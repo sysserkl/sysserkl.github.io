@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="Python">
+<trk><name>龙井寺至茶叶博物馆</name>
+<trkseg>
+<trkpt lat="30.219984" lon="120.110002"></trkpt>
+<trkpt lat="30.220445" lon="120.109800"></trkpt>
+<trkpt lat="30.220813" lon="120.109961"></trkpt>
+<trkpt lat="30.221006" lon="120.110216"></trkpt>
+<trkpt lat="30.221500" lon="120.110109"></trkpt>
+<trkpt lat="30.221959" lon="120.109532"></trkpt>
+<trkpt lat="30.222570" lon="120.108962"></trkpt>
+<trkpt lat="30.222911" lon="120.108245"></trkpt>
+<trkpt lat="30.223445" lon="120.107903"></trkpt>
+<trkpt lat="30.223996" lon="120.107246"></trkpt>
+<trkpt lat="30.224737" lon="120.106374"></trkpt>
+<trkpt lat="30.225026" lon="120.106662"></trkpt>
+<trkpt lat="30.226069" lon="120.106743"></trkpt>
+<trkpt lat="30.226919" lon="120.106790"></trkpt>
+<trkpt lat="30.227795" lon="120.107366"></trkpt>
+<trkpt lat="30.228733" lon="120.107802"></trkpt>
+<trkpt lat="30.229491" lon="120.107816"></trkpt>
+<trkpt lat="30.229564" lon="120.107534"></trkpt>
+<trkpt lat="30.230041" lon="120.107668"></trkpt>
+<trkpt lat="30.230998" lon="120.109029"></trkpt>
+<trkpt lat="30.231938" lon="120.109304"></trkpt>
+<trkpt lat="30.232383" lon="120.109707"></trkpt>
+<trkpt lat="30.232921" lon="120.109921"></trkpt>
+<trkpt lat="30.233764" lon="120.110833"></trkpt>
+<trkpt lat="30.234071" lon="120.111477"></trkpt>
+<trkpt lat="30.234231" lon="120.112302"></trkpt>
+<trkpt lat="30.234005" lon="120.112805"></trkpt>
+<trkpt lat="30.233495" lon="120.113582"></trkpt>
+<trkpt lat="30.233557" lon="120.113904"></trkpt>
+<trkpt lat="30.233840" lon="120.114139"></trkpt>
+<trkpt lat="30.234001" lon="120.114628"></trkpt>
+<trkpt lat="30.233881" lon="120.115292"></trkpt>
+<trkpt lat="30.234326" lon="120.115909"></trkpt>
+<trkpt lat="30.234323" lon="120.117894"></trkpt>
+<trkpt lat="30.234143" lon="120.118719"></trkpt>
+<trkpt lat="30.234316" lon="120.119979"></trkpt>
+<trkpt lat="30.233406" lon="120.120221"></trkpt>
+<trkpt lat="30.232995" lon="120.120677"></trkpt>
+<trkpt lat="30.233071" lon="120.120898"></trkpt>
+<trkpt lat="30.232811" lon="120.121160"></trkpt></trkseg>
+</trk>
+</gpx>

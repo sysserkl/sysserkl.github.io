@@ -1,0 +1,89 @@
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8" />
+<script language="javascript" type="text/javascript" src="../hard_ln_io/jquery.js"></script>
+<SCRIPT language=JavaScript src="../hard_ln_io/klbase.js"></SCRIPT>
+<script language="javascript">
+klbase_addons_import_js_b(['css','flot']);
+</script>
+<script language="javascript">
+flot_import_js_k(['time','symbol']);
+</script>
+<SCRIPT language=JavaScript src="zj_college_search_code.js"></SCRIPT>
+<script language="javascript">
+var scheme_global={};
+scheme_generation_b();
+css_root_style_b('18','10.5',['base'],[],1);
+
+var school_speciality_sum_arr_global=[];
+var speciality_popular_arr_global=[];
+var school_sum_average_arr_global=[];
+var school_median_rank_arr_global=[];
+var school_last_number_arr_global=[];
+var school_plan_arr_global=[];
+var speciality_all_sum_arr_global=[];
+var line_count_arr_global=[];
+var mark_rank_global={};
+</script>
+<style>
+td{font-size:0.9rem;}
+tr.odd {background-color: #ffffff;}
+tr.odd:hover {background-color: #E9EEF2;}
+th.blackline {border-bottom:2px solid #000000;}
+.blackline2 {border-bottom:2px solid #000000;cursor:pointer;}
+td.blackline0 {border-bottom:1px solid #000000;}
+</style>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+</head>
+<body>
+<a name=top></a>
+<h2 style="margin:0 0 0 0.5rem;"><span id="span_h2"></span> <span id=span_array_count style="font-size:0.7rem"></span></h2>
+<p style="margin-left:0.5rem;">ver 0.0.5-20200805 <span id="span_years"></span></p>
+<!--history
+0.0.5-20200805 增加 div id 跳转；增加分数对应位次
+0.0.4-20191030
+0.0.3-20190801
+0.0.2-20180718
+-->
+<script type="text/javascript">
+var zj_education_data_global=[];
+load_data_zjedu();
+</script>
+
+<p style="margin-left:0.5rem;"><input type="text" id="input_search" onkeyup="javascript:if (event.key=='Enter'){run_txtsearch_zjedu();}"> 
+<input type="checkbox" id="input_reg">正则
+<span class="aclick" onclick="javascript:run_txtsearch_zjedu();">搜索</span>
+<span class="aclick" onclick="javascript:search_demo_zjedu();">语法示例</span>
+</p>
+<div id="div_recent_search" style="margin-top:0.3rem;margin-left:0.5rem;line-height:180%;"></div>
+<table width=100%><tr><td valign=top width=60%>
+<div id="divhtml"></div>
+<div id="div_line_count_flot" style="width:100%;height:20rem"></div>
+</td>
+<td valign=top style="padding-left:0.5rem;" width=40% id="td_right">
+</td>
+</tr>
+</table>
+<script type="text/javascript">
+check_data_zjedu();
+input_with_x_b('input_search',15);
+mark_rank_list_zjedu();
+td_right_html_zjedu();
+document.getElementById('span_array_count').innerHTML='<i>('+zj_education_data_global.length+'条)</i>';
+var jgarray_public=[];
+var csorder_public=-1;
+var num_public=100;
+var blschool_public=[];
+
+run_txtsearch_zjedu();
+</script>
+<a name=footer></a>
+<div id="div_top_bottom"></div>
+<script type="text/javascript">
+track_source_b('zj_education',false);
+top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.4rem'));
+recent_search_zjedu();
+</script>
+</body>
+</html>

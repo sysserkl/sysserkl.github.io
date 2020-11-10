@@ -1,0 +1,149 @@
+<html>
+<head>
+<title>➕➖❌➗</title>
+<meta charset="UTF-8" />
+<SCRIPT language=JavaScript src="../hard_ln_io/klbase.js"></SCRIPT>
+<link rel="manifest" href="calculator.webmanifest">
+<script language="javascript">
+klbase_addons_import_js_b(['css','date']);
+</script>
+<script language="javascript">
+//history
+//0.0.1-20200804
+//-------------------------------------------
+var scheme_global={};
+scheme_generation_b();
+css_root_style_b('18','13',['base'],[],1);
+var line_no_calc_global=0;
+</script>
+<style>
+ol#ol_calc li{font-size:1.5rem;word-break:break-all;word-wrap:break-word;}
+</style>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+</head>
+<body>
+<a name=top></a>
+<h2 style="margin-top:0px;"><span id="span_title">➕➖❌➗</span></h2>
+<div id="div_form" style="margin:0.5rem;">
+<p><input type="text" id="input_calc" placeholder="计算器" onkeyup="javascript:if (event.key=='Enter'){eval_calculator();}" /> <span id="span_status" style="font-weight:bold;"></span></p>
+</div>
+<ol id="ol_calc" style="margin:0.5rem;"></ol>
+<div id="div_top_bottom"></div>
+<script type="text/javascript">
+// Register service worker to control making site work offline
+if('serviceWorker' in navigator) {
+    navigator.serviceWorker
+        .register('calculator_service_worker.js')
+        .then(function() { 
+            document.getElementById('span_status').innerHTML='Calculator Service Worker Registered';
+        });
+}
+else {
+    document.getElementById('span_status').innerHTML='Calculator Service Worker not work';
+}
+//-------------------------
+function insert_claculator(csstr){
+    var oinput=document.getElementById('input_calc');
+    oinput.value=oinput.value+csstr;
+    oinput.focus();
+}
+
+function init_calculator(){
+    top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.6rem'));
+    input_with_x_b('input_calc',15,'',false);
+    
+    var ool=document.getElementById('ol_calc');    
+        
+    var list_t=local_storage_get_b('list_kl_calculator',20,true);
+    for (let blxl=0;blxl<list_t.length;blxl++){
+        if (list_t[blxl]==''){continue;}
+        list_t[blxl]='<li>'+background_calculator(list_t[blxl])+'</li>';
+        line_no_calc_global=line_no_calc_global+1;
+    }
+    document.getElementById('ol_calc').innerHTML=list_t.join('\n');
+    
+    var list_t=['*','(',')'];
+    var bljg='';
+    for (let item of list_t){
+        bljg=bljg+'<span class="oblong_box" onclick="javascript:insert_claculator(\''+item+'\');">'+item+'</span> ';
+    }
+    document.getElementById('span_status').insertAdjacentHTML('beforebegin',' '+bljg);
+    mouseover_mouseout_oblong_span_b(document.querySelectorAll('div#div_form span.oblong_box'));
+}
+
+function eval_calculator(){
+    var oinput=document.getElementById('input_calc');
+    var str_t=oinput.value.trim();
+    var ospan=document.getElementById('span_status');
+    ospan.innerHTML='';
+    if (str_t==''){
+        ospan.innerHTML='未输入数学表达式';
+        return;        
+    }
+    if (str_t.match(/^\d+\.?(\d+)?$/g)!==null){return;} //纯数字不计算 - 保留注释
+    //var checkstr=str_t.replace(new RegExp('[0-9]','g'),'');
+    //var checkstr=checkstr.replace(new RegExp(/[\.\s\+\-\*\/\(\)]/,'g'),'');
+    var check_list=['let','var','eval','=','localStorage','return','break','for','while','{','}','[',']','document','window','if','else','switch','continue','inner','outer','style','class','id','getElement','alert','prompt','confirm','function','try','catch','script'];
+    for (let item of check_list){
+        if (str_t.includes(item)){
+            ospan.innerHTML='包含了多余字符：'+item;
+            return;
+        }
+    }
+    try {
+        var bldecimal=str_t.match(/\.\d+/g) || [''];
+        var bllen=0;
+        for (let item of bldecimal){
+            if (item==''){continue;}
+            bllen=Math.max(bllen,item.length-1);
+        }
+        if (bllen==0 && str_t.includes('/')){
+            bllen=3;
+        }
+        var blvalue=eval(str_t);
+        if (bllen>0 && !isNaN(blvalue)){
+            blvalue=blvalue.toFixed(bllen);
+        }
+    }
+    catch (error) {
+        ospan.innerHTML=error;
+        return;
+    }
+    var bltime=now_time_str_b(':',true);
+    var bljg=emoji_category_b('vegetable',line_no_calc_global);
+    bljg=bljg+' <span class="span_box" ondblclick="javascript:dbl_calculator(this);">'+str_t+'</span>';
+    bljg=bljg+' = <strong>'+blvalue+'</strong>';
+    bljg=bljg+' <small><small>'+time_2_emoji_b()+' <span style="color:'+scheme_global['memo']+';">'+bltime+'</span></small></small>';
+
+    oinput.value=blvalue;
+    
+    line_no_calc_global=line_no_calc_global+1;
+    var ool=document.getElementById('ol_calc');    
+    ool.insertAdjacentHTML('afterbegin','<li>'+background_calculator(bljg)+'</li>');
+    var list_t=local_storage_get_b('list_kl_calculator',20,true);
+    list_t=[bljg].concat(list_t);
+    localStorage.setItem('list_kl_calculator',list_t.join('\n'));
+}
+
+function dbl_calculator(ospan){
+    try{
+        document.getElementById('input_calc').value=ospan.innerText;
+    }
+    catch (error){
+        document.getElementById('span_status').innerHTML=error;
+    }
+}
+
+function background_calculator(csstr){
+    if (line_no_calc_global % 2 == 0){
+        return '<span style="background-color:'+scheme_global['button']+';">'+csstr+'</span>';
+    }
+    return csstr;
+}
+//-------------------------
+init_calculator();
+track_source_b('calculator',false);
+</script>
+<a name=footer></a>
+</body>
+</html>

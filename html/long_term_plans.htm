@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>⛳ Long Term Plans</title>
+<SCRIPT language=JavaScript src="../hard_ln_io/klbase.js"></SCRIPT>
+<script language="javascript">
+klbase_addons_import_js_b(['css','date']);
+</script>
+<SCRIPT language=JavaScript src="long_term_plans.js"></SCRIPT>
+<link rel="manifest" href="long_term_plans.webmanifest">
+<script language="javascript">
+//history
+//0.0.2-20201107 增加计划搜索功能
+//0.0.1-20200422
+//-----------------------
+var long_term_plans_global=[];
+var scheme_global={};
+scheme_generation_b();
+css_root_style_b('19','13',['base','menu']);
+</script>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+</head>
+<body>
+<a name="top"></a>
+<h2 id="h2_title" style="margin-top:0rem;font-size:1.3rem;"><span style="cursor:pointer;" ondblclick="javascript:init_lt_plans();">Long Term Plans</span> <span id="span_count" style="font-size:0.8rem;font-weight:normal;"></span></h2>
+<div id="divhtml">
+</div>
+<div id="div_status" style="font-size:0.8rem;color:grey;"></div>
+<div id="div_top_bottom"></div>
+<script language="javascript">
+// Register service worker to control making site work offline
+if('serviceWorker' in navigator) {
+    navigator.serviceWorker
+        .register('long_term_plans_service_worker.js')
+        .then(function() { 
+            document.getElementById('div_status').innerHTML='Long Term Plans Service Worker Registered';
+        });
+}
+else {
+    document.getElementById('div_status').innerHTML='Long Term Plans Service Worker not work';
+}
+//-------------------------
+init_lt_plans();
+menu_lt_plans();
+top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.4rem'));
+</script>
+</body>
+</html>

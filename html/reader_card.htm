@@ -1,0 +1,99 @@
+<html>
+<head>
+<title>🗂 Reader Card</title>
+<meta charset="UTF-8" />
+<SCRIPT language=JavaScript src="../hard_ln_io/klbase.js"></SCRIPT>
+<script language="javascript">
+klbase_addons_import_js_b(['css','date','books','eng','en_de_str','wiki','txtlistsearch']);
+</script>
+<script language="javascript">
+load_current_book_b();
+</script>
+<SCRIPT language=JavaScript src="reader_card.js"></SCRIPT>
+<script language="javascript">
+add_tag_for_marked_books_kltxt_b();
+books_init_b();
+var scheme_global={};
+scheme_generation_b();
+css_root_style_b('17','14',['base'],[],1);
+var line_height_global=180;
+</script>
+<script language="javascript">
+document.write('\n<style>\n');
+if (ismobile_b()){
+    document.write('#divhtml {margin:0.5rem;}\n');
+}
+else {
+    document.write('#divhtml {margin:0rem 0.5rem;column-count:3;}\n');
+}
+document.write('</style>\n');
+</script>
+<style>
+.txtsearch_kltxt_lineno {color:#707070;font-size:0.8rem}
+i {border-bottom:0.15rem dashed tomato;}
+#divhtml p{font-size:1rem;line-height:180%;margin-bottom:0.8rem;}
+#divhtml img{max-width:100%;}
+</style>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+</head>
+<body>
+<a name=top></a>
+<h2 style="margin-top:0px;"><span id="span_title" onclick="javascript:showhide_kltxt_b();" style="cursor:pointer;">🗂 Reader Card</span> - <span id=booktitle></span><span id=readingdata></span></h2>
+<div id='div_show_hide' style="display:block;margin:0rem 0.5rem;">
+<!--history
+0.0.2-20200614 增加最近搜索
+0.0.1-20200411
+-->
+<script type="text/javascript">
+var klwiki_syntaxhighlight_global=false;
+var book_tag_global='all';
+</script>
+
+<script type="text/javascript">
+var cskeys=href_split_b(location.href);
+var csbookname_global='';
+import_book_kltxt_b(cskeys,true);
+</script>
+<script type="text/javascript">
+decode_and_create_menu_kltxt_b();
+//var kltxt_menulist_index_global=[];
+//menu_all_only_one_kltxt_b();
+</script>
+<p>
+<input type="text" id="input_search" onkeyup="javascript:if (event.key=='Enter'){recent_search_add_txtcard();}">
+<input type="checkbox" id="input_reg"><label for="input_reg">正则</label>
+<span class="aclick" onclick="javascript:split_all_txtcard();">刷新本书卡片</span>
+<span class="aclick" onclick="javascript:document.location.href='?';">随机书籍(全部)</span>
+<span class="aclick" onclick="javascript:window.location.reload();">随机书籍(当前条件)</span>
+</p>
+<p>
+<input type="number" id="input_lineno" style="display:none;" value=1>
+<input type="number" id="input_lines" style="display:none;" value=20>
+<input type="checkbox" id="check_hide_no" checked style="display:none;"><!--隐藏序号-->
+<input type="checkbox" id="check_hide_lineno" checked style="display:none;"><!--隐藏行号-->
+<input type="checkbox" id="check_klwiki_format" checked style="display:none;"><!--KLWiki format-->
+</p>
+<div id="div_recent_search" style="margin:0.5rem;line-height:200%;"></div>
+</div>
+<a name=content></a>
+<div id="divhtml"></div>
+<script type="text/javascript">
+input_with_x_b('input_search',11);
+recent_search_b('recent_search_reader_card','','search_str_txtcard','div_recent_search',[],20);
+//var usera=navigator.userAgent.toLowerCase();
+split_all_txtcard();
+key_txtcard();
+</script>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div id="div_top_bottom"></div>
+<a name=footer></a>
+<script type="text/javascript">
+top_bottom_arrow_b('div_top_bottom','',true,(ismobile_b()?'1.7rem':'1.4rem'));
+track_source_b('reader_card',false);
+if (!is_firefox_b(false)){
+    blank_page_b(false);
+}
+</script>
+</body>
+</html>

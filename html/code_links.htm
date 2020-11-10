@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>随机编程知识点</title>
+<meta charset="UTF-8" />
+<SCRIPT language=JavaScript src="../hard_ln_io/klbase.js"></SCRIPT>
+<SCRIPT language=JavaScript src="../hard_ln_io/klbase_css.js"></SCRIPT>
+<SCRIPT language=JavaScript src="../hard_ln_io/klbase_wiki.js"></SCRIPT>
+<script type="text/javascript">
+var learning_list_global=[];
+css_root_style_b('16','22');
+
+document.write('\n<SCRIPT language=JavaScript src="../jsdata/learning_links/learning_links_'+Math.floor(Math.random()*12+1)+'_data.js"><\/SCRIPT>\n');
+</script>
+<link href="../recent_info.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<h2 style="margin:1rem 0rem;"><span id="span_title" class="headline_on">随机编程知识点</span></h2>
+<div id="divhtml"></div>
+<script type="text/javascript">
+function codelink(cscount=1){
+    var learn_something='';
+    if (learning_list_global.length>0){
+        learning_list_global.sort(randomsort_b);
+        for (let blxl=0;blxl<Math.min(learning_list_global.length,cscount);blxl++){
+            learn_something=learn_something+div_title_href_b(learning_list_global[blxl]);
+        }
+    }
+    return learn_something;
+}
+
+document.getElementById('divhtml').innerHTML=codelink(10)+'<p align=center> ver: 0.0.1-20190901</p>';
+</script>
+<!--history
+0.0.1-20190901
+-->
+<script type="text/javascript">
+track_source_b('code_link');
+</script>
+</body>
+</html>

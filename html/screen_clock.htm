@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>⏰ Clock</title>
+<SCRIPT language=JavaScript src="../hard_ln_io/klbase.js"></SCRIPT>
+<script language="javascript">
+klbase_addons_import_js_b(['css','slide']);
+</script>
+<link rel="manifest" href="screen_clock.webmanifest">
+<style>
+html {height: 100%;}
+body {height: 100%; margin: 0;}
+#div_flex {
+    height: 100%;
+    width:100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#child {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+<div id="div_flex">
+<div style="width:100%;"> 
+<div id="child"></div>
+</div>
+</div>
+<div id="div_transparent"></div>
+<script type="text/javascript">
+function run_klcolok(){
+    var today = new Date();
+    if (stopwatch_start_global>=0){
+        var bls=(today.getTime()-stopwatch_start_global)/1000;
+        var blh=0;
+        var blm=0;
+        if (bls>=60){
+            blm=parseInt(bls/60);
+            bls=bls-blm*60;
+        }
+        if (blm>=60){
+            blh=parseInt(blm/60);
+            blm=blm-blh*60;
+        }
+        bls=Math.round(bls);
+        if (nosecond_global){
+            var mytime=('0'+blh).slice(-2)+':'+('0'+blm).slice(-2);
+        }
+        else {
+            var mytime=('0'+blh).slice(-2)+':'+('0'+blm).slice(-2)+'<span style="font-size:'+font_size2_global+'rem;">'+':'+('0'+bls).slice(-2)+'</span>';
+        }
+    }
+    else {
+        if (nosecond_global){
+            var mytime=('0'+today.getHours()).slice(-2)+':'+('0'+today.getMinutes()).slice(-2);
+        }
+        else {
+            var mytime=('0'+today.getHours()).slice(-2)+':'+('0'+today.getMinutes()).slice(-2)+'<span style="font-size:'+font_size2_global+'rem;">'+':'+('0'+today.getSeconds()).slice(-2)+'</span>';
+        }
+    }
+    odiv_global.innerHTML=mytime;
+    document.title=odiv_global.innerText;
+}
+
+function fontsize_change_klcolok(cstype='+'){
+    if (cstype=='+'){
+        font_size1_global=font_size1_global+1;
+    }
+    else if (cstype=='-') {
+        font_size1_global=Math.max(1,font_size1_global-1);
+    }
+    else {
+        font_size1_global=18;
+    }
+    font_size2_global=Math.round(font_size1_global/2,2);
+    odiv_global.style.fontSize=font_size1_global+'rem';
+}
+
+function getcolor_klcolok(cscolor){
+    if (isNaN(cscolor)==false){
+        return "#"+cscolor;
+    }
+    else if (cscolor.replace(new RegExp("[0123456789abcdef]","ig"),"")==""){
+        return "#"+cscolor;
+    }
+    else {
+        return cscolor;
+    }
+}
+//---------------------------------
+// Register service worker to control making site work offline
+if('serviceWorker' in navigator) {
+    navigator.serviceWorker
+        .register('screen_clock_service_worker.js')
+        .then(function() { 
+            console.log('Screen Clock Service Worker Registered');
+        });
+}
+else {
+    console.log('Screen Clock Service Worker not work');
+}
+//---------------------------------------------
+div_height_temp_create_b();
+
+//history
+//0.0.3-20200413 增加 PWA Cache 清除
+//0.0.2-20200403 支持秒表 和 PWA
+//0.0.1-20190523
+
+slide_control_table_b('div_transparent','333');
+document.getElementById("div_transparent_td_l1").setAttribute('onclick','javascript:if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'pwa_screen_clock_store\',\'screen_clock_service_worker.js\');}');
+document.getElementById("div_transparent_td_l2").setAttribute('onclick','javascript:fontsize_change_klcolok("-");');
+document.getElementById("div_transparent_td_l3").setAttribute('onclick','javascript:console.log(3);');
+document.getElementById("div_transparent_td_m1").setAttribute('onclick','javascript:console.log(4);');
+document.getElementById("div_transparent_td_m2").setAttribute('onclick',"javascript:fontsize_change_klcolok('');");
+document.getElementById("div_transparent_td_m3").setAttribute('onclick',"javascript:stopwatch_start_global=(stopwatch_start_global>=0?-1:new Date().getTime());");
+document.getElementById("div_transparent_td_r1").setAttribute('onclick','javascript:console.log(7);');
+document.getElementById("div_transparent_td_r2").setAttribute('onclick','javascript:fontsize_change_klcolok("+");');
+document.getElementById("div_transparent_td_r3").setAttribute('onclick','javascript:nosecond_global=!nosecond_global;');
+
+var odiv_global=document.getElementById('child');
+var font_size1_global=0;
+var font_size2_global=0;
+var fore_color_global="black";
+var backgounrd_color_global="tomato";
+var nosecond_global=false;
+var stopwatch_start_global=-1;
+fontsize_change_klcolok('');
+
+var cskeys=href_split_b(location.href);
+if (cskeys.length>0 && cskeys[0]!==''){
+	for (var item of cskeys){
+        var str_t=item.trim();
+		if (str_t.substring(0,2)=='c='){
+			fore_color_global=str_t.substring(2);
+		}
+		if (str_t.substring(0,3)=='bc='){
+			backgounrd_color_global=str_t.substring(3);
+		}
+    }
+}
+
+odiv_global.style.color=getcolor_klcolok(fore_color_global);
+document.getElementById("div_flex").style.backgroundColor=getcolor_klcolok(backgounrd_color_global);
+
+run_klcolok();
+setInterval(run_klcolok,1000);
+setTimeout(div_height_temp_remove_b,5000);
+track_source_b('screen_clock',false);
+</script>
+</body>
+</html>

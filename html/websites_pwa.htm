@@ -1,0 +1,262 @@
+<html>
+<head>
+<title>Websites</title>
+<meta charset="UTF-8" />
+<script type="text/javascript" src="../hard_ln_io/jquery.js"></script>
+<SCRIPT language=JavaScript src="../hard_ln_io/klbase.js"></SCRIPT>
+<script language="javascript">
+klbase_addons_import_js_b(['css','qr','websites'],['jeromeetienne_qrcode.min.js'],['websites_demo_data.js']);
+</script>
+<script language="javascript">
+//history
+//0.0.1-20200811
+//-------------------------------------------
+var scheme_global={};
+scheme_generation_b();
+css_root_style_b('18','13',['base','menu'],[],1);
+var oa_qr_list_websites_global=[];
+var oa_qr_no_websites_global=0;
+var canvas_size_websites_global=(ismobile_b()?90:150);
+</script>
+<style>
+div.div_qr{padding:0.2rem;margin:0.2rem;border: 0.15rem solid black;}
+</style>
+<link rel="manifest" href="websites.webmanifest">
+<link rel="shortcut icon" href="websites_pwa_ico/websites_pwa128.png" />
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+</head>
+<body>
+<a name=top></a>
+<h2 style="margin-top:0;"><span id="span_title">Websites</span> <span id="span_status" style="font-weight:normal;font-size:1rem;"></span></h2>
+<div id="divhtml" style="margin-left:0.5rem;"></div>
+<div id="div_top_bottom"></div>
+<script type="text/javascript">
+document.getElementById('span_status').style.color=scheme_global['memo'];
+// Register service worker to control making site work offline
+if('serviceWorker' in navigator) {
+    navigator.serviceWorker
+        .register('websites_service_worker.js')
+        .then(function() { 
+            document.getElementById('span_status').innerHTML='Websites for PWA Service Worker Registered';
+        });
+}
+else {
+    document.getElementById('span_status').innerHTML='Websites for PWA Service Worker not work';
+}
+//-------------------------
+function menu_websites_pwa(){
+    var str_t=klmenu_hide_b('#top');
+    var klmenu1=[
+    '<span class="span_menu" onclick="javascript:'+str_t+'add_websites_pwa();">添加单个网址</span>',    
+    '<span class="span_menu" onclick="javascript:'+str_t+'form_websites_pwa();">导入/导出</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'organize_websites_pwa();">整理</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'qr_html_websites_pwa();">qr</span>',
+    ];
+
+    var klmenu2=[
+    '<span class="span_menu" onclick="javascript:'+str_t+'clear_cache_websites_pwa();">更新版本</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'demo_websites_pwa();">导入Demo网址</span>',    
+    ];
+
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','14rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'⚙','14rem','1rem','1rem','60rem'),'','0rem')+' ');
+}
+
+function demo_websites_pwa(){
+    var websites_str=local_storage_get_b('websites_list_pwa',-1,false).trim();
+    if (websites_str!==''){
+        alert('现有网址不为空，取消导入');
+        return;
+    }
+    if (confirm('是否导入Demo网址？')){
+        localStorage.setItem('websites_list_pwa',websites_demo_global.trim());
+        show_websites_pwa();
+    }
+}
+
+function clear_cache_websites_pwa(){
+    if (confirm('是否更新版本？')){
+        document.getElementById('span_status').innerHTML='';
+        service_worker_delete_b('pwa_websites_store\',\'websites_service_worker.js');
+    }
+}
+
+function add_websites_pwa(){
+    var ospan=document.getElementById('span_status');
+    var websites_list=local_storage_get_b('websites_list_pwa',-1,true);
+    var blexample=websites_list[0];
+    if (blexample==''){
+        blexample='新闻 https://www.thepaper.cn/ 澎湃';
+    }
+    
+    var blcategory='';
+    var blstr=(prompt('输入格式：分类 网址 名称',blexample) || '').trim();
+    var blname='';
+    [blcategory,blstr,blname]=split_websites_pwa(blstr);
+    
+    if (blcategory==''){
+        ospan.innerHTML='无分类';
+        return;
+    }
+    if (blstr==''){
+        ospan.innerHTML='无网址';
+        return;    
+    }
+    if (blname==''){
+        ospan.innerHTML='无名称';
+        return;    
+    }
+        
+    if (websites_list.includes(' '+blstr+' ')){
+        ospan.innerHTML='已存在同名网址';
+        return;
+    }
+    websites_list.push(blcategory+' '+blstr+' '+blname);
+    localStorage.setItem('websites_list_pwa',websites_list.join('\n'));
+    show_websites_pwa();
+}
+
+function split_websites_pwa(csstr){
+    var blat=csstr.indexOf('http');
+    if (blat==-1){
+        return ['','',''];
+    }
+    var blcategory=csstr.substring(0,blat).trim();
+    if (blcategory==''){
+        blcategory='未分类';
+    }
+    csstr=csstr.substring(blat,);
+    blat=csstr.indexOf(' ');
+    if (blat==-1){
+        blat=csstr.lastIndexOf('/');
+        if (blat==-1){
+            return [blcategory,csstr,''];
+        }
+    }
+    var blname=csstr.substring(blat,).trim();
+    csstr=csstr.substring(0,blat).trim();
+    return [blcategory,csstr,blname];
+}
+
+function form_websites_pwa(){
+    var websites_list=local_storage_get_b('websites_list_pwa',-1,false);
+    var postpath=postpath_b();
+	var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php" name="form_websites_pwa" target=_blank>\n';
+    bljg=bljg+'<textarea name="textarea_websites_pwa" id="textarea_websites_pwa" style="width:90%;height:24rem;">'+websites_list+'</textarea>';
+    bljg=bljg+'<p>';
+    bljg=bljg+'<span class="aclick" onclick="javascript:show_websites_pwa();">关闭</span> ';
+    bljg=bljg+'<span class="aclick" onclick="javascript:update_websites_pwa();">更新</span> ';
+    bljg=bljg+textarea_buttons_b('textarea_websites_pwa','清空,复制,发送到临时记事本,发送地址')+' 行数：'+websites_list.split('\n').length;
+
+    bljg=bljg+'</p></form>';
+    document.getElementById('divhtml').innerHTML=bljg;
+}
+
+function update_websites_pwa(){
+    if (confirm("是否更新网址库？")){
+        var blstr=document.getElementById('textarea_websites_pwa').value.trim();
+        localStorage.setItem('websites_list_pwa',blstr);
+        show_websites_pwa();
+    }
+}
+
+function show_websites_pwa(){
+    var websites_list=local_storage_get_b('websites_list_pwa',-1,true);
+    var list_t=[];
+    var blcategory='';
+    var blstr='';
+    var blname='';
+    var new_list=[];
+    for (let item of websites_list){
+        [blcategory,blstr,blname]=split_websites_pwa(item);
+        if (blcategory=='' || blstr=='' || blname==''){continue;}
+        list_t.push([blcategory,blstr,blname]);
+        new_list.push(blcategory+' '+blstr+' '+blname);
+    }
+    list_t.sort(function (a,b){return zh_sort_b(a,b,false,2);});
+    list_t.sort(function (a,b){return zh_sort_b(a,b,false,0);});
+    
+    new_list=array_unique_b(new_list);
+    new_list.sort(function (a,b){return zh_sort_b(a,b,false);});
+    new_list=new_list.slice(-500,);
+    localStorage.setItem('websites_list_pwa',new_list.join('\n'));
+    
+    var result_t={}
+    var blxl=0;
+    for (let item of list_t){
+        if ((item[0] in result_t)===false){
+            result_t[item[0]]=[];
+        }
+        result_t[item[0]].push('<span class="span_websites_link_container"><a class="a_oblong_box" href="'+item[1].replace(new RegExp('"',"g"),'&quot;')+'" target=_blank>'+specialstr92_b(item[2])+'</a></span>');
+        blxl=blxl+1;
+    }
+    var bljg='';
+    for (let key in result_t){
+        bljg=bljg+'<span style="font-weight:bold;font-size:1.2rem;">'+key+'</span> '+result_t[key].join(' ')+' ';
+    }
+    document.getElementById('divhtml').innerHTML='<p style="line-height:'+(ismobile_b()?'1.8':'2.2')+'rem;">'+bljg+'</p>';
+    top_bottom_arrow_b('div_top_bottom',blxl+' ');
+}
+
+function organize_websites_pwa(){
+    var ospans=document.getElementsByClassName('span_websites_link_container');
+
+    var odelete=document.querySelector('span.span_websites_link_container span.span_box');
+    if (odelete){
+        for (let item of ospans){
+            odelete=item.querySelector('span.span_box');
+            if (odelete){
+                odelete.parentNode.removeChild(odelete);
+            }
+        }
+        show_websites_pwa();
+    }
+    else {
+        for (let item of ospans){
+            item.insertAdjacentHTML('beforeend',' <span class="span_box" onclick="javascript:delete_websites_pwa(this.parentNode);">☒</span>');
+        }
+    }
+}
+
+function delete_websites_pwa(ospan){
+    if (!ospan){
+        return;
+    }
+    var oa=ospan.querySelector('a.a_oblong_box');
+    if (!oa){
+        return;
+    }
+    var blstr=oa.innerText;
+    if (confirm('是否删除 '+blstr+' ？')){
+        var websites_list=local_storage_get_b('websites_list_pwa',-1,true);
+        var list_t=[];
+        for (let item of websites_list){
+            if (item.includes(' '+oa.href+' ')){continue;}
+            list_t.push(item);
+        }
+        localStorage.setItem('websites_list_pwa',list_t.join('\n'));
+        ospan.parentNode.removeChild(ospan);
+    }
+}
+
+function qr_html_websites_pwa(){
+    qr_html_websites_b('divhtml','a.a_oblong_box');
+    qr_generate_websites_pwa();
+}
+
+function qr_generate_websites_pwa(){
+    if (qr_generate_websites_b('div#divhtml canvas')===false){
+        return;
+    }
+    setTimeout(qr_generate_websites_pwa,10);
+}
+//------------------
+top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.6rem'));
+menu_websites_pwa();
+show_websites_pwa();
+</script>
+<script type="text/javascript">
+track_source_b('websites_pwa',false);
+</script>
+<a name=footer></a>
+</body>
+</html>

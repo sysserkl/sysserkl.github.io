@@ -1,0 +1,119 @@
+<html>
+<head>
+<title>屏幕测试</title>
+<meta charset="UTF-8" />
+<SCRIPT language=JavaScript src="../hard_ln_io/klbase.js"></SCRIPT>
+<script language="javascript">
+klbase_addons_import_js_b(['css','slide']);
+</script>
+<script language="javascript">
+var scheme_global={};
+scheme_generation_b();
+css_root_style_b('14.5','',['base']);
+</script>
+<link rel="shortcut icon" href="../icos/screen_test.png" />
+</head>
+<body>
+<div id="div_test" style="width:100%;height:100%;"></div>
+<div id="div_transparent"></div>
+<script type="text/javascript">
+function basecolor_klscreentest(){
+    var basecolor=['red','blue','yellow','green','black','white','pink','tomato','grey','purple','orange'];
+    var list_t=[];
+    for (let item of basecolor){
+        list_t.push(item);
+    }
+    var l_list=[];
+    for (let item of basecolor){
+        var ohsl=rgb2hsl_b(item);
+        if (!l_list.includes(ohsl["h"]+'_'+ohsl["s"])){
+            l_list.push(ohsl["h"]+'_'+ohsl["s"]);
+            list_t.push('l_'+item);
+        }
+    }
+    list_t.push('grey256');
+    return list_t;
+}
+
+function jump_to_l_klscreentest(){
+    for (let blxl=0;blxl<pure_color_list_global.length;blxl++){
+        if (pure_color_list_global[blxl].substring(0,2)=='l_'){
+            color_no_global=blxl;
+            pure_colors_klscreentest(0);
+            break;
+        }
+    }
+}
+
+function pure_colors_klscreentest(csnum=1){
+    document.getElementById('div_test').innerHTML='';
+    color_no_global=color_no_global+csnum;
+
+    if (color_no_global>=pure_color_list_global.length){
+        color_no_global=0;
+    }
+    else if (color_no_global<0){
+        color_no_global=Math.max(0,pure_color_list_global.length+color_no_global);
+    }
+    
+    if (pure_color_list_global[color_no_global]=='grey256'){
+        grey256_klscreentest();
+    }
+    if (pure_color_list_global[color_no_global].substring(0,2)=='l_'){
+        hsl_klscreentest(pure_color_list_global[color_no_global].substring(2,),'l');
+    }
+    else {
+        document.getElementById('div_test').style.backgroundColor=pure_color_list_global[color_no_global];
+    }
+}
+
+function grey256_klscreentest(){
+    document.getElementById('div_test').style.backgroundColor='white';
+    var list_t=color_range_b(color1=[0,0,0],color2=[255,255,255],cscount=256);
+
+    var window_w=document.body.offsetWidth;
+    var window_h=document.body.offsetHeight;
+    var rows=Math.ceil(Math.sqrt(256*window_h/window_w));
+    var cols=Math.ceil(256/rows);
+
+    var div_w=parseInt(window_w/cols-10);
+    var div_h=parseInt(window_h/rows-10);
+    var bljg='';
+    for (let blxl=0;blxl<256;blxl++){
+        bljg=bljg+'<div style="position:relative;float:left;width:'+div_w+'px;height:'+div_h+'px;margin:5px;background-color:'+rgb2hex_b(list_t[blxl])+';font-size:0.8rem;"><center style="background-color:grey;">'+rgb2hex_b(list_t[blxl])+'</center></div>';
+    } 
+    document.getElementById('div_test').innerHTML=bljg;
+}
+
+function hsl_klscreentest(cscolor){
+    ohsl=rgb2hsl_b(cscolor);
+    var bljg='';
+    var bllen=document.body.offsetWidth/2;
+    for (let blxl=0;blxl<bllen;blxl++){
+        bljg=bljg+'<td style="background-color:'+hsl2hex_b(ohsl["h"],ohsl["s"],blxl/bllen)+';"></td>';
+    }
+    bljg='<table width=100% height=100% cellpadding=0 cellspacing=0><tr>'+bljg+'</tr></table>';
+    document.getElementById('div_test').innerHTML=bljg;
+}
+
+//-------------
+var pure_color_list_global=basecolor_klscreentest();
+var color_no_global=-1;
+
+slide_control_table_b('div_transparent','333');
+document.getElementById("div_transparent_td_l1").setAttribute('onclick','javascript:color_no_global=-1;pure_colors_klscreentest(1);');
+document.getElementById("div_transparent_td_l2").setAttribute('onclick','javascript:pure_colors_klscreentest(-1);');
+document.getElementById("div_transparent_td_l3").setAttribute('onclick','javascript:color_no_global=pure_color_list_global.length;pure_colors_klscreentest(-1);');
+document.getElementById("div_transparent_td_m1").setAttribute('onclick','javascript:console.log(4);');
+document.getElementById("div_transparent_td_m2").setAttribute('onclick',"javascript:pure_colors_klscreentest(1);");
+document.getElementById("div_transparent_td_m3").setAttribute('onclick',"javascript:console.log(5);");
+document.getElementById("div_transparent_td_r1").setAttribute('onclick','javascript:console.log(7);');
+document.getElementById("div_transparent_td_r2").setAttribute('onclick','javascript:pure_colors_klscreentest(1);');
+document.getElementById("div_transparent_td_r3").setAttribute('onclick','javascript:jump_to_l_klscreentest();');
+
+</script>
+<script type="text/javascript">
+track_source_b('screen_test',false);
+</script>
+</body>
+</html>

@@ -1,0 +1,468 @@
+<html>
+<head>
+<title>Tetris</title>
+<meta charset="UTF-8" />
+<SCRIPT language=JavaScript src="../hard_ln_io/klbase.js"></SCRIPT>
+<SCRIPT language=JavaScript src="../hard_ln_io/klbase_css.js"></SCRIPT>
+<SCRIPT language=JavaScript src="../hard_ln_io/klbase_en_de_str.js"></SCRIPT>
+<style>
+#score{display: inline-block;}
+div{
+    font-size: 25px;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+}
+canvas{
+    display: block;
+    margin:0 auto;
+}
+.button_tetris{font-size:1rem;padding:0.1rem 1rem;margin:0rem 0.3rem;}
+</style>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="../icos/tetris.png" />
+</head>
+<body>
+<script language="javascript">
+//code based on: https://github.com/CodeExplainedRepo/Tetris-JavaScript
+
+function drop(){
+    let now = Date.now();
+    let delta = now - dropStart_global;
+    if (delta > 1000){
+        moveDown();
+        dropStart_global = Date.now();
+    }
+    if (!gameOver_global){
+        requestAnimationFrame(drop);
+    }
+}
+
+function moveDown(){
+    if (!collision(0,1,current_brick_pattern_global)){
+        piecefill(background_color_global);
+        position_y_global++;
+        piecefill(current_brick_color_global);
+        return true;
+    }
+
+    //piecelock
+    for(let r = 0; r < current_brick_pattern_global.length; r++){
+        for(let c = 0; c < current_brick_pattern_global.length; c++){
+            // we skip the background_color_global square_size_globaluares
+            if (!current_brick_pattern_global[r][c]){
+                continue;
+            }
+            // pieces to lock on top = game over
+            if (position_y_global + r < 0){
+                alert("Game Over");
+                // stop request animation frame
+                gameOver_global = true;
+                break;
+            }
+            // we lock the piece
+            board[position_y_global+r][position_x_global+c] = current_brick_color_global;
+        }
+        if (gameOver_global){break;}
+    }
+    
+    // remove full rows_globals
+    var full_row_count=0;
+    for(let the_full_row = 0; the_full_row < rows_global; the_full_row++){
+        let isrows_globalFull = true;
+        for(let c = 0; c < cols_global; c++){
+            //isrows_globalFull = isrows_globalFull && (board[r][c] != background_color_global);
+            if (board[the_full_row][c] == background_color_global){
+                isrows_globalFull=false;
+                break;
+            }
+        }
+        
+        if (!isrows_globalFull){
+            continue;
+        }
+        
+        full_row_count=full_row_count+1;
+        // if the rows_global is full
+        // we move down all the rows_globals above it
+        for(let arow = the_full_row; arow > 1; arow--){
+            for(let acol = 0; acol < cols_global; acol++){
+                board[arow][acol] = board[arow-1][acol];
+            }
+        }
+        
+        // the top rows_global board[0][..] has no rows_global above it
+        for(let acol = 0; acol < cols_global; acol++){
+            board[0][acol] = background_color_global;
+        }
+        // increment the score
+        
+    }
+    if (full_row_count>0){
+        score_global = score_global + Math.floor(cols_global*(full_row_count+(full_row_count-1)*0.5));
+    }
+    // update the board
+    randomPiece();
+    
+    // update the score
+    scoreElement.innerHTML = 'Score : '+score_global;
+    return false;
+}
+
+// generate random pieces
+function randomPiece(){
+    //draw board
+    for(let r = 0; r <rows_global; r++){
+        for(let c = 0; c < cols_global; c++){
+            drawsquare(ctx,c,r,board[r][c]);
+        }
+    }
+    //--
+    pattern_list_generator();
+    
+    var first_pattern=pattern_list_global.shift();
+    current_brick_global = first_pattern[0];
+    current_brick_globalN = first_pattern[1];
+    current_brick_pattern_global = current_brick_global[current_brick_globalN];
+    current_brick_color_global=first_pattern[2];    
+
+    draw_board_next();
+    
+    position_x_global = Math.floor(cols_global/2);
+    position_y_global = -2;
+}
+
+function draw_board_next(){
+    var list_t=[];
+    
+    for (let r=0;r<board_next.length;r++){
+        for (let c=0;c<board_next[0].length;c++){
+            board_next[r][c]=background_color_global;
+        }
+    }
+    
+    for (var blxl=0;blxl<3;blxl++){
+        var one_pattern=pattern_list_global[blxl];
+
+        var piece4 = one_pattern[0];
+        var piece4_no = one_pattern[1];
+        var current_piece = piece4[piece4_no];
+        var thecolor=one_pattern[2];    
+    
+        for (let r=0;r<current_piece.length;r++){
+            for (let c=0;c<current_piece.length;c++){
+                if (current_piece[r][c]==0){
+                    board_next[r+blxl*5][c]=background_color_global;
+                }
+                else {
+                    board_next[r+blxl*5][c]=thecolor;
+                }
+            }
+        }
+    }
+    
+    for (let r=0;r<board_next.length;r++){
+        for (let c=0;c<board_next[0].length;c++){
+            drawsquare(ctx_next,c,r,board_next[r][c]);
+        }
+    }
+}
+
+function piecefill(cscolor){
+    for( r = 0; r < current_brick_pattern_global.length; r++){
+        for(c = 0; c < current_brick_pattern_global.length; c++){
+            // we draw only occupied square_size_globaluares
+            if ( current_brick_pattern_global[r][c]){
+                drawsquare(ctx,position_x_global + c,position_y_global + r, cscolor);
+            }
+        }
+    }
+}
+
+function collision(x,y,piece){
+    for(let r = 0; r < piece.length; r++){
+        for(let c = 0; c < piece.length; c++){
+            // if the square_size_globaluare is 0(empty), we skip it.
+            if (!piece[r][c]){
+                continue;
+            }
+            // coordinates of the piece after movement
+            let newX = position_x_global + c + x;
+            let newY = position_y_global + r + y;
+            
+            // conditions
+            if (newX < 0 || newX >= cols_global || newY >= rows_global){
+                return true;
+            }
+            // skip newY < 0; board[-1] will crush our game
+            if (newY < 0){
+                continue;
+            }
+            // check if there is a locked piece alrady in place
+            if ( board[newY][newX] != background_color_global){
+                return true;
+            }
+        }
+    }
+    return false;
+}
+    
+function key_control(event){
+    return move_brick(event.keyCode);
+}
+
+function move_brick(cstype){
+    var blstat=false;
+    if (cstype == 37){
+        //moveLeft
+        if (!collision(-1,0,current_brick_pattern_global)){
+            piecefill(background_color_global);
+            position_x_global--;
+            piecefill(current_brick_color_global);
+            blstat=true;
+        }
+        dropStart_global = Date.now();
+    }
+    else if (cstype == 38){
+        //rotate
+        let nextPattern = current_brick_global[(current_brick_globalN + 1)%current_brick_global.length];
+        let kick = 0;
+        
+        if (collision(0,0,nextPattern)){
+            if (position_x_global > cols_global/2){
+                // it's the right wall
+                kick = -1; // we need to move the piece to the left
+            }
+            else {
+                // it's the left wall
+                kick = 1; // we need to move the piece to the right
+            }
+        }
+        
+        if (!collision(kick,0,nextPattern)){
+            piecefill(background_color_global);
+            position_x_global += kick;
+            current_brick_globalN = (current_brick_globalN + 1)%current_brick_global.length; // (0+1)%4 => 1
+            current_brick_pattern_global = current_brick_global[current_brick_globalN];
+            piecefill(current_brick_color_global);
+        }
+                
+        dropStart_global = Date.now();
+    }
+    else if (cstype == 39){
+        //moveRight
+        if (!collision(1,0,current_brick_pattern_global)){
+            piecefill(background_color_global);
+            position_x_global++;
+            piecefill(current_brick_color_global);
+            blstat=true;
+        }
+            
+        dropStart_global = Date.now();
+    }
+    else if (cstype == 40){
+        moveDown();
+    }
+    else if (cstype == 'bottom'){
+        while (moveDown()){}
+    }
+    else if (cstype == 'leftmost'){
+        while (move_brick(37)){}
+    }
+    else if (cstype == 'rightmost'){
+        while (move_brick(39)){}
+    }    
+    return blstat;
+}
+
+// draw a square_size_globaluare
+function drawsquare(canvasobj,x,y,cscolor){
+    canvasobj.fillStyle = cscolor;
+    canvasobj.fillRect(x*square_size_global,y*square_size_global,square_size_global,square_size_global);
+
+    canvasobj.strokeStyle = "black";
+    canvasobj.strokeRect(x*square_size_global,y*square_size_global,square_size_global,square_size_global);
+}
+
+function piece_4_patterns(cslist){
+    function sub_piece_4_patterns_1(cslist){
+        var rows=cslist.length;
+        var cols=cslist[0].length;
+        var list_t=[];
+        for (let blxl=0; blxl<cols;blxl++){
+            var new_row=[];
+            var blxl2=rows-1;
+            while (blxl2>=0){
+                new_row.push(cslist[blxl2][blxl]);
+                blxl2=blxl2-1;
+            }
+            list_t.push(new_row);
+        }
+        return list_t;
+    }
+    var list1=sub_piece_4_patterns_1(cslist);
+    var list2=sub_piece_4_patterns_1(list1);
+    var list3=sub_piece_4_patterns_1(list2);
+    return [cslist,list1,list2,list3];
+}
+
+function array_mirror(cslist){
+    var list_t=[];
+    for (let item of cslist){
+        var new_row=item.reverse();
+        list_t.push(new_row);
+    }
+    return list_t;
+}
+
+function pattern_list_generator(){
+    if (pattern_list_global.length>=10){return;}
+    function sub_pattern_list_generator_one(){
+        if (Math.random()>0.5){
+            piece_types_global.sort(function (a,b){return Math.random()>0.5;});
+            switch (piece_types_global[0]){
+                case "I":
+                    var selected_brick = [
+                    [0, 0, 0, 0],
+                    [1, 1, 1, 1],
+                    [0, 0, 0, 0],
+                    [0, 0, 0, 0],
+                    ];
+                    break;
+                case "L":
+                    var selected_brick = [
+                    [0, 0, 1],
+                    [1, 1, 1],
+                    [0, 0, 0]
+                    ];
+                    break;
+                case "O":
+                    var selected_brick = [
+                    [0, 0, 0, 0],
+                    [0, 1, 1, 0],
+                    [0, 1, 1, 0],
+                    [0, 0, 0, 0],
+                    ];
+                    break;
+                case "T":
+                    var selected_brick = [
+                    [0, 1, 0],
+                    [1, 1, 1],
+                    [0, 0, 0]
+                    ];
+                    break;
+                case "Z":
+                    var selected_brick = [
+                    [1, 1, 0],
+                    [0, 1, 1],
+                    [0, 0, 0]
+                    ];
+                    break;
+            }
+        }
+        else {
+            var rnd_row_col=Math.max(2,Math.floor(Math.random() * 4));
+            var selected_brick =[];
+            var count1=0;
+            for (let blxl=0;blxl<rnd_row_col;blxl++){
+                selected_brick[blxl]=[];
+                for (let blxl2=0;blxl2<rnd_row_col;blxl2++){
+                    if (Math.random()>0.5){
+                        selected_brick[blxl].push(1);
+                        count1=count1+1;
+                    }
+                    else {
+                        selected_brick[blxl].push(0);
+                    }
+                }
+            }
+            if (count1==0){
+                selected_brick[0][0]=1;
+            }
+        }
+
+        if (Math.random()>0.5){
+            selected_brick=array_mirror(selected_brick);
+        }
+        
+        var piece4 = piece_4_patterns(selected_brick);
+        var piece4_no = Math.floor(Math.random() * piece4.length);
+        if (Math.random()>0.5){
+            var piece4_color=rnd_margin_color_b();
+        }
+        else {
+            var piece4_color=rndcolor_light_b(0.4,0.4);
+        }
+        return [piece4,piece4_no,piece4_color];
+    }
+    for (let blxl=0;blxl<10;blxl++){
+        pattern_list_global.push(sub_pattern_list_generator_one());
+    }
+}
+
+//--------------------
+const piece_types_global = ['Z', 'T', 'O', 'L', 'I'];
+const square_size_global = 20;
+const rows_global = Math.ceil(window.innerHeight/square_size_global)-8; //20
+const cols_global = Math.ceil(window.innerWidth/square_size_global)-6; //10
+
+const background_color_global = "white";
+
+var current_brick_global;
+var current_brick_globalN;
+var current_brick_pattern_global;
+var current_brick_color_global;
+var position_x_global;
+var position_y_global;
+var score_global = 0;
+
+document.write('<table align=center width=100% height=1>');
+document.write('<tr><td width=80% align=right valign=top>');
+document.write('\n<canvas id="tetris" width="'+square_size_global*cols_global+'" height="'+square_size_global*rows_global+'"><\/canvas>\n');
+document.write('<\/td><td width=20% align=left valign=top>\n');
+document.write('\n<canvas id="tetris_next" width="'+square_size_global*4+'" height="'+square_size_global*(4+1)*3+'"><\/canvas>\n');
+</script>
+</td></tr>
+<tr><td height=1 align=center>
+<p style="margin-top:0.5rem;"><button class="button_tetris" onclick="javascript:move_brick('leftmost');">↞</button><button class="button_tetris" onclick="javascript:move_brick(38);">↑</button><button class="button_tetris" onclick="javascript:move_brick('rightmost');">↠</button></p>
+<p style="margin-top:0.5rem;margin-bottom:0.2rem;"><button class="button_tetris" onclick="javascript:move_brick(37);">←</button><button class="button_tetris" onclick="javascript:move_brick(40);">↓</button><button class="button_tetris" onclick="javascript:move_brick('bottom');">↡</button><button class="button_tetris" onclick="javascript:move_brick(39);">→</button></p>
+</td>
+</table>
+<div id="div_score" style="font-size:1rem;">0</div>
+<script language="javascript">
+const ctx = document.getElementById("tetris").getContext("2d");
+const ctx_next = document.getElementById("tetris_next").getContext("2d");
+const scoreElement = document.getElementById("div_score");
+var pattern_list_global=[];
+// create the board
+let board = [];
+for(let r = 0; r <rows_global; r++){
+    board[r] = [];
+    for(let c = 0; c < cols_global; c++){
+        board[r][c] = background_color_global;
+    }
+}
+
+let board_next = [];
+for(let r = 0; r <(4+1)*3; r++){
+    board_next[r] = [];
+    for(let c = 0; c < 4; c++){
+        board_next[r][c] = background_color_global;
+    }
+}
+
+randomPiece();
+
+document.addEventListener("keydown",key_control);
+
+// drop the piece every 1sec
+var dropStart_global = Date.now();
+var gameOver_global = false;
+
+drop();
+</script>
+<script type="text/javascript">
+track_source_b('tetris',false);
+</script>
+</body>
+</html>

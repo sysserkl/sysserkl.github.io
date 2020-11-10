@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>🃏 poker24</title>
+<SCRIPT language=JavaScript src="../hard_ln_io/klbase.js"></SCRIPT>
+<script language="javascript">
+klbase_addons_import_js_b(['css','en_de_str','poker']);
+</script>
+<script language="javascript">
+//history
+//0.0.1-20200104
+//-----------------------
+var scheme_global={};
+scheme_generation_b();
+css_root_style_b('18','13',['base']);
+var poker_24_global=[0,0,0,0];
+var result_global='';
+var calculate_times_global=0;
+var calculate_number_global=24;
+</script>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+</head>
+<body>
+<script language="javascript">
+function number_poker24(israndom=true){
+    for (let blxl=0;blxl<poker_24_global.length;blxl++){
+        if (israndom){
+            poker_24_global[blxl]=randint_b(1,15);
+        }
+        var bljg=number_poker_b(poker_24_global[blxl],'random')+'&nbsp;';
+        document.getElementById('td_24_'+(blxl+1)).innerHTML=bljg;
+    }
+}
+
+function init_poker24(israndom=true){
+    //poker_24_global=[0,0,0,0];
+    result_global='';
+    calculate_times_global=0;
+    
+    var list_t=['table_24','div_content'];
+    for (let blid of list_t){
+	    var blitem=document.getElementById(blid);
+	    if(blitem){
+            blitem.parentNode.removeChild(blitem);
+        }
+    }
+    
+    var blheight=document_body_offsetHeight_b();
+    var bljg='<table id="table_24" width=100%>';
+    bljg=bljg+'<tr>';
+    bljg=bljg+'<td id="td_24_1" align=center valign=middle></td>';
+    bljg=bljg+'<td id="td_24_2" align=center valign=middle></td>';
+    bljg=bljg+'</tr><tr>';
+    bljg=bljg+'<td id="td_24_3" align=center valign=middle></td>';
+    bljg=bljg+'<td id="td_24_4" align=center valign=middle></td>';
+    bljg=bljg+'</tr>';
+    bljg=bljg+'</table>';
+    bljg=bljg+'<div id="div_content">'
+    bljg=bljg+'<p align=center><a class="aclick" href="javascript:void(null);" onclick="javascript:show_result_poker24();">答案</a>';
+    bljg=bljg+'<a class="aclick" href="javascript:void(null);" onclick="javascript:init_poker24();">New Game</a>';
+    bljg=bljg+'<a class="aclick" href="javascript:void(null);" onclick="javascript:input_poker24();">input</a></p>';    
+    bljg=bljg+'<p align=center id="p_result">&nbsp;</p>';
+    bljg=bljg+'</div>';
+    document.querySelector('body').insertAdjacentHTML('afterbegin',bljg);
+    number_poker24(israndom);
+    
+    var odiv=document.getElementById('div_content');
+    var rect = odiv.getBoundingClientRect();
+    document.getElementById('table_24').style.height=(blheight-rect.height-10)+'px';
+}
+
+function show_result_poker24(){
+    function sub_show_result_poker24_generator(){
+        var t0=0;
+        var t1=0;
+        if (result_global==''){
+            t0 = performance.now();
+            calculate_poker24(poker_24_global);
+            if (result_global==''){
+                result_global='无结果';
+            }
+            t1 = performance.now();
+        }
+        document.getElementById("p_result").innerHTML=result_global+' 计算次数：'+calculate_times_global+(t1-t0==0?'':'; 费时：'+(t1 - t0) + " milliseconds");
+    }
+    //-----------------
+    document.getElementById("p_result").innerHTML='计算中...';
+    setTimeout(sub_show_result_poker24_generator,10);
+}
+
+function input_poker24(csnumber=''){
+    if (csnumber==''){
+        var csnumber=prompt('输入计算的数字，以逗号或空格隔开') || '';
+    }
+    
+    csnumber=csnumber.replace(new RegExp(/[,，]/,'g'),' ');
+    while (true){
+        if (csnumber.includes('  ')){
+            csnumber=csnumber.replace(new RegExp(/  /,'g'),' ');
+        }
+        else {break;}
+    }
+    poker_24_global=csnumber.trim().split(' ');
+    init_poker24(false);
+}
+
+function calculate_2_poker24(cslist){
+    if (cslist.length<2){return cslist;}
+    var list_t=[];
+    var right_part_list=cslist.slice(2,);
+    var blleft='(';
+    var blright=')';
+    if (cslist.length==2){
+        blleft='';
+        blright='';
+    }
+    list_t.push([blleft+cslist[0]+'+'+cslist[1]+blright].concat(right_part_list));
+    list_t.push([blleft+cslist[0]+'-'+cslist[1]+blright].concat(right_part_list));
+    list_t.push([blleft+cslist[0]+'*'+cslist[1]+blright].concat(right_part_list));
+    list_t.push([blleft+cslist[0]+'/'+cslist[1]+blright].concat(right_part_list));
+    list_t.push([blleft+cslist[0]+'**'+cslist[1]+blright].concat(right_part_list));
+    
+    return list_t;
+}
+
+function calculate_poker24(cslist){
+    calculate_times_global=calculate_times_global+1;
+    if (result_global!==''){return [];}
+    if (calculate_times_global>10000){return [];}
+    if (cslist.length<2){return cslist;}
+    var list_t=permutator_b(cslist);
+    //减少元素 - 保留注释
+    var blresult=[];
+    for (let item of list_t){
+        blresult=blresult.concat(calculate_2_poker24(item));
+    }
+    
+    for (let item of blresult){
+        if (item.length==0){continue;}
+        else if (item.length==1){
+            try {
+                var blvalue=eval(item[0]).toFixed(3);
+                if (blvalue==calculate_number_global+".000"){
+                    result_global=item[0]+'='+calculate_number_global;
+                    break;
+                }
+            }
+            catch (error) {
+                //do nothing
+            }
+        }
+        else {
+            calculate_poker24(item);
+        }
+    }
+}
+
+function args_poker24(){
+    var cskeys=href_split_b(location.href);
+    var dosomething=false;
+    if (cskeys.length>0){
+       for (let item of cskeys){
+            if (item.substring(0,2)=='c='){
+                calculate_number_global=parseInt(item.substring(2,).trim());
+            }
+            else if (item.substring(0,2)=='n='){
+                input_poker24(item.substring(2,).trim());
+                dosomething=true;
+            }
+       }
+    }
+    if (dosomething==false){
+        init_poker24();
+    }
+}
+//-------------
+args_poker24();
+track_source_b('poker24',false);
+</script>
+</body>
+</html>

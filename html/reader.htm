@@ -1,0 +1,137 @@
+<html>
+<head>
+<title>Reader</title>
+<meta charset="UTF-8" />
+<SCRIPT language=JavaScript src="../hard_ln_io/klbase.js"></SCRIPT>
+<script language="javascript">
+klbase_addons_import_js_b(['css','date','books','eng','en_de_str','wiki','txtlistsearch'],[],['words/enwords_data.js','words/cnwords_data.js,defer']);
+</script>
+<script language="javascript">
+load_current_book_b();
+</script>
+<SCRIPT language=JavaScript src="../hard_ln_io/enwords_book.js"></SCRIPT>
+<script language="javascript">
+add_tag_for_marked_books_kltxt_b();
+books_init_b();
+var scheme_global={};
+scheme_generation_b();
+css_root_style_b('17','14',['base','menu'],[],1);
+if (ismobile_b()){
+    var line_height_global=180;
+}
+else {
+    var line_height_global=180;
+}
+var show_all_books_global=false;
+</script>
+<style>
+.txtsearch_kltxt_lineno {color:#707070;font-size:0.8rem}
+i {border-bottom:0.15rem dashed tomato;}
+</style>
+<link rel="shortcut icon" href="reader_ico/reader256.png" />
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+</head>
+<body>
+<a name=top></a>
+<h2 style="margin-top:0px;"><span id="span_title" onclick="javascript:showhide_kltxt_b();" style="cursor:pointer;">Reader</span> - <span id=booktitle></span><span id=readingdata></span></h2>
+<div id='div_show_hide' style="display:block;margin:0rem 0.5rem;">
+<!--history
+0.0.1-20190628
+-->
+<script type="text/javascript">
+var klwiki_syntaxhighlight_global=false;
+var book_tag_global='all';
+
+mobile_style_kltxt_b();
+</script>
+
+<script type="text/javascript">
+var cskeys=href_split_b(location.href);
+var csbookname_global='';
+import_book_kltxt_b(cskeys);
+</script>
+<script type="text/javascript">
+digest_temp_load_kltxt_b();
+decode_and_create_menu_kltxt_b();
+var kltxt_menulist_index_global=[];
+menu_all_only_one_kltxt_b();
+</script>
+<p style="line-height:150%;"><span class="span_link" onclick="javascript:show_all_books_global=!show_all_books_global;books_b(show_all_books_global,'txt',book_tag_global);"><b>书籍选择</b></span> <a href="?&line=0_0">随机</a> <span id="span_book_category"></span> <span id=booklinks></span></p>
+
+<p><input type="text" id="input_search" onkeyup="javascript:if (event.key=='Enter'){search_klreader();}">
+<input type="checkbox" id="input_reg"><label for="input_reg">正则</label>
+<span class="aclick" onclick="javascript:search_klreader();">内容搜索</span>
+<span class="aclick" onclick="javascript:booksearch_kltxt_b();">书目</span>
+<input type="checkbox" id="input_highlight" checked><label for="input_highlight">关键字加亮</label>
+<input type="checkbox" id="input_digest" checked><label for="input_digest">显示摘要</label>
+<SELECT id="select_menu" style="max-width:15rem;" onchange="javascript:findmenu_kltxt_b(this.value);"> 
+</SELECT>
+</p>
+<div id="div_recent_search" style="line-height:1.8rem;"></div>
+</div>
+<div id="div_cn_words"></div>
+<a name=content></a>
+<input type="number" id="input_lineno" style="display:none;" value=1>
+<input type="number" id="input_lines" style="display:none;" value=20>
+<input type="checkbox" id="check_hide_no" checked style="display:none;"><!--隐藏序号-->
+<input type="checkbox" id="check_hide_lineno" checked style="display:none;"><!--隐藏行号-->
+<input type="checkbox" id="check_klwiki_format" checked style="display:none;"><!--KLWiki format-->
+</p>
+
+<div id="divhtml"></div>
+<div id="divhtml2"></div>
+<script type="text/javascript">
+input_with_x_b('input_search',15);
+
+txtmenus_kltxt_b('reader');
+book_category_b('span_book_category',['演义','圣经','KLWiki'],book_tag_global);
+//--------------------------
+function search_klreader(csstr=''){
+    var ocheck=document.getElementById('check_hide_lineno');
+    ocheck.checked=false;
+    if (csstr==''){
+        txtsearch_kltxt_b();
+    }
+    else {
+        txtsearch_kltxt_b(csstr);
+    }
+    ocheck.checked=true;
+}
+//-----------------
+for (let bltmpstr of cskeys){
+	bltmpstr=bltmpstr.trim();
+	if (bltmpstr.substring(0,5)=='line='){
+		var blno_lines=bltmpstr.substring(5).split('_'); //30_20
+		if (blno_lines.length>1){
+            getlines_kltxt_b(parseInt(blno_lines[0]), parseInt(blno_lines[1]));
+        }
+		else{
+            getlines_kltxt_b(parseInt(blno_lines[0]));
+        }
+		break;
+	}
+}
+if (cskeys.length==1 && (cskeys[0]=='' || cskeys[0].substring(0,4)=='_tag')){
+    getlines_kltxt_b();
+}
+
+books_b(false,'txt',book_tag_global);
+create_menulist_kltxt_b();
+if (csbookname_global=='klwiki_en'){
+    en_lines_days_kltxt_b();
+}
+recent_search_kltxt_b('',true);
+</script>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div id="div_top_bottom"></div>
+<a name=footer></a>
+<script type="text/javascript">
+top_bottom_arrow_b('div_top_bottom','',true,(ismobile_b()?'1.7rem':'1.4rem'));
+track_source_b('reader',false);
+if (!is_firefox_b(false)){
+    blank_page_b(false);
+}
+</script>
+</body>
+</html>

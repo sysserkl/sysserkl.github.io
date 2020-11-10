@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>GPS Points</title>
+<SCRIPT language=JavaScript src="../hard_ln_io/klbase.js"></SCRIPT>
+<SCRIPT language=JavaScript src="gps_points_code.js"></SCRIPT>
+<script language="javascript">
+var gpx_pb_global=[];
+var gpx_kl_global=[];
+klbase_addons_import_js_b(['css','date','en_de_str','leaflet'],['leaflet/leaflet.css','leaflet/leaflet.js','leaflet_plugins/leaflet.ChineseTmsProviders.js'],['gpx_pb_data.js']);
+</script>
+<SCRIPT language=JavaScript src="../../../../data/gpx_kl_data.js"></SCRIPT>
+<script language="javascript">
+var scheme_global={};
+scheme_generation_b();
+css_root_style_b('17','11',['base','menu'],[],1);
+</script>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+</head>
+<body>
+<!--history
+0.0.5-20201110 增加 路线擦除
+0.0.4-20201109 增加 坐标转换
+0.0.3-20200903 增加 XMLHttpRequest 读取 txt 文件功能
+0.0.2-20200116
+0.0.1-20191112
+-->
+<div id="div_gps_points">
+<div id="div_icon" style="display:inline;font-size:2rem;cursor:pointer;" onclick="javascript:current_position_gps_points();"></div>
+<div id="div_status" style="display:inline;font-size:2rem;cursor:pointer;" onclick="javascript:show_hide_textarea_gps_points();"></div> 
+<div id="div_buttons" style="display:none;"></div>
+</div>
+<div id="div_map"></div>
+<div id="div_gpx_file_selection" style="display:none;line-height:2rem;padding:2rem;"></div>
+<script language="javascript">
+var klmaps_global=[];
+var omap_gps_points_global;
+init_gps_points();
+</script>
+</body>
+</html>

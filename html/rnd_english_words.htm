@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>随机单词</title>
+<meta charset="UTF-8" />
+<SCRIPT language=JavaScript src="../hard_ln_io/klbase.js"></SCRIPT>
+<script language="javascript">
+klbase_addons_import_js_b(['css','date','en_de_str','wiki','eng'],[],['words/enwords_data.js','words/enwords_sentence_data.js']);
+</script>
+<SCRIPT language=JavaScript src="../hard_ln_io/enwords_book.js"></SCRIPT>
+<SCRIPT language=JavaScript src="../hard_ln_io/enwords_exam.js"></SCRIPT>
+<SCRIPT language=JavaScript src="rnd_english_words.js"></SCRIPT>
+<link rel="manifest" href="rnd_english_words.webmanifest">
+<script type="text/javascript">
+var scheme_global={};
+scheme_generation_b();
+css_root_style_b('18','15',['base','menu']);
+enwords_init_b();
+var en_words_temp_global;
+var ismobile_global=ismobile_b();
+en_word_temp_get_b();
+var slide_no_rndwords_global=0;
+var slide_do_rndwords_global;
+var words_temp_arr_global=[];
+var slide_interval_seconds_rndwords_global=8;
+</script>
+<link href="../recent_info.css" type="text/css" rel="stylesheet">
+<style>
+div.link_title{margin: 1rem;padding:0.8rem;}
+div#div_recent_search p{line-height:1.6rem;}
+</style>
+<link rel="shortcut icon" href="rnd_english_words_ico/english_words64.png" />
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+</head>
+<body>
+<a name="top"></a>
+<div id="div_menu_buttons">
+<h2 style="margin:0rem;font-size:1.3rem;" id="h2_title"><span id="span_title" onclick="javascript:exam_rndwords(true);document.getElementById('input_eng_search').value='';search_rndwords();" style="cursor:pointer;">随机单词</span></h2>
+<div id="div_rnd_enwords_buttons" style="margin-left:1.5rem;margin-top:1.5rem;">
+<input type="text" name="input_eng_search" id="input_eng_search" placeholder="单词搜索" onkeyup="javascript:if (event.key=='Enter'){search_rndwords();}" />
+</div>
+<div id="div_recent_search" style="margin-left:1rem;margin-top:0.5rem;"></div>
+</div>
+<div id="div_exam_buttons"></div>
+<div id="divhtml"></div>
+<div id="div_top_bottom"></div>
+<script type="text/javascript">
+klwiki_syntaxhighlight_global=false;
+top_bottom_arrow_b('div_top_bottom','',false,(ismobile_global?'1.6rem':'1.5rem'));
+input_with_x_b('input_eng_search',16);
+
+// Register service worker to control making site work offline
+if('serviceWorker' in navigator) {
+    navigator.serviceWorker
+        .register('rnd_english_words_service_worker.js')
+        .then(function() { 
+            document.getElementById('span_title').style.color=scheme_global["a"];
+        });
+}
+else {
+    document.getElementById('span_title').style.color=scheme_global["color"]; //Service Worker not work - 保留注释;
+}
+//-----------
+menu_rndwords();
+args_rndwords();
+</script>
+<!--history
+0.0.5-20200418 支持 PWA
+0.0.4-20200224 增加每日旧单词搜索
+0.0.3-20200223 增加菜单，增加最近搜索
+0.0.2-20200110
+0.0.1-20190805
+-->
+<script type="text/javascript">
+track_source_b('rndwords',false);
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="Python">
+<trk><name>黄龙洞至宝石山</name>
+<trkseg>
+<trkpt lat="30.264700" lon="120.138412"></trkpt>
+<trkpt lat="30.263408" lon="120.138566"></trkpt>
+<trkpt lat="30.262222" lon="120.138599"></trkpt>
+<trkpt lat="30.261614" lon="120.138117"></trkpt>
+<trkpt lat="30.261238" lon="120.137982"></trkpt>
+<trkpt lat="30.260694" lon="120.137191"></trkpt>
+<trkpt lat="30.260075" lon="120.136373"></trkpt>
+<trkpt lat="30.259478" lon="120.135736"></trkpt>
+<trkpt lat="30.258870" lon="120.135347"></trkpt>
+<trkpt lat="30.258447" lon="120.135260"></trkpt>
+<trkpt lat="30.257816" lon="120.135233"></trkpt>
+<trkpt lat="30.257565" lon="120.135635"></trkpt>
+<trkpt lat="30.257696" lon="120.135998"></trkpt>
+<trkpt lat="30.258632" lon="120.136822"></trkpt>
+<trkpt lat="30.258801" lon="120.137627"></trkpt>
+<trkpt lat="30.257950" lon="120.137694"></trkpt>
+<trkpt lat="30.257904" lon="120.137745"></trkpt>
+<trkpt lat="30.257440" lon="120.137433"></trkpt>
+<trkpt lat="30.257695" lon="120.137997"></trkpt>
+<trkpt lat="30.257735" lon="120.138322"></trkpt>
+<trkpt lat="30.258365" lon="120.139176"></trkpt>
+<trkpt lat="30.258528" lon="120.139712"></trkpt>
+<trkpt lat="30.258975" lon="120.140463"></trkpt>
+<trkpt lat="30.259281" lon="120.141202"></trkpt>
+<trkpt lat="30.258840" lon="120.141683"></trkpt>
+<trkpt lat="30.259115" lon="120.142501"></trkpt>
+<trkpt lat="30.259692" lon="120.142527"></trkpt>
+<trkpt lat="30.259875" lon="120.144653"></trkpt>
+<trkpt lat="30.260540" lon="120.146721"></trkpt>
+<trkpt lat="30.261039" lon="120.148171"></trkpt>
+<trkpt lat="30.260891" lon="120.148491"></trkpt>
+<trkpt lat="30.260975" lon="120.148906"></trkpt>
+<trkpt lat="30.260814" lon="120.149265"></trkpt>
+<trkpt lat="30.260356" lon="120.149494"></trkpt>
+<trkpt lat="30.260567" lon="120.151401"></trkpt>
+<trkpt lat="30.260262" lon="120.152729"></trkpt>
+<trkpt lat="30.260619" lon="120.153711"></trkpt></trkseg>
+</trk>
+</gpx>

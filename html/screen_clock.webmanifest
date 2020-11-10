@@ -1,0 +1,25 @@
+{
+  "background_color": "Tomato",
+  "description": "KL Screen Clock",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "screen_clock_ico/clock512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "screen_clock_ico/clock128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "screen_clock_ico/clock64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }
+  ],
+  "name": "KL Screen Clock",
+  "short_name": "KL Clock",
+  "start_url": "screen_clock.htm"
+}
