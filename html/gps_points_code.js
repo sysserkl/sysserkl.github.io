@@ -319,7 +319,7 @@ function circle_gps_points(csstr,dotransform=true,layertype='navigation',dopanto
     }
 }
 
-function rectangle_gps_points(csstr){
+function rectangle_gps_points(csstr,dotransform=true,layertype='navigation',dopanto=true){
     //格式：lon,lat,longlinexshortline,color;lon,lat,longlinexshortline,color; - 保留注释
     var list_t=csstr.split(';');
     var blcolor='red';
@@ -342,15 +342,27 @@ function rectangle_gps_points(csstr){
             
             var lon = parseFloat(onerect[0]);
             var lat  = parseFloat(onerect[1]);
-            [lon,lat]=transform_lon_lat_gps_points(bltype,lon,lat);            
+            if (dotransform){
+                [lon,lat]=transform_lon_lat_gps_points(bltype,lon,lat);            
+            }
             
-            navigation_layer_gps_global.addLayer(rectangle_leaflet_b(omap_gps_points_global,true,lon,lat,longline,shortline,blcolor));
+            var orectangle=rectangle_leaflet_b(omap_gps_points_global,true,lon,lat,longline,shortline,blcolor);
+            if (layertype=='navigation'){
+                navigation_layer_gps_global.addLayer(orectangle);
+            }
+            else if (layertype=='current'){
+                current_position_layer_gps_global.addLayer(orectangle);
+            }            
         }
 
         var lon = parseFloat(onerect[0]);
         var lat  = parseFloat(onerect[1]);
-        [lon,lat]=transform_lon_lat_gps_points(bltype,lon,lat);           
-        omap_gps_points_global.panTo(new L.LatLng(lat,lon));
+        if (dotransform){
+            [lon,lat]=transform_lon_lat_gps_points(bltype,lon,lat);           
+        }
+        if (dopanto){
+            omap_gps_points_global.panTo(new L.LatLng(lat,lon));
+        }
     }
 }
 
@@ -376,7 +388,7 @@ function current_position_gps_points(){
 
         current_layer_refresh_gps_points();
         current_position_layer_gps_global.addLayer(L.marker([lat,lon]));
-        circle_distance_gps_points(lat,lon);
+        circle_distance_show_gps_points(lat,lon);
     },
     function (){
         document.getElementById('div_status').innerHTML='Unable to retrieve your location';        
@@ -441,16 +453,45 @@ function init_gps_points(){
     omap_gps_points_global.addEventListener('click', function(ev) {
         document.getElementById('div_status').innerHTML=' lng: '+ev.latlng.lng+', lat: '+ev.latlng.lat;
         current_layer_refresh_gps_points();        
-        circle_distance_gps_points(ev.latlng.lng,ev.latlng.lat);
+        circle_distance_show_gps_points(ev.latlng.lng,ev.latlng.lat);
        //以下2行保留注释
        //var latlon=omap_gps_points_global.getCenter();
        //document.getElementById('div_status').innerHTML=latlon["lng"]+','+latlon["lat"];
     });
 }
 
-function circle_distance_gps_points(cslon,cslat){
+function circle_distance_settings_gps_points(show_prompt=true){
+    var default_value='100,blue;200,green;300,red;1000,blue;2000,green;3000,red';
+    var blstr=local_storage_get_b('circle_distance_gps_points');
+    if (blstr==''){
+        blstr=default_value;
+    }
+    if (show_prompt){
+        var newstr=(prompt('输入距离圈设置，格式：xxx米,颜色1;yyy米,颜色2; 如：100,red;200,blue\n输入 默认 则返回默认值：',blstr) || '').trim();
+        if (newstr==''){
+            return blstr;
+        }
+        if (newstr=='默认'){
+            newstr=default_value;
+        }
+        blstr=newstr;
+    }
+    localStorage.setItem('circle_distance_gps_points',blstr);
+    return blstr;
+}
+
+function circle_distance_show_gps_points(cslon,cslat){
     if (klmenu_check_b('span_show_circle',false)===false){return;}
-    circle_gps_points(cslon+','+cslat+',100,blue;'+cslon+','+cslat+',200,green;'+cslon+','+cslat+',300,red;'+cslon+','+cslat+',1000,blue;'+cslon+','+cslat+',2000,green;'+cslon+','+cslat+',3000,red',false,'current',false);
+    var list_t=circle_distance_settings_gps_points(false).split(';')
+    for (let blxl=0;blxl<list_t.length;blxl++){
+        list_t[blxl]=cslon+','+cslat+','+list_t[blxl];
+    }
+    if (klmenu_check_b('span_is_rectangle',false)){
+        rectangle_gps_points(list_t.join(';'),false,'current',false);
+    }
+    else {
+        circle_gps_points(list_t.join(';'),false,'current',false);
+    }
 }
 
 function read_txt_file_gps_points(fname,cstype){ 
@@ -546,7 +587,9 @@ function menu_gps_points(){
     var klmenu2=[
     '<span class="span_menu" onclick="javascript:'+str_t+'help_gps_points();">Help</span>',
     '<span id="span_gpx_2_latlon" class="span_menu" onclick="javascript:'+str_t+'klmenu_check_b(this.id);">⚪ 转换gpx为纬度,经度点</span>',
-    '<span id="span_show_circle" class="span_menu" onclick="javascript:'+str_t+'klmenu_check_b(this.id);current_layer_refresh_gps_points();">⚪ 显示距离圈</span>',    
+    '<span id="span_show_circle" class="span_menu" onclick="javascript:'+str_t+'klmenu_check_b(this.id);current_layer_refresh_gps_points();">⚪ 显示距离圈</span>',
+    '<span id="span_is_rectangle" class="span_menu" onclick="javascript:'+str_t+'klmenu_check_b(this.id);">⚪ 方形距离圈</span>',        
+    '<span class="span_menu" onclick="javascript:'+str_t+'circle_distance_settings_gps_points();">距离圈设置</span>',        
     ];
     document.getElementById('input_upload_gpx').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','16rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'⚙','16rem','1rem','1rem','60rem'),'','0rem')+' ');
 }
