@@ -1030,7 +1030,10 @@ function textarea_buttons_b(textarea_name,csbuttons,cstype='',csstyle=''){
     if (csbuttons.includes('全选')){
         bljg=bljg+'<span class="aclick"'+csstyle+' onclick="javascript:document.getElementById(\''+textarea_name+'\').select();">全选</span> ';
     }
-    if (csbuttons.includes('清空')){    
+    if (csbuttons.includes('清空编辑框')){    
+        bljg=bljg+'<span class="aclick"'+csstyle+' onclick="javascript:document.getElementById(\''+textarea_name+'\').value=\'\';">清空编辑框</span> ';
+    }    
+    else if (csbuttons.includes('清空')){    
         bljg=bljg+'<span class="aclick"'+csstyle+' onclick="javascript:document.getElementById(\''+textarea_name+'\').value=\'\';">清空</span> ';
     }
     if (csbuttons.includes('复制')){

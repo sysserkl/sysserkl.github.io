@@ -1,5 +1,9 @@
 var en_sentence_count_global=[
 ["interchangeably",0],
+["Michele",1],
+["baptismal",1],
+["overt",1],
+["chuse",1],
 ["heterogeneous",1],
 ["unprofitably",1],
 ["steadfastness",1],
@@ -95,8 +99,4 @@ var en_sentence_count_global=[
 ["crayon",1],
 ["craftsman",1],
 ["atheistic",1],
-["gaol",1],
-["atheist",1],
-["groundhog",1],
-["suckle",1],
 ];

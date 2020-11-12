@@ -1,5 +1,9 @@
 //单词库
 var enwords=[
+["ornamental", "[ˌɔː(r)nə'ment(ə)l]", "adj. 装饰的；装饰性的；点缀的；beautiful rather than useful; of value as an ornament; decorative; used as decoration rather than for a practical purpose; of, relating to, or serving as ornament, specifically: grown as an ornamental; (of a plant) used to decorate houses, gardens, etc; n. 装饰物；观赏植物；a decorative object, especially: a plant cultivated for its beauty rather than for use; a plant cultivated for show or decoration"],
+["eyelash", "[ˈaɪˌlæʃ]", "n. 睫毛；one of the hairs growing on the edge of the eyelids; the fringe of hair edging the eyelid —usually used in plural; a single hair of the eyelashes; n. 一发之差；发隙距离；极小的距离；hairbreadth"],
+["myopia", "[maɪ'əʊpiə]", "n. 近视；目光短浅；缺乏远见；the condition of being unable to see things clearly when they are far away; a condition in which the visual images come to a focus in front of the retina of the eye resulting especially in defective vision of distant objects: nearsightedness; inability to see distant objects clearly because the images are focused in front of the retina;  an abnormal eye condition in which light rays from distant objects are focused in front of the retina instead of on it, so that the objects are not seen distinctly; the state of being unable to see what the results of a particular action or decision will be; the failure to think about anything outside your own situation; lack of understanding or foresight; a lack of foresight or discernment; a narrow view of something"],
+["saliva", "[sə'laɪvə]", "n. 唾液；the liquid that is produced in your mouth that helps you to swallow food; a slightly alkaline secretion of water, mucin, protein, salts, and often a starch-splitting enzyme (such as ptyalin) that is secreted into the mouth by salivary glands, lubricates ingested food, and often begins the breakdown of starches"],
 ["vicinity", "[və'sɪnəti] [vɪ'sɪnəti] [vɪˈsɪnɪti]", "n. 附近；接近；挨近；临近；邻近；邻近地区；周边地区；周围地区；大约的程度或者数量；the area around a particular place; a surrounding area or district: neighborhood; n. an approximate amount, extent, or degree; the quality or state of being near: proximity"],
 ["Michele", "[mɪˈʃɛl]", "n. 米歇尔(女子名)；a female given name from Hebrew, anglicized form of Michèle, a French spelling variant of Michelle; n. a male given name"],
 ["Joe", "[dʒəʊ]", "n. (often: joe, (slang)):〈美口〉家伙；美国兵；fellow, guy; a man or fellow; soldier; n. Joe: a personification of a typical, often unprepossessing representative of an occupation, personality trait, state of being, etc., that is expressed, sometimes metonymically, as a mock surname; n. joe: coffee; brewed coffee; a beverage made by percolation, infusion, or decoction from the roasted and ground seeds of a coffee plant; n. Joe: 乔；a male given name, form of Joseph; a diminutive of the female given names Joanne or Josephine; n. Joe: (Informal): Joseph"],
@@ -1280,7 +1284,7 @@ var enwords=[
 ["brother-in-law", "['brʌðər ɪn lɔː]", "n. 内兄；内弟；大伯子；小叔子；姐夫；妹夫；the brother of your husband or wife; your sister's or brother's husband; the husband of your husband or wife's sister"],
 ["brotherly", "['brʌðərli]", "adj. 兄弟的；兄弟般的；亲切友好的；showing feelings of affection and kindness that you would expect a brother to show; adv. 兄弟一样地；亲密地；like or characteristic of a brother"],
 ["brought", "[brɔːt]", "v. 带来，拿来（动词bring的过去式和过去分词）"],
-["brown", "[braʊn]", "adj. 棕色的；褐色的；n. 褐色；棕色；v. （使）变褐色；Brown: n. 布朗(姓氏)"],
+["brown", "[braʊn]", "adj. 棕色的；褐色的；n. 褐色；棕色；v. （使）变褐色；n. Brown: 布朗(姓氏)"],
 ["brownish", "['braʊnɪʃ]", "adj. 带棕色的；近棕色的；带褐色的"],
 ["brownness", "[braʊnnɪz]", "n. 褐色；the quality or state of being brown"],
 ["browse", "[braʊz]", "v. 浏览；随意观看；吃草；n. 浏览；嫩叶"],
@@ -7704,7 +7708,7 @@ var enwords=[
 ["scapegoat", "['skeɪpɡəʊt]", "n. 替罪羊；替罪的羔羊；替人顶罪者；a goat upon whose head are symbolically placed the sins of the people after which he is sent into the wilderness in the biblical ceremony for Yom Kippur; one that bears the blame for others; a person who is blamed for something bad that somebody else has done or for some failure; one that is the object of irrational hostility; v. 使 ... 成为替罪羊；to blame somebody/something for a failure or for something bad that another person has done"],
 ["scare", "UK [skeə(r)] US [sker]", "v. 受惊吓；恐吓；吓走；n. 惊吓；惊恐"],
 ["scarf", "[skɑːrf]", "n. 围巾；头巾；披巾；a piece of cloth that is worn around the neck, for example for warmth or decoration. Women also wear scarves over their shoulders or hair.; a broad band of cloth worn about the shoulders, around the neck, or over the head; v. 用围巾[台布]围[盖]；围（围巾）；披（披巾）；to wrap, cover, or adorn with or as if with a scarf; v. 贪婪地吃；狼吞虎咽；to consume greedily; to eat something quickly and eagerly"],
-["scarlet", "['skɑːrlət]", "n. 猩红；绯红色；红布；(大主教、英国高等法院法官、英国队军军官等的)红衣；adj. 绯红色的；猩红的；鲜红的"],
+["scarlet", "['skɑːrlət]", "n. 猩红；绯红色；红布；(大主教、英国高等法院法官、英国队军军官等的)红衣；adj. 猩红的；绯红色的；鲜红的"],
 ["scar", "[skɑːr]", "n. 疤痕；伤痕；断崖；v. 结疤；痊愈"],
 ["scarves", "[skɑːrvz]", "n. 围巾；领巾；台巾；名词scarf的复数形式"],
 ["scary", "UK ['skeəri] US ['skeri]", "adj. 可怕的；容易受惊的；引起恐慌的；恐怖的；吓人的"],
