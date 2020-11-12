@@ -388,7 +388,7 @@ function current_position_gps_points(){
 
         current_layer_refresh_gps_points();
         current_position_layer_gps_global.addLayer(L.marker([lat,lon]));
-        circle_distance_show_gps_points(lat,lon);
+        circle_distance_show_gps_points(lon,lat);
     },
     function (){
         document.getElementById('div_status').innerHTML='Unable to retrieve your location';        
