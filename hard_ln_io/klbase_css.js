@@ -238,17 +238,21 @@ function checkbox_kl_value_b(csid){
         var ocheck=obj.getElementsByTagName('input')[0];
         if (ocheck){
             return ocheck.checked;
-        }
-        //if (obj.style.color=='grey'){
-            //return false;
-            ////ocheck.checked=true;
-        //}
-        //else {
-            //return true;
-            ////ocheck.checked=false;
-        //}        
+        }   
     }
     return false;
+}
+
+function klmenu_check_b(span_id,change_value=true){
+    var ospan=document.getElementById(span_id);
+    if (!ospan){return false;}
+    var blstr=ospan.innerText;
+    var blvalue=(blstr.indexOf('⚪')==0?false:true);
+    if (change_value){
+        blvalue=!blvalue;
+        ospan.innerText=(blvalue?'🔵':'⚪')+blstr.substring((blvalue?1:2),);
+    }
+    return blvalue;
 }
 
 function klmenu_b(csarray,menu_name='',min_width='',button_fontsize='',item_fontsize="",max_height='',cstitle=''){

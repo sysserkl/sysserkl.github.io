@@ -135,7 +135,7 @@ function one_chapter_emoji(startno=0){
 //--------------
 var scheme_global={};
 scheme_generation_b();
-css_root_style_b('18','30',['base']);
+css_root_style_b('18','11',['base']);
 </script>
 <style>
 #divhtml {margin:0.5rem 1rem;column-count: 2;}
@@ -147,6 +147,7 @@ if (mobile_global=='mobile'){
     document.write('\n<style>\ntd {font-size:1.5rem;}\n</style>\n');
 }
 </script>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 </head>
 <body style="margin:0.5rem;">
 <h2 style="margin:0.5rem 0rem;font-size:3rem;">🎁️emoji</h2>
@@ -189,7 +190,7 @@ else {
     search_emoji();
 }
 
-top_bottom_arrow_b('div_top_bottom');
+top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.4rem'));
 </script>
 <script type="text/javascript">
 track_source_b('emoji',false);
