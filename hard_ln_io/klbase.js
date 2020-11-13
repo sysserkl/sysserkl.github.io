@@ -1,3 +1,15 @@
+function ismobile_b(getstr=false){
+    var usera=navigator.userAgent.toLowerCase();
+    if (usera.includes('android') || usera.includes('mobile')){
+        if (getstr){
+            return 'mobile';
+        }
+        else {return true;}
+    }
+    if (getstr){return 'pc';}
+    else {return false;}
+}
+
 function is_local_b(){
     var blhost=location.host; 
     if (blhost.substring(0,4)=='192.' || blhost.substring(0,3)=='10.' || blhost.substring(0,9)=='127.0.0.1'){
@@ -1054,9 +1066,14 @@ function textarea_buttons_b(textarea_name,csbuttons,cstype='',csstyle=''){
 
 function klsofts_list_b(cstype='all'){
     var isfile=(location.href.substring(0,5)=='file:');
+    var ismobile=ismobile_b();
     var divlist=local_storage_get_b('common_softs',-1,true);
     for (let blxl=0;blxl<divlist.length;blxl++){
         divlist[blxl]=divlist[blxl].trim().split(',');
+        if (divlist[blxl].length==4 && divlist[blxl][3].includes('_')){
+            var list_t=divlist[blxl][3].split('_');
+            divlist[blxl][3]=(ismobile?list_t[1]:list_t[0]);
+        }
     }
     
     divlist.sort(function(a,b){return a[1].toLowerCase()>b[1].toLowerCase();});

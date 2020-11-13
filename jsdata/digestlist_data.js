@@ -7,6 +7,7 @@ var digestlist_source_global_b=[
 ["xi_you_ji_99175_digest",3],
 ["hong_lou_meng_86212_digest",3],
 ["jing_shi_tong_yan_127894_digest",1],
+["hei_an_shi_ke_xi_tldtsyncwhsxc_662171_digest",1],
 ["yu_shi_ming_yan_103391_digest",1],
 ["jin_yong_zuo_pin_ji_tlbbxdbq5_587006_digest",1],
 ["she_diao_ying_xiong_chuan_xdbq4_412432_digest",1],
@@ -20,5 +21,6 @@ var digestlist_source_global_b=[
 ["jin_yong_zuo_pin_ji_xajhxdbq4_573536_digest",1],
 ["li_xiang_guo_yi_cong_ddzzjjxjb2qsxlxflxsfszpjg7lxgcp_1094955_digest",1],
 ["zhong_guo_you_ji_jie_clzj_244884_digest",1],
+["xian_dai_xing_yu_da_tsqgmbm_335429_digest",1],
 ["jin_yong_zuo_pin_ji_sdxlxdbq4_575838_digest",1],
 ];
