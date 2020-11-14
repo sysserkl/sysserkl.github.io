@@ -1192,11 +1192,11 @@ function getlines_kltxt_b(csno=false,cslines=false,single=false){
             bljg=bljg+page_one_b(pages,(csno-1)/cslines+1,blxl,'onclick="javascript:getlines_kltxt_b('+((blxl-1)*cslines+1)+', '+cslines+');"',0,0,'span_page_number oblong_box');
         }
         bljg=page_remove_dot_b(bljg);
+        if (filelist.length<=2000){
+            bljg=bljg+'<span style="cursor:pointer;" class="oblong_box" onclick="javascript:getlines_kltxt_b(1,filelist.length,true);"><b>一页</b></span> ';
+        }        
         bljg=bljg+page_prev_next_b(pages,(csno-1)/cslines+1,' onclick="javascript:getlines_kltxt_b('+(csno-cslines)+', '+cslines+');"','onclick="javascript:getlines_kltxt_b('+(csno+cslines)+', '+cslines+');"',' onclick="javascript:page_kltxt_b('+pages+','+cslines+');"','oblong_box');
 
-        if (filelist.length<=2000){
-            bljg=bljg+'<span style="cursor:pointer;" class="oblong_box" onclick="javascript:getlines_kltxt_b(1,filelist.length,true);"><b>一页</b></span>';
-        }
         bljg='<p align=right style="font-size:0.9rem;line-height:1rem;">'+bljg+'</p>';
 
         return bljg;    
@@ -1598,7 +1598,7 @@ function format_lines_kltxt_b(cslist,csstyle='',csaname=-1){
             }
             if (csklwiki_format){
                 blstr=wiki_line_b(blstr,remote_host+'/wikiuploads/');
-            }
+            }            
         }
         if (csbooklist_sub_global_b[csbookno_global_b][1]=='圣经和合本' || csbooklist_sub_global_b[csbookno_global_b][1]=='Bible(kjv)'){
             blstr=sub_format_lines_kltxt_b_bible(blstr);

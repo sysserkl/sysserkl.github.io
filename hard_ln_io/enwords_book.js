@@ -21,7 +21,7 @@ function args_enbook(){
                     csbookno2_global_b=parseInt(list_t[1])-1;
                 }
                 books_b(true,'eng','englishwords');
-                import_book_js_b();
+                import_book_js_b(false);
                 break;
             }
         }

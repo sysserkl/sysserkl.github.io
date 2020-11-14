@@ -14,7 +14,7 @@ var csbooklist_source_global_b=[
 ["er_shi_nian_mu_du_zgxzwjr_308350","二十年目睹之怪现状(吴趼人)","","3",""],
 ["bible_kjv_890","Bible(kjv)","englishwords,圣经","3",""],
 ["the_war_of_the_worlds_whg_2795","The War of the Worlds(Wells,H. G.)","englishwords,幻想","3",""],
-["a_princess_of_mars_1616","A Princess of Mars","englishwords","3",""],
+["a_princess_of_mars_1616","A Princess of Mars","englishwords,已整理","3",""],
 ["a_journey_to_the_centre_ote_3228","A Journey to the Centre of the Earth","englishwords","3",""],
 ["jean_christophe_volume_i_mian_fgbs_129538","Jean-Christophe, Volume I, by Romain Rolland","englishwords","3",""],
 ["the_time_machine_1445","The Time Machine","englishwords,幻想","3",""],

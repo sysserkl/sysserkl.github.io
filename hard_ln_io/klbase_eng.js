@@ -297,15 +297,15 @@ function sup_kleng_words_b(){
 	var o_sups=document.querySelectorAll('sup.kleng');
 	if (o_sups.length==0){return;}
 
-	for (let blxl in o_sups){
-        var word_t=o_sups[blxl].innerHTML;
+	for (let one_sup of o_sups){
+        var word_t=one_sup.innerHTML;
         if (!word_t){
             continue;
         }
         if (word_t.substring(0,1)=='"' && word_t.slice(-1)=='"'){
             word_t=word_t.slice(1,-1);
         }
-        if (o_sups[blxl].style && o_sups[blxl].style.color=='blue'){
+        if (one_sup.style && one_sup.style.color=='blue'){
             var supcolor='blue';
         }
         else {
@@ -313,7 +313,7 @@ function sup_kleng_words_b(){
         }
         for (let item of enwords){
             if (item[0]==word_t){
-                o_sups[blxl].innerHTML='(<a href="http://dict.cn/'+word_t+'" target="_blank"><font color="'+supcolor+'">'+item[1]+'</font></a> '+en_word_def_istrong_b(item[2])+')';
+                one_sup.innerHTML='(<a href="http://dict.cn/'+word_t+'" target="_blank"><font color="'+supcolor+'">'+item[1]+'</font></a> '+en_word_def_istrong_b(item[2])+')';
                 break;
             }
         }
@@ -351,10 +351,14 @@ function enwords_b(csstr,cstype=''){
     }
     else {
         var bljg='';
-        bljg=csstr.replace(new RegExp(/&lt;eword w=(&quot;|")(.*?)\1&gt;&lt;\/eword&gt;/,"g"),'<sup style="font-size:0.8rem;color:#cc0000;" class="kleng">$2</sup>');
-        bljg=bljg.replace(new RegExp(/&lt;eword w=(.*?)(&gt;|\s).*?&lt;\/eword&gt;/,"g"),'<sup style="font-size:0.8rem;color:#cc0000;" class="kleng">$1</sup>');
+        bljg=csstr.replace(new RegExp(/&lt;eword w=(&quot;|")(.*?)\1&gt;&lt;\/eword&gt;/,"g"),sup_kleng_style_b()+'$2</sup>');
+        bljg=bljg.replace(new RegExp(/&lt;eword w=(.*?)(&gt;|\s).*?&lt;\/eword&gt;/,"g"),sup_kleng_style_b()+'$1</sup>');
         return bljg;
     }
+}
+
+function sup_kleng_style_b(){
+    return '<sup style="font-size:0.8rem;color:#cc0000;" class="kleng">';
 }
 
 function en_lines_days_b(csarray,cstheday=''){

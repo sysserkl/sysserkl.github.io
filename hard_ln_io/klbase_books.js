@@ -93,12 +93,8 @@ function import_one_book_b(bookname,jsdoc_num){
     document.write('\n<SCRIPT language=JavaScript src="'+book_path_b(jsdoc_num)+bookname+'"><\/SCRIPT\n>');
 }
 
-function import_book_js_b(book_no){
-	var csnum=arguments.length;
-	if (csnum==0){
-        var book_no = csbookno_global_b;
-    }
-   //----
+function import_book_js_b(import_digest=true){
+    var book_no = csbookno_global_b;
     if (csbookno2_global_b>=0){
         var jsdoc_num='';
         if (csbooklist_sub_global_b[csbookno2_global_b].length>=4){
@@ -127,23 +123,52 @@ function import_book_js_b(book_no){
         document.write('\n<SCRIPT language=JavaScript src="'+jsdoc_path+bookid+'.js"><\/SCRIPT>\n');
         if (jsdoc_num.includes('digest')){
             document.write('\n<script type="text/javascript">\n');
-            document.write('\nvar filelist=[];\n');
-            document.write('\nfor (let item of digest_global) {\n');
-            document.write('\n    filelist.push(item);\n');
+            document.write('var filelist=[];\n');
+            document.write('for (let item of digest_global) {\n');
+            document.write('    filelist.push(item);\n');
             document.write('}\n');
-            //document.write('digest_global=[];\n');
             document.write('</script>\n');        
         }
         else {
             if (csbooklist_sub_global_b[book_no][4].includes('P')){
                 document.write('\n<SCRIPT language=JavaScript src="'+jsdoc_path+'menu/'+bookid+'_menu.js"><\/SCRIPT>\n');
+                document.write('\n<SCRIPT language=JavaScript src="'+jsdoc_path+'digest/'+bookid+'_digest.js"><\/SCRIPT>\n');
             }
             else {
                 document.write('\n<SCRIPT language=JavaScript src="'+book_path_py_b('menu',jsdoc_num)+bookid+'_menu.js"><\/SCRIPT>\n');
             }
-            document.write('\n<SCRIPT language=JavaScript src="'+book_path_py_b('digest',jsdoc_num)+bookid+'_digest.js"><\/SCRIPT>\n');     
+            if (import_digest){
+                document.write('\n<SCRIPT language=JavaScript src="'+book_path_py_b('digest',jsdoc_num)+bookid+'_digest.js"><\/SCRIPT>\n');
+                document.write('\n<script type="text/javascript">\n');
+                document.write('digest_enwords_get_book_b();\n');
+                document.write('</script>\n');        
+            }
         }
     }
+}
+
+function digest_enwords_get_book_b(){
+    var t0 = performance.now();
+    var new_list=[];
+    for (let item of digest_global){
+        if (item.substring(0,1)!=='*'){
+            new_list.push(item);
+            continue;
+        }  //摘要中*号开头的作为英语单词 - 保留注释
+        var blword=item.substring(1,).trim();
+        var blfound=false;
+        for (let blxl=0;blxl<filelist.length;blxl++){
+            if (filelist[blxl].match('\\b'+blword+'\\b')==null){continue;}
+            filelist[blxl]=filelist[blxl].replace(new RegExp('\\b'+blword+'\\b'),blword+sup_kleng_style_b()+blword+'</sup>');
+            blfound=true;
+            break;
+        }
+        if (blfound===false){
+            filelist.push(blword+sup_kleng_style_b()+blword+'</sup>');  //如果未发现单词，则添加到 filelist 末尾 - 保留注释
+        }
+    }
+    digest_global=new_list;
+    console.log('digest_enwords_get_book_b() 费时：'+(performance.now() - t0) + " milliseconds");
 }
 
 function books_b(showall=false,cstype='txt',cstag='all'){   //书目生成，category - 保留注释

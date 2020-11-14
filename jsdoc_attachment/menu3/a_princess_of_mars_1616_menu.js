@@ -1,9 +1,5 @@
 var menulist=[
 "=== With my back against a golden throne, I fought once again for Dejah Thoris. ===",
-"= A PRINCESS OF MARS =",
-"=== by ===",
-"== Edgar Rice Burroughs ==",
-"=== To My Son Jack ===",
 "=== FOREWORD ===",
 "=== To the Reader of this Work: ===",
 "== CONTENTS ==",
