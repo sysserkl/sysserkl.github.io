@@ -15,7 +15,7 @@ function args_enbook(){
             bltmpstr=bltmpstr.trim();
 
             if (bltmpstr.substring(0,5)=='book='){
-                let list_t=bltmpstr.substring(5).split('_');    //如book=2_5 - 保留注释
+                let list_t=bltmpstr.substring(5,).split('_');    //如book=2_5 - 保留注释
                 csbookno_global_b=parseInt(list_t[0])-1;
                 if (list_t.length>1){
                     csbookno2_global_b=parseInt(list_t[1])-1;
@@ -24,6 +24,17 @@ function args_enbook(){
                 import_book_js_b(false);
                 break;
             }
+            else if (bltmpstr.substring(0,7)=='allnew='){
+                var new_words_str=bltmpstr.substring(7,);
+                var otextarea=document.getElementById('textarea_new_words');
+                if (otextarea){
+                    otextarea.value=new_words_str;
+                }
+                in_all_new_words_enbook();
+                get_new_words_arr_enbook(2);
+                books_b(true,'eng','englishwords');
+                break;
+            } 
         }
     }
     else {
@@ -37,6 +48,7 @@ function new_words_form_enbook(){
     bljg=bljg+'<p><span class="aclick" onclick="javascript:get_new_words_arr_enbook(1);">显示全部单词</span> ';
     bljg=bljg+'<span class="aclick" onclick="javascript:get_new_words_arr_enbook(2);">显示未收录单词</span> ';
     bljg=bljg+'<span class="aclick" onclick="javascript:get_new_words_arr_enbook(3);">显示已收录单词</span> ';
+    bljg=bljg+'<span class="aclick" onclick="javascript:in_all_new_words_enbook();">在全部新单词中的词</span> ';    
     bljg=bljg+'<span class="aclick" onclick="javascript:get_new_words_arr_enbook(4);">(wiki格式)</span> ';
     bljg=bljg+'<span class="aclick" onclick="javascript:get_new_words_arr_enbook(5);">(js格式)</span> ';
     bljg=bljg+'<span class="aclick" onclick="javascript:show_sentence_kle(3,true);">显示少量例句</span> ';    
@@ -57,6 +69,20 @@ function new_words_form_enbook(){
     
     input_size_b([["input_first_lines",5]],'id');
 	return;
+}
+
+function in_all_new_words_enbook(){
+    var list_t=array_unique_b(document.getElementById('textarea_new_words').value.trim().split(' '));
+    var result_t=[];
+    for (let item of list_t){
+        if (all_new_words_global.includes(item) || all_new_words_global.includes(item.toLowerCase())){
+            result_t.push(item);
+        }
+    }
+    if (result_t.length==0){
+        result_t=['无'];
+    }
+    document.getElementById('textarea_new_words2').value=result_t.join(' ');
 }
 
 function wordtypes_enbook(blitem){
@@ -476,7 +502,7 @@ function str_2_array_enbook(blstr,isset=false){
 }
 
 function import_enbook(){
-    if (filelist!==null){
+    if (filelist!==null && filelist.length>0){
         var bljg=filelist.join('\n');
         var otextarea_t=document.getElementById('textarea_new_words')
         if (otextarea_t){
@@ -486,7 +512,7 @@ function import_enbook(){
         filelist=[];
         
     }
-    if (filelist2!==null){
+    if (filelist2!==null && filelist2.length>0){
         var bljg=filelist2.join('\n');
         var otextarea_t=document.getElementById('textarea_new_words2')
         if (otextarea_t){

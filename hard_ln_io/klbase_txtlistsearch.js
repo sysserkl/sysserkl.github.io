@@ -2211,6 +2211,7 @@ function digest_temp_load_kltxt_b(){
     if (list_t.join('\n')!==new_full_list.join('\n')){
         localStorage.setItem('digest_temp_txtlistsearch',new_full_list.join('\n'));
     }
+    digest_enwords_get_book_b();    //添加英语单词 - 保留注释
 }
 
 function digest_temp_add_kltxt_b(){

@@ -122,7 +122,7 @@ function one_line_rndwords(item,csrecent_word=''){
     }
 
     var list_t=['http://dict.cn/'+item[0],"<span style='font-size:2.5rem;font-weight:600;'>"+item[0]+"</span>",(ismobile_global?'<p>':'')+blpronounce+' '+en_word_def_b(item[0],item[2],csrecent_word)];
-    list_t[2]=list_t[2]+'<hr />'+en_sentence_b(item[0],5,'0.9','','',1)[0];
+    list_t[2]=list_t[2]+'<hr />'+en_sentence_b(item[0],5,'0.9','','','txtlistsearch.htm?_tag',1)[0];
     
     return div_title_href_b(list_t);
 }

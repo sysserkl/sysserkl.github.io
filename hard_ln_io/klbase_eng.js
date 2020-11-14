@@ -460,14 +460,21 @@ function en_sentence_one_line_b(aline,wordname='',fontsize='',attachment_path=''
     }
     bljg=bljg+' <span class="span_from" style="line-height:150%;" onclick="javascript:this.style.backgroundColor=\''+scheme_global['pink']+'\';">'+wiki_line_b(aline[1])+'</span>';
     if (wikisite!==''){
-        bljg=bljg+'<span class="span_from_wiki" style="line-height:150%;" onclick="javascript:this.style.backgroundColor=\''+scheme_global['pink']+'\';">'+wiki_line_b('['+wikisite+encodeURIComponent(aline[2])+' '+aline[2]+']')+'</span>';
+        bljg=bljg+'<span class="span_from_wiki" style="line-height:150%;" onclick="javascript:this.style.backgroundColor=\''+scheme_global['pink']+'\';">';
+        if (aline[2].slice(-4,)=='_TLS'){
+            var blstr=aline[2].slice(0,-4);
+            bljg=bljg+'<a href="'+wikisite+encodeURIComponent(blstr.replace(new RegExp(' ','g'),'\\s'))+'_reg&s='+wordname+'" target=_blank>'+blstr+'</a></span>';
+        }
+        else {
+            bljg=bljg+'<a href="'+wikisite+encodeURIComponent(aline[2])+'" target=_blank>'+aline[2]+'</a></span>';
+        }
     }
     bljg=bljg+'</p>';
     
     return bljg;
 }
 
-function en_sentence_b(wordname,csmax=-1,fontsize='',attachment_path='',wikisite='',csodd=0){
+function en_sentence_b(wordname,csmax=-1,fontsize='',attachment_path='',wikisite='',txtlistsearch_site='',csodd=0){
     if (en_sentence_global.length==0){
         return ['',0];
     }
@@ -495,7 +502,8 @@ function en_sentence_b(wordname,csmax=-1,fontsize='',attachment_path='',wikisite
                 if (csmax>0 && sentence_list[aword][1]>=csmax){
                     continue;
                 }
-                var str_t=en_sentence_one_line_b(aline,aword,fontsize,attachment_path,wikisite,(blxl+csodd)%2);
+                var search_site=(aline[2].slice(-4,)=='_TLS'?txtlistsearch_site:wikisite);
+                var str_t=en_sentence_one_line_b(aline,aword,fontsize,attachment_path,search_site,(blxl+csodd)%2);
                 if (str_t!==''){
                     sentence_list[aword][0]=sentence_list[aword][0]+str_t;
                     sentence_list[aword][1]=sentence_list[aword][1]+1;
@@ -509,7 +517,8 @@ function en_sentence_b(wordname,csmax=-1,fontsize='',attachment_path='',wikisite
         var bljg='';
         var blxl=0;
         for (let aline of en_sentence_global){
-            var str_t=en_sentence_one_line_b(aline,wordname,fontsize,attachment_path,wikisite,(blxl+csodd)%2);
+            var search_site=(aline[2].slice(-4,)=='_TLS'?txtlistsearch_site:wikisite);
+            var str_t=en_sentence_one_line_b(aline,wordname,fontsize,attachment_path,search_site,(blxl+csodd)%2);
             if (str_t!==''){
                 bljg=bljg+str_t;
                 blxl=blxl+1;
