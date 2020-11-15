@@ -159,23 +159,23 @@ function digest_enwords_get_book_b(){
         var blfound=false;
         for (let blxl=0;blxl<filelist.length;blxl++){
             var arow=filelist[blxl];
-            if (arow.match('\\b'+blword+'\\b')==null){continue;}
+            if (arow.match(new RegExp('\\b'+blword+'\\b','i'))==null){continue;}
             
             if (arow.includes('<') && arow.includes('>')){
                 var bltmp_str=(arow.match(/<.*?>/g) || []).join(' ');
-                if (bltmp_str.match('\\b'+blword+'\\b')!==null){continue;}
+                if (bltmp_str.match(new RegExp('\\b'+blword+'\\b','i'))!==null){continue;}
             }
             if (arow.includes('&lt;') && arow.includes('&gt;')){            
                 var bltmp_str=(arow.match(/&lt;.*?&gt;/g) || []).join(' ');
-                if (bltmp_str.match('\\b'+blword+'\\b')!==null){continue;}
+                if (bltmp_str.match(new RegExp('\\b'+blword+'\\b','i'))!==null){continue;}
             }
                         
-            filelist[blxl]=filelist[blxl].replace(new RegExp('\\b'+blword+'\\b'),blword+sup_kleng_style_b()+blword+'</sup>');
+            filelist[blxl]=filelist[blxl].replace(new RegExp('\\b('+blword+')\\b','i'),'$1'+sup_kleng_style_b()+blword+'</sup>');
             blfound=true;
             break;
         }
         if (blfound===false){
-            filelist.push(blword+sup_kleng_style_b()+blword+'</sup>');  //如果未发现单词，则添加到 filelist 末尾 - 保留注释
+            filelist.push('* '+blword+sup_kleng_style_b()+blword+'</sup>');  //如果未发现单词，则添加到 filelist 末尾 - 保留注释
         }
     }
     digest_global=new_list;

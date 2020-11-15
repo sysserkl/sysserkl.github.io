@@ -1854,7 +1854,7 @@ var enwords=[
 ["compliance", "[kəm'plaɪəns]", "n. 顺从；服从；屈服；遵守；柔度；灵活性"],
 ["compliant", "[kəm'plaɪənt]", "adj. 顺从的；适用的"],
 ["complicate", "UK ['kɒmplɪkeɪt] US ['kɑːmplɪkeɪt]", "v. 使复杂化；使起纠纷；adj. 复杂的"],
-["complication", "UK [ˌkɒmplɪ'keɪʃn] US [ˌkɑːmplɪ'keɪʃn]", "n. 复杂；并发症；纠纷"],
+["complication", "UK [ˌkɒmplɪ'keɪʃn] US [ˌkɑːmplɪ'keɪʃn]", "n. 复杂；纠纷；并发症"],
 ["complicity", "[kəm'plɪsəti]", "n. 串通；勾结；共犯；共谋；同谋；the act of taking part with another person in a crime; involvement with others in a crime or in another activity that is wrong"],
 ["compliment", "UK ['kɒmplɪmənt] US ['kɑːmplɪmənt]", "n. 恭维；称赞；赞美；n. (复数)致意；vt. 恭维；称赞；赞扬"],
 ["comply", "[kəm'plaɪ]", "vi. 顺从；遵照；答应"],

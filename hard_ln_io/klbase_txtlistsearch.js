@@ -1553,23 +1553,25 @@ function highheight_kltxt_b(cswordlist){
 function format_lines_kltxt_b(cslist,csstyle='',csaname=-1){
     //cslist 的每个元素为数组，包含2个元素：0为字符串，1为序号
     function sub_format_lines_kltxt_b_bible(blstr){
+        if (blstr.includes('<')){return blstr;}
         if (blstr.match(/^==*\s(.*?)\s(\d*)\s?==*/g)){
             var str_t=blstr.replace(new RegExp(/^==*\s(.*?)\s(\d*)\s?==*/,'g'),'$1');
             var num_t=blstr.replace(new RegExp(/^==*\s(.*?)\s(\d*)\s?==*/,'g'),'$2');
-            
+            var other_book_t='';
             if (csbooklist_sub_global_b[csbookno_global_b][1]=='圣经和合本'){
-                var other_book_t='Bible(kjv)';
+                other_book_t='Bible(kjv)';
             }
             else {
-                var other_book_t='圣经和合本';
+                other_book_t='圣经和合本';
             }
+            var other_book_id_t='';
             for (let item of csbooklist_sub_global_b){
                 if (item[1]==other_book_t){
-                    var other_book_id_t=item[0];
+                    other_book_id_t=item[0];
                     break;
                 }
             }
-            
+            if (other_book_id_t==''){return blstr;}
             blstr='<a href="txtlistsearch.htm?'+other_book_id_t+'&s=+'+bible_en_cn_b(str_t).replace(new RegExp(' ','g'),' +');
             if (num_t){
                 num_t=parseInt(num_t);
