@@ -1229,7 +1229,12 @@ function getlines_kltxt_b(csno=false,cslines=false,single=false){
         csno=Math.max(0,csno);
     }
 	if (cslines===false){
-        cslines= Math.min(500,Math.max(0,parseInt(document.getElementById('input_lines').value.trim())));
+        var csmaxlines=500;
+        var oinput_maxlines=document.getElementById('input_max_lines');
+        if (oinput_maxlines){
+            csmaxlines=parseInt(oinput_maxlines.value);
+        }    
+        cslines= Math.min(csmaxlines,Math.max(0,parseInt(document.getElementById('input_lines').value.trim())));
     }
 
 	var cshideno=document.getElementById('check_hide_no').checked;

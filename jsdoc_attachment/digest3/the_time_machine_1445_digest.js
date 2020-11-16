@@ -1,0 +1,18 @@
+var digest_global=`
+*antenna
+*cannibal
+*contagious
+*downpour
+*economical
+*estuary
+*fingernail
+*greyish
+*groove
+*luxurious
+*mineralogy
+*molecule
+*optics
+*powdery
+*self-devotion
+*tableful
+`.trim().split('\n');

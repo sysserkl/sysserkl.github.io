@@ -1,6 +1,9 @@
 var en_sentence_count_global=[
+["Scandinavia",0],
 ["forepaw",0],
 ["stopover",0],
+["Scandinavian",1],
+["Croatia",1],
 ["pathbreaking",1],
 ["groundbreaking",1],
 ["machinist",1],
@@ -96,7 +99,4 @@ var en_sentence_count_global=[
 ["airship",1],
 ["airtight",1],
 ["Aladdin",1],
-["alehouse",1],
-["Alexandria",1],
-["Algerian",1],
 ];
