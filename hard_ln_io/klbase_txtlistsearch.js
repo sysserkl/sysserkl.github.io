@@ -237,6 +237,7 @@ function editable_kltxt_b(){
 function books_current_table_kltxt_b(){
     var list_t=[];
     var bookname_list=[];
+    var bookpath_list=[];
     list_t.push(array_2_li_b(['id','name','tag','no','type'],'th',container_type='tr'));
     for (let item of csbooklist_sub_global_b){
         if (item[0]==csbookname_global){
@@ -248,15 +249,31 @@ function books_current_table_kltxt_b(){
             list_t.push(array_2_li_b(item,'td',container_type='tr'));
         }
         bookname_list.push(item[1]);
+        if (item[3]=='3'){
+            bookpath_list.push('~/klwebphp/PythonTools/data/selenium_news/jsdoc'+item[3]+'/'+item[0]+'.js');
+        }
+        else {
+            bookpath_list.push('~/jsdoc/jsdoc'+item[3]+'/'+item[0]+'.js');
+        }
     }
-    var bljg='<table class="table_common" cellpadding=0 cellspacing=0>'+list_t.join('\n')+'</table>';
+    bookpath_list.sort();
     
-    bljg=bljg+'<textarea name="textarea_booknamelist" id="textarea_booknamelist" style="height:20rem;">';
+    var bljg='<table class="table_common" cellpadding=0 cellspacing=0>'+list_t.join('\n')+'</table>';
+
+    bljg=bljg+'<textarea name="textarea_booknamelist" id="textarea_booknamelist" style="height:15rem;">';
     bljg=bljg+bookname_list.join('\n')+'\n';
     bljg=bljg+'</textarea>';
-    bljg=bljg+'<p><span class="aclick" onclick="javascript:document.getElementById(\'divhtml2\').innerHTML=\'\';">关闭</span>';    
+    bljg=bljg+'<p>';
     bljg=bljg+textarea_buttons_b('textarea_booknamelist','全选,清空,复制');
     bljg=bljg+'</p>';
+
+    bljg=bljg+'<textarea name="textarea_bookpathlist" id="textarea_bookpathlist" style="height:15rem;">';
+    bljg=bljg+bookpath_list.join('\n')+'\n';
+    bljg=bljg+'</textarea>';
+    bljg=bljg+'<p><span class="aclick" onclick="javascript:document.getElementById(\'divhtml2\').innerHTML=\'\';">关闭</span>';    
+    bljg=bljg+textarea_buttons_b('textarea_bookpathlist','全选,清空,复制');
+    bljg=bljg+'</p>';
+    
     document.getElementById('divhtml2').innerHTML=bljg;
     location.href="#divhtml2";
 }
