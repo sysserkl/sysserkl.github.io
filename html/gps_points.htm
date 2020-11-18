@@ -17,6 +17,7 @@ scheme_generation_b();
 css_root_style_b('17','11',['base','menu'],[],1);
 </script>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="manifest" href="gps_points.webmanifest">
 </head>
 <body>
 <!--history
@@ -37,6 +38,19 @@ css_root_style_b('17','11',['base','menu'],[],1);
 var klmaps_global=[];
 var omap_gps_points_global;
 init_gps_points();
+//-------------------------
+// Register service worker to control making site work offline
+if('serviceWorker' in navigator) {
+    navigator.serviceWorker
+        .register('gps_points_service_worker.js')
+        .then(function() { 
+            document.getElementById('div_status').innerHTML='GPS Points Service Worker Registered';
+        });
+}
+else {
+    document.getElementById('div_status').innerHTML='GPS Points Service Worker not work';
+}
+//-------------------------
 </script>
 </body>
 </html>

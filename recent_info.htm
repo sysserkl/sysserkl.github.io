@@ -179,6 +179,7 @@ function big_title_klrecent(){
 function clear_cache_all_klrecent(){
     if (confirm('是否清空全部 PWA Cache？')){
         service_worker_delete_b('pwa_bible_store','bible_service_worker.js');
+        service_worker_delete_b('pwa_bible_store','gps_points_service_worker.js');
         service_worker_delete_b('pwa_calculator_store','calculator_service_worker.js');
         service_worker_delete_b('pwa_long_term_plans_store','long_term_plans_service_worker.js');
         service_worker_delete_b('pwa_rnd_enwords_store','rnd_english_words_service_worker.js');
@@ -187,8 +188,8 @@ function clear_cache_all_klrecent(){
         service_worker_delete_b('pwa_screen_colorful_boxes_store','screen_colorful_boxes_service_worker.js');
         service_worker_delete_b('pwa_screen_matrix_store','screen_matrix_service_worker.js');
         service_worker_delete_b('pwa_sticker_mobile_store','sticker_mobile_service_worker.js');
-        service_worker_delete_b('pwa_websites_store','websites_service_worker.js');
         service_worker_delete_b('pwa_todolist_store','todolist_service_worker.js');
+        service_worker_delete_b('pwa_websites_store','websites_service_worker.js');        
     }
 }
 

@@ -404,8 +404,7 @@ function current_position_gps_points(){
         current_position_layer_gps_global.addLayer(L.marker([lat,lon]));
         circle_distance_show_gps_points(lon,lat);
         if (klmenu_check_b('span_continue_position',false)){
-            setTimeout(current_position_gps_points,2000);
-            console.log(1);
+            setTimeout(current_position_gps_points,5000);
         }
     },
     function (){
