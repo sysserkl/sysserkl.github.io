@@ -383,4 +383,5 @@ var digest_global=`
 *yell
 *yesternight
 *Zion
+*Hebron
 `.trim().split('\n');

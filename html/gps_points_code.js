@@ -239,7 +239,11 @@ function data_lines_2_latlon_gps_points(csstr='',cstype='latlon'){
     else {
         for (let item of list_t){
             if (!item.includes(',')){continue;}
-        
+
+            var blat=item.indexOf('#');
+            if (blat>=0){
+                item=item.substring(0,blat).trim();
+            }
             var ll_list=item.trim().split(',');
             if (cstype=='lonlat'){
                 bllon=parseFloat(ll_list[0].trim());
@@ -565,9 +569,15 @@ function lonlat_2_latlon_gps_points(){
     var result_t=[];
     var list_t=otextarea.value.trim().split('\n');
     for (let item of list_t){
+        var blat=item.indexOf('#');
+        var blcomment='';
+        if (blat>=0){
+            blcomment=item.substring(blat,);
+            item=item.substring(0,blat).trim();
+        }
         var temp_list=item.split(',');
         if (temp_list.length==2){
-            result_t.push(temp_list[1].trim()+','+temp_list[0].trim());
+            result_t.push(temp_list[1].trim()+','+temp_list[0].trim()+blcomment);
         }
     }
     otextarea.value=result_t.join('\n');

@@ -176,9 +176,9 @@ function specialstr92_g($csstr){
     return $bljg;
 }
 
-function filter_query_g($csstr){
+function filter_query_g($csstr){    
     $list_t=explode(' ',$csstr);
-    $filter_t=["query","select","drop","delete","where","limit","function","global","require_once","require","if","return","echo","foreach","as","insert","update","values","break","into","order","and","or","not","true","false"];
+    $filter_t=["query","select","drop","delete","where","limit","function","global","require_once","require","if","return","echo","foreach","as","insert","update","values","break","into","order","and","or","not","true","false","\\"];
     $bljg=[];
     foreach ($list_t as $item){
         if (trim($item)==''){continue;}
@@ -268,6 +268,7 @@ function query_make_g($keys,$columns,$reg=false){
     //query_make_g($key,["title","href(n)"]);
     //query_make_g($key,["title,标题","href(n),链接"]);
     $bljg='';
+    if (count($keys)==1 and $keys[0]==''){return '';}
     foreach ($keys as $akey){
         if ($keys==''){continue;}
         $pre=' or ';
