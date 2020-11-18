@@ -1,4 +1,3 @@
-console.log(location.href);
 self.addEventListener('install', function(e) {
     e.waitUntil(
         caches.open('pwa_calculator_store').then(function(cache) {

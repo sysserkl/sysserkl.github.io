@@ -1,4 +1,3 @@
-console.log(location.href);
 self.addEventListener('install', function(e) {
     e.waitUntil(
         caches.open('pwa_screen_colorful_boxes_store').then(function(cache) {
