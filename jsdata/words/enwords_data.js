@@ -1,5 +1,7 @@
 //单词库
 var enwords=[
+["criteria", "UK [kraɪ'tɪəriə] US [kraɪ'tɪəriə]", "n. 标准；准则；尺度；名词 criterion 的复数形式；plural of 'criterion'"],
+
 ["automaton", "UK [ɔː'tɒmət(ə)n] US [ɔː'tɑːmət(ə)n]", "n. 自动机；自动机器；(小型)机器人；不动脑筋机械行事的人；a moving mechanical device in the shape of a person; a small robot that can perform a particular range of functions; a mechanism that is relatively self-operating, especially: robot; a machine or control mechanism designed to follow automatically a predetermined sequence of operations or respond to encoded instructions; a person who behaves like a machine, without thinking or feeling anything; an individual who acts in a mechanical fashion "],
 ["flippant", "['flɪp(ə)nt]", "adj. 轻率的；轻浮的；无礼的；没礼貌的；showing that you do not take something as seriously as other people think you should; lacking proper respect or seriousness; marked by inappropriate levity; frivolous or offhand; impertinent; saucy; frivolous and disrespectful; adj. [古]能说会道的；嘴碎的；(archaic): glib, talkative"],
 ["quark", "UK [kwɑː(r)k] US [kwɑːrk] [kwɔːrk]", "n. 夸克（据信构成质子、中子等的细小粒子）；a very small part of matter (= a substance). There are several types of quark and it is thought that protons, neutrons, etc. are formed from them.; any of several elementary particles that are postulated to come in pairs (as in the up and down varieties) of similar mass with one member having a charge of +²/₃ and the other a charge of −¹/₃ and are held to make up hadrons; n. 夸克干酪；软（质）干酪；a type of soft cheese from central Europe, similar to curd cheese; a type of low-fat soft cheese"],
@@ -1897,7 +1899,7 @@ var enwords=[
 ["concept", "UK ['kɒnsept] US ['kɑːnsept]", "n. 概念；观念；想法"],
 ["concern", "[kən'sɜːrn]", "n. 关心；关心的事；担心；忧虑；vt. 关心；（使）担心；涉及；影响；n. 公司；企业"],
 ["concert", "UK ['kɒnsət] US ['kɑːnsərt]", "n. 音乐会；一致；和谐；vt. 协定；协同安排；vi. 合作"],
-["concession", "[kən'seʃn]", "n. 让步；特许权；租界；妥协"],
+["concession", "[kən'seʃn]", "n. 让步；妥协；特许权；租界"],
 ["conclude", "[kən'kluːd]", "v. (使)结束；总结；作决定；推断出；缔结；作协议"],
 ["conclusion", "[kən'kluːʒn]", "n. 结束；结尾；结论"],
 ["conclusive", "[kən'kluːsɪv]", "adj. 决定性的；结论性的；确实的；确凿的；不容置疑的"],
@@ -2269,7 +2271,7 @@ var enwords=[
 ["dangerous", "['deɪndʒərəs]", "adj. 危险的；不安全的"],
 ["dangerously", "['deɪndʒərəsli]", "adv. 危险地；in a way that is likely to harm or injure somebody, or to damage or destroy something"],
 ["Daniel", "['dænjəl]", "n. 丹尼尔（男子名）；n. [圣经]但以理书；the Jewish hero of the Book of Daniel who as an exile in Babylon interprets dreams, gives accounts of apocalyptic visions, and is divinely delivered from a den of lions; book of narratives, visions, and prophecies in canonical Jewish and Christian Scripture"],
-["Danish", "['deɪnɪʃ]", "n. 丹麦文；丹麦人；adj. 丹麦的；丹麦人的；丹麦语的"],
+["Danish", "['deɪnɪʃ]", "n. 丹麦人；丹麦文；adj. 丹麦的；丹麦人的；丹麦语的"],
 ["Danny", "[ˈdæni]", "n. 丹尼(男子名；Daniel的昵称)；a diminutive of the male given name Daniel; n. 丹妮(女子名)；a diminutive of the female given names Danielle, Daniella and Daniela; n. danny: (dialect) the hand (used esp when addressing children)"],
 ["Danube", "[ˈdænju:b]", "n. 多瑙河；river 1770 miles (2848 kilometers) long in central and southeastern Europe flowing southeast from southwestern Germany into the Black Sea in Romania, with the northernmost channel forming the boundary between Romania and Ukraine"],
 ["dare", "UK [deə(r)] US [der]", "vt. 敢；挑战；冒...的风险；vi. 勇于；胆敢；aux. 胆敢；n. 胆量；挑战"],
@@ -8349,7 +8351,7 @@ var enwords=[
 ["sprung", "[sprʌŋ]", "adj. 装有弹簧的；弹簧支撑的；fitted with metal springs; v. 动词 spring 的过去式和过去分词"],
 ["spurt", "[spɜːt]", "v. 喷出；冲刺；n. 喷出；突然一阵；(营业的)突然兴隆；突然高涨"],
 ["spyglass", "UK ['spaɪɡlɑːs] US ['spaɪɡlæs]", "n. 小望远镜；a small telescope"],
-["spy", "[spaɪ]", "n.侦探；侦察； 间谍；v. 侦探；监视；看到；找出"],
+["spy", "[spaɪ]", "n. 侦探；侦察； 间谍；v. 侦探；监视；看到；找出"],
 ["square", "UK [skweə(r)] US [skwer]", "n. 正方形；广场；街区；平方；直角尺；[俚]古板的人；adj. 正方形的；结实的；规矩的；公正的；断然的；v. 使 ... 成方形；使成平方；调整；一致；结清；收买；adv. 正方形地；正对着地；径直地；in a straightforward or honest manner; in a firm manner"],
 ["square with", "UK [skwɛə wið] US [skwɛr wɪð]", "（使）与…相符；与 ... 协调或一致；商量；对上号；付清账款"],
 ["squash", "UK [skwɒʃ] US [skwɑːʃ]", "n. （软式）墙网球；壁球；浓缩果汁；sweetened citrus fruit juice often served with added soda water; v. 变扁；压软（或挤软、压坏、压扁等）；把…压（或挤）变形；（使）挤进；塞入；to press something so that it becomes soft, damaged or flat, or changes shape; to push somebody/something or yourself into a space that is too small; to stop something from continuing; to destroy something because it is a problem for you"],

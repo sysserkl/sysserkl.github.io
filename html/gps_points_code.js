@@ -484,7 +484,7 @@ function init_gps_points(){
 }
 
 function circle_distance_settings_gps_points(show_prompt=true){
-    var default_value='100,blue;200,green;300,red;1000,blue;2000,green;3000,red';
+    var default_value='100,yellow;200,cyan;300,deeppink;1000,yellow;2000,cyan;3000,deeppink';
     var blstr=local_storage_get_b('circle_distance_gps_points');
     if (blstr==''){
         blstr=default_value;
