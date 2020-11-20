@@ -1,8 +1,10 @@
 var digestlist_source_global_b=[
 ["jiu_tang_shu_67933_digest",3],
+["david_copperfield_1653_digest",3],
 ["bible_kjv_890_digest",3],
 ["liao_zhai_zhi_yi_107694_digest",3],
 ["shui_hu_chuan_75942_digest",3],
+["pride_and_prejudice_1794_digest",3],
 ["san_guo_yan_yi_90723_digest",3],
 ["feng_shen_yan_yi_103100_digest",3],
 ["a_princess_of_mars_1616_digest",3],

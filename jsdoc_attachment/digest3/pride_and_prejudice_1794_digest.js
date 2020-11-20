@@ -1,0 +1,27 @@
+var digest_global=`
+*attentive
+*clergyman
+*Denny
+*discreditable
+*disrespect
+*disrespectful
+*duchess
+*endeavour
+*excessively
+*exclamation
+*footstool
+*groundwork
+*injure
+*laity
+*lessen
+*mildness
+*poultry
+*prejudice
+*premeditation
+*stubbornness
+*tolerable
+*unknowingly
+*unpardonable
+*valueless
+*woody
+`.trim().split('\n');

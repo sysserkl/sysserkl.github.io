@@ -1066,7 +1066,6 @@ function bookmarks_get_kltxt_b(current_book_today_bookmark_only_one=false,return
     var bookmark_list=[];
     
     [current_book_today_bookmark_count,bookmark_list]=bookmarks_read_kltxt_b(current_book_today_bookmark_only_one,return_full);
-       
     var sum_line_done=0;
     var sum_line_total=0;
 
@@ -1145,7 +1144,7 @@ function bookmarks_get_kltxt_b(current_book_today_bookmark_only_one=false,return
     if (return_full){
         bljg=bljg+'<span class="aclick" onclick="javascript:bookmarks_import_kltxt_b();">更新</span> ';
         bljg=bljg+'<span class="aclick" onclick="javascript:bookmarks_get_kltxt_b(false,false);">最新书签</span> ';
-        bljg=bljg+textarea_buttons_b('textarea_bookmarks','全选,清空,复制,发送到临时记事本,发送地址','txtlistearch_bookmarks');
+        bljg=bljg+textarea_buttons_b('textarea_bookmarks','全选,清空,复制,发送到临时记事本,发送地址','txtlistearch_bookmarks')+' ';
     }
     else {
         bljg=bljg+'<span class="aclick" onclick="javascript:bookmarks_get_kltxt_b();">全部书签</span> ';
@@ -1156,7 +1155,15 @@ function bookmarks_get_kltxt_b(current_book_today_bookmark_only_one=false,return
         bljg=bljg+'<p><span class="aclick" onclick="javascript:bookmarks_get_kltxt_b(true);">当前书籍今日书签仅留最新一个</span></p>';
     }
     bljg=bljg+'</form>\n';
-    
+    if (return_full){
+        var current_book_percent=[];
+        for (let item of bookmark_list){
+            if (item[1]!==csbookname_global){continue;}
+            current_book_percent.push([new Date(item[5].split(' ')[0]),item[2]*100/item[4]]);
+        }
+        current_book_percent.sort(function (a,b){return a[0]>b[0];});
+        bljg=bljg+'<div id="div_flot_bookmark" style="width=100%;height:35rem;"></div>';
+    }
     document.getElementById('divhtml').innerHTML='';
     var table_th='<tr><th>No.</th><th>书名</th><th nowrap>当前行号 / 总行数 / 完成%</th><th>Δ</th><th nowrap>'+theyear+' / '+(theyear+1)+' / '+(theyear+2)+'年年底<br />完成每日需阅读行数</th><th>添加日期</th></tr>';
     
@@ -1172,7 +1179,9 @@ function bookmarks_get_kltxt_b(current_book_today_bookmark_only_one=false,return
     table_sum=table_sum+'<th></th></tr>';
     
     document.getElementById('divhtml2').innerHTML='<section style="overflow:auto;"><table id="table_bookmarks" class="table_common" cellpadding=0 cellspacing=0 style="font-size:0.85rem;margin-left:0.5rem;" width=100%>'+table_th+array_2_li_b(result_t,'tr',false)+table_sum+'</table></section><br />'+bljg;
-    
+    if (return_full){
+        flot_lines_k([['《'+csbooklist_sub_global_b[csbookno_global_b][1]+'》阅读进度'].concat(current_book_percent)],'div_flot_bookmark','nw',true,'','d','%');
+    }
     var otds=document.querySelectorAll('table#table_bookmarks td.td_bookmark_datetime');
     for (let one_td of otds){
         if (one_td.innerText==newest_datetime){

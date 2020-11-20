@@ -2,14 +2,19 @@
 <head>
 <title>Reader</title>
 <meta charset="UTF-8" />
+<script language="javascript" type="text/javascript" src="../hard_ln_io/jquery.js"></script>
 <SCRIPT language=JavaScript src="../hard_ln_io/klbase.js"></SCRIPT>
 <script language="javascript">
-klbase_addons_import_js_b(['css','date','books','eng','en_de_str','wiki','txtlistsearch'],[],['words/enwords_data.js','words/cnwords_data.js,defer']);
+klbase_addons_import_js_b(['css','date','books','eng','en_de_str','wiki','flot','txtlistsearch'],[],['words/enwords_data.js','words/cnwords_data.js,defer']);
 </script>
 <script language="javascript">
 load_current_book_b();
 </script>
 <SCRIPT language=JavaScript src="../hard_ln_io/enwords_book.js"></SCRIPT>
+<script language="javascript">
+add_tag_for_marked_books_kltxt_b();
+flot_import_js_k(['time','symbol']);
+</script>
 <script language="javascript">
 add_tag_for_marked_books_kltxt_b();
 books_init_b();
