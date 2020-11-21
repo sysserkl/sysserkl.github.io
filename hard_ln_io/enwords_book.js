@@ -403,6 +403,7 @@ function new_words_continue_enbook(cslength){
         else {
             news_words_statistics_enbook();
             alert('done');
+            location.href="?";
         }
     }
 }

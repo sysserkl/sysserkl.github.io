@@ -106,4 +106,5 @@ var digest_global=`
 *windowsill
 *wintry
 *workhouse
+*Copperfield
 `.trim().split('\n');

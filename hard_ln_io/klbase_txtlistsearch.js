@@ -155,9 +155,6 @@ function txtmenus_kltxt_b(cstype=''){
     menu0.push('<span class="span_menu" onclick="javascript:'+str_t+'search_or_reader_kltxt_b(\'reader_card\');">Card</span>');
     menu0.push('<span class="span_menu" onclick="javascript:'+str_t+'bookmarks_get_kltxt_b(false,false);">读取最新书签</span>');
     menu0.push('<span class="span_menu" onclick="javascript:'+str_t+'bookmarks_set_kltxt_b();">添加书签</span>');
-    menu0.push('<span class="span_menu" onclick="javascript:'+str_t+'digest_temp_add_kltxt_b();">添加临时摘要</span>');
-    menu0.push('<span class="span_menu" onclick="javascript:'+str_t+'digest_lines_kltxt_b();">显示摘要段落</span>');    
-    menu0.push('<span class="span_menu" onclick="javascript:'+str_t+'digest_excluded_kltxt_b();">查看未包含的摘要</span>');
     menu0.push('<span class="span_menu" onclick="javascript:'+str_t+'getlines_kltxt_b();">返回阅读页面</span>');
     menu0.push('<span class="span_menu" onclick="javascript:'+str_t+'new_words_kltxt_b();">显示生词</span>');
     menu0.push('<span class="span_menu" onclick="javascript:'+str_t+'find_cn_words_kltxt_b();">显示汉字生字</span>');
@@ -171,8 +168,7 @@ function txtmenus_kltxt_b(cstype=''){
     if (cstype!=='reader'){
         menu1.push('<span class="span_menu" onclick="javascript:'+str_t+'menu_insert_kltxt_b(3);">显示搜索关键字目录3</span>');
         menu1.push('<span class="span_menu" onclick="javascript:'+str_t+'menu_insert_kltxt_b(1);">显示搜索关键字目录1</span>');
-    }    
-
+    }
     
     var menu2=[
         '<span class="span_menu" onclick="javascript:'+str_t+'search_demo_kltxt_b();">语法示例</span>',
@@ -183,7 +179,13 @@ function txtmenus_kltxt_b(cstype=''){
         '<span class="span_menu" onclick="javascript:'+str_t+'statistics_kltxt_b();">统计</span>',
         '<span class="span_menu" onclick="javascript:'+str_t+'books_current_table_kltxt_b();">当前书目列表</span>',
     ];
-        
+    
+    var menu3=[
+    '<span class="span_menu" onclick="javascript:'+str_t+'digest_temp_add_kltxt_b();">添加临时摘要</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'digest_lines_kltxt_b();">显示摘要段落</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'digest_excluded_kltxt_b();">查看未包含或重复的摘要</span>',
+    ];
+    
     //color menu - 保留注释
     var list_t=popular_colors_b();
     var color_menu=[];
@@ -196,6 +198,7 @@ function txtmenus_kltxt_b(cstype=''){
     var fontsize=(ismobile_b()?'0.9rem':'1rem');
     
     var bljg=klmenu_b(menu0,'','12rem','',fontsize);
+    bljg=bljg+klmenu_b(menu3,'🖊','14rem','',fontsize);
     bljg=bljg+klmenu_b(menu1,'⏬','14rem','',fontsize);
     if (cstype!=='reader' && cstype!=='digest'){
         bljg=bljg+klmenu_b(menu2,'⚙','12rem','',fontsize,'20rem');
@@ -2315,7 +2318,20 @@ function digest_excluded_kltxt_b(){
             excluded_list.push(item);
         }
     }
-    document.getElementById('divhtml').innerHTML=array_2_li_b(excluded_list,'li','ol');
+    
+    list_t=[].concat(digest_global);
+    list_t.sort();
+    var blstr='';
+    var duplication=new Set();
+    for (let item of list_t){
+        if (item==blstr){
+            duplication.add(item);
+        }
+        else {
+            blstr=item;
+        }
+    }
+    document.getElementById('divhtml').innerHTML='<h4>未包含的摘要</h4>'+array_2_li_b(excluded_list,'li','ol')+'<h4>重复的摘要</h4>'+array_2_li_b(Array.from(duplication),'li','ol');
 }
 
 function digest_temp_show_kltxt_b(is_all=false){

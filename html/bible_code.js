@@ -1,5 +1,5 @@
 function recent_search_bible(csstr=''){
-    recent_search_b('recent_search_bible',csstr,'search_bible','div_recent_search',['[借著讚鍊](:r)','b=传道书_3_1_8','带著','照著','讚美','讚美　神']);
+    recent_search_b('recent_search_bible',csstr,'search_bible','div_recent_search',['[借著鍊](:r)','b=传道书_3_1_8','带著','照著']);
 }
 
 function bookmarks_set_bible(){

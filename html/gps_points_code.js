@@ -77,7 +77,7 @@ function draw_gpx_gps_points(cslist=false,csname='',dotransform=false,draw_lines
         return cslist;
     }
     navigation_layer_gps_global.addLayer(line_leaflet_b(omap_gps_points_global,true,cslist,'blue',csname));
-    circle_gps_points(cslist[0][1]+','+cslist[0][0]+',2,green',false);
+    circle_gps_points(cslist[0][1]+','+cslist[0][0]+',2,cyan',false);
     circle_gps_points(cslist[cslist.length-1][1]+','+cslist[cslist.length-1][0]+',2,red',false);
 }
 

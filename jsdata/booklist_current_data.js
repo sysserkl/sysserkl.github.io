@@ -3,7 +3,7 @@ var csbooklist_source_global_b=[
 ["shi_jing_68262","诗经","诗词","3",""],
 ["twenty_thousand_leagues_under_the_sautotw_6548","Twenty Thousand Leagues Under the Seas: An Underwater Tour of the World","englishwords","3",""],
 ["han_shu_ban_gu_47791","汉书(班固)","历史","3",""],
-["the_federalist_papers_1999","The Federalist Papers","englishwords","3",""],
+["the_federalist_papers_1999","The Federalist Papers","englishwords,已整理","3",""],
 ["han_fei_zi_101015","韩非子","","3",""],
 ["jean_christophe_in_paris_the_mpath_5878","Jean Christophe: in Paris The Market-Place, Antoinette, the House, by Romain Rolland","englishwords","3",""],
 ["lao_can_you_ji_liu_e_185908","老残游记(刘鹗)","","3",""],
