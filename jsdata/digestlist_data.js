@@ -13,6 +13,7 @@ var digestlist_source_global_b=[
 ["anna_karenina_1223_digest",3],
 ["xi_you_ji_99175_digest",3],
 ["hong_lou_meng_86212_digest",3],
+["the_mysterious_island_2048_digest",1],
 ["jing_shi_tong_yan_127894_digest",1],
 ["hei_an_shi_ke_xi_tldtsyncwhsxc_662171_digest",1],
 ["yu_shi_ming_yan_103391_digest",1],

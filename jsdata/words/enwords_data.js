@@ -1,5 +1,9 @@
 //单词库
 var enwords=[
+["upriver", "[ˌʌp'rɪvə(r)] [ˈʌpˈrɪvə]", "adj. 上游的；向水源的；toward or at a point nearer the source of a river; towards the place where a river starts; adv. 向上游地；along a river, in the opposite direction to the way in which the water flows; n. 上游；an area located upstream"],
+["unripe", "[ʌn'raɪp]", "adj. （食物）未成熟的；未熟的；生的；not yet ready to eat; not ripe: immature; adj. 没准备的；未准备好的；not ready: unprepared"],
+["unclouded", "UK ['ʌn'klaʊdɪd] US [ʌn'klaʊdɪd]", "adj. 没有云的；晴朗的；开朗的；清晰的；not cloudy or overcast; not covered by clouds; not darkened or obscured: clear; not milky or dull; not made gloomy or depressed; not confused or impaired"],
+["Rudolph", "['ru:dɔlf] [ruˌdɑlf]", "n. 鲁道夫(男子名)；a male given name from the Germanic languages; a surname; a masculine name: dim. Rudy; var. Rodolph, Rolf, Rollo; equiv. Fr. Rodolphe, Ger. Rudolf, It. & Sp. Rodolfo"],
 ["epiphany", "[ɪ'pɪfəni]", "n. 对事物真谛的顿悟；事物本质的揭示；事物本质的显现；显现（特指神的显现）；显灵；a sudden and surprising moment of understanding; a moment of sudden intuitive understanding; flash of insight; an appearance or manifestation especially of a divine being; a usually sudden manifestation or perception of the essential nature or meaning of something; an intuitive grasp of reality through something (such as an event) usually simple and striking; an illuminating discovery, realization, or disclosure; an appearance or manifestation of a god or other supernatural being; any moment of great or sudden revelation; a revealing scene or moment; n. Epiphany: 主显节（1月6日纪念贤士朝拜耶稣）；January 6 observed as a church festival in commemoration of the coming of the Magi as the first manifestation of Christ to the Gentiles or in the Eastern Church in commemoration of the baptism of Christ; a Christian festival, held on the 6 January, in memory of the time when the Magi came to see the baby Jesus at Bethlehem"],
 ["maxim", "['mæksɪm]", "n. 座右铭；箴言；格言；准则；a well-known phrase that expresses something that is usually true or that people think is a rule for sensible behaviour; a general truth, fundamental principle, or rule of conduct; a proverbial saying; a precept; a succinct statement or observation of a rule of conduct or moral teaching; (now rare) a self-evident axiom or premise; a pithy expression of a general principle or rule; n. Maxim: 早期单管自动机关枪；an early, single-barreled, automatic machine gun; n. Maxim: 马克西姆(姓氏)；a male given name from Latin, equivalent to English 'Maximus'"],
 ["middleman", "['mɪd(ə)lˌmæn]", "n. 中间人；中间商；经纪人；经销商；调解人；掮客；a person or a company that buys goods from the company that makes them and sells them to somebody else; a person who helps to arrange things between people who do not want to talk directly to each other; an intermediary or agent between two parties, especially: a dealer, agent, or company intermediate between the producer of goods and the retailer or consumer; an independent trader engaged in the distribution of goods from producer to consumer; a go-between; n. (theatre): the interlocutor in minstrel shows"],
@@ -5482,7 +5486,7 @@ var enwords=[
 ["matrix", "['meɪtrɪks]", "n. 矩阵；发源地；基质；母体；子宫；(人或社会成长发展的）社会环境、政治局势；线路网；道路网；[地]杂基；矩阵转接电路；唱片模板"],
 ["matter", "['mætər]", "n. 事情；事态；问题；关于...的事情；物质；重要性；v. 有关系；要紧"],
 ["Matthew", "[ˈmæθju:]", "n. 马修；【宗】马太；(基督教《圣经》中的)《马太福音》；the first Gospel in the New Testament"],
-["mature", "UK [mə'tʃʊə(r)] US [mə'tʃʊr]", "adj. 成熟的；(保单）到期的；考虑周到的；v. 成熟；长成"],
+["mature", "UK [mə'tʃʊə(r)] US [mə'tʃʊr]", "adj. 成熟的；(保单)到期的；考虑周到的；v. 成熟；长成"],
 ["maturity", "[mə'tʃʊrəti]", "n. 成熟；(支票等的)到期"],
 ["maw", "[mɔː]", "n. 动物的胃；咽喉；口部；无底洞；吞噬一切的深渊；something that seems like a big mouth that swallows things up completely"],
 ["maximize", "['mæksɪmaɪz]", "v. 使增加至最大限度；充分利用"],

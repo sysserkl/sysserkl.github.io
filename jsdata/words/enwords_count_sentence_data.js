@@ -3,7 +3,6 @@ var en_sentence_count_global=[
 ["forepaw",0],
 ["stopover",0],
 ["epiphany",1],
-["maxim",1],
 ["middleman",1],
 ["developmental",1],
 ["handicraft",1],
@@ -62,7 +61,6 @@ var en_sentence_count_global=[
 ["materialistic",1],
 ["shopkeeper",1],
 ["storekeeper",1],
-["Hiroshima",1],
 ["Marxist",1],
 ["bourgeois",1],
 ["bento",1],
@@ -99,4 +97,6 @@ var en_sentence_count_global=[
 ["affix",1],
 ["affordably",1],
 ["afterdeck",1],
+["aftermarket",1],
+["afterthought",1],
 ];
