@@ -1266,7 +1266,13 @@ function getlines_kltxt_b(csno=false,cslines=false,single=false){
         cslines= Math.min(csmaxlines,Math.max(0,parseInt(document.getElementById('input_lines').value.trim())));
     }
 
-	var cshideno=document.getElementById('check_hide_no').checked;
+    var ohide_no=document.getElementById('check_hide_no');
+    if (ohide_no){
+	    var cshideno=ohide_no.checked;
+    }
+    else {
+        var cshideno=true;
+    }
 
 	klwiki_syntaxhighlight_global=false;
 	
@@ -1287,8 +1293,14 @@ function getlines_kltxt_b(csno=false,cslines=false,single=false){
         csno=(Math.ceil(csno/cslines)-1)*cslines+1;
     }
     
-	document.getElementById('input_lineno').value=csno;
-	document.getElementById('input_lines').value=cslines;
+    var olineno=document.getElementById('input_lineno');
+    if (olineno){
+        olineno.value=csno;
+    }
+    var olines=document.getElementById('input_lines');
+    if (olines){
+        olines.value=cslines;
+    }
     
     var blpage=sub_getlines_kltxt_b_pages(csno,cslines,bllength);
     if (single===false){
@@ -1298,7 +1310,7 @@ function getlines_kltxt_b(csno=false,cslines=false,single=false){
 	if (cshideno==false){
         bljg=bljg+'<ul>';
     }
-    if (csno==1){
+    if (csno==1 && csbookno_global_b>=0){
         var coverpath=csbooklist_sub_global_b[csbookno_global_b][3];
         var covername=csbooklist_sub_global_b[csbookno_global_b][0];
         if (coverpath.includes('digest')){
@@ -1517,8 +1529,11 @@ function txtsearch_kltxt_b(csword,csreg,cscontinue){
 }
 
 function highheight_kltxt_b(cswordlist){
-    if (document.getElementById('input_highlight').checked==false){
-        return;
+    var ohighlight=document.getElementById('input_highlight');
+    if (ohighlight){
+        if (document.getElementById('input_highlight').checked==false){
+            return;
+        }
     }
     var t0 = performance.now();
     var blkey=[];
@@ -1623,11 +1638,11 @@ function format_lines_kltxt_b(cslist,csstyle='',csaname=-1){
         return blstr;
     }
     
-    function sub_format_lines_kltxt_b_a_line(cslist,cshidelineno=false,csklwiki_format=false,remote_host='',imgpath='',is_digest=false){
+    function sub_format_lines_kltxt_b_a_line(cslist,cshidelineno=false,csklwiki_format=false,remote_host='',imgpath='',is_digest=false,isbold=false){
         var blstr=cslist[0];
         var csxl=cslist[1];
         var menu_t='';
-        if (csbooklist_sub_global_b[csbookno_global_b][0].substring(0,6)=='klwiki' || csbooklist_sub_global_b[csbookno_global_b][0].slice(-6,).toLowerCase()=='klwiki'){
+        if (csbookno_global_b>=0 && (csbooklist_sub_global_b[csbookno_global_b][0].substring(0,6)=='klwiki' || csbooklist_sub_global_b[csbookno_global_b][0].slice(-6,).toLowerCase()=='klwiki')){
             if (blstr.includes('<') || blstr.includes('>')){
                 blstr=blstr.replace(new RegExp("<","g"),"&lt;");
                 blstr=blstr.replace(new RegExp(">","g"),"&gt;");
@@ -1636,7 +1651,7 @@ function format_lines_kltxt_b(cslist,csstyle='',csaname=-1){
                 blstr=wiki_line_b(blstr,remote_host+'/wikiuploads/');
             }            
         }
-        if (csbooklist_sub_global_b[csbookno_global_b][1]=='圣经和合本' || csbooklist_sub_global_b[csbookno_global_b][1]=='Bible(kjv)'){
+        if (csbookno_global_b>=0 && (csbooklist_sub_global_b[csbookno_global_b][1]=='圣经和合本' || csbooklist_sub_global_b[csbookno_global_b][1]=='Bible(kjv)')){
             blstr=sub_format_lines_kltxt_b_bible(blstr);
         }
         else if (is_digest===false && csxl<100 && blstr.length<50){
@@ -1647,6 +1662,9 @@ function format_lines_kltxt_b(cslist,csstyle='',csaname=-1){
             blstr=blstr.replace(new RegExp(/<jsdocimg>(.*?)<\/jsdocimg>/,'g'),'<img src="'+imgpath+'$1" />');
         }
         blstr='<span class="txt_content">'+blstr+'</span>';
+        if (isbold){
+            blstr='<big><strong>'+blstr+'</strong></big>';
+        }
         if (cshidelineno){
             return blstr;
         }
@@ -1663,23 +1681,52 @@ function format_lines_kltxt_b(cslist,csstyle='',csaname=-1){
         csstyle='color:'+scheme_global['color'];
     }
     
-	var cshideno=document.getElementById('check_hide_no').checked;
-	var cshidelineno=document.getElementById('check_hide_lineno').checked;
-	var csklwiki_format=document.getElementById('check_klwiki_format').checked;
+    var ohideno=document.getElementById('check_hide_no');
+    if (ohideno){
+	    var cshideno=ohideno.checked;
+    }
+    else {
+        var cshideno=true;
+    }
+    var ohidelineno=document.getElementById('check_hide_lineno');
+    if (ohidelineno){
+	    var cshidelineno=ohidelineno.checked;
+    }
+    else {
+        var cshidelineno=true;
+    }
+    var owikiformat=document.getElementById('check_klwiki_format');
+    if (owikiformat){
+	    var csklwiki_format=owikiformat.checked;
+    }
+    else {
+        var csklwiki_format=true;
+    }
     
     var bljg='';
     var remote_host=local_storage_get_b('kl_remote_host',-1,false);
     var is_digest=location.href.includes('digest.htm');
     
-    if (csbooklist_sub_global_b[csbookno_global_b][4].includes('L')){
-        var imgpath=book_path_b(csbooklist_sub_global_b[csbookno_global_b][3])+'images/'+csbookname_global+'/';
-    }
-    else {
-        var imgpath=book_path_py_b('images',csbooklist_sub_global_b[csbookno_global_b][3])+csbookname_global+'/';
+    var imgpath='';
+    if (csbookno_global_b>=0){
+        if (csbooklist_sub_global_b[csbookno_global_b][4].includes('L')){
+            imgpath=book_path_b(csbooklist_sub_global_b[csbookno_global_b][3])+'images/'+csbookname_global+'/';
+        }
+        else {
+            imgpath=book_path_py_b('images',csbooklist_sub_global_b[csbookno_global_b][3])+csbookname_global+'/';
+        }
     }
 
     var html_keys=['table','tr','th','td','ul','ol','li','div'];
     var opened_keys=[];
+    
+    var menu_no_list=[];
+    var obold=document.getElementById('input_menu_bold');
+    if (obold && obold.checked){
+        for (let item of kltxt_menulist_index_global){
+            menu_no_list.push(item[0]);
+        }
+    }
     for (let item of cslist){
         //item 为 [ "玉亭失望地见他哥快上了土坡，就又轻轻喊叫了一声：“哥，你先等一等……”", 380 ] 这样的数组 - 保留注释
         if (item[1]+1==csaname){
@@ -1722,7 +1769,7 @@ function format_lines_kltxt_b(cslist,csstyle='',csaname=-1){
             }
         }
         if (only_html_key==null){
-            bljg=bljg+blleft+sub_format_lines_kltxt_b_a_line(item,cshidelineno,csklwiki_format,remote_host,imgpath,is_digest)+blright;
+            bljg=bljg+blleft+sub_format_lines_kltxt_b_a_line(item,cshidelineno,csklwiki_format,remote_host,imgpath,is_digest,menu_no_list.includes(item[1]))+blright;
         }
         else {
             bljg=bljg+item[0];  //如一行只有html key，如<td>，则不做修饰 - 保留注释

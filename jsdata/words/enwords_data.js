@@ -1,5 +1,9 @@
 //单词库
 var enwords=[
+["banyan", "['bænjən]", "n. （印度）榕树；=banian；a large fig tree (Ficus benghalensis) native to India and Pakistan that starts as an epiphyte and has spreading branches which send out aerial roots that grow down to the ground and form secondary trunks around the host tree; a South Asian tree with structures that grow down from the branches to the ground and then grow into new roots and trunks; a moraceous tree, Ficus benghalensis, of tropical India and the East Indies, having aerial roots that grow down into the soil forming additional trunks; n. a member of the Hindu merchant caste of N and W India; n. a loose-fitting shirt, jacket, or robe, worn originally in India"],
+["modicum", "UK ['mɒdɪkəm] US ['mɑːdɪkəm]", "n. 少量；一小份；一点点；a fairly small amount, especially of something good or pleasant; a small portion; a limited quantity; bit"],
+["proverbial", "[prə'vɜː(r)biəl]", "adj. 谚语的；谚语表达的；如谚语所说的；众所周知的；used to show that you are referring to a particular proverb or well-known phrase; of, relating to, or resembling a proverb; well known and talked about by a lot of people; that has become a proverb or byword; commonly spoken of"],
+["axiom", "['æksiəm]", "n. 公理；自明之理；格言；a rule or principle that most people believe to be true; a statement accepted as true as the basis for argument or inference; an established rule or principle or a self-evident truth; a maxim widely accepted on its intrinsic merit "],
 ["upriver", "[ˌʌp'rɪvə(r)] [ˈʌpˈrɪvə]", "adj. 上游的；向水源的；toward or at a point nearer the source of a river; towards the place where a river starts; adv. 向上游地；along a river, in the opposite direction to the way in which the water flows; n. 上游；an area located upstream"],
 ["unripe", "[ʌn'raɪp]", "adj. （食物）未成熟的；未熟的；生的；not yet ready to eat; not ripe: immature; adj. 没准备的；未准备好的；not ready: unprepared"],
 ["unclouded", "UK ['ʌn'klaʊdɪd] US [ʌn'klaʊdɪd]", "adj. 没有云的；晴朗的；开朗的；清晰的；not cloudy or overcast; not covered by clouds; not darkened or obscured: clear; not milky or dull; not made gloomy or depressed; not confused or impaired"],
@@ -4803,7 +4807,7 @@ var enwords=[
 ["investor", "[ɪn'vestər]", "n. 投资者"],
 ["invisible", "[ɪn'vɪzəbl]", "adj. 看不见的；无形的；n. 隐形人(或物)"],
 ["invitation", "[ˌɪnvɪ'teɪʃn]", "n. 邀请；邀请函；招待；招致；引诱"],
-["invite", "[ɪn'vaɪt]", "vt. 邀请；请求；招致；招待"],
+["invite", "[ɪn'vaɪt]", "vt. 邀请；请求；招待；招致"],
 ["involvement", "UK [ɪn'vɒlvmənt] US [ɪn'vɑːlvmənt]", "n. 卷入；牵连；参与；兴趣；恋爱关系；性关系"],
 ["involve", "UK [ɪn'vɒlv] US [ɪn'vɑːlv]", "vt. 使卷入；使陷入；牵涉；包含；使忙于"],
 ["inward-looking", "[ˈɪnwərdˌlʊkɪŋ]", "adj. 注重内心精神的；更关心自己的；不考虑他人的；对外界不太关注的；(of a people or society) more interested in themselves than in other people or societies"],
