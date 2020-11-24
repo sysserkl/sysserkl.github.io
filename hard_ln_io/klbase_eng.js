@@ -178,11 +178,13 @@ function en_search_sites_b(dictcn=true,maxlength=-1){
     ['m','Merriam-webster'],
     ['o','Oxford'],
     ['+','Cambridge'],
-    ['c','Collins'],
-    ['r','wordReference'],
-    ['e','enwords'],
+    //以下3行保留 - 保留注释
+    //['c','Collins'],
+    //['r','wordReference'],
+    //['e','enwords'],
     ['w','KLWiki'],
     ['t','txtlistsearch'],
+    ['E','Englishwords Book Search'],
     ['s','Selenium_news_reader'],
     ['4','海词+Bing+Merriam-webster+Oxford'],
     ]);
@@ -254,6 +256,9 @@ function open_link_en_b(cstype,csword){
                 blhref='txtlistsearch.htm';
             }
             window.open(blhref+'?_tagKLWiki0&s='+encodeURIComponent(('+'+csword).replace(new RegExp(' ','g'),' +')));
+            break;
+        case 'E':
+            window.open('englishwords_book_search.php?s='+encodeURIComponent(csword.replace(new RegExp(' ','g'),'\\s')));
             break;
         case 'e':
             window.open('enwords.htm?s='+encodeURIComponent(('+'+csword).replace(new RegExp(' ','g'),' +')));

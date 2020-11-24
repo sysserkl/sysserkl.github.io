@@ -22,6 +22,7 @@ var digest_global=`
 *chatty
 *combatant
 *compatriot
+*blindfold
 *cough
 *counterattack
 *countermovement

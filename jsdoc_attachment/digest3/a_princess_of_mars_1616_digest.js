@@ -242,7 +242,6 @@ var digest_global=`
 *vase
 *violet
 *voluntary
-*wander
 *warlike
 *warrior
 *watcher

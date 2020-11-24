@@ -21,6 +21,7 @@ var digest_global=`
 *baker
 *bald
 *baldness
+*wander
 *baptism
 *barefoot
 *barley
@@ -32,7 +33,6 @@ var digest_global=`
 *belly
 *beloved
 *Bethlehem
-*blindfold
 *blush
 *boar
 *bondmaid
@@ -384,4 +384,5 @@ var digest_global=`
 *yesternight
 *Zion
 *Hebron
+*unsearchable
 `.trim().split('\n');

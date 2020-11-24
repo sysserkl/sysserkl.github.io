@@ -10,7 +10,7 @@ var csbooklist_source_global_b=[
 ["dong_zhou_lie_guo_zhi_109423","东周列国志","历史","3",""],
 ["song_shi_yan_yi_93402","宋史演义","","3",""],
 ["jin_gu_qi_guan_bao_wlr_207970","今古奇观(抱瓮老人)","","3",""],
-["little_women_1172","Little Women(Louisa May Alcott)","englishwords","3",""],
+["little_women_1172","Little Women(Louisa May Alcott)","englishwords,已整理","3",""],
 ["er_shi_nian_mu_du_zgxzwjr_308350","二十年目睹之怪现状(吴趼人)","","3",""],
 ["bible_kjv_890","Bible(kjv)","englishwords,圣经,已整理","3",""],
 ["the_war_of_the_worlds_whg_2795","The War of the Worlds(Wells,H. G.)","englishwords,幻想","3",""],
