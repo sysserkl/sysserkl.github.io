@@ -1,0 +1,26 @@
+var digest_global=`
+*abbey
+*aluminium
+*bacterial
+*bloodshot
+*climber
+*craziness
+*discoverer
+*dreamt
+*eleventh
+*forepart
+*Hampton
+*handbook
+*hearsay
+*innkeeper
+*intermittently
+*Kingston
+*locomotion
+*milkman
+*riverbank
+*spectroscope
+*Thames
+*threepence
+*vender
+*Waterloo
+`.trim().split('\n');

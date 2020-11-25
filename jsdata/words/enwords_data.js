@@ -1,5 +1,8 @@
 //单词库
 var enwords=[
+["Diana", "[daɪˈænə]", "n. 黛安娜(女子名)；a feminine name: dim. Di; Fr. Diane; n. 【罗神】戴安娜(月亮和狩猎的女神)；an ancient Italian goddess of the forest and of childbirth who was identified with the moon goddess Artemis by the Romans; n. （诗）月；n. 女猎人；善骑的女人"],
+
+
 ["foe", "[fəʊ]", "n. 敌人；仇敌；反对者；one who has personal enmity for anothe; an enemy in war; adversary, opponent; one who opposes on principle; n. 危害物；something prejudicial or injurious; abbr. FOE, F.O.E.: 老鹰兄弟会；Fraternal Order of Eagles, an association devoted to charitable and social activities; abbr. FOE, FoE: 地球之友；Friends of the Earth, an organization of environmentalists and conservationists whose aim is to promote the sustainable use of the earth's resources"],
 ["homelike", "['həʊmˌlaɪk]", "adj. 像家一样舒适的；在自己家似的；舒适的；自在的；亲切的；characteristic of a home; having qualities associated with home; comfortable, familiar, cozy, etc.; like or suggestive of home; warmly comfortable"],
 ["nightingale", "UK ['naɪtɪŋˌɡeɪl] US ['naɪtɪŋˌɡeɪl][ˈnaɪt(ə)nˌgeɪl]", "n. 夜莺；a small brown bird, the male of which has a beautiful song; an Old World thrush (Luscinia megarhynchos synonym Erithacus megarhynchos) noted for the sweet usually nocturnal song of the male, also: any of various other birds noted for their sweet song or for singing at night; n. Nightingale: 南丁格尔(人名)；奈廷格尔；Florence 1820–1910 English nurse and philanthropist; Florence1820-1910; Eng. nurse in the Crimean War: regarded as the founder of modern nursing"],
@@ -8409,7 +8412,7 @@ var enwords=[
 ["Stanley", "[ˈstænli]", "n. 斯坦利（男子名）"],
 ["staple", "['steɪpl]", "n. U形(订书)钉；主要产物(要素)；原料(地)；adj. 主要的；重要的；vt. 用订书机装订"],
 ["starch", "[stɑːrtʃ]", "n. 淀粉；含淀粉的食物；（浆衣服、床单等用的）淀粉浆；vt. 给 ... 上浆；把（衣服、床单等）浆一浆"],
-["starcraft", "['staːkræft]", "n. 占星学；n. Starcraft: 星际争霸（一款网络游戏名）"],
+["starcraft", "['stɑ:krɑ:ft] ['staːkræft]", "n. 占星学；the art of interpreting or reading the stars, astrology; n. 星际飞船；a vehicle which travels to or among the stars; n. Starcraft: 星际争霸（一款网络游戏名）"],
 ["stardom", "['stɑːrdəm]", "n. 演员身份；明星地位；the status or position of a star; the state of being famous as an actor, a singer, etc."],
 ["stare", "UK [steə(r)] US [ster]", "v. 盯着看；凝视；n. 凝视"],
 ["starfish", "['stɑːrfɪʃ]", "n. 海星"],

@@ -204,16 +204,24 @@ function get_new_words_arr_enbook(cstype,csstr='',csobjects=false,maxlength=3,ad
 	if (checkbox_kl_value_b('remove_square')==false){
 		csstr=csstr.replace(new RegExp("(\\[[^\\[\\]]+\\])","g"),' ');
 	}
-    
-    var bljgarr2=str_2_array_enbook(csstr,true);
+
     var new_words_set=new Set();
     var old_words_set=new Set();    
+    var bljgarr2=str_2_array_enbook(csstr,true);
     [new_words_set,old_words_set]=get_new_words_arr_enbook2(bljgarr2);
-
     bljgarr2=array_union_b(new_words_set,old_words_set,true);
 
+    var new_words_set10=new Set();
+    var old_words_set10=new Set();    
+    if (en_words_book_newwords_continue_global){
+        var list10=csstr.trim().split('\n');
+        var blstr10=list10.slice(0,parseInt(list10.length*0.1)).join('\n');
+        var bljgarr2_10=str_2_array_enbook(blstr10,true);
+        [new_words_set10,old_words_set10]=get_new_words_arr_enbook2(bljgarr2_10);
+    }
+    
     if (csobjects==false){
-        get_new_words_arr_html_enbook(cstype,bljgarr2,[new_words_set,old_words_set]);
+        get_new_words_arr_html_enbook(cstype,bljgarr2,[new_words_set,old_words_set,new_words_set10,old_words_set10]);
     }
     else {
         sub_get_new_words_arr_objects_enbook();
@@ -343,46 +351,45 @@ function get_new_words_group_enbook(cstype){
 
 function get_new_words_arr_html_enbook(cstype,bljgarr2,list_t){
     //cstype: 1 全部单词 2 未收录 3 已收录 4 wiki 5 js - 保留注释
-    
     var en_new2_total=list_t[0];
     var en_intersection_total=list_t[1];
     //----------------------
     if (en_words_book_newwords_continue_global){
-        new_words_continue_enbook(en_new2_total.size);
+        new_words_continue_enbook(en_new2_total.size,list_t[2].size);
+        return;
     }
-    else {
-        var bljg='';
-        switch (cstype){
-            case 1:
-                bljg=new_old_words_html_enbook(bljgarr2,'全部单词');
-                break;
-            case 2:
-                bljg=new_old_words_html_enbook(en_new2_total,'未收录单词');
-                break;
-            case 3:
-                bljg=new_old_words_html_enbook(en_intersection_total,'已收录单词');
-                break;
-            case 4:
-                onetextarea_t=checkbox_kl_value_b('newwords_one_textarea');
-                bljg=wiki_type_words_kle(Array.from(en_intersection_total),onetextarea_t);
-                break;
-            case 5:
-                onetextarea_t=checkbox_kl_value_b('newwords_one_textarea');
-                bljg=js_type_words_kle(Array.from(en_intersection_total),onetextarea_t);
-                break;
-        }
-        document.getElementById('div_new_words2').innerHTML='<div id="div_sub_words">'+bljg+'</div>';
-        
-        //未收录单词 - 保留注释
-        if (en_words_book_newwords_continue_global==false && cstype==2 && csbookno_global_b>=0 && csbooklist_sub_global_b[csbookno_global_b][1]=='Way Station(Clifford D. Simak)' && !document.getElementById('textarea_new_words').value.includes('已截取')){
-            if (confirm("是否更新 Way Station 的未收录单词统计数字：("+en_new2_total.size+")？")){
-                local_storage_today_b('enwords_way_station_statistics',40,en_new2_total.size,'/');
-            }
+    //----------------------
+    var bljg='';
+    switch (cstype){
+        case 1:
+            bljg=new_old_words_html_enbook(bljgarr2,'全部单词');
+            break;
+        case 2:
+            bljg=new_old_words_html_enbook(en_new2_total,'未收录单词');
+            break;
+        case 3:
+            bljg=new_old_words_html_enbook(en_intersection_total,'已收录单词');
+            break;
+        case 4:
+            onetextarea_t=checkbox_kl_value_b('newwords_one_textarea');
+            bljg=wiki_type_words_kle(Array.from(en_intersection_total),onetextarea_t);
+            break;
+        case 5:
+            onetextarea_t=checkbox_kl_value_b('newwords_one_textarea');
+            bljg=js_type_words_kle(Array.from(en_intersection_total),onetextarea_t);
+            break;
+    }
+    document.getElementById('div_new_words2').innerHTML='<div id="div_sub_words">'+bljg+'</div>';
+    
+    //未收录单词 - 保留注释
+    if (en_words_book_newwords_continue_global===false && cstype==2 && csbookno_global_b>=0 && csbooklist_sub_global_b[csbookno_global_b][1]=='Way Station(Clifford D. Simak)' && !document.getElementById('textarea_new_words').value.includes('已截取')){
+        if (confirm("是否更新 Way Station 的未收录单词统计数字：("+en_new2_total.size+")？")){
+            local_storage_today_b('enwords_way_station_statistics',40,en_new2_total.size,'/');
         }
     }
 }
 
-function new_words_continue_enbook(cslength){
+function new_words_continue_enbook(cslength,percent10length=0){
     if (csbookno_global_b>=0 && en_words_book_newwords_continue_global){
         if (csbookno_global_b==0){
             if (confirm("是否批量统计生词数量？")==false){
@@ -394,7 +401,7 @@ function new_words_continue_enbook(cslength){
         if (newwords_statistics.split('\n')[0].trim()!==today){
             newwords_statistics=today;
         }
-        newwords_statistics=newwords_statistics+'\n'+csbooklist_sub_global_b[csbookno_global_b][0]+' /// '+csbooklist_sub_global_b[csbookno_global_b][1]+' /// '+cslength+'\n';
+        newwords_statistics=newwords_statistics+'\n'+csbooklist_sub_global_b[csbookno_global_b][0]+' /// '+csbooklist_sub_global_b[csbookno_global_b][1]+' /// '+cslength+' /// '+percent10length+'\n';
         localStorage.setItem('enwords_books_all_new_words',newwords_statistics);
         
         if (csbooklist_sub_global_b.length-1>csbookno_global_b){
@@ -548,11 +555,14 @@ function compare_statistics_enbook(){
             var item=cslist[blxl];
             var list_temp=item.split(' /// ');
             //形如 24tian_tu_po_gao_kao_dgch3cc_343788 /// 24天突破高考大纲词汇3500(陈灿) /// 2426 - 保留注释
-            if (list_temp.length!==3){
-                cslist[blxl]=['','',0];
+            if (list_temp.length<3){
+                cslist[blxl]=['','',0,0];
             }
+            else if (list_temp.length<4){
+                cslist[blxl]=[list_temp[0].trim(),list_temp[1].trim(),parseInt(list_temp[2].trim()),0];
+            }            
             else {
-                cslist[blxl]=[list_temp[0].trim(),list_temp[1].trim(),parseInt(list_temp[2].trim())];
+                cslist[blxl]=[list_temp[0].trim(),list_temp[1].trim(),parseInt(list_temp[2].trim()),parseInt(list_temp[3].trim())];
             }
         }
         return cslist;
@@ -570,13 +580,13 @@ function compare_statistics_enbook(){
         var blfound=false;
         for (let item1 of list1){
             if (item1[0]==bookid){
-                enbook_compare_result_list_global.push([bookid,item2[1],item1[2],item2[2],item2[2]-item1[2]]);
+                enbook_compare_result_list_global.push([bookid,item2[1],item1[2],item2[2],item2[2]-item1[2],item1[3],item2[3],item2[3]-item1[3]]);
                 blfound=true;
                 break;
             }
         }
         if (!blfound){
-            enbook_compare_result_list_global.push([bookid,item2[1],'',item2[2],'--']);
+            enbook_compare_result_list_global.push([bookid,item2[1],'',item2[2],'--','',item2[3],'--']);
         }
     }
     compare_result_list_to_table_enbook();
@@ -594,10 +604,28 @@ function compare_result_list_to_table_enbook(sortno=4){
     var tdstyle='style="padding:0.5rem;border-bottom:0.1rem solid '+scheme_global['color']+';"';
     var thstyle='style="cursor:pointer;padding:0.5rem;border-bottom:0.2rem solid '+scheme_global['color']+';"';
     var bljg='<table id="table_compare" cellpadding=0 cellspacing=0 align=center>';
-    bljg=bljg+'<tr><th '+thstyle+'>No.</th><th '+thstyle+' onclick="javascript:compare_result_list_to_table_enbook(1);">书名</th><th '+thstyle+' onclick="javascript:compare_result_list_to_table_enbook(2);">Data1</th><th '+thstyle+' onclick="javascript:compare_result_list_to_table_enbook(3);">Data2</th><th '+thstyle+' onclick="javascript:compare_result_list_to_table_enbook(4);">Data2 - Data1</th></tr>';
+    bljg=bljg+'<tr>';
+    bljg=bljg+'<th '+thstyle+'>No.</th>';
+    bljg=bljg+'<th '+thstyle+' onclick="javascript:compare_result_list_to_table_enbook(1);">书名</th>';
+    bljg=bljg+'<th '+thstyle+' onclick="javascript:compare_result_list_to_table_enbook(2);">Data1</th>';
+    bljg=bljg+'<th '+thstyle+' onclick="javascript:compare_result_list_to_table_enbook(3);">Data2</th>';
+    bljg=bljg+'<th '+thstyle+' onclick="javascript:compare_result_list_to_table_enbook(4);">Δ</th>';
+    bljg=bljg+'<th '+thstyle+' onclick="javascript:compare_result_list_to_table_enbook(5);">Data1(10%)</th>';
+    bljg=bljg+'<th '+thstyle+' onclick="javascript:compare_result_list_to_table_enbook(6);">Data2(10%)</th>';
+    bljg=bljg+'<th '+thstyle+' onclick="javascript:compare_result_list_to_table_enbook(7);">Δ</th>';    
+    bljg=bljg+'</tr>';
     var blxl=1;
     for (let item of enbook_compare_result_list_global){
-        bljg=bljg+'<tr><td '+tdstyle+'>'+blxl+'</td><td '+tdstyle+'>'+item[1]+'</td><td align=right '+tdstyle+'>'+item[2]+'</td><td align=right '+tdstyle+'>'+item[3]+'</td><td align=right '+tdstyle+'>'+item[4]+'</td></tr>';
+        bljg=bljg+'<tr>';
+        bljg=bljg+'<td '+tdstyle+'>'+blxl+'</td>';
+        bljg=bljg+'<td '+tdstyle+'>'+item[1]+'</td>';
+        bljg=bljg+'<td align=right '+tdstyle+'>'+item[2]+'</td>';
+        bljg=bljg+'<td align=right '+tdstyle+'>'+item[3]+'</td>';
+        bljg=bljg+'<td align=right '+tdstyle+'>'+item[4]+'</td>';
+        bljg=bljg+'<td align=right '+tdstyle+'>'+item[5]+'</td>';
+        bljg=bljg+'<td align=right '+tdstyle+'>'+item[6]+'</td>';
+        bljg=bljg+'<td align=right '+tdstyle+'>'+item[7]+'</td>';        
+        bljg=bljg+'</tr>';
         blxl=blxl+1;
     }
     bljg=bljg+'</table>';
@@ -611,7 +639,9 @@ function compare_form_statistics_enbook(){
     bljg=bljg+'<tr><td colspan=2 align=right><span class="aclick" onclick="javascript:compare_statistics_enbook();">比较</span><span class="aclick" href="javascript:void(null);" onclick="javascript:document.getElementById(\'divhtml2\').innerHTML=\'\';">Close</span></p></tr>';
     bljg=bljg+'<tr><td colspan=2 valign=top id="td_result" style="padding:1rem;"></tr>';    
     bljg=bljg+'</table>';
-    document.getElementById('divhtml2').innerHTML=bljg;
+    var odiv=document.getElementById('divhtml2');
+    odiv.innerHTML=bljg;
+    odiv.scrollIntoView();
 }
 
 function import_words_enbook(cstype){

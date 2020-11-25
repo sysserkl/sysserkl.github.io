@@ -1,7 +1,7 @@
 var csbooklist_source_global_b=[
 ["shi_ji_57250","史记","历史","3",""],
 ["shi_jing_68262","诗经","诗词","3",""],
-["twenty_thousand_leagues_under_the_sautotw_6548","Twenty Thousand Leagues Under the Seas: An Underwater Tour of the World","englishwords","3",""],
+["twenty_thousand_leagues_under_the_sautotw_6548","Twenty Thousand Leagues Under the Seas: An Underwater Tour of the World","englishwords,已整理","3",""],
 ["han_shu_ban_gu_47791","汉书(班固)","历史","3",""],
 ["the_federalist_papers_1999","The Federalist Papers","englishwords,已整理","3",""],
 ["han_fei_zi_101015","韩非子","","3",""],
@@ -13,7 +13,7 @@ var csbooklist_source_global_b=[
 ["little_women_1172","Little Women(Louisa May Alcott)","englishwords,已整理","3",""],
 ["er_shi_nian_mu_du_zgxzwjr_308350","二十年目睹之怪现状(吴趼人)","","3",""],
 ["bible_kjv_890","Bible(kjv)","englishwords,圣经,已整理","3",""],
-["the_war_of_the_worlds_whg_2795","The War of the Worlds(Wells,H. G.)","englishwords,幻想","3",""],
+["the_war_of_the_worlds_whg_2795","The War of the Worlds(Wells,H. G.)","englishwords,幻想,已整理","3",""],
 ["a_princess_of_mars_1616","A Princess of Mars","englishwords,已整理","3",""],
 ["a_journey_to_the_centre_ote_3228","A Journey to the Centre of the Earth","englishwords","3",""],
 ["jean_christophe_volume_i_mian_fgbs_129538","Jean-Christophe, Volume I, by Romain Rolland","englishwords,已整理","3",""],
