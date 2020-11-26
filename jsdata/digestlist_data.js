@@ -41,5 +41,6 @@ var digestlist_source_global_b=[
 ["li_xiang_guo_yi_cong_ddzzjjxjb2qsxlxflxsfszpjg7lxgcp_1094955_digest",1],
 ["zhong_guo_you_ji_jie_clzj_244884_digest",1],
 ["xian_dai_xing_yu_da_tsqgmbm_335429_digest",1],
+["harry_potter_and_the_philosopher_ss_3784_digest",1],
 ["jin_yong_zuo_pin_ji_sdxlxdbq4_575838_digest",1],
 ];

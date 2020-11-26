@@ -450,4 +450,7 @@ var digest_global=`
 *wrongly
 *yacht
 *zebra
+*recognizable
+*watercourse
+*seabird
 `.trim().split('\n');

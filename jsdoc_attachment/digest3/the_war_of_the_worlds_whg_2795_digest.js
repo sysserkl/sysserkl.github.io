@@ -23,4 +23,5 @@ var digest_global=`
 *threepence
 *vender
 *Waterloo
+*seaward
 `.trim().split('\n');

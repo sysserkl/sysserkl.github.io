@@ -20,27 +20,67 @@ function sentence_new_words_klsnews(){
     get_new_words_arr_enbook(2,list_t.join('\n'),ospans,4,true,true);
 }
 
-function sitecompare_klsnews(list_all,list_exist,csdays){
-    if (list_all.length==0 || list_exist.length==0 || csdays==0){
+function sites_compare_sort_klsnews(sort_type){
+    sites_compare_list_isdesc=!sites_compare_list_isdesc;
+    sort_type=Math.min(3,Math.max(0,parseInt(sort_type)));
+    if (sort_type==0){
+        sites_compare_list_global.sort(function (a,b){return zh_sort_b(a,b,sites_compare_list_isdesc,0);});
+    }
+    else {
+        if (sites_compare_list_isdesc){
+            sites_compare_list_global.sort(function (a,b){return b[sort_type]-a[sort_type];});
+        }
+        else {
+            sites_compare_list_global.sort(function (a,b){return a[sort_type]-b[sort_type];});
+        }
+    }
+
+    var bljg='';
+    for (let blxl=0;blxl<sites_compare_list_global.length;blxl++){
+        bljg=bljg+'<tr class="odd">';
+        var foundname=false;
+        for (let www of sites_all_global){
+            if (www[1]==sites_compare_list_global[blxl][0]){
+                bljg=bljg+'<td class="blackline1">'+(blxl+1)+'. <a href="'+www[0]+'" target=_blank>'+sites_compare_list_global[blxl][0]+'</a></td>';
+                foundname=true;
+                break;
+            }
+        }
+        if (foundname==false){
+            bljg=bljg+'<td class="blackline1">'+(blxl+1)+'. '+sites_compare_list_global[blxl][0]+'</td>';
+        }
+        bljg=bljg+'<td align=right class="blackline1">'+sites_compare_list_global[blxl][1]+'</td>';
+        bljg=bljg+'<td align=right class="blackline1">'+sites_compare_list_global[blxl][2]+'</td>';
+        bljg=bljg+'</tr>\n';
+    }
+    if (bljg!==''){
+        bljg='<h3>网站更新频率</h3>\n<table>\n<tr><th class="blackline2" onclick="javascript:sites_compare_sort_klsnews(0);">网站</th><th class="blackline2" onclick="javascript:sites_compare_sort_klsnews(1);">更新次数</th><th class="blackline2" onclick="javascript:sites_compare_sort_klsnews(2);">更新条数</th></tr>\n'+bljg+'</table>\n';
+    }
+    document.getElementById('td_sites_compare').innerHTML=bljg;
+}
+
+function sites_compare_klsnews(csdays,sort_type=2){
+    if (sites_all_global.length==0 || site_exist_global.length==0 || csdays==0){
         return;
     }
     var odiv=document.getElementById('divhtml');
     var bljg='';
     var list_0=[];
-    if (list_exist.length>0){
-        for (let item_t of list_exist){
+    if (site_exist_global.length>0){
+        for (let item_t of site_exist_global){
             if (item_t.length<3){continue;}
             list_0.push(item_t[0]);
         }
     }
     var list_all0=[];
-    for (let item_t of list_all){
+    for (let item_t of sites_all_global){
         list_all0.push(item_t[1]);
     }
+    
     var result_t=array_difference_b(list_all0,list_0);
     result_t.sort(function (a,b){return zh_sort_b(a,b);});
     for (let item_t of result_t){
-        for (let www of list_all){
+        for (let www of sites_all_global){
             if (item_t==www[1]){
                 bljg=bljg+'<li><a href="'+www[0]+'" target=_blank>'+www[1]+'</a></li>\n';
             }
@@ -52,55 +92,22 @@ function sitecompare_klsnews(list_all,list_exist,csdays){
 
     var statistics_t=[];
 
-    for (let item_t of list_exist){
+    for (let item_t of site_exist_global){
         if (item_t.length<3){continue;}
         if (statistics_t[item_t[0]]==null){
             statistics_t[item_t[0]]=[item_t[0],0,0];
         }
         statistics_t[item_t[0]][1]=statistics_t[item_t[0]][1]+1;
         statistics_t[item_t[0]][2]=statistics_t[item_t[0]][2]+item_t[2];
-        
     }
-    result_t=[];
-    for (var blxl in statistics_t){
-        result_t.push(statistics_t[blxl]);
+    
+    sites_compare_list_global=[];
+    for (let key in statistics_t){
+        sites_compare_list_global.push(statistics_t[key]);
     }
-    result_t.sort(function (a,b){
-        if (a[1]==b[1]){
-            return a[2]-b[2];
-        }
-        else {
-            return a[1]-b[1];
-        }
-    });
-
-    var bljg2='';
-    for (let blxl=0;blxl<result_t.length;blxl++){
-        bljg2=bljg2+'<tr class="odd">';
-        var foundname=false;
-        for (let www of list_all){
-            if (www[1]==result_t[blxl][0]){
-                bljg2=bljg2+'<td class="blackline1">'+(blxl+1)+'. <a href="'+www[0]+'" target=_blank>'+result_t[blxl][0]+'</a></td>';
-                foundname=true;
-                break;
-            }
-        }
-        if (foundname==false){
-            bljg2=bljg2+'<td class="blackline1">'+(blxl+1)+'. '+result_t[blxl][0]+'</td>';
-        }
-        bljg2=bljg2+'<td align=right class="blackline1">'+result_t[blxl][1]+'</td>';
-        bljg2=bljg2+'<td align=right class="blackline1">'+result_t[blxl][2]+'</td>';
-        bljg2=bljg2+'</tr>';
-    }
-    if (bljg2!==''){
-        bljg2='<h3>网站更新频率</h3><table><tr><th align=center class="blackline2">网站</th><th align=center class="blackline2">更新次数</th><th align=center class="blackline2">更新条数</th></tr>'+bljg2+'</table>';
-    }
-    if (bljg!=='' && bljg2!==''){
-        odiv.innerHTML='<table style="margin-top:15px;padding:10px;"><tr><td valign=top>'+bljg+'</td><td valign=top>'+bljg2+'</td></tr></table>';
-    }
-    else {
-        odiv.innerHTML=bljg+bljg2;
-    }
+    
+    odiv.innerHTML='<table cellpadding="10" style="margin-top:0.5rem;"><tr><td valign=top>'+bljg+'</td><td valign=top id="td_sites_compare"></td></tr></table>';
+    sites_compare_sort_klsnews(sort_type);
 }
 
 function sort_keys_klsnews(){
