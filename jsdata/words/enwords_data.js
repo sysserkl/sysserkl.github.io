@@ -1,5 +1,11 @@
 //单词库
 var enwords=[
+["broomstick", "['bruːmˌstɪk] [ˈbrumˌstɪk]", "n. 长柄扫帚；扫帚柄（传说中女巫用以飞行）；a broom with a long handle and small thin sticks at the end, or the handle of a broom. In stories witches (= women with evil magic powers) ride through the air on broomsticks.; the long thin handle of a broom"],
+["redheaded", "['redˌhedɪd]", "adj. 红发的；红头羽毛的；having red hair or a red head; having red hair, as a person, or a red head, as a bird"],
+["boarhound", "UK ['bɔːhaʊnd] US [ˈbɔrˌhaund, ˈbour-]", "n. 野猪猎犬；用以猎野猪的大猎狗；a large dog used in hunting wild boars; a hound used to chase boar; a Great Dane or other large dog used in hunting wild boar"],
+["heedless", "[ˈhidlɪs] ['hiːdləs]", "adj. 不注意的；不留心的；not paying careful attention to somebody/something; not taking heed: inconsiderate, thoughtless; unaware, without noticing; inattentive; careless; showing a reckless lack of care or attention"],
+["heedlessly", "['hiːdləsli]", "adv. 不注意地；without paying careful attention to somebody/something; in a way that does not give attention to a risk or possible difficulty; in a heedless manner"],
+["heedlessness", "[hiːdlɪsnɪs] [ˈhiːdləsnəs]", "n. 不注意；不留神；掉以轻心；the state or character of being heedless; inattention; carelessness; thoughtlessness; a lack of attentiveness (as to children or helpless people); the trait of acting rashly and without prudence; the trait of forgetting or ignoring your responsibilities"],
 ["Diana", "[daɪˈænə]", "n. 黛安娜(女子名)；a feminine name: dim. Di; Fr. Diane; n. 【罗神】狄安娜 ；戴安娜(月亮和狩猎的女神)；an ancient Italian goddess of the forest and of childbirth who was identified with the moon goddess Artemis by the Romans; n. （诗）月；the moon personified as a goddess; n. 女猎人；善骑的女人；独身主义的女性；n. diana: a North American fritillary (butterfly), the male of which is orange and black and the female blue and black"],
 ["beetroot", "['biːtruːt] ['bitˌrut]", "n. 甜菜；甜菜根；a plant with a round dark red root that is cooked and eaten as a vegetable; a beet grown for its edible usually red root, also: the root"],
 ["Angelina", "[ˌændʒiˈli:nə] [ˌændʒəˈlinə] [ˌændʒəˈlaɪnə]", "n. 安吉丽娜；安吉莉娜；安吉利娜(女子名)；Angela 的昵称；a female given name, form of 'Angela'; n. 年轻的缺乏经验的流浪汉/无业游民；(slang): a young, inexperienced hobo (of either gender)"],

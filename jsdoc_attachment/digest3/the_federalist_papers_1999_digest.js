@@ -53,4 +53,5 @@ var digest_global=`
 *undoubted
 *unquestionably
 *vigor
+*prejudicial
 `.trim().split('\n');

@@ -119,4 +119,6 @@ var digest_global=`
 *wrathfully
 *Zola
 *zoology
+*heedlessly
+*heedlessness
 `.trim().split('\n');

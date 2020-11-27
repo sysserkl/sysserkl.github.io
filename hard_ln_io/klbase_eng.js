@@ -849,7 +849,7 @@ function en_words_temp_textarea_b(divname,calljsname=''){
     en_word_temp_get_b();
     var postpath=postpath_b();
 	var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php?type=enwords" name="form_word_temp" target=_blank>\n';
-    bljg=bljg+'<textarea name="textarea_word_temp" id="textarea_word_temp" style="height:20rem;">'+en_words_temp_global.join('\n')+'</textarea>';
+    bljg=bljg+'<textarea name="textarea_word_temp" id="textarea_word_temp" style="height:'+(ismobile_b()?'10':'20')+'rem;">'+en_words_temp_global.join('\n')+'</textarea>';
     bljg=bljg+'<p>';
     bljg=bljg+'<span class="aclick" onclick="javascript:document.getElementById(\''+divname+'\').innerHTML=\'\';">关闭</span> ';
     if (calljsname!==''){

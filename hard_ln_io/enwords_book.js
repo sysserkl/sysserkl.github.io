@@ -213,7 +213,7 @@ function get_new_words_arr_enbook(cstype,csstr='',csobjects=false,maxlength=3,ad
 
     var new_words_set10=new Set();
     var old_words_set10=new Set();    
-    if (en_words_book_newwords_continue_global){
+    if (typeof en_words_book_newwords_continue_global!=='undefined' && en_words_book_newwords_continue_global){
         var list10=csstr.trim().split('\n');
         var blstr10=list10.slice(0,parseInt(list10.length*0.1)).join('\n');
         var bljgarr2_10=str_2_array_enbook(blstr10,true);
