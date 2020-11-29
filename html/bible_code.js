@@ -201,6 +201,7 @@ function fav_location_bible(cspages){
 }
 
 function search_bible(cskey='',csstartno=0,favpage_no=1){
+    var t0=performance.now();   
     if (cskey==''){
         cskey=document.getElementById('input_bible_search').value.trim();
     }
@@ -314,6 +315,7 @@ function search_bible(cskey='',csstartno=0,favpage_no=1){
     document.getElementById('select_chapter_cn').value='-1';
     document.getElementById('select_sub').innerHTML='';
     mouseover_mouseout_oblong_span_b(document.querySelectorAll('div#divhtml span.oblong_box'));
+    console.log('search_bible 费时：'+(performance.now() - t0) + " milliseconds");
 }
 
 function fav_statistics_bible(cscolumn=-1){
@@ -403,7 +405,7 @@ function fav_sort_bible(csarray){
 }
 
 function fav_all_bible(){
-    var t0=0;   
+    var t0=performance.now();   
     var result_t=[];
     for (let blxl=0;blxl<chapter_global.length;blxl++){
         var startline=chapter_global[blxl][0];
@@ -415,7 +417,7 @@ function fav_all_bible(){
         }
         result_t=result_t.concat(fav_one_book_bible(startline,endline));
     }
-    console.log('费时：'+(performance.now() - t0) + " milliseconds");
+    console.log('fav_all_bible 费时：'+(performance.now() - t0) + " milliseconds");
     
     var aname=[];
     for (let blxl=0;blxl<result_t.length;blxl++){

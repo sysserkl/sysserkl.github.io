@@ -15,4 +15,5 @@ var digest_global=`
 *powdery
 *self-devotion
 *tableful
+*scepticism
 `.trim().split('\n');
