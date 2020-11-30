@@ -257,4 +257,5 @@ var digest_global=`
 *wreck
 *wrist
 *yellowish
+*safekeeping
 `.trim().split('\n');

@@ -1,5 +1,9 @@
 //单词库
 var enwords=[
+["depositary", "UK [dɪ'pɒzɪt(ə)rɪ] US [dɪˈpɒzɪteri] [dɪ'pɒzəˌterɪ] [dɪ'pɑzəˌterɪ]", "n. 保管所；保管室；保管人；受托人；受托公司；存放处；储藏所；a person or group to whom something is entrusted for safety or preservation; a place where something is placed or deposited especially for safekeeping; a storehouse; depository; trustee"],
+["depository", "UK [dɪ'pɒzɪt(ə)ri] US [dɪˈpɑzɪˌtɔri, -ˌtouri]", "n. 保管人；受托人；存放处；贮藏室；仓库；a store, such as a warehouse, for furniture, valuables, etc; repository; a place where things can be stored; a place where something is placed or deposited especially for safekeeping; a person to whom something is entrusted; a trustee; depositary; storehouse"],
+["safekeeping", "['seɪf'kiːpɪŋ]", "n. 妥善保管；安全保护 ；（对贵重物品的）保护，保管；the act or process of preserving in safety; the state of being preserved in safety; the act of keeping or state of being kept in safety; a keeping or being kept in safety; protection or custody"],
+["cornflakes", "['kɔː(r)nˌfleɪks]", "n. 脆玉米片（通常加牛奶和糖作早餐）；a breakfast food made from small dry yellow pieces of maize, usually eaten with milk and sugar; toasted flakes made from the coarse meal of hulled corn for use as a breakfast cereal"],
 ["philanthropist", "UK [fɪ'lænθrəpɪst] US [fɪ'lænθrəpɪst] [fəˈlænθrəpɪst]", "n. 慈善家；乐善好施的人；博爱的人；博爱主义者；a rich person who helps the poor and those in need, especially by giving money; one who makes an active effort to promote human welfare; a person who practices philanthropy; a person who loves humankind in general; a very generous person or institution"],
 ["scepticism", "['skeptɪˌsɪz(ə)m]", "n. 怀疑主义；怀疑论；怀疑态度；怀疑宗教（对宗教信条的怀疑或不信任）；=skepticism（英）；an attitude of doubting that claims or statements are true or that something will happen; an attitude that shows you doubt whether something is true or useful"],
 ["passcode", "UK [ˈpɑːsˌkəʊd] US [ˈpæsˌkoʊd]", "n. 密码；a sequence of digits used to gain access to a building, computer system, etc; a combination of numbers or movements on the screen that allow you to use an electronic device"],
@@ -7450,7 +7454,7 @@ var enwords=[
 ["reportedly", "[rɪ'pɔːrtɪdli]", "adv. 据报道；据说"],
 ["reporter", "UK [rɪˈpɔː(r)tə(r)] US [rɪˈpɔrtər]", "n. 记者；通讯员"],
 ["report", "UK [rɪ'pɔːt] US [rɪ'pɔːrt]", "n. 报告；传闻；成绩单；爆炸声；v. 报告；报导；叙述；举报；报到；对…负责"],
-["repository", "UK [rɪ'pɒzətri] US [rɪ'pɑːzətɔːri]", "n. 容器；仓库；贮藏室；存放处；智囊；学识渊博的人；a person or book that is full of information; a place, room, or container where something is deposited or stored"],
+["repository", "UK [rɪ'pɒzətri] US [rɪ'pɑːzətɔːri]", "n. 存放处；贮藏室；仓库；容器；智囊；学识渊博的人；a person or book that is full of information; a place, room, or container where something is deposited or stored"],
 ["representation", "[ˌreprɪzen'teɪʃn]", "n. 陈述；表现；表示法；代表"],
 ["representative", "[ˌreprɪ'zentətɪv]", "n. 代表；众议员；典型；adj. 代表的；代表制的；典型的"],
 ["represent", "[ˌreprɪ'zent]", "vt. 表现；表示；描绘；代表；象征；说明；阐明；vi. 提出异议"],

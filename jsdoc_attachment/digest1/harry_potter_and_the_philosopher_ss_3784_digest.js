@@ -4,4 +4,5 @@ var digest_global=`
 *broomstick
 *redheaded
 *boarhound
+*cornflakes
 `.trim().split('\n');

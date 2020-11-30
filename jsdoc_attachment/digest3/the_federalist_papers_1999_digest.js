@@ -55,4 +55,6 @@ var digest_global=`
 *vigor
 *prejudicial
 *equilibrium
+*depositary
+*depository
 `.trim().split('\n');
