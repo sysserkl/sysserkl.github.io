@@ -950,6 +950,9 @@ function bookmarks_set_kltxt_b(){
 
 	var csno= Math.max(parseInt(document.getElementById('input_lineno').value.trim()),0);
 	var cslines= Math.min(500,Math.max(0,parseInt(document.getElementById('input_lines').value.trim())));
+    if ((csno-1)/cslines+1==Math.ceil(filelist.length/cslines)){
+        csno=filelist.length;   //最后一页 - 保留注释
+    }
     var str_t=csbookname_global+'&'+csno+'&'+cslines;
     if (!('&'+bljg+'&').includes('&'+str_t+'&')){
         str_t=csbooklist_sub_global_b[csbookno_global_b][1].replace(new RegExp(/&/,'g'),'_')+'&'+str_t+'&'+filelist.length+'&'+now_time_str_b(':',true)+'\n';
@@ -1183,7 +1186,7 @@ function bookmarks_get_kltxt_b(current_book_today_bookmark_only_one=false,return
     
     document.getElementById('divhtml2').innerHTML='<section style="overflow:auto;"><table id="table_bookmarks" class="table_common" cellpadding=0 cellspacing=0 style="font-size:0.85rem;margin-left:0.5rem;" width=100%>'+table_th+array_2_li_b(result_t,'tr',false)+table_sum+'</table></section><br />'+bljg;
     if (return_full){
-        flot_lines_k([['《'+csbooklist_sub_global_b[csbookno_global_b][1]+'》阅读进度'].concat(current_book_percent)],'div_flot_bookmark','nw',true,'','d','%');
+        flot_lines_k([['《'+csbooklist_sub_global_b[csbookno_global_b][1]+'》阅读进度'].concat(current_book_percent)],'div_flot_bookmark','nw',true,'','d','%',-1,[],-1,0,100);
     }
     var otds=document.querySelectorAll('table#table_bookmarks td.td_bookmark_datetime');
     for (let one_td of otds){
@@ -1930,9 +1933,9 @@ function en_lines_days_kltxt_b(theday=new Date()){
     function sub_en_lines_days_kltxt_b_div(blenstr_t){
         var bljg='';
         var englist_t=blenstr_t.match(/<sup style="font-size:0.8rem;color:#cc0000;" class="kleng">(.*?)<\/sup>/g);
-        for (var enitem_t in englist_t){
-            englist_t[enitem_t]=englist_t[enitem_t].replace(new RegExp(/<sup style="font-size:0.8rem;color:#cc0000;" class="kleng">(.*?)<\/sup>/,'g'),'$1');
-        }        
+        for (let blxl=0;blxl<englist_t.length;blxl++){
+            englist_t[blxl]=englist_t[blxl].replace(new RegExp(/<sup style="font-size:0.8rem;color:#cc0000;" class="kleng">(.*?)<\/sup>/,'g'),'$1');
+        }
         bljg=bljg+enwords_batch_div_b(englist_t);    
         return bljg;
     }

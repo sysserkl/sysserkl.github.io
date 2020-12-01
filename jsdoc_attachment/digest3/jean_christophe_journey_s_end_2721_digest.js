@@ -31,4 +31,5 @@ var digest_global=`
 *unprofitably
 *victoriously
 *wheresoever
+*common sense
 `.trim().split('\n');

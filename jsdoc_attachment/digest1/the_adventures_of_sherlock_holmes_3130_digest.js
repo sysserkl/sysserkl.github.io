@@ -37,4 +37,5 @@ var digest_global=`
 *verdict
 *wardrobe
 *wayside
+*depositor
 `.trim().split('\n');

@@ -37,5 +37,6 @@ var digest_global=`
 *sociological
 *sociology
 *stethoscope
+*insultingly
 *vitality
 `.trim().split('\n');

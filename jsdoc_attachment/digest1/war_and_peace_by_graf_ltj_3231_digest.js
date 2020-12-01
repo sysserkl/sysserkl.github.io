@@ -130,4 +130,6 @@ var digest_global=`
 *wineglass
 *withdrew
 *heedless
+*effrontery
+*invaluable
 `.trim().split('\n');

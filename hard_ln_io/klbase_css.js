@@ -1141,7 +1141,7 @@ function page_prev_next_b(pages_count,cspageno,span_script_prev,span_script_next
     else {
         page_html=page_html+'<span class="'+classname+'" style="color:'+scheme_global['memo']+';">prev</span> ';
     }
-    if (cspageno<pages_count-1){
+    if (cspageno<=pages_count-1){
         page_html=page_html+'<span class="'+classname+'" '+span_script_next+'>next</span> ';
     }
     else {

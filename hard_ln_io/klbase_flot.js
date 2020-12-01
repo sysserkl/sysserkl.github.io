@@ -140,7 +140,7 @@ function isoneyear_isonemonth_k(cslist){
     return [list_y.length>1?false:true,list_m.length>1?false:true];
 }
 
-function flot_lines_k(cslist,csid,label_position='nw',cstime=false,cstimeformat="",cstype='m',y1unit='',y1dec=-1,cstickSize=[],csmin_data_length=-1){
+function flot_lines_k(cslist,csid,label_position='nw',cstime=false,cstimeformat="",cstype='m',y1unit='',y1dec=-1,cstickSize=[],csmin_data_length=-1,csymin=false,csymax=false){
    //[
    //[ "成都", [2012,300], [2014,400] ], 
    //[ "苏州", [2012,500], [2014,600] ],
@@ -221,7 +221,18 @@ function flot_lines_k(cslist,csid,label_position='nw',cstime=false,cstimeformat=
             }, 
         ];
     }
-        
+
+    var oxaxis={};
+    oxaxis['tickDecimals']=0;
+    
+    var oyxaxis={};
+    if (csymin!==false){
+        oyxaxis['min']=csymin;
+    }
+    if (csymax!==false){
+        oyxaxis['max']=csymax;
+    }
+    
     if (cstime){
         var oneyear=true;
         var onemonth=true;
@@ -232,27 +243,37 @@ function flot_lines_k(cslist,csid,label_position='nw',cstime=false,cstimeformat=
             oneyear=oneyear && oneyear2;
             onemonth=onemonth && onemonth2;
         }
-
+        
         cstimeformat=flot_timeformat_k(cstimeformat,cstype,oneyear,onemonth);
+        
+        oxaxis['mode']="time";
         if (cstimeformat!==''){
-            if (cstickSize.length==0){
-                $.plot("#"+csid, chart_data,{legend: { position: label_position }, xaxis: {mode:"time", timeformat:cstimeformat, tickDecimals: 0 },yaxes:blyaxes});
-            }
-            else {
-                $.plot("#"+csid, chart_data,{legend: { position: label_position }, xaxis: {mode:"time", tickSize: cstickSize,timeformat:cstimeformat, tickDecimals: 0 },yaxes:blyaxes});
-            }
+            oxaxis['timeformat']=cstimeformat;
         }
-        else {
-            if (cstickSize.length==0){
-                $.plot("#"+csid, chart_data,{legend: { position: label_position }, xaxis: {mode:"time", tickDecimals: 0 },yaxes:blyaxes});            
-            }
-            else {
-                $.plot("#"+csid, chart_data,{legend: { position: label_position }, xaxis: {mode:"time", tickSize: cstickSize, tickDecimals: 0 },yaxes:blyaxes});
-            }
+        if (cstickSize.length!==0){
+            oxaxis['tickSize']=cstickSize;
         }
+        
+        $.plot("#"+csid, chart_data,{legend: { position: label_position }, xaxis: oxaxis, yaxis:oyxaxis, yaxes:blyaxes});
+        //if (cstimeformat!==''){
+            //if (cstickSize.length==0){
+                //$.plot("#"+csid, chart_data,{legend: { position: label_position }, xaxis: {mode:"time", timeformat:cstimeformat, tickDecimals: 0 },yaxes:blyaxes});
+            //}
+            //else {
+                //$.plot("#"+csid, chart_data,{legend: { position: label_position }, xaxis: {mode:"time", tickSize: cstickSize,timeformat:cstimeformat, tickDecimals: 0 },yaxes:blyaxes});
+            //}
+        //}
+        //else {
+            //if (cstickSize.length==0){
+                //$.plot("#"+csid, chart_data,{legend: { position: label_position }, xaxis: {mode:"time", tickDecimals: 0 },yaxes:blyaxes});            
+            //}
+            //else {
+                //$.plot("#"+csid, chart_data,{legend: { position: label_position }, xaxis: {mode:"time", tickSize: cstickSize, tickDecimals: 0 },yaxes:blyaxes});
+            //}
+        //}
     }
     else {
-        $.plot("#"+csid, chart_data,{legend: { position: label_position }, xaxis: {tickDecimals: 0 },yaxes:blyaxes});
+        $.plot("#"+csid, chart_data,{legend: { position: label_position }, xaxis: oxaxis, yaxis:oyxaxis, yaxes:blyaxes});
     }
 }
 
