@@ -5,4 +5,5 @@ var digest_global=`
 *redheaded
 *boarhound
 *cornflakes
+*herbology
 `.trim().split('\n');

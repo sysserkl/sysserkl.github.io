@@ -132,4 +132,5 @@ var digest_global=`
 *heedless
 *effrontery
 *invaluable
+*fraternal
 `.trim().split('\n');

@@ -121,4 +121,5 @@ var digest_global=`
 *zoology
 *heedlessly
 *heedlessness
+*kinship
 `.trim().split('\n');

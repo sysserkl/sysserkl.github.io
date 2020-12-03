@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Image 2 base64</title>
+<meta charset="UTF-8" />
+<SCRIPT language=JavaScript src="../hard_ln_io/klbase.js"></SCRIPT>
+<script language="javascript">
+klbase_addons_import_js_b(['css']);
+</script>
+<SCRIPT language=JavaScript src="image2base64.js"></SCRIPT>
+<link rel="shortcut icon" href="image2base64_ico/base64_512.png" />
+<script language="javascript">
+var scheme_global={};
+scheme_generation_b();
+css_root_style_b('18','11',['base','menu'],[],1);
+</script>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+</head>
+<body>
+<!--history
+0.0.2-20191007
+-->
+<h2 id="h2_title" style="font-size:1.2rem;">Image to Base64</h2>
+<div id="div_buttons" style="margin:0.5rem;">
+<p>Select Image: 
+<input type="file" id="input_img">
+<span class="aclick" onclick="javascript:trans_klbase64();">Upload</span>
+<span id="span_copy"></span></p>
+
+<p><b>Original Image</b> <span id="span_original_img_size"></span></p>
+<p><img id="img_original" src="" alt="" style="padding:1rem;border:0.1rem black solid;"></p>
+
+<p style="line-height:1.8rem;">
+<b>Original Image Base64 Data:</b>
+<span class="oblong_box" onclick="javascript:copy_klbase64('textarea_base64_original');">Copy</span>
+<span class="oblong_box" onclick="javascript:rows_klbase64('textarea_base64_original',50);">Split Data to 50 rows</span>
+<span class="oblong_box" onclick="javascript:load_img_from_textarea_klbase64();">Show Image</span>
+</p>
+
+<textarea id="textarea_base64_original"></textarea>
+
+<hr />
+<div id="div_form"></div>
+<hr />
+<p style="line-height:1.8rem;">
+<b>Result:</b> 
+<span class="oblong_box" onclick="javascript:copy_klbase64('textarea_base64_result');">Copy</span>
+</p>
+<textarea id="textarea_base64_result"></textarea>  
+</div>
+<div id="div_top_bottom"></div>
+<script language="javascript">
+init_klbase64();
+</script>  
+</body>
+</html>

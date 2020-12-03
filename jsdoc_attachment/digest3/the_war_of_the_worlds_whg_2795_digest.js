@@ -24,4 +24,5 @@ var digest_global=`
 *vender
 *Waterloo
 *seaward
+*uninhabitable
 `.trim().split('\n');
