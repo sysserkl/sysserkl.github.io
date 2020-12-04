@@ -71,11 +71,19 @@ function same_size_klbase64(){
 function object_klbase64(cstype){
     var img_original_obj=new Image();
     img_original_obj.onload = function(){
-        if (cstype=='resize'){
-            resize_klbase64(img_original_obj);
-        }
-        else if (cstype=='split'){
-            split_klbase64(img_original_obj);
+        switch (cstype){
+            case 'resize':
+                resize_klbase64(img_original_obj);
+                break;
+            case 'split':
+                split_klbase64(img_original_obj);
+                break;
+            case 'filter_demo':
+                filter_klbase64(img_original_obj);
+                break;
+            case 'filter_full':
+                filter_klbase64(img_original_obj,true);
+                break;                
         }
     };
     img_original_obj.src=document.getElementById('img_original').src;
@@ -148,38 +156,59 @@ function copy_klbase64(idname) {
     }, 3000); 
 }
 
-function resize_klbase64(oimg){
-    var blmaxwidth=parseInt(document.getElementById('input_maxw').value);
-    var blmaxheight=parseInt(document.getElementById('input_maxh').value)
-    
+function filter_klbase64(oimg,isfullimg=false){   
+    var blwidth=(isfullimg?oimg.width:Math.min(900,oimg.width));
+    var blheight=(isfullimg?oimg.height:Math.min(900,oimg.height));
+    document.getElementById('div_canvas').innerHTML='<canvas id="canvas_filter" width='+blwidth+' height='+blheight+' style="margin:1rem;padding:1rem;display:none;"></canvas>';
+    var canvas=document.getElementById("canvas_filter");
+    var ctx=canvas.getContext("2d");    
+    ctx.filter = document.getElementById('input_filter').value.trim();
+    ctx.drawImage(oimg, 0, 0, blwidth, blheight,0,0,blwidth, blheight);
+    var resized_src=canvas.toDataURL("image/jpeg");
+    document.getElementById('img_filtered').src=resized_src;
+    document.getElementById('textarea_base64_filtered').value=resized_src;
+}
+
+function resize_new_wh_klbase64(oimg,csmaxwidth,csmaxheight){
     var resize_w=oimg.width;
     var resize_h=oimg.height;
     var blratio_wh=resize_w/resize_h;
     var blratio_hw=resize_h/resize_w;
     var doresize=false;
 
-    if (resize_w>=blmaxwidth){
-        resize_w = blmaxwidth;
+    if (resize_w>=csmaxwidth){
+        resize_w = csmaxwidth;
         resize_h = Math.floor(resize_w*blratio_hw);
         doresize=true;
     }
 
-    if (resize_h>=blmaxheight){
-        resize_h=blmaxheight;
+    if (resize_h>=csmaxheight){
+        resize_h=csmaxheight;
         resize_w=Math.floor(resize_h*blratio_wh);
         doresize=true;
     }
+    return [resize_w,resize_h,doresize];
+}
+
+function resize_klbase64(oimg){
+    var blmaxwidth=parseInt(document.getElementById('input_maxw').value);
+    var blmaxheight=parseInt(document.getElementById('input_maxh').value)
+
+    var resize_w;
+    var resize_h;
+    var doresize;
+    [resize_w,resize_h,doresize]=resize_new_wh_klbase64(oimg,blmaxwidth,blmaxheight);
+
+    if (doresize===false){return;}
     
-    if (doresize){
-        document.getElementById('div_canvas').innerHTML='<canvas id="canvas_resize" width='+resize_w+' height='+resize_h+' style="margin:1rem;padding:1rem;display:none;"></canvas>';
-        var canvas=document.getElementById("canvas_resize");
-        var ctx=canvas.getContext("2d");    
-        ctx.drawImage(oimg, 0, 0, oimg.width, oimg.height, 0,0, resize_w, resize_h);
-        var resized_src=canvas.toDataURL("image/jpeg");
-        document.getElementById('img_resized').src=resized_src;
-        document.getElementById('textarea_base64_resized').value=resized_src;
-        document.getElementById('span_resized_img_size').innerHTML='Width: '+resize_w+' Height: '+resize_h+' Data Length: '+kbmbgb_b(resized_src.length,2);
-    }
+    document.getElementById('div_canvas').innerHTML='<canvas id="canvas_resize" width='+resize_w+' height='+resize_h+' style="margin:1rem;padding:1rem;display:none;"></canvas>';
+    var canvas=document.getElementById("canvas_resize");
+    var ctx=canvas.getContext("2d");    
+    ctx.drawImage(oimg, 0, 0, oimg.width, oimg.height, 0,0, resize_w, resize_h);
+    var resized_src=canvas.toDataURL("image/jpeg");
+    document.getElementById('img_resized').src=resized_src;
+    document.getElementById('textarea_base64_resized').value=resized_src;
+    document.getElementById('span_resized_img_size').innerHTML='Width: '+resize_w+' Height: '+resize_h+' Data Length: '+kbmbgb_b(resized_src.length,2);
 }
 
 function init_klbase64(){
@@ -187,6 +216,82 @@ function init_klbase64(){
     mouseover_mouseout_oblong_span_b(document.querySelectorAll('div#div_buttons span.oblong_box'));
     document.getElementById('img_original').style.maxWidth=(ismobile_b()?'80%':'');
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.4rem'));
+}
+
+function filter_select_value_klbase64(new_value=false){
+    var cstype=document.getElementById('select_filter').value;
+    var oinput=document.getElementById('input_filter');
+    var list_t=oinput.value.trim().split(' ');
+    var blvalue=0;
+    var blfound=false;
+    for (let blxl=0;blxl<list_t.length;blxl++){
+        var item=list_t[blxl];
+        var blat=item.indexOf(cstype+'(');
+        if (blat==0 && item.slice(-2,)=='%)'){
+            if (new_value===false){
+                blvalue=parseInt(item.slice(blat+cstype.length+1,-2));
+            }
+            else {
+                if (new_value==0){
+                    list_t[blxl]='';
+                }
+                else {
+                    list_t[blxl]=cstype+'('+new_value+'%)';
+                }
+                blvalue=new_value;
+            }
+            blfound=true;
+            break;
+        }
+    }
+    if (new_value!==false){
+        if (blfound===false){
+            blvalue=new_value;
+            list_t.push(cstype+'('+new_value+'%)');
+        }
+        var newlist=[];
+        for (let item of list_t){
+            if (item==''){continue;}
+            newlist.push(item);
+        }
+        oinput.value=newlist.join(' ');
+    }
+    document.getElementById('input_range_filter').value=blvalue;
+    document.getElementById('span_range_filter').innerHTML=blvalue+'%';
+}
+
+function filter_form_klbase64(){
+    var blstr=`<p style="line-height:1.8rem;">
+    <select id="select_filter" onchange="javascript:filter_select_value_klbase64();">
+    <option>brightness</option>
+    <option>contrast</option>
+    <option>grayscale</option>
+    <option>invert</option>
+    <option>opacity</option>
+    <option>saturate</option>
+    <option>sepia</option>
+    </select>
+    <input type="range" min=0 max=100 value=0 id="input_range_filter" style="width:10rem;"  oninput="javascript:filter_select_value_klbase64(this.value);object_klbase64('filter_demo');"><span id="span_range_filter">0%</span>
+    <input type="text" id="input_filter" />
+    <span class="oblong_box" onclick="javascript:object_klbase64('filter_full');">filter</span>
+    </p>
+    <p><b>Filtered Image</b></p>
+    <p><img id="img_filtered" src="" alt="" style="padding:1rem;border:0.1rem black solid;"></p>
+    <p style="line-height:1.8rem;">
+    <b>Filtered Image Base64 Data:</b>
+    <span class="oblong_box" onclick="javascript:copy_klbase64('textarea_base64_filtered');">Copy</span>
+    <span class="oblong_box" onclick="javascript:rows_klbase64('textarea_base64_filtered',50);">Split Data to 50 rows</span>
+    </p>
+    <textarea id="textarea_base64_filtered"></textarea>`;
+    var odiv=document.getElementById('div_form');
+    odiv.innerHTML=blstr;
+    var input_list=[
+    ["input_filter",(ismobile_b?24:40)],
+    ];
+    input_size_b(input_list,'id');    
+    mouseover_mouseout_oblong_span_b(document.querySelectorAll('div#div_form span.oblong_box'));
+    document.getElementById('img_filtered').style.maxWidth=(ismobile_b()?'80%':'');
+    odiv.scrollIntoView();
 }
 
 function resize_form_klbase64(){
@@ -204,8 +309,7 @@ function resize_form_klbase64(){
     <span class="oblong_box" onclick="javascript:copy_klbase64('textarea_base64_resized');">Copy</span>
     <span class="oblong_box" onclick="javascript:rows_klbase64('textarea_base64_resized',50);">Split Data to 50 rows</span>
     </p>
-    <textarea id="textarea_base64_resized"></textarea>
-    <div id="div_canvas"></div>`;
+    <textarea id="textarea_base64_resized"></textarea>`;
     var odiv=document.getElementById('div_form');
     odiv.innerHTML=blstr;
     var input_list=[
@@ -240,6 +344,7 @@ function split_form_klbase64(){
 function menu_klbase64(){
     var str_t=klmenu_hide_b('');
     var klmenu0=[
+    '<span class="span_menu" onclick="javascript:'+str_t+'filter_form_klbase64();">Filter</span>',    
     '<span class="span_menu" onclick="javascript:'+str_t+'resize_form_klbase64();">Resize</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'split_form_klbase64();">Split</span>',
     ];

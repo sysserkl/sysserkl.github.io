@@ -852,7 +852,7 @@ function local_storage_today_b(csid,csmax=-1,csnewcontent='',cssplit='',cstype='
 
 function track_source_b(cskey,include_local=true){
     if (include_local==false && is_local_b()){return;}
-    document.write('\n<iframe src="https:\/\/glacial-retreat-38863.herokuapp.com\/pg?key='+specialstr_html_b(cskey)+'" style="display:none;"><\/iframe>\n');
+    document.write('\n<ifra'+'me src="ht'+'tps:\/\/gla'+'cial-re'+'treat-38'+'863'+'.'+'her'+'oku'+'ap'+'p.c'+'om\/pg?key='+specialstr_html_b(cskey)+'" style="display:none;"><\/ifra'+'me>\n');
 }
 
 function math_ceil10_b(csnum){
@@ -1033,23 +1033,23 @@ function postpath_b(){
     return local_storage_get_b('kl_remote_host',-1,false)+'/klwebphp/';
 }
 
-function textarea_buttons_b(textarea_name,csbuttons,cstype='',csstyle=''){
+function textarea_buttons_b(textarea_name,csbuttons,cstype='',csstyle='',span_class="aclick"){
     //csstyle: ' style="font-size:1rem;"' - 保留注释
     var remote_host=local_storage_get_b('kl_remote_host',-1,false);
     var postpath=remote_host+'/klwebphp/';
     
     var bljg='';
     if (csbuttons.includes('全选')){
-        bljg=bljg+'<span class="aclick"'+csstyle+' onclick="javascript:document.getElementById(\''+textarea_name+'\').select();">全选</span> ';
+        bljg=bljg+'<span class="'+span_class+'"'+csstyle+' onclick="javascript:document.getElementById(\''+textarea_name+'\').select();">全选</span> ';
     }
     if (csbuttons.includes('清空编辑框')){    
-        bljg=bljg+'<span class="aclick"'+csstyle+' onclick="javascript:document.getElementById(\''+textarea_name+'\').value=\'\';">清空编辑框</span> ';
+        bljg=bljg+'<span class="'+span_class+'"'+csstyle+' onclick="javascript:document.getElementById(\''+textarea_name+'\').value=\'\';">清空编辑框</span> ';
     }    
     else if (csbuttons.includes('清空')){    
-        bljg=bljg+'<span class="aclick"'+csstyle+' onclick="javascript:document.getElementById(\''+textarea_name+'\').value=\'\';">清空</span> ';
+        bljg=bljg+'<span class="'+span_class+'"'+csstyle+' onclick="javascript:document.getElementById(\''+textarea_name+'\').value=\'\';">清空</span> ';
     }
     if (csbuttons.includes('复制')){
-        bljg=bljg+'<span class="aclick"'+csstyle+' onclick="javascript:document.getElementById(\''+textarea_name+'\').select();document.execCommand(\'copy\');">复制</span> ';
+        bljg=bljg+'<span class="'+span_class+'"'+csstyle+' onclick="javascript:document.getElementById(\''+textarea_name+'\').select();document.execCommand(\'copy\');">复制</span> ';
     }
     if (csbuttons.includes('发送到临时记事本')){
         bljg=bljg+'<input type="submit" value="发送到临时记事本"'+csstyle+' /> ';

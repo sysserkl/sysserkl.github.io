@@ -14,4 +14,5 @@ var digest_global=`
 *rainstorm
 *sandstorm
 *shortwave
+*merchant
 `.trim().split('\n');
