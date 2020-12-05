@@ -25,4 +25,5 @@ var digest_global=`
 *Waterloo
 *seaward
 *uninhabitable
+*unproven
 `.trim().split('\n');

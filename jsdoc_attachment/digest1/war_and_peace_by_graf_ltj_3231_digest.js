@@ -133,4 +133,5 @@ var digest_global=`
 *effrontery
 *invaluable
 *fraternal
+*reschedule
 `.trim().split('\n');

@@ -551,7 +551,7 @@ function en_sentence_mobile_b(){
         var oas=a_span.getElementsByTagName('a');
         for (let one_a of oas){
             one_a.title=one_a.innerText;
-            one_a.innerText='wiki';
+            one_a.innerText=(one_a.href.includes('txtlistsearch.htm')?'txt':'wiki');
         }
     }
 }

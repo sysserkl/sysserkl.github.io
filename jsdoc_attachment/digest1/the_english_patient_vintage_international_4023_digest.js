@@ -15,4 +15,5 @@ var digest_global=`
 *sandstorm
 *shortwave
 *merchant
+*herbal
 `.trim().split('\n');
