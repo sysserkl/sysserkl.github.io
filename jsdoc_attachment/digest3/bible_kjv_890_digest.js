@@ -385,4 +385,5 @@ var digest_global=`
 *Zion
 *Hebron
 *unsearchable
+*forbad
 `.trim().split('\n');

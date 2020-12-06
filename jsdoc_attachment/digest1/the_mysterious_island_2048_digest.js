@@ -453,4 +453,5 @@ var digest_global=`
 *recognizable
 *watercourse
 *seabird
+*Britannia
 `.trim().split('\n');
