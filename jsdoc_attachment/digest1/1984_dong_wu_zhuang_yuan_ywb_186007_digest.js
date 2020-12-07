@@ -72,4 +72,6 @@ var digest_global=`
 *whisky
 *workmate
 *wristwatch
+*Stalinism
+*Stalin
 `.trim().split('\n');

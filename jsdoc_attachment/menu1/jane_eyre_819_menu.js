@@ -1,5 +1,4 @@
 var menulist=[
-"= JANE EYRE AN AUTOBIOGRAPHY =",
 "== PREFACE ==",
 "== NOTE TO THE THIRD EDITION ==",
 "== CHAPTER I ==",

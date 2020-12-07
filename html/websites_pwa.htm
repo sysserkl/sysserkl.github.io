@@ -9,6 +9,7 @@ klbase_addons_import_js_b(['css','qr','websites'],['jeromeetienne_qrcode.min.js'
 </script>
 <script language="javascript">
 //history
+//0.0.2-20201207 增加搜索功能
 //0.0.1-20200811
 //-------------------------------------------
 var scheme_global={};
@@ -27,7 +28,7 @@ div.div_qr{padding:0.2rem;margin:0.2rem;border: 0.15rem solid black;}
 </head>
 <body>
 <a name=top></a>
-<h2 style="margin-top:0;"><span id="span_title">Websites</span> <span id="span_status" style="font-weight:normal;font-size:1rem;"></span></h2>
+<h2 style="margin-top:0;"><span id="span_title" style="cursor:pointer;" ondblclick="javascript:show_websites_pwa('');">Websites</span><span id="span_count" style="font-size:0.8rem;color:grey;font-weight:normal;"></span> <span id="span_status" style="font-weight:normal;font-size:1rem;"></span></h2>
 <div id="divhtml" style="margin-left:0.5rem;"></div>
 <div id="div_top_bottom"></div>
 <script type="text/javascript">
@@ -151,6 +152,11 @@ function form_websites_pwa(){
     document.getElementById('divhtml').innerHTML=bljg;
 }
 
+function buttons_klwebsite_pwa(keyword=''){
+    var bljg='<input type="text" id="input_search" style="width:10rem;" value="'+keyword+'" placeholder="搜索" onkeyup="javascript:if (event.key==\'Enter\'){show_websites_pwa(this.value);}" />';
+    return bljg;
+}
+
 function update_websites_pwa(){
     if (confirm("是否更新网址库？")){
         var blstr=document.getElementById('textarea_websites_pwa').value.trim();
@@ -159,9 +165,27 @@ function update_websites_pwa(){
     }
 }
 
-function show_websites_pwa(){
+function show_websites_pwa(cskey=''){
     var websites_list=local_storage_get_b('websites_list_pwa',-1,true);
+    
+    cskey=cskey.trim();
     var list_t=[];
+    if (cskey!==''){
+        for (let item of websites_list){
+            var blfound=str_reg_search_b(item,cskey,true);
+            if (blfound==-1){
+                break;
+            }
+            if (blfound){
+                list_t.push(item);
+            }
+        }
+    }
+    if (list_t.length>0){
+        websites_list=[].concat(list_t);
+    }
+    
+    list_t=[];
     var blcategory='';
     var blstr='';
     var blname='';
@@ -178,7 +202,9 @@ function show_websites_pwa(){
     new_list=array_unique_b(new_list);
     new_list.sort(function (a,b){return zh_sort_b(a,b,false);});
     new_list=new_list.slice(-500,);
-    localStorage.setItem('websites_list_pwa',new_list.join('\n'));
+    if (cskey==''){
+        localStorage.setItem('websites_list_pwa',new_list.join('\n'));
+    }
     
     var result_t={}
     var blxl=0;
@@ -193,7 +219,9 @@ function show_websites_pwa(){
     for (let key in result_t){
         bljg=bljg+'<span style="font-weight:bold;font-size:1.2rem;">'+key+'</span> '+result_t[key].join(' ')+' ';
     }
-    document.getElementById('divhtml').innerHTML='<p style="line-height:'+(ismobile_b()?'1.8':'2.2')+'rem;">'+bljg+'</p>';
+    document.getElementById('divhtml').innerHTML='<p style="line-height:'+(ismobile_b()?'1.8':'2.2')+'rem;">'+buttons_klwebsite_pwa(cskey)+bljg+'</p>';
+    input_with_x_b('input_search',8);
+    document.getElementById('span_count').innerText='('+new_list.length+')';
     top_bottom_arrow_b('div_top_bottom',blxl+' ');
 }
 
@@ -239,8 +267,12 @@ function delete_websites_pwa(ospan){
 }
 
 function qr_html_websites_pwa(){
-    qr_html_websites_b('divhtml','a.a_oblong_box');
-    qr_generate_websites_pwa();
+    if (qr_html_websites_b('divhtml','a.a_oblong_box')){
+        qr_generate_websites_pwa();
+    }
+    else {  //切换 - 保留注释
+        show_websites_pwa();
+    }
 }
 
 function qr_generate_websites_pwa(){

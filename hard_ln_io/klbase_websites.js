@@ -1,7 +1,7 @@
 function qr_html_websites_b(divid,aclass){
     var odiv=document.getElementById(divid);
     if (odiv.getElementsByTagName('canvas').length>0 || odiv.getElementsByClassName('img_qr').length>0){
-        return;
+        return false;
     }    
     var oas=odiv.querySelectorAll(aclass);
     var bljg=[];
@@ -16,6 +16,7 @@ function qr_html_websites_b(divid,aclass){
     }
 
     oa_qr_list_websites_global=odiv.querySelectorAll('div.div_qr');
+    return true;
 }
 
 function qr_generate_websites_b(query_str){

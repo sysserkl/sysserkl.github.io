@@ -40,4 +40,5 @@ var digest_global=`
 *insultingly
 *vitality
 *formalism
+*disdainful
 `.trim().split('\n');

@@ -18,7 +18,7 @@ var csbooklist_source_global_b=[
 ["a_journey_to_the_centre_ote_3228","A Journey to the Centre of the Earth","englishwords,已整理","3",""],
 ["jean_christophe_volume_i_mian_fgbs_129538","Jean-Christophe, Volume I, by Romain Rolland","englishwords,已整理","3",""],
 ["the_time_machine_1445","The Time Machine","englishwords,幻想,已整理","3",""],
-["the_complete_works_of_william_s_3872","The Complete Works of William Shakespeare","englishwords","3",""],
+["the_complete_works_of_william_s_3872","The Complete Works of William Shakespeare","englishwords,已整理","3",""],
 ["su_shi_ji_108817","苏轼集","诗词","3",""],
 ["san_guo_yan_yi_90723","三国演义","五大名著,已整理","3",""],
 ["sheng_jing_he_he_ben_124338","圣经和合本","已整理","3",""],
