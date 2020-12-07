@@ -159,8 +159,15 @@ function buttons_klwebsite_pwa(keyword=''){
 
 function update_websites_pwa(){
     if (confirm("是否更新网址库？")){
-        var blstr=document.getElementById('textarea_websites_pwa').value.trim();
-        localStorage.setItem('websites_list_pwa',blstr);
+        var result_t=[];
+        var list_t=document.getElementById('textarea_websites_pwa').value.trim().split('\n');
+        for (let item of list_t){
+            item=item.trim();
+            if (item=='' || result_t.includes(item)){continue;}
+            result_t.push(item);
+        }
+        result_t.sort(function (a,b){return zh_sort_b(a,b,false);});        
+        localStorage.setItem('websites_list_pwa',result_t.join('\n'));
         show_websites_pwa();
     }
 }
