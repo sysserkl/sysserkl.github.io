@@ -30,4 +30,5 @@ var digest_global=`
 *stepson
 *unclouded
 *weathercock
+*mad as a hatter
 `.trim().split('\n');

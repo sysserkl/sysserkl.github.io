@@ -39,4 +39,5 @@ var digest_global=`
 *stethoscope
 *insultingly
 *vitality
+*formalism
 `.trim().split('\n');

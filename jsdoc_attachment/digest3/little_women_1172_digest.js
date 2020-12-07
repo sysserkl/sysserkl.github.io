@@ -33,4 +33,5 @@ var digest_global=`
 *teatime
 *unambitious
 *unladylike
+*thorny
 `.trim().split('\n');
