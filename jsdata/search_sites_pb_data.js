@@ -20,6 +20,7 @@ var search_sites_list_global=[
 ['https://www.oxfordlearnersdictionaries.com/us/pronunciation/english/','',2,'#006633','Oxford Pronunciation','','English',''],
 ['https://www.ahdictionary.com/word/search.html?q=','',0,'','American Heritage Dictionary','','English',''],
 ['https://www.wordnik.com/words/','',0,'','Wordnik','','English',''],
+['https://www.howtopronounce.com/','',0,'','howtopronounce','','English',''],
 
 ['https://www.bing.com/search?q=','',0,'salmon','Bing','0','Search',''],
 ['https://duckduckgo.com/?q=','',0,'','DuckDuckGo','0','Search',''],

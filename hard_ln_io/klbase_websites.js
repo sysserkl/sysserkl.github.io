@@ -1,4 +1,4 @@
-function qr_html_websites_b(divid,aclass){
+function qr_html_websites_b(divid,aclass,ahref=''){
     var odiv=document.getElementById(divid);
     if (odiv.getElementsByTagName('canvas').length>0 || odiv.getElementsByClassName('img_qr').length>0){
         return false;
@@ -12,7 +12,12 @@ function qr_html_websites_b(divid,aclass){
     
     oas=odiv.querySelectorAll('a.a_oblong_box');
     for (let one_a of oas){
-        one_a.outerHTML='<div style="positon:relative;float:left;padding:0.2rem;text-align:center;"><div class="div_qr" style="width:'+canvas_size_websites_global+'px;height:'+canvas_size_websites_global+'px;" title="'+one_a.href+'"></div>'+one_a.outerHTML+'</div>';
+        if (ahref=='' || one_a.href.includes(ahref)){
+            one_a.outerHTML='<div style="positon:relative;float:left;padding:0.2rem;text-align:center;"><div class="div_qr" style="width:'+canvas_size_websites_global+'px;height:'+canvas_size_websites_global+'px;" title="'+one_a.href+'"></div>'+one_a.outerHTML+'</div>';
+        }
+        else {
+            one_a.outerHTML='<div style="positon:relative;float:left;padding:0.2rem;text-align:center;">'+one_a.outerHTML+'</div>';        
+        }
     }
 
     oa_qr_list_websites_global=odiv.querySelectorAll('div.div_qr');
