@@ -770,16 +770,23 @@ function local_storage_get_b(csid,csmax=-1,return_list=false,remove_item=''){
     if (remove_item.length>0){
         if (Array.isArray(remove_item)){
             for (let item of remove_item){
-                var blat=list_t.indexOf(item);
-                if (blat>=0){
-                    list_t.splice(blat,1);
+                if (item==''){continue;}
+                while (true){
+                    var blat=list_t.indexOf(item);
+                    if (blat>=0){
+                        list_t.splice(blat,1);
+                    }
+                    else {break;}
                 }
             }
         }
         else {
-            var blat=list_t.indexOf(remove_item);
-            if (blat>=0){
-                list_t.splice(blat,1);
+            while (true){
+                var blat=list_t.indexOf(remove_item);
+                if (blat>=0){
+                    list_t.splice(blat,1);
+                }
+                else {break;}
             }
         }
     }

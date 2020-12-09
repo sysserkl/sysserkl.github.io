@@ -1064,6 +1064,12 @@ function recent_search_b(localsavename,csstr,jsfunctionname,divname,commonlist=[
         for (let blxl=0;blxl<csstr.length;blxl++){
             csstr[blxl]=sub_recent_search_b_key_replace(csstr[blxl]);
         }
+        var list_t=[];
+        for (let item of csstr){
+            if (item=='' || list_t.includes(item)){continue;}
+            list_t.push(item);
+        }
+        csstr=list_t;
     }
     else {
         csstr=sub_recent_search_b_key_replace(csstr);
