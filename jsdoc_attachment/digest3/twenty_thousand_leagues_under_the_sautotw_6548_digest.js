@@ -503,4 +503,5 @@ var digest_global=`
 *zinc
 *zoological
 *Diana
+*indigo
 `.trim().split('\n');

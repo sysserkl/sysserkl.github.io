@@ -113,8 +113,13 @@ function search_site_klsearch(csno,csproxy=false,cskey='',openwindow=-1,showhtml
     //else if (item[csi][3]=="unicode"){
     //    window.open(blleft+escape(blstr)+blright);
     //}
-            
-    var blhref=item[0]+cskey+item[1];
+
+    if (item[5].includes('n')){
+        var blhref=item[0]+item[1];
+    }
+    else {
+        var blhref=item[0]+cskey+item[1];
+    }
     if (csproxy){
         var blhero=local_storage_get_b('herokuapp_host').trim();
         if (blhero!==''){

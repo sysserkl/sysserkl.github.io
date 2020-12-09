@@ -38,4 +38,5 @@ var digest_global=`
 *wardrobe
 *wayside
 *depositor
+*right angle
 `.trim().split('\n');

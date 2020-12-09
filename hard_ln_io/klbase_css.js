@@ -1049,17 +1049,35 @@ function recent_search_b(localsavename,csstr,jsfunctionname,divname,commonlist=[
         }
         return '<span class="oblong_box" onclick="javascript:'+jsfunctionname+'(\''+str_t+'\');">'+specialstr_html_b(item)+'</span>&nbsp;'; //不能使用空格，而应该使用 &nbsp; - 保留注释
     }
-    //----------------------------------
-    csstr=csstr.trim().replace(new RegExp("<",'g'),'&lt;');
-    csstr=csstr.replace(new RegExp(">",'g'),'&gt;');
-    //csstr=csstr.replace(new RegExp(/\\/,'g'),'\\\\');
-    if (csstr=='(:r)'){
-        csstr='';
+    
+    function sub_recent_search_b_key_replace(csstr){
+        csstr=csstr.trim().replace(new RegExp("<",'g'),'&lt;');
+        csstr=csstr.replace(new RegExp(">",'g'),'&gt;');
+        //csstr=csstr.replace(new RegExp(/\\/,'g'),'\\\\');
+        if (csstr=='(:r)'){
+            csstr='';
+        }
+        return csstr;
     }
+    //----------------------------------
+    if (Array.isArray(csstr)){
+        for (let blxl=0;blxl<csstr.length;blxl++){
+            csstr[blxl]=sub_recent_search_b_key_replace(csstr[blxl]);
+        }
+    }
+    else {
+        csstr=sub_recent_search_b_key_replace(csstr);
+    }
+    
     var recent_search=local_storage_get_b(localsavename,csmax,true,csstr);
     var is_changed=false;
-    if (csstr!==''){
-        recent_search=[csstr].concat(recent_search);
+    if (csstr.length>0){
+        if (Array.isArray(csstr)){
+            recent_search=csstr.concat(recent_search);
+        }
+        else {
+            recent_search=[csstr].concat(recent_search);
+        }
         is_changed=true;
     }
     for (let item of commonlist){

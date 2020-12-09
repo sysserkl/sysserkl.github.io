@@ -42,4 +42,5 @@ var digest_global=`
 *formalism
 *disdainful
 *confessional
+*orchestral
 `.trim().split('\n');

@@ -5,7 +5,7 @@
 <script type="text/javascript" src="../hard_ln_io/jquery.js"></script>
 <SCRIPT language=JavaScript src="../hard_ln_io/klbase.js"></SCRIPT>
 <script language="javascript">
-klbase_addons_import_js_b(['css','qr','websites'],['jeromeetienne_qrcode.min.js'],['websites_demo_data.js']);
+klbase_addons_import_js_b(['css','date','qr','websites'],['jeromeetienne_qrcode.min.js'],['websites_demo_data.js']);
 </script>
 <script language="javascript">
 //history
@@ -28,7 +28,7 @@ div.div_qr{padding:0.2rem;margin:0.2rem;border: 0.15rem solid black;}
 </head>
 <body>
 <a name=top></a>
-<h2 style="margin-top:0;"><span id="span_title" style="cursor:pointer;" ondblclick="javascript:show_websites_pwa('');">Websites</span><span id="span_count" style="font-size:0.8rem;color:grey;font-weight:normal;"></span> <span id="span_status" style="font-weight:normal;font-size:1rem;"></span></h2>
+<h2 style="margin-top:0;"><span id="span_title" style="cursor:pointer;" ondblclick="javascript:search_websites_pwa('');">Websites</span><span id="span_count" style="font-size:0.8rem;color:grey;font-weight:normal;"></span> <span id="span_status" style="font-weight:normal;font-size:1rem;"></span></h2>
 <div id="divhtml" style="margin-left:0.5rem;"></div>
 <div id="div_top_bottom"></div>
 <script type="text/javascript">
@@ -38,11 +38,11 @@ if('serviceWorker' in navigator) {
     navigator.serviceWorker
         .register('websites_service_worker.js')
         .then(function() { 
-            document.getElementById('span_status').innerHTML='Websites for PWA Service Worker Registered';
+            status_websites_pwa('Websites for PWA Service Worker Registered');
         });
 }
 else {
-    document.getElementById('span_status').innerHTML='Websites for PWA Service Worker not work';
+    status_websites_pwa('Websites for PWA Service Worker not work');
 }
 //-------------------------
 function menu_websites_pwa(){
@@ -71,7 +71,7 @@ function demo_websites_pwa(){
     }
     if (confirm('是否导入Demo网址？')){
         localStorage.setItem('websites_list_pwa',websites_demo_global.trim());
-        show_websites_pwa();
+        search_websites_pwa();
     }
 }
 
@@ -83,7 +83,6 @@ function clear_cache_websites_pwa(){
 }
 
 function add_websites_pwa(){
-    var ospan=document.getElementById('span_status');
     var websites_list=local_storage_get_b('websites_list_pwa',-1,true);
     var blexample=websites_list[0];
     if (blexample==''){
@@ -96,25 +95,34 @@ function add_websites_pwa(){
     [blcategory,blstr,blname]=split_websites_pwa(blstr);
     
     if (blcategory==''){
-        ospan.innerHTML='无分类';
+        status_websites_pwa('无分类');
         return;
     }
     if (blstr==''){
-        ospan.innerHTML='无网址';
+        status_websites_pwa('无网址');
         return;    
     }
     if (blname==''){
-        ospan.innerHTML='无名称';
+        status_websites_pwa('无名称');
         return;    
     }
         
     if (websites_list.includes(' '+blstr+' ')){
-        ospan.innerHTML='已存在同名网址';
+        status_websites_pwa('已存在同名网址');
         return;
     }
     websites_list.push(blcategory+' '+blstr+' '+blname);
     localStorage.setItem('websites_list_pwa',websites_list.join('\n'));
-    show_websites_pwa();
+    search_websites_pwa();
+}
+
+function status_websites_pwa(csstr){
+    function status_websites_pwa_hide(){
+        document.getElementById('span_status').innerHTML='';
+    }
+    //-----------------------
+    document.getElementById('span_status').innerHTML=csstr;
+    setTimeout(status_websites_pwa_hide,5000);
 }
 
 function split_websites_pwa(csstr){
@@ -145,7 +153,7 @@ function form_websites_pwa(){
 	var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php" name="form_websites_pwa" target=_blank>\n';
     bljg=bljg+'<textarea name="textarea_websites_pwa" id="textarea_websites_pwa" style="width:90%;height:24rem;">'+websites_list+'</textarea>';
     bljg=bljg+'<p>';
-    bljg=bljg+'<span class="aclick" onclick="javascript:show_websites_pwa();">关闭</span> ';
+    bljg=bljg+'<span class="aclick" onclick="javascript:search_websites_pwa();">关闭</span> ';
     bljg=bljg+'<span class="aclick" onclick="javascript:update_websites_pwa();">更新</span> ';
     bljg=bljg+textarea_buttons_b('textarea_websites_pwa','清空,复制,发送到临时记事本,发送地址')+' 行数：'+websites_list.split('\n').length;
 
@@ -154,7 +162,7 @@ function form_websites_pwa(){
 }
 
 function buttons_klwebsite_pwa(keyword=''){
-    var bljg='<input type="text" id="input_search" style="width:10rem;" value="'+keyword+'" placeholder="搜索" onkeyup="javascript:if (event.key==\'Enter\'){show_websites_pwa(this.value);}" />';
+    var bljg='<input type="text" id="input_search" style="width:10rem;" value="'+keyword+'" placeholder="搜索" onkeyup="javascript:if (event.key==\'Enter\'){search_websites_pwa(this.value);}" />';
     bljg=bljg+'<span id="span_recent_search"></span>';
     return bljg;
 }
@@ -170,23 +178,38 @@ function update_websites_pwa(){
         }
         result_t.sort(function (a,b){return zh_sort_b(a,b,false);});        
         localStorage.setItem('websites_list_pwa',result_t.join('\n'));
-        show_websites_pwa();
+        search_websites_pwa();
     }
 }
 
-function show_websites_pwa(cskey=''){
+function search_websites_pwa(cskey=''){
     var websites_list=local_storage_get_b('websites_list_pwa',-1,true);
     
     cskey=cskey.trim();
     var list_t=[];
     if (cskey!==''){
-        for (let item of websites_list){
-            var blfound=str_reg_search_b(item,cskey,true);
-            if (blfound==-1){
-                break;
+        if (cskey.match(/^\d{4}\-\d{2}\-\d{2}$/)!==null){
+            var theday=validdate_b(cskey);
+            if (theday!==false){
+                var bldays_count=day_of_year_b(theday) % 20;
+                for (let item of websites_list){
+                    var blasc_sum=asc_sum_b(item);
+                    if (blasc_sum % 20 == bldays_count){
+                        list_t.push(item);
+                    }
+                }
             }
-            if (blfound){
-                list_t.push(item);
+        }
+        
+        if (list_t.length==0){
+            for (let item of websites_list){
+                var blfound=str_reg_search_b(item,cskey,true);
+                if (blfound==-1){
+                    break;
+                }
+                if (blfound){
+                    list_t.push(item);
+                }
             }
         }
     }
@@ -230,7 +253,7 @@ function show_websites_pwa(cskey=''){
     }
     document.getElementById('divhtml').innerHTML='<p style="line-height:'+(ismobile_b()?'1.8':'2.2')+'rem;">'+buttons_klwebsite_pwa(cskey)+bljg+'</p>';
     input_with_x_b('input_search',8);
-    recent_search_b('recent_search_websites_pwa',cskey,'show_websites_pwa','span_recent_search',[],15,false);
+    recent_search_b('recent_search_websites_pwa',[cskey,date2str_b(),previous_day_b(),next_day_b()],'search_websites_pwa','span_recent_search',[],15,false);
     document.getElementById('span_count').innerText='('+new_list.length+')';
     top_bottom_arrow_b('div_top_bottom',blxl+' ');
 }
@@ -246,7 +269,7 @@ function organize_websites_pwa(){
                 odelete.parentNode.removeChild(odelete);
             }
         }
-        show_websites_pwa();
+        search_websites_pwa();
     }
     else {
         for (let item of ospans){
@@ -281,7 +304,7 @@ function qr_html_websites_pwa(ahref=''){
         qr_generate_websites_pwa();
     }
     else {  //切换 - 保留注释
-        show_websites_pwa();
+        search_websites_pwa();
     }
 }
 
@@ -294,7 +317,7 @@ function qr_generate_websites_pwa(){
 //------------------
 top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.6rem'));
 menu_websites_pwa();
-show_websites_pwa();
+search_websites_pwa();
 </script>
 <script type="text/javascript">
 track_source_b('websites_pwa',false);

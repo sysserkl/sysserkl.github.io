@@ -1,7 +1,8 @@
 var search_sites_list_global=[
-//left_part,right_part,key_word_type,color,site_name,(c:check，用在usescript中；p:proxy b:button；0:important),category,title - 保留注释
+//left_part,right_part,key_word_type,color,site_name,(c:check，用在usescript中；p:proxy b:button；0:important；n:without key, just link),category,title - 保留注释
 ['https://dict.cn/','',0,'','Dict.cn','c0','English',''],
 ['https://cn.bing.com/dict/search?q=','',0,'','Bing(cn)','c0','English',''],
+['https://cn.bing.com/translator/','',0,'','BT','n0','English',''],
 ['http://dict.youdao.com/search?le=eng&q=','',0,'','Youdao','c0','English',''],
 ['http://www.iciba.com/','',0,'','ICIBA','c0','English',''],
 ['https://www.merriam-webster.com/dictionary/','',0,'blue','Merriam-Webster','c0','English',''],

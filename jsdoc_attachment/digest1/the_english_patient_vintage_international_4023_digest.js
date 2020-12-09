@@ -16,4 +16,5 @@ var digest_global=`
 *shortwave
 *merchant
 *herbal
+*ladybird
 `.trim().split('\n');

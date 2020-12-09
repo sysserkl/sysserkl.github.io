@@ -760,18 +760,28 @@ function local_storage_get_b(csid,csmax=-1,return_list=false,remove_item=''){
         bljg=bljg.replace(new RegExp(/\n\n/,'g'),'\n');
     }
     bljg=bljg.trim();
-    if (csmax<=0 && return_list==false && remove_item==''){
+    if (csmax<=0 && return_list==false && remove_item.length==0){
         return bljg;
     }
     var list_t=bljg.split('\n');
     if (csmax>0){
         list_t=list_t.slice(0,csmax);
     }
-    if (remove_item!==''){
+    if (remove_item.length>0){
+        if (Array.isArray(remove_item)){
+            for (let item of remove_item){
+                var blat=list_t.indexOf(item);
+                if (blat>=0){
+                    list_t.splice(blat,1);
+                }
+            }
+        }
+        else {
             var blat=list_t.indexOf(remove_item);
             if (blat>=0){
                 list_t.splice(blat,1);
             }
+        }
     }
     if (return_list){
         return list_t;
