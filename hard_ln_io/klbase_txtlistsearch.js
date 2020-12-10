@@ -1933,6 +1933,7 @@ function en_lines_days_kltxt_b(theday=new Date()){
     function sub_en_lines_days_kltxt_b_div(blenstr_t){
         var bljg='';
         var englist_t=blenstr_t.match(/<sup style="font-size:0.8rem;color:#cc0000;" class="kleng">(.*?)<\/sup>/g);
+        if (englist_t==null){return '';}
         for (let blxl=0;blxl<englist_t.length;blxl++){
             englist_t[blxl]=englist_t[blxl].replace(new RegExp(/<sup style="font-size:0.8rem;color:#cc0000;" class="kleng">(.*?)<\/sup>/,'g'),'$1');
         }
