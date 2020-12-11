@@ -134,4 +134,5 @@ var digest_global=`
 *invaluable
 *fraternal
 *reschedule
+*sonata
 `.trim().split('\n');

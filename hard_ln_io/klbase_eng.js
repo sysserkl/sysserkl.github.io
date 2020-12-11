@@ -35,12 +35,12 @@ function words_queue_read_b(){
         if (item.includes('-') && item.replace(new RegExp(/-/,'g'),'')==''){continue;}
         if (item==''){continue;}
         one_word.push(item);
-        if (one_word.length==3){
+        if (one_word.length==3){    //每3行处理一次 - 保留注释
             var blfound=false;
             for (let blxl=0;blxl<enwords.length;blxl++){
                 if (enwords[blxl][0]==one_word[0]){
                     enwords[blxl][1]=one_word[1];
-                    enwords[blxl][2]=one_word[2]+'🥚';
+                    enwords[blxl][2]=one_word[2]+'✏';
                     blfound=true;
                     break;
                 }

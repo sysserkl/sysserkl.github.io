@@ -245,7 +245,7 @@ function init_klsearch(){
 function local_or_remote_host_klsearch(ospan){
     var remote_address=local_storage_get_b('kl_remote_host',-1,false);
     if (ospan.innerText=='使用本地地址'){
-        ospan.innerText='使用'+remote_address+'地址';
+        ospan.innerText='使用('+remote_address+')地址';
         user_remote_host_klsearch_global=false;
     }
     else {
@@ -273,7 +273,7 @@ function menu_klsearch(){
     '<span class="span_menu" onclick="javascript:'+str_t+'local_or_remote_host_klsearch(this);">使用本地地址</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'javascript:kl_remote_host_address_b();">远端地址设定</span>',
     ];
-    document.getElementById('div_title_klsearch').insertAdjacentHTML('afterbegin',klmenu_b(menu0,'','17rem','','1rem')+' ');
+    document.getElementById('div_title_klsearch').insertAdjacentHTML('afterbegin',klmenu_b(menu0,'','19rem','','1rem')+' ');
 }
 
 function one_key_to_all_links_klsearch(){
