@@ -504,4 +504,5 @@ var digest_global=`
 *zoological
 *Diana
 *indigo
+*oblique angle
 `.trim().split('\n');

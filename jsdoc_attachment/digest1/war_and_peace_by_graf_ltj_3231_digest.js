@@ -135,4 +135,5 @@ var digest_global=`
 *fraternal
 *reschedule
 *sonata
+*acute angle
 `.trim().split('\n');
