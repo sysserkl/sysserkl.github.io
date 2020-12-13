@@ -74,4 +74,5 @@ var digest_global=`
 *wristwatch
 *Stalinism
 *Stalin
+*expressionless
 `.trim().split('\n');

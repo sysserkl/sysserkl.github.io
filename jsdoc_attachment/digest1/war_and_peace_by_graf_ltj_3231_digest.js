@@ -136,4 +136,6 @@ var digest_global=`
 *reschedule
 *sonata
 *acute angle
+*skeptical
+*mentally
 `.trim().split('\n');
