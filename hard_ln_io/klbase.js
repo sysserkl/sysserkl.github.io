@@ -760,7 +760,7 @@ function local_storage_get_b(csid,csmax=-1,return_list=false,remove_item=''){
         bljg=bljg.replace(new RegExp(/\n\n/,'g'),'\n');
     }
     bljg=bljg.trim();
-    if (csmax<=0 && return_list==false && remove_item.length==0){
+    if (csmax<=0 && return_list===false && remove_item.length==0){
         return bljg;
     }
     var list_t=bljg.split('\n');

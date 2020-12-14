@@ -243,7 +243,7 @@ function klmenu_check_b(span_id,change_value=true){
     return blvalue;
 }
 
-function klmenu_b(csarray,menu_name='',min_width='',button_fontsize='',item_fontsize="",max_height='',cstitle=''){
+function klmenu_b(csarray,menu_name='',min_width='',button_fontsize='',item_fontsize="",max_height='',cstitle='',menuid='',buttonid=''){
     // csarray links <a href="#">Link 1</a>
     if (menu_name==''){
         menu_name='☰';
@@ -261,8 +261,16 @@ function klmenu_b(csarray,menu_name='',min_width='',button_fontsize='',item_font
         max_height='40rem';
     }
     
-    var bljg='<div class="klmenu">';
-    bljg=bljg+'<button type="button" style="font-size:'+button_fontsize+';" onclick="javascript:if(this.parentNode.getElementsByTagName(\'div\')[0].style.display==\'block\'){this.parentNode.getElementsByTagName(\'div\')[0].style.display=\'none\';}else {this.parentNode.getElementsByTagName(\'div\')[0].style.display=\'block\';}" title="'+cstitle+'">'+menu_name+'</button>';
+    var bljg='<div class="klmenu"';
+    if (menuid!==''){
+        bljg=bljg+' id="'+menuid+'"';
+    }
+    bljg=bljg+'>';
+    bljg=bljg+'<button type="button"';
+    if (buttonid!==''){
+        bljg=bljg+' id="'+buttonid+'"';
+    }
+    bljg=bljg+' style="font-size:'+button_fontsize+';" onclick="javascript:if(this.parentNode.getElementsByTagName(\'div\')[0].style.display==\'block\'){this.parentNode.getElementsByTagName(\'div\')[0].style.display=\'none\';}else {this.parentNode.getElementsByTagName(\'div\')[0].style.display=\'block\';}" title="'+cstitle+'">'+menu_name+'</button>';
     bljg=bljg+'<div style="display:none;min-width: '+min_width+';max-height:'+max_height+';overflow:scroll;overflow-y:auto;overflow-x:auto;">';
     for (let item of csarray){
         bljg=bljg+'<span style="text-align:left;font-size:'+item_fontsize+';">'+item+'</span>\n';

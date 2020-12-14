@@ -22,6 +22,7 @@ var digest_global=`
 *luncheon
 *masculine
 *momma
+*happy-go-lucky
 *Monaco
 *nightingale
 *noonday

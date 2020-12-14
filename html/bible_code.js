@@ -248,6 +248,8 @@ function search_bible(cskey='',csstartno=0,favpage_no=1){
         }
     }
     
+    fav_list=new Set(fav_list); //加快搜索速度 - 保留注释
+    
     var bljg='<table class="table_zebra" border=0 cellspacing=5 cellpadding=10 width=100%>';
     var blcount=0;
     var blfound;
@@ -279,7 +281,7 @@ function search_bible(cskey='',csstartno=0,favpage_no=1){
             continue;
         }
         blstyle='';
-        if (fav_list.includes(blxl.toString())){
+        if (fav_list.has(blxl.toString())){
             if (exclude_fav){
                 continue;
             }
@@ -291,7 +293,7 @@ function search_bible(cskey='',csstartno=0,favpage_no=1){
             }
         }
         if (cskey=='FAV'){
-            blfound=fav_list.includes(blxl.toString());
+            blfound=fav_list.has(blxl.toString());
         }
         else {
             blfound=str_reg_search_b([item,cnbible_global[blxl]],cskey,isreg);

@@ -19,7 +19,7 @@ h4{margin:0.5rem 0;}
 </head>
 <body>
 <a name=top></a>
-<h2 id="h2_title" style="margin:0;font-size:1.3rem;"><span style="cursor:pointer;" onclick="javascript:hide_klplan_b();">Routines</span> <span id="span_total" style="font-size:1rem;font-weight:normal;cursor:pointer;" onclick="javascript:hide_klplan_b(true);"></span></h2>
+<h2 id="h2_title" style="margin:0;font-size:1.3rem;"><span style="cursor:pointer;" onclick="javascript:check_week_klroutines();hide_klplan_b();">Routines</span> <span id="span_total" style="font-size:1rem;font-weight:normal;cursor:pointer;" onclick="javascript:check_week_klroutines();hide_klplan_b(true);"></span></h2>
 <div id="div_week" style="margin-left:1rem;"></div>
 <div id="div_category_links" style="margin-top:0.4rem;margin-left:1rem;font-size:0.8rem;"></div>
 <!--history
@@ -147,7 +147,15 @@ function menu_klroutines(){
         klmenu1.push('<a href="../wiki/index.php/KL_Routines" onclick="javascript:'+str_t+'" target=_blank>KL Routines - KLWiki</a>');
     }
     
-    document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,day_2_week_b('',true),'14rem','1rem','1rem','60rem'),'','0rem')+' '); //♾ - 保留注释
+    document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,day_2_week_b('',true),'14rem','1rem','1rem','60rem','','div_rountines_menu1','button_routines_menu1'),'','0rem','','div_routines_menu')+' '); //♾ - 保留注释
+}
+
+function check_week_klroutines(){
+    var blstr=document.getElementById('button_routines_menu1').innerText;
+    var thisweek=day_2_week_b('',true);
+    if (blstr==thisweek){return;}
+    document.getElementById('div_routines_menu').outerHTML='';
+    menu_klroutines();
 }
 
 function check_klroutines(csid,cscategory){
