@@ -973,7 +973,6 @@ function popular_colors_b(){
     "indigo,ivory",
     "white,#8B7A76,#DAD6E2",
     "white,black,white",
-
     ];
 }
 
@@ -1247,4 +1246,22 @@ function root_font_size_menu_b(csstr){
     '<span class="span_menu" onclick="javascript:'+csstr+'root_font_size_change_b(false);">默认字号大小</span>', 
     '<span class="span_menu" onclick="javascript:'+csstr+'root_font_size_change_b(0,true);">指定字号</span>',     
     ];
+}
+
+function change_colors_b(csstr){
+    if (csstr.includes('.')){
+        csstr=csstr.substring(csstr.indexOf('.')+1,);
+    }
+    if (csstr=='default'){
+        csstr='black,white';
+    }    
+    var list_t=csstr.split(',');
+    if (list_t.length>=2){
+        scheme_global['color']=list_t[0].trim();
+        scheme_global['background']=list_t[1].trim();
+        scheme_generation_b();
+    }
+    var obody=document.querySelector('body');
+    obody.style.color=scheme_global['color'];
+    obody.style.backgroundColor=scheme_global['background'];
 }

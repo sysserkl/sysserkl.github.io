@@ -58,25 +58,7 @@ function possible_menu_kltxt_b(){
 }
 
 function change_colors_kltxt_b(csstr){
-    if (csstr.includes('.')){
-        csstr=csstr.substring(csstr.indexOf('.')+1,);
-    }
-    if (csstr=='default'){
-        scheme_global['color']='';
-        scheme_global['background']='';
-        scheme_generation_b();
-        return;
-    }    
-    var list_t=csstr.split(',');
-    if (list_t.length>=2){
-        scheme_global['color']=list_t[0].trim();
-        scheme_global['background']=list_t[1].trim();
-        scheme_generation_b();
-    }
-    var obody=document.querySelector('body');
-    obody.style.color=scheme_global['color'];
-    obody.style.backgroundColor=scheme_global['background'];
-    
+    change_colors_b(csstr);
     var ospan=document.getElementsByClassName('span_page_number');
     for (let item of ospan){
         if (item.style.color==scheme_global['a-hover']){
@@ -109,7 +91,7 @@ function statistics_kltxt_b(){
 
     document.getElementById("divhtml").innerHTML=bljg;
     flot_data.sort(function (a,b){return a[0]>b[0];});
-    flot_lines_k([['书籍数'].concat(flot_data)],'div_flot_line','nw',true,'','d','本',1,[1, 'day'],5);
+    flot_lines_k([['书籍数'].concat(flot_data)],'div_flot_line','nw',true,'','d','本',0,[1, 'day'],5);
 }
 
 function new_words_kltxt_b(){
@@ -170,7 +152,9 @@ function txtmenus_kltxt_b(cstype=''){
         menu1.push('<span class="span_menu" onclick="javascript:'+str_t+'menu_insert_kltxt_b(1);">显示搜索关键字目录1</span>');
     }
     
-    var menu2=[
+    var menu2=root_font_size_menu_b(str_t);
+    if (cstype!=='reader' && cstype!=='digest'){
+        menu2=menu2.concat([
         '<span class="span_menu" onclick="javascript:'+str_t+'search_demo_kltxt_b();">语法示例</span>',
         '<span class="span_menu" onclick="javascript:'+str_t+'editable_kltxt_b();">页面可编辑</span>',        
         '<span class="span_menu" onclick="javascript:'+str_t+'counthz_kltxt_b();">汉字量统计</span>',
@@ -178,7 +162,8 @@ function txtmenus_kltxt_b(cstype=''){
         '<span class="span_menu" onclick="javascript:'+str_t+'booksthickness_form_kltxt_b();">书的厚度</span>',    
         '<span class="span_menu" onclick="javascript:'+str_t+'statistics_kltxt_b();">统计</span>',
         '<span class="span_menu" onclick="javascript:'+str_t+'books_current_table_kltxt_b();">当前书目列表</span>',
-    ];
+        ]);
+    }
     
     var menu3=[
     '<span class="span_menu" onclick="javascript:'+str_t+'digest_temp_add_kltxt_b();">添加临时摘要</span>',
@@ -187,7 +172,7 @@ function txtmenus_kltxt_b(cstype=''){
     ];
     
     //color menu - 保留注释
-    var list_t=popular_colors_b();
+    var list_t=['default'].concat(popular_colors_b());
     var color_menu=[];
 
     for (let blxl=0;blxl<list_t.length;blxl++){
@@ -200,8 +185,8 @@ function txtmenus_kltxt_b(cstype=''){
     var bljg=klmenu_b(menu0,'','12rem','',fontsize);
     bljg=bljg+klmenu_b(menu3,'🖊','14rem','',fontsize);
     bljg=bljg+klmenu_b(menu1,'⏬','14rem','',fontsize);
-    if (cstype!=='reader' && cstype!=='digest'){
-        bljg=bljg+klmenu_b(menu2,'⚙','12rem','',fontsize,'20rem');
+    if (cstype!=='digest'){
+        bljg=bljg+klmenu_b(menu2,'⚙','12rem','',fontsize);
     }
     if (cstype=='digest'){
         bljg=klmenu_b(color_menu,'🎨',(ismobile_b()?'16rem':'22rem'),'',fontsize,'20rem');

@@ -56,10 +56,10 @@ var csbookname_global='';
 import_book_kltxt_b(cskeys);
 </script>
 <script type="text/javascript">
-digest_temp_load_kltxt_b();
 decode_and_create_menu_kltxt_b();
 var kltxt_menulist_index_global=[];
 menu_all_only_one_kltxt_b();
+digest_temp_load_kltxt_b(); //放在 menu_all_only_one_kltxt_b 之后 - 保留注释
 </script>
 <p style="line-height:150%;"><span class="span_link" onclick="javascript:show_all_books_global=!show_all_books_global;books_b(show_all_books_global,'txt',book_tag_global);"><b>书籍选择</b></span> <a href="?&line=0_0">随机</a> <span id="span_book_category"></span> <span id=booklinks></span></p>
 

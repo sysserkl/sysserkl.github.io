@@ -1,5 +1,9 @@
 //单词库
 var enwords=[
+["learnt", "[lɜː(r)nt]", "v.  学会；学习；得知（learn 的过去式和过去分词形式之一）；chiefly British past tense and past participle of 'learn'"],
+["freebie", "[ˈfriːbi]", "n. 免费的东西；（常指公司提供的）免费品；免费赠品（尤指戏院赠券）；免费赠券；something (such as a theater ticket) given without charge; something that is given to somebody without payment, usually by a company; adj. 免费的；without charge; free"],
+["rehome", "[ˌri:'həʊm]", "v. 为（宠物）寻找新家；为（狗、猫等宠物）找新家；不通过官方收养机构为（一个或多个领养儿童）寻找一个新的家庭；to find a new owner for a pet, especially a dog or cat, usually after caring for it for a time; to find a new home for (especially a pet); to find a new home for an animal, usually a pet; to find a new family for (one or more adopted children) without using official adoption agencies"],
+["debater", "[dɪˈbeɪtə(r)]", "n. （参加）讨论者；争论者；辩论家；a person who is involved in a formal debate; a person who takes part in a serious discussion of a subject with many other people"],
 ["skeptical", "['skeptɪk(ə)l]", "adj. 怀疑的；（哲学）怀疑论的；怀疑宗教的；relating to, characteristic of, or marked by skepticism; of or characteristic of skeptics or skepticism; having doubts that a claim or statement is true or that something will happen; doubting that something is true or useful; not easily persuaded or convinced; doubting; questioning; showing doubt; doubting the fundamental doctrines of religion; denying or questioning the tenets of a religion"],
 ["raptor", "UK ['ræptə] US [ˈræptər] [ræpˌtɔr]", "n. 猛禽；攫禽；肉食鸟；any bird of prey (= a bird that kills other creatures for food); a carnivorous medium- to large-sized bird (such as a hawk, eagle, owl, or vulture) that has a hooked beak and large sharp talons and that feeds wholly or chiefly on meat taken by hunting or on carrion: bird of prey; n. [New Latin -raptor (as in 'velociraptor')]: a usually small-to-medium-sized predatory dinosaur (such as a velociraptor or deinonychus); a carnivorous bipedal dinosaur of the late Cretaceous period"],
 ["mentally", "['ment(ə)li]", "adv. 精神上；心理上；思想上；智力上；connected with or happening in the mind; using the mind; with regard to the mind or its capacity"],
@@ -2344,7 +2348,7 @@ var enwords=[
 ["cybersecurity", "UK [ˌsaɪ.bə.sɪˈkjʊə.rə.ti] US [ˌsaɪ.bɚ.səˈkjʊr.ə.t̬i]", "n. 网络安全；things that are done to protect a person, organization, or country and their computer information against crime or attacks carried out using the internet; ways of protecting computer systems against threats such as viruses; the state of being safe from electronic crime and the measures taken to achieve this; measures taken to protect a computer or computer system (as on the Internet) against unauthorized access or attack"],
 ["cyberspace", "['saɪbərspeɪs]", "n. 网络空间"],
 ["cyborg", "['saɪbɔːrɡ]", "n. 半机械人；靠机械装置维持生命的人"],
-["cycle", "['saɪkl]", "n. 循环；周期；自行车；摩托车；v. 骑自行车；(使)轮转；(使)循环"],
+["cycle", "['saɪkl]", "n. 循环；周期；自行车；摩托车；v. (使)循环；(使)轮转；骑自行车"],
 ["cyclic", "['saɪklɪk] [ˈsɪklɪk]", "adj. 循环的；周期的；周期性的；环形的；repeated many times and always happening in the same order; of, relating to, or being a cycle; moving in cycles; adj. of, relating to, or being a chemical compound containing a ring of atoms; adj. being a mathematical group that has an element such that every element of the group can be expressed as one of its powers; n. a helicopter control that governs horizontal thrust by adjusting the pitch of individual rotor blades during their rotation"],
 ["cyclist", "['saɪklɪst]", "n. 骑自行车的人"],
 ["cylinder", "['sɪlɪndə(r)]", "n. 圆柱；圆柱体；圆筒；（尤指用作容器的）圆筒状物；汽缸；a solid or hollow figure with round ends and long straight sides; an object like a cylinder in shape, especially one used as a container; the hollow tube in an engine, like a cylinder in shape, inside which the piston moves"],
@@ -4134,7 +4138,7 @@ var enwords=[
 ["handmade", "[ˌhænd'meɪd]", "adj. 手工制作的"],
 ["handmaiden", "['hændmeɪd(ə)n]", "n. 女仆；女佣；侍女；=handmaid; a personal maid or female servant; n. 基础；根基；something that supports and helps something else; something whose essential function is to serve or assist"],
 ["handmaid", "['hændmeɪd]", "n. 女佣人；侍女；=handmaiden"],
-["handout", "UK ['hændaʊt] US ['hændˌaʊt]", "n. 讲义材料；施舍；传单；救济品；捐赠品；政府拨款（为促进商业活动）；food, money or clothes that are given to a person who is poor; money that is given to a person or an organization by the government, etc., for example to encourage commercial activity; a free document that gives information about an event or a matter of public interest, or that states the views of a political party, etc.; a document that is given to students in class or people attending a talk, etc. and that contains a summary of the lesson/talk, a set of exercises, etc."],
+["handout", "UK ['hændaʊt] US ['hændˌaʊt]", "n. 讲义材料；传单；施舍；救济品；捐赠品；政府拨款（为促进商业活动）；food, money or clothes that are given to a person who is poor; money that is given to a person or an organization by the government, etc., for example to encourage commercial activity; a free document that gives information about an event or a matter of public interest, or that states the views of a political party, etc.; a document that is given to students in class or people attending a talk, etc. and that contains a summary of the lesson/talk, a set of exercises, etc."],
 ["handshake", "['hæn(d)ˌʃeɪk]", "n. 握手；an act of shaking somebody's hand with your own, used especially to say hello or goodbye or when you have made an agreement"],
 ["handsome", "['hænsəm]", "adj. 可观的；英俊的；慷慨大方的；灵巧的"],
 ["handwriting", "['hændraɪtɪŋ]", "n. 笔迹；字迹；手写；手书；书法"],

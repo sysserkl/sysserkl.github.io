@@ -50,14 +50,17 @@ function menu_bible(){
         klmenu1.push(    '<a href="../../../../enwords_book.htm" onclick="javascript:'+str_t+'" target=_blank>生词统计链接</a>');
     }
     var klmenu2=[
-    '<span class="span_menu" onclick="javascript:'+str_t+'idb_bible(\'count\');">统计 IDB 记录数</span>',     
-    '<span class="span_menu" onclick="javascript:'+str_t+'if (confirm(\'是否从 IDB 导入数据？\')){load_data_bible(true);}">从 IDB 导入数据</span>',
-    '<span class="span_menu" onclick="javascript:'+str_t+'if (confirm(\'是否写入数据到 IDB？\')){idb_bible(\'write\');}">写入数据到 IDB</span>', 
-    '<span class="span_menu" onclick="javascript:'+str_t+'if (confirm(\'是否清除 IDB 数据？\')){idb_bible(\'clear\');}">清除 IDB 数据</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'pwa_bible_store\',\'bible_service_worker.js\');}">更新版本</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'help_bible();">Help</span>',
     ];
     klmenu2=root_font_size_menu_b(str_t).concat(klmenu2);
+    
+    var klmenu_idb=[
+    '<span class="span_menu" onclick="javascript:'+str_t+'idb_bible(\'count\');">统计 IDB 记录数</span>',     
+    '<span class="span_menu" onclick="javascript:'+str_t+'if (confirm(\'是否从 IDB 导入数据？\')){load_data_bible(true);}">从 IDB 导入数据</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'if (confirm(\'是否写入数据到 IDB？\')){idb_bible(\'write\');}">写入数据到 IDB</span>', 
+    '<span class="span_menu" onclick="javascript:'+str_t+'if (confirm(\'是否清除 IDB 数据？\')){idb_bible(\'clear\');}">清除 IDB 数据</span>',
+    ];
     
     var klmenu3=[
     '<span class="span_menu" onclick="javascript:'+str_t+'web_sites_href_list_bible(\'BibleGateway_CUVS\',\'BibleGateway(和合本)\');">BibleGateway(和合本)</span>',
@@ -67,8 +70,15 @@ function menu_bible(){
     '<span class="span_menu" onclick="javascript:'+str_t+'web_sites_href_list_bible(\'shengjing_jidujiao_com\',\'基督教中文网\');">基督教中文网</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'web_sites_href_list_bible(\'biblestudytools.com\',\'Bible Study Tools(KJV)\');">Bible Study Tools(KJV)</span>',
     ];
+    
+    var color_menu=[];
+    var list_t=['default'].concat(popular_colors_b());
+    for (let blxl=0;blxl<list_t.length;blxl++){
+        var item=list_t[blxl];
+        color_menu.push('<span class="span_menu" onclick="javascript:'+'change_colors_b(\''+item+'\');" style="color:'+item.split(',')[0]+';background-color:'+item.split(',')[1]+';">'+(blxl+1)+'. '+item+'</span>');
+    }
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'✝','14rem','1.5rem','1rem','60rem')+klmenu_b(klmenu2,'⚙','14rem','1.5rem','1rem','60rem')+klmenu_b(klmenu3,'🌐','16rem','1.5rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'✝','14rem','1.5rem','1rem','60rem')+klmenu_b(klmenu2,'⚙','14rem','1.5rem','1rem','60rem')+klmenu_b(klmenu_idb,'ℹ','14rem','1.5rem','1rem','60rem')+klmenu_b(klmenu3,'🌐','16rem','1.5rem','1rem','60rem')+klmenu_b(color_menu,'🎨','20rem','1.5rem','1rem','20rem'),'','0rem')+' ');
 }
 
 function args_bible(){

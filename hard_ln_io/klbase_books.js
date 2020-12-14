@@ -139,9 +139,9 @@ function import_book_js_b(import_digest=true){
             }
             if (import_digest){
                 document.write('\n<SCRIPT language=JavaScript src="'+book_path_py_b('digest',jsdoc_num)+bookid+'_digest.js"><\/SCRIPT>\n');
-                document.write('\n<script type="text/javascript">\n');
-                document.write('digest_enwords_get_book_b();\n');
-                document.write('</script>\n');        
+                //document.write('\n<script type="text/javascript">\n');
+                //document.write('digest_enwords_get_book_b();\n');
+                //document.write('</script>\n');        
             }
         }
     }
@@ -150,6 +150,13 @@ function import_book_js_b(import_digest=true){
 function digest_enwords_get_book_b(){
     var t0 = performance.now();
     var new_list=[];
+    var menu_list=new Set();    //如果使用 list 则极慢 - 保留注释
+    if (typeof kltxt_menulist_index_global == 'object' && Array.isArray(kltxt_menulist_index_global)){
+        for (let item of kltxt_menulist_index_global){
+            menu_list.add(item[0]);
+        }
+    }
+    
     for (let item of digest_global){
         if (item.substring(0,1)!=='*'){
             new_list.push(item);
@@ -164,6 +171,7 @@ function digest_enwords_get_book_b(){
         }
         var blfound=false;
         for (let blxl=0;blxl<filelist.length;blxl++){
+            if (menu_list.has(blxl)){continue;}
             var arow=filelist[blxl];
             if (arow.match(new RegExp('\\b'+blword+'\\b','i'))==null){continue;}
             
