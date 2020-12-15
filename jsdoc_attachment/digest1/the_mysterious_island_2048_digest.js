@@ -454,4 +454,5 @@ var digest_global=`
 *watercourse
 *seabird
 *Britannia
+*koala
 `.trim().split('\n');

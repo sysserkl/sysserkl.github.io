@@ -39,4 +39,5 @@ var digest_global=`
 *wayside
 *depositor
 *right angle
+*brewer
 `.trim().split('\n');
