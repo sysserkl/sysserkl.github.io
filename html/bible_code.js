@@ -210,7 +210,7 @@ function fav_location_bible(cspages){
     search_bible('FAV',0,blno);
 }
 
-function search_bible(cskey='',csstartno=0,favpage_no=1){
+function search_bible(cskey='',csstartno=0,favpage_no=1,csmax=500){
     var t0=performance.now();   
     if (cskey==''){
         cskey=document.getElementById('input_bible_search').value.trim();
@@ -229,16 +229,16 @@ function search_bible(cskey='',csstartno=0,favpage_no=1){
     }
     recent_search_bible(cskey+(isreg?'(:r)':''));
     csstartno=Math.max(0,parseInt(csstartno));
-    var fav_rows_per_page=10;
+    //var csmax=10;
     var fav_list=local_storage_get_b('fav_lines_bible',-1,true);
     var fav_len=fav_list.length;
     var fav_start=0;
     var fav_pages='';
-    if (cskey=='FAV'){
-        fav_start=(favpage_no-1)*fav_rows_per_page;
-        fav_list=fav_list.slice(fav_start,fav_start+fav_rows_per_page);
+    if (cskey=='FAV' && csmax>=0){
+        fav_start=(favpage_no-1)*csmax;
+        fav_list=fav_list.slice(fav_start,fav_start+csmax);
         
-        var pages_count=Math.ceil(fav_len/fav_rows_per_page);
+        var pages_count=Math.ceil(fav_len/csmax);
         if (pages_count>1){
             for (let blxl=1;blxl<=pages_count;blxl++){
                 fav_pages=fav_pages+page_one_b(pages_count,favpage_no,blxl,'onclick="javascript:search_bible(\'FAV\',0,'+blxl+');"'+(blxl==favpage_no?' style="color:red;"':''),0,0);
@@ -269,6 +269,7 @@ function search_bible(cskey='',csstartno=0,favpage_no=1){
     }
     cskey=cskey.trim();
     //FAV dog 无意义 - 保留注释
+    current_search_no_global=new Set();
     for (let blxl=csstartno;blxl<kjv.length;blxl++){
         var item=kjv[blxl];
         if (item.substring(0,3)=='== ' && item.slice(-3,)==' =='){
@@ -302,26 +303,35 @@ function search_bible(cskey='',csstartno=0,favpage_no=1){
             }
         }
         if (blfound && h2>-1 && h3>-1){
+            current_search_no_global.add(blxl);
             bljg=bljg+search_one_row_bible(blxl,h2,h3,blstyle,ismobile);
             blcount=blcount+1;
-            if (blcount>=500){
+            if (csmax>=0 && blcount>=csmax){
                 continue_search_no=blxl+1;
                 break;
             }
         }
     }
     bljg=bljg+'</table>';
-    if (continue_search_no>0 && continue_search_no<kjv.length){
-        bljg=bljg+'<p style="line-height:1.8rem;margin-left:0.5rem;"><span class="oblong_box" onclick="javascript:search_bible(\'\','+continue_search_no+');">继续搜索('+continue_search_no+')</span></p>';
-    }
-    
     bljg=bljg+(fav_pages==''?'':'<p style="line-height:1.8rem;margin-left:0.5rem;">'+fav_pages+'</p>');
+
+    bljg=bljg+'<p style="line-height:1.8rem;margin-left:0.5rem;">';
+    bljg=bljg+'('+blcount+') ';
     
-    bljg=bljg+'<p style="line-height:1.8rem;margin-left:0.5rem;">('+blcount+') ';
-    bljg=bljg+'<span class="oblong_box" onclick="javascript:fav_export_import_form_bible();">Import/Export</span> ';
-    bljg=bljg+'<span class="oblong_box" onclick="javascript:fav_statistics_bible();">Statistics</span> ';    
+    if (cskey!=='FAV' && continue_search_no>0 && continue_search_no<kjv.length){
+        bljg=bljg+'<span class="oblong_box" onclick="javascript:search_bible(\'\','+continue_search_no+');">继续搜索('+continue_search_no+')</span> ';
+    }
+    if (csmax>=0 && blcount==csmax){
+        bljg=bljg+'<span class="oblong_box" onclick="javascript:search_bible(\''+specialstr_j(cskey)+'\',0,1,-1);">完全搜索</span> ';    
+    }
+    bljg=bljg+'<span class="oblong_box" onclick="javascript:search_statistics_bible();">Statistics</span> ';    
+    
+    if (cskey=='FAV'){
+        bljg=bljg+'<span class="oblong_box" onclick="javascript:fav_export_import_form_bible();">FAV Import/Export</span> ';
+    }
     bljg=bljg+'</p>';
-    bljg=bljg+'<div id="div_fav_bible" style="margin:0.5rem;"></div>';
+    bljg=bljg+'<div id="div_search_statistics" style="margin:0.5rem;"></div>';
+    
     document.getElementById('divhtml').innerHTML=bljg;
     document.getElementById('select_chapter').value='-1';
     document.getElementById('select_chapter_cn').value='-1';
@@ -330,15 +340,15 @@ function search_bible(cskey='',csstartno=0,favpage_no=1){
     console.log('search_bible 费时：'+(performance.now() - t0) + " milliseconds");
 }
 
-function fav_statistics_bible(cscolumn=-1){
-    var fav_list=local_storage_get_b('fav_lines_bible',-1,true);
-    var fav_chapter={};
+function search_statistics_bible(cscolumn=-1){
+    //var fav_list=local_storage_get_b('fav_lines_bible',-1,true);
+    var blchapter={};
     for (let blxl=0;blxl<chapter_global.length;blxl++){
         var one_chapter_name=chapter_global[blxl][1];
-        fav_chapter[one_chapter_name]=[blxl,0];
+        blchapter[one_chapter_name]=[blxl,0];
     }
     
-    for (let item of fav_list){
+    for (let item of current_search_no_global){
         var blvalue=parseInt(item);
         if (blvalue<0){continue;}
         var blfound=false;
@@ -346,22 +356,22 @@ function fav_statistics_bible(cscolumn=-1){
             var one_chapter_number=chapter_global[blxl][0];
             if (blvalue<one_chapter_number && blxl>0){
                 var prev_chapter_name=chapter_global[blxl-1][1];
-                fav_chapter[prev_chapter_name][1]=fav_chapter[prev_chapter_name][1]+1;
+                blchapter[prev_chapter_name][1]=blchapter[prev_chapter_name][1]+1;
                 blfound=true;
                 break;
             }
         }
         if (blfound===false){
             var prev_chapter_name=chapter_global[chapter_global.length-1][1];
-            fav_chapter[prev_chapter_name][1]=fav_chapter[prev_chapter_name][1]+1;            
+            blchapter[prev_chapter_name][1]=blchapter[prev_chapter_name][1]+1;            
         }
     }
     
     var result_t=[];
-    for (let key in fav_chapter){
-        //console.log(key,fav_chapter[key]); - 保留注释
-        var blno=fav_chapter[key][0];
-        var blcount=fav_chapter[key][1];
+    for (let key in blchapter){
+        //console.log(key,blchapter[key]); - 保留注释
+        var blno=blchapter[key][0];
+        var blcount=blchapter[key][1];
         result_t.push([chapter_global[blno][1],chapter_global[blno][2],blcount]);
     }
     
@@ -388,12 +398,12 @@ function fav_statistics_bible(cscolumn=-1){
     }
     fav_desc_sort_global=!fav_desc_sort_global;
     
-    var bljg='<table class="table_zebra"><tr><th style="cursor:pointer;" onclick="javascript:fav_statistics_bible(0);">EN</th><th style="cursor:pointer;" onclick="javascript:fav_statistics_bible(1);">CN</th><th style="cursor:pointer;" onclick="javascript:fav_statistics_bible(2);">Count</th></tr>';
+    var bljg='<table class="table_zebra"><tr><th style="cursor:pointer;" onclick="javascript:search_statistics_bible(0);">EN</th><th style="cursor:pointer;" onclick="javascript:search_statistics_bible(1);">CN</th><th style="cursor:pointer;" onclick="javascript:search_statistics_bible(2);">Count</th></tr>';
     for (let item of result_t){
         bljg=bljg+'<tr><td>'+item[0]+'</td><td>'+item[1]+'</td><td align=right>'+item[2]+'</td></tr>';
     }
     bljg=bljg+'</table>';
-    document.getElementById('div_fav_bible').innerHTML=bljg;   
+    document.getElementById('div_search_statistics').innerHTML=bljg;   
 }
 
 function fav_update_bible(){
@@ -532,7 +542,7 @@ function fav_export_import_form_bible(){
     bljg=bljg+textarea_buttons_b('textarea_fav_bible','发送地址','bible_fav')+' 行数：'+fav_list.length+'</div>';
     bljg=bljg+'</p>';
     bljg=bljg+'</form>';
-    document.getElementById('div_fav_bible').innerHTML=bljg;
+    document.getElementById('div_search_statistics').innerHTML=bljg;
 }
 
 function cn_a_bible(csstr){
