@@ -91,7 +91,7 @@ function enwords_init_b(simple=false){
     console.log('enwords_init_b() 费时：'+(performance.now() - t0) + " milliseconds");
 }
 
-function en_similar_word_b(cskey,cskey_list,compared_word){
+function en_similar_word_b(cskey,cskey_set,compared_word){
     if (compared_word==cskey || compared_word.toLowerCase()==cskey.toLowerCase()){
         return 0;
     }
@@ -101,10 +101,18 @@ function en_similar_word_b(cskey,cskey_list,compared_word){
     else if (cskey==compared_word.slice(-1*cskey.length,) || cskey.toLowerCase()==compared_word.slice(-1*cskey.length,).toLowerCase()){
         return 2;
     }
-    else if (cskey_list.includes(compared_word) || cskey_list.includes(compared_word.toLowerCase())){
+    else if (cskey_set.has(compared_word) || cskey_set.has(compared_word.toLowerCase())){
         return 3;
     }
     else {
+        for (let item of cskey_set){
+            if (item.includes(compared_word) || item.includes(compared_word.toLowerCase())){
+                return 3;
+            }
+            if (compared_word.includes(item) || compared_word.toLowerCase().includes(item)){
+                return 3;
+            }            
+        }
         return 4;
     }
 }

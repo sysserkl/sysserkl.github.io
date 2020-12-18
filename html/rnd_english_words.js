@@ -257,7 +257,7 @@ function search_rndwords(csstr='',times=10){
     else {
         var words_temp_equal_arr=[[],[],[],[],[]];
         var csword_filter=(csstr.match(/[a-zA-Z0-9 '_\-]+/) || [""])[0];
-        var csword_filter_list=csword_filter.split(' ');
+        var csword_filter_set=new Set(csword_filter.split(' '));
         
         for (let item of enwords){
             var blfound=str_reg_search_b(item,csstr,isreg);
@@ -265,7 +265,7 @@ function search_rndwords(csstr='',times=10){
                 break;
             }
             if (blfound){
-                var blnumber=en_similar_word_b(csword_filter,csword_filter_list,item[0]);
+                var blnumber=en_similar_word_b(csword_filter,csword_filter_set,item[0]);
                 if (blnumber==4 && blxl<=times || blnumber!==4){
                     words_temp_equal_arr[blnumber].push(item);
                 }

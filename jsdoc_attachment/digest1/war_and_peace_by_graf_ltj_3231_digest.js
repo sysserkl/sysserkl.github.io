@@ -139,4 +139,5 @@ var digest_global=`
 *acute angle
 *skeptical
 *mentally
+*obstacle
 `.trim().split('\n');

@@ -17,4 +17,6 @@ var digest_global=`
 *merchant
 *herbal
 *ladybird
+*wanderer
+*motorbike
 `.trim().split('\n');
