@@ -3,4 +3,5 @@ var digest_global=`
 *gull
 *panacea
 *radii
+*salable
 `.trim().split('\n');

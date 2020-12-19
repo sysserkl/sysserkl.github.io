@@ -1,5 +1,9 @@
 //单词库
 var enwords=[
+["purchaser", "['pɜ:(r)tʃəsə(r)]", "n. 买主；买方；购买人；采购人员；a person who buys something; a person or company that buys something"],
+["salable", "['seɪləb(ə)l]", "adj. 适于销售的；有销路的；畅销的；=saleable；capable of being or fit to be sold: marketable; good enough to be sold; that somebody will want to buy; easy to sell or suitable for selling; readily sold"],
+["disembark", "[ˌdɪsɪm'bɑː(r)k] [ˌdɪsɛmˈbɑː(r)k]", "v. 下（车、船、飞机等）；（使）上岸；（使）登陆；to leave a vehicle, especially a ship or an aircraft, at the end of a journey; to let or make people leave a vehicle; to get off a plane, train, or boat; to remove to shore from a ship; to go ashore out of a ship; to get out of a vehicle or craft"],
+["icebound", "['aɪsˌbaʊnd]", "adj. 冰封的；被冰封冻着的；covered or made immobile by ice; frozen in; held fast or hemmed in by ice; obstructed or shut off by ice; surrounded, obstructed, or covered by ice; held fast by ice (said as of a boat); made inaccessible by ice (said as of a port)"],
 ["wanderer", "UK ['wɒndərə(r)] US [ˈwɑːndərər]", "n. 漫游者；漂泊者；流浪者；a person who keeps travelling from place to place with no permanent home; one who wanders, who travels aimlessly; someone who often travels from place to place, especially without any clear aim or purpose; n. any of various far-migrating nymphalid butterflies of the genus 'Danaus'; n. 漂泊信天翁；(colloquial) the wandering albatross, Diomedea exulans"],
 ["obstacle", "UK ['ɒbstək(ə)l] US ['ɑːbstək(ə)l]", "n. 妨碍；阻碍；障碍；障碍物；障碍栅栏；绊脚石；a situation, an event, etc. that makes it difficult for you to do or achieve something; an object that is in your way and that makes it difficult for you to move forward; (in showjumping) a fence, etc. for a horse to jump over; a fence or hedge used in showjumping; something that blocks you so that movement, going forward, or action is prevented or made more difficult; something that impedes progress or achievement; a person or thing that opposes or hinders something"],
 ["off-road", "UK [ˌɒfˈrəʊd] [ˈɒf rəʊd] US [ˌɑːfˈroʊd] [ˈɔːfˈroud, ˈɑːf-]", "adj. adv. 非公路上的(地)；（车辆设计等）越野的(地)；of, relating to, done with, or being a vehicle designed especially to operate away from public roads; not on the public road; on rough ground; designed, built, or used for traveling off public roads, esp. on unpaved roads, trails, beaches, or rough terrain; used for or suitable to an off-road vehicle"],
@@ -5329,7 +5333,7 @@ var enwords=[
 ["link", "[lɪŋk]", "v. 联系；连接；n. 联系；环；节"],
 ["linseed", "['lɪnˌsiːd]", "n. 亚麻籽[仁]；the seeds of the flax plant, eaten as a health food or used to make linseed oil"],
 ["Linus", "['lainəs]", "n. 莱纳斯(男子名)；a male given name from Latin"],
-["Linux", "['lɪnəks] [ˈlaɪnəks] [ˈlaɪnʌks] [ˈlɪnʌks]", "n. 一种可免费使用的UNIX类型操作系统；(software) any unix-like operating system distro that uses the Linux kernel; an open-source version of the UNIX operating system; "],
+["Linux", "['lɪnəks] [ˈlaɪnəks] [ˈlɪnʌks] [ˈlaɪnʌks]", "n. 一种可免费使用的UNIX类型操作系统；(software) any unix-like operating system distro that uses the Linux kernel; an open-source version of the UNIX operating system; an operating system, based on UNIX, that runs on many different hardware platforms and whose source code is available to the public; an open-source operating system modelled on UNIX"],
 ["lion", "['laɪən]", "n. 勇猛的人；狮子"],
 ["lip", "[lɪp]", "n. 嘴唇；唇状物；v. 接吻；说话；拍打"],
 ["lip service", "[lip ˈsɜːvɪs]", "n. 说得好听的话，空口的应酬话；空口答应[应酬话]；口惠；if somebody pays lip service to something, they say that they approve of it or support it, without proving their support by what they actually do"],

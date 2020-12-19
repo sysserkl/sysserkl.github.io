@@ -322,8 +322,9 @@ function search_bible(cskey='',csstartno=0,favpage_no=1,csmax=500){
         bljg=bljg+'<span class="oblong_box" onclick="javascript:search_bible(\'\','+continue_search_no+');">继续搜索('+continue_search_no+')</span> ';
     }
     if (csmax>=0 && blcount==csmax){
-        bljg=bljg+'<span class="oblong_box" onclick="javascript:search_bible(\''+specialstr_j(cskey)+'\',0,1,-1);">完全搜索</span> ';    
+        bljg=bljg+'<span class="oblong_box" onclick="javascript:search_bible(\''+specialstr_j(cskey+(isreg?'(:r)':''))+'\',0,1,-1);">完全搜索</span> ';    
     }
+    bljg=bljg+'<span class="oblong_box" onclick="javascript:break_line_bible();">断句</span> ';    
     bljg=bljg+'<span class="oblong_box" onclick="javascript:search_statistics_bible();">Statistics</span> ';    
     
     if (cskey=='FAV'){
@@ -338,6 +339,65 @@ function search_bible(cskey='',csstartno=0,favpage_no=1,csmax=500){
     document.getElementById('select_sub').innerHTML='';
     mouseover_mouseout_oblong_span_b(document.querySelectorAll('div#divhtml span.oblong_box'));
     console.log('search_bible 费时：'+(performance.now() - t0) + " milliseconds");
+}
+
+function break_line_bible(){
+    var blkey=document.getElementById('input_bible_search').value.trim();
+    var isreg=false;
+    if (blkey.slice(-4,)=='(:r)'){
+        isreg=true;
+        blkey=blkey.substring(0,blkey.length-4);
+    }    
+    if (blkey=='' || current_search_no_global.length==0){return;}
+    if (isreg){
+        try{
+            ''.match(blkey);
+            ''.replace(new RegExp('('+blkey+')','g'),'\n$1');
+        }
+        catch (error){
+            alert(error.message);
+            return;
+        }
+    }
+    
+    var result_t=[];
+    for (let blno of current_search_no_global){
+        if (isreg){
+            if (kjv[blno].match(blkey)!==null){
+                result_t.push(kjv[blno].replace(new RegExp('('+blkey+')','g'),'\n$1'));
+            }
+            if (cnbible_global[blno].match(blkey)!==null){
+                result_t.push(cnbible_global[blno].replace(new RegExp('('+blkey+')','g'),'\n$1'));
+            }            
+        }
+        else {
+            if (kjv[blno].includes(blkey)){
+                result_t.push(kjv[blno].replace(new RegExp('('+blkey+')','g'),'\n$1'));
+            }
+            if (cnbible_global[blno].includes(blkey)){
+                result_t.push(cnbible_global[blno].replace(new RegExp('('+blkey+')','g'),'\n$1'));
+            }
+        }
+    }
+    if (result_t.length==0){return;}
+    result_t=result_t.join('\n').split('\n');
+    
+    var bljg=[];
+    for (let item of result_t){
+        if (isreg){
+            if (item.match(blkey)!==null){
+                bljg.push(item);
+            }
+        }
+        else {
+            if (item.includes(blkey)){
+                bljg.push(item);
+            }        
+        }
+    }
+    bljg.sort(function (a,b){return zh_sort_b(a,b);});
+    var blbuttons='<p><span class="aclick" onclick="javascript:document.getElementById(\'div_search_statistics\').innerHTML=\'\';">Close</span></p>';
+    document.getElementById('div_search_statistics').innerHTML=array_2_li_b(bljg,'li','ol')+blbuttons;
 }
 
 function search_statistics_bible(cscolumn=-1){

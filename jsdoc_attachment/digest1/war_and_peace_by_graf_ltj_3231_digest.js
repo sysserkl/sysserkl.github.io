@@ -140,4 +140,5 @@ var digest_global=`
 *skeptical
 *mentally
 *obstacle
+*purchaser
 `.trim().split('\n');
