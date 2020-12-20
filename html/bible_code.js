@@ -39,7 +39,7 @@ function menu_bible(){
     var klmenu1=[
     '<span class="span_menu" onclick="javascript:'+str_t+'bookmarks_get_bible();">读取书签</span>',    
     '<span class="span_menu" onclick="javascript:'+str_t+'bookmarks_set_bible();">添加书签</span>',
-    '<span class="span_menu" onclick="javascript:'+str_t+'statistics_bible();">阅读进度</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'reading_statistics_bible();">阅读进度</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'search_bible(\'FAV\');">FAV</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'fav_all_bible();">FAV_Reader</span>',    
     '<span class="span_menu" onclick="javascript:'+str_t+'chapter_all_bible();">所有章节</span>',
@@ -144,7 +144,7 @@ function init_bible(){
     }
 }
 
-function statistics_bible(){
+function reading_statistics_bible(){
     var blsub=parseInt(document.getElementById('select_sub').value);
     if (isNaN(blsub) || blsub<0){
         return;
@@ -458,7 +458,7 @@ function search_statistics_bible(cscolumn=-1){
     }
     fav_desc_sort_global=!fav_desc_sort_global;
     
-    var bljg='<table class="table_zebra"><tr><th style="cursor:pointer;" onclick="javascript:search_statistics_bible(0);">EN</th><th style="cursor:pointer;" onclick="javascript:search_statistics_bible(1);">CN</th><th style="cursor:pointer;" onclick="javascript:search_statistics_bible(2);">Count</th></tr>';
+    var bljg='<table class="table_zebra"><tr><th style="cursor:pointer;" onclick="javascript:search_statistics_bible(0);">EN</th><th style="cursor:pointer;" onclick="javascript:search_statistics_bible(1);">CN</th><th style="cursor:pointer;" onclick="javascript:search_statistics_bible(2);">Lines</th></tr>';
     for (let item of result_t){
         bljg=bljg+'<tr><td>'+item[0]+'</td><td>'+item[1]+'</td><td align=right>'+item[2]+'</td></tr>';
     }

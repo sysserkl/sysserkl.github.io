@@ -95,14 +95,14 @@ function en_similar_word_b(cskey,cskey_set,compared_word){
     if (compared_word==cskey || compared_word.toLowerCase()==cskey.toLowerCase()){
         return 0;
     }
+    else if (cskey_set.has(compared_word) || cskey_set.has(compared_word.toLowerCase())){
+        return 0;
+    }    
     else if (cskey==compared_word.substring(0,cskey.length) || cskey.toLowerCase()==compared_word.substring(0,cskey.length).toLowerCase()){
         return 1;
     }
     else if (cskey==compared_word.slice(-1*cskey.length,) || cskey.toLowerCase()==compared_word.slice(-1*cskey.length,).toLowerCase()){
         return 2;
-    }
-    else if (cskey_set.has(compared_word) || cskey_set.has(compared_word.toLowerCase())){
-        return 3;
     }
     else {
         for (let item of cskey_set){

@@ -2029,6 +2029,17 @@ function decode_and_create_menu_kltxt_b(){
 function args_kltxt_b(cskeys){
     for (let bltmpstr of cskeys){
         bltmpstr=bltmpstr.trim();
+        if (bltmpstr.substring(0,5)=='line='){
+            var blno_lines=bltmpstr.substring(5).split('_'); //30_20
+            if (blno_lines.length>1){
+                getlines_kltxt_b(parseInt(blno_lines[0]), parseInt(blno_lines[1]));
+            }
+            else{
+                getlines_kltxt_b(parseInt(blno_lines[0]));
+            }
+            break;
+        }
+        
         if (bltmpstr.substring(0,2)=='s='){
             var bls_reg=bltmpstr.substring(2).trim(); //河流_reg
 
@@ -2041,6 +2052,9 @@ function args_kltxt_b(cskeys){
             
             break;
         }
+
+        if (location.href.match(/\/(txtlistsearh|digest)\.htm\?/)==null){continue;}
+                
         if (bltmpstr.substring(0,3)=='sc='){
             var bls_reg=bltmpstr.substring(3).trim(); //河流_reg
             if (bls_reg.slice(-4)=='_reg'){
@@ -2072,16 +2086,6 @@ function args_kltxt_b(cskeys){
             }
             break;
         }    
-        if (bltmpstr.substring(0,5)=='line='){
-            var blno_lines=bltmpstr.substring(5).split('_'); //30_20
-            if (blno_lines.length>1){
-                getlines_kltxt_b(parseInt(blno_lines[0]), parseInt(blno_lines[1]));
-            }
-            else{
-                getlines_kltxt_b(parseInt(blno_lines[0]));
-            }
-            break;
-        }
     }
     recent_search_kltxt_b('',true);
 }
