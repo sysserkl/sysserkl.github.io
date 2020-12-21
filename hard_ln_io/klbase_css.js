@@ -1151,7 +1151,7 @@ function page_one_b(pages_count,cspageno,current_no,span_script,show_number=3,in
     }
     page_html=page_html+'<span class="'+classname+'" '+span_script+'>';
     if (current_no==cspageno){
-        page_html=page_html+'<font color='+scheme_global['a-hover']+'>'+current_no+'</font>';
+        page_html=page_html+'<font color="'+scheme_global['a-hover']+'">'+current_no+'</font>';
     }
     else {
         page_html=page_html+current_no;
@@ -1260,7 +1260,7 @@ function change_colors_b(csstr){
     if (csstr.includes('.')){
         csstr=csstr.substring(csstr.indexOf('.')+1,);
     }
-    if (csstr=='default'){
+    if (csstr=='' || csstr=='default'){
         csstr='black,white';
     }    
     var list_t=csstr.split(',');

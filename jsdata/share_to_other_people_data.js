@@ -80,4 +80,5 @@ var recent_info_list=[
 * [?Festival]
 </div>
 `],
+["?预言、预测、未来","预言、预测、未来"],
 ];

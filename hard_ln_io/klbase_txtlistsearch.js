@@ -13,7 +13,7 @@ function mobile_style_kltxt_b(){
 	var pc_t='\n<style>\n'+same_style;
 	pc_t=pc_t+'ul,ol,li{font-size:1.1rem;line-height:'+line_height_global+'%;padding:0px;}\n';
     pc_t=pc_t+'li{margin-bottom:0.5rem;}\n';
-	pc_t=pc_t+'#divhtml,#div_cn_words {font-family:Noto Sans;margin-left:'+(parseInt(document.body.clientWidth)*0.5)/2+'px; max-width:'+Math.max(700,(parseInt(document.body.clientWidth)*0.5))+'px;}\n';
+	pc_t=pc_t+'#divhtml,#div_cn_words {font-family:Noto Sans;margin-left:10%; margin-right:10%;max-width:'+Math.max(700,parseInt(document.body.clientWidth*0.5))+'px;}\n'; //margin-left:'+(parseInt(document.body.clientWidth)*0.5)/2+'px; - 保留注释
 	pc_t=pc_t+'#div_top_bottom{position:fixed; bottom:2%; right:1%; z-index:9999; padding:0; margin:0;opacity:0.7;}\n';
     pc_t=pc_t+'#divhtml p {font-size:1.1rem;margin-bottom:1rem;line-height:'+line_height_global+'%;}\n';
     pc_t=pc_t+'img {max-width:500px;}\n';
@@ -57,11 +57,16 @@ function possible_menu_kltxt_b(){
     document.getElementById('divhtml').innerHTML='<ol>'+bljg+'</ol>';
 }
 
-function change_colors_kltxt_b(csstr){
+function change_colors_kltxt_b(csstr=''){
+    if (csstr==''){
+        csstr=local_storage_get_b('theme_txtlistsearch');
+    }
     change_colors_b(csstr);
-    var ospan=document.getElementsByClassName('span_page_number');
+    localStorage.setItem('theme_txtlistsearch',csstr);
+    var ospan=document.querySelectorAll('span[class*="span_page_number"]');
     for (let item of ospan){
-        if (item.style.color==scheme_global['a-hover']){
+        var ofont=item.querySelector('font[color="'+scheme_global['a-hover']+'"]');
+        if (ofont){
             item.click();
             document.location.href="#top";
             break;
@@ -208,7 +213,7 @@ function txtmenus_kltxt_b(cstype=''){
     '<span class="span_menu" onclick="javascript:'+str_t+'select_array_kltxt_b(\'remove\');">删除符合条件的记录</span>',
     ];
     
-    document.getElementById('p_search_menu').insertAdjacentHTML('afterbegin',klmenu_b(search_list,'🔻 ','25rem')+' ');
+    document.getElementById('p_search_menu').insertAdjacentHTML('afterbegin',klmenu_b(search_list,'🔻 ','22rem','1rem','1rem')+' ');
 }
 
 function editable_kltxt_b(){
@@ -263,6 +268,7 @@ function books_current_table_kltxt_b(){
     bljg=bljg+'</p>';
     
     document.getElementById('divhtml2').innerHTML=bljg;
+    fix_divhtml2(false);
     location.href="#divhtml2";
 }
 
@@ -1643,7 +1649,7 @@ function format_lines_kltxt_b(cslist,csstyle='',csaname=-1){
             blstr=sub_format_lines_kltxt_b_bible(blstr);
         }
         else if (is_digest===false && csxl<100 && blstr.length<50){
-            menu_t=' <span class="txtsearch_kltxt_lineno" style="cursor:pointer;" onclick=\'javascript:search_next_kltxt_b('+csxl+',"'+blstr+'");\'>⇓</span>';
+            menu_t=' <span class="txtsearch_kltxt_lineno" style="cursor:pointer;'+(cshidelineno?'display:none;':'')+'" onclick=\'javascript:search_next_kltxt_b('+csxl+',"'+blstr+'");\'>⇓</span>';
         }
         
         if (csklwiki_format && blstr.match(/<jsdocimg>(.*?)<\/jsdocimg>/)!==null){
@@ -1653,14 +1659,14 @@ function format_lines_kltxt_b(cslist,csstyle='',csaname=-1){
         if (isbold){
             blstr='<big><strong>'+blstr+'</strong></big>';
         }
-        if (cshidelineno){
-            return blstr;
-        }
-        else {
-            blstr=blstr+' <span class="txtsearch_kltxt_lineno" style="cursor:pointer;font-style: italic;" onclick="javascript:getlines_kltxt_b('+(csxl+1)+')">('+(csxl+1)+')</span>';
+        //if (cshidelineno){
+           // return blstr;
+        //}
+        //else {
+            blstr=blstr+' <span class="txtsearch_kltxt_lineno" style="cursor:pointer;font-style: italic;'+(cshidelineno?'display:none;':'')+'" onclick="javascript:getlines_kltxt_b('+(csxl+1)+')">('+(csxl+1)+')</span>';
             blstr=blstr+menu_t;
             return blstr;
-        }
+        //}
     }
 
     //---------
@@ -2053,7 +2059,7 @@ function args_kltxt_b(cskeys){
             break;
         }
 
-        if (location.href.match(/\/(txtlistsearh|digest)\.htm\?/)==null){continue;}
+        if (location.href.match(/\/(txtlistsearch|digest)\.htm\?/)==null){continue;}
                 
         if (bltmpstr.substring(0,3)=='sc='){
             var bls_reg=bltmpstr.substring(3).trim(); //河流_reg
@@ -2241,9 +2247,9 @@ function digest_show_kltxt_b(){
 
     digest_list=[].concat(digest_global);
     for (let blno=0;blno<digest_len;blno++){
-        if (digest_list[blno].substring(0,1)=='#'){
+        if (digest_list[blno].substring(0,1)=='#' && digest_list[blno].slice(-1)!=='#'){
             digest_list[blno]='';   //忽略开头为 # 的 摘要 - 保留注释
-        }       
+        } 
     }
     
     for (let blxl=0;blxl<list_t.length;blxl++){
@@ -2290,26 +2296,60 @@ function digest_temp_load_kltxt_b(){
     digest_enwords_get_book_b();    //添加英语单词 - 保留注释
 }
 
+function fix_divhtml2(do_fix=true,ospan=false){
+    var otemp=document.getElementById('div_temp_space');
+    if (otemp){
+        otemp.parentNode.removeChild(otemp);
+    }
+    var odiv=document.getElementById('divhtml2');
+    if (do_fix){
+        var rect =odiv.getBoundingClientRect();
+        odiv.insertAdjacentHTML('afterend','<div id="div_temp_space" style="height:'+rect.height+'px;"></div>');
+        if (ismobile_b()){
+            var blmargin='width:100%;';
+        }
+        else {
+            var blmargin='margin-left:10%;margin-right:10%;max-width:'+Math.max(700,parseInt(document.body.clientWidth*0.5))+'px;';
+        }
+        odiv.style.cssText='position:fixed;bottom:0;'+blmargin+'padding:0.1rem;height:auto;background-color:'+scheme_global['background']+';border-top:0.2rem solid '+scheme_global['shadow']+';';    
+    }
+    else {
+        odiv.style.cssText='';
+        odiv.scrollIntoView();
+    }
+    if (ospan){
+        ospan.innerText=(ospan.innerText=='固定'?'不固定':'固定');
+    }
+
+    var op=document.getElementById('p_temp_digest_bottom_buttons');
+    if (op){
+        op.style.display=(do_fix?'none':'');
+    }    
+}
+
 function digest_temp_add_kltxt_b(){
     var list_t=local_storage_get_b('digest_temp_txtlistsearch',-1,true);
     var postpath=postpath_b();
 	var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php" name="form_digest_textarea" target=_blank style="margin-left:0.5rem;">\n';
-    bljg=bljg+'<p id="p_digest_button" style="line-height:2.5rem;">';
-    bljg=bljg+textarea_buttons_b('textarea_digest_txtlistsearch','清空');
-    bljg=bljg+'<span class="aclick" onclick="javascript:digest_temp_update_kltxt_b();">添加临时摘要</span> ';
-    bljg=bljg+'<span class="aclick" onclick="javascript:digest_temp_jump_to_line_kltxt_b();">回到阅读位置</span>';
+    bljg=bljg+'<p id="p_digest_button" style="font-size:0.9rem;line-height:1rem;">';
+    bljg=bljg+textarea_buttons_b('textarea_digest_txtlistsearch','清空','','','oblong_box');
+    bljg=bljg+'<span class="oblong_box" onclick="javascript:digest_temp_update_kltxt_b();">添加临时摘要</span> ';
+    bljg=bljg+'<span class="oblong_box" onclick="javascript:digest_temp_jump_to_line_kltxt_b();">返回阅读</span> ';
+    bljg=bljg+'<span class="oblong_box" onclick="javascript:fix_divhtml2(this.innerText==\'固定\',this);">固定</span> '; 
     bljg=bljg+'</p>';
-    bljg=bljg+'<textarea name="textarea_digest_txtlistsearch" id="textarea_digest_txtlistsearch" style="height:15rem;">';
+    bljg=bljg+'<textarea name="textarea_digest_txtlistsearch" id="textarea_digest_txtlistsearch" style="height:4rem;">';
     for (let item of list_t){
         bljg=bljg+'\n';
     }
     bljg=bljg+'</textarea>';
-    bljg=bljg+'<p>';
-    bljg=bljg+'<span class="aclick" onclick="javascript:document.getElementById(\'divhtml2\').innerHTML=\'\';">关闭</span> ';         
-    bljg=bljg+textarea_buttons_b('textarea_digest_txtlistsearch','全选,复制,发送到临时记事本,发送地址')+' 行数：'+list_t.length+' <span id="span_digest_temp_status"></span></p>';    
+    bljg=bljg+'<p id="p_temp_digest_bottom_buttons" style="font-size:0.9rem;line-height:1.5rem;margin-top:0.2rem;">';
+    bljg=bljg+'<span class="oblong_box" onclick="javascript:document.getElementById(\'divhtml2\').innerHTML=\'\';">关闭</span> ';       
+    bljg=bljg+textarea_buttons_b('textarea_digest_txtlistsearch','全选,复制,发送到临时记事本,发送地址','','','oblong_box')+' 行数：'+list_t.length+' <span id="span_digest_temp_status"></span></p>';    
     bljg=bljg+'</form>\n';
-    document.getElementById('divhtml2').innerHTML=bljg;
-    
+    var odiv=document.getElementById('divhtml2');
+    odiv.innerHTML=bljg;
+    mouseover_mouseout_oblong_span_b(odiv.querySelectorAll('span.oblong_box'));
+
     var str_t=klmenu_hide_b('');
     var digest_menu=[
     '<span class="span_menu" onclick="javascript:'+str_t+'digest_temp_show_kltxt_b();">显示当前书籍临时摘要</span>',
@@ -2317,7 +2357,7 @@ function digest_temp_add_kltxt_b(){
     '<span class="span_menu" onclick="javascript:'+str_t+'digest_temp_delete_kltxt_b(true);">清除当前书籍所有临时摘要</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'digest_temp_delete_kltxt_b();">清除当前书籍最新添加的一条临时摘要</span>',
     ];
-    document.getElementById('p_digest_button').insertAdjacentHTML('afterbegin',klmenu_b(digest_menu,'🔻','19rem','','1rem')+' ');
+    document.getElementById('p_digest_button').insertAdjacentHTML('afterbegin',klmenu_b(digest_menu,'🔻','21rem','0.8rem','0.9rem')+' ');
     
     location.href="#divhtml2";
 }
@@ -2356,6 +2396,7 @@ function digest_excluded_kltxt_b(){
         }
         if (blfound===false){
             excluded_list.push(item);
+            if (excluded_list.length>=500){break;}
         }
     }
     
@@ -2371,7 +2412,7 @@ function digest_excluded_kltxt_b(){
             blstr=item;
         }
     }
-    document.getElementById('divhtml').innerHTML='<h4>未包含的摘要</h4>'+array_2_li_b(excluded_list,'li','ol')+'<h4>重复的摘要</h4>'+array_2_li_b(Array.from(duplication),'li','ol');
+    document.getElementById('divhtml').innerHTML='<h4>未包含的摘要</h4>'+array_2_li_b(excluded_list,'li','ol')+(excluded_list.length>=500?'<p>超长省略...</p>':'')+'<h4>重复的摘要</h4>'+array_2_li_b(Array.from(duplication),'li','ol');
 }
 
 function digest_temp_show_kltxt_b(is_all=false){
