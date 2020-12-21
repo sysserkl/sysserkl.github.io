@@ -1,5 +1,9 @@
 //单词库
 var enwords=[
+["optimize", "UK ['ɒptɪmaɪz] US ['ɑːptɪˌmaɪz] [ˈɑːp.tə.maɪz]", "v. 使最优化；使优化；使完善；充分利用；to make something as good as it can be; to use something in the best possible way; to change data, software, etc. in order to make it work more efficiently or to make it suitable for a particular purpose; to make as perfect, effective, or functional as possible; to take the full advantage of; to plan or carry out (an economic activity) with maximum efficiency; to find the best compromise among several often conflicting requirements, as in engineering design; v. 持乐观态度；to be optimistic; to be given to optimism"],
+["airspeed", "UK ['eəˌspiːd] US ['erˌspiːd]", "n. 对气速度；空速；the speed of an aircraft relative to the air through which it is moving; the speed (as of an airplane) with relation to the air"],
+["airflow", "UK ['eəˌfləʊ] US ['erˌfloʊ]", "n. 空气的气流；（运行中的飞机或汽车周围的）气流；the flow of air, especially around a moving aircraft or vehicle; a flow of air, especially: the motion of air (as around parts of an airplane in flight) relative to the surface of a body immersed in it"],
+["Sharon", "UK [ˈʃærən] [ʃəˈrɒn] US [ˈʃɛrən]", "n. 莎伦（女子名）；a feminine name; n. 沙龙 [ʃəˈrɒn]: (Biography) Ariel (ˈærɪəl). 1928–2014, Israeli soldier and politician; Likud prime minister (2001–06); n. [ˈʃærən] [ˈʃɛrən]: (Placename) Plain of Sharon: a plain in W Israel, between the Mediterranean and the hills of Samaria, extending from Haifa to Tel Aviv"],
 ["colourless", "['kʌlə(r)ləs] [ˈkʌləlɪs]", "adj. 无色的；水白的；苍白的；无趣的；枯燥的；不生动的；中立的；无偏见的；=colorless(美)；without colour or very pale; grey or pallid in tone or hue; (of a liquid) water white; not interesting; lacking in interest or variety; without prejudice; neutral"],
 ["marketable", "UK [ˈmɑ:(r)kɪtəb(ə)l] US [ˈmɑ:(r)kɪtəb(ə)l] [ˈmɑrkədəb(ə)l]", "adj. 市场的；市场买卖的；可销售的；有销路的；畅销的；easy to sell; attractive to customers or employers; fit to be offered for sale in a market; wanted by purchasers or employers: salable; saleable (of goods) or employable (of people); of or relating to buying or selling on a market; being in good demand"],
 ["saleable", "['seɪləb(ə)l]", "adj. 适销的；有销路的；畅销的；=salable；capable of being or fit to be sold: marketable; good enough to be sold; that somebody will want to buy; easy to sell or suitable for selling; readily sold"],
@@ -4384,7 +4388,7 @@ var enwords=[
 ["home", "[həʊm]", "n. 家；家庭；发源地；栖息地；收容所；adv. 在家；回家；在国内；回国；正中目标；adj. 家用的；国内的；总部的；（比赛）主场的；v. 提供住处；朝向"],
 ["homeland", "['həʊmlænd]", "n. 祖国"],
 ["homelessness", "['həʊmləsnəs]", "n. 无家可归；the state of having no home; the state of being without a home"],
-["homeless", "UK ['həʊmləs] US ['hoʊmləs]", "adj. 无家可归的"],
+["homeless", "['həʊmləs]", "adj. 无家可归的"],
 ["homemade", "['həʊm'meɪd]", "adj. 自制的；国产的"],
 ["homemaker", "['həʊmmeɪkə(r)]", "n. 主妇；操持家务者"],
 ["homeowner", "['həʊməʊnə(r)]", "n. 房主；a person who owns their house or flat/apartment"],
@@ -9535,7 +9539,7 @@ var enwords=[
 ["unpaid", "[ˌʌn'peɪd]", "adj. 未付款的；没有报酬的"],
 ["unparalleled", "[ʌn'pærəleld]", "adj. 无比的；无双的；空前的"],
 ["unpardonable", "[ʌn'pɑː(r)d(ə)nəb(ə)l]", "adj. 不可原谅的；不可宽恕的；不可饶恕的；that cannot be forgiven or excused; (of behaviour) too bad to forgive or be accepted; too bad to be pardoned or forgiven; not pardonable; unforgivable"],
-["unperfect", "['ʌn'pɜːfɪkt]", "adj. 不完全的；不完整的；不完善的；有缺陷的；lacking in some quality, attribute, or part necessary for full, efficient, and successful operation or action, or adequacy for the intended purpose; incomplete, defective, or flawed in some way; imperfect; (of a person): not thoroughly accomplished or practised in a skill or pursuit; inexpert, unskilled; v. 破坏或摧毁 ... 的完美；to mar or destroy the perfection of"],
+["unperfect", "[(ˌ)ʌnˈpəːfɪkt]", "adj. 不完全的；不完整的；不完善的；有缺陷的；lacking in some quality, attribute, or part necessary for full, efficient, and successful operation or action, or adequacy for the intended purpose; incomplete, defective, or flawed in some way; imperfect; (of a person): not thoroughly accomplished or practised in a skill or pursuit; inexpert, unskilled; v. 破坏或摧毁 ... 的完美；to mar or destroy the perfection of"],
 ["unplayable", "[ˌʌn'pleɪəbl]", "adj. （乐曲）无法演奏的；（球）接不住的；（高尔夫球，板球等）无法击出的；（运动场）不能用于比赛的；无法击败的；not able to be played; impossible to play on or with; (of a sportsperson or team) playing so well that it is impossible to beat them"],
 ["unpleasant", "[ʌn'plez(ə)nt]", "adj. 令人不快的；不友好的；不客气的；不和蔼的；不合意的；不舒服的；讨厌的；粗鲁的；not pleasant or comfortable; not kind, friendly or polite; rude and angry; not attractive or enjoyable or easy to like"],
 ["unpolluted", "[ˌʌnpə'luːtɪd]", "adj. 未受污染的；清洁的"],

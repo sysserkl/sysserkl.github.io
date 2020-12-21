@@ -386,4 +386,5 @@ var digest_global=`
 *Hebron
 *unsearchable
 *forbad
+*Sharon
 `.trim().split('\n');
