@@ -2240,10 +2240,10 @@ function digest_show_kltxt_b(){
     if (oinput.checked==false){return;}    
     var t0 = performance.now();
     var ospans=document.querySelectorAll('div#divhtml span.txt_content');
-    var list_t=[];
-    for (let one_span of ospans){
-        list_t.push(one_span.innerText);
-    }
+    //var list_t=[];
+    //for (let one_span of ospans){
+        //list_t.push(one_span.innerText);
+    //}
 
     digest_list=[].concat(digest_global);
     for (let blno=0;blno<digest_len;blno++){
@@ -2252,20 +2252,38 @@ function digest_show_kltxt_b(){
         } 
     }
     
-    for (let blxl=0;blxl<list_t.length;blxl++){
+    var line_no_list=[];    
+    for (let blxl=0;blxl<ospans.length;blxl++){
+        line_no_list.push('');
+        var oldtxt=ospans[blxl].innerText;
         var oldhtml=ospans[blxl].innerHTML;
         var newhtml=oldhtml;
         for (let blno=0;blno<digest_len;blno++){
             var one_digest=digest_list[blno];
-            if (!newhtml.includes(one_digest) || one_digest==''){
-                continue;
+            var is_whole_line=false;
+            if (one_digest==''){continue;}
+            if (!newhtml.includes(one_digest)){
+                if (one_digest.substring(0,1)!=='#' || one_digest.slice(-1)!=='#'){continue;}
+                if (line_no_list[blxl]==''){
+                    var oline_no=ospans[blxl].parentNode.querySelector('span.txtsearch_kltxt_lineno');
+                    if (!oline_no){continue;}
+                    line_no_list[blxl]=(parseInt(oline_no.innerText.slice(1,-1))-1).toString();
+                }
+                if (line_no_list[blxl]!==one_digest.slice(1,-1)){
+                    continue;
+                }
+                else {
+                    one_digest=oldtxt;
+                    is_whole_line=true;
+                }
             }
          
             newhtml=newhtml.replace(one_digest,'<span style="font-weight:bold;border-bottom:0.15rem solid '+scheme_global['pink']+';">'+one_digest+'</span>');
             digest_list[blno]='';
+            if (is_whole_line){break;}
         }
         ospans[blxl].innerHTML=newhtml;
-        if (ospans[blxl].innerText!==list_t[blxl]){
+        if (ospans[blxl].innerText!==oldtxt){//list_t[blxl]){
             ospans[blxl].innerHTML=oldhtml;
             ospans[blxl].insertAdjacentHTML('afterend','💡');
         }
