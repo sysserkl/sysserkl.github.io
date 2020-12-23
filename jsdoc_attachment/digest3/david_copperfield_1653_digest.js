@@ -6,8 +6,10 @@ var digest_global=`
 *adore
 *alehouse
 *assure
+*cutlet
 *asthma
 *asthmatic
+*ripen
 *ballad
 *bareheaded
 *barmaid
@@ -107,4 +109,5 @@ var digest_global=`
 *wintry
 *workhouse
 *Copperfield
+*great-grandfather
 `.trim().split('\n');

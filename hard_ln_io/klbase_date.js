@@ -190,16 +190,16 @@ function year365_b(csyear=0,returndate=false){
     return blresult;
 }
 
-function validdate_b(datestr,first_day_of_month=false){
+function validdate_b(datestr,first_day_of_month=false,ismonth_day=false){
     if (Object.prototype.toString.call(datestr) === "[object Date]" && !isNaN(datestr)){
         var theday2 = new Date(datestr.getTime()); //deepcopy - 保留注释
         return theday2;
     }
     
-	if (datestr.length==8 && !datestr.includes('-')){
-		datestr=datestr.slice(0,4)+'-'+datestr.slice(4,6)+'-'+datestr.slice(-2);
+	if (datestr.length==8 && !datestr.includes('-')){   //年月日 - 保留注释
+		datestr=datestr.slice(0,4)+'-'+datestr.slice(4,6)+'-'+datestr.slice(-2,);
 	}
-    else if (datestr.length==6 && !datestr.includes('-')){
+    else if (datestr.length==6 && !datestr.includes('-')){  //年月 - 保留注释
         var blyear=datestr.slice(0,4);
         var blmonth=datestr.slice(4,6);
         if (first_day_of_month){
@@ -209,15 +209,23 @@ function validdate_b(datestr,first_day_of_month=false){
             datestr=blyear+'-'+blmonth+'-'+month_day_b(parseInt(blmonth),parseInt(blyear));
         }
     }
-    else if (datestr.length==7){
+    else if (datestr.length==7){    //年-月 - 保留注释
         var blyear=datestr.slice(0,4);
-        var blmonth=datestr.slice(-2);
+        var blmonth=datestr.slice(-2,);
         if (first_day_of_month){
             datestr=blyear+'-'+blmonth+'-01';
         }
         else {
             datestr=blyear+'-'+blmonth+'-'+month_day_b(parseInt(blmonth),parseInt(blyear));
         }
+    }
+    else if (ismonth_day){
+        var blyear=new Date().getFullYear();
+        if (datestr.length==4 || datestr.length==5){    //月日，月-日 - 保留注释
+            var blmonth=datestr.slice(0,2);
+            var blday=datestr.slice(-2,);
+            datestr=blyear+'-'+blmonth+'-'+blday;
+        }        
     }
     
 	var datetmp=new Date(datestr);

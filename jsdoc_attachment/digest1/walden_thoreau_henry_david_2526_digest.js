@@ -4,4 +4,5 @@ var digest_global=`
 *panacea
 *radii
 *salable
+*foxhound
 `.trim().split('\n');

@@ -4,4 +4,5 @@ var digest_global=`
 *weeknight
 *claustrophobia
 *suppertime
+*pneumonia
 `.trim().split('\n');

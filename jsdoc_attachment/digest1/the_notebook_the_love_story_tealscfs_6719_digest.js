@@ -1,5 +1,3 @@
 var digest_global=`
-*Celtic
-*icebound
-*beehive
+*lunchtime
 `.trim().split('\n');

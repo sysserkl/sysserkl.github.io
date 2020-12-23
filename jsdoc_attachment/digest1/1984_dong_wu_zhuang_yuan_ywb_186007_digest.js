@@ -17,7 +17,6 @@ var digest_global=`
 *empirical
 *enumerate
 *farmhouse
-*foxhound
 *goatee
 *great-grandmother
 *gymnasium

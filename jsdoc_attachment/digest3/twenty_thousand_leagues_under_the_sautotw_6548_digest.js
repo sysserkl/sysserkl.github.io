@@ -87,7 +87,6 @@ var digest_global=`
 *cream
 *crewman
 *crustacean
-*cutlet
 *cylindrical
 *daddy longlegs
 *Danube
@@ -229,7 +228,6 @@ var digest_global=`
 *kilogram
 *knob
 *lagoon
-*landslide
 *larder
 *leaflike
 *legislator
@@ -295,7 +293,6 @@ var digest_global=`
 *on this score
 *orbital
 *otherworldly
-*outdistance
 *outflow
 *outline
 *outskirt
@@ -304,11 +301,9 @@ var digest_global=`
 *panama
 *pandora
 *patriotic
-*paw
 *peacock
 *pearly
 *penguin
-*petal
 *petrel
 *phenomenon
 *physicist
@@ -354,7 +349,6 @@ var digest_global=`
 *repay
 *reread
 *Rhine
-*ripen
 *roast
 *rotational
 *ruin

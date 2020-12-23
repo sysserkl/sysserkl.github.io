@@ -16,4 +16,5 @@ var digest_global=`
 *self-devotion
 *tableful
 *scepticism
+*blacken
 `.trim().split('\n');

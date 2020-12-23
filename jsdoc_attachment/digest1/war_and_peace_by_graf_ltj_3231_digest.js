@@ -10,6 +10,7 @@ var digest_global=`
 *Baltic
 *baptismal
 *beardless
+*petal
 *bedclothes
 *blockhead
 *Bolshevism
@@ -45,7 +46,6 @@ var digest_global=`
 *feminine
 *firelight
 *flew
-*flowerpot
 *foreleg
 *formless
 *fourteenth

@@ -147,8 +147,24 @@ function import_book_js_b(import_digest=true){
     }
 }
 
-function digest_enwords_get_book_b(){
+function digest_enwords_get_book_b(){   //digest_import_enwords - 保留注释
     var t0 = performance.now();
+    var csstr=local_storage_get_b('txt_englishwords_excluded');
+    var excluded_words=csstr.split('\n');
+    var enwords_changed=false;
+    if (csstr.includes(csbookname_global+' /// ')){
+        var result_t=[];
+        for (let item of excluded_words){
+            if (item.indexOf(csbookname_global+' /// ')==0){
+                enwords_changed=true;
+                continue;
+            }
+            result_t.push(item);
+        }
+        excluded_words=result_t;
+    }
+    
+    //----
     var new_list=[];
     var menu_list=new Set();    //如果使用 list 则极慢 - 保留注释
     if (typeof kltxt_menulist_index_global == 'object' && Array.isArray(kltxt_menulist_index_global)){
@@ -190,7 +206,12 @@ function digest_enwords_get_book_b(){
         }
         if (blfound===false){
             filelist.push('* '+blleft+blword+blright+sup_kleng_style_b()+blword+'</sup>');  //如果未发现单词，则添加到 filelist 末尾 - 保留注释
+            excluded_words.push(csbookname_global+' /// '+blword);
+            enwords_changed=true;
         }
+    }
+    if (enwords_changed){
+        localStorage.setItem('txt_englishwords_excluded',excluded_words.join('\n'));
     }
     digest_global=new_list;
     console.log('digest_enwords_get_book_b() 费时：'+(performance.now() - t0) + " milliseconds");

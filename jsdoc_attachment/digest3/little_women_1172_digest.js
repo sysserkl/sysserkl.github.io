@@ -10,6 +10,7 @@ var digest_global=`
 *forgivable
 *Frankfurt
 *garland
+*flowerpot
 *greatcoat
 *hairdresser
 *homelike

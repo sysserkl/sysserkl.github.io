@@ -12,7 +12,6 @@ var digest_global=`
 *Eiffel
 *enroll
 *Goethe
-*great-grandfather
 *gymnastic
 *hungrily
 *Huron

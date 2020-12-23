@@ -34,7 +34,11 @@ function args_enbook(){
                 get_new_words_arr_enbook(2);
                 books_b(true,'eng','englishwords');
                 break;
-            } 
+            }
+            else if (bltmpstr=='excluded'){
+                exclude_words_enbook();
+                break;
+            }            
         }
     }
     else {
@@ -658,6 +662,38 @@ function import_words_enbook(cstype){
     }
 }
 
+function exclude_words_enbook(){
+    var list_t=local_storage_get_b('txt_englishwords_excluded',-1,true);
+    var bookname='';
+    var bljg='';
+    var bltotal=0;
+    var blno=0;
+    var bookno=0;
+    var blwords='';
+    for (let blxl=0;blxl<list_t.length;blxl++){
+        var item=list_t[blxl].split(' /// ');
+        if (item.length<2){continue;}
+        if (bookname!==item[0]){
+            bookno=bookno+1;
+            bljg=bljg+'<p>'+blwords+'</p>';
+            blwords='';
+            bljg=bljg+'<h3>'+bookno+'. <a href="PythonTools/data/selenium_news/html/txtlistsearch.htm?'+encodeURIComponent(item[0]+'&s='+item[1])+'" target=_blank>'+item[0]+'</a></h3>';
+            bookname=item[0];
+            blno=0;
+        }
+        blno=blno+1;
+        bltotal=bltotal+1;
+        blwords=blwords+blno+'. <a href="englishwords_book_search.php?s='+encodeURIComponent(item[1])+'" target=_blank>'+item[1]+'</a> ';
+    }
+    if (blwords!==''){
+        bljg=bljg+'<p>'+blwords+'</p>';
+    }
+    bljg=bljg+'<p style="margin-top:1rem;"><a class="aclick" href="PythonTools/data/selenium_news/html/txtlistsearch.htm?_tagenglishwords&sc=batch_refresh_'+Math.round((Math.random()*99999))+'" target=_blank>批量刷新</a> 全部：'+bltotal+'</p>';
+    var odiv=document.getElementById('divhtml2');
+    odiv.innerHTML=bljg;
+    odiv.scrollIntoView();
+}
+
 function menu_enbook(){
     var str_t=klmenu_hide_b('#top');
     var klmenu1=[
@@ -667,7 +703,8 @@ function menu_enbook(){
     '<span class="span_menu" onclick="javascript:'+str_t+'compare_form_statistics_enbook();">比较统计数据</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'import_words_enbook(\'new\');">导入KLWiki全部新单词</span>',    
     '<span class="span_menu" onclick="javascript:'+str_t+'import_words_enbook(\'sentence\');">导入全部例句</span>',
-    '<span class="span_menu" onclick="javascript:'+str_t+'import_words_enbook(\'old\');">导入全部旧单词</span>',        
+    '<span class="span_menu" onclick="javascript:'+str_t+'import_words_enbook(\'old\');">导入全部旧单词</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'exclude_words_enbook();">电子书中未包含的旧单词</span>',    
     ];
 
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_b(klmenu1,'','14rem','1rem','1rem','60rem')+' ');

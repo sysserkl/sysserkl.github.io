@@ -3,4 +3,7 @@ var digest_global=`
 *loveliness
 *malt
 *marketable
+*betoken
+*heedful
+*unheedful
 `.trim().split('\n');

@@ -17,7 +17,6 @@ var digest_global=`
 *battleship
 *beardless
 *belly
-*betoken
 *blindly
 *bloodthirsty
 *boundary

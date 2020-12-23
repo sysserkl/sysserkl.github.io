@@ -31,7 +31,6 @@ var digest_global=`
 *behold
 *bend
 *birthplace
-*blacken
 *blackish
 *blade
 *blockhouse

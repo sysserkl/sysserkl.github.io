@@ -5,7 +5,6 @@ var digest_global=`
 *authoress
 *ballet
 *ballroom
-*beehive
 *bodyguard
 *buckwheat
 *Bulgarian
