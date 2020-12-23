@@ -59,6 +59,7 @@ var search_sites_list_global=[
 ['http://book.douban.com/subject_search?search_text=','',0,'','豆瓣读书','0','Shopping',''],
 ['http://searchb.dangdang.com/?key=','',4,'','当当','','Shopping',''],
 ['http://search.suning.com/emall/search.do?keyword=','',0,'','苏宁','','Shopping',''],
+['https://www.gutenberg.org/ebooks/search/?query=','&sort_order=downloads',1,'','Gutenberg','','Shopping',''],
 
 ['https://map.baidu.com/m?word=','',0,'','百度地图','','Map',''],
 ['https://ditu.amap.com/search?query=','',0,'','高德','','Map',''],

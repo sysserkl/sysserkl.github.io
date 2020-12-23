@@ -141,4 +141,6 @@ var digest_global=`
 *mentally
 *obstacle
 *purchaser
+*forefather
+*forebear
 `.trim().split('\n');

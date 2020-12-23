@@ -1059,6 +1059,7 @@ function bookmarks_read_kltxt_b(current_book_today_bookmark_only_one=false,retur
 
 function bookmarks_get_kltxt_b(current_book_today_bookmark_only_one=false,return_full=true){
     //格式：书编号&开始行号&每页行数&filelist元素个数&日期时间 - 保留注释
+    fix_divhtml2(false);
     var current_book_today_bookmark_count=0;
     var bookmark_list=[];
     
@@ -1152,14 +1153,16 @@ function bookmarks_get_kltxt_b(current_book_today_bookmark_only_one=false,return
         bljg=bljg+'<p><span class="aclick" onclick="javascript:bookmarks_get_kltxt_b(true);">当前书籍今日书签仅留最新一个</span></p>';
     }
     bljg=bljg+'</form>\n';
+    var current_book_percent=[];
     if (return_full){
-        var current_book_percent=[];
         for (let item of bookmark_list){
             if (item[1]!==csbookname_global){continue;}
             current_book_percent.push([new Date(item[5].split(' ')[0]),item[2]*100/item[4]]);
         }
         current_book_percent.sort(function (a,b){return a[0]>b[0];});
-        bljg=bljg+'<div id="div_flot_bookmark" style="width=100%;height:35rem;"></div>';
+        if (current_book_percent.length>0){
+            bljg=bljg+'<div id="div_flot_bookmark" style="width=100%;height:35rem;"></div>';
+        }
     }
     document.getElementById('divhtml').innerHTML='';
     var table_th='<tr><th>No.</th><th>书名</th><th nowrap>当前行号 / 总行数 / 完成%</th><th>Δ</th><th nowrap>'+theyear+' / '+(theyear+1)+' / '+(theyear+2)+'年年底<br />完成每日需阅读行数</th><th>添加日期</th></tr>';
@@ -1176,7 +1179,7 @@ function bookmarks_get_kltxt_b(current_book_today_bookmark_only_one=false,return
     table_sum=table_sum+'<th></th></tr>';
     
     document.getElementById('divhtml2').innerHTML='<section style="overflow:auto;"><table id="table_bookmarks" class="table_common" cellpadding=0 cellspacing=0 style="font-size:0.85rem;margin-left:0.5rem;" width=100%>'+table_th+array_2_li_b(result_t,'tr',false)+table_sum+'</table></section><br />'+bljg;
-    if (return_full){
+    if (return_full && current_book_percent.length>0 && csbooklist_sub_global_b.length>0){
         flot_lines_k([['《'+csbooklist_sub_global_b[csbookno_global_b][1]+'》阅读进度'].concat(current_book_percent)],'div_flot_bookmark','nw',true,'','d','%',-1,[],-1,0,100);
     }
     var otds=document.querySelectorAll('table#table_bookmarks td.td_bookmark_datetime');
@@ -1586,6 +1589,7 @@ function highheight_kltxt_b(cswordlist){
             }
             one_dom.innerHTML=new_html;
             if (one_dom.innerText!==old_text){
+                console.log(one_dom.innerText,old_text);
                 one_dom.innerHTML=old_html;
             }
         }
@@ -2343,17 +2347,23 @@ function fix_divhtml2(do_fix=true,ospan=false){
     if (op){
         op.style.display=(do_fix?'none':'');
     }    
+    var omenu=document.getElementById('menu_temp_digest');
+    if (omenu){
+        omenu.style.display=(do_fix?'none':'');
+    }    
 }
 
 function digest_temp_add_kltxt_b(){
+    fix_divhtml2(false);
     var list_t=local_storage_get_b('digest_temp_txtlistsearch',-1,true);
     var postpath=postpath_b();
 	var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php" name="form_digest_textarea" target=_blank style="margin-left:0.5rem;">\n';
-    bljg=bljg+'<p id="p_digest_button" style="font-size:0.9rem;line-height:1rem;">';
+    bljg=bljg+'<p id="p_digest_button" style="font-size:0.9rem;line-height:1.5rem;margin-top:0.2rem;">';
     bljg=bljg+textarea_buttons_b('textarea_digest_txtlistsearch','清空','','','oblong_box');
-    bljg=bljg+'<span class="oblong_box" onclick="javascript:digest_temp_update_kltxt_b();">添加临时摘要</span> ';
+    bljg=bljg+'<span class="oblong_box" onclick="javascript:digest_temp_update_kltxt_b();">➕临时摘要</span> ';
     bljg=bljg+'<span class="oblong_box" onclick="javascript:digest_temp_jump_to_line_kltxt_b();">返回阅读</span> ';
     bljg=bljg+'<span class="oblong_box" onclick="javascript:fix_divhtml2(this.innerText==\'固定\',this);">固定</span> '; 
+    bljg=bljg+'<span id="span_current_book_temp_digest_count"></span>';     
     bljg=bljg+'</p>';
     bljg=bljg+'<textarea name="textarea_digest_txtlistsearch" id="textarea_digest_txtlistsearch" style="height:4rem;">';
     for (let item of list_t){
@@ -2375,7 +2385,7 @@ function digest_temp_add_kltxt_b(){
     '<span class="span_menu" onclick="javascript:'+str_t+'digest_temp_delete_kltxt_b(true);">清除当前书籍所有临时摘要</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'digest_temp_delete_kltxt_b();">清除当前书籍最新添加的一条临时摘要</span>',
     ];
-    document.getElementById('p_digest_button').insertAdjacentHTML('afterbegin',klmenu_b(digest_menu,'🔻','21rem','0.8rem','0.9rem')+' ');
+    document.getElementById('p_digest_button').insertAdjacentHTML('afterbegin',klmenu_b(digest_menu,'🔻','21rem','0.8rem','0.9rem','','','menu_temp_digest')+' ');
     
     location.href="#divhtml2";
 }
@@ -2526,6 +2536,15 @@ function digest_temp_update_kltxt_b(){
     if (blxl>0){
         localStorage.setItem('digest_temp_txtlistsearch',digest_list.join('\n'));
         document.getElementById('span_digest_temp_status').innerHTML='<span style="background-color:'+rndcolor_b()+';border-radius:1rem;padding-right:1rem;">&nbsp;</span> <font color="'+scheme_global['a']+'"><b>'+now_time_str_b()+'</b></font> 添加了<font color="'+scheme_global['a-hover']+'"><b>'+blxl+'</b></font>条临时摘要('+specialstr92_b(last_row.substring(0,20))+'...)';
+        
+        digest_list=local_storage_get_b('digest_temp_txtlistsearch',-1,true);
+        var blno=0;
+        for (let one_row of digest_list){
+            if (one_row.indexOf(csbookname_global+':')==0){
+                blno=blno+1;
+            }        
+        }
+        document.getElementById('span_current_book_temp_digest_count').innerHTML='('+blno+')';
     }
 }
 

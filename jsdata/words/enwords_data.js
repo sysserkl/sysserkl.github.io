@@ -1,5 +1,9 @@
 //单词库
 var enwords=[
+["forefather", "['fɔː(r)fɑːðə(r)] UK", "n. 〈正式〉祖先；先辈；a person (especially a man) in your family who lived a long time ago; an ancestor, esp a male; one from whom a person is descended and who is usually more remote in the line of descent than a grandparent; a person of an earlier period and common heritage"],
+["forebear", "UK ['fɔː(r)beə(r)] US ['fɔːrˌber]", "n. 祖先；祖宗；=forbear；a person in your family who lived a long time ago; ancestor, forefather, also: precursor —usually used in plural; a relative who lived in the past"],
+["claustrophobia", "UK [ˌklɔːstrə'fəʊbiə] [ˌklɒstrəˈfəʊbiə] US [ˌklɔstrə'foʊbiə] [ˌklɑːstrəˈfoʊ.biə]", "n. 幽闭恐怖（症）；幽闭恐惧症；因受限制而产生的不适感；an extreme fear of being shut in a small place; fear of being in closed spaces; an extreme fear of being in an enclosed or crowded space; the unpleasant feeling that a person gets in a situation that limits them; abnormal dread of being in closed or narrow spaces; a feeling of discomfort or discontent caused by being in a limiting or restrictive situation or environment"],
+["suppertime", "['sʌpə(r)ˌtaɪm]", "n. 晚饭时间；晚餐时间；the time at which it is customary to eat supper; the time in the evening when people have a meal; "],
 ["bystander", "['baɪˌstændə(r)]", "n. 旁观者；局外人；a person who sees something that is happening but is not involved; one who is present but not taking part in a situation or event: a chance spectator; a person present but not involved; onlooker; spectator; a person who stands near but does not participate; mere onlooker"],
 ["repairman", "UK [rɪ'peə(r)ˌmæn] US [rɪ'perˌmæn] [rɪˈpɛrmən]", "n. 修理工；修理工人；a person whose job is to repair things; one who repairs, specifically: one whose occupation is to make repairs in a mechanism"],
 ["weeknight", "[ˈwiːkˌnaɪt]", "n. 工作日夜晚（指周末休息日以外的每个夜晚；除星期六和星期日以外的任何夜晚，有时亦不含星期五晚上）；a weekday night; the evening or night of a weekday; any night of the week except Saturday or Sunday; any night of the week except Saturday, Sunday and sometimes Friday night"],
@@ -602,7 +606,7 @@ var enwords=[
 ["analysis", "[ə'næləsɪs]", "n. （对物质成分的）分析；解析；分析结果"],
 ["analyst", "['ænəlɪst]", "n. 分析家"],
 ["analyze", "['ænəlaɪz]", "vt. 分析；解析；研究"],
-["ancestor", "['ænsestər]", "n. 祖宗；祖先；原种；（动物的）原始种型；（机器的）原型；a person in your family who lived a long time ago; an animal that lived in the past which a modern animal has developed from; an early form of a machine which later became more developed"],
+["ancestor", "['ænsestər]", "n. 祖先；祖宗；原种；（动物的）原始种型；（机器的）原型；a person in your family who lived a long time ago; an animal that lived in the past which a modern animal has developed from; an early form of a machine which later became more developed"],
 ["ancestral", "[æn'sestrəl]", "adj. 祖先的；祖传的；connected with or that belonged to people in your family who lived a long time ago; of, relating to, or inherited from an ancestor"],
 ["ancient", "['eɪnʃənt]", "adj. 古老的；古代的；n. 古人"],
 ["and", "[ənd]", "conj. 和；加；接着；那么"],
