@@ -26,7 +26,7 @@ function search_lt_klmemo(){
 }
 
 function update_lt_klmemo(){
-    var otextarea_item=document.getElementById('textarea_backup_item');
+    var otextarea_item=document.getElementById('textarea_backup_memo');
     if (!otextarea_item){return;}
     var blitems=otextarea_item.value.trim();
     if (confirm("是否更新数据？")){
@@ -76,7 +76,7 @@ function local_storage_2_array_lt_klmemo(){
 
 function send_lt_klmemo(){
     if (confirm("是否发送到临时记事本？")){
-        document.querySelector('form[name="form_lt_klmemo"]').submit();
+        document.querySelector('form[name="form_backup_memo"]').submit();
     }
 }
 
@@ -86,13 +86,13 @@ function backup_lt_klmemo(){
     var bljg='<div id="div_backup" style="width:90%;margin:0.5rem;">';
     bljg=bljg+'<div id=div_help></div>'
     bljg=bljg+'<p><b>项目：</b></p>';
-    bljg=bljg+'<form method="POST" action="'+postpath+'temp_txt_share.php?type=klmemo" name="form_lt_klmemo" target=_blank>\n';
-    bljg=bljg+'<textarea id="textarea_backup_item" name="textarea_backup_item" style="width:100%;height:10rem;">'+items+'</textarea>';
+    bljg=bljg+'<form method="POST" action="'+postpath+'temp_txt_share.php?type=klmemo" name="form_backup_memo" target=_blank>\n';
+    bljg=bljg+'<textarea id="textarea_backup_memo" name="textarea_backup_memo" style="width:100%;height:10rem;">'+items+'</textarea>';
     bljg=bljg+'<p align=right>';
     bljg=bljg+'<span class="aclick" onclick="javascript:help_lt_klmemo();">Help</span> ';
 
     bljg=bljg+'<span class="aclick" onclick="javascript:update_lt_klmemo();">更新</span> ';   
-    bljg=bljg+textarea_buttons_b('textarea_backup_item','清空,复制,发送到临时记事本,发送地址','klmemo')+' ';
+    bljg=bljg+textarea_buttons_b('textarea_backup_memo','清空,复制,发送到临时记事本,发送地址','klmemo')+' ';
 
     bljg=bljg+'<span class="aclick"  onclick="javascript:document.getElementById(\'div_backup\').style.display=\'none\';">Close</span>';
     bljg=bljg+'</p>';

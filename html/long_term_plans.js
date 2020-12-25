@@ -26,7 +26,7 @@ function search_lt_plans(){
 }
 
 function update_lt_plans(){
-    var otextarea_item=document.getElementById('textarea_backup_item');
+    var otextarea_item=document.getElementById('textarea_backup_ltp');
     if (!otextarea_item){return;}
     var blitems=otextarea_item.value.trim();
     if (confirm("是否更新数据？")){
@@ -91,12 +91,12 @@ function backup_lt_plans(){
     bljg=bljg+'<div id=div_help></div>'
     bljg=bljg+'<p><b>项目：</b></p>';
     bljg=bljg+'<form method="POST" action="'+postpath+'temp_txt_share.php?type=long_term_plans" name="form_lt_plans" target=_blank>\n';
-    bljg=bljg+'<textarea id="textarea_backup_item" name="textarea_backup_item" style="width:100%;height:10rem;">'+items+'</textarea>';
+    bljg=bljg+'<textarea id="textarea_backup_ltp" name="textarea_backup_ltp" style="width:100%;height:10rem;">'+items+'</textarea>';
     bljg=bljg+'<p align=right>';
     bljg=bljg+'<span class="aclick" onclick="javascript:help_lt_plans();">Help</span> ';
 
     bljg=bljg+'<span class="aclick" onclick="javascript:update_lt_plans();">更新</span> ';   
-    bljg=bljg+textarea_buttons_b('textarea_backup_item','清空,复制,发送到临时记事本,发送地址','long_term_plans')+' ';
+    bljg=bljg+textarea_buttons_b('textarea_backup_ltp','清空,复制,发送到临时记事本,发送地址','long_term_plans')+' ';
 
     bljg=bljg+'<span class="aclick"  onclick="javascript:document.getElementById(\'div_backup\').style.display=\'none\';">Close</span>';
     bljg=bljg+'</p>';
