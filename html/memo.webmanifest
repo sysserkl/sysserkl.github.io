@@ -25,6 +25,6 @@
     }        
   ],
   "name": "KL Memo",
-  "short_name": "KL Memo",
+  "short_name": "KMemo",
   "start_url": "memo.htm"
 }
