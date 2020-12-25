@@ -19,4 +19,5 @@ var digest_global=`
 *ladybird
 *wanderer
 *motorbike
+*beaker
 `.trim().split('\n');

@@ -143,4 +143,5 @@ var digest_global=`
 *purchaser
 *forefather
 *forebear
+*masonic
 `.trim().split('\n');

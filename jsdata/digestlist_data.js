@@ -31,6 +31,7 @@ var digestlist_source_global_b=[
 ["she_diao_ying_xiong_chuan_xdbq4_412432_digest",1],
 ["in_search_of_the_castaways_otcocg_5418_digest",1],
 ["ping_fan_de_shi_jie_ly_125498_digest",1],
+["the_notebook_the_love_story_tealscfs_6719_digest",1],
 ["jin_ping_mei_94028_digest",1],
 ["yin_he_di_guo_1_7jdqbq_240799_digest",1],
 ["jane_eyre_819_digest",1],
