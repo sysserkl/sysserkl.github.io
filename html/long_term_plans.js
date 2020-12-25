@@ -93,12 +93,11 @@ function backup_lt_plans(){
     bljg=bljg+'<form method="POST" action="'+postpath+'temp_txt_share.php?type=long_term_plans" name="form_lt_plans" target=_blank>\n';
     bljg=bljg+'<textarea id="textarea_backup_ltp" name="textarea_backup_ltp" style="width:100%;height:10rem;">'+items+'</textarea>';
     bljg=bljg+'<p align=right>';
+    bljg=bljg+'<span class="aclick"  onclick="javascript:document.getElementById(\'div_backup\').style.display=\'none\';">Close</span> ';
     bljg=bljg+'<span class="aclick" onclick="javascript:help_lt_plans();">Help</span> ';
 
     bljg=bljg+'<span class="aclick" onclick="javascript:update_lt_plans();">更新</span> ';   
     bljg=bljg+textarea_buttons_b('textarea_backup_ltp','清空,复制,发送到临时记事本,发送地址','long_term_plans')+' ';
-
-    bljg=bljg+'<span class="aclick"  onclick="javascript:document.getElementById(\'div_backup\').style.display=\'none\';">Close</span>';
     bljg=bljg+'</p>';
     bljg=bljg+'</form>';
     bljg=bljg+'</div>';
@@ -112,7 +111,12 @@ function backup_lt_plans(){
 }
 
 function help_lt_plans(){
-    var bljg=`<b>格式如下：</b>
+    //history
+    //0.0.2-20201107 增加计划搜索功能
+    //0.0.1-20200422
+    //-----------------------
+    var bljg=`ver. 0.0.2-20201107
+    <b>格式如下：</b>
     ---
     项目编号1
     项目名称1

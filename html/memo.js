@@ -1,8 +1,8 @@
 function menu_lt_klmemo(){
     var str_t=klmenu_hide_b('#top');
     var klmenu1=[
-    '<span class="span_menu" onclick="javascript:'+str_t+'search_lt_klmemo();">计划搜索</span>',     
-    '<span class="span_menu" onclick="javascript:'+str_t+'new_klmemo();">新计划</span>', 
+    '<span class="span_menu" onclick="javascript:'+str_t+'search_lt_klmemo();">搜索</span>',     
+    '<span class="span_menu" onclick="javascript:'+str_t+'new_klmemo();">新Memo</span>', 
     '<span class="span_menu" onclick="javascript:'+str_t+'backup_lt_klmemo();">编辑/导入/导出</span>', 
     ];
 
@@ -89,12 +89,11 @@ function backup_lt_klmemo(){
     bljg=bljg+'<form method="POST" action="'+postpath+'temp_txt_share.php?type=klmemo" name="form_backup_memo" target=_blank>\n';
     bljg=bljg+'<textarea id="textarea_backup_memo" name="textarea_backup_memo" style="width:100%;height:10rem;">'+items+'</textarea>';
     bljg=bljg+'<p align=right>';
+    bljg=bljg+'<span class="aclick"  onclick="javascript:document.getElementById(\'div_backup\').style.display=\'none\';">Close</span> ';
     bljg=bljg+'<span class="aclick" onclick="javascript:help_lt_klmemo();">Help</span> ';
 
     bljg=bljg+'<span class="aclick" onclick="javascript:update_lt_klmemo();">更新</span> ';   
     bljg=bljg+textarea_buttons_b('textarea_backup_memo','清空,复制,发送到临时记事本,发送地址','klmemo')+' ';
-
-    bljg=bljg+'<span class="aclick"  onclick="javascript:document.getElementById(\'div_backup\').style.display=\'none\';">Close</span>';
     bljg=bljg+'</p>';
     bljg=bljg+'</form>';
     bljg=bljg+'</div>';
@@ -108,7 +107,11 @@ function backup_lt_klmemo(){
 }
 
 function help_lt_klmemo(){
-    var bljg=`<b>格式如下：</b>
+    //history
+    //0.0.1-20201225
+    //-----------------------
+    var bljg=`ver. 0.0.1-20201225
+    <b>格式如下：</b>
     ---
     Memo1
     起始日期，形式如：2020-04-23
@@ -259,7 +262,7 @@ function new_klmemo(){
         return;
     }
     var list_t=[newmemo,date2str_b(),previous_day_b('',10)];
-    klmemo_global.push(list_t);
+    klmemo_global.push(list_t); //此处无sort - 保留注释
     array_2_local_storage_lt_klmemo();
     draw_lt_klmemo(klmemo_global.length-1);
     document.getElementById('span_count').innerHTML='('+klmemo_global.length+')';
