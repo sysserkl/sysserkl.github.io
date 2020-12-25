@@ -454,4 +454,5 @@ var digest_global=`
 *seabird
 *Britannia
 *koala
+*Nebuchadnezzar
 `.trim().split('\n');

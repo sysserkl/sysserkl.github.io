@@ -23,6 +23,7 @@ var digest_global=`
 *Austria
 *Austrian
 *aye
+*lowermost
 *azure
 *bachelor
 *baggage

@@ -2,11 +2,11 @@ self.addEventListener('install', function(e) {
     e.waitUntil(
         caches.open('pwa_long_term_plans_store').then(function(cache) {
             return cache.addAll([
-            'bible.htm',
-            '../hard_ln_io/klbase.js',
+            'long_term_plans.htm',
+            'long_term_plans.js',            
+            '../hard_ln_io/klbase.js',            
             '../hard_ln_io/klbase_css.js',
             '../hard_ln_io/klbase_date.js',
-            'long_term_plans.js',
             ]);
         })
     );

@@ -240,4 +240,6 @@ var digest_global=`
 *woodland
 *woodpile
 *wrongly
+*Abe
+*Gettysburg
 `.trim().split('\n');

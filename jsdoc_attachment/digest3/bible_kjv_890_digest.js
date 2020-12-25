@@ -387,4 +387,5 @@ var digest_global=`
 *unsearchable
 *forbad
 *Sharon
+*Nebuchadrezzar
 `.trim().split('\n');
