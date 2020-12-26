@@ -1870,7 +1870,7 @@ var enwords=[
 ["closure", "['kləʊʒə(r)]", "n. 关口；关闭；终结；讨论终结"],
 ["clothe", "[kləʊð]", "vt. 穿上；给…穿衣；为（某人）提供衣服；赋予；to endow especially with power or a quality"],
 ["clothes", "[kləʊðz]", "n. 服装；衣服"],
-["cloth", "UK [klɒθ] US [klɔːθ]", "n. 布；布料；一块布；织物；桌布"],
+["cloth", "UK [klɒθ] US [klɔːθ]", "n. 布；布料；一块布；桌布；织物"],
 ["cloud", "[klaʊd]", "n. 云；阴影"],
 ["cloudless", "['klaʊdləs]", "adj. 无云的；晴朗的"],
 ["cloudy", "['klaʊdi]", "adj. 多云的；阴天的；被云遮住的；混浊的；模糊不清的；(of liquids) not clear or transparent"],
