@@ -1,5 +1,13 @@
 //单词库
 var enwords=[
+["armload", "UK [ˈɑːmləʊd] US [ˈɑrmˌloʊd]", "n. 〈美口〉一抱(量)；（单臂或双臂）一抱之量；as much as can be held or carried with the arms or one arm; armful"],
+["armful", "['ɑː(r)mfʊl]", "n. 单臂（或双臂）一抱的量；一抱之量；a quantity that you can carry in one or both arms; as much as the arm or arms can hold"],
+["resale", "[ˈriːˌseɪl] [riːˈseɪl]", "n. 再卖；转卖；转售；the act of selling again usually to a new party; a secondhand sale; an additional sale to the same buyer; the sale to another person of something that you have bought; adj. 二手的；用过的；used; secondhand; adj. of or pertaining to selling on"],
+["fishpond", "['fɪʃˌpɒnd] [ˈfɪʃˌpɑnd]", "na. 养鱼塘；鱼塘；鱼池；a pond stocked with fish; a pond where fish are kept or bred; a small pond containing fish, often one in which edible fish are raised for commercial purposes, as for stocking lakes and streams or wholesaling; n. 〈谑〉海"],
+["snowbound", "['snəʊˌbaʊnd]", "adj. 被雪困住的；被雪封住的；(of a person or vehicle) stuck in a particular place and unable to move because a lot of snow has fallen; (of a road or building) that you cannot use or reach because a lot of snow has fallen; shut in or blockaded by snow; confined to one place by heavy falls or drifts of snow; snowed-in; shut in or immobilized by snow"],
+["cedarwood", "['siːdəwʊd]", "na. 雪松属木料；杉木；柏木；the wood of a cedar that is especially repellent to insects"],
+["fingerless", "[ˈfɪŋɡə(r)ləs]", "adj. 无指的；失去指的；(especially of gloves) without fingers; having no fingers; having lost the fingers"],
+["spearman", "UK ['spɪəmən] US ['spɪrmən]", "n. 持矛枪的人[兵]；矛兵；枪兵；a person armed with a spear; a soldier armed with a spear"],
 ["Abe", "[eib]", "n. 埃布；亚伯(男子名；Abraham 的昵称)；a male given name, form of 'Abraham'; a diminutive of the male given name 'Abraham', from Hebrew; n. 安倍晋三；Shinzo 1954– , prime minister of Japan (2012–2020); n. 一张五美元的纸币；(slang, US) a five-dollar bill"],
 ["lowermost", "['ləʊəˌməʊst]", "adj. 最低的；最下的；最底下的；lowest; below all others"],
 ["Gettysburg", "UK [ˈɡɛtɪzˌbɜːɡ] US [ˈgɛtɪzˌbɜrg]", "n. 葛底斯堡(宾夕法尼亚南部钱伯斯堡东南偏东城镇)；a small town in S Pennsylvania, southwest of Harrisburg: scene of a crucial battle (1863) during the American Civil War, in which Meade's Union forces defeated Lee's Confederate army; site of the national cemetery dedicated by President Lincoln. Pop: 7825 (2003 est)"],

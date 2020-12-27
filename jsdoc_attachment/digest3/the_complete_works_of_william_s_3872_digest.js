@@ -6,4 +6,5 @@ var digest_global=`
 *betoken
 *heedful
 *unheedful
+*fishpond
 `.trim().split('\n');
