@@ -1,5 +1,7 @@
 //单词库
 var enwords=[
+["Aristotle", "UK [ˈæriˌstɔt(ə)l] US [ˈærɪˌstɑt(ə)l] [ˈɛrɪsˌtɑt(ə)l]", "n. a male given name; n. 亚里士多德(古希腊哲学家)；384–322 bc, Greek philosopher; pupil of Plato, tutor of Alexander the Great, and founder of the Peripatetic school at Athens; author of works on logic, ethics, politics, poetics, rhetoric, biology, zoology, and metaphysics. His works influenced Muslim philosophy and science and medieval scholastic philosophy; n. 亚里士多德环形山；a prominent crater in the NW quadrant of the moon about 83 kilometres in diameter; n. aristotle: (Australian slang): a bottle; n. 屁股或肛门；aristotle: (old-fashioned): the buttocks or anus, shortened from 'bottle and glass arse'"],
+["mountaintop", "UK ['maʊntɪnˌtɒp] US ['maʊnt(ə)nˌtɑːp]", "n. 山顶；the top of a mountain; the summit of a mountain"],
 ["armload", "UK [ˈɑːmləʊd] US [ˈɑrmˌloʊd]", "n. 〈美口〉一抱(量)；（单臂或双臂）一抱之量；as much as can be held or carried with the arms or one arm; armful"],
 ["armful", "['ɑː(r)mfʊl]", "n. 单臂（或双臂）一抱的量；一抱之量；a quantity that you can carry in one or both arms; as much as the arm or arms can hold"],
 ["resale", "[ˈriːˌseɪl] [riːˈseɪl]", "n. 再卖；转卖；转售；the act of selling again usually to a new party; a secondhand sale; an additional sale to the same buyer; the sale to another person of something that you have bought; adj. 二手的；用过的；used; secondhand; adj. of or pertaining to selling on"],
@@ -7149,7 +7151,7 @@ var enwords=[
 ["prolong", "[prə'lɒŋ]", "vt. 延长；拖延"],
 ["Prometheus", "[prəˈmiːθɪəs]", "n. 普罗米修斯；a Titan, who stole fire from Olympus to give to humankind and in punishment was chained to a rock, where an eagle tore at his liver until Hercules freed him "],
 ["prominently", "UK ['prɒmɪnəntli] US [ˈprɑːmɪnəntli]", "adv. 显著地；in a way that is easily seen or noticed; in a way that deliberately gives a lot of attention to somebody/something and makes them important or significant"],
-["prominent", "UK ['prɒmɪnənt] US ['prɑːmɪnənt]", "adj. 显著的；杰出的；突出的"],
+["prominent", "UK ['prɒmɪnənt] US ['prɑːmɪnənt]", "adj. 显著的；突出的；杰出的"],
 ["promise", "UK ['prɒmɪs] US ['prɑːmɪs]", "n. 诺言；预示；约定；(有)希望；v. 允诺；发誓；答应；有希望"],
 ["promontory", "UK ['prɒməntri] US ['prɑːməntɔːri]", "n. 海角；岬；a long narrow area of high land that goes out into the sea"],
 ["promote", "[prə'məʊt]", "vt. 促进；提升；促销，推销；发起；升迁"],

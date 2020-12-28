@@ -5,4 +5,5 @@ var digest_global=`
 *cedarwood
 *fingerless
 *spearman
+*mountaintop
 `.trim().split('\n');
