@@ -376,11 +376,11 @@ function get_new_words_arr_html_enbook(cstype,bljgarr2,list_t){
             break;
         case 4:
             onetextarea_t=checkbox_kl_value_b('newwords_one_textarea');
-            bljg=wiki_type_words_kle(Array.from(en_intersection_total),onetextarea_t);
+            bljg=enwords_wiki_type_words_b(Array.from(en_intersection_total),onetextarea_t);
             break;
         case 5:
             onetextarea_t=checkbox_kl_value_b('newwords_one_textarea');
-            bljg=js_type_words_kle(Array.from(en_intersection_total),onetextarea_t);
+            bljg=enwords_js_type_words_b(Array.from(en_intersection_total),onetextarea_t);
             break;
     }
     document.getElementById('div_new_words2').innerHTML='<div id="div_sub_words">'+bljg+'</div>';

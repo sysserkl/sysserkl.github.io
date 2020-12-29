@@ -20,4 +20,5 @@ var digest_global=`
 *wanderer
 *motorbike
 *beaker
+*faultless
 `.trim().split('\n');

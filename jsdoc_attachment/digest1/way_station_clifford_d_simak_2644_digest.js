@@ -242,4 +242,5 @@ var digest_global=`
 *wrongly
 *Abe
 *Gettysburg
+*heartwarming
 `.trim().split('\n');

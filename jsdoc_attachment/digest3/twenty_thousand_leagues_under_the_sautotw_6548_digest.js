@@ -500,4 +500,5 @@ var digest_global=`
 *Diana
 *indigo
 *oblique angle
+*Montreal
 `.trim().split('\n');
