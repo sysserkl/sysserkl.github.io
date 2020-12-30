@@ -257,4 +257,5 @@ var digest_global=`
 *wrist
 *yellowish
 *safekeeping
+*uppermost
 `.trim().split('\n');

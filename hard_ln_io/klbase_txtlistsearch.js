@@ -158,6 +158,7 @@ function txtmenus_kltxt_b(cstype=''){
     }
     
     var menu2=root_font_size_menu_b(str_t);
+    menu2.push('<span class="span_menu" onclick="javascript:'+str_t+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>');
     if (cstype!=='reader' && cstype!=='digest'){
         menu2=menu2.concat([
         '<span class="span_menu" onclick="javascript:'+str_t+'search_demo_kltxt_b();">语法示例</span>',

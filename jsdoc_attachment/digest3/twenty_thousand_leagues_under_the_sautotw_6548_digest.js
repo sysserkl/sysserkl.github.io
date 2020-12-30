@@ -501,4 +501,5 @@ var digest_global=`
 *indigo
 *oblique angle
 *Montreal
+*Quebec
 `.trim().split('\n');

@@ -1007,6 +1007,7 @@ function title_menu_klsnews(cskeys,js_or_php=''){
     
     var menu_list3=[
     '<span class="span_menu" onclick="javascript:'+str_t+'statistics_sites_klsnews();">当前页网站列表</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>',
     ];
 
     if (js_or_php=='php'){
@@ -1040,10 +1041,7 @@ function keywords_form_klsnews(){
     bljg=bljg+'<textarea name="textarea_selenium_keywords" id="textarea_selenium_keywords"></textarea>';
     bljg=bljg+'<p>';
     bljg=bljg+'<span class="aclick" onclick="javascript:keywords_read_klsnews();">读取</span> ';
-    bljg=bljg+'<span class="aclick" onclick="javascript:keywords_update_klsnews();">更新</span> ';
-    //bljg=bljg+'<input type="submit" value="发送到临时记事本" /> ';
-    //bljg=bljg+'<a href="javascript:void(null);" onclick="javascript:kl_remote_host_address_b();" title="设置发送地址">发送地址</a>：'+postpath+'temp_txt_share.php';
-    
+    bljg=bljg+'<span class="aclick" onclick="javascript:keywords_update_klsnews();">更新</span> ';   
     bljg=bljg+textarea_buttons_b('textarea_selenium_keywords','发送到临时记事本,发送地址');    
 
     bljg=bljg+'</p>';

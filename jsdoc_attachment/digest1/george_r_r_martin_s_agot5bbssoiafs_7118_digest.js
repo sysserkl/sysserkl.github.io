@@ -6,4 +6,5 @@ var digest_global=`
 *fingerless
 *spearman
 *mountaintop
+*foetid
 `.trim().split('\n');

@@ -1072,7 +1072,7 @@ function enwords_js_wiki_textarea_b(cslist){
     return enwords_js_type_words_b(list_t,true)+enwords_wiki_type_words_b(list_t,true);
 }
 
-function enwords_search_show_html_b(odiv,batch_div_name,recent_search_str,csword,csarray,csequal){
+function enwords_search_show_html_b(odiv,batch_div_name,recent_search_str,csword,csarray,csequal,without_textarea=false){
     var csword_filter=(csword.match(/[a-zA-Z0-9 '_\-]+/) || [""])[0];
     odiv.innerHTML='';
     if (csarray.length==0){
@@ -1080,21 +1080,24 @@ function enwords_search_show_html_b(odiv,batch_div_name,recent_search_str,csword
         if (csword_filter.trim()==''){
             csword_filter=csword;
         }
-        odiv.innerHTML=recent_search_str+enwords_batch_div_b([csword_filter],batch_div_name);
+        var bljg=recent_search_str+enwords_batch_div_b([csword_filter],batch_div_name);
     }
     else {
+        var bljg=recent_search_str+enwords_array_to_html_b(csarray,false);
+        var bltextarea=(without_textarea?'':enwords_js_wiki_textarea_b(csarray));
         if (csequal){
-            odiv.innerHTML=recent_search_str+enwords_array_to_html_b(csarray,false);+enwords_batch_div_b(csarray,batch_div_name)+enwords_js_wiki_textarea_b(csarray);
+            bljg=bljg+enwords_batch_div_b(csarray,batch_div_name)+bltextarea;
         }
         else {
             if (csword_filter!==''){
-                odiv.innerHTML=recent_search_str+enwords_array_to_html_b(csarray,false)+enwords_batch_div_b([csword_filter].concat(csarray),batch_div_name,true,-1)+enwords_js_wiki_textarea_b(csarray);
+                bljg=bljg+enwords_batch_div_b([csword_filter].concat(csarray),batch_div_name,true,-1)+bltextarea;
             }
             else {
-                odiv.innerHTML=recent_search_str+enwords_array_to_html_b(csarray,false)+enwords_batch_div_b(csarray,batch_div_name)+enwords_js_wiki_textarea_b(csarray);
+                bljg=bljg+enwords_batch_div_b(csarray,batch_div_name)+bltextarea;
             }
         }
     }
+    odiv.innerHTML=bljg;
     mouseover_mouseout_oblong_span_b(document.querySelectorAll('p#p_recent_search span.oblong_box'));
 }
 
@@ -1182,7 +1185,7 @@ function enwords_mini_search_b(csword=''){
 
     en_word_temp_get_b();
     
-    var csreg=checkbox_kl_value_b('input_mini_reg');
+    var csreg=checkbox_kl_value_b('input_enwords_mini_search_reg');
     var cs_w_p_d=enword_search_type_b([]);
 
     var csword_filter=(csword.match(/[a-zA-Z0-9 '_\-]+/) || [""])[0];
@@ -1205,7 +1208,48 @@ function enwords_mini_search_b(csword=''){
     }
 
     var odiv = document.getElementById('session_mini_search');
-    var recent_search_str=recent_search_words_kle(csword,'mini');
+    var recent_search_str=enwords_recent_search_b(csword,'mini');
     
-    enwords_search_show_html_b(odiv,'_mini',recent_search_str,csword,words_temp_arr,blequal);
+    enwords_search_show_html_b(odiv,'_mini',recent_search_str,csword,words_temp_arr,blequal,true);
+}
+
+function enwords_mini_search_frame_show_hide_b(){
+    var odiv=document.getElementById('div_enwords_mini_search_frame');
+    if (!odiv){return;}
+    if (odiv.style.cssText==''){
+        enwords_mini_search_frame_style_b();
+        enwords_mini_search_frame_form_b('');
+    }
+    else {
+        odiv.style.cssText='';
+        odiv.innerHTML='';
+    }
+}
+
+function enwords_mini_search_frame_style_b(){
+    document.getElementById('div_enwords_mini_search_frame').style.cssText='position:fixed;right:0%;top:0%;border:0.2rem pink dashed;background-color:white;max-width:70%;padding:0.5rem;';
+}
+
+function enwords_mini_search_frame_form_b(cstype='s'){
+    var odiv=document.getElementById('div_enwords_mini_search_frame');
+    if (cstype=='s'){
+        odiv.innerHTML='<span onclick="javascript:enwords_mini_search_frame_form_b(\'\');" style="padding:1rem 0.5rem;cursor:pointer;color:tomato;"><b>S</b></span>';
+        odiv.style.opacity='0.5';
+    }
+    else {
+        var bljg='';
+        bljg=bljg+'<input id="input_enwords_mini_search" type="text" onkeyup="javascript:if (event.key==\'Enter\'){enwords_mini_search_b();}"> ';
+        bljg=bljg+'<span class=aclick onclick="javascript:enwords_mini_search_frame_form_b();">Close</span>';
+        bljg=bljg+'<section style="overflow:auto;padding-top:0.1rem;max-height:'+parseInt(window.innerHeight*2/3)+'px;font-size:1rem;" id="session_mini_search">'+enwords_recent_search_b('','mini');+'</section>';
+        odiv.innerHTML=bljg;
+        mouseover_mouseout_oblong_span_b(document.querySelectorAll('p#p_recent_search span.oblong_box'));
+        odiv.style.opacity='';
+        input_with_x_b('input_enwords_mini_search',11,'',0.8,'input_enwords_mini_search_reg');
+        checkbox_kl_color_b('input_enwords_mini_search_reg',1);
+    }
+}
+
+function enwords_recent_search_b(csword='',cstype=''){
+    var recent_search_str='<p id="p_recent_search" style="line-height:'+(ismobile_b()?'200':'210')+'%;">';
+    return recent_search_str+recent_search_b('recent_search_kle',csword,(cstype=='mini'?'enwords_mini_search_b':'wordsearch_kle'),'',[],25,false)+'</p>';
 }

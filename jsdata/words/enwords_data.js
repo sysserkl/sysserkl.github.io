@@ -1,5 +1,9 @@
 //单词库
 var enwords=[
+["uppermost", "['ʌpə(r)ˌməʊst]", "adj. 最高的；最上面的；最上端的；至上的；最重要的；最突出的；higher or nearer the top than other things; more important than other things in a particular situation; situated in the highest or most prominent position; highest in place, position, power, authority, influence, etc.; topmost; predominant; foremost; adv. 处于最高位置地；向着或在最高或最重要位置地；面向上地；最重要地；最突出地；in the highest position; facing upwards; in the highest place, position, rank, etc.; in or into the uppermost place, rank, or predominance"],
+["foetid", "[ˈfiːtɪd] [ˈfetɪd]", "adj. 有恶臭的；恶臭的；=fetid；smelling very unpleasant; having an offensive odor; stinking; chiefly British spelling of 'fetid'"],
+["fetid", "[ˈfiːtɪd] ['fetɪd]", "adj.  有恶臭的；恶臭的；smelling very unpleasant; having a heavy offensive smell; having a stale nauseating smell, as of decay; having a bad smell, as of decay; putrid"],
+["Quebec", "[kwɪˈbɛk , kə-, kɛ-] [keɪˈbɛk]", "n. 魁北克(加拿大港市省名)；a province of E Canada: the largest Canadian province; a French colony from 1608 to 1763, when it passed to Britain; lying mostly on the Canadian Shield, it has vast areas of forest and extensive tundra and is populated mostly in the plain around the St Lawrence River. Capital: Quebec. Pop: 7,903,001 (2011). Area: 1,540,680 sq km (594 860 sq miles), French name: Québec. Abbreviation: PQ; a port in E Canada, capital of the province of Quebec, situated on the St Lawrence River: founded in 1608 by Champlain; scene of the battle of the Plains of Abraham (1759), by which the British won Canada from the French. Pop: 516,622 (2011); n. (communications): a code word for the letter q; the letter Q in the ICAO spelling alphabet"],
 ["Montreal", "UK [ˌmɒntri'ɔːl] US [ˌmɑntri'ɔːl] [ˌmʌntriˈɔl]", "n. 蒙特利尔（加拿大城市）；a city and major port in central Canada, in S Quebec on Montreal Island at the junction of the Ottawa and St Lawrence Rivers. Pop: 1,039,534 (2001), French name: Montréal; this island: 201 sq mi (521 sq km) "],
 ["faultless", "['fɔːltləs]", "adj. 无缺点的；完美无缺的；没有错误的；having no mistakes; having no fault: irreproachable; without any fault or defect; perfect or blameless"],
 ["heartwarming", "['haː(r)tˌwɔː(r)mɪŋ]", "adj. 暖人心房的；感人的；鼓舞人心的；=heart-warming; inspiring sympathetic feeling: cheering; (especially of an event, action, or story) seeming to be something positive and good and therefore causing feelings of pleasure and happiness; such as to kindle a warm glow of genial feelings; gratifying; rewarding; satisfying"],
@@ -2362,7 +2366,7 @@ var enwords=[
 ["crumble", "['krʌmbl]", "v. 崩溃；弄碎；破灭"],
 ["crustacean", "[krʌ'steɪʃ(ə)n]", "n. 甲壳纲动物；甲壳类动物；any creature with a soft body that is divided into sections, and a hard outer shell; any of various types of animal that live in water and have a hard outer shell; any arthropod of the mainly aquatic class Crustacea, typically having a carapace hardened with lime and including the lobsters, crabs, shrimps, woodlice, barnacles, copepods, and water fleas; adj. 甲壳纲的；甲壳类的；of, relating to, or belonging to the Crustacea"],
 ["crust", "[krʌst]", "n. 外壳；坚硬的外壳；面包皮；v. 结硬皮；盖以硬皮"],
-["cry", "[kraɪ]", "v. 哭；(大声)叫喊；(强烈)要求；n. 叫声；哭；喊"],
+["cry", "[kraɪ]", "v. 哭；(大声)叫喊；(强烈)要求；n. 哭；喊；叫声"],
 ["crystal", "['krɪstl]", "n. 水晶；结晶体；表蒙子；adj. 晶体的；透明的"],
 ["CTO", "[ˌsiː.tiːˈəʊ]", "abbr. 首席技术官；(=Chief Technology Officer)；chief technical officer; a chief technology (or technical) officer, a senior executive with responsibility for managing the technological requirements of a company or other institution"],
 ["Cuba", "['kjuːbə]", "n. 古巴（加勒比海的一个岛国）"],

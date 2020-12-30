@@ -50,6 +50,7 @@ function menu_bible(){
         klmenu1.push(    '<a href="../../../../enwords_book.htm" onclick="javascript:'+str_t+'" target=_blank>生词统计链接</a>');
     }
     var klmenu2=[
+    '<span class="span_menu" onclick="javascript:'+str_t+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>',    
     '<span class="span_menu" onclick="javascript:'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'pwa_bible_store\',\'bible_service_worker.js\');}">更新版本</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'help_bible();">Help</span>',
     ];
