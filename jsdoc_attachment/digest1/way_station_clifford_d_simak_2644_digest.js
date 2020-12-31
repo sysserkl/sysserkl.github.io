@@ -243,4 +243,5 @@ var digest_global=`
 *Abe
 *Gettysburg
 *heartwarming
+*clannish
 `.trim().split('\n');

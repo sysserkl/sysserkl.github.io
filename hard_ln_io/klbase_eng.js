@@ -1213,12 +1213,17 @@ function enwords_mini_search_b(csword=''){
     enwords_search_show_html_b(odiv,'_mini',recent_search_str,csword,words_temp_arr,blequal,true);
 }
 
-function enwords_mini_search_frame_show_hide_b(){
+function enwords_mini_search_frame_show_hide_b(csexpand=true){
     var odiv=document.getElementById('div_enwords_mini_search_frame');
     if (!odiv){return;}
     if (odiv.style.cssText==''){
         enwords_mini_search_frame_style_b();
-        enwords_mini_search_frame_form_b('');
+        if (csexpand){
+            enwords_mini_search_frame_form_b('');
+        }
+        else {
+            enwords_mini_search_frame_form_b();
+        }
     }
     else {
         odiv.style.cssText='';

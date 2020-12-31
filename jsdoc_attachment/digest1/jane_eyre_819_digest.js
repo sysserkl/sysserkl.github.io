@@ -3,4 +3,5 @@ var digest_global=`
 *plateful
 *learnt
 *colourless
+*Marseilles
 `.trim().split('\n');
