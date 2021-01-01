@@ -1073,7 +1073,7 @@ function bookmarks_get_kltxt_b(current_book_today_bookmark_only_one=false,return
     var sum_line_change=0;
     
     var theyear = new Date().getFullYear();
-    var remain_days=days_remained_of_year_b();
+    var remain_days=1+days_remained_of_year_b();    //包含当天 - 保留注释
     var next_year_days=(isLeapYear_b(theyear+1)?366:365);
     var next_year2_days=(isLeapYear_b(theyear+2)?366:365);
     
@@ -1173,6 +1173,7 @@ function bookmarks_get_kltxt_b(current_book_today_bookmark_only_one=false,return
     table_sum=table_sum+'<th align=right>'+(sum_line_change>0?'+':'')+sum_line_change+'</th>';
 
     lines_left=sum_line_total-sum_line_done;
+
     table_sum=table_sum+'<th align=right>'+Math.ceil(lines_left/remain_days)+' / ';
     table_sum=table_sum+Math.ceil(lines_left/(remain_days+next_year_days))+' / ';
     table_sum=table_sum+Math.ceil(lines_left/(remain_days+next_year_days+next_year2_days))+'</th>';       
