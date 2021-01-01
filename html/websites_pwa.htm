@@ -53,6 +53,7 @@ function menu_websites_pwa(){
     '<span class="span_menu" onclick="javascript:'+str_t+'organize_websites_pwa();">逐个整理</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'qr_html_websites_pwa();">QR</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'qr_html_websites_pwa(\'weixin.qq.com\');">QR微信公众号</span>',    
+    '<span class="span_menu" onclick="javascript:'+str_t+'weixin_select_pwa();">QR微信公众号_Select</span>',   
     ];
 
     var klmenu2=[
@@ -305,6 +306,43 @@ function qr_html_websites_pwa(ahref=''){
     }
     else {  //切换 - 保留注释
         search_websites_pwa();
+    }
+}
+
+function weixin_select_pwa(){
+    var odiv_wx=document.getElementById('div_canvas_qr_wx');
+    if (odiv_wx){return;}
+    var odiv=document.getElementById('divhtml');
+    var oas=odiv.querySelectorAll('a.a_oblong_box');
+    var wx_list=[];
+    var other_list=[];
+    for (let item of oas){
+        var blhref=item.href;
+        if (!blhref){continue;}
+        if (blhref.includes('/weixin.qq.com/')){
+            wx_list.push([blhref,item.innerText]);
+        }
+        else {
+            other_list.push(item.outerHTML);
+        }
+    }
+    var blselect='<div id="div_canvas_qr_wx" style="width:'+canvas_size_websites_global*2+'px;height:'+canvas_size_websites_global*2+'px;padding:0.5rem;border:0.1rem black solid;"></div>';
+    blselect=blselect+'<select id="select_canvas_qr_wx" style="margin-top:0.5rem;margin-bottom:0.5rem;" onchange="javascript:weixin_qr_pwa(this.value);">';
+    for (let item of wx_list){
+        blselect=blselect+'<option value="'+item[0]+'">'+item[1]+'</option>\n';
+    }
+    blselect=blselect+'</select>';
+    odiv.innerHTML=blselect+'<p>'+other_list.join(' ')+'</p>';
+    weixin_qr_pwa(document.getElementById('select_canvas_qr_wx').value);
+}
+
+function weixin_qr_pwa(csvalue){
+    var odiv=document.getElementById('div_canvas_qr_wx');
+    odiv.innerHTML='';
+    create_qr_b($(odiv),csvalue,canvas_size_websites_global*2,'black','white',false,'canvas');
+    var ocanvas=odiv.querySelector('canvas');
+    if (ocanvas){
+        ocanvas.outerHTML='<img class="img_qr" src="'+canvas2img_b(ocanvas)+'" />';
     }
 }
 

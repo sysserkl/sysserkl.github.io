@@ -144,4 +144,5 @@ var digest_global=`
 *forefather
 *forebear
 *masonic
+*Barbara
 `.trim().split('\n');

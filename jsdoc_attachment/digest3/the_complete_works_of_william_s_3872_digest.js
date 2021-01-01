@@ -7,4 +7,6 @@ var digest_global=`
 *heedful
 *unheedful
 *fishpond
+*armipotent
+*shepherdess
 `.trim().split('\n');

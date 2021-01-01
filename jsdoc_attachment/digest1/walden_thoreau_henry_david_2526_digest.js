@@ -5,4 +5,5 @@ var digest_global=`
 *radii
 *salable
 *foxhound
+*lawfully
 `.trim().split('\n');
