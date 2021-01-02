@@ -74,4 +74,5 @@ var digest_global=`
 *Stalinism
 *Stalin
 *expressionless
+*dustbin
 `.trim().split('\n');

@@ -8,4 +8,5 @@ var digest_global=`
 *mountaintop
 *foetid
 *unread
+*auctioneer
 `.trim().split('\n');

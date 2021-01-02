@@ -1,5 +1,11 @@
 //单词库
 var enwords=[
+["uncooked", "[ʌnˈkʊkt]", "adj. 未烹煮的；未煮过的；未熟的；生的；not cooked; raw"],
+["auctioneer", "UK [ˌɔːkʃəˈnɪə(r)] [ˌɒkʃəˈnɪə(r)] US [ˌɒkʃəˈnir]", "n. 拍卖商；拍卖人；a person whose job is to direct an auction and sell the goods; an agent who sells goods at auction; a person who conducts an auction by announcing the lots and controlling the bidding; v. 拍卖；to sell by auction; to sell at an auction"],
+["phosphorescent", "UK [ˌfɒsfə'res(ə)nt] US [ˌfɑːsfə'res(ə)nt]", "adj. （在黑暗中）发微光的；发磷光的；磷光性的；producing a small amount of light in the dark; producing light without heat or with so little heat that it cannot be felt; exhibiting phosphorescence; giving off or shining with light, and giving off little or no heat"],
+["dustbin", "['dʌstbɪn]", "n. （常置于房外的）垃圾桶；垃圾箱；a large container with a lid (= cover), used for putting rubbish in, usually kept outside the house; a can for trash or garbage; a large container for rubbish from a house or other building, usually made of strong plastic or metal and kept outside; n. 被遗忘的物品/事项的类别；a category of forgotten items; a situation in which something is no longer considered fashionable or important and is therefore not used, talked about, etc."],
+
+
 ["armipotent", "UK ['ɑ:mɪpət(ə)nt] US ['ɑrmɪpətənt]", "adj. 兵力强大的；军事实力强的；军备充实的；(archaic): powerful in arms; mighty in battle; strong in arms or war; n. 一个强大的战士；(poetic, archaic): a powerful combatant"],
 ["lawfully", "['lɔ:f(ə)lɪ] [ˈlɔːfʊli]", "adv. 合法地；守法地；依法地；法定地；in a way that is allowed or recognized by law; legally; in a way that conforms to or is permitted or recognized by the law"],
 ["shepherdess", "[ˌʃepə(r)'des] [ˈʃepə(r)dəs]", "n. 牧羊女；女牧羊人；a woman who takes care of sheep; a woman or girl who tends sheep, also: a rural girl or woman"],

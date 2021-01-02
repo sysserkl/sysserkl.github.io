@@ -26,4 +26,5 @@ var digest_global=`
 *seaward
 *uninhabitable
 *unproven
+*uncooked
 `.trim().split('\n');

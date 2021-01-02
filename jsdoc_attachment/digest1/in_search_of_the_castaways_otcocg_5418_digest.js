@@ -4,4 +4,5 @@ var digest_global=`
 *disembarkation
 *paw
 *outdistance
+*phosphorescent
 `.trim().split('\n');

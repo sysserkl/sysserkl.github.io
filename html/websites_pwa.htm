@@ -326,20 +326,35 @@ function weixin_select_pwa(){
             other_list.push(item.outerHTML);
         }
     }
-    var blselect='<div id="div_canvas_qr_wx" style="width:'+canvas_size_websites_global*2+'px;height:'+canvas_size_websites_global*2+'px;padding:0.5rem;border:0.1rem black solid;"></div>';
-    blselect=blselect+'<select id="select_canvas_qr_wx" style="margin-top:0.5rem;margin-bottom:0.5rem;" onchange="javascript:weixin_qr_pwa(this.value);">';
+    var blselect='<div id="div_canvas_qr_wx" style="width:'+canvas_size_websites_global*1.5+'px;height:'+canvas_size_websites_global*1.5+'px;padding:0.5rem;border:0.1rem black solid;"></div>';
+    blselect=blselect+'<select id="select_canvas_qr_wx" style="margin-top:0.5rem;margin-bottom:0.5rem;height:2rem;" onchange="javascript:weixin_qr_pwa(this.value);">';
     for (let item of wx_list){
         blselect=blselect+'<option value="'+item[0]+'">'+item[1]+'</option>\n';
     }
-    blselect=blselect+'</select>';
+    blselect=blselect+'</select> ';
+    blselect=blselect+'<span class="aclick" onclick="javascript:weixin_prev_or_next_pwa(\'p\');">prev</span> <span class="aclick" onclick="javascript:weixin_prev_or_next_pwa(\'n\');">next</span>';
     odiv.innerHTML=blselect+'<p>'+other_list.join(' ')+'</p>';
+    var rect =document.getElementById('div_canvas_qr_wx').getBoundingClientRect();
+    document.getElementById('select_canvas_qr_wx').style.width=rect.width+'px';
     weixin_qr_pwa(document.getElementById('select_canvas_qr_wx').value);
+}
+
+function weixin_prev_or_next_pwa(cstype){
+    var oselect=document.getElementById('select_canvas_qr_wx');
+    if (oselect.selectedIndex>0 && cstype=='p'){
+        oselect.selectedIndex--;
+        weixin_qr_pwa(oselect.value);
+    }
+    else if (oselect.selectedIndex<oselect.length-1 && cstype=='n'){
+        oselect.selectedIndex++;
+        weixin_qr_pwa(oselect.value);
+    }
 }
 
 function weixin_qr_pwa(csvalue){
     var odiv=document.getElementById('div_canvas_qr_wx');
     odiv.innerHTML='';
-    create_qr_b($(odiv),csvalue,canvas_size_websites_global*2,'black','white',false,'canvas');
+    create_qr_b($(odiv),csvalue,canvas_size_websites_global*1.5,'black','white',false,'canvas');
     var ocanvas=odiv.querySelector('canvas');
     if (ocanvas){
         ocanvas.outerHTML='<img class="img_qr" src="'+canvas2img_b(ocanvas)+'" />';
