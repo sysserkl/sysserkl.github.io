@@ -2,17 +2,27 @@ function menu_lt_klmemo(){
     var str_t=klmenu_hide_b('#top');
     var klmenu1=[
     '<span class="span_menu" onclick="javascript:'+str_t+'search_lt_klmemo();">搜索</span>',     
+    '<span class="span_menu" onclick="javascript:'+str_t+'init_lt_klmemo(\'DONE\');">已完成的事项</span>',     
     '<span class="span_menu" onclick="javascript:'+str_t+'new_klmemo();">新Memo</span>', 
     '<span class="span_menu" onclick="javascript:'+str_t+'backup_lt_klmemo();">编辑/导入/导出</span>', 
     ];
 
-    var klmenu2=[
+    var klmenu_sort=[
+        '<span class="span_menu" onclick="javascript:'+str_t+'klmemo_sort_type_global=\'\';init_lt_klmemo();">名称升序</span>',     
+        '<span class="span_menu" onclick="javascript:'+str_t+'klmemo_sort_type_global=\'0d\';init_lt_klmemo();">名称降序</span>',     
+        '<span class="span_menu" onclick="javascript:'+str_t+'klmemo_sort_type_global=\'1\';init_lt_klmemo();">开始日期升序</span>',     
+        '<span class="span_menu" onclick="javascript:'+str_t+'klmemo_sort_type_global=\'1d\';init_lt_klmemo();">开始日期降序</span>',     
+        '<span class="span_menu" onclick="javascript:'+str_t+'klmemo_sort_type_global=\'2\';init_lt_klmemo();">结束日期升序</span>',     
+        '<span class="span_menu" onclick="javascript:'+str_t+'klmemo_sort_type_global=\'2d\';init_lt_klmemo();">结束日期降序</span>',         
+    ];
+    
+    var klmenu_config=[
     '<span class="span_menu" onclick="javascript:'+str_t+'kl_remote_host_address_b();">设置form发送地址</span>', 
     '<span class="span_menu" onclick="javascript:'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'pwa_memo_store\',\'memo_service_worker.js\');}">更新版本</span>',
     ];
-    klmenu2=root_font_size_menu_b(str_t).concat(klmenu2);
+    klmenu_config=root_font_size_menu_b(str_t).concat(klmenu_config);
     
-    var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu1,'🧷','14rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'⚙','14rem','1rem','1rem','60rem'),'','0rem');
+    var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu1,'🧷','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_sort,'↕','10rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','14rem','1rem','1rem','60rem'),'','0rem');
     
     document.getElementById('h2_title').insertAdjacentHTML('afterbegin',bljg+' ');
 }
@@ -46,7 +56,14 @@ function array_2_local_storage_lt_klmemo(){
     localStorage.setItem('klmemo_item',bljg.trim());
 }
 
-function local_storage_2_array_lt_klmemo(){
+function delete_klmemo(){
+    if (confirm("是否清空完成项？")){
+        local_storage_2_array_lt_klmemo(true);
+        init_lt_klmemo();
+    }        
+}
+
+function local_storage_2_array_lt_klmemo(do_delete=false){
     var items=('\n'+local_storage_get_b('klmemo_item',-1,false)).split('\n---\n');
     var ids=[];
     for (let one_item of items){
@@ -61,16 +78,33 @@ function local_storage_2_array_lt_klmemo(){
         }
         ids.push(list_t[0]);
     }
+    
     klmemo_global=[];
     for (let one_item of items){
         var list_t=one_item.trim().split('\n');
         var bllen=list_t.length;
         if (bllen<3){
             continue;
-        }        
+        }
+        if (do_delete){
+            var start_day = validdate_b(list_t[1]);
+            var end_day = validdate_b(list_t[2]);
+            if (start_day!==false && end_day!==false){
+                if (end_day>=start_day){continue;}
+            }
+        }
         klmemo_global.push(list_t);
     }
-    klmemo_global.sort();
+    
+    var blno=parseInt((klmemo_sort_type_global+'0').substring(0,1));
+    if (isNaN(blno)){
+        blno=0;
+    }
+    blno=Math.min(2,Math.max(0,blno));
+    klmemo_global.sort(function (a,b){return a[blno]>b[blno];});
+    if (klmemo_sort_type_global.includes('d')){
+        klmemo_global.reverse();
+    }
     array_2_local_storage_lt_klmemo();
 }
 
@@ -167,7 +201,20 @@ function init_lt_klmemo(cskey=''){
         klmemo_global.push(['Memo Demo','2020-05-01','2020-10-31']);
         array_2_local_storage_lt_klmemo();
     }
+    document.getElementById('span_count').innerHTML='('+klmemo_global.length+')';
 
+    if (cskey=='DONE'){
+        for (let blxl=0;blxl<klmemo_global.length;blxl++){
+            var item=klmemo_global[blxl];
+            var start_day = validdate_b(item[1]);
+            var end_day = validdate_b(item[2]);
+            if (start_day===false || end_day===false){continue;}
+            if (end_day<start_day){continue;}
+            draw_lt_klmemo(blxl);
+        }
+        document.getElementById('divhtml').insertAdjacentHTML('afterbegin','<p><span class="aclick" onclick="javascript:delete_klmemo();">清空已完成项</span></p>');
+        return;
+    }
     var isreg=false;
     if (cskey.slice(-4,)=='(:r)'){
         isreg=true;
@@ -191,7 +238,6 @@ function init_lt_klmemo(cskey=''){
             draw_lt_klmemo(blxl);
         }
     }
-    document.getElementById('span_count').innerHTML='('+klmemo_global.length+')';
 }
 
 function change_lt_klmemo(csid,csnumber){
