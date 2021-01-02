@@ -204,15 +204,19 @@ function init_lt_klmemo(cskey=''){
     document.getElementById('span_count').innerHTML='('+klmemo_global.length+')';
 
     if (cskey=='DONE'){
+        var blfound=false;
         for (let blxl=0;blxl<klmemo_global.length;blxl++){
             var item=klmemo_global[blxl];
             var start_day = validdate_b(item[1]);
             var end_day = validdate_b(item[2]);
             if (start_day===false || end_day===false){continue;}
             if (end_day<start_day){continue;}
+            blfound=true;
             draw_lt_klmemo(blxl);
         }
-        document.getElementById('divhtml').insertAdjacentHTML('afterbegin','<p><span class="aclick" onclick="javascript:delete_klmemo();">清空已完成项</span></p>');
+        if (blfound){
+            document.getElementById('divhtml').insertAdjacentHTML('afterbegin','<p><span class="aclick" onclick="javascript:delete_klmemo();">清空已完成项</span></p>');
+        }
         return;
     }
     var isreg=false;
