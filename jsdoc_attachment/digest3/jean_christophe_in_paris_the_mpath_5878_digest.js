@@ -43,4 +43,5 @@ var digest_global=`
 *disdainful
 *confessional
 *orchestral
+*phosphorescence
 `.trim().split('\n');

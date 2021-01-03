@@ -145,4 +145,6 @@ var digest_global=`
 *forebear
 *masonic
 *Barbara
+*self-satisfied
+*unmarried
 `.trim().split('\n');
