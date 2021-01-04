@@ -116,28 +116,21 @@ function flot_timeformat_k(cstimeformat,cstype,isoneyear,isonemonth){
 }
 
 function isoneyear_isonemonth_k(cslist){
-    var list_y=[];
-    var list_m=[];
+    var list_y=new Set();
+    var list_m=new Set();
     for (let item of cslist){
         if (Array.isArray(item)){
             if (item.length>0){
-                var bly=item[0].getFullYear();
-                if (!list_y.includes(bly)){
-                    list_y.push(bly);
-                }
-
-                var blm=item[0].getMonth();
-                if (!list_m.includes(blm)){
-                    list_m.push(blm);
-                }
+                list_y.add(item[0].getFullYear());
+                list_m.add(item[0].getMonth());
                 
-                if (list_y.length>1){
+                if (list_y.size>1){
                     return [false,false];
                 }
             }
         }
     }
-    return [list_y.length>1?false:true,list_m.length>1?false:true];
+    return [list_y.size>1?false:true,list_m.size>1?false:true];
 }
 
 function flot_lines_k(cslist,csid,label_position='nw',cstime=false,cstimeformat="",cstype='m',y1unit='',y1dec=-1,cstickSize=[],csmin_data_length=-1,csymin=false,csymax=false){
