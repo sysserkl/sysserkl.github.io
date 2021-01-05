@@ -244,4 +244,5 @@ var digest_global=`
 *Gettysburg
 *heartwarming
 *clannish
+*luminescence
 `.trim().split('\n');

@@ -147,4 +147,5 @@ var digest_global=`
 *Barbara
 *self-satisfied
 *unmarried
+*armistice
 `.trim().split('\n');

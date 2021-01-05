@@ -9,4 +9,5 @@ var digest_global=`
 *foetid
 *unread
 *auctioneer
+*clansman
 `.trim().split('\n');
