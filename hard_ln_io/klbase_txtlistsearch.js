@@ -1388,6 +1388,7 @@ function getlines_kltxt_b(csno=false,cslines=false,single=false){
         document.location.href = "#content";
     }
     sup_kleng_words_b();
+    highheight_kltxt_b();
     digest_show_kltxt_b();
 }
 
@@ -1537,13 +1538,23 @@ function txtsearch_kltxt_b(csword,csreg,cscontinue){
     digest_show_kltxt_b();
 }
 
-function highheight_kltxt_b(cswordlist){
+function highheight_kltxt_b(cswordlist=[]){
     var ohighlight=document.getElementById('input_highlight');
     if (ohighlight){
         if (document.getElementById('input_highlight').checked==false){
             return;
         }
     }
+    
+    if (cswordlist.length==0){
+        var csword=document.getElementById('input_search').value.trim();
+        if (csword.slice(-4,)=='(:r)'){
+            csword=csword.slice(0,-4);
+        }
+        if (csword==''){return;}
+        cswordlist=csword.split(' ');
+    }
+    
     var t0 = performance.now();
     var blkey=[];
     for (let item of cswordlist){

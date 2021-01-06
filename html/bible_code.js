@@ -175,7 +175,7 @@ function reading_statistics_bible(){
     alert(bljg);
 }
 
-function search_one_row_bible(blxl,h2,h3,blstyle,ismobile){
+function search_one_row_bible(blxl,h2,h3,chapter_no_current,blstyle,ismobile){
     var blno;
     var enstr;
     var cnstr;
@@ -188,7 +188,7 @@ function search_one_row_bible(blxl,h2,h3,blstyle,ismobile){
         bljg=bljg+'<p><big>'+cnstr+'</big></p>';
     }
     bljg=bljg+'<p>&nbsp;</p><p>';
-    bljg=bljg+'—— ';
+    bljg=bljg+'—— 【'+(chapter_no_current+1)+'】';
     bljg=bljg+'<span class="span_box" onclick="javascript:book_bible(\''+kjv[h2].substring(3,kjv[h2].length-3)+'_'+kjv[h3].substring(4,kjv[h3].length-4).split(' ').slice(-1)[0]+'_'+kjv[blxl].split(' ')[0]+'\');">';
     if (use_kjv_cn_global[0] && use_kjv_cn_global[1]){
         bljg=bljg+kjv[h2].substring(3,kjv[h2].length-3)+' '+cnbible_global[h3].substring(4,cnbible_global[h3].length-4);
@@ -270,11 +270,19 @@ function search_bible(cskey='',csstartno=0,favpage_no=1,csmax=500){
     }
     cskey=cskey.trim();
     //FAV dog 无意义 - 保留注释
+    
+    var chapter_no_t=[];
+    for (let item of chapter_global){
+        chapter_no_t.push(item[0]);
+    }
+    var chapter_no_current=-1;
+    
     current_search_no_global=new Set();
     for (let blxl=csstartno;blxl<kjv.length;blxl++){
         var item=kjv[blxl];
         if (item.substring(0,3)=='== ' && item.slice(-3,)==' =='){
             h2=blxl;
+            chapter_no_current=chapter_no_t.indexOf(h2);
             h3=-1;
             continue;
         }
@@ -305,7 +313,7 @@ function search_bible(cskey='',csstartno=0,favpage_no=1,csmax=500){
         }
         if (blfound && h2>-1 && h3>-1){
             current_search_no_global.add(blxl);
-            bljg=bljg+search_one_row_bible(blxl,h2,h3,blstyle,ismobile);
+            bljg=bljg+search_one_row_bible(blxl,h2,h3,chapter_no_current,blstyle,ismobile);
             blcount=blcount+1;
             if (csmax>=0 && blcount>=csmax){
                 continue_search_no=blxl+1;

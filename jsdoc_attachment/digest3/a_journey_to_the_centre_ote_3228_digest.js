@@ -3,4 +3,5 @@ var digest_global=`
 *icebound
 *beehive
 *fetid
+*immortal
 `.trim().split('\n');

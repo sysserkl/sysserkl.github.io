@@ -502,4 +502,5 @@ var digest_global=`
 *oblique angle
 *Montreal
 *Quebec
+*luminescent
 `.trim().split('\n');

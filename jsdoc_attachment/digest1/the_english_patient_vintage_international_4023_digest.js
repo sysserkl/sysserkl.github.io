@@ -21,4 +21,5 @@ var digest_global=`
 *motorbike
 *beaker
 *faultless
+*odometer
 `.trim().split('\n');
