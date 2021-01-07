@@ -148,4 +148,6 @@ var digest_global=`
 *self-satisfied
 *unmarried
 *armistice
+*musketeer
+*chronicle
 `.trim().split('\n');

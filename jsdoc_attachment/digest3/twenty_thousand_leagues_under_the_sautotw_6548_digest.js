@@ -503,4 +503,5 @@ var digest_global=`
 *Montreal
 *Quebec
 *luminescent
+*chronicler
 `.trim().split('\n');

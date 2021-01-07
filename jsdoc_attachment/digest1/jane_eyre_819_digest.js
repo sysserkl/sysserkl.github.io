@@ -4,4 +4,5 @@ var digest_global=`
 *learnt
 *colourless
 *Marseilles
+*sceptical
 `.trim().split('\n');
