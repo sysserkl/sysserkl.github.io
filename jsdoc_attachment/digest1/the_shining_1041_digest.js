@@ -5,4 +5,5 @@ var digest_global=`
 *claustrophobia
 *suppertime
 *pneumonia
+*snowshoe
 `.trim().split('\n');

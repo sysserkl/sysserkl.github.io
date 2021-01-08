@@ -1247,13 +1247,29 @@ function root_font_size_change_b(change_value=0,csask=false){
     localStorage.setItem('root_font_size_increment',increment);
 }
 
-function root_font_size_menu_b(csstr){
-    return [
-    '<span class="span_menu" onclick="javascript:'+csstr+'root_font_size_change_b(0.5);">字号+</span>', 
-    '<span class="span_menu" onclick="javascript:'+csstr+'root_font_size_change_b(-0.5);">字号-</span>', 
-    '<span class="span_menu" onclick="javascript:'+csstr+'root_font_size_change_b(false);">默认字号大小</span>', 
-    '<span class="span_menu" onclick="javascript:'+csstr+'root_font_size_change_b(0,true);">指定字号</span>',     
-    ];
+function root_font_size_menu_b(csstr='',font_menu=true,full_screen_menu=true){
+    var list_t=[];
+    if (font_menu){
+        list_t=list_t.concat(['<span class="span_menu" onclick="javascript:'+csstr+'root_font_size_change_b(0.5);">字号+</span>', 
+        '<span class="span_menu" onclick="javascript:'+csstr+'root_font_size_change_b(-0.5);">字号-</span>', 
+        '<span class="span_menu" onclick="javascript:'+csstr+'root_font_size_change_b(false);">默认字号大小</span>', 
+        '<span class="span_menu" onclick="javascript:'+csstr+'root_font_size_change_b(0,true);">指定字号</span>',
+        ]);
+    }
+    if (full_screen_menu){
+        list_t=list_t.concat(['<span class="span_menu" onclick="javascript:'+csstr+'body_fullscreen_b();">fullscreen</span>'
+        ]);
+    }
+    return list_t;
+}
+
+function body_fullscreen_b(){
+    if (document.fullscreenElement==null){
+        document.documentElement.requestFullscreen();
+    } 
+    else {
+        document.exitFullscreen();
+    }
 }
 
 function change_colors_b(csstr){

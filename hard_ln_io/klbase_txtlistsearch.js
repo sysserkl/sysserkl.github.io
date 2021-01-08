@@ -138,7 +138,6 @@ function txtmenus_kltxt_b(cstype=''){
         '<span class="span_menu" onclick="javascript:'+str_t+'search_or_reader_kltxt_b(\'reader\');">Reader</span>',
         ];    
     }
-
     menu0.push('<span class="span_menu" onclick="javascript:'+str_t+'search_or_reader_kltxt_b(\'reader_card\');">Card</span>');
     menu0.push('<span class="span_menu" onclick="javascript:'+str_t+'bookmarks_get_kltxt_b(false,false);">读取最新书签</span>');
     menu0.push('<span class="span_menu" onclick="javascript:'+str_t+'bookmarks_set_kltxt_b();">添加书签</span>');
