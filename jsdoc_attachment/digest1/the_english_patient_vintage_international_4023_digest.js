@@ -22,4 +22,5 @@ var digest_global=`
 *beaker
 *faultless
 *odometer
+*aviator
 `.trim().split('\n');

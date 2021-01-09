@@ -1,6 +1,6 @@
 var recent_info_list=[
 ["","Bash",`
-<div style="column-count: 2;">
+<div class="div_columns_rct">
 * [?Bash_-_Math Math]
 * [?Bash_-_字符串 字符串]
 * [?Bash_-_数组 数组]
@@ -9,7 +9,7 @@ var recent_info_list=[
 </div>
 `],
 ["","Game",`
-<div style="column-count: 2;">
+<div class="div_columns_rct">
 * [?三国游戏 三国]
 * [?帝国时代]
 * [?炎龙骑士团2_黄金城之谜 炎龙骑士团2 黄金城之谜]
@@ -18,25 +18,25 @@ var recent_info_list=[
 ["?Git","Git"],
 ["?Imagemagick","Imagemagick"],
 ["","JavaScript",`
-<div style="column-count: 2;">
+<div class="div_columns_rct">
 * [?JavaScript_-_字符串操作函数、命令 字符串操作函数、命令]
 * [?JavaScript_-_对象、元素、属性_操作 对象、元素、属性 操作]
 * [?JavaScript_数组, JSON 数组, JSON]
 </div>
 `],
 ["","Linux",`
-<div style="column-count: 2;">
+<div class="div_columns_rct">
 * [?SSH,_SCP]
 </div>
 `],
 ["?PGP, GPG","PGP, GPG"],
 ["","PHP",`
-<div style="column-count: 2;">
+<div class="div_columns_rct">
 * [?PHP_-_输入、输出、对话框、显示、注释 输入、输出、对话框、显示、注释]
 </div>
 `],
 ["","Python",`
-<div style="column-count: 2;">
+<div class="div_columns_rct">
 * [?Python_-_Math Math]
 * [?Python_-_图形 图形]
 * [?Python_-_字符串 字符串]
@@ -50,14 +50,14 @@ var recent_info_list=[
 ["?Selenium","Selenium"],
 ["?Termux","Termux"],
 ["","Zip",`
-<div style="column-count: 2;">
+<div class="div_columns_rct">
 * [?7z]
 </div>
 `],
 ["?产权、财税、经济学、经济学家","产权、财税、经济学、经济学家"],
 ["?城市化和建筑设计、房地产、经济适用房、土地制度","城市化和建筑设计、房地产、经济适用房、土地制度"],
 ["","吃的生活",`
-<div style="column-count: 2;">
+<div class="div_columns_rct">
 * [?咖啡、茶与健康]
 * [?如何喝水]
 * [?节食、禁食、饥饿疗法、辟谷]
@@ -68,7 +68,7 @@ var recent_info_list=[
 ["?灵修","灵修"],
 ["?生活、简单、收藏、占有、舍弃、整理","生活、简单、收藏、占有、舍弃、整理"],
 ["","输入法",`
-<div style="column-count: 2;">
+<div class="div_columns_rct">
 * [?SunPinyin]
 </div>
 `],
@@ -76,7 +76,7 @@ var recent_info_list=[
 ["?数据存储、备份、同步","数据存储、备份、同步"],
 ["?信息处理、收集、过滤、分享、传播、过载、RSS、搜索引擎","信息处理、收集、过滤、分享、传播、过载、RSS、搜索引擎"],
 ["","语音",`
-<div style="column-count: 2;">
+<div class="div_columns_rct">
 * [?Festival]
 </div>
 `],

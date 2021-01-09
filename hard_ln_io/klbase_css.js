@@ -721,36 +721,41 @@ function div_title_href_id_b(item,id_list){
 }
 
 function div_title_href_b(item,csfsize='',underline=false,csid='',fnname=''){ //依赖klbase_wiki.js - 保留注释
-    if (csfsize==''){
+    if (csfsize===''){
         csfsize='1rem';
     }
     var bljg='';
     var review='';
     if (item[0]==''){
         if (item[1]!==''){
-            bljg=bljg+'<font color="'+scheme_global["a"]+'">'+item[1]+'</font> ';
+            bljg=bljg+'<span class="span_a_article_title_b" style="color:'+scheme_global["a"]+'">'+item[1]+'</span> ';
         }
     }
     else {
         if (item[1]==''){
-            bljg=bljg+'<a href="'+item[0]+'" target=_blank>'+item[0]+'</a> ';
+            bljg=bljg+'<a class="span_a_article_title_b" href="'+item[0]+'" target=_blank>'+item[0]+'</a> ';
         }
         else {
-            bljg=bljg+'<a href="'+item[0]+'" target=_blank>'+item[1]+'</a> ';
+            bljg=bljg+'<a class="span_a_article_title_b" href="'+item[0]+'" target=_blank>'+item[1]+'</a> ';
         }
     }
 
     if (item.length>=3){
         if (item[2]!==""){
             var blcontent=wiki_all_format_b(item[2],"",-1,underline);
-            blcontent='<span style="font-size:'+csfsize+';">'+blcontent+'</span>';            
+            if (csfsize!==false){
+                blcontent='<span style="font-size:'+csfsize+';">'+blcontent+'</span>';            
+            }
             bljg=bljg+blcontent;
         }
     }
     if (item.length>=4){
         if (item[3]!==''){
             review=wiki_all_format_b('{{span|t=l}}'+item[3]+'{{/span}}','',-1,underline); //ismobile
-            review='<span style="font-size:'+csfsize+';">'+review+'</span> ';
+            if (csfsize!==false){
+                review='<span style="font-size:'+csfsize+';">'+review+'</span>';
+            }
+            review=review+' ';
         }
     }
     bljg=review+bljg;

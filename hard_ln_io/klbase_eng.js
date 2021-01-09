@@ -202,23 +202,32 @@ function en_search_sites_b(dictcn=true,maxlength=-1){
 }
 
 function enwords_checkbox_open_b(csname,cstype){
+    function sub_enwords_checkbox_open_b_one(){
+        if (blxl>=ocheckbox.length){return;}
+        if (ocheckbox[blxl].checked){
+            open_link_en_b(cstype,ocheckbox[blxl].value);
+        }
+        blxl=blxl+1;
+        setTimeout(sub_enwords_checkbox_open_b_one,1000);
+    }
+    //---------------------------
     var ocheckbox=document.getElementsByName(csname);
     if (ocheckbox.length==0){return;}
     if (cstype=='1'){
-        for (var blxl in ocheckbox){
-            ocheckbox[blxl].checked=true;
+        for (let item of ocheckbox){
+            item.checked=true;
         }
         return;
     }
-    if (cstype=='0'){
-        for (var blxl in ocheckbox){
-            ocheckbox[blxl].checked=false;
+    else if (cstype=='0'){
+        for (let item of ocheckbox){
+            item.checked=false;
         }
         return;
     }
     var blcount=0;
-    for (var blxl=0;blxl<ocheckbox.length;blxl++){
-        if (ocheckbox[blxl].checked){
+    for (let item of ocheckbox){
+        if (item.checked){
             blcount=1;
             break;
         }
@@ -227,11 +236,8 @@ function enwords_checkbox_open_b(csname,cstype){
         ocheckbox[0].checked=true;
     }
     
-    for (var blxl=0;blxl<ocheckbox.length;blxl++){
-        if (ocheckbox[blxl].checked){
-            open_link_en_b(cstype,ocheckbox[blxl].value);
-        }
-    }
+    var blxl=0;
+    sub_enwords_checkbox_open_b_one();
 }
 
 function open_link_en_b(cstype,csword){
@@ -241,7 +247,7 @@ function open_link_en_b(cstype,csword){
             break;
         case 'c':
             window.open('https://www.collinsdictionary.com/dictionary/english/'+encodeURIComponent(csword.split(' ').join('-')));
-            break;                    
+            break;
         case 'd':
             window.open('http://dict.cn/'+encodeURIComponent(csword));
             break;

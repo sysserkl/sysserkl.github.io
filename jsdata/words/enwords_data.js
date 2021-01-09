@@ -1,5 +1,9 @@
 //单词库
 var enwords=[
+["XVII", "[ˈsɛv(ə)nˈtin] [ˌsev(ə)nˈtiːn]", "n. 罗马数字十七；the cardinal number that is the sum of sixteen and one; a Roman numeral representing the number seventeen (17); adj. 十七的；being one more than sixteen"],
+["XVI", "[ˈsɪksˈtiːn] [ˌsɪkˈstiːn]", "n. 十六；a Roman numeral representing the number sixteen (16); the cardinal number that is the sum of fifteen and one; adj. 十六的；being one more than fifteen"],
+["antelope", "UK ['æntɪˌləʊp] US ['æntɪˌloʊp] [ˈænt(ə)ˌloʊp] [ˈænt(ə)lˌoʊp]", "n. 羚；羚羊；羚类动物；羚羊皮革；an African or Asian animal, like a deer, that runs very fast; any of various ruminant deerlike mammals (family Bovidae) chiefly of Africa and southwest Asia that have a slender lean build and usually horns directed upward and backward;  any of a group of swift, bovid ruminants usually living in wild herds on the plains of Africa and Asia, including the gnu, impala, and kudu; pronghorn; leather from antelope hide"],
+["aviator", "UK ['eɪviˌeɪtə(r)] US ['eɪviˌeɪtər] [ˈæviˌeɪtər]", "n. 飞行员；飞机驾驶员；a person who flies an aircraft; the operator or pilot of an aircraft and especially an airplane; the pilot of an aeroplane or airship; flyer; flier; a pilot of an airplane or other heavier-than-air aircraft"],
 ["snowshoe", "[ˈsnəʊʃuː]", "n. 雪鞋（平面框式结构，可固定在鞋上，在深雪中行走时穿）；a usually lightweight platform for the foot that is designed to enable a person to walk on soft snow without sinking and that typically consists of an oblong frame crossed with leather thongs or synthetic material; one of a pair of flat frames that you attach to the bottom of your shoes so that you can walk on deep snow without sinking in; a device to facilitate walking on snow, esp a racket-shaped frame with a network of thongs stretched across it; either of a pair of racket-shaped frames of wood, etc. fitted with crosspieces and crisscrossed with strips of leather, etc., worn on the feet to prevent sinking in deep snow; v. 穿着雪鞋走；穿雪鞋行走；to travel on snowshoes; to walk or go using snowshoes; to use snowshoes in walking"],
 ["westernmost", "['westə(r)nməʊst]", "adj. 最西的；最西端的；最西部的；极西的；​located furthest west; furthest to the west; situated or occurring farthest west"],
 ["outmost", "['aʊtˌməʊst]", "adj. 最外面的；最远的；farthest out; most remote; outermost"],
@@ -8117,7 +8121,7 @@ var enwords=[
 ["settler", "['setlər]", "n. 【C】移居者；定居者"],
 ["sevenfold", "UK ['sevn'fəʊld] US ['sevən'foʊld]", "adj. 七倍的；七重的；adv. 七倍地"],
 ["seven", "['sevn]", "num. 七"],
-["seventeen", "[ˌsevn'tiːn]", "num. 十七"],
+["seventeen", "[ˈsɛv(ə)nˈtin] [ˌsev(ə)n'tiːn]", "n. 十七；the cardinal number between sixteen and eighteen; 17; XVII; n. 十七岁；十七个；十七的数[物,人]；十七的记号；something represented by, representing, or consisting of 17 units; adj. 十七的；totaling seven more than ten"],
 ["seventeenth", "[ˌsev(ə)n'tiːnθ]", "num. 17th written as a word; adj. adv. 第十七的(地)；十七分之一的(地)；n. 第十七；十七分之一；one of 17 equal parts of something"],
 ["seventh", "['sevnθ]", "num. 第七；七分之一"],
 ["seventy", "['sevnti]", "七十"],
@@ -8289,7 +8293,7 @@ var enwords=[
 ["sixpence", "['sɪkspəns]", "n. [英]六便士(硬币，1971 年以前使用）；a British coin in use until 1971, worth six old pence; a former British monetary unit equal to six pennies; (plural 'sixpence' or 'sixpences'): a coin worth sixpence"],
 ["sixscore", "['sɪks'skɔː(r)]", "num. 一百二十；adj. 一百二十的"],
 ["six", "[sɪks]", "num. 六"],
-["sixteen", "[ˌsɪks'tiːn]", "num. 十六"],
+["sixteen", "[ˈsɪksˈtiːn] [ˌsɪks'tiːn]", "n. 十六；the cardinal number between fifteen and seventeen; 16; XVI; n. 十六岁；十六点钟；十六个人[物]；十六的记号；something represented by, representing, or consisting of 16 units; adj. 十六的；totaling six more than ten"],
 ["sixteenth", "[ˌsɪks'tiːnθ]", "num. (序数)第十六；十六分之一；16th written as a word; n. 十六分之一；第十六(个)；月的第十六日；【乐】十六分音符；one of 16 equal parts of something; adj. adv. 第十六的/地；十六分之一的/地；(in the position of) the number 16 in a series"],
 ["sixth", "[sɪksθ]", "n. 六分之一；六度音；num. 第六"],
 ["sixtieth", "['sɪkstiəθ]", "num. 第六十；六十分之一；n. 第六十(个)；adj. 第六十的；adv. 第六十"],

@@ -150,4 +150,6 @@ var digest_global=`
 *armistice
 *musketeer
 *chronicle
+*XVII
+*XVI
 `.trim().split('\n');

@@ -258,4 +258,5 @@ var digest_global=`
 *yellowish
 *safekeeping
 *uppermost
+*antelope
 `.trim().split('\n');
