@@ -150,7 +150,8 @@ function check_week_klroutines(){
     if (blstr==thisweek){return;}
     document.getElementById('div_routines_menu').outerHTML='';
     menu_klroutines();
-    count_klplan_b();   //重新计数 - 保留注释
+    show_klroutines();
+    //count_klplan_b();   //重新计数 - 保留注释
 }
 
 function check_klroutines(csid,cscategory){

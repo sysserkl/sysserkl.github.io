@@ -11,4 +11,5 @@ var digest_global=`
 *auctioneer
 *clansman
 *outmost
+*tyrant
 `.trim().split('\n');

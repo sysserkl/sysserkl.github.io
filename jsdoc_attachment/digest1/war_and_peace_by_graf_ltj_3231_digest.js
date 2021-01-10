@@ -152,4 +152,6 @@ var digest_global=`
 *chronicle
 *XVII
 *XVI
+*XIV
+*XV
 `.trim().split('\n');

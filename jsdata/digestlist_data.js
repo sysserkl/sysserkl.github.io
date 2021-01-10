@@ -48,6 +48,7 @@ var digestlist_source_global_b=[
 ["the_english_patient_vintage_international_4023_digest",1],
 ["1984_dong_wu_zhuang_yuan_ywb_186007_digest",1],
 ["zi_zhi_tong_jian_138381_digest",1],
+["into_the_wild_picador_classic_2752_digest",1],
 ["jin_yong_zuo_pin_ji_xajhxdbq4_573536_digest",1],
 ["zi_you_zhu_yi_huo_bhs_228121_digest",1],
 ["li_xiang_guo_yi_cong_ddzzjjxjb2qsxlxflxsfszpjg7lxgcp_1094955_digest",1],
