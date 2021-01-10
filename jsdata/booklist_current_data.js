@@ -13,7 +13,7 @@ var csbooklist_source_global_b=[
 ["song_shi_yan_yi_93402","宋史演义","","3",""],
 ["jin_gu_qi_guan_bao_wlr_207970","今古奇观(抱瓮老人)","","3",""],
 ["little_women_1172","Little Women(Louisa May Alcott)","englishwords,已整理","3",""],
-["er_shi_nian_mu_du_zgxzwjr_308350","二十年目睹之怪现状(吴趼人)","","3",""],
+["er_shi_nian_mu_du_zgxzwjr_308350","二十年目睹之怪现状(吴趼人)","已整理","3",""],
 ["bible_kjv_890","Bible(kjv)","englishwords,圣经,已整理","3",""],
 ["the_war_of_the_worlds_whg_2795","The War of the Worlds(Wells,H. G.)","englishwords,幻想,已整理","3",""],
 ["a_princess_of_mars_1616","A Princess of Mars","englishwords,已整理","3",""],

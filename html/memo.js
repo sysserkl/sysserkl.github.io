@@ -8,12 +8,12 @@ function menu_lt_klmemo(){
     ];
 
     var klmenu_sort=[
-        '<span class="span_menu" onclick="javascript:'+str_t+'klmemo_sort_type_global=\'\';init_lt_klmemo();">名称升序</span>',     
-        '<span class="span_menu" onclick="javascript:'+str_t+'klmemo_sort_type_global=\'0d\';init_lt_klmemo();">名称降序</span>',     
-        '<span class="span_menu" onclick="javascript:'+str_t+'klmemo_sort_type_global=\'1\';init_lt_klmemo();">开始日期升序</span>',     
-        '<span class="span_menu" onclick="javascript:'+str_t+'klmemo_sort_type_global=\'1d\';init_lt_klmemo();">开始日期降序</span>',     
-        '<span class="span_menu" onclick="javascript:'+str_t+'klmemo_sort_type_global=\'2\';init_lt_klmemo();">结束日期升序</span>',     
-        '<span class="span_menu" onclick="javascript:'+str_t+'klmemo_sort_type_global=\'2d\';init_lt_klmemo();">结束日期降序</span>',         
+        '<span class="span_menu" onclick="javascript:'+str_t+'klmemo_sort_type_global=\'0a\';init_lt_klmemo();">名称升序</span>',     
+        '<span class="span_menu" onclick="javascript:'+str_t+'klmemo_sort_type_global=\'0\';init_lt_klmemo();">名称降序</span>',     
+        '<span class="span_menu" onclick="javascript:'+str_t+'klmemo_sort_type_global=\'1a\';init_lt_klmemo();">开始日期升序</span>',     
+        '<span class="span_menu" onclick="javascript:'+str_t+'klmemo_sort_type_global=\'1\';init_lt_klmemo();">开始日期降序</span>',     
+        '<span class="span_menu" onclick="javascript:'+str_t+'klmemo_sort_type_global=\'2a\';init_lt_klmemo();">结束日期升序</span>',     
+        '<span class="span_menu" onclick="javascript:'+str_t+'klmemo_sort_type_global=\'2\';init_lt_klmemo();">结束日期降序</span>',         
     ];
     
     var klmenu_config=[
@@ -102,7 +102,7 @@ function local_storage_2_array_lt_klmemo(do_delete=false){
     }
     blno=Math.min(2,Math.max(0,blno));
     klmemo_global.sort(function (a,b){return a[blno]>b[blno];});
-    if (klmemo_sort_type_global.includes('d')){
+    if (klmemo_sort_type_global.includes('a')){
         klmemo_global.reverse();
     }
     array_2_local_storage_lt_klmemo();
@@ -184,7 +184,7 @@ function draw_lt_klmemo(csno){
         otable.innerHTML=bljg;
     }
     else {
-        document.getElementById('divhtml').insertAdjacentHTML('beforeend','<div id="div_memo_'+csno+'" width=100%>'+bljg+'</div>');
+        document.getElementById('divhtml').insertAdjacentHTML('afterbegin','<div id="div_memo_'+csno+'" width=100%>'+bljg+'</div>\n');
     }
 }
 

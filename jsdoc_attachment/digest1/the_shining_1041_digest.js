@@ -6,4 +6,5 @@ var digest_global=`
 *suppertime
 *pneumonia
 *snowshoe
+*XII
 `.trim().split('\n');

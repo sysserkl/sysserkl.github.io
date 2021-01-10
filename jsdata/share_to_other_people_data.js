@@ -24,6 +24,11 @@ var recent_info_list=[
 * [?JavaScript_数组, JSON 数组, JSON]
 </div>
 `],
+["","KLWiki Links",`
+<div class="div_columns_rct">
+* [?klwiki_links_code code]
+</div>
+`],
 ["","Linux",`
 <div class="div_columns_rct">
 * [?SSH,_SCP]

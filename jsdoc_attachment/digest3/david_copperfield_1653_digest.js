@@ -110,4 +110,5 @@ var digest_global=`
 *workhouse
 *Copperfield
 *great-grandfather
+*bedstead
 `.trim().split('\n');

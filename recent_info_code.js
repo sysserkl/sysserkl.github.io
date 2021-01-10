@@ -234,8 +234,8 @@ function clear_cache_all_klrecent(){
 }
 
 function search_klrecent(cskey='',showhtml=false){
-    var bljg='';
-    var bljgtop='';
+    var bljg=[];
+    var bljgtop=[];
     var title_list=[];
     recent_info_list.reverse();
 
@@ -248,6 +248,7 @@ function search_klrecent(cskey='',showhtml=false){
     var a_name_list=[];
     var a_name_asc='';
     var tablewidth=(ismobile_b()?'100%':'80%');
+    var blxl=0;
     for (let item of recent_info_list){
         if (cskey!==''){
             var blfound=str_reg_search_b(item,cskey,isreg);
@@ -256,7 +257,7 @@ function search_klrecent(cskey='',showhtml=false){
             }
             if (blfound===false){continue;}
         }
-        if (bljg.includes(item[0]) && item[0]!==""){continue;}
+        //if (bljg.includes(item[0]) && item[0]!==""){continue;} //暂时保留 - 保留注释
 
         a_name_asc=div_title_href_id_b(item,a_name_list);
         a_name_list.push(a_name_asc);
@@ -274,21 +275,26 @@ function search_klrecent(cskey='',showhtml=false){
         var blstr=div_title_href_b(item,false,true,a_name_asc,'title_klrecent');
         if (item[1].substring(0,4)=='[置顶]'){
             item[1]='📢 '+item[1].substring(4,);
-            bljgtop=bljgtop+blstr;
+            bljgtop.push(blstr);
         }
         else {
-            bljg=bljg+blstr;
+            bljg.push(blstr);
+        }
+        blxl=blxl+1;
+        if (blxl>=10000){
+            bljg.push(div_title_href_b(['','...超长省略...'],false,true,a_name_asc,'title_klrecent'));
+            break;
         }
     }
     
-    bljg=menu_klrecent(title_list)+bljgtop+bljg;
+    var result_str=menu_klrecent(title_list)+bljgtop.join('\n')+bljg.join('\n');
     if (showhtml){
         var odiv=document.getElementById('div_rct_content');
         if (odiv){
-            odiv.innerHTML=bljg;
+            odiv.innerHTML=result_str;
         }
     }
-    return bljg;
+    return result_str;
 }
 
 function menu_klrecent(title_list){
