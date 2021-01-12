@@ -123,7 +123,7 @@ function history_klrecent(){
         for (let acol of item){
             str_t=str_t+' '+acol;
         }
-        bljg=bljg+div_title_href_b(['',str_t],'',true);
+        bljg=bljg+div_title_href_b(['',str_t],false,true);
     }
     document.getElementById('divhtml').innerHTML=bljg+'<p align=center>('+recent_info_title_global.length+')</p>'; 
 }
@@ -178,7 +178,7 @@ function more_tools_klrecent(){
     bljg=bljg+'<a class="a_oblong_box" href="javascript:void(null);" onclick="javascript:local_storage_import_klrecent();">导入 localStorage</a>';
     bljg=bljg+'</p>';
     bljg=bljg+'<div id="div_localstorage" style="margin-top:0.5rem;"></div>';
-    return div_title_href_b(['','Tools:',bljg],'',true);
+    return div_title_href_b(['','Tools:',bljg],false,true);
 }
 
 function local_storage_import_klrecent(){
@@ -267,7 +267,7 @@ function search_klrecent(cskey='',showhtml=false){
         else if (item[0]!==''){
             title_list.push([item[0],a_name_asc]);
         }
-        else {
+        else if (item[2]!=='') {
             title_list.push([item[2].substring(0,20),a_name_asc]);
         }
         
@@ -299,14 +299,14 @@ function search_klrecent(cskey='',showhtml=false){
 
 function menu_klrecent(title_list){
     if (showmenu_rct_global===false){return '';}
-    var menu_str='';
+    var menu_t=[];
     var blxl=1;
     for (let item of title_list){
-        menu_str=menu_str+'<p style="font-size:1.05rem;line-height:1.35rem;margin:0.3rem 0;">'+blxl+'. <a href="#'+item[1]+'"'+(blxl%2==0?' style="background-color:'+scheme_global['button']+';':'')+'" onclick="javascript:this.style.backgroundColor=\''+scheme_global["pink"]+'\';">'+item[0]+'</a></p>';
+        menu_t.push('<p style="font-size:1.05rem;line-height:1.35rem;margin:0.3rem 0;">'+blxl+'. <a href="#'+item[1]+'"'+(blxl%2==0?' style="background-color:'+scheme_global['button']+';':'')+'" onclick="javascript:this.style.backgroundColor=\''+scheme_global["pink"]+'\';">'+item[0]+'</a></p>');
         blxl=blxl+1;
     }
-    if (menu_str!==''){
-        return div_title_href_b(['',"<b>Menu</b>",menu_str]);
+    if (menu_t.length>0){
+        return div_title_href_b(['','<span class="span_link" style="font-weight:bold;" onclick="javascript:popup_show_hide_b(\'div_menu_rct\');">Menu</span>','<div id="div_menu_rct" style="display:block;">'+menu_t.join('\n')+'</div>'],false);
     }
     else {
         return '';

@@ -12,4 +12,5 @@ var digest_global=`
 *clansman
 *outmost
 *tyrant
+*streambed
 `.trim().split('\n');

@@ -27,6 +27,7 @@ var recent_info_list=[
 ["","KLWiki Links",`
 <div class="div_columns_rct">
 * [?klwiki_links_code code]
+* [?klwiki_links_internet internet]
 </div>
 `],
 ["","Linux",`

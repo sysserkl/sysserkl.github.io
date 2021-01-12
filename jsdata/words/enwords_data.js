@@ -1,5 +1,9 @@
 //单词库
 var enwords=[
+["lionlike", "['laɪənˌlaɪk]", "adj. 狮子般的；similar to or resembling a lion"],
+["unaltered", "[ʌn'ɔːltə(r)d]", "adj. 未改变的；未被改变的；不变的；照旧的；依然如此的；that has not changed or been changed; not changed into something else especially deliberately: not altered; remaining in its initial state; adj. （动物）未阉割的；(of an animal) not neutered"],
+["streambed", "['striːmˌbed]", "n. 河床；the channel occupied or formerly occupied by a stream; the channel in which a stream flows or has flowed"],
+["ecologist", "UK [ɪ'kɒlədʒɪst] US [ɪ'kɑːlədʒɪst]", "n. 生态学家；生态保护论者；a scientist who studies ecology; a scholar of ecology; a person who studies the natural relationships between the air, land, water, animals, plants, etc.; a person who studies the relationship between living things and their environment"],
 ["eastwardly", "['iːstwə(r)dli]", "adj. adv. 向东的(地)；从东方的(地)；来自东方的(地)；toward or from the east: easterly; having an eastward direction or situation; coming from the east"],
 ["bedstead", "['bedˌsted]", "n. （旧式）床架；the wooden or metal frame of an old-fashioned type of bed; the framework of a bed; the framework of a bed, usually including a headboard and springs but excluding the mattress and other coverings; a framework for supporting the bedspring and mattress of a bed"],
 ["XII", "[twɛlv]", "n. (罗马数字)十二；Roman numeral twelve (12); the cardinal number that is the sum of eleven and one; n. (especially in the names of aristocracy) the twelfth; adj. 十二的；denoting a quantity consisting of 12 items or units"],

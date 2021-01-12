@@ -352,10 +352,10 @@ function book_category_b(csid,otherlists=[],cstag=''){
     for (let item of list_t){
         if (item==''){continue;}
         if (item==cstag){
-            bljg=bljg+'<a href="'+blsite+'?_tag'+item+'" style="color:red;">'+item+'</a> ';
+            bljg=bljg+'<a class="a_book_category" href="'+blsite+'?_tag'+item+'" style="color:red;">'+item+'</a> ';
         }
         else {
-            bljg=bljg+'<a href="'+blsite+'?_tag'+item+'">'+item+'</a> ';
+            bljg=bljg+'<a class="a_book_category" href="'+blsite+'?_tag'+item+'">'+item+'</a> ';
         }
     }
 	var tmp_o=document.getElementById(csid);
@@ -378,7 +378,63 @@ function books_id2name_b(bookid){
     return str_t;
 }
 
-function books_init_b(){
+function booklist_source_config_b(is_digest=false){
+    var last_book=local_storage_get_b('reader_lastbook',-1,true);
+    var marked_set=new Set();
+    for (let item of last_book){
+        var list_t=item.split('&');
+        if (list_t.length>=2){
+            marked_set.add(list_t[1]);
+        }
+    }
+    
+    var temp_digest_set=new Set();
+    var list_t=local_storage_get_b('digest_temp_txtlistsearch',-1,true);
+    for (let item of list_t){
+        temp_digest_set.add(item.split(':')[0]);
+    }
+
+    var type_list=[['P','🏳P'],['L','🏳L'],['*','🏳E']];
+    for (let blxl=0;blxl<csbooklist_source_global_b.length;blxl++){
+        var item=csbooklist_source_global_b[blxl];
+        if (marked_set.has(item[0])){
+            csbooklist_source_global_b[blxl][2]=csbooklist_source_global_b[blxl][2]+',🔖';
+        }
+        if (temp_digest_set.has(item[0])){
+            csbooklist_source_global_b[blxl][2]=csbooklist_source_global_b[blxl][2]+',📝';
+        }
+        for (let one_type of type_list){
+            if (item[4].includes(one_type[0])){
+                csbooklist_source_global_b[blxl][2]=csbooklist_source_global_b[blxl][2]+','+one_type[1];
+            }        
+        }
+    }
+    
+    if (is_digest){
+        var list_t=[];
+        for (let one_digest of digestlist_source_global_b){
+            for (let one_book of csbooklist_source_global_b){
+                if (one_book[0]+'_digest'==one_digest[0]){
+                    one_book[0]=one_book[0]+'_digest';
+                    one_book[3]='digest'+one_digest[1];
+                    list_t.push(one_book);
+                    break;
+                }
+            }
+        }
+        csbooklist_source_global_b=[].concat(list_t);    
+    }
+
+    csbooklist_source_global_b.sort(function(a,b){return zh_sort_b(a,b,false,1);});
+
+    local_storage_today_b('booklist_statistics',40,csbooklist_source_global_b.length,'/');
+    var list_t=local_storage_get_b('booklist_statistics',-1,true);
+    if (list_t.length>30){
+        local_storage_squash_b('booklist_statistics',list_t,8,0,0.5);
+    }
+}
+
+function books_init_b(){        
     csbookno_global_b=-1;
     csbookno2_global_b=-1;
     // csbooklist_sub_global_b 是 csbooklist_source_global_b 的子集 - 保留注释
@@ -394,14 +450,6 @@ function books_init_b(){
     //for (let blxl=1;blxl<=4;blxl++){
         //csbooklist_source_global_b.push(["klwiki"+("0"+blxl).slice(-2),"KLWiki"+("0"+blxl).slice(-2)+"*","KLWiki0","2"]);
     //}
-
-    csbooklist_source_global_b.sort(function(a,b){return zh_sort_b(a,b,false,1);});
-
-    local_storage_today_b('booklist_statistics',40,csbooklist_source_global_b.length,'/');
-    var list_t=local_storage_get_b('booklist_statistics',-1,true);
-    if (list_t.length>30){
-        local_storage_squash_b('booklist_statistics',list_t,8,0,0.5);
-    }
 }
 
 function load_current_book_b(){

@@ -2340,6 +2340,19 @@ function digest_temp_load_kltxt_b(){
     digest_enwords_get_book_b();    //添加英语单词 - 保留注释
 }
 
+//function bookmarks_clear_temp_digest_category_kltxt_b(){
+    //var blstr=local_storage_get_b('digest_temp_txtlistsearch').trim();
+    //if (blstr==''){
+        //var oas=document.querySelectorAll('span#span_book_category a.a_book_category');
+        //for (let one_a of oas){
+            //if (one_a.innerText=='📝'){
+                //one_a.parentNode.removeChild(one_a);
+                //break;
+            //}
+        //}
+    //}
+//}
+
 function fix_divhtml2(do_fix=true,ospan=false){
     var otemp=document.getElementById('div_temp_space');
     if (otemp){
@@ -2575,39 +2588,6 @@ function digest_temp_update_kltxt_b(){
             }        
         }
         document.getElementById('span_current_book_temp_digest_count').innerHTML='('+blno+')';
-    }
-}
-
-function add_tag_for_marked_books_kltxt_b(){
-    var last_book=local_storage_get_b('reader_lastbook',-1,true);
-    var marked_set=new Set();
-    for (let item of last_book){
-        var list_t=item.split('&');
-        if (list_t.length>=2){
-            marked_set.add(list_t[1]);
-        }
-    }
-    
-    var temp_digest_set=new Set();
-    var list_t=local_storage_get_b('digest_temp_txtlistsearch',-1,true);
-    for (let item of list_t){
-        temp_digest_set.add(item.split(':')[0]);
-    }
-
-    var type_list=[['P','🏳P'],['L','🏳L'],['*','🏳E']];
-    for (let blxl=0;blxl<csbooklist_source_global_b.length;blxl++){
-        var item=csbooklist_source_global_b[blxl];
-        if (marked_set.has(item[0])){
-            csbooklist_source_global_b[blxl][2]=csbooklist_source_global_b[blxl][2]+',🔖';
-        }
-        if (temp_digest_set.has(item[0])){
-            csbooklist_source_global_b[blxl][2]=csbooklist_source_global_b[blxl][2]+',📝';
-        }
-        for (let one_type of type_list){
-            if (item[4].includes(one_type[0])){
-                csbooklist_source_global_b[blxl][2]=csbooklist_source_global_b[blxl][2]+','+one_type[1];
-            }        
-        }
     }
 }
 

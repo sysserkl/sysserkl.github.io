@@ -46,6 +46,14 @@ function args_enbook(){
     }
 }
 
+function space2underline_enbook(){
+    if (confirm("是否替换单词间空格为下划线？")==false){return;}
+    var otextarea=document.getElementById('textarea_new_words');
+    var blstr=otextarea.value.trim();
+    blstr=blstr.replace(new RegExp(/([a-z]) +([a-z])/,'ig'),'$1_$2');
+    otextarea.value=blstr;
+}
+
 function new_words_form_enbook(){
     var bljg='<p>第一组</p>';
     bljg=bljg+'<textarea id="textarea_new_words"></textarea>';
@@ -58,6 +66,7 @@ function new_words_form_enbook(){
     bljg=bljg+'<span class="aclick" onclick="javascript:show_sentence_kle(3,true);">显示少量例句</span> ';    
     bljg=bljg+'<span class="aclick" onclick="javascript:words_sort_count_enbook();">单词排序</span> ';
     bljg=bljg+'<span class="aclick" onclick="javascript:textarea_shift_enbook();">对调</span> ';    
+    bljg=bljg+'<span class="aclick" onclick="javascript:space2underline_enbook();">替换单词间空格为下划线</span> ';        
     bljg=bljg+'<br />'+checkbox_kl_b('remove_square','删除方括号[](否则方括号中的内容视为音标而不收录')+' ';
     bljg=bljg+checkbox_kl_b('newwords_one_textarea','WIKI格式单词放在一个编辑框内','',true);
     bljg=bljg+' <span id="span_book_lines_count"></span>';
