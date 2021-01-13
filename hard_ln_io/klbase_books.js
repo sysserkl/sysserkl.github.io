@@ -348,9 +348,12 @@ function book_category_b(csid,otherlists=[],cstag=''){
     else {
         var blsite='reader.htm';
     }
-    
+
+    var blstr=local_storage_get_b('digest_temp_txtlistsearch').trim();
+
     for (let item of list_t){
         if (item==''){continue;}
+        if (item=='📝' && blstr==''){continue;} //无临时摘要则不显示临时摘要图标，但 csbooklist_source_global_b 中书籍的 tag 中还有 📝 标记 - 保留注释
         if (item==cstag){
             bljg=bljg+'<a class="a_book_category" href="'+blsite+'?_tag'+item+'" style="color:red;">'+item+'</a> ';
         }
@@ -435,6 +438,7 @@ function booklist_source_config_b(is_digest=false){
 }
 
 function books_init_b(){        
+    //以下变量为全局变量，不加 var 或 let - 保留注释
     csbookno_global_b=-1;
     csbookno2_global_b=-1;
     // csbooklist_sub_global_b 是 csbooklist_source_global_b 的子集 - 保留注释
@@ -443,13 +447,7 @@ function books_init_b(){
     filelist=[];
     filelist2=[];
     menulist=[];
-    //menulist2=[];
     digest_global=[];
-    //digest2_global=[];
-    //以上变量不加 var 或 let - 保留注释
-    //for (let blxl=1;blxl<=4;blxl++){
-        //csbooklist_source_global_b.push(["klwiki"+("0"+blxl).slice(-2),"KLWiki"+("0"+blxl).slice(-2)+"*","KLWiki0","2"]);
-    //}
 }
 
 function load_current_book_b(){

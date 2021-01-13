@@ -17,7 +17,20 @@ function sentence_new_words_klsnews(){
     for (let item of ospans){
         list_t.push(item.innerText);
     }
-    get_new_words_arr_enbook(2,list_t.join('\n'),ospans,4,true,true);
+    get_new_words_arr_enbook(2,list_t.join('\n'),ospans,4,true,true,'sentence_check_link_and_style_klsnews()');
+}
+
+function sentence_check_link_and_style_klsnews(){
+    var ospans=document.querySelectorAll('span.span_content');
+    for (let item of ospans){
+        var oa=item.querySelector('a.a_news_link');
+        if (oa){
+            if (oa.innerText==''){
+                oa.innerText='(link)';
+            }
+        }
+    }
+    masonrydiv_klsnews();
 }
 
 function sites_compare_sort_klsnews(sort_type){
@@ -594,7 +607,7 @@ function words_translate_klsnews(){
     if (checkbox_kl_value_b('input_enwords')){
         var enwords_temp=[];
         var enwords_temp_no=[];
-        for (var blxl=0;blxl<enwords.length;blxl++){
+        for (let blxl=0;blxl<enwords.length;blxl++){
             if (enwords_easy.includes(enwords[blxl][0].toLowerCase())){
                 continue;
             }
@@ -603,7 +616,7 @@ function words_translate_klsnews(){
         }
         var odiv2as=document.querySelectorAll('a.a_news_link');
         var bltotal=0;
-        for (var blxl=odiv2as.length-1;blxl>=0;blxl--){
+        for (let blxl=odiv2as.length-1;blxl>=0;blxl--){
             //单词总数控制 - 保留注释
             if (bltotal>50){break;}
             var str_t=odiv2as[blxl].innerText;
@@ -614,7 +627,7 @@ function words_translate_klsnews(){
                     continue;
                 }
                 var bly=0;
-                for (var blx in list_t){
+                for (let blx=0;blx<list_t.length;blx++){
                     if (list_t[blx]=='' || enwords_easy.includes(list_t[blx]) || enwords_easy.includes(list_t[blx].toLowerCase())){
                         continue;
                     }

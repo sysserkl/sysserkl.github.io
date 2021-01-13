@@ -57,4 +57,5 @@ var digest_global=`
 *equilibrium
 *depositary
 *depository
+*VIII
 `.trim().split('\n');

@@ -148,7 +148,7 @@ function wordtypes_enbook(blitem){
 	return array_unique_b(bltmparr);
 }
 
-function get_new_words_arr_enbook(cstype,csstr='',csobjects=false,maxlength=3,addline=false,append_parent=false){
+function get_new_words_arr_enbook(cstype,csstr='',csobjects=false,maxlength=3,addline=false,append_parent=false,execstring=''){
     //cstype 1 全部单词 2 未收录 3 已收录 4 wiki 5 js - 保留注释
     //csobjects 在 selenium bible mediawiki_common 等中被调用 - 保留注释
     //------------------
@@ -172,7 +172,7 @@ function get_new_words_arr_enbook(cstype,csstr='',csobjects=false,maxlength=3,ad
             var new_line='';
             var words_list=oldstr.match(/[a-zA-Z\-']+/g) || [];
             if (words_list.length==0){continue;}
-            for (let one_new_word of new_words_set){               
+            for (let one_new_word of new_words_set){
                 if (!words_list.includes(one_new_word)){continue;}
 
                 var oldhtml=item.innerHTML;
@@ -200,6 +200,14 @@ function get_new_words_arr_enbook(cstype,csstr='',csobjects=false,maxlength=3,ad
                     item.parentNode.insertAdjacentHTML('afterend','<p class="p_new_word_search_links" style="line-height:250%;">'+new_line+'</p>');
                 }
             }
+        }
+        if (execstring!==''){
+            try {
+                eval(execstring);
+            }
+            catch (error) {
+                console.log('get_new_words_arr_enbook',error);
+            }                 
         }
         console.log('sub_get_new_words_arr_objects_enbook() 费时：'+(performance.now() - t0) + " milliseconds");
     }

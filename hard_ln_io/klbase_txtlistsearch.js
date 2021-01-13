@@ -2164,7 +2164,7 @@ function import_book_kltxt_b(cskeys,csrandom=false){
             
             if (blfound===false){
                 //此次添加不在数组中的书籍 - 保留注释
-                //csbookname_global 格式：id-name-jsdoc号-是否解密
+                //csbookname_global 格式：id-name-jsdoc号-是否解密 - 保留注释
                 var list_t=csbookname_global.split('-');
                 csbookname_global=list_t[0];
                 var bname=csbookname_global;
@@ -2186,7 +2186,6 @@ function import_book_kltxt_b(cskeys,csrandom=false){
         }
     }
     import_book_js_b();
-    //var csbookid=csbooklist_sub_global_b[csbookno_global_b][0];
     if (csbooklist_sub_global_b.length>0){
         document.getElementById('booktitle').innerHTML=(parseInt(csbookno_global_b)+1)+'.'+csbooklist_sub_global_b[csbookno_global_b][1]+' <span id="linecount" style="font-size:0.7rem;font-style: italic;"></span>';
         document.getElementById('readingdata').innerHTML=' - 正在读取数据...';
@@ -2339,19 +2338,6 @@ function digest_temp_load_kltxt_b(){
     }
     digest_enwords_get_book_b();    //添加英语单词 - 保留注释
 }
-
-//function bookmarks_clear_temp_digest_category_kltxt_b(){
-    //var blstr=local_storage_get_b('digest_temp_txtlistsearch').trim();
-    //if (blstr==''){
-        //var oas=document.querySelectorAll('span#span_book_category a.a_book_category');
-        //for (let one_a of oas){
-            //if (one_a.innerText=='📝'){
-                //one_a.parentNode.removeChild(one_a);
-                //break;
-            //}
-        //}
-    //}
-//}
 
 function fix_divhtml2(do_fix=true,ospan=false){
     var otemp=document.getElementById('div_temp_space');

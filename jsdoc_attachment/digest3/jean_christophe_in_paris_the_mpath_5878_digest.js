@@ -44,4 +44,5 @@ var digest_global=`
 *confessional
 *orchestral
 *phosphorescence
+*woodpecker
 `.trim().split('\n');
