@@ -1,5 +1,9 @@
 //单词库
 var enwords=[
+["nostalgia", "UK [nɒ'stældʒə, -dʒɪə] US [nɑːˈstældʒə, -dʒiə] [nə'stældʒə] [nəˈstaldʒə]", "n. 乡愁；怀旧之情；怀旧；念旧；向往过去；a sad feeling mixed with pleasure when you think of happy times in the past; longing for home or family; a longing to go back to one's home, home town, or homeland; the state of being homesick: homesickness; a wistful or excessively sentimental yearning for return to or of some past period or irrecoverable condition, also: something that evokes nostalgia; a longing for something far away or long ago or for former happy circumstances; a bittersweet yearning for the things of the past"],
+["interviewee", "UK [ˌɪntəvjuː'iː] US [ˌɪntərvjuːˈiː] [ˈɪntərvjuːˌiː]", "n. 被面试者；被接见者；被采访者；被访问者；the person who answers the questions in an interview; one who is interviewed"],
+["interviewer", "UK [ˈɪntəvjuːə(r)]  US [ˈɪntərvjuːər]", "n. 面试者；（面试时的）主考官；接见者；采访者；the person who asks the questions in an interview; a person who conducts an interview; one (such as a journalist or prospective employer) who obtains information from another by asking a series of questions; n. 门上的窥视孔；a peephole in an entrance door"],
+["anarchist", "UK [ˈænəkɪst] US [ˈænərˌkɪst] [ˈænˌɑrkɪst]", "n. 无政府主义者；a person who believes that laws and governments are not necessary; a person who advocates the abolition of government and a social system based on voluntary cooperation; a person who rebels against any authority, established order, or ruling power; a person who believes in, advocates, or promotes anarchism or anarchy, especially: one who uses violent means to overthrow the established order; a person who causes disorder or upheaval; adj. 无政府主义的；无政府主义者的； (somewhat rare) relating to anarchism or to anarchists, anarchistic"],
 ["VIII", "[eɪt]", "n. (罗马数字)八；a Roman numeral representing the number eight (8); the cardinal number that is the sum of seven and one; n. 第八；(especially in the names of aristocracy) the eighth; adj. 八的；being one more than seven"],
 ["woodpecker", "['wʊdˌpekə(r)]", "n. 啄木鸟；any of numerous birds (family Picidae) with zygodactyl feet, stiff spiny tail feathers used in climbing or resting on tree trunks, a usually extensible tongue, a very hard bill used to drill the bark or wood of trees for insect food or to excavate nesting cavities, and generally showy parti-colored plumage; a bird with a long beak that it uses to make holes in trees when it is looking for insects to eat"],
 ["gaslit", "[ˈɡæsˌlɪt]", "adj. 以煤气灯照明的；illuminated by gaslight; illuminated by burning gas; lighted or as if lighted by gaslight; of or resembling a time, esp. the 1890s, when gaslight was widely used; v. gaslight 的过去式和过去分词；simple past tense and past participle of 'gaslight'"],
@@ -1296,7 +1300,7 @@ var enwords=[
 ["blizzard", "['blɪzərd]", "n. 暴风雪；大量；〈非正式〉暴风雪般的一阵；a snowstorm with very strong winds; a large quantity of things that may seem to be attacking you; a large amount of something that arrives or is produced together in a confusing or badly organized way; n. Blizzard: 暴雪（美国游戏软件制作公司）"],
 ["bloat", "[bləʊt]", "vt. 使肿胀；adj. 肿胀的；n. 膨胀；自傲；(家畜)肠道炎"],
 ["blockhead", "UK ['blɒkhed] US ['blɑːkhed]", "n. 傻瓜；笨蛋；a stupid person"],
-["blockhouse", "UK ['blɒkhaʊs] US ['blɑːkhaʊs]", "n. 木堡；防舍；碉堡"],
+["blockhouse", "UK ['blɒkhaʊs] US ['blɑːkhaʊs]", "n. 木堡；碉堡；防舍"],
 ["block", "UK [blɒk] US [blɑːk]", "n. 木块；石块；大楼；街区；阻塞(物)；障碍(物)；一组；v. 阻塞"],
 ["blogger", "['blɒɡə(r)]", "n. 写日志(部落格)的人"],
 ["blogosphere", "UK ['blɒɡəsfɪə(r)] US ['blɑːɡəsfɪr]", "n. 博客圈；博客世界"],
@@ -7286,7 +7290,7 @@ var enwords=[
 ["publication", "[ˌpʌblɪ'keɪʃn]", "n. 出版；出版物；发行；公布；发表"],
 ["publicise", "['pʌblɪsaɪz]", "vt. 宣传；宣扬；推广；传播；=publicize(美)"],
 ["publicize", "['pʌblɪsaɪz]", "v. 宣传；宣扬；推广；传播；公布；广告；to make something known to the public; to advertise something"],
-["publicly", "['pʌblɪkli]", "adv. 公开地；公然地；以公众名义"],
+["publicly", "['pʌblɪkli]", "adv. 公开地；公然地；以公众名义地"],
 ["public", "['pʌblɪk]", "adj. 公众的；公共的；公开的；n. 民众；公众；大众"],
 ["publisher", "['pʌblɪʃə(r)]", "n. 出版社；出版者；出版人（或机构）；发行人（或机构）；a person or company that prepares and prints books, magazines, newspapers or electronic products and makes them available to the public; one that publishes something, especially: a person or corporation whose business is publishing"],
 ["publish", "['pʌblɪʃ]", "v. 出版；发行；公开发表"],

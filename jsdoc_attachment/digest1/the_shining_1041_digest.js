@@ -7,4 +7,7 @@ var digest_global=`
 *pneumonia
 *snowshoe
 *XII
+*nostalgia
+*interviewee
+*interviewer
 `.trim().split('\n');

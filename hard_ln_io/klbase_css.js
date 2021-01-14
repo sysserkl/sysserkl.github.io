@@ -720,7 +720,7 @@ function div_title_href_id_b(item,id_list){
     return bltype+blhref_length+'_'+bltitle_length+'_'+a_name_asc;
 }
 
-function div_title_href_b(item,csfsize='',underline=false,csid='',fnname=''){ //依赖klbase_wiki.js - 保留注释
+function div_title_href_b(item,csfsize='',underline=false,csid='',fnname='',item2_nofomat=false){ //依赖klbase_wiki.js - 保留注释
     if (csfsize===''){
         csfsize='1rem';
     }
@@ -742,7 +742,12 @@ function div_title_href_b(item,csfsize='',underline=false,csid='',fnname=''){ //
 
     if (item.length>=3){
         if (item[2]!==""){
-            var blcontent=wiki_all_format_b(item[2],"",-1,underline);
+            if (item2_nofomat){
+                var blcontent=item[2];
+            }
+            else {
+                var blcontent=wiki_all_format_b(item[2],"",-1,underline);
+            }
             if (csfsize!==false){
                 blcontent='<span style="font-size:'+csfsize+';">'+blcontent+'</span>';            
             }

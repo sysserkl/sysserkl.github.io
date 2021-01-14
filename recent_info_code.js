@@ -48,10 +48,11 @@ function init_klrecent(){
         document.getElementById('span_title').innerText=recent_info_title_global[0][0];
     }
 
-    var bljg=search_klrecent();
+    recent_info_list.reverse();
+    var bljg=search_klrecent('',false);
     var blinput='';
     if (recent_info_list.length>10){
-        blinput='<p style="margin-left:2rem;"><input type="text" id="input_search" placeholder="search" onkeyup="javascript:if (event.key==\'Enter\'){search_klrecent(this.value,true);}"/></p>';
+        blinput='<p style="margin-left:2rem;"><input type="text" id="input_search" placeholder="search" onkeyup="javascript:if (event.key==\'Enter\'){search_klrecent(this.value,true);}"/></p>\n<div id="div_recent_search" style="font-size:1rem;line-height:2rem;margin-left:2rem;margin-top:0.5rem;"></div>';
     }
     
     var blquote='';
@@ -77,7 +78,8 @@ function init_klrecent(){
         title_klrecent(location.href);
     }
     input_with_x_b('input_search',17.5);
-
+    recent_search_b('recent_search_recent_info','','search_klrecent','div_recent_search',[],20,false);
+    
     if (recent_info_list.length>0){
         top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.85rem':'2rem'));
     }
@@ -233,18 +235,23 @@ function clear_cache_all_klrecent(){
     }
 }
 
-function search_klrecent(cskey='',showhtml=false){
+function search_klrecent(cskey='',showhtml=true){
     var bljg=[];
     var bljgtop=[];
     var title_list=[];
-    recent_info_list.reverse();
 
+    recent_search_b('recent_search_recent_info',cskey,'search_klrecent','div_recent_search',[],20,false);
+    
+    var oinput=document.getElementById('input_search');
+    if (oinput){
+        oinput.value=cskey;
+    }
     var isreg=false;
     if (cskey.slice(-4,)=='(:r)'){
         isreg=true;
         cskey=cskey.slice(0,-4);
     }
-    
+
     var a_name_list=[];
     var a_name_asc='';
     var tablewidth=(ismobile_b()?'100%':'80%');
@@ -306,7 +313,7 @@ function menu_klrecent(title_list){
         blxl=blxl+1;
     }
     if (menu_t.length>0){
-        return div_title_href_b(['','<span class="span_link" style="font-weight:bold;" onclick="javascript:popup_show_hide_b(\'div_menu_rct\');">Menu</span>','<div id="div_menu_rct" style="display:block;">'+menu_t.join('\n')+'</div>'],false);
+        return div_title_href_b(['','<span class="span_link" style="font-weight:bold;" onclick="javascript:popup_show_hide_b(\'div_menu_rct\');">Menu</span>','<div id="div_menu_rct" style="display:block;">'+menu_t.join('\n')+'</div>'],false,false,'','',true);
     }
     else {
         return '';

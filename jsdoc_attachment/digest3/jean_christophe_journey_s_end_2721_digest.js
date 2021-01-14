@@ -31,4 +31,5 @@ var digest_global=`
 *victoriously
 *wheresoever
 *common sense
+*anarchist
 `.trim().split('\n');
