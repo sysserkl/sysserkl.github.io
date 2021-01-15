@@ -504,4 +504,5 @@ var digest_global=`
 *Quebec
 *luminescent
 *chronicler
+*daylong
 `.trim().split('\n');

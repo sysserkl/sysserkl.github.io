@@ -1,5 +1,9 @@
 //单词库
 var enwords=[
+["walnut", "UK ['wɔːlˌnʌt] US [ˈwɔlˌnʌt] [ˈwɔlnət]", "n. 核桃；核桃木；胡桃；胡桃木；核桃色；茶色；any juglandaceous deciduous tree of the genus 'Juglans', of America, SE Europe, and Asia, esp 'J. regia', which is native to W Asia but introduced elsewhere. They have aromatic leaves and flowers in catkins and are grown for their edible nuts and for their wood; the light-brown nut of the walnut tree that has a rough surface and a hard round shell in two halves; the furrowed nut of any of a genus (Juglans of the family Juglandaceae, the walnut family) of deciduous trees, especially: the large edible nut of an English walnut; a tree that bears walnuts; the tree on which walnuts grow; the brown wood of the walnut tree, used in making furniture; the wood of a walnut that is often used for cabinetmaking and veneers; a moderate reddish brown; a light yellowish-brown colour; adj. 胡桃科植物的；核桃木制成的；核桃色的；designating a family (Juglandaceae, order Juglandales) of dicotyledonous trees native to the temperate parts of the Northern Hemisphere, including the black walnut, English walnut, pecan, and hickory; made from the wood of a walnut tree; of the colour walnut; n. Walnut: city east of Los Angeles in southwestern California, population: 29,172"],
+["headmaster", "UK [ˌhed'mɑːstə(r)] US [ˌhedˈmæstər] [ˈhedˈmæstər, -ˈmɑːstər]", "n. （尤指私立学校的）校长；a male teacher who is in charge of a school, especially a private school; (chiefly Britain) a male school principal; a person who is the leader of a private school; a man heading the staff of a private school"],
+["daylong", "UK ['deɪlɒŋ] US ['deɪlɔːŋ] [ˈdeɪˌlɔŋ]", "adj. adv. 一整天的(地)；全天的(地)；终日的(地)；lasting all day; through the entire day; all day"],
+["monthlong", "['mʌnθ'lɒŋ]", "adj. 整月的；lasting a month; which lasts a month, or approximately so; continuing for the period of one month"],
 ["nostalgia", "UK [nɒ'stældʒə, -dʒɪə] US [nɑːˈstældʒə, -dʒiə] [nə'stældʒə] [nəˈstaldʒə]", "n. 乡愁；怀旧之情；怀旧；念旧；向往过去；a sad feeling mixed with pleasure when you think of happy times in the past; longing for home or family; a longing to go back to one's home, home town, or homeland; the state of being homesick: homesickness; a wistful or excessively sentimental yearning for return to or of some past period or irrecoverable condition, also: something that evokes nostalgia; a longing for something far away or long ago or for former happy circumstances; a bittersweet yearning for the things of the past"],
 ["interviewee", "UK [ˌɪntəvjuː'iː] US [ˌɪntərvjuːˈiː] [ˈɪntərvjuːˌiː]", "n. 被面试者；被接见者；被采访者；被访问者；the person who answers the questions in an interview; one who is interviewed"],
 ["interviewer", "UK [ˈɪntəvjuːə(r)]  US [ˈɪntərvjuːər]", "n. 面试者；（面试时的）主考官；接见者；采访者；the person who asks the questions in an interview; a person who conducts an interview; one (such as a journalist or prospective employer) who obtains information from another by asking a series of questions; n. 门上的窥视孔；a peephole in an entrance door"],
@@ -7312,7 +7316,7 @@ var enwords=[
 ["puppy", "['pʌpi]", "n. 小狗；自负的小伙子"],
 ["purchase", "['pɜːrtʃəs]", "vt. 购买；n. 购买；购买的物品"],
 ["purchase price", "['pɜːtʃəs praɪs]", "买价；进货价格；the price that is paid for something you buy"],
-["purely", "UK ['pjʊəli] US ['pjʊrli]", "adv. 纯粹地；清白地；纯洁地"],
+["purely", "UK ['pjʊəli] US ['pjʊrli]", "adv. 纯洁地；纯粹地；清白地"],
 ["pure", "UK [pjʊə(r)] US [pjʊr]", "adj. 纯的；纯洁的；纯粹的"],
 ["purification", "[ˌpjʊərɪfɪ'keɪʃn]", "n. 净化；提纯；[宗]涤罪；（犹太妇女按教规在月经后行的）洁净礼；斋戒"],
 ["purify", "UK ['pjʊərɪfaɪ] US ['pjʊrɪfaɪ]", "v. (使）净化；提纯；涤罪；使（某物）洁净；（使）精炼"],

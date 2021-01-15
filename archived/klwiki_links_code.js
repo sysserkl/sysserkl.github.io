@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-01-13 11:09:16 三"],
+["","","","更新日期：2021-01-14 22:17:11 四"],
 ["https://mail.python.org/pipermail/python-list/2005-May/342496.html","20050506 | [HELP] Tkinter Application Minimized to System Tray :)"],
 ["http://m.blog.csdn.net/article/details?id=1811343","20071004 | Tkinter教程之Text(1)篇"],
 ["http://m.blog.csdn.net/article/details?id=1811347","20071004 | Tkinter教程之Text(2)篇"],
@@ -400,6 +400,7 @@ var recent_info_list=[
 ["https://stackoverflow.com/questions/50950359/how-to-count-the-total-number-of-sheets-in-an-excel-file-using-python","20180620 | How to count the total number of sheets in an Excel file using Python - Stack Overflow"],
 ["https://stackoverflow.com/questions/51162636/unicodeencodeerror-ucs-2-codec-cant-encode-characters-in-position-8-8-non-b","20180703 | python - UnicodeEncodeError: 'UCS-2' codec can't encode characters in position 8-8: Non-BMP character not supported in Tk - Stack Overflow"],
 ["https://stackoverflow.com/questions/2676178/joining-relative-urls","20180704 | javascript - joining relative urls? - Stack Overflow"],
+["https://twitter.com/tecmint/status/1017440010189012993","20180713 | Linux Inside: The Ideal Blog for Sysadmins &amp; Geeks on Twitter: \"Choose your weapon.. #Linux #Programming #c++ #java #python #cprogramming… \""],
 ["https://stackoverflow.com/questions/51476300/why-did-pip-upgrade-from-version-10-to-version-18","20180723 | python - Why did pip upgrade from version 10 to version 18? - Stack Overflow"],
 ["https://serverfault.com/questions/926388/how-to-get-current-debian-ubuntu-version-name-in-a-bash-script","20180814 | How to get current Debian/Ubuntu version name in a Bash script - Server Fault"],
 ["https://stackoverflow.com/questions/51944359/python-pptx-to-change-line-color-in-line-chart","20180821 | powerpoint - Python, pptx to change line color in line chart - Stack Overflow"],
@@ -427,6 +428,7 @@ var recent_info_list=[
 ["https://www.solidot.org/story?sid=64234","20200427 | 奇客Solidot | 为什么开发者不使用 Rust？"],
 ["https://stackoverflow.com/questions/14585688/clear-all-polylines-from-leaflet-map","20200610 | javascript - Clear all polylines from leaflet map - Stack Overflow"],
 ["https://stackoverflow.com/questions/30408939/how-to-save-image-from-canvas-with-css-filters","20200620 | javascript - How to save image from canvas with CSS filters - Stack Overflow"],
+["https://my.oschina.net/u/4021301/blog/4394168","20200716 | 微服务开源框架TARS的RPC源码解析 之 初识TARS C++服务端 - TARS基金会的个人空间 - OSCHINA"],
 ["https://stackoverflow.com/questions/63313569/how-to-scale-a-three-js-sprite","20200809 | javascript - How to scale a three.js sprite? - Stack Overflow"],
 ["https://unix.stackexchange.com/questions/610763/execute-a-command-after-some-time-if-no-input-from-user","20200922 | bash - Execute a command after some time if no input from user - Unix &amp; Linux Stack Exchange"],
 ["https://www.cyberciti.biz/tips/linux-unix-get-yesterdays-tomorrows-date.html","20201209 | Getting Yesterday's or Tomorrow's date with bash on Linux / Unix - nixCraft"],

@@ -10,4 +10,6 @@ var digest_global=`
 *nostalgia
 *interviewee
 *interviewer
+*walnut
+*headmaster
 `.trim().split('\n');
