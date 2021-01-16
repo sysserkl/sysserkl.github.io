@@ -58,4 +58,5 @@ var digest_global=`
 *depositary
 *depository
 *VIII
+*fraudulent
 `.trim().split('\n');

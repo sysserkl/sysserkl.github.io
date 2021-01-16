@@ -233,12 +233,12 @@ function form_list_klplan_b(csarray,cstype,plan_id,update_fn_name){
     }
     
     var postpath=postpath_b();
-	var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php" name="form_list_'+cstype+'" target=_blank>\n';
+	var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php?type=list_'+cstype+'" name="form_list_'+cstype+'" target=_blank>\n';
     bljg=bljg+'<textarea name="textarea_list_'+cstype+'" id="textarea_list_'+cstype+'" style="width:90%;height:24rem;">'+list_plans.join('\n')+'</textarea>';
     bljg=bljg+'<p>';
     bljg=bljg+'<span class="aclick" onclick="javascript:document.getElementById(\'divhtml2\').innerHTML=\'\';">关闭</span> ';
     bljg=bljg+'<span class="aclick" onclick="javascript:'+update_fn_name+'(\'textarea_list_'+cstype+'\',\''+plan_id+'\');">更新</span> ';
-    bljg=bljg+textarea_buttons_b('textarea_list_'+cstype,'清空,复制,发送到临时记事本,发送地址')+' 行数：'+list_plans.length;
+    bljg=bljg+textarea_buttons_b('textarea_list_'+cstype,'清空,复制,发送到临时记事本,发送地址','list_'+cstype)+' 行数：'+list_plans.length;
     bljg=bljg+'</p></form>';
     
     bljg=bljg+"<p><b>1.</b> 格式：id 分类 名称 <b>2.</b> id必须唯一，名称可重复 <b>3. </b>忽略元素个数小于3的行 <b>4.</b> 如果前3个元素之一开头为#，则忽略</p>";
@@ -249,12 +249,12 @@ function form_list_klplan_b(csarray,cstype,plan_id,update_fn_name){
 function form_done_klplan_b(cstype,done_id,update_fn_name){
     var done_list=local_storage_get_b(done_id,-1,false);
     var postpath=postpath_b();
-	var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php" name="form_done_'+cstype+'" target=_blank>\n';
+	var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php?type=done_'+cstype+'" name="form_done_'+cstype+'" target=_blank>\n';
     bljg=bljg+'<textarea name="textarea_done_'+cstype+'" id="textarea_done_'+cstype+'" style="width:90%;height:24rem;">'+done_list+'</textarea>';
     bljg=bljg+'<p>';
     bljg=bljg+'<span class="aclick" onclick="javascript:document.getElementById(\'divhtml2\').innerHTML=\'\';">关闭</span> ';
     bljg=bljg+'<span class="aclick" onclick="javascript:'+update_fn_name+'(\'textarea_done_'+cstype+'\',\''+done_id+'\',false);">更新完成项</span> ';
-    bljg=bljg+textarea_buttons_b('textarea_done_'+cstype,'清空,复制,发送到临时记事本,发送地址')+' 行数：'+done_list.split('\n').length;
+    bljg=bljg+textarea_buttons_b('textarea_done_'+cstype,'清空,复制,发送到临时记事本,发送地址','done_'+cstype)+' 行数：'+done_list.split('\n').length;
     bljg=bljg+'</p></form>';
     document.getElementById('divhtml2').innerHTML=bljg;
 }

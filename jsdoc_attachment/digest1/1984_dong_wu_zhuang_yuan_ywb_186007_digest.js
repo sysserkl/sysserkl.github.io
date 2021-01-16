@@ -75,4 +75,7 @@ var digest_global=`
 *Stalin
 *expressionless
 *dustbin
+*supposedly
+*uncomfortably
+*spyhole
 `.trim().split('\n');

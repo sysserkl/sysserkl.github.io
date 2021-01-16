@@ -127,6 +127,7 @@ function tw_kltxt_b(){
 }
 
 function digest_statistics_kltxt_b(){
+    var t0 = performance.now();
 	var start_lineno;
 	var end_lineno;
     var blmax;
@@ -138,28 +139,30 @@ function digest_statistics_kltxt_b(){
     for (let blxl=start_lineno;blxl<end_lineno;blxl++){     
         if (filelist[blxl]==''){continue;}
         if (all_empty){
-            result_t.push('○');
+            result_t.push('<span style="color:grey;margin-left:0.1rem;" title="'+(blxl+1)+'">○</span>');
             continue;
         }
         
-        var blfound='○';
+        var blfound='<span style="color:grey;margin-left:0.1rem;" title="'+(blxl+1)+'">○</span>';
         all_empty=true;
         for (let blno=0;blno<digest_t.length;blno++){
             var one_digest=digest_t[blno];
             if (one_digest==''){continue;}
+            if (one_digest.substring(0,1)=='#'){
+                digest_t[blno]='';
+                continue;
+            }
             all_empty=false;
             if (filelist[blxl].includes(one_digest)){
                 digest_t[blno]='';
-                blfound='●';
+                blfound='<span style="color:green;margin-left:0.1rem;" title="'+(blxl+1)+'">●</span>';
                 break;  
             }
         }
         result_t.push(blfound);
     }
-    var bljg=result_t.join('');
-    bljg=bljg.replace(new RegExp('●','g'),'<div style="position:relative;float:left;margin:0.1rem;font-size:0.8rem;line-height:100%;"><span style="color:green;">●</span></div>');
-    bljg=bljg.replace(new RegExp('○','g'),'<div style="position:relative;float:left;margin:0.1rem;font-size:0.8rem;line-height:100%;"><span style="color:grey;">○</span></div>');    
-    document.getElementById('divhtml').innerHTML=bljg;
+    document.getElementById('divhtml').innerHTML='<p style="line-height:120%;font-size:0.8rem;word-break:break-all;word-wrap:break-word;">'+result_t.join('\n')+'</p>';
+    console.log('digest_statistics_kltxt_b() 费时：'+(performance.now() - t0) + " milliseconds");
 }
 
 function txtmenus_kltxt_b(cstype=''){
@@ -2238,6 +2241,7 @@ function digest_number_2_txt_kltxt_b(){
 }
 
 function digest_lines_kltxt_b(){
+    var t0 = performance.now();
 	var start_lineno;
 	var end_lineno;
     var blmax;
@@ -2248,30 +2252,30 @@ function digest_lines_kltxt_b(){
     var list_t=[];
     var blcount=0;
     digest_number_2_txt_kltxt_b();
-    var digest_list=[].concat(digest_global);
-       
-    var all_empty=false;
-    for (let blxl=start_lineno;blxl<end_lineno;blxl++){
-        if (all_empty){break;}
-        if (filelist[blxl]==''){continue;}
+    
+    var scanned_number=new Set();
+    for (let one_digest of digest_global){
+        if (one_digest=='' || one_digest.substring(0,1)=='#'){continue;}
+
+        var all_scanned=true;
         var blfound=false;
-        
-        all_empty=true;
-        for (let blno=0;blno<digest_list.length;blno++){
-            var one_digest=digest_list[blno];
-            if (one_digest==''){continue;}
-            all_empty=false;
+        for (let blxl=start_lineno;blxl<end_lineno;blxl++){
+            if (scanned_number.has(blxl)){continue;}
+            all_scanned=false;
             if (filelist[blxl].includes(one_digest)){
                 list_t.push([filelist[blxl],blxl]);
-                digest_list[blno]='';
                 blfound=true;
-
+                scanned_number.add(blxl);
                 break;  
             }
         }
         if (blfound){
             blcount=blcount+1;
             if (blcount>=blmax){break;}        
+        }
+        if (all_scanned){
+            console.log('all_scanned');
+            break;
         }
     }
 
@@ -2286,6 +2290,7 @@ function digest_lines_kltxt_b(){
     }
     sup_kleng_words_b();
     digest_show_kltxt_b();
+    console.log('digest_lines_kltxt_b() 费时：'+(performance.now() - t0) + " milliseconds");
 }
 
 function digest_show_kltxt_b(){

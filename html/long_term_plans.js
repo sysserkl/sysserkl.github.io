@@ -152,7 +152,7 @@ function draw_lt_plans(csno){
 
     var blpercent=Math.abs(blcurrent/blcount);
     var blposition=parseInt(blpercent*all_days);
-    var divstyle='position:relative;float:left;margin:0.1rem;font-size:0.8rem;line-height:100%;';
+    //var divstyle='position:relative;float:left;margin:0.1rem;font-size:0.8rem;line-height:100%;';
     var bljg='<tr><td><b>'+(csno+1)+'.';
     bljg=bljg+'<span style="cursor:pointer;" onclick="change_lt_plans(\''+csitem[0]+'\',1);">'+csitem[1]+'</span>';
     bljg=bljg+'</b> <small>[';
@@ -160,22 +160,23 @@ function draw_lt_plans(csno){
     bljg=bljg+'<span style="cursor:pointer;" onclick="change_lt_plans(\''+csitem[0]+'\',5);">终值: '+csitem[5]+'; '+'</span>';    
     bljg=bljg+'<span style="cursor:pointer;" onclick="change_lt_plans(\''+csitem[0]+'\',6);">进度: '+csitem[6]+', '+(blpercent*100).toFixed(2)+'%</span>';
     bljg=bljg+']</small></td></tr>';
-    bljg=bljg+'<tr><td>';
-    bljg=bljg+'<div style="'+divstyle+'"><span style="cursor:pointer;" onclick="change_lt_plans(\''+csitem[0]+'\',2);">'+csitem[2]+'</span></div>';
+    bljg=bljg+'<tr><td style="font-size:0.72rem;line-height:120%;padding:0.1rem;word-break:break-all;word-wrap:break-word;">';
+    bljg=bljg+'<span style="cursor:pointer;" onclick="change_lt_plans(\''+csitem[0]+'\',2);">'+csitem[2]+'</span> ';
 
     for (let blxl=1;blxl<=all_days;blxl++){
         var day_str=date2str_b('/',start_day);
-        var blstr='<span style="color:grey;">○</span>';
+        var list_t=['grey','○'];
         if (blxl<=blposition){
-            blstr='<span style="color:green;">●</span>';
+            list_t=['green','●'];
         }
         if (day_str==today_str){
-            blstr='<span style="color:red;">●</span>';
+            list_t=['red','●'];
         }
-        bljg=bljg+'<div style="'+divstyle+'" title="'+blxl+'. '+day_str+'">'+blstr+'</div>';
+        bljg=bljg+'<span style="color:'+list_t[0]+';margin-right:0.1rem;" title="'+blxl+'. '+day_str+'">'+list_t[1]+'</span>';
+        //bljg=bljg+'<div style="'+divstyle+'" title="'+blxl+'. '+day_str+'">'+blstr+'</div>';
         start_day.setTime(start_day.getTime()+24*60*60*1000);
     }
-    bljg=bljg+'<div style="'+divstyle+'"><span style="cursor:pointer;" onclick="change_lt_plans(\''+csitem[0]+'\',4);">'+csitem[4]+'</span> ('+all_days+'天)</div>';
+    bljg=bljg+'<span style="cursor:pointer;" onclick="change_lt_plans(\''+csitem[0]+'\',4);">'+csitem[4]+'</span> ('+all_days+'天)';
     bljg=bljg+'</td></tr>';
     
     var otable=document.getElementById('table_'+csitem[0]);
