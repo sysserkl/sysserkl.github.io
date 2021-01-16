@@ -12,4 +12,7 @@ var digest_global=`
 *interviewer
 *walnut
 *headmaster
+*psychokinesis
+*self-image
+*peephole
 `.trim().split('\n');
