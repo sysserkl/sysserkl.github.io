@@ -512,20 +512,20 @@ function rearray_kltxt_b(){
     
     var bljg='';
     var newlist_t=[];
-    for (var blxl in filelist){
-        match_t=str_reg_search_b(filelist[blxl],blkey,csreg);
+    for (let item of filelist){
+        match_t=str_reg_search_b(item,blkey,csreg);
         if (match_t){
             if (bljg!==''){
                 newlist_t.push(bljg);
             }
-            bljg=filelist[blxl];
+            bljg=item;
         }
         else {
             if (bljg==''){
-                bljg=bljg+filelist[blxl];
+                bljg=bljg+item;
             }
             else {
-                bljg=bljg+' &lt;br /&gt;'+filelist[blxl];
+                bljg=bljg+' &lt;br /&gt;'+item;
             }
         }
     }
@@ -533,10 +533,10 @@ function rearray_kltxt_b(){
         newlist_t.push(bljg);
     }
 
-    if (newlist_t!==[]){
+    if (newlist_t.length>0){
         filelist=[];
-        for (var blxl in newlist_t){
-            filelist.push(newlist_t[blxl]);
+        for (let item of newlist_t){
+            filelist.push(item);
         }
         document.getElementById('linecount').innerHTML='('+filelist.length+'行)';
     }
@@ -1461,7 +1461,32 @@ function recent_search_kltxt_b(cskeys='',addstyle=false){
     recent_search_b('recent_search_txtlistsearch',cskeys,blfn,'div_recent_search',["&lt;title;.mht",'&lt;title&gt;;.mht|blogspot|evernote|youdao|wordpress\.com(:r)','+http +2018\\d{4}(:r)','&lt;title;avplayer','&lt;title;引用资料;-ref','&lt;title;引用资料;^[0-9]\\.(:r)','&lt;title;{{wikiuploads}}200[2-6]/(:r)','&lt;title;引用资料;^\\d+.*http','([^\\x00-\\xff])\\1\\1(:r)','^[^\\x00-\\xff]{2,10}$(:r)','一|二|三|四|五|六|七|八|九|十|零|〇(:r)','+http +2018\\d{4}(:r)','-klwiki -englishwords','狍 獐 獾 鹿 蛙 野味 兔'],20);
 }
 
-function txtsearch_kltxt_b(csword,csreg,cscontinue){
+function txtsearch_list_kltxt_b(cswordlist,csreg,csmaxlines,start_lineno=0,end_lineno=-1){
+    if (cswordlist.length==0){return [];}
+    if (cswordlist.length==1 && cswordlist[0]==''){return [];}
+	var blcount=0;
+    if (end_lineno==-1){
+        end_lineno=filelist.length;
+    }
+    var result_t=[];
+    for (let blxl=start_lineno;blxl<end_lineno;blxl++){         
+		var bltmp = filelist[blxl];
+		
+		var blfound=str_reg_search_b(bltmp,cswordlist,csreg);
+		if (blfound==-1){
+			break;
+		}
+
+		if (blfound){
+            result_t.push([bltmp,blxl]);
+			blcount=blcount+1;
+			if (blcount>=csmaxlines){break;}
+		}
+	}
+    return result_t;
+}
+
+function txtsearch_kltxt_b(csword,csreg,cscontinue,csmaxlines){
 	var csnum=arguments.length;
 	if (csnum==0){
         var csword=document.getElementById('input_search').value.trim();
@@ -1480,44 +1505,39 @@ function txtsearch_kltxt_b(csword,csreg,cscontinue){
    
     recent_search_kltxt_b(csword+(csreg?'(:r)':''));
 
+    if (csnum<=2){
+        var cscontinue=false;
+    }
     var oinput_continue=document.getElementById('input_continue');
     if (oinput_continue){
         if (csnum<=2){
-            var cscontinue=oinput_continue.checked;
+            cscontinue=oinput_continue.checked;
         }
         oinput_continue.checked=cscontinue;
     }
 
-	if (csword==''){return;}
+	//if (csword==''){return;}
 	
 	var cshideno=document.getElementById('check_hide_no').checked;
+
+    if (csnum<=3){
+        var csmaxlines=false;
+    }
     
-	var start_lineno;
-	var end_lineno;
-    var csmaxlines;
-    [start_lineno,end_lineno,csmaxlines]=start_end_lineno_kltxt_b();
+    var list_t=start_end_lineno_kltxt_b();
+	var start_lineno=list_t[0];
+	var end_lineno=list_t[1];
+    if (csmaxlines===false){
+        csmaxlines=list_t[2];
+    }
+    
     //一开始设置为false，这样才能正确运行 wiki_line_b
 	klwiki_syntaxhighlight_global=false;
 	
-	var blcount=0;
-	var blwordlist=csword.split(' ');
+	var blwordlist=csword.split(' ');   
 
-    var list_t=[];
-    for (let blxl=start_lineno;blxl<end_lineno;blxl++){         
-		var bltmp = filelist[blxl];
-		
-		var blfound=str_reg_search_b(bltmp,blwordlist,csreg);
-		if (blfound==-1){
-			break;
-		}
-
-		if (blfound){
-            list_t.push([bltmp,blxl]);
-			blcount=blcount+1;
-			if (blcount>=csmaxlines){break;}
-		}
-	}
-	var bljg=format_lines_kltxt_b(list_t);
+    var result_t=txtsearch_list_kltxt_b(blwordlist,csreg,csmaxlines,start_lineno,end_lineno);
+	var bljg=format_lines_kltxt_b(result_t);
 
 	var odiv = document.getElementById('divhtml');
 	if (cshideno){
@@ -1547,6 +1567,7 @@ function txtsearch_kltxt_b(csword,csreg,cscontinue){
     sup_kleng_words_b();
     highheight_kltxt_b(blwordlist);
     digest_show_kltxt_b();
+    books_b(false,'txt',book_tag_global);
 }
 
 function highheight_kltxt_b(cswordlist=[]){

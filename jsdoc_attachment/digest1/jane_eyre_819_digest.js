@@ -5,4 +5,5 @@ var digest_global=`
 *colourless
 *Marseilles
 *sceptical
+*unuttered
 `.trim().split('\n');

@@ -259,4 +259,5 @@ var digest_global=`
 *safekeeping
 *uppermost
 *antelope
+*prospector
 `.trim().split('\n');

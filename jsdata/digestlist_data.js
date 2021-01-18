@@ -3,6 +3,7 @@ var digestlist_source_global_b=[
 ["jiu_tang_shu_67933_digest",3],
 ["the_complete_works_of_william_s_3872_digest",3],
 ["little_women_1172_digest",3],
+["the_call_of_the_wild_1731_digest",3],
 ["david_copperfield_1653_digest",3],
 ["bible_kjv_890_digest",3],
 ["the_war_of_the_worlds_whg_2795_digest",3],

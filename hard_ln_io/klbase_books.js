@@ -11,7 +11,7 @@ function book_makelist_b(cstag='all'){
     var list2_t=[];
     if (csbookno2_global_b>=0){
         var list2_t=csbooklist_sub_global_b[csbookno2_global_b];
-    }    
+    }
     csbooklist_sub_global_b=[];
     for (let item of csbooklist_source_global_b){
         if (cstag=='' || cstag=='all'){
@@ -27,10 +27,10 @@ function book_makelist_b(cstag='all'){
         }
     }
     
-    if (list_t!==[]){
+    if (list_t.length>0){
         csbookno_global_b=csbooklist_sub_global_b.indexOf(list_t);
     }    
-    if (list2_t!==[]){
+    if (list2_t.length>0){
         csbookno2_global_b=csbooklist_sub_global_b.indexOf(list2_t);
     }
 }
@@ -427,13 +427,15 @@ function booklist_source_config_b(is_digest=false){
         }
         csbooklist_source_global_b=[].concat(list_t);    
     }
-
+    
     csbooklist_source_global_b.sort(function(a,b){return zh_sort_b(a,b,false,1);});
-
-    local_storage_today_b('booklist_statistics',40,csbooklist_source_global_b.length,'/');
-    var list_t=local_storage_get_b('booklist_statistics',-1,true);
-    if (list_t.length>30){
-        local_storage_squash_b('booklist_statistics',list_t,8,0,0.5);
+    
+    if (is_digest===false){
+        local_storage_today_b('booklist_statistics',40,csbooklist_source_global_b.length,'/');
+        var list_t=local_storage_get_b('booklist_statistics',-1,true);
+        if (list_t.length>30){
+            local_storage_squash_b('booklist_statistics',list_t,8,0,0.5);
+        }
     }
 }
 

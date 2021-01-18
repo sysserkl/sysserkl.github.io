@@ -270,7 +270,6 @@ function wiki_ed2k_magnet_b(csstr,cstyle=""){
             csstr=sub_wiki_ed2k_magnet_b_filesize(csstr);
         }
         else if (csstr.includes('&lt;ed2k name=') && csstr.includes('&lt;/ed2k&gt;')){
-            console.log(2,csstr);
             csstr=csstr.replace(new RegExp(/&lt;ed2k name=(.*?)&gt;(ed2k:\/\/\|.*?\|.*?\|(.*?)\|.*?)&lt;\/ed2k&gt;/,"g"),'<a href="$2">$1</a><filesize>$3</filesize>');
             csstr=sub_wiki_ed2k_magnet_b_filesize(csstr);
         }	
