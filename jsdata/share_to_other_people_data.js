@@ -29,6 +29,7 @@ var recent_info_list=[
 * [?klwiki_links_apple apple]
 * [?klwiki_links_city city]
 * [?klwiki_links_code code]
+* [?klwiki_links_game game]
 * [?klwiki_links_huawei 华为]
 * [?klwiki_links_internet internet]
 * [?klwiki_links_xiaomi 小米]

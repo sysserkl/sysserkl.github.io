@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-01-15 16:48:02 五"],
+["","","","更新日期：2021-01-18 12:36:28 一"],
 ["http://www.cnbeta.com/articles/292345.htm","20140515 | 雷军称曾反复考虑小米平板要不要上市_cnBeta.COM"],
 ["http://www.cnbeta.com/articles/301641.htm","20140616 | 小米3再降价 雷军连发微博：不喜欢的人不要买_cnBeta.COM"],
 ["http://news.sina.com.cn/c/p/2015-06-29/075732031731.shtml","20150629 | 小米公司党委成立 雷军到会致辞_新浪新闻"],
@@ -11,7 +11,6 @@ var recent_info_list=[
 ["http://news.winshang.com/html/062/4597.html","20170902 | 听说雷军有一种傲娇 叫做“周末别去逛小米之家”_赢商网"],
 ["http://www.cnbeta.com/articles/tech/667249.htm","20171104 | 雷军：除了拼命工作 世界上没有更高明的经营诀窍_cnBeta.COM"],
 ["http://tech.sina.com.cn/t/2017-11-09/doc-ifynstfh2470892.shtml","20171109 | 雷军受邀出席特朗普访华晚宴 网友：雷总去唱歌吗？_新浪网"],
-["http://tech.sina.com.cn/i/2017-12-03/doc-ifypikwt5529062.shtml","20171203 | 丁磊再请客！马化腾李彦宏刘强东雷军周鸿祎现身捧场_新浪网"],
 ["https://weibo.com/1749127163/GltFI4EPD","20180615 | 小米之家南京旗舰店就要开业了，地址在江宁... 来自雷军 - 微博"],
 ["https://weibo.com/1749127163/H6tk0BhRN","20181209 | 一个台北朋友发的信息: 好旺的小米之家，... 来自雷军 - 微博"],
 ["http://www.tmtpost.com/3665206.html","20181224 | 金山成立30周年，雷军回忆称刚加入公司时才5个人，觉得被忽悠了 - 钛媒体"],

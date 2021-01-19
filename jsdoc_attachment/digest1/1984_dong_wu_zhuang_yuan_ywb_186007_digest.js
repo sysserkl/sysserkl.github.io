@@ -78,4 +78,5 @@ var digest_global=`
 *supposedly
 *uncomfortably
 *spyhole
+*springy
 `.trim().split('\n');

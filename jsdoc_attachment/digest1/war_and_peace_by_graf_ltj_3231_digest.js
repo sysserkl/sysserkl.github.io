@@ -155,4 +155,5 @@ var digest_global=`
 *XIV
 *XV
 *narcissism
+*leonine
 `.trim().split('\n');
