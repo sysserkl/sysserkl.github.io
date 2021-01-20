@@ -15,4 +15,5 @@ var digest_global=`
 *psychokinesis
 *self-image
 *peephole
+*shallowly
 `.trim().split('\n');

@@ -1,7 +1,9 @@
 //依赖 klbase_date.js - 保留注释
-function flot_two_lines_two_yaxis_k(cslist,cslist2,csid,y1unit,y2unit,label_position='nw',cstime=false,cstype='m',y1dec=2,y2dec=2,cstimeformat="",cstickSize=[],csmin_data_length=-1){
+function flot_two_lines_two_yaxis_k(cslist,cslist2,csid,y1unit,y2unit,label_position='nw',cstime=false,cstype='m',y1dec=2,y2dec=2,cstimeformat="",cstickSize=[],csmin_data_length=-1,csymin1=false,csymax1=false,csymin2=false,csymax2=false){
     //cslist: [ '次数',[2019-08-01, 100],[2019-08-02, 300] ];
-    if (label_position==''){label_position='nw';}
+    if (label_position==''){
+        label_position='nw';
+    }
     if (cstime && cslist.length==2 && cslist2.length==2){
         //只能是数字，不能加年份和字符 - 保留注释
         cslist[1][0]=date_2_ymd_b(cslist[1][0],cstype);
@@ -18,41 +20,80 @@ function flot_two_lines_two_yaxis_k(cslist,cslist2,csid,y1unit,y2unit,label_posi
     
     if (csmin_data_length>0){
         if (cslist.length<=csmin_data_length && cslist2.length<=csmin_data_length){
-            if (y1dec==0){y1dec=-1;}
-            if (y2dec==0){y2dec=-1;}
+            if (y1dec==0){
+                y1dec=-1;
+            }
+            if (y2dec==0){
+                y2dec=-1;
+            }
         }
     }
-  
+   
     var label_1=cslist.shift();
     var label_2=cslist2.shift();
     
     var dataset = [
-        { label: label_1, data: cslist, lines: {show: true}, points: {show: true, symbol: flot_rand_flot_symbol_k()} },
+        { label: label_1, data: cslist, lines: {show: true}, points: {show: true, symbol: flot_rand_flot_symbol_k()}},
         { label: label_2, data: cslist2, lines: {show: true}, points: {show: true, symbol: flot_rand_flot_symbol_k()}, yaxis: 2 } 
     ];
     
     if (cslist.length==1 && cslist2.length==1){
         var blyaxes=[
             {
-                tickFormatter: function (v, axis) {return v.toFixed(axis.tickDecimals) + y1unit;}
+                'tickFormatter': function (v, axis) {return v.toFixed(axis.tickDecimals) + y1unit;}
             }, 
             { 
-                position: "right",
-                tickFormatter: function (v, axis) {return v.toFixed(axis.tickDecimals) + y2unit;}
+                'position': "right",
+                'tickFormatter': function (v, axis) {return v.toFixed(axis.tickDecimals) + y2unit;}
             }
         ];
     }
     else {
         var blyaxes=[
             {
-                tickFormatter: function (v, axis) {return v.toFixed(y1dec==-1?axis.tickDecimals:y1dec) + y1unit;}
+                'tickFormatter': function (v, axis) {return v.toFixed(y1dec==-1?axis.tickDecimals:y1dec) + y1unit;}
             }, 
             { 
-                position: "right",
-                tickFormatter: function (v, axis) {return v.toFixed(y2dec==-1?axis.tickDecimals:y2dec) + y2unit;}
+                'position': "right",
+                'tickFormatter': function (v, axis) {return v.toFixed(y2dec==-1?axis.tickDecimals:y2dec) + y2unit;}
             }
         ];
     }
+
+    var oxaxis={};
+    oxaxis['tickDecimals']=0;
+    if (cstime){
+        oxaxis['mode']='time';
+    }
+
+    if (cstickSize.length!==0){
+        oxaxis['tickSize']=cstickSize;
+    }
+
+    var oyxaxis1={};
+    if (csymin1!==false){
+        oyxaxis1['min']=csymin1;
+    }
+    if (csymax1!==false){
+        oyxaxis1['max']=csymax1;
+    }
+    
+    var oyxaxis2={};
+    if (csymin2!==false){
+        oyxaxis2['min']=csymin2;
+    }
+    if (csymax2!==false){
+        oyxaxis2['max']=csymax2;
+    }
+    if (csymin2!==false || csymax2!==false){
+        if (cslist.length==1 && cslist2.length==1){
+            oyxaxis2['tickFormatter']=function (v, axis) {return v.toFixed(axis.tickDecimals) + y2unit;}
+        }
+        else {
+            oyxaxis2['tickFormatter']=function (v, axis) {return v.toFixed(y2dec==-1?axis.tickDecimals:y2dec) + y2unit;}
+        }
+    }
+
     if (cstime){
         var oneyear;
         var oneyear2;
@@ -61,25 +102,17 @@ function flot_two_lines_two_yaxis_k(cslist,cslist2,csid,y1unit,y2unit,label_posi
         [oneyear,onemonth]=isoneyear_isonemonth_k(cslist);
         [oneyear2,onemonth2]=isoneyear_isonemonth_k(cslist2);
         cstimeformat=flot_timeformat_k(cstimeformat,cstype, oneyear && oneyear2,onemonth && onemonth2);
+        
         if (cstimeformat!==''){
-            if (cstickSize.length==0){
-                $.plot("#"+csid, dataset,{legend: { position: label_position }, xaxis: {mode:"time",timeformat:cstimeformat, tickDecimals: 0 },yaxes:blyaxes});            
-            }
-            else {
-                $.plot("#"+csid, dataset,{legend: { position: label_position }, xaxis: {mode:"time",tickSize: cstickSize,timeformat:cstimeformat, tickDecimals: 0 },yaxes:blyaxes});
-            }
-        }
-        else {
-            if (cstickSize.length==0){
-                $.plot("#"+csid, dataset,{legend: { position: label_position }, xaxis: {mode:"time",tickDecimals: 0 },yaxes:blyaxes});            
-            }
-            else {        
-                $.plot("#"+csid, dataset,{legend: { position: label_position }, xaxis: {mode:"time", tickSize: cstickSize,tickDecimals: 0 },yaxes:blyaxes});
-            }
+            oxaxis['timeformat']=cstimeformat;
         }
     }
+    
+    if (csymin1==false && csymax1==false && csymin2==false && csymax2==false){
+        $.plot("#"+csid, dataset,{legend: { position: label_position }, xaxis: oxaxis,yaxes:blyaxes});    
+    }
     else {
-        $.plot("#"+csid, dataset,{legend: { position: label_position }, xaxis: {tickDecimals: 0 },yaxes:blyaxes});
+        $.plot("#"+csid, dataset,{legend: { position: label_position }, xaxis: oxaxis,yaxis:oyxaxis1,y2axis:oyxaxis2,yaxes:blyaxes});
     }
 }
 
@@ -248,22 +281,6 @@ function flot_lines_k(cslist,csid,label_position='nw',cstime=false,cstimeformat=
         }
         
         $.plot("#"+csid, chart_data,{legend: { position: label_position }, xaxis: oxaxis, yaxis:oyxaxis, yaxes:blyaxes});
-        //if (cstimeformat!==''){
-            //if (cstickSize.length==0){
-                //$.plot("#"+csid, chart_data,{legend: { position: label_position }, xaxis: {mode:"time", timeformat:cstimeformat, tickDecimals: 0 },yaxes:blyaxes});
-            //}
-            //else {
-                //$.plot("#"+csid, chart_data,{legend: { position: label_position }, xaxis: {mode:"time", tickSize: cstickSize,timeformat:cstimeformat, tickDecimals: 0 },yaxes:blyaxes});
-            //}
-        //}
-        //else {
-            //if (cstickSize.length==0){
-                //$.plot("#"+csid, chart_data,{legend: { position: label_position }, xaxis: {mode:"time", tickDecimals: 0 },yaxes:blyaxes});            
-            //}
-            //else {
-                //$.plot("#"+csid, chart_data,{legend: { position: label_position }, xaxis: {mode:"time", tickSize: cstickSize, tickDecimals: 0 },yaxes:blyaxes});
-            //}
-        //}
     }
     else {
         $.plot("#"+csid, chart_data,{legend: { position: label_position }, xaxis: oxaxis, yaxis:oyxaxis, yaxes:blyaxes});

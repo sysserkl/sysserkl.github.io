@@ -165,6 +165,12 @@ function digest_statistics_kltxt_b(){
     console.log('digest_statistics_kltxt_b() 费时：'+(performance.now() - t0) + " milliseconds");
 }
 
+function reading_mode_kltxt_b(){
+    digest_temp_add_kltxt_b(true);   
+    document.getElementById("div_show_hide").style.display='none';
+    location.href='#content';
+}
+
 function txtmenus_kltxt_b(cstype=''){
     var str_t=klmenu_hide_b('');
     if (cstype=='reader'){
@@ -211,6 +217,7 @@ function txtmenus_kltxt_b(cstype=''){
     }
     
     var menu3=[
+    '<span class="span_menu" onclick="javascript:'+str_t+'reading_mode_kltxt_b();">进入阅读状态</span>',    
     '<span class="span_menu" onclick="javascript:'+str_t+'digest_temp_add_kltxt_b();">添加临时摘要</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'digest_lines_kltxt_b();">显示摘要段落</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'digest_excluded_kltxt_b();">查看未包含或重复的摘要</span>',
@@ -309,7 +316,7 @@ function books_current_table_kltxt_b(){
     bljg=bljg+'</p>';
     
     document.getElementById('divhtml2').innerHTML=bljg;
-    fix_divhtml2(false);
+    fix_divhtml2_kltxt_b(false);
     location.href="#divhtml2";
 }
 
@@ -463,16 +470,6 @@ function counthz_kltxt_b(){
 	document.getElementById('divhtml').innerHTML='<p><b>汉字量：'+hz_t.length+' 其中常用汉字：'+blcount+' 占 '+(blcount*100/hz_t.length).toFixed(2)+'%</b></p><p>'+hz_t+'</p><p><b>其中非常用汉字：</b></p><p>'+out_3500_t+'</p>';
 	hz_t=[];
     console.log('counthz_kltxt_b() 费时：'+(performance.now() - t0) + " milliseconds");
-}
-
-function showhide_kltxt_b(){
-	var odiv=document.getElementById("div_show_hide");
-	if (odiv.style.display=='none'){
-        odiv.style.display='block';
-    }
-	else {
-        odiv.style.display='none';
-    }
 }
 
 function booksthickness_form_kltxt_b(){
@@ -1097,7 +1094,7 @@ function bookmarks_read_kltxt_b(current_book_today_bookmark_only_one=false,retur
 
 function bookmarks_get_kltxt_b(current_book_today_bookmark_only_one=false,return_full=true){
     //格式：书编号&开始行号&每页行数&filelist元素个数&日期时间 - 保留注释
-    fix_divhtml2(false);
+    fix_divhtml2_kltxt_b(false);
     var current_book_today_bookmark_count=0;
     var bookmark_list=[];
     
@@ -1226,8 +1223,7 @@ function bookmarks_get_kltxt_b(current_book_today_bookmark_only_one=false,return
     
     document.getElementById('divhtml2').innerHTML='<section style="overflow:auto;"><table id="table_bookmarks" class="table_common" cellpadding=0 cellspacing=0 style="font-size:0.85rem;margin-left:0.5rem;" width=100%>'+table_th+array_2_li_b(result_t,'tr',false)+table_sum+'</table></section><br />'+bljg;
     if (return_full && current_book_percent.length>0 && csbooklist_sub_global_b.length>0){
-    
-        flot_two_lines_two_yaxis_k(['《'+csbooklist_sub_global_b[csbookno_global_b][1]+'》阅读行数'].concat(reading_lines),['《'+csbooklist_sub_global_b[csbookno_global_b][1]+'》已读比例'].concat(current_book_percent),'div_flot_bookmark_line','行','%','nw',true,'d',0,0);        //flot_lines_k([['《'+csbooklist_sub_global_b[csbookno_global_b][1]+'》阅读进度'].concat(current_book_percent)],'div_flot_bookmark_line','nw',true,'','d','%',-1,[],-1,0,100);        //flot_lines_k([['《'+csbooklist_sub_global_b[csbookno_global_b][1]+'》阅读行数'].concat(reading_lines)],'div_flot_bookmark_histogram','nw',true,'','d','行');        
+        flot_two_lines_two_yaxis_k(['《'+csbooklist_sub_global_b[csbookno_global_b][1]+'》阅读行数'].concat(reading_lines),['《'+csbooklist_sub_global_b[csbookno_global_b][1]+'》已读比例'].concat(current_book_percent),'div_flot_bookmark_line','行','%','nw',true,'d',0,0,'',[],-1,false,false,false,100);        //flot_lines_k([['《'+csbooklist_sub_global_b[csbookno_global_b][1]+'》阅读进度'].concat(current_book_percent)],'div_flot_bookmark_line','nw',true,'','d','%',-1,[],-1,0,100);        //flot_lines_k([['《'+csbooklist_sub_global_b[csbookno_global_b][1]+'》阅读行数'].concat(reading_lines)],'div_flot_bookmark_histogram','nw',true,'','d','行');        
     }
     var otds=document.querySelectorAll('table#table_bookmarks td.td_bookmark_datetime');
     for (let one_td of otds){
@@ -2414,7 +2410,7 @@ function digest_temp_load_kltxt_b(){
     digest_enwords_get_book_b();    //添加英语单词 - 保留注释
 }
 
-function fix_divhtml2(do_fix=true,ospan=false){
+function fix_divhtml2_kltxt_b(do_fix=true,ospan=false){
     var otemp=document.getElementById('div_temp_space');
     if (otemp){
         otemp.parentNode.removeChild(otemp);
@@ -2449,8 +2445,8 @@ function fix_divhtml2(do_fix=true,ospan=false){
     }    
 }
 
-function digest_temp_add_kltxt_b(){
-    fix_divhtml2(false);
+function digest_temp_add_kltxt_b(do_fix=false){
+    fix_divhtml2_kltxt_b(false);
     var list_t=local_storage_get_b('digest_temp_txtlistsearch',-1,true);
     var postpath=postpath_b();
 	var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php" name="form_digest_textarea" target=_blank style="margin-left:0.5rem;">\n';
@@ -2458,7 +2454,7 @@ function digest_temp_add_kltxt_b(){
     bljg=bljg+textarea_buttons_b('textarea_digest_txtlistsearch','清空','','','oblong_box');
     bljg=bljg+'<span class="oblong_box" onclick="javascript:digest_temp_update_kltxt_b();">➕临时摘要</span> ';
     bljg=bljg+'<span class="oblong_box" onclick="javascript:digest_temp_jump_to_line_kltxt_b();">返回阅读</span> ';
-    bljg=bljg+'<span class="oblong_box" onclick="javascript:fix_divhtml2(this.innerText==\'固定\',this);">固定</span> '; 
+    bljg=bljg+'<span class="oblong_box" id="span_digest_temp_fix" onclick="javascript:fix_divhtml2_kltxt_b(this.innerText==\'固定\',this);">固定</span> '; 
     bljg=bljg+'<span id="span_current_book_temp_digest_count"></span>';     
     bljg=bljg+'</p>';
     bljg=bljg+'<textarea name="textarea_digest_txtlistsearch" id="textarea_digest_txtlistsearch" style="height:4rem;">';
@@ -2483,6 +2479,12 @@ function digest_temp_add_kltxt_b(){
     ];
     document.getElementById('p_digest_button').insertAdjacentHTML('afterbegin',klmenu_b(digest_menu,'🔻','21rem','0.8rem','0.9rem','','','menu_temp_digest')+' ');
     
+    if (do_fix){
+        var ospan=document.getElementById('span_digest_temp_fix');
+        if (ospan){
+            fix_divhtml2_kltxt_b(true,ospan);
+        }
+    }
     location.href="#divhtml2";
 }
 

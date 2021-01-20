@@ -415,7 +415,7 @@ function break_line_bible(){
     document.getElementById('div_search_statistics').innerHTML=array_2_li_b(bljg,'li','ol')+blbuttons;
 }
 
-function search_statistics_bible(cscolumn=-1){
+function search_statistics_bible(cscolumn=-1,hidezero=false){
     //var fav_list=local_storage_get_b('fav_lines_bible',-1,true);
     var blchapter={};
     for (let blxl=0;blxl<chapter_global.length;blxl++){
@@ -447,37 +447,34 @@ function search_statistics_bible(cscolumn=-1){
         //console.log(key,blchapter[key]); - 保留注释
         var blno=blchapter[key][0];
         var blcount=blchapter[key][1];
-        result_t.push([chapter_global[blno][1],chapter_global[blno][2],blcount]);
+        if (hidezero && blcount==0){continue;}
+        result_t.push([blno+1,chapter_global[blno][1],chapter_global[blno][2],blcount]);
     }
     
-    switch (cscolumn){
-        case 0:
-            if (fav_desc_sort_global){
-                result_t.sort(function (a,b){return a[0]>b[0];});
-            }
-            else {
-                result_t.sort(function (a,b){return a[0]<b[0];});
-            }
-            break;
-        case 1:
-            result_t.sort(function (a,b){return zh_sort_b(a,b,fav_desc_sort_global,1);});
-            break;        
-        case 2:
-            if (fav_desc_sort_global){
-                result_t.sort(function (a,b){return a[2]-b[2];});
-            }
-            else {
-                result_t.sort(function (a,b){return b[2]-a[2];});
-            }
-            break;
+    if (cscolumn==2){
+        result_t.sort(function (a,b){return zh_sort_b(a,b,fav_desc_sort_global,2);});
     }
+    else {
+        if (fav_desc_sort_global){
+            result_t.sort(function (a,b){return a[cscolumn]>b[cscolumn];});
+        }
+        else {
+            result_t.sort(function (a,b){return a[cscolumn]<b[cscolumn];});
+        }    
+    }
+
     fav_desc_sort_global=!fav_desc_sort_global;
     
-    var bljg='<table class="table_zebra"><tr><th style="cursor:pointer;" onclick="javascript:search_statistics_bible(0);">EN</th><th style="cursor:pointer;" onclick="javascript:search_statistics_bible(1);">CN</th><th style="cursor:pointer;" onclick="javascript:search_statistics_bible(2);">Lines</th></tr>';
+    var bljg='<table class="table_zebra"><tr>';
+    bljg=bljg+'<th style="cursor:pointer;" onclick="javascript:search_statistics_bible(0,'+hidezero+');">No.</th>';
+    bljg=bljg+'<th style="cursor:pointer;" onclick="javascript:search_statistics_bible(1,'+hidezero+');">EN</th>';
+    bljg=bljg+'<th style="cursor:pointer;" onclick="javascript:search_statistics_bible(2,'+hidezero+');">CN</th>';
+    bljg=bljg+'<th style="cursor:pointer;" onclick="javascript:search_statistics_bible(3,'+hidezero+');">Lines</th></tr>';
     for (let item of result_t){
-        bljg=bljg+'<tr><td>'+item[0]+'</td><td>'+item[1]+'</td><td align=right>'+item[2]+'</td></tr>';
+        bljg=bljg+'<tr><td align=right>'+item[0]+'</td><td>'+item[1]+'</td><td>'+item[2]+'</td><td align=right>'+item[3]+'</td></tr>';
     }
     bljg=bljg+'</table>';
+    bljg=bljg+'<p><span class="aclick" onclick="javascript:fav_desc_sort_global=!fav_desc_sort_global;search_statistics_bible('+cscolumn+','+!hidezero+');">'+(hidezero?'Show':'Hide')+' Zero</span></p>';
     document.getElementById('div_search_statistics').innerHTML=bljg;   
 }
 

@@ -388,4 +388,5 @@ var digest_global=`
 *forbad
 *Sharon
 *Nebuchadrezzar
+*Armenia
 `.trim().split('\n');
