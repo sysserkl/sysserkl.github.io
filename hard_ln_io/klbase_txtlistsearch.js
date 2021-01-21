@@ -1222,15 +1222,25 @@ function bookmarks_get_kltxt_b(current_book_today_bookmark_only_one=false,return
     table_sum=table_sum+'<th></th></tr>';
     
     document.getElementById('divhtml2').innerHTML='<section style="overflow:auto;"><table id="table_bookmarks" class="table_common" cellpadding=0 cellspacing=0 style="font-size:0.85rem;margin-left:0.5rem;" width=100%>'+table_th+array_2_li_b(result_t,'tr',false)+table_sum+'</table></section><br />'+bljg;
+    var blstatsitics='';
+    if (reading_lines.length>=2){
+        var day_start=reading_lines[0][0];
+        var day_end=reading_lines.slice(-1)[0][0];
+        blstatsitics='<p style="margin-left:0.5rem;"><b>《'+csbooklist_sub_global_b[csbookno_global_b][1]+'》</b>';
+        blstatsitics=blstatsitics+'开始阅读日期：'+date2str_b('-',day_start)+' '+day_2_week_b(day_start)+'；结束日期：'+date2str_b('-',day_end)+' '+day_2_week_b(day_end)+'；总天数：'+((day_end - day_start) / 86400000 + 1)+'天；';
+        blstatsitics=blstatsitics+'实际阅读天数：'+reading_lines.length+'天；平均每天阅读：'+(filelist.length/reading_lines.length).toFixed(0)+'行。';
+        blstatsitics=blstatsitics+'</p>';
+    }
     if (return_full && current_book_percent.length>0 && csbooklist_sub_global_b.length>0){
-        flot_two_lines_two_yaxis_k(['《'+csbooklist_sub_global_b[csbookno_global_b][1]+'》阅读行数'].concat(reading_lines),['《'+csbooklist_sub_global_b[csbookno_global_b][1]+'》已读比例'].concat(current_book_percent),'div_flot_bookmark_line','行','%','nw',true,'d',0,0,'',[],-1,false,false,false,100);        //flot_lines_k([['《'+csbooklist_sub_global_b[csbookno_global_b][1]+'》阅读进度'].concat(current_book_percent)],'div_flot_bookmark_line','nw',true,'','d','%',-1,[],-1,0,100);        //flot_lines_k([['《'+csbooklist_sub_global_b[csbookno_global_b][1]+'》阅读行数'].concat(reading_lines)],'div_flot_bookmark_histogram','nw',true,'','d','行');        
+        flot_two_lines_two_yaxis_k(['《'+csbooklist_sub_global_b[csbookno_global_b][1]+'》阅读行数'].concat(reading_lines),['《'+csbooklist_sub_global_b[csbookno_global_b][1]+'》已读比例'].concat(current_book_percent),'div_flot_bookmark_line','行','%','nw',true,'d',0,0,'',[],-1,false,false,false,100);
+        document.getElementById('div_flot_bookmark_line').insertAdjacentHTML('afterend',blstatsitics);
     }
     var otds=document.querySelectorAll('table#table_bookmarks td.td_bookmark_datetime');
     for (let one_td of otds){
         if (one_td.innerText==newest_datetime){
             one_td.parentNode.style.backgroundColor=scheme_global['pink'];
             one_td.parentNode.setAttribute('onmouseover','javascript:this.style.backgroundColor="'+scheme_global['button']+'";');
-            one_td.parentNode.setAttribute('onmouseout','javascript:this.style.backgroundColor="'+scheme_global['pink']+'";');            
+            one_td.parentNode.setAttribute('onmouseout','javascript:this.style.backgroundColor="'+scheme_global['pink']+'";');
             break;
         }
     }

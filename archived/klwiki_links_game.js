@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-01-19 11:08:52 二"],
+["","","","更新日期：2021-01-20 09:27:33 三"],
 ["http://games.sina.com.cn/t/n/2007-01-04/1208182130.shtml","20070104 | 2006年日本游戏厂商排行榜 任天堂领先"],
 ["http://www.ftchinese.com/sc/story.jsp?id=001012456&amp;pos=MID_HLB&amp;pa1=1&amp;pa2=0&amp;loc=HOMEPAGE","20070703 | 洁本《魔兽世界》"],
 ["http://www.yeeyan.com/articles/view/18126/36466","20090408 | 魔兽世界宝物掉落率背后的科学"],

@@ -1299,3 +1299,29 @@ function change_colors_b(csstr){
     obody.style.color=scheme_global['color'];
     obody.style.backgroundColor=scheme_global['background'];
 }
+
+function obj_search_show_hide_b(objs,cskey,csreg,checkreg=false){   
+    if (checkreg){
+        if (cskey.slice(-4,)=='(:r)'){
+            csreg=true;
+            cskey=cskey.slice(0,-4).trim();
+        }
+    }
+    if (cskey==''){
+        for (let item of objs){
+            item.style.display='';
+        }
+        return;
+    }
+    for (let item of objs){
+        var bltext=item.innerText.trim();
+        var blfound=str_reg_search_b(bltext,cskey,csreg);
+        if (blfound==-1){break;}
+        if (blfound){
+            item.style.display='';
+        }
+        else {
+            item.style.display='none';
+        }    
+    }
+}

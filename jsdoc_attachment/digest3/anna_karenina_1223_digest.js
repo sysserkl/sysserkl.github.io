@@ -121,4 +121,5 @@ var digest_global=`
 *heedlessly
 *heedlessness
 *kinship
+*persuasive
 `.trim().split('\n');

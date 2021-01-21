@@ -156,4 +156,5 @@ var digest_global=`
 *XV
 *narcissism
 *leonine
+*Armenian
 `.trim().split('\n');
