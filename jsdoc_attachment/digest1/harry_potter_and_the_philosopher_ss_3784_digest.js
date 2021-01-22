@@ -6,4 +6,5 @@ var digest_global=`
 *boarhound
 *cornflakes
 *herbology
+*doughnut
 `.trim().split('\n');

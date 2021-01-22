@@ -50,7 +50,10 @@ function space2underline_enbook(){
     if (confirm("是否替换单词间空格为下划线？")==false){return;}
     var otextarea=document.getElementById('textarea_new_words');
     var blstr=otextarea.value.trim();
-    blstr=blstr.replace(new RegExp(/([a-z]) +([a-z])/,'ig'),'$1_$2');
+    while (true){   //考虑 get a grip 等形式 - 保留注释
+        if (blstr.match(/([a-z]) +([a-z])/)==null){break;}
+        blstr=blstr.replace(new RegExp(/([a-z]) +([a-z])/,'ig'),'$1_$2'); 
+    }
     otextarea.value=blstr;
 }
 

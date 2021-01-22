@@ -138,7 +138,7 @@ function menu_klroutines(){
     '<span class="span_menu" onclick="javascript:'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'pwa_routines_store\',\'routines_service_worker.js\');}">更新版本</span>',
     ];
     if (is_local_b()){
-        klmenu1.push('<a href="../wiki/index.php/KL_Routines" onclick="javascript:'+str_t+'" target=_blank>KL Routines - KLWiki</a>');
+        klmenu1.push('<a href="../../../../../wiki/index.php/KL_Routines" onclick="javascript:'+str_t+'" target=_blank>KL Routines - KLWiki</a>');
     }
     
     document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,day_2_week_b('',true),'14rem','1rem','1rem','60rem','','div_rountines_menu1','button_routines_menu1'),'','0rem','','div_routines_menu')+' '); //♾ - 保留注释
