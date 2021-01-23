@@ -3,6 +3,7 @@ self.addEventListener('install', function(e) {
         caches.open('pwa_websites_store').then(function(cache) {
             return cache.addAll([
             'websites_pwa.htm',
+            'websites_pwa_code.js',
             '../hard_ln_io/jquery.js',            
             '../hard_ln_io/klbase_css.js',
             '../hard_ln_io/klbase.js',

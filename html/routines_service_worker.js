@@ -3,12 +3,19 @@ self.addEventListener('install', function(e) {
         caches.open('pwa_routines_store').then(function(cache) {
             return cache.addAll([
             'routines.htm',
-            '../hard_ln_io/klbase.js',            
+            'routines_code.js',
+            '../hard_ln_io/jquery.js',
+            '../hard_ln_io/klbase.js',
             '../hard_ln_io/klbase_css.js',
             '../hard_ln_io/klbase_date.js',
+            '../hard_ln_io/klbase_flot.js',
             '../hard_ln_io/klbase_en_de_str.js',
             '../hard_ln_io/klbase_plan.js',
             '../jsdata/routines_demo_data.js',
+            '../module/flot/jquery.flot.min.js',       
+            '../module/flot/jquery.flot.categories.min.js',
+            '../module/flot/jquery.flot.symbol.min.js',
+            '../module/flot/jquery.flot.time.min.js',     
             ]);
         })
     );

@@ -166,7 +166,7 @@ function isoneyear_isonemonth_k(cslist){
     return [list_y.size>1?false:true,list_m.size>1?false:true];
 }
 
-function flot_lines_k(cslist,csid,label_position='nw',cstime=false,cstimeformat="",cstype='m',y1unit='',y1dec=-1,cstickSize=[],csmin_data_length=-1,csymin=false,csymax=false){
+function flot_lines_k(cslist,csid,label_position='nw',cstime=false,cstimeformat="",cstype='m',y1unit='',y1dec=-1,cstickSize=[],csmin_data_length=-1,csymin=false,csymax=false,csshowline=true){
    //[
    //[ "成都", [2012,300], [2014,400] ], 
    //[ "苏州", [2012,500], [2014,600] ],
@@ -220,14 +220,33 @@ function flot_lines_k(cslist,csid,label_position='nw',cstime=false,cstimeformat=
     var chart_data=[];
     for (let blxl in cslist){
         var label_t=cslist[blxl].shift();
+        var label_showline=csshowline;
+        var label_showpoints=true;
+        if (label_t.includes('#show:true#')){
+            label_showline=true;
+            label_t=label_t.replace('#show:true#','');
+        }
+        else if (label_t.includes('#show:false#')){
+            label_showline=true;
+            label_t=label_t.replace('#show:false#','');
+        }
+        if (label_t.includes('#points:true#')){
+            label_showpoints=true;
+            label_t=label_t.replace('#points:true#','');
+        }
+        else if (label_t.includes('#points:false#')){
+            label_showpoints=false;
+            label_t=label_t.replace('#points:false#','');
+        }
+        
         chart_data.push({
             data: cslist[blxl], 
             label: label_t, 
             lines: { 
-                show: true 
+                show: label_showline 
             }, 
             points: {
-                show: true,
+                show: label_showpoints,
                 symbol: flot_rand_flot_symbol_k() 
             }
         });

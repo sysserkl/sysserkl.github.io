@@ -148,12 +148,12 @@ function klbase_addons_import_js_b(klbase_list=[],module_list=[],jsdata_list=[])
 
 function object2array_b(cs_object_array){
 	var list_t=[];
-	for (let blxl in cs_object_array){
-        if (Array.isArray(cs_object_array[blxl])){
-		    list_t.push([].concat(cs_object_array[blxl])); //如果是数组直接添加会建立关联，所以需要concat - 保留注释
+	for (let key in cs_object_array){
+        if (Array.isArray(cs_object_array[key])){
+		    list_t.push([].concat(cs_object_array[key])); //如果是数组直接添加会建立关联，所以需要concat - 保留注释
         }
         else {
-            list_t.push(cs_object_array[blxl]);
+            list_t.push(cs_object_array[key]);
         }
 	}
     return list_t;

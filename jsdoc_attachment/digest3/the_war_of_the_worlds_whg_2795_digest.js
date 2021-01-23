@@ -27,4 +27,5 @@ var digest_global=`
 *uninhabitable
 *unproven
 *uncooked
+*summerhouse
 `.trim().split('\n');

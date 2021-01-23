@@ -1,6 +1,10 @@
 //单词库
 var enwords=[
-["seagull", "['siːɡʌl]", "n. 海鸥；a seabird with long wings and usually white and grey or black feathers; a gull frequenting the sea, broadly: gull; n. 非工会成员的码头临时工人；(New Zealand): a casual wharf labourer who is not a trade-union member"],
+["summerhouse", "['sʌmə(r)ˌhaʊs]", "n. (花园中的)凉亭；a covered structure in a garden or park designed to provide a shady resting place in summer; a small building in a garden or park, used for shade or recreation in the summer; n. 〈美〉避暑别墅；a country house for summer residence"],
+["kiosk", "UK ['kiːɒsk] US [ˈkiːɑːsk]", "n.  亭；凉亭；（出售报纸、饮料等的）小亭；售货亭；公用电话亭；报刊亭；报摊；小摊棚；a small structure with one or more open sides that is used to vend merchandise (such as newspapers) or services (such as film developing); a small shop, open at the front, where newspapers, drinks, etc. are sold; a small structure in a public area used for providing information, showing advertisements or providing a service, typically via a computer screen; a small stand-alone device providing information and services on a computer screen; (British English, old-fashioned): a public phone box; an open summerhouse or pavilion"],
+["recreation", "[ˌrekri'eɪʃ(ə)n] [ˌriːkri'eɪʃ(ə)n]", "n. [ˌrekri'eɪʃ(ə)n]: 消遣；娱乐；娱乐活动；游戏；refreshment of strength and spirits after work, also: a means of refreshment or diversion: hobby; (a way of) enjoying yourself when you are not working; something done for pleasure or to relax, or such activities generally; refreshment in body or mind, as after work, by some form of play, amusement, or relaxation; refreshment of health or spirits by relaxation and enjoyment; n. [ˌrekri'eɪʃ(ə)n]: an interval of free time between school lessons; n. [ˌriːkri'eɪʃ(ə)n]: 重建；重现；the act of making something exist or happen again; the act or process of making something that existed in the past exist or seem to exist again"],
+["largish", "['lɑː(r)dʒɪʃ]", "adj. 相当大的；颇大的；稍大的；fairly large, but not very large; rather large; somewhat large"],
+["seagull", "['siːɡʌl]", "n. 海鸥；a seabird with long wings and usually white and grey or black feathers; a gull frequenting the sea, broadly: gull; n. 非工会成员的临时码头工人；(New Zealand): a casual wharf labourer who is not a trade-union member"],
 ["internationalization", "UK [ˌɪntəˌnæʃ(ə)nəlaɪ'zeɪʃ(ə)n] US [ˌɪntərˌnæʃ(ə)nələˈzeɪʃ(ə)n]", "n. 国际化；国际共管；=internationalisation(英)；the act or process of bringing something under the control or protection of two or more nations; the act or process of making something international; the conversion of something in order to make it international; n. (software engineering): the act or process of making a product suitable for international markets, typically by making text messages easily translatable and ensuring support of non-Latin character sets, languages, and regions"],
 ["internationalisation", "UK [ˌɪntəˌnæʃ(ə)nəlaɪ'zeɪʃ(ə)n] US [ˌɪntərˌnæʃ(ə)nələˈzeɪʃ(ə)n]", "n. 国际化；国际共管；the act or process of bringing something under the control or protection of two or more nations; the act or process of making something international; the conversion of something in order to make it international; n. (software engineering): the act or process of making a product suitable for international markets, typically by making text messages easily translatable and ensuring support of non-Latin character sets, languages, and regions"],
 ["donut", "[ˈdəʊˌnʌt]", "n. 多纳圈（常含果酱、水果、奶油等）；炸面圈；油炸圈饼；环状物；doughnut 的另一种拼法；a small cake made of fried dough, usually in the shape of a ring, or round and filled with jam, fruit, cream, etc.; a small usually ring-shaped piece of sweet fried dough; something (such as a mathematical torus) that has a round shape like a doughnut; n. 汽车360度打滑；a controlled skid that sends an automobile into a tight circle of at least 360 degrees —usually used in the phrase 'do doughnuts'"],
@@ -9731,8 +9735,8 @@ var enwords=[
 ["upon", "UK [ə'pɒn] US [ə'pɑːn]", "prep. 在 ... 上；紧接着；逼近"],
 ["upstairs", "UK [ˌʌp'steəz] US [ˌʌp'sterz]", "adv. 在楼上；往楼上；在高处；头脑上；n. 楼上；adj. 楼上的；上层的"],
 ["upstream", "[ˌʌp'striːm]", "adj. 逆流而上的；上游的；adv. 逆流地；向上游"],
-["up", "[ʌp]", "adv. 向上；起来；上升；往上；prep. 向上；adj. 向上的；上行的；n. 上升；v. 上升；增加"],
-["upwards", "['ʌpwərdz]", "adv. 往上；向上地；以上"],
+["up", "[ʌp]", "adj. 向上的；上行的；adv. 向上；往上；上升；起来；prep. 向上；n. 上升；v. 上升；增加"],
+["upwards", "['ʌpwərdz]", "adv. 向上地；往上；以上"],
 ["urban", "['ɜːrbən]", "adj. 城市的；都市的"],
 ["urbanization", "[ˌɜːbənaɪ'zeɪʃn]", "n. 都市化；城市化"],
 ["urgency", "['ɜːdʒənsi]", "n. 紧急(的事)；the quality of being very important and needing attention immediately"],

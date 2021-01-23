@@ -3,7 +3,7 @@ function menu_lt_klmemo(){
     var klmenu1=[
     '<span class="span_menu" onclick="javascript:'+str_t+'search_lt_klmemo();">搜索</span>',     
     '<span class="span_menu" onclick="javascript:'+str_t+'init_lt_klmemo(\'DONE\');">已完成的事项</span>',     
-    '<span class="span_menu" onclick="javascript:'+str_t+'new_klmemo();">新Memo</span>', 
+    '<span class="span_menu" onclick="javascript:'+str_t+'new_lt_klmemo();">新Memo</span>', 
     '<span class="span_menu" onclick="javascript:'+str_t+'backup_lt_klmemo();">编辑/导入/导出</span>', 
     ];
 
@@ -56,11 +56,12 @@ function array_2_local_storage_lt_klmemo(){
     localStorage.setItem('klmemo_item',bljg.trim());
 }
 
-function delete_klmemo(){
+function delete_lt_klmemo(){
     if (confirm("是否清空完成项？")){
         local_storage_2_array_lt_klmemo(true);
         init_lt_klmemo();
-    }        
+        tag_list_lt_klmemo();
+    }
 }
 
 function local_storage_2_array_lt_klmemo(do_delete=false){
@@ -215,7 +216,7 @@ function init_lt_klmemo(cskey=''){
             draw_lt_klmemo(blxl);
         }
         if (blfound){
-            document.getElementById('divhtml').insertAdjacentHTML('afterbegin','<p><span class="aclick" onclick="javascript:delete_klmemo();">清空已完成项</span></p>');
+            document.getElementById('divhtml').insertAdjacentHTML('afterbegin','<p><span class="aclick" onclick="javascript:delete_lt_klmemo();">清空已完成项</span></p>');
         }
         return;
     }
@@ -279,7 +280,7 @@ function change_lt_klmemo(csid,csnumber){
                         alert('存在同名的Memo，取消修改');
                         return;
                     }
-                }            
+                }
                 else if ([1,2].includes(csnumber)){
                     currentvalue=validdate_b(currentvalue);
                     if (currentvalue===false){
@@ -291,13 +292,18 @@ function change_lt_klmemo(csid,csnumber){
                 klmemo_global[blxl][csnumber]=currentvalue;
                 array_2_local_storage_lt_klmemo();
                 draw_lt_klmemo(blxl);
+                if (csnumber==0){
+                    if (oldvalue.includes('#') || currentvalue.includes('#')){
+                        tag_list_lt_klmemo();
+                    }
+                }
             }
             break;
         }
     }
 }
 
-function new_klmemo(){
+function new_lt_klmemo(){
     var newmemo=(prompt('输入Memo') || '').trim();
     if (newmemo==''){return;}
     var name_list=new Set();
@@ -316,4 +322,39 @@ function new_klmemo(){
     array_2_local_storage_lt_klmemo();
     draw_lt_klmemo(klmemo_global.length-1);
     document.getElementById('span_count').innerHTML='('+klmemo_global.length+')';
+}
+
+function tag_list_lt_klmemo(){
+    function sub_tag_list_lt_klmemo_one_tag(tagname,cscount){
+        if (tagname==''){return ''};
+        tagname=tagname.substring(1,);
+        return '<span class="oblong_box" onclick="javascript:init_lt_klmemo(\''+tagname+'\');">'+tagname+'<font color="grey"><small>('+cscount+')</small></font></span>\n';
+    }
+    //---------------------------------
+    var tags_t=[];
+    for (let item of klmemo_global){
+        var list_t=item[0].match(/#[^\s]+/g);
+        if (list_t==null){continue;}
+        tags_t=tags_t.concat(list_t);
+    }
+    
+    tags_t.sort();
+    var result_t=[];
+    var tagname='';
+    var blcount=0;
+    for (let item of tags_t){
+        if (item==tagname){
+            blcount=blcount+1;
+        }
+        else {
+            result_t.push(sub_tag_list_lt_klmemo_one_tag(tagname,blcount));
+            tagname=item;
+            blcount=1;
+        }
+    }
+    
+    result_t.push(sub_tag_list_lt_klmemo_one_tag(tagname,blcount));
+    var op=document.getElementById('p_tags_klmemo');
+    op.innerHTML=result_t.join('');
+    mouseover_mouseout_oblong_span_b(op.querySelectorAll('span.oblong_box'));
 }

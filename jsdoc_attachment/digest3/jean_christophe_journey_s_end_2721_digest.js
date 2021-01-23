@@ -32,4 +32,5 @@ var digest_global=`
 *wheresoever
 *common sense
 *anarchist
+*kiosk
 `.trim().split('\n');
