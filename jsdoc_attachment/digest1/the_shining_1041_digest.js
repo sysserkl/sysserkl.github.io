@@ -16,4 +16,5 @@ var digest_global=`
 *self-image
 *peephole
 *shallowly
+*Anderson
 `.trim().split('\n');

@@ -27,6 +27,7 @@ var digestlist_source_global_b=[
 ["jean_christophe_volume_i_mian_fgbs_129538_digest",3],
 ["the_mysterious_island_2048_digest",1],
 ["jing_shi_tong_yan_127894_digest",1],
+["yin_he_di_guo_8_1jqrxlwbq_317863_digest",1],
 ["hei_an_shi_ke_xi_tldtsyncwhsxc_662171_digest",1],
 ["yu_shi_ming_yan_103391_digest",1],
 ["jin_yong_zuo_pin_ji_tlbbxdbq5_587006_digest",1],

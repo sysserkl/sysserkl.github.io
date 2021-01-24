@@ -14,4 +14,5 @@ var digest_global=`
 *tyrant
 *streambed
 *seagull
+*sleeveless
 `.trim().split('\n');

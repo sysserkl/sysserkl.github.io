@@ -112,4 +112,5 @@ var digest_global=`
 *great-grandfather
 *bedstead
 *unaltered
+*footsore
 `.trim().split('\n');

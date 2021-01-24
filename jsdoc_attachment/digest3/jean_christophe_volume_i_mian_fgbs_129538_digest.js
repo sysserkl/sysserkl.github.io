@@ -31,4 +31,5 @@ var digest_global=`
 *unclouded
 *weathercock
 *mad as a hatter
+*Dumas
 `.trim().split('\n');
