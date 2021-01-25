@@ -17,4 +17,5 @@ var digest_global=`
 *peephole
 *shallowly
 *Anderson
+*sonny
 `.trim().split('\n');

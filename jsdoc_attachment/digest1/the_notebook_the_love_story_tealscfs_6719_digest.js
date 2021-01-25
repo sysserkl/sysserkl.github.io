@@ -3,4 +3,5 @@ var digest_global=`
 *Whitman
 *thermostat
 *ageless
+*Mozart
 `.trim().split('\n');

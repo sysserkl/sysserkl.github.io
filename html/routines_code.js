@@ -6,6 +6,7 @@ function statistics_form_klroutines(){
     bljg=bljg+'<span class="aclick" onclick="javascript:statistics_items_klroutines();">项目统计</span>';
     bljg=bljg+'<span class="aclick" onclick="javascript:statistics_category_klroutines();">分类统计</span>';
     bljg=bljg+'<span class="aclick" onclick="javascript:statistics_date_klroutines();">日统计</span>';
+    bljg=bljg+'<span class="aclick" onclick="javascript:statistics_category_date_klroutines();">分类日统计</span>';    
     bljg=bljg+'<span class="aclick" onclick="javascript:document.getElementById(\'divhtml2\').innerHTML=\'\';">Close</span>';    
     bljg=bljg+'</p>\n';    
     bljg=bljg+'<div id="div_flot_date_klroutines" style="width:100%;height:100%;display:none;"></div>\n';
@@ -62,11 +63,15 @@ function statistics_items_klroutines(){
         bljg.push(item+': 0');
     }
     document.getElementById('divhtml').innerHTML=array_2_li_b(bljg)+'<p>Total: '+bltotal+'</p>';
-    document.getElementById('div_flot_date_klroutines').style.display='none';
-    document.getElementById('div_flot_week_klroutines').style.display='none';    
+    statsitics_flot_show_ide_klroutines('none');
 }
 
-function statistics_category_klroutines(){
+function statsitics_flot_show_ide_klroutines(cstype='none'){
+    document.getElementById('div_flot_date_klroutines').style.display=cstype;
+    document.getElementById('div_flot_week_klroutines').style.display=cstype;
+}
+
+function statistics_category_klroutines(only_return_obj=false){
     var otextarea=document.getElementById('textarea_statistics');
     var list_t=otextarea.value.trim().split('\n');
     var result_t={};
@@ -88,6 +93,9 @@ function statistics_category_klroutines(){
             }
         }
     }
+    if (only_return_obj){
+        return result_t;
+    }
     result_t=object2array_b(result_t);
     result_t.sort(function (a,b){return a[1]<b[1];});
     var bltotal=0;
@@ -96,8 +104,7 @@ function statistics_category_klroutines(){
         result_t[blxl]=result_t[blxl][0]+': '+result_t[blxl][1];
     }
     document.getElementById('divhtml').innerHTML=array_2_li_b(result_t)+'<p>Total: '+bltotal+'</p>';
-    document.getElementById('div_flot_date_klroutines').style.display='none';
-    document.getElementById('div_flot_week_klroutines').style.display='none';    
+    statsitics_flot_show_ide_klroutines('none');
 }
 
 function statistics_date_klroutines(){
@@ -105,9 +112,10 @@ function statistics_date_klroutines(){
     var list_t=otextarea.value.trim().split('\n');
     var list2_t=[];
     for (let item of list_t){
-        var blvalue=item.trim().match(/ \(\d{4}-\d{2}-\d{2}( \d{2}:\d{2}:\d{2}( [日一二三四五六])?)?\)$/);
+        item=item.trim();
+        var blvalue=item.match(/ \(\d{4}-\d{2}-\d{2}( \d{2}:\d{2}:\d{2}( [日一二三四五六])?)?\)$/);
         if (blvalue!==null){
-            list2_t.push(item.trim().replace(new RegExp(/^.* \((\d{4}-\d{2}-\d{2})( \d{2}:\d{2}:\d{2}( [日一二三四五六])?)?\)$/,'g'),'$1').trim());
+            list2_t.push(item.replace(new RegExp(/^.* \((\d{4}-\d{2}-\d{2})( \d{2}:\d{2}:\d{2}( [日一二三四五六])?)?\)$/,'g'),'$1').trim());
         }        
     }
 
@@ -165,8 +173,7 @@ function statistics_date_klroutines(){
     }
     bljg=bljg+'</p>';
     document.getElementById('divhtml').innerHTML=bljg;
-    document.getElementById('div_flot_date_klroutines').style.display='';
-    document.getElementById('div_flot_week_klroutines').style.display='';    
+    statsitics_flot_show_ide_klroutines('');
 
     weeks_t.push(['每日执行数#show:true##points:false#'].concat(result_t2));
     flot_lines_k(weeks_t,'div_flot_date_klroutines','ne',true,"",'d',y1unit='项',0,[],-1,false,false,false);    
@@ -179,6 +186,103 @@ function statistics_date_klroutines(){
             tickFormatter: function (v, axis) {return v.toFixed(axis.tickDecimals) + '项';}
         }
     });
+}
+
+function statistics_category_date_klroutines(){
+    var otextarea=document.getElementById('textarea_statistics');
+    var list_t=otextarea.value.trim().split('\n');
+    var result_t={};
+    var current_category='';
+    for (let item of list_t){
+        item=item.trim();
+        var blvalue=item.match(/ \(\d{4}-\d{2}-\d{2}( \d{2}:\d{2}:\d{2}( [日一二三四五六])?)?\)$/);
+        if (blvalue!==null){
+            if (current_category==''){
+                console.log('分类为空',item); //- 保留注释
+            }
+            else {
+                if (result_t[current_category]==undefined){
+                    result_t[current_category]=[];
+                }
+                var bldate=item.replace(new RegExp(/^.* \((\d{4}-\d{2}-\d{2})( \d{2}:\d{2}:\d{2}( [日一二三四五六])?)?\)$/,'g'),'$1').trim();
+                result_t[current_category].push(bldate);
+            }
+            continue;
+        }
+        var blvalue=item.match(/ \([1-9]\d*\)$/);
+        if (blvalue!==null){
+            if (item.match(/^\d{4}\-\d{2}\-\d{2}——\d{4}\-\d{2}\-\d{2}/)==null){
+                current_category=item.replace(new RegExp(/ \([1-9]\d*\)$/),'').trim();
+            }
+        }
+    }
+    
+    var different_key=[];
+    var category_dict=statistics_category_klroutines(true);
+    for (let key in category_dict){
+        if (key in result_t){
+            if (result_t[key].length!==category_dict[key][1]){
+                different_key.push('key数量不一致：'+key+' '+result_t[key].length+' vs '+category_dict[key][1]);
+            }
+        }
+        else {
+            different_key.push('key缺失：'+key);
+        }
+    }
+    
+    var flot_array=[];
+    var one_date_category=[];
+    for (let key in result_t){
+        result_t[key].sort();
+        
+        var list_t=[];
+        var same_date_count=0
+        var current_date=''
+        for (let item of result_t[key]){
+            if (current_date==''){
+                current_date=item;
+                same_date_count=1;
+            }
+            if (current_date==item){
+                same_date_count=same_date_count+1;
+            }
+            else {
+                var bldate=validdate_b(current_date);
+                if (bldate===false){
+                    bldate=new Date('2018-12-31');  //错误日期 - 保留注释
+                    console.log(current_date); //此行保留 - 保留注释 
+                }
+                list_t.push([bldate,same_date_count]);
+                current_date=item;
+                same_date_count=1;
+            }
+        }
+        if (same_date_count>0){
+            var bldate=validdate_b(current_date);
+            if (bldate===false){
+                bldate=new Date('2018-12-31');  //错误日期 - 保留注释
+                console.log(current_date); //此行保留 - 保留注释 
+            }
+            list_t.push([bldate,same_date_count]);        
+        }
+        
+        if (list_t.length==1){
+            one_date_category.push(key+' '+date2str_b('-',list_t[0][0])+': '+list_t[0][1]);
+        }
+        else {
+            flot_array.push([key].concat(list_t));
+        }
+    }
+    
+    for (let blxl=0;blxl<flot_array.length;blxl++){
+        if (flot_array[blxl].length<=3){continue;}
+        flot_array[blxl]=[flot_array[blxl][0]].concat(date_list_insert_zero_b(flot_array[blxl].slice(1,)));
+    }
+    
+    document.getElementById('div_flot_date_klroutines').style.display='';
+    flot_lines_k(flot_array,'div_flot_date_klroutines','ne',true,'','m','项',0);    
+
+    document.getElementById('divhtml').innerHTML='不一致的key:<br />'+array_2_li_b(different_key)+'只有一项的分类：<br />'+array_2_li_b(one_date_category);
 }
 
 function update_klroutines(textarea_id,local_storage_id,reload=true){

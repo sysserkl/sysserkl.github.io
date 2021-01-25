@@ -45,4 +45,5 @@ var digest_global=`
 *orchestral
 *phosphorescence
 *woodpecker
+*infirmary
 `.trim().split('\n');

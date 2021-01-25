@@ -15,4 +15,5 @@ var digest_global=`
 *streambed
 *seagull
 *sleeveless
+*cellmate
 `.trim().split('\n');

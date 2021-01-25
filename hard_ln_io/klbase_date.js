@@ -310,3 +310,29 @@ function time_2_emoji_b(cstime=false){
     blh=parseInt(blh.trim()) % 12;
     return blemoji[blh];
 }
+
+function date_list_insert_zero_b(cslist){
+    //[
+    //[date1,value1],
+    //[date2,value2],    
+    //];
+    cslist.sort(function (a,b){return a[0]>b[0];});
+    if (cslist.length<2){
+        return cslist;
+    }
+    var days=new Set();
+    for (let item of cslist){
+        days.add(date2str_b('-',item[0]));
+    }
+    var mindate=new Date(cslist[0][0].getTime());
+    var maxdate=new Date(cslist[cslist.length-1][0].getTime());
+    while (true){
+        if (mindate>=maxdate){break;}
+        mindate.setTime(mindate.getTime()+24*60*60*1000);
+        if (!days.has(date2str_b('-',mindate))){
+            cslist.push([new Date(mindate.getTime()),0]);
+        }
+    }
+    cslist.sort(function (a,b){return a[0]>b[0];});
+    return cslist;
+}
