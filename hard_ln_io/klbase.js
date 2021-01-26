@@ -543,6 +543,10 @@ function specialstr_html_b(csstr){
     return bljg;
 }
 
+function quote_2_cn_character(csstr){
+    return csstr.replace(new RegExp("'",'g'),'’').replace(new RegExp('"','g'),'”').replace(new RegExp(/\\/,'g'),'＼');
+}
+
 function asc_sum_b(csstr){
     var asc_t=0;
     var length_t=csstr.length;

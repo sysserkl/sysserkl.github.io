@@ -174,18 +174,35 @@ function draw_lt_klmemo(csno){
     }
     
     var bljg='';
-    bljg=bljg+'<hr /><p style="font-size:0.8rem;color:'+scheme_global['color']+';background-color:'+scheme_global[(csitem[2]<csitem[1]?'skyblue':'button')]+';">'+(csno+1)+'. <span style="cursor:pointer;" onclick="change_lt_klmemo(\''+csitem[0]+'\',1);">'+csitem[1]+'</span>&nbsp;&nbsp;-&nbsp;&nbsp;';
+    bljg=bljg+'<hr />';
+    bljg=bljg+'<table width=100% cellspacing=0 cellpadding=0><tr style="font-size:0.8rem;color:'+scheme_global['color']+';background-color:'+scheme_global[(csitem[2]<csitem[1]?'skyblue':'button')]+';"><td>'+(csno+1)+'. <span style="cursor:pointer;" onclick="change_lt_klmemo(\''+csitem[0]+'\',1);">'+csitem[1]+'</span>&nbsp;&nbsp;-&nbsp;&nbsp;';
 
-    bljg=bljg+'<span style="cursor:pointer;" onclick="change_lt_klmemo(\''+csitem[0]+'\',2);">'+(csitem[2]<csitem[1]?'yyyy-mm-dd':csitem[2])+'</span>'+all_days+'</p>';
-    bljg=bljg+'<p style="font-size:1.2rem;"><b>';
-    bljg=bljg+'<span style="cursor:pointer;" onclick="change_lt_klmemo(\''+csitem[0]+'\',0);">'+csitem[0]+'</span>';
-    bljg=bljg+'</b></p><hr />';    
+    bljg=bljg+'<span style="cursor:pointer;" onclick="change_lt_klmemo(\''+csitem[0]+'\',2);">'+(csitem[2]<csitem[1]?'yyyy-mm-dd':csitem[2])+'</span>'+all_days+'</td>';
+    bljg=bljg+'<td></td></tr></table>'; //保留待用 - 保留注释
+    bljg=bljg+'<p class="p_memo_content" style="font-size:1.2rem;">';
+    bljg=bljg+'<span class="span_memo_content" style="font-weight:bold;cursor:pointer;" onclick="content_editable_lt_klmemo(this,'+csno+');change_lt_klmemo(\''+csitem[0]+'\',0);">'+csitem[0]+'</span>';
+    bljg=bljg+'</p><hr />';
     var otable=document.getElementById('div_memo_'+csno);
     if (otable){
         otable.innerHTML=bljg;
     }
     else {
         document.getElementById('divhtml').insertAdjacentHTML('afterbegin','<div id="div_memo_'+csno+'" width=100%>'+bljg+'</div>\n');
+    }
+}
+
+function content_editable_lt_klmemo(ospan,csno){
+    return;
+    ospan.setAttribute('contenteditable','true');
+    ospan.removeAttribute('onclick','');
+    ospan.style.cursor='';
+    ospan.insertAdjacentHTML('afterend',' <button onclick="javascript:change_content_lt_klmemo(this.parentNode,'+csno+');">保存</button> <button onclick="javascript:draw_lt_klmemo('+csno+');">取消</button>');
+}
+
+function change_content_lt_klmemo(op,csno){
+    var ospan=op.querySelector('span.span_memo_content');
+    if (ospan){
+        alert(ospan.innerText+' '+csno);
     }
 }
 
@@ -257,7 +274,7 @@ function change_lt_klmemo(csid,csnumber){
     
     for (let blxl=0;blxl<klmemo_global.length;blxl++){
         var item=klmemo_global[blxl];
-        if (item[0]==csid){            
+        if (item[0]==csid){
             var oldvalue=item[csnumber];
             var blinfo='：'+oldvalue;
             if (csnumber==2 && item[2]<item[1]){
@@ -269,7 +286,7 @@ function change_lt_klmemo(csid,csnumber){
                 break;
             }
                         
-            var currentvalue=(prompt('输入'+list_t[csnumber],oldvalue) || '').trim();
+            var currentvalue=quote_2_cn_character((prompt('输入'+list_t[csnumber],oldvalue) || '').trim());
             if (currentvalue==item[csnumber]){
                 alert('未修改');
                 return;
@@ -304,7 +321,7 @@ function change_lt_klmemo(csid,csnumber){
 }
 
 function new_lt_klmemo(){
-    var newmemo=(prompt('输入Memo') || '').trim();
+    var newmemo=quote_2_cn_character((prompt('输入Memo') || '').trim());
     if (newmemo==''){return;}
     var name_list=new Set();
     for (let item of klmemo_global){

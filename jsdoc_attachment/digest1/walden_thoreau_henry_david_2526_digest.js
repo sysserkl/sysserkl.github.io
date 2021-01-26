@@ -6,4 +6,6 @@ var digest_global=`
 *salable
 *foxhound
 *lawfully
+*unimaginable
+*Hugh
 `.trim().split('\n');

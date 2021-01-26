@@ -158,4 +158,5 @@ var digest_global=`
 *leonine
 *Armenian
 *largish
+*imaginable
 `.trim().split('\n');

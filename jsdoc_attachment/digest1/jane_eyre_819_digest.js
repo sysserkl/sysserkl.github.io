@@ -6,4 +6,5 @@ var digest_global=`
 *Marseilles
 *sceptical
 *unuttered
+*insuperable
 `.trim().split('\n');
