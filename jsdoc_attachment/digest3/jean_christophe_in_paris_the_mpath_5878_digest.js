@@ -46,4 +46,5 @@ var digest_global=`
 *phosphorescence
 *woodpecker
 *infirmary
+*undesirable
 `.trim().split('\n');

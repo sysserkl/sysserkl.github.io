@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-01-24 10:54:59 日"],
+["","","","更新日期：2021-01-26 16:26:36 二"],
 ["http://www.flasher.cn/Cartoon_1/200493012517-1.html","20040930 | 是什么成就了宫崎骏？(代前言)――宫崎骏与日本动画史的大师们比较论"],
 ["http://www.youtube.com/watch?v=npMzzKFmMcI","20070914 | YouTube - 1991年年届38岁邓丽君在金门向大陆同胞喊话"],
 ["http://bbs.btbbt.com/viewthread.php?tid=3122351","20080827 | 宫崎骏与吉卜力美术馆"],

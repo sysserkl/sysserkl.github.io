@@ -1,0 +1,15 @@
+var recent_info_list=[
+["","","","更新日期：2021-01-26 16:26:36 二"],
+["http://tech.sina.com.cn/d/2005-07-03/0828652110.shtml","20050703 | 北京三分之一市民患有慢性病 高血压居首位"],
+["http://news.sina.com.cn/c/h/2007-05-17/144313012150.shtml","20070517 | 中国成人高血压患者已达一亿六千万"],
+["http://www.bbc.co.uk/zhongwen/simp/china/2009/10/091006_china_hypertension.shtml","20091006 | BBC 中文网 - “高血压是中国人一大杀手”"],
+["http://www.aqee.net/my-standing-desk-experiment/","20121016 | 使用站立式办公桌的体验"],
+["https://mp.weixin.qq.com/s?__biz=MjA1ODMxMDQwMQ==&amp;mid=220800308&amp;idx=1&amp;sn=f6e612cfac8e7ca1d6e79e9b78ce9af1&amp;scene=21#wechat_redirect","20150517 | 一图读懂 · 被忽视的高血压 - 丁香医生"],
+["http://www.cnbeta.com/articles/403921.htm","20150618 | 英编辑亲身体验站立办公 称效率快了两倍_cnBeta.COM"],
+["http://cn.nytstyle.com/health/20151109/t09well-stand-more/","20151109 | 立式办公桌真的能让你更健康吗？ - 纽约时报"],
+["http://www.solidot.org/story?sid=54304","20171030 | Solidot | 中国的高血压危机"],
+["http://news.medlive.cn/heart/info-progress/show-135334_129.html","20171114 | 重磅！美国新版高血压指南发布，变化何其多……（附：全文下载）_医脉通"],
+["https://www.solidot.org/story?sid=54561","20171120 | Solidot | 46% 的美国人口现在有高血压"],
+["https://www.solidot.org/story?sid=61869","20190827 | Solidot | 中国每年新增千万高血压患者"],
+["http://www.xinhuanet.com/politics/2019-10/24/c_1125147069.htm","20191024 | 我国高血压患者2.7亿 该如何稳住我们的血压？-新华网"],
+];

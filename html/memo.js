@@ -14,6 +14,7 @@ function menu_lt_klmemo(){
         '<span class="span_menu" onclick="javascript:'+str_t+'klmemo_sort_type_global=\'1\';init_lt_klmemo();">开始日期降序</span>',     
         '<span class="span_menu" onclick="javascript:'+str_t+'klmemo_sort_type_global=\'2a\';init_lt_klmemo();">结束日期升序</span>',     
         '<span class="span_menu" onclick="javascript:'+str_t+'klmemo_sort_type_global=\'2\';init_lt_klmemo();">结束日期降序</span>',         
+        '<span class="span_menu" onclick="javascript:'+str_t+'klmemo_sort_type_global=\'tag\';init_lt_klmemo();">按tag排序</span>',
     ];
     
     var klmenu_config=[
@@ -97,14 +98,27 @@ function local_storage_2_array_lt_klmemo(do_delete=false){
         klmemo_global.push(list_t);
     }
     
-    var blno=parseInt((klmemo_sort_type_global+'0').substring(0,1));
-    if (isNaN(blno)){
-        blno=0;
+    if (klmemo_sort_type_global=='tag'){
+        klmemo_global.sort(function (a,b){
+            let list_a=a[0].match(/(#[^#\s]{2,})/g) || ['']; //忽略#1 #r 等 - 保留注释
+            let list_b=b[0].match(/(#[^#\s]{2,})/g) || [''];
+            list_a.sort();
+            list_b.sort();
+            if (list_a[0]==''){return false;}
+            if (list_b[0]==''){return true;}
+            return list_a[0]<list_b[0];
+        });    
     }
-    blno=Math.min(2,Math.max(0,blno));
-    klmemo_global.sort(function (a,b){return a[blno]>b[blno];});
-    if (klmemo_sort_type_global.includes('a')){
-        klmemo_global.reverse();
+    else {
+        var blno=parseInt((klmemo_sort_type_global+'0').substring(0,1));
+        if (isNaN(blno)){
+            blno=0;
+        }
+        blno=Math.min(2,Math.max(0,blno));
+        klmemo_global.sort(function (a,b){return a[blno]>b[blno];});
+        if (klmemo_sort_type_global.includes('a')){
+            klmemo_global.reverse();
+        }
     }
     array_2_local_storage_lt_klmemo();
 }
@@ -159,6 +173,26 @@ function help_lt_klmemo(){
     document.getElementById('div_help').innerHTML=bljg.split('\n').join('<br />');
 }
 
+function tag_style_lt_klmemo(csstr){
+    var color_value=''
+    var color_list=[['#r','🔴'],['#b','🔵'],['#y','🟡'],['#g',' 🟢'],['#p','🟣']];
+    for (let item of color_list){
+        if (csstr.includes(item[0]+' ') || csstr.slice(-2,)==item[0]){
+            color_value=item[1];
+            break;
+        }
+    }
+    
+    var no_value='';
+    for (let blxl=0;blxl<=3;blxl++){
+        if (csstr.includes('#'+blxl+' ') || csstr.slice(-2,)=='#'+blxl){
+            no_value='⓿❶❷❸'.substring(blxl,blxl+1);
+            break;
+        }    
+    }
+    return color_value+no_value;
+}
+
 function draw_lt_klmemo(csno){
     var csitem=klmemo_global[csno];
     var start_day = validdate_b(csitem[1]);
@@ -173,36 +207,90 @@ function draw_lt_klmemo(csno){
         all_days=' ('+all_days+'天)';
     }
     
+    var flag_value=tag_style_lt_klmemo(csitem[0]);
+    var is_son=((csitem[0].includes('#s ') || csitem[0].slice(-2,)=='#s')?'padding-left:2rem;':'');
+
     var bljg='';
     bljg=bljg+'<hr />';
     bljg=bljg+'<table width=100% cellspacing=0 cellpadding=0><tr style="font-size:0.8rem;color:'+scheme_global['color']+';background-color:'+scheme_global[(csitem[2]<csitem[1]?'skyblue':'button')]+';"><td>'+(csno+1)+'. <span style="cursor:pointer;" onclick="change_lt_klmemo(\''+csitem[0]+'\',1);">'+csitem[1]+'</span>&nbsp;&nbsp;-&nbsp;&nbsp;';
 
     bljg=bljg+'<span style="cursor:pointer;" onclick="change_lt_klmemo(\''+csitem[0]+'\',2);">'+(csitem[2]<csitem[1]?'yyyy-mm-dd':csitem[2])+'</span>'+all_days+'</td>';
-    bljg=bljg+'<td></td></tr></table>'; //保留待用 - 保留注释
+    bljg=bljg+'<td width=1% nowrap align=left style="padding:0 0.2rem;">'+flag_value+'</td>';
+    bljg=bljg+'<td id="td_memo_buttons_'+csno+'" align=right width=1% nowrap><span style="cursor:pointer;" onclick="content_editable_lt_klmemo('+csno+');">🖊</span></td></tr></table>'; //onclick 不能放在 td 中 - 保留注释
     bljg=bljg+'<p class="p_memo_content" style="font-size:1.2rem;">';
-    bljg=bljg+'<span class="span_memo_content" style="font-weight:bold;cursor:pointer;" onclick="content_editable_lt_klmemo(this,'+csno+');change_lt_klmemo(\''+csitem[0]+'\',0);">'+csitem[0]+'</span>';
+    bljg=bljg+'<span class="span_memo_content" id="span_memo_content_'+csno+'" style="font-weight:bold;'+is_son+'">';
+
+    bljg=bljg+csitem[0]+'</span>'; //change_lt_klmemo(\''+csitem[0]+'\',0); - 保留注释
     bljg=bljg+'</p><hr />';
-    var otable=document.getElementById('div_memo_'+csno);
-    if (otable){
-        otable.innerHTML=bljg;
+    var odiv=document.getElementById('div_memo_'+csno);
+    if (odiv){
+        odiv.innerHTML=bljg;
     }
     else {
         document.getElementById('divhtml').insertAdjacentHTML('afterbegin','<div id="div_memo_'+csno+'" width=100%>'+bljg+'</div>\n');
     }
 }
 
-function content_editable_lt_klmemo(ospan,csno){
-    return;
+function content_editable_lt_klmemo(csno){
+    var ospan=document.getElementById('span_memo_content_'+csno);
+    var otd=document.getElementById('td_memo_buttons_'+csno);    
+    if (!ospan){
+        alert('未发现指定编号事项');
+        return;
+    }
+    if (!otd){
+        alert('未发现按钮区');
+        return;
+    }    
     ospan.setAttribute('contenteditable','true');
-    ospan.removeAttribute('onclick','');
-    ospan.style.cursor='';
-    ospan.insertAdjacentHTML('afterend',' <button onclick="javascript:change_content_lt_klmemo(this.parentNode,'+csno+');">保存</button> <button onclick="javascript:draw_lt_klmemo('+csno+');">取消</button>');
+    //ospan.removeAttribute('onclick','');
+    //ospan.style.cursor='';
+    otd.innerHTML='<button onclick="javascript:change_content_lt_klmemo('+csno+');">保存</button> <button onclick="javascript:draw_lt_klmemo('+csno+');">取消</button>';
 }
 
-function change_content_lt_klmemo(op,csno){
-    var ospan=op.querySelector('span.span_memo_content');
-    if (ospan){
-        alert(ospan.innerText+' '+csno);
+function change_content_lt_klmemo(csno){
+    var ospan=document.getElementById('span_memo_content_'+csno);
+    if (!ospan){
+        alert('未发现指定编号事项');
+        return;
+    }
+    
+    var currentvalue=ospan.innerText.trim();
+    if (currentvalue==''){
+        alert('修改项为空值，未保存');
+        return;
+    }
+    
+    if (csno<0 || csno>=klmemo_global.length){
+        alert('编号超出范围，未保存');
+        return;    
+    }
+    
+    currentvalue=quote_2_cn_character(currentvalue);
+    
+    for (let blxl=0;blxl<klmemo_global.length;blxl++){
+        if (currentvalue==klmemo_global[blxl][0]){
+            if (blxl==csno){
+                alert('未做修改，未保存');
+                return;                
+            }
+            else {
+                alert('存在同名的Memo，取消修改');
+                return;
+            }
+        }
+    }
+    
+    var oldvalue=klmemo_global[csno][0];
+    if (confirm('是否修改？\n'+oldvalue+'\n'+currentvalue)==false){
+        return;
+    }
+
+    klmemo_global[csno][0]=currentvalue;
+    array_2_local_storage_lt_klmemo();
+    draw_lt_klmemo(csno);
+    if (oldvalue.includes('#') || currentvalue.includes('#')){
+        tag_list_lt_klmemo();
     }
 }
 
@@ -243,6 +331,10 @@ function init_lt_klmemo(cskey=''){
         cskey=cskey.substring(0,cskey.length-4);
     }
     
+    if (cskey.length==2 && cskey.slice(0,1)=='#'){  //针对 #1 #r 等 - 保留注释
+        cskey=cskey+'\\b';
+        isreg=true;
+    }
     if (cskey!==''){
         for (let blxl=0;blxl<klmemo_global.length;blxl++){
             var item=klmemo_global[blxl][0];   //Memo Name - 保留注释
@@ -344,7 +436,9 @@ function new_lt_klmemo(){
 function tag_list_lt_klmemo(){
     function sub_tag_list_lt_klmemo_one_tag(tagname,cscount){
         if (tagname==''){return ''};
-        tagname=tagname.substring(1,);
+        if (tagname.length>2){
+            tagname=tagname.substring(1,);  //剔除# - 保留注释
+        }
         return '<span class="oblong_box" onclick="javascript:init_lt_klmemo(\''+tagname+'\');">'+tagname+'<font color="grey"><small>('+cscount+')</small></font></span>\n';
     }
     //---------------------------------

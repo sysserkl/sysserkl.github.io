@@ -260,4 +260,5 @@ var digest_global=`
 *uppermost
 *antelope
 *prospector
+*sprang
 `.trim().split('\n');

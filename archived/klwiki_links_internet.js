@@ -1,8 +1,7 @@
 var recent_info_list=[
-["","","","更新日期：2021-01-24 10:54:59 日"],
+["","","","更新日期：2021-01-26 16:26:36 二"],
 ["http://tech.sina.com.cn/i/2007-10-16/10171795136.shtml","20071016 | 唐骏：无论马云持多少股份都是公司核心"],
 ["http://money.163.com/08/0519/18/4CB0VMBA00251RJ2.html","20080519 | 马云：最大的善举绝不在于捐款"],
-["http://zjnews.zjol.com.cn/05zjnews/system/2008/07/21/009751470.shtml","20080721 | 马云做规矩： 到淘宝网上班要先学会倒立"],
 ["http://news.xinhuanet.com/newmedia/2009-02/04/content_10760063.htm","20090204 | 马云的2008：白云观禁语3天 淘宝高管需会倒立"],
 ["http://blog.china.alibaba.com/blog/yunma/article/b0-i6910954.html","20090518 | 马云在首届网商交易会上的讲话：不做电子商务，5年后你会后悔！"],
 ["http://blog.donews.com/keso/archive/2009/09/08/1559345.aspx","20090908 | 东拉西扯：柳传志和马云 - 对牛乱弹琴"],
