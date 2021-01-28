@@ -1300,7 +1300,7 @@ function change_colors_b(csstr){
     obody.style.backgroundColor=scheme_global['background'];
 }
 
-function obj_search_show_hide_b(objs,cskey,csreg,checkreg=false){   
+function obj_search_show_hide_b(objs,subobj_querystr='',cskey='',csreg=false,checkreg=false){   
     if (checkreg){
         if (cskey.slice(-4,)=='(:r)'){
             csreg=true;
@@ -1314,7 +1314,16 @@ function obj_search_show_hide_b(objs,cskey,csreg,checkreg=false){
         return;
     }
     for (let item of objs){
-        var bltext=item.innerText.trim();
+        var bltext='';
+        if (subobj_querystr==''){
+            bltext=item.innerText.trim();
+        }
+        else {
+            var osub=item.querySelector(subobj_querystr);
+            if (osub){
+                bltext=osub.innerText.trim();
+            }
+        }
         var blfound=str_reg_search_b(bltext,cskey,csreg);
         if (blfound==-1){break;}
         if (blfound){

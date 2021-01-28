@@ -21,9 +21,9 @@ css_root_style_b('19','13',['base','menu']);
 </head>
 <body>
 <a name="top"></a>
-<h2 id="h2_title" style="margin-top:0rem;font-size:1.3rem;"><span style="cursor:pointer;" ondblclick="javascript:init_lt_klmemo();">Memo</span> <span id="span_count" style="font-size:0.8rem;font-weight:normal;"></span></h2>
+<h2 id="h2_title" style="margin-top:0rem;font-size:1.3rem;"><span style="cursor:pointer;" ondblclick="javascript:init_lt_klmemo('',true);">Memo</span> <span id="span_count" style="font-size:0.8rem;font-weight:normal;"></span></h2>
 <div style="margin-left:0.5rem;margin-right:0.5rem;">
-<p id="p_tags_klmemo" style="font-size:0.8rem;line-height:2rem;"></p>
+<p id="p_tags_klmemo" style="font-size:0.8rem;line-height:1.8rem;"></p>
 <div id="divhtml">
 </div>
 <div id="div_status" style="font-size:0.8rem;color:grey;cursor:pointer;" ondblclick="javascript:this.innerHTML='';"></div>
@@ -42,8 +42,7 @@ else {
     document.getElementById('div_status').innerHTML='Memo Service Worker not work';
 }
 //-------------------------
-init_lt_klmemo();
-tag_list_lt_klmemo();
+init_lt_klmemo('',true);
 menu_lt_klmemo();
 top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.4rem'));
 </script>

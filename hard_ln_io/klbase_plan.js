@@ -80,21 +80,30 @@ function hide_klplan_b(only_today=false){
     var today=date2str_b('-');
     var olis=document.querySelectorAll('div#divhtml li');
     for (let item of olis){
-        var ospan=item.querySelector('span.span_date');
-        if (ospan){
+        var ospan_date=item.querySelector('span.span_date');
+        if (ospan_date){
             if (hide_li_golbal==true){
-                if (ospan.innerHTML==''){
+                if (ospan_date.innerHTML==''){
                     item.style.display='none';
                 }
-                if (only_today && !ospan.innerText.includes(today)){
+                if (only_today && !ospan_date.innerText.includes(today)){
                     item.style.display='none';
-                }                
+                }
             }
             else {
                 item.style.display='';
             }
-        }
+        }        
     }
+}
+
+function search_klplan_b(){
+    var cskey=prompt('输入搜索关键字：');
+    if (cskey==null){
+        return;
+    }
+    var olis=document.querySelectorAll('div#divhtml li');
+    obj_search_show_hide_b(olis,'span.span_link',cskey.trim(),false,true);
 }
 
 function category_klplan_b(cscategory){

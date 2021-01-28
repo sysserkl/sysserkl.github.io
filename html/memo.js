@@ -42,7 +42,7 @@ function update_lt_klmemo(){
     var blitems=otextarea_item.value.trim();
     if (confirm("是否更新数据？")){
         localStorage.setItem('klmemo_item',blitems);
-        init_lt_klmemo();
+        init_lt_klmemo('',true);
     }
 }
 
@@ -60,8 +60,7 @@ function array_2_local_storage_lt_klmemo(){
 function delete_lt_klmemo(){
     if (confirm("是否清空完成项？")){
         local_storage_2_array_lt_klmemo(true);
-        init_lt_klmemo();
-        tag_list_lt_klmemo();
+        init_lt_klmemo('',true);
     }
 }
 
@@ -294,7 +293,7 @@ function change_content_lt_klmemo(csno){
     }
 }
 
-function init_lt_klmemo(cskey=''){
+function init_lt_klmemo(cskey='',refresh_tag=false){
     local_storage_2_array_lt_klmemo();
     document.getElementById('divhtml').innerHTML='';
 
@@ -351,6 +350,9 @@ function init_lt_klmemo(cskey=''){
         for (let blxl=0;blxl<klmemo_global.length;blxl++){
             draw_lt_klmemo(blxl);
         }
+    }
+    if (refresh_tag){
+        tag_list_lt_klmemo();
     }
 }
 
@@ -430,6 +432,9 @@ function new_lt_klmemo(){
     klmemo_global.push(list_t); //此处无sort - 保留注释
     array_2_local_storage_lt_klmemo();
     draw_lt_klmemo(klmemo_global.length-1);
+    if (newmemo.includes('#')){
+        tag_list_lt_klmemo();
+    }    
     document.getElementById('span_count').innerHTML='('+klmemo_global.length+')';
 }
 

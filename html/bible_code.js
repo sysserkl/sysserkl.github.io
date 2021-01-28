@@ -79,7 +79,16 @@ function menu_bible(){
         color_menu.push('<span class="span_menu" onclick="javascript:'+'change_colors_b(\''+item+'\');" style="color:'+item.split(',')[0]+';background-color:'+item.split(',')[1]+';">'+(blxl+1)+'. '+item+'</span>');
     }
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'✝','14rem','1.5rem','1rem','60rem')+klmenu_b(klmenu2,'⚙','14rem','1.5rem','1rem','60rem')+klmenu_b(klmenu_idb,'ℹ','14rem','1.5rem','1rem','60rem')+klmenu_b(klmenu3,'🌐','16rem','1.5rem','1rem','60rem')+klmenu_b(color_menu,'🎨','20rem','1.5rem','1rem','20rem'),'','0rem')+' ');
+    if (ismobile_b()){
+        var button_fontsize='1.8rem';
+        var menu_fontsize='1.2rem';
+    }
+    else {
+        var button_fontsize='1.5rem';
+        var menu_fontsize='1rem';
+    }
+    
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'✝','14rem',button_fontsize,menu_fontsize,'60rem')+klmenu_b(klmenu2,'⚙','14rem',button_fontsize,menu_fontsize,'60rem')+klmenu_b(klmenu_idb,'ℹ','14rem',button_fontsize,menu_fontsize,'60rem')+klmenu_b(klmenu3,'🌐','16rem',button_fontsize,menu_fontsize,'60rem')+klmenu_b(color_menu,'🎨','20rem',button_fontsize,menu_fontsize,'20rem'),'','0rem')+' ');
 }
 
 function args_bible(){

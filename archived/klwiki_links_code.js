@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-01-26 16:26:36 二"],
+["","","","更新日期：2021-01-27 09:25:52 三"],
 ["https://mail.python.org/pipermail/python-list/2005-May/342496.html","20050506 | [HELP] Tkinter Application Minimized to System Tray :)"],
 ["http://m.blog.csdn.net/article/details?id=1811343","20071004 | Tkinter教程之Text(1)篇"],
 ["http://m.blog.csdn.net/article/details?id=1811347","20071004 | Tkinter教程之Text(2)篇"],

@@ -160,4 +160,5 @@ var digest_global=`
 *largish
 *imaginable
 *drummer
+*beekeeper
 `.trim().split('\n');

@@ -7,4 +7,5 @@ var digest_global=`
 *cornflakes
 *herbology
 *doughnut
+*outta
 `.trim().split('\n');

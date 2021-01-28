@@ -106,6 +106,7 @@ function update_todolist(textarea_id,local_storage_id,reload=true){
 function menu_todolist(){
     var str_t=klmenu_hide_b('');
     var klmenu1=[
+    '<span class="span_menu" onclick="javascript:'+str_t+'search_klplan_b();">搜索</span>',     
     '<span class="span_menu" onclick="javascript:'+str_t+'edit_switch_todolist();">逐个整理事项</span>',    
     '<span class="span_menu" onclick="javascript:'+str_t+'form_list_todolist();">批量整理事项</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'demo_todolist();">导入Demo事项</span>',

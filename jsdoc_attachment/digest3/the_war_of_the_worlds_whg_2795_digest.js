@@ -28,4 +28,5 @@ var digest_global=`
 *unproven
 *uncooked
 *summerhouse
+*Ripley
 `.trim().split('\n');

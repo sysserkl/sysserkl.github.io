@@ -295,6 +295,7 @@ function form_list_klroutines(){
 function menu_klroutines(){
     var str_t=klmenu_hide_b('');
     var klmenu1=[
+    '<span class="span_menu" onclick="javascript:'+str_t+'search_klplan_b();">搜索</span>',     
     '<span class="span_menu" onclick="javascript:'+str_t+'statistics_form_klroutines();">统计</span>',    
     '<span class="span_menu" onclick="javascript:'+str_t+'edit_switch_klroutines();">逐个整理事项</span>',    
     '<span class="span_menu" onclick="javascript:'+str_t+'form_list_klroutines();">批量整理事项</span>',
@@ -306,7 +307,15 @@ function menu_klroutines(){
         klmenu1.push('<a href="../../../../../wiki/index.php/KL_Routines" onclick="javascript:'+str_t+'" target=_blank>KL Routines - KLWiki</a>');
     }
     
-    document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,day_2_week_b('',true),'14rem','1rem','1rem','60rem','','div_rountines_menu1','button_routines_menu1'),'','0rem','','div_routines_menu')+' '); //♾ - 保留注释
+    if (ismobile_b()){
+        var fontsize='0.8rem';
+        var menu1width='10rem';
+    }
+    else {
+        var fontsize='1rem';
+        var menu1width='14rem';
+    }
+    document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,day_2_week_b('',true),menu1width,fontsize,fontsize,'60rem','','div_rountines_menu1','button_routines_menu1'),'','0rem','','div_routines_menu')+' '); //♾ - 保留注释
 }
 
 function week_check_klroutines(){

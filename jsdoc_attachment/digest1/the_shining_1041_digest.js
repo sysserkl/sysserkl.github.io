@@ -18,4 +18,5 @@ var digest_global=`
 *shallowly
 *Anderson
 *sonny
+*Brett
 `.trim().split('\n');
