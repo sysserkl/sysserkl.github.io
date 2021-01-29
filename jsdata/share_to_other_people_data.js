@@ -37,6 +37,7 @@ var recent_info_list=[
 * [?klwiki_links_internet internet]
 * [?klwiki_links_linux Linux]
 * [?klwiki_links_multimedia 影音动漫]
+* [?klwiki_links_religion religion]
 * [?klwiki_links_xiaomi 小米]
 </div>
 `],

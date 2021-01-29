@@ -8456,7 +8456,7 @@ var enwords=[
 ["snakebite", "['sneɪkbaɪt]", "n. 蛇咬伤"],
 ["snake", "[sneɪk]", "n. 蛇；狡诈的人；v. 蜿蜒；拖曳"],
 ["snapshot", "UK ['snæpʃɒt] US ['snæpʃɑːt]", "n. 快照；印象"],
-["sneak", "[sniːk]", "vt. 偷偷摸摸做；vi. 偷偷地走；偷偷地做；n. 鬼鬼祟祟的人；潜行；溜；adj. 出其不意的；暗中进行的"],
+["sneak", "[sniːk]", "v. 偷偷摸摸做；偷偷地做；偷偷地走；n. 鬼鬼祟祟的人；潜行；溜；adj. 出其不意的；暗中进行的"],
 ["sneeze", "[sniːz]", "n. 喷嚏；喷嚏声；the act of sneezing or the noise you make when you sneeze; an act or instance of sneezing; vi. 打喷嚏；to have air come suddenly and noisily out through your nose and mouth in a way that you cannot control, for example because you have a cold; to make a sudden violent spasmodic audible expiration of breath through the nose and mouth especially as a reflex act"],
 ["sniper", "['snaɪpər]", "n. 狙击兵；狙击手；a person who shoots at somebody from a hidden position; someone who shoots at people from a place where they cannot be seen"],
 ["snippet", "['snɪpɪt]", "n. 小片；小部分；（消息或文章等的）片段"],
