@@ -505,4 +505,5 @@ var digest_global=`
 *luminescent
 *chronicler
 *daylong
+*Brittany
 `.trim().split('\n');

@@ -79,4 +79,5 @@ var digest_global=`
 *uncomfortably
 *spyhole
 *springy
+*eyeless
 `.trim().split('\n');

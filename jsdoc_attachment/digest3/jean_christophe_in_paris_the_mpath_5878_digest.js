@@ -47,4 +47,5 @@ var digest_global=`
 *woodpecker
 *infirmary
 *undesirable
+*Nathan
 `.trim().split('\n');

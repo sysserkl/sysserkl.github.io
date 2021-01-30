@@ -33,4 +33,5 @@ var digest_global=`
 *common sense
 *anarchist
 *kiosk
+*Breton
 `.trim().split('\n');

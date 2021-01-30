@@ -1,8 +1,15 @@
 var recent_info_list=[
-["","","","更新日期：2021-01-28 18:57:07 四"],
+["","","","更新日期：2021-01-29 19:36:22 五"],
+["http://www.china.org.cn/chinese/zhuanti/305781.htm","20030402 | 张治云：连环画收藏行话初探"],
+["http://forum.taobao.com/forum-12/show_thread----3205710-.htm","20051201 | 中国连环画(小人书)封面集锦"],
+["http://news.sina.com.cn/c/2008-11-18/010716671233.shtml","20081118 | 我国首座连环画博物馆将落户昆明"],
 ["http://chinagfw.blogspot.com/2009/01/blog-post_13.html","20090113 | 宋石男：请禁止“四大名著”于网络传播"],
 ["http://www.douban.com/note/202575876/","20120227 | 苏掌柜：四大名著死亡人数统计"],
 ["http://www.ftchinese.com/story/001047210","20121030 | 企鹅出版社与兰登书屋合并 - FT中文网"],
 ["http://www.bbc.co.uk/zhongwen/simp/business/2013/04/130405_penguin_random_merger.shtml","20130405 | 欧盟批准企鹅与兰登书屋合并计划 - BBC中文网"],
+["http://news.sina.com.cn/c/nd/2016-03-16/doc-ifxqnskh0871155.shtml","20160316 | 连环画泰斗贺友直辞世 笔下老上海影响几代人_新浪新闻"],
 ["http://weibo.com/5961036557/EeVFBychQ","20161028 | 位于人民中路一段29号的书屋，是四川省唯一... 来自更成都 - 微博"],
+["http://m.weibo.cn/status/4036220059083123","20161030 | 于双子鱼：周末连环画《乌龙院》 - 微博"],
+["https://weibo.com/3645321135/Hz8FdCqRz","20190616 | 周末连环画红楼梦上美版（19册） ... 来自于双子鱼 - 微博"],
+["https://www.weibo.com/3645321135/Iad4w05D5","20191006 | 周末连环画彩绘全本三国演义（10册）... 来自于双子鱼 - 微博"],
 ];
