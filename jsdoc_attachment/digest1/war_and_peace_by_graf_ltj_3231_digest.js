@@ -161,4 +161,5 @@ var digest_global=`
 *imaginable
 *drummer
 *beekeeper
+*kennelman
 `.trim().split('\n');

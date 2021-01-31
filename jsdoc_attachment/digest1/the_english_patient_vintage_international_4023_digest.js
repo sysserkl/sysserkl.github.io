@@ -23,4 +23,5 @@ var digest_global=`
 *faultless
 *odometer
 *aviator
+*anticlockwise
 `.trim().split('\n');

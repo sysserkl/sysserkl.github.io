@@ -19,4 +19,6 @@ var digest_global=`
 *Anderson
 *sonny
 *Brett
+*Casey
+*stairwell
 `.trim().split('\n');
