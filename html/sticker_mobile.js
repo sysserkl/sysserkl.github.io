@@ -45,20 +45,24 @@ function remove_title_klsticker_m(){
     document.getElementById('td_title').style.display='none';
 }
 
-function article_padding_klsticker_m(){
+function article_padding_klsticker_m(csvalue=''){   //3rem - 保留注释
     var odiv=document.getElementById('table_article');
     var blpadding=odiv.style.padding;
-    var blnew=(prompt('输入新padding值',blpadding) || '').trim();
-    if (blnew==''){return;}
-    odiv.style.padding=blnew;
+    if (csvalue==''){
+        csvalue=(prompt('输入新padding值',blpadding) || '').trim();
+    }
+    if (csvalue==''){return;}
+    odiv.style.padding=csvalue;
 }
 
-function p_margin_klsticker_m(){
-    var blnew=(prompt('输入新margin值',p_margin_global) || '').trim();
-    if (blnew==''){return;}
-    blnew=parseFloat(blnew);
-    if (blnew<0){return;}
-    p_margin_global=blnew;    
+function p_margin_klsticker_m(csvalue=''){
+    if (csvalue==''){
+        csvalue=(prompt('输入新margin值',p_margin_global) || '').trim();
+    }
+    if (csvalue==''){return;}
+    csvalue=parseFloat(csvalue);
+    if (csvalue<0){return;}
+    p_margin_global=csvalue;    
     vertical_klsticker_m(false);
 }
 
@@ -82,6 +86,7 @@ function vertical_klsticker_m(dochange=true){
         else {break;}
     }
     
+    var otable=document.getElementById('table_article');
     if (blclass=='horizontal'){
         otd_content.setAttribute('class','vertical');
         for (let item of blos){
@@ -94,7 +99,7 @@ function vertical_klsticker_m(dochange=true){
                 item.innerHTML='<span class="span_line_sticker_m" style="'+(underline_padding_global==''?'':'padding-left:'+underline_padding_global+'rem;')+'border-width:0 0 0 0.1rem; border-style:solid;">'+item.innerHTML+'</span>';
             }
         }
-        document.getElementById('table_article').style.writingMode='vertical-rl';
+        otable.style.writingMode='vertical-rl';
         
         otd_title.style.borderBottom='';
         otd_title.style.paddingBottom='';     
@@ -116,7 +121,7 @@ function vertical_klsticker_m(dochange=true){
                 item.innerHTML='<span class="span_line_sticker_m" style="'+(underline_padding_global==''?'':'padding-bottom:'+underline_padding_global+'rem;')+'border-width:0 0 0.1rem 0; border-style:solid;">'+item.innerHTML+'</span>';
             }
         }        
-        document.getElementById('table_article').style.writingMode='';
+        otable.style.writingMode='';
         
         otd_title.style.borderBottom='0.1rem solid';
         otd_title.style.paddingBottom='0.5rem';
@@ -211,21 +216,23 @@ function change_scheme_klsticker_m(csstr){
     document.querySelector('body').style.backgroundColor=current_scheme_sticker_m_global[1];    
 }
 
-function font_size_klsticker_m(csid,cstype=''){
+function font_size_klsticker_m(csid,csvalue=''){
     var blo=document.getElementById(csid);
     var blfont=parseFloat(blo.style.fontSize.split('rem')[0].trim());
-    if (cstype=='+'){
+    if (csvalue=='+'){
         blfont=blfont+0.1;
     }
-    else if (cstype=='-'){
+    else if (csvalue=='-'){
         blfont=Math.max(0.1,blfont-0.1);
     }
     else {
-        var blnew=(prompt('输入字号值',blfont) || '').trim();
-        if (blnew==''){return;}
-        blnew=parseFloat(blnew);
-        if (blnew<0){return;}   
-        blfont=blnew; 
+        if (csvalue==''){
+            csvalue=(prompt('输入字号值',blfont) || '').trim();
+        }
+        if (csvalue==''){return;}
+        csvalue=parseFloat(csvalue);
+        if (csvalue<0){return;}   
+        blfont=csvalue; 
     }
     blo.style.fontSize=blfont+'rem';
 }
@@ -314,12 +321,14 @@ function underline_klsticker_m(){
     vertical_klsticker_m(false);
 }
 
-function line_height_klsticker_m(){
+function line_height_klsticker_m(csvalue=''){
     var odiv=document.getElementById('table_article');
     var bl_line_height=odiv.style.lineHeight.trim();
-    var blnew=(prompt('输入新line height值',bl_line_height) || '').trim();
-    if (blnew==''){return;}
-    odiv.style.lineHeight=blnew;
+    if (csvalue==''){
+        csvalue=(prompt('输入新line height值',bl_line_height) || '').trim();
+    }
+    if (csvalue==''){return;}
+    odiv.style.lineHeight=csvalue;
 }
 
 function qr_generate_klsticker_m(){

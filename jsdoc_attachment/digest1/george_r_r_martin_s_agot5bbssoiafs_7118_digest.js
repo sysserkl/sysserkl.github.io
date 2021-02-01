@@ -16,4 +16,6 @@ var digest_global=`
 *seagull
 *sleeveless
 *cellmate
+*girlhood
+*leaderless
 `.trim().split('\n');

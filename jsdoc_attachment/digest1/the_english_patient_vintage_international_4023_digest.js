@@ -24,4 +24,5 @@ var digest_global=`
 *odometer
 *aviator
 *anticlockwise
+*deceiver
 `.trim().split('\n');
