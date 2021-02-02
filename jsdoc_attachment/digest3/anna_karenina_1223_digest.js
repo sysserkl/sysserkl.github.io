@@ -122,4 +122,7 @@ var digest_global=`
 *heedlessness
 *kinship
 *persuasive
+*Sasha
+*unnoticed
+*greedily
 `.trim().split('\n');

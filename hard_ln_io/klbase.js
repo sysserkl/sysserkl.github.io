@@ -871,8 +871,24 @@ function local_storage_today_b(csid,csmax=-1,csnewcontent='',cssplit='',cstype='
     localStorage.setItem(csid,today+cssplit+csnewcontent+bljg);
 }
 
-function track_source_b(cskey,include_local=true){
+function track_source_b(cskey,include_local=true,count_per_day=1){
     if (include_local==false && is_local_b()){return;}
+    var theday=new Date();
+    var daystr=theday.getFullYear()+'-'+('0'+(theday.getMonth()+1)).slice(-2)+'-'+('0'+theday.getDate()).slice(-2);    
+    var blcount=0;
+    var list_t=local_storage_get_b('track_source_count_per_day',-1,true);
+    if (list_t.length>=2){
+        if (list_t[0]==daystr){
+            blcount=parseInt(list_t[1]);
+            if (!isNaN(blcount)){
+                if (count_per_day>=0 && blcount>=count_per_day){return;}
+            }
+            else {
+                blcount=0;
+            }
+        }
+    }
+    localStorage.setItem('track_source_count_per_day',daystr+'\n'+(blcount+1));
     document.write('\n<ifra'+'me src="ht'+'tps:\/\/gla'+'cial-re'+'treat-38'+'863'+'.'+'her'+'oku'+'ap'+'p.c'+'om\/pg?key='+specialstr_html_b(cskey)+'" style="display:none;"><\/ifra'+'me>\n');
 }
 

@@ -50,6 +50,7 @@ var digestlist_source_global_b=[
 ["walden_thoreau_henry_david_2526_digest",1],
 ["the_english_patient_vintage_international_4023_digest",1],
 ["1984_dong_wu_zhuang_yuan_ywb_186007_digest",1],
+["breakfast_at_tiffany_s_vintage_i_4298_digest",1],
 ["zi_zhi_tong_jian_138381_digest",1],
 ["into_the_wild_picador_classic_2752_digest",1],
 ["jin_yong_zuo_pin_ji_xajhxdbq4_573536_digest",1],

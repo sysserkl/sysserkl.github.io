@@ -565,7 +565,9 @@ function import_enbook(){
 
 function news_words_statistics_enbook(){
     var blresult=(localStorage.getItem('enwords_books_all_new_words') || '').trim().split('\n');
-    document.getElementById('div_new_words2').innerHTML=array_2_li_b(blresult);
+    var odiv=document.getElementById('div_new_words2');
+    odiv.innerHTML=array_2_li_b(blresult);
+    odiv.scrollIntoView();
 }
 
 function current_statistics_data_enbook(csid){
@@ -618,10 +620,22 @@ function compare_statistics_enbook(){
 
 function compare_result_list_to_table_enbook(sortno=4){
     if (enbook_compare_result_list_sort_order_global){
-        enbook_compare_result_list_global.sort(function (a,b){return a[sortno]>b[sortno];});   
+        enbook_compare_result_list_global.sort(function (a,b){
+            if (sortno>=2){
+                if (isNaN(a[sortno])){return 1;}
+                if (isNaN(b[sortno])){return 0;}
+            }
+            return a[sortno]>b[sortno];
+        });   
     }
     else {
-        enbook_compare_result_list_global.sort(function (a,b){return a[sortno]<b[sortno];});   
+        enbook_compare_result_list_global.sort(function (a,b){
+            if (sortno>=2){
+                if (isNaN(a[sortno])){return 0;}
+                if (isNaN(b[sortno])){return 1;}
+            }
+            return a[sortno]<b[sortno];
+        });   
     }
     enbook_compare_result_list_sort_order_global=!enbook_compare_result_list_sort_order_global;
     

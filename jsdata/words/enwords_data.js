@@ -1,5 +1,9 @@
 //单词库
 var enwords=[
+["multimillionaire", "UK [ˌmʌltiˌmɪljə'neə(r)] US [ˌmʌltiˌmɪljə'ner] [ˌmʌltaɪˌmɪljəˈner]", "n. 拥有数百万资产的富翁；大富豪；千万富翁；a person who has money and possessions worth several million pounds, dollars, etc.; a person whose wealth amounts to many millions (as of dollars or pounds)"],
+["Sasha", "['sɑ:ʃə]", "n. 莎夏；沙夏；萨夏；萨莎（女子名）；a female given name, form of Sandra, Alexandra; a female given name from Russian; n. 沙夏；萨夏（男子名）；a male give name, form of Alexander; a male given name from Russian"],
+["unnoticed", "[ˌʌn'nəʊtɪst]", "adj. 被忽视的；不被注意的；不引人注意的；未被看见的；not seen or noticed; not perceived or observed"],
+["greedily", "['ɡriːdɪlɪ] [ˈɡriːd(ə)li]", "adv. 贪婪地；贪食地；狼吞虎咽地；in a way that shows that you want more money, power, food, etc. than you really need; in a greedy manner; with keen or ardent desire; in a way that shows an excessive desire or appetite for food; with an intense and selfish desire for wealth or power"],
 ["girlhood", "[ˈɡɜː(r)lˌhʊd]", "n. 少女身份；少女状态；少女时期；少女时代；the time when somebody is a girl; the fact of being a girl; the state or time of being a girl; n. 少女(总称)；girls collectively"],
 ["deceiver", "[dɪ'siːvə(r)]", "n. 骗子；欺骗者；欺诈者；a person or thing that makes somebody believe something that is not true; someone who deceives people; a person who lies or deceives; n. 撒旦的别名；(usually preceded by 'the') another name for Satan"],
 ["leaderless", "['liːdə(r)ləs]", "adj. 无领袖的；无领导的；without a leader; without a person providing direction; without a thing serving as leader"],
@@ -16,7 +20,7 @@ var enwords=[
 ["apiarist", "[ˈeɪpɪərɪst]", "n. 养蜂人；养蜂家；a person who studies or keeps bees; a person who keeps an apiary; beekeeper; a person who keeps bees, especially to produce honey"],
 ["beekeeper", "['biːˌkiːpə(r)]", "n. 养蜂人；=apiarist；a person who owns and takes care of bees; a person who raises bees; a person who raises honeybees; apiculturist; apiarist"],
 ["outta", "['aʊtə]", "prep. 'out of' 的简写；used for writing the way 'out of' is sometimes pronounced in informal speech; prep. get outta here!"],
-["Ripley", "[ˈrɪplɪ]", "里普利；黎普列；雷普利；雷普莉(人名，英格兰人姓氏）；a surname; n. 加拿大、美国、英国地名；住所名称，来源于古英语，含义是“地块+树林，开垦地”(strip of land+wood,clearing)；a city, the county seat of Jackson County, West Virginia, United States; a city, the county seat of Lauderdale County, Tennessee, United States; a city, the county seat of Tippah County, Mississippi, United States; a town in Bruce County, Ontario, Canada; a town in Chautauqua County, New York, United States; a village in Brown County, Illinois, United States; a village in Brown County, Ohio, United States; a village in Guildford borough, Surrey, England"],
+["Ripley", "[ˈrɪplɪ]", "n. 里普利；黎普列；雷普利；雷普莉(人名，英格兰人姓氏）；a surname; n. 加拿大、美国、英国地名；住所名称，来源于古英语，含义是“地块+树林，开垦地”(strip of land+wood,clearing)；a city, the county seat of Jackson County, West Virginia, United States; a city, the county seat of Lauderdale County, Tennessee, United States; a city, the county seat of Tippah County, Mississippi, United States; a town in Bruce County, Ontario, Canada; a town in Chautauqua County, New York, United States; a village in Brown County, Illinois, United States; a village in Brown County, Ohio, United States; a village in Guildford borough, Surrey, England"],
 ["Brett", "[bret]", "n. 布雷特(人名)；a male or female given name, also: Bret; n. brett: 折篷大马车（敞篷四轮马车的一种）；britska; a kind of horse-drawn carriage; n. brett: (informal) a fault in wine caused by Brettanomyces yeast"],
 ["waterfront", "['wɔːtə(r)frʌnt]", "n. 水边地；滨水区；码头区；a part of a town or an area that is next to water, for example in a harbour; the area of a town or city alongside a body of water, such as a harbour or dockyard; land, land with buildings, or a section of a town fronting or abutting on a body of water; land at the edge of a stream, harbor, etc.; the wharf or dock area of a city; the dockland district of a town"],
 ["beekeeping", "[ˈbiːkiːpɪŋ]", "n. 养蜂；the activity or job of keeping bees in order to produce honey; the rearing and breeding of honeybees; apiculture; the activity of owning and taking care of bees"],
@@ -9943,7 +9947,7 @@ var enwords=[
 ["voluntary", "UK ['vɒlənt(ə)ri] US ['vɑlənˌteri]", "adj. 自愿的；志愿的；主动的；自告奋勇的；n. 仪式终始曲；(教堂礼拜仪式前后或进行期间的)乐器独奏"],
 ["volunteer", "UK [ˌvɒlən'tɪə(r)] US [ˌvɑːlən'tɪr]", "n. 志愿者；(自行生长的)植物；v. (自愿)做"],
 ["voodoo", "['vuːduː]", "n. 伏都教(一种西非原始宗教)；伏都教徒；a religion that is practised especially in Haiti and involves magic and witchcraft; v. 施魔法于；adj. 伏都教的"],
-["voracious", "[və'reɪʃəs]", "adj. 狼吞虎咽的；贪婪的；贪吃的；求知欲强的"],
+["voracious", "[və'reɪʃəs]", "adj. 贪婪的；贪吃的；狼吞虎咽的；求知欲强的"],
 ["vortex", "['vɔː(r)teks]", "n. 漩涡；涡旋；低涡；感情（或局势）的旋涡；旋风；a mass of air, water, etc. that turns round and round very fast and pulls things into its centre; something that resembles a whirlpool; a mass of fluid (such as a liquid) with a whirling or circular motion that tends to form a cavity or vacuum in the center of the circle and to draw toward this cavity or vacuum bodies subject to its action, especially: whirlpool, eddy; a very powerful feeling or situation that you cannot avoid or escape from"],
 ["voter", "['vəʊtə(r)]", "n. 投票人；选举人"],
 ["vote", "[vəʊt]", "n. 选举；选举权；投票；投票结果；v. 选举；投票；表决"],
