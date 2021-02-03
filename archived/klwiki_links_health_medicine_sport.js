@@ -1,9 +1,11 @@
 var recent_info_list=[
-["","","","更新日期：2021-01-29 19:36:22 五"],
+["","","","更新日期：2021-02-02 11:12:16 二"],
 ["http://tech.sina.com.cn/d/2005-07-03/0828652110.shtml","20050703 | 北京三分之一市民患有慢性病 高血压居首位"],
+["http://news.sina.com.cn/c/2005-08-07/09506631319s.shtml","20050807 | 我国1.6亿人血脂异常 专家呼吁改变饮食习惯"],
 ["http://news.sina.com.cn/c/h/2007-05-17/144313012150.shtml","20070517 | 中国成人高血压患者已达一亿六千万"],
 ["http://www.bbc.co.uk/zhongwen/simp/china/2009/10/091006_china_hypertension.shtml","20091006 | BBC 中文网 - “高血压是中国人一大杀手”"],
 ["http://www.aqee.net/my-standing-desk-experiment/","20121016 | 使用站立式办公桌的体验"],
+["http://www.bjnews.com.cn/news/2014/12/30/348062.html","20141230 | “血脂异常”为北京人体检头号问题_新京报网"],
 ["https://mp.weixin.qq.com/s?__biz=MjA1ODMxMDQwMQ==&amp;mid=220800308&amp;idx=1&amp;sn=f6e612cfac8e7ca1d6e79e9b78ce9af1&amp;scene=21#wechat_redirect","20150517 | 一图读懂 · 被忽视的高血压 - 丁香医生"],
 ["http://www.cnbeta.com/articles/403921.htm","20150618 | 英编辑亲身体验站立办公 称效率快了两倍_cnBeta.COM"],
 ["http://cn.nytstyle.com/health/20151109/t09well-stand-more/","20151109 | 立式办公桌真的能让你更健康吗？ - 纽约时报"],

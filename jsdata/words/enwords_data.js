@@ -1,5 +1,9 @@
 //单词库
 var enwords=[
+["typist", "['taɪpɪst]", "n. 打字员；（用打字机或计算机键盘的）打字者；a person who works in an office typing letters, etc.; a person who types especially as a job; a person who operates a typewriter, esp. one whose work is typing; a person who uses a typewriter or computer keyboard"],
+["lobsterback", "UK ['lɒbstəˌbæk] US [ˈlɑbstərˌbæk]", "n. [史]红外套英国兵；(archaic): a British soldier; redcoat; (derogatory, historical) a British soldier during the American Revolution"],
+["mother-naked", "[ˌmʌðəˈneɪkɪd] [ˈmʌðərˈneɪkɪd]", "adj. 像出娘胎时那样赤裸裸的；像初出娘胎那样一丝不挂的；一丝不挂的；stark naked; not wearing any clothes at all; as naked as when one was born; completely naked"],
+["bellybutton", "[belɪˌbʌt(ə)n]", "n. 肚脐；the human navel; an informal name for the navel"],
 ["multimillionaire", "UK [ˌmʌltiˌmɪljə'neə(r)] US [ˌmʌltiˌmɪljə'ner] [ˌmʌltaɪˌmɪljəˈner]", "n. 拥有数百万资产的富翁；大富豪；千万富翁；a person who has money and possessions worth several million pounds, dollars, etc.; a person whose wealth amounts to many millions (as of dollars or pounds)"],
 ["Sasha", "['sɑ:ʃə]", "n. 莎夏；沙夏；萨夏；萨莎（女子名）；a female given name, form of Sandra, Alexandra; a female given name from Russian; n. 沙夏；萨夏（男子名）；a male give name, form of Alexander; a male given name from Russian"],
 ["unnoticed", "[ˌʌn'nəʊtɪst]", "adj. 被忽视的；不被注意的；不引人注意的；未被看见的；not seen or noticed; not perceived or observed"],
