@@ -1,5 +1,9 @@
 //单词库
 var enwords=[
+["newsstand", "UK ['njuːzˌstænd] US ['nuzˌstænd] [ˈnjuzˌstænd]", "n. 报亭；报摊；杂志摊；a place (such as an outdoor stall) where newspapers and periodicals are sold; a stand at which newspapers, magazines, etc. are sold; a portable stand or stall in the street, from which newspapers are sold"],
+["wordlessly", "[ˈwɜː(r)dləsli]", "沉默地；默默无言地；一声不吭地；不用言语表达地；without speaking; without using any words"],
+["skyward", "['skaɪwə(r)d]", "adj. adv. 向天空的(地)；向上的(地)；in the direction of the sky; at or toward the sky; upward; adv. (also): skywards"],
+["bazillion", "[bə'zɪljən]", "n. 千千万万；许许多多；多得数不清；无数；a very large, indefinite number; a huge, unspecified number; an extremely large, but not an exact, number"],
 ["typist", "['taɪpɪst]", "n. 打字员；（用打字机或计算机键盘的）打字者；a person who works in an office typing letters, etc.; a person who types especially as a job; a person who operates a typewriter, esp. one whose work is typing; a person who uses a typewriter or computer keyboard"],
 ["lobsterback", "UK ['lɒbstəˌbæk] US [ˈlɑbstərˌbæk]", "n. [史]红外套英国兵；(archaic): a British soldier; redcoat; (derogatory, historical) a British soldier during the American Revolution"],
 ["mother-naked", "[ˌmʌðəˈneɪkɪd] [ˈmʌðərˈneɪkɪd]", "adj. 像出娘胎时那样赤裸裸的；像初出娘胎那样一丝不挂的；一丝不挂的；stark naked; not wearing any clothes at all; as naked as when one was born; completely naked"],
@@ -5732,7 +5736,7 @@ var enwords=[
 ["Maoist", "['maʊɪst]", "n. 毛泽东主义者；adj. 毛泽东的；毛(泽东)主义的"],
 ["map", "[mæp]", "n. 地图；vt. 绘制地图；计划"],
 ["marathon", "UK ['mærəθən] US ['mærəθɑːn]", "n. 马拉松；耐力比赛"],
-["march", "[mɑːrtʃ]", "n. 行军；行进；游行示威；稳步前进；进行曲；v. 行进；前进；进发；使同行；游行示威；March；n. 三月"],
+["march", "[mɑːrtʃ]", "n. 行进；行军；游行示威；稳步前进；进行曲；v. 行进；前进；游行示威；进发；使同行；n. March: 三月"],
 ["Marcus", "['mɑːkəs]", "n. 马库斯(男子名)"],
 ["Margaret", "UK [ˈmɑːɡrət] US [ˈˈmɑrgərɪt] [ˈmɑrgrɪt]", "n. 玛格丽特(女子名)；a feminine name: dim. Greta, Madge, Maggie, Marge, Meg, Peg, Peggy; var. Margery, Margo, Margot, Marjorie; equiv. Fr. Marguerite, Ger. Margarete, Gretchen, Ir. Megan, It. Margherita, Sp. Margarita"],
 ["marginal cost", "['mɑːdʒɪnəl kɒst]", "n. [经]边际成本；边缘费用；the cost of producing one more item, etc. compared to the cost of producing all items so far"],

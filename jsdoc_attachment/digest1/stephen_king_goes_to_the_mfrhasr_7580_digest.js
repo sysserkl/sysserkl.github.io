@@ -3,4 +3,8 @@ var digest_global=`
 *lobsterback
 *mother-naked
 *bellybutton
+*newsstand
+*wordlessly
+*skyward
+*bazillion
 `.trim().split('\n');
