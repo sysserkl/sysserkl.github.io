@@ -38,6 +38,7 @@ var digestlist_source_global_b=[
 ["jin_ping_mei_94028_digest",1],
 ["yin_he_di_guo_1_7jdqbq_240799_digest",1],
 ["jane_eyre_819_digest",1],
+["jin_shi_ji_shi_ben_mldjsbm_311221_digest",1],
 ["quan_yuan_qu_xi_wen_119091_digest",1],
 ["jin_yong_zuo_pin_ji_bxjxdbq2_682718_digest",1],
 ["pi_pi_lu_he_she_wab_247886_digest",1],

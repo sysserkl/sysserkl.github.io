@@ -29,4 +29,5 @@ var digest_global=`
 *uncooked
 *summerhouse
 *Ripley
+*northwards
 `.trim().split('\n');

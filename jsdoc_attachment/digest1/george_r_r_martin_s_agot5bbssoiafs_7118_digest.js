@@ -18,4 +18,5 @@ var digest_global=`
 *cellmate
 *girlhood
 *leaderless
+*evenfall
 `.trim().split('\n');

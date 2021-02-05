@@ -17,4 +17,5 @@ var digest_global=`
 *tableful
 *scepticism
 *blacken
+*forthwith
 `.trim().split('\n');

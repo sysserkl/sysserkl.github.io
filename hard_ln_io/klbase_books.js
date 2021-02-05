@@ -45,7 +45,7 @@ function book_path_py_b(csname,jsdoc_num){
     }
 }
 
-function book_path_b(jsdoc_num){
+function book_path_b(jsdoc_num,is_private=false){
     var blhref=location.href;
     var is_file=(blhref.substring(0,5)=='file:');
     if (jsdoc_num=='3'){
@@ -57,11 +57,21 @@ function book_path_b(jsdoc_num){
         }
     }
     else if (jsdoc_num.toString().includes('digest')){
-        if ((blhref.includes('/klwebphp/') || blhref.includes('/klwebphp_backup/')) && !blhref.includes('/PythonTools/')){
-            return 'PythonTools/data/selenium_news/jsdoc_attachment/'+jsdoc_num+'/';
+        if (is_private){
+            if (is_file){
+                return blhref.split('/klwebphp/')[0]+'/jsdoc/jsdoc'+jsdoc_num.replace('digest','')+'/digest/';
+            }
+            else {
+                return blhref.split('/klwebphp/')[0]+'/klwebphp/jsdoc'+jsdoc_num.replace('digest','')+'/digest/';
+            }        
         }
         else {
-            return '../jsdoc_attachment/'+jsdoc_num+'/';
+            if ((blhref.includes('/klwebphp/') || blhref.includes('/klwebphp_backup/')) && !blhref.includes('/PythonTools/')){
+                return 'PythonTools/data/selenium_news/jsdoc_attachment/'+jsdoc_num+'/';
+            }
+            else {
+                return '../jsdoc_attachment/'+jsdoc_num+'/';
+            }
         }
     }
     else {
@@ -118,7 +128,7 @@ function import_book_js_b(import_digest=true){
         jsdoc_num=csbooklist_sub_global_b[book_no][3];
     }
     if (csbooklist_sub_global_b.length>0){
-        var jsdoc_path=book_path_b(jsdoc_num);
+        var jsdoc_path=book_path_b(jsdoc_num,csbooklist_sub_global_b[book_no][4].includes('P'));
         var bookid=csbooklist_sub_global_b[book_no][0];
         document.write('\n<SCRIPT language=JavaScript src="'+jsdoc_path+bookid+'.js"><\/SCRIPT>\n');
         if (jsdoc_num.includes('digest')){
@@ -452,16 +462,19 @@ function books_init_b(){
     digest_global=[];
 }
 
-function load_current_book_b(){
+function load_current_book_b(load_digest_file=false){
     var blhref=location.href;
     if (blhref.includes('/klwebphp/')){
-        blhref=blhref.split('/klwebphp/')[0]+'/klwebphp/data/booklist_current_data.js';
+        blhref=blhref.split('/klwebphp/')[0]+'/klwebphp/data/';
     }
     else if (blhref.includes('/klwebphp_backup/')){
-        blhref=blhref.split('/klwebphp_backup/')[0]+'/klwebphp_backup/data/booklist_current_data.js';
+        blhref=blhref.split('/klwebphp_backup/')[0]+'/klwebphp_backup/data/';
     }    
     else {
-        blhref='../jsdata/booklist_current_data.js';
+        blhref='../jsdata/';
     }
-    document.write('<SCRIPT language=JavaScript src="'+blhref+'"></script>\n');
+    document.write('<SCRIPT language=JavaScript src="'+blhref+'booklist_current_data.js"></script>\n');
+    if (load_digest_file){
+        document.write('<SCRIPT language=JavaScript src="'+blhref+'digestlist_data.js"></script>\n');
+    }
 } 

@@ -113,4 +113,5 @@ var digest_global=`
 *bedstead
 *unaltered
 *footsore
+*ceaselessly
 `.trim().split('\n');
