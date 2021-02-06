@@ -7,4 +7,7 @@ var digest_global=`
 *sceptical
 *unuttered
 *insuperable
+*exodus
+*Chronicles
+*Jonah
 `.trim().split('\n');

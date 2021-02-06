@@ -455,4 +455,5 @@ var digest_global=`
 *Britannia
 *koala
 *Nebuchadnezzar
+*emigration
 `.trim().split('\n');

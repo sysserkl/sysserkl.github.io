@@ -162,4 +162,6 @@ var digest_global=`
 *drummer
 *beekeeper
 *kennelman
+*eastwards
+*emigrate
 `.trim().split('\n');

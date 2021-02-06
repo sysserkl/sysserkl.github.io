@@ -80,4 +80,5 @@ var digest_global=`
 *spyhole
 *springy
 *eyeless
+*Burma
 `.trim().split('\n');
