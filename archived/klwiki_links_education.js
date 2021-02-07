@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-02-05 16:56:45 五"],
+["","","","更新日期：2021-02-06 19:37:59 六"],
 ["http://news.sina.com.cn/e/2001-11-22/404615.html","20011122 | 哪来那么多哈佛女孩？从畸形的“精英”情结说起 - 中国青年报"],
 ["http://news.sina.com.cn/s/2003-09-28/0532833051s.shtml","20030928 | 北京新东方学校不服千万元赔偿判决 已决定上诉 - 北京青年报"],
 ["http://www.ilisten.cn/dispbbs.asp?boardID=2&amp;ID=1275&amp;txtID=11531","20051004 | 罗永浩找工作时写给北京新东方俞校长的一封信"],
@@ -14,7 +14,6 @@ var recent_info_list=[
 ["http://www.hecaitou.net/?p=2627","20080229 | 和菜头 - 比特海日志：新东方和五笔字"],
 ["http://chinese.wsj.com/gb/20080717/ptl153020.asp?source=rss","20080717 | 哈佛研究挑战长尾理论"],
 ["http://mycinderella.blogbus.com/logs/28849036.html","20080912 | 【英伦夏日风情】--剑桥1"],
-["http://chenghuanwen.z.infzm.com/2009/01/01/%e5%8d%ab%e5%be%b7%e8%af%ba%e5%9b%be%e4%b9%a6%e9%a6%86%e5%b0%b1%e6%98%af%e5%93%88%e4%bd%9b%ef%bc%8c%e5%93%88%e4%bd%9b%e5%b0%b1%e6%98%af%e5%8d%ab%e5%be%b7%e8%af%ba%e5%9b%be%e4%b9%a6%e9%a6%86/","20090101 | 程焕文：卫德诺图书馆就是哈佛，哈佛就是卫德诺图书馆"],
 ["http://www.bbc.co.uk/china/lifeintheuk/story/2009/07/090729_cambridge_concert.shtml","20090729 | BBC China 剑桥建校800年纪念音乐会"],
 ["http://jandan.net/2010/02/22/harvard-undersex.html","20100222 | 一日一冷新闻：哈佛的学生需要更多的嘿咻 | 煎蛋"],
 ["http://www.jobbole.com/entry.php/419","20101228 | Google员工自述：在哈佛教书和在Google工作的差别"],

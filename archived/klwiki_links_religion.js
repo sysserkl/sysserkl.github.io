@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-02-05 16:56:45 五"],
+["","","","更新日期：2021-02-06 19:37:59 六"],
 ["http://news.sina.com.cn/w/2005-07-04/14446345710s.shtml","20050704 | 越南将与梵蒂冈增加接触提升天主教徒境遇"],
 ["http://club.cat898.com/newbbs/dispbbs.asp?boardID=1&amp;ID=778652&amp;page=1","20050915 | 以诺雅列：为什么知道耶和华上帝是独一的上帝？"],
 ["http://www.pep.com.cn/200406/ca425801.htm","20051206 | 湖北教育出版社《历史上最有影响的100人》——3.耶稣"],
@@ -37,7 +37,6 @@ var recent_info_list=[
 ["http://www.dw.de/%E5%B0%81%E5%9C%A3%E6%9A%B4%E9%9C%B2%E5%87%BA%E6%A2%B5%E8%92%82%E5%86%88%E5%86%85%E9%83%A8%E6%9C%89%E4%B8%8D%E5%90%8C%E5%A3%B0%E9%9F%B3/a-17592063?maca=chi-rss-chi-all-1127-rdf","20140427 | “封圣暴露出梵蒂冈内部有不同声音”！ | DW.DE"],
 ["http://www.bbc.co.uk/zhongwen/simp/world/2014/08/140815_pope_message_china.shtml","20140815 | 教皇对华问候电报未送到 梵蒂冈二次传递 - BBC中文网"],
 ["http://www.chinese.rfi.fr/%E4%B8%AD%E5%9B%BD/20140826-%E6%A2%B5%E8%92%82%E5%86%88%E8%A5%BF%E6%96%AF%E5%BB%B7%E6%95%99%E5%A0%82%E5%90%88%E5%94%B1%E5%9B%A2%E4%B9%9D%E6%9C%88%E5%88%B0%E8%AE%BF%E6%B8%AF%E6%BE%B3%E5%8F%B0%E4%BD%86%E6%97%A0%E7%BC%98%E5%8C%97%E4%BA%AC","20140826 | 梵蒂冈西斯廷教堂合唱团九月到访港澳台但无缘北京 - RFI"],
-["https://www.solidot.org/story?sid=44008","20150509 | Solidot | 梵蒂冈图书馆用开源文件格式存档历史"],
 ["http://www.bbc.com/zhongwen/simp/world/2015/07/150710_pope_bolivia_communist_gift","20150710 | 梵蒂冈教皇获赠“镰刀斧头”十字架惹争议 - BBC 中文网"],
 ["http://weibo.com/2610449507/EAyp3q793","20170319 | 主耶稣基督蒙福的静默中少有呈天使形态的基... 来自臆想图志 - 微博"],
 ];
