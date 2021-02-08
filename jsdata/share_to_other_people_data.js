@@ -30,14 +30,15 @@ var recent_info_list=[
 * [?klwiki_links_book 阅读]
 * [?klwiki_links_city city]
 * [?klwiki_links_code code]
+* [?klwiki_links_e-commerce e-commerce]
 * [?klwiki_links_education 教育]
 * [?klwiki_links_game game]
 * [?klwiki_links_health_medicine_sport health]
 * [?klwiki_links_huawei 华为]
-* [?klwiki_links_internet internet]
 * [?klwiki_links_linux Linux]
 * [?klwiki_links_multimedia 影音动漫]
 * [?klwiki_links_religion religion]
+* [?klwiki_links_travel travel]
 * [?klwiki_links_xiaomi 小米]
 </div>
 `],

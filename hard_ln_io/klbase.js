@@ -679,7 +679,17 @@ function chinese_punctuation_b(csstr){
     return csstr;
 }
 
-function local_storage_all_b(cstype=''){
+function local_storage_all_b(cstype='',key_list=[]){
+    if (typeof key_list == 'string' ){
+        switch (key_list){
+            case 'PIM':
+                key_list=['long_term_plans_item','klmemo_item','list_routines','list_todolist'];
+                break;
+            default:
+                key_list=[];
+        }
+    }
+    var key_list_len=key_list.length;
     if (cstype=='name'){
         var blcontent=[];
         for (let blxl = 0; blxl < localStorage.length; blxl++){
@@ -692,6 +702,7 @@ function local_storage_all_b(cstype=''){
         var blcontent=[];
         var total_len=0;
         for (let blxl = 0; blxl < localStorage.length; blxl++){
+            if (key_list_len>0 && !key_list.includes(localStorage.key(blxl))){continue;}
             var bllen=localStorage.getItem(localStorage.key(blxl)).length;
             blcontent.push([localStorage.key(blxl),bllen]);
             total_len=total_len+bllen;
@@ -702,6 +713,7 @@ function local_storage_all_b(cstype=''){
     
     var blcontent='';
     for (let blxl = 0; blxl < localStorage.length; blxl++){
+        if (key_list_len>0 && !key_list.includes(localStorage.key(blxl))){continue;}
         blcontent=blcontent+localStorage.key(blxl)+'\n'+localStorage.getItem(localStorage.key(blxl))+'\n';
     }
     var randstr='== 分隔行 '+parseInt(Math.random()*9999999)+' ==\n';
@@ -715,6 +727,8 @@ function local_storage_all_b(cstype=''){
     var bljg=[];
     var bllen=0;
     for (let blxl = 0; blxl < localStorage.length; blxl++){
+        if (key_list_len>0 && !key_list.includes(localStorage.key(blxl))){continue;}
+
         var blstr=localStorage.getItem(localStorage.key(blxl));
         bllen=bllen+blstr.length;
         blstr=randstr+localStorage.key(blxl)+'\n'+blstr;

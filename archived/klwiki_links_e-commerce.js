@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-02-07 12:53:07 日"],
+["","","","更新日期：2021-02-08 11:33:10 一"],
 ["http://tech.sina.com.cn/i/2007-10-16/10171795136.shtml","20071016 | 唐骏：无论马云持多少股份都是公司核心"],
 ["http://money.163.com/08/0519/18/4CB0VMBA00251RJ2.html","20080519 | 马云：最大的善举绝不在于捐款"],
 ["http://news.xinhuanet.com/newmedia/2009-02/04/content_10760063.htm","20090204 | 马云的2008：白云观禁语3天 淘宝高管需会倒立"],
@@ -235,5 +235,6 @@ var recent_info_list=[
 ["https://www.zaobao.com/news/china/story20201106-1098735","20201106 | 消息人士：马云坚持炮轰监管机制 激怒当局导致蚂蚁上市暂停 | 联合早报网"],
 ["https://www.solidot.org/story?sid=66429","20201221 | 奇客Solidot | 消息称马云曾提出把蚂蚁部分业务移交"],
 ["https://www.solidot.org/story?sid=66480","20201225 | 奇客Solidot | 阿里巴巴为何成为监管目标"],
+["https://xueqiu.com/3209134259/166768164","20201225 | 亲爹妈也表态要大义灭亲了？亲橙办的人民公仆们表示处境有点尴尬 $阿里巴巴(BABA)$ - 雪球"],
 ["https://cn.nytimes.com/technology/20201228/china-jack-ma-alibaba/","20201228 | 袁莉：从“马爸爸”到“吸血鬼”，中国为何向马云“开战”？ - 纽约时报中文网"],
 ];

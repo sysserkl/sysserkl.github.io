@@ -176,7 +176,8 @@ function more_tools_klrecent(){
         bljg=bljg+'<a class="a_oblong_box" href="'+item[0]+'" target=_blank>'+item[1]+'</a> ';
     }
     bljg=bljg+'<a class="a_oblong_box" href="javascript:void(null);" onclick="javascript:clear_cache_all_klrecent();">Clear PWA Cache</a> ';
-    bljg=bljg+'<a class="a_oblong_box" href="javascript:void(null);" onclick="javascript:local_storage_view_klrecent();">查看 localStorage</a> ';
+    bljg=bljg+'<a class="a_oblong_box" href="javascript:void(null);" onclick="javascript:local_storage_view_klrecent();">查看 localStorage(全部)</a> ';
+    bljg=bljg+'<a class="a_oblong_box" href="javascript:void(null);" onclick="javascript:local_storage_view_klrecent(\'PIM\');">查看 localStorage(PIM系列)</a> ';    
     bljg=bljg+'<a class="a_oblong_box" href="javascript:void(null);" onclick="javascript:local_storage_import_klrecent();">导入 localStorage</a>';
     bljg=bljg+'</p>';
     bljg=bljg+'<div id="div_localstorage" style="margin-top:0.5rem;"></div>';
@@ -189,13 +190,14 @@ function local_storage_import_klrecent(){
     }
 }
 
-function local_storage_view_klrecent(){   
+function local_storage_view_klrecent(keytype=''){   
     var postpath=postpath_b();
 
     var odiv=document.getElementById('div_localstorage');
 	var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php" name="form_selenium_localstorage" target=_blank>\n';
-    bljg=bljg+'<textarea name="textarea_selenium_localstorage" id="textarea_selenium_localstorage" style="height:20rem;">'+local_storage_all_b()[0]+'</textarea>';
+    bljg=bljg+'<textarea name="textarea_selenium_localstorage" id="textarea_selenium_localstorage" style="height:20rem;">'+local_storage_all_b('',keytype)[0]+'</textarea>';
     bljg=bljg+'<p>';
+    bljg=bljg+'<span class="aclick" onclick="javascript:document.getElementById(\'div_localstorage\').innerHTML=\'\';">Close</span> ';
     bljg=bljg+textarea_buttons_b('textarea_selenium_localstorage','清空,复制,发送到临时记事本,发送地址');
     
     bljg=bljg+'</form>'

@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-02-07 12:53:07 日"],
+["","","","更新日期：2021-02-08 11:33:10 一"],
 ["http://tech.sina.com.cn/t/2006-06-17/0741994777.shtml","20060617 | 华为基本法修改工程启动 时代局限性日益凸现"],
 ["http://tech.sina.com.cn/t/2007-01-18/03341340866.shtml","20070118 | 华为18年无一项原创发明 购买专利竞跑国际市场"],
 ["http://tech.sina.com.cn/it/2007-05-01/02421493757.shtml","20070501 | 华为国际专利全球排名升至13 力拓知识产权路径"],
@@ -215,4 +215,5 @@ var recent_info_list=[
 ["https://cn.reuters.com/article/uk-huawei-risk-1002-idCNKBS26M7RM?il=0","20201001 | 华为不能保证使用其设备带来的所有风险能在长期得到缓解--英国政府报告 | 路透"],
 ["https://www.solidot.org/story?sid=65845","20201019 | 奇客Solidot | 小米苹果增产填补华为减产份额"],
 ["https://www.solidot.org/story?sid=66549","20210104 | 奇客Solidot | 腾讯华为纠纷凸显硬核联盟的垄断嫌疑"],
+["https://www.solidot.org/story?sid=66847","20210203 | 奇客Solidot | Ars 尝试华为的鸿蒙操作系统"],
 ];

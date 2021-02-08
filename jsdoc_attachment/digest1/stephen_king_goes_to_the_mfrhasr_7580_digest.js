@@ -7,4 +7,6 @@ var digest_global=`
 *wordlessly
 *skyward
 *bazillion
+*windshield
+*earthlight
 `.trim().split('\n');

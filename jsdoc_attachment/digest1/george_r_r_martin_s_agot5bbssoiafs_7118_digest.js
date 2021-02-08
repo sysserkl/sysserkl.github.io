@@ -19,4 +19,5 @@ var digest_global=`
 *girlhood
 *leaderless
 *evenfall
+*seasickness
 `.trim().split('\n');

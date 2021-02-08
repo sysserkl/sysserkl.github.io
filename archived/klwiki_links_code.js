@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-02-07 12:53:07 日"],
+["","","","更新日期：2021-02-08 11:33:10 一"],
 ["https://mail.python.org/pipermail/python-list/2005-May/342496.html","20050506 | [HELP] Tkinter Application Minimized to System Tray :)"],
 ["http://m.blog.csdn.net/article/details?id=1811343","20071004 | Tkinter教程之Text(1)篇"],
 ["http://m.blog.csdn.net/article/details?id=1811347","20071004 | Tkinter教程之Text(2)篇"],
@@ -279,6 +279,7 @@ var recent_info_list=[
 ["https://stackoverflow.com/questions/26812470/how-to-get-page-title-in-requests","20141108 | python - How to get page title in requests - Stack Overflow"],
 ["https://stackoverflow.com/questions/27065230/how-to-split-up-an-image-in-pieces-and-reshuffle-it-using-html-javascript-or-c","20141121 | How to split up an image in pieces and reshuffle it, using HTML, Javascript or CamanJS? - Stack Overflow"],
 ["http://stackoverflow.com/questions/27367723/python-tkinter-updating-a-text-widget","20141208 | Python Tkinter updating a Text Widget - Stack Overflow"],
+["https://stackoverflow.com/questions/27736288/how-to-fill-the-whole-canvas-with-specific-color","20150102 | javascript - How to fill the whole canvas with specific color? - Stack Overflow"],
 ["https://linux.cn/article-4585-1.html","20150103 | 一大波有用的 bash 别名和函数-Linux.中国-开源社区"],
 ["https://stackoverflow.com/questions/27753246/match-vs-exec-in-javascript","20150103 | regex - match Vs exec in JavaScript - Stack Overflow"],
 ["https://stackoverflow.com/questions/27954017/resize-image-with-imagemagick-and-set-background-color","20150115 | extend - Resize image with ImageMagick and set background color - Stack Overflow"],
