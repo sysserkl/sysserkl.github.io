@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-02-06 19:37:59 六"],
+["","","","更新日期：2021-02-07 12:53:07 日"],
 ["http://tech.sina.com.cn/i/2007-10-16/10171795136.shtml","20071016 | 唐骏：无论马云持多少股份都是公司核心"],
 ["http://money.163.com/08/0519/18/4CB0VMBA00251RJ2.html","20080519 | 马云：最大的善举绝不在于捐款"],
 ["http://news.xinhuanet.com/newmedia/2009-02/04/content_10760063.htm","20090204 | 马云的2008：白云观禁语3天 淘宝高管需会倒立"],
@@ -46,7 +46,6 @@ var recent_info_list=[
 ["http://mp.weixin.qq.com/s?__biz=MjAzNzMzNTkyMQ==&amp;mid=200486358&amp;idx=1&amp;sn=78ebe71d63f9b0d9c1c1cb58780640be#rd","20140507 | 阿里巴巴提交招股书，马云邮件提醒阿里人在资本市场的诱惑中勿忘初心"],
 ["http://cn.nytimes.com/business/20140508/c08founder/","20140508 | NEIL GOUGH, 艾莎 - 马云传奇：想当将军的英语教师是个好商人 - 纽约时报中文网"],
 ["http://mp.weixin.qq.com/s?__biz=MjMyNTI3NTU4MQ==&amp;mid=200238855&amp;idx=3&amp;sn=5255dced66e052ecd292c8b6bf420878#rd","20140508 | 葛甲：阿里巴巴IPO戏单的四大看点：天猫销售额竟成最高机密"],
-["http://mp.weixin.qq.com/s?__biz=MTIxMjEzMzc0MQ==&amp;mid=200410573&amp;idx=1&amp;sn=0c499e416b12b7070a083ce067452c33#rd","20140520 | 马云突访绿城足球基地 - 钱江晚报"],
 ["http://www.bbc.co.uk/zhongwen/simp/business/2014/05/140528_alibaba_singapore_post.shtml","20140528 | 阿里巴巴收购新加坡邮政逾10%股份 - BBC中文网"],
 ["http://weibo.com/1642471052/B8y8GtrvI?ref=home","20140611 | TechWeb的微博：阿里巴巴近年投资一览！"],
 ["http://www.36kr.com/p/212804.html?ref=related","20140612 | 阿里巴巴联手中国邮政，计划共建电商公共物流平台及金融服务平台 | 36氪"],

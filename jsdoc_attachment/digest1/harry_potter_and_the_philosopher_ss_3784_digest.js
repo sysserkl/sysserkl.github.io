@@ -8,4 +8,5 @@ var digest_global=`
 *herbology
 *doughnut
 *outta
+*skywards
 `.trim().split('\n');

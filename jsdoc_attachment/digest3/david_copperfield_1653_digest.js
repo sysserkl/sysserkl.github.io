@@ -114,4 +114,5 @@ var digest_global=`
 *unaltered
 *footsore
 *ceaselessly
+*leastways
 `.trim().split('\n');
