@@ -30,7 +30,7 @@ function update_lt_plans(){
     if (!otextarea_item){return;}
     var blitems=otextarea_item.value.trim();
     if (confirm("是否更新数据？")){
-        localStorage.setItem('long_term_plans_item',blitems);
+        localStorage.setItem('list_long_term_plans',blitems);
         init_lt_plans();
     }
 }
@@ -43,11 +43,11 @@ function array_2_local_storage_lt_plans(){
             bljg=bljg+one_col+'\n';
         }
     }
-    localStorage.setItem('long_term_plans_item',bljg.trim());
+    localStorage.setItem('list_long_term_plans',bljg.trim());
 }
 
 function local_storage_2_array_lt_plans(){
-    var items=('\n'+local_storage_get_b('long_term_plans_item',-1,false)).split('\n---\n');
+    var items=('\n'+local_storage_get_b('list_long_term_plans',-1,false)).split('\n---\n');
     var ids=[];
     for (let one_item of items){
         var list_t=one_item.trim().split('\n');
@@ -85,7 +85,7 @@ function send_lt_plans(){
 }
 
 function backup_lt_plans(){
-    var items=local_storage_get_b('long_term_plans_item',-1,false);
+    var items=local_storage_get_b('list_long_term_plans',-1,false);
     var postpath=postpath_b();
     var bljg='<div id="div_backup" style="width:90%;margin:0.5rem;">';
     bljg=bljg+'<div id=div_help></div>'

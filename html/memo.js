@@ -41,7 +41,7 @@ function update_lt_klmemo(){
     if (!otextarea_item){return;}
     var blitems=otextarea_item.value.trim();
     if (confirm("是否更新数据？")){
-        localStorage.setItem('klmemo_item',blitems);
+        localStorage.setItem('list_klmemo',blitems);
         init_lt_klmemo('',true);
     }
 }
@@ -54,7 +54,7 @@ function array_2_local_storage_lt_klmemo(){
             bljg=bljg+one_col+'\n';
         }
     }
-    localStorage.setItem('klmemo_item',bljg.trim());
+    localStorage.setItem('list_klmemo',bljg.trim());
 }
 
 function delete_lt_klmemo(){
@@ -65,7 +65,7 @@ function delete_lt_klmemo(){
 }
 
 function local_storage_2_array_lt_klmemo(do_delete=false){
-    var items=('\n'+local_storage_get_b('klmemo_item',-1,false)).split('\n---\n');
+    var items=('\n'+local_storage_get_b('list_klmemo',-1,false)).split('\n---\n');
     var ids=[];
     for (let one_item of items){
         var list_t=one_item.trim().split('\n');
@@ -129,7 +129,7 @@ function send_lt_klmemo(){
 }
 
 function backup_lt_klmemo(){
-    var items=local_storage_get_b('klmemo_item',-1,false);
+    var items=local_storage_get_b('list_klmemo',-1,false);
     var postpath=postpath_b();
     var bljg='<div id="div_backup" style="width:90%;margin:0.5rem;">';
     bljg=bljg+'<div id=div_help></div>'

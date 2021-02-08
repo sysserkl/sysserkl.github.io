@@ -8250,7 +8250,7 @@ var enwords=[
 ["seventeenth", "[ˌsev(ə)n'tiːnθ]", "num. 17th written as a word; adj. adv. 第十七的(地)；十七分之一的(地)；n. 第十七；十七分之一；one of 17 equal parts of something"],
 ["seventh", "['sevnθ]", "num. 第七；七分之一"],
 ["seventy", "['sevnti]", "七十"],
-["several", "['sevrəl]", "pron. 若干；adj. 几个的；若干的；各自的"],
+["several", "['sevrəl]", "pron. 若干；adj. 若干的；几个的；各自的"],
 ["severely", "UK [sɪ'vɪəli] US [sɪ'vɪrli] [səˈvɪr.li]", "adv. 严重地；严厉地；严格地；严肃地；苛刻地；朴实地；very badly or seriously; in an extreme or strict way; in a way that is not kind or sympathetic and shows disapproval of somebody/something; in a way that is extremely difficult and requires a lot of skill or ability; in an extremely plain style that lacks any decoration"],
 ["severe", "UK [sɪ'vɪə(r)] US [sɪ'vɪr] [səˈvɪr]", "adj. 严重的；严厉的；严格的；严峻的；剧烈的；朴实的；extremely bad or serious; punishing somebody in an extreme way when they break a particular set of rules; not kind or sympathetic and showing disapproval of somebody/something; extremely difficult and requiring a lot of skill or ability; extremely plain and lacking any decoration"],
 ["sew", "[səʊ]", "v. 缝；缝制；缝合；缝补；做针线活；to use a needle and thread to make stitches in cloth; to make, repair or attach something using a needle and thread"],

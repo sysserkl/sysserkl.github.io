@@ -683,7 +683,7 @@ function local_storage_all_b(cstype='',key_list=[]){
     if (typeof key_list == 'string' ){
         switch (key_list){
             case 'PIM':
-                key_list=['long_term_plans_item','klmemo_item','list_routines','list_todolist'];
+                key_list=['list_long_term_plans','list_klmemo','list_routines','list_todolist'];
                 break;
             default:
                 key_list=[];

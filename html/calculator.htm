@@ -54,7 +54,7 @@ function init_calculator(){
     
     var ool=document.getElementById('ol_calc');    
         
-    var list_t=local_storage_get_b('list_kl_calculator',20,true);
+    var list_t=local_storage_get_b('kl_calculator_item',20,true);
     for (let blxl=0;blxl<list_t.length;blxl++){
         if (list_t[blxl]==''){continue;}
         list_t[blxl]='<li>'+background_calculator(list_t[blxl])+'</li>';
@@ -120,9 +120,9 @@ function eval_calculator(){
     line_no_calc_global=line_no_calc_global+1;
     var ool=document.getElementById('ol_calc');    
     ool.insertAdjacentHTML('afterbegin','<li>'+background_calculator(bljg)+'</li>');
-    var list_t=local_storage_get_b('list_kl_calculator',20,true);
+    var list_t=local_storage_get_b('kl_calculator_item',20,true);
     list_t=[bljg].concat(list_t);
-    localStorage.setItem('list_kl_calculator',list_t.join('\n'));
+    localStorage.setItem('kl_calculator_item',list_t.join('\n'));
 }
 
 function dbl_calculator(ospan){
