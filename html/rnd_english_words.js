@@ -57,10 +57,9 @@ function menu_rndwords(){
     var klmenu3=[
     '<span class="span_menu" onclick="javascript:'+str_t+'window.open(location.href,\'\',\'width=550, height=200\');">新窗口</span>', 
     '<span class="span_menu" onclick="javascript:'+str_t+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>',
-    '<span class="span_menu" onclick="javascript:'+str_t+'kl_remote_host_address_b();">设置form发送地址</span>', 
     '<span class="span_menu" onclick="javascript:'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'pwa_rnd_english_words_store\',\'rnd_english_words_service_worker.js\');}">更新版本</span>',
     ];
-    klmenu3=root_font_size_menu_b(str_t).concat(klmenu3);
+    klmenu3=root_font_size_menu_b(str_t,true,true,true).concat(klmenu3);
     
     document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🇬🇧','14rem','1.1rem','1rem','60rem')+klmenu_b(klmenu2,'💡','14rem','1.1rem','1rem','60rem')+klmenu_b(klmenu3,'⚙','14rem','1.1rem','1rem','60rem'),'','0rem')+' ');
 }

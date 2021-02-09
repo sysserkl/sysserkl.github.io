@@ -18,10 +18,9 @@ function menu_lt_klmemo(){
     ];
     
     var klmenu_config=[
-    '<span class="span_menu" onclick="javascript:'+str_t+'kl_remote_host_address_b();">设置form发送地址</span>', 
     '<span class="span_menu" onclick="javascript:'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'pwa_memo_store\',\'memo_service_worker.js\');}">更新版本</span>',
     ];
-    klmenu_config=root_font_size_menu_b(str_t).concat(klmenu_config);
+    klmenu_config=root_font_size_menu_b(str_t,true,true,true).concat(klmenu_config);
     
     var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu1,'🧷','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_sort,'↕','10rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','14rem','1rem','1rem','60rem'),'','0rem');
     

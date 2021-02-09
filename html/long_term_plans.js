@@ -7,10 +7,9 @@ function menu_lt_plans(){
     ];
 
     var klmenu2=[
-    '<span class="span_menu" onclick="javascript:'+str_t+'kl_remote_host_address_b();">设置form发送地址</span>', 
     '<span class="span_menu" onclick="javascript:'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'pwa_long_term_plans_store\',\'long_term_plans_service_worker.js\');}">更新版本</span>',
     ];
-    klmenu2=root_font_size_menu_b(str_t).concat(klmenu2);
+    klmenu2=root_font_size_menu_b(str_t,true,true,true).concat(klmenu2);
     
     var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu1,'⛳','14rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'⚙','14rem','1rem','1rem','60rem'),'','0rem');
     
