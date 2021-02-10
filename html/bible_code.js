@@ -634,7 +634,10 @@ function fav_export_import_form_bible(){
 	var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php?type=bible_fav" name="form_fav_bible" target=_blank>\n';
     bljg=bljg+'<textarea name="textarea_fav_bible" id="textarea_fav_bible" style="height:20rem;">'+fav_list.join('\n')+'</textarea>';
     bljg=bljg+'<p>';
+    bljg=bljg+'<span class="aclick" onclick="javascript:document.getElementById(\'div_search_statistics\').innerHTML=\'\';">Close</span> ';        
     bljg=bljg+'<span class="aclick" onclick="javascript:fav_update_bible();">更新</span> ';    
+    bljg=bljg+'<span class="aclick" onclick="javascript:local_storage_view_form_b(\'\',\'div_search_statistics\');">查看 localStorage</span> ';
+
     bljg=bljg+textarea_buttons_b('textarea_fav_bible','清空,复制,发送到临时记事本');
     bljg=bljg+'<div id="div_word_temp" style="display:inline;">';
     bljg=bljg+textarea_buttons_b('textarea_fav_bible','发送地址','bible_fav')+' 行数：'+fav_list.length+'</div>';

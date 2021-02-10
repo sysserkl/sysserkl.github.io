@@ -246,6 +246,7 @@ function form_list_klplan_b(csarray,cstype,plan_id,update_fn_name){
     bljg=bljg+'<textarea name="textarea_list_'+cstype+'" id="textarea_list_'+cstype+'" style="width:90%;height:24rem;">'+list_plans.join('\n')+'</textarea>';
     bljg=bljg+'<p>';
     bljg=bljg+'<span class="aclick" onclick="javascript:document.getElementById(\'divhtml2\').innerHTML=\'\';">关闭</span> ';
+    bljg=bljg+'<span class="aclick" onclick="javascript:local_storage_view_form_b(\'PIM\',\'divhtml2\');">查看 localStorage(PIM系列)</span> ';
     bljg=bljg+'<span class="aclick" onclick="javascript:'+update_fn_name+'(\'textarea_list_'+cstype+'\',\''+plan_id+'\');">更新</span> ';
     bljg=bljg+textarea_buttons_b('textarea_list_'+cstype,'清空,复制,发送到临时记事本,发送地址','list_'+cstype)+' 行数：'+list_plans.length;
     bljg=bljg+'</p></form>';

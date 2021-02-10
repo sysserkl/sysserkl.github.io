@@ -389,4 +389,5 @@ var digest_global=`
 *Sharon
 *Nebuchadrezzar
 *Armenia
+*Salem
 `.trim().split('\n');

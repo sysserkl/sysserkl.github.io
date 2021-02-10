@@ -36,4 +36,5 @@ var digest_global=`
 *unambitious
 *unladylike
 *thorny
+*laddie
 `.trim().split('\n');

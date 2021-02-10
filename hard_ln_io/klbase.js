@@ -1051,33 +1051,57 @@ function kl_remote_host_address_b(){
     localStorage.setItem('kl_remote_host',bladdress);
 }
 
-function local_storage_import_b(textarea_id){
-    var otextarea=document.getElementById(textarea_id);
-    if (otextarea){
-        if (!confirm("是否批量导入 localStorage(同名变量被覆盖更新，不同名的变量保留不变)？")){
-            return false;
-        }
-        var blstr=otextarea.value.trim();
-        var split_str=blstr.split('\n')[0].trim();
-        if (split_str==''){
-            alert('未发现分隔行');
-            return;
-        }
-        if (split_str.substring(0,7)!=='== 分隔行 ' || split_str.slice(-3,)!==' =='){
-            alert('分隔行格式错误');
-            return;
-        }     
-        var list_t=('\n'+blstr).split('\n'+split_str+'\n');
-        for (let item of list_t){
-            var rows=item.trim().split('\n');
-            var blname=rows[0];
-            if (blname==''){continue;}
-            rows.splice(0,1);
-            localStorage.setItem(blname,rows.join('\n'));
-        }
-        return true;
+function local_storage_view_form_b(keytype='',csid=''){
+	var bljg='<form method="POST" action="'+postpath_b()+'temp_txt_share.php" name="form_backup_localstorage" target=_blank>\n';
+    bljg=bljg+'<textarea name="textarea_backup_localstorage" id="textarea_backup_localstorage" style="height:20rem;">'+local_storage_all_b('',keytype)[0]+'</textarea>';
+    bljg=bljg+'<p>';
+    bljg=bljg+'<span class="aclick" onclick="javascript:document.getElementById(\''+csid+'\').innerHTML=\'\';">Close</span> ';
+    bljg=bljg+'<span class="aclick" onclick="javascript:local_storage_import_b(\'textarea_backup_localstorage\',true);">导入 localStorage</span> ';
+    bljg=bljg+textarea_buttons_b('textarea_backup_localstorage','清空,复制,发送到临时记事本,发送地址');
+    bljg=bljg+'</form>';
+    var obj=document.getElementById(csid);
+    if (obj){
+        obj.innerHTML=bljg;
     }
-    return false;
+}
+
+function local_storage_import_b(textarea_id,sucess_alert=false){
+    var otextarea=document.getElementById(textarea_id);
+    if (!otextarea){return false;}
+    
+    var blstr=otextarea.value.trim();
+    var split_str=blstr.split('\n')[0].trim();
+    if (split_str==''){
+        alert('未发现分隔行');
+        return false;
+    }
+    if (split_str.substring(0,7)!=='== 分隔行 ' || split_str.slice(-3,)!==' =='){
+        alert('分隔行格式错误');
+        return false;
+    }     
+    var list_t=('\n'+blstr).split('\n'+split_str+'\n');
+    var name_list=[];
+    var name_value_list=[];
+    for (let item of list_t){
+        var rows=item.trim().split('\n');
+        var blname=rows[0];
+        if (blname==''){continue;}
+        name_list.push(blname);
+        rows.splice(0,1);
+        name_value_list.push([blname,rows.join('\n')]);
+    }
+
+    if (!confirm('是否批量导入\n\n'+name_list.slice(0,5).join('\n')+'\n\n'+(name_list.length>5?'等 ':'')+name_list.length+' 个 localStorage(同名变量被覆盖更新，不同名的变量保留不变)？')){
+        return false;
+    }
+    
+    for (let item of name_value_list){
+        localStorage.setItem(item[0],item[1]);
+    }
+    if (sucess_alert){
+        alert('批量导入 localStorage 完成');
+    }
+    return true;
 }
 
 function postpath_b(){

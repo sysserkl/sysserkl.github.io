@@ -20,4 +20,5 @@ var digest_global=`
 *leaderless
 *evenfall
 *seasickness
+*seasick
 `.trim().split('\n');

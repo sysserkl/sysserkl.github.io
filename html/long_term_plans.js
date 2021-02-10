@@ -89,14 +89,15 @@ function backup_lt_plans(){
     var bljg='<div id="div_backup" style="width:90%;margin:0.5rem;">';
     bljg=bljg+'<div id=div_help></div>'
     bljg=bljg+'<p><b>项目：</b></p>';
-    bljg=bljg+'<form method="POST" action="'+postpath+'temp_txt_share.php?type=long_term_plans" name="form_lt_plans" target=_blank>\n';
+    bljg=bljg+'<form method="POST" action="'+postpath+'temp_txt_share.php?type=list_long_term_plans" name="form_lt_plans" target=_blank>\n';
     bljg=bljg+'<textarea id="textarea_backup_ltp" name="textarea_backup_ltp" style="width:100%;height:10rem;">'+items+'</textarea>';
     bljg=bljg+'<p align=right>';
     bljg=bljg+'<span class="aclick"  onclick="javascript:document.getElementById(\'div_backup\').style.display=\'none\';">Close</span> ';
+    bljg=bljg+'<span class="aclick" onclick="javascript:local_storage_view_form_b(\'PIM\',\'div_backup\');">查看 localStorage(PIM系列)</span> ';
     bljg=bljg+'<span class="aclick" onclick="javascript:help_lt_plans();">Help</span> ';
 
     bljg=bljg+'<span class="aclick" onclick="javascript:update_lt_plans();">更新</span> ';   
-    bljg=bljg+textarea_buttons_b('textarea_backup_ltp','清空,复制,发送到临时记事本,发送地址','long_term_plans')+' ';
+    bljg=bljg+textarea_buttons_b('textarea_backup_ltp','清空,复制,发送到临时记事本,发送地址','list_long_term_plans')+' ';
     bljg=bljg+'</p>';
     bljg=bljg+'</form>';
     bljg=bljg+'</div>';

@@ -70,7 +70,9 @@ function init_klrecent(){
     //
     if (bljg+blquote!==''){
         if (is_default_rct_global){
-            document.getElementById('divhtml').innerHTML=blinput+'<div id="div_rct_content">'+bljg+'</div>'+blquote+more_tools_klrecent()+'<p align=center>('+recent_info_list.length+') <span style="cursor:pointer;" onclick="javascript:alert(navigator.userAgent);">ver: 0.0.6-20200310</span> <span onclick="javascript:history_klrecent();" style="cursor:pointer;color:blue;">Title History</span></p>';
+            var odiv=document.getElementById('divhtml');
+            odiv.innerHTML=blinput+'<div id="div_rct_content">'+bljg+'</div>'+blquote+more_tools_klrecent()+'<p align=center>('+recent_info_list.length+') <span style="cursor:pointer;" onclick="javascript:alert(navigator.userAgent);">ver: 0.0.6-20200310</span> <span onclick="javascript:history_klrecent();" style="cursor:pointer;color:blue;">Title History</span></p>';
+            mouseover_mouseout_oblong_span_b(odiv.querySelectorAll('span.oblong_box'));
         }
         else {
             document.getElementById('divhtml').innerHTML=blinput+'<div id="div_rct_content">'+bljg+'</div>';
@@ -132,42 +134,42 @@ function history_klrecent(){
 
 function more_tools_klrecent(){
     var tools=[
-    ["html/bible.htm", "Bible"],
+    ['html/bible.htm', 'Bible'],
     ['html/calculator.htm','➕➖❌➗'],
-    ["html/calendar.htm", "Calendar"],
+    ['html/calendar.htm', 'Calendar'],
     ['html/code_links.htm','随机编程知识点'],
-    ["html/digest.htm", "Digest"],
+    ['html/digest.htm', 'Digest'],
     ['html/emoji.htm','emoji'],
-    ["html/gps_https.htm", "Coords"],
-    ["html/gps_points.htm", "gps points"],    
-    ["html/hzpinyin.htm", "hzpy"],
+    ['html/gps_https.htm', 'Coords'],
+    ['html/gps_points.htm', 'gps points'],    
+    ['html/hzpinyin.htm', 'hzpy'],
     ['html/image2base64.htm','image2base64'],
     ['html/klsearch.htm','KL Search'],
     ['html/long_term_plans.htm','Long Term Plans'],
     ['html/memo.htm','Memo'],    
-    ["html/mine.htm","Mine"],
-    ["html/money_plan.htm", "Money Plan"],
+    ['html/mine.htm','Mine'],
+    ['html/money_plan.htm', 'Money Plan'],
     ['html/poker24.htm','24'],
     ['html/qrcode.htm','QR'],
     ['html/qrimg.htm','qrimg'],
-    ["html/reader_card.htm", "reader card"],
-    ["html/reader.htm", "reader"],
-    ["html/rnd_english_words.htm", "随机单词"],
-    ["html/routines.htm", "routines"],
-    ["html/screen_clock.htm","Clock"],
+    ['html/reader_card.htm', 'reader card'],
+    ['html/reader.htm', 'reader'],
+    ['html/rnd_english_words.htm', '随机单词'],
+    ['html/routines.htm', 'routines'],
+    ['html/screen_clock.htm','Clock'],
     ['html/screen_colorful_boxes.htm','screen colorful boxes'],
     ['html/screen_color_picker.htm','screen color picker'],    
-    ["html/screen_matrix.htm", "Matrix"],
-    ["html/screen_test.htm", "Screen Test"],
+    ['html/screen_matrix.htm', 'Matrix'],
+    ['html/screen_test.htm', 'Screen Test'],
     ['html/sticker_mobile.htm','Sticker Mobile'],
-    ["html/sudoku.htm", "Sudoku"],
-    ["html/symbols.htm", "Symbols"],
+    ['html/sudoku.htm', 'Sudoku'],
+    ['html/symbols.htm', 'Symbols'],
     ['html/tetris.htm','Tetris'],
-    ["html/todolist.htm", "ToDoList"],
-    ["html/txtlistsearch.htm", "txtlistsearch"],
-    ["html/websites_pwa.htm", "Websites for PWA"],
+    ['html/todolist.htm', 'ToDoList'],
+    ['html/txtlistsearch.htm', 'txtlistsearch'],
+    ['html/websites_pwa.htm', 'Websites for PWA'],
     ['html/zj_college_search.htm','浙江高考分数'],    
-    ["index.htm", "更多资讯"],
+    ['index.htm', '更多资讯'],
 
     ];
     tools.sort(function (a,b){return a[1].toLowerCase()>b[1].toLowerCase();});
@@ -175,33 +177,12 @@ function more_tools_klrecent(){
     for (let item of tools){
         bljg=bljg+'<a class="a_oblong_box" href="'+item[0]+'" target=_blank>'+item[1]+'</a> ';
     }
-    bljg=bljg+'<a class="a_oblong_box" href="javascript:void(null);" onclick="javascript:clear_cache_all_klrecent();">Clear PWA Cache</a> ';
-    bljg=bljg+'<a class="a_oblong_box" href="javascript:void(null);" onclick="javascript:local_storage_view_klrecent();">查看 localStorage(全部)</a> ';
-    bljg=bljg+'<a class="a_oblong_box" href="javascript:void(null);" onclick="javascript:local_storage_view_klrecent(\'PIM\');">查看 localStorage(PIM系列)</a> ';    
-    bljg=bljg+'<a class="a_oblong_box" href="javascript:void(null);" onclick="javascript:local_storage_import_klrecent();">导入 localStorage</a>';
+    bljg=bljg+'<span class="oblong_box" onclick="javascript:clear_cache_all_klrecent();">Clear PWA Cache</span> ';
+    bljg=bljg+'<span class="oblong_box" onclick="javascript:local_storage_view_form_b(\'\',\'div_localstorage\');">查看 localStorage(全部)</span> ';
+    bljg=bljg+'<span class="oblong_box" onclick="javascript:local_storage_view_form_b(\'PIM\',\'div_localstorage\');">查看 localStorage(PIM系列)</span> ';    
     bljg=bljg+'</p>';
     bljg=bljg+'<div id="div_localstorage" style="margin-top:0.5rem;"></div>';
     return div_title_href_b(['','Tools:',bljg],false,true);
-}
-
-function local_storage_import_klrecent(){
-    if (local_storage_import_b('textarea_selenium_localstorage')){
-        alert('批量导入 localStorage 完成');
-    }
-}
-
-function local_storage_view_klrecent(keytype=''){   
-    var postpath=postpath_b();
-
-    var odiv=document.getElementById('div_localstorage');
-	var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php" name="form_selenium_localstorage" target=_blank>\n';
-    bljg=bljg+'<textarea name="textarea_selenium_localstorage" id="textarea_selenium_localstorage" style="height:20rem;">'+local_storage_all_b('',keytype)[0]+'</textarea>';
-    bljg=bljg+'<p>';
-    bljg=bljg+'<span class="aclick" onclick="javascript:document.getElementById(\'div_localstorage\').innerHTML=\'\';">Close</span> ';
-    bljg=bljg+textarea_buttons_b('textarea_selenium_localstorage','清空,复制,发送到临时记事本,发送地址');
-    
-    bljg=bljg+'</form>'
-    odiv.innerHTML=bljg;
 }
 
 function big_title_klrecent(){
