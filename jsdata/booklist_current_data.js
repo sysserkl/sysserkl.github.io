@@ -6,7 +6,7 @@ var csbooklist_source_global_b=[
 ["the_federalist_papers_1999","The Federalist Papers","englishwords,已整理","3",""],
 ["han_fei_zi_101015","韩非子","","3",""],
 ["jean_christophe_in_paris_the_mpath_5878","Jean Christophe: in Paris The Market-Place, Antoinette, the House, by Romain Rolland","englishwords,已整理","3",""],
-["lao_can_you_ji_liu_e_185908","老残游记(刘鹗)","","3",""],
+["lao_can_you_ji_liu_e_185908","老残游记(刘鹗)","已整理","3",""],
 ["metamorphosis_1387", "Metamorphosis(Franz Kafka)","englishwords,已整理","3",""],
 ["dong_zhou_lie_guo_zhi_109423","东周列国志","历史","3",""],
 ["the_call_of_the_wild_1731", "The Call of the Wild(Jack London)","englishwords,已整理","3",""],

@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-02-08 21:51:45 一"],
+["","","","更新日期：2021-02-10 12:31:01 三"],
 ["https://mail.python.org/pipermail/python-list/2005-May/342496.html","20050506 | [HELP] Tkinter Application Minimized to System Tray :)"],
 ["http://m.blog.csdn.net/article/details?id=1811343","20071004 | Tkinter教程之Text(1)篇"],
 ["http://m.blog.csdn.net/article/details?id=1811347","20071004 | Tkinter教程之Text(2)篇"],
@@ -171,7 +171,6 @@ var recent_info_list=[
 ["https://stackoverflow.com/questions/442404/retrieve-the-position-x-y-of-an-html-element","20120709 | javascript - Retrieve the position (X,Y) of an HTML element - Stack Overflow"],
 ["https://blog.csdn.net/xrdks/article/details/7759305","20120718 | bash shell 获取数组中给定元素的下标 - xrdks的专栏 - CSDN博客"],
 ["https://stackoverflow.com/questions/11715646/scroll-automatically-to-the-bottom-of-the-page","20120730 | javascript - Scroll Automatically to the Bottom of the Page - Stack Overflow"],
-["https://stackoverflow.com/questions/11715646/scroll-automatically-to-the-bottom-of-the-page","20120730 | javascript - Scroll Automatically to the Bottom of the Page - Stack Overflow"],
 ["https://stackoverflow.com/questions/11773708/php-function-rename-permission-denied","20120802 | PHP Function Rename Permission denied - Stack Overflow"],
 ["https://stackoverflow.com/questions/11935175/sampling-a-random-subset-from-an-array","20120813 | javascript - Sampling a random subset from an array - Stack Overflow"],
 ["http://www.aqee.net/why-do-some-programming-languages-live-and-others-die/","20120823 | 为什么有些编程语言会死而有些能活下来？"],
@@ -299,7 +298,6 @@ var recent_info_list=[
 ["https://stackoverflow.com/questions/9612166/how-do-i-pass-parameters-into-a-php-script-through-a-webpage","20150612 | How do I pass parameters into a PHP script through a webpage? - Stack Overflow"],
 ["https://stackoverflow.com/questions/31405812/how-to-get-client-ip-address-using-python-bottle-framework","20150715 | How to get client IP address using python bottle framework - Stack Overflow"],
 ["http://blog.csdn.net/alice_991/article/details/48266767","20150907 | Python---tkinter之Text() - Alice_991的博客 - 博客频道 - CSDN.NET"],
-["https://stackoverflow.com/questions/32442608/ucs-2-codec-cant-encode-characters-in-position-1050-1050","20150907 | python - 'UCS-2' codec can't encode characters in position 1050-1050 - Stack Overflow"],
 ["https://stackoverflow.com/questions/32442608/ucs-2-codec-cant-encode-characters-in-position-1050-1050","20150907 | python - 'UCS-2' codec can't encode characters in position 1050-1050 - Stack Overflow"],
 ["https://stackoverflow.com/questions/32615440/python-3-tkinter-how-to-update-button-text","20150916 | Python 3, Tkinter, How to update button text - Stack Overflow"],
 ["http://tkinter.unpythonic.net/wiki/tkFileDialog","20150917 | tkFileDialog - Tkinter Wiki"],

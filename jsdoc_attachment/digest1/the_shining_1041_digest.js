@@ -22,4 +22,5 @@ var digest_global=`
 *Casey
 *stairwell
 *matchbook
+*windscreen
 `.trim().split('\n');
