@@ -9,7 +9,7 @@ klbase_addons_import_js_b(['css','en_de_str']);
 <script language="javascript">
 var scheme_global={};
 scheme_generation_b();
-css_root_style_b('17','11',['base','menu']);
+css_root_style_b('17','11',['base','menu'],[],1);
 //history
 //0.0.1-20210211
 </script>
@@ -21,13 +21,13 @@ css_root_style_b('17','11',['base','menu']);
 <h2 style="margin-top:0px;font-size:1.3rem;"><span id="span_title">LSM</span></h2>
 <div style="margin:0 0.5rem;">
 <table width=100% cellpadding=0 cellspacing=0><tr>
-<td width=20% valign=top style="word-break:break-all;word-wrap:break-word;">
+<td id="td_lsm_name" width=20% valign=top style="font-size:1rem;padding-right:0.5rem;word-break:break-all;word-wrap:break-word;">
 <input type="text" id="input_search" onkeyup="javascript:if (event.key=='Enter'){filter_lsm();}" />
 <input type="checkbox" id="checkbox_select_all" onchange="javascript:select_all_lsm(this.checked);" /><label for="checkbox_select_all">全选</label>
 <section id="section_lsm_name" style="height:30rem;overflow:auto;">
 </section>
 </td>
-<td width=80% valign=top>
+<td id="td_lsm_value" width=80% valign=top>
 <form method="POST" action="" name="form_lsm" target=_blank>
 <textarea name="textarea_lsm_content" id="textarea_lsm_content" style="height:30rem;width:100%;"></textarea>
 <p id="p_buttons">
@@ -175,8 +175,11 @@ function init_lsm(){
         var bljg=textarea_buttons_b('textarea_lsm_content','全选,清空,复制,发送到临时记事本,发送地址');    
         op.insertAdjacentHTML('beforeend',bljg);
     }
-    input_with_x_b('input_search',9);
-
+    input_with_x_b('input_search',(ismobile_b()?5:9));
+    if (ismobile_b()){
+        document.getElementById('td_lsm_name').width='30%';    
+        document.getElementById('td_lsm_value').width='70%';
+    }
     keys_lsm();
 }
 
