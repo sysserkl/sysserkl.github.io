@@ -111,7 +111,7 @@ function menu_todolist(){
     '<span class="span_menu" onclick="javascript:'+str_t+'form_list_todolist();">批量整理事项</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'demo_todolist();">导入Demo事项</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'form_done_todolist();">导入/导出完成项</span>',    
-    '<span class="span_menu" onclick="javascript:'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'pwa_todolist_store\',\'todolist_service_worker.js\');}">更新版本</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'todolist\');}">更新版本</span>',
     ];
     
     document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'✅','14rem','1rem','1rem','60rem'),'','0rem')+' '); //♾ - 保留注释

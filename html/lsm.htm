@@ -1,0 +1,204 @@
+<html>
+<head>
+<title>LSM</title>
+<meta charset="UTF-8" />
+<SCRIPT language=JavaScript src="../hard_ln_io/klbase.js"></SCRIPT>
+<script language="javascript">
+klbase_addons_import_js_b(['css','en_de_str']);
+</script>
+<script language="javascript">
+var scheme_global={};
+scheme_generation_b();
+css_root_style_b('17','11',['base','menu']);
+//history
+//0.0.1-20210211
+</script>
+<link rel="shortcut icon" href="lsm_ico/lsm512.png" />
+<link rel="manifest" href="lsm.webmanifest">
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+</head>
+<body>
+<h2 style="margin-top:0px;font-size:1.3rem;"><span id="span_title">LSM</span></h2>
+<div style="margin:0 0.5rem;">
+<table width=100% cellpadding=0 cellspacing=0><tr>
+<td width=20% valign=top style="word-break:break-all;word-wrap:break-word;">
+<input type="text" id="input_search" onkeyup="javascript:if (event.key=='Enter'){filter_lsm();}" />
+<input type="checkbox" id="checkbox_select_all" onchange="javascript:select_all_lsm(this.checked);" /><label for="checkbox_select_all">全选</label>
+<section id="section_lsm_name" style="height:30rem;overflow:auto;">
+</section>
+</td>
+<td width=80% valign=top>
+<form method="POST" action="" name="form_lsm" target=_blank>
+<textarea name="textarea_lsm_content" id="textarea_lsm_content" style="height:30rem;width:100%;"></textarea>
+<p id="p_buttons">
+<span class="aclick" onclick="javascript:selected_keys_lsm('value');">显示选中key的值</span>
+<span class="aclick" onclick="javascript:selected_keys_lsm('length');">显示选中key的长度</span>
+<span class="aclick" onclick="javascript:selected_keys_lsm('remove');">移除选中key</span>
+</p>
+</form>
+</td>
+</tr>
+<tr><td colspan=2>
+<textarea id="textarea_lsm_state" style="width:100%;"></textarea>
+</td></tr>
+</table>
+</div>
+<div id="divhtml" style="margin:0 0.5rem;"></div>
+<div id="div_top_bottom"></div>
+<script type="text/javascript">
+// Register service worker to control making site work offline
+if('serviceWorker' in navigator) {
+    navigator.serviceWorker
+        .register('lsm_service_worker.js')
+        .then(function() { 
+            document.getElementById('textarea_lsm_state').value='LSM Service Worker Registered';
+        });
+}
+else {
+    document.getElementById('textarea_lsm_state').value='LSM Service Worker not work';
+}
+//-------------------------
+function select_all_lsm(csvalue){
+    var olis=document.querySelectorAll('ol#ol_lsm li');
+    var key_list=[];
+    for (let item of olis){
+        if (item.style.display=='none'){continue;}
+        
+        var ocheckbox=item.querySelector('input[type="checkbox"]');
+        if (ocheckbox){
+            ocheckbox.checked=csvalue;
+        }
+    }
+}
+
+function selected_keys_lsm(cstype=''){
+    var olis=document.querySelectorAll('ol#ol_lsm li');
+    var key_list=[];
+    for (let item of olis){
+        if (item.style.display=='none'){continue;}
+        
+        var ocheckbox=item.querySelector('input[type="checkbox"]');
+        if (ocheckbox){
+            if (ocheckbox.checked){
+                key_list.push(ocheckbox.value);
+            }
+        }
+    }
+    if (key_list.length==0){return;}
+        
+    switch (cstype){
+        case 'value':
+            document.getElementById('textarea_lsm_content').value=local_storage_all_b('',key_list)[0];
+            break;
+        case 'remove':
+            var rndstr=randstr_b(4,true,false);
+            if ((prompt('输入 '+rndstr+' 确认移除\n\n'+key_list.slice(0,5).join('\n')+'\n\n'+(key_list.length>5?'等 ':'')+key_list.length+'个 localStorage key') || '').trim()==rndstr){    
+                for (let blkey of key_list){
+                    localStorage.removeItem(blkey);
+                }
+                document.getElementById('textarea_lsm_state').value='移除名为 '+key_list.join(', ')+' 的 localStorage 值';        
+                keys_lsm();                
+            }
+            break;
+        case 'length':
+            document.getElementById('textarea_lsm_content').value=local_storage_all_b('name_length',key_list)[0].join('\n');
+            break;
+    }
+}
+
+function filter_lsm(){
+    var csstr=document.getElementById('input_search').value;
+    var blreg=false;
+    if (csstr.slice(-4,)=='(:r)'){
+        blreg=true;
+        csstr=csstr.slice(0,-4).trim();
+    }
+    
+    var olis=document.querySelectorAll('ol#ol_lsm li');
+    obj_search_show_hide_b(olis,'',csstr,blreg);
+    for (let item of olis){
+        item.querySelector('input[type="checkbox"]').checked=false;
+    }
+    document.getElementById('checkbox_select_all').checked=false;
+}
+
+function local_storage_view_lsm(cstype=''){
+    var blstr;
+    var bllen;
+    [blstr,bllen]=local_storage_all_b(cstype);
+    if (Array.isArray(blstr)){
+        blstr=blstr.join('\n');
+    }
+    document.getElementById('textarea_lsm_content').value=blstr;
+    document.getElementById('textarea_lsm_state').value='localStorage 长度：'+bllen;
+}
+
+function local_storage_import_lsm(){
+    if (local_storage_import_b('textarea_lsm_content')){
+        document.getElementById('textarea_lsm_state').value='批量导入 localStorage 完成';
+    }
+}
+
+function local_storage_read_key_lsm(cskey=''){
+    if (cskey==''){
+        cskey=(prompt('输入key') || '').trim();
+    }
+    if (cskey==''){return;}
+    document.getElementById('textarea_lsm_content').value=local_storage_get_b(cskey);
+    document.getElementById('textarea_lsm_state').value='读取名为 '+cskey+' 的 localStorage 值';
+}
+
+function menu_lsm(){
+    var str_t=klmenu_hide_b();
+
+    var klmenu_local=[ 
+    '<span class="span_menu" onclick="javascript:'+str_t+'local_storage_view_lsm(\'name\');">查看全部 localStorage key</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'local_storage_view_lsm(\'name_length\');">查看全部 localStorage key 和 长度</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'local_storage_view_lsm();">查看全部 localStorage</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'local_storage_import_lsm();">导入 localStorage</span>',
+    ];
+    
+    var klmenu_config=[ 
+    '<span class="span_menu" onclick="javascript:'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'lsm\');}">更新版本</span>',
+    ];
+        
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_local,'L','20rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','8rem','1rem','1rem','60rem'),'','0rem')+' ');
+}
+
+function init_lsm(){
+    var oform=document.querySelector('form[name="form_lsm"]');
+    if (oform){
+	    oform.setAttribute('action',postpath_b()+'temp_txt_share.php');
+    }
+    var op=document.getElementById('p_buttons');
+    if (op){
+        var bljg=textarea_buttons_b('textarea_lsm_content','全选,清空,复制,发送到临时记事本,发送地址');    
+        op.insertAdjacentHTML('beforeend',bljg);
+    }
+    input_with_x_b('input_search',9);
+
+    keys_lsm();
+}
+
+function keys_lsm(){
+    var otd=document.getElementById('section_lsm_name');
+
+    var lsm_key=[];
+    for (let blxl = 0; blxl < localStorage.length; blxl++){
+        lsm_key.push('<input type="checkbox" value="'+localStorage.key(blxl)+'" /> <span class="span_link" onclick="javascript:local_storage_read_key_lsm(this.innerText);">'+localStorage.key(blxl)+'</span>');
+    }
+    lsm_key.sort();
+    otd.innerHTML=array_2_li_b(lsm_key,'li','ol','ol_lsm');
+    filter_lsm();
+}
+//----------------
+init_lsm();
+menu_lsm();
+top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.4rem'));
+</script>
+<script type="text/javascript">
+track_source_b('LSM',false);
+</script>
+</div>
+</body>
+</html>

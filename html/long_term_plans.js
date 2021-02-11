@@ -7,7 +7,7 @@ function menu_lt_plans(){
     ];
 
     var klmenu2=[
-    '<span class="span_menu" onclick="javascript:'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'pwa_long_term_plans_store\',\'long_term_plans_service_worker.js\');}">更新版本</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'long_term_plans\');}">更新版本</span>',
     ];
     klmenu2=root_font_size_menu_b(str_t,true,true,true).concat(klmenu2);
     

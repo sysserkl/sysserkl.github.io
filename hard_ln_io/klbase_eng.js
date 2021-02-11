@@ -117,6 +117,22 @@ function en_similar_word_b(cskey,cskey_set,compared_word){
     }
 }
 
+function enwords_batch_select_b(csname,csvalue=0,batch_open_num=20){
+    csvalue=parseInt(csvalue);
+    if (csvalue==-1){return;}
+    var ocheckboxs=document.querySelectorAll('input[name="'+csname+'"]');
+    
+    if (batch_open_num>=0){
+        var blmax=Math.min(ocheckboxs.length,csvalue+batch_open_num);
+    }
+    else {
+        var blamx=ocheckboxs.length;
+    }
+    for (let blxl=0;blxl<ocheckboxs.length;blxl++){
+        ocheckboxs[blxl].checked=(blxl>=csvalue && blxl<blmax);
+    }
+}
+
 function enwords_batch_div_b(wordslist_t,checkboxno='',showno=true,startno=0){
     if (wordslist_t==null || wordslist_t.length==0){return '';}
     var bljg='<div style="border:0.2rem dashed '+scheme_global['shadow']+';padding:0.5rem;margin-top:0.5rem;">';
@@ -134,7 +150,7 @@ function enwords_batch_div_b(wordslist_t,checkboxno='',showno=true,startno=0){
         }
         if (enstr_t==''){continue;}
         blxl=blxl+1;
-        bljg=bljg+'<input type="checkbox" name="checkbox_enword'+checkboxno+'"  id="checkbox_enword'+id_name+'" value="'+specialstr_j(enstr_t,true)+'">';
+        bljg=bljg+'<input type="checkbox" name="checkbox_enword'+checkboxno+'" id="checkbox_enword'+id_name+'" value="'+specialstr_j(enstr_t,true)+'">';
         if (showno){
             bljg=bljg+'<label for="checkbox_enword'+id_name+'"><small style="color:'+scheme_global['memo']+';">'+blxl+'.</small>';
         }
@@ -145,8 +161,18 @@ function enwords_batch_div_b(wordslist_t,checkboxno='',showno=true,startno=0){
         }
     }
 
-    if (wordslist_t.length>1){
+    var bllen=wordslist_t.length;
+    if (bllen>1){
         bljg=bljg+'<input type="checkbox" id="checkbox_enwords_select_all" onchange=\'javascript:if (this.checked){enwords_checkbox_open_b("checkbox_enword'+checkboxno+'","1");}else {enwords_checkbox_open_b("checkbox_enword'+checkboxno+'","0");}\'><label for="checkbox_enwords_select_all">全选</label> ';
+    }
+    var batch_open_num=20;
+    if (bllen>batch_open_num){
+        bljg=bljg+'<select onchange="javascript:enwords_batch_select_b(\'checkbox_enword'+checkboxno+'\', this.value);">\n';
+        bljg=bljg+'<option value=-1></option>\n';
+        for (let blxl=0;blxl<Math.ceil(bllen/batch_open_num);blxl++){
+            bljg=bljg+'<option value='+(blxl*batch_open_num)+'>'+(blxl*batch_open_num+1)+' - '+Math.min(bllen,((blxl+1)*batch_open_num))+'</option>\n';
+        }
+        bljg=bljg+'</select>\n';
     }
     bljg=bljg+'<span style="font-size:1.3rem;word-break:break-all;word-wrap:break-word;">';
     var list_t=en_search_sites_b();
@@ -206,9 +232,13 @@ function enwords_checkbox_open_b(csname,cstype){
         if (blxl>=ocheckbox.length){return;}
         if (ocheckbox[blxl].checked){
             open_link_en_b(cstype,ocheckbox[blxl].value);
+            blxl=blxl+1;
+            setTimeout(sub_enwords_checkbox_open_b_one,1000);
         }
-        blxl=blxl+1;
-        setTimeout(sub_enwords_checkbox_open_b_one,1000);
+        else {
+            blxl=blxl+1;
+            sub_enwords_checkbox_open_b_one();
+        }
     }
     //---------------------------
     var ocheckbox=document.getElementsByName(csname);

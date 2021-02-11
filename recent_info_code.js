@@ -146,6 +146,7 @@ function more_tools_klrecent(){
     ['html/image2base64.htm','image2base64'],
     ['html/klsearch.htm','KL Search'],
     ['html/long_term_plans.htm','Long Term Plans'],
+    ['html/lsm.htm','LSM'],    
     ['html/memo.htm','Memo'],    
     ['html/mine.htm','Mine'],
     ['html/money_plan.htm', 'Money Plan'],
@@ -202,6 +203,7 @@ function clear_cache_all_klrecent(){
         "calculator",
         "gps_points",
         "long_term_plans",
+        "lsm",
         "memo",
         "rnd_english_words",
         "routines",
@@ -213,7 +215,7 @@ function clear_cache_all_klrecent(){
         "websites",
         ];
         for (let item of service_list){
-            service_worker_delete_b('pwa_'+item+'_store',item+'_service_worker.js');
+            service_worker_delete_b(item);
         }
     }
 }

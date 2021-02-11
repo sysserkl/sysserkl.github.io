@@ -984,7 +984,10 @@ function reverse_str_b(csstr){
     return csstr.split("").reverse().join("");
 }
 
-function service_worker_delete_b(keyname,fname){
+function service_worker_delete_b(appname){
+    var keyname='pwa_'+appname+'_store';
+    var fname=appname+'_service_worker.js';
+    
     caches.delete(keyname);
     console.log('caches.delete',keyname); //此行保留 - 保留注释
     if(window.navigator && navigator.serviceWorker) {
@@ -1259,12 +1262,12 @@ function read_txt_file_b(fullname){
     return allText;
 }
 
-function array_2_li_b(csarray,row_type='li',container_type='ol'){
-    var bljg='<'+row_type+'>'+csarray.join('</'+row_type+'><'+row_type+'>')+'</'+row_type+'>';
+function array_2_li_b(csarray,row_type='li',container_type='ol',container_id='',row_classname=''){
+    var bljg='<'+row_type+(row_classname==''?'':' class="'+row_classname+'"')+'>'+csarray.join('</'+row_type+'><'+row_type+(row_classname==''?'':' class="'+row_classname+'"')+'>')+'</'+row_type+'>';
     if (container_type===false){
         return bljg;
     }
-    bljg='<'+container_type+'>'+bljg+'</'+container_type+'>';
+    bljg='<'+container_type+(container_id==''?'':' id="'+container_id+'"')+'>'+bljg+'</'+container_type+'>';
     return bljg;
 }
 

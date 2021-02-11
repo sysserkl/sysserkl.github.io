@@ -21,4 +21,6 @@ var digest_global=`
 *evenfall
 *seasickness
 *seasick
+*humorless
+*ugliness
 `.trim().split('\n');

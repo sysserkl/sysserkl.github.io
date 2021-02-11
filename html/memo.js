@@ -18,7 +18,7 @@ function menu_lt_klmemo(){
     ];
     
     var klmenu_config=[
-    '<span class="span_menu" onclick="javascript:'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'pwa_memo_store\',\'memo_service_worker.js\');}">更新版本</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'memo\');}">更新版本</span>',
     ];
     klmenu_config=root_font_size_menu_b(str_t,true,true,true).concat(klmenu_config);
     

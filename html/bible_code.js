@@ -51,7 +51,7 @@ function menu_bible(){
     }
     var klmenu2=[
     '<span class="span_menu" onclick="javascript:'+str_t+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>',    
-    '<span class="span_menu" onclick="javascript:'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'pwa_bible_store\',\'bible_service_worker.js\');}">更新版本</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'bible\');}">更新版本</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'help_bible();">Help</span>',
     ];
     klmenu2=root_font_size_menu_b(str_t).concat(klmenu2);

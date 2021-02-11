@@ -301,7 +301,7 @@ function menu_klroutines(){
     '<span class="span_menu" onclick="javascript:'+str_t+'form_list_klroutines();">批量整理事项</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'demo_klroutines();">导入Demo事项</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'form_done_klroutines();">导入/导出完成项</span>',    
-    '<span class="span_menu" onclick="javascript:'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'pwa_routines_store\',\'routines_service_worker.js\');}">更新版本</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'routines\');}">更新版本</span>',
     ];
     if (is_local_b()){
         klmenu1.push('<a href="../../../../../wiki/index.php/KL_Routines" onclick="javascript:'+str_t+'" target=_blank>KL Routines - KLWiki</a>');

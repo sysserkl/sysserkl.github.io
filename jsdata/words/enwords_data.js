@@ -1,5 +1,9 @@
 //单词库
 var enwords=[
+["humorless", "[ˈhjuːməlɪs] [ˈhjuːmə(r)ləs]", "adj. 缺乏幽默感的；非常严肃的；一本正经的；not having or showing the ability to laugh at things that other people think are funny; lacking a sense of humor; lacking humorous characteristics; unable to see humor in things when most others do; having no humor; not able to appreciate or express humour"],
+["ugliness", "[ˈʌglinɪs] [ˈʌɡlinəs]", "n. 丑陋；丑陋之物；the quality or state of being ugly; the fact of being unpleasant to look at; the quality of being unpleasant to look at, or not attractive; the fact of being unpleasant or dangerous, especially involving threats or violence; something that is ugly; something that is unpleasant and threatening or violent"],
+["postponement", "UK [pəˈspəʊnmənt] [pəstˈpəʊnmənt] [pəʊstˈpəʊnmənt] US [poʊˈspoʊnmənt] [poʊs(t)ˈpoʊnmənt]", "n. 推迟；延期；延缓；a change to the date or time of an event so that it will take place later than originally planned; a delay, as a formal delay in a proceeding; a delay to an event because someone plans or decides that it should happen at a later date or time"],
+["unforgivably", "[ˌʌnfə(r)ˈɡɪvəbli]", "adv. 不可原谅地；不可饶恕地；in a way that is so bad or unacceptable that you cannot forgive it; in an unforgivable manner"],
 ["twinship", "[ˈtwɪnʃɪp]", "n. 孪生；双生；the condition of being a twin or twins; n. 相同设计的两艘船中的任意一艘；either of a pair of ships of exactly the same design"],
 ["winemaking", "['waɪnˌmeɪkɪŋ]", "n. 酿酒；酿酒业；葡萄酒酿制(业)；the activity or business of producing wine; the process of making wine; the procedures and processes carried out in the making and maturing of wine; viniculture; vinification; winegrowing"],
 ["windscreen", "['wɪndˌskriːn]", "n. 风挡；(汽车的)挡风玻璃；the window across the front of a vehicle; the sheet of flat or curved glass that forms a window of a motor vehicle, esp the front window; a screen for protecting something from the wind; (chiefly British): windshield"],

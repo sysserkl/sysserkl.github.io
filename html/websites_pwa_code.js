@@ -32,7 +32,7 @@ function demo_websites_pwa(){
 function clear_cache_websites_pwa(){
     if (confirm('是否更新版本？')){
         document.getElementById('span_status').innerHTML='';
-        service_worker_delete_b('pwa_websites_store\',\'websites_service_worker.js');
+        service_worker_delete_b('websites');
     }
 }
 
