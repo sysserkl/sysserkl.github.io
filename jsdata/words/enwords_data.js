@@ -1,5 +1,9 @@
 //单词库
 var enwords=[
+["Frankie", "[ˈfræŋki]", "n. 弗兰基（男子名）；a male given name, form of Frank; a diminutive of the male given name Frank or Francis; n. 	弗朗姬（女子名）；a diminutive of the female given name Frances or Francesca"],
+["Willie", "[ˈwɪlɪ]", "n. 威利（男子名；William 的昵称）；a masculine name; a diminutive of the male given name William; n. 威莉（女子名）；a diminutive of the female given name Wilhelmina or a feminine diminutive of William, often in the form 'Willie Mae'; n. willie: (儿语)小鸡鸡(阴茎)；a variant spelling of 'willy'"],
+["danseuse", "UK [dɑ:n'sɜ:z] US [dɑn'sɜz] [dɑnˈsʊz] [dænˈsuz] French [dɑ̃søz]", "n. 芭蕾舞女演员；女芭蕾舞演员；a female ballet dancer"],
+["ballerina", "[ˌbælə'riːnə]", "n. 芭蕾舞女演员；a female dancer in ballet; a woman who is a ballet dancer: danseuse; n. 芭蕾舞团中的女主角；the star female ballet performer in the company; the principal female dancer of a ballet company; n. (贬义)芭蕾舞男演员；(less common, sometimes derogatory): a male ballet dancer; n. 芭蕾舞平底鞋；a ballet flat shoe"],
 ["humorless", "[ˈhjuːməlɪs] [ˈhjuːmə(r)ləs]", "adj. 缺乏幽默感的；非常严肃的；一本正经的；not having or showing the ability to laugh at things that other people think are funny; lacking a sense of humor; lacking humorous characteristics; unable to see humor in things when most others do; having no humor; not able to appreciate or express humour"],
 ["ugliness", "[ˈʌglinɪs] [ˈʌɡlinəs]", "n. 丑陋；丑陋之物；the quality or state of being ugly; the fact of being unpleasant to look at; the quality of being unpleasant to look at, or not attractive; the fact of being unpleasant or dangerous, especially involving threats or violence; something that is ugly; something that is unpleasant and threatening or violent"],
 ["postponement", "UK [pəˈspəʊnmənt] [pəstˈpəʊnmənt] [pəʊstˈpəʊnmənt] US [poʊˈspoʊnmənt] [poʊs(t)ˈpoʊnmənt]", "n. 推迟；延期；延缓；a change to the date or time of an event so that it will take place later than originally planned; a delay, as a formal delay in a proceeding; a delay to an event because someone plans or decides that it should happen at a later date or time"],
@@ -3279,7 +3283,7 @@ var enwords=[
 ["emphasize", "['emfəsaɪz]", "vt. 强调；着重；重视；使突出"],
 ["empire", "['empaɪər]", "n. 帝国；帝权；大企业"],
 ["empirical", "[ɪm'pɪrɪk(ə)l] [ɛmˈpɪrɪk(ə)l]", "adj. 经验主义的；以观察或实验为根据的；完全根据经验的；凭经验的；实证的；based on experiments or experience rather than ideas or theories; originating in or based on observation or experience; relying on experience or observation alone often without due regard for system and theory; capable of being verified or disproved by observation or experiment; of or relating to empiricism"],
-["employee", "UK [.emplɔɪ'iː] US [.ɪmplɔɪ'i]", "n. 雇员；雇工；受雇者"],
+["employee", "UK [ˌemplɔɪ'iː] US [ˌɪmplɔɪ'i]", "n. 雇员；雇工；受雇者"],
 ["employer", "[ɪm'plɔɪər]", "n. 雇主"],
 ["employ", "[ɪm'plɔɪ]", "v. 雇佣；使用"],
 ["employment", "[ɪm'plɔɪmənt]", "n. 职业；雇用；使用"],
@@ -3456,7 +3460,7 @@ var enwords=[
 ["evocation", "UK [ˌiːvəʊ'keɪʃ(ə)n] US [ˌevə'keɪʃ(ə)n]", "n. 唤起；唤出；引起；[古] 召唤；招魂；the act of bringing a feeling, a memory or an image into your mind; the act or an instance of evoking; calling up supposed supernatural forces by spells and incantations; n. 【法】案件的移送；the transference of a case from an inferior court for adjudication by a higher tribunal; an action of a court in summoning a case from another, usually lower, court for purposes of complete review and decision, as on an appeal in which the issue is incidental or procedural and the court of first instance has not yet rendered a decision on its merits; the removal of a case from one court to another"],
 ["evoke", "[ɪ'vəʊk]", "vt. 唤起（感情、记忆或形象）；引起；to bring a feeling, a memory or an image into your mind"],
 ["evolutionary", "UK [ˌiːvə'luːʃ(ə)n(ə)ri] US [ˌevə'luʃ(ə)neri]", "adj. 进化的；演变的；逐渐发展的"],
-["evolution", "UK [.iːvə'luːʃ(ə)n] US [.evə'luʃ(ə)n]", "n. 演变；进化；发展；渐进"],
+["evolution", "UK [ˌiːvə'luːʃ(ə)n] US [ˌevə'luʃ(ə)n]", "n. 进化；演变；发展；渐进"],
 ["exact", "[ɪɡ'zækt]", "adj. 精密严谨的；确切的"],
 ["exactly", "[ɪɡ'zæktli]", "adv. 精确地；确切地；正是；严密地；完全地"],
 ["exactness", "[ɪɡ'zæktnəs]", "n. 精确；准确性；正确；精密度"],

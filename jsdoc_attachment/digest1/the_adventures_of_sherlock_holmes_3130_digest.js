@@ -40,4 +40,5 @@ var digest_global=`
 *depositor
 *right angle
 *brewer
+*danseuse
 `.trim().split('\n');

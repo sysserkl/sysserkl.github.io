@@ -9,4 +9,6 @@ var digest_global=`
 *bazillion
 *windshield
 *earthlight
+*Willie
+*ballerina
 `.trim().split('\n');
