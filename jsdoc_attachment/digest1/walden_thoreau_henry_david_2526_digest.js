@@ -9,4 +9,5 @@ var digest_global=`
 *unimaginable
 *Hugh
 *sundown
+*demigod
 `.trim().split('\n');

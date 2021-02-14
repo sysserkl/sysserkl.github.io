@@ -4,4 +4,5 @@ var digest_global=`
 *ecologist
 *snowpack
 *waterfront
+*sailboat
 `.trim().split('\n');
