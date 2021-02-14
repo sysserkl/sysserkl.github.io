@@ -5,4 +5,5 @@ var digest_global=`
 *snowpack
 *waterfront
 *sailboat
+*Andy
 `.trim().split('\n');

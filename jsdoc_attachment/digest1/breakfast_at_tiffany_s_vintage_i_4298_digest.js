@@ -4,4 +4,6 @@ var digest_global=`
 *twinship
 *postponement
 *unforgivably
+*tugboat
+*wanna
 `.trim().split('\n');
