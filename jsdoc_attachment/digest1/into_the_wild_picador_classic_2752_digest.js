@@ -6,4 +6,5 @@ var digest_global=`
 *waterfront
 *sailboat
 *Andy
+*monkish
 `.trim().split('\n');

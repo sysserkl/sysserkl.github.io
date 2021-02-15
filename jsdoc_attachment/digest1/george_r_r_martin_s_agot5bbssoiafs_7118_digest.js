@@ -23,4 +23,5 @@ var digest_global=`
 *seasick
 *humorless
 *ugliness
+*woodcarver
 `.trim().split('\n');

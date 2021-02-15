@@ -6,4 +6,5 @@ var digest_global=`
 *unforgivably
 *tugboat
 *wanna
+*Pekingese
 `.trim().split('\n');

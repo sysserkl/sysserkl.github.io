@@ -390,4 +390,5 @@ var digest_global=`
 *Nebuchadrezzar
 *Armenia
 *Salem
+*Ethiopian
 `.trim().split('\n');
