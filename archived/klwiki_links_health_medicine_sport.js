@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-02-15 10:42:45 一"],
+["","","","更新日期：2021-02-16 19:58:28 二"],
 ["http://162.105.138.196:8008/jbxt/gns-homepage.htm","20010603 | 是谁发明了篮球？"],
 ["http://news.sina.com.cn/c/2004-08-05/07273298228s.shtml","20040804 | 外交部：期待中日球迷文明欣赏亚洲杯足球决赛"],
 ["http://news.sina.com.cn/w/2005-05-16/14246656559.shtml","20050516 | 美拉斯维加斯庆祝建城百年 蛋糕比篮球场大"],
@@ -38,6 +38,7 @@ var recent_info_list=[
 ["http://www.chinese.rfi.fr/%E4%B8%AD%E5%9B%BD/20110605-%E6%9D%8E%E5%A8%9C%E5%A4%BA%E5%86%A0%E5%BC%95%E8%B5%B7%E4%B8%AD%E5%9B%BD%E5%AA%92%E4%BD%93%E5%8F%8D%E6%80%9D%E4%BD%93%E8%82%B2%E5%88%B6%E5%BA%A6","20110605 | 李娜夺冠引起中国媒体反思体育制度 | RFI"],
 ["http://weibo.com/1650304300/xsnkem14S","20111012 | 西门不暗：中国足球队被淘汰路线图"],
 ["http://china.kyodonews.jp/news/2011/12/21651.html","20111214 | 美津浓推出超轻足球鞋 | 共同网"],
+["http://www.bbc.co.uk/zhongwen/simp/chinese_news/2012/07/120710_china_chronicle_disease.shtml","20120710 | BBC中文网 - 中国慢性病患者数量超过2.6亿"],
 ["http://2012.163.com/12/0801/04/87Q1FL95000506A2.html","20120801 | 羽球中韩女双涉嫌假打 中国组合输球遭观众狂嘘_网易体育"],
 ["http://2012.163.com/12/0801/07/87Q8NE6H000506A2.html","20120801 | 新华社杨明：国羽输球又输人 丢人丢到家了！_网易体育"],
 ["http://2012.163.com/12/0801/20/87RM0LPI000506A2.html","20120801 | 于洋/王晓理消极比赛 四对女双被取消奥运资格_网易体育"],
@@ -61,8 +62,10 @@ var recent_info_list=[
 ["http://www.nanzao.com/sc/national/14e432733b8b0b8/wu-han-gao-wen-xia-hua-zhong-shi-da-kai-fang-ti-yu-guan-gong-xue-sheng-bi-shu","20150630 | 武汉高温下 华中师大开放体育馆供学生避暑 - 南早中文"],
 ["http://cn.nytimes.com/china/20151009/c09sino-soccer/","20151009 | 球迷嘘国歌，香港足球总会遭罚 - 纽约时报中文网"],
 ["http://cn.nytstyle.com/health/20151109/t09well-stand-more/","20151109 | 立式办公桌真的能让你更健康吗？ - 纽约时报"],
+["http://weibo.com/1737847545/DjtmLfBQh","20160225 | 土摩托：把癌症变成慢性病 - 微博"],
 ["http://m.post.smzdm.com/p/427638/","20160308 | 迪卡侬购物指南 | 迪卡侬全品类产品购物攻略_什么值得买"],
 ["http://news.sina.com.cn/w/zx/2016-05-30/doc-ifxsqxxu4683023.shtml","20160530 | 金正恩观看中朝篮球友谊赛 中国队3场皆败_新浪新闻"],
+["http://www.cnbeta.com/articles/527145.htm","20160806 | 中国科学家在根治HIV等慢性病毒感染上取得突破_cnBeta.COM"],
 ["http://2016.sina.com.cn/china/2016-08-19/doc-ifxvcsrn8630804.shtml","20160819 | 体育仲裁法庭认定陈欣怡尿样呈阳性 取消奥运资格_新浪网"],
 ["http://www.sohu.com/a/144310082_482792","20170528 | 2016全球关店大潮中新开164家！迪卡侬如何逆袭？"],
 ["http://news.winshang.com/html/062/4440.html","20170831 | 迪卡侬大中华区新总部落户上海浦东 国内共有230家门店_赢商网"],
@@ -74,5 +77,6 @@ var recent_info_list=[
 ["https://tech.sina.com.cn/i/2018-08-29/doc-ihikcahf1956268.shtml","20180829 | 健康猫爆雷牵扯25万体育人 维权者：涉及资金已逾30亿_新浪网"],
 ["https://www.solidot.org/story?sid=61869","20190827 | Solidot | 中国每年新增千万高血压患者"],
 ["http://www.xinhuanet.com/politics/2019-10/24/c_1125147069.htm","20191024 | 我国高血压患者2.7亿 该如何稳住我们的血压？-新华网"],
+["https://www.thepaper.cn/newsDetail_forward_6153483","20200225 | 卫健委：基层医疗机构应及时掌握老年人、慢性病患者健康状况_中国政库_澎湃新闻"],
 ["https://cn.reuters.com/article/ioc-olympics-arrangements-0326-thur-idCNKBS21D03Z?il=0","20200326 | 国际奥委会正与众体育协会协调 安排2021年7-8月举办奥运会 - 路透中文网"],
 ];

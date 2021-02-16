@@ -5,4 +5,5 @@ var digest_global=`
 *paw
 *outdistance
 *phosphorescent
+*woodcutter
 `.trim().split('\n');

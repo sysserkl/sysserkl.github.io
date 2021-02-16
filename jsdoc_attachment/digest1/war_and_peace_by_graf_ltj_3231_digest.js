@@ -164,4 +164,6 @@ var digest_global=`
 *kennelman
 *eastwards
 *emigrate
+*smithy
+*Christmastime
 `.trim().split('\n');

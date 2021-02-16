@@ -40,6 +40,7 @@ var recent_info_list=[
 * [?klwiki_links_religion religion]
 * [?klwiki_links_travel travel]
 * [?klwiki_links_xiaomi 小米]
+* [?klwiki_links_environment 环境]
 </div>
 `],
 ["","Linux",`
