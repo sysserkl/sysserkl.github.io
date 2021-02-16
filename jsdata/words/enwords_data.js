@@ -3106,7 +3106,7 @@ var enwords=[
 ["drive belt", "[draiv belt]", "传动皮带"],
 ["drive", "[draɪv]", "vt. 开车；驱赶；迫使；n. 驾车；驱使；推进力；路；快车道；街；[计]驱动器"],
 ["driver", "['draɪvər]", "n. 驾驶员；司机；驱动器"],
-["driverless", "[d'raɪvərles]", "adj. 无人驾驶的"],
+["driverless", "[ˈdraɪvə(r)ləs]", "adj. 无人驾驶的"],
 ["drizzle", "['drɪz(ə)l]", "v. 细雨般地洒下；下毛毛雨；（毛毛雨似的）洒落；（在食物上）浇（液态调料）；to rain in very small drops or very lightly; to rain lightly; to pour liquid slowly over something, especially in a thin line or in small drops; to pour a small amount of liquid over the surface of something; to make wet with minute drops; sprinkle; to moisten with tiny droplets; (cookery): to drip or pour (a liquid) in a fine stream onto (a food); to pour slowly and evenly, especially oil or honey in cooking; n. 细雨；毛毛细雨；light fine rain; a fine misty rain; something that is drizzled; very light rain, specifically consisting of droplets less than 0.5 mm in diameter"], 
 ["DRM", "[ˌdi; ɑ;r 'em]", "abbr. 数字版权管理（指软件或信息拥有者为防止互联网盗版行为所采用的措施或装置）；Digital Rights Management: types of technology used to prevent people from illegally copying software, music, films, etc"],
 ["drone", "[drəʊn]", "n. 雄蜂；游手好闲者；无人驾驶飞机；n. 嗡嗡声；单调的声音；vi. 嗡嗡叫；混日子；vt. 单调低沉地说"],
