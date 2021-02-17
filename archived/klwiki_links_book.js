@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-02-16 20:01:55 二"],
+["","","","更新日期：2021-02-17 13:24:01 三"],
 ["http://www.southcn.com/news/community/shzt/youth/forerunner/200404280880.htm","19191101 | 鲁迅：我们现在怎样做父亲"],
 ["http://sina.com.cn/comment/1999-11-6/29197.html","19991106 | 评论：有感于国家图书馆收押金 - 南方周末"],
 ["http://book.18007.com/xdwx/l/luxun/000/002.htm","20000519 | 鲁迅挨“骂”录"],
@@ -151,6 +151,7 @@ var recent_info_list=[
 ["https://www.solidot.org/story?sid=63372","20200129 | 奇客Solidot | 调查显示有更多的美国人去图书馆而不是去电影院"],
 ["https://www.thepaper.cn/newsDetail_forward_6124885","20200224 | 许知远为单向空间发求助信：书店撑不住了，求众筹续命_澎湃新闻"],
 ["https://weibo.com/6312135066/J0lV4EsmL","20200504 | 由于我们百度盘被封，所以开始尝试国内一个... 来自书格数字图书馆 - 微博"],
+["https://www.thepaper.cn/point_question.jsp?contid=10019171&amp;commentid=29930451","20200902 | 朱文秋：实体书店未来怎么发展_澎湃新闻"],
 ["https://www.solidot.org/story?sid=65722","20201004 | 奇客Solidot | 图书馆电子书的流行让出版商忧心忡忡"],
 ["https://www.solidot.org/story?sid=66300","20201207 | 奇客Solidot | 现代数学发源于一座已经消失的伊斯兰图书馆"],
 ];

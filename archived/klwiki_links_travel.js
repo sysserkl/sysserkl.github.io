@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-02-16 20:01:55 二"],
+["","","","更新日期：2021-02-17 13:24:01 三"],
 ["http://www.guxiang.com/index.htm","19270602 | 王国维在颐和园投湖自尽"],
 ["http://www.sonicbbs.com/war/topicdisplay.asp?BoardID=11&amp;Page=1&amp;TopicID=301787","20030813 | 颐和园长廊"],
 ["http://news.sina.com.cn/c/2003-11-28/09071205023s.shtml","20031128 | 中国公布首批历史文化名镇名村 周庄乌镇入选"],
@@ -37,7 +37,6 @@ var recent_info_list=[
 ["http://www.solidot.org/story?sid=52502","20170523 | Solidot | 乌镇人机大战第一场，柯洁不敌 AlphaGo"],
 ["https://36kr.com/p/5078443.html","20170605 | 寻找下一个民宿洼地，寻找下一个莫干山_36氪"],
 ["http://slide.news.sina.com.cn/c/slide_1_2841_216693.html#p=1","20171108 | 习近平和夫人在故宫迎接美国总统特朗普夫妇_高清图集_新浪网"],
-["http://tech.sina.com.cn/2017-12-03/doc-ifypikwt5749308.shtml","20171203 | 乌镇大佬晚宴第二波！丁磊之后刘强东和王兴再组局_新浪网"],
 ["https://www.thepaper.cn/newsDetail_forward_3246356","20190403 | 演员赵立新就日军侵华不毁故宫等不当言论致歉_澎湃新闻"],
 ["https://cn.nytimes.com/china/20190807/beijing-forbidden-city-museum/","20190807 | 张彦：中国复兴传统文化，故宫恢复往日辉煌 - 纽约时报中文网"],
 ["https://www.zaobao.com/realtime/china/story20200118-1022157","20200118 | 女网友闭馆日开豪车进故宫惹众怒 故宫致歉 | 联合早报网"],

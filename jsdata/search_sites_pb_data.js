@@ -8,6 +8,7 @@ var search_sites_list_global=[
 ['https://www.merriam-webster.com/dictionary/','',0,'blue','Merriam-Webster','c0','English',''],
 ['https://www.oxfordlearnersdictionaries.com/definition/english/','',2,'green','Oxford','c0','English',''],
 ['https://dictionary.cambridge.org/dictionary/english/','',2,'orange','Cambridge','c0','English',''],
+['https://dictionary.cambridge.org/dictionary/english-chinese-simplified/','',2,'','Cambridge CN','c0','English',''],
 ['https://www.collinsdictionary.com/dictionary/english/','',2,'purple','Collins','cp0','English',''],
 ['https://www.wordreference.com/definition/','',0, 'cadetblue','WordreRerence','0','English',''],
 ['https://www.wordreference.com/enzh/','',0,'','(CN)','0','English',''],

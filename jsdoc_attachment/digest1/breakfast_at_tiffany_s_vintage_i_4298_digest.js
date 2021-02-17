@@ -8,4 +8,5 @@ var digest_global=`
 *wanna
 *Pekingese
 *youngster
+*yuletide
 `.trim().split('\n');
