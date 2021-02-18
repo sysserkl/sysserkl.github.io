@@ -1244,9 +1244,16 @@ function bookmarks_get_kltxt_b(current_book_today_bookmark_only_one=false,return
         var day_end=reading_lines.slice(-1)[0][0];
         blstatsitics='<p style="margin-left:0.5rem;"><b>《'+csbooklist_sub_global_b[csbookno_global_b][1]+'》</b>';
         blstatsitics=blstatsitics+'开始阅读日期：'+date2str_b('-',day_start)+' '+day_2_week_b(day_start)+'；结束日期：'+date2str_b('-',day_end)+' '+day_2_week_b(day_end)+'；总天数：'+((day_end - day_start) / 86400000 + 1)+'天；';
-        blstatsitics=blstatsitics+'实际阅读天数：'+read_days+'天；平均每天阅读：'+(current_line_no_max/read_days).toFixed(0)+'行。';
+        
+        var lines_per_day=current_line_no_max/read_days;
+        blstatsitics=blstatsitics+'实际阅读天数：'+read_days+'天；平均每天阅读：'+lines_per_day.toFixed(0)+'行。';
+        if (current_line_no_max<filelist.length){
+            var plan_days=Math.ceil((filelist.length-current_line_no_max)/lines_per_day);
+            blstatsitics=blstatsitics+'完成阅读还需要：'+plan_days+'天；即，'+next_day_b('',plan_days)+'。';
+        }
         blstatsitics=blstatsitics+'</p>';
     }
+
     if (return_full && current_book_percent.length>0 && csbooklist_sub_global_b.length>0){
         flot_two_lines_two_yaxis_k(['《'+csbooklist_sub_global_b[csbookno_global_b][1]+'》阅读行数'].concat(reading_lines),['《'+csbooklist_sub_global_b[csbookno_global_b][1]+'》已读比例'].concat(current_book_percent),'div_flot_bookmark_line','行','%','nw',true,'d',0,0,'',[],-1,false,false,false,100);
         document.getElementById('div_flot_bookmark_line').insertAdjacentHTML('afterend',blstatsitics);
