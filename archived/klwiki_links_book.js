@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-02-17 22:08:28 三"],
+["","","","更新日期：2021-02-18 11:41:09 四"],
 ["http://www.southcn.com/news/community/shzt/youth/forerunner/200404280880.htm","19191101 | 鲁迅：我们现在怎样做父亲"],
 ["http://sina.com.cn/comment/1999-11-6/29197.html","19991106 | 评论：有感于国家图书馆收押金 - 南方周末"],
 ["http://book.18007.com/xdwx/l/luxun/000/002.htm","20000519 | 鲁迅挨“骂”录"],
@@ -119,6 +119,7 @@ var recent_info_list=[
 ["http://www.solidot.org/story?sid=50321","20161110 | Solidot | 中国科幻小说简史"],
 ["https://mp.weixin.qq.com/s?__biz=MjM5ODIwNDIwMA==&amp;mid=2652678075&amp;idx=2&amp;sn=27050318d5cbb71b797ce5709054759e&amp;chksm=bd2641fc8a51c8ea949f191282b42720c8f8623245150989a49b07d28c4efa90c3c2948af89d&amp;mpshare=1&amp;scene=2&amp;srcid=1118aRt06So90FHYoH6P8eVU&amp;from=timeline&amp;isappinstalled=0#wechat_redirect","20161116 | 葛剑雄：当了图书馆长之后，我决定这样处理自己的藏书"],
 ["http://zj.sina.com.cn/news/s/2016-12-05/detail-ifxyiayq2305123.shtml","20161205 | 浙财大图书馆推二维码占座 让占座不再粗暴 - 钱报网"],
+["http://m.weibo.cn/status/4050329466878137","20161208 | 在很大程度上，人生仅仅是一场闹剧，有时最好站在一旁，观之笑之，这比一味介入要强得多。——林语堂《吾国与吾民》 - 微博"],
 ["http://www.ftchinese.com/story/001070685","20161223 | 北戴河海边图书馆获香港设计大奖 - FT中文网"],
 ["http://weibo.com/5323388430/Epe5hmPbQ","20170104 | 希望亚马逊能推出一项功能：在购买电子书前... 来自NoPingWest - 微博"],
 ["http://www.jianshu.com/p/c7cb82c91b88","20170211 | 邓哲：为什么我看武侠小说容易生气 - 简书"],

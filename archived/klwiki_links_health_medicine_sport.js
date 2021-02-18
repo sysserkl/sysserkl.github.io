@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-02-17 22:08:28 三"],
+["","","","更新日期：2021-02-18 11:41:09 四"],
 ["http://162.105.138.196:8008/jbxt/gns-homepage.htm","20010603 | 是谁发明了篮球？"],
 ["http://news.sina.com.cn/c/2004-08-05/07273298228s.shtml","20040804 | 外交部：期待中日球迷文明欣赏亚洲杯足球决赛"],
 ["http://news.sina.com.cn/w/2005-05-16/14246656559.shtml","20050516 | 美拉斯维加斯庆祝建城百年 蛋糕比篮球场大"],
@@ -35,6 +35,7 @@ var recent_info_list=[
 ["http://science.solidot.org/article.pl?sid=10/10/12/0744220&amp;from=rss","20101012 | Solidot | 超级麦克风从吵杂的体育馆挑出单个声音"],
 ["http://www.ftchinese.com/story/001035209","20101027 | 颜强：女子体育美感的沦丧 - FT中文网"],
 ["http://twitter.com/#!/roseluqiu/status/1531817307934720","20101108 | 闾丘露薇: 今晚广州中日足球赛"],
+["http://chn.chosun.com/site/data/html_dir/2011/03/22/20110322000022.html","20110322 | 穿运动鞋、吃汉堡 巴菲特生活简朴 - 朝鲜日报中文网"],
 ["http://www.chinese.rfi.fr/%E4%B8%AD%E5%9B%BD/20110605-%E6%9D%8E%E5%A8%9C%E5%A4%BA%E5%86%A0%E5%BC%95%E8%B5%B7%E4%B8%AD%E5%9B%BD%E5%AA%92%E4%BD%93%E5%8F%8D%E6%80%9D%E4%BD%93%E8%82%B2%E5%88%B6%E5%BA%A6","20110605 | 李娜夺冠引起中国媒体反思体育制度 | RFI"],
 ["http://weibo.com/1650304300/xsnkem14S","20111012 | 西门不暗：中国足球队被淘汰路线图"],
 ["http://china.kyodonews.jp/news/2011/12/21651.html","20111214 | 美津浓推出超轻足球鞋 | 共同网"],
