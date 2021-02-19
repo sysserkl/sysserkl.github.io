@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-02-18 11:41:09 四"],
+["","","","更新日期：2021-02-18 11:43:10 四"],
 ["http://www.southcn.com/news/community/shzt/youth/forerunner/200404280880.htm","19191101 | 鲁迅：我们现在怎样做父亲"],
 ["http://sina.com.cn/comment/1999-11-6/29197.html","19991106 | 评论：有感于国家图书馆收押金 - 南方周末"],
 ["http://book.18007.com/xdwx/l/luxun/000/002.htm","20000519 | 鲁迅挨“骂”录"],
@@ -111,6 +111,7 @@ var recent_info_list=[
 ["https://www.amazon.cn/gp/press/pr/20160122/ref=amb_link_102458612_1?pf_rd_m=A1AJ19PSB66TGU&amp;pf_rd_s=center-1&amp;pf_rd_r=1YJF7WDX91HV6TJ8BPHE&amp;pf_rd_t=2701&amp;pf_rd_p=273130132&amp;pf_rd_i=home-2016","20160122 | 亚马逊发布“2015年度Kindle电子书阅读行为报告” "],
 ["http://www.williamlong.info/archives/4498.html","20160130 | 亚马逊发布年度Kindle电子书排行榜-月光博客"],
 ["http://news.sina.com.cn/c/nd/2016-03-16/doc-ifxqnskh0871155.shtml","20160316 | 连环画泰斗贺友直辞世 笔下老上海影响几代人_新浪新闻"],
+["http://news.sina.com.cn/c/nd/2016-04-29/doc-ifxrtzte9786582.shtml","20160429 | 《白鹿原》作者陈忠实因病去世 曾获茅盾文学奖_新浪新闻"],
 ["http://news.mydrivers.com/1/483/483978.htm","20160525 | 电子书福音！E Ink发布全彩色电子纸：牛-驱动之家"],
 ["http://m.weibo.cn/status/4033689937617695","20161023 | 高嵩：买了电脑以后，娃立刻跑去图书馆借了本编程的书，这会自学做网站呢。会不会过两年FBI 来敲我的门？ - 微博"],
 ["http://weibo.com/5961036557/EeVFBychQ","20161028 | 位于人民中路一段29号的书屋，是四川省唯一... 来自更成都 - 微博"],

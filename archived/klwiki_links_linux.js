@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-02-18 11:41:09 四"],
+["","","","更新日期：2021-02-18 11:43:10 四"],
 ["https://www.debuntu.org/how-to-enable-apache-modules-under-debian-based-system-page-2/","20060615 | How To: Enable apache modules under Debian based system — page 2 - Debuntu"],
 ["http://www.2cto.com/os/201108/101074.html","20110822 | 安装samb别忘了开放端口 - Linux操作系统：Ubuntu_Centos_Debian - 红黑联盟"],
 ["http://software.solidot.org/article.pl?sid=11/11/10/0534252&amp;from=rss","20111110 | Solidot | Unity、GNOME和Windows 8被批垃圾"],
