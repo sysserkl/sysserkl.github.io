@@ -1,5 +1,9 @@
 //单词库
 var enwords=[
+["wingless", "['wɪŋləs] [ˈwɪŋlɪs]", "adj. 没有翅膀的；无翅的；无翼的；(especially of insects) without wings; having no wings or very rudimentary wings; having no wings or vestigial wings; adj. 只有原始的（未充分发展的、退化的）翅膀的；having only rudimentary wings, as an apteryx; adj. designating primitive insects of the subclass Apterygota, characterized by small size, lack of wings, and larvae resembling the adults: includes the springtails and bristletails"],
+["centipede", "['sentɪpiːd]", "n. 蜈蚣；a small creature like an insect, with a long thin body and many legs; any of a class (Chilopoda) of long flattened many-segmented predaceous arthropods with each segment bearing one pair of legs of which the foremost pair is modified into poison fangs"],
+["Ashley", "[ˈæʃli]", "n. 艾什莉(女子名)；阿什利（男子名）；a feminine and masculine name; n. river 40 miles (64 kilometers) long in southern South Carolina flowing southeast into Charleston harbor; n. a number of places in the United States of America; n. one of ten villages and hamlets in England; n. a locality in New South Wales, Australia; named for one of the settlements in England"],
+["checkbook", "['tʃekˌbʊk]", "n. 支票簿； =chequebook；a book of printed checks; a book containing blank checks to be drawn on a bank; a book containing detachable forms for writing checks on a bank"],
 ["gulag", "UK [ˈɡuːlæɡ] US [ˈguˌlɑg] [ˈguˌlæg]", "n. (often capitalized): 古拉格(前苏联劳改集中营)；a system of prison labour camps in the Soviet Union from 1930 to 1955, where many people died; the penal system of the U.S.S.R. consisting of a network of labor camps; (formerly) the central administrative department of the Soviet security service, established in 1930, responsible for maintaining prisons and forced labour camps; n. gulag: any political labour camp; any system used to silence dissents; any prison or detention camp, esp. for political prisoners"],
 ["self-sufficiency", "[ˌself səˈfɪʃ(ə)nsi]", "n. 自给自足；独立性；the ability to do or produce everything that you need without the help of other people; the quality or state of being self-sufficient; the quality or state of being able to provide everything you need, especially food, without the help of other people or countries; the quality of being able to take care of yourself, to be happy, or to deal with problems, without help from other people; the capacity to manage one's own affairs, make one's own judgments, and provide for oneself; personal independence"],
 ["huntress", "['hʌntrəs] [(ˈhʌntrɪs]", "n. 女猎人；女狩猎者；猎杀猎物的雌性动物；a woman who hunts wild animals; a woman who seeks out and kills or captures game; a female hunter; a woman who hunts game, also: a female animal that hunts prey"],
@@ -10374,7 +10378,7 @@ var enwords=[
 ["yard", "[jɑːrd]", "n. 院子；庭院；n. 码(长度单位)"],
 ["yarn", "UK [jɑːn] US [jɑːrn]", "n. 纱；线；thread that has been spun, used for knitting, making cloth, etc.; n. [口]（尤指夸张的或编造的）故事；a long story, especially one that is exaggerated or invented; a story, usually a long one with a lot of excitement or interest; v. 讲故事；to tell a yarn"],
 ["yeah", "[jeə]", "adv. 是"],
-["yearly", "UK ['jɪə(r)li] US ['jɪrli]", "n. 年刊；adv. 每年地；一年一次地；adj. 每年的；一年一次的；年度的；一年的"],
+["yearly", "UK ['jɪə(r)li] US ['jɪrli]", "adj. 每年的；一年一次的；一年的；年度的；adv. 每年地；一年一次地；n. 年刊"],
 ["year", "UK [jɪə(r)] US [jɪr]", "n. 年；年度；年龄；学年"],
 ["yeast", "[jiːst]", "n. 酵母；发酵剂；vi. 发酵；起泡沫"],
 ["yell", "[jel]", "v. 大叫；n. 大喊；叫嚷；（为运动队加油的）呐喊"],

@@ -6,4 +6,5 @@ var digest_global=`
 *outdistance
 *phosphorescent
 *woodcutter
+*wingless
 `.trim().split('\n');

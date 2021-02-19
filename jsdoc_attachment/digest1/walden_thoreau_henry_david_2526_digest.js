@@ -10,4 +10,5 @@ var digest_global=`
 *Hugh
 *sundown
 *demigod
+*centipede
 `.trim().split('\n');

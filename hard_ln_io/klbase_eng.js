@@ -117,7 +117,7 @@ function en_similar_word_b(cskey,cskey_set,compared_word){
     }
 }
 
-function enwords_batch_select_b(csname,csvalue=0,batch_open_num=20){
+function enwords_batch_select_b(csname,csvalue=0,batch_open_num=10){
     csvalue=parseInt(csvalue);
     if (csvalue==-1){return;}
     var ocheckboxs=document.querySelectorAll('input[name="'+csname+'"]');
@@ -165,7 +165,7 @@ function enwords_batch_div_b(wordslist_t,checkboxno='',showno=true,startno=0){
     if (bllen>1){
         bljg=bljg+'<input type="checkbox" id="checkbox_enwords_select_all" onchange=\'javascript:if (this.checked){enwords_checkbox_open_b("checkbox_enword'+checkboxno+'","1");}else {enwords_checkbox_open_b("checkbox_enword'+checkboxno+'","0");}\'><label for="checkbox_enwords_select_all">全选</label> ';
     }
-    var batch_open_num=20;
+    var batch_open_num=10;
     if (bllen>batch_open_num){
         bljg=bljg+'<select onchange="javascript:enwords_batch_select_b(\'checkbox_enword'+checkboxno+'\', this.value);">\n';
         bljg=bljg+'<option value=-1></option>\n';
