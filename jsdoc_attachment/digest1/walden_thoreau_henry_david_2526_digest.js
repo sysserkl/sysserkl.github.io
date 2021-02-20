@@ -11,4 +11,5 @@ var digest_global=`
 *sundown
 *demigod
 *centipede
+*Luther
 `.trim().split('\n');
