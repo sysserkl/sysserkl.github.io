@@ -13,4 +13,5 @@ var digest_global=`
 *centipede
 *Luther
 *shoemaker
+*bather
 `.trim().split('\n');

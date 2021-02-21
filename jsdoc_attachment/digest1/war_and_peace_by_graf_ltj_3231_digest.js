@@ -167,4 +167,5 @@ var digest_global=`
 *smithy
 *Christmastime
 *remarry
+*remarriage
 `.trim().split('\n');

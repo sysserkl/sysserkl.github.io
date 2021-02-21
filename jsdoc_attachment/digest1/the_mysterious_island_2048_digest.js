@@ -456,4 +456,6 @@ var digest_global=`
 *koala
 *Nebuchadnezzar
 *emigration
+*bootmaker
+*sportsman
 `.trim().split('\n');

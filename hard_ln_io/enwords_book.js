@@ -88,17 +88,24 @@ function new_words_form_enbook(){
 }
 
 function in_all_new_words_enbook(){
-    var list_t=array_unique_b(document.getElementById('textarea_new_words').value.trim().split(' '));
-    var result_t=[];
-    for (let item of list_t){
+    var csstr=document.getElementById('textarea_new_words').value.trim();
+    
+    var new_words_set=new Set();
+    var old_words_set=new Set();    
+    var bljgarr2=str_2_array_enbook(csstr,true);
+    [new_words_set,old_words_set]=get_new_words_arr_enbook2(bljgarr2);
+    
+    var result_t_include=[];
+    var result_t_exclude=[];
+    for (let item of new_words_set){
         if (all_new_words_global.includes(item) || all_new_words_global.includes(item.toLowerCase())){
-            result_t.push(item);
+            result_t_include.push(item);
+        }
+        else {
+            result_t_exclude.push(item);        
         }
     }
-    if (result_t.length==0){
-        result_t=['无'];
-    }
-    document.getElementById('textarea_new_words2').value=result_t.join(' ');
+    document.getElementById('textarea_new_words2').value='已在新单词库中的词：'+result_t_include.join(' ')+'\n不在新单词库中的词：'+result_t_exclude.join(' ');
 }
 
 function wordtypes_enbook(blitem){
@@ -682,6 +689,14 @@ function compare_form_statistics_enbook(){
     odiv.scrollIntoView();
 }
 
+function max_length_new_words_enbook(){
+    var list_t=[].concat(all_new_words_global);
+    list_t.sort(function (a,b){return a.length<b.length;});
+    list_t=list_t.slice(0,100);
+    if (list_t.length==0){return;}
+    document.getElementById('textarea_new_words').value='最长('+list_t[0].length+'-'+list_t.slice(-1)[0].length+')的 '+list_t.length+' 个单词：\n'+list_t.join('\n');
+}
+
 function import_words_enbook(cstype){
     switch (cstype){
         case 'new':
@@ -735,11 +750,12 @@ function menu_enbook(){
     '<a href="?book=1&continue" onclick="javascript:'+str_t+'">批量统计生词</a>',
     '<span class="span_menu" onclick="javascript:'+str_t+'news_words_statistics_enbook();">显示统计结果</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'compare_form_statistics_enbook();">比较统计数据</span>',
-    '<span class="span_menu" onclick="javascript:'+str_t+'import_words_enbook(\'new\');">导入KLWiki全部新单词</span>',    
+    '<span class="span_menu" onclick="javascript:'+str_t+'import_words_enbook(\'new\');">导入KLWiki和txtbook全部新单词</span>',    
+    '<span class="span_menu" onclick="javascript:'+str_t+'max_length_new_words_enbook();">全部新单词中最长的单词</span>',     
     '<span class="span_menu" onclick="javascript:'+str_t+'import_words_enbook(\'sentence\');">导入全部例句</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'import_words_enbook(\'old\');">导入全部旧单词</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'exclude_words_enbook();">电子书中未包含的旧单词</span>',    
     ];
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_b(klmenu1,'','14rem','1rem','1rem','60rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_b(klmenu1,'','18rem','1rem','1rem','60rem')+' ');
 }
