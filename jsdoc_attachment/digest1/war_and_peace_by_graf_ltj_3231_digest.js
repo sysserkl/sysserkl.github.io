@@ -166,4 +166,5 @@ var digest_global=`
 *emigrate
 *smithy
 *Christmastime
+*remarry
 `.trim().split('\n');

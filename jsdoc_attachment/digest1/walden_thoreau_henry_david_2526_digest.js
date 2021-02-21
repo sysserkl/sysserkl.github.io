@@ -12,4 +12,5 @@ var digest_global=`
 *demigod
 *centipede
 *Luther
+*shoemaker
 `.trim().split('\n');

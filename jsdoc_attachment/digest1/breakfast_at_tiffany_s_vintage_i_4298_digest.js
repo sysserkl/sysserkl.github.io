@@ -9,4 +9,5 @@ var digest_global=`
 *Pekingese
 *youngster
 *yuletide
+*ashtray
 `.trim().split('\n');

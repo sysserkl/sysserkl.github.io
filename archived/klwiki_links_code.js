@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-02-19 22:13:40 五"],
+["","","","更新日期：2021-02-20 22:19:09 六"],
 ["https://mail.python.org/pipermail/python-list/2005-May/342496.html","20050506 | [HELP] Tkinter Application Minimized to System Tray :)"],
 ["http://blog.wpjam.com/article/wordpress-custom-fields/","20070805 | WordPress 自定义字段（Custom Fields）详细介绍和使用"],
 ["http://m.blog.csdn.net/article/details?id=1811343","20071004 | Tkinter教程之Text(1)篇"],
@@ -475,6 +475,7 @@ var recent_info_list=[
 ["https://www.cnblogs.com/xiaobingqianrui/p/8461707.html","20180223 | Python之sqlite3 - Fate0729 - 博客园"],
 ["https://yagisanatode.com/2018/02/23/how-do-i-change-the-size-and-position-of-the-main-window-in-tkinter-and-python-3/","20180223 | How Do I Change the Size and Position of the Main Window in Tkinter and Python 3 – Yagisanatode"],
 ["https://stackoverflow.com/questions/49111431/how-to-get-texture-dimensions-with-three-js","20180305 | javascript - How to get texture dimensions with Three.js - Stack Overflow"],
+["https://www.learnpyqt.com/courses/adanced-ui-features/system-tray-mac-menu-bar-applications-pyqt/","20180322 | System tray &amp; Mac menu bar applications in PyQt (Updated 2019) — Learn PyQt5 GUI programming hands-on"],
 ["https://stackoverflow.com/questions/15345790/scipy-misc-module-has-no-attribute-imread","20180331 | python - scipy.misc module has no attribute imread? - Stack Overflow"],
 ["https://stackoverflow.com/questions/47859217/how-can-i-install-snapcraft-in-a-docker-image","20180426 | How can I install Snapcraft in a docker image? - Stack Overflow"],
 ["https://stackoverflow.com/questions/50177216/how-to-grant-all-privileges-to-root-user-in-mysql-8-0","20180506 | How to grant all privileges to root user in MySQL 8.0 - Stack Overflow"],

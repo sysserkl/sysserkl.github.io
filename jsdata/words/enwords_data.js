@@ -1,5 +1,9 @@
 //单词库
 var enwords=[
+["Luther", "UK [ˈlu:θə] US [ˈluθər]", "n. 卢瑟(姓氏；男子名)；(chiefly US) A male given name transferred from the surname, originally in honor of Martin Luther; a surname of English speakers who descend from German immigrants; n. Martin Luther 马丁路德；Martin. 1483–1546, German leader of the Protestant Reformation. As professor of biblical theology at Wittenberg University from 1511, he began preaching the crucial doctrine of justification by faith rather than by works, and in 1517 he nailed 95 theses to the church door at Wittenberg, attacking Tetzel's sale of indulgences. He was excommunicated and outlawed by the Diet of Worms (1521) as a result of his refusal to recant, but he was protected in Wartburg Castle by Frederick III of Saxony (1521–22). He translated the Bible into German (1521–34) and approved Melanchthon's Augsburg Confession (1530), defining the basic tenets of Lutheranism; n. a city and town in Iowa; a village in Michigan; a town in Oklahoma."],
+["shoemaker", "['ʃuːˌmeɪkə(r)]", "n. 鞋匠；制鞋工人；a person whose job is making shoes and boots; a person whose occupation is making or repairing shoes; n. the threadfish; a fish, Elagatis pinnulatis, the runner; n. Shoemaker: 休梅克(人名)；a occupational surname; alternative form of 'Schumacher'​"],
+["remarry", "[ˌriː'mæri] [riːˈmærɪ]", "v. 再婚；to marry again after being divorced or after your husband or wife has died; to marry a second or subsequent time"],
+["ashtray", "['æʃˌtreɪ]", "n. 烟灰缸；a container into which people who smoke put ash, cigarette ends, etc.; a receptacle for tobacco ashes and for cigar and cigarette butts"],
 ["wingless", "['wɪŋləs] [ˈwɪŋlɪs]", "adj. 没有翅膀的；无翅的；无翼的；(especially of insects) without wings; having no wings or very rudimentary wings; having no wings or vestigial wings; adj. 只有原始的（未充分发展的、退化的）翅膀的；having only rudimentary wings, as an apteryx; adj. designating primitive insects of the subclass Apterygota, characterized by small size, lack of wings, and larvae resembling the adults: includes the springtails and bristletails"],
 ["centipede", "['sentɪpiːd]", "n. 蜈蚣；a small creature like an insect, with a long thin body and many legs; any of a class (Chilopoda) of long flattened many-segmented predaceous arthropods with each segment bearing one pair of legs of which the foremost pair is modified into poison fangs"],
 ["Ashley", "[ˈæʃli]", "n. 艾什莉(女子名)；阿什利（男子名）；a feminine and masculine name; n. river 40 miles (64 kilometers) long in southern South Carolina flowing southeast into Charleston harbor; n. a number of places in the United States of America; n. one of ten villages and hamlets in England; n. a locality in New South Wales, Australia; named for one of the settlements in England"],
@@ -9680,7 +9684,7 @@ var enwords=[
 ["underbrush", "['ʌndəbrʌʃ]", "n. 林下灌木丛；矮树丛"],
 ["undercover", "[ˌʌndər'kʌvər]", "adj. 秘密的；从事秘密工作的"],
 ["undercurrent", "['ʌndə(r)ˌkʌrənt]", "n. 潜流；(时势等的)暗流；【电】电流不足；【矿】(宽平的)分支洗金槽"],
-["underdog", "['ʌndədɒɡ]", "n. 处于劣势的一方；牺牲者；受害者；输家；弱者"],
+["underdog", "['ʌndədɒɡ]", "n. 输家；弱者；牺牲者；受害者；处于劣势的一方"],
 ["underestimate", "verb. [ˌʌndər'estɪmeɪt] noun. [ˌʌndər'estɪmət]", "n. 低估；轻视；an opinion that something is smaller, easier, less important, or less extreme than it actually is; v. 低估；轻视；对…估计不足；对…认识不足（或重视不够）；to think or guess that the amount, cost or size of something is smaller than it really is; to not realize how good, strong, determined, etc. somebody really is"],
 ["undergone", "[ˌʌndə'ɡɒn]", "v. undergo 的过去分词"],
 ["undergo", "[ˌʌndə'ɡəʊ]", "vt. 经历；经受；遭受"],

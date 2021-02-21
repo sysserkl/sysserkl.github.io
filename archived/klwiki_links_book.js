@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-02-19 22:13:40 五"],
+["","","","更新日期：2021-02-20 22:19:09 六"],
 ["http://www.southcn.com/news/community/shzt/youth/forerunner/200404280880.htm","19191101 | 鲁迅：我们现在怎样做父亲"],
 ["http://sina.com.cn/comment/1999-11-6/29197.html","19991106 | 评论：有感于国家图书馆收押金 - 南方周末"],
 ["http://book.18007.com/xdwx/l/luxun/000/002.htm","20000519 | 鲁迅挨“骂”录"],
