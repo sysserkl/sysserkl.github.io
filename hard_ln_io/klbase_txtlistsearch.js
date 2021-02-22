@@ -174,49 +174,52 @@ function reading_mode_kltxt_b(){
 function txtmenus_kltxt_b(cstype=''){
     var str_t=klmenu_hide_b('');
     if (cstype=='reader'){
-        var menu0=[
+        var menu_general=[
         '<span class="span_menu" onclick="javascript:'+str_t+'search_or_reader_kltxt_b(\'txtlistsearch\');">Search Page</span>',       
         ];
     }
     else {
-        var menu0=[
+        var menu_general=[
         '<span class="span_menu" onclick="javascript:'+str_t+'search_or_reader_kltxt_b(\'reader\');">Reader</span>',
         ];    
     }
-    menu0.push('<span class="span_menu" onclick="javascript:'+str_t+'search_or_reader_kltxt_b(\'reader_card\');">Card</span>');
-    menu0.push('<span class="span_menu" onclick="javascript:'+str_t+'bookmarks_get_kltxt_b(false,false);">读取最新书签</span>');
-    menu0.push('<span class="span_menu" onclick="javascript:'+str_t+'bookmarks_set_kltxt_b();">添加书签</span>');
-    menu0.push('<span class="span_menu" onclick="javascript:'+str_t+'getlines_kltxt_b();">返回阅读页面</span>');
-    menu0.push('<span class="span_menu" onclick="javascript:'+str_t+'new_words_kltxt_b();">显示生词</span>');
-    menu0.push('<span class="span_menu" onclick="javascript:'+str_t+'find_cn_words_kltxt_b();">显示汉字生字</span>');
+    menu_general.push('<span class="span_menu" onclick="javascript:'+str_t+'search_or_reader_kltxt_b(\'reader_card\');">Card</span>');
+    menu_general.push('<span class="span_menu" onclick="javascript:'+str_t+'bookmarks_get_kltxt_b(false,false);">读取最新书签</span>');
+    menu_general.push('<span class="span_menu" onclick="javascript:'+str_t+'bookmarks_set_kltxt_b();">添加书签</span>');
+    menu_general.push('<span class="span_menu" onclick="javascript:'+str_t+'getlines_kltxt_b();">返回阅读页面</span>');
+    menu_general.push('<span class="span_menu" onclick="javascript:'+str_t+'new_words_kltxt_b();">显示生词</span>');
+    menu_general.push('<span class="span_menu" onclick="javascript:'+str_t+'find_cn_words_kltxt_b();">显示汉字生字</span>');
 
-    var menu1=[
+    var menu_dir=[
         '<span class="span_menu" onclick="javascript:'+str_t+'findmenu_kltxt_b(-1,-1,a_raw_number_kltxt_b());">查找目录</span>',
         '<span class="span_menu" onclick="javascript:'+str_t+'fullmenu_kltxt_b();">全部目录</span>',
         '<span class="span_menu" onclick="javascript:'+str_t+'possible_menu_kltxt_b();">可能的目录</span>',
     ];
     
     if (cstype!=='reader'){
-        menu1.push('<span class="span_menu" onclick="javascript:'+str_t+'menu_insert_kltxt_b(3);">显示搜索关键字目录3</span>');
-        menu1.push('<span class="span_menu" onclick="javascript:'+str_t+'menu_insert_kltxt_b(1);">显示搜索关键字目录1</span>');
+        menu_dir.push('<span class="span_menu" onclick="javascript:'+str_t+'menu_insert_kltxt_b(3);">显示搜索关键字目录3</span>');
+        menu_dir.push('<span class="span_menu" onclick="javascript:'+str_t+'menu_insert_kltxt_b(1);">显示搜索关键字目录1</span>');
     }
     
-    var menu2=root_font_size_menu_b(str_t);
-    menu2.push('<span class="span_menu" onclick="javascript:'+str_t+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>');
+    var menu_config=root_font_size_menu_b(str_t);
+    menu_config.push('<span class="span_menu" onclick="javascript:'+str_t+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>');
     if (cstype!=='reader' && cstype!=='digest'){
-        menu2=menu2.concat([
+        menu_config=menu_config.concat([
         '<span class="span_menu" onclick="javascript:'+str_t+'search_demo_kltxt_b();">语法示例</span>',
         '<span class="span_menu" onclick="javascript:'+str_t+'editable_kltxt_b();">页面可编辑</span>',        
-        '<span class="span_menu" onclick="javascript:'+str_t+'counthz_kltxt_b();">汉字量统计</span>',
-        '<span class="span_menu" onclick="javascript:'+str_t+'tw_kltxt_b();">繁体字</span>',        
-        '<span class="span_menu" onclick="javascript:'+str_t+'booksthickness_form_kltxt_b();">书的厚度</span>',    
-        '<span class="span_menu" onclick="javascript:'+str_t+'statistics_kltxt_b();">统计</span>',
         '<span class="span_menu" onclick="javascript:'+str_t+'break_line_kltxt_b();">断句</span>',        
-        '<span class="span_menu" onclick="javascript:'+str_t+'books_current_table_kltxt_b();">当前书目列表</span>',
         ]);
     }
     
-    var menu3=[
+    var menu_statistics=[
+        '<span class="span_menu" onclick="javascript:'+str_t+'statistics_kltxt_b();">统计</span>',    
+        '<span class="span_menu" onclick="javascript:'+str_t+'counthz_kltxt_b();">汉字量统计</span>',
+        '<span class="span_menu" onclick="javascript:'+str_t+'tw_kltxt_b();">繁体字统计</span>',     
+        '<span class="span_menu" onclick="javascript:'+str_t+'booksthickness_form_kltxt_b();">书的厚度</span>',    
+        '<span class="span_menu" onclick="javascript:'+str_t+'books_current_table_kltxt_b();">当前书目列表</span>',
+    ];
+    
+    var menu_digest=[
     '<span class="span_menu" onclick="javascript:'+str_t+'reading_mode_kltxt_b();">进入阅读状态</span>',    
     '<span class="span_menu" onclick="javascript:'+str_t+'digest_temp_add_kltxt_b();">添加临时摘要</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'digest_lines_kltxt_b();">显示摘要段落</span>',
@@ -235,11 +238,14 @@ function txtmenus_kltxt_b(cstype=''){
 
     var fontsize=(ismobile_b()?'0.9rem':'1rem');
     
-    var bljg=klmenu_b(menu0,'','12rem','',fontsize);
-    bljg=bljg+klmenu_b(menu3,'🖊','14rem','',fontsize);
-    bljg=bljg+klmenu_b(menu1,'⏬','14rem','',fontsize);
+    var bljg=klmenu_b(menu_general,'','12rem','',fontsize);
+    bljg=bljg+klmenu_b(menu_digest,'🖊','14rem','',fontsize);
+    bljg=bljg+klmenu_b(menu_dir,'⏬','14rem','',fontsize);
     if (cstype!=='digest'){
-        bljg=bljg+klmenu_b(menu2,'⚙','12rem','',fontsize);
+        bljg=bljg+klmenu_b(menu_config,'⚙','12rem','',fontsize);
+        if (cstype!=='reader'){
+            bljg=bljg+klmenu_b(menu_statistics,'🧮','12rem','',fontsize);
+        }
     }
     if (cstype=='digest'){
         bljg=klmenu_b(color_menu,'🎨',(ismobile_b()?'16rem':'22rem'),'',fontsize,'20rem');

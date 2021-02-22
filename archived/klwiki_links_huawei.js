@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-02-20 22:19:09 六"],
+["","","","更新日期：2021-02-21 16:38:18 日"],
 ["http://tech.sina.com.cn/t/2006-06-17/0741994777.shtml","20060617 | 华为基本法修改工程启动 时代局限性日益凸现"],
 ["http://tech.sina.com.cn/t/2007-01-18/03341340866.shtml","20070118 | 华为18年无一项原创发明 购买专利竞跑国际市场"],
 ["http://tech.sina.com.cn/it/2007-05-01/02421493757.shtml","20070501 | 华为国际专利全球排名升至13 力拓知识产权路径"],
@@ -26,8 +26,6 @@ var recent_info_list=[
 ["http://www.cnbeta.com/articles/500385.htm","20160511 | 华为预想未来：机器人统治世界 人类能与死去的亲属交流_cnBeta.COM"],
 ["http://finance.sina.com.cn/roll/2016-05-23/doc-ifxsktkr5891842.shtml","20160523 | 深圳对华为或失去吸引力 房地产过度发展将挤出工业_新浪网"],
 ["http://news.sina.com.cn/c/nd/2016-05-23/doc-ifxskpkx7639849.shtml","20160523 | “别让华为跑了”疯传 揭秘华为缘何欲逃离深圳_新浪新闻"],
-["http://www.cnbeta.com/articles/505599.htm","20160529 | 华为的成长烦恼：“大脑”留在深圳，“肢体”搬到东莞？_cnBeta.COM"],
-["http://www.cnbeta.com/articles/505635.htm","20160529 | 内部人士：华为有意布局深圳和东莞双中心_cnBeta.COM"],
 ["http://www.bbc.com/zhongwen/simp/world/2016/06/160602_us_huawei","20160602 | 美国要求华为提供出口朝鲜伊朗等国信息 - BBC 中文网"],
 ["http://www.ifanr.com/664554","20160603 | 莊偉宏 Odin：专利撕三星、手机秒苹果 ── 华为何以如此“牛气”？ | 爱范儿"],
 ["http://www.cnbeta.com/articles/533527.htm","20160827 | 中国企业500强：中移动第10 华为第27_cnBeta.COM"],
