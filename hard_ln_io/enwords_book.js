@@ -71,7 +71,8 @@ function new_words_form_enbook(){
     bljg=bljg+'<span class="aclick" onclick="javascript:textarea_shift_enbook();">对调</span> ';    
     bljg=bljg+'<span class="aclick" onclick="javascript:space2underline_enbook();">替换单词间空格为下划线</span> ';        
     bljg=bljg+'<br />'+checkbox_kl_b('remove_square','删除方括号[](否则方括号中的内容视为音标而不收录')+' ';
-    bljg=bljg+checkbox_kl_b('newwords_one_textarea','WIKI格式单词放在一个编辑框内','',true);
+    bljg=bljg+checkbox_kl_b('newwords_one_textarea','WIKI格式单词放在一个编辑框内','',true)+' ';
+    bljg=bljg+checkbox_kl_b('words_type_check','检验单词类型','',true)+' ';    
     bljg=bljg+' <span id="span_book_lines_count"></span>';
     bljg=bljg+' 前：<input type="text" id="input_first_lines" value="10%">行 <span class="aclick" onclick="javascript:textarea_first_lines_enbook();">截取</span>';   
     bljg=bljg+'</p>';
@@ -93,7 +94,7 @@ function in_all_new_words_enbook(){
     var new_words_set=new Set();
     var old_words_set=new Set();    
     var bljgarr2=str_2_array_enbook(csstr,true);
-    [new_words_set,old_words_set]=get_new_words_arr_enbook2(bljgarr2);
+    [new_words_set,old_words_set]=get_new_words_arr_enbook2(bljgarr2,checkbox_kl_value_b('words_type_check'));
     
     var result_t_include=[];
     var result_t_exclude=[];
@@ -110,16 +111,17 @@ function in_all_new_words_enbook(){
 
 function wordtypes_enbook(blitem){
     function sub_wordtypes_enbook_push(csarray,csword){
-        csarray.push(csword);
-        csarray.push(csword.toLowerCase());
-        csarray.push(csword.toUpperCase());
-        csarray.push(csword.substring(0,1).toUpperCase()+csword.substring(1,).toLowerCase());
+        csarray.add(csword);
+        csarray.add(csword.toLowerCase());
+        csarray.add(csword.toUpperCase());
+        csarray.add(csword.substring(0,1).toUpperCase()+csword.substring(1,).toLowerCase());
         return csarray;
     }
     
-	var bltmparr=[blitem];
-    bltmparr.push(blitem.toLowerCase(),blitem.toUpperCase());
-    bltmparr.push(blitem.substring(0,1).toUpperCase()+blitem.substring(1,).toLowerCase());
+	var bltmparr=new Set();
+    bltmparr.add(blitem);
+    bltmparr.add(blitem.toLowerCase(),blitem.toUpperCase());
+    bltmparr.add(blitem.substring(0,1).toUpperCase()+blitem.substring(1,).toLowerCase());
     
     if ('pped,gged,nned,lled,dded,ssed'.includes(blitem.slice(-4))){
         word_tmp=blitem.substring(0,blitem.length-3);
@@ -155,7 +157,7 @@ function wordtypes_enbook(blitem){
         bltmparr=sub_wordtypes_enbook_push(bltmparr,word_tmp);
     }
 
-	return array_unique_b(bltmparr);
+    return bltmparr;
 }
 
 function get_new_words_arr_enbook(cstype,csstr='',csobjects=false,maxlength=3,addline=false,append_parent=false,execstring=''){
@@ -231,7 +233,6 @@ function get_new_words_arr_enbook(cstype,csstr='',csobjects=false,maxlength=3,ad
         }
         csstr=otextarea.value;
     }
-
 	if (checkbox_kl_value_b('remove_square')==false){
 		csstr=csstr.replace(new RegExp("(\\[[^\\[\\]]+\\])","g"),' ');
 	}
@@ -239,7 +240,8 @@ function get_new_words_arr_enbook(cstype,csstr='',csobjects=false,maxlength=3,ad
     var new_words_set=new Set();
     var old_words_set=new Set();    
     var bljgarr2=str_2_array_enbook(csstr,true);
-    [new_words_set,old_words_set]=get_new_words_arr_enbook2(bljgarr2);
+    
+    [new_words_set,old_words_set]=get_new_words_arr_enbook2(bljgarr2,checkbox_kl_value_b('words_type_check'));
     bljgarr2=array_union_b(new_words_set,old_words_set,true);
 
     var new_words_set10=new Set();
@@ -248,7 +250,7 @@ function get_new_words_arr_enbook(cstype,csstr='',csobjects=false,maxlength=3,ad
         var list10=csstr.trim().split('\n');
         var blstr10=list10.slice(0,parseInt(list10.length*0.1)).join('\n');
         var bljgarr2_10=str_2_array_enbook(blstr10,true);
-        [new_words_set10,old_words_set10]=get_new_words_arr_enbook2(bljgarr2_10);
+        [new_words_set10,old_words_set10]=get_new_words_arr_enbook2(bljgarr2_10,checkbox_kl_value_b('words_type_check'));
     }
     
     if (csobjects==false){
@@ -260,7 +262,7 @@ function get_new_words_arr_enbook(cstype,csstr='',csobjects=false,maxlength=3,ad
     console.log('get_new_words_arr_enbook() 费时：'+(performance.now() - t0) + " milliseconds");
 }
 
-function get_new_words_arr_enbook2(bljgarr2){
+function get_new_words_arr_enbook2(bljgarr2,check_types=true){
     //提取单词列表
 	var endata_t=new Set();
 	for (let item of enwords){
@@ -277,7 +279,12 @@ function get_new_words_arr_enbook2(bljgarr2){
         if (new_words_all_set.has(item) || new_words_set.has(item) || old_words_set.has(item)){
             continue;
         }
-        var list_t=wordtypes_enbook(item);
+        if (check_types){
+            var list_t=wordtypes_enbook(item);
+        }
+        else {
+            var list_t=new Set();
+        }
         var blfound=false;
         for (let one_word of list_t){
             if (endata_t.has(one_word)){

@@ -168,4 +168,5 @@ var digest_global=`
 *Christmastime
 *remarry
 *remarriage
+*unsportsmanlike
 `.trim().split('\n');
