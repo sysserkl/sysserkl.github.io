@@ -41,4 +41,5 @@ var digest_global=`
 *right angle
 *brewer
 *danseuse
+*cashbox
 `.trim().split('\n');

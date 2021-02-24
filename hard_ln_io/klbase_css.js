@@ -228,7 +228,7 @@ function checkbox_kl_value_b(csid){
             return ocheck.checked;
         }   
     }
-    return false;
+    return 0;
 }
 
 function klmenu_check_b(span_id,change_value=true){

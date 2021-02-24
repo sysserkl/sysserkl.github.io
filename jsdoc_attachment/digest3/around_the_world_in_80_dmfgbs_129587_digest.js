@@ -3,4 +3,5 @@ var digest_global=`
 *polygonal
 *Francis
 *Uranus
+*exhaustless
 `.trim().split('\n');

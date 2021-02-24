@@ -241,7 +241,10 @@ function get_new_words_arr_enbook(cstype,csstr='',csobjects=false,maxlength=3,ad
     var old_words_set=new Set();    
     var bljgarr2=str_2_array_enbook(csstr,true);
     
-    [new_words_set,old_words_set]=get_new_words_arr_enbook2(bljgarr2,checkbox_kl_value_b('words_type_check'));
+    var bltypecheck=checkbox_kl_value_b('words_type_check');
+    bltypecheck=(bltypecheck===0?true:bltypecheck);
+    
+    [new_words_set,old_words_set]=get_new_words_arr_enbook2(bljgarr2,bltypecheck);
     bljgarr2=array_union_b(new_words_set,old_words_set,true);
 
     var new_words_set10=new Set();
@@ -250,7 +253,7 @@ function get_new_words_arr_enbook(cstype,csstr='',csobjects=false,maxlength=3,ad
         var list10=csstr.trim().split('\n');
         var blstr10=list10.slice(0,parseInt(list10.length*0.1)).join('\n');
         var bljgarr2_10=str_2_array_enbook(blstr10,true);
-        [new_words_set10,old_words_set10]=get_new_words_arr_enbook2(bljgarr2_10,checkbox_kl_value_b('words_type_check'));
+        [new_words_set10,old_words_set10]=get_new_words_arr_enbook2(bljgarr2_10,bltypecheck);
     }
     
     if (csobjects==false){

@@ -391,4 +391,5 @@ var digest_global=`
 *Armenia
 *Salem
 *Ethiopian
+*carefulness
 `.trim().split('\n');

@@ -14,4 +14,5 @@ var digest_global=`
 *Luther
 *shoemaker
 *bather
+*auroral
 `.trim().split('\n');
