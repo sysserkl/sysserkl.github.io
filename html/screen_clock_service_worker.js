@@ -5,7 +5,13 @@ self.addEventListener('install', function(e) {
             'screen_clock.htm',
             '../hard_ln_io/klbase.js',
             '../hard_ln_io/klbase_css.js',
+            '../hard_ln_io/klbase_date.js',
             '../hard_ln_io/klbase_slide.js',
+            '../hard_ln_io/sound/ding.wav',
+            '../hard_ln_io/sound/drop.wav',
+            '../hard_ln_io/sound/dududu.wav',
+            '../hard_ln_io/sound/elephant.wav',
+            '../hard_ln_io/sound/whistle.wav',
             ]);
         })
     );

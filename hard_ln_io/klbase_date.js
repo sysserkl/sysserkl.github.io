@@ -278,14 +278,28 @@ function isLeapYear_b(csyear) {
 }
 
 function date_2_ymd_b(csdate,cstype){
-    if (cstype=='y'){
-        return csdate.getFullYear();
+    if (csdate===false){
+        csdate=new Date();
     }
-    else if (cstype=='m'){
-        return csdate.getMonth()+1;
-    }
-    else if (cstype=='d'){
-        return csdate.getDate();
+    switch (cstype){
+        case 'y':
+            return csdate.getFullYear();
+            break;
+        case 'm':
+            return csdate.getMonth()+1;
+            break;
+        case 'd':
+            return csdate.getDate();
+            break;
+        case 'h':
+            return csdate.getHours();
+            break;
+        case 'M':
+            return csdate.getMinutes();
+            break;
+        case 's':
+            return csdate.getSeconds();
+            break;        
     }
     return -1;
 }
@@ -293,7 +307,7 @@ function date_2_ymd_b(csdate,cstype){
 function time_2_emoji_b(cstime=false){
     var blemoji=['🕛','🕐','🕑','🕒','🕓','🕔','🕕','🕖','🕗','🕘','🕙','🕚'];
     if (cstime===false){
-        var cstime=new Date();
+        cstime=new Date();
     }
     var blh='';
     if (Object.prototype.toString.call(cstime) === "[object Date]" && !isNaN(cstime)){

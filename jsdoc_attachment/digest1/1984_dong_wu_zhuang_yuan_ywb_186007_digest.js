@@ -83,4 +83,5 @@ var digest_global=`
 *Burma
 *screwdriver
 *inconceivably
+*worthwhile
 `.trim().split('\n');

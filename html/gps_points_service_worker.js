@@ -13,6 +13,11 @@ self.addEventListener('install', function(e) {
             '../module/leaflet/leaflet.js',
             '../module/leaflet_plugins/leaflet.ChineseTmsProviders.js',
             '../jsdata/gpx_pb_data.js',
+            '../hard_ln_io/sound/ding.wav',
+            '../hard_ln_io/sound/drop.wav',
+            '../hard_ln_io/sound/dududu.wav',
+            '../hard_ln_io/sound/elephant.wav',
+            '../hard_ln_io/sound/whistle.wav',            
             ]);
         })
     );

@@ -86,6 +86,9 @@ function klwebphp_path_b(subdir_or_file=''){
     else if (local_storage_get_b('use_klwebphp_path').trim()=='1' && (klbase_path+'/_').match(/:\d+\//)!==null){
         return '/'+subdir_or_file;
     }
+    else if (klbase_path.includes('/wp_remote/')){
+        return '../'+subdir_or_file;
+    }    
     else {
         return false;
     }

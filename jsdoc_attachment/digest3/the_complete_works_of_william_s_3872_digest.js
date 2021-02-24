@@ -9,4 +9,5 @@ var digest_global=`
 *fishpond
 *armipotent
 *shepherdess
+*bagpiper
 `.trim().split('\n');

@@ -1052,7 +1052,7 @@ function keywords_form_klsnews(){
     var postpath=postpath_b();
 	var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php" name="form_selenium_keywords" target=_blank>\n';
     bljg=bljg+'<textarea name="textarea_selenium_keywords" id="textarea_selenium_keywords"></textarea>';
-    bljg=bljg+'<p>';
+    bljg=bljg+'<p>格式：按英文逗号间隔，不支持空格或换行 ';
     bljg=bljg+'<span class="aclick" onclick="javascript:keywords_read_klsnews();">读取</span> ';
     bljg=bljg+'<span class="aclick" onclick="javascript:keywords_update_klsnews();">更新</span> ';   
     bljg=bljg+textarea_buttons_b('textarea_selenium_keywords','发送到临时记事本,发送地址');    

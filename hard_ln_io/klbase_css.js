@@ -1336,3 +1336,73 @@ function obj_search_show_hide_b(objs,subobj_querystr='',cskey='',csreg=false,che
         }    
     }
 }
+
+function sound_b(cstype){
+	var audio = new Audio(klwebphp_path_b('sound/'+cstype+'.wav'));
+	audio.play();
+}
+
+function alarm_interval_sound_b(){
+    function sub_alarm_interval_sound_b_next(){
+        if (typeof(kl_alarm_obj_global)!=='undefined'){
+            clearInterval(kl_alarm_obj_global);
+        }
+        var blm=date_2_ymd_b(false,'M');
+        var bls=date_2_ymd_b(false,'s');
+        var blinterval=kl_alarm_interval_global - blm % kl_alarm_interval_global;
+        kl_alarm_obj_global=setInterval(alarm_interval_sound_b,Math.max(0,blinterval*60*1000-bls*1000));   //不能使用setTimeout，有可能重复运行 - 保留注释
+    }
+    
+    function sub_alarm_interval_sound_b_one_sound(){
+        if (kl_alarm_interval_global==-1){  //全局变量 - 保留注释
+            return;
+        }
+        if (blxl>=sound_type.length){
+            sub_alarm_interval_sound_b_next();
+            return;
+        }
+        sound_b(sound_type[blxl]);
+        blxl=blxl+1;
+        setTimeout(sub_alarm_interval_sound_b_one_sound,1000);
+    }
+    //-----------------------------------------
+    if (kl_alarm_interval_global==-1){
+        return;
+    }
+    var sound_list=['elephant','ding','drop','flash','whistle','dududu'];
+    var blm=date_2_ymd_b(false,'M');
+    if (blm % 5 == 0 && blm % kl_alarm_interval_global == 0){
+        var blstr=('0'+blm).slice(-2,);
+        var sound_type=[sound_list[parseInt(blstr.slice(0,1))],sound_list[parseInt(blstr.slice(-1,))]];
+        var blxl=0;
+        sub_alarm_interval_sound_b_one_sound();
+    }
+    else {
+        sub_alarm_interval_sound_b_next();
+    }
+}
+
+function alarm_interval_set_b(csinterval=5){
+    if (csinterval==0){
+        if (typeof(kl_alarm_interval_global) == 'undefined'){
+            var blvalue='5';
+        }
+        else {
+            var blvalue=Math.max(5,parseInt(kl_alarm_interval_global));
+        }
+        csinterval=prompt('输入整点报时时间间隔，须能被5整除，取消报时输入任意不符合要求数字',blvalue);
+        if (csinterval==null){return;}
+        csinterval=parseInt(csinterval.trim());
+    }
+    if (isNaN(csinterval) ||  csinterval % 5 !== 0){
+        if (typeof(kl_alarm_obj_global)!=='undefined'){    //全局变量
+            clearInterval(kl_alarm_obj_global);
+        }
+        kl_alarm_interval_global=-1;
+        console.log('整点报时停止');
+        return;
+    }
+    console.log('整点报时('+csinterval+')开始');
+    kl_alarm_interval_global=csinterval;    //全局变量 - 保留注释
+    alarm_interval_sound_b();
+}
