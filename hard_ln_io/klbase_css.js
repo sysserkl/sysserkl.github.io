@@ -1339,7 +1339,7 @@ function obj_search_show_hide_b(objs,subobj_querystr='',cskey='',csreg=false,che
 
 function sound_b(cstype){
     var sfile=klwebphp_path_b('sound/'+cstype+'.wav');
-    if (sfile===false && location.href.includes('/html/')){
+    if (sfile===false && location.href.includes('/html/')){ //for git remote address - 保留注释
         sfile='../hard_ln_io/sound/'+cstype+'.wav';
     }
 	var audio = new Audio(sfile);
