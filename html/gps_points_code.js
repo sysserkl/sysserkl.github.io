@@ -638,7 +638,8 @@ function menu_gps_points(){
     '<span id="span_show_circle" class="span_menu" onclick="javascript:'+str_t+'klmenu_check_b(this.id);current_layer_refresh_gps_points();">⚪ 显示距离圈</span>',
     '<span id="span_is_rectangle" class="span_menu" onclick="javascript:'+str_t+'klmenu_check_b(this.id);">⚪ 方形距离圈</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'circle_distance_settings_gps_points();">距离圈设置</span>',        
-    '<span class="span_menu" onclick="javascript:'+str_t+'alarm_interval_set_b(0);">整点报时</span>',       
+    '<span class="span_menu" onclick="javascript:'+str_t+'alarm_interval_set_b(0);">整点报时</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'gps_points\');}">更新版本</span>',
     ];
     document.getElementById('input_upload_gpx').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','16rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'⚙','16rem','1rem','1rem','60rem'),'','0rem')+' ');
 }
