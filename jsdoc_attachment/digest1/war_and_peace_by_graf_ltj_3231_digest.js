@@ -169,4 +169,6 @@ var digest_global=`
 *remarry
 *remarriage
 *unsportsmanlike
+*Voltaire
+*inexhaustible
 `.trim().split('\n');
