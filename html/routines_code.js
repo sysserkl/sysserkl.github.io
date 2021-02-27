@@ -270,6 +270,7 @@ function statistics_category_date_klroutines(){
     }
     
     document.getElementById('div_flot_date_klroutines').style.display='';
+    document.getElementById('div_flot_week_klroutines').style.display='none';
     flot_lines_k(flot_array,'div_flot_date_klroutines','ne',true,'','m','项',0);    
 
     document.getElementById('divhtml').innerHTML='不一致的key:<br />'+array_2_li_b(different_key)+'只有一项的分类：<br />'+array_2_li_b(one_date_category);

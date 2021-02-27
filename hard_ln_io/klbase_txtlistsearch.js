@@ -986,7 +986,7 @@ function bookmarks_set_kltxt_b(){
         csno=filelist.length;   //最后一页 - 保留注释
     }
     var str_t=csbookname_global+'&'+csno+'&'+cslines;
-    if (!('&'+bljg+'&').includes('&'+str_t+'&')){
+    if (!('&'+bljg+'&').includes('&'+str_t+'&')){   //避免不同日期，相同书签值的出现 - 保留注释
         str_t=csbooklist_sub_global_b[csbookno_global_b][1].replace(new RegExp(/&/,'g'),'_')+'&'+str_t+'&'+filelist.length+'&'+now_time_str_b(':',true)+'\n';
         bljg=str_t+bljg;
     }
@@ -1239,8 +1239,8 @@ function bookmarks_get_kltxt_b(current_book_today_bookmark_only_one=false,return
         current_line_no_max=current_line_no_max-1;  //书签行号-1 - 保留注释
     }
     if (reading_lines.length>=2){
-        if (reading_lines[0][1]<=1){
-            var day_start=reading_lines[1][0];
+        if (reading_lines[0][1]<=1){    //考虑第一个书签已读行数为1的情形 - 保留注释
+            var day_start=reading_lines[1][0];  //第二个书签已读行数应当>1 - 保留注释
             var read_days=reading_lines.length-1;
         }
         else {

@@ -24,4 +24,5 @@ var digest_global=`
 *matchbook
 *windscreen
 *stewardess
+*underpants
 `.trim().split('\n');

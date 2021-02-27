@@ -25,4 +25,5 @@ var digest_global=`
 *ugliness
 *woodcarver
 *huntress
+*raindrop
 `.trim().split('\n');

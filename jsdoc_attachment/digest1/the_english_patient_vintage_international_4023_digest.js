@@ -25,4 +25,5 @@ var digest_global=`
 *aviator
 *anticlockwise
 *deceiver
+*earphone
 `.trim().split('\n');

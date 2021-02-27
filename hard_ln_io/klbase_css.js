@@ -976,6 +976,7 @@ function popular_colors_b(){
     "#E6D565,#480FAE,#14FCD9",
     "#E8CB72,#4457ED,#EECE6C",
     "#EAEFE4,#6777AC,#033326",
+    "#EBE1E0,#811826,#1320B5",
     "#EC7703,#37036C,#D13124",
     "#ED363F,#13183F,#1EA143",
     "#EDD8B1,#BB5857,#A2D2C5",
