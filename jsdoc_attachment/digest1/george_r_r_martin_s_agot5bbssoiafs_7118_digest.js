@@ -26,4 +26,5 @@ var digest_global=`
 *woodcarver
 *huntress
 *raindrop
+*challenger
 `.trim().split('\n');

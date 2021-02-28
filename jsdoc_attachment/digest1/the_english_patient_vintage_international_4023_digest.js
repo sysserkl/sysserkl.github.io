@@ -26,4 +26,5 @@ var digest_global=`
 *anticlockwise
 *deceiver
 *earphone
+*Francesca
 `.trim().split('\n');
