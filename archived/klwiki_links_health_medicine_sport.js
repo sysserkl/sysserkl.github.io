@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-02-25 22:20:25 四"],
+["","","","更新日期：2021-02-28 13:13:52 日"],
 ["http://162.105.138.196:8008/jbxt/gns-homepage.htm","20010603 | 是谁发明了篮球？"],
 ["http://news.sina.com.cn/c/2004-08-05/07273298228s.shtml","20040804 | 外交部：期待中日球迷文明欣赏亚洲杯足球决赛"],
 ["http://news.sina.com.cn/w/2005-05-16/14246656559.shtml","20050516 | 美拉斯维加斯庆祝建城百年 蛋糕比篮球场大"],
@@ -81,7 +81,6 @@ var recent_info_list=[
 ["https://www.solidot.org/story?sid=54561","20171120 | Solidot | 46% 的美国人口现在有高血压"],
 ["http://world.kbs.co.kr/chinese/news/news_Po_detail.htm?No=57360&amp;id=Po","20171221 | 忠清北道堤川市体育中心火灾造成人员伤亡 | KBS World Radio"],
 ["https://tech.sina.com.cn/i/2018-08-29/doc-ihikcahf1956268.shtml","20180829 | 健康猫爆雷牵扯25万体育人 维权者：涉及资金已逾30亿_新浪网"],
-["https://weibo.com/5693194807/H3gRQDgto","20181118 | 苏州马拉松争议一幕，何引丽在与非洲选手争... 来自新浪跑步 - 微博"],
 ["https://www.solidot.org/story?sid=61869","20190827 | Solidot | 中国每年新增千万高血压患者"],
 ["http://www.xinhuanet.com/politics/2019-10/24/c_1125147069.htm","20191024 | 我国高血压患者2.7亿 该如何稳住我们的血压？-新华网"],
 ["https://www.thepaper.cn/newsDetail_forward_6153483","20200225 | 卫健委：基层医疗机构应及时掌握老年人、慢性病患者健康状况_中国政库_澎湃新闻"],

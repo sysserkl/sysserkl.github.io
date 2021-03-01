@@ -35,6 +35,7 @@ var recent_info_list=[
 * [?klwiki_links_game game]
 * [?klwiki_links_health_medicine_sport health]
 * [?klwiki_links_huawei 华为]
+* [?klwiki_links_it it]
 * [?klwiki_links_linux Linux]
 * [?klwiki_links_multimedia 影音动漫]
 * [?klwiki_links_religion religion]

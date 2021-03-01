@@ -733,11 +733,11 @@ function filter_list_klsnews(){
     }
     var focus=checkbox_kl_value_b('input_focus'); //oinput_focus.checked;
     var selected_list=[];
-    if (focus){        
+    if (focus===true){       
         var focus_list=sort_keys_klsnews();
         for (let one_row of sourcelist){
             for (let one_key of focus_list) {
-		        if (one_key==''){continue;}
+		        if (one_key.trim()==''){continue;}
                 if (one_row[0].toLowerCase().includes(one_key) || one_row[1].toLowerCase().includes(one_key)){
                     selected_list.push(one_row);
                     break;

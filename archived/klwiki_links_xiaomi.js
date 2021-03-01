@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-02-25 22:20:25 四"],
+["","","","更新日期：2021-02-28 13:13:52 日"],
 ["https://www.oschina.net/question/5189_26583","20110827 | 抢先看！小米手机开箱图集 - 开源中国社区"],
 ["http://www.oschina.net/news/20923/xiaomi-mobile-in-10-steps","20110828 | 10 步跟我拆小米手机（多图+大图） - 开源中国社区"],
 ["http://cn.engadget.com/2012/08/16/xiaomi-phone-2/","20120816 | 小米手机 2 来了，S4 四核心、4.3 吋 720p 屏幕、Android 4.1"],

@@ -13,6 +13,7 @@ var search_sites_list_global=[
 ['https://www.wordreference.com/definition/','',0, 'cadetblue','WordreRerence','0','English',''],
 ['https://www.wordreference.com/enzh/','',0,'','(CN)','0','English',''],
 ['https://www.lexico.com/definition/','',0,'#990066','Lexico','0','English',''],
+['https://learnersdictionary.com/definition/','',0,'','learnersdictionary','','English',''],
 ['https://www.dictionary.com/browse/','',0,'#6666cc','Dictionary.com','','English',''],
 ['https://www.thefreedictionary.com/','',0,'#0099ff','The Free Dictionary','','English',''],
 ['https://www.yourdictionary.com/','',0,'#990033','YourDictionary','','English',''],

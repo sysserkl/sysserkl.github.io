@@ -392,4 +392,5 @@ var digest_global=`
 *Salem
 *Ethiopian
 *carefulness
+*mulberry
 `.trim().split('\n');
