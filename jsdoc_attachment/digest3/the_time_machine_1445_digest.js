@@ -18,4 +18,5 @@ var digest_global=`
 *scepticism
 *blacken
 *forthwith
+*antennae
 `.trim().split('\n');

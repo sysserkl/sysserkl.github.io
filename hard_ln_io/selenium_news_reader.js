@@ -12,6 +12,9 @@ function mobile_style_klsnews(){
 }
 
 function sentence_new_words_klsnews(){
+    var do_translate=checkbox_kl_value_b('input_show_new_words');
+    if (!do_translate===true){return;}
+    
     var ospans=document.querySelectorAll('span.span_content');
     var list_t=[];
     for (let item of ospans){
@@ -592,6 +595,7 @@ function classify_sites_klsnews(bottom_eng=false,sort_by_day=false){
     
     //enwords----
     words_translate_klsnews();
+    sentence_new_words_klsnews();
     //----
     document.location.href = "#content";
     fav_status_klsnews();
@@ -600,11 +604,10 @@ function classify_sites_klsnews(bottom_eng=false,sort_by_day=false){
 }
 
 function words_translate_klsnews(){
-    var oinput_enwords=document.getElementById('input_enwords');
-    if (!oinput_enwords){
-        return;
-    }
-    if (checkbox_kl_value_b('input_enwords')){
+    var do_translate=checkbox_kl_value_b('input_enwords');
+    if (do_translate===0){return;}
+    
+    if (do_translate===true){
         var enwords_temp=[];
         var enwords_temp_no=[];
         for (let blxl=0;blxl<enwords.length;blxl++){
@@ -875,9 +878,18 @@ function getlines_klsnews(csno=1,cslines=50,jssearchkey=''){
         odivhtml2.style.cssText='margin:0 0.5rem;';
     }
     words_translate_klsnews();
+    sentence_new_words_klsnews();
     
 	document.location.href = "#content";
     fav_status_klsnews();
+}
+
+function show_all_day_links_klsnews(ospan){
+    var oas=document.querySelectorAll('div#div_dbcname a.a_oblong_box');
+    for (let item of oas){
+        item.style.display='';
+    }
+    ospan.parentNode.removeChild(ospan);
 }
 
 function dbc_list_klsnews(cskeys,csshow_websites=false,csoneday=false){
@@ -891,7 +903,7 @@ function dbc_list_klsnews(cskeys,csshow_websites=false,csoneday=false){
         var html_file='selenium_news_reader_offline.htm';
         var space_str=' ';
     }
-    for (var blxl=0;blxl<dbc_js_files.length;blxl++){
+    for (let blxl=0;blxl<dbc_js_files.length;blxl++){//天数 - 保留注释
         var file_date=dbc_js_files[blxl];
         var file_date2=file_date;
         if (csoneday==false && blxl>0){
@@ -905,10 +917,15 @@ function dbc_list_klsnews(cskeys,csshow_websites=false,csoneday=false){
             }
             else {
                 if (csoneday){continue;}
-                else{bljg=bljg+file_date2+': ';}
+                else{
+                    bljg=bljg+file_date2+': ';
+                }
             }
         }
-        for (let item of selenium_dbc_global){
+        if (dbc_count==1 && blxl==4 && dbc_js_files.length>4){
+            bljg=bljg+'<span class="oblong_box" onclick="show_all_day_links_klsnews(this);">...</span> ';
+        }
+        for (let item of selenium_dbc_global){//数据表 - 保留注释
             var str_t=file_date+'_'+item[0];
             if (dbc_count==1){
                 var html_title=file_date2;
@@ -916,17 +933,27 @@ function dbc_list_klsnews(cskeys,csshow_websites=false,csoneday=false){
             else {
                 var html_title=item[1];
             }
+
+            bljg=bljg+'<a class="a_oblong_box"';
+            if (dbc_count==1 && blxl>3){
+                if (csshow_websites!==false || cskeys.substring(0,10)!==file_date || cskeys.split('_')[1]!==item[0]){
+                    bljg=bljg+' style="display:none;"';
+                }
+            }
+            bljg=bljg+' href="'+html_file+'?day_dbf='+str_t+'">';
             if (csshow_websites==false && cskeys.substring(0,10)==file_date && cskeys.split('_')[1]==item[0]){
-                bljg=bljg+'<a class="a_oblong_box" href="'+html_file+'?day_dbf='+str_t+'"><font color=red><b>'+html_title+'</b></font></a>'+space_str;
+                bljg=bljg+'<font color=red><b>'+html_title+'</b></font>';
             }
             else {
-                bljg=bljg+'<a class="a_oblong_box" href="'+html_file+'?day_dbf='+str_t+'">'+html_title+'</a>'+space_str;
+                bljg=bljg+html_title;
             }
+            bljg=bljg+'</a>'+space_str;
         }
-
         bljg=bljg+' ';
     }
-    document.getElementById('div_dbcname').innerHTML=bljg;
+    var odiv=document.getElementById('div_dbcname');
+    odiv.innerHTML=bljg;
+    mouseover_mouseout_oblong_span_b(odiv.querySelectorAll('span.oblong_box'));    
 }
 
 function dbc_list2_klsnews(cskeys){
@@ -990,7 +1017,7 @@ function dbc_select_submit(csvalue){
     document.getElementById('form_search').submit();
 }
 
-function title_menu_klsnews(cskeys,js_or_php=''){
+function menu_klsnews(cskeys,js_or_php=''){
     //cskyes 形如 2019-05-30_www - 保留注释
     var another_page=[];
     if (js_or_php=='js'){
@@ -1011,7 +1038,6 @@ function title_menu_klsnews(cskeys,js_or_php=''){
     '<span class="span_menu" onclick="javascript:'+str_t+'sourcelist.sort(function (a,b){return sort_by_date_b(a,b,true,2,1,false,true);});getlines_klsnews();">按日期排序</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'sourcelist.sort(function (a,b){return zh_sort_b(a,b,false,1);});getlines_klsnews();">按标题排序</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'fav_show_klsnews();">收藏</span>',
-    '<span class="span_menu" onclick="javascript:'+str_t+'sentence_new_words_klsnews();">显示生词</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'newwords_klsnews();">热门生词</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'clearInterval(rnd_open_window_klsnews_global);rnd_window_klsnews();rnd_open_window_klsnews_global=setInterval(rnd_window_klsnews,60000);">随机访问</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'clearInterval(rnd_open_window_klsnews_global);rnd_search_window_klsnews();rnd_open_window_klsnews_global=setInterval(rnd_search_window_klsnews,20000);">随机搜索</span>',    
@@ -1041,7 +1067,8 @@ function buttons_klsnews(){
     var button_size='0.9rem;'
     var button_more='';
     button_more=button_more+'<div class=klmenu><button style="font-size:'+button_size+';">'+checkbox_kl_b('input_focus','只显示重点条目')+'</button></div>';
-    button_more=button_more+'<div class=klmenu><button style="font-size:'+button_size+';">'+checkbox_kl_b('input_enwords','单词翻译')+'</button></div>';
+    button_more=button_more+'<div class=klmenu><button style="font-size:'+button_size+';">'+checkbox_kl_b('input_show_new_words','显示生词')+'</button></div>';    
+    button_more=button_more+'<div class=klmenu><button style="font-size:'+button_size+';">'+checkbox_kl_b('input_enwords','旧单词翻译')+'</button></div>';
     button_more=button_more+'<div class=klmenu><button style=font-size:'+button_size+';" onclick="javascript:popup_show_hide_b(\'div_selenium_keywords\');">关键词</button></div>';
     
     document.getElementById('div_show_hide').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(button_more,'block','0','','div_menu_checkboxes'));

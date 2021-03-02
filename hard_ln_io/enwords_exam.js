@@ -85,15 +85,19 @@ function en2cn_klexam(csnumber='',cstype='en2cn'){
     var isrecent=false;
     var odiv;
     [isrecent,csnumber,odiv]=init_klexam(csnumber,cstype);
+
+    var recent_type=document.getElementById('select_recent_enwords').value;
+    var recent_half_len=en_words_temp_global.length/2;
     
 	var bljg='<p style="background-color:'+scheme_global['skyblue']+';">Type: '+cstype+'</p>';
     var bllink_t='';
     var blxl=0;
 	for (let item of enwords){
         if (isrecent){
-            if (!en_words_temp_global.includes(item[0])){
+            var blat=en_words_temp_global.indexOf(item[0]);
+            if (blat==-1 || recent_type=='1' && blat<recent_half_len || recent_type=='2' && blat>recent_half_len){
                 continue;
-            }
+            }            
         }
         bllink_t=bllink_t+item[0]+'|';
 		bljg=bljg+'<p id="p_en2cn_'+blxl+'" align=center style="font-size:2.5rem;font-weight:bold;border:0.1rem dotted black;padding:1rem;">'+item[0]+'</p>';
@@ -146,6 +150,9 @@ function input_klexam(cstestno='',cstype='all'){
     var odiv;
     [isrecent,cstestno,odiv]=init_klexam(cstestno,cstype);
     
+    var recent_type=document.getElementById('select_recent_enwords').value;
+    var recent_half_len=en_words_temp_global.length/2;
+    
 	var words_list_t=[];
     
     en_words_no_list_global=[];
@@ -154,7 +161,8 @@ function input_klexam(cstestno='',cstype='all'){
     if (isrecent){
         for (let blno=0;blno<enwords.length;blno++){
             var item=enwords[blno];
-            if (!en_words_temp_global.includes(item[0])){
+            var blat=en_words_temp_global.indexOf(item[0]);
+            if (blat==-1 || recent_type=='1' && blat<recent_half_len || recent_type=='2' && blat>recent_half_len){
                 continue;
             }
             
@@ -297,11 +305,17 @@ function showletter_klexam(csno){
     }
 }
 
-function buttons_klexam(){
+function buttons_klexam(){  //不能转换为htm，随机单词也用到 - 保留注释
     var bljg=`<p style="margin-bottom:0.5rem;">题目数量：<input type="number" id="testno" value=10 onkeyup="javascript:if (event.key=='Enter'){input_klexam();}"> 
     <span class="aclick" onclick="javascript:input_klexam();">生成</span>
     <span class="aclick" onclick="javascript:input_klexam('','recent');">Recent</span>
     <span class="aclick" onclick="javascript:en2cn_klexam();">en2cn</span>
-    <span class="aclick" onclick="javascript:en2cn_klexam('','en2cn_recent');">Recent(en2cn)</span></p>`;
+    <span class="aclick" onclick="javascript:en2cn_klexam('','en2cn_recent');">Recent(en2cn)</span>
+    <select id="select_recent_enwords" style="height:2rem;">
+    <option value='0'>全部最近记忆单词</option>
+    <option value='1'>新近添加的最近记忆单词</option>
+    <option value='2'>非新近添加的最近记忆单词</option>
+    </select>
+    </p>`;
     document.getElementById('div_exam_buttons').innerHTML=bljg;
 }

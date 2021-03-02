@@ -102,12 +102,9 @@ function css_root_style_b(pcsize="16",mobilesize="30",cssname=[''],usercss=[],ch
         document.write('SELECT{font-size:0.9rem;}\n');
         document.write('.span_from, .span_from_wiki {color:'+scheme_global['memo']+';font-size:0.7rem;font-style: italic;}\n');
         document.write('.span_from a, .span_from_wiki a{color:'+scheme_global['memo']+';text-decoration:none;}\n');
-        //document.write('#booklinks a{text-decoration:none;-webkit-border-radius: 0.5rem;border:0.1rem solid '+scheme_global['shadow']+';padding:0.1rem 0.3rem;line-height:1.8rem;}');
-        
         document.write('a.a_oblong_box{color:'+scheme_global['color']+';background-color:'+scheme_global['background']+';text-decoration:none;border-radius: 0.5rem;border:0.1rem solid '+scheme_global['shadow']+';padding:0.1rem 0.3rem;line-height:1.8rem;}\n');
         document.write('a.a_oblong_box:hover{color:'+scheme_global['a-hover']+';box-shadow: 0.1rem 0.1rem 0.1rem '+scheme_global['shadow']+';}\n');
         document.write('.oblong_box{border-radius: 0.5rem;border:0.1rem solid '+scheme_global['shadow']+';padding:0.1rem 0.3rem;}\n');
-
         document.write('.table_common th{border-bottom:0.1rem solid black;padding:0.1rem 0.5rem;}\n');
         document.write('.table_common tr:hover {background-color:'+scheme_global['button']+';}\n');        
         document.write('.table_common td {border-bottom:0.05rem dotted black;padding:0.1rem 0.5rem;}\n');    

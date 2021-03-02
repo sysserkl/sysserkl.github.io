@@ -110,12 +110,11 @@ function in_all_new_words_enbook(){
 }
 
 function wordtypes_enbook(blitem){
-    function sub_wordtypes_enbook_push(csarray,csword){
-        csarray.add(csword);
-        csarray.add(csword.toLowerCase());
-        csarray.add(csword.toUpperCase());
-        csarray.add(csword.substring(0,1).toUpperCase()+csword.substring(1,).toLowerCase());
-        return csarray;
+    function sub_wordtypes_enbook_push(csword){
+        bltmparr.add(csword);
+        bltmparr.add(csword.toLowerCase());
+        bltmparr.add(csword.toUpperCase());
+        bltmparr.add(csword.substring(0,1).toUpperCase()+csword.substring(1,).toLowerCase());
     }
     
 	var bltmparr=new Set();
@@ -125,36 +124,36 @@ function wordtypes_enbook(blitem){
     
     if ('pped,gged,nned,lled,dded,ssed'.includes(blitem.slice(-4))){
         word_tmp=blitem.substring(0,blitem.length-3);
-        bltmparr=sub_wordtypes_enbook_push(bltmparr,word_tmp);
+        sub_wordtypes_enbook_push(word_tmp);
     }
     
     if ('nning,pping,tting'.includes(blitem.slice(-5))){
         word_tmp=blitem.substring(0,blitem.length-4);
-        bltmparr=sub_wordtypes_enbook_push(bltmparr,word_tmp);   
+        sub_wordtypes_enbook_push(word_tmp);   
     }
     
     if ('est'.includes(blitem.slice(-3))){
         word_tmp=blitem.substring(0,blitem.length-3);
-        bltmparr=sub_wordtypes_enbook_push(bltmparr,word_tmp);
-        bltmparr=sub_wordtypes_enbook_push(bltmparr,word_tmp+'e');
+        sub_wordtypes_enbook_push(word_tmp);
+        sub_wordtypes_enbook_push(word_tmp+'e');
     }
     else if ('ing'.includes(blitem.slice(-3))){
         word_tmp=blitem.substring(0,blitem.length-3);
-        bltmparr=sub_wordtypes_enbook_push(bltmparr,word_tmp);
-        bltmparr=sub_wordtypes_enbook_push(bltmparr,word_tmp+'e');
+        sub_wordtypes_enbook_push(word_tmp);
+        sub_wordtypes_enbook_push(word_tmp+'e');
     }
     else if ('ies,ier,ied'.includes(blitem.slice(-3))){
         word_tmp=blitem.substring(0,blitem.length-3);
-        bltmparr=sub_wordtypes_enbook_push(bltmparr,word_tmp+'y');
+        sub_wordtypes_enbook_push(word_tmp+'y');
     }
     
     if ('ed,es,er'.includes(blitem.slice(-2))){
         word_tmp=blitem.substring(0,blitem.length-2);
-        bltmparr=sub_wordtypes_enbook_push(bltmparr,word_tmp);
+        sub_wordtypes_enbook_push(word_tmp);
     }
     if ('d,s'.includes(blitem.slice(-1))){
         word_tmp=blitem.substring(0,blitem.length-1);
-        bltmparr=sub_wordtypes_enbook_push(bltmparr,word_tmp);
+        sub_wordtypes_enbook_push(word_tmp);
     }
 
     return bltmparr;

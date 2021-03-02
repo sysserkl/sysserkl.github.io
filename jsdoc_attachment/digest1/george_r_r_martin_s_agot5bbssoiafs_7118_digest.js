@@ -27,4 +27,5 @@ var digest_global=`
 *huntress
 *raindrop
 *challenger
+*moth
 `.trim().split('\n');

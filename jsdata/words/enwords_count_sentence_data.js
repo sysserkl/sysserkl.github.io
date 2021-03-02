@@ -1,4 +1,6 @@
 var en_sentence_count_global=[
+["rectum",1],
+["mulberry",1],
 ["raindrop",1],
 ["earphone",1],
 ["underpants",1],
@@ -97,6 +99,4 @@ var en_sentence_count_global=[
 ["seagull",1],
 ["internationalization",1],
 ["internationalisation",1],
-["donut",1],
-["doughnut",1],
 ];
