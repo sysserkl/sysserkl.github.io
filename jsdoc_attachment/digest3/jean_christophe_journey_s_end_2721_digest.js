@@ -34,4 +34,5 @@ var digest_global=`
 *anarchist
 *kiosk
 *Breton
+*nobility
 `.trim().split('\n');

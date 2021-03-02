@@ -25,4 +25,5 @@ var digest_global=`
 *windscreen
 *stewardess
 *underpants
+*featureless
 `.trim().split('\n');

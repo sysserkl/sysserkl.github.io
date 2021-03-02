@@ -84,4 +84,5 @@ var digest_global=`
 *screwdriver
 *inconceivably
 *worthwhile
+*feebly
 `.trim().split('\n');

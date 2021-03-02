@@ -19,4 +19,5 @@ var digest_global=`
 *blacken
 *forthwith
 *antennae
+*horticulture
 `.trim().split('\n');
