@@ -1005,7 +1005,7 @@ function localstorage_value_load_save_b(cs_id_list,cs_checkbox_list,savename,cst
                 for (let item of cs_checkbox_list){
                     blpara.push(checkbox_kl_value_b(item)?1:0);
                 }
-                var bljg=blpara.join(',');
+                var bljg=blpara.join(' /// ');  //不能使用英文逗号，因为字体名称中可能会有英文逗号 - 保留注释
             }
             else {
                 var bljg=document.getElementById(cs_id_list).value;
@@ -1014,10 +1014,9 @@ function localstorage_value_load_save_b(cs_id_list,cs_checkbox_list,savename,cst
         }
     }
     else if (cstype=='load'){
-        //var bljg=localStorage.getItem(savename,bljg) || '';
         var bljg=local_storage_get_b(savename);
         if (Array.isArray(cs_id_list)){
-            var list_t=bljg.split(',');
+            var list_t=bljg.split(' /// ');
             if (list_t.length==cs_id_list.length+cs_checkbox_list.length){
                 for (let blxl=0;blxl<cs_id_list.length;blxl++){
                     document.getElementById(cs_id_list[blxl]).value=list_t[blxl];
@@ -1026,6 +1025,9 @@ function localstorage_value_load_save_b(cs_id_list,cs_checkbox_list,savename,cst
                 for (let blxl=0;blxl<cs_checkbox_list.length;blxl++){
                     checkbox_kl_color_b(cs_checkbox_list[blxl],list_t[bllen+blxl]);
                 }
+            }
+            else {
+                console.log(list_t.length,cs_id_list.length,cs_checkbox_list.length,bljg); //此行保留 - 保留注释
             }
         }
         else {

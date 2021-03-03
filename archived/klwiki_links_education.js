@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-02-28 13:13:52 日"],
+["","","","更新日期：2021-03-02 21:27:45 二"],
 ["http://news.sina.com.cn/e/2001-11-22/404615.html","20011122 | 哪来那么多哈佛女孩？从畸形的“精英”情结说起 - 中国青年报"],
 ["http://news.sina.com.cn/s/2003-09-28/0532833051s.shtml","20030928 | 北京新东方学校不服千万元赔偿判决 已决定上诉 - 北京青年报"],
 ["http://news.sina.com.cn/c/2005-03-09/12265310795s.shtml","20050309 | 山东幼儿园车辆起火事故造成12名儿童死亡"],
@@ -34,7 +34,6 @@ var recent_info_list=[
 ["http://blog.sina.com.cn/s/blog_61f0c67a0100zcdh.html","20111101 | 剑桥饭局当代史_王丫米_新浪博客"],
 ["http://news.sina.com.cn/c/2011-11-16/165023476727.shtml","20111116 | 甘肃正宁县幼儿园校车事故已致20死44伤_新浪网"],
 ["http://www.bbc.co.uk/zhongwen/simp/uk/2012/03/120305_uk_cambridge_rich.shtml","20120305 | BBC中文网 - 剑桥大学富可敌国 人均13万英镑"],
-["http://bbs.qjwb.com.cn/index-htm-m-cms-q-view-id-956.html","20120523 | 余杭一所幼儿园被曝用紫外线灯光惩罚儿童 - 钱报网"],
 ["http://china.kyodonews.jp/news/2012/06/32585.html","20120623 | 菲律宾在南沙群岛上设立幼儿园 | 共同网"],
 ["http://cn.nytimes.com/article/business/2012/07/18/cc18noe/","20120718 | 新东方遭SEC调查股价暴跌 - 纽约时报中文网"],
 ["http://cn.nytimes.com/article/china/2012/07/20/cc20caixin/","20120720 | 俞敏洪回应浑水对新东方的质疑 - 纽约时报中文网"],
