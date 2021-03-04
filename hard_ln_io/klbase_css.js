@@ -962,6 +962,7 @@ function popular_colors_b(){
     "#CFBB20,#049D96,#DD2CBE",
     "#D0BDC7,#110E41,#D0BDC7",
     "#D3A58B,#03406F,#89A6EF",
+    "#D5D8F6,#082D4A,#90FAEE",    
     "#D86207,#0A031E,#044BBA",
     "#D8F3E6,#298C2E,#E1C419",
     "#DAC390,#097EA5,#80E811",
@@ -989,6 +990,7 @@ function popular_colors_b(){
     "indigo,ivory",
     "white,#8B7A76,#DAD6E2",
     "white,black,white",
+
     ];
 }
 
