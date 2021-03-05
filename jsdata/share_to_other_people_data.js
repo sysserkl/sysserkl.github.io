@@ -32,8 +32,10 @@ var recent_info_list=[
 * [?klwiki_links_code code]
 * [?klwiki_links_e-commerce e-commerce]
 * [?klwiki_links_education 教育]
+* [?klwiki_links_environment 环境]
 * [?klwiki_links_game game]
 * [?klwiki_links_health_medicine_sport health]
+* [?klwiki_links_history history]
 * [?klwiki_links_huawei 华为]
 * [?klwiki_links_it it]
 * [?klwiki_links_linux Linux]
@@ -41,7 +43,7 @@ var recent_info_list=[
 * [?klwiki_links_religion religion]
 * [?klwiki_links_travel travel]
 * [?klwiki_links_xiaomi 小米]
-* [?klwiki_links_environment 环境]
+
 </div>
 `],
 ["","Linux",`

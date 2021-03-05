@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-03-02 21:27:45 二"],
+["","","","更新日期：2021-03-04 09:50:42 四"],
 ["https://www.debuntu.org/how-to-enable-apache-modules-under-debian-based-system-page-2/","20060615 | How To: Enable apache modules under Debian based system — page 2 - Debuntu"],
 ["http://www.williamlong.info/archives/1912.html","20090901 | CentOS操作系统安装教程-月光博客"],
 ["http://sofree.cc/vmware-centos/","20110427 | 利用VMware Player安裝CentOS作業系統！"],

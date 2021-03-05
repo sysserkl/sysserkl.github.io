@@ -1,0 +1,18 @@
+var recent_info_list=[
+["","","","更新日期：2021-03-04 09:50:42 四"],
+["http://news.sina.com.cn/w/2003-07-18/1601404349s.shtml","20030718 | 历史学家语出惊人 50年内澳大利亚将成美国一州"],
+["http://tech.sina.com.cn/t/2004-09-21/1029428802.shtml","20040921 | 汉字起源有望破解 甲骨文借鉴古埃及象形文"],
+["http://www.douban.com/review/1162033/","20070531 | 伊谢尔伦的风 (武汉)：有个喝红茶的男人，想当历史学家，然后死掉了"],
+["http://www.dw-world.de/dw/article/0,2144,3097050,00.html","20080130 | 历史学家称魏玛共和国的教训依然有益今天"],
+["http://news.sina.com.cn/c/2008-03-14/083113572421s.shtml","20080314 | 民政部处罚中国考古学会等18个社会团体"],
+["http://www.bbc.com/zhongwen/simp/press_review/2014/06/140624_press_yellow_river.shtml","20140624 | 英媒：考古学家称治黄工程导致西汉灭亡 - BBC 中文网"],
+["https://mp.weixin.qq.com/s?__biz=MjM5MTM3OTA3NA==&amp;mid=201394283&amp;idx=1&amp;sn=913e045b7f732872a51ac474bcba274c#rd","20140808 | 一点特荐｜国家典籍博物馆首展 国宝司马光《资治通鉴》亮相 - ART一点"],
+["https://www.solidot.org/story?sid=46346","20151130 | Solidot | 考古学家称信任的背叛帮助人类扩散到全世界"],
+["http://gj.zdic.net/archive.php?aid=9809","20160731 | 资治通鉴 卷第一百八十一"],
+["http://www.solidot.org/story?sid=49575","20160905 | Solidot | 中华文明起源于古埃及？"],
+["http://weibo.com/1295718153/Ex2ezxJcw","20170224 | 二大爷说：《资治通鉴》中，“大饥”一词出现... 来自闲情偶记 - 微博"],
+["http://www.aisixiang.com/data/117189.html","20190716 | 杨大庆：应用历史学：从战前日美关系看中美关系_爱思想"],
+["https://www.solidot.org/story?sid=61500","20190726 | Solidot | 考古学转向研究 99% 的人口"],
+["http://www.360doc.com/content/20/0207/13/36319167_890276625.shtml","20200207 | 读《资治通鉴·汉纪二十四》（二）"],
+["https://www.solidot.org/story?sid=66610","20210109 | 奇客Solidot | 考古学家在土耳其发掘出 2500 年历史的阿佛洛狄忒神庙"],
+];
