@@ -847,6 +847,7 @@ function input_with_x_b(csid,cswidth,xid='',csexpand=false,regid=false,isreg=fal
 
 function popular_colors_b(){
     return [
+    "#000000,#E2E9E8,#6A01F4",
     "#01321B,#E2E9E8,#6A01F4",
     "#0436EB,#DDBBD4,#0F5133",
     "#050D00,#D7E7F3,#3E9FDB",  
@@ -884,6 +885,7 @@ function popular_colors_b(){
     "#343B3C,#E9D5C5,#2D81C2",
     "#344621,#E0FFF8,#7B4BD5",
     "#344E59,#EEEADE,#FE5161",
+    "#353431,#72C1A9,#8E7DF8",    
     "#39205D,#CAE0DD,#AA563F",
     "#3A4C72,#E8EDAD,#9E6D50",
     "#3D292D,#E5E5E5,#BCCC8E",
@@ -991,7 +993,7 @@ function popular_colors_b(){
     "indigo,ivory",
     "white,#8B7A76,#DAD6E2",
     "white,black,white",
-    
+
     ];
 }
 

@@ -28,4 +28,5 @@ var digest_global=`
 *raindrop
 *challenger
 *moth
+*Williams
 `.trim().split('\n');

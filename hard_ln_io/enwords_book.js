@@ -286,6 +286,7 @@ function get_new_words_arr_enbook2(bljgarr2,check_types=true){
         }
         else {
             var list_t=new Set();
+            list_t.add(item);
         }
         var blfound=false;
         for (let one_word of list_t){

@@ -11,4 +11,6 @@ var digest_global=`
 *earthlight
 *Willie
 *ballerina
+*madhouse
+*Asimov
 `.trim().split('\n');
