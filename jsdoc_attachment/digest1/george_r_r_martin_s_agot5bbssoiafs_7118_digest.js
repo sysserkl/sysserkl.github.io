@@ -29,4 +29,5 @@ var digest_global=`
 *challenger
 *moth
 *Williams
+*legless
 `.trim().split('\n');

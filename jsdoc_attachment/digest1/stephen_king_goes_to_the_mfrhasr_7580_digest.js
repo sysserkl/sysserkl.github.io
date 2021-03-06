@@ -13,4 +13,5 @@ var digest_global=`
 *ballerina
 *madhouse
 *Asimov
+*uncomfy
 `.trim().split('\n');

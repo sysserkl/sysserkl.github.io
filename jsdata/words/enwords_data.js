@@ -1,5 +1,11 @@
 //单词库
 var enwords=[
+["Malthus", "['mælθəs]", "n. 马尔萨斯(姓氏)；a rare surname derived from the Middle English word for malthouse; n. Thomas Robert. 1766–1834, English economist. He propounded his population theory in An Essay on the Principle of Population (1798); Thomas Malthus, English demographer and political economist, who proposed the view that population growth always exceeds the growth of the necessary food supply"],
+["legless", "['leɡləs] [ˈlɛɡlɪs]", "adj. 无腿的；without legs；adj. 醉醺醺的；烂醉如泥的；very drunk; too drunk to stand"],
+["uncomfy", "[ʌnˈkʌmfɪ]", "adj. 不舒服的；不自在的；难受的；uncomfortable; not comfortable"],
+["comfy", "['kʌmfi]", "adj. 舒服的；舒适的；comfortable"],
+
+
 ["Williams", "[ˈwɪljəmz] [ˈwɪli.əmz]", "n. 威廉姆斯；威廉斯(姓氏)；a surname​; an English patronymic surname​ of common usage in Wales and England; an Irish patronymic surname, an adopted anglicization of 'Mac Uilliam' (McWilliam); n. 美国、澳大利亚的城镇、河流等多处地名；a place in the United States; a place in Australia; n. 一种梨；a dessert pear of an early green variety"],
 ["Chanel", "[ʃə'nɛl] French [ʃaˈnɛl]", "n. 香奈儿；香奈尔；夏奈尔；夏娜尔（姓氏；女子名）；a surname; a female given name of modern usage; n. （品牌）香奈儿(Chanel)的创始人可可·香奈儿(Coco Chanel)，原名嘉柏丽尔·博耐尔·香奈儿(Gabrielle Bonheur Chanel)，1883年出生于法国的奥弗涅省(Auvergne)； Gabrielle (ɡabriɛl), known as Coco Chanel. 1883–1971, French couturière and perfumer, who created 'the little black dress' and the perfume Chanel No. 5"],
 ["madhouse", "['mædˌhaʊs]", "n. 精神病院；疯人院；(informal + now often offensive): an institution providing care to mentally ill individuals; a hospital for people who are mentally ill; a psychiatric hospital; a hospital for the treatment of people with mental illnesses; n. 混乱吵闹的地方； 喧闹的地方；a place where there is noise and a lack of order; a place of uproar or confusion; a wild, confused, and often noisy place, set of circumstances, etc"],

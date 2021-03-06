@@ -125,4 +125,5 @@ var digest_global=`
 *Sasha
 *unnoticed
 *greedily
+*Malthus
 `.trim().split('\n');

@@ -688,6 +688,9 @@ function local_storage_all_b(cstype='',key_list=[]){
             case 'PIM':
                 key_list=['list_long_term_plans','list_klmemo','list_routines','list_todolist'];
                 break;
+            case 'done_PIM':
+                key_list=['done_routines','done_todolist'];
+                break;                
             default:
                 key_list=[];
         }
