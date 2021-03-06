@@ -3657,7 +3657,7 @@ var enwords=[
 ["eyesight", "['aɪsaɪt]", "n. 视力；目力"],
 ["eyewitness", "['aɪwɪtnəs]", "n. 目击者；见证人"],
 ["fabulous", "UK ['fæbjʊləs] US ['fæbjələs]", "adj. 极好的；巨大的；很大的；传说中的；绝妙的；extremely good; told in or based on fable"],
-["Facebook", "['feɪsbʊk]", "n. 肖像影集；脸谱网或脸书网（知名社交网站）；v. 在脸书网页上寻找"],
+["Facebook", "['feɪsbʊk]", "n. 脸谱网或脸书网（知名社交网站）；v. 在脸书网页上寻找；n. facebook: 肖像影集"],
 ["facedown", "['feɪsdaʊn]", "adj. 面朝下的；adv. 面朝下"],
 ["face", "[feɪs]", "n. 脸；表面；表情；v. 面对；面向；朝"],
 ["faceless", "['feɪsləs]", "adj. 匿名的；无名的；没脸面的；无个性的；无特性的"],
