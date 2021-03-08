@@ -32,4 +32,5 @@ var digest_global=`
 *weathercock
 *mad as a hatter
 *Dumas
+*boarding school
 `.trim().split('\n');

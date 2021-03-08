@@ -37,4 +37,5 @@ var digest_global=`
 *unladylike
 *thorny
 *laddie
+*Chloe
 `.trim().split('\n');
