@@ -226,6 +226,8 @@ function edit_switch_klplan_b(query_str){
 }
 
 function update_klplan_b(textarea_id,local_storage_id){
+    if (textarea_id==''){return true;}  //仅重载 - 保留注释
+    if (local_storage_id==''){return false;}
     if (confirm("是否更新？")){
         var blstr=document.getElementById(textarea_id).value.trim();
         localStorage.setItem(local_storage_id,blstr);
@@ -247,7 +249,6 @@ function form_list_klplan_b(csarray,cstype,plan_id,update_fn_name){
     bljg=bljg+'<p>';
     bljg=bljg+'<span class="aclick" onclick="javascript:document.getElementById(\'divhtml2\').innerHTML=\'\';">关闭</span> ';
     bljg=bljg+'<span class="aclick" onclick="javascript:local_storage_view_form_b(\'PIM\',\'divhtml2\');">查看 localStorage(PIM)</span> ';
-    bljg=bljg+'<span class="aclick" onclick="javascript:local_storage_view_form_b(\'done_PIM\',\'divhtml2\');">查看 localStorage(done_PIM)</span> ';    
     bljg=bljg+'<span class="aclick" onclick="javascript:'+update_fn_name+'(\'textarea_list_'+cstype+'\',\''+plan_id+'\');">更新</span> ';
     bljg=bljg+textarea_buttons_b('textarea_list_'+cstype,'清空,复制,发送到临时记事本,发送地址','list_'+cstype)+' 行数：'+list_plans.length;
     bljg=bljg+'</p></form>';
@@ -264,6 +265,7 @@ function form_done_klplan_b(cstype,done_id,update_fn_name){
     bljg=bljg+'<textarea name="textarea_done_'+cstype+'" id="textarea_done_'+cstype+'" style="width:90%;height:24rem;">'+done_list+'</textarea>';
     bljg=bljg+'<p>';
     bljg=bljg+'<span class="aclick" onclick="javascript:document.getElementById(\'divhtml2\').innerHTML=\'\';">关闭</span> ';
+    bljg=bljg+'<span class="aclick" onclick="javascript:local_storage_view_form_b(\'done_PIM\',\'divhtml2\');">查看 localStorage(done_PIM)</span> ';        
     bljg=bljg+'<span class="aclick" onclick="javascript:'+update_fn_name+'(\'textarea_done_'+cstype+'\',\''+done_id+'\',false);">更新完成项</span> ';
     bljg=bljg+textarea_buttons_b('textarea_done_'+cstype,'清空,复制,发送到临时记事本,发送地址','done_'+cstype)+' 行数：'+done_list.split('\n').length;
     bljg=bljg+'</p></form>';
@@ -355,7 +357,16 @@ function new_item_klplan_b(csarray,plan_id){
         alert('取消添加');
         return false;
     }
-    var new_category=(prompt('输入新事项的分类') || '').trim();
+    
+    var new_category=''
+    for (let item of csarray){
+        if (item.length<3){continue;}
+        if (item[2]==new_name){
+            new_category=item[1];
+            break;
+        }
+    }
+    var new_category=(prompt('输入新事项的分类',new_category) || '').trim();
     if (new_category==''){
         alert('取消添加');
         return false;

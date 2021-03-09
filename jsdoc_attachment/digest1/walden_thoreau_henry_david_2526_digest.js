@@ -15,4 +15,5 @@ var digest_global=`
 *shoemaker
 *bather
 *auroral
+*aforethought
 `.trim().split('\n');

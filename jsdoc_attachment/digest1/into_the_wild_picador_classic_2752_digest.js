@@ -7,4 +7,5 @@ var digest_global=`
 *sailboat
 *Andy
 *monkish
+*nomadic
 `.trim().split('\n');

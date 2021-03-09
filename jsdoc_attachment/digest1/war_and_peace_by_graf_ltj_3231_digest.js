@@ -171,4 +171,5 @@ var digest_global=`
 *unsportsmanlike
 *Voltaire
 *inexhaustible
+*nomad
 `.trim().split('\n');

@@ -1,5 +1,9 @@
 //单词库
 var enwords=[
+["aforethought", "[ə'fɔː(r)θɔːt]", "adj. 事先考虑的；事先谋划好的；预谋的；previously in mind; premeditated, deliberate; premeditated (esp in the phrase 'malice aforethought'); thought out beforehand; planned ahead of time"],
+["thru", "[θruː]", "adv. prep. adj. through (= until, and including);  less common spelling of 'through'"],
+["nomad", "['nəʊmæd]", "n. 游牧部落一员；牧民；a member of a community that moves with its animals from place to place; a member of a people who have no fixed residence but move from place to place usually seasonally and within a well-defined territory; a member of a people or tribe who move from place to place to find pasture and food; a member of a tribe or people having no permanent home, but moving about constantly in search of food, pasture, etc.; a member of a people or tribe that has no permanent abode but moves about from place to place, usually seasonally and often following a traditional route or circuit according to the state of the pasturage or food supply; a member of a society or class who herd animals from pasture to pasture with no fixed home; n. 流浪者；流浪汉；an individual who roams about; a person who continually moves from place to place; wanderer; any wanderer who has no fixed home; itinerant; n. 经常换住处的人；a person who changes residence frequently; n. 经常换队伍的游戏者；a player who changes teams frequently; adj. 游牧的；游牧民族的；流浪的；nomadic; wandering"],
+["nomadic", "[nəʊ'mædɪk]", "adj. 游牧的；游牧民族的；belonging to a community that moves with its animals from place to place; of, relating to, or characteristic of nomads; relating to or characteristic of nomads or their way of life; of or related to itinerant herdsmen; of or related to any habitually wandering person or animal; adj. 流浪的；moving often from place to place; roaming about from place to place aimlessly, frequently, or without a fixed pattern of movement"],
 ["Chloe", "[ˈkləʊɪ]", "n. 克洛伊；珂洛艾伊(女子名)；（法国品牌）蔻依；a feminine name; a female given name from Ancient Greek; n. the lover of Daphnis in a Greek pastoral romance"],
 ["boarding school", "['bɔː(r)dɪŋ skuːl]", "n. 寄宿学校；a school where children can live during the school year; a school that provides meals and lodging; a school providing living accommodation for some or all of its pupils"],
 ["filmmaking", "['fɪlmˌmeɪkɪŋ]", "n. 电影摄制；电影制作；制片；the making of motion pictures; the process or art of making a film"],
@@ -8062,7 +8066,7 @@ var enwords=[
 ["rumour", "['ruːmər]", "n. 谣言；传闻；传说；vt. 谣传；传闻；=[美]rumor"],
 ["run-of-the-mill", "[ˌrʌn əv ðə ˈmɪl]", "adj. 不出众的；普通的；平凡的；乏味的；ordinary, with no special or interesting features; not outstanding in quality or rarity"],
 ["run", "[rʌn]", "v. 跑；行驶；运转；运营；持续；蔓延；传播；竞选；遭遇；熔化；褪色；流；n. 路程；奔跑；趋向；adj. 熔化的；浇铸的；洄游的"],
-["runtime", "[rʌn'taɪm]", "n. 运行时间；执行时间；运转时间；the amount of time that a program takes to perform a task; the time when a program is performing a task; a computer program that enables other computer programs to run inside it"],
+["runtime", "[rʌn'taɪm]", "n. 运行时间；运转时间；执行时间；the amount of time that a program takes to perform a task; the time when a program is performing a task; a computer program that enables other computer programs to run inside it"],
 ["runway", "['rʌnweɪ]", "n. 跑道；河床；悬索道；滑沟"],
 ["rural", "['rʊrəl]", "adj. 农村的；乡村的；田园的"],
 ["rush", "[rʌʃ]", "v. 冲；仓促行事；奔；急速流动；突袭；n. 匆忙；冲进；蜂拥；抢购；急速行进；adj. 繁忙的；紧急的"],

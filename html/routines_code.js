@@ -276,32 +276,34 @@ function statistics_category_date_klroutines(){
     document.getElementById('divhtml').innerHTML='不一致的key:<br />'+array_2_li_b(different_key)+'只有一项的分类：<br />'+array_2_li_b(one_date_category);
 }
 
-function update_klroutines(textarea_id,local_storage_id,reload=true){
+function update_klroutines(textarea_id='',local_storage_id='',reload=true){
+    //update_klroutines() - 意味仅重载 - 保留注释
     if (update_klplan_b(textarea_id,local_storage_id)){
         if (reload){
             routines_data_global=load_lists_klplan_b('list_routines');
-        }    
+        }
         init_klroutines(false);
     }
 }
 
 function form_done_klroutines(){
-    form_done_klplan_b('routines','done_routines','update_klroutines');
+    form_done_klplan_b('routines','done_routines','update_klroutines'); //update_klroutines() - 保留注释
 }
 
 function form_list_klroutines(){
-    form_list_klplan_b(routines_data_global,'routines','list_routines','update_klroutines');
+    form_list_klplan_b(load_lists_klplan_b('list_routines'),'routines','list_routines','update_klroutines');//routines_data_global
 }
 
 function menu_klroutines(){
     var str_t=klmenu_hide_b('');
     var klmenu1=[
-    '<span class="span_menu" onclick="javascript:'+str_t+'search_klplan_b();">搜索</span>',     
+    '<span class="span_menu" onclick="javascript:'+str_t+'search_klplan_b();">搜索</span>',   
     '<span class="span_menu" onclick="javascript:'+str_t+'statistics_form_klroutines();">统计</span>',    
     '<span class="span_menu" onclick="javascript:'+str_t+'edit_switch_klroutines();">逐个整理事项</span>',    
     '<span class="span_menu" onclick="javascript:'+str_t+'form_list_klroutines();">批量整理事项</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'demo_klroutines();">导入Demo事项</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'form_done_klroutines();">导入/导出完成项</span>',    
+    '<span class="span_menu" onclick="javascript:'+str_t+'update_klroutines();">数据重载</span>',        
     '<span class="span_menu" onclick="javascript:'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'routines\');}">更新版本</span>',
     ];
     if (is_local_b()){

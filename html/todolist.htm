@@ -94,7 +94,8 @@ function edit_item_todolist(csid){
     }
 }
 
-function update_todolist(textarea_id,local_storage_id,reload=true){
+function update_todolist(textarea_id='',local_storage_id='',reload=true){
+    //update_todolist() - 意味仅重载 - 保留注释
     if (update_klplan_b(textarea_id,local_storage_id)){
         if (reload){
             todolist_data_global=load_lists_klplan_b('list_todolist');
@@ -111,6 +112,7 @@ function menu_todolist(){
     '<span class="span_menu" onclick="javascript:'+str_t+'form_list_todolist();">批量整理事项</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'demo_todolist();">导入Demo事项</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'form_done_todolist();">导入/导出完成项</span>',    
+    '<span class="span_menu" onclick="javascript:'+str_t+'update_todolist();">数据重载</span>',            
     '<span class="span_menu" onclick="javascript:'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'todolist\');}">更新版本</span>',
     ];
     
