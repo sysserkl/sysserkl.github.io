@@ -1000,7 +1000,6 @@ function service_worker_delete_b(appname){
         navigator.serviceWorker.getRegistrations()
         .then(function(registrations) {
             for(let one_registration of registrations) {
-                console.log(one_registration.active['scriptURL']);
                 if (one_registration.active['scriptURL'].includes(fname)){
                     one_registration.unregister();
                     console.log('one_registration.unregister',fname); //此行保留 - 保留注释

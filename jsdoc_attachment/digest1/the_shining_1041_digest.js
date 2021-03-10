@@ -26,4 +26,5 @@ var digest_global=`
 *stewardess
 *underpants
 *featureless
+*washbasin
 `.trim().split('\n');

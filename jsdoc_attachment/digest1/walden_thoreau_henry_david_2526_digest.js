@@ -16,4 +16,5 @@ var digest_global=`
 *bather
 *auroral
 *aforethought
+*almshouse
 `.trim().split('\n');

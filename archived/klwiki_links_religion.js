@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-03-07 12:30:57 日"],
+["","","","更新日期：2021-03-10 09:57:32 三"],
 ["http://news.sina.com.cn/w/2005-07-04/14446345710s.shtml","20050704 | 越南将与梵蒂冈增加接触提升天主教徒境遇"],
 ["http://club.cat898.com/newbbs/dispbbs.asp?boardID=1&amp;ID=778652&amp;page=1","20050915 | 以诺雅列：为什么知道耶和华上帝是独一的上帝？"],
 ["http://www.pep.com.cn/200406/ca425801.htm","20051206 | 湖北教育出版社《历史上最有影响的100人》——3.耶稣"],
@@ -22,6 +22,7 @@ var recent_info_list=[
 ["http://news.bbc.co.uk/chinese/simp/hi/newsid_8060000/newsid_8060500/8060508.stm","20090520 | 爱尔兰公布天主教机构虐儿报告"],
 ["http://mymovie.blogbus.com/logs/56364761.html","20100114 | 《阿凡达》引发梵蒂冈媒体和玻利维亚总统热议 - 影像日报"],
 ["http://www.duomoo.com/?p=4187","20100526 | 雷人：佛教王国不丹的遍地JJ！"],
+["http://www.chinese.rfi.fr/node/35327","20100928 | 和合本圣经90年首次修订本在香港面世 | RFI"],
 ["http://www.bbc.co.uk/zhongwen/simp/uk/2011/01/110115_anglican_catholics.shtml","20110115 | BBC 中文网 - 英国三名新教主教皈依天主教"],
 ["http://www.bbc.co.uk/zhongwen/simp/china/2011/04/110415_vatican_xuguangqi.shtml","20110415 | BBC中文网 - 徐光启将被封圣 梵蒂冈反应积极"],
 ["http://www.chinese.rfi.fr/%E7%A4%BE%E4%BC%9A/20110501-%E5%A4%A9%E4%B8%BB%E6%95%99%E4%B8%BA%E5%B7%B2%E6%95%85%E6%95%99%E7%9A%87%E7%BA%A6%E7%BF%B0%E4%BF%9D%E7%BD%97%E4%BA%8C%E4%B8%96%E4%B8%BE%E8%A1%8C%E5%AE%A3%E7%A6%8F%E7%A4%BC","20110501 | 天主教为已故教皇约翰保罗二世举行宣福礼 | RFI"],
@@ -46,4 +47,6 @@ var recent_info_list=[
 ["http://collection.sina.com.cn/exhibit/2016-08-25/doc-ifxvixer7245146.shtml","20160825 | “汉藏佛教艺术与国家文化认同学术论坛”在浙举办_展览信息_新浪收藏_新浪网"],
 ["http://news.sina.com.cn/c/nd/2017-02-03/doc-ifyafcyx6839004.shtml#","20170203 | 调查组再谈释永信遭举报：收供养钱符佛教传统_新浪新闻"],
 ["http://weibo.com/2610449507/EAyp3q793","20170319 | 主耶稣基督蒙福的静默中少有呈天使形态的基... 来自臆想图志 - 微博"],
+["http://www.gospeltimes.cn/index.php/portal/article/index/id/42692","20171012 | 多明我之锤：基督徒只能用和合本圣经？ - 福音时报"],
+["http://www.gospeltimes.cn/index.php/portal/article/index/id/46701","20190117 | 百年和合，永放光芒——纪念《圣经》（和合本）出版100周年暨基督教中国化研讨会在沪举行 - 福音时报"],
 ];

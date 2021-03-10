@@ -33,4 +33,5 @@ var digest_global=`
 *mad as a hatter
 *Dumas
 *boarding school
+*alms
 `.trim().split('\n');
