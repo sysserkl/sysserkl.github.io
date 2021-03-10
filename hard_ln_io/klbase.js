@@ -1161,14 +1161,26 @@ function klsofts_list_b(cstype='all'){
     }
     
     divlist.sort(function(a,b){return a[1].toLowerCase()>b[1].toLowerCase();});
-    if (cstype=='all'){
+    if (cstype=='all' || cstype==''){
         return divlist;
     }
+    
     var selected_t=[];
-    for (let item of divlist){
-        if (cstype.includes(item[3])){
-            selected_t.push(item);
+    if (['0','1','2','3'].includes(cstype)){
+        for (let item of divlist){
+            if (cstype.includes(item[3])){
+                selected_t.push(item);
+            }
         }
+    }
+    else {
+        for (let item of divlist){
+            var blfound=str_reg_search_b(item,cstype,true);
+            if (blfound==-1){break;}   
+            if (blfound){
+                selected_t.push(item);
+            }              
+        }    
     }
     return selected_t;
 }

@@ -458,4 +458,5 @@ var digest_global=`
 *emigration
 *bootmaker
 *sportsman
+*torn
 `.trim().split('\n');

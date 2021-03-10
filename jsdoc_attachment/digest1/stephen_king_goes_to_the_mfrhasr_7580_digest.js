@@ -14,4 +14,5 @@ var digest_global=`
 *madhouse
 *Asimov
 *uncomfy
+*washroom
 `.trim().split('\n');

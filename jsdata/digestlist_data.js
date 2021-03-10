@@ -35,6 +35,7 @@ var digestlist_source_global_b=[
 ["in_search_of_the_castaways_otcocg_5418_digest",1],
 ["ping_fan_de_shi_jie_ly_125498_digest",1],
 ["the_notebook_the_love_story_tealscfs_6719_digest",1],
+["wang_ding_jun_hui_yi_lsbqwdj_265198_digest",1],
 ["ju_ren_de_yun_luo_kflt_146891_digest",1],
 ["jin_ping_mei_94028_digest",1],
 ["yin_he_di_guo_1_7jdqbq_240799_digest",1],
@@ -64,4 +65,5 @@ var digestlist_source_global_b=[
 ["xian_dai_xing_yu_da_tsqgmbm_335429_digest",1],
 ["harry_potter_and_the_philosopher_ss_3784_digest",1],
 ["jin_yong_zuo_pin_ji_sdxlxdbq4_575838_digest",1],
+["jurassic_park_a_novel_1969_digest",1],
 ];

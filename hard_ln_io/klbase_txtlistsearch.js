@@ -1,6 +1,5 @@
 function mobile_style_kltxt_b(){
-    var same_style='#p_search_menu {margin-top:0.2rem;}\n';       
-	var mobile_t='\n<style>\n'+same_style;
+	var mobile_t='\n<style>\n';
 	mobile_t=mobile_t+'ul,ol,li{font-size:1.1rem;line-height:'+line_height_global+'%;}\n';
     mobile_t=mobile_t+'li{margin-bottom:1.5rem;}\n';
     mobile_t=mobile_t+'ul,ol{padding:0;margin-left:0rem;list-style-position: inside;}\n';    
@@ -10,7 +9,7 @@ function mobile_style_kltxt_b(){
     mobile_t=mobile_t+'img {max-width:100%;}\n';
 	mobile_t=mobile_t+'</style>\n';
 
-	var pc_t='\n<style>\n'+same_style;
+	var pc_t='\n<style>\n';
 	pc_t=pc_t+'ul,ol,li{font-size:1.1rem;line-height:'+line_height_global+'%;padding:0px;}\n';
     pc_t=pc_t+'li{margin-bottom:0.5rem;}\n';
 	pc_t=pc_t+'#divhtml,#div_cn_words {font-family:Noto Sans;margin-left:10%; margin-right:10%;max-width:'+Math.max(700,parseInt(document.body.clientWidth*0.5))+'px;}\n'; //margin-left:'+(parseInt(document.body.clientWidth)*0.5)/2+'px; - 保留注释
@@ -195,15 +194,26 @@ function txtmenus_kltxt_b(cstype=''){
         '<span class="span_menu" onclick="javascript:'+str_t+'fullmenu_kltxt_b();">全部目录</span>',
         '<span class="span_menu" onclick="javascript:'+str_t+'possible_menu_kltxt_b();">可能的目录</span>',
     ];
-    
+
     if (cstype!=='reader'){
         menu_dir.push('<span class="span_menu" onclick="javascript:'+str_t+'menu_insert_kltxt_b(3);">显示搜索关键字目录3</span>');
         menu_dir.push('<span class="span_menu" onclick="javascript:'+str_t+'menu_insert_kltxt_b(1);">显示搜索关键字目录1</span>');
+        menu_dir.push('<hr />');
     }
+    var menu_dir_width='14rem';
+    var search_list=[
+    '<span class="span_menu" onclick="javascript:'+str_t+'absearch_kltxt_b();">AB搜索</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'absearch_kltxt_b(\'\',-1,true);">AB搜索(单一结果)</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'rearray_kltxt_b();">重新分组</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'select_array_kltxt_b(\'select\');">提取符合条件的记录(不支持AB搜索)</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'select_array_kltxt_b(\'remove\');">删除符合条件的记录</span>',
+    ];
     
     var menu_config=root_font_size_menu_b(str_t);
     menu_config.push('<span class="span_menu" onclick="javascript:'+str_t+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>');
     if (cstype!=='reader' && cstype!=='digest'){
+        menu_dir=menu_dir.concat(search_list);
+        menu_dir_width='19rem';
         menu_config=menu_config.concat([
         '<span class="span_menu" onclick="javascript:'+str_t+'search_demo_kltxt_b();">语法示例</span>',
         '<span class="span_menu" onclick="javascript:'+str_t+'editable_kltxt_b();">页面可编辑</span>',        
@@ -238,39 +248,25 @@ function txtmenus_kltxt_b(cstype=''){
         var item=list_t[blxl];
         color_menu.push('<span class="span_menu" onclick="javascript:'+'change_colors_kltxt_b(\''+item+'\');" style="color:'+item.split(',')[0]+';background-color:'+item.split(',')[1]+';">'+(blxl+1)+'. '+item+'</span>');
     }
-
-    var fontsize=(ismobile_b()?'0.9rem':'1rem');
     
-    var bljg=klmenu_b(menu_general,'','12rem','',fontsize);
-    bljg=bljg+klmenu_b(menu_digest,'🖊','14rem','',fontsize);
-    bljg=bljg+klmenu_b(menu_dir,'⏬','14rem','',fontsize);
+    var fontsize=(ismobile_b()?'0.9rem':'1rem');
+    var bljg='';
+    var colors=klmenu_b(color_menu,'🎨',(ismobile_b()?'16rem':'20rem'),'',fontsize,'20rem');
     if (cstype!=='digest'){
-        bljg=bljg+klmenu_b(menu_config,'⚙','12rem','',fontsize);
+        bljg=bljg+klmenu_b(menu_general,'','10rem','',fontsize);
+        bljg=bljg+klmenu_b(menu_dir,'🔍',menu_dir_width,'',fontsize);
+        bljg=bljg+klmenu_b(menu_digest,'🖊','14rem','',fontsize);       
+        bljg=bljg+colors;
+        bljg=bljg+klmenu_b(menu_config,'⚙','10rem','',fontsize);
         if (cstype!=='reader'){
-            bljg=bljg+klmenu_b(menu_statistics,'🧮','12rem','',fontsize);
+            bljg=bljg+klmenu_b(menu_statistics,'🧮','9rem','',fontsize);
         }
     }
-    if (cstype=='digest'){
-        bljg=klmenu_b(color_menu,'🎨',(ismobile_b()?'16rem':'22rem'),'',fontsize,'20rem');
-    }
-    else {
-        bljg=bljg+klmenu_b(color_menu,'🎨',(ismobile_b()?'16rem':'22rem'),'',fontsize,'20rem');
+    else{
+        bljg=bljg+colors;
     }
 
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(bljg,'','0rem')+' ');
-    //---
-    if (cstype=='reader' || cstype=='digest'){return;}
-    
-    str_t=klmenu_hide_b('');
-    var search_list=[
-    '<span class="span_menu" onclick="javascript:'+str_t+'absearch_kltxt_b();">AB搜索</span>',
-    '<span class="span_menu" onclick="javascript:'+str_t+'absearch_kltxt_b(\'\',-1,true);">AB搜索(单一结果)</span>',
-    '<span class="span_menu" onclick="javascript:'+str_t+'rearray_kltxt_b();">重新分组</span>',
-    '<span class="span_menu" onclick="javascript:'+str_t+'select_array_kltxt_b(\'select\');">提取符合条件的记录(不支持AB搜索格式)</span>',
-    '<span class="span_menu" onclick="javascript:'+str_t+'select_array_kltxt_b(\'remove\');">删除符合条件的记录</span>',
-    ];
-    
-    document.getElementById('p_search_menu').insertAdjacentHTML('afterbegin',klmenu_b(search_list,'🔻 ','22rem','1rem','1rem')+' ');
 }
 
 function editable_kltxt_b(){
