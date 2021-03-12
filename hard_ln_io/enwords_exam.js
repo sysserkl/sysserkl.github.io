@@ -57,7 +57,7 @@ function show_all_cn_klexam(cscount){
     }
 }
 
-function init_klexam(cstestno,cstype=''){
+function config_klexam(cstestno,cstype=''){
 	if (cstestno==''){
         var cstestno= document.getElementById('testno').value;
         if (cstestno==''){
@@ -84,27 +84,38 @@ function init_klexam(cstestno,cstype=''){
 function en2cn_klexam(csnumber='',cstype='en2cn'){
     var isrecent=false;
     var odiv;
-    [isrecent,csnumber,odiv]=init_klexam(csnumber,cstype);
+    [isrecent,csnumber,odiv]=config_klexam(csnumber,cstype);
 
     var recent_type=document.getElementById('select_recent_enwords').value;
+    var bllen=en_words_temp_global.length;
     var recent_half_len=en_words_temp_global.length/2;
     
 	var bljg='<p style="background-color:'+scheme_global['skyblue']+';">Type: '+cstype+'</p>';
     var bllink_t='';
     var blxl=0;
+    var include_no=new Set();
 	for (let item of enwords){
         if (isrecent){
             var blat=en_words_temp_global.indexOf(item[0]);
-            if (blat==-1 || recent_type=='1' && blat<recent_half_len || recent_type=='2' && blat>recent_half_len){
+            if (blat==-1){
                 continue;
             }            
+            if (recent_type=='1' && blat<recent_half_len || recent_type=='2' && blat>recent_half_len){
+                continue;
+            }
+            if (recent_type=='1000' && bllen-1-blat>=1000 || recent_type=='-1000' && blat>=1000){
+                continue;
+            }                        
         }
+        include_no.add(blat);
+
         bllink_t=bllink_t+item[0]+'|';
 		bljg=bljg+'<p id="p_en2cn_'+blxl+'" align=center style="font-size:2.5rem;font-weight:bold;border:0.1rem dotted black;padding:1rem;">'+item[0]+'</p>';
         bljg=bljg+'<p style="font-size:1rem;margin-bottom:1rem;"><span class="oblong_box" style="cursor:pointer;" onclick="javascript:showcn_klexam(\''+blxl+'\');">释义</span> <span id="span_en2cn_'+blxl+'"></span></p>';
         blxl=blxl+1;
         if (blxl==csnumber){break;}
 	}
+    console.log(recent_type,Math.min(...include_no),Math.max(...include_no)); //此行保留 - 保留注释
 
     if (bllink_t.slice(-1)=='|'){
         bllink_t=bllink_t.substring(0,bllink_t.length-1);
@@ -124,6 +135,16 @@ function unblur_klexam(ospan){
     ospan.style.backgroundColor=scheme_global['background'];
 }
 
+function init_klexam(){
+    buttons_klexam();
+    enwords_mini_search_frame_style_b();
+    input_size_b([['testno',5]],'id');
+    enwords_init_b();
+    enwords_mini_search_frame_form_b();
+    keys_klexam();
+    top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.4rem'));
+}
+
 function input_klexam(cstestno='',cstype='all'){
     function sub_input_klexam_one_word(blno){
         var item=enwords[blno];
@@ -135,7 +156,6 @@ function input_klexam(cstestno='',cstype='all'){
             var bldef=item[2];
         }
         else if (item[2].toLowerCase().includes(item[0].toLowerCase())) {
-            console.log(item[0]);
             var bldef=item[2].replace(new RegExp('('+item[0]+')','ig'),'<span class="span_word_blur" ondblclick="javascript:unblur_klexam(this);">$1</span>');
         }
         else {
@@ -148,9 +168,11 @@ function input_klexam(cstestno='',cstype='all'){
     //-----------------------
     var isrecent=false;
     var odiv;
-    [isrecent,cstestno,odiv]=init_klexam(cstestno,cstype);
+    [isrecent,cstestno,odiv]=config_klexam(cstestno,cstype);
     
     var recent_type=document.getElementById('select_recent_enwords').value;
+    
+    var bllen=en_words_temp_global.length;
     var recent_half_len=en_words_temp_global.length/2;
     
 	var words_list_t=[];
@@ -159,19 +181,28 @@ function input_klexam(cstestno='',cstype='all'){
     var bllink_t=[];
     var blxl=0;
     if (isrecent){
+        var include_no=new Set();
         for (let blno=0;blno<enwords.length;blno++){
             var item=enwords[blno];
             var blat=en_words_temp_global.indexOf(item[0]);
-            if (blat==-1 || recent_type=='1' && blat<recent_half_len || recent_type=='2' && blat>recent_half_len){
+            if (blat==-1){
+                continue;
+            }            
+            if (recent_type=='1' && blat<recent_half_len || recent_type=='2' && blat>recent_half_len){
                 continue;
             }
-            
+            if (recent_type=='1000' && bllen-1-blat>=1000 || recent_type=='-1000' && blat>=1000){
+                continue;
+            }
+            include_no.add(blat);
+
             en_words_no_list_global.push(item[3]);
             bllink_t.push(item[0]);
             words_list_t.push(sub_input_klexam_one_word(blno));
             blxl=blxl+1;
             if (blxl==cstestno){break;}
         }
+        console.log(recent_type,Math.min(...include_no),Math.max(...include_no)); //此行保留 - 保留注释
     }
     else {
         for (let blno=0;blno<enwords.length;blno++){
@@ -306,6 +337,12 @@ function showletter_klexam(csno){
 }
 
 function buttons_klexam(){  //不能转换为htm，随机单词也用到 - 保留注释
+    var bl1000='';
+    if (en_words_temp_global.length>2000){
+        bl1000=`<option value='1000'>最新1000最近记忆单词</option>
+        <option value='-1000'>最旧1000最近记忆单词</option>`
+    }
+
     var bljg=`<p style="margin-bottom:0.5rem;">题目数量：<input type="number" id="testno" value=10 onkeyup="javascript:if (event.key=='Enter'){input_klexam();}"> 
     <span class="aclick" onclick="javascript:input_klexam();">生成</span>
     <span class="aclick" onclick="javascript:input_klexam('','recent');">Recent</span>
@@ -315,6 +352,7 @@ function buttons_klexam(){  //不能转换为htm，随机单词也用到 - 保�
     <option value='0'>全部最近记忆单词</option>
     <option value='1'>新近添加的最近记忆单词</option>
     <option value='2'>非新近添加的最近记忆单词</option>
+    `+bl1000+`
     </select>
     </p>`;
     document.getElementById('div_exam_buttons').innerHTML=bljg;

@@ -38,4 +38,5 @@ var digest_global=`
 *thorny
 *laddie
 *Chloe
+*newspaperman
 `.trim().split('\n');

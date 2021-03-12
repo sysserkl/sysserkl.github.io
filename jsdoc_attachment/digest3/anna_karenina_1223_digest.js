@@ -126,4 +126,5 @@ var digest_global=`
 *unnoticed
 *greedily
 *Malthus
+*washstand
 `.trim().split('\n');

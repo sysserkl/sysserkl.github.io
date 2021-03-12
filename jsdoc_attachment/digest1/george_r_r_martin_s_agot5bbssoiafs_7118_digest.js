@@ -30,4 +30,5 @@ var digest_global=`
 *moth
 *Williams
 *legless
+*auburn
 `.trim().split('\n');
