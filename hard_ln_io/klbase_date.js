@@ -35,7 +35,12 @@ function date2str_b(sep='-',theday=false){
     if (theday===false){
         theday=new Date();
     }
-    return theday.getFullYear()+sep+('0'+(theday.getMonth()+1)).slice(-2)+sep+('0'+theday.getDate()).slice(-2);
+    if (sep.length==3){
+        return theday.getFullYear()+sep.substring(0,1)+('0'+(theday.getMonth()+1)).slice(-2)+sep.substring(1,2)+('0'+theday.getDate()).slice(-2)+sep.substring(2,);    
+    }
+    else {
+        return theday.getFullYear()+sep+('0'+(theday.getMonth()+1)).slice(-2)+sep+('0'+theday.getDate()).slice(-2);
+    }
 }
 
 function now_time_str_b(sep=":",withdate=false,theday=false){

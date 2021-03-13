@@ -10,4 +10,5 @@ var digest_global=`
 *exodus
 *Chronicles
 *Jonah
+*Hepburn
 `.trim().split('\n');

@@ -7,4 +7,6 @@ var digest_global=`
 *phosphorescent
 *woodcutter
 *wingless
+*foremast
+*mainmast
 `.trim().split('\n');

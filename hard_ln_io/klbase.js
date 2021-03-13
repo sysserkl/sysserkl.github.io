@@ -98,23 +98,34 @@ function base_path_set_b(cstype){
     localStorage.setItem('use_klwebphp_path',(cstype=='k'?'1':'0'));
 }
 
-function klbase_addons_import_js_b(klbase_list=[],module_list=[],jsdata_list=[]){
+function klbase_sele_path_b(){
     var blhref=location.href.trim();
     if (blhref.includes('/index.htm')){
         if (blhref.slice(-7,-1)=='?path='){
             base_path_set_b(blhref.slice(-1));
         }
     }
+    
     var klbase_path=klwebphp_path_b();
+    var sele_path='';
+    
     if (klbase_path===false){
-        klbase_path=location.href.split('//')[0]+'//'+location.host+'/hard_ln_io/';
-        var module_path=location.href.split('//')[0]+'//'+location.host+'/module/';
-        var jsdata_path=location.href.split('//')[0]+'//'+location.host+'/jsdata/';
+        sele_path=location.href.split('//')[0]+'//'+location.host;
+        klbase_path=sele_path+'/hard_ln_io/';
     }
     else {
-        var module_path=klbase_path+'PythonTools/data/selenium_news/module/';
-        var jsdata_path=klbase_path+'PythonTools/data/selenium_news/jsdata/';
+        sele_path=klbase_path+'PythonTools/data/selenium_news';
     }
+
+    return [klbase_path,sele_path]; //sele_path 末尾无/ - 保留注释
+}
+
+function klbase_addons_import_js_b(klbase_list=[],module_list=[],jsdata_list=[]){
+    var klbase_path='';
+    var sele_path='';
+    [klbase_path,sele_path]=klbase_sele_path_b();
+    var module_path=sele_path+'/module/';
+    var jsdata_path=sele_path+'/jsdata/';        
     
     for (let item of klbase_list){
         var defer_str='';

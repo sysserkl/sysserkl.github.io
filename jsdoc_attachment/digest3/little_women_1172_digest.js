@@ -39,4 +39,5 @@ var digest_global=`
 *laddie
 *Chloe
 *newspaperman
+*bachelorhood
 `.trim().split('\n');

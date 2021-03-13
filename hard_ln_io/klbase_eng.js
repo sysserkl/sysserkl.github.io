@@ -28,6 +28,7 @@ function en_word_def_istrong_b(csdef,is_remove=false){
 }
 
 function words_queue_read_b(){
+    console.log('添加临时单词前，单词库总数：',enwords.length);
     var list_t=local_storage_get_b('words_queue_kle',-1,true);
     var one_word=[];
     for (let item of list_t){
@@ -51,11 +52,13 @@ function words_queue_read_b(){
             one_word=[];
         }
     }
+    console.log('添加临时单词后，单词库总数：',enwords.length);
 }
 
 function enwords_init_b(simple=false){
-    var t0 = performance.now();
-    words_queue_read_b();
+    var t0 = performance.now();    
+    words_queue_read_b();   //导入临时添加的单词 - 保留注释
+   
     if (simple){
         //写入序号 - 保留注释
         for (let blxl=0;blxl<enwords.length;blxl++){

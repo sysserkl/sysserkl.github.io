@@ -17,12 +17,15 @@ function bookmarks_set_bible(){
 function bookmarks_get_bible(only_change_title=false){
     var bm=localStorage.getItem('bible_bookmark') || '';
     if (!bm.includes(' /// ')){
-        return;
+        return ['',''];
     }
     var blchapter;
     var blsub;
     [blchapter,blsub]=bm.split(' /// ');
-    if (only_change_title){return;}
+    if (only_change_title){
+        return [blchapter,blsub];
+    }
+    
     document.getElementById('select_chapter').value=blchapter;
     document.getElementById('select_chapter_cn').value=blchapter;
     minor_options_bible(blchapter);
@@ -154,10 +157,12 @@ function init_bible(){
     }
 }
 
-function reading_statistics_bible(){
-    var blsub=parseInt(document.getElementById('select_sub').value);
-    if (isNaN(blsub) || blsub<0){
-        return;
+function reading_statistics_bible(cssub=-1,do_alert=true){
+    if (cssub==-1){
+        cssub=parseInt(document.getElementById('select_sub').value);
+    }
+    if (isNaN(cssub) || cssub<0){
+        return '';
     }
     var list_t=[];
     for (let blxl=0;blxl<kjv.length;blxl++){
@@ -166,22 +171,25 @@ function reading_statistics_bible(){
             list_t.push(blxl);
         }
     }
-    var blno=list_t.indexOf(blsub);
+    var blno=list_t.indexOf(cssub);
     var remained_days=days_remained_of_year_b();
     var remained_chapters=list_t.length-blno;
     var chapters_per_day=remained_chapters/remained_days;
     
     var bljg='今年剩余天数 '+remained_days+ ' 天。\n全书共有 '+list_t.length+' 章，'+kjv.length+' 行。\n';
-    bljg=bljg+'当前章'+kjv[blsub].replace('=== ','【').replace(' ===','')+'・'+cnbible_global[blsub].replace('=== ','').replace(' ===','】');
-    bljg=bljg+' 为第 '+(blno+1)+' 章('+((blno+1)*100/list_t.length).toFixed(1)+'%)。\n当前为第 '+(blsub+1)+' 行('+((blsub+1)*100/kjv.length).toFixed(2)+'%)。\n完成阅读需要 '+chapters_per_day.toFixed(1) +' 章/天；';
-    bljg=bljg+'完成阅读需要 '+((kjv.length-blsub)/remained_days).toFixed(2) +' 行/天。';
+    bljg=bljg+'当前章'+kjv[cssub].replace('=== ','【').replace(' ===','')+'・'+cnbible_global[cssub].replace('=== ','').replace(' ===','】');
+    bljg=bljg+' 为第 '+(blno+1)+' 章('+((blno+1)*100/list_t.length).toFixed(1)+'%)。\n当前为第 '+(cssub+1)+' 行('+((cssub+1)*100/kjv.length).toFixed(2)+'%)。\n完成阅读需要 '+chapters_per_day.toFixed(1) +' 章/天；';
+    bljg=bljg+'完成阅读需要 '+((kjv.length-cssub)/remained_days).toFixed(2) +' 行/天。';
     
     var chapters_per_day_ceil=Math.ceil(chapters_per_day);
     if (chapters_per_day_ceil!==chapters_per_day){
         var days_ceil=remained_chapters/chapters_per_day_ceil;
         bljg=bljg+'\n按每日 '+chapters_per_day_ceil+' 章阅读，需要 '+days_ceil.toFixed(1)+' 天读完，即 '+next_day_b('',days_ceil)+'。';
     }
-    alert(bljg);
+    if (do_alert){
+        alert(bljg);
+    }
+    return bljg;
 }
 
 function chapter_relative_bible(csno){
@@ -1333,8 +1341,9 @@ function load_data_bible(load_from_idb=false){
     }
 }
 
-function load_filelist_bible(){
-    document.write('\n<script language=JavaScript src="../jsdoc3/bible_kjv_890.js"><\/script>\n');
+function load_filelist_bible(do_init=true){
+    var sele_path=klbase_sele_path_b()[1];
+    document.write('\n<script language=JavaScript src="'+sele_path+'/jsdoc3/bible_kjv_890.js"><\/script>\n');
     document.write('<script language="javascript">\n');
     document.write('kjv=[];\n');
     document.write('for (let item of filelist){\n');
@@ -1342,13 +1351,16 @@ function load_filelist_bible(){
     document.write('}\n');
     document.write('</script>\n');
     
-    document.write('\n<script language=JavaScript src="../jsdoc3/sheng_jing_he_he_ben_124338.js"><\/script>\n');
+    document.write('\n<script language=JavaScript src="'+sele_path+'/jsdoc3/sheng_jing_he_he_ben_124338.js"><\/script>\n');
     document.write('<script language="javascript">\n');
     document.write('cnbible_global=[];\n');
     document.write('for (let item of filelist){\n');
     document.write('    cnbible_global.push(item);\n');
     document.write('}\n');
-    document.write('init_bible();\n');    //idb_count_and_write_bible();
+    document.write('filelist=[];\n');
+    if (do_init){
+        document.write('init_bible();\n');    //idb_count_and_write_bible();
+    }
     document.write('</script>\n');
 }
 

@@ -127,4 +127,5 @@ var digest_global=`
 *greedily
 *Malthus
 *washstand
+*Petersburg
 `.trim().split('\n');
