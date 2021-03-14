@@ -172,4 +172,5 @@ var digest_global=`
 *Voltaire
 *inexhaustible
 *nomad
+*seedless
 `.trim().split('\n');

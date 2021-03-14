@@ -393,4 +393,5 @@ var digest_global=`
 *Ethiopian
 *carefulness
 *mulberry
+*Immanuel
 `.trim().split('\n');

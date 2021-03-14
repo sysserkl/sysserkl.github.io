@@ -27,4 +27,5 @@ var digest_global=`
 *underpants
 *featureless
 *washbasin
+*sweatshirt
 `.trim().split('\n');
