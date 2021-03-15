@@ -115,4 +115,5 @@ var digest_global=`
 *footsore
 *ceaselessly
 *leastways
+*nautical
 `.trim().split('\n');

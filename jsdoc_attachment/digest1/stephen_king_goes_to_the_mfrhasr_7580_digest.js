@@ -15,4 +15,5 @@ var digest_global=`
 *Asimov
 *uncomfy
 *washroom
+*pullover
 `.trim().split('\n');
