@@ -10,4 +10,5 @@ var digest_global=`
 *armipotent
 *shepherdess
 *bagpiper
+*manslaughter
 `.trim().split('\n');

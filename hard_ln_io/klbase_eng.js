@@ -705,7 +705,7 @@ function enwords_sort_b(cstype=""){
             break;
         case "r":
             var bltotal_t=Math.floor((Math.random()*50)+1);
-            for (var blxl=0;blxl<bltotal_t;blxl++){
+            for (let blxl=0;blxl<bltotal_t;blxl++){
                 enwords.sort(randomsort_b);
             }
             break;

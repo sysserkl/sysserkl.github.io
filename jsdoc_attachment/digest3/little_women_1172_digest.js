@@ -40,4 +40,5 @@ var digest_global=`
 *Chloe
 *newspaperman
 *bachelorhood
+*Mendelssohn
 `.trim().split('\n');
