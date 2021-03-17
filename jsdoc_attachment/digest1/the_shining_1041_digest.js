@@ -28,4 +28,5 @@ var digest_global=`
 *featureless
 *washbasin
 *sweatshirt
+*usefulness
 `.trim().split('\n');
