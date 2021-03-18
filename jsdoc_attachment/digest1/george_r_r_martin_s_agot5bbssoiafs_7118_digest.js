@@ -31,4 +31,5 @@ var digest_global=`
 *Williams
 *legless
 *auburn
+*moonlit
 `.trim().split('\n');

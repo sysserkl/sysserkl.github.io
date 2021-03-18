@@ -41,4 +41,5 @@ var digest_global=`
 *newspaperman
 *bachelorhood
 *Mendelssohn
+*sisterly
 `.trim().split('\n');

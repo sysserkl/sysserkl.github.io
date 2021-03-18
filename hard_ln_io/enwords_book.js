@@ -70,6 +70,7 @@ function new_words_form_enbook(){
     bljg=bljg+'<span class="aclick" onclick="javascript:words_sort_count_enbook();">单词排序</span> ';
     bljg=bljg+'<span class="aclick" onclick="javascript:textarea_shift_enbook();">对调</span> ';    
     bljg=bljg+'<span class="aclick" onclick="javascript:space2underline_enbook();">替换单词间空格为下划线</span> ';        
+    bljg=bljg+'<span class="aclick" onclick="javascript:filter_enbook();">筛选单词</span> ';            
     bljg=bljg+'<br />'+checkbox_kl_b('remove_square','删除方括号[](否则方括号中的内容视为音标而不收录')+' ';
     bljg=bljg+checkbox_kl_b('newwords_one_textarea','WIKI格式单词放在一个编辑框内','',true)+' ';
     bljg=bljg+checkbox_kl_b('words_type_check','检验单词类型','',true)+' ';    
@@ -86,6 +87,32 @@ function new_words_form_enbook(){
     
     input_size_b([["input_first_lines",5]],'id');
 	return;
+}
+
+function filter_enbook(){
+    var blstr=document.getElementById('textarea_new_words').value.trim();
+    if (blstr==''){return;}
+    var blkey=prompt('输入筛选关键字：') || '';
+    if (blkey==''){return;}
+    
+    var is_reg=false;
+    if (blkey.slice(-4,)=='(:r)'){
+        blkey=blkey.slice(0,-4);
+        is_reg=true;
+    }
+    var result_t=new Set();
+    var list_t=blstr.split(' ');
+    for (let item of list_t){
+		var blfound=str_reg_search_b(item,blkey,is_reg);
+		if (blfound==-1){
+			break;
+		}        
+        if (blfound){
+            result_t.add(item);
+        }
+    }
+    var otextarea2=document.getElementById('textarea_new_words2');
+    otextarea2.value=Array.from(result_t).join(' ');
 }
 
 function in_all_new_words_enbook(){
@@ -507,19 +534,14 @@ function sort_enwords_enbook(oa,cstype){
     if (!olinksdiv){
         return;
     }
+    var t0 = performance.now();
     var csarray=otextarea.value.trim().split(' ');
     switch (cstype){
         case 1: //排序 - 保留注释
             csarray.sort();
             break;
         case 2:
-            for (let blxl=0;blxl<csarray.length;blxl++){
-                csarray[blxl]=reverse_str_b(csarray[blxl]);
-            }
-            csarray.sort();
-            for (let blxl=0;blxl<csarray.length;blxl++){
-                csarray[blxl]=reverse_str_b(csarray[blxl]);
-            }
+            csarray.sort(function (a,b){return reverse_str_b(a)>reverse_str_b(b);});
             break;
         case 3: //随机排序
             csarray.sort(randomsort_b);
@@ -531,6 +553,7 @@ function sort_enwords_enbook(oa,cstype){
         bljg=bljg+(blxl+1)+'. '+en_one_word_b([csarray[blxl].replace(new RegExp('_','g'),' ')],[-1,0,cshidelink])+' ';
     }    
     olinksdiv.innerHTML=bljg+enwords_batch_div_b(csarray);
+    console.log('sort_enwords_enbook() 费时：'+(performance.now() - t0) + " milliseconds");    
 }
 
 function str_2_array_enbook(blstr,isset=false){
