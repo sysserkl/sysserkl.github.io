@@ -35,4 +35,5 @@ var digest_global=`
 *kiosk
 *Breton
 *nobility
+*annoyance
 `.trim().split('\n');

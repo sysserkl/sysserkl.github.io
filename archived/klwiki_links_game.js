@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-03-10 09:57:32 三"],
+["","","","更新日期：2021-03-17 13:01:24 三"],
 ["http://www.gov.cn/gongbao/content/2000/content_60240.htm","20000615 | 国务院办公厅转发文化部等部门关于开展电子游戏经营场所专项治理意见的通知"],
 ["http://games.sina.com.cn/talk/0203/031111292.shtml","20020311 | 《星际争霸》中最变态的打法"],
 ["http://zhaoting.blogchina.com/4067.html","20030216 | 赵挺：电子游戏？电子海洛因？"],
@@ -32,6 +32,7 @@ var recent_info_list=[
 ["http://www.cnbeta.com/articles/117384.htm","20100725 | 智冠获《星际争霸2》港澳台代理权：下周二上线"],
 ["http://developers.solidot.org/article.pl?sid=10/08/06/0731224&amp;from=rss","20100806 | Solidot | 《星际争霸2》：哀悼内容创作自由的死亡"],
 ["http://www.beareyes.com.cn/2/lib/201008/08/20100808006_0.htm","20100808 | 不得不说的故事！星际争霸十年全回顾—小熊在线"],
+["http://www.williamlong.info/archives/2292.html","20100815 | 单机游戏日-月光博客"],
 ["http://www.guokr.com/article/50773/","20110715 | 游戏永不休：如何避免在电子游戏里挂掉 | 果壳网"],
 ["http://www.cnbeta.com/articles/160060.htm","20111028 | 暴雪总裁：《魔兽世界》很挣钱 想免费没门"],
 ["http://cn.wsj.com/gb/20120213/ahd072746.asp","20120213 | 电子游戏新玩法：不杀一人通关 - 华尔街日报"],
@@ -46,6 +47,7 @@ var recent_info_list=[
 ["http://www.smzdm.com/youhui/393881","20140106 | 主机玩家看过来：长达13年的游戏机禁令 今起封印破除！_什么值得买"],
 ["http://digi.163.com/14/0304/14/9MGI2IC000162OUT.html","20140304 | 神秘岛和模拟城市等经典游戏进入电子游戏博物馆_网易数码"],
 ["https://www.techbang.com/posts/18113","20140512 | 家用主機秘辛1：任天堂紅白機導致的破解風潮 | T客邦"],
+["http://games.sina.com.cn/e/n/2014-05-19/1119785111.shtml","20140519 | 十年沧桑 2004到2014单机游戏典大作盘点_新浪网"],
 ["http://www.ifanr.com/438043","20140730 | Xbox One 入华，中国游戏机行业重启 - 爱范儿"],
 ["http://www.cnbeta.com/articles/353689.htm","20141211 | 索尼两款游戏机正式入华 PS4售2899元_cnBeta.COM"],
 ["http://www.cnbeta.com/articles/386929.htm","20150420 | 海盗湾创始人想玩游戏机 监狱：不准玩_cnBeta.COM"],

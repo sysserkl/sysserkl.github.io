@@ -48,4 +48,5 @@ var digest_global=`
 *infirmary
 *undesirable
 *Nathan
+*inconvenient
 `.trim().split('\n');

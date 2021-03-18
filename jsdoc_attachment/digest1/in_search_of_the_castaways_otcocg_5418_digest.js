@@ -9,4 +9,5 @@ var digest_global=`
 *wingless
 *foremast
 *mainmast
+*inopportune
 `.trim().split('\n');

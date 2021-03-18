@@ -116,4 +116,5 @@ var digest_global=`
 *ceaselessly
 *leastways
 *nautical
+*unseasonable
 `.trim().split('\n');

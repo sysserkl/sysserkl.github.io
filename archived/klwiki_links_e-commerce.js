@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-03-10 09:57:32 三"],
+["","","","更新日期：2021-03-17 13:01:24 三"],
 ["http://tech.sina.com.cn/i/2007-10-16/10171795136.shtml","20071016 | 唐骏：无论马云持多少股份都是公司核心"],
 ["http://money.163.com/08/0519/18/4CB0VMBA00251RJ2.html","20080519 | 马云：最大的善举绝不在于捐款"],
 ["http://news.xinhuanet.com/newmedia/2009-02/04/content_10760063.htm","20090204 | 马云的2008：白云观禁语3天 淘宝高管需会倒立"],
@@ -337,4 +337,5 @@ var recent_info_list=[
 ["https://xueqiu.com/3209134259/166768164","20201225 | 亲爹妈也表态要大义灭亲了？亲橙办的人民公仆们表示处境有点尴尬 $阿里巴巴(BABA)$ - 雪球"],
 ["https://cn.nytimes.com/technology/20201228/china-jack-ma-alibaba/","20201228 | 袁莉：从“马爸爸”到“吸血鬼”，中国为何向马云“开战”？ - 纽约时报中文网"],
 ["https://www.williamlong.info/archives/6345.html","20210213 | 阿里巴巴女员工与顺风车司机谈恋爱被骗一千万-月光博客"],
+["https://finance.sina.com.cn/tech/2021-03-12/doc-ikkntiak9563248.shtml","20210312 | 胡晓明辞任蚂蚁金服CEO，未来将负责社会公益项目_新浪网"],
 ];

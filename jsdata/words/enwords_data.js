@@ -1,5 +1,9 @@
 //单词库
 var enwords=[
+["inconvenient", "[ˌɪnkənˈviːniənt] [ˌɪnkənˈviːnjənt]", "adj. 不方便的；打扰人的；引起麻烦的；造成困难的；causing trouble or problems, especially in connection with what you need or would like yourself; not convenient especially in giving trouble or annoyance: inopportune; troublesome, awkward, or difficult; not favorable to one's comfort; difficult to do, use, or get to; causing trouble or bother; unhandy; adj. (obsolete): not appropriate; n. 不一致、不协调的事物；(obsolete): an inconsistency, an incongruity; n. (obsolete): an inconvenient circumstance or situation; an inconvenience"],
+["unseasonable", "[ʌn'siːz(ə)nəb(ə)l]", "adj. 不合季节的；违反时令的；（气候）反常的；不合时宜的；unusual for the time of year; occurring at other than the proper time: untimely; not being in season; not normal for the season of the year; marked by unseasonable weather; not in accordance with the season; (esp of the weather) inappropriate for the season; inopportune; coming, said, etc. at the wrong time"],
+["inopportune", "UK [ɪn'ɒpə(r)ˌtjuːn] US [ɪnˌɑːpərˈtuːn] [ɪnˌɑpərˈtjun]", "adj. 不合时宜的；不合时机的；不是时候的；不适当的；happening at a bad time; not at a good time; done or happening at the wrong time; not opportune; coming or happening at a poor time; not appropriate; happening or done at a time that is not suitable or convenient; inconvenient, unseasonable; not suitable or right for a particular situation"],
+["annoyance", "[ə'nɔɪəns]", "n. 烦恼；恼怒；生气；使人烦恼的人或事情；the feeling of being slightly angry; the state or feeling of being annoyed: vexation; the act of annoying someone or of being annoyed; something that makes you slightly angry; a source of vexation or irritation: nuisance; a person or thing that annoys"],
 ["Buffett", "['bʌfit]", "n. 巴菲特(姓氏)；a surname; n. Warren (Edward). born 1930, US financier, investor, and philanthropist"],
 ["usefulness", "['juːsf(ə)lnəs]", "n. 可用性；有用性；有用；实用；the fact of being useful or possible to use; the quality of having utility and especially practical worth or applicability; the quality or state of being useful"],
 ["quartet", "UK [kwɔː(r)'tet] US [kwɔr'tet]", "n. 四重奏（曲）；四重唱（曲）；四重奏乐团；四重唱组合；四件一套；a musical composition for four instruments or voices; a group of four musicians or singers who play or sing together; a piece of music for four musicians or singers; a group of four performers of such a composition, or any group of four musicians playing together; a set of four people or things; a group or set of four, especially: the performers of a quartet; any group of four"],
@@ -973,7 +977,7 @@ var enwords=[
 ["anniversary", "[ˌænɪ'vɜːrsəri]", "n. 周年纪念；周年纪念日"],
 ["announce", "[ə'naʊns]", "vt. 宣布；宣告；预示；播报；vi. 宣布竞选；作播音员"],
 ["announcement", "[ə'naʊnsmənt]", "n. 宣布；通告；声明"],
-["annoy", "[ə'nɔɪ]", "v. 使恼怒；使烦恼；骚扰"],
+["annoy", "[ə'nɔɪ]", "v. 使烦恼；使恼怒；骚扰"],
 ["annual", "['ænjuəl]", "adj. 每年的；年度的；一年生的；n. 年刊；一年生植物"],
 ["annually", "['ænjuəli]", "adv. 每年；年年"],
 ["anonymity", "[ˌænə'nɪməti]", "n. 匿名；笔者不明"],
@@ -8130,7 +8134,7 @@ var enwords=[
 ["safety deposit box", "UK [ˌseɪfti dɪˈpɒzɪt bɒks] US [ˌseɪfti dɪˈpɑːzɪt bɑːks]", "n. 保险箱"],
 ["safety", "['seɪfti]", "n. 安全；保险"],
 ["Sahara", "UK [səˈhɑːrə] US [səˈhɑrə] [səˈhærə] [səˈhɛrə]", "n. 撒哈拉沙漠；vast desert region extending across northern Africa north of the Sudan region from the Atlantic coast to the Red Sea"],
-["said", "[sed]", "adj. 上述的；v. 说；讲；动词say的过去式和过去分词形式"],
+["said", "[sed]", "adj. 上述的；v. 说；讲；动词 say 的过去式和过去分词形式"],
 ["sailfish", "['seɪlˌfɪʃ]", "n. 旗鱼；a fish with a long, narrow, pointed mouth and a very high fin on its back that looks like a sail"],
 ["sailmaker", "['seɪlmeɪkər]", "n. 修帆工；制帆工；a person whose job is to make or repair sails"],
 ["sailor", "['seɪlər]", "n. 海员；水手；扁平的硬边草帽"],

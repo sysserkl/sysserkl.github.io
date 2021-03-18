@@ -17,8 +17,34 @@ function days_remained_of_year_b(theday){
     return Math.ceil((new Date(theday.getFullYear(),11,31) - theday) / 86400000);
 }
 
+function prev_month_b(csstr){
+    //csstr: 2018-11
+	var csnum=arguments.length;
+	if (csnum<1){
+        var csstr=date2str_b('-').substring(0,7);
+    }
+    
+    var list_t=csstr.split('-');
+    if (list_t.length!==2){
+        return '';
+    }
+    var blyear=parseInt(list_t[0]);
+    var blmonth=parseInt(list_t[1]);
+    if (blmonth>1){
+        return blyear+'-'+('0'+(blmonth-1)).slice(-2);
+    }
+    else {
+        return (blyear-1)+'-12';
+    }
+}
+
 function next_month_b(csstr){
-    //2018-11
+    //csstr: 2018-11
+	var csnum=arguments.length;
+	if (csnum<1){
+        var csstr=date2str_b('-').substring(0,7);
+    }
+    
     var list_t=csstr.split('-');
     if (list_t.length!==2){return '';}
     var blyear=parseInt(list_t[0]);

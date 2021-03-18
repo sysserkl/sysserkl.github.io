@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-03-10 09:57:32 三"],
+["","","","更新日期：2021-03-17 13:01:24 三"],
 ["http://tech.sina.com.cn/t/2006-06-17/0741994777.shtml","20060617 | 华为基本法修改工程启动 时代局限性日益凸现"],
 ["http://tech.sina.com.cn/t/2007-01-18/03341340866.shtml","20070118 | 华为18年无一项原创发明 购买专利竞跑国际市场"],
 ["http://tech.sina.com.cn/it/2007-05-01/02421493757.shtml","20070501 | 华为国际专利全球排名升至13 力拓知识产权路径"],
@@ -141,6 +141,7 @@ var recent_info_list=[
 ["https://www.cnbeta.com/articles/tech/903091.htm","20191025 | 网传任正非安检照片 自用iPad Pro引热议 - cnBeta.COM"],
 ["https://www.cnbeta.com/articles/tech/903711.htm","20191026 | 华为鲁勇：如果每个零部件都要自己做 不可能整合成最好的产品 - cnBeta.COM"],
 ["https://www.solidot.org/story?sid=62381","20191026 | Solidot | ARM 表示会继续向华为提供新一代芯片设计"],
+["https://www.cnbeta.com/articles/tech/904623.htm","20191029 | 倪光南称华为估值世界第一 达1.3万亿美元 - cnBeta.COM"],
 ["https://www.solidot.org/story?sid=62420","20191030 | 奇客Solidot | 华为智能手机在中国的市场占有率达到 42%"],
 ["https://www.solidot.org/story?sid=62481","20191104 | Solidot | 美国敦促台积电停止向华为供货"],
 ["https://cn.reuters.com/article/germany-huawei-5g-network-1105-idCNKBS1XF04L","20191105 | 德国外长对华为能否参与德国5G网络建设提出质疑 - 路透中文网"],

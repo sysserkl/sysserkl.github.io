@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-03-10 09:57:32 三"],
+["","","","更新日期：2021-03-17 13:01:24 三"],
 ["http://news.sina.com.cn/w/2005-07-04/14446345710s.shtml","20050704 | 越南将与梵蒂冈增加接触提升天主教徒境遇"],
 ["http://club.cat898.com/newbbs/dispbbs.asp?boardID=1&amp;ID=778652&amp;page=1","20050915 | 以诺雅列：为什么知道耶和华上帝是独一的上帝？"],
 ["http://www.pep.com.cn/200406/ca425801.htm","20051206 | 湖北教育出版社《历史上最有影响的100人》——3.耶稣"],
@@ -9,6 +9,7 @@ var recent_info_list=[
 ["http://cn.netor.com/know/buddhism/other/other6.htm","20061204 | 日本佛教"],
 ["http://cn.netor.com/know/christ/christ9.htm","20061204 | 真耶稣教会"],
 ["http://ent.sina.com.cn/m/f/2007-04-09/18591512328.html","20070409 | 耶稣喝饮料惹纠纷 可口可乐不满状告电影公司"],
+["http://zhidao.baidu.com/question/26767808","20070520 | 三自爱国会出版的圣经会不会有不当的修改？_百度知道"],
 ["http://news.sina.com.cn/w/2007-11-17/091314327438.shtml","20071117 | 天主教东正教首次同意教皇为第一主教"],
 ["http://www.xschina.org/show.php?id=11493","20080114 | 他们为何走向耶稣？——关于武汉市93位基督教徒信仰原因的调查"],
 ["http://news.sina.com.cn/w/2008-04-01/075613666567s.shtml","20080401 | 梵蒂冈称穆斯林人数首超天主教徒"],
