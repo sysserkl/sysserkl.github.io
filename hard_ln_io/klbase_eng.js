@@ -801,6 +801,24 @@ function en_sentence_source_b(){
     return list_t;
 }
 
+function popup_words_links_b(event,csword){
+    console.log(event,csword);
+    var odiv=document.getElementById('div_enword_search_links');
+    if (!odiv){
+        document.querySelector('body').insertAdjacentHTML('beforeend','<div id="div_enword_search_links" style="position:absolute;display:none;background-color:'+scheme_global['background']+';padding:0.5rem; border:0.1rem solid '+scheme_global['memo']+';border-radius:1rem;"></div>');
+        odiv=document.getElementById('div_enword_search_links');
+    }
+    if (!odiv){
+        console.log('popup_words_links_b()','未发现 div_enword_search_links');
+        return;
+    }
+    
+    odiv.style.left=event.pageX;
+    odiv.style.top=event.pageY;
+    odiv.style.display='';
+    odiv.innerHTML='<b>'+csword+'</b><br />'+en_word_links_b(csword,true)+' <span class="span_box" onclick="javascript:this.parentNode.style.display=\'none\';">❌</span>';
+}
+
 function en_one_word_b(csword,csno,csrecent_word){  //wordlinks_kle
     if (csword==null){return '';}
 	var csnum=arguments.length;
@@ -832,19 +850,22 @@ function en_one_word_b(csword,csno,csrecent_word){  //wordlinks_kle
     }
     else if (csword[1]=='' && csword[2]==''){
         //just word - 保留注释
-        bljg=bljg+'<span class="a_word" onclick="javascript:window.open(\'http://dict.cn/'+blword0+'\'); en_word_temp_change_b(this,\''+blword0+'\');"';
+        bljg=bljg+'<span class="a_word" onclick="javascript:popup_words_links_b(event,\''+blword0+'\'); en_word_temp_change_b(this,\''+blword0+'\');"';
+        //window.open(\'http://dict.cn/'+blword0+'\'); - 保留注释
     }    
     else {
-        bljg=bljg+'<span class="a_word" onclick="javascript:window.open(\'http://dict.cn/'+blword0+'\');"';
+        bljg=bljg+'<span class="a_word" onclick="javascript:popup_words_links_b(event,\''+blword0+'\');"';
+        //window.open(\'http://dict.cn/'+blword0+'\'); - 保留注释
     }
     
     bljg=bljg+'><b>'+csword[0]+'</b></span> ';
 	
-	if (csno[2]==false){
-		bljg=bljg+'(<i>';
-        bljg=bljg+en_word_links_b(blword0,false);
-		bljg=bljg+'</i>)';
-	}
+    //以下5行保留 - 保留注释
+	//if (csno[2]==false){
+		//bljg=bljg+'(<i>';
+        //bljg=bljg+en_word_links_b(blword0,true);
+		//bljg=bljg+'</i>)';
+	//}
 	if (csword[1]!==''){
         bljg=bljg+' <span class="span_pronounce" onclick="javascript:en_word_temp_change_b(this,\''+blword0+'\',\'switch\');"';
 
