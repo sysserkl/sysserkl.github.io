@@ -17,4 +17,5 @@ var digest_global=`
 *washroom
 *pullover
 *hysterical
+*bathrobe
 `.trim().split('\n');

@@ -8,4 +8,5 @@ var digest_global=`
 *Andy
 *monkish
 *nomadic
+*restroom
 `.trim().split('\n');

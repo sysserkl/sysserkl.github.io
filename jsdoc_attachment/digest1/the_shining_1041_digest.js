@@ -29,4 +29,5 @@ var digest_global=`
 *washbasin
 *sweatshirt
 *usefulness
+*foreplay
 `.trim().split('\n');

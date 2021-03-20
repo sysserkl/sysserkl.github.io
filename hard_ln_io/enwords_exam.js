@@ -202,7 +202,7 @@ function input_klexam(cstestno='',cstype='all'){
             blxl=blxl+1;
             if (blxl==cstestno){break;}
         }
-        console.log(recent_type,Math.min(...include_no),Math.max(...include_no)); //此行保留 - 保留注释
+        console.log('input_klexam()',recent_type,Math.min(...include_no),Math.max(...include_no)); //此行保留 - 保留注释
     }
     else {
         for (let blno=0;blno<enwords.length;blno++){

@@ -42,4 +42,5 @@ var digest_global=`
 *bachelorhood
 *Mendelssohn
 *sisterly
+*Rousseau
 `.trim().split('\n');

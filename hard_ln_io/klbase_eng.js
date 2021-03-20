@@ -802,7 +802,6 @@ function en_sentence_source_b(){
 }
 
 function popup_words_links_b(event,csword){
-    console.log(event,csword);
     var odiv=document.getElementById('div_enword_search_links');
     if (!odiv){
         document.querySelector('body').insertAdjacentHTML('beforeend','<div id="div_enword_search_links" style="position:absolute;display:none;background-color:'+scheme_global['background']+';padding:0.5rem; border:0.1rem solid '+scheme_global['memo']+';border-radius:1rem;"></div>');
@@ -812,11 +811,11 @@ function popup_words_links_b(event,csword){
         console.log('popup_words_links_b()','未发现 div_enword_search_links');
         return;
     }
-    
-    odiv.style.left=event.pageX;
-    odiv.style.top=event.pageY;
-    odiv.style.display='';
     odiv.innerHTML='<b>'+csword+'</b><br />'+en_word_links_b(csword,true)+' <span class="span_box" onclick="javascript:this.parentNode.style.display=\'none\';">❌</span>';
+    odiv.style.display='';  //否则rect的值为0 - 保留注释
+    var rect=odiv.getBoundingClientRect();
+    odiv.style.left=Math.min(event.pageX,document.body.scrollWidth-rect.width);
+    odiv.style.top=event.pageY;
 }
 
 function en_one_word_b(csword,csno,csrecent_word){  //wordlinks_kle
