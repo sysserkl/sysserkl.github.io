@@ -117,4 +117,5 @@ var digest_global=`
 *leastways
 *nautical
 *unseasonable
+*ironmonger
 `.trim().split('\n');

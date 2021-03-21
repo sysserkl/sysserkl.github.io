@@ -32,4 +32,5 @@ var digest_global=`
 *legless
 *auburn
 *moonlit
+*cheesemonger
 `.trim().split('\n');

@@ -30,4 +30,5 @@ var digest_global=`
 *sweatshirt
 *usefulness
 *foreplay
+*nightclothes
 `.trim().split('\n');

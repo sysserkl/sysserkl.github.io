@@ -173,4 +173,5 @@ var digest_global=`
 *inexhaustible
 *nomad
 *seedless
+*newsmonger
 `.trim().split('\n');
