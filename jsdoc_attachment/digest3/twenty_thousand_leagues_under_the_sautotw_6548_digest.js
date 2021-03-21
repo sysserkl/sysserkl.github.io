@@ -506,4 +506,5 @@ var digest_global=`
 *chronicler
 *daylong
 *Brittany
+*cannoneer
 `.trim().split('\n');

@@ -5,4 +5,5 @@ var digest_global=`
 *fetid
 *immortal
 *inconceivable
+*mineralogist
 `.trim().split('\n');

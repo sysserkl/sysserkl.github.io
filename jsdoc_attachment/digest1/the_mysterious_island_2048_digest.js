@@ -459,4 +459,5 @@ var digest_global=`
 *bootmaker
 *sportsman
 *torn
+*kingfisher
 `.trim().split('\n');

@@ -10,4 +10,5 @@ var digest_global=`
 *foremast
 *mainmast
 *inopportune
+*muleteer
 `.trim().split('\n');
