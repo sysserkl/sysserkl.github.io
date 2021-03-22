@@ -188,3 +188,144 @@ function table_detail_money_b(cspage,csstatus,cspagenum,cssimple=false,csluru_ph
 	}
     return [bljg,blamount_total,blamount_this_page,blsum_this_page];
 }
+
+function luru_input_format_money_b(cstype='name'){
+    var input_list=[
+    ["input_class",4,0.8],
+    ["input_name",18,0.8],
+    ["input_unit",4,0.8],
+    ["input_amount",6,0.8],
+    ["input_price",6],
+    ["input_total_price",8,0.8],
+    ["input_address",18,0.8],
+    ["input_day_purchase",10],
+    ["input_tag",12],
+    ];
+    input_size_b(input_list,cstype);
+}
+
+function editor_money_b(){
+	var bljg='';
+    var list_t=["加粗","下划线","斜体","删除线","上标","下标","多媒体"];
+    var list2_t=["<b>B</b>","<u>U</u>","<i>I</i>","<strike>删除线</strike>","上标","下标","多媒体"];
+    for (let blxl=0;blxl<list_t.length;blxl++){
+	    bljg=bljg+'<span class="aclick" onclick=style_money_b("'+list_t[blxl]+'") title="'+list_t[blxl]+'" tabindex="-1">'+list2_t[blxl]+'</span>';
+    }
+	var odiv=document.getElementById("div_editor");
+	if (odiv){
+        odiv.innerHTML=bljg;
+    }
+}
+
+function style_money_b(csedittype){
+	var fontbegin="";
+	var fontend="";
+	var blarray=[
+    ["加粗","<<B>>","<</B>>"],
+    ["下划线","<<U>>","<</U>>"],
+    ["斜体","<<I>>","<</I>>"],
+    ["删除线","<<strike>>","<</strike>>"],
+    ["上标","<<sup>>","<</sup>>"],
+    ["下标","<<sub>>","<</sub>>"],
+    ["多媒体","<<!--mymedia-->>[path1]/","<<!--/mymedia-->>"],
+    ];
+	for(let blys of blarray){
+		if (blys[0]==csedittype){
+			fontbegin=blys[1];
+			fontend=blys[2];
+			break;
+		}
+	}
+
+	var txa = document.getElementById("textarea_content");
+	if (txa){
+		var st=txa.selectionStart;
+		var ed=txa.selectionEnd;
+		txa.value=txa.value.substring(0,st)+fontbegin+txa.value.substring(st,ed)+fontend+txa.value.slice(ed);
+	}
+}
+
+function popup_selection_money_b(){
+    function sub_popup_selection_money_b_generate(cslist,span_name,popup_name,input_name){
+        cslist.sort(zh_sort_b);
+        var bljg='';
+        for (let item of cslist) {
+            bljg=bljg+'<div style="margin-bottom:1rem;display:inline-block;font-weight:300;font-size:1.5rem;"><span class="span_box" style="padding:0.5rem;" onclick="javascript:document.getElementById(\''+input_name+'\').value=\''+item+'\';popup_show_hide_b(\''+popup_name+'\');">'+item+'</span></div>';
+        }
+        var oclass=document.getElementById(span_name);
+        if (oclass){
+            oclass.insertAdjacentHTML('afterend',popup_b(popup_name,bljg,'','70%'));
+        }
+    }
+    //---------------
+    var list_t=["健康","食品","休闲","水电物","衣物","电脑","蔬菜","水果","礼金","交通","餐馆","工具","卫生","办公","卧室","化妆","厨房","家装","阅读","牛奶","通信","影视","投资","生活"];
+    sub_popup_selection_money_b_generate(list_t,'span_class','popup_class','input_class');
+    
+    var from_list=local_storage_get_b('recent_from_wp',25,true);
+    sub_popup_selection_money_b_generate(from_list,'span_from','popup_from','input_address');
+}
+
+function eval_calculator_money_b(){
+    var str_t=document.getElementById('input_calculator').value.trim();
+    var ospan=document.getElementById('span_calculator');
+    if (str_t==''){
+        ospan.innerHTML='未输入数学表达式';
+        return;        
+    }
+    var checkstr=str_t.replace(new RegExp('[0-9]','g'),'');
+    var checkstr=checkstr.replace(new RegExp(/[\.\s\+\-\*\/\(\)]/,'g'),'');
+    if (checkstr!==''){
+        ospan.innerHTML='包含了多余字符：'+checkstr;
+        return;
+    }
+    try {
+        var blvalue=eval(str_t).toFixed(3);
+    }
+    catch (error) {
+        var blvalue=error;
+    }
+    document.getElementById('span_calculator').innerHTML=blvalue;
+}
+
+function calculator_generate_money_b(){
+    var odiv=document.getElementById('div_calculator');
+    if (odiv){
+        var bljg='计算器：<input type="text" name="input_calculator" id="input_calculator" onkeyup="javascript:if (event.key==\'Enter\'){eval_calculator_money_b();}"> = <span id="span_calculator"></span>';
+        odiv.innerHTML=bljg;
+        input_with_x_b('input_calculator',14,'',0.8);
+    }
+}
+
+function form_content_check_money_b(){
+	var blo_t=document.getElementById("textarea_content");
+	if (blo_t){
+		var blstr_t=blo_t.value.trim();
+		
+		var space_t=[' ', '　', '\t'];
+		for (var blxl in space_t){
+			while (blstr_t.includes('\n'+space_t[blxl])){
+				blstr_t=blstr_t.replace(new RegExp('\n'+space_t[blxl],'g'),'\n');
+			}
+			while (blstr_t.includes(space_t[blxl]+'\r\n')){
+				blstr_t=blstr_t.replace(new RegExp(space_t[blxl]+'\r\n','g'),'\r\n');
+			}
+			while (blstr_t.includes(space_t[blxl]+'\n')){
+				blstr_t=blstr_t.replace(new RegExp(space_t[blxl]+'\n','g'),'\n');
+			}
+		}
+		
+		while (blstr_t.includes('\r\n\r\n')){
+			blstr_t=blstr_t.replace(new RegExp('\r\n\r\n','g'),'\r\n');
+		}
+		while (blstr_t.includes('\n\n')){
+			blstr_t=blstr_t.replace(new RegExp('\n\n','g'),'\n');	
+		}
+		
+		blo_t.value=blstr_t;
+	}
+    var oaddress=document.getElementById('input_address');
+    if (oaddress){
+        var blfrom=oaddress.value.trim();
+        local_storage_insert_unique_b('recent_from_wp',blfrom,25);
+    }
+}
