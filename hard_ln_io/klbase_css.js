@@ -847,6 +847,7 @@ function input_with_x_b(csid,cswidth,xid='',csexpand=false,regid=false,isreg=fal
 
 function popular_colors_b(){
     return [
+    "#000000,#E3E1EA,#2B1E1A",
     "#01321B,#E2E9E8,#6A01F4",
     "#0436EB,#DDBBD4,#0F5133",
     "#050D00,#D7E7F3,#3E9FDB",  
@@ -978,6 +979,7 @@ function popular_colors_b(){
     "#E0D4F7,#0E2D3B,#2C1FC7",
     "#E4D1DC,#000803,#AF6EB4",
     "#E4E1EE,#933B6E,#E4E1EE",
+    "#E4EAE1,#173F45,#4A0653",
     "#E6D565,#480FAE,#14FCD9",
     "#E8CB72,#4457ED,#EECE6C",
     "#EAEFE4,#6777AC,#033326",

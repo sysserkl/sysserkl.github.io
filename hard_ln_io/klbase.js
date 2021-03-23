@@ -544,6 +544,18 @@ function href_split_b(cshref){
     return cskeys;
 }
 
+function restore_str_b(csstr){
+    var bljg=csstr.toString();
+    bljg=bljg.replace(new RegExp("&#39;","g"),"'");   
+    bljg=bljg.replace(new RegExp('&quot;',"g"),'"');
+    bljg=bljg.replace(new RegExp('&#92;',"g"),'\\');
+    
+    bljg=bljg.replace(new RegExp('&gt;',"g"),'>');
+    bljg=bljg.replace(new RegExp('&lt;',"g"),'<');
+    bljg=bljg.replace(new RegExp('&amp;',"g"),'&');
+    return bljg;
+}
+
 function specialstr92_b(csstr){
     //和 php 的 specialstr92_g() 等效 - 保留注释
     return specialstr_html_b(specialstr_lt_gt_j(csstr,true));

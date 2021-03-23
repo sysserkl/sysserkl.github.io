@@ -33,4 +33,8 @@ var digest_global=`
 *auburn
 *moonlit
 *cheesemonger
+*torchlit
+*puppeteer
+*waterskin
+*snakeskin
 `.trim().split('\n');

@@ -5,25 +5,34 @@
 <title>✍️ 收支离线登记</title>
 <SCRIPT language=JavaScript src="../hard_ln_io/klbase.js"></SCRIPT>
 <script language="javascript">
-klbase_addons_import_js_b(['css','date','money']);
+klbase_addons_import_js_b(['css','date','en_de_str','money']);
 </script>
+<SCRIPT language=JavaScript src="wp_offline_luru.js"></SCRIPT>
 <script language="javascript">
+var csdata=[];
+var current_id_wp_offline_luru_global=-1;
 var scheme_global={};
 scheme_generation_b();
-css_root_style_b('14','10',['base','menu']);
+css_root_style_b('15.5','10',['base','menu']);
 </script>
 <style>
-p{font-size:1.35rem;}
+p{font-size:1.15rem;}
 div#lurudiv{position: fixed; left: 50%; top: 50%; width:auto; height:auto; display:inline; border:solid 15px #ff0000;background-color:#acf212;text-align:center;font-size:2rem;padding:25px;-webkit-transform: translateX(-50%) translateY(-50%);color:red;cursor:pointer;display:none;}
+.tablebordertd2{border-bottom:solid 0.1rem #e0e0e0;font-size:1.2rem;}
+.tablebordertd2 td{border-top:solid 0.1rem #e0e0e0;}
+.tablebordertd2 tr.trcolor {background-color: #ffffff;}
+.tablebordertd2 tr.trcolor:hover {background-color: #E9EEF2;}
 </style>
+<link rel="shortcut icon" href="wp_offline/wp_offline512.png" />
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 </head>
 <body>
-<h2 style="margin:0;">✍️收支离线登记</h2>
+<h2 style="margin:0;font-size:1.4rem;"><span id="span_title">收支离线登记</span></h2>
 <hr />
 <div id="lurudiv" onclick='javascript:this.style.display="none";'></div>
 
 <div style="margin:0 0.5rem;" id="div_edit_zone">
+<div id="div_export_import"></div>
 <p class=tb04><span id="span_class" style="cursor:pointer;font-weight:600;" onclick="javascript:popup_show_hide_b('popup_class');">分类：</span><input type="text" id="input_class" required autocomplete="off" placeholder="分类"></p>
 <p class=tb04><b>名称：</b><input type="text" id="input_name" required placeholder="名称">
 <p class=tb04>
@@ -40,117 +49,12 @@ div#lurudiv{position: fixed; left: 50%; top: 50%; width:auto; height:auto; displ
 <p class=tb04><b>内容：</b><span class="minisize2"><i>(字数限制在20000个字符以内)</i></span></p>
 <div id="div_editor"></div>
 <p class=tb04><!--webbot bot="Validation" B-Value-Required="TRUE" I-Maximum-Length="20000" --><textarea id="textarea_content" style="width:90%;height:6.5rem;padding:0.5rem;font-size:1.2rem;margin-top:0.5rem;"></textarea></p>
-<p class=tb04><span class="aclick" onclick="javascript:add_wp_offline_luru();">确定</span></p>
-
-<div id="div_calculator" style="margin-top:0.5rem;"></div>
+<p class=tb04><span class="aclick" id="span_submit" onclick="javascript:add_or_edit_wp_offline_luru(this.innerText);">添加</span><span class="aclick" id="span_cancel_edit" onclick="javascript:cancel_edit_wp_offline_luru();" style="display:none;">取消修改</span></p>
+<div id="div_calculator" style="margin:0 0.5rem;"></div>
+<div id="divhtml"></div>
 </div>
 <div id="div_top_bottom"></div>
 <script type="text/javascript">
-function init_wp_offline_luru(){
-    top_bottom_arrow_b('div_top_bottom','',false,'2rem');
-    luru_input_format_money_b('id');
-    editor_money_b();
-    popup_selection_money_b();
-    calculator_generate_money_b();
-}
-
-function info_wp_offline_luru(csstr){
-    var odiv=document.getElementById('lurudiv');
-    odiv.innerHTML=csstr;
-    odiv.style.display=(csstr==''?'none':'block');    
-}
-
-function check_wp_offline_luru(){
-    var input_list=[
-    ["input_class",'分类'],
-    ["input_name",'名称'],
-    ["input_amount",'数量'],
-    ["input_total_price",'总价'],
-    ["input_day_purchase",'购置日期'],
-    ];
-    for (let item of input_list){
-        if (document.getElementById(item[0]).value.trim()==''){
-            info_wp_offline_luru(item[1]+'未输入');
-            return false;
-        }
-    }
-    
-    var item_len=[
-    ['input_class','分类',50],
-    ['input_name','名称',150],
-    ['input_unit','单位',10],
-    ['input_address','地址',100],
-    ['input_tag','子类',50],
-    ];
-    for (let item of item_len){
-        var value=document.getElementById(item[0]).value.trim();
-        if (value.length>item[2]){
-            info_wp_offline_luru('【'+value+'】'+item[1]+'长度为'+item[0].length+'超过'+item[2]);
-            return false;
-        }
-    }
-    
-    var number_list=[
-    ['input_amount','数量'],
-    ['input_total_price','总价'],    
-    ];
-      
-    for (let one_number of number_list){
-        var value=document.getElementById(one_number[0]).value.trim();
-        if (isNaN(value) || value==''){ //isNaN('')==false - 保留注释
-            info_wp_offline_luru(one_number[1]+'非数字');
-            return false;
-        }    
-    }
-   
-    var k_amount=parseFloat(document.getElementById('input_amount').value.trim());
-    if (k_amount<=0){
-        info_wp_offline_luru('数量小于等于0');
-        return false;
-    }
-
-    var k_price=document.getElementById('input_price').value.trim();
-    var k_total_price=parseFloat(document.getElementById('input_total_price').value.trim());
-    
-    if (k_price==''){
-        k_price=k_total_price/k_amount;
-    }
-    else if (isNaN(k_price)){
-        info_wp_offline_luru('单价非数字');
-        return false;
-    }
-    else {
-        k_price=parseFloat(k_price);
-    }
-    
-    number_list=[
-    [k_amount,'数量',0,99999999.999],
-    [k_price,'单价',-999999.99,9999999.99],
-    [k_total_price,'总价',-999999.99,9999999.99],    
-    ];
-    
-    for (let one_number of number_list){
-        if (one_number[0]<one_number[2] || one_number[0]>one_number[3]){
-            info_wp_offline_luru(one_number[1]+'不在'+one_number[2]+'和'+one_number[3]+'之间');
-            return false;
-        }
-    }
-    
-    var bldate=validdate_b(document.getElementById('input_day_purchase').value.trim());
-    if (bldate===false){
-        info_wp_offline_luru('日期格式错误');
-        return false;    
-    }
-    
-    form_content_check_money_b();
-    return true;
-}
-
-function add_wp_offline_luru(){
-    info_wp_offline_luru('');
-    check_wp_offline_luru();
-}
-//-----------------------------
 init_wp_offline_luru();
 if (!is_firefox_b() || !is_local_b()){
     blank_page_b();

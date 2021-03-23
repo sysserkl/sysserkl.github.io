@@ -289,7 +289,7 @@ function menu_klqr(){
     ];
 
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','10rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'⚙','7rem','1rem','1rem','60rem'),'','0rem')+' ');
-    klmenu_check_b('span_table_klqr');
+    //klmenu_check_b('span_table_klqr'); //此行保留 - 保留注释
 }
 
 function help_klqr(){
