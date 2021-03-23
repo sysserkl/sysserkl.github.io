@@ -169,9 +169,9 @@ function more_tools_klrecent(){
     ['html/todolist.htm', 'ToDoList'],
     ['html/txtlistsearch.htm', 'txtlistsearch'],
     ['html/websites_pwa.htm', 'Websites for PWA'],
+    ['html/wp_offline_luru.htm', 'wp offline'],
     ['html/zj_college_search.htm','浙江高考分数'],    
     ['index.htm', '更多资讯'],
-    ['wp_offline_luru.htm', 'wp offline'],
 
     ];
     tools.sort(function (a,b){return a[1].toLowerCase()>b[1].toLowerCase();});
