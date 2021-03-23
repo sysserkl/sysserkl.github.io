@@ -1,5 +1,11 @@
 //单词库
 var enwords=[
+["Paddington", "[ˈpædiŋtən]", "n. 帕丁顿(姓氏)；a surname​; n. 帕丁顿（英国伦敦西部一住宅区）；a former residential borough of Greater London, England, now part of Westminster; an urban area of Westminster, London, noted for its major railway terminus; n. an inner city area of Sydney, New South Wales, Australia"],
+["roofless", "['ruːflɪs] ['ruːfləs]", "adj. 无屋顶的；无屋可住的；无家的；无家可归的；having no roof; without a roof, open to the sky; having no house or home; unsheltered; without the shelter of a house"],
+["sunlit", "['sʌnˌlɪt]", "adj. 阳光照耀的；(似)被日光照射的；receiving light from the sun; lighted by or as if by the sun; illuminated by sunlight"],
+["starlit", "['stɑː(r)lɪt]", "adj. 星光闪耀的；星光灿烂的；with light from the stars; lighted by the stars; starry; lit by stars; illuminated by starlight"],
+["torchlight", "['tɔː(r)tʃˌlaɪt]", "n. 手电筒光；火炬光；火炬的光亮；the light that is produced by an electric torch or by burning torches; light given by torches; the light produced by a flashlight; n. 手电筒；火炬；a torch or flashlight; adj. done or carried on by torchlight"],
+["wineskin", "[ˈwaɪnˌskɪn]", "n. 葡萄酒用皮袋；(整只羊的皮做成的)皮酒囊；the skin of a sheep or goat sewn up and used as a holder for wine; in Eastern countries, a large bag for holding wine, made of the skin of an animal; a bag, usually of goatskin, for carrying wine and having a spigot from which one drinks"],
 ["torchlit", "[ˈtɔːtʃˌlɪt]", "adj. 火炬照耀的；火把照耀的；illuminated by the light of a torch or torches; lighted by torches; lit by torches"],
 ["puppeteer", "UK [ˌpʌpɪ'tɪə(r)] US [ˌpʌpɪ'tɪr]", "n. 演木偶戏的人；操纵木偶的人；拉线木偶表演者；a person who performs with puppets; a person who manipulates puppets; a person who operates, designs, or costumes puppets, or produces puppet shows; a person who uses a puppet; n. (figuratively) someone who is manipulative and thus able to get people to do what they want or events to develop in the way they want, respectively, in a puppet-like manner; vt. 操纵；to control a person, event, or organisation"],
 ["waterskin", "['wɔːtəˌskɪn]", "n. 运水用皮袋； (储水或运水用的)革制水袋；a container of skin to hold water; a container of skin for holding water; a container for water made of skin; the skin of a goat used as a container for water; a bag made from goat skin or the bladder of a cow or sheep, used for storing and dispensing water"],
@@ -8899,7 +8905,7 @@ var enwords=[
 ["starlet", "['stɑːrlət]", "n. 刚入影坛的演员；小明星"],
 ["starlight", "['stɑːrlaɪt]", "n. 星光"],
 ["starring", "[s'tɑːrɪŋ]", "v. 主演（动词star的ing形式）；n. 主演；adj. 主演的"],
-["starry", "['stɑːri]", "adj. 星光照耀的；闪亮的；满天星斗的；星状的；星一般闪亮的；(of the sky) full of stars; looking like a star; (of eyes) shining like stars"],
+["starry", "['stɑːri]", "adj. 星光照耀的；满天星斗的；星一般闪亮的；闪亮的；星状的；(of the sky) full of stars; looking like a star; (of eyes) shining like stars"],
 ["starship", "['stɑːrʃɪp]", "n. 星际飞船"],
 ["star", "[stɑːr]", "n. 星；明星；v. 以星状物装饰；变成演员"],
 ["start", "[stɑːrt]", "v. 开始；出发；震惊；n. 开始；震动；领先优势；起推动作用的外力"],

@@ -127,13 +127,15 @@ function klbase_addons_import_js_b(klbase_list=[],module_list=[],jsdata_list=[])
     var module_path=sele_path+'/module/';
     var jsdata_path=sele_path+'/jsdata/';        
     
+    var result_t=[];
     for (let item of klbase_list){
         var defer_str='';
         if (item.slice(-6,)==',defer'){
             item=item.slice(0,-6);
             defer_str=' defer';
         }
-        document.write('\n<script language="javascript" type="text/javascript" src="'+klbase_path+'klbase_'+item+'.js"'+defer_str+'></script>\n');
+        result_t.push(['js',klbase_path+'klbase_'+item+'.js',defer_str]);
+        //document.write('\n<script language="javascript" type="text/javascript" src="'+klbase_path+'klbase_'+item+'.js"'+defer_str+'></script>\n');
     }
     for (let item of module_list){
         var defer_str='';
@@ -142,10 +144,10 @@ function klbase_addons_import_js_b(klbase_list=[],module_list=[],jsdata_list=[])
             defer_str=' defer';
         }    
         if (item.slice(-3,)=='.js'){
-            document.write('\n<script language="javascript" type="text/javascript" src="'+module_path+item+'"'+defer_str+'></script>\n');
+            result_t.push(['js',module_path+item,defer_str]);
         }
         else if (item.slice(-4,)=='.css'){
-            document.write('<link href="'+module_path+item+'" type="text/css" rel="stylesheet">\n');
+            result_t.push(['css',module_path+item,'']);
         }        
     }
     for (let item of jsdata_list){
@@ -155,9 +157,21 @@ function klbase_addons_import_js_b(klbase_list=[],module_list=[],jsdata_list=[])
             defer_str=' defer';
         }    
         if (item.slice(-3,)=='.js'){
-            document.write('\n<script language="javascript" type="text/javascript" src="'+jsdata_path+item+'"'+defer_str+'></script>\n');
+            result_t.push(['js',jsdata_path+item,defer_str]);
         }    
-    }        
+    }
+    
+    var links_t=[];
+    for (let item of result_t){//不能sort - 保留注释
+        if (item[0]=='js'){
+            document.write('\n<script language="javascript" type="text/javascript" src="'+item[1]+'"'+item[2]+'></script>\n');
+        }
+        else if (item[0]=='css'){
+            document.write('<link href="'+item[1]+'" type="text/css" rel="stylesheet">\n');
+        }
+        links_t.push(item[1]);
+    }
+    console.log(links_t.join('\n')); //此行保留 - 保留注释
 }
 
 function object2array_b(cs_object_array){

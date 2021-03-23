@@ -174,4 +174,5 @@ var digest_global=`
 *nomad
 *seedless
 *newsmonger
+*roofless
 `.trim().split('\n');

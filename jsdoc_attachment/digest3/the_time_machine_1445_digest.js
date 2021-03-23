@@ -20,4 +20,5 @@ var digest_global=`
 *forthwith
 *antennae
 *horticulture
+*sunlit
 `.trim().split('\n');

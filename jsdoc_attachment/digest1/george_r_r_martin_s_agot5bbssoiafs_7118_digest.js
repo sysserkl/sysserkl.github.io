@@ -37,4 +37,6 @@ var digest_global=`
 *puppeteer
 *waterskin
 *snakeskin
+*torchlight
+*wineskin
 `.trim().split('\n');

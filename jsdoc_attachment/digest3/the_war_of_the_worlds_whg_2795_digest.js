@@ -30,4 +30,5 @@ var digest_global=`
 *summerhouse
 *Ripley
 *northwards
+*starlit
 `.trim().split('\n');

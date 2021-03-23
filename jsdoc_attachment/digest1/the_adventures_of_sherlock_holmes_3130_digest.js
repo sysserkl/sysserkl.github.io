@@ -42,4 +42,5 @@ var digest_global=`
 *brewer
 *danseuse
 *cashbox
+*Paddington
 `.trim().split('\n');

@@ -336,7 +336,6 @@ function flot_pie_k(chart_data,csid,label_radius=11/15){
 
 function flot_labelFormatter_k(label, series) {
     return "<div class='div_flot_pie_label'>" + label + "<br/>" + (series.percent).toFixed(2) + "%</div>";
-    //style='font-size:0.9rem; text-align:center; padding:2px; color:black;'
 }
 
 function flot_import_js_k(cslist=[],isdefer=false){
@@ -349,8 +348,15 @@ function flot_import_js_k(cslist=[],isdefer=false){
         blpath=location.href.split('//')[0]+'//'+location.host+'/module/flot/';
     }
     var defer_str=(isdefer?' defer':'');
-    document.write('\n<script language="javascript" type="text/javascript" src="'+blpath+'jquery.flot.min.js"'+defer_str+'></script>\n');
+
+    var result_t=[];
+    result_t.push(blpath+'jquery.flot.min.js');
     for (let item of cslist){
-        document.write('\n<script language="javascript" type="text/javascript" src="'+blpath+'jquery.flot.'+item+'.min.js"'+defer_str+'></script>\n');
+        result_t.push(blpath+'jquery.flot.'+item+'.min.js');
     }
+    
+    for (let item of result_t){
+        document.write('\n<script language="javascript" type="text/javascript" src="'+item+'"'+defer_str+'></script>\n');
+    }
+    console.log(result_t.join('\n')); //此行保留 -保留注释
 }

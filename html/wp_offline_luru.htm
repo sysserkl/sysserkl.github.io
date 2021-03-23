@@ -25,6 +25,7 @@ div#lurudiv{position: fixed; left: 50%; top: 50%; width:auto; height:auto; displ
 </style>
 <link rel="shortcut icon" href="wp_offline/wp_offline512.png" />
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="manifest" href="wp_offline.webmanifest">
 </head>
 <body>
 <h2 style="margin:0;font-size:1.4rem;"><span id="span_title">收支离线登记</span></h2>
@@ -55,6 +56,20 @@ div#lurudiv{position: fixed; left: 50%; top: 50%; width:auto; height:auto; displ
 </div>
 <div id="div_top_bottom"></div>
 <script type="text/javascript">
+// Register service worker to control making site work offline
+if('serviceWorker' in navigator) {
+    navigator.serviceWorker
+        .register('calculator_service_worker.js')
+        .then(function() { 
+            console.log('Calculator Service Worker Registered');
+            document.getElementById('span_title').style.color='blue';            
+        });
+}
+else {
+    console.log('Calculator Service Worker not work');
+    
+}
+//-------------------------
 init_wp_offline_luru();
 if (!is_firefox_b() || !is_local_b()){
     blank_page_b();

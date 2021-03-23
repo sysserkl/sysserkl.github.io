@@ -1,0 +1,30 @@
+{
+  "background_color": "Tomato",
+  "description": "KL wp offline",
+  "display": "fullscreen",
+  "icons": [
+    {
+    "src": "wp_offline_ico/wp_offline512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+    },
+    {
+    "src": "wp_offline_ico/wp_offline256.png",
+    "sizes": "256x256",
+    "type": "image/png"
+    },
+    {
+    "src": "wp_offline_ico/wp_offline128.png",
+    "sizes": "128x128",
+    "type": "image/png"
+    },
+    {
+    "src": "wp_offline_ico/wp_offline64.png",
+    "sizes": "64x64",
+    "type": "image/png"
+    }
+  ],
+  "name": "KL wp offline",
+  "short_name": "wp offline",
+  "start_url": "wp_offline_luru.htm"
+}
