@@ -39,4 +39,7 @@ var digest_global=`
 *snakeskin
 *torchlight
 *wineskin
+*birthmark
+*sleet
+*chewy
 `.trim().split('\n');

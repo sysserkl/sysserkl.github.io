@@ -18,4 +18,5 @@ var digest_global=`
 *pullover
 *hysterical
 *bathrobe
+*undershirt
 `.trim().split('\n');

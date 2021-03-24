@@ -1,5 +1,11 @@
 //单词库
 var enwords=[
+["birthmark", "['bɜː(r)θˌmɑː(r)k]", "n. 胎记；胎痣；a red or brown mark on a person's skin that has been there since they were born; an unusual mark or blemish on the skin at birth: nevus; a blemish or new growth on skin formed before birth, usually brown or dark red; naevus; a minor disfigurement or blemish on a person's skin at birth"],
+["Juliet", "UK [ˈdʒuːlɪɛt] US [ˈdʒuliˌɛt] [ˌdʒuliˈɛt] [ˈdʒuliɪt] [ˈdʒuljɪt] [ˈdʒuliət]", "n. 朱丽叶(女子名)；a female given name from Latin; n. 莎士比亚悲剧《罗米欧与朱丽叶》中的女主角；the heroine of Shakespeare's tragedy 'Romeo and Juliet' who dies for love of Romeo; n. a woman who is or is with a great lover; n. by analogy with the Shakespearean character, a woman who is in love with a man from a family, party, or country opposing that of her own; n. 天卫十一，距天王星第六近的卫星；(astronomy): the sixth moon of the planet Uranus; n. 表示字母J（应该用 Juliett 代表 J），a code word for the letter 'j'; misspelling of 'Juliett' (the letter J in the ICAO spelling alphabet https://en.wiktionary.org/wiki/ICAO_spelling_alphabet)"],
+["sleet", "[sliːt]", "n. 雨夹雪；冻雨；frozen or partly frozen rain; partly melted falling snow or hail or (esp US) partly frozen rain; transparent or translucent precipitation in the form of pellets of ice that are smaller than 5 mm (.2 in); (chiefly US) pellets of ice made of mostly frozen raindrops or refrozen melted snowflakes; (chiefly Britain, Ireland, New England) a mixture of rain and snow; n. 雨淞；雨雪冻结在树木、街道等物体表面形成的薄薄的冰层；the thin coat of ice that forms when sleet or rain freezes on cold surfaces; the icy coating formed when rain freezes on trees, streets, etc; a smooth coating of ice formed on ground or other objects by freezing rain; v. 下雨夹雪；下冻雨；to shower sleet; to shower in the form of sleet; to fall as sleet"],
+["undershirt", "['ʌndə(r)ˌʃɜː(r)t]", "n. （衬衣等里面贴身穿的）背心；贴身内衣；汗衫；a collarless undergarment with or without sleeves; a piece of underwear worn under a shirt, etc. next to the skin; an undergarment worn beneath a shirt, often collarless and sleeveless; an undergarment worn under a blouse or shirt; a collarless, usually pullover undergarment for the torso, usually of cotton and either sleeveless and low-cut or with sleeves, worn chiefly by men and children"],
+["Bucharest", "UK [ˌbuːkəˈrɛst] [ˌbjuːkəˈrɛst] US [ˈbukəˌrɛst] [ˈbjukəˈrɛst]", "n. 布加勒斯特（罗马尼亚的首都）；the capital of Romania, in the southeast. Pop: 1,867,724 (2015 est); n. 罗马尼亚政府；(metonymically): the Romanian government"],
+["chewy", "UK ['tʃuːi] US ['tʃui]", "adj. 需要多嚼的；不易嚼碎的；不易嚼烂的；耐嚼的；难嚼的；有嚼劲的；柔软而会黏着的；(of food) needing to be chewed a lot before it can be eaten; of a consistency requiring chewing; that needs much chewing; not easily chewed, as because of toughness or stickiness; somewhat firm and sticky; having a pliable or springy texture when chewed; n. 口香糖；(Australia, informal): alternative form of chewie ('chewing gum')"],
 ["Paddington", "[ˈpædiŋtən]", "n. 帕丁顿(姓氏)；a surname​; n. 帕丁顿（英国伦敦西部一住宅区）；a former residential borough of Greater London, England, now part of Westminster; an urban area of Westminster, London, noted for its major railway terminus; n. an inner city area of Sydney, New South Wales, Australia"],
 ["roofless", "['ruːflɪs] ['ruːfləs]", "adj. 无屋顶的；无屋可住的；无家的；无家可归的；having no roof; without a roof, open to the sky; having no house or home; unsheltered; without the shelter of a house"],
 ["sunlit", "['sʌnˌlɪt]", "adj. 阳光照耀的；(似)被日光照射的；receiving light from the sun; lighted by or as if by the sun; illuminated by sunlight"],
@@ -2314,7 +2320,7 @@ var enwords=[
 ["combo", "UK ['kɒmbəʊ] US ['kɑːmboʊ]", "n. 小型爵士乐队；组合物"],
 ["comedian", "[kə'miːdiən]", "n. 喜剧演员；滑稽演員"],
 ["comedy", "UK ['kɒmədi] US ['kɑːmədi]", "n. 喜剧；滑稽；幽默事件"],
-["come", "[kʌm]", "v. 来；来到；来取、来拿；成为；达到；接近；摆出 ... 的样子；处于（某个位置）"],
+["come", "[kʌm]", "v. 来；来到；来取；来拿；成为；达到；接近；摆出 ... 的样子；处于（某个位置）"],
 ["comeliness", "['kʌmlɪnɪs] [ˈkʌmlɪnəs]", "n. 清秀；美丽；合宜；适当；the quality of being good looking and attractive; quality of being comely; beauty, attractiveness; "],
 ["comely", "['kʌmli]", "adj. 清秀的；美丽的；合适的"],
 ["comet", "UK ['kɒmɪt] US ['kɑːmət] [ˈkɑːmɪt]", "n. 彗星；扫帚星；a mass of ice and dust that moves around the sun and looks like a bright star with a tail"],

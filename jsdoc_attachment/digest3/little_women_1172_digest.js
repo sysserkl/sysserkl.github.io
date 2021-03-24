@@ -43,4 +43,5 @@ var digest_global=`
 *Mendelssohn
 *sisterly
 *Rousseau
+*Juliet
 `.trim().split('\n');
