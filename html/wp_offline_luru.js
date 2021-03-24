@@ -6,6 +6,22 @@ function init_wp_offline_luru(){
     popup_selection_money_b();
     calculator_generate_money_b();
     read_wp_offline_luru();
+    
+    var list_t=[
+    "input_class",
+    "input_name",
+    "input_unit",
+    "input_amount",
+    "input_price",
+    "input_total_price",
+    "input_address",
+    //"input_day_purchase", //购置日期忽略 - 保留注释
+    "input_tag",
+    ];
+    for (let item of list_t){
+        document.getElementById(item).setAttribute('onkeyup',"javascript:if (event.key=='Enter'){submit_wp_offline_luru();}");
+    }
+    document.getElementById('input_day_purchase').value=date2str_b();
 }
 
 function menu_wp_offline_luru(){
@@ -216,6 +232,7 @@ function check_wp_offline_luru(cstype='添加'){
                 return false;
             }
         }
+        document.getElementById('input_class').value='';
         alert(cstype+'完成，原有记录'+old_count+'条，现有记录'+count_wp_offline_luru()+'条');
         read_wp_offline_luru();
         cancel_edit_wp_offline_luru(true);
@@ -296,7 +313,10 @@ function read_wp_offline_luru(){
     var blsum_this_page=0;
     [bljg,blamount_total,blamount_this_page,blsum_this_page]=table_detail_money_b(0,'',-1,false,'wp_offline_luru',true,true);
     document.getElementById('divhtml').innerHTML=bljg;
-    document.getElementById('td_status_wp').innerHTML='共有记录 <span style="color:red;font-weight:bold;">'+csdata.length+'</span> 条；数量累计：<span style="color:blue;font-weight:bold;">'+blamount+'</span>；总额累计：<span style="color:blue;font-weight:bold;">'+blsum+'</span>￥';
+    var ostatus=document.getElementById('td_status_wp');
+    if (ostatus){
+        ostatus.innerHTML='共有记录 <span style="color:red;font-weight:bold;">'+csdata.length+'</span> 条；数量累计：<span style="color:blue;font-weight:bold;">'+blamount+'</span>；总额累计：<span style="color:blue;font-weight:bold;">'+blsum+'</span>￥';
+    }
 }
 
 function add_or_edit_wp_offline_luru(cstype){
@@ -381,4 +401,8 @@ function cancel_edit_wp_offline_luru(cscancel=true){
     if (cscancel){
         current_id_wp_offline_luru_global=-1;
     }
+}
+
+function submit_wp_offline_luru(){
+    document.getElementById('span_submit').click();
 }

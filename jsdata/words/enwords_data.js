@@ -3830,7 +3830,7 @@ var enwords=[
 ["federal", "['fedərəl]", "adj. 联邦制的；联邦政府的；同盟的；n. 联邦主义者；同盟盟友"],
 ["federalism", "['fed(ə)rəlɪz(ə)m]", "n. 联邦主义；联邦制度；联邦制；a federal system of government; belief in a federal system of government; the federal principle of government or organization; (capitalized): Federalist principles; (capitalized): the principles of the Federalist Party"],
 ["federation", "[ˌfedə'reɪʃn]", "n. 联邦；联盟；联合；（俱乐部、工会等的）联合会"],
-["fed", "[fed]", "n. [美口]联邦政府官员；联邦调查局人员；动词feed的过去式和过去分词"],
+["fed", "[fed]", "n. [美口]联邦政府官员；联邦调查局人员；v. 动词 feed 的过去式和过去分词"],
 ["feeble", "['fiːb(ə)l]", "adj. 衰弱的；虚弱的；无力的；无效的；缺乏决心的；weak and without energy, strength, or power; very weak; weak intellectually or morally; lacking in force, strength, or effectiveness; not effective or good; not showing energy or effort; markedly lacking in strength; inadequate; unconvincing; easily influenced or indecisive; infirm; easily broken; frail"],
 ["feedback", "['fiːdbæk]", "n. 反馈；反馈意见"],
 ["feed", "[fiːd]", "v. 饲养；喂养；吃饲料；进餐；靠 ... 为生；向 ... 提供；n. 饲养；饲料；一餐"],
