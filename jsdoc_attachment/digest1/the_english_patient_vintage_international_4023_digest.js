@@ -27,4 +27,8 @@ var digest_global=`
 *deceiver
 *earphone
 *Francesca
+*Isaiah
+*Punjab
+*candlelit
+*Williamson
 `.trim().split('\n');

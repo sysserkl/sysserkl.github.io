@@ -19,4 +19,5 @@ var digest_global=`
 *hysterical
 *bathrobe
 *undershirt
+*bigamy
 `.trim().split('\n');

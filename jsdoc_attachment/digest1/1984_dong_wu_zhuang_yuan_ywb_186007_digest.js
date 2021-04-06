@@ -86,4 +86,5 @@ var digest_global=`
 *worthwhile
 *feebly
 *youthfulness
+*gyroscope
 `.trim().split('\n');

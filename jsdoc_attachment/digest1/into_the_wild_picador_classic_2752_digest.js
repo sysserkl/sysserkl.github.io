@@ -9,4 +9,8 @@ var digest_global=`
 *monkish
 *nomadic
 *restroom
+*paperback
+*mountaineer
+*paperbound
+*bigamist
 `.trim().split('\n');

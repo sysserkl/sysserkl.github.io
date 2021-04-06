@@ -49,4 +49,5 @@ var digest_global=`
 *undesirable
 *Nathan
 *inconvenient
+*dirtiness
 `.trim().split('\n');

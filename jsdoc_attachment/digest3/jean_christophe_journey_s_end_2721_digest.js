@@ -36,4 +36,6 @@ var digest_global=`
 *Breton
 *nobility
 *annoyance
+*sewn
+*eavesdropper
 `.trim().split('\n');

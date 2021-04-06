@@ -11,4 +11,5 @@ var digest_global=`
 *yuletide
 *ashtray
 *martini
+*pumpkin
 `.trim().split('\n');

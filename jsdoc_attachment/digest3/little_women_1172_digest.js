@@ -44,4 +44,7 @@ var digest_global=`
 *sisterly
 *Rousseau
 *Juliet
+*dogskin
+*chewing gum
+*spouse
 `.trim().split('\n');

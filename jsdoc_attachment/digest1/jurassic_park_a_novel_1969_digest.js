@@ -4,4 +4,6 @@ var digest_global=`
 *thunderclap
 *biochemist
 *friendliness
+*biweekly
+*subatomic
 `.trim().split('\n');

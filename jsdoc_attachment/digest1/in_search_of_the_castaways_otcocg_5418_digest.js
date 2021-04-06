@@ -11,4 +11,7 @@ var digest_global=`
 *mainmast
 *inopportune
 *muleteer
+*waterfowl
+*prophetic
+*bandicoot
 `.trim().split('\n');

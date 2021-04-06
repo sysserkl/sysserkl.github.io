@@ -48,16 +48,24 @@ function update_wp_offline_luru(){
     }
 }
 
+function innertext_wp_offline_luru(){
+    if (confirm('是否获取正文文本到当前编辑框？')){
+        var blstr=document.getElementById('divhtml').innerText;
+        document.getElementById('textarea_wp_offline_luru').value=blstr;
+    }
+}
+
 function export_import_form_wp_offline_luru(){
     var bldata=specialstr92_b(local_storage_get_b('wp_offline_data'));
     var postpath=postpath_b();
 	var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php" name="form_fav_bible" target=_blank>\n';
     bljg=bljg+'<textarea name="textarea_wp_offline_luru" id="textarea_wp_offline_luru" style="height:20rem;">'+bldata+'</textarea>';
     bljg=bljg+'<p>';
-    bljg=bljg+'<span class="aclick" onclick="javascript:document.getElementById(\'div_export_import\').innerHTML=\'\';">Close</span> ';        
-    bljg=bljg+'<span class="aclick" onclick="javascript:update_wp_offline_luru();">更新</span> ';    
+    bljg=bljg+'<span class="aclick" onclick="javascript:document.getElementById(\'div_export_import\').innerHTML=\'\';">Close</span> ';      
+    bljg=bljg+'<span class="aclick" onclick="javascript:update_wp_offline_luru();">更新</span> ';          
+    bljg=bljg+'<span class="aclick" onclick="javascript:innertext_wp_offline_luru();">innerText</span> ';    
     bljg=bljg+textarea_buttons_b('textarea_wp_offline_luru','清空,复制,发送到临时记事本,发送地址');
-    bljg=bljg+'</p></form>';
+    bljg=bljg+'</p></form>\n';
     document.getElementById('div_export_import').innerHTML=bljg;
 }
 
@@ -315,7 +323,7 @@ function read_wp_offline_luru(){
     document.getElementById('divhtml').innerHTML=bljg;
     var ostatus=document.getElementById('td_status_wp');
     if (ostatus){
-        ostatus.innerHTML='共有记录 <span style="color:red;font-weight:bold;">'+csdata.length+'</span> 条；数量累计：<span style="color:blue;font-weight:bold;">'+blamount+'</span>；总额累计：<span style="color:blue;font-weight:bold;">'+blsum+'</span>￥';
+        ostatus.innerHTML='共有记录 <span style="color:red;font-weight:bold;">'+csdata.length+'</span> 条；数量累计：<span style="color:blue;font-weight:bold;">'+blamount.toFixed(3)+'</span>；总额累计：<span style="color:blue;font-weight:bold;">'+blsum.toFixed(2)+'</span>￥';
     }
 }
 

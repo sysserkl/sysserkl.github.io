@@ -139,7 +139,7 @@ function list_tr_money_b(csarr,csxl,cssimple=false,csluru_php='wpluru.php',csnol
 	bljg=bljg+' / '+csarr[11].toFixed(3)+csarr[10]+' / '+csarr[12].toFixed(2);
 	bljg=bljg+' '+color_money_b(csarr);
     if (csarr[7]!=='忽略' || csarr[8]!=='忽略' || csarr[9]!=='忽略'){
-	    bljg=bljg+' <font color=#c0c0c0>/ 登记 '+csarr[7]+' '+csarr[8]+' '+csarr[9]+'</font>';
+	    bljg=bljg+' <font class="font_bookkeeping_info_wp" color=#c0c0c0>/ 登记 '+csarr[7]+' '+csarr[8]+' '+csarr[9]+'</font>';
     }
     bljg=bljg+'</td>';
 	bljg=bljg+'<td align=right nowrap width=6% style="font-size:1.45rem;font-weight:600;">'+csarr[13].toFixed(2)+'</td>';
@@ -179,13 +179,18 @@ function from_day_money_b(csday){
             }
             fromarr[item[5]][1]=fromarr[item[5]][1]+item[13] ;
         }
-        var bljg='';
+        
+        var fromarr2=object2array_b(fromarr);
+        fromarr2.sort(function (a,b) {return zh_sort_b(a,b,false,0);});
+        
+        var bljg=[];
         var blsum=0;
-        for (let blxl in fromarr){
-            bljg=bljg+'<tr><td nowrap>'+(fromarr[blxl][0]==""?"无出处":fromarr[blxl][0])+'</td><td align=right>'+fromarr[blxl][1].toFixed(2)+'</td></tr>';
-            blsum=blsum+fromarr[blxl][1];
+        for (let item of fromarr2){
+            var bladdress=(item[0]==""?"无出处":item[0]);
+            bljg.push('<tr><td nowrap>'+bladdress+'</td><td align=right>'+item[1].toFixed(2)+'</td></tr>');
+            blsum=blsum+item[1];
         }
-        bljg=bljg+'<tr><td>合计</td><td align=right>'+blsum.toFixed(2)+'</td></tr>';
+        bljg=bljg.join('\n')+'<tr><td>合计</td><td align=right>'+blsum.toFixed(2)+'</td></tr>';
         ospan.innerHTML='<table>'+bljg+'</table>';
         popup_show_hide_b('popup_'+csday);
     }
@@ -283,7 +288,7 @@ function style_money_b(csedittype){
 
 function popup_selection_money_b(){
     function sub_popup_selection_money_b_generate(cslist,span_name,popup_name,input_name){
-        cslist.sort(zh_sort_b);
+        cslist.sort(function (a,b) {return zh_sort_b(a,b);});
         var bljg='';
         for (let item of cslist) {
             bljg=bljg+'<div style="margin-bottom:1rem;display:inline-block;font-weight:300;font-size:1.5rem;"><span class="span_box" style="padding:0.5rem;" onclick="javascript:document.getElementById(\''+input_name+'\').value=\''+item+'\';popup_show_hide_b(\''+popup_name+'\');">'+item+'</span></div>';

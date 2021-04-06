@@ -507,4 +507,8 @@ var digest_global=`
 *daylong
 *Brittany
 *cannoneer
+*inconveniently
+*sealskin
+*unsanitary
+*handrail
 `.trim().split('\n');

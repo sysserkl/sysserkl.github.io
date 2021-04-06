@@ -42,4 +42,13 @@ var digest_global=`
 *birthmark
 *sleet
 *chewy
+*stableboy
+*wolfskin
+*sleepwalker
+*hellhound
+*seaworthy
+*skinless
+*unseaworthy
+*deerskin
+*pinewood
 `.trim().split('\n');

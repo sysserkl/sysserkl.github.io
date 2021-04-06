@@ -1316,12 +1316,12 @@ function enwords_mini_search_frame_form_b(cstype='s'){
 function enwords_recent_search_b(csword='',cstype=''){
     if (cstype=='mini'){
         var recent_search_str='<p id="p_recent_search" style="line-height:'+(ismobile_b()?'200':'210')+'%;">';
-        return recent_search_str+recent_search_b('recent_search_kle',csword,'enwords_mini_search_b','',[],25,false)+'</p>';
+        return recent_search_str+recent_search_b('recent_search_kle',csword,'enwords_mini_search_b','',['🥚','✏'],25,false)+'</p>';
     }
     else {
         var odiv=document.getElementById('div_recent_search');
         if (odiv){
-            odiv.innerHTML=recent_search_b('recent_search_kle',csword,'wordsearch_kle','',[],25,false);    
+            odiv.innerHTML=recent_search_b('recent_search_kle',csword,'wordsearch_kle','',['🥚','✏'],25,false);    
             mouseover_mouseout_oblong_span_b(odiv.querySelectorAll('span.oblong_box'));
         }
         return '';
