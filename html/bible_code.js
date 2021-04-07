@@ -524,6 +524,7 @@ function fav_update_bible(){
 function fav_sort_bible(csarray){
     var result_t=[];
     for (let item of csarray){
+        item=item.replace(new RegExp('#','g'),'').trim();
         var blvalue=parseInt(item);
         if (isNaN(blvalue)){continue;}
         result_t.push(blvalue);
@@ -640,7 +641,7 @@ function fav_export_import_form_bible(){
     var fav_list=local_storage_get_b('fav_lines_bible',-1,true);
     var postpath=postpath_b();
 	var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php?type=bible_fav" name="form_fav_bible" target=_blank>\n';
-    bljg=bljg+'<textarea name="textarea_fav_bible" id="textarea_fav_bible" style="height:20rem;">'+fav_list.join('\n')+'</textarea>';
+    bljg=bljg+'<textarea name="textarea_fav_bible" id="textarea_fav_bible" style="height:20rem;">#'+fav_list.join('#\n#')+'#</textarea>';
     bljg=bljg+'<p>';
     bljg=bljg+'<span class="aclick" onclick="javascript:document.getElementById(\'div_search_statistics\').innerHTML=\'\';">Close</span> ';        
     bljg=bljg+'<span class="aclick" onclick="javascript:fav_update_bible();">更新</span> ';    

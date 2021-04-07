@@ -232,7 +232,8 @@ function txtmenus_kltxt_b(cstype=''){
     var menu_digest=[
     '<span class="span_menu" onclick="javascript:'+str_t+'reading_mode_kltxt_b();">进入阅读状态</span>',    
     '<span class="span_menu" onclick="javascript:'+str_t+'digest_temp_add_kltxt_b();">添加临时摘要</span>',
-    '<span class="span_menu" onclick="javascript:'+str_t+'digest_lines_kltxt_b();">显示摘要段落</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'digest_lines_kltxt_b();">显示全部摘要段落</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'digest_lines_kltxt_b(500);">显示含有最新添加的500条摘要的段落</span>',    
     '<span class="span_menu" onclick="javascript:'+str_t+'digest_excluded_kltxt_b();">查看未包含或重复的摘要</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'digest_statistics_kltxt_b();">摘要分布统计</span>',
     ];
@@ -255,7 +256,7 @@ function txtmenus_kltxt_b(cstype=''){
     if (cstype!=='digest'){
         bljg=bljg+klmenu_b(menu_general,'','10rem','',fontsize);
         bljg=bljg+klmenu_b(menu_dir,'🔍',menu_dir_width,'',fontsize);
-        bljg=bljg+klmenu_b(menu_digest,'🖊','14rem','',fontsize);       
+        bljg=bljg+klmenu_b(menu_digest,'🖊','20rem','',fontsize);       
         bljg=bljg+colors;
         bljg=bljg+klmenu_b(menu_config,'⚙','10rem','',fontsize);
         if (cstype!=='reader'){
@@ -2392,7 +2393,7 @@ function digest_number_2_txt_kltxt_b(){
     console.log('digest_number_2_txt_kltxt_b() 费时：'+(performance.now() - t0) + " milliseconds");
 }
 
-function digest_lines_kltxt_b(){
+function digest_lines_kltxt_b(recent_lines=-1){
     var t0 = performance.now();
 	var start_lineno;
 	var end_lineno;
@@ -2405,8 +2406,15 @@ function digest_lines_kltxt_b(){
     var blcount=0;
     digest_number_2_txt_kltxt_b();
     
+    if (recent_lines==-1){
+        var digest_list=[].concat(digest_global);
+    }
+    else {
+        var digest_list=digest_global.slice(-1*recent_lines,);
+    }
+    
     var scanned_number=new Set();
-    for (let one_digest of digest_global){
+    for (let one_digest of digest_list){
         if (one_digest=='' || one_digest.substring(0,1)=='#'){continue;}
 
         var all_scanned=true;
@@ -2441,22 +2449,29 @@ function digest_lines_kltxt_b(){
         odiv.innerHTML='<ol>'+bljg+'</ol>';
     }
     sup_kleng_words_b();
-    digest_show_kltxt_b();
+    digest_show_kltxt_b(false,recent_lines);
     console.log('digest_lines_kltxt_b() 费时：'+(performance.now() - t0) + " milliseconds");
 }
 
-function digest_show_kltxt_b(){
-    digest_number_2_txt_kltxt_b();
-    var digest_len=digest_global.length;
-    if (digest_len.length==0){return;}
+function digest_show_kltxt_b(do_number_2_txt=true,recent_lines=-1){
+    if (do_number_2_txt){
+        digest_number_2_txt_kltxt_b();
+    }
+    if (digest_global.length==0){return;}
     var oinput=document.getElementById('input_digest');
     if (!oinput){return;}
     if (oinput.checked==false){return;}    
     var t0 = performance.now();
     var ospans=document.querySelectorAll('div#divhtml span.txt_content');
 
-    digest_list=[].concat(digest_global);
-    for (let blno=0;blno<digest_len;blno++){
+    if (recent_lines==-1){
+        var digest_list=[].concat(digest_global);
+    }
+    else {
+        var digest_list=digest_global.slice(-1*recent_lines,);
+    }
+    
+    for (let blno=0;blno<digest_list.length;blno++){
         if (digest_list[blno].substring(0,1)=='#'){// && digest_list[blno].slice(-1)!=='#'){
             digest_list[blno]='';   //忽略开头为 # 的 摘要 - 保留注释
         } 
@@ -2468,7 +2483,7 @@ function digest_show_kltxt_b(){
         var oldtxt=ospans[blxl].innerText;
         var oldhtml=ospans[blxl].innerHTML;
         var newhtml=oldhtml;
-        for (let blno=0;blno<digest_len;blno++){
+        for (let blno=0;blno<digest_list.length;blno++){
             var one_digest=digest_list[blno];
             var is_whole_line=false;
             if (one_digest==''){continue;}
@@ -2489,7 +2504,7 @@ function digest_show_kltxt_b(){
             }
          
             newhtml=newhtml.replace(one_digest,'<span style="font-weight:bold;border-bottom:0.15rem solid '+scheme_global['pink']+';">'+one_digest+'</span>');
-            digest_list[blno]='';
+            digest_list[blno]='';   //不重复显示同样的摘要 - 保留注释
             if (is_whole_line){break;}
         }
         ospans[blxl].innerHTML=newhtml;

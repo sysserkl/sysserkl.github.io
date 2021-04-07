@@ -14,4 +14,5 @@ var digest_global=`
 *waterfowl
 *prophetic
 *bandicoot
+*submerge
 `.trim().split('\n');

@@ -50,4 +50,6 @@ var digest_global=`
 *Nathan
 *inconvenient
 *dirtiness
+*philanthropy
+*sharpen
 `.trim().split('\n');

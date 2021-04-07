@@ -38,6 +38,10 @@ function clear_cache_websites_pwa(){
 
 function add_websites_pwa(){
     var websites_list=local_storage_get_b('websites_list_pwa',-1,true);
+    if (websites_list.length>=2000){
+        alert('网址总数不能超过2000');
+        return;
+    }
     var blexample=websites_list[0];
     if (blexample==''){
         blexample='新闻 https://www.thepaper.cn/ 澎湃';
@@ -187,7 +191,7 @@ function search_websites_pwa(cskey=''){
     
     new_list=array_unique_b(new_list);
     new_list.sort(function (a,b){return zh_sort_b(a,b,false);});
-    new_list=new_list.slice(-500,);
+    new_list=new_list.slice(-2000,);
     if (cskey==''){
         localStorage.setItem('websites_list_pwa',new_list.join('\n'));
     }
