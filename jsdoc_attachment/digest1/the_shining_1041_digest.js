@@ -32,4 +32,5 @@ var digest_global=`
 *foreplay
 *nightclothes
 *whorehouse
+*urinal
 `.trim().split('\n');

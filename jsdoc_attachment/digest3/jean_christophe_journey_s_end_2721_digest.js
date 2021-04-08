@@ -38,4 +38,5 @@ var digest_global=`
 *annoyance
 *sewn
 *eavesdropper
+*unlit
 `.trim().split('\n');

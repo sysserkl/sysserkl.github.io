@@ -52,4 +52,5 @@ var digest_global=`
 *dirtiness
 *philanthropy
 *sharpen
+*Venetian
 `.trim().split('\n');

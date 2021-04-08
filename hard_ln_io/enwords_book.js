@@ -735,11 +735,32 @@ function import_words_enbook(cstype){
         case 'new':
             document.getElementById('textarea_new_words').value=all_new_words_global.join(' ');
             break;
+        case 'new2500':
+            var words_t=[].concat(all_new_words_global);
+            var bltotal_t=Math.floor((Math.random()*10)+1);
+            for (let blxl=0;blxl<bltotal_t;blxl++){
+                words_t.sort(randomsort_b);
+            }        
+            document.getElementById('textarea_new_words').value=words_t.slice(0,2500).join(' ');
+            break;            
         case 'old':
-            document.getElementById('textarea_new_words').value=enwords.join(' ');
+            var result_t=[];
+            for (let item of enwords){
+                result_t.push(item[2]);
+            }
+            document.getElementById('textarea_new_words').value=result_t.join('\n');
             break;
         case 'sentence':
-            document.getElementById('textarea_new_words').value=en_sentence_global.join(' ');
+            var bltotal_t=Math.floor((Math.random()*10)+1);
+            for (let blxl=0;blxl<bltotal_t;blxl++){
+                en_sentence_global.sort(randomsort_b);
+            }
+            var list_t=en_sentence_global.slice(0,2000);
+            var result_t=[];
+            for (let item of list_t){
+                result_t.push(item[0]);
+            }
+            document.getElementById('textarea_new_words').value=result_t.join('\n\n');
             break;
     }
 }
@@ -780,15 +801,20 @@ function menu_enbook(){
     var str_t=klmenu_hide_b('#top');
     var klmenu1=[
     '<a href="enwords.htm" onclick="javascript:'+str_t+'" target=_blank>单词库</a>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'import_words_enbook(\'new\');">导入KLWiki和txtbook全部新单词</span>',    
+    '<span class="span_menu" onclick="javascript:'+str_t+'import_words_enbook(\'new2500\');">随机导入2500个新单词</span>',        
+    '<span class="span_menu" onclick="javascript:'+str_t+'max_length_new_words_enbook();">全部新单词中最长的单词</span>',     
+    '<span class="span_menu" onclick="javascript:'+str_t+'import_words_enbook(\'sentence\');">随机导入2000条例句</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'import_words_enbook(\'old\');">导入全部旧单词释义</span>',
+    ];
+    
+    var klmenu2=[
     '<a href="?book=1&continue" onclick="javascript:'+str_t+'">批量统计生词</a>',
     '<span class="span_menu" onclick="javascript:'+str_t+'news_words_statistics_enbook();">显示统计结果</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'compare_form_statistics_enbook();">比较统计数据</span>',
-    '<span class="span_menu" onclick="javascript:'+str_t+'import_words_enbook(\'new\');">导入KLWiki和txtbook全部新单词</span>',    
-    '<span class="span_menu" onclick="javascript:'+str_t+'max_length_new_words_enbook();">全部新单词中最长的单词</span>',     
-    '<span class="span_menu" onclick="javascript:'+str_t+'import_words_enbook(\'sentence\');">导入全部例句</span>',
-    '<span class="span_menu" onclick="javascript:'+str_t+'import_words_enbook(\'old\');">导入全部旧单词</span>',
-    '<span class="span_menu" onclick="javascript:'+str_t+'exclude_words_enbook();">电子书中未包含的旧单词</span>',    
+    '<span class="span_menu" onclick="javascript:'+str_t+'exclude_words_enbook();">电子书中未包含的旧单词</span>',        
     ];
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_b(klmenu1,'','18rem','1rem','1rem','60rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','18rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'🧮','14rem','1rem','1rem','60rem'),'','0rem')+' ');
+    
 }

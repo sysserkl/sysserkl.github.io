@@ -602,6 +602,30 @@ function en_sentence_mobile_b(){
     }
 }
 
+function en_word_temp_important_init_b(){
+    if (typeof en_words_temp_important_global == 'undefined'){
+        en_words_temp_important_global=[];  //全局变量 - 保留注释
+    }
+}
+
+function en_word_temp_important_change_b(ospan){
+    var csword=ospan.innerText;
+    en_word_temp_important_init_b();
+    if (ospan.style.color==''){
+        if (!en_words_temp_global.includes(csword) || en_words_temp_important_global.includes(csword)){return;}
+        en_words_temp_important_global.push(csword);
+        ospan.style.color=scheme_global['a-hover'];
+    }
+    else {
+        var blat=en_words_temp_important_global.indexOf(csword);
+        if (blat>=0){
+            en_words_temp_important_global.splice(blat,1);
+            ospan.style.color='';
+        }
+    }
+    enwords_temp_2_local_storage_b(en_words_temp_global);
+}
+
 function en_word_temp_change_b(ospan,csword,cstype=''){
     //cstype: add remove switch - 保留注释
     if (cstype!==''){
@@ -622,12 +646,12 @@ function en_word_temp_change_b(ospan,csword,cstype=''){
                 do_change=true;
             }
             if (do_change){
-                localStorage.setItem('enwords_temp',en_words_temp_global.join('\n'));
+                enwords_temp_2_local_storage_b(en_words_temp_global);
             }
         }
     }
     else {
-        var recent_bookmark=(localStorage.getItem('enwords_recent_bookmark') || "").trim();
+        var recent_bookmark=(localStorage.getItem('enwords_recent_bookmark') || '').trim();
         if (csword==recent_bookmark){
             //如果单词是书签，则不可剔除 - 保留注释
             return;
@@ -637,14 +661,16 @@ function en_word_temp_change_b(ospan,csword,cstype=''){
             var blat=en_words_temp_global.indexOf(csword);
             if (blat>=0){
                 en_words_temp_global.splice(blat,1);
-                localStorage.setItem('enwords_temp',en_words_temp_global.join('\n'));
+                
+                en_word_temp_important_init_b();
+                var blat2=en_words_temp_important_global.indexOf(csword);
+                if (blat2>=0){
+                    en_words_temp_important_global.splice(blat2,1);
+                }
+                enwords_temp_2_local_storage_b(en_words_temp_global);
             }
         }
     }
-}
-
-function en_word_temp_get_b(){
-    en_words_temp_global=local_storage_get_b('enwords_temp',-1,true);
 }
 
 function en_day_old_words_b(daynumber,cstype,array_num_t){
@@ -723,13 +749,18 @@ function en_words_temp_list_b(){
     for (let blxl=0;blxl<bllen;blxl++){
         var item=enwords[blxl];
         if (en_words_temp_global.includes(item[0])){
-            if (blxl>100){
-                list_t.push([item,en_words_temp_global.indexOf(item[0])]); //单词数组 和 序号 - 保留注释
-            }
-            else {
-                //将最新的100个单词排在前头 - 保留注释
+            if (blxl<=100){
+                //将 最新的100个单词 排在前头 - 保留注释
                 list_t.push([item,bllen-blxl]);
             }
+            else if (en_words_temp_important_global.includes(item[0])){
+                //将 重要临时单词 排在前头 - 保留注释            
+                list_t.push([item,bllen-101]);
+            }
+            else {
+                list_t.push([item,en_words_temp_global.indexOf(item[0])]); //单词数组 和 序号 - 保留注释
+            }            
+
             list_simple_t.push(item[0]);
         }
     }
@@ -811,7 +842,10 @@ function popup_words_links_b(event,csword){
         console.log('popup_words_links_b()','未发现 div_enword_search_links');
         return;
     }
-    odiv.innerHTML='<b>'+csword+'</b><br />'+en_word_links_b(csword,true)+' <span class="span_box" onclick="javascript:this.parentNode.style.display=\'none\';">❌</span>';
+    var bljg='<span style="cursor:pointer;font-weight:bold;'+(en_words_temp_important_global.includes(csword)?'color:'+scheme_global["a-hover"]+';':'')+'" onclick="javascript:en_word_temp_important_change_b(this);">'+csword+'</span> ';
+    bljg=bljg+'<br />'+en_word_links_b(csword,true);
+    bljg=bljg+' <span class="span_box" onclick="javascript:this.parentNode.style.display=\'none\';">❌</span>';
+    odiv.innerHTML=bljg;
     odiv.style.display='';  //否则rect的值为0 - 保留注释
     var rect=odiv.getBoundingClientRect();
     odiv.style.left=Math.min(event.pageX,document.body.scrollWidth-rect.width);
@@ -915,7 +949,7 @@ function en_words_temp_textarea_b(divname,calljsname=''){
     en_word_temp_get_b();
     var postpath=postpath_b();
 	var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php?type=enwords" name="form_word_temp" target=_blank>\n';
-    bljg=bljg+'<textarea name="textarea_word_temp" id="textarea_word_temp" style="height:'+(ismobile_b()?'10':'20')+'rem;">'+en_words_temp_global.join('\n')+'</textarea>';
+    bljg=bljg+'<textarea name="textarea_word_temp" id="textarea_word_temp" style="height:'+(ismobile_b()?'10':'20')+'rem;">'+en_word_temp_get_b(true)+'</textarea>';
     bljg=bljg+'<p>';
     bljg=bljg+'<span class="aclick" onclick="javascript:document.getElementById(\''+divname+'\').innerHTML=\'\';">关闭</span> ';
     if (calljsname!==''){
@@ -946,11 +980,40 @@ function en_words_temp_update_b(divname){
         var list_t=otextarea.value.trim().split('\n');
         list_t=array_unique_b(list_t);
         if (confirm("是否更新("+list_t.length+")？")){
-            var blstr=list_t.join('\n');
-            localStorage.setItem('enwords_temp',blstr);
+            //var blstr=list_t.join('\n');
+            //localStorage.setItem('enwords_temp',blstr);
+            enwords_temp_2_local_storage_b(list_t);
             en_words_temp_textarea_b(divname);
         }
     }
+}
+
+function en_word_temp_get_b(is_raw=false){
+    if (is_raw){
+        return local_storage_get_b('enwords_temp');
+    }
+    en_words_temp_important_global=[];  //全局变量 - 保留注释
+    en_words_temp_global=local_storage_get_b('enwords_temp',-1,true);
+    for (let blxl=0;blxl<en_words_temp_global.length;blxl++){
+        if (en_words_temp_global[blxl].substring(0,1)=='*'){
+            en_words_temp_global[blxl]=en_words_temp_global[blxl].substring(1,);
+            en_words_temp_important_global.push(en_words_temp_global[blxl]);
+        }
+    }
+}
+
+function enwords_temp_2_local_storage_b(csarray){
+    en_word_temp_important_init_b();
+    var result_t=[];
+    for (let item of csarray){
+        if (en_words_temp_important_global.includes(item)){
+            result_t.push('*'+item);
+        }
+        else {
+            result_t.push(item);
+        }
+    }
+    localStorage.setItem('enwords_temp',result_t.join('\n'));
 }
 
 function enwords_array_to_html_b(csarray,showstatus=true,isrecent=false){

@@ -1175,11 +1175,12 @@ function bookmarks_get_kltxt_b(current_book_today_bookmark_only_one=false,return
             newest_datetime=abook[5];
         }
         
+        var blno='<td align=right>'+(blxl+1)+'</td>';
         if (csbookname_global==abook[1]){
-            result_t.push('<td align=right>'+(blxl+1)+'</td><td style="min-width:10rem;"><a href="javascript:void(null);" onclick="javascript:getlines_kltxt_b('+abook[2]+','+abook[3]+');">'+str_t+'</a></td>'+blstr);
+            result_t.push(blno+'<td style="min-width:10rem;"><span class="span_link" onclick="javascript:getlines_kltxt_b('+abook[2]+','+abook[3]+');">'+str_t+'</span></td>'+blstr);
         }
         else {
-            result_t.push('<td align=right>'+(blxl+1)+'</td><td style="min-width:10rem;"><a href="?'+abook[1]+'&line='+abook[2]+'_'+abook[3]+'">'+str_t+'</a></td>'+blstr);
+            result_t.push(blno+'<td style="min-width:10rem;"><a href="?'+abook[1]+'&line='+abook[2]+'_'+abook[3]+'">'+str_t+'</a></td>'+blstr);
         }
     }
         
@@ -1239,14 +1240,19 @@ function bookmarks_get_kltxt_b(current_book_today_bookmark_only_one=false,return
         bookmarks_statistics_kltxt_b(bookmark_list,reading_lines,current_book_percent,csbookname_global,csbooklist_sub_global_b[csbookno_global_b][1],return_full);
     }
 
+    var today=date2str_b();
     var otds=document.querySelectorAll('table#table_bookmarks td.td_bookmark_datetime');
     for (let one_td of otds){
+        if (one_td.innerText.substring(0,10)!==today && one_td.innerText!==newest_datetime){continue;}  //最新日期不一定是今天 - 保留注释
         if (one_td.innerText==newest_datetime){
-            one_td.parentNode.style.backgroundColor=scheme_global['pink'];
-            one_td.parentNode.setAttribute('onmouseover','javascript:this.style.backgroundColor="'+scheme_global['button']+'";');
-            one_td.parentNode.setAttribute('onmouseout','javascript:this.style.backgroundColor="'+scheme_global['pink']+'";');
-            break;
+            var blcolor=scheme_global['pink'];
         }
+        else {
+            var blcolor=scheme_global['skyblue'];
+        }
+        one_td.parentNode.style.backgroundColor=blcolor;
+        one_td.parentNode.setAttribute('onmouseover','javascript:this.style.backgroundColor="'+scheme_global['button']+'";');
+        one_td.parentNode.setAttribute('onmouseout','javascript:this.style.backgroundColor="'+blcolor+'";');
     }
 }
 
@@ -1274,11 +1280,16 @@ function bookmarks_statistics_kltxt_b(bookmark_list,reading_lines,current_book_p
     var blstatsitics='';
 
     var current_line_no_max=0;
+    var filelist_len=0;
     for (let item of bookmark_list){
         if (item[1]!==bookid){continue;}
-        current_line_no_max=Math.max(current_line_no_max,item[2]);
+        if (current_line_no_max<item[2]){
+            current_line_no_max=item[2];
+            filelist_len=item[4];
+        }
     }
-    if (current_line_no_max<filelist.length){
+    
+    if (current_line_no_max<filelist_len){
         current_line_no_max=current_line_no_max-1;  //书签行号-1 - 保留注释
     }
     if (reading_lines.length>=2){
@@ -1291,16 +1302,20 @@ function bookmarks_statistics_kltxt_b(bookmark_list,reading_lines,current_book_p
             var read_days=reading_lines.length;
         }
         var day_end=reading_lines.slice(-1)[0][0];
+        if (current_line_no_max<filelist_len){
+            var day_end=validdate_b(date2str_b());
+        }
         var day_all=(day_end - day_start) / 86400000 + 1;
         blstatsitics='<p style="margin-left:0.5rem;"><b>《'+bookname+'》</b>';
         blstatsitics=blstatsitics+'开始阅读日期：'+date2str_b('-',day_start)+' '+day_2_week_b(day_start)+'；结束日期：'+date2str_b('-',day_end)+' '+day_2_week_b(day_end)+'；总天数：'+day_all+'天；';
         
         var lines_per_day_real=current_line_no_max/read_days;
         var lines_per_day_all=current_line_no_max/day_all;
-        blstatsitics=blstatsitics+'实际阅读天数：'+read_days+'天；完成：'+(current_line_no_max*100/filelist.length).toFixed(2)+'%；平均每天阅读：'+lines_per_day_real.toFixed(0)+'—'+lines_per_day_all.toFixed(0)+'行。';
-        if (current_line_no_max<filelist.length){
-            var plan_days_real=Math.ceil((filelist.length-current_line_no_max)/lines_per_day_real);
-            var plan_days_all=Math.ceil((filelist.length-current_line_no_max)/lines_per_day_all);
+        blstatsitics=blstatsitics+'实际阅读天数：'+read_days+'天；总行数：'+filelist_len+'；完成：'+(current_line_no_max*100/filelist_len).toFixed(2)+'%；平均每天阅读：'+lines_per_day_real.toFixed(0)+'—'+lines_per_day_all.toFixed(0)+'行。';
+
+        if (current_line_no_max<filelist_len){
+            var plan_days_real=Math.ceil((filelist_len-current_line_no_max)/lines_per_day_real);
+            var plan_days_all=Math.ceil((filelist_len-current_line_no_max)/lines_per_day_all);
             blstatsitics=blstatsitics+'完成阅读还需要：'+plan_days_real+'—'+plan_days_all+'天；即，'+next_day_b('',plan_days_real)+'—'+next_day_b('',plan_days_all)+'。';
         }
         blstatsitics=blstatsitics+'</p>';
