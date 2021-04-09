@@ -5,4 +5,5 @@ var digest_global=`
 *Uranus
 *exhaustless
 *Pittsburgh
+*Sumatra
 `.trim().split('\n');

@@ -13,4 +13,5 @@ var digest_global=`
 *mountaineer
 *paperbound
 *bigamist
+*rattlesnake
 `.trim().split('\n');

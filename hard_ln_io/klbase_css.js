@@ -858,6 +858,7 @@ function popular_colors_b(){
     "#094525,#8FCDA0,#486275",
     "#0A6778,#A3D5C1,#2005E0",
     "#0B0F0C,#77C0AD,#9A0712",
+    "#0B2823,#E7F2D9,#ABB7E4",
     "#0C1E1F,#9CC3C7,#F5A9FF",
     "#0D2636,#ACC1F9,#1D47A3",
     "#0E669A,#CED7CA,#DE7C45",
@@ -997,6 +998,7 @@ function popular_colors_b(){
     "#FC99CB,#523270,#D2B9E2",
     "#FDDDF1,#2695A0,#C654E7",
     "#FFEA77,#25565C,#4FA96A",
+    "#FFFFFF,#046295,#233610",
     "#ffffff,#37342F,#703AF3",    
     "#FFFFFF,#566778,#81B538",    
     "indigo,ivory",
@@ -1365,10 +1367,26 @@ function alarm_interval_sound_b(){
         if (typeof(kl_alarm_obj_global)!=='undefined'){
             clearInterval(kl_alarm_obj_global);
         }
-        var blm=date_2_ymd_b(false,'M');
-        var bls=date_2_ymd_b(false,'s');
-        var blinterval=kl_alarm_interval_global - blm % kl_alarm_interval_global;
-        kl_alarm_obj_global=setInterval(alarm_interval_sound_b,Math.max(0,blinterval*60*1000-bls*1000));   //不能使用setTimeout，有可能重复运行 - 保留注释
+        var blm=date_2_ymd_b(false,'M');    //当前分钟 - 保留注释
+        var bls=date_2_ymd_b(false,'s');    //当前分钟已度过的秒数 - 保留注释
+        if (kl_alarm_start_time_global===-1){
+            kl_alarm_start_time_global=new Date().getTime()+(5 - blm % 5)*60*1000-bls*1000;   //先转到 5 或 0 分钟处 - 保留注释
+            console.log('alarm_interval_sound_b','start time',new Date(kl_alarm_start_time_global));
+        }
+        
+        var blminutes=(new Date().getTime()-kl_alarm_start_time_global)/1000/60;
+        if (blminutes<0){
+            var blinterval=Math.abs(blminutes)+kl_alarm_interval_global;
+        }
+        else{
+            var m_times=blminutes/kl_alarm_interval_global;
+            var blinterval=kl_alarm_interval_global-(m_times-Math.floor(m_times))*kl_alarm_interval_global;
+        }
+        console.log('alarm_interval_sound_b', new Date(),Math.floor(blinterval)+'m'+((blinterval-Math.floor(blinterval))*60).toFixed(3)+'s');
+        kl_alarm_obj_global=setInterval(alarm_interval_sound_b,blinterval*60*1000); 
+        
+        //var blinterval=kl_alarm_interval_global - blm % kl_alarm_interval_global;   //下一次播放剩余分钟 - 保留注释
+        //kl_alarm_obj_global=setInterval(alarm_interval_sound_b,Math.max(0,blinterval*60*1000-bls*1000));   //不能使用setTimeout，有可能重复运行 - 保留注释
     }
     
     function sub_alarm_interval_sound_b_one_sound(){
@@ -1381,7 +1399,7 @@ function alarm_interval_sound_b(){
         }
         sound_b(sound_type[blxl]);
         blxl=blxl+1;
-        setTimeout(sub_alarm_interval_sound_b_one_sound,1000);
+        setTimeout(sub_alarm_interval_sound_b_one_sound,1000);  //间隔1秒播放 - 保留注释
     }
     //-----------------------------------------
     if (kl_alarm_interval_global==-1){
@@ -1422,5 +1440,6 @@ function alarm_interval_set_b(csinterval=5){
     }
     console.log('整点报时('+csinterval+')开始');
     kl_alarm_interval_global=csinterval;    //全局变量 - 保留注释
+    kl_alarm_start_time_global=-1;
     alarm_interval_sound_b();
 }

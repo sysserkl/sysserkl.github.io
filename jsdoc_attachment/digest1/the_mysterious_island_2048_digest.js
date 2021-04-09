@@ -460,4 +460,5 @@ var digest_global=`
 *sportsman
 *torn
 *kingfisher
+*orang
 `.trim().split('\n');
