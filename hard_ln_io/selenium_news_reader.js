@@ -244,7 +244,7 @@ function weibo_at_klsnews(cssite,csstr){
 }
 
 function longtxts_klsnews(cslist,addsitename=false){
-    var str_t='<span class="span_content"><a href="'+cslist[0]+'" target=_blank style="text-decoration:none;" title="'+cslist[2]+' '+cslist[0]+'" class="a_news_link">';
+    var str_t='<span class="span_content"><a href="'+cslist[0]+'" target=_blank style="text-decoration:none;" title="'+cslist[2]+' '+cslist[0]+'" class="a_news_link" onclick="javascript:this.style.backgroundColor=\''+scheme_global['pink']+'\';">';
     
     var title_t=specialstr_lt_gt_j(cslist[1].trim());
     //替换英文字母边的中文引号为英文引号 - 保留注释
@@ -417,7 +417,7 @@ function finish_site_klsnews(sitename,ospan){
     }
 }
 
-function classify_sites_klsnews(bottom_eng=false,sort_by_day=false){
+function classify_sites_klsnews(bottom_eng=false,sort_by_day=false,show_cn_en=''){
     function sub_classify_sites_klsnews_link(bly,blxl){
         var str_t='<p ';
         if (bly % 2 == 1){
@@ -539,38 +539,52 @@ function classify_sites_klsnews(bottom_eng=false,sort_by_day=false){
     //[ 1, "豆瓣", "<p style=\"line-height:120%;font-size:1rem;\">1. <a href=\"https://www.douban.com/event/31952137/\" target=_blank style=\"text-decoration:none;\" title=\"2019-03-25 https://www.douban.com/event/31952137/\" class=\"a_news_link\">由废墟再出发 I&#39;d Rather Struggle</a></p>", "", 2 ]
     //分别是：排序分数，网站名，前20条内容，第21条开始的内容，显示序号
     // bljg_list.sort(function (a,b){return zh_sort_b(a,b,false,1);}); - 保留注释
-    if (bottom_eng){
+    if (bottom_eng || ['cn','en'].includes(show_cn_en)){
         var maxnum=0;
         for (let item of bljg_list){
             maxnum=Math.max(maxnum,item[0])+1;  //如果不+1,则 maxnum 可能是 0 - 保留注释
         }
         var removestr='[”“’‘„–—‒…‚・⨯]';
-        for (let blxl=0;blxl<bljg_list.length;blxl++){
+        var list_t=[].concat(bljg_list);
+        for (let blxl=0;blxl<list_t.length;blxl++){
+            var item=list_t[blxl];
+            var site_type='';
+            var do_add=false;
             //适用 www 数据库 - 保留注释
-            if (sites_en_cn_global["cn"].includes(bljg_list[blxl][1])){
-                console.log(0,bljg_list[blxl][1]);
-                continue;
+            if (sites_en_cn_global["cn"].includes(item[1])){
+                site_type='cn0';
             }
-            else if (sites_en_cn_global["en"].includes(bljg_list[blxl][1])){
-                console.log(1,bljg_list[blxl][1]);
-                bljg_list[blxl][0]=bljg_list[blxl][0]+maxnum;
-                continue;
-            }            
+            else if (sites_en_cn_global["en"].includes(item[1])){
+                site_type='en0';
+                if (bottom_eng){do_add=true;}
+            }
             //适用 www 数据库以外；网站名中含有中文 - 保留注释
-            else if ((bljg_list[blxl][1].replace(new RegExp(removestr,'g'),'').trim().match(/[^\x00-\xff]/) || []).length>0){
-                console.log(2,bljg_list[blxl][1]);
-                continue;
+            else if ((item[1].replace(new RegExp(removestr,'g'),'').trim().match(/[^\x00-\xff]/) || []).length>0){
+                site_type='cn1';
             }
             //适用全部数据库；第一条记录中含有中文数量少于2个 - 保留注释
-            else if ((bljg_list[blxl][2].split('</p>')[0].trim().replace(new RegExp(removestr,'g'),'').match(/[^\x00-\xff]/g) || []).length<=1){
-                console.log(3,bljg_list[blxl][1]);
-                bljg_list[blxl][0]=bljg_list[blxl][0]+maxnum;
+            else if ((item[2].split('</p>')[0].trim().replace(new RegExp(removestr,'g'),'').match(/[^\x00-\xff]/g) || []).length<=1){
+                site_type='en1';
+                if (bottom_eng){do_add=true;}
+            }
+            
+            console.log(site_type,item[1]);
+            if (show_cn_en=='cn' && site_type.substring(0,2)=='en' || show_cn_en=='en' && site_type.substring(0,2)=='cn'){
+                list_t[blxl]='';
+            }
+            else if (do_add){
+                list_t[blxl][0]=item[0]+maxnum;
             }
             //以下四行保留注释
             //else {
                 //console.log(bljg_list[blxl][0],bljg_list[blxl][1],bljg_list[blxl][1].replace(new RegExp(removestr,'g'),'').trim().match(/[^\x00-\xff]/));
                 //console.log(bljg_list[blxl][2].split('</p>')[0].trim().replace(new RegExp(removestr,'g'),'').match(/[^\x00-\xff]/g));
             //}
+        }
+        bljg_list=[];
+        for (let item of list_t){
+            if (item==''){continue;}
+            bljg_list.push(item);
         }
     }
     bljg_list.sort(function (a,b){return a[0]-b[0];});
@@ -589,7 +603,6 @@ function classify_sites_klsnews(bottom_eng=false,sort_by_day=false){
         a_site_num_links=a_site_num_links+'<option value="#a_site_num_'+(blxl+1)+'">'+(blxl+1)+'. '+bljg_list[blxl][1]+'</option>';
         //第n部分 增加标签分组 - ToDo
     }
-    //console.log(bljg_list);
     odiv2.innerHTML='<div class="div_masonry" style="'+divstyle+'"><select onchange="document.location.href = this.value;">'+a_site_num_links+'</select>'+' <a id="a_open_all" href="javascript:void(null);" onclick=\'javascript:this.style.display="none";open_all_more_klsnews();\' class="aclick">全部展开</a></div>'+bljg;
     masonrydiv_klsnews();
     
@@ -664,8 +677,8 @@ function rnd_search_window_klsnews(){
         return;
     }
     var str_t='';
-    for (var blxl=0;blxl<1;blxl++){
-        var item=randint_b(0,list_len);
+    for (let blxl=0;blxl<1;blxl++){
+        var item=randint_b(0,list_len-1);
         var str_t=str_t+' '+odiv2as[item].innerText;
     }
     
@@ -695,6 +708,30 @@ function rnd_search_window_klsnews(){
     window.open(websites[0]+str_t,'rnd_news_window');
 }
 
+function rnd_links_klsnews(cscount=0){
+    function sub_rnd_links_klsnews_one_link(){
+        if (blxl>=list_t.length){return;}
+        odiv2as[list_t[blxl]].click();
+        blxl=blxl+1;
+        setTimeout(sub_rnd_links_klsnews_one_link,1500);
+    }
+    //---------------------
+    var odiv2as=document.querySelectorAll('a.a_news_link');
+    var list_t=[];
+    for (let blno=0;blno<odiv2as.length;blno++){
+        if (odiv2as[blno].style.backgroundColor==scheme_global['pink']){continue;}
+        list_t.push(blno);
+    }
+    var bltotal_t=Math.floor((Math.random()*20)+1);
+    for (let blno=0;blno<bltotal_t;blno++){    
+        list_t.sort(randomsort_b);
+    }
+    list_t=list_t.slice(0,cscount);
+    if (list_t.length==0){return;}
+    var blxl=0;
+    sub_rnd_links_klsnews_one_link();
+}
+
 function rnd_window_klsnews(){
     var odiv2as=document.querySelectorAll('a.a_news_link');
     var list_len=odiv2as.length;
@@ -702,7 +739,7 @@ function rnd_window_klsnews(){
         clearInterval(rnd_open_window_klsnews_global);
         return;
     }
-    var item=randint_b(0,list_len);
+    var item=randint_b(0,list_len-1);
     console.log('rndhref',odiv2as[item].href);
     window.open(odiv2as[item].href,'rnd_news_window');
 }
@@ -1033,20 +1070,23 @@ function menu_klsnews(cskeys,js_or_php=''){
     var menu_list1=[
     '<span class="span_menu" onclick="javascript:'+str_t+'classify_sites_klsnews();">按网站分类</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'classify_sites_klsnews(true);">按网站分类(中上英下)</span>',    
+    '<span class="span_menu" onclick="javascript:'+str_t+'classify_sites_klsnews(false,true,\'en\');">按网站分类(英文)</span>',    
+    '<span class="span_menu" onclick="javascript:'+str_t+'classify_sites_klsnews(false,true,\'cn\');">按网站分类(中文)</span>',    
     '<span class="span_menu" onclick="javascript:'+str_t+'classify_sites_klsnews(false,true);">按网站分类(ASC排序)</span>',    
     '<span class="span_menu" onclick="javascript:'+str_t+'sourcelist.sort(randomsort_b);getlines_klsnews();">乱序</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'sourcelist.sort(function (a,b){return sort_by_date_b(a,b,true,2,1,false,true);});getlines_klsnews();">按日期排序</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'sourcelist.sort(function (a,b){return zh_sort_b(a,b,false,1);});getlines_klsnews();">按标题排序</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'fav_show_klsnews();">收藏</span>',
-    '<span class="span_menu" onclick="javascript:'+str_t+'newwords_klsnews();">热门生词</span>',
-    '<span class="span_menu" onclick="javascript:'+str_t+'clearInterval(rnd_open_window_klsnews_global);rnd_window_klsnews();rnd_open_window_klsnews_global=setInterval(rnd_window_klsnews,60000);">随机访问</span>',
-    '<span class="span_menu" onclick="javascript:'+str_t+'clearInterval(rnd_open_window_klsnews_global);rnd_search_window_klsnews();rnd_open_window_klsnews_global=setInterval(rnd_search_window_klsnews,20000);">随机搜索</span>',    
     ];
     menu_list1=another_page.concat(menu_list1);
     
     var menu_list3=[
     '<span class="span_menu" onclick="javascript:'+str_t+'statistics_sites_klsnews();">当前页网站列表</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'newwords_klsnews();">热门生词</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'clearInterval(rnd_open_window_klsnews_global);rnd_window_klsnews();rnd_open_window_klsnews_global=setInterval(rnd_window_klsnews,60000);">随机访问</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'clearInterval(rnd_open_window_klsnews_global);rnd_search_window_klsnews();rnd_open_window_klsnews_global=setInterval(rnd_search_window_klsnews,20000);">随机搜索</span>',        
+    '<span class="span_menu" onclick="javascript:'+str_t+'rnd_links_klsnews(10);">随机打开10条链接</span>',            
     ];
 
     if (js_or_php=='php'){

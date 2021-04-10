@@ -31,4 +31,5 @@ var digest_global=`
 *Punjab
 *candlelit
 *Williamson
+*microsecond
 `.trim().split('\n');

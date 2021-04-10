@@ -1407,7 +1407,7 @@ function alarm_interval_sound_b(){
     }
     var sound_list=['elephant','ding','drop','flash','whistle','dududu'];
     var blm=date_2_ymd_b(false,'M');
-    if (blm % 5 == 0 && blm % kl_alarm_interval_global == 0){
+    if (blm % 5 == 0 && kl_alarm_start_time_global!==-1){
         var blstr=('0'+blm).slice(-2,);
         var sound_type=[sound_list[parseInt(blstr.slice(0,1))],sound_list[parseInt(blstr.slice(-1,))]];
         var blxl=0;
@@ -1435,6 +1435,7 @@ function alarm_interval_set_b(csinterval=5){
             clearInterval(kl_alarm_obj_global);
         }
         kl_alarm_interval_global=-1;
+        kl_alarm_start_time_global=-1;
         console.log('整点报时停止');
         return;
     }
