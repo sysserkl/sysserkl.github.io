@@ -33,4 +33,6 @@ var digest_global=`
 *nightclothes
 *whorehouse
 *urinal
+*arrogantly
+*inadequacy
 `.trim().split('\n');

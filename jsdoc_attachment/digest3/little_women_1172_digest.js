@@ -47,4 +47,5 @@ var digest_global=`
 *dogskin
 *chewing gum
 *spouse
+*manageable
 `.trim().split('\n');
