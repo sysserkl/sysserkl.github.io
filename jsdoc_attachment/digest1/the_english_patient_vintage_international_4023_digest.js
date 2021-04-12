@@ -32,4 +32,5 @@ var digest_global=`
 *candlelit
 *Williamson
 *microsecond
+*Nicholson
 `.trim().split('\n');

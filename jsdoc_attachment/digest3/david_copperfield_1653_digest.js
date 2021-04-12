@@ -118,4 +118,5 @@ var digest_global=`
 *nautical
 *unseasonable
 *ironmonger
+*liquidation
 `.trim().split('\n');

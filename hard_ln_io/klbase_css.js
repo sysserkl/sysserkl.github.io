@@ -469,7 +469,7 @@ function rgb2hex_b(rgb,csg,csb) {
     return ("#" + sub_rgb2hex_b_component(rgb[0]) + sub_rgb2hex_b_component(rgb[1]) + sub_rgb2hex_b_component(rgb[2])).toUpperCase();
 }
 
-function hex2rgb_b(hex) { 
+function hex2rgb_b(hex,return_str=false) { 
     //hex支持颜色名称输入 - 保留注释
     var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
     hex = hex.replace(shorthandRegex, function(m, r, g, b) {
@@ -481,7 +481,17 @@ function hex2rgb_b(hex) {
         hex=color_name2hex_b(hex);
         result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
     }
-    return result ? [parseInt(result[1], 16), parseInt(result[2], 16), parseInt(result[3], 16)] : false;
+    
+    var bljg = result ? [parseInt(result[1], 16), parseInt(result[2], 16), parseInt(result[3], 16)] : false;
+    if (return_str){
+        if (bljg===false){return '';}
+        else {
+            return 'rgb('+bljg.join(', ')+')';
+        }
+    }
+    else {
+        return bljg;
+    }
 }
 
 function color_range_b(color1=[],color2=[],cscount=10){
@@ -982,6 +992,7 @@ function popular_colors_b(){
     "#E4D1DC,#000803,#AF6EB4",
     "#E4E1EE,#933B6E,#E4E1EE",
     "#E4EAE1,#173F45,#4A0653",
+    "#E5E5E5,#3F8D6B,#F304D4",
     "#E6D565,#480FAE,#14FCD9",
     "#E8CB72,#4457ED,#EECE6C",
     "#EAEFE4,#6777AC,#033326",

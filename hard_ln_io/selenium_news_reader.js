@@ -713,13 +713,14 @@ function rnd_links_klsnews(cscount=0){
         if (blxl>=list_t.length){return;}
         odiv2as[list_t[blxl]].click();
         blxl=blxl+1;
-        setTimeout(sub_rnd_links_klsnews_one_link,1500);
+        setTimeout(sub_rnd_links_klsnews_one_link,2000);
     }
     //---------------------
     var odiv2as=document.querySelectorAll('a.a_news_link');
     var list_t=[];
+    var bgcolor=hex2rgb_b(scheme_global['pink'],true);
     for (let blno=0;blno<odiv2as.length;blno++){
-        if (odiv2as[blno].style.backgroundColor==scheme_global['pink']){continue;}
+        if (odiv2as[blno].style.backgroundColor==bgcolor){continue;}
         list_t.push(blno);
     }
     var bltotal_t=Math.floor((Math.random()*20)+1);

@@ -39,4 +39,6 @@ var digest_global=`
 *sewn
 *eavesdropper
 *unlit
+*mayonnaise
+*unjustly
 `.trim().split('\n');
