@@ -1033,9 +1033,10 @@ function fav_init_bible(){
     localStorage.setItem('fav_lines_bible',fav_list.join('\n'));    
 }
 
-function fav_add_bible(blno){
-    var ospan_en=document.getElementById('span_number_bible_en_'+blno);
-    var ospan_cn=document.getElementById('span_number_bible_cn_'+blno);
+function fav_add_bible(csno){
+    csno=csno.toString();
+    var ospan_en=document.getElementById('span_number_bible_en_'+csno);
+    var ospan_cn=document.getElementById('span_number_bible_cn_'+csno);
     var fav_list=array_unique_b(local_storage_get_b('fav_lines_bible',-1,true));
     var is_remove=false;
     if (ospan_en){
@@ -1057,7 +1058,7 @@ function fav_add_bible(blno){
         }
     }
     
-    var blat=fav_list.indexOf(blno.toString());
+    var blat=fav_list.indexOf(csno);
     if (is_remove){
         if (blat>=0){
             fav_list.splice(blat,1);
@@ -1066,7 +1067,7 @@ function fav_add_bible(blno){
     }
     else {
         if (blat==-1){
-            fav_list.push(blno);
+            fav_list.push(csno);
             fav_list=fav_sort_bible(fav_list);
             localStorage.setItem('fav_lines_bible',fav_list.join('\n'));
         }
