@@ -340,7 +340,7 @@ function edit_form_wp_offline_luru(csno,cs_asc_sum){
         alert('记录'+(csno+1)+'不一致');
         return;
     }
-    
+        
     var items=[
     '记录号:忽略',
     '编号:忽略',
@@ -363,6 +363,9 @@ function edit_form_wp_offline_luru(csno,cs_asc_sum){
         alert('数组长度出错');
         return;
     }
+
+    if (!confirm('是否修改记录'+arow[4]+'？')){return;}
+
     for (let blxl=0;blxl<arow.length;blxl++){
         var blid=items[blxl];
         if (blid.slice(-3,)==':忽略'){continue;}

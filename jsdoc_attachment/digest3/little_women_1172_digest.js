@@ -48,4 +48,5 @@ var digest_global=`
 *chewing gum
 *spouse
 *manageable
+*maple
 `.trim().split('\n');

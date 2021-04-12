@@ -35,4 +35,5 @@ var digest_global=`
 *urinal
 *arrogantly
 *inadequacy
+*switchboard
 `.trim().split('\n');

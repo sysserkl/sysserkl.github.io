@@ -511,4 +511,5 @@ var digest_global=`
 *sealskin
 *unsanitary
 *handrail
+*eyepiece
 `.trim().split('\n');
