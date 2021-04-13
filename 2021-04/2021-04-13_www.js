@@ -1,0 +1,16 @@
+var sourcelist=[
+["https://www.solidot.org/story?sid=67459","改善城市贫民睡眠的经济后果","2021-04-13","Solidot","1",],
+["https://www.solidot.org/story?sid=67460","伊朗纳坦兹核设施发生停电事故","2021-04-13","Solidot","1",],
+["https://www.solidot.org/story?sid=67461","黑客在 Pwn2Own 2021 上演示对 Zoom 的远程代码执行漏洞的利用","2021-04-13","Solidot","1",],
+["https://www.solidot.org/story?sid=67464","阿里巴巴表态将降低电商进入门槛","2021-04-13","Solidot","1",],
+["https://www.solidot.org/story?sid=67465","巴西公布科兴新冠疫苗Ⅲ期临床试验最终研究结果","2021-04-13","Solidot","1",],
+["https://www.solidot.org/story?sid=67466","开发 mRNA 疫苗的科学家","2021-04-13","Solidot","1",],
+["https://www.solidot.org/story?sid=67469","加加林进入太空六十周年","2021-04-13","Solidot","1",],
+["https://www.solidot.org/story?sid=67470","大脑在解决问题时从未考虑删除掉东西","2021-04-13","Solidot","1",],
+["https://www.solidot.org/story?sid=67437#comment_295173","同学，把什么都推到技术身上，技术表示这个锅背不起啊。","2021-04-13","Solidot","1",],
+["https://shumeipai.nxez.com/2021/04/06/tuya-developer-combat-camp.html","开发者实战营：手把手带你实现物联网开发，硬件开发工具免费领","2021-04-13","树莓派实验室","1",],
+["https://shumeipai.nxez.com/2021/04/08/cable-extension-kit-thser101.html","树莓派摄像头 MIPI 延长线方案","2021-04-13","树莓派实验室","1",],
+["https://shumeipai.nxez.com/2021/04/08/raspberry-pi-cm4-enable-hdmi-audio-output.html","树莓派 CM4 启用 HDMI 音频输出","2021-04-13","树莓派实验室","1",],
+["https://shumeipai.nxez.com/2021/04/07/raspberry-pi-pico-how-to-interface-almost-everything.html","一份全面的树莓派 Pico 入门指南","2021-04-13","树莓派实验室","1",],
+["https://shumeipai.nxez.com/2021/03/26/use-python-to-remotely-control-industrial-raspberry-pi-io.html","使用 Python 对工业树莓派 I/O 进行远程控制","2021-04-13","树莓派实验室","1",],
+];
