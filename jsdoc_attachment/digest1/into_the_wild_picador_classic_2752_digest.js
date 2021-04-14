@@ -14,4 +14,5 @@ var digest_global=`
 *paperbound
 *bigamist
 *rattlesnake
+*landlocked
 `.trim().split('\n');

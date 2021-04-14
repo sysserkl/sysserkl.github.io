@@ -176,4 +176,5 @@ var digest_global=`
 *newsmonger
 *roofless
 *Bucharest
+*Urals
 `.trim().split('\n');

@@ -395,4 +395,5 @@ var digest_global=`
 *mulberry
 *Immanuel
 *filthiness
+*dunghill
 `.trim().split('\n');

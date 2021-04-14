@@ -813,8 +813,9 @@ function menu_enbook(){
     '<span class="span_menu" onclick="javascript:'+str_t+'news_words_statistics_enbook();">显示统计结果</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'compare_form_statistics_enbook();">比较统计数据</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'exclude_words_enbook();">电子书中未包含的旧单词</span>',        
+    '<a href="http://192.168.0.133/wiki/index.php/%E8%8B%B1%E8%AF%AD%E4%B9%A6%E7%B1%8D%E7%94%9F%E8%AF%8D%E7%BB%9F%E8%AE%A1" onclick="javascript:'+str_t+'" target=_blank>英语书籍生词统计(KLWiki)</a>',    
     ];
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','18rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'🧮','14rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','18rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'🧮','16rem','1rem','1rem','60rem'),'','0rem')+' ');
     
 }
