@@ -19,4 +19,6 @@ var digest_global=`
 *almshouse
 *Patrick
 *sleety
+*Helena
+*peninsular
 `.trim().split('\n');
