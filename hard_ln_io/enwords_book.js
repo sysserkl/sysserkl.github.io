@@ -1,4 +1,5 @@
 function args_enbook(){
+    var bltag='englishwords en_minor';
     var cskeys=href_split_b(location.href);
     if (cskeys.length>0 && cskeys[0]!==''){
         //形如：enwords.htm?s=english& - 保留注释
@@ -20,19 +21,19 @@ function args_enbook(){
                 if (list_t.length>1){
                     csbookno2_global_b=parseInt(list_t[1])-1;
                 }
-                books_b(true,'eng','englishwords');
+                books_b(true,'eng',bltag);
                 import_book_js_b(false);
                 break;
             }
             else if (bltmpstr.substring(0,7)=='allnew='){
                 var new_words_str=bltmpstr.substring(7,);
-                var otextarea=document.getElementById('textarea_new_words');
+                var otextarea=document.getElementById('textarea_new_words1');
                 if (otextarea){
                     otextarea.value=new_words_str;
                 }
                 in_all_new_words_enbook();
                 get_new_words_arr_enbook(2);
-                books_b(true,'eng','englishwords');
+                books_b(true,'eng',bltag);
                 break;
             }
             else if (bltmpstr=='excluded'){
@@ -42,13 +43,13 @@ function args_enbook(){
         }
     }
     else {
-        books_b(true,'eng','englishwords');
+        books_b(true,'eng',bltag);
     }
 }
 
 function space2underline_enbook(){
     if (confirm("是否替换单词间空格为下划线？")==false){return;}
-    var otextarea=document.getElementById('textarea_new_words');
+    var otextarea=document.getElementById('textarea_new_words1');
     var blstr=otextarea.value.trim();
     while (true){   //考虑 get a grip 等形式 - 保留注释
         if (blstr.match(/([a-z]) +([a-z])/)==null){break;}
@@ -59,18 +60,22 @@ function space2underline_enbook(){
 
 function new_words_form_enbook(){
     var bljg='<p>第一组</p>';
-    bljg=bljg+'<textarea id="textarea_new_words"></textarea>';
+    bljg=bljg+'<textarea id="textarea_new_words1"></textarea>';
     bljg=bljg+'<p><span class="aclick" onclick="javascript:get_new_words_arr_enbook(1);">显示全部单词</span> ';
     bljg=bljg+'<span class="aclick" onclick="javascript:get_new_words_arr_enbook(2);">显示未收录单词</span> ';
     bljg=bljg+'<span class="aclick" onclick="javascript:get_new_words_arr_enbook(3);">显示已收录单词</span> ';
-    bljg=bljg+'<span class="aclick" onclick="javascript:in_all_new_words_enbook();">在全部新单词中的词</span> ';    
+    bljg=bljg+'<span class="aclick" onclick="javascript:in_all_new_words_enbook(\'include\');">已在全部新单词中的新单词</span> ';        
+    bljg=bljg+'<span class="aclick" onclick="javascript:in_all_new_words_enbook();">不在全部新单词中的新单词</span> ';    
     bljg=bljg+'<span class="aclick" onclick="javascript:get_new_words_arr_enbook(4);">(wiki格式)</span> ';
     bljg=bljg+'<span class="aclick" onclick="javascript:get_new_words_arr_enbook(5);">(js格式)</span> ';
     bljg=bljg+'<span class="aclick" onclick="javascript:show_sentence_kle(3,true);">显示少量例句</span> ';    
     bljg=bljg+'<span class="aclick" onclick="javascript:words_sort_count_enbook();">单词排序</span> ';
     bljg=bljg+'<span class="aclick" onclick="javascript:textarea_shift_enbook();">对调</span> ';    
-    bljg=bljg+'<span class="aclick" onclick="javascript:space2underline_enbook();">替换单词间空格为下划线</span> ';        
-    bljg=bljg+'<span class="aclick" onclick="javascript:filter_enbook();">筛选单词</span> ';            
+    bljg=bljg+'<span class="aclick" onclick="javascript:space2underline_enbook();">替换单词间空格为下划线</span> ';      
+    bljg=bljg+'<span class="aclick" onclick="javascript:filter_enbook();">筛选单词</span> ';
+    bljg=bljg+'<span class="aclick" onclick="javascript:document.getElementById(\'textarea_new_words1\').select();document.execCommand(\'copy\');">复制</span> ';    
+    bljg=bljg+'<span class="aclick" onclick="javascript:document.getElementById(\'textarea_new_words1\').value=\'\';">清空</span> ';
+
     bljg=bljg+'<br />'+checkbox_kl_b('remove_square','删除方括号[](否则方括号中的内容视为音标而不收录')+' ';
     bljg=bljg+checkbox_kl_b('newwords_one_textarea','WIKI格式单词放在一个编辑框内','',true)+' ';
     bljg=bljg+checkbox_kl_b('words_type_check','检验单词类型','',true)+' ';    
@@ -80,7 +85,8 @@ function new_words_form_enbook(){
     bljg=bljg+'<p>第二组</p>';
     bljg=bljg+'<textarea id="textarea_new_words2"></textarea>';
     bljg=bljg+'<p><span class="aclick" onclick="javascript:get_new_words_group_enbook();">分组比较(无扩展)</span> ';
-    //bljg=bljg+'<a class="aclick" href="javascript:void(null);" onclick="javascript:books_b(true,\'eng\');">导入书籍</a> <span id=booklinks></span>';
+    bljg=bljg+'<span class="aclick" onclick="javascript:document.getElementById(\'textarea_new_words2\').select();document.execCommand(\'copy\');">复制</span> ';    
+    bljg=bljg+'<span class="aclick" onclick="javascript:document.getElementById(\'textarea_new_words2\').value=\'\';">清空</span> ';    
     bljg=bljg+'<span id=booklinks></span>';
     bljg=bljg+'<p>结果：</p><div id="div_new_words2" style="max-width:900px;font-family:Noto Sans;"></div>';
     document.getElementById('divhtml').innerHTML=bljg;
@@ -90,7 +96,7 @@ function new_words_form_enbook(){
 }
 
 function filter_enbook(){
-    var blstr=document.getElementById('textarea_new_words').value.trim();
+    var blstr=document.getElementById('textarea_new_words1').value.trim();
     if (blstr==''){return;}
     var blkey=prompt('输入筛选关键字：') || '';
     if (blkey==''){return;}
@@ -115,8 +121,8 @@ function filter_enbook(){
     otextarea2.value=Array.from(result_t).join(' ');
 }
 
-function in_all_new_words_enbook(){
-    var csstr=document.getElementById('textarea_new_words').value.trim();
+function in_all_new_words_enbook(cstype='exclude'){
+    var csstr=document.getElementById('textarea_new_words1').value.trim();
     
     var new_words_set=new Set();
     var old_words_set=new Set();    
@@ -133,7 +139,14 @@ function in_all_new_words_enbook(){
             result_t_exclude.push(item);        
         }
     }
-    document.getElementById('textarea_new_words2').value='已在新单词库中的词：'+result_t_include.join(' ')+'\n不在新单词库中的词：'+result_t_exclude.join(' ');
+    var bljg='';
+    if (cstype=='' || cstype=='include'){
+        bljg=bljg+'已在新单词库中的新单词：'+result_t_include.join(' ')+'\n';
+    }
+    if (cstype=='' || cstype=='exclude'){
+        bljg=bljg+'不在新单词库中的新单词：'+result_t_exclude.join(' ')+'\n';
+    }
+    document.getElementById('textarea_new_words2').value=bljg;
 }
 
 function wordtypes_enbook(blitem){
@@ -253,7 +266,7 @@ function get_new_words_arr_enbook(cstype,csstr='',csobjects=false,maxlength=3,ad
     var t0 = performance.now();
     csstart=0;
     if (csstr==''){
-        var otextarea=document.getElementById('textarea_new_words');
+        var otextarea=document.getElementById('textarea_new_words1');
         if (!otextarea){
             return;
         }
@@ -334,7 +347,7 @@ function get_new_words_arr_enbook2(bljgarr2,check_types=true){
 }
 
 function words_sort_count_enbook(){
-    var csstr=document.getElementById('textarea_new_words').value;
+    var csstr=document.getElementById('textarea_new_words1').value;
     var list_t=csstr.match(/\b[a-zA-Z_']+\b/g) || [];
     list_t.sort();
     var bljg=[];
@@ -356,7 +369,7 @@ function words_sort_count_enbook(){
 }
 
 function textarea_shift_enbook(){
-    var otextarea1=document.getElementById('textarea_new_words');
+    var otextarea1=document.getElementById('textarea_new_words1');
     var otextarea2=document.getElementById('textarea_new_words2');
     var blstr1=otextarea1.value;
     var blstr2=otextarea2.value;
@@ -365,7 +378,7 @@ function textarea_shift_enbook(){
 }
 
 function textarea_first_lines_enbook(){
-    var otextarea=document.getElementById('textarea_new_words');
+    var otextarea=document.getElementById('textarea_new_words1');
     if (otextarea){
         var bljg=otextarea.value;
         if (bljg.includes('\n已截取\n')){
@@ -390,7 +403,7 @@ function textarea_first_lines_enbook(){
 }
 
 function get_new_words_group_enbook(cstype){
-	var str1=document.getElementById('textarea_new_words').value.trim();
+	var str1=document.getElementById('textarea_new_words1').value.trim();
 	if (str1==''){return;}
 
 	var str2=document.getElementById('textarea_new_words2').value.trim();
@@ -407,10 +420,10 @@ function get_new_words_group_enbook(cstype){
     alink=alink+'<a class="a_oblong_box" href="#get_new_words_group_enbook_6">第二组含有但第一组没有的单词</a>';
     
 	var bljg='';
-    bljg=bljg+new_old_words_html_enbook(list1_t,'第一组单词量','',true);
-    bljg=bljg+new_old_words_html_enbook(list2_t,'第二组单词量','',true);
-    bljg=bljg+new_old_words_html_enbook(union_t,'两组合计单词量','',true);
-    bljg=bljg+new_old_words_html_enbook(inter_t,'两组单词交集','');
+    bljg=bljg+new_old_words_html_enbook(list1_t,'第一组单词量','group1',true);
+    bljg=bljg+new_old_words_html_enbook(list2_t,'第二组单词量','group2',true);
+    bljg=bljg+new_old_words_html_enbook(union_t,'两组合计单词量','group_union',true);
+    bljg=bljg+new_old_words_html_enbook(inter_t,'两组单词交集','group_intersection');
     bljg=bljg+new_old_words_html_enbook(diff1_t,'第一组含有但第二组没有的单词','get_new_words_group_enbook_5');
     bljg=bljg+new_old_words_html_enbook(diff2_t,'第二组含有但第一组没有的单词','get_new_words_group_enbook_6');
     
@@ -430,13 +443,13 @@ function get_new_words_arr_html_enbook(cstype,bljgarr2,list_t){
     var bljg='';
     switch (cstype){
         case 1:
-            bljg=new_old_words_html_enbook(bljgarr2,'全部单词');
+            bljg=new_old_words_html_enbook(bljgarr2,'全部单词','all_words');
             break;
         case 2:
-            bljg=new_old_words_html_enbook(en_new2_total,'未收录单词');
+            bljg=new_old_words_html_enbook(en_new2_total,'未收录单词','new_words');
             break;
         case 3:
-            bljg=new_old_words_html_enbook(en_intersection_total,'已收录单词');
+            bljg=new_old_words_html_enbook(en_intersection_total,'已收录单词','old_words');
             break;
         case 4:
             onetextarea_t=checkbox_kl_value_b('newwords_one_textarea');
@@ -450,7 +463,7 @@ function get_new_words_arr_html_enbook(cstype,bljgarr2,list_t){
     document.getElementById('div_new_words2').innerHTML='<div id="div_sub_words">'+bljg+'</div>';
     
     //未收录单词 - 保留注释
-    if (en_words_book_newwords_continue_global===false && cstype==2 && csbookno_global_b>=0 && csbooklist_sub_global_b[csbookno_global_b][1]=='Way Station(Clifford D. Simak)' && !document.getElementById('textarea_new_words').value.includes('已截取')){
+    if (en_words_book_newwords_continue_global===false && cstype==2 && csbookno_global_b>=0 && csbooklist_sub_global_b[csbookno_global_b][1]=='Way Station(Clifford D. Simak)' && !document.getElementById('textarea_new_words1').value.includes('已截取')){
         if (confirm("是否更新 Way Station 的未收录单词统计数字：("+en_new2_total.size+")？")){
             local_storage_today_b('enwords_way_station_statistics',40,en_new2_total.size,'/');
         }
@@ -514,8 +527,9 @@ function new_old_words_html_enbook(csarray,csname,csaname='',onlytitle=false){
     blsort=blsort+'<span class="aclick" onclick="sort_enwords_enbook(this,1);">排序</span>';
     blsort=blsort+'<span class="aclick" onclick="sort_enwords_enbook(this,2);">尾部排序</span>';
     blsort=blsort+'<span class="aclick" onclick="sort_enwords_enbook(this,3);">随机排序</span>';
+    blsort=blsort+'<span class="aclick" onclick="javascript:document.getElementById(\'textarea_enwords_book_'+csaname+'\').select();document.execCommand(\'copy\');">复制</span>';
 
-    return bltitle+'<div class="div_enwords_container"><textarea style="height:200px;">'+Array.from(csarray).join(' ')+'</textarea><p>'+blsort+'</p><div class="div_enwords_links">'+bljg+enwords_batch_div_b(Array.from(csarray),parseInt(Math.random()*99999))+'</div></div>';
+    return bltitle+'<div class="div_enwords_container"><textarea id="textarea_enwords_book_'+csaname+'" style="height:200px;">'+Array.from(csarray).join(' ')+'</textarea><p>'+blsort+'</p><div class="div_enwords_links">'+bljg+enwords_batch_div_b(Array.from(csarray),parseInt(Math.random()*99999))+'</div></div>';
 }
 
 function sort_enwords_enbook(oa,cstype){
@@ -576,7 +590,7 @@ function str_2_array_enbook(blstr,isset=false){
 function import_enbook(){
     if (filelist!==null && filelist.length>0){
         var bljg=filelist.join('\n');
-        var otextarea_t=document.getElementById('textarea_new_words')
+        var otextarea_t=document.getElementById('textarea_new_words1')
         if (otextarea_t){
             otextarea_t.value=bljg;
             document.getElementById('span_book_lines_count').innerHTML='共有 '+bljg.trim().split('\n').length+' 行';
@@ -727,13 +741,13 @@ function max_length_new_words_enbook(){
     list_t.sort(function (a,b){return a.length<b.length;});
     list_t=list_t.slice(0,100);
     if (list_t.length==0){return;}
-    document.getElementById('textarea_new_words').value='最长('+list_t[0].length+'-'+list_t.slice(-1)[0].length+')的 '+list_t.length+' 个单词：\n'+list_t.join('\n');
+    document.getElementById('textarea_new_words1').value='最长('+list_t[0].length+'-'+list_t.slice(-1)[0].length+')的 '+list_t.length+' 个单词：\n'+list_t.join('\n');
 }
 
 function import_words_enbook(cstype){
     switch (cstype){
         case 'new':
-            document.getElementById('textarea_new_words').value=all_new_words_global.join(' ');
+            document.getElementById('textarea_new_words1').value=all_new_words_global.join(' ');
             break;
         case 'new2500':
             var words_t=[].concat(all_new_words_global);
@@ -741,14 +755,14 @@ function import_words_enbook(cstype){
             for (let blxl=0;blxl<bltotal_t;blxl++){
                 words_t.sort(randomsort_b);
             }        
-            document.getElementById('textarea_new_words').value=words_t.slice(0,2500).join(' ');
+            document.getElementById('textarea_new_words1').value=words_t.slice(0,2500).join(' ');
             break;            
         case 'old':
             var result_t=[];
             for (let item of enwords){
                 result_t.push(item[2]);
             }
-            document.getElementById('textarea_new_words').value=result_t.join('\n');
+            document.getElementById('textarea_new_words1').value=result_t.join('\n');
             break;
         case 'sentence':
             var bltotal_t=Math.floor((Math.random()*10)+1);
@@ -760,7 +774,7 @@ function import_words_enbook(cstype){
             for (let item of list_t){
                 result_t.push(item[0]);
             }
-            document.getElementById('textarea_new_words').value=result_t.join('\n\n');
+            document.getElementById('textarea_new_words1').value=result_t.join('\n\n');
             break;
     }
 }

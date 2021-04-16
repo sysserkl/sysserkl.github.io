@@ -512,4 +512,6 @@ var digest_global=`
 *unsanitary
 *handrail
 *eyepiece
+*electrocute
+*expel
 `.trim().split('\n');

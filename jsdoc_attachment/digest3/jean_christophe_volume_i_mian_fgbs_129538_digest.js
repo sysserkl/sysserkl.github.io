@@ -34,4 +34,5 @@ var digest_global=`
 *Dumas
 *boarding school
 *alms
+*Zurich
 `.trim().split('\n');

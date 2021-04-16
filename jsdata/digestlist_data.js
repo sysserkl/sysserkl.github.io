@@ -31,6 +31,7 @@ var digestlist_source_global_b=[
 ["yin_he_di_guo_di_gsbq11tzg3_342158_digest",1],
 ["hei_an_shi_ke_xi_tldtsyncwhsxc_662171_digest",1],
 ["yu_shi_ming_yan_103391_digest",1],
+["doctor_zhivago_vintage_international_3610_digest",1],
 ["jin_yong_zuo_pin_ji_tlbbxdbq5_587006_digest",1],
 ["she_diao_ying_xiong_chuan_xdbq4_412432_digest",1],
 ["in_search_of_the_castaways_otcocg_5418_digest",1],

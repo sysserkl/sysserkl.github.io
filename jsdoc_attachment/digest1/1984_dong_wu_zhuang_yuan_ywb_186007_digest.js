@@ -87,4 +87,5 @@ var digest_global=`
 *feebly
 *youthfulness
 *gyroscope
+*Cromwell
 `.trim().split('\n');

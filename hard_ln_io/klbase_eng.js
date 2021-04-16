@@ -211,19 +211,19 @@ function en_search_sites_b(dictcn=true,maxlength=-1){
     }
     list_t=list_t.concat([
     ['b','Bing'],
+    ['y','youdao'],
     ['m','Merriam-webster'],
     ['o','Oxford'],
     ['+','Cambridge'],
-    //以下3行保留 - 保留注释
-    //['c','Collins'],
-    //['r','wordReference'],
-    //['e','enwords'],
+    ['c','Collins'],
+    ['r','wordReference'],
+    ['e','enwords'],
     ['w','KLWiki'],
     ['t','txtlistsearch'],
     ['E','Englishwords Book Search'],
     ['s','Selenium_news_reader'],
     ['4','海词+Bing+Merriam-webster+Oxford'],
-    ]);
+    ]); //不可排序 - 保留注释
     if (maxlength>0){
         list_t=list_t.slice(0,maxlength);
     }
@@ -276,10 +276,10 @@ function enwords_checkbox_open_b(csname,cstype){
 function open_link_en_b(cstype,csword){
     switch (cstype){
         case '+':
-            window.open('https://dictionary.cambridge.org/dictionary/english/'+encodeURIComponent(csword.split(' ').join('-')));
+            window.open('https://dictionary.cambridge.org/dictionary/english/'+web_href_key_b(csword,'-',true));
             break;
         case 'c':
-            window.open('https://www.collinsdictionary.com/dictionary/english/'+encodeURIComponent(csword.split(' ').join('-')));
+            window.open('https://www.collinsdictionary.com/dictionary/english/'+web_href_key_b(csword,'-',true));
             break;
         case 'd':
             window.open('http://dict.cn/'+encodeURIComponent(csword));
@@ -287,6 +287,9 @@ function open_link_en_b(cstype,csword){
         case 'b':
             window.open('https://cn.bing.com/dict/search?q='+encodeURIComponent(csword));
             break;
+        case 'y':
+            window.open('http://dict.youdao.com/search?le=eng&q='+encodeURIComponent(csword));
+            break;            
         case 'w':
             window.open(local_storage_get_b('kl_remote_host',-1,false)+'/wiki/index.php?search='+encodeURIComponent(csword)+'&title=特殊%3A搜索&profile=default&fulltext=1');
             break;
@@ -301,31 +304,31 @@ function open_link_en_b(cstype,csword){
             else {
                 blhref='txtlistsearch.htm';
             }
-            window.open(blhref+'?_tagKLWiki0&s='+encodeURIComponent(('+'+csword).replace(new RegExp(' ','g'),' +')));
+            window.open(blhref+'?_tagKLWiki0&s='+web_href_key_b(csword,'+',true));
             break;
         case 'E':
-            window.open('englishwords_book_search.php?s='+encodeURIComponent(csword.replace(new RegExp(' ','g'),'\\s')));
+            window.open('englishwords_book_search.php?s='+web_href_key_b(csword,'s',true));
             break;
         case 'e':
-            window.open('enwords.htm?s='+encodeURIComponent(('+'+csword).replace(new RegExp(' ','g'),' +')));
+            window.open('enwords.htm?s='+web_href_key_b(csword,'+',true));
             break;
         case 'o':
-            window.open('https://www.oxfordlearnersdictionaries.com/definition/english/'+encodeURIComponent(csword.split(' ').join('-')));
+            window.open('https://www.oxfordlearnersdictionaries.com/definition/english/'+web_href_key_b(csword,'-',true));
             break;
         case 'm':
-            window.open('https://www.merriam-webster.com/dictionary/'+encodeURIComponent(('+'+csword).replace(new RegExp(' ','g'),' +')));
+            window.open('https://www.merriam-webster.com/dictionary/'+web_href_key_b(csword,'+',true));
             break;  
         case 'r':
-            window.open('https://www.wordreference.com/definition/'+encodeURIComponent(('+'+csword).replace(new RegExp(' ','g'),' +')));
+            window.open('https://www.wordreference.com/definition/'+encodeURIComponent(csword));
             break;                      
         case 's':
-            window.open('klbase_html_jump.htm?selenium_news_search.php?search='+encodeURIComponent( '\\b'+csword)+'\\b(:title)(:r)');
+            window.open('klbase_html_jump.htm?selenium_news_search.php?search='+encodeURIComponent( '\\b'+csword+'\\b(:title)(:r)'));
             break;
         case '4':
             window.open('http://dict.cn/'+encodeURIComponent(csword));
             window.open('https://cn.bing.com/dict/search?q='+encodeURIComponent(csword));
-            window.open('https://www.merriam-webster.com/dictionary/'+encodeURIComponent(('+'+csword).replace(new RegExp(' ','g'),' +')));            
-            window.open('https://www.oxfordlearnersdictionaries.com/definition/english/'+encodeURIComponent(csword.split(' ').join('-')));
+            window.open('https://www.merriam-webster.com/dictionary/'+web_href_key_b(csword,'+',true));            
+            window.open('https://www.oxfordlearnersdictionaries.com/definition/english/'+web_href_key_b(csword,'-',true));
             break;
     }
 }

@@ -1334,3 +1334,33 @@ function string_2_txt_file_b(csstr,savename,cstype='csv'){
     pom.click();    
     document.body.removeChild(pom); 
 }
+
+function web_href_key_b(cskey,cstype,encode=false){
+    switch (cstype){
+        case 1:
+        case '1':
+        case '+':
+            if (cskey.includes(' ')){
+                cskey='+'+cskey.split(' ').join(' +');
+            }
+            break;
+        case 2:
+        case '2':
+        case '-':
+            if (cskey.includes(' ')){
+                cskey=cskey.split(' ').join('-');
+            }
+            break;
+        case 3:
+        case '3':
+        case 's':
+            cskey=cskey.replace(new RegExp(' ','g'),'\\s');
+            break;
+    }
+    if (encode){
+        return encodeURIComponent(cskey);
+    }
+    else {
+        return cskey;
+    }
+}

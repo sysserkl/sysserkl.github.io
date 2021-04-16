@@ -1,4 +1,5 @@
 function book_makelist_b(cstag='all'){
+    //cstag 支持如：“历史 幻想” 等表达式 - 保留注释
     var list_t=[];
     var blreg=false;
     if (cstag.slice(-4,)=='_reg'){
@@ -13,12 +14,14 @@ function book_makelist_b(cstag='all'){
         var list2_t=csbooklist_sub_global_b[csbookno2_global_b];
     }
     csbooklist_sub_global_b=[];
+    
     for (let item of csbooklist_source_global_b){
         if (cstag=='' || cstag=='all'){
             csbooklist_sub_global_b.push(item);
             continue;
         }
-        var search_t=str_reg_search_b(item,cstag,blreg);
+        
+        search_t=str_reg_search_b(item,cstag,blreg);
         if (search_t==-1){
             break;
         }
@@ -364,7 +367,7 @@ function book_category_b(csid,otherlists=[],cstag=''){
     for (let item of list_t){
         if (item==''){continue;}
         if (item=='📝' && blstr==''){continue;} //无临时摘要则不显示临时摘要图标，但 csbooklist_source_global_b 中书籍的 tag 中还有 📝 标记 - 保留注释
-        if (item==cstag){
+        if ((' '+cstag+' ').includes(' +'+item+' ') || (' '+cstag+' ').includes(' '+item+' ') && !cstag.includes('+')){
             bljg=bljg+'<a class="a_book_category" href="'+blsite+'?_tag'+item+'" style="color:red;">'+item+'</a> ';
         }
         else {

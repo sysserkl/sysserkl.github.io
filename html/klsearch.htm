@@ -82,7 +82,6 @@ function search_site_klsearch(csno,csproxy=false,cskey='',openwindow=-1,showhtml
     if (cskey==''){
         cskey=document.getElementById('input_searchtxt').value;
     }
-    //if (cskey==''){return '';}
     
     if (openwindow===-1){
         openwindow=document.getElementById('checkbox_openwindow').checked;
@@ -90,23 +89,11 @@ function search_site_klsearch(csno,csproxy=false,cskey='',openwindow=-1,showhtml
     
     recent_search_klsearch(cskey);
     var item=search_sites_list_global[csno];
-    switch (item[2]){
-        case 1:
-            if (cskey.includes(' ')){
-                cskey='+'+cskey.split(' ').join(' +');
-            }
-            break;
-        case 2:
-            if (cskey.includes(' ')){
-                cskey=cskey.split(' ').join('-');
-            }
-            break;
-        case 3:
-            cskey=cskey.replace(new RegExp(' ','g'),'\\s');
-            break;
-        case 4:    
-            cskey=gbkcode(cskey);
-            break;
+    if (item[2]==4){ 
+        cskey=gbkcode(cskey);
+    }
+    else {
+        cskey=web_href_key_b(cskey,item[2]);
     }
     
     //以下3行保留 - 保留注释
