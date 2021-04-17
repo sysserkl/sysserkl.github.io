@@ -191,8 +191,9 @@ function txtsearch_zjedu(csword,csreg){
     }
 	document.getElementById('input_reg').checked=csreg;
 
-    recent_search_b('recent_search_zjedu',csword+(csreg?'(:r)':''),'txtsearch_zjedu','div_recent_search');
-
+    //recent_search_b('recent_search_zjedu',csword+(csreg?'(:r)':''),'txtsearch_zjedu','div_recent_search');
+    recent_search_zjedu(csword+(csreg?'(:r)':''));
+    
 	var blcount=0;
 	var blplan=0;
     var blreal=0;

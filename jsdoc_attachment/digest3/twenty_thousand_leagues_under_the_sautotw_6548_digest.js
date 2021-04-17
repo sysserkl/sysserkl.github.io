@@ -514,4 +514,5 @@ var digest_global=`
 *eyepiece
 *electrocute
 *expel
+*manatee
 `.trim().split('\n');

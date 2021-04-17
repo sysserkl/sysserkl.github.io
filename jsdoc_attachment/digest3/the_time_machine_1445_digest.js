@@ -21,4 +21,5 @@ var digest_global=`
 *antennae
 *horticulture
 *sunlit
+*rhododendron
 `.trim().split('\n');

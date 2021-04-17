@@ -171,6 +171,7 @@ function more_tools_klrecent(){
     ['html/websites_pwa.htm', 'Websites for PWA'],
     ['html/wp_offline_luru.htm', 'wp offline'],
     ['html/zj_college_search.htm','浙江高考分数'],    
+    ['html/zj_company.htm','浙江企业'],    
     ['index.htm', '更多资讯'],
 
     ];

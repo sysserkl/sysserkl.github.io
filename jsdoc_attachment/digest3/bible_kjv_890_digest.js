@@ -396,4 +396,5 @@ var digest_global=`
 *Immanuel
 *filthiness
 *dunghill
+*extol
 `.trim().split('\n');

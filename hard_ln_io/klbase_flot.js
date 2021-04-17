@@ -166,11 +166,12 @@ function isoneyear_isonemonth_k(cslist){
     return [list_y.size>1?false:true,list_m.size>1?false:true];
 }
 
-function flot_lines_k(cslist,csid,label_position='nw',cstime=false,cstimeformat="",cstype='m',y1unit='',y1dec=-1,cstickSize=[],csmin_data_length=-1,csymin=false,csymax=false,csshowline=true){
+function flot_lines_k(cslist,csid,label_position='nw',cstime=false,cstimeformat='',cstype='m',y1unit='',y1dec=-1,cstickSize=[],csmin_data_length=-1,csymin=false,csymax=false,csshowline=true){
    //[
    //[ "成都", [2012,300], [2014,400] ], 
    //[ "苏州", [2012,500], [2014,600] ],
    //]; - 保留注释
+   //其中的 元素 不是 [ "成都", [ [2012,300], [2014,400] ] ], 
    //cstype y:getFullYear m: getMonth; d: getDate; - 保留注释
    
    //以下5行保留注释
@@ -180,7 +181,9 @@ function flot_lines_k(cslist,csid,label_position='nw',cstime=false,cstimeformat=
         //}
     //}
     
-    if (label_position==''){label_position='nw';}
+    if (label_position==''){
+        label_position='nw';
+    }
     if (cstime){
         for (let blxl=0;blxl<cslist.length;blxl++){
             if (cslist[blxl].length==2){
@@ -213,12 +216,14 @@ function flot_lines_k(cslist,csid,label_position='nw',cstime=false,cstimeformat=
     //数据量不够时，纵轴间隔改为默认设置 - 保留注释
     if (csmin_data_length>0){
         if (maxdatalength<=csmin_data_length){
-            if (y1dec==0){y1dec=-1;}
+            if (y1dec==0){
+                y1dec=-1;
+            }
         }
     }
         
     var chart_data=[];
-    for (let blxl in cslist){
+    for (let blxl=0;blxl<cslist.length;blxl++){
         var label_t=cslist[blxl].shift();
         var label_showline=csshowline;
         var label_showpoints=true;

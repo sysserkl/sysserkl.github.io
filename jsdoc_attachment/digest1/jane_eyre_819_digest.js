@@ -11,4 +11,6 @@ var digest_global=`
 *Chronicles
 *Jonah
 *Hepburn
+*foxglove
+*handbreadth
 `.trim().split('\n');

@@ -165,7 +165,7 @@ function date_row_money_b(purchase_date,csnolink){
 }
 
 function from_day_money_b(csday){
-    var ospan=document.getElementById('popup_'+csday);
+    var ospan=document.getElementById('popup_'+csday);  //popup需要支持多个popup同时显示，不能使用event弹出唯一的div - 保留注释
     if (ospan){
         if (ospan.innerHTML!==''){
             popup_show_hide_b('popup_'+csday);
