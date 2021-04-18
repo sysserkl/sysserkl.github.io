@@ -13,4 +13,5 @@ var digest_global=`
 *Hepburn
 *foxglove
 *handbreadth
+*seraph
 `.trim().split('\n');

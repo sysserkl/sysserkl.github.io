@@ -6,4 +6,6 @@ var digest_global=`
 *exhaustless
 *Pittsburgh
 *Sumatra
+*Stuart
+*sherry
 `.trim().split('\n');

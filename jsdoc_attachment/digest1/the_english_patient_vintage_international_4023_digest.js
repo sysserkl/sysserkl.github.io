@@ -33,4 +33,5 @@ var digest_global=`
 *Williamson
 *microsecond
 *Nicholson
+*Tunis
 `.trim().split('\n');
