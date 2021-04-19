@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-03-17 13:01:24 三"],
+["","","","更新日期：2021-04-18 12:49:17 日"],
 ["https://www.debuntu.org/how-to-enable-apache-modules-under-debian-based-system-page-2/","20060615 | How To: Enable apache modules under Debian based system — page 2 - Debuntu"],
 ["http://www.williamlong.info/archives/1912.html","20090901 | CentOS操作系统安装教程-月光博客"],
 ["http://www.unixmen.com/after-a-fresh-install-of-ubuntu-1010-maverick-meerkat-configuration-made-easy-with-ubuntu-tweak/","20101002 | After a fresh install of Ubuntu 10.10 Maverick Meerkat, configuration made easy with Ubuntu-Tweak | Newbies | Unixmen"],
@@ -101,7 +101,9 @@ var recent_info_list=[
 ["https://www.osradar.com/how-to-install-configure-dnsmasq-on-ubuntu-18-04-lts/","20200106 | How To Install &amp; configure Dnsmasq on Ubuntu 18.04 LTS - OSRadar"],
 ["https://www.solidot.org/story?sid=63797","20200312 | 奇客Solidot | 开源桌面环境 GNOME 3.36 版发布"],
 ["https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-20-04","20200511 | How to Install and Configure VNC on Ubuntu 20.04 | DigitalOcean"],
+["https://linux.cn/article-12242-1.html","20200523 | Lubuntu 20.04 点评：轻量、简约、文雅"],
 ["https://www.oschina.net/news/116548/ubuntu-20-04-1-release-delay","20200619 | Ubuntu 20.04.1 和 18.04.5 延迟发布 - OSCHINA"],
+["https://linux.cn/article-12455-1.html","20200726 | 技术|Fedora 33 开始测试切换到 Btrfs"],
 ["https://www.solidot.org/story?sid=65338","20200824 | 奇客Solidot | Fedora 33 将默认使用 Btrfs 文件系统"],
 ["https://www.solidot.org/story?sid=66322","20201209 | 奇客Solidot | CentOS 8 将在明年底结束支持"],
 ["https://www.solidot.org/story?sid=66365","20201214 | 奇客Solidot | CentOS Linux 的替代"],

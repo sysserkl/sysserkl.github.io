@@ -1364,3 +1364,39 @@ function web_href_key_b(cskey,cstype,encode=false){
         return cskey;
     }
 }
+
+function int_number_list_insert_zero_b(cslist,csmin=false,csmax=false){
+    //[
+    //[int_number1,value1],
+    //[int_number,value2],    
+    //];
+    cslist.sort(function (a,b){return a[0]>b[0];});
+    if (cslist.length<2){
+        return cslist;
+    }
+    var num_set=new Set();
+    for (let item of cslist){
+        num_set.add(item[0]);
+    }
+    
+    if (csmin===false){
+        csmin=cslist[0][0];
+    }
+    if (csmax===false){
+        csmax=cslist[cslist.length-1][0];
+    }
+    
+    var blxl=0;    
+    var blcurrent=csmin;
+    while (true){
+        if (blcurrent>=csmax){break;}
+        if (!num_set.has(blcurrent)){
+            cslist.push([blcurrent,0]);
+        }
+        blcurrent=blcurrent+1;
+        blxl=blxl+1;
+        if (blxl>100000){break};
+    }
+    cslist.sort(function (a,b){return a[0]>b[0];});
+    return cslist;
+}

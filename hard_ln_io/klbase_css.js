@@ -230,7 +230,7 @@ function checkbox_kl_value_b(csid){
 
 function klmenu_check_b(span_id,change_value=true){
     var ospan=document.getElementById(span_id);
-    if (!ospan){return false;}
+    if (!ospan){return 0;} //原先为 false - 保留注释
     var blstr=ospan.innerText;
     var blvalue=(blstr.indexOf('⚪')==0?false:true);
     if (change_value){

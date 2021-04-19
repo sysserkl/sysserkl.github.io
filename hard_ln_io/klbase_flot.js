@@ -1,6 +1,7 @@
 //依赖 klbase_date.js - 保留注释
-function flot_two_lines_two_yaxis_k(cslist,cslist2,csid,y1unit,y2unit,label_position='nw',cstime=false,cstype='m',y1dec=2,y2dec=2,cstimeformat="",cstickSize=[],csmin_data_length=-1,csymin1=false,csymax1=false,csymin2=false,csymax2=false){
-    //cslist: [ '次数',[2019-08-01, 100],[2019-08-02, 300] ];
+function flot_two_lines_two_yaxis_k(cslist,cslist2,csid,y1unit,y2unit,label_position='nw',cstime=false,cstype='m',y1dec=2,y2dec=2,cstimeformat='',cstickSize=[],csmin_data_length=-1,csymin1=false,csymax1=false,csymin2=false,csymax2=false){
+    //cslist: [ '次数',[2019-08-01, 100],[2019-08-02, 300] ];    
+    //不支持一边多条线 - 保留注释
     if (label_position==''){
         label_position='nw';
     }
@@ -318,6 +319,11 @@ function flot_rand_flot_symbol_k(){
 }
 
 function flot_pie_k(chart_data,csid,label_radius=11/15){
+    //chart_data 类型如下：
+    //[
+    //{label: '杭州', data: 30},
+    //{label: '宁波', data: 40},
+    //];
     $.plot('#'+csid, chart_data, {
         series: {
             pie: {

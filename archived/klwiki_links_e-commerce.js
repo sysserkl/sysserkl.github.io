@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-03-17 13:01:24 三"],
+["","","","更新日期：2021-04-18 12:49:17 日"],
 ["http://tech.sina.com.cn/i/2007-10-16/10171795136.shtml","20071016 | 唐骏：无论马云持多少股份都是公司核心"],
 ["http://money.163.com/08/0519/18/4CB0VMBA00251RJ2.html","20080519 | 马云：最大的善举绝不在于捐款"],
 ["http://news.xinhuanet.com/newmedia/2009-02/04/content_10760063.htm","20090204 | 马云的2008：白云观禁语3天 淘宝高管需会倒立"],
@@ -338,4 +338,7 @@ var recent_info_list=[
 ["https://cn.nytimes.com/technology/20201228/china-jack-ma-alibaba/","20201228 | 袁莉：从“马爸爸”到“吸血鬼”，中国为何向马云“开战”？ - 纽约时报中文网"],
 ["https://www.williamlong.info/archives/6345.html","20210213 | 阿里巴巴女员工与顺风车司机谈恋爱被骗一千万-月光博客"],
 ["https://finance.sina.com.cn/tech/2021-03-12/doc-ikkntiak9563248.shtml","20210312 | 胡晓明辞任蚂蚁金服CEO，未来将负责社会公益项目_新浪网"],
+["https://finance.sina.com.cn/tech/2021-04-10/doc-ikmxzfmk6006198.shtml","20210410 | 阿里巴巴被罚182.28亿元，公司回应：诚恳接受，坚决服从！|阿里巴巴_新浪网"],
+["https://www.bjnews.com.cn/detail/161801648615272.html","20210410 | 182.28亿元！阿里巴巴实施“二选一”垄断行为被罚 - 新京报"],
+["https://www.solidot.org/story?sid=67464","20210412 | 奇客Solidot | 阿里巴巴表态将降低电商进入门槛"],
 ];

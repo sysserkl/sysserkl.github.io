@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-03-17 13:01:24 三"],
+["","","","更新日期：2021-04-18 12:49:17 日"],
 ["https://mail.python.org/pipermail/python-list/2005-May/342496.html","20050506 | [HELP] Tkinter Application Minimized to System Tray :)"],
 ["http://www.enet.com.cn/article/2006/1120/A20061120298161.shtml","20061120 | PHP：“草根语言”挑战“大腕”Java .Net"],
 ["http://blog.wpjam.com/article/wordpress-custom-fields/","20070805 | WordPress 自定义字段（Custom Fields）详细介绍和使用"],
@@ -434,6 +434,7 @@ var recent_info_list=[
 ["http://blogread.cn/it/article/7678","20160210 | SQLIte这么娇小可爱，不多了解点都不行啊 -- IT技术博客大学习"],
 ["https://stackoverflow.com/questions/35341376/python-selenium-find-element-by-css-selector-not-working","20160211 | Python selenium find_element_by_css_selector() not working - Stack Overflow"],
 ["https://stackoverflow.com/questions/35408339/is-there-any-method-to-get-the-number-of-rows-and-columns-present-in-xlsx-sheet","20160215 | python - Is there any method to get the number of rows and columns present in .xlsx sheet using openpyxl? - Stack Overflow"],
+["https://stackoverflow.com/questions/35850490/how-to-open-new-bash-terminal-using-python","20160307 | linux - How to open new bash terminal using Python - Stack Overflow"],
 ["https://stackoverflow.com/questions/36025267/how-to-find-out-size-of-a-photoimage-in-tkinter","20160316 | python - How to find out size of a PhotoImage in Tkinter? - Stack Overflow"],
 ["http://www.solidot.org/story?sid=47553","20160320 | Solidot | Stack Overflow调查发现开发者更多用Mac"],
 ["http://www.cnblogs.com/wumac/p/5308862.html","20160322 | tkinter 表格 - 無碼 - 博客园"],
@@ -457,6 +458,7 @@ var recent_info_list=[
 ["http://blog.csdn.net/aa1049372051/article/details/51880276","20160711 | Tkinter教程之Menu篇 - aa1049372051的专栏 - 博客频道 - CSDN.NET"],
 ["http://www.cfan.com.cn/2016/0712/126792.shtml","20160712 | 干掉全家桶！小编教你干干净净用Java_电脑爱好者"],
 ["https://stackoverflow.com/questions/16298923/catching-stdout-stderr-from-git","20160721 | perl - Catching STDOUT/STDERR from git - Stack Overflow"],
+["https://stackoverflow.com/questions/38556387/hide-or-removing-a-menubar-of-tkinter-in-python","20160724 | Hide or removing a menubar of tkinter in python - Stack Overflow"],
 ["https://bugs.mysql.com/bug.php?id=82384","20160729 | MySQL Bugs: #82384: 5.7.14 complains about wrong slave_master_info after upgrade from 5.7.13"],
 ["https://stackoverflow.com/questions/38792094/how-to-change-color-of-subtext-in-the-text-widget-python","20160806 | tkinter - How to change color of subtext in the Text widget (Python) - Stack Overflow"],
 ["https://stackoverflow.com/questions/38811735/accept-multiple-lines-of-input-in-a-bash-script","20160807 | linux - Accept multiple lines of input in a bash script - Stack Overflow"],

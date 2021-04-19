@@ -185,6 +185,7 @@ function txtmenus_kltxt_b(cstype=''){
     menu_general.push('<span class="span_menu" onclick="javascript:'+str_t+'search_or_reader_kltxt_b(\'reader_card\');">Card</span>');
     menu_general.push('<span class="span_menu" onclick="javascript:'+str_t+'bookmarks_get_kltxt_b(false,false);">读取最新书签</span>');
     menu_general.push('<span class="span_menu" onclick="javascript:'+str_t+'bookmarks_set_kltxt_b();">添加书签</span>');
+    menu_general.push('<span id="span_add_zero_reading_lines_txtlistsearch" class="span_menu" onclick="javascript:'+str_t+'klmenu_check_b(this.id,true);">⚪ 阅读行数补零</span>');
     menu_general.push('<span class="span_menu" onclick="javascript:'+str_t+'getlines_kltxt_b();">返回阅读页面</span>');
     menu_general.push('<span class="span_menu" onclick="javascript:'+str_t+'new_words_kltxt_b();">显示生词</span>');
     menu_general.push('<span class="span_menu" onclick="javascript:'+str_t+'find_cn_words_kltxt_b();">显示汉字生字</span>');
@@ -254,7 +255,7 @@ function txtmenus_kltxt_b(cstype=''){
     var bljg='';
     var colors=klmenu_b(color_menu,'🎨',(ismobile_b()?'16rem':'20rem'),'',fontsize,'20rem');
     if (cstype!=='digest'){
-        bljg=bljg+klmenu_b(menu_general,'','10rem','',fontsize);
+        bljg=bljg+klmenu_b(menu_general,'','11rem','',fontsize);
         bljg=bljg+klmenu_b(menu_dir,'🔍',menu_dir_width,'',fontsize);
         bljg=bljg+klmenu_b(menu_digest,'🖊','20rem','',fontsize);       
         bljg=bljg+colors;
@@ -1311,7 +1312,14 @@ function bookmarks_statistics_kltxt_b(bookmark_list,reading_lines,current_book_p
         
         var lines_per_day_real=current_line_no_max/read_days;
         var lines_per_day_all=current_line_no_max/day_all;
-        blstatsitics=blstatsitics+'实际阅读天数：'+read_days+'天；总行数：'+filelist_len+'；完成：'+(current_line_no_max*100/filelist_len).toFixed(2)+'%；平均每天阅读：'+lines_per_day_real.toFixed(0)+'—'+lines_per_day_all.toFixed(0)+'行。';
+        blstatsitics=blstatsitics+'实际阅读天数：'+read_days+'天；总行数：'+filelist_len+'；';
+        blstatsitics=blstatsitics+'完成：'+(current_line_no_max*100/filelist_len).toFixed(2)+'%；';
+        if (lines_per_day_all==lines_per_day_real){
+            blstatsitics=blstatsitics+'平均每天阅读：'+lines_per_day_all.toFixed(0)+'行。';        
+        }
+        else {
+            blstatsitics=blstatsitics+'平均每天阅读：'+lines_per_day_all.toFixed(0)+'—'+lines_per_day_real.toFixed(0)+'行。';
+        }
 
         if (current_line_no_max<filelist_len){
             var plan_days_real=Math.ceil((filelist_len-current_line_no_max)/lines_per_day_real);
@@ -1321,6 +1329,9 @@ function bookmarks_statistics_kltxt_b(bookmark_list,reading_lines,current_book_p
         blstatsitics=blstatsitics+'</p>';
     }
 
+    if (klmenu_check_b('span_add_zero_reading_lines_txtlistsearch',false)){
+        reading_lines=date_list_insert_zero_b(reading_lines);   //阅读行数补零 - 保留注释
+    }
     if (return_full && current_book_percent.length>0 && csbooklist_sub_global_b.length>0){
         flot_two_lines_two_yaxis_k(['《'+bookname+'》阅读行数'].concat(reading_lines),['《'+bookname+'》已读比例'].concat(current_book_percent),'div_flot_bookmark_line','行','%','nw',true,'d',0,0,'',[],-1,false,false,false,100);
         var odiv=document.getElementById('div_bookmark_statistics');
