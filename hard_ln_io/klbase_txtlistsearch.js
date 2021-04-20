@@ -239,7 +239,7 @@ function txtmenus_kltxt_b(cstype=''){
     '<span class="span_menu" onclick="javascript:'+str_t+'digest_statistics_kltxt_b();">摘要分布统计</span>',
     ];
     if (is_local_b()){
-        menu_digest.push('<span class="span_menu" onclick="javascript:window.open(\''+klwebphp_path_b('sticker.php')+'\', \'sticker\'+new Date().getTime(), \'width=1440, height=540\');">Sticker</span>');
+        menu_digest.push('<span class="span_menu" onclick="javascript:'+str_t+'window.open(\''+klwebphp_path_b('sticker.php')+'\', \'sticker\'+new Date().getTime(), \'width=1440, height=540\');">Sticker</span>');
     }
     
     //color menu - 保留注释

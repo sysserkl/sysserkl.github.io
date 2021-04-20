@@ -515,4 +515,6 @@ var digest_global=`
 *electrocute
 *expel
 *manatee
+*Tunisia
+*obituary
 `.trim().split('\n');

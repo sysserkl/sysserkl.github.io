@@ -51,4 +51,5 @@ var digest_global=`
 *unseaworthy
 *deerskin
 *pinewood
+*treeless
 `.trim().split('\n');
