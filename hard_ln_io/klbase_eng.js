@@ -307,7 +307,7 @@ function open_link_en_b(cstype,csword){
             window.open(blhref+'?_tagKLWiki0&s='+web_href_key_b(csword,'+',true));
             break;
         case 'E':
-            window.open('englishwords_book_search.php?s='+web_href_key_b(csword,'s',true));
+            window.open('book_search.php?s='+web_href_key_b(csword,'s',true)+'&eng');
             break;
         case 'e':
             window.open('enwords.htm?s='+web_href_key_b(csword,'+',true));

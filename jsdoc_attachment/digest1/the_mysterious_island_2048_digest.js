@@ -461,4 +461,5 @@ var digest_global=`
 *torn
 *kingfisher
 *orang
+*octahedron
 `.trim().split('\n');

@@ -6,4 +6,6 @@ var digest_global=`
 *friendliness
 *biweekly
 *subatomic
+*alkaline
+*octahedral
 `.trim().split('\n');

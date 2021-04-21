@@ -800,7 +800,7 @@ function exclude_words_enbook(){
         }
         blno=blno+1;
         bltotal=bltotal+1;
-        blwords=blwords+blno+'. <a href="englishwords_book_search.php?s='+encodeURIComponent(item[1])+'" target=_blank>'+item[1]+'</a> ';
+        blwords=blwords+blno+'. <a href="book_search.php?s='+encodeURIComponent(item[1])+'&eng" target=_blank>'+item[1]+'</a> ';
     }
     if (blwords!==''){
         bljg=bljg+'<p>'+blwords+'</p>';

@@ -34,4 +34,5 @@ var digest_global=`
 *microsecond
 *Nicholson
 *Tunis
+*lorry
 `.trim().split('\n');

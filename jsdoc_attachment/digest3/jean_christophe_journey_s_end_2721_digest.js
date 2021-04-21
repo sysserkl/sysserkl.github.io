@@ -41,4 +41,6 @@ var digest_global=`
 *unlit
 *mayonnaise
 *unjustly
+*Adriatic
+*insurrection
 `.trim().split('\n');

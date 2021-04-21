@@ -1,4 +1,29 @@
 <?php
+function file_check_g($file_path_name,$show_full_name=false,$check_write=false,$max_size=50){
+    if ($show_full_name){
+        $bname=$file_path_name;
+    }
+    else {
+        $bname = pathinfo($file_path_name)['basename'];
+    }
+    if (!file_exists($file_path_name)) {
+        return $bname.' does not exists';
+    }
+    if (!is_readable($file_path_name)) {
+        return $bname.' is not readable';
+    }
+    if ($check_write and !is_writable($file_path_name)) {
+        return $bname.' is not writable';
+    }
+    if ($max_size>=0){
+        $fsize=filesize($file_path_name)/1024/1024; //MB - 保留注释
+        if ($fsize>$max_size){
+            return $bname.' large than '.$max_size.' MB';
+        }
+    }
+    return '';
+}
+
 function strcmp_array_g($arr1,$arr2){
     //用法 $intersect = array_uintersect($moneydata2, $moneydata, 'strcmp_array_g');
     //用法 $intersect = array_udiff($moneydata2, $moneydata, 'comparevalue');
