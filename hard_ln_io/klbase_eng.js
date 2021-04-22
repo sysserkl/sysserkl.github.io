@@ -694,7 +694,7 @@ function en_day_old_words_b(daynumber,cstype,array_num_t){
     if (cstype.includes('_OR')){
         for (let oneword of enwords){
             var asc_t=0;
-            for (var item of array_num_t){
+            for (let item of array_num_t){
                 //asc_t=asc_sum_b(oneword[item]); - 保留注释
                 asc_t=oneword[4][item];
                 //只要一项元素符合即可 - 保留注释
@@ -710,7 +710,7 @@ function en_day_old_words_b(daynumber,cstype,array_num_t){
         for (let oneword of enwords){
             var asc_t=0;
             //对选定的元素进行求和计算 - 保留注释
-            for (var item of array_num_t){
+            for (let item of array_num_t){
                 //asc_t=asc_t+asc_sum_b(oneword[item]); - 保留注释
                 asc_t=asc_t+oneword[4][item];
             }

@@ -104,6 +104,7 @@ function flot_district_revenue_pie_multi_year_zjcompany(do_count=false){
         flot_pie_k(list_t,blid);
     }
     search_result_zj_company_global=[];
+    document.getElementById('input_search').value='';
 }
 
 function div_flot_css_zjcompany(csshow=true,fullscreen=false){
@@ -158,9 +159,31 @@ function flot_district_revenue_pie_zjcompany(show_chart=true,do_count=false){
     flot_pie_k(list_t,'div_flot_zj_company');
 }
 
-function flot_year_revenue_line_zjcompany(){
-    var flot_array={};
+function flot_year_revenue_district_line_zjcompany(){
+    var list_t=[];
+    var flot_array=[];
     
+    for (let blxl=0;blxl<search_result_zj_company_global.length;blxl++){
+        var item=search_result_zj_company_global[blxl];
+        if (list_t[item[1]+'_'+item[4]]==null){
+            list_t[item[1]+'_'+item[4]]=[item[4].substring(0,4),0];
+        }
+        if (flot_array[item[1]]==null){
+            flot_array[item[1]]=[item[1]];
+        }
+        list_t[item[1]+'_'+item[4]][1]=list_t[item[1]+'_'+item[4]][1]+item[2]/100000000;
+    }
+
+    for (let key in list_t){
+        flot_array[key.split('_')[0]].push(list_t[key]);
+    }
+    
+    div_flot_css_zjcompany(true,false);
+    flot_lines_k(object2array_b(flot_array),'div_flot_zj_company','nw',false,'','m','万亿元',-1,[],-1,false,false,true);
+}
+
+function flot_year_revenue_company_line_zjcompany(){
+    var flot_array={};
     for (let blxl=0;blxl<search_result_zj_company_global.length;blxl++){
         var item=search_result_zj_company_global[blxl];
         if (flot_array[item[0]]==null){
@@ -232,9 +255,10 @@ function array_2_html_zjcompany(csarray,cssum=false,table_id='table_zj_company',
         bljg=bljg+'<span class="aclick" onclick="javascript:switch_columns_zjcompany(\'table_zj_company\',\'td_no\',\'td_rank\');">序号与名次对调</span>\n';       
         bljg=bljg+'<span class="aclick" onclick="javascript:switch_columns_zjcompany(\'table_zj_company\',\'td_city\',\'td_revenue\');">城市与地区对调</span>\n';        
         bljg=bljg+'</p><p>';
-        bljg=bljg+'<span class="aclick" onclick="javascript:flot_year_revenue_line_zjcompany();">显示年份收入折线图</span>\n';
-        bljg=bljg+'<span class="aclick" onclick="javascript:flot_district_revenue_pie_zjcompany();">显示地区收入饼图</span>\n';  
-        bljg=bljg+'<span class="aclick" onclick="javascript:flot_district_revenue_pie_zjcompany(true,true);">显示地区家数饼图</span>\n';  
+        bljg=bljg+'<span class="aclick" onclick="javascript:flot_year_revenue_company_line_zjcompany();">年份收入折线图</span>\n';
+        bljg=bljg+'<span class="aclick" onclick="javascript:flot_year_revenue_district_line_zjcompany();">地区收入折线图</span>\n';        
+        bljg=bljg+'<span class="aclick" onclick="javascript:flot_district_revenue_pie_zjcompany();">地区收入饼图</span>\n';  
+        bljg=bljg+'<span class="aclick" onclick="javascript:flot_district_revenue_pie_zjcompany(true,true);">地区家数饼图</span>\n';  
         bljg=bljg+'</p>\n';
         if (cssum!==false){  
             bljg=bljg+'<p>平均收入：'+blaverage+'万元；在平均线上的企业共有 '+average_count+' 家，占 '+(average_count*100/csarray.length).toFixed(2)+' %</p>\n';
@@ -356,6 +380,11 @@ function flot_district_year_revenue_line_zjcompany(is_percent=false,do_count=fal
 		if (cskey=='' || blfound){        
             flot_revenue_data.push(item);
         }
+    }
+    
+    if (flot_revenue_data.length==0){
+        alert('无符合条件 '+cskey+' 的记录，仅支持城市筛选，不支持年份筛选');
+        return;
     }
 
     var odiv=div_flot_css_zjcompany(true,false);

@@ -765,14 +765,11 @@ function import_words_enbook(cstype){
             document.getElementById('textarea_new_words1').value=result_t.join('\n');
             break;
         case 'sentence':
-            var bltotal_t=Math.floor((Math.random()*10)+1);
-            for (let blxl=0;blxl<bltotal_t;blxl++){
-                en_sentence_global.sort(randomsort_b);
-            }
-            var list_t=en_sentence_global.slice(0,2000);
+            var list_t=array_numbers_b(Math.min(2000,en_sentence_global.length),Math.floor((Math.random()*10)+1));
+
             var result_t=[];
             for (let item of list_t){
-                result_t.push(item[0]);
+                result_t.push(en_sentence_global[item]);
             }
             document.getElementById('textarea_new_words1').value=result_t.join('\n\n');
             break;

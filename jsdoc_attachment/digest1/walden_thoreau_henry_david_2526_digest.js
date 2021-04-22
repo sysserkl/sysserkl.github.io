@@ -21,4 +21,5 @@ var digest_global=`
 *sleety
 *Helena
 *peninsular
+*biped
 `.trim().split('\n');
