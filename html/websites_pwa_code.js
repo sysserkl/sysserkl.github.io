@@ -114,13 +114,30 @@ function form_websites_pwa(){
     bljg=bljg+'<span class="aclick" onclick="javascript:search_websites_pwa();">关闭</span> ';
     bljg=bljg+'<span class="aclick" onclick="javascript:update_websites_pwa();">更新</span> ';
     bljg=bljg+textarea_buttons_b('textarea_websites_pwa','清空,复制,发送到临时记事本,发送地址')+' 行数：'+websites_list.split('\n').length;
-
     bljg=bljg+'</p></form>';
+    bljg=bljg+'<p><input type="text" id="input_filter" placeholder="过滤" onkeyup="javascript:if (event.key==\'Enter\'){filter_websites_pwa(this.value);}" /></p>';    
     document.getElementById('divhtml').innerHTML=bljg;
+    input_with_x_b('input_filter',10);
+}
+
+function filter_websites_pwa(csstr){
+    var otextarea=document.getElementById('textarea_websites_pwa');
+    var list_t=otextarea.value.trim().split('\n');
+    var bljg=[];
+    for (let item of list_t){
+        var blfound=str_reg_search_b(item,csstr,true);
+        if (blfound==-1){
+            break;
+        }
+        if (blfound){
+            bljg.push(item);
+        }
+    }
+    otextarea.value=bljg.join('\n');
 }
 
 function buttons_klwebsite_pwa(keyword=''){
-    var bljg='<input type="text" id="input_search" style="width:10rem;" value="'+keyword+'" placeholder="搜索" onkeyup="javascript:if (event.key==\'Enter\'){search_websites_pwa(this.value);}" />';
+    var bljg='<input type="text" id="input_search" value="'+keyword+'" placeholder="搜索" onkeyup="javascript:if (event.key==\'Enter\'){search_websites_pwa(this.value);}" />';
     bljg=bljg+'<span id="span_recent_search"></span>';
     return bljg;
 }
