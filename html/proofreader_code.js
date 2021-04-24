@@ -1,5 +1,6 @@
 function init_dpr(){
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.6rem'));
+    menu_dpr();
 }
 
 function show_hide_dpr(show_textarea=true){
@@ -32,15 +33,23 @@ function array_sort_count_dpr(csarray,sort_type='num'){
     return blstr;
 }
 
-function high_light_dpr(csarray,csstyle){
+function high_light_dpr(csarray,csstyle='',csclass=''){
     var odiv=document.getElementById('div_content_dpr');
     var oldtxt=odiv.innerText;
     var oldhtml=odiv.innerHTML;
     var newhtml=oldhtml;
+    var span_str='<span';
+    if (csstyle!==''){
+        span_str=span_str+' style="'+csstyle+'"';
+    }    
+    if (csclass!==''){
+        span_str=span_str+' class="'+csclass+'"';
+    }      
+    span_str=span_str+'>';
     for (let item of csarray){
         if (!newhtml.includes(item)){continue;}
         try{
-            newhtml=newhtml.replace(new RegExp(item,'g'),'<span style="'+csstyle+'">'+item+'</span>');
+            newhtml=newhtml.replace(new RegExp(item,'g'),span_str+item+'</span>');
             odiv.innerHTML=newhtml;
             if (odiv.innerText!==oldtxt){
                 odiv.innerHTML=oldhtml;
@@ -55,6 +64,7 @@ function high_light_dpr(csarray,csstyle){
 function cirminal_law_dpr(){
     var otextarea=document.getElementById('textarea_document_proofreader');
     var blstr=otextarea.value;
+    if (blstr.trim()==''){return;}
     show_hide_dpr(false);
     
     var result_t=[];
@@ -178,7 +188,7 @@ function cirminal_law_dpr(){
                     else {
                         var days=(from_to_date_list[1][1]-from_to_date_list[0][1])/86400000;
                         var next_month=next_month_b(date2str_b('-',from_to_date_list[0][1]).substring(0,7),Math.ceil(days/30));
-                        result_t.push('⚪ 刑期('+one_duration+')：'+days+'天≈'+(days/30).toFixed(1)+'月。');
+                        result_t.push('⚪ 刑期('+one_duration+')：'+days.toFixed(1)+'天≈'+(days/30).toFixed(1)+'月。');
                         result_t.push('⚪ '+from_to_date_list[0][0]+' 加 '+Math.round(days/30)+' 个月 是：'+next_month.replace('-','年')+'月');
                     }
                 }
@@ -238,4 +248,17 @@ function cirminal_law_dpr(){
     var odiv=document.getElementById('divhtml');
     odiv.innerHTML=array_2_li_b(result_t);
     odiv.scrollIntoView();
+}
+
+function menu_dpr(){
+    var str_t=klmenu_hide_b('');
+    var klmenu1=[
+    '<a href="https://wenshu.court.gov.cn/.htm" target=_blank>裁判文书网</a>',    
+    ];
+
+    var klmenu2=[
+    '<span class="span_menu" onclick="javascript:'+str_t+'pwa_clear_cache_all_b();">更新版本</span>',        
+    ];
+
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'✒','8rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'⚙','8rem','1rem','1rem','60rem'),'','0rem')+' ');
 }
