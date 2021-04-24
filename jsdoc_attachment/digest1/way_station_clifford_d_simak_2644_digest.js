@@ -245,4 +245,5 @@ var digest_global=`
 *heartwarming
 *clannish
 *luminescence
+*chickadee
 `.trim().split('\n');

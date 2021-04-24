@@ -52,4 +52,6 @@ var digest_global=`
 *deerskin
 *pinewood
 *treeless
+*cobalt
+*obese
 `.trim().split('\n');
