@@ -180,7 +180,7 @@ function more_tools_klrecent(){
     for (let item of tools){
         bljg=bljg+'<a class="a_oblong_box" href="'+item[0]+'" target=_blank>'+item[1]+'</a> ';
     }
-    bljg=bljg+'<span class="oblong_box" onclick="javascript:clear_cache_all_klrecent();">Clear PWA Cache</span> ';
+    bljg=bljg+'<span class="oblong_box" onclick="javascript:pwa_clear_cache_all_b();">Clear PWA Cache</span> ';
     bljg=bljg+'<span class="oblong_box" onclick="javascript:local_storage_view_form_b(\'\',\'div_localstorage\');">查看 localStorage(全部)</span> ';
     bljg=bljg+'<span class="oblong_box" onclick="javascript:local_storage_view_form_b(\'PIM\',\'div_localstorage\');">查看 localStorage(PIM系列)</span> ';    
     bljg=bljg+'</p>';
@@ -196,30 +196,6 @@ function big_title_klrecent(){
     otable.querySelector('td').valign="center";
     otable.querySelector('h2').style.cssText="";
     otable.querySelector('#span_title').style.cssText="font-size:"+headline_size_rct_global+"rem;border-radius: 0rem;";
-}
-
-function clear_cache_all_klrecent(){
-    if (confirm('是否清空全部 PWA Cache？')){
-        var service_list=[
-        "bible",
-        "calculator",
-        "gps_points",
-        "long_term_plans",
-        "lsm",
-        "memo",
-        "rnd_english_words",
-        "routines",
-        "screen_clock",
-        "screen_colorful_boxes",
-        "screen_matrix",
-        "sticker_mobile",
-        "todolist",
-        "websites",
-        ];
-        for (let item of service_list){
-            service_worker_delete_b(item);
-        }
-    }
 }
 
 function search_klrecent(cskey='',showhtml=true){
