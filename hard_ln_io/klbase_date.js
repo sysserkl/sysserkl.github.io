@@ -38,7 +38,7 @@ function prev_month_b(csstr){
     }
 }
 
-function next_month_b(csstr){
+function next_month_b(csstr,csmonths=1){
     //csstr: 2018-11
 	var csnum=arguments.length;
 	if (csnum<1){
@@ -48,13 +48,17 @@ function next_month_b(csstr){
     var list_t=csstr.split('-');
     if (list_t.length!==2){return '';}
     var blyear=parseInt(list_t[0]);
-    var blmonth=parseInt(list_t[1]);
-    if (blmonth<12){
-        return blyear+'-'+('0'+(blmonth+1)).slice(-2);
+    if (csmonths>12){
+        blyear=blyear+parseInt(csmonths/12);
+        csmonths=csmonths-parseInt(csmonths/12)*12;
     }
-    else {
-        return (blyear+1)+'-01';
+    var blmonth=parseInt(list_t[1])+csmonths;
+    
+    if (blmonth>12){
+        blyear=blyear+1;
+        blmonth=blmonth-12;
     }
+    return blyear+'-'+('0'+blmonth).slice(-2);
 }
 
 function date2str_b(sep='-',theday=false){
@@ -97,6 +101,27 @@ function day_2_week_b(csstr='',csbrief=false){
         str_t='星期';
     }
     return str_t+['日','一','二','三','四','五','六'][theday.getDay()];
+}
+
+function chinese_find_ymd_b(csstr){
+    return csstr.match(/[一二三四五六七八九〇○]{1,}(\s+)?年[一二三四五六七八九十〇○]{1,}(\s+)?月[一二三四五六七八九十〇○]{1,}(\s+)?日/g) || [];
+}
+
+function chinese_ymd_2_number_b(csstr){
+    csstr=csstr.replace(new RegExp(/三十一(\s+)?日/,'g'),'31日');
+    csstr=csstr.replace(new RegExp(/三十(\s+)?日/,'g'),'30日');
+    csstr=csstr.replace(new RegExp(/二十([一二三四五六七八九])(\s+)?日/,'g'),'2$1日');    //非20 - 保留注释
+    csstr=csstr.replace(new RegExp(/二十(\s+)?日/,'g'),'20日');
+    csstr=csstr.replace(new RegExp(/十([一二三四五六七八九])(\s+)?日/,'g'),'1$1日');    //非10 - 保留注释
+    csstr=csstr.replace(new RegExp(/十(\s+)?日/,'g'),'10日');
+    csstr=csstr.replace(new RegExp(/十([一二])(\s+)?月/,'g'),'1$1月');    //非10 - 保留注释
+    csstr=csstr.replace(new RegExp(/十(\s+)?月/,'g'),'10月');
+    
+    var list_t={'一':1,'二':2,'三':3,'四':4,'五':5,'六':6,'七':7,'八':8,'九':9,'〇':0,'○':0};
+    for (let key in list_t){
+        csstr=csstr.replace(new RegExp(key,'g'),list_t[key]);
+    }
+    return csstr;
 }
 
 function day_2_week_range_b(csstr,cstype='',returnstr=true){
@@ -249,6 +274,9 @@ function validdate_b(datestr,first_day_of_month=false,ismonth_day=false){
         else {
             datestr=blyear+'-'+blmonth+'-'+month_day_b(parseInt(blmonth),parseInt(blyear));
         }
+    }
+    else if (datestr.match(/^\d{4}年\d{1,2}月\d{1,2}日$/)){
+        datestr=datestr.replace(new RegExp(/[年月]/,'g'),'-').slice(0,-1);
     }
     else if (ismonth_day){
         var blyear=new Date().getFullYear();

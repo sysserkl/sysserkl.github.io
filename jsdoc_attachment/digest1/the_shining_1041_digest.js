@@ -36,4 +36,5 @@ var digest_global=`
 *arrogantly
 *inadequacy
 *switchboard
+*hexagonal
 `.trim().split('\n');

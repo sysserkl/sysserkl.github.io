@@ -8,4 +8,5 @@ var digest_global=`
 *subatomic
 *alkaline
 *octahedral
+*unreliable
 `.trim().split('\n');
