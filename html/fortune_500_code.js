@@ -39,15 +39,30 @@ function search_fortune_500(cskey,csreg,show_html){
 function pie_multiyear_district_statistics_fortune_500(csindex=1){
     var years=year_district_list_fortune_500()[0];
     if (years.length==0){return;}
+    
+    var cskey= document.getElementById('input_search').value.trim();
+    var csreg=document.getElementById('input_reg').checked;
+    if (cskey.slice(-4,)=='(:r)'){
+        csreg=true;
+        cskey=cskey.substring(0,cskey.length-4);
+    }
+    
     var result_t=[];
     for (let item of years){
-        search_fortune_500(item,false,false);
-        result_t.push([item,pie_district_statistics_fortune_500(false,csindex)]);
+		var blfound=str_reg_search_b(item,cskey,csreg);
+		if (blfound==-1){
+			break;
+		}
+
+		if (cskey=='' || blfound){        
+            search_fortune_500(item,false,false);
+            result_t.push([item,pie_district_statistics_fortune_500(false,csindex)]);
+        }
     }
     
     document.getElementById('divhtml').innerHTML='';
     var odiv=div_flot_css_fortune_500(true,true);
-    odiv.innerHTML='';
+    odiv.innerHTML='<h3 id="h3_multi_year_pi">多年地区'+['企业家数','','收入','利润'][csindex+1]+'饼图</h3>';
     
     for (let one_year_data of result_t){
         var list_t=[];
@@ -59,7 +74,6 @@ function pie_multiyear_district_statistics_fortune_500(csindex=1){
         flot_pie_k(list_t,blid);
     }
     search_result_fortune_500_global=[];
-    document.getElementById('input_search').value='';
 }
 
 function div_flot_css_fortune_500(csshow=true,fullscreen=false){
@@ -69,14 +83,12 @@ function div_flot_css_fortune_500(csshow=true,fullscreen=false){
 function pie_district_statistics_fortune_500(show_chart=true,csindex=1){
     var fraction_len=1;
     var list_t=pie_district_statistics_array_rank_b(search_result_fortune_500_global,3,csindex);
-
     if (!show_chart){
         return list_t;
     }
     
     var bljg=[];
     [list_t,bljg]=pie_district_statistics_string_rank_b(list_t,fraction_len,'百万美元',1,csindex);
-    
     var div_id='div_district_revenue_pie_data_fortune_500';
     var odiv=document.getElementById(div_id);
     if (!odiv){
@@ -87,10 +99,10 @@ function pie_district_statistics_fortune_500(show_chart=true,csindex=1){
     flot_pie_k(list_t,'div_flot_fortune_500');
 }
 
-function line_district_revenue_fortune_500(return_percent=false){
+function line_district_revenue_fortune_500(return_percent=false,csindex=1){
     var fraction_len=1;
 
-    var flot_array=line_district_revenue_rank_b(search_result_fortune_500_global,3,5,1,1);
+    var flot_array=line_district_revenue_rank_b(search_result_fortune_500_global,3,5,csindex,1);
 
     div_flot_css_fortune_500(true,false);    
 
@@ -103,15 +115,15 @@ function line_district_revenue_fortune_500(return_percent=false){
     flot_lines_k(object2array_b(flot_array),'div_flot_fortune_500','nw',false,'','m','百万美元',-1,[],-1,false,false,true);
 }
 
-function company_rate_fortune_500(){
-    var bljg=company_rate_rank_b(search_result_fortune_500_global,3,5,1,1);
+function company_rate_fortune_500(csindex=1){
+    var bljg=company_rate_rank_b(search_result_fortune_500_global,3,5,csindex,1);
 
     div_flot_css_fortune_500(true,false);    
     document.getElementById('div_flot_fortune_500').innerHTML='<table class="table_fortune_500" cellpadding=0 cellspacing=0>'+bljg+'</table>';   
 }
 
-function line_company_revenue_fortune_500(){
-    var list_t=line_company_revenue_rank_b(search_result_fortune_500_global,5,1,1);
+function line_company_revenue_fortune_500(csindex=1){
+    var list_t=line_company_revenue_rank_b(search_result_fortune_500_global,5,csindex,1);
     
     div_flot_css_fortune_500(true,false);    
     flot_lines_k(list_t,'div_flot_fortune_500','nw',false,'','m','百万美元',-1,[],-1,false,false,true);
@@ -159,7 +171,7 @@ function array_2_html_fortune_500(csarray,cssum=false,table_id='table_fortune_50
         bljg=bljg+'<p>'+table_buttons_rank_b('table_fortune_500')+'</p>';
         bljg=bljg+'<p>';
         bljg=bljg+'<select onchange="javascript:flot_type_fortune_500(this.value);" style="height:2rem;">';
-        for (let item of ['','企业收入折线图','企业多年平均增长率','地区收入折线图','地区多年平均增长率','地区收入饼图','地区企业家数饼图']){
+        for (let item of ['','企业收入折线图','企业收入多年平均增长率','企业利润折线图','企业利润多年平均增长率','地区收入折线图','地区收入多年平均增长率','地区利润折线图','地区利润多年平均增长率','地区收入饼图','地区利润饼图','地区企业家数饼图']){
             bljg=bljg+'<option>'+item+'</option>\n';
         }
         bljg=bljg+'</select>';
@@ -179,18 +191,33 @@ function flot_type_fortune_500(cstype){
         case '企业收入折线图':
             line_company_revenue_fortune_500();
             break;
-        case '企业多年平均增长率':
+        case '企业收入多年平均增长率':
             company_rate_fortune_500();
+            break;
+        case '企业利润折线图':
+            line_company_revenue_fortune_500(2);
+            break;
+        case '企业利润多年平均增长率':
+            company_rate_fortune_500(2);
             break;
         case '地区收入折线图':
             line_district_revenue_fortune_500();
             break;
-        case '地区多年平均增长率':
+        case '地区收入多年平均增长率':
             line_district_revenue_fortune_500(true);
-            break;            
+            break;           
+        case '地区利润折线图':
+            line_district_revenue_fortune_500(false,2);
+            break;
+        case '地区利润多年平均增长率':
+            line_district_revenue_fortune_500(true,2);
+            break;                 
         case '地区收入饼图':
             pie_district_statistics_fortune_500();
             break;
+        case '地区利润饼图':
+            pie_district_statistics_fortune_500(true,2);
+            break;            
         case '地区企业家数饼图':
             pie_district_statistics_fortune_500(true,-1);
             break;
@@ -268,9 +295,12 @@ function menu_fortune_500(){
     '<span class="span_menu" onclick="javascript:'+str_t+'array_2_csv_fortune_500();">导出当前结果为csv</span>',    
     '<span class="span_menu" onclick="javascript:'+str_t+'line_district_statistics_fortune_500();">地区收入图</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'line_district_statistics_fortune_500(true);">地区收入比例图</span>',    
+    '<span class="span_menu" onclick="javascript:'+str_t+'line_district_statistics_fortune_500(false,2);">地区利润图</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'line_district_statistics_fortune_500(true,2);">地区利润比例图</span>',    
     '<span class="span_menu" onclick="javascript:'+str_t+'line_district_statistics_fortune_500(false,-1);">地区企业家数图</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'line_district_statistics_fortune_500(true,-1);">地区企业家数比例图</span>',        
     '<span class="span_menu" onclick="javascript:'+str_t+'pie_multiyear_district_statistics_fortune_500();">多年地区收入饼图</span>',     
+    '<span class="span_menu" onclick="javascript:'+str_t+'pie_multiyear_district_statistics_fortune_500(2);">多年地区利润饼图</span>',     
     '<span class="span_menu" onclick="javascript:'+str_t+'pie_multiyear_district_statistics_fortune_500(-1);">多年地区企业家数饼图</span>',     
     ];
 

@@ -253,7 +253,7 @@ function cirminal_law_dpr(){
 function menu_dpr(){
     var str_t=klmenu_hide_b('');
     var klmenu1=[
-    '<a href="https://wenshu.court.gov.cn/.htm" target=_blank>裁判文书网</a>',    
+    '<a href="https://wenshu.court.gov.cn/" target=_blank>裁判文书网</a>',    
     ];
 
     var klmenu2=[

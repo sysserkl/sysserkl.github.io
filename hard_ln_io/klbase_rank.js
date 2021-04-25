@@ -114,12 +114,16 @@ function company_rate_rank_b(csarray,district_index,year_index,revenue_index,den
         if (flot_array[item[0]]==null){
             flot_array[item[0]]=[item[0],item[district_index],[]];
         }
-        flot_array[item[0]][2].push([parseInt(item[year_index].substring(0,4)),item[revenue_index]/denominator]);
+        var blvalue=item[revenue_index];
+        if (blvalue=='' || isNaN(blvalue)){continue;}
+        var blyear=parseInt(item[year_index].substring(0,4));
+        flot_array[item[0]][2].push([blyear,blvalue/denominator]);
     }
     
     //------------------
     var list_t=[];
     for (let key in flot_array){
+        if (flot_array[key][2].length==0){continue;}
         flot_array[key][2].sort();
         list_t.push(flot_array[key]);
     }
@@ -129,8 +133,14 @@ function company_rate_rank_b(csarray,district_index,year_index,revenue_index,den
         if (item[2].length<2){continue;}   //只有一年 - 保留注释
         var first_item=item[2][0];
         var last_item=item[2].slice(-1)[0];
-        var blpow=Math.pow(last_item[1]/first_item[1],1/(last_item[0]-first_item[0]))-1;
-        rate_list.push([item[0],item[1],first_item[0],last_item[0],blpow]);    //企业，初始年分，结束年份，增长率 - 保留注释
+        var bldivide=last_item[1]/first_item[1];
+        if (bldivide>=0){
+            var blpow=Math.pow(bldivide,1/(last_item[0]-first_item[0]))-1;
+            rate_list.push([item[0],item[1],first_item[0],last_item[0],blpow]);    //企业，初始年分，结束年份，增长率 - 保留注释
+        }
+        else {
+            console.log(item); //负数未计算 - 保留注释
+        }
     }
     rate_list.sort(function (a,b){return a[4]<b[4];});  //增长率逆序 - 保留注释
     rate_list.sort(function (a,b){return a[3]<b[3];});  //结束年份逆序 - 保留注释
@@ -257,7 +267,9 @@ function pie_district_statistics_array_rank_b(csarray,district_index,revenue_ind
         if (list_t[item[district_index]]==null){
             list_t[item[district_index]]=[item[district_index],0];
         }
-        list_t[item[district_index]][1]=list_t[item[district_index]][1]+(revenue_index==-1?1:item[revenue_index]);
+        var blvalue=(revenue_index==-1?1:item[revenue_index]);
+        if (blvalue=='' || isNaN(blvalue)){continue;}
+        list_t[item[district_index]][1]=list_t[item[district_index]][1]+blvalue;
     }
     
     var list_t=object2array_b(list_t);
@@ -270,7 +282,9 @@ function pie_district_statistics_string_rank_b(csarray,fraction_len,caption,deno
     var blsum=0;
     for (let blxl=0;blxl<csarray.length;blxl++){
         blsum=blsum+csarray[blxl][1];
-        csarray[blxl]={'label': csarray[blxl][0],'data': (revenue_index==-1?csarray[blxl][1]:csarray[blxl][1]/denominator)};
+        var blvalue=(revenue_index==-1?csarray[blxl][1]:csarray[blxl][1]/denominator);
+        if (blvalue=='' || isNaN(blvalue)){continue;}
+        csarray[blxl]={'label': csarray[blxl][0],'data': blvalue};
     }
     bljg.push(['合计',blsum]);
 
