@@ -26,6 +26,8 @@ function array_sort_count_dpr(csarray,sort_type='num'){
             break;
         case 'str':
             list_t.sort();
+        case 'cn':
+            list_t.sort(function (a,b){return zh_sort_b(a,b);});
     }
     
     var blstr=list_t.join(' ◽ ');
@@ -61,15 +63,15 @@ function high_light_dpr(csarray,csstyle='',csclass=''){
     }
 }
 
-function cirminal_law_dpr(){
+function proofread_dpr(){
     var otextarea=document.getElementById('textarea_document_proofreader');
-    var blstr=otextarea.value;
-    if (blstr.trim()==''){return;}
+    var content_str=otextarea.value;
+    if (content_str.trim()==''){return;}
     show_hide_dpr(false);
     
     var result_t=[];
     //中文日期
-    var ymd_cn_list=chinese_find_ymd_b(blstr);
+    var ymd_cn_list=chinese_find_ymd_b(content_str);
     var ymd_cn_varified_list=[];
     for (let item of ymd_cn_list){
         var bldate=validdate_b(chinese_ymd_2_number_b(item));
@@ -80,11 +82,13 @@ function cirminal_law_dpr(){
             ymd_cn_varified_list.push([item,date2str_b(bldate)]);
         }
     }
-    result_t.push('⚪ 中文日期格式：'+array_sort_count_dpr(ymd_cn_list,'str'));
-    high_light_dpr(ymd_cn_list,'border-bottom:0.2rem solid blue;');
+    result_t.push('⚪ 中文日期：'+array_sort_count_dpr(ymd_cn_list,'cn'));
+    if (klmenu_check_b('span_highlight_date_dpr',false)){
+        high_light_dpr(ymd_cn_list,'border-bottom:0.2rem solid blue;');
+    }
     
     //阿拉伯数字日期
-    var ymd_num_list=blstr.match(/\d{1,}年\d{1,}月\d{1,}日/g) || [];
+    var ymd_num_list=content_str.match(/\d{1,}年\d{1,}月\d{1,}日/g) || [];
     var ymd_num_varified_list=[];
     for (let item of ymd_num_list){
         var bldate=validdate_b(item);
@@ -95,9 +99,10 @@ function cirminal_law_dpr(){
             ymd_num_varified_list.push([item,date2str_b(bldate)]);        
         }
     }
-    result_t.push('⚪ 数字日期格式：'+array_sort_count_dpr(ymd_num_list,'str'));
-    high_light_dpr(ymd_num_list,'border-bottom:0.2rem solid green;');
-
+    result_t.push('⚪ 数字日期：'+array_sort_count_dpr(ymd_num_list,'str'));
+    if (klmenu_check_b('span_highlight_date_dpr',false)){
+        high_light_dpr(ymd_num_list,'border-bottom:0.2rem solid green;');
+    }
 
     //中文日期与阿拉伯数字日期对应
     var date_double_equal_set=new Set();
@@ -117,49 +122,51 @@ function cirminal_law_dpr(){
     else {
         result_t.push('⚪ 成对日期：'+Array.from(date_double_equal_set).join(' ◽ '));
     }
-    high_light_dpr(Array.from(date_double_single_set),'background-color:skyblue;');
+    if (klmenu_check_b('span_highlight_date_dpr',false)){
+        high_light_dpr(Array.from(date_double_single_set),'background-color:skyblue;');
+    }
 
     //多个小数点
-    var points_list=blstr.match(/\d+\.\d+\.|\d+\.{2,}\d+/g) || [];
+    var points_list=content_str.match(/\d+\.\d+\.|\d+\.{2,}\d+/g) || [];
     for (let item of points_list){
         result_t.push('❓ 多个小数点：'+item);
     }
     high_light_dpr(points_list,'background-color:pink;');
 
     //0
-    var zero_list=blstr.match(/[〇○零]/g) || [];
+    var zero_list=content_str.match(/[〇○零]/g) || [];
     zero_list=array_unique_b(zero_list);
     if (zero_list.length>1){
         result_t.push('❓ 几种0写法：'+zero_list.join(' ◽ '));
     }
 
     //超过4位的连续数字
-    var num5_list=blstr.match(/[0-9\-\.]{5,}/g) || [];
+    var num5_list=content_str.match(/[0-9\-\.]{5,}/g) || [];
     if (num5_list.length>0){
         result_t.push('❓ 超过4位的连续数字：'+array_sort_count_dpr(num5_list));
     }
     
     //小于4位的连续数字
-    var num1_3_list=blstr.match(/\b[0-9\-\.]{1,3}\b/g) || [];
+    var num1_3_list=content_str.match(/\b[0-9\-\.]{1,3}\b/g) || [];
     if (num1_3_list.length>0){
         result_t.push('⚪ 小于4位的连续数字：'+array_sort_count_dpr(num1_3_list));
     }
     
     //4位的连续数字
-    var num4_list=blstr.match(/\b[0-9\-\.]{4}\b/g) || [];
+    var num4_list=content_str.match(/\b[0-9\-\.]{4}\b/g) || [];
     if (num4_list.length>0){
         result_t.push('⚪ 4位的连续数字：'+array_sort_count_dpr(num4_list));
     }
     
     //英文标点符号
-    var en_punctuation_list=blstr.match(/[^\x00-\xff][\.,\?!"']/g) || [];
+    var en_punctuation_list=content_str.match(/[^\x00-\xff][\.,\?!"']/g) || [];
     if (en_punctuation_list.length>0){
         result_t.push('❓ 英文标点符号：'+en_punctuation_list.join(' ◽ '));
         high_light_dpr(en_punctuation_list,'background-color:pink;');
     }
     
     //刑期
-    var duration_list=blstr.match(/自.*起至.*止/g) || [];
+    var duration_list=content_str.match(/自.*起至.*止/g) || [];
     if (duration_list.length==0){
         result_t.push('❓ 未发现刑期起止日期');
     }
@@ -200,7 +207,7 @@ function cirminal_law_dpr(){
     var cdouble_list=character_double_b().split('');
     var cdouble_found_list=[];
     for (let item of cdouble_list){
-        if (blstr.includes(item)){
+        if (content_str.includes(item)){
             cdouble_found_list.push(item);
         }
     }
@@ -210,7 +217,7 @@ function cirminal_law_dpr(){
     }
     
     //x*
-    var asterisk_list=array_unique_b(blstr.match(/[x\*×]{2,}/g) || []); 
+    var asterisk_list=array_unique_b(content_str.match(/[x\*×]{2,}/g) || []); 
     for (let one_asterisk of asterisk_list){
         if (array_unique_b(one_asterisk.split('')).length>1){
             result_t.push('❓ 发现Xx*中至少两个字符同时使用：'+one_asterisk);    
@@ -218,18 +225,20 @@ function cirminal_law_dpr(){
         }
     }
     
-    //标点符号配对
+    //标点符号个数和同行配对
     var punctuation_quotation_list=['《》','（）','“”','’‘'];
     for (let one_quotation of punctuation_quotation_list){
-        var punctuation1_length=(blstr.match(new RegExp(one_quotation.substring(0,1),'g')) || []).length; 
-        var punctuation2_length=(blstr.match(new RegExp(one_quotation.substring(1),'g')) || []).length; 
-        if (punctuation1_length!==punctuation2_length){
-            result_t.push('❓ 标点符号'+one_quotation+'不成对：'+punctuation1_length+'-'+punctuation2_length+'个');
+        var punctuation1_length=(content_str.match(new RegExp(one_quotation.substring(0,1),'g')) || []).length; 
+        var punctuation2_length=(content_str.match(new RegExp(one_quotation.substring(1),'g')) || []).length; 
+        var punctuation3_length=(content_str.match(new RegExp(one_quotation.substring(0,1)+'.*?'+one_quotation.substring(1),'g')) || []).length; 
+        
+        if (punctuation1_length!==punctuation2_length || punctuation1_length!==punctuation3_length){
+            result_t.push('❓ 标点符号'+one_quotation+'个数不一致：'+punctuation1_length+'-'+punctuation2_length+'个');
         }    
     }
     
     //被告人加亮
-    var defendant_list=blstr.match(/(被告人[^\x00-\xff]{2,4}?)，/g) || []; 
+    var defendant_list=content_str.match(/(被告人[^\x00-\xff]{2,4}?)，/g) || []; 
     for (let blxl=0;blxl<defendant_list.length;blxl++){
         if (defendant_list[blxl].slice(-1)=='，'){
             defendant_list[blxl]=defendant_list[blxl].slice(0,-1);
@@ -240,14 +249,67 @@ function cirminal_law_dpr(){
         result_t.push('🔴 未发现被告人');    
     }
     else {
-        result_t.push('⚪ 被告人：'+array_sort_count_dpr(defendant_list,'str'));
-        high_light_dpr(defendant_list,'background-color:#afeeee;');
+        result_t.push('⚪ 被告人：'+array_sort_count_dpr(defendant_list,'cn'));
+        if (klmenu_check_b('span_highlight_defendant_dpr',false)){
+            high_light_dpr(defendant_list,'background-color:#afeeee;');
+        }
     }
 
+    //中文金额
+    var money_cn_list=content_str.match(/[一二三四五六七八九十百千万亿〇○]{1,}(\s+)?余?元/g) || [];
+    result_t.push('⚪ 中文金额：'+array_sort_count_dpr(money_cn_list,'cn'));
+    if (klmenu_check_b('span_highlight_money_dpr',false)){
+        high_light_dpr(money_cn_list,'background-color:#00cc99;');
+    }
+
+    //数字金额
+    var money_num_list=content_str.match(/[0-9\.\-\,]{1,}(\s+)?元/g) || [];
+    result_t.push('⚪ 数字金额：'+array_sort_count_dpr(money_num_list,'cn'));
+    if (klmenu_check_b('span_highlight_money_dpr',false)){
+        high_light_dpr(money_num_list,'background-color:#33ccff;');
+    }
+
+    //男女
+    var male_female_list=content_str.match(/[男女]/g) || []; 
+    if (male_female_list.length==0){
+        result_t.push('🔴 未发现男女');    
+    }
+    else {
+        result_t.push('⚪ 男女：'+array_sort_count_dpr(male_female_list,'cn'));
+    }
+    
+    //职位
+    var position_list=['人民陪审员','代理书记员','代书记员','书记员','审判员','法官助理','审判长'];
+    var position_not_foun_list=[];
+    for (let item of position_list){
+        var regstr='^(\\s+)?'+item.split('').join('(\\s+)?')+'\\s';
+        if (content_str.match(new RegExp(regstr,'m'))){continue;}
+        position_not_foun_list.push(item);
+    }
+    if (position_not_foun_list.length>0){
+        result_t.push('❓ 未发现：'+position_not_foun_list.join(' ◽ '));    
+    }
+    
+   //罪名
+    var criminal_name_list=content_str.match(/犯([^，]{1,}罪)/g) || []; 
+    for (let blxl=0;blxl<criminal_name_list.length;blxl++){
+        if (criminal_name_list[blxl].substring(0,1)=='犯'){
+            criminal_name_list[blxl]=criminal_name_list[blxl].substring(1,);
+        }
+    }
+    if (criminal_name_list.length==0){
+        result_t.push('🔴 未发现罪名');    
+    }
+    else {
+        result_t.push('⚪ 罪名：'+array_sort_count_dpr(criminal_name_list,'cn'));
+        if (klmenu_check_b('span_highlight_criminal_name_dpr',false)){
+            high_light_dpr(array_unique_b(criminal_name_list),'background-color:#66aaff;');
+        }
+    }
+    
     //---
     var odiv=document.getElementById('divhtml');
     odiv.innerHTML=array_2_li_b(result_t);
-    odiv.scrollIntoView();
 }
 
 function menu_dpr(){
@@ -257,8 +319,19 @@ function menu_dpr(){
     ];
 
     var klmenu2=[
+    '<span id="span_highlight_date_dpr" class="span_menu" onclick="javascript:klmenu_check_b(this.id,true);proofread_dpr();">⚪ 高亮日期</span>',        
+    '<span id="span_highlight_defendant_dpr" class="span_menu" onclick="javascript:klmenu_check_b(this.id,true);proofread_dpr();">⚪ 高亮被告人</span>',        
+    '<span id="span_highlight_money_dpr" class="span_menu" onclick="javascript:klmenu_check_b(this.id,true);proofread_dpr();">⚪ 高亮金额</span>',        
+    '<span id="span_highlight_criminal_name_dpr" class="span_menu" onclick="javascript:klmenu_check_b(this.id,true);proofread_dpr();">⚪ 高亮罪名</span>',        
+    
     '<span class="span_menu" onclick="javascript:'+str_t+'pwa_clear_cache_all_b();">更新版本</span>',        
     ];
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'✒','8rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'⚙','8rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'✒','8rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'⚙','10rem','1rem','1rem','60rem'),'','0rem')+' ');
+    
+    klmenu_check_b('span_highlight_date_dpr',true);
+    klmenu_check_b('span_highlight_defendant_dpr',true);
+    klmenu_check_b('span_highlight_money_dpr',true);
+    klmenu_check_b('span_highlight_criminal_name_dpr',true);
+
 }

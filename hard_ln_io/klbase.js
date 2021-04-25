@@ -1440,6 +1440,7 @@ function int_number_list_insert_zero_b(cslist,csmin=false,csmax=false){
 }
 
 function array_count_b(csarray,quote=true,ignore_1=false,obj2array=true){
+    if (csarray==null){return [];}
     var result_t=[];
     for (let item of csarray){
         if (result_t['a'+item]==null){
