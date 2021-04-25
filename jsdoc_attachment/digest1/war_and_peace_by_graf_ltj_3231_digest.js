@@ -177,4 +177,5 @@ var digest_global=`
 *roofless
 *Bucharest
 *Urals
+*onlooker
 `.trim().split('\n');

@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-04-18 12:49:17 日"],
+["","","","更新日期：2021-04-25 11:48:15 日"],
 ["https://mail.python.org/pipermail/python-list/2005-May/342496.html","20050506 | [HELP] Tkinter Application Minimized to System Tray :)"],
 ["http://www.enet.com.cn/article/2006/1120/A20061120298161.shtml","20061120 | PHP：“草根语言”挑战“大腕”Java .Net"],
 ["http://blog.wpjam.com/article/wordpress-custom-fields/","20070805 | WordPress 自定义字段（Custom Fields）详细介绍和使用"],
@@ -533,6 +533,7 @@ var recent_info_list=[
 ["https://stackoverflow.com/questions/48923151/importing-image-to-python-cannot-import-name-imread","20180222 | Importing image to python :cannot import name 'imread' - Stack Overflow"],
 ["https://www.cnblogs.com/xiaobingqianrui/p/8461707.html","20180223 | Python之sqlite3 - Fate0729 - 博客园"],
 ["https://yagisanatode.com/2018/02/23/how-do-i-change-the-size-and-position-of-the-main-window-in-tkinter-and-python-3/","20180223 | How Do I Change the Size and Position of the Main Window in Tkinter and Python 3 – Yagisanatode"],
+["https://stackoverflow.com/questions/36947847/how-to-generate-range-of-numbers-from-0-to-n-in-es2015-only","20180228 | javascript - How to generate range of numbers from 0 to n in ES2015 only? - Stack Overflow"],
 ["https://stackoverflow.com/questions/49111431/how-to-get-texture-dimensions-with-three-js","20180305 | javascript - How to get texture dimensions with Three.js - Stack Overflow"],
 ["https://www.learnpyqt.com/courses/adanced-ui-features/system-tray-mac-menu-bar-applications-pyqt/","20180322 | System tray &amp; Mac menu bar applications in PyQt (Updated 2019) — Learn PyQt5 GUI programming hands-on"],
 ["https://stackoverflow.com/questions/15345790/scipy-misc-module-has-no-attribute-imread","20180331 | python - scipy.misc module has no attribute imread? - Stack Overflow"],
@@ -585,6 +586,7 @@ var recent_info_list=[
 ["https://stackoverflow.com/questions/57584560/how-to-clear-the-text-of-qtextedit-and-immediately-insert-new-text","20190823 | python - How to clear the text of QTextEdit and immediately insert new text - Stack Overflow"],
 ["https://stackoverflow.com/questions/57782617/how-to-remove-pwa-service-worker-and-its-cache-from-client-browser-after-remove","20190904 | How to remove PWA service worker and its cache from client browser after remove PWA in angular 6 website - Stack Overflow"],
 ["https://stackoverflow.com/questions/57828992/how-to-specify-user-agent-in-qwebengineview","20190907 | python - How to specify user agent in QWebEngineView - Stack Overflow"],
+["https://stackoverflow.com/questions/55231170/taking-a-screenshot-of-a-web-page-in-pyqt5","20190916 | python - Taking a screenshot of a web page in PyQt5 - Stack Overflow"],
 ["https://www.solidot.org/story?sid=62534","20191108 | Solidot | 微软的 Rust 实验进展良好"],
 ["https://www.solidot.org/story?sid=63556","20200218 | 奇客Solidot | WordPress 插件 bug 允许攻击者远程重置网站内容"],
 ["https://www.cnblogs.com/xll1025/p/12500576.html","20200315 | 五分钟学Java：如何才能学好Java Web里这么多的技术 - 黄小斜 - 博客园"],

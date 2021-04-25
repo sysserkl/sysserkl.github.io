@@ -21,4 +21,5 @@ var digest_global=`
 *undershirt
 *bigamy
 *prostate
+*foamy
 `.trim().split('\n');

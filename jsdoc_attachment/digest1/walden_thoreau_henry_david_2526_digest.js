@@ -22,4 +22,6 @@ var digest_global=`
 *Helena
 *peninsular
 *biped
+*spectator
+*fluctuation
 `.trim().split('\n');
