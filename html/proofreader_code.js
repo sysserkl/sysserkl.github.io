@@ -1,18 +1,22 @@
 function init_dpr(){
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.6rem'));
+    document.getElementById('span_textarea_buttons').innerHTML=textarea_buttons_b('textarea_document_proofreader','全选,清空,复制');
     menu_dpr();
 }
 
 function show_hide_dpr(show_textarea=true){
     var odiv=document.getElementById('div_content_dpr');
     var otextarea=document.getElementById('textarea_document_proofreader');
+    var obuttons=document.getElementById('span_textarea_buttons');
     if (show_textarea){
         odiv.style.display='none';
         otextarea.style.display='';
+        obuttons.style.display='';
     }
     else {
         odiv.style.display='';
         otextarea.style.display='none';
+        obuttons.style.display='none';
         var list_t=otextarea.value.split('\n');
         odiv.innerHTML='<p>'+list_t.join('</p>\n<p>')+'</p>\n';
     }
@@ -35,9 +39,33 @@ function array_sort_count_dpr(csarray,sort_type='num'){
     return blstr;
 }
 
-function high_light_dpr(csarray,csstyle='',csclass=''){
+function html_replace_dpr(csarray){
+    //csarray [[find_str1,replace_str1], [find_str2,replace_str2]] - 保留注释
     var odiv=document.getElementById('div_content_dpr');
-    var oldtxt=odiv.innerText;
+    var oldtxt=odiv.innerText;  //不变 - 保留注释
+    var oldhtml=odiv.innerHTML;
+    var newhtml=oldhtml;
+    
+    for (let item of csarray){
+        if (!newhtml.includes(item[0])){continue;}
+        try{
+            newhtml=newhtml.replace(item[0],item[1]);
+            odiv.innerHTML=newhtml;
+            if (odiv.innerText!==oldtxt){
+                odiv.innerHTML=oldhtml;
+            }
+        }
+        catch (error) {
+            console.log('html_replace_dpr','error:',item);
+        }    
+    }
+}
+
+function high_light_dpr(csarray,csstyle='',csclass=''){
+    if (csstyle=='' && csclass==''){return;}
+
+    var odiv=document.getElementById('div_content_dpr');
+    var oldtxt=odiv.innerText;  //不变 - 保留注释
     var oldhtml=odiv.innerHTML;
     var newhtml=oldhtml;
     var span_str='<span';
@@ -48,6 +76,7 @@ function high_light_dpr(csarray,csstyle='',csclass=''){
         span_str=span_str+' class="'+csclass+'"';
     }      
     span_str=span_str+'>';
+
     for (let item of csarray){
         if (!newhtml.includes(item)){continue;}
         try{
@@ -60,7 +89,7 @@ function high_light_dpr(csarray,csstyle='',csclass=''){
         catch (error) {
             console.log('high_light_dpr','error:',item);
         }
-    }
+    }    
 }
 
 function proofread_dpr(){
@@ -237,7 +266,7 @@ function proofread_dpr(){
         }    
     }
     
-    //被告人加亮
+    //被告人
     var defendant_list=content_str.match(/(被告人[^\x00-\xff]{2,4}?)，/g) || []; 
     for (let blxl=0;blxl<defendant_list.length;blxl++){
         if (defendant_list[blxl].slice(-1)=='，'){
@@ -307,6 +336,37 @@ function proofread_dpr(){
         }
     }
     
+    //书名号 条款
+    if (klmenu_check_b('span_add_book_link_dpr',false)){
+        var bookname_list=content_str.match(/(《[^《》]+》[^《》。]*条)/g) || []; 
+        for (let blxl=0;blxl<bookname_list.length;blxl++){
+            var one_book=bookname_list[blxl];
+            var bookname_str=(one_book.match(/《.*?》/) || [''])[0];
+            if (bookname_str==''){continue;}
+            var paragraph_list=one_book.match(/第[^第]*?条/g) || [];
+            
+            var new_str=one_book;
+            for (let one_num of paragraph_list){
+                new_str=new_str.replace(one_num,'<a href="https://www.baidu.com/baidu?wd='+encodeURIComponent(bookname_str+one_num)+'" target=_blank>'+one_num+'</a>');
+            }
+            bookname_list[blxl]=[one_book,new_str]
+        }
+        html_replace_dpr(bookname_list);
+    }
+    
+    //出现次数最少的非汉字字符
+    var character_en_list=content_str.match(/[\x00-\xff]/g) || [];
+    character_en_list=(array_count_b(character_en_list,false,false,true));
+    character_en_list.sort(function (a,b){return a[1]>b[1];});
+    var character_en_rare_list=[];
+    for (let item of character_en_list){
+        if (item[1]<=2){
+            character_en_rare_list.push(item[0]);
+        }
+        else {break;}
+    }
+    result_t.push('⚪ 出现次数最少的非汉字字符：'+array_sort_count_dpr(character_en_rare_list,''));
+    
     //---
     var odiv=document.getElementById('divhtml');
     odiv.innerHTML=array_2_li_b(result_t);
@@ -315,7 +375,11 @@ function proofread_dpr(){
 function menu_dpr(){
     var str_t=klmenu_hide_b('');
     var klmenu1=[
-    '<a href="https://wenshu.court.gov.cn/" target=_blank>裁判文书网</a>',    
+    '<a href="https://wenshu.court.gov.cn/" target=_blank>裁判文书网</a>',   
+    '<a href="http://www.npc.gov.cn/" target=_blank>中国人大</a>',   
+    '<a href="http://www.court.gov.cn/" target=_blank>最高人民法院</a>',   
+    '<a href="https://www.spp.gov.cn/" target=_blank>最高人民检察院</a>', 
+    '<a href="http://www.cnki.net/" target=_blank>知网</a>',       
     ];
 
     var klmenu2=[
@@ -323,15 +387,15 @@ function menu_dpr(){
     '<span id="span_highlight_defendant_dpr" class="span_menu" onclick="javascript:klmenu_check_b(this.id,true);proofread_dpr();">⚪ 高亮被告人</span>',        
     '<span id="span_highlight_money_dpr" class="span_menu" onclick="javascript:klmenu_check_b(this.id,true);proofread_dpr();">⚪ 高亮金额</span>',        
     '<span id="span_highlight_criminal_name_dpr" class="span_menu" onclick="javascript:klmenu_check_b(this.id,true);proofread_dpr();">⚪ 高亮罪名</span>',        
-    
+    '<span id="span_add_book_link_dpr" class="span_menu" onclick="javascript:klmenu_check_b(this.id,true);proofread_dpr();">⚪ 条款链接</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'pwa_clear_cache_all_b();">更新版本</span>',        
     ];
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'✒','8rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'⚙','10rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'✒','10rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'⚙','10rem','1rem','1rem','60rem'),'','0rem')+' ');
     
     klmenu_check_b('span_highlight_date_dpr',true);
     klmenu_check_b('span_highlight_defendant_dpr',true);
     klmenu_check_b('span_highlight_money_dpr',true);
     klmenu_check_b('span_highlight_criminal_name_dpr',true);
-
+    klmenu_check_b('span_add_book_link_dpr',true);
 }

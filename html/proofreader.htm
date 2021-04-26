@@ -26,15 +26,15 @@ div#div_content_dpr p{font-size:1rem;line-height:1.5rem;margin-bottom:0.5rem;}
 //0.0.2-20210425 增加高亮选项菜单
 //0.0.1-20210424
 -->
-<div id="div_form" style="margin:0.5rem;">
+<div style="margin:0.5rem;">
 <p><textarea id="textarea_document_proofreader" style="height:30rem;" placeholder='复制文本并粘贴到此处'></textarea></p>
 <div id="div_content_dpr" style="display:none;border:0.1rem grey solid;padding:0.5rem;" ondblclick="javascript:show_hide_dpr(true);"></div>
 <p>
 <span class="aclick" onclick="javascript:proofread_dpr();">校对</span>
+<span id="span_textarea_buttons"></span>
 </p>
+<div id="divhtml"></div>
 </div>
-<div id="divhtml" style="margin:0.5rem;"></div>
-<div id="div_recent_search" style="font-size:0.85rem;margin:0.5rem 0rem;line-height:1.8rem;word-break:break-all;word-wrap:break-word;"></div>
 <div id="div_top_bottom"></div>
 <script type="text/javascript">
 init_dpr();
