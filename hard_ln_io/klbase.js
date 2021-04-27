@@ -135,7 +135,6 @@ function klbase_addons_import_js_b(klbase_list=[],module_list=[],jsdata_list=[])
             defer_str=' defer';
         }
         result_t.push(['js',klbase_path+'klbase_'+item+'.js',defer_str]);
-        //document.write('\n<script language="javascript" type="text/javascript" src="'+klbase_path+'klbase_'+item+'.js"'+defer_str+'></script>\n');
     }
     for (let item of module_list){
         var defer_str='';
@@ -164,7 +163,7 @@ function klbase_addons_import_js_b(klbase_list=[],module_list=[],jsdata_list=[])
     var links_t=[];
     for (let item of result_t){//不能sort - 保留注释
         if (item[0]=='js'){
-            document.write('\n<script language="javascript" type="text/javascript" src="'+item[1]+'"'+item[2]+'></script>\n');
+            document.write('\n<script language="javascript" type="text/javascript" src="'+item[1]+'"'+item[2]+'><\/script>\n');
         }
         else if (item[0]=='css'){
             document.write('<link href="'+item[1]+'" type="text/css" rel="stylesheet">\n');

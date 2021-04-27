@@ -54,4 +54,5 @@ var digest_global=`
 *treeless
 *cobalt
 *obese
+*oversize
 `.trim().split('\n');
