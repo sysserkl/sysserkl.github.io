@@ -353,6 +353,31 @@ function popup_b(csid,cscontent='',csfontsize='',cswidth='',cspadding='',csline_
     return bljg;
 }
 
+function popup_event_div_b(event,div_id,div_html='',add_close_button='bottom'){
+    var odiv=document.getElementById(div_id);
+    if (!odiv){
+        document.querySelector('body').insertAdjacentHTML('beforeend','<div id="'+div_id+'" style="position:absolute;display:none;background-color:'+scheme_global['background']+';padding:0.5rem; border:0.1rem solid '+scheme_global['memo']+';border-radius:1rem;top:0;left:0;"></div>');
+        odiv=document.getElementById(div_id);
+    }
+    if (!odiv){
+        console.log('popup_event_div_b()','未发现',div_id);
+        return;
+    }
+    switch (add_close_button){
+        case 'bottom':
+            div_html=div_html+' <span class="span_box" onclick="javascript:this.parentNode.style.display=\'none\';">❌</span>';
+            break;
+        case 'top_right':
+            div_html='<p align=right><span class="span_box" onclick="javascript:this.parentNode.parentNode.style.display=\'none\';">❌</span></p>'+div_html;
+            break;
+    }
+    odiv.innerHTML=div_html;
+    odiv.style.display='';  //否则rect的值为0 - 保留注释
+    var rect=odiv.getBoundingClientRect();
+    odiv.style.left=Math.min(event.pageX,document.body.scrollWidth-rect.width)+'px';    //必须加上px - 保留注释
+    odiv.style.top=event.pageY+'px';
+}
+
 function top_bottom_arrow_b(idname,csmemo='',cseng=false,csfsize='1.3rem',show_soft=true){
     var odiv=document.getElementById(idname);
     if (!odiv){

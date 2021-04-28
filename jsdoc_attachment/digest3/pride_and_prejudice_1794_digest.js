@@ -26,4 +26,5 @@ var digest_global=`
 *woody
 *Georgiana
 *unexampled
+*faulty
 `.trim().split('\n');

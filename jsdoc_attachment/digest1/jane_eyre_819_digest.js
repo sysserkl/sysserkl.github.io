@@ -14,4 +14,5 @@ var digest_global=`
 *foxglove
 *handbreadth
 *seraph
+*harbourage
 `.trim().split('\n');

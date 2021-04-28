@@ -192,21 +192,23 @@ function reading_statistics_bible(cssub=-1,do_alert=true){
     return bljg;
 }
 
-function chapter_relative_bible(csno){
-    var bljg='';
+function chapter_relative_bible(event,csno){
+    var bljg=[];
     for (let blxl=0;blxl<chapter_global.length;blxl++){
         if (blxl<csno-3 || blxl>csno+3){continue;}
         var item=chapter_global[blxl];
-        bljg=bljg+(blxl+1)+'. ';
+        var blstr='<p>';
+        blstr=blstr+(blxl+1)+'. ';
         if (use_kjv_cn_global[0]){
-            bljg=bljg+item[1]+' ';
+            blstr=blstr+item[1]+' ';
         }
         if (use_kjv_cn_global[1]){
-            bljg=bljg+item[2];
+            blstr=blstr+item[2];
         }
-        bljg=bljg.trim()+'\n'
+        bljg.push(blstr.trim()+'</p>');
     }
-    alert(bljg);
+    popup_event_div_b(event,'div_popup_bible',bljg.join('\n'),'top_right');
+    //alert(bljg);
 }
 
 function search_one_row_bible(blxl,h2,h3,chapter_no_current,blstyle,ismobile){
@@ -222,7 +224,7 @@ function search_one_row_bible(blxl,h2,h3,chapter_no_current,blstyle,ismobile){
         bljg=bljg+'<p><big>'+cnstr+'</big></p>';
     }
     bljg=bljg+'<p>&nbsp;</p><p>';
-    bljg=bljg+'—— <span style="cursor:pointer;" onclick="javascript:chapter_relative_bible('+chapter_no_current+');">【'+(chapter_no_current+1)+'】</span>';
+    bljg=bljg+'—— <span style="cursor:pointer;" onclick="javascript:chapter_relative_bible(event,'+chapter_no_current+');">【'+(chapter_no_current+1)+'】</span>';
     bljg=bljg+'<span class="span_box" onclick="javascript:book_bible(\''+kjv[h2].substring(3,kjv[h2].length-3)+'_'+kjv[h3].substring(4,kjv[h3].length-4).split(' ').slice(-1)[0]+'_'+kjv[blxl].split(' ')[0]+'\');">';
     if (use_kjv_cn_global[0] && use_kjv_cn_global[1]){
         bljg=bljg+kjv[h2].substring(3,kjv[h2].length-3)+' '+cnbible_global[h3].substring(4,cnbible_global[h3].length-4);
