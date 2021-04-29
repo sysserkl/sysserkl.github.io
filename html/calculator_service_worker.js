@@ -3,6 +3,7 @@ self.addEventListener('install', function(e) {
         caches.open('pwa_calculator_store').then(function(cache) {
             return cache.addAll([
             'calculator.htm',
+            'calculator_code.js',
             '../hard_ln_io/klbase.js',            
             '../hard_ln_io/klbase_css.js',
             '../hard_ln_io/klbase_date.js',

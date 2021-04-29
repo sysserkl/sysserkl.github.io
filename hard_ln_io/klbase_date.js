@@ -373,13 +373,15 @@ function time_2_emoji_b(cstime=false){
         blh=cstime.getHours().toString();
     }
     else {
-        var list_t=cstime.toString().trim().split(' ').slice(-1)[0].split(':');
+        //形如 2021-04-28 12:21:19 - 保留注释
+        var list_t=cstime.toString().trim().split(' ').slice(-1)[0].split(':');//分割年月日与时间，再提取小时 - 保留注释
         if (list_t.length==0){
             return '';
         }
         blh=list_t[0];
     }
     if (blh==''){return '';}
+    console.log(blh);
     blh=parseInt(blh.trim()) % 12;
     return blemoji[blh];
 }

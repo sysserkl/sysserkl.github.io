@@ -96,7 +96,8 @@ function specialstr_g($csstr){
     return $bljg;
 }
 
-function filelist_g($csdir,$cstype="",$csfilter='',$onlyname=false,$csmax=-1){
+function filelist_g($csdir,$cstype='',$csfilter='',$onlyname=false,$csmax=-1){
+    //cstype: f d - 保留注释
     //csfilter 格式如：/.*readlater_data.*/i' - 保留注释
     $file_list=[];
     if (!is_dir($csdir)){
@@ -138,7 +139,9 @@ function filelist_g($csdir,$cstype="",$csfilter='',$onlyname=false,$csmax=-1){
             if ($file == "." or $file == "..") {
                 continue;
             }
-
+            if (!is_readable($csdir.$file)) {
+                continue;
+            }
             $is_push=false;
             if (is_dir($csdir.$file)){
                 if (substr($file,-1)!=='/'){
