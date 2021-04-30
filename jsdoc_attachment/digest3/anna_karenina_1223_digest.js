@@ -128,4 +128,5 @@ var digest_global=`
 *Malthus
 *washstand
 *Petersburg
+*hawklike
 `.trim().split('\n');

@@ -5,4 +5,5 @@ var digest_global=`
 *blameworthy
 *dweller
 *adultery
+*ambiguity
 `.trim().split('\n');

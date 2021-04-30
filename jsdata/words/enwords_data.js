@@ -1,5 +1,9 @@
 //单词库
 var enwords=[
+["shipmaster", "UK ['ʃɪpˌmɑːst] US [ˈʃɪpˌmæstər] [ˈʃɪpˌmɑstər]", "n. 船长；船主；the master or captain of a ship; the officer in command of a merchant ship; a person who commands a ship; the master or commander of a ship other than a warship"],
+["shipman", "['ʃɪpˌmən]", "n. 水手；海员；船员；船长；船主；a seaman or sailor; a mariner; a labourer on a ship; (obsolete) the master of a ship; shiplord; shipmaster"],
+["ambiguity", "[ˌæmbɪ'ɡjuːəti]", "n. 歧义；一语多义；模棱两可；含糊不清；不明确；the state of having more than one possible meaning; the state of being difficult to understand or explain because of involving many different aspects; the quality or state of being ambiguous especially in meaning; an unclear, indefinite, or equivocal word, expression, meaning, etc; doubtfulness or uncertainty of meaning or intention; vagueness or uncertainty of meaning; a word or statement that can be understood in more than one way; a word or expression that can be understood in two or more possible ways: an ambiguous word or expression; something, particularly words and sentences, that is open to more than one interpretation, explanation or meaning, if that meaning etc cannot be determined from its context; uncertainty"],
+["hawklike", "['hɔːklaɪk]", "adj. 似鹰的；resembling or suggesting a hawk in appearance or character"],
 ["Patton", "[ˈpæt(ə)n]", "n. 帕顿(英格兰人、苏格兰人姓氏，Pate的昵称)；a surname​; n. 巴顿将军（美国二战名将）；George Smith. 1885–1945, US general, who successfully developed tank warfare as an extension of cavalry tactics in World War II: captured Palermo, Sicily (1942) and much of France (1944); n. 帕顿(地名)(美国)"],
 ["blameworthy", "['bleɪmˌwɜː(r)ði]", "adj. 该受指责的；应受谴责的；（对坏事）负有责任的；deserving criticism and blame; responsible for doing something wrong; being at fault: deserving blame; deserving to be blamed; deserving disapproval or censure"],
 ["dweller", "['dwelə(r)]", "n. 居民；居住者；栖身者；(especially in compounds) a person or an animal that lives in the particular place that is mentioned; a person who lives in a city, town, cave, etc.; a person who lives in a particular type of place; an inhabitant of a specific place; an inhabitant or denizen"],
@@ -2255,7 +2259,7 @@ var enwords=[
 ["chimney", "['tʃɪmni]", "n. 烟道；烟囱；（屋顶上的）烟囱管；狭缝"],
 ["chimpanzee", "[ˌtʃɪmpæn'ziː]", "n. 黑猩猩；a small, very intelligent African ape with black or brown fur"],
 ["Chinatown", "['tʃaɪnətaʊn]", "n. 唐人街；中国城；an area of a city outside China where many Chinese people live and there are a lot of Chinese restaurants and shops; the Chinese quarter of any city outside of China; a quarter of any city or town outside China with a predominantly Chinese population"],
-["China", "['tʃaɪnə]", "n. 中国；n. [小写]瓷器"],
+["China", "['tʃaɪnə]", "n. 中国；n. china: 瓷器"],
 ["Chinese", "[ˌtʃaɪ'niːz]", "n. 中国人；汉语；adj. 中国的；中国人的；汉语的"],
 ["chin", "[tʃɪn]", "n. 下巴；颏；the part of the face below the mouth and above the neck; the lower portion of the face lying below the lower lip and including the prominence of the lower jaw; the surface beneath or between the branches of the lower jaw; v. 〈口〉用下巴夹住(提琴等)；(单杠)引体向上使下巴高过横杠；谈话；聊天；to bring to or hold with the chin; to raise (oneself) while hanging by the hands until the chin is level with the support; to talk idly"],
 ["chipmaker", "UK [ˈtʃɪpˌmeɪkə(r)]", "n. 芯片制造商；a manufacturer of integrated circuits; a manufacturer of electronic chips; a company that manufactures chips that are used in computers and other electronic equipment"],

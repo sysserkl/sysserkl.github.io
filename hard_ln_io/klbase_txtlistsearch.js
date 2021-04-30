@@ -1199,6 +1199,7 @@ function bookmarks_get_kltxt_b(current_book_today_bookmark_only_one=false,return
     if (return_full){
         bljg=bljg+'<span class="aclick" onclick="javascript:bookmarks_import_kltxt_b();">更新</span> ';
         bljg=bljg+'<span class="aclick" onclick="javascript:bookmarks_get_kltxt_b(false,false);">最新书签</span> ';
+        bljg=bljg+'<span class="aclick" onclick="javascript:bookmarks_separate_kltxt_b();">分离当前书签</span> ';       
         bljg=bljg+textarea_buttons_b('textarea_bookmarks','全选,清空,复制,发送到临时记事本,发送地址','txtlistearch_bookmarks')+' ';
     }
     else {
@@ -1206,6 +1207,9 @@ function bookmarks_get_kltxt_b(current_book_today_bookmark_only_one=false,return
     }
     bljg=bljg+theyear+'年剩余天数：'+remain_days;
     bljg=bljg+'</p>';
+    if (return_full){
+        bljg=bljg+'<p><textarea id="textarea_current_book_bookmarks_kltxt" style="display:none;" onclick="javascript:this.select();document.execCommand(\'copy\');"></textarea></p>\n';
+    }
     if (current_book_today_bookmark_count>1){
         bljg=bljg+'<p><span class="aclick" onclick="javascript:bookmarks_get_kltxt_b(true);">当前书籍今日书签仅留最新一个</span></p>';
     }
@@ -1255,6 +1259,27 @@ function bookmarks_get_kltxt_b(current_book_today_bookmark_only_one=false,return
         one_td.parentNode.setAttribute('onmouseover','javascript:this.style.backgroundColor="'+scheme_global['button']+'";');
         one_td.parentNode.setAttribute('onmouseout','javascript:this.style.backgroundColor="'+blcolor+'";');
     }
+}
+
+function bookmarks_separate_kltxt_b(){
+    var otextarea=document.getElementById('textarea_bookmarks');
+    var list_t=otextarea.value.trim().split('\n');
+    var others_bookmark_list=[];
+    var current_bookmark_list=[];
+    for (let item of list_t){
+        if (item.includes('&'+csbookname_global+'&')){
+            current_bookmark_list.push(item);
+        }
+        else {
+            others_bookmark_list.push(item);
+        }
+    }
+    if (current_bookmark_list.length==0){return;}
+    otextarea.value=others_bookmark_list.join('\n');
+    var otextarea_current=document.getElementById('textarea_current_book_bookmarks_kltxt');
+    otextarea_current.value=current_bookmark_list.join('\n');
+    otextarea_current.style.display='';
+    alert('原共有书签'+list_t.length+'条；当前书籍书签'+current_bookmark_list.length+'条；其他书籍书签'+others_bookmark_list.length+'条。'+(list_t.length==current_bookmark_list.length+others_bookmark_list.length?'条数一致。':'条数不一致。'));
 }
 
 function bookmarks_percent_lines_kltxt_b(bookmark_list,bookid,return_full){

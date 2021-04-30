@@ -397,4 +397,5 @@ var digest_global=`
 *filthiness
 *dunghill
 *extol
+*shipmaster
 `.trim().split('\n');
