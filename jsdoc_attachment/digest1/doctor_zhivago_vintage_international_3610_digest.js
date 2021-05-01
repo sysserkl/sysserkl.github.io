@@ -6,4 +6,6 @@ var digest_global=`
 *dweller
 *adultery
 *ambiguity
+*ambiguous
+*laryngoscope
 `.trim().split('\n');

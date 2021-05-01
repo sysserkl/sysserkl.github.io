@@ -6,4 +6,5 @@ var digest_global=`
 *Mozart
 *apiarist
 *beekeeping
+*shipyard
 `.trim().split('\n');
