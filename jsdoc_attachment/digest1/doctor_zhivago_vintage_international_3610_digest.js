@@ -8,4 +8,6 @@ var digest_global=`
 *ambiguity
 *ambiguous
 *laryngoscope
+*inkwell
+*inkstand
 `.trim().split('\n');

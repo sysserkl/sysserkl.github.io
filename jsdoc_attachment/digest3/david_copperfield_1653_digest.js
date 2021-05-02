@@ -120,4 +120,5 @@ var digest_global=`
 *ironmonger
 *liquidation
 *shoreward
+*bookstall
 `.trim().split('\n');
