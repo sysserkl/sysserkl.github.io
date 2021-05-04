@@ -304,11 +304,12 @@ function klmenu_multi_button_div_b(csstr,cstyle='',cspadding='',csmargin='',csid
 }
 
 function popup_show_hide_b(csid,cstype='block') {
-  if (document.getElementById(csid).style.display==cstype){
-      document.getElementById(csid).style.display='none';
-      return;
-  }
-  document.getElementById(csid).style.display=cstype;
+    var obj=document.getElementById(csid);
+    if (obj.style.display==cstype){
+        obj.style.display='none';
+        return;
+    }
+    obj.style.display=cstype;
 }
 
 function border_style_b(spanid,popupid) {

@@ -1372,6 +1372,28 @@ function string_2_txt_file_b(csstr,savename,cstype='csv'){
     document.body.removeChild(pom); 
 }
 
+function table_2_csv_b(table_querystring){
+    var otable=document.querySelector(table_querystring);
+    if (!otable){return;}
+    var otrs=otable.querySelectorAll('tr');
+    var result_t=[];
+    for (let one_tr of otrs){
+        var arow=[];
+        var otds=one_tr.querySelectorAll('th,td');
+        for (let one_td of otds){
+            var blvalue=one_td.innerText.trim();
+            if (blvalue=='' || isNaN(blvalue)){
+                arow.push('"'+specialstr_j(blvalue)+'"');
+            }
+            else {
+                arow.push(blvalue);
+            }
+        }
+        result_t.push(arow.join(','));
+    }
+    string_2_txt_file_b(result_t.join('\n'),'table2csv_export'+'.csv','csv');
+}
+
 function web_href_key_b(cskey,cstype,encode=false){
     switch (cstype){
         case 1:

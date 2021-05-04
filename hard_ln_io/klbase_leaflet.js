@@ -95,6 +95,7 @@ function rad_leaflet_b(d) {
 function earth_radius_leaflet_b(){ 
     return 6378.137;
 }
+
 function get_y_leaflet_b(lat1,lng1,s_len,lat2){
     s_len=s_len/1000;
     s_len=s_len/earth_radius_leaflet_b();

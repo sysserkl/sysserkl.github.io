@@ -1,0 +1,17 @@
+var sourcelist=[
+["https://www.solidot.org/story?sid=67676#comment_295258","re:我前段时间还用它制作手机铃声呢，以后还会免费吗？","2021-05-05","Solidot","1",],
+["https://www.quantamagazine.org/privacy-policy","privacy policy","2021-05-05","Quanta Magazine","0",],
+["https://www.quantamagazine.org/how-gravity-is-a-double-copy-of-other-forces-20210504/","How Gravity Is a Double Copy of Other Forces","2021-05-05","Quanta Magazine","0",],
+["https://www.quantamagazine.org/tag/molecular-biology/","molecular biology","2021-05-05","Quanta Magazine","0",],
+["https://www.quantamagazine.org/researchers-read-the-sugary-language-on-cell-surfaces-20210503/","Researchers Read the Sugary ‘Language’ on Cell Surfaces","2021-05-05","Quanta Magazine","0",],
+["https://www.quantamagazine.org/with-constructor-theory-chiara-marletto-invokes-the-impossible-20210429/","How to Rewrite the Laws of Physics in the Language of Impossibility","2021-05-05","Quanta Magazine","0",],
+["https://www.quantamagazine.org/how-the-immune-system-protects-the-brain-20210428/","A Backdoor Lets the Immune System Monitor the Brain","2021-05-05","Quanta Magazine","0",],
+["https://www.quantamagazine.org/new-proof-reveals-that-graphs-with-no-pentagons-are-fundamentally-different-20210426/","New Proof Reveals That Graphs With No Pentagons Are Fundamentally Different","2021-05-05","Quanta Magazine","0",],
+["https://www.quantamagazine.org/amie-wilkinson-sees-the-dynamic-chaos-in-puff-pastry-20210503/","Amie Wilkinson Sees the Dynamic Chaos in Puff Pastry","2021-05-05","Quanta Magazine","0",],
+["https://www.quantamagazine.org/high-energy-cosmic-ray-sources-mapped-out-for-the-first-time-20210427/","Cosmic Map of Ultrahigh-Energy Particles Points to Long-Hidden Treasures","2021-05-05","Quanta Magazine","0",],
+["https://www.quantamagazine.org/how-maxwells-demon-continues-to-startle-scientists-20210422/","How Maxwell’s Demon Continues to Startle Scientists","2021-05-05","Quanta Magazine","0",],
+["https://www.quantamagazine.org/dna-of-giant-corpse-flower-parasite-surprises-biologists-20210421/","DNA of Giant ‘Corpse Flower’ Parasite Surprises Biologists","2021-05-05","Quanta Magazine","0",],
+["https://www.quantamagazine.org/new-neural-networks-solve-hardest-equations-faster-than-ever-20210419/","Latest Neural Nets Solve World’s Hardest Equations Faster Than Ever Before","2021-05-05","Quanta Magazine","0",],
+["https://www.quantamagazine.org/gravitons-revealed-in-the-noise-of-gravitational-waves-20200723/","How the Bits of Quantum Gravity Can Buzz","2021-05-05","Quanta Magazine","0",],
+["https://www.quantamagazine.org/the-puzzling-power-of-simple-arithmetic-20210420/","The Puzzling Power of Simple Arithmetic","2021-05-05","Quanta Magazine","0",],
+];

@@ -23,8 +23,8 @@ function load_data_zjedu(){
     document.getElementById('span_years').innerHTML=str_t;
 
     document.write('\n<SCRIPT language=JavaScript src="'+datadir+'zj'+theyear+'_1_data.js"><\/SCRIPT>\n');
-    document.title='💯 浙江省'+theyear+'年普通高校招生普通类平行投档（一段）分数线 查询';
-    document.getElementById('span_h2').innerHTML='💯 浙江省'+theyear+'年普通高校招生普通类平行投档（一段）分数线 查询';
+    document.title='浙江省'+theyear+'年普通高校招生普通类平行投档（一段）分数线 查询';
+    document.getElementById('span_h2').innerHTML='浙江省'+theyear+'年普通高校招生普通类平行投档（一段）分数线 查询';
 }
 
 function mark_2_rank_zjedu(csmark){
@@ -191,7 +191,6 @@ function txtsearch_zjedu(csword,csreg){
     }
 	document.getElementById('input_reg').checked=csreg;
 
-    //recent_search_b('recent_search_zjedu',csword+(csreg?'(:r)':''),'txtsearch_zjedu','div_recent_search');
     recent_search_zjedu(csword+(csreg?'(:r)':''));
     
 	var blcount=0;
@@ -399,7 +398,10 @@ function school_zjedu(){
     speciality_all_sum_zjedu(true);
     
 	//分数线人数
-    line_count_zjedu();        
+    line_count_zjedu();
+    
+    //---
+    mouseover_mouseout_oblong_span_b(document.querySelectorAll('td#td_right span.oblong_box'));
 }
 
 function school_speciality_sum_zjedu(csreverse=false){
@@ -424,7 +426,7 @@ function school_speciality_sum_zjedu(csreverse=false){
 	for (let blxl=0;blxl<Math.min(num_public,s_num_t.length);blxl++){
 		bljg=bljg+'<tr class=odd><td class=blackline0>'+s_num_t[blxl][0]+'</td><td class=blackline0 nowrap align=right>'+s_num_t[blxl][1]+'</td></tr>';
 	}
-	document.getElementById('divschool'+(csreverse?'_reverse':'')).innerHTML='<h4>当前页面学校数：'+school_speciality_sum_arr_global.length+'</h4><h5>专业分类最'+(csreverse?'少':'多')+'的'+Math.min(num_public,s_num_t.length)+'个学校</h5><table>'+th_zjedu(['学校','专业数'])+bljg+'</table>';
+	document.getElementById('divschool'+(csreverse?'_reverse':'')).innerHTML='<h4>当前页面学校数：'+school_speciality_sum_arr_global.length+'</h4><h5>专业分类最'+(csreverse?'少':'多')+'的'+Math.min(num_public,s_num_t.length)+'个学校</h5>'+th_zjedu('divschool'+(csreverse?'_reverse':''),['学校','专业数'],bljg);
     
     document.getElementById('ol_anames').insertAdjacentHTML('beforeend','<li><a href="#'+'divschool'+(csreverse?'_reverse':'')+'">专业分类最'+(csreverse?'少':'多')+'的'+Math.min(num_public,s_num_t.length)+'个学校</a></li>');
 }
@@ -452,7 +454,7 @@ function speciality_popular_zjedu(csreverse=false){
 	for (let blxl=0;blxl<Math.min(num_public,s_num_t.length);blxl++){
 		bljg=bljg+'<tr class=odd><td class=blackline0>'+s_num_t[blxl][0]+'</td><td class=blackline0 nowrap align=right>'+s_num_t[blxl][1]+'</td></tr>';
 	}	
-	document.getElementById('divmajor'+(csreverse?'_reverse':'')).innerHTML='<h4>当前页面专业数：'+speciality_popular_arr_global.length+'</h4><h5>出现次数最'+(csreverse?'少':'多')+'的'+Math.min(num_public,s_num_t.length)+'个专业</h5><table>'+th_zjedu(['专业','个数'])+bljg+'</table>';
+	document.getElementById('divmajor'+(csreverse?'_reverse':'')).innerHTML='<h4>当前页面专业数：'+speciality_popular_arr_global.length+'</h4><h5>出现次数最'+(csreverse?'少':'多')+'的'+Math.min(num_public,s_num_t.length)+'个专业</h5>'+th_zjedu('divmajor'+(csreverse?'_reverse':''),['专业','个数'],bljg);
 
     document.getElementById('ol_anames').insertAdjacentHTML('beforeend','<li><a href="#'+'divmajor'+(csreverse?'_reverse':'')+'">出现次数最'+(csreverse?'少':'多')+'的'+Math.min(num_public,s_num_t.length)+'个专业</a></li>');
 }
@@ -470,7 +472,7 @@ function school_sum_average_zjedu(csreverse=false){
 	for (let blxl=0;blxl<Math.min(num_public,arr2_t.length);blxl++){
 		bljg=bljg+'<tr class=odd><td class=blackline0>'+arr2_t[blxl][0]+'</td><td class=blackline0 nowrap align=right>'+arr2_t[blxl][1]+'</td></tr>';
 	}
-	document.getElementById('divnum'+(csreverse?'_reverse':'')).innerHTML='<h5>计划招收人数最'+(csreverse?'少':'多')+'的'+Math.min(num_public,arr2_t.length)+'个学校</h5><table>'+th_zjedu(['学校','计划数'])+bljg+'</table>';
+	document.getElementById('divnum'+(csreverse?'_reverse':'')).innerHTML='<h5>计划招收人数最'+(csreverse?'少':'多')+'的'+Math.min(num_public,arr2_t.length)+'个学校</h5>'+th_zjedu('divnum'+(csreverse?'_reverse':''),['学校','计划数'],bljg);
 
     document.getElementById('ol_anames').insertAdjacentHTML('beforeend','<li><a href="#'+'divnum'+(csreverse?'_reverse':'')+'">计划招收人数最'+(csreverse?'少':'多')+'的'+Math.min(num_public,arr2_t.length)+'个学校</a></li>');
 
@@ -486,7 +488,7 @@ function school_sum_average_zjedu(csreverse=false){
 	for (let blxl=0;blxl<Math.min(num_public,arr2_t.length);blxl++){
 		bljg=bljg+'<tr class=odd><td class=blackline0>'+arr2_t[blxl][0]+'</td><td class=blackline0 nowrap align=right>'+arr2_t[blxl][3].toFixed(2)+'</td><td class=blackline0 nowrap align=right>'+mark_2_rank_zjedu(arr2_t[blxl][3])[2]+'</td></tr>';
 	}
-	document.getElementById('divaverage'+(csreverse?'_reverse':'')).innerHTML='<h5>平均分数线最'+(csreverse?'低':'高')+'的'+Math.min(num_public,arr2_t.length)+'个学校</h5><table>'+th_zjedu(['学校','平均分数线','对应位次'])+bljg+'</table>';
+	document.getElementById('divaverage'+(csreverse?'_reverse':'')).innerHTML='<h5>平均分数线最'+(csreverse?'低':'高')+'的'+Math.min(num_public,arr2_t.length)+'个学校</h5>'+th_zjedu('divaverage'+(csreverse?'_reverse':''),['学校','平均分数线','对应位次'],bljg);
     document.getElementById('ol_anames').insertAdjacentHTML('beforeend','<li><a href="#'+'divaverage'+(csreverse?'_reverse':'')+'">平均分数线最'+(csreverse?'低':'高')+'的'+Math.min(num_public,arr2_t.length)+'个学校</a></li>');
 }
 
@@ -513,7 +515,7 @@ function school_median_rank_zjedu(csreverse=false){
 	for (let blxl=0;blxl<Math.min(num_public,arr2_t.length);blxl++){
 		bljg=bljg+'<tr class=odd><td class=blackline0>'+arr2_t[blxl][0]+'</td><td class=blackline0 nowrap align=right>'+arr2_t[blxl][1].toFixed(2)+'</td><td class=blackline0 nowrap align=right>'+mark_2_rank_zjedu(arr2_t[blxl][1])[2]+'</td></tr>';
 	}
-	document.getElementById('divmedian'+(csreverse?'_reverse':'')).innerHTML='<h5>中位数分数线最'+(csreverse?'低':'高')+'的'+Math.min(num_public,arr2_t.length)+'个学校</h5><table>'+th_zjedu(['学校','中位数分数线','对应位次'])+bljg+'</table>';
+	document.getElementById('divmedian'+(csreverse?'_reverse':'')).innerHTML='<h5>中位数分数线最'+(csreverse?'低':'高')+'的'+Math.min(num_public,arr2_t.length)+'个学校</h5>'+th_zjedu('divmedian'+(csreverse?'_reverse':''),['学校','中位数分数线','对应位次'],bljg);
     document.getElementById('ol_anames').insertAdjacentHTML('beforeend','<li><a href="#'+'divmedian'+(csreverse?'_reverse':'')+'">中位数分数线最'+(csreverse?'低':'高')+'的'+Math.min(num_public,arr2_t.length)+'个学校</a></li>');
 }
 
@@ -534,7 +536,7 @@ function school_plan_zjedu(sort_by_count=false){
 	for (let blxl=0;blxl<Math.min(num_public,arr2_t.length);blxl++){
 		bljg=bljg+'<tr class=odd><td class=blackline0>'+arr2_t[blxl][0]+'</td><td class=blackline0 nowrap align=right>'+arr2_t[blxl][3].toFixed(2)+'%</td><td class=blackline0 nowrap align=right>'+arr2_t[blxl][1]+'</td><td class=blackline0 nowrap align=right>'+(arr2_t[blxl][1]+arr2_t[blxl][2])+'</td></tr>';
 	}
-	document.getElementById('divplan'+(sort_by_count?'_reverse':'')).innerHTML='<h5>未完成招生计划的前'+Math.min(num_public,arr2_t.length)+'个学校'+(sort_by_count?'(数量)':'(比例)')+'</h5><table>'+th_zjedu(['学校','未完成的专业比例','未完成的专业数','全部专业数'])+bljg+'</table>';
+	document.getElementById('divplan'+(sort_by_count?'_reverse':'')).innerHTML='<h5>未完成招生计划的前'+Math.min(num_public,arr2_t.length)+'个学校'+(sort_by_count?'(数量)':'(比例)')+'</h5>'+th_zjedu('divplan'+(sort_by_count?'_reverse':''),['学校','未完成的专业比例','未完成的专业数','全部专业数'],bljg);
     document.getElementById('ol_anames').insertAdjacentHTML('beforeend','<li><a href="#divplan'+(sort_by_count?'_reverse':'')+'">未完成招生计划的前'+Math.min(num_public,arr2_t.length)+'个学校'+(sort_by_count?'(数量)':'(比例)')+'</a></li>');
 }
 
@@ -556,7 +558,7 @@ function school_last_number_zjedu(csreverse=false){
 	for (let blxl=0;blxl<Math.min(num_public,arr2_t.length);blxl++){
 		bljg=bljg+'<tr class=odd><td class=blackline0>'+arr2_t[blxl][0]+'</td><td class=blackline0 nowrap align=right>'+arr2_t[blxl][1]+'</td></tr>';
 	}
-	document.getElementById('divposition'+(csreverse?'_reverse':'')).innerHTML='<h5>录取位次排名，'+(csreverse?'后':'前')+Math.min(num_public,arr2_t.length)+'个学校</h5><table>'+th_zjedu(['学校','最低录取位次'])+bljg+'</table>';
+	document.getElementById('divposition'+(csreverse?'_reverse':'')).innerHTML='<h5>录取位次排名，'+(csreverse?'后':'前')+Math.min(num_public,arr2_t.length)+'个学校</h5>'+th_zjedu('divposition'+(csreverse?'_reverse':''),['学校','最低录取位次'],bljg);
     document.getElementById('ol_anames').insertAdjacentHTML('beforeend','<li><a href="#'+'divposition'+(csreverse?'_reverse':'')+'">录取位次排名，'+(csreverse?'后':'前')+Math.min(num_public,arr2_t.length)+'个学校</a></li>');
 }
 
@@ -574,7 +576,7 @@ function speciality_all_sum_zjedu(csreverse=false){
 	for (let blxl=0;blxl<Math.min(num_public,arr2_t.length);blxl++){
 		bljg=bljg+'<tr class=odd><td class=blackline0>'+arr2_t[blxl][0]+'</td><td class=blackline0 nowrap align=right>'+arr2_t[blxl][1]+'</td></tr>';
 	}
-	document.getElementById('divnum2'+(csreverse?'_reverse':'')).innerHTML='<h5>计划招收人数最'+(csreverse?'少':'多')+'的'+Math.min(num_public,arr2_t.length)+'个专业</h5><table>'+th_zjedu(['专业','计划数'])+bljg+'</table>';
+	document.getElementById('divnum2'+(csreverse?'_reverse':'')).innerHTML='<h5>计划招收人数最'+(csreverse?'少':'多')+'的'+Math.min(num_public,arr2_t.length)+'个专业</h5>'+th_zjedu('divnum2'+(csreverse?'_reverse':''),['专业','计划数'],bljg);
 
     document.getElementById('ol_anames').insertAdjacentHTML('beforeend','<li><a href="#'+'divnum2'+(csreverse?'_reverse':'')+'">计划招收人数最'+(csreverse?'少':'多')+'的'+Math.min(num_public,arr2_t.length)+'个专业</a></li>');
 
@@ -589,7 +591,7 @@ function speciality_all_sum_zjedu(csreverse=false){
 	for (let blxl=0;blxl<Math.min(num_public,arr2_t.length);blxl++){
 		bljg=bljg+'<tr class=odd><td class=blackline0>'+arr2_t[blxl][0]+'</td><td class=blackline0 nowrap align=right>'+arr2_t[blxl][3].toFixed(2)+'</td></tr>';
 	}
-	document.getElementById('divaverage2'+(csreverse?'_reverse':'')).innerHTML='<h5>平均分数线最'+(csreverse?'低':'高')+'的'+Math.min(num_public,arr2_t.length)+'个专业</h5><table>'+th_zjedu(['专业','平均分数线'])+bljg+'</table>';
+	document.getElementById('divaverage2'+(csreverse?'_reverse':'')).innerHTML='<h5>平均分数线最'+(csreverse?'低':'高')+'的'+Math.min(num_public,arr2_t.length)+'个专业</h5>'+th_zjedu('divaverage2'+(csreverse?'_reverse':''),['专业','平均分数线'],bljg);
     
     document.getElementById('ol_anames').insertAdjacentHTML('beforeend','<li><a href="#'+'divaverage2'+(csreverse?'_reverse':'')+'">平均分数线最'+(csreverse?'低':'高')+'的'+Math.min(num_public,arr2_t.length)+'个专业</a></li>');    
 }
@@ -608,7 +610,7 @@ function line_count_zjedu(){
 		blscore_t=item[0];
 		bljg=bljg+'<tr class=odd><td class=blackline0>'+item[0]+'</td><td class=blackline0 nowrap align=right>'+item[1]+'</td></tr>';
 	}
-	document.getElementById('divnum3').innerHTML='<h5>(最低)分数线和招收人数</h5><table>'+th_zjedu(['(最低)分数线','计划数'])+bljg+'</table>';
+	document.getElementById('divnum3').innerHTML='<h5>(最低)分数线和招收人数</h5>'+th_zjedu('divnum3',['(最低)分数线','计划数'],bljg);
 
     document.getElementById('ol_anames').insertAdjacentHTML('beforeend','<li><a href="#divnum3">(最低)分数线和招收人数</a></li>');
 
@@ -629,8 +631,8 @@ function line_count_zjedu(){
     flot_lines_k([['分数线和招收人数'].concat(object2array_b(arr3_t))],'div_line_count_flot','ne',false,"",'m',y1unit='人');
 }
 
-function th_zjedu(cslist){
-    return '<tr><th class=blackline nowrap>'+cslist.join('</th><th class=blackline nowrap>')+'</th></tr>';
+function th_zjedu(divid,cslist,cstr_string){
+    return '<table><tr><th class=blackline nowrap>'+cslist.join('</th><th class=blackline nowrap>')+'</th></tr>'+cstr_string+'</table>\n<p style="margin-top:0.5rem;font-size:0.8rem;"><span class="oblong_box" onclick="javascript:table_2_csv_b(\'div#'+divid+' table\');">CSV</span></p>\n';
 }
 
 function sortdata_zjedu(cstype){
@@ -711,4 +713,39 @@ function check_data_zjedu(){
     console.log('计划数求和：',list_t[0]);
     console.log('分数线求和：',list_t[1]);
     console.log('位次求和：',list_t[2]);
+}
+
+function export_csv_zjedu(){
+    var result_t=[];
+    for (let item of jgarray_public){
+        result_t.push('"'+specialstr_j(item[1])+'","'+specialstr_j(item[3])+'",'+item[4]+','+item[5]+','+item[6]+'');
+    }
+
+    if (result_t.length==0){return;}
+
+    var blhead='"学校名称","专业名称","计划数","分数线","位次"\n';        
+    string_2_txt_file_b(blhead+result_t.join('\n'),'zj_edu_export_'+now_time_str_b("-",true)+'.csv','csv');
+}
+
+function menu_zjedu(){
+    var str_t=klmenu_hide_b('');
+    var klmenu1=[
+    '<a href="https://www.zjzs.net/" target=_blank>浙江省教育考试院</a>',    
+    '<span class="span_menu" onclick="javascript:'+str_t+'export_csv_zjedu();">导出当前记录为csv</span>',    
+    ];
+
+    document.getElementById('span_h2').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'💯','14rem','1rem','1rem','60rem'),'','0rem')+' ');
+}
+
+function init_zjedu(){
+    top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.4rem'));
+    recent_search_zjedu();
+    menu_zjedu();    
+    
+    check_data_zjedu();
+    input_with_x_b('input_search',15);
+    mark_rank_list_zjedu();
+    td_right_html_zjedu();
+    document.getElementById('span_array_count').innerHTML='<i>('+zj_education_data_global.length+'条)</i>';
+    run_txtsearch_zjedu();
 }

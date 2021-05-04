@@ -10,4 +10,5 @@ var digest_global=`
 *laryngoscope
 *inkwell
 *inkstand
+*paperboy
 `.trim().split('\n');

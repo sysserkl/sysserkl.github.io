@@ -31,4 +31,5 @@ var digest_global=`
 *Ripley
 *northwards
 *starlit
+*newsboy
 `.trim().split('\n');

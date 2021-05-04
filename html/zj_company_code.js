@@ -226,7 +226,7 @@ function array_2_csv_zjcompany(){
     
     for (let blxl=0;blxl<search_result_zj_company_global.length;blxl++){
         var item=search_result_zj_company_global[blxl];
-        bljg.push((blxl+1)+',"'+specialstr_j(item[0])+'","'+specialstr_j(item[1])+'",'+item[2].toFixed(fraction_len)+','+item[3]+',"'+item[4]+'"');
+        bljg.push((blxl+1)+',"'+specialstr_j(item[0])+'","'+specialstr_j(item[1])+'",'+item[2].toFixed(fraction_len)+','+item[3]+',"'+specialstr_j(item[4])+'"');
     }
 
     if (bljg.length==0){return;}

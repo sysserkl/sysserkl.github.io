@@ -462,4 +462,5 @@ var digest_global=`
 *kingfisher
 *orang
 *octahedron
+*utensil
 `.trim().split('\n');
