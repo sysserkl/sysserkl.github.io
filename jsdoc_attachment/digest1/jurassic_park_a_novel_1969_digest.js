@@ -9,4 +9,5 @@ var digest_global=`
 *alkaline
 *octahedral
 *unreliable
+*intravenous
 `.trim().split('\n');

@@ -36,4 +36,5 @@ var digest_global=`
 *Tunis
 *lorry
 *undercarriage
+*Sudanese
 `.trim().split('\n');

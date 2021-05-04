@@ -178,4 +178,5 @@ var digest_global=`
 *Bucharest
 *Urals
 *onlooker
+*praiseworthy
 `.trim().split('\n');
