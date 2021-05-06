@@ -563,13 +563,13 @@ function gpx_file_selection_gps_points(cskeys=''){
 
 function gpx_file_array_2_html_gps_points(cskeys,cslist){
     var buttons='<p><input type="text" id="input_gpx_search" value="'+cskeys+'" onkeyup="javascript:if (event.key==\'Enter\'){gpx_file_selection_gps_points(this.value);}"> ';
-    buttons=buttons+'<span class="aclick" onclick="javascript:show_hide_map_gps_points();">返回</span>';
-    buttons=buttons+'<span class="aclick" onclick="javascript:gpx_near_gps_points();">离当前点最近的gpx文件</span>';    
+    buttons=buttons+'<span class="aclick" onclick="javascript:show_hide_map_gps_points();">返回</span> ';
+    buttons=buttons+'<span class="aclick" onclick="javascript:gpx_near_gps_points();">当前条件下离当前点最近的gpx文件</span>';    
     buttons=buttons+'</p>';
     buttons=buttons+'<div id="div_recent_gpx_sreach"></div>';
     
     var odiv=document.getElementById('div_selection');
-    odiv.innerHTML=buttons+array_2_li_b(cslist);
+    odiv.innerHTML=buttons+array_2_li_b(cslist,'li','ol','ol_gpx_file_list');
     input_with_x_b('input_gpx_search',15);
     
     recent_search_b('recent_search_gpx_gps_points',cskeys,'gpx_file_selection_gps_points','div_recent_gpx_sreach',["西湖"],20);
@@ -577,6 +577,8 @@ function gpx_file_array_2_html_gps_points(cskeys,cslist){
 }
 
 function gpx_near_gps_points(){
+    var t0 = performance.now();
+
     blstr=document.getElementById('div_status').innerHTML;
     if (blstr.substring(0,8)!=='lat,lng:'){return;}
     var list_t=blstr.substring(8,).trim().split(',');
@@ -584,14 +586,33 @@ function gpx_near_gps_points(){
     list_t[0]=parseFloat(list_t[0]);    //lat - 保留注释
     list_t[1]=parseFloat(list_t[1]);    //lon - 保留注释
     if (isNaN(list_t[0]) || isNaN(list_t[1])){return;}
+
+    var li_names=new Set();
+    var olis=document.querySelectorAll('ol#ol_gpx_file_list li');
+    for (let item of olis){
+        li_names.add(item.innerText);
+    }
     
+    var distance_list=[];
     var result_t=[];
-    for (let item of gpx_pb_global){
-        result_t.push([item[0],Math.min(Math.abs(list_t[0]-item[2]),Math.abs(item[4]-list_t[0]))+Math.min(Math.abs(list_t[1]-item[1]),Math.abs(item[3]-list_t[1])),'pb']);
+    for (let item of gpx_pb_global){//gpxfilename,min_lat,min_lon,max_lat,max_lon
+        if (!li_names.has(item[0])){continue;}
+        distance_list[0]=distance_leaflet_b(list_t[0], list_t[1],item[1], item[2]);
+        distance_list[1]=distance_leaflet_b(list_t[0], list_t[1],item[3], item[4]);
+        distance_list[2]=distance_leaflet_b(list_t[0], list_t[1],item[1], item[4]);
+        distance_list[3]=distance_leaflet_b(list_t[0], list_t[1],item[3], item[2]);
+        
+        result_t.push([item[0],Math.min(...distance_list),'pb']);
     }
 
     for (let item of gpx_kl_global){
-        result_t.push([item[0],Math.min(Math.abs(list_t[0]-item[2]),Math.abs(item[4]-list_t[0]))+Math.min(Math.abs(list_t[1]-item[1]),Math.abs(item[3]-list_t[1])),'kl']);
+        if (!li_names.has(item[0])){continue;}    
+        distance_list[0]=distance_leaflet_b(list_t[0], list_t[1],item[1], item[2]);
+        distance_list[1]=distance_leaflet_b(list_t[0], list_t[1],item[3], item[4]);
+        distance_list[2]=distance_leaflet_b(list_t[0], list_t[1],item[1], item[4]);
+        distance_list[3]=distance_leaflet_b(list_t[0], list_t[1],item[3], item[2]);
+        
+        result_t.push([item[0],Math.min(...distance_list),'kl']);
     }
     result_t.sort(function (a,b){return a[1]>b[1];});
     
@@ -601,6 +622,7 @@ function gpx_near_gps_points(){
     }
 
     gpx_file_array_2_html_gps_points('',span_list);
+    console.log('gpx_near_gps_points() 费时：'+(performance.now() - t0) + " milliseconds");    
 }
 
 function lonlat_2_latlon_gps_points(){

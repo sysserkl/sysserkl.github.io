@@ -88,6 +88,21 @@ function line_leaflet_b(csomap,islayer=false,cslist,cscolor='red',cscaption=''){
     }
 }
 
+function distance_leaflet_b(lat1, lng1, lat2, lng2){    
+    var radLat1 = rad_leaflet_b(lat1);
+    var radLat2 = rad_leaflet_b(lat2);
+    var a = radLat1 - radLat2;
+    var b = rad_leaflet_b(lng1) - rad_leaflet_b(lng2);
+    
+    var tmp1=Math.pow(Math.sin(a/2),2);
+    var tmp2=Math.pow(Math.sin(b/2),2);
+    
+    //球面距离公式???
+    var distance = 2 * Math.asin(Math.sqrt(tmp1 + Math.cos(radLat1)*Math.cos(radLat2)*tmp2));
+    distance = distance * earth_radius_leaflet_b()*1000;
+    return distance;
+}
+
 function rad_leaflet_b(d) {
     return d*Math.PI/180.0;
 }

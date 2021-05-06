@@ -11,4 +11,5 @@ var digest_global=`
 *inkwell
 *inkstand
 *paperboy
+*watchmaker
 `.trim().split('\n');
