@@ -32,4 +32,5 @@ var digest_global=`
 *northwards
 *starlit
 *newsboy
+*firelit
 `.trim().split('\n');

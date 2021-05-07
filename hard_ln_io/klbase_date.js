@@ -103,6 +103,25 @@ function day_2_week_b(csstr='',csbrief=false){
     return str_t+['日','一','二','三','四','五','六'][theday.getDay()];
 }
 
+function days_between_two_days_b(csday_start='',csday_end='',return_days=true){
+    if (csday_start==''){
+        csday_start=new Date();
+    }
+    if (csday_end==''){
+        csday_end=new Date();
+    }
+    var day1 = validdate_b(csday_start);
+    var day2 = validdate_b(csday_end);
+
+    var blvalue=day2-day1;
+    if (return_days){
+        return blvalue/(1000*3600*24);
+    }
+    else {
+        return blvalue;
+    }
+}
+
 function chinese_find_ymd_b(csstr){
     return csstr.match(/[一二三四五六七八九〇○]{1,}(\s+)?年[一二三四五六七八九十〇○]{1,}(\s+)?月[一二三四五六七八九十〇○]{1,}(\s+)?日/g) || [];
 }
@@ -134,7 +153,9 @@ function day_2_week_range_b(csstr,cstype='',returnstr=true){
         var theday=validdate_b(csstr);
     }
     var theweek=theday.getDay();
-    if (theweek==0){theweek=7;}
+    if (theweek==0){
+        theweek=7;
+    }
     theday.setTime(theday.getTime()-(theweek-1)*24*60*60*1000);
     if (cstype=='pre'){
         theday.setTime(theday.getTime()-7*24*60*60*1000);
@@ -252,7 +273,7 @@ function validdate_b(datestr,first_day_of_month=false,ismonth_day=false){
         return theday2;
     }
     
-	if (datestr.length==8 && !datestr.includes('-')){   //年月日 - 保留注释
+    if (datestr.length==8 && !datestr.includes('-')){   //年月日 - 保留注释
 		datestr=datestr.slice(0,4)+'-'+datestr.slice(4,6)+'-'+datestr.slice(-2,);
 	}
     else if (datestr.length==6 && !datestr.includes('-')){  //年月 - 保留注释
@@ -286,8 +307,9 @@ function validdate_b(datestr,first_day_of_month=false,ismonth_day=false){
             datestr=blyear+'-'+blmonth+'-'+blday;
         }        
     }
-    
-	var datetmp=new Date(datestr);
+
+    var bltime=(datestr.includes(':')?'':' 00:00:00');
+	var datetmp=new Date(datestr+bltime);
 	if ( Object.prototype.toString.call(datetmp) === "[object Date]" ) {
 		if ( isNaN( datetmp.getTime() ) ) {
             return false;
@@ -381,7 +403,6 @@ function time_2_emoji_b(cstime=false){
         blh=list_t[0];
     }
     if (blh==''){return '';}
-    console.log(blh);
     blh=parseInt(blh.trim()) % 12;
     return blemoji[blh];
 }

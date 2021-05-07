@@ -121,4 +121,5 @@ var digest_global=`
 *liquidation
 *shoreward
 *bookstall
+*labourer
 `.trim().split('\n');

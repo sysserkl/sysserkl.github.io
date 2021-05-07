@@ -481,6 +481,9 @@ function init_klroutines(showmenu=true){
     }
     if (showmenu){
         menu_klroutines();
+        var bltime=days_between_two_days_b('',next_day_b(),false)+1;    //是否需要加1毫秒？ - 保留注释
+        console.log('init_klroutines()','等候',(bltime/1000/60/60).toFixed(1),'小时');
+        setTimeout(week_check_klroutines, bltime);
     }
 }
 

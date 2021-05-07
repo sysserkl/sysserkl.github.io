@@ -774,7 +774,7 @@ function div_title_href_b(item,csfsize='',underline=false,csid='',fnname='',item
     }
 
     if (item.length>=3){
-        if (item[2]!==""){
+        if (item[2]!==''){
             if (item2_nofomat){
                 var blcontent=item[2];
             }

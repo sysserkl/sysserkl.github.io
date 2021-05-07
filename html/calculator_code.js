@@ -10,7 +10,7 @@ function get_local_storage_calculator(){
 
 function init_calculator(){
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.6rem'));
-    input_with_x_b('input_calc',15,'',false);
+    input_with_x_b('input_calc',(ismobile_b()?15:40),'',false);
     menu_calculator();
     old_data_calculator();
     
@@ -46,15 +46,64 @@ function portion_calculator(cstype='all'){
     }
 }
 
+function help_calculator(){
+    var blvalue;
+    var blinfo='';
+    var list_t=[
+    '30>20?"ok":"error"',
+    '3+4 //备注',
+    '[-99,"bad",45].length //数组长度',
+    'days_between_two_days_b("2020-12-31","2021-12-31") //日期间天数相差',
+    'document.body.getBoundingClientRect().height',
+    'document.body.offsetHeight',
+    'document.querySelector("ol").style.cssText',
+    '"dog".length //字符串长度',
+    'hex2rgb_b("#ff0000",true)',
+    'let a=3;let b=4;a+b',
+    'location.href',
+    'Math.max(3,45,6)',
+    'Math.random() //随机数',
+    'Math.sin(1)',
+    'navigator.userAgent',
+    'new Date().getFullYear() //年份',
+    'next_day_b("",1) //1天之后',
+    'next_day_b("2020-08-16",1) //2020-08-16的1天之后',
+    'now_time_str_b()',
+    'previous_day_b("",1) //1天之前',
+    'previous_day_b("2020-08-16",1) //2020-08-16的1天之前',    
+    'rgb2hex_b(0,0,255)',
+    'String.fromCodePoint(Math.round(Math.random()*20901+19968)) //随机汉字',
+
+    ];
+    for (let blxl=0;blxl<list_t.length;blxl++){
+        var bltime=now_time_str_b(':',true);
+        var blemoji=emoji_category_b('vegetable',blxl);
+        [blvalue,blinfo]=value_calculator(list_t[blxl]);
+        
+        list_t[blxl]=show_row_calculator(blemoji,list_t[blxl],blvalue,bltime);
+    }
+    document.getElementById('ol_calc').innerHTML='<li>'+list_t.join('</li><li>')+'</li>';
+}
+
+function filter_calculator(){
+    var blkey=prompt('输入筛选关键字：') || '';
+    if (blkey==''){return;}
+    var olis=document.querySelectorAll('ol#ol_calc li');
+    obj_search_show_hide_b(olis,'',blkey,false,true);
+}
+
 function menu_calculator(){
     var str_t=klmenu_hide_b('');
     var klmenu1=[
     '<span class="span_menu" onclick="javascript:'+str_t+'portion_calculator(\'show_selected\');">显示选中项</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'portion_calculator(\'show_unselected\');">显示未选中项</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'portion_calculator(\'all\');">全部显示</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'filter_calculator();">筛选</span>',    
+    '<span class="span_menu" onclick="javascript:'+str_t+'old_data_calculator();">重新载入</span>',    
     ];
 
     var klmenu2=[
+    '<span class="span_menu" onclick="javascript:'+str_t+'help_calculator();">Help</span>',    
     '<span class="span_menu" onclick="javascript:'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'calculator\');}">更新版本</span>',        
     ];
 
@@ -92,7 +141,7 @@ function value_calculator(csstr){
     if (csstr.match(/^\d+\.?(\d+)?$/g)!==null){
         return [csstr,''];  //纯数字不计算 - 保留注释
     }
-    var check_list=['let','var','eval','=','localStorage','return','break','for','while','{','}','[',']','document','window','if','else','switch','continue','inner','outer','style','class','id','getElement','alert','prompt','confirm','function','try','catch','script','///'];
+    var check_list=['var','eval','localStorage','return','break','for','while','{','}','window','if','else','switch','continue','inner','outer','class','getElement','alert','prompt','confirm','function','try','catch','script','///'];
     for (let item of check_list){
         if (csstr.includes(item)){
             return [false,'包含了多余字符：'+item];
@@ -138,6 +187,10 @@ function eval_calculator(){
 }
 
 function show_row_calculator(csemoji,csstr,csvalue,cstime){
+    var blat=csstr.indexOf('//');
+    if (blat>=0){
+        csstr=csstr.substring(0,blat)+'<span style="color:'+scheme_global['memo']+';font-size:0.9rem;">'+csstr.substring(blat,)+'</span>';
+    }
     var bljg=csemoji+' <span class="span_box span_string_calculator" onclick="javascript:select_row_calculator(this);" ondblclick="javascript:dbl_calculator(this);">'+csstr+'</span>';
     bljg=bljg+' = <strong>'+csvalue+'</strong>';
     bljg=bljg+' <small><small>'+time_2_emoji_b(cstime)+' <span style="color:'+scheme_global['memo']+';">'+cstime+'</span></small></small>';

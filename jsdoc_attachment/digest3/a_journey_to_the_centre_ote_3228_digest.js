@@ -7,4 +7,5 @@ var digest_global=`
 *inconceivable
 *mineralogist
 *ovoid
+*laborer
 `.trim().split('\n');
