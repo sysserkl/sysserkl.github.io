@@ -5,70 +5,35 @@
 <title>hzpy</title>
 <SCRIPT language=JavaScript src="../hard_ln_io/klbase.js"></SCRIPT>
 <script language="javascript">
-klbase_addons_import_js_b(['css'],[],['words/hzpy_data.js']);
+klbase_addons_import_js_b(['css'],[],['words/hzpy_data.js','words/zh_tw_data.js','words/cnwords_data.js']);
 </script>
+<SCRIPT language=JavaScript src="hzpinyin_code.js"></SCRIPT>
 <script language="javascript">
 var scheme_global={};
 scheme_generation_b();
-css_root_style_b('16','10',['base']);
+css_root_style_b('18','10',['base']);
 </script>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 <link rel="shortcut icon" href="../icos/hzpy.png" />
 </head>
 <body style="margin:0.5rem;">
-<h3 style="margin:0.5rem 0rem;font-size:3rem;"><img src="../icos/hzpy.png" style="max-width:3.5rem;" />hzpy</h3>
-<p><span id="span_info"></span> ver 0.0.1-20200229</p>
+<h3 style="margin:0.5rem 0rem;font-size:2rem;"><img src="../icos/hzpy.png" style="max-width:2.5rem;" />hzpy</h3>
+<p><span id="span_info"></span></p>
 <!-- 
 history:
+0.0.2-20210506 增加简繁对应、注释、半拼音化
 0.0.1-20200229
 -->
-<input type="text" id="input_search" onkeyup="javascript:if (event.key=='Enter'){search_hzpy();}"/>
+<textarea id="textarea_search"></textarea>
+<p>
+<span class="aclick" onclick="javascript:search_hzpy();">Search</span>
+<span class="aclick" onclick="javascript:half_py_hzpy();">半拼音化</span>
+<input type="number" id="input_half_py_probability" placeholder="半拼音化几率" min=0 max=1 step=0.1 value=1 />
+</p>
+<div id="div_recent_search" style="font-size:0.85rem;margin:0.5rem 0rem;line-height:1.8rem;word-break:break-all;word-wrap:break-word;"></div>
 <div id="divhtml" style="word-break:break-all;word-wrap:break-word;"></div>
 <div id="div_top_bottom"></div>
 <script type="text/javascript">
-function search_hzpy(csstr=''){
-    if (csstr==''){
-        csstr=document.getElementById('input_search').value.trim();
-    }
-    document.getElementById('input_search').value=csstr;
-    var bljg='';
-    if (csstr in hz2py_global){
-        bljg=bljg+csstr+' '+hz2py_global[csstr].join(', ');
-    }
-    if (csstr in py2hz_global){
-        bljg=bljg+csstr+' '+py2hz_global[csstr].join(', ');
-    }
-    
-    if (bljg=='' && csstr.substring(0,1) in hz2py_global){
-        var bltemp=csstr.split('');
-        for (let item of bltemp){
-            item=item.trim();
-            if (item==''){continue;}
-            if (item in hz2py_global){
-                bljg=bljg+'<div style="position:relative;float:left;"><table style="border:0.15rem dotted grey;margin:0.2rem;"><tr><td align=center valign=middle>'+hz2py_global[item].join(', ')+'</td></tr><tr><td align=center valign=middle>'+item+'</td></tr></table></div>';
-            }
-        }
-    }
-    document.getElementById('divhtml').innerHTML=bljg;
-}
-
-function init_hzpy(){
-    top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'2rem':'1.8rem'));
-    input_with_x_b('input_search',15);
-
-    blxl=0
-    for (let item in hz2py_global){
-        blxl=blxl+1;
-    }
-
-    blxl2=0
-    for (let item in py2hz_global){
-        blxl2=blxl2+1;
-    }
-    var bljg='汉字 '+blxl+' 个；读音 '+blxl2+' 种'
-    document.getElementById('span_info').innerHTML=bljg;
-}
-//-------------------------
 init_hzpy();
 </script>
 <script type="text/javascript">

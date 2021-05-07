@@ -22,4 +22,5 @@ var digest_global=`
 *bigamy
 *prostate
 *foamy
+*hydrant
 `.trim().split('\n');

@@ -917,9 +917,9 @@ function findmenu_kltxt_b(csxl=-1,cslimit=20,cscontent_length=-1){
 function find_cn_words_kltxt_b(){
     var csstr=document.getElementById('divhtml').innerHTML;
     var bljg='';
-    for (let item of cnwords_global){
-        if (csstr.includes(item[0])){
-            bljg=bljg+'<li style="font-size:0.9rem;"><font color=blue><b>'+item[0]+'</b></font> '+item[1]+' '+item[2]+'</li>';
+    for (let key in cnwords_global){
+        if (csstr.includes(key)){
+            bljg=bljg+'<li style="font-size:0.9rem;"><font color=blue><b>'+key+'</b></font> '+cnwords_global[key].join(' ')+'</li>';
         }
     }
     if (bljg!==''){
