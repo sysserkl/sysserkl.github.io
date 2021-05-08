@@ -56,9 +56,12 @@ function words_queue_read_b(){
 }
 
 function enwords_init_b(simple=false){
+    if (enwords.length==0){return;}
+    if (enwords[0].length>3){return;}   //已初始化 - 保留注释
+    
     var t0 = performance.now();    
     words_queue_read_b();   //导入临时添加的单词 - 保留注释
-   
+    
     if (simple){
         //写入序号 - 保留注释
         for (let blxl=0;blxl<enwords.length;blxl++){
@@ -1325,16 +1328,19 @@ function enwords_mini_search_b(csword=''){
 }
 
 function enwords_mini_search_frame_show_hide_b(csexpand=true){
+    if (csexpand){
+        enwords_init_b(true);
+    }
     enwords_mini_search_frame_style_b('div_enwords_mini_search_frame',false);   //初始化 - 保留注释
     var odiv=document.getElementById('div_enwords_mini_search_frame');
     if (!odiv){return;}
     if (odiv.style.cssText==''){
-        enwords_mini_search_frame_style_b();
+        enwords_mini_search_frame_style_b('',true);
         if (csexpand){
             enwords_mini_search_frame_form_b('');
         }
         else {
-            enwords_mini_search_frame_form_b();
+            enwords_mini_search_frame_form_b('s');
         }
     }
     else {
@@ -1351,14 +1357,15 @@ function enwords_mini_search_frame_style_b(csid='',set_css=true){
     if (!odiv){
         document.body.insertAdjacentHTML('beforeend','<div id="'+csid+'"></div>')
     }
+    odiv=document.getElementById(csid);
     if (set_css){
-        odiv=document.getElementById(csid);
         odiv.style.cssText='position:fixed;right:0%;top:0%;border:0.2rem pink dashed;background-color:white;max-width:70%;padding:0.5rem;';
     }
 }
 
 function enwords_mini_search_frame_form_b(cstype='s'){
     var odiv=document.getElementById('div_enwords_mini_search_frame');
+    //odiv.style.display='';
     if (cstype=='s'){
         odiv.innerHTML='<span onclick="javascript:enwords_mini_search_frame_form_b(\'\');" style="padding:1rem 0.5rem;cursor:pointer;color:tomato;"><b>S</b></span>';
         odiv.style.opacity='0.5';

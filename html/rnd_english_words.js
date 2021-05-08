@@ -61,7 +61,7 @@ function menu_rndwords(){
     ];
     klmenu3=root_font_size_menu_b(str_t,true,true,true).concat(klmenu3);
     
-    document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🇬🇧','14rem','1.1rem','1rem','60rem')+klmenu_b(klmenu2,'💡','14rem','1.1rem','1rem','60rem')+klmenu_b(klmenu3,'⚙','14rem','1.1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🇬🇧','12rem','1.1rem','1rem','60rem')+klmenu_b(klmenu2,'💡','16rem','1.1rem','1rem','60rem')+klmenu_b(klmenu3,'⚙','12rem','1.1rem','1rem','60rem'),'','0rem')+' ');
 }
 
 function slide_set_seconds_rndwords(){

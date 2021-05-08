@@ -1318,7 +1318,7 @@ function root_font_size_change_b(change_value=0,csask=false){
     localStorage.setItem('root_font_size_increment',increment);
 }
 
-function root_font_size_menu_b(csstr='',font_menu=true,full_screen_menu=true,remote_host_address=false){
+function root_font_size_menu_b(csstr='',font_menu=true,full_screen_menu=true,remote_host_address=false,location_href_menu=true){
     var list_t=[];
     if (font_menu){
         list_t=list_t.concat(['<span class="span_menu" onclick="javascript:'+csstr+'root_font_size_change_b(0.5);">字号+</span>', 
@@ -1332,6 +1332,9 @@ function root_font_size_menu_b(csstr='',font_menu=true,full_screen_menu=true,rem
     }
     if (remote_host_address){
         list_t=list_t.concat(['<span class="span_menu" onclick="javascript:'+csstr+'kl_remote_host_address_b();">设置form发送地址</span>']);
+    }
+    if (location_href_menu){
+        list_t=list_t.concat(['<span class="span_menu" onclick="javascript:'+csstr+'window.open(location.href);">location.href</span>']);
     }
     return list_t;
 }
