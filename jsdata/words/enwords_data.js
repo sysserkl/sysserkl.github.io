@@ -1,5 +1,9 @@
 //单词库
 var enwords=[
+["Washingtonian", "UK [ˌwɒʃɪŋˈtəʊnɪən] US [ˌwɑʃɪŋˈtouniən, ˌwɔʃɪŋ-]", "adj. 华盛顿市的；华盛顿州的；华盛顿市的人的；华盛顿州的人的；of or relating to the city or state of Washington or their inhabitants; living in or coming from Washington, D.C., or the state of Washington; of, or pertaining to, the U.S. state of Washington or its culture; of, or pertaining to, Washington, D.C. or its culture; adj. (有关)乔治·华盛顿的；of or characteristic of George Washington; of, or pertaining to, the life, values, or presidential administration of George Washington; n. 华盛顿市的人；华盛顿州的人；a native or inhabitant of the city or state of Washington; a person born or living in the state of Washington; a person born or living in the city of Washington; a native or inhabitant of Washington, D.C., or the state of Washington; n. (historical) a member of the Washingtonian movement, a 19th-century sobriety support group"],
+["ploughman", "['plaʊmən]", "n. 扶犁者（尤指畜力拉的犁）；犁田者；庄稼汉；农夫；a man whose job is guiding a plough, especially one pulled by animals; a man who ploughs, esp using horses; any farm labourer; (Britain) alternative spelling of plowman"],
+["unambiguous", "[ˌʌnæm'bɪɡjuəs]", "adj. 无歧义的；单意义的；不含糊的；明白的；明确的；清楚的；not ambiguous: clear, precise; clear in meaning; that can only be understood in one way"],
+["neatness", "[ˈniːtnəs] [ˈnitnɪs]", "n. 整洁；简洁；干净；整齐；整洁有序；the quality or condition of being neat; the quality of being tidy and in order or of being carefully done or arranged"],
 ["waterpower", "['wɔːtə(r)ˌpaʊə(r)]", "n. 水力；水力可利用的水流；the power of water employed to move machinery; power that is obtained from water flowing from one level to a lower level; a fall of water suitable for being used to move machinery; the energy produced by running or falling water that is used for driving machinery, especially for generating electricity; a source of such energy, as a waterfall; n. （磨房的）用水权；a water right owned by a mill; n. (从消防软管或水枪中)喷水的能力；the capacity to shoot water, as from a fire hose or squirt gun"],
 ["laborer", "['leɪbərə(r)]", "n. (体力)劳动者；劳工；工人；（熟练工人的）辅助工；a person whose job involves hard physical work that does not need special skills, especially work that is done outdoors; one that labors, specifically: a person who does unskilled physical work for wages; (American spelling): one who uses body strength instead of intellectual power to earn a wage, usually hourly; an unskilled or semiskilled worker who brings materials to, and does preparatory work for, skilled workers in a trade"],
 ["labourer", "['leɪbərə(r)]", "n. (体力)劳动者；劳工；工人；（熟练工人的）辅助工；Britain standard spelling of 'laborer'"],
@@ -7409,7 +7413,7 @@ var enwords=[
 ["plenty", "['plenti]", "n. 充足；大量；丰富；adj. 充足的；相当多的；adv. 充分；非常"],
 ["plotline", "['plɒtˌlaɪn]", "n. (戏剧、小说等的)情节主线；主要情节"],
 ["plot", "UK [plɒt] US [plɑːt]", "n. 情节；阴谋；图；(小块)土地；v. 密谋；计划；绘图；标示位置"],
-["plowman", "['plaʊmən]", "n. 农夫；把犁人；耕地人"],
+["plowman", "['plaʊmən]", "n. 把犁人；耕地人；农夫"],
 ["plowshare", "UK ['plaʊˌʃeə(r)] US ['plaʊˌʃer]", "n. 犁刃；犁头；犁铧；铧头；the broad curved blade (= metal cutting edge) of a plow; a part of a plow that cuts the furrow"],
 ["plugin", "['plʌgɪn]", "n. 插件（计算机软件术语）"],
 ["plum", "[plʌm]", "n. 李子；梅子；紫红色；[口]美事"],

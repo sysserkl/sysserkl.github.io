@@ -59,4 +59,5 @@ var digest_global=`
 *depository
 *VIII
 *fraudulent
+*unambiguous
 `.trim().split('\n');
