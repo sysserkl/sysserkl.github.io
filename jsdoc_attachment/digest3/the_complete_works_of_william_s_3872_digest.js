@@ -12,5 +12,6 @@ var digest_global=`
 *bagpiper
 *manslaughter
 *shipman
+*slaughterman
 *ploughman
 `.trim().split('\n');

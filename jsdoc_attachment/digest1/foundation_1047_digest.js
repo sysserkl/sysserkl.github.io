@@ -3,4 +3,5 @@ var digest_global=`
 *symbology
 *driftage
 *psychohistorian
+*vanadium
 `.trim().split('\n');
