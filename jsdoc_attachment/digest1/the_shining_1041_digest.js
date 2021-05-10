@@ -37,4 +37,5 @@ var digest_global=`
 *inadequacy
 *switchboard
 *hexagonal
+*overdose
 `.trim().split('\n');

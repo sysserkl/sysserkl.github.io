@@ -1109,7 +1109,6 @@ function highlight_oblong_span_b(ospan,ishover=true,cscolor=''){
 }
 
 function mouseover_mouseout_oblong_span_b(ospans){
-    console.log(new Date(),'mouseover_mouseout_oblong_span_b',ospans.length);
     for (let one_span of ospans){
         one_span.setAttribute('onmouseover','javascript:highlight_oblong_span_b(this);');
         one_span.setAttribute('onmouseout','javascript:highlight_oblong_span_b(this,false,\''+one_span.style.color+'\');');

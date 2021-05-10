@@ -242,8 +242,6 @@ function content_editable_lt_klmemo(csno){
         return;
     }    
     ospan.setAttribute('contenteditable','true');
-    //ospan.removeAttribute('onclick','');
-    //ospan.style.cursor='';
     otd.innerHTML='<button onclick="javascript:change_content_lt_klmemo('+csno+');">保存</button> <button onclick="javascript:draw_lt_klmemo('+csno+');">取消</button>';
 }
 
@@ -265,7 +263,7 @@ function change_content_lt_klmemo(csno){
         return;    
     }
     
-    currentvalue=quote_2_cn_character(currentvalue);
+    currentvalue=quote_2_cn_character_b(currentvalue);
     
     for (let blxl=0;blxl<klmemo_global.length;blxl++){
         if (currentvalue==klmemo_global[blxl][0]){
@@ -379,8 +377,10 @@ function change_lt_klmemo(csid,csnumber){
             if (confirm('是否修改？\n'+list_t[csnumber]+blinfo)==false){
                 break;
             }
-                        
-            var currentvalue=quote_2_cn_character((prompt('输入'+list_t[csnumber],oldvalue) || '').trim());
+
+            var currentvalue=(prompt('输入'+list_t[csnumber],oldvalue) || '').trim();                        
+            currentvalue=remove_n_klmemo(currentvalue);
+            currentvalue=quote_2_cn_character_b(currentvalue);
             if (currentvalue==item[csnumber]){
                 alert('未修改');
                 return;
@@ -414,8 +414,16 @@ function change_lt_klmemo(csid,csnumber){
     }
 }
 
+function remove_n_klmemo(csstr){
+    csstr=csstr.replace(new RegExp(/\r\n/,'g'),' ');
+    csstr=csstr.replace(new RegExp(/\n/,'g'),' ');
+    return csstr.trim();
+}
+
 function new_lt_klmemo(){
-    var newmemo=quote_2_cn_character((prompt('输入Memo') || '').trim());
+    var newmemo=quote_2_cn_character_b((prompt('输入Memo') || '').trim());
+    newmemo=remove_n_klmemo(newmemo);
+    
     if (newmemo==''){return;}
     var name_list=new Set();
     for (let item of klmemo_global){

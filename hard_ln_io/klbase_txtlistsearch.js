@@ -1331,7 +1331,8 @@ function bookmarks_statistics_kltxt_b(bookmark_list,reading_lines,current_book_p
         if (current_line_no_max<filelist_len){
             var day_end=validdate_b(date2str_b());
         }
-        var day_all=(day_end - day_start) / 86400000 + 1;
+        var day_all=Math.ceil(days_between_two_days_b(day_start,day_end))+1;
+        
         blstatsitics='<p style="margin-left:0.5rem;"><b>《'+bookname+'》</b>';
         blstatsitics=blstatsitics+'开始阅读日期：'+date2str_b('-',day_start)+' '+day_2_week_b(day_start)+'；结束日期：'+date2str_b('-',day_end)+' '+day_2_week_b(day_end)+'；总天数：'+day_all+'天；';
         
@@ -1346,10 +1347,27 @@ function bookmarks_statistics_kltxt_b(bookmark_list,reading_lines,current_book_p
             blstatsitics=blstatsitics+'平均每天阅读：'+lines_per_day_all.toFixed(0)+'—'+lines_per_day_real.toFixed(0)+'行。';
         }
 
-        if (current_line_no_max<filelist_len){
+        if (current_line_no_max<filelist_len){       
             var plan_days_real=Math.ceil((filelist_len-current_line_no_max)/lines_per_day_real);
             var plan_days_all=Math.ceil((filelist_len-current_line_no_max)/lines_per_day_all);
             blstatsitics=blstatsitics+'完成阅读还需要：'+plan_days_real+'—'+plan_days_all+'天；即，'+next_day_b('',plan_days_real)+'—'+next_day_b('',plan_days_all)+'。';
+            
+            var recent_reading_times=5;
+            var recent_reading_status='';
+            if (reading_lines.length>recent_reading_times){
+                var day10_start=reading_lines.slice(-1*recent_reading_times,-1*recent_reading_times+1)[0][0];
+                var day10_len=Math.ceil(days_between_two_days_b(day10_start,day_end))+1;
+                var day10_reading_lines=0;
+                for (let blxl=reading_lines.length-recent_reading_times;blxl<reading_lines.length;blxl++){
+                    day10_reading_lines=day10_reading_lines+reading_lines[blxl][1];
+                }
+                var lines_per_day_10=day10_reading_lines/day10_len;
+                var plan_days_10=Math.ceil((filelist_len-current_line_no_max)/lines_per_day_10);
+                
+                recent_reading_status='最近'+day10_len+'天，共阅读'+recent_reading_times+'次，共阅读'+day10_reading_lines+'行，平均每天阅读'+(lines_per_day_10).toFixed(0)+'行。按此计算，';
+                recent_reading_status=recent_reading_status+'完成阅读还需要：'+plan_days_10+'天；即，'+next_day_b('',plan_days_10)+'。';
+            }
+            blstatsitics=blstatsitics+recent_reading_status;
         }
         blstatsitics=blstatsitics+'</p>';
     }

@@ -582,7 +582,7 @@ function specialstr_html_b(csstr){
     return bljg;
 }
 
-function quote_2_cn_character(csstr){
+function quote_2_cn_character_b(csstr){
     return csstr.replace(new RegExp("'",'g'),'’').replace(new RegExp('"','g'),'”').replace(new RegExp(/\\/,'g'),'＼');
 }
 

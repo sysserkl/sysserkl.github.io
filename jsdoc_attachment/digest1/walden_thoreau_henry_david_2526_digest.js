@@ -24,4 +24,5 @@ var digest_global=`
 *biped
 *spectator
 *fluctuation
+*lecturer
 `.trim().split('\n');
