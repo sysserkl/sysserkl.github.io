@@ -61,18 +61,18 @@ function space2underline_enbook(){
 function new_words_form_enbook(){
     var bljg='<p>第一组</p>';
     bljg=bljg+'<textarea id="textarea_new_words1"></textarea>';
-    bljg=bljg+'<p><span class="aclick" onclick="javascript:get_new_words_arr_enbook(1);">显示全部单词</span> ';
-    bljg=bljg+'<span class="aclick" onclick="javascript:get_new_words_arr_enbook(2);">显示未收录单词</span> ';
-    bljg=bljg+'<span class="aclick" onclick="javascript:get_new_words_arr_enbook(3);">显示已收录单词</span> ';
+    bljg=bljg+'<p>';
+    bljg=bljg+'<span class="aclick" onclick="javascript:get_new_words_arr_enbook(1);">全部单词</span> ';
+    bljg=bljg+'<span class="aclick" onclick="javascript:get_new_words_arr_enbook(2);">新单词</span> ';
+    bljg=bljg+'<span class="aclick" onclick="javascript:get_new_words_arr_enbook(3);">旧单词</span> ';
+
     bljg=bljg+'<span class="aclick" onclick="javascript:in_all_new_words_enbook(\'include\');">已在全部新单词中的新单词</span> ';        
     bljg=bljg+'<span class="aclick" onclick="javascript:in_all_new_words_enbook();">不在全部新单词中的新单词</span> ';    
-    bljg=bljg+'<span class="aclick" onclick="javascript:get_new_words_arr_enbook(4);">(wiki格式)</span> ';
-    bljg=bljg+'<span class="aclick" onclick="javascript:get_new_words_arr_enbook(5);">(js格式)</span> ';
-    bljg=bljg+'<span class="aclick" onclick="javascript:show_sentence_kle(3,true);">显示少量例句</span> ';    
-    bljg=bljg+'<span class="aclick" onclick="javascript:words_sort_count_enbook();">单词排序</span> ';
+    bljg=bljg+'<span class="aclick" onclick="javascript:old_words_in_sentence_enbook();">最少例句中的旧单词</span> ';        
+
     bljg=bljg+'<span class="aclick" onclick="javascript:textarea_shift_enbook();">对调</span> ';    
     bljg=bljg+'<span class="aclick" onclick="javascript:space2underline_enbook();">替换单词间空格为下划线</span> ';      
-    bljg=bljg+'<span class="aclick" onclick="javascript:filter_enbook();">筛选单词</span> ';
+    bljg=bljg+'<span class="aclick" onclick="javascript:filter_enbook();">筛选</span> ';
     bljg=bljg+'<span class="aclick" onclick="javascript:document.getElementById(\'textarea_new_words1\').select();document.execCommand(\'copy\');">复制</span> ';    
     bljg=bljg+'<span class="aclick" onclick="javascript:document.getElementById(\'textarea_new_words1\').value=\'\';">清空</span> ';
 
@@ -92,7 +92,6 @@ function new_words_form_enbook(){
     document.getElementById('divhtml').innerHTML=bljg;
     
     input_size_b([["input_first_lines",5]],'id');
-	return;
 }
 
 function filter_enbook(){
@@ -146,6 +145,19 @@ function in_all_new_words_enbook(cstype='exclude'){
     if (cstype=='' || cstype=='exclude'){
         bljg=bljg+'不在新单词库中的新单词：'+result_t_exclude.join(' ')+'\n';
     }
+    document.getElementById('textarea_new_words2').value=bljg;
+}
+
+function old_words_in_sentence_enbook(){
+    var csstr=document.getElementById('textarea_new_words1').value.trim();
+    
+    var new_words_set=new Set();
+    var old_words_set=new Set();    
+    var bljgarr2=str_2_array_enbook(csstr,true);
+    [new_words_set,old_words_set]=get_new_words_arr_enbook2(bljgarr2,checkbox_kl_value_b('words_type_check'));
+    var intersection=array_intersection_b(old_words_set,en_sentence_count_global);
+
+    var bljg='最少例句中的旧单词：'+Array.from(intersection).join(' ')+'\n';
     document.getElementById('textarea_new_words2').value=bljg;
 }
 
@@ -809,9 +821,17 @@ function exclude_words_enbook(){
 }
 
 function menu_enbook(){
-    var str_t=klmenu_hide_b('#top');
+    var str_t=klmenu_hide_b('');
+    var str2_t=klmenu_hide_b('#div_new_words2');
     var klmenu1=[
     '<a href="enwords.htm" onclick="javascript:'+str_t+'" target=_blank>单词库</a>',
+    '<span class="span_menu" onclick="javascript:'+str2_t+'get_new_words_arr_enbook(4);">旧单词wiki格式</span>',
+    '<span class="span_menu" onclick="javascript:'+str2_t+'get_new_words_arr_enbook(5);">旧单词js格式</span>',
+    '<span class="span_menu" onclick="javascript:'+str2_t+'show_sentence_kle(3,true);">显示少量例句</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'words_sort_count_enbook();">单词排序</span>',
+    ];
+
+    var klmenu_new=[
     '<span class="span_menu" onclick="javascript:'+str_t+'import_words_enbook(\'new\');">导入KLWiki和txtbook全部新单词</span>',    
     '<span class="span_menu" onclick="javascript:'+str_t+'import_words_enbook(\'new2500\');">随机导入2500个新单词</span>',        
     '<span class="span_menu" onclick="javascript:'+str_t+'max_length_new_words_enbook();">全部新单词中最长的单词</span>',     
@@ -827,6 +847,36 @@ function menu_enbook(){
     '<a href="http://192.168.0.133/wiki/index.php/%E8%8B%B1%E8%AF%AD%E4%B9%A6%E7%B1%8D%E7%94%9F%E8%AF%8D%E7%BB%9F%E8%AE%A1" onclick="javascript:'+str_t+'" target=_blank>英语书籍生词统计(KLWiki)</a>',    
     ];
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','18rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'🧮','16rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_new,'🔤','18rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'🧮','16rem','1rem','1rem','60rem'),'','0rem')+' ');
     
+}
+
+function init_enbook(){
+    top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.4rem'));
+    new_words_form_enbook();
+    //---------------
+    enwords_mini_search_frame_style_b();
+    enwords_init_b();
+    local_storage_today_b('enwords_statistics',40,enwords.length,'/');
+    args_enbook();
+    menu_enbook();
+    enwords_mini_search_frame_form_b();
+    
+    var list_t=new Set();
+    for (let item of en_sentence_count_global){
+        if (item[1]>=3){continue;}
+        list_t.add(item[0]);
+    }
+    en_sentence_count_global=list_t;
+}
+
+function style_enbook(){
+    document.write('\n<style>\n');
+    document.write('a.similar {text-decoration:none;}\n');
+    document.write('a.similar:link, a.similar:visited, a.similar:hover, a.similar:active{color:'+scheme_global['memo']+';}\n');
+    document.write('.txtsearch_lineno {color:'+scheme_global['memo']+';font-size:0.8rem;}\n');
+    document.write('.div_sentence{margin:1rem 0rem 1rem 2rem;border:0.2rem dashed '+scheme_global['shadow']+';padding:0.5rem 1rem;}\n');
+    document.write('#table_compare tr{background-color: '+scheme_global['background']+';}\n');
+    document.write('#table_compare tr:hover {background-color: '+scheme_global['skyblue']+';}\n');
+    document.write('</style>\n');
 }

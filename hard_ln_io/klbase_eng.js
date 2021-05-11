@@ -161,7 +161,7 @@ function enwords_batch_div_b(wordslist_t,checkboxno='',showno=true,startno=0){
             bljg=bljg+'<label for="checkbox_enword'+id_name+'"><small style="color:'+scheme_global['memo']+';">'+blxl+'.</small>';
         }
         bljg=bljg+specialstr_j(enstr_t,true)+'</label> ';
-        if (blxl>=100){
+        if (blxl>100){
             bljg=bljg+'<strong><i>(&gt;100...)</i></strong>'
             break;
         }
