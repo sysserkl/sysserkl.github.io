@@ -15,4 +15,5 @@ var digest_global=`
 *bigamist
 *rattlesnake
 *landlocked
+*professorial
 `.trim().split('\n');

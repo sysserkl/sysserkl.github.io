@@ -15,4 +15,7 @@ var digest_global=`
 *handbreadth
 *seraph
 *harbourage
+*undefined
+*undiscovered
+*unlimited
 `.trim().split('\n');

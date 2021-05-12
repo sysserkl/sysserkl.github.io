@@ -1,11 +1,14 @@
 <?php
-function file_check_g($file_path_name,$show_full_name=false,$check_write=false,$max_size=50){
+function file_check_g($file_path_name,$show_full_name=false,$check_write=false,$check_is_file=true,$max_size=50){
     if ($show_full_name){
         $bname=$file_path_name;
     }
     else {
         $bname = pathinfo($file_path_name)['basename'];
     }
+    if ($check_is_file and !is_file($file_path_name)) {
+        return $bname.' is not a file';
+    }    
     if (!file_exists($file_path_name)) {
         return $bname.' does not exists';
     }

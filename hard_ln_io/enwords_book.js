@@ -486,6 +486,7 @@ function new_words_continue_enbook(cslength,percent10length=0){
     if (csbookno_global_b>=0 && en_words_book_newwords_continue_global){
         if (csbookno_global_b==0){
             if (confirm("是否批量统计生词数量？")==false){
+                location.href="?";
                 return;
             }
         }
@@ -501,7 +502,7 @@ function new_words_continue_enbook(cslength,percent10length=0){
             location.href='?book='+(csbookno_global_b+1+1)+'&continue';
         }
         else {
-            news_words_statistics_enbook();
+            //news_words_statistics_enbook();
             alert('done');
             location.href="?";
         }
@@ -820,6 +821,14 @@ function exclude_words_enbook(){
     odiv.scrollIntoView();
 }
 
+function txtlistsearch_enbook(){
+    var blpath=klwebphp_path_b('PythonTools/data/selenium_news/html/txtlistsearch.htm');
+    if (csbookno_global_b>=0){
+        blpath=blpath+'?'+csbooklist_sub_global_b[csbookno_global_b][0]+'&line=1';
+    }
+    window.open(blpath);
+}
+
 function menu_enbook(){
     var str_t=klmenu_hide_b('');
     var str2_t=klmenu_hide_b('#div_new_words2');
@@ -829,6 +838,7 @@ function menu_enbook(){
     '<span class="span_menu" onclick="javascript:'+str2_t+'get_new_words_arr_enbook(5);">旧单词js格式</span>',
     '<span class="span_menu" onclick="javascript:'+str2_t+'show_sentence_kle(3,true);">显示少量例句</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'words_sort_count_enbook();">单词排序</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'txtlistsearch_enbook();">txtlistsearch</span>',
     ];
 
     var klmenu_new=[
@@ -852,22 +862,25 @@ function menu_enbook(){
 }
 
 function init_enbook(){
-    top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.4rem'));
     new_words_form_enbook();
-    //---------------
-    enwords_mini_search_frame_style_b();
-    enwords_init_b();
-    local_storage_today_b('enwords_statistics',40,enwords.length,'/');
+    enwords_init_b(true);
     args_enbook();
-    menu_enbook();
-    enwords_mini_search_frame_form_b();
-    
-    var list_t=new Set();
-    for (let item of en_sentence_count_global){
-        if (item[1]>=3){continue;}
-        list_t.add(item[0]);
+    //---------------
+    if (en_words_book_newwords_continue_global===false){
+        top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.4rem'));
+
+        enwords_mini_search_frame_style_b();
+        //local_storage_today_b('enwords_statistics',40,enwords.length,'/');
+        menu_enbook();
+        enwords_mini_search_frame_form_b();
+        
+        var list_t=new Set();
+        for (let item of en_sentence_count_global){
+            if (item[1]>=3){continue;}
+            list_t.add(item[0]);
+        }
+        en_sentence_count_global=list_t;
     }
-    en_sentence_count_global=list_t;
 }
 
 function style_enbook(){
