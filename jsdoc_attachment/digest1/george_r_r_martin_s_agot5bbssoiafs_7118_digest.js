@@ -55,4 +55,6 @@ var digest_global=`
 *cobalt
 *obese
 *oversize
+*murderous
+*unconcerned
 `.trim().split('\n');

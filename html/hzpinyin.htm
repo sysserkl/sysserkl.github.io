@@ -11,19 +11,20 @@ klbase_addons_import_js_b(['css'],[],['words/hzpy_data.js','words/zh_tw_data.js'
 <script language="javascript">
 var scheme_global={};
 scheme_generation_b();
-css_root_style_b('18','10',['base']);
+css_root_style_b('18','10',['base','menu']);
 </script>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 <link rel="shortcut icon" href="../icos/hzpy.png" />
 </head>
-<body style="margin:0.5rem;">
-<h3 style="margin:0.5rem 0rem;font-size:2rem;"><img src="../icos/hzpy.png" style="max-width:2.5rem;" />hzpy</h3>
+<body>
+<h2 id="h2_title" style="margin:0rem;font-size:1.35rem;">hzpy</h2>
 <p><span id="span_info"></span></p>
 <!-- 
 history:
 0.0.2-20210506 增加简繁对应、注释、半拼音化
 0.0.1-20200229
 -->
+<div style="margin:0.5rem;">
 <textarea id="textarea_search"></textarea>
 <p>
 <span class="aclick" onclick="javascript:search_hzpy();">Search</span>
@@ -32,6 +33,7 @@ history:
 </p>
 <div id="div_recent_search" style="font-size:0.85rem;margin:0.5rem 0rem;line-height:1.8rem;word-break:break-all;word-wrap:break-word;"></div>
 <div id="divhtml" style="word-break:break-all;word-wrap:break-word;"></div>
+</div>
 <div id="div_top_bottom"></div>
 <script type="text/javascript">
 init_hzpy();

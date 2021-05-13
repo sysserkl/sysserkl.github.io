@@ -152,7 +152,6 @@ function draw_lt_plans(csno){
 
     var blpercent=Math.abs(blcurrent/blcount);
     var blposition=parseInt(blpercent*all_days);
-    //var divstyle='position:relative;float:left;margin:0.1rem;font-size:0.8rem;line-height:100%;';
     var bljg='<tr><td><b>'+(csno+1)+'.';
     bljg=bljg+'<span style="cursor:pointer;" onclick="change_lt_plans(\''+csitem[0]+'\',1);">'+csitem[1]+'</span>';
     bljg=bljg+'</b> <small>[';
@@ -160,20 +159,20 @@ function draw_lt_plans(csno){
     bljg=bljg+'<span style="cursor:pointer;" onclick="change_lt_plans(\''+csitem[0]+'\',5);">终值: '+csitem[5]+'; '+'</span>';    
     bljg=bljg+'<span style="cursor:pointer;" onclick="change_lt_plans(\''+csitem[0]+'\',6);">进度: '+csitem[6]+', '+(blpercent*100).toFixed(2)+'%</span>';
     bljg=bljg+']</small></td></tr>';
-    bljg=bljg+'<tr><td style="font-size:0.72rem;line-height:120%;padding:0.1rem;word-break:break-all;word-wrap:break-word;">';
+    bljg=bljg+'<tr><td style="font-size:0.72rem;line-height:120%;padding:0.1rem;overflow-wrap: anywhere;">';
     bljg=bljg+'<span style="cursor:pointer;" onclick="change_lt_plans(\''+csitem[0]+'\',2);">'+csitem[2]+'</span> ';
 
+    var symbol_list=['○','●'];
     for (let blxl=1;blxl<=all_days;blxl++){
         var day_str=date2str_b('/',start_day);
-        var list_t=['grey','○'];
+        var list_t=['grey',symbol_list[0]];
         if (blxl<=blposition){
-            list_t=['green','●'];
+            list_t=['green',symbol_list[1]];
         }
         if (day_str==today_str){
-            list_t=['red','●'];
+            list_t=['red',symbol_list[1]];
         }
         bljg=bljg+'<span style="color:'+list_t[0]+';margin-right:0.1rem;" title="'+blxl+'. '+day_str+'">'+list_t[1]+'</span>';
-        //bljg=bljg+'<div style="'+divstyle+'" title="'+blxl+'. '+day_str+'">'+blstr+'</div>';
         start_day.setTime(start_day.getTime()+24*60*60*1000);
     }
     bljg=bljg+'<span style="cursor:pointer;" onclick="change_lt_plans(\''+csitem[0]+'\',4);">'+csitem[4]+'</span> ('+all_days+'天)';

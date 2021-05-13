@@ -16,4 +16,5 @@ var digest_global=`
 *rattlesnake
 *landlocked
 *professorial
+*unrestricted
 `.trim().split('\n');

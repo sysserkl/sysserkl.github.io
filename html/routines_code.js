@@ -321,7 +321,7 @@ function menu_klroutines(){
     document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,day_2_week_b('',true),menu1width,fontsize,fontsize,'60rem','','div_rountines_menu1','button_routines_menu1'),'','0rem','','div_routines_menu')+' '); //♾ - 保留注释
 }
 
-function week_check_klroutines(){
+function week_check_klroutines(do_settimeout=false){
     var blstr=document.getElementById('button_routines_menu1').innerText;
     var thisweek=day_2_week_b('',true);
     if (blstr==thisweek){return;}
@@ -331,6 +331,11 @@ function week_check_klroutines(){
     menu_klroutines();
     show_klroutines();
     //count_klplan_b();   //重新计数 - 保留注释
+    if (do_settimeout){
+        var bltime=days_between_two_days_b('',next_day_b(),false)+1;    //是否需要加1毫秒？ - 保留注释
+        console.log('week_check_klroutines()','等候',(bltime/1000/60/60).toFixed(1),'小时');
+        setTimeout(function (){week_check_klroutines(true);}, bltime);
+    }
 }
 
 function check_klroutines(csid,cscategory){
@@ -483,7 +488,7 @@ function init_klroutines(showmenu=true){
         menu_klroutines();
         var bltime=days_between_two_days_b('',next_day_b(),false)+1;    //是否需要加1毫秒？ - 保留注释
         console.log('init_klroutines()','等候',(bltime/1000/60/60).toFixed(1),'小时');
-        setTimeout(week_check_klroutines, bltime);
+        setTimeout(function (){week_check_klroutines(true);}, bltime);
     }
 }
 

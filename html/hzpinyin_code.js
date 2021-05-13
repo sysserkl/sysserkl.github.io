@@ -49,7 +49,7 @@ function search_hzpy(csstr=''){
             item=item.trim();
             if (item==''){continue;}
             if (item in hz2py_global){
-                bljg.push('<div style="position:relative;float:left;"><table style="border:0.15rem dotted grey;margin:0.2rem;"><tr><td align=center valign=middle>'+hz2py_global[item].join(', ')+'</td></tr><tr><td align=center valign=middle>'+item+'</td></tr></table></div>');
+                bljg.push(one_word_hzpy(item));
             }
         }
         list_t=array_unique_b(list_t);
@@ -67,8 +67,68 @@ function search_hzpy(csstr=''){
     document.getElementById('divhtml').innerHTML='<table><tr><td>'+bljg.join('\n')+'</td></tr><tr><td>'+gb_big5_list.join('\n')+'</td></tr><tr><td>'+definition_list.join('\n')+'</td></tr></table>';
 }
 
+function one_word_hzpy(cskey){
+    return '<div style="position:relative;float:left;"><table style="border:0.15rem dotted grey;margin:0.2rem;"><tr><td align=center valign=middle>'+hz2py_global[cskey].join(', ')+'</td></tr><tr><td align=center valign=middle>'+cskey+'</td></tr></table></div>';
+}
+
+function pronunciation_hzpy(cstype){
+    switch (cstype){
+        case 'single':
+            var result_t=new Set();
+            for (let key in hz2py_global){
+                if (hz2py_global[key].length==1){
+                    result_t.add(one_word_hzpy(key));
+                }
+            }
+            result_t=Array.from(result_t);
+            result_t.sort();            
+            break;
+        case 'multiple':
+            var result_t=[];
+            for (let key in hz2py_global){
+                if (hz2py_global[key].length>1){
+                    result_t.push([one_word_hzpy(key),hz2py_global[key].length]);
+                }
+            }    
+            result_t.sort();
+            result_t.sort(function (a,b){return a[1]>b[1];});   
+            for (let blxl=0;blxl<result_t.length;blxl++){
+                result_t[blxl]=result_t[blxl][0];
+            }
+            break;
+        case 'list':
+            var result_t=[];
+            for (let key in py2hz_global){
+                result_t.push([key,py2hz_global[key].length]);
+            }
+            result_t.sort(function (a,b){return a[1]>b[1];});
+            for (let blxl=0;blxl<result_t.length;blxl++){
+                var words='';
+                if (result_t[blxl][1]<=10){
+                    words='<span class="oblong_box">'+py2hz_global[result_t[blxl][0]].join(' ')+'</span>';
+                }
+                
+                result_t[blxl]=result_t[blxl][0]+'<small>('+result_t[blxl][1]+')'+words+'</small>';
+            }
+            break;
+    }
+    document.getElementById('divhtml').innerHTML='<table><tr><td style="line-height:1.8rem;">'+result_t.join('\n')+'</td></tr><tr><td>'+result_t.length+'</td></tr></table>';
+}
+
+function menu_hzpy(){
+    var str_t=klmenu_hide_b('');
+    var klmenu1=[
+    '<span class="span_menu" onclick="javascript:'+str_t+'pronunciation_hzpy(\'single\');">所有单音字</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'pronunciation_hzpy(\'multiple\');">所有多音字</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'pronunciation_hzpy(\'list\');">读音列表</span>',    
+    ];
+
+    document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','8rem','1rem','1rem','60rem'),'','0rem')+' ');
+}
+
 function init_hzpy(){
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'2rem':'1.6rem'));
+    menu_hzpy();
     var input_list=[
     ["input_half_py_probability",4],
     ];
