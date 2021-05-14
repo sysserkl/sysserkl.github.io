@@ -1,5 +1,6 @@
 function qr_html_websites_b(divid,aclass,ahref=''){
     var odiv=document.getElementById(divid);
+    if (!odiv){return false;}
     if (odiv.getElementsByTagName('canvas').length>0 || odiv.getElementsByClassName('img_qr').length>0){
         return false;
     }    

@@ -25,4 +25,5 @@ var digest_global=`
 *spectator
 *fluctuation
 *lecturer
+*lecture
 `.trim().split('\n');

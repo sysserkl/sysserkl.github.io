@@ -246,4 +246,5 @@ var digest_global=`
 *clannish
 *luminescence
 *chickadee
+*misjudge
 `.trim().split('\n');

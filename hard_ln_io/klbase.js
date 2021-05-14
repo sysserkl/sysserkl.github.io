@@ -1353,8 +1353,11 @@ function read_txt_file_b(fullname){
     return allText;
 }
 
-function array_2_li_b(csarray,row_type='li',container_type='ol',container_id='',row_classname=''){
-    var bljg='<'+row_type+(row_classname==''?'':' class="'+row_classname+'"')+'>'+csarray.join('</'+row_type+'><'+row_type+(row_classname==''?'':' class="'+row_classname+'"')+'>')+'</'+row_type+'>';
+function array_2_li_b(csarray,row_type='li',container_type='ol',container_id='',row_classname='',row_style=''){
+    row_classname=(row_classname==''?'':' class="'+row_classname+'"');
+    row_style=(row_style==''?'':' style="'+row_style+'"');
+
+    var bljg='<'+row_type+row_classname+row_style+'>'+csarray.join('</'+row_type+'><'+row_type+row_classname+row_style+'>')+'</'+row_type+'>';
     if (container_type===false){
         return bljg;
     }
