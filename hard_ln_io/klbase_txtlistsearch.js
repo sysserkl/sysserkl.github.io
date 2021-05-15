@@ -1376,7 +1376,7 @@ function bookmarks_statistics_kltxt_b(bookmark_list,reading_lines,current_book_p
         reading_lines=date_list_insert_zero_b(reading_lines);   //阅读行数补零 - 保留注释
     }
     if (return_full && current_book_percent.length>0 && csbooklist_sub_global_b.length>0){
-        flot_two_lines_two_yaxis_k(['《'+bookname+'》阅读行数'].concat(reading_lines),['《'+bookname+'》已读比例'].concat(current_book_percent),'div_flot_bookmark_line','行','%','nw',true,'d',0,0,'',[],-1,false,false,false,100);
+        flot_two_lines_two_yaxis_k([['《'+bookname+'》阅读行数'].concat(reading_lines),['《'+bookname+'》已读比例'].concat(current_book_percent)],'div_flot_bookmark_line','行','%','nw',true,'d',0,0,'',[],-1,false,false,false,100);
         var odiv=document.getElementById('div_bookmark_statistics');
         odiv.innerHTML=blstatsitics;
         

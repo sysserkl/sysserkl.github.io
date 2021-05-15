@@ -58,4 +58,5 @@ var digest_global=`
 *murderous
 *unconcerned
 *uninformative
+*misjudgment
 `.trim().split('\n');

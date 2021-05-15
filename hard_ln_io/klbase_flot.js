@@ -1,26 +1,48 @@
 //依赖 klbase_date.js - 保留注释
-function flot_two_lines_two_yaxis_k(cslist,cslist2,csid,y1unit,y2unit,label_position='nw',cstime=false,cstype='m',y1dec=2,y2dec=2,cstimeformat='',cstickSize=[],csmin_data_length=-1,csymin1=false,csymax1=false,csymin2=false,csymax2=false){
-    //cslist: [ '次数',[2019-08-01, 100],[2019-08-02, 300] ];    
+function flot_two_lines_two_yaxis_k(cslist,csid,y1unit,y2unit,label_position='nw',cstime=false,cstype='m',y1dec=2,y2dec=2,cstimeformat='',cstickSize=[],csmin_data_length=-1,csymin1=false,csymax1=false,csymin2=false,csymax2=false,right_group_count=1){
+    function sub_flot_two_lines_two_yaxis_k_date_set(cslist,isright=false){
+        var label_str=cslist.shift();
+        if (isright){
+            return { label: label_str, data: cslist, lines: {show: true}, points: {show: true, symbol: flot_rand_flot_symbol_k()},yaxis: 2};        
+        }
+        else {
+            return { label: label_str, data: cslist, lines: {show: true}, points: {show: true, symbol: flot_rand_flot_symbol_k()}};
+        }
+    }
+    //----------------------------------------------------------------------------
+    //list1_t: [ '次数',[2019-08-01, 100],[2019-08-02, 300] ];    
     //不支持一边多条线 - 保留注释
+    var left_group=cslist.slice(0,-1*right_group_count);
+    var right_group=cslist.slice(-1*right_group_count,);
+    var list1_t=left_group[0];
+    var list2_t=right_group[0];
+    
     if (label_position==''){
         label_position='nw';
     }
-    if (cstime && cslist.length==2 && cslist2.length==2){
+    if (cstime && list1_t.length==2 && list2_t.length==2){
         //只能是数字，不能加年份和字符 - 保留注释
-        cslist[1][0]=date_2_ymd_b(cslist[1][0],cstype);
-        cslist2[1][0]=date_2_ymd_b(cslist2[1][0],cstype);
+        for (let blxl=0;blxl<left_group.length;blxl++){
+            left_group[blxl][1][0]=date_2_ymd_b(left_group[blxl][1][0],cstype);
+        }
+        for (let blxl=0;blxl<right_group.length;blxl++){
+            right_group[blxl][1][0]=date_2_ymd_b(right_group[blxl][1][0],cstype);
+        }        
+        
+        //list1_t[1][0]=date_2_ymd_b(list1_t[1][0],cstype);
+        //list2_t[1][0]=date_2_ymd_b(list2_t[1][0],cstype);
         cstime=false;
     }
     
     //指定 csmin_data_length 时，则当数据量少于 csmin_data_length 时，使用用户定义的 cstickSize，否则使用自动的cstickSize - 保留注释
     if (csmin_data_length>0 && cstickSize.length>0){
-        if (cslist.length>csmin_data_length && cslist2.length>csmin_data_length){
+        if (list1_t.length>csmin_data_length && list2_t.length>csmin_data_length){
             cstickSize=[];
         }
     }
     
     if (csmin_data_length>0){
-        if (cslist.length<=csmin_data_length && cslist2.length<=csmin_data_length){
+        if (list1_t.length<=csmin_data_length && list2_t.length<=csmin_data_length){
             if (y1dec==0){
                 y1dec=-1;
             }
@@ -29,16 +51,16 @@ function flot_two_lines_two_yaxis_k(cslist,cslist2,csid,y1unit,y2unit,label_posi
             }
         }
     }
-   
-    var label_1=cslist.shift();
-    var label_2=cslist2.shift();
+       
+    var dataset = [];
+    for (let one_array of left_group){
+        dataset.push(sub_flot_two_lines_two_yaxis_k_date_set(one_array,false));
+    }
+    for (let one_array of right_group){
+        dataset.push(sub_flot_two_lines_two_yaxis_k_date_set(one_array,true));
+    }    
     
-    var dataset = [
-        { label: label_1, data: cslist, lines: {show: true}, points: {show: true, symbol: flot_rand_flot_symbol_k()}},
-        { label: label_2, data: cslist2, lines: {show: true}, points: {show: true, symbol: flot_rand_flot_symbol_k()}, yaxis: 2 } 
-    ];
-    
-    if (cslist.length==1 && cslist2.length==1){
+    if (list1_t.length==1 && list2_t.length==1){
         var blyaxes=[
             {
                 'tickFormatter': function (v, axis) {return v.toFixed(axis.tickDecimals) + y1unit;}
@@ -87,7 +109,7 @@ function flot_two_lines_two_yaxis_k(cslist,cslist2,csid,y1unit,y2unit,label_posi
         oyxaxis2['max']=csymax2;
     }
     if (csymin2!==false || csymax2!==false){
-        if (cslist.length==1 && cslist2.length==1){
+        if (list1_t.length==1 && list2_t.length==1){
             oyxaxis2['tickFormatter']=function (v, axis) {return v.toFixed(axis.tickDecimals) + y2unit;}
         }
         else {
@@ -100,15 +122,14 @@ function flot_two_lines_two_yaxis_k(cslist,cslist2,csid,y1unit,y2unit,label_posi
         var oneyear2;
         var onemonth;        
         var onemonth2;
-        [oneyear,onemonth]=isoneyear_isonemonth_k(cslist);
-        [oneyear2,onemonth2]=isoneyear_isonemonth_k(cslist2);
+        [oneyear,onemonth]=isoneyear_isonemonth_k(list1_t);
+        [oneyear2,onemonth2]=isoneyear_isonemonth_k(list2_t);
         cstimeformat=flot_timeformat_k(cstimeformat,cstype, oneyear && oneyear2,onemonth && onemonth2);
         
         if (cstimeformat!==''){
             oxaxis['timeformat']=cstimeformat;
         }
     }
-    
     if (csymin1==false && csymax1==false && csymin2==false && csymax2==false){
         $.plot("#"+csid, dataset,{legend: { position: label_position }, xaxis: oxaxis,yaxes:blyaxes});    
     }

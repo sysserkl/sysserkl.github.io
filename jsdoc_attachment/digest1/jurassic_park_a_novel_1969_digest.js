@@ -10,4 +10,5 @@ var digest_global=`
 *octahedral
 *unreliable
 *intravenous
+*Peking
 `.trim().split('\n');

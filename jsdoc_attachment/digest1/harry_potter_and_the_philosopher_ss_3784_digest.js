@@ -9,4 +9,5 @@ var digest_global=`
 *doughnut
 *outta
 *skywards
+*doorbell
 `.trim().split('\n');
