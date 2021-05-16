@@ -8,4 +8,5 @@ var digest_global=`
 *mineralogist
 *ovoid
 *laborer
+*by means of
 `.trim().split('\n');

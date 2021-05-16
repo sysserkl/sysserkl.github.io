@@ -35,4 +35,5 @@ var digest_global=`
 *boarding school
 *alms
 *Zurich
+*energetically
 `.trim().split('\n');

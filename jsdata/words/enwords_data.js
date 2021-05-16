@@ -1,5 +1,8 @@
 //单词库
 var enwords=[
+["energetically", "[ˌenə(r)'dʒetɪk(ə)lɪ]", "adv. 精力旺盛地；精力充沛地；充满活力地；有力地；积极地；能量地；需要能量地；with a lot of energy or enthusiasm; in an energetic manner; with great energy; by means of energy"],
+["by means of", "[baɪ miːnz əv]", "用…的方法；凭借…；借助…；with the use or help of; through the use of (something); by using (a thing or an approach); with the aid of; through"],
+["abolitionism", "[ˌæbəˈlɪʃəˌnɪzəm]", "n. 废奴主义；废除主义；principles or measures promoting the abolition especially of slavery; the principle or policy of abolition, esp. of slavery of Black people in the U.S.; the American campaign in the 1800s to free the slaves in the southern states. Its members were called abolitionists, and many hid slaves who were escaping on the Underground Railroad. Famous abolitionists included the poet John Greenleaf Whittier and the author Harriet Beecher Stowe."],
 ["doorbell", "UK ['dɔːbel] US [ˈdɔrˌbel, ˈdour-]", "n. 门铃；a bell with a button outside a house that you push to let the people inside know that you are there; a bell or set of chimes to be rung usually by a push button at an outer door; a bell that is rung by visitors to a house to alert someone inside to their arrival; a mechanism, now usually activated by a push button at the entrance of a building or room, that rings, buzzes, etc. to alert the occupants of a visitor; v. 挨家挨户地拉票、游说、兜售、筹集；to canvass or solicit from door to door, esp. for votes or contributions"],
 ["misjudgment", "[mɪs'dʒʌdʒmənt]", "n. 判断错误；判断不公；估计错误；an act of misjudging; a mistake in judgment; an unfair or wrong opinion about someone or something; the action of forming a wrong opinion or conclusion about something; a wrong guess about an amount or distance; the action of estimating or assessing something incorrectly"],
 ["Peking", "[ˌpiːˈkɪŋ] [ˈpiˈkɪŋ]", "n. 北京(市)(旧译法，=Beijing)；the former English name of 'Beijing'"],
@@ -2028,7 +2031,7 @@ var enwords=[
 ["byproduct", "UK ['baɪˌprɒdʌkt] US ['baɪˌprɒdəkt]", "n. 副产品"],
 ["Byron", "UK ['baɪərən] US ['baɪrən]", "n. 拜伦(男子名)"],
 ["byte", "[baɪt]", "n. 字节；8位元组"],
-["by virtue of", "[baɪ 'vɜːrtʃuː əv]", "由于，因为；凭借；依靠；凭借…的力量"],
+["by virtue of", "[baɪ 'vɜːrtʃuː əv]", "因为；由于；凭借；凭借…的力量；依靠"],
 ["cabbage", "['kæbɪdʒ]", "n. 卷心菜；洋白菜；甘蓝"],
 ["cabinet", "['kæbɪnət]", "n. 橱柜；内阁；adj. 内阁的；秘密的"],
 ["cabin", "['kæbɪn]", "n. 船舱；机舱；小木屋；vt. 抑制；vi. 住在小屋"],
@@ -3692,7 +3695,7 @@ var enwords=[
 ["endurance", "UK [ɪn'djʊərəns] US [ɪn'dʊrəns]", "n. 忍耐力；耐久力；忍耐；耐性"],
 ["endure", "UK [ɪn'djʊə(r)] US [ɪn'dʊr]", "v. 忍耐；忍受；持续；持久"],
 ["enemy", "['enəmi]", "n. 敌人；敌军；有害物"],
-["energetic", "[ˌenər'dʒetɪk]", "adj. 精力旺盛的；精力充沛的；充满活力的；有力的；能量的；需要能量的；积极的；having or needing a lot of energy and enthusiasm; very active physically and mentally"],
+["energetic", "[ˌenər'dʒetɪk]", "adj. 精力旺盛的；精力充沛的；充满活力的；有力的；积极的；能量的；需要能量的；having or needing a lot of energy and enthusiasm; very active physically and mentally"],
 ["energy", "['enərdʒi]", "n. 精力；活力；能源"],
 ["enfeeble", "[ɪn'fiːb(ə)l]", "vt. 使衰弱；使虚弱；使无力；to make somebody/something weak; to make feeble; deprive of strength"],
 ["enfold", "[ɪn'fəʊld]", "v. 包裹；拥抱；围住"],
