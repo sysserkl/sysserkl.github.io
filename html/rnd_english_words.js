@@ -255,31 +255,20 @@ function search_rndwords(csstr='',times=10){
         }
     }
     else {
-        var words_temp_equal_arr=[[],[],[],[],[]];
+        var words_temp_equal_arr=enwords_search_arr_init_b();
         var csword_filter=(csstr.match(/[a-zA-Z0-9 '_\-]+/) || [""])[0];
         var csword_filter_set=new Set(csword_filter.split(' '));
-        
+        var blnumber=-1;
         for (let item of enwords){
-            var blfound=str_reg_search_b(item,csstr,isreg);
-            if (blfound==-1){
-                break;
-            }
-            if (blfound){
-                var blnumber=en_similar_word_b(csword_filter,csword_filter_set,item[0]);
-                if (blnumber==4 && blxl<=times || blnumber!==4){
-                    words_temp_equal_arr[blnumber].push(item);
-                }
-
-                blxl=blxl+1;
+            [blxl,blnumber]=enwords_search_one_b(item,csstr,isreg,csword_filter,csword_filter_set,[true,true,true],blxl,times);
+            if (blxl==-1){break;}
+            if (blnumber!==-1){
+                words_temp_equal_arr[blnumber].push(item);
             }
         }
+    
+        words_temp_arr_global=enwords_merge_b(words_temp_equal_arr,times);
         
-        for (let blxl=0;blxl<=4;blxl++){
-            words_temp_arr_global=words_temp_arr_global.concat(words_temp_equal_arr[blxl]);
-        }
-        if (words_temp_arr_global.length>times){
-            words_temp_arr_global=words_temp_arr_global.slice(0,times);
-        }        
         for (let blxl=0;blxl<words_temp_arr_global.length;blxl++){
             learn_something=learn_something+'<a name="word_'+blxl+'"></a>'+one_line_rndwords(words_temp_arr_global[blxl]);
         }

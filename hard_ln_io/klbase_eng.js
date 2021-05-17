@@ -102,24 +102,24 @@ function en_similar_word_b(cskey,cskey_set,compared_word){
         return 0;
     }
     else if (cskey_set.has(compared_word) || cskey_set.has(compared_word.toLowerCase())){
-        return 0;
+        return 1;
     }    
     else if (cskey==compared_word.substring(0,cskey.length) || cskey.toLowerCase()==compared_word.substring(0,cskey.length).toLowerCase()){
-        return 1;
+        return 2;
     }
     else if (cskey==compared_word.slice(-1*cskey.length,) || cskey.toLowerCase()==compared_word.slice(-1*cskey.length,).toLowerCase()){
-        return 2;
+        return 3;
     }
     else {
         for (let item of cskey_set){
             if (item.includes(compared_word) || item.includes(compared_word.toLowerCase())){
-                return 3;
+                return 4;
             }
             if (compared_word.includes(item) || compared_word.toLowerCase().includes(item)){
-                return 3;
+                return 4;
             }            
         }
-        return 4;
+        return 5;
     }
 }
 
@@ -1258,31 +1258,48 @@ function enword_search_type_b(cs_w_p_d){
     return cs_w_p_d;
 }
 
+function enwords_search_one_b(csitem,cswordlist,csreg,csword_filter,csword_filter_set,cs_w_p_d,cscount,csmax=500){
+    var bltmp1 = (cs_w_p_d[0]?csitem[0]:'');
+    var bltmp2 = (cs_w_p_d[1]?csitem[1]:'');
+    var bltmp3 = (cs_w_p_d[2]?csitem[2]:'');
+            
+    var blfound=str_reg_search_b([bltmp1,bltmp2,bltmp3],cswordlist,csreg);
+    if (blfound==-1){
+        return [-1,-1];
+    }
+
+    var blnumber=-1;
+    if (blfound){
+        var blnumber=en_similar_word_b(csword_filter,csword_filter_set,bltmp1);
+        if (blnumber==5 && cscount<=csmax || blnumber!==5){
+            //do nothing - 保留注释
+        }
+        else {
+            blnumber=-1;
+        }
+        cscount=cscount+1;
+    }
+    return [cscount,blnumber];
+}
+
+function enwords_search_arr_init_b(){
+    return [[],[],[],[],[],[]];
+}
+
 function enwords_search_old_b(cs_w_p_d,csword,csreg){
     var blcount=0;
-    var words_temp_equal_arr=[[],[],[],[],[]];
+    var words_temp_equal_arr=enwords_search_arr_init_b();
 	
     var cswordlist=csword.split(' ');
     var csword_filter=(csword.match(/[a-zA-Z0-9 '_\-]+/) || [""])[0];
     var csword_filter_set=new Set(csword_filter.split(' '));
+    var blnumber=-1;
     
     for (let blitem_t of enwords){
-        var bltmp1 = (cs_w_p_d[0]?blitem_t[0]:'');
-        var bltmp2 = (cs_w_p_d[1]?blitem_t[1]:'');
-        var bltmp3 = (cs_w_p_d[2]?blitem_t[2]:'');
-                
-        var blfound=str_reg_search_b([bltmp1,bltmp2,bltmp3],cswordlist,csreg);
-        if (blfound==-1){
-            break;
-        }
-
-        if (blfound){
-            var blnumber=en_similar_word_b(csword_filter,csword_filter_set,bltmp1);
-            if (blnumber==4 && blcount<=500 || blnumber!==4){
-                words_temp_equal_arr[blnumber].push(blitem_t);
-            }
-            
-            blcount=blcount+1;
+        [blcount,blnumber]=enwords_search_one_b(blitem_t,cswordlist,csreg,csword_filter,csword_filter_set,cs_w_p_d,blcount);
+        if (blcount==-1){break;}
+        if (blnumber!==-1){
+            words_temp_equal_arr[blnumber].push(blitem_t);
         }
     }
     return words_temp_equal_arr;
@@ -1306,13 +1323,8 @@ function enwords_mini_search_b(csword=''){
 
     var words_temp_equal_arr=enwords_search_old_b(cs_w_p_d,csword,csreg);
     
-    var words_temp_arr=[];
-    for (let blxl=0;blxl<=4;blxl++){
-        words_temp_arr=words_temp_arr.concat(words_temp_equal_arr[blxl]);
-    }
-    if (words_temp_arr.length>500){
-        words_temp_arr=words_temp_arr.slice(0,500);
-    }
+    var words_temp_arr=enwords_merge_b(words_temp_equal_arr,500);
+    
     var blequal=false;
     for (let item of words_temp_arr){
         if (csword_filter==item[0]){
@@ -1325,6 +1337,17 @@ function enwords_mini_search_b(csword=''){
     var recent_search_str=enwords_recent_search_b(csword,'mini');
     
     enwords_search_show_html_b(odiv,'_mini',recent_search_str,csword,words_temp_arr,blequal,true);
+}
+
+function enwords_merge_b(cswords_list,cstimes=500){
+    var result_t=[];
+    for (let item of cswords_list){
+        result_t=result_t.concat(item);
+    }
+    if (result_t.length>cstimes){
+        result_t=result_t.slice(0,cstimes);
+    }
+    return result_t;
 }
 
 function enwords_mini_search_frame_show_hide_b(csexpand=true){

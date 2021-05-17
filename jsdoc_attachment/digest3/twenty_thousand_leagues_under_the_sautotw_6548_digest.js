@@ -517,4 +517,5 @@ var digest_global=`
 *manatee
 *Tunisia
 *obituary
+*in all seriousness
 `.trim().split('\n');
