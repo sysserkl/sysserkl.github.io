@@ -1343,8 +1343,8 @@ function read_txt_file_b(fullname){
     var rawFile = new XMLHttpRequest(); //不支持 file:// - 保留注释
     rawFile.open("GET", fullname, false);
     rawFile.onreadystatechange = function (){
-        if(rawFile.readyState === 4){
-            if(rawFile.status === 200 || rawFile.status == 0){
+        if (rawFile.readyState === 4){
+            if (rawFile.status === 200 || rawFile.status == 0){
                 allText = rawFile.responseText;
             }
         }

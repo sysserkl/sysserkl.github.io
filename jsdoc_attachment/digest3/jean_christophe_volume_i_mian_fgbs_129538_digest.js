@@ -36,4 +36,5 @@ var digest_global=`
 *alms
 *Zurich
 *energetically
+*in all weathers
 `.trim().split('\n');

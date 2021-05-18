@@ -546,6 +546,7 @@ function gpx_file_selection_gps_points(cskeys=''){
     }
     cskeys=cskeys.trim();
     var list_t=[];
+    gpx_files_list_global=[];
     for (let item of gpx_pb_global){
         if (cskeys!==''){
             var blfound=str_reg_search_b(item,cskeys,csreg);
@@ -553,6 +554,7 @@ function gpx_file_selection_gps_points(cskeys=''){
             if (blfound==false){continue;}       
         } 
         list_t.push('<span class="span_link" onclick="javascript:read_txt_file_gps_points(\''+item[0]+'\',\'pb\');">'+item[0]+'</span>');
+        gpx_files_list_global.push([item[0],'pb']);
     }
     for (let item of gpx_kl_global){
         if (cskeys!==''){
@@ -561,8 +563,16 @@ function gpx_file_selection_gps_points(cskeys=''){
             if (blfound==false){continue;}           
         }
         list_t.push('<span class="span_link" onclick="javascript:read_txt_file_gps_points(\''+item[0]+'\',\'kl\');">'+item[0]+'</span>');
+        gpx_files_list_global.push([item[0],'kl']);
     }
     gpx_file_array_2_html_gps_points(cskeys,list_t);
+}
+
+function gpx_files_batch_open_gps_points(){
+    if (gpx_files_list_global.length==0){return;}
+    var blvalue=gpx_files_list_global.shift();
+    read_txt_file_gps_points(blvalue[0],blvalue[1]);
+    setTimeout(gpx_files_batch_open_gps_points,1000);
 }
 
 function filter_gpx_list_gps_points(cstype){
@@ -626,8 +636,9 @@ function gpx_quadrangle_gps_points(){
 function gpx_file_array_2_html_gps_points(cskeys,cslist){
     var buttons='<p><input type="text" id="input_gpx_search" value="'+cskeys+'" onkeyup="javascript:if (event.key==\'Enter\'){gpx_file_selection_gps_points(this.value);}"> ';
     buttons=buttons+'<span class="aclick" onclick="javascript:show_hide_map_gps_points();">返回</span> ';
-    buttons=buttons+'<span class="aclick" onclick="javascript:gpx_near_gps_points();">当前条件下离当前点最近的gpx文件</span> ';    
-    buttons=buttons+'<span class="aclick" onclick="javascript:gpx_quadrangle_gps_points();">当前条件下gpx文件范围示意</span> ';        
+    buttons=buttons+'当前条件下：<span class="aclick" onclick="javascript:gpx_near_gps_points();">离当前点最近的gpx文件</span> ';    
+    buttons=buttons+'<span class="aclick" onclick="javascript:gpx_quadrangle_gps_points();">gpx文件范围示意</span> ';  
+    buttons=buttons+'<span class="aclick" onclick="javascript:gpx_files_batch_open_gps_points();">gpx文件批量打开</span> ';    
     buttons=buttons+'<span class="aclick" onclick="javascript:filter_gpx_list_gps_points(\'reverse\');">倒转</span> ';    
     buttons=buttons+'<span class="aclick" onclick="javascript:filter_gpx_list_gps_points(\'slice\');">截取</span> ';    
 

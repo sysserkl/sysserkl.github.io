@@ -43,4 +43,5 @@ var digest_global=`
 *danseuse
 *cashbox
 *Paddington
+*introspect
 `.trim().split('\n');

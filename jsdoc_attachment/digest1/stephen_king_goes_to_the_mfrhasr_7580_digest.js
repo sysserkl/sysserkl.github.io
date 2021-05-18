@@ -23,4 +23,5 @@ var digest_global=`
 *prostate
 *foamy
 *hydrant
+*in all honesty
 `.trim().split('\n');

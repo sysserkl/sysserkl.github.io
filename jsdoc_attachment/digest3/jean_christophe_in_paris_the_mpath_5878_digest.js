@@ -53,4 +53,5 @@ var digest_global=`
 *philanthropy
 *sharpen
 *Venetian
+*introspective
 `.trim().split('\n');
