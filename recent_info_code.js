@@ -164,6 +164,7 @@ function more_tools_klrecent(){
     ['html/screen_color_picker.htm','screen color picker'],    
     ['html/screen_matrix.htm', 'Matrix'],
     ['html/screen_test.htm', 'Screen Test'],
+    ['html/society_data_analyze.htm','sda'],    
     ['html/sticker_mobile.htm','Sticker Mobile'],
     ['html/sudoku.htm', 'Sudoku'],
     ['html/symbols.htm', 'Symbols'],

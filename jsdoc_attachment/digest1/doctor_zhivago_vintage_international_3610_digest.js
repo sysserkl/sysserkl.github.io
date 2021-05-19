@@ -12,4 +12,5 @@ var digest_global=`
 *inkstand
 *paperboy
 *watchmaker
+*moonbeam
 `.trim().split('\n');

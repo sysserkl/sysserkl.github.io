@@ -179,4 +179,5 @@ var digest_global=`
 *Urals
 *onlooker
 *praiseworthy
+*retrospection
 `.trim().split('\n');

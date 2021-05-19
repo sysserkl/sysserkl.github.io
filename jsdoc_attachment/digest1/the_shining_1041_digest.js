@@ -38,4 +38,5 @@ var digest_global=`
 *switchboard
 *hexagonal
 *overdose
+*Leonard
 `.trim().split('\n');

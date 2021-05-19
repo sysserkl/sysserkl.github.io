@@ -11,4 +11,5 @@ var digest_global=`
 *unreliable
 *intravenous
 *Peking
+*Arnold
 `.trim().split('\n');
