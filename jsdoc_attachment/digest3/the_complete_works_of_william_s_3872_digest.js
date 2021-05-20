@@ -15,4 +15,5 @@ var digest_global=`
 *slaughterman
 *ploughman
 *slaughterous
+*rather than
 `.trim().split('\n');

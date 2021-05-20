@@ -24,4 +24,5 @@ var digest_global=`
 *foamy
 *hydrant
 *in all honesty
+*starboard
 `.trim().split('\n');
