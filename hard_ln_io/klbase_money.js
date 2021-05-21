@@ -99,7 +99,7 @@ function search_link_money_b(csstr,cstype,csname=''){
 }
 
 function list_tr_money_b(csarr,csxl,cssimple=false,csluru_php='wpluru.php',csnolink=false,csnew_window=true){
-	var bljg='<tr class="trcolor"><td align=center nowrap width=1%><span class="wpno">';
+	var bljg='<tr class="trcolor"><td align=center nowrap width=1% style="padding-left:1rem;padding-right:1rem;font-size:1.5rem;"><span class="wpno">';
 
     if (csluru_php=='wp_offline_luru'){
         bljg=bljg+'<span class="span_link" onclick="javascript:edit_form_wp_offline_luru('+csarr[0]+','+asc_sum_b(csarr.join(''))+');"';
