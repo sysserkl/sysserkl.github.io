@@ -1,5 +1,11 @@
 var en_sentence_count_global=[
-["bandicoot",0],
+["scrapyard",1],
+["tactician",1],
+["cannibalistic",1],
+["retrospection",1],
+["unsupportive",1],
+["moonbeam",1],
+["introspect",1],
 ["self-reflection",1],
 ["abolitionism",1],
 ["doorbell",1],
@@ -93,10 +99,4 @@ var en_sentence_count_global=[
 ["orangutan",1],
 ["Sumatra",1],
 ["rattlesnake",1],
-["sleazebag",1],
-["Venetian",1],
-["unlit",1],
-["sharpen",1],
-["pinewood",1],
-["pumpkin",1],
 ];

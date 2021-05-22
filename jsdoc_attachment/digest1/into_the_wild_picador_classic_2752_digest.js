@@ -17,4 +17,5 @@ var digest_global=`
 *landlocked
 *professorial
 *unrestricted
+*burro
 `.trim().split('\n');

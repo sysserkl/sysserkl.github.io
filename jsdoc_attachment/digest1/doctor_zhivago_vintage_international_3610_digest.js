@@ -13,4 +13,5 @@ var digest_global=`
 *paperboy
 *watchmaker
 *moonbeam
+*pathology
 `.trim().split('\n');

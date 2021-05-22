@@ -25,4 +25,5 @@ var digest_global=`
 *hydrant
 *in all honesty
 *starboard
+*salesmanship
 `.trim().split('\n');
