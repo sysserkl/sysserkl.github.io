@@ -59,4 +59,5 @@ var digest_global=`
 *unconcerned
 *uninformative
 *misjudgment
+*unskilled
 `.trim().split('\n');

@@ -16,4 +16,5 @@ var digest_global=`
 *ploughman
 *slaughterous
 *rather than
+*Mauritania
 `.trim().split('\n');

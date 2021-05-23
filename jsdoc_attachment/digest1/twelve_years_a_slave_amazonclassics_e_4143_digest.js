@@ -3,4 +3,5 @@ var digest_global=`
 *Washingtonian
 *neatness
 *abolitionism
+*floodwood
 `.trim().split('\n');
