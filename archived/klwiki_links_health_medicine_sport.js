@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-05-02 09:35:01 日"],
+["","","","更新日期：2021-05-23 11:04:55 日"],
 ["http://162.105.138.196:8008/jbxt/gns-homepage.htm","20010603 | 是谁发明了篮球？"],
 ["http://news.sina.com.cn/c/2004-08-05/07273298228s.shtml","20040804 | 外交部：期待中日球迷文明欣赏亚洲杯足球决赛"],
 ["http://news.sina.com.cn/w/2005-05-16/14246656559.shtml","20050516 | 美拉斯维加斯庆祝建城百年 蛋糕比篮球场大"],
@@ -121,4 +121,5 @@ var recent_info_list=[
 ["http://www.jksb.com.cn/html/2020/jjxxgzbd_0319/160814.html","20200319 | 湖北省肿瘤医院床位爆满！住院率远超武汉当地综合医院 - 健康时报网"],
 ["https://cn.reuters.com/article/ioc-olympics-arrangements-0326-thur-idCNKBS21D03Z?il=0","20200326 | 国际奥委会正与众体育协会协调 安排2021年7-8月举办奥运会 - 路透中文网"],
 ["https://www.jfdaily.com/staticsg/res/html/web/newsDetail.html?id=333788","20210121 | 上海肿瘤医院外包后勤保障人员一人核酸检测结果可疑，目前只允许工作人员进入"],
+["https://www.solidot.org/story?sid=67806","20210518 | 奇客Solidot | 新技术让肿瘤细胞自我消灭"],
 ];

@@ -17,4 +17,5 @@ var digest_global=`
 *slaughterous
 *rather than
 *Mauritania
+*fivepence
 `.trim().split('\n');

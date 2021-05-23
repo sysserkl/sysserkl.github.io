@@ -8,4 +8,5 @@ var digest_global=`
 *beekeeping
 *shipyard
 *introspection
+*upperclassman
 `.trim().split('\n');

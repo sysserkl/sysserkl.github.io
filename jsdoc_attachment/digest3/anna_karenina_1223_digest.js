@@ -129,4 +129,5 @@ var digest_global=`
 *washstand
 *Petersburg
 *hawklike
+*diplomat
 `.trim().split('\n');

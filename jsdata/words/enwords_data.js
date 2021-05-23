@@ -1,5 +1,9 @@
 //单词库
 var enwords=[
+["fivepence", "[ˈfaɪvpəns]", "n. 〈英〉五便士；〈美〉5分(铜币)；money with a value equal to that of five pennies; the sum of five pennies —usually used in reference to British pennies; five U.S. cents; a five-cent piece"],
+["upperclassman", "UK [ˌʌpə(r)'klɑːsmən] US [ˌʌpər'klæsmən] [ˈʌpərˈklæsmən, -ˈklɑːs-]", "n. 高年级学生（美国中学或大学的最高两个年级的学生）；(in the US) a male student in the last two years of high school or college; a member of the junior or senior class in a school or college; a junior or senior student in an American high school, college, or university; a junior or senior in a secondary school or college"],
+["diplomat", "['dɪpləˌmæt]", "n. 外交官；外交家；通权达变的人；圆通的人；善于交际的人；有社交手腕的人；a person whose job is to represent his or her country in a foreign country, for example, in an embassy; one employed or skilled in diplomacy; an official, such as an ambassador or first secretary, engaged in diplomacy; a representative of a government who conducts relations with the governments of other nations; person whose career or profession is diplomacy; a person appointed by a national government to conduct official negotiations and maintain political, economic, and social relations with another country or countries; a person who shows skill at dealing with other people; a person who deals with people tactfully or skilfully; a person skilled in dealing with other people; tactful person; a person who is tactful and skillful in managing delicate situations, handling people, etc"],
+["diplomatist", "UK [dɪ'pləʊmətɪst] US [dɪ'pləʊmətɪst]", "n. 外交官；外交家；通权达变的人；圆通的人；善于交际的人；有社交手腕的人；a diplomat; n. The Diplomatist:  (英国)《外交家》月刊；https://diplomatist.com/"],
 ["impeachable", "[ɪm'piːtʃəb(ə)l]", "adj. 可弹劾的；可控告的；可指责的；可揭发的 ；会招致弹劾（或控告）的；可怀疑的；(of a crime) for which a politician or a person who works for the government can be impeached; capable of being impeached or accused; (of an offence) making a person liable to impeachment; liable to be impeached; making one liable to be impeached; making one subject to impeachment, as misconduct in office; deserving or causing impeachment"],
 ["Mauritania", "UK [ˌmɒrɪ'teɪniə] US [ˌmɔrəˈteɪniə] [ˌmɔrəˈteɪnjə]", "n. 毛里塔尼亚（非洲西北部国家）；a republic in NW Africa, on the Atlantic: established as a French protectorate in 1903 and a colony in 1920; gained independence in 1960; lies in the Sahara; contains rich resources of iron ore. Official language: Arabic; Fulani, Soninke, Wolof, and French are also spoken. Official religion: Muslim. Currency: ouguiya. Capital: Nouakchott. Pop: 4,420,184 (2017 est). Area: 1,030,700 sq km (398,000 sq miles). Official name: Islamic Republic of Mauritania"],
 ["floodwood", "['flʌdwʊd]", "na. 〈美〉漂流木；浮木；wood drifting on a stream or left stranded by a flood; "],
@@ -3016,7 +3020,7 @@ var enwords=[
 ["damn", "[dæm]", "int. 该死；讨厌；v. 诅咒；批评；使失败；n. 诅咒；丝毫；adj. 该死的；可恶的；adv. 非常；极其"],
 ["dampness", "['dæmpnəs]", "n. 含水量；潮湿；湿度"],
 ["dancer", "UK ['dɑːnsə(r)] US ['dænsər]", "n. 跳舞者；舞蹈演员"],
-["dance", "UK [dɑːns] US [dæns]", "n. 舞会；跳舞；舞蹈；舞步；vi. 跳舞；手舞足蹈；vt. 跳舞；使跳跃"],
+["dance", "UK [dɑːns] US [dæns]", "n. 跳舞；舞蹈；舞步；舞会；v. 跳舞；手舞足蹈；使跳跃"],
 ["danger", "['deɪndʒər]", "n. 【U】危险；n. 【C】危险物（或人）；威胁"],
 ["dangerous", "['deɪndʒərəs]", "adj. 危险的；不安全的"],
 ["dangerously", "['deɪndʒərəsli]", "adv. 危险地；in a way that is likely to harm or injure somebody, or to damage or destroy something"],

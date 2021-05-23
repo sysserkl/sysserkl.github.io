@@ -180,4 +180,5 @@ var digest_global=`
 *onlooker
 *praiseworthy
 *retrospection
+*diplomatist
 `.trim().split('\n');
