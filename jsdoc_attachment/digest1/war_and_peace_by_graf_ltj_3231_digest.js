@@ -181,4 +181,6 @@ var digest_global=`
 *praiseworthy
 *retrospection
 *diplomatist
+*introductory
+*ramshackle
 `.trim().split('\n');

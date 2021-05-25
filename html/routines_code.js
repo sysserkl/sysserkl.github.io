@@ -328,6 +328,7 @@ function week_check_klroutines(do_settimeout=false){
     document.getElementById('div_routines_menu').outerHTML='';
     thisweek_global=day_2_week_range_b('','',true);
     preweek_global=day_2_week_range_b('','pre',true);    
+    document.getElementById('div_week').innerHTML=week_klroutines();
     menu_klroutines();
     show_klroutines();
     //count_klplan_b();   //重新计数 - 保留注释

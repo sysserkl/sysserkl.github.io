@@ -10,4 +10,5 @@ var digest_global=`
 *outta
 *skywards
 *doorbell
+*secondary school
 `.trim().split('\n');

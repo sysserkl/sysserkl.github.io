@@ -18,4 +18,5 @@ var digest_global=`
 *rather than
 *Mauritania
 *fivepence
+*conjoin
 `.trim().split('\n');
