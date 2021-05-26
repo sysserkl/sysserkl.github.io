@@ -546,7 +546,6 @@ function gpx_file_selection_gps_points(cskeys=''){
     }
     cskeys=cskeys.trim();
     var list_t=[];
-    gpx_files_list_global=[];
     for (let item of gpx_pb_global){
         if (cskeys!==''){
             var blfound=str_reg_search_b(item,cskeys,csreg);
@@ -554,7 +553,6 @@ function gpx_file_selection_gps_points(cskeys=''){
             if (blfound==false){continue;}       
         } 
         list_t.push('<span class="span_link" onclick="javascript:read_txt_file_gps_points(\''+item[0]+'\',\'pb\');">'+item[0]+'</span>');
-        gpx_files_list_global.push([item[0],'pb']);
     }
     for (let item of gpx_kl_global){
         if (cskeys!==''){
@@ -563,15 +561,35 @@ function gpx_file_selection_gps_points(cskeys=''){
             if (blfound==false){continue;}           
         }
         list_t.push('<span class="span_link" onclick="javascript:read_txt_file_gps_points(\''+item[0]+'\',\'kl\');">'+item[0]+'</span>');
-        gpx_files_list_global.push([item[0],'kl']);
     }
     gpx_file_array_2_html_gps_points(cskeys,list_t);
 }
 
 function gpx_files_batch_open_gps_points(){
-    if (gpx_files_list_global.length==0){return;}
-    var blvalue=gpx_files_list_global.shift();
-    read_txt_file_gps_points(blvalue[0],blvalue[1]);
+    var ool=document.getElementById('ol_gpx_file_list');
+    var olis=ool.querySelectorAll('li');
+    if (gpx_files_batch_no_global>=olis.length){return;}
+
+    var fname=olis[gpx_files_batch_no_global].innerText;
+    
+    var blfound=false
+    for (let item of gpx_pb_global){
+        if (item[0]==fname){
+            read_txt_file_gps_points(item[0],'pb');
+            blfound=true;
+            break;
+        }
+    }
+    if (blfound===false){
+        for (let item of gpx_kl_global){
+            if (item[0]==fname){
+                read_txt_file_gps_points(item[0],'kl');
+                blfound=true;
+                break;
+            }
+        }
+    }
+    gpx_files_batch_no_global=gpx_files_batch_no_global+1;
     setTimeout(gpx_files_batch_open_gps_points,1000);
 }
 
@@ -599,16 +617,23 @@ function filter_gpx_list_gps_points(cstype){
 function gpx_quadrangle_gps_points(){
     function sub_gpx_quadrangle_gps_points_draw(gpx_point,do_transform){
         var result_t=[];
-        var min_lat=gpx_point[3];
-        var min_lon=gpx_point[4];
-        var max_lat=gpx_point[5];
-        var max_lon=gpx_point[6];
-        result_t.push([min_lat,min_lon]);
-        result_t.push([min_lat, max_lon]);
-        result_t.push([max_lat, max_lon]);
-        result_t.push([max_lat, min_lon]);
-        result_t.push([min_lat,min_lon]);
-        draw_gpx_gps_points(result_t,gpx_point[0],do_transform,true,['blue','','']);    
+
+        var min_lat=gpx_point[0][0];
+        var min_lon=gpx_point[0][1];        
+        
+        for (let one_range of gpx_point){
+            result_t=[];
+            min_lat=one_range[0];
+            min_lon=one_range[1];
+            var max_lat=one_range[2];
+            var max_lon=one_range[3];
+            result_t.push([min_lat,min_lon]);
+            result_t.push([min_lat, max_lon]);
+            result_t.push([max_lat, max_lon]);
+            result_t.push([max_lat, min_lon]);
+            result_t.push([min_lat,min_lon]);
+            draw_gpx_gps_points(result_t,gpx_point[0],do_transform,true,['blue','','']);    
+        }
         return [min_lat,min_lon];
     }
     //---------------
@@ -623,11 +648,11 @@ function gpx_quadrangle_gps_points(){
     var lon;
     for (let item of gpx_pb_global){//gpxfilename,fsize,fdate,min_lat,min_lon,max_lat,max_lon
         if (!li_names.has(item[0])){continue;}        
-        [lat,lon]=sub_gpx_quadrangle_gps_points_draw(item,do_transform);
+        [lat,lon]=sub_gpx_quadrangle_gps_points_draw(item[3],do_transform);
     }
     for (let item of gpx_kl_global){
         if (!li_names.has(item[0])){continue;}          
-        [lat,lon]=sub_gpx_quadrangle_gps_points_draw(item,do_transform);
+        [lat,lon]=sub_gpx_quadrangle_gps_points_draw(item[3],do_transform);
     }
     show_hide_map_gps_points();
     omap_gps_points_global.panTo(new L.LatLng(lat,lon));
@@ -638,7 +663,7 @@ function gpx_file_array_2_html_gps_points(cskeys,cslist){
     buttons=buttons+'<span class="aclick" onclick="javascript:show_hide_map_gps_points();">返回</span> ';
     buttons=buttons+'当前条件下：<span class="aclick" onclick="javascript:gpx_near_gps_points();">离当前点最近的gpx文件</span> ';    
     buttons=buttons+'<span class="aclick" onclick="javascript:gpx_quadrangle_gps_points();">gpx文件范围示意</span> ';  
-    buttons=buttons+'<span class="aclick" onclick="javascript:gpx_files_batch_open_gps_points();">gpx文件批量打开</span> ';    
+    buttons=buttons+'<span class="aclick" onclick="javascript:gpx_files_batch_no_global=0;gpx_files_batch_open_gps_points();">gpx文件批量打开</span> ';
     buttons=buttons+'<span class="aclick" onclick="javascript:filter_gpx_list_gps_points(\'reverse\');">倒转</span> ';    
     buttons=buttons+'<span class="aclick" onclick="javascript:filter_gpx_list_gps_points(\'slice\');">截取</span> ';    
 
@@ -656,15 +681,16 @@ function gpx_file_array_2_html_gps_points(cskeys,cslist){
 function gpx_near_gps_points(){
     function sub_gpx_near_gps_points_min_distance(current_point,gpx_point){
         var distance_list=[];
-        var min_lat=gpx_point[3];
-        var min_lon=gpx_point[4];
-        var max_lat=gpx_point[5];
-        var max_lon=gpx_point[6];
-        distance_list[0]=distance_leaflet_b(current_point[0], current_point[1],min_lat, min_lon);
-        distance_list[1]=distance_leaflet_b(current_point[0], current_point[1],max_lat, max_lon);
-        distance_list[2]=distance_leaflet_b(current_point[0], current_point[1],min_lat, max_lon);
-        distance_list[3]=distance_leaflet_b(current_point[0], current_point[1],max_lat, min_lon);
-        
+        for (let one_range of gpx_point){
+            var min_lat=one_range[0];
+            var min_lon=one_range[1];
+            var max_lat=one_range[2];
+            var max_lon=one_range[3];
+            distance_list.push(distance_leaflet_b(current_point[0], current_point[1],min_lat, min_lon));
+            distance_list.push(distance_leaflet_b(current_point[0], current_point[1],max_lat, max_lon));
+            distance_list.push(distance_leaflet_b(current_point[0], current_point[1],min_lat, max_lon));
+            distance_list.push(distance_leaflet_b(current_point[0], current_point[1],max_lat, min_lon));
+        }
         return Math.min(...distance_list);
     }
     //------------------------------------------
@@ -687,12 +713,12 @@ function gpx_near_gps_points(){
     var result_t=[];
     for (let item of gpx_pb_global){//gpxfilename,fsize,fdate,min_lat,min_lon,max_lat,max_lon
         if (!li_names.has(item[0])){continue;}        
-        result_t.push([item[0],sub_gpx_near_gps_points_min_distance(list_t,item),'pb']);
+        result_t.push([item[0],sub_gpx_near_gps_points_min_distance(list_t,item[3]),'pb']);
     }
 
     for (let item of gpx_kl_global){
         if (!li_names.has(item[0])){continue;}            
-        result_t.push([item[0],sub_gpx_near_gps_points_min_distance(list_t,item),'kl']);
+        result_t.push([item[0],sub_gpx_near_gps_points_min_distance(list_t,item[3]),'kl']);
     }
     result_t.sort(function (a,b){return a[1]>b[1];});
     

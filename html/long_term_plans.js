@@ -6,12 +6,23 @@ function menu_lt_plans(){
     '<span class="span_menu" onclick="javascript:'+str_t+'backup_lt_plans();">编辑/导入/导出</span>', 
     ];
 
-    var klmenu2=[
+    var klmenu_sort=[
+        '<span class="span_menu" onclick="javascript:'+str_t+'ltp_sort_type_global=\'1a\';init_lt_plans();">名称升序</span>',     
+        '<span class="span_menu" onclick="javascript:'+str_t+'ltp_sort_type_global=\'1\';init_lt_plans();">名称降序</span>',     
+        '<span class="span_menu" onclick="javascript:'+str_t+'ltp_sort_type_global=\'2a\';init_lt_plans();">开始日期升序</span>',     
+        '<span class="span_menu" onclick="javascript:'+str_t+'ltp_sort_type_global=\'2\';init_lt_plans();">开始日期降序</span>',     
+        '<span class="span_menu" onclick="javascript:'+str_t+'ltp_sort_type_global=\'4a\';init_lt_plans();">结束日期升序</span>',     
+        '<span class="span_menu" onclick="javascript:'+str_t+'ltp_sort_type_global=\'4\';init_lt_plans();">结束日期降序</span>',         
+        '<span class="span_menu" onclick="javascript:'+str_t+'ltp_sort_type_global=\'-1a\';init_lt_plans();">进度升序</span>',
+        '<span class="span_menu" onclick="javascript:'+str_t+'ltp_sort_type_global=\'-1\';init_lt_plans();">进度降序</span>',
+    ];
+    
+    var klmenu_config=[
     '<span class="span_menu" onclick="javascript:'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'long_term_plans\');}">更新版本</span>',
     ];
-    klmenu2=root_font_size_menu_b(str_t,true,true,true).concat(klmenu2);
+    klmenu_config=root_font_size_menu_b(str_t,true,true,true).concat(klmenu_config);
     
-    var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu1,'⛳','14rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'⚙','14rem','1rem','1rem','60rem'),'','0rem');
+    var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu1,'⛳','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_sort,'↕','10rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','14rem','1rem','1rem','60rem'),'','0rem');
     
     document.getElementById('h2_title').insertAdjacentHTML('afterbegin',bljg+' ');
 }
@@ -73,7 +84,22 @@ function local_storage_2_array_lt_plans(){
         
         long_term_plans_global.push(list_t);
     }
-    long_term_plans_global.sort();
+    
+    if (ltp_sort_type_global.includes('-1')){
+        long_term_plans_global.sort(function (a,b){return percent_lt_plans(a)<percent_lt_plans(b);});    
+    }
+    else {
+        var blno=parseInt((ltp_sort_type_global+'0').substring(0,1));
+        if (isNaN(blno)){
+            blno=0;
+        }
+        blno=Math.min(4,Math.max(0,blno));
+        long_term_plans_global.sort(function (a,b){return a[blno]<b[blno];});
+    }
+    if (ltp_sort_type_global.includes('a')){
+        long_term_plans_global.reverse();
+    }    
+   
     array_2_local_storage_lt_plans();
 }
 
@@ -136,6 +162,14 @@ function help_lt_plans(){
     document.getElementById('div_help').innerHTML=bljg.split('\n').join('<br />');
 }
 
+function percent_lt_plans(csitem){
+    var blcount=csitem[5]-csitem[3];
+    if (blcount==0){return false;}
+    var blcurrent=parseFloat(csitem[6])-csitem[3];
+
+    return Math.abs(blcurrent/blcount);
+}
+
 function draw_lt_plans(csno){
     var csitem=long_term_plans_global[csno];
     var start_day = validdate_b(csitem[2]);
@@ -146,11 +180,9 @@ function draw_lt_plans(csno){
     if (all_days<=0){return;}
     var used_days=Math.ceil((today-start_day)/(1000*3600*24));
     
-    var blcount=csitem[5]-csitem[3];
-    if (blcount==0){return;}
-    var blcurrent=parseFloat(csitem[6])-csitem[3];
-
-    var blpercent=Math.abs(blcurrent/blcount);
+    var blpercent=percent_lt_plans(csitem);
+    if (blpercent===false){return;}
+    
     var blposition=parseInt(blpercent*all_days);
     var bljg='<tr><td><b>'+(csno+1)+'.';
     bljg=bljg+'<span style="cursor:pointer;" onclick="change_lt_plans(\''+csitem[0]+'\',1);">'+csitem[1]+'</span>';
@@ -244,6 +276,10 @@ function change_lt_plans(csid,csnumber){
             if (currentvalue!==''){
                 if ([3,5,6].includes(csnumber)){
                     currentvalue=parseFloat(currentvalue);
+                    if (csnumber==3 && long_term_plans_global[blxl][5]==currentvalue || csnumber==5 && long_term_plans_global[blxl][3]==currentvalue){
+                        alert('初值终值不能相同');
+                        return;                        
+                    }
                 }
                 else if ([2,4].includes(csnumber)){
                     currentvalue=validdate_b(currentvalue);
@@ -252,6 +288,10 @@ function change_lt_plans(csid,csnumber){
                         return;
                     }
                     currentvalue=date2str_b('-',currentvalue);
+                    if (csnumber==2 && long_term_plans_global[blxl][4]<=currentvalue || csnumber==4 && long_term_plans_global[blxl][2]>=currentvalue){
+                        alert('日期不能相同，结束日期不能小于起始日期');
+                        return;                        
+                    }
                 }
                 long_term_plans_global[blxl][csnumber]=currentvalue;
                 array_2_local_storage_lt_plans();

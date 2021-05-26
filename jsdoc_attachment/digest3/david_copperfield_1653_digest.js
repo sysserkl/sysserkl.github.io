@@ -122,4 +122,7 @@ var digest_global=`
 *shoreward
 *bookstall
 *labourer
+*cemetery
+*fidelity
+*rosebud
 `.trim().split('\n');
