@@ -12,6 +12,10 @@ function flot_two_lines_two_yaxis_k(cslist,csid,y1unit,y2unit,label_position='nw
     //----------------------------------------------------------------------------
     //list1_t: [ '次数',[2019-08-01, 100],[2019-08-02, 300] ];    
     //不支持一边多条线 - 保留注释
+    
+    if (cslist.length<2){return;}
+    if (cslist[0].length<2){return;} //内容为空，或者只有名称 - 保留注释
+    
     var left_group=cslist.slice(0,-1*right_group_count);
     var right_group=cslist.slice(-1*right_group_count,);
     var list1_t=left_group[0];
@@ -202,7 +206,9 @@ function flot_lines_k(cslist,csid,label_position='nw',cstime=false,cstimeformat=
             //console.log(Array.isArray(acol),acol);
         //}
     //}
-    
+    if (cslist.length==0){return;}
+    if (cslist[0].length<2){return;}    //内容为空，或者只有名称 - 保留注释
+        
     if (label_position==''){
         label_position='nw';
     }
@@ -345,6 +351,8 @@ function flot_pie_k(chart_data,csid,label_radius=11/15){
     //{label: '杭州', data: 30},
     //{label: '宁波', data: 40},
     //];
+    if (chart_data.length==0){return;}
+    
     $.plot('#'+csid, chart_data, {
         series: {
             pie: {

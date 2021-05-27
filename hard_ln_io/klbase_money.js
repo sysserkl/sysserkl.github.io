@@ -202,9 +202,9 @@ function table_top_money_b(){
 
 function table_detail_money_b(cspage=1,csstatus='',cspagenum=-1,cssimple=false,csluru_php='wpluru.php',csnolink=false,csnew_window=true){
     var bljg='';
-	if (csdata.length>0){
+	//if (csdata.length>0){
 		bljg=table_top_money_b()+'<tr><td colspan=3 style="border:0px;" id="td_recent_search"></td></tr><tr><td colspan=3 style="border:0px;" id="td_status_wp">'+csstatus+'</td></tr>';
-	}
+	//}
 	
     var date_t='';
     var blamount_total=0;
@@ -224,9 +224,9 @@ function table_detail_money_b(cspage=1,csstatus='',cspagenum=-1,cssimple=false,c
 		}
 	}
 
-	if (csdata.length>0){
+	//if (csdata.length>0){
 		bljg=bljg+'</table>';
-	}
+	//}
     return [bljg,blamount_total,blamount_this_page,blsum_this_page];
 }
 

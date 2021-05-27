@@ -243,7 +243,7 @@ function str_reg_search_b(csinput,cskeys,csreg){
     //---------
 	var blfound=false;
 	var csarray=Array.isArray(csinput);
-	if (csarray==false && typeof csinput!=="string"){
+	if (csarray==false && typeof csinput!=='string'){
 		csinput=''+csinput;
 	}
     //如果 查询关键字 是 字符串，则转换为数组 - 保留注释
@@ -253,7 +253,7 @@ function str_reg_search_b(csinput,cskeys,csreg){
 
 	for (var blno=0;blno<cskeys.length;blno++){
 		var word_t=cskeys[blno];
-		if (word_t=="" || word_t=="+" || word_t=="-"){
+		if (word_t=='' || word_t=='+' || word_t=='-'){
 			continue;
 		}
 		if (csreg==false){

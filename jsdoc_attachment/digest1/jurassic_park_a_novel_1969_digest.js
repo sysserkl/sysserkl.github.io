@@ -12,4 +12,6 @@ var digest_global=`
 *intravenous
 *Peking
 *Arnold
+*bacterium
+*rosebush
 `.trim().split('\n');

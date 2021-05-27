@@ -26,4 +26,5 @@ var digest_global=`
 *in all honesty
 *starboard
 *salesmanship
+*tumorous
 `.trim().split('\n');
