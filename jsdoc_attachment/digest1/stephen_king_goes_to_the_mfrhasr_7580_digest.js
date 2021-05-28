@@ -27,4 +27,5 @@ var digest_global=`
 *starboard
 *salesmanship
 *tumorous
+*inexpertly
 `.trim().split('\n');

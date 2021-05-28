@@ -113,9 +113,9 @@ function transform_dotlines_gps_points(cslist=false,cstype=false,write_to_textar
 
 function read_gpx_gps_points(csstr,csname=''){
     var all_points=[];
-    var list_t=csstr.split('<trk>');
+    var list_t=csstr.split('<trk>');    //有几条线路就有几个 trk - 保留注释
     var bltype=document.getElementById('select_transform').value;
-    for (let blxl=1;blxl<list_t.length;blxl++){
+    for (let blxl=1;blxl<list_t.length;blxl++){ //忽略第1个元素 - 保留注释
         var result_list=[];
         var blname=list_t[blxl].match(/<name>(.*?)<\/name>/m);
         if (blname==null){
@@ -126,6 +126,12 @@ function read_gpx_gps_points(csstr,csname=''){
         }
         else {
             blname=blname[1];
+        }
+        var bltime=list_t[blxl].match(/<time>.*?<\/time>/m);
+        if (bltime!==null){
+            if (bltime.length>=1){
+                blname=blname+'('+bltime[0].split('T')[0].replace(new RegExp('-','g'),'')+')';  //添加日期 - 保留注释
+            }
         }
         var trkpts=list_t[blxl].split('<trkpt ');
         for (let lonlat of trkpts){
@@ -771,6 +777,11 @@ function remove_navigation_gps_points(){
     navigation_layer_gps_global.addTo(omap_gps_points_global);
 }
 
+function gpx_from_textarea_gps_points(){
+    var blstr=document.getElementById('textarea_gps_points').value;
+    read_gpx_gps_points(blstr,'');
+}
+
 function menu_gps_points(){
     var str_t=klmenu_hide_b('');
     var klmenu1=[];    
@@ -784,6 +795,7 @@ function menu_gps_points(){
     klmenu1.push('<span class="span_menu" onclick="javascript:'+str_t+'transform_dotlines_gps_points(false,false,true);">纬度,经度格式坐标转换</span>');    
     klmenu1.push('<span class="span_menu" onclick="javascript:'+str_t+'latlon_2_gpx_gps_points();">纬度,经度格式生成GPX文件</span>');    
     klmenu1.push('<span class="span_menu" onclick="javascript:'+str_t+'generate_gps_points();">生成点</span>');    
+    klmenu1.push('<span class="span_menu" onclick="javascript:'+str_t+'gpx_from_textarea_gps_points();">从编辑框显示GPX图形</span>');    
 
     var klmenu2=[
     '<span class="span_menu" onclick="javascript:'+str_t+'help_gps_points();">Help</span>',
