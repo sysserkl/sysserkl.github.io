@@ -398,4 +398,5 @@ var digest_global=`
 *dunghill
 *extol
 *shipmaster
+*winebibber
 `.trim().split('\n');

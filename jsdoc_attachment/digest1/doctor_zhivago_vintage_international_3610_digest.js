@@ -14,4 +14,5 @@ var digest_global=`
 *watchmaker
 *moonbeam
 *pathology
+*chatterbox
 `.trim().split('\n');

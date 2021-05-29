@@ -125,4 +125,5 @@ var digest_global=`
 *cemetery
 *fidelity
 *rosebud
+*usefully
 `.trim().split('\n');
