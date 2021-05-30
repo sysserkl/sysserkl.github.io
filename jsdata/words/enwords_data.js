@@ -1,5 +1,9 @@
 //单词库
 var enwords=[
+["sexily", "UK [ˈsɛksɪli] US [ˈseksəli]", "adv. 〈口〉性感地；in a sexually attractive or sexually exciting way; in a sexy manner"],
+["underwent", "[ˌʌndə(r)ˈwent]", "v. 经历；经受；遭受；遭遇（undergo的过去式）；the past tense of 'undergo'"],
+["incessant", "[ɪn'ses(ə)nt]", "adj. 不停的；不断的；持续不断的；连续的；没完没了的；never stopping; continuing or following without interruption: unceasing; not ceasing; continual; never ceasing; continuing or being repeated without stopping or in a way that seems endless; constant"],
+["incessantly", "[ɪn'ses(ə)ntli]", "adv. 不停地；不断地；不间断地；不休地；without stopping; in a way that never stops, especially when this is annoying or unpleasant; in an unceasing manner; without interruption or relief: continually"],
 ["winebibber", "[ˈwaɪnˌbɪbə(r)]", "n. 酒徒；酒鬼；酒仙；a person who drinks a great deal of wine; a person given to drinking much or too much wine; (archaic, poetic) a habitual (or heavy) drinker of alcohol, especially wine, an excessive wine-drinker; a drunkard"],
 ["chatterbox", "UK ['tʃætə(r)ˌbɒks] US ['tʃætərˌbɑːks]", "n. 喋喋不休者；滔滔不绝的人；话匣子（尤指小孩）；one who engages in much idle talk; a person who talks constantly, esp about trivial matters; a person who talks incessantly; an excessively talkative person; a person who talks a lot, especially a child"],
 ["scalability", "[ˌskeɪləˈbɪlɪtɪ] [ˌskeɪləˈbɪləti]", "n. 可扩展性；可伸缩性；可量测性；the ability of something, esp a computer system, to adapt to increased demands; the fact that it is possible to adapt something to meet greater needs in the future; the ability of a business or system to grow larger; the property of being scalable"],

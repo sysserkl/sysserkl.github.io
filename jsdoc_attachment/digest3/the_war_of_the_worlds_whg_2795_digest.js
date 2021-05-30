@@ -33,4 +33,5 @@ var digest_global=`
 *starlit
 *newsboy
 *firelit
+*incessant
 `.trim().split('\n');

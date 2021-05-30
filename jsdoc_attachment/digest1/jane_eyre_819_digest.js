@@ -18,4 +18,5 @@ var digest_global=`
 *undefined
 *undiscovered
 *unlimited
+*underwent
 `.trim().split('\n');

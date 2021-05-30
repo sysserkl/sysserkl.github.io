@@ -9,4 +9,5 @@ var digest_global=`
 *ovoid
 *laborer
 *by means of
+*incessantly
 `.trim().split('\n');
