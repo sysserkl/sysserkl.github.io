@@ -15,4 +15,5 @@ var digest_global=`
 *moonbeam
 *pathology
 *chatterbox
+*disrepair
 `.trim().split('\n');

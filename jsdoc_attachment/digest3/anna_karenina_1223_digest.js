@@ -130,4 +130,6 @@ var digest_global=`
 *Petersburg
 *hawklike
 *diplomat
+*insurmountable
+*undeveloped
 `.trim().split('\n');

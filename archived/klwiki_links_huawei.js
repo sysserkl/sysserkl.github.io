@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-05-23 11:08:38 日"],
+["","","","更新日期：2021-05-30 20:14:12 日"],
 ["http://tech.sina.com.cn/t/2006-06-17/0741994777.shtml","20060617 | 华为基本法修改工程启动 时代局限性日益凸现"],
 ["http://tech.sina.com.cn/t/2007-01-18/03341340866.shtml","20070118 | 华为18年无一项原创发明 购买专利竞跑国际市场"],
 ["http://tech.sina.com.cn/it/2007-05-01/02421493757.shtml","20070501 | 华为国际专利全球排名升至13 力拓知识产权路径"],
@@ -225,6 +225,7 @@ var recent_info_list=[
 ["https://www.solidot.org/story?sid=65037","20200724 | 奇客Solidot | 法国到 2028 年将禁止使用华为设备"],
 ["https://cn.reuters.com/article/canalys-huawei-q2-phone-shipment-0730-idCNKCS24V0LX?il=0","20200730 | 华为挤下三星 第二季手机出货量跃居全球第一 - 路透中文网"],
 ["https://cn.reuters.com/article/germany-usa-huawei-5g-0801-idCNKCS24X3D1?il=0","20200801 | 华为呼吁德国政府不要将其排除在5G网络建设之外--《明镜周刊》 - 路透中文网"],
+["https://m.thepaper.cn/newsDetail_forward_8566240","20200803 | 德国官员称欧洲国家应选择华为以外的5G供应商，外交部回应"],
 ["https://www.solidot.org/story?sid=65179","20200807 | 奇客Solidot | 华为高管称其自主设计的 ARM 芯片在 9 月 15 日之后无法由台积电代工"],
 ["https://cn.reuters.com/article/huawei-caixin-chips-production-0808-sat-idCNKCS25600R?il=0","20200810 | 受美国制裁影响 华为9月15日后将无法生产旗舰芯片--财新 - 路透中文网"],
 ["https://cn.reuters.com/article/qualcomm-huawei-wsj-0808-sat-idCNKCS25601G?il=0","20200810 | 高通游说美国政府 盼解除对华为出售5G手机芯片禁令--华尔街日报 - 路透中文网"],

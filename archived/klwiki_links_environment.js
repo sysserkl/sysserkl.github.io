@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-05-23 11:08:38 日"],
+["","","","更新日期：2021-05-30 20:14:12 日"],
 ["http://bj.house.sina.com.cn/d/r/2002-12-18/17266.html","20021218 | 我国首部《室内空气质量标准》明年３月起实施"],
 ["http://news.sina.com.cn/c/2004-02-18/16391835092s.shtml","20040218 | 北京加紧制定教室空气标准 检测教室空气质量"],
 ["http://news.sina.com.cn/w/2004-09-03/06193569297s.shtml","20040903 | 10年罕见强飓风将袭美国佛州 250万人紧急疏散"],
@@ -162,4 +162,5 @@ var recent_info_list=[
 ["https://www.cnbeta.com/articles/soft/733529.htm","20180605 | 高德上线环境地图 身边空气质量及水质等全国可查询 - cnBeta.COM"],
 ["https://www.bbc.com/zhongwen/simp/world-46664649","20181223 | 印尼海啸：与火山爆发有关的不寻常灾难 - BBC News 中文"],
 ["https://www.solidot.org/story?sid=65018","20200722 | 奇客Solidot | 金星火山显示仍然活跃的迹象"],
+["https://m.thepaper.cn/newsDetail_forward_12811026","20210523 | 受外来沙尘影响，北京全市空气质量已达严重污染"],
 ];
