@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-05-30 20:14:12 日"],
+["","","","更新日期：2021-05-30 20:15:58 日"],
 ["https://www.oschina.net/question/5189_26583","20110827 | 抢先看！小米手机开箱图集 - 开源中国社区"],
 ["http://www.oschina.net/news/20923/xiaomi-mobile-in-10-steps","20110828 | 10 步跟我拆小米手机（多图+大图） - 开源中国社区"],
 ["http://cn.engadget.com/2012/08/16/xiaomi-phone-2/","20120816 | 小米手机 2 来了，S4 四核心、4.3 吋 720p 屏幕、Android 4.1"],
@@ -12,7 +12,6 @@ var recent_info_list=[
 ["http://www.cnbeta.com/articles/246730.htm","20130731 | TD网络+1.5G四核仅售799 红米手机开箱_cnBeta.COM"],
 ["http://www.cnbeta.com/articles/246896.htm","20130801 | 799元究竟能做什么?红米手机性能评测_cnBeta.COM"],
 ["http://www.dgtle.com/article-4042-1.html","20130815 | 廉价主力机-红米手机体验-数字尾巴"],
-["http://www.expreview.com/29376.html","20131111 | 双11总支付宝成交额已破200亿，小米手机包揽单品前四 - 超能网"],
 ["http://www.expreview.com/31723.html","20140227 | 考验忠诚度的时刻到了，小米手机2S降至1299元 - 超能网"],
 ["http://www.expreview.com/33324.html","20140510 | 眼花缭乱了，简述红米Note、红米1S和红米手机现存版本差异 - 超能网"],
 ["http://www.cnbeta.com/articles/292345.htm","20140515 | 雷军称曾反复考虑小米平板要不要上市_cnBeta.COM"],

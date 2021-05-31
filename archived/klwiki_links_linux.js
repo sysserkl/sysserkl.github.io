@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-05-30 20:14:12 日"],
+["","","","更新日期：2021-05-30 20:15:58 日"],
 ["https://www.debuntu.org/how-to-enable-apache-modules-under-debian-based-system-page-2/","20060615 | How To: Enable apache modules under Debian based system — page 2 - Debuntu"],
 ["http://www.williamlong.info/archives/1912.html","20090901 | CentOS操作系统安装教程-月光博客"],
 ["http://www.unixmen.com/after-a-fresh-install-of-ubuntu-1010-maverick-meerkat-configuration-made-easy-with-ubuntu-tweak/","20101002 | After a fresh install of Ubuntu 10.10 Maverick Meerkat, configuration made easy with Ubuntu-Tweak | Newbies | Unixmen"],
