@@ -16,4 +16,5 @@ var digest_global=`
 *pathology
 *chatterbox
 *disrepair
+*unbuilt
 `.trim().split('\n');

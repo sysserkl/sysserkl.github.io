@@ -39,4 +39,5 @@ var digest_global=`
 *hexagonal
 *overdose
 *Leonard
+*doorbell
 `.trim().split('\n');

@@ -62,6 +62,7 @@ function enwords_init_b(simple=false){
     var t0 = performance.now();    
     words_queue_read_b();   //导入临时添加的单词 - 保留注释
     
+    no_article_enwords_global=[];   //未在文章中出现、无例句，只有单词的英语单词 - 保留注释
     if (simple){
         //写入序号 - 保留注释
         for (let blxl=0;blxl<enwords.length;blxl++){
@@ -70,6 +71,9 @@ function enwords_init_b(simple=false){
                 enwords[blxl][1]='[null]';
             }
             enwords[blxl][2]=en_word_def_istrong_b(enwords[blxl][2]);
+            if (enwords[blxl][2].includes('🈚')){
+                no_article_enwords_global.push(enwords[blxl][0]);
+            }
         }
         console.log('enwords_init_b() 费时：'+(performance.now() - t0) + " milliseconds");
         return;
@@ -1407,14 +1411,19 @@ function enwords_mini_search_frame_form_b(cstype='s'){
 }
 
 function enwords_recent_search_b(csword='',cstype=''){
+    function sub_enwords_recent_search_b_fn(fn_name){
+        return recent_search_b('recent_search_kle',csword,fn_name,'',logo_list,25,false);
+    }
+    //----------------------------
+    var logo_list=['🥚','✏','🚧','🈚'];
     if (cstype=='mini'){
         var recent_search_str='<p id="p_recent_search" style="line-height:'+(ismobile_b()?'200':'210')+'%;">';
-        return recent_search_str+recent_search_b('recent_search_kle',csword,'enwords_mini_search_b','',['🥚','✏','🚧'],25,false)+'</p>';
+        return recent_search_str+sub_enwords_recent_search_b_fn('enwords_mini_search_b')+'</p>';
     }
     else {
         var odiv=document.getElementById('div_recent_search');
         if (odiv){
-            odiv.innerHTML=recent_search_b('recent_search_kle',csword,'wordsearch_kle','',['🥚','✏'],25,false);    
+            odiv.innerHTML=sub_enwords_recent_search_b_fn('wordsearch_kle');    
             mouseover_mouseout_oblong_span_b(odiv.querySelectorAll('span.oblong_box'));
         }
         return '';

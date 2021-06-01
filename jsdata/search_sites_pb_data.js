@@ -1,5 +1,6 @@
 var search_sites_list_global=[
 //left_part,right_part,key_word_type,color,site_name,(c:check，用在usescript中；p:proxy b:button；0:important；n:without key, just link),category,title - 保留注释
+//key_word_type: 1+, 2-,3\s - 保留注释
 ['https://dict.cn/','',0,'','Dict.cn','c0','English',''],
 ['https://cn.bing.com/dict/search?q=','',0,'','Bing(cn)','c0','English',''],
 ['https://cn.bing.com/translator/','',0,'','BT','n0','English',''],
@@ -14,6 +15,7 @@ var search_sites_list_global=[
 ['https://www.wordreference.com/enzh/','',0,'','(CN)','0','English',''],
 ['https://www.lexico.com/definition/','',0,'#990066','Lexico','0','English',''],
 ['https://learnersdictionary.com/definition/','',0,'','learnersdictionary','','English',''],
+['https://www.ldoceonline.com/dictionary/','',2,'','Longman','','English',''],
 ['https://www.dictionary.com/browse/','',0,'#6666cc','Dictionary.com','','English',''],
 ['https://www.thefreedictionary.com/','',0,'#0099ff','The Free Dictionary','','English',''],
 ['https://www.yourdictionary.com/','',0,'#990033','YourDictionary','','English',''],

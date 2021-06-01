@@ -18,4 +18,5 @@ var digest_global=`
 *professorial
 *unrestricted
 *burro
+*touchdown
 `.trim().split('\n');

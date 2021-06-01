@@ -8,4 +8,5 @@ var digest_global=`
 *Sumatra
 *Stuart
 *sherry
+*polygamy
 `.trim().split('\n');

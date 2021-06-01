@@ -28,4 +28,5 @@ var digest_global=`
 *salesmanship
 *tumorous
 *inexpertly
+*dweller
 `.trim().split('\n');

@@ -26,4 +26,5 @@ var digest_global=`
 *fluctuation
 *lecturer
 *lecture
+*chickadee
 `.trim().split('\n');

@@ -669,7 +669,7 @@ function gpx_file_array_2_html_gps_points(cskeys,cslist){
     buttons=buttons+'<span class="aclick" onclick="javascript:show_hide_map_gps_points();">返回</span> ';
     buttons=buttons+'当前条件下：<span class="aclick" onclick="javascript:gpx_near_gps_points();">离当前点最近的gpx文件</span> ';    
     buttons=buttons+'<span class="aclick" onclick="javascript:gpx_quadrangle_gps_points();">gpx文件范围示意</span> ';  
-    buttons=buttons+'<span class="aclick" onclick="javascript:gpx_files_batch_no_global=0;gpx_files_batch_open_gps_points();">gpx文件批量打开</span> ';
+    buttons=buttons+'<span class="aclick" onclick="javascript:if (confirm(\'是否批量载入GPX文件？\')){gpx_files_batch_no_global=0;gpx_files_batch_open_gps_points();}">gpx文件批量载入</span> ';
     buttons=buttons+'<span class="aclick" onclick="javascript:filter_gpx_list_gps_points(\'reverse\');">倒转</span> ';    
     buttons=buttons+'<span class="aclick" onclick="javascript:filter_gpx_list_gps_points(\'slice\');">截取</span> ';    
 

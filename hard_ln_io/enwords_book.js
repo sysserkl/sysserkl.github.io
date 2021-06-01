@@ -155,7 +155,11 @@ function old_words_in_sentence_enbook(){
     var old_words_set=new Set();    
     var bljgarr2=str_2_array_enbook(csstr,true);
     [new_words_set,old_words_set]=get_new_words_arr_enbook2(bljgarr2,checkbox_kl_value_b('words_type_check'));
-    var intersection=array_intersection_b(old_words_set,en_sentence_count_global);
+    
+    if (typeof no_article_enwords_global == 'undefined'){
+        no_article_enwords_global=[];
+    }
+    var intersection=array_intersection_b(old_words_set,Array.from(en_sentence_count_global).concat(no_article_enwords_global));
 
     var bljg='最少例句中的旧单词：'+Array.from(intersection).join(' ')+'\n';
     document.getElementById('textarea_new_words2').value=bljg;
