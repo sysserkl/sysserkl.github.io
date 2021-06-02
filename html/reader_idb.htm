@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>Reader IDB</title>
+<meta charset="UTF-8" />
+<SCRIPT language=JavaScript src="../hard_ln_io/klbase.js"></SCRIPT>
+<script language="javascript">
+klbase_addons_import_js_b(['css','date','books','eng','en_de_str','wiki','txtlistsearch'],[],['words/enwords_data.js','words/cnwords_data.js,defer']);
+</script>
+<SCRIPT language=JavaScript src="reader_idb_code.js"></SCRIPT>
+<script language="javascript">
+var csbooklist_sub_global_b=[['','','','','']];
+var csbookno_global_b=0;
+var csbookname_global='';
+var digest_scan_hash_global=false;
+var digest_global=[];
+var line_height_global=180;
+
+var filelist=[];
+var idbbookname_list_global=[];
+var scheme_global={};
+scheme_generation_b();
+css_root_style_b('17','14',['base','menu'],[],1);
+</script>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+</head>
+<body>
+<a name=top></a>
+<h2 style="margin-top:0; font-size:1.35rem;">Reader - IDB <span id="span_filename"></span><span id="span_filelength" style="font-size:0.8rem;"></span></h2>
+<div style="margin:0.5rem;">
+<p>
+<input type="file" id="input_upload_txt">
+<span class="aclick" onclick="javascript:upload_txt_reader_idb();">Upload TXT File</span>
+</p>
+<p>
+<span id="span_idbbooklist"></span>
+<input type="text" id="input_search">
+<input type="number" id="input_lineno" style="display:none;" value=1>
+<input type="number" id="input_lines" style="display:none;" value=20>
+</p>
+</div>
+<!--history
+0.0.1-20210601
+-->
+<div id="divhtml"></div>
+<div id="div_top_bottom"></div>
+<script type="text/javascript">
+init_reader_idb();
+track_source_b('reader_idb',false);
+if (!is_firefox_b(false)){
+    blank_page_b(false);
+}
+</script>
+</body>
+</html>

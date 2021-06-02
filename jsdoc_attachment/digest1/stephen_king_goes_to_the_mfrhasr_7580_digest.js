@@ -29,4 +29,6 @@ var digest_global=`
 *tumorous
 *inexpertly
 *dweller
+*stomachache
+*shoreward
 `.trim().split('\n');

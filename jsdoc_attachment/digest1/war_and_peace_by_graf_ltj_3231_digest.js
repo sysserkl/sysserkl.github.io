@@ -183,4 +183,5 @@ var digest_global=`
 *diplomatist
 *introductory
 *ramshackle
+*tactician
 `.trim().split('\n');

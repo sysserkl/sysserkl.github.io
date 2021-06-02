@@ -90,4 +90,5 @@ var digest_global=`
 *Cromwell
 *exile
 *invertebrate
+*rosebud
 `.trim().split('\n');

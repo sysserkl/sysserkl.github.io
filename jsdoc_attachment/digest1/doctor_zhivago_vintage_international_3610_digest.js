@@ -17,4 +17,5 @@ var digest_global=`
 *chatterbox
 *disrepair
 *unbuilt
+*theologian
 `.trim().split('\n');
