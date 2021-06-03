@@ -1062,20 +1062,21 @@ function service_worker_delete_b(appname){
 function pwa_clear_cache_all_b(){
     if (confirm('是否清空全部 PWA Cache？')){
         var service_list=[
-        "bible",
-        "calculator",
-        "gps_points",
-        "long_term_plans",
-        "lsm",
-        "memo",
-        "rnd_english_words",
-        "routines",
-        "screen_clock",
-        "screen_colorful_boxes",
-        "screen_matrix",
-        "sticker_mobile",
-        "todolist",
-        "websites",
+        'bible',
+        'calculator',
+        'gps_points',
+        'long_term_plans',
+        'lsm',
+        'memo',
+        'reader_idb',
+        'rnd_english_words',
+        'routines',
+        'screen_clock',
+        'screen_colorful_boxes',
+        'screen_matrix',
+        'sticker_mobile',
+        'todolist',
+        'websites',
         ];
         for (let item of service_list){
             service_worker_delete_b(item);

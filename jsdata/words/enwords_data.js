@@ -1,5 +1,9 @@
 //单词库
 var enwords=[
+["goaltender", "[ˈɡəʊlˌtendə(r)]", "n. （足球等运动的）守门员（等于goalkeeper）；(in football (soccer), hockey, etc.) a player whose job is to stop the ball from going into his or her own team's goal; goalkeeper; 🈚"],
+["superstore", "['suːpə(r)ˌstɔː(r)]", "n. 大型超级市场；大型超市；大型商场；a very large supermarket or a large shop that sells a wide variety of one type of goods; a very large supermarket, often selling household goods, clothes, etc, as well as food; a very large retail store offering a very wide selection of merchandise; a very large store often offering a wide variety of merchandise for sale; 🈚"],
+["schoolbag", "[ˈskulˌbæɡ]", "n. 书包；a bag which children carry to school, in which they put their books, pens, lunch etc; a bag used for carrying books, school supplies, etc; a bag for carrying schoolbooks and school supplies; 🈚"],
+["schoolchild", "['skuːlˌtʃaɪld]", "n. 学童；小学生；中小学生；a child who attends school; a child attending school; a child who attends primary school; a child who attends secondary school; 🈚"],
 ["stomachache", "UK [ˈstʌməkˌeɪk] ['stʌməkeɪk] US [ˈstʌməkˌeɪk] [ˈstʌmɪkˌeɪk] ['stʌməkeɪk]", "n. 胃痛；腹痛；肚子痛；pain in or in the region of the stomach; pain in the stomach or abdominal region, as from acute indigestion; colic"],
 ["nanometer", "['nænəʊˌmiːtə(r)] [ˈnænəˌmitə(r), ˈneɪnə-]", "n. 纳米；毫微米；十亿分之一米；one billionth of a meter"],
 ["nanometre", "['nænəʊmiːtə(r)] [ˈnænəˌmitə(r)]", "n. 纳米；毫微米；十亿分之一米；one thousand-millionth of a metre; Symbol: nm; 🈚"],
@@ -9610,7 +9614,7 @@ var enwords=[
 ["Taylor", "['teɪlə]", "n. 泰勒"],
 ["teaboard", "['tiːbɔːd]", "n. 茶盘；a tray for serving tea; a tray for carrying tea and refreshments"],
 ["teacher", "['tiːtʃər]", "n. 教师"],
-["teach", "[tiːtʃ]", "vt. 教；教导；教授；教训；vi. 给予指导"],
+["teach", "[tiːtʃ]", "v. 教；教导；教授；教训；给予指导"],
 ["teacup", "['tiːkʌp]", "n. 茶杯；a cup in which tea is served; a small cup usually with a handle used with a saucer for hot beverages"],
 ["teammate", "['tiːmmeɪt]", "n. 队友"],
 ["team", "[tiːm]", "n. 队；组；v. 结成一队；使相配；使合作；adj. 团队的"],

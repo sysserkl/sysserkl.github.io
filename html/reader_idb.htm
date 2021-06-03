@@ -2,13 +2,18 @@
 <head>
 <title>Reader IDB</title>
 <meta charset="UTF-8" />
+<script language="javascript" type="text/javascript" src="../hard_ln_io/jquery.js"></script>
 <SCRIPT language=JavaScript src="../hard_ln_io/klbase.js"></SCRIPT>
 <script language="javascript">
-klbase_addons_import_js_b(['css','date','books','eng','en_de_str','wiki','txtlistsearch'],[],['words/enwords_data.js','words/cnwords_data.js,defer']);
+klbase_addons_import_js_b(['css','date','books','eng','en_de_str','wiki','flot','txtlistsearch'],[],['words/enwords_data.js','words/cnwords_data.js,defer']);
+</script>
+<script language="javascript">
+flot_import_js_k(['time','symbol']);    //用于显示阅读进度 - 保留注释
 </script>
 <SCRIPT language=JavaScript src="reader_idb_code.js"></SCRIPT>
 <script language="javascript">
-var csbooklist_sub_global_b=[['','','','','']];
+var csbooklist_source_global_b=[];
+var csbooklist_sub_global_b=[['','','','1','']];
 var csbookno_global_b=0;
 var csbookname_global='';
 var digest_scan_hash_global=false;
@@ -25,23 +30,28 @@ css_root_style_b('17','14',['base','menu'],[],1);
 </head>
 <body>
 <a name=top></a>
-<h2 style="margin-top:0; font-size:1.35rem;">Reader - IDB <span id="span_filename"></span><span id="span_filelength" style="font-size:0.8rem;"></span></h2>
-<div style="margin:0.5rem;">
-<p>
+<h2 id="h2_title" style="margin-top:0; font-size:1.35rem;">Reader - IDB <span id="span_filename"></span><span id="span_filelength" style="font-size:0.8rem;"></span></h2>
+<div style="margin:1rem 0.5rem;">
+<p style="margin-bottom:0.5rem;">
 <input type="file" id="input_upload_txt">
 <span class="aclick" onclick="javascript:upload_txt_reader_idb();">Upload TXT File</span>
+<span class="aclick" onclick="javascript:upload_digest_reader_idb();">Upload Digest File</span>
+
 </p>
-<p>
+<p style="margin-bottom:0.5rem;">
 <span id="span_idbbooklist"></span>
-<input type="text" id="input_search">
+<input type="text" id="input_search" style="display:none;">
 <input type="number" id="input_lineno" style="display:none;" value=1>
 <input type="number" id="input_lines" style="display:none;" value=20>
+<input type="checkbox" id="input_digest" checked style="display:none;"><!--显示摘要-->
 </p>
 </div>
 <!--history
 0.0.1-20210601
 -->
+<a name=content></a>
 <div id="divhtml"></div>
+<div id="divhtml2"></div>
 <div id="div_top_bottom"></div>
 <script type="text/javascript">
 init_reader_idb();
