@@ -170,6 +170,17 @@ function reading_mode_kltxt_b(){
     location.href='#content';
 }
 
+function float_bookname_kltxt_b(){
+    var odiv=document.getElementById('div_float_bookname');
+    if (!odiv){
+        document.body.insertAdjacentHTML('beforeend','<div id="div_float_bookname" style="position:fixed;left:0;bottom:0;width:100%;background-color:'+scheme_global['background']+';cursor:pointer;" ondblclick="javascript:this.style.display=\'none\';"></div>');
+        odiv=document.getElementById('div_float_bookname');
+    }
+    if (!odiv){return;}
+    odiv.innerHTML='<hr /><p align=right style="font-weight:bold;margin:0.5rem;">《'+csbooklist_sub_global_b[csbookno_global_b][1]+'》</hp>';    
+    odiv.style.display='';
+}
+
 function txtmenus_kltxt_b(cstype=''){
     var str_t=klmenu_hide_b('');
     if (cstype=='reader'){
@@ -212,6 +223,8 @@ function txtmenus_kltxt_b(cstype=''){
     
     var menu_config=root_font_size_menu_b(str_t);
     menu_config.push('<span class="span_menu" onclick="javascript:'+str_t+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>');
+    menu_config.push('<span class="span_menu" onclick="javascript:'+str_t+'float_bookname_kltxt_b();">浮动书名</span>');
+    
     if (cstype!=='reader' && cstype!=='digest'){
         menu_dir=menu_dir.concat(search_list);
         menu_dir_width='19rem';

@@ -1,5 +1,9 @@
 //单词库
 var enwords=[
+["metalworker", "[ˈmetlwɜː(r)kə(r)]", "n. 金属工人；锻造金属的工人；制金属品工人；金属品加工工人；金属制造工；a person who shapes metal; a person who makes objects out of metal; 🈚"],
+["papergirl", "[ˈpeipə(r)ˌɡɜː(r)l]", "n. 女报童；女送报人；a girl who sells or delivers newspapers; a girl who delivers newspapers to homes; a girl who delivers newspapers to people's homes; a girl who delivers newspapers to people's houses; a female paperboy; 🈚"],
+["newsgirl", "UK [ˈnjuːzˌɡɜːl] US [ˈnuːzˌɡɜːrl, ˈnjuːz-]", "n. 女报童；卖报女孩；a girl who sells or delivers newspapers; a girl that sells or delivers newspapers to individual customers; n. 女新闻播音员；女新闻记者；新闻女郎；a female newsreader or reporter; 🈚"],
+["semiskilled", "UK [ˌsemɪ'skɪld] US [ˌsemiˈskɪld, ˌsemai]", "adj. (工人)半熟练的；只需有限训练即可操作的；having or requiring less training than skilled labor and more than unskilled labor; partly skilled or trained but not sufficiently so to perform specialized work; of or doing manual work that requires only limited training; having or requiring more training and skill than unskilled labor but less than skilled labor; 🈚"],
 ["goaltender", "[ˈɡəʊlˌtendə(r)]", "n. （足球等运动的）守门员（等于goalkeeper）；(in football (soccer), hockey, etc.) a player whose job is to stop the ball from going into his or her own team's goal; goalkeeper; 🈚"],
 ["superstore", "['suːpə(r)ˌstɔː(r)]", "n. 大型超级市场；大型超市；大型商场；a very large supermarket or a large shop that sells a wide variety of one type of goods; a very large supermarket, often selling household goods, clothes, etc, as well as food; a very large retail store offering a very wide selection of merchandise; a very large store often offering a wide variety of merchandise for sale; 🈚"],
 ["schoolbag", "[ˈskulˌbæɡ]", "n. 书包；a bag which children carry to school, in which they put their books, pens, lunch etc; a bag used for carrying books, school supplies, etc; a bag for carrying schoolbooks and school supplies; 🈚"],
