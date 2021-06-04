@@ -103,7 +103,9 @@ function book_path_b(jsdoc_num,is_private=false){
 
 function import_one_book_b(bookname,jsdoc_num){
     //bookname: klwiki_en.js - 保留注释
-    document.write('\n<SCRIPT language=JavaScript src="'+book_path_b(jsdoc_num)+bookname+'"><\/SCRIPT\n>');
+    var blpath_name=book_path_b(jsdoc_num)+bookname;
+    document.write('\n<SCRIPT language=JavaScript src="'+blpath_name+'"><\/SCRIPT\n>');
+    console.log(blpath_name);
 }
 
 function import_book_js_b(import_digest=true){
@@ -383,15 +385,15 @@ function book_category_b(csid,otherlists=[],cstag=''){
     }
 }
 
-function books_id2name_b(bookid){
-    var str_t='';
-    for (let a_element of csbooklist_source_global_b){
-        if (a_element[0]==bookid){
-            str_t=a_element[1];
+function filename_2_bookname_b(filename){
+    var bookname_t=filename;
+    for (let item of csbooklist_source_global_b){
+        if (item[0]==filename){
+            bookname_t=item[1];
             break;
         }
     }
-    return str_t;
+    return bookname_t;
 }
 
 function booklist_source_config_b(is_digest=false){
@@ -477,7 +479,9 @@ function load_current_book_b(load_digest_file=false){
         blhref='../jsdata/';
     }
     document.write('<SCRIPT language=JavaScript src="'+blhref+'booklist_current_data.js"></script>\n');
+    console.log(blhref+'booklist_current_data.js');
     if (load_digest_file){
         document.write('<SCRIPT language=JavaScript src="'+blhref+'digestlist_data.js"></script>\n');
+        console.log(blhref+'digestlist_data.js');
     }
 } 

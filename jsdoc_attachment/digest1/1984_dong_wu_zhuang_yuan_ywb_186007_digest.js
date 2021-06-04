@@ -91,4 +91,5 @@ var digest_global=`
 *exile
 *invertebrate
 *rosebud
+*newsflash
 `.trim().split('\n');

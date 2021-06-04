@@ -5,14 +5,17 @@
 <script language="javascript" type="text/javascript" src="../hard_ln_io/jquery.js"></script>
 <SCRIPT language=JavaScript src="../hard_ln_io/klbase.js"></SCRIPT>
 <script language="javascript">
-klbase_addons_import_js_b(['css','date','books','eng','en_de_str','wiki','flot','txtlistsearch'],[],['words/enwords_data.js','words/cnwords_data.js,defer']);
+klbase_addons_import_js_b(['css','date','books','eng','en_de_str','wiki','flot','txtlistsearch'],[],[]);//'words/enwords_data.js','words/cnwords_data.js,defer'
 </script>
 <script language="javascript">
 flot_import_js_k(['time','symbol']);    //用于显示阅读进度 - 保留注释
 </script>
 <SCRIPT language=JavaScript src="reader_idb_code.js"></SCRIPT>
 <script language="javascript">
-var csbooklist_source_global_b=[];
+load_current_book_b();
+</script>
+<script language="javascript">
+csbooklist_source_global_b.sort(function (a,b){return zh_sort_b(a,b,false,1);}); //按书名排序 - 保留注释
 var csbooklist_sub_global_b=[['','','','1','']];
 var csbookno_global_b=0;
 var csbookname_global='';
@@ -27,18 +30,20 @@ scheme_generation_b();
 css_root_style_b('17','14',['base','menu'],[],1);
 </script>
 <link rel="shortcut icon" href="reader_idb_ico/reader_idb512.png" />
+<link rel="manifest" href="reader_idb.webmanifest">
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 </head>
 <body>
 <a name=top></a>
 <h2 id="h2_title" style="margin-top:0; font-size:1.35rem;">Reader - IDB <span id="span_filename"></span><span id="span_filelength" style="font-size:0.8rem;"></span></h2>
 <div style="margin:1rem 0.5rem;">
+
 <p style="margin-bottom:0.5rem;">
 <input type="file" id="input_upload_txt">
 <span class="aclick" onclick="javascript:upload_txt_reader_idb();">Upload TXT File</span>
 <span class="aclick" onclick="javascript:upload_digest_reader_idb();">Upload Digest File</span>
-
 </p>
+
 <p style="margin-bottom:0.5rem;">
 <span id="span_idbbooklist"></span>
 <input type="text" id="input_search" style="display:none;">
@@ -55,6 +60,19 @@ css_root_style_b('17','14',['base','menu'],[],1);
 <div id="divhtml2"></div>
 <div id="div_top_bottom"></div>
 <script type="text/javascript">
+//-------------------------
+// Register service worker to control making site work offline
+if('serviceWorker' in navigator) {
+    navigator.serviceWorker
+        .register('reader_idb_service_worker.js')
+        .then(function() { 
+            document.getElementById('h2_title').style.color=scheme_global['a'];
+        });
+}
+else {
+    document.getElementById('h2_title').style.color=scheme_global['color'];
+}
+//-------------------------
 init_reader_idb();
 track_source_b('reader_idb',false);
 if (!is_firefox_b(false)){

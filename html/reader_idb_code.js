@@ -38,12 +38,89 @@ function menu_reader_idb(){
     '<span class="span_menu" onclick="javascript:'+str_t+'bookname_set_reader_idb();">当前书籍书名修改</span>',
     ];
 
+    var blhref=location.href;
+    if (blhref.substring(0,5)!=='file:'){
+        klmenu1.push('<span class="span_menu" onclick="javascript:'+str_t+'remote_book_list_reader_idb();">读取远程书籍</span>');
+    }
+    
     var klmenu2=[
+    '<span class="span_menu" onclick="javascript:'+str_t+'remove_current_book_reader_idb();">移除当前书籍</span>',    
     '<span class="span_menu" onclick="javascript:'+str_t+'center_reader_idb(\'clear_all\');">清空所有书籍</span>',    
     '<span class="span_menu" onclick="javascript:'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'reader_idb\');}">更新版本</span>',        
     ];
 
     document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','12rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'⚙','10rem','1rem','1rem','60rem'),'','0rem')+' ');
+}
+
+function remove_current_book_reader_idb(){
+    if (csbookname_global==''){return;}
+    var blid=-1;
+    var bookname='';
+    for (let item of idbfilename_list_global){
+        if (item[1]==csbookname_global){
+            blid=item[0];
+            bookname=item[2];
+            break;
+        }
+    }
+    
+    if (!confirm("是否移除当前书籍："+bookname+"？")){return;}
+
+    center_reader_idb('delete','',blid);
+}
+
+function remote_book_list_reader_idb(){
+    var odiv=document.getElementById('divhtml2');
+    var oinput=document.getElementById('input_remote_book_filter');
+    if (oinput){
+        odiv.innerHTML='';
+        return;
+    }
+    var bljg='<hr />\n';
+    bljg=bljg+'<p style="margin:0.5rem;">';
+    bljg=bljg+'<input type="text" id="input_remote_book_filter" placeholder="远程书籍筛选" onkeyup="javascript:if (event.key==\'Enter\'){remote_book_filter_reader_idb(this.value);}"> ';
+    bljg=bljg+'<span class="aclick" onclick="javascript:document.getElementById(\'divhtml2\').innerHTML=\'\';">Close</span>';
+    bljg=bljg+'</p>\n';
+    bljg=bljg+'<hr />\n';
+    
+    var list_t=[];
+    for (let item of csbooklist_source_global_b){
+        list_t.push('<span class="span_link" onclick="javascript:remote_book_import_reader_idb(\''+specialstr_j(item[0],false)+'\',\''+item[3]+'\');">'+item[1]+'</span>');
+    }
+    odiv.innerHTML=bljg+'<div style="margin:0.5rem;'+(ismobile_b()?'':'column-count:2;')+'">'+array_2_li_b(list_t,'li','ol','ol_remote_book_list')+'</div>';
+    input_with_x_b('input_remote_book_filter',16);
+    odiv.scrollIntoView();
+}
+
+function remote_book_filter_reader_idb(cskey){
+    var olis=document.querySelectorAll('ol#ol_remote_book_list li');
+    var blreg=false;
+    if (cskey.slice(-4,)=='(:r)'){
+        blreg=true;
+        cskey=cskey.slice(0,-4).trim();
+    }
+    obj_search_show_hide_b(olis,'',cskey,blreg);
+}
+
+function remote_book_import_reader_idb(filename,jsdoc_num){
+    var bookname=filename_2_bookname_b(filename);
+    if (!confirm("是否载入文件："+bookname+"？")){return;}
+    
+    var blpath_name=book_path_b(jsdoc_num)+filename+'.js';
+    var allText=read_txt_file_b(blpath_name);
+
+    try {
+        eval(allText);  //var filelist 此时是局部变量 - 保留注释
+        if (filelist.length==0){
+            alert('远程文件无适合内容：'+blpath_name);  
+            return;                        
+        }
+        generate_list_reader_idb(filename,filelist);
+    }
+    catch (error) {
+        alert('解读错误：'+blpath_name);  
+        return;
+    }
 }
 
 function jsdoc_no_change_reader_idb(ospan){
@@ -143,8 +220,6 @@ function upload_txt_reader_idb(){
         }
         var blfname=ofile.name.substring(0,ofile.name.lastIndexOf('.'));
         generate_list_reader_idb(blfname,filelist);
-        document.getElementById('span_filename').innerHTML=blfname;
-        document.getElementById('span_filelength').innerHTML='('+filelist.length+')';
     }
 }
 
@@ -160,6 +235,7 @@ function generate_digest_reader_idb(cslist){
 
 function refresh_book_list_reader_idb(){
     var result_t=[];
+    idbfilename_list_global.sort(function (a,b){return zh_sort_b(a,b,false,2);});
     for (let item of idbfilename_list_global){
         result_t.push('<span class="oblong_box" onclick="javascript:choose_reader_idb('+item[0]+');">'+item[2]+'</span>');
     }
@@ -198,12 +274,15 @@ function filename_list_reader_idb(db){
             var cursor = event.target.result;
             if (cursor) {
                 if (cursor.value.type=='n'){
-                    var bookname_t=cursor.value.content;
+                    var bookname_t='';
                     for (let item of fname_bookname_list){
                         if (item[0]==cursor.value.content && item.length>1){
                             bookname_t=item[1];
                             break;
                         }
+                    }
+                    if (bookname_t==''){
+                        bookname_t=filename_2_bookname_b(cursor.value.content);
                     }
                     idbfilename_list_global.push([cursor.value.id,cursor.value.content,bookname_t]);
                 }
@@ -214,6 +293,17 @@ function filename_list_reader_idb(db){
                 var current_idb_book_id=args_reader_idb();
                 if (current_idb_book_id>=0){
                     center_reader_idb('read','',current_idb_book_id);
+                }
+                else if (idbfilename_list_global.length>0) {
+                    center_reader_idb('read','',idbfilename_list_global[0][0]);
+                }
+                else {  //不能使用 locaiton.reload()  或 location.href='?' - 保留注释
+                    document.getElementById('divhtml').innerHTML='';
+                    document.getElementById('span_filename').innerHTML='';
+                    document.getElementById('span_filelength').innerHTML='';  
+                    document.title='';
+                    csbooklist_sub_global_b[csbookno_global_b][0]='';
+                    csbooklist_sub_global_b[csbookno_global_b][1]='';        
                 }
                 resolve(true);
             }
@@ -288,10 +378,58 @@ function one_book_reader_idb(db,bookid){
             else {
                 document.getElementById('span_filename').innerHTML=bookname_t;
                 document.getElementById('span_filelength').innerHTML='('+filelist.length+')';     
+                document.title=bookname_t;
                 csbooklist_sub_global_b[csbookno_global_b][0]=csbookname_global;
                 csbooklist_sub_global_b[csbookno_global_b][1]='《'+csbookname_global+'》';
                 digest_temp_load_kltxt_b();
                 getlines_kltxt_b();
+                resolve(true);
+            }
+        };
+    });
+}
+
+function delete_reader_idb(db,bookid){
+    return new Promise((resolve, reject) => {
+        var transaction = db.transaction(['reader_txt_dbf'], "readwrite");
+        transaction.onerror = function(event) {
+            console.log('transaction error');
+        };
+
+        var otable = transaction.objectStore('reader_txt_dbf');
+        otable.onsuccess = function (event) {
+            console.log('dbf 打开成功');
+        };
+        otable.onerror = function (event) {
+            console.log('dbf 打开失败');
+        }
+
+        var bookname_t='';
+        for (let item of idbfilename_list_global){
+            if (item[0]==bookid){
+                csbookname_global=item[1];
+                bookname_t=item[2];
+                break;
+            }
+        }
+        
+        otable.openCursor().onsuccess = function (event) {
+            var cursor = event.target.result;
+            if (cursor) {
+                if (cursor.value.id==bookid){
+                    var blcontent=cursor.value.content;
+                    var delete_request = cursor.delete();
+                    delete_request.onsuccess = function() {
+                        //do nothing - 保留注释
+                    };
+                    delete_request.onerror = function() {
+                        console.log('delete error:',bookid,blcontent);
+                    }                    
+                }
+                cursor.continue();
+            }
+            else {
+                center_reader_idb('list');
                 resolve(true);
             }
         };
@@ -342,7 +480,7 @@ function write_reader_idb(db,filename,cslist){
                     document.title='IDB数据写入完毕，现有记录 '+ocount3.result+' 条';
                 }
                 
-                var bookname_t=filename;
+                var bookname_t='';
                 var fname_bookname_list=local_storage_get_b('reader_idb_filename_bookname',-1,true);
                 for (let item of fname_bookname_list){
                     if (!item.includes(' /// ')){continue;}
@@ -351,8 +489,12 @@ function write_reader_idb(db,filename,cslist){
                         bookname_t=list_t[1];
                     }
                 }
+                if (bookname_t==''){
+                    bookname_t=filename_2_bookname_b(filename);
+                }      
                 idbfilename_list_global.push([maxid,filename,bookname_t]);
                 refresh_book_list_reader_idb();
+                choose_reader_idb(maxid);
             }
             else {
                 console.log(new Date().toLocaleTimeString(),'书籍已存在');
@@ -486,6 +628,14 @@ function center_reader_idb(cstype='',filename='',bookid=-1,cslist=[]){
                     }
                     center_reader_idb_write();
                     break;
+                case 'delete':
+                    async function center_reader_idb_delete() {
+                        console.log('center_reader_idb_delete()');
+                        await delete_reader_idb(db,bookid);
+                        resolve(true);
+                    }
+                    center_reader_idb_delete();
+                    break;                                        
                 case 'clear_all':
                     var rndstr=randstr_b(4,true,false);
                     if ((prompt('输入 '+rndstr+' 确认清空全部书籍') || '').trim()!==rndstr){break;}

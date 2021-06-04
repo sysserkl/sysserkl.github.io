@@ -157,6 +157,7 @@ function more_tools_klrecent(){
     ['html/qrimg.htm','qrimg'],
     ['html/reader_card.htm', 'reader card'],
     ['html/reader.htm', 'reader'],
+    ['html/reader_idb.htm','reader idb'],    
     ['html/rnd_english_words.htm', '随机单词'],
     ['html/routines.htm', 'routines'],
     ['html/screen_clock.htm','Clock'],
