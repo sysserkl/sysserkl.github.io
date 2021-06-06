@@ -230,6 +230,7 @@ function en_search_sites_b(dictcn=true,maxlength=-1){
     ['E','Englishwords Book Search'],
     ['s','Selenium_news_reader'],
     ['4','海词+Bing+Merriam-webster+Oxford'],
+    ['k','KL Search'],
     ]); //不可排序 - 保留注释
     if (maxlength>0){
         list_t=list_t.slice(0,maxlength);
@@ -337,6 +338,8 @@ function open_link_en_b(cstype,csword){
             window.open('https://www.merriam-webster.com/dictionary/'+web_href_key_b(csword,'+',true));            
             window.open('https://www.oxfordlearnersdictionaries.com/definition/english/'+web_href_key_b(csword,'-',true));
             break;
+        case 'k':
+            window.open('PythonTools/data/selenium_news/html/klsearch.htm?k='+encodeURIComponent(csword)+'&t=dict.cn,bing(cn),merriam-webster,cambridge,collins(p),youdao,iciba,cambridge_cn,wordreference_cn&iframe');            
     }
 }
 
