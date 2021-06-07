@@ -4,4 +4,5 @@ var digest_global=`
 *driftage
 *psychohistorian
 *vanadium
+*doubtfully
 `.trim().split('\n');

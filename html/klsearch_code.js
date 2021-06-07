@@ -180,7 +180,10 @@ function args_klsearch(){
         if (xl_list.length>0){
             show_iframe_klsearch(xl_list[0]);
         }
-        odiv.scrollIntoView();
+        document.getElementById('div_title_klsearch').style.display='none';
+        document.getElementById('div_recent_search').style.display='none';
+        document.getElementById('div_search').style.display='none';
+        //odiv.scrollIntoView();
     }
     else {
         var is_proxy=false;
