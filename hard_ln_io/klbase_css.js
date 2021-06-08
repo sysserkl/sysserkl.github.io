@@ -1406,6 +1406,26 @@ function obj_search_show_hide_b(objs,subobj_querystr='',cskey='',csreg=false,che
     }
 }
 
+function highlight_obj_b(obj,search_str,new_str){
+    var old_txt=obj.innerText;
+    var old_html=obj.innerHTML;
+    try{
+        if (old_html.match(search_str)==null){return 0;}
+        var new_html=old_html.replace(new RegExp(search_str,'g'),new_str);
+    }
+    catch (error){
+        console.log(error.message);
+        return -1;
+    }
+    
+    obj.innerHTML=new_html;
+    if (obj.innerText!==old_txt){
+        obj.innerHTML=old_html;
+        return false;
+    }
+    return true;
+}
+
 function sound_b(cstype){
     var sfile=klwebphp_path_b('sound/'+cstype+'.wav');
     if (sfile===false && location.href.includes('/html/')){ //for git remote address - 保留注释

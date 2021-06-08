@@ -61,9 +61,10 @@ function menu_bible(){
     
     var klmenu_idb=[
     '<span class="span_menu" onclick="javascript:'+str_t+'idb_bible(\'count\');">统计 IDB 记录数</span>',     
-    '<span class="span_menu" onclick="javascript:'+str_t+'if (confirm(\'是否从 IDB 导入数据？\')){load_data_bible(true);}">从 IDB 导入数据</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'if (confirm(\'是否从 IDB 读取数据？\')){load_data_bible(true);}">从 IDB 读取数据</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'if (confirm(\'是否写入数据到 IDB？\')){idb_bible(\'write\');}">写入数据到 IDB</span>', 
     '<span class="span_menu" onclick="javascript:'+str_t+'if (confirm(\'是否清除 IDB 数据？\')){idb_bible(\'clear\');}">清除 IDB 数据</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'compare_data_bible();">比较 js 和 IDB 数据</span>',    
     ];
     
     var klmenu3=[
@@ -92,6 +93,105 @@ function menu_bible(){
     }
     
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'✝','14rem',button_fontsize,menu_fontsize,'60rem')+klmenu_b(klmenu2,'⚙','14rem',button_fontsize,menu_fontsize,'60rem')+klmenu_b(klmenu_idb,'ℹ','14rem',button_fontsize,menu_fontsize,'60rem')+klmenu_b(klmenu3,'🌐','16rem',button_fontsize,menu_fontsize,'60rem')+klmenu_b(color_menu,'🎨','20rem',button_fontsize,menu_fontsize,'20rem'),'','0rem')+' ');
+}
+
+function compare_data_bible(){
+    async function sub_compare_data_bible_get_old_data(){
+        await idb_bible('read',true);
+        var len_min=Math.min(kjv.length,cnbible_global.length,enbible_old_global.length,cnbible_old_global.length);
+        var diff_td_list=[];
+        var diff_str_js_list=[];
+        var diff_str_idb_list=[];
+        var character_list=[];
+        var js_list=[];
+        var idb_list=[];
+        var blno=1;
+        var subchapter_no;
+        var subchapter_name='';
+        for (let blxl=0;blxl<len_min;blxl++){
+            if (kjv[blxl].substring(0,4)=='=== ' && kjv[blxl].slice(-4,)==' ==='){
+                subchapter_no=blxl;
+            }
+            if (kjv[blxl]!==enbible_old_global[blxl]){
+                subchapter_name=kjv[subchapter_no].slice(4,-4);
+                diff_td_list.push('<td align=right>'+blno+'</td><td align=right style="cursor:pointer;" onclick="javascript:book_bible(\''+subchapter_name.replace(new RegExp(/(\d+)$/,'g'),'_$1')+kjv[blxl].split(' ')[0]+'\');">'+subchapter_name+'</td><td class="td_compare_bible">'+kjv[blxl]+'</td><td class="td_compare_bible">'+enbible_old_global[blxl]+'</td>');
+                diff_str_js_list.push(kjv[blxl]);
+                diff_str_idb_list.push(enbible_old_global[blxl]);
+                
+                js_list=kjv[blxl].split('');
+                idb_list=enbible_old_global[blxl].split('');
+                character_list=character_list.concat(array_difference_b(js_list,idb_list));
+                character_list=character_list.concat(array_difference_b(idb_list,js_list));
+                blno=blno+1;
+            }
+            if (cnbible_global[blxl]!==cnbible_old_global[blxl]){
+                subchapter_name=cnbible_global[subchapter_no].slice(4,-4);
+                diff_td_list.push('<td align=right>'+blno+'</td><td style="cursor:pointer;" align=right onclick="javascript:book_bible(\''+subchapter_name.replace(new RegExp(/(\d+)$/,'g'),'_$1')+'_'+cnbible_global[blxl].split(' ')[0]+'\');">'+subchapter_name+'</td><td class="td_compare_bible">'+cnbible_global[blxl]+'</td><td class="td_compare_bible">'+cnbible_old_global[blxl]+'</td>');       
+                diff_str_js_list.push(cnbible_global[blxl]);
+                diff_str_idb_list.push(cnbible_old_global[blxl]);
+                                
+                js_list=cnbible_global[blxl].split('');
+                idb_list=cnbible_old_global[blxl].split('');
+                character_list=character_list.concat(array_difference_b(js_list,idb_list));
+                character_list=character_list.concat(array_difference_b(idb_list,js_list));
+                blno=blno+1;
+            }
+            if (blno>=400){break;}
+        }
+        
+        character_list=array_unique_b(character_list);
+        var bljg='<table id="table_compare_bible" class="table_common" cellspacing=0><tr><th>No.</th><th>Book</th><th>js</th><th>idb</th></tr>\n'+array_2_li_b(diff_td_list,'tr',false,'','','')+'</table>';
+        bljg=bljg+array_2_li_b(character_list);
+        //---
+        var diff_str_list=diff_str_js_list.concat(diff_str_idb_list);
+        if (character_list.length==2){
+            var len_old=diff_str_list.length;
+            try{
+                for (let blxl=0;blxl<len_old;blxl++){
+                    diff_str_list[blxl]=diff_str_list[blxl].replace(new RegExp(character_list[0],'g'),character_list[1]);
+                }
+            }
+            catch (error){
+                console.log(error.message);
+            }    
+            diff_str_list=array_unique_b(diff_str_list);
+            bljg=bljg+'<div id="div_compare_bible">';
+            bljg=bljg+'<p>将 '+character_list[0]+' 替换为 '+character_list[1]+' 之后，结果行数从 '+len_old+' 行变为 '+diff_str_list.length+' 行</p>';
+            bljg=bljg+array_2_li_b(diff_str_list);
+            bljg=bljg+'</div>';
+            //---
+            diff_str_list.sort();
+            var blstr=diff_str_list.join('\n');
+            diff_str_js_list.sort();
+            diff_str_idb_list.sort();
+            if (blstr==diff_str_js_list.join('\n')){
+                bljg=bljg+'<h4>与 js 一致</h4>';
+            }
+            else if (blstr==diff_str_idb_list.join('\n')){
+                bljg=bljg+'<h4>与 idb 一致</h4>';
+            }
+            else {
+                bljg=bljg+'<h4>与 js 和 idb 都不一致</h4>';
+            }
+        }
+        //---
+        document.getElementById('divhtml').innerHTML='<div style="margin:0.5rem;" >'+bljg+'</div>';
+        var is_ok;
+        var otds=document.querySelectorAll('table#table_compare_bible td.td_compare_bible,div#div_compare_bible p,div#div_compare_bible li');
+        for (let one_td of otds){
+            for (let one_character of character_list){
+                is_ok=highlight_obj_b(one_td,one_character,'<span style="background-color:'+scheme_global['pink']+';">'+one_character+'</span>');
+                if (is_ok===-1){break;}
+                else if (is_ok===false){
+                    one_td.insertAdjacentHTML('beforeend','💡<span style="background-color:'+scheme_global['pink']+';">'+one_character+'</span>');
+                }
+            }
+        }
+
+        enbible_old_global=[];
+        cnbible_old_global=[];
+    }
+    sub_compare_data_bible_get_old_data();
 }
 
 function args_bible(){
@@ -681,8 +781,9 @@ function help_bible(){
     bljg=bljg+'<li><a href="?b=启2:4" target=_blank>bible.htm?b=启2:4&alone</a></li>';
     
     bljg='<ul style="margin-left:2rem;">'+bljg+'</ul>';
-    bljg=bljg+'<p style="margin-left:2rem;">ver: 0.1.1- 20200619</p>'
+    bljg=bljg+'<p style="margin-left:2rem;">ver: 0.1.2- 20210607</p>'
     //history:
+    //0.1.2- 20210607 增加 js 和 idb 对比功能
     //0.1.1- 20200619 FAV分页 继续搜索
     //0.1.0 -20200613 增加收藏功能
     //0.0.9-20200413 增加 PWA Cache 清除
@@ -1138,7 +1239,7 @@ function refresh_use_bible(csupdate=false){
     }
 }
 
-function idb_read_bible(db){
+function idb_read_bible(db,is_old=false){
     return new Promise((resolve, reject) => {
         var transaction = db.transaction(['bible_dbf'], "readonly");
         //transaction.oncomplete = function(event) {
@@ -1156,20 +1257,28 @@ function idb_read_bible(db){
             console.log('dbf 打开失败');
         }    
                 
-        kjv=[];
-        cnbible_global=[];            
+        var en_list=[];
+        var cn_list=[];            
         otable.openCursor().onsuccess = function (event) {
             var cursor = event.target.result;
             if (cursor) {
                 if (cursor.value.type=='en'){
-                    kjv.push(cursor.value.text);
+                    en_list.push(cursor.value.text);
                 }
                 else if (cursor.value.type=='cn'){
-                    cnbible_global.push(cursor.value.text);
+                    cn_list.push(cursor.value.text);
                 }
                 cursor.continue();
             }
             else {
+                if (is_old){
+                    enbible_old_global=en_list;
+                    cnbible_old_global=cn_list;                                  
+                }
+                else {
+                    kjv=en_list;
+                    cnbible_global=cn_list;                        
+                }
                 resolve(true);
             }
         };
@@ -1368,7 +1477,7 @@ function load_filelist_bible(do_init=true){
     document.write('</script>\n');
 }
 
-function idb_bible(cstype=''){
+function idb_bible(cstype='',is_old=false){
     return new Promise((resolve, reject) => {
         var bljg=0;
         var db;
@@ -1389,7 +1498,7 @@ function idb_bible(cstype=''){
                 case 'read':
                     async function sub_idb_bible_read() {
                         console.log('sub_idb_bible_read()');
-                        await idb_read_bible(db);
+                        await idb_read_bible(db,is_old);
                         resolve(true);
                     }
                     sub_idb_bible_read();
