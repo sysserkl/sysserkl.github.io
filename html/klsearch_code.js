@@ -183,7 +183,7 @@ function args_klsearch(){
         document.getElementById('div_title_klsearch').style.display='none';
         document.getElementById('div_recent_search').style.display='none';
         document.getElementById('div_search').style.display='none';
-        //odiv.scrollIntoView();
+        document.title=blkey+' - KLSearch';
     }
     else {
         var is_proxy=false;

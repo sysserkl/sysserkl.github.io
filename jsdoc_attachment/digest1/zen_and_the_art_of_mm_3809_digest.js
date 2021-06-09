@@ -3,4 +3,7 @@ var digest_global=`
 *methodological
 *overprice
 *washbowl
+*Hegelian
+*nonexclusive
+*voltmeter
 `.trim().split('\n');

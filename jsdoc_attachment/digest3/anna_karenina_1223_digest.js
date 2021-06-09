@@ -132,4 +132,5 @@ var digest_global=`
 *diplomat
 *insurmountable
 *undeveloped
+*misspelt
 `.trim().split('\n');
