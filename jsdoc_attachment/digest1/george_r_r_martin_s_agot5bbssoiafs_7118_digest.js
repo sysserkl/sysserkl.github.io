@@ -61,4 +61,5 @@ var digest_global=`
 *misjudgment
 *unskilled
 *untrained
+*odorless
 `.trim().split('\n');
