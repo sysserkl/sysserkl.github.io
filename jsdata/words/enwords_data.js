@@ -2852,7 +2852,7 @@ var enwords=[
 ["convert", "[kən'vɜːrt]", "v. (使)转变；转化；兑换；换算；使…改变信仰；n. 皈依者；改变信仰的人"],
 ["conveyance", "[kən'veɪəns]", "n. 传送；运送；输送；运输工具；运载工具；交通工具；the action of conveying; the process of taking somebody/something from one place to another; a vehicle or method of transport; the process of transporting goods from one place to another; n. [法律]财产让与；a legal document that moves property from one owner to another; a legal document that officially gives to someone the rights to land or property"],
 ["convey", "[kən'veɪ]", "vt. 运输；转移；表达；传达"],
-["conviction", "[kən'vɪkʃn]", "n. 坚信；定罪；信服；深信"],
+["conviction", "[kən'vɪkʃn]", "n. 定罪；坚信；信服；深信"],
 ["convict", "[kən'vɪkt]", "vt. 宣判 ... 有罪；使 ... 知罪；n. 囚犯；罪犯；adj. 被定罪的"],
 ["convince", "[kən'vɪns]", "vt. 说服；使信服；使确信"],
 ["convoy", "noun. UK ['kɒnvɔɪ] US [ˈkɑːnvɔɪ] verb. [kənˈvɔɪ]", "n. 护航队；护送；护卫；警护；a group of vehicles or ships travelling together, especially when soldiers or other vehicles travel with them for protection; v. 护航；护送"],
