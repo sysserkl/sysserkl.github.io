@@ -208,6 +208,44 @@ function wgs84togcj02_b(lng, lat){
         return [mglng, mglat];
     }
 }
+
+function bd09togcj02_b(bd_lng, bd_lat) {
+    //百度坐标系 (BD-09) 转 火星坐标系 (GCJ-02)
+    var bd_lng = +bd_lng;
+    var bd_lat = +bd_lat;
+    var x = bd_lng - 0.0065;
+    var y = bd_lat - 0.006;
+    var x_PI = 3.14159265358979324 * 3000.0 / 180.0;
+    var z = Math.sqrt(x * x + y * y) - 0.00002 * Math.sin(y * x_PI);
+    var theta = Math.atan2(y, x) - 0.000003 * Math.cos(x * x_PI);
+    var gg_lng = z * Math.cos(theta);
+    var gg_lat = z * Math.sin(theta);
+    return [gg_lng, gg_lat];
+}
+
+function gcj02tobd09_b(lng, lat) {
+    //火星坐标系 (GCJ-02) 转百度坐标系 (BD-09) 
+    var lng = +lng;
+    var lat = +lat;
+    var x_PI = 3.14159265358979324 * 3000.0 / 180.0;
+    var z = Math.sqrt(lng * lng + lat * lat) + 0.00002 * Math.sin(lat * x_PI);
+    var theta = Math.atan2(lat, lng) + 0.000003 * Math.cos(lng * x_PI);
+    var bd_lng = z * Math.cos(theta) + 0.0065;
+    var bd_lat = z * Math.sin(theta) + 0.006;
+    return [bd_lng, bd_lat];
+}
+
+function wgs84tobd09_b(lng, lat){
+    //WGS84 转百度坐标系 (BD-09) 
+    [lng, lat]=wgs84togcj02_b(lng,lat);
+    return gcj02tobd09_b(lng,lat);
+}
+
+function bd09towgs84_b(lng, lat){
+    //百度坐标系 (BD-09) 转 WGS84
+    [lng, lat]=bd09togcj02_b(lng,lat);
+    return gcj02towgs84_b(lng,lat);
+}
   
 function out_of_china_b(lng, lat) {
     // 纬度 3.86~53.55, 经度 73.66~135.05 
@@ -230,4 +268,69 @@ function transformlat_b(lng, lat){
     ret += (20.0 * Math.sin(lat * PI) + 40.0 * Math.sin(lat / 3.0 * PI)) * 2.0 / 3.0;
     ret += (160.0 * Math.sin(lat / 12.0 * PI) + 320 * Math.sin(lat * PI / 30.0)) * 2.0 / 3.0;
     return ret;
+}
+
+function transform_lng_lat_dots_b(csstr,cstype=''){
+    var list_t=csstr.trim().replace(new RegExp(/\r\n/,'mg'),'\n').replace(new RegExp(/\n/,'mg'),';').split(';');
+    var result_t=[];
+    for (let aline of list_t){
+        var line_t=[];
+        var line_dots=aline.split(',');
+        for (let one_lng_lat of line_dots){
+            one_lng_lat=one_lng_lat.trim().split(' ');
+            if (one_lng_lat.length!==2){continue;}
+            [lon_value,lat_value]=one_lng_lat;
+            if (cstype!==''){
+                [lon_value,lat_value]=transform_lon_lat_one_dot_b(cstype,lon_value,lat_value);
+            }
+            line_t.push([lon_value,lat_value]);
+        }
+        if (line_t.length>0){
+            result_t.push(line_t);
+        }
+    }
+    return result_t;
+}
+
+function transform_lon_lat_one_dot_b(cstype,lon,lat){
+    cstype=cstype.toUpperCase();
+    switch (cstype){
+        case 'WGS84_TO_GCJ02':
+        case 'W2G':
+        case 'WTOG':
+        case 'WG':
+            [lon,lat]=wgs84togcj02_b(lon, lat);
+            break;
+        case 'GCJ02_TO_WGS84':
+        case 'G2W':
+        case 'GTOW':
+        case 'GW':
+            [lon,lat]=gcj02towgs84_b(lon, lat);
+            break;
+        case 'BD09_TO_GCJ02':
+        case 'B2G':
+        case 'BTOG':
+        case 'BG':
+            [lon,lat]=bd09togcj02_b(lon, lat);
+            break;        
+        case 'BD09_TO_WGS84':
+        case 'B2W':
+        case 'BTOW':
+        case 'BW':
+            [lon,lat]=bd09towgs84_b(lon, lat);
+            break;
+        case 'GCJ02_TO_BD09':
+        case 'G2B':
+        case 'GTOB':
+        case 'GB':
+            [lon,lat]=gcj02tobd09_b(lon, lat);
+            break;
+        case 'WGS84_TO_BD09':
+        case 'W2B':
+        case 'WTOB':
+        case 'WB':
+            [lon,lat]=wgs84tobd09_b(lon, lat);
+            break;        
+    }
+    return [lon,lat];
 }

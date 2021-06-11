@@ -37,4 +37,5 @@ var digest_global=`
 *lorry
 *undercarriage
 *Sudanese
+*biplane
 `.trim().split('\n');

@@ -75,17 +75,6 @@ function draw_gpx_gps_points(cslist=false,csname='',dotransform=false,draw_lines
     }
 }
 
-function transform_lon_lat_gps_points(cstype,lon,lat){
-    cstype=cstype.toUpperCase();
-    if (['WGS84_TO_GCJ02','W2G','WTOG','WG'].includes(cstype)){
-        [lon,lat]=wgs84togcj02_b(lon, lat);
-    }
-    else if (['GCJ02_TO_WGS84','G2W','GTOW','GW'].includes(cstype)){
-        [lon,lat]=gcj02towgs84_b(lon, lat);
-    }
-    return [lon,lat];
-}
-
 function transform_dotlines_gps_points(cslist=false,cstype=false,write_to_textarea=false){
     if (cslist===false){
         cslist=data_lines_2_latlon_gps_points('','latlon');   //返回为 lat,lon 格式 - 保留注释
@@ -96,7 +85,7 @@ function transform_dotlines_gps_points(cslist=false,cstype=false,write_to_textar
     var bllon;
     var bllat;
     for (let blxl=0;blxl<cslist.length;blxl++){
-        [bllon,bllat]=transform_lon_lat_gps_points(cstype,cslist[blxl][1],cslist[blxl][0]);
+        [bllon,bllat]=transform_lon_lat_one_dot_b(cstype,cslist[blxl][1],cslist[blxl][0]);
         cslist[blxl]=[bllat,bllon];
     }
 
@@ -141,7 +130,7 @@ function read_gpx_gps_points(csstr,csname=''){
                 var bllon=lonlat.split('lon=')[1].split(' ')[0].replace(new RegExp(/['"]/,'g'),'');
                 bllat=parseFloat(bllat);
                 bllon=parseFloat(bllon);
-                [bllon,bllat]=transform_lon_lat_gps_points(bltype,bllon,bllat);
+                [bllon,bllat]=transform_lon_lat_one_dot_b(bltype,bllon,bllat);
                 result_list.push([bllat,bllon]);
             }
         }
@@ -186,7 +175,7 @@ function arrays_gps_points(csstr){
             }
         }
         if (bllat!==0 && bllon!==0){
-            [bllon,bllat]=transform_lon_lat_gps_points(bltype,bllon,bllat);        
+            [bllon,bllat]=transform_lon_lat_one_dot_b(bltype,bllon,bllat);        
             
             result_t.push([parseInt(blyear) || 9999,bllon,bllat]);  //年份，经度，纬度 - 保留注释
         }
@@ -280,7 +269,7 @@ function lines_gps_points(csstr=''){
     var bllon;
     var bllat;
     for (let blxl=0;blxl<result_t.length;blxl++){
-        [bllon,bllat]=transform_lon_lat_gps_points(bltype,result_t[blxl][1],result_t[blxl][0]);
+        [bllon,bllat]=transform_lon_lat_one_dot_b(bltype,result_t[blxl][1],result_t[blxl][0]);
         result_t[blxl]=[bllat,bllon];
     }
     
@@ -311,7 +300,7 @@ function circle_gps_points(csstr,dotransform=true,layertype='navigation',dopanto
             var lon = parseFloat(onecircle[0]);
             var lat  = parseFloat(onecircle[1]);
             if (dotransform){
-                [lon,lat]=transform_lon_lat_gps_points(bltype,lon,lat);
+                [lon,lat]=transform_lon_lat_one_dot_b(bltype,lon,lat);
             }
             
             var ocircle=circle_leaflet_b(omap_gps_points_global,true,lon,lat,one_radius,blcolor,'',0);
@@ -325,7 +314,7 @@ function circle_gps_points(csstr,dotransform=true,layertype='navigation',dopanto
         var lon = parseFloat(onecircle[0]);
         var lat  = parseFloat(onecircle[1]);
         if (dotransform){
-            [lon,lat]=transform_lon_lat_gps_points(bltype,lon,lat);
+            [lon,lat]=transform_lon_lat_one_dot_b(bltype,lon,lat);
         }
         if (dopanto){
             omap_gps_points_global.panTo(new L.LatLng(lat,lon));
@@ -357,7 +346,7 @@ function rectangle_gps_points(csstr,dotransform=true,layertype='navigation',dopa
             var lon = parseFloat(onerect[0]);
             var lat  = parseFloat(onerect[1]);
             if (dotransform){
-                [lon,lat]=transform_lon_lat_gps_points(bltype,lon,lat);            
+                [lon,lat]=transform_lon_lat_one_dot_b(bltype,lon,lat);            
             }
             
             var orectangle=rectangle_leaflet_b(omap_gps_points_global,true,lon,lat,longline,shortline,blcolor);
@@ -372,7 +361,7 @@ function rectangle_gps_points(csstr,dotransform=true,layertype='navigation',dopa
         var lon = parseFloat(onerect[0]);
         var lat  = parseFloat(onerect[1]);
         if (dotransform){
-            [lon,lat]=transform_lon_lat_gps_points(bltype,lon,lat);           
+            [lon,lat]=transform_lon_lat_one_dot_b(bltype,lon,lat);           
         }
         if (dopanto){
             omap_gps_points_global.panTo(new L.LatLng(lat,lon));
@@ -396,7 +385,7 @@ function current_position_gps_points(){
             var lon = position.coords.longitude;
             var lat  = position.coords.latitude;
             var bltype=document.getElementById('select_transform').value;
-            [lon,lat]=transform_lon_lat_gps_points(bltype,lon,lat);
+            [lon,lat]=transform_lon_lat_one_dot_b(bltype,lon,lat);
             
             document.getElementById('div_status').innerHTML='lat,lng: '+lat+','+lon;
             omap_gps_points_global.panTo(new L.LatLng(lat,lon));
@@ -474,7 +463,7 @@ function init_gps_points(){
         var bltype=document.getElementById('select_transform').value;    
         var bllon;
         var bllat;
-        [bllon,bllat]=transform_lon_lat_gps_points(bltype,ev.latlng.lng,ev.latlng.lat);
+        [bllon,bllat]=transform_lon_lat_one_dot_b(bltype,ev.latlng.lng,ev.latlng.lat);
         document.getElementById('div_status').innerHTML='lat,lng: '+bllat+','+bllon;
         current_layer_refresh_gps_points();
         circle_distance_show_gps_points(ev.latlng.lng,ev.latlng.lat);
@@ -784,20 +773,27 @@ function gpx_from_textarea_gps_points(){
 
 function menu_gps_points(){
     var str_t=klmenu_hide_b('');
-    var klmenu1=[];    
+    var klmenu_gpx=[];    
     if (document.location.href.substring(0,5).toLowerCase()!=='file:'){
-        klmenu1.push('<span class="span_menu" onclick="javascript:'+str_t+'gpx_file_selection_gps_points();">选择GPX文件</span>');
+        klmenu_gpx.push('<span class="span_menu" onclick="javascript:'+str_t+'gpx_file_selection_gps_points();">选择GPX文件</span>');
     }
-    klmenu1.push('<span class="span_menu" onclick="javascript:'+str_t+'remove_navigation_gps_points();">清除路线</span>');    
-    klmenu1.push('<span class="span_menu" onclick="javascript:'+str_t+
-    'lonlat_2_latlon_gps_points();">经度,纬度前后调换</span>');
-    klmenu1.push('<span class="span_menu" onclick="javascript:'+str_t+'draw_gpx_gps_points(false,\'\',true);">纬度,经度格式生成线条</span>');   
-    klmenu1.push('<span class="span_menu" onclick="javascript:'+str_t+'transform_dotlines_gps_points(false,false,true);">纬度,经度格式坐标转换</span>');    
-    klmenu1.push('<span class="span_menu" onclick="javascript:'+str_t+'latlon_2_gpx_gps_points();">纬度,经度格式生成GPX文件</span>');    
-    klmenu1.push('<span class="span_menu" onclick="javascript:'+str_t+'generate_gps_points();">生成点</span>');    
-    klmenu1.push('<span class="span_menu" onclick="javascript:'+str_t+'gpx_from_textarea_gps_points();">从编辑框显示GPX图形</span>');    
+    klmenu_gpx=klmenu_gpx.concat([
+    '<span class="span_menu" onclick="javascript:'+str_t+'remove_navigation_gps_points();">清除路线</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'gpx_from_textarea_gps_points();">从编辑框显示GPX图形</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'latlon_2_gpx_gps_points();">纬度,经度格式生成GPX文件</span>',
+    ]);
+    
+    var klmenu_dots=[
+    '<span class="span_menu" onclick="javascript:'+str_t+'lonlat_2_latlon_gps_points();">经度,纬度前后调换</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'draw_gpx_gps_points(false,\'\',true);">纬度,经度格式生成线条</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'transform_dotlines_gps_points(false,false,true);">纬度,经度格式坐标转换</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'generate_gps_points();">生成点</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'baidu_data_transform_gps_points(\'BD09_TO_WGS84\');">百度 经度 纬度,经度 纬度;经度 纬度 格式转换为WGS84</span>',    
+    '<span class="span_menu" onclick="javascript:'+str_t+'baidu_data_transform_gps_points(\'BD09_TO_GCJ02\');">百度 经度 纬度,经度 纬度;经度 纬度 格式转换为GCJ02</span>',    
+    '<span class="span_menu" onclick="javascript:'+str_t+'lng_lat_gps_points();">经度 纬度,经度 纬度;经度 纬度 格式生成线条</span>',
+    ];
 
-    var klmenu2=[
+    var klmenu_config=[
     '<span class="span_menu" onclick="javascript:'+str_t+'help_gps_points();">Help</span>',
     '<span id="span_continue_position" class="span_menu" onclick="javascript:'+str_t+'klmenu_check_b(this.id);current_position_gps_points();">⚪ 持续定位</span>',    
     '<span id="span_gpx_2_latlon" class="span_menu" onclick="javascript:'+str_t+'klmenu_check_b(this.id);">⚪ 转换gpx为纬度,经度点</span>',
@@ -807,5 +803,34 @@ function menu_gps_points(){
     '<span class="span_menu" onclick="javascript:'+str_t+'alarm_interval_set_b(0);">整点报时</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'gps_points\');}">更新版本</span>',
     ];
-    document.getElementById('input_upload_gpx').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','16rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'⚙','16rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('input_upload_gpx').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_gpx,'⛰','16rem','1rem','1rem','60rem')+klmenu_b(klmenu_dots,'','28rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','60rem'),'','0rem')+' ');
+}
+
+function baidu_data_transform_gps_points(cstype){
+    var otextarea=document.getElementById('textarea_gps_points');
+    var list_t=transform_lng_lat_dots_b(otextarea.value,cstype);
+    var result_t=[];
+    for (let one_line of list_t){
+        for (let blxl=0;blxl<one_line.length;blxl++){
+            one_line[blxl]=one_line[blxl].join(' ');
+        }
+        result_t.push(one_line);
+    }
+    otextarea.value=result_t.join(';');
+}
+
+function lng_lat_gps_points(){
+    var bltype=document.getElementById('select_transform').value;
+    var otextarea=document.getElementById('textarea_gps_points');
+    var list_t=transform_lng_lat_dots_b(otextarea.value,'');
+    for (let one_line of list_t){
+        if (one_line.length==0){continue;}    
+        for (let blxl=0;blxl<one_line.length;blxl++){
+            one_line[blxl]=[one_line[blxl][1],one_line[blxl][0]];
+        }
+        draw_gpx_gps_points(one_line,'',true);
+        
+        var last_point=transform_dotlines_gps_points(one_line.slice(-1),bltype,false);
+        omap_gps_points_global.panTo(new L.LatLng(last_point[0][0],last_point[0][1]));
+    }
 }

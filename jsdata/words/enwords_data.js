@@ -1,5 +1,13 @@
 //单词库
 var enwords=[
+["biplane", "['baɪˌpleɪn]", "n. （早期的）双翼飞机；复翼飞机；an aircraft with two main supporting surfaces usually placed one above the other; an old type of aircraft with two sets of wings, one above the other; an airplane with two sets of wings, one above and usually slightly forward of the other"],
+["policewoman", "[pə'liːsˌwʊmən]", "n. 女警察；女警官；a woman who is a member of a police force; a female member of a police force or body; a female police officer; 🈚"],
+["carsickness", "['kɑː(r)sɪknəs]", "n. 晕车；the unpleasant feeling that you are going to vomit caused by travelling in a car; the condition of feeling ill and wanting to vomit because of the movement of a car; motion sickness due to riding in a vehicle; 🈚"],
+["carsick", "['kɑː(r)ˌsɪk]", "adj. 晕车的；affected with motion sickness especially in an automobile; feeling that you want to vomit because of the movement of a car; feeling sick because you are travelling in a car; nauseated from riding in a car or other vehicle; ill with carsickness; 🈚"],
+["bioluminescence", "[ˌbaɪəʊˌluːmɪ'nes(ə)ns]", "n. 生物体发光；生物发光；生物冷光；生物荧光；the natural production of light by living creatures such as glow-worms; the emission of light from living organisms (such as fireflies, dinoflagellates, and bacteria) as the result of internal, typically oxidative chemical reactions, also: the light so produced; light created by the body of a living creature, for example by some sea creatures and insects such as fireflies; the production of light by living organisms as a result of the oxidation of a light-producing substance (luciferin) by the enzyme luciferase: occurs in many marine organisms, insects such as the firefly, etc; 🈚"],
+["antiballistic", "UK [ˌæntiːbə'lɪstɪk] US [ˌæntibəˈlɪstɪk, ˌæntai-]", "adj. 反弹道的；反导弹的；of or relating to defence against ballistic weapons; (Military): designed to detect, intercept, or destroy ballistic missiles; 🈚"],
+["experimentalism", "UK [ɪkˌspɛrɪˈmɛntəˌlɪzəm] US [ɛkˌspɛrəˈmɛntəlˌɪzəm] [ɪkˌspɛrəˈmɛntəlˌɪzəm] often [ɛkˌspɪrəˈmɛntəlˌɪzəm] [ɪkˌspɪrəˈmɛntəlˌɪzəm]", "n. 实验论；实验主义；经验主义；爱好实验或创新；reliance on or advocacy of experimental or empirical principles and procedures, specifically: instrumentalism; employment of or reliance upon experiments; empiricism; the theory or practice of depending on experimentation; doctrine or practice of relying on experimentation; fondness for experimenting or for new experiences, procedures, etc.; fondness for experimenting or innovating; 🈚"],
+["guitarist", "[ɡɪ'tɑːrɪst]", "n. 吉他弹奏者；吉他手；a person who plays the guitar; a performer on the guitar; 🈚"],
 ["odorless", "['əʊdə(r)ləs] ['oʊdə(r)lɪs]", "adj. 无气味的；无臭的；不臭的；无嗅的；without a smell; having no odor; devoid of odor or fragrance; free from odor"],
 ["chequebook", "['tʃekˌbʊk]", "n. 支票簿；=checkbook（美）；a book of printed cheques; a book of cheques with your name printed on them that is given to you by your bank to make payments with; a book containing detachable blank cheques and issued by a bank or building society to holders of cheque accounts; 🈚"],
 ["detachable", "[dɪ'tætʃəb(ə)l]", "adj. 可分开的；可分离的；可拆开的；可拆卸的；可拆下的；able to be detached; that can be taken off; capable of being detached or separated; designed to be unfastened or disconnected without damage; able to be removed and put back; 🈚"],
@@ -5336,7 +5344,7 @@ var enwords=[
 ["inadequate", "[ɪn'ædɪkwət]", "adj. 不足的；不够的；不适当的；不胜任的；不充分的；not enough; not good enough; (of people) not able, or not confident enough, to deal with a situation; not capable"],
 ["inadvertently", "[ˌɪnəd'vɜːrtəntli]", "adv. 不注意地；疏忽地；非故意地"],
 ["inalienable", "[ɪn'eɪliənəbl]", "adj. 不可剥夺（或分割）的"],
-["in all likelihood", "[in ɔ:l ˈlaiklihud]", "十有八九，多半，可能性很大"],
+["in all likelihood", "[in ɔ:l ˈlaiklihud]", "十有八九；多半；可能性很大"],
 ["in all probability", "[in ɔ:l ˌprɔbəˈbiliti]", "十之八九；很可能；almost certainly; very likely"],
 ["inappropriate", "[ˌɪnə'prəʊpriət]", "adj. 不适当的；不适合的；不适用的；不合宜的；不合时宜的；不正当的；not suitable or appropriate in a particular situation"],
 ["inappropriately", "[ˌɪnə'prəʊpriətli]", "adv. 不适当地"],
