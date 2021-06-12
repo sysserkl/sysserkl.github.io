@@ -27,4 +27,5 @@ var digest_global=`
 *lecturer
 *lecture
 *chickadee
+*fatalist
 `.trim().split('\n');

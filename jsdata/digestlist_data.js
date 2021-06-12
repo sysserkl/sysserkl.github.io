@@ -68,6 +68,7 @@ var digestlist_source_global_b=[
 ["zhong_guo_you_ji_jie_clzj_244884_digest",1],
 ["twelve_years_a_slave_amazonclassics_e_4143_digest",1],
 ["stephen_king_goes_to_the_mfrhasr_7580_digest",1],
+["zen_and_the_art_of_mm_3809_digest",1],
 ["xian_dai_xing_yu_da_tsqgmbm_335429_digest",1],
 ["harry_potter_and_the_philosopher_ss_3784_digest",1],
 ["jin_yong_zuo_pin_ji_sdxlxdbq4_575838_digest",1],
