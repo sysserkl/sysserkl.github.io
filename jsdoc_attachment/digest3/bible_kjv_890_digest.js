@@ -399,4 +399,5 @@ var digest_global=`
 *extol
 *shipmaster
 *winebibber
+*prophetess
 `.trim().split('\n');
