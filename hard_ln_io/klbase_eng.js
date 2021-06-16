@@ -339,7 +339,7 @@ function open_link_en_b(cstype,csword){
             window.open('https://www.oxfordlearnersdictionaries.com/definition/english/'+web_href_key_b(csword,'-',true));
             break;
         case 'k':
-            window.open('PythonTools/data/selenium_news/html/klsearch.htm?k='+encodeURIComponent(csword)+'&t=dict.cn,merriam-webster,cambridge,collins(p),youdao,iciba,cambridge_cn,wordreference_cn,wikitionary(p)&iframe');            
+            window.open('PythonTools/data/selenium_news/html/klsearch.htm?k='+encodeURIComponent(csword)+'&t=batch_en&iframe');            
     }
 }
 

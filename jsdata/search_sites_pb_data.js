@@ -17,7 +17,7 @@ var search_sites_list_global=[
 ['https://learnersdictionary.com/definition/','',0,'','learnersdictionary','','English',''],
 ['https://www.ldoceonline.com/dictionary/','',2,'','Longman','','English',''],
 ['https://www.dictionary.com/browse/','',0,'#6666cc','Dictionary.com','','English',''],
-['https://www.thefreedictionary.com/','',0,'#0099ff','The Free Dictionary','','English',''],
+['https://www.thefreedictionary.com/','',0,'#0099ff','The_Free_Dictionary','','English',''],
 ['https://www.yourdictionary.com/','',0,'#990033','YourDictionary','','English',''],
 ['http://wordnetweb.princeton.edu/perl/webwn?s=','',0,'#663300','Wordnet','','English',''],
 ['https://en.wiktionary.org/wiki/','',0,'#6666cc','Wikitionary','p0','English',''],
@@ -75,5 +75,5 @@ var search_sites_list_global=[
 ['txtlistsearch.htm?_tag','_reg',0,'','📚','b0','Local','书目查询'],
 ['rnd_english_words.htm?s=','(:r)',0,'','🇬🇧','b','Local','随机单词'],
 ['bible.htm?s=','(:r)',0,'red','✝','b0','Local','Bible'],
-
+['klsearch.htm?k=','&t=batch_en&iframe',0,'darkslategray','KLSearch(en)','0','Local',''],
 ];

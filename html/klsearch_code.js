@@ -134,6 +134,11 @@ function args_klsearch(){
             }
             else if (item.substring(0,2)=='t='){
                 bltype=item.substring(2,).toLowerCase();
+                switch (bltype){
+                    case 'batch_en':
+                        bltype='dict.cn,merriam-webster,cambridge,collins(p),youdao,iciba,cambridge_cn,wordreference_cn,wikitionary(p),learnersdictionary,The_Free_Dictionary,Wordnet';
+                        break;
+                }
             }
             else if (item.substring(0,2)=='c='){
                 blcategory=item.substring(2,).toLowerCase();
@@ -155,12 +160,12 @@ function args_klsearch(){
     if (bltype==''){return;}
     
     if (is_iframe){ //只考虑 type 参数，忽略 category 等其他 - 保留注释
-        var xl_list=[];    
         var buttons_t=[];
         var result_t=[];
         bltype=bltype.split(',');   
         for (let one_type of bltype){
             var is_proxy=false;
+            one_type=one_type.toLowerCase();
             if (one_type.slice(-3,)=='(p)'){
                 is_proxy=true;
                 one_type=one_type.slice(0,-3);
@@ -168,17 +173,17 @@ function args_klsearch(){
             for (let blxl=0;blxl<search_sites_list_global.length;blxl++){
                 var item=search_sites_list_global[blxl];
                 if (one_type==item[4].toLowerCase()){
-                    xl_list.push(blxl);
-                    buttons_t.push('<span class="aclick" onclick="javascript:show_iframe_klsearch('+blxl+');">'+one_type+'</span>');
+                    buttons_t.push('<span class="aclick" onclick="javascript:show_iframe_klsearch(this,'+blxl+');">'+one_type+'</span>');
                     result_t.push('<iframe class="iframe_site" id="iframe_site_'+blxl+'" style="width:95%;height:40rem;display:none;" src="'+search_site_klsearch(blxl,is_proxy,blkey,false)+'"></iframe>');
                     break;
                 }
             }
         }
         var odiv=document.getElementById('div_status');
-        odiv.innerHTML='<p>'+buttons_t.join(' ')+'</p>'+result_t.join('\n');
-        if (xl_list.length>0){
-            show_iframe_klsearch(xl_list[0]);
+        odiv.innerHTML='<p id="p_buttons_kls">'+buttons_t.join(' ')+'</p>'+result_t.join('\n');
+        var ospan=document.querySelector('p#p_buttons_kls span.aclick');
+        if (ospan){
+            ospan.click();
         }
         document.getElementById('div_title_klsearch').style.display='none';
         document.getElementById('div_recent_search').style.display='none';
@@ -207,7 +212,7 @@ function args_klsearch(){
     }
 }
 
-function show_iframe_klsearch(csno){
+function show_iframe_klsearch(ospan,csno){
     var oiframe=document.getElementById('iframe_site_'+csno);
     if (!oiframe){return;}
     var oiframes=document.querySelectorAll('iframe.iframe_site');
@@ -215,6 +220,14 @@ function show_iframe_klsearch(csno){
         one_iframe.style.display='none';
     }
     oiframe.style.display='';
+    
+    var ospans=document.querySelectorAll('p#p_buttons_kls span.aclick');
+    for (let one_span of ospans){
+        one_span.style.color='';
+        one_span.style.fontWeight='';
+    }
+    ospan.style.color=scheme_global["a-hover"];
+    ospan.style.fontWeight='bold';
 }
 
 function init_klsearch(){
@@ -227,7 +240,7 @@ function init_klsearch(){
         if (blat>=0){
             blhref=blhref.substring(0,blat+1);
         }
-        search_sites_list_global=search_sites_list_global.concat(search_sites_list_kl_global);
+        search_sites_list_global=search_sites_list_global.concat(search_sites_list_kl_global);  //合并 - 保留注释
         for (let blxl=0;blxl<search_sites_list_global.length;blxl++){
             var item=search_sites_list_global[blxl][0];
             if (item.substring(0,4)=='http'){continue;}

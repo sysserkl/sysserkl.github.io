@@ -18,4 +18,5 @@ var digest_global=`
 *disrepair
 *unbuilt
 *theologian
+*introductory
 `.trim().split('\n');
