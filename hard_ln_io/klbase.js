@@ -887,8 +887,12 @@ function array_squash_b(csarray,csmax=0.5){
     return bljg;
 }
 
-function local_storage_today_b(csid,csmax=-1,csnewcontent='',cssplit='',cstype='d'){
+function local_storage_today_b(csid,csmax=-1,csnewcontent='',cssplit='',squash=[],cstype='d'){
     if (csnewcontent==''){return;}
+    if (squash.length==3){
+        var list_t=local_storage_get_b(csid,-1,true);
+        local_storage_squash_b(csid,list_t,squash[0],squash[1],squash[2]);
+    }
     var list_t=local_storage_get_b(csid,csmax,true);
     var theday=new Date();
     var today='';

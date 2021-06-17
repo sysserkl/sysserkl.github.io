@@ -32,4 +32,5 @@ var digest_global=`
 *stomachache
 *shoreward
 *seacoast
+*ladybug
 `.trim().split('\n');

@@ -40,4 +40,5 @@ var digest_global=`
 *overdose
 *Leonard
 *doorbell
+*lawnmower
 `.trim().split('\n');

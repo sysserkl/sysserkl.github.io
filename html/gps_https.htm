@@ -104,7 +104,7 @@ function success_record_gps(position) {
     myLayer = L.geoJSON().addTo(omap_gps_global);
     myLayer.addData(myLines);
     
-    local_storage_today_b('gps',20000,csnewcontent=lon_gps_global+','+lat_gps_global,',','dt');
+    local_storage_today_b('gps',20000,csnewcontent=lon_gps_global+','+lat_gps_global,',',[],'dt');
     
     run_times_global=run_times_global+1;
     document.getElementById('span_count').innerHTML=run_times_global;
