@@ -6,4 +6,5 @@ var digest_global=`
 *Hegelian
 *nonexclusive
 *voltmeter
+*Hume
 `.trim().split('\n');

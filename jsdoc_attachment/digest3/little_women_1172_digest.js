@@ -49,4 +49,5 @@ var digest_global=`
 *spouse
 *manageable
 *maple
+*anteroom
 `.trim().split('\n');

@@ -37,4 +37,5 @@ var digest_global=`
 *Zurich
 *energetically
 *in all weathers
+*waiting room
 `.trim().split('\n');
