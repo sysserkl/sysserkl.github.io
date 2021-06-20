@@ -610,7 +610,7 @@ function filter_gpx_list_gps_points(cstype){
 }
 
 function gpx_quadrangle_gps_points(){
-    function sub_gpx_quadrangle_gps_points_draw(gpx_point,do_transform){
+    function sub_gpx_quadrangle_gps_points_draw(fname,gpx_point,do_transform){
         var result_t=[];
 
         var min_lat=gpx_point[0][0];
@@ -627,7 +627,7 @@ function gpx_quadrangle_gps_points(){
             result_t.push([max_lat, max_lon]);
             result_t.push([max_lat, min_lon]);
             result_t.push([min_lat,min_lon]);
-            draw_gpx_gps_points(result_t,gpx_point[0],do_transform,true,['blue','','']);    
+            draw_gpx_gps_points(result_t,file_path_name_b(fname)[1],do_transform,true,['blue','','']);    
         }
         return [min_lat,min_lon];
     }
@@ -643,11 +643,11 @@ function gpx_quadrangle_gps_points(){
     var lon;
     for (let item of gpx_pb_global){//gpxfilename,fsize,fdate,min_lat,min_lon,max_lat,max_lon
         if (!li_names.has(item[0])){continue;}        
-        [lat,lon]=sub_gpx_quadrangle_gps_points_draw(item[3],do_transform);
+        [lat,lon]=sub_gpx_quadrangle_gps_points_draw(item[0],item[3],do_transform);
     }
     for (let item of gpx_kl_global){
         if (!li_names.has(item[0])){continue;}          
-        [lat,lon]=sub_gpx_quadrangle_gps_points_draw(item[3],do_transform);
+        [lat,lon]=sub_gpx_quadrangle_gps_points_draw(item[0],item[3],do_transform);
     }
     show_hide_map_gps_points();
     omap_gps_points_global.panTo(new L.LatLng(lat,lon));

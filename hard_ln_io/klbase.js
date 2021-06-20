@@ -1493,3 +1493,24 @@ function array_count_b(csarray,quote=true,ignore_1=false,obj2array=true){
     }
     return result_t;
 }
+
+function file_path_name_b(csfilename=''){
+    //['/media/temp/', '论反对日本帝国主义的策略', '.js', '论反对日本帝国主义的策略.js'] - 保留注释
+    var blat=Math.max(csfilename.lastIndexOf('/'),csfilename.lastIndexOf('\\'));
+    var blpath='';
+    var fullname=csfilename;
+    if (blat>=0){
+        blpath=csfilename.substring(0,blat+1);
+        fullname=csfilename.substring(blat+1,);
+    }
+    
+    blat=fullname.lastIndexOf('.');
+    var basename=fullname;
+    var blext='';
+    if (blat>=0){
+        basename=fullname.substring(0,blat);    //不含. - 保留注释
+        blext=fullname.substring(blat+1,);
+    }    
+   
+    return [blpath, basename, blext, fullname];
+}

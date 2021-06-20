@@ -1,5 +1,9 @@
 //单词库
 var enwords=[
+["selenium", "[sɪˈliːnɪəm] [sə'liːniəm]", "n. 硒；a photosensitive element that occurs in both crystalline and amorphous forms, is obtained chiefly as a by-product in copper refining, and is used especially in glass, semiconductor devices, and alloys; a nonmetallic element that exists in several allotropic forms. It occurs free in volcanic areas and in sulphide ores, esp pyrite. The common form is a grey crystalline solid that is photoconductive, photovoltaic, and semiconducting: used in photocells, solar cells, and in xerography. Symbol: Se; atomic no: 34; atomic wt: 78.96; valency: –2, 4, or 6; relative density: 4.79 (grey); melting pt: 221°C (grey); boiling pt: 685°C (grey); 🈚"],
+["antechamber", "['æntiˌtʃeɪmbə(r)]", "n. 前厅；前堂；接待室；anteroom; a room where people can wait before entering a larger room, especially in an important public building; a smaller room leading into a larger or main room; a smaller room serving as an entryway into a larger room; a chamber or room that serves as a waiting room and entrance to a larger room or an apartment"],
+["reword", "[ˌriː'wɜː(r)d]", "v. 修改措辞；改说；改写；to alter the wording of, also: to restate in other words; ; change the wording of; to write something again in different words; to state (something) again using different and often simpler words; express the same message in different words; to write or say something again using different words in order to make it clearer or more acceptable; express differently; v. 重述；to repeat in the same words; to state or express again in the same words; repeat; 🈚"],
+["unnamed", "[ˌʌn'neɪmd]", "adj. 未命名的；未披露姓名的；不知姓名的；不知名的；无名的；匿名的；没有提及的；not having a name or identified by name; not named, esp. in order to keep a name secret or unknown; whose name is not given or not known; used to indicate that a person's name is not mentioned or known; not indicated or mentioned by name; unidentified; having no name; without a name; nameless"],
 ["Hume", "[hju:m]", "n. 休姆(姓氏)；a Scottish habitational surname from Home in Berwickshire; an English, Irish and Scottish surname, a variant of Holme; n. David Hume 大卫休谟，苏格兰历史学家、哲学家；David. 1711–76, Scottish empiricist philosopher, economist, and historian, whose sceptic philosophy restricted human knowledge to that which can be perceived by the senses. His works include 'A Treatise of Human Nature' (1740), 'An Enquiry concerning the Principles of Morals' (1751), 'Political Discourses' (1752), and 'History of England' (1754–62)"],
 ["waiting room", "[ˈˈweɪtɪŋ ruːm] [ˈweɪtɪŋ rʊm]", "等候室；候车室；候诊室；a room (as in a doctor's office) for the use of persons (such as patients) who are waiting; a room in some public place for people to wait; a room in a place where people can sit while waiting, as in an airport or a doctor's office; a room in which people may wait, as at a railway station, doctor's or dentist's office, etc; a room for the use of persons waiting, as in a railroad station or a physician's office; a room (as in a hotel or airport) with seating where people can wait"],
 ["anteroom", "['æntiˌruːm] ['æntiˌrum]", "n. （通往较大、较重要房间的）前厅；（尤指重要公共建筑的）前厅；接待室；候见室；a room before, or forming an entrance to, another; a waiting room; a small outer room that leads to another room and that is often used as a waiting room; a room where people can wait before entering a larger room, especially in an important public building; a small room, especially a waiting room, that leads into a larger, more important room; a room that admits to a larger room"],
@@ -1957,7 +1961,7 @@ var enwords=[
 ["boardwalk", "['bɔːrdwɔːk]", "n. 木板路；木板铺成的散步道"],
 ["boar", "UK [bɔː(r)] US [bɔr]", "n. 野猪；未阉的公猪"],
 ["boat", "[bəʊt]", "n. 船；船型物；v. 乘船；划船；放于船上"],
-["boatman", "['bəʊtmən]", "n. 出租游艇者；船夫；靠小船营生的人；摆渡者；小船出租人；a man who earns money from small boats, either by carrying passengers or goods on them, or by renting them out"],
+["boatman", "['bəʊtmən]", "n. 船夫；靠小船营生的人；小船出租人；出租游艇者；摆渡者；a man who earns money from small boats, either by carrying passengers or goods on them, or by renting them out"],
 ["bodyguard", "UK ['bɒdiɡɑːd] US ['bɑːdiɡɑːrd]", "n. 保镖；警卫员；保卫人员；a person or a group of people who are employed to protect somebody; a person or group of people whose job is to protect someone from attack; a usually armed attendant or group of attendants whose duty is to protect a person; v. 护送；to provide with or act as a bodyguard"],
 ["body", "UK ['bɒdi] US ['bɑːdi]", "n. 身体；躯体；尸体；主体；团体；正文；主要部分；v. 赋…以形体"],
 ["Bohemia", "[bəʊˈhi:miə]", "n. 波希米亚；波希米亚式群落"],
@@ -9743,7 +9747,7 @@ var enwords=[
 ["terabyte", "['terəbaɪt]", "n. 1000吉(千兆)字节(GB)；兆兆位(量度信息单位)"],
 ["terminology", "UK [ˌtɜːmɪ'nɒlədʒi] US [ˌtɜːrmə'nɑːlədʒi]", "n. 术语；（某学科的）术语；术语学；用辞；专门用语；有特别含义的用语；the set of technical words or expressions used in a particular subject; the technical or special terms used in a business, art, science, or special subject; nomenclature as a field of study; the study of terms"],
 ["terms", "[tɜːrmz]", "n. 条件；条款；关系；措辞；名词term的复数形式"],
-["terrace", "['terəs]", "n. 平台；阳台；梯田；vt. 使成梯田；给 ... 建阳台"],
+["terrace", "['terəs]", "n. 平台；阳台；梯田；vt. 给 ... 建阳台；使成梯田"],
 ["terrain", "[tə'reɪn]", "n. 地带；地形"],
 ["terrarium", "UK [te'reəriəm] US [te'reriəm]", "n. 动植物饲养园；玻璃容器"],
 ["terrible", "['terəbl]", "adj. 可怕的；极度的；糟糕的"],

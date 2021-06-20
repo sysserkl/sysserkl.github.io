@@ -19,4 +19,5 @@ var digest_global=`
 *unrestricted
 *burro
 *touchdown
+*unnamed
 `.trim().split('\n');
