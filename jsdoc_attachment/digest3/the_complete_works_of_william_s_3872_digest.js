@@ -19,4 +19,5 @@ var digest_global=`
 *Mauritania
 *fivepence
 *conjoin
+*stonecutter
 `.trim().split('\n');

@@ -73,8 +73,7 @@ L.TileLayer.ChinaProvider.providers = {
             Map: "https://{s}.tile.osm.org/{z}/{x}/{y}.png",
         },
         Subdomains: ['a', 'b', 'c']
-    }
-
+    },
 };
 
 L.tileLayer.chinaProvider = function(type, options) {

@@ -11,6 +11,7 @@ function baselayers_leaflet_b(){
         "geoq_Hydro": L.layerGroup([klmaps_global["geoq_Hydro"]]),
         "高德地图": L.layerGroup([klmaps_global["gd"]]),
         "高德地形(无路网)": L.layerGroup([klmaps_global["gd_earth"]]),
+        "高德路网": L.layerGroup([klmaps_global["gd_road"]]),
     }
 }
 
@@ -26,7 +27,7 @@ function init_maps_leaflet_b(csmax=18,csmin=5){
     klmaps_global["gd"] = L.tileLayer.chinaProvider('GaoDe.Normal.Map', {maxZoom: 18,minZoom: 5});
     klmaps_global["gd_earth"] = L.tileLayer.chinaProvider('GaoDe.Satellite.Map', {maxZoom: 18,minZoom: 5});
     klmaps_global["gd_road"] = L.tileLayer.chinaProvider('GaoDe.Satellite.Annotion', {maxZoom: 18,minZoom: 5});
-
+    
     klmaps_global["osm"] = L.tileLayer.chinaProvider('OSM.Normal.Map', {maxZoom: 18,minZoom: 5});
 
     klmaps_global["google"] = L.tileLayer.chinaProvider('Google.Normal.Map', {maxZoom: 18,minZoom: 5});

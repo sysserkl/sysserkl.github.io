@@ -19,4 +19,6 @@ var digest_global=`
 *undiscovered
 *unlimited
 *underwent
+*doubtfully
+*misjudge
 `.trim().split('\n');

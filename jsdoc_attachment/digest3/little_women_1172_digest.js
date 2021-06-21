@@ -50,4 +50,5 @@ var digest_global=`
 *manageable
 *maple
 *anteroom
+*prophetess
 `.trim().split('\n');

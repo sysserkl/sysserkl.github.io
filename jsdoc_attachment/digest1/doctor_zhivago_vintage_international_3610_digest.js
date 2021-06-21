@@ -19,4 +19,6 @@ var digest_global=`
 *unbuilt
 *theologian
 *introductory
+*professorial
+*seacoast
 `.trim().split('\n');
