@@ -185,4 +185,5 @@ var digest_global=`
 *ramshackle
 *tactician
 *foreword
+*larvae
 `.trim().split('\n');

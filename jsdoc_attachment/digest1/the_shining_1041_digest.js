@@ -41,4 +41,5 @@ var digest_global=`
 *Leonard
 *doorbell
 *lawnmower
+*stomachache
 `.trim().split('\n');

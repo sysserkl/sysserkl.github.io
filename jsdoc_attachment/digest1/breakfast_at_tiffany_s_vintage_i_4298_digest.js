@@ -12,4 +12,5 @@ var digest_global=`
 *ashtray
 *martini
 *pumpkin
+*embryonic
 `.trim().split('\n');

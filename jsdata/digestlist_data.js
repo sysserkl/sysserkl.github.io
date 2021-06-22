@@ -30,6 +30,7 @@ var digestlist_source_global_b=[
 ["yin_he_di_guo_8_1jqrxlwbq_317863_digest",1],
 ["frankenstein_1256_digest",1],
 ["yin_he_di_guo_di_gsbq11tzg3_342158_digest",1],
+["hyperion_hyperion_cantos_book_1_3005_digest",1],
 ["hei_an_shi_ke_xi_tldtsyncwhsxc_662171_digest",1],
 ["foundation_1047_digest",1],
 ["yu_shi_ming_yan_103391_digest",1],
