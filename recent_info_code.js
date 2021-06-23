@@ -142,6 +142,7 @@ function more_tools_klrecent(){
     ['html/emoji.htm','emoji'],
     ['html/fortune_500.htm','Fortune 500'],    
     ['html/gps_https.htm', 'Coords'],
+    ['html/gps_news.htm', 'gps news'],        
     ['html/gps_points.htm', 'gps points'],    
     ['html/hzpinyin.htm', 'hzpy'],
     ['html/image2base64.htm','image2base64'],

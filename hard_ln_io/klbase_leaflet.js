@@ -335,3 +335,34 @@ function transform_lon_lat_one_dot_b(cstype,lon,lat){
     }
     return [lon,lat];
 }
+
+function district_cn_name_2_lnglat_b(csname){
+    //需要载入 district_cn_geo_global - 保留注释
+    var exact_lnglat=[];
+    var similar1_list=[];
+    var similar2_list=[];
+    for (let item of district_cn_geo_global){
+        if (item[4]==csname){
+            exact_lnglat=item.slice(-2,);
+            break;
+        }
+        else if (item[3]==csname){
+            similar1_list.push(item.slice(-2,));
+        }
+        else if (item[3].includes(csname) || item[4].includes(csname)){
+            similar2_list.push(item.slice(-2,));
+        }        
+    }
+    if (exact_lnglat.length>0){
+        return exact_lnglat;
+    }
+    else if (similar1_list.length==1){
+        return similar1_list[0];
+    }
+    else if (similar1_list.length==0 && similar2_list.length==1){
+        return similar2_list[0];
+    }
+    else {
+        return [false,false];
+    }
+}
