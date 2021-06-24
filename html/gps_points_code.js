@@ -7,7 +7,12 @@ function buttons_gps_points(){
     bljg=bljg+'<option>GCJ02_TO_WGS84</option>\n';
     bljg=bljg+'</select>\n';
     bljg=bljg+'<span class="aclick" onclick="javascript:this.parentNode.parentNode.style.display=\'none\';">Close</span> ';
-    bljg=bljg+'<textarea id="textarea_gps_points" style="height:20rem;"></textarea>';
+    
+    var postpath=postpath_b();
+    bljg=bljg+'<form method="POST" action="'+postpath+'temp_txt_share.php" name="form_gps_news" target=_blank>\n';
+    bljg=bljg+'<textarea name="textarea_gps_points" id="textarea_gps_points" style="height:20rem;"></textarea>';    
+    bljg=bljg+'<p>'+textarea_buttons_b('textarea_gps_points','全选,清空,复制,发送到临时记事本,发送地址')+'</p>';
+    bljg=bljg+'</form>\n';    
     return bljg;
 }
 

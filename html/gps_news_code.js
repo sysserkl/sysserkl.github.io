@@ -4,7 +4,15 @@ function buttons_gps_news(){
     bljg=bljg+'<option>WGS84_TO_GCJ02</option>\n';
     bljg=bljg+'<option>GCJ02_TO_WGS84</option>\n';
     bljg=bljg+'</select>\n';
+    bljg=bljg+'<input type="text" id="input_day_start_gps_news" placeholder="开始日期，格式如：20210525"> ';
+    bljg=bljg+'<input type="text" id="input_day_end_gps_news" placeholder="结束日期，格式如：20210525"> ';
     bljg=bljg+'<span class="aclick" onclick="javascript:this.parentNode.parentNode.style.display=\'none\';">Close</span> ';
+    
+    var postpath=postpath_b();
+    bljg=bljg+'<form method="POST" action="'+postpath+'temp_txt_share.php" name="form_gps_news" target=_blank>\n';
+    bljg=bljg+'<textarea name="textarea_gps_news" id="textarea_gps_news" style="height:20rem;"></textarea>';    
+    bljg=bljg+'<p>'+textarea_buttons_b('textarea_gps_news','全选,清空,复制,发送到临时记事本,发送地址')+'</p>';
+    bljg=bljg+'</form>\n';
     return bljg;
 }
 
@@ -38,21 +46,26 @@ function current_position_gps_news(){
     );
 }
 
-function init_gps_news(){
+function div_size_gps_news(){
     var window_h=document_body_offsetHeight_b();
     var odiv=document.getElementById('div_selection');
     odiv.style.maxHeight=Math.round(window_h*0.8)+'px';
     var rect =document.getElementById('div_gps_news').getBoundingClientRect();
     document.getElementById('div_map').style.height=Math.max(300,(window_h-rect.height))+'px';
+}
+
+function init_gps_news(){
+    div_size_gps_news();
 
     var lat_lon_value=[31.2,121.5];
     var zoom_value=6;
-    var map_name_value='gd';    //gd 或 mapbox - 保留注释
+    var map_name_value='mapbox';    //gd 或 mapbox - 保留注释
 
     //----------
     document.getElementById('div_icon').innerHTML='📰';
     document.getElementById('div_status').innerHTML='时局图';
     document.getElementById('div_buttons').innerHTML=buttons_gps_news();
+    document.getElementById('input_day_start_gps_news').value=date_2_ymd_b(false,'y')+'0101';
     menu_gps_news();
     
     init_maps_leaflet_b();
@@ -105,19 +118,31 @@ function remove_navigation_gps_news(){
 
 function popup_gps_news(){
     //gps_news_global 中的每一组格式 ["日期","地区","事件名称","网址","tag"]
+    remove_navigation_gps_news();
+    var bltype=document.getElementById('select_transform').value;
+    var day_start=document.getElementById('input_day_start_gps_news').value.trim();
+    var day_end=document.getElementById('input_day_end_gps_news').value.trim();
+    
     var lng;
     var lat;
     var district_list={};
+    var bljg=[];
     for (let item of gps_news_global){
+        if (item[0]<day_start || day_end!=='' && item[0]>day_end){continue;}
+        
         [lng,lat]=district_cn_name_2_lnglat_b(item[1]);
         if (lng==false || lat==false){
             console.log('未找到位置',item);
             continue;
         }
+
+        [lng,lat]=transform_lon_lat_one_dot_b(bltype,lng,lat);
+
         if (district_list['d'+lng+'_'+lat]==null){
             district_list['d'+lng+'_'+lat]=[lat,lng,[]];
         }
         district_list['d'+lng+'_'+lat][2].push((item[0]==''?'':item[0]+' | ')+'<a href="'+item[3]+'" target=_blank>'+item[2]+'</a>');
+        bljg.push((item[0]==''?'':item[0]+' | ')+item[2]+' '+item[3]);
     }
     
     var blyear=date_2_ymd_b(false,'y');
@@ -140,15 +165,19 @@ function popup_gps_news(){
         //navigation_layer_gps_global.addLayer(opopup); //此行保留 - 保留注释
         omap_gps_news_global.panTo(new L.LatLng(district_list[key][0],district_list[key][1]));
     }
+    
+    bljg.sort().reverse();
+    document.getElementById('textarea_gps_news').value=bljg.join('\n');
 }
 
 function menu_gps_news(){
     var str_t=klmenu_hide_b('');
     var klmenu_gpx=[
+    '<span class="span_menu" onclick="javascript:'+str_t+'popup_gps_news();">重绘</span>',    
     '<span class="span_menu" onclick="javascript:'+str_t+'remove_navigation_gps_news();">清除路线</span>',
     ];
     
-    document.getElementById('select_transform').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_gpx,'⛰','16rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('select_transform').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_gpx,'⛰','10rem','1rem','1rem','60rem'),'','0rem')+' ');
 }
 
 

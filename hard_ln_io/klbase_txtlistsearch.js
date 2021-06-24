@@ -1654,7 +1654,7 @@ function recent_search_kltxt_b(cskeys='',addstyle=false){
             odiv.style.cssText='line-height:1.8rem;margin-top:0.5rem;margin-bottom:0.5rem;padding-top:0.2rem;border-top:0.1rem dotted '+scheme_global['memo']+';border-bottom:0.1rem dotted '+scheme_global['memo']+';';
         }
     }
-    recent_search_b('recent_search_txtlistsearch',cskeys,blfn,'div_recent_search',["&lt;title;.mht",'&lt;title&gt;;.mht|blogspot|evernote|youdao|wordpress\.com(:r)','+http +2018\\d{4}(:r)','&lt;title;avplayer','&lt;title;引用资料;-ref','&lt;title;引用资料;^[0-9]\\.(:r)','&lt;title;{{wikiuploads}}200[2-6]/(:r)','&lt;title;引用资料;^\\d+.*http','([^\\x00-\\xff])\\1\\1(:r)','^[^\\x00-\\xff]{2,10}$(:r)','一|二|三|四|五|六|七|八|九|十|零|〇(:r)','+http +2018\\d{4}(:r)','-klwiki -englishwords','狍 獐 獾 鹿 蛙 野味 兔'],20);
+    recent_search_b('recent_search_txtlistsearch',cskeys,blfn,'div_recent_search',["&lt;title;.mht",'&lt;title&gt;;.mht|blogspot|evernote|youdao|wordpress\.com(:r)','+http +2018\\d{4}(:r)','&lt;title;avplayer','&lt;title;引用资料;-ref','&lt;title;引用资料;^[0-9]\\.(:r)','&lt;title;{{wikiuploads}}200[2-6]/(:r)','&lt;title;引用资料;^\\d+.*http','([^\\x00-\\xff])\\1\\1(:r)','^[^\\x00-\\xff]{2,10}$(:r)','一|二|三|四|五|六|七|八|九|十|零|〇(:r)','kleng','-klwiki -englishwords','狍 獐 獾 鹿 蛙 野味 兔'],20);
 }
 
 function txtsearch_one_kltxt_b(csword='',csreg=false){

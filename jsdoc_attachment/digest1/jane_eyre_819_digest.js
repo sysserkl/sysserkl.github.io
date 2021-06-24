@@ -21,4 +21,5 @@ var digest_global=`
 *underwent
 *doubtfully
 *misjudge
+*vocalist
 `.trim().split('\n');

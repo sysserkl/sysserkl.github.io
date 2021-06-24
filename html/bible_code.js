@@ -316,9 +316,11 @@ function reading_statistics_bible(cssub=-1,do_alert=true){
     bljg=bljg+'完成阅读需要 '+((kjv.length-cssub)/remained_days).toFixed(2) +' 行/天。';
     
     var chapters_per_day_ceil=Math.ceil(chapters_per_day);
-    if (chapters_per_day_ceil!==chapters_per_day){
-        var days_ceil=remained_chapters/chapters_per_day_ceil;
-        bljg=bljg+'\n按每日 '+chapters_per_day_ceil+' 章阅读，需要 '+days_ceil.toFixed(1)+' 天读完，即 '+next_day_b('',days_ceil)+'。';
+    for (let blxl=chapters_per_day_ceil;blxl<=4;blxl++){
+        if (blxl!==chapters_per_day){
+            var days_ceil=remained_chapters/blxl;
+            bljg=bljg+'\n按每日 '+blxl+' 章阅读，需要 '+days_ceil.toFixed(1)+' 天读完，即 '+next_day_b('',days_ceil)+'。';
+        }
     }
     if (do_alert){
         alert(bljg);
