@@ -186,4 +186,5 @@ var digest_global=`
 *tactician
 *foreword
 *larvae
+*restatement
 `.trim().split('\n');

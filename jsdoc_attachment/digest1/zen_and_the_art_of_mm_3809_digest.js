@@ -7,4 +7,5 @@ var digest_global=`
 *nonexclusive
 *voltmeter
 *Hume
+*restate
 `.trim().split('\n');
