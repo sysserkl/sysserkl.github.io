@@ -3,4 +3,5 @@ var digest_global=`
 *zooplankton
 *customhouse
 *boomtown
+*seawall
 `.trim().split('\n');

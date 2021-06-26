@@ -21,4 +21,5 @@ var digest_global=`
 *introductory
 *professorial
 *seacoast
+*polygon
 `.trim().split('\n');

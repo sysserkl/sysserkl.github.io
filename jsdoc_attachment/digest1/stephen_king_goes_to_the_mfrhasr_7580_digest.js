@@ -33,4 +33,5 @@ var digest_global=`
 *shoreward
 *seacoast
 *ladybug
+*blueberry
 `.trim().split('\n');

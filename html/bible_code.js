@@ -504,6 +504,7 @@ function search_bible(cskey='',csstartno=0,favpage_no=1,csmax=500){
     }
     if (csmax>=0 && blcount==csmax){
         bljg=bljg+'<span class="oblong_box" onclick="javascript:search_bible(\''+specialstr_j(cskey+(isreg?'(:r)':''))+'\',0,1,-1);">完全搜索</span> ';    
+        bljg=bljg+'<span class="oblong_box" onclick="javascript:search_bible(\''+specialstr_j(cskey+(isreg?'(:r)':''))+'\',0,1,-1);break_line_bible();">完全搜索+断句</span> ';
     }
     bljg=bljg+'<span class="oblong_box" onclick="javascript:break_line_bible();">断句</span> ';    
     bljg=bljg+'<span class="oblong_box" onclick="javascript:search_statistics_bible();">Statistics</span> ';    
@@ -584,7 +585,9 @@ function break_line_bible(){
     
     bljg.sort(function (a,b){return zh_sort_b(a,b);});
     var blbuttons='<p><span class="aclick" onclick="javascript:document.getElementById(\'div_search_statistics\').innerHTML=\'\';">Close</span></p>';
-    document.getElementById('div_search_statistics').innerHTML=array_2_li_b(bljg,'li','ol')+blbuttons;
+    var odiv=document.getElementById('div_search_statistics');
+    odiv.innerHTML=array_2_li_b(bljg,'li','ol')+blbuttons;
+    odiv.scrollIntoView();
 }
 
 function search_statistics_bible(cscolumn=-1,hidezero=false){

@@ -141,6 +141,9 @@ function value_calculator(csstr){
     if (csstr.match(/^\d+\.?(\d+)?$/g)!==null){
         return [csstr,''];  //纯数字不计算 - 保留注释
     }
+    if (csstr.substring(0,2)=='//'){
+        return ['',''];  //注释不计算 - 保留注释
+    }
     var check_list=['var','eval','localStorage','return','break','for','while','{','}','window','if','else','switch','continue','inner','outer','class','getElement','alert','prompt','confirm','function','try','catch','script','///'];
     for (let item of check_list){
         if (csstr.includes(item)){
@@ -189,10 +192,12 @@ function eval_calculator(){
 function show_row_calculator(csemoji,csstr,csvalue,cstime){
     var blat=csstr.indexOf('//');
     if (blat>=0){
-        csstr=csstr.substring(0,blat)+'<span style="color:'+scheme_global['memo']+';font-size:0.9rem;">'+csstr.substring(blat,)+'</span>';
+        csstr=csstr.substring(0,blat)+'<span style="'+(blat==0?'':'color:'+scheme_global['memo']+';')+'font-size:0.9rem;">'+csstr.substring(blat,)+'</span>';
     }
     var bljg=csemoji+' <span class="span_box span_string_calculator" onclick="javascript:select_row_calculator(this);" ondblclick="javascript:dbl_calculator(this);">'+csstr+'</span>';
-    bljg=bljg+' = <strong>'+csvalue+'</strong>';
+    if (csvalue!==''){
+        bljg=bljg+' = <strong>'+csvalue+'</strong>';
+    }
     bljg=bljg+' <small><small>'+time_2_emoji_b(cstime)+' <span style="color:'+scheme_global['memo']+';">'+cstime+'</span></small></small>';
     return bljg;
 }

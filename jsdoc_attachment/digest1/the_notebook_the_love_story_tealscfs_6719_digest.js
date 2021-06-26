@@ -9,4 +9,5 @@ var digest_global=`
 *shipyard
 *introspection
 *upperclassman
+*toolshed
 `.trim().split('\n');

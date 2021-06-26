@@ -39,7 +39,7 @@ function menu_rndwords(){
     '<span class="span_menu" onclick="javascript:'+str_t+'exam_rndwords(true);day_old_words_rndwords();">今日旧单词</span>', 
     '<span class="span_menu" onclick="javascript:'+str_t+'exam_rndwords(true);recent_words_rndwords();">最近记忆单词</span>',     
     '<span class="span_menu" onclick="javascript:'+str_t+'exam_rndwords();">单词测试</span>',         
-    '<span class="span_menu" onclick="javascript:'+str_t+'exam_rndwords(true);en_sentence_source_rndwords();">例句出处文章列表</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'exam_rndwords(true);sentence_source_list_rndwords();">例句出处文章列表</span>',
     ];
     
     var klmenu2=[
@@ -288,7 +288,7 @@ function search_rndwords(csstr='',times=10){
     document.location.href="#top";
 }
 
-function en_sentence_source_rndwords(){
+function sentence_source_list_rndwords(){
     var list_t=en_sentence_source_b();
     var result_t=[];
     var bljg='';
@@ -302,13 +302,32 @@ function en_sentence_source_rndwords(){
             bljg='';
             blhost=item[0];
         }
-        bljg=bljg+'<p>'+blxl+'. <a href=" '+item[1]+'" target=_blank>'+item[2]+'</a></p>\n';
+        bljg=bljg+'<p class="p_sentence_source">'+blxl+'. <a href=" '+item[1]+'" target=_blank>'+item[2]+'</a></p>\n';
         blxl=blxl+1;
     }
     if (bljg!==''){
         result_t.push(bljg);
-    }    
-    document.getElementById('divhtml').innerHTML='<div style="margin:1rem;"><hr />'+result_t.join('<hr />')+'</div>';
+    }
+    var buttons='<input type="text" id="input_sentence_source" placeholder="出处筛选" onkeyup="javascript:if (event.key==\'Enter\'){sentence_source_filter_rndwords(this.value);}" />';
+    var odiv=document.getElementById('divhtml');
+    odiv.innerHTML='<div id="div_sentence_source" style="margin:1rem;"><hr /><p>'+buttons+'</p>'+result_t.join('<hr class="hr_sentence_source" />')+'</div>';
+    input_with_x_b('input_sentence_source',11);
+}
+
+function sentence_source_filter_rndwords(csstr=''){
+    var ops=document.querySelectorAll('p.p_sentence_source');
+    var blreg=false;
+    if (csstr.slice(-4,)=='(:r)'){
+        blreg=true;
+        csstr=csstr.slice(0,-4).trim();
+    }
+    obj_search_show_hide_b(ops,'',csstr,blreg,false,true);
+    
+    var ohrs=document.querySelectorAll('hr.hr_sentence_source');
+    var bldisplay=(csstr==''?'':'none');
+    for (let one_hr of ohrs){
+        one_hr.style.display=bldisplay;
+    }
 }
 
 function slide_start_rndwords(){

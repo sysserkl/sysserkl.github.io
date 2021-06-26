@@ -1371,7 +1371,8 @@ function change_colors_b(csstr){
     obody.style.backgroundColor=scheme_global['background'];
 }
 
-function obj_search_show_hide_b(objs,subobj_querystr='',cskey='',csreg=false,checkreg=false){   
+function obj_search_show_hide_b(objs,subobj_querystr='',cskey='',csreg=false,checkreg=false,get_html=false){  
+    //filter - 保留注释
     if (checkreg){
         if (cskey.slice(-4,)=='(:r)'){
             csreg=true;
@@ -1384,15 +1385,26 @@ function obj_search_show_hide_b(objs,subobj_querystr='',cskey='',csreg=false,che
         }
         return;
     }
+    
     for (let item of objs){
         var bltext='';
         if (subobj_querystr==''){
-            bltext=item.innerText.trim();
+            if (get_html){
+                bltext=item.innerHTML.trim();            
+            }
+            else {
+                bltext=item.innerText.trim();
+            }
         }
         else {
             var osub=item.querySelector(subobj_querystr);
             if (osub){
-                bltext=osub.innerText.trim();
+                if (get_html){
+                    bltext=osub.innerHTML.trim();
+                }
+                else {
+                    bltext=osub.innerText.trim();
+                }
             }
         }
         var blfound=str_reg_search_b(bltext,cskey,csreg);

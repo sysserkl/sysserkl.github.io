@@ -15,6 +15,7 @@ function menu_lt_klmemo(){
         '<span class="span_menu" onclick="javascript:'+str_t+'klmemo_sort_type_global=\'2a\';init_lt_klmemo();">结束日期升序</span>',     
         '<span class="span_menu" onclick="javascript:'+str_t+'klmemo_sort_type_global=\'2\';init_lt_klmemo();">结束日期降序</span>',         
         '<span class="span_menu" onclick="javascript:'+str_t+'klmemo_sort_type_global=\'tag\';init_lt_klmemo();">按tag排序</span>',
+        '<span class="span_menu" onclick="javascript:'+str_t+'klmemo_sort_type_global=\'random\';init_lt_klmemo();">随机排序</span>',
     ];
     
     var klmenu_config=[
@@ -96,6 +97,11 @@ function local_storage_2_array_lt_klmemo(do_delete=false){
         klmemo_global.push(list_t);
     }
     
+    sort_lt_klmemo();
+    array_2_local_storage_lt_klmemo();
+}
+
+function sort_lt_klmemo(){
     if (klmemo_sort_type_global=='tag'){
         klmemo_global.sort(function (a,b){
             let list_a=a[0].match(/(#[^#\s]{2,})/g) || ['']; //忽略#1 #r 等 - 保留注释
@@ -106,6 +112,9 @@ function local_storage_2_array_lt_klmemo(do_delete=false){
             if (list_b[0]==''){return true;}
             return list_a[0]<list_b[0];
         });    
+    }
+    else if (klmemo_sort_type_global=='random'){
+        klmemo_global.sort(randomsort_b);
     }
     else {
         var blno=parseInt((klmemo_sort_type_global+'0').substring(0,1));
@@ -118,7 +127,6 @@ function local_storage_2_array_lt_klmemo(do_delete=false){
             klmemo_global.reverse();
         }
     }
-    array_2_local_storage_lt_klmemo();
 }
 
 function send_lt_klmemo(){
@@ -128,6 +136,12 @@ function send_lt_klmemo(){
 }
 
 function backup_lt_klmemo(){
+    klmemo_sort_type_global='0a';   //名称升序 - 保留注释
+    sort_lt_klmemo();
+    array_2_local_storage_lt_klmemo();
+    klmemo_sort_type_global='1';    //开始日期降序 - 保留注释
+    init_lt_klmemo();
+    
     var items=local_storage_get_b('list_klmemo',-1,false);
     var postpath=postpath_b();
     var bljg='<div id="div_backup" style="width:90%;margin:0.5rem;">';
@@ -291,6 +305,22 @@ function change_content_lt_klmemo(csno){
     }
 }
 
+function done_lt_klmemo(){
+    var blfound=false;
+    for (let blxl=0;blxl<klmemo_global.length;blxl++){
+        var item=klmemo_global[blxl];
+        var start_day = validdate_b(item[1]);
+        var end_day = validdate_b(item[2]);
+        if (start_day===false || end_day===false){continue;}
+        if (end_day<start_day){continue;}
+        blfound=true;
+        draw_lt_klmemo(blxl);
+    }
+    if (blfound){
+        document.getElementById('divhtml').insertAdjacentHTML('afterbegin','<p><span class="aclick" onclick="javascript:delete_lt_klmemo();">清空已完成项</span></p>');
+    }
+}
+
 function init_lt_klmemo(cskey='',refresh_tag=false){
     local_storage_2_array_lt_klmemo();
     document.getElementById('divhtml').innerHTML='';
@@ -307,19 +337,7 @@ function init_lt_klmemo(cskey='',refresh_tag=false){
     document.getElementById('span_count').innerHTML='('+klmemo_global.length+')';
 
     if (cskey=='DONE'){
-        var blfound=false;
-        for (let blxl=0;blxl<klmemo_global.length;blxl++){
-            var item=klmemo_global[blxl];
-            var start_day = validdate_b(item[1]);
-            var end_day = validdate_b(item[2]);
-            if (start_day===false || end_day===false){continue;}
-            if (end_day<start_day){continue;}
-            blfound=true;
-            draw_lt_klmemo(blxl);
-        }
-        if (blfound){
-            document.getElementById('divhtml').insertAdjacentHTML('afterbegin','<p><span class="aclick" onclick="javascript:delete_lt_klmemo();">清空已完成项</span></p>');
-        }
+        done_lt_klmemo();
         return;
     }
     var isreg=false;
