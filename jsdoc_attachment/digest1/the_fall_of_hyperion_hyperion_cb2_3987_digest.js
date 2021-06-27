@@ -3,4 +3,5 @@ var digest_global=`
 *hemispherical
 *millipede
 *powerboat
+*anyplace
 `.trim().split('\n');

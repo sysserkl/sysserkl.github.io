@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-05-30 20:15:58 日"],
+["","","","更新日期：2021-06-27 10:00:10 日"],
 ["http://www.sonicbbs.com/war/topicdisplay.asp?BoardID=11&amp;Page=1&amp;TopicID=301787","20030813 | 颐和园长廊"],
 ["http://news.sina.com.cn/c/2003-11-28/09071205023s.shtml","20031128 | 中国公布首批历史文化名镇名村 周庄乌镇入选"],
 ["http://moganshan.zhan.cn.yahoo.com/apps/ncpcontent/?module_id=27500000019107&amp;action=read&amp;articleid=6","20040715 | 颐园读书记_莫干山居图"],
@@ -48,4 +48,5 @@ var recent_info_list=[
 ["https://www.thepaper.cn/newsDetail_forward_3246356","20190403 | 演员赵立新就日军侵华不毁故宫等不当言论致歉_澎湃新闻"],
 ["https://cn.nytimes.com/china/20190807/beijing-forbidden-city-museum/","20190807 | 张彦：中国复兴传统文化，故宫恢复往日辉煌 - 纽约时报中文网"],
 ["https://www.zaobao.com/realtime/china/story20200118-1022157","20200118 | 女网友闭馆日开豪车进故宫惹众怒 故宫致歉 | 联合早报网"],
+["https://mp.weixin.qq.com/s/9Bqg1sRqJIcl-I05HUR77Q","20210618 | 杜梨：在颐和园，我为人民服务，人民千姿百态 - 先生制造"],
 ];

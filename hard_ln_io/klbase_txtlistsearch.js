@@ -229,7 +229,7 @@ function txtmenus_kltxt_b(cstype=''){
         menu_dir=menu_dir.concat(search_list);
         menu_dir_width='19rem';
         menu_config=menu_config.concat([
-        '<span class="span_menu" onclick="javascript:'+str_t+'search_demo_kltxt_b();">语法示例</span>',
+        '<span class="span_menu" onclick="javascript:'+str_t+'help_kltxt_b();">Help</span>',
         '<span class="span_menu" onclick="javascript:'+str_t+'editable_kltxt_b();">页面可编辑</span>',        
         '<span class="span_menu" onclick="javascript:'+str_t+'break_line_kltxt_b();">断句</span>',        
         ]);
@@ -621,16 +621,23 @@ function get_books_thickness_kltxt_b(){
 	document.getElementById('divhtml2').innerHTML='<p>全部书籍相当于：'+totalsize_t.toFixed(2)+'本'+blcompared_book+'</p>'+bljg;
 }
 
-function search_demo_kltxt_b(){
-	var bljg='<p>搜索语法示例：</p>\n';
-	bljg=bljg+'<ol>\n';
-	bljg=bljg+'<li>必须含有宝玉，并且必须含有林黛玉（<b>+宝玉 +林黛玉</b>）</li>\n';
-	bljg=bljg+'<li>或者含有宝玉，或者含有林黛玉（<b>宝玉 林黛玉</b>）</li>\n';
-	bljg=bljg+'<li>必须含有宝玉，并且必须不含有林黛玉（<b>+宝玉 -林黛玉</b>）</li>\n';
-	bljg=bljg+'<li>或者含有宝玉，并且必须含有林黛玉（<b>宝玉 +林黛玉</b>）</li>\n';
-	bljg=bljg+'</ol>\n';
+function help_kltxt_b(){
+	var bljg=`<h4>搜索语法示例：</h4>
+<ol>
+<li>必须含有宝玉，并且必须含有林黛玉（<b>+宝玉 +林黛玉</b>）</li>
+<li>或者含有宝玉，或者含有林黛玉（<b>宝玉 林黛玉</b>）</li>
+<li>必须含有宝玉，并且必须不含有林黛玉（<b>+宝玉 -林黛玉</b>）</li>
+<li>或者含有宝玉，并且必须含有林黛玉（<b>宝玉 +林黛玉</b>）</li>
+</ol>
+<h4>参数示例：</h4>
+<ol>
+<li><a href="?_tag幻想" target=_blank>?_tag幻想</a> 返回指定分类的书籍</li>
+<li><a href="?xi_you_ji_99175" target=_blank>?xi_you_ji_99175</a> 返回指定书籍</li>
+<li><a href="?xi_you_ji_99175&s=猪八戒" target=_blank>?xi_you_ji_99175&s=猪八戒</a> 搜索指定书籍内容</li>
+<li><a href="?xi_you_ji_99175&s1=衡阳峪黑水河神府" target=_blank>?xi_you_ji_99175&s1=衡阳峪黑水河神府</a> 返回搜索得到的第一条记录的阅读页面</li>
+</ol>
+`;
 	document.getElementById('divhtml').innerHTML=bljg;
-	return;
 }
 
 function menu_all_only_one_kltxt_b(csmax=3000){

@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-05-30 20:15:58 日"],
+["","","","更新日期：2021-06-27 10:00:10 日"],
 ["http://www.southcn.com/news/community/shzt/youth/forerunner/200404280880.htm","19191101 | 鲁迅：我们现在怎样做父亲"],
 ["http://www.guxiang.com/index.htm","19270602 | 王国维在颐和园投湖自尽"],
 ["http://sina.com.cn/comment/1999-11-6/29197.html","19991106 | 评论：有感于国家图书馆收押金 - 南方周末"],
@@ -152,6 +152,7 @@ var recent_info_list=[
 ["https://www.weibo.com/3645321135/Iad4w05D5","20191006 | 周末连环画彩绘全本三国演义（10册）... 来自于双子鱼 - 微博"],
 ["https://weibo.com/2971003043/IgMdaEkMK","20191118 | #站务#自今年08月30日开始，新版网站公开上... 来自书格图书馆 - 微博"],
 ["https://www.solidot.org/story?sid=62825","20191203 | Solidot | 美国公共图书馆放弃逾期罚款结果出人意料"],
+["https://weibo.com/3645321135/IkQZh1gOj","20191215 | 周末连环画福尔摩斯探案集57册 - 来自于双子鱼 - 微博"],
 ["http://blog.sciencenet.cn/blog-213646-1211517.html","20191226 | 科学网—高校图书馆人力资源状况忧思录 - 王启云的博文"],
 ["https://www.solidot.org/story?sid=63372","20200129 | 奇客Solidot | 调查显示有更多的美国人去图书馆而不是去电影院"],
 ["https://www.thepaper.cn/newsDetail_forward_6124885","20200224 | 许知远为单向空间发求助信：书店撑不住了，求众筹续命_澎湃新闻"],

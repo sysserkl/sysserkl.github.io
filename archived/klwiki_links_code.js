@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-05-30 20:15:58 日"],
+["","","","更新日期：2021-06-27 10:00:10 日"],
 ["https://mail.python.org/pipermail/python-list/2005-May/342496.html","20050506 | [HELP] Tkinter Application Minimized to System Tray :)"],
 ["http://www.enet.com.cn/article/2006/1120/A20061120298161.shtml","20061120 | PHP：“草根语言”挑战“大腕”Java .Net"],
 ["http://blog.wpjam.com/article/wordpress-custom-fields/","20070805 | WordPress 自定义字段（Custom Fields）详细介绍和使用"],
@@ -285,6 +285,7 @@ var recent_info_list=[
 ["https://stackoverflow.com/questions/16865997/python-bottle-module-causes-error-413-request-entity-too-large","20130531 | http - Python bottle module causes \"Error: 413 Request Entity Too Large\" - Stack Overflow"],
 ["https://stackoverflow.com/questions/16994696/python-get-time-stamp-on-file-in-mm-dd-yyyy-format","20130608 | date - python get time stamp on file in mm/dd/yyyy format - Stack Overflow"],
 ["https://stackoverflow.com/questions/16996432/how-do-i-bind-the-enter-key-to-a-function-in-tkinter","20130608 | python - How do I bind the enter key to a function in tkinter? - Stack Overflow"],
+["https://stackoverflow.com/questions/17009216/arranging-pyqt-combobox-in-toolbar","20130609 | python - Arranging pyqt combobox in toolbar - Stack Overflow"],
 ["https://stackoverflow.com/questions/17056349/convert-sql-results-into-php-array","20130612 | mysql - Convert SQL results into PHP array - Stack Overflow"],
 ["https://stackoverflow.com/questions/17075534/apache-one-setting-for-multiple-directories","20130613 | apache2 - Apache: One setting for multiple directories - Stack Overflow"],
 ["https://stackoverflow.com/questions/17097642/how-to-insert-an-inline-heredoc-maybe-python-script-into-a-bash-stdin-stdout?r=SearchResults","20130613 | How to insert an inline (heredoc maybe? ) python script into a bash stdin/stdout streaming pipeline - Stack Overflow"],
@@ -366,6 +367,7 @@ var recent_info_list=[
 ["http://codegeekz.com/jquery-lightbox-plugins-beautifying-websites/","20140912 | 20 Best jQuery Lightbox Plugins - CodeGeekz"],
 ["https://www.cnblogs.com/zjoch/p/3984427.html","20140921 | mysql sql长度限制解决 - 遥望星空 - 博客园"],
 ["https://stackoverflow.com/questions/26259657/imagemagick-montage-resizing-only-one-input-image","20141009 | ImageMagick montage: Resizing only one input image - Stack Overflow"],
+["https://stackoverflow.com/questions/9047931/leaflet-js-open-all-popup-bubbles-on-page-load","20141020 | map - Leaflet.js: Open all popup bubbles on page load - Stack Overflow"],
 ["http://codegeekz.com/25-best-jquery-grid-plugins-developers/","20141022 | 25 Best jQuery Grid Plugins for Developers - Code Geekz"],
 ["https://stackoverflow.com/questions/26568952/how-to-replace-multiple-patterns-at-once-with-sed","20141026 | syntax - How to replace multiple patterns at once with sed? - Stack Overflow"],
 ["https://stackoverflow.com/questions/26765218/get-the-text-of-a-button-widget","20141105 | python - Get the text of a button widget - Stack Overflow"],
@@ -536,6 +538,7 @@ var recent_info_list=[
 ["https://stackoverflow.com/questions/36947847/how-to-generate-range-of-numbers-from-0-to-n-in-es2015-only","20180228 | javascript - How to generate range of numbers from 0 to n in ES2015 only? - Stack Overflow"],
 ["https://stackoverflow.com/questions/49111431/how-to-get-texture-dimensions-with-three-js","20180305 | javascript - How to get texture dimensions with Three.js - Stack Overflow"],
 ["https://www.learnpyqt.com/courses/adanced-ui-features/system-tray-mac-menu-bar-applications-pyqt/","20180322 | System tray &amp; Mac menu bar applications in PyQt (Updated 2019) — Learn PyQt5 GUI programming hands-on"],
+["https://stackoverflow.com/questions/49518242/how-do-i-get-the-current-text-from-a-qcombobox-with-pyqt5-using-a-button","20180328 | python - How do I get the current text from a QcomboBox with PyQt5 using a button? - Stack Overflow"],
 ["https://stackoverflow.com/questions/15345790/scipy-misc-module-has-no-attribute-imread","20180331 | python - scipy.misc module has no attribute imread? - Stack Overflow"],
 ["https://kn007.net/topics/the-road-to-mysql-8-0-11-update/","20180419 | MySQL 8.0.11的更新之路 | kn007的个人博客"],
 ["https://www.cnbeta.com/articles/soft/718465.htm","20180420 | MySQL 8 正式版 8.0.11 发布：比MySQL 5.7快2倍 - cnBeta.COM"],
@@ -606,4 +609,5 @@ var recent_info_list=[
 ["https://www.cyberciti.biz/tips/linux-unix-get-yesterdays-tomorrows-date.html","20201209 | Getting Yesterday's or Tomorrow's date with bash on Linux / Unix - nixCraft"],
 ["https://www.solidot.org/story?sid=66502","20201228 | 奇客Solidot | WordPress 的市场份额在不断增长"],
 ["https://forum.qt.io/topic/122166/problem-with-pyside6-and-qtwebenginewidgets-module/5","20201229 | Problem with PySide6 and QtWebEngineWidgets module | Qt Forum"],
+["https://www.solidot.org/story?sid=68068","20210618 | 奇客Solidot | Google 资助用 Rust 开发内核项目"],
 ];
