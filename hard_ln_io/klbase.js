@@ -1088,51 +1088,65 @@ function permutator_b(inputArr) {
 }
 
 function reverse_str_b(csstr){
-    return csstr.split("").reverse().join("");
+    return csstr.split('').reverse().join('');
 }
 
-function service_worker_delete_b(appname){
-    var keyname='pwa_'+appname+'_store';
+function service_worker_unregister_b(appname){
     var fname=appname+'_service_worker.js';
-    
-    caches.delete(keyname);
-    console.log('caches.delete',keyname); //此行保留 - 保留注释
-    if(window.navigator && navigator.serviceWorker) {
+    if (window.navigator && navigator.serviceWorker){        
         navigator.serviceWorker.getRegistrations()
         .then(function(registrations) {
-            for(let one_registration of registrations) {
-                if (one_registration.active['scriptURL'].includes(fname)){
+            var blfound=false;
+            for (let one_registration of registrations) {
+                if (one_registration.active['scriptURL'].includes(fname) || one_registration.waiting && one_registration.waiting['scriptURL'].includes(fname)){
                     one_registration.unregister();
-                    console.log('one_registration.unregister',fname); //此行保留 - 保留注释
+                    console.log('unregister',fname); //此行保留 - 保留注释
+                    blfound=true;
                 }
             }
+            if (blfound===false){
+                console.log('not found',fname);
+            }
+            console.log('==========');
         });
     }
 }
 
-function pwa_clear_cache_all_b(){
-    if (confirm('是否清空全部 PWA Cache？')){
-        var service_list=[
-        'bible',
-        'calculator',
-        'gps_points',
-        'long_term_plans',
-        'lsm',
-        'memo',
-        'reader_idb',
-        'rnd_english_words',
-        'routines',
-        'screen_clock',
-        'screen_colorful_boxes',
-        'screen_matrix',
-        'sticker_mobile',
-        'todolist',
-        'websites',
-        ];
-        for (let item of service_list){
-            service_worker_delete_b(item);
+function service_worker_delete_b(appname=''){
+    var is_all=(appname=='');
+
+    var keyname='pwa_'+appname+'_store'; //keyname 支持如 pwa_xxx_store_v任意字符 - 保留注释
+
+    var app_list=[];
+    caches.keys().then(function(keyList) {
+        for (let one_key of keyList){
+            if (is_all || one_key==keyname || one_key.substring(0,keyname.length+2)==keyname+'_v'){
+                caches.open(one_key).then(function(cache) {
+                    cache.keys().then(function(keys) {
+                        var blxl=1;
+                        keys.forEach(function(request, index, array) {
+                            console.log(blxl,one_key,'delete url:',array[index]['url']);
+                            blxl=blxl+1;
+                            cache.delete(request);
+                        });
+                        console.log('----------');
+                        caches.delete(one_key);
+                        console.log('caches.delete',one_key); //此行保留 - 保留注释   
+                        console.log('----------');
+                        
+                        appname=one_key.replace(new RegExp(/^pwa_(.*?)_store.*$/,'g'),'$1');
+                        app_list.push(appname);
+                        service_worker_unregister_b(appname);
+                    });
+                });
+            }
         }
-    }
+    });
+}
+
+function pwa_clear_cache_all_b(){
+    if (confirm('是否清空全部 PWA Cache？')==false){return;}
+    service_worker_delete_b();
 }
 
 function array_repeated_column_value_b(cslist,checknum=0){
