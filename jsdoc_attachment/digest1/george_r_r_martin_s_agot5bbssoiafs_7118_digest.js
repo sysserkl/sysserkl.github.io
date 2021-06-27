@@ -62,4 +62,5 @@ var digest_global=`
 *unskilled
 *untrained
 *odorless
+*octagon
 `.trim().split('\n');

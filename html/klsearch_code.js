@@ -299,7 +299,7 @@ function menu_klsearch(){
     '<span class="span_menu" onclick="javascript:'+str_t+'same_name_klsearch();">相同名称的搜索</span>',
     ];
     
-    document.getElementById('div_title_klsearch').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','12rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'⚙','12rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('div_title_klsearch').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','18rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'⚙','12rem','1rem','1rem','60rem'),'','0rem')+' ');
 }
 
 function same_name_klsearch(){
@@ -346,6 +346,7 @@ function batch_keys_form_klsearch(){
     bljg=bljg+textarea_buttons_b('textarea_batch_keys','清空,全选,复制');
     bljg=bljg+'搜索引擎名称：<input type="text" id="input_search_type" /> ';
     bljg=bljg+'<span class="aclick" onclick="javascript:batch_keys_links_klsearch();">生成链接</span> ';
+    bljg=bljg+'<select id="select_links_range_klsearch" onchange="javascript:current_no_oa_klsearch_global=Math.max(0,parseInt(this.value));"></select>';
     bljg=bljg+'最大间隔秒数：<input type="number" id="input_max_seconds" min=0 step=1 value=10 /> ';    
     bljg=bljg+'<span class="aclick" onclick="javascript:batch_open_links_klsearch();">批量打开链接</span> ';        
     bljg=bljg+'<span id="span_batch_keys_count"></span> ';        
@@ -355,17 +356,24 @@ function batch_keys_form_klsearch(){
     input_size_b([['input_max_seconds',4]],'id');
 }
 
-function batch_open_links_klsearch(){
+function batch_open_links_klsearch(is_init=false){
     if (oa_batch_links_klsearch_global===false){
         oa_batch_links_klsearch_global=document.getElementsByClassName('batch_links_klsearch');
         current_no_oa_klsearch_global=0;
+        document.getElementById('select_links_range_klsearch').value=0;
     }
+    if (is_init){return;}
     window.open(oa_batch_links_klsearch_global[current_no_oa_klsearch_global].href);
     document.getElementById('span_batch_keys_count').innerHTML=(1+current_no_oa_klsearch_global)+'/'+oa_batch_links_klsearch_global.length;
     current_no_oa_klsearch_global=current_no_oa_klsearch_global+1;
     if (current_no_oa_klsearch_global>=oa_batch_links_klsearch_global.length){
         oa_batch_links_klsearch_global=false;
         current_no_oa_klsearch_global=0;
+        document.getElementById('select_links_range_klsearch').value=0;
+    }
+    else if (current_no_oa_klsearch_global % 10 == 0){
+        document.getElementById('select_links_range_klsearch').value=current_no_oa_klsearch_global;
+        return;
     }
     else {    
         var blmax=parseInt(document.getElementById('input_max_seconds').value);
@@ -407,4 +415,12 @@ function batch_keys_links_klsearch(){
         bljg=bljg+'<li><a class="batch_links_klsearch" href="'+item+'" target=_blank>'+item+'</a></li>';
     }
     document.getElementById('div_status').insertAdjacentHTML('beforeend','<ol>'+bljg+'</ol>');
+    batch_open_links_klsearch(true);
+    
+    var batch_open_num=10;
+    var bljg='';
+    if (oa_batch_links_klsearch_global.length>batch_open_num){
+        bljg=bljg+select_option_numbers_b(Math.min(100,oa_batch_links_klsearch_global.length),batch_open_num);
+    }
+    document.getElementById('select_links_range_klsearch').innerHTML=bljg;
 }

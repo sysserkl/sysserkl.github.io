@@ -46,46 +46,32 @@ function update_lt_plans(){
 }
 
 function array_2_local_storage_lt_plans(){
-    var bljg='';
-    for (let one_row of long_term_plans_global){
-        bljg=bljg+'---\n';
-        for (let one_col of one_row){
-            bljg=bljg+one_col+'\n';
-        }
-    }
-    localStorage.setItem('list_long_term_plans',bljg.trim());
+    array_2_local_storage_b('list_long_term_plans',long_term_plans_global);
 }
 
-function local_storage_2_array_lt_plans(){
-    var items=('\n'+local_storage_get_b('list_long_term_plans',-1,false)).split('\n---\n');
-    var ids=[];
-    for (let one_item of items){
-        var list_t=one_item.trim().split('\n');
-        var bllen=list_t.length;
-        if (bllen<6){
-            continue;
-        }
-        if (ids.includes(list_t[0])){
-            alert('发现重复key: '+list_t[0]+'，未更新');
-            return;
-        }
-        ids.push(list_t[0]);
-    }
-    long_term_plans_global=[];
-    for (let one_item of items){
-        var list_t=one_item.trim().split('\n');
-        var bllen=list_t.length;
-        if (bllen<6){
-            continue;
-        }
-        list_t[3]=parseFloat(list_t[3]);
-        list_t[5]=parseFloat(list_t[5]);
-        list_t[6]=parseFloat(list_t[6]);
-        
-        long_term_plans_global.push(list_t);
+function local_storage_2_array_lt_plans(do_join_sort=false){   
+    var is_ok;
+    var result_t;
+    [is_ok,result_t]=local_storage_2_array_b('list_long_term_plans',6,do_join_sort);
+    if (is_ok === false){
+        alert('发现重复key: '+result_t+'，未更新');
+        return;
     }
     
-    if (ltp_sort_type_global.includes('-1')){
+    for (let blxl=0;blxl<result_t.length;blxl++){
+        result_t[blxl][3]=parseFloat(result_t[blxl][3]);
+        result_t[blxl][5]=parseFloat(result_t[blxl][5]);
+        result_t[blxl][6]=parseFloat(result_t[blxl][6]);    
+    }
+    long_term_plans_global=result_t;
+
+    sort_lt_plans();
+    array_2_local_storage_lt_plans();
+}
+
+function sort_lt_plans(){
+    if (ltp_sort_type_global==''){return;}
+    else if (ltp_sort_type_global.includes('-1')){
         long_term_plans_global.sort(function (a,b){return percent_lt_plans(a)<percent_lt_plans(b);});    
     }
     else {
@@ -96,11 +82,10 @@ function local_storage_2_array_lt_plans(){
         blno=Math.min(4,Math.max(0,blno));
         long_term_plans_global.sort(function (a,b){return a[blno]<b[blno];});
     }
+    
     if (ltp_sort_type_global.includes('a')){
         long_term_plans_global.reverse();
     }    
-   
-    array_2_local_storage_lt_plans();
 }
 
 function send_lt_plans(){
@@ -110,6 +95,10 @@ function send_lt_plans(){
 }
 
 function backup_lt_plans(){
+    ltp_sort_type_global='';
+    local_storage_2_array_lt_plans(true);
+    init_lt_plans('',false);
+    
     var items=local_storage_get_b('list_long_term_plans',-1,false);
     var postpath=postpath_b();
     var bljg='<div id="div_backup" style="width:90%;margin:0.5rem;">';
@@ -219,8 +208,10 @@ function draw_lt_plans(csno){
     }
 }
 
-function init_lt_plans(cskey=''){
-    local_storage_2_array_lt_plans();
+function init_lt_plans(cskey='',reload=true){
+    if (reload){
+        local_storage_2_array_lt_plans();
+    }
     document.getElementById('divhtml').innerHTML='';
 
     var bljg=array_repeated_column_value_b(long_term_plans_global,0);

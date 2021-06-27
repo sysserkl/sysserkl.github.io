@@ -1529,3 +1529,11 @@ function alarm_interval_set_b(csinterval=5){
     kl_alarm_start_time_global=-1;
     alarm_interval_sound_b();
 }
+
+function select_option_numbers_b(cslen,batch_open_num){
+    var bljg='<option value=-1></option>\n';
+    for (let blxl=0;blxl<Math.ceil(cslen/batch_open_num);blxl++){
+        bljg=bljg+'<option value='+(blxl*batch_open_num)+'>'+(blxl*batch_open_num+1)+' - '+Math.min(cslen,((blxl+1)*batch_open_num))+'</option>\n';
+    }
+    return bljg;
+}

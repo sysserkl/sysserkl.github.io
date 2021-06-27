@@ -116,7 +116,7 @@ function remove_navigation_gps_news(){
     navigation_layer_gps_global.addTo(omap_gps_news_global);
 }
 
-function popup_gps_news(){
+function popup_gps_news(show_content=true){
     //gps_news_global 中的每一组格式 ["日期","地区","事件名称","网址","tag"]
     remove_navigation_gps_news();
     var bltype=document.getElementById('select_transform').value;
@@ -159,8 +159,11 @@ function popup_gps_news(){
         opopup.setLatLng(new L.LatLng(district_list[key][0],district_list[key][1]));
         opopup.setContent(popupContent);        
         
-        L.marker([district_list[key][0],district_list[key][1]]).addTo(navigation_layer_gps_global)
-        .bindPopup(opopup).openPopup();
+        var omarker=L.marker([district_list[key][0],district_list[key][1]]).addTo(navigation_layer_gps_global)
+        .bindPopup(opopup);
+        if (show_content){
+            omarker.openPopup();
+        }
         
         //navigation_layer_gps_global.addLayer(opopup); //此行保留 - 保留注释
         omap_gps_news_global.panTo(new L.LatLng(district_list[key][0],district_list[key][1]));
@@ -174,6 +177,7 @@ function menu_gps_news(){
     var str_t=klmenu_hide_b('');
     var klmenu_gpx=[
     '<span class="span_menu" onclick="javascript:'+str_t+'popup_gps_news();">重绘</span>',    
+    '<span class="span_menu" onclick="javascript:'+str_t+'popup_gps_news(false);">重绘(仅标记点)</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'remove_navigation_gps_news();">清除路线</span>',
     ];
     

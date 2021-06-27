@@ -25,4 +25,7 @@ var gps_news_global=[
 ["20210613","大邑县","食品公司6人掉入废水池死亡","https://m.thepaper.cn/newsDetail_forward_13130457","事故"],
 ["20210621","汝城","汝城民房垮塌5死7伤","http://henan.china.com.cn/news/2021-06/21/content_41597666.htm","事故"],
 ["20210622","上杭县","上杭县摆酒席意外致9死7伤","https://www.thepaper.cn/newsDetail_forward_13251789","事故"],
+["20210626","柘城县","柘城县火灾已致18人死亡6人重伤","https://m.thepaper.cn/newsDetail_forward_13320027","事故"],
+["20210221","华宁县","华宁县3车追尾5死1伤","https://www.thepaper.cn/newsDetail_forward_11404772","交通"],
+["20210227","长乐区","福州一染整厂火灾6死7伤","https://www.thepaper.cn/newsDetail_forward_11489797","事故"],
 ];

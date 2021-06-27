@@ -165,7 +165,7 @@ function enwords_batch_div_b(wordslist_t,checkboxno='',showno=true,startno=0){
             bljg=bljg+'<label for="checkbox_enword'+id_name+'"><small style="color:'+scheme_global['memo']+';">'+blxl+'.</small>';
         }
         bljg=bljg+specialstr_j(enstr_t,true)+'</label> ';
-        if (blxl>100){
+        if (blxl>=100){
             bljg=bljg+'<strong><i>(&gt;100...)</i></strong>'
             break;
         }
@@ -178,10 +178,7 @@ function enwords_batch_div_b(wordslist_t,checkboxno='',showno=true,startno=0){
     var batch_open_num=10;
     if (bllen>batch_open_num){
         bljg=bljg+'<select onchange="javascript:enwords_batch_select_b(\'checkbox_enword'+checkboxno+'\', this.value);">\n';
-        bljg=bljg+'<option value=-1></option>\n';
-        for (let blxl=0;blxl<Math.ceil(bllen/batch_open_num);blxl++){
-            bljg=bljg+'<option value='+(blxl*batch_open_num)+'>'+(blxl*batch_open_num+1)+' - '+Math.min(bllen,((blxl+1)*batch_open_num))+'</option>\n';
-        }
+        bljg=bljg+select_option_numbers_b(Math.min(100,bllen),batch_open_num);
         bljg=bljg+'</select>\n';
     }
     bljg=bljg+'<span style="font-size:1.3rem;word-break:break-all;word-wrap:break-word;">';
