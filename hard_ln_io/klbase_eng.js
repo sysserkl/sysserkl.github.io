@@ -848,29 +848,18 @@ function popup_words_links_b(event,csword){
     popup_event_div_b(event,'div_enword_search_links',bljg,'bottom');
 }
 
-function en_one_word_b(csword,csno,csrecent_word){  //wordlinks_kle
+function en_one_word_b(csword,csno=[-1,0],csrecent_word=''){  //wordlinks_kle
     if (csword==null){return '';}
-	var csnum=arguments.length;
-	if (csnum<=1){
-        csno=[-1,0,false];
-    }
-	if (csnum<=2){
-        csrecent_word='';
-    }
-
 	if (csword.length==1){
-        csword.push("");
+        csword.push('');
     }
 	if (csword.length==2){
-        csword.push("");
+        csword.push('');
     }
 	
 	if (csno.length==1){
         csno.push(0);  //similar
     }
-	if (csno.length==2){
-        csno.push(false); //hide link
-    } 
 	
 	var bljg='';
     var blword0=csword[0].replace(new RegExp("'",'g'),"\\'");
@@ -880,21 +869,13 @@ function en_one_word_b(csword,csno,csrecent_word){  //wordlinks_kle
     else if (csword[1]=='' && csword[2]==''){
         //just word - 保留注释
         bljg=bljg+'<span class="a_word" onclick="javascript:popup_words_links_b(event,\''+blword0+'\'); en_word_temp_change_b(this,\''+blword0+'\');"';
-        //window.open(\'http://dict.cn/'+blword0+'\'); - 保留注释
     }    
     else {
         bljg=bljg+'<span class="a_word" onclick="javascript:popup_words_links_b(event,\''+blword0+'\');"';
-        //window.open(\'http://dict.cn/'+blword0+'\'); - 保留注释
     }
     
     bljg=bljg+'><b>'+csword[0]+'</b></span> ';
 	
-    //以下5行保留 - 保留注释
-	//if (csno[2]==false){
-		//bljg=bljg+'(<i>';
-        //bljg=bljg+en_word_links_b(blword0,true);
-		//bljg=bljg+'</i>)';
-	//}
 	if (csword[1]!==''){
         bljg=bljg+' <span class="span_pronounce" onclick="javascript:en_word_temp_change_b(this,\''+blword0+'\',\'switch\');"';
 
@@ -1025,13 +1006,7 @@ function enwords_array_to_html_b(csarray,showstatus=true,isrecent=false){
     else {
         var cshidelineno=true;
     }
-    if (document.getElementById('check_hide_link')){
-	    var cshidelink=document.getElementById('check_hide_link').checked;
-    }
-    else {
-        var cshidelink=false;
-    }
-		
+
 	var bljg='';
 	var length_t=csarray.length;
     var jumpstr='';
@@ -1072,13 +1047,13 @@ function enwords_array_to_html_b(csarray,showstatus=true,isrecent=false){
         }
         
         if (cshidelineno){
-            bljg=bljg+en_one_word_b(blitem_t,[-1,0,cshidelink],recent_bookmark);
+            bljg=bljg+en_one_word_b(blitem_t,[-1,0],recent_bookmark);
         }
         else if (blitem_t.length>3) {
-            bljg=bljg+en_one_word_b(blitem_t,[blitem_t[3],0,cshidelink],recent_bookmark);
+            bljg=bljg+en_one_word_b(blitem_t,[blitem_t[3],0],recent_bookmark);
         }
         else {
-            bljg=bljg+en_one_word_b(blitem_t,[blxl,0,cshidelink],recent_bookmark);
+            bljg=bljg+en_one_word_b(blitem_t,[blxl,0],recent_bookmark);
         }
         
         if (cshideno){

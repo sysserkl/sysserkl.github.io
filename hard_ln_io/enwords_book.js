@@ -513,15 +513,7 @@ function new_words_continue_enbook(cslength,percent10length=0){
     }
 }
 
-function new_old_words_html_enbook(csarray,csname,csaname='',onlytitle=false){
-    var ocheck=document.getElementById('check_hide_link');
-    if (ocheck){
-        var cshidelink=document.getElementById('check_hide_link').checked;
-    }
-    else {
-        var cshidelink=false;
-    }
-    
+function new_old_words_html_enbook(csarray,csname,csaname='',onlytitle=false){    
     var bltitle='';
     if (csaname!==''){
         bltitle=bltitle+'<a name="'+csaname+'"></a>';
@@ -537,7 +529,7 @@ function new_old_words_html_enbook(csarray,csname,csaname='',onlytitle=false){
     var bljg='';
     var blxl=0;
     for (let item of csarray){
-        bljg=bljg+(blxl+1)+'. '+en_one_word_b([item.replace(new RegExp('_','g'),' ')],[-1,0,cshidelink])+' ';
+        bljg=bljg+(blxl+1)+'. '+en_one_word_b([item.replace(new RegExp('_','g'),' ')],[-1,0])+' ';
         blxl=blxl+1;
     }
     var blsort='<span class="aclick" onclick="sort_enwords_enbook(this,0);">原始顺序</span>';
@@ -579,9 +571,8 @@ function sort_enwords_enbook(oa,cstype){
             break;        
     }
     var bljg='';
-    var cshidelink=document.getElementById('check_hide_link').checked;
     for (let blxl=0;blxl<csarray.length;blxl++){
-        bljg=bljg+(blxl+1)+'. '+en_one_word_b([csarray[blxl].replace(new RegExp('_','g'),' ')],[-1,0,cshidelink])+' ';
+        bljg=bljg+(blxl+1)+'. '+en_one_word_b([csarray[blxl].replace(new RegExp('_','g'),' ')],[-1,0])+' ';
     }    
     olinksdiv.innerHTML=bljg+enwords_batch_div_b(csarray);
     console.log('sort_enwords_enbook() 费时：'+(performance.now() - t0) + " milliseconds");    

@@ -59,6 +59,7 @@ var digestlist_source_global_b=[
 ["george_r_r_martin_s_agot5bbssoiafs_7118_digest",1],
 ["walden_thoreau_henry_david_2526_digest",1],
 ["the_english_patient_vintage_international_4023_digest",1],
+["slaughterhouse_five_1930_digest",1],
 ["1984_dong_wu_zhuang_yuan_ywb_186007_digest",1],
 ["breakfast_at_tiffany_s_vintage_i_4298_digest",1],
 ["zi_zhi_tong_jian_138381_digest",1],

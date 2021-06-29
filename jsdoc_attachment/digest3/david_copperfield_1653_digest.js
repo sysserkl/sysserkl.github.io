@@ -127,4 +127,5 @@ var digest_global=`
 *rosebud
 *usefully
 *Helena
+*amend
 `.trim().split('\n');
