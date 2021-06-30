@@ -217,10 +217,10 @@ function create_element_b(cstype,csidname,csstyle,o_div,csafter=true){
 function str_reg_search_b(csinput,cskeys,csreg){
     //csinput 和 cskeys 可以是字符串，也可以是数组 - 保留注释
     //如果返回 -1 ，表示正则表达式出错 - 保留注释
-    function sub_str_reg_search_b_array(csinput,word_t){
+    function sub_str_reg_search_b_normal(csinput,word_t){
         var blfound2=false;
-        for (let blx=0; blx<csinput.length;blx++){
-            if ((csinput[blx]+'').includes(word_t)){
+        for (let item of csinput){
+            if ((item+'').includes(word_t)){
                 blfound2=true;
                 break;
             }
@@ -228,10 +228,10 @@ function str_reg_search_b(csinput,cskeys,csreg){
         return blfound2;
     }
     
-    function sub_sort_by_date_b_sort_array_reg(csinput,word_t){
+    function sub_str_reg_search_b_re(csinput,word_t){
         var blfound2=false;
-        for (let blx=0; blx<csinput.length;blx++){
-            if ((csinput[blx]+'').search(new RegExp(word_t,"i"))>=0){
+        for (let item of csinput){
+            if ((item+'').search(new RegExp(word_t,"i"))>=0){
                 blfound2=true;
                 break;
             }
@@ -240,118 +240,74 @@ function str_reg_search_b(csinput,cskeys,csreg){
     }
     //---------
 	var blfound=false;
-	var csarray=Array.isArray(csinput);
-	if (csarray==false && typeof csinput!=='string'){
-		csinput=''+csinput;
+	if (Array.isArray(csinput)==false){
+		csinput=[''+csinput];   //可能不是字符串，typeof csinput!=='string' - 保留注释
 	}
+
     //如果 查询关键字 是 字符串，则转换为数组 - 保留注释
     if (typeof cskeys=='string'){
         cskeys=cskeys.split(' ');
     }
 
-	for (var blno=0;blno<cskeys.length;blno++){
-		var word_t=cskeys[blno];
+	for (let word_t of cskeys){
 		if (word_t=='' || word_t=='+' || word_t=='-'){
 			continue;
 		}
 		if (csreg==false){
 			if (word_t.substring(0,1)=='+'){
-				if (csarray){
-                    var blfound2=sub_str_reg_search_b_array(csinput,word_t.substring(1,));
-                    
-					if (blfound2==false){
-						blfound=false;
-						break;
-					}
-					else{blfound=true;}	 
-				}
-				else {
-					if (csinput.indexOf(word_t.substring(1,))<0){
-						blfound=false;
-						break;
-					}
-					else{blfound=true;}
-				}
+                var blfound2=sub_str_reg_search_b_normal(csinput,word_t.substring(1,));
+                if (blfound2==false){
+                    blfound=false;
+                    break;
+                }
+                else{
+                    blfound=true;
+                } 
 			}
 			else if (word_t.substring(0,1)=='-'){
-				if (csarray){
-                    var blfound2=sub_str_reg_search_b_array(csinput,word_t.substring(1,));
-					if (blfound2==true){
-						blfound=false;
-						break;
-					}
-					else{blfound=true;}	 
-				}
-				else {
-					if (csinput.includes(word_t.substring(1,))){
-						blfound=false;
-						break;
-					}
-					else{blfound=true;}
-				}
+                var blfound2=sub_str_reg_search_b_normal(csinput,word_t.substring(1,));
+                if (blfound2==true){
+                    blfound=false;
+                    break;
+                }
+                else{
+                    blfound=true;
+                }
 			}
 			else {
-				if (csarray){
-                    var blfound2=sub_str_reg_search_b_array(csinput,word_t);
-					if (blfound2==true){
-						blfound=true;
-					}
-				}
-				else {
-					if (csinput.includes(word_t)){
-						blfound=true;
-					}
-				}
+                var blfound2=sub_str_reg_search_b_normal(csinput,word_t);
+                if (blfound2==true){
+                    blfound=true;
+                }
 			}
 		}
 		else{
 			try{
 				if (word_t.substring(0,1)=='+'){
-					if (csarray){
-                        var blfound2=sub_sort_by_date_b_sort_array_reg(csinput,word_t.substring(1,));
-						if (blfound2==false){
-							blfound=false;
-							break;
-						}
-						else{blfound=true;}	 
-					}
-					else {
-						if (csinput.search(new RegExp(word_t.substring(1,),"i"))<0){
-							blfound=false;
-							break;
-						}
-						else{blfound=true;}
-					}
+                    var blfound2=sub_str_reg_search_b_re(csinput,word_t.substring(1,));
+                    if (blfound2==false){
+                        blfound=false;
+                        break;
+                    }
+                    else{
+                        blfound=true;
+                    } 
 				}
 				else if (word_t.substring(0,1)=='-'){
-					if (csarray){
-                        var blfound2=sub_sort_by_date_b_sort_array_reg(csinput,word_t.substring(1,));
-						if (blfound2==true){
-							blfound=false;
-							break;
-						}
-						else{blfound=true;}	 
-					}
-					else {
-						if (csinput.search(new RegExp(word_t.substring(1,),"i"))>=0){
-							blfound=false;
-							break;
-						}
-						else{blfound=true;}
-					}
+                    var blfound2=sub_str_reg_search_b_re(csinput,word_t.substring(1,));
+                    if (blfound2==true){
+                        blfound=false;
+                        break;
+                    }
+                    else{
+                        blfound=true;
+                    } 
 				}
 				else {
-					if (csarray){
-                        var blfound2=sub_sort_by_date_b_sort_array_reg(csinput,word_t);
-						if (blfound2==true){
-							blfound=true;
-						}
-					}
-					else {
-						if (csinput.search(new RegExp(word_t,"i"))>=0){
-							blfound=true;
-						}
-					}
+                    var blfound2=sub_str_reg_search_b_re(csinput,word_t);
+                    if (blfound2==true){
+                        blfound=true;
+                    }
 				}
 			}
 			catch (error){
