@@ -1,5 +1,9 @@
 //单词库
 var enwords=[
+["octagonal", "UK [ɒk'tæɡ(ə)n(ə)l] US [ɑːkˈtæɡ(ə)n(ə)l]", "adj. 八边形的；八角形的；有八边的；having eight straight sides; having eight sides and eight angles; of or relating to an octagon; (geometry) shaped like an octagon, in having eight sides and eight angles"],
+["collarless", "UK ['kɒlələs] US ['kɑːlərləs]", "adj. 无领的；无颈圈的；(of clothing) having no collar; with no collar; of a dog, not wearing a dog collar; (obsolete) of a man, not wearing a detachable collar; 🈚"],
+["bibliography", "UK [ˌbɪbli'ɒɡrəfi] US [ˌbɪbli'ɑːɡrəfi]", "n. 参考书目；（某一专题或作家的）书目；文献目录；目录索引；目录学；文献学；the study of the history of books and their production; the study of the history of books in terms of their classification, printing and publication; the study of the editions, dates, authorship, etc. of books and other writings; the study of the history, classification, etc, of literary material; the history, identification, or description of writings or publications; a list often with descriptive or critical notes of writings relating to a particular subject, period, or author; a list of works written by an author or printed by a publishing house; the works or a list of the works referred to in a text or consulted by the author in its production; a list of the books and articles that have been used by someone when writing a particular book or article; a list of books or other material on a subject; a list of sources used in the preparation of a book, thesis, etc; a list of the works of a particular author or publisher; a list of sources of information on a given subject, period, etc., or of the literary works of a given author, publisher, etc.; a list of the books, articles, etc. used or referred to by an author; a section of a written work containing citations, not quotations, to all the books referred to in the work; a list of books or documents relevant to a particular subject or author; the list of books, etc. that have been used by somebody writing an article, etc.; 🈚"],
+["yearbook", "UK ['jɪə(r)ˌbʊk] US ['jɪrˌbʊk]", "n. 年鉴；年报；年刊；学校年刊；（每年出版的）校刊；a book published yearly; an almanac or reference book published annually and containing details of events of the previous year; a book giving statistics and data of the preceding year; a book published annually, containing information, statistics, etc., about the past year; a book published yearly as a report or summary of statistics or facts: annual; a book that is published every year by a school or other organization to give facts about the events and achievements of the previous year; a school publication that is compiled usually by a graduating class and that serves as a record of the year's activities; a book published every year by a school, that gives information about the events and achievements of the previous year, and has pictures of the students; a publication of the graduating class of a school or college, with pictures and reports of the school year just coming to an end; 🈚"],
 ["dustless", "['dʌstlɪs]", "adj. 无灰尘的；不起灰尘的；无灰的；无尘的；having or causing no dust; free of dust; without dust"],
 ["cookware", "UK ['kʊkˌweə(r)] US ['kʊkˌwer] [ˈkukˌwɛər]", "n. 炊具；烹饪用具；厨房用具；pots and containers used in cooking; utensils used in cooking; items such as pans, bowls, knives, spoons, etc. used in cooking; cooking utensils; the assorted objects, such as pots, pans, baking sheets, etc., used for cooking"],
 ["raintight", "['reɪnˌtaɪt]", "adj. 防雨的；不漏雨的；雨密的；so tight as to exclude rain; 🈚"],
@@ -10729,8 +10733,8 @@ var enwords=[
 ["whistleblower", "['wɪsəlˌbləʊə]", "n. 告密者；揭发者"],
 ["whistle", "['wɪsl]", "n. 口哨；汽笛；警笛；v. 吹口哨；鸣汽笛；呼啸；吹口哨召唤"],
 ["whiteboard", "['waɪtbɔːrd]", "n. 白色书写板"],
-["whiteness", "[waɪtnəs]", "n. 白；苍白；洁白"],
-["white", "[waɪt]", "adj. 白色的；纯洁的；白种的；加牛奶的；n. 白色；白种人"],
+["whiteness", "[waɪtnəs]", "n. 白；洁白；苍白"],
+["white", "[waɪt]", "adj. 白色的；白种的；纯洁的；加牛奶的；n. 白色；白种人"],
 ["whitish", "['waɪtɪʃ]", "adj. 发白的；稍白的"],
 ["Whitney", "[ˈwɪtnɪ]", "n. 惠特尼(姓氏)"],
 ["whodunit", "[ˌhuːˈdʌn.ɪt]", "n. 〈美俚〉侦探小说[戏剧、影片等]；=whodunnit；a detective story or mystery story; a story about a crime and the attempt to discover who committed it"],

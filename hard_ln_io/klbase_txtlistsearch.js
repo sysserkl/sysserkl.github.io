@@ -1736,8 +1736,6 @@ function txtsearch_kltxt_b(csword,csreg,cscontinue,csmaxlines){
         oinput_continue.checked=cscontinue;
     }
 
-	//if (csword==''){return;}
-	
 	var cshideno=document.getElementById('check_hide_no').checked;
 
     if (csnum<=3){
@@ -1793,9 +1791,7 @@ function txtsearch_kltxt_b(csword,csreg,cscontinue,csmaxlines){
 function highheight_kltxt_b(cswordlist=[]){
     var ohighlight=document.getElementById('input_highlight');
     if (ohighlight){
-        if (document.getElementById('input_highlight').checked==false){
-            return;
-        }
+        if (document.getElementById('input_highlight').checked==false){return;}
     }
     
     if (cswordlist.length==0){
