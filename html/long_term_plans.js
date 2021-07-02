@@ -1,11 +1,17 @@
 function menu_lt_plans(){
     var str_t=klmenu_hide_b('#top');
+    var blsymbol=local_storage_get_b('symbol_long_term_plans',-1,false);
+    if (blsymbol==''){
+        blsymbol=symbol_manage_lt_plans('default');
+    }
     var klmenu1=[
     '<span class="span_menu" onclick="javascript:'+str_t+'search_lt_plans();">计划搜索</span>',     
     '<span class="span_menu" onclick="javascript:'+str_t+'blank_lt_plans();">新计划</span>', 
     '<span class="span_menu" onclick="javascript:'+str_t+'backup_lt_plans();">编辑/导入/导出</span>', 
+    '<span id="span_symbol_lt_plans" class="span_menu" onclick="javascript:'+str_t+'symbol_manage_lt_plans();">符号：'+blsymbol+'</span>',    
+    '<span id="span_simple_lt_plan" class="span_menu" onclick="javascript:'+str_t+'klmenu_check_b(this.id,true);">⚪ Simple</span>',    
     ];
-
+    
     var klmenu_sort=[
         '<span class="span_menu" onclick="javascript:'+str_t+'ltp_sort_type_global=\'1a\';init_lt_plans();">名称升序</span>',     
         '<span class="span_menu" onclick="javascript:'+str_t+'ltp_sort_type_global=\'1\';init_lt_plans();">名称降序</span>',     
@@ -33,6 +39,43 @@ function search_lt_plans(){
         return;
     }
     init_lt_plans(blstr);
+}
+
+function symbol_manage_lt_plans(cstype='set'){
+    var default_symbol='○,●';
+    if (cstype=='default'){
+        return default_symbol;
+    }
+    
+    var ospan=document.getElementById('span_symbol_lt_plans');
+    if (!ospan){return;}
+    
+    var blstr=ospan.innerText.trim();
+    if (blstr.substring(0,3)=='符号：'){
+        blstr=blstr.substring(3,).trim();
+    }
+    
+    var list_t=blstr.split(',');
+    if (list_t.length==2){
+        var old_symbol=blstr;
+    }
+    else {
+        var old_symbol=default_symbol;
+    }
+    switch (cstype){
+        case 'get':
+            return old_symbol.split(',');
+            break;
+        case 'set':
+            var new_symbol=(prompt('设置符号，并以英文逗号间隔：',old_symbol) || '').replace(new RegExp(/\s/,'g'),'').split(',');
+            if (new_symbol[0]=='默认'){
+                new_symbol=default_symbol.split(',');
+            }
+            else if (new_symbol.length!==2 || new_symbol == old_symbol){return;}
+            ospan.innerText='符号：'+new_symbol.join(',');
+            localStorage.setItem('symbol_long_term_plans',new_symbol.join(','));
+            break;
+    }
 }
 
 function update_lt_plans(){
@@ -160,6 +203,24 @@ function percent_lt_plans(csitem){
 }
 
 function draw_lt_plans(csno){
+    function sub_draw_lt_plans_dots(dots){
+        var bljg=[];
+        for (let item of dots){
+            bljg.push('<span style="color:'+item[1]+';margin-right:0.1rem;" title="'+item[0]+'. '+item[3]+'">'+item[2]+'</span>');
+        }
+        return bljg.join('');
+    }
+    
+    function sub_draw_lt_plans_section(dot_list,cscolor){
+        var days=10;
+        if (is_simple && dot_list.length>=days*2+days){
+            return sub_draw_lt_plans_dots(dot_list.slice(0,days))+'<span style="color:'+cscolor+';" title="'+dot_list[days][3]+'—'+dot_list.slice(-1*days-1,-1*days)[0][3]+'">…'+'('+(dot_list.length-days*2)+'天)…</span>'+sub_draw_lt_plans_dots(dot_list.slice(-1*days,));
+        }
+        else {
+            return sub_draw_lt_plans_dots(dot_list);
+        }    
+    }
+    //---------------------------
     var csitem=long_term_plans_global[csno];
     var start_day = validdate_b(csitem[2]);
     var end_day = validdate_b(csitem[4]);
@@ -172,7 +233,8 @@ function draw_lt_plans(csno){
     var blpercent=percent_lt_plans(csitem);
     if (blpercent===false){return;}
     
-    var blposition=parseInt(blpercent*all_days);
+    var blposition=Math.min(all_days,Math.max(0,parseInt(blpercent*all_days)));
+    
     var bljg='<tr><td><b>'+(csno+1)+'.';
     bljg=bljg+'<span style="cursor:pointer;" onclick="change_lt_plans(\''+csitem[0]+'\',1);">'+csitem[1]+'</span>';
     bljg=bljg+'</b> <small>[';
@@ -183,19 +245,41 @@ function draw_lt_plans(csno){
     bljg=bljg+'<tr><td style="font-size:0.72rem;line-height:120%;padding:0.1rem;overflow-wrap: anywhere;">';
     bljg=bljg+'<span style="cursor:pointer;" onclick="change_lt_plans(\''+csitem[0]+'\',2);">'+csitem[2]+'</span> ';
 
-    var symbol_list=['○','●'];
-    for (let blxl=1;blxl<=all_days;blxl++){
+    var symbol_list=symbol_manage_lt_plans('get');
+    
+    var is_simple=klmenu_check_b('span_simple_lt_plan',false);
+    //------------------
+    var dot_list=[];
+    for (let blxl=1;blxl<=blposition;blxl++){
         var day_str=date2str_b('/',start_day);
-        var list_t=['grey',symbol_list[0]];
-        if (blxl<=blposition){
-            list_t=['green',symbol_list[1]];
-        }
         if (day_str==today_str){
-            list_t=['red',symbol_list[1]];
+            bljg=bljg+sub_draw_lt_plans_section(dot_list,'green');
+            dot_list=[];
+            bljg=bljg+sub_draw_lt_plans_dots([[blxl,'red',symbol_list[1],day_str]]);
         }
-        bljg=bljg+'<span style="color:'+list_t[0]+';margin-right:0.1rem;" title="'+blxl+'. '+day_str+'">'+list_t[1]+'</span>';
+        else {
+            dot_list.push([blxl,'green',symbol_list[1],day_str]);
+        }
         start_day.setTime(start_day.getTime()+24*60*60*1000);
     }
+    bljg=bljg+sub_draw_lt_plans_section(dot_list,'green');
+    
+    dot_list=[];
+    for (let blxl=blposition+1;blxl<=all_days;blxl++){
+        var day_str=date2str_b('/',start_day);
+        if (day_str==today_str){
+            bljg=bljg+sub_draw_lt_plans_section(dot_list,'grey');
+            dot_list=[];        
+            bljg=bljg+sub_draw_lt_plans_dots([[blxl,'red',symbol_list[1],day_str]]);
+        }
+        else {
+            dot_list.push([blxl,'grey',symbol_list[0],day_str]);
+        }
+        start_day.setTime(start_day.getTime()+24*60*60*1000);
+    }
+    bljg=bljg+sub_draw_lt_plans_section(dot_list,'grey');
+    //------------------
+    
     bljg=bljg+'<span style="cursor:pointer;" onclick="change_lt_plans(\''+csitem[0]+'\',4);">'+csitem[4]+'</span> ('+all_days+'天)';
     bljg=bljg+'</td></tr>';
     

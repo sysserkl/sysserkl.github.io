@@ -20,4 +20,5 @@ var digest_global=`
 *burro
 *touchdown
 *unnamed
+*gamesmanship
 `.trim().split('\n');

@@ -400,4 +400,5 @@ var digest_global=`
 *shipmaster
 *winebibber
 *prophetess
+*unblameable
 `.trim().split('\n');

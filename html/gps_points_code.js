@@ -811,8 +811,10 @@ function gpx_from_textarea_gps_points(){
     read_gpx_gps_points(blstr,'');
 }
 
-function district_gps_points(){
-    var cskeys=(prompt('输入查询地区名称：') || '').trim();
+function district_gps_points(cskeys=false){
+    if (cskeys===false){
+        var cskeys=(prompt('输入查询地区名称：') || '').trim();
+    }
     var csreg=false;
     if (cskeys.slice(-4,)=='(:r)'){
         csreg=true;
@@ -910,6 +912,7 @@ function menu_gps_points(){
 
     var klmenu_district=[
         '<span class="span_menu" onclick="javascript:'+str_t+'district_gps_points();">地区坐标搜索</span>',
+        '<span class="span_menu" onclick="javascript:'+str_t+'district_gps_points(\',1,\');">地级及以上城市</span>',
         '<span class="span_menu" onclick="javascript:'+str_t+'batch_2points_distance_list_gps_points();">两两坐标距离排序</span>',
     ];
     
