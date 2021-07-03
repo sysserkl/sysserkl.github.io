@@ -3,4 +3,5 @@ var digest_global=`
 *cookware
 *lamplit
 *semitropical
+*Raphael
 `.trim().split('\n');

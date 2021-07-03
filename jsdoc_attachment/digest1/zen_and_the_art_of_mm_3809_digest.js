@@ -8,4 +8,6 @@ var digest_global=`
 *voltmeter
 *Hume
 *restate
+*enlargement
+*rind
 `.trim().split('\n');

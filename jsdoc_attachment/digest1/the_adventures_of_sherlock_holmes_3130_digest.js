@@ -44,4 +44,6 @@ var digest_global=`
 *cashbox
 *Paddington
 *introspect
+*leakage
+*receipt
 `.trim().split('\n');

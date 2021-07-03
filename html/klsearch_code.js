@@ -136,7 +136,7 @@ function args_klsearch(){
                 bltype=item.substring(2,).toLowerCase();
                 switch (bltype){
                     case 'batch_en':
-                        bltype='dict.cn,youdao,iciba,merriam-webster,cambridge,collins(p),cambridge_cn,wordreference_cn,wikitionary(p),learnersdictionary,The_Free_Dictionary,Wordnet,KLWiki,EBS';
+                        bltype='dict.cn,youdao,iciba,merriam-webster,cambridge,collins(p),cambridge_cn,wr_cn,wikitionary(p),learnersdictionary,TFD,Wordnet,KLWiki,EBS';
                         break;
                 }
             }

@@ -14,4 +14,5 @@ var digest_global=`
 *Arnold
 *bacterium
 *rosebush
+*teardrop
 `.trim().split('\n');

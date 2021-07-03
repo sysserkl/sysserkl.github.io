@@ -401,4 +401,5 @@ var digest_global=`
 *winebibber
 *prophetess
 *unblameable
+*silversmith
 `.trim().split('\n');

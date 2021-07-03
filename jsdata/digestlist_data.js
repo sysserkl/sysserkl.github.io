@@ -51,6 +51,7 @@ var digestlist_source_global_b=[
 ["quan_yuan_qu_xi_wen_119091_digest",1],
 ["jin_yong_zuo_pin_ji_bxjxdbq2_682718_digest",1],
 ["pi_pi_lu_he_she_wab_247886_digest",1],
+["endymion_hyperion_cantos_book_3_2996_digest",1],
 ["way_station_clifford_d_simak_2644_digest",1],
 ["shi_ji_wen_bai_dui_z_166231_digest",1],
 ["the_adventures_of_sherlock_holmes_3130_digest",1],

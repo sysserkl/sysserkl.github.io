@@ -4,4 +4,6 @@ var digest_global=`
 *millipede
 *powerboat
 *anyplace
+*freethinker
+*marionette
 `.trim().split('\n');

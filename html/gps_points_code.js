@@ -841,6 +841,7 @@ function batch_2points_distance_list_gps_points(){
     var lat;
     var lng;
     var result_t=[];
+    var blxl=0;
     for (let item of list_t){
         blmemo='';
         var blat=item.indexOf('#');
@@ -857,6 +858,11 @@ function batch_2points_distance_list_gps_points(){
         lng=parseFloat(lat_lng[1]);
         if (isNaN(lat) || isNaN(lng)){continue;}
         result_t.push([lat,lng,blmemo]);
+        blxl=blxl+1;
+        if (blxl>=10000){
+            document.getElementById('div_status').innerHTML='仅计算前10000条记录';
+            break;
+        }
     }
     
     var distance_list=[];
@@ -880,6 +886,10 @@ function batch_2points_distance_list_gps_points(){
         }    
     }
     distance_list.sort(function (a,b){return a[0]>b[0];});
+    if (distance_list.length>10000){
+        document.getElementById('div_status').innerHTML='只显示前10000条记录';
+        distance_list=distance_list.slice(0,10000);
+    }
     for (let blxl=0;blxl<distance_list.length;blxl++){
         distance_list[blxl]='<p>'+(blxl+1)+'. '+distance_list[blxl][1].join('——')+': '+distance_list[blxl][0].toFixed(2)+'公里</p>';
     }
@@ -913,6 +923,7 @@ function menu_gps_points(){
     var klmenu_district=[
         '<span class="span_menu" onclick="javascript:'+str_t+'district_gps_points();">地区坐标搜索</span>',
         '<span class="span_menu" onclick="javascript:'+str_t+'district_gps_points(\',1,\');">地级及以上城市</span>',
+        '<span class="span_menu" onclick="javascript:'+str_t+'district_gps_points(\'+,2, +区,\');">城区</span>',
         '<span class="span_menu" onclick="javascript:'+str_t+'batch_2points_distance_list_gps_points();">两两坐标距离排序</span>',
     ];
     

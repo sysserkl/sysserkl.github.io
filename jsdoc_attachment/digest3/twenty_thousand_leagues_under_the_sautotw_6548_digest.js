@@ -518,4 +518,5 @@ var digest_global=`
 *Tunisia
 *obituary
 *in all seriousness
+*Samoa
 `.trim().split('\n');

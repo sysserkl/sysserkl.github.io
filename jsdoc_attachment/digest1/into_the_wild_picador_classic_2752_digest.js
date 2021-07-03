@@ -21,4 +21,5 @@ var digest_global=`
 *touchdown
 *unnamed
 *gamesmanship
+*anthropology
 `.trim().split('\n');
