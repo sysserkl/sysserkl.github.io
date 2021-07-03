@@ -9081,7 +9081,7 @@ var enwords=[
 ["smell", "[smel]", "n. 气味；嗅觉；嗅；v. 嗅；闻；散发气味；有臭味；察觉"],
 ["smile", "[smaɪl]", "n. 微笑；笑容；v. 微笑；露出笑容"],
 ["smilingly", "['smaɪlɪŋli]", "adv. 微笑地；微笑着；with a smile or smiles; in a smiling manner"],
-["smith", "[smɪθ]", "n. 铁匠；金属工匠；a worker in metals; Smith 史密斯（姓氏）"],
+["smith", "[smɪθ]", "n. 铁匠；金属工匠；a worker in metals; n. Smith: 史密斯（姓氏）"],
 ["smokehouse", "['sməʊkhaʊs]", "n. 熏制室"],
 ["smoker", "['sməʊkə(r)]", "n. 吸烟者；吸烟室（车厢）；（男人的）吸烟聚会"],
 ["smokescreen", "['sməʊkskriːn]", "n. 烟幕"],
