@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-06-27 10:12:31 日"],
+["","","","更新日期：2021-07-04 11:29:52 日"],
 ["http://news.sina.com.cn/e/2001-11-22/404615.html","20011122 | 哪来那么多哈佛女孩？从畸形的“精英”情结说起 - 中国青年报"],
 ["http://news.sina.com.cn/s/2003-09-28/0532833051s.shtml","20030928 | 北京新东方学校不服千万元赔偿判决 已决定上诉 - 北京青年报"],
 ["http://news.sina.com.cn/c/2005-03-09/12265310795s.shtml","20050309 | 山东幼儿园车辆起火事故造成12名儿童死亡"],
@@ -56,6 +56,4 @@ var recent_info_list=[
 ["https://thestandnews.com/nature/%E5%93%88%E4%BD%9B%E5%86%8D%E8%AD%89-%E6%B0%A3%E5%80%99%E8%AE%8A%E5%8C%96%E8%87%B4%E7%B3%A7%E9%A3%9F%E9%8B%85%E9%90%B5%E8%9B%8B%E7%99%BD%E8%B3%AA%E9%87%8F%E6%B8%9B-2050-%E5%B9%B4-19-%E5%84%84%E4%BA%BA%E7%87%9F%E9%A4%8A%E4%B8%8D%E8%89%AF/","20180828 | 哈佛再證　氣候變化致糧食鋅鐵蛋白質量減　2050 年 19 億人營養不良 | 立場報道 | 立場新聞"],
 ["https://www.solidot.org/story?sid=59814","20190307 | Solidot | 2018 年中国幼儿园入园人数下滑"],
 ["http://news.sciencenet.cn/htmlnews/2019/3/424436.shtm","20190324 | 剑桥大学承认中国高考成绩 要求全省前0.1%—科学网"],
-["https://cn.reuters.com/article/china-mofa-covid-harvard-0609-idCNKBS23G11C?il=0","20200609 | 就哈佛公布的相关新冠病毒研究结果 中国外交部称仅从车流量等表象得出结论“出奇的荒谬” - 路透中文网"],
-["https://cn.reuters.com/article/harvard-covid-wuhan-fall-0609-idCNKBS23G0S7?il=0","20200609 | 哈佛研究显示新冠病毒可能早在去年8月就已在武汉传播 - 路透中文网"],
 ];

@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-06-27 10:12:31 日"],
+["","","","更新日期：2021-07-04 11:29:52 日"],
 ["https://news.sohu.com/17/76/news146347617.shtml","20010823 | 高考录取分数线悬殊太大!青岛三考生状告教育部"],
 ["https://news.sohu.com/42/01/news146510142.shtml","20010908 | 新闻追踪：青岛三考生告教育部违宪诉状(全文)"],
 ["http://www.doyouhike.net/forum/mountain/17340,0,0,1.html","20020805 | 深圳山野健行、登山远足安全指引 （老余） - 磨房"],
@@ -789,7 +789,9 @@ var recent_info_list=[
 ["https://m.weibo.cn/detail/4583586672672969","20201218 | 【关于昆明市西山区《白鱼口片区控制性详细规划项目》规划编制单位终止招选的情况说明】 - 昆明市西山区发布 - 微博"],
 ["https://www.thepaper.cn/newsDetail_forward_10662598","20210105 | 深圳市严控春节离深，要求各单位领导干部带头在深过节_澎湃新闻"],
 ["https://mp.weixin.qq.com/s/UXc-2RSk2tJ3AXvywMlr7A","20210106 | 关于一例境外输入复阳无症状感染者曾在我市活动情况的通告 - 东莞疾控"],
+["https://www.solidot.org/story?sid=66668","20210115 | 奇客Solidot | Adobe 冻结 Flash 影响大连铁路"],
 ["https://mp.weixin.qq.com/s/T0JhwwfbFpKkssns7msd0A","20210117 | 重磅榜单！深圳上海彻底火了：市值狂增8万亿！更有这9大城市，首次突破1万亿，无锡、宜宾最\"亮眼\"… - 中国基金报"],
+["https://www.thepaper.cn/newsDetail_forward_11489797","20210227 | 福建福州一染整厂发生火灾，已致6死7伤_澎湃新闻"],
 ["https://m.weibo.cn/detail/4616998745015216","20210321 | #余生请多指教# 很多家庭一生不幸福，主要就是因为，总有一方几十年如一日地自信指教。 - 叶语在苏州 - 微博"],
 ["https://www.thepaper.cn/newsDetail_forward_12691733","20210515 | 苏州盛泽龙卷风致4人死亡，中心最大风力17级_澎湃新闻"],
 ["https://finance.sina.com.cn/chanjing/cyxw/2021-05-25/doc-ikmyaawc7346845.shtml","20210525 | 大连男子投资失败驾车撞死5人 投资项目曝光_新浪网"],

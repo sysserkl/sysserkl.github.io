@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-06-27 10:12:31 日"],
+["","","","更新日期：2021-07-04 11:29:52 日"],
 ["https://mail.python.org/pipermail/python-list/2005-May/342496.html","20050506 | [HELP] Tkinter Application Minimized to System Tray :)"],
 ["http://www.enet.com.cn/article/2006/1120/A20061120298161.shtml","20061120 | PHP：“草根语言”挑战“大腕”Java .Net"],
 ["http://blog.wpjam.com/article/wordpress-custom-fields/","20070805 | WordPress 自定义字段（Custom Fields）详细介绍和使用"],
@@ -609,5 +609,6 @@ var recent_info_list=[
 ["https://www.cyberciti.biz/tips/linux-unix-get-yesterdays-tomorrows-date.html","20201209 | Getting Yesterday's or Tomorrow's date with bash on Linux / Unix - nixCraft"],
 ["https://www.solidot.org/story?sid=66502","20201228 | 奇客Solidot | WordPress 的市场份额在不断增长"],
 ["https://forum.qt.io/topic/122166/problem-with-pyside6-and-qtwebenginewidgets-module/5","20201229 | Problem with PySide6 and QtWebEngineWidgets module | Qt Forum"],
+["https://stackoverflow.com/questions/26842504/printing-column-separated-by-comma-using-awk-command-line","20210304 | csv - Printing column separated by comma using Awk command line - Stack Overflow"],
 ["https://www.solidot.org/story?sid=68068","20210618 | 奇客Solidot | Google 资助用 Rust 开发内核项目"],
 ];

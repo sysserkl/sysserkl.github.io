@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-06-27 10:12:31 日"],
+["","","","更新日期：2021-07-04 11:29:52 日"],
 ["http://162.105.138.196:8008/jbxt/gns-homepage.htm","20010603 | 是谁发明了篮球？"],
 ["http://news.sina.com.cn/c/2004-08-05/07273298228s.shtml","20040804 | 外交部：期待中日球迷文明欣赏亚洲杯足球决赛"],
 ["http://news.sina.com.cn/w/2005-05-16/14246656559.shtml","20050516 | 美拉斯维加斯庆祝建城百年 蛋糕比篮球场大"],
@@ -110,6 +110,7 @@ var recent_info_list=[
 ["https://www.solidot.org/story?sid=54561","20171120 | Solidot | 46% 的美国人口现在有高血压"],
 ["http://world.kbs.co.kr/chinese/news/news_Po_detail.htm?No=57360&amp;id=Po","20171221 | 忠清北道堤川市体育中心火灾造成人员伤亡 | KBS World Radio"],
 ["https://www.solidot.org/story?sid=55434","20180201 | Solidot | 癌症“疫苗”消灭小鼠肿瘤"],
+["https://www.zhihu.com/question/28450035/answer/310966066","20180204 | 宫颈息肉需要怎么治疗？ - 知乎"],
 ["https://tech.sina.com.cn/i/2018-08-29/doc-ihikcahf1956268.shtml","20180829 | 健康猫爆雷牵扯25万体育人 维权者：涉及资金已逾30亿_新浪网"],
 ["https://www.solidot.org/story?sid=58704","20181123 | Solidot | 甘露糖或有助于减缓肿瘤生长"],
 ["https://weibo.com/1642088277/H91TT2Q5P","20181226 | 权健肿瘤医院喉癌患者：这里不用切除 ... 来自财经网 - 微博"],

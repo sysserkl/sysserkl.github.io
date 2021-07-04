@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-06-27 10:12:31 日"],
+["","","","更新日期：2021-07-04 11:29:52 日"],
 ["https://www.debuntu.org/how-to-enable-apache-modules-under-debian-based-system-page-2/","20060615 | How To: Enable apache modules under Debian based system — page 2 - Debuntu"],
 ["http://www.williamlong.info/archives/1912.html","20090901 | CentOS操作系统安装教程-月光博客"],
 ["http://www.cnbeta.com/articles/100458.htm","20091221 | Tiny Core Linux 2.7 发布"],
@@ -132,4 +132,5 @@ var recent_info_list=[
 ["https://imcn.me/html/y2020/36519.html","20201026 | Ubuntu 20.10 其他桌面版本发布 | 我是菜鸟"],
 ["https://www.solidot.org/story?sid=66322","20201209 | 奇客Solidot | CentOS 8 将在明年底结束支持"],
 ["https://www.solidot.org/story?sid=66365","20201214 | 奇客Solidot | CentOS Linux 的替代"],
+["https://www.solidot.org/story?sid=68144","20210628 | 奇客Solidot | Linux 5.13 Kernel 发布"],
 ];

@@ -30,6 +30,7 @@ var recent_info_list=[
 * [?klwiki_links_book 阅读]
 * [?klwiki_links_city city]
 * [?klwiki_links_code code]
+* [?klwiki_links_coronavirus 新冠病毒]
 * [?klwiki_links_e-commerce e-commerce]
 * [?klwiki_links_education 教育]
 * [?klwiki_links_environment 环境]

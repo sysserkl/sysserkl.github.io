@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-06-27 10:12:31 日"],
+["","","","更新日期：2021-07-04 11:29:52 日"],
 ["http://tech.sina.com.cn/t/2006-06-17/0741994777.shtml","20060617 | 华为基本法修改工程启动 时代局限性日益凸现"],
 ["http://tech.sina.com.cn/t/2007-01-18/03341340866.shtml","20070118 | 华为18年无一项原创发明 购买专利竞跑国际市场"],
 ["http://tech.sina.com.cn/it/2007-05-01/02421493757.shtml","20070501 | 华为国际专利全球排名升至13 力拓知识产权路径"],
@@ -259,6 +259,7 @@ var recent_info_list=[
 ["https://www.solidot.org/story?sid=65927","20201027 | 奇客Solidot | 三星显示器获美国许可继续向华为供应部分面板"],
 ["https://www.zaobao.com/news/china/story20201102-1097557","20201102 | 华为拟在上海建自主技术芯片厂 | 联合早报网"],
 ["https://www.solidot.org/story?sid=66296","20201207 | 奇客Solidot | 华为投资了多家中国半导体企业"],
+["https://linux.cn/article-12974-1.html","20210101 | 华为在 Linux 内核 5.10 中代码贡献排名第一"],
 ["https://www.solidot.org/story?sid=66549","20210104 | 奇客Solidot | 腾讯华为纠纷凸显硬核联盟的垄断嫌疑"],
 ["https://www.solidot.org/story?sid=66758","20210125 | 奇客Solidot | 华为洽谈出售手机品牌 P 和 Mate"],
 ["https://www.solidot.org/story?sid=66797","20210129 | 奇客Solidot | 华为手机出货量大幅下滑"],
@@ -274,4 +275,5 @@ var recent_info_list=[
 ["https://www.solidot.org/story?sid=67939","20210603 | 奇客Solidot | 华为推出鸿蒙2.0操作系统"],
 ["https://www.solidot.org/story?sid=67944","20210603 | 奇客Solidot | 华为混淆两个鸿蒙操作系统"],
 ["https://www.zaobao.com/wencui/political/story20210604-1151843","20210604 | 华为用鸿蒙打手机翻身仗，与第三方合作成关键 | 联合早报网"],
+["https://www.solidot.org/story?sid=68077","20210620 | 奇客Solidot | 华为开发者被批评在内核刷 KPI"],
 ];
