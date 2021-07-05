@@ -5,7 +5,8 @@ function menu_lt_plans(){
         blsymbol=symbol_manage_lt_plans('default');
     }
     var klmenu1=[
-    '<span class="span_menu" onclick="javascript:'+str_t+'search_lt_plans();">计划搜索</span>',     
+    '<span class="span_menu" onclick="javascript:'+str_t+'search_lt_plans();">计划搜索</span>',   
+    '<span id="span_reg_lt_plan" class="span_menu" onclick="javascript:'+str_t+'klmenu_check_b(this.id,true);">⚪ 正则</span>',    
     '<span class="span_menu" onclick="javascript:'+str_t+'blank_lt_plans();">新计划</span>', 
     '<span class="span_menu" onclick="javascript:'+str_t+'backup_lt_plans();">编辑/导入/导出</span>', 
     '<span id="span_symbol_lt_plans" class="span_menu" onclick="javascript:'+str_t+'symbol_manage_lt_plans();">符号：'+blsymbol+'</span>',    
@@ -31,13 +32,15 @@ function menu_lt_plans(){
     var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu1,'⛳','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_sort,'↕','10rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','14rem','1rem','1rem','60rem'),'','0rem');
     
     document.getElementById('h2_title').insertAdjacentHTML('afterbegin',bljg+' ');
+    klmenu_check_b('span_reg_lt_plan',true);
 }
 
 function search_lt_plans(){
-    var blstr=(prompt('输入搜索关键字：') || '').trim();
+    var blstr=(prompt('输入搜索关键字：',recent_search_key_lt_plan_global) || '').trim();
     if (blstr==''){
         return;
     }
+    recent_search_key_lt_plan_global=blstr;
     init_lt_plans(blstr);
 }
 
@@ -308,12 +311,12 @@ function init_lt_plans(cskey='',reload=true){
         array_2_local_storage_lt_plans();
     }
 
-    var isreg=false;
+    var isreg=klmenu_check_b('span_reg_lt_plan',false);
     if (cskey.slice(-4,)=='(:r)'){
         isreg=true;
         cskey=cskey.substring(0,cskey.length-4);
     }
-    
+
     if (cskey!==''){
         for (let blxl=0;blxl<long_term_plans_global.length;blxl++){
             var item=long_term_plans_global[blxl][1];   //项目名称 - 保留注释

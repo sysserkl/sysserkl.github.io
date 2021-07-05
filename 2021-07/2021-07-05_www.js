@@ -1,0 +1,17 @@
+var sourcelist=[
+["https://larrysanger.org/2021/06/wikipedia-is-more-one-sided-than-ever/","Wikipedia Is More One-Sided Than Ever","2021-07-05","Larry Sanger Blog","0",],
+["https://www.solidot.org/story?sid=68194","Gizmo’s Freeware 走向终点","2021-07-05","Solidot","1",],
+["https://www.solidot.org/story?sid=68193","网信办下架滴滴出行APP","2021-07-05","Solidot","1",],
+["https://www.solidot.org/story?sid=68192","200 家美国公司遭遇供应链攻击","2021-07-05","Solidot","1",],
+["https://www.solidot.org/story?sid=68191","Xbox 礼品卡盗窃案的背后","2021-07-05","Solidot","1",],
+["https://www.whudat.de/smarter-by-the-day-how-to-overcome-fear-anxiety-stress-and-tension-in-life/","Smarter by the Day: How to overcome Fear, Anxiety, Stress and Tension in Life","2021-07-05","MC Winkels weBlog","0",],
+["https://www.whudat.de/common-ft-pj-imagine-official-video/","Common ft. PJ – „Imagine“ // Official Video","2021-07-05","MC Winkels weBlog","0",],
+["https://www.whudat.de/the-steoples-in-the-dance-official-video/","The Steoples – „In The Dance“ // Official Video","2021-07-05","MC Winkels weBlog","0",],
+["https://www.whudat.de/hiatus-kaiyote-veroeffentlichen-drittes-album-mood-valiant-streams/","Hiatus Kaiyote veröffentlichen drittes Album „Mood Valiant“ // Streams","2021-07-05","MC Winkels weBlog","0",],
+["https://www.whudat.de/jorja-smith-home-official-video/","Jorja Smith – „Home“ // Official Video","2021-07-05","MC Winkels weBlog","0",],
+["https://www.whudat.de/trommeltobi-veroeffentlicht-instrumental-projekt-well-be-okay-streams/","TrommelTobi veröffentlicht Instrumental Projekt „We’ll Be Okay“ // Streams","2021-07-05","MC Winkels weBlog","0",],
+["https://www.whudat.de/carrtoons-kaelin-ellis-kiefer-and-the-kount-are-playing-live-for-tiny-desk-home-concert/","Carrtoons, Kaelin Ellis, Kiefer and The Kount are playing live for Tiny Desk (Home) Concert","2021-07-05","MC Winkels weBlog","0",],
+["https://www.whudat.de/travel-where-you-are-we-stayed-home-and-travelled-for-one-year-a-film-by-sebastian-linda/","Travel Where You Are – „We stayed home and travelled for one year“ // A Film by Sebastian Linda","2021-07-05","MC Winkels weBlog","0",],
+["https://www.whudat.de/logic-the-ys-collection-vol-1-streams/","Logic – „The YS Collection Vol. 1“ // Streams","2021-07-05","MC Winkels weBlog","0",],
+["https://www.whudat.de/evidence-veroeffentlicht-unlearning-vol-1-streams/","Evidence veröffentlicht „Unlearning Vol. 1“ // Streams","2021-07-05","MC Winkels weBlog","0",],
+];

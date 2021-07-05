@@ -4,6 +4,7 @@ function menu_websites_pwa(){
     '<span class="span_menu" onclick="javascript:'+str_t+'add_websites_pwa();">添加单个网址</span>',    
     '<span class="span_menu" onclick="javascript:'+str_t+'form_websites_pwa();">导入/导出</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'organize_websites_pwa();">逐个整理</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'search_websites_pwa(\'\',true,100);">随机100个网址</span>',    
     '<span class="span_menu" onclick="javascript:'+str_t+'qr_html_websites_pwa();">QR</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'qr_html_websites_pwa(\'weixin.qq.com\');">QR微信公众号</span>',    
     '<span class="span_menu" onclick="javascript:'+str_t+'weixin_select_pwa();">QR微信公众号_Select</span>',   
@@ -157,7 +158,21 @@ function update_websites_pwa(){
     }
 }
 
-function search_websites_pwa(cskey=''){
+function array_2_local_storage_websites_pwa(csarray,cskey='',return_max=-1){
+    csarray=array_unique_b(csarray);
+    if (cskey=='' && return_max==-1){
+        csarray.sort(function (a,b){return zh_sort_b(a,b,false);});
+        csarray=csarray.slice(-2000,);
+        console.log(1);
+        localStorage.setItem('websites_list_pwa',csarray.join('\n'));
+    }
+    else if (return_max>0) {
+        csarray=csarray.slice(0,return_max);
+    }
+    return csarray.length;
+}
+
+function search_websites_pwa(cskey='',is_random=false,return_max=-1){
     var websites_list=local_storage_get_b('websites_list_pwa',-1,true);
     
     cskey=cskey.trim();
@@ -179,9 +194,7 @@ function search_websites_pwa(cskey=''){
         if (list_t.length==0){
             for (let item of websites_list){
                 var blfound=str_reg_search_b(item,cskey,true);
-                if (blfound==-1){
-                    break;
-                }
+                if (blfound==-1){break;}
                 if (blfound){
                     list_t.push(item);
                 }
@@ -203,17 +216,22 @@ function search_websites_pwa(cskey=''){
         list_t.push([blcategory,blstr,blname]);
         new_list.push(blcategory+' '+blstr+' '+blname);
     }
-    list_t.sort(function (a,b){return zh_sort_b(a,b,false,2);});
-    list_t.sort(function (a,b){return zh_sort_b(a,b,false,0);});
     
-    new_list=array_unique_b(new_list);
-    new_list.sort(function (a,b){return zh_sort_b(a,b,false);});
-    new_list=new_list.slice(-2000,);
-    if (cskey==''){
-        localStorage.setItem('websites_list_pwa',new_list.join('\n'));
+    if (is_random){
+        list_t.sort(randomsort_b);
+    }
+    else {
+        list_t.sort(function (a,b){return zh_sort_b(a,b,false,2);});
+        list_t.sort(function (a,b){return zh_sort_b(a,b,false,0);});
     }
     
-    var result_t={}
+    if (return_max>0){
+        list_t=list_t.slice(0,return_max);
+    }
+    
+    var new_list_len=array_2_local_storage_websites_pwa(new_list,cskey,return_max);
+    
+    var result_t={};
     var blxl=0;
     for (let item of list_t){
         if ((item[0] in result_t)===false){
@@ -229,7 +247,7 @@ function search_websites_pwa(cskey=''){
     document.getElementById('divhtml').innerHTML='<p style="line-height:'+(ismobile_b()?'1.8':'2.2')+'rem;">'+buttons_klwebsite_pwa(cskey)+bljg+'</p>';
     input_with_x_b('input_search',8);
     recent_search_b('recent_search_websites_pwa',[cskey,date2str_b(),previous_day_b(),next_day_b()],'search_websites_pwa','span_recent_search',[],15,false);
-    document.getElementById('span_count').innerText='('+new_list.length+')';
+    document.getElementById('span_count').innerText='('+new_list_len+')';
     top_bottom_arrow_b('div_top_bottom',blxl+' ');
 }
 
@@ -300,7 +318,7 @@ function weixin_select_pwa(){
             other_list.push(item.outerHTML);
         }
     }
-    wx_list.sort();
+    wx_list.sort(function (a,b){return zh_sort_b(a,b,false,1);});
     var blselect='<div id="div_canvas_qr_wx" style="width:'+canvas_size_websites_global*1.5+'px;height:'+canvas_size_websites_global*1.5+'px;padding:0.5rem;border:0.1rem black solid;"></div>';
     var bllen=wx_list.length;
     blselect=blselect+'<select id="select_canvas_qr_wx" style="margin-top:0.5rem;margin-bottom:0.5rem;height:2rem;" onchange="javascript:weixin_qr_pwa(this.value);">';

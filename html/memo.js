@@ -2,6 +2,7 @@ function menu_lt_klmemo(){
     var str_t=klmenu_hide_b('#top');
     var klmenu1=[
     '<span class="span_menu" onclick="javascript:'+str_t+'search_lt_klmemo();">搜索</span>',     
+    '<span id="span_reg_lt_klmemo" class="span_menu" onclick="javascript:'+str_t+'klmenu_check_b(this.id,true);">⚪ 正则</span>',        
     '<span class="span_menu" onclick="javascript:'+str_t+'init_lt_klmemo(\'DONE\');">已完成的事项</span>',     
     '<span class="span_menu" onclick="javascript:'+str_t+'new_lt_klmemo();">新Memo</span>', 
     '<span class="span_menu" onclick="javascript:'+str_t+'backup_lt_klmemo();">编辑/导入/导出</span>', 
@@ -26,13 +27,15 @@ function menu_lt_klmemo(){
     var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu1,'🧷','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_sort,'↕','10rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','14rem','1rem','1rem','60rem'),'','0rem');
     
     document.getElementById('h2_title').insertAdjacentHTML('afterbegin',bljg+' ');
+    klmenu_check_b('span_reg_lt_klmemo',true);
 }
 
 function search_lt_klmemo(){
-    var blstr=(prompt('输入搜索关键字：') || '').trim();
+    var blstr=(prompt('输入搜索关键字：',recent_search_key_klmemo_global) || '').trim();
     if (blstr==''){
         return;
     }
+    recent_search_key_klmemo_global=blstr;
     init_lt_klmemo(blstr);
 }
 
@@ -325,7 +328,8 @@ function init_lt_klmemo(cskey='',refresh_tag=false,reload=true){
         done_lt_klmemo();
         return;
     }
-    var isreg=false;
+    
+    var isreg=klmenu_check_b('span_reg_lt_klmemo',false);
     if (cskey.slice(-4,)=='(:r)'){
         isreg=true;
         cskey=cskey.substring(0,cskey.length-4);
