@@ -4,4 +4,5 @@ var digest_global=`
 *customhouse
 *boomtown
 *seawall
+*holistic
 `.trim().split('\n');

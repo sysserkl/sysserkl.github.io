@@ -38,6 +38,7 @@ function menu_rndwords(){
     '<span class="span_menu" onclick="javascript:'+str_t+'new_words_rndwords();">显示生词</span>',   
     '<span class="span_menu" onclick="javascript:'+str_t+'exam_rndwords(true);day_old_words_rndwords();">今日旧单词</span>', 
     '<span class="span_menu" onclick="javascript:'+str_t+'exam_rndwords(true);recent_words_rndwords();">最近记忆单词</span>',     
+    '<span class="span_menu" onclick="javascript:'+str_t+'en_word_recent_bookmark_b(false);exam_rndwords(true);recent_words_rndwords();">设置书签</span>',    
     '<span class="span_menu" onclick="javascript:'+str_t+'exam_rndwords();">单词测试</span>',         
     '<span class="span_menu" onclick="javascript:'+str_t+'exam_rndwords(true);sentence_source_list_rndwords();">例句出处文章列表</span>',
     ];

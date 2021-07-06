@@ -801,7 +801,7 @@ function en_word_def_b(csword,csdef,csrecent_word){
                 bljg=bljg+' <span class="span_explanation" style="background-color:'+scheme_global["skyblue"]+';">'+csdef+'</span>';
             }
             else {
-                bljg=bljg+' <span class="span_explanation" onclick="javascript:en_word_recent_bookmark_b(this,\''+csword+'\');">'+csdef+'</span>';
+                bljg=bljg+' <span class="span_explanation">'+csdef+'</span>';   //onclick="javascript:en_word_recent_bookmark_b(this,\''+csword+'\');"
             }
         }
         else {
@@ -811,14 +811,20 @@ function en_word_def_b(csword,csdef,csrecent_word){
     return bljg;
 }
 
-function en_word_recent_bookmark_b(current_span,csword){
-    if (confirm("是否设置"+csword+"为最近记忆单词书签？")){
-        var ospans=document.getElementsByClassName('span_explanation');
-        for (let item of ospans){
-            item.style.backgroundColor='';
-        }
-        current_span.style.backgroundColor=scheme_global["skyblue"];
-        localStorage.setItem('enwords_recent_bookmark',csword);
+function en_word_recent_bookmark_b(refresh=true){
+    var old_word=local_storage_get_b('enwords_recent_bookmark');
+    var csword=(prompt('输入新的最近记忆单词，作为书签',old_word) || '').trim();
+    if (csword=='' || csword==old_word){return;}
+    
+    en_word_temp_get_b();
+    if (!en_words_temp_global.includes(csword)){
+        alert(csword+' 不是最近记忆单词');
+        return;
+    }
+    
+    localStorage.setItem('enwords_recent_bookmark',csword);
+    if (refresh){
+        recent_words_list_kle(0);
     }
 }
 
@@ -957,8 +963,6 @@ function en_words_temp_update_b(divname){
         var list_t=otextarea.value.trim().split('\n');
         list_t=array_unique_b(list_t);
         if (confirm("是否更新("+list_t.length+")？")){
-            //var blstr=list_t.join('\n');
-            //localStorage.setItem('enwords_temp',blstr);
             enwords_temp_2_local_storage_b(list_t);
             en_words_temp_textarea_b(divname);
         }
