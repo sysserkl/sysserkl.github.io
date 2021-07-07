@@ -519,4 +519,5 @@ var digest_global=`
 *obituary
 *in all seriousness
 *Samoa
+*Grenada
 `.trim().split('\n');

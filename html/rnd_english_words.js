@@ -56,6 +56,7 @@ function menu_rndwords(){
     ];
     
     var klmenu3=[
+    '<span id="span_reg_rndwords" class="span_menu" onclick="javascript:'+str_t+'klmenu_check_b(this.id,true);">⚪ 正则</span>',                
     '<span class="span_menu" onclick="javascript:'+str_t+'window.open(location.href,\'\',\'width=550, height=200\');">新窗口</span>', 
     '<span class="span_menu" onclick="javascript:'+str_t+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'rnd_english_words\');}">更新版本</span>',
@@ -63,6 +64,8 @@ function menu_rndwords(){
     klmenu3=root_font_size_menu_b(str_t,true,true,true).concat(klmenu3);
     
     document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🇬🇧','12rem','1.1rem','1rem','60rem')+klmenu_b(klmenu2,'💡','16rem','1.1rem','1rem','60rem')+klmenu_b(klmenu3,'⚙','12rem','1.1rem','1rem','60rem'),'','0rem')+' ');
+    
+    klmenu_check_b('span_reg_rndwords',true);
 }
 
 function slide_set_seconds_rndwords(){
@@ -231,7 +234,7 @@ function search_rndwords(csstr='',times=10){
         }
     }
     
-    var isreg=false;
+    var isreg=klmenu_check_b('span_reg_rndwords',false);
     if (csstr.slice(-4,)=='(:r)'){
         isreg=true;
         csstr=csstr.substring(0,csstr.length-4);

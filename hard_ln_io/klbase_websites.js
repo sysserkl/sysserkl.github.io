@@ -43,3 +43,13 @@ function qr_generate_websites_b(query_str){
     oa_qr_no_websites_global=oa_qr_no_websites_global+1;
     return true;
 }
+
+function icon_klwebsites_b(cshref,isremote=false){
+    if (isremote){
+        var blsrc=href2host_b(cshref,true)+'/favicon.ico'
+    }
+    else {
+        var blsrc='data/website_ico/'+href2host_b(cshref,false)+'.ico'
+    }
+    return '<img alt="" src="'+blsrc+'" style="max-width:1rem;max-height:1rem;border-radius:1rem;" />';   //alt可以隐藏无图片的网站，title不行 - 保留注释
+}

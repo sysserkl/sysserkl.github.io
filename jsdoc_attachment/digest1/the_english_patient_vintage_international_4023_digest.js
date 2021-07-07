@@ -38,4 +38,5 @@ var digest_global=`
 *undercarriage
 *Sudanese
 *biplane
+*Michelangelo
 `.trim().split('\n');

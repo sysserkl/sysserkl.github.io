@@ -55,7 +55,7 @@ mobile_style_kltxt_b();
 var cskeys=href_split_b(location.href);
 var csbookname_global='';
 booklist_source_config_b();
-import_book_kltxt_b(cskeys);
+import_book_kltxt_b(cskeys);    //在 args_kltxt_b() 前运行，以获得 book_tag_global - 保留注释
 </script>
 <script type="text/javascript">
 decode_and_create_menu_kltxt_b();
@@ -70,9 +70,15 @@ digest_temp_load_kltxt_b(); //放在 menu_all_only_one_kltxt_b 之后 - 保留�
 <span class="aclick" onclick="javascript:txtsearch_kltxt_b();">搜索</span>
 <span class="aclick" onclick="javascript:booksearch_kltxt_b();">书目</span>
 <input type="checkbox" id="input_continue"><label for="input_continue">连续搜索</label>
+<span class="aclick" onclick="javascript:popup_show_hide_b('span_checkboxes_txtbook','');">⚙</span>
+<span id="span_checkboxes_txtbook" style="display:none;">
 <input type="checkbox" id="input_highlight" checked><label for="input_highlight">关键字加亮</label>
 <input type="checkbox" id="input_digest" checked><label for="input_digest">显示摘要</label>
 <input type="checkbox" id="input_menu_bold" checked><label for="input_menu_bold">目录加粗</label>
+<input type="checkbox" id="check_hide_no"><label for="check_hide_no">隐藏序号</label>
+<input type="checkbox" id="check_hide_lineno"><label for="check_hide_lineno">隐藏行号</label>
+<input type="checkbox" id="check_klwiki_format" checked><label for="check_klwiki_format">KLWiki format</label>
+</span>
 &nbsp;搜索结果最大行数：<input type="number" id="input_max_lines" style="width:5rem;" value="500">
 </p>
 <div id="div_recent_search"></div>
@@ -88,9 +94,6 @@ digest_temp_load_kltxt_b(); //放在 menu_all_only_one_kltxt_b 之后 - 保留�
 <span class="aclick" onclick="javascript:getlines_kltxt_b();">显示</span>
 <span class="aclick" onclick="javascript:getlines_kltxt_b(false,false,true);">单页</span>
 <span class="aclick" onclick="javascript:findmenu_kltxt_b(-1,-1,a_raw_number_kltxt_b());">查找目录</span>
-<input type="checkbox" id="check_hide_no"><label for="check_hide_no">隐藏序号</label>
-<input type="checkbox" id="check_hide_lineno"><label for="check_hide_lineno">隐藏行号</label>
-<input type="checkbox" id="check_klwiki_format" checked><label for="check_klwiki_format">KLWiki format</label>
 </p>
 
 <div id="divhtml"></div>

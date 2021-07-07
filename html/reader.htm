@@ -67,9 +67,12 @@ digest_temp_load_kltxt_b(); //放在 menu_all_only_one_kltxt_b 之后 - 保留�
 <input type="checkbox" id="input_reg"><label for="input_reg">正则</label>
 <span class="aclick" onclick="javascript:search_klreader();">内容搜索</span>
 <span class="aclick" onclick="javascript:booksearch_kltxt_b();">书目</span>
+<span class="aclick" onclick="javascript:popup_show_hide_b('span_checkboxes_txtbook','');">⚙</span>
+<span id="span_checkboxes_txtbook" style="display:none;">
 <input type="checkbox" id="input_highlight" checked><label for="input_highlight">关键字加亮</label>
 <input type="checkbox" id="input_digest" checked><label for="input_digest">显示摘要</label>
 <input type="checkbox" id="input_menu_bold" checked><label for="input_menu_bold">目录加粗</label>
+</span>
 <SELECT id="select_menu" style="max-width:15rem;" onchange="javascript:findmenu_kltxt_b(this.value);"> 
 </SELECT>
 </p>

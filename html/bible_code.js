@@ -53,6 +53,7 @@ function menu_bible(){
         klmenu1.push(    '<a href="../../../../enwords_book.htm" onclick="javascript:'+str_t+'" target=_blank>生词统计链接</a>');
     }
     var klmenu2=[
+    '<span id="span_reg_bible" class="span_menu" onclick="javascript:'+str_t+'klmenu_check_b(this.id,true);">⚪ 正则</span>',            
     '<span class="span_menu" onclick="javascript:'+str_t+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>',    
     '<span class="span_menu" onclick="javascript:'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'bible\');}">更新版本</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'help_bible();">Help</span>',
@@ -93,6 +94,8 @@ function menu_bible(){
     }
     
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'✝','14rem',button_fontsize,menu_fontsize,'60rem')+klmenu_b(klmenu2,'⚙','14rem',button_fontsize,menu_fontsize,'60rem')+klmenu_b(klmenu_idb,'ℹ','14rem',button_fontsize,menu_fontsize,'60rem')+klmenu_b(klmenu3,'🌐','16rem',button_fontsize,menu_fontsize,'60rem')+klmenu_b(color_menu,'🎨','20rem',button_fontsize,menu_fontsize,'20rem'),'','0rem')+' ');
+
+    klmenu_check_b('span_reg_bible',true);
 }
 
 function compare_data_bible(){
@@ -395,14 +398,14 @@ function search_bible(cskey='',csstartno=0,favpage_no=1,csmax=500){
     document.getElementById('input_bible_search').value=cskey;
     var h2=-1;
     var h3=-1;
-    var isreg=false;
+    var isreg=klmenu_check_b('span_reg_bible',false);
     if (cskey.slice(-4,)=='(:r)'){
         isreg=true;
         cskey=cskey.substring(0,cskey.length-4);
     }
     recent_search_bible(cskey+(isreg?'(:r)':''));
     csstartno=Math.max(0,parseInt(csstartno));
-    //var csmax=10;
+
     var fav_list=local_storage_get_b('fav_lines_bible',-1,true);
     var fav_len=fav_list.length;
     var fav_start=0;
