@@ -43,4 +43,5 @@ var digest_global=`
 *unjustly
 *Adriatic
 *insurrection
+*hypocritical
 `.trim().split('\n');

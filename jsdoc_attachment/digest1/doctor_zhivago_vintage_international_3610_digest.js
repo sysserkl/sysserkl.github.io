@@ -22,4 +22,5 @@ var digest_global=`
 *professorial
 *seacoast
 *polygon
+*anarchism
 `.trim().split('\n');

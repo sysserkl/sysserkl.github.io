@@ -197,7 +197,7 @@ function en_word_links_b(csword='',dictcn=true,maxlength=-1,csquote=false){
     var bljg='';
     
     for (let item of list_t){
-        bljg=bljg+'<span class="span_link" title="'+item[1]+'" onclick="javascript:open_link_en_b(\''+item[0]+'\',\''+csword+'\'); en_word_temp_change_b(this,\''+item[0]+'\');"';
+        bljg=bljg+'<span class="span_link" title="'+item[1]+'" onclick="javascript:open_link_en_b(\''+item[0]+'\',\''+specialstr_j(csword)+'\'); en_word_temp_change_b(this,\''+item[0]+'\');"';
         bljg=bljg+'>'+item[0]+'</span> ';
     }
     if (csquote){

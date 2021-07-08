@@ -5,4 +5,5 @@ var digest_global=`
 *boomtown
 *seawall
 *holistic
+*Cantonese
 `.trim().split('\n');

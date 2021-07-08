@@ -10,4 +10,6 @@ var digest_global=`
 *introspection
 *upperclassman
 *toolshed
+*adjourn
+*unimportant
 `.trim().split('\n');

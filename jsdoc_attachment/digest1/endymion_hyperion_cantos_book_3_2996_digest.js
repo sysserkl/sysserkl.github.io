@@ -4,4 +4,5 @@ var digest_global=`
 *lamplit
 *semitropical
 *Raphael
+*outsmart
 `.trim().split('\n');
