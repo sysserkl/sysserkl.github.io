@@ -3,4 +3,5 @@ var digest_global=`
 *guiltless
 *southwards
 *antelope
+*inquirer
 `.trim().split('\n');

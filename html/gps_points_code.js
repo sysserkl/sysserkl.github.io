@@ -632,7 +632,7 @@ function gpx_files_batch_open_one_step_gps_points(){
     setTimeout(gpx_files_batch_open_one_step_gps_points,1000);
 }
 
-function filter_gpx_list_gps_points(cstype){
+function gpx_list_filter_gps_points(cstype){
     var ool=document.getElementById('ol_gpx_file_list');
     var olis=ool.querySelectorAll('li');
     var result_t=[];
@@ -653,29 +653,49 @@ function filter_gpx_list_gps_points(cstype){
     ool.innerHTML=result_t.join('\n');
 }
 
-function gpx_quadrangle_gps_points(){
+function gpx_quadrangle_gps_points(is_simple=false){
     function sub_gpx_quadrangle_gps_points_draw(fname,gpx_point,do_transform,line_color){
         var result_t=[];
 
         var min_lat=gpx_point[0][0];
         var min_lon=gpx_point[0][1];        
-        
-        for (let one_range of gpx_point){
+        var max_lat=gpx_point[0][2];
+        var max_lon=gpx_point[0][3];
+                        
+        if (is_simple){
+            for (let one_range of gpx_point){
+                min_lat=Math.min(min_lat,one_range[0]);
+                min_lon=Math.min(min_lon,one_range[1]);
+                max_lat=Math.max(max_lat,one_range[2]);
+                max_lon=Math.max(max_lon,one_range[3]);
+            }
             result_t=[];
-            min_lat=one_range[0];
-            min_lon=one_range[1];
-            var max_lat=one_range[2];
-            var max_lon=one_range[3];
             result_t.push([min_lat,min_lon]);
             result_t.push([min_lat, max_lon]);
             result_t.push([max_lat, max_lon]);
             result_t.push([max_lat, min_lon]);
-            result_t.push([min_lat,min_lon]);
+            result_t.push([min_lat,min_lon]);            
             draw_gpx_gps_points(result_t,file_path_name_b(fname)[1],do_transform,true,[line_color,'','']);    
+        }
+        else {
+            for (let one_range of gpx_point){
+                result_t=[];
+                min_lat=one_range[0];
+                min_lon=one_range[1];
+                max_lat=one_range[2];
+                max_lon=one_range[3];
+                result_t.push([min_lat,min_lon]);
+                result_t.push([min_lat, max_lon]);
+                result_t.push([max_lat, max_lon]);
+                result_t.push([max_lat, min_lon]);
+                result_t.push([min_lat,min_lon]);
+                draw_gpx_gps_points(result_t,file_path_name_b(fname)[1],do_transform,true,[line_color,'','']);    
+            }
         }
         return [min_lat,min_lon];
     }
     //---------------
+    var t0 = performance.now();
     var li_names=new Set();
     var olis=document.querySelectorAll('ol#ol_gpx_file_list li');
     for (let item of olis){
@@ -687,7 +707,7 @@ function gpx_quadrangle_gps_points(){
     var lon;
     var line_color=colors_get_gps_points()[0];
 
-    for (let item of gpx_pb_global){//gpxfilename,fsize,fdate,min_lat,min_lon,max_lat,max_lon
+    for (let item of gpx_pb_global){//每个item：gpxfilename,fsize,fdate,[[min_lat1,min_lon1,max_lat1,max_lon1],[min_lat2,min_lon2,max_lat2,max_lon2],...]
         if (!li_names.has(item[0])){continue;}        
         [lat,lon]=sub_gpx_quadrangle_gps_points_draw(item[0],item[3],do_transform,line_color);
     }
@@ -697,16 +717,46 @@ function gpx_quadrangle_gps_points(){
     }
     show_hide_map_gps_points();
     omap_gps_points_global.panTo(new L.LatLng(lat,lon));
+    console.log('gpx_quadrangle_gps_points() 费时：'+(performance.now() - t0) + " milliseconds");    
 }
 
+function gpx_list_gps_points(cstype=''){
+    if (cstype==''){
+        cstype=document.getElementById('select_gpx_list_gps_points').value;
+    }
+    switch (cstype){
+        case '离当前点最近的gpx文件':
+            gpx_near_gps_points();
+            break;
+        case 'gpx文件范围示意':
+            gpx_quadrangle_gps_points();
+            break;
+        case 'gpx文件范围示意(简单)':
+            gpx_quadrangle_gps_points(true);
+            break;            
+        case 'gpx文件批量载入':
+            gpx_files_batch_open_init_gps_points();
+            break;
+        case '倒转':
+            gpx_list_filter_gps_points('reverse');
+            break;
+        case '截取':
+            gpx_list_filter_gps_points('slice');
+            break;
+    }
+}
 function gpx_file_array_2_html_gps_points(cskeys,cslist){
     var buttons='<p><input type="text" id="input_gpx_search" value="'+cskeys+'" onkeyup="javascript:if (event.key==\'Enter\'){gpx_file_selection_gps_points(this.value);}"> ';
     buttons=buttons+'<span class="aclick" onclick="javascript:show_hide_map_gps_points();">返回</span> ';
-    buttons=buttons+'当前条件下：<span class="aclick" onclick="javascript:gpx_near_gps_points();">离当前点最近的gpx文件</span> ';    
-    buttons=buttons+'<span class="aclick" onclick="javascript:gpx_quadrangle_gps_points();">gpx文件范围示意</span> ';  
-    buttons=buttons+'<span class="aclick" onclick="javascript:gpx_files_batch_open_init_gps_points();">gpx文件批量载入</span> ';
-    buttons=buttons+'<span class="aclick" onclick="javascript:filter_gpx_list_gps_points(\'reverse\');">倒转</span> ';    
-    buttons=buttons+'<span class="aclick" onclick="javascript:filter_gpx_list_gps_points(\'slice\');">截取</span> ';    
+    buttons=buttons+'当前条件下：<select id="select_gpx_list_gps_points">';
+    buttons=buttons+'<option>离当前点最近的gpx文件</option>\n';
+    buttons=buttons+'<option>gpx文件范围示意(简单)</option>\n';    
+    buttons=buttons+'<option>gpx文件范围示意</option>\n';
+    buttons=buttons+'<option>gpx文件批量载入</span>\n';
+    buttons=buttons+'<option>倒转</option>\n';
+    buttons=buttons+'<option>截取</option>\n';
+    buttons=buttons+'</select>\n'; 
+    buttons=buttons+'<span class="aclick" onclick="javascript:gpx_list_gps_points();">执行</span> ';
 
     buttons=buttons+'</p>';
     buttons=buttons+'<div id="div_recent_gpx_sreach"></div>';

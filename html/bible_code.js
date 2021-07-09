@@ -387,23 +387,27 @@ function fav_location_bible(cspages){
 }
 
 function search_bible(cskey='',csstartno=0,favpage_no=1,csmax=500){
-    var t0=performance.now();   
     if (cskey==''){
         cskey=document.getElementById('input_bible_search').value.trim();
     }
-    if (cskey.substring(0,2).toLowerCase()=='b='){
-        book_bible(cskey.substring(2,));
-        return;
-    }
     document.getElementById('input_bible_search').value=cskey;
-    var h2=-1;
-    var h3=-1;
     var isreg=klmenu_check_b('span_reg_bible',false);
     if (cskey.slice(-4,)=='(:r)'){
         isreg=true;
         cskey=cskey.substring(0,cskey.length-4);
     }
-    recent_search_bible(cskey+(isreg?'(:r)':''));
+    if (cskey.substring(0,2).toLowerCase()=='b='){
+        recent_search_bible(cskey);
+        book_bible(cskey.substring(2,));
+        return;
+    }
+    else {
+        recent_search_bible(cskey+(isreg?'(:r)':''));
+    }
+    
+    var t0=performance.now();       
+    var h2=-1;
+    var h3=-1;
     csstartno=Math.max(0,parseInt(csstartno));
 
     var fav_list=local_storage_get_b('fav_lines_bible',-1,true);
@@ -704,7 +708,7 @@ function fav_all_bible(){
             result_t[blxl][1]='<h2>'+blh2_cn+'</h2>';
             result_t[blxl][2]='tr_'+blh2_en;
             trclass=' class="tr_head"';
-            aname.push('<option value="#tr_'+blh2_en+'">'+blh2_en+' '+blh2_cn+'</option>');
+            aname.push('<option value="tr_'+blh2_en+'">'+blh2_en+' '+blh2_cn+'</option>');
         }        
         else if (item[0].substring(0,4)=='=== ' && item[0].slice(-4,)==' ==='){
             result_t[blxl][0]='<h3>'+result_t[blxl][0].slice(4,-4)+'</h3>';
@@ -718,7 +722,7 @@ function fav_all_bible(){
 
         result_t[blxl]='<tr'+trclass+(result_t[blxl][2]==''?'':' id="'+result_t[blxl][2]+'"')+'><td class="td_fav_en" valign=top width=50%>'+item[0]+'</td><td class="td_fav_cn" valign=top width=50%>'+item[1]+'</td></tr>';
     }
-    var bljg='<select style="max-width:20rem;" onchange="javascript:location.href=this.value;">'+aname.join(' ')+'</select>';
+    var bljg='<select style="max-width:20rem;" onchange="javascript:document.getElementById(this.value).scrollIntoView();">'+aname.join(' ')+'</select>';
     bljg=bljg+'<input type="checkbox" id="radio_type_en" onclick="javascript:fav_en_cn_bible();" checked><label for="radio_type_en">en</label> <input type="checkbox" id="radio_type_cn" onclick="javascript:fav_en_cn_bible();" checked><label for="radio_type_cn">cn</label>';
     bljg=bljg+'<table id="table_fav" border=0 cellspacing=5 cellpadding=10 width=100%>'+result_t.join('\n')+'</table>';
     document.getElementById('divhtml').innerHTML=bljg;
@@ -809,18 +813,18 @@ function cn_a_bible(csstr){
 }
 
 function help_bible(){
-    var bljg='<li><a href="?s=神" target=_blank>bible.htm?s=神</a></li>';
-    bljg=bljg+'<li><a href="?s=+Joseph +Noah" target=_blank>bible.htm?s=+Joseph +Noah</a></li>';
-    bljg=bljg+'<li><a href="?s=-Joseph +Noah" target=_blank>bible.htm?s=-Joseph +Noah</a></li>';
-    bljg=bljg+'<li><a href="?s=Joseph Noah" target=_blank>bible.htm?s=Joseph Noah</a></li>';
-    bljg=bljg+'<li><a href="?s=Joseph|Noah(:r)" target=_blank>bible.htm?s=Joseph|Noah(:r)</a></li>';
-    bljg=bljg+'<li><a href="?s=耶稣&u=cn" target=_blank>bible.htm?s=耶稣&u=cn</a></li>';
-    bljg=bljg+'<li><a href="?s=Jehovah&u=kjv" target=_blank>bible.htm?s=Jehovah&u=kjv</a></li>';
-    bljg=bljg+'<li><a href="?b=启示录_2_5_9" target=_blank>bible.htm?b=启示录_2_5_9</a></li>';
-    bljg=bljg+'<li><a href="?b=启_2_5_9" target=_blank>bible.htm?b=启_2_5_9</a></li>';
-    bljg=bljg+'<li><a href="?b=rev3:4" target=_blank>bible.htm?b=rev3:4</a></li>';
-    bljg=bljg+'<li><a href="?b=启2:4" target=_blank>bible.htm?b=启2:4</a></li>';
-    bljg=bljg+'<li><a href="?b=启2:4" target=_blank>bible.htm?b=启2:4&alone</a></li>';
+    var bljg='<li><a href="?s=神">bible.htm?s=神</a></li>';
+    bljg=bljg+'<li><a href="?s=+Joseph +Noah">bible.htm?s=+Joseph +Noah</a></li>';
+    bljg=bljg+'<li><a href="?s=-Joseph +Noah">bible.htm?s=-Joseph +Noah</a></li>';
+    bljg=bljg+'<li><a href="?s=Joseph Noah">bible.htm?s=Joseph Noah</a></li>';
+    bljg=bljg+'<li><a href="?s=Joseph|Noah(:r)">bible.htm?s=Joseph|Noah(:r)</a></li>';
+    bljg=bljg+'<li><a href="?s=耶稣&u=cn">bible.htm?s=耶稣&u=cn</a></li>';
+    bljg=bljg+'<li><a href="?s=Jehovah&u=kjv">bible.htm?s=Jehovah&u=kjv</a></li>';
+    bljg=bljg+'<li><a href="?b=启示录_2_5_9">bible.htm?b=启示录_2_5_9</a></li>';
+    bljg=bljg+'<li><a href="?b=启_2_5_9">bible.htm?b=启_2_5_9</a></li>';
+    bljg=bljg+'<li><a href="?b=rev3:4">bible.htm?b=rev3:4</a></li>';
+    bljg=bljg+'<li><a href="?b=启2:4">bible.htm?b=启2:4</a></li>';
+    bljg=bljg+'<li><a href="?b=启2:4">bible.htm?b=启2:4&alone</a></li>';
     
     bljg='<ul style="margin-left:2rem;">'+bljg+'</ul>';
     bljg=bljg+'<p style="margin-left:2rem;">ver: 0.1.2- 20210607</p>'
@@ -874,13 +878,13 @@ function book_bible(csstr,isalone=false){
             var start_td=parseInt(book_no_list[2]);
             if (book_no_list.length>2 && start_td>1){
                 //定位到上一条 - 保留注释
-                document.location.href ='#kjv_'+(start_td-1);
+                document.querySelector('#td_kjv_'+(start_td-1)+', #td_cn_'+(start_td-1)).scrollIntoView();
             }
             var end_td=start_td;
             if (book_no_list.length>3){
                 end_td=parseInt(book_no_list[3]);
             }
-            if (isalone===false){                
+            if (isalone===false){
                 for (let blxl=start_td;blxl<=end_td;blxl++){
                     var okjv=document.getElementById('td_kjv_'+blxl);
                     var ocn=document.getElementById('td_cn_'+blxl);
@@ -1145,7 +1149,8 @@ function chapter_one_bible(startno=0,endno=0){
             var blstyle=(fav_list.has(blxl.toString())?' style="background-color:'+scheme_global['pink']+';"':'');
             [tdnum,enstr,cnstr]=number_bible(blxl,blstyle);
             if (use_kjv_cn_global[0]){
-                bljg=bljg+'<td width='+tdwidth+' valign=top id="td_kjv_'+tdnum+'" class="td_kjv">'+'<a name="kjv_'+tdnum+'"></a>'+enstr+'</td>';
+                bljg=bljg+'<td width='+tdwidth+' valign=top id="td_kjv_'+tdnum+'" class="td_kjv">'+enstr+'</td>';
+                //+'<a name="kjv_'+tdnum+'"></a>'
             }
             if (use_kjv_cn_global[1]){
                 bljg=bljg+'<td width='+tdwidth+' valign=top id="td_cn_'+tdnum+'" class="td_cn">'+cnstr+'</td>';
