@@ -5,4 +5,5 @@ var digest_global=`
 *psychohistorian
 *vanadium
 *doubtfully
+*questioner
 `.trim().split('\n');

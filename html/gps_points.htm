@@ -9,8 +9,8 @@
 var gpx_pb_global=[];
 var gpx_kl_global=[];
 var gpx_files_batch_no_global=0;
-var gpx_colors_global=[];
 var clicked_lat_lng_global=[];
+var gpx_line_color_no_global=0;
 klbase_addons_import_js_b(['css','date','en_de_str','leaflet'],['leaflet/leaflet.css','leaflet/leaflet.js','leaflet_plugins/leaflet.ChineseTmsProviders.js'],['gpx_pb_data.js','map/district_cn_geo_data.js']);
 </script>
 <SCRIPT language=JavaScript src="../../../../data/gpx_kl_data.js"></SCRIPT>
@@ -24,6 +24,7 @@ css_root_style_b('17','11',['base','menu'],[],1);
 </head>
 <body>
 <!--history
+0.0.7-20210709 支持多种线条颜色
 0.0.6-20210504 增加 距离指定地点最近的gpx文件排序
 0.0.5-20201110 增加 路线擦除
 0.0.4-20201109 增加 坐标转换
