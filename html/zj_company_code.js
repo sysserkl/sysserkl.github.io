@@ -30,7 +30,6 @@ function search_zjcompany(cskey,csreg,show_html){
     
     var blsum=0;
     [search_result_zj_company_global,blsum]=search_rank_b(zj_company_raw_global,cskey,csreg,2,3,4);
-    
     if (show_html){
         array_2_html_zjcompany(search_result_zj_company_global,blsum);
     }
@@ -83,14 +82,13 @@ function div_flot_css_zjcompany(csshow=true,fullscreen=false){
 
 function pie_district_statistics_zjcompany(show_chart=true,csindex=2){
     var list_t=pie_district_statistics_array_rank_b(search_result_zj_company_global,1,csindex);
-
     if (!show_chart){
         return list_t;
     }
     
     var bljg=[];
     [list_t,bljg]=pie_district_statistics_string_rank_b(list_t,3,'万亿元',100000000,csindex);
-    
+
     var div_id='div_district_revenue_pie_data_zjcompany';
     var odiv=document.getElementById(div_id);
     if (!odiv){
@@ -103,7 +101,6 @@ function pie_district_statistics_zjcompany(show_chart=true,csindex=2){
 
 function line_district_revenue_zjcompany(return_percent=false){
     var flot_array=line_district_revenue_rank_b(search_result_zj_company_global,1,4,2,100000000);
-
     div_flot_css_zjcompany(true,false);    
 
     if (return_percent){
@@ -124,7 +121,6 @@ function company_rate_zjcompany(){
 
 function line_company_revenue_zjcompany(){
     var list_t=line_company_revenue_rank_b(search_result_zj_company_global,4,2,10000);
-    
     div_flot_css_zjcompany(true,false);    
     flot_lines_k(list_t,'div_flot_zj_company','nw',false,'','m','亿元',-1,[],-1,false,false,true);
 }

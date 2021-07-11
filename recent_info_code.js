@@ -156,6 +156,7 @@ function more_tools_klrecent(){
     ['html/proofreader.htm','proofreader'],    
     ['html/qrcode.htm','QR'],
     ['html/qrimg.htm','qrimg'],
+    ['html/qs_university_asia.htm','QS University Asia'],        
     ['html/reader_card.htm', 'reader card'],
     ['html/reader.htm', 'reader'],
     ['html/reader_idb.htm','reader idb'],    

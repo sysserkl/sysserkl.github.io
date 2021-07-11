@@ -171,14 +171,24 @@ function klbase_addons_import_js_b(klbase_list=[],module_list=[],jsdata_list=[])
     console.log(links_t.join('\n')); //此行保留 - 保留注释
 }
 
-function object2array_b(cs_object_array){
+function object2array_b(cs_object_array,add_key=false){
 	var list_t=[];
 	for (let key in cs_object_array){
         if (Array.isArray(cs_object_array[key])){
-		    list_t.push([].concat(cs_object_array[key])); //如果是数组直接添加会建立关联，所以需要concat - 保留注释
+            if (add_key){
+		        list_t.push([key].concat(cs_object_array[key])); //如果是数组直接添加会建立关联，所以需要concat - 保留注释            
+            }
+            else {
+		        list_t.push([].concat(cs_object_array[key])); //如果是数组直接添加会建立关联，所以需要concat - 保留注释
+            }
         }
         else {
-            list_t.push(cs_object_array[key]);
+            if (add_key){
+                list_t.push([key,cs_object_array[key]]);            
+            }
+            else {        
+                list_t.push(cs_object_array[key]);
+            }
         }
 	}
     return list_t;

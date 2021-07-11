@@ -1,5 +1,6 @@
-function switch_columns_rank_b(csid,tdclass1,tdclass2){
-    var otable=document.getElementById(csid);
+function switch_columns_rank_b(table_id,tdclass1,tdclass2){
+    //表格列对调 - 保留注释
+    var otable=document.getElementById(table_id);
     if (!otable){return;}
 
     var otrs=otable.querySelectorAll('tr');
@@ -20,6 +21,7 @@ function switch_columns_rank_b(csid,tdclass1,tdclass2){
 }
 
 function year_district_list_rank_b(csarray,year_no,district_no,is_all=true){
+    //csarray 与 line_district_revenue_rank_b() 的 csarray 格式一致 - 保留注释
     var year_list=new Set();
     var district_list=new Set();
     if (is_all){
@@ -35,11 +37,14 @@ function year_district_list_rank_b(csarray,year_no,district_no,is_all=true){
         }
     }
     
-    return [Array.from(year_list).sort(),Array.from(district_list).sort(function (a,b){return zh_sort_b(a,b);})];
+    year_list=Array.from(year_list).sort(); //形如 ["2009年", "2010年", "2011年",] - 保留注释
+    district_list=Array.from(district_list).sort(function (a,b){return zh_sort_b(a,b);}); //形如 [ "爱尔兰", "奥地利", "澳大利亚", "巴西", "比利时", "波兰", ] - 保留注释
+    return [year_list,district_list];
 }
 
-function show_hide_rank_b(csid,cstype){
-    var otable=document.getElementById(csid);
+function show_hide_rank_b(table_id,cstype){
+    //隐藏显示表格列 - 老板注释
+    var otable=document.getElementById(table_id);
     if (!otable){return;}
     var otds=otable.querySelectorAll('th,td');
     for (let one_td of otds){
@@ -49,6 +54,7 @@ function show_hide_rank_b(csid,cstype){
 }
 
 function search_rank_b(csarray,cskey,csreg,revenue_index,rank_index,year_index){    
+    //csarray 与 line_district_revenue_rank_b() 的 csarray 格式一致 - 保留注释
     var result_t=[];
     var blsum=0;
     for (let item of csarray){
@@ -66,6 +72,8 @@ function search_rank_b(csarray,cskey,csreg,revenue_index,rank_index,year_index){
     result_t.sort(function (a,b){return a[revenue_index]<b[revenue_index];});//收入 - 保留注释
     result_t.sort(function (a,b){return a[rank_index]>b[rank_index];});//排名 - 保留注释
     result_t.sort(function (a,b){return a[year_index]<b[year_index];});//年份 - 保留注释
+    //result_t 是 csarray 的子集 - 保留注释
+    //blsum 是 收入 合计 - 保留注释
     return [result_t,blsum];
 }
 
@@ -83,10 +91,13 @@ function div_flot_css_rank_b(csid,csshow=true,fullscreen=false){
     return odiv;
 }
 
-function obj2array_rank_b(csarray,revenue_index){
+function obj2array_rank_b(csarray,revenue_index=-1){
+    //转换原始数据（以年份为dict，值为数组，每个元素也是数组，包含了企业名称 地区 收入 利润(可选)）为数组 ，并按收入排序，添加排名和年份- 保留注释
     var result_t=[];
     for (let key in csarray){
-        csarray[key].sort(function (a,b){return a[revenue_index]<b[revenue_index];});
+        if (revenue_index>=0){
+            csarray[key].sort(function (a,b){return a[revenue_index]<b[revenue_index];});
+        }
         for (let blxl=0;blxl<csarray[key].length;blxl++){
             var arow=csarray[key][blxl];
             arow.push(blxl+1);
@@ -97,18 +108,20 @@ function obj2array_rank_b(csarray,revenue_index){
     return result_t;
 }
 
-function table_buttons_rank_b(csid){
+function table_buttons_rank_b(table_id){
+    //表格列隐藏显示、对调按钮 - 保留注释
     var bljg='';
-    bljg=bljg+'<span class="aclick" onclick="javascript:show_hide_rank_b(\''+csid+'\',\'td_rank\');">名次</span>\n';
-    bljg=bljg+'<span class="aclick" onclick="javascript:show_hide_rank_b(\''+csid+'\',\'td_year\');">年份</span>\n';
-    bljg=bljg+'<span class="aclick" onclick="javascript:show_hide_rank_b(\''+csid+'\',\'td_no\');">序号</span>\n';        
-    bljg=bljg+'<span class="aclick" onclick="javascript:switch_columns_rank_b(\''+csid+'\',\'td_no\',\'td_rank\');">序号与名次对调</span>\n';       
-    bljg=bljg+'<span class="aclick" onclick="javascript:switch_columns_rank_b(\''+csid+'\',\'td_district\',\'td_revenue\');">地区与收入对调</span>\n';      
+    bljg=bljg+'<span class="aclick" onclick="javascript:show_hide_rank_b(\''+table_id+'\',\'td_rank\');">名次</span>\n';
+    bljg=bljg+'<span class="aclick" onclick="javascript:show_hide_rank_b(\''+table_id+'\',\'td_year\');">年份</span>\n';
+    bljg=bljg+'<span class="aclick" onclick="javascript:show_hide_rank_b(\''+table_id+'\',\'td_no\');">序号</span>\n';        
+    bljg=bljg+'<span class="aclick" onclick="javascript:switch_columns_rank_b(\''+table_id+'\',\'td_no\',\'td_rank\');">序号与名次对调</span>\n';       
+    bljg=bljg+'<span class="aclick" onclick="javascript:switch_columns_rank_b(\''+table_id+'\',\'td_district\',\'td_revenue\');">地区与收入对调</span>\n';      
     return bljg;  
 }
 
 function company_rate_rank_b(csarray,district_index,year_index,revenue_index,denominator){
-   var flot_array={};
+    //企业收入多年平均增长率，企业利润多年平均增长率 - 保留注释
+    var flot_array={};
     for (let blxl=0;blxl<csarray.length;blxl++){
         var item=csarray[blxl];
         if (flot_array[item[0]]==null){
@@ -154,27 +167,41 @@ function company_rate_rank_b(csarray,district_index,year_index,revenue_index,den
 }
 
 function group_rank_b(csarray,group_district,group_year,district_index,year_index){
+    function sub_group_rank_b_push(cskey,item){
+        if (result_t[cskey]==null){
+            result_t[cskey]=[];
+        }
+        result_t[cskey].push(item);            
+    }
+    //------------------------------------------------------
+    //分组 - 保留注释
     var blkey='';
     var result_t=[];
-    for (let item of csarray){
-        if (group_district && group_year){
+
+    if (group_district && group_year){
+        for (let item of csarray){
             blkey=item[district_index]+'_'+item[year_index];
+            sub_group_rank_b_push(blkey,item);                
         }
-        else if (group_district){
-            blkey=item[district_index];
-        }        
-        else {
-            blkey=item[year_index];
-        }
-        if (result_t[blkey]==null){
-            result_t[blkey]=[];
-        }
-        result_t[blkey].push(item);
     }
+    else if (group_district){
+        for (let item of csarray){
+            blkey=item[district_index];
+            sub_group_rank_b_push(blkey,item);               
+        }            
+    }        
+    else {
+        for (let item of csarray){
+            blkey=item[year_index];
+            sub_group_rank_b_push(blkey,item);
+        }            
+    }
+
     return result_t;
 }
 
 function line_district_revenue_percent_rank_b(flot_array,fraction_len,denominator,caption){
+    //flot_array 每个元素 形如 ['美国',[’2001‘,收入或利润],[’2002‘,收入或利润]...] - 保留注释
     var rate_list=[];
     for (let key in flot_array){
         if (flot_array[key].length<3){continue;}
@@ -260,10 +287,10 @@ function line_district_statistics_flot_array_rank_b(csarray,cskey,csreg,district
 }
 
 function pie_district_statistics_array_rank_b(csarray,district_index,revenue_index){
+    //csarray 与 line_district_revenue_rank_b() 的 csarray 格式一致 - 保留注释
     var list_t={};
 
-    for (let blxl=0;blxl<csarray.length;blxl++){
-        var item=csarray[blxl];
+    for (let item of csarray){
         if (list_t[item[district_index]]==null){
             list_t[item[district_index]]=[item[district_index],0];
         }
@@ -275,9 +302,11 @@ function pie_district_statistics_array_rank_b(csarray,district_index,revenue_ind
     var list_t=object2array_b(list_t);
     list_t.sort(function (a,b){return a[1]<b[1];});
     return list_t;
+    //list_t 每个元素形如 ['地区', 收入] - 保留注释
 }
 
 function pie_district_statistics_string_rank_b(csarray,fraction_len,caption,denominator,revenue_index){
+    //csarray 每个元素形如 ['地区', 收入] - 保留注释
     var bljg=[].concat(csarray);
     var blsum=0;
     for (let blxl=0;blxl<csarray.length;blxl++){
@@ -291,13 +320,16 @@ function pie_district_statistics_string_rank_b(csarray,fraction_len,caption,deno
     for (let blxl=0;blxl<bljg.length;blxl++){
         bljg[blxl]=bljg[blxl][0]+': '+(revenue_index==-1?bljg[blxl][1]+'家，':(bljg[blxl][1]/denominator).toFixed(fraction_len)+caption+'，')+(bljg[blxl][1]*100/blsum).toFixed(2)+'%';
     }
+    
+    //csarray 每个元素形如 { label: "地区", data: 收入 } - 保留注释
+    //bljg 每个元素为字符串，形如 "美国: 86952891.5百万美元，58.35%" - 保留注释
     return [csarray,bljg];
 }
 
 function line_company_revenue_rank_b(csarray,year_index,revenue_index,denominator){
+    //csarray 与 line_district_revenue_rank_b() 的 csarray 格式一致 - 保留注释
     var flot_array={};
-    for (let blxl=0;blxl<csarray.length;blxl++){
-        var item=csarray[blxl];
+    for (let item of csarray){
         if (flot_array[item[0]]==null){
             flot_array[item[0]]=[];
         }
@@ -309,14 +341,16 @@ function line_company_revenue_rank_b(csarray,year_index,revenue_index,denominato
         list_t.push([key].concat(flot_array[key])); //不是 list_t.push([key],flot_array[key]);
     }
     return list_t;
+    //返回结果每个元素形如：['企业名称',[2018,收入],[2019,收入]...] - 保留注释    
 }
 
 function line_district_revenue_rank_b(csarray,district_index,year_index,revenue_index,denominator){
+    //csarray 每一个元素为数组，形如 ['Company', 'City', Revenue, 当年名次,'2020年'] - 保留注释
+    //或者 形如 ['Company', 营收(百万美元), 利润(百万美元), 'Country', 当年名次,'2020年'] - 保留注释
     var list_t=[];
     var flot_array=[];
     
-    for (let blxl=0;blxl<csarray.length;blxl++){
-        var item=csarray[blxl];
+    for (let item of csarray){
         var key_name=item[district_index]+'_'+item[year_index];
         if (list_t[key_name]==null){
             list_t[key_name]=[item[district_index],item[year_index].substring(0,4),0];
@@ -336,6 +370,6 @@ function line_district_revenue_rank_b(csarray,district_index,year_index,revenue_
         flot_array[key].sort();
         flot_array[key]=[key].concat(flot_array[key]);
     }
-    console.log(33334);
     return flot_array;
+    //返回结果每个元素形如：['中国',['2018',收入],['2019',收入]...] - 保留注释
 }
