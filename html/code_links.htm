@@ -3,21 +3,29 @@
 <title>随机编程知识点</title>
 <meta charset="UTF-8" />
 <SCRIPT language=JavaScript src="../hard_ln_io/klbase.js"></SCRIPT>
-<SCRIPT language=JavaScript src="../hard_ln_io/klbase_css.js"></SCRIPT>
-<SCRIPT language=JavaScript src="../hard_ln_io/klbase_wiki.js"></SCRIPT>
+<script language="javascript">
+klbase_addons_import_js_b(['css','wiki']);
+</script>
 <script type="text/javascript">
+//history
+//0.0.1-20190901
+//-----------------
 var learning_list_global=[];
-css_root_style_b('16','22');
+var scheme_global={};
+scheme_generation_b();
+css_root_style_b('17.6','14',['base'],[],1);
 
 document.write('\n<SCRIPT language=JavaScript src="../jsdata/learning_links/learning_links_'+Math.floor(Math.random()*12+1)+'_data.js"><\/SCRIPT>\n');
 </script>
 <link href="../recent_info.css" type="text/css" rel="stylesheet">
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 </head>
 <body>
-<h2 style="margin:1rem 0rem;"><span id="span_title" class="headline_on">随机编程知识点</span></h2>
+<h2 style="margin:1rem;"><span id="span_title" class="headline_on" style="cursor:pointer;" ondblclick="javascript:codelinks(10);">随机编程知识点</span></h2>
 <div id="divhtml"></div>
+<p align=center>ver: 0.0.1-20190901</p>
 <script type="text/javascript">
-function codelink(cscount=1){
+function codelinks(cscount=1){
     var learn_something='';
     if (learning_list_global.length>0){
         learning_list_global.sort(randomsort_b);
@@ -25,14 +33,12 @@ function codelink(cscount=1){
             learn_something=learn_something+div_title_href_b(learning_list_global[blxl]);
         }
     }
+    document.getElementById('divhtml').innerHTML=learn_something;
     return learn_something;
 }
-
-document.getElementById('divhtml').innerHTML=codelink(10)+'<p align=center> ver: 0.0.1-20190901</p>';
+//-----------------
+codelinks(10);
 </script>
-<!--history
-0.0.1-20190901
--->
 <script type="text/javascript">
 track_source_b('code_links');
 </script>

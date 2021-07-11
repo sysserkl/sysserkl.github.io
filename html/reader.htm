@@ -15,16 +15,14 @@ load_current_book_b();
 flot_import_js_k(['time','symbol']);    //用于显示阅读进度 - 保留注释
 </script>
 <script language="javascript">
+//history
+//0.0.1-20190628
+//-----------------
 books_init_b();
 var scheme_global={};
 scheme_generation_b();
 css_root_style_b('17','14',['base','menu'],[],1);
-if (ismobile_b()){
-    var line_height_global=180;
-}
-else {
-    var line_height_global=180;
-}
+var line_height_global=180;
 var show_all_books_global=false;
 var digest_scan_hash_global=false;
 </script>
@@ -39,9 +37,6 @@ i {border-bottom:0.15rem dashed tomato;}
 <a name=top></a>
 <h2 style="margin-top:0px;"><span id="span_title" onclick="javascript:popup_show_hide_b('div_show_hide');" style="cursor:pointer;">Reader</span> - <span id=booktitle></span><span id=readingdata></span></h2>
 <div id='div_show_hide' style="display:block;margin:0rem 0.5rem;">
-<!--history
-0.0.1-20190628
--->
 <script type="text/javascript">
 var klwiki_syntaxhighlight_global=false;
 var book_tag_global='all';

@@ -61,4 +61,5 @@ var digest_global=`
 *fraudulent
 *unambiguous
 *impeachable
+*inquire
 `.trim().split('\n');

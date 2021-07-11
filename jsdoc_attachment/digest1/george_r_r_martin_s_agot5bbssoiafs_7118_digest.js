@@ -64,4 +64,5 @@ var digest_global=`
 *odorless
 *octagon
 *octagonal
+*inquiry
 `.trim().split('\n');

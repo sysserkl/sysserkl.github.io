@@ -7,48 +7,23 @@
 <script language="javascript">
 klbase_addons_import_js_b(['css'],[],['symbols_data.js']);
 </script>
+<SCRIPT language=JavaScript src="symbols_code.js"></SCRIPT>
 <script language="javascript">
+//history
+//0.0.1-20200228
+//-----------------
 var scheme_global={};
 scheme_generation_b();
-css_root_style_b('16','10',['base']);
+css_root_style_b('16','10',['base','menu'],[],1);
 </script>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 </head>
-<body style="margin:0.5rem;">
-<h3 style="margin:0.5rem 0rem;font-size:3rem;">🔣 Symbols</h3>
-<p>ver 0.0.1-20200228</p>
-<!-- 
-history:
-0.0.1-20200228
--->
-<div id="divhtml"></div>
+<body>
+<h3 id="h3_title" style="margin:0;font-size:1.45rem;">Symbols</h3>
+<div id="divhtml" style="margin:0.5rem;"></div>
 <div id="div_top_bottom"></div>
 <script type="text/javascript">
-function more_symbols(ospan){
-    var blid=ospan.id.substring(5,);
-    if (blid in symbols_global){
-        ospan.parentNode.innerHTML='<div style="'+divstyle_global+'">'+symbols_global[blid].join('</div><div style="'+divstyle_global+'">')+'</div>';
-    }
-}
-//-------------------
-top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'2rem':'1.8rem'));
-var bljg='';
-var divstyle_global='display:inline-block;padding:0.2rem;margin:0.2rem;border:0.1rem grey dotted;border-radius:0.5rem;';
-for (let blxl in symbols_global){
-    bljg=bljg+'<div style="positon:relative;float:left;border:0.1rem grey dotted;border-radius:0.5rem;margin:0.5rem;padding:0.5rem;font-size:2rem;word-break:break-all;word-wrap:break-word;line-height:180%;">';
-    if (symbols_global[blxl].length>8){
-        bljg=bljg+'<div style="'+divstyle_global+'">'+symbols_global[blxl].slice(0,4).join('</div><div style="'+divstyle_global+'">')+'</div>';
-        bljg=bljg+' <span id="span_'+blxl+'" style="cursor:pointer;" onclick="javascript:more_symbols(this)">...</span> ';
-        bljg=bljg+'<div style="'+divstyle_global+'">'+symbols_global[blxl].slice(-4,).join('</div><div style="'+divstyle_global+'">')+'</div>';
-
-    }
-    else {
-        bljg=bljg+'<div style="'+divstyle_global+'">'+symbols_global[blxl].join('</div><div style="'+divstyle_global+'">')+'</div>';
-    }
-    
-    bljg=bljg+'</div>';
-}
-document.getElementById('divhtml').innerHTML=bljg;
+init_symbols();
 </script>
 <script type="text/javascript">
 track_source_b('symbols',false);

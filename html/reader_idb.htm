@@ -5,7 +5,7 @@
 <script language="javascript" type="text/javascript" src="../hard_ln_io/jquery.js"></script>
 <SCRIPT language=JavaScript src="../hard_ln_io/klbase.js"></SCRIPT>
 <script language="javascript">
-klbase_addons_import_js_b(['css','date','books','eng','en_de_str','wiki','flot','txtlistsearch'],[],[]);//'words/enwords_data.js','words/cnwords_data.js,defer'
+klbase_addons_import_js_b(['css','date','books','eng','en_de_str','wiki','flot','txtlistsearch']);
 </script>
 <script language="javascript">
 flot_import_js_k(['time','symbol']);    //用于显示阅读进度 - 保留注释
@@ -15,6 +15,9 @@ flot_import_js_k(['time','symbol']);    //用于显示阅读进度 - 保留注�
 load_current_book_b();
 </script>
 <script language="javascript">
+//history
+//0.0.1-20210601
+//-----------------
 csbooklist_source_global_b.sort(function (a,b){return zh_sort_b(a,b,false,1);}); //按书名排序 - 保留注释
 var csbooklist_sub_global_b=[['','','','1','']];
 var csbookno_global_b=0;
@@ -52,9 +55,6 @@ css_root_style_b('17','14',['base','menu'],[],1);
 <input type="checkbox" id="input_digest" checked style="display:none;"><!--显示摘要-->
 </p>
 </div>
-<!--history
-0.0.1-20210601
--->
 <a name=content></a>
 <div id="divhtml"></div>
 <div id="divhtml2"></div>

@@ -10,6 +10,11 @@ klbase_addons_import_js_b(['css','qr'],['jeromeetienne_qrcode.min.js']);
 </script>
 <script type="text/javascript" src="qrcode.js"></script>
 <script language="javascript">
+//history
+//0.0.3-20210321 增加菜单
+//0.0.2-20190926
+//0.0.1-20190924
+//-----------------
 var qr_list_global=[];
 var scheme_global={};
 scheme_generation_b();
@@ -22,11 +27,6 @@ css_root_style_b('18','11',['base','menu']);
 <body>
 <h2 style="margin-top:0;font-size:1.3rem;"><span id="span_title">QR Code Generator</span></h2>
 <div style="margin:0.5rem;">
-<!--history
-0.0.3-20210321 增加菜单
-0.0.2-20190926
-0.0.1-20190924
--->
 <p>Strings: <input type="text" id="input_qrtxt" value="just for fun" onkeyup="javascript:if (event.key=='Enter'){create_klqr();}">
 <span class="aclick" onclick="javascript:create_klqr();"><b>Generate</b></span> 
 </p>

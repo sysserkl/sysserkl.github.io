@@ -3,6 +3,7 @@ self.addEventListener('install', function(e) {
         caches.open('pwa_screen_matrix_store').then(function(cache) {
             return cache.addAll([
             'screen_matrix.htm',
+            'screen_matrix_code.js',
             '../hard_ln_io/klbase.js',
             '../hard_ln_io/klbase_css.js',
             '../hard_ln_io/klbase_en_de_str.js',

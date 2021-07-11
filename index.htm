@@ -8,6 +8,11 @@ klbase_addons_import_js_b(['css'],[],['title_data.js','selenium_offline_days_dat
 </script>
 <SCRIPT language=JavaScript src="hard_ln_io/selenium_news_reader.js"></SCRIPT>
 <script type="text/javascript">
+//history
+//ver: 0.0.3-20190312
+//ver: 0.0.2-20190302
+//ver: 0.0.1-20190301
+//-----------------
 var selenium_dbc_global=[['www','默认']];
 var scheme_global={};
 scheme_generation_b();
@@ -23,15 +28,10 @@ span.span_content{word-break:break-all;word-wrap:break-word;}
 </head>
 <body style="margin:0.5rem;">
 <h2 style="margin-top:1rem;"><span id="span_title" class="headline_on" style="font-size:1.5rem;">News</span> <span style="font-size:0.8rem;font-weight:300;" id="span_count"></span></h2>
-<p>ver: 0.0.3-20190312 <span id="span_search_key" style="font-weight:bold;"></span> <a href="www_rss.xml" target=_blank><img src="icos/rss.png" style="width:1rem;" /></a></p>
+<p><span id="span_search_key" style="font-weight:bold;"></span> <a href="www_rss.xml" target=_blank><img src="icos/rss.png" style="width:1rem;" /></a></p>
 <noscript><h1 style="color:red;">请在浏览器打开“原网页”</h1></noscript>
 
 <div id="div_dbcname" style="font-size:0.9rem;line-height:1.9rem;"></div>
-<!--history
-ver: 0.0.3-20190312
-ver: 0.0.2-20190302
-ver: 0.0.1-20190301
--->
 <script type="text/javascript">
 if (recent_info_title_global.length>1){
     if (recent_info_title_global[1].length>=3 && recent_info_title_global[1][1]!==""){
@@ -52,7 +52,7 @@ for (var item of cskeys){
         day_dbf=item.substring(8,);
     }
 }
-if (day_dbf==""){
+if (day_dbf==''){
     //2019-01-24_laws
     day_dbf=dbc_js_files[0]+'_'+selenium_dbc_global[0][0];
 }
@@ -68,7 +68,9 @@ dbc_list_klsnews(day_dbf);
 classify_sites_klsnews();
 if (cskeys.includes('expand')){
     var oa=document.getElementById('a_open_all');
-    if (oa){oa.click();}
+    if (oa){
+        oa.click();
+    }
 }
 
 document.getElementById('span_count').innerHTML='<i>('+sourcelist.length+')</i>';

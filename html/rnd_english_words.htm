@@ -11,6 +11,13 @@ klbase_addons_import_js_b(['css','date','en_de_str','wiki','eng'],[],['words/enw
 <SCRIPT language=JavaScript src="rnd_english_words.js"></SCRIPT>
 <link rel="manifest" href="rnd_english_words.webmanifest">
 <script type="text/javascript">
+//history
+//0.0.5-20200418 支持 PWA
+//0.0.4-20200224 增加每日旧单词搜索
+//0.0.3-20200223 增加菜单，增加最近搜索
+//0.0.2-20200110
+//0.0.1-20190805
+//-----------------
 var scheme_global={};
 scheme_generation_b();
 css_root_style_b('18','15',['base','menu'],[],1);
@@ -42,7 +49,6 @@ div#div_recent_search p{line-height:1.6rem;}
 </div>
 <div id="div_exam_buttons"></div>
 <div id="divhtml"></div>
-<!--div id="div_enwords_mini_search_frame"></div-->
 <div id="div_top_bottom"></div>
 <script type="text/javascript">
 klwiki_syntaxhighlight_global=false;
@@ -64,13 +70,6 @@ else {
 menu_rndwords();
 args_rndwords();
 </script>
-<!--history
-0.0.5-20200418 支持 PWA
-0.0.4-20200224 增加每日旧单词搜索
-0.0.3-20200223 增加菜单，增加最近搜索
-0.0.2-20200110
-0.0.1-20190805
--->
 <script type="text/javascript">
 track_source_b('rndwords',false);
 </script>

@@ -10,4 +10,6 @@ var digest_global=`
 *restate
 *enlargement
 *rind
+*enquiry
+*enquire
 `.trim().split('\n');

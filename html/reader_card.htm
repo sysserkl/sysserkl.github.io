@@ -11,6 +11,10 @@ load_current_book_b();
 </script>
 <SCRIPT language=JavaScript src="reader_card.js"></SCRIPT>
 <script language="javascript">
+//history
+//0.0.2-20200614 增加最近搜索
+//0.0.1-20200411
+//-----------------
 books_init_b();
 var scheme_global={};
 scheme_generation_b();
@@ -39,10 +43,6 @@ i {border-bottom:0.15rem dashed tomato;}
 <a name=top></a>
 <h2 style="margin-top:0px;"><span id="span_title" onclick="javascript:popup_show_hide_b('div_show_hide');" style="cursor:pointer;">🗂 Reader Card</span> - <span id=booktitle></span><span id=readingdata></span></h2>
 <div id='div_show_hide' style="display:block;margin:0rem 0.5rem;">
-<!--history
-0.0.2-20200614 增加最近搜索
-0.0.1-20200411
--->
 <script type="text/javascript">
 var klwiki_syntaxhighlight_global=false;
 var book_tag_global='all';
@@ -55,8 +55,6 @@ import_book_kltxt_b(cskeys,true);
 </script>
 <script type="text/javascript">
 decode_and_create_menu_kltxt_b();
-//var kltxt_menulist_index_global=[];
-//menu_all_only_one_kltxt_b();
 </script>
 <p>
 <input type="text" id="input_search" onkeyup="javascript:if (event.key=='Enter'){recent_search_add_txtcard();}">
