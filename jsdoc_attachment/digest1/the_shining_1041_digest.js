@@ -42,4 +42,7 @@ var digest_global=`
 *doorbell
 *lawnmower
 *stomachache
+*asshole
+*salesman
+*tumor
 `.trim().split('\n');

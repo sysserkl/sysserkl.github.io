@@ -11,4 +11,6 @@ var digest_global=`
 *skywards
 *doorbell
 *secondary school
+*postage
+*unluckily
 `.trim().split('\n');

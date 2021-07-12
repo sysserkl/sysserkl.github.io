@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-07-04 11:29:52 日"],
+["","","","更新日期：2021-07-11 21:24:26 日"],
 ["https://news.sohu.com/17/76/news146347617.shtml","20010823 | 高考录取分数线悬殊太大!青岛三考生状告教育部"],
 ["https://news.sohu.com/42/01/news146510142.shtml","20010908 | 新闻追踪：青岛三考生告教育部违宪诉状(全文)"],
 ["http://www.doyouhike.net/forum/mountain/17340,0,0,1.html","20020805 | 深圳山野健行、登山远足安全指引 （老余） - 磨房"],
@@ -780,6 +780,7 @@ var recent_info_list=[
 ["https://cn.reuters.com/article/usa-china-consulate-houston-wh-0725-idCNKCS24Q026?il=0","20200725 | 美国警告中国不要通过下令关闭美驻成都总领馆进行“以牙还牙的报复” - 路透中文网"],
 ["https://www.solidot.org/story?sid=65065","20200727 | 奇客Solidot | 深圳要求宠物犬必须植入芯片"],
 ["https://www.thepaper.cn/newsDetail_forward_8501507","20200730 | 昆明“造城”留下40多个烂尾楼，政府和开发商希望业主自救_澎湃新闻"],
+["https://www.huxiu.com/article/373592.html","20200805 | 朱罗纪：深圳停建公寓的意义与市场判断-虎嗅网"],
 ["https://www.thepaper.cn/newsDetail_forward_8728997","20200814 | 超市员工在汕尾确诊，深圳排查出其2名同事核酸阳性_澎湃新闻"],
 ["https://cn.reuters.com/article/china-markets-chinext-shenzhen-0821-fri-idCNKBS25K01S","20200824 | 焦点：深圳创业板注册制首批18家企业周一上市 将加剧中美“科技战” - 路透中文网"],
 ["http://www.km.gov.cn/c/2020-08-26/3641126.shtml","20200826 | 选址西山区 湖畔大学首座分校为何落子昆明"],
@@ -805,4 +806,5 @@ var recent_info_list=[
 ["https://new.qq.com/omn/20210619/20210619A0081I00.html","20210619 | 广东多地现散发病例，东莞全市严格管理，居民非必要不外出_腾讯新闻"],
 ["https://www.163.com/news/article/GCVHB9DS0001899O.html","20210620 | 东莞：新华学院东莞校区2万师生不得离校_网易新闻"],
 ["https://finance.sina.com.cn/tech/2021-06-21/doc-ikqcfnca2372190.shtml","20210621 | 东莞：所有城市候机楼及机场专线停运_新浪网"],
+["https://www.solidot.org/story?sid=68164","20210630 | 奇客Solidot | 加拿大连续三天打破高温记录，最高 49.5C"],
 ];

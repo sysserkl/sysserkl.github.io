@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-07-04 11:29:52 日"],
+["","","","更新日期：2021-07-11 21:24:26 日"],
 ["https://mail.python.org/pipermail/python-list/2005-May/342496.html","20050506 | [HELP] Tkinter Application Minimized to System Tray :)"],
 ["http://www.enet.com.cn/article/2006/1120/A20061120298161.shtml","20061120 | PHP：“草根语言”挑战“大腕”Java .Net"],
 ["http://blog.wpjam.com/article/wordpress-custom-fields/","20070805 | WordPress 自定义字段（Custom Fields）详细介绍和使用"],
@@ -510,6 +510,7 @@ var recent_info_list=[
 ["https://stackoverflow.com/questions/44275443/python-inserts-pictures-to-powerpoint-how-to-set-the-width-and-height-of-the-pi","20170531 | python inserts pictures to powerpoint, how to set the width and height of the picture? - Stack Overflow"],
 ["https://mp.weixin.qq.com/s/O2PxugKoThTlXjHmfs7tZw","20170619 | 翻译首发！「Stack Overflow 的 HTTPS 化：漫漫长路的终点」"],
 ["https://stackoverflow.com/questions/42602713/how-to-set-a-window-icon-with-pyqt5","20170707 | python - How to set a window icon with PyQt5? - Stack Overflow"],
+["https://stackoverflow.com/questions/31353244/how-to-config-wget-to-retry-more-than-20","20170710 | linux - How to config wget to retry more than 20? - Stack Overflow"],
 ["https://stackoverflow.com/questions/43102811/change-log-level-of-geckodriver-for-python-selenium","20170710 | Change log level of Geckodriver for Python Selenium - Stack Overflow"],
 ["https://stackoverflow.com/questions/45031687/scrolling-disabled-in-the-webpage-when-full-screen-mode-is-triggered","20170711 | javascript - scrolling disabled in the webpage when full screen mode is triggered - Stack Overflow"],
 ["https://stackoverflow.com/questions/3298477/get-the-first-key-name-of-a-javascript-object","20170720 | Get the first key name of a JavaScript object - Stack Overflow"],
@@ -531,6 +532,7 @@ var recent_info_list=[
 ["https://blog.csdn.net/blue0bird/article/details/78629221#5-4-if-else","20171124 | Bash 脚本基本语法 - blue0bird的专栏 - CSDN博客"],
 ["https://blog.csdn.net/joson1234567890/article/details/78639014","20171126 | Tkinter 插入就JPG格式图片 - Test_Box - CSDN博客"],
 ["https://blog.jqueryui.com/2017/12/the-future-of-jquery-ui-and-jquery-mobile/","20171221 | Alex Schmitz: The Future of jQuery UI and jQuery Mobile | jQuery UI Blog"],
+["https://stackoverflow.com/questions/6986085/get-file-size-of-a-file-to-wget-before-wget-ing-it","20180120 | command line - get file size of a file to wget before wget-ing it? - Stack Overflow"],
 ["https://stackoverflow.com/questions/48867800/tk-treeview-focus-how-do-i-get-multiple-selected-lines","20180219 | python - Tk Treeview Focus(). How do I Get Multiple Selected Lines? - Stack Overflow"],
 ["https://stackoverflow.com/questions/48923151/importing-image-to-python-cannot-import-name-imread","20180222 | Importing image to python :cannot import name 'imread' - Stack Overflow"],
 ["https://www.cnblogs.com/xiaobingqianrui/p/8461707.html","20180223 | Python之sqlite3 - Fate0729 - 博客园"],
@@ -611,4 +613,5 @@ var recent_info_list=[
 ["https://forum.qt.io/topic/122166/problem-with-pyside6-and-qtwebenginewidgets-module/5","20201229 | Problem with PySide6 and QtWebEngineWidgets module | Qt Forum"],
 ["https://stackoverflow.com/questions/26842504/printing-column-separated-by-comma-using-awk-command-line","20210304 | csv - Printing column separated by comma using Awk command line - Stack Overflow"],
 ["https://www.solidot.org/story?sid=68068","20210618 | 奇客Solidot | Google 资助用 Rust 开发内核项目"],
+["https://www.solidot.org/story?sid=68211","20210706 | 奇客Solidot | Linux 内核准备支持 Rust"],
 ];

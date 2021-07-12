@@ -1,5 +1,5 @@
 var recent_info_list=[
-["","","","更新日期：2021-07-04 11:29:52 日"],
+["","","","更新日期：2021-07-11 21:24:26 日"],
 ["http://blog.sina.com.cn/u/46e9d5da0100074w","20070331 | 闾丘露薇：在亚马逊热带雨林"],
 ["http://tech.sina.com.cn/i/2007-10-16/10171795136.shtml","20071016 | 唐骏：无论马云持多少股份都是公司核心"],
 ["http://money.163.com/08/0519/18/4CB0VMBA00251RJ2.html","20080519 | 马云：最大的善举绝不在于捐款"],
@@ -579,4 +579,7 @@ var recent_info_list=[
 ["https://www.bjnews.com.cn/detail/161801648615272.html","20210410 | 182.28亿元！阿里巴巴实施“二选一”垄断行为被罚 - 新京报"],
 ["https://www.solidot.org/story?sid=67464","20210412 | 奇客Solidot | 阿里巴巴表态将降低电商进入门槛"],
 ["https://www.solidot.org/story?sid=68047","20210616 | 奇客Solidot | 蔡崇信称马云现在很低调"],
+["https://www.solidot.org/story?sid=68208","20210706 | 奇客Solidot | 贝佐斯卸任亚马逊 CEO"],
+["https://www.solidot.org/story?sid=68220","20210707 | 奇客Solidot | 支付宝和微信限制新用户使用滴滴出行小程序"],
+["https://www.zaobao.com/realtime/china/story20210707-1166073","20210707 | 滴滴小程序在微信和支付宝中下架 | 联合早报网"],
 ];
