@@ -92,4 +92,5 @@ var digest_global=`
 *invertebrate
 *rosebud
 *newsflash
+*brainwork
 `.trim().split('\n');

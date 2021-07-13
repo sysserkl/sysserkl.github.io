@@ -453,6 +453,9 @@ function current_position_gps_points(){
 }
 
 function init_gps_points(){
+    gpx_pb_global.sort(function (a,b){return zh_sort_b(a,b,false,0)});
+    gpx_kl_global.sort(function (a,b){return zh_sort_b(a,b,false,0)});
+
     var window_h=document_body_offsetHeight_b();
     var odiv=document.getElementById('div_selection');
     odiv.style.maxHeight=Math.round(window_h*0.8)+'px';

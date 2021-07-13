@@ -20,4 +20,5 @@ var digest_global=`
 *fivepence
 *conjoin
 *stonecutter
+*Pythagoras
 `.trim().split('\n');
