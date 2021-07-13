@@ -6,4 +6,5 @@ var digest_global=`
 *anyplace
 *freethinker
 *marionette
+*painkiller
 `.trim().split('\n');

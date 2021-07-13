@@ -39,15 +39,15 @@ div#lurudiv{position: fixed; left: 50%; top: 50%; width:auto; height:auto; displ
 <p class=tb04><span id="span_class" style="cursor:pointer;font-weight:600;" onclick="javascript:popup_show_hide_b('popup_class');">分类：</span><input type="text" id="input_class" required autocomplete="off" placeholder="分类"></p>
 <p class=tb04><b>名称：</b><input type="text" id="input_name" required placeholder="名称">
 <p class=tb04>
-<b>单位：</b><input type="text" id="input_unit" autocomplete="off" placeholder="单位">
+<span style="font-weight:bold;color:grey;">单位：</span><input type="text" id="input_unit" autocomplete="off" placeholder="单位">
 <b>数量：</b><input type="number" id="input_amount" step="0.001" required autocomplete="off" placeholder="数量">
-<p class=tb04><b>单价：</b><input type="number" id="input_price" step="0.01" autocomplete="off" placeholder="单价">元
+<p class=tb04><span style="font-weight:bold;color:grey;">单价：</span><input type="number" id="input_price" step="0.01" autocomplete="off" placeholder="单价">元
 <b>总价：</b><input type="number" id="input_total_price" step="0.01" required autocomplete="off" placeholder="总价">元
 </p>
 <p class=tb04><span id="span_from" style="cursor:pointer;font-weight:600;" onclick="javascript:popup_show_hide_b('popup_from');">出处：</span><input type="text" id="input_address" placeholder="出处">
 <p class=tb04><span style="font-weight:600;cursor:pointer;" onclick="javascript:luru_today_wp();">购置日期：</span><input type="date" id="input_day_purchase" required>
 </p>
-<p class=tb04><b>子类：</b><input type="text" id="input_tag" placeholder="子类">
+<p class=tb04><span style="font-weight:bold;color:grey;">子类：</span><input type="text" id="input_tag" placeholder="子类">
 </p>
 <p class=tb04><b>内容：</b><span class="minisize2"><i>(字数限制在20000个字符以内)</i></span></p>
 <div id="div_editor"></div>
@@ -69,7 +69,6 @@ if('serviceWorker' in navigator) {
 }
 else {
     console.log('Calculator Service Worker not work');
-    
 }
 //-------------------------
 init_wp_offline_luru();
