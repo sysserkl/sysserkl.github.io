@@ -7,4 +7,5 @@ var digest_global=`
 *freethinker
 *marionette
 *painkiller
+*redeployment
 `.trim().split('\n');

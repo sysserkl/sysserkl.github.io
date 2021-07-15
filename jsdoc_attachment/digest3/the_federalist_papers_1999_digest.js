@@ -62,4 +62,5 @@ var digest_global=`
 *unambiguous
 *impeachable
 *inquire
+*Montesquieu
 `.trim().split('\n');

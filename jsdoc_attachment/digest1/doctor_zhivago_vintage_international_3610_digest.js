@@ -23,4 +23,5 @@ var digest_global=`
 *seacoast
 *polygon
 *anarchism
+*afterword
 `.trim().split('\n');

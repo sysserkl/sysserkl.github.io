@@ -15,10 +15,11 @@ function definition_hzpy(csstr){
 }
 
 function search_hzpy(csstr=''){
+    var otextarea=document.getElementById('textarea_search_hzpy');
     if (csstr==''){
-        csstr=document.getElementById('textarea_search').value.trim();
+        csstr=otextarea.value.trim();
     }
-    document.getElementById('textarea_search').value=csstr;
+    otextarea.value=csstr;
     if (csstr==''){return;}
     
     recent_search_hzpy(csstr);
@@ -131,9 +132,13 @@ function init_hzpy(){
     menu_hzpy();
     var input_list=[
     ["input_half_py_probability",4],
+    ["input_delimiter",8],
+    ["input_amount_per_col",5],
+    
     ];
     input_size_b(input_list,'id');
-    
+    form_generate_hzpy();
+
     var blxl=0
     for (let item in hz2py_global){
         blxl=blxl+1;
@@ -155,6 +160,16 @@ function init_hzpy(){
     recent_search_hzpy();
 }
 
+function form_generate_hzpy(){
+    var fav_list=local_storage_get_b('fav_lines_bible',-1,true);
+    var postpath=postpath_b();
+    var oform=document.getElementById('form_hzpy');
+    oform.setAttribute('action',postpath+'temp_txt_share.php');
+    
+    bljg=textarea_buttons_b('textarea_search_hzpy','清空,复制,发送到临时记事本,发送地址')
+    document.getElementById('p_buttons').innerHTML=bljg;
+}
+
 function recent_search_hzpy(csstr=''){
     recent_search_b('recent_search_hzpinyin',csstr,'search_hzpy','div_recent_search',[],25,false); 
 }
@@ -164,7 +179,7 @@ function half_py_hzpy(){
     if (isNaN(blprobability)){
         blprobability=1;
     }
-    var blstr=document.getElementById('textarea_search').value.trim();
+    var blstr=document.getElementById('textarea_search_hzpy').value.trim();
     var str_len=blstr.length;
     var list_t=blstr.split('\n');
     var result_t=[];
@@ -192,4 +207,107 @@ function half_py_hzpy(){
         result_t.push('\n');
     }
     document.getElementById('divhtml').innerHTML='<textarea style="height:10rem;" onclick="javascript:this.select();document.execCommand(\'copy\');">'+result_t.join('')+'</textarea><p style="margin-top:0.5rem;font-size:0.8rem;">'+blcount+'/'+str_len+' '+(blcount*100/str_len).toFixed(2)+'%</p>';
+}
+
+function vertical_str_hzpy(){
+    var otextarea=document.getElementById('textarea_search_hzpy');
+    var delimiter=document.getElementById('input_delimiter').value.trim();
+    if (delimiter==''){
+        delimiter=' ';
+    }
+    var vlens=parseInt(document.getElementById('input_amount_per_col').value);
+    var cstype=document.getElementById('select_vertical_str_hzpy').value;
+    var do_replace=document.getElementById('checkbox_replace_punctuation').checked;
+    otextarea.value=vertical_generation_hzpy(otextarea.value.trim(),vlens,delimiter,cstype,do_replace);
+}
+
+function vertical_generation_hzpy(csstr,v_len=-1,delimiter=' ',align='top',replace_punctuation=true){    
+    var result_t=[];
+    csstr=csstr.trim();
+    var blstr_list=csstr.split('\n');
+    for (let one_row of blstr_list){
+        one_row=one_row.trim().split('');
+        var one_col=[];
+        var blxl=0;
+        for (let item of one_row){
+            if (delimiter.includes(item)){
+                if (one_col.length>0){
+                    result_t.push(one_col);
+                }
+                one_col=[];
+                blxl=0;
+                continue;   //不添加 分隔符 - 保留注释
+            }
+            else if (v_len>0 && blxl % v_len == 0){
+                if (one_col.length>0){
+                    result_t.push(one_col);
+                }
+                one_col=[];
+                blxl=0;
+            }
+
+            one_col.push(item);
+            blxl=blxl+1;
+        }
+        
+        if (one_col.length>0){
+            result_t.push(one_col);
+        }
+    }
+    result_t.reverse();
+    
+    if (result_t.length==0){return '';}
+    
+    v_len=0;    //避免不必要的空格 - 保留注释
+    for (let item of result_t){
+        v_len=Math.max(v_len,item.length);
+    }
+
+    switch (align){
+        case 'top':
+            for (let blxl=0;blxl<result_t.length;blxl++){
+                for (let blno=result_t[blxl].length;blno<v_len;blno++){
+                    result_t[blxl].push('　');
+                }     
+            }
+            break;
+        case 'bottom':
+            for (let blxl=0;blxl<result_t.length;blxl++){
+                for (let blno=result_t[blxl].length;blno<v_len;blno++){
+                    result_t[blxl]=['　'].concat(result_t[blxl]);
+                }     
+            }
+            break;
+        case 'center':
+            for (let blxl=0;blxl<result_t.length;blxl++){
+                for (let blno=result_t[blxl].length;blno<v_len;blno++){
+                    if (blno % 2 == 0){
+                        result_t[blxl]=['　'].concat(result_t[blxl]);
+                    }
+                    else {
+                        result_t[blxl].push('　');
+                    }
+                }     
+            }
+            break;        
+    }
+    
+    var bljg='';
+    for (let row=0;row<v_len;row++){
+        for (let item of result_t){
+            bljg=bljg+item[row]+' ';
+        }
+        bljg=bljg.slice(0,-1)+'\n';
+    }
+    if (replace_punctuation){
+        var punctuations=[
+        ['“','﹁'],['”','﹂'],['《','︽'],['》','︾'],['（','︵'],['）','︶'],['{','︷'],['}','︸'],
+        ['—','〡'],
+        ];
+        for (let item of punctuations){
+            bljg=bljg.replace(new RegExp(item[0],'g'),item[1]);
+        }        
+    }
+    bljg=bljg.replace(new RegExp(/[,.?"':;!“”‘’、，。；：？！]/,'g'),'　'); //微信不对齐中文中文标点 - 保留注释
+    return bljg;
 }
