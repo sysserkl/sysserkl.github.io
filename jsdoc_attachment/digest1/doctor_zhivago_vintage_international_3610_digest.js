@@ -24,4 +24,5 @@ var digest_global=`
 *polygon
 *anarchism
 *afterword
+*chairwoman
 `.trim().split('\n');
