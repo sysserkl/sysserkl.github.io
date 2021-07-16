@@ -178,7 +178,7 @@ function more_tools_klrecent(){
     ['html/wp_offline_luru.htm', 'wp offline'],
     ['html/zj_college_search.htm','浙江高考分数'],    
     ['html/zj_company.htm','浙江企业'],    
-    ['index.htm', '更多资讯'],
+    ['recent_news.htm?expand', '更多资讯'],
 
     ];
     tools.sort(function (a,b){return a[1].toLowerCase()>b[1].toLowerCase();});
