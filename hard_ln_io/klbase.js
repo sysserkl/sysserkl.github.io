@@ -611,6 +611,7 @@ function array_union_b(array1,array2,isset=false){
 }
 
 function array_numbers_b(csmax,randomsort_times=-1){
+    csmax=Math.max(0,csmax);
     var list_t=Array.from(Array(csmax).keys()); //形如[0,1,2,...,csmax-1]，不含csmax - 保留注释
     if (randomsort_times>0){
         for (let blxl=0;blxl<randomsort_times;blxl++){

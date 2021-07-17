@@ -247,4 +247,8 @@ var digest_global=`
 *luminescence
 *chickadee
 *misjudge
+*magnet
+*musket
+*purchaser
+*unpack
 `.trim().split('\n');

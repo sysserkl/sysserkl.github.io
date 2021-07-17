@@ -22,4 +22,5 @@ var digest_global=`
 *unnamed
 *gamesmanship
 *anthropology
+*syndrome
 `.trim().split('\n');

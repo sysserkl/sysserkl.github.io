@@ -51,4 +51,5 @@ var digest_global=`
 *maple
 *anteroom
 *prophetess
+*nunnery
 `.trim().split('\n');

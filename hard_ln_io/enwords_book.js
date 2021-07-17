@@ -528,9 +528,10 @@ function new_old_words_html_enbook(csarray,csname,csaname='',onlytitle=false){
     
     var bljg=array_2_html_enbook(csarray);
     var blsort='<span class="aclick" onclick="sort_enwords_enbook(this,0);">原始顺序</span>';
-    blsort=blsort+'<span class="aclick" onclick="sort_enwords_enbook(this,1);">排序</span>';
-    blsort=blsort+'<span class="aclick" onclick="sort_enwords_enbook(this,2);">尾部排序</span>';
-    blsort=blsort+'<span class="aclick" onclick="sort_enwords_enbook(this,3);">随机排序</span>';
+    blsort=blsort+'<span class="aclick" onclick="sort_enwords_enbook(this);">排序</span>';
+    blsort=blsort+'<span class="aclick" onclick="sort_enwords_enbook(this,\'tail\');">尾部排序</span>';
+    blsort=blsort+'<span class="aclick" onclick="sort_enwords_enbook(this,\'length\');">长度排序</span>';    
+    blsort=blsort+'<span class="aclick" onclick="sort_enwords_enbook(this,\'random\');">随机排序</span>';
     blsort=blsort+'<span class="aclick" onclick="javascript:document.getElementById(\'textarea_enwords_book_'+csaname+'\').select();document.execCommand(\'copy\');">复制</span>';
 
     return bltitle+'<div class="div_enwords_container"><textarea id="textarea_enwords_book_'+csaname+'" style="height:200px;">'+Array.from(csarray).join(' ')+'</textarea><p>'+blsort+'</p><div class="div_enwords_links">'+bljg.join(' ')+enwords_batch_div_b(Array.from(csarray),parseInt(Math.random()*99999))+'</div></div>';
@@ -546,32 +547,31 @@ function array_2_html_enbook(csarray){
     return bljg;
 }
 
-function sort_enwords_enbook(oa,cstype){
+function sort_enwords_enbook(oa,cstype=''){
     var odiv=oa.parentNode.parentNode;
-    if (!odiv){
-        return;
-    }
-    if (odiv.getAttribute('class')!=='div_enwords_container'){
-        return;
-    }
+    if (!odiv){return;}
+    
+    if (odiv.getAttribute('class')!=='div_enwords_container'){return;}
+    
     var otextarea=odiv.querySelector('textarea');
-    if (!otextarea){
-        return;
-    }
+    if (!otextarea){return;}
+    
     var olinksdiv=odiv.querySelector('div.div_enwords_links');
-    if (!olinksdiv){
-        return;
-    }
+    if (!olinksdiv){return;}
+    
     var t0 = performance.now();
     var csarray=otextarea.value.trim().split(' ');
     switch (cstype){
-        case 1: //排序 - 保留注释
+        case '': //排序 - 保留注释
             csarray.sort();
             break;
-        case 2:
+        case 'tail':
             csarray.sort(function (a,b){return reverse_str_b(a)>reverse_str_b(b);});
             break;
-        case 3: //随机排序
+        case 'length':
+            csarray.sort(function (a,b){return a.length>b.length;});
+            break;            
+        case 'random': //随机排序
             csarray.sort(randomsort_b);
             break;        
     }
@@ -757,15 +757,17 @@ function max_length_new_words_enbook(){
 function import_words_enbook(cstype,csmax=-1){
     switch (cstype){
         case 'new':
-            document.getElementById('textarea_new_words1').value=all_new_words_global.join(' ');
-            break;
-        case 'new2500':
-            var words_t=[].concat(all_new_words_global);
-            var bltotal_t=Math.floor((Math.random()*10)+1);
-            for (let blxl=0;blxl<bltotal_t;blxl++){
-                words_t.sort(randomsort_b);
-            }        
-            document.getElementById('textarea_new_words1').value=words_t.slice(0,2500).join(' ');
+            if (csmax>0){
+                var words_t=[].concat(all_new_words_global);
+                var bltotal_t=Math.floor((Math.random()*10)+1);
+                for (let blxl=0;blxl<bltotal_t;blxl++){
+                    words_t.sort(randomsort_b);
+                }
+                document.getElementById('textarea_new_words1').value=words_t.slice(0,csmax).join(' ');
+            }
+            else {
+                document.getElementById('textarea_new_words1').value=all_new_words_global.join(' ');            
+            }
             break;            
         case 'old':
             var result_t=[];
@@ -779,7 +781,7 @@ function import_words_enbook(cstype,csmax=-1){
             document.getElementById('textarea_new_words1').value=result_t.join('\n');
             break;
         case 'sentence':
-            var list_t=array_numbers_b(Math.min(2000,en_sentence_global.length),Math.floor((Math.random()*10)+1));
+            var list_t=array_numbers_b(Math.min(csmax,en_sentence_global.length),Math.floor((Math.random()*10)+1));
 
             var result_t=[];
             for (let item of list_t){
@@ -830,6 +832,18 @@ function txtlistsearch_enbook(){
     window.open(blpath);
 }
 
+function day_new_words_enbook(){
+    var days=day_of_year_b();   //当年第几天 - 保留注释
+
+    var result_t=[];
+    for (let item of all_new_words_global){
+        if ((1+asc_sum_b(item)%365)==days){
+            result_t.push(item);
+        }        
+    }
+    document.getElementById('textarea_new_words1').value=result_t.join(' ');    
+}
+
 function menu_enbook(){
     var str_t=klmenu_hide_b('');
     var str2_t=klmenu_hide_b('#div_new_words2');
@@ -844,9 +858,10 @@ function menu_enbook(){
 
     var klmenu_new=[
     '<span class="span_menu" onclick="javascript:'+str_t+'import_words_enbook(\'new\');">导入KLWiki和txtbook全部新单词</span>',    
-    '<span class="span_menu" onclick="javascript:'+str_t+'import_words_enbook(\'new2500\');">随机导入2500个新单词</span>',        
+    '<span class="span_menu" onclick="javascript:'+str_t+'day_new_words_enbook();">今日新单词</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'import_words_enbook(\'new\',2500);">随机导入2500个新单词</span>',        
     '<span class="span_menu" onclick="javascript:'+str_t+'max_length_new_words_enbook();">全部新单词中最长的单词</span>',     
-    '<span class="span_menu" onclick="javascript:'+str_t+'import_words_enbook(\'sentence\');">随机导入2000条例句</span>',
+    '<span class="span_menu" onclick="javascript:'+str_t+'import_words_enbook(\'sentence\',2000);">随机导入2000条例句</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'import_words_enbook(\'old\',2500);">随机导入2500条旧单词释义</span>',
     '<span class="span_menu" onclick="javascript:'+str_t+'import_words_enbook(\'old\');">导入全部旧单词释义</span>',
     ];
