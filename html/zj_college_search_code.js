@@ -1,6 +1,6 @@
 function load_data_zjedu(){
     var datadir='../jsdata/education/';
-    var datalist=["2018","2019","2020"];
+    var datalist=["2018","2019","2020","2021"];
     var theyear=datalist[datalist.length-1];
     var cskeys=href_split_b(location.href);
     if (cskeys.length>0){
