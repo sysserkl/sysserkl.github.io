@@ -989,9 +989,9 @@ function math_ceil10_b(csnum){
 }
 
 function character_single_2_double_b(str){
-    var result = "";
+    var result = '';
     var len = str.length;
-    for(let blxl=0;blxl<len;blxl++){
+    for (let blxl=0;blxl<len;blxl++){
         var cCode = str.charCodeAt(blxl);
         //全角与半角相差（除空格外）：65248(十进制)
         cCode = (cCode>=0x0021 && cCode<=0x007E)?(cCode + 65248) : cCode;
@@ -1007,14 +1007,14 @@ function character_double_b(){
 }
 
 function character_double_2_single_b(str,only_az09=false){
-    var result = "";
+    var result = '';
     var len = str.length;
     var double_az09='';
     if (only_az09){
         double_az09=character_double_b();
     }
     
-    for(let blxl=0;blxl<len;blxl++){
+    for (let blxl=0;blxl<len;blxl++){
         if (only_az09 && !double_az09.includes(str[blxl])){
             result=result+str[blxl];
             continue;

@@ -218,12 +218,16 @@ function vertical_str_hzpy(){
     var vlens=parseInt(document.getElementById('input_amount_per_col').value);
     var cstype=document.getElementById('select_vertical_str_hzpy').value;
     var do_replace=document.getElementById('checkbox_replace_punctuation').checked;
-    otextarea.value=vertical_generation_hzpy(otextarea.value.trim(),vlens,delimiter,cstype,do_replace);
+    var s2d=document.getElementById('checkbox_single_2_double').checked;
+    otextarea.value=vertical_generation_hzpy(otextarea.value.trim(),vlens,delimiter,cstype,do_replace,s2d);
 }
 
-function vertical_generation_hzpy(csstr,v_len=-1,delimiter=' ',align='top',replace_punctuation=true){    
+function vertical_generation_hzpy(csstr,v_len=-1,delimiter=' ',align='top',replace_punctuation=true,single_2_double=true){    
     var result_t=[];
     csstr=csstr.trim();
+    if (single_2_double){
+        csstr=character_single_2_double_b(csstr);
+    }
     var blstr_list=csstr.split('\n');
     for (let one_row of blstr_list){
         one_row=one_row.trim().split('');
