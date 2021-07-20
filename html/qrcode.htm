@@ -18,7 +18,7 @@ klbase_addons_import_js_b(['css','qr'],['jeromeetienne_qrcode.min.js']);
 var qr_list_global=[];
 var scheme_global={};
 scheme_generation_b();
-css_root_style_b('18','11',['base','menu']);
+css_root_style_b('18','11',['base','menu'],[],1);
 </script>
 <link rel="shortcut icon" href="qrcode_ico/qrcode512.png" />
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -40,6 +40,23 @@ B-Color: <input type="text" value="white" id="input_backcolor" onkeyup="javascri
 <div id="div_qrcode" style="padding:0.5rem;margin-top:0.5rem;margin-left:2rem;"></div>
 <p><img id="img_from_canvas" src="" alt="" style="padding:0.5rem;margin-top:0.5rem;margin-left:2rem;border:0.1rem black solid;display:none;"></p>
 <div id="div_recent_search" style="font-size:0.85rem;margin:0.5rem 0rem;line-height:1.8rem;word-break:break-all;word-wrap:break-word;"></div>
+
+<div id="div_buttons" style="display:none;">
+<p id="p_block_count"></p>
+<p>
+<span class="aclick" onclick="javascript:show_border_klqr();">Border</span> 
+<span class="aclick" onclick="javascript:show_number_klqr();">Number</span> 
+<input type="checkbox" id="checkbox_black_square" /><label for="checkbox_black_square">黑框</label>
+<input type="checkbox" id="checkbox_comma" /><label for="checkbox_comma">逗号间隔</label>
+<span class="aclick" onclick="javascript:table_2_ascii_klqr();">ASCII</span> 
+<span class="aclick" id="span_list" style="display:none;" onclick="javascript:show_list_klqr();">List</span>
+<span class="aclick" onclick="javascript:round_klqr();">Round</span>
+</p>
+<textarea id="textarea_ascii_klqr" placeholder="ASCII"></textarea>
+<div id="div_list_klqr" style="display:none;">
+</div>
+</div>
+
 <div id="div_statistics"></div>
 </div>
 <script type="text/javascript">
