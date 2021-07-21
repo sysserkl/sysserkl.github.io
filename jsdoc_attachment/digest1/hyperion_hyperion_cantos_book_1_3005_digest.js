@@ -6,4 +6,5 @@ var digest_global=`
 *seawall
 *holistic
 *Cantonese
+*salesperson
 `.trim().split('\n');

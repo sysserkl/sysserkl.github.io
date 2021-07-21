@@ -4,4 +4,5 @@ var digest_global=`
 *neatness
 *abolitionism
 *floodwood
+*postscript
 `.trim().split('\n');
