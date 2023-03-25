@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>单词填空</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','eng','enwc','wiki'],[],['words/enwords_data.js','words/enwords_sentence_data.js'],['enwords_exam_ico/enwords_exam512.png']);
+</script>
+<script src="enwords_exam_code.js"></script>
+<script>
+var scheme_global={};
+scheme_generation_b();
+css_root_style_b('18','14',['base'],[p_enwords_sentence_style_b(false)],1);
+var words_searched_arr=[];
+var en_words_no_list_global=[];
+en_word_temp_get_b();
+</script>
+<style>
+span.span_word_blur {color:grey;background-color:grey;}
+</style>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+</head>
+<body style="margin:0.5rem;">
+<script>
+mobile_style_enwc_b();
+</script>
+<h2 style="margin-top:0px;">单词填空</h2>
+<div id="div_exam_buttons"></div>
+<div id="divhtml"></div>
+<script>
+init_klexam();
+</script>
+</body>
+</html>

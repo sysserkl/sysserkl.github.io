@@ -1,0 +1,30 @@
+{
+  "background_color": "transparent",
+  "description": "GPS Points",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "gps_points_ico/gps_points512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },  
+    {
+      "src": "gps_points_ico/gps_points256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "gps_points_ico/gps_points128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "gps_points_ico/gps_points64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }        
+  ],
+  "name": "GPS Points",
+  "short_name": "GPS P",
+  "start_url": "gps_points.htm"
+}

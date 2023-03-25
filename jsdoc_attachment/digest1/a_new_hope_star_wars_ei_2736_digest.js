@@ -1,0 +1,24 @@
+var digest_global=`
+*acidic
+*bipedal
+*cityscape
+*enclave
+*extragalactic
+*firepower
+*foursome
+*grimace
+*hairdo
+*headrest
+*manipulator
+*omnidirectional
+*overabundance
+*programmable
+*recharger
+*savior
+*selflessly
+*sorcerer
+*spatial
+*stabilize
+*teleport
+*widen
+`.trim().split('\n');

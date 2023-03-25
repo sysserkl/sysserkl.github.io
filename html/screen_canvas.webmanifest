@@ -1,0 +1,30 @@
+{
+  "background_color": "transparent",
+  "description": "Screen Canvas",
+  "display": "fullscreen",
+  "icons": [
+    {
+        "src": "screen_canvas_ico/screen_canvas512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    },
+    {
+        "src": "screen_canvas_ico/screen_canvas256.png",
+        "sizes": "256x256",
+        "type": "image/png"
+    },
+    {
+        "src": "screen_canvas_ico/screen_canvas128.png",
+        "sizes": "128x128",
+        "type": "image/png"
+    },
+    {
+        "src": "screen_canvas_ico/screen_canvas64.png",
+        "sizes": "64x64",
+        "type": "image/png"
+    }
+  ],
+  "name": "Screen Canvas",
+  "short_name": "KCanvas",
+  "start_url": "screen_canvas.htm"
+}

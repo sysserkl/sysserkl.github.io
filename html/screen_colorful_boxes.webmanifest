@@ -1,0 +1,30 @@
+{
+  "background_color": "transparent",
+  "description": "KL Colorful Boxes",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "screen_colorful_boxes_ico/colorful_boxes512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },  
+    {
+      "src": "screen_colorful_boxes_ico/colorful_boxes256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "screen_colorful_boxes_ico/colorful_boxes128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "screen_colorful_boxes_ico/colorful_boxes64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }        
+  ],
+  "name": "KL Colorful Boxes",
+  "short_name": "KBoxes",
+  "start_url": "screen_colorful_boxes.htm"
+}

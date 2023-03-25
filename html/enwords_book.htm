@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+document.title=local_storage_get_b('enbook_title_name');
+var onetab_global=[];
+var enwords_selenium_scan_global=[];
+
+klbase_addons_import_js_b(['css','date','eng','wiki','books','enbook','enwc','en_de_str','rlater'],[],['words/enwords_data.js','words/all_new_words_data.js','words/enwords_sentence_data.js','words/enwords_count_sentence_data.js','words/senior_high_school_en_data.js','words/cet6_en_data.js'],['enwords_book_ico/enwords_book512.png','../../../../data/words/enwords_selenium_scan.js']);
+</script>
+<script>
+load_current_book_b();
+</script>
+<script src="../../../../data/words/onetab_data.js"></script>
+<script src="enwords_book_code.js"></script>
+<script>
+//history
+//0.0.4-20200404 增加按词尾排序
+//0.0.3-20200403 增加英语书籍生词新旧统计数据对比
+//0.0.2-20200302 增加英语书籍生词批量统计
+//0.0.1-20200120
+//-------------------------------------------
+books_global_value_init_b();
+filelist=[];
+var enbook_compare_result_list_global=[];
+var enbook_compare_result_list_sort_order_global=true;
+var en_words_book_newwords_continue_global=false;
+var show_all_books_global=false;
+var enwords_selenium_cached_global=selenium_local_storage_get_enwords_book();
+en_word_temp_get_b();
+</script>
+<script>
+csbooklist_source_global.sort(function(a,b){return zh_sort_b(a,b,false,1);});
+en_sentence_count_global.sort(function (a,b){return a[0]>b[0];});
+var scheme_global={};
+scheme_generation_b();
+css_root_style_b('17.2','13',['base','menu'],[],1);
+en_style_b(true);
+</script>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+</head>
+<body>
+<script>
+book_makelist_b('englishwords en_minor');
+mobile_style_enwc_b();
+</script>
+
+<a name=top></a>
+<h2 style="margin-top:0px;font-size:1.2rem;"><span id="span_title" onclick="showhide_enwc_b();" style="cursor:pointer;">生词统计</span></h2>
+<div id='div_show_hide' style="display:block;margin:0rem 0.5rem;">
+<a name=content></a>
+<label><input type="checkbox" id="input_s_word" checked />单词</label>
+<label><input type="checkbox" id="input_s_p" />音标</label>
+<label><input type="checkbox" id="input_s_def" checked />释义</label>
+</div>
+<div id="divhtml"></div>
+<div id="divhtml2" style="margin-left:2rem;margin-right:2rem;"></div>
+<script>
+var words_searched_arr=[];
+init_enwords_book();
+</script>
+
+<script>
+import_filelist_enwords_book();
+if (en_words_book_newwords_continue_global){
+    get_new_words_arr_enbook_b(2);
+}
+</script>
+<a name=footer></a>
+</body>
+</html>

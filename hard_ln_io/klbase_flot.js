@@ -1,0 +1,600 @@
+//依赖 klbase_date.js - 保留注释
+function flot_two_lines_two_yaxis_b(cslist,csid,y1unit='',y2unit='',label_position='nw',cstime=false,cstype='m',y1dec=2,y2dec=2,cstimeformat='',cstickSize=[],csmin_data_length=-1,csymin1=false,csymax1=false,csymin2=false,csymax2=false,right_group_count=1){
+    function sub_flot_two_lines_two_yaxis_b_date_set(cslist,isright=false){
+        var label_str=cslist.shift();
+        if (isright){
+            return { label: label_str, data: cslist, lines: {show: true}, points: {show: true, symbol: flot_rand_flot_symbol_b()},yaxis: 2};        
+        }
+        else {
+            return { label: label_str, data: cslist, lines: {show: true}, points: {show: true, symbol: flot_rand_flot_symbol_b()}};
+        }
+    }
+    //----------------------------------------------------------------------------    
+    //list1_t: [ '次数',[2019-08-01, 100],[2019-08-02, 300] ];    
+    //不支持一边多条线 - 保留注释
+    if (cslist.length<2){return;}
+    if (cslist[0].length<2){return;} //内容为空，或者只有名称 - 保留注释
+
+    var left_group=cslist.slice(0,-1*right_group_count);
+    var right_group=cslist.slice(-1*right_group_count,);
+    var list1_t=left_group[0];
+    var list2_t=right_group[0];
+    
+    if (label_position==''){
+        label_position='nw';
+    }
+    if (cstime && list1_t.length==2 && list2_t.length==2){
+        //只能是数字，不能加年份和字符 - 保留注释
+        for (let blxl=0;blxl<left_group.length;blxl++){
+            left_group[blxl][1][0]=date_2_ymd_b(left_group[blxl][1][0],cstype);
+        }
+        for (let blxl=0;blxl<right_group.length;blxl++){
+            right_group[blxl][1][0]=date_2_ymd_b(right_group[blxl][1][0],cstype);
+        }
+        cstime=false;
+    }
+    
+    //指定 csmin_data_length 时，则当数据量少于 csmin_data_length 时，使用用户定义的 cstickSize，否则使用自动的cstickSize - 保留注释
+    if (csmin_data_length>0 && cstickSize.length>0){
+        if (list1_t.length>csmin_data_length && list2_t.length>csmin_data_length){
+            cstickSize=[];
+        }
+    }
+    
+    if (csmin_data_length>0){
+        if (list1_t.length<=csmin_data_length && list2_t.length<=csmin_data_length){
+            if (y1dec==0){
+                y1dec=-1;
+            }
+            if (y2dec==0){
+                y2dec=-1;
+            }
+        }
+    }
+       
+    var dataset = [];
+    for (let one_array of left_group){
+        dataset.push(sub_flot_two_lines_two_yaxis_b_date_set(one_array,false));
+    }
+    for (let one_array of right_group){
+        dataset.push(sub_flot_two_lines_two_yaxis_b_date_set(one_array,true));
+    }    
+    
+    if (list1_t.length==1 && list2_t.length==1){
+        var blyaxes=[
+            {
+                'tickFormatter': function (v, axis) {return v.toFixed(axis.tickDecimals) + y1unit;}
+            }, 
+            { 
+                'position': 'right',
+                'tickFormatter': function (v, axis) {return v.toFixed(axis.tickDecimals) + y2unit;}
+            }
+        ];
+    }
+    else {
+        var blyaxes=[
+            {
+                'tickFormatter': function (v, axis) {return v.toFixed(y1dec==-1?axis.tickDecimals:y1dec) + y1unit;}
+            }, 
+            { 
+                'position': 'right',
+                'tickFormatter': function (v, axis) {return v.toFixed(y2dec==-1?axis.tickDecimals:y2dec) + y2unit;}
+            }
+        ];
+    }
+
+    var oxaxis={};
+    oxaxis['tickDecimals']=0;
+    if (cstime){
+        oxaxis['mode']='time';
+    }
+
+    if (cstickSize.length!==0){
+        oxaxis['tickSize']=cstickSize;
+    }
+
+    var oyxaxis1={};
+    if (csymin1!==false){
+        oyxaxis1['min']=csymin1;
+    }
+    if (csymax1!==false){
+        oyxaxis1['max']=csymax1;
+    }
+    
+    var oyxaxis2={};
+    if (csymin2!==false){
+        oyxaxis2['min']=csymin2;
+    }
+    if (csymax2!==false){
+        oyxaxis2['max']=csymax2;
+    }
+    if (csymin2!==false || csymax2!==false){
+        if (list1_t.length==1 && list2_t.length==1){
+            oyxaxis2['tickFormatter']=function (v, axis) {return v.toFixed(axis.tickDecimals) + y2unit;}
+        }
+        else {
+            oyxaxis2['tickFormatter']=function (v, axis) {return v.toFixed(y2dec==-1?axis.tickDecimals:y2dec) + y2unit;}
+        }
+    }
+
+    if (cstime){
+        var oneyear;
+        var oneyear2;
+        var onemonth;        
+        var onemonth2;
+        [oneyear,onemonth]=isoneyear_isonemonth_b(list1_t);
+        [oneyear2,onemonth2]=isoneyear_isonemonth_b(list2_t);
+        cstimeformat=flot_timeformat_b(cstimeformat,cstype, oneyear && oneyear2,onemonth && onemonth2);
+        
+        if (cstimeformat!==''){
+            oxaxis['timeformat']=cstimeformat;
+        }
+    }
+    if (csymin1==false && csymax1==false && csymin2==false && csymax2==false){
+        $.plot('#'+csid, dataset,{legend: { position: label_position }, xaxis: oxaxis,yaxes:blyaxes});    
+    }
+    else {
+        $.plot('#'+csid, dataset,{legend: { position: label_position }, xaxis: oxaxis,yaxis:oyxaxis1,y2axis:oyxaxis2,yaxes:blyaxes});
+    }
+}
+
+function flot_timeformat_b(cstimeformat,cstype,isoneyear,isonemonth){
+    if (cstimeformat!==''){
+        return cstimeformat;
+    }
+    if (cstype=='y'){
+        cstimeformat='%Y年';
+        //cstickSize: [1, 'year']; - 保留注释
+    }
+    else if (cstype=='m'){
+        if (isoneyear){
+            cstimeformat='%m月';
+        }
+        else {
+            cstimeformat='%Y/%m';
+        }
+        //cstickSize: [1, 'month']; - 保留注释
+    }
+    else if (cstype=='d'){
+        if (isonemonth){
+            cstimeformat='%d日';
+        }
+        else if (isoneyear){
+            cstimeformat='%m/%d';
+        }
+        else {
+            cstimeformat='%Y/%m/%d';
+        }
+        //cstickSize: [1, 'day']; - 保留注释
+    }
+    return cstimeformat;
+}
+
+function isoneyear_isonemonth_b(cslist){
+    var list_y=new Set();
+    var list_m=new Set();
+    for (let item of cslist){
+        if (Array.isArray(item)){
+            if (item.length>0){
+                list_y.add(item[0].getFullYear());
+                list_m.add(item[0].getMonth());
+                
+                if (list_y.size>1){
+                    return [false,false];
+                }
+            }
+        }
+    }
+    return [list_y.size>1?false:true,list_m.size>1?false:true];
+}
+
+function flot_lines_b(cslist,csid,label_position='nw',cstime=false,cstimeformat='',cstype='m',y1unit='',y1dec=-1,cstickSize=[],csmin_data_length=-1,csymin=false,csymax=false,csshowline=true){
+   //[
+   //[ "成都", [2012,300], [2014,400] ], 
+   //[ "苏州", [2012,500], [2014,600] ],
+   //]; - 保留注释
+   //其中的 元素 不是 [ "成都", [ [2012,300], [2014,400] ] ], 
+   //cstype y:getFullYear m: getMonth; d: getDate; - 保留注释
+   
+   //以下5行保留注释
+    //for (let item of cslist){
+        //for (let acol of item){
+            //console.log(Array.isArray(acol),acol);
+        //}
+    //}
+    if (cslist.length==0){return;}
+    if (cslist[0].length<2){return;}    //内容为空，或者只有名称 - 保留注释
+        
+    if (label_position==''){
+        label_position='nw';
+    }
+    if (cstime){
+        for (let blxl=0;blxl<cslist.length;blxl++){
+            if (cslist[blxl].length==2){    //如果只有两个元素，第一个是名称，第二个是年份和数值，则与其他含有更多记录的线条同时出现时，日期格式失效 - 保留注释
+                //只能是数字，不能加年份和字符 - 保留注释
+                cslist[blxl][1][0]=date_2_ymd_b(cslist[blxl][1][0],cstype);
+                cstime=false;
+            }
+        }
+    }
+    var only_one_data=true;
+    for (let blxl=0;blxl<cslist.length;blxl++){
+        if (cslist[blxl].length>2){
+            only_one_data=false;
+            break;
+        }
+    }
+    
+    //指定 csmin_data_length 时，则当数据量少于 csmin_data_length 时，使用用户定义的 cstickSize，否则使用自动的cstickSize - 保留注释
+    var maxdatalength=0;
+    for (let item of cslist){
+        maxdatalength=Math.max(maxdatalength,item.length);
+    }
+    
+    if (csmin_data_length>0 && cstickSize.length>0){
+        if (maxdatalength>csmin_data_length){
+            cstickSize=[];
+        }
+    }
+    
+    //数据量不够时，纵轴间隔改为默认设置 - 保留注释
+    if (csmin_data_length>0){
+        if (maxdatalength<=csmin_data_length){
+            if (y1dec==0){
+                y1dec=-1;
+            }
+        }
+    }
+        
+    var chart_data=[];
+    for (let blxl=0;blxl<cslist.length;blxl++){
+        var label_t=cslist[blxl].shift();
+        var label_showline=csshowline;
+        var label_showpoints=true;
+        if (label_t.includes('#show:true#')){
+            label_showline=true;
+            label_t=label_t.replace('#show:true#','');
+        }
+        else if (label_t.includes('#show:false#')){
+            label_showline=false;
+            label_t=label_t.replace('#show:false#','');
+        }
+        if (label_t.includes('#points:true#')){
+            label_showpoints=true;
+            label_t=label_t.replace('#points:true#','');
+        }
+        else if (label_t.includes('#points:false#')){
+            label_showpoints=false;
+            label_t=label_t.replace('#points:false#','');
+        }
+        
+        chart_data.push({
+            data: cslist[blxl], 
+            label: label_t, 
+            lines: { 
+                show: label_showline 
+            }, 
+            points: {
+                show: label_showpoints,
+                symbol: flot_rand_flot_symbol_b() 
+            }
+        });
+    }
+    
+    if (y1dec==-1 || only_one_data){
+        var blyaxes=[
+            {
+                tickFormatter: function (v, axis) {return v.toFixed(axis.tickDecimals) + y1unit;}
+            }, 
+        ];
+    }
+    else {
+        var blyaxes=[
+            {
+                tickFormatter: function (v, axis) {return v.toFixed(y1dec) + y1unit;}
+            }, 
+        ];
+    }
+
+    var oxaxis={};
+    oxaxis['tickDecimals']=0;
+    
+    var oyxaxis={};
+    if (csymin!==false){
+        oyxaxis['min']=csymin;
+    }
+    if (csymax!==false){
+        oyxaxis['max']=csymax;
+    }
+    
+    if (cstime){
+        var oneyear=true;
+        var onemonth=true;
+        var oneyear2=true;
+        var onemonth2=true;        
+        for (let item of cslist){
+            [oneyear2,onemonth2]=isoneyear_isonemonth_b(item);
+            oneyear=oneyear && oneyear2;
+            onemonth=onemonth && onemonth2;
+        }
+        
+        cstimeformat=flot_timeformat_b(cstimeformat,cstype,oneyear,onemonth);
+        
+        oxaxis['mode']='time';
+        if (cstimeformat!==''){
+            oxaxis['timeformat']=cstimeformat;
+        }
+        if (cstickSize.length!==0){
+            oxaxis['tickSize']=cstickSize;
+        }
+        
+        $.plot('#'+csid, chart_data,{legend: { position: label_position }, xaxis: oxaxis, yaxis:oyxaxis, yaxes:blyaxes});
+    }
+    else {
+        $.plot('#'+csid, chart_data,{legend: { position: label_position }, xaxis: oxaxis, yaxis:oyxaxis, yaxes:blyaxes});
+    }
+}
+
+function flot_rand_flot_symbol_b(){
+    var sym_t=['circle', 'square', 'diamond', 'triangle', 'cross', ];
+    sym_t.sort(randomsort_b);
+    return sym_t[0];
+}
+
+function flot_pie_b(chart_data,csid,label_radius=11/15){
+    //chart_data 类型如下：
+    //[
+    //{label: '杭州', data: 30},
+    //{label: '宁波', data: 40},
+    //];
+    if (chart_data.length==0){return;}
+    
+    $.plot('#'+csid, chart_data, {
+        series: {
+            pie: {
+                show: true,
+                radius: 1,
+                label: {
+                    show: true,
+                    radius: label_radius,
+                    formatter: flot_labelFormatter_b,
+                    background: {
+                        opacity: 0.5
+                    }
+                }
+            }
+        },
+        legend: {
+        show: false
+        }
+    });
+}
+
+function flot_labelFormatter_b(label, series) {
+    return "<div class='div_flot_pie_label'>" + label + "<br/>" + (series.percent).toFixed(2) + "%</div>";
+}
+
+function flot_import_js_b(cslist=[],isdefer=false,do_write=true){
+    var blpath=location.href;
+    if (blpath.includes('/klwebphp/')){
+        blpath=blpath.split('/klwebphp/')[0];
+        blpath=blpath+'/klwebphp/PythonTools/data/selenium_news/module/flot/';
+    }
+    else {
+        blpath=location.href.split('//')[0]+'//'+location.host+'/module/flot/';
+    }
+    var defer_str=(isdefer?'defer':'');
+
+    var result_t=[];
+    result_t.push(['js',blpath+'jquery.flot.min.js',defer_str]);
+    for (let item of cslist){
+        result_t.push(['js',blpath+'jquery.flot.'+item+'.min.js',defer_str]);
+    }
+    if (do_write){
+        write_js_css_b(result_t);
+    }
+    return result_t;
+}
+
+function statistics_dir_file_count_b(){
+    if (is_local_b(false)==false){return [];}
+    var fname=klwebphp_path_b('data/klwiki/dir_file_count.csv');
+    if (fname==false){return [];}
+
+    var category_list={'klmusic':'klmusic','待整理照片':'photos_to_do','album':'album','gpx_pb':'gpx_pb','jsdoc3':'jsdoc3'};
+    var result_t=[];
+    for (let key in category_list){
+        var list_t=read_txt_file_b(fname).match(new RegExp('\\/'+key+'\\/,\\d{4}-\\d{2}-\\d{2},\\d+,\\d+$','mg')) || [];
+        
+        var dir_file_count_list=[];
+        for (let item of list_t){
+            var bldate=item.replace(new RegExp(/^.*,(\d{4}-\d{2}-\d{2}),.*$/,'g'),'$1');
+            var blcount=item.replace(new RegExp(/^.*,\d{4}-\d{2}-\d{2},(\d+),.*$/,'g'),'$1');
+            if (!dir_file_count_list.includes(bldate+'/'+blcount)){
+                dir_file_count_list.push(bldate+'/'+blcount);
+            }
+        }
+        dir_file_count_list.sort().reverse();
+        result_t.push([key,category_list[key],dir_file_count_list]);
+    }
+    return result_t;
+}
+
+function statistics_old_code_b(){
+    if (is_local_b(false)==false){return [];}
+    var fname=klwebphp_path_b('PythonTools/data/code_search/old_code_file_data.txt');
+    if (fname==false){return [];}
+    var list_t=read_txt_file_b(fname).match(/^.*?全部代码文件个数：\d+；行数：\d+；/mg) || [];
+    var result_t=[];
+    
+    for (let item of list_t){
+        var bldate=item.trim().split(' ')[0];
+        var blcount=item.replace(new RegExp(/^.*?全部代码文件个数：(\d+)；.*$/,'g'),'$1');
+        var bllines=item.replace(new RegExp(/^.*?行数：(\d+)；.*$/,'g'),'$1');
+        if (!result_t.includes(bldate+'/'+blcount+'/'+bllines)){
+            result_t.push(bldate+'/'+blcount+'/'+bllines);
+        }
+    }
+    result_t.sort().reverse();
+    return result_t;
+}
+
+function statistics_data_type_b(data_type){
+    var idlist=[];
+    switch (data_type){
+        case 'enwords':
+            idlist=[
+            ['enwords_statistics','单词累计',0,'/'],
+            ['enwords_recent_statistics','最近记忆单词',0,'/'],
+            ['enwords_plan_per_day','每日须记忆单词',3,'/'],   //小数点3位 - 保留注释
+            ['enwords_way_station_statistics','Way Station 生词',0,'/'],
+            ['enwords_days_last_row_minus_one','-1所需的额外记忆单词量',0,'/'],
+            ['enwords_recent_bookmark_position','最近记忆单词bookmark位置',0,'/'],
+            ['enwords_non_ensentence','无例句单词',0,'/'],
+            ['cached_records_count_enbook','已缓存的selenium英语单词文章链接',0,'/'],
+            ['all_new_words_statistics','全部新单词',0,'/'],
+            ['enwords_sentence_rows','例句行数',0,'/'],
+            ['en_article_statistics','文章数',0,': '],
+            ['klwiki_en2_rows','klwiki_en2 行数',0,'/'],
+            ['enwords_articles_without_eword','无eword的KLWiki文章数',0,'/'],            
+            ['enwords_articles_avg_new_words','KLWiki文章平均生词数',0,'/'],            
+            ];
+            break;
+        case 'miscellaneous':
+            idlist=[
+            ['readlater_statistics','ReadLater 信息条数',0,': '],
+            ['booklist_statistics','txt书籍数',0,'/'],
+            ['offline_file_browser_statistics','移动硬盘文件数',0,' / ',1],    //末尾是列号 - 保留注释
+            ['offline_file_browser_statistics','移动硬盘文件大小(GB)',0,' / ',2],
+            ['offline_file_browser_statistics','移动硬盘文件时长(小时)',0,' / ',3],
+            ['gpx_file_statistics','GPX文件数',0,'/',2],
+            ['local_storage_used_length','local storage 使用量(KiB)',2,':'],
+            ];
+            
+            var old_code_list=statistics_old_code_b();
+            if (old_code_list.length>0){
+                idlist.push([old_code_list,'全部代码文件个数',0,'/',1,'old_code_count']);
+                idlist.push([old_code_list,'全部代码行数',0,'/',2,'old_code_lines']);
+            }
+            
+            var dir_file_count_list=statistics_dir_file_count_b();
+            for (let item of dir_file_count_list){
+                if (item[2].length>0){
+                    idlist.push([item[2],item[0]+'文件数',0,'/',1,item[1]]);
+                }
+            }
+            break;
+    }
+    return idlist;
+}
+
+function statistics_idlist_format_b(idlist){
+    var result_t=[];
+    for (let item of idlist){
+        bllen=item.length;
+        if (bllen==0){continue;}
+        var is_arr=Array.isArray(item[0]);
+        
+        if (bllen<2){
+            if (is_arr){
+                item.push('unnamed');
+            }
+            else {
+                item.push(item[0]);
+            }
+        }
+        if (bllen<3){
+            item.push(0);
+        }
+        if (bllen<4){
+            item.push('/');
+        }
+        if (bllen<5){
+            item.push(1);
+        }
+        if (bllen<6){
+            if (is_arr){
+                item.push('unnamed');;
+            }
+            else {
+                item.push(item[0]);
+            }
+        }
+        result_t.push(item);
+    }
+    return result_t;
+}
+
+function statistics_div_idname_b(item,csxl){
+    return 'div_progress_'+item[5]+'_'+csxl;
+}
+
+function statistics_draw_b(data_type,idname='divhtml',show_table=false,date_min=false,date_max=false,max_lines=false,cols=2,section_w='810px',table_w='125%',div_h='500px',add_today=false){
+    function sub_statistics_draw_b_oneline(arow){
+        var csname=arow[0];
+        var cscaption=arow[1];
+        var fraction_len=arow[2];
+        var delimiter=arow[3];
+        var value_col=(arow.length>=5?arow[4]:1);
+        
+        var result_t=[];
+        var flot_list=[];
+        [result_t,flot_list]=date_rows_tr_generate_b(csname,100,[15,0,0.5],fraction_len,delimiter,value_col,date_min,date_max,max_lines,add_today).slice(1,3);
+
+        var bljg='';
+        if (result_t.length>0){
+            bljg='<table border=1 cellspacing=0 cellpadding=0 style="margin:1rem 0rem;"><tr><th  style="padding:0.2rem;" nowrap>日期</th><th  style="padding:0.2rem;" nowrap>'+cscaption+'</th><th  style="padding:0.2rem;" nowrap>Δ</th></tr>'+result_t.join('\n')+'</table>';
+        }
+        return [bljg,[cscaption].concat(flot_list)];
+    }
+    //----------------
+    var t0=performance.now();    
+    var bljg='';
+    var str_t;
+    var oneline_list;
+    var lines_list=[];
+    var ismobile=ismobile_b();
+    
+    var odiv=document.getElementById(idname);
+    var orect=odiv.getBoundingClientRect();
+    var blwidth=(ismobile?orect.width:orect.width/cols);
+    var blheight=blwidth*2/3;
+    
+    if (Array.isArray(data_type)){
+        var idlist=data_type;
+    }
+    else {
+        var idlist=statistics_data_type_b(data_type);
+    }
+    idlist=statistics_idlist_format_b(idlist);
+    
+    if (show_table){
+        for (let blxl=0;blxl<idlist.length;blxl++){
+            var item=idlist[blxl];
+            [str_t,oneline_list]=sub_statistics_draw_b_oneline(item);
+            if (ismobile){
+                bljg=bljg+'<section style="width:'+section_w+';overflow:auto;">';
+            }
+            bljg=bljg+'<table width='+table_w+'><tr><td valign=top width=1 height=50%>'+str_t+'</td><td valign=top width=99%><div style="width:100%;height:'+div_h+';" id="'+statistics_div_idname_b(item,blxl)+'"></div></td></tr></table>';//table 的 width 可以大于 100% - 保留注释
+            if (ismobile){
+                bljg=bljg+'</section>';
+            }
+            lines_list.push(oneline_list);
+        }
+    }
+    else {
+        for (let blxl=0;blxl<idlist.length;blxl++){
+            var item=idlist[blxl];
+            [str_t,oneline_list]=sub_statistics_draw_b_oneline(item);
+            bljg=bljg+'<div style="position:relative;float:left; width:'+blwidth+'px;height:'+blheight+'px;" id="'+statistics_div_idname_b(item,blxl)+'"></div>';
+            lines_list.push(oneline_list);
+        }
+    }
+    
+    odiv.innerHTML=bljg;
+    for (let blxl=0;blxl<idlist.length;blxl++){
+        var item=idlist[blxl];
+        flot_lines_b([lines_list[blxl]],statistics_div_idname_b(item,blxl),'nw',true,'','d','',item[2],[1, 'day'],7);
+    }
+    console.log('statistics_draw_b() 费时：'+(performance.now() - t0) + ' milliseconds');    
+}

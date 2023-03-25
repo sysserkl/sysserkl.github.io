@@ -1,0 +1,75 @@
+var digest_global=`
+*a cappella
+*ageless
+*anticlockwise
+*aviator
+*barrack
+*beaker
+*biplane
+*bootlace
+*braille
+*breastbone
+*busyness
+*candlelit
+*deathlike
+*deceiver
+*drinkable
+*earphone
+*Egyptology
+*Ezra
+*facedown
+*faultless
+*fountain pen
+*Francesca
+*gatepost
+*gearbox
+*gramophone
+*Gypsy
+*handbook
+*haversack
+*herbal
+*Hiroshima
+*Isaiah
+*ladybird
+*landmass
+*logician
+*lorry
+*merchant
+*Michelangelo
+*microsecond
+*morphia
+*morphinic
+*motorbike
+*mythical
+*Nicholson
+*night table
+*odometer
+*Ottawa
+*permanence
+*pollen
+*Punjab
+*quicksand
+*rainstorm
+*roofless
+*sandstorm
+*shortwave
+*Sri Lanka
+*starless
+*Sudanese
+*Suffolk
+*sundial
+*tango
+*temptress
+*tiredness
+*Tunis
+*undercarriage
+*wanderer
+*waterless
+*whisky
+*Williamson
+*windstorm
+*clavicle
+*ostrich
+*Marseillaise
+*hearing aid
+`.trim().split('\n');

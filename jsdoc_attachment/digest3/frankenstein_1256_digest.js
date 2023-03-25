@@ -1,0 +1,22 @@
+var digest_global=`
+*adventurer
+*antelope
+*Caroline
+*experimentalist
+*guiltless
+*inquirer
+*playmate
+*southwards
+*interchange
+*knightly
+*meditate
+*groundwork
+*insatiate
+*revoke
+*invader
+*southwesterly
+*Milan
+*Rotterdam
+*stagecoach
+*Dante
+`.trim().split('\n');

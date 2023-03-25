@@ -1,0 +1,15 @@
+var menulist=[
+"== I. The Coming of the Storm ==",
+"== II. After the Storm. Norton. A Trip to Town. ==",
+"== III. The Coming of the Mist. ==",
+"== IV. The Storage Area. Problems with the Generators. What Happened to the Bag-Boy. ==",
+"== V. An Argument with Norton. A Discussion Near the Beer Cooler. Verification. ==",
+"== VI. Further Discussion. Mrs. Carmody. Fortifications. What Happened to the Flat-Earth Society. ==",
+"== VII. The First Night. ==",
+"== VIII. What Happened to the Soldiers. With Amanda. A Conversation with Dan Miller. ==",
+"== IX. The Expedition to the Pharmacy. ==",
+"== X. The Spell of Mrs. Carmody. The Second Night in the Market. The Final Confrontation. ==",
+"== XI. The End. ==",
+"= Continue Reading… =",
+"== About the Author ==",
+];

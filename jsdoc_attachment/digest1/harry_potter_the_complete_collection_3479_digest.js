@@ -1,0 +1,60 @@
+var digest_global=`
+*Albanian
+*alchemist
+*Angelina
+*babysit
+*barman
+*beetroot
+*biographer
+*boarhound
+*broomstick
+*cornflakes
+*doorbell
+*double-decker
+*doughnut
+*dustbin
+*eggnog
+*firecracker
+*flightless
+*giantess
+*greyish
+*headmistress
+*herbology
+*hosepipe
+*hourglass
+*Janus
+*mum
+*outta
+*Paddington
+*postage
+*puffer
+*redheaded
+*rucksack
+*schoolbag
+*secondary school
+*shoelace
+*skywards
+*sportsmanship
+*strawberry
+*teabag
+*tea cosy
+*tea towel
+*telephone box
+*the coast is clear
+*toffee
+*tortoise
+*unluckily
+*washing line
+*weakly
+*pigsty
+*sugar-free
+*mulish
+*handpick
+*stepladder
+*merman
+*sick leave
+*Bradley
+*Lancelot
+*rechristen
+*wolfhound
+`.trim().split('\n');

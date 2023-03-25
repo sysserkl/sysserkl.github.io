@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>✝ ️Bible (KJV&amp;ChiUns)</title>
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date','eng','enbook','en_de_str'],[],['words/enwords_data.js,defer','bible_web_sites_data.js'],['bible_code.js']);
+</script>
+<link rel="manifest" href="bible.webmanifest" />
+<script>
+var chapter_global=[];
+var current_search_no_global=new Set();
+var use_kjv_cn_global=[true,true];
+var kjv=[];
+var cnbible_global=[];
+var enbible_old_global=[];
+var cnbible_old_global=[];
+var fav_desc_sort_global=false;
+var en_words_temp_important_global=[]; 
+</script>
+<script>
+var scheme_global={};
+scheme_generation_b();
+css_root_style_b('18','9.5',['base','menu'],[],1);
+</script>
+<style>
+table.table_zebra tr:nth-child(even) {background-color: #efefef;}
+table.table_zebra tr:hover {background-color: #E9EEF2;}
+table#table_fav tr.tr_head{background-color: #efefef;}
+table#table_fav tr:hover {background-color: #E9EEF2;}
+td p {font-size:inherit;}
+span.span_number_bible{cursor:pointer;padding:0 0.1rem;border:0.1rem dashed grey;border-radius:1rem;}
+#div_recent_search a{font-size:0.9rem;}
+</style>
+<script>
+if (ismobile_b(true)=='mobile'){
+    document.write('\n<style>\ntd {font-size:1.5rem;}\n</style>\n');
+}
+</script>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+</head>
+<body>
+<a name="top"></a>
+<h2 id="h2_title" style="margin:0rem;font-size:1.8rem;"><span id="span_title" style="cursor:pointer;" onclick="rand_chapter_list_bible();" title="随机读取">️Bible</span></h2>
+<div id="div_buttons" style="margin:0.5rem;">
+<input type="text" id="input_bible_search" placeholder="圣经搜索" onkeyup="if (event.key=='Enter'){search_bible();}" />
+<div id="div_recent_search" style="margin-top:0.3rem;line-height:180%;"></div>
+<p style="line-height:2.8rem;">
+<select id="select_chapter" style="max-width:15rem;height:2.5rem;" onchange="document.getElementById('select_chapter_cn').value=this.value;minor_options_bible(this.value);"></select>
+<select id="select_chapter_cn" style="max-width:10rem;height:2.5rem;" onchange="document.getElementById('select_chapter').value=this.value; minor_options_bible(this.value);"></select>
+<select id="select_sub" style="max-width:4rem;height:2.5rem;" onchange="chapter_one_bible(this.value); document.getElementById('select_end_sub').value=-1;"></select>
+<select id="select_end_sub" style="max-width:4rem;height:2.5rem;" onchange="chapter_one_bible(document.getElementById('select_sub').value,this.value);"></select>
+</p>
+</div>
+<div id="divhtml"><h2>Loading...</h2><h3>数据载入中，请稍后...</h3></div>
+<div id="div_status" style="font-size:0.8rem;margin:0.5rem;">
+<span id="span_status" style="cursor:pointer;" ondblclick="this.innerHTML='';"></span>
+<select id="select_outside_links" onchange="web_site_open_bible(this.value);"></select>
+</div>
+<script>
+document.getElementById('span_status').style.color=scheme_global['memo'];
+
+pwa_register_b('bible_service_worker.js','Bible','span_status','html');
+
+//-------------------------
+input_with_x_b('input_bible_search',25);
+load_data_bible();
+track_source_b('bible',false);
+menu_bible();
+recent_search_bible();
+fav_init_bible();
+</script>
+</body>
+</html>

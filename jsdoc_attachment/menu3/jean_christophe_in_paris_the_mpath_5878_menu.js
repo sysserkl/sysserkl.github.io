@@ -1,0 +1,17 @@
+var menulist=[
+"== JEAN-CHRISTOPHE ==",
+"== CONTENTS ==",
+"==== THE MARKET-PLACE ====",
+"===== ANTOINETTE =====",
+"===== THE HOUSE =====",
+"== THE MARKET-PLACE ==",
+"== I ==",
+"== II ==",
+"== III ==",
+"== ANTOINETTE ==",
+"== I ==",
+"== THE HOUSE ==",
+"== I ==",
+"== II ==",
+"== III ==",
+];

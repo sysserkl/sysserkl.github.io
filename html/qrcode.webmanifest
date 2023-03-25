@@ -1,0 +1,30 @@
+{
+  "background_color": "transparent",
+  "description": "QR Code",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "qrcode_ico/qrcode512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },    
+    {
+      "src": "qrcode_ico/qrcode256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },  
+    {
+      "src": "qrcode_ico/qrcode128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "qrcode_ico/qrcode64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }
+  ],
+  "name": "qr code",
+  "short_name": "QRCode",
+  "start_url": "qrcode.htm"
+}

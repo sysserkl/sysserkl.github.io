@@ -1,0 +1,30 @@
+{
+  "background_color": "transparent",
+  "description": "Screen Test",
+  "display": "fullscreen",
+  "icons": [
+    {
+        "src": "screen_test_ico/screen_test512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    },
+    {
+        "src": "screen_test_ico/screen_test256.png",
+        "sizes": "256x256",
+        "type": "image/png"
+    },
+    {
+        "src": "screen_test_ico/screen_test128.png",
+        "sizes": "128x128",
+        "type": "image/png"
+    },
+    {
+        "src": "screen_test_ico/screen_test64.png",
+        "sizes": "64x64",
+        "type": "image/png"
+    }
+  ],
+  "name": "Screen Test",
+  "short_name": "KSTest",
+  "start_url": "screen_test.htm"
+}

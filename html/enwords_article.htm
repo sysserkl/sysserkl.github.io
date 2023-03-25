@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>文章和单词</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date','eng','enbook','enwc','books','wiki','en_de_str'],[],['words/enwords_data.js','words/enwords_sentence_data.js'],['enwords_ico/enwords512.png']);
+</script>
+<script src="enwords_article_code.js"></script>
+<script>
+import_one_book_b('klwiki_en2.js',1);
+</script>
+<script>
+load_data_enarticle();
+en_word_temp_get_b();
+</script>
+<script>
+var scheme_global={};
+scheme_generation_b();
+css_root_style_b('17.2','13',['base','menu'],[],1);
+en_style_b(false);
+</script>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+</head>
+<body>
+<script>
+mobile_style_enwc_b();
+</script>
+<a name=top></a>
+<h2 style="margin-top:0px;font-size:1.2rem;">
+<span id="span_title">文章和单词</span> 
+</h2>
+<div id='div_show_hide' style="display:block;margin:0rem 0.5rem;">
+<p>
+<input type="number" id="input_month" style="width:3rem;" max=12 min=1>月
+<input type="number" id="input_day" style="width:3rem;" max=31 min=1>日
+<span class="aclick" onclick="article_words_list_enwc_b();">Search</span> 
+</p>
+<a name=content></a>
+<div id="div_recent_search" style="font-size:0.85rem;margin:0.5rem 0rem;line-height:1.8rem;"></div>
+</div>
+<div id="divhtml"></div>
+<script>
+init_enarticle();
+</script>
+<a name=footer></a>
+</body>
+</html>

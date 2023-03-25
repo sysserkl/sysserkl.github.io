@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ensentence</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date','wiki','eng','enwc','enbook'],[],['words/enwords_data.js','words/enwords_sentence_data.js','words/enwords_count_sentence_data.js']);
+</script>
+<script src="ensentence_code.js"></script>
+<script>
+//history
+//0.0.1-20220825
+//-------------------------------------------
+en_sentence_count_global.sort(function (a,b){return a[0]>b[0];});
+en_word_temp_get_b();
+
+var scheme_global={};
+scheme_generation_b();
+css_root_style_b('17.2','13',['base','menu'],[],1);
+en_style_b(true);
+</script>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+</head>
+<body>
+<script>
+mobile_style_enwc_b();
+</script>
+<a name=top></a>
+<h2 style="margin-top:0px;font-size:1.2rem;"><span id="span_title">ensentence</span></h2>
+<p style="margin:0.5rem;">
+<input type="number" id="input_month" style="width:3rem;" max=12 min=1>月
+<input type="number" id="input_day" style="width:3rem;" max=31 min=1>日
+</p>
+<a name=content></a>
+<div id="divhtml"></div>
+<script>
+init_ensentence();
+</script>
+<a name=footer></a>
+</body>
+</html>
