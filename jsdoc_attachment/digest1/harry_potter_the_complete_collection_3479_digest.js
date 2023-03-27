@@ -57,4 +57,5 @@ var digest_global=`
 *Lancelot
 *rechristen
 *wolfhound
+*Higgs
 `.trim().split('\n');

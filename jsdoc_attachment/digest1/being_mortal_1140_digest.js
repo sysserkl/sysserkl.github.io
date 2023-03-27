@@ -11,4 +11,5 @@ var digest_global=`
 *Kinshasa
 *Lesotho
 *Lagos
+*Rutherford
 `.trim().split('\n');
