@@ -4,4 +4,5 @@ var digest_global=`
 *yesteryear
 *purine
 *pyrimidine
+*nuclei
 `.trim().split('\n');

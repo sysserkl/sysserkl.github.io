@@ -4,4 +4,5 @@ var digest_global=`
 *state visit
 *spaceman
 *polymath
+*nucleonics
 `.trim().split('\n');

@@ -6,4 +6,5 @@ var digest_global=`
 *thermodynamic
 *scornfully
 *tungsten
+*pion
 `.trim().split('\n');
