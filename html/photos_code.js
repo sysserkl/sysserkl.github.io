@@ -889,10 +889,13 @@ function calendar_css_klphotos(){
 
 function data_load_klphotos(){
     //photo_info_global;
-    albumlist_global=albumlist_pb_global.concat(albumlist_kl_global);
+    albumlist_global=albumlist_kl_global.concat(albumlist_pb_global);
     albumlist_pb_global=null;
     albumlist_kl_global=null;
     album_current_global=[];
+    if (albumlist_global.length>0){
+        album_current_global=albumlist_global[0];
+    }
     
     var cskeys=href_split_b(location.href);
     if (cskeys.length>0){
@@ -914,6 +917,7 @@ function data_load_klphotos(){
 function data_set_klphotos(){
     var blfilter_str=album_current_global[4];
     if (album_current_global[3]){ //元素为数组型 - 保留注释
+        blfilter_str=filter_str_img_b(blfilter_str);
         if (blfilter_str!==''){
             var list_t=[];
             for (let one_array of photo_source_global){
@@ -938,20 +942,7 @@ function data_set_klphotos(){
     }
     else {
         //元素为字符串型 - 保留注释
-        if (blfilter_str!==''){
-            var list_t=[];
-            for (let item of photo_source_global){
-                if (item.includes(' /// ')){
-                    if (item.match(blfilter_str)){
-                        list_t.push(item);
-                    }
-                }
-                else {
-                    list_t.push(item);
-                }
-            }
-            photo_source_global=list_t;
-        }
+        photo_source_global=filter_array_img_b(photo_source_global,blfilter_str)
         photo_source_global.sort(function(a,b){return zh_sort_b(a,b,false,0);});
     }
 }

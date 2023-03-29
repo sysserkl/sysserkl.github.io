@@ -5,4 +5,5 @@ var digest_global=`
 *Maurice
 *teleprompter
 *Yugoslavia
+*photocopier
 `.trim().split('\n');

@@ -181,3 +181,29 @@ function img2base64_b(oimgs,alert_info_id=''){
     var t0 = performance.now();
     sub_img2base64_b_one_img();
 }
+
+function filter_str_img_b(csstr){
+    if (csstr=='BIGPHOTO'){
+        csstr='///\\s([7-9][0-9]{2,}|\\d{4,})\\s([6-9][0-9]{2}|[1-9][0-9]{3,})\\s[0-2]\\s?$';
+    }
+    return csstr;
+}
+
+function filter_array_img_b(csarray,filter_str){
+    filter_str=filter_str_img_b(filter_str);     
+    if (filter_str!==''){
+        var list_t=[];
+        for (let item of csarray){
+            if (item.includes(' /// ')){
+                if (item.match(filter_str)){
+                    list_t.push(item);
+                }
+            }
+            else {
+                list_t.push(item);
+            }
+        }
+        return list_t;
+    }
+    return csarray;
+}

@@ -46,6 +46,7 @@ var common_apps_pb_global=[
 ["{{selenium_news}}/html/poker24.htm","24","🃏","5","game"],
 ["{{selenium_news}}/html/progress.htm","progress","📈","2",""],
 ["{{selenium_news}}/html/proofreader.htm","proofreader","✒","2"],
+["{{selenium_news}}html/puzzle.htm","puzzle","puzzle512.png","2","game"],
 ["{{selenium_news}}/html/qrcode.htm","qrcode","qrcode512.png","1"],
 ["{{selenium_news}}/html/qrimg.htm","qrimg","qrimg512.png","1"],
 ["{{selenium_news}}/html/qs_university.htm","QS University","🏛","5","database|education"],

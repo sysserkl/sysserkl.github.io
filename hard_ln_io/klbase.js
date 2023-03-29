@@ -245,49 +245,55 @@ function klbase_addons_import_js_b(klbase_list=[],module_list=[],jsdata_list=[],
     var module_path=sele_path+'/module/';
     var jsdata_path=sele_path+'/jsdata/';
     
-    var result_t=[];
+    var result_t=[[],[],[],[]];
+    if (import_jquery){
+        result_t[0].push(['js',module_path+'jquery.js','']);  //jquery 首先载入 - 保留注释
+    }   
+
     var defer_str;
     for (let item of klbase_list){
         [item,defer_str]=js_file_import_defer_b(item);
-        result_t.push(['js',klbase_path+'klbase_'+item+'.js',defer_str]);
+        result_t[0].push(['js',klbase_path+'klbase_'+item+'.js',defer_str]);
     }
+
     for (let item of module_list){
         [item,defer_str]=js_file_import_defer_b(item);
         if (item.slice(-3,)=='.js'){
-            result_t.push(['js',module_path+item,defer_str]);
+            result_t[1].push(['js',module_path+item,defer_str]);
         }
         else if (item.slice(-4,)=='.css'){
-            result_t.push(['css',module_path+item,'']);
+            result_t[1].push(['css',module_path+item,'']);
         }        
     }
+
     for (let item of jsdata_list){
         [item,defer_str]=js_file_import_defer_b(item);
         if (item.slice(-3,)=='.js'){
-            result_t.push(['js',jsdata_path+item,defer_str]);
+            result_t[2].push(['js',jsdata_path+item,defer_str]);
         }    
     }
-    
+
     var same_dir=location_href_b();
     for (let item of same_dir_file_list){
         [item,defer_str]=js_file_import_defer_b(item);
         if (item.slice(-3,)=='.js'){
-            result_t.push(['js',same_dir+item,defer_str]);
+            result_t[3].push(['js',same_dir+item,defer_str]);
         }
         else if (item.slice(-4,)=='.css'){
-            result_t.push(['css',same_dir+item,'']);
+            result_t[3].push(['css',same_dir+item,'']);
         }
         else if (item.slice(-4,)=='.png'){
-            result_t.push(['png',same_dir+item,'']);
+            result_t[3].push(['png',same_dir+item,'']);
         }        
     }
-
-    if (import_jquery){
-        result_t=[['js',module_path+'jquery.js','']].concat(result_t);  //jquery 首先载入 - 保留注释
-    }
+    
     if (do_write){
-        write_js_css_b(result_t);
+        for (let item of result_t){
+            if (item.length==0){continue;}
+            write_js_css_b(item);
+        }
     }
-    return result_t;
+    return result_t[0].concat(result_t[1]).concat(result_t[2]).concat(result_t[3]);
 }
 
 function write_js_css_b(cslist,do_write=true){
