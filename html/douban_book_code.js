@@ -112,8 +112,6 @@ function menu_dbb(){
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','16rem','1rem','1rem','60rem')+klmenu_b(klmenu_statistics,'🧮','16rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','20rem','1rem','1rem','60rem'),'','0rem')+' ');
     klmenu_check_b('span_reg_dbb',true);        
     klmenu_check_b('span_txtbook_icon_dbb',true);        
-    klmenu_check_b('span_bought_show_dbb',true);            
-    klmenu_check_b('span_txtbook_ignore_dbb',true);                
 }
 
 function standalone_search_dbb(){

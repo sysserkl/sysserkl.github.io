@@ -1891,7 +1891,7 @@ function no_lines_get_kltxt_b(csno,cslines,single){
     return [csno,cslines,aname_num,bllength];
 }
 
-function getlines_one_part_kltxt_b(csmin,csmax,bllength,csgrey,csaname,is_single=false,cshideno=false,cover_img='',addhr=false,is_group_file=false){
+function getlines_one_part_kltxt_b(csmin,csmax,bllength,csgrey,csaname,is_single=false,cshideno=false,cover_img='',addhr=false,is_group_file=''){
     var bljg=cover_img;
     
     if (!is_single || !csgrey){
@@ -2168,15 +2168,34 @@ function img_load_check_kltxt_b(){
             return '';
         }       
         
-        var group_no=file_path_name_b(blsrc)[1].slice(-2,);
-        if (group_no==''){
+        var group_no=new Set();
+        var bname=file_path_name_b(blsrc)[1];
+        if (is_group_file.includes('G')){
+            group_no.add(bname.slice(-2,));
+        }
+        if (is_group_file.includes('T')){
+            group_no.add(bname.substring(0,3));
+        }
+        if (is_group_file.includes('F')){
+            group_no.add(bname.substring(0,4));
+        }
+                        
+        if (group_no.size==0){
             one_img.classList.remove('img_raw_kltxt');
             return '';
         }
         
-        if (img_group_ignore_kltxt_global.has(group_no)){
+        var can_ignore=true;
+        for (let one_no of group_no){
+            if (!img_group_ignore_kltxt_global.has(one_no)){
+                can_ignore=false;
+                break;
+            }
+        }
+        if (can_ignore){
             one_img.classList.remove('img_raw_kltxt');
-            return '';        
+            console.log('发现忽略',group_no);
+            return '';                
         }
         
         if (return_group){
@@ -2184,6 +2203,15 @@ function img_load_check_kltxt_b(){
         }
         else {
             return blsrc;       
+        }
+    }
+
+    function sub_img_load_check_kltxt_b_convert_info(fname,one_img,key_type){
+        var base64_value=img_key_2_base64_kltxt_b(fname,is_group_file,key_type);
+        if (base64_value!==''){
+            console.log('转换',fname,'为 base64');
+            one_img.src=base64_value;
+            one_img.classList.remove('img_raw_kltxt');
         }
     }
     
@@ -2196,11 +2224,15 @@ function img_load_check_kltxt_b(){
             var finfo=file_path_name_b(blsrc);
             var fname=finfo[3];
 
-            var base64_value=img_key_2_base64_kltxt_b(fname,is_group_file,finfo[1].slice(-2,));
-            if (base64_value!==''){
-                console.log('转换',fname,'为 base64');
-                one_img.src=base64_value;
-                one_img.classList.remove('img_raw_kltxt');
+            if (is_group_file.includes('G')){
+                sub_img_load_check_kltxt_b_convert_info(fname,one_img,finfo[1].slice(-2,));
+            }
+            if (is_group_file.includes('T')){
+                sub_img_load_check_kltxt_b_convert_info(fname,one_img,finfo[1].substring(0,3));
+                group_no.add(bname.substring(0,3));
+            }
+            if (is_group_file.includes('F')){
+                sub_img_load_check_kltxt_b_convert_info(fname,one_img,finfo[1].substring(0,4));
             }
         }
 
@@ -2211,7 +2243,7 @@ function img_load_check_kltxt_b(){
     }
 
     function sub_img_load_check_kltxt_b_group(){
-        if (!is_group_file){
+        if (is_group_file==''){
             return new Set(['']);
         }
         
@@ -2220,7 +2252,7 @@ function img_load_check_kltxt_b(){
         for (let one_img of oimgs){
             var group_no=sub_img_load_check_kltxt_b_status(one_img,true);
             if (group_no!==''){
-                result_t.add(group_no);
+                result_t=array_union_b(result_t,group_no,true);
             }
         }
         
@@ -2231,6 +2263,7 @@ function img_load_check_kltxt_b(){
     function sub_img_load_check_kltxt_b_import_js(is_loaded=true){
         if (!is_loaded){
             img_group_ignore_kltxt_global.add(group_t[blxl-1]);
+            console.log('添加忽略',group_t[blxl-1]);
         }
         if (blxl>=bllen){
             sub_img_load_check_kltxt_b_wait();
@@ -2244,8 +2277,9 @@ function img_load_check_kltxt_b(){
         }
         
         if (sub_img_load_check_kltxt_b_wait()==0){
-            console.log('应加载总数：',group_t.length,'；已加载：',group_t.slice(0,blxl),'；未继续加载：',blxl,group_t.slice(blxl,));
+            console.log('应加载总数：',group_t.length,'；已加载：',group_t.slice(0,blxl),'；未继续加载：',group_t.slice(blxl,));
             //未继续加载部分 不能合并到 img_group_ignore_kltxt_global 中，可能存在相同编号，但尺寸较小或较大的图片 - 保留注释
+            console.log('img_load_check_kltxt_b() 费时：'+(performance.now() - t0) + ' milliseconds');
             return;
         }
         
@@ -2261,7 +2295,13 @@ function img_load_check_kltxt_b(){
     //----------------------------
     var oimgs=document.querySelectorAll('img.img_raw_kltxt');
     if (oimgs.length==0){return;}
-
+    
+    var t0 = performance.now();
+    
+    var blxl=0;
+    var bllen=oimgs.length;
+    
+    
     if (typeof img_group_ignore_kltxt_global == 'undefined'){
         img_group_ignore_kltxt_global=new Set();
     }
@@ -2269,7 +2309,7 @@ function img_load_check_kltxt_b(){
     var is_group_file=is_group_file_kltxt_b();
     var group_t=Array.from(sub_img_load_check_kltxt_b_group());
     group_t.sort();
-
+    console.log(group_t);
     var bllen=group_t.length;
     var blxl=0;
     var imgpath=img_path_kltxt_b();
@@ -2278,10 +2318,12 @@ function img_load_check_kltxt_b(){
 }
 
 function is_group_file_kltxt_b(){
-    var is_group_file=false;
+    var is_group_file='';
     if (csbookno_global>=0 && csbooklist_sub_global_b.length>0){
-        if (csbooklist_sub_global_b[csbookno_global][4].includes('G')){
-            is_group_file=true;
+        for (let item of ['G','F','T']){
+            if (csbooklist_sub_global_b[csbookno_global][4].includes(item)){
+                is_group_file=is_group_file+item;
+            }
         }
     }
     return is_group_file;
@@ -2310,27 +2352,43 @@ function img_key_2_base64_kltxt_b(img_name,is_group_file,group_no=false){
 
     var base64_value=sub_img_key_2_base64_kltxt_b_one_arr(mini_img_list_global);
 
-    if (is_group_file && base64_value==''){
+    var group_no_list=[];
+    if (is_group_file!=='' && base64_value==''){
         if (group_no===false){
-            var group_no=file_path_name_b(img_name)[1].slice(-2,);
+            var bname=file_path_name_b(img_name)[1];
+            if (is_group_file.includes('G')){
+                group_no_list.push(bname.slice(-2,));
+            }
+            else if (is_group_file.includes('T')){
+                group_no_list.push(bname.substring(0,3));
+            }
+            else if (is_group_file.includes('F')){
+                group_no_list.push(bname.substring(0,4));
+            }
+        }
+        else {
+            group_no_list=[group_no];
         }
     
-        if (eval('typeof mini_img_list'+group_no+'_global') == 'undefined'){return '';}
-
-        if (group_no!==''){
-            try {
-                var csarray=eval('mini_img_list'+group_no+'_global');
-                base64_value=sub_img_key_2_base64_kltxt_b_one_arr(csarray);
-            }
-            catch (error){
-                console.log(error);
+        for (let group_no of group_no_list){
+            if (eval('typeof mini_img_list'+group_no+'_global') !== 'undefined'){
+                if (group_no!==''){
+                    try {
+                        var csarray=eval('mini_img_list'+group_no+'_global');
+                        base64_value=sub_img_key_2_base64_kltxt_b_one_arr(csarray);
+                        if (base64_value!==''){break;}
+                    }
+                    catch (error){
+                        console.log(error);
+                    }
+                }
             }
         }
     }
     return base64_value;
 }
 
-function format_lines_kltxt_b(cslist,csstyle='',csaname=-1,is_group_file=false){
+function format_lines_kltxt_b(cslist,csstyle='',csaname=-1,is_group_file=''){
     //cslist 的每个元素为数组，包含2个元素：0为字符串，1为序号
     function sub_format_lines_kltxt_b_bible(blstr){
         if (blstr.includes('<')){

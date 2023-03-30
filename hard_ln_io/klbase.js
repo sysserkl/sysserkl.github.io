@@ -2730,9 +2730,10 @@ function load_fn_b(fn_name,csmax,cswait,run_fn_onsuccess){
 function load_var_b(var_name,csmax,cswait,run_fn){
     function sub_load_var_b_wait(){
         blxl=blxl+1;
+        
         if (eval('typeof '+var_name) == 'object'){
             console.log('发现 '+var_name+' ，扫描次数：'+blxl);       
-            run_fn(true);            
+            run_fn(true);     
         }
         else {
             if (blxl>=csmax){
