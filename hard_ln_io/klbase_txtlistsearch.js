@@ -1414,7 +1414,8 @@ function bookmarks_get_kltxt_b(current_book_today_bookmark_only_one=false,return
         bljg=bljg+'<span class="aclick" onclick="bookmarks_import_kltxt_b(\''+cslsname+'\');">更新</span> ';
         bljg=bljg+'<span class="aclick" onclick="bookmarks_get_kltxt_b(false,false,\''+cslsname+'\');">最新书签</span> ';
         bljg=bljg+'<span class="aclick" onclick="bookmarks_separate_kltxt_b(\''+textarea_name+'\');">分离当前书签</span> ';       
-        bljg=bljg+'<span class="aclick" onclick="bookmarks_textarea_flot_kltxt_b(\''+textarea_name+'\');">当前书签阅读图形</span> ';               
+        bljg=bljg+'<span class="aclick" onclick="bookmarks_textarea_flot_kltxt_b(\''+textarea_name+'\');">当前书签阅读图形</span> ';       
+        bljg=bljg+'<select id="select_flot_legend_position_kltxt"><option>nw</option><option>ne</option><option>sw</option><option>se</option></select> '        
         bljg=bljg+textarea_buttons_b(textarea_name,'全选,清空,复制,发送到临时记事本,发送地址',bltype)+' ';
     }
     else {
@@ -1646,7 +1647,7 @@ function bookmarks_statistics_kltxt_b(bookmark_list,reading_lines,current_book_p
         var flot_list1=[bookname_t+'阅读'+unit_t+'数'].concat(reading_lines);        
         var flot_list2=[bookname_t+'已读比例'].concat(current_book_percent);
         
-        flot_two_lines_two_yaxis_b([flot_list1,flot_list2],'div_flot_bookmark_line',unit_t,'%','nw',true,'d',0,0,'',[],-1,false,false,false,100);
+        flot_two_lines_two_yaxis_b([flot_list1,flot_list2],'div_flot_bookmark_line',unit_t,'%',document.getElementById('select_flot_legend_position_kltxt').value,true,'d',0,0,'',[],-1,false,false,false,100);
         var odiv=document.getElementById('div_bookmark_statistics');
         odiv.innerHTML=blstatsitics;
         
@@ -1792,7 +1793,7 @@ function bookmarks_all_book_statistics_flot_kltxt_b(show_sum,id_set,cslsname,csl
 
     var odiv=document.getElementById('div_flot_bookmark_line');
     if (odiv){
-        flot_lines_b(cslist,'div_flot_bookmark_line','nw',true,'','d','行',0);
+        flot_lines_b(cslist,'div_flot_bookmark_line',document.getElementById('select_flot_legend_position_kltxt').value,true,true,'','d','行',0);
         odiv.scrollIntoView();
     }
     var diy_name=bookmarks_diy_name_kltxt_b();
@@ -2168,16 +2169,26 @@ function img_load_check_kltxt_b(){
             return '';
         }       
         
-        var group_no=new Set();
-        var bname=file_path_name_b(blsrc)[1];
-        if (is_group_file.includes('G')){
-            group_no.add(bname.slice(-2,));
+        var group_no=new Set();        
+        var finfo=file_path_name_b(blsrc);
+        var bname=finfo[3];
+        
+        var blfound=false;
+        if (typeof mini_img_index_global !== 'undefined'){
+            for (let akey in mini_img_index_global){
+                if (mini_img_index_global[akey].includes(bname)){
+                    group_no.add(akey);
+                    blfound=true;
+                    break;
+                }
+            }
         }
-        if (is_group_file.includes('T')){
-            group_no.add(bname.substring(0,3));
-        }
-        if (is_group_file.includes('F')){
-            group_no.add(bname.substring(0,4));
+
+        if (!blfound){
+            bname=finfo[1];        
+            if (is_group_file.includes('G')){
+                group_no.add(bname.slice(-2,));
+            }
         }
                         
         if (group_no.size==0){
@@ -2224,15 +2235,17 @@ function img_load_check_kltxt_b(){
             var finfo=file_path_name_b(blsrc);
             var fname=finfo[3];
 
-            if (is_group_file.includes('G')){
-                sub_img_load_check_kltxt_b_convert_info(fname,one_img,finfo[1].slice(-2,));
+            var blkey='';
+            if (typeof mini_img_index_global !== 'undefined'){
+                for (let akey in mini_img_index_global){
+                    if (mini_img_index_global[akey].includes(fname)){
+                        blkey=akey;
+                        break;
+                    }
+                }
             }
-            if (is_group_file.includes('T')){
-                sub_img_load_check_kltxt_b_convert_info(fname,one_img,finfo[1].substring(0,3));
-                group_no.add(bname.substring(0,3));
-            }
-            if (is_group_file.includes('F')){
-                sub_img_load_check_kltxt_b_convert_info(fname,one_img,finfo[1].substring(0,4));
+            if (blkey!==''){
+                sub_img_load_check_kltxt_b_convert_info(fname,one_img,blkey);
             }
         }
 
@@ -2242,11 +2255,7 @@ function img_load_check_kltxt_b(){
         return bllen;
     }
 
-    function sub_img_load_check_kltxt_b_group(){
-        if (is_group_file==''){
-            return new Set(['']);
-        }
-        
+    function sub_img_load_check_kltxt_b_group(){        
         var result_t=new Set();
         var oimgs=document.querySelectorAll('img.img_raw_kltxt');        
         for (let one_img of oimgs){
@@ -2256,7 +2265,6 @@ function img_load_check_kltxt_b(){
             }
         }
         
-        result_t.add('');
         return result_t;
     }
     
@@ -2267,6 +2275,8 @@ function img_load_check_kltxt_b(){
         }
         if (blxl>=bllen){
             sub_img_load_check_kltxt_b_wait();
+            console.log('应加载总数：',group_t.length,'；已加载：',group_t.slice(0,blxl),'；未继续加载：',group_t.slice(blxl,));
+            console.log('img_load_check_kltxt_b() 费时：'+(performance.now() - t0) + ' milliseconds');            
             return;
         }
         
@@ -2282,7 +2292,7 @@ function img_load_check_kltxt_b(){
             console.log('img_load_check_kltxt_b() 费时：'+(performance.now() - t0) + ' milliseconds');
             return;
         }
-        
+
         if (eval('typeof mini_img_list'+group_t[blxl]+'_global') == 'undefined'){    
             file_dom_create_b([imgpath+'mini_img_list'+group_t[blxl]+'_data.js']);
             load_var_b('mini_img_list'+group_t[blxl]+'_global',csmax,1000,sub_img_load_check_kltxt_b_import_js);
@@ -2290,41 +2300,49 @@ function img_load_check_kltxt_b(){
         else {
             load_var_b('mini_img_list'+group_t[blxl]+'_global',1,1,sub_img_load_check_kltxt_b_import_js);        
         }
+        
         blxl=blxl+1;
     }    
+    
+    function sub_img_load_check_kltxt_b_start(){
+        group_t=Array.from(sub_img_load_check_kltxt_b_group());
+        group_t.sort();
+        console.log(group_t);
+        
+        bllen=group_t.length;
+        blxl=0;
+        sub_img_load_check_kltxt_b_import_js();    
+    }
     //----------------------------
     var oimgs=document.querySelectorAll('img.img_raw_kltxt');
     if (oimgs.length==0){return;}
     
     var t0 = performance.now();
-    
-    var blxl=0;
-    var bllen=oimgs.length;
-    
-    
+        
     if (typeof img_group_ignore_kltxt_global == 'undefined'){
         img_group_ignore_kltxt_global=new Set();
     }
-    
+
     var is_group_file=is_group_file_kltxt_b();
-    var group_t=Array.from(sub_img_load_check_kltxt_b_group());
-    group_t.sort();
-    console.log(group_t);
-    var bllen=group_t.length;
-    var blxl=0;
     var imgpath=img_path_kltxt_b();
     var csmax=(is_local_b()?5:10);    
-    sub_img_load_check_kltxt_b_import_js();
+    var group_t, bllen, blxl;
+
+    if (typeof mini_img_index_global == 'undefined'){
+        file_dom_create_b([imgpath+'mini_img_index_data.js']);
+        load_var_b('mini_img_index_global',csmax,1000,sub_img_load_check_kltxt_b_start);            
+    }
+    else {
+        sub_img_load_check_kltxt_b_start();
+    }
 }
 
 function is_group_file_kltxt_b(){
     var is_group_file='';
     if (csbookno_global>=0 && csbooklist_sub_global_b.length>0){
-        for (let item of ['G','F','T']){
-            if (csbooklist_sub_global_b[csbookno_global][4].includes(item)){
-                is_group_file=is_group_file+item;
-            }
-        }
+        if (csbooklist_sub_global_b[csbookno_global][4].includes('G')){
+            is_group_file=is_group_file+'G';
+        }        
     }
     return is_group_file;
 }
@@ -2348,43 +2366,28 @@ function img_key_2_base64_kltxt_b(img_name,is_group_file,group_no=false){
         return base64_value;
     }
     //--------------------
-    if (typeof mini_img_list_global == 'undefined'){return '';}
-
-    var base64_value=sub_img_key_2_base64_kltxt_b_one_arr(mini_img_list_global);
-
-    var group_no_list=[];
-    if (is_group_file!=='' && base64_value==''){
-        if (group_no===false){
-            var bname=file_path_name_b(img_name)[1];
-            if (is_group_file.includes('G')){
-                group_no_list.push(bname.slice(-2,));
-            }
-            else if (is_group_file.includes('T')){
-                group_no_list.push(bname.substring(0,3));
-            }
-            else if (is_group_file.includes('F')){
-                group_no_list.push(bname.substring(0,4));
-            }
-        }
-        else {
-            group_no_list=[group_no];
-        }
+    var base64_value='';
     
-        for (let group_no of group_no_list){
-            if (eval('typeof mini_img_list'+group_no+'_global') !== 'undefined'){
-                if (group_no!==''){
-                    try {
-                        var csarray=eval('mini_img_list'+group_no+'_global');
-                        base64_value=sub_img_key_2_base64_kltxt_b_one_arr(csarray);
-                        if (base64_value!==''){break;}
-                    }
-                    catch (error){
-                        console.log(error);
-                    }
+    var group_no_list=[];
+    if (group_no!==false){
+        group_no_list=[group_no];
+    }
+
+    for (let group_no of group_no_list){
+        if (eval('typeof mini_img_list'+group_no+'_global') !== 'undefined'){
+            if (group_no!==''){
+                try {
+                    var csarray=eval('mini_img_list'+group_no+'_global');
+                    base64_value=sub_img_key_2_base64_kltxt_b_one_arr(csarray);
+                    if (base64_value!==''){break;}
+                }
+                catch (error){
+                    console.log(error);
                 }
             }
         }
     }
+    
     return base64_value;
 }
 
