@@ -77,4 +77,5 @@ var digest_global=`
 *preliterate
 *E. coli
 *amigo
+*antipersonnel
 `.trim().split('\n');
