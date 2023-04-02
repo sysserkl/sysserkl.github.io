@@ -289,6 +289,7 @@ function txtmenus_kltxt_b(cstype=''){
     '<span class="span_menu" onclick="'+str_t+'digest_lines_kltxt_b(500);">显示含有最新添加的500条摘要的段落</span>',    
     '<span class="span_menu" onclick="'+str_t+'digest_excluded_kltxt_b();">查看未包含或重复的摘要</span>',
     '<span class="span_menu" onclick="'+str_t+'digest_statistics_kltxt_b();">摘要分布统计</span>',
+    '<span class="span_menu" onclick="'+str_t+'digest_sort_kltxt_b();">按文章顺序重新生成不重复的摘要</span>',    
     '<span class="span_menu" onclick="'+str_t+'wiki_style_kltxt_b();">当前页面WIKI格式生成</span>',
     ];
     
@@ -3115,7 +3116,39 @@ function digest_number_2_txt_kltxt_b(){
         }
     }
     digest_scan_hash_global=true;
-    console.log('digest_number_2_txt_kltxt_b() 费时：'+(performance.now() - t0) + " milliseconds");
+    console.log('digest_number_2_txt_kltxt_b() 费时：'+(performance.now() - t0) + ' milliseconds');
+}
+
+function digest_sort_kltxt_b(){
+    var t0 = performance.now();
+
+    var digest_t=[].concat(digest_global);
+    var result_t=new Set();
+    var hash_count=0;
+    for (let blxl=0;blxl<filelist.length;blxl++){
+        if (filelist[blxl]==''){continue;}
+
+        for (let blno=0;blno<digest_t.length;blno++){
+            var one_digest=digest_t[blno];
+            if (one_digest==''){continue;}
+            if (one_digest.substring(0,1)=='#'){
+                result_t.add(one_digest);
+                digest_t[blno]='';
+                hash_count=hash_count+1;
+                continue;
+            }
+            if (filelist[blxl].includes(one_digest)){
+                digest_t[blno]='';  
+                result_t.add(one_digest);  
+            }
+        }
+    }
+    var bljg='<p><textarea style="height:30rem;">'+Array.from(result_t).join('\n')+'</textarea></p>';
+    bljg=bljg+'<p style="font-size:0.9rem;line-height:100%;">原摘要数：'+digest_global.length+'，其中<b>#</b>开头的摘要有：'+hash_count+'；原摘要无重复数：'+new Set(digest_global).size+'；整理后：'+result_t.size+'</p>';
+    bljg=bljg+'<p  style="font-size:0.9rem;line-height:100%;">注：原摘要的数字形式会转化为文字形式。原摘要中的<b>#</b>会排在最前面。</p>';
+    document.getElementById('divhtml').innerHTML=bljg;
+
+    console.log('digest_sort_kltxt_b() 费时：'+(performance.now() - t0) + ' milliseconds');
 }
 
 function digest_lines_kltxt_b(recent_lines=-1){
@@ -3167,6 +3200,7 @@ function digest_lines_kltxt_b(recent_lines=-1){
     lines_2_html_kltxt_b(list_t);
     old_words_kltxt_b(true);
     digest_show_kltxt_b(false,recent_lines);
+
     console.log('digest_lines_kltxt_b() 费时：'+(performance.now() - t0) + ' milliseconds');
 }
 
@@ -3404,7 +3438,9 @@ function digest_excluded_kltxt_b(){
             blstr=item;
         }
     }
-    document.getElementById('divhtml').innerHTML='<h4>未包含的摘要</h4>'+array_2_li_b(excluded_list,'li','ol')+(excluded_list.length>=500?'<p>超长省略...</p>':'')+'<h4>重复的摘要</h4>'+array_2_li_b(Array.from(duplication),'li','ol');
+    var bljg='<h4>未包含的摘要</h4>'+array_2_li_b(excluded_list,'li','ol')+(excluded_list.length>=500?'<p>超长省略...</p>':'');
+    bljg=bljg+'<h4>重复的摘要</h4>'+array_2_li_b(Array.from(duplication),'li','ol');
+    document.getElementById('divhtml').innerHTML=bljg;    
 }
 
 function digest_temp_show_kltxt_b(is_all=false){

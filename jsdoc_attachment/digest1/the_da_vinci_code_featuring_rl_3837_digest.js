@@ -23,4 +23,5 @@ var digest_global=`
 *Boolean
 *Baldwin
 *in-house
+*command post
 `.trim().split('\n');
