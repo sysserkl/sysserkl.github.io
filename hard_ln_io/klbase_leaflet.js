@@ -498,7 +498,6 @@ function lines_latlon_2_dots_leaflet_b(cslist,cstype){
         if (isNaN(bllon) || isNaN(bllat)){continue;}
         result_t.push([bllat,bllon]);
     }    
-    
     return result_t;
 }
 
@@ -553,6 +552,16 @@ function one_point_leaflet_b(lon,lat,csradius,cscolor){
     var ocircle=circle_leaflet_b(omap_gps_points_global,true,lon,lat,csradius,cscolor,'',0);
     navigation_layer_gps_global.addLayer(ocircle);
     omap_gps_points_global.panTo(new L.LatLng(lat,lon));
+}
+
+function map_range_leaflet_b(){
+    var xy=omap_gps_points_global.getSize();
+    var result_t=[];
+    for (let item of [[0,0],[xy.x,0],[0,xy.y],[xy.x,xy.y]]){
+        var lat_lon=omap_gps_points_global.containerPointToLatLng(item);
+        result_t.push([lat_lon['lat'],lat_lon['lng']]);
+    }
+    return result_t;
 }
 
 function gpx_file_draw_leaflet_b(csstr,cstype,csname='',cscolors=[]){

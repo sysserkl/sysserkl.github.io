@@ -18,4 +18,8 @@ var digest_global=`
 *unladylike
 *westwards
 *Mordecai
+*Heine
+*caviare
+*serval
+*settler
 `.trim().split('\n');

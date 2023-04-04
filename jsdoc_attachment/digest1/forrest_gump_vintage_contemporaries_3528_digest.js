@@ -8,4 +8,6 @@ var digest_global=`
 *fart
 *Hoffman
 *Wordsworth
+*poppa
+*turd
 `.trim().split('\n');
