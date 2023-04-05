@@ -1,7 +1,30 @@
 var digest_global=`
 *Amman
-*marigold
+*babysitter
+*boyhood
+*breadwinner
+*cashier
+*collagen
+*collarbone
+*crosswalk
+*deflate
+*diesel
+*feminism
+*fundamentalism
+*heartache
 *homeschool
+*hothead
+*marigold
+*milkshake
+*miscommunication
+*pantsuit
+*parse
+*partway
+*pathological
 *sandpaper
+*self-destructive
+*self-knowledge
+*tablespoon
+*typo
 *utility pole
 `.trim().split('\n');
