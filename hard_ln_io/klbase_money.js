@@ -382,12 +382,14 @@ function electricity_get_money_b(csstr){
         error='未发现电量';
         return [error,blname,bladdress,blamount,total_price,csstr];
     }
+    
     var blat=csstr.indexOf('。本期');
     if (blat==-1){
-        error='未发现本期值';
-        return [error,blname,bladdress,blamount,total_price,csstr];
-    }    
-    csstr=csstr.substring(blat+1,);
+        csstr=csstr.replace(/.*，户名：.*?，地址：.*?。/,'');
+    }   
+    else {
+        csstr=csstr.substring(blat+1,);
+    }
     csstr=csstr.replace(new RegExp(/交费到期日为.*?，如已交费，敬请忽略，/,'g'),'');
     csstr=csstr.replace('请及时交费，如已交费，敬请忽略，','');  
     csstr=csstr.replace(new RegExp(/可点击https:\/\/.*?查询详情。/,'g'),'');
