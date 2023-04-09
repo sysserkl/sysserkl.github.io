@@ -251,7 +251,7 @@ function get_new_words_arr_html_enbook_b(cstype,bljgarr2,list_t){
     
     //未收录单词 - 保留注释
     if (en_words_book_newwords_continue_global===false && cstype==2 && csbookno_global>=0 && csbooklist_sub_global_b[csbookno_global][1]=='Way Station(Clifford D. Simak)' && !document.getElementById('textarea_new_words1').value.includes('已截取')){
-        if (confirm("是否更新 Way Station 的未收录单词统计数字：("+en_new2_total.size+")？")){
+        if (confirm('是否更新 Way Station 的未收录单词统计数字：('+en_new2_total.size+')？')){
             local_storage_today_b('enwords_way_station_statistics',40,en_new2_total.size,'/');
         }
     }
@@ -260,8 +260,8 @@ function get_new_words_arr_html_enbook_b(cstype,bljgarr2,list_t){
 function new_words_continue_enbook_b(cslength,percent10length=0){
     if (csbookno_global>=0 && en_words_book_newwords_continue_global){
         if (csbookno_global==0){
-            if (confirm("是否批量统计生词数量？")==false){
-                location.href="?";
+            if (confirm('是否批量统计生词数量？')==false){
+                location.href='?';
                 return;
             }
             else {

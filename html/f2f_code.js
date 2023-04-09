@@ -384,10 +384,10 @@ function new_lt_f2f(){
     }
     
     if (date_list.length>=2){
-        var date_range=date_list[0]+' ~ '+date_list[date_list.length-1];
+        var date_range=date_list[0]+' '+day_2_week_b(date_list[0],'cnbrief')+' ~ '+date_list[date_list.length-1]+' '+day_2_week_b(date_list[date_list.length-1],'cnbrief');
     }
     else {
-        var date_range=date_list[0];
+        var date_range=date_list[0]+' '+day_2_week_b(date_list[0],'cnbrief');
     }
     if (confirm('是否添加'+encounter_list.size+'人（'+Array.from(encounter_list)+'）、'+date_list.length+'天（'+date_range+'）记录?')==false){return;}
 

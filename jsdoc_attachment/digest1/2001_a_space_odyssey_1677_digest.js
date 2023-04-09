@@ -1,3 +1,20 @@
 var digest_global=`
 *Neil
+*bookcase
+*emigrant
+*cybernetics
+*extensible
+*feasibility
+*geostationary
+*isotope
+*kitchenette
+*outnumber
+*psychosis
+*rowboat
+*simulator
+*steadfastly
+*subsystem
+*surveyor
+*tornado
+*unquote
 `.trim().split('\n');

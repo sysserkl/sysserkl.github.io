@@ -139,7 +139,7 @@ function args_klsearch(){
                 bltype=item.substring(2,).toLowerCase();
                 switch (bltype){
                     case 'batch_en':
-                        var same_part1='EBS,dict.cn,youdao,iciba,merriam-webster,cambridge,';
+                        var same_part1='dict.cn,youdao,iciba,merriam-webster,cambridge,';   //EBS - 保留注释
                         var same_part2='cambridge_cn,wr_cn,TFD,Wordnet';
                         if (is_local_b()){
                             bltype='KLWiki,'+same_part1+same_part2; //+'collins(p),wiktionary(p),' -此两项保留 - 保留注释
