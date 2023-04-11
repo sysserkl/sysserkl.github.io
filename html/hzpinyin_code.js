@@ -184,7 +184,7 @@ function pronunciation_hzpy(cstype){
 }
 
 function idiom_hzpy(cstype='idiom'){
-    var list_t=document.getElementById('textarea_search_hzpy').value.match(/[^\x00-\xff]/g);
+    var list_t=document.getElementById('textarea_search_hzpy').value.match(/[^\x00-\xff]/g) || [];
     var result_t=new Set();
     switch (cstype){
         case 'word':
@@ -206,29 +206,169 @@ function idiom_hzpy(cstype='idiom'){
     document.getElementById('divhtml').innerHTML=array_2_li_b(result_t);
 }
 
+function split_2_hz_hzpy(){
+    function sub_split_2_hz_hzpy_one_dict(csdict){
+        for (let key in csdict){
+            for (let acol of csdict[key]){
+                var blfound=true;
+                for (let acz of set_t){
+                    if (!acol.includes(acz)){
+                        blfound=false;
+                        break;
+                    }
+                }
+                if (blfound){
+                    if (hz_set.has(key+acol)){continue;}
+                    hz_set.add(key+acol);        
+                    result_t.push([key,acol]);
+                }
+            }
+        }
+    }
+    //------------------------    
+    var set_t=new Set(document.getElementById('textarea_search_hzpy').value.trim().split(' '));
+    var result_t=[];    
+    var hz_set=new Set();
+    
+    sub_split_2_hz_hzpy_one_dict(chaizi_ft_global);
+    sub_split_2_hz_hzpy_one_dict(chaizi_jt_global);
+    document.getElementById('divhtml').innerHTML=array_2_li_b(result_t);    
+}
+
+function split_same_hzpy(){
+    function sub_split_same_hzpyy_one_dict(csdict,t2s=false){
+        for (let ahz in csdict){
+            if (t2s){
+                var t2s_list=s2t_t2s_search_b([ahz]);
+                if (t2s_list.length==1){
+                    t2s_list=t2s_list[0][1].split(' ');
+                }
+            }
+                        
+            for (let acol of csdict[ahz]){
+                if (acol==''){continue;}
+                if (hz_set.has(ahz+acol)){continue;}
+                
+                if (t2s && t2s_list.length>0){
+                    var blfound=false;
+                    for (let asame of t2s_list){
+                        if (hz_set.has(asame+acol)){
+                            blfound=true;
+                            break;
+                        }
+                    }
+                    if (blfound){continue;}
+                }
+                
+                var list_t=acol.split(' ');
+                list_t.sort();
+                var blkey=list_t.join('_');
+                if (result_t[blkey]==undefined){
+                    result_t[blkey]=[];
+                }
+                result_t[blkey].push(ahz);
+                hz_set.add(ahz+acol);
+            }
+        }
+    }
+    //------------------------
+    var result_t={};
+    var hz_set=new Set();
+    sub_split_same_hzpyy_one_dict(chaizi_ft_global);
+    sub_split_same_hzpyy_one_dict(chaizi_jt_global,true);
+
+    var bljg={};
+    for (let key in result_t){
+        if (result_t[key].length<=1){continue;}        
+        var hzs=result_t[key].join(' ');
+        if (bljg[hzs]==undefined){
+            bljg[hzs]=[];
+        }
+        bljg[hzs].push(key.split('_').join(' '));
+    }
+    
+    bljg=object2array_b(bljg,true);
+    for (let blxl=0;blxl<bljg.length;blxl++){
+        bljg[blxl]=bljg[blxl][0]+': '+bljg[blxl].slice(1,).join(', ');
+    }
+    document.getElementById('divhtml').innerHTML=array_2_li_b(bljg);    
+}
+
+function split_duplication_hzpy(){
+    function sub_split_duplication_hzpy_one_dict(csdict){
+        for (let key in csdict){
+            for (let acol of csdict[key]){
+                var list_t=acol.split(' ');
+                var set_t=new Set(list_t);
+                if (set_t.size==list_t.length){continue;}
+                if (hz_set.has(key+acol)){continue;}
+                result_t.push([key,acol,list_t.length,set_t.size]);
+                hz_set.add(key+acol);
+            }
+        }
+    }
+    //------------------------
+    var result_t=[];
+    var hz_set=new Set();
+    sub_split_duplication_hzpy_one_dict(chaizi_ft_global);
+    sub_split_duplication_hzpy_one_dict(chaizi_jt_global);
+    result_t.sort(function (a,b){return a[2]-a[3]<b[2]-b[3];});
+    document.getElementById('divhtml').innerHTML=array_2_li_b(result_t);    
+}
+
+function split_words_hzpy(){
+    var list_t=new Set(document.getElementById('textarea_search_hzpy').value.match(/[^\x00-\xff]/g) || []);
+    var result_t=[];
+    for (let aword of list_t){
+        var czs=[];
+        if (aword in chaizi_ft_global){
+            czs=czs.concat(chaizi_ft_global[aword]);
+        }
+        if (aword in chaizi_jt_global){
+            czs=czs.concat(chaizi_jt_global[aword]);
+        }
+        result_t.push([aword,Array.from(new Set(czs))]);
+    }
+    document.getElementById('divhtml').innerHTML=array_2_li_b(result_t);    
+}
+
 function menu_hzpy(){
-    var str_t=klmenu_hide_b('');
-    var klmenu1=[
-    '<span class="span_menu" onclick="'+str_t+'pronunciation_hzpy(\'single\');">所有单音字</span>',
+    var str_t=klmenu_hide_b('');   
+    var klmenu1=[    
+    '<span class="span_menu" onclick="'+str_t+'split_duplication_hzpy();">含有重复部分的汉字</span>',
+    '<span class="span_menu" onclick="'+str_t+'split_2_hz_hzpy();">由拆字查找汉字</span>',
+    '<span class="span_menu" onclick="'+str_t+'split_same_hzpy();">相同拆字的汉字</span>',
+    ];
+
+    var group_list=[
+    ['成语','idiom_hzpy();',true],
+    ['词语','idiom_hzpy(\'word\');',true],
+    ['拆字','split_words_hzpy();',true],    
+    ];    
+    klmenu1.push(menu_container_b(str_t,group_list,'含有当前字的: '));
+    
+    var group_list=[
+    ['查找','s2t_t2s_search_hzpy();',true],
+    ['一一对应的字','s2t_t2s_pair_hzpy();',true],
+    ];    
+    klmenu1.push(menu_container_b(str_t,group_list,'繁简: '));
+
+    var klmenu2=[
     '<span class="span_menu" onclick="'+str_t+'pronunciation_hzpy(\'multiple\');">所有多音字</span>',
+    '<span class="span_menu" onclick="'+str_t+'pronunciation_hzpy(\'single\');">所有单音字</span>',
+    '<span class="span_menu" onclick="'+str_t+'pronunciation_single_3500_hzpy();">常见单音字</span>',                
     '<span class="span_menu" onclick="'+str_t+'pronunciation_hzpy(\'list\');">读音列表</span>',    
     '<span class="span_menu" onclick="'+str_t+'pronunciation_hzpy(\'length\');">读音长度排序</span>',    
     '<span class="span_menu" onclick="'+str_t+'homophonic_words_hzpy();">谐音字</span>',    
-    '<span class="span_menu" onclick="'+str_t+'idiom_hzpy();">含有当前字的成语</span>',    
-    '<span class="span_menu" onclick="'+str_t+'idiom_hzpy(\'word\');">含有当前字的词语</span>',    
-    '<span class="span_menu" onclick="'+str_t+'s2t_t2s_pair_hzpy();">繁简一一对应的字</span>',        
-    '<span class="span_menu" onclick="'+str_t+'s2t_t2s_search_hzpy();">繁简查找</span>',        
-    '<span class="span_menu" onclick="'+str_t+'pronunciation_single_3500_hzpy();">常见单音字</span>',            
     ];
     
-    var klmenu_link=[
-    ];
+    var klmenu_link=[];
     if (is_local_b()){
         klmenu_link.push('<a onclick="'+str_t+'" href="'+klwebphp_path_b('sticker.php')+'" target=_blank>Sticker</a>');    
         klmenu_link.push('<span class="span_menu" onclick="'+str_t+'klwiki_link_b(\'KL 微信清单\',true);">KL 微信清单</span>');
     }    
 
-    document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','16rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'📢','10rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem'),'','0rem')+' ');
 }
 
 function init_hzpy(){

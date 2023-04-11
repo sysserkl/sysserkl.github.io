@@ -773,7 +773,14 @@ function s2t_t2s_pair_b(){
 
 function s2t_t2s_search_b(csstr){
     var result_t=[];
-    var list_t=new Set(csstr.match(/[^\x00-\xff]/g) || []);
+    
+    if (Array.isArray(csstr)){
+        var list_t=csstr;
+    }
+    else {
+        var list_t=new Set(csstr.match(/[^\x00-\xff]/g) || []);
+    }
+    
     for (let item of list_t){
         if (item in cn_t2s_global){
             result_t.push([item,cn_t2s_global[item]]);
