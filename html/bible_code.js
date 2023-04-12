@@ -5,9 +5,8 @@ function recent_search_bible(csstr=''){
 function bookmarks_set_bible(){
     var omain=document.getElementById('select_chapter');
     var osub=document.getElementById('select_sub');
-    if (omain.selectedIndex==-1 || omain.value=='' || osub.selectedIndex==-1){
-        return;
-    }
+    if (omain.selectedIndex==-1 || omain.value=='' || osub.selectedIndex==-1){return;}
+    
     if (confirm('是否更新 书签：'+kjv[omain.value]+' -> '+(osub.selectedIndex+1)+'？')){
         localStorage.setItem('bible_bookmark',omain.value+' /// '+osub.value);
         alert('书签已更新');
@@ -16,7 +15,7 @@ function bookmarks_set_bible(){
 }
 
 function bookmarks_get_bible(only_change_title=false){
-    var bm=localStorage.getItem('bible_bookmark') || '';
+    var bm=local_storage_get_b('bible_bookmark');
     if (!bm.includes(' /// ')){
         return ['',''];
     }
@@ -31,6 +30,7 @@ function bookmarks_get_bible(only_change_title=false){
     document.getElementById('select_chapter_cn').value=blchapter;
     minor_options_bible(blchapter);
     document.getElementById('select_sub').value=blsub;
+    document.getElementById('select_end_sub').value=blsub;    
     chapter_one_bible(blsub);
 }
 
@@ -38,6 +38,18 @@ function new_words_bible(){
     if (klmenu_check_b('span_show_new_enwords',false)){
         get_new_words_arr_enbook_b(2,document.getElementById('divhtml').innerText,document.querySelectorAll('.txt_content'),0);
     }
+}
+
+function sub_start_change_bible(oselect){
+    chapter_one_bible(oselect.value); 
+    var oend=document.getElementById('select_end_sub');
+    if (parseInt(oend.value)<parseInt(oselect.value)){
+        oend.value=oselect.value;
+    }
+}
+
+function sub_end_change_bible(oselect){
+    chapter_one_bible(document.getElementById('select_sub').value,oselect.value);
 }
 
 function menu_bible(){
@@ -1015,7 +1027,6 @@ function book_bible(csstr,isalone=false){
     var found_sub=false;
     if (book_no_list.length>1){
         var osub_options=document.querySelectorAll('#select_sub option');
-        console.log(osub_options);
         for (let item of osub_options){
             if (item.innerText.trim()==book_no_list[1]){
                 item.selected=true;

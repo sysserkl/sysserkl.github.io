@@ -161,11 +161,12 @@ function menu_calculator(){
     '<span class="span_menu" onclick="'+str_t+'portion_calculator(\'all\');">show all</span>',
     '<span class="span_menu" onclick="'+str_t+'filter_calculator();">filter</span>',   
     '<span class="span_menu" onclick="'+str_t+'delete_calculator();">delete current items</span>',       
-    '<span id="span_reg_calculator" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ reg</span>',
     '<span class="span_menu" onclick="'+str_t+'old_data_calculator();">reload</span>',    
     ];
 
     var klmenu2=[
+    '<span id="span_reg_calculator" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ reg</span>',
+    '<span id="span_value_calculator" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 表达式2数值</span>',        
     '<span id="span_decimal_len" class="span_menu" onclick="'+str_t+'decimal_len_set();">decimal length: '+decimal_length_global+'</span>',        
     '<span class="span_menu" onclick="'+str_t+'help_calculator();">help</span>',    
     '<span class="span_menu" onclick="'+str_t+'if (confirm(\'do updaate?\')){service_worker_delete_b(\'calculator\');}">update</span>',        
@@ -173,6 +174,7 @@ function menu_calculator(){
 
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'➕','15rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'➖','12rem','1rem','1rem','60rem'),'','0rem')+' ');
     klmenu_check_b('span_reg_calculator',true);
+    klmenu_check_b('span_value_calculator',true);    
 }
 
 function old_data_calculator(){
@@ -243,8 +245,9 @@ function eval_calculator(){
 
     var bljg=show_row_calculator(blemoji,str_t,blvalue,bltime);
     
-    oinput.value=blvalue;
-    
+    if (klmenu_check_b('span_value_calculator',false)){
+        oinput.value=blvalue;
+    }
     line_no_calc_global=line_no_calc_global+1;
     var ool=document.getElementById('ol_calc');    
     ool.insertAdjacentHTML('afterbegin','<li>'+bljg+'</li>');

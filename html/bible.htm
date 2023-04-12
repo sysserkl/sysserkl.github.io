@@ -49,8 +49,8 @@ if (ismobile_b(true)=='mobile'){
 <p style="line-height:2.8rem;">
 <select id="select_chapter" style="max-width:15rem;height:2.5rem;" onchange="document.getElementById('select_chapter_cn').value=this.value;minor_options_bible(this.value);"></select>
 <select id="select_chapter_cn" style="max-width:10rem;height:2.5rem;" onchange="document.getElementById('select_chapter').value=this.value; minor_options_bible(this.value);"></select>
-<select id="select_sub" style="max-width:4rem;height:2.5rem;" onchange="chapter_one_bible(this.value); document.getElementById('select_end_sub').value=-1;"></select>
-<select id="select_end_sub" style="max-width:4rem;height:2.5rem;" onchange="chapter_one_bible(document.getElementById('select_sub').value,this.value);"></select>
+<select id="select_sub" style="max-width:4rem;height:2.5rem;" onchange="sub_start_change_bible(this);"></select>
+<select id="select_end_sub" style="max-width:4rem;height:2.5rem;" onchange="sub_end_change_bible(this);"></select>
 </p>
 </div>
 <div id="divhtml"><h2>Loading...</h2><h3>数据载入中，请稍后...</h3></div>

@@ -79,6 +79,8 @@ function circle_leaflet_b(csomap,islayer=false,cslon=121.5,cslat=31.2,csradius=1
 
 function line_leaflet_b(csomap,islayer=false,cslist,cscolor='red',cscaption=''){
     //[[lat,lon],[lat,lon]] - 保留注释
+    if (cslist.length==0){return;}
+    
     var polyline = L.polyline(cslist, {color: cscolor});
     var bllen=0;
     for (let blno=1;blno<cslist.length;blno++){
@@ -95,13 +97,14 @@ function line_leaflet_b(csomap,islayer=false,cslist,cscolor='red',cscaption=''){
     }
     
     var restore_type='';
-    var oselect=document.getElementById('line_leaflet_b');
+    var oselect=document.getElementById('select_transform');    //line_leaflet_b
     if (oselect){
         restore_type=oselect.value;
     }
     else if (typeof gps_tranform_type_global !== 'undefined'){
         restore_type=gps_tranform_type_global;
     }
+    
     switch (restore_type){
         case 'WGS84_TO_GCJ02':
             restore_type='GCJ02_TO_WGS84';
@@ -111,12 +114,15 @@ function line_leaflet_b(csomap,islayer=false,cslist,cscolor='red',cscaption=''){
             break;
     }
     
-    if (cscaption!==''){
-        blstr=cscaption+' '+blstr+' <span style="cursor:pointer;" onclick="data_2_gpx_file_leaflet_b(\''+restore_type+'\',this);">⬇</span>';
+    if (cscaption==''){
+        cscaption=cslist[0]+'_'+cslist[cslist.length-1];
     }
+    
+    blstr='<span style="word-break:break-all;">'+cscaption+' '+blstr+' <span style="cursor:pointer;" onclick="data_2_gpx_file_leaflet_b(\''+restore_type+'\',this);">⬇</span></span>';
+    
     polyline.bindPopup(blstr);
     
-    polyline.on("click", (e) => {
+    polyline.on('click', (e) => {
         gpx_current_geometry_data_global=e.target.getLatLngs(); //全局变量 - 保留注释
     });
     
@@ -554,14 +560,28 @@ function one_point_leaflet_b(lon,lat,csradius,cscolor){
     omap_gps_points_global.panTo(new L.LatLng(lat,lon));
 }
 
-function map_range_leaflet_b(){
+function map_range_leaflet_b(min_max=false){
     var xy=omap_gps_points_global.getSize();
-    var result_t=[];
-    for (let item of [[0,0],[xy.x,0],[0,xy.y],[xy.x,xy.y]]){
-        var lat_lon=omap_gps_points_global.containerPointToLatLng(item);
-        result_t.push([lat_lon['lat'],lat_lon['lng']]);
+    if (min_max){
+        var lat_list=[];
+        var lon_list=[];
+        for (let item of [[0,0],[xy.x,xy.y]]){
+            var lat_lon=omap_gps_points_global.containerPointToLatLng(item);
+            lat_list.push(lat_lon['lat']);
+            lon_list.push(lat_lon['lng']);
+        }
+        lat_list.sort(function (a,b){return a>b;});
+        lon_list.sort(function (a,b){return a>b;});
+        return [lat_list,lon_list];
     }
-    return result_t;
+    else {
+        var result_t=[];
+        for (let item of [[0,0],[xy.x,0],[0,xy.y],[xy.x,xy.y]]){
+            var lat_lon=omap_gps_points_global.containerPointToLatLng(item);
+            result_t.push([lat_lon['lat'],lat_lon['lng']]);
+        }
+        return result_t;
+    }
 }
 
 function gpx_file_draw_leaflet_b(csstr,cstype,csname='',cscolors=[]){
@@ -636,8 +656,7 @@ function data_2_gpx_file_leaflet_b(transform_type='',odom=false){
     if (typeof gpx_current_geometry_data_global == 'undefined'){return;}
     if (Array.isArray(gpx_current_geometry_data_global)==false){return;}
     var list_t=[];
-    var lat;
-    var lon;
+    var lat, lon;
     for (let item of gpx_current_geometry_data_global){
         [lon,lat]=transform_lon_lat_one_dot_b(transform_type,item['lng'],item['lat']);
         list_t.push([lat,lon]);
@@ -662,7 +681,7 @@ function data_2_gpx_file_leaflet_b(transform_type='',odom=false){
     string_2_txt_file_b(blstr,savename+'.gpx','gpx');
 }
 
-function latlon_2_gpx_file_leaflet_b(cslist,csname){
+function latlon_2_gpx_file_leaflet_b(cslist,csname,with_head_tail=true){
     //cslist 数组每一个元素都是 [lat,lon] 格式 - 保留注释
     for (let blxl=0;blxl<cslist.length;blxl++){
         cslist[blxl]='<trkpt lat="'+cslist[blxl][0]+'" lon="'+cslist[blxl][1]+'"></trkpt>';
@@ -673,7 +692,10 @@ function latlon_2_gpx_file_leaflet_b(cslist,csname){
     bljg=bljg+cslist.join('\n');
     bljg=bljg+'</trkseg>\n</trk>\n';
     
-    return gpx_head_tail_leaflet_b(bljg);
+    if (with_head_tail){
+        bljg=gpx_head_tail_leaflet_b(bljg);
+    }
+    return bljg;
 }
 
 function gpx_head_tail_leaflet_b(cscontent){
