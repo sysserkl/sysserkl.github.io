@@ -4,4 +4,7 @@ var digest_global=`
 *dishtowel
 *schoolchild
 *yoghurt
+*black-market
+*insemination
+*keynote
 `.trim().split('\n');

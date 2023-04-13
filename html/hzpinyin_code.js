@@ -294,6 +294,96 @@ function split_same_hzpy(){
     document.getElementById('divhtml').innerHTML=array_2_li_b(bljg);    
 }
 
+function sentence_2_split_hzpy(csstr=false,show_html=true){
+    function sub_sentence_2_split_hzpy_init(csdict){
+        var reverse_dict={};
+        for (let key in csdict){
+            for (let acol of csdict[key]){
+                var blvalue=acol.replace(/ /g,'');
+                if (reverse_dict[blvalue]==undefined){
+                    reverse_dict[blvalue]=[];
+                }
+                reverse_dict[blvalue].push(key);
+            }
+        }    
+        return reverse_dict;
+    }
+    
+    function sub_sentence_2_split_hzpy_cut(snippet,csdict){
+        if (snippet in csdict){
+            if (csdict[snippet].length>1){
+                csdict[snippet].sort(randomsort_b);
+            }
+            return csdict[snippet][0];
+        }    
+        return false;
+    }
+    //------------------
+    if (typeof chaizi_jt_reverse_global == 'undefined'){
+        chaizi_jt_reverse_global=sub_sentence_2_split_hzpy_init(chaizi_jt_global);
+    }
+        
+    if (typeof chaizi_ft_reverse_global == 'undefined'){
+        chaizi_ft_reverse_global=sub_sentence_2_split_hzpy_init(chaizi_ft_global);
+    }
+
+    if (csstr===false){
+        csstr=document.getElementById('textarea_search_hzpy').value.trim().split('\n');
+    }
+    
+    if (typeof csstr == 'string'){
+        var rows_list=csstr.split('\n');
+    }
+    else {
+        var rows_list=csstr;
+    }
+    
+    var bljg=[];
+    for (let arow of rows_list){
+        var result_t=[];
+        var blxl=4;
+        while (true){
+            if (arow.length==0){break;}
+            var bltmp=arow.substring(0,blxl);
+            
+            var blvalue=sub_sentence_2_split_hzpy_cut(bltmp,chaizi_jt_reverse_global);
+            if (blvalue===false){
+                blvalue=sub_sentence_2_split_hzpy_cut(bltmp,chaizi_ft_reverse_global);
+            }
+            if (blvalue===false){
+                if (blxl>2){
+                    blxl=blxl-1;
+                }
+                else {
+                    result_t.push(bltmp);
+                    arow=arow.substring(blxl,);
+                    blxl=4;
+                }
+            }
+            else {        
+                result_t.push(blvalue);
+                arow=arow.substring(blxl,);
+            }
+        }
+        bljg.push(result_t.join(''));
+    }
+    if (show_html){
+        document.getElementById('divhtml').innerHTML=bljg.join('<br />');        
+    }
+    return bljg;
+}
+
+function idiom_2_split_hzpy(){
+    var result_t=[];
+    for (let item of cn_idiom_global){
+        var bltmp=sentence_2_split_hzpy([item],false);
+        if (bltmp[0]==item){continue;}
+        result_t.push([bltmp[0],item]);
+    }
+    result_t.sort(function (a,b){return a[0].length>b[0].length;});
+    document.getElementById('divhtml').innerHTML=array_2_li_b(result_t);
+}
+
 function split_duplication_hzpy(){
     function sub_split_duplication_hzpy_one_dict(csdict){
         for (let key in csdict){
@@ -338,6 +428,8 @@ function menu_hzpy(){
     '<span class="span_menu" onclick="'+str_t+'split_duplication_hzpy();">含有重复部分的汉字</span>',
     '<span class="span_menu" onclick="'+str_t+'split_2_hz_hzpy();">由拆字查找汉字</span>',
     '<span class="span_menu" onclick="'+str_t+'split_same_hzpy();">相同拆字的汉字</span>',
+    '<span class="span_menu" onclick="'+str_t+'sentence_2_split_hzpy();">依据拆字合并文字</span>',    
+    '<span class="span_menu" onclick="'+str_t+'idiom_2_split_hzpy();">依据拆字显示可合并的全部成语</span>',    
     ];
 
     var group_list=[
@@ -368,7 +460,7 @@ function menu_hzpy(){
         klmenu_link.push('<span class="span_menu" onclick="'+str_t+'klwiki_link_b(\'KL 微信清单\',true);">KL 微信清单</span>');
     }    
 
-    document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','16rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'📢','10rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','18rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'📢','10rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem'),'','0rem')+' ');
 }
 
 function init_hzpy(){
