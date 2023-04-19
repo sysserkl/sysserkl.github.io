@@ -17,7 +17,7 @@ var search_sites_list_global=[
 ['https://www.definitions.net/definition/','',1,'','definitions','','English',''],
 ['https://www.dictionary.com/browse/','',0,'#6666cc','Dictionary.com','','English',''],
 ['https://www.howtopronounce.com/','',0,'','howtopronounce','','English',''],
-['https://kaikki.org/dictionary/English/words.html?s=','',1,'','kaikki','0','English',''], 
+['https://kaikki.org/dictionary/English/words.html?s=','',0,'','kaikki','0','English',''], 
 
 ['https://learnersdictionary.com/definition/','',0,'','learnersdictionary','','English',''],
 ['https://www.ldoceonline.com/dictionary/','',2,'','Longman','','English',''],    

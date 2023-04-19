@@ -34,4 +34,12 @@ var digest_global=`
 *televise
 *unofficially
 *wholesaler
+*asthmatic
+*gentlemanly
+*handicraft
+*menopause
+*situate
+*underclothes
+*unholy
+*wedlock
 `.trim().split('\n');

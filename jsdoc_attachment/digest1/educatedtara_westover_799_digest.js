@@ -27,4 +27,9 @@ var digest_global=`
 *tablespoon
 *typo
 *utility pole
+*checkbook
+*epicenter
+*mealtime
+*turnip
+*witchcraft
 `.trim().split('\n');

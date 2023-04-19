@@ -33,6 +33,20 @@ function args_kle(){
     var cskeys=href_split_b(location.href);
     if (cskeys.length>0 && cskeys[0]!==''){
         //形如：enwords.htm?s=english& - 保留注释
+        
+        //是否显示例句 - 保留注释
+        var show_sentence=false;
+        for (let item of cskeys){
+            if (item=='sentence'){
+                show_sentence=true;
+                var ocheck=document.getElementById('check_js_wiki');
+                if (ocheck){
+                    ocheck.checked=true;
+                }
+                break;
+            }
+        }
+                
         for (let bltmpstr of cskeys){
             bltmpstr=bltmpstr.trim();
             if (bltmpstr.substring(0,2)=='s='){
@@ -106,12 +120,9 @@ function args_kle(){
                 break;
             }
         }
-        //是否显示例句 - 保留注释
-        for (let item of cskeys){
-            if (item=='sentence'){
-                show_sentence_enwc_b();
-                break;
-            }
+
+        if (show_sentence){
+            show_sentence_enwc_b();
         }
     }
     else{
@@ -508,14 +519,22 @@ function menu_kle(){
     
     var klmenu_statistics=[
     '<span class="span_menu" onclick="'+str_t+'statistics_draw_b(\'enwords\');">统计</span>',
-    '<span class="span_menu" onclick="'+str_t+'day_old_word_all_kle(\'\',[0]);">全部旧单词0</span>',
-    '<span class="span_menu" onclick="'+str_t+'day_old_word_all_kle(\'\',[1]);">全部旧单词1</span>',
-    '<span class="span_menu" onclick="'+str_t+'day_old_word_all_kle(\'\',[2]);">全部旧单词2</span>',
-    '<span class="span_menu" onclick="'+str_t+'day_old_word_all_kle(\'_OR\',[0,2]);">全部旧单词0_2_OR</span>',
-    '<span class="span_menu" onclick="'+str_t+'day_old_word_all_kle(\'\',[0,1,2]);">全部旧单词0_1_2</span>',
-    '<span class="span_menu" onclick="'+str_t+'letters_26_kle();">26字首统计</span>',
-    '<span class="span_menu" onclick="'+str_t+'week_plan_show_kle();">每周记忆计划</span>',    
     ];
+
+    var group_list=[
+    ['0','day_old_word_all_kle(\'\',[0]);',true],
+    ['1','day_old_word_all_kle(\'\',[1]);',true],
+    ['2','day_old_word_all_kle(\'\',[2]);',true],
+    ];    
+    klmenu_statistics.push(menu_container_b(str_t,group_list,'全部旧单词：'));
+
+    klmenu_statistics=klmenu_statistics.concat([
+    '<span class="span_menu" onclick="'+str_t+'day_old_word_all_kle(\'_OR\',[0,2]);">全部旧单词：0_2_OR</span>',
+    '<span class="span_menu" onclick="'+str_t+'day_old_word_all_kle(\'\',[0,1,2]);">全部旧单词：0_1_2</span>',
+    '<span class="span_menu" onclick="'+str_t+'letters_26_kle();">26字首统计</span>',
+    '<span class="span_menu" onclick="'+str_t+'other_characters_kle();">除字母外的其他字符</span>',
+    '<span class="span_menu" onclick="'+str_t+'week_plan_show_kle();">每周记忆计划</span>',    
+    ]);
 
     var list_t=[
     "-([a-zA-Z]{3,}.*){3,}(:r)",
@@ -547,6 +566,18 @@ function menu_kle(){
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',bljg);
     
     document.getElementById('span_checkboxes').insertAdjacentHTML('beforeend',klmenu_multi_button_div_b(klmenu_b(en_font_menu_b(str_t),'🅰','10rem','1rem','1rem','30rem'),'','0rem')+' ');
+}
+
+function other_characters_kle(){
+    var set_t=simple_words_b();
+    var result_t=[];
+    for (let one_word of set_t){
+        var list_t=one_word.match(/[^a-z\s'\.\-]/ig) ||[];
+        if (list_t.length==0){continue;}
+        result_t=result_t.concat(list_t);
+    }
+    wordsearch_enwords_b("[^a-z\\s'\\.\\-]",true,[true,false,false]);
+    document.getElementById('divhtml').insertAdjacentHTML('afterbegin','<p><b>'+array_unique_b(result_t).join(' ')+'</b></p>');
 }
 
 function letters_26_kle(idno='',sort_by_count=false,percent=false){
