@@ -46,4 +46,8 @@ var digest_global=`
 *unaffordable
 *unrealistic
 *untreatable
+*gynecologist
+*scrotum
+*self-sufficiency
+*sheepdog
 `.trim().split('\n');

@@ -23,4 +23,8 @@ var digest_global=`
 *sexist
 *videotape
 *yoghurt
+*earring
+*fatherhood
+*godliness
+*sauna
 `.trim().split('\n');

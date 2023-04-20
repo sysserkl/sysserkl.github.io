@@ -13,4 +13,8 @@ var digest_global=`
 *self-defeating
 *snippet
 *sparsely
+*outbuilding
+*surveyor
+*watchtower
+*withstood
 `.trim().split('\n');
