@@ -233,25 +233,32 @@ function done_date_klplan_b(arow,today,span_name){
     return done_date;
 }
 
+function id_category_name_get_klplan_b(arow){
+    arow=arow.trim();
+    var blat=arow.indexOf(' ');
+    if (blat==-1){return false;}
+    var blid=arow.substring(0,blat).trim();
+    arow=arow.substring(blat,).trim();
+
+    blat=arow.indexOf(' ');
+    if (blat==-1){return false;}
+
+    var blcategory=arow.substring(0,blat).trim();
+    arow=arow.substring(blat,).trim();
+    
+    if (blid=='' || blcategory=='' || arow==''){return false;}
+    if (blid.substring(0,1)=='#' || blcategory.substring(0,1)=='#' || arow.substring(0,1)=='#'){return false;}
+    
+    return [blid,blcategory,arow];
+}
+
 function load_lists_klplan_b(csid){
     var plan_t=[];
     var list_t=local_storage_get_b(csid,-1,true);
-    for (let arow of list_t){
-        arow=arow.trim();
-        var blat=arow.indexOf(' ');
-        if (blat==-1){continue;}
-        var blid=arow.substring(0,blat).trim();
-        arow=arow.substring(blat,).trim();
-
-        blat=arow.indexOf(' ');
-        if (blat==-1){continue;}
-    
-        var blcategory=arow.substring(0,blat).trim();
-        arow=arow.substring(blat,).trim();
-        
-        if (blid=='' || blcategory=='' || arow==''){continue;}
-        if (blid.substring(0,1)=='#' || blcategory.substring(0,1)=='#' || arow.substring(0,1)=='#'){continue;}
-        plan_t.push([blid,blcategory,arow]);
+    for (let arow of list_t){        
+        var result_t=id_category_name_get_klplan_b(arow);
+        if (result_t===false){continue;}
+        plan_t.push(result_t);
     }
     return remove_memo_klplan_b(plan_t);
 }
@@ -320,17 +327,26 @@ function filter_klplan_b(textarea_id,ospan=false){
     var otextarea=document.getElementById(textarea_id);
     var list_t=otextarea.value.trim().split('\n');
 
-    var cskey=(prompt('input filter key: ') || '').trim();
+    var cskey=(prompt('输入分类 或 名称 或 分类 名称，不支持正则表达式：') || '').trim();
     if (cskey==''){return;}
     
     var others_item_list=[];
     var current_item_list=[];
+    var category_set=new Set();
     for (let item of list_t){
-        if (item.includes(cskey)){
+        var result_t=id_category_name_get_klplan_b(item);
+        if (result_t===false){continue;}
+        
+        if (cskey==result_t[1] || cskey==result_t[2] || cskey==result_t[1]+' '+result_t[2]){
             current_item_list.push(item);
+            category_set.add(result_t[1]);
         }
         else {
             others_item_list.push(item);
+        }
+        if (category_set.size>1){
+            alert('分类数超过1个（'+Array.from(category_set)+'），取消操作');
+            return;
         }
     }
     if (current_item_list.length==0){
@@ -343,7 +359,7 @@ function filter_klplan_b(textarea_id,ospan=false){
     var otextarea_current=document.getElementById('textarea_filter_items_klplan');
     otextarea_current.value=current_item_list.join('\n');
     otextarea_current.style.display='';
-    alert('原共有项目'+list_t.length+'条；当前筛选出项目'+current_item_list.length+'条；剩余项目'+others_item_list.length+'条。'+(list_t.length==current_item_list.length+others_item_list.length?'条数一致。':'条数不一致。'));
+    alert('原共有项目'+list_t.length+'条；当前筛选出项目'+current_item_list.length+'条，分类为：'+Array.from(category_set)[0]+'；剩余项目'+others_item_list.length+'条。'+(list_t.length==current_item_list.length+others_item_list.length?'条数一致。':'条数不一致。'));
     if (ospan!==false){
         ospan.style.display='none'; //仅运行一次filter，避免误删 - 保留注释
     }
