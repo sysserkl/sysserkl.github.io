@@ -42,4 +42,9 @@ var digest_global=`
 *underclothes
 *unholy
 *wedlock
+*cashmere
+*outsmart
+*schoolmate
+*underthings
+*yesteryear
 `.trim().split('\n');

@@ -24,4 +24,7 @@ var digest_global=`
 *Baldwin
 *in-house
 *command post
+*symbology
+*unbuilt
+*watermark
 `.trim().split('\n');

@@ -22,4 +22,7 @@ var digest_global=`
 *caviare
 *serval
 *settler
+*clove
+*extol
+*mourner
 `.trim().split('\n');

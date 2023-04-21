@@ -32,4 +32,7 @@ var digest_global=`
 *mealtime
 *turnip
 *witchcraft
+*disprove
+*pocketknife
+*trigonometry
 `.trim().split('\n');
