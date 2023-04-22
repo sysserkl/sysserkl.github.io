@@ -21,7 +21,7 @@ function menu_ensentence(){
     '<span class="span_menu" onclick="'+str_t+'get_day_sentences_enwc_b(\'\',\'\',false);">指定日期例句(段落)</span>',        
     '<span class="span_menu" onclick="'+str_t+'minimum_ensentence();">例句最少的单词300</span>',
     '<span class="span_menu" onclick="'+str_t+'random_scan_ensentence('+(ismobile_b()?20:100)+');">随机扫描例句最少的单词</span>',
-    '<span class="span_menu" onclick="'+str_t+'rare_old_words_ensentence();">例句最少的单词1000</span>',    
+    '<span class="span_menu" onclick="'+str_t+'rare_old_words_ensentence();">例句最少的单词2000</span>',    
     '<span class="span_menu" onclick="'+str_t+'none_ensentence();">无例句的单词</span>',
     '<span class="span_menu" onclick="'+str_t+'show_new_words_enwc_b(\'span.span_enwords_sentence\',false);">显示例句中的生词</span>',    
     ];
@@ -281,7 +281,7 @@ function rare_old_words_ensentence(){
                 if (!oldset.has(arow[0].toLowerCase())){continue;}
                 words_searched_arr.push(arow[0]);
                 blno=blno+1;
-                if (blno>=1000){break;}
+                if (blno>=2000){break;}
             }
             var bltextarea='<textarea onclick="this.select();document.execCommand(\'copy\');">'+words_searched_arr.join('\n')+'</textarea>';
             document.getElementById('divhtml').innerHTML=enwords_array_to_html_b(words_searched_arr,false)+bltextarea;
