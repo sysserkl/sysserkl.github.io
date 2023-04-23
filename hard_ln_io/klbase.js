@@ -2790,3 +2790,11 @@ function checkbox_value_get_b(csid,default_value=false){
     var ocheck=document.getElementById(csid);
     return (ocheck?ocheck.checked:default_value);
 }
+
+function multiyear_average_growth_rate_b(first_year,first_value,last_year,last_value){
+    var bldivide=last_value/first_value;
+    if (bldivide>=0){
+        return blpow=Math.pow(bldivide,1/(last_year-first_year))-1;
+    }
+    return false;
+}

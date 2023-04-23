@@ -193,15 +193,15 @@ function company_rate_rank_b(csarray,district_index,year_index,revenue_index,den
     var flot_array={};
     for (let blxl=0;blxl<csarray.length;blxl++){
         var item=csarray[blxl];
-        if (flot_array[item[0]]==undefined){
-            flot_array[item[0]]=[item[0],item[district_index],[]];
+        var key='k_'+item[0];
+        if (flot_array[key]==undefined){
+            flot_array[key]=[item[0],item[district_index],[]];
         }
         var blvalue=item[revenue_index];
         if (blvalue=='' || isNaN(blvalue)){continue;}
         var blyear=parseInt(item[year_index].substring(0,4));
-        flot_array[item[0]][2].push([blyear,blvalue/denominator]);
+        flot_array[key][2].push([blyear,blvalue/denominator]);
     }
-    
     //------------------
     var list_t=[];
     for (let key in flot_array){
@@ -214,11 +214,10 @@ function company_rate_rank_b(csarray,district_index,year_index,revenue_index,den
     for (let item of list_t){
         if (item[2].length<2){continue;}   //只有一年 - 保留注释
         var first_item=item[2][0];
-        var last_item=item[2].slice(-1)[0];
-        var bldivide=last_item[1]/first_item[1];
-        if (bldivide>=0){
-            var blpow=Math.pow(bldivide,1/(last_item[0]-first_item[0]))-1;
-            rate_list.push([item[0],item[1],first_item[0],last_item[0],blpow]);    //企业，初始年分，结束年份，增长率 - 保留注释
+        var last_item=item[2].slice(-1)[0];        
+        var blpow=multiyear_average_growth_rate_b(first_item[0],first_item[1],last_item[0],last_item[1]);
+        if (blvalue!==false){
+            rate_list.push([item[0],item[1],first_item[0],last_item[0],blpow]);    //企业，地区，初始年分，结束年份，增长率 - 保留注释
         }
         else {
             console.log(item); //负数未计算 - 保留注释
