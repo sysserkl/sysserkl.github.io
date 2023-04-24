@@ -104,16 +104,16 @@ function sentence_source_location_ensentence(cspages,csmax){
 
 function minimum_ensentence(){
     en_word_temp_get_b();
-    words_searched_arr=[];
+    words_searched_arr_global=[];
     for (let item of en_sentence_count_global){
         for (let item2 of enwords){
             if (item2[0]==item[0]){
-                words_searched_arr.push(item2);
+                words_searched_arr_global.push(item2);
                 break;
             }
         }
     }
-    document.getElementById('divhtml').innerHTML=enwords_array_to_html_b(words_searched_arr,false)+enwords_batch_div_b(words_searched_arr,'');
+    document.getElementById('divhtml').innerHTML=enwords_array_to_html_b(words_searched_arr_global,false)+enwords_batch_div_b(words_searched_arr_global,'');
     show_sentence_enwc_b();
 }
 
@@ -275,16 +275,16 @@ function rare_old_words_ensentence(){
 
             var oldset=simple_words_b(true,true);
             en_word_temp_get_b();
-            words_searched_arr=[];            
+            words_searched_arr_global=[];            
             var blno=0;
             for (let arow of result_t){
                 if (!oldset.has(arow[0].toLowerCase())){continue;}
-                words_searched_arr.push(arow[0]);
+                words_searched_arr_global.push(arow[0]);
                 blno=blno+1;
                 if (blno>=2000){break;}
             }
-            var bltextarea='<textarea onclick="this.select();document.execCommand(\'copy\');">'+words_searched_arr.join('\n')+'</textarea>';
-            document.getElementById('divhtml').innerHTML=enwords_array_to_html_b(words_searched_arr,false)+bltextarea;
+            var bltextarea='<textarea onclick="this.select();document.execCommand(\'copy\');">'+words_searched_arr_global.join('\n')+'</textarea>';
+            document.getElementById('divhtml').innerHTML=enwords_array_to_html_b(words_searched_arr_global,false)+bltextarea;
             show_sentence_enwc_b();            
             console.log('rare_old_words_ensentence() 费时：'+(performance.now() - t0) + ' milliseconds');           
             return;

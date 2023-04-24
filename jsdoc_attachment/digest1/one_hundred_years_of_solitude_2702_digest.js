@@ -10,4 +10,6 @@ var digest_global=`
 *Augustine
 *Nicaragua
 *alpaca
+*inkwell
+*life-size
 `.trim().split('\n');

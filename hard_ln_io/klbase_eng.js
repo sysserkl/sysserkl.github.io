@@ -2121,19 +2121,18 @@ function words_count_enwords_b(){
     }
 }
 
-function recent_words_list_enwords_b(cspageno=0,words_count_per_page=100,israndom=false){
-	var blhtml = document.getElementById('divhtml');
-    words_searched_arr=en_words_temp_list_b();
-    var pages_count=Math.ceil(words_searched_arr.length/words_count_per_page);
+function recent_words_list_enwords_b(cspageno=0,words_count_per_page=100,israndom=false,show_html=true){
+    words_searched_arr_global=en_words_temp_list_b();
+    var pages_count=Math.ceil(words_searched_arr_global.length/words_count_per_page);
     //cspageno 从 1 开始，0表示当前书签单词所在页，-1表示全部 - 保留注释
     var recent_bookmark=enwords_recent_bookmark_get_b();
     if (cspageno==0){
-        if (recent_bookmark=='' && words_searched_arr.length>0){
-            recent_bookmark=words_searched_arr[0][0];
+        if (recent_bookmark=='' && words_searched_arr_global.length>0){
+            recent_bookmark=words_searched_arr_global[0][0];
         }
         var blat=0;
-        for (let blxl=0;blxl<words_searched_arr.length;blxl++){
-            if (words_searched_arr[blxl][0]==recent_bookmark){
+        for (let blxl=0;blxl<words_searched_arr_global.length;blxl++){
+            if (words_searched_arr_global[blxl][0]==recent_bookmark){
                 blat=blxl;
                 break;
             }
@@ -2143,23 +2142,27 @@ function recent_words_list_enwords_b(cspageno=0,words_count_per_page=100,isrando
     
     if (israndom){
         if (cspageno>1){
-            words_searched_arr=words_searched_arr.slice((cspageno-1)*words_count_per_page,);
-            for (let blxl=0;blxl<words_searched_arr.length;blxl++){
-                if (words_searched_arr[blxl][0]==recent_bookmark){
-                    words_searched_arr=words_searched_arr.slice(blxl,);
+            words_searched_arr_global=words_searched_arr_global.slice((cspageno-1)*words_count_per_page,);
+            for (let blxl=0;blxl<words_searched_arr_global.length;blxl++){
+                if (words_searched_arr_global[blxl][0]==recent_bookmark){
+                    words_searched_arr_global=words_searched_arr_global.slice(blxl,);
                     break;
                 }
             }
         }
 
-        words_searched_arr.sort(randomsort_b);
-        words_searched_arr=words_searched_arr.slice(0,words_count_per_page);
+        words_searched_arr_global.sort(randomsort_b);
+        words_searched_arr_global=words_searched_arr_global.slice(0,words_count_per_page);
     }
     else if (cspageno!==-1){
-        words_searched_arr=words_searched_arr.slice((cspageno-1)*words_count_per_page,cspageno*words_count_per_page);
+        words_searched_arr_global=words_searched_arr_global.slice((cspageno-1)*words_count_per_page,cspageno*words_count_per_page);
     }
-        
-	var bljg=enwords_array_to_html_b(words_searched_arr,true,true);
+
+    if (!show_html){
+        return words_searched_arr_global; 
+    }
+    
+	var bljg=enwords_array_to_html_b(words_searched_arr_global,true,true);
     var blweek=date_2_ymd_b(false,'w');    
     
     var blday=date_2_ymd_b(false,'d');
@@ -2179,8 +2182,8 @@ function recent_words_list_enwords_b(cspageno=0,words_count_per_page=100,isrando
         }
         page_html='<p>'+page_html+'</p>';
     }
-    
-    blhtml.innerHTML=bljg+page_html;
+
+	document.getElementById('divhtml').innerHTML=bljg+page_html;
     title_change_enwords_b('最近记忆的单词'+(cspageno==-1?'(全部)':'_第'+cspageno+'页'));
     document.location.href='#top';
     document.location.href='#a_recent_bookmark';
@@ -2242,7 +2245,7 @@ function similar_enwords_b(csword,cshideno,cshidelineno,cshidesimilarno,csshow){
 	var bllist=[];
 	var wordlength=csword.length;
     
-    words_searched_arr=[];
+    words_searched_arr_global=[];
     
 	// door 分解为 d oo r 和 d o o r 最终合并为 d o r oo - 保留注释
     for (let blxl=0;blxl<enwords.length;blxl++){
@@ -2253,8 +2256,8 @@ function similar_enwords_b(csword,cshideno,cshidelineno,cshidesimilarno,csshow){
 		
         //差集含有大于2元素则排除 - 保留注释
         var diff1=string_difference_b(csword,word2).length;
-        var diff2=string_difference_b(word2,csword).length;
         if (diff1>=2){continue;}
+        var diff2=string_difference_b(word2,csword).length;
         if (diff2>=2){continue;}
 
         var blvalue=wordlength-diff2;
@@ -2266,11 +2269,9 @@ function similar_enwords_b(csword,cshideno,cshidelineno,cshidesimilarno,csshow){
         return '';
     }
 	bllist.sort(function(a,b){return b[0]-a[0];});
-
+    bllist=bllist.slice(0,100);
 	var bljg='';
-	for (let blxl in bllist){
-		if (blxl>=100){break;}	// || bllist[blxl][0]<0.3
-
+	for (let blxl=0;blxl<bllist.length;blxl++){
 		var blno=bllist[blxl][1];
 
 		if (cshideno){
@@ -2298,7 +2299,7 @@ function similar_enwords_b(csword,cshideno,cshidelineno,cshidesimilarno,csshow){
 		else{
             bljg=bljg+'</li>';
         }
-        words_searched_arr.push(enwords[blno]);
+        words_searched_arr_global.push(enwords[blno]);
 	}
 
 	if (cshideno){
@@ -2310,7 +2311,7 @@ function similar_enwords_b(csword,cshideno,cshidelineno,cshidesimilarno,csshow){
 	bljg=bljg+'<p>';
 	
 	if (csshow){
-        document.getElementById('divhtml').innerHTML=bljg+enwords_batch_div_b(words_searched_arr,'')+enwords_js_wiki_textarea_b(words_searched_arr);
+        document.getElementById('divhtml').innerHTML=bljg+enwords_batch_div_b(words_searched_arr_global,'')+enwords_js_wiki_textarea_b(words_searched_arr_global);
     }
 	return bljg;
 }
@@ -2357,13 +2358,11 @@ function wordsearch_enwords_b(csword='',csreg=-1,cs_w_p_d=[],csnew_words=false,s
         enwords_search_show_html_b(blhtml,'','',csword,words_temp_arr,blequal);
     }
     
-    words_searched_arr=[];
-    for (let item of words_temp_arr){
-        words_searched_arr.push(item);
-    }
+    words_searched_arr_global=[].concat(words_temp_arr);
+
     if (showhtml){
         title_change_enwords_b('');
-        top_bottom_arrow_b('div_top_bottom',words_searched_arr.length+' ');
+        top_bottom_arrow_b('div_top_bottom',words_searched_arr_global.length+' ');
     }
 }
 

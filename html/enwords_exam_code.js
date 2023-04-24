@@ -72,18 +72,24 @@ function config_klexam(cstestno,cstype=''){
     cstestno = Math.min(enwords.length,Math.max(1, parseInt(cstestno)));
 
 	document.getElementById('testno').value=cstestno;
+
+    var today_list=[];
+    if (isrecent){
+        enwords_sort_b();
+        var today_list=recent_1_today_words_klexam();    
+    }
     
     enwords_sort_b('r');
 
 	var odiv = document.getElementById('divhtml');
 	odiv.innerHTML='';
-    return [isrecent,cstestno,odiv];
+    return [isrecent,cstestno,odiv,today_list];
 }
 
 function en2cn_klexam(csnumber='',cstype='en2cn'){
     var isrecent=false;
-    var odiv;
-    [isrecent,csnumber,odiv]=config_klexam(csnumber,cstype);
+    var odiv,today_list;
+    [isrecent,csnumber,odiv,today_list]=config_klexam(csnumber,cstype);
 
     var recent_type=document.getElementById('select_recent_enwords').value;
     var bllen=en_words_temp_global.length;
@@ -97,7 +103,7 @@ function en2cn_klexam(csnumber='',cstype='en2cn'){
 	for (let item of enwords){
         if (isrecent){
             var blat=en_words_temp_global.indexOf(item[0]);
-            if (check_recent_klexam(blat,item[0],recent_type,recent_half_len,bllen,important_list)==false){continue;}
+            if (check_recent_klexam(blat,item[0],recent_type,recent_half_len,bllen,important_list,today_list)==false){continue;}
         }
         include_no.add(blat);
 
@@ -107,7 +113,7 @@ function en2cn_klexam(csnumber='',cstype='en2cn'){
         blxl=blxl+1;
         if (blxl==csnumber){break;}
 	}
-    console.log(recent_type,Math.min(...include_no),Math.max(...include_no)); //此行保留 - 保留注释
+    console.log('en2cn_klexam()',recent_type,blxl,Math.min(...include_no),Math.max(...include_no)); //此行保留 - 保留注释
 
     if (bllink_t.slice(-1)=='|'){
         bllink_t=bllink_t.substring(0,bllink_t.length-1);
@@ -115,7 +121,7 @@ function en2cn_klexam(csnumber='',cstype='en2cn'){
     
 	bljg=bljg+'<p style="margin-top:0.5rem;"><span class="aclick" onclick="show_all_cn_klexam('+blxl+');">显示全部释义</span> ';
     if (!location.href.includes('rnd_english_words')){
-        bljg=bljg+'<a class=aclick href="enwords.htm?s=^('+bllink_t.replace(new RegExp(" ","g"),'\\s')+')$_reg" target=_blank>link</a> ';
+        bljg=bljg+'<a class=aclick href="enwords.htm?s=^('+bllink_t.replace(new RegExp(' ','g'),'\\s')+')$_reg" target=_blank>link</a> ';
     }
     bljg=bljg+'</p>'
 	odiv.innerHTML=bljg;
@@ -137,7 +143,7 @@ function init_klexam(){
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.4rem'));
 }
 
-function check_recent_klexam(csat,csword,recent_type,recent_half_len,en_words_temp_global_len,important_list){
+function check_recent_klexam(csat,csword,recent_type,recent_half_len,en_words_temp_global_len,important_list,today_list){
     if (csat==-1){
         return false;
     }
@@ -163,8 +169,21 @@ function check_recent_klexam(csat,csword,recent_type,recent_half_len,en_words_te
         case 'important':
             return important_list.includes(csword);
             break;
+        case '1-today':
+            return today_list.includes(csword);
+            break;            
     }
     return true;
+}
+
+function recent_1_today_words_klexam(){
+    var blday=parseInt(day_no_klexam());
+    var words=recent_words_list_enwords_b(1,100,false,false).concat(recent_words_list_enwords_b(blday,100,false,false));
+    var result_t=[];
+    for (let item of words){
+        result_t.push(item[0]);
+    }
+    return result_t;
 }
 
 function input_klexam(cstestno='',cstype='all'){
@@ -189,8 +208,8 @@ function input_klexam(cstestno='',cstype='all'){
     }
     //-----------------------
     var isrecent=false;
-    var odiv;
-    [isrecent,cstestno,odiv]=config_klexam(cstestno,cstype);
+    var odiv,today_list;
+    [isrecent,cstestno,odiv,today_list]=config_klexam(cstestno,cstype);
     var recent_type=document.getElementById('select_recent_enwords').value;
     
     var bllen=en_words_temp_global.length;
@@ -201,13 +220,15 @@ function input_klexam(cstestno='',cstype='all'){
     en_words_no_list_global=[];
     var bllink_t=[];
     var blxl=0;
+
     if (isrecent){
         var important_list=en_word_temp_get_b('important');
+
         var include_no=new Set();
         for (let blno=0;blno<enwords.length;blno++){
             var item=enwords[blno];
             var blat=en_words_temp_global.indexOf(item[0]);
-            if (check_recent_klexam(blat,item[0],recent_type,recent_half_len,bllen,important_list)==false){continue;}
+            if (check_recent_klexam(blat,item[0],recent_type,recent_half_len,bllen,important_list,today_list)==false){continue;}
             
             include_no.add(blat);
 
@@ -217,7 +238,7 @@ function input_klexam(cstestno='',cstype='all'){
             blxl=blxl+1;
             if (blxl==cstestno){break;}
         }
-        console.log('input_klexam()',recent_type,Math.min(...include_no),Math.max(...include_no)); //此行保留 - 保留注释
+        console.log('input_klexam()',recent_type,blxl,Math.min(...include_no),Math.max(...include_no)); //此行保留 - 保留注释
     }
     else {
         for (let blno=0;blno<enwords.length;blno++){
@@ -372,6 +393,14 @@ function showletter_klexam(csno){
     }
 }
 
+function day_no_klexam(){
+    var blday=date2str_b().slice(-2,);
+    if (blday!=='10' && blday!=='11'){
+        blday=blday.slice(-1);
+    }
+    return blday;
+}
+
 function buttons_klexam(){  //不能转换为htm，随机单词也用到 - 保留注释
     var bl1000='';
     if (en_words_temp_global.length>2000){
@@ -379,6 +408,8 @@ function buttons_klexam(){  //不能转换为htm，随机单词也用到 - 保�
         <option value='-1000'>最旧1000最近记忆单词</option>`
     }
 
+    var blday=day_no_klexam();
+    
     var bljg=`<p style="margin-bottom:0.5rem;">题目数量：<input type="number" id="testno" value=10 onkeyup="if (event.key=='Enter'){input_klexam();}"> 
     <span class="aclick" onclick="input_klexam();">生成</span>
     <span class="aclick" onclick="input_klexam('','recent');">Recent</span>
@@ -391,6 +422,7 @@ function buttons_klexam(){  //不能转换为htm，随机单词也用到 - 保�
     <option value='a-m'>a-m最近记忆单词</option>
     <option value='n-z'>n-z最近记忆单词</option>
     <option value='important'>important最近记忆单词</option>
+    <option value='1-today'>第1页和第${blday}页最近记忆单词</option>
     `+bl1000+`
     </select>
     </p>`;

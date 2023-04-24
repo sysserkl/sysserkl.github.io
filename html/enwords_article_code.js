@@ -13,7 +13,7 @@ function init_enarticle(){
     top_bottom_arrow_b('div_top_bottom','',true,(ismobile_b()?'1.8rem':'1.4rem'),true,true,2);
     menu_enarticle();
 
-    words_searched_arr=[];
+    words_searched_arr_global=[];
     enwords_init_b();
     input_date_set_enwords_b();
     

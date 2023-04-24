@@ -10,7 +10,7 @@ function get_day_words_enwc_b(csday='',csmonth='',cstype='new',cs_write_html=tru
     
     var csday2=months_b(csmonth-1)+csday; //当年第几天 - 保留注释
 	var bljg='';
-	words_searched_arr=[];
+	words_searched_arr_global=[];
 
     //旧单词 - 保留注释
     var array_num_t=cstype.match(/\d/g);
@@ -25,18 +25,18 @@ function get_day_words_enwc_b(csday='',csmonth='',cstype='new',cs_write_html=tru
         }
         array_num_t=array_unique_b(array_num_t);
     }
-    words_searched_arr=day_old_word_enwc_b(csday2,cstype,array_num_t,cs_write_html); //此处默认修改标题 - 保留注释
+    words_searched_arr_global=day_old_word_enwc_b(csday2,cstype,array_num_t,cs_write_html); //此处默认修改标题 - 保留注释
 
-	bljg=bljg+enwords_array_to_html_b(words_searched_arr);
+	bljg=bljg+enwords_array_to_html_b(words_searched_arr_global);
     bljg=bljg+'<p>'+pages_day_enwc_b('get_day_words_enwc_b',cstype,blyear,csmonth,csday)+'</p>';
 
     if (cs_write_html){
         bljg=bljg+'<p><span class="aclick" onclick="en_word_temp_batch_add_b();">批量添加当前条件下的单词为最近记忆单词</span></p>';
-    	bljg=bljg+enwords_batch_div_b(words_searched_arr,"");
-        bljg=bljg+enwords_js_wiki_textarea_b(words_searched_arr);
+    	bljg=bljg+enwords_batch_div_b(words_searched_arr_global,'');
+        bljg=bljg+enwords_js_wiki_textarea_b(words_searched_arr_global);
         document.getElementById('divhtml').innerHTML=bljg;
     }
-    return words_searched_arr;
+    return words_searched_arr_global;
 }
 
 function get_month_day_enwc_b(csday='',csmonth='',cs_write_input=true){
@@ -118,12 +118,12 @@ function article_words_list_enwc_b(csmonth=0,csday=0){
     if (csmonth==0 || csday==0){return;}
         
 	var blhtml = document.getElementById('divhtml');
-    words_searched_arr=en_lines_days_b(enwords_article,bldate);
-	var bljg=enwords_array_to_html_b(words_searched_arr);
+    words_searched_arr_global=en_lines_days_b(enwords_article,bldate);
+	var bljg=enwords_array_to_html_b(words_searched_arr_global);
     
     bljg=bljg+'<p>'+pages_day_enwc_b('article_words_list_enwc_b','',blyear,csmonth,csday)+'</p>';
     
-    blhtml.innerHTML=bljg+enwords_batch_div_b(words_searched_arr,'')+enwords_js_wiki_textarea_b(words_searched_arr);
+    blhtml.innerHTML=bljg+enwords_batch_div_b(words_searched_arr_global,'')+enwords_js_wiki_textarea_b(words_searched_arr_global);
 }
 
 function get_day_sentences_enwc_b(csday='',csmonth='',use_asc=true){
@@ -270,17 +270,17 @@ function getlines_enwc_b(csno,cslines){
         page_html='<p>'+page_html+'</p>';
     }
     
-	words_searched_arr=[];
+	words_searched_arr_global=[];
 	
 	for (let blxl=csno-1;blxl<csno+cslines-1;blxl++){
 		if (blxl>=bllength){break;}
 		
-		words_searched_arr.push(enwords[blxl]);
+		words_searched_arr_global.push(enwords[blxl]);
 	}
 
-    var bljg=page_html+enwords_array_to_html_b(words_searched_arr)+page_html;
+    var bljg=page_html+enwords_array_to_html_b(words_searched_arr_global)+page_html;
     enwords_recent_search_b('');
-	document.getElementById('divhtml').innerHTML=bljg+enwords_batch_div_b(words_searched_arr,'')+enwords_js_wiki_textarea_b(words_searched_arr);
+	document.getElementById('divhtml').innerHTML=bljg+enwords_batch_div_b(words_searched_arr_global,'')+enwords_js_wiki_textarea_b(words_searched_arr_global);
     title_change_enwords_b('');
 	document.location.href = '#content';
 }
@@ -593,12 +593,12 @@ function menu_base_enwc_b(){
 
 function recent_words_dead_enwc_b(){
     var list_t=en_words_temp_list_b(true,true);
-    words_searched_arr=[];
+    words_searched_arr_global=[];
     for (let item of list_t){
         if (item.includes('===')){continue;}
-        words_searched_arr.push([item,'[null]','']);
+        words_searched_arr_global.push([item,'[null]','']);
     }    
-    document.getElementById('divhtml').innerHTML=enwords_array_to_html_b(words_searched_arr,true);
+    document.getElementById('divhtml').innerHTML=enwords_array_to_html_b(words_searched_arr_global,true);
     show_sentence_enwc_b();                
 }
 
@@ -638,22 +638,22 @@ function getlines_rnd_enwc_b(cslines='',showhtml=true){
     
 	var bllength=enwords.length;
 	
-	words_searched_arr=[];
+	words_searched_arr_global=[];
 	var bllink_t='';
 	for (let blxl=0;blxl<cslines;blxl++){
 		if (blxl>=bllength){break;}
 		
-		words_searched_arr.push(enwords[blxl]);
+		words_searched_arr_global.push(enwords[blxl]);
 		bllink_t=bllink_t+enwords[blxl][0]+'|';
 	}
 	var blhtml = document.getElementById('divhtml');
-	var bljg=enwords_array_to_html_b(words_searched_arr)+'<p>';
+	var bljg=enwords_array_to_html_b(words_searched_arr_global)+'<p>';
     
     if (bllink_t.slice(-1)=='|'){
         bllink_t=bllink_t.substring(0,bllink_t.length-1);
     }
     if (showhtml){
-	    blhtml.innerHTML=bljg+'<p><span class="aclick" onclick="sls_search_link_generate_enwc_b(word_doms_txt_get_enwc_b());">link</span> <span class="aclick" onclick="en_word_temp_batch_add_b();">批量添加当前条件下的单词为最近记忆单词</span></p>'+enwords_batch_div_b(words_searched_arr,'');
+	    blhtml.innerHTML=bljg+'<p><span class="aclick" onclick="sls_search_link_generate_enwc_b(word_doms_txt_get_enwc_b());">link</span> <span class="aclick" onclick="en_word_temp_batch_add_b();">批量添加当前条件下的单词为最近记忆单词</span></p>'+enwords_batch_div_b(words_searched_arr_global,'');
         title_change_enwords_b('随机单词');
     }
     enwords_sort_b();
@@ -661,9 +661,9 @@ function getlines_rnd_enwc_b(cslines='',showhtml=true){
 
 function rnd_cn_search_enwc_b(cslines='',showhtml=true){
 	if (cslines===''){
-        var cslines= document.getElementById('input_lines').value.trim();
+        var cslines = document.getElementById('input_lines').value.trim();
     }
-    cslines= Math.min(max_result_enwords_b(),Math.max(0,parseInt(cslines)));
+    cslines = Math.min(max_result_enwords_b(),Math.max(0,parseInt(cslines)));
     if (isNaN(cslines)){
         cslines=20;
     }
@@ -672,30 +672,20 @@ function rnd_cn_search_enwc_b(cslines='',showhtml=true){
     enwords_sort_b('r');
     for (let bly=0;bly<10;bly++){
         var str_t=enwords[Math.max(0,parseInt(Math.random()*enwords.length))][2];
-        str_t=str_t.replace(new RegExp(/[\x00-\xff]/,'g'),' ');
-        str_t=str_t.replace(new RegExp('[；，。！？”“‘、《》【】（）—…]','g'),' ');
-
-        var list_t=str_t.split(' ');
-        list_t=array_unique_b(list_t);
-        str_t='';
-        for (let blxl in list_t){
-            //汉字长度>=2 - 保留注释
-            if (list_t[blxl].trim().length<2){continue;}
-            str_t=str_t+list_t[blxl]+' ';
-        }
-        document.getElementById('input_search').value=str_t;
+        str_t=str_t.replace(/[；，。！？”“‘、《》【】（）—…📋]/mg,' ');
+        var list_t=array_unique_b(str_t.match(/[^\x00-\xff]{2,5}/g) || []);
+        
+        document.getElementById('input_search').value=list_t.join(' ');
         wordsearch_enwords_b('',-1,[],false,showhtml);
         //即便如此，也有可能返回只有1个的结果 - 保留注释
-        if (words_searched_arr.length>=cslines){
-            break;
-        }
+        if (words_searched_arr_global.length>=cslines){break;}
     }
-    words_searched_arr=words_searched_arr.slice(0,cslines);
+    words_searched_arr_global=words_searched_arr_global.slice(0,cslines);
     if (showhtml){
         var blhtml = document.getElementById('divhtml');
-        var bljg=enwords_array_to_html_b(words_searched_arr);
+        var bljg=enwords_array_to_html_b(words_searched_arr_global);
         bljg=bljg+'<p><span class="aclick" onclick="en_word_temp_batch_add_b();">批量添加当前条件下的单词为最近记忆单词</span></p>';
-        bljg=bljg+enwords_batch_div_b(words_searched_arr,"")+enwords_js_wiki_textarea_b(words_searched_arr);
+        bljg=bljg+enwords_batch_div_b(words_searched_arr_global,'')+enwords_js_wiki_textarea_b(words_searched_arr_global);
         blhtml.innerHTML=bljg;
         title_change_enwords_b('随机中文词汇');
     }

@@ -934,7 +934,7 @@ function init_kle(){
     input_with_x_b('input_search',(ismobile_b()?11:22),'',false,'input_reg',true);
     top_bottom_arrow_b('div_top_bottom','',true,(ismobile_b()?'1.8rem':'1.4rem'),true,true,2);
 
-    words_searched_arr=[];  //全局变量 - 保留注释
+    words_searched_arr_global=[];  //全局变量 - 保留注释
     
     enwords_init_b();
     local_storage_today_b('enwords_statistics',40,enwords.length,'/');

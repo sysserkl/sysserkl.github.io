@@ -6,4 +6,7 @@ var digest_global=`
 *teleprompter
 *Yugoslavia
 *photocopier
+*diarist
+*gullible
+*troublemaker
 `.trim().split('\n');

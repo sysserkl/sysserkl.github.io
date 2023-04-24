@@ -16,13 +16,13 @@ function auto_enslide(csno){
 			break;
 		case 3:
 			if (csorder_t==2){
-                words_searched_arr.sort(randomsort_b);
+                words_searched_arr_global.sort(randomsort_b);
             }
 			break;
 		case 4:
 			cocktail_enslide();
 			if (csorder_t==2){
-                words_searched_arr.sort(randomsort_b);
+                words_searched_arr_global.sort(randomsort_b);
             }
 			break;
 	}
@@ -90,31 +90,31 @@ function show_enslide(csxl){
 			}
 			break;
 		case 3:
-			if (words_searched_arr.length==0){
+			if (words_searched_arr_global.length==0){
 				hide_enslide();
 				return;
 			}
-			if (csxl>words_searched_arr.length-1){
+			if (csxl>words_searched_arr_global.length-1){
 				csxl=0;
 				if (csorder_t==2){
-                    words_searched_arr.sort(randomsort_b);
+                    words_searched_arr_global.sort(randomsort_b);
                 }
 			}
-			var bljg=en_one_word_b(words_searched_arr[csxl],[-1,0,true]);
+			var bljg=en_one_word_b(words_searched_arr_global[csxl],[-1,0,true]);
 			break;
 		case 4:
-			if (words_searched_arr.length==0){
+			if (words_searched_arr_global.length==0){
 				hide_enslide();
 				return;
 			}
-			if (csxl>words_searched_arr.length-1){
+			if (csxl>words_searched_arr_global.length-1){
 				csxl=0;
 				cocktail_enslide();
 				if (csorder_t==2){
-                    words_searched_arr.sort(randomsort_b);
+                    words_searched_arr_global.sort(randomsort_b);
                 }
 			}
-			var bljg=en_one_word_b(words_searched_arr[csxl],[-1,0,true]);
+			var bljg=en_one_word_b(words_searched_arr_global[csxl],[-1,0,true]);
 			break;
 	}
 		
@@ -227,12 +227,12 @@ function cocktail_enslide(cslines='',cspercent=''){
         }
     }
 	//--------------
-    words_searched_arr=[];
+    words_searched_arr_global=[];
     for (let item of wordsarr_t){
-        words_searched_arr.push(item);
+        words_searched_arr_global.push(item);
     }
     wordsarr_t=[];
-    document.getElementById('divhtml').innerHTML=enwords_array_to_html_b(words_searched_arr);
+    document.getElementById('divhtml').innerHTML=enwords_array_to_html_b(words_searched_arr_global);
     
     title_change_enwords_b('鸡尾酒');
 }

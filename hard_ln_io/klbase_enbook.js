@@ -356,7 +356,7 @@ function array_2_html_enbook_b(csarray,oldset=new Set(),fn_name=''){
     }
     for (let item of csarray){  //csarray 有可能是 set - 保留注释
         var blword=item.replace(new RegExp('_','g'),' ');
-        bljg.push('<span>'+blsmall+(blxl+1)+'. </small>'+(oldset.has(blword)?'💧':'')+en_one_word_b([blword],[-1,0],'',true,true,true)+'</span>');
+        bljg.push('<span class="span_word_combination_enbook">'+blsmall+(blxl+1)+'. </small>'+(oldset.has(blword)?'💧':'')+en_one_word_b([blword],[-1,0],'',true,true,true)+'</span>');
         blxl=blxl+1;
     }
     return bljg;

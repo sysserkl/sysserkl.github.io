@@ -15,24 +15,24 @@ function olds_words_batch_today_words(rnd_words_num=0,cn_def_words_num=0){
         var list_t=[];
         
         get_day_words_enwc_b(theday.getDate(),theday.getMonth()+1,'old',false,false);
-        list_t=list_t.concat(words_searched_arr);
+        list_t=list_t.concat(words_searched_arr_global);
         
-        if (words_searched_arr.length>0){
-            bljg=bljg+enwords_array_to_html_b(words_searched_arr,false)+'<hr />';
+        if (words_searched_arr_global.length>0){
+            bljg=bljg+enwords_array_to_html_b(words_searched_arr_global,false)+'<hr />';
         }
         
         getlines_rnd_enwc_b(rnd_words_num,false);
-        list_t=list_t.concat(words_searched_arr);
+        list_t=list_t.concat(words_searched_arr_global);
 
-        if (words_searched_arr.length>0){
-            bljg=bljg+enwords_array_to_html_b(words_searched_arr,false)+'<hr />';
+        if (words_searched_arr_global.length>0){
+            bljg=bljg+enwords_array_to_html_b(words_searched_arr_global,false)+'<hr />';
         }
         
         rnd_cn_search_enwc_b(cn_def_words_num,false);
-        list_t=list_t.concat(words_searched_arr);
+        list_t=list_t.concat(words_searched_arr_global);
 
-        if (words_searched_arr.length>0){
-            bljg=bljg+enwords_array_to_html_b(words_searched_arr,false)+'<hr />';
+        if (words_searched_arr_global.length>0){
+            bljg=bljg+enwords_array_to_html_b(words_searched_arr_global,false)+'<hr />';
         }        
         
         result_t=result_t.concat(list_t);
@@ -48,11 +48,11 @@ function olds_words_batch_today_words(rnd_words_num=0,cn_def_words_num=0){
         if (islast || blxl>30){break;}
     }
 
-    words_searched_arr=[].concat(result_t);
+    words_searched_arr_global=[].concat(result_t);
     
     var blhtml = document.getElementById('divhtml');
-    blhtml.innerHTML=bljg+'<p><span class="aclick" onclick="en_word_temp_batch_add_b();">批量添加当前条件下的单词为最近记忆单词</span></p>'+enwords_batch_div_b(words_searched_arr)+enwords_js_wiki_textarea_b(words_searched_arr);
-    top_bottom_arrow_b('div_top_bottom',words_searched_arr.length+' ');    
+    blhtml.innerHTML=bljg+'<p><span class="aclick" onclick="en_word_temp_batch_add_b();">批量添加当前条件下的单词为最近记忆单词</span></p>'+enwords_batch_div_b(words_searched_arr_global)+enwords_js_wiki_textarea_b(words_searched_arr_global);
+    top_bottom_arrow_b('div_top_bottom',words_searched_arr_global.length+' ');    
     
     title_change_enwords_b('旧单词+rnd'+rnd_words_num+'+cn'+cn_def_words_num);
 }
@@ -84,15 +84,15 @@ function rnd_batch_today_words(cstype=''){
         else {
             getlines_rnd_enwc_b(blnum,false);
         }
-        list_t=list_t.concat(words_searched_arr);
+        list_t=list_t.concat(words_searched_arr_global);
 
-        bljg=bljg+'<h3>'+blxl+'</h3>'+enwords_array_to_html_b(words_searched_arr,false)+'<hr />';
+        bljg=bljg+'<h3>'+blxl+'</h3>'+enwords_array_to_html_b(words_searched_arr_global,false)+'<hr />';
     }
     
-    words_searched_arr=[].concat(list_t);
+    words_searched_arr_global=[].concat(list_t);
     var blhtml = document.getElementById('divhtml');
-    blhtml.innerHTML=bljg+'<p><span class="aclick" onclick="en_word_temp_batch_add_b();">批量添加当前条件下的单词为最近记忆单词</span></p>'+enwords_batch_div_b(words_searched_arr)+enwords_js_wiki_textarea_b(words_searched_arr);
-    top_bottom_arrow_b('div_top_bottom',words_searched_arr.length+' ');
+    blhtml.innerHTML=bljg+'<p><span class="aclick" onclick="en_word_temp_batch_add_b();">批量添加当前条件下的单词为最近记忆单词</span></p>'+enwords_batch_div_b(words_searched_arr_global)+enwords_js_wiki_textarea_b(words_searched_arr_global);
+    top_bottom_arrow_b('div_top_bottom',words_searched_arr_global.length+' ');
 }
 
 function set_today_words(){
@@ -147,7 +147,7 @@ function init_today_words(){
     enwords_mini_search_frame_style_b();
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.4rem'),true,false,2);
     
-    words_searched_arr=[];  //全局变量 - 保留注释
+    words_searched_arr_global=[];  //全局变量 - 保留注释
 
     enwords_init_b();
     local_storage_today_b('enwords_statistics',40,enwords.length,'/');

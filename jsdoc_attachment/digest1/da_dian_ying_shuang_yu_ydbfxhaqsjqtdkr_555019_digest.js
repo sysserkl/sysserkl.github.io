@@ -1,12 +1,34 @@
 var digest_global=`
-*Uzbekistan
 *Belize
-*turbojet
+*bottleneck
+*bullhorn
+*cartilage
+*civil engineering
+*comfy
+*compatriot
+*cyclist
+*dispose
+*district attorney
+*guardrail
+*gymnast
+*henchman
+*hoarsely
+*hungrily
+*jailbait
 *Nagasaki
 *ninja
-*gymnast
-*jailbait
-*district attorney
-*civil engineering
+*nuclei
+*nutcase
+*outflow
+*overeager
+*overt
+*playboy
 *pricy
+*pursuer
+*pushup
+*snoop
+*thermonuclear
+*turbojet
+*Uzbekistan
+*wingless
 `.trim().split('\n');
