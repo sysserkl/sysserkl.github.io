@@ -369,7 +369,7 @@ function selenium_contain_enwords_book(){
             result_t[key_name]=[[],new Set(word_list)];
         }
 
-        var words=array_2_html_enbook_b(word_list,oldset,'selenium_count_enwords_book').join(' ');        
+        var words=enwords_array_to_links_b(word_list,oldset,'selenium_count_enwords_book').join(' ');        
         result_t[key_name][0].push([selenium_list_container_generation_book(html,words),word_list.length]);
     }
 
@@ -423,7 +423,7 @@ function selenium_one2more_enwords_book(){
             result_t['s_'+key_name]=[];
         }
         
-        var words=array_2_html_enbook_b(word_list,oldset,'selenium_count_enwords_book').join(' ');        
+        var words=enwords_array_to_links_b(word_list,oldset,'selenium_count_enwords_book').join(' ');        
         result_t['s_'+key_name].push([selenium_list_container_generation_book(html,words),word_list.length]);
     }
 
@@ -488,7 +488,7 @@ function selenium_list_enwords_book(use_cache=false,cstype=''){
             html=html+' ⚓';
         }
         html=html+'</h3>\n';
-        var words=array_2_html_enbook_b(item[3].split(' '),oldset,'selenium_count_enwords_book').join(' ');
+        var words=enwords_array_to_links_b(item[3].split(' '),oldset,'selenium_count_enwords_book').join(' ');
         if (result_t['k_'+item[2]]==undefined){
             result_t['k_'+item[2]]=[];
         }
@@ -1073,7 +1073,7 @@ function new_and_common_enwords_book(csresult,cslength,common_max){
 
 function common_word_sign_set_enwords_book(csset){
     var t0 = performance.now();
-    var ospans=document.querySelectorAll('span.span_word_combination_enbook');
+    var ospans=document.querySelectorAll('span.span_word_combination_enword');
     for (let one_span of ospans){
         var osub=one_span.querySelector('span.a_word');
         if (!osub){continue;}

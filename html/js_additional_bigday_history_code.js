@@ -5,13 +5,13 @@ function style_load_bigday_history(){
 
 function file_load_bigday_history(){
     function sub_file_load_bigday_history_flot(){
-        file_list=flot_import_js_b(['time','symbol'],true,false); 
+        file_list=flot_import_js_b(['time','symbol'],false,false); 
+        //元素形如：[ "js", "http://xxx/module/flot/jquery.flot.min.js", "" ] - 保留注释
         file_dom_create_b(file_list,true,'js');
     }
     //------------------
     var file_list=klbase_addons_import_js_b(['date','flot'],[],[],[],true,false);
     file_dom_create_b(file_list,true,'js');
-    
     load_fn_b('flot_import_js_b',-1,2000,sub_file_load_bigday_history_flot);
 }
 
@@ -91,10 +91,13 @@ function statistics_bigday_history(cstype){
                 }
                 md_list[the_date]=md_list[the_date]+1;
             }
-            result_t=object2array_b(md_list,true,3);
-            for (let blxl=0;blxl<result_t.length;blxl++){
-                result_t[blxl][0]=validdate_b('2000年'+result_t[blxl][0]);
+            list_t=object2array_b(md_list,true,3);
+            for (let item of list_t){
+                item[0]=validdate_b('2000年'+item[0]);
+                if (item[0]===false){continue;}
+                result_t.push(item);
             }
+            
             result_t.sort(function (a,b){return a[0]>b[0];});
             result_t=date_list_insert_zero_b(result_t);
             caption='逐日分布';

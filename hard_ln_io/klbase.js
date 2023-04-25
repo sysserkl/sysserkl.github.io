@@ -338,9 +338,9 @@ function file_dom_create_b(file_list,in_head=true,cstype='js'){
                 
     for (let afile of file_list){
         if (Array.isArray(afile)){
-            if (afile.length==3){
+            if (afile.length==3){   //[ "js", "http://xxx/module/jquery.js", "" ] - 保留注释
                 cstype=afile[0];
-                afile=afile[1]; //[ "js", "http://127.0.0.1/klwebphp/PythonTools/data/selenium_news/module/jquery.js", "" ] - 保留注释
+                afile=afile[1]; 
             }
             else {
                 console.log('error',afile);
@@ -967,6 +967,10 @@ function local_storage_key_length_b(key_list,sort_index=1,is_reverse=true){
     }
     else {
         blcontent.sort(function (a,b){return a[sort_index]>b[sort_index];});
+    }
+    
+    for (let blxl=0;blxl<blcontent.length;blxl++){
+        blcontent[blxl].push((blcontent[blxl][1]*100/total_len).toFixed(2)+'%');
     }
     return [blcontent,total_len];
 }

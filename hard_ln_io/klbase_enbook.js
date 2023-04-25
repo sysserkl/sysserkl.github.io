@@ -284,7 +284,7 @@ function new_words_continue_enbook_b(cslength,percent10length=0){
         }
         else {
             alert('done');
-            location.href="?";
+            location.href='?';
         }
     }
 }
@@ -328,7 +328,7 @@ function new_old_words_html_enbook_b(csarray,csname,csaname='',onlytitle=false){
         return bltitle;
     }
     
-    var bljg=array_2_html_enbook_b(csarray);
+    var bljg=enwords_array_to_links_b(csarray);
     var blsort='<span class="aclick" onclick="sort_enwords_enbook_b(this,0);">原始顺序</span>';
     blsort=blsort+'<span class="aclick" onclick="sort_enwords_enbook_b(this);">排序</span>';
     blsort=blsort+'<span class="aclick" onclick="sort_enwords_enbook_b(this,\'tail\');">尾部排序</span>';
@@ -343,23 +343,6 @@ function new_old_words_html_enbook_b(csarray,csname,csaname='',onlytitle=false){
 function show_hide_words_enbook_b(ospan){
     var odiv=ospan.parentNode.parentNode.querySelector('div.div_enwords_links');
     odiv.style.display=(odiv.style.display==''?'none':'');
-}
-
-function array_2_html_enbook_b(csarray,oldset=new Set(),fn_name=''){
-    var bljg=[];
-    var blxl=0;
-    if (fn_name==''){
-        blsmall='<small>';
-    }
-    else {
-        blsmall='<small style="cursor:pointer;" onclick="'+fn_name+'(this);">';
-    }
-    for (let item of csarray){  //csarray 有可能是 set - 保留注释
-        var blword=item.replace(new RegExp('_','g'),' ');
-        bljg.push('<span class="span_word_combination_enbook">'+blsmall+(blxl+1)+'. </small>'+(oldset.has(blword)?'💧':'')+en_one_word_b([blword],[-1,0],'',true,true,true)+'</span>');
-        blxl=blxl+1;
-    }
-    return bljg;
 }
 
 function sort_enwords_enbook_b(oa,cstype=''){
@@ -390,7 +373,7 @@ function sort_enwords_enbook_b(oa,cstype=''){
             csarray.sort(randomsort_b);
             break;        
     }
-    var bljg=array_2_html_enbook_b(csarray);
+    var bljg=enwords_array_to_links_b(csarray);
     olinksdiv.innerHTML=bljg.join(' ')+enwords_batch_div_b(csarray);
     console.log('sort_enwords_enbook_b() 费时：'+(performance.now() - t0) + ' milliseconds'); 
 }

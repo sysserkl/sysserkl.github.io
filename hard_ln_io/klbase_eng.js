@@ -1315,6 +1315,23 @@ function enwords_temp_2_local_storage_b(csarray){
     localStorage.setItem('enwords_temp',result_t.join('\n'));
 }
 
+function enwords_array_to_links_b(csarray,oldset=new Set(),fn_name=''){
+    var bljg=[];
+    var blxl=0;
+    if (fn_name==''){
+        blsmall='<small>';
+    }
+    else {
+        blsmall='<small style="cursor:pointer;" onclick="'+fn_name+'(this);">';
+    }
+    for (let item of csarray){  //csarray 有可能是 set - 保留注释
+        var blword=item.replace(new RegExp('_','g'),' ');
+        bljg.push('<span class="span_word_combination_enword">'+blsmall+(blxl+1)+'. </small>'+(oldset.has(blword)?'💧':'')+en_one_word_b([blword],[-1,0],'',true,true,true)+'</span>');
+        blxl=blxl+1;
+    }
+    return bljg;
+}
+
 function enwords_array_to_html_b(csarray,showstatus=true,isrecent=false,csword=''){
     if (document.getElementById('check_hide_no')){
 	    var cshideno=document.getElementById('check_hide_no').checked;
