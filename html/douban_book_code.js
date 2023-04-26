@@ -76,31 +76,46 @@ function menu_dbb(){
     var str_t=klmenu_hide_b('');
     var klmenu1=[
     '<a href="https://book.douban.com" onclick="'+str_t+'" target=_blank>豆瓣读书</a>',    
-    '<span class="span_menu" onclick="'+str_t+'search_dbb(false,\'txtbook\');">当前条件已购书籍</span>',    
-    '<span class="span_menu" onclick="'+str_t+'search_dbb(false,\'ignore\');">当前条件忽略书籍</span>',    
     ];
+    
+    var group_list=[
+    ['已购','search_dbb(false,\'txtbook\');',true],
+    ['忽略','search_dbb(false,\'ignore\');',true],
+    ];    
+    klmenu1.push(menu_container_b(str_t,group_list,'当前条件书籍：'));    
     
     var klmenu_statistics=[
     '<span class="span_menu" onclick="'+str_t+'statistics_key_year_line_dbb(\'people\',[\'count\',\'sum\'],[\'本\',\'人\']);">评论人数年份图</span>',
     '<span class="span_menu" onclick="'+str_t+'statistics_key_year_line_dbb(\'rating\',[\'count\',\'average\'],[\'本\',\'分\']);">平均分年份图</span>',
-    '<span class="span_menu" onclick="'+str_t+'statistics_textarea_values_dbb(\'rating\');">当前条件全部评分</span>',    
     ];
-    
-    var statistics_list=[
+
+    var group_list=[
+    ['全部评分','statistics_textarea_values_dbb(\'rating\');',true],
+    ['书名','statistics_textarea_values_dbb(\'title\');',true],
+    ];    
+    klmenu_statistics.push(menu_container_b(str_t,group_list,'当前条件：'));    
+
+    var group_list=[
+    ['书名','statistics_textarea_values_dbb(\'title\',true);',true],
+    ['作者','statistics_textarea_values_dbb(\'作者\',true);',true],
+    ];    
+    klmenu_statistics.push(menu_container_b(str_t,group_list,'当前页：'));    
+        
+    group_list=[
     ['出版社','statistics_key_pie_dbb(\'出版社\');',true],
     ['出版年','statistics_key_pie_dbb(\'publication_year\');',true],
     ['评分','statistics_key_pie_dbb(\'rating\');',true],
     ];    
-    klmenu_statistics.push(menu_container_b(str_t,statistics_list,'统计: '));    
+    klmenu_statistics.push(menu_container_b(str_t,group_list,'统计：'));    
     
-    statistics_list=[
+    group_list=[
     ['英语','jieba_dbb(\'en\');',true],
     ['非英语','jieba_dbb(\'cn\');',true],
     ];    
-    klmenu_statistics.push(menu_container_b(str_t,statistics_list,'当前条件分词: '));        
+    klmenu_statistics.push(menu_container_b(str_t,group_list,'当前条件分词：'));        
 
     var klmenu_config=[
-    '<span class="span_menu">排序：<select id="select_sort_type_dbb" onchange="'+klmenu_hide_b('',true)+'"><option></option><option selected>评分</option><option>人数</option><option>出版年</option><option>页数</option><option>定价</option><option>随机</option></select></span>',    
+    '<span class="span_menu">排序：<select id="select_sort_type_dbb" onchange="'+klmenu_hide_b('',true)+'"><option></option><option>书名</option><option selected>评分</option><option>人数</option><option>出版年</option><option>页数</option><option>定价</option><option>随机</option></select></span>',    
     '<span id="span_reg_dbb" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ reg</span>',
     '<span id="span_txtbook_icon_dbb" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 标记已有书籍</span>',
     '<span id="span_bought_show_dbb" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 显示已有书籍</span>',    
@@ -222,7 +237,7 @@ function search_dbb(cskey=false,cstype=''){
     console.log('空白年记录数：'+empty_year_count);
     
     var sort_type=document.getElementById('select_sort_type_dbb').value;
-    if (['人数','出版年','页数','定价'].includes(sort_type)){
+    if (['书名','人数','出版年','页数','定价'].includes(sort_type)){
         current_result_dbb_global.sort(function (a,b){return a[0]['rating']<b[0]['rating'];});    //评分排序 - 保留注释
         current_result_dbb_global.sort(function (a,b){return zh_sort_b(a,b,false,1);}); //书名排序 - 保留注释       
     }
@@ -248,7 +263,9 @@ function search_dbb(cskey=false,cstype=''){
             current_result_dbb_global.sort(randomsort_b);
             break;
         default:
-            current_result_dbb_global.sort(function (a,b){return zh_sort_b(a,b,false,1);});
+            if (sort_type!=='书名'){
+                current_result_dbb_global.sort(function (a,b){return zh_sort_b(a,b,false,1);});
+            }
     }
     result_percent_b('span_count',current_result_dbb_global.length,douban_book_global.length,3);
 
@@ -365,21 +382,43 @@ function locate_dbb(pages){
     }        
 }
 
-function statistics_textarea_values_dbb(cstype){
+function statistics_textarea_values_dbb(cstype,is_current_page=false){
     var list_t=statistics_key_value_dbb(cstype);
     var blbutton='<p>'+close_button_b('div_statistics','')+'</p>';
     var odiv=document.getElementById('div_statistics');
-    odiv.innerHTML = '<textarea style="height:20rem;">'+list_t+'</textarea>'+blbutton;    
+    if (cstype!=='rating'){
+        var delimiter='\n';    
+        list_t=array_unique_b(list_t);
+    }
+    else {
+        var delimiter=',';
+    }
+    odiv.innerHTML = '<textarea style="height:20rem;">'+list_t.join(delimiter)+'</textarea>'+blbutton;    
     odiv.scrollIntoView();    
 }
 
-function statistics_key_value_dbb(cskey){
+function statistics_key_value_dbb(cskey,is_current_page=false){
     var result_t=[];
+    if (is_current_page){
+        var ofont=document.querySelector('font.font_current_no_b');
+        if (ofont){
+            var blstart=parseInt(ofont.innerText)-1;
+        }
+        else {
+            var blstart=0;
+        }
+        var csarray=current_result_dbb_global.slice(blstart*rows_per_page_dbb_global,);
+        csarray=csarray.slice(0,rows_per_page_dbb_global);
+    }
+    else {
+        var csarray=current_result_dbb_global;
+    }
     for (let arow of current_result_dbb_global){
         var blvalue=arow[0][cskey]; 
         if (blvalue==undefined){continue;}
         result_t.push(blvalue);
     }
+    
     switch (cskey){
         case 'publication_year':
             var year_list=[];

@@ -1,6 +1,20 @@
 var digest_global=`
-*grocery
-*bondsman
 *bean curd
+*bondsman
+*calfskin
+*conductivity
+*dizzily
 *emigrant
+*grocery
+*handcuff
+*ideologically
+*louse
+*omnipresent
+*ponder
+*recharge
+*recyclable
+*repairman
+*substandard
+*switchboard
+*whey
 `.trim().split('\n');

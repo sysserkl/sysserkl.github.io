@@ -281,7 +281,7 @@ function rare_old_words_ensentence(){
                 if (!oldset.has(arow[0].toLowerCase())){continue;}
                 words_searched_arr_global.push(arow[0]);
                 blno=blno+1;
-                if (blno>=2000){break;}
+                if (blno>=2000 || arow[1]>1 && blno>100){break;} 
             }
             var bltextarea='<textarea onclick="this.select();document.execCommand(\'copy\');">'+words_searched_arr_global.join('\n')+'</textarea>';
             document.getElementById('divhtml').innerHTML=enwords_array_to_html_b(words_searched_arr_global,false)+bltextarea;
