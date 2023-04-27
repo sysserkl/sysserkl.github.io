@@ -2802,3 +2802,18 @@ function multiyear_average_growth_rate_b(first_year,first_value,last_year,last_v
     }
     return false;
 }
+
+function window_is_closed_b(owindow,wait_times,csmax=10){
+    if (wait_times>csmax){
+        console.log(new Date().toLocaleString(), '强制关闭窗口，等待次数',wait_times);
+        owindow.close();
+    }
+    
+    if (owindow===false || owindow.closed){
+        return [true,wait_times];
+    }
+    else {
+        wait_times=wait_times+1;
+        return [false,wait_times];
+    }    
+}

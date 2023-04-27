@@ -120,7 +120,8 @@ function menu_dbb(){
     '<span id="span_txtbook_icon_dbb" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 标记已有书籍</span>',
     '<span id="span_bought_show_dbb" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 显示已有书籍</span>',    
     '<span id="span_txtbook_ignore_dbb" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 显示被忽略的书籍</span>',    
-    '<span class="span_menu" onclick="'+str_t+'standalone_search_dbb();">当前结果导出为 standalone search</span>',    
+    '<span class="span_menu" onclick="'+str_t+'ignore_books_list_dbb();">忽略书籍名单</span>',    
+    '<span class="span_menu" onclick="'+str_t+'standalone_dbb();">当前结果导出为 standalone search</span>',    
     ];
     klmenu_config=klmenu_config.concat(root_font_size_menu_b(str_t));
     
@@ -129,7 +130,7 @@ function menu_dbb(){
     klmenu_check_b('span_txtbook_icon_dbb',true);        
 }
 
-function standalone_search_dbb(){
+function standalone_dbb(){
     var bltitle=prompt('输入标题');
     if (bltitle==null){return;}
     if (bltitle.trim()==''){
@@ -274,12 +275,62 @@ function search_dbb(cskey=false,cstype=''){
     page_dbb(1);
 }
 
+function ignore_books_list_dbb(){
+    var all_books=new Set();
+    for (let abook of douban_book_global){
+        all_books.add(abook['title']);
+    }
+    var column_count=(ismobile_b()?2:5);
+    var old_size=ignored_books_dbb_global.size;    
+    
+    var diff_with_all_set=array_difference_b(ignored_books_dbb_global,all_books,true);
+    var intersect_with_txtbook_set=array_intersection_b(ignored_books_dbb_global,csbooklist_source_global,true);
+    
+    var blnotfound=(diff_with_all_set.size==0 && intersect_with_txtbook_set.size==0);
+    
+    if (blnotfound){
+        var bljg='共有'+old_size+'个忽略书籍。';
+    }
+    else {
+        var bljg='原共有'+old_size+'个忽略书籍。';    
+    }
+    
+    if (diff_with_all_set.size==0){
+        bljg=bljg+'未发现不在全部书籍中的忽略书籍名单。';
+    }
+    else {
+        bljg=bljg+'发现'+diff_with_all_set.size+'个不在全部书籍中的忽略书籍。';
+        ignored_books_dbb_global=array_difference_b(ignored_books_dbb_global,diff_with_all_set,true);       
+        bljg=bljg+'<h3>清除名单</h3>';
+        bljg=bljg+'<div style="column-count:'+column_count+';">'+array_2_li_b(Array.from(diff_with_all_set))+'</div>';
+    }
+    
+    if (intersect_with_txtbook_set.size==0){
+        bljg=bljg+'未发现在txtbook书籍中的忽略书籍名单。';
+    }
+    else {
+        bljg=bljg+'发现'+intersect_with_txtbook_set.size+'个在txtbook书籍中的忽略书籍。';    
+        ignored_books_dbb_global=array_difference_b(ignored_books_dbb_global,intersect_with_txtbook_set,true); 
+        bljg=bljg+'<h3>清除名单</h3>';
+        bljg=bljg+'<div style="column-count:'+column_count+';">'+array_2_li_b(Array.from(intersect_with_txtbook_set))+'</div>';
+    }
+   
+    var list_t=Array.from(ignored_books_dbb_global);
+    list_t.sort(function (a,b){return zh_sort_b(a,b);});
+    if (blnotfound==false){
+        localStorage.setItem('ignored_books_dbb',list_t.join('\n'));
+    }
+    
+    bljg=bljg+'<h3>现有名单</h3><div style="column-count:'+column_count+';">'+array_2_li_b(list_t)+'</div>';
+    document.getElementById('divhtml').innerHTML=bljg;    
+}
+
 function popup_dbb(event,ospan){
     var oa=ospan.parentNode.querySelector('a.a_title_dbb');
     if (!oa){return;}
     var bltitle=oa.innerText;
     var bllink=[
-    '<a href="https://www.amazon.cn/gp/search?field-keywords='+bltitle+'" target=_blank>𝐀</a>',
+    '<a href="https://www.amazon.cn/s?k='+bltitle+'" target=_blank>𝐀</a>',
     '<a href="https://www.bing.com/search?q='+bltitle+'" target=_blank>𝐁</a>',
     '<a href="https://book.douban.com/subject_search?search_text='+bltitle+'" target=_blank>豆</a>',
     '<a href="http://searchb.dangdang.com/?key='+bltitle+'" target=_blank>当</a>',
@@ -329,8 +380,7 @@ function ignore_set_dbb(cshref,ospan){
         ospan.innerText='忽略';
         ignored_books_dbb_global.delete(blname);
     }
-    
-    localStorage.setItem('ignored_books_dbb',Array.from(ignored_books_dbb_global).join('\n'));
+    localStorage.setItem('ignored_books_dbb',list_t.join('\n'));
 }
 
 function arow_dbb(arow,show_txtbook=false){
@@ -382,9 +432,69 @@ function locate_dbb(pages){
     }        
 }
 
+function title_simple_name_dbb(simplify=true){
+    var otextarea=document.querySelector('div#div_statistics textarea');
+    if (!otextarea){return [];}
+    var blstr=otextarea.value.trim();
+    if (blstr==''){return [];}
+    
+    var list_t=blstr.split('\n');
+    if (simplify){
+        var result_t=new Set();
+        for (let arow of list_t){
+            arow=arow.replace(/^(.+)[\(（].*$/g,'$1');
+            arow=arow.replace(/[·\s]*[0-9\-_]+$/g,'');
+            arow=arow.replace(/\s*[IVX]+$/g,'');
+            arow=arow.replace(/\s*vol\.?$/ig,'');
+            arow=arow.trim();
+            if (ignored_books_dbb_global.has(arow) || csbooklist_source_global.has(arow)){continue;}
+            result_t.add(arow);
+        }
+        result_t=Array.from(result_t);
+        otextarea.value=result_t.join('\n');
+        return result_t;        
+    }
+    else {
+        return list_t;
+    }
+}
+
+function amazon_title_batch_dbb(){
+    function sub_amazon_title_batch_dbb_one_title(){
+        [is_closed,wait_times]=window_is_closed_b(owindow,wait_times,10);
+        if (!is_closed){
+            setTimeout(sub_amazon_title_batch_dbb_one_title,2000);
+            return;
+        }
+        
+        if (blxl>=bllen){
+            var used_seconds=(new Date()-start_time)/1000;
+            console.log(new Date().toLocaleString(), '完成，扫描了',scanned_count,'条。费时：',(used_seconds/bllen).toFixed(2)+'秒');
+            document.title=old_title;
+            return;
+        }
+        owindow=window.open('https://www.amazon.cn/s?k='+encodeURIComponent(list_t[blxl])+'&autoclose=1');
+        blxl=blxl+1;
+        wait_times=0;
+        setTimeout(sub_amazon_title_batch_dbb_one_title,2000);        
+    }
+    //--------------------------
+    var list_t=title_simple_name_dbb(false);
+    var bllen=list_t.length;
+    if (list_t.length==0){return;}
+    if (!confirm('是否在亚马逊批量搜索'+list_t.length+'条记录？')){return;}
+    var blxl=0;
+    var wait_times=0;
+    var owindow=false;
+    var is_closed=false;
+    var start_time=new Date();
+    var scanned_count=0;
+    var old_title=document.title;    
+    sub_amazon_title_batch_dbb_one_title();
+}
+
 function statistics_textarea_values_dbb(cstype,is_current_page=false){
-    var list_t=statistics_key_value_dbb(cstype);
-    var blbutton='<p>'+close_button_b('div_statistics','')+'</p>';
+    var list_t=statistics_key_value_dbb(cstype,is_current_page);
     var odiv=document.getElementById('div_statistics');
     if (cstype!=='rating'){
         var delimiter='\n';    
@@ -393,7 +503,13 @@ function statistics_textarea_values_dbb(cstype,is_current_page=false){
     else {
         var delimiter=',';
     }
-    odiv.innerHTML = '<textarea style="height:20rem;">'+list_t.join(delimiter)+'</textarea>'+blbutton;    
+    
+    var blbuttons='<p>';
+    blbuttons=blbuttons+'<span class="aclick" onclick="title_simple_name_dbb();">去除书籍尾部序号及已忽略和已购书籍</span>';    
+    blbuttons=blbuttons+'<span class="aclick" onclick="amazon_title_batch_dbb();">亚马逊批量检索</span>';    
+    blbuttons=blbuttons+close_button_b('div_statistics','');
+    blbuttons=blbuttons+'</p>';
+    odiv.innerHTML = '<textarea style="height:20rem;">'+list_t.join(delimiter)+'</textarea>'+blbuttons;    
     odiv.scrollIntoView();    
 }
 
@@ -407,13 +523,12 @@ function statistics_key_value_dbb(cskey,is_current_page=false){
         else {
             var blstart=0;
         }
-        var csarray=current_result_dbb_global.slice(blstart*rows_per_page_dbb_global,);
-        csarray=csarray.slice(0,rows_per_page_dbb_global);
+        var csarray=current_result_dbb_global.slice(blstart*rows_per_page_dbb_global,(blstart+1)*rows_per_page_dbb_global);
     }
     else {
         var csarray=current_result_dbb_global;
     }
-    for (let arow of current_result_dbb_global){
+    for (let arow of csarray){
         var blvalue=arow[0][cskey]; 
         if (blvalue==undefined){continue;}
         result_t.push(blvalue);

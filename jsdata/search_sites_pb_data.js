@@ -74,7 +74,7 @@ var search_sites_list_global=[
 ['https://s.taobao.com/search?q=','',4,'','淘宝','','Shopping',''],
 ['https://list.tmall.com/search_product.htm?q=','',4,'','天猫','','Shopping',''],
 ['https://search.jd.com/Search?keyword=','&enc=utf-8',0,'','京东','','Shopping',''],
-['https://www.amazon.cn/gp/search?field-keywords=','',0,'','亚马逊','0','Shopping',''],
+['https://www.amazon.cn/s?k=','',0,'','亚马逊','0','Shopping',''],
 ['http://book.douban.com/subject_search?search_text=','',0,'','豆瓣读书','0','Shopping',''],
 ['http://searchb.dangdang.com/?key=','',4,'','当当','','Shopping',''],
 ['http://search.suning.com/emall/search.do?keyword=','',0,'','苏宁','','Shopping',''],
