@@ -67,11 +67,38 @@ function new_filter_form_klwebsites(){
     bljg=bljg+'<textarea id="textarea_filter_exist_href_klwebsites" style="height:10rem;"></textarea>';
     bljg=bljg+'<p><b>已存在相同名称</b><span id="span_filter_exist_name_klwebsites"></span></p>';
     bljg=bljg+'<textarea id="textarea_filter_exist_name_klwebsites" style="height:10rem;"></textarea>';
-    bljg=bljg+'<p><b>不存在</b><span id="span_filter_nonexist_klwebsites"></span></p>';
+    bljg=bljg+'<p style="margin-top:0.5rem; margin-bottom:0.5rem;"><b>不存在</b><span id="span_filter_nonexist_klwebsites"></span> <span class="oblong_box" onclick="csv_2_html_klwebsites();">html</span></p>';
     bljg=bljg+'<textarea id="textarea_filter_nonexist_klwebsites" style="height:10rem;"></textarea>';    
+    bljg=bljg+'<div id="div_filter_nonexist_klwebsites" style="column-count:'+(ismobile_b()?2:4)+';"></div>';    
     bljg=bljg+'<p><b>error</b><span id="span_filter_error_klwebsites"></span></p>';
     bljg=bljg+'<textarea id="textarea_filter_error_klwebsites" style="height:10rem;"></textarea>';       
-    document.getElementById('divhtml').innerHTML=bljg;
+    var odiv=document.getElementById('divhtml');
+    odiv.innerHTML=bljg;
+    mouseover_mouseout_oblong_span_b(odiv.querySelectorAll('span.oblong_box'));    
+}
+
+function csv_2_html_klwebsites(){
+    var odiv=document.getElementById('div_filter_nonexist_klwebsites');
+    if (!odiv){return;}
+    var otextarea=document.getElementById('textarea_filter_nonexist_klwebsites');
+    if (!otextarea){return;}
+    
+    var list_t=otextarea.value.trim().split('\n');
+    var result_t=[];
+    for (let arow of list_t){
+        arow=arow.trim();
+        if (arow==''){continue;}
+        try {
+            arow=eval('['+arow+']');
+            if (arow.length<4){continue;}
+            result_t.push('<a href="'+arow[0]+'" onclick="this.style.backgroundColor=\''+scheme_global['pink']+'\';" target=_blank>'+arow[2]+'</a> ('+arow[3]+')');
+        }
+        catch (e){
+            //pass
+        }
+    }
+    if (result_t.length==0){return;}
+    odiv.innerHTML=array_2_li_b(result_t);
 }
 
 function new_filter_result_klwebsites(){
@@ -128,7 +155,7 @@ function new_filter_result_klwebsites(){
             result_t['error'].push(arow);
             result_t['error'].push(error.message);
             continue;
-        }        
+        }
     }
     
     for (let one_key of Object.keys(result_t)){

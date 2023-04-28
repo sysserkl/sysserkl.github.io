@@ -120,9 +120,15 @@ function menu_dbb(){
     '<span id="span_txtbook_icon_dbb" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 标记已有书籍</span>',
     '<span id="span_bought_show_dbb" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 显示已有书籍</span>',    
     '<span id="span_txtbook_ignore_dbb" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 显示被忽略的书籍</span>',    
-    '<span class="span_menu" onclick="'+str_t+'ignore_books_list_dbb();">忽略书籍名单</span>',    
     '<span class="span_menu" onclick="'+str_t+'standalone_dbb();">当前结果导出为 standalone search</span>',    
     ];
+    
+    group_list=[
+    ['名单','ignore_books_list_dbb();',true],
+    ['缓存','window.open(\'lsm.htm?key=ignored_books_dbb\');',true],
+    ];    
+    klmenu_config.push(menu_container_b(str_t,group_list,'忽略书籍：'));        
+        
     klmenu_config=klmenu_config.concat(root_font_size_menu_b(str_t));
     
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','16rem','1rem','1rem','60rem')+klmenu_b(klmenu_statistics,'🧮','16rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','20rem','1rem','1rem','60rem'),'','0rem')+' ');
@@ -380,6 +386,7 @@ function ignore_set_dbb(cshref,ospan){
         ospan.innerText='忽略';
         ignored_books_dbb_global.delete(blname);
     }
+    var list_t=Array.from(ignored_books_dbb_global);
     localStorage.setItem('ignored_books_dbb',list_t.join('\n'));
 }
 

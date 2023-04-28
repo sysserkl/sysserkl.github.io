@@ -1315,7 +1315,7 @@ function enwords_temp_2_local_storage_b(csarray){
     localStorage.setItem('enwords_temp',result_t.join('\n'));
 }
 
-function enwords_array_to_links_b(csarray,oldset=new Set(),fn_name=''){
+function enwords_array_to_links_b(csarray,oldset=new Set(),fn_name='',return_old_count=false){
     var bljg=[];
     var blxl=0;
     if (fn_name==''){
@@ -1324,10 +1324,19 @@ function enwords_array_to_links_b(csarray,oldset=new Set(),fn_name=''){
     else {
         blsmall='<small style="cursor:pointer;" onclick="'+fn_name+'(this);">';
     }
+    var old_count=0;
     for (let item of csarray){  //csarray 有可能是 set - 保留注释
         var blword=item.replace(new RegExp('_','g'),' ');
-        bljg.push('<span class="span_word_combination_enword">'+blsmall+(blxl+1)+'. </small>'+(oldset.has(blword)?'💧':'')+en_one_word_b([blword],[-1,0],'',true,true,true)+'</span>');
+        var icon='';
+        if (oldset.has(blword)){
+            old_count=old_count+1;
+            icon='💧';
+        }
+        bljg.push('<span class="span_word_combination_enword">'+blsmall+(blxl+1)+'. </small>'+icon+en_one_word_b([blword],[-1,0],'',true,true,true)+'</span>');
         blxl=blxl+1;
+    }
+    if (return_old_count){
+        return [bljg,old_count];
     }
     return bljg;
 }

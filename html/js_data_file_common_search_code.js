@@ -15,13 +15,29 @@ function init_common(){
     var cskeys=href_split_b(location.href);
     if (cskeys.length>0 && cskeys[0]!==''){
         for (let one_key of cskeys){
+            if (one_key.substring(0,2)=='s='){
+                one_key=one_key.substring(2,);
+                var is_reg;
+                [one_key,is_reg]=str_reg_check_b(one_key,false,true);
+                for (let arow of js_file_list_common_global){
+                    var blfound=str_reg_search_b(arow,one_key,is_reg);
+                    if (blfound){
+                        cskeys=js_file_row_2_arg_common(arow,false);
+                        break;
+                    }
+                }
+                break;
+            }
+        }
+        
+        for (let one_key of cskeys){
             one_key=one_key.trim();
             if (one_key.substring(0,2)=='d='){
                 data_file_jscm_global=one_key.substring(2,)
             }
             else if (one_key.substring(0,2)=='i='){
                 icon_emoji_jscm_global=one_key.substring(2,)
-            }            
+            }
             else if (one_key.substring(0,2)=='t='){
                 title_name_jscm_global=one_key.substring(2,)
             }    
@@ -30,7 +46,7 @@ function init_common(){
             }                
             else if (one_key.substring(0,2)=='j='){
                 js_additional_jscm_global=one_key.substring(2,)
-            }       
+            }
         }
     }
     document.title=icon_emoji_jscm_global+' '+title_name_jscm_global;
@@ -140,9 +156,17 @@ function js_file_links_common(csarray){
     var klmenu_list=[];
     for (let item of csarray){
         if (item[2]==title_name_jscm_global){continue;}
-        klmenu_list.push('<a href="?'+encodeURIComponent('d='+item[0]+'&i='+item[1]+'&t='+item[2]+'&v='+item[3]+'&j='+item[4])+'">'+item[2]+'</a>');
+        klmenu_list.push('<a href="?'+encodeURIComponent(js_file_row_2_arg_common(item,true))+'">'+item[2]+'</a>');
     }
     return klmenu_list;
+}
+
+function js_file_row_2_arg_common(arow,return_str=false){
+    var list_t=['d='+arow[0],'i='+arow[1],'t='+arow[2],'v='+arow[3],'j='+arow[4]];
+    if (return_str){
+        return list_t.join('&');
+    }
+    return list_t;
 }
 
 function menu_common(){

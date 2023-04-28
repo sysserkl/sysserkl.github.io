@@ -126,6 +126,8 @@ function menu_enwords_book(){
     '<span class="span_menu" onclick="'+str2_t+'selenium_list_enwords_book(true,\'random\');">selenium新词(缓存随机)</span>',    
     '<span class="span_menu" onclick="'+str2_t+'selenium_list_enwords_book(true,\'old\');">selenium新词(缓存旧单词在前)</span>',    
     '<span class="span_menu" onclick="'+str2_t+'selenium_list_enwords_book(true,\'count\');">selenium新词(缓存单词数)</span>',    
+    '<span class="span_menu" onclick="'+str2_t+'selenium_list_enwords_book(true,\'length\');">selenium新词(缓存标题和链接长度)</span>',    
+    '<span class="span_menu" onclick="'+str2_t+'selenium_list_enwords_book(true,\'rare\');">selenium新词(稀有度)</span>',
     '<span class="span_menu" onclick="'+str2_t+'selenium_one2more_enwords_book();">selenium新词(一对多)</span>',        
     '<span class="span_menu" onclick="'+str2_t+'selenium_contain_enwords_book();">selenium新词(包含)</span>',        
     '<span class="span_menu" onclick="'+str2_t+'selenium_list_popular_enwords_book();">selenium常见新词(缓存)</span>',    
@@ -143,7 +145,7 @@ function menu_enwords_book(){
         klmenu2.push('<span class="span_menu" onclick="'+str_t+'klwiki_link_b(\'英语书籍生词统计\',true);">英语书籍生词统计(KLWiki)</span>');
     }
 
-    var menus=klmenu_b(klmenu1,'','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_new,'🔤','18rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'🧮','16rem','1rem','1rem','60rem')+(is_local_b()?klmenu_b(klmenu_selenium,'📰','18rem','1rem','1rem','60rem'):'');
+    var menus=klmenu_b(klmenu1,'','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_new,'🔤','18rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'🧮','16rem','1rem','1rem','60rem')+(is_local_b()?klmenu_b(klmenu_selenium,'📰','20rem','1rem','1rem','60rem'):'');
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(menus,'','0rem')+' ');
     
 }
@@ -464,6 +466,18 @@ function selenium_list_container_generation_book(html,words){
     return '<div  class="div_h3_selenium_enbook">\n'+html+'<div style="border:0.1rem dotted '+scheme_global['shadow']+';border-radius:1rem;padding:0.5rem;">'+words+'</div>\n</div>';
 }
 
+function rare_word_count_enwords_book(cslist,rare_dict){
+    var blcount_set=new Set();
+    for (let aword of cslist){
+        if (rare_dict['w_'+aword]==undefined){continue;}
+        blcount_set.add(rare_dict['w_'+aword]);
+    }
+    if (blcount_set.size>0){
+        return Math.min(...blcount_set);
+    }
+    return 0;
+}
+
 function selenium_list_enwords_book(use_cache=false,cstype=''){
     var result_t={};
     var cached_list=selenium_local_storage_get_enwords_book(true);
@@ -477,6 +491,22 @@ function selenium_list_enwords_book(use_cache=false,cstype=''){
 
     var oldset=simple_words_b();
     var theday='';
+    var bllinks,old_count;
+    
+    var rare_dict={};
+    if (cstype=='rare'){
+        for (let item of enarray){
+            var word_list=item[3].split(' ');
+            for (let one_word of word_list){
+                var blkey='w_'+one_word;
+                if (rare_dict[blkey]==undefined){
+                    rare_dict[blkey]=0;
+                }
+                rare_dict[blkey]=rare_dict[blkey]+1;
+            }
+        }
+    }
+    
     for (let item of enarray){
         if (item[1]=='' && item[2]=='' && item[3]==''){
             theday=item[0];
@@ -488,19 +518,33 @@ function selenium_list_enwords_book(use_cache=false,cstype=''){
             html=html+' ⚓';
         }
         html=html+'</h3>\n';
-        var words=enwords_array_to_links_b(item[3].split(' '),oldset,'selenium_count_enwords_book').join(' ');
+        var word_list=item[3].split(' ');
+        [bllinks,old_count]=enwords_array_to_links_b(word_list,oldset,'selenium_count_enwords_book',true);
+        var words=bllinks.join(' ');
         if (result_t['k_'+item[2]]==undefined){
             result_t['k_'+item[2]]=[];
         }
-        result_t['k_'+item[2]].push(selenium_list_container_generation_book(html,words));
+        
+        var blstr=selenium_list_container_generation_book(html,words);
+        
+        var blrare_count=0;
+        if (cstype=='rare'){
+            blrare_count=rare_word_count_enwords_book(word_list,rare_dict);
+        }
+        
+        if (['count','old','random','length','rare'].includes(cstype)){
+            result_t['k_'+item[2]].push([blstr,(item[0]+item[1]).length,item[3].length,old_count,blrare_count]);
+        }
+        else {
+            result_t['k_'+item[2]].push(blstr);
+        }
     }
     
-    if (['count','old','random'].includes(cstype)){
+    if (['count','old','random','length','rare'].includes(cstype)){
         var list_t=[];
         for (let key in result_t){
             list_t=list_t.concat(result_t[key]);    //逐个元素合并 - 保留注释
-        }   
-        
+        }
         //先随机排序一番 - 保留注释
         var blmax=randint_b(5,10);
         for (let blxl=0;blxl<blmax;blxl++){
@@ -508,19 +552,21 @@ function selenium_list_enwords_book(use_cache=false,cstype=''){
         }
         //---
         switch (cstype){
-            case 'old':
-                list_t.sort(function (a,b){
-                    if (a.includes('💧') && b.includes('💧')){
-                        return (a.match(/💧/g) || []).length/(a.match(/class="a_word"/g) || ['']).length<(b.match(/💧/g) || []).length/(b.match((/class="a_word"/g) || ['']).length); //按💧与单词数目的比例，分母至少是1 - 保留注释
-                    }
-                    else {
-                        return b.includes('💧');
-                    }
-                });
+            case 'length':
+                list_t.sort(function (a,b){return a[1]<b[1];});            
                 break;
             case 'count':
-                list_t.sort(function (a,b){return (a.match(/class="a_word"/g) || []).length>(b.match((/class="a_word"/g) || []).length);});
+                list_t.sort(function (a,b){return a[2]<b[2];});                        
+                break;                        
+            case 'old':
+                list_t.sort(function (a,b){return a[3]/a[2]<b[3]/b[2];});
                 break;
+            case 'rare':
+                list_t.sort(function (a,b){return a[4]<b[4];});                        
+                break;
+        }
+        for (let blxl=0;blxl<list_t.length;blxl++){
+            list_t[blxl]=list_t[blxl][0];
         }
         //---
         result_t=list_t.join('\n');

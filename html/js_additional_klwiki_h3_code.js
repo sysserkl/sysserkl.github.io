@@ -57,7 +57,7 @@ function years_count_klwiki_h3(){
         }
         else {
             not_found_count=not_found_count+1;
-            console.log(not_found_count,blstr);
+            console.log('not found:',not_found_count,blstr);
         }
     }
     result_t=object2array_b(result_t,true,2);
@@ -97,7 +97,7 @@ function weixin_rank_klwiki_h3(){
         
         var blkey='';
     
-        var list_t=blstr.match(/ \- (.*?)<\/a>/) || [];
+        var list_t=blstr.match(/\- (.*?)<\/a>/) || [];
         if (list_t.length==2){  //[ " - 棒约翰</a>", "棒约翰" ] - 保留注释
             blkey=list_t[1].trim();
         }
@@ -122,7 +122,7 @@ function weixin_rank_klwiki_h3(){
         
         if (blkey=='' || blkey.length>100){
             not_found_count=not_found_count+1;
-            console.log(not_found_count,blstr);
+            console.log('not found:',not_found_count,blstr);
             continue;
         }
         
@@ -145,11 +145,12 @@ function rank_2_html_klwiki_h3(cslist,cstype='',ignore_value=1){
             blat=blxl;
             break;
         }
+        
         if (cstype=='weibo'){
-            cslist[blxl]='<a href="https://weibo.com/n/'+encodeURIComponent(cslist[blxl][0])+'" target=_blank>'+cslist[blxl][0]+'</a>：'+cslist[blxl][1];
+            cslist[blxl]='<a href="https://weibo.com/n/'+encodeURIComponent(cslist[blxl][0])+'" target=_blank>'+cslist[blxl][0]+'</a>：<span class="span_rank_count_klwiki_h3">'+cslist[blxl][1]+'</span>';
         }
         else {
-            cslist[blxl]=cslist[blxl][0]+'：'+cslist[blxl][1];        
+            cslist[blxl]=cslist[blxl][0]+'：<span class="span_rank_count_klwiki_h3">'+cslist[blxl][1]+'</span>';        
         }
     }
     
@@ -161,15 +162,38 @@ function rank_2_html_klwiki_h3(cslist,cstype='',ignore_value=1){
         }
         cslist=cslist.slice(0,blat);
     }
-    //cslist=cslist.slice(0,1000);
     if (others>0){
         cslist.push('others：'+others);
     }
     
-    var blbutton='<p>'+close_button_b('div_status_common','','aclick')+'</p>';
+    var blbuttons='<p>';
+    blbuttons=blbuttons+'<span class="aclick" onclick="website_style_klwiki_h3(this);">网址库风格</span>';
+    blbuttons=blbuttons+close_button_b('div_status_common','','aclick');
+    blbuttons=blbuttons+'</p>';
     var odiv=document.getElementById('div_status_common');
-    odiv.innerHTML=array_2_li_b(cslist)+blbutton;
+    odiv.innerHTML=array_2_li_b(cslist)+blbuttons;
     odiv.scrollIntoView();
+}
+
+function website_style_klwiki_h3(ospan){
+    var odiv=document.getElementById('div_status_common');
+    var olis=odiv.querySelectorAll('li');
+    var result_t=[];
+    for (let one_li of olis){
+        var oa=one_li.querySelector('a');
+        if (!oa){continue;}
+        var ocount=one_li.querySelector('span.span_rank_count_klwiki_h3');
+        var blhref=oa.href;
+        if (!blhref){continue;}
+        var bltitle=oa.innerText;
+        if (blhref.includes('weibo')){
+            bltitle=bltitle+' - 微博';
+        }
+        var blcount=(ocount?ocount.innerText:'10');
+        result_t.push('"'+blhref+'","","'+bltitle+'",'+blcount+',""');
+    }
+    odiv.insertAdjacentHTML('beforeend','<textarea style="height:30rem;">'+result_t.join('\n')+'</textarea>');
+    ospan.outerHTML='';
 }
 
 function weibo_rank_klwiki_h3(){
@@ -238,7 +262,7 @@ function weibo_rank_klwiki_h3(){
         
         if (blkey=='' || blkey.length>100){
             not_found_count=not_found_count+1;
-            console.log(not_found_count,blstr);
+            console.log('not found:',not_found_count,blstr);
             continue;
         }
         
@@ -270,7 +294,13 @@ function host_klwiki_h3(){
         var blstr=arow.toString();  //形如：<a href="https://xxxxx" target=_blank>20221125 | bbbbb</a> <span style="cccc">(dddd)</span>,589 或 http://xxxxx.shtml,20170719 | bbbb,cccc,12783- 保留注释
         var blhref=blstr.match(/http[^\s]+/) || []; //统计 host，无须考虑 https://xxxxx" 或 http://xxxxx.shtml,20170719 这样的情况 - 保留注释
         if (blhref.length==1){
-            var ourl = new URL(blhref[0]);
+            try {
+                var ourl = new URL(blhref[0]);
+            }
+            catch (e){
+                console.log(e);
+                continue;
+            }
             var one_host=ourl.host;
             var blkey='h_'+one_host;
             if (category_list[blkey]==undefined){
@@ -280,7 +310,7 @@ function host_klwiki_h3(){
         }
         else {
             not_found_count=not_found_count+1;
-            console.log(not_found_count,blstr);
+            console.log('not found:',not_found_count,blstr);
         }
     }
     
