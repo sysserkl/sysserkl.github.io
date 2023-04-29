@@ -1319,10 +1319,10 @@ function enwords_array_to_links_b(csarray,oldset=new Set(),fn_name='',return_old
     var bljg=[];
     var blxl=0;
     if (fn_name==''){
-        blsmall='<small>';
+        blsmall='<small class="small_enword_no_b">';
     }
     else {
-        blsmall='<small style="cursor:pointer;" onclick="'+fn_name+'(this);">';
+        blsmall='<small class="small_enword_no_b" style="cursor:pointer;" onclick="'+fn_name+'(this);">';
     }
     var old_count=0;
     for (let item of csarray){  //csarray 有可能是 set - 保留注释

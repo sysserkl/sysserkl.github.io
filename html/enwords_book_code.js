@@ -321,7 +321,7 @@ function selenium_list_popular_enwords_book(){
     get_new_words_arr_enbook_b(2);
 }
 
-function selenium_count_enwords_book(odom){
+function selenium_count_one_enword_book(odom){
     var oword=odom.parentNode.querySelector('span.a_word');
     if (!oword){return;}
     var blword=oword.innerText;
@@ -333,7 +333,7 @@ function selenium_count_enwords_book(odom){
             blcount=blcount+1;
         }
     }
-    odom.innerText=blold+'('+blcount+'). '
+    odom.innerText=blold+'('+(blcount==1?'𝟭':blcount)+'). '
 }
 
 function selenium_contain_enwords_book(){
@@ -371,8 +371,8 @@ function selenium_contain_enwords_book(){
             result_t[key_name]=[[],new Set(word_list)];
         }
 
-        var words=enwords_array_to_links_b(word_list,oldset,'selenium_count_enwords_book').join(' ');        
-        result_t[key_name][0].push([selenium_list_container_generation_book(html,words),word_list.length]);
+        var words=enwords_array_to_links_b(word_list,oldset,'selenium_count_one_enword_book').join(' ');        
+        result_t[key_name][0].push([selenium_list_container_generation_enwords_book(html,words,word_list.length),word_list.length]);
     }
 
     var sentence_list=[];
@@ -425,8 +425,8 @@ function selenium_one2more_enwords_book(){
             result_t['s_'+key_name]=[];
         }
         
-        var words=enwords_array_to_links_b(word_list,oldset,'selenium_count_enwords_book').join(' ');        
-        result_t['s_'+key_name].push([selenium_list_container_generation_book(html,words),word_list.length]);
+        var words=enwords_array_to_links_b(word_list,oldset,'selenium_count_one_enword_book').join(' ');        
+        result_t['s_'+key_name].push([selenium_list_container_generation_enwords_book(html,words,word_list.length),word_list.length]);
     }
 
     var list_t=[];
@@ -462,8 +462,20 @@ function selenium_list_h3_2_fav_enwords_book(ospan,addtag=true){
     fav_add_rlater_b(oa,ospan,addtag,'添加');
 }
 
-function selenium_list_container_generation_book(html,words){
-    return '<div  class="div_h3_selenium_enbook">\n'+html+'<div style="border:0.1rem dotted '+scheme_global['shadow']+';border-radius:1rem;padding:0.5rem;">'+words+'</div>\n</div>';
+function selenium_list_container_generation_enwords_book(html,words,cslength=0){
+    var blstr='<div  class="div_h3_selenium_enbook">\n'+html+'<div style="border:0.1rem dotted '+scheme_global['shadow']+';border-radius:1rem;padding:0.5rem;">';
+    if (cslength>1){
+        blstr=blstr+'<span class="span_box" onclick="selenium_count_batch_enwords_book(this);">👆</span> ';
+    }
+    blstr=blstr+words+'</div>\n</div>';
+    return blstr;
+}
+
+function selenium_count_batch_enwords_book(ospan){
+    var osmalls=ospan.parentNode.querySelectorAll('span.span_word_combination_enword small.small_enword_no_b');
+    for (let one_small of osmalls){
+        selenium_count_one_enword_book(one_small);
+    }
 }
 
 function rare_word_count_enwords_book(cslist,rare_dict){
@@ -519,13 +531,13 @@ function selenium_list_enwords_book(use_cache=false,cstype=''){
         }
         html=html+'</h3>\n';
         var word_list=item[3].split(' ');
-        [bllinks,old_count]=enwords_array_to_links_b(word_list,oldset,'selenium_count_enwords_book',true);
+        [bllinks,old_count]=enwords_array_to_links_b(word_list,oldset,'selenium_count_one_enword_book',true);
         var words=bllinks.join(' ');
         if (result_t['k_'+item[2]]==undefined){
             result_t['k_'+item[2]]=[];
         }
         
-        var blstr=selenium_list_container_generation_book(html,words);
+        var blstr=selenium_list_container_generation_enwords_book(html,words,word_list.length);
         
         var blrare_count=0;
         if (cstype=='rare'){

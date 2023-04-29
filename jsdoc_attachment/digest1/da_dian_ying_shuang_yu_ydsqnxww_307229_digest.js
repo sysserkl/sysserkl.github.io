@@ -5,4 +5,6 @@ var digest_global=`
 *armpit
 *artesian
 *Mona Lisa
+*deliveryman
+*glassware
 `.trim().split('\n');
