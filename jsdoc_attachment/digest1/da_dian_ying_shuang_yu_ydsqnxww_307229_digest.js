@@ -1,10 +1,26 @@
 var digest_global=`
 *Douglas
-*Thucydides
-*saddlebag
+*adequacy
+*altimeter
 *armpit
 *artesian
-*Mona Lisa
+*barley
+*beachhead
+*bidder
+*biplane
+*cheetah
 *deliveryman
 *glassware
+*hairstyle
+*joystick
+*Mona Lisa
+*monochrome
+*monoplane
+*narrow-minded
+*saddlebag
+*sharpshooter
+*sightless
+*Thucydides
+*underscore
+*warmonger
 `.trim().split('\n');

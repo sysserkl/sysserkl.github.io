@@ -275,7 +275,8 @@ function txtmenus_kltxt_b(cstype=''){
     
     var menu_statistics=[
     '<span class="span_menu" onclick="'+str_t+'statistics_kltxt_b();">Statistics</span>',    
-    '<span class="span_menu" onclick="'+str_t+'counthz_kltxt_b();">汉字量统计</span>',
+    '<span class="span_menu" onclick="'+str_t+'counthz_kltxt_b();">不重复汉字数统计</span>',
+    '<span class="span_menu" onclick="'+str_t+'count_characters_kltxt_b();">innterText字符数统计</span>',
     '<span class="span_menu" onclick="'+str_t+'tw_kltxt_b();">繁体字统计</span>',     
     '<span class="span_menu" onclick="'+str_t+'booksthickness_form_kltxt_b();">书的厚度</span>',    
     '<span class="span_menu" onclick="'+str_t+'books_current_table_kltxt_b();">当前书目列表</span>',
@@ -330,6 +331,34 @@ function txtmenus_kltxt_b(cstype=''){
     }
 
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(bljg,'','0rem')+' ');
+}
+
+function count_characters_kltxt_b(){
+    function sub_count_characters_kltxt_b_one_step(){
+        if (blxl>bllen){
+            result_t.push('Total: '+bltotal);        
+            odiv.innerHTML=array_2_li_b(result_t);
+            return;
+        }
+        getlines_kltxt_b(blxl,blstep,true,false,false,false,false);
+        var ospans=odiv.querySelectorAll('span.txt_content');
+        var blcount=0;
+        for (let one_span of ospans){
+            blcount=blcount+one_span.innerText.trim().length;
+        }
+        result_t.push(blxl+'-'+(blxl+blstep)+': '+blcount);
+        bltotal=bltotal+blcount;
+        blxl=blxl+blstep;
+        setTimeout(sub_count_characters_kltxt_b_one_step,200);
+    }
+    //---------------------
+    var bllen=filelist.length;
+    var blxl=1;
+    var blstep=250;
+    var bltotal=0;
+    var odiv=document.getElementById('divhtml');
+    var result_t=[];
+    sub_count_characters_kltxt_b_one_step();
 }
 
 function wiki_style_kltxt_b(){
@@ -635,7 +664,6 @@ function counthz_kltxt_b(){
 		}
 	}
     hz_t=Array.from(hz_t);
-    
 	hz_t.sort(function(a,b){return zh_sort_b(a,b,false,0);});
 	
 	var blcount=0;
@@ -649,7 +677,7 @@ function counthz_kltxt_b(){
         }
 	}
 	
-    var bljg='<p><b>汉字量：'+hz_t.length+' 其中常用汉字：'+blcount+' 占 '+(blcount*100/hz_t.length).toFixed(2)+'%</b></p>';
+    var bljg='<p><b>不重复汉字数：'+hz_t.length+' 其中常用汉字：'+blcount+' 占 '+(blcount*100/hz_t.length).toFixed(2)+'%</b></p>';
     bljg=bljg+'<p>'+hz_t.join(' ')+'</p><p><b>其中非常用汉字：</b></p><p id="p_uncommon_zh_words">'+out_3500_t.join(' ')+'</p>';
     document.getElementById('divhtml').innerHTML=bljg;
 
@@ -1925,7 +1953,7 @@ function getlines_one_part_kltxt_b(csmin,csmax,bllength,csgrey,csaname,is_single
     return bljg;
 }
     
-function getlines_kltxt_b(csno=false,cslines=false,single=false,highlight=true,addhr=true,b_style=false){
+function getlines_kltxt_b(csno=false,cslines=false,single=false,highlight=true,addhr=true,b_style=false,do_render=true){
     //csno 从 1 开始 - 保留注释
     function sub_getlines_kltxt_b_pages(csno,cslines,bllength){
         var bljg='';
@@ -1984,7 +2012,9 @@ function getlines_kltxt_b(csno=false,cslines=false,single=false,highlight=true,a
         document.location.href = '#content';
     }
     
-    render_html_kltxt_b([],false,highlight,b_style);
+    if (do_render){
+        render_html_kltxt_b([],false,highlight,b_style);
+    }
 }
 
 function booksearch_kltxt_b(csword,csreg){
@@ -2136,7 +2166,7 @@ function txtsearch_kltxt_b(csword='',csreg=-1,cscontinue=-1,add_recent=true){
     }
 }
 
-function render_html_kltxt_b(wordlist=[],layout=true,highlight,b_style=false){
+function render_html_kltxt_b(wordlist=[],layout=true,highlight=true,b_style=false){
     if (layout){
         layout_kltxt_b();
     }
