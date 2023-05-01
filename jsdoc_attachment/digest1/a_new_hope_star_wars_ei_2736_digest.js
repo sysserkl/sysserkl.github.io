@@ -21,4 +21,5 @@ var digest_global=`
 *stabilize
 *teleport
 *widen
+*marksmanship
 `.trim().split('\n');

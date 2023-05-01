@@ -952,7 +952,7 @@ function local_storage_key_name_list_b(){
     return result_t;
 }
 
-function local_storage_key_length_b(key_list,sort_index=1,is_reverse=true){
+function local_storage_key_length_b(key_list,is_reverse=true){
     var blcontent=[];
     var total_len=0;
     var key_list_len=key_list.length;
@@ -962,11 +962,13 @@ function local_storage_key_length_b(key_list,sort_index=1,is_reverse=true){
         blcontent.push([localStorage.key(blxl),bllen]);
         total_len=total_len+bllen;
     }
+    
+    blcontent.sort();
     if (is_reverse){
-        blcontent.sort(function (a,b){return a[sort_index]<b[sort_index];});
+        blcontent.sort(function (a,b){return a[1]<b[1];});
     }
     else {
-        blcontent.sort(function (a,b){return a[sort_index]>b[sort_index];});
+        blcontent.sort(function (a,b){return a[1]>b[1];});
     }
     
     for (let blxl=0;blxl<blcontent.length;blxl++){
