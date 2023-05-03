@@ -2819,3 +2819,12 @@ function window_is_closed_b(owindow,wait_times,csmax=10){
         return [false,wait_times];
     }    
 }
+
+function copy_2_clipboard_b(csstr){
+    var otextarea=document.createElement('textarea');
+    otextarea.value=csstr;
+    document.body.appendChild(otextarea);
+    otextarea.select();
+    document.execCommand('copy');
+    otextarea.parentNode.removeChild(otextarea);
+}

@@ -7,4 +7,5 @@ var digest_global=`
 *scornfully
 *tungsten
 *pion
+*reactivate
 `.trim().split('\n');
