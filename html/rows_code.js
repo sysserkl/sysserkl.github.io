@@ -83,6 +83,28 @@ function do_type_klr2(cstype){
     }
 }
 
+function str_en_de_kl2(cstype='double',en=true){
+    var blstr=document.getElementById('textarea_rows_content').value;
+    switch (cstype){
+        case 'double':
+            if (en){
+                document.getElementById('textarea_status').value=en_double_str_b(blstr);    
+            }
+            else {
+                document.getElementById('textarea_status').value=de_double_str_b(blstr);    
+            }
+            break;
+        case 'url':
+            if (en){
+                document.getElementById('textarea_status').value=encodeURIComponent(blstr);    
+            }
+            else {
+                document.getElementById('textarea_status').value=decodeURIComponent(blstr);    
+            }        
+            break;
+    }
+}
+
 function menu_klr2(){
     var str_t=klmenu_hide_b();
     var klmenu_fn=[];
@@ -90,15 +112,24 @@ function menu_klr2(){
     ['左侧','lines_trim_klr_b(\'l\');',true],
     ['右侧','lines_trim_klr_b(\'r\');',true],
     ['两侧','lines_trim_klr_b();',true],
-
     ];    
     klmenu_fn.push(menu_container_b(str_t,group_list,'删除每行空格: '));
-        
+
+    var group_list=[
+    ['en','str_en_de_kl2(\'url\',true);',true],
+    ['de','str_en_de_kl2(\'url\',false);',true],
+    ];    
+    klmenu_fn.push(menu_container_b(str_t,group_list,'codeURIComponent: '));
+    
+    var group_list=[
+    ['en','str_en_de_kl2(\'double\',true);',true],
+    ['de','str_en_de_kl2(\'double\',false);',true],
+    ];    
+    klmenu_fn.push(menu_container_b(str_t,group_list,'double: '));
+    
     klmenu_fn=klmenu_fn.concat([
-    '<span class="span_menu" onclick="'+str_t+'document.getElementById(\'textarea_status\').value=en_double_str_b(document.getElementById(\'textarea_rows_content\').value);">en_double</span>',
     '<span class="span_menu" onclick="'+str_t+'en_double_2_array_klr2();">en_double 2 array</span>',
     '<span class="span_menu" onclick="'+str_t+'en_double_2_array_klr2(true);">en_double 2 array html file</span>',
-    '<span class="span_menu" onclick="'+str_t+'document.getElementById(\'textarea_status\').value=de_double_str_b(document.getElementById(\'textarea_rows_content\').value);">de_double</span>',
     '<span class="span_menu" onclick="'+str_t+'add_to_html_klr_b(\'textarea_rows_content\',\'body\');">显示为HTML(body)</span>',    
     '<span class="span_menu" onclick="'+str_t+'html_to_image_klr_b();">保存为图片</span>',
     '<span class="span_menu" onclick="'+str_t+'setInterval(random_strs_klr2,5000);">每5秒生成随机字符串到剪贴板</span>',
