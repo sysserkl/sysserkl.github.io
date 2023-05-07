@@ -1,0 +1,15 @@
+var sourcelist=[
+["https://freeyork.org/photography/bolivias-cholitas-bravas-women-skaters/","Exploring Bolivia’s Cholitas Bravas: Photographer Celia D. Luna Shines a Light on Indigenous Women Skaters","2023-05-07","FREEYORK","0",],
+["https://freeyork.org/photography/diving-deeper-meet-the-2023-underwater-photographer-of-the-year/","Diving Deeper: Meet the 2023 Underwater Photographer of the Year","2023-05-07","FREEYORK","0",],
+["https://freeyork.org/architecture/reviving-a-dated-kitchen-a-guide-to-bringing-your-space-up-to-date/","Reviving a Dated Kitchen: A Guide to Bringing Your Space Up to Date","2023-05-07","FREEYORK","0",],
+["https://freeyork.org/art/relive-your-favorite-middle-earth-moments-with-legos-rivendell-set/","Relive Your Favorite Middle Earth Moments With LEGO’s Rivendell Set","2023-05-07","FREEYORK","0",],
+["https://www.solidot.org/story?sid=74872","天王星最大的四颗卫星可能有地下海洋","2023-05-07","Solidot","1",],
+["https://www.solidot.org/story?sid=74874","WHO 降低新冠疫情风险等级","2023-05-07","Solidot","1",],
+["https://www.solidot.org/story?sid=74875","Gmail 开始展示更多广告","2023-05-07","Solidot","1",],
+["https://www.solidot.org/story?sid=74876","TikTok 曾跟踪观看 LGBT 内容的用户","2023-05-07","Solidot","1",],
+["https://www.solidot.org/story?sid=74877","美国连续五个季度生产率下降","2023-05-07","Solidot","1",],
+["https://www.solidot.org/story?sid=74879","白宫提议对加密货币挖矿使用的电力征 30% 的税","2023-05-07","Solidot","1",],
+["https://www.solidot.org/story?sid=74880","Vice Media 准备申请破产以 4 亿美元出售","2023-05-07","Solidot","1",],
+["https://www.solidot.org/story?sid=74881","OpenAI 不再使用 API 客户数据训练 ChatGPT","2023-05-07","Solidot","1",],
+["https://www.solidot.org/story?sid=74882","Hugging Face 和 ServiceNow 发布免费代码生成模型 StarCoder","2023-05-07","Solidot","1",],
+];
