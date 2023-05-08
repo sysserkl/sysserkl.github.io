@@ -1,11 +1,37 @@
 var digest_global=`
-*Kaaba
-*bathwater
-*gnu
+*acidity
+*atheistic
 *athlete
-*irrational number
-*lo and behold
+*bathwater
+*busyness
+*chimp
+*cockroach
+*countercurrent
+*cowherd
 *devotee
-*year-round
+*dimwit
+*drinkable
+*earthworm
+*flipper
+*freshwater
+*gnu
+*happenstance
+*hide-and-seek
+*irrational number
+*Kaaba
+*lentil
+*lo and behold
 *Mendel
+*oxygenation
+*plankton
+*reinfection
+*sandpaper
+*seashore
+*seasick
+*seasickness
+*shoelace
+*toffee
+*unambiguous
+*year-round
+*zookeeper
 `.trim().split('\n');
