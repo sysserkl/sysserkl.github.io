@@ -2008,7 +2008,7 @@ function dom_value_2_txt_file_b(csid,savename='',csext='txt'){
     string_2_txt_file_b(odom.value,savename,csext);
 }
 
-function table_2_csv_b(table_querystring){
+function table_2_csv_b(table_querystring,colno_list=[]){
     var otable=document.querySelector(table_querystring);
     if (!otable){return;}
     var otrs=otable.querySelectorAll('tr');
@@ -2016,7 +2016,9 @@ function table_2_csv_b(table_querystring){
     for (let one_tr of otrs){
         var arow=[];
         var otds=one_tr.querySelectorAll('th,td');
-        for (let one_td of otds){
+        for (let blxl=0;blxl<otds.length;blxl++){
+            if (colno_list.length>0 && !colno_list.includes(blxl)){continue;}
+            var one_td=otds[blxl];
             var blvalue=one_td.innerText.trim();
             if (blvalue=='' || isNaN(blvalue)){
                 arow.push('"'+specialstr_j(blvalue)+'"');

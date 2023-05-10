@@ -513,7 +513,10 @@ function flot_lines_show_arr_analyze(cslist,istime=false){
 
 function menu_arr_analyze(){
     var str_t=klmenu_hide_b('');
-    var klmenu1=['<span class="span_menu" onclick="'+str_t+'ascii_table_arr_analyze();">ascii table</span>'];
+    var klmenu1=[
+    '<span class="span_menu" onclick="'+str_t+'table2csv_arr_analyze();">table 2 csv</span>',
+    '<span class="span_menu" onclick="'+str_t+'ascii_table_arr_analyze();">ascii table</span>',
+    ];
     if (is_local_b()){
         klmenu1.push('<a href="../../../../data/klwiki/dir_line_count.csv" onclick="'+str_t+'" target=_blank>下载 dir_line_count.csv</a>');
         if (!is_file_type_b()){
@@ -525,6 +528,15 @@ function menu_arr_analyze(){
     klmenu2.push('<span class="span_menu" onclick="'+str_t+'import_arr_analyze();">以数组形式直接载入记录</span>');
     
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','15rem','1rem','1rem','60rem'),'','0rem')+klmenu_b(klmenu2,'⚙','20rem','1rem','1rem','60rem')+' ');
+}
+
+function table2csv_arr_analyze(){
+    if (table_array_global.length==0){return;}
+    var list_t=[];
+    for (let blxl=0;blxl<table_array_global[0].length;blxl++){
+        list_t.push(blxl+1);     //忽略第一列的序号 - 保留注释
+    }
+    table_2_csv_b('#table_arrays',list_t);
 }
 
 function import_arr_analyze(){
@@ -621,6 +633,18 @@ function th_menu_arr_analyze(csno,thname=false){
         thname=num_2_xls_colnum_letter_arr_analyze(csno+1);
     }
     return klmenu_b(klmenu1,thname,'8rem','1rem','1rem','60rem');
+}
+
+function remove_arr_analyze(cstype){
+    if (table_array_global.length==0){return;}
+    var colno=parseInt(document.getElementById('input_column1').value.trim())-1;
+    for (let blxl=0;blxl<table_array_global.length;blxl++){
+        if (colno<0 || colno>=table_array_global[blxl].length){continue;}
+        if (typeof table_array_global[blxl][colno] == 'string'){
+            table_array_global[blxl][colno]=table_array_global[blxl][colno].replace(new RegExp(cstype,'g'),'');
+        }
+    }
+    list_arr_analyze();
 }
 
 function num_2_xls_colnum_letter_arr_analyze(csnum){
