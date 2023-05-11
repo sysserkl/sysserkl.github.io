@@ -523,11 +523,29 @@ function menu_arr_analyze(){
             klmenu1.push('<span class="span_menu" onclick="'+str_t+'code_lines_read_arr_analyze();">code files line count</span>');
         }
     }
+    
+    var vertical_list=[];
+    var horizontal_list=[];
+    for (let blxl=2;blxl<=9;blxl++){
+        vertical_list.push([blxl+'段','split_table_arr_analyze(\'rows\','+blxl+');',true]);    
+        horizontal_list.push([blxl+'段','split_table_arr_analyze(\'cols\','+blxl+');',true]);
+    }
+    klmenu1.push(menu_container_b(str_t,vertical_list,'rows分割：'));    
+    klmenu1.push(menu_container_b(str_t,horizontal_list,'cols分割：'));    
 
     var klmenu2=root_font_size_menu_b(str_t);
     klmenu2.push('<span class="span_menu" onclick="'+str_t+'import_arr_analyze();">以数组形式直接载入记录</span>');
     
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','15rem','1rem','1rem','60rem'),'','0rem')+klmenu_b(klmenu2,'⚙','20rem','1rem','1rem','60rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','22rem','1rem','1rem','60rem'),'','0rem')+klmenu_b(klmenu2,'⚙','20rem','1rem','1rem','60rem')+' ');
+}
+
+function split_table_arr_analyze(split_type,cscount){
+    window.scrollTo(0, 0);
+    var otable=document.getElementById('table_arrays');
+    if (!otable){return;}
+    var rect_table=otable.getBoundingClientRect();
+    var otrs=otable.querySelectorAll('tr');
+    split_table_by_rows_or_cols_b(otrs,cscount,split_type,rect_table);
 }
 
 function table2csv_arr_analyze(){

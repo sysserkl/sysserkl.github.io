@@ -2830,3 +2830,120 @@ function copy_2_clipboard_b(csstr){
     document.execCommand('copy');
     otextarea.parentNode.removeChild(otextarea);
 }
+
+function split_dom_vertical_or_horizontal_b(odom,cscount,split_type){
+    var rect=odom.getBoundingClientRect();
+
+    var odiv_splits=document.querySelectorAll('div.div_split_dom_vertical_or_horizontal_b');
+    for (let item of odiv_splits){
+        item.parentNode.removeChild(item);
+    }
+   
+    var split_len=(split_type=='rows'?rect.height:rect.width);
+    
+    var split_list=[];
+    for (let blxl=0;blxl<cscount;blxl++){
+        split_list.push(split_len*blxl/cscount);
+    }
+    
+    for (let blxl=0;blxl<split_list.length;blxl++){        
+        var odiv_split=document.createElement('div');
+        document.body.appendChild(odiv_split);
+        odiv_split.style.cssText='position:absolute;';
+        odiv_split.classList.add('div_split_dom_vertical_or_horizontal_b');
+
+        if (split_type=='rows'){
+            odiv_split.style.left=rect.left+'px';
+            odiv_split.style.width=rect.width+'px';  
+            odiv_split.style.height=rect.height/split_list.length+'px';
+            odiv_split.style.top=split_list[blxl]+'px';
+        }
+        else {
+            odiv_split.style.top=rect.top+'px';
+            odiv_split.style.height=rect.height+'px';  
+            odiv_split.style.width=rect.width/split_list.length+'px';
+            odiv_split.style.left=split_list[blxl]+'px';
+        }
+        odiv_split.setAttribute('ondblclick',"this.outerHTML='';");
+    }
+}
+
+function split_table_by_rows_or_cols_b(otrs,cscount,cstype='rows',rect_table=false){
+    var split_len=otrs.length;
+    if (split_len==0){return [];}
+
+    var split_list=[];
+    if (cstype=='rows'){
+        for (let blxl=0;blxl<cscount;blxl++){
+            var blvalue=Math.round(split_len*blxl/cscount);
+            if (blvalue>=0 && blvalue<=split_len-1){
+                var rect_tr=otrs[blvalue].getBoundingClientRect();   
+                blvalue=rect_tr.top;
+            }
+            else {
+                console.log('error:',blvalue);
+            }
+            split_list.push(blvalue);
+        }
+    }
+    else {
+        var otds=otrs[0].querySelectorAll('th,td');
+        split_len=otds.length;
+        if (split_len==0){return [];}
+        
+        for (let blxl=0;blxl<cscount;blxl++){
+            var blvalue=Math.round(split_len*blxl/cscount);
+            if (blvalue>=0 && blvalue<=split_len-1){
+                var rect_td=otds[blvalue].getBoundingClientRect();   
+                blvalue=rect_td.left;
+            }
+            else {
+                console.log('error:',blvalue);
+            }
+            split_list.push(blvalue);
+        }
+    }
+    
+    if (rect_table===false){
+        return split_list;
+    }
+
+    var odiv_splits=document.querySelectorAll('div.div_split_dom_vertical_or_horizontal_b');
+    for (let item of odiv_splits){
+        item.parentNode.removeChild(item);
+    }
+    
+    for (let blxl=0;blxl<split_list.length;blxl++){
+        var odiv_split=document.createElement('div');
+        document.body.appendChild(odiv_split);
+        odiv_split.classList.add('div_split_dom_vertical_or_horizontal_b');
+        odiv_split.style.cssText='position:absolute;';
+        
+        if (cstype=='rows'){
+            odiv_split.style.left=rect_table.left+'px';
+            odiv_split.style.top=split_list[blxl]+'px';        
+            odiv_split.style.width=rect_table.width+'px';
+        
+            if (blxl<split_list.length-1){
+                odiv_split.style.height=(split_list[blxl+1]-split_list[blxl])+'px';
+            }
+            else {
+                odiv_split.style.height=(rect_table.top+rect_table.height-split_list[blxl])+'px';
+            }
+        }
+        else {
+            odiv_split.style.top=rect_table.top+'px';
+            odiv_split.style.left=split_list[blxl]+'px';        
+            odiv_split.style.height=rect_table.height+'px';
+        
+            if (blxl<split_list.length-1){
+                odiv_split.style.width=(split_list[blxl+1]-split_list[blxl])+'px';
+            }
+            else {
+                odiv_split.style.width=(rect_table.left+rect_table.width-split_list[blxl])+'px';
+            }
+        }
+        odiv_split.setAttribute('ondblclick',"this.outerHTML='';");
+    }
+    return split_list;    
+}
