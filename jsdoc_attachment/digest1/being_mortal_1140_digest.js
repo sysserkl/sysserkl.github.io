@@ -35,7 +35,6 @@ var digest_global=`
 *overinflated
 *Planck
 *predictability
-*promotional
 *radiology
 *redo
 *reproducible

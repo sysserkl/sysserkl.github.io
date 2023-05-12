@@ -58,4 +58,7 @@ var digest_global=`
 *rechristen
 *wolfhound
 *Higgs
+*department store
+*undefeated
+*reapply
 `.trim().split('\n');

@@ -101,4 +101,7 @@ var digest_global=`
 *pigheaded
 *misogyny
 *Tchaikovsky
+*Romanov
+*kinfolk
+*Sisyphean
 `.trim().split('\n');

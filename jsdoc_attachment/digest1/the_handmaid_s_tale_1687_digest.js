@@ -27,4 +27,6 @@ var digest_global=`
 *fatherhood
 *godliness
 *sauna
+*defunct
+*motorist
 `.trim().split('\n');

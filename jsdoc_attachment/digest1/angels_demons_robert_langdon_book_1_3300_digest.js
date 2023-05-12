@@ -44,4 +44,6 @@ var digest_global=`
 *ultramodern
 *waistline
 *warhead
+*penmanship
+*fire truck
 `.trim().split('\n');
