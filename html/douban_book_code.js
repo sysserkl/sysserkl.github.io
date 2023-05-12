@@ -112,8 +112,15 @@ function menu_dbb(){
     ['英语','jieba_dbb(\'en\');',true],
     ['非英语','jieba_dbb(\'cn\');',true],
     ];    
-    klmenu_statistics.push(menu_container_b(str_t,group_list,'当前条件分词：'));        
+    klmenu_statistics.push(menu_container_b(str_t,group_list,'当前条件全部分词：'));        
 
+    group_list=[
+    ['常见','jieba_dbb(\'title\');',true],
+    ['罕见','jieba_dbb(\'title\',1,9);',true],
+    ['单一','jieba_dbb(\'title\',1,1);',true],
+    ];    
+    klmenu_statistics.push(menu_container_b(str_t,group_list,'当前条件书名分词：'));      
+    
     var klmenu_config=[
     '<span class="span_menu">排序：<select id="select_sort_type_dbb" onchange="'+klmenu_hide_b('',true)+'"><option></option><option>书名</option><option selected>评分</option><option>人数</option><option>出版年</option><option>页数</option><option>定价</option><option>随机</option></select></span>',    
     '<span id="span_reg_dbb" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ reg</span>',
@@ -131,7 +138,7 @@ function menu_dbb(){
         
     klmenu_config=klmenu_config.concat(root_font_size_menu_b(str_t));
     
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','16rem','1rem','1rem','60rem')+klmenu_b(klmenu_statistics,'🧮','16rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','20rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','16rem','1rem','1rem','60rem')+klmenu_b(klmenu_statistics,'🧮','20rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','20rem','1rem','1rem','60rem'),'','0rem')+' ');
     klmenu_check_b('span_reg_dbb',true);        
     klmenu_check_b('span_txtbook_icon_dbb',true);        
 }
@@ -149,24 +156,36 @@ function standalone_dbb(){
     standalone_search_funs_b(bltitle.trim(),result_t.join('\n'),['popup_dbb','popup_event_div_b','style_generate_b']);
 }
 
-function jieba_dbb(cstype='cn'){
+function jieba_dbb(cstype='cn',csmin=10,csmax=-1){
     var list_t=[];
-    for (let arow of current_result_dbb_global){
-        list_t.push(Object.values(arow[0]).toString());
-    }
-    var blstr=list_t.join('\n');
-    if (cstype=='cn'){
-        list_t=blstr.match(/[^\x00-\xff]+/mg) || [];
+    if (['cn','en'].includes(cstype)){
+        for (let arow of current_result_dbb_global){
+            list_t.push(Object.values(arow[0]).toString());
+        }
     }
     else {
-        list_t=blstr.match(/[a-z\'\-]+/img) || [];    
+        for (let arow of current_result_dbb_global){
+            list_t.push(arow[0][cstype]);
+        }
     }
+    
+    var blstr=list_t.join('\n');
+    
+    switch (cstype){
+        case 'cn':
+            list_t=blstr.match(/[^\x00-\xff]+/mg) || [];
+            break;
+        case 'en':
+            list_t=blstr.match(/[a-z\'\-]+/img) || [];    
+            break;
+    }
+    
     blstr=list_t.join('\n');
-    var arr_t = count_words_b(blstr,split_words_b(blstr,true),10);
+    var arr_t = count_words_b(blstr,split_words_b(blstr,true),csmin,csmax);
 
     var blbutton='<p>'+close_button_b('div_statistics','')+'</p>';
     var odiv=document.getElementById('div_statistics');
-    odiv.innerHTML = '<textarea style="height:20rem;">'+arr_t+'</textarea>'+blbutton;    
+    odiv.innerHTML = '<textarea style="height:20rem;">'+arr_t.join('\n')+'</textarea>'+blbutton;    
     odiv.scrollIntoView();
 }
 

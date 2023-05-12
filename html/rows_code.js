@@ -137,17 +137,28 @@ function menu_klr2(){
     '<span class="span_menu" onclick="'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'rows\');}">更新版本</span>',
     ]);
 
-    var klmenu_sort=[
-    '<span class="span_menu" onclick="'+str_t+'sort_rows_klr_b(\'textarea_rows_content\',\'\');">升序</span>',    
-    '<span class="span_menu" onclick="'+str_t+'sort_rows_klr_b(\'textarea_rows_content\',\'desc\');">倒序</span>',
+    var klmenu_sort=[];
+    
+    var group_list=[
+    ['升序','sort_rows_klr_b(\'textarea_rows_content\',\'\');',true],
+    ['倒序','sort_rows_klr_b(\'textarea_rows_content\',\'desc\');',true],
+    ];    
+    klmenu_sort.push(menu_container_b(str_t,group_list,''));
+
+    var group_list=[
+    ['升序','sort_rows_klr_b(\'textarea_rows_content\',\'asc_num\');',true],
+    ['倒序','sort_rows_klr_b(\'textarea_rows_content\',\'desc_num\');',true],
+    ];    
+    klmenu_sort.push(menu_container_b(str_t,group_list,'数字：'));
+    
+    klmenu_sort=klmenu_sort.concat([
     '<span class="span_menu" onclick="'+str_t+'reverse_klr_b();">倒转</span>',
-    '<span class="span_menu" onclick="'+str_t+'sort_rows_klr_b(\'textarea_rows_content\',\'asc_num\');">数字升序</span>',
-    '<span class="span_menu" onclick="'+str_t+'sort_rows_klr_b(\'textarea_rows_content\',\'desc_num\');">数字倒序</span>',    
     '<span class="span_menu" onclick="'+str_t+'chinese_sort_klr_b();">汉字升序</span>',
     '<span class="span_menu" onclick="'+str_t+'unique_rows_klr_b();">unique</span>',
+    '<span class="span_menu" onclick="'+str_t+'sort_rows_klr_b(\'textarea_rows_content\',\'length\');">长度排序</span>',    
     '<span class="span_menu" onclick="'+str_t+'sort_rows_klr_b(\'textarea_rows_content\',\'random\');">随机排序</span>',
-    ];    
-    
+    ]);    
+   
     var klmenu_batch=[
     '<span class="span_menu" onclick="'+str_t+'enwords_get_klr2();">提取英文单词</span>',        
     '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'batchwww\');">批量打开网址</span>',

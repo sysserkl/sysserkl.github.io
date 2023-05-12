@@ -58,7 +58,10 @@ function sort_rows_klr_b(csid='textarea_rows_content',cstype=''){
             break;
         case 'desc_num':
             list_t.sort(function (a,b){return parseFloat(a)<parseFloat(b);});
-            break;            
+            break;      
+        case 'length':
+            list_t.sort(function (a,b){return a.length>b.length;});        
+            break;
     }
 
 	var result_t=[];

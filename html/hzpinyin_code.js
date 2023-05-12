@@ -442,6 +442,7 @@ function menu_hzpy(){
     var group_list=[
     ['查找','s2t_t2s_search_hzpy();',true],
     ['一一对应的字','s2t_t2s_pair_hzpy();',true],
+    ['按行拆分','st_split_by_line_hzpy();',true],    
     ];    
     klmenu1.push(menu_container_b(str_t,group_list,'繁简: '));
 
@@ -461,6 +462,29 @@ function menu_hzpy(){
     }    
 
     document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','18rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'📢','10rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem'),'','0rem')+' ');
+}
+
+function st_split_by_line_hzpy(){
+    var list_t=document.getElementById('textarea_search_hzpy').value.trim().split('\n');
+    var without_t_list=[];
+    var with_t_list=[];
+    for (let arow of list_t){
+        var list_t=new Set(arow.split(''));
+        var blfound_t=false;
+        for (let item of list_t){
+            if (cn_t2s_global[item] && cn_s2t_global[item]==undefined){
+                blfound_t=true;
+                break;
+            }
+        }
+        if (blfound_t){
+            with_t_list.push(arow);
+        }
+        else {
+            without_t_list.push(arow);
+        }
+    }
+    document.getElementById('divhtml').innerHTML='<h3>不含繁体的行</h3><textarea style="height:20rem;">'+without_t_list.join('\n')+'</textarea>'+'<h3>含繁体的行</h3><textarea style="height:20rem;">'+with_t_list.join('\n')+'</textarea>';
 }
 
 function init_hzpy(){

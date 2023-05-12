@@ -286,7 +286,7 @@ function split_words_b(csstr,cscombine=false){
     //------------------    
     var t0 = performance.now();
     var list_done=[];
-    csstr=csstr.replace(new RegExp("[—、；：。，？！【】（）《》“”‘’…ɑəŋɔʒθ]",'g'),' ');
+    csstr=csstr.replace(new RegExp("[—、；：。，？！【】（）《》“”‘’…ɑəŋɔʒθ〈〉「」〔〕『』〜～・．－]",'g'),' ');  //〜～ 这两个不一样 - 保留注释
     
     var list_en=csstr.match(/\b[a-zA-Z'\-_]{2,}\b/g);   //英文分词简单处理 - 保留注释
     if (list_en==null){
@@ -344,16 +344,17 @@ function split_words_b(csstr,cscombine=false){
     }
 }
 
-function count_words_b(csstr,words_list,csmin=1){
+function count_words_b(csstr,words_list,csmin=1,csmax=-1){
     var list_t=[];
     for (let item of words_list){
         if (item==''){continue;}
         var blcount=csstr.split(item).length-1;
-        if (blcount>=csmin){
-            list_t.push([item,blcount]);
-        }
+        if (blcount<csmin){continue;}
+        if (csmax>0 && blcount>csmax){continue;}
+        list_t.push([item,blcount]);
     }
-    list_t.sort(function (a,b){return b[1]-a[1];});
+    list_t.sort();
+    list_t.sort(function (a,b){return a[1]<b[1];});
     return list_t;
 }
 
