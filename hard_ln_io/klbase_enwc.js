@@ -286,28 +286,58 @@ function getlines_enwc_b(csno,cslines){
 }
 
 function show_sentence_enwc_b(maxlines=0,showcount=true,is_random=false,show_button=true){
-    function sub_show_sentence_enwc_b(font_size,button_str){
-        if (blxl>=oalen){
+    function sub_show_sentence_enwc_b_count(){
+        var odiv=document.querySelector('div.div_word_sentence_rank');
+        if (!odiv){return;}
+        word_sentence_rank=object2array_b(word_sentence_rank,false,2);
+        var rank_dict={'0':[],'1':[],'2':[],'more':[]};
+        for (let item of word_sentence_rank){
+            if (rank_dict[item[0]]==undefined){
+                rank_dict['more']=rank_dict['more'].concat(item[1]);
+            }
+            else {
+                rank_dict[item[0]]=rank_dict[item[0]].concat(item[1]);
+            }
+        }
+        var bljg=[];
+        for (let key in rank_dict){
+            if (rank_dict[key].length==0){continue;}
+            bljg.push('<p><b>'+key+'</b></p>');
+            bljg.push('<textarea style="height:5rem;">'+rank_dict[key].join('\n')+'</textarea>');
+        }
+        odiv.innerHTML='<h3>例句条数</h3>'+bljg.join('\n')+'<p>'+close_button_b('div.div_word_sentence_rank','','aclick',false)+'</p>';
+    }    
+    
+    function sub_show_sentence_enwc_b_one_step(font_size,button_str){
+        if (blxl>=oaslen){
+            sub_show_sentence_enwc_b_count();
             setTimeout(en_sentence_mobile_b,10);
             console.log('show_sentence_enwc_b() 费时：'+(performance.now() - t0) + ' milliseconds');
             return;
         }
-        var aword=oa[blxl];
+        var oword=oas[blxl];
         var bljg,blcount,no_next;
-        [bljg,blcount,no_next]=sentence_set_path_and_get_b(aword.innerText,csmax,font_size,remote_host,button_str);
+        var wordname=oword.innerText;
+        [bljg,blcount,no_next]=sentence_set_path_and_get_b(wordname,csmax,font_size,remote_host,button_str);
+
+        if (word_sentence_rank['c_'+blcount]==undefined){
+            word_sentence_rank['c_'+blcount]=[blcount.toString(),[]];
+        }
+        word_sentence_rank['c_'+blcount][1].push(wordname);
+        
         if (bljg!==''){
             if (showcount){
                 bljg=bljg+'<p align=right style="color:'+scheme_global['shadow']+';">('+blcount+')</p>';
             }
-            aword.parentNode.insertAdjacentHTML('afterend','<div class="div_sentence">'+bljg+'</div>');
+            oword.parentNode.insertAdjacentHTML('afterend','<div class="div_sentence">'+bljg+'</div>');
         }
         
         blxl=blxl+1;
         if (blxl % 10==0){
-            setTimeout(function (){sub_show_sentence_enwc_b(font_size,button_str);},1);
+            setTimeout(function (){sub_show_sentence_enwc_b_one_step(font_size,button_str);},1);
         }
         else {
-            sub_show_sentence_enwc_b(font_size,button_str);
+            sub_show_sentence_enwc_b_one_step(font_size,button_str);
         }
     }
     //--------------------------
@@ -321,8 +351,8 @@ function show_sentence_enwc_b(maxlines=0,showcount=true,is_random=false,show_but
         return;
     }
 
-    var oa=document.querySelectorAll('span.a_word');
-    var oalen=oa.length;
+    var oas=document.querySelectorAll('span.a_word');
+    var oaslen=oas.length;
     
     if (maxlines>0){
         var csmax=maxlines;
@@ -330,13 +360,13 @@ function show_sentence_enwc_b(maxlines=0,showcount=true,is_random=false,show_but
     else {
         if (ismobile_b()){
             var csmax=10;
-            if (oalen>10){
+            if (oaslen>10){
                 csmax=5;
             }
         }
         else {
             var csmax=20;
-            if (oalen>10){
+            if (oaslen>10){
                 csmax=10;
             }
         }
@@ -346,7 +376,8 @@ function show_sentence_enwc_b(maxlines=0,showcount=true,is_random=false,show_but
     [remote_host,button_str,font_size]=sentence_property_b(show_button);
     
     var blxl=0;
-    sub_show_sentence_enwc_b(font_size,button_str);
+    var word_sentence_rank={};
+    sub_show_sentence_enwc_b_one_step(font_size,button_str);
 }
 
 function days_enwc_b(only_plan=false){

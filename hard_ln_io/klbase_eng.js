@@ -1470,6 +1470,7 @@ function enwords_different_types_div_b(cswlist){
     blbuttons=blbuttons+'</p>';
     blbuttons=blbuttons+'<textarea class="textarea_enwords_raw_types">'+cswlist.join('\n')+'</textarea>';    
     blbuttons=blbuttons+'<div class="div_textarea_enwords_different_types"></div>';
+    blbuttons=blbuttons+'<div class="div_word_sentence_rank"></div>';
     return '<div style="margin-top:0.5rem;">'+blbuttons+'</div>';
 }
 
@@ -1488,7 +1489,7 @@ function enwords_different_types_textarea_b(oselect){
             bljg=enwords_js_type_words_b(raw_list,one_textarea,remove_emoji);
             break;
         case 'temp':
-            bljg=enwords_js_type_words_b(raw_list,one_textarea,remove_emoji,true);        
+            bljg=enwords_js_type_words_b(raw_list,one_textarea,remove_emoji,true);
             break;
         case 'wiki':
             bljg=enwords_wiki_type_words_b(raw_list,one_textarea,false);        
@@ -1499,31 +1500,30 @@ function enwords_different_types_textarea_b(oselect){
 
 function enwords_js_type_words_b(cswlist,onetextarea=false,remove_emoji=false,three_lines=false){
     //cswlist 形如：["Doris", "biocompatibility", "deworm", "dewdrop", ] - 保留注释
-    var list_t=[];
-    var str_t='';
-    var js_type='';
     if (remove_emoji){
         var emoji_list=words_queue_emoji_b();
     }
     else {
         var emoji_list=[];
     }
-        
+
+    var list_t=[];
+    var js_type='';    
     for (let item of enwords){
         if (cswlist.includes(item[0]) || cswlist.includes(item[0].replace(new RegExp(' ','g'),'_'))){
-            js_type=enwords_lines_2_js_array_b(item,emoji_list,three_lines);;
+            js_type=enwords_lines_2_js_array_b(item,emoji_list,three_lines);
             if (onetextarea==false){
-                str_t='<br /><textarea style="height:3rem;" onclick="this.select();document.execCommand(\'copy\');">'+js_type+'</textarea>';
+                js_type='<br /><textarea style="height:3rem;" onclick="this.select();document.execCommand(\'copy\');">'+js_type+'</textarea>';
             }
             else {
                 if (three_lines){
-                    str_t=js_type+'\n---\n';
+                    js_type=js_type+'\n---\n';
                 }
                 else {
-                    str_t=js_type+'\n';
+                    js_type=js_type+'\n';
                 }
             }
-            list_t.push([str_t,(2+cswlist.indexOf(item[0]))*-1]);
+            list_t.push([js_type,(2+cswlist.indexOf(item[0]))*-1]);
         }
     }
     return enwords_different_types_result_b(list_t,onetextarea);
@@ -1558,7 +1558,6 @@ function enwords_different_types_result_b(cslist,onetextarea){
 
 function enwords_wiki_type_words_b(cswlist,onetextarea=false,asterisk=false){
     var list_t=[];
-    var str_t='';
     var wiki_type='';
     for (let item of enwords){
         if (cswlist.includes(item[0]) || cswlist.includes(item[0].replace(new RegExp(' ','g'),'_'))){
@@ -1569,17 +1568,14 @@ function enwords_wiki_type_words_b(cswlist,onetextarea=false,asterisk=false){
                 wiki_type='&lt;eword w="'+item[0]+'"&gt;&lt;/eword&gt;';
             }
             if (onetextarea==false){
-                str_t='<br /><textarea style="height:3rem;" onclick="this.select();document.execCommand(\'copy\');">';
-                str_t=str_t+wiki_type;
-                str_t=str_t+'</textarea>';
+                wiki_type='<br /><textarea style="height:3rem;" onclick="this.select();document.execCommand(\'copy\');">'+wiki_type+'</textarea>';
             }
             else {
-                str_t=wiki_type+'\n';
+                wiki_type=wiki_type+'\n';
             }
-            list_t.push([str_t,(2+cswlist.indexOf(item[0]))*-1]);
+            list_t.push([wiki_type,(2+cswlist.indexOf(item[0]))*-1]);
         }
     }
-    
     return enwords_different_types_result_b(list_t,onetextarea);
 }
 

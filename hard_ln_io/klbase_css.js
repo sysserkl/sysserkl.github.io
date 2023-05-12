@@ -1947,16 +1947,19 @@ function character_2_icon_b(csstr){
     olink.href=imgsrc;
 }
 
-function close_button_b(csid='',cstype='',class_name='aclick'){
+function close_button_b(query_str='',cstype='',class_name='aclick',is_id=true){
+    if (is_id){
+        query_str='#'+query_str;
+    }
     switch (cstype){
         case '':
-            return '<span class="'+class_name+'" onclick="document.getElementById(\''+csid+'\').innerHTML=\'\';">Close</span>';
+            return '<span class="'+class_name+'" onclick="document.querySelector(\''+query_str+'\').innerHTML=\'\';">Close</span>';
             break;      
         case 'none':
-            return '<span class="'+class_name+'" onclick="document.getElementById(\''+csid+'\').style.display=\'none\';">Close</span>';
+            return '<span class="'+class_name+'" onclick="document.querySelector(\''+query_str+'\').style.display=\'none\';">Close</span>';
             break;        
         case 'remove':
-            return '<span class="'+class_name+'" onclick="document.getElementById(\''+csid+'\').outerHTML=\'\';">Close</span>';        
+            return '<span class="'+class_name+'" onclick="document.querySelector(\''+query_str+'\').outerHTML=\'\';">Close</span>';        
             break;
     }
 }
