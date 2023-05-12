@@ -374,7 +374,7 @@ function flot_labelFormatter_b(label, series) {
     return "<div class='div_flot_pie_label'>" + label + "<br/>" + (series.percent).toFixed(2) + "%</div>";
 }
 
-function flot_import_js_b(cslist=[],isdefer=false,do_write=true){
+function flot_import_js_b(cslist=[],isdefer=false,write_or_dom='write'){
     var blpath=location.href;
     if (blpath.includes('/klwebphp/')){
         blpath=blpath.split('/klwebphp/')[0];
@@ -390,8 +390,14 @@ function flot_import_js_b(cslist=[],isdefer=false,do_write=true){
     for (let item of cslist){
         result_t.push(['js',blpath+'jquery.flot.'+item+'.min.js',defer_str]);
     }
-    if (do_write){
+    if (write_or_dom=='write'){
         write_js_css_b(result_t);
+    }
+    else if (write_or_dom=='dom'){
+        file_dom_create_b([result_t[0]],true,'js');
+        if (result_t.length>1){        
+            load_var_b('$.plot.plugins',5,1000,function (){file_dom_create_b(result_t.slice(1,),true,'js');});
+        }
     }
     return result_t;
 }

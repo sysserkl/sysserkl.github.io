@@ -5,9 +5,7 @@ function style_load_bigday_history(){
 
 function file_load_bigday_history(){
     function sub_file_load_bigday_history_flot(){
-        file_list=flot_import_js_b(['time','symbol'],false,false); 
-        //元素形如：[ "js", "http://xxx/module/flot/jquery.flot.min.js", "" ] - 保留注释
-        file_dom_create_b(file_list,true,'js');
+        flot_import_js_b(['time','symbol'],false,'dom'); 
     }
     //------------------
     var file_list=klbase_addons_import_js_b(['date','flot'],[],[],[],true,false);
