@@ -186,6 +186,8 @@ function menu_common(){
     klmenu_config.push('<span class="span_menu" onclick="'+str_t+'standalone_search_common();">当前结果导出为 standalone search</span>');
     
     var menu_group={};
+    js_file_list_common_global.sort(function (a,b){return zh_sort_b(a,b,false,2);});
+    js_file_list_common_global.sort(function (a,b){return zh_sort_b(a,b,false,5);});
     for (let item of js_file_list_common_global){
         var blcategory='c_'+(item[5]==''?'📜':item[5]);
         if (menu_group[blcategory]==undefined){
