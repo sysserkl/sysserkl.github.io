@@ -494,9 +494,14 @@ function menu_kle(){
     var klmenu1;
     var klmenu_brain;
     [klmenu_old,klmenu1,klmenu_brain]=menu_base_enwc_b();
+
+    var group_list=[
+    ['随机排序','show_sentence_enwc_b(0,true,true);',true],
+    ['最多3条','show_sentence_enwc_b(3,true,true);',true],
+    ];    
+    klmenu1.push(menu_container_b(str_t,group_list,'显示例句：'));
     
     klmenu1=klmenu1.concat([
-    '<span class="span_menu" onclick="'+str_t+'show_sentence_enwc_b(0,true,true);">显示例句(随机排序)</span>',
     '<span class="span_menu" onclick="'+str_t+'en_sentence_to_default_order_b();alert(\'done\');">例句恢复原始排序</span>',
     '<span class="span_menu" onclick="'+str_t+'definition_2_multilines_kle();">释义分段</span>',    
     '<span class="span_menu" onclick="'+str_t+'similar_words_batch_kle();">全部相似单词</span>',
@@ -561,7 +566,7 @@ function menu_kle(){
         klmenu_search.push('<span class="span_menu" onclick="'+str_t+'search_r_key_b(\'input_search\',\'input_reg\',\''+item.replace(new RegExp(/(\\)/,'g'),'\\\\')+'\');wordsearch_enwords_b();">'+item+'</span>');
     }
     
-    var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu1,'','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_old,'旧','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_brain,'🧠','17rem','1rem','1rem')+klmenu_b(klmenu_new,'🆕','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_statistics,'🧮','14rem','1rem','1rem')+klmenu_b(klmenu_search,'🔽','18rem','1rem','1rem','30rem'),'','0rem')+' ';
+    var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu1,'','16rem','1rem','1rem','60rem')+klmenu_b(klmenu_old,'旧','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_brain,'🧠','17rem','1rem','1rem')+klmenu_b(klmenu_new,'🆕','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_statistics,'🧮','14rem','1rem','1rem')+klmenu_b(klmenu_search,'🔽','18rem','1rem','1rem','30rem'),'','0rem')+' ';
     
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',bljg);
     

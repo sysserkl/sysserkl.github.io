@@ -302,10 +302,10 @@ function show_sentence_enwc_b(maxlines=0,showcount=true,is_random=false,show_but
         var bljg=[];
         for (let key in rank_dict){
             if (rank_dict[key].length==0){continue;}
-            bljg.push('<p><b>'+key+'</b></p>');
+            bljg.push('<p><b> '+rank_dict[key].length+' 个单词 '+key+' 条例句</b></p>');
             bljg.push('<textarea style="height:5rem;">'+rank_dict[key].join('\n')+'</textarea>');
         }
-        odiv.innerHTML='<h3>例句条数</h3>'+bljg.join('\n')+'<p>'+close_button_b('div.div_word_sentence_rank','','aclick',false)+'</p>';
+        odiv.innerHTML='<hr />'+bljg.join('\n')+'<p>'+close_button_b('div.div_word_sentence_rank','','aclick',false)+'</p>';
     }    
     
     function sub_show_sentence_enwc_b_one_step(font_size,button_str){
@@ -597,7 +597,7 @@ function menu_base_enwc_b(){
     
     var menu1=[
     '<a href="'+sele_path+'/html/enwords_exam.htm?n=100&type=recent" onclick="'+str_t+'" target=_blank>单词填空</a>',
-    '<span class="span_menu" onclick="'+'getlines_rnd_enwc_b();'+str_t+'">随机旧单词</span>',    
+    '<span class="span_menu" onclick="'+'getlines_rnd_enwc_b(\'\',true,false);'+str_t+'">随机旧单词</span>',    
     '<span class="span_menu" onclick="'+str_t+'get_day_words_enwc_b(\'\',\'\',\'old\');">今日旧单词0</span>',
     '<span class="span_menu" onclick="'+str_t+'get_day_words_enwc_b(\'\',\'\',\'old2\');">今日旧单词2</span>',
     '<span class="span_menu" onclick="'+str_t+'get_day_words_enwc_b(0,\'\',\'old02_OR\');">今日旧单词0和2</span>',
@@ -658,7 +658,7 @@ function sls_search_link_generate_enwc_b(cslist){
     window.open('enwords.htm?sls');
 }
 
-function getlines_rnd_enwc_b(cslines='',showhtml=true){
+function getlines_rnd_enwc_b(cslines='',showhtml=true,without_textarea=true){
 	if (cslines===''){
         var cslines= document.getElementById('input_lines').value.trim();
     }
@@ -684,7 +684,9 @@ function getlines_rnd_enwc_b(cslines='',showhtml=true){
         bllink_t=bllink_t.substring(0,bllink_t.length-1);
     }
     if (showhtml){
-	    blhtml.innerHTML=bljg+'<p><span class="aclick" onclick="sls_search_link_generate_enwc_b(word_doms_txt_get_enwc_b());">link</span> <span class="aclick" onclick="en_word_temp_batch_add_b();">批量添加当前条件下的单词为最近记忆单词</span></p>'+enwords_batch_div_b(words_searched_arr_global,'');
+        var bltextarea=(without_textarea?'':enwords_js_wiki_textarea_b(words_searched_arr_global));
+
+	    blhtml.innerHTML=bljg+'<p><span class="aclick" onclick="sls_search_link_generate_enwc_b(word_doms_txt_get_enwc_b());">link</span> <span class="aclick" onclick="en_word_temp_batch_add_b();">批量添加当前条件下的单词为最近记忆单词</span></p>'+enwords_batch_div_b(words_searched_arr_global,'')+bltextarea;
         title_change_enwords_b('随机单词');
     }
     enwords_sort_b();

@@ -536,7 +536,7 @@ function menu_arr_analyze(){
     var klmenu2=root_font_size_menu_b(str_t);
     klmenu2.push('<span class="span_menu" onclick="'+str_t+'import_arr_analyze();">以数组形式直接载入记录</span>');
     
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','22rem','1rem','1rem','60rem'),'','0rem')+klmenu_b(klmenu2,'⚙','20rem','1rem','1rem','60rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','22rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'⚙','20rem','1rem','1rem','60rem'),'','0rem')+' ');
 }
 
 function split_table_arr_analyze(split_type,cscount){
@@ -621,8 +621,13 @@ function table_refresh_arr_analyze(reload=true){
         maxcol=Math.max(maxcol,item.length);
         var arow=['<td align="right" style="background-color:'+scheme_global['button']+';">'+row_no+'</td>'];
         row_no=row_no+1;
-        for (let bly=0;bly<item.length;bly++){
-            arow.push('<td'+(isNaN(item[bly])?'':' align="right"')+'>'+item[bly]+'</td>');
+        for (let acol of item){
+            if (!isNaN(acol) || acol.slice(-1)=='%' && !isNaN(acol.slice(0,1))){
+                arow.push('<td align="right">'+acol+'</td>');
+            }
+            else {
+                arow.push('<td>'+acol+'</td>');            
+            }
         }
         result_t.push('<tr>'+arow.join('')+'</tr>');    
     }

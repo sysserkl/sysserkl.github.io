@@ -104,4 +104,6 @@ var digest_global=`
 *understaffed
 *Cossack
 *echo chamber
+*menfolk
+*motorist
 `.trim().split('\n');

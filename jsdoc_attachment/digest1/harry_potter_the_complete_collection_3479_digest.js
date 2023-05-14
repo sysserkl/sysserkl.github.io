@@ -61,4 +61,7 @@ var digest_global=`
 *department store
 *undefeated
 *reapply
+*laddie
+*unendurable
+*southwards
 `.trim().split('\n');
