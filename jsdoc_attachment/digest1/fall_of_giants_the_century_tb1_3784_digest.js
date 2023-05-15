@@ -16,6 +16,7 @@ var digest_global=`
 *Heinrich
 *Hoffmann
 *Keynes
+*magnesium
 *Menshevik
 *motorcyclist
 *neckline
@@ -23,6 +24,7 @@ var digest_global=`
 *Nicolson
 *nightstand
 *nightwear
+*peacemaker
 *pocketknife
 *presidium
 *Second Coming

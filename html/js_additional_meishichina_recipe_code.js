@@ -3,9 +3,17 @@ function menu_more_meishichina_recipe(){
     var klmenu1=[
     '<span class="span_menu" onclick="'+str_t+'statistics_ingredient_meishichina_recipe();">不同原料菜谱的原料使用统计</span>',   
     '<span class="span_menu" onclick="'+str_t+'same_ingredient_meishichina_recipe();">相同原料的菜谱</span>',   
+    '<span class="span_menu" onclick="'+str_t+'random_ingredient_meishichina_recipe();">随机菜谱</span>',   
 
     ];
     return klmenu_b(klmenu1,'🧮','16rem','1rem','1rem','30rem');
+}
+
+function random_ingredient_meishichina_recipe(){
+    if (meishichina_recipe_global.length==0){return;}
+    meishichina_recipe_global.sort(randomsort_b);
+    document.getElementById('input_result_max').value=1000;
+    search_common('.');
 }
 
 function statistics_ingredient_meishichina_recipe(){

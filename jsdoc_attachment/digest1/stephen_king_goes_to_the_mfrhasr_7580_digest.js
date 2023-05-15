@@ -86,4 +86,7 @@ var digest_global=`
 *Garfield
 *evening paper
 *nicotine
+*Big Ben
+*cranberry
+*effortful
 `.trim().split('\n');

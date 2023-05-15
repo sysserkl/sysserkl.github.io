@@ -27,4 +27,8 @@ var digest_global=`
 *symbology
 *unbuilt
 *watermark
+*Koran
+*penmanship
+*freeze-frame
+*hairdresser
 `.trim().split('\n');
