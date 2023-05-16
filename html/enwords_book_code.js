@@ -1101,7 +1101,7 @@ function new_and_common_enwords_book(csresult,cslength,common_max){
             common_set=csresult.slice(0,blxl);
             break;
         }
-    }    
+    }
     
     for (let blxl=0;blxl<common_set.length;blxl++){
         common_set[blxl]=common_set[blxl][0];
@@ -1139,7 +1139,7 @@ function common_word_sign_set_enwords_book(csset){
         if (!csset.has(blword)){continue;}
         osub.insertAdjacentHTML('beforebegin','👫');
     }
-    console.log('common_word_sign_set_enwords_book() 费时：'+(performance.now() - t0) + ' milliseconds');                
+    console.log('common_word_sign_set_enwords_book() 费时：'+(performance.now() - t0) + ' milliseconds');
 }
 
 function frequency_enwords_book(cstype='',common_max=4000){
@@ -1162,7 +1162,7 @@ function frequency_enwords_book(cstype='',common_max=4000){
             }
             if (cstype!=='sentence_rare'){
                 document.getElementById('textarea_new_words2').value='var enwords_easy_global=[\n//常见单词('+common_t.length+')\n'+common_t.join('\n')+'\n];\n';
-                console.log('frequency_enwords_book() 费时：'+(performance.now() - t0) + ' milliseconds');            
+                console.log('frequency_enwords_book() 费时：'+(performance.now() - t0) + ' milliseconds');
             }
             return;
         }
