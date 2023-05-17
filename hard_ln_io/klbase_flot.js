@@ -457,6 +457,7 @@ function statistics_data_type_b(data_type){
             ['enwords_days_last_row_minus_one','-1所需的额外记忆单词量',0,'/'],
             ['enwords_recent_bookmark_position','最近记忆单词bookmark位置',0,'/'],
             ['enwords_non_ensentence','无例句单词',0,'/'],
+            ['enwords_rare_ensentence','例句最少单词',0,'/'],
             ['cached_records_count_enbook','已缓存的selenium英语单词文章链接',0,'/'],
             ['all_new_words_statistics','全部新单词',0,'/'],
             ['enwords_sentence_rows','例句行数',0,'/'],

@@ -595,7 +595,7 @@ function selenium_list_enwords_book(use_cache=false,cstype=''){
 
 function selenium_html_enwords_book(result_str,use_cache,cached_list_len,theday){
     var bljg='<h1>'+theday+'</h1>\n'+result_str+'<p>';
-    bljg=bljg+'<span class="aclick" onclick="frequency_enwords_book(\'sentence_rare\');this.outerHTML=\'\';">例句中的常见单词</span>';
+    bljg=bljg+'<span class="aclick" onclick="frequency_enwords_book(\'sentence_rare\',true);this.outerHTML=\'\';">例句中的常见单词</span>';
     bljg=bljg+'<span class="aclick" onclick="selenium_number_enwords_book();">刷新编号</span>';
     if (use_cache){
         bljg=bljg+'<span class="aclick" onclick="selenium_local_storage_clear_enwords_book();">清空缓存(<span id="span_selenium_local_storage_count">'+cached_list_len+'</span>)</span>';
@@ -1142,7 +1142,7 @@ function common_word_sign_set_enwords_book(csset){
     console.log('common_word_sign_set_enwords_book() 费时：'+(performance.now() - t0) + ' milliseconds');
 }
 
-function frequency_enwords_book(cstype='',common_max=4000){
+function frequency_enwords_book(cstype='',simple_split=false,common_max=4000){
     function sub_frequency_enwords_book_arow(){
         if (blxl>=bllen){
             var new_t,common_t,common_set;
@@ -1175,6 +1175,7 @@ function frequency_enwords_book(cstype='',common_max=4000){
             
             var is_new=true;
             var blstr='';
+            
             if (new_word_set.has(aword)){
                 blstr=aword;
             }
@@ -1182,7 +1183,7 @@ function frequency_enwords_book(cstype='',common_max=4000){
                 blstr=aword;
                 is_new=false;
             }
-            else {
+            else if (!simple_split){
                 var variety=wordtypes_enbook_b(aword);
                 for (let one_type of variety){
                     if (oldwords.has(one_type)){
@@ -1193,6 +1194,7 @@ function frequency_enwords_book(cstype='',common_max=4000){
                     }                    
                 }
             }
+            
             if (blstr==''){
                 blstr=aword;
             }

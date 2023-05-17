@@ -9,7 +9,7 @@ var common_apps_pb_global=[
 ["{{selenium_news}}/html/bible.htm","Bible","✝️","0_1"],
 ["{{selenium_news}}/html/book_search_js.htm","EBS_JS","👁","1_1_f"],
 ["{{selenium_news}}/html/bookshelf.htm","bookshelf","📚","5","txtbook"],
-["{{selenium_news}}/html/calculator.htm","Calculator","➗","0_1"],
+["{{selenium_news}}/html/calculator.htm","Calculator","➗","1"],
 ["{{selenium_news}}/html/calendar.htm","Calendar","calendar256.png","1"],
 ["{{selenium_news}}/html/canvas_draw.htm","canvas draw","🖍","3",""],
 ["{{selenium_news}}/html/cn_idiom.htm","cn idiom","😵","2",""],

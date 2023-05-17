@@ -16,16 +16,27 @@ function init_ensentence(){
 
 function menu_ensentence(){
     var str_t=klmenu_hide_b('');
-    var klmenu1=[
-    '<span class="span_menu" onclick="'+str_t+'get_day_sentences_enwc_b();">指定日期例句(asc)</span>',
-    '<span class="span_menu" onclick="'+str_t+'get_day_sentences_enwc_b(\'\',\'\',false);">指定日期例句(段落)</span>',        
+    var klmenu1=[];
+    
+    var group_list=[
+    ['asc','get_day_sentences_enwc_b();',true],
+    ['段落','get_day_sentences_enwc_b(\'\',\'\',false);',true],
+    ];    
+    klmenu1.push(menu_container_b(str_t,group_list,'指定日期例句：'));
+        
+    klmenu1=klmenu1.concat([
     '<span class="span_menu" onclick="'+str_t+'minimum_ensentence();">例句最少的单词300</span>',
     '<span class="span_menu" onclick="'+str_t+'random_scan_ensentence('+(ismobile_b()?20:100)+');">随机扫描例句最少的单词</span>',
-    '<span class="span_menu" onclick="'+str_t+'rare_old_words_ensentence();">例句最少的单词2000</span>',    
     '<span class="span_menu" onclick="'+str_t+'none_ensentence();">无例句的单词</span>',
     '<span class="span_menu" onclick="'+str_t+'show_new_words_enwc_b(\'span.span_enwords_sentence\',false);">显示例句中的生词</span>',    
-    ];
+    ]);
 
+    var group_list=[
+    ['显示例句','rare_old_words_ensentence();',true],
+    ['不显示例句','rare_old_words_ensentence(false);',true],
+    ];    
+    klmenu1.push(menu_container_b(str_t,group_list,'例句最少的单词2000：'));
+    
     var klmenu_config=[
     '<span class="span_menu" onclick="'+str_t+'sentence_source_list_ensentence();">例句出处文章列表</span>',    
     '<span class="span_menu" onclick="'+str_t+'host_count_ensentence();">例句出处统计</span>',    
@@ -34,7 +45,7 @@ function menu_ensentence(){
     '<a href="'+location.origin+'/wiki/index.php/%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9" onclick="'+str_t+'" target=_blank>KLWiki最近更改</a>',    
     ];    
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🗨','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','17rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🗨','23rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','17rem','1rem','1rem','60rem'),'','0rem')+' ');
     klmenu_check_b('span_reg_ensentence',true);
 }
 
@@ -267,7 +278,7 @@ function random_scan_ensentence(csmax=-1){
     setTimeout(sub_random_scan_ensentence_one_word,1);
 }
 
-function rare_old_words_ensentence(){
+function rare_old_words_ensentence(show_sentence=true){
     function sub_rare_old_words_ensentence_arow(){
         if (blxl>=bllen){
             result_t=object2array_b(result_t,true,2);
@@ -285,8 +296,13 @@ function rare_old_words_ensentence(){
             }
             var bltextarea='<textarea onclick="this.select();document.execCommand(\'copy\');">'+words_searched_arr_global.join('\n')+'</textarea>';
             document.getElementById('divhtml').innerHTML=enwords_array_to_html_b(words_searched_arr_global,false)+bltextarea;
-            show_sentence_enwc_b();            
-            console.log('rare_old_words_ensentence() 费时：'+(performance.now() - t0) + ' milliseconds');           
+            
+            local_storage_today_b('enwords_rare_ensentence',40,words_searched_arr_global.length,'/');
+            
+            if (show_sentence){
+                show_sentence_enwc_b();
+            }
+            console.log('rare_old_words_ensentence() 费时：'+(performance.now() - t0) + ' milliseconds');
             return;
         }
         

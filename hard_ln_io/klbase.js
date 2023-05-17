@@ -103,7 +103,7 @@ function remote_access_page_b(){
     document.querySelector('body').innerHTML='';
 }
 
-function klwebphp_path_b(subdir_or_file=''){    
+function klwebphp_path_b(subdir_or_file=''){
     var klbase_path=location.href;
     if (klbase_path.includes('/klwebphp/')){
         return klbase_path.split('/klwebphp/')[0]+'/klwebphp/'+subdir_or_file;
@@ -137,7 +137,7 @@ function location_host_b(use_remote_host=false){
         return 'file:///'+location.host;    //location.host 为 空 - 保留注释
     }
     else {
-        return blhref.split('//')[0]+'//'+location.host;
+        return location.origin; //blhref.split('//')[0]+'//'+location.host;
     }
 }
 
@@ -1660,7 +1660,7 @@ function klsofts_list_b(cstype='all',diy_list=[],ignore_popup=false){
     var ico_path=klwebphp_path+'icos/';
     
     var selected_t=[];
-    var is_local_file=(location.href.substring(0,5)=='file:');    
+    var is_local_file=is_file_type_b();
     var blfound=false;
     for (let blxl=0;blxl<divlist.length;blxl++){
         if (divlist[blxl].length==4 && divlist[blxl][3].includes('_')){

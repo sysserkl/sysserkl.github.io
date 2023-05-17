@@ -2,13 +2,8 @@ function init_klindex(){
     //将常用app储存在localstorage中，便于KLWiki等调用 - 保留注释
     var bljg='';
     var tags='';
-    var isfile=is_file_type_b();
     var common_apps=common_apps_kl_global.concat(common_apps_pb_global);
     for (let item of common_apps){
-        if (isfile && item[0].slice(-4,)=='.php' && item[0].substring(0,4)!=='http'){
-            console.log(item[0]);   //此行保留 - 保留注释
-            continue;
-        }
         bljg=bljg+item.join(',')+'\n';
         if (item.length>=5){
             tags=tags+item[4]+'|';
@@ -27,7 +22,70 @@ function recent_search_klindex(csstr='',constant_value=[]){
     recent_search_b('recent_search_app',csstr,'components_klindex','div_recent_search',constant_value,35,false);
 }
 
-function components_klindex(cskey=''){
+function klsofts_local_or_remote_klindex(odom){
+    var is_to_remote=(odom.innerText.match(/\blocal\b/) || []).length>0;
+    if (!is_to_remote){
+        components_klindex(false,true);
+        return;
+    }
+    components_klindex(false,false);
+    
+    var local_str=klwebphp_path_b();    //仅考虑当前host为 file 或 127.0.0.1 - 保留注释
+    var local_len=local_str.length;
+    
+    var remote_str=location_host_b(true);
+    if (remote_str==''){
+        remote_str=local_str;
+    }
+    else {
+        remote_str=remote_str+'/klwebphp/';
+    }
+    
+    var remote_len=remote_str.length;
+
+    var oas=document.querySelectorAll('div.div_klsofts_one a');
+    for (let one_a of oas){
+        var blhref=one_a.href;
+        if (!blhref){continue;}
+        if (is_to_remote && blhref.substring(0,local_len)==local_str){
+            blhref=blhref.replace(local_str,remote_str);
+            one_a.setAttribute('href',blhref);
+        }
+        else if (!is_to_remote && blhref.substring(0,remote_len)==remote_str){
+            blhref=blhref.replace(remote_str,local_str);
+            one_a.setAttribute('href',blhref);
+        }
+    }
+}
+
+function php_remove_klindex(cskey,is_local){
+    var divlist=klsofts_list_b(cskey);
+    
+    if (is_file_type_b() || location.host=='127.0.0.1'){
+        //不在其他host时生效，因为无法知道 local 为 file 时的具体地址 - 保留注释    
+        if (location_host_b()!==location_host_b(true)){
+            if (is_local){
+                divlist.push(['javascript:klsofts_local_or_remote_klindex(this);','local','⛺','0']);
+            }
+            else {
+                divlist.push(['javascript:klsofts_local_or_remote_klindex(this);','remote','☁','0']);        
+            }
+        }
+    }
+    
+    var isfile=is_file_type_b();
+    var result_t=[];
+    for (let item of divlist){
+        if (is_local && isfile && item[0].slice(-4,)=='.php' && item[0].substring(0,4)!=='http'){
+            console.log(item[0]);   //此行保留 - 保留注释
+            continue;
+        }
+        result_t.push(item);
+    }
+    return result_t;
+}
+
+function components_klindex(cskey='',is_local=true){
     function sub_components_klindex_table(csarray,tdcolumns){
         var bljg='';
         for (let blxl=0;blxl<csarray.length;blxl++){
@@ -51,8 +109,13 @@ function components_klindex(cskey=''){
         return '<table width=100% border=0 cellpadding=0 cellspacing=0 style="word-break:normal;word-wrap:break-word;">'+bljg+'</table>';    
     }
     //--------------------    
-    var divlist=klsofts_list_b(cskey);
-    document.getElementById('input_search').value=cskey;
+    var oinput=document.getElementById('input_search');
+    if (cskey===false){
+        cskey=oinput.value;
+    }
+    var divlist=php_remove_klindex(cskey,is_local);
+
+    oinput.value=cskey;
     recent_search_klindex(cskey);
 
     var list_file={};
