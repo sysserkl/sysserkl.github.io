@@ -20,4 +20,5 @@ var digest_global=`
 *stepbrother
 *stylist
 *win-win
+*clavicle
 `.trim().split('\n');

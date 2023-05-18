@@ -1,16 +1,22 @@
 var digest_global=`
 *alchemist
+*anthropological
 *beehive
 *by means of
 *Celtic
 *decomposition
 *eightieth
 *eleventh
+*exportation
 *fetid
 *firmament
 *foolhardy
+*giantess
+*glacier
 *goatskin
+*god-daughter
 *gymnastic
+*herbaceous
 *icebound
 *immortal
 *incessantly
@@ -18,18 +24,26 @@ var digest_global=`
 *inflammable
 *laborer
 *leathern
+*manganese
+*mineralogical
 *mineralogist
+*mineralogy
+*nautical
 *ovoid
+*pinewood
 *porridge
 *quartz
 *quicken
 *reunite
+*sandstone
 *sausage
-*tithe
 *seaworthy
 *southeasterly
+*subsidence
 *take the place of
+*tithe
+*unpronounceable
+*weekday
+*westernmost
 *whey
-*sandstone
-*glacier
 `.trim().split('\n');

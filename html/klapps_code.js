@@ -59,7 +59,7 @@ function klsofts_local_or_remote_klindex(odom){
 }
 
 function php_remove_klindex(cskey,is_local){
-    var divlist=klsofts_list_b(cskey);
+    var divlist=klsofts_list_b(cskey,[],false,false);
     
     if (is_file_type_b() || location.host=='127.0.0.1'){
         //不在其他host时生效，因为无法知道 local 为 file 时的具体地址 - 保留注释    
@@ -73,16 +73,10 @@ function php_remove_klindex(cskey,is_local){
         }
     }
     
-    var isfile=is_file_type_b();
-    var result_t=[];
-    for (let item of divlist){
-        if (is_local && isfile && item[0].slice(-4,)=='.php' && item[0].substring(0,4)!=='http'){
-            console.log(item[0]);   //此行保留 - 保留注释
-            continue;
-        }
-        result_t.push(item);
+    if (is_local){
+        divlist=klsofts_ingore_php_b(divlist);
     }
-    return result_t;
+    return divlist;
 }
 
 function components_klindex(cskey='',is_local=true){
