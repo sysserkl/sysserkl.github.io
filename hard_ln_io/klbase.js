@@ -1626,7 +1626,7 @@ function textarea_buttons_b(textarea_id,csbuttons,cstype='',csstyle='',span_clas
     }
     if (csbuttons.includes('发送地址') || csbuttons.includes('set remote address')){
         var bladdress=postpath+'temp_txt_share.php'+(cstype==''?'':'?type='+cstype);
-        bljg=bljg+'<span class="span_link"'+csstyle+' onclick="kl_remote_host_address_b();" title="set remote address">set remote address</span>：<a'+csstyle+' href="'+bladdress+'" target=_blank>'+bladdress+'</a>';
+        bljg=bljg+'<span class="aclick"'+csstyle+' onclick="kl_remote_host_address_b();" title="set remote address">⛓</span>：<a'+csstyle+' href="'+bladdress+'" target=_blank>'+bladdress+'</a>';
     }
     return bljg;
 }
@@ -1635,7 +1635,17 @@ function klsofts_cols_count_b(){
     return ismobile_b()?4:9;
 }
 
-function klsofts_ingore_php_b(divlist){
+function klsofts_ingore_php_b(divlist,ignore_php=false,do_sort=true){
+    if (do_sort){
+        divlist.sort(function(a,b){
+            if (a[3]=='-1'){return false;}   //不排序 - 保留注释        
+            if (a[1]=='KL Apps'){return false;}   //不排序 - 保留注释
+            return a[1].toLowerCase()>b[1].toLowerCase();
+        });
+        divlist.sort(function (a,b){return ['remote','local'].includes(a[1]);});
+    }
+    if (!ignore_php){return divlist;}
+    
     var isfile=is_file_type_b();
     var result_t=[];
     for (let item of divlist){
@@ -1648,7 +1658,7 @@ function klsofts_ingore_php_b(divlist){
     return result_t;
 }
 
-function klsofts_list_b(cstype='all',diy_list=[],ignore_popup=false,ignore_php=true){
+function klsofts_list_b(cstype='all',diy_list=[],ignore_popup=false,ignore_php=true,do_sort=true){
     var ismobile=ismobile_b();
     
     var list_t=diy_list.concat(local_storage_get_b('common_softs',-1,true));
@@ -1699,15 +1709,8 @@ function klsofts_list_b(cstype='all',diy_list=[],ignore_popup=false,ignore_php=t
     if (blfound){
         divlist=[].concat(selected_t);
     }
-    
-    divlist.sort(function(a,b){
-        if (a[1].toLowerCase()=='kl apps'){return false;}   //置顶 - 保留注释
-        return a[1].toLowerCase()>b[1].toLowerCase();
-    });
 
-    if (ignore_php){
-        divlist=klsofts_ingore_php_b(divlist);    
-    }
+    divlist=klsofts_ingore_php_b(divlist,ignore_php,do_sort);    
     
     if (is_local_file && !location.href.includes('/klapps.htm')){
         divlist.push(['javascript:klsofts_config_b();','config','⚙','0']);

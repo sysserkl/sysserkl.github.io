@@ -10,3 +10,25 @@ function col_rearrange_catchphrase(){
     }
     return list_t;
 }
+
+function file_load_catchphrase(){
+    var file_list=klbase_addons_import_js_b(['wiki'],[],[],[],false,false);
+    file_dom_create_b(file_list,true,'js');
+}
+
+function data_load_catchphrase(array_name){
+    function sub_data_load_catchphrase_format(){
+        var t0=performance.now();           
+        var result_t=[];
+        for (let arow of eval(array_name)){
+            for (let blxl=0;blxl<arow.length;blxl++){
+                arow[blxl]=wiki_all_format_b(arow[blxl]);
+            }
+            result_t.push(arow);
+        }
+        eval(array_name+'=result_t');
+        console.log('data_load_catchphrase 费时：'+(performance.now() - t0) + ' milliseconds');
+    }
+    //---------------
+    load_fn_b('wiki_all_format_b',-1,2000,sub_data_load_catchphrase_format);
+}

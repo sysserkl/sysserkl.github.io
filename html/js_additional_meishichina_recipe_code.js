@@ -3,17 +3,34 @@ function menu_more_meishichina_recipe(){
     var klmenu1=[
     '<span class="span_menu" onclick="'+str_t+'statistics_ingredient_meishichina_recipe();">不同原料菜谱的原料使用统计</span>',   
     '<span class="span_menu" onclick="'+str_t+'same_ingredient_meishichina_recipe();">相同原料的菜谱</span>',   
-    '<span class="span_menu" onclick="'+str_t+'random_ingredient_meishichina_recipe();">随机菜谱</span>',   
-
+    '<span class="span_menu" onclick="'+str_t+'random_recipe_meishichina_recipe();">随机菜谱</span>',   
+    '<span class="span_menu" onclick="'+str_t+'random_ingredient_meishichina_recipe();">随机原料</span>',   
     ];
     return klmenu_b(klmenu1,'🧮','16rem','1rem','1rem','30rem');
 }
 
-function random_ingredient_meishichina_recipe(){
+function random_recipe_meishichina_recipe(){
     if (meishichina_recipe_global.length==0){return;}
     meishichina_recipe_global.sort(randomsort_b);
     document.getElementById('input_result_max').value=1000;
     search_common('.');
+}
+
+function random_ingredient_meishichina_recipe(){
+    meishichina_recipe_global.sort(randomsort_b);
+    var ingredient_t=new Set();
+    for (let arow of meishichina_recipe_global){
+        var list_t=arow[1].split(' ');
+        ingredient_t=array_union_b(ingredient_t,new Set(list_t),true);
+        if (ingredient_t.size>=1000){break;}
+    }
+    
+    ingredient_t=Array.from(ingredient_t);
+    ingredient_t.sort(randomsort_b);    
+    ingredient_t=ingredient_t.slice(0,150);
+    ingredient_t.sort(function (a,b){return zh_sort_b(a,b,false,0);});
+    
+    document.getElementById('divhtml').innerHTML='<div style="column-count:'+(ismobile_b()?4:9)+';">'+array_2_li_b(ingredient_t)+'</div>';
 }
 
 function statistics_ingredient_meishichina_recipe(){

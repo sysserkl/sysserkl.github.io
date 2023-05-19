@@ -61,16 +61,6 @@ function init_common(){
 
 function wait_array_common(){
     function sub_wait_array_common_fn(){
-        var fn_data_load=fn_name_get_common('data_load_');
-        if (fn_data_load!==''){
-            try {
-                eval(fn_data_load+'("'+var_name_jscm_global+'")');
-            }
-            catch (error){
-                console.log(error);
-            }
-        }
-        
         for (let afn of ['style_load_','file_load_']){
             var fn_style_load=fn_name_get_common(afn);
             if (fn_style_load!==''){
@@ -80,6 +70,16 @@ function wait_array_common(){
                 catch (error){
                     console.log(error);
                 }
+            }
+        }
+        
+        var fn_data_load=fn_name_get_common('data_load_');
+        if (fn_data_load!==''){
+            try {
+                eval(fn_data_load+'("'+var_name_jscm_global+'")');
+            }
+            catch (error){
+                console.log(error);
             }
         }
 

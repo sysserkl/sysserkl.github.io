@@ -22,14 +22,7 @@ function recent_search_klindex(csstr='',constant_value=[]){
     recent_search_b('recent_search_app',csstr,'components_klindex','div_recent_search',constant_value,35,false);
 }
 
-function klsofts_local_or_remote_klindex(odom){
-    var is_to_remote=(odom.innerText.match(/\blocal\b/) || []).length>0;
-    if (!is_to_remote){
-        components_klindex(false,true);
-        return;
-    }
-    components_klindex(false,false);
-    
+function klsofts_local_or_remote_klindex(is_local){
     var local_str=klwebphp_path_b();    //仅考虑当前host为 file 或 127.0.0.1 - 保留注释
     var local_len=local_str.length;
     
@@ -40,18 +33,18 @@ function klsofts_local_or_remote_klindex(odom){
     else {
         remote_str=remote_str+'/klwebphp/';
     }
-    
+
     var remote_len=remote_str.length;
 
     var oas=document.querySelectorAll('div.div_klsofts_one a');
     for (let one_a of oas){
         var blhref=one_a.href;
         if (!blhref){continue;}
-        if (is_to_remote && blhref.substring(0,local_len)==local_str){
+        if (!is_local && blhref.substring(0,local_len)==local_str){
             blhref=blhref.replace(local_str,remote_str);
             one_a.setAttribute('href',blhref);
         }
-        else if (!is_to_remote && blhref.substring(0,remote_len)==remote_str){
+        else if (is_local && blhref.substring(0,remote_len)==remote_str){
             blhref=blhref.replace(remote_str,local_str);
             one_a.setAttribute('href',blhref);
         }
@@ -59,27 +52,27 @@ function klsofts_local_or_remote_klindex(odom){
 }
 
 function php_remove_klindex(cskey,is_local){
-    var divlist=klsofts_list_b(cskey,[],false,false);
+    var divlist=klsofts_list_b(cskey,[],false,false,false);
+    if (divlist.length==0){return divlist;}
     
     if (is_file_type_b() || location.host=='127.0.0.1'){
         //不在其他host时生效，因为无法知道 local 为 file 时的具体地址 - 保留注释    
         if (location_host_b()!==location_host_b(true)){
             if (is_local){
-                divlist.push(['javascript:klsofts_local_or_remote_klindex(this);','local','⛺','0']);
+                divlist.push(['javascript:components_klindex(false,false);','local','⛺','0']);
             }
             else {
-                divlist.push(['javascript:klsofts_local_or_remote_klindex(this);','remote','☁','0']);        
+                divlist.push(['javascript:components_klindex(false,true);','remote','☁','0']);        
             }
+            divlist.push(['javascript:kl_remote_host_address_b();','remote ip address','⛓','1']);                    
         }
     }
     
-    if (is_local){
-        divlist=klsofts_ingore_php_b(divlist);
-    }
+    divlist=klsofts_ingore_php_b(divlist,is_local);
     return divlist;
 }
 
-function components_klindex(cskey='',is_local=true){
+function components_klindex(cskey=false,is_local=-1){
     function sub_components_klindex_table(csarray,tdcolumns){
         var bljg='';
         for (let blxl=0;blxl<csarray.length;blxl++){
@@ -107,6 +100,13 @@ function components_klindex(cskey='',is_local=true){
     if (cskey===false){
         cskey=oinput.value;
     }
+    
+    if (is_local===-1){
+        var ops = document.querySelectorAll('p'); 
+        var list_t=Array.from(ops).filter(one_p => one_p.innerText=='remote'); 
+        is_local=(list_t.length==1?false:true);
+    }
+
     var divlist=php_remove_klindex(cskey,is_local);
 
     oinput.value=cskey;
@@ -141,6 +141,7 @@ function components_klindex(cskey='',is_local=true){
         result_t[blxl]=result_t[blxl][1];
     }
     document.getElementById('div_list').innerHTML=result_t.join('<hr />');
+    klsofts_local_or_remote_klindex(is_local);    
 }
 
 function args_klindex(){
