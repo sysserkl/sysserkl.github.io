@@ -700,6 +700,8 @@ function init_klwebsites(){
 
     var t0 = performance.now();
     var klwebphp_path=klwebphp_path_b();
+    var hostname,bltail;
+    
     for (let blxl=0;blxl<sites_all_global.length;blxl++){
         var href_str=sites_all_global[blxl][0];
         var count1=0;
@@ -731,7 +733,13 @@ function init_klwebsites(){
     sites_all_global.sort(function (a,b){return a[0].length>b[0].length});  //网址长度 - 保留注释
     for (let blxl=0;blxl<sites_all_global.length;blxl++){
         if (name_set.has(sites_all_global[blxl][1])){
-            sites_all_global[blxl][1]=sites_all_global[blxl][1]+'<small>('+same_name_websites_b(sites_all_global[blxl][0])+')</small>';
+            [hostname,bltail]=same_name_websites_b(sites_all_global[blxl][0],sites_all_global[blxl][1],true);
+            if (hostname!=='' && !name_set.has(hostname)){
+                sites_all_global[blxl][1]=hostname;
+            }
+            else {
+                sites_all_global[blxl][1]=bltail;
+            }
         }
         name_set.add(sites_all_global[blxl][1]);
     }

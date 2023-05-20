@@ -269,6 +269,7 @@ function update_websites_pwa(){
 
     site_list.sort(function (a,b){return a[1].length>b[1].length});  //网址长度 - 保留注释
 
+    var hostname,bltail;
     var name_set=new Set();
     for (let blxl=0;blxl<site_list.length;blxl++){
         var blname=name_remove_quote_websites_b(site_list[blxl][1],site_list[blxl][2]);
@@ -277,7 +278,14 @@ function update_websites_pwa(){
         }
 
         if (name_set.has(site_list[blxl][2])){
-            site_list[blxl][2]=site_list[blxl][2]+'('+same_name_websites_b(site_list[blxl][1])+')';
+            [hostname,bltail]=same_name_websites_b(site_list[blxl][1],site_list[blxl][2],false);
+            console.log(hostname,bltail);
+            if (hostname!=='' && !name_set.has(hostname)){
+                site_list[blxl][2]=hostname;
+            }
+            else {
+                site_list[blxl][2]=bltail;
+            }
         }
         name_set.add(site_list[blxl][2]);    
     

@@ -1,18 +1,48 @@
 var digest_global=`
-*unsweetened
-*pathologist
+*amputee
+*antibiotic
+*black market
+*camper
+*carelessly
+*cashbox
+*charmless
+*cross-dressing
+*crowd-pleaser
+*doorsill
+*engrave
+*gaslit
+*gosh
+*gyroscope
+*hamster
 *hoarder
 *insecticide
-*amputee
-*preteen
-*hamster
-*multiplication table
+*know-it-all
+*lakeshore
+*lifeguard
 *lumberyard
 *modus operandi
-*odyssey
+*multiplication table
+*ninetieth
+*nomad
 *noncommunicable
-*unadoptable
-*carelessly
-*black market
+*odorless
+*odyssey
+*paperweight
+*pathologist
+*pithy
+*preteen
+*revisionist
+*roofline
 *sampan
+*seawall
+*subcommittee
+*testicle
+*totem
+*typist
+*unadoptable
+*undergarment
+*undershorts
+*unsweetened
+*verifiable
+*watercolor
 `.trim().split('\n');
