@@ -394,10 +394,10 @@ function showletter_klexam(csno){
 }
 
 function day_no_klexam(){
-    var blday=date2str_b().slice(-2,);
-    if (blday!=='10' && blday!=='11'){
-        blday=blday.slice(-1);
-    }
+    var blday=date2str_b().slice(-1,);
+    if (blday=='0' || blday=='1'){
+        blday='1'+blday;
+    }    
     return blday;
 }
 

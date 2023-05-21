@@ -360,6 +360,7 @@ function popup_dbb(event,ospan){
     '<a href="https://book.douban.com/subject_search?search_text='+bltitle+'" target=_blank>豆</a>',
     '<a href="http://searchb.dangdang.com/?key='+bltitle+'" target=_blank>当</a>',
     '<a href="https://search.jd.com/Search?keyword='+bltitle+'" target=_blank>京</a>',
+    '<span class="span_link" onclick="copy_2_clipboard_b(\''+specialstr_j(oa.innerText)+'\');close_popup_dbb();">复制</span>',
     ];
     
     if (typeof ignored_books_dbb_global !== 'undefined'){
