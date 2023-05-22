@@ -368,6 +368,7 @@ function popup_dbb(event,ospan){
     }
     bllink.push('');    //末尾添加空格 - 保留注释
     popup_event_div_b(event,'div_popup_dbb',bllink.join('&nbsp;&nbsp;'),'bottom','1.25rem',0.8);
+    ospan.style.backgroundColor=scheme_global['pink'];
 }
 
 function close_popup_dbb(){
