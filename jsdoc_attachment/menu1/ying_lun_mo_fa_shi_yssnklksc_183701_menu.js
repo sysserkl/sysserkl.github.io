@@ -1,0 +1,15 @@
+var menulist=[
+"= 致谢 =",
+"= 目　录 =",
+"= 序 =",
+"= <jsdocimg>00016.jpeg</jsdocimg> =",
+"= <jsdocimg>00002.jpeg</jsdocimg> =",
+"= <jsdocimg>00018.jpeg</jsdocimg> =",
+"= <jsdocimg>00012.jpeg</jsdocimg> =",
+"= <jsdocimg>00005.jpeg</jsdocimg> =",
+"= <jsdocimg>00014.jpeg</jsdocimg> =",
+"= <jsdocimg>00010.jpeg</jsdocimg> =",
+"= <jsdocimg>00017.jpeg</jsdocimg> =",
+"= 有关如何与仙人打交道的一些小建议 &mdash;&mdash;代译后记 =",
+"= 名家及媒体评价 =",
+];
