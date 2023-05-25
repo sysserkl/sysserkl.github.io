@@ -1,7 +1,17 @@
 var digest_global=`
-*Rolex
+*businesspeople
+*celebratory
 *collarless
+*combo
 *conversationalist
+*espresso
 *extended family
+*firebomb
+*nationalist
+*newscaster
+*perjury
+*promotional
+*pullover
+*Rolex
 *unorthodox
 `.trim().split('\n');

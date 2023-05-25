@@ -40,4 +40,5 @@ var digest_global=`
 *unskilled
 *warthog
 *washroom
+*loudspeaker
 `.trim().split('\n');
