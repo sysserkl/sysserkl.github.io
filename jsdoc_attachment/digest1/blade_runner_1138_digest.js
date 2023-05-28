@@ -17,4 +17,5 @@ var digest_global=`
 *substandard
 *switchboard
 *whey
+*irrationality
 `.trim().split('\n');

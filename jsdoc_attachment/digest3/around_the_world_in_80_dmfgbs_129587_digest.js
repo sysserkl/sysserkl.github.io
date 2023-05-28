@@ -18,4 +18,8 @@ var digest_global=`
 *stringed instrument
 *fanatical
 *pagoda
+*typhoon
+*ferryboat
+*ogre
+*saviour
 `.trim().split('\n');
