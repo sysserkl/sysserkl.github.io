@@ -45,6 +45,7 @@ var digestlist_source_global_b=[
 ["omerta_a_novel_the_godfather_b3_3166_digest",1],
 ["fall_of_giants_the_century_tb1_3784_digest",1],
 ["the_handmaid_s_tale_1687_digest",1],
+["heretics_of_dune_1496_digest",1],
 ["qin_hui_jin_yan_zuo_pj_226226_digest",1],
 ["forward_the_foundation_2157_digest",1],
 ["da_dian_ying_shuang_yu_ydbfxhaqsjqtdkr_555019_digest",1],

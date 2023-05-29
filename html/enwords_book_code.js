@@ -64,12 +64,6 @@ function init_enwords_book(){
         menu_enwords_book();
         enwords_mini_search_frame_form_b();
         
-        var list_t=new Set();
-        for (let item of en_sentence_count_global){
-            if (item[1]>=3){continue;}
-            list_t.add(item[0]);
-        }
-        en_sentence_count_global=list_t;
         local_storage_today_b('all_new_words_statistics',40,all_new_words_global.length,'/');
 
     }    

@@ -933,7 +933,6 @@ function search_similar_new_sentence_kle(cstype){
 }
 
 function init_kle(){
-    en_sentence_count_global.sort(function (a,b){return a[0]>b[0];});
     local_storage_today_b('enwords_sentence_rows',40,en_sentence_global.length,'/');
 
     input_with_x_b('input_search',(ismobile_b()?11:22),'',false,'input_reg',true);
