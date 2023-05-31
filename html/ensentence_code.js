@@ -16,18 +16,20 @@ function init_ensentence(){
 
 function menu_ensentence(){
     var str_t=klmenu_hide_b('');
-    var klmenu1=[
-    '<span class="span_menu" onclick="'+str_t+'show_new_words_enwc_b(\'span.span_enwords_sentence\',false);">显示例句中的生词</span>',
-    '<span class="span_menu" onclick="'+str_t+'rare_old_words_ensentence(false);">例句最少的单词2000</span>',
-    '<span class="span_menu" onclick="'+str_t+'show_sentence_enwc_b();">显示例句</span>',
-    ];
+    var klmenu1=[];
     
     var group_list=[
     ['asc','get_day_sentences_enwc_b();',true],
     ['段落','get_day_sentences_enwc_b(\'\',\'\',false);',true],
     ];    
     klmenu1.push(menu_container_b(str_t,group_list,'指定日期例句：'));
-        
+    
+    klmenu1=klmenu1.concat([
+    '<span class="span_menu" onclick="'+str_t+'rare_old_words_ensentence(false);">例句最少的单词2000</span>',
+    '<span class="span_menu" onclick="'+str_t+'show_sentence_enwc_b();">显示例句</span>',
+    '<span class="span_menu" onclick="'+str_t+'show_new_words_enwc_b(\'span.span_enwords_sentence\',false);">显示例句中的生词</span>',
+    ]);
+    
     var group_list=[
     ['无例句的单词','rare_old_words_ensentence(true,1,0);',true],
     ['词组','phrase_not_in_ensentence();',true],

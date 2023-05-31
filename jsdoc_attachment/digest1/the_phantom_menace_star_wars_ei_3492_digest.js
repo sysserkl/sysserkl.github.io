@@ -1,19 +1,24 @@
 var digest_global=`
-*inertial
 *automata
 *caregiver
+*decapitate
 *directional
 *disbelieve
 *hardback
 *heavyweight
+*imposter
+*inertial
 *meaty
 *millionth
+*misjudgment
 *moviegoer
+*multipurpose
 *nonviolent
+*onslaught
+*outbuilding
 *self-defeating
 *snippet
 *sparsely
-*outbuilding
 *surveyor
 *watchtower
 *withstood
