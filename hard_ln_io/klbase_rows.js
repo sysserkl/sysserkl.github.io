@@ -295,6 +295,7 @@ function replace_strs_klr_b(csrep1,csrep2,csid='textarea_rows_content'){
 	    blstr = blstr.replace(new RegExp(csrep1,'gm'),csrep2);
     }
 	otextarea.value = blstr;
+    return [otextarea,blstr];
 }
 
 function hash_filename2wiki_table_klr_b(csid,filename_hash=false){
@@ -654,7 +655,15 @@ function strquick_klr_b(cstype='',csid='textarea_rows_content',status_id='textar
             ['", "',' '],
 			['"],',']'],
             ];
-			replace_strs_klr_b(arr_t,'',csid);
+            var otextarea,blstr;
+			[otextarea,blstr]=replace_strs_klr_b(arr_t,'',csid);
+            var list_t=blstr.split('\n');
+            for (let blxl=0;blxl<list_t.length;blxl++){
+                if (list_t[blxl].match(/^(.*?\s)(.*?[\[\]].*)\]$/)){
+                    list_t[blxl]=list_t[blxl].replace(/^(.*?\s)(.*?[\[\]].*)\]$/mg,'$1<nowiki>$2</nowiki>]');
+                }
+            }
+            otextarea.value=list_t.join('\n');
 			break;     
         case 'wikihref2js':
             str2js_klr_b(csid,'wikihref');

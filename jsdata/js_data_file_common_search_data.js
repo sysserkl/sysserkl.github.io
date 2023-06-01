@@ -12,4 +12,6 @@ var js_file_list_common_global=[
 ['../jsdata/words/cn_ci_data.js',' 🇨🇳','汉语词语','cn_ci_global','','言'],
 ['../jsdata/words/cn_idoim_data.js',' 🇨🇳','汉语成语','cn_idiom_global','cn_idiom','言'],
 ['../jsdata/words/enwords_sentence_data.js','🇬🇧','英语例句','en_sentence_global','','言'],
+['../jsdata/js_data_file_common_search_blank_data.js','📦','blank data','blank_data_global','blank_data',''],
+
 ];
