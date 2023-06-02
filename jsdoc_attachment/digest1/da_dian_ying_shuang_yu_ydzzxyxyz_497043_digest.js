@@ -6,4 +6,9 @@ var digest_global=`
 *loudspeaker
 *speedboat
 *telecommunication
+*double-decker
+*surfboard
+*hydrant
+*multiverse
+*overthink
 `.trim().split('\n');

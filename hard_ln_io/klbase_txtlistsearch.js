@@ -326,7 +326,14 @@ function txtmenus_kltxt_b(cstype=''){
         }
         bljg=bljg+klmenu_b(book_menu,'📚','15rem','',fontsize);        
     }
-    else{
+    else {
+        var dmenu_info=[
+        '<span class="span_menu" onclick="'+str_t+'date_size_digest();">当前摘要文件日期和大小</span>',    
+        '<span class="span_menu" onclick="'+str_t+'date_size_digest(true);">无摘要文件列表</span>',    
+
+        '<span class="span_menu" onclick="'+str_t+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>'        
+        ];   
+        bljg=bljg+klmenu_b(dmenu_info,'🗃','15rem','',fontsize);        
         bljg=bljg+colors;
     }
 
@@ -426,15 +433,15 @@ function books_current_table_kltxt_b(){
     var list_t=[];
     var bookname_list=[];
     var bookpath_list=[];
-    list_t.push(array_2_li_b(['id','name','tag','no','type'],'th',container_type='tr'));
+    list_t.push(array_2_li_b(['id','name','tag','no','type'],'th','tr'));
     for (let item of csbooklist_sub_global_b){
         if (item[0]==csbookname_global){
             var highheight_row=[].concat(item);
             highheight_row[0]='<span id="span_current_book_id" style="background-color:'+scheme_global['pink']+';">'+highheight_row[0]+'</span>';
-            list_t.push(array_2_li_b(highheight_row,'td',container_type='tr'));
+            list_t.push(array_2_li_b(highheight_row,'td','tr'));
         }
         else {
-            list_t.push(array_2_li_b(item,'td',container_type='tr'));
+            list_t.push(array_2_li_b(item,'td','tr'));
         }
         bookname_list.push(item[1]);
         if (item[3]=='3'){

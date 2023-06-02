@@ -154,10 +154,24 @@ function menu_klr2(){
     klmenu_sort=klmenu_sort.concat([
     '<span class="span_menu" onclick="'+str_t+'reverse_klr_b();">倒转</span>',
     '<span class="span_menu" onclick="'+str_t+'chinese_sort_klr_b();">汉字升序</span>',
-    '<span class="span_menu" onclick="'+str_t+'unique_rows_klr_b();">unique</span>',
+    '<span class="span_menu" onclick="'+str_t+'lines_unique_klr_b();">unique</span>',
     '<span class="span_menu" onclick="'+str_t+'sort_rows_klr_b(\'textarea_rows_content\',\'length\');">长度排序</span>',    
     '<span class="span_menu" onclick="'+str_t+'sort_rows_klr_b(\'textarea_rows_content\',\'random\');">随机排序</span>',
     ]);    
+   
+    var group_list=[
+    ['js2href','JavaScript 数组 =&gt; 网址链接'],
+    ['js2wikihref','JavaScript 数组 =&gt; wiki链接'],
+    ['wikihref2js','wiki链接 =&gt; JavaScript 数组'],
+    ['href_title2js','网址 名称 =&gt; JavaScript 数组'],
+    ['title_href2js','名称 网址 =&gt; JavaScript 数组'],
+    ['title_href2csv','名称 网址 =&gt; csv网址格式'],
+    ];
+    
+    var klmenu_convert=[];
+    for (let arow of group_list){
+        klmenu_convert.push('<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\''+arow[0]+'\');">'+arow[1]+'</span>');
+    }
    
     var klmenu_batch=[
     '<span class="span_menu" onclick="'+str_t+'enwords_get_klr2();">提取英文单词</span>',        
@@ -176,7 +190,7 @@ function menu_klr2(){
     '<a href="?klqr">KLQR(userscript)</a>',
     '<a href="image2base64.htm" onclick="'+str_t+'" target=_blank>Image 2 base64</a>',
     ];    
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_fn,'','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_sort,'↕','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_batch,'🗂','26rem','1rem','1rem','60rem')+klmenu_b(klmenu_links,'链','12rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_fn,'','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_sort,'↕','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_convert,'↔','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_batch,'🗂','26rem','1rem','1rem','60rem')+klmenu_b(klmenu_links,'链','12rem','1rem','1rem','60rem'),'','0rem')+' ');
 }
 
 function enwords_get_klr2(){
@@ -236,7 +250,6 @@ function option_generate_klr2(){
     ['blank_rows_remove','remove blank rows'],
     ['ltrim_rows','移除段前空格'],
     ['lines2comma','换行符转换为英文逗号'],    
-    ['unique_lines','段落无重复'],
     ['unique_characters','字符无重复'],
     ['js_multilines','js多行内容`{}替换'],
     ['chinese_punctuation','中文标点'],
@@ -247,12 +260,6 @@ function option_generate_klr2(){
     ['rhash_ed2k','rhash_ed2k'],
     ['ahref','a href'],
     ['ahref_encode','a href encode'],
-    ['js2href','JavaScript 数组转换为网址链接'],
-    ['js2wikihref','JavaScript 数组转换为wiki链接'],
-    ['wikihref2js','wiki链接转换为JavaScript 数组'],
-    ['href_title2js','网址_名称转换为JavaScript 数组'],
-    ['title_href2js','名称_网址转换为JavaScript 数组'],
-    ['title_href2csv','名称_网址转换为csv网址格式'],
     ['movefiles','Move Files'],
     ['jieba','分词'],
     ['links_html','链接和文本'],

@@ -25,7 +25,7 @@ function menu_ensentence(){
     klmenu1.push(menu_container_b(str_t,group_list,'指定日期例句：'));
     
     klmenu1=klmenu1.concat([
-    '<span class="span_menu" onclick="'+str_t+'rare_old_words_ensentence(false);">例句最少的单词2000</span>',
+    '<span class="span_menu" onclick="'+str_t+'rare_old_words_ensentence(false);">例句最少的单词3000</span>',
     '<span class="span_menu" onclick="'+str_t+'show_sentence_enwc_b();">显示例句</span>',
     '<span class="span_menu" onclick="'+str_t+'show_new_words_enwc_b(\'span.span_enwords_sentence\',false);">显示例句中的生词</span>',
     ]);
@@ -44,7 +44,7 @@ function menu_ensentence(){
     '<a href="'+location.origin+'/wiki/index.php/%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9" onclick="'+str_t+'" target=_blank>KLWiki最近更改</a>',    
     ];    
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🗨','23rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','17rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🗨','15rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','17rem','1rem','1rem','60rem'),'','0rem')+' ');
     klmenu_check_b('span_reg_ensentence',true);
 }
 
@@ -220,9 +220,9 @@ function rare_old_words_ensentence(show_sentence=true,max_count=2,csoverflow=100
                 blno=blno+1;
             }
             
-            if (words_searched_arr_global.length>2000){
+            if (words_searched_arr_global.length>3000){
                 words_searched_arr_global.sort(randomsort_b);
-                words_searched_arr_global=words_searched_arr_global.slice(0,2000);
+                words_searched_arr_global=words_searched_arr_global.slice(0,3000);
             }
             words_searched_arr_global.sort();
             

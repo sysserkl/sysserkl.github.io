@@ -399,14 +399,20 @@ function booklist_source_config_b(is_digest=false){
     
     if (is_digest){
         var list_t=[];
-        for (let one_digest of digestlist_source_global_b){
-            for (let one_book of csbooklist_source_global){
+        without_digest_book_list_global=[];
+        for (let one_book of csbooklist_source_global){
+            var blfound=false;
+            for (let one_digest of digest_list_source_global){
                 if (one_book[0]+'_digest'==one_digest[0]){
                     one_book[0]=one_book[0]+'_digest';
                     one_book[3]='digest'+one_digest[1];
                     list_t.push(one_book);
+                    blfound=true;
                     break;
                 }
+            }
+            if (!blfound){
+                without_digest_book_list_global.push(one_book);
             }
         }
         csbooklist_source_global=[].concat(list_t);    
@@ -456,7 +462,7 @@ function load_current_book_b(load_digest_file=false,do_write=true){
     
     var digest_js='';
     if (load_digest_file){
-        digest_js=blhref+'digestlist_data.js';
+        digest_js=blhref+'digest_list_data.js';
         file_list.push(['js',digest_js,'']);
     }
     if (do_write){

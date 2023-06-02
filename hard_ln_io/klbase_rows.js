@@ -21,13 +21,6 @@ function reverse_klr_b(csid='textarea_rows_content'){
 	otextarea.value = list_t.join('\n');
 }
 
-function unique_rows_klr_b(csid='textarea_rows_content'){
-	var otextarea = document.getElementById(csid);
-	var list_t = otextarea.value.split('\n');
-    list_t=array_unique_b(list_t);
-	otextarea.value = list_t.join('\n');
-}
-
 function line_count_klr_b(content_id='',status_id=''){
     var ocontent = document.getElementById(content_id);
     var ostatus=document.getElementById(status_id);
@@ -501,9 +494,6 @@ function strquick_klr_b(cstype='',csid='textarea_rows_content',status_id='textar
             break;
         case 'wiki_photo':
             wiki_photo_klr_b(csid);
-            break;
-        case 'unique_lines':
-            lines_unique_klr_b(csid);
             break;
         case 'unique_characters':
             characters_unique_klr_b(csid);
