@@ -9,6 +9,7 @@ var digest_global=`
 *Heine
 *Hera
 *hornbill
+*hundredweight
 *insecticide
 *mango
 *mascot
@@ -18,13 +19,19 @@ var digest_global=`
 *motorboat
 *mourner
 *neighbourly
+*peony
 *rheumatism
 *rupee
 *serval
 *settler
+*shipowner
 *Somali
 *Somaliland
 *sugar cane
 *unladylike
+*unselfishly
+*waterless
 *westwards
+*wildebeest
+*womenfolk
 `.trim().split('\n');

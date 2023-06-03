@@ -1937,7 +1937,9 @@ function sentence_split_b(csstr,csno=-1){
         }
         return [csstr];
     }
-    csstr=csstr.replace(new RegExp(/(([^A-Z]((\. )+)?\.|\?|!|\"|\?) )/,'g'),'$1\n');
+    
+    var old_str=csstr;
+    csstr=csstr.replace(/(([^A-Z]((\. )+)?\.|\?|!|\"|\?) )/g,'$1\n');
     var has_mr=(csstr.includes('Mr.') || csstr.includes('Dr.'));
     var list_t=csstr.split('\n');
     var result_t=[];
@@ -1970,13 +1972,13 @@ function sentence_split_b(csstr,csno=-1){
                 list_t[blxl-1]=list_t[blxl-1]+list_t[blxl];
                 list_t[blxl]='';    
             }
-        }        
+        }
     }
 
     for (let item of list_t){
         if (item==''){continue;}
         if (item.includes('; ') && item.length>300){
-            var semicolon_list=item.replace(new RegExp(/( [a-zA-Z0-9_\-']+; )([a-zA-Z0-9_\-']+ )/,'g'),'$1\n').split('\n');
+            var semicolon_list=item.replace(/( [a-zA-Z0-9_\-']+; )([a-zA-Z0-9_\-']+ )/g,'$1\n$2').split('\n');
             for (let blxl=semicolon_list.length-1;blxl>0;blxl--){
                 if (sub_sentence_split_b_check(semicolon_list[blxl-1],semicolon_list[blxl])){
                     semicolon_list[blxl-1]=semicolon_list[blxl-1]+semicolon_list[blxl];
@@ -1995,6 +1997,8 @@ function sentence_split_b(csstr,csno=-1){
     if (csno>=0){
         en_sentence_global[csno][0]=result_t;
     }
+    
+    //console.log(old_str==result_t.join('')); //此行保留，用于检测是否正确分割了例句 - 保留注释
     return result_t;
 }
 

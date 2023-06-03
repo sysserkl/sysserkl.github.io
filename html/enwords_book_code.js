@@ -128,6 +128,13 @@ function menu_enwords_book(){
     '<a href="lsm.htm?key=selenium_enbook" onclick="'+str_t+'" target=_blank>查看缓存</a>',
     ];
     
+    var group_list=[
+    ['第1个','selenium_words_count_more_than_one_line_enword_book();',true],
+    ['第2个','selenium_words_count_more_than_one_line_enword_book(2);',true],
+    ['最后一个','selenium_words_count_more_than_one_line_enword_book(-1);',true],
+    ];    
+    klmenu_selenium.push(menu_container_b(str_t,group_list,'非单一单词行：'));        
+    
     var klmenu2=[
     '<a href="?book=1&continue" onclick="'+str_t+'">批量统计生词</a>',
     '<span class="span_menu" onclick="'+str_t+'news_words_statistics_enwords_book();">显示统计结果</span>',
@@ -325,9 +332,58 @@ function selenium_count_one_enword_book(odom){
     for (let aword of owords){
         if (aword.innerText==blword){
             blcount=blcount+1;
+            if (blcount>5){
+                blcount='5+';
+                break;
+            }
         }
     }
     odom.innerText=blold+'('+(blcount==1?'𝟭':blcount)+'). '
+}
+
+function selenium_words_count_more_than_one_line_enword_book(csno=1){
+    function sub_selenium_words_count_more_than_one_line_enword_book_one_hand(one_div){
+        var olist=one_div.querySelector('div.div_word_list_selenium_enbook');
+        if (olist.innerText.includes('𝟭')){return false;}
+        
+        var ohand=one_div.querySelector('span.span_batch_count_enwords_book');
+        ohand.click();
+        row_count=row_count+1;
+        if (row_count>50){
+            one_div.scrollIntoView();
+            alert('终止运行');
+            return true;
+        }
+            
+        if (!olist.innerText.includes('𝟭')){
+            found_count=found_count+1;
+            if (found_count==csno){
+                one_div.scrollIntoView();
+                return true;
+            }
+        }
+        return false;
+    }
+    //------------------
+    var t0 = performance.now();
+    var found_count=0;
+    var row_count=0;
+    var odivs=document.querySelectorAll('div.div_h3_selenium_enbook');
+    
+    if (csno<0){
+        csno=-1*csno;
+        for (let blxl=odivs.length-1;blxl>0;blxl--){
+            var one_div=odivs[blxl];
+            if (sub_selenium_words_count_more_than_one_line_enword_book_one_hand(one_div)){break;}
+        } 
+    }
+    else {
+        for (let blxl=0;blxl<odivs.length;blxl++){
+            var one_div=odivs[blxl];
+            if (sub_selenium_words_count_more_than_one_line_enword_book_one_hand(one_div)){break;}
+        }
+    }
+    console.log('selenium_words_count_more_than_one_line_enword_book() 费时：'+(performance.now() - t0) + ' milliseconds');
 }
 
 function selenium_contain_enwords_book(){
@@ -457,9 +513,12 @@ function selenium_list_h3_2_fav_enwords_book(ospan,addtag=true){
 }
 
 function selenium_list_container_generation_enwords_book(html,words,cslength=0){
-    var blstr='<div  class="div_h3_selenium_enbook">\n'+html+'<div style="border:0.1rem dotted '+scheme_global['shadow']+';border-radius:1rem;padding:0.5rem;">';
+    var blstr='<div  class="div_h3_selenium_enbook">\n'+html+'<div class="div_word_list_selenium_enbook" style="border:0.1rem dotted '+scheme_global['shadow']+';border-radius:1rem;padding:0.5rem;">';
     if (cslength>1){
-        blstr=blstr+'<span class="span_box" onclick="selenium_count_batch_enwords_book(this);">👆</span> ';
+        blstr=blstr+'<span class="span_box span_batch_count_enwords_book" onclick="selenium_count_batch_enwords_book(this);">👆</span> ';
+    }
+    else {
+        blstr=blstr+'<span class="span_box span_batch_count_enwords_book" onclick="selenium_count_batch_enwords_book(this);" style="display:none;">👆</span> ';    
     }
     blstr=blstr+words+'</div>\n</div>';
     return blstr;
@@ -546,6 +605,7 @@ function selenium_list_enwords_book(use_cache=false,cstype=''){
         }
     }
     
+    var rare_href='';
     if (['count','old','random','length','rare'].includes(cstype)){
         var list_t=[];
         for (let key in result_t){
@@ -568,7 +628,13 @@ function selenium_list_enwords_book(use_cache=false,cstype=''){
                 list_t.sort(function (a,b){return a[3]/a[2]<b[3]/b[2];});
                 break;
             case 'rare':
-                list_t.sort(function (a,b){return a[4]<b[4];});                        
+                list_t.sort(function (a,b){return a[4]<b[4];});
+                for (let item of list_t){
+                    if (item[4]==1){
+                        rare_href=(item[0].match(/"(http[^\s]+)"/) || ['',''])[1];
+                        break;
+                    }
+                }
                 break;
         }
         for (let blxl=0;blxl<list_t.length;blxl++){
@@ -585,6 +651,36 @@ function selenium_list_enwords_book(use_cache=false,cstype=''){
         result_t=object2array_b(result_t).join('\n');
     }
     selenium_html_enwords_book(result_t,use_cache,cached_list.length,theday);
+    selenium_rare_jump_enwords_book(rare_href);
+}
+
+function selenium_rare_jump_enwords_book(rare_href){
+    if (rare_href==''){return;}
+    var odivs=document.querySelectorAll('div.div_h3_selenium_enbook');
+    for (let blxl=0;blxl<odivs.length;blxl++){
+        var one_div=odivs[blxl];
+        var oa=one_div.querySelector('a.a_black');
+        if (!oa){continue;}
+        var blhref=oa.href;
+        if (!blhref){continue;}
+        if (blhref==rare_href){
+            var ospan=one_div.querySelector('span.span_batch_count_enwords_book');
+            if (ospan){
+                ospan.click();
+            }
+            if (blxl>0){
+                ospan=odivs[blxl-1].querySelector('span.span_batch_count_enwords_book');
+                if (ospan){
+                    ospan.click();
+                }      
+                odivs[blxl-1].scrollIntoView();
+            }
+            else {
+                one_div.scrollIntoView();
+            }
+            break;
+        }
+    }
 }
 
 function selenium_html_enwords_book(result_str,use_cache,cached_list_len,theday){
@@ -1126,12 +1222,19 @@ function new_and_common_enwords_book(csresult,cslength,common_max){
 function common_word_sign_set_enwords_book(csset){
     var t0 = performance.now();
     var ospans=document.querySelectorAll('span.span_word_combination_enword');
+    var ofirst=false;
     for (let one_span of ospans){
         var osub=one_span.querySelector('span.a_word');
         if (!osub){continue;}
         var blword=osub.innerText;
         if (!csset.has(blword)){continue;}
         osub.insertAdjacentHTML('beforebegin','👫');
+        if (ofirst===false){
+            ofirst=osub;
+        }
+    }
+    if (ofirst!==false){
+        ofirst.scrollIntoView();
     }
     console.log('common_word_sign_set_enwords_book() 费时：'+(performance.now() - t0) + ' milliseconds');
 }
