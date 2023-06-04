@@ -464,7 +464,7 @@ function sup_kleng_words_b(csdisplay='none'){
 
 function line_enword_count_b(odiv,ocontent){
     if (odiv && ocontent){            
-        var blstr=ocontent.innerHTML.replace(new RegExp(/<sup.*?>.*?<\/sup>/,'g'),'');
+        var blstr=ocontent.innerHTML.replace(/<sup.*?>.*?<\/sup>/g,'');
         odiv.innerHTML=blstr;
         var list_t=odiv.innerText.match(/\b[a-z\-\']+\b/ig) || [];
         return list_t.length;
@@ -1461,7 +1461,7 @@ function enwords_lines_2_js_array_b(aword,emoji_list,three_lines=false){
 function enwords_different_types_div_b(cswlist){
     var blbuttons='<p>';
     blbuttons=blbuttons+'<select onchange="enwords_different_types_textarea_b(this);">';
-    for (let item of ['','asterisk','js','temp','wiki']){
+    for (let item of ['','asterisk','js','temp','wiki','reg']){
         blbuttons=blbuttons+'<option>'+item+'</option>\n';
     }
     blbuttons=blbuttons+'</select>\n';    
@@ -1493,6 +1493,10 @@ function enwords_different_types_textarea_b(oselect){
             break;
         case 'wiki':
             bljg=enwords_wiki_type_words_b(raw_list,one_textarea,false);        
+            break;
+        case 'reg':
+            bljg=raw_list.join('|').replace(/\s/g,'\\s');
+            bljg='<br /><textarea style="height:3rem;" onclick="this.select();document.execCommand(\'copy\');">\\b('+bljg+')\\b</textarea>';
             break;
     }
     odiv.innerHTML=bljg;
@@ -1696,7 +1700,7 @@ function enwords_search_old_b(cs_w_p_d,csword,csreg){
     var words_temp_equal_arr=enwords_search_arr_init_b();
 	
     var cswordlist=csword.split(' ');
-    var csword_filter=(csword.match(/[a-zA-Z0-9 '_\-]+/) || [""])[0];
+    var csword_filter=(csword.match(/[a-zA-Z0-9 '_\-]+/) || [''])[0];
     var csword_filter_set=new Set(csword_filter.split(' '));
     var blnumber=-1;
     
@@ -2045,10 +2049,10 @@ function sentence_search_b(csword='',csreg=false,csmax=500,show_button=true,csmo
 	return '<div class="div_sentence">'+bljg.join('\n')+'</div><p><i>('+bljg.length+')</i></p>';
 }
 
-function simple_words_b(is_set=true,is_minimum=false){
+function simple_words_b(is_set=true,to_lower_case=false){
     if (is_set){
         var result_t=new Set();
-        if (is_minimum){
+        if (to_lower_case){
             for (let item of enwords){
                 result_t.add(item[0].toLowerCase());
             }        
@@ -2061,7 +2065,7 @@ function simple_words_b(is_set=true,is_minimum=false){
     }
     else {
         var result_t=[];
-        if (is_minimum){
+        if (to_lower_case){
             for (let item of enwords){
                 result_t.push(item[0].toLowerCase());
             }        

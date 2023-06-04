@@ -3342,7 +3342,7 @@ function digest_temp_load_kltxt_b(cstype=''){
     if (list_t.join('\n')!==new_full_list.join('\n')){
         localStorage.setItem('digest_temp_txtlistsearch',new_full_list.join('\n'));
     }
-    digest_enwords_get_kltxt_b(cstype);    //添加英语单词 - 保留注释
+    digest_enwords_remove_kltxt_b(cstype);    //添加英语单词 - 保留注释
 }
 
 function fix_divhtml2_kltxt_b(do_fix=true,ospan=false){
@@ -3709,7 +3709,7 @@ function layout_kltxt_b(cstype=''){
     layout_done_kltxt_global=true;
 
     menu_all_only_one_kltxt_b();
-    digest_temp_load_kltxt_b(cstype); //放在 menu_all_only_one_kltxt_b 之后，此函数末尾执行 digest_enwords_get_kltxt_b();，在其中设置缓存：txt_englishwords_excluded - 保留注释
+    digest_temp_load_kltxt_b(cstype); //放在 menu_all_only_one_kltxt_b 之后，此函数末尾执行 digest_enwords_remove_kltxt_b();，在其中设置缓存：txt_englishwords_excluded - 保留注释
 
     input_with_x_b('input_search',15);
 
@@ -3732,7 +3732,7 @@ function layout_kltxt_b(cstype=''){
     enwords_mini_search_frame_form_b();
 }
 
-function digest_enwords_get_kltxt_b(cstype=''){   
+function digest_enwords_remove_kltxt_b(cstype=''){   
     if (cstype=='digest'){return;}
     //摘要转为例句，digest_import_enwords，与KLfuns_txtbook_enwords.py 及 enwords_klwiki_from_books_terminal.py 对应 - 保留注释
     var t0 = performance.now();
@@ -3814,5 +3814,5 @@ function digest_enwords_get_kltxt_b(cstype=''){
         localStorage.setItem('txt_englishwords_excluded',excluded_words.join('\n'));
     }
     digest_global=new_list;
-    console.log('digest_enwords_get_kltxt_b() 费时：'+(performance.now() - t0) + ' milliseconds');
+    console.log('digest_enwords_remove_kltxt_b() 费时：'+(performance.now() - t0) + ' milliseconds');
 }

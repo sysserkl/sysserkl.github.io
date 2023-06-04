@@ -163,6 +163,24 @@ function import_book_js_b(import_digest=true){
     }
 }
 
+function digest_get_enwords_b(is_set=true,is_lower=false){
+    var result_t=[];
+    for (let item of digest_global){
+        if (item.substring(0,1)=='*'){
+            if (is_lower){
+                result_t.push(item.substring(1,).trim().toLowerCase());            
+            }
+            else {
+                result_t.push(item.substring(1,).trim());
+            }
+        }
+    }
+    if (is_set){
+        return new Set(result_t);
+    }
+    return result_t;
+}
+
 function menu_digest_file_full_name_b(book_no=false,jsdoc_num=false,bookid=false,jsdoc_path=false,import_digest=true,do_write=false){
     if (csbooklist_sub_global_b.length==0){
         return ['',''];

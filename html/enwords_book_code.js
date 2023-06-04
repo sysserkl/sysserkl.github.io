@@ -24,7 +24,7 @@ function args_enwords_book(){
                 title_set_enwords_book();
                 title_setted=true;
                 show_enwords_book();
-                import_book_js_b(false);
+                import_book_js_b(true);
                 break;
             }
             else if (bltmpstr.substring(0,7)=='allnew='){
@@ -78,7 +78,7 @@ function menu_enwords_book(){
     '<span class="span_menu" onclick="'+str2_t+'get_new_words_arr_enbook_b(4);">旧单词js_wiki格式</span>',
     '<span class="span_menu" onclick="'+str2_t+'show_sentence_enwc_b(3,true);">显示少量例句</span>',
     '<span class="span_menu" onclick="'+str_t+'words_sort_count_enwords_book();">单词数量统计排序</span>',
-    '<span class="span_menu" onclick="'+str_t+'txtlistsearch_enwords_book();">txtlistsearch</span>',
+    '<span class="span_menu" onclick="'+str_t+'txtlistsearch_enwords_book();">打开当前电子书</span>',
     ];
     
     if (is_local_b()){
@@ -121,9 +121,9 @@ function menu_enwords_book(){
     '<span class="span_menu" onclick="'+str2_t+'selenium_list_enwords_book(true,\'old\');">selenium新词(缓存旧单词在前)</span>',    
     '<span class="span_menu" onclick="'+str2_t+'selenium_list_enwords_book(true,\'count\');">selenium新词(缓存单词数)</span>',    
     '<span class="span_menu" onclick="'+str2_t+'selenium_list_enwords_book(true,\'length\');">selenium新词(缓存标题和链接长度)</span>',    
-    '<span class="span_menu" onclick="'+str2_t+'selenium_list_enwords_book(true,\'rare\');">selenium新词(稀有度)</span>',
-    '<span class="span_menu" onclick="'+str2_t+'selenium_one2more_enwords_book();">selenium新词(一对多)</span>',        
-    '<span class="span_menu" onclick="'+str2_t+'selenium_contain_enwords_book();">selenium新词(包含)</span>',        
+    '<span class="span_menu" onclick="'+str2_t+'selenium_list_enwords_book(true,\'rare\');">selenium新词(缓存稀有度)</span>',
+    '<span class="span_menu" onclick="'+str2_t+'selenium_one2more_enwords_book();">selenium新词(缓存一对多)</span>',        
+    '<span class="span_menu" onclick="'+str2_t+'selenium_contain_enwords_book();">selenium新词(缓存包含)</span>',        
     '<span class="span_menu" onclick="'+str2_t+'selenium_list_popular_enwords_book();">selenium常见新词(缓存)</span>',    
     '<a href="lsm.htm?key=selenium_enbook" onclick="'+str_t+'" target=_blank>查看缓存</a>',
     ];
@@ -165,8 +165,7 @@ function new_words_form_enwords_book(){
     bljg=bljg+'<span class="aclick" onclick="textarea_shift_b(\'textarea_new_words1\',\'textarea_new_words2\');">对调</span> ';    
     bljg=bljg+'<span class="aclick" onclick="space2underline_enwords_book();">替换单词间空格为下划线</span> ';      
     bljg=bljg+'<span class="aclick" onclick="filter_key_enwords_book();">Filter</span> ';
-    bljg=bljg+'<span class="aclick" onclick="document.getElementById(\'textarea_new_words1\').select();document.execCommand(\'copy\');">Copy</span> ';    
-    bljg=bljg+'<span class="aclick" onclick="document.getElementById(\'textarea_new_words1\').value=\'\';">Clear</span> ';
+    bljg=bljg+textarea_buttons_b('textarea_new_words1','清空,复制');
 
     bljg=bljg+'<br />'+checkbox_kl_b('remove_square','删除方括号[](否则方括号中的内容视为音标而不收录')+' ';
     bljg=bljg+checkbox_kl_b('words_type_check','检验单词类型','',true)+' ';    
@@ -176,14 +175,32 @@ function new_words_form_enwords_book(){
     bljg=bljg+'<p>第二组</p>';
     bljg=bljg+'<textarea id="textarea_new_words2"></textarea>';
     bljg=bljg+'<p><span class="aclick" onclick="get_new_words_group_enwords_book();">分组比较(无扩展)</span> ';
-    bljg=bljg+'<span class="aclick" onclick="document.getElementById(\'textarea_new_words2\').select();document.execCommand(\'copy\');">Copy</span> ';    
-    bljg=bljg+'<span class="aclick" onclick="document.getElementById(\'textarea_new_words2\').value=\'\';">Clear</span> ';    
+    bljg=bljg+'<span class="aclick" onclick="words_check_by_lines_enwords_book();">单词逐行搜索</span> ';    
+    bljg=bljg+textarea_buttons_b('textarea_new_words2','清空,复制');
+
     bljg=bljg+'<span class="aclick" onclick="show_all_books_global=!show_all_books_global;show_enwords_book();">Books</span> ';        
     bljg=bljg+'<span><span id=booklinks></span>';
     bljg=bljg+'<p>结果：</p><div id="div_new_words2" style="max-width:900px;font-family:Noto Sans;"></div>';
     document.getElementById('divhtml').innerHTML=bljg;
     
     input_size_b([['input_first_lines',5]],'id');
+}
+
+
+
+function words_check_by_lines_enwords_book(){
+    var blstr=document.getElementById('textarea_new_words1').value.trim();
+    var word_list=new Set(document.getElementById('textarea_new_words2').value.trim().split('\n'));
+    var digest_words=digest_get_enwords_b(true,true);
+    var result_t=new Set();
+    for (let aword of word_list){
+        if (digest_words.has(aword.toLowerCase())){continue;}
+        if (blstr.match(new RegExp('\\b'+aword+'\\b','i'))!==null){
+            result_t.add(aword);
+        }
+    }
+    var bljg=new_old_words_html_enbook_b(result_t,'包含的单词列表','',false);
+    document.getElementById('div_new_words2').innerHTML=bljg+enwords_different_types_div_b(Array.from(result_t));
 }
 
 function txtlistsearch_enwords_book(){

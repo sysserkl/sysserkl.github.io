@@ -31,7 +31,7 @@ function menu_ensentence(){
     ]);
     
     var group_list=[
-    ['无例句的单词','rare_old_words_ensentence(true,1,0);',true],
+    ['无例句的单词','rare_old_words_ensentence(true,1,0,3000);',true],
     ['词组','phrase_not_in_ensentence();',true],
     ];    
     klmenu1.push(menu_container_b(str_t,group_list,''));
@@ -140,8 +140,7 @@ function phrase_not_in_ensentence(){
     var odiv=document.getElementById('divhtml');   
     odiv.innerHTML=enwords_array_to_html_b(full_t,false);    
     odiv.insertAdjacentHTML('beforeend','<textarea onclick="this.select();document.execCommand(\'copy\');">'+words_found.join('\n')+'</textarea>');
-    local_storage_today_b('enwords_non_ensentence',40,words_found.length,'/');
-    console.log('phrase_not_in_ensentence() 费时：'+(performance.now() - t0) + ' milliseconds');       
+    console.log('phrase_not_in_ensentence() 费时：'+(performance.now() - t0) + ' milliseconds');
 }
 
 function host_count_ensentence(){
@@ -191,7 +190,7 @@ function enwords_count_sentence_data_save_ensentence(){
     string_2_txt_file_b('var en_sentence_count_global=[\n'+list_t.join('\n')+'\n];\n','enwords_count_sentence_data.js','txt');
 }
 
-function rare_old_words_ensentence(show_sentence=true,max_count=2,csoverflow=100){
+function rare_old_words_ensentence(show_sentence=true,max_count=2,rows_min=10,rows_max=3000){
     function sub_rare_old_words_ensentence_form(){
         var postpath=postpath_b();
         var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php" target=_blank>\n';    
@@ -205,7 +204,8 @@ function rare_old_words_ensentence(show_sentence=true,max_count=2,csoverflow=100
     
     function sub_rare_old_words_ensentence_arow(){
         if (blxl>=bllen){
-            result_t=object2array_b(result_t,true,2);
+            result_t=object2array_b(result_t);
+            result_t.sort();
             result_t.sort(function (a,b){return a[1]>b[1];});
 
             var oldset=simple_words_b(true,true);
@@ -214,22 +214,22 @@ function rare_old_words_ensentence(show_sentence=true,max_count=2,csoverflow=100
             var blno=0;
             for (let arow of result_t){
                 if (!oldset.has(arow[0].toLowerCase())){continue;}
-                if (arow[1]>=max_count && blno>=csoverflow){break;} 
-                
+                if (arow[1]>=max_count && blno>=rows_min){break;}
                 words_searched_arr_global.push(arow[0]);
                 blno=blno+1;
             }
             
-            if (words_searched_arr_global.length>3000){
+            if (words_searched_arr_global.length>rows_max){
                 words_searched_arr_global.sort(randomsort_b);
-                words_searched_arr_global=words_searched_arr_global.slice(0,3000);
+                words_searched_arr_global=words_searched_arr_global.slice(0,rows_max);
             }
             words_searched_arr_global.sort();
             
             var bltextarea=sub_rare_old_words_ensentence_form();
             document.getElementById('divhtml').innerHTML=enwords_array_to_html_b(words_searched_arr_global,false)+bltextarea;
             
-            local_storage_today_b('enwords_rare_ensentence',40,words_searched_arr_global.length,'/');
+            var local_id=(max_count>1?'enwords_rare_ensentence':'enwords_non_ensentence');
+            local_storage_today_b(local_id,40,words_searched_arr_global.length,'/');
             
             if (show_sentence){
                 show_sentence_enwc_b();
@@ -245,9 +245,9 @@ function rare_old_words_ensentence(show_sentence=true,max_count=2,csoverflow=100
             for (let aword of words_list){
                 var blkey='w_'+aword.toLowerCase(); //否则 一些 Save 之类的在例句中出现次数很少，但 save 出现次数很多，结果 Save 被列为出现次数很少的单词 - 保留注释
                 if (result_t[blkey]==undefined){
-                    result_t[blkey]=0;
+                    result_t[blkey]=[aword,0];
                 }
-                result_t[blkey]=result_t[blkey]+1;
+                result_t[blkey][1]=result_t[blkey][1]+1;
             }
         }
         blxl=blxl+1;
@@ -267,11 +267,11 @@ function rare_old_words_ensentence(show_sentence=true,max_count=2,csoverflow=100
         
         var blkey='w_'+item[0].toLowerCase();
         if (result_t[blkey]==undefined){
-            result_t[blkey]=0;
+            result_t[blkey]=[item[0],0];
         }
     }
     console.log('rare_old_words_ensentence() 旧单词部分 费时：'+(performance.now() - t0) + ' milliseconds');
-        
+
     var blxl=0;
     var bllen=en_sentence_global.length;
     sub_rare_old_words_ensentence_arow();
