@@ -1114,7 +1114,6 @@ function menu_klsnews_b(cskeys,js_or_php=''){
     }
     var str_t=klmenu_hide_b('');
     var menu_list1=[
-    '<span id="span_masonry_style" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ masonry</span>',        
     '<span class="span_menu" onclick="'+str_t+'fav_show_klsnews_b();">收藏</span>',
     ];
     
@@ -1137,15 +1136,20 @@ function menu_klsnews_b(cskeys,js_or_php=''){
     menu_list1=another_page.concat(menu_list1);
     
     var menu_list3=[
+    '<span id="span_masonry_style" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ masonry</span>',            
     '<span class="span_menu" onclick="'+str_t+'statistics_sites_klsnews_b();">当前页网站列表</span>',
     '<span class="span_menu" onclick="'+str_t+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>',
     '<span class="span_menu" onclick="'+str_t+'newwords_klsnews_b();">热门生词</span>',
-    '<span class="span_menu" onclick="'+str_t+'clearInterval(rnd_open_window_klsnews_global);rnd_window_klsnews_b();rnd_open_window_klsnews_global=setInterval(rnd_window_klsnews_b,60000);">随机访问</span>',
-    '<span class="span_menu" onclick="'+str_t+'clearInterval(rnd_open_window_klsnews_global);rnd_search_window_klsnews_b();rnd_open_window_klsnews_global=setInterval(rnd_search_window_klsnews_b,20000);">随机搜索</span>',        
-    '<span class="span_menu" onclick="'+str_t+'rnd_links_klsnews_b(10);">随机打开10条链接</span>',
     '<span class="span_menu" onclick="'+str_t+'span_fav_show_hide_klsnews_b();">fav button show/hide</span>',    
     '<span class="span_menu" onclick="'+str_t+'stanalone_search_klsnews_b();">导出链接为standalone search</span>',        
     ];
+    
+    var group_list=[
+    ['访问','rnd_open_or_search_klsnews_b(false);',true],
+    ['搜索','rnd_open_or_search_klsnews_b(true);',true],
+    ['打开10条链接','rnd_links_klsnews_b(10);',true],
+    ];    
+    menu_list3.push(menu_container_b(str_t,group_list,'随机：'));
 
     if (js_or_php=='php'){
         menu_list3.push('<a href="?dbf='+cskeys+'&countdays=30">最近30天更新统计</a>');
@@ -1164,6 +1168,18 @@ function menu_klsnews_b(cskeys,js_or_php=''){
     
     document.getElementById('span_h2_title').insertAdjacentHTML('beforebegin',bljg+' ');
     klmenu_check_b('span_masonry_style',true);            
+}
+
+function rnd_open_or_search_klsnews_b(is_search=false){
+    clearInterval(rnd_open_window_klsnews_global);
+    if (is_search){
+        rnd_search_window_klsnews_b();
+        rnd_open_window_klsnews_global=setInterval(rnd_search_window_klsnews_b,20000);    
+    }
+    else {
+        rnd_window_klsnews_b();
+        rnd_open_window_klsnews_global=setInterval(rnd_window_klsnews_b,60000);
+    }
 }
 
 function stanalone_search_klsnews_b(){

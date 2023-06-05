@@ -893,35 +893,6 @@ function links_and_text_klr_b(){
 	div_t.innerHTML=ahref+'<br />'+otextarea;
 }
 
-function wiki_content_anaylsis_klr_b(csstr='',csid='textarea_rows_content'){
-    csstr=csstr.replace(new RegExp('(\\[|<photo>)?{{wikiuploads}}','g'),'\n$1{{wikiuploads}}')
-    var list_t=csstr.split('\n');
-    var eword=[];
-    var blog=[];
-    var notimg=[];
-    var isimg=[];
-    for (let item of list_t){
-        if (item.match(/https?:\/\/.*(blogspot|wordpress|evernote|youdao)/gi)){
-            blog.push(item);
-        }
-        if (str_reg_search_b(item,'+{{wikiuploads}}',true)){
-            if (str_reg_search_b(item,'-\.(jpeg|jpg|gif|bmp|png)',true)){
-                notimg.push(item);
-            }
-            else {
-                isimg.push(item);
-            }
-        }
-        if (item.includes('<eword ')){
-            eword.push(item);
-        }
-    }
-    otextarea=document.getElementById(csid);
-    if (otextarea){
-        otextarea.value='🚩eword('+eword.length+')\n\n'+eword.join('\n')+'\n\n🚩blog('+blog.length+')\n\n'+blog.join('\n')+'\n\n🚩not image('+notimg.length+')\n\n'+notimg.join('\n')+'\n\n🚩is image('+isimg.length+')\n\n'+isimg.join('\n');
-    }
-}
-
 function rnd_str_klr_b(cstype='',cslines=0,csmin=0,csmax=0,csid='textarea_rows_content'){
     cslines=parseInt(cslines);
     csmin=parseInt(csmin);

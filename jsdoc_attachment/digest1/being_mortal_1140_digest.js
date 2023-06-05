@@ -57,4 +57,17 @@ var digest_global=`
 *unrealistic
 *untreatable
 *washerwoman
+*Appalachia
+*biopsy
+*Hobson
+*Straus
+*Chopin
+*Dickinson
+*Douglass
+*Dracula
+*MacArthur
+*Minnesotan
+*opt
+*Uganda
+*Yorkshire
 `.trim().split('\n');

@@ -179,14 +179,32 @@ function new_words_form_enwords_book(){
     bljg=bljg+textarea_buttons_b('textarea_new_words2','清空,复制');
 
     bljg=bljg+'<span class="aclick" onclick="show_all_books_global=!show_all_books_global;show_enwords_book();">Books</span> ';        
-    bljg=bljg+'<span><span id=booklinks></span>';
+    bljg=bljg+'<span><span id=booklinks></span></p>';
+
+    bljg=bljg+'<p>digest_global</p>';
+    bljg=bljg+'<textarea id="textarea_new_words3"></textarea>';
+    bljg=bljg+'<p><span class="aclick" onclick="import_to_digest_global_enwords_book();">导入</span></p>';
+
     bljg=bljg+'<p>结果：</p><div id="div_new_words2" style="max-width:900px;font-family:Noto Sans;"></div>';
     document.getElementById('divhtml').innerHTML=bljg;
     
     input_size_b([['input_first_lines',5]],'id');
 }
 
-
+function import_to_digest_global_enwords_book(){
+    var blstr=document.getElementById('textarea_new_words3').value.trim();
+    if (blstr==''){
+        var list_t=[];
+    }
+    else {
+        var list_t=blstr.split('\n');
+    }
+    if (!confirm('是否修改 digest_global 变量值为 '+list_t.length+' 行单词？')){return;}
+    digest_global=[];
+    for (let item of list_t){
+        digest_global.push('*'+item);
+    }
+}
 
 function words_check_by_lines_enwords_book(){
     var blstr=document.getElementById('textarea_new_words1').value.trim();
@@ -561,6 +579,17 @@ function rare_word_count_enwords_book(cslist,rare_dict){
 }
 
 function selenium_list_enwords_book(use_cache=false,cstype=''){
+    function sub_selenium_list_enwords_book_watershed(cslist,colno,csvalue=1){
+        var rare_href='';
+        for (let item of cslist){
+            if (item[colno]==csvalue){
+                rare_href=(item[0].match(/"(http[^\s]+)"/) || ['',''])[1];
+                break;
+            }
+        }    
+        return rare_href;
+    }
+    //-------------------------
     var result_t={};
     var cached_list=selenium_local_storage_get_enwords_book(true);
     
@@ -615,7 +644,7 @@ function selenium_list_enwords_book(use_cache=false,cstype=''){
         }
         
         if (['count','old','random','length','rare'].includes(cstype)){
-            result_t['k_'+item[2]].push([blstr,(item[0]+item[1]).length,item[3].length,old_count,blrare_count]);
+            result_t['k_'+item[2]].push([blstr,(item[0]+item[1]).length,word_list.length,old_count/word_list.length,blrare_count]);
         }
         else {
             result_t['k_'+item[2]].push(blstr);
@@ -639,19 +668,16 @@ function selenium_list_enwords_book(use_cache=false,cstype=''){
                 list_t.sort(function (a,b){return a[1]<b[1];});            
                 break;
             case 'count':
-                list_t.sort(function (a,b){return a[2]<b[2];});                        
+                list_t.sort(function (a,b){return a[2]<b[2];});
+                rare_href=sub_selenium_list_enwords_book_watershed(list_t,2);            
                 break;                        
             case 'old':
-                list_t.sort(function (a,b){return a[3]/a[2]<b[3]/b[2];});
+                list_t.sort(function (a,b){return a[3]<b[3];});
+                rare_href=sub_selenium_list_enwords_book_watershed(list_t,3,0);
                 break;
             case 'rare':
                 list_t.sort(function (a,b){return a[4]<b[4];});
-                for (let item of list_t){
-                    if (item[4]==1){
-                        rare_href=(item[0].match(/"(http[^\s]+)"/) || ['',''])[1];
-                        break;
-                    }
-                }
+                rare_href=sub_selenium_list_enwords_book_watershed(list_t,4);
                 break;
         }
         for (let blxl=0;blxl<list_t.length;blxl++){
@@ -929,19 +955,16 @@ function compare_result_list_to_table_enwords_book(sortno=4){
     bljg=bljg+'<th '+thstyle+' onclick="compare_result_list_to_table_enwords_book(6);">Data2(10%)</th>';
     bljg=bljg+'<th '+thstyle+' onclick="compare_result_list_to_table_enwords_book(7);">Δ</th>';    
     bljg=bljg+'</tr>';
-    var blxl=1;
+    var blno=1;
     for (let item of enbook_compare_result_list_global){
         bljg=bljg+'<tr>';
-        bljg=bljg+'<td '+tdstyle+'>'+blxl+'</td>';
+        bljg=bljg+'<td '+tdstyle+'>'+blno+'</td>';
         bljg=bljg+'<td '+tdstyle+'>'+item[1]+'</td>';
-        bljg=bljg+'<td align=right '+tdstyle+'>'+item[2]+'</td>';
-        bljg=bljg+'<td align=right '+tdstyle+'>'+item[3]+'</td>';
-        bljg=bljg+'<td align=right '+tdstyle+'>'+item[4]+'</td>';
-        bljg=bljg+'<td align=right '+tdstyle+'>'+item[5]+'</td>';
-        bljg=bljg+'<td align=right '+tdstyle+'>'+item[6]+'</td>';
-        bljg=bljg+'<td align=right '+tdstyle+'>'+item[7]+'</td>';        
+        for (let blxl=2;blxl<=7;blxl++){
+            bljg=bljg+'<td align=right '+tdstyle+'>'+item[blxl]+'</td>';
+        } 
         bljg=bljg+'</tr>';
-        blxl=blxl+1;
+        blno=blno+1;
     }
     bljg=bljg+'</table>';
     document.getElementById('td_result').innerHTML=bljg;
