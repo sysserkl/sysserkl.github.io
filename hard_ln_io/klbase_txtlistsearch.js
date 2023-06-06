@@ -3420,7 +3420,7 @@ function digest_temp_add_kltxt_b(do_fix=false){
             fix_divhtml2_kltxt_b(true,ospan);
         }
     }
-    location.href="#divhtml2";
+    location.href='#divhtml2';
 }
 
 function digest_temp_jump_to_line_kltxt_b(){
@@ -3709,7 +3709,8 @@ function layout_kltxt_b(cstype=''){
     layout_done_kltxt_global=true;
 
     menu_all_only_one_kltxt_b();
-    digest_temp_load_kltxt_b(cstype); //放在 menu_all_only_one_kltxt_b 之后，此函数末尾执行 digest_enwords_remove_kltxt_b();，在其中设置缓存：txt_englishwords_excluded - 保留注释
+    digest_temp_load_kltxt_b(cstype);
+    //上一行放在 menu_all_only_one_kltxt_b 之后，此函数末尾执行 digest_enwords_remove_kltxt_b();，在其中设置缓存：txt_englishwords_excluded - 保留注释
 
     input_with_x_b('input_search',15);
 

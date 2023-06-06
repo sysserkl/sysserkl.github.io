@@ -1,4 +1,5 @@
 var csbooklist_source_global=[
+["robert_s_rules_of_order_pmoroofda_7672", "Robert's Rules of Order Pocket Manual of Rules of Order for Deliberative Assemblies(Henry M. Robert)","已整理,englishwords","3",""],
 ["anna_karenina_1223","Anna Karenina","englishwords,已整理","3",""],
 ["zi_zhi_tong_jian_138381","资治通鉴","历史,已整理","3",""],
 ["jiu_tang_shu_67933","旧唐书(刘昫等)","历史,已整理","3",""],

@@ -14,4 +14,7 @@ var digest_global=`
 *pullover
 *Rolex
 *unorthodox
+*shitload
+*Disneyland
+*Latino
 `.trim().split('\n');

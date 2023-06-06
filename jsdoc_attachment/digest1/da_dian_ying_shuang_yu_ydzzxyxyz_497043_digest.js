@@ -11,4 +11,7 @@ var digest_global=`
 *hydrant
 *multiverse
 *overthink
+*Alps
+*Eiffel
+*Whitney
 `.trim().split('\n');

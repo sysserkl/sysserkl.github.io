@@ -28,4 +28,5 @@ var digest_global=`
 *unambitious
 *waistband
 *widowhood
+*mozzarella
 `.trim().split('\n');

@@ -31,4 +31,5 @@ var digest_global=`
 *turbojet
 *Uzbekistan
 *wingless
+*monorail
 `.trim().split('\n');

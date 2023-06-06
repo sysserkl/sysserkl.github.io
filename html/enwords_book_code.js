@@ -1161,7 +1161,6 @@ function exclude_enwords_book(){
     var blwords='';
     var textarea_value=[];
     var book_search=(klwebphp_path_b()===false?'book_search_js.htm':'../../../../book_search.php');
-    console.log(book_search);
     for (let blxl=0;blxl<list_t.length;blxl++){
         var item=list_t[blxl].split(' /// ');
         if (item.length<2){continue;}

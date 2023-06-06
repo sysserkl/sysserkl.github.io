@@ -421,11 +421,17 @@ function elm_get_money_b(csstr,csdate,csaddress,to_line_style=false){
     var result_t=[];
     var blname='';
     var blamount='';
-    for (let item of list_t){
-        item=item.trim();
-        if (item.includes('/')){
+    for (let blxl=0;blxl<list_t.length;blxl++){
+        var item=list_t[blxl].trim();
+        if (item.includes('/')){    //含有单位，如 /盒 - 保留注释
             blname=item;
             continue;
+        }
+        else if (blxl<list_t.length-1){
+            if (list_t[blxl+1].match(/^x \d/)){ //不含有单位，但下一行是如 x 1 格式 - 保留注释
+                blname=item;
+                continue;
+            }
         }
         if (blname==''){continue;}
         
