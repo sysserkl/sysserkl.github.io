@@ -1,0 +1,19 @@
+var digest_global=`
+*Albanian
+*disembarkation
+*Edinburgh
+*ellipsis
+*encamp
+*extortionate
+*flatterer
+*linseed
+*materialist
+*moonbeam
+*parallelogram
+*polygon
+*prawn
+*prejudicial
+*stagnation
+*subtitle
+*usurer
+`.trim().split('\n');

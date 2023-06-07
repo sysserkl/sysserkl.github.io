@@ -1,0 +1,15 @@
+var menulist=[
+"== The Project Gutenberg eBook of The Great Gatsby ==",
+"= The Great Gatsby by F. Scott Fitzgerald =",
+"== Table of Contents ==",
+"== I ==",
+"== II ==",
+"== III ==",
+"== IV ==",
+"== V ==",
+"== VI ==",
+"== VII ==",
+"== VIII ==",
+"== IX ==",
+"== THE FULL PROJECT GUTENBERG LICENSE ==",
+];

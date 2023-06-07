@@ -1,4 +1,10 @@
 var csbooklist_source_global=[
+["moby_dick_or_the_whale_1996", "Moby Dick; Or, The Whale(Herman Melville)","已整理,englishwords","3",""],
+["the_great_gatsby_1470", "The Great Gatsby(F. Scott Fitzgerald)","已整理,englishwords","3",""],
+["the_three_musketeers_1921", "The Three Musketeers(Alexandre Dumas)","已整理,englishwords","3",""],
+["the_man_in_the_iron_m_2073", "The Man in the Iron Mask(Alexandre Dumas)","已整理,englishwords","3",""],
+["ten_years_later_1379", "Ten Years Later(Alexandre Dumas)","已整理,englishwords","3",""],
+["twenty_years_after_1729", "Twenty Years After(Alexandre Dumas)","已整理,englishwords","3",""],
 ["robert_s_rules_of_order_pmoroofda_7672", "Robert's Rules of Order Pocket Manual of Rules of Order for Deliberative Assemblies(Henry M. Robert)","已整理,englishwords","3",""],
 ["anna_karenina_1223","Anna Karenina","englishwords,已整理","3",""],
 ["zi_zhi_tong_jian_138381","资治通鉴","历史,已整理","3",""],

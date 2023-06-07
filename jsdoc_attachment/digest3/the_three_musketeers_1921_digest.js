@@ -1,0 +1,19 @@
+var digest_global=`
+*Delilah
+*Macbeth
+*Robespierre
+*Rubens
+*Scotsman
+*astrologer
+*bettor
+*bloodstain
+*chambermaid
+*falconry
+*horsemanship
+*impolitic
+*moonbeam
+*ninny
+*shipmaster
+*strongbox
+*swordsmanship
+`.trim().split('\n');
