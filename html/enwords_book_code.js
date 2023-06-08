@@ -468,15 +468,25 @@ function selenium_contain_enwords_book(){
         if (sentence_list.length==1){
             bottom_list.push(sentence_list[0][0]);
         }
-        else {        
+        else {
             sentence_list.sort(function (a,b){return a[1]<b[1];});
             for (let arow of sentence_list){
                 list_t.push(arow[0]);
             }
         }
     }
-    bottom_list.sort(randomsort_b);        
+    bottom_list.sort(randomsort_b);
+    var rare_href=bottom_list_href_get_enwords_book(bottom_list);
     selenium_html_enwords_book(list_t.join('\n')+bottom_list.join('\n'),true,cached_len,'Cached');
+    selenium_rare_jump_enwords_book(rare_href);
+}
+
+function bottom_list_href_get_enwords_book(bottom_list){
+    var rare_href='';
+    if (bottom_list.length>0){
+        rare_href=(bottom_list[0].match(/"(http[^\s]+)"/) || ['',''])[1];
+    }
+    return rare_href;
 }
 
 function selenium_one2more_enwords_book(){
@@ -530,7 +540,9 @@ function selenium_one2more_enwords_book(){
     }
     
     bottom_list.sort(randomsort_b);    
+    var rare_href=bottom_list_href_get_enwords_book(bottom_list);
     selenium_html_enwords_book(list_t.join('\n')+bottom_list.join('\n'),true,cached_len,'Cached');
+    selenium_rare_jump_enwords_book(rare_href);
 }
 
 function selenium_list_h3_generation_enwords_book(item,use_cache){

@@ -21,6 +21,7 @@ var digest_list_source_global=[
 ["liao_zhai_zhi_yi_107694_digest",3,"2020-10-28",1184],
 ["the_federalist_papers_1999_digest",3,"2023-02-21",887],
 ["shui_hu_chuan_75942_digest",3,"2020-10-27",3569],
+["moby_dick_or_the_whale_1996_digest",3,"2023-06-06",652],
 ["pride_and_prejudice_1794_digest",3,"2022-04-11",407],
 ["the_warden_trollope_anthony_2641_digest",3,"2023-02-03",86],
 ["san_guo_yan_yi_90723_digest",3,"2020-10-15",3964],

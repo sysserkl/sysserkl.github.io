@@ -35,4 +35,6 @@ var digest_global=`
 *uncooperative
 *widen
 *workbench
+*awesomeness
+*uncountable
 `.trim().split('\n');
