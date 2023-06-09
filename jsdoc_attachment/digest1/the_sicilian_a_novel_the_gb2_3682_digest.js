@@ -29,4 +29,7 @@ var digest_global=`
 *waistband
 *widowhood
 *mozzarella
+*Engels
+*Scandinavia
+*sirocco
 `.trim().split('\n');

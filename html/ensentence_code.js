@@ -40,11 +40,15 @@ function menu_ensentence(){
     '<span class="span_menu" onclick="'+str_t+'sentence_source_list_ensentence();">例句出处文章列表</span>',    
     '<span class="span_menu" onclick="'+str_t+'host_count_ensentence();">例句出处统计</span>',    
     '<span id="span_reg_ensentence" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ reg</span>',
-    '<a href="../jsdata/words/enwords_sentence_data.js?'+date2str_b('')+'" onclick="'+str_t+'" target=_blank>enwords_sentence_data.js</a>',    
-    '<a href="'+location.origin+'/wiki/index.php/%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9" onclick="'+str_t+'" target=_blank>KLWiki最近更改</a>',    
     ];    
+    
+    var klmenu_link=[
+    '<a href="../jsdata/words/enwords_sentence_data.js?'+date2str_b('')+'" onclick="'+str_t+'" target=_blank>enwords_sentence_data.js</a>',    
+    '<a href="'+location.origin+'/wiki/index.php/%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9" onclick="'+str_t+'" target=_blank>KLWiki最近更改</a>',        
+    '<a href="enwords_book.htm" onclick="'+str_t+'" target=_blank>生词统计</a>',
+    ];
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🗨','15rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','17rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🗨','15rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','12rem','1rem','1rem','60rem'),'','0rem')+' ');
     klmenu_check_b('span_reg_ensentence',true);
 }
 

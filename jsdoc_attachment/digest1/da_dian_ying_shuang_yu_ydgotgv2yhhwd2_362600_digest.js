@@ -4,4 +4,5 @@ var digest_global=`
 *turd
 *stomp
 *wormhole
+*brother-in-arms
 `.trim().split('\n');

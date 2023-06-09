@@ -1,0 +1,27 @@
+var digest_global=`
+*Cincinnatus
+*Heidelberg
+*Hippocratic
+*Hobbes
+*Nash
+*Olivia
+*Ophelia
+*Wordsworth
+*bookworm
+*conchology
+*fluctuation
+*forewarn
+*handloom
+*interjection
+*mayoralty
+*missy
+*prolongation
+*quotient
+*self-criticism
+*silversmith
+*summerhouse
+*tableful
+*unconstrained
+*uncreative
+*unsuspicious
+`.trim().split('\n');

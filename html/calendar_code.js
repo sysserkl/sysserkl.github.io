@@ -504,6 +504,7 @@ function menu_klcalendar(){
     var klmenu1=[
     '<span class="span_menu" onclick="'+str_t+'memo_form_klcalendar();">Memo 编辑</span>',    
     '<span class="span_menu" onclick="'+str_t+'memo_help_klcalendar();">Memo Demo</span>',
+    '<a href="https://www.baidu.com/s?cl=3&wd=%C8%D5%C0%FA" onclick="'+str_t+'" target=_blank>百度</a>',        
     ];
 
     document.getElementById('td_head').insertAdjacentHTML('afterbegin',klmenu_b(klmenu1,'公元','14rem'));
