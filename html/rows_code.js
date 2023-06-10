@@ -16,7 +16,12 @@ function input_style_klr2(){
     ['input_rnd_count_max',5],
 
     ];
-    input_size_b(input_list,'id');
+    var dom_list=input_size_b(input_list,'id',false,true);
+    for (let one_dom of dom_list){
+        if (!one_dom.hasAttribute('onkeydown')){
+            one_dom.setAttribute('onkeydown',"if (event.key=='Enter'){return false;}");   
+        }
+    }
 }
 
 function en_double_2_array_klr2(do_export=false){

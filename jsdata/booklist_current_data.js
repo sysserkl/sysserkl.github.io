@@ -1,4 +1,5 @@
 var csbooklist_source_global=[
+["the_blue_castle_a_novel_2103", "The Blue Castle- a novel(L. M. Montgomery)","已整理,englishwords","3",""],
 ["the_enchanted_april_1763", "The Enchanted April(Elizabeth Von Arnim)","已整理,englishwords","3",""],
 ["middlemarch_1114", "Middlemarch(George Eliot)","已整理,englishwords","3",""],
 ["a_room_with_a_view_1558", "A Room with a View(E. M. Forster)","已整理,englishwords","3",""],

@@ -1038,7 +1038,7 @@ function div_title_href_b(item,csfsize='',underline=false,csid='',fnname='',item
     return bljg;
 }
 
-function input_size_b(cslist,cstype='name',font_size=false){
+function input_size_b(cslist,cstype='name',font_size=false,return_dom=false){
     //cslist: [ ["input_class0",8],["input_class",5,false], ["input_calculator",21,3], ]; - 保留注释
     //cstype name; id
     var is_mobile=ismobile_b(true);
@@ -1046,12 +1046,13 @@ function input_size_b(cslist,cstype='name',font_size=false){
         var querystr='input[name="';
         var querystr_end='"]';
     }
-    else if (cstype=='id') {
+    else if (cstype=='id'){
         var querystr='input#';
         var querystr_end='';
     }
-    else {return;}
+    else {return [];}
     
+    var dom_list=[];
     for (let item of cslist){
         var oinput=document.querySelector(querystr+item[0]+querystr_end);
         if (oinput){
@@ -1064,8 +1065,12 @@ function input_size_b(cslist,cstype='name',font_size=false){
             else {
                 oinput.style.cssText=css_input_text_b(item[1],is_mobile,false,'',font_size);
             }
+            if (return_dom){
+                dom_list.push(oinput);
+            }
         }
     }
+    return dom_list;
 }
 
 function input_with_x_b(csid,cswidth,xid='',csexpand=false,regid=false,isreg=false){
