@@ -35,10 +35,12 @@ function backup_lt_f2f(){
     bljg=bljg+'<textarea id="textarea_backup_f2f" name="textarea_backup_f2f" style="width:100%;height:10rem;">'+items+'</textarea>';
     bljg=bljg+'<p>';
     bljg=bljg+close_button_b('div_backup','none')+' ';
+    bljg=bljg+'<span class="aclick" onclick="filter_klplan_f2f();">Filter</span> ';       
     bljg=bljg+'<span class="aclick" onclick="update_lt_f2f();">Update</span> ';   
     bljg=bljg+textarea_buttons_b('textarea_backup_f2f','清空,复制,发送到临时记事本,发送地址')+' ';
     bljg=bljg+'</p>';
     bljg=bljg+'</form>';
+    bljg=bljg+'<p><textarea id="textarea_filter_items_f2f" style="display:none; width:100%;height:10rem;" onclick="this.select();document.execCommand(\'copy\');"></textarea></p>\n';
     bljg=bljg+'</div>';
     var odiv=document.getElementById('div_backup');
     if (odiv){
@@ -47,6 +49,41 @@ function backup_lt_f2f(){
     else {
         document.getElementById('divhtml').insertAdjacentHTML('afterbegin',bljg);
     }
+}
+
+function filter_klplan_f2f(){
+    var otextarea=document.getElementById('textarea_backup_f2f');
+    var list_t=otextarea.value.trim().split('\n');
+
+    var cskey=(prompt('输入过滤关键词：') || '').trim();
+    var is_reg=false;
+    [cskey,is_reg]=str_reg_check_b(cskey,false);
+    if (cskey==''){return;}
+    
+    var others_item_list=[];
+    var current_item_list=[];
+    for (let item of list_t){
+        var blfound=str_reg_search_b(item,cskey,is_reg);
+        if (blfound===-1){break;}
+        
+        if (blfound){
+            current_item_list.push(item);
+        }
+        else {
+            others_item_list.push(item);
+        }
+    }
+    
+    if (current_item_list.length==0){
+        alert('not found');
+        return;
+    }
+    
+    otextarea.value=others_item_list.join('\n');
+    var otextarea_current=document.getElementById('textarea_filter_items_f2f');
+    otextarea_current.value=current_item_list.join('\n');
+    otextarea_current.style.display='';
+    alert('原共有项目'+list_t.length+'条；当前筛选出项目'+current_item_list.length+'条；剩余项目'+others_item_list.length+'条。'+(list_t.length==current_item_list.length+others_item_list.length?'条数一致。':'条数不一致。'));
 }
 
 function update_lt_f2f(){
