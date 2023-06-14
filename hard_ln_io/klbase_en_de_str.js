@@ -792,3 +792,26 @@ function s2t_t2s_search_b(csstr){
     }
     return result_t;
 }
+
+function decode_quoted_printable_b(data){
+    //from: https://codereview.stackexchange.com/questions/181017/decoder-for-content-transfer-encoding-and-quoted-printable
+    var replacer = function (match, p1){
+        // handle escape sequence
+        if (p1.trim().length === 2){
+            // decode byte (for example: "=20" ends up as " ")
+            var code = parseInt(p1.trim(), 16);
+            return String.fromCharCode(code);
+        }
+        // handle soft line breaks
+        return '';
+    };
+    // remove soft line breaks and convert escape sequences
+    data = data.replace(/=([0-9A-F]{2}|\r\n|\n)/gi, replacer);
+    // decode escape sequences
+    try {
+        return decodeURIComponent(escape(data));
+    } 
+    catch (dummy){
+        return null;
+    }
+};

@@ -93,16 +93,29 @@ function menu_enwords_book(){
     klmenu_new.push(menu_container_b(str_t,format_list,'今日新单词：'));    
     
     klmenu_new=klmenu_new.concat([
-    '<span class="span_menu" onclick="'+str_t+'import_enwords_book(\'new\');">导入KLWiki和txtbook全部新单词</span>',    
-    '<span class="span_menu" onclick="'+str_t+'import_enwords_book(\'new\',2500);">随机导入2500个新单词</span>',        
+    '<span class="span_menu" onclick="'+str_t+'import_enwords_book(\'new\');">导入KLWiki和txtbook全部新单词</span>',   
     '<span class="span_menu" onclick="'+str_t+'max_length_new_enwords_book();">全部新单词中最长的单词</span>',     
-    '<span class="span_menu" onclick="'+str_t+'import_enwords_book(\'sentence\',1000);">随机导入1000条例句</span>',
-    '<span class="span_menu" onclick="'+str_t+'import_enwords_book(\'old_def\',2500);">随机导入2500条旧单词释义</span>',
-    '<span class="span_menu" onclick="'+str_t+'import_enwords_book(\'old_def\');">导入全部旧单词释义</span>',
-    '<span class="span_menu" onclick="'+str_t+'import_enwords_book(\'old\');">导入全部旧单词</span>',
-    '<span class="span_menu" onclick="'+str_t+'frequency_enwords_book(\'sentence_common\');">例句中的常见单词</span>',    
-    '<span class="span_menu" onclick="'+str_t+'frequency_enwords_book(\'textarea\');">当前内容常见单词</span>',        
     ]);
+
+    var format_list=[
+    ['例句中','frequency_enwords_book(\'sentence_common\');',true],
+    ['当前内容','frequency_enwords_book(\'textarea\');',true],
+    ];    
+    klmenu_new.push(menu_container_b(str_t,format_list,'常见单词：'));    
+    
+    var format_list=[
+    ['新单词','import_enwords_book(\'new\',2500);',true],
+    ['旧单词释义','import_enwords_book(\'old_def\',2500);',true],
+    ['例句','import_enwords_book(\'sentence\',1000);',true],
+    ['kaikki phrase','import_enwords_book(\'kaikki phrase\',1000);',true],
+    ];    
+    klmenu_new.push(menu_container_b(str_t,format_list,'随机导入：'));    
+
+    var format_list=[
+    ['导入全部旧单词','import_enwords_book(\'old\');',true],
+    ['释义','import_enwords_book(\'old_def\');',true],
+    ];    
+    klmenu_new.push(menu_container_b(str_t,format_list,''));    
     
     if (is_local_b()){
         klmenu_new.push('<span class="span_menu" onclick="'+str_t+'onetab_enwords_book();">导入onetab</span>');
@@ -146,7 +159,7 @@ function menu_enwords_book(){
         klmenu2.push('<span class="span_menu" onclick="'+str_t+'klwiki_link_b(\'英语书籍生词统计\',true);">英语书籍生词统计(KLWiki)</span>');
     }
 
-    var menus=klmenu_b(klmenu1,'','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_new,'🔤','18rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'🧮','16rem','1rem','1rem','60rem')+(is_local_b()?klmenu_b(klmenu_selenium,'📰','20rem','1rem','1rem','60rem'):'');
+    var menus=klmenu_b(klmenu1,'','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_new,'🔤','24rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'🧮','16rem','1rem','1rem','60rem')+(is_local_b()?klmenu_b(klmenu_selenium,'📰','20rem','1rem','1rem','60rem'):'');
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(menus,'','0rem')+' ');
     
 }
@@ -311,7 +324,11 @@ function import_enwords_book(cstype,csmax=-1){
             break;
         case 'cet6':
             document.getElementById('textarea_new_words1').value=cet6_en_global.join('\n');        
-            break;        
+            break;   
+        case 'kaikki phrase':
+            kaikki_phrase_global.sort(randomsort_b);
+            document.getElementById('textarea_new_words1').value=kaikki_phrase_global.slice(0,1000).join('\n').replace(/ /g,'_');
+            break;
     }
 }
 

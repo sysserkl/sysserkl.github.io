@@ -32,4 +32,5 @@ var digest_global=`
 *Uzbekistan
 *wingless
 *monorail
+*Rolex
 `.trim().split('\n');

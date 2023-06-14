@@ -1,4 +1,7 @@
 var csbooklist_source_global=[
+["cranfordelizabeth_cleghorn_gaskell_815", "Cranford(Elizabeth Cleghorn Gaskell)","已整理,englishwords","3",""],
+["the_expedition_of_humphry_clinker_3140", "The Expedition of Humphry Clinker(T. Smollett)","已整理,englishwords","3",""],
+["the_adventures_of_ferdinand_count_fc_12855", "The Adventures of Ferdinand Count Fathom — Complete(T. Smollett)","已整理,englishwords","3",""],
 ["the_blue_castle_a_novel_2103", "The Blue Castle- a novel(L. M. Montgomery)","已整理,englishwords","3",""],
 ["the_enchanted_april_1763", "The Enchanted April(Elizabeth Von Arnim)","已整理,englishwords","3",""],
 ["middlemarch_1114", "Middlemarch(George Eliot)","已整理,englishwords","3",""],
