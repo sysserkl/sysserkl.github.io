@@ -1803,6 +1803,12 @@ function klsofts_config_b(){
     odiv.innerHTML=bljg;
 }
 
+function klsofts_is_local_p(){
+    var ops = document.querySelectorAll('div.div_klsofts_one p'); 
+    var list_t=Array.from(ops).filter(one_p => one_p.innerText=='remote'); 
+    return (list_t.length==1?false:true);
+}
+
 function klsofts_popup_b(event=false,odom=false,csstr='',fontsize=1){
     var ogrand=false;
     var blfound=false;
@@ -1820,7 +1826,8 @@ function klsofts_popup_b(event=false,odom=false,csstr='',fontsize=1){
         }
     }
 
-    var list_t=klsofts_list_b(csstr,[],true);
+    var is_local=klsofts_is_local_p();
+    var list_t=klsofts_list_b(csstr,[],true,is_local);
     for (let blxl=0;blxl<list_t.length;blxl++){
         list_t[blxl]=klsofts_one_b(list_t[blxl],fontsize,false,'','',(blfound?' target=_blank':''));
     }
@@ -1837,6 +1844,42 @@ function klsofts_popup_b(event=false,odom=false,csstr='',fontsize=1){
         }
     }
     klsofts_recent_b('popup:'+csstr);    
+    klsofts_local_or_remote_b(is_local,true);
+}
+
+function klsofts_local_or_remote_b(is_local,only_popup=false){
+    var local_str=klwebphp_path_b();    //仅考虑当前host为 file 或 127.0.0.1 - 保留注释
+    var local_len=local_str.length;
+    
+    var remote_str=location_host_b(true);
+    if (remote_str==''){
+        remote_str=local_str;
+    }
+    else {
+        remote_str=remote_str+'/klwebphp/';
+    }
+
+    var remote_len=remote_str.length;
+
+    if (only_popup){
+        var oas=document.querySelectorAll('div#div_common_softs div.div_klsofts_one a');    
+    }
+    else {
+        var oas=document.querySelectorAll('div.div_klsofts_one a');
+    }
+    
+    for (let one_a of oas){
+        var blhref=one_a.href;
+        if (!blhref){continue;}
+        if (!is_local && blhref.substring(0,local_len)==local_str){
+            blhref=blhref.replace(local_str,remote_str);
+            one_a.setAttribute('href',blhref);
+        }
+        else if (is_local && blhref.substring(0,remote_len)==remote_str){
+            blhref=blhref.replace(remote_str,local_str);
+            one_a.setAttribute('href',blhref);
+        }
+    }
 }
 
 function klsofts_one_b(csitem,fontsize=2.5,addp=true,cshref='',jsstr='',new_tab=' target=_blank',popup_fsize=false){

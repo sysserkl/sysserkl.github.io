@@ -5,7 +5,6 @@ var digest_global=`
 *babysit
 *barman
 *beetroot
-*biographer
 *boarhound
 *broomstick
 *cornflakes

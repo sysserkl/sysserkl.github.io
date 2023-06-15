@@ -7,6 +7,11 @@ function bookmarks_set_bible(){
     var osub=document.getElementById('select_sub');
     if (omain.selectedIndex==-1 || omain.value=='' || osub.selectedIndex==-1){return;}
     
+    if (omain.value+' /// '+osub.value==local_storage_get_b('bible_bookmark')){
+        alert('书签已存在');
+        return;
+    }
+    
     if (confirm('是否更新 书签：'+kjv[omain.value]+' -> '+(osub.selectedIndex+1)+'？')){
         localStorage.setItem('bible_bookmark',omain.value+' /// '+osub.value);
         alert('书签已更新');

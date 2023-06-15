@@ -59,15 +59,15 @@ function search_link_money_b(csstr,cstype,csname=''){
 	var bljg='';
     var fn_name='search_wp';
 	switch (cstype){
-		case "登记日期":
+		case '登记日期':
 			var bltmp=fn_name+'(\"'+csstr+'(:'+cstype+')\");';
             bljg='<span class="span_underline_box" onclick=\''+bltmp+'\'>'+csstr+'</span>';
 			break;        
-		case "购置日期":
+		case '购置日期':
 			var bltmp=fn_name+'(\"='+csstr+'(:'+cstype+')\");';
             bljg='<span class="span_underline_box" onclick=\''+bltmp+'\'>'+csstr+'</span>';
 			break;
-		case "子类":
+		case '子类':
 			var blarr=csstr.split(',');
 			var bljg='';
 			var bltmp='';
@@ -78,14 +78,14 @@ function search_link_money_b(csstr,cstype,csname=''){
 				bljg=bljg+' <span class="span_underline_box" onclick=\''+bltmp+'\'>'+item+'</span>';
 			}
 			break;
-		case "出处":
-		case "分类+子类":
-		case "分类":
-			if (!csstr.includes(' ') && cstype=="分类+子类"){
+		case '出处':
+		case '分类+子类':
+		case '分类':
+			if (!csstr.includes(' ') && cstype=='分类+子类'){
 				var bltmp=fn_name+'(\"'+csstr+'(:分类) '+csstr+'(:子类)\");';
 				bljg='<span class="span_underline_box" onclick=\''+bltmp+'\'>'+csstr+'</span>';
 			}
-			else{
+			else {
 				var blarr=csstr.split(' ');
 				var bltmp=fn_name+'(\"';
 				for (let item of blarr){
@@ -95,7 +95,7 @@ function search_link_money_b(csstr,cstype,csname=''){
                     bltmp=bltmp.substring(0,bltmp.length-1);
                 }
 				bltmp=bltmp+'\");';
-				bljg='<span class="span_underline_box" onclick=\''+bltmp+'\'>'+csstr+'</span>';
+				bljg='<span class="span_underline_box span_'+(cstype=='出处'?'address':'class')+'_wp" onclick=\''+bltmp+'\'>'+csstr+'</span>';
 			}
 			break;
 	}
@@ -124,7 +124,7 @@ function list_tr_money_b(csarr,csxl,cssimple=false,csluru_php='wpluru.php',csnol
     }
     bljg=bljg+'</b>';
     if (csarr[2]=='失效物品'){
-        bljg=bljg+' <big><span style="color:'+scheme_global['a-hover']+'; font-weight:600;">✗</span></big>';
+        bljg=bljg+' <big><span style="color:'+scheme_global['a-hover']+'; font-weight:bold;">✗</span></big>';
     }
     bljg=bljg+'</p>';
 	
@@ -135,18 +135,26 @@ function list_tr_money_b(csarr,csxl,cssimple=false,csluru_php='wpluru.php',csnol
         bljg=bljg+' / '+csarr[5];
     }
     else {
-        bljg=bljg+search_link_money_b(csarr[2],"分类");
-	    bljg=bljg+search_link_money_b(csarr[3],"子类");
-        bljg=bljg+' / '+search_link_money_b(csarr[5],"出处");
+        bljg=bljg+search_link_money_b(csarr[2],'分类');
+	    bljg=bljg+search_link_money_b(csarr[3],'子类');
+        bljg=bljg+' / '+search_link_money_b(csarr[5],'出处');
     }
 
-	bljg=bljg+' / '+csarr[11].toFixed(3)+csarr[10]+' / '+csarr[12].toFixed(2);
+	bljg=bljg+' / <span class="span_amount_wp">'+csarr[11].toFixed(3)+'</span><span class="span_unit_wp">'+csarr[10]+'</span> / ';
+    bljg=bljg+'<span class="span_price_wp">'+csarr[12].toFixed(2)+'</span>';
 	bljg=bljg+' '+color_money_b(csarr);
     if (csarr[7]!=='忽略' || csarr[8]!=='忽略' || csarr[9]!=='忽略'){
-	    bljg=bljg+' <font class="font_bookkeeping_info_wp" color=#c0c0c0>/ 登记 '+csarr[7]+' '+csarr[8]+' '+csarr[9]+'</font>';
+	    bljg=bljg+' <font class="font_bookkeeping_info_wp" color=#c0c0c0>/ ';
+        if (csluru_php=='wpluru.php'){
+            bljg=bljg+'<span class="span_box span_template_wp" onclick="template_set_money_b(this);" title="发送当前记录到录入界面">登记</span> ';        
+        }
+        else {
+            bljg=bljg+'登记 ';
+        }
+        bljg=bljg+csarr[7]+' '+csarr[8]+' '+csarr[9]+'</font>';
     }
     bljg=bljg+'</td>';
-	bljg=bljg+'<td align=right nowrap width=6% style="font-size:1.45rem;font-weight:600;">'+csarr[13].toFixed(2)+'</td>';
+	bljg=bljg+'<td align=right nowrap width=6% style="font-size:1.45rem;font-weight:bold;" class="td_total_price_wp">'+csarr[13].toFixed(2)+'</td>';
 	
     bljg=bljg+'</tr>';
 	
@@ -154,6 +162,61 @@ function list_tr_money_b(csarr,csxl,cssimple=false,csluru_php='wpluru.php',csnol
         bljg=bljg+'<tr class="trcolor"><td colspan=3><p class=tb01>'+content_media_money_b(csarr[14])+'</td></tr>';
     }
 	return bljg;
+}
+
+function template_set_money_b(csspan){
+    var odiv=document.getElementById('jstj');
+    if (!odiv){return;}
+    var otrs=odiv.querySelectorAll('tr');
+    for (let one_tr of otrs){
+        var ospan=one_tr.querySelector('span.span_template_wp');
+        if (!ospan){continue;}
+        if (ospan==csspan){
+            var dom_list=['span.span_class_wp','p.p_wp_name','span.span_unit_wp','span.span_amount_wp','span.span_price_wp','td.td_total_price_wp','span.span_address_wp'];
+            var result_t=[];
+            for (let dom_str of dom_list){
+                var odom=one_tr.querySelector(dom_str);
+                if (!odom){
+                    result_t.push(dom_str+':');
+                }
+                else {
+                    result_t.push(dom_str+':'+odom.innerText);
+                }
+            }
+            localStorage.setItem('wp_template',result_t.join('\n'));
+            break;
+        }
+    }
+}
+
+function template_get_money_b(){
+    var list_t=local_storage_get_b('wp_template',-1,true);
+    var id_list=[    
+    'input_class',
+    'input_name',
+    'input_unit',
+    'input_amount',
+    'input_price',
+    'input_total_price',
+    'input_address',    
+    ];
+    if (list_t.length!==id_list.length){return;}
+    for (let blxl=0;blxl<list_t.length;blxl++){
+        var odom=document.querySelector('input[name="'+id_list[blxl]+'"');
+        if (!odom){
+            console.log('not found '+id_list[blxl]);
+            continue;
+        }
+        var blat=list_t[blxl].indexOf(':');
+        if (blat>=0){
+            list_t[blxl]=list_t[blxl].substring(blat+1,);
+        }
+        if (['input_amount','input_price','input_total_price'].includes(id_list[blxl])){
+            list_t[blxl]=parseFloat(list_t[blxl]);
+        }
+        odom.value=list_t[blxl];
+    }
+    localStorage.setItem('wp_template','');    
 }
 
 function date_row_money_b(purchase_date,csnolink){
