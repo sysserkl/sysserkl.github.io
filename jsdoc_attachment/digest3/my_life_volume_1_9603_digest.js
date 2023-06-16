@@ -1,0 +1,26 @@
+var digest_global=`
+*Absalom
+*Adolph
+*Camilla
+*Friedrich
+*Hegelian
+*Heine
+*Jeannette
+*Leipzig
+*Macbeth
+*Nuremberg
+*Robespierre
+*Shakespearean
+*Strauss
+*Wittgenstein
+*caviare
+*dishearten
+*half-yearly
+*homelike
+*housemate
+*menfolk
+*middleman
+*ninepence
+*professorship
+*vocalist
+`.trim().split('\n');

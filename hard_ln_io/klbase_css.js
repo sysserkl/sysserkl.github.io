@@ -2043,3 +2043,18 @@ function date_count_dots_b(cslist,cscolor='red',color_range=13,csstep=20,csunit=
     blstr=blstr+'<p style="line-height:'+line_height+';">'+color_legend_list.join(' ')+csunit+'</p>';
     return blstr;
 }
+
+function progress_b(cspercent,cscolor1='blue',cscolor2='white',cswidth=100,csheight=10,csalpha=0.5){
+    var ocanvas=document.createElement('canvas');    
+    ocanvas.width = cswidth;
+    ocanvas.height = csheight;
+
+    var ctx = ocanvas.getContext('2d');    
+    ctx.globalAlpha=csalpha;
+    
+    ctx.fillStyle=cscolor2;
+    ctx.fillRect(0,0,ocanvas.width,ocanvas.height);
+    ctx.fillStyle=cscolor1;
+    ctx.fillRect(0, 0, ocanvas.width*(cspercent/100), ocanvas.height);
+    return ocanvas.toDataURL('image/png');  //png 支持 alpha - 保留注释
+}

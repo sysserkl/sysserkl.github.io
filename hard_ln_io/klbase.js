@@ -2212,16 +2212,24 @@ function file_path_name_b(csfilename=''){
 
 function local_storage_2_array_b(idname,elements_count=-1,do_join_sort=false,join_list_as_id=false){
     //支持以---分隔的行 - 保留注释
-    var items=('\n'+local_storage_get_b(idname,-1,false)).split('\n---\n');
+    if (typeof idname == 'string'){
+        var items=('\n'+local_storage_get_b(idname,-1,false)).split('\n---\n');
+    }
+    else if (Array.isArray(idname)){
+        var items=idname;
+    }
+    else {
+        return [false,'type error'];
+    }
+    
     var ids=new Set();
     var result_t=[];
     
     for (let one_item of items){
         var list_t=one_item.trim().split('\n');
         var bllen=list_t.length;
-        if (elements_count>0 && bllen<elements_count){
-            continue;
-        }
+        if (elements_count>0 && bllen<elements_count){continue;}
+        
         if (join_list_as_id===false){
             if (ids.has(list_t[0])){
                 return [false,list_t[0]];

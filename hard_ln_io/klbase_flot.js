@@ -521,7 +521,7 @@ function statistics_idlist_format_b(idlist){
         }
         if (bllen<6){
             if (is_arr){
-                item.push('unnamed');;
+                item.push('unnamed');
             }
             else {
                 item.push(item[0]);
@@ -574,7 +574,9 @@ function statistics_draw_b(data_type,idname='divhtml',show_table=false,date_min=
         var idlist=statistics_data_type_b(data_type);
     }
     idlist=statistics_idlist_format_b(idlist);
-    
+    //idlist 元素形如：[ [ "2021-07-04/543/100640", "2021-07-11/555/100954", … ], "全部代码文件个数", 0, "/", 1, "old_code_count" ] - 保留注释
+    //或形如：[ "local_storage_used_length", "local storage 使用量(KiB)", 2, ":", 1, "local_storage_used_length" ] - 保留注释
+
     if (show_table){
         for (let blxl=0;blxl<idlist.length;blxl++){
             var item=idlist[blxl];
@@ -582,7 +584,7 @@ function statistics_draw_b(data_type,idname='divhtml',show_table=false,date_min=
             if (ismobile){
                 bljg=bljg+'<section style="width:'+section_w+';overflow:auto;">';
             }
-            bljg=bljg+'<table width='+table_w+'><tr><td valign=top width=1 height=50%>'+str_t+'</td><td valign=top width=99%><div style="width:100%;height:'+div_h+';" id="'+statistics_div_idname_b(item,blxl)+'"></div></td></tr></table>';//table 的 width 可以大于 100% - 保留注释
+            bljg=bljg+'<table width='+table_w+'><tr><td valign=top width=1 height=50%>'+str_t+'</td><td valign=top width=99%><div style="width:100%;height:'+div_h+';" id="'+statistics_div_idname_b(item,blxl)+'" class="div_statistics_plot_b"></div></td></tr></table>';//table 的 width 可以大于 100% - 保留注释
             if (ismobile){
                 bljg=bljg+'</section>';
             }
@@ -593,7 +595,7 @@ function statistics_draw_b(data_type,idname='divhtml',show_table=false,date_min=
         for (let blxl=0;blxl<idlist.length;blxl++){
             var item=idlist[blxl];
             [str_t,oneline_list]=sub_statistics_draw_b_oneline(item);
-            bljg=bljg+'<div style="position:relative;float:left; width:'+blwidth+'px;height:'+blheight+'px;" id="'+statistics_div_idname_b(item,blxl)+'"></div>';
+            bljg=bljg+'<div style="position:relative;float:left; width:'+blwidth+'px;height:'+blheight+'px;" id="'+statistics_div_idname_b(item,blxl)+'" class="div_statistics_plot_b"></div>';
             lines_list.push(oneline_list);
         }
     }
@@ -604,4 +606,5 @@ function statistics_draw_b(data_type,idname='divhtml',show_table=false,date_min=
         flot_lines_b([lines_list[blxl]],statistics_div_idname_b(item,blxl),'nw',true,'','d','',item[2],[1, 'day'],7);
     }
     console.log('statistics_draw_b() 费时：'+(performance.now() - t0) + ' milliseconds');    
+    return idlist;
 }

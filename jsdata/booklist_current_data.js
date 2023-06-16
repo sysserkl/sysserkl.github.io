@@ -1,4 +1,6 @@
 var csbooklist_source_global=[
+["alice_s_adventures_in_wonderland_3038", "Alice's Adventures in Wonderland(Lewis Carroll)","已整理,englishwords","3",""],
+["my_life_volume_1_9603", "My Life — Volume 1(Richard Wagner)","已整理,englishwords","3",""],
 ["history_of_tom_jones_a_f_3017", "History of Tom Jones, a Foundling(Henry Fielding)","已整理,englishwords","3",""],
 ["the_adventures_of_roderick_random_3115", "The Adventures of Roderick Random(T. Smollett)","已整理,englishwords","3",""],
 ["cranfordelizabeth_cleghorn_gaskell_815", "Cranford(Elizabeth Cleghorn Gaskell)","已整理,englishwords","3",""],

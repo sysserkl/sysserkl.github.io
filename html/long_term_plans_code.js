@@ -1,6 +1,9 @@
-function show_type_lt_plans(cstype=''){
+function show_type_lt_plans(cstype='',re_init=false){
     if (cstype!==''){
         localStorage.setItem('showtype_long_term_plans',cstype);
+        if (re_init){
+            init_lt_plans();
+        }        
     }
     var blstr=local_storage_get_b('showtype_long_term_plans');
     return (blstr==''?'normal':blstr);
@@ -12,30 +15,31 @@ function menu_lt_plans(){
     if (blsymbol==''){
         blsymbol=symbol_manage_lt_plans('default');
     }
+    
+    var show_type=show_type_lt_plans();
+    var option_list=['normal','simple','checklist','percent'];
+    for (let blxl=0;blxl<option_list.length;blxl++){
+        option_list[blxl]='<option'+(show_type==option_list[blxl]?' selected':'')+'>'+option_list[blxl]+'</option>';
+    }
+    
     var klmenu1=[
     '<span class="span_menu" onclick="'+str_t+'search_lt_plans();">search</span>',   
     '<span id="span_reg_lt_plan" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ reg</span>',    
     '<span class="span_menu" onclick="'+str_t+'blank_lt_plans();">new plan</span>', 
     '<span class="span_menu" onclick="'+str_t+'backup_lt_plans();">edit/import/export</span>', 
-    '<span id="span_symbol_lt_plans" class="span_menu" onclick="'+str_t+'symbol_manage_lt_plans();">Symbol: '+blsymbol+'</span>',    
+    '<span id="span_symbol_lt_plans" class="span_menu" onclick="'+str_t+'symbol_manage_lt_plans();">Symbol: '+blsymbol+'</span>',   
+    '<span class="span_menu">show type: <select id="select_show_type_lt_plans" onchange="'+klmenu_hide_b('',true)+'show_type_lt_plans(this.value,true);"><option></option>'+option_list.join('')+'</select></span>',        
     ];
-    
-    var format_list=[
-    ['normal','show_type_lt_plans(\'normal\');init_lt_plans();',true],
-    ['simple','show_type_lt_plans(\'simple\');init_lt_plans();',true],
-    ['checklist','show_type_lt_plans(\'checklist\');init_lt_plans();',true],
-    ];    
-    klmenu1.push(menu_container_b(str_t,format_list,'show type: '));
-    
+        
     var klmenu_sort=[
-        '<span class="span_menu" onclick="'+str_t+'ltp_sort_type_global=\'1a\';init_lt_plans();">sort by name</span>',     
-        '<span class="span_menu" onclick="'+str_t+'ltp_sort_type_global=\'1\';init_lt_plans();">sor by name desc</span>',     
-        '<span class="span_menu" onclick="'+str_t+'ltp_sort_type_global=\'2a\';init_lt_plans();">sort by start date</span>',     
-        '<span class="span_menu" onclick="'+str_t+'ltp_sort_type_global=\'2\';init_lt_plans();">sort by start date desc</span>',     
-        '<span class="span_menu" onclick="'+str_t+'ltp_sort_type_global=\'4a\';init_lt_plans();">sort by end date</span>',     
-        '<span class="span_menu" onclick="'+str_t+'ltp_sort_type_global=\'4\';init_lt_plans();">sort by end date desc</span>',         
-        '<span class="span_menu" onclick="'+str_t+'ltp_sort_type_global=\'-1a\';init_lt_plans();">sort by percent</span>',
-        '<span class="span_menu" onclick="'+str_t+'ltp_sort_type_global=\'-1\';init_lt_plans();">sort by percent desc</span>',
+    '<span class="span_menu" onclick="'+str_t+'ltp_sort_type_global=\'1a\';init_lt_plans();">sort by name</span>',     
+    '<span class="span_menu" onclick="'+str_t+'ltp_sort_type_global=\'1\';init_lt_plans();">sor by name desc</span>',     
+    '<span class="span_menu" onclick="'+str_t+'ltp_sort_type_global=\'2a\';init_lt_plans();">sort by start date</span>',     
+    '<span class="span_menu" onclick="'+str_t+'ltp_sort_type_global=\'2\';init_lt_plans();">sort by start date desc</span>',     
+    '<span class="span_menu" onclick="'+str_t+'ltp_sort_type_global=\'4a\';init_lt_plans();">sort by end date</span>',     
+    '<span class="span_menu" onclick="'+str_t+'ltp_sort_type_global=\'4\';init_lt_plans();">sort by end date desc</span>',         
+    '<span class="span_menu" onclick="'+str_t+'ltp_sort_type_global=\'-1a\';init_lt_plans();">sort by percent</span>',
+    '<span class="span_menu" onclick="'+str_t+'ltp_sort_type_global=\'-1\';init_lt_plans();">sort by percent desc</span>',
     ];
     
     var klmenu_config=[
@@ -51,9 +55,8 @@ function menu_lt_plans(){
 
 function search_lt_plans(){
     var blstr=(prompt('输入搜索关键字：',recent_search_key_lt_plan_global) || '').trim();
-    if (blstr==''){
-        return;
-    }
+    if (blstr==''){return;}
+    
     recent_search_key_lt_plan_global=blstr;
     init_lt_plans(blstr);
 }
@@ -99,6 +102,14 @@ function update_lt_plans(){
     var otextarea_item=document.getElementById('textarea_backup_ltp');
     if (!otextarea_item){return;}
     var blitems=otextarea_item.value.trim();
+    
+    var is_ok,result_t;
+    [is_ok,result_t]=local_storage_2_array_b(('\n'+blitems).split('\n---\n'),7,false);
+    if (is_ok===false){
+        alert('出错了，未更改，发现重复key: '+result_t);
+        return;
+    }
+    
     if (confirm('是否更新数据？')){
         localStorage.setItem('list_long_term_plans',blitems);
         init_lt_plans();
@@ -115,7 +126,7 @@ function local_storage_2_array_lt_plans(do_join_sort=false){
     [is_ok,result_t]=local_storage_2_array_b('list_long_term_plans',7,do_join_sort);
     if (is_ok === false){
         alert('发现重复key: '+result_t+'，未更新');
-        return;
+        return false;
     }
     
     for (let blxl=0;blxl<result_t.length;blxl++){
@@ -127,6 +138,7 @@ function local_storage_2_array_lt_plans(do_join_sort=false){
 
     sort_lt_plans();
     array_2_local_storage_lt_plans();
+    return true;
 }
 
 function sort_lt_plans(){
@@ -150,8 +162,9 @@ function sort_lt_plans(){
 
 function backup_lt_plans(){
     ltp_sort_type_global='';
-    local_storage_2_array_lt_plans(true);
-    init_lt_plans('',false);
+    if (local_storage_2_array_lt_plans(true)){
+        init_lt_plans('',false);
+    }
     
     var items=local_storage_get_b('list_long_term_plans',-1,false);
     var postpath=postpath_b();
@@ -249,22 +262,28 @@ function draw_lt_plans(csno,do_jump=false){
     var blposition=Math.min(all_days,Math.max(0,parseInt(blpercent*all_days)));
     
     var show_type=show_type_lt_plans();
+    var is_normal_or_simple=['normal','simple'].includes(show_type);
     
     var bljg='<tr><td>';
+    bljg=bljg+'<b>'+(csno+1<10?'0':'')+(csno+1)+'.</b>';
     
-    bljg=bljg+'<b>'+(csno+1)+'.<span style="cursor:pointer;" onclick="change_lt_plans(\''+csitem[0]+'\',1);">'+csitem[1]+'</span></b> ';
-    if (show_type!=='checklist'){
+    if (show_type=='percent'){
+        bljg=bljg+' <img src="'+progress_b(blpercent*100)+'" style="border:0.1rem '+scheme_global['color']+' solid;" /> ';
+    }   
+     
+    bljg=bljg+'<b><span class="span_box" onclick="change_lt_plans(\''+csitem[0]+'\',1);">'+csitem[1]+'</span></b> ';
+    if (is_normal_or_simple){
         bljg=bljg+'<small>[';
-        bljg=bljg+'<span style="cursor:pointer;" onclick="change_lt_plans(\''+csitem[0]+'\',3);">初值: '+csitem[3]+'; '+'</span>';    
-        bljg=bljg+'<span style="cursor:pointer;" onclick="change_lt_plans(\''+csitem[0]+'\',5);">终值: '+csitem[5]+'; '+'</span>';    
-        bljg=bljg+'<span style="cursor:pointer;" onclick="change_lt_plans(\''+csitem[0]+'\',6);">进度: '+csitem[6]+', '+(blpercent*100).toFixed(2)+'%</span>';
+        bljg=bljg+'<span class="span_box" onclick="change_lt_plans(\''+csitem[0]+'\',3);">初值: '+csitem[3]+'; '+'</span>';    
+        bljg=bljg+'<span class="span_box" onclick="change_lt_plans(\''+csitem[0]+'\',5);">终值: '+csitem[5]+'; '+'</span>';    
+        bljg=bljg+'<span class="span_box" onclick="change_lt_plans(\''+csitem[0]+'\',6);">进度: '+csitem[6]+', '+(blpercent*100).toFixed(2)+'%</span>';
         bljg=bljg+']</small>';
         
         bljg=bljg+'</td></tr>';
         
         bljg=bljg+'<tr><td style="font-size:0.72rem;line-height:120%;padding:0.1rem;overflow-wrap: anywhere;">';
 
-        bljg=bljg+'<span style="cursor:pointer;" onclick="change_lt_plans(\''+csitem[0]+'\',2);">'+csitem[2]+'</span> ';
+        bljg=bljg+'<span class="span_box" onclick="change_lt_plans(\''+csitem[0]+'\',2);">'+csitem[2]+'</span> ';
 
         var symbol_list=symbol_manage_lt_plans('get');
         //------------------
@@ -300,8 +319,16 @@ function draw_lt_plans(csno,do_jump=false){
         //------------------
     }
     
-    bljg=bljg+'<span style="cursor:pointer;" onclick="change_lt_plans(\''+csitem[0]+'\',4);">'+(show_type!=='checklist'?'<small>'+csitem[4]+'</small>':csitem[4])+'</span>';
-    if (show_type!=='checklist'){
+    if (show_type=='percent'){
+        bljg=bljg+'<span class="span_box" onclick="change_lt_plans(\''+csitem[0]+'\',6);">'+csitem[6]+' '+(blpercent*100).toFixed(2)+'%</span>';
+    }
+    else {
+        bljg=bljg+'<span class="span_box" onclick="change_lt_plans(\''+csitem[0]+'\',4);">';
+        bljg=bljg+(is_normal_or_simple?'<small>'+csitem[4]+'</small>':csitem[4]);
+        bljg=bljg+'</span>';
+    }
+    
+    if (is_normal_or_simple){
         bljg=bljg+' ('+all_days+'天)';
     }
     bljg=bljg+'</td></tr>';
@@ -326,7 +353,7 @@ function draw_lt_plans(csno,do_jump=false){
 
 function init_lt_plans(cskey='',reload=true){
     if (reload){
-        local_storage_2_array_lt_plans();
+        if (local_storage_2_array_lt_plans()===false){return;}
     }
     document.getElementById('divhtml').innerHTML='';
 
@@ -350,9 +377,7 @@ function init_lt_plans(cskey='',reload=true){
         for (let blxl=0;blxl<long_term_plans_global.length;blxl++){
             var item=long_term_plans_global[blxl][1];   //项目名称 - 保留注释
             blfound=str_reg_search_b(item,cskey,isreg);
-            if (blfound==-1){
-                break;
-            }
+            if (blfound==-1){break;}
             if (blfound){
                 draw_lt_plans(blxl);
             }
@@ -375,9 +400,7 @@ function change_lt_plans(csid,csnumber){
         var item=long_term_plans_global[blxl];
         if (item[0]==csid){
             if (csnumber!==list_t.length-1){
-                if (confirm(list_t[csnumber]+'：'+item[csnumber]+"\n是否修改？")==false){
-                    break;
-                }
+                if (confirm(list_t[csnumber]+'：'+item[csnumber]+"\n是否修改？")==false){break;}
             }
             if (csnumber==1){
                 var currentvalue=(prompt('输入'+list_t[1]+'，若删除则输入【删除】或【delete】',item[csnumber]) || '').trim();

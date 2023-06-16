@@ -30,5 +30,18 @@ function category_progress(csname){
     date_max=(date_max==''?false:date_max);
     max_lines=(max_lines==''?false:max_lines);
 
-    statistics_draw_b(csname,'divhtml',show_table,date_min,date_max,max_lines,2,'810px','100%','500px',true);
+    var result_t=statistics_draw_b(csname,'divhtml',show_table,date_min,date_max,max_lines,2,'810px','100%','500px',true);
+    for (let blxl=0;blxl<result_t.length;blxl++){
+        result_t[blxl]='<span class="oblong_box" onclick="jump_to_item_progress('+blxl+');">'+result_t[blxl][1]+'</span>'
+    }
+    var op=document.getElementById('p_bookmark_progress');
+    op.innerHTML=result_t.join(' ');
+    mouseover_mouseout_oblong_span_b(op.querySelectorAll('span.oblong_box'));    
+}
+
+function jump_to_item_progress(csno){
+    var odivs=document.querySelectorAll('div.div_statistics_plot_b');
+    if (csno>=0 && csno<=odivs.length-1){
+        odivs[csno].scrollIntoView();
+    }
 }
