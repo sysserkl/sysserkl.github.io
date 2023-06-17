@@ -22,4 +22,6 @@ var digest_global=`
 *surveyor
 *watchtower
 *withstood
+*amidships
+*uncouple
 `.trim().split('\n');

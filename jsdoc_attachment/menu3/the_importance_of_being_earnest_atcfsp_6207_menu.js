@@ -1,0 +1,15 @@
+var menulist=[
+"== The Project Gutenberg eBook of The Importance of Being Earnest: A Trivial Comedy for Serious People ==",
+"= The Importance of Being Earnest =",
+"=== A Trivial Comedy for Serious People ===",
+"== THE PERSONS IN THE PLAY ==",
+"== THE SCENES OF THE PLAY ==",
+"== LONDON: ST. JAMES’S THEATRE ==",
+"== FIRST ACT ==",
+"=== SCENE ===",
+"== SECOND ACT ==",
+"=== SCENE ===",
+"== THIRD ACT ==",
+"=== SCENE ===",
+"== THE FULL PROJECT GUTENBERG LICENSE ==",
+];

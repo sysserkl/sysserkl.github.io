@@ -290,7 +290,7 @@ function show_sentence_enwc_b(maxlines=0,showcount=true,is_random=false,show_but
         var odiv=document.querySelector('div.div_word_sentence_rank');
         if (!odiv){return;}
         word_sentence_rank=object2array_b(word_sentence_rank,false,2);
-        var rank_dict={'0':[],'1':[],'2':[],'more':[]};
+        var rank_dict={'0':[],'1':[],'2':[],'3':[],'4':[],'5':[],'more':[]};
         for (let item of word_sentence_rank){
             if (rank_dict[item[0]]==undefined){
                 rank_dict['more']=rank_dict['more'].concat(item[1]);

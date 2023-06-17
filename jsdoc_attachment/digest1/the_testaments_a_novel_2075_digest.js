@@ -57,4 +57,5 @@ var digest_global=`
 *wholesaler
 *yellowy
 *yesteryear
+*computerize
 `.trim().split('\n');

@@ -1,6 +1,10 @@
 var csbooklist_source_global=[
-["alice_s_adventures_in_wonderland_3038", "Alice's Adventures in Wonderland(Lewis Carroll)","已整理,englishwords","3",""],
+["the_picture_of_dorian_gray_2370", "The Picture of Dorian Gray(Oscar Wilde)","已整理,englishwords","3",""],
+["a_tale_of_two_cities_1719", "A Tale of Two Cities(Charles Dickens)","已整理,englishwords","3",""],
+["draculabram_stoker_700", "Dracula(Bram Stoker)","已整理,englishwords","3",""],
+["the_importance_of_being_earnest_atcfsp_6207", "The Importance of Being Earnest- A Trivial Comedy for Serious People(Oscar Wilde)","已整理,englishwords","3",""],
 ["my_life_volume_1_9603", "My Life — Volume 1(Richard Wagner)","已整理,englishwords","3",""],
+["alice_s_adventures_in_wonderland_3038", "Alice's Adventures in Wonderland(Lewis Carroll)","已整理,englishwords","3",""],
 ["history_of_tom_jones_a_f_3017", "History of Tom Jones, a Foundling(Henry Fielding)","已整理,englishwords","3",""],
 ["the_adventures_of_roderick_random_3115", "The Adventures of Roderick Random(T. Smollett)","已整理,englishwords","3",""],
 ["cranfordelizabeth_cleghorn_gaskell_815", "Cranford(Elizabeth Cleghorn Gaskell)","已整理,englishwords","3",""],

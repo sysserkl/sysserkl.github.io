@@ -41,4 +41,8 @@ var digest_global=`
 *warthog
 *washroom
 *loudspeaker
+*Canberra
+*meatless
+*Paine
+*Everest
 `.trim().split('\n');

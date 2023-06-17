@@ -4,4 +4,5 @@ var digest_global=`
 *cheesemonger
 *notification
 *saleswoman
+*hundredweight
 `.trim().split('\n');

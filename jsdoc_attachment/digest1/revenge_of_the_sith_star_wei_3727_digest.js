@@ -26,4 +26,5 @@ var digest_global=`
 *stepbrother
 *stylist
 *win-win
+*jaw-dropping
 `.trim().split('\n');

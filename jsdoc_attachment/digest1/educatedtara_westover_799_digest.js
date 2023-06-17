@@ -48,4 +48,7 @@ var digest_global=`
 *understaffed
 *utility pole
 *witchcraft
+*undefeated
+*Michele
+*VCR
 `.trim().split('\n');

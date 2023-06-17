@@ -70,4 +70,5 @@ var digest_global=`
 *opt
 *Uganda
 *Yorkshire
+*colonoscopy
 `.trim().split('\n');

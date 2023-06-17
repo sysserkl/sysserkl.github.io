@@ -570,7 +570,7 @@ function fullmenu_filter_kltxt_b(csstr){
 function menu_insert_kltxt_b(menu_count=3){
     var ohr=document.querySelector('hr.hr_inserted_menu');
     if (ohr){return;}
-    
+
     var menu_no=[];
     for (let item of kltxt_menulist_index_global){
         menu_no.push(item[0]);
@@ -597,6 +597,7 @@ function menu_insert_kltxt_b(menu_count=3){
             menu_list=[];
             continue;
         }
+        
         for (let item of menu_no){
             if (item<=pre_no){continue;}
             if (item>lineno){
@@ -607,7 +608,18 @@ function menu_insert_kltxt_b(menu_count=3){
                 menu_list=[];
                 break;
             }
-            menu_list.push('<hr class="hr_inserted_menu" /><span style="font-weight:bold;font-size:1.5rem;">'+filelist[item]+'</span> <span style="cursor:pointer;font-style: italic;color:'+scheme_global["shadow"]+';" onclick="getlines_kltxt_b('+(item+1)+');">('+(item+1)+')</span>'+'<hr class="hr_inserted_menu" />');
+            
+            if (filelist[item].substring(0,7)=='<title>' && filelist[item].slice(-8,)=='</title>'){
+                var title_name=filelist[item].slice(7,-8);
+            }
+            else {
+                var title_name=filelist[item];
+            }
+            var bljg='<hr class="hr_inserted_menu" />';
+            bljg=bljg+'<span style="font-weight:bold;font-size:1.5rem;">'+title_name+'</span> ';
+            bljg=bljg+'<span style="cursor:pointer;font-style: italic;color:'+scheme_global['shadow']+';" onclick="getlines_kltxt_b('+(item+1)+');">('+(item+1)+')</span>';
+            bljg=bljg+'<hr class="hr_inserted_menu" />'
+            menu_list.push(bljg);
             pre_no=item;
         }
     }
