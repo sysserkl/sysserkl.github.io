@@ -36,4 +36,8 @@ var digest_global=`
 *tearoom
 *unpatriotic
 *Wesley
+*Bismarck
+*Londoner
+*bedsheet
+*overlord
 `.trim().split('\n');

@@ -6,4 +6,6 @@ var digest_global=`
 *life-size
 *architectural
 *cookery
+*Gaia
+*dewdrop
 `.trim().split('\n');

@@ -13,11 +13,7 @@ function ismobile_b(getstr=false,check_arm=false){
 }
 
 function is_file_type_b(){
-    var blhref=location.href;
-    if (blhref.substring(0,5)=='file:'){
-        return true;
-    }
-    return false;
+    return location.href.substring(0,5)=='file:';
 }
 
 function is_local_b(check_is_file=true){
@@ -1613,7 +1609,7 @@ function textarea_buttons_b(textarea_id,csbuttons,cstype='',csstyle='',span_clas
         }
         else {
             var web_type=(is_file_type_b()?'local':location.host);
-            var savename=cstype+'_'+(navigator.platform || '').replace(new RegExp(/\s/,'g'),'_')+'_'+web_type+'_'+today_str_b('dt','','','_')+'.'+fext[1];
+            var savename=cstype+'_'+(navigator.platform || '').replace(/\s/g,'_')+'_'+web_type+'_'+today_str_b('dt','','','_')+'.'+fext[1];
         }
         bljg=bljg+'<span class="'+span_class+'"'+csstyle+' onclick="dom_value_2_txt_file_b(\''+textarea_id+'\',\''+specialstr_j(savename)+'\',\''+specialstr_j(fext[1])+'\');">'+fext[0]+'</span> ';
     }    
@@ -2210,7 +2206,7 @@ function file_path_name_b(csfilename=''){
     return [blpath, basename, blext, fullname];
 }
 
-function local_storage_2_array_b(idname,elements_count=-1,do_join_sort=false,join_list_as_id=false){
+function local_storage_2_array_b(idname,elements_count=-1,do_join_sort=false,join_list_as_id=false,filter_str=''){
     //支持以---分隔的行 - 保留注释
     if (typeof idname == 'string'){
         var items=('\n'+local_storage_get_b(idname,-1,false)).split('\n---\n');
@@ -2224,6 +2220,9 @@ function local_storage_2_array_b(idname,elements_count=-1,do_join_sort=false,joi
     
     var ids=new Set();
     var result_t=[];
+    
+    var is_reg=false;
+    [filter_str,is_reg]=str_reg_check_b(filter_str);
     
     for (let one_item of items){
         var list_t=one_item.trim().split('\n');
@@ -2241,6 +2240,14 @@ function local_storage_2_array_b(idname,elements_count=-1,do_join_sort=false,joi
                 return [false,list_t.join(join_list_as_id)];
             }
             ids.add(list_t.join(join_list_as_id));                
+        }
+        
+        if (filter_str!==''){
+            var blfound=str_reg_search_b(list_t,filter_str,is_reg);
+            if (blfound===-1){
+                return [false,'reg error'];
+            }
+            if (!blfound){continue;}
         }
         result_t.push(list_t);
     }
@@ -3019,4 +3026,12 @@ function split_table_by_rows_or_cols_b(otrs,cscount,cstype='rows',rect_table=fal
         odiv_split.setAttribute('ondblclick',"this.outerHTML='';");
     }
     return split_list;    
+}
+
+function percent_calculation_b(starting_value,final_value,current_value){
+    var blcount=final_value-starting_value;
+    if (blcount==0){return false;}
+    var blcurrent=current_value-starting_value;
+
+    return Math.abs(blcurrent/blcount);
 }

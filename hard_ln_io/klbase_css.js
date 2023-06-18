@@ -2058,3 +2058,19 @@ function progress_b(cspercent,cscolor1='blue',cscolor2='white',cswidth=100,cshei
     ctx.fillRect(0, 0, ocanvas.width*(cspercent/100), ocanvas.height);
     return ocanvas.toDataURL('image/png');  //png 支持 alpha - 保留注释
 }
+
+function ltp_status_get_b(cskey,cscolor1='blue',cscolor2='white',cswidth=100,csheight=10,csalpha=0.5){
+    var error,list_t;
+    [error,list_t]=local_storage_2_array_b('list_long_term_plans',7,false,false,cskey);
+    if (error===false){
+        console.log(list_t);
+        return [];
+    }
+    var result_t=[];
+    for (let arow of list_t){
+        var blpercent=100*percent_calculation_b(parseFloat(arow[3]),parseFloat(arow[5]),parseFloat(arow[6]));
+        var blbase64=progress_b(blpercent,cscolor1,cscolor2,cswidth,csheight,csalpha);
+        result_t.push('<img src="'+blbase64+'" title="'+specialstr_j(arow[1])+'" style="border:0.1rem '+scheme_global['color']+' solid;" /> '+arow[1]+' <b>'+blpercent.toFixed(2)+'%</b>');
+    }
+    return result_t;
+}

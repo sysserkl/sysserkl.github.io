@@ -89,4 +89,9 @@ var digest_global=`
 *Big Ben
 *cranberry
 *effortful
+*Attica
+*Pulitzer
+*Stewart
+*headlamp
+*motherfucker
 `.trim().split('\n');

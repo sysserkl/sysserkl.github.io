@@ -111,19 +111,19 @@ function update_lt_plans(){
     }
     
     if (confirm('是否更新数据？')){
-        localStorage.setItem('list_long_term_plans',blitems);
+        localStorage.setItem(ltp_ls_name_global,blitems);
         init_lt_plans();
     }
 }
 
 function array_2_local_storage_lt_plans(){
-    array_2_local_storage_b('list_long_term_plans',long_term_plans_global);
+    array_2_local_storage_b(ltp_ls_name_global,long_term_plans_global);
 }
 
 function local_storage_2_array_lt_plans(do_join_sort=false){   
     var is_ok;
     var result_t;
-    [is_ok,result_t]=local_storage_2_array_b('list_long_term_plans',7,do_join_sort);
+    [is_ok,result_t]=local_storage_2_array_b(ltp_ls_name_global,7,do_join_sort);
     if (is_ok === false){
         alert('发现重复key: '+result_t+'，未更新');
         return false;
@@ -166,12 +166,12 @@ function backup_lt_plans(){
         init_lt_plans('',false);
     }
     
-    var items=local_storage_get_b('list_long_term_plans',-1,false);
+    var items=local_storage_get_b(ltp_ls_name_global,-1,false);
     var postpath=postpath_b();
     var bljg='<div id="div_backup" style="width:90%;margin:0.5rem;">';
     bljg=bljg+'<div id=div_help></div>'
     bljg=bljg+'<p><b>Items:</b></p>';
-    bljg=bljg+'<form method="POST" action="'+postpath+'temp_txt_share.php?type=list_long_term_plans" target=_blank>\n';
+    bljg=bljg+'<form method="POST" action="'+postpath+'temp_txt_share.php?type='+ltp_ls_name_global+'" target=_blank>\n';
     bljg=bljg+'<textarea id="textarea_backup_ltp" name="textarea_backup_ltp" style="width:100%;height:10rem;">'+items+'</textarea>';
     bljg=bljg+'<p align=right>';
     bljg=bljg+close_button_b('div_backup','none')+' ';
@@ -179,7 +179,7 @@ function backup_lt_plans(){
     bljg=bljg+'<span class="aclick" onclick="help_lt_plans();">Help</span> ';
 
     bljg=bljg+'<span class="aclick" onclick="update_lt_plans();">Update</span> ';   
-    bljg=bljg+textarea_buttons_b('textarea_backup_ltp','清空,复制,发送到临时记事本,发送地址','list_long_term_plans')+' ';
+    bljg=bljg+textarea_buttons_b('textarea_backup_ltp','清空,复制,发送到临时记事本,发送地址',ltp_ls_name_global)+' ';
     bljg=bljg+'</p>';
     bljg=bljg+'</form>';
     bljg=bljg+'</div>';
@@ -218,12 +218,8 @@ function help_lt_plans(){
     document.getElementById('div_help').innerHTML=bljg.split('\n').join('<br />');
 }
 
-function percent_lt_plans(csitem){
-    var blcount=csitem[5]-csitem[3];
-    if (blcount==0){return false;}
-    var blcurrent=parseFloat(csitem[6])-csitem[3];
-
-    return Math.abs(blcurrent/blcount);
+function percent_lt_plans(csitem){   
+    return percent_calculation_b(csitem[3],csitem[5],parseFloat(csitem[6]));
 }
 
 function draw_lt_plans(csno,do_jump=false){

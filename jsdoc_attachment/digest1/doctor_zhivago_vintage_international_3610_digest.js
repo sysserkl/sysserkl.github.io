@@ -104,4 +104,6 @@ var digest_global=`
 *Romanov
 *kinfolk
 *Sisyphean
+*Marxist
+*eyehole
 `.trim().split('\n');

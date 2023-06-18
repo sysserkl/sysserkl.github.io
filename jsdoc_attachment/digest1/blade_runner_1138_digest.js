@@ -18,4 +18,5 @@ var digest_global=`
 *switchboard
 *whey
 *irrationality
+*Strauss
 `.trim().split('\n');

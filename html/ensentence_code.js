@@ -230,7 +230,10 @@ function rare_old_words_ensentence(show_sentence=true,max_count=2,rows_min=10,ro
             words_searched_arr_global.sort();
             
             var bltextarea=sub_rare_old_words_ensentence_form();
-            document.getElementById('divhtml').innerHTML=enwords_array_to_html_b(words_searched_arr_global,false)+bltextarea;
+            
+            var progress_list=ltp_status_get_b('+例句 +单词','green','white',100);
+
+            document.getElementById('divhtml').innerHTML='<p>'+progress_list.join(' ')+'</p>'+enwords_array_to_html_b(words_searched_arr_global,false)+bltextarea;
             
             var local_id=(max_count>1?'enwords_rare_ensentence':'enwords_non_ensentence');
             local_storage_today_b(local_id,40,words_searched_arr_global.length,'/');

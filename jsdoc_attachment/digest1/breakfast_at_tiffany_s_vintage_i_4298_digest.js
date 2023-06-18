@@ -30,4 +30,5 @@ var digest_global=`
 *Monroe
 *Marilyn
 *cleaning lady
+*biographer
 `.trim().split('\n');
