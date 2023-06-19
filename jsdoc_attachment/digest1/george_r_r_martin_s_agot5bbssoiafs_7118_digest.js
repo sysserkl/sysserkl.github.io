@@ -128,7 +128,6 @@ var digest_global=`
 *flipper
 *humid
 *snowman
-*uncoil
 *murderess
 *stewpot
 *undermanned

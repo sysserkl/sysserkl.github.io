@@ -283,6 +283,9 @@ function compare_form_statistics_enwords_book(){
 }
 
 function import_enwords_book(cstype,csmax=-1){
+    var ospan=document.getElementById('span_progress_enbook');
+    ospan.innerHTML='';
+    var otextarea=document.getElementById('textarea_new_words1');
     switch (cstype){
         case 'new':
             if (csmax>0){
@@ -291,10 +294,10 @@ function import_enwords_book(cstype,csmax=-1){
                 for (let blxl=0;blxl<bltotal_t;blxl++){
                     words_t.sort(randomsort_b);
                 }
-                document.getElementById('textarea_new_words1').value=words_t.slice(0,csmax).join(' ');
+                otextarea.value=words_t.slice(0,csmax).join(' ');
             }
             else {
-                document.getElementById('textarea_new_words1').value=all_new_words_global.join(' ');            
+                otextarea.value=all_new_words_global.join(' ');            
             }
             break;    
         case 'old':
@@ -308,7 +311,7 @@ function import_enwords_book(cstype,csmax=-1){
                 result_t.sort(randomsort_b);
                 result_t=result_t.slice(0,csmax);
             }
-            document.getElementById('textarea_new_words1').value=result_t.join('\n');
+            otextarea.value=result_t.join('\n');
             break;
         case 'sentence':
             var list_t=array_numbers_b(Math.min(csmax,en_sentence_global.length),Math.floor((Math.random()*10)+1));
@@ -317,17 +320,19 @@ function import_enwords_book(cstype,csmax=-1){
             for (let item of list_t){
                 result_t.push(en_sentence_global[item]);
             }
-            document.getElementById('textarea_new_words1').value=result_t.join('\n\n');
+            otextarea.value=result_t.join('\n\n');
             break;
         case 'senior_high_school':
-            document.getElementById('textarea_new_words1').value=senior_high_school_en_global.join('\n');        
+            otextarea.value=senior_high_school_en_global.join('\n');        
             break;
         case 'cet6':
-            document.getElementById('textarea_new_words1').value=cet6_en_global.join('\n');        
+            otextarea.value=cet6_en_global.join('\n');     
+            var progress_list=ltp_status_get_b('+生词 +CET6','pink','white',100);
+            ospan.innerHTML=progress_list.join(' ');   
             break;   
         case 'kaikki phrase':
             kaikki_phrase_global.sort(randomsort_b);
-            document.getElementById('textarea_new_words1').value=kaikki_phrase_global.slice(0,1000).join('\n').replace(/ /g,'_');
+            otextarea.value=kaikki_phrase_global.slice(0,1000).join('\n').replace(/ /g,'_');
             break;
     }
 }
@@ -756,7 +761,9 @@ function selenium_rare_jump_enwords_book(rare_href){
 }
 
 function selenium_html_enwords_book(result_str,use_cache,cached_list_len,theday){
-    var bljg='<h1>'+theday+'</h1>\n'+result_str+'<p>';
+    var progress_list=ltp_status_get_b('+selenium +生词统计','tomato','white',100);
+    var bljg='<p>'+progress_list.join(' ')+'</p>';
+    bljg=bljg+'<h1>'+theday+'</h1>\n'+result_str+'<p>';
     bljg=bljg+'<span class="aclick" onclick="frequency_enwords_book(\'sentence_rare\',true);this.outerHTML=\'\';">例句中的常见单词</span>';
     bljg=bljg+'<span class="aclick" onclick="selenium_number_enwords_book();">刷新编号</span>';
     if (use_cache){
@@ -996,7 +1003,9 @@ function compare_result_list_to_table_enwords_book(sortno=4){
         blno=blno+1;
     }
     bljg=bljg+'</table>';
-    document.getElementById('td_result').innerHTML=bljg;
+    
+    var progress_list=ltp_status_get_b('+George +生词','purple','white',100);
+    document.getElementById('td_result').innerHTML='<p>'+progress_list.join(' ')+'</p>'+bljg;
 }
 
 function selenium_remove_enwords_book(odiv){

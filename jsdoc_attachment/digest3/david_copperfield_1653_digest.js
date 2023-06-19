@@ -65,7 +65,6 @@ var digest_global=`
 *gooseberry
 *great-grandfather
 *guilt
-*half-holiday
 *handicraft
 *haystack
 *Helena
