@@ -38,6 +38,23 @@ function import_as_js_blank_data(){
 function form_blank_data(){
     var blbuttons='<p>';
     blbuttons=blbuttons+'<span class="aclick" onclick="import_as_js_blank_data();">import as js</span>';
+    
+    if (!is_file_type_b()){
+        var option_list=['<option></option>'];
+        if (typeof blank_js_file_list_pb_global !== 'undefined' ){
+            for (let item of blank_js_file_list_pb_global){
+                option_list.push('<option>p_'+item+'</option>');
+            }
+        }
+        if (typeof blank_js_file_list_kl_global !== 'undefined' ){
+            for (let item of blank_js_file_list_kl_global){
+                option_list.push('<option>k_'+item+'</option>');
+            }
+        }    
+        blbuttons=blbuttons+' <select id="select_import_js_file_blank_data">'+option_list.join('\n')+'</select> ';
+        blbuttons=blbuttons+'<span class="aclick" onclick="import_js_file_to_textarea_blank_data();">import file to textarea</span>';    
+    }
+    
     blbuttons=blbuttons+close_button_b('div_form_common','','aclick');
     blbuttons=blbuttons+'</p>';
     var odiv=document.getElementById('div_form_common');
@@ -46,6 +63,40 @@ function form_blank_data(){
     odiv.innerHTML=blstr+blbuttons;
     odiv.scrollIntoView();
 }
+
+function import_js_file_to_textarea_blank_data(){
+    var oselect=document.getElementById('select_import_js_file_blank_data');
+    if (!oselect){return;}
+    var blvalue=oselect.value;
+    if (blvalue==''){return;}
+    
+    var otextarea=document.getElementById('textarea_blank_data');
+    if (!otextarea){return;}
+    
+    var blstr='';
+    var bltype=blvalue.slice(0,1);
+    blvalue=blvalue.substring(2,);
+    if (bltype=='p'){
+        var selepath=klbase_sele_path_b()[1]+'/jsdata/blank_data_pb/';
+        blstr=read_txt_file_b(selepath+blvalue+'_data.js');
+    }
+    else {
+        var klwebphp_path=klwebphp_path_b('data/blank_data_kl/'+blvalue+'_data.js');
+        console.log(klwebphp_path);
+        if (klwebphp_path!==false){
+            blstr=read_txt_file_b(klwebphp_path);    
+        }
+    }
+    if (blstr!==''){
+        otextarea.value=blstr;
+    }
+}
+
+function file_load_blank_data(){
+    var file_list=klbase_addons_import_js_b([],[],['blank_data_pb/blank_js_file_list_pb_data.js'],['../../../../data/blank_data_kl/blank_js_file_list_kl_data.js'],false,false);
+    file_dom_create_b(file_list,true,'js');
+}
+
 
 function menu_more_blank_data(){
     var str_t=klmenu_hide_b('');
