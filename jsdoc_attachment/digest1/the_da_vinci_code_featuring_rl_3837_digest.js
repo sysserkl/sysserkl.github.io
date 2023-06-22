@@ -31,4 +31,7 @@ var digest_global=`
 *penmanship
 *freeze-frame
 *hairdresser
+*blurry
+*cyclic
+*overlord
 `.trim().split('\n');

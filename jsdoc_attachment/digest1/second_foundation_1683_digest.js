@@ -26,4 +26,7 @@ var digest_global=`
 *unproven
 *fella
 *intranuclear
+*blurry
+*dewdrop
+*psychohistorian
 `.trim().split('\n');

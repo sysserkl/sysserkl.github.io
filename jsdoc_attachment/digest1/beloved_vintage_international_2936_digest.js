@@ -7,4 +7,7 @@ var digest_global=`
 *toolhouse
 *playroom
 *scarecrow
+*Muhammad
+*Wilmington
+*riverboat
 `.trim().split('\n');

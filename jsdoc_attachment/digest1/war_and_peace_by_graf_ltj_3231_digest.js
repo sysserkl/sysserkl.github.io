@@ -233,4 +233,6 @@ var digest_global=`
 *workbag
 *higher mathematics
 *nonintervention
+*Madagascar
+*bathhouse
 `.trim().split('\n');

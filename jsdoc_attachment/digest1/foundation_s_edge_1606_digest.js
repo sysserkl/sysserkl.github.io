@@ -5,4 +5,7 @@ var digest_global=`
 *spaceman
 *polymath
 *nucleonics
+*publicize
+*rotational
+*symptomatic
 `.trim().split('\n');
