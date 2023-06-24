@@ -65,4 +65,7 @@ var digest_global=`
 *ogre
 *Montaigne
 *Cézanne
+*archeology
+*incestuous
+*monopolize
 `.trim().split('\n');

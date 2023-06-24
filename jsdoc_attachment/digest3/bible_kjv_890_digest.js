@@ -419,4 +419,6 @@ var digest_global=`
 *Zebulun
 *Nehemiah
 *Horeb
+*Ezra
+*environ
 `.trim().split('\n');

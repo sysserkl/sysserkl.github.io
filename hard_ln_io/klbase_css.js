@@ -1581,8 +1581,14 @@ function root_font_size_change_b(change_value=0,csask=false){
 function menu_container_b(nodestr,cslist,caption=''){
     var blparent=nodestr.replace('.parentNode.','.parentNode.parentNode.');
     var result_t=[];
-    for (let item of cslist){   //[caption,onclick,add_parent_node] - 保留注释
-        var blstr='<span class="span_box_strong span_menu_container_item" onclick="'+(item[2]?blparent:'')+item[1]+'">'+item[0]+'</span>';
+    for (let item of cslist){   //[caption,onclick,add_parent_node,span_id] - 保留注释
+        var id_str='';
+        if (item.length>=4){
+            if (item[3]!==''){
+                id_str='id="'+item[3]+'" ';
+            }
+        }
+        var blstr='<span '+id_str+'class="span_box_strong span_menu_container_item" onclick="'+(item[2]?blparent:'')+item[1]+'">'+item[0]+'</span>';            
         result_t.push(blstr);   //item[1] 不能添加 specialstr_j - 保留注释
     }
     return '<span class="span_menu_container">'+caption+result_t.join(' ')+'</span>';

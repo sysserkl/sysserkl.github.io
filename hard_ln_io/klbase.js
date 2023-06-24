@@ -1503,27 +1503,100 @@ function array_repeated_column_value_b(cslist,checknum=0){
     return bljg;
 }
 
-function kl_remote_host_address_b(){
+function ip_address_autocomplete_b(csip){
+    csip=csip.trim();
+    if (csip!==''){
+        if (csip.match(/^\d{1,3}$/)!==null){
+            csip='http://192.168.0.'+csip;
+        }
+        if (csip.substring(0,7)!=='http://'){
+            csip='http://'+csip;
+        }
+        if (csip.slice(-1)=='/'){
+            csip=csip.slice(0,-1);
+        }
+    }
+    return csip;
+}
+
+function kl_remote_host_address_b(new_address=null,do_ask=false){
     var old_address=local_storage_get_b('kl_remote_host',-1,false);
-    var bladdress=prompt('输入 form 发送远程服务器地址(形如：http://123.456.789.023)\n如只输入23，则自动补全为 http://192.168.0.23，\n未输入 http:// 则自动补全：',old_address);
-    if (bladdress==null){return;}
     
-    bladdress=bladdress.trim();
-    if (bladdress==''){
-        localStorage.setItem('kl_remote_host','');
+    if (new_address===null){
+        var bladdress=prompt('输入 form 发送远程服务器地址(形如：http://123.456.789.023)\n如只输入23，则自动补全为 http://192.168.0.23，\n未输入 http:// 则自动补全；如果输入如101-105，或192.168.1.101-105，或：192.168.1.101-192.168.1.105，则进行扫描处理',old_address);
+    }
+    else {
+        bladdress=new_address;
+    }
+    
+    if (bladdress==null){return;}
+
+    var list_t=bladdress.split('-');
+    if (list_t.length==2){
+        list_t[0]=ip_address_autocomplete_b(list_t[0]);
+        list_t[1]=ip_address_autocomplete_b(list_t[1]);
+        if (!list_t[0].includes('.') || !list_t[1].includes('.')){
+            alert('ip地址格式错误，未发现.号：'+list_t.toString());
+            return;
+        }
+        var blat=list_t[0].lastIndexOf('.');
+        var host_left_part=list_t[0].substring(0,blat+1);
+        var blmin=parseInt(list_t[0].substring(blat+1,));
+        
+        blat=list_t[1].lastIndexOf('.');
+        var blmax=parseInt(list_t[1].substring(blat+1,));
+        
+        if (isNaN(blmin) || isNaN(blmax)){
+            alert('ip地址格式错误，非数值：'+list_t.toString()+'，'+blmin+','+blmax);
+            return;
+        }
+        remote_ip_detector_b(host_left_part,blmin,blmax,true);
         return;
     }
+
+    bladdress=ip_address_autocomplete_b(bladdress);
     
-    if (bladdress.match(/^\d{1,3}$/)!==null){
-        bladdress='http://192.168.0.'+bladdress;
+    if (do_ask){
+        if (old_address==bladdress){
+            alert('远程 ip 为 '+old_address+' ，与原有设置一致，未修改');
+            return;
+        }
+    
+        if (!confirm('是否修改远程 ip '+old_address+' 为 '+bladdress+'？')){return;}
     }
-    if (bladdress.substring(0,7)!=='http://'){
-        bladdress='http://'+bladdress;
-    }
-    if (bladdress.slice(-1)=='/'){
-        bladdress=bladdress.slice(0,-1);
-    }
+    
+    if (old_address==bladdress){return;}
     localStorage.setItem('kl_remote_host',bladdress);
+}
+
+function remote_ip_detector_b(host_left_part,csmin,csmax,do_alert=false){
+    function sub_remote_ip_detector_b_one_step(is_loaded=true){
+        if (is_loaded){
+            console.log('remote_ip_detector_b() 发现 ip: '+host_left_part+(csmin+blxl)+'，循环次数：'+(blxl+1)+'，费时：'+(performance.now() - t0) + ' milliseconds');
+            kl_remote_host_address_b(host_left_part+(csmin+blxl),true);
+            return;
+        }
+
+        if (blxl>=bllen){
+            var blstr='remote_ip_detector_b() 未发现 ip，循环次数：'+(blxl+1)+'，费时：'+(performance.now() - t0) + ' milliseconds';
+            console.log(blstr);
+            if (do_alert){
+                alert(blstr);
+            }
+            return;
+        }
+        
+        //eval('typeof you_found_me_global') == 'undefined' - 肯定成立 - 保留注释
+        blxl=blxl+1;
+        file_dom_create_b([host_left_part+(csmin+blxl)+'/klwebphp/klbase_you_found_me.js']);
+        load_var_b('you_found_me_global',(is_local_b()?10:50),500,sub_remote_ip_detector_b_one_step);
+    }
+    //-------------------
+    var t0 = performance.now();    
+    var bllen=Math.min(256,csmax-csmin);
+    var blxl=-1;
+    you_found_me_global=undefined;
+    sub_remote_ip_detector_b_one_step(false);
 }
 
 function local_storage_view_form_b(keytype='',csid=''){
@@ -2819,7 +2892,7 @@ function load_var_b(var_name,csmax,cswait,run_fn){
     function sub_load_var_b_wait(){
         blxl=blxl+1;
         
-        if (eval('typeof '+var_name) == 'object'){
+        if (eval('typeof '+var_name) !== 'undefined'){
             console.log('发现 '+var_name+' ，扫描次数：'+blxl);       
             run_fn(true);     
         }

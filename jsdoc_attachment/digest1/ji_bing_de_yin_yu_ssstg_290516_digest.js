@@ -528,4 +528,6 @@ var digest_global=`
 *civil servant
 *Mahler
 *Hobbes
+*Nagasaki
+*disinfection
 `.trim().split('\n');

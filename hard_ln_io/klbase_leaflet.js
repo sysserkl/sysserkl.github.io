@@ -34,9 +34,9 @@ function baselayers_leaflet_b(cstype=''){
 
 function init_maps_leaflet_b(csmax=18,csmin=5){
     klmaps_global=[];
-    klmaps_global["mapbox"]=L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-        maxZoom: 18,
-        minZoom:5,
+    klmaps_global['mapbox']=L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+        maxZoom: 30,
+        minZoom: 0,
         id: 'mapbox.streets',
         accessToken: 'pk.eyJ1Ijoid3k3MzA1ZSIsImEiOiJjazJuMG9laTEwMWJqM2xtenZ2eXduMHdtIn0.yh0uJghsB8Ci-Kd2Scy_wA'
     });

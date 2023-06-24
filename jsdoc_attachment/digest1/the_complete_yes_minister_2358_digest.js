@@ -3,4 +3,7 @@ var digest_global=`
 *Southampton
 *Green Paper
 *smokescreen
+*Damocles
+*legislate
+*photocopy
 `.trim().split('\n');

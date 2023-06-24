@@ -22,4 +22,9 @@ var digest_global=`
 *room temperature
 *Andrea
 *blackbody
+*Bangkok
+*affix
+*bodybuilder
+*counterclockwise
+*slowdown
 `.trim().split('\n');

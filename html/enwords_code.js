@@ -356,15 +356,21 @@ function words_editor_form_kle(){
     bljg=bljg+'<span class="aclick" onclick="words_queue_update_kle();">更新</span> ';
     bljg=bljg+'<span class="aclick" onclick="words_queue_append_kle();">批量添加</span> ';
     bljg=bljg+textarea_buttons_b('textarea_words_queue','全选,清空,复制,发送到临时记事本,发送地址','enwords_queue')+' ';    
-    bljg=bljg+'<span class="aclick" onclick="words_queue_transform_kle();">展现为数组形式</span> ';
-    bljg=bljg+'<span class="aclick" onclick="words_array_2_lines_kle();">数组转为多行形式</span> ';    
-    bljg=bljg+'<select id="select_queue_insert">';
-    for (let item of ['[',']','[,]','〘 , 〙']){
+    
+    bljg=bljg+'<select id="select_queue_do_type">';
+    for (let item of ['展现为数组形式','数组转为多行形式','enminor_search']){
         bljg=bljg+'<option>'+item+'</option>';
     }
-    
+    bljg=bljg+'</select> ';
+    bljg=bljg+'<span class="aclick" onclick="words_queue_do_type_kle();">执行</span> ';    
+
+    bljg=bljg+'<select id="select_queue_insert">';
+    for (let item of ['[',']','[,]','〘 , 〙',"'",'ˌ']){
+        bljg=bljg+'<option>'+item+'</option>';
+    }
     bljg=bljg+'</select> ';
     bljg=bljg+'<span class="aclick" onclick="words_queue_insert_kle();">插入</span> ';    
+    
     bljg=bljg+'<a href="lsm.htm?key=enwords_queue" target=_blank>LocalStorage</a> ';
     bljg=bljg+' 行数：'+list_t.length;    
     bljg=bljg+'</p>';
@@ -387,11 +393,30 @@ function words_editor_form_kle(){
         }
     }
     bljg=bljg+enwords_different_types_div_b(list_t);
-    //enwords_js_type_words_b(list_t,true,true);
     document.getElementById('divhtml').innerHTML=bljg;
     words_queue_select_kle();
 }
 
+function words_queue_do_type_kle(){
+    var bltype=document.getElementById('select_queue_do_type').value;
+    switch (bltype){
+        case '展现为数组形式':
+            words_queue_transform_kle();
+            break;
+        case '数组转为多行形式':
+            words_array_2_lines_kle(); 
+            break;
+        case 'enminor_search':
+            var otextarea=document.getElementById('textarea_words_queue');
+            var blstr=otextarea.value.trim().split('\n')[0];
+            if (blstr!==''){
+                if (confirm('是否 en minor search [ '+blstr+' ] ？')){
+                    window.open('klsearch.htm?k='+blstr+'&t=batch_en_minor&close=0');
+                }
+            }
+            break;
+    }
+}
 
 function words_array_2_lines_kle(){
     var otextarea=document.getElementById('textarea_words_queue');
