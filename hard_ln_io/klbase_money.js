@@ -480,6 +480,9 @@ function elm_get_money_b(csstr,csdate,csaddress,to_line_style=false){
     //¥
     //8.75
     //¥13.6
+    csstr=csstr.replace(/^支持\d+天无理由$/mg,'');
+    csstr=csstr.replace(/\n+/mg,'\n');
+    
     var list_t=csstr.trim().split('\n');
     var result_t=[];
     var blname='';

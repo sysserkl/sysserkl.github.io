@@ -1,7 +1,9 @@
 var csbooklist_source_global=[
-["great_expectations_1802", "Great Expectations(Charles Dickens)","已整理,englishwords","3",""],
+["ulyssesjames_joyce_760", "Ulysses(James Joyce)","已整理,englishwords","3",""],
+["a_modest_proposal", "A Modest Proposal(Jonathan Swift)","已整理,englishwords","3",""],
 ["the_count_of_monte_cristo_i_3535", "The Count of Monte Cristo, Illustrated(Alexandre Dumas)","已整理,englishwords","3",""],
 ["the_brothers_karamazov_2134", "The Brothers Karamazov(Fyodor Dostoyevsky)","已整理,englishwords","3",""],
+["great_expectations_1802", "Great Expectations(Charles Dickens)","已整理,englishwords","3",""],
 ["the_yellow_wallpaper_1925", "The Yellow Wallpaper(Charlotte Perkins Gilman)","已整理,englishwords","3",""],
 ["a_doll_s_house_1194", "A Doll's House(a play)","已整理,englishwords","3",""],
 ["the_importance_of_being_earnest_atcfsp_6207", "The Importance of Being Earnest- A Trivial Comedy for Serious People(Oscar Wilde)","已整理,englishwords","3",""],
