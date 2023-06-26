@@ -175,12 +175,17 @@ function menu_common(){
     '<span id="span_reg_common" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ reg</span>',    
     '<span id="span_highlight_common" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ highlight</span>',    
     '<span id="span_row_no_common" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ row no</span>',        
-    '<span id="span_table_style_common" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ table</span>',
-    '<span id="span_table_columns_common" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ table columns</span>',   
-    '<span id="span_table_row_no_common" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ table row no</span>',    
     '<span id="span_http_links_common" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ http links</span>',    
     '<span id="span_additional_fn_common" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ additional fn</span>',       
     ];
+
+    var group_list=[
+    ['⚪ table','klmenu_check_b(this.id,true);',true,'span_table_style_common'],
+    ['⚪ columns','klmenu_check_b(this.id,true);',true,'span_table_columns_common'],
+    ['⚪ row no','klmenu_check_b(this.id,true);',true,'span_table_row_no_common'],
+
+    ];    
+    klmenu1.push(menu_container_b(str_t,group_list,''));
     
     var klmenu_config=root_font_size_menu_b(str_t);
     klmenu_config.push('<span class="span_menu" onclick="'+str_t+'standalone_search_common();">当前结果导出为 standalone search</span>');
@@ -202,7 +207,7 @@ function menu_common(){
         menu_files.push(klmenu_b(klmenu_list,akey.substring(2,),'12rem','1rem','1rem','30rem'));
     }
         
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,icon_emoji_jscm_global,'14rem','1rem','1rem','60rem')+menu_files.join('')+'<span id="span_menu_more_common"></span>'+klmenu_b(klmenu_config,'⚙','19rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,icon_emoji_jscm_global,'18rem','1rem','1rem','60rem')+menu_files.join('')+'<span id="span_menu_more_common"></span>'+klmenu_b(klmenu_config,'⚙','19rem','1rem','1rem','60rem'),'','0rem')+' ');
     klmenu_check_b('span_reg_common',true);
     klmenu_check_b('span_highlight_common',true);
     klmenu_check_b('span_row_no_common',true);

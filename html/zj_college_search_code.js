@@ -209,11 +209,11 @@ function txtsearch_zjedu(csword,csreg){
 				
 		if (blfound || csword==''){
 			blcount=blcount+1;
-			blplan=blplan+item[4];
+			blplan=blplan+item[4];  //计划数 - 保留注释
 			blline=blline+item[4]*item[5];
             
             min_max_line_list.push(item[5]);
-            median_line_list.push([item[4],item[5]]);
+            median_line_list.push([item[4],item[5]]);   //计划数，分数线 - 保留注释
             
             if (item[6]>0){
                 blreal=blreal+item[4];
@@ -625,19 +625,71 @@ function exam_range_flot_zjedu(is_batch=false){
         var blmin=parseInt(zj_current_year_global);
         var blmax=blmin;
     }
+
+    var median_type=klmenu_check_b('span_median_mark',false);
     
+    var status_list=[];    
     var flot_list=[];
     for (let blxl=blmin;blxl<=blmax;blxl++){
         var list_t=[blxl+'年#points:false#'];
-        for (let item of zj_exam_range_global[blxl.toString()]){
-            list_t.push([item[0],item[1]]);
-        }      
+
+        var blarr=zj_exam_range_global[blxl.toString()];
+        blarr.sort(function (a,b){return a[0]<b[0];});    //分数线从高到低排列 - 保留注释
+        if (median_type){
+            var population=0;
+            var blarr2=[];
+            for (let item of blarr){
+                population=population+item[1];
+                blarr2.push(item.concat([population]));
+            }
+            var half_list=[population*0.25,population*0.75,population*0.5];
+            var median_list=[];
+            for (let one_half of half_list){
+                one_half=Math.round(one_half);
+                var blmedian=0;
+                var the_row='';
+                for (let blno=0;blno<blarr2.length-1;blno++){
+                    if (blarr2[blno][2]==one_half){
+                        the_row=blarr2[blno].toString();
+                        blmedian=blarr2[blno][0];
+                        break;
+                    }
+                    else if (blarr2[blno][2]<one_half && blarr2[blno+1][2]>one_half){
+                        the_row=blarr2[blno].toString()+' ~ '+blarr2[blno+1].toString();
+                        blmedian=blarr2[blno+1][0];
+                        break;
+                    }
+                }
+                median_list.push('<td align="right">'+[one_half,the_row,blmedian].join('</td><td align="right">')+'</td>');
+            }
+
+            status_list.push('<tr><td>'+blxl+'</td><td>'+population+'</td>'+median_list.join('')+'</tr>');
+            for (let item of blarr2){
+                list_t.push([item[0]-blmedian,item[1]]);
+            }
+        }
+        else {
+            for (let item of blarr){
+                list_t.push([item[0],item[1]]);
+            }            
+        }
         flot_list.push(list_t);  
     }
-
-    flot_lines_b(flot_list,'div_line_count_flot','nw',false,'','m','人',-1,[],-1,false,false,true)
     
-    document.getElementById('div_line_count_flot').scrollIntoView();
+    var odiv=document.getElementById('divhtml');
+    if (status_list.length>0){
+        var th='<tr><th>年份</th><th>总人数</th>';
+        for (let item of ['25%','75%','50%']){
+            th=th+'<th>'+[item+'人数',item+'取值区间：分数,人数,累计人数',item+'分数'].join('</th><th>')+'</th>';
+        }
+        th=th+'</tr>';
+        odiv.innerHTML='<table class="table_common">'+th+status_list.join('\n')+'</table>';
+    }
+    else {
+        odiv.innerHTML='';
+    }
+    flot_lines_b(flot_list,'div_line_count_flot','nw',false,'','m','人',-1,[],-1,false,false,true)
+    odiv.scrollIntoView();
 }
 
 function exam_range_check_zjedu(){
@@ -786,9 +838,10 @@ function menu_zjedu(){
     var klmenu1=[
     '<a href="https://www.zjzs.net/" target=_blank>浙江省教育考试院</a>',    
     '<span class="span_menu" onclick="'+str_t+'export_csv_zjedu();">导出当前记录为csv</span>',    
+    '<span id="span_median_mark" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 中位分数</span>',        
     '<span class="span_menu" onclick="'+str_t+'exam_range_flot_zjedu();">'+zj_current_year_global+'年分数人数分布图</span>',    
     '<span class="span_menu" onclick="'+str_t+'exam_range_flot_zjedu(true);">历年分数人数分布图</span>',    
-    '<span class="span_menu" onclick="'+str_t+'exam_range_check_zjedu();">分数人数分布数据检验</span>',        
+    '<span class="span_menu" onclick="'+str_t+'exam_range_check_zjedu();">分数人数分布表及检验</span>',        
     ];
     
     var klmenu_year=[];
