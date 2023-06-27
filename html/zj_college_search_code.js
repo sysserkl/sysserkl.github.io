@@ -616,10 +616,184 @@ function line_count_zjedu(){
     flot_lines_b([['分数线和招收人数'].concat(object2array_b(arr3_t))],'div_line_count_flot','ne',false,'','m',y1unit='人');
 }
 
+function median_value_get_zjedu(csyear,csarr,half_list=false,range_col=true){
+    var population=0;
+    var blarr2=[];
+    for (let item of csarr){
+        population=population+item[1];
+        blarr2.push(item.concat([population]));
+    }
+    
+    if (half_list===false){
+        half_list=[0.25,0.5,0.75];
+    }
+
+    var status_list=[];    
+    var median_str_list=[];
+    var median_value_dict={};
+    for (let one_half of half_list){
+        var sub_population=Math.round(population*one_half);
+        var blmedian=0;
+        var the_row='';
+        for (let blno=0;blno<blarr2.length-1;blno++){
+            if (blarr2[blno][2]==sub_population){
+                the_row=blarr2[blno].toString();
+                blmedian=blarr2[blno][0];
+                break;
+            }
+            else if (blarr2[blno][2]<sub_population && blarr2[blno+1][2]>sub_population){
+                the_row=blarr2[blno].toString()+'<hr />'+blarr2[blno+1].toString();
+                blmedian=blarr2[blno+1][0];
+                break;
+            }
+        }
+        if (range_col){
+            median_str_list.push('<td align="right">'+[sub_population,the_row,blmedian].join('</td><td align="right">')+'</td>');
+        }
+        else {
+            median_str_list.push('<td align="right">'+[sub_population,blmedian].join('</td><td align="right">')+'</td>');        
+        }
+        median_value_dict[one_half.toString()]=blmedian;
+    }
+
+    status_list.push('<tr><td>'+csyear+'</td><td>'+population+'</td>'+median_str_list.join('')+'</tr>');
+    return [blarr2,median_value_dict,status_list];
+}
+
+function range_status_type_zjedu(cstype){
+    document.getElementById('div_line_count_flot').innerHTML='';
+    var range_col=klmenu_check_b('span_median_range_show',false);
+
+    var keys=Object.keys(zj_exam_range_global);
+    keys.sort();
+    var blmin=parseInt(keys[0]);
+    var blmax=parseInt(keys[keys.length-1]);
+        
+    if (typeof range_list_zjedu_global=='undefined'){
+        range_list_zjedu_global='25,50,75';
+    }
+
+    var new_range=prompt('输入取值范围，如25,50,75或10000-10000;500，分号后的500表示step',range_list_zjedu_global);
+    if (new_range==null){return;}
+    var list_t=new_range.trim().split(';');
+    var blstep=1;
+    if (list_t.length>1){
+        blstep=parseInt(list_t[1]);
+    }
+    console.log(blstep);
+    var half_list=Array.from(str2num_range_b(list_t[0],blstep,100));
+    half_list.sort(function (a,b){return a>b;});
+    
+    var found_positive=false;
+    for (let blxl=0;blxl<half_list.length;blxl++){
+        if (half_list[blxl]>0){
+            half_list=half_list.slice(blxl,);
+            found_positive=true;
+            break;
+        }
+    }
+    if (!found_positive){return;}
+    
+    range_list_zjedu_global=new_range;
+    switch (cstype){
+        case 'percent':
+            for (let blxl=0;blxl<half_list.length;blxl++){
+                half_list[blxl]=half_list[blxl]/100;
+            }
+            var status_list=[];
+            for (let blxl=blmin;blxl<=blmax;blxl++){
+                var blarr=zj_exam_range_global[blxl.toString()];
+                status_list=status_list.concat(median_value_get_zjedu(blxl,blarr,half_list,range_col)[2]);
+            }
+            document.getElementById('divhtml').innerHTML=range_status_table_zjedu(status_list,half_list,range_col);
+            break;
+        case 'population':
+            var status_list=[];
+            for (let blxl=blmin;blxl<=blmax;blxl++){
+                var blarr=zj_exam_range_global[blxl.toString()];
+                status_list=status_list.concat(population_value_get_zjedu(blxl,blarr,half_list,range_col));
+            }
+            document.getElementById('divhtml').innerHTML=range_status_table_zjedu(status_list,half_list,range_col,'population');
+            break;
+    }
+}
+
+function population_value_get_zjedu(csyear,csarr,half_list,range_col=true){
+    var population=0;
+    var blarr2=[];
+    for (let item of csarr){
+        population=population+item[1];
+        blarr2.push(item.concat([population]));
+    }
+
+    var status_list=[];    
+    var median_str_list=[];
+    for (let one_half of half_list){
+        var blmedian=0;
+        var the_row='';
+        for (let blno=0;blno<blarr2.length-1;blno++){
+            if (blarr2[blno][2]==one_half){
+                the_row=blarr2[blno].toString();
+                blmedian=blarr2[blno][0];
+                break;
+            }
+            else if (blarr2[blno][2]<one_half && blarr2[blno+1][2]>one_half){
+                the_row=blarr2[blno].toString()+'<hr />'+blarr2[blno+1].toString();
+                blmedian=blarr2[blno+1][0];
+                break;
+            }
+        }
+        if (range_col){
+            median_str_list.push('<td align="right">'+[the_row,blmedian].join('</td><td align="right">')+'</td>');
+        }
+        else {
+            median_str_list.push('<td align="right">'+[blmedian].join('</td><td align="right">')+'</td>');        
+        }
+    }
+
+    status_list.push('<tr><td>'+csyear+'</td><td>'+population+'</td>'+median_str_list.join('')+'</tr>');
+    return status_list;
+}
+
+function range_status_table_zjedu(status_list,half_list,range_show,cstype='percent'){
+    if (status_list.length==0){return '';}
+    var th='<tr><th>年份</th><th>总人数</th>';
+    switch (cstype){
+        case 'percent':
+            for (let item of half_list){
+                item=(item*100)+'%';
+                
+                if (range_show){
+                    th=th+'<th nowrap>'+[item+'<br />人数',item+'取值区间：<br />分数,人数,累计人数',item+'<br />分数'].join('</th><th nowrap>')+'</th>';
+                }
+                else {
+                    th=th+'<th nowrap>'+[item+'<br />人数',item+'<br />分数'].join('</th><th nowrap>')+'</th>';
+                }
+            }
+            th=th+'</tr>';
+            break;
+        case 'population':
+            for (let item of half_list){
+                if (range_show){
+                    th=th+'<th nowrap>'+['第'+item+'名取值区间：<br />分数,人数,累计人数','第'+item+'名<br />分数'].join('</th><th nowrap>')+'</th>';
+                }
+                else {
+                    th=th+'<th nowrap>'+['第'+item+'名<br />分数'].join('</th><th nowrap>')+'</th>';
+                }
+            }
+            th=th+'</tr>';        
+            break;
+    }
+    
+    return '<table class="table_common">'+th+status_list.join('\n')+'</table>';
+}
+
 function exam_range_flot_zjedu(is_batch=false){
     if (is_batch){
-        var blmin=zj_year_range_global[0];
-        var blmax=zj_year_range_global[1];
+        var keys=Object.keys(zj_exam_range_global);
+        keys.sort();
+        var blmin=parseInt(keys[0]);
+        var blmax=parseInt(keys[keys.length-1]);
     }
     else {
         var blmin=parseInt(zj_current_year_global);
@@ -627,8 +801,8 @@ function exam_range_flot_zjedu(is_batch=false){
     }
 
     var median_type=klmenu_check_b('span_median_mark',false);
+    var range_show=klmenu_check_b('span_median_range_show',false);
     
-    var status_list=[];    
     var flot_list=[];
     for (let blxl=blmin;blxl<=blmax;blxl++){
         var list_t=[blxl+'年#points:false#'];
@@ -636,36 +810,10 @@ function exam_range_flot_zjedu(is_batch=false){
         var blarr=zj_exam_range_global[blxl.toString()];
         blarr.sort(function (a,b){return a[0]<b[0];});    //分数线从高到低排列 - 保留注释
         if (median_type){
-            var population=0;
-            var blarr2=[];
-            for (let item of blarr){
-                population=population+item[1];
-                blarr2.push(item.concat([population]));
-            }
-            var half_list=[population*0.25,population*0.75,population*0.5];
-            var median_list=[];
-            for (let one_half of half_list){
-                one_half=Math.round(one_half);
-                var blmedian=0;
-                var the_row='';
-                for (let blno=0;blno<blarr2.length-1;blno++){
-                    if (blarr2[blno][2]==one_half){
-                        the_row=blarr2[blno].toString();
-                        blmedian=blarr2[blno][0];
-                        break;
-                    }
-                    else if (blarr2[blno][2]<one_half && blarr2[blno+1][2]>one_half){
-                        the_row=blarr2[blno].toString()+' ~ '+blarr2[blno+1].toString();
-                        blmedian=blarr2[blno+1][0];
-                        break;
-                    }
-                }
-                median_list.push('<td align="right">'+[one_half,the_row,blmedian].join('</td><td align="right">')+'</td>');
-            }
-
-            status_list.push('<tr><td>'+blxl+'</td><td>'+population+'</td>'+median_list.join('')+'</tr>');
+            var blarr2, median_value_dict;
+            [blarr2,median_value_dict]=median_value_get_zjedu(blxl,blarr,[0.5],range_show).slice(0,2);
             for (let item of blarr2){
-                list_t.push([item[0]-blmedian,item[1]]);
+                list_t.push([item[0]-median_value_dict['0.5'],item[1]]);
             }
         }
         else {
@@ -676,20 +824,9 @@ function exam_range_flot_zjedu(is_batch=false){
         flot_list.push(list_t);  
     }
     
-    var odiv=document.getElementById('divhtml');
-    if (status_list.length>0){
-        var th='<tr><th>年份</th><th>总人数</th>';
-        for (let item of ['25%','75%','50%']){
-            th=th+'<th>'+[item+'人数',item+'取值区间：分数,人数,累计人数',item+'分数'].join('</th><th>')+'</th>';
-        }
-        th=th+'</tr>';
-        odiv.innerHTML='<table class="table_common">'+th+status_list.join('\n')+'</table>';
-    }
-    else {
-        odiv.innerHTML='';
-    }
-    flot_lines_b(flot_list,'div_line_count_flot','nw',false,'','m','人',-1,[],-1,false,false,true)
-    odiv.scrollIntoView();
+    document.getElementById('divhtml').innerHTML='';
+    flot_lines_b(flot_list,'div_line_count_flot','nw',false,'','m','人',-1,[],-1,false,false,true);
+    document.getElementById('div_line_count_flot').scrollIntoView();
 }
 
 function exam_range_check_zjedu(){
@@ -725,9 +862,9 @@ function exam_range_check_zjedu(){
         result_t.push('<p><b>score</b> '+sub_exam_range_check_zjedu_array(list_score)+'</p>');
         result_t.push('<p><b>count</b> '+sub_exam_range_check_zjedu_array(list_count,false)+'</p>');
         result_t.push('<p><span class="aclick" onclick="popup_show_hide_b(\'table_range_check_'+key+'\');">显示</span></p>');        
-        result_t.push('<table class="table_common" style="display:none;" id="table_range_check_'+key+'"><tr><th>分数</th><th>人数</th><th>累计人数</th></tr>');
+        result_t.push('<section style="max-height:30rem;overflow:auto;"><table class="table_common" style="display:none;" id="table_range_check_'+key+'"><tr><th>分数</th><th>人数</th><th>累计人数</th></tr>');
         result_t=result_t.concat(table_list);
-        result_t.push('</table>');
+        result_t.push('</table></section>');
     }
     document.getElementById('divhtml').innerHTML='<div style="margin-left:0.5rem;">'+result_t.join('\n')+'</div>';
 }
@@ -830,7 +967,7 @@ function export_csv_zjedu(){
     if (result_t.length==0){return;}
 
     var blhead='"学校名称","专业名称","计划数","分数线","位次"\n';        
-    string_2_txt_file_b(blhead+result_t.join('\n'),'zj_edu_export_'+now_time_str_b("-",true)+'.csv','csv');
+    string_2_txt_file_b(blhead+result_t.join('\n'),'zj_edu_export_'+now_time_str_b('-',true)+'.csv','csv');
 }
 
 function menu_zjedu(){
@@ -838,11 +975,26 @@ function menu_zjedu(){
     var klmenu1=[
     '<a href="https://www.zjzs.net/" target=_blank>浙江省教育考试院</a>',    
     '<span class="span_menu" onclick="'+str_t+'export_csv_zjedu();">导出当前记录为csv</span>',    
-    '<span id="span_median_mark" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 中位分数</span>',        
-    '<span class="span_menu" onclick="'+str_t+'exam_range_flot_zjedu();">'+zj_current_year_global+'年分数人数分布图</span>',    
-    '<span class="span_menu" onclick="'+str_t+'exam_range_flot_zjedu(true);">历年分数人数分布图</span>',    
-    '<span class="span_menu" onclick="'+str_t+'exam_range_check_zjedu();">分数人数分布表及检验</span>',        
+    '<span class="span_menu" onclick="'+str_t+'exam_range_check_zjedu();">分数人数分布表及检验</span>',
     ];
+
+    var group_list=[
+    [zj_current_year_global+'年','exam_range_flot_zjedu();',true],
+    ['历年','exam_range_flot_zjedu(true);',true],
+    ];    
+    klmenu1.push(menu_container_b(str_t,group_list,'分数人数分布图：'));    
+
+    var group_list=[
+    ['累计人数比例','range_status_type_zjedu(\'percent\');',true],
+    ['累计人数','range_status_type_zjedu(\'population\');',true],
+    ];    
+    klmenu1.push(menu_container_b(str_t,group_list,'分数人数分布表：'));   
+    
+    var group_list=[
+    ['⚪ 中位分数','klmenu_check_b(this.id,true);',true,'span_median_mark'],
+    ['⚪ 区间显示','klmenu_check_b(this.id,true);',true,'span_median_range_show'],
+    ];    
+    klmenu1.push(menu_container_b(str_t,group_list,''));    
     
     var klmenu_year=[];
     for (let item=zj_year_range_global[0];item<=zj_year_range_global[1];item++){
@@ -851,7 +1003,7 @@ function menu_zjedu(){
 
     var klmenu_config=root_font_size_menu_b(str_t);
 
-    document.getElementById('span_h2').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_year,'💯','6rem','1rem','1rem','60rem')+klmenu_b(klmenu1,'','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','15rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_h2').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_year,'💯','6rem','1rem','1rem','60rem')+klmenu_b(klmenu1,'','24rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','15rem','1rem','1rem','60rem'),'','0rem')+' ');
 }
 
 function init_zjedu(){

@@ -2774,7 +2774,7 @@ function textarea_shift_b(idname1,idname2){
     otextarea2.value=blstr1;
 }
 
-function str2num_range_b(csstr){ //numinrange - 保留注释
+function str2num_range_b(csstr,csstep=1,maxlen=-1){ //numinrange。csstep仅对-有效 - 保留注释
     var result_t=new Set();
     var list_t=csstr.trim().split(',');
     for (let item of list_t){
@@ -2784,8 +2784,9 @@ function str2num_range_b(csstr){ //numinrange - 保留注释
             var blmax=parseInt(item.substring(blat+1,).trim());
             if (isNaN(blmin) || isNaN(blmax)){continue;}
             if (blmin>blmax){continue;}
-            for (let blxl=blmin;blxl<=blmax;blxl++){
+            for (let blxl=blmin;blxl<=blmax;blxl=blxl+csstep){
                 result_t.add(blxl);
+                if (maxlen>0 && result_t.size>=maxlen){break;}
             }
         }
         else {
