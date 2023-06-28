@@ -612,62 +612,179 @@ function line_count_zjedu(){
     for (let item of arr2_t){
         arr3_t['l'+item[0]][1]=item[1];
     }
-    
+
+    canvas_size_set_zjedu();
     flot_lines_b([['分数线和招收人数'].concat(object2array_b(arr3_t))],'div_line_count_flot','ne',false,'','m',y1unit='人');
 }
 
-function median_value_get_zjedu(csyear,csarr,half_list=false,range_col=true){
+function population_sum_arr_get_zjedu(csarr){
     var population=0;
     var blarr2=[];
     for (let item of csarr){
         population=population+item[1];
         blarr2.push(item.concat([population]));
     }
+    return [population,blarr2];
+}
+
+function gini_index_zjedu(){
+    var blmin,blmax;
+    [blmin,blmax]=year_range_get_zjedu();
+    
+    var population,blarr2;
+    var flot_list=[];
+    var tr_list=[];
+    var textarea_list=[];
+    for (let blxl=blmin;blxl<=blmax;blxl++){
+        var x_list=[0];
+        var y_list=[0];
+        var list_t=[blxl+'年#points:false#',[0,0]];
+
+        var blarr=zj_exam_range_global[blxl.toString()];
+        blarr.sort(function (a,b){return a[0]>b[0];});    //分数线从低到高排列 - 保留注释
+        [population,blarr2]=population_sum_arr_get_zjedu(blarr);
+        var score_total=0;
+        for (let item of blarr2){
+            score_total=score_total+item[0]*item[1];
+        }
+        tr_list.push('<tr><td>'+blxl+'</td><td align="right">'+population+'</td><td align="right">'+score_total+'</td></tr>');
+        var current_sum=0;
+        for (let item of blarr2){
+            current_sum=current_sum+item[0]*item[1];
+            list_t.push([item[2]*100/population,current_sum*100/score_total]);  //累计人数百分比,人数*分数累计/总分数 - 保留注释
+            x_list.push(item[2]/population);
+            y_list.push(current_sum/score_total);
+        }
+        flot_list.push(list_t);
+        textarea_list.push('"'+blxl+'x":['+x_list.join(',')+'],');
+        textarea_list.push('"'+blxl+'y":['+y_list.join(',')+'],');
+    }
+    flot_list.push(['y=x#points:false#',[0,0],[100,100]]);
+    var bltable='<table class="table_common"><tr><th>年份</th><th>总人数</th><th>总分数</th></tr>'+tr_list.join('\n')+'</table>';
+    document.getElementById('divhtml').innerHTML=bltable+'<textarea style="height:30rem;">zjdata={\n'+textarea_list.join('\n')+'\n}\n</textarea>';
+    var odiv=canvas_size_set_zjedu(true);
+    flot_lines_b(flot_list,'div_line_count_flot','nw',false,'','','%',-1,[],-1,0,100,true);
+    odiv.scrollIntoView();    
+}
+
+function canvas_size_set_zjedu(is_square){
+    var odiv=document.getElementById('div_line_count_flot');
+    if (is_square){
+        odiv.style.cssText='width:35rem;height:30rem';  //宽度略宽 - 保留注释
+    }
+    else {
+        odiv.style.cssText='width:100%;height:30rem';    
+    }
+    return odiv;
+}
+
+function median_value_get_zjedu(csyear,csarr,half_list=false,range_col=true){
+    var population,blarr2;
+    [population,blarr2]=population_sum_arr_get_zjedu(csarr);
     
     if (half_list===false){
         half_list=[0.25,0.5,0.75];
     }
 
-    var status_list=[];    
     var median_str_list=[];
     var median_value_dict={};
+    var blmedian, the_row;    
     for (let one_half of half_list){
         var sub_population=Math.round(population*one_half);
-        var blmedian=0;
-        var the_row='';
-        for (let blno=0;blno<blarr2.length-1;blno++){
-            if (blarr2[blno][2]==sub_population){
-                the_row=blarr2[blno].toString();
-                blmedian=blarr2[blno][0];
-                break;
-            }
-            else if (blarr2[blno][2]<sub_population && blarr2[blno+1][2]>sub_population){
-                the_row=blarr2[blno].toString()+'<hr />'+blarr2[blno+1].toString();
-                blmedian=blarr2[blno+1][0];
-                break;
-            }
-        }
-        if (range_col){
-            median_str_list.push('<td align="right">'+[sub_population,the_row,blmedian].join('</td><td align="right">')+'</td>');
-        }
-        else {
-            median_str_list.push('<td align="right">'+[sub_population,blmedian].join('</td><td align="right">')+'</td>');        
-        }
+        [blmedian, the_row]=row_and_value_get_zjedu(-1,blarr2,sub_population,range_col,true);
+        median_str_list.push(the_row);
         median_value_dict[one_half.toString()]=blmedian;
     }
 
-    status_list.push('<tr><td>'+csyear+'</td><td>'+population+'</td>'+median_str_list.join('')+'</tr>');
+    var status_list=['<tr><td>'+csyear+'</td><td>'+population+'</td>'+median_str_list.join('')+'</tr>'];
     return [blarr2,median_value_dict,status_list];
+}
+
+function row_and_value_get_zjedu(population,csarr,csvalue,range_col,show_value_in_td=true,compare_col=2,value_col=0){
+    var found_value=0;
+    var the_row='';
+    for (let blno=0;blno<csarr.length-1;blno++){
+        if (csarr[blno][compare_col]==csvalue){
+            the_row=csarr[blno].toString();
+            found_value=csarr[blno][value_col];
+            break;
+        }
+        else if (csarr[blno][compare_col]<csvalue && csarr[blno+1][compare_col]>csvalue){
+            the_row=csarr[blno].toString()+'<hr />'+csarr[blno+1].toString();
+            found_value=csarr[blno+1][value_col];
+            break;
+        }
+    }
+    
+    if (range_col){
+        if (show_value_in_td){
+            var result_t=[csvalue,the_row,found_value];
+        }
+        else {
+            var result_t=[the_row,found_value];
+        }
+    }
+    else {
+        if (show_value_in_td){
+            var result_t=[csvalue,found_value];
+        }
+        else {
+            var result_t=[found_value];
+        }    
+    }
+    
+    if (population>0){
+        result_t.push((found_value*100/population).toFixed(2)+'%');
+    }
+    return [found_value,'<td align="right">'+result_t.join('</td><td align="right">')+'</td>'];
+}
+
+function population_value_get_zjedu(csyear,csarr,half_list,range_col=true){
+    var population,blarr2;
+    [population,blarr2]=population_sum_arr_get_zjedu(csarr);
+
+    var median_str_list=[];
+    for (let one_half of half_list){
+        median_str_list.push(row_and_value_get_zjedu(-1,blarr2,one_half,range_col,false)[1]);
+    }
+
+    var status_list=['<tr><td>'+csyear+'</td><td>'+population+'</td>'+median_str_list.join('')+'</tr>'];
+    return status_list;
+}
+
+function score_value_get_zjedu(csyear,csarr,half_list,range_col=true){
+    var population,blarr2;
+    [population,blarr2]=population_sum_arr_get_zjedu(csarr);
+
+    var median_str_list=[];
+    for (let one_half of half_list){
+        median_str_list.push(row_and_value_get_zjedu(population,blarr2,one_half,range_col,false,0,2)[1]);
+    }
+
+    var status_list=['<tr><td>'+csyear+'</td><td>'+population+'</td>'+median_str_list.join('')+'</tr>'];
+    return status_list;
+}
+
+function year_range_get_zjedu(){
+    var keys=Object.keys(zj_exam_range_global);
+    keys.sort();
+    var blmin=parseInt(keys[0]);
+    var blmax=parseInt(keys[keys.length-1]);
+    return [blmin,blmax];
+}
+
+function range_sort_high_2_low_zjedu(){
+    for (let key in zj_exam_range_global){
+        zj_exam_range_global[key].sort(function (a,b){return a[0]<b[0];});    //分数线从高到低排列 - 保留注释
+    }
 }
 
 function range_status_type_zjedu(cstype){
     document.getElementById('div_line_count_flot').innerHTML='';
     var range_col=klmenu_check_b('span_median_range_show',false);
 
-    var keys=Object.keys(zj_exam_range_global);
-    keys.sort();
-    var blmin=parseInt(keys[0]);
-    var blmax=parseInt(keys[keys.length-1]);
+    var blmin,blmax;
+    [blmin,blmax]=year_range_get_zjedu();
         
     if (typeof range_list_zjedu_global=='undefined'){
         range_list_zjedu_global='25,50,75';
@@ -680,7 +797,6 @@ function range_status_type_zjedu(cstype){
     if (list_t.length>1){
         blstep=parseInt(list_t[1]);
     }
-    console.log(blstep);
     var half_list=Array.from(str2num_range_b(list_t[0],blstep,100));
     half_list.sort(function (a,b){return a>b;});
     
@@ -693,6 +809,8 @@ function range_status_type_zjedu(cstype){
         }
     }
     if (!found_positive){return;}
+    
+    range_sort_high_2_low_zjedu();
     
     range_list_zjedu_global=new_range;
     switch (cstype){
@@ -715,44 +833,15 @@ function range_status_type_zjedu(cstype){
             }
             document.getElementById('divhtml').innerHTML=range_status_table_zjedu(status_list,half_list,range_col,'population');
             break;
-    }
-}
-
-function population_value_get_zjedu(csyear,csarr,half_list,range_col=true){
-    var population=0;
-    var blarr2=[];
-    for (let item of csarr){
-        population=population+item[1];
-        blarr2.push(item.concat([population]));
-    }
-
-    var status_list=[];    
-    var median_str_list=[];
-    for (let one_half of half_list){
-        var blmedian=0;
-        var the_row='';
-        for (let blno=0;blno<blarr2.length-1;blno++){
-            if (blarr2[blno][2]==one_half){
-                the_row=blarr2[blno].toString();
-                blmedian=blarr2[blno][0];
-                break;
+        case 'score':
+            var status_list=[];
+            for (let blxl=blmin;blxl<=blmax;blxl++){
+                var blarr=zj_exam_range_global[blxl.toString()];
+                status_list=status_list.concat(score_value_get_zjedu(blxl,blarr,half_list,range_col));
             }
-            else if (blarr2[blno][2]<one_half && blarr2[blno+1][2]>one_half){
-                the_row=blarr2[blno].toString()+'<hr />'+blarr2[blno+1].toString();
-                blmedian=blarr2[blno+1][0];
-                break;
-            }
-        }
-        if (range_col){
-            median_str_list.push('<td align="right">'+[the_row,blmedian].join('</td><td align="right">')+'</td>');
-        }
-        else {
-            median_str_list.push('<td align="right">'+[blmedian].join('</td><td align="right">')+'</td>');        
-        }
+            document.getElementById('divhtml').innerHTML=range_status_table_zjedu(status_list,half_list,range_col,'score');
+            break;
     }
-
-    status_list.push('<tr><td>'+csyear+'</td><td>'+population+'</td>'+median_str_list.join('')+'</tr>');
-    return status_list;
 }
 
 function range_status_table_zjedu(status_list,half_list,range_show,cstype='percent'){
@@ -783,32 +872,41 @@ function range_status_table_zjedu(status_list,half_list,range_show,cstype='perce
             }
             th=th+'</tr>';        
             break;
+        case 'score':
+            for (let item of half_list){
+                if (range_show){
+                    th=th+'<th nowrap>'+[item+'分取值区间：<br />分数,人数,累计人数',item+'分<br />及以上人数','占比'].join('</th><th nowrap>')+'</th>';
+                }
+                else {
+                    th=th+'<th nowrap>'+[item+'分<br />及以上人数','占比'].join('</th><th nowrap>')+'</th>';
+                }
+            }
+            th=th+'</tr>';
+            break;
     }
     
     return '<table class="table_common">'+th+status_list.join('\n')+'</table>';
 }
 
 function exam_range_flot_zjedu(is_batch=false){
+    var blmin,blmax;
     if (is_batch){
-        var keys=Object.keys(zj_exam_range_global);
-        keys.sort();
-        var blmin=parseInt(keys[0]);
-        var blmax=parseInt(keys[keys.length-1]);
+        [blmin,blmax]=year_range_get_zjedu();
     }
     else {
-        var blmin=parseInt(zj_current_year_global);
-        var blmax=blmin;
+        blmin=parseInt(zj_current_year_global);
+        blmax=blmin;
     }
 
     var median_type=klmenu_check_b('span_median_mark',false);
     var range_show=klmenu_check_b('span_median_range_show',false);
-    
+
+    range_sort_high_2_low_zjedu();
     var flot_list=[];
     for (let blxl=blmin;blxl<=blmax;blxl++){
         var list_t=[blxl+'年#points:false#'];
 
         var blarr=zj_exam_range_global[blxl.toString()];
-        blarr.sort(function (a,b){return a[0]<b[0];});    //分数线从高到低排列 - 保留注释
         if (median_type){
             var blarr2, median_value_dict;
             [blarr2,median_value_dict]=median_value_get_zjedu(blxl,blarr,[0.5],range_show).slice(0,2);
@@ -825,8 +923,9 @@ function exam_range_flot_zjedu(is_batch=false){
     }
     
     document.getElementById('divhtml').innerHTML='';
+    var odiv=canvas_size_set_zjedu();    
     flot_lines_b(flot_list,'div_line_count_flot','nw',false,'','m','人',-1,[],-1,false,false,true);
-    document.getElementById('div_line_count_flot').scrollIntoView();
+    odiv.scrollIntoView();
 }
 
 function exam_range_check_zjedu(){
@@ -846,6 +945,7 @@ function exam_range_check_zjedu(){
         return bljg;
     }
     //---------------------------------------
+    range_sort_high_2_low_zjedu();
     var result_t=[];
     for (let key in zj_exam_range_global){
         var list_score=[];
@@ -981,12 +1081,15 @@ function menu_zjedu(){
     var group_list=[
     [zj_current_year_global+'年','exam_range_flot_zjedu();',true],
     ['历年','exam_range_flot_zjedu(true);',true],
+    ['基尼系数','gini_index_zjedu();',true],
+
     ];    
     klmenu1.push(menu_container_b(str_t,group_list,'分数人数分布图：'));    
 
     var group_list=[
     ['累计人数比例','range_status_type_zjedu(\'percent\');',true],
     ['累计人数','range_status_type_zjedu(\'population\');',true],
+    ['分数线','range_status_type_zjedu(\'score\');',true],
     ];    
     klmenu1.push(menu_container_b(str_t,group_list,'分数人数分布表：'));   
     
