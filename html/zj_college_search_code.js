@@ -928,6 +928,71 @@ function exam_range_flot_zjedu(is_batch=false){
     odiv.scrollIntoView();
 }
 
+function same_record_data_zjedu(){
+    var year_range=prompt('输入年份范围，如2018,2020,2022-2024');
+    if (year_range==null){return;}
+    var year_list=Array.from(str2num_range_b(year_range,1,50));
+
+    range_sort_high_2_low_zjedu();
+
+    var common_arr=[];
+    for (let key in zj_exam_range_global){
+        if (year_list.includes(parseInt(key))){
+            common_arr.push([key,zj_exam_range_global[key].slice(1,)]); //去掉第一个分数档 - 保留注释
+        }
+    }
+    
+    if (common_arr.length<2){
+        alert('未发现2个及以上的年份：'+year_list);
+        return;
+    }
+
+    var score_max=[];
+    var score_min=[];
+    for (let item of common_arr){
+        score_max.push(item[1][0][0]);
+        score_min.push(item[1][item[1].length-1][0]);
+    }
+    
+    score_max=Math.min(...score_max);   //最大值数组中取最小的 - 保留注释
+    score_min=Math.max(...score_min);
+
+    for (let blno=0;blno<common_arr.length;blno++){
+        var item=common_arr[blno];
+        var blat_range=[];
+        for (let blxl=0;blxl<item[1].length;blxl++){
+            if (item[1][blxl][0]==score_max || item[1][blxl][0]==score_min){
+                blat_range.push(blxl);
+                if (blat_range.length==2){break;}
+            }
+        }
+        blat_range.sort();
+        if (blat_range.length==2){
+            common_arr[blno][1]=common_arr[blno][1].slice(blat_range[0],blat_range[1]+1);   //假设分数段是连续的 - 保留注释
+        }
+    }
+    var textarea_list=[];
+    
+    var x_list=[];
+    for (let arow of common_arr[0][1]){
+        x_list.push(arow[0]);
+    }
+    textarea_list.push('"common_x":['+x_list.join(',')+'],');
+        
+    for (let item of common_arr){
+        var x_list=[];
+        var y_list=[];
+        for (let arow of item[1]){
+            x_list.push(arow[0]);
+            y_list.push(arow[1]);
+        }
+        textarea_list.push('"'+item[0]+'y":['+y_list.join(',')+'],');        
+    }
+
+    var odiv=document.getElementById('divhtml');
+    odiv.innerHTML='<div style="margin-left:0.5rem;"><textarea style="height:30rem;">zjdata={\n'+textarea_list.join('\n')+'\n}\n</textarea></div>';
+}
+
 function exam_range_check_zjedu(){
     function sub_exam_range_check_zjedu_array(csarr,range_compare=true){
         var blmin=Math.min(...csarr);
@@ -947,7 +1012,10 @@ function exam_range_check_zjedu(){
     //---------------------------------------
     range_sort_high_2_low_zjedu();
     var result_t=[];
+    var textarea_list=[];
     for (let key in zj_exam_range_global){
+        var x_list=[];
+        var y_list=[];
         var list_score=[];
         var list_count=[];
         var table_list=[];
@@ -957,16 +1025,23 @@ function exam_range_check_zjedu(){
             list_count.push(item[1]);
             total=total+item[1];
             table_list.push('<tr><td align="right">'+item[0]+'</td><td align="right">'+item[1]+'</td><td align="right">'+total+'</td></tr>');
+            x_list.push(item[0]);
+            y_list.push(item[1]);
         }
-        result_t.push('<h3>'+key+'</h3>');        
+        result_t.push('<h3>'+key+' <span class="oblong_box" style="font-size:0.85rem; font-weight:normal;" onclick="popup_show_hide_b(\'table_range_check_'+key+'\');">显示/隐藏</span></h3>');        
         result_t.push('<p><b>score</b> '+sub_exam_range_check_zjedu_array(list_score)+'</p>');
         result_t.push('<p><b>count</b> '+sub_exam_range_check_zjedu_array(list_count,false)+'</p>');
-        result_t.push('<p><span class="aclick" onclick="popup_show_hide_b(\'table_range_check_'+key+'\');">显示</span></p>');        
-        result_t.push('<section style="max-height:30rem;overflow:auto;"><table class="table_common" style="display:none;" id="table_range_check_'+key+'"><tr><th>分数</th><th>人数</th><th>累计人数</th></tr>');
+        result_t.push('<section style="max-height:25rem;overflow:auto;"><table class="table_common" style="display:none;" id="table_range_check_'+key+'"><tr><th>分数</th><th>人数</th><th>累计人数</th></tr>');
         result_t=result_t.concat(table_list);
         result_t.push('</table></section>');
+        
+        textarea_list.push('"'+key+'x":['+x_list.join(',')+'],');
+        textarea_list.push('"'+key+'y":['+y_list.join(',')+'],');        
     }
-    document.getElementById('divhtml').innerHTML='<div style="margin-left:0.5rem;">'+result_t.join('\n')+'</div>';
+    
+    var odiv=document.getElementById('divhtml');
+    odiv.innerHTML='<div style="margin-left:0.5rem;">'+result_t.join('\n')+'<textarea style="height:30rem;">zjdata={\n'+textarea_list.join('\n')+'\n}\n</textarea></div>';
+    mouseover_mouseout_oblong_span_b(odiv.querySelectorAll('span.oblong_box'));    
 }
 
 function th_zjedu(divid,cslist,cstr_string){
@@ -1075,14 +1150,18 @@ function menu_zjedu(){
     var klmenu1=[
     '<a href="https://www.zjzs.net/" target=_blank>浙江省教育考试院</a>',    
     '<span class="span_menu" onclick="'+str_t+'export_csv_zjedu();">导出当前记录为csv</span>',    
-    '<span class="span_menu" onclick="'+str_t+'exam_range_check_zjedu();">分数人数分布表及检验</span>',
     ];
 
+    var group_list=[
+    ['分数人数分布表及检验','exam_range_check_zjedu();',true],
+    ['相同分数数据','same_record_data_zjedu();',true],
+    ];    
+    klmenu1.push(menu_container_b(str_t,group_list,''));    
+    
     var group_list=[
     [zj_current_year_global+'年','exam_range_flot_zjedu();',true],
     ['历年','exam_range_flot_zjedu(true);',true],
     ['基尼系数','gini_index_zjedu();',true],
-
     ];    
     klmenu1.push(menu_container_b(str_t,group_list,'分数人数分布图：'));    
 
