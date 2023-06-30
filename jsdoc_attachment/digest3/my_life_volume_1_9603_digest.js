@@ -23,4 +23,5 @@ var digest_global=`
 *ninepence
 *professorship
 *vocalist
+*wonderland
 `.trim().split('\n');

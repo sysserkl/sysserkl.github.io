@@ -78,4 +78,7 @@ var digest_global=`
 *E. coli
 *amigo
 *antipersonnel
+*Galilee
+*expansionist
+*longbow
 `.trim().split('\n');

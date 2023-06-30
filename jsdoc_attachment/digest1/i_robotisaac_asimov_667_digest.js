@@ -3,4 +3,5 @@ var digest_global=`
 *biophysics
 *extensible
 *nucleic acid
+*urbanization
 `.trim().split('\n');

@@ -106,4 +106,7 @@ var digest_global=`
 *echo chamber
 *menfolk
 *motorist
+*deportation
+*doormat
+*forebear
 `.trim().split('\n');
