@@ -30,7 +30,14 @@ function import_as_js_blank_data(){
         raw_data_len_jscm_global=blank_data_global.length;
     }
     catch (error){
-        alert(error);
+        var info=array_check_b(list_t);
+        if (info==''){
+            alert(error);
+        }
+        else {
+            alert(info);
+        }
+        console.log(error);
     }
     document.getElementById('span_count').innerText='('+raw_data_len_jscm_global+')';
 }

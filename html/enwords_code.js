@@ -231,7 +231,7 @@ function words_queue_update_kle(){
     var blstr=document.getElementById('textarea_words_queue').value.trim();
     var selected_word=document.getElementById('select_queue_words').value;
     if (selected_word==''){
-        if (confirm("是否批量覆盖("+blstr.length+")？")){
+        if (confirm('是否批量覆盖('+blstr.length+')？')){
             localStorage.setItem('enwords_queue',blstr);
             words_queue_select_kle();
             js_alert_b('更新完成','span_queue_words_info');
@@ -257,6 +257,10 @@ function words_queue_update_kle(){
     if (selected_word!=='NEW WORD'){
         for (let blxl=0;blxl<bllen;blxl++){
             if (blxl % 3 == 0 && temp_words[blxl]==selected_word && blxl+2<bllen){
+                if (temp_words[blxl]==word_t[0] && temp_words[blxl+1]==word_t[1] && temp_words[blxl+2]==word_t[2]){
+                    alert('完全一致，未修改');
+                    return;
+                }
                 temp_words[blxl]=word_t[0];
                 temp_words[blxl+1]=word_t[1];
                 temp_words[blxl+2]=word_t[2];
@@ -265,32 +269,33 @@ function words_queue_update_kle(){
             }
         }
     }
+    
     if (blfound===false){
         temp_words=temp_words.concat(word_t);
     }
     
     var list_t=[];
-    var name_list=[];
+    var name_set=new Set();
     for (let blxl=0;blxl<temp_words.length;blxl++){  
         var item=temp_words[blxl];
-        if (blxl % 3 == 0){
-            if (name_list.includes(item)){
+        if (blxl % 3 == 0){ //单词名称行 - 保留注释
+            if (name_set.has(item)){
                 alert('发现重复的单词：'+item+'，取消更新');
                 return;
             }
-            name_list.push(item);
+            name_set.add(item);
         }
         list_t.push(item);
         if (blxl % 3 == 2){
-            list_t.push('---');
+            list_t.push('---'); //在单词释义行后添加分隔行 - 保留注释
         }  
     }
     
     if (selected_word=='NEW WORD' || selected_word==word_t[0]){
-        var blmessage="是否更新("+word_t[0]+")？";
+        var blmessage='是否更新('+word_t[0]+')？';
     }
     else {
-        var blmessage="是否将单词 "+selected_word+" 修改为 "+word_t[0]+" ？";
+        var blmessage='是否将单词 '+selected_word+' 修改为 '+word_t[0]+' ？';
     }
     if (confirm(blmessage)){
         localStorage.setItem('enwords_queue',list_t.join('\n'));

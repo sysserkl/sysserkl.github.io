@@ -3109,3 +3109,20 @@ function percent_calculation_b(starting_value,final_value,current_value){
 
     return Math.abs(blcurrent/blcount);
 }
+
+function array_check_b(cslist){
+    if (typeof cslist == 'string'){
+        cslist=cslist.split('\n');
+    }
+    var current='';
+    try {
+        for (let arow of cslist){
+            current=arow;
+            eval('['+arow+']');
+        }
+    }
+    catch (error){
+        return current;
+    }
+    return '';
+}

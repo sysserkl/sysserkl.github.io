@@ -567,7 +567,14 @@ function import_arr_analyze(){
         list_arr_analyze();
     }
     catch (error){
-        alert(error);
+        var info=array_check_b(blstr);
+        if (info==''){
+            alert(error);
+        }
+        else {
+            alert(info);
+        }
+        console.log(error);
     }               
 }
 
