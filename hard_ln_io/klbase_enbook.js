@@ -171,7 +171,7 @@ function get_new_words_arr_enbook_b(cstype,csstr='',csobjects=false,maxlength=3,
     else {
         sub_get_new_words_arr_enbook_b_objects();
     }
-    console.log('get_new_words_arr_enbook_b() 费时：'+(performance.now() - t0) + " milliseconds");
+    console.log('get_new_words_arr_enbook_b() 费时：'+(performance.now() - t0) + ' milliseconds');
 }
 
 function new_old_word_list_enbook_b(bljgarr2,check_types=true){
@@ -380,19 +380,19 @@ function str_2_array_enbook_b(blstr,cstype='set'){
     blstr=blstr.replace(new RegExp('\\b'+enword_type_b(true)+'\\b','g'),' ');
 
 	//去掉一些英文单引号后的字符 - 保留注释
-    blstr=blstr.replace(new RegExp(/\b[a-zA-Z\'\-_]+\'(s|d|re|t|m|ve|ll)\b/,'g'),' ');
+    blstr=blstr.replace(/\b[a-zA-Z\'\-_]+\'(s|d|re|t|m|ve|ll)\b/g,' ');
     
     //去掉多个连续- - 保留注释
-    blstr=blstr.replace(new RegExp(/\-{2,}/,'g'),' ');
+    blstr=blstr.replace(/\-{2,}/g,' ');
 
 	//去掉&开头接非空字符以;结尾的字符串 - 保留注释
-    blstr=blstr.replace(new RegExp(/&[^&;\s]{1,10};/,'g'),' ');
+    blstr=blstr.replace(/&[^&;\s]{1,10};/g,' ');
 
 	//去掉&lt;开头&gt;结尾的字符串 - 保留注释
-    blstr=blstr.replace(new RegExp(/&lt;[^(&lt;|&gt;)]{1,10}&gt;/,'g'),' ');
+    blstr=blstr.replace(/&lt;[^(&lt;|&gt;)]{1,10}&gt;/g,' ');
 
 	//去掉<开头>结尾的字符串 - 保留注释
-    blstr=blstr.replace(new RegExp(/<[^<>]{1,10}>/,'g'),' ');
+    blstr=blstr.replace(/<[^<>]{1,10}>/g,' ');
                 
     //去掉了单个字母，并保证第一个字符和最后一个字符为字母 - 保留注释
     var bljgarr2=blstr.match(/\b[a-z][a-z\'\-_]*[a-z]\b/ig) || [];

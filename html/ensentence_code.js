@@ -38,9 +38,12 @@ function menu_ensentence(){
         
     var klmenu_config=[
     '<span class="span_menu" onclick="'+str_t+'sentence_source_list_ensentence();">例句出处文章列表</span>',    
-    '<span class="span_menu" onclick="'+str_t+'host_count_ensentence();">例句出处统计</span>',    
+    '<span class="span_menu" onclick="'+str_t+'host_count_ensentence();">例句出处统计</span>',   
     '<span id="span_reg_ensentence" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ reg</span>',
     ];    
+    if (is_local_b()){
+        klmenu_config.push('<span class="span_menu" onclick="'+str_t+'klwiki_length_sort_ensentence();">KLWiki 最短例句</span>');
+    }
     
     var klmenu_link=[
     '<a href="../jsdata/words/enwords_sentence_data.js?'+date2str_b('')+'" onclick="'+str_t+'" target=_blank>enwords_sentence_data.js</a>',    
@@ -193,6 +196,38 @@ function enwords_count_sentence_data_save_ensentence(){
     
     string_2_txt_file_b('var en_sentence_count_global=[\n'+list_t.join('\n')+'\n];\n','enwords_count_sentence_data.js','txt');
 }
+
+function klwiki_length_sort_ensentence(){
+    var t0 = performance.now();
+
+    var result_t=[];
+    for (let blno=0;blno<en_sentence_global.length;blno++){
+        var aline=en_sentence_global[blno];
+        if (aline[2].slice(-4,)=='_TLS'){continue;}
+
+        if (Array.isArray(aline[0])){
+            var blstr=aline[0].join('');
+        }
+        else {
+            var blstr=aline[0];
+        }
+        
+        blstr=blstr.replace(/&lt;eword w=.*?&gt;&lt;\/eword&gt;/g,'');
+        if (blstr.length>50+10){continue;}  //最短例句长度是50 - 保留注释
+        result_t.push([blstr.length,aline]);
+    }
+    
+    result_t.sort(function (a,b){return a[0]>b[0];});
+    result_t=result_t.slice(0,200);
+    for (blxl=0;blxl<result_t.length;blxl++){
+        result_t[blxl]=result_t[blxl][1];
+    }
+    var bljg=sentence_list_2_html_b(result_t,[''],500,false);
+    
+    document.getElementById('divhtml').innerHTML='<div class="div_sentence">'+bljg.join('\n')+'</div><p><i>('+bljg.length+')</i></p>';
+    console.log('klwiki_length_sort_ensentence() 费时：'+(performance.now() - t0) + ' milliseconds');    
+}
+
 
 function rare_old_words_ensentence(show_sentence=true,max_count=2,rows_min=10,rows_max=3000){
     function sub_rare_old_words_ensentence_form(){

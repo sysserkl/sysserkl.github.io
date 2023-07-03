@@ -2728,7 +2728,7 @@ function absearch_kltxt_b(csword='',csreg=-1,csonlyone=false){
                 ablist[bly][1]=[bltmp,blxl];
                 if (bly<ablist.length-1){
                     //将剩余的列表改为空列表 - 保留注释
-                    for (var blz=bly+1;blz<ablist.length;blz++){
+                    for (let blz=bly+1;blz<ablist.length;blz++){
                         ablist[blz][1]=[];
                     }
                     break;
@@ -2743,7 +2743,7 @@ function absearch_kltxt_b(csword='',csreg=-1,csonlyone=false){
                 }
                 else {
                     //如果存在一项搜索结果为空列表 - 保留注释
-                    for (var blz=0;blz<ablist.length;blz++){
+                    for (let blz=0;blz<ablist.length;blz++){
                         if (ablist[blz][1].length==0){
                             match_t=false;
                             break;
@@ -2752,7 +2752,7 @@ function absearch_kltxt_b(csword='',csreg=-1,csonlyone=false){
                 }
                 if (match_t){
                     //循环一边当前存储的值 - 保留注释
-                    for (var blz=0;blz<ablist.length;blz++){
+                    for (let blz=0;blz<ablist.length;blz++){
                         if (ablist[blz][1][0]==''){continue;}
                         list_t.push([ablist[blz][1][0],ablist[blz][1][1]]);
                         if (csonlyone){
@@ -2780,7 +2780,7 @@ function absearch_kltxt_b(csword='',csreg=-1,csonlyone=false){
 
 function en_lines_days_kltxt_b(theday=new Date()){
     function sub_en_lines_days_kltxt_b_h3(csday,line_count_t,wordcount_t){
-        var daystr_t=csday.getFullYear()+"-" + ('0'+(csday.getMonth()+1)).slice(-2) + "-" + ('0'+csday.getDate()).slice(-2)+' 星期'+['日','一','二','三','四','五','六'][csday.getDay()];
+        var daystr_t=csday.getFullYear()+'-'+ ('0'+(csday.getMonth()+1)).slice(-2) + '-' + ('0'+csday.getDate()).slice(-2)+' 星期'+['日','一','二','三','四','五','六'][csday.getDay()];
         var bljg='';
         bljg=bljg+'<h3>'+daystr_t+' ('+line_count_t+'行)</h3>'; 
         return bljg;
@@ -3794,7 +3794,7 @@ function digest_enwords_remove_kltxt_b(cstype=''){
 
         for (let blxl=0;blxl<filelist.length;blxl++){
             if (menu_list.has(blxl)){continue;}
-            if (filelist[blxl].length<50){
+            if (filelist[blxl].length<50){  //例句最短长度 - 保留注释
                 menu_list.add(blxl);
                 continue;
             }

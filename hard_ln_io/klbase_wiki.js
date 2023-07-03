@@ -47,11 +47,11 @@ function wiki_line_b(csstr,attachment_server){
 
 	//nowiki - 保留注释
 	if (csstr.includes('&lt;nowiki&gt;') && csstr.includes('&lt;/nowiki&gt;')){
-		list_t=csstr.match(new RegExp(/&lt;nowiki&gt;.*?&lt;\/nowiki&gt;/,"g"));
+		list_t=csstr.match(/&lt;nowiki&gt;.*?&lt;\/nowiki&gt;/g);
 		for (let blxl=0;blxl<list_t.length;blxl++){
 			var tmp_t=list_t[blxl];
-			tmp_t=tmp_t.replace(new RegExp(/\[/,"g"),'&#91;');
-			tmp_t=tmp_t.replace(new RegExp(/\]/,"g"),'&#93;');
+			tmp_t=tmp_t.replace(/\[/g,'&#91;');
+			tmp_t=tmp_t.replace(/\]/g,'&#93;');
 			tmp_t=tmp_t.substring('&lt;nowiki&gt;'.length,tmp_t.length-'&lt;/nowiki&gt;'.length);
 			csstr=csstr.replace(list_t[blxl],tmp_t);
 		}
@@ -70,19 +70,19 @@ function wiki_line_b(csstr,attachment_server){
     csstr=enwords_b(csstr);
 	//u - 保留注释
 	if (csstr.includes('&lt;u&gt;') && csstr.includes('&lt;/u&gt;')){
-		csstr=csstr.replace(new RegExp(/&lt;u&gt;(.*?)&lt;\/u&gt;/,"g"),'<u>$1</u>');
+		csstr=csstr.replace(/&lt;u&gt;(.*?)&lt;\/u&gt;/g,'<u>$1</u>');
 	}
 	//p - 保留注释
 	if (csstr.includes('&lt;p&gt;') && csstr.includes('&lt;/p&gt;')){
-		csstr=csstr.replace(new RegExp(/&lt;p&gt;(.*?)&lt;\/p&gt;/,"g"),'<p>$1</p>');
+		csstr=csstr.replace(/&lt;p&gt;(.*?)&lt;\/p&gt;/g,'<p>$1</p>');
 	}
 	//sup - 保留注释
 	if (csstr.includes('&lt;sup&gt;') && csstr.includes('&lt;/sup&gt;')){
-		csstr=csstr.replace(new RegExp(/&lt;sup&gt;(.*?)&lt;\/sup&gt;/,"g"),'<sup>$1</sup>');
+		csstr=csstr.replace(/&lt;sup&gt;(.*?)&lt;\/sup&gt;/g,'<sup>$1</sup>');
 	}    
 	//sub - 保留注释
 	if (csstr.includes('&lt;sub&gt;') && csstr.includes('&lt;/sub&gt;')){
-		csstr=csstr.replace(new RegExp(/&lt;sub&gt;(.*?)&lt;\/sub&gt;/,"g"),'<sub>$1</sub>');
+		csstr=csstr.replace(/&lt;sub&gt;(.*?)&lt;\/sub&gt;/g,'<sub>$1</sub>');
 	}        
     //quote - 保留注释
 	if (csstr.includes('{{quote') && csstr.includes('{{/quote}}') || csstr.includes('{{span') && csstr.includes('{{/span}}')){
@@ -90,11 +90,11 @@ function wiki_line_b(csstr,attachment_server){
 	}
 	//br - 保留注释
 	if (csstr.includes('&lt;br /&gt;')){
-		csstr=csstr.replace(new RegExp(/&lt;br \/&gt;/,"g"),'<br />');
+		csstr=csstr.replace(/&lt;br \/&gt;/g,'<br />');
 	}        
 	//font - 保留注释
 	if (csstr.includes('&lt;font ') && csstr.includes('&lt;/font&gt;')){
-		csstr=csstr.replace(new RegExp(/&lt;font (.*?)&gt;(.*?)&lt;\/font&gt;/,"g"),'<font $1>$2</font>');
+		csstr=csstr.replace(/&lt;font (.*?)&gt;(.*?)&lt;\/font&gt;/g,'<font $1>$2</font>');
 	}
 	//''' - 保留注释
 	//'' - 保留注释
@@ -116,63 +116,63 @@ function wiki_href_b(csstr){
 	//http
     if (csstr.includes('[mailto:') && csstr.includes(']') && csstr.includes(' ')){
         //[mailto:aa@bbc.om xxxx] - 保留注释
-        csstr=csstr.replace(new RegExp(/\[(mailto:[^ ]*?) (.*?)\]/,"ig"),'<a href="$1" target=_blank>$2</a>');
+        csstr=csstr.replace(/\[(mailto:[^ ]*?) (.*?)\]/ig,'<a href="$1" target=_blank>$2</a>');
     }
     
 	if (csstr.includes('http')){
         //[http] no title,just link
 		if (csstr.includes('[http') && csstr.includes(']')){
-			csstr=csstr.replace(new RegExp(/\[(https?:\/\/[^ ]*?)\]/,"ig"),'<a href="$1" target=_blank>$1</a>');
+			csstr=csstr.replace(/\[(https?:\/\/[^ ]*?)\]/ig,'<a href="$1" target=_blank>$1</a>');
 		}
 		//[http ]
 		if (csstr.includes('[http') && csstr.includes(']') && csstr.includes(' ')){
-			csstr=csstr.replace(new RegExp(/\[(https?:\/\/[^ ]*?) (.*?)\]/,"ig"),'<a href="$1" target=_blank>$2</a>');
+			csstr=csstr.replace(/\[(https?:\/\/[^ ]*?) (.*?)\]/ig,'<a href="$1" target=_blank>$2</a>');
 		}
 		//^http
 		if (csstr.indexOf('http')==0){
-			csstr=csstr.replace(new RegExp(/(^https?:\/\/[^ ]*?([^\/]*?)\.(jpg|jpeg|png|gif|bmp|webp)) /,"ig"),'<img src="$1" title="$1" /> ');
-			csstr=csstr.replace(new RegExp(/(^https?:\/\/[^ ]*?([^\/]*?)\.(jpg|jpeg|png|gif|bmp|webp)$)/,"ig"),'<img src="$1" title="$1" />');
+			csstr=csstr.replace(/(^https?:\/\/[^ ]*?([^\/]*?)\.(jpg|jpeg|png|gif|bmp|webp)) /ig,'<img src="$1" title="$1" /> ');
+			csstr=csstr.replace(/(^https?:\/\/[^ ]*?([^\/]*?)\.(jpg|jpeg|png|gif|bmp|webp)$)/ig,'<img src="$1" title="$1" />');
 			
-			csstr=csstr.replace(new RegExp(/(^https?:\/\/[^ ]+) /,"ig"),'<a href="$1" target=_blank>$1</a> ');
-			csstr=csstr.replace(new RegExp(/(^https?:\/\/[^ ]+)/,"ig"),'<a href="$1" target=_blank>$1</a>');
+			csstr=csstr.replace(/(^https?:\/\/[^ ]+) /ig,'<a href="$1" target=_blank>$1</a> ');
+			csstr=csstr.replace(/(^https?:\/\/[^ ]+)/ig,'<a href="$1" target=_blank>$1</a>');
 		}
 		// http
 		if (csstr.includes(' http')){
-			csstr=csstr.replace(new RegExp(/ (https?:\/\/[^ ]*?([^\/]*?)\.(jpg|jpeg|png|gif|bmp|webp)) /,"ig"),' <br /><img src="$1" title="$1" /> ');
-			csstr=csstr.replace(new RegExp(/ (https?:\/\/[^ ]*?([^\/]*?)\.(jpg|jpeg|png|gif|bmp|webp)$)/,"ig"),' <br /><img src="$1" title="$1" />');
+			csstr=csstr.replace(/ (https?:\/\/[^ ]*?([^\/]*?)\.(jpg|jpeg|png|gif|bmp|webp)) /ig,' <br /><img src="$1" title="$1" /> ');
+			csstr=csstr.replace(/ (https?:\/\/[^ ]*?([^\/]*?)\.(jpg|jpeg|png|gif|bmp|webp)$)/ig,' <br /><img src="$1" title="$1" />');
 			
-			csstr=csstr.replace(new RegExp(/ (https?:\/\/[^ ]+) /,"ig"),' <a href="$1" target=_blank>$1</a> ');
-			csstr=csstr.replace(new RegExp(/ (https?:\/\/[^ ]+)/,"ig"),' <a href="$1" target=_blank>$1</a>');
+			csstr=csstr.replace(/ (https?:\/\/[^ ]+) /ig,' <a href="$1" target=_blank>$1</a> ');
+			csstr=csstr.replace(/ (https?:\/\/[^ ]+)/ig,' <a href="$1" target=_blank>$1</a>');
 		}
 		
 		//chinese
-		csstr=csstr.replace(new RegExp(/([^\x00-\xff])(https?:\/\/[^ ]*?([^\/]*?)\.(jpg|jpeg|png|gif|bmp|webp)) /,"ig"),'$1<br /><img src="$2" title="$1"> ');
-		csstr=csstr.replace(new RegExp(/([^\x00-\xff])(https?:\/\/[^ ]*?([^\/]*?)\.(jpg|jpeg|png|gif|bmp|webp)$)/,"ig"),'$1<br /><img src="$2" title="$1" />');
+		csstr=csstr.replace(/([^\x00-\xff])(https?:\/\/[^ ]*?([^\/]*?)\.(jpg|jpeg|png|gif|bmp|webp)) /ig,'$1<br /><img src="$2" title="$1"> ');
+		csstr=csstr.replace(/([^\x00-\xff])(https?:\/\/[^ ]*?([^\/]*?)\.(jpg|jpeg|png|gif|bmp|webp)$)/ig,'$1<br /><img src="$2" title="$1" />');
 		
-		csstr=csstr.replace(new RegExp(/([^\x00-\xff])(https?:\/\/[^ ]+) /,"ig"),'$1<a href="$2" target=_blank>$2</a> ');
-		csstr=csstr.replace(new RegExp(/([^\x00-\xff])(https?:\/\/[^ ]+)/,"ig"),'$1<a href="$2" target=_blank>$2</a>');
+		csstr=csstr.replace(/([^\x00-\xff])(https?:\/\/[^ ]+) /ig,'$1<a href="$2" target=_blank>$2</a> ');
+		csstr=csstr.replace(/([^\x00-\xff])(https?:\/\/[^ ]+)/ig,'$1<a href="$2" target=_blank>$2</a>');
 	}
     //[?] no title,just link
     if (csstr.includes('[?') && csstr.includes(']')){
-        csstr=csstr.replace(new RegExp(/\[\?([^ ]*?)\]/,"ig"),'<a href="?$1" target=_blank>$1</a>');
+        csstr=csstr.replace(/\[\?([^ ]*?)\]/ig,'<a href="?$1" target=_blank>$1</a>');
     }
     //[? ]
     if (csstr.includes('[?') && csstr.includes(']') && csstr.includes(' ')){
-        csstr=csstr.replace(new RegExp(/\[(\?[^ ]*?) (.*?)\]/,"ig"),'<a href="$1" target=_blank>$2</a>');
+        csstr=csstr.replace(/\[(\?[^ ]*?) (.*?)\]/ig,'<a href="$1" target=_blank>$2</a>');
     }
     return csstr;
 }
 
 function wiki_strong_b(csstr,underline=false){
     if (underline){
-        csstr=csstr.replace(new RegExp(/'''(.*?)'''/,"g"),'<strong style="border-bottom:0.5rem double '+scheme_global['pink']+';">$1</strong>');
-        csstr=csstr.replace(new RegExp(/([^=])''(.*?)''/,"g"),'$1<i style="border-bottom:0.5rem dotted '+scheme_global['pink']+';">$2</i>');
-        csstr=csstr.replace(new RegExp(/^''(.*?)''/,"g"),'<i style="border-bottom:0.5rem dotted '+scheme_global['pink']+';">$1</i>');
+        csstr=csstr.replace(/'''(.*?)'''/g,'<strong style="border-bottom:0.5rem double '+scheme_global['pink']+';">$1</strong>');
+        csstr=csstr.replace(/([^=])''(.*?)''/g,'$1<i style="border-bottom:0.5rem dotted '+scheme_global['pink']+';">$2</i>');
+        csstr=csstr.replace(/^''(.*?)''/g,'<i style="border-bottom:0.5rem dotted '+scheme_global['pink']+';">$1</i>');
     }
     else {
-        csstr=csstr.replace(new RegExp(/'''(.*?)'''/,"g"),'<strong>$1</strong>');
-        csstr=csstr.replace(new RegExp(/([^=])''(.*?)''/,"g"),'$1<i>$2</i>');
-        csstr=csstr.replace(new RegExp(/^''(.*?)''/,"g"),'<i>$1</i>');
+        csstr=csstr.replace(/'''(.*?)'''/g,'<strong>$1</strong>');
+        csstr=csstr.replace(/([^=])''(.*?)''/g,'$1<i>$2</i>');
+        csstr=csstr.replace(/^''(.*?)''/g,'<i>$1</i>');
     }
     return csstr;
 }
@@ -207,14 +207,14 @@ function wiki_base64_b(csstr){
             bljg=bljg+aline+'\n';
         }
     }
-    bljg=bljg.replace(new RegExp(/base64_BEGIN(.*?)base64_END/,"g"),'<img src="$1" />');
+    bljg=bljg.replace(/base64_BEGIN(.*?)base64_END/g,'<img src="$1" />');
     return bljg;
 }
 
 function wiki_quote_b(csstr,multi_lines=false){
     var rstyle='g';
     if (multi_lines){
-        rstyle="gm";
+        rstyle='gm';
     }
     if (csstr.includes('{{quote') && csstr.includes('{{/quote}}')){
         csstr=csstr.replace(new RegExp(/{{quote}}(.*?){{\/quote}}/,rstyle),'<div style="width:90%;border:solid 1px #6396D6;background-color:#E7EBEF;padding:0.2rem 0.5rem;">$1</div>');
@@ -239,23 +239,23 @@ function wiki_quote_b(csstr,multi_lines=false){
     return csstr;
 }
 
-function wiki_photo_b(csstr,cstyle=""){
+function wiki_photo_b(csstr,cstyle=''){
     if (cstyle=='and'){
         if (csstr.includes('&lt;photo&gt;') && csstr.includes('&lt;/photo&gt;')){
-            csstr=csstr.replace(new RegExp(/&lt;photo&gt;(.*?)&lt;\/photo&gt;/,"g"),'<img src="$1" title="$1" />');
+            csstr=csstr.replace(/&lt;photo&gt;(.*?)&lt;\/photo&gt;/g,'<img src="$1" title="$1" />');
         }
     }
     else {
         if (csstr.includes('<photo>') && csstr.includes('</photo>')){
-            csstr=csstr.replace(new RegExp(/<photo>(.*?)<\/photo>/,"g"),'<img src="$1" title="$1" />');
+            csstr=csstr.replace(/<photo>(.*?)<\/photo>/g,'<img src="$1" title="$1" />');
         }
     }
     return csstr;
 }
 
-function wiki_ed2k_magnet_b(csstr,cstyle=""){
+function wiki_ed2k_magnet_b(csstr,cstyle=''){
     function sub_wiki_ed2k_magnet_b_filesize(csstr){
-        var fsizelist_t=csstr.match(new RegExp(/<filesize>.*?<\/filesize>/,"g"));
+        var fsizelist_t=csstr.match(/<filesize>.*?<\/filesize>/g);
         var bldw='';
         for (var blxl in fsizelist_t){
             var blsize=parseInt(fsizelist_t[blxl].substring('<filesize>'.length,fsizelist_t[blxl].length-'</filesize>'.length).trim());
@@ -264,22 +264,22 @@ function wiki_ed2k_magnet_b(csstr,cstyle=""){
         return csstr;
     }
     //---------------
-    if (cstyle=="and"){
+    if (cstyle=='and'){
         //ed2k
         if (csstr.includes('&lt;ed2k name=&quot;') && csstr.includes('&lt;/ed2k&gt;')){
-            csstr=csstr.replace(new RegExp(/&lt;ed2k name=&quot;(.*?)&quot;&gt;(ed2k:\/\/\|.*?\|.*?\|(.*?)\|.*?)&lt;\/ed2k&gt;/,"g"),'<a href="$2">$1</a><filesize>$3</filesize>');
+            csstr=csstr.replace(/&lt;ed2k name=&quot;(.*?)&quot;&gt;(ed2k:\/\/\|.*?\|.*?\|(.*?)\|.*?)&lt;\/ed2k&gt;/g,'<a href="$2">$1</a><filesize>$3</filesize>');
             csstr=sub_wiki_ed2k_magnet_b_filesize(csstr);
         }
         else if (csstr.includes('&lt;ed2k name="') && csstr.includes('&lt;/ed2k&gt;')){
-            csstr=csstr.replace(new RegExp(/&lt;ed2k name="(.*?)"&gt;(ed2k:\/\/\|.*?\|.*?\|(.*?)\|.*?)&lt;\/ed2k&gt;/,"g"),'<a href="$2">$1</a><filesize>$3</filesize>');
+            csstr=csstr.replace(/&lt;ed2k name="(.*?)"&gt;(ed2k:\/\/\|.*?\|.*?\|(.*?)\|.*?)&lt;\/ed2k&gt;/g,'<a href="$2">$1</a><filesize>$3</filesize>');
             csstr=sub_wiki_ed2k_magnet_b_filesize(csstr);
         }
         else if (csstr.includes('&lt;ed2k name=') && csstr.includes('&lt;/ed2k&gt;')){
-            csstr=csstr.replace(new RegExp(/&lt;ed2k name=(.*?)&gt;(ed2k:\/\/\|.*?\|.*?\|(.*?)\|.*?)&lt;\/ed2k&gt;/,"g"),'<a href="$2">$1</a><filesize>$3</filesize>');
+            csstr=csstr.replace(/&lt;ed2k name=(.*?)&gt;(ed2k:\/\/\|.*?\|.*?\|(.*?)\|.*?)&lt;\/ed2k&gt;/g,'<a href="$2">$1</a><filesize>$3</filesize>');
             csstr=sub_wiki_ed2k_magnet_b_filesize(csstr);
         }	
         else if (csstr.includes('&lt;ed2k&gt;') && csstr.includes('&lt;/ed2k&gt;')){
-            csstr=csstr.replace(new RegExp(/&lt;ed2k&gt;(ed2k:\/\/\|.*?\|.*?\|(.*?)\|.*?)&lt;\/ed2k&gt;/,"g"),'<a href="$1">ed2k</a><filesize>$2</filesize>');
+            csstr=csstr.replace(/&lt;ed2k&gt;(ed2k:\/\/\|.*?\|.*?\|(.*?)\|.*?)&lt;\/ed2k&gt;/g,'<a href="$1">ed2k</a><filesize>$2</filesize>');
             csstr=sub_wiki_ed2k_magnet_b_filesize(csstr);
         }
         
@@ -424,7 +424,7 @@ function wiki_ul_b(csstr,csstyle=''){
     return csstr;
 }
 
-function wiki_font_color_b(csstr,cstyle=""){
+function wiki_font_color_b(csstr,cstyle=''){
     //<fc=red>xxxxxx</fc> <fc=#ff0000></fc>
     if (cstyle=='and'){
         if (csstr.includes('&lt;fc=') && csstr.includes('&lt;/fc&gt;')){

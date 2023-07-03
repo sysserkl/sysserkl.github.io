@@ -359,16 +359,10 @@ function show_sentence_enwc_b(maxlines=0,showcount=true,is_random=false,show_but
     }
     else {
         if (ismobile_b()){
-            var csmax=10;
-            if (oaslen>10){
-                csmax=5;
-            }
+            var csmax=(oaslen>10?5:10);
         }
         else {
-            var csmax=20;
-            if (oaslen>10){
-                csmax=10;
-            }
+            var csmax=(oaslen>10?10:20);
         }
     }
     //-------------------

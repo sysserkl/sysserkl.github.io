@@ -508,7 +508,7 @@ function lines_enword_total_b(clicked_ospan=false){
 
 function enwords_b(csstr,cstype=''){
 	//<eword w=zoo></eword> - 保留注释
-    if (csstr.indexOf('&lt;eword')<0 || csstr.indexOf('&lt;/eword&gt;')<0){
+    if (!csstr.includes('&lt;eword') || !csstr.includes('&lt;/eword&gt;')){
         if (cstype=='array'){
             return [];
         }
@@ -536,9 +536,8 @@ function enwords_b(csstr,cstype=''){
         return list_t;
     }
     else {
-        var bljg='';
-        bljg=csstr.replace(new RegExp(/&lt;eword w=(&quot;|")(.*?)\1&gt;&lt;\/eword&gt;/,"g"),sup_kleng_style_b()+'$2</sup>');
-        bljg=bljg.replace(new RegExp(/&lt;eword w=(.*?)(&gt;|\s).*?&lt;\/eword&gt;/,"g"),sup_kleng_style_b()+'$1</sup>');
+        var bljg=csstr.replace(/&lt;eword w=(&quot;|")(.*?)\1&gt;&lt;\/eword&gt;/g,sup_kleng_style_b()+'$2</sup>');
+        bljg=bljg.replace(/&lt;eword w=(.*?)(&gt;|\s).*?&lt;\/eword&gt;/g,sup_kleng_style_b()+'$1</sup>');
         return bljg;
     }
 }
@@ -593,8 +592,8 @@ function en_sentence_one_line_b(aline,wordname='',attachment_path='',wikisite=''
     if (typeof wordname == 'string'){
         wordname=[wordname];
     }
+    
     var blmatch=false;
-
     for (let aword of wordname){
         if (aword==''){
             blmatch=true;
@@ -618,7 +617,7 @@ function en_sentence_one_line_b(aline,wordname='',attachment_path='',wikisite=''
     }
     
     if (!keep_kleng){
-        item=item.replace(new RegExp(/&lt;eword.*?&gt;&lt;\/eword&gt;/,'g'),'');
+        item=item.replace(/&lt;eword.*?&gt;&lt;\/eword&gt;/g,'');
     }
     
     for (let aword of wordname){
@@ -654,7 +653,7 @@ function en_sentence_one_line_b(aline,wordname='',attachment_path='',wikisite=''
     if (wikisite!==''){
         if (aline[2].slice(-4,)=='_TLS'){
             var blstr=aline[2].slice(0,-4);
-            wiki_source='<a href="'+wikisite+encodeURIComponent(blstr.replace(new RegExp(/[\+\s\?\*\-\\\[\]\(\)\']/,'g'),'.'))+'_reg&s='+wordname+'" target=_blank>'+blstr+'</a>';
+            wiki_source='<a href="'+wikisite+encodeURIComponent(blstr.replace(/[\+\s\?\*\-\\\[\]\(\)\']/g,'.'))+'_reg&s='+wordname+'" target=_blank>'+blstr+'</a>';
         }
         else {
             wiki_source='<a href="'+wikisite+encodeURIComponent(aline[2])+'" target=_blank>'+aline[2]+'</a>';
@@ -673,6 +672,10 @@ function en_sentence_one_line_b(aline,wordname='',attachment_path='',wikisite=''
 }
 
 function en_sentence_result_b(wordname,csmax=-1,fontsize='',attachment_path='',wikisite='',txtlistsearch_site='',button_str='',no_start=0){
+    function sub_en_sentence_result_b_statistics(){
+        console.log('扫描例句条数：',split_no_set.size,'；例句总条数：',en_sentence_global.length,'；占比：',(split_no_set.size*100/en_sentence_global.length).toFixed(2)+'%');    
+    }
+    //----------------------------------
     if (en_sentence_global.length==0){
         return ['',0,0];
     }
@@ -690,6 +693,7 @@ function en_sentence_result_b(wordname,csmax=-1,fontsize='',attachment_path='',w
     }
     var p_style=en_sentence_p_style_b(fontsize);
     
+    var split_no_set=new Set();
     if (Array.isArray(wordname)){
         var sentence_list={};
         for (let aword of wordname){
@@ -703,6 +707,7 @@ function en_sentence_result_b(wordname,csmax=-1,fontsize='',attachment_path='',w
             
                 var search_site=(aline[2].slice(-4,)=='_TLS'?txtlistsearch_site:wikisite);
                 var line_split=sentence_split_b(aline[0],blno);
+                split_no_set.add(blno);
                 for (let arow of line_split){
                     var str_t=en_sentence_one_line_b([arow].concat(aline.slice(1,)),aword,attachment_path,search_site,button_str);
                     if (str_t!==''){
@@ -714,6 +719,8 @@ function en_sentence_result_b(wordname,csmax=-1,fontsize='',attachment_path='',w
                 }
             }
         }
+        
+        sub_en_sentence_result_b_statistics();
         return sentence_list;
     }
     else {
@@ -725,6 +732,8 @@ function en_sentence_result_b(wordname,csmax=-1,fontsize='',attachment_path='',w
             var search_site=(aline[2].slice(-4,)=='_TLS'?txtlistsearch_site:wikisite);
             var do_break=false;
             var line_split=sentence_split_b(aline[0],blno);
+            split_no_set.add(blno);
+
             for (let arow of line_split){
                 var str_t=en_sentence_one_line_b([arow].concat(aline.slice(1,)),wordname,attachment_path,search_site,button_str);
                 if (str_t!==''){
@@ -739,6 +748,8 @@ function en_sentence_result_b(wordname,csmax=-1,fontsize='',attachment_path='',w
             }
             if (do_break){break;}
         }
+        
+        sub_en_sentence_result_b_statistics();
         return [bljg,blxl,no_next];
     }
 }

@@ -363,7 +363,7 @@ function words_editor_form_kle(){
     bljg=bljg+textarea_buttons_b('textarea_words_queue','全选,清空,复制,发送到临时记事本,发送地址','enwords_queue')+' ';    
     
     bljg=bljg+'<select id="select_queue_do_type">';
-    for (let item of ['展现为数组形式','数组转为多行形式','enminor_search']){
+    for (let item of ['展现为数组形式','数组转为多行形式','batch_en','batch_en_minor']){
         bljg=bljg+'<option>'+item+'</option>';
     }
     bljg=bljg+'</select> ';
@@ -411,12 +411,13 @@ function words_queue_do_type_kle(){
         case '数组转为多行形式':
             words_array_2_lines_kle(); 
             break;
-        case 'enminor_search':
+        case 'batch_en':
+        case 'batch_en_minor':
             var otextarea=document.getElementById('textarea_words_queue');
             var blstr=otextarea.value.trim().split('\n')[0];
             if (blstr!==''){
-                if (confirm('是否 en minor search [ '+blstr+' ] ？')){
-                    window.open('klsearch.htm?k='+blstr+'&t=batch_en_minor&close=0');
+                if (confirm('是否 '+bltype+' [ '+blstr+' ] ？')){
+                    window.open('klsearch.htm?k='+blstr+'&t='+bltype+(bltype=='batch_en'?'&iframe':'&close=0'));
                 }
             }
             break;
