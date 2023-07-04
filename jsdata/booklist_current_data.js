@@ -1,4 +1,6 @@
 var csbooklist_source_global=[
+["the_imitation_of_christ_2161", "The Imitation of Christ(à Kempis Thomas)","已整理,englishwords","3",""],
+["the_varieties_of_religious_experience_asihn_5699", "The Varieties of Religious Experience- A Study in Human Nature(William James)","已整理,englishwords","3",""],
 ["ulyssesjames_joyce_760", "Ulysses(James Joyce)","已整理,englishwords","3",""],
 ["a_modest_proposal", "A Modest Proposal(Jonathan Swift)","已整理,englishwords","3",""],
 ["the_count_of_monte_cristo_i_3535", "The Count of Monte Cristo, Illustrated(Alexandre Dumas)","已整理,englishwords","3",""],
