@@ -32,4 +32,6 @@ var digest_global=`
 *soft drink
 *habitat
 *copilot
+*armband
+*motherfucker
 `.trim().split('\n');

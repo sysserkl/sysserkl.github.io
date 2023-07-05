@@ -32,4 +32,5 @@ var digest_global=`
 *cornmeal
 *Zambia
 *medalist
+*faucet
 `.trim().split('\n');

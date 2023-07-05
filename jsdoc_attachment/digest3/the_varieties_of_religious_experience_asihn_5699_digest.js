@@ -1,2 +1,20 @@
 var digest_global=`
+*Elisha
+*Harrisburg
+*Melanesian
+*Tyndall
+*Whitsunday
+*anabaptist
+*autobiographic
+*autobiographical
+*cannibalistic
+*idealize
+*misplace
+*monotheism
+*naturalism
+*polyhedron
+*polytheism
+*reintroduce
+*restate
+*self-contradiction
 `.trim().split('\n');

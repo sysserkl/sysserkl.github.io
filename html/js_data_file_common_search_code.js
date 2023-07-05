@@ -455,3 +455,13 @@ function locate_common(pages){
         page_common((blno-1)*rows_per_page_jscm_global+1);
     }        
 }
+
+function flot_load_common(file1=['flot'],flot_type=['time','symbol'],file2=[],file3=[],file4=[]){
+    function sub_flot_load_common_flot(){
+        flot_import_js_b(flot_type,false,'dom'); 
+    }
+    //------------------
+    var file_list=klbase_addons_import_js_b(file1,file2,file3,file3,true,false);
+    file_dom_create_b(file_list,true,'js');
+    load_fn_b('flot_import_js_b',-1,2000,sub_flot_load_common_flot);
+}

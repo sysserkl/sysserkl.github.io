@@ -27,4 +27,5 @@ var digest_global=`
 *bodybuilder
 *counterclockwise
 *slowdown
+*hamster
 `.trim().split('\n');

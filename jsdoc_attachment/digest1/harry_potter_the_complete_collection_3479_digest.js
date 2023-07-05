@@ -26,7 +26,6 @@ var digest_global=`
 *outta
 *Paddington
 *postage
-*puffer
 *redheaded
 *rucksack
 *schoolbag

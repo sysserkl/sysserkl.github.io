@@ -6,4 +6,5 @@ var digest_global=`
 *Damocles
 *legislate
 *photocopy
+*Whitehall
 `.trim().split('\n');

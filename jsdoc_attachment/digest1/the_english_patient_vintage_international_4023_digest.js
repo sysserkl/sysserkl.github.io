@@ -72,4 +72,5 @@ var digest_global=`
 *ostrich
 *Marseillaise
 *hearing aid
+*lionlike
 `.trim().split('\n');

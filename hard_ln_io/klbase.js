@@ -1693,9 +1693,14 @@ function textarea_buttons_b(textarea_id,csbuttons,cstype='',csstyle='',span_clas
     if (csbuttons.includes('打开临时记事本') || csbuttons.includes('open remote temp memo')){
         bljg=bljg+'<a'+csstyle+' href="'+postpath+'temp_txt_share.php'+(cstype==''?'':'?type='+cstype)+'" class="a_oblong_box" target=_blank>open remote temp memo('+remote_host.slice(-3,)+')</a> ';
     }
+    if (csbuttons.includes('➕')){
+        var bladdress=postpath+'temp_txt_append.php';
+        bljg=bljg+'<a class="'+span_class+'"'+csstyle+' href="'+bladdress+'" title="'+bladdress+'" target=_blank">➕</a> ';
+    }
+        
     if (csbuttons.includes('发送地址') || csbuttons.includes('set remote address')){
         var bladdress=postpath+'temp_txt_share.php'+(cstype==''?'':'?type='+cstype);
-        bljg=bljg+'<span class="aclick"'+csstyle+' onclick="kl_remote_host_address_b();" title="set remote address">⛓</span>：<a'+csstyle+' href="'+bladdress+'" target=_blank>'+bladdress+'</a>';
+        bljg=bljg+'<span class="'+span_class+'"'+csstyle+' onclick="kl_remote_host_address_b();" title="set remote address">⛓</span>：<a'+csstyle+' href="'+bladdress+'" target=_blank>'+(remote_host.includes('//')?remote_host.split('//')[1]:remote_host)+' | temp_txt_share.php '+(cstype==''?'':' | '+cstype)+'</a>';
     }
     return bljg;
 }

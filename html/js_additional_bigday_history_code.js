@@ -4,13 +4,7 @@ function style_load_bigday_history(){
 }
 
 function file_load_bigday_history(){
-    function sub_file_load_bigday_history_flot(){
-        flot_import_js_b(['time','symbol'],false,'dom'); 
-    }
-    //------------------
-    var file_list=klbase_addons_import_js_b(['date','flot'],[],[],[],true,false);
-    file_dom_create_b(file_list,true,'js');
-    load_fn_b('flot_import_js_b',-1,2000,sub_file_load_bigday_history_flot);
+    flot_load_common(['data','flot'],['time','symbol']);
 }
 
 function data_load_bigday_history(array_name){
