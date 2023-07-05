@@ -2353,21 +2353,20 @@ function array_2_local_storage_b(idname,csarray){
 }
 
 function wiki_link_punctuation_b(csstr){
-    csstr=csstr.replace(RegExp(/&amp;/,'g'),'.26');
-    csstr=csstr.replace(RegExp(/&/,'g'),'.26');
-    csstr=csstr.replace(RegExp(/'/,'g'),'.27');
-    csstr=csstr.replace(RegExp(/=/,'g'),'.3D');
-    csstr=csstr.replace(RegExp(/\?/,'g'),'.3F');
-    csstr=csstr.replace(RegExp(/~/,'g'),'.7E');
-    csstr=csstr.replace(RegExp(/!/,'g'),'.21');
-    csstr=csstr.replace(RegExp(/,/,'g'),'.2C');
-    //csstr=csstr.replace(RegExp(/\|/,'g'),'.7C');
-    csstr=csstr.replace(RegExp(/\(/,'g'),'.28');
-    csstr=csstr.replace(RegExp(/\)/,'g'),'.29');
-    csstr=csstr.replace(RegExp(/\$/,'g'),'.24');
-    csstr=csstr.replace(RegExp(/\//,'g'),'.2F');
+    csstr=csstr.replace(/&amp;/g,'.26');
+    csstr=csstr.replace(/&/g,'.26');
+    csstr=csstr.replace(/'/g,'.27');
+    csstr=csstr.replace(/=/g,'.3D');
+    csstr=csstr.replace(/\?/g,'.3F');
+    csstr=csstr.replace(/~/g,'.7E');
+    csstr=csstr.replace(/!/g,'.21');
+    csstr=csstr.replace(/,/g,'.2C');
+    csstr=csstr.replace(/\(/g,'.28');
+    csstr=csstr.replace(/\)/g,'.29');
+    csstr=csstr.replace(/\$/g,'.24');
+    csstr=csstr.replace(/\//g,'.2F');
 
-    csstr=csstr.replace(RegExp(/\s+/,'g'),'_'); //合并多个空格 - 保留注释
+    csstr=csstr.replace(/\s+/g,'_'); //合并多个空格 - 保留注释
     
     return encodeURI(csstr);
 }

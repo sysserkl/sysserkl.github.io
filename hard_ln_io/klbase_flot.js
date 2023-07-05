@@ -459,6 +459,7 @@ function statistics_data_type_b(data_type){
             ['enwords_non_ensentence','无例句单词',0,'/'],
             ['enwords_rare_ensentence','例句最少单词',0,'/'],
             ['cached_records_count_enbook','已缓存的selenium英语单词文章链接',0,'/'],
+            ['enwords_selenium_new_words','selenium 新单词数',0,'/'],
             ['all_new_words_statistics','全部新单词',0,'/'],
             ['enwords_sentence_rows','例句行数',0,'/'],
             ['en_article_statistics','文章数',0,': '],

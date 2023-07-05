@@ -364,18 +364,21 @@ function selenium_list_popular_enwords_book(){
     }
     word_list=object2array_b(word_list,true);
     word_list.sort(function (a,b){return a[1]<b[1];});
-    
+
     var oldset=simple_words_b();
     var result_t=[];
     var blxl=0;
     for (let item of word_list){
-        if (item[1]==1){break;}
         if (oldset.has(item[0])){continue;}
-        result_t.push(item[0]);
+
+        if (item[1]>1){
+            result_t.push(item[0]);
+        }
         blxl=blxl+1;
-        if (blxl>=1000){break;}
     }
     document.getElementById('textarea_new_words1').value=result_t.join(' ');
+    document.getElementById('textarea_new_words2').value='共有新单词 '+blxl+' 个';
+    local_storage_today_b('enwords_selenium_new_words',40,blxl,'/');
     get_new_words_arr_enbook_b(2);
 }
 
