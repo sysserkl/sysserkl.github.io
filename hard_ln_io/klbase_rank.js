@@ -49,7 +49,7 @@ function show_hide_rank_b(table_id,cstype){
 
 function buttons_rank_b(caption,search_fn){
     var blstr='';
-    blstr=blstr+'<h2 style="margin:0rem;font-size:1.35rem;"><span id="span_title">'+caption+'</span></h2>\n';
+    blstr=blstr+'<h2 style="margin:0rem;font-size:1.35rem;"><span id="span_title">'+caption+'</span><span id="span_count" style="font-weight:normal;font-size:0.9rem;"></span></h2>\n';
     blstr=blstr+'<p style="margin-left:0.5rem;">';
     blstr=blstr+'<input type="text" id="input_search" onkeyup="if (event.key==\'Enter\'){'+search_fn+'}"> ';
     blstr=blstr+'<label><input type="checkbox" id="input_reg">正则</label>';    

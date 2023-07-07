@@ -583,11 +583,11 @@ function strquick_klr_b(cstype='',csid='textarea_rows_content',status_id='textar
         case 'jieba':
             var otextarea = document.getElementById(csid);
             var arr_t = count_words_b(otextarea.value,split_words_b(otextarea.value,true),2);
-            var str_t='';
+            var str_t=[];
             for (let item of arr_t){
-                str_t=str_t+item[0]+' ';
+                str_t.push(item[0]);
             }
-            otextarea.value = str_t+'\n\n'+arr_t;
+            otextarea.value = str_t.join(' ')+'\n\n'+arr_t;
             break;
         case 'n_br':
             replace_strs_klr_b('\n','\n<br />',csid);

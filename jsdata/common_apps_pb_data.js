@@ -65,7 +65,7 @@ var common_apps_pb_global=[
 ["{{selenium_news}}/html/society_data_analyze.htm","Society Data Analyze","society_data_analyze512.png","5","database"],
 ["{{selenium_news}}/html/sticker_mobile.htm","sticker_mobile","sticker_mobile512.png","2"],
 ["{{selenium_news}}/html/study_canvas.htm","study canvas","study_canvas512.png","5"],
-["{{selenium_news}}/html/study_flot.htm","study flot","📈","5"],
+["{{selenium_news}}/html/study_flot.htm","study flot","📊","5"],
 ["{{selenium_news}}/html/study_js.htm","study js","study_js512.png","5"],
 ["{{selenium_news}}/html/study_leaflet.htm","study leaflet","📍","5"],
 ["{{selenium_news}}/html/sudoku.htm","Sudoku","sudoku512.png","5","game"],

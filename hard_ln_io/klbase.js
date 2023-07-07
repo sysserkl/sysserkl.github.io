@@ -3130,3 +3130,18 @@ function array_check_b(cslist){
     }
     return '';
 }
+
+function list_category_count_b(cslist,return_dict=false){
+    var key_dict={};
+    for (let item of cslist){
+        var blkey='k_'+item;
+        if (key_dict[blkey]==undefined){
+            key_dict[blkey]=0;
+        }
+        key_dict[blkey]=key_dict[blkey]+1;
+    }
+    if (return_dict){
+        return key_dict;
+    }
+    return object2array_b(key_dict,true,2);
+}

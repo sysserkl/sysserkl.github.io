@@ -1,10 +1,10 @@
 function pie_data_study_flot(){
     return [
-        { label: "Series1",  data: 10},
-        { label: "Series2",  data: 30},
-        { label: "Series3",  data: 90},
-        { label: "Series4",  data: 70},
-        { label: "Series5",  data: 80},
+        { label: 'Series1',  data: 10},
+        { label: 'Series2',  data: 30},
+        { label: 'Series3',  data: 90},
+        { label: 'Series4',  data: 70},
+        { label: 'Series5',  data: 80},
     ];
 }
 
@@ -177,7 +177,7 @@ function line_steps_study_flot(){
     for (let blxl=0; blxl<200;blxl += 10) {
         d1.push([blxl, Math.log10(blxl)]);
     }
-	$.plot("#td_flot", [d1],{
+	$.plot('#td_flot', [d1],{
         series:{
             lines: { show: true, steps: true },
         },
@@ -186,7 +186,7 @@ function line_steps_study_flot(){
 
 function bars_simple_study_flot(){
     var d1 = [[0,8],[1,-10],[4,3],[5,12],[6,18],[9,3]]; //第一个元素为数值序号 - 保留注释
-	$.plot("#td_flot", [d1],{
+	$.plot('#td_flot', [d1],{
         series: {
             label:'bars_simple',
             bars: { show: true },
@@ -196,14 +196,14 @@ function bars_simple_study_flot(){
 }
 
 function bars_with_name_study_flot(){
-    var d1 = [ ["January", 10], ["February", -8], ["March", 4], ["April", 13], ["May", 17], ["June", 9] ];
-    var d2 = [ ["January", 20], ["February", 0], ["March", 14], ["April", 3], ["May", 7], ["June", 19] ];
+    var d1 = [ ['January', 10], ['February', -8], ['March', 4], ['April', 13], ['May', 17], ['June', 9] ];
+    var d2 = [ ['January', 20], ['February', 0], ['March', 14], ['April', 3], ['May', 7], ['June', 19] ];
 
-    $.plot("#td_flot", [ d1,d2 ], {
+    $.plot('#td_flot', [ d1,d2 ], {
         series: {
-            bars: {show: true, barWidth: 0.3, align: "center"},
+            bars: {show: true, barWidth: 0.3, align: 'center'},
         },
-        xaxis: {mode: "categories", tickLength: 0}
+        xaxis: {mode: 'categories', tickLength: 0}
     });
 }
 
@@ -243,7 +243,7 @@ function menu_study_flot(){
     '<span id="span_reg_study" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ reg</span>',
     ];
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'📈','8rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'📊','8rem','1rem','1rem','60rem'),'','0rem')+' ');
     klmenu_check_b('span_reg_study',true);
 }
 
