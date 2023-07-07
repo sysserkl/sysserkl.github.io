@@ -180,7 +180,7 @@ function menu_qs_rank(){
     klmenu1.push(menu_container_b(str_t,group_list,'type: '));
     
     var menu_group=[
-    '<span class="span_menu" onclick="'+str_t+'search_qs_rank(\'^=?\\\\d{1,2}\\\\b,.*, ^=?100,.*\',true);">排名前100名的学校</span>',          
+    '<span class="span_menu" onclick="'+str_t+'search_qs_rank(\'^=?(\\\\d{1,2}|100)\\\\b\',true);">排名前100名的学校</span>',          
     '<span class="span_menu" onclick="'+str_t+'is_unique_qs_rank();">重复记录检查</span>',  
     '<span class="span_menu" onclick="'+str_t+'years_qs_rank();">多年记录表</span>',  
     '<span id="span_group_year_qs_rank" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 按年份分组</span>',        
@@ -203,6 +203,7 @@ function menu_qs_rank(){
     group_list=[
     ['⚪ 统计表','klmenu_check_b(this.id,true);',true,'span_table_statistics_qs_rank'],
     ['⚪ 图形','klmenu_check_b(this.id,true);',true,'span_flot_statistics_qs_rank'],
+    ['⚪ section','klmenu_check_b(this.id,true);',true,'span_section_statistics_qs_rank'],
     ];    
     menu_statistics.push(menu_container_b(str_t,group_list,'显示：'));
     
@@ -225,9 +226,10 @@ function menu_qs_rank(){
     }
     country_list.sort(function (a,b){return zh_sort_b(a,b);});
     
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🏛','10rem','1rem','1rem','60rem')+klmenu_b(menu_years,'年','7rem','1rem','1rem','30rem')+klmenu_b(country_list,'国','12rem','1rem','1rem','30rem')+klmenu_b(menu_group,'👥','12rem','1rem','1rem','30rem')+klmenu_b(menu_statistics,'🧮','16rem','1rem','1rem','30rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🏛','10rem','1rem','1rem','60rem')+klmenu_b(menu_years,'年','7rem','1rem','1rem','30rem')+klmenu_b(country_list,'国','12rem','1rem','1rem','30rem')+klmenu_b(menu_group,'👥','12rem','1rem','1rem','30rem')+klmenu_b(menu_statistics,'🧮','18rem','1rem','1rem','30rem'),'','0rem')+' ');
     
-    for (let item of ['span_university_statistics_qs_rank','span_district_statistics_qs_rank','span_country_statistics_qs_rank','span_table_statistics_qs_rank','span_flot_statistics_qs_rank']){
+    var id_list=statistics_set_get_qs_rank(true);
+    for (let item of id_list){
         klmenu_check_b(item,true);        
     }
 }
@@ -248,63 +250,171 @@ function name_district_statistics_by_years_qs_rank(){
     var set_list=statistics_set_get_qs_rank();
     
     var blxl=0;
+    var line_list=[];
     for (let key in year_dict){
         odiv.insertAdjacentHTML('beforeend','<h3>'+key.substring(2,)+'</h3>');    
-        var list_t=name_district_statistics_qs_rank(year_dict[key],set_list,blxl.toString(),false);
+        var list_t=name_district_statistics_qs_rank(year_dict[key],set_list,blxl.toString(),15,false);
         for (let item of list_t){
+            if (item.length==0){
+                line_list.push([]);
+                continue;
+            }
             odiv.insertAdjacentHTML('beforeend',item[0]);
-            flot_pie_b(item[1],item[2]);
+            flot_pie_b(item[1],'div_flot_'+item[2]+'_pie_qs_rank');    
+            line_list.push([key,item[2].split('_')[0],item[3]]);
         }
         blxl=blxl+1;
     }
+    
+    flot_line_qs_rank(line_list,set_list,odiv);
 }
 
-function statistics_set_get_qs_rank(){
+function flot_line_qs_rank(cslist,set_list,odiv){
+    var category_dict={};
+    var year_set=new Set();
+    for (let item of cslist){
+        if (item.length==0){continue;}
+        var category_key='c_'+item[1];
+        if (category_dict[category_key]==undefined){
+            category_dict[category_key]={'key':item[1]};
+        }
+        
+        var blyear=parseInt(item[0].slice(2,-1)); //'y_2018年';
+        year_set.add(blyear);
+        
+        var blarray=object2array_b(item[2],true,2);
+        for (let one_key of blarray){
+            if (one_key[0]=='others'){continue;}
+            var bllabel='k_'+one_key[0];
+
+            if (category_dict[category_key][bllabel]==undefined){
+                category_dict[category_key][bllabel]={};
+            }            
+            category_dict[category_key][bllabel]['y_'+blyear]=one_key[1];
+        }
+    }
+    
+    var blmin=Math.min(...year_set);
+    var blmax=Math.max(...year_set);
+    var blrange=blmax-blmin+1;
+    
+    var th_list=[];
+    for (let blxl=blmin;blxl<=blmax;blxl++){
+        th_list.push('<th>'+blxl+'年</th>');
+    }
+    th_list=th_list.join('');
+    
+    for (let one_category in category_dict){
+        odiv.insertAdjacentHTML('beforeend','<h3>'+one_category.substring(2,)+'</h3>');
+
+        var line_list=[];
+        for (let one_key in category_dict[one_category]){
+            if (one_key=='key'){continue;}
+            
+            for (let blxl=blmin;blxl<=blmax;blxl++){
+                var y_key='y_'+blxl;
+                if (category_dict[one_category][one_key][y_key]==undefined){
+                    category_dict[one_category][one_key][y_key]=0;
+                }
+            }
+            
+            var list_t=object2array_b(category_dict[one_category][one_key],true,2);
+            var blsum=0;
+            for (let blxl=0;blxl<list_t.length;blxl++){
+                list_t[blxl][0]=parseInt(list_t[blxl][0]);
+                blsum=blsum+list_t[blxl][1];
+            }
+            list_t.sort();  
+            
+            line_list.push([one_key.substring(2,),list_t,blsum,blsum/blrange]);
+        }
+        line_list.sort();
+        line_list.sort(function (a,b){return a[2]<b[2];});
+        
+        var bljg=[];
+        var flot_list=[];
+        for (let blxl=0;blxl<line_list.length;blxl++){
+            flot_list.push([line_list[blxl][0]].concat(line_list[blxl][1]));
+            var td_list=[];
+            for (let item of line_list[blxl][1]){
+                td_list.push('<td align="right">'+item[1]+'</td>');
+            }
+            bljg.push('<tr><td>'+(blxl+1)+'</td><td>'+line_list[blxl][0]+'</td>'+td_list.join('')+'<td align="right">'+line_list[blxl][2]+'</td><td align="right">'+line_list[blxl][3].toFixed(1)+'</td></tr>');
+        }
+
+        if (set_list[3]){
+            bljg='<table class="table_common"><tr><th>No.</th><th>'+one_category.substring(2,)+(one_category=='c_Country'?'/Region':'')+'</th>'+th_list+'<th>Total</th><th>Average</th></tr>'+bljg.join('\n')+'</table>';
+            if (set_list[5]){
+                bljg='<section style="max-height:40rem;overflow:auto;">'+bljg+'</section>';
+            }
+        }
+        else {
+            bljg='';
+        }
+        odiv.insertAdjacentHTML('beforeend',bljg);
+
+        if (set_list[4]){
+            var idname=category_dict[one_category]['key'];
+            bljg='<div id="div_flot_'+idname+'_lines_qs_rank" style="width:900px;height:800px;"></div>';        
+            odiv.insertAdjacentHTML('beforeend',bljg);
+            flot_lines_b(flot_list,'div_flot_'+idname+'_lines_qs_rank');
+        }
+    }
+}
+
+function statistics_set_get_qs_rank(only_id_list=false){
+    var id_list=['span_university_statistics_qs_rank','span_district_statistics_qs_rank','span_country_statistics_qs_rank','span_table_statistics_qs_rank','span_flot_statistics_qs_rank','span_section_statistics_qs_rank'];
+    if (only_id_list){
+        return id_list;
+    }
     var set_list=[];
-    for (let item of ['span_university_statistics_qs_rank','span_district_statistics_qs_rank','span_country_statistics_qs_rank','span_table_statistics_qs_rank','span_flot_statistics_qs_rank']){
+    for (let item of id_list){
         set_list.push(klmenu_check_b(item,false));        
     }
     return set_list;
 }
 
-function name_district_statistics_qs_rank(csarray=false,set_list=false,id_no='',show_html=true){
-    function sub_name_district_statistics_qs_rank_to_array(csobj,cscount,caption,flot_id_name,odiv,id_no,set_list,show_html){
+function name_district_statistics_qs_rank(csarray=false,set_list=false,id_no='',max_rows=15,show_html=true){
+    function sub_name_district_statistics_qs_rank_to_array(csobj,cscount,caption,flot_id_name){
         csobj=object2array_b(csobj,true,2);
         csobj.sort();
         csobj.sort(function (a,b){return a[1]<b[1];});
         var bljg=[];
-        var others=0;
+        var others_count=0;
         var flot_list=[];
         for (let blxl=0;blxl<csobj.length;blxl++){
             var blprecent=(csobj[blxl][1]*100/cscount).toFixed(2)+'%';
             bljg.push('<tr><td>'+(blxl+1)+'</td><td>'+csobj[blxl][0]+'</td><td align="right">'+csobj[blxl][1]+'</td><td align="right">'+blprecent+'</td></tr>');
-            if (blxl>=15){
-                others=others+csobj[blxl][1];
+            if (max_rows>0 && blxl>=max_rows){
+                others_count=others_count+csobj[blxl][1];
             }
             else {
                 flot_list.push({'label':csobj[blxl][0],'data':csobj[blxl][1]});
             }
         }
-        if (others>0){
-            flot_list.push({'label':'others','data':others});
+        if (others_count>0){
+            flot_list.push({'label':'others','data':others_count});
         }
         
         if (set_list[3]){
-            bljg='<section style="max-height:40rem;overflow:auto;"><table class="table_common"><tr><th>No.</th><th>'+caption+'</th><th>Count</th><th>Percent</th></tr>'+bljg.join('\n')+'</table></section>';
+            bljg='<table class="table_common"><tr><th>No.</th><th>'+caption+'</th><th>Count</th><th>Percent</th></tr>'+bljg.join('\n')+'</table>';
+            if (set_list[5]){
+                bljg='<section style="max-height:40rem;overflow:auto;">'+bljg+'</section>';
+            }
         }
         else {
             bljg='';
         }
         if (set_list[4]){
-            bljg=bljg+'<div id="div_flot_'+flot_id_name+id_no+'_qs_rank" style="width:600px;height:600px;"></div>';        
+            bljg=bljg+'<div id="div_flot_'+flot_id_name+'_'+id_no+'_pie_qs_rank" style="width:600px;height:600px;"></div>';        
         }
         if (show_html){
             odiv.insertAdjacentHTML('beforeend',bljg);
         }
         if (set_list[4] && show_html){
-            flot_pie_b(flot_list,'div_flot_'+flot_id_name+id_no+'_qs_rank');
+            flot_pie_b(flot_list,'div_flot_'+flot_id_name+'_'+id_no+'_pie_qs_rank');
         }
-        return [bljg,flot_list,'div_flot_'+flot_id_name+id_no+'_qs_rank'];
+        return [bljg,flot_list,flot_id_name+'_'+id_no];
     }
     //---------------------
     if (set_list===false){
@@ -369,29 +479,25 @@ function name_district_statistics_qs_rank(csarray=false,set_list=false,id_no='',
     if (show_html){
         odiv.innerHTML='';
     }
-    
-    var university_str='';
-    var district_str='';
-    var country_str='';
-    
-    var university_flot=[];
-    var district_flot=[];
-    var country_flot=[];
-    
-    var university_flot_id='';
-    var district_flot_id='';
-    var country_flot_id='';
+
+    var university_result=[];
+    var district_result=[];
+    var country_result=[];
     
     if (set_list[0]){
-        [university_str,university_flot,university_flot_id]=sub_name_district_statistics_qs_rank_to_array(university_list,university_count,'University','University',odiv,id_no,set_list,show_html);    
+        university_result=sub_name_district_statistics_qs_rank_to_array(university_list,university_count,'University','University');    
+        university_result.push(university_list);        
     }
     if (set_list[1]){
-        [district_str,district_flot,district_flot_id]=sub_name_district_statistics_qs_rank_to_array(district_list,district_count,'District','District',odiv,id_no,set_list,show_html);
+        district_result=sub_name_district_statistics_qs_rank_to_array(district_list,district_count,'District','District');
+        district_result.push(district_list);
     }
     if (set_list[2]){    
-        [country_str,country_flot,country_flot_id]=sub_name_district_statistics_qs_rank_to_array(country_list,country_count,'Country/Region','Country',odiv,id_no,set_list,show_html);
+        country_result=sub_name_district_statistics_qs_rank_to_array(country_list,country_count,'Country/Region','Country');
+        country_result.push(country_list);        
     }
-    return [[university_str,university_flot,university_flot_id],[district_str,district_flot,district_flot_id],[country_str,country_flot,country_flot_id]];
+    
+    return [university_result,district_result,country_result];
 }
 
 function jieba_name_qs_rank(){
