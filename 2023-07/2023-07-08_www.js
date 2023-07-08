@@ -1,0 +1,15 @@
+var sourcelist=[
+["https://www.americanrivers.org/endangeredrivers","Most Endangered Rivers","2023-07-08","American Rivers","0",],
+["https://www.solidot.org/story?sid=75447","中兴智能手机努比亚红魔8S Pro+ 内存达到 24 GB","2023-07-08","Solidot","1",],
+["https://www.solidot.org/story?sid=75448","索尼克之父中裕司因内幕交易被判 2 年半徒刑缓刑四年","2023-07-08","Solidot","1",],
+["https://www.solidot.org/story?sid=75449","Bending Spoons 裁掉了印象笔记所有员工","2023-07-08","Solidot","1",],
+["https://www.solidot.org/story?sid=75450","OpenAI 宣布 GPT-4 Generally Available","2023-07-08","Solidot","1",],
+["https://www.solidot.org/story?sid=75451","活动人士用交通锥阻止无人驾驶出租车","2023-07-08","Solidot","1",],
+["https://www.solidot.org/story?sid=75452","网信办公布《网络暴力信息治理规定（征求意见稿）》","2023-07-08","Solidot","1",],
+["https://www.solidot.org/story?sid=75453","食用植物油或会导致肠道问题","2023-07-08","Solidot","1",],
+["https://www.solidot.org/story?sid=75454","AI 热潮下旧金山科技公司恢复招聘","2023-07-08","Solidot","1",],
+["https://www.solidot.org/story?sid=75456","FDA 批准阿尔茨海默病新药","2023-07-08","Solidot","1",],
+["https://www.solidot.org/story?sid=75446","Twitter 指控 Meta 的 Threads 侵犯其知识产权威胁起诉","2023-07-08","Solidot","1",],
+["https://www.solidot.org/story?sid=75445","周二的全球气温打破了周一的记录","2023-07-08","Solidot","1",],
+["https://www.solidot.org/story?sid=75444","WordPress 插件 0day 威胁 20 万网站","2023-07-08","Solidot","1",],
+];
