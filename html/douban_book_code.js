@@ -48,9 +48,25 @@ function init_dbb(){
     args_dbb();
 }
 
+function arg_input_dict_dbb(){
+    return {'rmin':'input_rating_min','rmax':'input_rating_max','pmin':'input_people_min','pmax':'input_people_max','ymin':'input_year_min','ymax':'input_year_max'};
+}
+
+function current_link_dbb(){
+    var input_dict=arg_input_dict_dbb();
+    var bljg=[];
+    for (let akey in input_dict){
+        var oinput=document.getElementById(input_dict[akey]);
+        if (oinput){
+            bljg.push(akey+'='+oinput.value.trim());
+        }
+    }
+    document.getElementById('divhtml').innerHTML='<p><a href="?'+bljg.join('&')+'" target=_blank>'+bljg.join('&')+'</p>';
+}
+
 function args_dbb(){
     var cskeys=href_split_b(location.href);
-    var input_dict={'rmin':'input_rating_min','rmax':'input_rating_max','pmin':'input_people_min','pmax':'input_people_max','ymin':'input_year_min','ymax':'input_year_max'};
+    var input_dict=arg_input_dict_dbb();
     if (cskeys.length>0 && cskeys[0]!==''){
         for (let one_key of cskeys){
             one_key=one_key.trim();
@@ -81,6 +97,7 @@ function menu_dbb(){
     var group_list=[
     ['已购','search_dbb(false,\'txtbook\');',true],
     ['忽略','search_dbb(false,\'ignore\');',true],
+    ['链接','current_link_dbb();',true],   
     ];    
     klmenu1.push(menu_container_b(str_t,group_list,'当前条件书籍：'));    
     

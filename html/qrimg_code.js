@@ -223,7 +223,7 @@ function upload_qrimg(){
     var bljg='';
     for (let blxl=0;blxl<oimgs.length;blxl++){
         var ofile=oimgs[blxl];
-        if (ofile.type.substring(0,6)!=="image/"){
+        if (ofile.type.substring(0,6)!=='image/'){
             document.getElementById('divhtml').innerHTML = '非图片文件：'+ofile.name+' '+ofile.type;
             return;
         }
@@ -239,9 +239,7 @@ function upload_qrimg(){
             bljg=bljg+style_qrimg(this.result,file_path_name_b(this.fileName)[1]);
             document.getElementById('divhtml').innerHTML=bljg;
         }
-        if (blxl>=8){
-            break;
-        }
+        if (blxl>=8){break;}
     }
     clean_qrimg();
 }
@@ -253,12 +251,12 @@ function style_qrimg(cssrc,fname=''){
 function init_qrimg(){
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.6rem'));
     var input_list=[
-    ["input_qr_rows",5,0.5],
-    ["input_qr_cols",5,0.5],   
-    ["input_qr_padding",5,0.5],    
-    ["input_qrstr",15,0.5],    
-    ["input_qr_size",5,0.5],    
-    ["input_qr_position",15,0.5],    
+    ['input_qr_rows',5,0.5],
+    ['input_qr_cols',5,0.5],   
+    ['input_qr_padding',5,0.5],    
+    ['input_qrstr',15,0.5],    
+    ['input_qr_size',5,0.5],    
+    ['input_qr_position',15,0.5],    
 
     ];
     input_size_b(input_list,'id');
