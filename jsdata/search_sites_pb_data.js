@@ -43,6 +43,7 @@ var search_sites_list_global=[
 ['https://www.bing.com/search?q=',' site: thepaper.cn',0,'','澎湃','0','Search',''],
 ['https://www.bing.com/search?q=',' site: www.people.com.cn',0,'','人民','','Search',''],
 ['https://www.bing.com/search?q=',' site: www.xinhuanet.com',0,'','新华','','Search',''],
+['https://search.cctv.com/search.php?qtext=','&type=web',0,'','CCTV','','Search',''],
 ['https://www.bing.com/search?q=',' site: www.gov.cn',0,'','国务院','','Search',''],
 ['https://www.bing.com/search?q=',' site: sina.com.cn',0,'','新浪','','Search',''],
 ['https://www.douban.com/search?q=','',0,'','豆瓣','0','Search',''],
