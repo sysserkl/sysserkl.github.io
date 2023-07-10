@@ -5,7 +5,7 @@
 <meta charset="UTF-8" />
 <script src="../hard_ln_io/klbase.js"></script>
 <script>
-klbase_addons_import_js_b(['css','qr'],['jeromeetienne_qrcode.min.js'],[],['qrcode_ico/qrcode512.png'],true);
+klbase_addons_import_js_b(['css','qr','image'],['jeromeetienne_qrcode.min.js'],[],['qrcode_ico/qrcode512.png'],true);
 </script>
 <script src="qrcode.js"></script>
 <script>
@@ -15,6 +15,7 @@ klbase_addons_import_js_b(['css','qr'],['jeromeetienne_qrcode.min.js'],[],['qrco
 //0.0.1-20190924
 //-----------------
 var qr_list_global=[];
+var background_img_klqr_global='';
 var parameter_klqr_global=new Set();
 var scheme_global={};
 scheme_generation_b();
@@ -27,6 +28,13 @@ css_root_style_b('18','11',['base','menu'],[],1);
 <h2 id="h2_title" style="margin-top:0;font-size:1.3rem;"><span id="span_title" style="cursor:pointer;" onclick="popup_show_hide_b('div_head_buttons_klqr');">QR Code Generator</span></h2>
 <div style="margin:0.5rem;">
 <div id="div_head_buttons_klqr">
+<p id="p_img_upload" style="display:none;">Select Image: 
+<input type="file" id="input_upload_img">
+<span class="aclick" onclick="upload_img_klqr();">Upload Image</span>
+<input id="bg_left_klqr" type="input" value=-1 />
+<input id="bg_top_klqr" type="input" value=-1 />
+</p>
+
 <p>Strings: <input type="text" id="input_qrtxt" value="just for fun" onkeyup="if (event.key=='Enter'){create_klqr();}">
 <span class="aclick" onclick="create_klqr();"><b>Generate</b></span> 
 </p>

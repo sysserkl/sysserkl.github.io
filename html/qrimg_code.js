@@ -29,9 +29,10 @@ function sort_by_name_qrimg(desc=false){
     else {
         list_t.sort(function (a,b){return a[1]>b[1];});    
     }
-    
+
+    var img_border=klmenu_check_b('span_img_border',false);        
     for (let blxl=0;blxl<list_t.length;blxl++){
-        list_t[blxl]=style_qrimg(list_t[blxl][0],list_t[blxl][1]);
+        list_t[blxl]=style_qrimg(list_t[blxl][0],list_t[blxl][1],img_border);
     }
     document.getElementById('divhtml').innerHTML=list_t.join('');
 }
@@ -40,8 +41,9 @@ function shift_qrimg(reset=false){
     if (reset){
         var oimgs=document.querySelectorAll('img.img_uploaded');
         var list_t=[];
+        var img_border=klmenu_check_b('span_img_border',false);                
         for (let item of oimgs){
-            list_t.push(style_qrimg(item.src,item.getAttribute('alt')));
+            list_t.push(style_qrimg(item.src,item.getAttribute('alt'),img_border));
         }
         document.getElementById('divhtml').innerHTML=list_t.join('');
         return;
@@ -53,10 +55,11 @@ function shift_qrimg(reset=false){
     var oimgs=document.querySelectorAll('img.img_uploaded');
     var bllen=oimgs.length;
     if (bllen<img1 || bllen<img2){return;}
-    
+
+    var img_border=klmenu_check_b('span_img_border',false);            
     var list_t=[];
     for (let item of oimgs){
-        list_t.push(style_qrimg(item.src,item.getAttribute('alt')));
+        list_t.push(style_qrimg(item.src,item.getAttribute('alt'),img_border));
     }
     var bltmp=list_t[img2-1];
     list_t[img2-1]=list_t[img1-1];
@@ -83,31 +86,40 @@ function round_qrimg(){
     }
 }
 
+function size_qrimg(){
+    var blleft=0;
+    var bltop=0;
+    var blwidth=0;
+    var blheight=0;
+    
+    var otable=document.getElementById('table_imgs');
+    if (otable){
+        var rect=otable.getBoundingClientRect();
+        [blleft,bltop,blwidth,blheight]=[rect.left,rect.top,rect.width,rect.height];
+    }
+    else {
+        var oimgs=document.querySelectorAll('img.img_uploaded');
+        [blleft,bltop,blwidth,blheight]=doms_rect_b(oimgs,true);
+    }
+    return {'left':blleft,'top':bltop,'width':blwidth,'height':blheight};
+}
+
 function qr_qrimg(){
-    var qrsize=size_qrimg();
-    if (qrsize==-1){return;}
+    var odiv=document.getElementById('div_qr');
+    var size_dict=size_qrimg();
+    var qrsize=parseInt(Math.min(size_dict.width,size_dict.height)*document.getElementById('input_qr_size').value);
+
     clean_qrimg();
     var blstr=document.getElementById('input_qrstr').value.trim();
     create_qr_b($('div#div_qr'),blstr,qrsize,'black','white',false);
-    center_qrimg();
+    center_qrimg(size_dict);
 }
 
-function size_qrimg(){
-    var otable=document.getElementById('table_imgs');
-    if (!otable){
-        return -1;
+function center_qrimg(cssize=false){
+    if (cssize===false){
+        cssize=size_qrimg();
     }
-    var rect=otable.getBoundingClientRect();
-    var odiv=document.getElementById('div_qr');
-    var qrsize=parseInt(Math.min(rect.width,rect.height)*document.getElementById('input_qr_size').value);
-    return qrsize;
-}
 
-function center_qrimg(){
-    var otable=document.getElementById('table_imgs');
-    if (!otable){
-        return;
-    }
     var position_list=document.getElementById('input_qr_position').value.trim().split(';');
     var lrtb_list=['left','right','top','bottom'];
     var position_set=false;
@@ -146,10 +158,9 @@ function center_qrimg(){
         }
     }
     if (position_set==false){
-        var rect1=otable.getBoundingClientRect();   
         var rect2=odiv.getBoundingClientRect();
-        odiv.style.left=(rect1.left+rect1.width/2-rect2.width/2)+'px';
-        odiv.style.top=(rect1.top+rect1.height/2-rect2.height/2)+'px';  //px不能省略 - 保留注释
+        odiv.style.left=(cssize.left+cssize.width/2-rect2.width/2)+'px';
+        odiv.style.top=(cssize.top+cssize.height/2-rect2.height/2)+'px';  //px不能省略 - 保留注释
     }
     odiv.style.transform=bltransform;
 }
@@ -221,22 +232,21 @@ function clean_qrimg(){
 function upload_qrimg(){
     var oimgs=document.getElementById('input_img').files;
     var bljg='';
+    var img_border=klmenu_check_b('span_img_border',false);        
+    
     for (let blxl=0;blxl<oimgs.length;blxl++){
         var ofile=oimgs[blxl];
-        if (ofile.type.substring(0,6)!=='image/'){
-            document.getElementById('divhtml').innerHTML = '非图片文件：'+ofile.name+' '+ofile.type;
-            return;
-        }
-        if (ofile.size>30*1024*1024){
-            document.getElementById('divhtml').innerHTML = '文件太大：'+ofile.name+' '+ofile.size;  
-            return;
+        var error=upload_img_file_check_b(ofile);
+        if (error!==''){
+            document.getElementById('divhtml').innerHTML=error;
+            return;        
         }
         
         var imgFile = new FileReader();
         imgFile.fileName = ofile.name;
         imgFile.readAsDataURL(ofile); 
         imgFile.onload = function (){
-            bljg=bljg+style_qrimg(this.result,file_path_name_b(this.fileName)[1]);
+            bljg=bljg+style_qrimg(this.result,file_path_name_b(this.fileName)[1],img_border);
             document.getElementById('divhtml').innerHTML=bljg;
         }
         if (blxl>=8){break;}
@@ -244,8 +254,8 @@ function upload_qrimg(){
     clean_qrimg();
 }
 
-function style_qrimg(cssrc,fname=''){
-    return '<div style="position:relative;float:left;"><img class="img_uploaded" src="'+cssrc+'" style="max-width:500px;margin:0.5rem;border:0.1rem black solid;" alt="'+specialstr_j(fname)+'" /></div>';
+function style_qrimg(cssrc,fname='',csborder=true){
+    return '<div class="div_relative_uploaded" style="position:relative;float:left;"><img class="img_uploaded" src="'+cssrc+'" style="max-width:500px;margin:0.5rem;'+(csborder?'border:0.1rem black solid;':'')+'" alt="'+specialstr_j(fname)+'" /></div>';
 }
 
 function init_qrimg(){
@@ -260,7 +270,18 @@ function init_qrimg(){
 
     ];
     input_size_b(input_list,'id');
+    menu_qrimg();
     select_qrimg();    
+}
+
+function menu_qrimg(){
+    var str_t=klmenu_hide_b('');
+    var klmenu_config=[
+    '<span id="span_img_border" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ img border</span>',    
+    ];
+
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_config,'𖣯','12rem','1rem','1rem','30rem'),'','0rem')+' ');
+    klmenu_check_b('span_img_border',true);        
 }
 
 function run_qrimg(cstype){

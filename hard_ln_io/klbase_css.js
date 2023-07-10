@@ -392,12 +392,15 @@ function popup_show_hide_b(csid,cstype='block'){
         var obj=csid;
     }
     
-    if (!obj){return;}
+    if (!obj){return false;}
     if (obj.style.display==cstype){
         obj.style.display='none';
-        return;
+        cstype='none';
     }
-    obj.style.display=cstype;
+    else {
+        obj.style.display=cstype;
+    }
+    return cstype;
 }
 
 function border_style_b(spanid,popupid) {
@@ -689,11 +692,11 @@ function rndcolor_light_b(light_max=1,light_min=0){
     return rgb2hex_b([rgbcolor['r'],rgbcolor['g'],rgbcolor['b']]);
 }
 
-function rgb2hex_b(rgb,csg,csb) {
+function rgb2hex_b(rgb,csg,csb){
     //rgb [255,0,0] - 保留注释
-    function sub_rgb2hex_b_component(c) {
+    function sub_rgb2hex_b_component(c){
         var hex = c.toString(16);
-        return hex.length == 1 ? "0" + hex : hex;
+        return hex.length == 1 ? '0' + hex : hex;
     }
     //--------------------
     var csnum=arguments.length;
@@ -706,7 +709,9 @@ function rgb2hex_b(rgb,csg,csb) {
         }
         else if (typeof rgb == 'string' ){//rgb(153, 153, 153) - 保留注释
             var hexname=color_name2hex_b(rgb);
-            if (hexname!==''){return hexname;}
+            if (hexname!==''){
+                return hexname;
+            }
             rgb=rgb.replace('rgb','');
             rgb=rgb.replace('(','');
             rgb=rgb.replace(')','');
@@ -720,13 +725,13 @@ function rgb2hex_b(rgb,csg,csb) {
         }
     }
 
-    return ("#" + sub_rgb2hex_b_component(rgb[0]) + sub_rgb2hex_b_component(rgb[1]) + sub_rgb2hex_b_component(rgb[2])).toUpperCase();
+    return ('#' + sub_rgb2hex_b_component(rgb[0]) + sub_rgb2hex_b_component(rgb[1]) + sub_rgb2hex_b_component(rgb[2])).toUpperCase();
 }
 
-function hex2rgb_b(hex,return_str=false) { 
+function hex2rgb_b(hex,return_str=false){
     //hex支持颜色名称输入 - 保留注释
     var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
-    hex = hex.replace(shorthandRegex, function(m, r, g, b) {
+    hex = hex.replace(shorthandRegex, function(m, r, g, b){
         return r + r + g + g + b + b;
     });
 
@@ -762,7 +767,7 @@ function color_range_b(color1=[],color2=[],cscount=10){
     var green=(color2[1]-color1[1])/cscount;
     var blue=(color2[2]-color1[2])/cscount;
     
-    for (var blxl=0;blxl<=cscount;blxl++){
+    for (let blxl=0;blxl<=cscount;blxl++){
         list_t.push([parseInt(color1[0]+red*blxl),parseInt(color1[1]+green*blxl),parseInt(color1[2]+blue*blxl)]);
     }
     return list_t;
@@ -781,37 +786,18 @@ function color_with_different_light_b(cscolor,cscount=10){
 }
 
 function hsl2hex_b(h,s,l){
-    if (arguments.length === 1) {
-        s = h.s;
-        l = h.l;
-        h = h.h;
+    if (arguments.length === 1){
+        var s,l;
+        [h,s,l]=[h.h, h.s, h.l];
     }
     return rgb2hex_b(hsl2rgb_b(h,s,l));
 }
 
 function hsl2rgb_b(h,s,l){
     //code source: https://stackoverflow.com/questions/17242144/javascript-convert-hsb-hsv-color-to-rgb-accurately
-    if (arguments.length === 1) {
-        s = h.s;
-        l = h.l;
-        h = h.h;
-    }
-    if (s==0){
-        var rgb = { };
-        rgb.r = rgb.g = rgb.b = Math.round(l * 255);
-        return rgb;
-    }
-    
-    //--------------
-    function sub_HSLtoHSV_b(h, s, l) {
-        if (arguments.length === 1) {
-            s = h.s;
-            l = h.l;
-            h = h.h;
-        }
+    function sub_HSLtoHSV_b(h, s, l){
         var _h = h;
-        var _s;
-        var _v;
+        var _s, _v;
 
         l *= 2;
         s *= (l <= 1) ? l : 2 - l;
@@ -822,22 +808,21 @@ function hsl2rgb_b(h,s,l){
         else {
             _s = (2 * s) / (l + s);
         }
-        return {h: _h, s: _s, v: _v};
+        return [_h, _s, _v];
     }
 
-    function sub_HSVtoRGB_b(h, s, v) {
+    function sub_HSVtoRGB_b(cslist){
+        var h,s,v;
+        [h,s,v]=cslist;
+        
         var r, g, b, i, f, p, q, t;
-        if (arguments.length === 1) {
-            s = h.s;
-            v = h.v;
-            h = h.h;
-        }
+        
         i = Math.floor(h * 6);
         f = h * 6 - i;
         p = v * (1 - s);
         q = v * (1 - f * s);
         t = v * (1 - (1 - f) * s);
-        switch (i % 6) {
+        switch (i % 6){
             case 0:
                 r = v, g = t, b = p; 
                 break;
@@ -864,40 +849,22 @@ function hsl2rgb_b(h,s,l){
         };
     }
     //------------
+    if (arguments.length === 1){
+        var s,l;
+        [h,s,l]=[h.h, h.s, h.l];
+    }
+    if (s==0){
+        var rgb = { };
+        rgb.r = rgb.g = rgb.b = Math.round(l * 255);
+        return rgb;
+    }
+        
     return sub_HSVtoRGB_b(sub_HSLtoHSV_b(h,s,l));
 }
 
 function rgb2hsl_b(r,g,b){
     //code source: https://stackoverflow.com/questions/17242144/javascript-convert-hsb-hsv-color-to-rgb-accurately
-    if (arguments.length === 1) {
-        if (Array.isArray(r) && r.length==3){
-            g=r[1];
-            b=r[2];
-            r=r[0];
-        }
-        //hex - 保留注释
-        else if (typeof r =='string') {
-            var rgb=hex2rgb_b(r);
-            r=rgb[0];
-            g=rgb[1];
-            b=rgb[2];
-        }
-        else if (typeof r == 'object') {
-            g = r.g;
-            b = r.b;
-            r = r.r;
-        }
-    }
-    if (r==255 && g==255 && b==255){
-        return {h: 0, s: 0, l: 1};
-    }
-    //----------
-    function sub_RGBtoHSV_b(r, g, b) {
-        if (arguments.length === 1) {
-            g = r.g;
-            b = r.b;
-            r = r.r;
-        }
+    function sub_RGBtoHSV_b(r, g, b){
         var max = Math.max(r, g, b);
         var min = Math.min(r, g, b);
         var d = max - min;
@@ -905,7 +872,7 @@ function rgb2hsl_b(r,g,b){
         var _s = (max === 0 ? 0 : d / max);
         var _v = max / 255;
 
-        switch (max) {
+        switch (max){
             case min:
                 _h = 0; 
                 break;
@@ -926,12 +893,9 @@ function rgb2hsl_b(r,g,b){
         return {h: _h, s: _s, v: _v};
     }
 
-    function sub_HSVtoHSL_b(h, s, v) {
-        if (arguments.length === 1) {
-            s = h.s;
-            v = h.v;
-            h = h.h;
-        }
+    function sub_HSVtoHSL_b(cslist){
+        var h,s,v;
+        [h,s,v]=[cslist.h, cslist.s, cslist.v];
         
         var _h = h;
         var _s = s * v;
@@ -942,6 +906,23 @@ function rgb2hsl_b(r,g,b){
         return {h: _h, s: _s, l: _l};
     }
     //----------
+    if (arguments.length === 1){
+        var g,b;
+        if (Array.isArray(r) && r.length==3){
+            [r,g,b]=r;
+        }
+        else if (typeof r =='string'){        //hex - 保留注释
+            [r,g,b]=hex2rgb_b(r);
+        }
+        else if (typeof r == 'object'){
+            [r,g,b]=[r.r, r.g, r.b];
+        }
+    }
+    
+    if (r==255 && g==255 && b==255){
+        return {h: 0, s: 0, l: 1};
+    }
+        
     return sub_HSVtoHSL_b(sub_RGBtoHSV_b(r,g,b));
 }
 
@@ -1076,9 +1057,8 @@ function input_size_b(cslist,cstype='name',font_size=false,return_dom=false){
 function input_with_x_b(csid,cswidth,xid='',csexpand=false,regid=false,isreg=false){
     //csexpand 可以是 数值型 - 保留注释
     var oinput=document.getElementById(csid);
-    if (!oinput){
-        return false;
-    }
+    if (!oinput){return false;}
+    
     var blcolor=(typeof scheme_global=='undefined'?'black':scheme_global['color']);
     oinput.outerHTML='<span style="border-bottom:0.1rem solid '+blcolor+';">'+oinput.outerHTML+'</span>';
     
@@ -1293,7 +1273,7 @@ function localstorage_value_load_save_b(cs_id_list,cs_checkbox_list,savename,cst
     //cs_id_list 形如 ['input_fcolor', 'input_bcolor']; 或为 字符串，代表 id - 保留注释
     //csprefix 为前缀字符串 - 保留注释 
     if (cstype=='save'){
-        if (confirm("是否保存？")){
+        if (confirm('是否保存？')){
             if (Array.isArray(cs_id_list)){
                 var blpara=[];
                 for (let item of cs_id_list){
@@ -1354,7 +1334,7 @@ function mouseover_mouseout_oblong_span_b(ospans){
 
 function recent_search_b(localsavename,csstr,jsfunctionname,divname,commonlist=[],csmax=15,return_with_p=true,show_items=-1,remove_reg_str=''){
     function sub_recent_search_b_one_key(item,jsfunctionname){
-        var str_t=item.replace(new RegExp(/\\/,'g'),'\\\\');
+        var str_t=item.replace(/\\/g,'\\\\');
         str_t=str_t.replace(new RegExp('"','g'),'&quot;');
         str_t=str_t.replace(new RegExp("'",'g'),'\\\'');
         if (str_t.trim()==''){
@@ -1565,9 +1545,8 @@ function root_font_size_change_b(change_value=0,csask=false){
     
     if (csask){
         var newsize=parseFloat((prompt('输入字号大小',oldsize) || '').trim());
-        if (isNaN(newsize)){
-            return;
-        }
+        if (isNaN(newsize)){return;}
+        
         increment=newsize-(oldsize-increment);
         root.style.fontSize=newsize.toFixed(2)+'px';
     }
@@ -1746,9 +1725,8 @@ function alarm_interval_sound_b(){
         setTimeout(sub_alarm_interval_sound_b_one_sound,1000);  //间隔1秒播放 - 保留注释
     }
     //-----------------------------------------
-    if (kl_alarm_interval_global==-1){
-        return;
-    }
+    if (kl_alarm_interval_global==-1){return;}
+    
     var sound_list=['elephant','ding','drop','flash','whistle','dududu'];
     var blm=date_2_ymd_b(false,'M');
     if (blm % 5 == 0 && kl_alarm_start_time_global!==-1){
@@ -1846,9 +1824,8 @@ function highlight_text_b(cswordlist=[],query_str=''){
             blkey=blkey.concat(item);
             continue;
         }
-        if (item.substring(0,1)=='-'){
-            continue;
-        }
+        if (item.substring(0,1)=='-'){continue;}
+        
         if (item.substring(0,1)=='+'){
             item=item.substring(1,);
         }
@@ -2079,4 +2056,26 @@ function ltp_status_get_b(cskey,cscolor1='blue',cscolor2='white',cswidth=100,csh
         result_t.push('<img src="'+blbase64+'" title="'+specialstr_j(arow[1])+'" style="border:0.1rem '+scheme_global['color']+' solid;" /> '+arow[1]+' <b>'+blpercent.toFixed(2)+'%</b>');
     }
     return result_t;
+}
+
+function doms_rect_b(odoms,return_list=false){
+    var blleft=0;
+    var bltop=0;
+    var blwidth=0;
+    var blheight=0;
+    
+    for (let one_dom of odoms){
+        var rect=one_dom.getBoundingClientRect();
+        blleft=Math.min(blleft,rect.left);
+        bltop=Math.min(bltop,rect.top);
+        blwidth=Math.max(blwidth,rect.left+rect.width);
+        blheight=Math.max(blheight,rect.top+rect.height);
+    }
+    
+    if (return_list){
+        return [blleft,bltop,blwidth,blheight];
+    }
+    else {
+        return {'left':blleft,'top':bltop,'width':blwidth,'height':blheight};
+    }
 }

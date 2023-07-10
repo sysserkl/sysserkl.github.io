@@ -207,3 +207,16 @@ function filter_array_img_b(csarray,filter_str){
     }
     return csarray;
 }
+
+function upload_img_file_check_b(ofile,cssize=30*1024*1024){
+    if (!ofile){
+        return '未发现图片文件';
+    }
+    if (ofile.type.substring(0,6)!=='image/'){
+        return '非图片文件：'+ofile.name+' '+ofile.type;
+    }
+    if (ofile.size>cssize){
+        return '文件太大：'+ofile.name+' '+ofile.size;  
+    }
+    return '';
+}

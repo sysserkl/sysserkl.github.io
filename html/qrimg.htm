@@ -5,7 +5,7 @@
 <meta charset="UTF-8" />
 <script src="../hard_ln_io/klbase.js"></script>
 <script>
-klbase_addons_import_js_b(['css','qr'],['html2canvas.js','jeromeetienne_qrcode.min.js'],[],['qrimg_ico/qrimg512.png'],true);
+klbase_addons_import_js_b(['css','qr','image'],['html2canvas.js','jeromeetienne_qrcode.min.js'],[],['qrimg_ico/qrimg512.png'],true);
 </script>
 <script src="qrimg_code.js"></script>
 <script>
@@ -15,7 +15,7 @@ klbase_addons_import_js_b(['css','qr'],['html2canvas.js','jeromeetienne_qrcode.m
 //-------------------------------------------
 var scheme_global={};
 scheme_generation_b();
-css_root_style_b('17.2','13',['base'],[],1);
+css_root_style_b('17.2','13',['base','menu'],[],1);
 </script>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 <style>
@@ -24,8 +24,9 @@ img{max-width:1440px;}
 </head>
 <body>
 <a name=top></a>
-<div id="div_form" style="margin:0.5rem;">
-<h2 style="margin-top:0px;font-size:1.2rem;"><span id="span_title">qrimg</span></h2>
+<div id="div_form">
+<h2 style="margin:0px;font-size:1.2rem;"><span id="span_title">qrimg</span></h2>
+<div style="margin:0.5rem;">
 <p>Select Image: 
 <input type="file" id="input_img" multiple>
 <span class="aclick" onclick="upload_qrimg();">Upload Image</span>
@@ -61,6 +62,7 @@ size: <input type="number" id="input_qr_size" min=0 max=1 step=0.1 value=0.5 />
 <span class="aclick" onclick="close_qrimg();canvas_qrimg();">关闭并生成图片</span>
 
 </p>
+</div>
 </div>
 <div id="divhtml" ondblclick="document.getElementById('div_form').style.display='';"></div>
 <div id="div_qr" style="position:absolute;background-color:white;" ondblclick="clean_qrimg();"></div>

@@ -13,11 +13,11 @@ function sort_merge_img(cstype){
 function init_merge_img(){
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.6rem'));
     var input_list=[
-    ["input_max_width",5,0.5],
-    ["input_max_height",5,0.5],
-    ["input_span",5,0.5],
-    ["input_margin",5,0.5],
-    ["input_bgcolor",8,0.5],
+    ['input_max_width',5,0.5],
+    ['input_max_height',5,0.5],
+    ['input_span',5,0.5],
+    ['input_margin',5,0.5],
+    ['input_bgcolor',8,0.5],
     ];
     
     input_size_b(input_list,'id');
@@ -157,14 +157,13 @@ function upload_merge_img(){
     var result_t=[];
     for (let blxl=0;blxl<oimgs.length;blxl++){
         var ofile=oimgs[blxl];
-        if (ofile.type.substring(0,6)!=="image/"){
-            document.getElementById('divhtml').innerHTML = '非图片文件：'+ofile.name+' '+ofile.type;
-            return;
-        }
-        if (ofile.size>30*1024*1024){
-            document.getElementById('divhtml').innerHTML = '文件太大：'+ofile.name+' '+ofile.size;  
-            return;
-        }
+        
+        var error=upload_img_file_check_b(ofile);
+        if (error!==''){
+            document.getElementById('divhtml').innerHTML=error;
+            return;        
+        }            
+        
         result_t.push(blxl);
     }
     

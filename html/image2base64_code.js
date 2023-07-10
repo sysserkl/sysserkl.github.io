@@ -42,9 +42,9 @@ function split_klbase64(oimg){
             odiv.innerHTML=bljg;
             for (let item of list_t){
                 var canvas=document.getElementById('canvas_'+item[0]);
-                var ctx=canvas.getContext("2d");    
+                var ctx=canvas.getContext('2d');    
                 ctx.drawImage(oimg, item[1],item[2], item[3], item[4], 0,0, item[3], item[4]);
-                var splited_img_src=canvas.toDataURL("image/jpeg");
+                var splited_img_src=canvas.toDataURL('image/jpeg');
                 document.getElementById('img_'+item[0]).src=splited_img_src;                
             }
         }
@@ -103,15 +103,11 @@ function rows_klbase64(textareaid,lines_num){
 
 /*转换函数*/  
 function trans_klbase64() {  
-    var ofile=document.getElementById('input_img').files[0];
-    if (!ofile){return;}
-    if (ofile.type.substring(0,6)!=="image/"){
-        document.getElementById('textarea_base64_original').value = '非图片文件：'+ofile.name+' '+ofile.type;
-        return;
-    }
-    if (ofile.size>30*1024*1024){
-        document.getElementById('textarea_base64_original').value = '文件太大：'+ofile.name+' '+ofile.size;  
-        return;
+    var ofile=document.getElementById('input_img').files[0];   
+    var error=upload_img_file_check_b(ofile);
+    if (error!==''){
+        document.getElementById('textarea_base64_original').value=error;
+        return;        
     }
 
     var imgFile = new FileReader();
@@ -146,12 +142,12 @@ function load_img_from_textarea_klbase64(){
 }
 
 /*复制数据*/  
-function copy_klbase64(idname) {  
+function copy_klbase64(idname){  
     var textarea_base64 = document.getElementById(idname);
     textarea_base64.select(); // 选择对象    
-    var cpd=document.execCommand("Copy"); // 执行浏览器复制命令    
+    var cpd=document.execCommand('Copy'); // 执行浏览器复制命令    
     document.getElementById('span_copy').innerHTML = (cpd?'复制成功' :'复制失败');  
-    window.setTimeout(function () {  
+    window.setTimeout(function (){  
         document.getElementById('span_copy').innerHTML = '';  
     }, 3000); 
 }
@@ -237,8 +233,8 @@ function resize_form_klbase64(){
     var odiv=document.getElementById('div_form');
     odiv.innerHTML=blstr;
     var input_list=[
-    ["input_maxw",5],
-    ["input_maxh",5],
+    ['input_maxw',5],
+    ['input_maxh',5],
     ];
     input_size_b(input_list,'id');    
     default_size_klbase64();
