@@ -220,3 +220,55 @@ function upload_img_file_check_b(ofile,cssize=30*1024*1024){
     }
     return '';
 }
+
+function qr_read_b(oimg){
+    var icanvas = document.createElement('canvas');    
+    icanvas.width=oimg.naturalWidth || oimg.width;
+    icanvas.height=oimg.naturalHeight || oimg.height;
+
+    var ictx = icanvas.getContext('2d');
+    ictx.drawImage(oimg, 0, 0,oimg.naturalWidth,oimg.naturalHeight,0,0,icanvas.width,icanvas.height);
+    var iimageData = ictx.getImageData(0,0, icanvas.width, icanvas.height);
+
+    var ode = jsQR(iimageData.data, oimg.naturalWidth, oimg.naturalHeight);
+    if (ode){
+        return ode.data;        
+    }
+    else {
+        return '';
+    }    
+}
+
+function grey_img_b(img_original_obj,ocanvas,ctx,white_and_black=false){
+    // 将图像绘制到canvas上
+    ocanvas.width = img_original_obj.width;
+    ocanvas.height = img_original_obj.height;
+    ctx.drawImage(img_original_obj, 0, 0, ocanvas.width, ocanvas.height);
+
+    // 获取图像数据
+    const imageData = ctx.getImageData(0, 0, ocanvas.width, ocanvas.height);
+    const data = imageData.data;
+
+    // 将图像转换为黑白二色
+    var r,g,b;
+    for (let blxl = 0; blxl < data.length; blxl += 4){
+        [r, g, b] = [data[blxl], data[blxl + 1], data[blxl + 2]];
+        var gray = 0.299 * r + 0.587 * g + 0.114 * b; // 计算灰度值。在图像处理中，灰度化是将彩色图像转换为灰度图像的过程，即将每个像素点的RGB值转换为一个灰度值。常用的灰度化方法有平均值法、加权平均法、最大值法和最小值法等。其中，0.299、0.587、0.114是RGB三个颜色通道的权值比例，这些权值比例是经过科学实验得到的最佳值，使得转换后的灰度图像最能够反映彩色图像的亮度和对比度信息。在灰度化过程中，将每个像素点的RGB值乘以对应的权值比例，然后将三个结果相加，得到该像素点的灰度值。这个灰度值可以用来代替原来的RGB值，从而得到灰度图像。
+        data[blxl] = gray;
+        data[blxl + 1] = gray;
+        data[blxl + 2] = gray;
+    }
+    
+    if (white_and_black){
+        for (let blxl = 0; blxl < data.length; blxl += 4){
+            var gray = data[blxl];
+            var bw = gray > 128 ? 255 : 0; // 将灰度值大于128的像素点设为白色，否则设为黑色
+            data[blxl] = bw;
+            data[blxl + 1] = bw;
+            data[blxl + 2] = bw;
+        }    
+    }
+
+    // 将处理后的图像数据绘制回canvas
+    ctx.putImageData(imageData, 0, 0);
+}

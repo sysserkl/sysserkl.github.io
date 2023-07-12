@@ -5,7 +5,7 @@
 <meta charset="UTF-8" />
 <script src="../hard_ln_io/klbase.js"></script>
 <script>
-klbase_addons_import_js_b(['css','qr','image'],['jeromeetienne_qrcode.min.js'],[],['qrcode_ico/qrcode512.png'],true);
+klbase_addons_import_js_b(['css','qr','image'],['jeromeetienne_qrcode.min.js','jsQR.js'],[],['qrcode_ico/qrcode512.png'],true);
 </script>
 <script src="qrcode.js"></script>
 <script>
@@ -31,6 +31,7 @@ css_root_style_b('18','11',['base','menu'],[],1);
 <p id="p_img_upload" style="display:none;">Select Image: 
 <input type="file" id="input_upload_img">
 <span class="aclick" onclick="upload_img_klqr();">Upload Image</span>
+<span class="aclick" onclick="read_img_klqr();">QR Read</span>
 <input id="bg_left_klqr" type="input" value=-1 />
 <input id="bg_top_klqr" type="input" value=-1 />
 </p>

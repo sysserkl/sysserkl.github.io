@@ -10,6 +10,7 @@ self.addEventListener('install', function(e) {
             '../hard_ln_io/klbase_qr.js',
             '../hard_ln_io/klbase_image.js',
             '../module/jeromeetienne_qrcode.min.js',
+            '../module/jsQR.js',
             ]);
         })
     );

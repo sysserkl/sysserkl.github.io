@@ -159,7 +159,12 @@ function menu_enwords_book(){
         klmenu2.push('<span class="span_menu" onclick="'+str_t+'klwiki_link_b(\'英语书籍生词统计\',true);">英语书籍生词统计(KLWiki)</span>');
     }
 
-    var menus=klmenu_b(klmenu1,'','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_new,'🔤','24rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'🧮','16rem','1rem','1rem','60rem')+(is_local_b()?klmenu_b(klmenu_selenium,'📰','20rem','1rem','1rem','60rem'):'');
+    var klmenu_config=[
+    '<span class="span_menu" onclick="'+str_t+'space2underline_enwords_book();">替换单词间空格为下划线</span> ',  
+    '<span class="span_menu" onclick="'+str_t+'underline2space_enwords_book();">替换下划线为空格</span> ',  
+    ];
+    
+    var menus=klmenu_b(klmenu1,'','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_new,'🔤','26rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'🧮','16rem','1rem','1rem','60rem')+(is_local_b()?klmenu_b(klmenu_selenium,'📰','20rem','1rem','1rem','60rem'):'')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','60rem');
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(menus,'','0rem')+' ');
     
 }
@@ -176,7 +181,6 @@ function new_words_form_enwords_book(){
     bljg=bljg+'<span class="aclick" onclick="in_all_new_enwords_book();">不在全部新单词中的新单词</span> ';    
 
     bljg=bljg+'<span class="aclick" onclick="textarea_shift_b(\'textarea_new_words1\',\'textarea_new_words2\');">对调</span> ';    
-    bljg=bljg+'<span class="aclick" onclick="space2underline_enwords_book();">替换单词间空格为下划线</span> ';      
     bljg=bljg+'<span class="aclick" onclick="filter_key_enwords_book();">Filter</span> ';
     bljg=bljg+textarea_buttons_b('textarea_new_words1','清空,复制');
 
@@ -1112,8 +1116,16 @@ function space2underline_enwords_book(){
     var blstr=otextarea.value.trim();
     while (true){   //考虑 get a grip 等形式 - 保留注释
         if (blstr.match(/([a-z]) +([a-z])/)==null){break;}
-        blstr=blstr.replace(new RegExp(/([a-z]) +([a-z])/,'ig'),'$1_$2'); 
+        blstr=blstr.replace(/([a-z]) +([a-z])/ig,'$1_$2'); 
     }
+    otextarea.value=blstr;
+}
+
+function underline2space_enwords_book(){
+    if (confirm('是否替换下划线为空格？')==false){return;}
+    var otextarea=document.getElementById('textarea_new_words1');
+    var blstr=otextarea.value.trim();
+    blstr=blstr.replace(/_/g,' '); 
     otextarea.value=blstr;
 }
 
