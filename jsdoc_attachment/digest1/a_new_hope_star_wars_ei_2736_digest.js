@@ -37,4 +37,5 @@ var digest_global=`
 *workbench
 *awesomeness
 *uncountable
+*centrally
 `.trim().split('\n');

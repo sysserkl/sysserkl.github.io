@@ -12,4 +12,13 @@ var digest_global=`
 *gotta
 *interdependent
 *night shift
+*fluorescence
+*percentile
+*pseudoscience
+*semiannual
+*semiautonomous
+*softcover
+*southwestward
+*gerontology
+*washbowl
 `.trim().split('\n');

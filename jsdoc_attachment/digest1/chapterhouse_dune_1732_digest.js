@@ -6,4 +6,6 @@ var digest_global=`
 *elbow room
 *mislabel
 *untypical
+*cenotaph
+*unenforceable
 `.trim().split('\n');

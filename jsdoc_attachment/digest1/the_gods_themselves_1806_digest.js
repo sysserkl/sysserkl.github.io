@@ -25,4 +25,5 @@ var digest_global=`
 *tungsten
 *unilateral
 *uranium
+*Oppenheimer
 `.trim().split('\n');

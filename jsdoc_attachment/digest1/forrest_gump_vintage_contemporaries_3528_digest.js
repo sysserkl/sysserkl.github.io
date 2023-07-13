@@ -10,4 +10,15 @@ var digest_global=`
 *Wordsworth
 *poppa
 *turd
+*busload
+*dickhead
+*goalpost
+*goofball
+*quarterback
+*unzip
+*Rudolph
+*cocksucker
+*splashdown
+*flophouse
+*orangutan
 `.trim().split('\n');

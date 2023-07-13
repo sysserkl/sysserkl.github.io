@@ -59,4 +59,7 @@ var digest_global=`
 *impermeable
 *Adolf
 *Borgia
+*microorganism
+*moonrise
+*treetop
 `.trim().split('\n');

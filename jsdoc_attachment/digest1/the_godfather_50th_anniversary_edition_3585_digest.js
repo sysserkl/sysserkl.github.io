@@ -40,4 +40,6 @@ var digest_global=`
 *stableboy
 *totem
 *unworkable
+*Dartmouth
+*up-and-coming
 `.trim().split('\n');

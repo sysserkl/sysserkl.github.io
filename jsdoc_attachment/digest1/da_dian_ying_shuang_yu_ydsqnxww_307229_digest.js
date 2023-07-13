@@ -23,4 +23,5 @@ var digest_global=`
 *Thucydides
 *underscore
 *warmonger
+*discolor
 `.trim().split('\n');

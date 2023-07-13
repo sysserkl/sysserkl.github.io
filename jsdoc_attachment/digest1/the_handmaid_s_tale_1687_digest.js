@@ -39,4 +39,5 @@ var digest_global=`
 *uncooked
 *videotape
 *yoghurt
+*baseboard
 `.trim().split('\n');

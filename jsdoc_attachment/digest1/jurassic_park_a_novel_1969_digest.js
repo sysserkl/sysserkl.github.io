@@ -86,4 +86,6 @@ var digest_global=`
 *unsurprising
 *Walkman
 *wash-and-wear
+*jackhammer
+*keypad
 `.trim().split('\n');

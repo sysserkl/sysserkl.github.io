@@ -1220,6 +1220,16 @@ function today_str_b(cstype='d',delimiter1='-',delimiter2=':',delimiter3=' '){
     return today;
 }
 
+function local_storage_list_in_one_day_b(csid){
+    //格式是：第一行，日期；第二行开始：各种值 - 保留注释
+    var list_t=(localStorage.getItem(csid) || '').trim().split('\n');
+    var today_str=today_str_b();
+    if (list_t[0]!==today_str){
+        list_t=[today_str];
+    }
+    return list_t;
+}
+
 function local_storage_today_b(csid,csmax=-1,csnewcontent='',cssplit='',squash=[],cstype='d'){
     if (csnewcontent==''){return;}
     if (squash.length==3){  //否则不执行压缩，仅截取 - 保留注释
@@ -1852,7 +1862,7 @@ function klsofts_recent_b(cshref=''){
 }
 
 function klsofts_import_b(){    //针对 firefox 读取 file:///****.htm 时不同路径下，localStorage 不共享的问题 - 保留注释
-    var otextarea=document.querySelector('#div_top_bottom_softs textarea');
+    var otextarea=document.querySelector('#div_top_bottom_menu textarea');
     if (!otextarea){return;}
     var blstr=otextarea.value.trim();
     var bllen=blstr.length;
@@ -1870,7 +1880,7 @@ function klsofts_import_b(){    //针对 firefox 读取 file:///****.htm 时不�
 }
 
 function klsofts_config_b(){
-    var odiv=document.getElementById('div_top_bottom_softs');
+    var odiv=document.getElementById('div_top_bottom_menu');
     if (!odiv){return;}
     var bljg='<textarea style="width:90%;">'+local_storage_get_b('common_softs')+'</textarea>\n';
     bljg=bljg+'<p style="font-size:0.9rem;"><span class="aclick" onclick="klsofts_import_b();">import</span></p>\n';
@@ -1892,7 +1902,7 @@ function klsofts_popup_b(event=false,odom=false,csstr='',fontsize=1){
             if (ogrand){
                 var blid=ogrand.getAttribute('id');
                 if (blid){
-                    if (blid=='div_top_bottom_softs'){
+                    if (blid=='div_top_bottom_menu'){
                         blfound=true;
                     }
                 }
@@ -2032,6 +2042,48 @@ function klsofts_one_b(csitem,fontsize=2.5,addp=true,cshref='',jsstr='',new_tab=
     return bljg;
 }
 
+function klsofts_routines_random_b(){
+    var items=new Set(local_storage_get_b('list_routines',-1,false).replace(/^.*?\s(.*?)\s(.*)$/mg,'$1 /// $2').split('\n'));  //去掉前面的 id - 保留注释
+    if (items.size==0){return '';}
+    
+    var list_t=new Set(local_storage_list_in_one_day_b('klsofts_routines'));
+    items=array_difference_b(items,list_t,true);
+    if (items.size==0){return '';}
+    
+    items=Array.from(items);
+    items.sort(randomsort_b);
+    
+    var blat=items[0].indexOf(' /// ');
+    var blcategory='(<span class="span_category">'+items[0].substring(0,blat)+'</span>)';
+    var blname=items[0].substring(blat+5,);
+    if (blname.length>15){
+        return blcategory+'<span class="span_todolist_name" title="'+specialstr_j(blname)+'">'+blname.substring(0,15)+'...</span>';
+    }
+    else {
+        return blcategory+'<span class="span_todolist_name">'+blname+'</span>';    
+    }
+}
+
+function klsofts_routines_ignore_or_done_b(ospan){
+    var blcategory=ospan.querySelector('span.span_category').innerText;
+    var oname=ospan.querySelector('span.span_todolist_name');
+    var blname=oname.getAttribute('title');
+    if (!blname){
+        blname=oname.innerText;
+    }
+    
+    var list_t=local_storage_list_in_one_day_b('klsofts_routines');
+    list_t.push(blcategory +' /// '+ blname);
+    localStorage.setItem('klsofts_routines',list_t.join('\n'));
+    var new_item=klsofts_routines_random_b();
+    if (new_item==''){
+        ospan.parentNode.outerHTML='';
+    }
+    else {
+        ospan.innerHTML='♾ '+new_item;
+    }
+}
+
 function klsofts_div_b(divid,font_size,padding=0,autoclose=true){
     var blhref=klwebphp_path_b();
     if (blhref===false){
@@ -2041,6 +2093,11 @@ function klsofts_div_b(divid,font_size,padding=0,autoclose=true){
     var soft_str='<div id="'+divid+'" style="display:none;font-weight:normal;padding:'+padding+'rem;">';
     var head_part='{{selenium_news}}/html/klapps.htm,KL Apps,klapps512.png,0';
     var soft_list=klsofts_list_b('0',[head_part]);
+    
+    var bltodolist=klsofts_routines_random_b();
+    if (bltodolist!==''){
+        soft_list.push(['javascript:klsofts_routines_ignore_or_done_b(this)',bltodolist,'♾',0]);
+    }
     
     if (autoclose){
         var jsstr=' onclick="popup_show_hide_b(\''+divid+'\');"'

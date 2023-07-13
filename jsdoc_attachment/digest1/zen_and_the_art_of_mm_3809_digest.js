@@ -54,4 +54,5 @@ var digest_global=`
 *Sunday school
 *generation gap
 *Truman
+*redwood
 `.trim().split('\n');

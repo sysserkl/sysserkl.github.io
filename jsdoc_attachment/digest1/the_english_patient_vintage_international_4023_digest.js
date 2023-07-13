@@ -73,4 +73,5 @@ var digest_global=`
 *Marseillaise
 *hearing aid
 *lionlike
+*Gestapo
 `.trim().split('\n');

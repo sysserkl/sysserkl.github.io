@@ -3,4 +3,7 @@ var digest_global=`
 *flatterer
 *Gloucester
 *Addison
+*godchild
+*pelican
+*premeditate
 `.trim().split('\n');

@@ -40,4 +40,6 @@ var digest_global=`
 *Londoner
 *bedsheet
 *overlord
+*armband
+*teaspoon
 `.trim().split('\n');

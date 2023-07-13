@@ -15,4 +15,7 @@ var digest_global=`
 *reinsert
 *statecraft
 *watcher
+*haploid
+*hardbound
+*surfboard
 `.trim().split('\n');

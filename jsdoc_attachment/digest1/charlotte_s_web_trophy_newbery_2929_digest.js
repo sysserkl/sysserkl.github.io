@@ -4,4 +4,5 @@ var digest_global=`
 *aeronaut
 *monkeyshine
 *Cornell
+*cheeseburger
 `.trim().split('\n');

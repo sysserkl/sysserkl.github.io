@@ -8,4 +8,5 @@ var digest_global=`
 *cookery
 *Gaia
 *dewdrop
+*multicellular
 `.trim().split('\n');

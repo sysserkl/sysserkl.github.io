@@ -53,4 +53,5 @@ var digest_global=`
 *saucepan
 *shuttlecock
 *protégée
+*firelit
 `.trim().split('\n');

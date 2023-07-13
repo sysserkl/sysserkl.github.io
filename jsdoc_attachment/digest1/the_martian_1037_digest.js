@@ -27,4 +27,5 @@ var digest_global=`
 *Anglophile
 *zirconia
 *earpiece
+*crewmate
 `.trim().split('\n');

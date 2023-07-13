@@ -19,4 +19,5 @@ var digest_global=`
 *whey
 *irrationality
 *Strauss
+*saleswoman
 `.trim().split('\n');
