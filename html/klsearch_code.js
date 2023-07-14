@@ -149,7 +149,7 @@ function args_klsearch(){
                         }
                         break;
                     case 'batch_en_minor':
-                        bltype='AHD,definitions,dictionary.com,learnersdictionary,lexico,longman,macmillan,Wiktionary(Local),wordhippo,wordnik,yourdictionary';
+                        bltype='AHD,definitions,dictionary.com,learnersdictionary,lexico,longman,Wiktionary(Local),wordhippo,wordnik,yourdictionary';
                         break;
                 }
             }

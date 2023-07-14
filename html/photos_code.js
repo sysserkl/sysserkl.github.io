@@ -27,7 +27,7 @@ function gallery_2_canvas_klphotos(){
 
             blxl=blxl+1;
             if (blxl>=bllen){
-                var jpeg_src=ocanvas.toDataURL("image/jpeg");
+                var jpeg_src=ocanvas.toDataURL('image/jpeg');
                 document.getElementById('td_gallery_klphotos').innerHTML='<img src="'+jpeg_src+'" />';                
                 return;
             }
@@ -94,7 +94,9 @@ function gallery_klphotos(){
     document.getElementById('span_page_no2').innerHTML='';
             
     var odiv=document.getElementById('div_info');
-    odiv.innerHTML='<table id="table_gallery_klphotos" cellpadding=0 cellspacing=0 style="margin:0.5rem 0rem;"><tr><td id="td_gallery_klphotos" align=center style="border:0.1rem solid black; padding:0.5rem;">'+result_t.join('\n')+'</td></tr></table>'+blbuttons;
+    var img_border=klmenu_check_b('span_img_border',false);        
+
+    odiv.innerHTML='<table id="table_gallery_klphotos" cellpadding=0 cellspacing=0 style="margin:0.5rem 0rem;"><tr><td id="td_gallery_klphotos" align="center"'+(img_border?' style="border:0.1rem solid black;padding:0.5rem;"':'')+'>'+result_t.join('\n')+'</td></tr></table>'+blbuttons;
     odiv.scrollIntoView();
 }
 
@@ -123,7 +125,8 @@ function menu_klphotos(){
     '<span class="span_menu" onclick="'+str_t+'timeline_category_klphotos();">Timeline</span>',   
     '<span class="span_menu" onclick="'+str_t+'screen_album_start_klphotos();">屏幕相框</span>',
     '<span class="span_menu" onclick="'+str_t+'export_array_klphotos();">导出数组</span>',
-    '<span class="span_menu" onclick="'+str_t+'gallery_klphotos();">当前图片合并显示</span>',    
+    '<span class="span_menu" onclick="'+str_t+'gallery_klphotos();">当前图片合并显示</span>',  
+    '<span id="span_img_border" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ img border</span>',        
     ]);
 
     var menu_month=[];

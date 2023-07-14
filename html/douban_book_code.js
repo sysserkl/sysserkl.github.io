@@ -139,7 +139,7 @@ function menu_dbb(){
     klmenu_statistics.push(menu_container_b(str_t,group_list,'当前条件书名分词：'));      
     
     var klmenu_config=[
-    '<span class="span_menu">排序：<select id="select_sort_type_dbb" onchange="'+klmenu_hide_b('',true)+'"><option></option><option>书名</option><option selected>评分</option><option>人数</option><option>出版年</option><option>页数</option><option>定价</option><option>随机</option></select></span>',    
+    '<span class="span_menu">排序：<select id="select_sort_type_dbb" onchange="'+klmenu_hide_b('',true)+'"><option></option><option>书名</option><option selected>评分/书名</option><option>评分/人数</option><option>人数</option><option>出版年</option><option>页数</option><option>定价</option><option>随机</option></select></span>',    
     '<span id="span_reg_dbb" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ reg</span>',
     '<span id="span_txtbook_icon_dbb" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 标记已有书籍</span>',
     '<span id="span_bought_show_dbb" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 显示已有书籍</span>',    
@@ -285,11 +285,16 @@ function search_dbb(cskey=false,cstype=''){
         current_result_dbb_global.sort(function (a,b){return zh_sort_b(a,b,false,1);}); //书名排序 - 保留注释       
     }
     switch (sort_type){
-        case '评分':
+        case '评分/书名':
             current_result_dbb_global.sort(function (a,b){return a[0]['people']<b[0]['people'];});    //人数排序 - 保留注释
             current_result_dbb_global.sort(function (a,b){return zh_sort_b(a,b,false,1);}); //书名排序 - 保留注释
             current_result_dbb_global.sort(function (a,b){return a[0]['rating']<b[0]['rating'];});  //评分排序 - 保留注释
             break;
+        case '评分/人数':
+            current_result_dbb_global.sort(function (a,b){return zh_sort_b(a,b,false,1);}); //书名排序 - 保留注释
+            current_result_dbb_global.sort(function (a,b){return a[0]['people']<b[0]['people'];});    //人数排序 - 保留注释
+            current_result_dbb_global.sort(function (a,b){return a[0]['rating']<b[0]['rating'];});  //评分排序 - 保留注释
+            break;            
         case '人数':
             current_result_dbb_global.sort(function (a,b){return a[0]['people']<b[0]['people'];});
             break;

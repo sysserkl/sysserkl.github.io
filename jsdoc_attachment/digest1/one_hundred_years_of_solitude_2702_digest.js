@@ -12,4 +12,11 @@ var digest_global=`
 *alpaca
 *inkwell
 *life-size
+*Aegean
+*Colombian
+*Memphis
+*newlywed
+*swampland
+*ballerina
+*oregano
 `.trim().split('\n');

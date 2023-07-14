@@ -279,7 +279,7 @@ function en_search_sites_b(maxlength=-1,ew=false){
     ['c','Collins'],    
     ['o','Oxford'],
     ['+','Cambridge'],
-    ['r','wordReference'],
+    //['r','wordReference'],
     ['k','KL Search'],    
     ];
     
@@ -396,9 +396,9 @@ function open_link_en_b(cstype,csword,do_open=true){
         case 'm':
             blhref='https://www.merriam-webster.com/dictionary/'+web_href_key_b(csword,'+',true);
             break;  
-        case 'r':
-            blhref='https://www.wordreference.com/definition/'+encodeURIComponent(csword);
-            break;                      
+        //case 'r':
+            //blhref='https://www.wordreference.com/definition/'+encodeURIComponent(csword);
+            //break;                      
         case 's':
             var blhref=klwebphp_path_b('klbase_html_jump.htm');
             blhref=blhref+'?selenium_news_search.php?search='+encodeURIComponent( '\\b'+csword+'\\b(:title)(:r)');
@@ -589,6 +589,10 @@ function en_sentence_one_line_b(aline,wordname='',attachment_path='',wikisite=''
     }
     //--------------------------------
     var item=aline[0];
+    if (Array.isArray(item)){
+        item=item.join(' ');
+    }
+    
     if (typeof wordname == 'string'){
         wordname=[wordname];
     }
@@ -1955,13 +1959,13 @@ function sentence_split_b(csstr,csno=-1){
     
     var old_str=csstr;
     csstr=csstr.replace(/(([^A-Z]((\. )+)?\.|\?|!|\"|\?) )/g,'$1\n');
-    var has_mr=(csstr.includes('Mr.') || csstr.includes('Dr.'));
+    var has_mr=(csstr.includes('Mr.') || csstr.includes('Dr.') || csstr.includes('St.'));
     var list_t=csstr.split('\n');
     var result_t=[];
 
     if (has_mr){
         for (let blxl=list_t.length-1;blxl>0;blxl--){
-            if (sub_sentence_split_b_check(list_t[blxl-1],list_t[blxl]) || list_t[blxl-1].trim().slice(-5,)==' etc.' || [' Dr.',' Mr.'].includes(list_t[blxl-1].trim().slice(-4,)) && list_t[blxl-1].slice(-1)!=='.'){
+            if (sub_sentence_split_b_check(list_t[blxl-1],list_t[blxl]) || list_t[blxl-1].trim().slice(-5,)==' etc.' || [' Dr.',' Mr.',' St.'].includes(list_t[blxl-1].trim().slice(-4,)) && list_t[blxl-1].slice(-1)!=='.'){
                 list_t[blxl-1]=list_t[blxl-1]+list_t[blxl];
                 list_t[blxl]='';    
             }
@@ -1974,7 +1978,7 @@ function sentence_split_b(csstr,csno=-1){
         list_t=[].concat(result_t);
         
         for (let blxl=0;blxl<list_t.length-1;blxl++){
-            if (['Mr.','Dr.'].includes(list_t[blxl].trim().slice(-3,))){
+            if (['Mr.','Dr.','St.'].includes(list_t[blxl].trim().slice(-3,))){
                 list_t[blxl+1]=list_t[blxl]+list_t[blxl+1];
                 list_t[blxl]='';    
             }

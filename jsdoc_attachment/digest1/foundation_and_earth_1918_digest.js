@@ -9,4 +9,7 @@ var digest_global=`
 *Gaia
 *dewdrop
 *multicellular
+*nonrandom
+*recalculate
+*rulebook
 `.trim().split('\n');

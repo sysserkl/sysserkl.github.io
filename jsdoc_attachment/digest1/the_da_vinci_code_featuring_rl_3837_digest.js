@@ -1,37 +1,49 @@
 var digest_global=`
-*Heathrow
-*Pisces
 *airsickness
+*Baldwin
+*bankroll
 *bibliography
+*blurry
+*Boolean
 *closing time
 *combination lock
+*command post
+*cyclic
 *deplane
+*devastate
+*dockworker
+*embezzle
+*epicenter
+*equilateral
+*freeze-frame
+*guidepost
+*hairdresser
+*Heathrow
 *hexagram
+*honeybee
+*hyperlink
 *hypertext
 *imaginary number
+*in-house
+*jackhammer
+*Koran
+*Kuala Lumpur
 *menopause
+*octagon
 *organizational
+*overlord
+*penmanship
 *pentagram
+*photocopy
+*Pisces
+*pistol
+*Sophie
+*symbology
+*topless
+*traditionalist
 *transliteration
 *turboprop
-*Sophie
-*bankroll
 *ultraconservative
-*pistol
-*Kuala Lumpur
-*epicenter
-*Boolean
-*Baldwin
-*in-house
-*command post
-*symbology
 *unbuilt
 *watermark
-*Koran
-*penmanship
-*freeze-frame
-*hairdresser
-*blurry
-*cyclic
-*overlord
 `.trim().split('\n');

@@ -67,4 +67,5 @@ var digest_global=`
 *strangeness
 *falconry
 *Bonaparte
+*Hippocrates
 `.trim().split('\n');

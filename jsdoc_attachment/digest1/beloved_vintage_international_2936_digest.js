@@ -10,4 +10,8 @@ var digest_global=`
 *Muhammad
 *Wilmington
 *riverboat
+*abolitionist
+*handsaw
+*smokehouse
+*snakebite
 `.trim().split('\n');

@@ -11,4 +11,5 @@ var digest_global=`
 *sportswoman
 *unforgivably
 *yellowy
+*weatherproof
 `.trim().split('\n');

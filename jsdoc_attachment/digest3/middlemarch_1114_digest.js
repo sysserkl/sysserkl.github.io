@@ -24,4 +24,5 @@ var digest_global=`
 *unconstrained
 *uncreative
 *unsuspicious
+*nag
 `.trim().split('\n');

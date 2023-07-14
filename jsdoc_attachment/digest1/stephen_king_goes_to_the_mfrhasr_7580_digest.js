@@ -94,4 +94,5 @@ var digest_global=`
 *Stewart
 *headlamp
 *motherfucker
+*baseboard
 `.trim().split('\n');

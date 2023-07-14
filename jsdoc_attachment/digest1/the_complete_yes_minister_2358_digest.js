@@ -7,4 +7,7 @@ var digest_global=`
 *legislate
 *photocopy
 *Whitehall
+*deflation
+*gunboat
+*redeploy
 `.trim().split('\n');

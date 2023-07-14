@@ -138,7 +138,10 @@ function background_img_merge_klqr(ocanvas,oimg){
     }
     ictx.putImageData(iimageData, 0, 0);
     
-    document.getElementById('div_qrcode').insertAdjacentHTML('afterbegin','<p><img id="img_backgound_qr" src="'+icanvas.toDataURL('image/png')+'" style="border:0.1px solid '+scheme_global['color']+';" /></p>');
+    var img_border=klmenu_check_b('span_img_border',false);        
+    var bljg='<p><img id="img_backgound_qr" src="'+icanvas.toDataURL('image/png')+'"'+(img_border?' style="border:0.1px solid '+scheme_global['color']+';"':'')+' /></p>';
+    
+    document.getElementById('div_qrcode').insertAdjacentHTML('afterbegin',bljg);
 }
 
 function background_img_load_klqr(ocanvas=false){
@@ -549,11 +552,12 @@ function menu_klqr(){
 
     var klmenu2=[
     '<span class="span_menu" onclick="'+str_t+'hide_show_p_img_upload_klqr();">背景图片</span>',
+    '<span id="span_img_border" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ img border</span>',        
     '<span class="span_menu" onclick="'+str_t+'help_klqr();">help</span>',
     '<span class="span_menu" onclick="'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'qrcode\');}">更新版本</span>',    
     ];
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','11rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'⚙','7rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','11rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'⚙','11rem','1rem','1rem','60rem'),'','0rem')+' ');
     //klmenu_check_b('span_table_klqr'); //此行保留 - 保留注释
 }
 
