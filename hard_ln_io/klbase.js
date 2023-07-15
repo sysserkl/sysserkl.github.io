@@ -2052,7 +2052,7 @@ function klsofts_routines_random_b(){
     
     items=Array.from(items);
     items.sort(randomsort_b);
-    
+    if (items[0]==''){return '';}
     var blat=items[0].indexOf(' /// ');
     var blcategory='(<span class="span_category">'+items[0].substring(0,blat)+'</span>)';
     var blname=items[0].substring(blat+5,);

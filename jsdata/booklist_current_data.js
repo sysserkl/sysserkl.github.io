@@ -1,7 +1,8 @@
 var csbooklist_source_global=[
-["the_adventures_of_tom_sawyer_c_3527", "The Adventures of Tom Sawyer, Complete(Mark Twain)","已整理,englishwords","3",""],
+["on_the_duty_of_civil_d_3022", "On the Duty of Civil Disobedience(Henry David Thoreau)","已整理,englishwords","3",""],
 ["the_romance_of_lust_a_cven_4876", "The Romance of Lust- A classic Victorian erotic novel(Anonymous)","已整理,englishwords","3",""],
 ["the_prince_930", "The Prince(Niccolò Machiavelli)","已整理,englishwords","3",""],
+["the_adventures_of_tom_sawyer_c_3527", "The Adventures of Tom Sawyer, Complete(Mark Twain)","已整理,englishwords","3",""],
 ["crime_and_punishment_1934", "Crime and Punishment(Fyodor Dostoyevsky)","已整理,englishwords","3",""],
 ["the_wonderful_wizard_of_oz_2406", "The Wonderful Wizard of Oz(L. Frank Baum)","已整理,englishwords","3",""],
 ["the_varieties_of_religious_experience_asihn_5699", "The Varieties of Religious Experience - A Study in Human Nature(William James)","已整理,englishwords","3",""],
