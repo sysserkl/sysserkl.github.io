@@ -109,7 +109,7 @@ var digest_list_source_global=[
 ["prelude_to_foundation_2059_digest",1,"2023-03-23",140],
 ["ping_fan_de_shi_jie_ly_125498_digest",1,"2020-11-30",399999],
 ["one_hundred_years_of_solitude_2702_digest",1,"2023-07-13",251],
-["the_notebook_the_love_story_tealscfs_6719_digest",1,"2023-07-04",402],
+["the_notebook_the_love_story_tealscfs_6719_digest",1,"2023-07-15",402],
 ["chan_yu_mo_tuo_che_wxyslbtmbxg_251461_digest",1,"2022-09-02",59580],
 ["da_wei_ke_bo_fei_e_160770_digest",1,"2021-12-26",284272],
 ["hai_bo_li_an_si_bqtzdxms_236329_digest",1,"2021-07-15",373669],

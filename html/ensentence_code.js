@@ -42,7 +42,7 @@ function menu_ensentence(){
     '<span id="span_reg_ensentence" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ reg</span>',
     ];    
     if (is_local_b()){
-        klmenu_config.push('<span class="span_menu" onclick="'+str_t+'klwiki_length_sort_ensentence();">KLWiki 最短例句</span>');
+        klmenu_config.push('<span class="span_menu" onclick="'+str_t+'length_sort_ensentence();">最短例句</span>');
     }
     
     var klmenu_link=[
@@ -197,16 +197,16 @@ function enwords_count_sentence_data_save_ensentence(){
     string_2_txt_file_b('var en_sentence_count_global=[\n'+list_t.join('\n')+'\n];\n','enwords_count_sentence_data.js','txt');
 }
 
-function klwiki_length_sort_ensentence(){
+function length_sort_ensentence(){
     var t0 = performance.now();
 
     var result_t=[];
     for (let blno=0;blno<en_sentence_global.length;blno++){
         var aline=en_sentence_global[blno];
-        if (aline[2].slice(-4,)=='_TLS'){continue;}
+        //if (aline[2].slice(-4,)=='_TLS'){continue;}   //此行保留 - 保留注释
 
         if (Array.isArray(aline[0])){
-            var blstr=aline[0].join('');
+            var blstr=aline[0].join(' ');
         }
         else {
             var blstr=aline[0];
@@ -225,7 +225,7 @@ function klwiki_length_sort_ensentence(){
     var bljg=sentence_list_2_html_b(result_t,[''],500,false);
     
     document.getElementById('divhtml').innerHTML='<div class="div_sentence">'+bljg.join('\n')+'</div><p><i>('+bljg.length+')</i></p>';
-    console.log('klwiki_length_sort_ensentence() 费时：'+(performance.now() - t0) + ' milliseconds');    
+    console.log('length_sort_ensentence() 费时：'+(performance.now() - t0) + ' milliseconds');    
 }
 
 

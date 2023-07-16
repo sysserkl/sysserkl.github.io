@@ -2431,3 +2431,77 @@ function input_date_set_enwords_b(){
         omonth.value=today.getMonth()+1;
     }
 }
+
+function enwords_definition_2_multilines_b(){
+    var ospans=document.querySelectorAll('span.span_explanation');
+    for (let one_span of ospans){
+        var blstr=one_span.innerHTML;
+        if (blstr.substring(0,4)=='<ul>'){continue;}
+        one_span.innerHTML='<ul><li>'+enwords_definition_split_b(blstr,true,false).join('</li><li>')+'</li></ul>';
+    }
+}
+
+function enwords_definition_split_b(csdefinition,include_cn=false,remove_type=true){
+    function sub_enwords_definition_split_b_push(csstr){
+        if (csstr.includes('；') && ! item.includes('〘')){
+            if (include_cn){
+                result_t=result_t.concat(csstr.split('；'));
+            }
+            else {
+                result_t.push(csstr.split('；').slice(-1));
+            }
+        }
+        else{
+            result_t.push(csstr);
+        }    
+        //无法处理〘 cross my heart (and hope to die): 我发誓所说属实（否则不得好死）；said to show that what you have just said or promised is completely true or sincere 〙 - 保留注释
+    }
+    //------------------------
+    if (remove_type){
+        csdefinition=csdefinition.replace(new RegExp('<b>'+enword_type_b(true)+'\\. <\/b>','g'),'');    //不能加\\b - 保留注释
+    }
+    else {
+        csdefinition=csdefinition.replace(new RegExp('<b>'+enword_type_b(true)+'\\. <\/b>','g'),'<b>$1\. </b>; 📋 ');    //不能加\\b - 保留注释    
+    }
+    
+    var def_list=csdefinition.split('; 📋 ');
+    var result_t=[];
+    var blstr='';
+    for (let blxl=0;blxl<def_list.length;blxl++){
+        var item=def_list[blxl];
+        if (item.includes('〘') && item.includes('〙')){
+            sub_enwords_definition_split_b_push(blstr+item);
+            blstr='';
+            continue;
+        }
+        
+        if (item.includes('〘')){
+            if (blstr!==''){
+                sub_enwords_definition_split_b_push(blstr);
+            }
+            blstr=item+'; ';
+            continue;
+        }
+        
+        if (item.includes('〙')){
+            sub_enwords_definition_split_b_push(blstr+item);
+            blstr='';
+            continue;
+        }
+
+        if (blstr!==''){
+            if (blxl<def_list.length-1){
+                blstr=blstr+item+'; ';
+            }
+            else {
+                sub_enwords_definition_split_b_push(blstr+item);
+                blstr='';
+            }
+        }
+        else {
+            sub_enwords_definition_split_b_push(item);
+        }
+    }
+
+    return result_t;
+}

@@ -1,4 +1,6 @@
 var csbooklist_source_global=[
+["anne_of_green_gables_1782", "Anne of Green Gables(L. M. Montgomery)","已整理,englishwords","3",""],
+["beyond_good_and_evil_1805", "Beyond Good and Evil(Friedrich Wilhelm Nietzsche)","已整理,englishwords","3",""],
 ["on_the_duty_of_civil_d_3022", "On the Duty of Civil Disobedience(Henry David Thoreau)","已整理,englishwords","3",""],
 ["the_romance_of_lust_a_cven_4876", "The Romance of Lust- A classic Victorian erotic novel(Anonymous)","已整理,englishwords","3",""],
 ["the_prince_930", "The Prince(Niccolò Machiavelli)","已整理,englishwords","3",""],

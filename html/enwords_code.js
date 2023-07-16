@@ -534,7 +534,7 @@ function menu_kle(){
     
     klmenu1=klmenu1.concat([
     '<span class="span_menu" onclick="'+str_t+'en_sentence_to_default_order_b();alert(\'done\');">例句恢复原始排序</span>',
-    '<span class="span_menu" onclick="'+str_t+'definition_2_multilines_kle();">释义分段</span>',    
+    '<span class="span_menu" onclick="'+str_t+'enwords_definition_2_multilines_b();">释义分段</span>',    
     '<span class="span_menu" onclick="'+str_t+'similar_words_batch_kle();">全部相似单词</span>',
     '<span class="span_menu" onclick="'+str_t+'duplicate_words_kle();">重复单词和格式检查</span>',
     '<a href="enwords_slide.htm" onclick="'+str_t+'" target=_blank>幻灯片</a>',  
@@ -680,80 +680,6 @@ function letters_26_kle(idno='',sort_by_count=false,percent=false){
     if (idno=='' || idno==3){    
         sub_letters_26_kle_one_array(en_words_temp_important_global,'全部重要临时记忆单词',false,3,sort_by_count,percent);  
     }
-}
-
-function definition_2_multilines_kle(){
-    var ospans=document.querySelectorAll('span.span_explanation');
-    for (let one_span of ospans){
-        var blstr=one_span.innerHTML;
-        if (blstr.substring(0,4)=='<ul>'){continue;}
-        one_span.innerHTML='<ul><li>'+definition_split_kle(blstr,true,false).join('</li><li>')+'</li></ul>';
-    }
-}
-
-function definition_split_kle(csdefinition,include_cn=false,remove_type=true){
-    function sub_definition_split_kle_push(csstr){
-        if (csstr.includes('；') && ! item.includes('〘')){
-            if (include_cn){
-                result_t=result_t.concat(csstr.split('；'));
-            }
-            else {
-                result_t.push(csstr.split('；').slice(-1));
-            }
-        }
-        else{
-            result_t.push(csstr);
-        }    
-        //无法处理〘 cross my heart (and hope to die): 我发誓所说属实（否则不得好死）；said to show that what you have just said or promised is completely true or sincere 〙 - 保留注释
-    }
-    //------------------------
-    if (remove_type){
-        csdefinition=csdefinition.replace(new RegExp('<b>'+enword_type_b(true)+'\\. <\/b>','g'),'');    //不能加\\b - 保留注释
-    }
-    else {
-        csdefinition=csdefinition.replace(new RegExp('<b>'+enword_type_b(true)+'\\. <\/b>','g'),'<b>$1\. </b>; 📋 ');    //不能加\\b - 保留注释    
-    }
-    
-    var def_list=csdefinition.split('; 📋 ');
-    var result_t=[];
-    var blstr='';
-    for (let blxl=0;blxl<def_list.length;blxl++){
-        var item=def_list[blxl];
-        if (item.includes('〘') && item.includes('〙')){
-            sub_definition_split_kle_push(blstr+item);
-            blstr='';
-            continue;
-        }
-        
-        if (item.includes('〘')){
-            if (blstr!==''){
-                sub_definition_split_kle_push(blstr);
-            }
-            blstr=item+'; ';
-            continue;
-        }
-        
-        if (item.includes('〙')){
-            sub_definition_split_kle_push(blstr+item);
-            blstr='';
-            continue;
-        }
-
-        if (blstr!==''){
-            if (blxl<def_list.length-1){
-                blstr=blstr+item+'; ';
-            }
-            else {
-                sub_definition_split_kle_push(blstr+item);
-                blstr='';
-            }
-        }
-        else {
-            sub_definition_split_kle_push(item);
-        }
-    }
-
-    return result_t;
 }
 
 function duplicate_words_kle(){

@@ -98,6 +98,8 @@ function menu_rndwords(){
     var klmenu3=[
     '<span id="span_reg_rndwords" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 正则</span>',                
     '<span class="span_menu" onclick="'+str_t+'window.open(location.href,\'\',\'width=550, height=200\');">新窗口</span>', 
+    '<span class="span_menu" onclick="'+str_t+'enwords_definition_2_multilines_b();">释义分段</span>',
+    '<span class="span_menu" onclick="'+str_t+'pronunciation_show_hide_rndwords();">音标显示切换</span>',    
     '<span class="span_menu" onclick="'+str_t+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>',
     '<span class="span_menu" onclick="'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'rnd_english_words\');}">更新版本</span>',
     ];
@@ -109,6 +111,13 @@ function menu_rndwords(){
     klmenu_check_b('span_sentence_en_slide',true);
     if (!ismobile_b()){
         klmenu_check_b('span_source_en_slide',true);
+    }
+}
+
+function pronunciation_show_hide_rndwords(){
+    var ospans=document.querySelectorAll('span.span_pronounce');
+    for (let item of ospans){
+        popup_show_hide_b(item,'');
     }
 }
 
