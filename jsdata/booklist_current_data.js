@@ -1,4 +1,6 @@
 var csbooklist_source_global=[
+["peter_panj_m_barrie_831", "Peter Pan(J. M. Barrie)","已整理,englishwords","3",""],
+["grimms_fairy_tales_1738", "Grimms' Fairy Tales(Jacob Grimm)","已整理,englishwords","3",""],
 ["anne_of_green_gables_1782", "Anne of Green Gables(L. M. Montgomery)","已整理,englishwords","3",""],
 ["beyond_good_and_evil_1805", "Beyond Good and Evil(Friedrich Wilhelm Nietzsche)","已整理,englishwords","3",""],
 ["on_the_duty_of_civil_d_3022", "On the Duty of Civil Disobedience(Henry David Thoreau)","已整理,englishwords","3",""],

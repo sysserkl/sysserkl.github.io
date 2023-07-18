@@ -172,13 +172,14 @@ function menu_enwords_book(){
 function new_words_form_enwords_book(){
     var bljg='<p>第一组</p>';
     bljg=bljg+'<textarea id="textarea_new_words1"></textarea>';
-    bljg=bljg+'<p>';
-    bljg=bljg+'<span class="aclick" onclick="get_new_words_arr_enbook_b(1);">全部单词</span> ';
-    bljg=bljg+'<span class="aclick" onclick="get_new_words_arr_enbook_b(2);">新单词</span> ';
-    bljg=bljg+'<span class="aclick" onclick="get_new_words_arr_enbook_b(3);">旧单词</span> ';
+    bljg=bljg+'<p>单词：';
+    bljg=bljg+'<span class="aclick" onclick="get_new_words_arr_enbook_b(1);">全部</span> ';
+    bljg=bljg+'<span class="aclick" onclick="get_new_words_arr_enbook_b(2);">新</span> ';
+    bljg=bljg+'<span class="aclick" onclick="get_new_words_arr_enbook_b(3);">旧</span> ';
 
     bljg=bljg+'<span class="aclick" onclick="in_all_new_enwords_book(\'include\');">已在全部新单词中的新单词</span> ';        
     bljg=bljg+'<span class="aclick" onclick="in_all_new_enwords_book();">不在全部新单词中的新单词</span> ';    
+    bljg=bljg+'<span class="aclick" onclick="in_rare_words_enwords_book();">稀有旧单词</span> ';    
 
     bljg=bljg+'<span class="aclick" onclick="textarea_shift_b(\'textarea_new_words1\',\'textarea_new_words2\');">对调</span> ';    
     bljg=bljg+'<span class="aclick" onclick="filter_key_enwords_book();">Filter</span> ';
@@ -605,6 +606,22 @@ function selenium_count_batch_enwords_book(ospan){
     for (let one_small of osmalls){
         selenium_count_one_enword_book(one_small);
     }
+}
+
+function in_rare_words_enwords_book(){    
+    var csstr=document.getElementById('textarea_new_words1').value.trim();
+    
+    var bljgarr2=str_2_array_enbook_b(csstr);
+    var old_words_set=new_old_word_list_enbook_b(bljgarr2,checkbox_kl_value_b('words_type_check'))[1];
+    
+    var result_t_include=[];
+    for (let item of old_words_set){
+        if (en_sentence_count_global.includes(item) || en_sentence_count_global.includes(item.toLowerCase())){
+            result_t_include.push(item);
+        }
+    }
+    var bljg='稀有旧单词：'+result_t_include.join(' ')+'\n';
+    document.getElementById('textarea_new_words2').value=bljg;    
 }
 
 function rare_word_count_enwords_book(cslist,rare_dict){
@@ -1062,10 +1079,8 @@ function day_new_enwords_book(do_filter=false){
 function in_all_new_enwords_book(cstype='exclude'){
     var csstr=document.getElementById('textarea_new_words1').value.trim();
     
-    var new_words_set=new Set();
-    var old_words_set=new Set();    
     var bljgarr2=str_2_array_enbook_b(csstr);
-    [new_words_set,old_words_set]=new_old_word_list_enbook_b(bljgarr2,checkbox_kl_value_b('words_type_check'));
+    var new_words_set=new_old_word_list_enbook_b(bljgarr2,checkbox_kl_value_b('words_type_check'))[0];
     
     var result_t_include=[];
     var result_t_exclude=[];

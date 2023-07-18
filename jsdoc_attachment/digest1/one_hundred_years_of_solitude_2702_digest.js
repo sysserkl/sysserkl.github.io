@@ -19,4 +19,6 @@ var digest_global=`
 *swampland
 *ballerina
 *oregano
+*barroom
+*wineskin
 `.trim().split('\n');

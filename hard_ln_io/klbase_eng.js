@@ -1476,7 +1476,7 @@ function enwords_lines_2_js_array_b(aword,emoji_list,three_lines=false){
 function enwords_different_types_div_b(cswlist){
     var blbuttons='<p>';
     blbuttons=blbuttons+'<select onchange="enwords_different_types_textarea_b(this);">';
-    for (let item of ['','asterisk','js','temp','wiki','reg']){
+    for (let item of ['','asterisk','js','temp','wiki','reg','space']){
         blbuttons=blbuttons+'<option>'+item+'</option>\n';
     }
     blbuttons=blbuttons+'</select>\n';    
@@ -1512,6 +1512,10 @@ function enwords_different_types_textarea_b(oselect){
         case 'reg':
             bljg=raw_list.join('|').replace(/\s/g,'\\s');
             bljg='<br /><textarea style="height:3rem;" onclick="this.select();document.execCommand(\'copy\');">\\b('+bljg+')\\b</textarea>';
+            break;
+        case 'space':
+            bljg=raw_list.join(' ');
+            bljg='<br /><textarea style="height:3rem;" onclick="this.select();document.execCommand(\'copy\');">'+bljg+'</textarea>';        
             break;
     }
     odiv.innerHTML=bljg;

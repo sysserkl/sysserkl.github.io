@@ -28,4 +28,5 @@ var digest_global=`
 *uninspiring
 *wholehearted
 *backstabbing
+*Zionism
 `.trim().split('\n');

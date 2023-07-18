@@ -11,4 +11,6 @@ var digest_global=`
 *mountaineer
 *newsmonger
 *stagecoach
+*Versailles
+*charger
 `.trim().split('\n');

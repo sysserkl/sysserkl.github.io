@@ -14,4 +14,6 @@ var digest_global=`
 *hemoglobin
 *savannah
 *peptide
+*Istanbul
+*essayist
 `.trim().split('\n');

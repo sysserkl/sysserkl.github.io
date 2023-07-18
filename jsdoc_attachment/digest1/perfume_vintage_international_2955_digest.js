@@ -21,4 +21,5 @@ var digest_global=`
 *thousandfold
 *tumorous
 *vernal
+*boxful
 `.trim().split('\n');

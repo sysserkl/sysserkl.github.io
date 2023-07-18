@@ -6,4 +6,5 @@ var digest_global=`
 *arsehole
 *Casanova
 *lengthways
+*knowingly
 `.trim().split('\n');
