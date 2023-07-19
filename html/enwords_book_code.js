@@ -134,6 +134,7 @@ function menu_enwords_book(){
     '<span class="span_menu" onclick="'+str2_t+'selenium_list_enwords_book(true,\'old\');">selenium新词(缓存旧单词在前)</span>',    
     '<span class="span_menu" onclick="'+str2_t+'selenium_list_enwords_book(true,\'count\');">selenium新词(缓存单词数)</span>',    
     '<span class="span_menu" onclick="'+str2_t+'selenium_list_enwords_book(true,\'length\');">selenium新词(缓存标题和链接长度)</span>',    
+    '<span class="span_menu" onclick="'+str2_t+'selenium_list_enwords_book(true,\'title\');">selenium新词(标题)</span>',        
     '<span class="span_menu" onclick="'+str2_t+'selenium_list_enwords_book(true,\'rare\');">selenium新词(缓存稀有度)</span>',
     '<span class="span_menu" onclick="'+str2_t+'selenium_one2more_enwords_book();">selenium新词(缓存一对多)</span>',        
     '<span class="span_menu" onclick="'+str2_t+'selenium_contain_enwords_book();">selenium新词(缓存包含)</span>',        
@@ -701,8 +702,8 @@ function selenium_list_enwords_book(use_cache=false,cstype=''){
             blrare_count=rare_word_count_enwords_book(word_list,rare_dict);
         }
         
-        if (['count','old','random','length','rare'].includes(cstype)){
-            result_t['k_'+item[2]].push([blstr,(item[0]+item[1]).length,word_list.length,old_count/word_list.length,blrare_count]);
+        if (['count','old','random','length','rare','title'].includes(cstype)){
+            result_t['k_'+item[2]].push([blstr,(item[0]+item[1]).length,word_list.length,old_count/word_list.length,blrare_count,item[1]]);
         }
         else {
             result_t['k_'+item[2]].push(blstr);
@@ -710,7 +711,7 @@ function selenium_list_enwords_book(use_cache=false,cstype=''){
     }
     
     var rare_href='';
-    if (['count','old','random','length','rare'].includes(cstype)){
+    if (['count','old','random','length','rare','title'].includes(cstype)){
         var list_t=[];
         for (let key in result_t){
             list_t=list_t.concat(result_t[key]);    //逐个元素合并 - 保留注释
@@ -736,6 +737,10 @@ function selenium_list_enwords_book(use_cache=false,cstype=''){
             case 'rare':
                 list_t.sort(function (a,b){return a[4]<b[4];});
                 rare_href=sub_selenium_list_enwords_book_watershed(list_t,4);
+                break;
+            case 'title':
+                list_t.sort(function (a,b){return a[5]>b[5];});
+                //rare_href=sub_selenium_list_enwords_book_watershed(list_t,5);
                 break;
         }
         for (let blxl=0;blxl<list_t.length;blxl++){

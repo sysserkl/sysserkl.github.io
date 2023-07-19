@@ -25,7 +25,6 @@ var digest_global=`
 *hydrant
 *in all honesty
 *starboard
-*salesmanship
 *tumorous
 *inexpertly
 *dweller
