@@ -45,7 +45,7 @@ var mark_rank_global={};
 var zj_university_global=[];
 var zj_exam_range_global={};
 var zj_current_year_global='';
-var zj_year_range_global=[2018,2022];
+var zj_year_range_global=[2018,2023];
 load_data_zjedu();
 </script>
 
@@ -53,6 +53,7 @@ load_data_zjedu();
 <label><input type="checkbox" id="input_reg">正则</label>
 <span class="aclick" onclick="run_txtsearch_zjedu();">搜索</span>
 <span class="aclick" onclick="search_demo_zjedu();">语法示例</span>
+最大统计结果数：<input id="input_max_num_zjc" value="100" onfocusout="num_change_zjedu(this.value);" />
 </p>
 <div id="div_recent_search" style="margin-top:0.3rem;margin-left:0.5rem;line-height:180%;"></div>
 <table width=100%><tr><td valign=top width=60%>
@@ -64,10 +65,10 @@ load_data_zjedu();
 </tr>
 </table>
 <script>
-var jgarray_public=[];
-var csorder_public=-1;
-var num_public=100;
-var blschool_public=[];
+var jgarray_zjc_global=[];
+var csorder_zjc_global=-1;
+var num_zjc_global=100;
+var school_zjc_global=[];
 
 init_zjedu();
 </script>
