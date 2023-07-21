@@ -108,7 +108,10 @@ function mark_rank_list_zjedu(){
     mark_rank_global['range']=[mark_min,mark_max];
 }
 
-function run_txtsearch_zjedu(){
+function run_txtsearch_zjedu(csstr=false){
+    if (csstr!==false){
+        document.getElementById('input_search').value=csstr;
+    }
     document.getElementById('div_line_count_flot').innerHTML='';
     document.getElementById('divhtml').innerHTML='<span style="font-size:2rem;">数据计算中...</span>';
     td_right_html_zjedu();
@@ -169,7 +172,7 @@ function median_zjedu(blplan, median_line_list){
 }
 
 function recent_search_zjedu(csstr=''){
-    recent_search_b('recent_search_zjedu',csstr,'txtsearch_zjedu','div_recent_search',['浙江大学','(一流大学建设高校)','(一流学科建设高校)','北京大学|清华大学(:r)']);
+    recent_search_b('recent_search_zjedu',csstr,'run_txtsearch_zjedu','div_recent_search',['浙江大学','(一流大学建设高校)','(一流学科建设高校)','北京大学|清华大学(:r)']);
 }
 
 function txtsearch_zjedu(csword,csreg){
@@ -234,6 +237,8 @@ function txtsearch_zjedu(csword,csreg){
 			jgarray_zjc_global.push(item);
 		}
 	}
+    
+    result_percent_b('span_array_count',jgarray_zjc_global.length,zj_university_global.length,2);
     
     if (min_max_line_list.length>0){
         blmaxline=Math.max(...min_max_line_list);
@@ -1217,12 +1222,13 @@ function menu_zjedu(){
     }
 
     var klmenu_statistics=[
-    '<span class="span_menu" onclick="'+str_t+'search_type_zjedu(\'50000\');">前50000名</span>',    
+    '<span class="span_menu" onclick="'+str_t+'search_type_zjedu(\'50000\');">最低录取位次前50000名</span>',    
+    '<span class="span_menu" onclick="'+str_t+'search_type_zjedu(\'700\');">700分</span>',    
     ];    
 
     var klmenu_config=root_font_size_menu_b(str_t);
 
-    document.getElementById('span_h2').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_year,'💯','6rem','1rem','1rem','60rem')+klmenu_b(klmenu1,'','24rem','1rem','1rem','60rem')+klmenu_b(klmenu_statistics,'🧮','10rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','15rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_h2').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_year,'💯','6rem','1rem','1rem','60rem')+klmenu_b(klmenu1,'','24rem','1rem','1rem','60rem')+klmenu_b(klmenu_statistics,'🧮','15rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','15rem','1rem','1rem','60rem'),'','0rem')+' ');
 }
 
 function init_zjedu(){
@@ -1248,6 +1254,9 @@ function search_type_zjedu(cstype){
     switch (cstype){
         case '50000':
             oinput.value=',([1-9]|\\d{2,4}|[1-4]\\d{4}),$';
+            break;
+        case '700':
+            oinput.value=',(7\\d{2}|699),.+';
             break;
     }
     run_txtsearch_zjedu();
