@@ -1121,7 +1121,33 @@ function sortdata_zjedu(cstype){
     blths=blths+'<th style="cursor:pointer;" onclick="csorder_zjc_global=csorder_zjc_global*-1;sortdata_zjedu(4);" nowrap>计划数</th>';
     blths=blths+'<th style="cursor:pointer;" onclick="csorder_zjc_global=csorder_zjc_global*-1;sortdata_zjedu(5);" nowrap nowrap>分数线</th>';
     blths=blths+'<th style="cursor:pointer;" onclick="csorder_zjc_global=csorder_zjc_global*-1;sortdata_zjedu(6);" nowrap>位次</th></tr>';
-    blhtml.innerHTML='<table class="table_common">'+blths+bljg+'</table>';
+    blhtml.innerHTML='<table class="table_common" id="table_main_zjc">'+blths+bljg+'</table>';
+}
+
+function jump_to_tr_zjedu(jump_to_end=false){
+    var otable=document.getElementById('table_main_zjc');   
+    if (!otable){return;}
+    var otrs=otable.querySelectorAll('tr');
+    if (otrs.length==0){return;}
+    if (jump_to_end){
+        otrs[otrs.length-1].scrollIntoView();
+        return;
+    }
+    
+    var blno=prompt('输入要跳转的指定行号');
+    if (blno==null){return;}
+    blno=blno.trim();
+    if (isNaN(blno)){return;}
+    
+    for (let one_tr of otrs){
+        var otds=one_tr.querySelectorAll('td');
+        if (otds.length==0){continue;}
+        var blstr=otds[0].innerText.trim();
+        if (blstr==blno){
+            one_tr.scrollIntoView();
+            break;
+        }
+    }
 }
 
 function search_demo_zjedu(){
@@ -1222,13 +1248,17 @@ function menu_zjedu(){
     }
 
     var klmenu_statistics=[
-    '<span class="span_menu" onclick="'+str_t+'search_type_zjedu(\'50000\');">最低录取位次前50000名</span>',    
+    '<span class="span_menu" onclick="'+str_t+'search_type_zjedu(\'50000\');">最低录取位次前50000名的专业</span>',    
     '<span class="span_menu" onclick="'+str_t+'search_type_zjedu(\'700\');">700分</span>',    
     ];    
 
     var klmenu_config=root_font_size_menu_b(str_t);
+    klmenu_config=klmenu_config.concat([
+    '<span class="span_menu" onclick="'+str_t+'jump_to_tr_zjedu(true);">跳转到表格末尾</span>',    
+    '<span class="span_menu" onclick="'+str_t+'jump_to_tr_zjedu();">跳转到指定行号</span>',        
+    ]);
 
-    document.getElementById('span_h2').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_year,'💯','6rem','1rem','1rem','60rem')+klmenu_b(klmenu1,'','24rem','1rem','1rem','60rem')+klmenu_b(klmenu_statistics,'🧮','15rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','15rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_h2').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_year,'💯','6rem','1rem','1rem','60rem')+klmenu_b(klmenu1,'','24rem','1rem','1rem','60rem')+klmenu_b(klmenu_statistics,'🧮','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','15rem','1rem','1rem','60rem'),'','0rem')+' ');
 }
 
 function init_zjedu(){

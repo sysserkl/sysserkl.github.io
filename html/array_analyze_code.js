@@ -534,9 +534,39 @@ function menu_arr_analyze(){
     klmenu1.push(menu_container_b(str_t,horizontal_list,'cols分割：'));    
 
     var klmenu2=root_font_size_menu_b(str_t);
-    klmenu2.push('<span class="span_menu" onclick="'+str_t+'import_arr_analyze();">以数组形式直接载入记录</span>');
+    klmenu2=klmenu2.concat([
+    '<span class="span_menu" onclick="'+str_t+'import_arr_analyze();">以数组形式直接载入记录</span>',
+    '<span class="span_menu" onclick="'+str_t+'th_name_get_arr_analyze();">获取表格列名称</span>',    
+    '<span class="span_menu" onclick="'+str_t+'setTimeout(th_name_set_arr_analyze,1);">设置表格列名称</span>', //避免菜单还显示 - 保留注释
+    ]);
     
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','22rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'⚙','20rem','1rem','1rem','60rem'),'','0rem')+' ');
+}
+
+function th_name_get_arr_analyze(do_alert=true){
+    var obuttons=document.querySelectorAll('#table_arrays th button');
+    var result_t=[];
+    for (let one_button of obuttons){
+        result_t.push(one_button.innerText);
+    }
+    if (do_alert){
+        alert(result_t);
+    }
+    return result_t;
+}
+
+function th_name_set_arr_analyze(){
+    var old_name=th_name_get_arr_analyze(false).join(' | ');
+    var new_name=prompt('批量输入表格列名称',old_name);
+    if (new_name==null){return;}
+    new_name=new_name.trim();
+    if (new_name==''){return;}
+    new_name=new_name.split(' | ');
+    var obuttons=document.querySelectorAll('#table_arrays th button');
+    var bllen=Math.min(new_name.length,obuttons.length);
+    for (let blxl=0;blxl<bllen;blxl++){
+        obuttons[blxl].innerText=new_name[blxl];
+    }
 }
 
 function split_table_arr_analyze(split_type,cscount){
@@ -591,7 +621,6 @@ function init_arr_analyze(){
     
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.4rem'));
     menu_arr_analyze();
-    //table_refresh_arr_analyze();
 }
 
 function show_source_arr_anaylze(show_source){
