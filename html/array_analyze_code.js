@@ -183,8 +183,13 @@ function lower_arr_analyze(){
 	list_arr_analyze();
 }
 
-function column_filter_arr_analyze(){
-	var no_t=document.getElementById('input_column1').value.split(',');
+function column_filter_arr_analyze(cssplit=false,do_update=true){
+    if (cssplit===false){
+	    var no_t=document.getElementById('input_column1').value.split(',');
+    }
+    else {
+        var no_t=cssplit;
+    }
 	var nolist_t=[];
     var include_no=[];
     var exclude_no=[];
@@ -237,14 +242,18 @@ function column_filter_arr_analyze(){
 			list_t.push(item_t);
 		}
 	}
-	table_array_global=[];
-	for (let item of list_t){
-		table_array_global.push(item);
-	}
-	list_arr_analyze();
+    
+    if (do_update){
+        table_array_global=[];
+        for (let item of list_t){
+            table_array_global.push(item);
+        }
+        list_arr_analyze();
+    }
+    return list_t;
 }
 
-function var_arr_analyze(){
+function var_arr_analyze(csarray=false,show_html=true){
     function sub_var_arr_analyze_row_not_array(csrow){
         var bljg='';
         if (typeof csrow !== 'number'){
@@ -272,7 +281,10 @@ function var_arr_analyze(){
     }
     //----------
 	var bljg='';
-	for (let blrow of table_array_global){
+    if (csarray===false){
+        csarray=table_array_global;
+    }
+	for (let blrow of csarray){
         if (blrow == undefined){continue;}
         
 		if (Array.isArray(blrow)){
@@ -283,8 +295,13 @@ function var_arr_analyze(){
 		}
         bljg=bljg+'\n';
 	}
-	document.getElementById('textarea_arrays').value='var table_array_global=[\n'+bljg+'];\n';
-	document.getElementById('span_length').innerHTML=table_array_global.length;
+    
+    bljg='var table_array_global=[\n'+bljg+'];\n';
+    if (show_html){
+	    document.getElementById('textarea_arrays').value=bljg;
+	    document.getElementById('span_length').innerHTML=table_array_global.length;
+    }
+    return bljg;
 }
 
 function group_sum_arr_analyze(){
@@ -536,11 +553,39 @@ function menu_arr_analyze(){
     var klmenu2=root_font_size_menu_b(str_t);
     klmenu2=klmenu2.concat([
     '<span class="span_menu" onclick="'+str_t+'import_arr_analyze();">以数组形式直接载入记录</span>',
-    '<span class="span_menu" onclick="'+str_t+'th_name_get_arr_analyze();">获取表格列名称</span>',    
-    '<span class="span_menu" onclick="'+str_t+'setTimeout(th_name_set_arr_analyze,1);">设置表格列名称</span>', //避免菜单还显示 - 保留注释
+    '<span class="span_menu" onclick="'+str_t+'split_arr_by_cols_form_analyze();">数组批量列分割</span>',
     ]);
+
+    var group_list=[
+    ['获取','setTimeout(th_name_get_arr_analyze,1);',true],
+    ['设置','setTimeout(th_name_set_arr_analyze,1);',true],   ////避免菜单还显示 - 保留注释
+    ];    
+    klmenu2.push(menu_container_b(str_t,group_list,'表格列名称: '));
     
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','22rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'⚙','20rem','1rem','1rem','60rem'),'','0rem')+' ');
+}
+
+function split_arr_by_cols_form_analyze(){
+    var blclose=close_button_b('divhtml','');
+    var blstr=`<p><b>按一行一个分组条件输入：</b></p>
+<textarea id="textarea_split_analyze" style="height:20rem;"></textarea>
+<p><span class="aclick" onclick="split_arr_by_cols_result_analyze();">执行</span>
+`+blclose+'</p><div id="div_split_result_analyze"></div>';
+    var odiv=document.getElementById('divhtml');
+    odiv.innerHTML=blstr;
+    odiv.scrollIntoView();
+}
+
+function split_arr_by_cols_result_analyze(){
+    var list_t=document.getElementById('textarea_split_analyze').value.trim().split('\n');
+    var odiv=document.getElementById('div_split_result_analyze');
+
+    for (let item of list_t){
+        arr_t=column_filter_arr_analyze(item.trim().split(','),false);
+        var blstr='<p><b>'+item+'</b></p><textarea style="height:15rem;" onclick="this.select();document.execCommand(\'copy\');">'+var_arr_analyze(arr_t,false)+'</textarea>';
+        odiv.insertAdjacentHTML('beforeend',blstr);
+    }    
+    odiv.scrollIntoView();
 }
 
 function th_name_get_arr_analyze(do_alert=true){
