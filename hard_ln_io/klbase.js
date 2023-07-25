@@ -2431,11 +2431,14 @@ function wiki_link_punctuation_b(csstr){
 function temp_save_local_b(local_id,csmax,blvalue=[],do_add=false,do_save=false){
     var split_str='\n-----\n';
     var old_str=localStorage.getItem(local_id) || '';    //需要保留空格，而 local_storage_get_b 会删除空格 - 保留注释
+    var old_len=0;
     if (old_str==''){
         var old_list=[];
     }
     else {
-        var old_list=old_str.split(split_str).slice(0,csmax);
+        var old_list=old_str.split(split_str);
+        old_len=old_list.length;
+        old_list=old_list.slice(0,csmax);
     }
     
     if (typeof blvalue == 'string'){
@@ -2456,18 +2459,24 @@ function temp_save_local_b(local_id,csmax,blvalue=[],do_add=false,do_save=false)
     if (do_save){
         localStorage.setItem(local_id,old_list.join(split_str));
     }
-    return old_list;
+    return [old_list,old_len];
 }
 
-function temp_save_table_b(cstype='',local_id,read_textarea_id,div_id,csmax=20,paste_textarea_id=''){
+function temp_save_table_b(cstype='',local_id,read_textarea_id,div_id,csmax=20,paste_textarea_id='',override=true){
     var blstr='';
-    if (cstype=='write'){
+    var old_list,old_len;
+
+    if (cstype=='write'){    
+        if (!override){
+            old_len=temp_save_local_b(local_id,csmax,blstr,false,false)[1]; //先读取 - 保留注释
+            if (old_len>=csmax){return false;}
+        }
         var otextarea=document.getElementById(read_textarea_id);
         blstr=otextarea.value;
     }
 
-    var old_list=temp_save_local_b(local_id,csmax,blstr,(cstype=='write'),(cstype=='write'));
-    if (old_list.length==0){return;}
+    [old_list,old_len]=temp_save_local_b(local_id,csmax,blstr,(cstype=='write'),(cstype=='write'));
+    if (old_list.length==0){return old_len;}
     
     if (paste_textarea_id==''){
         paste_textarea_id=read_textarea_id;
@@ -2496,14 +2505,19 @@ function temp_save_table_b(cstype='',local_id,read_textarea_id,div_id,csmax=20,p
         bottom_buttons=bottom_buttons+line_total_count+'/'+length_total_count+' ';
         bottom_buttons=bottom_buttons+'<span class="span_box" onclick=" temp_save_merge_b(\''+paste_textarea_id+'\',\''+local_id+'\','+csmax+');">merge all</span> ';
         bottom_buttons=bottom_buttons+'<span class="span_box" onclick=" temp_save_empty_b(\'table_temp_save_'+rndint+'\',\''+local_id+'\','+csmax+');">delete all</span>';
+        if (old_len>csmax){
+            bottom_buttons=bottom_buttons+' <font color="'+scheme_global['a-hover']+'">现有条数：'+old_len+' 超出最大合并数：'+csmax+'</font>';
+        }
         bottom_buttons=bottom_buttons+'</td></tr>\n';
     }
     
     document.getElementById(div_id).innerHTML='<table id="table_temp_save_'+rndint+'" class="table_common" width=90%>'+old_list.join('\n')+bottom_buttons+'</table>';  
+    return old_len;
 }
 
 function temp_save_empty_b(table_id,local_id,csmax){
-    var old_list=temp_save_local_b(local_id,csmax,'',false,false);
+    var old_list,old_len;
+    [old_list,old_len]=temp_save_local_b(local_id,csmax,'',false,false);
     var rndstr=randstr_b(4,true,false);
     if ((prompt('输入 '+rndstr+' 确认全部清除'+old_list.length+'条记录') || '').trim()==rndstr){    
         localStorage.setItem(local_id,'');
@@ -2516,8 +2530,9 @@ function temp_save_empty_b(table_id,local_id,csmax){
 
 function temp_save_merge_b(textarea_id,local_id,csmax){
     var otextarea=document.getElementById(textarea_id);
-    if (!otextarea){return;}
-    var old_list=temp_save_local_b(local_id,csmax,'',false,false);
+    if (!otextarea){return;}    
+    var old_list,old_len;
+    [old_list,old_len]=temp_save_local_b(local_id,csmax,'',false,false);
     var delimiter=prompt('合并'+old_list.length+'条记录到编辑框，输入间隔标记','\\n-----\\n');
     if (delimiter==null){return;}
     delimiter=delimiter.replace(new RegExp(/(\\n)/,'g'),'\n');

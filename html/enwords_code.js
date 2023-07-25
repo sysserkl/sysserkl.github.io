@@ -158,16 +158,32 @@ function words_queue_transform_kle(){
     }
 }
 
+function words_queue_new_or_old_kle(is_new=true,only_word=false){
+    var result_t=[];
+    if (is_new){
+        var new_str=document.getElementById('textarea_words_queue').value.trim();
+        if (new_str==''){return [];}
+        result_t=words_queue_split_kle(new_str,'sublist');    
+    }
+    else {
+        result_t=words_queue_split_kle(words_queue_get_kle(false),'sublist');
+    }
+    
+    if (only_word){
+        for (let blxl=0;blxl<result_t.length;blxl++){
+            result_t[blxl]=result_t[blxl][0];
+        }
+    }
+    return result_t;
+}
+
 function words_queue_append_kle(){
     if (document.getElementById('select_queue_words').value!==''){return;}
 
-    var new_str=document.getElementById('textarea_words_queue').value.trim();
-    if (new_str==''){return;}
-    
-    var new_list=words_queue_split_kle(new_str,'sublist');
+    var new_list=words_queue_new_or_old_kle(true);
     if (new_list.length==0){return;}
     
-    var old_list=words_queue_split_kle(words_queue_get_kle(false),'sublist');
+    var old_list=words_queue_new_or_old_kle(false);
     
     var blfound='';
     for (let old_row of old_list){
@@ -231,7 +247,16 @@ function words_queue_update_kle(){
     var blstr=document.getElementById('textarea_words_queue').value.trim();
     var selected_word=document.getElementById('select_queue_words').value;
     if (selected_word==''){
-        if (confirm('是否批量覆盖('+blstr.length+')？')){
+        var new_list=words_queue_new_or_old_kle(true,false);    
+        var old_list=words_queue_new_or_old_kle(false,false);
+        if (new_list.toString()==old_list.toString()){
+            alert('完全一致，未修改');
+            return;
+        }
+        var new_list=words_queue_new_or_old_kle(true,true);    
+        var old_list=words_queue_new_or_old_kle(false,true);
+        
+        if (confirm('是否将原有'+old_list.length+'个单词('+old_list+')批量覆盖为'+new_list.length+'个单词('+new_list+')('+blstr.length+')？')){
             localStorage.setItem('enwords_queue',blstr);
             words_queue_select_kle();
             js_alert_b('更新完成','span_queue_words_info');
@@ -241,7 +266,7 @@ function words_queue_update_kle(){
     //---
     var word_t=words_queue_split_kle(blstr,'');
     if (word_t.length!==3){
-        alert(selected_word+'行数不为3');
+        alert(selected_word+'行数不为3，取消更新');
         return;
     }
     
@@ -249,7 +274,7 @@ function words_queue_update_kle(){
     var temp_words=words_queue_split_kle(words_queue_get_kle(false),'');
     var bllen=temp_words.length;
     if (bllen % 3 !== 0){
-        alert('临时单词行数不为 3 的倍数');
+        alert('临时单词行数不为 3 的倍数，取消更新');
         return;
     }
     
@@ -370,7 +395,7 @@ function words_editor_form_kle(){
     bljg=bljg+'<span class="aclick" onclick="words_queue_do_type_kle();">执行</span> ';    
 
     bljg=bljg+'<select id="select_queue_insert">';
-    for (let item of ['[',']','[,]','〘 , 〙',"'",'ˌ']){
+    for (let item of ['[',']','[,]','] [','(,)','(',')','（,）','（','）','〘 , 〙',"'",'ˌ']){
         bljg=bljg+'<option>'+item+'</option>';
     }
     bljg=bljg+'</select> ';
