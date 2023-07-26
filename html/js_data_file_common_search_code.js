@@ -108,7 +108,7 @@ function wait_array_common(){
         
         if (blxl>csmax){
             console.log('未发现数组 '+var_name_jscm_global+'，等待次数：',blxl);        
-            document.getElementById('span_count').innerHTML='数据载入失败，等待次数：'+blxl+' <a href="'+location.origin+'/'+data_file_jscm_global+'" target=_blank>'+file_path_name_b(data_file_jscm_global)[3]+'</a>';
+            document.getElementById('span_count').innerHTML='数据载入失败，等待次数：'+blxl+' <a href="'+data_file_jscm_global+'" target=_blank>'+file_path_name_b(data_file_jscm_global)[3]+'</a>';    //'+location.origin+'/'
             return;
         }
         
@@ -464,4 +464,21 @@ function flot_load_common(file1=['flot'],flot_type=['time','symbol'],file2=[],fi
     var file_list=klbase_addons_import_js_b(file1,file2,file3,file3,true,false);
     file_dom_create_b(file_list,true,'js');
     load_fn_b('flot_import_js_b',-1,2000,sub_flot_load_common_flot);
+}
+
+function merge_data_common(varname,jsfile_list,ospan=false){    
+    function sub_merge_data_common_done(){
+        raw_data_len_jscm_global=eval(varname).length;
+        document.getElementById('span_count').innerText='('+raw_data_len_jscm_global+')';
+        if (ospan){
+            ospan.outerHTML='';
+        }
+    }
+    //----------------
+    if (jsfile_list.length==0){return;} 
+
+    if (!confirm('是否合并数据？')){return;}
+    document.getElementById('span_count').innerText='数据载入中...';
+
+    merge_js_data_files_in_one_b(varname,jsfile_list,sub_merge_data_common_done);
 }
