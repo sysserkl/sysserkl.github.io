@@ -32,4 +32,6 @@ var digest_global=`
 *Engels
 *Scandinavia
 *sirocco
+*Valentino
+*womanizer
 `.trim().split('\n');

@@ -49,4 +49,9 @@ var digest_global=`
 *streetwalker
 *sundial
 *teahouse
+*Minotaur
+*Pembroke
+*alphabetical
+*alphabetic
+*Munro
 `.trim().split('\n');

@@ -160,12 +160,16 @@ function menu_enwords_book(){
         klmenu2.push('<span class="span_menu" onclick="'+str_t+'klwiki_link_b(\'英语书籍生词统计\',true);">英语书籍生词统计(KLWiki)</span>');
     }
 
+    var klmenu_link=[
+    '<a href="ensentence.htm" onclick="'+str_t+'" target=_blank>ensentence</a>',
+    ];
+    
     var klmenu_config=[
     '<span class="span_menu" onclick="'+str_t+'space2underline_enwords_book();">替换单词间空格为下划线</span> ',  
     '<span class="span_menu" onclick="'+str_t+'underline2space_enwords_book();">替换下划线为空格</span> ',  
     ];
     
-    var menus=klmenu_b(klmenu1,'','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_new,'🔤','26rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'🧮','16rem','1rem','1rem','60rem')+(is_local_b()?klmenu_b(klmenu_selenium,'📰','20rem','1rem','1rem','60rem'):'')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','60rem');
+    var menus=klmenu_b(klmenu1,'','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_new,'🔤','26rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'🧮','16rem','1rem','1rem','60rem')+(is_local_b()?klmenu_b(klmenu_selenium,'📰','20rem','1rem','1rem','60rem'):'')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','60rem');
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(menus,'','0rem')+' ');
     
 }

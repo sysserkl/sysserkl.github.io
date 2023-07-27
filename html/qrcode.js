@@ -22,6 +22,10 @@ function init_klqr(){
     menu_klqr();
 }
 
+function qrtxt_clear_klqr(){
+    document.getElementById('input_qrtxt').value='';
+}
+
 function canvas2img_klqr(cscolor){
 	var odiv=document.getElementById('div_qrcode');
 	var ocanvas=odiv.querySelector('canvas');
@@ -68,8 +72,9 @@ function read_img_klqr(){
 }
 
 function background_img_merge_klqr(ocanvas,oimg){
+    var bltitle=(oimg.natrualWidth|oimg.width)+','+(oimg.naturalHeight|oimg.height);
     if (!ocanvas){
-        document.getElementById('div_qrcode').insertAdjacentHTML('afterbegin','<p><img id="img_backgound_qr" src="'+background_img_klqr_global+'" /></p>');
+        document.getElementById('div_qrcode').insertAdjacentHTML('afterbegin','<p><img id="img_backgound_qr" src="'+background_img_klqr_global+'" title="'+bltitle+'" /></p>');
         return;
     }
     
@@ -97,6 +102,9 @@ function background_img_merge_klqr(ocanvas,oimg){
     else if (blleft<0 && blleft>-1){
         blleft=Math.max(0,icanvas.width*(1+blleft)-ocanvas.width);
     }        
+    else if (blleft<-1){
+        blleft=Math.max(0,icanvas.width+blleft-ocanvas.width);
+    }
     
     var bltop=parseFloat(document.getElementById('bg_top_klqr').value.trim());
     if (isNaN(bltop) || bltop==-1){        
@@ -107,7 +115,10 @@ function background_img_merge_klqr(ocanvas,oimg){
     }        
     else if (bltop<0 && bltop>-1){
         bltop=Math.max(0,icanvas.height*(1+bltop)-ocanvas.height);
-    }        
+    }   
+    else if (bltop<-1){
+        bltop=Math.max(0,icanvas.height+bltop-ocanvas.height);        
+    }     
             
     var col_end=blleft+ocanvas.width;
     var row_end=bltop+ocanvas.height;
@@ -139,7 +150,7 @@ function background_img_merge_klqr(ocanvas,oimg){
     ictx.putImageData(iimageData, 0, 0);
     
     var img_border=klmenu_check_b('span_img_border',false);        
-    var bljg='<p><img id="img_backgound_qr" src="'+icanvas.toDataURL('image/png')+'"'+(img_border?' style="border:0.1px solid '+scheme_global['color']+';"':'')+' /></p>';
+    var bljg='<p><img id="img_backgound_qr" src="'+icanvas.toDataURL('image/png')+'"'+(img_border?' style="border:0.1px solid '+scheme_global['color']+';"':'')+' title="'+bltitle+'" /></p>';
     
     document.getElementById('div_qrcode').insertAdjacentHTML('afterbegin',bljg);
 }
