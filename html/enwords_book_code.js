@@ -114,6 +114,9 @@ function menu_enwords_book(){
     var format_list=[
     ['导入全部旧单词','import_enwords_book(\'old\');',true],
     ['释义','import_enwords_book(\'old_def\');',true],
+    ['全部词组','import_enwords_book(\'phrase\');',true],
+    ['非词组','import_enwords_book(\'not_phrase\');',true],
+    ['词组中的生词','new_words_in_phrase_enwords_book();',true],
     ];    
     klmenu_new.push(menu_container_b(str_t,format_list,''));    
     
@@ -166,10 +169,11 @@ function menu_enwords_book(){
     
     var klmenu_config=[
     '<span class="span_menu" onclick="'+str_t+'space2underline_enwords_book();">替换单词间空格为下划线</span> ',  
-    '<span class="span_menu" onclick="'+str_t+'underline2space_enwords_book();">替换下划线为空格</span> ',  
+    '<span class="span_menu" onclick="'+str_t+'character2space_enwords_book(\'_\',\'下划线\');">替换下划线为空格</span> ',  
+    '<span class="span_menu" onclick="'+str_t+'character2space_enwords_book(\'-\',\'连字符\');">替换连字符为空格</span> ',  
     ];
     
-    var menus=klmenu_b(klmenu1,'','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_new,'🔤','26rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'🧮','16rem','1rem','1rem','60rem')+(is_local_b()?klmenu_b(klmenu_selenium,'📰','20rem','1rem','1rem','60rem'):'')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','60rem');
+    var menus=klmenu_b(klmenu1,'','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_new,'🔤','28rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'🧮','16rem','1rem','1rem','60rem')+(is_local_b()?klmenu_b(klmenu_selenium,'📰','20rem','1rem','1rem','60rem'):'')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','60rem');
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(menus,'','0rem')+' ');
     
 }
@@ -292,6 +296,26 @@ function compare_form_statistics_enwords_book(){
     odiv.scrollIntoView();
 }
 
+function new_words_in_phrase_enwords_book(){
+    var t0 = performance.now();
+
+    var old_words=simple_words_b();
+    var result_t=new Set();
+    for (let aword of old_words){
+        if (aword.includes('-')){
+            aword.replace(/\-/g,' ');
+        }
+        if (!aword.includes(' ')){continue;}
+        var list_t=aword.split(' ');
+        for (let item of list_t){
+            if (old_words.has(item) || old_words.has(item.toLowerCase())){continue;}
+            result_t.add(item);
+        }
+    }
+    document.getElementById('textarea_new_words1').value=Array.from(result_t);
+    console.log('new_words_in_phrase_enwords_book() 费时：'+(performance.now() - t0) + ' milliseconds');
+}
+
 function import_enwords_book(cstype,csmax=-1){
     var ospan=document.getElementById('span_progress_enbook');
     ospan.innerHTML='';
@@ -322,6 +346,24 @@ function import_enwords_book(cstype,csmax=-1){
                 result_t=result_t.slice(0,csmax);
             }
             otextarea.value=result_t.join('\n');
+            break;
+        case 'phrase':
+            var result_t=[];        
+            for (let item of enwords){    
+                if (item[0].includes(' ') || item[0].includes('-')){
+                    result_t.push(item[0]);
+                }    
+            }
+            otextarea.value=result_t.join('\n');            
+            break;        
+        case 'not_phrase':
+            var result_t=[];        
+            for (let item of enwords){    
+                if (!item[0].includes(' ') && !item[0].includes('-')){
+                    result_t.push(item[0]);
+                }    
+            }
+            otextarea.value=result_t.join('\n');            
             break;
         case 'sentence':
             var list_t=array_numbers_b(Math.min(csmax,en_sentence_global.length),Math.floor((Math.random()*10)+1));
@@ -1145,11 +1187,11 @@ function space2underline_enwords_book(){
     otextarea.value=blstr;
 }
 
-function underline2space_enwords_book(){
-    if (confirm('是否替换下划线为空格？')==false){return;}
+function character2space_enwords_book(cscharacter,cscaption){
+    if (confirm('是否替换'+cscaption+'为空格？')==false){return;}
     var otextarea=document.getElementById('textarea_new_words1');
     var blstr=otextarea.value.trim();
-    blstr=blstr.replace(/_/g,' '); 
+    blstr=blstr.replace(new RegExp(cscharacter,'g'),' '); 
     otextarea.value=blstr;
 }
 
