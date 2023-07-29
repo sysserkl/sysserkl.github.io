@@ -15,5 +15,5 @@ var js_file_list_common_global=[
 ['../jsdata/js_data_file_common_search_blank_data.js','📦','blank data','blank_data_global','blank_data',''],
 ['../jsdata/britannica_nobel_prize_data.js','🏆','nobel prize','nobel_prize_global','nobel_prize',''],
 ['../jsdata/rmrb_online/rmrb_online_194605_196612_data.js','🗞','rmrb online','rmrb_online_global','rmrb_online',''],
-
+['../../../../bash/data/php8000_pic_album_data.js','🗄','php8000','photo_source_global','php8000',''],
 ];
