@@ -1,5 +1,9 @@
 //单词库
 var enwords=[
+["e-tail", "[ˈiːˌteɪl]", "n. 电子零售；retail conducted via the internet; retail business conducted online via the World Wide Web; e-tailing;  the business of using the Internet to sell products directly to the people who will use them"],
+["e-tailer", "UK [ˈiː teɪlə(r)] US [ˈiˌteɪlər]", "n. 网络零售商；网上零售商；电子零售商；电子零售业者；电子商务零售商；网上购物店；one that sells goods or commodities to consumers electronically, as over the internet; a person or company that sells goods to the public over the internet; a company that does business via electronic media, especially via the Internet; a business that uses the internet to sell its products; a retail business that sells goods online over the Internet from a website"],
+["dyestuff", "[ˈdaɪˌstʌf]", "n. 染料；染色剂；着色剂；a substance that can be used as a dye or from which a dye can be obtained; any substance constituting or yielding a dye; a material yielding or used as a dye; a soluble or insoluble coloring matter; a usually soluble substance for staining or coloring e.g. fabrics or hair"],
+["frictionless", "[ˈfrɪkʃ(ə)nləs]", "adj. 无摩擦的；光滑的；of or pertaining to lack of friction; lacking all friction; without any friction; with no resistance between a surface or substance and something that is moving along or through it; adj. 无困难的；无障碍的；achieved with or involving little difficulty or effort; happening very easily without anything to make it slower or more difficult; adj. 无关税或非关税壁垒的；(finance) of a transaction or trade, without tariffs and non-tariff barriers"],
 ["sculpturesque", "UK [ˌskʌlptʃəˈrɛsk] US [ˌskʌlptʃəˈresk] [ˌskʌlptʃərˈɛsk]", "adj. 雕刻般的；像雕刻一般的；凿刻的；轮廓分明的；done in the manner of or resembling sculpture; like or suggesting sculpture: shapely, statuelike, etc.; suggestive of or having the qualities of sculpture; 〘 possessing the character of sculpture; chiseled; hence, clean-cut and well-proportioned; grand rather than beautiful or pretty 〙"],
 ["sculptural", "[ˈskʌlptʃərəl]", "adj. 雕刻的；雕塑的；雕刻般的；of or relating to sculpture; of, pertaining to, or having characteristics of sculpture; connected with sculpture; relating to or consisting of sculpture; made by shaping a material such as wood, clay, metal, or stone; like a sculpture; resembling sculpture: sculpturesque"],
 ["place mat", "[ˈpleɪs ˌmæt]", "n. 餐具垫；餐垫（一种用于保护餐桌表面的垫子，通常放在餐具下方，可防止餐具刮伤桌面或沾污）；(also placemat) a mat on a table on which a person's plate is put; a mat that is put on the table before a meal for someone to put a plate or bowl on; a small mat of cloth, paper, etc. serving as an individual table cover for a person at a meal; a mat set on a dining table beneath a place setting; a small often rectangular table mat on which a place setting is laid; a decorative piece of card, cloth, wood, plastic, etc. on which someone's plate is put on a table; a piece of cloth, paper, or plastic put on a table under someone’s plate and eating utensils; a protective table mat for a single setting of dishes and flatware; a mat serving as table linen for an individual place setting; a protective table mat, usually heat-resistant, for a single setting of plates and dishes"],
@@ -9862,7 +9866,6 @@ var enwords=[
 ["prisoner", "['prɪznər]", "n. 囚犯"],
 ["prison", "['prɪzn]", "n. 监狱；监禁；vt. 关入监狱；囚禁"],
 ["privacy", "['praɪvəsi]", "n. 隐居；隐私；秘密；私生活"],
-["private-equity", "[ˌpraɪvət ˈekwəti]", "n. 私人股权"],
 ["privately held", "", "adj. 私人拥有的；used to describe a company whose shares cannot be traded on a stock market"],
 ["privately", "['praɪvətli]", "adv. 私下地；秘密地"],
 ["private", "['praɪvət]", "adj. 个人的；私人的；私下的；私有的；缄默的；n. 士兵；列兵"],
