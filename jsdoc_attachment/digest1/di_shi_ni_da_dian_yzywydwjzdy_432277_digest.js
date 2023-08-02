@@ -3,4 +3,5 @@ var digest_global=`
 *firecracker
 *toolshed
 *glider
+*tyrannosaur
 `.trim().split('\n');

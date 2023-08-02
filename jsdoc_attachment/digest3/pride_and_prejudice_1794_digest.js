@@ -32,4 +32,5 @@ var digest_global=`
 *humility
 *monosyllable
 *decease
+*discontinuance
 `.trim().split('\n');

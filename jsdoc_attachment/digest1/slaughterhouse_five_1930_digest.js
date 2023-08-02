@@ -34,4 +34,5 @@ var digest_global=`
 *copilot
 *armband
 *motherfucker
+*slaughterhouse
 `.trim().split('\n');

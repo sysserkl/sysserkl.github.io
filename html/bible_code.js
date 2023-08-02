@@ -46,11 +46,11 @@ function new_words_bible(){
 }
 
 function sub_start_change_bible(oselect){
-    chapter_one_bible(oselect.value); 
     var oend=document.getElementById('select_end_sub');
     if (parseInt(oend.value)<parseInt(oselect.value)){
         oend.value=oselect.value;
     }
+    chapter_one_bible(oselect.value,oend.value); 
 }
 
 function sub_end_change_bible(oselect){
