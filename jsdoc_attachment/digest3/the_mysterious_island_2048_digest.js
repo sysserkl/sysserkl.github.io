@@ -431,7 +431,6 @@ var digest_global=`
 *waterfall
 *waterproof
 *whaler
-*what a pity
 *wheaten
 *whereabouts
 *whirlpool
