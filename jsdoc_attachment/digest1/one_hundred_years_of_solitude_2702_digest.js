@@ -21,4 +21,5 @@ var digest_global=`
 *oregano
 *barroom
 *wineskin
+*sought-after
 `.trim().split('\n');

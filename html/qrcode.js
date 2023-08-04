@@ -24,6 +24,7 @@ function init_klqr(){
 
 function qrtxt_clear_klqr(){
     document.getElementById('input_qrtxt').value='';
+    document.getElementById('input_qrtxt').focus();
 }
 
 function canvas2img_klqr(cscolor){
