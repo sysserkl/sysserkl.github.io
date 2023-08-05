@@ -3035,7 +3035,8 @@ function common_search_b(cskey,isreg,csarray,csmax=-1){
     return [result_t,is_all_result];
 }
 
-function result_percent_b(id_str,len1,len2,fraction=2){
+function result_percent_b(id_str,len1,len2,fraction=2){ 
+    //span_count - 保留注释
     document.getElementById(id_str).innerHTML='('+len1+'/'+len2+'/'+(100*len1/len2).toFixed(fraction)+'%)';
 }
 

@@ -206,6 +206,7 @@ function array_2_html_fortune_500(csarray,cssum=false,table_id='table_fortune_50
     }
     if (show_html){
         document.getElementById('divhtml').innerHTML=bljg;
+        result_percent_b('span_count',csarray.length,fortune_500_raw_global.length);
     }
     return bljg;
 }
@@ -358,8 +359,12 @@ function menu_fortune_500(){
     ];
     
     var klmenu_config=root_font_size_menu_b(str_t);
+
+    var klmenu_search=[
+    '<span class="span_menu" onclick="'+str_t+'search_fortune_500(\'^-[0-9]+(:r)\') ;">亏损企业</span>',     
+    ];
     
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🏭','17rem','1rem','1rem','60rem')+klmenu_b(menu_years,'Year','7rem','1rem','1rem','30rem')+klmenu_b(menu_district,'Countries','12rem','1rem','1rem','30rem')+klmenu_b(menu_group,'👥','12rem','1rem','1rem','30rem')+klmenu_b(klmenu_config,'⚙','15rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🏭','17rem','1rem','1rem','60rem')+klmenu_b(menu_years,'Year','7rem','1rem','1rem','30rem')+klmenu_b(menu_district,'Countries','12rem','1rem','1rem','30rem')+klmenu_b(menu_group,'👥','12rem','1rem','1rem','30rem')+klmenu_b(klmenu_search,'🔽','10rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','15rem','1rem','1rem','60rem'),'','0rem')+' ');
     klmenu_check_b('span_sort_by_year_fortune_500',true);
 }
 

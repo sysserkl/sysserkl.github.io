@@ -158,7 +158,7 @@ function array_2_html_qs_rank(csarray,table_id='table_qs_rank',only_tr=false,sho
     }
     if (show_html){    
         document.getElementById('divhtml').innerHTML=bljg;
-        document.getElementById('span_count').innerHTML=' '+csarray.length+'/'+qs_university_raw_global.length+'/'+(csarray.length*100/qs_university_raw_global.length).toFixed(2)+'%'
+        result_percent_b('span_count',csarray.length,qs_university_raw_global.length);
     }
     return bljg;
 }
