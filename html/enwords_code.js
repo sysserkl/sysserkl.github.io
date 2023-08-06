@@ -736,7 +736,7 @@ function duplicate_words_kle(){
             duplication.add(enwords[blxl][0]);
         }
         
-        var tmp_list=definition_split_kle(item[2]);
+        var tmp_list=enwords_definition_split_b(item[2]);
         if (tmp_list.length!==new Set(tmp_list).size){
             definition_redundant.add(item[0]);
         }
