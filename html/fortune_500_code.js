@@ -33,6 +33,8 @@ function search_fortune_500(cskey=false,csreg=-1,show_html=true){
         search_result_fortune_500_global=simple_name_rank_b(cskey,search_result_fortune_500_global,0);
     }
     
+    search_result_fortune_500_global=group_district_replace_fortune_500(search_result_fortune_500_global);
+
     if (show_html){
         array_2_html_fortune_500(search_result_fortune_500_global,blsum);
     }
@@ -152,19 +154,42 @@ function one_td_fortune_500(item,csno,fraction_len){
     bljg=bljg+'<td>'+item[0]+'</td>';
     bljg=bljg+'<td class="td_district">'+item[3]+'</td>';
     bljg=bljg+'<td class="td_revenue" align=right>'+item[1].toFixed(fraction_len)+'</td>';
-    bljg=bljg+'<td class="td_interest" align=right>'+((item[2]=='' || isNaN(item[2]))?'':item[2].toFixed(fraction_len))+'</td>';
-    bljg=bljg+'<td class="td_percent" align=right>'+(isNaN(item[6])?'':item[6].toFixed(fraction_len))+'</td>';
+    bljg=bljg+'<td class="td_interest" align=right>'+value_to_fixed_fortune_500(item[2],fraction_len)+'</td>';
+    bljg=bljg+'<td class="td_percent" align=right>'+value_to_fixed_fortune_500(item[6],fraction_len)+'</td>';
     bljg=bljg+'<td class="td_rank" align=right>'+item[4]+'</td>';
     bljg=bljg+'<td class="td_year">'+item[5]+'</td>';
     bljg=bljg+'</tr>';
     return bljg;
 }
 
-function array_2_html_fortune_500(csarray,cssum=false,table_id='table_fortune_500',only_tr=false,show_button=true,show_html=true){
-    var bljg=[];
-    
-    var fraction_len=1;
+function value_to_fixed_fortune_500(value,fraction_len){
+    return ((value==='' || isNaN(value))?'':value.toFixed(fraction_len));
+}
 
+function group_district_replace_fortune_500(csarray){
+    var group_district_name=document.getElementById('select_group_district_fortune_500').value;
+    if (group_district_name==''){return csarray;}
+    
+    var result_t=[];
+    var group_district_list=group_disctrict_fortune_500_global[group_district_name];
+    for (let item of csarray){
+        var list_t=[].concat(item);
+        if (group_district_list.includes(list_t[3])){
+            list_t[3]=group_district_name;
+        }
+        result_t.push(list_t);
+    }
+    return result_t;
+}
+
+function array_2_html_fortune_500(csarray,cssum=false,table_id='table_fortune_500',only_tr=false,show_button=true,show_html=true,group_distrct_check=false){
+    var bljg=[];
+    var fraction_len=1;
+    
+    if (group_distrct_check){
+        csarray=group_district_replace_fortune_500(csarray);
+    }
+    
     var blaverage=(cssum===false?false:(cssum/csarray.length).toFixed(fraction_len));
     var average_count=0;
     
@@ -266,7 +291,7 @@ function array_2_csv_fortune_500(){
     
     for (let blxl=0;blxl<search_result_fortune_500_global.length;blxl++){
         var item=search_result_fortune_500_global[blxl];
-        bljg.push((blxl+1)+',"'+specialstr_j(item[0])+'",'+item[1].toFixed(fraction_len)+','+item[2].toFixed(fraction_len)+',"'+specialstr_j(item[3])+'",'+item[4]+',"'+item[5]+'"');
+        bljg.push((blxl+1)+',"'+specialstr_j(item[0])+'",'+item[1].toFixed(fraction_len)+','+value_to_fixed_fortune_500(item[2],fraction_len)+',"'+specialstr_j(item[3])+'",'+item[4]+',"'+item[5]+'"');
     }
 
     if (bljg.length==0){return;}
@@ -311,7 +336,7 @@ function group_fortune_500(){
     var result_t=group_rank_b(search_result_fortune_500_global,group_district,group_year,3,5);
     var bljg=[];
     for (let key in result_t){
-        bljg.push(array_2_html_fortune_500(result_t[key],false,'',true,false,false));
+        bljg.push(array_2_html_fortune_500(result_t[key],false,'',true,false,false,true));
     }
 
     div_flot_css_fortune_500(false,false);    
@@ -349,6 +374,7 @@ function menu_fortune_500(){
     }
     
     var menu_group=[
+    '<span class="span_menu">组团：<select id="select_group_district_fortune_500"><option></option></select></span>',         
     '<span class="span_menu">排序：<select id="select_sort_type_fortune_500"><option value=1>收入</option><option value=2>利润</option><option value=6>利润率</option></select></span>',     
     '<span id="span_sort_by_year_fortune_500" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 按年份排序</span>',    
     '<span id="span_sort_reverse_fortune_500" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ reverse</span>',
@@ -364,11 +390,32 @@ function menu_fortune_500(){
     '<span class="span_menu" onclick="'+str_t+'search_fortune_500(\'^-[0-9]+(:r)\') ;">亏损企业</span>',     
     ];
     
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🏭','17rem','1rem','1rem','60rem')+klmenu_b(menu_years,'Year','7rem','1rem','1rem','30rem')+klmenu_b(menu_district,'Countries','12rem','1rem','1rem','30rem')+klmenu_b(menu_group,'👥','12rem','1rem','1rem','30rem')+klmenu_b(klmenu_search,'🔽','10rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','15rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🏭','17rem','1rem','1rem','60rem')+klmenu_b(menu_years,'Year','7rem','1rem','1rem','30rem')+klmenu_b(menu_district,'Countries','12rem','1rem','1rem','30rem')+klmenu_b(menu_group,'👥','14rem','1rem','1rem','30rem')+klmenu_b(klmenu_search,'🔽','10rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','15rem','1rem','1rem','60rem'),'','0rem')+' ');
     klmenu_check_b('span_sort_by_year_fortune_500',true);
+    
+    var oselect=document.getElementById('select_group_district_fortune_500');
+    for (let key in group_disctrict_fortune_500_global){
+        oselect.insertAdjacentHTML('beforeend','<option>'+key+'</option>');
+    }
 }
 
 function init_fortune_500(){
+    group_disctrict_fortune_500_global={
+    'UK+EU':['法国','德国','英国','瑞士','荷兰','西班牙','意大利','爱尔兰','瑞典','比利时','丹麦','卢森堡','挪威','波兰','芬兰','奥地利','英国/荷兰','匈牙利'],
+    'G7':['美国','加拿大','法国','德国','英国','意大利','日本'],
+    '五眼联盟':['美国','加拿大','英国','澳大利亚','新西兰'],
+    };
+    group_disctrict_fortune_500_global['发达国家']=array_unique_b(['韩国'].concat(group_disctrict_fortune_500_global['UK+EU']).concat(group_disctrict_fortune_500_global['G7']).concat(group_disctrict_fortune_500_global['五眼联盟']));
+
+    group_disctrict_fortune_500_global['发达国家(不含US)']=[].concat(group_disctrict_fortune_500_global['发达国家']);
+    var blat=group_disctrict_fortune_500_global['发达国家(不含US)'].indexOf('美国');
+    if (blat>=0){
+        group_disctrict_fortune_500_global['发达国家(不含US)'].splice(blat,1);
+    }
+    for (let key in group_disctrict_fortune_500_global){
+        group_disctrict_fortune_500_global[key].sort(zh_sort_b);
+    }
+
     buttons_rank_b('Fortune 500','search_fortune_500();');
     fortune_500_raw_global=obj2array_rank_b(fortune_500_raw_global,1);
     for (let blxl=0;blxl<fortune_500_raw_global.length;blxl++){

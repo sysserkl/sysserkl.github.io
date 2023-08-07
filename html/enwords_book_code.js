@@ -95,6 +95,7 @@ function menu_enwords_book(){
     klmenu_new=klmenu_new.concat([
     '<span class="span_menu" onclick="'+str_t+'import_enwords_book(\'new\');">导入KLWiki和txtbook全部新单词</span>',   
     '<span class="span_menu" onclick="'+str_t+'max_length_new_enwords_book();">全部新单词中最长的单词</span>',     
+    '<span class="span_menu" onclick="'+str_t+'phrase_in_current_enwords_book();">由当前单词组成的词组</span>',     
     ]);
 
     var format_list=[
@@ -175,7 +176,31 @@ function menu_enwords_book(){
     
     var menus=klmenu_b(klmenu1,'','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_new,'🔤','28rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'🧮','16rem','1rem','1rem','60rem')+(is_local_b()?klmenu_b(klmenu_selenium,'📰','20rem','1rem','1rem','60rem'):'')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','60rem');
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(menus,'','0rem')+' ');
+}
+
+function phrase_in_current_enwords_book(){
+    var blstr=document.getElementById('textarea_new_words1').value;
+    if (blstr.trim()==''){return;}
+    var words_set=new Set(blstr.replace(/\s+/mg,' ').split(' '));
+    var result_t=new Set();
+    for (let aword of enwords){
+        if (aword[0].includes('-') || aword[0].includes(' ')){
+            var phrase_words=aword[0].replace(/\s+/mg,' ').split(' ');
+            var blfound=true;
+            for (let item of phrase_words){
+                if (!words_set.has(item)){
+                    blfound=false;
+                    break;
+                }
+            }
+            if (blfound){
+                result_t.add(aword[0]);
+            }
+        }
+    }    
     
+    var bljg=new_old_words_html_enbook_b(result_t,'由当前单词组成的词组');
+    document.getElementById('div_new_words2').innerHTML=bljg;
 }
 
 function new_words_form_enwords_book(){
