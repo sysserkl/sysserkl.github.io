@@ -62,7 +62,7 @@ function en_font_set_b(csno=''){
 }
 
 function enword_type_b(return_reg=false){
-    var list_t=['adj', 'adv', 'art', 'vt', 'vi', 'pron', 'prep', 'pref', 'suf', 'conj', 'noun','idiom','num', 'abbr', 'int', 'v', 'n'];
+    var list_t=['adj', 'adv', 'art', 'vt', 'vi', 'phrase', 'pron', 'prep', 'pref', 'suf', 'conj', 'noun','idiom','num', 'abbr', 'int', 'v', 'n'];
     if (return_reg){
         return list_join_2_reg_style_b(list_t);
     }
@@ -86,12 +86,12 @@ function en_word_def_istrong_b(csdef,is_remove=false){
     }
     
     for (let item of bltypes){
-        if (csdef.includes(' '+item+'. ')){
-            csdef=csdef.replace(new RegExp(' '+item+'\\. ','g'),' <b>'+item+'. </b>');
+        if (csdef.includes('; '+item+'. ') || csdef.includes('；'+item+'. ')){
+            csdef=csdef.replace(new RegExp('(; |；)'+item+'\\. ','g'),'$1<b>'+item+'. </b>');
         }
-        if (csdef.includes('；'+item+'. ')){
-            csdef=csdef.replace(new RegExp('；'+item+'\\. ','g'),'；<b>'+item+'. </b>');
-        }            
+        //if (csdef.includes('；'+item+'. ')){
+            //csdef=csdef.replace(new RegExp('；'+item+'\\. ','g'),'；<b>'+item+'. </b>');
+        //}            
         if (csdef.indexOf(item+'. ')==0){
             //从左到右替换一次 - 保留注释
             csdef=csdef.replace(item+'. ','<b>'+item+'. </b>');
