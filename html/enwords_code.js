@@ -395,7 +395,7 @@ function words_editor_form_kle(){
     bljg=bljg+'<span class="aclick" onclick="words_queue_do_type_kle();">执行</span> ';    
 
     bljg=bljg+'<select id="select_queue_insert">';
-    for (let item of ['[',']','[,]','] [','(,)','(',')','（,）','（','）','〘 , 〙',"'",'ˌ']){
+    for (let item of ['[',']','[,]','] [','(,)','(',')','ə','(ə)','（,）','（','）','〘 , 〙',"'",'ˌ']){
         bljg=bljg+'<option>'+item+'</option>';
     }
     bljg=bljg+'</select> ';
