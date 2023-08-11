@@ -1,25 +1,24 @@
-function auto_enslide(csno){
-    slide_type_global=[csno,(klmenu_check_b('span_random_en_slide',false)?2:1)];
+function auto_enslide(cstype){
+    slide_type_global=[cstype,(klmenu_check_b('span_random_en_slide',false)?2:1)];
 
 	document.getElementById('div_slide').style.display='block';
     document.getElementById('div_transparent').style.display='block';
 	document.getElementById('div_top_bottom').style.display='none';
 
-    var cstype_t=slide_type_global[0];
     var csorder_t=slide_type_global[1];
 
-	switch (cstype_t){
-		case 1:
+	switch (slide_type_global[0]){
+		case '已背单词':
 			if (csorder_t==2){
                 enwords_sort_b('r');
             }
 			break;
-		case 3:
+		case '条件结果':
 			if (csorder_t==2){
                 words_searched_arr_global.sort(randomsort_b);
             }
 			break;
-		case 4:
+		case '鸡尾酒':
 			cocktail_enslide();
 			if (csorder_t==2){
                 words_searched_arr_global.sort(randomsort_b);
@@ -44,21 +43,21 @@ function menu_enslide(){
     ]);
 
     var klmenu4=[];
-    var menu_t=['已背单词','生词库','条件结果','鸡尾酒'];
+    var menu_t=['已背单词','条件结果','鸡尾酒'];
     for (let blxl=0;blxl<menu_t.length;blxl++){
-        klmenu4.push('<span class="span_menu" onclick="'+str_t+'auto_enslide('+(blxl+1)+');">'+menu_t[blxl]+'</span>');
+        klmenu4.push('<span class="span_menu" onclick="'+str_t+'auto_enslide(\''+menu_t[blxl]+'\');">'+menu_t[blxl]+'</span>');
     }
-
-    klmenu4.push('<span class="span_menu" onclick="'+str_t+'recent_words_list_enwords_b(-1);auto_enslide(3);">最近记忆的单词(全部)</span>');
-    klmenu4.push('<span class="span_menu" onclick="'+str_t+'recent_words_list_enwords_b(0);auto_enslide(3);">最近记忆的单词(recent)</span>');
-    klmenu4.push('<span class="span_menu" onclick="'+str_t+'recent_words_list_enwords_b(1);auto_enslide(3);">最近记忆的单词(top)</span>');    
-    klmenu4.push('<span class="span_menu" onclick="'+str_t+'recent_words_list_enwords_b(0,500,true);auto_enslide(3);">最近记忆的单词(随机500)</span>');
-    klmenu4.push('<span class="span_menu" onclick="'+str_t+'recent_words_list_enwords_b(-1,500,true);auto_enslide(3);">最近记忆的单词(全部随机500)</span>');
+    
+    klmenu4=klmenu4.concat(menu_recent_enwc_b(str_t,'recent_words_enslide'));
     klmenu4.push('<span id="span_random_en_slide" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 随机排序</span>');
-
+    
     var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu1,'','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_old,'旧','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_brain,'🧠','17rem','1rem','1rem')+klmenu_b(klmenu4,'💡','17rem','1rem','1rem'),'','0rem')+' ';
     
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',bljg);
+}
+
+function recent_words_enslide(cstype){
+    show_recent_words_enwc_b(cstype,false,auto_enslide,'条件结果'); //可直接传递函数名称 - 保留注释
 }
 
 function show_enslide(csxl){
@@ -67,11 +66,10 @@ function show_enslide(csxl){
         var csxl = slide_num;
     }
 	
-    var cstype_t=slide_type_global[0];
     var csorder_t=slide_type_global[1];
     
-	switch (cstype_t){
-		case 1:
+	switch (slide_type_global[0]){
+		case '已背单词':
 			if (csorder_t==1){
 				if (csxl>enwords.length-1){
 					csxl=0;
@@ -89,7 +87,7 @@ function show_enslide(csxl){
 				var bljg=en_one_word_b(enwords[csxl],[-1,0,true]);
 			}
 			break;
-		case 3:
+		case '条件结果':
 			if (words_searched_arr_global.length==0){
 				hide_enslide();
 				return;
@@ -102,7 +100,7 @@ function show_enslide(csxl){
 			}
 			var bljg=en_one_word_b(words_searched_arr_global[csxl],[-1,0,true]);
 			break;
-		case 4:
+		case '鸡尾酒':
 			if (words_searched_arr_global.length==0){
 				hide_enslide();
 				return;
@@ -117,8 +115,8 @@ function show_enslide(csxl){
 			var bljg=en_one_word_b(words_searched_arr_global[csxl],[-1,0,true]);
 			break;
 	}
-		
-	document.getElementById("div_slide").innerHTML='<table width=100% height=100% style="border:10px #c0c0c0 solid;background-color:#f0f0f0;"><tr><td align=center valign=center style="padding:0px 30px;font-size:'+slide_font_size+'rem;">'+bljg+'</td></tr></table>';
+
+	document.getElementById('div_slide').innerHTML='<table width=100% height=100% style="border:10px #c0c0c0 solid;background-color:#f0f0f0;"><tr><td align=center valign=center style="padding:0px 30px;font-size:'+slide_font_size+'rem;">'+bljg+'</td></tr></table>';
 
 	slide_num=csxl+1;
 }

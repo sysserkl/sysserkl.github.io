@@ -2170,8 +2170,8 @@ function words_count_enwords_b(){
     }
 }
 
-function recent_words_list_enwords_b(cspageno=0,words_count_per_page=100,israndom=false,show_html=true){
-    words_searched_arr_global=en_words_temp_list_b();
+function recent_words_list_enwords_b(cspageno=0,words_count_per_page=100,israndom=false,show_html=true,add_date_line=true){
+    words_searched_arr_global=en_words_temp_list_b(add_date_line);
     var pages_count=Math.ceil(words_searched_arr_global.length/words_count_per_page);
     //cspageno 从 1 开始，0表示当前书签单词所在页，-1表示全部 - 保留注释
     var recent_bookmark=enwords_recent_bookmark_get_b();
@@ -2188,13 +2188,13 @@ function recent_words_list_enwords_b(cspageno=0,words_count_per_page=100,isrando
         }
         cspageno=Math.ceil((blat+1)/words_count_per_page);
     }
-    
+
     if (israndom){
         if (cspageno>1){
             words_searched_arr_global=words_searched_arr_global.slice((cspageno-1)*words_count_per_page,);
             for (let blxl=0;blxl<words_searched_arr_global.length;blxl++){
                 if (words_searched_arr_global[blxl][0]==recent_bookmark){
-                    words_searched_arr_global=words_searched_arr_global.slice(blxl,);
+                    words_searched_arr_global=words_searched_arr_global.slice(blxl,);                    
                     break;
                 }
             }

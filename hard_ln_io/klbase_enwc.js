@@ -395,7 +395,7 @@ function days_enwc_b(only_plan=false){
         
         if (csvalue!==csint){
             var bldays2_ceil=(csvalue-enwords.length)/cseveryday;
-            blstr_tmp=blstr_tmp+'；<br />达到 20000 需要 '+bldays2_ceil.toFixed(1)+' 天，即 '+next_day_b('',bldays2_ceil);
+            blstr_tmp=blstr_tmp+'；<br />达到 '+csvalue+' 需要 '+bldays2_ceil.toFixed(1)+' 天，即 '+next_day_b('',bldays2_ceil);
         }
         blstr_tmp=blstr_tmp+'。<br />';    
         return blstr_tmp;
@@ -533,7 +533,7 @@ function days_enwc_b(only_plan=false){
     local_storage_today_b('enwords_plan_per_day',40,max_everyday.toFixed(3),'/',[15,0,0.5]);
 
     var blint=Math.ceil(enwords.length/1000)*1000;
-    var blvalue=math_ceil10_b(blint);    
+    var blvalue=math_ceil10_b(blint);
     var blplan=sub_days_enwc_b_plan(max_everyday,blint,blvalue,true);
     
     var max_everyday_ceil=Math.max(2,Math.ceil(max_everyday));
@@ -604,16 +604,46 @@ function menu_base_enwc_b(){
     var menu2=['<span class="span_menu" onclick="'+str_t+'en_words_temp_textarea_b(\'divhtml\',\'words_count_enwords_b\'); words_count_enwords_b();">临时词库</span>',    
     '<a href="'+blhost+'/klwebphp/temp_txt_share.php?type=enwords_temp" onclick="'+str_t+'" target=_blank>打开临时记事本('+blhost.slice(-3,)+')</a>',    
     ];
-    var menu3=[
-    '<span class="span_menu" onclick="'+'recent_words_list_enwords_b(-1);'+str2_t+'">最近记忆的单词(全部)</span>',
-    '<span class="span_menu" onclick="'+'recent_words_list_enwords_b(0);'+str2_t+'">最近记忆的单词(recent)</span>',
-    '<span class="span_menu" onclick="'+'recent_words_list_enwords_b(1);'+str2_t+'">最近记忆的单词(top)</span>',
-    '<span class="span_menu" onclick="'+'recent_words_list_enwords_b(0,500,true);'+str2_t+'">最近记忆的单词(随机500)</span>',
-    '<span class="span_menu" onclick="'+'recent_words_list_enwords_b(-1,500,true);'+str2_t+'">最近记忆的单词(全部随机500)</span>',    
+    
+    var menu3=menu_recent_enwc_b(str2_t,'show_recent_words_enwc_b');
+    menu3=menu3.concat([ 
     '<span class="span_menu" onclick="'+'en_word_recent_bookmark_b();'+str2_t+'">设置书签</span>',
     '<span class="span_menu" onclick="'+'recent_words_dead_enwc_b();'+str2_t+'">失效的最近记忆的单词</span>',    
-    ];
+    ]);
     return [menu1,menu2,menu3];
+}
+
+function menu_recent_enwc_b(str_t,fn_name){
+    return [
+    '<span class="span_menu" onclick="'+str_t+fn_name+'(\'全部\');">最近记忆单词(全部)</span>',
+    '<span class="span_menu" onclick="'+str_t+fn_name+'(\'recent\');">最近记忆单词(recent)</span>',
+    '<span class="span_menu" onclick="'+str_t+fn_name+'(\'top\');">最近记忆单词(top)</span>',    
+    '<span class="span_menu" onclick="'+str_t+fn_name+'(\'随机500\');">最近记忆单词(随机500)</span>',
+    '<span class="span_menu" onclick="'+str_t+fn_name+'(\'全部随机500\');">最近记忆单词(全部随机500)</span>',
+    ];
+}
+
+function show_recent_words_enwc_b(cstype,add_date_line=true,fn_name=false,fn_para=false){
+    switch (cstype){
+        case '全部':
+            recent_words_list_enwords_b(-1,100,false,true,add_date_line);
+            break;
+        case 'recent':
+            recent_words_list_enwords_b(0,100,false,true,add_date_line);
+            break;
+        case 'top':
+            recent_words_list_enwords_b(1,100,false,true,add_date_line);        
+            break;
+        case '随机500':
+            recent_words_list_enwords_b(0,500,true,true,add_date_line);        
+            break;
+        case '全部随机500':        
+            recent_words_list_enwords_b(-1,500,true,true,add_date_line);                        
+            break;
+    }
+    if (fn_name!==false){
+        fn_name(fn_para);    
+    }
 }
 
 function recent_words_dead_enwc_b(){
