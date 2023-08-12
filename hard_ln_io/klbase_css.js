@@ -1638,10 +1638,16 @@ function obj_search_show_hide_b(objs,subobj_querystr='',cskey='',csreg=false,che
         for (let item of objs){
             item.style.display='';
         }
-        return objs.length;
+        if (objs.length>0){
+            return [objs.length,objs[0]];
+        }
+        else {
+            return [objs.length,false];
+        }
     }
     
     var blcount=0;
+    var first_dom=false;
     for (let item of objs){
         var bltext='';
         if (subobj_querystr==''){
@@ -1667,13 +1673,16 @@ function obj_search_show_hide_b(objs,subobj_querystr='',cskey='',csreg=false,che
         if (blfound==-1){break;}
         if (blfound){
             item.style.display='';
+            if (blcount==0){
+                first_dom=item;
+            }            
             blcount=blcount+1;
         }
         else {
             item.style.display='none';
-        }    
+        }
     }
-    return blcount;
+    return [blcount,first_dom];
 }
 
 function sound_b(cstype){

@@ -37,7 +37,7 @@ function range_filter_emoji(cskey=false){
         cskey=cskey.substring(0,cskey.length-4);
     }
     var objs=document.querySelectorAll('select#select_unicode option');
-    if (obj_search_show_hide_b(objs,'',cskey,isreg)==0 && cskey.length<=4){
+    if (obj_search_show_hide_b(objs,'',cskey,isreg)[0]==0 && cskey.length<=4){
         unicode_search_emoji(cskey);
     }
 }

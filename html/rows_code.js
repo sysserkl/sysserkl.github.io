@@ -184,7 +184,8 @@ function menu_klr2(){
     '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'bing_oxford_klsearch_en\');">批量打开Bing+Oxford+KLSearch(en)</span>',    
     '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'bing_collins_oxford_klsearch_en\');">批量打开Bing+Collins+Oxford+KLSearch(en)</span>',    
     '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'oxford_klsearch_en\');">批量打开Oxford+KLSearch(en)</span>',
-    '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'collins\');">批量打开Collins</span>',
+    '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'cambridge\');">批量打开Cambridge(en)</span>',    
+    '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'collins\');">批量打开Collins(en)</span>',
     ];
     if (is_local_b()){
         klmenu_batch.push('<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'klwikititle\');">批量打开KLWiki Title</span>');
