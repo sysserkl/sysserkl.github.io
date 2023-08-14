@@ -33,4 +33,5 @@ var digest_global=`
 *wingless
 *monorail
 *Rolex
+*geyser
 `.trim().split('\n');

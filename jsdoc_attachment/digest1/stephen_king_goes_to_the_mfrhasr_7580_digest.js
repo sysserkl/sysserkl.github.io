@@ -94,4 +94,5 @@ var digest_global=`
 *headlamp
 *motherfucker
 *baseboard
+*cicada
 `.trim().split('\n');

@@ -21,5 +21,6 @@ var digest_global=`
 *typhoon
 *ferryboat
 *ogre
+*Londoner
 *saviour
 `.trim().split('\n');

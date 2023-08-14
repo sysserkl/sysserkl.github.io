@@ -6,4 +6,5 @@ var digest_global=`
 *pigpen
 *pronunciation
 *puppeteer
+*veer
 `.trim().split('\n');

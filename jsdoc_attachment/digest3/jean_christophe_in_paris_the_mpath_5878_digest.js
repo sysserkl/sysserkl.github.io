@@ -70,4 +70,5 @@ var digest_global=`
 *Tolstoy
 *lampshade
 *attainable
+*falsify
 `.trim().split('\n');

@@ -3,4 +3,5 @@ var digest_global=`
 *crowd-pleaser
 *opportunist
 *self-improvement
+*footprint
 `.trim().split('\n');

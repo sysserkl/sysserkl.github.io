@@ -21,4 +21,5 @@ var digest_global=`
 *topmost
 *vanadium
 *plutonium
+*colossi
 `.trim().split('\n');

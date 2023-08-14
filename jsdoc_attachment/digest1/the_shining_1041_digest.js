@@ -109,4 +109,5 @@ var digest_global=`
 *deportation
 *doormat
 *forebear
+*colossus
 `.trim().split('\n');

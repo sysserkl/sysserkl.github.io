@@ -181,4 +181,6 @@ var digest_global=`
 *wrathfully
 *Zola
 *zoology
+*congratulation
+*Byzantium
 `.trim().split('\n');

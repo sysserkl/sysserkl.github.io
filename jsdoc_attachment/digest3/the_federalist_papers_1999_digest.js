@@ -76,4 +76,5 @@ var digest_global=`
 *disuse
 *discontinue
 *indignation
+*undervalue
 `.trim().split('\n');

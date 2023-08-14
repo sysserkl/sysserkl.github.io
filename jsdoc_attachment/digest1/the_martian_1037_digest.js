@@ -28,4 +28,5 @@ var digest_global=`
 *zirconia
 *earpiece
 *crewmate
+*bodybuilder
 `.trim().split('\n');

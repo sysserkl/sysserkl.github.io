@@ -53,4 +53,5 @@ var digest_global=`
 *dodo
 *Ockham
 *nebular
+*colossi
 `.trim().split('\n');

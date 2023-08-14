@@ -46,4 +46,5 @@ var digest_global=`
 *ultraconservative
 *unbuilt
 *watermark
+*sought-after
 `.trim().split('\n');

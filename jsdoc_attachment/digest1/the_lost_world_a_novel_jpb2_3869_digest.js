@@ -16,4 +16,5 @@ var digest_global=`
 *peptide
 *Istanbul
 *essayist
+*platelet
 `.trim().split('\n');

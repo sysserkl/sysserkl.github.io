@@ -10,4 +10,5 @@ var digest_global=`
 *deflation
 *gunboat
 *redeploy
+*piglet
 `.trim().split('\n');

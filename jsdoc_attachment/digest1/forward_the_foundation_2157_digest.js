@@ -5,4 +5,5 @@ var digest_global=`
 *purine
 *pyrimidine
 *nuclei
+*brainchild
 `.trim().split('\n');

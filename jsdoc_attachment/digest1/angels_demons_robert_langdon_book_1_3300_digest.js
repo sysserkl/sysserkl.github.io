@@ -46,4 +46,5 @@ var digest_global=`
 *warhead
 *penmanship
 *fire truck
+*aggressor
 `.trim().split('\n');

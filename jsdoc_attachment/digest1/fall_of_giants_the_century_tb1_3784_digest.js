@@ -42,4 +42,6 @@ var digest_global=`
 *overlord
 *armband
 *teaspoon
+*hailstorm
+*parfait
 `.trim().split('\n');

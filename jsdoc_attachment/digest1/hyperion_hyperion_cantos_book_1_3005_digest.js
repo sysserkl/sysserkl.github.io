@@ -81,4 +81,7 @@ var digest_global=`
 *Galilee
 *expansionist
 *longbow
+*chromium
+*frictionless
+*wafer-thin
 `.trim().split('\n');

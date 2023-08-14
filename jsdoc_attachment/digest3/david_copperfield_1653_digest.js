@@ -159,4 +159,5 @@ var digest_global=`
 *workhouse
 *youngster
 *youthfulness
+*bricklayer
 `.trim().split('\n');

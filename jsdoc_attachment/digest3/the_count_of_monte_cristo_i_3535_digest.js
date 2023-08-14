@@ -13,4 +13,5 @@ var digest_global=`
 *unperfect
 *viscountess
 *woodcutter
+*pea
 `.trim().split('\n');

@@ -31,4 +31,5 @@ var digest_global=`
 *Marilyn
 *cleaning lady
 *biographer
+*Yiddish
 `.trim().split('\n');

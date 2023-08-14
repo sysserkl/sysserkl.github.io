@@ -7,4 +7,5 @@ var digest_global=`
 *retractable
 *selfie
 *touchscreen
+*wafer-thin
 `.trim().split('\n');

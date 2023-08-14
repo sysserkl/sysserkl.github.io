@@ -55,4 +55,5 @@ var digest_global=`
 *generation gap
 *Truman
 *redwood
+*slump
 `.trim().split('\n');
