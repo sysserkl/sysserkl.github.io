@@ -63,4 +63,5 @@ var digest_global=`
 *unendurable
 *southwards
 *tadpole
+*cardigan
 `.trim().split('\n');

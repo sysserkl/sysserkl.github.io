@@ -28,4 +28,7 @@ var digest_global=`
 *New South Wales
 *first mate
 *Spaniard
+*Hobson
+*handcuff
+*ubiquity
 `.trim().split('\n');

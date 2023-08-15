@@ -68,4 +68,5 @@ var digest_global=`
 *archeology
 *incestuous
 *monopolize
+*jingle
 `.trim().split('\n');

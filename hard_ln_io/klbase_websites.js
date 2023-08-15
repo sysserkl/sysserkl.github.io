@@ -123,7 +123,7 @@ function qr_img_veil_websites_b(oimg){
             one_img.style.filter='';
         }
         else {
-            one_img.style.filter='brightness(0%)';
+            one_img.style.filter='brightness(0%) contrast(0%)'; //brightness(0%) 只用 brightness(0%) 会变成黑色 - 保留注释
         }
     }
 }

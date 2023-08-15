@@ -530,4 +530,5 @@ var digest_global=`
 *Hobbes
 *Nagasaki
 *disinfection
+*Marxism
 `.trim().split('\n');

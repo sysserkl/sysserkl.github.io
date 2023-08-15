@@ -29,4 +29,6 @@ var digest_global=`
 *wholehearted
 *backstabbing
 *Zionism
+*Bahamas
+*Marxism
 `.trim().split('\n');

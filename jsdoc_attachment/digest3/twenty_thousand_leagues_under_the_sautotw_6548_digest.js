@@ -534,4 +534,5 @@ var digest_global=`
 *Augustus
 *ingratitude
 *Cartier
+*Bahamas
 `.trim().split('\n');

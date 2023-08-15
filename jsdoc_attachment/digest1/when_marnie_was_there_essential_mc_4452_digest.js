@@ -15,4 +15,5 @@ var digest_global=`
 *ice rink
 *half-wit
 *Carnegie
+*cardigan
 `.trim().split('\n');

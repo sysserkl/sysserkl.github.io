@@ -1,4 +1,6 @@
 var csbooklist_source_global=[
+["meditations_1153", "Meditations(Emperor of Rome Marcus Aurelius)","已整理,englishwords","3",""],
+["the_odyssey_rendered_into_english_pftuotwcrto_8375", "The Odyssey  Rendered into English prose for the use of those who cannot read the original(Homer)","已整理,englishwords","3",""],
 ["down_and_out_in_the_mk_2949", "Down and Out in the Magic Kingdom(Cory Doctorow)","已整理,englishwords","3",""],
 ["grimms_fairy_tales_1738", "Grimms' Fairy Tales(Jacob Grimm)","已整理,englishwords","3",""],
 ["peter_panj_m_barrie_831", "Peter Pan(J. M. Barrie)","已整理,englishwords","3",""],
