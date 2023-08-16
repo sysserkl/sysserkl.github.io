@@ -1,4 +1,6 @@
 var csbooklist_source_global=[
+["a_child_s_history_of_tw_2671", "A Child's History of the World(V. M. Hillyer)","已整理,englishwords","3",""],
+["the_pickwick_papers_1793", "The Pickwick Papers(Charles Dickens)","已整理,englishwords","3",""],
 ["meditations_1153", "Meditations(Emperor of Rome Marcus Aurelius)","已整理,englishwords","3",""],
 ["the_odyssey_rendered_into_english_pftuotwcrto_8375", "The Odyssey  Rendered into English prose for the use of those who cannot read the original(Homer)","已整理,englishwords","3",""],
 ["down_and_out_in_the_mk_2949", "Down and Out in the Magic Kingdom(Cory Doctorow)","已整理,englishwords","3",""],
