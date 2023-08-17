@@ -239,12 +239,15 @@ function recent_common(csstr=''){
     recent_search_b('recent_search_common',csstr,'search_common','div_recent_search',[],25,false);
 }
 
-function search_common(cskey=false,row_no=1){
+function search_common(cskey=false,row_no=1,show_html=true){
     var oinput=document.getElementById('input_search');
     if (cskey===false){
         cskey=oinput.value.trim();
     }
-    recent_common(cskey);
+    
+    if (show_html){
+        recent_common(cskey);
+    }
     
     var isreg=klmenu_check_b('span_reg_common',false);
     [cskey,isreg]=str_reg_check_b(cskey,isreg,true);    
@@ -287,7 +290,9 @@ function search_common(cskey=false,row_no=1){
 
     clicked_row_no_jscm_global=row_no;
     var page_no=Math.ceil(row_no/rows_per_page_jscm_global);
-    page_common(1+(page_no-1)*rows_per_page_jscm_global);
+    if (show_html){
+        page_common(1+(page_no-1)*rows_per_page_jscm_global);
+    }
 }
 
 function fn_name_get_common(prefix){

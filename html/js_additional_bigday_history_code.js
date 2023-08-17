@@ -4,7 +4,7 @@ function style_load_bigday_history(){
 }
 
 function file_load_bigday_history(){
-    flot_load_common(['data','flot'],['time','symbol']);
+    flot_load_common(['date','flot'],['time','symbol']);
 }
 
 function data_load_bigday_history(array_name){

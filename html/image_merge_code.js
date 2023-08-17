@@ -93,7 +93,7 @@ function read_merge_img(){
     [max_width, max_height, min_width, min_height, sum_width, sum_height]=size_merge_img(limited_width,limited_height);
     var vh=document.getElementById('select_vh').value;
     
-    var ocanvas = document.getElementById("canvas");
+    var ocanvas = document.getElementById('canvas');
     
     if (vh=='vertical'){
         ocanvas.width=max_width+blmargin*2;
@@ -103,8 +103,8 @@ function read_merge_img(){
         ocanvas.width=sum_width+(img_file_list_global.length-1)*blspan+blmargin*2;
         ocanvas.height=max_height+blmargin*2;
     }
-
-    var ctx = ocanvas.getContext("2d");   
+    document.getElementById('span_canvas_info').innerText='canvas: '+ocanvas.width+'w, '+ocanvas.height+'h';
+    var ctx = ocanvas.getContext('2d');   
     
     var bgcolor=document.getElementById('input_bgcolor').value.trim();
     ctx.fillStyle = (bgcolor==''?'white':bgcolor);
@@ -129,7 +129,7 @@ function read_merge_img(){
     }
     
     var imgtype=document.getElementById('select_ext').value;
-    var img = ocanvas.toDataURL("image/"+imgtype);
+    var img = ocanvas.toDataURL('image/'+imgtype);
     document.getElementById('divhtml').innerHTML='<img src="' + img + '" style="max-width:900px;max-height:1400px;" />';        
 }
 

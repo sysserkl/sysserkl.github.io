@@ -118,10 +118,8 @@ function flot_two_lines_two_yaxis_b(cslist,csid,y1unit='',y2unit='',label_positi
     }
 
     if (cstime){
-        var oneyear;
-        var oneyear2;
-        var onemonth;        
-        var onemonth2;
+        var oneyear, oneyear2, onemonth, onemonth2;
+        
         [oneyear,onemonth]=isoneyear_isonemonth_b(list1_t);
         [oneyear2,onemonth2]=isoneyear_isonemonth_b(list2_t);
         cstimeformat=flot_timeformat_b(cstimeformat,cstype, oneyear && oneyear2,onemonth && onemonth2);

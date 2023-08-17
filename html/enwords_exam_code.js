@@ -32,7 +32,18 @@ function keys_klexam(){
     }
 }
 
-function showcn_klexam(csid){
+function is_show_sentence_klexam(){
+    show_sentence=klmenu_check_b('span_show_sentence_klexam',false);
+    if (show_sentence===0){
+        show_sentence=klmenu_check_b('span_sentence_en_slide',false);            
+    }
+    return show_sentence;
+}
+
+function showcn_klexam(csid,show_sentence=-1,remote_host=false, button_str=false, font_size=false,max_rows=5){
+    if (show_sentence===-1){
+        show_sentence=is_show_sentence_klexam();
+    }
     var op=document.getElementById('p_en2cn_'+csid);
     var bljg=[];
     if (op){
@@ -48,11 +59,28 @@ function showcn_klexam(csid){
     if (ospan){
         ospan.innerHTML=en_one_word_b(bljg,[-1,0,false])
     }
+
+    if (show_sentence){
+        var odiv=document.getElementById('div_en2cn_sentence_'+csid);
+        if (odiv){
+            if (remote_host===false || button_str===false || font_size===false){
+                [remote_host,button_str,font_size]=sentence_property_b(false);
+                console.log('showcn_klexam() 初始化变量',remote_host,button_str,font_size);
+            }
+            var blstr,blcount,no_next;
+            [blstr,blcount,no_next]=sentence_set_path_and_get_b(bljg[0],max_rows,font_size,remote_host,button_str);           
+            odiv.innerHTML=blstr; 
+            odiv.style.display='';
+        }
+    }
 }
 
 function show_all_cn_klexam(cscount){
+    var show_sentence=is_show_sentence_klexam();
+    var remote_host,button_str,font_size;
+    [remote_host,button_str,font_size]=sentence_property_b(false);
     for (let blxl=0;blxl<cscount;blxl++){
-        showcn_klexam(blxl);
+        showcn_klexam(blxl,show_sentence,remote_host, button_str, font_size);
     }
 }
 
@@ -100,6 +128,7 @@ function en2cn_klexam(csnumber='',cstype='en2cn'){
     var blxl=0;
     var important_list=(isrecent?en_word_temp_get_b('important'):[]);
     var include_no=new Set();
+    var hr_str=(is_rnd_eng_klexam()?'border-top: 0.1rem dotted '+scheme_global['memo']+';':'');
 	for (let item of enwords){
         if (isrecent){
             var blat=en_words_temp_global.indexOf(item[0]);
@@ -110,6 +139,7 @@ function en2cn_klexam(csnumber='',cstype='en2cn'){
         bllink_t=bllink_t+item[0]+'|';
 		bljg=bljg+'<p id="p_en2cn_'+blxl+'" align=center style="font-size:2.5rem;font-weight:bold;border:0.1rem dotted black;padding:1rem;">'+item[0]+'</p>';
         bljg=bljg+'<p style="font-size:1rem;margin-bottom:1rem;margin-top:0.5rem;"><span class="oblong_box" style="cursor:pointer;" onclick="showcn_klexam(\''+blxl+'\');">释义</span> <span id="span_en2cn_'+blxl+'"></span></p>';
+        bljg=bljg+'<div id="div_en2cn_sentence_'+blxl+'" class="div_sentence" style="display:none;'+hr_str+'"></div>';
         blxl=blxl+1;
         if (blxl==csnumber){break;}
 	}
@@ -120,7 +150,7 @@ function en2cn_klexam(csnumber='',cstype='en2cn'){
     }
     
 	bljg=bljg+'<p style="margin-top:0.5rem;"><span class="aclick" onclick="show_all_cn_klexam('+blxl+');">显示全部释义</span> ';
-    if (!location.href.includes('rnd_english_words')){
+    if (!is_rnd_eng_klexam()){
         bljg=bljg+'<a class=aclick href="enwords.htm?s=^('+bllink_t.replace(new RegExp(' ','g'),'\\s')+')$_reg" target=_blank>link</a> ';
     }
     bljg=bljg+'</p>'
@@ -133,7 +163,18 @@ function unblur_klexam(ospan){
     ospan.style.backgroundColor=scheme_global['background'];
 }
 
+function menu_klexam(){
+    var str_t=klmenu_hide_b('');
+    var klmenu1=[
+    '<span id="span_show_sentence_klexam" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 显示例句</span>',    
+    ];
+
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','11rem','1rem','1rem','30rem'),'','0rem')+' ');
+    klmenu_check_b('span_show_sentence_klexam',true);        
+}
+
 function init_klexam(){
+    menu_klexam();
     buttons_klexam();
     enwords_mini_search_frame_style_b();
     input_size_b([['testno',5]],'id');
@@ -257,7 +298,7 @@ function input_klexam(cstestno='',cstype='all'){
 	bljg=bljg+' <span class="aclick" onclick="switch_klexam(\'right\');">正确</span>';
 	bljg=bljg+' <span class="aclick" onclick="switch_klexam(\'wrong\');">错误</span>';
 	bljg=bljg+' <span class="aclick" onclick="switch_klexam();">全部</span> ';
-    if (!location.href.includes('rnd_english_words')){
+    if (!is_rnd_eng_klexam()){
         bljg=bljg+'<span class="aclick" onclick="search_link_klexam();">link</span> ';
     }
     bljg=bljg+checkbox_kl_b('o_ignore_empty','忽略未输入项','',true);
@@ -269,6 +310,10 @@ function input_klexam(cstestno='',cstype='all'){
     for (let item of oinputs){
         input_size_b([[item.getAttribute('id'),10]],'id');
     }
+}
+
+function is_rnd_eng_klexam(){
+    return location.href.includes('rnd_english_words');
 }
 
 function search_link_klexam(){

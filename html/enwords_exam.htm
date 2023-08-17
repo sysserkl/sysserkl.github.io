@@ -11,7 +11,7 @@ klbase_addons_import_js_b(['css','eng','enwc','wiki','date'],[],['words/enwords_
 <script>
 var scheme_global={};
 scheme_generation_b();
-css_root_style_b('18','14',['base'],[p_enwords_sentence_style_b(false)],1);
+css_root_style_b('18','14',['base','menu'],[p_enwords_sentence_style_b(false)],1);
 var words_searched_arr_global=[];
 var en_words_no_list_global=[];
 en_word_temp_get_b();
@@ -19,13 +19,16 @@ en_word_temp_get_b();
 <style>
 span.span_word_blur {color:grey;background-color:grey;}
 </style>
+<script>
+en_style_b();
+</script>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 </head>
-<body style="margin:0.5rem;">
+<body>
 <script>
 mobile_style_enwc_b();
 </script>
-<h2 style="margin-top:0px;">单词填空</h2>
+<h2 style="margin-top:0px; font-size:1.3rem;"><span id="span_title">单词填空</span></h2>
 <div id="div_exam_buttons"></div>
 <div id="divhtml"></div>
 <script>

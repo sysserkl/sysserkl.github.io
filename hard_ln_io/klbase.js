@@ -3265,3 +3265,16 @@ function merge_js_data_files_in_one_b(varname,jsfile_list,run_fn){
     file_dom_create_b([jsfile_list[blxl]],true,'js');    
     load_var_b(varname,-1,1000,sub_merge_js_data_files_in_one_b);
 }
+
+function array_remove_item_b(csarr,csitem){
+    if (typeof csitem == 'string'){
+        csitem=[csitem];
+    }
+    for (let akey of csitem){
+        var blat=csarr.indexOf(akey);
+        if (blat>=0){
+            csarr.splice(blat,1);
+        }
+    }
+    return csarr;
+}

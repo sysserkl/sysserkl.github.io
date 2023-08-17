@@ -170,14 +170,25 @@ function group_district_replace_fortune_500(csarray){
     var group_district_name=document.getElementById('select_group_district_fortune_500').value;
     if (group_district_name==''){return csarray;}
     
+    group_district_name=group_district_name.split('|');
+
     var result_t=[];
-    var group_district_list=group_disctrict_fortune_500_global[group_district_name];
     for (let item of csarray){
         var list_t=[].concat(item);
-        if (group_district_list.includes(list_t[3])){
-            list_t[3]=group_district_name;
-        }
         result_t.push(list_t);
+    }
+            
+    for (let one_name of group_district_name){
+        var group_district_list=group_disctrict_fortune_500_global[one_name];
+        if (group_district_list==undefined){
+            console.log('error',one_name);
+            continue;
+        }
+        for (let item of result_t){
+            if (group_district_list.includes(item[3])){
+                item[3]=one_name;
+            }
+        }
     }
     return result_t;
 }
@@ -357,7 +368,7 @@ function menu_fortune_500(){
     '<span class="span_menu" onclick="'+str_t+'line_district_statistics_fortune_500(true,-1);">地区企业家数比例图</span>',        
     '<span class="span_menu" onclick="'+str_t+'pie_multiyear_district_statistics_fortune_500();">multiyear district revenue pie</span>',     
     '<span class="span_menu" onclick="'+str_t+'pie_multiyear_district_statistics_fortune_500(2);">多年地区利润饼图</span>',     
-    '<span class="span_menu" onclick="'+str_t+'pie_multiyear_district_statistics_fortune_500(-1);">多年地区企业家数饼图</span>',     
+    '<span class="span_menu" onclick="'+str_t+'pie_multiyear_district_statistics_fortune_500(-1);">多年地区企业家数饼图</span>',
     ];
 
     var menu_years;
@@ -390,7 +401,7 @@ function menu_fortune_500(){
     '<span class="span_menu" onclick="'+str_t+'search_fortune_500(\'^-[0-9]+(:r)\') ;">亏损企业</span>',     
     ];
     
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🏭','17rem','1rem','1rem','60rem')+klmenu_b(menu_years,'Year','7rem','1rem','1rem','30rem')+klmenu_b(menu_district,'Countries','12rem','1rem','1rem','30rem')+klmenu_b(menu_group,'👥','14rem','1rem','1rem','30rem')+klmenu_b(klmenu_search,'🔽','10rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','15rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🏭','17rem','1rem','1rem','60rem')+klmenu_b(menu_years,'Year','7rem','1rem','1rem','30rem')+klmenu_b(menu_district,'Countries','12rem','1rem','1rem','30rem')+klmenu_b(menu_group,'👥','18rem','1rem','1rem','30rem')+klmenu_b(klmenu_search,'🔽','10rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','15rem','1rem','1rem','60rem'),'','0rem')+' ');
     klmenu_check_b('span_sort_by_year_fortune_500',true);
     
     var oselect=document.getElementById('select_group_district_fortune_500');
@@ -404,14 +415,19 @@ function init_fortune_500(){
     'UK+EU':['法国','德国','英国','瑞士','荷兰','西班牙','意大利','爱尔兰','瑞典','比利时','丹麦','卢森堡','挪威','波兰','芬兰','奥地利','英国/荷兰','匈牙利'],
     'G7':['美国','加拿大','法国','德国','英国','意大利','日本'],
     '五眼联盟':['美国','加拿大','英国','澳大利亚','新西兰'],
+    'G7(不含US)|EU(不含德法意)':[],
     };
-    group_disctrict_fortune_500_global['发达国家']=array_unique_b(['韩国'].concat(group_disctrict_fortune_500_global['UK+EU']).concat(group_disctrict_fortune_500_global['G7']).concat(group_disctrict_fortune_500_global['五眼联盟']));
+    group_disctrict_fortune_500_global['发达国家']=array_unique_b(['韩国'].concat(group_disctrict_fortune_500_global['UK+EU'],group_disctrict_fortune_500_global['G7'],group_disctrict_fortune_500_global['五眼联盟']));
 
     group_disctrict_fortune_500_global['发达国家(不含US)']=[].concat(group_disctrict_fortune_500_global['发达国家']);
-    var blat=group_disctrict_fortune_500_global['发达国家(不含US)'].indexOf('美国');
-    if (blat>=0){
-        group_disctrict_fortune_500_global['发达国家(不含US)'].splice(blat,1);
-    }
+    group_disctrict_fortune_500_global['发达国家(不含US)']=array_remove_item_b(group_disctrict_fortune_500_global['发达国家(不含US)'],'美国');
+
+    group_disctrict_fortune_500_global['G7(不含US)']=[].concat(group_disctrict_fortune_500_global['G7']);
+    group_disctrict_fortune_500_global['G7(不含US)']=array_remove_item_b(group_disctrict_fortune_500_global['G7(不含US)'],'美国');
+
+    group_disctrict_fortune_500_global['EU(不含德法意)']=[].concat(group_disctrict_fortune_500_global['UK+EU']);
+    group_disctrict_fortune_500_global['EU(不含德法意)']=array_remove_item_b(group_disctrict_fortune_500_global['EU(不含德法意)'],['德国','法国','意大利','英国']);
+
     for (let key in group_disctrict_fortune_500_global){
         group_disctrict_fortune_500_global[key].sort(zh_sort_b);
     }
