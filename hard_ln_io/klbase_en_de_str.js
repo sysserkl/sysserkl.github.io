@@ -153,7 +153,7 @@ function de_confuse_str_b(csstr){
     if (csstr==''){
         return '';
     }
-    return (csstr.replace(new RegExp(/~[^\x00-\xff]{3,5}[}\)\]]{2}([a-zA-Z0-9]){3,5}~~[^\x00-\xff]{3,5}[{\(\[]{2}~/,'g'),'')).split('').reverse().join(''); 
+    return (csstr.replace(/~[^\x00-\xff]{3,5}[}\)\]]{2}([a-zA-Z0-9]){3,5}~~[^\x00-\xff]{3,5}[{\(\[]{2}~/g,'')).split('').reverse().join(''); 
 }
 
 function odd_str_b(csstr){

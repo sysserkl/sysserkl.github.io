@@ -68,9 +68,11 @@ function showcn_klexam(csid,show_sentence=-1,remote_host=false, button_str=false
                 console.log('showcn_klexam() 初始化变量',remote_host,button_str,font_size);
             }
             var blstr,blcount,no_next;
-            [blstr,blcount,no_next]=sentence_set_path_and_get_b(bljg[0],max_rows,font_size,remote_host,button_str);           
-            odiv.innerHTML=blstr; 
-            odiv.style.display='';
+            [blstr,blcount,no_next]=sentence_set_path_and_get_b(bljg[0],max_rows,font_size,remote_host,button_str);    
+            if (blstr!==''){       
+                odiv.innerHTML=blstr; 
+                odiv.style.display='';
+            }
         }
     }
 }

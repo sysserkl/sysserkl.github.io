@@ -33,17 +33,15 @@ function prev_month_b(csstr='',csmonths=1){
     }
     
     var list_t=csstr.split('-');
-    if (list_t.length!==2){
-        return '';
-    }
+    if (list_t.length!==2){return '';}
     var blyear=parseInt(list_t[0]);
     
     if (csmonths>12){
         blyear=blyear-parseInt(csmonths/12);
         csmonths=csmonths-parseInt(csmonths/12)*12;
     }
-
     var blmonth=parseInt(list_t[1])-csmonths;
+    
     if (blmonth<=0){
         blyear=blyear-1;
         blmonth=blmonth+12;
@@ -61,6 +59,7 @@ function next_month_b(csstr='',csmonths=1){
     var list_t=csstr.split('-');
     if (list_t.length!==2){return '';}
     var blyear=parseInt(list_t[0]);
+    
     if (csmonths>12){
         blyear=blyear+parseInt(csmonths/12);
         csmonths=csmonths-parseInt(csmonths/12)*12;
@@ -175,14 +174,14 @@ function chinese_find_ymd_b(csstr){
 }
 
 function chinese_ymd_2_number_b(csstr){
-    csstr=csstr.replace(new RegExp(/三十一(\s+)?日/,'g'),'31日');
-    csstr=csstr.replace(new RegExp(/三十(\s+)?日/,'g'),'30日');
-    csstr=csstr.replace(new RegExp(/二十([一二三四五六七八九])(\s+)?日/,'g'),'2$1日');    //非20 - 保留注释
-    csstr=csstr.replace(new RegExp(/二十(\s+)?日/,'g'),'20日');
-    csstr=csstr.replace(new RegExp(/十([一二三四五六七八九])(\s+)?日/,'g'),'1$1日');    //非10 - 保留注释
-    csstr=csstr.replace(new RegExp(/十(\s+)?日/,'g'),'10日');
-    csstr=csstr.replace(new RegExp(/十([一二])(\s+)?月/,'g'),'1$1月');    //非10 - 保留注释
-    csstr=csstr.replace(new RegExp(/十(\s+)?月/,'g'),'10月');
+    csstr=csstr.replace(/三十一(\s+)?日/g,'31日');
+    csstr=csstr.replace(/三十(\s+)?日/g,'30日');
+    csstr=csstr.replace(/二十([一二三四五六七八九])(\s+)?日/g,'2$1日');    //非20 - 保留注释
+    csstr=csstr.replace(/二十(\s+)?日/g,'20日');
+    csstr=csstr.replace(/十([一二三四五六七八九])(\s+)?日/g,'1$1日');    //非10 - 保留注释
+    csstr=csstr.replace(/十(\s+)?日/g,'10日');
+    csstr=csstr.replace(/十([一二])(\s+)?月/g,'1$1月');    //非10 - 保留注释
+    csstr=csstr.replace(/十(\s+)?月/g,'10月');
     
     var list_t={'一':1,'二':2,'三':3,'四':4,'五':5,'六':6,'七':7,'八':8,'九':9,'〇':0,'○':0};
     for (let key in list_t){
@@ -264,18 +263,43 @@ function preweekday_b(csstr='',weekno=0){
     return theday;
 }
 
-function next_day_b(csstr='',csdays=1,return_str=true,sep='-'){
+function previous_year_b(csstr,csyears=1,return_str=true,sep='-'){
     //2018-05-28
     var theday=default_date_b(csstr);
     if (theday==false){return '';}
     
-    theday.setTime(theday.getTime()+csdays*24*60*60*1000);
+    var blyear=theday.getFullYear()-csyears;
+
+    var date_str=now_time_str_b(':',true,theday,'-');
+    var blat=date_str.indexOf('-');
+    date_str=blyear+date_str.substring(blat,);
+    
+    if (!isLeapYear_b(blyear)){
+        var blstr=blyear+'-02-29';
+        if (date_str.substring(0,blstr.length)==blstr){
+            date_str=blyear+'-02-28'+date_str.substring(blstr.length,);
+        }
+    }
+    
+    var bljg=validdate_b(date_str);
+    if (bljg===false){return '';}
+    
     if (return_str){
-        return date2str_b(sep,theday);
+        return date2str_b(sep,bljg);
     }
     else {
-        return theday;
+        return bljg;
     }
+}
+
+function next_year_b(csstr='',csyears=1,return_str=true,sep='-'){
+    //2018-05-28
+    return previous_year_b(csstr,csyears*-1,return_str,sep);
+}
+
+function next_day_b(csstr='',csdays=1,return_str=true,sep='-'){
+    //2018-05-28
+    return previous_day_b(csstr,csdays*-1,return_str,sep);
 }
 
 function previous_day_b(csstr='',csdays=1,return_str=true,sep='-'){
