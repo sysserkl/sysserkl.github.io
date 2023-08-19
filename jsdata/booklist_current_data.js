@@ -1,4 +1,5 @@
 var csbooklist_source_global=[
+["ben_hur_a_tale_of_tc_2472", "Ben-Hur- A tale of the Christ(Lew Wallace)","已整理,englishwords","3",""],
 ["a_child_s_history_of_tw_2671", "A Child's History of the World(V. M. Hillyer)","已整理,englishwords","3",""],
 ["the_pickwick_papers_1793", "The Pickwick Papers(Charles Dickens)","已整理,englishwords","3",""],
 ["meditations_1153", "Meditations(Emperor of Rome Marcus Aurelius)","已整理,englishwords","3",""],

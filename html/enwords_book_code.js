@@ -52,14 +52,21 @@ function args_enwords_book(){
     }
 }
 
+function recent_enwords_book(csstr=''){
+    recent_search_b('recent_search_enwords_book',csstr,'search_enwords_book','div_recent_search',[],25,false); 
+}
+
 function init_enwords_book(){
+    words_searched_arr_global=[];
     new_words_form_enwords_book();
     enwords_init_b(true);
     args_enwords_book();
     //---------------
     if (en_words_book_newwords_continue_global===false){
         top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.4rem'),true,false,2);
-
+        input_with_x_b('input_search_enbook',11);
+        recent_enwords_book();
+        
         enwords_mini_search_frame_style_b();
         menu_enwords_book();
         enwords_mini_search_frame_form_b();
@@ -78,7 +85,7 @@ function menu_enwords_book(){
     '<span class="span_menu" onclick="'+str2_t+'get_new_words_arr_enbook_b(4);">旧单词js_wiki格式</span>',
     '<span class="span_menu" onclick="'+str2_t+'show_sentence_enwc_b(3,true);">显示少量例句</span>',
     '<span class="span_menu" onclick="'+str_t+'words_sort_count_enwords_book();">单词数量统计排序</span>',
-    '<span class="span_menu" onclick="'+str_t+'txtlistsearch_enwords_book();">打开当前电子书</span>',
+    '<span class="span_menu" onclick="'+str_t+'txtlistsearch_open_enwords_book();">打开当前电子书</span>',
     ];
     
     if (is_local_b()){
@@ -273,12 +280,42 @@ function words_check_by_lines_enwords_book(){
     document.getElementById('div_new_words2').innerHTML=bljg+enwords_different_types_div_b(Array.from(result_t));
 }
 
-function txtlistsearch_enwords_book(){
+function txtlistsearch_open_enwords_book(){
     var blpath=klbase_sele_path_b()[1]+('/html/txtlistsearch.htm');
     if (csbookno_global>=0){
         blpath=blpath+'?'+csbooklist_sub_global_b[csbookno_global][0]+'&line=1';
     }
     window.open(blpath);
+}
+
+function search_enwords_book(cskey=false){
+    var oinput=document.getElementById('input_search_enbook');
+    if (cskey===false){
+        cskey=oinput.value.trim();
+    }
+    oinput.value=cskey;
+
+    recent_enwords_book(cskey);
+    var isreg=false;
+    [cskey,isreg]=str_reg_check_b(cskey,isreg,true);        
+    
+    var bltype=document.getElementById('select_search_type_enbook').value;
+    var blarr=false;
+    switch (bltype){
+        case 'kaikki phrase':
+            blarr=kaikki_phrase_global;
+            break;
+        case '全部新单词':
+            blarr=all_new_words_global;
+            break;
+    }
+    if (blarr===false){return;}
+    
+    var result_t=common_search_b(cskey,isreg,blarr,1000)[0];
+    for (let blxl=0;blxl<result_t.length;blxl++){
+        result_t[blxl]=result_t[blxl][0].replace(/\s/g,'_');
+    }
+    document.getElementById('textarea_new_words1').value=result_t.join('\n');
 }
 
 function get_new_words_group_enwords_book(cstype){

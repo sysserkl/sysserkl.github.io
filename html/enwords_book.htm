@@ -54,12 +54,17 @@ mobile_style_enwc_b();
 <label><input type="checkbox" id="input_s_word" checked />单词</label>
 <label><input type="checkbox" id="input_s_p" />音标</label>
 <label><input type="checkbox" id="input_s_def" checked />释义</label>
+
+<input type="text" id="input_search_enbook" onkeyup="if (event.key=='Enter'){search_enwords_book();}"  />
+<select id="select_search_type_enbook"><option>kaikki phrase</option><option>全部新单词</option></select>
+<span class="aclick" onclick="search_enwords_book();">搜索</span>
+
 <span id="span_progress_enbook"></span>
+<div id="div_recent_search" style="font-size:0.85rem;margin:0.5rem 0rem;line-height:1.8rem;"></div>
 </div>
 <div id="divhtml"></div>
 <div id="divhtml2" style="margin-left:2rem;margin-right:2rem;"></div>
 <script>
-var words_searched_arr_global=[];
 init_enwords_book();
 </script>
 

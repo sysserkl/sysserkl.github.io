@@ -1567,8 +1567,12 @@ function root_font_size_change_b(change_value=0,csask=false){
     localStorage.setItem('root_font_size_increment',increment);
 }
 
+function menu_parent_node_b(nodestr){
+    return nodestr.replace('.parentNode.','.parentNode.parentNode.');
+}
+
 function menu_container_b(nodestr,cslist,caption=''){
-    var blparent=nodestr.replace('.parentNode.','.parentNode.parentNode.');
+    var blparent=menu_parent_node_b(nodestr);
     var result_t=[];
     for (let item of cslist){   //[caption,onclick,add_parent_node,span_id] - 保留注释
         var id_str='';
