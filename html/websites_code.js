@@ -50,11 +50,13 @@ function menu_klwebsites(){
     var klmenu_config=[
     '<span class="span_menu" onclick="'+str_t+'demo_style_klwebsites();">PWA Demo Style</span>',   
     '<span id="span_jieba_web" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ jieba分词</span>',
+    '<span id="span_category_with_p_web" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 分类分段</span>',
     ];    
     //---
     
     document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🕸','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_tag,'#','10rem','1rem','1rem','60rem')+klmenu_b(klmenu_search,'𓅸','10rem','1rem','1rem','60rem')+fav_www_menu_websites_b('',false)+klmenu_b(klmenu_config,'⚙','13rem','1rem','1rem','30rem'),'','0rem')+' ');
     klmenu_check_b('span_veil_web',true);        
+    klmenu_check_b('span_category_with_p_web',true);        
 }
 
 function new_filter_form_klwebsites(){
@@ -436,55 +438,48 @@ function search_klwebsites(keyword='',csnumber=999){
     }
     //----------------------
     var lineheight=(ismobile_b()?'1.3':'1.8');
-        
-    var odiv=document.getElementById('divhtml');
-    var bljg='';
-    
+
     var result_t=array_klwebsites(keyword,csnumber);
 
     var ico_type=(is_old_firefox_b()?'old':(is_local_b()?'local':''));
-    var category='';
-    var blxl2=0;
     var count1=0;
     var count2=0;
     var count3=0;
-    var select_str='';
+    var select_str=[];
+    var category_dict={};
+    
     for (let href_list of result_t){
-        var href_str=href_list[0];
-        var item=sites_all_global[href_list[1]];
+        var item=sites_all_global[href_list[1]];    
         count1=count1+item[5][0];
         count2=count2+item[5][1];
-        count3=count3+item[5][2];
+        count3=count3+item[5][2];    
         
-        if (category!==href_list[2]){
-            category=href_list[2];
-            if (bljg!==''){
-                bljg=bljg+sub_search_klwebsites_count(blxl2);
-                bljg=bljg+'</p>';
-            }
-            bljg=bljg+'<a name="sites_category_'+href_list[1]+'"></a><p class="p_sites" style="font-size:0.88rem;line-height:'+lineheight+'rem;"><span class="span_category_websites" style="font-weight:bold;cursor:pointer;" title="批量打开" onclick="batch_open_klwebsites(this.parentNode);">'+category+'</span> ';
-            blxl2=0;
-            select_str=select_str+'<option value="sites_category_'+href_list[1]+'">'+category+'</option>\n';
+        var blkey='c_'+href_list[2];
+        if (category_dict[blkey]==undefined){
+            category_dict[blkey]=[[]];  //网址列表在一个 list 中 - 保留注释
         }
-        
-        bljg=bljg+one_link_klwebsites(href_str,href_list[1],csnumber,(item[5][0]>0),ico_type);
-        blxl2=blxl2+1;
+        var item=sites_all_global[href_list[1]];
+        category_dict[blkey][0].push(one_link_klwebsites(href_list[0],href_list[1],csnumber,(item[5][0]>0),ico_type));
     }
+        
+    category_dict=object2array_b(category_dict,true,2);
     
-    if (bljg.slice(-4,)!=='</p>'){
-        bljg=bljg+sub_search_klwebsites_count(blxl2);
-        bljg=bljg+'</p>';
+    var tagname=(klmenu_check_b('span_category_with_p_web',false)?'p':'span');
+    for (let blxl=0;blxl<category_dict.length;blxl++){
+        select_str.push('<option value="sites_category_'+blxl+'">'+category_dict[blxl][0]+'</option>');        
+        category_dict[blxl]='<a name="sites_category_'+blxl+'"></a><'+tagname+' class="p_sites" style="font-size:0.88rem;line-height:'+lineheight+'rem;"><span class="span_category_websites" style="font-weight:bold;cursor:pointer;" title="批量打开" onclick="batch_open_klwebsites(this.parentNode);">'+category_dict[blxl][0]+'</span> '+category_dict[blxl][1].join('')+sub_search_klwebsites_count(category_dict[blxl][1].length)+'</'+tagname+'>';
     }
     
     //------------
-    select_str='<select style="width:5rem;height:2rem;margin-bottom:0.5rem;" onchange=\'document.location="#"+this.value;\'>'+select_str+'</select>';
+    select_str='<select style="width:5rem;height:2rem;margin-bottom:0.5rem;" onchange=\'document.location="#"+this.value;\'>'+select_str.join('\n')+'</select>';
     
-    bljg='<hr /><p style="line-height:1.45rem;">'+select_str+' '+sub_search_klwebsites_input_range(csnumber,keyword)+'</p><div id="div_sub_content">'+recent_refresh_klwebsites(lineheight)+bljg+random_klwebsites(lineheight)+day_klwebsites(lineheight)+'<p>&nbsp;</p></div>';
+    var bljg='<hr /><p style="line-height:1.45rem;">'+select_str+' '+sub_search_klwebsites_input_range(csnumber,keyword)+'</p><div id="div_sub_content">'+recent_refresh_klwebsites(lineheight)+category_dict.join('\n')+random_klwebsites(lineheight)+day_klwebsites(lineheight)+'<p>&nbsp;</p></div>';
 
     if (keyword=='http://'){
         bljg=bljg+http_klwebsites();
     }
-    
+
+    var odiv=document.getElementById('divhtml');
     odiv.innerHTML=bljg;
     mouseover_mouseout_oblong_span_b(odiv.querySelectorAll('span.oblong_box'));
     recent_search_b('recent_search_websites',keyword,'search_klwebsites','span_recent_search',[],15,false);
@@ -631,19 +626,22 @@ function day_klwebsites(lineheight,csday='',odom=false){
 }
 
 function batch_open_klwebsites(op){
-    if (!confirm('是否批量打开？')){return;}
-    if (op){
-        var oas=op.getElementsByTagName('a');
-        var blxl=0;
-        for (let one_a of oas){
-            var href_str=one_a.getAttribute('href');
-            if (href_str){
-                if (one_a.style.display=='none'){continue;}
-                window.open(href_str);
-                blxl=blxl+1;
-                if (blxl>=20){break;}
-            }
-        }
+    if (!op){return;}
+    var oas=op.getElementsByTagName('a');
+    var link_list=[];
+    var blxl=0;
+    for (let one_a of oas){
+        var href_str=one_a.getAttribute('href');
+        if (!href_str){return;}
+        if (one_a.style.display=='none'){continue;}
+        link_list.push(href_str);
+        blxl=blxl+1;
+        if (blxl>=20){break;}        
+    }
+    
+    if (!confirm('是否批量打开 '+link_list.length+' 个网址？')){return;}
+    for (let item of link_list){
+        window.open(item);
     }
 }
 
