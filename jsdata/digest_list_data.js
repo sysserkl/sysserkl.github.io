@@ -10,6 +10,7 @@ var digest_list_source_global=[
 ["yu_shi_ming_yan_103391_digest",3,"2020-11-02",4290],
 ["my_life_volume_1_9603_digest",3,"2023-06-29",310],
 ["ulyssesjames_joyce_760_digest",3,"2023-07-26",614],
+["ben_hur_a_tale_of_tc_2472_digest",3,"2023-08-18",147],
 ["the_complete_works_of_william_s_3872_digest",3,"2022-09-15",242],
 ["cranfordelizabeth_cleghorn_gaskell_815_digest",3,"2023-06-16",119],
 ["little_women_1172_digest",3,"2023-03-23",948],

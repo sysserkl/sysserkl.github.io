@@ -1,4 +1,7 @@
 var csbooklist_source_global=[
+["deng_xiao_ping_wen_xuan_dyjqsw_220488", "邓小平文选第一卷(求是网)","已整理","3",""],
+["deng_xiao_ping_wen_xuan_dejqsw_220628", "邓小平文选第二卷(求是网)","已整理","3",""],
+["deng_xiao_ping_wen_xuan_dsjqsw_220497", "邓小平文选第三卷(求是网)","已整理","3",""],
 ["ben_hur_a_tale_of_tc_2472", "Ben-Hur- A tale of the Christ(Lew Wallace)","已整理,englishwords","3",""],
 ["a_child_s_history_of_tw_2671", "A Child's History of the World(V. M. Hillyer)","已整理,englishwords","3",""],
 ["the_pickwick_papers_1793", "The Pickwick Papers(Charles Dickens)","已整理,englishwords","3",""],
