@@ -25,18 +25,20 @@ function menu_ensentence(){
     klmenu1.push(menu_container_b(str_t,group_list,'指定日期例句：'));
     
     klmenu1=klmenu1.concat([
-    '<span class="span_menu" onclick="'+str_t+'rare_old_words_ensentence(false);">例句最少的单词3000</span>',
-    '<span class="span_menu" onclick="'+str_t+'rare_old_words_ensentence(false,2,10,3000,true);">例句出处唯一的单词3000</span>',
+    '<span class="span_menu" onclick="'+str_t+'rare_old_words_ensentence(false,true);">例句最少的单词3000</span>',
+    '<span class="span_menu" onclick="'+str_t+'rare_old_words_ensentence(false,true,2,10,3000,true);">例句出处唯一的单词3000</span>',
     '<span class="span_menu" onclick="'+str_t+'show_sentence_enwc_b();">显示例句</span>',
     '<span class="span_menu" onclick="'+str_t+'show_new_words_enwc_b(\'span.span_enwords_sentence\',false);">显示例句中的生词</span>',
     ]);
     
     var group_list=[
-    ['无例句的单词','rare_old_words_ensentence(true,1,0,3000);',true],
+    ['无例句的单词','rare_old_words_ensentence(true,false,1,0,3000);',true],
     ['词组','phrase_not_in_ensentence();',true],
     ];    
     klmenu1.push(menu_container_b(str_t,group_list,''));
-        
+
+    klmenu1.push('<span id="span_sort_by_selenium_ensentence" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 按selenium单词数排序</span>');
+
     var klmenu_config=[
     '<span class="span_menu" onclick="'+str_t+'sentence_source_list_ensentence();">例句出处文章列表</span>',    
     '<span class="span_menu" onclick="'+str_t+'host_count_ensentence();">例句出处统计</span>',   
@@ -230,13 +232,15 @@ function length_sort_ensentence(){
 }
 
 
-function rare_old_words_ensentence(show_sentence=true,max_count=2,rows_min=10,rows_max=3000,source_check=false){
+function rare_old_words_ensentence(show_sentence=true,generate_js=false,max_count=2,rows_min=10,rows_max=3000,source_check=false){
     function sub_rare_old_words_ensentence_form(){
         var postpath=postpath_b();
         var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php" target=_blank>\n';    
         bljg=bljg+'<p><textarea name="textarea_rare_words" id="textarea_rare_words" style="height:10rem;">'+words_searched_arr_global.join('\n')+'</textarea></p>';
         bljg=bljg+'<p>'   
-        bljg=bljg+'<span class="aclick" onclick="enwords_count_sentence_data_save_ensentence();">save as enwords_count_sentence_data.js file</span>';
+        if (generate_js){
+            bljg=bljg+'<span class="aclick" onclick="enwords_count_sentence_data_save_ensentence();">save as enwords_count_sentence_data.js file</span>';
+        }
         bljg=bljg+textarea_buttons_b('textarea_rare_words','复制,发送到临时记事本,发送地址');
         bljg=bljg+'</p></form>';
         return bljg;
@@ -250,6 +254,41 @@ function rare_old_words_ensentence(show_sentence=true,max_count=2,rows_min=10,ro
             }
             result_t[blkey][1]=result_t[blkey][1]+1;
         }  
+    }
+
+    function sub_rare_old_words_ensentence_sort(){
+        if (klmenu_check_b('span_sort_by_selenium_ensentence',false)){
+            var selenium_words=selenium_local_storage_get_enbook_b('word');
+            var selenium_dict={};
+            for (let arow of selenium_words){
+                arow=arow.split(' ');
+                for (let one_word of arow){
+                    var blkey='w_'+one_word;
+                    if (selenium_dict[blkey]==undefined){
+                        selenium_dict[blkey]=0;
+                    }
+                    selenium_dict[blkey]=selenium_dict[blkey]+1;
+                }
+            }
+            
+            for (let blxl=0;blxl<words_searched_arr_global.length;blxl++){
+                var blkey='w_'+words_searched_arr_global[blxl];
+                if (selenium_dict[blkey]==undefined){
+                    words_searched_arr_global[blxl]=[words_searched_arr_global[blxl],0];
+                }
+                else {
+                    words_searched_arr_global[blxl]=[words_searched_arr_global[blxl],selenium_dict[blkey]];                
+                }
+            }
+            
+            words_searched_arr_global.sort(function (a,b){return a[1]<b[1];});
+            for (let blxl=0;blxl<words_searched_arr_global.length;blxl++){
+                words_searched_arr_global[blxl]=[words_searched_arr_global[blxl][0],'',words_searched_arr_global[blxl][1].toString()];
+            }
+        }
+        else {
+            words_searched_arr_global.sort();
+        }
     }
     
     function sub_rare_old_words_ensentence_arow(){
@@ -273,7 +312,7 @@ function rare_old_words_ensentence(show_sentence=true,max_count=2,rows_min=10,ro
                 words_searched_arr_global.sort(randomsort_b);
                 words_searched_arr_global=words_searched_arr_global.slice(0,rows_max);
             }
-            words_searched_arr_global.sort();
+            sub_rare_old_words_ensentence_sort();
             
             var bltextarea=sub_rare_old_words_ensentence_form();
             

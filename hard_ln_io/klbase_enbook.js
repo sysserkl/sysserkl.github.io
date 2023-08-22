@@ -410,3 +410,31 @@ function str_2_array_enbook_b(blstr,cstype='set'){
 
     return bljgarr2;
 }
+
+function selenium_local_storage_get_enbook_b(cstype='all'){
+    var list_t=local_storage_get_b('selenium_enbook').split('\n');
+    if (list_t.length % 4 !== 0){
+        console.log('列数不为4',list_t);    //此行保留 - 保留注释
+        return [];
+    }
+    var result_t=[];
+    switch (cstype){
+        case 'href':
+            for (let blxl=0;blxl<list_t.length;blxl=blxl+4){
+                result_t.push(list_t[blxl]);
+            }    
+            break;
+        case 'word':
+            for (let blxl=3;blxl<list_t.length;blxl=blxl+4){
+                result_t.push(list_t[blxl]);
+            }         
+            break;
+        case 'all':
+            for (let blxl=0;blxl<list_t.length;blxl=blxl+4){
+                result_t.push([list_t[blxl],list_t[blxl+1],list_t[blxl+2],list_t[blxl+3]]);
+            }
+            break;
+    }
+    
+    return result_t;
+}

@@ -1,4 +1,6 @@
 var csbooklist_source_global=[
+["essays_of_michel_de_montaigne_c_11799", "Essays of Michel de Montaigne — Complete(Michel de Montaigne)","已整理,englishwords","3",""],
+["adventures_of_huckleberry_finn_2913", "Adventures of Huckleberry Finn(Mark Twain)","已整理,englishwords","3",""],
 ["deng_xiao_ping_wen_xuan_dyjqsw_220488", "邓小平文选第一卷(求是网)","已整理","3",""],
 ["deng_xiao_ping_wen_xuan_dejqsw_220628", "邓小平文选第二卷(求是网)","已整理","3",""],
 ["deng_xiao_ping_wen_xuan_dsjqsw_220497", "邓小平文选第三卷(求是网)","已整理","3",""],

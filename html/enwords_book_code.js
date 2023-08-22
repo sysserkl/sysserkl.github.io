@@ -465,7 +465,7 @@ function filter_new_enwords_book(){
 }
 
 function selenium_list_popular_enwords_book(){
-    var cached_list=selenium_local_storage_get_enwords_book();
+    var cached_list=selenium_local_storage_get_enbook_b();
     var word_list={};
     for (let arow of cached_list){
         var list_t=arow[3].split(' ');
@@ -561,9 +561,9 @@ function selenium_words_count_more_than_one_line_enword_book(csno=1){
 }
 
 function selenium_contain_enwords_book(){
-    var cached_len=selenium_local_storage_get_enwords_book(true).length;
+    var cached_len=selenium_local_storage_get_enbook_b('href').length;
 
-    var enarray=selenium_local_storage_get_enwords_book(false);
+    var enarray=selenium_local_storage_get_enbook_b();
 
     var oldset=simple_words_b();
     var key_name;
@@ -629,9 +629,9 @@ function bottom_list_href_get_enwords_book(bottom_list){
 }
 
 function selenium_one2more_enwords_book(){
-    var cached_len=selenium_local_storage_get_enwords_book(true).length;
+    var cached_len=selenium_local_storage_get_enbook_b('href').length;
 
-    var enarray=selenium_local_storage_get_enwords_book(false);
+    var enarray=selenium_local_storage_get_enbook_b();
 
     var oldset=simple_words_b();
     var key_name;
@@ -758,10 +758,10 @@ function selenium_list_enwords_book(use_cache=false,cstype=''){
     }
     //-------------------------
     var result_t={};
-    var cached_list=selenium_local_storage_get_enwords_book(true);
+    var cached_list=selenium_local_storage_get_enbook_b('href');
     
     if (use_cache){
-        var enarray=[['Cached','','','']].concat(selenium_local_storage_get_enwords_book(false));
+        var enarray=[['Cached','','','']].concat(selenium_local_storage_get_enbook_b());
     }
     else {
         var enarray=enwords_selenium_scan_global;
@@ -932,7 +932,7 @@ function selenium_number_enwords_book(){
 }
 
 function selenium_local_storage_clear_enwords_book(){
-    var cached_list=selenium_local_storage_get_enwords_book();
+    var cached_list=selenium_local_storage_get_enbook_b();
     if (cached_list.length==0){return;}
 
     var rndstr=randstr_b(4,true,false);
@@ -943,7 +943,7 @@ function selenium_local_storage_clear_enwords_book(){
 }
 
 function selenium_local_storage_set_enwords_book(is_cache){
-    var cached_list=selenium_local_storage_get_enwords_book();
+    var cached_list=selenium_local_storage_get_enbook_b();
     var oas=document.querySelectorAll('div.div_h3_selenium_enbook a.a_black');
     if (oas.length==0){return;}
     if (cached_list.length>0 && confirm('缓存区现有记录'+cached_list.length+'条，是否添加当前页面'+oas.length+'条记录到缓存？')==false){
@@ -974,7 +974,7 @@ function selenium_local_storage_set_enwords_book(is_cache){
 
 function selenium_old_record_count_enwords_book(show_alert=false,show_error=true){
     var oas=document.querySelectorAll('div#div_new_words2 a.a_black');
-    var cached_list=selenium_local_storage_get_enwords_book(true);
+    var cached_list=selenium_local_storage_get_enbook_b('href');
     var bllen=cached_list.length;
     if (show_alert){
         var ospan=document.getElementById('span_selenium_local_storage_count');
@@ -1011,27 +1011,6 @@ function selenium_old_record_count_enwords_book(show_alert=false,show_error=true
         }
     }
     document.getElementById('span_selenium_old_record_count').innerHTML=blstr+minus;
-}
-
-function selenium_local_storage_get_enwords_book(only_href=false){
-    var list_t=local_storage_get_b('selenium_enbook').split('\n');
-    if (list_t.length % 4 !== 0){
-        console.log('列数不为4',list_t);    //此行保留 - 保留注释
-        return [];
-    }
-    var result_t=[];
-    if (only_href){
-        for (let blxl=0;blxl<list_t.length;blxl=blxl+4){
-            result_t.push(list_t[blxl]);
-        }    
-    }
-    else {
-        for (let blxl=0;blxl<list_t.length;blxl=blxl+4){
-            result_t.push([list_t[blxl],list_t[blxl+1],list_t[blxl+2],list_t[blxl+3]]);
-        }
-    }
-    
-    return result_t;
 }
 
 function title_set_enwords_book(){
