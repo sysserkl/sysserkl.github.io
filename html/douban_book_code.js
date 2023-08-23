@@ -519,7 +519,7 @@ function amazon_title_batch_dbb(){
         
         if (blxl>=bllen){
             var used_seconds=(new Date()-start_time)/1000;
-            console.log(new Date().toLocaleString(), '完成，扫描了',scanned_count,'条。费时：',(used_seconds/bllen).toFixed(2)+'秒');
+            console.log(new Date().toLocaleString(), '完成，费时：',(used_seconds/bllen).toFixed(2)+'秒');
             document.title=old_title;
             return;
         }
@@ -538,7 +538,6 @@ function amazon_title_batch_dbb(){
     var owindow=false;
     var is_closed=false;
     var start_time=new Date();
-    var scanned_count=0;
     var old_title=document.title;    
     sub_amazon_title_batch_dbb_one_title();
 }

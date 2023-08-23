@@ -2,6 +2,7 @@ function menu_klwebsites(){
     var str_t=klmenu_hide_b('');
     var klmenu1=[
     '<span class="span_menu" onclick="'+str_t+'search_in_site_options_klwebsites();">search in site</span>',        
+    '<span class="span_menu" onclick="'+str_t+'key_batch_search_by_engine_klwebsites(true);">batch eword search</span>',
     '<span class="span_menu" onclick="'+str_t+'search_klwebsites(\'http://\');">http_https check</span>',
     '<span class="span_menu" onclick="'+str_t+'qr_html_klwebsites();">qr</span>',
     '<span id="span_veil_web" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ QR遮罩</span>',
@@ -54,9 +55,99 @@ function menu_klwebsites(){
     ];    
     //---
     
-    document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🕸','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_tag,'#','10rem','1rem','1rem','60rem')+klmenu_b(klmenu_search,'𓅸','10rem','1rem','1rem','60rem')+fav_www_menu_websites_b('',false)+klmenu_b(klmenu_config,'⚙','13rem','1rem','1rem','30rem'),'','0rem')+' ');
+    document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🕸','16rem','1rem','1rem','60rem')+klmenu_b(klmenu_tag,'#','10rem','1rem','1rem','60rem')+klmenu_b(klmenu_search,'𓅸','10rem','1rem','1rem','60rem')+fav_www_menu_websites_b('',false)+klmenu_b(klmenu_config,'⚙','13rem','1rem','1rem','30rem'),'','0rem')+' ');
     klmenu_check_b('span_veil_web',true);        
     klmenu_check_b('span_category_with_p_web',true);        
+}
+
+function key_batch_search_by_engine_klwebsites(is_enword=true,max_result=5){
+    function sub_key_batch_search_by_engine_klwebsites_done(){
+        var used_seconds=(new Date()-start_time)/1000;
+        console.log(new Date().toLocaleString(), '完成，费时：',(used_seconds/bllen).toFixed(2)+'秒');        
+        document.title=old_title;    
+    }
+    
+    function sub_key_batch_search_by_engine_klwebsites_one_site(){
+        var window_id=false;
+        for (let blxl=0;blxl<window_list.length;blxl++){
+            if (window_list[blxl]===false || window_list[blxl].closed){
+                window_id=blxl;
+                break;
+            }
+        }
+        
+        if (window_id!==false){
+            var owindow=window_list[window_id];
+            [is_closed,wait_times]=window_is_closed_b(owindow,wait_times,10,false);
+            if (is_closed===false || is_closed===-1){   //没关掉，或超次数 - 保留注释
+                setTimeout(sub_key_batch_search_by_engine_klwebsites_one_site,wait_seconds*1000);
+                return;
+            }
+        }
+            
+        if (blno>=bllen){
+            sub_key_batch_search_by_engine_klwebsites_done();
+            return;
+        }
+        else if (window_id===false){
+            if (confirm('是否继续对 '+blkey+' 在剩余 '+(bllen-blno)+' 个网站中进行批量搜索？')){
+                //sub_key_batch_search_by_engine_klwebsites_init();
+                setTimeout(sub_key_batch_search_by_engine_klwebsites_one_site,wait_seconds*1000);
+            }
+            else {
+                sub_key_batch_search_by_engine_klwebsites_done();
+            }
+            return;
+        }
+        
+        var blurl=search_in_site_new_window_klwebsites('bing',blkey,site_list[blno],false);
+        window_list[window_id]=window.open(blurl);
+        blno=blno+1;
+        wait_times=0;
+        document.title=blno+'/'+bllen+' - '+old_title;
+        setTimeout(sub_key_batch_search_by_engine_klwebsites_one_site,wait_seconds*1000);
+    }
+    
+    function sub_key_batch_search_by_engine_klwebsites_init(){
+        for (let blxl=0;blxl<max_result;blxl++){
+            window_list.push(false);
+        }    
+    }
+    //---------------------------
+    
+    var site_list=false;
+    if (is_enword){
+        site_list=array_klwebsites('^1,0,0$',999);
+        for (let blxl=0;blxl<site_list.length;blxl++){
+            site_list[blxl]=site_list[blxl][0];
+        }
+    }
+    
+    var oinput=document.getElementById('input_search');
+    var blkey=oinput.value.trim();
+    if (blkey==''){return;}
+    
+    if (blkey.match(/^(["']).*\1$/)==null){
+        blkey='"'+blkey+'"';
+    }
+    
+    site_list=Array.from(search_in_site_options_klwebsites(true,site_list));
+    site_list.sort(randomsort_b);
+    
+    var bllen=site_list.length;
+    if (bllen==0){return;}
+    if (!confirm('是否对 '+blkey+' 在 '+bllen+' 个网站中进行批量搜索？')){return;}
+    
+    var window_list=[];
+    sub_key_batch_search_by_engine_klwebsites_init();
+
+    var blno=0;
+    var is_closed=false;
+    var start_time=new Date();
+    var wait_times=0;
+    var wait_seconds=5;
+    var old_title=document.title;
+    sub_key_batch_search_by_engine_klwebsites_one_site();
 }
 
 function new_filter_form_klwebsites(){
@@ -661,32 +752,59 @@ function qr_generate_klwebsites(do_veil=false){
     setTimeout(function(){qr_generate_klwebsites(do_veil);},10);
 }
 
-function search_in_site_options_klwebsites(){
-    var oas=document.querySelectorAll('div#div_sub_content p.p_sites a.a_oblong_box');
-    var list_t=new Set();
-    for (let one_a of oas){
-        var blhref=one_a.href;
-        if (!blhref){continue;}
-        blhref=blhref.replace(new RegExp(/^.*\/\/([^\/]+)\/?.*$/,'g'),'$1');
-        list_t.add(blhref);
+function search_in_site_options_klwebsites(only_set=false,site_list=false){
+    var set_t=new Set();
+    
+    if (Array.isArray(site_list)){
+        for (let blhref of site_list){
+            blhref=blhref.replace(/^.*\/\/([^\/]+)\/?.*$/g,'$1');
+            set_t.add(blhref);
+        }     
     }
-    if (list_t.size==0){return;}
+    else {
+        var oas=document.querySelectorAll('div#div_sub_content p.p_sites a.a_oblong_box');
+        for (let one_a of oas){
+            var blhref=one_a.href;
+            if (!blhref){continue;}
+            blhref=blhref.replace(/^.*\/\/([^\/]+)\/?.*$/g,'$1');
+            set_t.add(blhref);
+        }
+    }
+    
+    if (only_set){
+        return set_t;
+    }
+    
+    if (set_t.size==0){return;}
     var ospan=document.getElementById('span_search_in_site');
-    var bljg='<select id="select_search_in_site"><option>'+Array.from(list_t).join('</option><option>')+'</option></select> <span class="aclick" onclick="search_in_site_new_window_klwebsites(\'bing\');">Bing</span> <span class="aclick" onclick="search_in_site_new_window_klwebsites(\'baidu\');">Baidu</span>';
+    var bljg='<select id="select_search_in_site"><option>'+Array.from(set_t).join('</option><option>')+'</option></select> <span class="aclick" onclick="search_in_site_new_window_klwebsites(\'bing\');">Bing</span> <span class="aclick" onclick="search_in_site_new_window_klwebsites(\'baidu\');">Baidu</span>';
     ospan.innerHTML=bljg;
 }
 
-function search_in_site_new_window_klwebsites(cstype){
-    var blstr=encodeURIComponent(document.getElementById('input_search').value);
-    var blsite=document.getElementById('select_search_in_site').value;
+function search_in_site_new_window_klwebsites(cstype,cskey=false,site_name=false,open_window=true){
+    if (cskey===false){
+        cskey=document.getElementById('input_search').value;
+    }
+    cskey=encodeURIComponent(cskey);
+    
+    if (site_name===false){
+        site_name=document.getElementById('select_search_in_site').value;
+    }
+    
+    var blstr='';
     switch (cstype){
         case 'bing':
-            window.open('https://www.bing.com/search?q='+blstr+' site: '+blsite);
+            blstr='https://www.bing.com/search?q='+cskey+' site: '+site_name;
             break;
         case 'baidu':
-            window.open('https://www.baidu.com/baidu?wd='+blstr+' site: '+blsite);
+            blstr='https://www.baidu.com/baidu?wd='+cskey+' site: '+site_name;
             break;
     }
+    
+    if (blstr!=='' && open_window){
+        window.open(blstr);    
+    }
+    return blstr;
 }
 
 function init_klwebsites(){

@@ -3053,10 +3053,15 @@ function multiyear_average_growth_rate_b(first_year,first_value,last_year,last_v
     return false;
 }
 
-function window_is_closed_b(owindow,wait_times,csmax=10){
+function window_is_closed_b(owindow,wait_times,csmax=10,do_close=true){
     if (wait_times>csmax){
-        console.log(new Date().toLocaleString(), '强制关闭窗口，等待次数',wait_times);
-        owindow.close();
+        if (do_close){
+            console.log(new Date().toLocaleString(), '强制关闭窗口，等待次数',wait_times);
+            owindow.close();
+        }
+        else {
+            return [-1,wait_times];
+        }
     }
     
     if (owindow===false || owindow.closed){

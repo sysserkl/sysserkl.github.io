@@ -11,4 +11,5 @@ var digest_global=`
 *gunboat
 *redeploy
 *piglet
+*far-flung
 `.trim().split('\n');

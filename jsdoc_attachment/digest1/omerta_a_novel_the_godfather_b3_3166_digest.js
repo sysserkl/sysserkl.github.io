@@ -17,4 +17,5 @@ var digest_global=`
 *shitload
 *Disneyland
 *Latino
+*undernourished
 `.trim().split('\n');

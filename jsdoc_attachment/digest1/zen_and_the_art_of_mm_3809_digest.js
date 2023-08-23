@@ -56,4 +56,6 @@ var digest_global=`
 *Truman
 *redwood
 *slump
+*stopcock
+*timberline
 `.trim().split('\n');

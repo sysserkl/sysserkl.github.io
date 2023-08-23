@@ -1,28 +1,60 @@
 var digest_global=`
+*altimeter
 *Andy
+*anthropological
 *anthropology
+*antimony
+*backcountry
+*Bering
+*bestseller
 *bigamist
 *burro
+*Carmel
 *cheeseburger
+*conceptual
+*dental floss
+*diploma
+*disrespectful
+*drainage
+*duchess
 *ecologist
 *excel
 *gamesmanship
+*glycoprotein
+*grade school
+*Guatemala
+*Hathaway
+*homicide
+*Jeremiah
+*jukebox
+*lakeshore
 *landlocked
 *legalize
+*loner
+*lowlife
 *maw
 *monkish
 *mountaineer
 *nomadic
+*Oedipal
 *outermost
 *paperback
 *paperbound
+*philanderer
 *pornographic
 *professorial
+*psychiatric hospital
+*psychoanalysis
 *rattlesnake
+*redwood
 *restroom
 *sailboat
+*San Diego
 *scuttle
 *snowpack
+*southeastern
+*statehood
+*sweatshirt
 *syndrome
 *teammate
 *touchdown
@@ -32,37 +64,5 @@ var digest_global=`
 *waitress
 *waterfront
 *westernmost
-*redwood
 *windshield
-*bestseller
-*drainage
-*jukebox
-*sweatshirt
-*psychoanalysis
-*Bering
-*disrespectful
-*southeastern
-*duchess
-*backcountry
-*homicide
-*antimony
-*statehood
-*lakeshore
-*glycoprotein
-*diploma
-*Guatemala
-*Jeremiah
-*altimeter
-*psychiatric hospital
-*anthropological
-*lowlife
-*grade school
-*conceptual
-*Oedipal
-*Carmel
-*loner
-*dental floss
-*Hathaway
-*San Diego
-*philanderer
 `.trim().split('\n');

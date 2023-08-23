@@ -3,4 +3,5 @@ var digest_global=`
 *Serbian
 *Westphalia
 *storekeeper
+*Tiber
 `.trim().split('\n');

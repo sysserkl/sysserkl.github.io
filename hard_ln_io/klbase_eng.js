@@ -1946,9 +1946,9 @@ function sentence_list_2_html_b(cslist,csword_list=[''],csmax=500,show_button=tr
     return bljg;
 }
 
-function sentence_split_b(csstr,csno=-1){
+function sentence_split_b(csstr,csno=-1){   //sentence split - 保留注释
     function sub_sentence_split_b_check(csstr1,csstr2){
-        return csstr1.length<10 || (csstr1.match(/\s/g) || []).length<5 || csstr2.length<10 || (csstr2.match(/\s/g) || []).length<5;
+        return csstr1.length<10 || (csstr1.match(/\s/g) || []).length<5 || csstr2.length<10 || (csstr2.match(/\s/g) || []).length<5 || csstr2.trim().match(/^[a-z]/);   //如果csstr2 以小写字母开头 - 保留注释
     }
     //----------------------------------
     if (Array.isArray(csstr)){

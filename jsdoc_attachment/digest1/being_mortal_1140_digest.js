@@ -71,4 +71,5 @@ var digest_global=`
 *Uganda
 *Yorkshire
 *colonoscopy
+*stopcock
 `.trim().split('\n');
