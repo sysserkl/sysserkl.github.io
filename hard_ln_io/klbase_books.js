@@ -160,6 +160,11 @@ function import_book_js_b(import_digest=true){
         else {
             menu_digest_file_full_name_b(book_no,jsdoc_num,bookid,jsdoc_path,import_digest,true);
         }
+        
+        txtbook_js_code_file_global='';
+        if (csbooklist_sub_global_b[book_no][4].includes('J')){
+            txtbook_js_code_file_global='txtlistsearch_additional_'+csbooklist_sub_global_b[book_no][0]+'_code.js';
+        }
     }
 }
 

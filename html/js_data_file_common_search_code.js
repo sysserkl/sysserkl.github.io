@@ -466,7 +466,7 @@ function flot_load_common(file1=['flot'],flot_type=['time','symbol'],file2=[],fi
         flot_import_js_b(flot_type,false,'dom'); 
     }
     //------------------
-    var file_list=klbase_addons_import_js_b(file1,file2,file3,file3,true,false);
+    var file_list=klbase_addons_import_js_b(file1,file2,file3,file4,true,false);
     file_dom_create_b(file_list,true,'js');
     load_fn_b('flot_import_js_b',-1,2000,sub_flot_load_common_flot);
 }

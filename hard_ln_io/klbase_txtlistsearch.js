@@ -336,7 +336,7 @@ function txtmenus_kltxt_b(cstype=''){
         bljg=bljg+klmenu_b(dmenu_info,'🗃','15rem','',fontsize);        
         bljg=bljg+colors;
     }
-
+    bljg=bljg+'<span id="span_for_more_menu_kltxt"></span>';
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(bljg,'','0rem')+' ');
 }
 
@@ -3023,6 +3023,19 @@ function args_kltxt_b(cskeys){
         }
     }
     recent_search_kltxt_b('',true);
+    load_book_js_code_file_kltxt_b();
+}
+
+function load_book_js_code_file_kltxt_b(){
+    function sub_load_book_js_code_file_kltxt_b_do(){
+        menu_more_kltxt();
+    }
+    //------------------
+    if (txtbook_js_code_file_global==''){return;}
+    var file4=[txtbook_js_code_file_global];
+    var file_list=klbase_addons_import_js_b([],[],[],file4,false,false);
+    file_dom_create_b(file_list,true,'js');
+    load_fn_b('menu_more_kltxt',-1,2000,sub_load_book_js_code_file_kltxt_b_do);
 }
 
 function recent_opened_book_set_kltxt_b(bookid,cskeys){
