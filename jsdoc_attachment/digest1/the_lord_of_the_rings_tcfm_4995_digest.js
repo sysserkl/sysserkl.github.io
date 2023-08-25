@@ -9,4 +9,5 @@ var digest_global=`
 *westwards
 *yestereve
 *untimely
+*yestermorn
 `.trim().split('\n');

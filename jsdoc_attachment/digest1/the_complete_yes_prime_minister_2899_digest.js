@@ -31,4 +31,5 @@ var digest_global=`
 *Zionism
 *Bahamas
 *Marxism
+*Heathrow
 `.trim().split('\n');

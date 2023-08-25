@@ -17,4 +17,5 @@ var digest_global=`
 *Istanbul
 *essayist
 *platelet
+*taillight
 `.trim().split('\n');

@@ -12,4 +12,6 @@ var digest_global=`
 *redeploy
 *piglet
 *far-flung
+*Fiji
+*bowlful
 `.trim().split('\n');

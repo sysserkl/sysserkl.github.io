@@ -29,4 +29,5 @@ var digest_global=`
 *earpiece
 *crewmate
 *bodybuilder
+*Bowie
 `.trim().split('\n');

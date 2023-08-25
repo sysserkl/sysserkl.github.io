@@ -95,4 +95,6 @@ var digest_global=`
 *motherfucker
 *baseboard
 *cicada
+*busty
+*matchbook
 `.trim().split('\n');

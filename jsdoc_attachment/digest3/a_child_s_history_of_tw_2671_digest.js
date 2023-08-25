@@ -4,4 +4,5 @@ var digest_global=`
 *Westphalia
 *storekeeper
 *Tiber
+*plentifully
 `.trim().split('\n');

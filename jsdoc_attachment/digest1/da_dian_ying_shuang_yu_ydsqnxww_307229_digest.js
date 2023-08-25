@@ -24,4 +24,5 @@ var digest_global=`
 *underscore
 *warmonger
 *discolor
+*canister
 `.trim().split('\n');

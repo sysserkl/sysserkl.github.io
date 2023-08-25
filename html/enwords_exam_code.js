@@ -33,11 +33,7 @@ function keys_klexam(){
 }
 
 function is_show_sentence_klexam(){
-    show_sentence=klmenu_check_b('span_show_sentence_klexam',false);
-    if (show_sentence===0){
-        show_sentence=klmenu_check_b('span_sentence_en_slide',false);            
-    }
-    return show_sentence;
+    return klmenu_check_b('span_show_en_sentence_b',false);
 }
 
 function showcn_klexam(csid,show_sentence=-1,remote_host=false, button_str=false, font_size=false,max_rows=5){
@@ -168,11 +164,11 @@ function unblur_klexam(ospan){
 function menu_klexam(){
     var str_t=klmenu_hide_b('');
     var klmenu1=[
-    '<span id="span_show_sentence_klexam" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 显示例句</span>',    
+    '<span id="span_show_en_sentence_b" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 显示例句</span>',    
     ];
 
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','11rem','1rem','1rem','30rem'),'','0rem')+' ');
-    klmenu_check_b('span_show_sentence_klexam',true);        
+    klmenu_check_b('span_show_en_sentence_b',true);        
 }
 
 function init_klexam(){

@@ -58,4 +58,5 @@ var digest_global=`
 *slump
 *stopcock
 *timberline
+*propagandist
 `.trim().split('\n');

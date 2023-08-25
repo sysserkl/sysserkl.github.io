@@ -65,4 +65,5 @@ var digest_global=`
 *waterfront
 *westernmost
 *windshield
+*survivalist
 `.trim().split('\n');

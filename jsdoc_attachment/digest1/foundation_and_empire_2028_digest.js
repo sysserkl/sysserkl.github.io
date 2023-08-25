@@ -6,4 +6,5 @@ var digest_global=`
 *dimwit
 *monogram
 *utilization
+*minty
 `.trim().split('\n');

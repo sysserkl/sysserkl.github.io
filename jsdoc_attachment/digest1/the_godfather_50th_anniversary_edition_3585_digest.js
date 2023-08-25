@@ -42,4 +42,5 @@ var digest_global=`
 *unworkable
 *Dartmouth
 *up-and-coming
+*bosomy
 `.trim().split('\n');

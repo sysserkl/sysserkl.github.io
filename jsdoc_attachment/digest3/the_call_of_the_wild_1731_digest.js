@@ -14,4 +14,5 @@ var digest_global=`
 *powdery
 *hairless
 *steamship
+*streamlet
 `.trim().split('\n');

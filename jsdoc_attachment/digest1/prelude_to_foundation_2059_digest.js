@@ -8,4 +8,5 @@ var digest_global=`
 *weakly
 *manslaughter
 *pursuer
+*policewoman
 `.trim().split('\n');

@@ -64,4 +64,5 @@ var digest_global=`
 *southwards
 *tadpole
 *cardigan
+*longbow
 `.trim().split('\n');

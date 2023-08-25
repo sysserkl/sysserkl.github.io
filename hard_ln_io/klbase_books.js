@@ -144,7 +144,9 @@ function import_book_js_b(import_digest=true){
         jsdoc_num=csbooklist_sub_global_b[book_no][3];
     }
     if (csbooklist_sub_global_b.length>0){
-        var jsdoc_path=book_path_b(jsdoc_num,csbooklist_sub_global_b[book_no][4].includes('P'));
+        var book_type=book_type_b(csbooklist_sub_global_b[book_no]);
+
+        var jsdoc_path=book_path_b(jsdoc_num,book_type.includes('P'));
         var bookid=csbooklist_sub_global_b[book_no][0];
         document.write('\n<script src="'+jsdoc_path+bookid+'.js'+today+'"><\/script>\n');
         console.log(jsdoc_path+bookid+'.js'+today);
@@ -162,8 +164,8 @@ function import_book_js_b(import_digest=true){
         }
         
         txtbook_js_code_file_global='';
-        if (csbooklist_sub_global_b[book_no][4].includes('J')){
-            txtbook_js_code_file_global='txtlistsearch_additional_'+csbooklist_sub_global_b[book_no][0]+'_code.js';
+        if (book_type.includes('J')){
+            txtbook_js_code_file_global=bookid;
         }
     }
 }
@@ -203,9 +205,11 @@ function menu_digest_file_full_name_b(book_no=false,jsdoc_num=false,bookid=false
             jsdoc_num='';
         }
     }
-    
+
+    var book_type=book_type_b(csbooklist_sub_global_b[book_no]);
+
     if (jsdoc_path==false){
-        jsdoc_path=book_path_b(jsdoc_num,csbooklist_sub_global_b[book_no][4].includes('P'));
+        jsdoc_path=book_path_b(jsdoc_num,book_type.includes('P'));
     }
     if (bookid==false){
         bookid=csbooklist_sub_global_b[book_no][0];
@@ -214,7 +218,8 @@ function menu_digest_file_full_name_b(book_no=false,jsdoc_num=false,bookid=false
     var result_t=[];
     var js_menu_file='';
     var js_digest_file='';
-    if (csbooklist_sub_global_b[book_no][4].includes('P')){
+
+    if (book_type.includes('P')){
         js_menu_file=jsdoc_path+'menu/'+bookid+'_menu.js';
         result_t.push(['js',js_menu_file,'']);
         
@@ -407,6 +412,7 @@ function booklist_source_config_b(is_digest=false){
     var type_list=[['P','🏳P'],['L','🏳L'],['*','🏳E']];
     for (let blxl=0;blxl<csbooklist_source_global.length;blxl++){
         var item=csbooklist_source_global[blxl];
+        var book_type=book_type_b(item);
         if (marked_set.has(item[0])){
             csbooklist_source_global[blxl][2]=csbooklist_source_global[blxl][2]+',🔖';
         }
@@ -414,7 +420,7 @@ function booklist_source_config_b(is_digest=false){
             csbooklist_source_global[blxl][2]=csbooklist_source_global[blxl][2]+',📝';
         }
         for (let one_type of type_list){
-            if (item[4].includes(one_type[0])){
+            if (book_type.includes(one_type[0])){
                 csbooklist_source_global[blxl][2]=csbooklist_source_global[blxl][2]+','+one_type[1];
             }
         }
@@ -449,6 +455,15 @@ function booklist_source_config_b(is_digest=false){
         if (list_t.length>30){
             local_storage_squash_b('booklist_statistics',list_t,8,0,0.5);
         }
+    }
+}
+
+function book_type_b(arow,includes_character=false){
+    if (includes_character===false){
+        return arow[4];
+    }
+    else {
+        return arow[4].includes(includes_character);
     }
 }
 

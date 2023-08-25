@@ -76,7 +76,7 @@ function menu_rndwords(){
     '<span class="span_menu" onclick="'+str_t+'exam_rndwords(true);recent_words_rndwords();">最近记忆单词</span>',     
     '<span class="span_menu" onclick="'+str_t+'en_word_recent_bookmark_b(false);exam_rndwords(true);recent_words_rndwords();">设置书签</span>',    
     '<span class="span_menu" onclick="'+str_t+'exam_rndwords();">单词测试</span>',         
-    '<span id="span_sentence_en_slide" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 显示例句</span>',    
+    '<span id="span_show_en_sentence_b" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 显示例句</span>',    
     '<span id="span_source_en_slide" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 显示例句详细出处</span>',            
     '<span id="span_button_en_slide" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 显示例句按钮</span>',        
     ];
@@ -105,10 +105,10 @@ function menu_rndwords(){
     ];
     klmenu3=root_font_size_menu_b(str_t,true,true,true).concat(klmenu3);
     
-    document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🇬🇧','12rem','1.1rem','1rem','60rem')+klmenu_b(klmenu2,'💡','14rem','1.1rem','1rem','60rem')+klmenu_b(klmenu_search,'🎯','12rem','1.1rem','1rem','60rem')+klmenu_b(en_font_menu_b(str_t),'🅰','10rem','1rem','1rem','30rem')+klmenu_b(klmenu3,'⚙','14rem','1.1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🇬🇧','12rem','1.1rem','1rem','60rem')+klmenu_b(klmenu2,'💡','12rem','1.1rem','1rem','60rem')+klmenu_b(klmenu_search,'🎯','10rem','1.1rem','1rem','60rem')+klmenu_b(en_font_menu_b(str_t),'🅰','10rem','1rem','1rem','30rem')+klmenu_b(klmenu3,'⚙','16rem','1.1rem','1rem','60rem'),'','0rem')+' ');
     
     klmenu_check_b('span_reg_rndwords',true);
-    klmenu_check_b('span_sentence_en_slide',true);
+    klmenu_check_b('span_show_en_sentence_b',true);
     if (!ismobile_b()){
         klmenu_check_b('span_source_en_slide',true);
     }
@@ -177,19 +177,24 @@ function show_sentence_rndwords(){
         }
         
         if (odivs[blxl].style.display=='none'){
-            odivs[blxl].innerHTML=en_sentence_result_b(odivs[blxl].innerText,5,font_size,'','','txtlistsearch.htm?_tag',button_str)[0];
+            odivs[blxl].innerHTML=en_sentence_result_b(odivs[blxl].innerText,5,font_size,attachment_path,wikisite,txtlistsearch_site,button_str)[0];
+            //'','','txtlistsearch.htm?_tag'
             odivs[blxl].style.display='';
         }
         blxl=blxl+1;
         setTimeout(sub_show_sentence_rndwords_one_word,5);
     }
     //---------------
-    if (klmenu_check_b('span_sentence_en_slide',false)==false){return;}
+    if (klmenu_check_b('span_show_en_sentence_b',false)==false){return;}
 
     var t0=performance.now();       
     var font_size=(ismobile_b()?'0.95':'0.9');
     var button_str=(klmenu_check_b('span_button_en_slide',false)?en_sentence_button_init_b(true):'');
 
+    var remote_host=local_storage_get_b('kl_remote_host',-1,false);
+    var attachment_path,wikisite,txtlistsearch_site;
+    [attachment_path,wikisite,txtlistsearch_site]=sentence_path_get_b(remote_host,is_local_b());
+    
     var odivs=document.querySelectorAll('div.div_sentence');
     var bllen=odivs.length;
     var blxl=0;

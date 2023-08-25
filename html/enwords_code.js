@@ -16,17 +16,21 @@ function args_kle(){
         }
         else {
             var bls_reg=csstr.split('_'); //dog_reg
+            var search_str;
+            var is_reg=-1;
             if (bls_reg.length>1){
                 if (bls_reg[1]=='reg'){
-                    wordsearch_enwords_b(bls_reg[0],true,[],false,true,add_recent);
+                    search_str=bls_reg[0];
+                    is_reg=true;
                 }
                 else{
-                    wordsearch_enwords_b(csstr,-1,[],false,true,add_recent);
+                    search_str=csstr;
                 }
             }
             else{
-                wordsearch_enwords_b(bls_reg[0],-1,[],false,true,add_recent);
+                search_str=bls_reg[0];
             }
+            wordsearch_enwords_b(search_str,is_reg,[],false,true,add_recent);
         }
     }
     //--------------------------------------
@@ -546,16 +550,14 @@ function week_plan_show_kle(){
 function menu_kle(){
     var str_t=klmenu_hide_b('#top');
     var str2_t=klmenu_hide_b('#a_recent_bookmark');
-    var klmenu_old;
-    var klmenu1;
-    var klmenu_brain;
+    var klmenu_old, klmenu1, klmenu_brain;
     [klmenu_old,klmenu1,klmenu_brain]=menu_base_enwc_b();
-
+    klmenu1.push('<span id="span_show_en_sentence_b" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 显示例句</span>');
     var group_list=[
     ['随机排序','show_sentence_enwc_b(0,true,true);',true],
     ['最多3条','show_sentence_enwc_b(3,true,true);',true],
     ];    
-    klmenu1.push(menu_container_b(str_t,group_list,'显示例句：'));
+    klmenu1.push(menu_container_b(str_t,group_list,'例句：'));
     
     klmenu1=klmenu1.concat([
     '<span class="span_menu" onclick="'+str_t+'en_sentence_to_default_order_b();alert(\'done\');">例句恢复原始排序</span>',
@@ -619,7 +621,7 @@ function menu_kle(){
 
     var klmenu_search=[];
     for (let item of list_t){
-        klmenu_search.push('<span class="span_menu" onclick="'+str_t+'search_r_key_b(\'input_search\',\'input_reg\',\''+item.replace(new RegExp(/(\\)/,'g'),'\\\\')+'\');wordsearch_enwords_b();">'+item+'</span>');
+        klmenu_search.push('<span class="span_menu" onclick="'+str_t+'hot_key_search_kle(this);">'+item+'</span>');
     }
     
     var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu1,'','16rem','1rem','1rem','60rem')+klmenu_b(klmenu_old,'旧','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_brain,'🧠','17rem','1rem','1rem')+klmenu_b(klmenu_new,'🆕','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_statistics,'🧮','14rem','1rem','1rem')+klmenu_b(klmenu_search,'🔽','18rem','1rem','1rem','30rem'),'','0rem')+' ';
@@ -627,6 +629,12 @@ function menu_kle(){
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',bljg);
     
     document.getElementById('span_checkboxes').insertAdjacentHTML('beforeend',klmenu_multi_button_div_b(klmenu_b(en_font_menu_b(str_t),'🅰','10rem','1rem','1rem','30rem'),'','0rem')+' ');
+}
+
+function hot_key_search_kle(ospan){
+    var blkey=ospan.innerText;
+    search_r_key_b('input_search','input_reg',blkey);
+    wordsearch_enwords_b();
 }
 
 function other_characters_kle(){

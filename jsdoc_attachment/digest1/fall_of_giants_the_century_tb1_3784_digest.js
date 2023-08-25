@@ -44,4 +44,11 @@ var digest_global=`
 *teaspoon
 *hailstorm
 *parfait
+*Bolshevism
+*billfold
+*propagandist
+*handcart
+*Yiddish
+*undemocratic
+*bowlful
 `.trim().split('\n');

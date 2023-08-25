@@ -29,4 +29,5 @@ var digest_global=`
 *unhelpfully
 *viewfinder
 *wetsuit
+*timberline
 `.trim().split('\n');

@@ -6,4 +6,5 @@ var digest_global=`
 *pyrimidine
 *nuclei
 *brainchild
+*minimalism
 `.trim().split('\n');
