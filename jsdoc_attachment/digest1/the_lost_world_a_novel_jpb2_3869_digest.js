@@ -18,4 +18,7 @@ var digest_global=`
 *essayist
 *platelet
 *taillight
+*tyrannosaur
+*tyrannosaurus
+*blockhouse
 `.trim().split('\n');

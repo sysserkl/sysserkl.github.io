@@ -72,4 +72,5 @@ var digest_global=`
 *Euler
 *Schumann
 *Calvin
+*plentifully
 `.trim().split('\n');

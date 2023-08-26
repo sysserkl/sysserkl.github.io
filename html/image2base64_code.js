@@ -135,9 +135,7 @@ function trans_klbase64() {
 function load_img_from_textarea_klbase64(){
     var imgData = document.getElementById('textarea_base64_original').value;
     
-    if (imgData.trim().substring(0,11)!=='data:image/' || !imgData.includes(';base64,')){
-        return;
-    }
+    if (imgData.trim().substring(0,11)!=='data:image/' || !imgData.includes(';base64,')){return;}
     document.getElementById('img_original').setAttribute('src', imgData);  
     
     var img_original_obj=new Image();

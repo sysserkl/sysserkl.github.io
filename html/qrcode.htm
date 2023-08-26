@@ -28,13 +28,19 @@ css_root_style_b('18','11',['base','menu'],[],1);
 <h2 id="h2_title" style="margin-top:0;font-size:1.3rem;"><span id="span_title" style="cursor:pointer;" onclick="popup_show_hide_b('div_head_buttons_klqr');">QR Code Generator</span></h2>
 <div style="margin:0.5rem;">
 <div id="div_head_buttons_klqr">
-<p id="p_img_upload" style="display:none;">Select Image: 
-<input type="file" id="input_upload_img">
+<div id="div_img_upload_klqr" style="display:none;">
+<p>Select Image: 
+<input type="file" id="input_upload_img_klqr">
 <span class="aclick" onclick="upload_img_klqr();">Upload Image</span>
 <span class="aclick" onclick="read_img_klqr();">QR Read</span>
 <input id="bg_left_klqr" type="input" value=-1 />
 <input id="bg_top_klqr" type="input" value=-1 />
+<span class="aclick" onclick="popup_show_hide_b('div_base64_klqr');">base64</span>
 </p>
+<div id="div_base64_klqr" style="display:none;">
+<textarea id="textarea_base64_img_klqr"></textarea>
+</div>
+</div>
 
 <p><span class="span_box" ondblclick="qrtxt_clear_klqr();">Strings: </span><input type="text" id="input_qrtxt" value="just for fun" onkeyup="if (event.key=='Enter'){create_klqr();}">
 <span class="aclick" onclick="create_klqr();"><b>Generate</b></span> 

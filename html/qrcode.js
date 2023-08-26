@@ -20,6 +20,18 @@ function init_klqr(){
     }
     document.getElementById('select_box_color_klqr').innerHTML=list_t.join('\n');
     menu_klqr();
+    
+    var otextarea=document.getElementById('textarea_base64_img_klqr');
+    var buttons='<span class="aclick" onclick="import_base64_img_klqr();">载入图片</span>';
+    otextarea.insertAdjacentHTML('afterend','<p>'+buttons+textarea_buttons_b('textarea_base64_img_klqr','清空,复制')+'</p>');
+}
+
+function import_base64_img_klqr(){    
+    var imgData = document.getElementById('textarea_base64_img_klqr').value;
+    
+    if (imgData.trim().substring(0,11)!=='data:image/' || !imgData.includes(';base64,')){return;}
+    background_img_klqr_global = imgData;
+    background_img_load_klqr(false);    
 }
 
 function qrtxt_clear_klqr(){
@@ -529,15 +541,15 @@ function show_hide_klqr(cstype=false){
     }
 }
 
-function hide_show_p_img_upload_klqr(){
-    var status=popup_show_hide_b('p_img_upload');
+function hide_show_div_img_upload_klqr_klqr(){
+    var status=popup_show_hide_b('div_img_upload_klqr');
     if (status=='none'){
         background_img_klqr_global='';
     }
 }
 
 function upload_img_klqr(){
-    var ofile=document.getElementById('input_upload_img').files[0];
+    var ofile=document.getElementById('input_upload_img_klqr').files[0];
     var error=upload_img_file_check_b(ofile);
     if (error!==''){
         alert(error);
@@ -563,7 +575,7 @@ function menu_klqr(){
     ];
 
     var klmenu2=[
-    '<span class="span_menu" onclick="'+str_t+'hide_show_p_img_upload_klqr();">背景图片</span>',
+    '<span class="span_menu" onclick="'+str_t+'hide_show_div_img_upload_klqr_klqr();">背景图片</span>',
     '<span id="span_img_border" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ img border</span>',        
     '<span class="span_menu" onclick="'+str_t+'help_klqr();">help</span>',
     '<span class="span_menu" onclick="'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'qrcode\');}">更新版本</span>',    

@@ -62,4 +62,5 @@ var digest_global=`
 *microorganism
 *moonrise
 *treetop
+*crewmate
 `.trim().split('\n');

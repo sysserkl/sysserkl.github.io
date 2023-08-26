@@ -14,4 +14,5 @@ var digest_global=`
 *far-flung
 *Fiji
 *bowlful
+*biochemist
 `.trim().split('\n');

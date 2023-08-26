@@ -30,4 +30,8 @@ var digest_global=`
 *crewmate
 *bodybuilder
 *Bowie
+*checksum
+*shitload
+*nonflammable
+*hexadecimal
 `.trim().split('\n');
