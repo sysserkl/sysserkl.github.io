@@ -2555,7 +2555,7 @@ function format_lines_kltxt_b(cslist,csstyle='',csaname=-1,is_group_file=''){
             ul_no=0;
         }
     }
-    
+        
     if (csstyle==''){
         csstyle='color:'+scheme_global['color'];
     }
@@ -2564,7 +2564,6 @@ function format_lines_kltxt_b(cslist,csstyle='',csaname=-1,is_group_file=''){
     var cshidelineno=checkbox_value_get_b('check_hide_lineno',true);
     var csklwiki_format=checkbox_value_get_b('check_klwiki_format',true);
     
-    var bljg='';
     var remote_host=local_storage_get_b('kl_remote_host',-1,false);
     var is_digest=location.href.includes('digest.htm');
     
@@ -2591,7 +2590,8 @@ function format_lines_kltxt_b(cslist,csstyle='',csaname=-1,is_group_file=''){
     else if (csbookno_global>=0 && csbooklist_sub_global_b[csbookno_global][0]=='jsdoc_search_html_data'){
         booktype='jsdoc_html';
     }
-    
+
+    var bljg='';
     for (let item of cslist){
         //item 为 [ "玉亭失望地见他哥快上了土坡，就又轻轻喊叫了一声：“哥，你先等一等……”", 380 ] 这样的数组 - 保留注释
         if (item[1]+1==csaname){

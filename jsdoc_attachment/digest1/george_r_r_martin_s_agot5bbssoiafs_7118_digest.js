@@ -134,4 +134,6 @@ var digest_global=`
 *woodcarver
 *wordlessly
 *yestermorn
+*brother-in-arms
+*costermonger
 `.trim().split('\n');

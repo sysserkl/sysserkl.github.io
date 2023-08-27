@@ -21,4 +21,5 @@ var digest_global=`
 *southwestward
 *gerontology
 *washbowl
+*Johannesburg
 `.trim().split('\n');

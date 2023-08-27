@@ -34,4 +34,5 @@ var digest_global=`
 *westwards
 *wildebeest
 *womenfolk
+*cicada
 `.trim().split('\n');

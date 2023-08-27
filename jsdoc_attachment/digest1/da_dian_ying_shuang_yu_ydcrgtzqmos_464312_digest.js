@@ -30,4 +30,5 @@ var digest_global=`
 *viewfinder
 *wetsuit
 *timberline
+*up-and-comer
 `.trim().split('\n');

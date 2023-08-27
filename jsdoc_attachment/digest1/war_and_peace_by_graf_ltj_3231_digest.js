@@ -235,4 +235,5 @@ var digest_global=`
 *nonintervention
 *Madagascar
 *bathhouse
+*shamefully
 `.trim().split('\n');

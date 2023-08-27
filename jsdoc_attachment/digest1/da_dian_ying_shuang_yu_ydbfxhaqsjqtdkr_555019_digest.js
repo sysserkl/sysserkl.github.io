@@ -34,4 +34,5 @@ var digest_global=`
 *monorail
 *Rolex
 *geyser
+*up-and-comer
 `.trim().split('\n');

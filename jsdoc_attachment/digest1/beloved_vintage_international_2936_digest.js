@@ -14,4 +14,6 @@ var digest_global=`
 *handsaw
 *smokehouse
 *snakebite
+*overfeed
+*stonecutter
 `.trim().split('\n');

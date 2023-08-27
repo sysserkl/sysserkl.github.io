@@ -15,7 +15,7 @@ function batch_search_form_kltxt_klwiki_en2(){
     var postpath=postpath_b();
     var bljg='<p><textarea id="textarea_batch_search_words_kltxt_klen2" style="height:10rem;"></textarea></p>';
     bljg=bljg+'<p>'   
-    bljg=bljg+'<label><input type="checkbox" id="input_exclude_eword_kltxt_klen2" />不含eword</lable> ';
+    bljg=bljg+'<label><input type="checkbox" id="input_exclude_eword_kltxt_klen2" />不含eword</label> ';
     bljg=bljg+'<span class="aclick" onclick="batch_search_result_kltxt_klwiki_en2();">单词批量查找</span> ';
     bljg=bljg+textarea_buttons_b('textarea_batch_search_words_kltxt_klen2','复制,清空');
     bljg=bljg+close_button_b('divhtml2','')
@@ -46,13 +46,13 @@ function batch_search_result_kltxt_klwiki_en2(){
         csword=['+\\b('+blwordlist.join('|')+')\\b'];    //比 csword.push('\\b'+item+'\\b'); 快 - 保留注释
     }
 
-    var start_lineno, end_lineno;
-    [start_lineno, end_lineno]=start_end_lineno_kltxt_b().slice(0,2);
+    var start_lineno, end_lineno,blmax;
+    [start_lineno, end_lineno,blmax]=start_end_lineno_kltxt_b();
 
     //一开始设置为false，这样才能正确运行 wiki_line_b - 保留注释
 	klwiki_syntaxhighlight_global=false;
 
-    var result_t=txtsearch_list_kltxt_b(csword,true,100,start_lineno,end_lineno,false);
+    var result_t=txtsearch_list_kltxt_b(csword,true,blmax,start_lineno,end_lineno,false);
     lines_2_html_kltxt_b(result_t);
 
     render_html_kltxt_b(blwordlist);

@@ -28,7 +28,6 @@ var digest_global=`
 *zirconia
 *earpiece
 *crewmate
-*bodybuilder
 *Bowie
 *checksum
 *shitload

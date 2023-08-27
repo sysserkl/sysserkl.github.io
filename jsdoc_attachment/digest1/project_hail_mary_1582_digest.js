@@ -28,4 +28,6 @@ var digest_global=`
 *counterclockwise
 *slowdown
 *hamster
+*guesstimate
+*aesthetically
 `.trim().split('\n');
