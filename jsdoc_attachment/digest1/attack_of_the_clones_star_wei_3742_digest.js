@@ -4,4 +4,5 @@ var digest_global=`
 *opportunist
 *self-improvement
 *footprint
+*spearman
 `.trim().split('\n');

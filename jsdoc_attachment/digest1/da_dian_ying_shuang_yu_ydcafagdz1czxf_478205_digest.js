@@ -3,4 +3,5 @@ var digest_global=`
 *airspeed
 *monorail
 *Maginot
+*Arnim
 `.trim().split('\n');

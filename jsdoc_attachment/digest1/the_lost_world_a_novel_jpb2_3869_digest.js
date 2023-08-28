@@ -21,4 +21,5 @@ var digest_global=`
 *tyrannosaur
 *tyrannosaurus
 *blockhouse
+*answering machine
 `.trim().split('\n');
