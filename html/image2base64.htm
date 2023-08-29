@@ -20,17 +20,16 @@ css_root_style_b('18','11',['base','menu'],[],1);
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 </head>
 <body>
-<h2 id="h2_title" style="font-size:1.2rem;margin:0;">Image to Base64</h2>
+<h2 id="h2_title" style="font-size:1.2rem;margin:0;">Image to Base64 <span id="span_info" style="font-size:1rem; font-weight:normal;"></span></h2>
 <div id="div_buttons" style="margin:0.5rem;">
 <p>Select Image: 
 <input type="file" id="input_img">
 <span class="aclick" onclick="trans_klbase64();">Upload</span>
-<span id="span_copy"></span></p>
+</p>
 <p><b>Original Image</b> <span id="span_original_img_size"></span></p>
-<p><img id="img_original" src="" alt="" style="padding:1rem;border:0.1rem black solid;"></p>
-<p style="line-height:1.8rem;">
+<p><img id="img_original" src="" alt="" style="padding:1rem;border:0.1rem black solid;" onclick="img_xy_klbase64(event,this);"></p>
+<p id="p_original_klbase64" style="line-height:1.8rem;">
 <b>Original Image Base64 Data:</b>
-<span class="oblong_box" onclick="copy_klbase64('textarea_base64_original');">Copy</span>
 <span class="oblong_box" onclick="rows_klbase64('textarea_base64_original',50);">Split Data to 50 rows</span>
 <span class="oblong_box" onclick="load_img_from_textarea_klbase64();">Show Image</span>
 </p>
@@ -38,9 +37,8 @@ css_root_style_b('18','11',['base','menu'],[],1);
 <hr />
 <div id="div_form"></div>
 <hr />
-<p style="line-height:1.8rem;">
+<p id="p_result_klbase64" style="line-height:1.8rem;">
 <b>Result:</b> 
-<span class="oblong_box" onclick="copy_klbase64('textarea_base64_result');">Copy</span>
 </p>
 <textarea id="textarea_base64_result"></textarea>  
 </div>

@@ -178,7 +178,16 @@ function background_img_load_klqr(ocanvas=false){
     
     var oimg = new Image();
     oimg.onload = function(){
-        background_img_merge_klqr(ocanvas,oimg);
+        background_img_merge_klqr(ocanvas,this);
+        
+        var bg_img=document.getElementById('img_backgound_qr');    
+        if (bg_img){
+            bg_img.addEventListener('click', function(ev){
+                var x,y;
+                [x,y]=img_xy_b(ev,this);
+                document.getElementById('span_info').innerText=x+','+y;
+            });
+        }     
     };
     oimg.src = background_img_klqr_global;
 }

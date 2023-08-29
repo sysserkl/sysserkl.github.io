@@ -30,4 +30,5 @@ var digest_global=`
 *hamster
 *guesstimate
 *aesthetically
+*launchpad
 `.trim().split('\n');

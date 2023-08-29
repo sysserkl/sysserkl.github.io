@@ -268,7 +268,24 @@ function grey_img_b(img_original_obj,ocanvas,ctx,white_and_black=false){
             data[blxl + 2] = bw;
         }    
     }
-
     // 将处理后的图像数据绘制回canvas
     ctx.putImageData(imageData, 0, 0);
 }
+
+function img_xy_b(event,oimg){
+    var x = event.clientX - oimg.x;//offsetLeft;// - (oimg.offsetWidth-oimg.width)/2;
+    var y = event.clientY - oimg.y;//offsetTop;// - (oimg.offsetHeight-oimg.height)/2;
+    
+    //以下几行保留 - 保留注释
+    //console.log('--------------');
+    //console.log('n',oimg.naturalWidth,oimg.naturalHeight);
+    //console.log('wh',oimg.width,oimg.height);
+    //console.log('o',oimg.offsetWidth,oimg.offsetHeight);
+    //console.log('xy',x,y);
+    //console.log('lx,ty',oimg.offsetLeft,oimg.x,oimg.offsetTop,oimg.y);
+    //console.log('ratio',oimg.naturalWidth/oimg.width,oimg.naturalHeight/oimg.height);
+    //console.log('rect',oimg.getBoundingClientRect());
+    return [Math.round(x*oimg.naturalWidth/oimg.offsetWidth),Math.round(y*oimg.naturalHeight/oimg.offsetHeight)];
+}
+
+

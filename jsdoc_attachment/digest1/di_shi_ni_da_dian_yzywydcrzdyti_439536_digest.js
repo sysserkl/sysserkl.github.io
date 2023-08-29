@@ -4,4 +4,5 @@ var digest_global=`
 *washable
 *chiropractor
 *congresswoman
+*launchpad
 `.trim().split('\n');
