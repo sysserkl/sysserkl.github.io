@@ -8,4 +8,5 @@ var digest_global=`
 *untypical
 *cenotaph
 *unenforceable
+*loading dock
 `.trim().split('\n');

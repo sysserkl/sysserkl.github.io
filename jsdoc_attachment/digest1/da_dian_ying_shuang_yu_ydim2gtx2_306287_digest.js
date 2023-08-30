@@ -5,4 +5,5 @@ var digest_global=`
 *stepladder
 *purplish
 *tango
+*filmstrip
 `.trim().split('\n');

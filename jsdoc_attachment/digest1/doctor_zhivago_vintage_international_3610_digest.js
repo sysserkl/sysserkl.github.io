@@ -106,4 +106,7 @@ var digest_global=`
 *Sisyphean
 *Marxist
 *eyehole
+*heavy industry
+*toilet water
+*trade union
 `.trim().split('\n');

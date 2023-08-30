@@ -4,4 +4,5 @@ var digest_global=`
 *monorail
 *Maginot
 *Arnim
+*balance beam
 `.trim().split('\n');

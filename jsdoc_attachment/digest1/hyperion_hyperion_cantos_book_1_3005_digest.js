@@ -84,4 +84,6 @@ var digest_global=`
 *chromium
 *frictionless
 *wafer-thin
+*Holy Office
+*loading dock
 `.trim().split('\n');

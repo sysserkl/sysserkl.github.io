@@ -183,4 +183,5 @@ var digest_global=`
 *zoology
 *congratulation
 *Byzantium
+*house of cards
 `.trim().split('\n');

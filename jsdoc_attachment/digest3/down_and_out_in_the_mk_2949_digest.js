@@ -13,4 +13,5 @@ var digest_global=`
 *throughput
 *wetsuit
 *wonderland
+*side table
 `.trim().split('\n');

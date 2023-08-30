@@ -4,4 +4,5 @@ var digest_global=`
 *Midgard
 *Romanoff
 *demigod
+*divide and conquer
 `.trim().split('\n');
