@@ -10,7 +10,6 @@ var digest_global=`
 *Antarctic
 *anthill
 *appropriately
-*Arabian
 *archaeology
 *archduke
 *Archimedes
@@ -25,7 +24,6 @@ var digest_global=`
 *azure
 *bachelor
 *baggage
-*baleen
 *banyan
 *barometer
 *beefsteak
@@ -54,7 +52,6 @@ var digest_global=`
 *calmness
 *camphor
 *cannoneer
-*cape
 *Cape of Good Hope
 *Capricorn
 *carefree
@@ -252,7 +249,6 @@ var digest_global=`
 *Libyan
 *lifelong
 *lobster
-*longitude
 *lowermost
 *luggage
 *luminescent
@@ -404,7 +400,6 @@ var digest_global=`
 *sheer
 *shiny
 *shipowner
-*shortage
 *shorten
 *silken
 *simultaneous
