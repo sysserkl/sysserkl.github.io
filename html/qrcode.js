@@ -67,21 +67,26 @@ function read_img_klqr(){
         return;
     }
 
-    var otextarea=document.getElementById('textarea_qr_read');
-    if (otextarea){
-        otextarea.parentNode.removeChild(otextarea);    //确保编辑框在第一行 - 保留注释
+    var container_id='div_qr_read';
+    var textarea_id='textarea_qr_read';
+    var odiv=document.getElementById(container_id);
+    if (odiv){
+        odiv.parentNode.removeChild(odiv);    //确保编辑框在第一行 - 保留注释
     }
-    document.getElementById('div_qrcode').insertAdjacentHTML('afterbegin','<textarea id="textarea_qr_read"></textarea>');
-    var otextarea=document.getElementById('textarea_qr_read');
+    document.getElementById('div_qrcode').insertAdjacentHTML('afterbegin','<div id="'+container_id+'"><textarea id="'+textarea_id+'"></textarea><textarea id="'+textarea_id+'2"></textarea></div>');
+    var otextarea=document.getElementById(textarea_id);
     if (!otextarea){return;}   
 
     var qr_str = qr_read_b(oimg);
     if (qr_str!==''){
         otextarea.value=qr_str;    
+        var otextarea2=document.getElementById(textarea_id+'2');
+        otextarea2.value='"#'+qr_str+'","","网站名称",20,"微信公众号"';
+        if (!otextarea2){return;}             
     }
     else {
         otextarea.value='not found';
-    }
+    }  
 }
 
 function background_img_merge_klqr(ocanvas,oimg){

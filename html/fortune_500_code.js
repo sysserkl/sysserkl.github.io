@@ -393,6 +393,8 @@ function menu_fortune_500(){
     '<span id="span_group_district_fortune_500" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ group by district</span>',    
     '<span id="span_group_year_fortune_500" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ group by year</span>',        
     '<span class="span_menu" onclick="'+str_t+'group_fortune_500();">执行分组</span>',     
+    '<span class="span_menu" onclick="'+str_t+'merge_data_generate_fortune_500();">按年份和国籍分别合并当前结果</span>',     
+    '<span class="span_menu" onclick="'+str_t+'merge_data_clear_fortune_500();">清除全部合并数据</span>',     
     ];
     
     var klmenu_config=root_font_size_menu_b(str_t);
@@ -408,6 +410,64 @@ function menu_fortune_500(){
     for (let key in group_disctrict_fortune_500_global){
         oselect.insertAdjacentHTML('beforeend','<option>'+key+'</option>');
     }
+}
+
+function merge_data_generate_fortune_500(){
+    if (search_result_fortune_500_global.length<2){
+        alert('至少需要两条数据才能合并');
+        return;
+    }
+    
+    if (!confirm('是否合并当前 '+search_result_fortune_500_global.length+' 条数据？')){return;}
+    
+    var bltitle=(prompt('输入合并后的名称') || '').trim();
+    if (bltitle==''){return;}
+
+    var dict_t={};
+    for (let item of search_result_fortune_500_global){
+        var blkey=item[3]+'_'+item[5];
+        if (dict_t[blkey]==undefined){
+            dict_t[blkey]=[].concat(item);
+            dict_t[blkey][0]=bltitle;
+            dict_t[blkey][4]=-1;
+        }
+        else {
+            dict_t[blkey][1]=dict_t[blkey][1]+item[1];
+            dict_t[blkey][2]=dict_t[blkey][2]+item[2];
+        }
+    }   
+
+    var old_len=fortune_500_raw_global.length;
+    for (let key in dict_t){
+        dict_t[key][6]=dict_t[key][2]*100/dict_t[key][1];
+        fortune_500_raw_global.push(dict_t[key]);
+    }
+    alert('合并前原始数据共 '+old_len+' 条，合并后 '+fortune_500_raw_global.length+' 条');
+}
+
+function merge_data_clear_fortune_500(){
+    var blcount=0;
+    for (let item of fortune_500_raw_global){
+        if (item[4]==-1){
+            blcount=blcount+1;
+        }
+    }
+    if (blcount==0){
+        alert('无临时合并的数据');
+        return;
+    }
+
+    if (!confirm('是否清除 '+blcount+' 条临时合并的数据？')){return;}
+
+    var old_len=fortune_500_raw_global.length;
+
+    var result_t=[];
+    for (let item of fortune_500_raw_global){
+        if (item[4]==-1){continue;}
+        result_t.push(item);
+    }
+    fortune_500_raw_global=result_t;
+    alert('清除前原始数据共 '+old_len+' 条，清除后 '+fortune_500_raw_global.length+' 条');    
 }
 
 function init_fortune_500(){
