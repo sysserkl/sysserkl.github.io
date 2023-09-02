@@ -63,4 +63,5 @@ var digest_global=`
 *moonrise
 *treetop
 *crewmate
+*decapitate
 `.trim().split('\n');
