@@ -66,7 +66,7 @@ function randwrongstr_b(cslen){
     
     var bljg='';
     for (let blxl=1;blxl<=cslen;blxl++){
-        list_t.sort(function (a,b){return Math.random()>.5 ? -1 : 1;});
+        list_t.sort(function (a,b){return Math.random()>0.5 ? -1 : 1;});
         bljg=bljg+list_t[0];
     }
     return bljg;
