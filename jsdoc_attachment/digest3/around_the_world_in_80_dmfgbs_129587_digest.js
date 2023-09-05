@@ -22,5 +22,6 @@ var digest_global=`
 *ferryboat
 *ogre
 *Londoner
+*half-mast
 *saviour
 `.trim().split('\n');

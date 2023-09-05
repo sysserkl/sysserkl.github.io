@@ -28,7 +28,7 @@ function content_media_money_b(csstr){
 		}
 		
 		csstr=csstr.replace('<'+'!--mymedia--'+'>'+bltmp+'<'+'!--/mymedia--'+'>',bljg);
-        csstr=csstr.replace(new RegExp(/^(https?:\/\/.*?)(\s|<)/,'g'),'<a href="$1" target=_blank style="text-decoration:underline;color:blue;">$1</a>$2');
+        csstr=csstr.replace(/^(https?:\/\/.*?)(\s|<)/g,'<a href="$1" target=_blank style="text-decoration:underline;color:blue;">$1</a>$2');
 		blcount=blcount+1;
 	}
 	if (blcount>100){

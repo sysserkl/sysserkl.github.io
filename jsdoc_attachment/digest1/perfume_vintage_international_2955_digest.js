@@ -22,4 +22,5 @@ var digest_global=`
 *tumorous
 *vernal
 *boxful
+*isolationist
 `.trim().split('\n');

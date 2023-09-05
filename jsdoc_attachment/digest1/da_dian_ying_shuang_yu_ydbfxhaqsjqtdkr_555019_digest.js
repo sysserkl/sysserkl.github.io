@@ -35,4 +35,5 @@ var digest_global=`
 *Rolex
 *geyser
 *up-and-comer
+*gumball
 `.trim().split('\n');

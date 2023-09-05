@@ -65,4 +65,5 @@ var digest_global=`
 *tadpole
 *cardigan
 *longbow
+*noticeboard
 `.trim().split('\n');

@@ -1,0 +1,15 @@
+var sourcelist=[
+["https://thepihut.com/collections/adafruit-development-boards","Microcontrollers! Over 350 development boards to choose from - we&#39;ve got something for every project!","2023-09-05","The Pi Hut","0",],
+["https://thepihut.com/products/arduino-uno-r4-wifi","Arduino UNO R4 WiFi The latest UNO, now with onboard WiFi and a 12x8 LED matrix!","2023-09-05","The Pi Hut","0",],
+["https://thepihut.com/products/arduino-nano-esp32-with-headers","Arduino Nano ESP32 The power of the ESP32 with the support of the Arduino ecosystem","2023-09-05","The Pi Hut","0",],
+["https://www.solidot.org/story?sid=75978","科学家破解德国野猪高放射性之谜","2023-09-05","Solidot","1",],
+["https://www.solidot.org/story?sid=75979","历史学领域的重复性危机","2023-09-05","Solidot","1",],
+["https://www.solidot.org/story?sid=75980","研究发现地球海洋的颜色发生了变化","2023-09-05","Solidot","1",],
+["https://www.solidot.org/story?sid=75981","电动汽车被海水浸泡可能会起火","2023-09-05","Solidot","1",],
+["https://www.solidot.org/story?sid=75982","为什么说加密货币是史上最大的庞氏骗局","2023-09-05","Solidot","1",],
+["https://www.solidot.org/story?sid=75983","美国国家域名 .US 被广泛用于钓鱼","2023-09-05","Solidot","1",],
+["https://www.solidot.org/story?sid=75984","地球九成开花植物依赖动物传粉","2023-09-05","Solidot","1",],
+["https://www.solidot.org/story?sid=75985","研究发现香味能显著提升老年人的认知能力","2023-09-05","Solidot","1",],
+["https://www.solidot.org/story?sid=75986","Cruise 无人出租车被指阻挡了救护车延误了救治时间","2023-09-05","Solidot","1",],
+["https://www.solidot.org/story?sid=75987","微软澳大利亚数据中心因人手不足发生宕机事故","2023-09-05","Solidot","1",],
+];

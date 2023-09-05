@@ -19,6 +19,7 @@ function menu_progress(){
     ];
 
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'📈','14rem','1rem','1rem','60rem'),'','0rem')+' ');
+    klmenu_check_b('span_show_table_progress',true);            
 }
 
 function category_progress(csname){

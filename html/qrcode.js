@@ -30,7 +30,7 @@ function import_base64_img_klqr(){
     var imgData = document.getElementById('textarea_base64_img_klqr').value;
     
     if (imgData.trim().substring(0,11)!=='data:image/' || !imgData.includes(';base64,')){return;}
-    background_img_klqr_global = imgData;
+    background_img_data_klqr_global = imgData;
     background_img_load_klqr(false);    
 }
 
@@ -81,7 +81,7 @@ function read_img_klqr(){
     if (qr_str!==''){
         otextarea.value=qr_str;    
         var otextarea2=document.getElementById(textarea_id+'2');
-        otextarea2.value='"#'+qr_str+'","","网站名称",20,"微信公众号"';
+        otextarea2.value='"#'+qr_str+'","","'+specialstr_j(file_path_name_b(background_img_name_klqr_global)[1])+'",20,"微信公众号"';
         if (!otextarea2){return;}             
     }
     else {
@@ -92,7 +92,7 @@ function read_img_klqr(){
 function background_img_merge_klqr(ocanvas,oimg){
     var bltitle=(oimg.natrualWidth|oimg.width)+','+(oimg.naturalHeight|oimg.height);
     if (!ocanvas){
-        document.getElementById('div_qrcode').insertAdjacentHTML('afterbegin','<p><img id="img_backgound_qr" src="'+background_img_klqr_global+'" title="'+bltitle+'" /></p>');
+        document.getElementById('div_qrcode').insertAdjacentHTML('afterbegin','<p><img id="img_backgound_qr" src="'+background_img_data_klqr_global+'" title="'+bltitle+'" /></p>');
         return;
     }
     
@@ -174,7 +174,7 @@ function background_img_merge_klqr(ocanvas,oimg){
 }
 
 function background_img_load_klqr(ocanvas=false){
-    if (background_img_klqr_global==''){return;}
+    if (background_img_data_klqr_global==''){return;}
 
     var bg_img=document.getElementById('img_backgound_qr');
     if (bg_img){
@@ -194,7 +194,7 @@ function background_img_load_klqr(ocanvas=false){
             });
         }     
     };
-    oimg.src = background_img_klqr_global;
+    oimg.src = background_img_data_klqr_global;
 }
 
 function calculate_klqr(){
@@ -558,7 +558,7 @@ function show_hide_klqr(cstype=false){
 function hide_show_div_img_upload_klqr_klqr(){
     var status=popup_show_hide_b('div_img_upload_klqr');
     if (status=='none'){
-        background_img_klqr_global='';
+        background_img_data_klqr_global='';
     }
 }
 
@@ -569,12 +569,12 @@ function upload_img_klqr(){
         alert(error);
         return;
     }
-        
+    background_img_name_klqr_global=ofile.name;
     var imgFile = new FileReader();
     imgFile.readAsDataURL(ofile);
     imgFile.onload = function (){
         var imgData = this.result;
-        background_img_klqr_global = imgData;  
+        background_img_data_klqr_global = imgData;  
         background_img_load_klqr(false);
     }
 }

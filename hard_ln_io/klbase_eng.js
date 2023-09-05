@@ -651,8 +651,9 @@ function en_sentence_one_line_b(aline,wordname='',attachment_path='',wikisite=''
     
     var web_source=wiki_line_b(aline[1]);
     if (!return_arr){
-        web_source=' <span class="span_from" style="line-height:150%;" onclick="this.style.backgroundColor=\''+scheme_global['pink']+'\';">'+web_source+'</span>';
+        web_source=' <span class="span_from_url" style="line-height:150%;" onclick="this.style.backgroundColor=\''+scheme_global['pink']+'\';">'+web_source+'</span>';
     }
+    
     var wiki_source='';
     if (wikisite!==''){
         if (aline[2].slice(-4,)=='_TLS'){
@@ -660,12 +661,20 @@ function en_sentence_one_line_b(aline,wordname='',attachment_path='',wikisite=''
             wiki_source='<a href="'+wikisite+encodeURIComponent(blstr.replace(/[\+\s\?\*\-\\\[\]\(\)\']/g,'.'))+'_reg&s='+wordname+'" target=_blank>'+blstr+'</a>';
         }
         else {
-            wiki_source='<a href="'+wikisite+encodeURIComponent(aline[2])+'" target=_blank>'+aline[2]+'</a>';
+            var wiki_link=aline[1].match(/^\/\[[^\s]*\s(.+)\]\/$/) || [];
+            if (wiki_link.length==2){
+                wiki_link=wiki_page_title_link_generate_b(aline[2],wiki_link[1]);
+            }
+            else {
+                wiki_link=wiki_page_title_link_generate_b(aline[2]);
+            }
+            wiki_source='<a href="'+wikisite+wiki_link+'" target=_blank>'+aline[2]+'</a>';
         }
         if (!return_arr){
             wiki_source='<span class="span_from_wiki" style="line-height:150%;" onclick="this.style.backgroundColor=\''+scheme_global['pink']+'\';">'+wiki_source+'</span>';
         }
     }
+    
     if (return_arr){
         return [bljg,web_source,wiki_source];
     }
@@ -761,7 +770,7 @@ function en_sentence_result_b(wordname,csmax=-1,fontsize='',attachment_path='',w
 function en_sentence_mobile_b(enforce=false){
     if (enforce===false && ismobile_b()==false){return;}
     
-    var ospans=document.getElementsByClassName('span_from');
+    var ospans=document.getElementsByClassName('span_from_url');
     for (let a_span of ospans){
         var oas=a_span.getElementsByTagName('a');
         for (let one_a of oas){
@@ -1032,9 +1041,9 @@ function en_sentence_source_b(cskey='',isreg=false){
     }
     for (let blxl=0;blxl<list_t.length;blxl++){
         list_t[blxl]=[
-            list_t[blxl].replace(new RegExp(/.*\[https?:\/\/(.*?)\/.*$/,'g'),'$1'),
-            list_t[blxl].replace(new RegExp(/.*\[(https?:\/\/.*?)\s.*$/,'g'),'$1'),
-            list_t[blxl].replace(new RegExp(/.*\[https?:\/\/.*?\s(.*)\].*$/,'g'),'$1'),
+            list_t[blxl].replace(/.*\[https?:\/\/(.*?)\/.*$/g,'$1'),
+            list_t[blxl].replace(/.*\[(https?:\/\/.*?)\s.*$/g,'$1'),
+            list_t[blxl].replace(/.*\[https?:\/\/.*?\s(.*)\].*$/g,'$1'),
         ];
     }
     

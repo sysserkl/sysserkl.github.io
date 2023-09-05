@@ -31,4 +31,5 @@ var digest_global=`
 *wetsuit
 *timberline
 *up-and-comer
+*gumball
 `.trim().split('\n');

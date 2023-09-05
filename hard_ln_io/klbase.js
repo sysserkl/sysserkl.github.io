@@ -2409,25 +2409,6 @@ function array_2_local_storage_b(idname,csarray){
     return bljg;
 }
 
-function wiki_link_punctuation_b(csstr){
-    csstr=csstr.replace(/&amp;/g,'.26');
-    csstr=csstr.replace(/&/g,'.26');
-    csstr=csstr.replace(/'/g,'.27');
-    csstr=csstr.replace(/=/g,'.3D');
-    csstr=csstr.replace(/\?/g,'.3F');
-    csstr=csstr.replace(/~/g,'.7E');
-    csstr=csstr.replace(/!/g,'.21');
-    csstr=csstr.replace(/,/g,'.2C');
-    csstr=csstr.replace(/\(/g,'.28');
-    csstr=csstr.replace(/\)/g,'.29');
-    csstr=csstr.replace(/\$/g,'.24');
-    csstr=csstr.replace(/\//g,'.2F');
-
-    csstr=csstr.replace(/\s+/g,'_'); //合并多个空格 - 保留注释
-    
-    return encodeURI(csstr);
-}
-
 function temp_save_local_b(local_id,csmax,blvalue=[],do_add=false,do_save=false){
     var split_str='\n-----\n';
     var old_str=localStorage.getItem(local_id) || '';    //需要保留空格，而 local_storage_get_b 会删除空格 - 保留注释
@@ -3282,4 +3263,33 @@ function array_remove_item_b(csarr,csitem){
         }
     }
     return csarr;
+}
+
+function wiki_page_title_link_generate_b(cspage,cstitle=''){    
+    function sub_wiki_page_title_link_generate_b_punctuation(csstr){
+        csstr=csstr.replace(/&amp;/g,'.26');
+        csstr=csstr.replace(/&/g,'.26');
+        csstr=csstr.replace(/'/g,'.27');
+        csstr=csstr.replace(/=/g,'.3D');
+        csstr=csstr.replace(/\?/g,'.3F');
+        csstr=csstr.replace(/~/g,'.7E');
+        csstr=csstr.replace(/!/g,'.21');
+        //csstr=csstr.replace(/,/g,'.2C');
+        csstr=csstr.replace(/\(/g,'.28');
+        csstr=csstr.replace(/\)/g,'.29');
+        csstr=csstr.replace(/\$/g,'.24');
+        csstr=csstr.replace(/\//g,'.2F');
+
+        csstr=csstr.replace(/\s+/g,'_'); //合并多个空格 - 保留注释
+        
+        return encodeURI(csstr);
+    }
+    //-------------------------------
+    if (cstitle==''){
+        var bllink=sub_wiki_page_title_link_generate_b_punctuation(cspage);
+    }
+    else {
+        var bllink=sub_wiki_page_title_link_generate_b_punctuation(cspage)+'#'+sub_wiki_page_title_link_generate_b_punctuation(cstitle).replace(/%/g,'.');
+    }
+    return bllink;    
 }

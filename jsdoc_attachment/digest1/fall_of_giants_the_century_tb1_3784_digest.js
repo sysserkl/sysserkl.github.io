@@ -51,4 +51,5 @@ var digest_global=`
 *Yiddish
 *undemocratic
 *bowlful
+*Sarajevo
 `.trim().split('\n');
