@@ -27,4 +27,5 @@ var digest_global=`
 *viva
 *Whitsuntide
 *Nazareth
+*hereabouts
 `.trim().split('\n');

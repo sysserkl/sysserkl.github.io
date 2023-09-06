@@ -51,4 +51,5 @@ var digest_global=`
 *undefeated
 *Michele
 *VCR
+*Jordanian
 `.trim().split('\n');
