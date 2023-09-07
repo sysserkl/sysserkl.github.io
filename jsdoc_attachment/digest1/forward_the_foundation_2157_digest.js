@@ -7,4 +7,5 @@ var digest_global=`
 *nuclei
 *brainchild
 *minimalism
+*ringleader
 `.trim().split('\n');

@@ -31,4 +31,5 @@ var digest_global=`
 *Hobson
 *handcuff
 *ubiquity
+*proper noun
 `.trim().split('\n');
