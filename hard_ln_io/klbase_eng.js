@@ -1074,6 +1074,10 @@ function sentence_property_b(show_button){
     return [remote_host,button_str,font_size];
 }
 
+function sentence_format_b(csword){
+    copy_2_clipboard_b('<eword w="'+csword+'"></eword>');
+}
+
 function sentence_popup_b(csword,ospan=false,no_start=0){
     var odiv=document.getElementById('div_enword_search_links');
     if (!odiv){return;}    
@@ -1154,6 +1158,7 @@ function popup_words_links_b(event,csword,ew=false,def_button=false,mobile_font_
         bljg=bljg+'<span class="span_link" onclick="popup_def_b(this);">def</span> ';
     }
     bljg=bljg+'<br />'+en_word_links_b(csword,ew);
+    bljg=bljg+' <span class="span_link" onclick="sentence_format_b(\''+specialstr_j(csword)+'\');" title="复制 wiki 格式到剪贴板">f</span>';
     if (typeof en_sentence_global !== 'undefined'){
         bljg=bljg+' <span class="span_link" onclick="sentence_popup_b(\''+specialstr_j(csword)+'\',this);">例句</span>';
     }

@@ -12,4 +12,5 @@ var digest_global=`
 *unforgivably
 *yellowy
 *weatherproof
+*complication
 `.trim().split('\n');

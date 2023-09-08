@@ -9,4 +9,5 @@ var digest_global=`
 *cenotaph
 *unenforceable
 *loading dock
+*headscarf
 `.trim().split('\n');

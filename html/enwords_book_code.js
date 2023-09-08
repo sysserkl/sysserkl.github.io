@@ -145,7 +145,7 @@ function menu_enwords_book(){
     '<span class="span_menu" onclick="'+str2_t+'selenium_list_enwords_book(true,\'old\');">selenium新词(缓存旧单词在前)</span>',    
     '<span class="span_menu" onclick="'+str2_t+'selenium_list_enwords_book(true,\'count\');">selenium新词(缓存单词数)</span>',    
     '<span class="span_menu" onclick="'+str2_t+'selenium_list_enwords_book(true,\'length\');">selenium新词(缓存标题和链接长度)</span>',    
-    '<span class="span_menu" onclick="'+str2_t+'selenium_list_enwords_book(true,\'title\');">selenium新词(标题)</span>',        
+    '<span class="span_menu" onclick="'+str2_t+'selenium_list_enwords_book(true,\'title\');">selenium新词(缓存标题首字母)</span>',        
     '<span class="span_menu" onclick="'+str2_t+'selenium_list_enwords_book(true,\'rare\');">selenium新词(缓存稀有度)</span>',
     '<span class="span_menu" onclick="'+str2_t+'selenium_one2more_enwords_book();">selenium新词(缓存一对多)</span>',        
     '<span class="span_menu" onclick="'+str2_t+'selenium_contain_enwords_book();">selenium新词(缓存包含)</span>',        

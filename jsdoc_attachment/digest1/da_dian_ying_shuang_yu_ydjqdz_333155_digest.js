@@ -7,4 +7,5 @@ var digest_global=`
 *airworthy
 *Bucharest
 *bunny
+*touchpad
 `.trim().split('\n');
