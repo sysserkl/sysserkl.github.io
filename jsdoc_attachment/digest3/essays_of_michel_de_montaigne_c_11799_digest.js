@@ -10,4 +10,5 @@ var digest_global=`
 *muleteer
 *renal
 *self-murder
+*tenpence
 `.trim().split('\n');

@@ -23,4 +23,5 @@ var digest_global=`
 *vernal
 *boxful
 *isolationist
+*uniqueness
 `.trim().split('\n');

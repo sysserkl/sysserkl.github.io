@@ -18,4 +18,5 @@ var digest_global=`
 *haploid
 *hardbound
 *surfboard
+*uniqueness
 `.trim().split('\n');
