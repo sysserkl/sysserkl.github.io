@@ -2653,6 +2653,7 @@ function standalone_search_funs_b(cstitle='Search Standalone',cscontent='',diy_f
         var blend=Math.min(csno-1+rows_per_page,cslen);
         var row_no_range=[-1,-1];
         var raw_len=data_raw_standalone_global.length;
+        var is_raw=true;
         if (data_current_standalone_global===false){
             var current_len=raw_len;
             for (let blxl=csno-1;blxl<blend;blxl++){
@@ -2662,6 +2663,7 @@ function standalone_search_funs_b(cstitle='Search Standalone',cscontent='',diy_f
         }
         else {
             var current_len=data_current_standalone_global.length;
+            is_raw=(raw_len==current_len);
             if (csno-1>=0 && blend-1>=0){
                 row_no_range=[data_current_standalone_global[csno-1][1],data_current_standalone_global[blend-1][1]];
             }
@@ -2671,7 +2673,13 @@ function standalone_search_funs_b(cstitle='Search Standalone',cscontent='',diy_f
                         result_t.push(data_current_standalone_global[blxl][0]+' <span class="span_row_no_standalone" onclick="jump_standalone('+data_current_standalone_global[blxl][1]+');">('+data_current_standalone_global[blxl][1]+')</span>');    //rows_per_page
                         break;
                     case 'tr':
-                        result_t.push(data_current_standalone_global[blxl][0].slice(0,-5)+'<td><span class="span_row_no_standalone" onclick="jump_standalone('+data_current_standalone_global[blxl][1]+');">('+data_current_standalone_global[blxl][1]+')</span></td></tr>');
+                        if (is_raw){
+                            var jump_td='';
+                        }
+                        else {
+                            var jump_td='<td><span class="span_row_no_standalone" onclick="jump_standalone('+data_current_standalone_global[blxl][1]+');">('+data_current_standalone_global[blxl][1]+')</span></td>';
+                        }
+                        result_t.push(data_current_standalone_global[blxl][0].slice(0,-5)+jump_td+'</tr>');
                         break;                    
                     case 'li':
                         result_t.push(data_current_standalone_global[blxl][0].slice(0,-5)+' <span class="span_row_no_standalone" onclick="jump_standalone('+data_current_standalone_global[blxl][1]+');">('+data_current_standalone_global[blxl][1]+')</span></li>');
@@ -2692,7 +2700,7 @@ function standalone_search_funs_b(cstitle='Search Standalone',cscontent='',diy_f
         }
         else {
             if (type_standalone_global=='tr'){
-                odiv.innerHTML=bljg+'<table class="table_common" id="ol_result_standalone">'+table_th_global+result_t.join('\n')+'</table>\n'+bljg;
+                odiv.innerHTML=bljg+'<table class="table_common" id="ol_result_standalone">'+(is_raw?table_th_global:table_th_global.slice(0,-5)+'<th>row no</th></tr>')+result_t.join('\n')+'</table>\n'+bljg;
             }          
             else {
                 odiv.innerHTML=bljg+'<ol id="ol_result_standalone">\n'+result_t.join('\n')+'\n</ol>'+bljg;
@@ -2707,7 +2715,12 @@ function standalone_search_funs_b(cstitle='Search Standalone',cscontent='',diy_f
             if (type_standalone_global=='tr'){
                 var olis=document.querySelectorAll('table#ol_result_standalone tr');
                 if (table_th_global!==''){
-                    olis=olis.slice(1,);
+                    var new_trs=[];
+                    for (let blxl=1;blxl<olis.length;blxl++){
+                        new_trs.push(olis[blxl]);
+                    }
+                    olis=new_trs;
+                    //不能使用 olis=olis.slice(1,); 或 olis.shift() - 保留注释
                 }
             }
             else {

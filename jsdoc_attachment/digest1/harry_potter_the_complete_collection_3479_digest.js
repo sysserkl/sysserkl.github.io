@@ -66,4 +66,5 @@ var digest_global=`
 *cardigan
 *longbow
 *noticeboard
+*blackmailer
 `.trim().split('\n');

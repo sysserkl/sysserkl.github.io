@@ -138,17 +138,14 @@ function menu_enwords_book(){
     ];    
     klmenu_new.push(menu_container_b(str_t,format_list,'导入'));    
     
+    var cache_type_list=['','随机','旧单词在前','单词数','标题和链接长度','标题首字母','稀有度','一对多','包含'];
+    for (let blxl=0;blxl<cache_type_list.length;blxl++){
+        cache_type_list[blxl]='<option>'+cache_type_list[blxl]+'</option>';
+    }
+    
     var klmenu_selenium=[
     '<span class="span_menu" onclick="'+str2_t+'selenium_list_enwords_book();">selenium新词</span>',
-    '<span class="span_menu" onclick="'+str2_t+'selenium_list_enwords_book(true);">selenium新词(缓存)</span>',
-    '<span class="span_menu" onclick="'+str2_t+'selenium_list_enwords_book(true,\'random\');">selenium新词(缓存随机)</span>',    
-    '<span class="span_menu" onclick="'+str2_t+'selenium_list_enwords_book(true,\'old\');">selenium新词(缓存旧单词在前)</span>',    
-    '<span class="span_menu" onclick="'+str2_t+'selenium_list_enwords_book(true,\'count\');">selenium新词(缓存单词数)</span>',    
-    '<span class="span_menu" onclick="'+str2_t+'selenium_list_enwords_book(true,\'length\');">selenium新词(缓存标题和链接长度)</span>',    
-    '<span class="span_menu" onclick="'+str2_t+'selenium_list_enwords_book(true,\'title\');">selenium新词(缓存标题首字母)</span>',        
-    '<span class="span_menu" onclick="'+str2_t+'selenium_list_enwords_book(true,\'rare\');">selenium新词(缓存稀有度)</span>',
-    '<span class="span_menu" onclick="'+str2_t+'selenium_one2more_enwords_book();">selenium新词(缓存一对多)</span>',        
-    '<span class="span_menu" onclick="'+str2_t+'selenium_contain_enwords_book();">selenium新词(缓存包含)</span>',        
+    '<span class="span_menu"><select id="select_cache_type_enbook" style="height:2rem;">'+cache_type_list.join('')+'</select> <span class="aclick" onclick="'+menu_parent_node_b(str2_t)+'selenium_cache_do_type_enwords_book();">selenium新词(缓存)</span></span>',
     '<span class="span_menu" onclick="'+str2_t+'selenium_list_popular_enwords_book();">selenium常见新词(缓存)</span>',    
     '<a href="lsm.htm?key=selenium_enbook" onclick="'+str_t+'" target=_blank>查看缓存</a>',
     ];
@@ -181,7 +178,7 @@ function menu_enwords_book(){
     '<span class="span_menu" onclick="'+str_t+'character2space_enwords_book(\'-\',\'连字符\');">替换连字符为空格</span> ',  
     ];
     
-    var menus=klmenu_b(klmenu1,'','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_new,'🔤','28rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'🧮','16rem','1rem','1rem','60rem')+(is_local_b()?klmenu_b(klmenu_selenium,'📰','20rem','1rem','1rem','60rem'):'')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','60rem');
+    var menus=klmenu_b(klmenu1,'','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_new,'🔤','28rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'🧮','16rem','1rem','1rem','60rem')+(is_local_b()?klmenu_b(klmenu_selenium,'📰','22rem','1rem','1rem','60rem'):'')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','60rem');
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(menus,'','0rem')+' ');
 }
 
@@ -743,6 +740,39 @@ function rare_word_count_enwords_book(cslist,rare_dict){
         return Math.min(...blcount_set);
     }
     return 0;
+}
+
+function selenium_cache_do_type_enwords_book(){
+    var bltype=document.getElementById('select_cache_type_enbook').value;
+    switch (bltype){
+        case '':
+            selenium_list_enwords_book(true);
+            break;
+        case '随机':    
+            selenium_list_enwords_book(true,'random');
+            break;
+        case '旧单词在前':    
+            selenium_list_enwords_book(true,'old');
+            break;
+        case '单词数':    
+            selenium_list_enwords_book(true,'count');
+            break;
+        case '标题和链接长度':    
+            selenium_list_enwords_book(true,'length');
+            break;
+        case '标题首字母':
+            selenium_list_enwords_book(true,'title');
+            break;
+        case '稀有度':
+            selenium_list_enwords_book(true,'rare');
+            break;
+        case '一对多':      
+            selenium_one2more_enwords_book();
+            break;
+        case '包含':
+            selenium_contain_enwords_book();    
+            break;
+    }
 }
 
 function selenium_list_enwords_book(use_cache=false,cstype=''){

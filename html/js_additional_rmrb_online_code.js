@@ -9,7 +9,7 @@ function menu_more_rmrb_online(){
     klmenu1=js_file_links_common(klmenu1);
     
     klmenu1=klmenu1.concat([
-    '<span id="span_merge_show_rmrb_online_common" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 合并展示</span>',
+    '<span id="span_merge_show_rmrb_online_common" class="span_menu" onclick="'+str_t+'table_head_set_rmrb_online(this.id);">⚪ 合并展示</span>',
     '<span class="span_menu" onclick="'+str_t+'statistics_rmrb_online(false);">逐月分布</span>',   
     '<span class="span_menu" onclick="'+str_t+'statistics_rmrb_online(true);">逐年分布</span>',       
     '<span id="span_mutli_keys_flot_rmrb_online_common" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 多关键字分别统计</span>',
@@ -23,7 +23,18 @@ function menu_more_rmrb_online(){
     return klmenu_b(klmenu1,'📚','18rem','1rem','1rem','30rem');
 }
 
+function table_head_set_rmrb_online(csid=''){
+    var is_merge=klmenu_check_b(csid,true);
+    if (is_merge){
+        table_th_jscm_global={'年月':'','标题':''};    
+    }
+    else {
+        table_th_jscm_global={'网址':'','年月':'','标题':''};
+    }
+}
+
 function file_load_rmrb_online(){
+    table_head_set_rmrb_online();
     flot_load_common(['date','flot'],['time','symbol']);
 }
 

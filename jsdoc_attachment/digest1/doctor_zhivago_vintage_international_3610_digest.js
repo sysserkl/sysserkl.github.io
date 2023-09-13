@@ -109,4 +109,5 @@ var digest_global=`
 *heavy industry
 *toilet water
 *trade union
+*outdo
 `.trim().split('\n');

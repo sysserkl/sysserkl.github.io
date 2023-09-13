@@ -1,0 +1,12 @@
+var sourcelist=[
+["https://www.solidot.org/story?sid=76061","Windows Update 将禁止第三方打印机驱动","2023-09-13","Solidot","1",],
+["https://www.solidot.org/story?sid=76060","Google 释出紧急更新修复正被利用的 Chrome 0day","2023-09-13","Solidot","1",],
+["https://www.solidot.org/story?sid=76059","arXiv 电邮服务遭遇源自中国的 DDOS 攻击","2023-09-13","Solidot","1",],
+["https://www.solidot.org/story?sid=76058","研究人员利用 WiFi 穿墙读取字母","2023-09-13","Solidot","1",],
+["https://www.solidot.org/story?sid=76057","米高梅遭网络攻击，大部分服务瘫痪","2023-09-13","Solidot","1",],
+["https://www.solidot.org/story?sid=76056","韦伯望远镜在系外行星大气层发现甲烷和二氧化碳","2023-09-13","Solidot","1",],
+["https://www.solidot.org/story?sid=76055","通过 Google Play 传播的恶意版 Telegram 被下载了逾六万次","2023-09-13","Solidot","1",],
+["https://www.solidot.org/story?sid=76054","OpenSSL 1.1.1 结束支持","2023-09-13","Solidot","1",],
+["https://www.solidot.org/story?sid=76053","立陶宛为 FBI 秘密监听世界","2023-09-13","Solidot","1",],
+["https://www.solidot.org/story?sid=76052","X 公司正寻求阻止加州的内容审核法律","2023-09-13","Solidot","1",],
+];

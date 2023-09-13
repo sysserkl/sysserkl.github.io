@@ -231,7 +231,7 @@ function standalone_search_common(){
     for (let blxl=0;blxl<result_t.length;blxl++){
         result_t[blxl]='"'+specialstr_j(result_t[blxl])+'",';
     }
-    standalone_search_funs_b(bltitle.trim(),result_t.join('\n'),['style_generate_b'],false);
+    standalone_search_funs_b(bltitle.trim(),result_t.join('\n'),['style_generate_b'],false,th_generate_common());
     rows_per_page_jscm_global=old_value;
 }
 
@@ -344,6 +344,26 @@ function http_link_common(csstr,enable_http){
 }
 
 function page_common(csno,show_html=true){
+    function sub_page_common_td_generate(csxl,item){
+        var bltds=[];
+        if (show_table_row_no){
+            bltds.push('<td nowrap>'+(csxl+1)+'</td>');
+        }
+        
+        if (td_align==false){
+            for (let one_col of item[0]){
+                bltds.push('<td>'+http_link_common(one_col,http_links)+'</td>');
+            }
+        }
+        else {
+            for (let blxl=0;blxl<item[0].length;blxl++){
+                one_col=item[0][blxl];
+                bltds.push('<td align="'+td_align[blxl]+'">'+http_link_common(one_col,http_links)+'</td>');
+            }
+        }
+        return bltds;
+    }
+    //-----------------------
     var cslen=js_data_current_common_search_global.length;
     var bljg=page_combination_b(cslen,rows_per_page_jscm_global,csno,'page_common','locate_common',false,2,Math.round(raw_data_len_jscm_global/rows_per_page_jscm_global/10));  
     //-------------
@@ -351,24 +371,21 @@ function page_common(csno,show_html=true){
     var blend=Math.min(csno-1+rows_per_page_jscm_global,cslen);
     var blno=0;
 
-    var is_table=klmenu_check_b('span_table_style_common',false);
     var tag_name=(is_table?['tr','td']:['li','li']);
-    var table_columns=klmenu_check_b('span_table_columns_common',false);
-    var show_table_row_no=klmenu_check_b('span_table_row_no_common',false);
     var http_links=klmenu_check_b('span_http_links_common',false);
+    var td_align=false;
+    if (typeof table_th_jscm_global !== 'undefined'){
+        td_align=Object.values(table_th_jscm_global);
+    }
+    var id_no,is_table,table_columns,show_table_row_no;
+    [id_no,is_table,table_columns,show_table_row_no]=table_option_get_common();;
     
-    if (is_all_result_jscm_global || klmenu_check_b('span_row_no_common',false)==false){
+    if (is_all_result_jscm_global || id_no==false){
         if (is_table){
             for (let blxl=csno-1;blxl<blend;blxl++){
                 var item=js_data_current_common_search_global[blxl];
                 if (table_columns && Array.isArray(item[0])){
-                    var bltds=[];
-                    if (show_table_row_no){
-                        bltds.push('<td nowrap>'+(blxl+1)+'</td>');
-                    }
-                    for (let one_col of item[0]){
-                        bltds.push('<td>'+http_link_common(one_col,http_links)+'</td>');
-                    }
+                    var bltds=sub_page_common_td_generate(blxl,item);
                     result_t.push('<tr id="tr_common_'+item[1]+'">'+bltds.join('')+'</tr>');
                 }
                 else {
@@ -388,13 +405,7 @@ function page_common(csno,show_html=true){
             for (let blxl=csno-1;blxl<blend;blxl++){
                 var item=js_data_current_common_search_global[blxl];
                 if (table_columns && Array.isArray(item[0])){
-                    var bltds=[];
-                    if (show_table_row_no){
-                        bltds.push('<td nowrap>'+(blxl+1)+'</td>');
-                    }
-                    for (let one_col of item[0]){
-                        bltds.push('<td>'+http_link_common(one_col,http_links)+'</td>');
-                    }
+                    var bltds=sub_page_common_td_generate(blxl,item);
                     bltds.push(no_jump_common(item[1],'td'));
                     result_t.push('<tr>'+bltds.join('')+'</tr>');
                 }
@@ -420,7 +431,7 @@ function page_common(csno,show_html=true){
         odiv.innerHTML='';
     }
     else {
-        odiv.innerHTML=bljg+table_or_ol_common(is_table,result_t)+bljg;
+        odiv.innerHTML=bljg+table_or_ol_common(id_no,is_table,table_columns,show_table_row_no,result_t)+bljg;
         mouseover_mouseout_oblong_span_b(odiv.querySelectorAll('span.oblong_box'));
         
         if (klmenu_check_b('span_highlight_common',false)){
@@ -434,9 +445,43 @@ function page_common(csno,show_html=true){
     return result_t;
 }
 
-function table_or_ol_common(is_table,cslist){
+function table_option_get_common(){
+    var id_no=klmenu_check_b('span_row_no_common',false);
+    var is_table=klmenu_check_b('span_table_style_common',false);
+    var table_columns=klmenu_check_b('span_table_columns_common',false);
+    var show_table_row_no=klmenu_check_b('span_table_row_no_common',false);
+    return [id_no,is_table,table_columns,show_table_row_no];
+}
+
+function th_generate_common(table_option=false){
+    var id_no,is_table,table_columns,show_table_row_no;
+    if (table_option===false){
+        table_option=table_option_get_common();
+    }
+    [id_no,is_table,table_columns,show_table_row_no]=table_option;
+    
+    var th_str='';
+    if (table_columns){
+        if (typeof table_th_jscm_global !== 'undefined'){
+            th_str='<th>'+Object.keys(table_th_jscm_global).join('</th><th>')+'</th>';
+            if (show_table_row_no){
+                 th_str='<th>No.</th>'+th_str;
+            }
+            
+            if (id_no && !is_all_result_jscm_global){
+                th_str=th_str+'<th>row no</th>';                
+            }
+                        
+            th_str='<tr>'+th_str+'</tr>';
+        }
+    }
+    return th_str;
+}
+
+function table_or_ol_common(id_no,is_table,table_columns,show_table_row_no,cslist){
     if (is_table){
-        return '<table class="table_common">'+cslist.join('\n')+'</table>\n';    
+        var th_str=th_generate_common([id_no,is_table,table_columns,show_table_row_no]);
+        return '<table class="table_common">'+th_str+cslist.join('\n')+'</table>\n';    
     }
     else {
         return '<ol>'+cslist.join('\n')+'</ol>\n';

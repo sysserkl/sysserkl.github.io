@@ -16,4 +16,6 @@ var js_file_list_common_global=[
 ['../jsdata/britannica_nobel_prize_data.js','🏆','nobel prize','nobel_prize_global','nobel_prize',''],
 ['../jsdata/rmrb_online/rmrb_online_194605_196612_data.js','🗞','rmrb online','rmrb_online_global','rmrb_online',''],
 ['../../../../bash/data/php8000_pic_album_data.js','🗄','php8000','photo_source_global','php8000',''],
+['../../../../data/yhzyy_medicine_price_data.js','💊','yhzyy medicin price','yhzyy_medicine_price_global','yhzyy_medicine_price',''],
+
 ];
