@@ -226,7 +226,7 @@ function split_2_hz_hzpy(){
         }
     }
     //------------------------    
-    var set_t=new Set(document.getElementById('textarea_search_hzpy').value.trim().split(' '));
+    var set_t=new Set(document.getElementById('textarea_search_hzpy').value.trim().split(''));
     var result_t=[];    
     var hz_set=new Set();
     
@@ -425,10 +425,10 @@ function split_words_hzpy(){
 function menu_hzpy(){
     var str_t=klmenu_hide_b('');   
     var klmenu1=[    
-    '<span class="span_menu" onclick="'+str_t+'split_duplication_hzpy();">含有重复部分的汉字</span>',
-    '<span class="span_menu" onclick="'+str_t+'split_2_hz_hzpy();">由拆字查找汉字</span>',
-    '<span class="span_menu" onclick="'+str_t+'split_same_hzpy();">相同拆字的汉字</span>',
-    '<span class="span_menu" onclick="'+str_t+'sentence_2_split_hzpy();">依据拆字合并文字</span>',    
+    '<span class="span_menu" onclick="'+str_t+'split_duplication_hzpy();">所有含有重复部分的汉字</span>',
+    '<span class="span_menu" onclick="'+str_t+'split_2_hz_hzpy();">当前拆字查找汉字</span>',
+    '<span class="span_menu" onclick="'+str_t+'split_same_hzpy();">所有相同拆字的汉字</span>',
+    '<span class="span_menu" onclick="'+str_t+'sentence_2_split_hzpy();">依据当前拆字合并文字</span>',    
     '<span class="span_menu" onclick="'+str_t+'idiom_2_split_hzpy();">依据拆字显示可合并的全部成语</span>',    
     ];
 

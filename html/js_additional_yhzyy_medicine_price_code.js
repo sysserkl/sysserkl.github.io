@@ -12,8 +12,23 @@ function menu_more_yhzyy_medicine_price(){
     '<span class="span_menu"><select id="select_sort_type_jsad_yzmp" style="height:2rem;">'+col_name_list.join('')+'</select> <span class="aclick" onclick="'+blparent+'sort_yhzyy_medicine_price();">↑</span><span class="aclick" onclick="'+blparent+'sort_yhzyy_medicine_price(true);">↓</span></span>',
 
     '<span class="span_menu" onclick="'+str_t+'statistics_supplier_yhzyy_medicine_price();">当前条件产地统计</span>',   
+    '<span class="span_menu" onclick="'+str_t+'fraction_yhzyy_medicine_price();">当前条件单价小数点设置</span>',   
+
     ];
     return klmenu_b(klmenu1,'🏥','16rem','1rem','1rem','30rem');
+}
+
+function fraction_yhzyy_medicine_price(){
+    var bllen=prompt('输入小数点后数字保留位数','2');
+    if (bllen==null){return;}
+    bllen=parseInt(bllen.trim());
+    if (isNaN(bllen)){return;}
+    if (bllen<0 || bllen>20){return;}
+    for (let blxl=0;blxl<js_data_current_common_search_global.length;blxl++){
+        var item=js_data_current_common_search_global[blxl][0];
+        js_data_current_common_search_global[blxl][0]=[item[0],item[1],item[2],item[3].toFixed(bllen)];
+    }
+    page_common(1);
 }
 
 function sort_yhzyy_medicine_price(csdesc=false){

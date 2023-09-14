@@ -1860,7 +1860,7 @@ function enwords_recent_search_b(csword='',cstype=''){
         return recent_search_b('recent_search_enwords',csword,fn_name,'',logo_list,25,false);
     }
     //----------------------------
-    var logo_list=['🥚','✏','🚧','〘 〙'];
+    var logo_list=['🥚','✏','🚧','〘 〙','🚩'];
     if (cstype=='mini'){
         var recent_search_str='<p id="p_recent_search" style="line-height:'+(ismobile_b()?'200':'210')+'%;">';
         return recent_search_str+sub_enwords_recent_search_b_fn('enwords_mini_search_b')+'</p>';
@@ -2258,6 +2258,7 @@ function recent_words_list_enwords_b(cspageno=0,words_count_per_page=100,isrando
     document.location.href='#top';
     document.location.href='#a_recent_bookmark';
     words_count_enwords_b();
+    en_sentence_show_check_b();    
 }
 
 function page_location_enwords_b(cspages){

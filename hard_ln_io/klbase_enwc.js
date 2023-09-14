@@ -344,15 +344,16 @@ function show_sentence_enwc_b(maxlines=0,showcount=true,is_random=false,show_but
         }
     }
     //--------------------------
-    var t0 = performance.now();
-    if (is_random){
-        en_sentence_global.sort(randomsort_b);
-    }
     var osen=document.getElementsByClassName('div_sentence');
     if (osen.length>0 || en_sentence_global.length==0){
         console.log('已存在 .div_sentence 或 en_sentence_global 长度为 0');
         return;
     }
+
+    var t0 = performance.now();
+    if (is_random){
+        en_sentence_global.sort(randomsort_b);
+    }    
 
     var oas=document.querySelectorAll('span.a_word');
     var oaslen=oas.length;
@@ -644,7 +645,6 @@ function show_recent_words_enwc_b(cstype,add_date_line=true,fn_name=false,fn_par
             recent_words_list_enwords_b(-1,500,true,true,add_date_line);                        
             break;
     }
-    en_sentence_show_check_b();
     if (fn_name!==false){
         fn_name(fn_para);    
     }
