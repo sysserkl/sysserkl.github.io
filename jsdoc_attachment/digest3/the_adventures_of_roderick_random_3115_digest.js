@@ -9,4 +9,5 @@ var digest_global=`
 *messmate
 *milkwoman
 *extortioner
+*Angola
 `.trim().split('\n');

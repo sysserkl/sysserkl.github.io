@@ -14,4 +14,5 @@ var digest_global=`
 *disyllabic
 *Pallas
 *noninterference
+*gymnasia
 `.trim().split('\n');

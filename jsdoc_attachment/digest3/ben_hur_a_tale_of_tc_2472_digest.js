@@ -9,4 +9,5 @@ var digest_global=`
 *misgovernment
 *southwardly
 *westwardly
+*gymnasia
 `.trim().split('\n');

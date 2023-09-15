@@ -692,7 +692,7 @@ function selenium_list_h3_generation_enwords_book(item,use_cache){
 
 function selenium_list_h3_2_fav_enwords_book(ospan,addtag=true){
     var oa=ospan.parentNode.querySelector('a.a_black');
-    fav_add_rlater_b(oa,ospan,addtag,'添加');
+    fav_add_rlater_b(oa,ospan,'readlater',addtag,'添加');
 }
 
 function selenium_list_container_generation_enwords_book(html,words,cslength=0){
@@ -1457,7 +1457,7 @@ function common_word_sign_set_enwords_book(csset){
         if (!osub){continue;}
         var blword=osub.innerText;
         if (!csset.has(blword)){continue;}
-        osub.insertAdjacentHTML('beforebegin','👫');
+        osub.insertAdjacentHTML('beforebegin','<span class="span_common_old_words">👫</span>');
         if (ofirst===false){
             ofirst=osub;
         }
@@ -1542,6 +1542,7 @@ function frequency_enwords_book(cstype='',simple_split=false,common_max=4000){
         } 
     }
     //------------------
+    if (document.querySelector('span.span_common_old_words')){return;}
     var t0 = performance.now();
 
     var oldwords=simple_words_b();

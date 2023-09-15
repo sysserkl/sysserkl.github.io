@@ -97,4 +97,5 @@ var digest_global=`
 *cicada
 *busty
 *matchbook
+*snuck
 `.trim().split('\n');

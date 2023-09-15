@@ -138,8 +138,14 @@ function words_queue_read_b(){
 }
 
 function enwords_init_b(simple=false){
-    if (enwords.length==0){return;}
-    if (enwords[0].length>3){return;}   //已初始化 - 保留注释
+    if (enwords.length==0){
+        console.log('enwords 长度为0');
+        return;
+    }
+    if (enwords[0].length>3){
+        console.log('已初始化');
+        return;
+    }   //已初始化 - 保留注释
     
     var t0 = performance.now();    
     words_queue_read_b();   //导入临时添加的单词 - 保留注释
