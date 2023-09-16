@@ -1,11 +1,10 @@
-function fav_add_rlater_b(csid,csa,prefix='readlater',addtag=false,cscaption='移动',local_id='fav_sites_rlater'){
-    if (typeof csid == 'string'){
-        var oa=document.querySelector('a#'+csid);
-    }
-    else {  // object - 保留注释
-        var oa=csid;
-    }
+function fav_add_rlater_b(csid,csa,prefix='readlater',addtag=false){
+    var cscaption='移动';
+    var local_id='fav_sites_rlater';
+    
+    var oa=document.querySelector('a#'+csid);
     if (!oa){return;}
+    
     var bltag='';
     if (addtag){
         bltag=(prompt('输入 tag 并'+cscaption+'到收藏夹(不输入则取消收藏): \n'+specialstr_html_b(oa.href)+'\n'+specialstr_html_b(oa.innerText)) || '');
@@ -32,9 +31,8 @@ function fav_add_rlater_b(csid,csa,prefix='readlater',addtag=false,cscaption='�
             csa.classList.remove('span_box');
             csa.removeAttribute('onclick');
         }
-        if (typeof csid == 'string'){
-            delete_open_php_rlater_b(oa.href,csid,prefix);
-        }
+        
+        delete_open_php_rlater_b(oa.href,csid,prefix);
     }
 }
 
@@ -65,6 +63,12 @@ function delete_open_php_rlater_b(cshref,csid,prefix='readlater'){
 }
 
 function remove_from_array_rlater_b(csid,prefix){
+    var id_dict={'readlater':3,'selenium_enwords':4};
+    if (id_dict[prefix]==undefined){
+        console.log('未发现 prefix 对应 id');
+        return;
+    }
+    
     if (eval('typeof '+prefix+'_data_global') =='undefined'){
         console.log('未发现：',prefix+'_data_global');
         return;
@@ -78,8 +82,9 @@ function remove_from_array_rlater_b(csid,prefix){
     var csarray=eval(prefix+'_data_global');
     for (let blxl=0;blxl<csarray.length;blxl++){
         var item=csarray[blxl];
-        if (item[0]==oa.href && item[3]==blid){
+        if (item[0]==oa.href && item[id_dict[prefix]]==blid){
             csarray.splice(blxl,1);
+            years_rlater_b(csarray.length,false,true);
             break;
         }
     }
@@ -257,8 +262,16 @@ function delete_one_rlater_b(event=false,csid='',is_yes=false,button_id='',prgna
     }
 }
 
-function years_rlater_b(all_len,current_len=false){
-    return '<p>ToDoList: '+all_len+'条 40条/天 '+(all_len/40/365).toFixed(3)+'年'+(current_len===false?'':'。当前结果：'+current_len+' 条')+'</p><div id="div_info"></div>';
+function years_rlater_b(all_len,current_len=false,update_left_part=false){
+    var blstr=all_len+'条 40条/天 '+(all_len/40/365).toFixed(3)+'年';
+    if (update_left_part){
+        var ospan=document.getElementById('span_todolist_rlater');
+        if (ospan){
+            ospan.innerText=blstr;
+        }
+        return;
+    }
+    return '<p>ToDoList: <span id="span_todolist_rlater">'+blstr+'</span>'+(current_len===false?'':'。当前结果：'+current_len+' 条')+'</p><div id="div_info"></div>';
 }
 
 function one_link_gerenrate_rlater_b(idno,cslink,cstitle,csstrong=false,prgname='readlater',other_str=''){    

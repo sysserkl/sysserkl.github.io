@@ -28,7 +28,7 @@ function menu_ensentence(){
     '<span class="span_menu" onclick="'+str_t+'rare_old_words_ensentence(false,true);">例句最少的单词3000</span>',
     '<span class="span_menu" onclick="'+str_t+'rare_old_words_ensentence(false,true,2,10,3000,true);">例句出处唯一的单词3000</span>',
     '<span class="span_menu" onclick="'+str_t+'show_sentence_enwc_b();">显示例句</span>',
-    '<span class="span_menu" onclick="'+str_t+'show_new_words_enwc_b(\'span.span_enwords_sentence\',false);">显示例句中的生词</span>',
+    '<span class="span_menu" onclick="'+str_t+'show_new_words_enwc_b(\'span.span_enwords_sentence\',false);">显示例句中的生词</span>',  //get_new_words_arr_enbook_b - 保留注释
     ]);
     
     var group_list=[
@@ -37,14 +37,14 @@ function menu_ensentence(){
     ];    
     klmenu1.push(menu_container_b(str_t,group_list,''));
 
-    klmenu1.push('<span id="span_sort_by_selenium_ensentence" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 按selenium单词数排序</span>');
-
     var klmenu_config=[
     '<span class="span_menu" onclick="'+str_t+'sentence_source_list_ensentence();">例句出处文章列表</span>',    
     '<span class="span_menu" onclick="'+str_t+'host_count_ensentence();">例句出处统计</span>',   
     '<span id="span_reg_ensentence" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ reg</span>',
-    ];    
+    ];  
+      
     if (is_local_b()){
+        klmenu1.push('<span id="span_sort_by_selenium_ensentence" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 按selenium单词数排序</span>');    
         klmenu_config.push('<span class="span_menu" onclick="'+str_t+'length_sort_ensentence();">最短例句</span>');
     }
     
@@ -258,18 +258,7 @@ function rare_old_words_ensentence(show_sentence=true,generate_js=false,max_coun
 
     function sub_rare_old_words_ensentence_sort(){
         if (klmenu_check_b('span_sort_by_selenium_ensentence',false)){
-            var selenium_words=selenium_local_storage_get_enbook_b('word');
-            var selenium_dict={};
-            for (let arow of selenium_words){
-                arow=arow.split(' ');
-                for (let one_word of arow){
-                    var blkey='w_'+one_word;
-                    if (selenium_dict[blkey]==undefined){
-                        selenium_dict[blkey]=0;
-                    }
-                    selenium_dict[blkey]=selenium_dict[blkey]+1;
-                }
-            }
+            var selenium_dict=selenium_enwords_count_enbook_b(true);
             
             for (let blxl=0;blxl<words_searched_arr_global.length;blxl++){
                 var blkey='w_'+words_searched_arr_global[blxl];

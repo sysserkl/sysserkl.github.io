@@ -48,7 +48,7 @@ function wordtypes_enbook_b(blitem){
     return bltmparr;
 }
 
-function get_new_words_arr_enbook_b(cstype,csstr='',csobjects=false,maxlength=3,addline=false,append_parent=false,execstring='',ew=false){
+function get_new_words_arr_enbook_b(cstype,csstr='',csobjects=false,maxlength=3,addline=false,append_parent=false,execstring='',ew=false,div_id='div_new_words2'){
     //cstype 1 全部单词 2 未收录 3 已收录 4 wiki 5 js - 保留注释
     //csobjects 在 selenium bible mediawiki_common 等中被调用 - 保留注释
     //------------------
@@ -166,7 +166,7 @@ function get_new_words_arr_enbook_b(cstype,csstr='',csobjects=false,maxlength=3,
     }
     
     if (csobjects==false){
-        get_new_words_arr_html_enbook_b(cstype,bljgarr2,[new_words_set,old_words_set,new_words_set10,old_words_set10]);
+        get_new_words_arr_html_enbook_b(cstype,bljgarr2,[new_words_set,old_words_set,new_words_set10,old_words_set10],div_id);
     }
     else {
         sub_get_new_words_arr_enbook_b_objects();
@@ -216,7 +216,7 @@ function new_old_word_list_enbook_b(bljgarr2,check_types=true){
     return [new_words_set,old_words_set];
 }
 
-function get_new_words_arr_html_enbook_b(cstype,bljgarr2,list_t){
+function get_new_words_arr_html_enbook_b(cstype,bljgarr2,list_t,div_id){
     //cstype: 1 全部单词 2 未收录 3 已收录 4 wiki 5 js - 保留注释
     var en_new2_total=list_t[0];
     var en_intersection_total=list_t[1];
@@ -241,13 +241,9 @@ function get_new_words_arr_html_enbook_b(cstype,bljgarr2,list_t){
             bljg=enwords_different_types_div_b(Array.from(en_intersection_total));
             break;
     }
-    document.getElementById('div_new_words2').innerHTML='<div id="div_sub_words">'+bljg+'</div>';
-    
-    //未收录单词 - 保留注释
-    if (en_words_book_newwords_continue_global===false && cstype==2 && csbookno_global>=0 && csbooklist_sub_global_b[csbookno_global][1]=='Way Station(Clifford D. Simak)' && !document.getElementById('textarea_new_words1').value.includes('已截取')){
-        if (confirm('是否更新 Way Station 的未收录单词统计数字：('+en_new2_total.size+')？')){
-            local_storage_today_b('enwords_way_station_statistics',40,en_new2_total.size,'/');
-        }
+    var odiv=document.getElementById(div_id);
+    if (odiv){
+        odiv.innerHTML='<div id="div_sub_words">'+bljg+'</div>';
     }
 }
 
@@ -411,30 +407,188 @@ function str_2_array_enbook_b(blstr,cstype='set'){
     return bljgarr2;
 }
 
-function selenium_local_storage_get_enbook_b(cstype='all'){
-    var list_t=local_storage_get_b('selenium_enbook').split('\n');
-    if (list_t.length % 4 !== 0){
-        console.log('列数不为4',list_t);    //此行保留 - 保留注释
-        return [];
+function frequency_enwords_book_b(cstype='',simple_split=false,common_max=4000){
+    function sub_frequency_enwords_book_b_arow(){
+        if (blxl>=bllen){
+            var new_t,common_t,common_set;
+            [new_t,common_t,common_set]=new_and_common_enwords_book_b(result_t,oldwords.size*2,common_max); //2倍旧单词长度 - 保留注释
+            switch (cstype){
+                case 'sentence_common':
+                    document.getElementById('textarea_new_words1').value='//常见新单词('+new_t.length+')\n'+new_t.join('\n');
+                    get_new_words_arr_enbook_b(2);
+                    break;
+                case 'textarea':
+                    get_new_words_arr_enbook_b(2,new_t.join(' '));
+                    break;
+                case 'sentence_rare':
+                    console.log('frequency_enwords_book() 费时：'+(performance.now() - t0) + ' milliseconds');
+                    common_word_sign_set_enwords_book_b(common_set);
+                    break;
+            }
+            if (cstype!=='sentence_rare'){
+                document.getElementById('textarea_new_words2').value='var enwords_easy_global=[\n//常见单词('+common_t.length+')\n'+common_t.join('\n')+'\n];\n';
+                console.log('frequency_enwords_book() 费时：'+(performance.now() - t0) + ' milliseconds');
+            }
+            return;
+        }
+        
+        var blstr=article_arr[blxl].toString().replace(/&lt;eword w=['"]?.*?['"]?&gt;&lt;\/eword&gt;/g,'');
+        var list_t=str_2_array_enbook_b(blstr,'list');
+        for (let aword of list_t){
+            aword=aword.trim();
+            if (aword==''){continue;}
+            
+            var is_new=true;
+            var blstr='';
+            
+            if (new_word_set.has(aword)){
+                blstr=aword;
+            }
+            else if (oldwords.has(aword) || old_variety.has(aword)){
+                blstr=aword;
+                is_new=false;
+            }
+            else if (!simple_split){
+                var variety=wordtypes_enbook_b(aword);
+                for (let one_type of variety){
+                    if (oldwords.has(one_type)){
+                        blstr=one_type;
+                        is_new=false; 
+                        old_variety.add(one_type);
+                        break;
+                    }                    
+                }
+            }
+            
+            if (blstr==''){
+                blstr=aword;
+            }
+            if (is_new){
+                new_word_set.add(blstr);
+            }
+            if (result_t['w_'+blstr]==undefined){
+                result_t['w_'+blstr]=[0,is_new];
+            }
+            result_t['w_'+blstr][0]=result_t['w_'+blstr][0]+1;
+        }
+        
+        blxl=blxl+1;
+        if (blxl % 200 == 0){
+            setTimeout(sub_frequency_enwords_book_b_arow,1);
+        }
+        else {
+            sub_frequency_enwords_book_b_arow();
+        } 
     }
-    var result_t=[];
+    //------------------
+    if (document.querySelector('span.span_common_old_words')){return;}
+    var t0 = performance.now();
+
+    var oldwords=simple_words_b();
+    var old_variety=new Set();
+    var result_t={};
+    var new_word_set=new Set();
+    var article_arr=[];
     switch (cstype){
-        case 'href':
-            for (let blxl=0;blxl<list_t.length;blxl=blxl+4){
-                result_t.push(list_t[blxl]);
-            }    
-            break;
-        case 'word':
-            for (let blxl=3;blxl<list_t.length;blxl=blxl+4){
-                result_t.push(list_t[blxl]);
-            }         
-            break;
-        case 'all':
-            for (let blxl=0;blxl<list_t.length;blxl=blxl+4){
-                result_t.push([list_t[blxl],list_t[blxl+1],list_t[blxl+2],list_t[blxl+3]]);
+        case 'sentence_rare':
+        case 'sentence_common':
+            for (let item of en_sentence_global){
+                article_arr.push(item[0]);
             }
             break;
+        case 'textarea':
+            article_arr=document.getElementById('textarea_new_words1').value.trim().split('\n');
+            break;
+    }
+    var blxl=0;
+    var bllen=article_arr.length;
+    sub_frequency_enwords_book_b_arow();   
+}
+
+function new_and_common_enwords_book_b(csresult,cslength,common_max){
+    csresult=object2array_b(csresult,true,2);
+    csresult.sort();    
+    csresult.sort(function (a,b){return a[1]<b[1];});
+    
+    var common_set=[];
+    for (let blxl=0;blxl<csresult.length;blxl++){
+        if (csresult[blxl][1]<=1){
+            common_set=csresult.slice(0,blxl);
+            break;
+        }
     }
     
-    return result_t;
+    for (let blxl=0;blxl<common_set.length;blxl++){
+        common_set[blxl]=common_set[blxl][0];
+    }
+    common_set=new Set(common_set);
+    
+    csresult=csresult.slice(0,cslength);
+    
+    var common_list=[];
+    var new_t=[];
+    for (let blxl=0;blxl<csresult.length;blxl++){
+        var item=csresult[blxl];
+        common_list.push('"'+specialstr_lt_gt_j(item[0])+'",');
+        
+        if (item[2]){
+            new_t.push(item[0]);
+        }
+        
+        if (blxl>=common_max && blxl % 100 == 0){
+            if (common_list.length>=common_max && new_t.length >=1000){break;}
+        }
+    }
+    new_t=new_t.slice(0,1000);
+    common_list=common_list.slice(0,common_max);
+    return [new_t,common_list,common_set];
 }
+
+function common_word_sign_set_enwords_book_b(csset){
+    var t0 = performance.now();
+    var ospans=document.querySelectorAll('span.span_word_combination_enword');
+    var ofirst=false;
+    for (let one_span of ospans){
+        var osub=one_span.querySelector('span.a_word');
+        if (!osub){continue;}
+        var blword=osub.innerText;
+        if (!csset.has(blword)){continue;}
+        osub.insertAdjacentHTML('beforebegin','<span class="span_common_old_words">👫</span>');
+        if (ofirst===false){
+            ofirst=osub;
+        }
+    }
+    if (ofirst!==false){
+        ofirst.scrollIntoView();
+    }
+    console.log('common_word_sign_set_enwords_book_b() 费时：'+(performance.now() - t0) + ' milliseconds');
+}
+
+function selenium_enwords_count_enbook_b(is_original=false){
+    var csarray=false;
+    
+    if (is_original){
+        if (typeof selenium_enwords_data_original_global !== 'undefined'){
+            csarray=selenium_enwords_data_original_global;        
+        }    
+    }
+    else {
+        if (typeof selenium_enwords_data_global !== 'undefined'){
+            csarray=selenium_enwords_data_global;
+        }
+    }
+    
+    if (csarray===false){return;}
+
+    var selenium_dict={};
+    for (let arow of csarray){
+        for (let one_word of arow[3]){
+            var blkey='w_'+one_word;
+            if (selenium_dict[blkey]==undefined){
+                selenium_dict[blkey]=0;
+            }
+            selenium_dict[blkey]=selenium_dict[blkey]+1;
+        }
+    }           
+    return selenium_dict;  
+}    
