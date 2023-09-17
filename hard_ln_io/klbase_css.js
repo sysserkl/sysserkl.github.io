@@ -1367,12 +1367,15 @@ function recent_search_b(localsavename,csstr,jsfunctionname,divname,commonlist=[
         csstr=sub_recent_search_b_key_replace(csstr);
     }
 
-    var recent_search;
-    if (remove_reg_str!==''){
-        recent_search=local_storage_get_b(localsavename,csmax,true,remove_reg_str,true);
-        localStorage.setItem(localsavename,recent_search.join('\n'));   //此处长度缩短 - 保留注释
+    var recent_search=[];
+    if (localsavename!==''){    //当为空时，仅发布到 html，不操作缓存 - 保留注释
+        if (remove_reg_str!==''){
+            recent_search=local_storage_get_b(localsavename,csmax,true,remove_reg_str,true);
+            localStorage.setItem(localsavename,recent_search.join('\n'));   //此处长度缩短 - 保留注释
+        }
+        recent_search=local_storage_get_b(localsavename,csmax,true,csstr);
     }
-    recent_search=local_storage_get_b(localsavename,csmax,true,csstr);
+    
     var old_search_len=recent_search.join('\n').length;
     var is_changed=false;
     if (csstr.length>0){
@@ -1396,12 +1399,16 @@ function recent_search_b(localsavename,csstr,jsfunctionname,divname,commonlist=[
     if (is_changed){
         var blstr=recent_search.join('\n');
         if (blstr.length<5000 || old_search_len>=blstr.length){  //储存长度不超过5000 或 新的存储长度小于旧的存储长度 - 保留注释
-            localStorage.setItem(localsavename,blstr);
+            if (localsavename!==''){
+                localStorage.setItem(localsavename,blstr);
+            }
         }
         else {
             console.log('remove',recent_search.shift());    //删除第一个（刚刚添加的）元素 - 保留注释
             console.log('remove',recent_search.pop());    //删除最后一个元素 - 保留注释
-            localStorage.setItem(localsavename,recent_search.join('\n'));            
+            if (localsavename!==''){
+                localStorage.setItem(localsavename,recent_search.join('\n'));            
+            }
         }
     }
     
