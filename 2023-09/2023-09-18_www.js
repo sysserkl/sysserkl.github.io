@@ -1,0 +1,15 @@
+var sourcelist=[
+["https://www.solidot.org/story?sid=76106","Linux Mint Debian 版开放测试","2023-09-18","Solidot","1",],
+["https://www.solidot.org/story?sid=76105","慕尼黑学生打破了电动汽车单次充电行驶距离记录","2023-09-18","Solidot","1",],
+["https://www.solidot.org/story?sid=76104","NASA 报告称没有证据表明 UFO 来自外星","2023-09-18","Solidot","1",],
+["https://www.vice.com/en/article/4a3qbn/archaeologists-have-unearthed-the-remains-of-a-lost-ancient-roman-city","Archaeologists Have Unearthed the Remains of a Lost Ancient Roman City","2023-09-18","VICE","0",],
+["https://www.vice.com/en/article/pkaqxk/mobile-game-studios-with-billions-of-downloads-pledge-to-turn-off-unity-ads","Mobile Game Studios With Billions of Downloads Boycott Unity Ads In Protest","2023-09-18","VICE","0",],
+["https://www.vice.com/en/article/qjvwew/esports-pro-doublelift-isnt-done-yet","Esports Pro &#39;Doublelift&#39; Isn&#39;t Done Yet","2023-09-18","VICE","0",],
+["https://www.vice.com/en/article/pkaqmk/google-extends-chromebook-life-by-2-years-after-right-to-repair-campaign","Google Extends Chromebook Life by 2 Years After Right-to-Repair Campaign","2023-09-18","VICE","0",],
+["https://www.vice.com/en/article/y3w5qw/intercepted-audio-appears-to-show-us-pilots-training-to-bomb-north-korean-vip","Intercepted Audio Appears to Show U.S. Pilots Training to Bomb North Korean &#39;VIP&#39;","2023-09-18","VICE","0",],
+["https://www.vice.com/en/article/n7e4qz/here-is-nasas-36-page-report-investigating-ufos","Here Is NASA&#39;s 36-Page Report Investigating UFOs","2023-09-18","VICE","0",],
+["https://www.vice.com/en/article/bvjy5z/avocado-toast-millionaire-very-sorry-for-saying-arrogant-workers-should-lose-jobs-after-outrage","&#39;Avocado Toast&#39; Millionaire Very Sorry for Saying &#39;Arrogant&#39; Workers Should Lose Jobs After Outrage","2023-09-18","VICE","0",],
+["https://www.vice.com/en/article/bvjyyz/your-friends-will-hate-you-if-you-use-ai-to-write-texts-science-confirms","Your Friends Will Hate You If You Use AI to Write Texts, Science Confirms","2023-09-18","VICE","0",],
+["https://www.vice.com/en/article/k7znna/wtf-is-going-on-with-alien-corpses-being-shown-to-mexicos-congress","WTF Is Going On With &#39;Alien Corpses&#39; Being Shown to Mexico&#39;s Congress?","2023-09-18","VICE","0",],
+["https://www.vice.com/en/article/g5ywd4/marvel-vfx-workers-unanimously-vote-to-unionize-in-industry-first","Marvel VFX Workers Unanimously Vote to Unionize In Industry First","2023-09-18","VICE","0",],
+];

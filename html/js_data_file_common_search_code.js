@@ -204,7 +204,7 @@ function menu_common(){
     var menu_files=[];
     for (let akey in menu_group){
         var klmenu_list=js_file_links_common(menu_group[akey]);
-        menu_files.push(klmenu_b(klmenu_list,akey.substring(2,),'12rem','1rem','1rem','30rem'));
+        menu_files.push(klmenu_b(klmenu_list,akey.substring(2,),'16rem','1rem','1rem','30rem'));
     }
         
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,icon_emoji_jscm_global,'18rem','1rem','1rem','60rem')+menu_files.join('')+'<span id="span_menu_more_common"></span>'+klmenu_b(klmenu_config,'⚙','19rem','1rem','1rem','60rem'),'','0rem')+' ');
