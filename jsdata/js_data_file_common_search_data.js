@@ -18,5 +18,6 @@ var js_file_list_common_global=[
 ['../../../../bash/data/php8000_pic_album_data.js','🗄','php8000','photo_source_global','php8000',''],
 ['../../../../data/yhzyy_medicine_price_data.js','💊','yhzyy medicine price','yhzyy_medicine_price_global','hospital_medicine_price',''],
 ['../../../../data/yhrmyy_medicine_price_data.js','💊','yhrmyy medicine price','yhrmyy_medicine_price_global','hospital_medicine_price',''],
+['../../../../data/weather/district_weahter_taizhou_data.js','☔','district weather taizhou','district_weather_global','district_weather',''],
 
 ];

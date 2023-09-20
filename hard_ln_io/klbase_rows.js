@@ -760,11 +760,13 @@ function batch_open_www_klr_b(csid,ostatus,cstype=''){
             var bing_links=[];
             var collins_links=[];
             var klsearch_links=[];
+            var cambridge_links=[];
             for (let blno=0;blno<list_t.length;blno++){
                 var aword=list_t[blno].trim();
                 list_t[blno]=[aword,open_link_en_b('o',aword,false)];   //klbase_eng.js - 保留注释
                 bing_links.push([aword,open_link_en_b('b',aword,false)]);
                 collins_links.push([aword,open_link_en_b('c',aword,false)]);
+                cambridge_links.push([aword,open_link_en_b('+',aword,false)]);
                 klsearch_links.push([aword,open_link_en_b('k',aword,false)]);
             }
             list_t=list_t.concat(klsearch_links);
@@ -773,6 +775,7 @@ function batch_open_www_klr_b(csid,ostatus,cstype=''){
             }
             if (cstype=='bing_collins_oxford_klsearch_en'){
                 list_t=list_t.concat(collins_links);
+                list_t=list_t.concat(cambridge_links);
             }            
             
             list_t.sort();

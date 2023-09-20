@@ -181,8 +181,8 @@ function menu_klr2(){
     var klmenu_batch=[
     '<span class="span_menu" onclick="'+str_t+'enwords_get_klr2();">提取英文单词</span>',        
     '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'batchwww\');">批量打开网址</span>',
-    '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'bing_oxford_klsearch_en\');">批量打开Bing+Oxford+KLSearch(en)</span>',    
-    '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'bing_collins_oxford_klsearch_en\');">批量打开Bing+Collins+Oxford+KLSearch(en)</span>',    
+    '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'bing_oxford_klsearch_en\');">批量打开B+Oxford+KLSearch(en)</span>',    
+    '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'bing_collins_oxford_klsearch_en\');">批量打开B+Collins+Oxford+Cambridge+KLSearch(en)</span>',    
     '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'oxford_klsearch_en\');">批量打开Oxford+KLSearch(en)</span>',
     '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'cambridge\');">批量打开Cambridge(en)</span>',    
     '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'collins\');">批量打开Collins(en)</span>',
@@ -196,7 +196,7 @@ function menu_klr2(){
     '<a href="?klqr">KLQR(userscript)</a>',
     '<a href="image2base64.htm" onclick="'+str_t+'" target=_blank>Image 2 base64</a>',
     ];    
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_fn,'','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_sort,'↕','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_convert,'↔','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_batch,'🗂','26rem','1rem','1rem','60rem')+klmenu_b(klmenu_links,'链','12rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_fn,'','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_sort,'↕','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_convert,'↔','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_batch,'🗂','28rem','1rem','1rem','60rem')+klmenu_b(klmenu_links,'链','12rem','1rem','1rem','60rem'),'','0rem')+' ');
 }
 
 function enwords_get_klr2(){
