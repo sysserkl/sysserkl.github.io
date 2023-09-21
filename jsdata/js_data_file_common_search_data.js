@@ -19,5 +19,6 @@ var js_file_list_common_global=[
 ['../../../../data/yhzyy_medicine_price_data.js','💊','yhzyy medicine price','yhzyy_medicine_price_global','hospital_medicine_price',''],
 ['../../../../data/yhrmyy_medicine_price_data.js','💊','yhrmyy medicine price','yhrmyy_medicine_price_global','hospital_medicine_price',''],
 ['../../../../data/weather/district_weahter_taizhou_data.js','☔','district weather taizhou','district_weather_global','district_weather',''],
+['../../../../data/weather/district_weahter_hangzhou_data.js','☔','district weather hangzhou','district_weather_global','district_weather',''],
 
 ];

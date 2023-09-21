@@ -359,15 +359,17 @@ function month_day_b(csmonth=0,csyear=0,returnlist=false,current_day=false){
     return bljg;
 }
 
-function year365_b(csyear=0,returndate=false){
+function year365_b(csyear=0, returndate=false,month_list=[]){
     //返回一年份的日期列表数组 - 保留注释
-	var date1_tmp=new Date();
     if (csyear==0){
+	    var date1_tmp=new Date();
 	    csyear=date1_tmp.getFullYear();
     }
     var blresult=[];
     var list_m=month_day_b(0,csyear,true);
     for (let blxl=0;blxl<list_m.length;blxl++){
+        if (month_list.length>0 && !month_list.includes(blxl)){continue;}
+        
         for (let blday=1;blday<=list_m[blxl];blday++){
             if (returndate){
                 blresult.push(new Date(csyear+'-'+(blxl+1)+'-'+blday));
@@ -561,7 +563,7 @@ function date_list_insert_zero_b(cslist,add0101=false,add1231=false,months_list=
         if (day_end.slice(-6,)!=='-12-31'){
             cslist.push([validdate_b(day_end.substring(0,4)+'-12-31'),0]);
         }
-    }    
+    }
 
     if (cslist.length<2){
         return cslist;

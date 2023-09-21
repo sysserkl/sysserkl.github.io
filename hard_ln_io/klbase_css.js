@@ -773,6 +773,29 @@ function color_range_b(color1=[],color2=[],cscount=10){
     return list_t;
 }
 
+function color_range_with_value_range_b(color_range,min_value,max_value){
+    var blstep=Math.ceil((max_value-min_value+1)/color_range.length);
+    var legend=[];
+    var csarr=[].concat(color_range);
+    for (let blxl=0;blxl<csarr.length;blxl++){
+        csarr[blxl]=[csarr[blxl],min_value+blstep*blxl];
+        legend.push('<span style="color:'+csarr[blxl][0]+';">●</span>'+csarr[blxl][1]);
+    }
+    return [csarr,legend];
+}
+
+function value_in_color_range_b(csvalue,color_range,min_value,max_value){
+    var blcolor=false;
+    csvalue=Math.min(max_value,Math.max(min_value,csvalue));
+    for (let one_range of color_range){
+        if (csvalue<=one_range[1]){
+            blcolor=one_range[0];
+            break;
+        }
+    }
+    return blcolor;
+}
+
 function color_with_different_light_b(cscolor,cscount=10){
     var color_raw=rgb2hsl_b(cscolor);
     var result_t=[];
@@ -1983,6 +2006,8 @@ function close_button_b(query_str='',cstype='',class_name='aclick',is_id=true){
 }
 
 function date_count_dots_b(cslist,cscolor='red',color_range=13,csstep=20,csunit='',add0101=true,add1231=true,show_date_str=true,show_average=true,show_legend=true,line_height='1.5rem',sum_decimal_len=0,avg_decimal_len=2){
+    //cslist 每个元素如：[ Date Fri Sep 01 2023 00:00:00 GMT+0800 (China Standard Time), 127.57 ] - 保留注释
+
     cslist=date_list_insert_zero_b(cslist,add0101,add1231);
     
     if (cslist.length<2){return '';}
@@ -2002,7 +2027,7 @@ function date_count_dots_b(cslist,cscolor='red',color_range=13,csstep=20,csunit=
     for (let blxl=0;blxl<cslist.length;blxl++){
         var item=cslist[blxl];
         var the_day=date2str_b('-',item[0]);
-        var blno=Math.max(0,Math.min(color_range,Math.round(item[1]/csstep)));
+        var blno=Math.max(0,Math.min(color_range,Math.round(item[1]/csstep)));  //负数视为0 - 保留注释
         used_color.add(blno);
         var sunday_str=is_sunday_b(days_to_sunday,blxl);
         var is01=month01_day_b(the_day);
@@ -2017,7 +2042,8 @@ function date_count_dots_b(cslist,cscolor='red',color_range=13,csstep=20,csunit=
         if (item[1]==0){
             zero_days=zero_days+1;
         }
-    }    
+    }
+    
     var blstr='';
     if (show_date_str){
         blstr=blstr+'<p style="line-height:'+line_height+';">'+day_begin+'</p>';
@@ -2052,7 +2078,6 @@ function date_count_dots_b(cslist,cscolor='red',color_range=13,csstep=20,csunit=
     for (let blxl=0;blxl<color_legend_list.length;blxl++){
         color_legend_list[blxl]=color_legend_list[blxl][1];
     }
-    
     blstr=blstr+'<p style="line-height:'+line_height+';">'+color_legend_list.join(' ')+csunit+'</p>';
     return blstr;
 }
