@@ -3306,3 +3306,37 @@ function wiki_page_title_link_generate_b(cspage,cstitle=''){
     }
     return bllink;    
 }
+
+function array_col_value_get_b(csarr,col_no,default_value=false,cstype='int'){
+    var blvalue=default_value;
+    if (col_no<csarr.length){
+        var bltmp=csarr[col_no];
+        switch (cstype){
+            case 'int':
+                bltmp=parseInt(bltmp);
+                if (!isNaN(bltmp)){
+                    blvalue=bltmp;
+                }                
+                break;
+            case 'float':
+                bltmp=parseFloat(bltmp);   
+                if (!isNaN(bltmp)){
+                    blvalue=bltmp;
+                }                
+                break;         
+            default:
+                blvalue=bltmp;
+        }
+    }
+    return blvalue;
+}
+
+function array_batch_value_get_b(csarr,default_list){
+    var result_t=[];
+    for (let blxl=0;blxl<default_list.length;blxl++){
+        var default_value=default_list[blxl][0];
+        var cstype=default_list[blxl][1];
+        result_t.push(array_col_value_get_b(csarr,blxl,default_value,cstype));
+    }
+    return result_t;
+}

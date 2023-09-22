@@ -15,10 +15,20 @@ function menu_more_district_weather(){
     '<span class="span_menu"><select id="select_sort_type_jsad_dweather" style="height:2rem;">'+col_name_list.join('')+'</select> <span class="aclick" onclick="'+blparent+'sort_district_weather();">↑</span><span class="aclick" onclick="'+blparent+'sort_district_weather(true);">↓</span></span>',
     '<span class="span_menu">图形日期格式：<select id="select_flot_date_type_jsad_dweather" style="height:2rem;"><option>y</option><option>m</option><option selected>d</option></select></span>',
     '<span class="span_menu">温度选择：<select id="select_temperature_range_jsad_dweather" style="height:2rem;"><option>全部</option><option>最高温度</option><option>最低温度</option></select></span>',
-    '<span id="span_multi_year_lines_jsad_dweather" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 分年</span>',        
-    '<span class="span_menu" onclick="'+str_t+'check_district_weather();">格式检查</span>',   
-    '<span class="span_menu" onclick="'+str_t+'integrity_district_weather();">缺失日期温度填补</span>',   
+    '<span class="span_menu">温度和颜色范围：<input type="text" id="input_temperature_color_range_jsad_dweather" value="-10,45,8,blue,red" style="width:10rem;" /></span>',  
     ];
+
+    var group_list=[
+    ['⚪ 分年','klmenu_check_b(this.id,true);',false,'span_multi_year_lines_jsad_dweather'],
+    ['⚪ 月份补足','klmenu_check_b(this.id,true);',false,'span_zero_month_jsad_dweather'],
+    ];    
+    klmenu1.push(menu_container_b(str_t,group_list,''));
+    
+    var group_list=[
+    ['格式检查','check_district_weather();',true],
+    ['缺失日期温度填补','integrity_district_weather();',true],
+    ];    
+    klmenu1.push(menu_container_b(str_t,group_list,''));
     
     var group_list=[
     ['折线图','flot_line_temperature_district_weather();',true],
@@ -275,7 +285,7 @@ function check_district_weather(show_html=true){
     }
 
     if (not_found_date.length>0){
-        error=error+'缺少日期（'+not_found_date.join(' ')+'）：'
+        error=error+'缺少日期（'+not_found_date.length+': '+not_found_date.join(' ')+'）：'
     }
     
     if (error!==''){
@@ -292,6 +302,28 @@ function check_district_weather(show_html=true){
 }
 
 function dots_district_weather(){
+    function sub_dots_district_weather_zero_month(){
+        if (!klmenu_check_b('span_zero_month_jsad_dweather',false)){return;}
+        ym_set=Array.from(ym_set);
+        ym_set.sort();
+        var ym_min=ym_set[0];
+        if (ym_min.slice(-2,)!=='01'){
+            ym_min=ym_min.substring(0,5)+'01';
+        }
+        var ym_max=ym_set[ym_set.length-1];
+        var ym_str=ym_min;
+        while (true){
+            if (ht[ym_str]==undefined){
+                ht[ym_str]=[];
+            }
+            if (lt[ym_str]==undefined){
+                lt[ym_str]=[];
+            }
+            ym_str=next_month_b(ym_str);
+            if (ym_str=='' || ym_str>ym_max){break;}
+        }    
+    }
+    
     function sub_dots_district_weather_one_dict(csdict){
         var result_t=[];
         for (let key in csdict){
@@ -315,19 +347,21 @@ function dots_district_weather(){
                     bljg.push('<span title="'+item[0]+'">◌</span>');                                    
                 }
                 else {
-                    var blcolor=value_in_color_range_b(item[1],color_range,min_value,max_value);
+                    var blcolor=value_in_color_range_b(item[1],color_list,min_value,false); //max_value - 保留注释
                     bljg.push('<span style="color:'+blcolor+';" title="'+item[0]+' '+item[1]+'">●</span>');
                 }
             }
             
-            result_t.push(blyear+'年'+(blmonth+1)+'月 '+bljg.join(''));
+            result_t.push(blyear+'年'+(blmonth+1<10?'0':'')+(blmonth+1)+'月 '+bljg.join(''));
         }
+        result_t.sort();
         return result_t;
     }
     //--------------------------
     var temperature_range=document.getElementById('select_temperature_range_jsad_dweather').value;
     var ht={};
     var lt={};
+    var ym_set=new Set();
     for (let item of js_data_current_common_search_global){
         var bldate=item[0][0];
         var blkey=item[0][0].substring(0,7);    //年月 - 保留注释
@@ -340,20 +374,31 @@ function dots_district_weather(){
             lt[blkey]=[];
         }
         lt[blkey].push([bldate,item[0][2]]);
+        
+        ym_set.add(blkey);
     }
-
+    
+    if (ym_set.size==0){return;}
+    sub_dots_district_weather_zero_month();
+    
     var h_dots='';
     var l_dots='';
     
-    var color_range=color_with_different_light_b('blue',8);
-    color_range.reverse();
-    color_range=color_range.concat(color_with_different_light_b('red',8));
+    var temperature_color_list=document.getElementById('input_temperature_color_range_jsad_dweather').value.trim().split(',');
+    var min_value,max_value,color_range,color1,color2;    
+    [min_value,max_value,color_range,color1,color2]=array_batch_value_get_b(temperature_color_list,[[-10,'int'],[40,'int'],[8,'int'],['green',''],['red','']]);
     
-    var min_value=-10;
-    var max_value=40;
+    var color_list=[];
+    if (color1!==color2){
+        color_range=Math.round(color_range/2);
+        color_list=color_with_different_light_b(color1,color_range);
+        color_list.reverse();
+    }
+    color_list=color_list.concat(color_with_different_light_b(color2,color_range));
+    
     var legend=[];
  
-    [color_range,legend]=color_range_with_value_range_b(color_range,min_value,max_value);
+    [color_list,legend]=color_range_with_value_range_b(color_list,min_value,max_value);
     
     if (temperature_range=='全部' || temperature_range=='最高温度'){
         h_dots='<h3>最高温度</h3><p>'+sub_dots_district_weather_one_dict(ht).join('</p><p>')+'</p>';
@@ -364,6 +409,6 @@ function dots_district_weather(){
 
     var blbutton='<p>'+close_button_b('div_status_common','','aclick')+'</p>';    
     var odiv=document.getElementById('div_status_common');
-    odiv.innerHTML=h_dots+l_dots+'<p>'+legend.join(' ')+'</p>'+blbutton;
+    odiv.innerHTML='<table><tr><td style="padding:1rem;">'+h_dots+l_dots+'<p>'+legend.join(' ')+'</p></td></tr></table>'+blbutton;  //table 截图用 - 保留注释
     odiv.scrollIntoView();
 }

@@ -753,7 +753,7 @@ function hex2rgb_b(hex,return_str=false){
     }
 }
 
-function color_range_b(color1=[],color2=[],cscount=10){
+function color_range_b(color1=[],color2=[],cscount=10){ //date_count_dots_b - 保留注释
     if (color1.length!==3){
         var color1=[randint_b(0,255),randint_b(0,255),randint_b(0,255)];
     }
@@ -773,23 +773,34 @@ function color_range_b(color1=[],color2=[],cscount=10){
     return list_t;
 }
 
-function color_range_with_value_range_b(color_range,min_value,max_value){
-    var blstep=Math.ceil((max_value-min_value+1)/color_range.length);
+function color_range_with_value_range_b(color_list,min_value,max_value){
+    var blstep=Math.ceil((max_value-min_value+1)/(color_list.length-1));
     var legend=[];
-    var csarr=[].concat(color_range);
-    for (let blxl=0;blxl<csarr.length;blxl++){
+    var csarr=[].concat(color_list);
+    for (let blxl=0;blxl<csarr.length-1;blxl++){
         csarr[blxl]=[csarr[blxl],min_value+blstep*blxl];
         legend.push('<span style="color:'+csarr[blxl][0]+';">●</span>'+csarr[blxl][1]);
     }
+
+    csarr[csarr.length-1]=[csarr[csarr.length-1],Infinity];
+    legend.push('<span style="color:'+csarr[csarr.length-1][0]+';">●</span>'+csarr[csarr.length-1][1]);
+            
     return [csarr,legend];
 }
 
-function value_in_color_range_b(csvalue,color_range,min_value,max_value){
+function value_in_color_range_b(csvalue,color_list,min_value=false,max_value=false){
     var blcolor=false;
-    csvalue=Math.min(max_value,Math.max(min_value,csvalue));
-    for (let one_range of color_range){
-        if (csvalue<=one_range[1]){
-            blcolor=one_range[0];
+    if (min_value!==false){
+        csvalue=Math.max(min_value,csvalue);
+    }
+    if (max_value!==false){
+        csvalue=Math.min(max_value,csvalue);
+    }
+        
+    for (let item of color_list){
+        blcolor=item[0];
+        if (csvalue<=item[1]){
+            console.log(blcolor,csvalue,item[1]);
             break;
         }
     }
@@ -884,6 +895,17 @@ function hsl2rgb_b(h,s,l){
         
     return sub_HSVtoRGB_b(sub_HSLtoHSV_b(h,s,l));
 }
+
+function rgb_mix_b(rgb1,rgb2){ 
+    // 计算新的RGB值  
+    var newRgb = [  
+    Math.round((rgb1[0] + rgb2[0]) / 2),  
+    Math.round((rgb1[1] + rgb2[1]) / 2),  
+    Math.round((rgb1[2] + rgb2[2]) / 2)  
+    ];  
+  
+    return newRgb;  
+}  
 
 function rgb2hsl_b(r,g,b){
     //code source: https://stackoverflow.com/questions/17242144/javascript-convert-hsb-hsv-color-to-rgb-accurately

@@ -180,9 +180,9 @@ function menu_common(){
     ];
 
     var group_list=[
-    ['⚪ table','klmenu_check_b(this.id,true);',true,'span_table_style_common'],
-    ['⚪ columns','klmenu_check_b(this.id,true);',true,'span_table_columns_common'],
-    ['⚪ row no','klmenu_check_b(this.id,true);',true,'span_table_row_no_common'],
+    ['⚪ table','klmenu_check_b(this.id,true);',false,'span_table_style_common'],
+    ['⚪ columns','klmenu_check_b(this.id,true);',false,'span_table_columns_common'],
+    ['⚪ row no','klmenu_check_b(this.id,true);',false,'span_table_row_no_common'],
 
     ];    
     klmenu1.push(menu_container_b(str_t,group_list,''));
@@ -213,7 +213,10 @@ function menu_common(){
     klmenu_check_b('span_row_no_common',true);
     klmenu_check_b('span_http_links_common',true);    
     klmenu_check_b('span_additional_fn_common',true);    
-            
+
+    klmenu_check_b('span_table_columns_common',true);    
+    klmenu_check_b('span_table_row_no_common',true);    
+
     if (data_file_jscm_global!==''){
         recent_common();
     }
