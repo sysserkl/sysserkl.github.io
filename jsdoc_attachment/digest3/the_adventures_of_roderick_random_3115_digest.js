@@ -10,4 +10,5 @@ var digest_global=`
 *milkwoman
 *extortioner
 *Angola
+*hanger
 `.trim().split('\n');
