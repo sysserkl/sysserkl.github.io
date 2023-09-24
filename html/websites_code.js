@@ -104,7 +104,7 @@ function key_batch_search_by_engine_klwebsites(is_enword=true,max_result=5){
         window_list[window_id]=window.open(blurl);
         blno=blno+1;
         wait_times=0;
-        document.title=blno+'/'+bllen+' - '+old_title;
+        document.title=blno+'/'+bllen+' - '+title_key+' - '+old_title;
         setTimeout(sub_key_batch_search_by_engine_klwebsites_one_site,wait_seconds*1000);
     }
     
@@ -126,7 +126,9 @@ function key_batch_search_by_engine_klwebsites(is_enword=true,max_result=5){
     var oinput=document.getElementById('input_search');
     var blkey=oinput.value.trim();
     if (blkey==''){return;}
-    
+
+    var title_key=document_title_key_word_b(blkey,'');
+
     if (blkey.match(/^(["']).*\1$/)==null){
         blkey='"'+blkey+'"';
     }

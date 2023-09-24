@@ -36,4 +36,5 @@ var digest_global=`
 *geyser
 *up-and-comer
 *gumball
+*aeronautics
 `.trim().split('\n');

@@ -58,6 +58,7 @@ function search_ebsjs(csstr='',csmax_total=50,csmax_current=5){
         if (blxl>=bllen || bltotal>=csmax_total){
             ospan.innerHTML='';
             document.title=old_title;
+            document_title_ebs_b();
             content_file_found_global=result_t;
             show_result_ebsjs(csstr);
             enwords_array_ebs_b();

@@ -3340,3 +3340,16 @@ function array_batch_value_get_b(csarr,default_list){
     }
     return result_t;
 }
+
+function document_title_key_word_b(csstr,replaced_words=''){
+    if (csstr.length>15 && csstr.includes(' ')){
+        csstr=csstr.split(' ')[0];
+    }
+    if (csstr.length>15){
+        csstr=csstr.substring(0,15)+'...';
+    }
+    if (csstr!=='' && replaced_words!==''){
+        document.title=document.title.replace(replaced_words,specialstr_lt_gt_j(csstr)+' - '+replaced_words);
+    }
+    return csstr;
+}

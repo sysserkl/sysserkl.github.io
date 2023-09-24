@@ -33,4 +33,5 @@ var digest_global=`
 *shitload
 *nonflammable
 *hexadecimal
+*airflow
 `.trim().split('\n');

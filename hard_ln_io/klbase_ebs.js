@@ -161,3 +161,8 @@ function hide_batch_search_form_ebs_b(){
         document.getElementById('div_batch_search_ebs').style.display='none';
     }
 }
+
+function document_title_ebs_b(){
+    var blstr=document.getElementById('input_search').value;
+    document_title_key_word_b(blstr,'Book Search');
+}
