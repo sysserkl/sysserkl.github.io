@@ -5,9 +5,17 @@ function menu_more_kltxt_klwiki_en2(){
     var str_t=klmenu_hide_b('');
     var klmenu1=[
     '<span class="span_menu" onclick="'+str_t+'batch_search_form_kltxt_klwiki_en2();">单词批量查找</span>',
+    '<a href="enwords_book.htm" onclick="'+str_t+'" target=_blank>生词统计</a>',    
+    '<a href="ensentence.htm" onclick="'+str_t+'" target=_blank>ensentence</a>',
+    '<a href="../jsdata/words/enwords_sentence_data.js?'+date2str_b('')+'" onclick="'+str_t+'" target=_blank>enwords_sentence_data.js</a>',    
+    
     ];
     
-    var blstr=klmenu_b(klmenu1,'🇬🇧','12rem','1rem','1rem','30rem');
+    if (is_local_b()){
+        klmenu1.push('<a href="../../../../selenium_enwords.htm" onclick="'+str_t+'" target=_blank>selenium enwords</a>');
+    }
+    
+    var blstr=klmenu_b(klmenu1,'🇬🇧','17rem','1rem','1rem','30rem');
     ospan.outerHTML=blstr;
 }
 

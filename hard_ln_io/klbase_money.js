@@ -20,7 +20,7 @@ function content_media_money_b(csstr){
 			bljg='http://'+location.host+'/wikiuploads/wpatt/'+bljg.substring(8);
 		}
 		
-		if ('.jpg,.bmp,.png,.gif'.includes(bljg.substring(bljg.length-4).toLowerCase()) || '.jpeg,.webp'.includes(bljg.substring(bljg.length-5).toLowerCase())){
+		if ('.jpg,.bmp,.png,.gif'.includes(bljg.substring(bljg.length-4).toLowerCase()) || '.avif,.jpeg,.webp'.includes(bljg.substring(bljg.length-5).toLowerCase())){
 			bljg='<div style="max-width:20rem;max-height:30rem;overflow:hidden;"><img src=\"'+bljg+'\" onclick="resizeimg_wp(this.parentNode);" style="width:100%;" border="0"></div>';
 		}
 		else{
