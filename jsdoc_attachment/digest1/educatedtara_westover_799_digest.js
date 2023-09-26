@@ -52,4 +52,5 @@ var digest_global=`
 *Michele
 *VCR
 *Jordanian
+*cellphone
 `.trim().split('\n');
