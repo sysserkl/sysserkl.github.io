@@ -40,4 +40,5 @@ var digest_global=`
 *videotape
 *yoghurt
 *baseboard
+*strapless
 `.trim().split('\n');
