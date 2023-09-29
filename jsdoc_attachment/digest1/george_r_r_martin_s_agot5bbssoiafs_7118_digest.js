@@ -136,4 +136,5 @@ var digest_global=`
 *yestermorn
 *brother-in-arms
 *costermonger
+*outdo
 `.trim().split('\n');

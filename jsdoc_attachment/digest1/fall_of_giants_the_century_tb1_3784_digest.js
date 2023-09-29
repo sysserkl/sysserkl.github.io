@@ -52,4 +52,5 @@ var digest_global=`
 *undemocratic
 *bowlful
 *Sarajevo
+*Austria-Hungary
 `.trim().split('\n');

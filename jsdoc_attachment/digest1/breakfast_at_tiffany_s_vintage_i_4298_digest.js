@@ -32,4 +32,5 @@ var digest_global=`
 *cleaning lady
 *biographer
 *Yiddish
+*cockfight
 `.trim().split('\n');

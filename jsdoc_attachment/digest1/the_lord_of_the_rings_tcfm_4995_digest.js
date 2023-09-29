@@ -10,4 +10,5 @@ var digest_global=`
 *yestereve
 *untimely
 *yestermorn
+*flout
 `.trim().split('\n');

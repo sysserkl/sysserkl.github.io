@@ -16,4 +16,5 @@ var digest_global=`
 *shipmaster
 *strongbox
 *swordsmanship
+*inexpressible
 `.trim().split('\n');

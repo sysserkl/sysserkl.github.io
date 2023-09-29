@@ -23,7 +23,7 @@ function batch_search_form_kltxt_klwiki_en2(){
     var postpath=postpath_b();
     var bljg='<p><textarea id="textarea_batch_search_words_kltxt_klen2" style="height:10rem;"></textarea></p>';
     bljg=bljg+'<p>'   
-    bljg=bljg+'<label><input type="checkbox" id="input_exclude_eword_kltxt_klen2" />不含eword</label> ';
+    bljg=bljg+'<label><input type="checkbox" id="input_exclude_eword_kltxt_klen2" checked />不含eword</label> ';
     bljg=bljg+'<span class="aclick" onclick="batch_search_result_kltxt_klwiki_en2();">单词批量查找</span> ';
     bljg=bljg+textarea_buttons_b('textarea_batch_search_words_kltxt_klen2','复制,清空');
     bljg=bljg+close_button_b('divhtml2','')
