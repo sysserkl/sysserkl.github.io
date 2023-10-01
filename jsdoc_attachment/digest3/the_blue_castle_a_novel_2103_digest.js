@@ -6,4 +6,5 @@ var digest_global=`
 *stagnation
 *transgressor
 *unoriginal
+*civil engineering
 `.trim().split('\n');

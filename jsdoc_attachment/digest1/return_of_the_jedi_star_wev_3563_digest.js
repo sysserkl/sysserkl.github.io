@@ -11,4 +11,5 @@ var digest_global=`
 *raindrop
 *seasonally
 *sidestep
+*bounty hunter
 `.trim().split('\n');

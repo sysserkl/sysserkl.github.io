@@ -5,4 +5,5 @@ var digest_global=`
 *storekeeper
 *Tiber
 *plentifully
+*seaport
 `.trim().split('\n');

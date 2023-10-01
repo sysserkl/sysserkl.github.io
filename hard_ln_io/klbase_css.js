@@ -472,6 +472,9 @@ function popup_event_div_b(event,div_id,div_html='',add_close_button='bottom',di
         case 'top_right':
             div_html='<p align=right><span class="span_box" onclick="this.parentNode.parentNode.style.display=\'none\';">❌</span></p>'+div_html;
             break;
+        case 'top_left':
+            div_html='<p><span class="span_box" onclick="this.parentNode.parentNode.style.display=\'none\';">❌</span></p>'+div_html;
+            break;            
     }
     odiv.innerHTML=div_html;
     odiv.style.display='';  //否则rect的值为0 - 保留注释

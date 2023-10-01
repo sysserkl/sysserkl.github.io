@@ -16,4 +16,5 @@ var digest_global=`
 *half-wit
 *Carnegie
 *cardigan
+*afternoon tea
 `.trim().split('\n');
