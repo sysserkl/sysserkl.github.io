@@ -1770,10 +1770,10 @@ function klsofts_list_b(cstype='all',diy_list=[],ignore_popup=false,ignore_php=t
     var is_local_file=is_file_type_b();
     var blfound=false;
     for (let blxl=0;blxl<divlist.length;blxl++){
-        if (divlist[blxl].length==4 && divlist[blxl][3].includes('_')){
+        if (divlist[blxl].length>=4 && divlist[blxl][3].includes('_')){
             var list_t=divlist[blxl][3].split('_');
             divlist[blxl][3]=(ismobile?list_t[1]:list_t[0]);
-            if (is_local_file && list_t.length>=3){
+            if (is_local_file && list_t.length>=3){ // 如1_1_f - 保留注释
                 if (list_t[2]=='f'){
                     blfound=true;
                     continue;
@@ -2084,27 +2084,26 @@ function klsofts_routines_ignore_or_done_b(ospan){
     }
 }
 
-function klsofts_div_b(divid,font_size,padding=0,autoclose=true){
+function klsofts_div_b(divid,font_size,padding=0,filter_str='0',diy_list=[],autoclose=true,add_head=true,add_todolist=true){
     var blhref=klwebphp_path_b();
     if (blhref===false){
         blhref='';
     }
     
-    var soft_str='<div id="'+divid+'" style="display:none;font-weight:normal;padding:'+padding+'rem;">';
-    var head_part='{{selenium_news}}/html/klapps.htm,KL Apps,klapps512.png,0';
-    var soft_list=klsofts_list_b('0',[head_part]);
+    var soft_str='<div id="'+divid+'" class="div_top_bottom_menu" style="display:none;font-weight:normal;padding:'+padding+'rem;">';
+    var head_part=(add_head?['{{selenium_news}}/html/klapps.htm,KL Apps,klapps512.png,0']:[]);
+    head_part=head_part.concat(diy_list);
+    var soft_list=klsofts_list_b(filter_str,head_part);
     
-    var bltodolist=klsofts_routines_random_b();
-    if (bltodolist!==''){
-        soft_list.push(['javascript:klsofts_routines_ignore_or_done_b(this)',bltodolist,'♾',0]);
+    if (add_todolist){
+        var bltodolist=klsofts_routines_random_b();
+        if (bltodolist!==''){
+            soft_list.push(['javascript:klsofts_routines_ignore_or_done_b(this)',bltodolist,'♾',0]);
+        }
     }
     
-    if (autoclose){
-        var jsstr=' onclick="popup_show_hide_b(\''+divid+'\');"'
-    }
-    else {
-        var jsstr='';
-    }
+    var jsstr=(autoclose?' onclick="popup_show_hide_b(\''+divid+'\');"':'');
+
     for (let item of soft_list){
         if (item[0].substring(0,11)=='javascript:' || item[0].substring(0,6)=='popup:'){
             soft_str=soft_str+klsofts_one_b(item,font_size,false,blhref,'');    

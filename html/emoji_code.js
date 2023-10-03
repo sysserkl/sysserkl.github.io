@@ -183,6 +183,9 @@ function show_emoji(cstype){
             aspan.style.color='';
         }
     }
+    if (cstype=='range'){
+        unicode_list_emoji();
+    }
 }
 
 function unicode_page_emoji(cscategory,cspages){
@@ -262,9 +265,31 @@ function unicode_overlape_search_emoji(){
     sub_unicode_overlape_search_emoji_one_key();
 }
 
-function unicode_list_emoji(cscategory='',csstart=1){
-    if (cscategory==''){return;}
+function first_element_emoji(){
     var odiv=document.getElementById('divhtml_range');
+    var result_t=[];
+    var blstyle='border:0.1rem solid '+scheme_global['button']+';font-size:small;';
+    
+    for (let key in unicode_global){
+        var list_t=unicode_global[key];
+        var blstart=eval('0x'+list_t[0]);
+        var blend=eval('0x'+list_t[1])+1;
+        result_t.push('<span class="span_unicode" style="'+blstyle+'" onclick="unicode_list_emoji(\''+specialstr_j(key)+'\');">'+key+'</span> '+one_type_emoji(blstart,blend,odiv,1,'span').join(' '));
+    }
+    odiv.innerHTML='<p style="line-height:4rem;">'+result_t.join(' ')+'</p>';    
+}
+
+function unicode_list_emoji(cscategory=false,csstart=1){
+    var oselect=document.getElementById('select_unicode');
+    if (cscategory===false){
+        cscategory=oselect.value;
+    }
+    
+    if (cscategory==''){
+        first_element_emoji();
+        return;
+    }
+    oselect.value=cscategory;
 
     var list_t=unicode_global[cscategory];
     var blstart=eval('0x'+list_t[0]);
@@ -287,16 +312,26 @@ function unicode_list_emoji(cscategory='',csstart=1){
     if (blstart+no_per_page_emoji_global<blend){
         blend=blstart+no_per_page_emoji_global;
     }
-        
+
+    var odiv=document.getElementById('divhtml_range');
+    var result_t=one_type_emoji(blstart,blend,odiv);
+    odiv.innerHTML='<p style="word-break:break-all;word-wrap:break-word;">'+pages+'</p>'+result_t.join(' ');
+}
+
+function one_type_emoji(csstart,csend,odiv,csmax=-1,tagname='div'){
     var result_t=[];
     var blstyle='border:0.1rem solid '+scheme_global['button']+';';
-    for (let blxl=blstart;blxl<blend;blxl++){   //不包含 blend - 保留注释
+    
+    var blcount=0;
+    for (let blxl=csstart;blxl<csend;blxl++){   //不包含 blend - 保留注释
         var blstr='&#'+blxl+';' //也可以用：blstr=String.fromCodePoint(blxl); - 保留注释
         odiv.innerHTML=blstr;
         if (odiv.innerText.slice(-1)==';'){continue;}
-        result_t.push('<div class="div_unicode" style="'+blstyle+'" onclick="unicode_info_emoji('+blxl+');">'+blstr+'</div>');
+        result_t.push('<'+tagname+' class="'+tagname+'_unicode" style="'+blstyle+'" onclick="unicode_info_emoji('+blxl+');">'+blstr+'</'+tagname+'>');
+        blcount=blcount+1;
+        if (csmax>0 && blcount>=csmax){break;}
     }
-    odiv.innerHTML='<p style="word-break:break-all;word-wrap:break-word;">'+pages+'</p>'+result_t.join(' ');
+    return result_t;
 }
 
 function unicode_info_emoji(csxl){
