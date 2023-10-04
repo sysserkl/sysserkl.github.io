@@ -4,7 +4,7 @@ function new_words_rndwords(){
     for (let item of ospans){
         list_t.push(item.innerText);
     }
-    get_new_words_arr_enbook_b(2,list_t.join('\n'),ospans,4,true,true);
+    get_new_words_arr_obj_enbook_b(2,list_t.join('\n'),ospans,true,true);
 }
 
 function exam_rndwords(dohide=false){

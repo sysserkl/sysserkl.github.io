@@ -94,7 +94,7 @@ function statistics_kltxt_b(){
 
 function new_words_kltxt_b(){
     if (klmenu_check_b('span_show_new_enwords',false)){
-        get_new_words_arr_enbook_b(2,document.getElementById('divhtml').innerText,document.querySelectorAll('.txt_content'),true);
+        get_new_words_arr_obj_enbook_b(2,document.getElementById('divhtml').innerText,document.querySelectorAll('.txt_content'),true);
     }
 }
 
@@ -212,17 +212,35 @@ function txtmenus_kltxt_b(cstype=''){
     else {
         var jump_list=['reader','Reader'];
     }
-    var menu_general=[
-    '<span class="span_menu" onclick="'+str_t+'search_or_reader_kltxt_b(\''+jump_list[0]+'\');">'+jump_list[1]+'</span>',    
-    '<span class="span_menu" onclick="'+str_t+'search_or_reader_kltxt_b(\'reader_card\');">Card</span>',
-    '<span class="span_menu" onclick="'+str_t+'bookmarks_get_kltxt_b(false,false);">read bookmark</span>',
-    '<span class="span_menu" onclick="'+str_t+'bookmarks_set_kltxt_b();">add bookmark</span>',
+    
+    var menu_general=[];
+    
+    var group_list=[
+    [jump_list[1],'search_or_reader_kltxt_b(\''+jump_list[0]+'\');',true],
+    ['Card','search_or_reader_kltxt_b(\'reader_card\');',true],
+    ];    
+    menu_general.push(menu_container_b(str_t,group_list,''));
+
+    var group_list=[
+    ['read','bookmarks_get_kltxt_b(false,false);',true],
+    ['add','bookmarks_set_kltxt_b();',true],
+    ];    
+    menu_general.push(menu_container_b(str_t,group_list,'bookmark: '));
+        
+    menu_general=menu_general.concat([
     '<span id="span_add_zero_reading_lines_txtlistsearch" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 阅读行数补零</span>',
     '<span class="span_menu" onclick="'+str_t+'getlines_kltxt_b();">返回阅读页面</span>',
-    '<span id="span_show_new_enwords" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);new_words_kltxt_b();">⚪ 显示生词</span>',            
-    '<span id="span_show_old_enwords" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);old_words_kltxt_b();">⚪ 显示旧单词</span>',                
+    '<span class="span_menu" onclick="'+str_t+'frequent_new_enwords_kltxt_b();">常见英语生词</span>',
+    '<span class="span_menu" onclick="'+str_t+'rare_enwords_search_kltxt_b();">稀有旧单词搜索</span>',
     '<span class="span_menu" onclick="'+str_t+'find_cn_words_kltxt_b();">显示汉字生字</span>',
+    ]);    
+
+    var group_list=[
+    ['⚪ 显示生词','klmenu_check_b(this.id,true);new_words_kltxt_b();',true,'span_show_new_enwords'],
+    ['⚪ 显示旧单词','klmenu_check_b(this.id,true);old_words_kltxt_b();',true,'span_show_old_enwords'],
     ];    
+    menu_general.push(menu_container_b(str_t,group_list,''));
+        
     if (is_local_b()){
         menu_general.push('<span class="span_menu" onclick="'+str_t+'klwiki_link_b(\'KL Reading\',true);">KL Reading</span>');
     }
@@ -316,7 +334,7 @@ function txtmenus_kltxt_b(cstype=''){
     var bljg='';
     var colors=klmenu_b(color_menu,'🎨',(ismobile_b()?'16rem':'20rem'),'',fontsize,'20rem');
     if (cstype!=='digest'){
-        bljg=bljg+klmenu_b(menu_general,'','11rem','',fontsize);
+        bljg=bljg+klmenu_b(menu_general,'','14rem','',fontsize);
         bljg=bljg+klmenu_b(menu_dir,'🔍',menu_dir_width,'',fontsize);
         bljg=bljg+klmenu_b(menu_digest,'🖊','20rem','',fontsize);       
         bljg=bljg+colors;
@@ -330,7 +348,6 @@ function txtmenus_kltxt_b(cstype=''){
         var dmenu_info=[
         '<span class="span_menu" onclick="'+str_t+'date_size_digest();">当前摘要文件日期和大小</span>',    
         '<span class="span_menu" onclick="'+str_t+'date_size_digest(true);">无摘要文件列表</span>',    
-
         '<span class="span_menu" onclick="'+str_t+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>'        
         ];   
         bljg=bljg+klmenu_b(dmenu_info,'🗃','15rem','',fontsize);        
@@ -379,6 +396,11 @@ function wiki_style_kltxt_b(){
     for (let one_span of ospans){
         one_span.outerHTML=one_span.innerHTML;
     }
+}
+
+function frequent_new_enwords_kltxt_b(){
+    document.getElementById('divhtml').innerHTML='<h3>统计中...</h3>';
+    setTimeout(function (){frequency_enwords_book_b('klwiki_en_new');},1);
 }
 
 function klwiki_title_batch_open_kltxt_b(){
@@ -2124,19 +2146,27 @@ function txtsearch_list_kltxt_b(csword,csreg,csmaxlines,start_lineno=0,end_linen
     return result_t;
 }
 
+function rare_enwords_search_kltxt_b(){
+    if (typeof en_sentence_count_global == 'undefined'){return;}
+    var blstr='-eword +\\b('+en_sentence_count_global.join('|')+')\\b';
+    txtsearch_kltxt_b(blstr,true,-1,false);
+}
+
 function txtsearch_kltxt_b(csword='',csreg=-1,cscontinue=-1,add_recent=true){
+    var oinput=document.getElementById('input_search');
+    var oreg=document.getElementById('input_reg');
 	if (csword==''){
-        csword=document.getElementById('input_search').value.trim();
+        csword=oinput.value.trim();
     }
 
 	if (csreg===-1){
-        csreg=document.getElementById('input_reg').checked;
+        csreg=oreg.checked;
     }
 
     [csword,csreg]=str_reg_check_b(csword,csreg);
     
-    document.getElementById('input_search').value=csword;
-    document.getElementById('input_reg').checked=csreg;
+    oinput.value=csword;
+    oreg.checked=csreg;
 
     var oinput_continue=document.getElementById('input_continue');
     if (oinput_continue){
@@ -2895,7 +2925,7 @@ function args_kltxt_b(cskeys){
         }
     }
     recent_search_kltxt_b('',true);
-    load_book_js_code_file_kltxt_b();
+    load_book_js_code_file_kltxt_b();   //载入txt对应js code 文件 - 保留注释
 }
 
 function load_book_js_code_file_kltxt_b(){

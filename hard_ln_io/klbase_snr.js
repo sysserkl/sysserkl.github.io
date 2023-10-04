@@ -20,7 +20,7 @@ function sentence_new_words_klsnews_b(){
     for (let item of ospans){
         list_t.push(item.innerText);
     }
-    get_new_words_arr_enbook_b(2,list_t.join('\n'),ospans,4,true,true,'sentence_check_link_and_style_klsnews_b()');
+    get_new_words_arr_obj_enbook_b(2,list_t.join('\n'),ospans,true,true,'sentence_check_link_and_style_klsnews_b()');
 }
 
 function sentence_check_link_and_style_klsnews_b(){

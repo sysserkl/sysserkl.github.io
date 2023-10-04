@@ -667,7 +667,7 @@ function show_new_words_enwc_b(querystr,ew=true){
     for (let item of ospans){
         list_t.push(item.innerText);
     }
-    get_new_words_arr_enbook_b(2,list_t.join('\n'),ospans,4,true,true,'',ew);
+    get_new_words_arr_obj_enbook_b(2,list_t.join('\n'),ospans,true,true,'',ew);
 }
 
 function word_doms_txt_get_enwc_b(){

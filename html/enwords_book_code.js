@@ -34,7 +34,7 @@ function args_enwords_book(){
                     otextarea.value=new_words_str;
                 }
                 in_all_new_enwords_book();
-                get_new_words_arr_enbook_b(2);
+                get_new_words_arr_set_enbook_b(2);
                 show_enwords_book();
                 break;
             }
@@ -80,8 +80,8 @@ function menu_enwords_book(){
     var str2_t=klmenu_hide_b('#div_new_words2');
     var klmenu1=[
     '<a href="enwords.htm" onclick="'+str_t+'" target=_blank>单词库</a>',
-    '<span class="span_menu" onclick="'+str2_t+'get_new_words_arr_enbook_b(4);">旧单词js_wiki格式</span>',
-    '<span class="span_menu" onclick="'+str2_t+'get_new_words_arr_enbook_b(6);">稀有旧单词js_wiki格式</span>',
+    '<span class="span_menu" onclick="'+str2_t+'get_new_words_arr_set_enbook_b(4);">旧单词js_wiki格式</span>',
+    '<span class="span_menu" onclick="'+str2_t+'get_new_words_arr_set_enbook_b(6);">稀有旧单词js_wiki格式</span>',
     '<span class="span_menu" onclick="'+str2_t+'show_sentence_enwc_b(3,true);">显示少量例句</span>',
     '<span class="span_menu" onclick="'+str_t+'words_sort_count_enwords_book();">单词数量统计排序</span>',
     '<span class="span_menu" onclick="'+str_t+'txtlistsearch_open_enwords_book();">打开当前电子书</span>',
@@ -196,10 +196,10 @@ function new_words_form_enwords_book(){
     var bljg='<p>第一组</p>';
     bljg=bljg+'<textarea id="textarea_new_words1"></textarea>';
     bljg=bljg+'<p>单词：';
-    bljg=bljg+'<span class="aclick" onclick="get_new_words_arr_enbook_b(1);">全部</span> ';
-    bljg=bljg+'<span class="aclick" onclick="get_new_words_arr_enbook_b(2);">新</span> ';
-    bljg=bljg+'<span class="aclick" onclick="get_new_words_arr_enbook_b(3);">旧</span> ';
-    bljg=bljg+'<span class="aclick" onclick="get_new_words_arr_enbook_b(5);">稀有</span> ';
+    bljg=bljg+'<span class="aclick" onclick="get_new_words_arr_set_enbook_b(1);">全部</span> ';
+    bljg=bljg+'<span class="aclick" onclick="get_new_words_arr_set_enbook_b(2);">新</span> ';
+    bljg=bljg+'<span class="aclick" onclick="get_new_words_arr_set_enbook_b(3);">旧</span> ';
+    bljg=bljg+'<span class="aclick" onclick="get_new_words_arr_set_enbook_b(5);">稀有</span> ';
 
     bljg=bljg+'<span class="aclick" onclick="in_all_new_enwords_book(\'include\');">已在全部新单词中的新单词</span> ';        
     bljg=bljg+'<span class="aclick" onclick="in_all_new_enwords_book();">不在全部新单词中的新单词</span> ';    
@@ -444,7 +444,7 @@ function max_length_new_enwords_book(){
 
 function filter_new_enwords_book(){
     day_new_enwords_book(true);
-    get_new_words_arr_enbook_b(2);
+    get_new_words_arr_set_enbook_b(2);
 }
 
 function title_set_enwords_book(){

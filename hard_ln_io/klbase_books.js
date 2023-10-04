@@ -165,7 +165,13 @@ function import_book_js_b(import_digest=true){
         
         txtbook_js_code_file_global='';
         if (book_type.includes('J')){
-            txtbook_js_code_file_global=bookid;
+            var list_t=book_type.match(/J([a-z]+)/) || [];
+            if (list_t.length==2){
+                txtbook_js_code_file_global=list_t[1];            
+            }
+            else {
+                txtbook_js_code_file_global=bookid;
+            }
         }
     }
 }

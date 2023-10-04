@@ -86,7 +86,7 @@ function txtbook_link_b(ospan,bookid){
     }
 }
 
-function new_words_ebs_b(){
+function new_words_ebs_b(is_rare=false){
     var ospans=document.querySelectorAll('div#divhtml span.txt_content');
     var list_t=[];
     var ospans_content=[];
@@ -96,7 +96,7 @@ function new_words_ebs_b(){
         list_t.push(item.innerText);
         ospans_content.push(item);
     }
-    get_new_words_arr_enbook_b(2,list_t.join('\n'),ospans_content,4,true,true);
+    get_new_words_arr_obj_enbook_b((is_rare?5:2),list_t.join('\n'),ospans_content,true,true);
 }
 
 function enwords_array_ebs_b(){

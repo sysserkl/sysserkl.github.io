@@ -41,7 +41,7 @@ function bookmarks_get_bible(only_change_title=false){
 
 function new_words_bible(){
     if (klmenu_check_b('span_show_new_enwords',false)){
-        get_new_words_arr_enbook_b(2,document.getElementById('divhtml').innerText,document.querySelectorAll('.txt_content'),0);
+        get_new_words_arr_obj_enbook_b(2,document.getElementById('divhtml').innerText,document.querySelectorAll('.txt_content'));
     }
 }
 

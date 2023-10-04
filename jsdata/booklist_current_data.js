@@ -1,4 +1,5 @@
 var csbooklist_source_global=[
+["twenty_thousand_leagues_under_the_sautotw_6548","Twenty Thousand Leagues Under the Seas: An Underwater Tour of the World","englishwords,已整理","3",""],
 ["adventures_of_huckleberry_finn_2913", "Adventures of Huckleberry Finn(Mark Twain)","已整理,englishwords","3",""],
 ["essays_of_michel_de_montaigne_c_11799", "Essays of Michel de Montaigne — Complete(Michel de Montaigne)","已整理,englishwords","3",""],
 ["deng_xiao_ping_wen_xuan_dyjqsw_220488", "邓小平文选第一卷(求是网)","已整理","3",""],
@@ -100,7 +101,6 @@ var csbooklist_source_global=[
 ["in_search_of_the_castaways_otcocg_5418","In Search of the Castaways; or the Children of Captain Grant","englishwords,已整理","3",""],
 ["a_journey_to_the_centre_ote_3228","A Journey to the Centre of the Earth","englishwords,已整理","3",""],
 ["the_war_of_the_worlds_whg_2795","The War of the Worlds(Wells,H. G.)","englishwords,幻想,已整理","3",""],
-["twenty_thousand_leagues_under_the_sautotw_6548","Twenty Thousand Leagues Under the Seas: An Underwater Tour of the World","englishwords,已整理","3",""],
 ["jean_christophe_in_paris_the_mpath_5878","Jean Christophe: in Paris The Market-Place, Antoinette, the House, by Romain Rolland","englishwords,已整理","3",""],
 ["jean_christophe_journey_s_end_2721","Jean-Christophe Journey's End, by Romain Rolland","englishwords,已整理","3",""],
 ["jean_christophe_volume_i_mian_fgbs_129538","Jean-Christophe, Volume I, by Romain Rolland","englishwords,已整理","3",""],

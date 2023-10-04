@@ -148,6 +148,9 @@ function args_klsearch(){
                             bltype=same_part1+'collins,wiktionary,'+same_part2;
                         }
                         break;
+                    case 'batch_en_boc':
+                        bltype='Bing(cn),Oxford,Cambridge';
+                        break;
                     case 'batch_en_minor':
                         bltype='AHD,definitions,dictionary.com,learnersdictionary,lexico,longman,Wiktionary(Local),kaikki(Local),wordhippo,wordnik,yourdictionary';
                         break;
