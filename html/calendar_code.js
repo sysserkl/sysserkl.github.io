@@ -194,10 +194,10 @@ function changeCld_cDay_klcalendar(lunar_day){
 }
     
 function changeCld_klcalendar(){
-    var csyear=document.querySelector('#selectyear').selectedIndex+1900;
-    var csmonth=document.querySelector('#selectmonth').selectedIndex;
+    var csyear=document.getElementById('selectyear').selectedIndex+1900;
+    var csmonth=document.getElementById('selectmonth').selectedIndex;
 
-    var yDisplay="";
+    var yDisplay='';
     if (csyear<=1874){}
     else if (csyear<=1908){
         yDisplay = '光绪' + (((csyear-1874)==1)?'元':csyear-1874)+'年';
@@ -211,7 +211,7 @@ function changeCld_klcalendar(){
             yDisplay = yDisplay + ' <font color=pink>新冷战' + (((csyear-2017)==1)?'元':csyear-2017)+'年</font>';
         }
     }
-    document.querySelector('#span_year_name').innerHTML = yDisplay +' '; 
+    document.getElementById('span_year_name').innerHTML = yDisplay +' '; 
 
     var otoday=document.querySelector('.todayColor');
     if (otoday){
@@ -222,13 +222,13 @@ function changeCld_klcalendar(){
     
     var theday=new Date(csyear+'-'+(csmonth+1)+'-01');
 
-    for (let blxl=0;blxl<42;blxl++){
+    for (let blxl=0;blxl<42;blxl++){    //6rows*7cols - 保留注释
         var sObj=document.getElementById('span_td_day'+ blxl);
         var lObj=document.getElementById('span_td_lunar_day'+ blxl);
         sObj.style.borderBottom='';
         
         var sD = blxl - cld_global.firstWeek;
-        if (sD>=0 && sD<cld_global.length) { //日期内
+        if (sD>=0 && sD<cld_global.length){ //日期内
             sObj.innerHTML = sD+1;
 
             var important_list=memo_theday_klcalendar(theday,true);
@@ -287,8 +287,8 @@ function pushBtn_klcalendar(cstype){
         }
     }
     //---------
-    var blyselect=document.querySelector('#selectyear');
-    var blmselect=document.querySelector('#selectmonth');
+    var blyselect=document.getElementById('selectyear');
+    var blmselect=document.getElementById('selectmonth');
     var Today = new Date();
     switch (cstype){
         case 'year-' :
@@ -331,13 +331,16 @@ function pushBtn_klcalendar(cstype){
     if (!cstype==''){
         sub_pushBtn_klcalendar_klinittip('1');
     }
-    else{
+    else {
         sub_pushBtn_klcalendar_klinittip(Today.getDate().toString());
     }
 }
 
 function day_info_klcalendar(td_number=false){
     //显示详细日期资料
+    var osection=document.getElementById('section_history');
+    if (!osection){return;}
+        
     if (td_number===false){
         var sObj=document.getElementById(current_td_global);
     }
@@ -369,7 +372,8 @@ function day_info_klcalendar(td_number=false){
         if (item.match(/^\d{4}年/)==null){continue;}
         bigday_list[blxl]=bigday_list[blxl]+'<small style="color:grey;">('+(theyear-parseInt(item.substring(0,4)))+')</small>';
     }
-    document.getElementById('section_history').innerHTML=blstr+array_2_li_b(bigday_list,'p',false)+array_2_li_b(memo_list,'p',false);
+    
+    osection.innerHTML=blstr+array_2_li_b(bigday_list,'p',false)+array_2_li_b(memo_list,'p',false);
 }
 
 function td_onclick_klcalendar(csid){
@@ -397,7 +401,7 @@ function td_onclick_klcalendar(csid){
     }
 }
 
-function tr_days_klcalendar(){
+function tr_days_klcalendar(otable){
     var gNum;
     var bljg='';
     for (let row=0;row<6;row++){
@@ -406,18 +410,18 @@ function tr_days_klcalendar(){
             gNum = row*7+col;
             //公历
             bljg=bljg+'<td class="td_one_day" nowrap><span onmouseover="day_info_klcalendar(' + gNum +');" onclick="td_onclick_klcalendar(this.id);" id="span_td_day' + gNum +'" class="span_td_day"';
-            if(col==0){
+            if (col==0){
                 bljg=bljg+' color=red';
             }
-            if(col==6){
+            else if (col==6){
                 bljg=bljg+' color=#00D900';
             }
             //农历
-            bljg=bljg+'> </span><br><span id="span_td_lunar_day' + gNum + '" class="span_td_lunar_day"> </span></td>';
+            bljg=bljg+'> </span><br /><span id="span_td_lunar_day' + gNum + '" class="span_td_lunar_day"> </span></td>';
         }
         bljg=bljg+'</tr>\n';
     }
-    document.getElementById('tr_week_name').insertAdjacentHTML('afterend',bljg);
+    otable.querySelector('tr.tr_week_name').insertAdjacentHTML('afterend',bljg);
 }
 
 function memo_form_klcalendar(){
@@ -507,7 +511,7 @@ function menu_klcalendar(){
     '<a href="https://www.baidu.com/s?cl=3&wd=%C8%D5%C0%FA" onclick="'+str_t+'" target=_blank>百度</a>',        
     ];
 
-    document.getElementById('td_head').insertAdjacentHTML('afterbegin',klmenu_b(klmenu1,'公元','14rem'));
+    document.querySelector('td.td_head').insertAdjacentHTML('afterbegin',klmenu_b(klmenu1,'公元','14rem')+' ');
 }
 
 function memo_read_klcalendar(){
@@ -654,11 +658,107 @@ function mdw_str_klcalendar(csstr,csdate=false){
 }
 
 function init_klcalendar(){
+    var otable=document.getElementById('table_one_month');
+
+    week_head_klcalendar(otable);
+    tr_days_klcalendar(otable);
+
+    table_head_klcalendar(otable);
+    ym_buttons_klcalendar(otable);
+    td_xx_klcalendar();
+    section_klcalendar();
+    
+    mouseover_mouseout_oblong_span_b(otable.querySelectorAll('span.oblong_box'));
+    
     menu_klcalendar();
     memo_read_klcalendar();
-    if (!ismobile_b()){
-        var section_height=document.getElementById('td_section').getBoundingClientRect().height;
-        document.getElementById('section_history').style.maxHeight=section_height+'px';
-        document.getElementById('section_history').style.width='45rem';
+}
+
+function ym_buttons_klcalendar(otable){
+    var blstr=`<tr>
+<td colspan=7 nowrap align=right style="background-color:#e0e0e0;font-size:2rem;padding:0.5rem;">
+年<span class="oblong_box span_calendar_button" onclick="pushBtn_klcalendar('year+');">+</span>
+<span class="oblong_box span_calendar_button" onclick="pushBtn_klcalendar('year-');">-</span>
+月<span class="oblong_box span_calendar_button" onclick="pushBtn_klcalendar('month+');">+</span>
+<span class="oblong_box span_calendar_button" onclick="pushBtn_klcalendar('month-');">-</span>
+<span class="oblong_box span_calendar_button" onclick="pushBtn_klcalendar('');">本月</span>
+</td>
+</tr>`;
+    otable.insertAdjacentHTML('beforeend',blstr);
+}
+
+function table_head_klcalendar(otable){
+    var blstr='<tr>';
+    blstr=blstr+'<td class="td_head" colspan=7 align=center nowrap style="font-size:2rem;color:#ffffff;background-color:#4e81bb;padding:0 0.5rem 0.5rem 0.5rem;">';
+    blstr=blstr+'<select id="selectyear" onchange="changeCld_klcalendar();" style="max-width:6.5rem;">';
+    var year_list=[];
+    for (let blyear=1900; blyear<2101; blyear++){
+        year_list.push('<option>'+blyear+'</option>');
     }
+    blstr=blstr+year_list.join('\n');
+    blstr=blstr+'</select> 年';
+    
+    blstr=blstr+'<select id="selectmonth" onchange="changeCld_klcalendar();" style="max-width:5rem;">';
+    var month_list=[];
+    for (let blmonth=1; blmonth<13; blmonth++){
+        month_list.push('<option>'+blmonth+'</option>');
+    }
+    blstr=blstr+month_list.join('\n');
+    blstr=blstr+'</select> 月 ';
+    
+    blstr=blstr+'<span id="span_year_name"></span><a href="https://cn.bing.com/search?q=%E6%97%A5%E5%8E%86" target=_blank>Bing</a>';
+    blstr=blstr+'</td>';
+    blstr=blstr+'</tr>';
+    otable.insertAdjacentHTML('afterbegin',blstr);    
+}
+
+function week_head_klcalendar(otable){
+    var blstr=`<tr class="tr_week_name" align=center bgcolor=#e0e0e0>
+<td class="tdweek" nowrap><font color=red><b>日</b></font></td>
+<td class="tdweek" nowrap><b>一</b></td>
+<td class="tdweek" nowrap><b>二</b></td>
+<td class="tdweek" nowrap><b>三</b></td>
+<td class="tdweek" nowrap><b>四</b></td>
+<td class="tdweek" nowrap><b>五</b></td>
+<td class="tdweek" nowrap><font color=#00d900><b>六</b></font></td>
+</tr>`;
+    otable.insertAdjacentHTML('afterbegin',blstr);    
+}
+
+function td_xx_klcalendar(){
+    var blstr='<tr>';
+    if (ismobile_b()){
+        blstr=blstr+'<td id="td_xx">';
+    }
+    else {
+        blstr=blstr+'<td colspan=2 id="td_xx">';
+    }
+    blstr=blstr+'</td>';
+    blstr=blstr+'</tr>';
+    document.getElementById('table_container').insertAdjacentHTML('beforeend',blstr);    
+}
+
+function section_klcalendar(){
+    var ocontainer=document.getElementById('table_container');
+    var blstr=`<td id="td_section" valign=top style="background-color:#CFFDCF;border:0.05rem dashed #4E81BB;">
+<section id="section_history"></section>
+</td>`;
+
+    var is_mobile=ismobile_b();
+    if (is_mobile){
+        ocontainer.style.width='100%';
+        var bltype='afterend';
+        blstr='<tr>'+blstr+'</tr>';
+    }
+    else {
+        var bltype='beforeend';
+    }
+    ocontainer.querySelector('tr').insertAdjacentHTML(bltype,blstr);
+
+    if (!is_mobile){
+        var section_height=document.getElementById('td_section').getBoundingClientRect().height;
+        var ohistory=document.getElementById('section_history');
+        ohistory.style.maxHeight=section_height+'px';
+        ohistory.style.width='45rem';
+    }    
 }
