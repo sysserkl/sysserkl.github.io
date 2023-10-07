@@ -45,6 +45,11 @@ var cld_global={};
 var current_td_global=false;
 var memo_list_global=[];
 var memo_list_important_global=[];
+var memo_bg_enabled_klcalendar_global=false;
+var bgcolor_klcalendar_global=['skyblue','tomato','yellow','pink','green'];
+var memo_range_klcalendar_global=[''];
+var ym_range_klcalendar_global='';
+var bgcolor_index_klcalendar_global=0;
 var scheme_global={};
 scheme_generation_b();
 css_root_style_b('13','6.8',['base','menu']);
@@ -66,6 +71,7 @@ li{font-size:1.5rem;}
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 </head>
 <body>
+<div id="div_head" style="margin:1rem;"></div>
 <div id="divhtml">
 </div>
 <div id="div_memo" style="margin:1rem;"></div>

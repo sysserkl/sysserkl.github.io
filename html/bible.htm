@@ -10,6 +10,7 @@ klbase_addons_import_js_b(['css','date','eng','enbook','en_de_str'],[],['words/e
 <link rel="manifest" href="bible.webmanifest" />
 <script>
 var chapter_global=[];
+var chapter_sub_global=[];
 var current_search_no_global=new Set();
 var use_kjv_cn_global=[true,true];
 var kjv=[];
@@ -57,6 +58,7 @@ if (ismobile_b(true)=='mobile'){
 <div id="div_status" style="font-size:0.8rem;margin:0.5rem;">
 <span id="span_status" style="cursor:pointer;" ondblclick="this.innerHTML='';"></span>
 <select id="select_outside_links" onchange="web_site_open_bible(this.value);"></select>
+<span id="span_is_readed_bible" class="span_box" onclick="read_set_bible();"></span>
 </div>
 <script>
 document.getElementById('span_status').style.color=scheme_global['memo'];

@@ -210,7 +210,7 @@ function dict_generate_klcalendar(ymkey,csyear,csmonth){
     return cld_global[ymkey];
 }
 
-function changeCld_klcalendar(odom,hide_empty_row=true){
+function changeCld_klcalendar(odom,hide_empty_row=true,legend_dict={}){
     odom=table_find_klcalendar(odom,'select','select.select_year, select.select_month');
     var csyear, csmonth;
     [csyear, csmonth]=year_month_get_klcalendar(odom);
@@ -245,14 +245,40 @@ function changeCld_klcalendar(odom,hide_empty_row=true){
         var sObj=odom.querySelector('.span_td_day'+ blxl);
         var lObj=odom.querySelector('.span_td_lunar_day'+ blxl);
         sObj.style.borderBottom='';
+        sObj.style.backgroundColor='';
         
         var sD = blxl - cld_global[ymkey].firstWeek;
         if (sD>=0 && sD<cld_global[ymkey].length){ //日期内
             sObj.innerHTML = sD+1;
-
-            var important_list=memo_theday_klcalendar(theday,true);
-            if (important_list.length>0){
-                sObj.style.borderBottom='0.2rem dotted red';
+            
+            var check_important=true;
+            if (memo_range_klcalendar_global[0]!==false && memo_range_klcalendar_global[1]!==false){
+                if (theday<memo_range_klcalendar_global[0] || theday>memo_range_klcalendar_global[1]){
+                    check_important=false;
+                }
+            }
+            if (check_important){
+                var important_list=memo_theday_klcalendar(theday,true,false);
+                if (sObj.innerText.trim()!=='' && important_list.length>0){
+                    var legend_key='m_'+important_list[0];
+                    if (legend_dict[legend_key]==undefined){                
+                        var bgcolor=bgcolor_klcalendar_global[bgcolor_index_klcalendar_global];
+                        bgcolor_index_klcalendar_global=bgcolor_index_klcalendar_global+1;
+                        if (bgcolor_index_klcalendar_global>=bgcolor_klcalendar_global.length){
+                            bgcolor_index_klcalendar_global=0;
+                        }
+                        legend_dict[legend_key]=[bgcolor,important_list[0]];                        
+                    }
+                    else {
+                        var bgcolor=legend_dict[legend_key][0];
+                    }
+                    if (memo_bg_enabled_klcalendar_global){
+                        sObj.style.backgroundColor=bgcolor;
+                    }
+                    else {
+                        sObj.style.borderBottom='0.2rem dotted '+bgcolor;
+                    }
+                }
             }
             theday.setTime(theday.getTime()+24*60*60*1000);
 
@@ -296,6 +322,7 @@ function changeCld_klcalendar(odom,hide_empty_row=true){
         }
     }
     td_onclick_klcalendar(current_td_global);
+    return legend_dict;
 }
 
 function table_find_klcalendar(odom,cstagname,querystr,table_class='table_one_month'){
@@ -460,7 +487,7 @@ function td_onclick_klcalendar(otd_clicked){
     current_td_global=otd_clicked;
     
     if (otd_clicked.style.backgroundColor==''){
-        otd_clicked.style.backgroundColor='skyblue';
+        otd_clicked.style.backgroundColor=bgcolor_klcalendar_global[0];
     }
     else {
         otd_clicked.style.backgroundColor='';
@@ -496,8 +523,8 @@ function memo_form_klcalendar(){
 	var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php" name="form_memo_klcalendar" target=_blank>\n';
     bljg=bljg+'<textarea name="textarea_memo_klcalendar" id="textarea_memo_klcalendar" style="height:20rem;font-size:1.1rem;">'+memo_list.join('\n')+'</textarea>';
     bljg=bljg+'<p>';
-    bljg=bljg+'<span class="aclick" style="font-size:1.5rem;" onclick="document.getElementById(\'div_memo\').innerHTML=\'\';">关闭</span> ';    
-    bljg=bljg+'<span class="aclick" style="font-size:1.5rem;" onclick="memo_update_klcalendar();">更新</span> ';    
+    bljg=bljg+'<span class="aclick" style="font-size:1.5rem;" onclick="document.getElementById(\'div_memo\').innerHTML=\'\';">Close</span> ';    
+    bljg=bljg+'<span class="aclick" style="font-size:1.5rem;" onclick="memo_update_klcalendar();">Update</span> ';    
     bljg=bljg+textarea_buttons_b('textarea_memo_klcalendar','清空,复制,发送到临时记事本,发送地址','',' style="font-size:1.5rem;"');
     bljg=bljg+' 行数：<span id="span_line_count">'+memo_list.length+'</span>';
     bljg=bljg+'</p>';
@@ -520,7 +547,7 @@ function memo_update_klcalendar(){
         var raw_str=item;
         try {
             if (item.match(/^\d+,\s*\d+,\s*"/)==null){  //如果数字之后不含英文双引号 - 保留注释
-                item=item.replace(new RegExp(/^(\d+,\s*\d+,\s*)(.*)$/,'g'),'$1"$2"');
+                item=item.replace(/^(\d+,\s*\d+,\s*)(.*)$/g,'$1"$2"');
             }
             item=eval('['+item+']');    
         }
@@ -571,16 +598,57 @@ function memo_help_klcalendar(){
 
 }
 
-function menu_klcalendar(otable){
+function menu_klcalendar(otable=false,query_str='td.td_head',cscaption='公元'){
     var str_t=klmenu_hide_b('');
+    var parent_str=menu_parent_node_b(str_t);
+    
     var klmenu1=[
+    '<span id="span_memo_bg_klcalendar" class="span_menu" onclick="'+str_t+'memo_bg_enabled_klcalendar_global=klmenu_check_b(this.id,true);">⚪ Memo标注背景色</span>',        
     '<span class="span_menu" onclick="'+str_t+'memo_form_klcalendar();">Memo 编辑</span>',    
     '<span class="span_menu" onclick="'+str_t+'memo_help_klcalendar();">Memo Demo</span>',
-    '<span class="span_menu" onclick="'+str_t+'year12_klcalendar();">年历</span>',
-    '<a href="https://www.baidu.com/s?cl=3&wd=%C8%D5%C0%FA" onclick="'+str_t+'" target=_blank>百度</a>',        
+    '<span class="span_menu" onclick="'+str_t+'year_klcalendar();">年历</span>',
+    '<span class="span_menu">背景色系列：<input type="text" id="input_bgcolor_klcalendar" value="'+bgcolor_klcalendar_global.join(',')+'" /> <span class="aclick" onclick="'+parent_str+'bgcolor_set_klcalendar();">设置</span></span>',
+    '<span class="span_menu">Memo起止日期：<input type="text" id="input_memo_range_klcalendar" value="'+date2str_b('',memo_range_klcalendar_global[0])+'-'+date2str_b('',memo_range_klcalendar_global[1])+'" /> <span class="aclick" onclick="'+parent_str+'memo_range_set_klcalendar();">设置</span></span>',    
+    '<a href="https://www.baidu.com/s?cl=3&wd=%C8%D5%C0%FA" onclick="'+str_t+'" target=_blank>百度</a>',
     ];
+    
+    var bljg=klmenu_b(klmenu1,cscaption,'18rem')+' ';
+    if (otable){
+        otable.querySelector(query_str).insertAdjacentHTML('afterbegin',bljg);
+    }
+    else {
+        document.querySelector(query_str).insertAdjacentHTML('afterbegin',bljg);    
+    }
+}
 
-    otable.querySelector('td.td_head').insertAdjacentHTML('afterbegin',klmenu_b(klmenu1,'公元','14rem')+' ');
+function bgcolor_set_klcalendar(){
+    var oinput=document.getElementById('input_bgcolor_klcalendar');
+    if (!oinput){return;}
+    var blstr=oinput.value.trim();
+    if (blstr==''){return;}
+    bgcolor_klcalendar_global=blstr.split(',');
+}
+
+function memo_range_set_klcalendar(is_init=false){
+    if (is_init){
+        var list_t=memo_range_klcalendar_global;
+    }
+    else {
+        var oinput=document.getElementById('input_memo_range_klcalendar');
+        if (!oinput){return;}
+        var blstr=oinput.value.trim();
+        if (blstr==''){return;}
+        var list_t=blstr.split('-');
+    }
+    
+    list_t[0]=validdate_b(list_t[0]);
+
+    if (list_t.length==1){
+        list_t.push(next_day_b(list_t[0],365,false));
+    }
+        
+    list_t[1]=validdate_b(list_t[1]);
+    memo_range_klcalendar_global=list_t;
 }
 
 function memo_read_klcalendar(){
@@ -592,18 +660,20 @@ function memo_read_klcalendar(){
         if (item=='' || item.substring(0,1)=='#'){continue;}
         var list_t=item.split(',');
         if (list_t.length<3){continue;}
-        list_t[0]=list_t[0].trim();
-        list_t[1]=list_t[1].trim();
+        
+        list_t[0]=parseInt(list_t[0].trim());
+        list_t[1]=parseInt(list_t[1].trim());
         if (isNaN(list_t[0]) || isNaN(list_t[1])){continue;}
-        blstr=list_t.slice(2,).join(',');
-        memo_list_global.push([parseInt(list_t[0]),parseInt(list_t[1]),blstr]);
-        if (blstr.substring(0,1)=='*'){
-            memo_list_important_global.push([parseInt(list_t[0]),parseInt(list_t[1]),blstr]);
+        
+        blstr=list_t.slice(2,).join(',');   //避免 (w,5-7) 之类被分割 - 保留注释
+        memo_list_global.push([list_t[0],list_t[1],blstr]);
+        if (list_t[2].substring(0,1)=='*'){
+            memo_list_important_global.push([list_t[0],list_t[1],blstr]);   
         }
     }
 }
 
-function memo_theday_klcalendar(csdate=false,is_important=false){
+function memo_theday_klcalendar(csdate=false,is_important=false,with_hm=true){
     if (csdate===false){
         csdate=new Date();
     }
@@ -615,18 +685,22 @@ function memo_theday_klcalendar(csdate=false,is_important=false){
     else {
         var list_t=memo_list_global;
     }
-    for (let item of list_t){
+    
+    for (let blxl=0;blxl<list_t.length;blxl++){
+        var item=list_t[blxl];
         blstr=item[2];
         while (true){
-            [blstr,blpd]=mdw_str_klcalendar(blstr,csdate);
-            if (blpd===false){
-                break;
-            }
-            else if (blpd===null){
+            [blstr,blpd]=memo_mdw_str_klcalendar(blstr,csdate);
+            if (blpd===false){break;}
+            
+            if (blpd===null){
                 if (blstr.substring(0,1)=='*'){
                     blstr='<b>'+blstr.substring(1,)+'</b>';
                 }
-                result_t.push(('00'+item[0]).slice(-2,)+':'+('00'+item[1]).slice(-2,)+' '+blstr);
+                if (with_hm){
+                    blstr=('00'+item[0]).slice(-2,)+':'+('00'+item[1]).slice(-2,)+' '+blstr;
+                }
+                result_t.push(blstr);
                 break;
             }
         }
@@ -642,10 +716,10 @@ function memo_theday_klcalendar(csdate=false,is_important=false){
     //csdate.setTime(csdate.getTime()+24*60*60*1000);   
 }
 
-function mdw_str_klcalendar(csstr,csdate=false){
+function memo_mdw_str_klcalendar(csstr,csdate=false){
     //AAA(l33)(m,10-12,1-3)(w,1-3,5) - 保留注释
     //XXXXXX(d,24,25,26) - 保留注释
-    function sub_mdw_str_klcalendar_min_max(date_list,date_value){
+    function sub_memo_mdw_str_klcalendar_min_max(date_list,date_value){
         var blmin;
         var blmax;    
         for (let one_element of date_list){
@@ -659,6 +733,11 @@ function mdw_str_klcalendar(csstr,csdate=false){
         return false;
     }
     //--------------------------------
+    var s_list=csstr.match(/,s,(\d+),(\d+)[,\-]\s*(\d+)[,\-]\s*(\d+)$/) || [];
+    if (s_list.length==5){
+        csstr=csstr.replace(/,s,(\d+),(\d+)[,\-]\s*(\d+)[,\-]\s*(\d+)$/,'(s,$1,$2-$3-$4)');
+    }
+    
     var list_t=csstr.match(/\([wdms],\d+.*?\)/g);
     if (list_t==null){
         return [csstr,null];
@@ -666,99 +745,121 @@ function mdw_str_klcalendar(csstr,csdate=false){
     if (csdate===false){
         csdate=new Date();
     }
+
+    var blpd={'d':null,'m':null,'w':null,'s':null};
     for (let item of list_t){
         csstr=csstr.replace(item,'');
         date_list=item.slice(1,-1).split(',');
         switch (date_list[0]){
             case 'd':
                 var theday=csdate.getDate();
-                if (date_list.includes(theday.toString())){
-                    return [csstr,true];
-                }
-                if (sub_mdw_str_klcalendar_min_max(date_list,theday)){
-                    return [csstr,true];
-                }
+                blpd['d']=date_list.includes(theday.toString()) || sub_memo_mdw_str_klcalendar_min_max(date_list,theday);
                 break;
             case 'm':
                 var themonth=(csdate.getMonth()+1);
-                if (date_list.includes(themonth.toString())){
-                    return [csstr,true];
-                }               
-                if (sub_mdw_str_klcalendar_min_max(date_list,themonth)){
-                    return [csstr,true];
-                }                 
+                blpd['m']=date_list.includes(themonth.toString()) || sub_memo_mdw_str_klcalendar_min_max(date_list,themonth);            
                 break;
             case 'w':
                 var theweek=csdate.getDay();
-                if (date_list.includes(theweek.toString())){
-                    return [csstr,true];
-                }   
-                if (sub_mdw_str_klcalendar_min_max(date_list,theweek)){
-                    return [csstr,true];
-                }
-                
                 if (theweek==0){
                     theweek=7;
                 }
-                if (date_list.includes(theweek.toString())){
-                    return [csstr,true];
-                }   
-                if (sub_mdw_str_klcalendar_min_max(date_list,theweek)){
-                    return [csstr,true];
-                }                
+                blpd['w']=date_list.includes(theweek.toString()) || sub_memo_mdw_str_klcalendar_min_max(date_list,theweek);
                 break;
             case 's':
+                blpd['s']=false;
                 if (date_list.length==3){
                     var interval_days=date_list[1];
                     if (!isNaN(interval_days)){
                         interval_days=parseInt(interval_days);
                         var startday=validdate_b(date_list[2]);
                         if (interval_days>0 && startday!==false){
-                            if (0==Math.floor((csdate-startday)/86400000) % interval_days){
-                                return [csstr,true];
-                            }
+                            blpd['s']=(0==Math.floor((csdate-startday)/86400000) % interval_days);
                         }
                     }
                 }
                 break;
         }
     }
-    return [csstr,false];
+    
+    var is_all_null=false;
+    var blfound_false=false;
+    for (let key in blpd){
+        if (blpd[key]!==null){
+            is_all_null=false;
+        }
+        
+        if (blpd[key]===false){
+            blfound_false=true;
+            break;
+        }
+    }
+    return [csstr,(!blfound_false && !is_all_null)];
 }
 
 function init_klcalendar(){
+    memo_read_klcalendar();
+    memo_range_set_klcalendar(true);
+    
     var odiv=document.getElementById('divhtml');
     var ocontainer,otable;
     [ocontainer,otable]=month_generate_klcalendar(odiv);
+    
     pushBtn_klcalendar('today',otable);
     menu_klcalendar(otable);
-    memo_read_klcalendar();
 }
 
-function year12_klcalendar(){
-    var blyear=(prompt('输入年份',new Date().getFullYear()) || '').trim();
-    if (blyear==''){return;}
+function year_klcalendar(){
+    if (ym_range_klcalendar_global==''){
+        var ym_start=date2str_b('-').substring(0,4)+'-01';
+        var ym_end=next_month_b(ym_start,11);
+        ym_range_klcalendar_global=ym_start+' '+ym_end;
+    }
+    var blrange=(prompt('输入起止年月',ym_range_klcalendar_global) || '').trim();
+    if (blrange==''){return;}
+    ym_range_klcalendar_global=blrange;
+    
+    var list_t=blrange.split(' ');
+    if (list_t.length==1){
+        list_t.push(list_t[0]);
+    }
     
     var section_info=confirm('是否显示信息栏？');
     document.getElementById('divhtml').innerHTML='';
-    months_klcalendar(blyear+'-01',blyear+'-12',section_info);
+    var ohead=document.getElementById('div_head');
+    ohead.innerHTML='';
+    menu_klcalendar(false,query_str='#div_head','Legend');    
+    var legend_set=months_klcalendar(list_t[0],list_t[1],section_info);
+    ohead.insertAdjacentHTML('beforeend','<span style="font-size:1.35rem;">'+Array.from(legend_set).join(' ')+'</span>');
 }
 
 function months_klcalendar(start_ym,end_ym,section_info=true){
     //start_ym, end_ym: 2018-11 - 保留注释
+    bgcolor_index_klcalendar_global=0;  //初始化背景色序号 - 保留注释
     var current_ym=start_ym;
     var blxl=0;
     var odiv=document.getElementById('divhtml');
     var ocontainer,otable;
     var ocontainer_list=[];
+    var legend_set=new Set();
+    var legend_dict={};
     while (true){
         if (current_ym>end_ym || blxl>2400){break;}
         var list_t=current_ym.split('-');
+        if (list_t.length!==2){break;}
+        
         var blyear=parseInt(list_t[0]);
         var blmonth=parseInt(list_t[1]);
+        if (isNaN(blyear) || isNaN(blmonth)){break;}
+        
         [ocontainer,otable]=month_generate_klcalendar(odiv,blyear,blyear,blmonth,blmonth,false,false,section_info);
         ocontainer_list.push(ocontainer);
-        changeCld_klcalendar(otable,false);
+        var dict_t=changeCld_klcalendar(otable,false,legend_dict);
+        for (let key in dict_t){
+            legend_dict[key]=dict_t[key];
+            legend_set.add('<span style="border: 0.5rem solid '+dict_t[key][0]+'">'+dict_t[key][1]+'</span>');
+        }
+        
         display_date_info_klcalendar(otable,'1');    
         
         current_ym=next_month_b(current_ym);
@@ -770,6 +871,7 @@ function months_klcalendar(start_ym,end_ym,section_info=true){
         one_container.style.float='left';
         one_container.minWidth='';
     }
+    return legend_set;
 }
 
 function month_generate_klcalendar(odiv,year_min=1900,year_max=2100,month_min=1,month_max=12,ym_buttons=true,td_xx=true,section_info=true){
@@ -817,7 +919,7 @@ function table_head_klcalendar(otable,year_min=1900,year_max=2100,month_min=1,mo
         year_list.push('<option>'+blyear+'</option>');
     }
     blstr=blstr+year_list.join('\n');
-    blstr=blstr+'</select> 年';
+    blstr=blstr+'</select> 年 ';
     
     blstr=blstr+'<select class="select_month" onchange="changeCld_klcalendar(this);" style="max-width:5rem;">';
     var month_list=[];

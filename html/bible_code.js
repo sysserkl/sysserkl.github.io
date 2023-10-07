@@ -24,8 +24,7 @@ function bookmarks_get_bible(only_change_title=false){
     if (!bm.includes(' /// ')){
         return ['',''];
     }
-    var blchapter;
-    var blsub;
+    var blchapter, blsub;
     [blchapter,blsub]=bm.split(' /// ');
     if (only_change_title){
         return [blchapter,blsub];
@@ -407,28 +406,40 @@ function init_bible(){
     }
 }
 
-function reading_statistics_bible(cssub=-1,do_alert=true){
+function all_sub_chapters_bible(){
+    if (chapter_sub_global.length!==0){return;}
+
+    for (let blxl=0;blxl<kjv.length;blxl++){
+        var item=kjv[blxl];
+        if (item.substring(0,4)=='=== ' && item.slice(-4,)==' ==='){
+            chapter_sub_global.push(blxl);
+        }
+    }
+}
+
+function current_sub_chapter_index_bible(cssub=-1){
     if (cssub==-1){
         cssub=parseInt(document.getElementById('select_sub').value);
     }
     if (isNaN(cssub) || cssub<0){
-        return '';
+        return -1;
     }
-    var list_t=[];
-    for (let blxl=0;blxl<kjv.length;blxl++){
-        var item=kjv[blxl];
-        if (item.substring(0,4)=='=== ' && item.slice(-4,)==' ==='){
-            list_t.push(blxl);
-        }
-    }
-    var blno=list_t.indexOf(cssub);
+    
+    all_sub_chapters_bible();
+    return chapter_sub_global.indexOf(cssub);
+}
+
+function reading_statistics_bible(cssub=-1,do_alert=true){
+    var blno=current_sub_chapter_index_bible(cssub);
+    if (blno==-1){return '';}
+    
     var remained_days=days_remained_of_year_b();
-    var remained_chapters=list_t.length-blno;
+    var remained_chapters=chapter_sub_global.length-blno;
     var chapters_per_day=remained_chapters/remained_days;
     
-    var bljg='今年剩余天数 '+remained_days+ ' 天。\n全书共有 '+list_t.length+' 章，'+kjv.length+' 行。\n';
+    var bljg='今年剩余天数 '+remained_days+ ' 天。\n全书共有 '+chapter_sub_global.length+' 章，'+kjv.length+' 行。\n';
     bljg=bljg+'当前章'+kjv[cssub].replace('=== ','【').replace(' ===','')+'・'+cnbible_global[cssub].replace('=== ','').replace(' ===','】');
-    bljg=bljg+' 为第 '+(blno+1)+' 章('+((blno+1)*100/list_t.length).toFixed(1)+'%)。\n当前为第 '+(cssub+1)+' 行('+((cssub+1)*100/kjv.length).toFixed(2)+'%)。\n今年年底完成阅读需要 '+chapters_per_day.toFixed(1) +' 章/天，';
+    bljg=bljg+' 为第 '+(blno+1)+' 章('+((blno+1)*100/chapter_sub_global.length).toFixed(1)+'%)。\n当前为第 '+(cssub+1)+' 行('+((cssub+1)*100/kjv.length).toFixed(2)+'%)。\n今年年底完成阅读需要 '+chapters_per_day.toFixed(1) +' 章/天，';
     bljg=bljg+'或 '+((kjv.length-cssub)/remained_days).toFixed(2) +' 行/天。';
     
     var chapters_per_day_ceil=Math.ceil(chapters_per_day);
@@ -1060,10 +1071,10 @@ function book_bible(csstr,isalone=false){
                 var okjv=document.getElementById('td_kjv_'+blxl);
                 var ocn=document.getElementById('td_cn_'+blxl);
                 if (okjv){
-                    okjv.style.backgroundColor=scheme_global["pink"];
+                    okjv.style.backgroundColor=scheme_global['pink'];
                 }
                 if (ocn){
-                    ocn.style.backgroundColor=scheme_global["skyblue"];            
+                    ocn.style.backgroundColor=scheme_global['skyblue'];
                 }
             }
         }
@@ -1221,39 +1232,122 @@ function rand_chapter_list_bible(){
     minor_options_bible(chapter_global[rndchapter][0],true);
 }
 
+function main_with_sub_check_bible(){
+    function sub_main_with_sub_check_bible_one(){
+        var blkey='m_'+main_row_no;
+        if (dict_t[blkey]==undefined){
+            console.log('未发现key2 :'+blkey);
+        }
+        else if (dict_t[blkey].toString()!==sub_list.toString()){
+            console.log('sub 不一致：', blkey,dict_t[blkey],sub_list);
+        }    
+    }
+    //------------------------------
+    //检验 main_with_sub_check_bible() 是否正确 - 保留注释
+    var dict_t=main_with_sub_chapters_bible();
+    var keys=Object.keys(dict_t);
+    if (keys.length!==chapter_global.length){
+        console.log('dict 元素个数错误');
+    }
+    
+    for (let item of chapter_global){
+        var blkey='m_'+item[0];
+        if (dict_t[blkey]==undefined){
+            console.log('未发现key1 :'+blkey);
+            continue;
+        }
+    }
+
+
+    var main_row_no=-1;
+    var sub_list=[];
+    for (let blxl=0;blxl<kjv.length;blxl++){
+        if (kjv[blxl].substring(0,4)=='=== ' && kjv[blxl].slice(-4,)==' ==='){
+            sub_list.push(blxl);
+        }
+        else if (kjv[blxl].substring(0,3)=='== ' && kjv[blxl].slice(-3,)==' =='){
+            if (sub_list.length>0){
+                sub_main_with_sub_check_bible_one();
+            }
+            main_row_no=blxl;
+            sub_list=[];
+        }
+    }
+    
+    if (sub_list.length>0){
+        sub_main_with_sub_check_bible_one();
+    }
+    
+    console.log('检查完毕');
+}
+
+function main_with_sub_chapters_bible(main_line_no=false){
+    all_sub_chapters_bible();
+    
+    var blend=-1;
+    var line_no_list=[].concat(chapter_sub_global);
+    var main_no_list=[];
+    for (let item of chapter_global){
+        line_no_list.push(item[0]);
+        main_no_list.push(item[0]);
+    }
+    
+    line_no_list.sort(function (a,b){return a>b;});
+    
+    if (main_line_no===false){
+        var result_t={};
+        for (let blxl=0;blxl<main_no_list.length-1;blxl++){
+            var blat1=line_no_list.indexOf(main_no_list[blxl]);
+            var blat2=line_no_list.indexOf(main_no_list[blxl+1]);
+            result_t['m_'+main_no_list[blxl]]=line_no_list.slice(blat1+1,blat2);
+        }    
+
+        var blat1=line_no_list.indexOf(main_no_list[main_no_list.length-1]);
+        result_t['m_'+main_no_list[main_no_list.length-1]]=line_no_list.slice(blat1+1,);
+        return result_t;
+    }
+    else {
+        main_line_no=parseInt(main_line_no);
+        var blat1=line_no_list.indexOf(main_line_no);
+    
+        var blxl=main_no_list.indexOf(main_line_no);
+        if (blxl<main_no_list.length-1){
+            var blat2=line_no_list.indexOf(main_no_list[blxl+1]);        
+            return line_no_list.slice(blat1+1,blat2);
+        }
+        else {
+            return line_no_list.slice(blat1+1,);        
+        }
+    }
+}
+
 function minor_options_bible(csno=0,csrnd=false){
     if (csno==-1){
         document.getElementById('divhtml').innerHTML='';
         return;
     }
-    if (kjv.length==0 || cnbible_global.length==0){
-        return;
-    }
+    if (kjv.length==0 || cnbible_global.length==0){return;}
+    
     var item=kjv[csno];
-    if (item.substring(0,3)!=='== ' || item.slice(-3,)!==' =='){
-        return;
-    }
+    if (item.substring(0,3)!=='== ' || item.slice(-3,)!==' =='){return;}
+    
+    var line_no_list=main_with_sub_chapters_bible(csno);
+
     var enname=item.substring(3,item.length-3);
     var bljg='';
-    var list_t=[];
-    for (let blxl=parseInt(csno)+1;blxl<kjv.length;blxl++){
-        if (kjv[blxl].substring(0,4)=='=== ' && kjv[blxl].slice(-4,)==' ==='){
-            bljg=bljg+'<option value='+blxl+'>'+kjv[blxl].substring(4,kjv[blxl].length-4).replace(enname,'')+'</option>\n';
-            list_t.push(blxl);
-            continue;
-        }
-        if (kjv[blxl].substring(0,3)=='== ' && kjv[blxl].slice(-3,)==' =='){
-            break;
-        }
+    for (let blxl of line_no_list){
+        bljg=bljg+'<option value='+blxl+'>'+kjv[blxl].substring(4,kjv[blxl].length-4).replace(enname,'')+'</option>\n';
     }
+    
     document.getElementById('select_sub').innerHTML=bljg;
     document.getElementById('select_end_sub').innerHTML='<option value="-1"></option>'+bljg;
-    if (list_t.length>0){
+    
+    if (line_no_list.length>0){
         if (csrnd){
-            list_t.sort(randomsort_b);
+            line_no_list.sort(randomsort_b);
         }
-        document.getElementById('select_sub').value=list_t[0];
-        chapter_one_bible(list_t[0]);
+        document.getElementById('select_sub').value=line_no_list[0];
+        chapter_one_bible(line_no_list[0]);
     }
 }
 
@@ -1338,14 +1432,68 @@ function chapter_one_bible(startno=0,endno=0){
         var oselect=document.getElementById('select_outside_links');
         var bljg=['<option></option>'];
         var book_no=line_no_2_book_no(startno);
-        var chapter_no=parseInt(kjv[startno].replace(new RegExp(/^.*\s(\d+)\s===$/,'g'),'$1'))-1;
+        var chapter_no=parseInt(kjv[startno].replace(/^.*\s(\d+)\s===$/g,'$1'))-1;
         for (let key of web_sites_keys_bible()){
             bljg.push('<option value="'+book_no+','+chapter_no+','+key+'">'+key+'</option>');
         }
         oselect.innerHTML=bljg.join('\n');
     }
-
+    
+    var ospan=document.getElementById('span_is_readed_bible');
+    if (startno==endno || endno==0){
+        var is_readed=read_get_bible(startno);
+        if (is_readed!==-1){
+            ospan.innerText='⚪ 已读';
+            if (is_readed=='1'){
+                klmenu_check_b('span_is_readed_bible',true);
+            }
+        }
+    }
+    else {
+        ospan.innerText='';
+    }
     new_words_bible();
+}
+
+function read_all_unread_bible(){
+    var rndstr=randstr_b(4,true,false);
+    if ((prompt('输入 '+rndstr+' 确认设置全部章节未读') || '').trim()!==rndstr){return;} 
+    localStorage.setItem('bible_chapter_readed','');
+    alert('done');
+}
+
+function read_get_bible(line_no=-1){
+    var chapters=local_storage_get_b('bible_chapter_readed').split('');
+    if (chapters.length==''){
+        chapters='0'.repeat(chapter_sub_global.length);
+        localStorage.setItem('bible_chapter_readed',chapters);
+        chapters=chapters.split('');
+    }
+    
+    if (line_no==-1){
+        return chapters;
+    }
+    else {
+        var blno=current_sub_chapter_index_bible(line_no);
+        if (blno==-1){return -1;}
+        else {    
+            return chapters[blno];
+        }
+    }
+}
+
+function read_set_bible(){
+    var csvalue=(klmenu_check_b('span_is_readed_bible',true)?'1':'0');
+    
+    var blno=current_sub_chapter_index_bible();
+    if (blno==-1){
+        klmenu_check_b('span_is_readed_bible',true);
+        return;
+    }
+    
+    var chapters=read_get_bible(-1);
+    chapters[blno]=csvalue;
+    localStorage.setItem('bible_chapter_readed',chapters.join(''));    
 }
 
 function fav_init_bible(){
@@ -1602,8 +1750,8 @@ function chapter_list_bible(){
             chapter_global.push([blxl,item.substring(3,item.length-3),cnbible_global[blxl].substring(3,cnbible_global[blxl].length-3),0]);
         }
         if (item.substring(0,4)=='=== ' && item.slice(-4,)==' ==='){
-            var chapter_minor_name_current=item.replace(new RegExp(/^=== (.*?) (\d*) ===$/,'g'),'$1');
-            var chapter_minor_count_current=item.replace(new RegExp(/^=== (.*?) (\d*) ===$/,'g'),'$2');
+            var chapter_minor_name_current=item.replace(/^=== (.*?) (\d*) ===$/g,'$1');
+            var chapter_minor_count_current=item.replace(/^=== (.*?) (\d*) ===$/g,'$2');
             if (chapter_minor_name_current==chapter_minor_name_old){
                 chapter_minor_count_old=chapter_minor_count_current;
             }
@@ -1925,24 +2073,81 @@ function web_sites_href_list_bible(website_name){
     document.getElementById('divhtml').innerHTML='<h3 style="margin:0.5rem;">'+website_name+'</h3><div style="margin:0.5rem;column-count:4;line-height:'+(ismobile_b()?'180':'220')+'%;">'+result_t.join('\n')+'</div>';
 }
 
-function chapter_all_bible(){
+function chapter_all_check_bible(){
+    //检验 chapter_all_bible() 是否正确 - 保留注释
+
     var result_t=[];
     var main_chapter=-1;
     var main_no=1;
+    var chapters=read_get_bible(-1);
+
+    var sub_no=0;
     for (let blxl=0;blxl<kjv.length;blxl++){
         var item=kjv[blxl];
         if (item.substring(0,3)=='== ' && item.slice(-3,)==' =='){
-            main_chapter=blxl;        
+            main_chapter=blxl;
             result_t.push('<h3 style="cursor:pointer;" onclick="chapter_go_bible('+main_chapter+','+blxl+');">'+main_no+'. '+item.slice(3,-3)+' '+cnbible_global[blxl].slice(3,-3)+'</h3>');
             main_no=main_no+1;
         }
         else if (item.substring(0,4)=='=== ' && item.slice(-4,)==' ==='){
-            result_t.push('<span class="oblong_box" onclick="chapter_go_bible('+main_chapter+','+blxl+');">'+item.replace(new RegExp(/.*?\s*(\d*)\s*===$/,'g'),'$1')+'</span> ');
+            var bgcolor=(chapters[sub_no]=='1'?' style="background-color:pink;"':'');
+            result_t.push('<span class="oblong_box"'+bgcolor+' onclick="chapter_go_bible('+main_chapter+','+blxl+');">'+item.replace(/.*?\s*(\d*)\s*===$/g,'$1')+'</span> ');
+            sub_no=sub_no+1;
         }
-    }        
+    }     
     
-    document.getElementById('divhtml').innerHTML='<div style="margin:0.5rem;column-count:4;line-height:'+(ismobile_b()?'180':'220')+'%;">'+result_t.join('\n')+'</div>';
-    mouseover_mouseout_oblong_span_b(document.querySelectorAll('div#divhtml span.oblong_box'));
+    var result2_t=chapter_all_bible(true);
+    
+    console.log(result_t);
+    console.log(result2_t);
+    if (result_t.length==result2_t.length){
+        console.log('行数：一致');
+        var content_error=false;
+        for (let blxl=0;blxl<result_t.length;blxl++){
+            if (result_t[blxl]==result2_t[blxl]){continue;}
+            console.log('内容：不一致',blxl,result_t[blxl], result2_t[blxl]);        
+            content_error=true;    
+        }
+        if (content_error===false){
+            console.log('内容：一致');                    
+        }
+    }
+    else {
+        console.log('行数：不一致');    
+    }
+}
+
+function chapter_all_bible(only_check=false){
+    var result_t=[];
+    var main_chapter=-1;
+    var main_no=1;
+    var chapters=read_get_bible(-1);
+
+    var sub_no=0;
+    var main_sub_dict=main_with_sub_chapters_bible();
+    for (let key in main_sub_dict){
+        main_chapter=parseInt(key.substring(2,));
+        var item=kjv[main_chapter];
+        result_t.push('<h3 style="cursor:pointer;" onclick="chapter_go_bible('+main_chapter+','+main_chapter+');">'+main_no+'. '+item.slice(3,-3)+' '+cnbible_global[main_chapter].slice(3,-3)+'</h3>');
+        main_no=main_no+1;
+        
+        var sub_list=main_sub_dict[key];
+        for (let blno of sub_list){
+            var item=kjv[blno];
+            var bgcolor=(chapters[sub_no]=='1'?' style="background-color:pink;"':'');
+            result_t.push('<span class="oblong_box"'+bgcolor+' onclick="chapter_go_bible('+main_chapter+','+blno+');">'+item.replace(/.*?\s*(\d*)\s*===$/g,'$1')+'</span> ');
+            sub_no=sub_no+1;      
+        }
+    }
+    
+    if (only_check){
+        return result_t;
+    }
+        
+    var buttons='<p><a class="aclick" href="lsm.htm?key=bible_chapter_readed" target=_blank>导出已读状态</a><span class="aclick" onclick="read_all_unread_bible();">全部设置为未读</span></p>';
+    var odiv=document.getElementById('divhtml');
+    odiv.innerHTML='<div style="margin:0.5rem;column-count:4;line-height:'+(ismobile_b()?'180':'220')+'%;">'+result_t.join('\n')+'</div>'+buttons;
+    mouseover_mouseout_oblong_span_b(odiv.querySelectorAll('span.oblong_box'));
 }
 
 function chapter_go_bible(csmain,cssub){
