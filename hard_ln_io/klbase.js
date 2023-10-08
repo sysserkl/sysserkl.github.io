@@ -828,9 +828,16 @@ function array_intersection_b(array1,array2,isset=false){
 function array_difference_b(array1,array2,isset=false,bidirectional=false){
     //差集，array1 有 但 array2 没有
     if (isset){
-        return new Set([...array1].filter(x => !array2.has(x)));
+        if (bidirectional){
+            var en_intersection1 = new Set([...array1].filter(x => !array2.has(x)));
+            var en_intersection2 = new Set([...array2].filter(x => !array1.has(x)));
+            return [en_intersection1,en_intersection2];
+        }    
+        else {
+            return new Set([...array1].filter(x => !array2.has(x)));
+        }
     }
-    
+    //---
     var en_source1 = new Set(array1);
     var en_source2 = new Set(array2);
     var en_intersection1 = new Set([...en_source1].filter(x => !en_source2.has(x)));

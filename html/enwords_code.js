@@ -624,11 +624,72 @@ function menu_kle(){
         klmenu_search.push('<span class="span_menu" onclick="'+str_t+'hot_key_search_kle(this);">'+item+'</span>');
     }
     
+    klmenu_old.push('<span class="span_menu" onclick="'+str_t+'old_words_name_list_form_kle();">旧单词列表</span>');
+    
     var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu1,'','16rem','1rem','1rem','60rem')+klmenu_b(klmenu_old,'旧','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_brain,'🧠','17rem','1rem','1rem')+klmenu_b(klmenu_new,'🆕','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_statistics,'🧮','14rem','1rem','1rem')+klmenu_b(klmenu_search,'🔽','18rem','1rem','1rem','30rem'),'','0rem')+' ';
     
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',bljg);
     
     document.getElementById('span_checkboxes').insertAdjacentHTML('beforeend',klmenu_multi_button_div_b(klmenu_b(en_font_menu_b(str_t),'🅰','10rem','1rem','1rem','30rem'),'','0rem')+' ');
+}
+
+function old_words_name_list_form_kle(){
+    var postpath=postpath_b();
+    var form_head='<form method="POST" action="'+postpath+'temp_txt_share.php" target=_blank>\n';
+    
+    var old_list=simple_words_b(false);
+    
+    var bljg='<h3>全部旧单词列表</h3>';
+    bljg=bljg+form_head;
+    bljg=bljg+'<textarea name="textarea_old_words1_kle" id="textarea_old_words1_kle" style="height:15rem; background-color:'+scheme_global['button']+';" readonly>'+old_list.join('\n')+'</textarea>';
+    bljg=bljg+'<p>'+textarea_buttons_b('textarea_old_words1_kle','全选,清空,复制,发送到临时记事本,发送地址')+'</p>';
+    bljg=bljg+'</form>';
+    
+    bljg=bljg+'<h3>待比较的单词列表</h3>';
+    bljg=bljg+form_head;
+    bljg=bljg+'<textarea name="textarea_old_words2_kle" id="textarea_old_words2_kle" style="height:15rem;"></textarea>';
+    bljg=bljg+'<p><span class="aclick" onclick="old_words_name_list_compare_kle();">比较</span>'+textarea_buttons_b('textarea_old_words2_kle','全选,清空,复制,发送到临时记事本,发送地址')+'</p>';
+    bljg=bljg+'</form>';
+    
+    bljg=bljg+'<h3>比较结果（全部旧单词列表 有，待比较的单词列表 无）<span id="span_old_words3_kle"></span></h3>';    
+    bljg=bljg+form_head;    
+    bljg=bljg+'<textarea name="textarea_old_words3_kle" id="textarea_old_words3_kle" style="height:15rem;"></textarea>';
+    bljg=bljg+'<p>'+textarea_buttons_b('textarea_old_words3_kle','全选,清空,复制,发送到临时记事本,发送地址')+'</p>';
+    bljg=bljg+'</form>';    
+    bljg=bljg+'<div id="div_old_words3_kle"></div>';
+
+    bljg=bljg+'<h3>比较结果（全部旧单词列表 无，待比较的单词列表 有）<span id="span_old_words4_kle"></span></h3>';    
+    bljg=bljg+form_head;    
+    bljg=bljg+'<textarea name="textarea_old_words4_kle" id="textarea_old_words4_kle" style="height:15rem;"></textarea>';
+    bljg=bljg+'<p>'+textarea_buttons_b('textarea_old_words4_kle','全选,清空,复制,发送到临时记事本,发送地址')+'</p>';    
+    bljg=bljg+'</form>';    
+    bljg=bljg+'<div id="div_old_words4_kle"></div>';    
+    
+    document.getElementById('divhtml').innerHTML=bljg;
+}
+
+function old_words_name_list_compare_kle(){
+    var words_list=[];
+    for (let blxl=0;blxl<=1;blxl++){
+        var blstr=document.getElementById('textarea_old_words'+(blxl+1)+'_kle').value.trim();
+        if (blstr==''){
+            words_list[blxl]=new Set();
+        }
+        else {
+            words_list[blxl]=new Set(blstr.split('\n'));
+        }
+    }
+    
+    var diff_result=array_difference_b(words_list[0],words_list[1],true,true);
+
+    for (let blxl=0;blxl<=1;blxl++){
+        diff_result[blxl]=Array.from(diff_result[blxl]);
+    
+        var blkey=blxl+3;
+        document.getElementById('textarea_old_words'+blkey+'_kle').value=diff_result[blxl].join('\n');
+        document.getElementById('span_old_words'+blkey+'_kle').innerHTML='('+diff_result[blxl].length+')';
+        document.getElementById('div_old_words'+blkey+'_kle').innerHTML=enwords_js_wiki_textarea_b(diff_result[blxl],true);
+    }
 }
 
 function hot_key_search_kle(ospan){

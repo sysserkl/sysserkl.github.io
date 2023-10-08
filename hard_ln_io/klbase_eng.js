@@ -1629,14 +1629,22 @@ function enwords_wiki_type_words_b(cswlist,onetextarea=false,asterisk=false){
     return enwords_different_types_result_b(list_t,onetextarea);
 }
 
-function enwords_js_wiki_textarea_b(cslist){
+function enwords_js_wiki_textarea_b(cslist,is_simple=false){
+    //cslist 中每一行格式如 enwords 的每一行 - 保留注释
+    //cslist 中每一行格式也可以是如 ['dog'] - 保留注释
     var ocheck=document.getElementById('check_js_wiki');
     if (ocheck){
         if (!ocheck.checked){return '';}
     }
-    var list_t=[];
-    for (let item of cslist){
-        list_t.push(item[0]);
+    
+    if (is_simple){
+        var list_t=[].concat(cslist);    
+    }
+    else {
+        var list_t=[];
+        for (let item of cslist){
+            list_t.push(item[0]);
+        }
     }
     return enwords_different_types_div_b(list_t);
 }

@@ -393,7 +393,7 @@ function args_bible(){
 }
 
 function init_bible(){
-    chapter_list_bible();
+    main_sub_chapter_var_generate_bible();
     main_options_bible();
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'2.3rem':'1.6rem'),true,true,2);
     var dosomething=args_bible();
@@ -406,17 +406,6 @@ function init_bible(){
     }
 }
 
-function all_sub_chapters_bible(){
-    if (chapter_sub_global.length!==0){return;}
-
-    for (let blxl=0;blxl<kjv.length;blxl++){
-        var item=kjv[blxl];
-        if (item.substring(0,4)=='=== ' && item.slice(-4,)==' ==='){
-            chapter_sub_global.push(blxl);
-        }
-    }
-}
-
 function current_sub_chapter_index_bible(cssub=-1){
     if (cssub==-1){
         cssub=parseInt(document.getElementById('select_sub').value);
@@ -425,7 +414,6 @@ function current_sub_chapter_index_bible(cssub=-1){
         return -1;
     }
     
-    all_sub_chapters_bible();
     return chapter_sub_global.indexOf(cssub);
 }
 
@@ -1282,8 +1270,6 @@ function main_with_sub_check_bible(){
 }
 
 function main_with_sub_chapters_bible(main_line_no=false){
-    all_sub_chapters_bible();
-    
     var blend=-1;
     var line_no_list=[].concat(chapter_sub_global);
     var main_no_list=[];
@@ -1740,40 +1726,28 @@ function idb_write_bible(db,adddata=true){
     });
 }
 
-function chapter_list_bible(){
-    var chapter_minor_name_old='';
-    var chapter_minor_count_old='';
-    var chapter_minor_count_list=[];
+function main_sub_chapter_var_generate_bible(){
     for (let blxl=0;blxl<kjv.length;blxl++){
         var item=kjv[blxl];
         if (item.substring(0,3)=='== ' && item.slice(-3,)==' =='){
             chapter_global.push([blxl,item.substring(3,item.length-3),cnbible_global[blxl].substring(3,cnbible_global[blxl].length-3),0]);
         }
-        if (item.substring(0,4)=='=== ' && item.slice(-4,)==' ==='){
-            var chapter_minor_name_current=item.replace(/^=== (.*?) (\d*) ===$/g,'$1');
-            var chapter_minor_count_current=item.replace(/^=== (.*?) (\d*) ===$/g,'$2');
-            if (chapter_minor_name_current==chapter_minor_name_old){
-                chapter_minor_count_old=chapter_minor_count_current;
-            }
-            else {
-                if (chapter_minor_name_old!==''){
-                    chapter_minor_count_list.push([chapter_minor_name_old,parseInt(chapter_minor_count_old)]);
-                }
-                chapter_minor_name_old=chapter_minor_name_current;
-                chapter_minor_count_old=chapter_minor_count_current;
-            }
+        else if (item.substring(0,4)=='=== ' && item.slice(-4,)==' ==='){  
+            chapter_sub_global.push(blxl);
         }
     }
-
-    chapter_minor_count_list.push([chapter_minor_name_old,parseInt(chapter_minor_count_old)]);
     
-    if (chapter_minor_count_list.length==chapter_global.length){
-        for (let blxl=0;blxl<chapter_global.length;blxl++){
-            if (chapter_global[blxl][1]==chapter_minor_count_list[blxl][0]){
-                chapter_global[blxl][3]=chapter_minor_count_list[blxl][1];
-            }
+    var main_sub_dict=main_with_sub_chapters_bible();
+    
+    for (let blxl=0;blxl<chapter_global.length;blxl++){
+        var blkey='m_'+chapter_global[blxl][0];
+        if (main_sub_dict[blkey]==undefined){
+            console.log('error',blkey);
         }
-    }    
+        else {
+            chapter_global[blxl][3]=main_sub_dict[blkey].length;
+        }
+    }
 }
 
 function idb_count_and_write_bible(){
