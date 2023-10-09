@@ -110,4 +110,5 @@ var digest_global=`
 *doormat
 *forebear
 *colossus
+*fire truck
 `.trim().split('\n');

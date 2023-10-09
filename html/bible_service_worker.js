@@ -10,6 +10,8 @@ self.addEventListener('install', function(e) {
             '../hard_ln_io/klbase_en_de_str.js',            
             '../hard_ln_io/klbase_eng.js',
             '../hard_ln_io/klbase_enbook.js',
+            '../hard_ln_io/klbase_idb.js',
+            
             '../jsdoc3/bible_kjv_890.js',
             '../jsdoc3/sheng_jing_he_he_ben_124338.js',
             '../jsdata/bible_web_sites_data.js',

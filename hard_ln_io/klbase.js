@@ -1677,7 +1677,8 @@ function textarea_buttons_b(textarea_id,csbuttons,cstype='',csstyle='',span_clas
     //csstyle: ' style="font-size:1rem;"' - 保留注释
     var remote_host=local_storage_get_b('kl_remote_host',-1,false);
     var postpath=remote_host+'/klwebphp/';
-    
+    var isfile=is_file_type_b();
+
     var bljg='';
     if (csbuttons.includes('全选') || csbuttons.includes('select all')){
         bljg=bljg+'<span class="'+span_class+'"'+csstyle+' onclick="document.getElementById(\''+textarea_id+'\').select();">Select All</span> ';
@@ -1704,6 +1705,10 @@ function textarea_buttons_b(textarea_id,csbuttons,cstype='',csstyle='',span_clas
         bljg=bljg+'<span class="'+span_class+'"'+csstyle+' onclick="dom_value_2_txt_file_b(\''+textarea_id+'\',\''+specialstr_j(savename)+'\',\''+specialstr_j(fext[1])+'\');">'+fext[0]+'</span> ';
     }    
     
+    if (!isfile && csbuttons.includes('导入temp_txt_share')){
+        bljg=bljg+'<span class="'+span_class+'"'+csstyle+' onclick="import_temp_txt_share_content_b(\''+textarea_id+'\');">导入temp_txt_share</span> ';
+    }
+        
     if (csbuttons.includes('发送到临时记事本') || csbuttons.includes('send to remote temp memo')){
         bljg=bljg+'<input type="submit" value="📤"'+csstyle+' title="send to remote temp memo" /> ';
     }
@@ -1719,7 +1724,13 @@ function textarea_buttons_b(textarea_id,csbuttons,cstype='',csstyle='',span_clas
         var bladdress=postpath+'temp_txt_share.php'+(cstype==''?'':'?type='+cstype);
         bljg=bljg+'<span class="'+span_class+'"'+csstyle+' onclick="kl_remote_host_address_b();" title="set remote address">⛓</span>：<a'+csstyle+' href="'+bladdress+'" target=_blank>'+(remote_host.includes('//')?remote_host.split('//')[1]:remote_host)+' | temp_txt_share.php '+(cstype==''?'':' | '+cstype)+'</a>';
     }
+    
     return bljg;
+}
+
+function import_temp_txt_share_content_b(csid){
+    var blstr=read_txt_file_b(klwebphp_path_b('/data/php_writable/temp_txt_share_data.txt'));
+    document.getElementById(csid).value=blstr;  //不能使用 specialstr92_b(blstr) - 保留注释
 }
 
 function klsofts_cols_count_b(){
@@ -2197,8 +2208,9 @@ function string_2_txt_file_b(csstr,savename,cstype='csv'){
     pom.href = URL.createObjectURL(blob);
     pom.setAttribute('download', savename);
     document.body.appendChild(pom); 
-    pom.click();    
-    document.body.removeChild(pom); 
+    pom.click();
+    document.body.removeChild(pom);
+    blob='';
 }
 
 function dom_value_2_txt_file_b(csid,savename='',csext='txt'){

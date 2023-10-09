@@ -648,7 +648,7 @@ function old_words_name_list_form_kle(){
     bljg=bljg+'<h3>待比较的单词列表</h3>';
     bljg=bljg+form_head;
     bljg=bljg+'<textarea name="textarea_old_words2_kle" id="textarea_old_words2_kle" style="height:15rem;"></textarea>';
-    bljg=bljg+'<p><span class="aclick" onclick="old_words_name_list_compare_kle();">比较</span>'+textarea_buttons_b('textarea_old_words2_kle','全选,清空,复制,发送到临时记事本,发送地址')+'</p>';
+    bljg=bljg+'<p><span class="aclick" onclick="old_words_name_list_compare_kle();">比较</span>'+textarea_buttons_b('textarea_old_words2_kle','全选,清空,复制,导入temp_txt_share,发送到临时记事本,发送地址')+'</p>';
     bljg=bljg+'</form>';
     
     bljg=bljg+'<h3>比较结果（全部旧单词列表 有，待比较的单词列表 无）<span id="span_old_words3_kle"></span></h3>';    

@@ -348,49 +348,39 @@ function bookname_set_reader_idb(){
 }
 
 function one_book_reader_idb(db,bookid){
+    function sub_one_book_reader_idb_onsuccess(event){
+        var cursor = event.target.result;
+        if (cursor) {
+            if (cursor.value.id==bookid && cursor.value.type==''){
+                filelist.push(cursor.value.content);
+            }
+            cursor.continue();
+        }
+        else {
+            document.getElementById('span_filename').innerHTML=bookname_t;
+            document.getElementById('span_filelength').innerHTML='('+filelist.length+')';     
+            document.title=bookname_t;
+            csbooklist_sub_global_b[csbookno_global][0]=csbookname_global;
+            csbooklist_sub_global_b[csbookno_global][1]='《'+csbookname_global+'》';
+            digest_temp_load_kltxt_b();
+            getlines_kltxt_b();
+        }
+    }
+    //--------------
+    var bookname_t='';
+    for (let item of idbfilename_list_global){
+        if (item[0]==bookid){
+            csbookname_global=item[1];
+            bookname_t=item[2];
+            break;
+        }
+    }
+    
+    filelist=[];
+            
     return new Promise((resolve, reject) => {
-        var transaction = db.transaction(['reader_txt_dbf'], "readonly");
-        transaction.onerror = function(event) {
-            console.log('transaction error');
-        };
-
-        var otable = transaction.objectStore('reader_txt_dbf');
-        otable.onsuccess = function (event) {
-            console.log('dbf 打开成功');
-        };
-        otable.onerror = function (event) {
-            console.log('dbf 打开失败');
-        }
-
-        var bookname_t='';
-        for (let item of idbfilename_list_global){
-            if (item[0]==bookid){
-                csbookname_global=item[1];
-                bookname_t=item[2];
-                break;
-            }
-        }
-        
-        filelist=[];
-        otable.openCursor().onsuccess = function (event) {
-            var cursor = event.target.result;
-            if (cursor) {
-                if (cursor.value.id==bookid && cursor.value.type==''){
-                    filelist.push(cursor.value.content);
-                }
-                cursor.continue();
-            }
-            else {
-                document.getElementById('span_filename').innerHTML=bookname_t;
-                document.getElementById('span_filelength').innerHTML='('+filelist.length+')';     
-                document.title=bookname_t;
-                csbooklist_sub_global_b[csbookno_global][0]=csbookname_global;
-                csbooklist_sub_global_b[csbookno_global][1]='《'+csbookname_global+'》';
-                digest_temp_load_kltxt_b();
-                getlines_kltxt_b();
-                resolve(true);
-            }
-        };
+        idb_read_b(db,'reader_txt_dbf',sub_one_book_reader_idb_onsuccess);
+        resolve(true);
     });
 }
 
@@ -441,7 +431,7 @@ function delete_reader_idb(db,bookid){
     });
 }
 
-function write_reader_idb(db,filename,cslist){
+function write_reader_idb(db,filename,cslist){    
     return new Promise((resolve, reject) => {
         var transaction = db.transaction(['reader_txt_dbf'], "readwrite");
         transaction.oncomplete = function(event) {
@@ -455,11 +445,11 @@ function write_reader_idb(db,filename,cslist){
         var otable = transaction.objectStore('reader_txt_dbf');
 
         var ocount1=otable.count();
-        ocount1.onsuccess = function() {
+        ocount1.onsuccess = function(){
             console.log('写入前记录数：',ocount1.result);
         }
 
-        otable.openCursor().onsuccess = function (event) {      
+        //otable.openCursor().onsuccess = function (event){ 
             var id_set=new Set();
             id_set.add(-1);
             
@@ -479,10 +469,10 @@ function write_reader_idb(db,filename,cslist){
                     otable.add({'id':maxid,'content':item,'type':''});
                 }
                 
-                var ocount3=otable.count();
-                ocount3.onsuccess = function() {
-                    console.log(new Date().toLocaleTimeString(),'添加后记录数：',ocount3.result);
-                    document.title='IDB数据写入完毕，现有记录 '+ocount3.result+' 条';
+                var ocount2=otable.count();
+                ocount2.onsuccess = function(){
+                    console.log(new Date().toLocaleTimeString(),'添加后记录数：',ocount2.result);
+                    document.title='IDB数据写入完毕，现有记录 '+ocount2.result+' 条';
                 }
                 
                 var bookname_t='';
@@ -505,8 +495,8 @@ function write_reader_idb(db,filename,cslist){
                 console.log(new Date().toLocaleTimeString(),'书籍已存在');
                 document.title='书籍已存在';            
             }
-            resolve(true);
-        };
+            //resolve(true);
+        //};
         
         otable.onsuccess = function (event) {
             console.log('dbf 打开成功');
@@ -518,76 +508,28 @@ function write_reader_idb(db,filename,cslist){
 }
 
 function count_reader_idb(db){
+    function sub_count_reader_idb_onsuccess(cscount){
+        document.title='IDB现有22记录 '+cscount+' 条';
+    }
+
     return new Promise((resolve, reject) => {
-        var blcount=0;
-        var transaction = db.transaction(['reader_txt_dbf'], "readonly");
-        transaction.oncomplete = function(event) {
-            console.log('transaction ok',blcount);
-        };
-        transaction.onerror = function(event) {
-            console.log('transaction error');
-            reject(err);
-        };
-
-        var otable = transaction.objectStore('reader_txt_dbf');
-
-        var ocount=otable.count();
-        ocount.onsuccess = function() {
-            blcount=ocount.result;
-            document.title='IDB现有记录 '+blcount+' 条';
-            resolve(blcount);
-        }
-        ocount.onerror = function() {
-            reject(err);
-        }
-
-        otable.onsuccess = function (event) {
-            console.log('dbf 打开成功');
-        };
-        otable.onerror = function (event) {
-            console.log('dbf 打开失败');
-        }
+        var blcount=idb_count_b(db,'reader_txt_dbf',sub_count_reader_idb_onsuccess);
+        resolve(blcount);
     });
 }
 
 function clear_all_reader_idb(db){
+    function sub_idb_write_rlater_count1(cscount){
+        document.title='IDB 清除前记录数 '+cscount+' 条';    
+    }
+
+    function sub_idb_write_rlater_count2(cscount){
+        document.title='IDB数据清除完毕，现有记录 '+cscount+' 条';
+    }
+       
     return new Promise((resolve, reject) => {
-        var transaction = db.transaction(['reader_txt_dbf'], "readwrite");
-        transaction.oncomplete = function(event) {
-            console.log('transaction ok');
-            resolve(true);
-        };
-        transaction.onerror = function(event) {
-            console.log('transaction error');
-        };
-
-        var otable = transaction.objectStore('reader_txt_dbf');
-
-        var ocount1=otable.count();
-        ocount1.onsuccess = function() {
-            console.log('清除前记录数：',ocount1.result);
-        }
-
-        var oclear = otable.clear();
-        oclear.onsuccess = function(event) {
-            console.log('数据清除成功');
-        };
-        oclear.onerror= function(event) {
-            console.log('数据清除失败');
-        };
-
-        var ocount2=otable.count();
-        ocount2.onsuccess = function() {
-            console.log('清除后记录数：',ocount2.result);
-            document.title='IDB数据清除完毕，现有记录 '+ocount2.result+' 条';
-        }
-        
-        otable.onsuccess = function (event) {
-            console.log('dbf 打开成功');
-        };
-        otable.onerror = function (event) {
-            console.log('dbf 打开失败');
-        }
+        idb_write_b(db,'reader_txt_dbf',sub_idb_write_rlater_count1,sub_idb_write_rlater_count2,false);
+        resolve(true);
     });
 }
 
@@ -664,6 +606,7 @@ function center_reader_idb(cstype='',filename='',bookid=-1,cslist=[]){
             db.close();
         };
 
+        //文心一言：检查数据库中是否存在一个名为 'reader_txt_dbf' 的对象存储（Object Store）。如果该对象存储不存在，那么它会在数据库中创建一个新的对象存储，并命名为 'reader_txt_dbf'。这个新的对象存储还被设置为自动递增（autoIncrement），这意味着每当你向对象存储添加新数据时，每个新数据的键都会自动递增。 - 保留注释
         DBOpenRequest.onupgradeneeded = function (event) {
             var db = event.target.result;
             if (!db.objectStoreNames.contains('reader_txt_dbf')) {

@@ -32,4 +32,5 @@ var digest_global=`
 *Bahamas
 *Marxism
 *Heathrow
+*never ever
 `.trim().split('\n');

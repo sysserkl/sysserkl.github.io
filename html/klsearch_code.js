@@ -148,7 +148,7 @@ function args_klsearch(){
                             bltype=same_part1+'collins,wiktionary,'+same_part2;
                         }
                         break;
-                    case 'batch_en_boc':
+                    case 'batch_en_bo+':
                         bltype='Bing(cn),Oxford,Cambridge';
                         break;
                     case 'batch_en_minor':
