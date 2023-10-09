@@ -3298,21 +3298,21 @@ function array_remove_item_b(csarr,csitem){
 
 function wiki_page_title_link_generate_b(cspage,cstitle=''){    
     function sub_wiki_page_title_link_generate_b_punctuation(csstr){
-        csstr=csstr.replace(/&amp;/g,'.26');
-        csstr=csstr.replace(/&/g,'.26');
-        csstr=csstr.replace(/'/g,'.27');
-        csstr=csstr.replace(/=/g,'.3D');
-        csstr=csstr.replace(/\?/g,'.3F');
-        csstr=csstr.replace(/~/g,'.7E');
-        csstr=csstr.replace(/!/g,'.21');
-        //csstr=csstr.replace(/,/g,'.2C');
-        csstr=csstr.replace(/\(/g,'.28');
-        csstr=csstr.replace(/\)/g,'.29');
-        csstr=csstr.replace(/\$/g,'.24');
-        csstr=csstr.replace(/\//g,'.2F');
+        //csstr=csstr.replace(/&amp;/g,'.26');
+        //csstr=csstr.replace(/&/g,'.26');
+        //csstr=csstr.replace(/'/g,'.27');
+        //csstr=csstr.replace(/=/g,'.3D');
+        //csstr=csstr.replace(/\?/g,'.3F');
+        //csstr=csstr.replace(/~/g,'.7E');
+        //csstr=csstr.replace(/!/g,'.21');
+        //csstr=csstr.replace(/\(/g,'.28');
+        //csstr=csstr.replace(/\)/g,'.29');
+        //csstr=csstr.replace(/\$/g,'.24');
+        //csstr=csstr.replace(/\//g,'.2F');
 
         csstr=csstr.replace(/\s+/g,'_'); //合并多个空格 - 保留注释
-        
+
+        //console.log(encodeURI(csstr).replace(/\.7C/g,'|'));
         return encodeURI(csstr);
     }
     //-------------------------------
@@ -3320,8 +3320,9 @@ function wiki_page_title_link_generate_b(cspage,cstitle=''){
         var bllink=sub_wiki_page_title_link_generate_b_punctuation(cspage);
     }
     else {
-        var bllink=sub_wiki_page_title_link_generate_b_punctuation(cspage)+'#'+sub_wiki_page_title_link_generate_b_punctuation(cstitle).replace(/%/g,'.');
+        var bllink=sub_wiki_page_title_link_generate_b_punctuation(cspage)+'#'+sub_wiki_page_title_link_generate_b_punctuation(cstitle);//.replace(/%/g,'.');
     }
+    
     return bllink;    
 }
 

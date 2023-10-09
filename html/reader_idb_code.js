@@ -534,85 +534,65 @@ function clear_all_reader_idb(db){
 }
 
 function center_reader_idb(cstype='',filename='',bookid=-1,cslist=[]){
-    return new Promise((resolve, reject) => {
-        var bljg=0;
-        var db;
-        var DBOpenRequest = window.indexedDB.open('reader_txt_dbc');
-        DBOpenRequest.onerror = function (event) {
-            console.log('reader_txt_dbc 数据库打开报错');
-        };
-
-        DBOpenRequest.onsuccess = function (event) {
-            db = DBOpenRequest.result;
-            console.log('reader_txt_dbc 数据库打开成功');
-            
-            if (!db.objectStoreNames.contains('reader_txt_dbf')) {
-                db.createObjectStore('reader_txt_dbf', { autoIncrement: true });
-                console.log('new table: reader_txt_dbf');
-            }
-            switch (cstype){
-                case 'list':
-                    async function center_reader_idb_list() {
-                        console.log('center_reader_idb_list()');
-                        await filename_list_reader_idb(db);
-                        resolve(true);
-                    }
-                    center_reader_idb_list();
-                    break;
-                case 'read':
-                    async function center_reader_idb_read() {
-                        console.log('center_reader_idb_read()');
-                        await one_book_reader_idb(db,bookid);
-                        resolve(true);
-                    }
-                    center_reader_idb_read();
-                    break;                    
-                case 'write':
-                    async function center_reader_idb_write() {
-                        console.log('center_reader_idb_write()');
-                        await write_reader_idb(db,filename,cslist);
-                        resolve(true);
-                    }
-                    center_reader_idb_write();
-                    break;
-                case 'delete':
-                    async function center_reader_idb_delete() {
-                        console.log('center_reader_idb_delete()');
-                        await delete_reader_idb(db,bookid);
-                        resolve(true);
-                    }
-                    center_reader_idb_delete();
-                    break;                                        
-                case 'clear_all':
-                    var rndstr=randstr_b(4,true,false);
-                    if ((prompt('输入 '+rndstr+' 确认清空全部书籍') || '').trim()!==rndstr){break;}
-                    
-                    async function center_reader_idb_clear_all() {
-                        console.log('center_reader_idb_clear_all()');
-                        await clear_all_reader_idb(db);
-                        resolve(true);
-                    }
-                    center_reader_idb_clear_all();
-                    break;
-                case 'count':
-                    async function center_reader_idb_count() {
-                        console.log('center_reader_idb_count()');
-                        bljg = await count_reader_idb(db);
-                        resolve(bljg);
-                    }
-                    center_reader_idb_count();
-                    break;
-            }
-            db.close();
-        };
-
-        //文心一言：检查数据库中是否存在一个名为 'reader_txt_dbf' 的对象存储（Object Store）。如果该对象存储不存在，那么它会在数据库中创建一个新的对象存储，并命名为 'reader_txt_dbf'。这个新的对象存储还被设置为自动递增（autoIncrement），这意味着每当你向对象存储添加新数据时，每个新数据的键都会自动递增。 - 保留注释
-        DBOpenRequest.onupgradeneeded = function (event) {
-            var db = event.target.result;
-            if (!db.objectStoreNames.contains('reader_txt_dbf')) {
-                db.createObjectStore('reader_txt_dbf', { autoIncrement: true });
-            }
-            console.log('onupgradeneeded');
+    async function sub_center_reader_idb_switch(cstype, db, resolve, blcount, filename,bookid,cslist){
+        switch (cstype){
+            case 'list':
+                async function center_reader_idb_list() {
+                    console.log('center_reader_idb_list()');
+                    await filename_list_reader_idb(db);
+                    resolve(true);
+                }
+                center_reader_idb_list();
+                break;
+            case 'read':
+                async function center_reader_idb_read() {
+                    console.log('center_reader_idb_read()');
+                    await one_book_reader_idb(db,bookid);
+                    resolve(true);
+                }
+                center_reader_idb_read();
+                break;                    
+            case 'write':
+                async function center_reader_idb_write() {
+                    console.log('center_reader_idb_write()');
+                    await write_reader_idb(db,filename,cslist);
+                    resolve(true);
+                }
+                center_reader_idb_write();
+                break;
+            case 'delete':
+                async function center_reader_idb_delete() {
+                    console.log('center_reader_idb_delete()');
+                    await delete_reader_idb(db,bookid);
+                    resolve(true);
+                }
+                center_reader_idb_delete();
+                break;                                        
+            case 'clear_all':
+                var rndstr=randstr_b(4,true,false);
+                if ((prompt('输入 '+rndstr+' 确认清空全部书籍') || '').trim()!==rndstr){break;}
+                
+                async function center_reader_idb_clear_all() {
+                    console.log('center_reader_idb_clear_all()');
+                    await clear_all_reader_idb(db);
+                    resolve(true);
+                }
+                center_reader_idb_clear_all();
+                break;
+            case 'count':
+                async function center_reader_idb_count() {
+                    console.log('center_reader_idb_count()');
+                    blcount = await count_reader_idb(db);
+                    resolve(blcount);
+                }
+                center_reader_idb_count();
+                break;
         }
+    }
+    //-------------------------
+    return new Promise((resolve, reject) => {
+        var bljg=idb_main_b(cstype,'reader_txt_dbc','reader_txt_dbf',sub_center_reader_idb_switch,filename,bookid,cslist);
+        resolve(bljg);
     });
+    //center_reader_idb('count').then(value => {console.log('行数：',value);}); //此行保留 - 保留注释    
 }

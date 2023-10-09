@@ -12,4 +12,5 @@ var digest_global=`
 *nonrandom
 *recalculate
 *rulebook
+*filtration
 `.trim().split('\n');

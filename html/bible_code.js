@@ -1772,68 +1772,49 @@ function load_filelist_bible(do_init=true){
 }
 
 function idb_bible(cstype='',is_old=false){
+    async function sub_idb_bible_switch(cstype, db, resolve, blcount, id_old){
+        switch (cstype){
+            case 'read':
+                async function sub_idb_bible_read(){
+                    console.log('sub_idb_bible_read()');
+                    await idb_read_bible(db,is_old);
+                    resolve(true);
+                }
+                sub_idb_bible_read();
+                break;
+            case 'write':
+                async function sub_idb_bible_write(){
+                    console.log('sub_idb_bible_write()');
+                    await idb_write_bible(db);
+                    resolve(true);
+                }
+                sub_idb_bible_write();
+                break;
+            case 'clear':
+                async function sub_idb_bible_clear(){
+                    console.log('sub_idb_bible_clear()');
+                    await idb_write_bible(db,false);
+                    resolve(true);
+                }
+                sub_idb_bible_clear();
+                break;
+            case 'count':
+                async function sub_idb_bible_count(){
+                    console.log('sub_idb_bible_count()');
+                    blcount = await idb_count_bible(db);
+                    document.getElementById('span_status').innerHTML='IDB 记录数：'+blcount;
+                    resolve(blcount);
+                }
+                sub_idb_bible_count();
+                break;
+        }    
+    }
+    //----------------------
     return new Promise((resolve, reject) => {
-        var bljg=0;
-        var db;
-        var DBOpenRequest = window.indexedDB.open('bible');
-        DBOpenRequest.onerror = function (event){
-            console.log('bible 数据库打开报错');
-        };
-
-        DBOpenRequest.onsuccess = function (event){
-            db = DBOpenRequest.result;
-            console.log('bible 数据库打开成功');
-            
-            if (!db.objectStoreNames.contains('bible_dbf')){
-                db.createObjectStore('bible_dbf', { autoIncrement: true });
-                console.log('new table: bible_dbf');
-            }
-            switch (cstype){
-                case 'read':
-                    async function sub_idb_bible_read(){
-                        console.log('sub_idb_bible_read()');
-                        await idb_read_bible(db,is_old);
-                        resolve(true);
-                    }
-                    sub_idb_bible_read();
-                    break;
-                case 'write':
-                    async function sub_idb_bible_write(){
-                        console.log('sub_idb_bible_write()');
-                        await idb_write_bible(db);
-                        resolve(true);
-                    }
-                    sub_idb_bible_write();
-                    break;
-                case 'clear':
-                    async function sub_idb_bible_clear(){
-                        console.log('sub_idb_bible_clear()');
-                        await idb_write_bible(db,false);
-                        resolve(true);
-                    }
-                    sub_idb_bible_clear();
-                    break;
-                case 'count':
-                    async function sub_idb_bible_count(){
-                        console.log('sub_idb_bible_count()');
-                        bljg = await idb_count_bible(db);
-                        document.getElementById('span_status').innerHTML='IDB 记录数：'+bljg;
-                        resolve(bljg);
-                    }
-                    sub_idb_bible_count();
-                    break;
-            }
-            db.close();
-        };
-
-        DBOpenRequest.onupgradeneeded = function (event){
-            var db = event.target.result;
-            if (!db.objectStoreNames.contains('bible_dbf')){
-                db.createObjectStore('bible_dbf', { autoIncrement: true });
-            }
-            console.log('onupgradeneeded');
-        }
+        var bljg=idb_main_b(cstype,'bible','bible_dbf',sub_idb_bible_switch,is_old);
+        resolve(bljg);
     });
+    //idb_bible('count').then(value => {console.log('行数：',value);});  //此行保留 - 保留注释
 }
 
 function web_stes_list_get_bible(website_name,book_no=-1){
