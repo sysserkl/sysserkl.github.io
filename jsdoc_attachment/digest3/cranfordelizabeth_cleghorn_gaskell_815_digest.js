@@ -5,4 +5,5 @@ var digest_global=`
 *notification
 *saleswoman
 *hundredweight
+*House of Lords
 `.trim().split('\n');

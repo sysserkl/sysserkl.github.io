@@ -2,7 +2,6 @@ function menu_klwebsites(){
     var str_t=klmenu_hide_b('');
     var klmenu1=[
     '<span class="span_menu" onclick="'+str_t+'search_in_site_options_klwebsites();">search in site</span>',        
-    '<span class="span_menu" onclick="'+str_t+'key_batch_search_by_engine_klwebsites(true);">batch eword search</span>',
     '<span class="span_menu" onclick="'+str_t+'search_klwebsites(\'http://\');">http_https check</span>',
     '<span class="span_menu" onclick="'+str_t+'qr_html_klwebsites();">qr</span>',
     '<span id="span_veil_web" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ QR遮罩</span>',
@@ -11,6 +10,12 @@ function menu_klwebsites(){
     '<span class="span_menu" onclick="'+str_t+'window_open_klwebsites();">New Window</span>',
     ];
 
+    var list_t=[
+    ['bing','key_batch_search_by_engine_klwebsites(true,\'bing\');',true],
+    ['百度','key_batch_search_by_engine_klwebsites(true,\'baidu\');',true],
+    ];    
+    klmenu1.push(menu_container_b(str_t,list_t,'batch eword search: '));    
+    
     var list_t=[
     ['RSS','rss_klwebsites();',true],
     ['Weibo','weibo_klwebsites();',true],
@@ -55,12 +60,12 @@ function menu_klwebsites(){
     ];    
     //---
     
-    document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🕸','16rem','1rem','1rem','60rem')+klmenu_b(klmenu_tag,'#','10rem','1rem','1rem','60rem')+klmenu_b(klmenu_search,'𓅸','10rem','1rem','1rem','60rem')+fav_www_menu_websites_b('',false)+klmenu_b(klmenu_config,'⚙','13rem','1rem','1rem','30rem'),'','0rem')+' ');
+    document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🕸','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_tag,'#','10rem','1rem','1rem','60rem')+klmenu_b(klmenu_search,'𓅸','10rem','1rem','1rem','60rem')+fav_www_menu_websites_b('',false)+klmenu_b(klmenu_config,'⚙','13rem','1rem','1rem','30rem'),'','0rem')+' ');
     klmenu_check_b('span_veil_web',true);        
     klmenu_check_b('span_category_with_p_web',true);        
 }
 
-function key_batch_search_by_engine_klwebsites(is_enword=true,max_result=5){
+function key_batch_search_by_engine_klwebsites(is_enword=true,csengine='bing',max_result=5){
     function sub_key_batch_search_by_engine_klwebsites_done(){
         var used_seconds=(new Date()-start_time)/1000;
         console.log(new Date().toLocaleString(), '完成，费时：',(used_seconds/bllen).toFixed(2)+'秒');        
@@ -91,7 +96,6 @@ function key_batch_search_by_engine_klwebsites(is_enword=true,max_result=5){
         }
         else if (window_id===false){
             if (confirm('是否继续对 '+blkey+' 在剩余 '+(bllen-blno)+' 个网站中进行批量搜索？')){
-                //sub_key_batch_search_by_engine_klwebsites_init();
                 setTimeout(sub_key_batch_search_by_engine_klwebsites_one_site,wait_seconds*1000);
             }
             else {
@@ -100,7 +104,7 @@ function key_batch_search_by_engine_klwebsites(is_enword=true,max_result=5){
             return;
         }
         
-        var blurl=search_in_site_new_window_klwebsites('bing',blkey,site_list[blno],false);
+        var blurl=search_in_site_new_window_klwebsites(csengine,blkey,site_list[blno],false);
         window_list[window_id]=window.open(blurl);
         blno=blno+1;
         wait_times=0;

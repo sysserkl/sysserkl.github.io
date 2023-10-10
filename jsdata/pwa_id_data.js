@@ -18,6 +18,7 @@ var pwa_id_global=[
 "screen_test",
 "sticker_mobile",
 "todolist",
+"tts",
 "websites_pwa",
 "wp_pwa",
 ];

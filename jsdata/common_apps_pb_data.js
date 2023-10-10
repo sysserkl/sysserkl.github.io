@@ -5,6 +5,7 @@ var common_apps_pb_global=[
 ["popup:game","game","games.png","1"],
 ["popup:info","info","🗞","0"],
 ["popup:PIM","PIM","♺","0"],
+["popup:share","share","👥","0"],
 ["popup:study","study","study.png","1"],
 ["popup:txtbook","book","🕮","0"],
 ["popup:txteditor","txteditor","🖺","0"],
