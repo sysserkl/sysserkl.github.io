@@ -1,6 +1,6 @@
 self.addEventListener('install', function(e) {
     e.waitUntil(
-        caches.open('pwa_tts_store').then(function(cache) {
+        caches.open('pwa_temp_txt_share_store').then(function(cache) {
             return cache.addAll([
             'temp_txt_share.htm',
             'temp_txt_share_code.js',            
@@ -25,7 +25,7 @@ self.addEventListener('fetch', function(e) {
         caches.match(e.request).then(function(r) {
             console.log('[Service Worker] Fetching resource: '+e.request.url);
             return r || fetch(e.request).then(function(response) {
-                return caches.open('pwa_tts_store').then(function(cache) {
+                return caches.open('pwa_temp_txt_share_store').then(function(cache) {
                     console.log('[Service Worker] Caching new resource: ' + e.request.url);
                     cache.put(e.request, response.clone());
                     return response;

@@ -17,8 +17,8 @@ var pwa_id_global=[
 "screen_matrix",
 "screen_test",
 "sticker_mobile",
+"temp_txt_share",
 "todolist",
-"tts",
 "websites_pwa",
 "wp_pwa",
 ];
