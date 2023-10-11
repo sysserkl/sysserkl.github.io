@@ -271,7 +271,7 @@ function table_top_money_b(){
 function table_detail_money_b(cspage=1,csstatus='',cspagenum=-1,cssimple=false,csluru_php='wpluru.php',csnolink=false,csnew_window=true){
     var bljg='';
     bljg=table_top_money_b()+'<tr><td colspan=3 style="border:0px;" id="td_recent_search"></td></tr><tr><td colspan=3 style="border:0px;" id="td_status_wp">'+csstatus+'</td></tr>';
-	
+    
     var date_t='';
     var blamount_total=0;
     var blamount_this_page=0;
@@ -279,7 +279,8 @@ function table_detail_money_b(cspage=1,csstatus='',cspagenum=-1,cssimple=false,c
 	for (let blxl=0;blxl<csdata.length;blxl++){
         var item=csdata[blxl];
         blamount_total=blamount_total+item[11];
-		if (cspage<=0 || blxl<=cspage*cspagenum-1 && blxl>=(cspage-1)*cspagenum){
+		if (cspage<=0 || blxl>=cspage-1 && blxl<cspage-1+cspagenum){
+            //cspage<=0 时则显示全部记录 - 保留注释
             if (item[6]!==date_t){
                 date_t=item[6];
                 bljg=bljg+date_row_money_b(item[6],csnolink);

@@ -98,4 +98,5 @@ var digest_global=`
 *busty
 *matchbook
 *snuck
+*soft drink
 `.trim().split('\n');

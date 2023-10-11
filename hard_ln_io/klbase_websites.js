@@ -349,3 +349,29 @@ function category_websites_b(enable_jieba,cstitle,cscategory,cskey){
     }
     return result_t;
 }
+
+function split_pwa_websites_b(csstr){
+    var blat=csstr.indexOf('http');
+    if (blat==-1){
+        return ['','','',''];
+    }
+    var list_t=csstr.substring(0,blat).trim().split(',');
+    blcategory=list_t[0];
+    if (blcategory==''){
+        blcategory='未分类';
+    }
+    var bltag=list_t.slice(1,).join(',');
+    
+    csstr=csstr.substring(blat,);
+    blat=csstr.indexOf(' ');
+    if (blat==-1){
+        blat=csstr.lastIndexOf('/');
+        if (blat==-1){
+            return [blcategory,csstr,'',bltag];
+        }
+    }
+    var blname=csstr.substring(blat,).trim();
+    csstr=csstr.substring(0,blat).trim();
+    return [blcategory,csstr,blname,bltag];
+    //形如：[ "资讯", "https://weibo.com/u/2938715943?is_all=1", "人民网舆情数据中心 - 微博", "CN" ] - 保留注释
+}

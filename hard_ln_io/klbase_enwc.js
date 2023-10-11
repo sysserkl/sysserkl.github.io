@@ -256,21 +256,8 @@ function getlines_enwc_b(csno,cslines){
 		document.getElementById('input_lines').value=cslines;
 	}
 
-    var page_html='';
-    var pages_count=Math.ceil(bllength/cslines);
-    var blpageno=(csno-1)/cslines+1;
-    if (pages_count>=1){
-        for (let blxl=1;blxl<=pages_count;blxl++){
-            page_html=page_html+page_one_b(pages_count,blpageno,blxl,'onclick="getlines_enwc_b('+((blxl-1)*cslines+1)+','+cslines+');"',2,0);
-        }
-        var blfound;
-        [page_html,blfound]=page_remove_dot_b(page_html);
-        if (blfound){
-            page_html=page_html+page_prev_next_b(pages_count,blpageno,'onclick="getlines_enwc_b('+((blpageno-1-1)*cslines+1)+','+cslines+');"','onclick="getlines_enwc_b('+((blpageno-1+1)*cslines+1)+','+cslines+');"','onclick="getlines_location_enwc_b('+pages_count+','+cslines+');"');
-        }
-        page_html='<p>'+page_html+'</p>';
-    }
-    
+    var page_html=page_combination_b(bllength,cslines,csno,'getlines_enwc_b','getlines_location_enwc_b','',2,0,'','aclick');
+
 	words_searched_arr_global=[];
 	
 	for (let blxl=csno-1;blxl<csno+cslines-1;blxl++){

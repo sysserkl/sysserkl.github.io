@@ -94,23 +94,12 @@ function sentence_source_list_ensentence(csstr=''){
 function sentence_source_pages_ensentence(csno,csmax=100){
     var odiv=document.getElementById('div_sentence_source_content');
     if (!odiv){return;}
-    
-    var blstart=(csno-1)*csmax;
+
+    var blstart=(csno-1);
     var list_t=en_sentence_source_current_global.slice(blstart,blstart+csmax);
 
-    var pages_count=Math.ceil(en_sentence_source_current_global.length/csmax);
+    var blstr=page_combination_b(en_sentence_source_current_global.length,csmax,csno,'sentence_source_pages_ensentence','sentence_source_location_ensentence',false,0,0,'','aclick');
     
-    var blstr='';
-    if (pages_count>1){
-        for (let blxl=1;blxl<=pages_count;blxl++){
-            blstr=blstr+page_one_b(pages_count,csno,blxl,'onclick="sentence_source_pages_ensentence('+blxl+','+csmax+');"'+(blxl==csno?' style="color:red;"':''),0,0);
-        }
-        var blfound;
-        [blstr,blfound]=page_remove_dot_b(blstr);
-        if (blfound){
-            blstr=blstr+page_prev_next_b(pages_count,csno,'onclick="sentence_source_pages_ensentence('+(csno-1)+','+csmax+');"','onclick="sentence_source_pages_ensentence('+(csno+1)+','+csmax+');"','onclick="sentence_source_location_ensentence('+pages_count+','+csmax+');"');
-        }
-    }
     odiv.innerHTML=array_2_li_b(list_t)+blstr;
     odiv.parentNode.scrollIntoView();
 }
@@ -119,7 +108,7 @@ function sentence_source_location_ensentence(cspages,csmax){
     var blno=parseInt((prompt('输入页号',cspages) || '').trim());
     if (isNaN(blno)){return;}
     blno=Math.min(cspages,Math.max(1,blno));
-    sentence_source_pages_ensentence(blno,csmax);
+    sentence_source_pages_ensentence((blno-1)*csmax+1,csmax);
 }
 
 function phrase_not_in_ensentence(){ 

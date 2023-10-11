@@ -81,7 +81,7 @@ var common_apps_pb_global=[
 ["{{selenium_news}}/html/vcard.htm","vcard","📱","2"],
 ["{{selenium_news}}/html/websites.htm","网址库","websites512.png","0"],
 ["{{selenium_news}}/html/websites_pwa.htm","Websites PWA","websites_pwa512.png","3"],
-["{{selenium_news}}/html/wp_pwa.htm","wp pwa","wp_pwa512.png","1"],
+["{{selenium_news}}/html/wp_pwa.htm","wp pwa","wp_pwa512.png","5","PIM"],
 ["{{selenium_news}}/html/zj_college_search.htm","ZJ College","💯","5","database|education"],
 ["{{selenium_news}}/html/zj_company.htm","ZJ Company","🏭","5","database"],
 ["{{selenium_news}}/module/pdfjs/web/viewer.html","PDF.js","🔖","5","txtbook"],

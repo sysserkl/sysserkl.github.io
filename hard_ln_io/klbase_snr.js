@@ -203,7 +203,7 @@ function statistics_sites_klsnews_b(){
     var bljg='0. <span onclick=\'getlines_klsnews_b();\' style="cursor:pointer;">全部</span>('+sourcelist.length+') ';
     for (let blxl=0;blxl<sites_count_t.length;blxl++){
         var item=sites_count_t[blxl];
-        bljg=bljg+(parseInt(blxl)+1)+'. <span onclick=\'getlines_klsnews_b(1,50,"'+item[0]+'");\' style="cursor:pointer;">'+item[0]+'</span>('+item[1]+') ';
+        bljg=bljg+(parseInt(blxl)+1)+'. <span onclick=\'getlines_klsnews_b("'+item[0]+'",1,50);\' style="cursor:pointer;">'+item[0]+'</span>('+item[1]+') ';
     }
     odiv.innerHTML='<p>'+bljg+'</p>';
 }
@@ -873,29 +873,16 @@ function getlines_simple_klsnews_b(){
     fav_status_klsnews_b();
 }
 
-function getlines_location_klsnews_b(cscount,cslines,jssearchkey){
+function getlines_location_klsnews_b(jssearchkey,cscount,cslines){
     var blno=page_location_b(cscount);
     if (blno!==false){
-        getlines_klsnews_b((blno-1)*cslines+1,cslines,jssearchkey);
+        getlines_klsnews_b(jssearchkey,(blno-1)*cslines+1,cslines);
     }
 }
 
-function getlines_klsnews_b(csno=1,cslines=50,jssearchkey=''){
+function getlines_klsnews_b(jssearchkey='',csno=1,cslines=50){
     function sub_getlines_klsnews_b_pages(csno,cslines,bllength,jssearchkey){
-        var page_html='';
-        var pages_count=Math.ceil(bllength/cslines);
-        var blpageno=(csno-1)/cslines+1;
-        if (pages_count>=1){
-            for (let blxl=1;blxl<=pages_count;blxl++){
-                page_html=page_html+page_one_b(pages_count,blpageno,blxl,'onclick="getlines_klsnews_b('+((blxl-1)*cslines+1)+','+cslines+',\''+jssearchkey+'\');"',2,0);
-            }
-            var blfound;
-            [page_html,blfound]=page_remove_dot_b(page_html);
-            if (blfound){
-                page_html=page_html+page_prev_next_b(pages_count,blpageno,'onclick="getlines_klsnews_b('+((blpageno-1-1)*cslines+1)+','+cslines+',\''+jssearchkey+'\');"','onclick="getlines_klsnews_b('+((blpageno-1+1)*cslines+1)+','+cslines+',\''+jssearchkey+'\');"','onclick="getlines_location_klsnews_b('+pages_count+','+cslines+',\''+jssearchkey+'\');"');
-            }
-            page_html='<p align="right">'+page_html+'</p>';
-        }
+        var page_html=page_combination_b(bllength,cslines,csno,'getlines_klsnews_b(\''+jssearchkey+'\',','getlines_location_klsnews_b(\''+jssearchkey+'\',','text-align:right',2,0,'','aclick');
         return page_html;
     }
     //---------

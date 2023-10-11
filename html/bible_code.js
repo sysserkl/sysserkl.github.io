@@ -517,11 +517,11 @@ function search_one_row_bible(blxl,h2,h3,chapter_no_current,blstyle,ismobile){
     return bljg;
 }
 
-function fav_location_bible(cspages){
+function fav_location_bible(cspages,csmax){
     var blno=parseInt((prompt('输入页号',cspages) || '').trim());
     if (isNaN(blno)){return;}
     blno=Math.min(cspages,Math.max(1,blno));
-    search_bible('FAV',0,blno);
+    search_bible('FAV',0,(blno-1)*csmax+1);
 }
 
 function fav_get_bible(){
@@ -532,7 +532,7 @@ function fav_set_bible(cslist){
     localStorage.setItem('fav_lines_bible',cslist.join('\n'));
 }
 
-function search_bible(cskey='',csstartno=0,favpage_no=1,csmax=500){
+function search_bible(cskey='',csstartno=0,fav_start=1,csmax=500){
     if (cskey==''){
         cskey=document.getElementById('input_bible_search').value.trim();
     }
@@ -557,24 +557,11 @@ function search_bible(cskey='',csstartno=0,favpage_no=1,csmax=500){
     csstartno=Math.max(0,parseInt(csstartno));
 
     var fav_list=fav_get_bible();
-    var fav_len=fav_list.length;
-    var fav_start=0;
     var fav_pages='';
     if (cskey=='FAV' && csmax>=0){
-        fav_start=(favpage_no-1)*csmax;
-        fav_list=fav_list.slice(fav_start,fav_start+csmax);
-        
-        var pages_count=Math.ceil(fav_len/csmax);
-        if (pages_count>1){
-            for (let blxl=1;blxl<=pages_count;blxl++){
-                fav_pages=fav_pages+page_one_b(pages_count,favpage_no,blxl,'onclick="search_bible(\'FAV\',0,'+blxl+');"'+(blxl==favpage_no?' style="color:red;"':''),0,0);
-            }
-            var blfound_skipped;
-            [fav_pages,blfound_skipped]=page_remove_dot_b(fav_pages);
-            if (blfound_skipped){
-                fav_pages=fav_pages+page_prev_next_b(pages_count,favpage_no,'onclick="search_bible(\'FAV\',0,'+(favpage_no-1)+');"','onclick="search_bible(\'FAV\',0,'+(favpage_no+1)+');"','onclick="fav_location_bible('+pages_count+');"');
-            }
-        }
+        fav_pages=fav_pages+page_combination_b(fav_list.length,csmax,fav_start,'search_bible(\'FAV\',0,','fav_location_bible','word-break:break-all;word-wrap:break-word;',0,0,'','aclick');
+
+        fav_list=fav_list.slice(fav_start-1,fav_start-1+csmax);
     }
     
     fav_list=new Set(fav_list); //加快搜索速度 - 保留注释
@@ -591,9 +578,7 @@ function search_bible(cskey='',csstartno=0,favpage_no=1,csmax=500){
     var include_fav=(cskey_list.includes('+FAV'));
     cskey='';
     for (let item of cskey_list){
-        if (item=='+FAV' || item=='-FAV'){
-            continue;
-        }
+        if (item=='+FAV' || item=='-FAV'){continue;}
         cskey=cskey+item+' ';
     }
     cskey=cskey.trim();

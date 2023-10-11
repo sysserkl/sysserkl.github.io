@@ -26,7 +26,7 @@ function menu_websites_pwa(){
         
     var websites_list=localstorage_get_websites_pwa(true);
     for (let item of websites_list){
-        var row_list=split_websites_pwa(item);
+        var row_list=split_pwa_websites_b(item);
         if (fav_set.has(row_list[1])){
             fav_websites_global.push([row_list[1],row_list[2]]);
         }  
@@ -150,7 +150,7 @@ function add_websites_pwa(){
     var blstr=(prompt('输入格式：分类 网址 名称',blexample) || '').trim();
     var blname='';
     var bltag='';
-    [blcategory,blstr,blname,bltag]=split_websites_pwa(blstr);
+    [blcategory,blstr,blname,bltag]=split_pwa_websites_b(blstr);
     
     if (blcategory==''){
         status_websites_pwa('无分类');
@@ -181,32 +181,6 @@ function status_websites_pwa(csstr){
     //-----------------------
     document.getElementById('span_status').innerHTML=csstr;
     setTimeout(status_websites_pwa_hide,5000);
-}
-
-function split_websites_pwa(csstr){
-    var blat=csstr.indexOf('http');
-    if (blat==-1){
-        return ['','','',''];
-    }
-    var list_t=csstr.substring(0,blat).trim().split(',');
-    blcategory=list_t[0];
-    if (blcategory==''){
-        blcategory='未分类';
-    }
-    var bltag=list_t.slice(1,).join(',');
-    
-    csstr=csstr.substring(blat,);
-    blat=csstr.indexOf(' ');
-    if (blat==-1){
-        blat=csstr.lastIndexOf('/');
-        if (blat==-1){
-            return [blcategory,csstr,'',bltag];
-        }
-    }
-    var blname=csstr.substring(blat,).trim();
-    csstr=csstr.substring(0,blat).trim();
-    return [blcategory,csstr,blname,bltag];
-    //形如：[ "资讯", "https://weibo.com/u/2938715943?is_all=1", "人民网舆情数据中心 - 微博", "CN" ] - 保留注释
 }
 
 function form_websites_pwa(){
@@ -260,7 +234,7 @@ function update_websites_pwa(){
             continue;
         }
         
-        var site_tmp=split_websites_pwa(item);
+        var site_tmp=split_pwa_websites_b(item);
         if (site_tmp[0]==''){continue;}
         site_list.push(site_tmp);
         
@@ -382,7 +356,7 @@ function search_websites_pwa(cskey='',is_random=false,return_max=-1){
     var new_list=[];
     var ignored_list=[];
     for (let item of websites_list){
-        [blcategory,blstr,blname,bltag]=split_websites_pwa(item);
+        [blcategory,blstr,blname,bltag]=split_pwa_websites_b(item);
         if (blcategory=='' || blstr=='' || blname==''){
             ignored_list.push(item);
             continue;

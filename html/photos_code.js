@@ -474,7 +474,7 @@ function get_filter_style_klphotos(only_content=false){
 
 function thumbnail_klphotos(csno=0){
 	current_page_first_img_num_global = csno;
-	
+
 	var bljg='';
 	var bltitle_tmp='';
 	if (csno-pageitems_global>=0){
@@ -532,24 +532,14 @@ function page_no_select_klphotos(cspages){
 }
 
 function pages_klphotos(csno){
-	var bljg='';
 	if (photodata_global.length<=pageitems_global){
 		document.getElementById('span_page_no1').innerHTML='';
 		document.getElementById('span_page_no2').innerHTML='';
 		return;
 	}
-    
-    var pages_count=Math.ceil(photodata_global.length/pageitems_global);
-    for (let blxl=0;blxl<pages_count;blxl++){
-        bljg=bljg+page_one_b(pages_count,1+csno/pageitems_global,1+blxl,'onclick="thumbnail_klphotos('+(blxl*pageitems_global)+');"',0,0);
-	}
-    
-    var blfound;
-    [bljg,blfound]=page_remove_dot_b(bljg);    
-    if (blfound){
-        bljg=bljg+page_prev_next_b(pages_count,1+csno/pageitems_global,'onclick="thumbnail_klphotos('+(csno-pageitems_global)+');"','onclick="thumbnail_klphotos('+(csno+pageitems_global)+');"','onclick="page_no_select_klphotos('+pages_count+');"');
-    }
-    
+
+    var bljg=page_combination_b(photodata_global.length,pageitems_global,csno,'thumbnail_klphotos','page_no_select_klphotos',false,0,0,'','aclick',0,false);
+
 	document.getElementById('span_page_no1').innerHTML=bljg;
 	document.getElementById('span_page_no2').innerHTML=bljg;
 	

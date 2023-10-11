@@ -67,4 +67,5 @@ var digest_global=`
 *longbow
 *noticeboard
 *blackmailer
+*shelve
 `.trim().split('\n');

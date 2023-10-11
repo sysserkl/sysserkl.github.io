@@ -1997,24 +1997,7 @@ function getlines_one_part_kltxt_b(csmin,csmax,bllength,csgrey,csaname,is_single
 function getlines_kltxt_b(csno=false,cslines=false,single=false,highlight=true,addhr=true,b_style=false,do_render=true){
     //csno 从 1 开始 - 保留注释
     function sub_getlines_kltxt_b_pages(csno,cslines,bllength){
-        var bljg='';
-        var pages=Math.ceil(filelist.length/cslines);
-        //var pginterval=Math.max(1,parseInt(pages/(ismobile_b()?1:3))); - 保留注释
-        for (let blxl=1;blxl<=pages;blxl++){
-            bljg=bljg+page_one_b(pages,(csno-1)/cslines+1,blxl,'onclick="getlines_kltxt_b('+((blxl-1)*cslines+1)+', '+cslines+');"',0,0,'span_page_number oblong_box');
-        }
-        
-        var blfound;
-        [bljg,blfound]=page_remove_dot_b(bljg);
-        if (filelist.length<=2000){
-            bljg=bljg+'<span style="cursor:pointer;" class="oblong_box" onclick="getlines_kltxt_b(1,filelist.length,true);"><b>一页</b></span> ';
-        }        
-        if (blfound){
-            bljg=bljg+page_prev_next_b(pages,(csno-1)/cslines+1,' onclick="getlines_kltxt_b('+(csno-cslines)+', '+cslines+');"','onclick="getlines_kltxt_b('+(csno+cslines)+', '+cslines+');"',' onclick="page_kltxt_b('+pages+','+cslines+');"','oblong_box');
-        }
-        
-        bljg='<p align=right style="font-size:0.9rem;line-height:1rem;">'+bljg+'</p>';
-
+        var bljg=page_combination_b(filelist.length,cslines,csno,'getlines_kltxt_b','page_kltxt_b','font-size:0.9rem;line-height:1rem;text-align:right',0,0,'');
         return bljg;    
     }
     //--------

@@ -1267,7 +1267,7 @@ function en_words_temp_textarea_b(divname,calljsname=''){
         calljsname=calljsname+'();';
     }    
     bljg=bljg+'<span class="aclick" onclick="en_words_temp_update_b(\''+divname+'\');'+calljsname+'">Update</span> ';
-    bljg=bljg+textarea_buttons_b('textarea_word_temp','全选,清空,复制','enwords_temp');    
+    bljg=bljg+textarea_buttons_b('textarea_word_temp','全选,清空,复制,导入temp_txt_share','enwords_temp');    
     bljg=bljg+'<span class="aclick" onclick="en_words_temp_send_to_txt_b();" title="send to remote temp memo">📤</span> ';
 
     bljg=bljg+textarea_buttons_b('textarea_word_temp','发送地址','enwords_temp');
@@ -2207,6 +2207,7 @@ function words_count_enwords_b(){
 
 function recent_words_list_enwords_b(cspageno=0,words_count_per_page=100,israndom=false,show_html=true,add_date_line=true){
     words_searched_arr_global=en_words_temp_list_b(add_date_line);
+    var bllen=words_searched_arr_global.length;
     var pages_count=Math.ceil(words_searched_arr_global.length/words_count_per_page);
     //cspageno 从 1 开始，0表示当前书签单词所在页，-1表示全部 - 保留注释
     var recent_bookmark=enwords_recent_bookmark_get_b();
@@ -2222,11 +2223,12 @@ function recent_words_list_enwords_b(cspageno=0,words_count_per_page=100,isrando
             }
         }
         cspageno=Math.ceil((blat+1)/words_count_per_page);
+        cspageno=(cspageno-1)*words_count_per_page+1;
     }
 
     if (israndom){
         if (cspageno>1){
-            words_searched_arr_global=words_searched_arr_global.slice((cspageno-1)*words_count_per_page,);
+            words_searched_arr_global=words_searched_arr_global.slice(cspageno-1,);
             for (let blxl=0;blxl<words_searched_arr_global.length;blxl++){
                 if (words_searched_arr_global[blxl][0]==recent_bookmark){
                     words_searched_arr_global=words_searched_arr_global.slice(blxl,);                    
@@ -2239,7 +2241,7 @@ function recent_words_list_enwords_b(cspageno=0,words_count_per_page=100,isrando
         words_searched_arr_global=words_searched_arr_global.slice(0,words_count_per_page);
     }
     else if (cspageno!==-1){
-        words_searched_arr_global=words_searched_arr_global.slice((cspageno-1)*words_count_per_page,cspageno*words_count_per_page);
+        words_searched_arr_global=words_searched_arr_global.slice(cspageno-1,cspageno-1+words_count_per_page);
     }
 
     if (!show_html){
@@ -2254,20 +2256,12 @@ function recent_words_list_enwords_b(cspageno=0,words_count_per_page=100,isrando
     blday=(blday>11?blday%10:blday);
     blday=(blday<2?10+blday:blday);
 
-    var page_html='';
-    if (cspageno>=1 && israndom===false){
-        for (let blxl=1;blxl<=pages_count;blxl++){
-            page_html=page_html+page_one_b(pages_count,cspageno,blxl,'onclick="recent_words_list_enwords_b('+blxl+','+words_count_per_page+');"',1,15,'aclick',[(blweek==0?7:blweek),blday]);
-        }
-        var blfound;
-        [page_html,blfound]=page_remove_dot_b(page_html);
-        if (blfound){
-            page_html=page_html+page_prev_next_b(pages_count,cspageno,'onclick="recent_words_list_enwords_b('+(cspageno-1)+','+words_count_per_page+');"','onclick="recent_words_list_enwords_b('+(cspageno+1)+','+words_count_per_page+');"','onclick="page_location_enwords_b('+pages_count+');"');
-        }
-        page_html='<p>'+page_html+'</p>';
-    }
+    var page_html=page_combination_b(bllen,words_count_per_page,cspageno,'recent_words_list_enwords_b','page_location_enwords_b','',1,15,'','aclick',1,true,[(blweek==0?7:blweek),blday]);
 
 	document.getElementById('divhtml').innerHTML=bljg+page_html;
+    
+    cspageno=Math.ceil((cspageno+1)/words_count_per_page);
+
     title_change_enwords_b('最近记忆的单词'+(cspageno==-1?'(全部)':'_第'+cspageno+'页'));
     document.location.href='#top';
     document.location.href='#a_recent_bookmark';
@@ -2275,10 +2269,10 @@ function recent_words_list_enwords_b(cspageno=0,words_count_per_page=100,isrando
     en_sentence_show_check_b();    
 }
 
-function page_location_enwords_b(cspages){
+function page_location_enwords_b(cspages,words_count_per_page){
     var blno=page_location_b(cspages);
     if (blno!==false){
-        recent_words_list_enwords_b(blno);
+        recent_words_list_enwords_b((blno-1)*words_count_per_page+1,words_count_per_page);
     }
 }
 

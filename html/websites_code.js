@@ -1,4 +1,33 @@
-function menu_klwebsites(){
+function fav_and_tag_klwebsites(change_no=false){
+   var tag_list={};
+    var fav_set=fav_www_get_websites_b();
+    fav_websites_global=[];
+    for (let blxl=0;blxl<sites_all_global.length;blxl++){
+        var item=sites_all_global[blxl];
+        if (fav_set.has(item[0])){
+            fav_websites_global.push([item[0],item[1]]);
+            if (change_no){
+                sites_all_global[blxl][3]=7;
+            }
+        }
+        
+        var blat=item[2].indexOf(',');
+        if (blat==-1){continue;}
+        var bltag=item[2].substring(blat+1,).trim();
+        if (bltag==''){continue;}
+        
+        var list_t=bltag.split(',');
+        for (let atag of list_t){
+            if (tag_list[atag]==undefined){
+                tag_list[atag]=0;
+            }
+            tag_list[atag]=tag_list[atag]+1;
+        }
+    }
+    return tag_list;
+}
+
+function menu_klwebsites(change_no=false){
     var str_t=klmenu_hide_b('');
     var klmenu1=[
     '<span class="span_menu" onclick="'+str_t+'search_in_site_options_klwebsites();">search in site</span>',        
@@ -30,39 +59,36 @@ function menu_klwebsites(){
     '<span class="span_menu" onclick="'+str_t+'waterfall_klwebsites();">waterfall</span>',
     ];
     
-    //---
-    var tag_list={};
-    var fav_set=fav_www_get_websites_b();
-    fav_websites_global=[];
-    for (let item of sites_all_global){
-        if (fav_set.has(item[0])){
-            fav_websites_global.push([item[0],item[1]]);
-        }
-        var blat=item[2].indexOf(',');
-        if (blat==-1){continue;}
-        var bltag=item[2].substring(blat+1,).trim();
-        if (bltag==''){continue;}
-        var list_t=bltag.split(',');
-        for (let atag of list_t){
-            if (tag_list[atag]==undefined){
-                tag_list[atag]=0;
-            }
-            tag_list[atag]=tag_list[atag]+1;
-        }
-    }
-    
+    var tag_list=fav_and_tag_klwebsites(change_no);
     var klmenu_tag=tag_menu_websites_b(tag_list,'search_klwebsites',str_t);
     
     var klmenu_config=[
     '<span class="span_menu" onclick="'+str_t+'demo_style_klwebsites();">PWA Demo Style</span>',   
+    '<span class="span_menu" onclick="'+str_t+'import_pwa_data_klwebsites();">导入 PWA 网址</span>',   
     '<span id="span_jieba_web" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ jieba分词</span>',
     '<span id="span_category_with_p_web" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 分类分段</span>',
     ];    
     //---
     
-    document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🕸','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_tag,'#','10rem','1rem','1rem','60rem')+klmenu_b(klmenu_search,'𓅸','10rem','1rem','1rem','60rem')+fav_www_menu_websites_b('',false)+klmenu_b(klmenu_config,'⚙','13rem','1rem','1rem','30rem'),'','0rem')+' ');
+    document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🕸','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_tag,'#','10rem','1rem','1rem','60rem')+klmenu_b(klmenu_search,'𓅸','10rem','1rem','1rem','60rem')+fav_www_menu_websites_b('',false)+klmenu_b(klmenu_config,'⚙','13rem','1rem','1rem','30rem'),'','0rem','','div_websites_menu')+' ');
     klmenu_check_b('span_veil_web',true);        
     klmenu_check_b('span_category_with_p_web',true);        
+}
+
+function import_pwa_data_klwebsites(){
+    var list_t=local_storage_get_b('websites_list_pwa',-1,true);
+    sites_all_global=[];
+    for (let item of list_t){
+        var result_t=split_pwa_websites_b(item);
+        if (result_t[0]=='' && result_t[1]==''){continue;}
+        sites_all_global.push([result_t[1],result_t[2],result_t[0]+(result_t[3]==''?'':','+result_t[3]),10,'']);
+    }
+    
+    sites_type_klwebsites();
+    document.getElementById('div_websites_menu').outerHTML='';
+    menu_klwebsites(true);
+    sites_tail_klwebsites();
+    search_klwebsites('',7);
 }
 
 function key_batch_search_by_engine_klwebsites(is_enword=true,csengine='bing',max_result=5){
@@ -813,17 +839,9 @@ function search_in_site_new_window_klwebsites(cstype,cskey=false,site_name=false
     return blstr;
 }
 
-function init_klwebsites(){
-    if (typeof sites_all_global == 'undefined'){    //在menu前 - 保留注释
-        sites_all_global=[];
-    }
-    
-    top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.5rem':'1.4rem'));
-
-    var t0 = performance.now();
+function sites_type_klwebsites(){
     var klwebphp_path=klwebphp_path_b();
-    var hostname,bltail;
-    
+
     for (let blxl=0;blxl<sites_all_global.length;blxl++){
         var href_str=sites_all_global[blxl][0];
         var count1=0;
@@ -850,7 +868,11 @@ function init_klwebsites(){
         }
         sites_all_global[blxl].push([count1,count2,count3]);   //selenium类型网址，其中CN网址，非selenium类型网址 - 保留注释
     }
-    menu_klwebsites();  //等 #http 之类网站被修正后，引入 menu - 保留注释
+}
+
+function sites_tail_klwebsites(){
+    var t0 = performance.now();
+    var hostname,bltail;
     var name_set=new Set();
     sites_all_global.sort(function (a,b){return a[0].length>b[0].length});  //网址长度 - 保留注释
     for (let blxl=0;blxl<sites_all_global.length;blxl++){
@@ -865,7 +887,19 @@ function init_klwebsites(){
         }
         name_set.add(sites_all_global[blxl][1]);
     }
-    console.log('init_klwebsites() 网址数组初始化部分费时：'+(performance.now() - t0) + ' milliseconds');
+    console.log('sites_tail_klwebsites() 费时：'+(performance.now() - t0) + ' milliseconds');
+}
+
+function init_klwebsites(){
+    if (typeof sites_all_global == 'undefined'){    //在menu前 - 保留注释
+        sites_all_global=[];
+    }
+    
+    top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.5rem':'1.4rem'));
+
+    sites_type_klwebsites();
+    menu_klwebsites();  //等 #http 之类网站被修正后，引入 menu - 保留注释
+    sites_tail_klwebsites();
     
     recent_websites_b();
     args_klwebsites();

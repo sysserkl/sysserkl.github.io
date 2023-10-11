@@ -389,7 +389,7 @@ function words_editor_form_kle(){
     bljg=bljg+'<p>';
     bljg=bljg+'<span class="aclick" onclick="words_queue_update_kle();">更新</span> ';
     bljg=bljg+'<span class="aclick" onclick="words_queue_append_kle();">批量添加</span> ';
-    bljg=bljg+textarea_buttons_b('textarea_words_queue','全选,清空,复制,发送到临时记事本,发送地址','enwords_queue')+' ';    
+    bljg=bljg+textarea_buttons_b('textarea_words_queue','全选,清空,复制,导入temp_txt_share,发送到临时记事本,发送地址','enwords_queue')+' ';    
     
     bljg=bljg+'<select id="select_queue_do_type">';
     for (let item of ['展现为数组形式','数组转为多行形式','batch_en','batch_en_minor']){

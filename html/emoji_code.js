@@ -100,7 +100,8 @@ function menu_emoji(){
     var klmenu_link=[
     '<a href="https://www.unicode.org/emoji/charts/full-emoji-list.html" onclick="'+str_t+'" target=_blank>Full Emoji List</a>',    
     '<a href="https://www.unicodepedia.com/groups/" onclick="'+str_t+'" target=_blank>Unicodepedia</a>',    
-    '<a href="https://emojipedia.org/" onclick="'+str_t+'" target=_blank>Emojipedia</a>',        
+    '<a href="https://emojipedia.org/" onclick="'+str_t+'" target=_blank>Emojipedia</a>',
+    '<a href="https://symbl.cc/en/" onclick="'+str_t+'" target=_blank>SYMBL (◕‿◕)</a>',        
     ];
 
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🎁️','11rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L️','11rem','1rem','1rem','60rem'),'','0rem')+' ');
@@ -161,8 +162,10 @@ function unicode_search_emoji(csstr){
         }        
     }
     if (bljg!==''){
-        range_filter_emoji('+'+bljg.replace(new RegExp(/\s/,'g'),' +')+'(:r)');
-        unicode_list_emoji(bljg,Math.ceil(blno/no_per_page_emoji_global));
+        range_filter_emoji('+'+bljg.replace(/\s/g,' +')+'(:r)');
+        
+        var blstart=1+(Math.ceil(blno/no_per_page_emoji_global)-1)*no_per_page_emoji_global;
+        unicode_list_emoji(bljg,blstart);
     }
 }
 
@@ -191,7 +194,7 @@ function show_emoji(cstype){
 function unicode_page_emoji(cscategory,cspages){
     var blno=page_location_b(cspages);
     if (blno!==false){
-        unicode_list_emoji(cscategory,blno);
+        unicode_list_emoji(cscategory,(blno-1)*no_per_page_emoji_global+1);
     }
 }
 
@@ -294,21 +297,12 @@ function unicode_list_emoji(cscategory=false,csstart=1){
     var list_t=unicode_global[cscategory];
     var blstart=eval('0x'+list_t[0]);
     var blend=eval('0x'+list_t[1])+1;
+
+    document.getElementById('span_unicode_info').innerText=[list_t,blstart,eval('0x'+list_t[1]),eval('0x'+list_t[1])-blstart+1];  //此行保留 - 保留注释
+
+    var pages=page_combination_b(blend-blstart,no_per_page_emoji_global,csstart,'unicode_list_emoji(\''+specialstr_j(cscategory)+'\',','unicode_page_emoji(\''+specialstr_j(cscategory)+'\',','word-break:break-all;word-wrap:break-word;',1,100,'','aclick',1,false)
     
-    var page_count=Math.ceil((blend-blstart)/no_per_page_emoji_global);
-    var pages='';
-    if (page_count>1){
-        for (let blxl=1;blxl<=page_count;blxl++){
-            pages=pages+page_one_b(page_count,csstart,blxl,'onclick="unicode_list_emoji(\''+specialstr_j(cscategory)+'\','+blxl+');"',1,100);
-        }
-    }
-    var blfound;
-    [pages,blfound]=page_remove_dot_b(pages);
-    if (blfound){
-        pages=pages+page_prev_next_b(page_count,csstart,'onclick="unicode_list_emoji(\''+specialstr_j(cscategory)+'\','+(csstart-1)+');"','onclick="unicode_list_emoji(\''+specialstr_j(cscategory)+'\','+(csstart+1)+');"','onclick="unicode_page_emoji(\''+specialstr_j(cscategory)+'\','+page_count+');"');
-    }
-    
-    blstart=blstart+(csstart-1)*no_per_page_emoji_global;
+    blstart=blstart+csstart-1;
     if (blstart+no_per_page_emoji_global<blend){
         blend=blstart+no_per_page_emoji_global;
     }
