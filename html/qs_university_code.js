@@ -294,6 +294,8 @@ function flot_line_qs_rank(cslist,set_list,odiv){
         }
     }
     
+    if (year_set.size==0){return;}
+    
     var blmin=Math.min(...year_set);
     var blmax=Math.max(...year_set);
     var blrange=blmax-blmin+1;

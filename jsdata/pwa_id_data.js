@@ -6,6 +6,7 @@ var pwa_id_global=[
 "long_term_plans",
 "lsm",
 "memo",
+"notepad",
 "qrcode",
 "reader_idb",
 "rnd_english_words",

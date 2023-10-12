@@ -638,6 +638,9 @@ function line_count_zjedu(){
     for (let item of arr2_t){
         list_t.push(item[0]);
     }
+    
+    if (list_t.length==0){return;}
+    
     var min_line=Math.min(...list_t);
     var max_line=Math.max(...list_t);
     var arr3_t=[];
@@ -989,6 +992,7 @@ function same_record_data_zjedu(){
         score_min.push(item[1][item[1].length-1][0]);
     }
     
+    if (score_max.length==0 || score_min.length==0){return;}
     score_max=Math.min(...score_max);   //最大值数组中取最小的 - 保留注释
     score_min=Math.max(...score_min);
 
@@ -1030,6 +1034,7 @@ function same_record_data_zjedu(){
 
 function exam_range_check_zjedu(){
     function sub_exam_range_check_zjedu_array(csarr,range_compare=true){
+        if (csarr.length==0){return '';}
         var blmin=Math.min(...csarr);
         var blmax=Math.max(...csarr);
         var len1=csarr.length;
