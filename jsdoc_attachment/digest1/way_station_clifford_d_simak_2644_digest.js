@@ -71,7 +71,6 @@ var digest_global=`
 *drugstore
 *eagerness
 *Earthman
-*elbow room
 *embarrassment
 *Enoch
 *en route

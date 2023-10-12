@@ -20,4 +20,5 @@ var digest_global=`
 *stunner
 *tableware
 *trainee
+*elbow room
 `.trim().split('\n');
