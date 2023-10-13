@@ -27,8 +27,12 @@ css_root_style_b('18','13',['base','menu'],[],1);
 <div style="margin:0.5rem;">
 <p><input type="text" id="input_search" placeholder="search" onkeyup="if (event.key=='Enter'){search_notepad();}" /></p>
 <div id="div_recent_search" style="font-size:0.85rem;margin:0.5rem 0rem;line-height:1.8rem;"></div>
-<p><textarea id="textarea_content_notepad" style="display:none;height:20rem; padding:1rem;font-size:1rem;"></textarea></p>
-<p id="p_buttons_notepad" style="display:none;"><span id="span_append_or_edit_notepad" class="aclick" onclick="idb_notepad('edit');">保存</span><span class="aclick" onclick="show_hide_notepad(false);">取消</span><span id="span_delete_notepad" class="aclick" onclick="delete_notepad();">删除</span></p>
+
+<form method="POST"  id="form_notepad" target=_blank>
+<p><textarea name="textarea_content_notepad" id="textarea_content_notepad" style="display:none;height:20rem; padding:1rem;font-size:1rem;"></textarea></p>
+<p id="p_buttons_notepad" style="display:none;"><span id="span_append_or_edit_notepad" class="aclick" onclick="append_or_edit_notepad(this);">保存</span><span class="aclick" onclick="show_hide_notepad(false);">取消</span><span id="span_delete_notepad" class="aclick" onclick="delete_notepad();">删除</span></p>
+</form>
+
 <div id="divhtml" style="margin:1rem;"></div>
 </div>
 <script>

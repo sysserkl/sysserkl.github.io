@@ -2,6 +2,13 @@ function init_notepad(){
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.6rem'),false,false,2);
     input_with_x_b('input_search',11);
     recent_notepad();
+
+    var postpath=postpath_b();
+    document.getElementById('form_notepad').setAttribute('action',postpath+'temp_txt_share.php');
+    
+    var buttons=textarea_buttons_b('textarea_content_notepad','清空,复制,发送到临时记事本,发送地址,save as txt file');
+    document.getElementById('p_buttons_notepad').insertAdjacentHTML('afterbegin',buttons);
+    
     character_2_icon_b('N');    
 }
 
@@ -27,6 +34,11 @@ function recent_notepad(csstr=''){
 
 function search_notepad(cskey=false){
     idb_notepad('read',cskey);
+}
+
+function append_or_edit_notepad(ospan){
+    if (!confirm('是否'+ospan.innerText+'？')){return;}
+    idb_notepad('edit');
 }
 
 function page_notepad(csno){
