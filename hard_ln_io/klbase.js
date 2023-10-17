@@ -1729,6 +1729,7 @@ function textarea_buttons_b(textarea_id,csbuttons,cstype='',csstyle='',span_clas
 }
 
 function import_temp_txt_share_content_b(csid){
+    if (!confirm('是否导入temp_text_share_data.txt内容？')){return;}
     var blstr=read_txt_file_b(klwebphp_path_b('/data/php_writable/temp_txt_share_data.txt'));
     document.getElementById(csid).value=blstr;  //不能使用 specialstr92_b(blstr) - 保留注释
 }
