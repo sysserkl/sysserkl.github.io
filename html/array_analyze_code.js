@@ -383,6 +383,18 @@ function group_arr_analyze(showlist){
 }
 
 function data_2_flot_arr_analyze(is_demo=false){
+    function sub_data_2_flot_arr_analyze_row2arr(cslist){
+        var row1=['Item'];
+        var row2=[cslist[0]];
+        for (blno=1;blno<cslist.length;blno++){
+            if (Array.isArray(cslist[blno]) && cslist[blno].length==2){
+                row1.push(cslist[blno][0]);
+                row2.push(cslist[blno][1]);
+            }
+        }    
+        return [row1,row2];    
+    }
+
     function sub_data_2_flot_arr_analyze_str2date(cslist){
         for (blno=1;blno<cslist.length;blno++){
             if (Array.isArray(cslist[blno]) && cslist[blno].length==2){
@@ -442,6 +454,14 @@ function data_2_flot_arr_analyze(is_demo=false){
                     }
 
                     flot_lines_show_arr_analyze(list_t,(bltype=='flot lines date'));
+                    break;
+                case 'flot lines 2 array':
+                    var result_t=[];
+                    for (let item of list_t){
+                        item=eval('['+item+']');
+                        result_t=result_t.concat(sub_data_2_flot_arr_analyze_row2arr(item));
+                    }
+                    document.getElementById('divhtml').innerHTML='<textarea>'+result_t.join('\n')+'</textarea>';
                     break;
                 case 'pie':
                     for (let blxl=0;blxl<list_t.length;blxl++){
