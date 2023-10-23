@@ -14,7 +14,7 @@ function col_rearrange_blank_data(){
     return list_t;
 }
 
-function import_as_js_blank_data(){
+function import_as_js_blank_data(is_append=false){
     if (!confirm('是否导入js数据？')){return;}
     var otextarea=document.getElementById('textarea_blank_data');
     var list_t=otextarea.value.trim().split('\n');
@@ -26,7 +26,12 @@ function import_as_js_blank_data(){
         list_t=list_t.slice(0,-1);
     }
     try {
-        blank_data_global=eval('['+list_t.join('\n')+']');
+        if (is_append){
+            blank_data_global=blank_data_global.concat(eval('['+list_t.join('\n')+']'));        
+        }
+        else {
+            blank_data_global=eval('['+list_t.join('\n')+']');
+        }
         raw_data_len_jscm_global=blank_data_global.length;
     }
     catch (error){
@@ -44,7 +49,8 @@ function import_as_js_blank_data(){
 
 function form_blank_data(){
     var blbuttons='<p>';
-    blbuttons=blbuttons+'<span class="aclick" onclick="import_as_js_blank_data();">import as js</span>';
+    blbuttons=blbuttons+'<span class="aclick" onclick="import_as_js_blank_data();">清除旧记录并作为js导入</span>';
+    blbuttons=blbuttons+'<span class="aclick" onclick="import_as_js_blank_data(true);">添加到旧记录尾部并作为js导入</span>';
     
     if (!is_file_type_b()){
         var option_list=['<option></option>'];
@@ -62,6 +68,7 @@ function form_blank_data(){
         blbuttons=blbuttons+'<span class="aclick" onclick="import_js_file_to_textarea_blank_data();">import file to textarea</span>';    
     }
     
+    blbuttons=blbuttons+textarea_buttons_b('textarea_blank_data','清空,复制,导入temp_txt_share');        
     blbuttons=blbuttons+close_button_b('div_form_common','','aclick');
     blbuttons=blbuttons+'</p>';
     var odiv=document.getElementById('div_form_common');

@@ -11,6 +11,7 @@ function img_size_get_b(obj_img,use_natural){
 }
 
 function resize_img_check_b(oimg,csmaxwidth=-1,csmaxheight=-1,use_natural=false){    
+    var resize_w, resize_h;
     [resize_w,resize_h]=img_size_get_b(oimg,use_natural);
     
     var blratio_wh=resize_w/resize_h;
@@ -31,14 +32,48 @@ function resize_img_check_b(oimg,csmaxwidth=-1,csmaxheight=-1,use_natural=false)
     return [resize_w,resize_h,doresize];
 }
 
-function resize_img_convert_b(oimg,csmaxwidth,csmaxheight,return_type,use_natural=false){
-    var resize_w;
-    var resize_h;
-    var doresize;
+function resize_one_img_b(oimg,csmaxwidth,csmaxheight,return_type,use_natural=false){
+    var resize_w, resize_h, doresize;
     [resize_w,resize_h,doresize]=resize_img_check_b(oimg,csmaxwidth,csmaxheight,use_natural);
 
     if (doresize===false){return false;}
     return image_2_canvas_img_b(oimg,return_type,'',use_natural,resize_w,resize_h);
+}
+
+function resize_batch_imgs_b(oimgs,new_width=false,alert_id=''){
+    function sub_resize_batch_imgs_b_one(){
+        if (blxl>=bllen){
+            var blstr='操作完成，一共有'+bllen+'张图片，调整了'+changed+'张';
+            if (alert_id!==''){
+                js_alert_b(blstr,alert_id);
+            }
+            return;
+        }
+        
+        var one_img=oimgs[blxl];
+        var list_t=resize_one_img_b(one_img,new_width,-1,'canvas',true);
+        if (list_t!==false){
+            var ocanvas=list_t[0];
+            one_img.setAttribute('src',ocanvas.toDataURL('image/jpeg'));    
+            changed=changed+1;
+        }
+        blxl=blxl+1;
+        setTimeout(sub_resize_batch_imgs_b_one,10);
+    }
+    //---------------------------
+    if (new_width===false){
+        new_width=prompt('输入最大宽度','1600');
+    }
+    if (new_width==null){return;}
+    
+    new_width=new_width.trim();
+    if (new_width=='' || isNaN(new_width)){return;}
+    new_width=parseInt(new_width);
+    
+    var blxl=0;
+    var bllen=oimgs.length;
+    var changed=0;
+    sub_resize_batch_imgs_b_one();
 }
 
 function filter_form_img_b(csjs1='',csjs2=''){
@@ -142,12 +177,7 @@ function img2base64_b(oimgs,alert_info_id=''){
     function sub_img2base64_b_one_img(){
         if (blxl>=bllen){
             var blstr='操作完成，一共有'+bllen+'张图片，转换了'+changed+'张，无需转换'+unchanged+'张';
-            if (alert_info_id=='alert'){
-                alert(blstr);
-            }
-            else if (alert_info_id!==''){
-                js_alert_b(blstr,alert_info_id);
-            }
+            js_alert_b(blstr,alert_info_id);
             
             console.log('img2base64_kleditor() 费时：'+(performance.now() - t0) + ' milliseconds');
             return;
@@ -173,6 +203,8 @@ function img2base64_b(oimgs,alert_info_id=''){
         setTimeout(sub_img2base64_b_one_img,100);        
     }
     //-------------------------------
+    if (!confirm('是否转换图片为base64格式？')){return;}
+    
     var bllen=oimgs.length;
     var blxl=0;
     var changed=0;
@@ -288,4 +320,16 @@ function img_xy_b(event,oimg){
     return [Math.round(x*oimg.naturalWidth/oimg.offsetWidth),Math.round(y*oimg.naturalHeight/oimg.offsetHeight)];
 }
 
-
+function imgs_min_max_size_b(oimgs){
+    var blwidth=new Set();
+    var blheight=new Set();
+    for (let one_img of oimgs){
+        blwidth.add(one_img.naturalWidth);
+        blheight.add(one_img.naturalHeight);
+    }
+    if (blwidth.size=0 || blheight.size==0){return '';}
+    
+    var blmin='min wh: '+Math.min(...blwidth)+'x'+Math.min(...blheight);
+    var blmax='max wh: '+Math.max(...blwidth)+'x'+Math.max(...blheight);
+    return blmin+'\n'+blmax;
+}
