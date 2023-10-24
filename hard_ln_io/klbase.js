@@ -3131,7 +3131,7 @@ function copy_2_clipboard_b(csstr){
     otextarea.parentNode.removeChild(otextarea);
 }
 
-function split_dom_vertical_or_horizontal_b(odom,cscount,split_type){
+function split_dom_vertical_or_horizontal_b(odom,cscount,split_type,adjust_by_p=false){
     var rect=odom.getBoundingClientRect();
 
     var odiv_splits=document.querySelectorAll('div.div_split_dom_vertical_or_horizontal_b');
@@ -3145,25 +3145,41 @@ function split_dom_vertical_or_horizontal_b(odom,cscount,split_type){
     for (let blxl=0;blxl<cscount;blxl++){
         split_list.push(split_len*blxl/cscount);
     }
-    
-    for (let blxl=0;blxl<split_list.length;blxl++){        
+
+    //形如：[ 0, 7578.516927083333, 15157.033854166666 ] - 保留注释
+    if (adjust_by_p){
+        var p_position=[];
+        var ops=odom.querySelectorAll('p, h2, h3, h4, h5, li, tr');
+        for (let one_p of ops){
+            var osub=one_p.querySelector('p, h2, h3, h4, h5, li, tr');
+            if (osub){continue;}    //忽略含有子对象的对象 - 保留注释
+            var p_rect=one_p.getBoundingClientRect();
+            if (split_type=='rows'){
+                p_position.push([p_rect.top,p_rect.top+p_rect.height]);
+            }
+            else {
+                p_position.push([p_rect.left,p_rect.left+p_rect.width]);            
+            }
+        }
+        
+        for (let blx=1;blx<split_list.length;blx++){    //忽略第一个 0 元素 - 保留注释
+            for (let bly=0;bly<p_position.length-1;bly++){
+                if (p_position[bly+1][0]>=split_list[blx]){ //段落有可能太长，调整后，每份截图长度不一致 - 保留注释
+                    split_list[blx]=(p_position[bly][1]+p_position[bly+1][0])/2;
+                    break;
+                }
+            }
+        }
+    }
+
+    for (let blxl=0;blxl<split_list.length;blxl++){
         var odiv_split=document.createElement('div');
         document.body.appendChild(odiv_split);
         odiv_split.style.cssText='position:absolute;';
         odiv_split.classList.add('div_split_dom_vertical_or_horizontal_b');
 
-        if (split_type=='rows'){
-            odiv_split.style.left=rect.left+'px';
-            odiv_split.style.width=rect.width+'px';  
-            odiv_split.style.height=rect.height/split_list.length+'px';
-            odiv_split.style.top=split_list[blxl]+'px';
-        }
-        else {
-            odiv_split.style.top=rect.top+'px';
-            odiv_split.style.height=rect.height+'px';  
-            odiv_split.style.width=rect.width/split_list.length+'px';
-            odiv_split.style.left=split_list[blxl]+'px';
-        }
+        split_div_position_wh_b(split_type,split_list,blxl,odiv_split,rect);
+
         odiv_split.setAttribute('ondblclick',"this.outerHTML='';");
     }
 }
@@ -3219,33 +3235,37 @@ function split_table_by_rows_or_cols_b(otrs,cscount,cstype='rows',rect_table=fal
         odiv_split.classList.add('div_split_dom_vertical_or_horizontal_b');
         odiv_split.style.cssText='position:absolute;';
         
-        if (cstype=='rows'){
-            odiv_split.style.left=rect_table.left+'px';
-            odiv_split.style.top=split_list[blxl]+'px';        
-            odiv_split.style.width=rect_table.width+'px';
-        
-            if (blxl<split_list.length-1){
-                odiv_split.style.height=(split_list[blxl+1]-split_list[blxl])+'px';
-            }
-            else {
-                odiv_split.style.height=(rect_table.top+rect_table.height-split_list[blxl])+'px';
-            }
-        }
-        else {
-            odiv_split.style.top=rect_table.top+'px';
-            odiv_split.style.left=split_list[blxl]+'px';        
-            odiv_split.style.height=rect_table.height+'px';
-        
-            if (blxl<split_list.length-1){
-                odiv_split.style.width=(split_list[blxl+1]-split_list[blxl])+'px';
-            }
-            else {
-                odiv_split.style.width=(rect_table.left+rect_table.width-split_list[blxl])+'px';
-            }
-        }
+        split_div_position_wh_b(cstype,split_list,blxl,odiv_split,rect_table);
         odiv_split.setAttribute('ondblclick',"this.outerHTML='';");
     }
     return split_list;    
+}
+
+function split_div_position_wh_b(cstype,split_list,csxl,odiv_split,orect){
+    if (cstype=='rows'){
+        odiv_split.style.left=orect.left+'px';
+        odiv_split.style.width=orect.width+'px';
+            
+        odiv_split.style.top=split_list[csxl]+'px';
+        if (csxl<split_list.length-1){
+            odiv_split.style.height=(split_list[csxl+1]-split_list[csxl])+'px';
+        }
+        else {
+            odiv_split.style.height=(orect.top+orect.height-split_list[csxl])+'px';
+        }
+    }
+    else {
+        odiv_split.style.top=orect.top+'px';
+        odiv_split.style.height=orect.height+'px';
+                
+        odiv_split.style.left=split_list[csxl]+'px';
+        if (csxl<split_list.length-1){
+            odiv_split.style.width=(split_list[csxl+1]-split_list[csxl])+'px';
+        }
+        else {
+            odiv_split.style.width=(orect.left+orect.width-split_list[csxl])+'px';
+        }
+    }
 }
 
 function percent_calculation_b(starting_value,final_value,current_value){
