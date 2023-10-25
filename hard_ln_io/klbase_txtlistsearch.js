@@ -384,9 +384,9 @@ function innerHTML_2_arr_kltxt_b(){
     
     var postpath=postpath_b();
 	var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php" target=_blank style="margin-left:0.5rem;">\n';
-    bljg=bljg+'<textarea name="textarea_innerhtml_arr_kltxt" id="textarea_innerhtml_arr_kltxt" style="height:15rem;">'+result_t.join('\n')+'</textarea>';
+    bljg=bljg+'<textarea name="textarea_innerhtml_arr_kltxt" id="textarea_innerhtml_arr_kltxt" style="height:15rem;">var filelist=[\n'+result_t.join('\n')+'\n];\n</textarea>';
     bljg=bljg+'<p>'+close_button_b('divhtml2','');
-    bljg=bljg+textarea_buttons_b('textarea_innerhtml_arr_kltxt','全选,复制,发送到临时记事本,发送地址');
+    bljg=bljg+textarea_buttons_b('textarea_innerhtml_arr_kltxt','全选,复制,save as js file,发送到临时记事本,发送地址');
     bljg=bljg+'</p>';        
     bljg=bljg+'</form>';
     var odiv=document.getElementById('divhtml2');

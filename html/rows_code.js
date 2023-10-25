@@ -360,14 +360,6 @@ function leaflet_en_buttons_klr2(){
     }
     var buttons='<select id="select_transform_klr">'+result_t.join('\n')+'</select>\n';
     buttons=buttons+'<span class="aclick" onclick="en_transform_klr2(document.getElementById(\'select_transform_klr\').value);">执行</span> ';        
-
-    buttons=buttons+'Braille: ';
-    buttons=buttons+'<span class="aclick" onclick="brialle_transform_klr2();">encode</span> ';
-    buttons=buttons+'<span class="aclick" onclick="brialle_transform_klr2(false);">decode</span> ';
-
-    buttons=buttons+'Morse: ';
-    buttons=buttons+'<span class="aclick" onclick="morse_transform_klr2();">encode</span> ';
-    buttons=buttons+'<span class="aclick" onclick="morse_transform_klr2(false);">decode</span> ';
     
     buttons=buttons+'<select id="select_invisible_klr">\n';
     for (let item of ['add','cn','cn_phrase','remove','test']){
@@ -377,6 +369,15 @@ function leaflet_en_buttons_klr2(){
     buttons=buttons+'<label><input type="checkbox" id="input_invisible_restrict" />restrict</label>\n';
     buttons=buttons+'<span class="aclick" onclick="invisible_klr2(document.getElementById(\'select_invisible_klr\').value)">执行</span> ';    
     buttons=buttons+'<span class="aclick" onclick="encrypt_content_quick_transform_klr2();">quick</span> ';    
+    
+    buttons=buttons+'<select id="select_transform_type">';
+    for (let item of ['base64','braille','morse']){
+        buttons=buttons+'<option>'+item+'</option>';
+    }
+    buttons=buttons+'</select>';
+    buttons=buttons+'<span class="aclick" onclick="transform_type_kl2(true);">encode</span> ';
+    buttons=buttons+'<span class="aclick" onclick="transform_type_kl2(false);">decode</span> ';
+        
     document.getElementById('div_leaflet_en').insertAdjacentHTML('afterbegin',buttons);
 }
 
@@ -392,12 +393,31 @@ function temp_save_klr2(cstype='',textarea_id=''){
     temp_save_table_b(cstype,'klr2_save',textarea_id,'div_temp_save',20,'textarea_rows_content');
 }
 
-function brialle_transform_klr2(csencode){
-    document.getElementById('textarea_status').value=braille_transform_b(document.getElementById('textarea_rows_content').value,csencode);
-}
-
-function morse_transform_klr2(csencode){
-    document.getElementById('textarea_status').value=morse_transform_b(document.getElementById('textarea_rows_content').value,csencode);
+function transform_type_kl2(csencode=true){
+    var bltype=document.getElementById('select_transform_type').value;
+    switch (bltype){
+        case 'base64':
+            var blcontent=document.getElementById('textarea_rows_content').value;
+            try {
+                if (csencode){
+                    var bljg=btoa(blcontent);
+                }
+                else {
+                    var bljg=atob(blcontent.trim());
+                }
+            }
+            catch (error){
+                var bljg=error;
+            }   
+            document.getElementById('textarea_status').value=bljg;
+            break;
+        case 'braille':
+            document.getElementById('textarea_status').value=braille_transform_b(document.getElementById('textarea_rows_content').value,csencode);        
+            break;
+        case 'morse':
+            document.getElementById('textarea_status').value=morse_transform_b(document.getElementById('textarea_rows_content').value,csencode);        
+            break;
+    }
 }
 
 function invisible_klr2(cstype=''){

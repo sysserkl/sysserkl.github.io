@@ -20,7 +20,7 @@ function content_media_money_b(csstr){
 			bljg='http://'+location.host+'/wikiuploads/wpatt/'+bljg.substring(8);
 		}
 		
-		if ('.jpg,.bmp,.png,.gif'.includes(bljg.substring(bljg.length-4).toLowerCase()) || '.avif,.jpeg,.webp'.includes(bljg.substring(bljg.length-5).toLowerCase())){
+		if ('.jpg,.bmp,.png,.gif'.includes(bljg.substring(bljg.length-4).toLowerCase()) || '.avif,.jfif,.jpeg,.webp'.includes(bljg.substring(bljg.length-5).toLowerCase())){
 			bljg='<div style="max-width:20rem;max-height:30rem;overflow:hidden;"><img src=\"'+bljg+'\" onclick="resizeimg_wp(this.parentNode);" style="width:100%;" border="0"></div>';
 		}
 		else{
@@ -454,13 +454,13 @@ function electricity_get_money_b(csstr){
     else {
         csstr=csstr.substring(blat+1,);
     }
-    csstr=csstr.replace(new RegExp(/交费到期日为.*?，如已交费，敬请忽略，/,'g'),'');
+    csstr=csstr.replace(/交费到期日为.*?，如已交费，敬请忽略，/g,'');
     csstr=csstr.replace('请及时交费，如已交费，敬请忽略，','');  
-    csstr=csstr.replace(new RegExp(/可点击https:\/\/.*?查询详情。/,'g'),'');
+    csstr=csstr.replace(/可点击https:\/\/.*?查询详情。/g,'');
     csstr=csstr.split('\n')[0];
     
-    var blamount=csstr.replace(new RegExp(/.*电量(.*?)度.*/,'g'),'$1');
-    var total_price=csstr.replace(new RegExp(/.*电费(.*?)元.*/,'g'),'$1');
+    var blamount=csstr.replace(/.*电量(.*?)度.*/g,'$1');
+    var total_price=csstr.replace(/.*电费(.*?)元.*/g,'$1');
     if (isNaN(blamount) || isNaN(total_price)){
         error='未发现电量或电费数值';
         return [error,blname,bladdress,blamount,total_price,csstr];

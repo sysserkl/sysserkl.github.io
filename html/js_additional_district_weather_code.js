@@ -19,8 +19,8 @@ function menu_more_district_weather(){
     ];
 
     var group_list=[
-    ['⚪ 分年','klmenu_check_b(this.id,true);',false,'span_multi_year_lines_jsad_dweather'],
-    ['⚪ 月份补足','klmenu_check_b(this.id,true);',false,'span_zero_month_jsad_dweather'],
+    ['⚪ 折线图分年','klmenu_check_b(this.id,true);',false,'span_multi_year_lines_jsad_dweather'],
+    ['⚪ 点状热力图月份补足','klmenu_check_b(this.id,true);',false,'span_zero_month_jsad_dweather'],
     ];    
     klmenu1.push(menu_container_b(str_t,group_list,''));
     
@@ -36,14 +36,18 @@ function menu_more_district_weather(){
     ['温度数据导出','export_temperature_district_weather();',true],
     ['点状热力图','dots_district_weather();',true],
     ];    
-    klmenu1.push(menu_container_b(str_t,group_list,'当前条件温度'));
+    klmenu1.push(menu_container_b(str_t,group_list,'当前条件每日温度：'));
+    
+    klmenu1=klmenu1.concat([
+    '<span class="span_menu" onclick="'+str_t+'month_average_temperature_district_weather();">当前条件月均温</span>',
+    ]);
     
     var search_list=['+^(2[89]|[3-9]\\d)$'];
     var klmenu2=[];
     for (let item of search_list){
         klmenu2.push('<span class="span_menu" onclick="'+str_t+'search_common(\''+specialstr_j(item)+'\');">'+item+'</span>');
     }
-    return klmenu_b(klmenu1,'🌀','27rem','1rem','1rem','30rem')+klmenu_b(klmenu2,'🔍','16rem','1rem','1rem','30rem');
+    return klmenu_b(klmenu1,'🌀','30rem','1rem','1rem','30rem')+klmenu_b(klmenu2,'🔍','16rem','1rem','1rem','30rem');
 }
 
 function file_load_district_weather(){
@@ -75,7 +79,7 @@ function export_temperature_district_weather(){
             }
             if (year_l_dict[blkey]==undefined){
                 year_l_dict[blkey]=[];
-            }            
+            }
             
             year_h_dict[blkey].push('["2000'+bldate.substring(4,)+'",'+item[0][1]+']');
             year_l_dict[blkey].push('["2000'+bldate.substring(4,)+'",'+item[0][2]+']');
@@ -95,17 +99,17 @@ function export_temperature_district_weather(){
             ht.push('["'+bldate+'",'+item[0][1]+']');
             lt.push('["'+bldate+'",'+item[0][2]+']');
         }
-        ht=['"最高温度"'].concat(ht);    
+        ht=['"最高温度"'].concat(ht);
         lt=['"最低温度"'].concat(lt);
         switch (temperature_range){
             case '全部':
-                var flot_arr=[ht,lt];        
+                var flot_arr=[ht,lt];
                 break;
             case '最高温度':
                 var flot_arr=[ht];
                 break;
             case '最低温度':
-                var flot_arr=[lt];        
+                var flot_arr=[lt];
                 break;
         }
     }    
@@ -117,7 +121,35 @@ function export_temperature_district_weather(){
     odiv.scrollIntoView();        
 }
 
-function flot_line_temperature_district_weather(only_dot=false){
+function month_average_temperature_district_weather(only_dot=false){
+    var ym_dict={};
+    for (let item of js_data_current_common_search_global){
+        var blkey='ym_'+item[0][0].substring(0,7);
+        if (ym_dict[blkey]==undefined){
+            ym_dict[blkey]=[0,0,0];
+        }
+        ym_dict[blkey][0]=ym_dict[blkey][0]+item[0][1];
+        ym_dict[blkey][1]=ym_dict[blkey][1]+item[0][2];
+        ym_dict[blkey][2]=ym_dict[blkey][2]+1;
+    }
+    ym_dict=object2array_b(ym_dict,true,3);
+    var tr_list=['<tr><th>年月</th><th align=right>最高温度平均值℃</th><th align=right>最低温度平均值℃</th><th align=right>统计天数</th></tr>'];
+    for (let blxl=0;blxl<ym_dict.length;blxl++){
+        ym_dict[blxl][1]=ym_dict[blxl][1]/ym_dict[blxl][3];
+        ym_dict[blxl][2]=ym_dict[blxl][2]/ym_dict[blxl][3];
+        
+        tr_list.push('<tr><td>'+ym_dict[blxl][0]+'</td><td align=right>'+ym_dict[blxl][1].toFixed(2)+'</td><td align=right>'+ym_dict[blxl][2].toFixed(2)+'</td><td align=right>'+ym_dict[blxl][3]+'</td></tr>');
+
+        ym_dict[blxl][0]=ym_dict[blxl][0]+'-01';        
+        ym_dict[blxl][3]='';
+        ym_dict[blxl].push('');
+        ym_dict[blxl]=[ym_dict[blxl],-1];
+    }
+    document.getElementById('divhtml').innerHTML='<table class="table_common">'+tr_list.join('\n')+'</table>';
+    flot_line_temperature_district_weather(only_dot,ym_dict,'月均温');
+}
+
+function flot_line_temperature_district_weather(only_dot=false,csarr=false,legend_caption='温度'){
     function sub_flot_line_temperature_district_weather_flotarr(csdict,cscaption){
         for (let key in csdict){
             for (let blxl=0;blxl<csdict[key].length;blxl++){
@@ -138,11 +170,15 @@ function flot_line_temperature_district_weather(only_dot=false){
     }
     
     var temperature_range=document.getElementById('select_temperature_range_jsad_dweather').value;
-    js_data_current_common_search_global.sort(function (a,b){return a[0][0]>b[0][0];});
+    
+    if (csarr===false){
+        csarr=js_data_current_common_search_global;
+    }
+    csarr.sort(function (a,b){return a[0][0]>b[0][0];});
     if (klmenu_check_b('span_multi_year_lines_jsad_dweather',false)){
         var year_h_dict={};
         var year_l_dict={};
-        for (let item of js_data_current_common_search_global){
+        for (let item of csarr){
             var bldate=validdate_b(item[0][0]);
             var blkey=bldate.getFullYear()+'年';
             
@@ -161,30 +197,30 @@ function flot_line_temperature_district_weather(only_dot=false){
         if (temperature_range=='全部' || temperature_range=='最高温度'){
             sub_flot_line_temperature_district_weather_flotarr(year_h_dict,'最高温度');
         }
-        if (temperature_range=='全部' || temperature_range=='最低温度'){        
+        if (temperature_range=='全部' || temperature_range=='最低温度'){
             sub_flot_line_temperature_district_weather_flotarr(year_l_dict,'最低温度');
         }
     }
     else {
-        for (let item of js_data_current_common_search_global){
+        for (let item of csarr){
             var bldate=validdate_b(item[0][0]);
             ht.push([bldate,item[0][1]]);
             lt.push([bldate,item[0][2]]);
         }
-        ht=['最高温度'+line_type].concat(ht);    
-        lt=['最低温度'+line_type].concat(lt);
+        ht=['最高'+legend_caption+line_type].concat(ht);    
+        lt=['最低'+legend_caption+line_type].concat(lt);
         switch (temperature_range){
             case '全部':
-                var flot_arr=[ht,lt];        
+                var flot_arr=[ht,lt];
                 break;
             case '最高温度':
                 var flot_arr=[ht];
                 break;
             case '最低温度':
-                var flot_arr=[lt];        
+                var flot_arr=[lt];
                 break;
         }
-    }    
+    }
     
     var blbutton='<p>'+close_button_b('div_status_common','','aclick')+'</p>';
     var odiv=document.getElementById('div_status_common');
@@ -344,7 +380,7 @@ function dots_district_weather(){
             var bljg=[];
             for (let item of csdict[key]){
                 if (item[1]==null){
-                    bljg.push('<span title="'+item[0]+'">◌</span>');                                    
+                    bljg.push('<span title="'+item[0]+'">◌</span>');
                 }
                 else {
                     var blcolor=value_in_color_range_b(item[1],color_list,min_value,false); //max_value - 保留注释
