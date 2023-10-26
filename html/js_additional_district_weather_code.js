@@ -39,6 +39,7 @@ function menu_more_district_weather(){
     klmenu1.push(menu_container_b(str_t,group_list,'当前条件每日温度：'));
     
     klmenu1=klmenu1.concat([
+    '<span class="span_menu" onclick="'+str_t+'statistics_temperature_district_weather();">当前条件温度数据统计</span>',    
     '<span class="span_menu" onclick="'+str_t+'month_average_temperature_district_weather();">当前条件月均温</span>',
     ]);
     
@@ -50,8 +51,21 @@ function menu_more_district_weather(){
     return klmenu_b(klmenu1,'🌀','30rem','1rem','1rem','30rem')+klmenu_b(klmenu2,'🔍','16rem','1rem','1rem','30rem');
 }
 
+function statistics_temperature_district_weather(){
+    var ht=[];
+    var lt=[];
+    for (let item of js_data_current_common_search_global){
+        ht.push(item[0][1]);
+        lt.push(item[0][2]);
+    }
+    var odiv=document.getElementById('div_status_common');
+    var bljg='<p>最高温度：</p><textarea>'+ht.join(',')+'</textarea><p>'+object2array_b(describe_b(ht),true)+'</p><p>最低温度：</p><textarea>'+lt.join(',')+'</textarea><p>'+object2array_b(describe_b(lt),true)+'</p>';
+    odiv.innerHTML=bljg;
+    odiv.scrollIntoView();
+}
+
 function file_load_district_weather(){
-    flot_load_common(['date','flot'],['time','symbol']);
+    flot_load_common(['date','flot','math'],['time','symbol']);
 }
 
 function export_temperature_district_weather(){
