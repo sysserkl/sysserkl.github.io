@@ -49,8 +49,8 @@ function imdb_sort_multimedia(iname='Director',cssplit=false){
             blvalue=(blvalue.trim().substring(1,).split(' ')[0]).replace(new RegExp(',','g'),'');
         }
         else if (iname=='Runtime'){
-            var blhour=blvalue.replace(new RegExp(/^(\d+)\s*hours?.*$/,'g'),'$1');
-            var blmin=blvalue.replace(new RegExp(/^(\d+\s*hours?\s*)?(\d+)\s*minutes\s*$/,'g'),'$2');
+            var blhour=blvalue.replace(/^(\d+)\s*hours?.*$/g,'$1');
+            var blmin=blvalue.replace(/^(\d+\s*hours?\s*)?(\d+)\s*minutes\s*$/g,'$2');
             if (blhour!=='' && !isNaN(blhour)){
                 blhour=parseInt(blhour)*60;
             }
@@ -79,7 +79,7 @@ function imdb_sort_multimedia(iname='Director',cssplit=false){
                 dlist.push([blvalue,blrating,arow['Title']]);
             }
             else {
-                blvalue=blvalue.replace(new RegExp(/\|/,'g'),',');
+                blvalue=blvalue.replace(/\|/g,',');
                 var value_list=blvalue.split(',');
                 for (let item of value_list){
                     if (item.trim()==''){continue;}

@@ -562,9 +562,9 @@ function fullmenu_kltxt_b(is_simple=true,cstype='all'){
                 blstyle=' style="font-size:'+Math.max(0.7,(1.7-blcount/5))+'rem;"';
                 cstitle=cstitle.slice(blcount+1,-1*blcount-1);
                 if (cstitle.match(/^\[https?:\/\/[^\s]+\s.*\]$/g)!==null){
-                    href=cstitle.replace(new RegExp(/^\[(https?:\/\/[^\s]+)\s(.*)\]$/g),'$1');            
+                    href=cstitle.replace(/^\[(https?:\/\/[^\s]+)\s(.*)\]$/g,'$1');            
                     href='<a href="'+href+'" class="a_box a_menu_link_txtbook" style="font-size:0.8rem;" onclick="this.style.backgroundColor=\''+scheme_global['pink']+'\';" target=_blank>'+href+'</a> ';
-                    cstitle=cstitle.replace(new RegExp(/^\[(https?:\/\/[^\s]+)\s(.*)\]$/g),'$2');
+                    cstitle=cstitle.replace(/^\[(https?:\/\/[^\s]+)\s(.*)\]$/g,'$2');
                 }
             }
         }
@@ -1044,8 +1044,8 @@ function findmenu_kltxt_b(csxl=-1,cslimit=20,cscontent_length=-1){
     //cscontent_length: input_line_no - 保留注释
     function sub_findmenu_kltxt_bscan(blxl,cscontent_length,start_no_t,menu_no_t){
         var blitem=menulist[blxl].replace(new RegExp("=","g"),"").trim();
-        var blitem2=blitem.replace(new RegExp(/\s/,"g"),"").trim();
-        var blitem3=blitem.split('—')[0].replace(new RegExp(/[=\s]/,"g"),"").trim();
+        var blitem2=blitem.replace(/\s/g,"").trim();
+        var blitem3=blitem.split('—')[0].replace(/[=\s]/g,"").trim();
         var found_t=false;
         for (let blxl2=cscontent_length-1;blxl2>=start_no_t;blxl2--){ //内容扫描
             if (menulist[blxl]==filelist[blxl2].trim() || blitem==filelist[blxl2].trim() || blitem2==filelist[blxl2].trim().replace(new RegExp("　","g"),"")){
@@ -1063,7 +1063,7 @@ function findmenu_kltxt_b(csxl=-1,cslimit=20,cscontent_length=-1){
                 }
             }
             if (blxl2+1<cscontent_length){
-                if (blitem==filelist[blxl2].trim()+filelist[blxl2+1].trim() || blitem2==(filelist[blxl2].trim()+filelist[blxl2+1].trim()).replace(new RegExp(/[\s　]/,"g"),"")){
+                if (blitem==filelist[blxl2].trim()+filelist[blxl2+1].trim() || blitem2==(filelist[blxl2].trim()+filelist[blxl2+1].trim()).replace(/[\s　]/g,"")){
                     start_no_t=blxl2;
                     menu_no_t=blxl;
                     found_t=true;
@@ -1071,7 +1071,7 @@ function findmenu_kltxt_b(csxl=-1,cslimit=20,cscontent_length=-1){
                 }
             }
             if (blxl2+2<cscontent_length){
-                if (blitem==filelist[blxl2].trim()+filelist[blxl2+1].trim()+filelist[blxl2+2].trim() || blitem2==(filelist[blxl2].trim()+filelist[blxl2+1].trim()+filelist[blxl2+2].trim()).replace(new RegExp(/[\s　]/,"g"),"")){
+                if (blitem==filelist[blxl2].trim()+filelist[blxl2+1].trim()+filelist[blxl2+2].trim() || blitem2==(filelist[blxl2].trim()+filelist[blxl2+1].trim()+filelist[blxl2+2].trim()).replace(/[\s　]/g,"")){
                     start_no_t=blxl2;
                     menu_no_t=blxl;
                     found_t=true;
@@ -1329,7 +1329,7 @@ function bookmarks_set_kltxt_b(cslsname='reader_lastbook'){
     }
     var str_t=csbookname_global+'&'+csno+'&'+cslines;
     if (!('&'+bljg+'&').includes('&'+str_t+'&')){   //避免不同日期，相同书签值的出现 - 保留注释
-        str_t=csbooklist_sub_global_b[csbookno_global][1].replace(new RegExp(/&/,'g'),'_')+'&'+str_t+'&'+filelist.length+'&'+now_time_str_b(':',true)+'\n';
+        str_t=csbooklist_sub_global_b[csbookno_global][1].replace(/&/g,'_')+'&'+str_t+'&'+filelist.length+'&'+now_time_str_b(':',true)+'\n';
         bljg=str_t+bljg;
     }
     else{
@@ -3392,7 +3392,7 @@ function digest_temp_jump_to_line_kltxt_b(){
         location.href='#divhtml';
         return;
     }
-    var blstr2=blstr.replace(new RegExp(/^#*/,'g'),'').trim();
+    var blstr2=blstr.replace(/^#*/g,'').trim();
     
     var ospans=document.querySelectorAll('div#divhtml span.txt_content');
     for (let item of ospans){

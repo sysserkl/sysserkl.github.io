@@ -452,7 +452,7 @@ function create_element_b(cstype,csidname,csstyle,o_div,csafter=true){
 }
 
 function list_join_2_reg_style_b(cslist,add_quote=true){
-    var blstr=cslist.join('|').trim().replace(new RegExp(/\s/,'g'),'\\s');
+    var blstr=cslist.join('|').trim().replace(/\s/g,'\\s');
     if (add_quote){
         blstr='('+blstr+')';
     }
@@ -717,7 +717,7 @@ function radio_value_set_b(radio_name,csvalue){
 
 function specialstr_j(csstr,ignore_single_quote=false){
     //var www='"do\\gl\\\\h\'ello';
-    var bljg=csstr.toString().replace(new RegExp(/\\/,"g"),'\\\\');
+    var bljg=csstr.toString().replace(/\\/g,'\\\\');
     bljg=bljg.replace(new RegExp('"',"g"),'\\"');
     if (ignore_single_quote==false){
         bljg=bljg.replace(new RegExp("'","g"),"\\'");
@@ -729,9 +729,9 @@ function specialstr_lt_gt_j(csstr,csand=false){
     //var www='"do\\gl\\\\h\'ello';
     csstr=csstr.toString();
     if (csand){
-        csstr=csstr.replace(new RegExp(/&/,"g"),'&amp;');
+        csstr=csstr.replace(/&/g,'&amp;');
     }
-    csstr=csstr.replace(new RegExp(/</,"g"),'&lt;');
+    csstr=csstr.replace(/</g,'&lt;');
     csstr=csstr.replace(new RegExp('>',"g"),'&gt;');
     return csstr;
 }
@@ -777,7 +777,7 @@ function specialstr92_b(csstr){
 }
 
 function specialstr_html_b(csstr){
-    var bljg=csstr.toString().replace(new RegExp(/\\/,"g"),'&#92;');
+    var bljg=csstr.toString().replace(/\\/g,'&#92;');
     bljg=bljg.replace(new RegExp('"',"g"),'&quot;');
     bljg=bljg.replace(new RegExp("'","g"),"&#39;");
     return bljg;
@@ -785,9 +785,9 @@ function specialstr_html_b(csstr){
 
 function quote_2_cn_character_b(csstr,change_2_one_line=' '){
     if (typeof change_2_one_line == 'string'){
-        csstr=csstr.replace(new RegExp(/\r?\n/,'g'),change_2_one_line);
+        csstr=csstr.replace(/\r?\n/g,change_2_one_line);
     }
-    return csstr.replace(new RegExp("'",'g'),'’').replace(new RegExp('"','g'),'”').replace(new RegExp(/\\/,'g'),'＼').replace(new RegExp(/</,'g'),'＜').replace(new RegExp(/>/,'g'),'＞');
+    return csstr.replace(new RegExp("'",'g'),'’').replace(new RegExp('"','g'),'”').replace(/\\/g,'＼').replace(/</g,'＜').replace(/>/g,'＞');
 }
 
 function asc_sum_b(csstr){
@@ -925,23 +925,23 @@ function english_punctuation_b(csstr){
 
 function chinese_punctuation_b(csstr){
     for (var blxl=1;blxl<3;blxl++){
-        csstr=csstr.replace(new RegExp(/([^\x00-\xff])\?/,"g"),"$1？");
-        csstr=csstr.replace(new RegExp(/([^\x00-\xff])!/,"g"),"$1！");
-        csstr=csstr.replace(new RegExp(/([^\x00-\xff]),/,"g"),"$1，");
+        csstr=csstr.replace(/([^\x00-\xff])\?/g,"$1？");
+        csstr=csstr.replace(/([^\x00-\xff])!/g,"$1！");
+        csstr=csstr.replace(/([^\x00-\xff]),/g,"$1，");
         
-        csstr=csstr.replace(new RegExp(/([^\x00-\xff]): /,"g"),"$1：");
-        csstr=csstr.replace(new RegExp(/([^\x00-\xff]):/,"g"),"$1：");
-        csstr=csstr.replace(new RegExp(/([^\x00-\xff]); /,"g"),"$1；");
-        csstr=csstr.replace(new RegExp(/([^\x00-\xff]);/,"g"),"$1；");    
+        csstr=csstr.replace(/([^\x00-\xff]): /g,"$1：");
+        csstr=csstr.replace(/([^\x00-\xff]):/g,"$1：");
+        csstr=csstr.replace(/([^\x00-\xff]); /g,"$1；");
+        csstr=csstr.replace(/([^\x00-\xff]);/g,"$1；");    
         
-        csstr=csstr.replace(new RegExp(/^\'([^\x00-\xff][^\'‘’\n]*?[^\x00-\xff]?)\'/,"g"),"‘$1’");
-        csstr=csstr.replace(new RegExp(/([^\'])\'([^\x00-\xff][^\'‘’\n]*?[^\x00-\xff]?)\'/,"g"),"$1‘$2’");
-        csstr=csstr.replace(new RegExp(/\"([^\x00-\xff][^\"”“\n]*?[^\x00-\xff]?)\"/,"g"),"“$1”");
-        csstr=csstr.replace(new RegExp(/\(([^\x00-\xff][^\(\)（）\n]*?[^\x00-\xff]?)\)/,"g"),"（$1）");
-        
-        csstr=csstr.replace(new RegExp(/([^\x00-\xff])\.{6}/,"g"),"$1……");
-        csstr=csstr.replace(new RegExp(/([^\x00-\xff])\.{3}/,"g"),"$1…");
-        csstr=csstr.replace(new RegExp(/([^\x00-\xff])\./,"g"),"$1。");
+        csstr=csstr.replace(/^\'([^\x00-\xff][^\'‘’\n]*?[^\x00-\xff]?)\'/g,"‘$1’");
+        csstr=csstr.replace(/([^\'])\'([^\x00-\xff][^\'‘’\n]*?[^\x00-\xff]?)\'/g,"$1‘$2’");
+        csstr=csstr.replace(/\"([^\x00-\xff][^\"”“\n]*?[^\x00-\xff]?)\"/g,"“$1”");
+        csstr=csstr.replace(/\(([^\x00-\xff][^\(\)（）\n]*?[^\x00-\xff]?)\)/g,"（$1）");
+
+        csstr=csstr.replace(/([^\x00-\xff])\.{6}/g,"$1……");
+        csstr=csstr.replace(/([^\x00-\xff])\.{3}/g,"$1…");
+        csstr=csstr.replace(/([^\x00-\xff])\./g,"$1。");
     }
     return csstr;
 }
@@ -1165,7 +1165,7 @@ function local_storage_get_b(csid,csmax=-1,return_list=false,remove_item='',isre
     //--------------------------------
     var bljg=localStorage.getItem(csid) || '';
     while (bljg.includes('\n\n')){
-        bljg=bljg.replace(new RegExp(/\n\n/,'g'),'\n');
+        bljg=bljg.replace(/\n\n/g,'\n');
     }
     bljg=bljg.trim();
 
@@ -1428,7 +1428,7 @@ function service_worker_delete_b(appname=''){
                         console.log('caches.delete',one_key); //此行保留 - 保留注释   
                         console.log('----------');
                         
-                        appname=one_key.replace(new RegExp(/^pwa_(.*?)_store.*$/,'g'),'$1');
+                        appname=one_key.replace(/^pwa_(.*?)_store.*$/g,'$1');
                         app_list.push(appname);
                         service_worker_unregister_b(appname);
                     });
@@ -2040,7 +2040,7 @@ function klsofts_one_b(csitem,fontsize=2.5,addp=true,cshref='',jsstr='',new_tab=
         }
         if (addp){
             var blname=csitem[1];
-            blname=blname.replace(new RegExp(/([^\s]{4,}) ([^\s]{3,})/,'g'),'$1<br />$2');
+            blname=blname.replace(/([^\s]{4,}) ([^\s]{3,})/g,'$1<br />$2');
             if (csitem[0].slice(-1)=='/'){
                 bljg=bljg+'<p style="color:green;">'+blname+'</p>';
             }
@@ -2535,7 +2535,7 @@ function temp_save_merge_b(textarea_id,local_id,csmax){
     [old_list,old_len]=temp_save_local_b(local_id,csmax,'',false,false);
     var delimiter=prompt('合并'+old_list.length+'条记录到编辑框，输入间隔标记','\\n-----\\n');
     if (delimiter==null){return;}
-    delimiter=delimiter.replace(new RegExp(/(\\n)/,'g'),'\n');
+    delimiter=delimiter.replace(/(\\n)/g,'\n');
         
     otextarea.value=old_list.join(delimiter);
     otextarea.scrollIntoView();
@@ -2811,7 +2811,7 @@ function standalone_search_funs_b(cstitle='Search Standalone',cscontent='',diy_f
     }
     
     function highlight_standalone(){
-        var cskeys=document.getElementById('input_search').value.replace(new RegExp(/[\+\s\|\^\$]/,'g'),' ').trim().split(' ');
+        var cskeys=document.getElementById('input_search').value.replace(/[\+\s\|\^\$]/g,' ').trim().split(' ');
         cskeys=Array.from(new Set(cskeys));
         
         var is_ok;

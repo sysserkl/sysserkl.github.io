@@ -227,18 +227,18 @@ function open_all_more_klsnews_b(){
 
 function weibo_at_klsnews_b(cssite,csstr){
     if (cssite.includes('weibo.com')){
-        csstr=csstr.replace(new RegExp(/@([^# 【】《》@]+?)([：: ，])/,'g'),'<a href="http://weibo.com/n/$1" target=_blank>@$1</a>$2');
+        csstr=csstr.replace(/@([^# 【】《》@]+?)([：: ，])/g,'<a href="http://weibo.com/n/$1" target=_blank>@$1</a>$2');
         
-        csstr=csstr.replace(new RegExp(/(\s?)(https?:\/\/t\.cn\/[^\s]*)(\s?)/,'g'),'$1<a href="$2" target=_blank>$2</a>$3');
+        csstr=csstr.replace(/(\s?)(https?:\/\/t\.cn\/[^\s]*)(\s?)/g,'$1<a href="$2" target=_blank>$2</a>$3');
 
-        csstr=csstr.replace(new RegExp(/#([^@【】《》#]+?)#/,'g'),'<a href="https://s.weibo.com/weibo?q=%23$1%23" target=_blank>#$1#</a>');
+        csstr=csstr.replace(/#([^@【】《》#]+?)#/g,'<a href="https://s.weibo.com/weibo?q=%23$1%23" target=_blank>#$1#</a>');
         
-        csstr=csstr.replace(new RegExp(/《([^#@《》]+?)》/,'g'),'<b>《$1》</b>');
-        csstr=csstr.replace(new RegExp(/【([^#@【】]+?)】/,'g'),'<b>【$1】</b>');     
+        csstr=csstr.replace(/《([^#@《》]+?)》/g,'<b>《$1》</b>');
+        csstr=csstr.replace(/【([^#@【】]+?)】/g,'<b>【$1】</b>');     
         csstr=csstr.replace(new RegExp('O网页链接','g'),' ');
         csstr=csstr.replace(new RegExp('展开全文c','g'),' ');
-        csstr=csstr.replace(new RegExp(/\d+  \d+ ñ\d+/,'g'),' ');
-        csstr=csstr.replace(new RegExp(/^(\d?\d?:?\d?\d?)\s?来自 (微博 weibo.com|iPhone 6s|[^\s]*\s)/,'g'),'$1 ');
+        csstr=csstr.replace(/\d+  \d+ ñ\d+/g,' ');
+        csstr=csstr.replace(/^(\d?\d?:?\d?\d?)\s?来自 (微博 weibo.com|iPhone 6s|[^\s]*\s)/g,'$1 ');
     }
     return csstr;
 }
@@ -248,8 +248,8 @@ function longtxts_klsnews_b(cslist,addsitename=false){
     
     var title_t=specialstr_lt_gt_j(cslist[1].trim());
     //替换英文字母边的中文引号为英文引号 - 保留注释
-    title_t=title_t.replace(new RegExp(/([a-zA-Z])’/,'g'),'$1&#39;');
-    title_t=title_t.replace(new RegExp(/‘([a-zA-Z])/,'g'),'&#39;$1');
+    title_t=title_t.replace(/([a-zA-Z])’/g,'$1&#39;');
+    title_t=title_t.replace(/‘([a-zA-Z])/g,'&#39;$1');
     if (title_t.length>150 || cslist[0].includes('://weibo.com/')){
         var at_t=title_t.indexOf(' ');
         if (at_t<=10){
@@ -358,12 +358,12 @@ function fav_add_klsnews_b(ospan){
     if (cstype=='⚪'){
         ospan.innerText='🔴';
         if (fav_selenews.includes(str_t)){return;}
-        localStorage.setItem('fav_selenews',(fav_selenews+str_t).replace(new RegExp(/\n\n/,'g'),'\n'));
+        localStorage.setItem('fav_selenews',(fav_selenews+str_t).replace(/\n\n/g,'\n'));
     }
     else if (cstype=='🔴'){
         ospan.innerText='⚪';
         if (!fav_selenews.includes(str_t)){return;}
-        localStorage.setItem('fav_selenews',fav_selenews.replace(str_t,'\n').replace(new RegExp(/\n\n/,'g'),'\n'));
+        localStorage.setItem('fav_selenews',fav_selenews.replace(str_t,'\n').replace(/\n\n/g,'\n'));
     }
 }
 

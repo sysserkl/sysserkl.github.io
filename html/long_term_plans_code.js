@@ -87,7 +87,7 @@ function symbol_manage_lt_plans(cstype='set'){
             return old_symbol.split(',');
             break;
         case 'set':
-            var new_symbol=(prompt('设置符号，并以英文逗号间隔（输入 默认，恢复默认设置）：',old_symbol) || '').replace(new RegExp(/\s/,'g'),'').split(',');
+            var new_symbol=(prompt('设置符号，并以英文逗号间隔（输入 默认，恢复默认设置）：',old_symbol) || '').replace(/\s/g,'').split(',');
             if (new_symbol[0]=='默认'){
                 new_symbol=default_symbol.split(',');
             }

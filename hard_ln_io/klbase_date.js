@@ -412,7 +412,7 @@ function validdate_b(datestr,first_day_of_month=false,ismonth_day=false){
         }
     }
     else if (datestr.match(/^\d{4}年\d{1,2}月\d{1,2}日$/)){
-        datestr=datestr.replace(new RegExp(/[年月]/,'g'),'-').slice(0,-1);
+        datestr=datestr.replace(/[年月]/g,'-').slice(0,-1);
     }
     else if (ismonth_day){
         var blyear=new Date().getFullYear();

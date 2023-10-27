@@ -35,7 +35,7 @@ function array_sort_count_dpr(csarray,sort_type='num'){
     }
     
     var blstr=list_t.join(' ◽ ');
-    blstr=blstr.replace(new RegExp(/(\(.*?\))/,'g'),'<span style="color:grey;"><small>$1</small></span>');
+    blstr=blstr.replace(/(\(.*?\))/g,'<span style="color:grey;"><small>$1</small></span>');
     return blstr;
 }
 

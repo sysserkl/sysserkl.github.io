@@ -126,7 +126,7 @@ function blank_rows_wiki_type_klr_b(csid_or_csstr='textarea_rows_content',cstype
     var blxl=0;
     while (true){
         if (blstr.match(/\n([#\*].*?)\n\n([#\*].*?)\n/)==null || blxl>10){break;}
-        blstr = blstr.replace(new RegExp(/\n([#\*].*?)\n\n([#\*].*?)\n/,'gm'),'\n$1\n$2\n');
+        blstr = blstr.replace(/\n([#\*].*?)\n\n([#\*].*?)\n/mg,'\n$1\n$2\n');
         blxl=blxl+1;
     }
     
@@ -197,7 +197,7 @@ function add_ahref_klr_b(csid,encode=false){
         blstr=list_t.join('\n');
     }
     else {
-        blstr=blstr.replace(new RegExp(/\b(https?:\/\/[^\s]+)/,'g'),'<a href="$1" target=_blank>$1</a>');
+        blstr=blstr.replace(/\b(https?:\/\/[^\s]+)/g,'<a href="$1" target=_blank>$1</a>');
     }
 	otextarea.value = blstr;
 	add_to_html_klr_b();
@@ -431,7 +431,7 @@ function common_string_from_lines_klr_b(csid,only_file_name=false,status_id=''){
         var words=new Set(lines.join(' ').split(' '));
     }
     else {
-        var words=new Set(blstr.replace(new RegExp(/\n/,'g'),' ').split(' '));
+        var words=new Set(blstr.replace(/\n/g,' ').split(' '));
     }
     
     var common_list=[];
@@ -487,7 +487,7 @@ function strquick_klr_b(cstype='',csid='textarea_rows_content',status_id='textar
             break;
         case 'lines2comma':
             var otextarea = document.getElementById(csid);
-			otextarea.value=otextarea.value.trim().replace(new RegExp(/\n/,'mg'),',');
+			otextarea.value=otextarea.value.trim().replace(/\n/mg,',');
             break;
         case 'ltrim_rows':
             ltrim_rows_klr_b(csid);
@@ -551,9 +551,9 @@ function strquick_klr_b(cstype='',csid='textarea_rows_content',status_id='textar
             break;
         case 'js_multilines':
             var otextarea = document.getElementById(csid);
-            var blstr=otextarea.value.replace(new RegExp(/`/,'g'),"`+'`'+`");
-            blstr=blstr.replace(new RegExp(/{/,'g'),'\\{');
-            blstr=blstr.replace(new RegExp(/}/,'g'),'\\}');
+            var blstr=otextarea.value.replace(/`/g,"`+'`'+`");
+            blstr=blstr.replace(/{/g,'\\{');
+            blstr=blstr.replace(/}/g,'\\}');
             otextarea.value=blstr;       
             break;
 		case 'blank8':
@@ -574,7 +574,7 @@ function strquick_klr_b(cstype='',csid='textarea_rows_content',status_id='textar
             break;
         case 'space2underline':
             var otextarea = document.getElementById(csid);
-            otextarea.value = otextarea.value.replace(new RegExp(/ /,'g'),'_')  
+            otextarea.value = otextarea.value.replace(/ /g,'_')  
             break;
         case 'chinese_punctuation':
             var otextarea = document.getElementById(csid);
@@ -679,15 +679,15 @@ function strquick_klr_b(cstype='',csid='textarea_rows_content',status_id='textar
         case 'count':
             if (ostatus){
                 var blstr=document.getElementById(csid).value;
-                var blstr2=blstr.replace(new RegExp(/\s/,'g'),'');
+                var blstr2=blstr.replace(/\s/g,'');
                 ostatus.value='字数：' + blstr.length+', 去除空格后字数：'+blstr2.length+'\n'+ostatus.value;
             }
             break;
         case 'eword':
             var blstr=document.getElementById(csid).value;
             var blstr=(blstr.match(/<eword w="?(.*?)"?><\/eword>/g) || []).join('\n');
-            blstr=blstr.replace(new RegExp(/<eword w="?/,'g'),'');
-            blstr=blstr.replace(new RegExp(/"?><\/eword>/,'g'),'');
+            blstr=blstr.replace(/<eword w="?/g,'');
+            blstr=blstr.replace(/"?><\/eword>/g,'');
             document.getElementById(csid).value=blstr;
             break;
         case 'clear_copy_tab_title_url':
@@ -823,7 +823,7 @@ function str2csv_klr_b(csid,cstype){
 function js2_str_klr_b(csid){
     var otextarea = document.getElementById(csid);
     var blstr=otextarea.value.trim();
-    blstr=blstr.replace(new RegExp(/^\["(.*?)","(.*?)"\],$/,'mg'),'$1 $2');
+    blstr=blstr.replace(/^\["(.*?)","(.*?)"\],$/mg,'$1 $2');
     otextarea.value=blstr;
 }
 
@@ -855,7 +855,7 @@ function str2js_klr_b(csid,cstype){
             break;        
         case '[t](h)':
             var blstr=otextarea.value.trim();
-            blstr=blstr.replace(new RegExp(/^\[(.*)\]\((.*)\)$/,'mg'),'["$2","$1"],');
+            blstr=blstr.replace(/^\[(.*)\]\((.*)\)$/mg,'["$2","$1"],');
             otextarea.value=blstr;
             return;
     }
@@ -886,7 +886,7 @@ function html_to_image_klr_b(){
 
 function links_and_text_klr_b(){
 	var otextarea = document.getElementById('textarea_rows_content').value;
-	var alist_t=otextarea.match(new RegExp(/<[aA] .*?<\/[aA]>/,'g')) || [];
+	var alist_t=otextarea.match(/<[aA] .*?<\/[aA]>/g) || [];
 	var bljg=alist_t.join('<br />')
 	var div_t=document.getElementById('divhtml');
 	div_t.innerHTML=bljg;

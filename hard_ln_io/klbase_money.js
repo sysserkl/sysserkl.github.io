@@ -378,7 +378,7 @@ function eval_calculator_money_b(){
         return;        
     }
     var checkstr=str_t.replace(new RegExp('[0-9]','g'),'');
-    var checkstr=checkstr.replace(new RegExp(/[\.\s\+\-\*\/\(\)]/,'g'),'');
+    var checkstr=checkstr.replace(/[\.\s\+\-\*\/\(\)]/g,'');
     if (checkstr!==''){
         ospan.innerHTML='包含了多余字符：'+checkstr;
         return;

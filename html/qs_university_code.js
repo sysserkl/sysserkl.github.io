@@ -219,7 +219,7 @@ function menu_qs_rank(){
     var country_set=new Set();
     var country_list=[];
     for (let item of menu_district){
-        item=item.replace(new RegExp(/^.*,([A-Z].*)$/,'g'),'$1').trim();
+        item=item.replace(/^.*,([A-Z].*)$/g,'$1').trim();
         if (country_set.has(item)){continue;}
         country_set.add(item);
         country_list.push('<span class="span_menu" onclick="'+str_t+'search_qs_rank(\''+item+'\',false);">'+item+'</span>');

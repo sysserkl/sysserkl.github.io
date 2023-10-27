@@ -157,7 +157,7 @@ function change_wordle(csvalue){
         oletter.classList.add('div_done');   
              
         corrected_wordle_global=corrected_wordle_global+1;
-        if (corrected_wordle_global==length_wordle_global || document.getElementById('td_content').innerText.replace(new RegExp(/\s/,'g'),'').toLowerCase().trim()==current_word_wordle_global[0].replace(new RegExp(/\s/,'g'),'').toLowerCase()){
+        if (corrected_wordle_global==length_wordle_global || document.getElementById('td_content').innerText.replace(/\s/g,'').toLowerCase().trim()==current_word_wordle_global[0].replace(/\s/g,'').toLowerCase()){
             answer_wordle();
         }
         

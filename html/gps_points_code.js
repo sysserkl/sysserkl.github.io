@@ -1089,7 +1089,7 @@ function gpx_list_gps_points(cstype=''){
             window.open('https://www.baidu.com/s?wd='+encodeURIComponent(input_value+' 景点'));
             break;
         case '定位':
-            var list_t=district_search_gps_points('+'+input_value.replace(new RegExp(/_/,'g'),' +'));
+            var list_t=district_search_gps_points('+'+input_value.replace(/_/g,' +'));
             if (list_t.length>0){
                 location_gpx_gps_points(list_t[0]);
                 show_hide_map_gps_points();
@@ -1110,7 +1110,7 @@ function gpx_list_gps_points(cstype=''){
 
             var gps_list=[];
             for (let item of result_t){ //不能先合并地址再统一搜索，必须逐个搜索，以免数量多的地名放在前面 - 保留注释
-                item=item[0].replace(new RegExp(/_/,'g'),'.*');            
+                item=item[0].replace(/_/g,'.*');            
                 gps_list=gps_list.concat(district_search_gps_points('+,1, +'+item+'(:r)'));
             }
             if (gps_list.length>0){
@@ -1171,7 +1171,7 @@ function gpx_district_set_gps_points(cskey='',oselect=false){
                 list_top.push(one_option.outerHTML);
             }
             else {
-                list_num.push([one_option.innerText.replace(new RegExp(/^\d+\.\s?(.*)\(\d+\)$/,'g'),'$1'),parseInt(one_option.innerText.replace(new RegExp(/^\d+\.\s?.*\((\d+)\)$/,'g'),'$1'))]);
+                list_num.push([one_option.innerText.replace(/^\d+\.\s?(.*)\(\d+\)$/g,'$1'),parseInt(one_option.innerText.replace(/^\d+\.\s?.*\((\d+)\)$/g,'$1'))]);
             }
         }
 
@@ -1649,7 +1649,7 @@ function colors_settings_gps_points(){
     var new_value=(prompt('输入颜色，输入 默认 则返回默认值：',old_value) || '').trim();
     if (new_value==''){return;}
     
-    new_value=new_value.replace(new RegExp(/[，\s]/,'g'),',');
+    new_value=new_value.replace(/[，\s]/g,',');
     var list_t=new_value.split(',');
     new_value=[];
     for (let item of list_t){

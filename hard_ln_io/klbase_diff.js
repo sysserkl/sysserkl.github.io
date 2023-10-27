@@ -1,6 +1,6 @@
 function tab2space_diff_b(){
     function sub_tab2space_one_by_one_diff_b(csstr){
-        csstr=csstr.replace(new RegExp(/\t/,'g'),' ');
+        csstr=csstr.replace(/\t/g,' ');
         while (csstr.includes('  ')){
             csstr=csstr.replace(new RegExp('  ','g'),' ');
         }
@@ -19,7 +19,7 @@ function remove_cn_space_diff_b(){
     function sub_remove_cn_space_one_by_one_diff_b(csstr){
         while (true){
             if (csstr.match(/[^\x00-\xff]\s+[^\x00-\xff]/)==null){break;}
-            csstr=csstr.replace(new RegExp(/([^\x00-\xff])\s+([^\x00-\xff])/,'g'),'$1$2');
+            csstr=csstr.replace(/([^\x00-\xff])\s+([^\x00-\xff])/g,'$1$2');
             csstr=csstr.trim();
         }
         return csstr;
@@ -50,13 +50,13 @@ function remove_all_space_diff_b(){
 
 function remove_space_diff_b(){
     function sub_remove_space_one_by_one_diff_b(csstr){
-        csstr=csstr.replace(new RegExp(/\r\n/,'g'),'\n');
+        csstr=csstr.replace(/\r\n/g,'\n');
         csstr=csstr.trim();
         while (csstr.includes('\n ')){
-            csstr=csstr.replace(new RegExp(/\n /,'g'),'\n');
+            csstr=csstr.replace(/\n /g,'\n');
         }
         while (csstr.includes(' \n')){
-            csstr=csstr.replace(new RegExp(/ \n/,'g'),'\n');
+            csstr=csstr.replace(/ \n/g,'\n');
         }
         return csstr;
     }
@@ -71,9 +71,9 @@ function remove_space_diff_b(){
 
 function remove_empty_lines_diff_b(){
     function sub_remove_empty_lines_one_by_one_diff_b(csstr){
-        csstr=csstr.replace(new RegExp(/\r\n/,'g'),'\n');
+        csstr=csstr.replace(/\r\n/g,'\n');
         while (csstr.includes('\n\n')){
-            csstr=csstr.replace(new RegExp(/\n\n/,'g'),'\n');
+            csstr=csstr.replace(/\n\n/g,'\n');
         }
         return csstr;
     }

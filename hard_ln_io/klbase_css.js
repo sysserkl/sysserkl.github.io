@@ -1543,7 +1543,7 @@ function page_location_b(cspages){
 
 function page_remove_dot_b(page_html){
     while (page_html.includes('. . . . ')){
-        page_html=page_html.replace(new RegExp(/(\. ){4}/,'g'),'. . . ');
+        page_html=page_html.replace(/(\. ){4}/g,'. . . ');
     }
     var blfound=page_html.includes('. . . ');   //3点，非4点 - 保留注释    
     return [page_html,blfound];
@@ -1929,7 +1929,7 @@ function highlight_text_b(cswordlist=[],query_str=''){
         if (item.substring(0,1)=='(' && item.slice(-1)==')'){
             item=item.slice(1,-1);
         }
-        item=item.replace(new RegExp(/\.\*|\||\.\+|\[|\]/,'g'),' ');
+        item=item.replace(/\.\*|\||\.\+|\[|\]/g,' ');
         blkey=blkey.concat(item.split(' '));
     }
     blkey=array_unique_b(blkey);

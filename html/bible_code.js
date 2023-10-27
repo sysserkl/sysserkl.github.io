@@ -147,7 +147,7 @@ function compare_data_bible(){
     
     function sub_compare_data_bible_td(csno,js_str,idb_str,subchapter_name,line_no){
         var bookno=line_no_2_book_no(line_no);
-        return '<td align=right>'+csno+'</td><td><span style="cursor:pointer;" onclick="chapter_relative_bible(event,'+bookno+');">【'+(bookno+1)+'】</span><span style="cursor:pointer;" onclick="book_bible(\''+subchapter_name.replace(new RegExp(/\s*(\d+)$/,'g'),'_$1')+'_'+js_str.split(' ')[0]+'\');">'+subchapter_name+'</span></td><td class="td_compare_bible">'+js_str+'</td><td class="td_compare_bible">'+idb_str+'</td>'; //\s* 和 (\s+)? 效果不一样 - 保留注释
+        return '<td align=right>'+csno+'</td><td><span style="cursor:pointer;" onclick="chapter_relative_bible(event,'+bookno+');">【'+(bookno+1)+'】</span><span style="cursor:pointer;" onclick="book_bible(\''+subchapter_name.replace(/\s*(\d+)$/g,'_$1')+'_'+js_str.split(' ')[0]+'\');">'+subchapter_name+'</span></td><td class="td_compare_bible">'+js_str+'</td><td class="td_compare_bible">'+idb_str+'</td>'; //\s* 和 (\s+)? 效果不一样 - 保留注释
     }
     
     function sub_compare_data_bible_result(diff_str_list1,diff_str_list2,js_join,idb_join,key_list,len_old){
@@ -1014,11 +1014,11 @@ function help_bible(){
 function book_bible(csstr,isalone=false){
     //高亮边框指定的段落 - 保留注释
     //csstr: bookname_chapter_sentence_start-number_end-number 启_2_5_9 或 rev3:4 或 启2:4 - 保留注释
-    //csstr=csstr.replace(new RegExp(/[:：\.\-]/,'g'),'_').trim();
-    csstr=csstr.replace(new RegExp(/(\d{1,})[：:](\d{1,})/,'g'),'_$1_$2').trim();
+    //csstr=csstr.replace(/[:：\.\-]/g,'_').trim();
+    csstr=csstr.replace(/(\d{1,})[：:](\d{1,})/g,'_$1_$2').trim();
     var rightstr=(csstr.match(/(\d+_)*(\d+)?$/g) || [''])[0].trim();    //rev3 或 rev3_4，返回 3 或 3_4 - 保留注释
     if (rightstr!==''){
-        csstr=csstr.replace(new RegExp(/(\d+_)*(\d+)?$/,'g'),'').trim()+'_'+rightstr;
+        csstr=csstr.replace(/(\d+_)*(\d+)?$/g,'').trim()+'_'+rightstr;
     }
     while (csstr.includes('__')){
         csstr=csstr.replace(new RegExp('__','g'),'_');

@@ -290,7 +290,7 @@ function statistics_category_date_klroutines(){
                 if (result_t[current_category]==undefined){
                     result_t[current_category]=[];
                 }
-                var bldate=item.replace(new RegExp(/^.* \((\d{4}-\d{2}-\d{2})( \d{2}:\d{2}:\d{2}( [日一二三四五六]| [a-zA-Z]{3})?)?\)$/,'g'),'$1').trim();
+                var bldate=item.replace(/^.* \((\d{4}-\d{2}-\d{2})( \d{2}:\d{2}:\d{2}( [日一二三四五六]| [a-zA-Z]{3})?)?\)$/g,'$1').trim();
                 result_t[current_category].push(bldate);
             }
             continue;
@@ -298,7 +298,7 @@ function statistics_category_date_klroutines(){
         var blvalue=item.match(/ \([1-9]\d*\)$/);
         if (blvalue!==null){
             if (item.match(/^\d{4}\-\d{2}\-\d{2}——\d{4}\-\d{2}\-\d{2}/)==null){
-                current_category=item.replace(new RegExp(/ \([1-9]\d*\)$/),'').trim();
+                current_category=item.replace(/ \([1-9]\d*\)$/,'').trim();
             }
         }
     }

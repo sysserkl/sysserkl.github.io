@@ -115,7 +115,7 @@ function words_queue_read_b(){
     var one_word=[];
     for (let item of list_t){
         item=item.trim();
-        if (item.includes('-') && item.replace(new RegExp(/-/,'g'),'')==''){continue;}
+        if (item.includes('-') && item.replace(/-/g,'')==''){continue;}
         if (item==''){continue;}
         one_word.push(item);
         if (one_word.length==3){    //每3行处理一次 - 保留注释

@@ -569,7 +569,7 @@ function memo_update_klcalendar(){
             period='';
         }
         
-        //item[2]=item[2].replace(new RegExp(/\(l\d+\)/,'g'),''); //去掉持续时间 - 保留注释
+        //item[2]=item[2].replace(/\(l\d+\)/g,''); //去掉持续时间 - 保留注释
         if (item[2].substring(0,1)=='*' && item[2].slice(-1)=='*'){
             item[2]=item[2].slice(0,-1);
         }

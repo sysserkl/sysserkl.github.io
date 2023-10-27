@@ -412,8 +412,8 @@ function statistics_dir_file_count_b(){
         
         var dir_file_count_list=[];
         for (let item of list_t){
-            var bldate=item.replace(new RegExp(/^.*,(\d{4}-\d{2}-\d{2}),.*$/,'g'),'$1');
-            var blcount=item.replace(new RegExp(/^.*,\d{4}-\d{2}-\d{2},(\d+),.*$/,'g'),'$1');
+            var bldate=item.replace(/^.*,(\d{4}-\d{2}-\d{2}),.*$/g,'$1');
+            var blcount=item.replace(/^.*,\d{4}-\d{2}-\d{2},(\d+),.*$/g,'$1');
             if (!dir_file_count_list.includes(bldate+'/'+blcount)){
                 dir_file_count_list.push(bldate+'/'+blcount);
             }
@@ -433,8 +433,8 @@ function statistics_old_code_b(){
     
     for (let item of list_t){
         var bldate=item.trim().split(' ')[0];
-        var blcount=item.replace(new RegExp(/^.*?全部代码文件个数：(\d+)；.*$/,'g'),'$1');
-        var bllines=item.replace(new RegExp(/^.*?行数：(\d+)；.*$/,'g'),'$1');
+        var blcount=item.replace(/^.*?全部代码文件个数：(\d+)；.*$/g,'$1');
+        var bllines=item.replace(/^.*?行数：(\d+)；.*$/g,'$1');
         if (!result_t.includes(bldate+'/'+blcount+'/'+bllines)){
             result_t.push(bldate+'/'+blcount+'/'+bllines);
         }

@@ -44,11 +44,11 @@ function delete_open_php_rlater_b(cshref,csid,prefix='readlater'){
             console.log('未发现 div_search_links，未删除',cshref);
             return;
         }
-        var oiframe=odiv.querySelector('iframe#iframe_delete_record_rlater');
+        var oiframe=document.getElementById('iframe_delete_record_rlater');
         if (!oiframe){
-            odiv.insertAdjacentHTML('beforeend','<iframe id="iframe_delete_record_rlater" style="width:100%;height:16rem;" src=""></iframe>');
+            odiv.insertAdjacentHTML('afterend','<iframe id="iframe_delete_record_rlater" style="margin:0.5rem;width:90%;height:16rem;" src=""></iframe>');
         }
-        var oiframe=odiv.querySelector('iframe#iframe_delete_record_rlater');
+        var oiframe=document.getElementById('iframe_delete_record_rlater');
         if (!oiframe){
             console.log('未发现 iframe，未删除',cshref);
             return;

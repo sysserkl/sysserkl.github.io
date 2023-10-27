@@ -199,8 +199,8 @@ function input_poker24(csnumber=''){
     }
     if (csnumber==''){return;}
     
-    csnumber=csnumber.replace(new RegExp(/[,，]/,'g'),' ');
-    csnumber=csnumber.replace(new RegExp(/\s+/,'g'),' ');
+    csnumber=csnumber.replace(/[,，]/g,' ');
+    csnumber=csnumber.replace(/\s+/g,' ');
 
     var list_t=csnumber.trim().split(' ').slice(0,4);
     if (list_t.length!==4){return;}

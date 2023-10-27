@@ -79,7 +79,7 @@ function days_kltxt_klwiki_en2(theday=new Date()){
         var englist_t=blenstr_t.match(/<sup style="font-size:0.8rem;color:#cc0000;" class="kleng">(.*?)<\/sup>/g);
         if (englist_t==null){return '';}
         for (let blxl=0;blxl<englist_t.length;blxl++){
-            englist_t[blxl]=englist_t[blxl].replace(new RegExp(/<sup style="font-size:0.8rem;color:#cc0000;" class="kleng">(.*?)<\/sup>/,'g'),'$1');
+            englist_t[blxl]=englist_t[blxl].replace(/<sup style="font-size:0.8rem;color:#cc0000;" class="kleng">(.*?)<\/sup>/g,'$1');
         }
         bljg=bljg+enwords_batch_div_b(englist_t);    
         return bljg;

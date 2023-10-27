@@ -317,7 +317,7 @@ function transformlat_b(lng, lat){
 }
 
 function transform_lng_lat_dots_b(csstr,cstype=''){
-    var list_t=csstr.trim().replace(new RegExp(/\r\n/,'mg'),'\n').replace(new RegExp(/\n/,'mg'),';').split(';');
+    var list_t=csstr.trim().replace(/\r\n/mg,'\n').replace(/\n/mg,';').split(';');
     var result_t=[];
     for (let aline of list_t){
         var line_t=[];
@@ -428,13 +428,13 @@ function district_cn_level_b(level=2){
                 list_t[blno]=list_t[blno].replace(new RegExp(nationality,'g'),'$1');
             }
             else if (list_t[blno].match(/自治([区州盟县])$/)!==null){
-                list_t[blno]=list_t[blno].replace(new RegExp(/自治[区州盟县]$/,'g'),'');
+                list_t[blno]=list_t[blno].replace(/自治[区州盟县]$/g,'');
             }
             else if (list_t[blno].match(/.{2}(地区|新区|矿区|林区|城区|郊县|行政委员会|特别行政区)$/)!==null){
-                list_t[blno]=list_t[blno].replace(new RegExp(/(.{2})(地区|新区|矿区|林区|城区|郊县|行政委员会|特别行政区)$/,'g'),'$1');
+                list_t[blno]=list_t[blno].replace(/(.{2})(地区|新区|矿区|林区|城区|郊县|行政委员会|特别行政区)$/g,'$1');
             }
             else if (list_t[blno].match(/.{2}[省市区县盟]$/)!==null){
-                list_t[blno]=list_t[blno].replace(new RegExp(/(.{2})[省市区县盟]$/,'g'),'$1');
+                list_t[blno]=list_t[blno].replace(/(.{2})[省市区县盟]$/g,'$1');
             }
         }
         if (list_t.length>=2){
@@ -633,8 +633,8 @@ function gpx_file_draw_leaflet_b(csstr,cstype,csname='',cscolors=[]){
         for (let lonlat of trkpts){
             lonlat=lonlat.split('>')[0];
             if (lonlat.includes('lon=') && lonlat.includes('lat=')){
-                var bllat=lonlat.split('lat=')[1].trim().split(' ')[0].replace(new RegExp(/['"]/,'g'),'');
-                var bllon=lonlat.split('lon=')[1].split(' ')[0].replace(new RegExp(/['"]/,'g'),'');
+                var bllat=lonlat.split('lat=')[1].trim().split(' ')[0].replace(/['"]/g,'');
+                var bllon=lonlat.split('lon=')[1].split(' ')[0].replace(/['"]/g,'');
                 bllat=parseFloat(bllat);
                 bllon=parseFloat(bllon);
                 [bllon,bllat]=transform_lon_lat_one_dot_b(cstype,bllon,bllat);
@@ -668,8 +668,8 @@ function data_2_gpx_file_leaflet_b(transform_type='',odom=false){
         if (oparent){
             savename=oparent.innerText;
             savename=savename.split('(')[0].trim().split('.gpx')[0].trim();
-            savename=savename.replace(new RegExp(/\s+\d{8}.*$/,'g'),'');            
-            savename=savename.replace(new RegExp(/\s/,'g'),'_');
+            savename=savename.replace(/\s+\d{8}.*$/g,'');            
+            savename=savename.replace(/\s/g,'_');
         }
     }
     savename=prompt('输入保存文件名：',savename);

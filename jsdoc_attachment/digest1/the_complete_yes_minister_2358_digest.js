@@ -15,4 +15,5 @@ var digest_global=`
 *Fiji
 *bowlful
 *biochemist
+*modernise
 `.trim().split('\n');

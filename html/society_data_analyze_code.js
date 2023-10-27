@@ -244,15 +244,15 @@ function raw_data_check_klsda(){
                 console.log(key,arow);
             }
             var one_category=arow[0].trim();
-            one_category=one_category.replace(new RegExp(/\t/,'g'),' ');
-            one_category=one_category.replace(new RegExp(/\s+/,'g'),' ');
+            one_category=one_category.replace(/\t/g,' ');
+            one_category=one_category.replace(/\s+/g,' ');
             one_category=one_category.replace(new RegExp('（','g'),'(');
             one_category=one_category.replace(new RegExp('）','g'),')');
             if (one_category.substring(0,1)=='#'){
                 one_category='其中：'+one_category.substring(1,).trim();
             }
             var blunit=arow[1].trim();
-            blunit=blunit.replace(new RegExp(/[（）\(\)]/,'g'),'');
+            blunit=blunit.replace(/[（）\(\)]/g,'');
 
             sda_raw_data_global[key][blxl][0]=one_category;
             sda_raw_data_global[key][blxl][1]=blunit;

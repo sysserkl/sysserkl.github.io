@@ -527,7 +527,7 @@ function demo_content_klwebsites(cskey=false){
     var demo_list=[];
     for (let href_list of result_t){
         var href_str=href_list[0];
-        demo_list.push(sites_all_global[href_list[1]][2]+' '+href_str+' '+sites_all_global[href_list[1]][1].replace(new RegExp(/<\/?small>/,'g'),''));//+same_name_site_klwebsites(href_list[1],true));    
+        demo_list.push(sites_all_global[href_list[1]][2]+' '+href_str+' '+sites_all_global[href_list[1]][1].replace(/<\/?small>/g,''));
     }
     return demo_list;
 }

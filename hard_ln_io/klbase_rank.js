@@ -451,7 +451,7 @@ function line_district_revenue_rank_b(csarray,district_index,year_index,revenue_
 }
 
 function simple_name_rank_b(cskey,csarray,csno=0){
-    var name_list=cskey.replace(new RegExp(/[\(\)\|\,\s\+\-]/,'g'),' ').trim().split(' ');
+    var name_list=cskey.replace(/[\(\)\|\,\s\+\-]/g,' ').trim().split(' ');
     for (let blxl=0;blxl<csarray.length;blxl++){
         for (let one_name of name_list){
             if (csarray[blxl][csno].includes(one_name)){

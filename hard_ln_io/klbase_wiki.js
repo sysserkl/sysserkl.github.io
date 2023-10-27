@@ -285,43 +285,43 @@ function wiki_ed2k_magnet_b(csstr,cstyle=''){
         
         //magnet
         if (csstr.includes('&lt;magnet&gt;') && csstr.includes('&lt;/magnet&gt;')){
-            csstr=csstr.replace(new RegExp(/&lt;magnet&gt;(.*?)&lt;\/magnet&gt;/,"g"),'<a href="$1">magnet</a>');
+            csstr=csstr.replace(/&lt;magnet&gt;(.*?)&lt;\/magnet&gt;/g,'<a href="$1">magnet</a>');
         }
         else if (csstr.includes('&lt;magnet name=&quot;') && csstr.includes('&lt;/magnet&gt;')){
-            csstr=csstr.replace(new RegExp(/&lt;magnet name=&quot;(.*?)&quot;&gt;(.*?)&lt;\/magnet&gt;/,"g"),'<a href="$2">$1</a>');
+            csstr=csstr.replace(/&lt;magnet name=&quot;(.*?)&quot;&gt;(.*?)&lt;\/magnet&gt;/g,'<a href="$2">$1</a>');
         }
         else if (csstr.includes('&lt;magnet name="') && csstr.includes('&lt;/magnet&gt;')){
-            csstr=csstr.replace(new RegExp(/&lt;magnet name="(.*?)"&gt;(.*?)&lt;\/magnet&gt;/,"g"),'<a href="$2">$1</a>');
+            csstr=csstr.replace(/&lt;magnet name="(.*?)"&gt;(.*?)&lt;\/magnet&gt;/g,'<a href="$2">$1</a>');
         }        
         else if (csstr.includes('&lt;magnet name=') && csstr.includes('&lt;/magnet&gt;')){
-            csstr=csstr.replace(new RegExp(/&lt;magnet name=(.*?)&gt;(.*?)&lt;\/magnet&gt;/,"g"),'<a href="$2">$1</a>');
+            csstr=csstr.replace(/&lt;magnet name=(.*?)&gt;(.*?)&lt;\/magnet&gt;/g,'<a href="$2">$1</a>');
         }
     }
     else {
        //ed2k
         if (csstr.includes('<ed2k name="') && csstr.includes('</ed2k>')){
-            csstr=csstr.replace(new RegExp(/<ed2k name="(.*?)">(ed2k:\/\/\|.*?\|.*?\|(.*?)\|.*?)<\/ed2k>/,"g"),'<a href="$2">$1</a><filesize>$3</filesize>');
+            csstr=csstr.replace(/<ed2k name="(.*?)">(ed2k:\/\/\|.*?\|.*?\|(.*?)\|.*?)<\/ed2k>/g,'<a href="$2">$1</a><filesize>$3</filesize>');
             csstr=sub_wiki_ed2k_magnet_b_filesize(csstr);
         }
         
         else if (csstr.includes('<ed2k name=') && csstr.includes('</ed2k>')){
-            csstr=csstr.replace(new RegExp(/<ed2k name=(.*?)>(ed2k:\/\/\|.*?\|.*?\|(.*?)\|.*?)<\/ed2k>/,"g"),'<a href="$2">$1</a><filesize>$3</filesize>');
+            csstr=csstr.replace(/<ed2k name=(.*?)>(ed2k:\/\/\|.*?\|.*?\|(.*?)\|.*?)<\/ed2k>/g,'<a href="$2">$1</a><filesize>$3</filesize>');
             csstr=sub_wiki_ed2k_magnet_b_filesize(csstr);
         }	
         else if (csstr.includes('<ed2k>') && csstr.includes('</ed2k>')){
-            csstr=csstr.replace(new RegExp(/<ed2k>(ed2k:\/\/\|.*?\|.*?\|(.*?)\|.*?)<\/ed2k>/,"g"),'<a href="$1">ed2k</a><filesize>$2</filesize>');
+            csstr=csstr.replace(/<ed2k>(ed2k:\/\/\|.*?\|.*?\|(.*?)\|.*?)<\/ed2k>/g,'<a href="$1">ed2k</a><filesize>$2</filesize>');
             csstr=sub_wiki_ed2k_magnet_b_filesize(csstr);
         }
         
         //magnet
         if (csstr.includes('<magnet>') && csstr.includes('</magnet>')){
-            csstr=csstr.replace(new RegExp(/<magnet>(.*?)<\/magnet>/,"g"),'<a href="$1">magnet</a>');
+            csstr=csstr.replace(/<magnet>(.*?)<\/magnet>/g,'<a href="$1">magnet</a>');
         }
         else if (csstr.includes('<magnet name="') && csstr.includes('</magnet>')){
-            csstr=csstr.replace(new RegExp(/<magnet name="(.*?)">(.*?)<\/magnet>/,"g"),'<a href="$2">$1</a>');
+            csstr=csstr.replace(/<magnet name="(.*?)">(.*?)<\/magnet>/g,'<a href="$2">$1</a>');
         }
         else if (csstr.includes('<magnet name=') && csstr.includes('</magnet>')){
-            csstr=csstr.replace(new RegExp(/<magnet name=(.*?)>(.*?)<\/magnet>/,"g"),'<a href="$2">$1</a>');
+            csstr=csstr.replace(/<magnet name=(.*?)>(.*?)<\/magnet>/g,'<a href="$2">$1</a>');
         }
     }
     return csstr;
@@ -330,24 +330,24 @@ function wiki_ed2k_magnet_b(csstr,cstyle=''){
 function wiki_mrt_b(csstr,cstyle=""){
     if (cstyle=='and'){
         if (csstr.includes('&lt;mrt r&gt;') && csstr.includes('&lt;/mrt&gt;')){
-            csstr=csstr.replace(new RegExp(/&lt;mrt r&gt;(.*?)&lt;\/mrt&gt;/,"g"),'<font color=blue><b>REVIEW:</b></font> <span style="color:#303030; border-bottom:1px dotted #303030;background-color:#fdfd32;">$1</span>');
+            csstr=csstr.replace(/&lt;mrt r&gt;(.*?)&lt;\/mrt&gt;/g,'<font color=blue><b>REVIEW:</b></font> <span style="color:#303030; border-bottom:1px dotted #303030;background-color:#fdfd32;">$1</span>');
         }
         else if (csstr.includes('&lt;mrt m&gt;') && csstr.includes('&lt;/mrt&gt;')){
-            csstr=csstr.replace(new RegExp(/&lt;mrt m&gt;(.*?)&lt;\/mrt&gt;/,"g"),'<font color=green><b>MEMO:</b></font> <span style="color:#303030; border-bottom:1px dotted #303030;background-color:#fdfd32;">$1</span>');
+            csstr=csstr.replace(/&lt;mrt m&gt;(.*?)&lt;\/mrt&gt;/g,'<font color=green><b>MEMO:</b></font> <span style="color:#303030; border-bottom:1px dotted #303030;background-color:#fdfd32;">$1</span>');
         }
         else if (csstr.includes('&lt;mrt t&gt;') && csstr.includes('&lt;/mrt&gt;')){
-            csstr=csstr.replace(new RegExp(/&lt;mrt t&gt;(.*?)&lt;\/mrt&gt;/,"g"),'<font color=red><b>TODO:</b></font> <span style="color:#303030; border-bottom:1px dotted #303030;background-color:#fdfd32;">$1</span>');
+            csstr=csstr.replace(/&lt;mrt t&gt;(.*?)&lt;\/mrt&gt;/g,'<font color=red><b>TODO:</b></font> <span style="color:#303030; border-bottom:1px dotted #303030;background-color:#fdfd32;">$1</span>');
         }
     }
     else {
         if (csstr.includes('<mrt r>') && csstr.includes('</mrt>')){
-            csstr=csstr.replace(new RegExp(/<mrt r>(.*?)<\/mrt>/,"g"),'<font color=blue><b>REVIEW:</b></font> <span style="color:#303030; border-bottom:1px dotted #303030;background-color:#fdfd32;">$1</span>');
+            csstr=csstr.replace(/<mrt r>(.*?)<\/mrt>/g,'<font color=blue><b>REVIEW:</b></font> <span style="color:#303030; border-bottom:1px dotted #303030;background-color:#fdfd32;">$1</span>');
         }
         else if (csstr.includes('<mrt m>') && csstr.includes('</mrt>')){
-            csstr=csstr.replace(new RegExp(/<mrt m>(.*?)<\/mrt>/,"g"),'<font color=green><b>MEMO:</b></font> <span style="color:#303030; border-bottom:1px dotted #303030;background-color:#fdfd32;">$1</span>');
+            csstr=csstr.replace(/<mrt m>(.*?)<\/mrt>/g,'<font color=green><b>MEMO:</b></font> <span style="color:#303030; border-bottom:1px dotted #303030;background-color:#fdfd32;">$1</span>');
         }
         else if (csstr.includes('<mrt t>') && csstr.includes('</mrt>')){
-            csstr=csstr.replace(new RegExp(/<mrt t>(.*?)<\/mrt>/,"g"),'<font color=red><b>TODO:</b></font> <span style="color:#303030; border-bottom:1px dotted #303030;background-color:#fdfd32;">$1</span>');
+            csstr=csstr.replace(/<mrt t>(.*?)<\/mrt>/g,'<font color=red><b>TODO:</b></font> <span style="color:#303030; border-bottom:1px dotted #303030;background-color:#fdfd32;">$1</span>');
         }
     }
     return csstr;
@@ -361,10 +361,10 @@ function wiki_blur_text_b(csstr,ismobile=-1){
             ismobile=ismobile_b();
         }
         if (ismobile===false || ismobile===true){
-            csstr=csstr.replace(new RegExp(/{{blur}}(.*?){{\/blur}}/,'g'),'<span style="color: transparent; text-shadow: 0 0 '+(ismobile?'0.5':'0.2')+'rem #000;">$1</span>');
+            csstr=csstr.replace(/{{blur}}(.*?){{\/blur}}/g,'<span style="color: transparent; text-shadow: 0 0 '+(ismobile?'0.5':'0.2')+'rem #000;">$1</span>');
         }
         else {
-            csstr=csstr.replace(new RegExp(/{{blur}}(.*?){{\/blur}}/,'g'),'<span style="color: transparent; text-shadow: 0 0 '+ismobile+'rem #000;">$1</span>');
+            csstr=csstr.replace(/{{blur}}(.*?){{\/blur}}/g,'<span style="color: transparent; text-shadow: 0 0 '+ismobile+'rem #000;">$1</span>');
         }
     }
     return csstr;
@@ -428,12 +428,12 @@ function wiki_font_color_b(csstr,cstyle=''){
     //<fc=red>xxxxxx</fc> <fc=#ff0000></fc>
     if (cstyle=='and'){
         if (csstr.includes('&lt;fc=') && csstr.includes('&lt;/fc&gt;')){
-            csstr=csstr.replace(new RegExp(/&lt;fc=(.*?)&gt;(.*?)&lt;\/fc&gt;/,"g"),'<font color=$1>$2</font>');
+            csstr=csstr.replace(/&lt;fc=(.*?)&gt;(.*?)&lt;\/fc&gt;/g,'<font color=$1>$2</font>');
         }
     }
     else{
         if (csstr.includes('<fc=') && csstr.includes('</fc>')){
-            csstr=csstr.replace(new RegExp(/<fc=(.*?)>(.*?)<\/fc>/,"g"),'<font color=$1>$2</font>');
+            csstr=csstr.replace(/<fc=(.*?)>(.*?)<\/fc>/g,'<font color=$1>$2</font>');
         }
     }
     return csstr;
@@ -443,12 +443,12 @@ function wiki_website_b(csstr,cstyle=''){
     //<website s>xxxx</website>
     if (cstyle=='and'){
         if (csstr.includes('&lt;website s&gt;') && csstr.includes('&lt;/website&gt;')){
-            csstr=csstr.replace(new RegExp(/&lt;website s&gt;(.*?)&lt;\/website&gt;/,"g"),'<a href="https://cn.bing.com/search?q=$1" target=_blank>$1</a><sub><a href="https://www.baidu.com/s?wd=$1" target=_blank>b</a><a href="https://www.ecosia.org/search?q=$1" target=_blank>e</a><a href="https://duckduckgo.com/?q=$1" target=_blank>d</a></sub>');
+            csstr=csstr.replace(/&lt;website s&gt;(.*?)&lt;\/website&gt;/g,'<a href="https://cn.bing.com/search?q=$1" target=_blank>$1</a><sub><a href="https://www.baidu.com/s?wd=$1" target=_blank>b</a><a href="https://www.ecosia.org/search?q=$1" target=_blank>e</a><a href="https://duckduckgo.com/?q=$1" target=_blank>d</a></sub>');
         }
     }
     else{
         if (csstr.includes('<website s>') && csstr.includes('</website>')){
-            csstr=csstr.replace(new RegExp(/<website s>(.*?)<\/website>/,"g"),'<a href="https://cn.bing.com/search?q=$1" target=_blank>$1</a><sub><a href="https://www.baidu.com/s?wd=$1" target=_blank>b</a><a href="https://www.ecosia.org/search?q=$1" target=_blank>e</a><a href="https://duckduckgo.com/?q=$1" target=_blank>d</a></sub>');
+            csstr=csstr.replace(/<website s>(.*?)<\/website>/g,'<a href="https://cn.bing.com/search?q=$1" target=_blank>$1</a><sub><a href="https://www.baidu.com/s?wd=$1" target=_blank>b</a><a href="https://www.ecosia.org/search?q=$1" target=_blank>e</a><a href="https://duckduckgo.com/?q=$1" target=_blank>d</a></sub>');
         }
     }
     return csstr;
@@ -457,10 +457,10 @@ function wiki_website_b(csstr,cstyle=''){
 function wiki_sns_b(csstr){
     //{{t|n=}} {{w|n=}}
     if (csstr.includes('{{t|n=')) {
-        csstr=csstr.replace(new RegExp(/{{t\|n=(.*?)}}/,"g"),'<a href="https://twitter.com/$1" target=_blank>@$1</a>');
+        csstr=csstr.replace(/{{t\|n=(.*?)}}/g,'<a href="https://twitter.com/$1" target=_blank>@$1</a>');
     }   
     if (csstr.includes('{{w|n=')) {
-        csstr=csstr.replace(new RegExp(/{{w\|n=(.*?)}}/,"g"),'<a href="https://weibo.com/n/$1" target=_blank>@$1</a>');
+        csstr=csstr.replace(/{{w\|n=(.*?)}}/g,'<a href="https://weibo.com/n/$1" target=_blank>@$1</a>');
     }    
     return csstr;
 }
@@ -523,7 +523,7 @@ function wiki_table_b(csstr='',tablestyle='',tdstyle='',thstyle=''){
         }
         else if (item.substring(0,2)=='! '){
             item=item.substring(2,);
-            item=item.replace(new RegExp(/ \|\| /,'g'),' !! ');
+            item=item.replace(/ \|\| /g,' !! ');
             var td_list=item.split(' !! ');
             var blstr_t='';
             for (let one_td of td_list){

@@ -257,9 +257,9 @@ function format_data_form_zjcompany(){
 function format_data_2_array_zjcompany(){
     var otextarea=document.getElementById('textarea_data_format_zj_company');
     var blstr=otextarea.value.trim();
-    blstr=blstr.replace(new RegExp(/\s(\d{1,3})\s/,'mg'),'\n$1\t');
-    blstr=blstr.replace(new RegExp(/\s+$/,'mg'),'');
-    blstr=blstr.replace(new RegExp(/\t+/,'mg'),'\t');
+    blstr=blstr.replace(/\s(\d{1,3})\s/mg,'\n$1\t');
+    blstr=blstr.replace(/\s+$/mg,'');
+    blstr=blstr.replace(/\t+/mg,'\t');
     var list_t=blstr.trim().split('\n');
     list_t.sort(function (a,b){return parseFloat(a)>parseFloat(b);});
     var result_t=[];

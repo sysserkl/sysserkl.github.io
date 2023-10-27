@@ -865,7 +865,7 @@ function vertical_generation_hzpy(csstr,v_len=-1,delimiter=' ',align='top',repla
             bljg=bljg.replace(new RegExp(item[0],'g'),item[1]);
         }        
     }
-    bljg=bljg.replace(new RegExp(/[,.?"':;!“”‘’、，。；：？！]/,'g'),'　'); //微信不对齐中文中文标点 - 保留注释
+    bljg=bljg.replace(/[,.?"':;!“”‘’、，。；：？！]/g,'　'); //微信不对齐中文中文标点 - 保留注释
     return bljg;
 }
 

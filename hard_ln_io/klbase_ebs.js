@@ -76,7 +76,7 @@ function txtbook_link_b(ospan,bookid){
         if (odoms[blxl+1].classList.contains('span_ebs_book_name')){break;}
         
         var words=Array.from(remove_or_search_textarea_words_ebs_b(odoms[blxl+1],'value'));
-        temp_search_link_value_set_b('+('+specialstr_j(words.join('|')).replace(new RegExp(/\s/,'g'),'\\s')+')(:r)');
+        temp_search_link_value_set_b('+('+specialstr_j(words.join('|')).replace(/\s/g,'\\s')+')(:r)');
         window.open(klbase_sele_path_b()[1]+'/html/txtlistsearch.htm?'+bookid+'&sls');       
         blfound=true;
         break; 

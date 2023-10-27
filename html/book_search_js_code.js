@@ -115,7 +115,7 @@ function search_ebsjs(csstr='',csmax_total=50,csmax_current=5){
     //-----------------    
     var is_reg=false;    
 
-    csstr=csstr.replace(new RegExp(/[<>"]/,'g'),'');   
+    csstr=csstr.replace(/[<>"]/g,'');   
     csstr=csstr.trim();
     search_recent_ebsjs(csstr);
     document.getElementById('input_search').value=csstr;
@@ -171,7 +171,7 @@ function show_result_ebsjs(csstr=''){
 function search_batch_ebsjs(){
     var blstr=document.getElementById('textarea_batch_search_ebs').value.trim();
     if (blstr==''){return;}
-    blstr=blstr.replace(new RegExp(/\r/,'g'),'');
+    blstr=blstr.replace(/\r/g,'');
     var list_t=blstr.split('\n');
     var result_t=[];
     for (let aword of list_t){

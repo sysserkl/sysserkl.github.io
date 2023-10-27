@@ -23,7 +23,7 @@ function init_klqr(){
     
     var otextarea=document.getElementById('textarea_base64_img_klqr');
     var buttons='<span class="aclick" onclick="import_base64_img_klqr();">载入图片</span>';
-    otextarea.insertAdjacentHTML('afterend','<p>'+buttons+textarea_buttons_b('textarea_base64_img_klqr','清空,复制')+'</p>');
+    otextarea.insertAdjacentHTML('afterend','<p>'+buttons+textarea_buttons_b('textarea_base64_img_klqr','清空,复制,导入temp_txt_share')+'</p>');
 }
 
 function import_base64_img_klqr(){    

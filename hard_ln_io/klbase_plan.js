@@ -383,7 +383,7 @@ function edit_item_klplan_b(csarray,plan_id,csid){
     for (let item of csarray){
         if (csid!==item[0]){continue;}
         var new_name=(prompt('输入新的名称，若删除则输入【删除】或【delete】',item[2]) || '').trim();
-        new_name=new_name.replace(new RegExp(/\r?\n/,'g'),' ');
+        new_name=new_name.replace(/\r?\n/g,' ');
         if (new_name==''){
             alert('取消修改');
             return false;
@@ -405,7 +405,7 @@ function edit_item_klplan_b(csarray,plan_id,csid){
             }        
         }
         var new_category=(prompt('输入新的分类',item[1]) || '').trim();
-        new_category=new_category.replace(new RegExp(/\r?\n/,'g'),' ');
+        new_category=new_category.replace(/\r?\n/g,' ');
         
         if (new_category==''){
             alert('取消修改');
@@ -472,7 +472,7 @@ function new_id_klplan_b(csarray){
 function new_item_klplan_b(csarray,plan_id,multiple=false){
     var recent_input_item_name=local_storage_get_b('recent_input_item_name_klplan').trim();
     var new_name=(prompt('输入新事项的名称',recent_input_item_name) || '').trim();
-    new_name=new_name.replace(new RegExp(/\r?\n/,'g'),' ');
+    new_name=new_name.replace(/\r?\n/g,' ');
     
     if (new_name==''){
         alert('取消添加');
@@ -497,7 +497,7 @@ function new_item_klplan_b(csarray,plan_id,multiple=false){
         }
     }
     var new_category=(prompt('输入新事项的分类',new_category) || '').trim();
-    new_category=new_category.replace(new RegExp(/\r?\n/,'g'),' ');
+    new_category=new_category.replace(/\r?\n/g,' ');
     
     if (new_category==''){
         alert('取消添加');

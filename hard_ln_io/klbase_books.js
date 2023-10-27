@@ -337,8 +337,8 @@ function books_b(showall=false,cstype='txt',cstag='all'){   //书目生成，cat
         }
 	}
     
-	while (bljg.indexOf('. . . . ')>=0){
-        bljg=bljg.replace(new RegExp(/(\. ){4}/g),'. . . ');
+	while (bljg.includes('. . . . ')){
+        bljg=bljg.replace(/(\. ){4}/g,'. . . ');
     }
 	
 	tmp_o=document.getElementById('booklinks');

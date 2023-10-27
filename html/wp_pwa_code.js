@@ -330,9 +330,9 @@ function check_wp_pwa(cstype='添加',do_ask=true){
     result_t.push('总价:'+k_total_price);    
     
     var blcontent=document.getElementById('textarea_content').value.trim();
-    blcontent=blcontent.replace(new RegExp(/\r/,'g'),'');
+    blcontent=blcontent.replace(/\r/g,'');
     blcontent=specialstr92_b(blcontent);
-    blcontent=blcontent.replace(new RegExp(/\n/,'g'),'<p class=tb01>');
+    blcontent=blcontent.replace(/\n/g,'<p class=tb01>');
     result_t.push('备注:'+blcontent);    
     
     //-----------
@@ -342,7 +342,7 @@ function check_wp_pwa(cstype='添加',do_ask=true){
         info_wp_pwa('已储存超过200条记录，清理后再'+cstype);
         return false;         
     }
-    if (('---'+bldata.replace(new RegExp(/\n/,'g'),'')+'---').includes('---'+result_t.join('')+'---')){
+    if (('---'+bldata.replace(/\n/g,'')+'---').includes('---'+result_t.join('')+'---')){
         info_wp_pwa('重复输入');
         return false;                    
     }
@@ -361,7 +361,7 @@ function check_wp_pwa(cstype='添加',do_ask=true){
 
     if (cstype=='添加'){
         var bldata=bldata+'\n---\n'+result_t.join('\n')+'\n';
-        bldata=bldata.replace(new RegExp(/\n{2,}/,'g'),'\n');
+        bldata=bldata.replace(/\n{2,}/g,'\n');
         localstorage_set_wp_pwa(bldata);
     }
     else if (cstype=='修改'){
@@ -552,7 +552,7 @@ function array2localstorage_wp_pwa(){
         result_t.push(list_t.join('\n')+'\n');
     }
     var bldata='---\n'+result_t.join('\n---\n');
-    bldata=bldata.replace(new RegExp(/\n{2,}/,'g'),'\n');
+    bldata=bldata.replace(/\n{2,}/g,'\n');
     localstorage_set_wp_pwa(bldata.trim());
 }
 
