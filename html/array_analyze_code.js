@@ -29,8 +29,13 @@ function list_arr_analyze(csarray=false){
     }
 	for (let arow of csarray){
         var row_str=[];
-        for (let acol of arow){
-		    row_str.push(acol.toString());
+        if (Array.isArray(arow)){
+            for (let acol of arow){
+                row_str.push(acol.toString());
+            }
+        }
+        else {
+            row_str=[arow];
         }
         bljg.push(row_str.join(delimiter));
 	}
@@ -203,7 +208,7 @@ function column_filter_arr_analyze(cssplit=false,do_update=true){
 		}
 	}
     
-    console.log(include_no,exclude_no);
+    console.log('include_no:',include_no,'exclude_no:',exclude_no);
 	var list_t=[];
 	for (let item_t of table_array_global){
 		if (Array.isArray(item_t)){
@@ -414,7 +419,7 @@ function data_2_flot_arr_analyze(is_demo=false){
             case 'flot lines':    
                 blcontent=`
 //"成都#points:false#", [2012,300], [2014,400]
-//"苏州", [2012,500], [2014,600]
+//"苏州#show:false#", [2012,500], [2014,600]
 `;            
                 break;
             case 'flot lines date':    

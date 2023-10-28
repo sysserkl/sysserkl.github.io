@@ -871,11 +871,7 @@ function str2js_klr_b(csid,cstype){
 function copy_lines_klr_b(cstimes,csid='textarea_rows_content'){
 	var otextarea = document.getElementById(csid);
 	var blstr = otextarea.value;
-	var bljg=[];
-	for (let blxl=0;blxl<cstimes;blxl++){
-		bljg.push(blstr);
-	}
-	otextarea.value = bljg.join('');
+	otextarea.value = blstr + blstr.repeat(cstimes);
 }
 
 function html_to_image_klr_b(){

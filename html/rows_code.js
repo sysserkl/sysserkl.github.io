@@ -82,7 +82,7 @@ function do_type_klr2(cstype){
             rnd_str_klr_b(list_t[cstype],cslines,csmin,csmax);
             break;
         case '重复':
-	        var bltimes=document.getElementById('tcopy').value;        
+	        var bltimes=document.getElementById('tcopy').value;
             copy_lines_klr_b(bltimes);
             break;
     }
