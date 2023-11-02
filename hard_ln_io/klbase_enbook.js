@@ -51,7 +51,7 @@ function wordtypes_enbook_b(blitem){
 function get_new_old_rare_words_set_enbook_b(csstr){
     if (csstr==''){
         var otextarea=document.getElementById('textarea_new_words1');
-        if (!otextarea){return [false,false,false,false];}
+        if (!otextarea){return [false,false,false,false,csstr];}
         csstr=otextarea.value;
     }
     
@@ -63,20 +63,18 @@ function get_new_old_rare_words_set_enbook_b(csstr){
     
     var bltypecheck=checkbox_kl_value_b('words_type_check');
     bltypecheck=(bltypecheck===0?true:bltypecheck);
-    
-    return new_old_word_list_enbook_b(bljgarr2,bltypecheck).concat(bltypecheck);    //[new_words_set,old_words_set,rare_words_set] - 保留注释
+    return new_old_word_list_enbook_b(bljgarr2,bltypecheck).concat([bltypecheck,csstr]);    //[new_words_set,old_words_set,rare_words_set,bltypecheck,csstr] - 保留注释
 }
 
 function get_new_words_arr_set_enbook_b(cstype,csstr='',div_id='div_new_words2'){
     //cstype 1 全部单词 2 未收录 3 已收录 4 旧单词js_wiki格式 5 稀有旧单词 6 稀有旧单词js_wiki格式 - 保留注释
-
     var t0 = performance.now();
 
     var new_words_set, old_words_set, rare_words_set, bltypecheck;
-    [new_words_set,old_words_set,rare_words_set,bltypecheck]=get_new_old_rare_words_set_enbook_b(csstr);
+    [new_words_set,old_words_set,rare_words_set,bltypecheck,csstr]=get_new_old_rare_words_set_enbook_b(csstr);
     if (new_words_set===false){return;}    
     
-    bljgarr2=array_union_b(new_words_set,old_words_set,true);
+    var bljgarr2=array_union_b(new_words_set,old_words_set,true);
 
     var new_words_set10=new Set();  //10%新单词 - 保留注释
     if (typeof en_words_book_newwords_continue_global!=='undefined' && en_words_book_newwords_continue_global){
@@ -186,7 +184,7 @@ function get_new_words_arr_obj_enbook_b(cstype,csstr='',csobjects=false,addline=
     }
         
     var new_words_set, old_words_set, rare_words_set, bltypecheck;
-    [new_words_set,old_words_set,rare_words_set,bltypecheck]=get_new_old_rare_words_set_enbook_b(csstr);
+    [new_words_set,old_words_set,rare_words_set,bltypecheck,csstr]=get_new_old_rare_words_set_enbook_b(csstr);
     if (new_words_set===false){return;}    
 
     var csstart=0;
