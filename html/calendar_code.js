@@ -217,19 +217,22 @@ function changeCld_klcalendar(odom,hide_empty_row=true,legend_dict={}){
     var ymkey=csyear+'_'+csmonth;
 
     var yDisplay='';
-    if (csyear<=1874){}
-    else if (csyear<=1908){
-        yDisplay = '光绪' + (((csyear-1874)==1)?'元':csyear-1874)+'年';
-    }
-    else if (csyear<=1911){
-        yDisplay = '宣统' + (((csyear-1908)==1)?'元':csyear-1908)+'年';
-    }
-    else {
-        yDisplay = '民国' + (((csyear-1911)==1)?'元':csyear-1911)+'年';
-        if(csyear>2017){
-            yDisplay = yDisplay + ' <font color=pink>新冷战' + (((csyear-2017)==1)?'元':csyear-2017)+'年</font>';
+    if (memo_mg_enabled_klcalendar_global){
+        if (csyear<=1874){}
+        else if (csyear<=1908){
+            yDisplay = '光绪' + (((csyear-1874)==1)?'元':csyear-1874)+'年';
+        }
+        else if (csyear<=1911){
+            yDisplay = '宣统' + (((csyear-1908)==1)?'元':csyear-1908)+'年';
+        }
+        else {
+            yDisplay = '民国' + (((csyear-1911)==1)?'元':csyear-1911)+'年';
+            if (csyear>2017){
+                yDisplay = yDisplay + ' <font color=pink>新冷战' + (((csyear-2017)==1)?'元':csyear-2017)+'年</font>';
+            }
         }
     }
+
     odom.querySelector('.span_year_name').innerHTML = yDisplay +' '; 
     var otoday=odom.querySelector('.todayColor');
     if (otoday){
@@ -604,14 +607,20 @@ function menu_klcalendar(otable=false,query_str='td.td_head',cscaption='公元')
     var parent_str=menu_parent_node_b(str_t);
     
     var klmenu1=[
-    '<span id="span_memo_bg_klcalendar" class="span_menu" onclick="'+str_t+'memo_bg_enabled_klcalendar_global=klmenu_check_b(this.id,true);">⚪ Memo标注背景色</span>',        
+    '<span id="span_memo_bg_klcalendar" class="span_menu" onclick="'+str_t+'memo_bg_enabled_klcalendar_global=klmenu_check_b(this.id,true);">⚪ Memo标注背景色</span>',
+    '<span id="span_memo_mg_klcalendar" class="span_menu" onclick="'+str_t+'memo_mg_enabled_klcalendar_global=klmenu_check_b(this.id,true);">⚪ 显示民国纪年</span>',
     '<span class="span_menu" onclick="'+str_t+'memo_form_klcalendar();">Memo 编辑</span>',    
     '<span class="span_menu" onclick="'+str_t+'memo_help_klcalendar();">Memo Demo</span>',
     '<span class="span_menu" onclick="'+str_t+'year_klcalendar();">年历</span>',
     '<span class="span_menu">背景色系列：<input type="text" id="input_bgcolor_klcalendar" value="'+bgcolor_klcalendar_global.join(',')+'" /> <span class="aclick" onclick="'+parent_str+'bgcolor_set_klcalendar();">设置</span></span>',
     '<span class="span_menu">Memo起止日期：<input type="text" id="input_memo_range_klcalendar" value="'+date2str_b('',memo_range_klcalendar_global[0])+'-'+date2str_b('',memo_range_klcalendar_global[1])+'" /> <span class="aclick" onclick="'+parent_str+'memo_range_set_klcalendar();">设置</span></span>',    
-    '<a href="https://www.baidu.com/s?cl=3&wd=%C8%D5%C0%FA" onclick="'+str_t+'" target=_blank>百度</a>',
     ];
+    
+    var group_list=[
+    ['Bing','window.open(\'https://cn.bing.com/search?q=%E6%97%A5%E5%8E%86\');',true],
+    ['百度','window.open(\'https://www.baidu.com/s?cl=3&wd=%C8%D5%C0%FA\');',true],   //网址不能使用双引号 - 保留注释
+    ];    
+    klmenu1.push(menu_container_b(str_t,group_list,''));    
     
     var bljg=klmenu_b(klmenu1,cscaption,'18rem')+' ';
     if (otable){
@@ -619,6 +628,14 @@ function menu_klcalendar(otable=false,query_str='td.td_head',cscaption='公元')
     }
     else {
         document.querySelector(query_str).insertAdjacentHTML('afterbegin',bljg);    
+    }
+    
+    if (memo_bg_enabled_klcalendar_global){
+        klmenu_check_b('span_memo_bg_klcalendar',true);
+    }
+    
+    if (memo_mg_enabled_klcalendar_global){
+        klmenu_check_b('span_memo_mg_klcalendar',true);    
     }
 }
 
@@ -873,7 +890,18 @@ function months_klcalendar(start_ym,end_ym,section_info=true){
         one_container.style.float='left';
         one_container.minWidth='';
     }
-
+    
+    //---
+    var otds=document.querySelectorAll('td.td_head');
+    var width_set=new Set();
+    for (let one_td of otds){
+        width_set.add(one_td.getBoundingClientRect().width);
+    }
+    var blmax=Math.max(...width_set);
+    for (let one_td of otds){
+        one_td.style.minWidth=blmax+'px';   //统一宽度 - 保留注释
+    }    
+    //---
     return legend_dict;
 }
 
@@ -915,7 +943,7 @@ function ym_buttons_klcalendar(otable){
 
 function table_head_klcalendar(otable,year_min=1900,year_max=2100,month_min=1,month_max=12){
     var blstr='<tr>';
-    blstr=blstr+'<td class="td_head" colspan=7 align=center nowrap style="font-size:2rem;color:#ffffff;background-color:#4e81bb;padding:0 0.5rem 0.5rem 0.5rem;">';
+    blstr=blstr+'<td class="td_head" colspan=7 align=left nowrap style="font-size:2rem;color:#ffffff;background-color:#4e81bb;padding:0 0.5rem 0.5rem 0.5rem;min-width: 460px;">';
     blstr=blstr+'<select class="select_year" onchange="changeCld_klcalendar(this);" style="max-width:6.5rem;">';
     var year_list=[];
     for (let blyear=year_min; blyear<=year_max; blyear++){
@@ -930,9 +958,7 @@ function table_head_klcalendar(otable,year_min=1900,year_max=2100,month_min=1,mo
         month_list.push('<option>'+('0'+blmonth).slice(-2,)+'</option>');
     }
     blstr=blstr+month_list.join('\n');
-    blstr=blstr+'</select> 月 ';
-    
-    blstr=blstr+'<span class="span_year_name"></span><a href="https://cn.bing.com/search?q=%E6%97%A5%E5%8E%86" target=_blank>Bing</a>';
+    blstr=blstr+'</select> 月 <span class="span_year_name"></span>';
     blstr=blstr+'</td>';
     blstr=blstr+'</tr>';
     otable.insertAdjacentHTML('afterbegin',blstr);    

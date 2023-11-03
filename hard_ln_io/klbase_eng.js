@@ -1171,7 +1171,7 @@ function popup_words_links_b(event,csword,ew=false,def_button=false,mobile_font_
     var ismobile=ismobile_b();
     var odiv=document.getElementById('div_enwords_mini_search_frame');
     var z_index=(odiv?(parseInt(odiv.style.zIndex)+1 || -1):-1);
-    popup_event_div_b(event,'div_enword_search_links',bljg,'bottom',mobile_font_size,0.8,(ismobile?80:50)+'%','',(ismobile?'0.3rem':'0.2rem'),'inset',z_index);
+    popup_event_div_b(event,'div_enword_search_links',bljg,'bottom',mobile_font_size,0.8,(ismobile?70:50)+'%','',(ismobile?'0.3rem':'0.2rem'),'inset',z_index);
 }
 
 function en_one_word_b(csword,csno=[-1,0],csrecent_word='',change_color=true,ew=false,def_button=false){
@@ -1769,13 +1769,17 @@ function enwords_search_old_b(cs_w_p_d,csword,csreg){
 }
 
 function enwords_mini_search_b(csword=''){
+    var osession = document.getElementById('session_mini_search');
     var odiv=document.getElementById('input_enwords_mini_search');
     if (csword==''){
         csword=odiv.value;
     }
 	csword=csword.trim();   
     odiv.value=csword;
-	if (csword==''){return;}
+	if (csword==''){
+        osession.innerHTML='';
+        return;
+    }
 
     en_word_temp_get_b();
     
@@ -1796,10 +1800,8 @@ function enwords_mini_search_b(csword=''){
         }
     }
 
-    var odiv = document.getElementById('session_mini_search');
     var recent_search_str=enwords_recent_search_b(csword,'mini');
-    
-    enwords_search_show_html_b(odiv,'_mini',recent_search_str,csword,words_temp_arr,blequal,true);
+    enwords_search_show_html_b(osession,'_mini',recent_search_str,csword,words_temp_arr,blequal,true);
 }
 
 function enwords_merge_b(cswords_list,cstimes=500){

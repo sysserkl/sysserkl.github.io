@@ -66,7 +66,7 @@ function split_result_klbase64(oimg){
                     new_w=Math.min(split_width,oimg.width-blc);
                 }
                 bljg=bljg+'<canvas id="canvas_split_'+blr+'_'+blc+'" width='+new_w+' height='+new_h+' style="margin:1rem;padding:1rem;display:none;"></canvas>';
-                bljg=bljg+'<img id="img_split_'+blr+'_'+blc+'" class="img_split_klbase64" style="margin:0.2rem;'+max_width+'" onclick="split_img_selected_klbase64(this);">';
+                bljg=bljg+'<img id="img_split_'+blr+'_'+blc+'" class="img_split_klbase64" style="margin:0.2rem;'+max_width+'" onclick="split_img_selected_klbase64(this);" />';
                 list_t.push(['split_'+blr+'_'+blc,blc,blr,new_w,new_h]);
                 if (blc>0){break;}
             }
