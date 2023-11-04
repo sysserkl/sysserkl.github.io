@@ -305,16 +305,21 @@ function grey_img_b(img_original_obj,ocanvas,ctx,white_and_black=false){
 }
 
 function img_xy_b(event,oimg){
-    var x = event.clientX - oimg.x;//offsetLeft;// - (oimg.offsetWidth-oimg.width)/2;
-    var y = event.clientY - oimg.y;//offsetTop;// - (oimg.offsetHeight-oimg.height)/2;
+    var x = event.clientX - oimg.x;//oimg.offsetLeft;// - (oimg.offsetWidth-oimg.width)/2;
+    var y = event.clientY - oimg.y;//oimg.offsetTop;// - (oimg.offsetHeight-oimg.height)/2;
     
     //以下几行保留 - 保留注释
     //console.log('--------------');
-    //console.log('n',oimg.naturalWidth,oimg.naturalHeight);
-    //console.log('wh',oimg.width,oimg.height);
-    //console.log('o',oimg.offsetWidth,oimg.offsetHeight);
-    //console.log('xy',x,y);
-    //console.log('lx,ty',oimg.offsetLeft,oimg.x,oimg.offsetTop,oimg.y);
+    //console.log('oimg.naturalWidth, oimg.naturalHeight',oimg.naturalWidth,oimg.naturalHeight);
+    //console.log('oimg.width, oimg.height',oimg.width,oimg.height);
+    
+    //console.log('offsetLeft, offsetTop',oimg.offsetLeft,oimg.offsetTop);    
+    //console.log('offsetWidth, offsetHeight',oimg.offsetWidth,oimg.offsetHeight);
+
+    //console.log('event.clientX, event.clientY',event.clientX,event.clientY);    
+    //console.log('img.x, img.y',oimg.x,oimg.y);
+    //console.log('event.clientX - oimg.x, event.clientY - oimg.y',x,y);
+
     //console.log('ratio',oimg.naturalWidth/oimg.width,oimg.naturalHeight/oimg.height);
     //console.log('rect',oimg.getBoundingClientRect());
     return [Math.round(x*oimg.naturalWidth/oimg.offsetWidth),Math.round(y*oimg.naturalHeight/oimg.offsetHeight)];
@@ -332,4 +337,77 @@ function imgs_min_max_size_b(oimgs){
     var blmin='min wh: '+Math.min(...blwidth)+'x'+Math.min(...blheight);
     var blmax='max wh: '+Math.max(...blwidth)+'x'+Math.max(...blheight);
     return blmin+'\n'+blmax;
+}
+
+function img_split_list_get_b(oimg,split_width=0,split_height=0,only_2=false,csmax=10){
+    if (split_width<=0){
+        split_width=oimg.width;
+    }
+    if (split_height<=0){
+        split_height=oimg.height;
+    }
+
+    if (split_width<1){
+        split_width=split_width*oimg.width;
+    }
+    if (split_height<1){
+        split_height=split_height*oimg.height;
+    }
+    
+    var error='';
+    if (oimg.width<split_width || oimg.height<split_height){
+        error='尺寸超出';
+    }
+    else if (oimg.width==split_width && oimg.height==split_height){
+        error='尺寸一致';
+    }
+    else if (only_2===false && (oimg.width/split_width>csmax || oimg.height/split_height>csmax)){
+        error='超出'+csmax+'份';
+    }
+
+    if (error!==''){
+        return [error,[]];
+    }
+    
+    var list_t=[];
+    var new_w=0;
+    var new_h=0;
+    if (only_2){
+        for (let blr=0;blr<oimg.height;blr=blr+split_height){
+            for (let blc=0;blc<oimg.width;blc=blc+split_width){    
+                if (blr>0){
+                    new_h=oimg.height-blr;
+                }
+                else {
+                    new_h=Math.min(split_height,oimg.height-blr);
+                }
+                if (blc>0){
+                    new_w=oimg.width-blc;
+                }
+                else {
+                    new_w=Math.min(split_width,oimg.width-blc);
+                }
+                list_t.push([blc,blr,new_w,new_h]);
+                if (blc>0){break;}
+            }
+            if (blr>0){break;}
+        } 
+    }
+    else {
+        for (let blr=0;blr<oimg.height;blr=blr+split_height){
+            for (let blc=0;blc<oimg.width;blc=blc+split_width){
+                new_w=Math.min(split_width,oimg.width-blc);
+                new_h=Math.min(split_height,oimg.height-blr);
+                list_t.push([blc,blr,new_w,new_h]);
+            }
+        }
+    }
+    return [error,list_t];
+}
+
+function img_split_canvas_b(oimg,ocanvas,ctx,one_part,csext='jpeg'){
+    ocanvas.width=one_part[2];
+    ocanvas.height=one_part[3];
+    ctx.drawImage(oimg, one_part[0],one_part[1], one_part[2], one_part[3], 0,0, one_part[2], one_part[3]);
+    return ocanvas.toDataURL('image/'+csext);
 }

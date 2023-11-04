@@ -7,91 +7,29 @@ function img_xy_klbase64(event,oimg){
 function split_result_klbase64(oimg){
     var split_width=parseFloat(document.getElementById('input_split_width').value);
     var split_height=parseFloat(document.getElementById('input_split_height').value);
-    if (split_width<=0){
-        split_width=oimg.width;
-    }
-    if (split_height<=0){
-        split_height=oimg.height;
-    }
-
-    if (split_width<1){
-        split_width=split_width*oimg.width;
-    }
-    if (split_height<1){
-        split_height=split_height*oimg.height;
-    }
-    
     var only_2=document.getElementById('checkbox_split_onlye_2_klbase64').checked;
-    var doresize=false;
-    var bljg='';
-    if (oimg.width<split_width || oimg.height<split_height){
-        doresize=false;
-        bljg='尺寸超出';
-    }
-    else if (oimg.width==split_width && oimg.height==split_height){
-        doresize=false;
-        bljg='尺寸一致';
-    }
-    else if (only_2===false && (oimg.width/split_width>10 || oimg.height/split_height>10)){
-        doresize=false;
-        bljg='超出10份';
-    }
-    else {
-        doresize=true;
-    }
 
-    if (!doresize){
-        document.getElementById('div_split').innerHTML=bljg;
+    var error,list_t;
+    [error,list_t]=img_split_list_get_b(oimg,split_width,split_height,only_2);
+
+    if (error!==''){
+        document.getElementById('div_split').innerHTML=error;
         return;
     }
     
     var max_width=(ismobile_b()?'max-width:80%;':'');
-    var odiv=document.getElementById('div_split');
-    var list_t=[];
-    var new_w=0;
-    var new_h=0;
-    if (only_2){
-        for (let blr=0;blr<oimg.height;blr=blr+split_height){
-            for (let blc=0;blc<oimg.width;blc=blc+split_width){    
-                if (blr>0){
-                    new_h=oimg.height-blr;
-                }
-                else {
-                    new_h=Math.min(split_height,oimg.height-blr);
-                }
-                if (blc>0){
-                    new_w=oimg.width-blc;
-                }
-                else {
-                    new_w=Math.min(split_width,oimg.width-blc);
-                }
-                bljg=bljg+'<canvas id="canvas_split_'+blr+'_'+blc+'" width='+new_w+' height='+new_h+' style="margin:1rem;padding:1rem;display:none;"></canvas>';
-                bljg=bljg+'<img id="img_split_'+blr+'_'+blc+'" class="img_split_klbase64" style="margin:0.2rem;'+max_width+'" onclick="split_img_selected_klbase64(this);" />';
-                list_t.push(['split_'+blr+'_'+blc,blc,blr,new_w,new_h]);
-                if (blc>0){break;}
-            }
-            if (blr>0){break;}
-        } 
-    }
-    else {
-        for (let blr=0;blr<oimg.height;blr=blr+split_height){
-            for (let blc=0;blc<oimg.width;blc=blc+split_width){
-                new_w=Math.min(split_width,oimg.width-blc);
-                new_h=Math.min(split_height,oimg.height-blr);
-                bljg=bljg+'<canvas id="canvas_split_'+blr+'_'+blc+'" width='+new_w+' height='+new_h+' style="margin:1rem;padding:1rem;display:none;"></canvas>';
-                bljg=bljg+'<img id="img_split_'+blr+'_'+blc+'" class="img_split_klbase64" style="margin:0.2rem;'+max_width+'" onclick="split_img_selected_klbase64(this);" />';
-                list_t.push(['split_'+blr+'_'+blc,blc,blr,new_w,new_h]);
-            }
-        }
-    }
-    
-    odiv.innerHTML=bljg;
+    var img_list=[];
     for (let item of list_t){
-        var canvas=document.getElementById('canvas_'+item[0]);
-        var ctx=canvas.getContext('2d');    
-        ctx.drawImage(oimg, item[1],item[2], item[3], item[4], 0,0, item[3], item[4]);
-        var splited_img_src=canvas.toDataURL('image/jpeg');
-        document.getElementById('img_'+item[0]).src=splited_img_src;                
+        img_list.push('<img id="img_split_'+item[0]+'_'+item[1]+'" class="img_split_klbase64" style="margin:0.2rem;'+max_width+'" onclick="split_img_selected_klbase64(this);" />');
+    }
+
+    var odiv=document.getElementById('div_split');
+    odiv.innerHTML=img_list.join('');
+
+    var canvas = document.createElement('canvas');    
+    var ctx=canvas.getContext('2d');
+    for (let item of list_t){
+        document.getElementById('img_split_'+item[0]+'_'+item[1]).src=img_split_canvas_b(oimg,canvas,ctx,item);
     }
     split_img_selected_klbase64();
 }
@@ -172,7 +110,6 @@ function rows_klbase64(textareaid,lines_num){
     document.getElementById('textarea_base64_result').value='base64_BEGIN\n'+bljg+'base64_END\n';
 }
 
-/*转换函数*/  
 function trans_klbase64() {  
     var ofile=document.getElementById('input_img').files[0];   
     var error=upload_img_file_check_b(ofile);
@@ -185,15 +122,7 @@ function trans_klbase64() {
     imgFile.readAsDataURL(ofile);  
     imgFile.onload = function (){
         var imgData = this.result; //base64数据    
-        document.getElementById('img_original').setAttribute('src', imgData);  
-        
-        var img_original_obj=new Image();
-        img_original_obj.onload = function(){
-            document.getElementById('span_original_img_size').innerHTML='Width: <span id="span_original_width">'+img_original_obj.width+'</span> Height: <span id="span_original_height">'+img_original_obj.height +'</span> Data Length: '+kbmbgb_b(imgData.length,2);
-        };
-        img_original_obj.src=imgData;
-        
-        document.getElementById('textarea_base64_original').value = imgData;  
+        original_img_size_klbase64(imgData);
     }
 }
 
@@ -202,12 +131,21 @@ function load_img_from_textarea_klbase64(){
     
     if (imgData.trim().substring(0,11)!=='data:image/' || !imgData.includes(';base64,')){return;}
     document.getElementById('img_original').setAttribute('src', imgData);  
+    original_img_size_klbase64(imgData,false);
+}
+
+function original_img_size_klbase64(imgData,update_textarea=true){
+    document.getElementById('img_original').setAttribute('src', imgData);  
     
     var img_original_obj=new Image();
     img_original_obj.onload = function(){
         document.getElementById('span_original_img_size').innerHTML='Width: <span id="span_original_width">'+img_original_obj.width+'</span> Height: <span id="span_original_height">'+img_original_obj.height +'</span> Data Length: '+kbmbgb_b(imgData.length,2);
     };
     img_original_obj.src=imgData;
+    
+    if (update_textarea){
+        document.getElementById('textarea_base64_original').value = imgData;        
+    }
 }
 
 function filter_result_klbase64(oimg,isfullimg=false){   
@@ -244,9 +182,7 @@ function resize_result_klbase64(oimg){
     var blmaxwidth=parseInt(document.getElementById('input_maxw').value);
     var blmaxheight=parseInt(document.getElementById('input_maxh').value)
 
-    var resize_w;
-    var resize_h;
-    var doresize;
+    var resize_w, resize_h, doresize;
     [resize_w,resize_h,doresize]=resize_img_check_b(oimg,blmaxwidth,blmaxheight);
 
     if (doresize===false){return;}
@@ -268,7 +204,7 @@ function init_klbase64(){
     
     document.getElementById('p_original_klbase64').insertAdjacentHTML('beforeend',textarea_buttons_b('textarea_base64_original','清空,复制,save as txt file,发送到临时记事本,发送地址','','','oblong_box'));
     
-    document.getElementById('p_result_klbase64').insertAdjacentHTML('beforeend',textarea_buttons_b('textarea_base64_result','清空,复制,save as txt file,发送到临时记事本,发送地址','','','oblong_box'));    
+    document.getElementById('p_result_klbase64').insertAdjacentHTML('beforeend',textarea_buttons_b('textarea_base64_result','清空,复制,save as txt file,发送到临时记事本,发送地址','','','oblong_box')+'<span class="oblong_box" onclick="replace_klbase64(\'textarea_base64_result\');">replace the original image</span>');    
     mouseover_mouseout_oblong_span_b(document.querySelectorAll('div#div_buttons span.oblong_box'));    
     
     var postpath=postpath_b();
@@ -298,18 +234,17 @@ function modified_form_klbase64(caption){
 	var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php" target=_blank>\n';
     return bljg+'<p style="line-height:1.8rem;"><b>'+caption+' Image Base64 Data:</b>'+textarea_buttons_b('textarea_base64_modified','清空,复制,save as txt file,发送到临时记事本,发送地址','','','oblong_box')+`
 <span class="oblong_box" onclick="rows_klbase64('textarea_base64_modified',50);">Split Data to 50 rows</span>
-<span class="oblong_box" onclick="replace_klbase64();">replace the original image</span>
+<span class="oblong_box" onclick="replace_klbase64('textarea_base64_modified');">replace the original image</span>
 </p>
 <textarea name="textarea_base64_modified" id="textarea_base64_modified"></textarea>`+'</form>';
 }
 
-function replace_klbase64(){
+function replace_klbase64(textarea_id){
     if (!confirm('是否替代原始图片？')){return;}
 
-    var blstr=document.getElementById('textarea_base64_modified').value;
-    document.getElementById('textarea_base64_original').value=blstr;
+    var blstr=document.getElementById(textarea_id).value;
+    original_img_size_klbase64(blstr,true);
     var oimg=document.getElementById('img_original');
-    oimg.src=blstr;
     oimg.scrollIntoView();
 }
 
