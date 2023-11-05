@@ -846,7 +846,7 @@ function year_klcalendar(){
     document.getElementById('divhtml').innerHTML='';
     var ohead=document.getElementById('div_head');
     ohead.innerHTML='';
-    menu_klcalendar(false,query_str='#div_head','Legend');
+    menu_klcalendar(false,'#div_head','Legends');
     
     var legend_set=new Set();
     var legend_dict=months_klcalendar(list_t[0],list_t[1],section_info);    
