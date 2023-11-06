@@ -25,8 +25,7 @@ function recent_search_klindex(csstr='',constant_value=[]){
 function php_remove_klindex(cskey,is_local){
     var divlist=klsofts_list_b(cskey,[],false,false,false);
     if (divlist.length==0){return divlist;}
-    
-    if (is_file_type_b() || location.host=='127.0.0.1'){
+    //if (is_file_type_b() || location.host=='127.0.0.1'){
         //不在其他host时生效，因为无法知道 local 为 file 时的具体地址 - 保留注释    
         if (location_host_b()!==location_host_b(true)){
             if (is_local){
@@ -35,9 +34,9 @@ function php_remove_klindex(cskey,is_local){
             else {
                 divlist.push(['javascript:components_klindex(false,true);','remote','☁','0']);        
             }
-            divlist.push(['javascript:kl_remote_host_address_b();','remote ip address','⛓','1']);                    
+            divlist.push(['javascript:kl_remote_host_address_b();','remote ip address','⛓','1']);
         }
-    }
+    //}
     
     divlist=klsofts_ingore_php_b(divlist,is_local);
     return divlist;
