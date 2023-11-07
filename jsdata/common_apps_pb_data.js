@@ -47,6 +47,7 @@ var common_apps_pb_global=[
 ["{{selenium_news}}/html/mine.htm","Mine","💣","5","game"],
 ["{{selenium_news}}/html/money_plan.htm","Money Plan","💵","5","PIM"],
 ["{{selenium_news}}/html/notepad.htm","notepad","🗐","5","txteditor"],
+["{{selenium_news}}/html/nutrition_calculator.htm","nutrition calculator","🥗","5","PIM"],
 ["{{selenium_news}}/html/photos.htm","photos","photos512.png","1"],
 ["{{selenium_news}}/html/poker24.htm","24","🃏","5","game"],
 ["{{selenium_news}}/html/progress.htm","progress","📈","2",""],
