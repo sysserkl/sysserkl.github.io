@@ -358,6 +358,7 @@ function row_count_or_sum_arr_analyze(group_no,cum_col_no=-1,add_detail=true){
 	}
 
     var list2_t=object2array_b(list_t);
+    list2_t.sort(function (a,b){return zh_sort_b(a.toString(),b.toString());});
 	list2_t.sort(function(a,b){return b[1]-a[1];});
         
     return list2_t;

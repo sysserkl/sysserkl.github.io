@@ -1953,7 +1953,7 @@ function klsofts_popup_b(event=false,odom=false,csstr='',fontsize=1){
 function klsofts_local_or_remote_b(is_local,only_popup=false){
     var local_str=klwebphp_path_b();    //仅考虑当前host为 file 或 127.0.0.1 - 保留注释
     if (local_str===false){ //远程网站 - 保留注释
-        local_str=location_host_b(false);
+        local_str=location_host_b(false)+'/';
     }
     
     var local_len=local_str.length;
