@@ -109,8 +109,9 @@ function remove_nutrition_calc(is_last=false){
         if (otables.length==0){return;}
         var blcount=parseInt(prompt('输入删除列数（1-'+otables.length+'）','1') || '');    
         if (isNaN(blcount)){return;}
-        for (let blxl=otables.length-1;blxl>blcount;blxl--){
-            otables[blxl].outerHTML='';        
+        
+        for (let blxl=otables.length-1; blxl>otables.length-1-blcount; blxl--){
+            otables[blxl].outerHTML='';
         }
     }
     else {
