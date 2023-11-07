@@ -54,10 +54,9 @@ function color_money_b(csarr){
 	return bljg;
 }
 
-function search_link_money_b(csstr,cstype,csname=''){
+function search_link_money_b(csstr,cstype,fn_name='search_wp'){
 	csstr=csstr.trim();
 	var bljg='';
-    var fn_name='search_wp';
 	switch (cstype){
 		case '登记日期':
 			var bltmp=fn_name+'(\"'+csstr+'(:'+cstype+')\");';
@@ -540,4 +539,201 @@ function elm_get_money_b(csstr,csdate,csaddress,to_line_style=false){
         line_style_list.push(blcontent);
     }    
     return [result_t,line_style_list];
+}
+
+function import_elm_money_b(textarea_id='textarea_idb_content'){   //饿了么 - 保留注释
+    var otextarea=document.getElementById(textarea_id);
+    if (!otextarea){return [false,false,''];}
+    var blstr=otextarea.value.trim();
+    if (blstr==''){return [false,false,''];}
+
+    var bldate_default=date2str_b('-');
+    var bldate=prompt('输入日期，默认'+bldate_default+'：');
+    if (bldate==null){return [false,false,''];}
+    bldate=bldate.trim();
+    if (bldate==''){
+        bldate=bldate_default;
+    }
+
+    var provider=(blstr.match(/^.*\(.*店\)$/m) || [''])[0];
+    if (provider!==''){
+        provider='饿了么 '+provider.replace(/[\(\)]/g,'');
+    }
+    
+    var bladdress=local_storage_get_b('wp_import_address');
+    bladdress=prompt('输入地址（'+provider+'）：',bladdress);
+    if (bladdress==null){return [false,false,''];}
+    bladdress=bladdress.trim();
+    localStorage.setItem('wp_import_address',bladdress);
+    
+    var result_t,line_style_list;
+    [result_t,line_style_list]=elm_get_money_b(blstr,bldate,bladdress,true);
+
+    if (result_t.length==0){
+        return [false,false,'未发现饿了么数据'];
+    }
+    
+    if (!confirm('是否导入以下记录：\n'+result_t.join('\n'))){return [false,false,''];}
+
+    otextarea.value=line_style_list.join('\n');
+    return [result_t,line_style_list,''];
+}
+
+function elm_buttons_money_b(dom_id,textarea_id){
+    var blstr=`<span class="aclick" onclick="import_name_list_money_b(true,'`+textarea_id+`');">名称列表</span>
+<span class="aclick" onclick="import_statistics_money_b(true,'`+textarea_id+`');">数量与总价</span>
+<span class="aclick" onclick="import_merge_money_b('`+textarea_id+`');">合并为一条记录</span>
+<select id="select_wp_import"><option>保留</option><option selected>剔除</option></select>
+<input type="text" id="input_filter_wp_import" onkeydown="if (event.key=='Enter'){return false;}" />
+<span class="aclick" onclick="import_filter_records_money_b(false,'`+textarea_id+`');">筛选</span>
+<span class="aclick" onclick="import_jieba_records_money_b('`+textarea_id+`');">分词</span>`;
+
+    var op=document.getElementById(dom_id);
+    op.insertAdjacentHTML('beforeend',blstr);
+    var input_list=[
+    ['input_filter_wp_import',35,15],
+    ];
+    input_size_b(input_list,'id');  
+    return op;
+}
+
+function import_name_list_money_b(do_alert=true,textarea_id='textarea_idb_content'){
+    var otextarea=document.getElementById(textarea_id);
+    var blstr=otextarea.value.trim();
+    var list_t=blstr.match(/^名称:.*$/mg) || [];
+    for (let blxl=0;blxl<list_t.length;blxl++){
+        list_t[blxl]=(blxl+1)+'. '+list_t[blxl].substring(3,);
+    }
+    if (do_alert){
+        alert(list_t.join('\n'));
+    }
+    return list_t;
+}
+
+function import_statistics_money_b(do_alert=true,textarea_id='textarea_idb_content'){
+    var otextarea=document.getElementById(textarea_id);
+    var blstr=otextarea.value.trim();
+    var list_t=blstr.match(/^(数量|总价):.*$/mg) || [];
+    var amount=0;
+    var total_price=0;
+    for (let item of list_t){
+        var blname=item.substring(0,3);
+        var blvalue=parseFloat(item.substring(3,).trim());
+        if (blname=='数量:'){
+            amount=amount+blvalue;
+        }
+        else {
+            total_price=total_price+blvalue;
+        }        
+    }
+    if (do_alert){
+        alert('数量: '+amount.toFixed(3)+' 总价: '+total_price.toFixed(2)+'￥');
+    }
+    return [otextarea,amount,total_price];
+}
+
+function import_data_get_money_b(textarea_id='textarea_idb_content'){
+    var otextarea=document.getElementById(textarea_id);
+    var blcontent=otextarea.value.trim();
+    if (blcontent==''){return [false,false,false];}
+    
+    var list_t=('\n'+blcontent+'\n').split('\n---\n');
+    var result_t=[];
+    for (let item of list_t){
+        if (item==''){continue;}
+        result_t.push(item.trim());
+    }
+    var set_t=new Set(result_t);
+    return [otextarea,result_t,set_t];
+}
+
+function import_merge_money_b(textarea_id='textarea_idb_content'){
+    var otextarea,raw_list,set_t;
+    [otextarea,raw_list,set_t]=import_data_get_money_b(textarea_id);
+    if (otextarea===false){return;}
+    if (raw_list.length==0){return;}
+    
+    var amount,total_price;    
+    [otextarea,amount,total_price]=import_statistics_money_b(false,textarea_id);
+    
+    var blvalue=raw_list[0].split('\n');
+    for (let blxl=0;blxl<blvalue.length;blxl++){
+        var list_t=blvalue[blxl].split(':');
+        if (list_t[0]=='数量'){
+            blvalue[blxl]='数量:'+amount.toFixed(3);
+        }
+        else if (list_t[0]=='总价'){
+            blvalue[blxl]='总价:'+total_price.toFixed(2);
+        }
+    }
+
+    if (!confirm('是否合并 '+raw_list.length+' 条数据为\n---\n'+blvalue.join('\n')+'\n？')){return;}
+    otextarea.value='---\n'+blvalue.join('\n');
+}
+
+
+function import_filter_records_money_b(from_check_box=false,textarea_id='textarea_idb_content'){
+    var otextarea,raw_list,set_t;
+    [otextarea,raw_list,set_t]=import_data_get_money_b(textarea_id);
+    if (otextarea===false){return;}
+    
+    var oinput=document.getElementById('input_filter_wp_import');
+    if (from_check_box){
+        var blstr='';
+        var ocheckboxes=document.querySelectorAll('.checkbox_jieba_wpimport');
+        for (let one_checkbox of ocheckboxes){
+            if (one_checkbox.checked){
+                blstr=blstr+' '+one_checkbox.parentNode.innerText;
+            }
+        }
+        oinput.value=blstr;
+    }
+    else {
+        var blstr=oinput.value.trim();
+    }
+    var is_reg=false;
+    [blstr,is_reg]=str_reg_check_b(blstr,false);
+
+    var is_include=(document.getElementById('select_wp_import').value=='保留');
+    var included_t=[];
+    var excluded_t=[];
+    for (let blxl=0;blxl<raw_list.length;blxl++){
+        var item=raw_list[blxl];
+        var blfound=str_reg_search_b(item,blstr,is_reg);
+        if (blfound==-1){break;}
+        if (is_include && blfound || !is_include && !blfound){
+            included_t.push(item);
+        }
+        else {
+            excluded_t.push(item);        
+        }
+    }
+    if (excluded_t.length==0){
+        alert('没有可过滤的数据');
+        return;
+    }
+
+    var blstr='是否保留 '+included_t.length+' 条记录：\n---\n'+included_t.slice(0,3).join('\n---\n')+'\n...\n';
+    blstr=blstr+'是否剔除 '+excluded_t.length+' 条记录：\n---\n'+excluded_t.slice(0,3).join('\n---\n')+'\n...\n？';
+    
+    if (!confirm(blstr)){return;}
+    otextarea.value='---\n'+included_t.join('\n---\n');
+    
+    document.getElementById('textarea_split_content').value='---\n'+excluded_t.join('\n---\n');
+}
+
+function import_jieba_records_money_b(textarea_id='textarea_idb_content'){
+    var names=import_name_list_money_b(false,textarea_id);
+    var cn_words=split_words_b(names.join(' '))[1];
+    cn_words.sort(zh_sort_b);
+    var list_t=[];
+    for (let item of cn_words){
+        list_t.push('<label><input type="checkbox" class="checkbox_jieba_wpimport" />'+item+'</label>');    //也可以设定 checkbox 的 value - 保留注释
+    }
+    var buttons='<p>';
+    buttons=buttons+close_button_b('div_jieba_wpimport','')+' ';       
+    buttons=buttons+'<span class="aclick" onclick="import_filter_records_money_b(true,\''+textarea_id+'\');">确定</span>';   
+    buttons=buttons+'</p>';
+    var odiv=document.getElementById('div_jieba_wpimport');
+    odiv.innerHTML=list_t.join('\n')+buttons;
 }

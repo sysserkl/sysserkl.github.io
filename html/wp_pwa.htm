@@ -5,7 +5,7 @@
 <title>✍️ 收支离线登记</title>
 <script src="../hard_ln_io/klbase.js"></script>
 <script>
-klbase_addons_import_js_b(['css','date','en_de_str','money']);
+klbase_addons_import_js_b(['css','date','en_de_str','money'],[],['jieba_pb_dict_data.js']);
 </script>
 <script src="wp_pwa_code.js"></script>
 <script>
@@ -52,7 +52,14 @@ div#lurudiv{position: fixed; left: 50%; top: 50%; width:auto; height:auto; displ
 <p class=tb04><span style="cursor:pointer;" ondblclick="document.getElementById('textarea_content').value='';"><b>内容：</b></span><span class="minisize2"><i>(字数限制在20000个字符以内)</i></span></p>
 <div id="div_editor"></div>
 <p class=tb04><!--webbot bot="Validation" B-Value-Required="TRUE" I-Maximum-Length="20000" --><textarea id="textarea_content" style="width:90%;height:6.5rem;padding:0.5rem;font-size:1.2rem;margin-top:0.5rem;"></textarea></p>
-<p class=tb04><span class="aclick" id="span_submit" onclick="add_or_edit_wp_pwa(this.innerText);">添加</span><span class="aclick" id="span_cancel_edit" onclick="cancel_edit_wp_pwa();" style="display:none;">取消修改</span></p>
+<p class=tb04><span class="aclick" id="span_submit" onclick="add_or_edit_wp_pwa(this.innerText);">添加</span> <span class="aclick" id="span_cancel_edit" onclick="cancel_edit_wp_pwa();" style="display:none;">取消修改</span> <span id="span_elm_buttons_wp_pwa" style="display:none;"></span></p>
+
+<div id="div_elm_buttons" style="display:none;">
+<div id="div_jieba_wpimport"></div>
+<textarea id="textarea_split_content" style="width:90%;height:10rem;padding:0.5rem;font-size:1.2rem;margin-top:0.5rem;"></textarea>
+<p><span class="aclick" onclick="textarea_shift_b('textarea_content','textarea_split_content');">对调</span></p>
+</div>
+
 <div id="div_calculator" style="margin:0 0.5rem;"></div>
 <div id="divhtml" style="margin-bottom:3rem;"></div>
 </div>

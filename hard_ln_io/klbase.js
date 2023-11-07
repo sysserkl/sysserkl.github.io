@@ -1404,33 +1404,40 @@ function service_worker_unregister_b(appname){
     }
 }
 
-function service_worker_delete_b(appname=''){
+function service_worker_delete_b(appname='',file_key=''){
     var is_all=(appname=='');
-
     var keyname='pwa_'+appname+'_store'; //keyname 支持如 pwa_xxx_store_v任意字符 - 保留注释
 
-    var app_list=[];
-    caches.keys().then(function(keyList) {
+    caches.keys().then(function(keyList){
         for (let one_key of keyList){
             if (is_all || one_key==keyname || one_key.substring(0,keyname.length+2)==keyname+'_v'){
-                caches.open(one_key).then(function(cache) {
-                    cache.keys().then(function(keys) {
+                caches.open(one_key).then(function(cache){
+                    cache.keys().then(function(keys){
                         var blxl=1;
-                        keys.forEach(function(request, index, array) {
-                            if (blxl % 100 == 0){
-                                console.log(blxl,one_key,'delete url:',array[index]['url']);
+                        keys.forEach(function(request, index, array){
+                            if (file_key==''){
+                                if (blxl % 100 == 0){
+                                    console.log(blxl,one_key,'delete url:',array[index]['url']);
+                                }
+                                blxl=blxl+1;
+                                cache.delete(request);
                             }
-                            blxl=blxl+1;
-                            cache.delete(request);
+                            else if (array[index]['url'].includes(file_key)){
+                                console.log(blxl,one_key,'delete url:',array[index]['url']);
+                                blxl=blxl+1;
+                                cache.delete(request);                                
+                            }
                         });
-                        console.log('----------');
-                        caches.delete(one_key);
-                        console.log('caches.delete',one_key); //此行保留 - 保留注释   
-                        console.log('----------');
                         
-                        appname=one_key.replace(/^pwa_(.*?)_store.*$/g,'$1');
-                        app_list.push(appname);
-                        service_worker_unregister_b(appname);
+                        if (file_key==''){
+                            console.log('----------');
+                            caches.delete(one_key);
+                            console.log('caches.delete',one_key); //此行保留 - 保留注释   
+                            console.log('----------');
+                            
+                            appname=one_key.replace(/^pwa_(.*?)_store.*$/g,'$1');
+                            service_worker_unregister_b(appname);
+                        }
                     });
                 });
             }

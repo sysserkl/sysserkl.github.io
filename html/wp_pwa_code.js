@@ -22,6 +22,9 @@ function init_wp_pwa(){
         document.getElementById(item).setAttribute('onkeyup',"if (event.key=='Enter'){submit_wp_pwa();}");
     }
     document.getElementById('input_day_purchase').value=date2str_b();
+    
+    var op=elm_buttons_money_b('span_elm_buttons_wp_pwa','textarea_content');
+    op.insertAdjacentHTML('afterbegin',textarea_buttons_b('textarea_content','复制'));    
 }
 
 function menu_wp_pwa(){
@@ -29,10 +32,15 @@ function menu_wp_pwa(){
     var klmenu1=[
     '<span class="span_menu" onclick="'+str_t+'export_import_form_wp_pwa();">导入/导出</span>',
     '<span class="span_menu" onclick="'+str_t+'read_lines_2_form_wp_pwa();">读取行列格式到表单</span>',    
-    '<span class="span_menu" onclick="'+str_t+'electricity_wp_pwa();">电费</span>',
-    '<span class="span_menu" onclick="'+str_t+'elm_wp_pwa();">饿了么</span>',    
     '<span class="span_menu" onclick="'+str_t+'batch_append_wp_pwa(false,false,false);">批量添加当前行列格式到缓存</span>',    
+    '<span class="span_menu" onclick="'+str_t+'electricity_wp_pwa();">电费</span>',
     ];
+    
+    var group_list=[
+    ['饿了么','elm_wp_pwa();',true],
+    ['按钮切换','popup_show_hide_b(\'span_elm_buttons_wp_pwa\',\'\'); popup_show_hide_b(\'div_elm_buttons\');',true],
+    ];    
+    klmenu1.push(menu_container_b(str_t,group_list,''));    
 
     var klmenu2=[
     '<span class="span_menu" onclick="'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'wp_pwa\');}">更新版本</span>',        
@@ -42,31 +50,12 @@ function menu_wp_pwa(){
 }
 
 function elm_wp_pwa(){
-    var otextarea=document.getElementById('textarea_content');
-    var blstr=otextarea.value.trim();
-    if (blstr==''){return;}
-
-    var bldate_default=date2str_b('-');
-    var bldate=prompt('输入日期，默认'+bldate_default+'：');
-    if (bldate==null){return;}
-    bldate=bldate.trim();
-    if (bldate==''){
-        bldate=bldate_default;
+    var result_t,line_style_list,error;
+    [result_t,line_style_list,error]=import_elm_money_b('textarea_content');
+    if (error!==''){
+        info_wp_pwa(error);
     }
-    
-    var bladdress=prompt('输入地址：');
-    if (bladdress==null){return;}
-    bladdress=bladdress.trim();
-    
-    var result_t,line_style_list;
-    [result_t,line_style_list]=elm_get_money_b(blstr,bldate,bladdress,true);
-    
-    if (result_t.length==0){
-        info_wp_pwa('未发现饿了么数据');
-        return;
-    }
-    
-    if (!confirm('是否生成以下记录的行列形式：\n'+result_t.join('\n'))){return;}
+    if (result_t===false){return;}
     batch_append_wp_pwa(line_style_list,result_t,true);
 }
 
