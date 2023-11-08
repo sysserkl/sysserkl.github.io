@@ -655,11 +655,12 @@ function menu_insert_kltxt_b(menu_count=3){
     for (let arow of oli_op){
         var ospan=arow.querySelector('span.txtsearch_kltxt_lineno');
         if (!ospan){continue;}
+        
         var lineno=ospan.innerText;
-        lineno=lineno.replace('(','');
-        lineno=parseInt(lineno.replace(')','').trim());
+        lineno=parseInt(lineno.replace('(','').replace(')','').trim());
         if (isNaN(lineno)){continue;}
         lineno=lineno-1;
+        
         if (menu_no.includes(lineno)){
             arow.insertAdjacentHTML('beforebegin','<hr class="hr_inserted_menu" />');
             arow.insertAdjacentHTML('afterend','<hr class="hr_inserted_menu" />');
@@ -953,9 +954,10 @@ function menu_all_only_one_kltxt_b(csmax=3000){
     if (bllen==0){return;}
     
     var blstep=1;
-    if (csmax>0 && bllen>csmax){
-        blstep=Math.ceil(bllen/csmax);
-    }
+    //以下3行保留 - 保留注释
+    //if (csmax>0 && bllen>csmax){
+        //blstep=Math.ceil(bllen/csmax);
+    //}
     
     var notfound_list=[];
     var startno=0;
