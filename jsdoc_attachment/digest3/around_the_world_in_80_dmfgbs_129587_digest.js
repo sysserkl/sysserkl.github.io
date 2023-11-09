@@ -1,27 +1,28 @@
 var digest_global=`
-*eastwardly
-*polygonal
-*Francis
-*Uranus
-*exhaustless
-*Pittsburgh
-*Sumatra
-*Stuart
-*sherry
-*polygamy
 *anonymously
-*jewellery
-*teakwood
+*damsel
 *dogskin
-*godlike
-*telegraphic
-*stringed instrument
+*eastwardly
+*exhaustless
 *fanatical
-*pagoda
-*typhoon
 *ferryboat
-*ogre
-*Londoner
+*Francis
+*godlike
 *half-mast
+*jewellery
+*Londoner
+*ogre
+*pagoda
+*Pittsburgh
+*polygamy
+*polygonal
 *saviour
+*sherry
+*stringed instrument
+*Stuart
+*Sumatra
+*teakwood
+*telegraphic
+*typhoon
+*Uranus
 `.trim().split('\n');

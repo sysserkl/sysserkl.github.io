@@ -4,33 +4,34 @@ var digest_global=`
 *apiarist
 *auburn
 *beekeeping
+*burner
+*cornmeal
+*dishwasher
+*drawbridge
+*expertise
+*eye shadow
+*faucet
 *introspection
+*kayak
 *lunch box
 *lunchtime
+*medalist
 *Mozart
+*Orion
+*passerby
+*psychiatrist
 *reconnect
 *shipyard
+*space heater
+*spring break
 *thermostat
 *toolshed
 *unimportant
 *upperclassman
-*Whitman
-*windowsill
-*drawbridge
-*zebra
-*psychiatrist
-*burner
-*Orion
-*dishwasher
-*kayak
-*expertise
-*spring break
-*space heater
-*eye shadow
-*wildebeest
 *warthog
-*cornmeal
+*Whitman
+*wildebeest
+*windowsill
 *Zambia
-*medalist
-*faucet
+*zebra
 `.trim().split('\n');

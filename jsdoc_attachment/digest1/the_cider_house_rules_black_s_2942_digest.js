@@ -46,4 +46,5 @@ var digest_global=`
 *verifiable
 *watercolor
 *undernourished
+*applesauce
 `.trim().split('\n');

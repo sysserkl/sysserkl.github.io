@@ -86,4 +86,5 @@ var digest_global=`
 *scatterbrain
 *Ursa Major
 *Socratic
+*damsel
 `.trim().split('\n');

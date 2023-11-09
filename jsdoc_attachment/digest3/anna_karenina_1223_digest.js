@@ -13,6 +13,7 @@ var digest_global=`
 *bookkeeping
 *buckwheat
 *Bulgarian
+*Byzantium
 *carelessness
 *causeless
 *ceaseless
@@ -25,6 +26,7 @@ var digest_global=`
 *cockcrow
 *cod
 *comprehensible
+*congratulation
 *cowherd
 *cowhouse
 *Crimea
@@ -74,6 +76,7 @@ var digest_global=`
 *Herzegovina
 *horsecloth
 *hostess
+*house of cards
 *impulse
 *impulsive
 *inconsolable
@@ -116,6 +119,7 @@ var digest_global=`
 *persuasive
 *Petersburg
 *physiology
+*Pilate
 *plural
 *poetical
 *porch
@@ -181,7 +185,4 @@ var digest_global=`
 *wrathfully
 *Zola
 *zoology
-*congratulation
-*Byzantium
-*house of cards
 `.trim().split('\n');

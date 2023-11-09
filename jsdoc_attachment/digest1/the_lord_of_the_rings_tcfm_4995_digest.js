@@ -1,14 +1,16 @@
 var digest_global=`
-*ninnyhammer
 *abbreviate
-*hardback
 *emend
+*flout
+*hardback
+*hedgehog
 *lakeside
 *leap year
+*ninnyhammer
 *solar year
+*untimely
 *westwards
 *yestereve
-*untimely
 *yestermorn
-*flout
+*scornful
 `.trim().split('\n');

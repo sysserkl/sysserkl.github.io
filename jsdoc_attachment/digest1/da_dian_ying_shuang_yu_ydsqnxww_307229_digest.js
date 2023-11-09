@@ -25,4 +25,5 @@ var digest_global=`
 *warmonger
 *discolor
 *canister
+*Artemis
 `.trim().split('\n');

@@ -72,4 +72,5 @@ var digest_global=`
 *Yorkshire
 *colonoscopy
 *stopcock
+*ill-considered
 `.trim().split('\n');

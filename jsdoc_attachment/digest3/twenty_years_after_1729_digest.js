@@ -4,14 +4,17 @@ var digest_global=`
 *Augustine
 *behead
 *Breton
+*disdainfully
 *duchy
 *Gloucester
 *headsman
 *heiress
+*hereabouts
 *inopportune
 *liberator
 *monosyllable
 *musketeer
+*Nazareth
 *Oedipus
 *orangery
 *Pentecost
@@ -26,6 +29,4 @@ var digest_global=`
 *viscount
 *viva
 *Whitsuntide
-*Nazareth
-*hereabouts
 `.trim().split('\n');

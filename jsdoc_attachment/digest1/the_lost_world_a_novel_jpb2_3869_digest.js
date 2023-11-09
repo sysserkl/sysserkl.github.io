@@ -1,25 +1,26 @@
 var digest_global=`
-*petrol
-*megahertz
+*answering machine
 *bloat
-*Presley
-*headset
-*lioness
-*leopard
-*Hoover
-*glycogen
-*sucrose
+*blockhouse
 *Emerson
-*graduate school
-*hemoglobin
-*savannah
-*peptide
-*Istanbul
 *essayist
+*glycogen
+*graduate school
+*headset
+*hemoglobin
+*Hoover
+*Istanbul
+*leopard
+*lioness
+*megahertz
+*peptide
+*petrol
 *platelet
+*Presley
+*prizefighter
+*savannah
+*sucrose
 *taillight
 *tyrannosaur
 *tyrannosaurus
-*blockhouse
-*answering machine
 `.trim().split('\n');
