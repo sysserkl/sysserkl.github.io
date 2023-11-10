@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>JSON Fetch</title>
+<title>🔎 JSON Fetch</title>
 <meta charset="UTF-8" />
 <script>
 //history
@@ -17,7 +17,7 @@
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 </head>
 <body>
-<h2 style="margin-top:0px;font-size:1.2rem;">JSON Fetch <span id="span_count" style="font-weight:normal;font-size:0.9rem;"></span></h2>
+<h2 style="margin-top:0px;font-size:1.2rem;">🔎 JSON Fetch <span id="span_count" style="font-weight:normal;font-size:0.9rem;"></span></h2>
 <p>apikey: <input type="text" id="input_apikey" onkeyup="if (event.key=='Enter'){date_fetch();}" /> <button type="button" onclick="date_fetch();">fetch</button></p>
 <table id="table_for_json_data" class="table_common"><tr><th>No.</th><th>Title</th><th>Author</th></tr></table>
 </div>
@@ -31,6 +31,7 @@ function data_show(csarr){
             let blauthor=item['author'][0];
             result_t.push('<tr><td align="right">'+(blxl+1)+'</td><td>'+bltitle+'</td><td>'+blauthor+'</td></tr>');
         }
+        document.getElementById('span_count').innerHTML='('+csarr['docs'].length+')';
     }
     catch (err){
         alert(err.message);
