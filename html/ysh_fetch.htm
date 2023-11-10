@@ -12,13 +12,13 @@
 .table_common th {border-bottom:0.1rem solid black;padding:0.1rem 0.5rem;}
 .table_common tr:hover {background-color:#c0c0c0;}
 .table_common td {border-bottom:0.05rem dotted black;padding:0.1rem 0.5rem;}
-#input_apikey {width: 20rem; padding: 2px 5px; vertical-align: text-bottom; border: 0px; border-bottom:0.1rem solid black;}
+.input_text {padding: 2px 5px; vertical-align: text-bottom; border: 0px; border-bottom:0.1rem solid black;}
 </style>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 </head>
 <body>
 <h2 style="margin-top:0px;font-size:1.2rem;">🔎 JSON Fetch <span id="span_count" style="font-weight:normal;font-size:0.9rem;"></span></h2>
-<p>apikey: <input type="text" id="input_apikey" onkeyup="if (event.key=='Enter'){date_fetch();}" /> <button type="button" onclick="date_fetch();">fetch</button></p>
+<p>查询内容：<input type="text" id="input_search" class="input_text" onkeyup="if (event.key=='Enter'){date_fetch();}" style="width:20rem;" /> 返回条数： <input type="number" id="input_count" class="input_text" onkeyup="if (event.key=='Enter'){date_fetch();}" min=1 max=100 value=10 style="width:3rem;" /> apikey: <input type="text" id="input_apikey" class="input_text" onkeyup="if (event.key=='Enter'){date_fetch();}" style="width:15rem;" /> <button type="button" onclick="date_fetch();">fetch</button></p>
 <table id="table_for_json_data" class="table_common"><tr><th>No.</th><th>Title</th><th>Author</th></tr></table>
 </div>
 <script>
@@ -27,8 +27,8 @@ function data_show(csarr){
     try {
         for (let blxl=0;blxl<csarr['docs'].length;blxl++){
             let item=csarr['docs'][blxl]['pnx']['sort'];
-            let bltitle=item['title'][0];
-            let blauthor=item['author'][0];
+            let bltitle=(item['title']==undefined?'':item['title'][0]);
+            let blauthor=(item['author']==undefined?'':item['author'][0]);
             result_t.push('<tr><td align="right">'+(blxl+1)+'</td><td>'+bltitle+'</td><td>'+blauthor+'</td></tr>');
         }
         document.getElementById('span_count').innerHTML='('+csarr['docs'].length+')';
@@ -40,13 +40,27 @@ function data_show(csarr){
 }
 
 function date_fetch(){
+    var search_key=document.getElementById('input_search').value.trim();
+    if (search_key==''){
+        alert('请输入查询内容');
+        return;
+    }
+    
+    var blcount=parseInt(document.getElementById('input_count').value.trim());
+    if (isNaN(blcount)){
+        alert('格式错误');
+        return
+    }
+    
     var apikey=document.getElementById('input_apikey').value.trim();
     if (apikey==''){
         alert('请输入 apikey');
         return;
     }
-    
-    fetch("https://api-ap.hosted.exlibrisgroup.com/primo/v1/search?vid=65SIT_INST:SIT&tab=Everything&scope=MyInst_and_CI&lang=eng&offset=0&limit=10&sort=rank&pcAvailability=true&getMore=0&conVoc=false&inst=65SIT_INST:SIT&skipDelivery=true&disableSplitFacets=false&apikey="+apikey+"&q=any,contains,keyword")
+
+    var blhref="https://api-ap.hosted.exlibrisgroup.com/primo/v1/search?vid=65SIT_INST:SIT&tab=Everything&scope=MyInst_and_CI&lang=eng&offset=0&limit="+blcount+"&sort=rank&pcAvailability=true&getMore=0&conVoc=false&inst=65SIT_INST:SIT&skipDelivery=true&disableSplitFacets=false&apikey="+apikey+"&q=any,contains,"+encodeURIComponent(search_key);
+    console.log(blhref);
+    fetch(blhref)
     .then((response) => response.json())
     .then((data) => data_show(data))
     .catch((error) => {
