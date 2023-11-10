@@ -24,7 +24,7 @@
 <table id="table_for_json_data" class="table_common"><tr><th>No.</th><th>Title</th><th>Author</th></tr></table>
 <script>
 function data_show(csarr){
-    var result_t=[];
+    let result_t=[];
     try {
         for (let blxl=0;blxl<csarr['docs'].length;blxl++){
             let item=csarr['docs'][blxl]['pnx']['sort'];
@@ -41,25 +41,25 @@ function data_show(csarr){
 }
 
 function date_fetch(){
-    var search_key=document.getElementById('input_search').value.trim();
+    let search_key=document.getElementById('input_search').value.trim();
     if (search_key==''){
         alert('请输入查询内容');
         return;
     }
     
-    var blcount=parseInt(document.getElementById('input_count').value.trim());
+    let blcount=parseInt(document.getElementById('input_count').value.trim());
     if (isNaN(blcount)){
         alert('格式错误');
         return
     }
     
-    var apikey=document.getElementById('input_apikey').value.trim();
+    let apikey=document.getElementById('input_apikey').value.trim();
     if (apikey==''){
         alert('请输入 apikey');
         return;
     }
 
-    var blhref="https://api-ap.hosted.exlibrisgroup.com/primo/v1/search?vid=65SIT_INST:SIT&tab=Everything&scope=MyInst_and_CI&lang=eng&offset=0&limit="+blcount+"&sort=rank&pcAvailability=true&getMore=0&conVoc=false&inst=65SIT_INST:SIT&skipDelivery=true&disableSplitFacets=false&apikey="+apikey+"&q=any,contains,"+encodeURIComponent(search_key);
+    let blhref="https://api-ap.hosted.exlibrisgroup.com/primo/v1/search?vid=65SIT_INST:SIT&tab=Everything&scope=MyInst_and_CI&lang=eng&offset=0&limit="+blcount+"&sort=rank&pcAvailability=true&getMore=0&conVoc=false&inst=65SIT_INST:SIT&skipDelivery=true&disableSplitFacets=false&apikey="+apikey+"&q=any,contains,"+encodeURIComponent(search_key);
     console.log(blhref);
     fetch(blhref)
     .then((response) => response.json())
