@@ -18,8 +18,8 @@
 </head>
 <body>
 <h2 style="margin-top:0px;font-size:1.2rem;">🔎 JSON Fetch <span id="span_count" style="font-weight:normal;font-size:0.9rem;"></span></h2>
-<p>查询内容：<input type="text" id="input_search" class="input_text" onkeyup="if (event.key=='Enter'){date_fetch();}" style="width:20rem;" /></p>
-<p>返回条数： <input type="number" id="input_count" class="input_text" onkeyup="if (event.key=='Enter'){date_fetch();}" min=1 max=100 value=10 style="width:3rem;" /> apikey: <input type="text" id="input_apikey" class="input_text" onkeyup="if (event.key=='Enter'){date_fetch();}" style="width:15rem;" /> <button type="button" onclick="date_fetch();">fetch</button></p>
+<p>查询内容：<input type="text" id="input_search" class="input_text" onkeyup="if (event.key=='Enter'){date_fetch();}" style="width:16rem;" /></p>
+<p>返回条数： <input type="number" id="input_count" class="input_text" onkeyup="if (event.key=='Enter'){date_fetch();}" min=1 max=100 value=10 style="width:3rem;" /> apikey: <input type="text" id="input_apikey" class="input_text" onkeyup="if (event.key=='Enter'){date_fetch();}" style="width:10rem;" /> <button type="button" onclick="date_fetch();">fetch</button></p>
 <table id="table_for_json_data" class="table_common"><tr><th>No.</th><th>Title</th><th>Author</th></tr></table>
 </div>
 <script>
