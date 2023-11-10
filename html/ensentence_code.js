@@ -142,38 +142,99 @@ function phrase_not_in_ensentence(){
     console.log('phrase_not_in_ensentence() 费时：'+(performance.now() - t0) + ' milliseconds');
 }
 
-function host_count_ensentence(){
-    var result_t=new Set();
-    for (let item of en_sentence_global){
-        //item[1]形如：/[https://www.mnn.com/lifestyle/arts-culture/blogs/books-independent-bookstore-arent-dead 20190531 | Starre Vartan: Why paper books and the independent bookstore aren't dead | MNN]/ - 保留注释
-    
-        var list_t=item[1].match(/\/\[https?:\/\/[^\s]+/g);  
-        if (list_t==null){continue;}
-        var blstr=list_t[0];    //形如：/[https://www.rogerebert.com/reviews/a-single-man-2009 - 保留注释
-        blstr=blstr.substring(2,);
-        result_t.add(blstr);
+function host_count_ensentence(sort_no=-1){
+    function sub_host_count_ensentence_dict_generate(csarr){
+        var host_t={};
+        var article_from_t=new Set();
+        
+        for (let item of csarr){        
+            //item[1]形如：/[https://www.mnn.com/lifestyle/arts-culture/blogs/books-independent-bookstore-arent-dead 20190531 | Starre Vartan: Why paper books and the independent bookstore aren't dead | MNN]/ - 保留注释
+        
+            var list_t=item[1].match(/^\/\[https?:\/\/([^\/]+)/) || [];  
+            if (list_t.length==2){
+                var blstr=list_t[1];
+            }
+            else if (item[2].slice(-4,)=='_TLS'){
+                var blstr=item[2];   //TLS - 保留注释
+            }
+            else {  //无链接的KLWiki 文章 - 保留注释
+                var blstr='KLWiki_TLS';
+            }
+
+            if (host_t['h_'+blstr]==undefined){
+                host_t['h_'+blstr]=0;
+            }
+            host_t['h_'+blstr]=host_t['h_'+blstr]+1;
+            //---
+            var blhref=item[1].match(/^\/\[(https?:\/\/[^\s]+)/) || [];
+            if (blhref.length==2){
+                var blstr=blhref[1];
+            }
+            else {                
+                var blstr=item[2];   //TLS - 保留注释
+            }
+            article_from_t.add(blstr);  
+        }    
+        return [host_t,article_from_t];
     }
+    //------------
+    var sentence_host_t={};
+    var article_from_t=new Set();
+    [sentence_host_t,article_from_t]=sub_host_count_ensentence_dict_generate(en_sentence_global);
     
-    result_t=Array.from(result_t);
-    host_t={};
-    var bltotal=0;
-    for (let item of result_t){
-        item=item.match(/https?:\/\/[^\/]+/g)[0];  //形如 https://www.zdnet.com - 保留注释
-        item=item.split('//')[1];
-        if (host_t['h_'+item]==undefined){
-            host_t['h_'+item]=0;
+    var article_t=[];
+    for (let item of article_from_t){
+        article_t.push(['','/['+item,item]);
+    }
+    var article_host_t=sub_host_count_ensentence_dict_generate(article_t)[0];   //key元素形如 "h_www.vulture.com": 64, - 保留注释
+    var article_count=0;
+    for (let key in article_host_t){
+        article_count=article_count+article_host_t[key];
+    }
+        
+    sentence_host_t=object2array_b(sentence_host_t,true,2);
+    sentence_host_t.sort(function (a,b){return a[1]<b[1];});
+    
+    var sentence_len=en_sentence_global.length;
+    var result_t=[];
+    for (let blxl=0;blxl<sentence_host_t.length;blxl++){
+        var one_tr=[];
+        var article_host=article_host_t['h_'+sentence_host_t[blxl][0]];
+        
+        var blhost=sentence_host_t[blxl][0];
+        if (blhost.slice(-4,)!=='_TLS'){
+            blhost='<span class="span_link" onclick="sentence_source_list_ensentence(\''+specialstr_j(blhost)+'\');">'+blhost+'</span>';
         }
-        host_t['h_'+item]=host_t['h_'+item]+1;
-        bltotal=bltotal+1;
+        else {
+            blhost=blhost.slice(0,-4);
+        }
+        one_tr.push(blhost);
+        one_tr.push(sentence_host_t[blxl][1]);
+        one_tr.push(sentence_host_t[blxl][1]*100/sentence_len);
+
+        if (article_host==undefined){
+            one_tr.push(null);
+            one_tr.push(null);
+        }
+        else {
+            one_tr.push(article_host);
+            one_tr.push(article_host*100/article_count);        
+        }
+        result_t.push(one_tr);
     }
-    host_t=object2array_b(host_t,true);
-    host_t.sort(function (a,b){return a[1]<b[1];});
-    for (let blxl=0;blxl<host_t.length;blxl++){
-        var blhost=host_t[blxl][0].substring(2,);
-        blhost='<span class="span_link" onclick="sentence_source_list_ensentence(\''+specialstr_j(blhost)+'\');">'+blhost+'</span>';
-        host_t[blxl]=blhost+': '+host_t[blxl][1]+', '+(host_t[blxl][1]*100/bltotal).toFixed(2)+'%';
+    
+    if (sort_no>=0){
+        result_t.sort();
+        result_t.sort(function (a,b){return a[sort_no]<b[sort_no];});
     }
-    document.getElementById('divhtml').innerHTML='<p>Total: '+bltotal+'</p>'+array_2_li_b(host_t);
+    
+    for (let blxl=0;blxl<result_t.length;blxl++){
+        var item=result_t[blxl];
+        result_t[blxl]='<tr><td align=right>'+(blxl+1)+'</td><td>'+item[0]+'</td><td align=right>'+item[1]+'</td><td align=right>'+item[2].toFixed(2)+'%</td><td align=right>'+item[3]+'</td><td align=right>'+item[4].toFixed(2)+'%</td></tr>';
+    }
+    
+    var th='<tr><th nowrap>No.</th><th nowrap>出处</th><th nowrap style="cursor:pointer;" onclick="host_count_ensentence(1);">句数</th><th nowrap>占比</th><th nowrap style="cursor:pointer;" onclick="host_count_ensentence(3);">文章数</th><th nowrap>占比</th></tr>';
+    document.getElementById('divhtml').innerHTML='<p>Total: '+sentence_len+'</p><table class="table_common">'+th+result_t.join('\n')+'</table>';
 }
 
 function enwords_count_sentence_data_save_ensentence(){
