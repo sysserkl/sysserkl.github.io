@@ -43,8 +43,9 @@ function date_fetch(){
     var apikey=document.getElementById('input_apikey').value.trim();
     if (apikey==''){
         alert('请输入 apikey');
+        return;
     }
-        
+    
     fetch("https://api-ap.hosted.exlibrisgroup.com/primo/v1/search?vid=65SIT_INST:SIT&tab=Everything&scope=MyInst_and_CI&lang=eng&offset=0&limit=10&sort=rank&pcAvailability=true&getMore=0&conVoc=false&inst=65SIT_INST:SIT&skipDelivery=true&disableSplitFacets=false&apikey="+apikey+"&q=any,contains,keyword")
     .then((response) => response.json())
     .then((data) => data_show(data))
