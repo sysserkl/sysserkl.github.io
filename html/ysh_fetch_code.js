@@ -60,7 +60,7 @@ function data_export_form_ysh_jf(){
     bljg=bljg+'<span class="aclick" onclick="data_import_ysh_jf();">导入当前数据到 indexeddb 数据库</span>';
     bljg=bljg+'<span class="aclick" onclick="data_export_csv_ysh_jf();">导出当前数据为 csv</span>',    
     
-    bljg=bljg+textarea_buttons_b('textarea_ysh_jf','全选,复制,save as txt file'+(islocal?',发送到临时记事本,发送地址':''));
+    bljg=bljg+textarea_buttons_b('textarea_ysh_jf','全选,清空,复制,save as txt file'+(islocal?',发送到临时记事本,发送地址':''));
     bljg=bljg+'</p>';        
     
     if (islocal){
