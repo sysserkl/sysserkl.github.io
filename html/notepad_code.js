@@ -108,6 +108,7 @@ function delete_notepad(){
     
     idb_notepad('edit',false,true);
 }
+
 function idb_edit_notepad(db,is_delete=false){
     function sub_idb_edit_notepad_append(otable){
         var objectStoreRequest = otable.add({'id':current_id_notepad_global,'content':blcontent,'date':new Date().toLocaleString()});
@@ -252,7 +253,10 @@ function idb_clear_notepad(db){
     }
     
     return new Promise((resolve, reject) => {
-        idb_write_b(db,'notepad_dbf',sub_idb_clear_notepad_count1,sub_idb_clear_notepad_count2,sub_idb_clear_notepad_onsuccess);
+        var rndstr=randstr_b(4,true,false);
+        if ((prompt('输入 '+rndstr+' 确认清除全部数据') || '').trim()==rndstr){       
+            idb_write_b(db,'notepad_dbf',sub_idb_clear_notepad_count1,sub_idb_clear_notepad_count2,sub_idb_clear_notepad_onsuccess);
+        }
         resolve(true);
     });
 }

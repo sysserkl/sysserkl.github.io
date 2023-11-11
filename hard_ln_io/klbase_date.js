@@ -85,13 +85,13 @@ function date2str_b(sep='-',theday=false){
     }
 }
 
-function now_time_str_b(sep=':',withdate=false,theday=false,date_sep='-'){
+function now_time_str_b(sep=':',withdate=false,theday=false,date_sep='-',join_str=' '){
     if (theday===false){
         var theday=new Date();
     }
     var bljg='';
     if (withdate){
-        bljg=bljg+date2str_b(date_sep,theday)+' ';
+        bljg=bljg+date2str_b(date_sep,theday)+join_str;
     }
     bljg=bljg+('0'+theday.getHours()).slice(-2)+sep+('0'+theday.getMinutes()).slice(-2)+sep+('0'+theday.getSeconds()).slice(-2);
     return bljg;

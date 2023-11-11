@@ -2235,7 +2235,7 @@ function dom_value_2_txt_file_b(csid,savename='',csext='txt'){
     string_2_txt_file_b(odom.value,savename,csext);
 }
 
-function table_2_csv_b(table_querystring,colno_list=[]){
+function table_2_csv_b(table_querystring,colno_list=[],suffix=''){
     var otable=document.querySelector(table_querystring);
     if (!otable){return;}
     var otrs=otable.querySelectorAll('tr');
@@ -2256,7 +2256,7 @@ function table_2_csv_b(table_querystring,colno_list=[]){
         }
         result_t.push(arow.join(','));
     }
-    string_2_txt_file_b(result_t.join('\n'),'table2csv_export'+'.csv','csv');
+    string_2_txt_file_b(result_t.join('\n'),'table2csv_export'+suffix+'.csv','csv');
 }
 
 function web_href_key_b(cskey,cstype,encode=false){
