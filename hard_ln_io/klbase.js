@@ -1960,8 +1960,10 @@ function klsofts_popup_b(event=false,odom=false,csstr='',fontsize=1){
 
 function klsofts_local_or_remote_b(is_local,only_popup=false){
     var local_str=klwebphp_path_b();    //仅考虑当前host为 file 或 127.0.0.1 - 保留注释
+    var is_remote_site=false;
     if (local_str===false){ //远程网站 - 保留注释
         local_str=location_host_b(false)+'/';
+        is_remote_site=true;
     }
     
     var local_len=local_str.length;
@@ -1971,7 +1973,12 @@ function klsofts_local_or_remote_b(is_local,only_popup=false){
         remote_str=local_str;
     }
     else {
-        remote_str=remote_str+'/klwebphp/';
+        if (is_remote_site){
+            remote_str=klbase_sele_path_b(true)[1]+'/html/';
+        }
+        else {
+            remote_str=remote_str+'/klwebphp/';
+        }
     }
     
     var remote_len=remote_str.length;
