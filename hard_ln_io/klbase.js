@@ -1974,7 +1974,7 @@ function klsofts_local_or_remote_b(is_local,only_popup=false){
     }
     else {
         if (is_remote_site){
-            remote_str=klbase_sele_path_b(true)[1]+'/html/';
+            remote_str=klbase_sele_path_b(true)[1]+'/';
         }
         else {
             remote_str=remote_str+'/klwebphp/';
