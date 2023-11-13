@@ -175,23 +175,17 @@ function recent_search_zjedu(csstr=''){
     recent_search_b('recent_search_zjedu',csstr,'run_txtsearch_zjedu','div_recent_search',['浙江大学','(一流大学建设高校)','(一流学科建设高校)','北京大学|清华大学(:r)']);
 }
 
-function txtsearch_zjedu(csword,csreg){
-	var csnum=arguments.length;
-	if (csnum==0){
-        var csword= document.getElementById('input_search').value.trim();
+function txtsearch_zjedu(csword=false){
+	if (csword===false){
+        csword= document.getElementById('input_search').value.trim();
     }
-	document.getElementById('input_search').value=csword;
     
-	if (csnum<=1){
-        var csreg=document.getElementById('input_reg').checked;
-    }
-    if (csword.slice(-4,)=='(:r)'){
-        csreg=true;
-        csword=csword.substring(0,csword.length-4);
-    }
-	document.getElementById('input_reg').checked=csreg;
+    var csreg=klmenu_check_b('span_reg_zjedu',false);
+    
+    [csword,csreg]=str_reg_check_b(csword,csreg);
 
-    recent_search_zjedu(csword+(csreg?'(:r)':''));
+    recent_search_zjedu(csword);
+    document.getElementById('input_search').value=csword;
     
 	var blcount=0;
 	var blplan=0;
@@ -1259,11 +1253,14 @@ function menu_zjedu(){
 
     var klmenu_config=root_font_size_menu_b(str_t);
     klmenu_config=klmenu_config.concat([
+    '<span id="span_reg_zjedu" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ reg</span>',       
+    '<span class="span_menu" onclick="'+str_t+'search_demo_zjedu();">语法示例</span>',
     '<span class="span_menu" onclick="'+str_t+'jump_to_tr_zjedu(true);">跳转到表格末尾</span>',    
     '<span class="span_menu" onclick="'+str_t+'jump_to_tr_zjedu();">跳转到指定行号</span>',        
     ]);
 
     document.getElementById('span_h2').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_year,'💯','6rem','1rem','1rem','60rem')+klmenu_b(klmenu1,'','24rem','1rem','1rem','60rem')+klmenu_b(klmenu_statistics,'🧮','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','15rem','1rem','1rem','60rem'),'','0rem')+' ');
+    klmenu_check_b('span_reg_zjedu',true);        
 }
 
 function init_zjedu(){
@@ -1288,7 +1285,7 @@ function search_type_zjedu(cstype){
     var oinput=document.getElementById('input_search');
     switch (cstype){
         case '50000':
-            oinput.value=',([1-9]|\\d{2,4}|[1-4]\\d{4}),$';
+            oinput.value=',([1-9]|\\d{2,4}|[1-4]\\d{4}|50000),$';
             break;
         case '700':
             oinput.value=',(7\\d{2}|699),.+';

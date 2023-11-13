@@ -17,9 +17,9 @@ function args_enwords_book(){
 
             if (bltmpstr.substring(0,5)=='book='){
                 let list_t=bltmpstr.substring(5,).split('_');    //如book=2_5 - 保留注释
-                csbookno_global=Math.min(csbooklist_sub_global_b.length-1,parseInt(list_t[0])-1);
+                csbookno_global=Math.min(csbooklist_sub_global.length-1,parseInt(list_t[0])-1);
                 if (list_t.length>1){
-                    csbookno2_global_b=Math.min(csbooklist_sub_global_b.length-1,parseInt(list_t[1])-1);
+                    csbookno2_global=Math.min(csbooklist_sub_global.length-1,parseInt(list_t[1])-1);
                 }
                 title_set_enwords_book();
                 title_setted=true;
@@ -266,7 +266,7 @@ function words_check_by_lines_enwords_book(){
 function txtlistsearch_open_enwords_book(){
     var blpath=klbase_sele_path_b()[1]+('/html/txtlistsearch.htm');
     if (csbookno_global>=0){
-        blpath=blpath+'?'+csbooklist_sub_global_b[csbookno_global][0]+'&line=1';
+        blpath=blpath+'?'+csbooklist_sub_global[csbookno_global][0]+'&line=1';
     }
     window.open(blpath);
 }
@@ -449,15 +449,15 @@ function filter_new_enwords_book(){
 
 function title_set_enwords_book(){
     var bltitle='生词统计';
-    if (csbookno_global>=0 && csbookno_global<csbooklist_sub_global_b.length){
-        bltitle=bltitle+' - '+csbooklist_sub_global_b[csbookno_global][1];
+    if (csbookno_global>=0 && csbookno_global<csbooklist_sub_global.length){
+        bltitle=bltitle+' - '+csbooklist_sub_global[csbookno_global][1];
     }
-    if (csbookno2_global_b>=0 && csbookno2_global_b<csbooklist_sub_global_b.length){
-        bltitle=bltitle+' - '+csbooklist_sub_global_b[csbookno2_global_b][1];
+    if (csbookno2_global>=0 && csbookno2_global<csbooklist_sub_global.length){
+        bltitle=bltitle+' - '+csbooklist_sub_global[csbookno2_global][1];
     }    
     
     if (en_words_book_newwords_continue_global){
-        bltitle=(csbookno_global+1)+'/'+csbooklist_sub_global_b.length+' - '+bltitle;    
+        bltitle=(csbookno_global+1)+'/'+csbooklist_sub_global.length+' - '+bltitle;    
     }
 
     document.title=bltitle;

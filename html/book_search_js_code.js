@@ -65,7 +65,7 @@ function search_ebsjs(csstr='',csmax_total=50,csmax_current=5){
             enwords_array_ebs_b();
             return;
         }
-        var item=(is_eng_global?csbooklist_sub_global_b[blxl]:csbooklist_source_global[blxl]);
+        var item=(is_eng?csbooklist_sub_global[blxl]:csbooklist_source_global[blxl]);
         
         var filelist=[];
         var fname=import_one_book_b(item[0]+'.js',item[3],false);
@@ -128,11 +128,11 @@ function search_ebsjs(csstr='',csmax_total=50,csmax_current=5){
 
     digest_file_found_global=[];
 
-    var is_eng_global=document.getElementById('input_only_eng').checked;
+    var is_eng=document.getElementById('input_only_eng').checked;
     var ospan=document.getElementById('readingdata');
-    if (is_eng_global){
-        csbooklist_sub_global_b.sort(randomsort_b);
-        var bllen=csbooklist_sub_global_b.length;
+    if (is_eng){
+        csbooklist_sub_global.sort(randomsort_b);
+        var bllen=csbooklist_sub_global.length;
     }
     else {
         csbooklist_source_global.sort(randomsort_b);    
@@ -157,8 +157,8 @@ function show_result_ebsjs(csstr=''){
         csstr=csstr.slice(0,-6);
     }
     if (csstr==''){return;}
-    var is_eng_global=document.getElementById('input_only_eng').checked;
-    var book_arr=(is_eng_global?csbooklist_sub_global_b:csbooklist_source_global);
+    var is_eng=document.getElementById('input_only_eng').checked;
+    var book_arr=(is_eng?csbooklist_sub_global:csbooklist_source_global);
 
     var selepath=klbase_sele_path_b()[1];
     show_result_ebs_b(content_file_found_global,book_arr,csstr,selepath);

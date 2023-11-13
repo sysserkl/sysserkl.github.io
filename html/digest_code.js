@@ -13,7 +13,7 @@ function date_size_digest(without_digest=false,sortno=0){
         var csarray=without_digest_book_list_global;
     }
     else {
-        var csarray=csbooklist_sub_global_b;
+        var csarray=csbooklist_sub_global;
     }
 
     var result_t=[];

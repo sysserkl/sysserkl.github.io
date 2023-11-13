@@ -1,5 +1,5 @@
 function import_relation_vcard(){
-	document.getElementById('textarea_m').value=relation_xm_global_b;
+	document.getElementById('textarea_m').value=relation_xm_global;
 	document.getElementById('input_m_length').value=1;
 }
 
@@ -8,23 +8,23 @@ function string8_vcard(){
 }
 
 function tele_vcard(){
-	area_code_xm_global_b.sort(randomsort_b);
-	cellphone_xm_global_b.sort(randomsort_b);
-	var m_len = area_code_xm_global_b.length;
+	area_code_xm_global.sort(randomsort_b);
+	cellphone_xm_global.sort(randomsort_b);
+	var m_len = area_code_xm_global.length;
 	var rnd_tmp=Math.min(m_len-1,Math.floor(Math.random()*m_len));
 	
 	var bljg='';
 	if (Math.random()>0.8){
-		bljg=bljg+'<br />TEL;TYPE=HOME:'+area_code_xm_global_b[rnd_tmp]+' '+string8_vcard();
+		bljg=bljg+'<br />TEL;TYPE=HOME:'+area_code_xm_global[rnd_tmp]+' '+string8_vcard();
 	}
 	if (Math.random()>0.6){
-		bljg=bljg+'<br />TEL;TYPE=WORK:'+area_code_xm_global_b[rnd_tmp]+' '+string8_vcard();
+		bljg=bljg+'<br />TEL;TYPE=WORK:'+area_code_xm_global[rnd_tmp]+' '+string8_vcard();
 	}
 	if (Math.random()>0.1){
 		
-		m_len = cellphone_xm_global_b.length;
+		m_len = cellphone_xm_global.length;
 		rnd_tmp=Math.min(m_len-1,Math.floor(Math.random()*m_len));
-		bljg=bljg+'<br />TEL;TYPE=CELL:'+cellphone_xm_global_b[rnd_tmp]+' '+string8_vcard();
+		bljg=bljg+'<br />TEL;TYPE=CELL:'+cellphone_xm_global[rnd_tmp]+' '+string8_vcard();
 	}
 	return bljg;
 }
@@ -76,8 +76,8 @@ function surname_vcard(){
 }
 
 function just_name_vcard(){
-	surname_xm_global_b.sort(randomsort_b);
-	var x_len=surname_xm_global_b.length;
+	surname_xm_global.sort(randomsort_b);
+	var x_len=surname_xm_global.length;
 
 	var bl_m_str=document.getElementById('textarea_m').value;
 	var bl_m_arr=textarea_str_format_vcard(bl_m_str).split(',');
@@ -105,8 +105,8 @@ function just_name_vcard(){
 			rnd_m_tmp=Math.min(m_len-1,Math.floor(Math.random()*m_len));
 			m_tmp=m_tmp+bl_m_arr[rnd_m_tmp];
 		}
-		bljg=bljg+'<br />N:'+surname_xm_global_b[rnd_x_tmp]+';'+m_tmp+';;;';
-		bljg=bljg+'<br />FN:'+surname_xm_global_b[rnd_x_tmp]+m_tmp;
+		bljg=bljg+'<br />N:'+surname_xm_global[rnd_x_tmp]+';'+m_tmp+';;;';
+		bljg=bljg+'<br />FN:'+surname_xm_global[rnd_x_tmp]+m_tmp;
 		bljg=bljg+tele_vcard();
 		bljg=bljg+'<br />END:VCARD';
 	}
@@ -136,8 +136,8 @@ function fullname_vcard(){
 }
 
 function rnd_vcard(){
-	surname_xm_global_b.sort(randomsort_b);
-	var x_len=surname_xm_global_b.length;
+	surname_xm_global.sort(randomsort_b);
+	var x_len=surname_xm_global.length;
 	
 	var m_len = hz_3500_global.length;
 	var cscount= Math.min(3000,Math.max(parseInt(document.getElementById('input_xm_amount').value.trim()),1));
@@ -161,8 +161,8 @@ function rnd_vcard(){
 			rnd_m_tmp=Math.min(m_len-2,Math.floor(Math.random()*m_len));
 			m_tmp=m_tmp+hz_3500_global.slice(rnd_m_tmp,rnd_m_tmp+1);
 		}
-		bljg=bljg+'<br />N:'+surname_xm_global_b[rnd_x_tmp]+';'+m_tmp+';;;';
-		bljg=bljg+'<br />FN:'+surname_xm_global_b[rnd_x_tmp]+m_tmp;
+		bljg=bljg+'<br />N:'+surname_xm_global[rnd_x_tmp]+';'+m_tmp+';;;';
+		bljg=bljg+'<br />FN:'+surname_xm_global[rnd_x_tmp]+m_tmp;
 		bljg=bljg+tele_vcard();
 		bljg=bljg+'<br />END:VCARD';
 	}

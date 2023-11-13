@@ -297,11 +297,11 @@ function new_words_continue_enbook_b(cslength,percent10length=0){
         if (newwords_statistics.split('\n')[0].trim()!==today){
             newwords_statistics=today;
         }
-        newwords_statistics=newwords_statistics+'\n'+csbooklist_sub_global_b[csbookno_global][0]+' /// '+csbooklist_sub_global_b[csbookno_global][1]+' /// '+cslength+' /// '+percent10length+'\n';
+        newwords_statistics=newwords_statistics+'\n'+csbooklist_sub_global[csbookno_global][0]+' /// '+csbooklist_sub_global[csbookno_global][1]+' /// '+cslength+' /// '+percent10length+'\n';
         
         all_new_words_count_set_enbook_b(true,newwords_statistics);
         
-        if (csbooklist_sub_global_b.length-1>csbookno_global){
+        if (csbooklist_sub_global.length-1>csbookno_global){
             location.href='?book='+(csbookno_global+1+1)+'&continue';
         }
         else {

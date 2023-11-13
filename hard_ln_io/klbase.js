@@ -503,7 +503,7 @@ function str_reg_search_b(csinput,cskeys,csreg){
                     blfound=false;
                     break;
                 }
-                else{
+                else {
                     blfound=true;
                 } 
 			}
@@ -524,15 +524,15 @@ function str_reg_search_b(csinput,cskeys,csreg){
                 }
 			}
 		}
-		else{
-			try{
+		else {
+			try {
 				if (word_t.substring(0,1)=='+'){
                     var blfound2=sub_str_reg_search_b_re(csinput,word_t.substring(1,));
                     if (blfound2==false){
                         blfound=false;
                         break;
                     }
-                    else{
+                    else {
                         blfound=true;
                     } 
 				}
@@ -542,7 +542,7 @@ function str_reg_search_b(csinput,cskeys,csreg){
                         blfound=false;
                         break;
                     }
-                    else{
+                    else {
                         blfound=true;
                     } 
 				}
@@ -562,10 +562,11 @@ function str_reg_search_b(csinput,cskeys,csreg){
 	return blfound;
 }
 
-function str_reg_check_b(cskey,is_reg=false,do_trim=true){
-    if (cskey.slice(-4,)=='(:r)'){
+function str_reg_check_b(cskey,is_reg=false,do_trim=true,cstype='(:r)'){
+    var bllen=cstype.length*-1;
+    if (cskey.slice(bllen,)==cstype){
         is_reg=true;
-        cskey=cskey.slice(0,-4);
+        cskey=cskey.slice(0,bllen);
     }
     if (do_trim){
         cskey=cskey.trimRight();
