@@ -188,7 +188,10 @@ function menu_common(){
     klmenu1.push(menu_container_b(str_t,group_list,''));
     
     var klmenu_config=root_font_size_menu_b(str_t);
-    klmenu_config.push('<span class="span_menu" onclick="'+str_t+'standalone_search_common();">当前结果导出为 standalone search</span>');
+    klmenu_config=klmenu_config.concat([
+    '<span class="span_menu" onclick="'+str_t+'th_set_common();">设定表格列名称</span>',
+    '<span class="span_menu" onclick="'+str_t+'standalone_search_common();">当前结果导出为 standalone search</span>',
+    ]);
     
     var menu_group={};
     js_file_list_common_global.sort(function (a,b){return zh_sort_b(a,b,false,2);});
@@ -220,6 +223,34 @@ function menu_common(){
     if (data_file_jscm_global!==''){
         recent_common();
     }
+}
+
+function th_set_common(){
+    var old_value='{"列1":"","列1":"right"}';
+    if (typeof table_th_jscm_global !== 'undefined'){
+        var list_t=[];
+        for (let key in table_th_jscm_global){
+            list_t.push('"'+specialstr_j(key)+'":"'+table_th_jscm_global[key]+'"');
+        }
+        old_value='{'+list_t.join(',')+'}';
+    }
+    var new_value=prompt('输入表格列名称和格式，输入 undefined 删除表格头',old_value);
+    if (new_value==null){return;}
+    if (new_value=='undefined'){
+        table_th_jscm_global=undefined;
+        return;
+    }
+    
+    var new_dict=false;
+    try {
+        eval('new_dict='+new_value);
+    }
+    catch (error){
+        console.log(error);
+        return;
+    }
+    
+    table_th_jscm_global=new_dict;
 }
 
 function standalone_search_common(){
