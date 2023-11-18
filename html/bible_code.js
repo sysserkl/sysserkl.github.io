@@ -2030,7 +2030,7 @@ function chapter_all_bible(only_check=false){
         for (let blno of sub_list){
             var item=kjv[blno];
             var bgcolor=(chapters[sub_no]=='1'?' style="background-color:pink;"':'');
-            result_t.push('<span class="oblong_box"'+bgcolor+' onclick="chapter_go_bible('+main_chapter+','+blno+');">'+item.replace(/.*?\s*(\d*)\s*===$/g,'$1')+'</span> ');
+            result_t.push('<span class="oblong_box"'+bgcolor+' onclick="chapter_go_bible('+main_chapter+','+blno+');" title="全书第 '+(sub_no+1)+' 章">'+item.replace(/.*?\s*(\d*)\s*===$/g,'$1')+'</span> ');
             sub_no=sub_no+1;      
         }
     }
