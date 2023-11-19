@@ -316,6 +316,25 @@ function previous_day_b(csstr='',csdays=1,return_str=true,sep='-'){
     }
 }
 
+function previous_days_b(csstr='',csdays=1,return_str=true,sep='-'){
+    var theday=default_date_b(csstr);
+    if (theday==false){return [];}
+    
+    var result_t=[];
+    for (let blxl=0;blxl<csdays;blxl++){
+        theday.setTime(theday.getTime()-24*60*60*1000);
+        
+        if (return_str){
+            result_t.push(date2str_b(sep,theday));
+        }
+        else {
+            var theday2 = new Date(theday.getTime()); //deepcopy - 保留注释
+            result_t.push(theday2);
+        }
+    }
+    return result_t;
+}
+
 function default_date_b(csstr='',ignore_time=false){
     if (csstr==''){
         var theday=new Date();

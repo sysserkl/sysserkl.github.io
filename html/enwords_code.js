@@ -152,7 +152,7 @@ function words_queue_transform_kle(){
     
     var emoji_list=words_queue_emoji_b();
     var result_t=[];
-    var list_t=words_queue_split_kle(blstr,'sublist');
+    var list_t=words_queue_split_kle(blstr,'sublist')[0];
     for (let item of list_t){
         result_t.push(enwords_lines_2_js_array_b(item,emoji_list));
     }
@@ -164,13 +164,14 @@ function words_queue_transform_kle(){
 
 function words_queue_new_or_old_kle(is_new=true,only_word=false){
     var result_t=[];
+    var error='';
     if (is_new){
         var new_str=document.getElementById('textarea_words_queue').value.trim();
-        if (new_str==''){return [];}
-        result_t=words_queue_split_kle(new_str,'sublist');    
+        if (new_str==''){return [[],error];}
+        [result_t,error]=words_queue_split_kle(new_str,'sublist');    
     }
     else {
-        result_t=words_queue_split_kle(words_queue_get_kle(false),'sublist');
+        [result_t,error]=words_queue_split_kle(words_queue_get_kle(false),'sublist');
     }
     
     if (only_word){
@@ -178,17 +179,20 @@ function words_queue_new_or_old_kle(is_new=true,only_word=false){
             result_t[blxl]=result_t[blxl][0];
         }
     }
-    return result_t;
+    return [result_t,error];
 }
 
 function words_queue_append_kle(){
     if (document.getElementById('select_queue_words').value!==''){return;}
 
-    var new_list=words_queue_new_or_old_kle(true);
-    if (new_list.length==0){return;}
+    var new_list,error;
+    [new_list,error]=words_queue_new_or_old_kle(true);
+    if (new_list.length==0 || error!==''){return;}
     
-    var old_list=words_queue_new_or_old_kle(false);
-    
+    var old_list;
+    [old_list,error]=words_queue_new_or_old_kle(false);
+    if (error!==''){return;}
+
     var blfound='';
     for (let old_row of old_list){
         for (let new_row of new_list){
@@ -219,7 +223,7 @@ function words_queue_append_kle(){
 function words_queue_split_kle(csstr,cstype='string'){
     var result_t=[];
     var list_t=('\n'+csstr+'\n').split('\n---\n');
-    var error_found=false;
+    var error_str='';
     for (let item of list_t){
         item=item.trim();
         if (item==''){continue;}
@@ -236,29 +240,40 @@ function words_queue_split_kle(csstr,cstype='string'){
             }
         }
         else {
-            alert('error: '+item);
-            error_found=true;
+            error_str='error: '+item+(aword.length>3?'\n第4行开始是：'+aword[3].slice(0,10):'');
+            alert(error_str);
             break;
         }
     }
-    if (result_t.length>0 && error_found==false){
-        return result_t;
+    
+    if (error_str==''){
+        return [result_t,error_str];
     }
-    return [];
+    else {
+        return [[],error_str];
+    }
 }
 
 function words_queue_update_kle(){
     var blstr=document.getElementById('textarea_words_queue').value.trim();
     var selected_word=document.getElementById('select_queue_words').value;
+    var new_list,old_list,error='';
     if (selected_word==''){
-        var new_list=words_queue_new_or_old_kle(true,false);    
-        var old_list=words_queue_new_or_old_kle(false,false);
+        [new_list,error]=words_queue_new_or_old_kle(true,false);    
+        if (error!==''){return;}
+        
+        [old_list,error]=words_queue_new_or_old_kle(false,false);
+        if (error!==''){return;}
+        
         if (new_list.toString()==old_list.toString()){
             alert('完全一致，未修改');
             return;
         }
-        var new_list=words_queue_new_or_old_kle(true,true);    
-        var old_list=words_queue_new_or_old_kle(false,true);
+        [new_list,error]=words_queue_new_or_old_kle(true,true);    
+        if (error!==''){return;}
+        
+        [old_list,error]=words_queue_new_or_old_kle(false,true);
+        if (error!==''){return;}
         
         if (confirm('是否将原有'+old_list.length+'个单词('+old_list+')批量覆盖为'+new_list.length+'个单词('+new_list+')('+blstr.length+')？')){
             localStorage.setItem('enwords_queue',blstr);
@@ -268,17 +283,19 @@ function words_queue_update_kle(){
         return;
     }
     //---
-    var word_t=words_queue_split_kle(blstr,'');
-    if (word_t.length!==3){
-        alert(selected_word+'行数不为3，取消更新');
+    var word_t,error;
+    [word_t,error]=words_queue_split_kle(blstr,'');
+    if (error!==''){
+        //alert(selected_word+' 行数不为 3，取消更新');
         return;
     }
     
     //---
-    var temp_words=words_queue_split_kle(words_queue_get_kle(false),'');
+    var temp_words;
+    [temp_words,error]=words_queue_split_kle(words_queue_get_kle(false),'');
     var bllen=temp_words.length;
-    if (bllen % 3 !== 0){
-        alert('临时单词行数不为 3 的倍数，取消更新');
+    if (error!==''){
+        //alert('临时单词行数不为 3 的倍数，取消更新');
         return;
     }
     
@@ -317,7 +334,7 @@ function words_queue_update_kle(){
         list_t.push(item);
         if (blxl % 3 == 2){
             list_t.push('---'); //在单词释义行后添加分隔行 - 保留注释
-        }  
+        }
     }
     
     if (selected_word=='NEW WORD' || selected_word==word_t[0]){
@@ -345,7 +362,7 @@ function words_queue_read_one_word_kle(csword){
         return;
     }
     
-    var temp_words=words_queue_split_kle(words_queue_get_kle(false),'sublist');
+    var temp_words=words_queue_split_kle(words_queue_get_kle(false),'sublist')[0];
     for (let item of temp_words){
         if (item[0]==csword){
             otextarea.value=item.join('\n');
@@ -355,7 +372,7 @@ function words_queue_read_one_word_kle(csword){
 }
 
 function words_queue_select_kle(csword=''){    
-    var temp_words=words_queue_split_kle(words_queue_get_kle(false),'sublist');
+    var temp_words=words_queue_split_kle(words_queue_get_kle(false),'sublist')[0];
 
     var bljg='<option></option><option>NEW WORD</option>\n';
     for (let item of temp_words){
