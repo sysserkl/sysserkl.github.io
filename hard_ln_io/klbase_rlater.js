@@ -88,6 +88,23 @@ function remove_from_array_rlater_b(csid,prefix){
             break;
         }
     }
+    //---
+    if (prefix=='selenium_enwords'){
+        if (eval('typeof '+prefix+'_current_global') =='undefined'){
+            console.log('未发现：',prefix+'_current_global');
+            return;
+        }    
+
+        var blid=' id="'+csid+'" ';
+        var csarray=eval(prefix+'_current_global');
+        for (let blxl=0;blxl<csarray.length;blxl++){
+            var item=csarray[blxl][0];
+            if (item.includes(blid)){
+                csarray.splice(blxl,1);
+                break;
+            }
+        }
+    }
 }
 
 function import_data_rlater_b(csarray,load_fn_name){
@@ -274,9 +291,12 @@ function years_rlater_b(all_len,current_len=false,update_left_part=false){
     return '<p>ToDoList: <span id="span_todolist_rlater">'+blstr+'</span>'+(current_len===false?'':'。当前结果：'+current_len+' 条')+'</p><div id="div_info"></div>';
 }
 
-function one_link_gerenrate_rlater_b(idno,cslink,cstitle,csstrong=false,prgname='readlater',other_str=''){    
+function one_link_gerenrate_rlater_b(idno,cslink,cstitle,csstrong=false,prgname='readlater',other_str='',with_li=true){    
     var bljg='';
-    bljg=bljg+'<li><a class="a_rlater_link" id="a_rlater_link_'+idno+'" href="'+cslink+'" target=_blank onmousedown="this.style.backgroundColor=\''+scheme_global['pink']+'\';">'; //替代 onclick, ondragstart，支持鼠标右键 - 保留注释
+    if (with_li){
+        bljg=bljg+'<li>';
+    }
+    bljg=bljg+'<a class="a_rlater_link" id="a_rlater_link_'+idno+'" href="'+cslink+'" target=_blank onmousedown="this.style.backgroundColor=\''+scheme_global['pink']+'\';">'; //替代 onclick, ondragstart，支持鼠标右键 - 保留注释
     
     if (csstrong){
         bljg=bljg+'<font color=red><strong>'+cstitle+'</strong></font>';
@@ -291,7 +311,11 @@ function one_link_gerenrate_rlater_b(idno,cslink,cstitle,csstrong=false,prgname=
         bljg=bljg+' <span class="span_box" onclick="fav_add_rlater_b(\'a_rlater_link_'+idno+'\',this,\''+prgname+'\');" style="font-size:0.8rem;">⚪</span>';
         bljg=bljg+' <span class="span_box" onclick="fav_add_rlater_b(\'a_rlater_link_'+idno+'\',this,\''+prgname+'\',true);" style="font-size:0.8rem;">🏷</span>';
     }
-    bljg=bljg+other_str+'</li>\n';
+    bljg=bljg+other_str;
+    if (with_li){
+        bljg=bljg+'</li>';
+    }
+    bljg=bljg+'\n';
     
     return bljg;
 }

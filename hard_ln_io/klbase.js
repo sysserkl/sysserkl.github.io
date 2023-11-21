@@ -1134,6 +1134,18 @@ function lines_range_b(cslist,csmin=false,csmax=false){
     return result_t;
 }
 
+function local_storage_list_split_b(csid,csmax=-1,row_delimiter=',',min_cols=-1,max_cols=-1){
+    var result_t=[];
+    var list_t=local_storage_get_b(csid,csmax,true);
+    for (let arow of list_t){
+        arow=arow.split(row_delimiter);
+        if (min_cols>0 && arow.length<min_cols){continue;}
+        if (max_cols>0 && arow.length>max_cols){continue;}
+        result_t.push(arow);
+    }
+    return result_t;
+}
+
 function local_storage_get_b(csid,csmax=-1,return_list=false,remove_item='',isreg=false){
     function sub_local_storage_get_b_remove_item(item){ //参数不要使用 remove_item - 保留注释
         if (isreg){
