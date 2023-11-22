@@ -253,9 +253,17 @@ function txtmenus_kltxt_b(cstype=''){
     ];
 
     if (cstype!=='reader'){
-        menu_dir.push('<span class="span_menu" onclick="'+str_t+'menu_insert_kltxt_b(3);">显示搜索关键字目录3</span>');
-        menu_dir.push('<span class="span_menu" onclick="'+str_t+'menu_insert_kltxt_b(1);">显示搜索关键字目录1</span>');
-        menu_dir.push('<hr />');
+        var group_list=[
+        ['1','menu_insert_kltxt_b(1);',true],
+        ['3','menu_insert_kltxt_b(3);',true],
+        ['全部','menu_insert_kltxt_b(-1);',true],
+        ];    
+        menu_dir.push(menu_container_b(str_t,group_list,'显示搜索关键字目录：'));
+        
+        menu_dir=menu_dir.concat([
+        '<span class="span_menu" onclick="'+str_t+'ellipsis_lines_kltxt_b();">未显示的行不足为省略号</span>',
+        '<hr />'
+        ]);
     }
     var menu_dir_width='14rem';
     var search_list=[
@@ -639,9 +647,29 @@ function fullmenu_filter_kltxt_b(csstr){
     obj_search_show_hide_b(olis,'',csstr);
 }
 
+function ellipsis_lines_kltxt_b(){
+    var op=document.querySelector('p.p_ellipsis');
+    if (op){return;}
+    
+    var ospans=document.querySelectorAll('div#divhtml span.txtsearch_kltxt_lineno');
+    for (let blxl=0;blxl<ospans.length-1;blxl++){
+        var blcurrent=parseInt(ospans[blxl].innerText.replace(/[\(\)]/g,''));
+        var blnext=parseInt(ospans[blxl+1].innerText.replace(/[\(\)]/g,''));
+        if (isNaN(blcurrent) || isNaN(blnext)){continue;}
+        if (blcurrent+1==blnext){continue;}
+        ospans[blxl].parentNode.insertAdjacentHTML('afterend','<p class="p_ellipsis">……</p>');
+    }
+}
+
 function menu_insert_kltxt_b(menu_count=3){
-    var ohr=document.querySelector('hr.hr_inserted_menu');
-    if (ohr){return;}
+    function sub_menu_insert_kltxt_b_one_title(title_name,line_no){
+        var bljg=p_style+'<span style="font-weight:bold;font-size:1.5rem;">'+title_name+'</span> ';
+        bljg=bljg+'<span class="txtsearch_kltxt_lineno" id="txtsearch_kltxt_lineno_'+(line_no+1)+'" style="cursor:pointer;font-style: italic;color:'+scheme_global['shadow']+';'+bldisplay+'" onclick="getlines_kltxt_b('+(line_no+1)+');">('+(line_no+1)+')</span></p>';    
+        return bljg;
+    }
+    //---------------------
+    var op=document.querySelector('p.p_inserted_menu');
+    if (op){return;}
 
     var menu_no=[];
     for (let item of kltxt_menulist_index_global){
@@ -650,8 +678,14 @@ function menu_insert_kltxt_b(menu_count=3){
     if (menu_no.length==0){return;}
     
     var oli_op=document.querySelectorAll('div#divhtml p, div#divhtml li');
+    if (oli_op.length==0){return;}
+    
     var pre_no=-1;
     var menu_list=[];
+
+    var p_style='<p class="p_inserted_menu" style="padding:0.5rem 0; border-top:0.2rem dotted '+scheme_global['memo']+'; border-bottom:0.2rem dotted '+scheme_global['memo']+';">';
+    var bldisplay='display:'+(checkbox_value_get_b('check_hide_lineno',true)?'none':'')+';';
+    
     for (let arow of oli_op){
         var ospan=arow.querySelector('span.txtsearch_kltxt_lineno');
         if (!ospan){continue;}
@@ -662,23 +696,24 @@ function menu_insert_kltxt_b(menu_count=3){
         lineno=lineno-1;
         
         if (menu_no.includes(lineno)){
-            arow.insertAdjacentHTML('beforebegin','<hr class="hr_inserted_menu" />');
-            arow.insertAdjacentHTML('afterend','<hr class="hr_inserted_menu" />');
-            arow.style.fontWeight='bold';
-            arow.style.fontSize='1.5rem';
+            var bljg=sub_menu_insert_kltxt_b_one_title(arow.querySelector('span.txt_content').innerHTML,lineno);
+            arow.outerHTML=bljg;
+            
             pre_no=lineno;
             menu_list=[];
             continue;
         }
-        
+
         for (let item of menu_no){
             if (item<=pre_no){continue;}
             if (item>lineno){
-                menu_list=menu_list.slice(-1*menu_count,);
-                for (let one_menu of menu_list){
-                    arow.insertAdjacentHTML('beforebegin',one_menu);
+                if (menu_count>0){
+                    menu_list=menu_list.slice(-1*menu_count,);
                 }
-                menu_list=[];
+                if (menu_list.length>0){
+                    arow.insertAdjacentHTML('beforebegin',menu_list.join(''));
+                    menu_list=[];
+                }
                 break;
             }
             
@@ -688,12 +723,34 @@ function menu_insert_kltxt_b(menu_count=3){
             else {
                 var title_name=filelist[item];
             }
-            var bljg='<hr class="hr_inserted_menu" />';
-            bljg=bljg+'<span style="font-weight:bold;font-size:1.5rem;">'+title_name+'</span> ';
-            bljg=bljg+'<span style="cursor:pointer;font-style: italic;color:'+scheme_global['shadow']+';" onclick="getlines_kltxt_b('+(item+1)+');">('+(item+1)+')</span>';
-            bljg=bljg+'<hr class="hr_inserted_menu" />'
+            var bljg=sub_menu_insert_kltxt_b_one_title(title_name,item);
             menu_list.push(bljg);
             pre_no=item;
+        }
+    }
+    
+    if (menu_list.length>0){
+        oli_op[oli_op.length-1].insertAdjacentHTML('beforebegin',menu_list.join(''));
+        menu_list=[];    
+    }
+            
+    if (menu_count<=0){
+        for (let item of menu_no){
+            if (item<=pre_no){continue;}
+            
+            if (filelist[item].substring(0,7)=='<title>' && filelist[item].slice(-8,)=='</title>'){
+                var title_name=filelist[item].slice(7,-8);
+            }
+            else {
+                var title_name=filelist[item];
+            }
+            var bljg=sub_menu_insert_kltxt_b_one_title(title_name,item);
+            menu_list.push(bljg);
+        }
+        if (menu_list.length>0){
+            var arow=oli_op[oli_op.length-1];
+            arow.insertAdjacentHTML('afterend',menu_list.join(''));
+            menu_list=[];        
         }
     }
 }
@@ -2600,7 +2657,7 @@ function format_lines_kltxt_b(cslist,csstyle='',csaname=-1,is_group_file=''){
             blstr='<big><strong>'+blstr+'</strong></big>';
         }
 
-        blstr=blstr+' <span class="txtsearch_kltxt_lineno" style="cursor:pointer;font-style: italic;'+(cshidelineno?'display:none;':'')+'" onclick="getlines_kltxt_b('+(csxl+1)+');">('+(csxl+1)+')</span>';
+        blstr=blstr+' <span class="txtsearch_kltxt_lineno" id="txtsearch_kltxt_lineno_'+(csxl+1)+'" style="cursor:pointer; font-style: italic;'+(cshidelineno?'display:none;':'')+'" onclick="getlines_kltxt_b('+(csxl+1)+');">('+(csxl+1)+')</span>';
         blstr=blstr+menu_t;
         return blstr;
     }

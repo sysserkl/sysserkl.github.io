@@ -41,4 +41,5 @@ var digest_global=`
 *yoghurt
 *baseboard
 *strapless
+*coeducational
 `.trim().split('\n');

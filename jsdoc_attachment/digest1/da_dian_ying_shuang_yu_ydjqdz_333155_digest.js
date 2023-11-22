@@ -8,4 +8,5 @@ var digest_global=`
 *Bucharest
 *bunny
 *touchpad
+*ketchup
 `.trim().split('\n');

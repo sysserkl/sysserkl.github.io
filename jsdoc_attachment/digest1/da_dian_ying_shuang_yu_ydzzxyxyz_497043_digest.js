@@ -14,4 +14,5 @@ var digest_global=`
 *Alps
 *Eiffel
 *Whitney
+*headphone
 `.trim().split('\n');

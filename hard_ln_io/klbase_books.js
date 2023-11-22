@@ -1,8 +1,8 @@
-function book_makelist_b(cstag='all'){
+function book_makelist_b(cstag='all',reg_mark='_reg'){
     //cstag 支持如：“历史 幻想” 等表达式 - 保留注释
     var list_t=[];
     var blreg=false;
-    [cstag,blreg]=str_reg_check_b(cstag,blreg,true,'_reg');
+    [cstag,blreg]=str_reg_check_b(cstag,blreg,true,reg_mark);
     
     if (csbookno_global>=0){
         var list_t=csbooklist_sub_global[csbookno_global];

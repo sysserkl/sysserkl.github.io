@@ -4,6 +4,12 @@ function init_ebsjs(){
     enwords_mini_search_frame_form_b();
     
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.6rem'));
+    
+    var input_list=[
+    ['input_book_filter',12,0.8],
+    ];
+    input_size_b(input_list,'id');
+        
     input_with_x_b('input_search',20,'',false);
     search_recent_ebsjs();
 
@@ -26,31 +32,33 @@ function menu_ebsjs(){
 }
 
 function args_ebsjs(){
-    var cskeys=href_split_b(location.href);
     var is_eng=true;
+    var blkey=false;
+    var book_filter='';    
+
+    var cskeys=href_split_b(location.href);
     if (cskeys.length>0 && cskeys[0]!==''){        
         for (let one_key of cskeys){
             one_key=one_key.trim();
             if (one_key=='eng'){
                 is_eng=true;
             }
-            if (one_key=='all'){
+            else if (one_key=='all'){
                 is_eng=false;
-            }            
-        }
-    }   
-    
-    document.getElementById('input_only_eng').checked=is_eng;
-    
-    if (cskeys.length>0 && cskeys[0]!==''){            
-        //第二次处理 - 保留注释
-        for (let one_key of cskeys){
-            one_key=one_key.trim();
-            if (one_key.substring(0,2)=='s='){
-                search_ebsjs(one_key.substring(2,));
-                break;
+            }
+            else if (one_key.substring(0,2)=='s='){
+                blkey=one_key.substring(2,);
+            }
+            else if (one_key.substring(0,2)=='b='){
+                book_filter=one_key.substring(2,);
             }
         }
+    }
+
+    if (blkey!==false){
+        search_ebsjs(blkey);    
+        document.getElementById('input_only_eng').checked=is_eng;
+        document.getElementById('input_book_filter').value=book_filter;        
     }
 }
 
@@ -65,7 +73,7 @@ function search_ebsjs(csstr='',csmax_total=50,csmax_current=5){
             enwords_array_ebs_b();
             return;
         }
-        var item=(is_eng?csbooklist_sub_global[blxl]:csbooklist_source_global[blxl]);
+        var item=csbooklist_sub_global[blxl];//(is_eng?:csbooklist_source_global[blxl]);
         
         var filelist=[];
         var fname=import_one_book_b(item[0]+'.js',item[3],false);
@@ -113,31 +121,31 @@ function search_ebsjs(csstr='',csmax_total=50,csmax_current=5){
         setTimeout(function(){sub_search_ebsjs_one_book(csmax_total,csmax_current);},5);  
     }
     //-----------------    
-    var is_reg=false;    
-
     csstr=csstr.replace(/[<>"]/g,'');   
     csstr=csstr.trim();
     search_recent_ebsjs(csstr);
     document.getElementById('input_search').value=csstr;
 
-    if (csstr.slice(-4,)=='(:r)'){
-        is_reg=true;
-        csstr=csstr.slice(0,-4).trim();
-    }
+    [csstr,is_reg]=str_reg_check_b(csstr,false);
     if (csstr==''){return;}
 
     digest_file_found_global=[];
 
     var is_eng=document.getElementById('input_only_eng').checked;
+    var book_filter=document.getElementById('input_book_filter').value.trim();
     var ospan=document.getElementById('readingdata');
     if (is_eng){
-        csbooklist_sub_global.sort(randomsort_b);
-        var bllen=csbooklist_sub_global.length;
+        var filter_key='+englishwords +已整理'+(book_filter==''?'':'+'+book_filter);
     }
     else {
-        csbooklist_source_global.sort(randomsort_b);    
-        var bllen=csbooklist_source_global.length;
+        var filter_key=book_filter;
     }
+    
+    book_makelist_b(filter_key,'(:r)');
+    
+    csbooklist_sub_global.sort(randomsort_b);
+    var bllen=csbooklist_sub_global.length;    
+
     var blxl=0;
     var result_t=[];
     var bltotal=0;
@@ -158,7 +166,7 @@ function show_result_ebsjs(csstr=''){
     }
     if (csstr==''){return;}
     var is_eng=document.getElementById('input_only_eng').checked;
-    var book_arr=(is_eng?csbooklist_sub_global:csbooklist_source_global);
+    var book_arr=csbooklist_sub_global;//(is_eng?:csbooklist_source_global);
 
     var selepath=klbase_sele_path_b()[1];
     show_result_ebs_b(content_file_found_global,book_arr,csstr,selepath);
