@@ -1420,7 +1420,7 @@ function service_worker_unregister_b(appname){
 function service_worker_delete_b(appname='',file_key='',confirm_str='是否更新版本？',show_type='',show_id=''){
     function sub_service_worker_delete_b_message(current_str){
         console.log(current_str);
-        show_str=show_str+current_str+'\n';
+        show_str=show_str+current_str+delimiter;
         message_show_b(show_str,show_type,show_id,'',0,false);    
     }
     //---------------------------
@@ -1431,6 +1431,7 @@ function service_worker_delete_b(appname='',file_key='',confirm_str='是否更�
     var keyname='pwa_'+appname+'_store'; //keyname 支持如 pwa_xxx_store_v任意字符 - 保留注释
 
     var show_str='';
+    var delimiter=(show_type=='value'?:'\n':'<br />');
     caches.keys().then(function(keyList){
         for (let one_key of keyList){
             if (is_all || one_key==keyname || one_key.substring(0,keyname.length+2)==keyname+'_v'){
