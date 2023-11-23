@@ -75,7 +75,7 @@ function menu_bible(){
     var klmenu2=[
     '<span id="span_reg_bible" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 正则</span>',            
     '<span class="span_menu" onclick="'+str_t+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>',    
-    '<span class="span_menu" onclick="'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'bible\');}">更新版本</span>',
+    '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'bible\');">更新版本</span>',
     '<span class="span_menu" onclick="'+str_t+'help_bible();">Help</span>',
     ];
     klmenu2=root_font_size_menu_b(str_t).concat(klmenu2);

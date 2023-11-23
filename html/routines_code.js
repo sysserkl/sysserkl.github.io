@@ -427,7 +427,7 @@ function menu_klroutines(){
     klmenu_config=klmenu_config.concat([
     '<span id="span_reg_klplan" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ reg</span>',    
     '<span id="span_unique_klplan" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ unique</span>',    
-    '<span class="span_menu" onclick="'+str_t+'if (confirm(\'do update?\')){service_worker_delete_b(\'routines\');}">update</span>',
+    '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'routines\');">update</span>',
     ]);
 
     document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,day_2_week_b('','en3'),menu1width,fontsize,fontsize,'60rem','','div_rountines_menu1','button_routines_menu1')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','60rem'),'','0rem','','div_routines_menu')+' '); //♾ - 保留注释

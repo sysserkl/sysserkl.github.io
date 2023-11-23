@@ -9,7 +9,7 @@ function init_matrix(){
     document.getElementById('div_transparent_td_m1').setAttribute('onclick','body_fullscreen_b();');
     document.getElementById('div_transparent_td_m2').setAttribute('onclick','console.log(5);');
     document.getElementById('div_transparent_td_m3').setAttribute('onclick','console.log(6);');
-    document.getElementById('div_transparent_td_r1').setAttribute('onclick','if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'screen_matrix\');}');
+    document.getElementById('div_transparent_td_r1').setAttribute('onclick','service_worker_delete_b(\'screen_matrix\');');
     document.getElementById('div_transparent_td_r2').setAttribute('onclick','console.log(7);');
     document.getElementById('div_transparent_td_r3').setAttribute('onclick','console.log(8);');
     

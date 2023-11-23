@@ -169,7 +169,7 @@ function menu_calculator(){
     '<span id="span_value_calculator" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 表达式2数值</span>',        
     '<span id="span_decimal_len" class="span_menu" onclick="'+str_t+'decimal_len_set();">decimal length: '+decimal_length_global+'</span>',        
     '<span class="span_menu" onclick="'+str_t+'help_calculator();">help</span>',    
-    '<span class="span_menu" onclick="'+str_t+'if (confirm(\'do updaate?\')){service_worker_delete_b(\'calculator\');}">update</span>',        
+    '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'calculator\');">update</span>',        
     ];
 
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'➕','15rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'➖','12rem','1rem','1rem','60rem'),'','0rem')+' ');

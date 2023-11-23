@@ -21,7 +21,7 @@ function menu_notepad(){
         
     var klmenu_config=root_font_size_menu_b(str_t);
     klmenu_config=klmenu_config.concat([
-    '<span class="span_menu" onclick="'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'notepad\');}">更新版本</span>',        
+    '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'notepad\');">更新版本</span>',        
     ]);
 
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🗐','14rem','1rem','1rem','30rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','30rem'),'','0rem')+' ');

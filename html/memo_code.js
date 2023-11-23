@@ -20,7 +20,7 @@ function menu_lt_klmemo(){
     ];
     
     var klmenu_config=[
-    '<span class="span_menu" onclick="'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'memo\');}">update</span>',
+    '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'memo\');">update</span>',
     ];
     klmenu_config=root_font_size_menu_b(str_t,true,true,true).concat(klmenu_config);
     

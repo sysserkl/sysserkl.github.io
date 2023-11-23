@@ -16,7 +16,7 @@ function menu_lt_f2f(){
 
     var klmenu_config=root_font_size_menu_b(str_t,true,true,true);
     klmenu_config.push('<span class="span_menu" onclick="'+str_t+'backup_lt_f2f();">edit/import/export</span>');
-    klmenu_config.push('<span class="span_menu" onclick="'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'f2f\');}">更新版本</span>');
+    klmenu_config.push('<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'f2f\');">更新版本</span>');
 
     var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu1,'🫂','14rem','1rem','1rem','60rem')+klmenu_b(name_menu,'𓁈','16rem','1rem','1rem','30rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','60rem'),'','0rem');
     

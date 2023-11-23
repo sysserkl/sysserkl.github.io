@@ -47,7 +47,7 @@ function menu_reader_idb(){
     '<span class="span_menu" onclick="'+str_t+'popup_show_hide_b(\'div_upload_buttons\');">上传书籍</span>',            
     '<span class="span_menu" onclick="'+str_t+'remove_current_book_reader_idb();">移除当前书籍</span>',    
     '<span class="span_menu" onclick="'+str_t+'center_reader_idb(\'clear_all\');">清空所有书籍</span>',    
-    '<span class="span_menu" onclick="'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'reader_idb\');}">更新版本</span>',        
+    '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'reader_idb\');">更新版本</span>',        
     ];
 
     document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','12rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'⚙','10rem','1rem','1rem','60rem'),'','0rem')+' ');

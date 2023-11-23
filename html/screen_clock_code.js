@@ -66,7 +66,7 @@ function init_clock(){
     document.getElementById("div_transparent_td_m1").setAttribute('onclick','body_fullscreen_b();');
     document.getElementById("div_transparent_td_m2").setAttribute('onclick',"fontsize_change_clock('');");
     document.getElementById("div_transparent_td_m3").setAttribute('onclick',"stopwatch_start_global=(stopwatch_start_global>=0?-1:new Date().getTime());");
-    document.getElementById("div_transparent_td_r1").setAttribute('onclick','if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'screen_clock\');}');
+    document.getElementById("div_transparent_td_r1").setAttribute('onclick','service_worker_delete_b(\'screen_clock\');');
     document.getElementById("div_transparent_td_r2").setAttribute('onclick','fontsize_change_clock("+");');
     document.getElementById("div_transparent_td_r3").setAttribute('onclick','nosecond_global=!nosecond_global;');
     

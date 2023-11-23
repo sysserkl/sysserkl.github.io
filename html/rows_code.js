@@ -142,7 +142,7 @@ function menu_klr2(){
     '<span class="span_menu" onclick="'+str_t+'setInterval(random_strs_klr2,5000);">每5秒生成随机字符串到剪贴板</span>',
     '<span class="span_menu" onclick="'+str_t+'random_txt_files_klr2('+fsize+');">随机生成'+fsize+'MB文本文件</span>',
     '<span class="span_menu" onclick="scheme_div_b();">页面主题</span>',
-    '<span class="span_menu" onclick="'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'rows\');}">更新版本</span>',
+    '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'rows\');">更新版本</span>',
     ]);
 
     var klmenu_sort=[];
@@ -184,11 +184,11 @@ function menu_klr2(){
     var klmenu_batch=[
     '<span class="span_menu" onclick="'+str_t+'enwords_get_klr2();">提取英文单词</span>',        
     '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'batchwww\');">批量打开网址</span>',
-    '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'bing_oxford_klsearch_en\');">批量打开B+Oxford+KLSearch(en)</span>',    
-    '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'bing_collins_oxford_klsearch_en\');">批量打开B+Collins+Oxford+Cambridge+KLSearch(en)</span>',    
-    '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'oxford_klsearch_en\');">批量打开Oxford+KLSearch(en)</span>',
-    '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'cambridge\');">批量打开Cambridge(en)</span>',    
-    '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'collins\');">批量打开Collins(en)</span>',
+    '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'bing_oxford_klsearch_en\');">批量打开B_O_KLSearch(en)</span>',    
+    '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'bing_collins_oxford_klsearch_en\');">批量打开B_C_O_+_KLSearch(en)</span>',    
+    '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'oxford_klsearch_en\');">批量打开O_KLSearch(en)</span>',
+    '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'cambridge\');">批量打开+(en)</span>',    
+    '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'collins\');">批量打开C(en)</span>',
     ];
     if (is_local_b()){
         klmenu_batch.push('<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'klwikititle\');">批量打开KLWiki Title</span>');
@@ -199,7 +199,7 @@ function menu_klr2(){
     '<a href="?klqr">KLQR(userscript)</a>',
     '<a href="image2base64.htm" onclick="'+str_t+'" target=_blank>Image 2 base64</a>',
     ];    
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_fn,'','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_sort,'↕','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_convert,'↔','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_batch,'🗂','28rem','1rem','1rem','60rem')+klmenu_b(klmenu_links,'链','12rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_fn,'','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_sort,'↕','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_convert,'↔','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_batch,'🗂','20rem','1rem','1rem','60rem')+klmenu_b(klmenu_links,'链','12rem','1rem','1rem','60rem'),'','0rem')+' ');
 }
 
 function random_txt_files_klr2(cssize=100){
@@ -227,7 +227,8 @@ function random_txt_files_klr2(cssize=100){
 
 function enwords_get_klr2(){
     var otextarea=document.getElementById('textarea_rows_content');
-    var list_t=otextarea.value.trim().replace(new RegExp('_','g'),' ').split('\n');
+    var blstr=otextarea.value;
+    var list_t=blstr.trim().replace(new RegExp('_','g'),' ').split('\n');
     var result_t=[];
     for (let arow of list_t){
         for (let item of ['】',' - ','是什么意思','Definition & Meaning','definition and meaning']){
@@ -236,8 +237,8 @@ function enwords_get_klr2(){
         row_list=arow.match(/[a-z\-\_\s]+/ig) || [];
         result_t=array_union_b(result_t,row_list);
     }
-    
-    document.getElementById('textarea_status').value=result_t.join('\n');
+    otextarea.value=result_t.join('\n');
+    document.getElementById('textarea_status').value=blstr;
 }
 
 function random_strs_klr2(){

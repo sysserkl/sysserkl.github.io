@@ -95,7 +95,7 @@ function menu_todolist(){
     '<span class="span_menu" onclick="'+str_t+'form_done_todolist();">import/export finished items</span>',    
     '<span class="span_menu">show: <select id="select_show_type_todolist" onchange="show_todolist(true);">'+blselect.join('')+'</select></span>',
     '<span class="span_menu" onclick="'+str_t+'update_todolist();">reload</span>',            
-    '<span class="span_menu" onclick="'+str_t+'if (confirm(\'do update?\')){service_worker_delete_b(\'todolist\');}">update</span>',
+    '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'todolist\');">update</span>',
     ];
     
     document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'✅','18rem','1rem','1rem','60rem'),'','0rem')+' '); //♾ - 保留注释

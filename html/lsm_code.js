@@ -139,10 +139,17 @@ function menu_lsm(){
     var klmenu_config=root_font_size_menu_b(str_t);
 
     klmenu_config=klmenu_config.concat([ 
-    '<span class="span_menu" onclick="'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'lsm\');}">更新版本</span>',
+    '<span class="span_menu" onclick="'+str_t+'update_remote_file_lsm();">更新指定文件</span>',
+    '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'lsm\');">更新版本</span>',
     ]);
         
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_local,'','20rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','60rem'),'','0rem')+' ');
+}
+
+function update_remote_file_lsm(){
+    var blstr=(prompt('输入指定文件名称关键词，如 enwords') || '').trim();
+    if (blstr==''){return;}
+    service_worker_delete_b('',blstr,'是否更新指定文件？','value','textarea_lsm_state');
 }
 
 function init_lsm(){

@@ -43,7 +43,7 @@ function menu_wp_pwa(){
     klmenu1.push(menu_container_b(str_t,group_list,''));    
 
     var klmenu2=[
-    '<span class="span_menu" onclick="'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'wp_pwa\');}">更新版本</span>',        
+    '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'wp_pwa\');">更新版本</span>',        
     ];
 
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'✍️','16rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'⚙','8rem','1rem','1rem','60rem'),'','0rem')+' ');

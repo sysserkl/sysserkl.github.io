@@ -43,7 +43,7 @@ function menu_lt_plans(){
     ];
     
     var klmenu_config=[
-    '<span class="span_menu" onclick="'+str_t+'if (confirm(\'do update?\')){service_worker_delete_b(\'long_term_plans\');}">update</span>',
+    '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'long_term_plans\');">update</span>',
     ];
     klmenu_config=root_font_size_menu_b(str_t,true,true,true).concat(klmenu_config);
     

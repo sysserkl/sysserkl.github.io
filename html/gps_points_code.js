@@ -1557,7 +1557,7 @@ function menu_gps_points(){
     klmenu_config.push(menu_container_b(str_t,group_list,''));    
 
     var more_config=[
-    ['update','if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'gps_points\');}',true],
+    ['update','service_worker_delete_b(\'gps_points\');',true],
     ['help','help_gps_points();',true],
     ['整点报时','alarm_interval_set_b(0)',true],
     ];    

@@ -592,7 +592,7 @@ function menu_klqr(){
     '<span class="span_menu" onclick="'+str_t+'hide_show_div_img_upload_klqr_klqr();">背景图片</span>',
     '<span id="span_img_border" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ img border</span>',        
     '<span class="span_menu" onclick="'+str_t+'help_klqr();">help</span>',
-    '<span class="span_menu" onclick="'+str_t+'if (confirm(\'是否更新版本？\')){service_worker_delete_b(\'qrcode\');}">更新版本</span>',    
+    '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'qrcode\');">更新版本</span>',    
     ];
 
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','11rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'⚙','11rem','1rem','1rem','60rem'),'','0rem')+' ');

@@ -1417,10 +1417,20 @@ function service_worker_unregister_b(appname){
     }
 }
 
-function service_worker_delete_b(appname='',file_key=''){
+function service_worker_delete_b(appname='',file_key='',confirm_str='是否更新版本？',show_type='',show_id=''){
+    function sub_service_worker_delete_b_message(current_str){
+        console.log(current_str);
+        show_str=show_str+current_str+'\n';
+        message_show_b(show_str,show_type,show_id,'',0,false);    
+    }
+    //---------------------------
+    if (confirm_str!==''){
+        if (!confirm(confirm_str)){return;}
+    }
     var is_all=(appname=='');
     var keyname='pwa_'+appname+'_store'; //keyname 支持如 pwa_xxx_store_v任意字符 - 保留注释
 
+    var show_str='';
     caches.keys().then(function(keyList){
         for (let one_key of keyList){
             if (is_all || one_key==keyname || one_key.substring(0,keyname.length+2)==keyname+'_v'){
@@ -1430,24 +1440,28 @@ function service_worker_delete_b(appname='',file_key=''){
                         keys.forEach(function(request, index, array){
                             if (file_key==''){
                                 if (blxl % 100 == 0){
-                                    console.log(blxl,one_key,'delete url:',array[index]['url']);
+                                    var current_str=blxl+' '+one_key+' delete url: '+array[index]['url'];
+                                    sub_service_worker_delete_b_message(current_str);
                                 }
+                                
                                 blxl=blxl+1;
                                 cache.delete(request);
                             }
                             else if (array[index]['url'].includes(file_key)){
-                                console.log(blxl,one_key,'delete url:',array[index]['url']);
+                                var current_str=blxl+' '+one_key+' delete url: '+array[index]['url'];
+                                sub_service_worker_delete_b_message(current_str);               
+                                                 
                                 blxl=blxl+1;
                                 cache.delete(request);                                
                             }
                         });
                         
                         if (file_key==''){
-                            console.log('----------');
                             caches.delete(one_key);
-                            console.log('caches.delete',one_key); //此行保留 - 保留注释   
-                            console.log('----------');
                             
+                            var current_str='caches.delete '+one_key;
+                            sub_service_worker_delete_b_message(current_str);
+                  
                             appname=one_key.replace(/^pwa_(.*?)_store.*$/g,'$1');
                             service_worker_unregister_b(appname);
                         }
@@ -1460,52 +1474,45 @@ function service_worker_delete_b(appname='',file_key=''){
 
 function pwa_clear_cache_all_b(){
     if (confirm('是否清空全部 PWA Cache？')==false){return;}
-    service_worker_delete_b();
+    service_worker_delete_b('','','');
 }
 
 function pwa_register_b(jsfile,cscaption,csid,cstype,autohide=-1){
-    function sub_pwa_register_b_clear(){
-        document.getElementById(csid).innerHTML='';
-    }
-    //------------------------------------
     // Register service worker to control making site work offline
     if (!is_local_b() && 'serviceWorker' in navigator){
-        navigator.serviceWorker
-            .register(jsfile)
-            .then(function(){
-                switch (cstype){
-                    case 'color':
-                        document.getElementById(csid).style.color=scheme_global['a'];
-                        break;
-                    case 'html':
-                        document.getElementById(csid).innerHTML=cscaption+' Service Worker Registered';
-                        if (autohide>0){
-                            setTimeout(sub_pwa_register_b_clear,autohide);
-                        }
-                        break;
-                    case 'value':
-                        document.getElementById(csid).value=cscaption+' Service Worker Registered';
-                        break;
-                }
-                console.log(cscaption+' Service Worker Registered');
-            });
+        navigator.serviceWorker.register(jsfile).then(function(){
+            message_show_b(cscaption+' Service Worker Registered',cstype,csid,scheme_global['a'],autohide);
+        });
     }
     else {
+        message_show_b(cscaption+' Service Worker not work',cstype,csid,scheme_global['color'],autohide);
+    }
+}
+
+function message_show_b(csstr,cstype,csid='',cscolor='',autohide=0,show_in_console=true){
+    function sub_message_show_b_clear(){
+        document.getElementById(csid).innerHTML='';
+    }
+    //---------------
+    if (csid!==''){
+        var odom=document.getElementById(csid);
         switch (cstype){
             case 'color':    
-                document.getElementById(csid).style.color=scheme_global['color']; //Service Worker not work - 保留注释;
+                odom.style.color=cscolor;
                 break;
             case 'html':
-                document.getElementById(csid).innerHTML=cscaption+' Service Worker not work';
+                odom.innerHTML=csstr;
                 if (autohide>0){
-                    setTimeout(sub_pwa_register_b_clear,autohide);
+                    setTimeout(sub_message_show_b_clear,autohide);
                 }
                 break;
             case 'value':
-                document.getElementById(csid).value=cscaption+' Service Worker not work';            
+                odom.value=csstr;         
                 break;
         }
-        console.log(cscaption+' Service Worker not work');
+    }
+    if (show_in_console){
+        console.log(csstr);
     }
 }
 

@@ -131,7 +131,7 @@ function demo_websites_pwa(){
 function clear_cache_websites_pwa(){
     if (confirm('是否更新版本？')){
         document.getElementById('span_status').innerHTML='';
-        service_worker_delete_b('websites');
+        service_worker_delete_b('websites','','');
     }
 }
 
