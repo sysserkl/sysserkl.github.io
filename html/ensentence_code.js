@@ -137,8 +137,8 @@ function phrase_not_in_ensentence(){
     full_t.sort();
     
     var odiv=document.getElementById('divhtml');   
-    odiv.innerHTML=enwords_array_to_html_b(full_t,false);    
-    odiv.insertAdjacentHTML('beforeend','<textarea onclick="this.select();document.execCommand(\'copy\');">'+words_found.join('\n')+'</textarea>');
+    odiv.innerHTML=enwords_array_to_html_b(full_t,false);
+    odiv.insertAdjacentHTML('beforeend','<textarea onclick="this.select();document.execCommand(\'copy\');">'+words_found.join('\n')+'</textarea>'+words_2_js_array_ensentence(words_found));
     console.log('phrase_not_in_ensentence() 费时：'+(performance.now() - t0) + ' milliseconds');
 }
 
@@ -281,6 +281,13 @@ function length_sort_ensentence(){
     console.log('length_sort_ensentence() 费时：'+(performance.now() - t0) + ' milliseconds');    
 }
 
+function words_2_js_array_ensentence(csarray){
+    var result_t=[];
+    for (let aword of csarray){
+        result_t.push('"'+specialstr_j(aword)+'"');
+    }
+    return '<textarea onclick="this.select();document.execCommand(\'copy\');">    var rare_words=new Set(['+result_t.join(',')+']);</textarea>';
+}
 
 function rare_old_words_ensentence(show_sentence=true,generate_js=false,max_count=2,rows_min=10,rows_max=3000,source_check=false){
     function sub_rare_old_words_ensentence_form(){
@@ -357,7 +364,7 @@ function rare_old_words_ensentence(show_sentence=true,generate_js=false,max_coun
             
             var progress_list=ltp_status_get_b('+例句 +单词','green','white',100);
 
-            document.getElementById('divhtml').innerHTML='<p>'+progress_list.join(' ')+'</p>'+enwords_array_to_html_b(words_searched_arr_global,false)+bltextarea;
+            document.getElementById('divhtml').innerHTML='<p>'+progress_list.join(' ')+'</p>'+enwords_array_to_html_b(words_searched_arr_global,false)+bltextarea+words_2_js_array_ensentence(words_searched_arr_global);
             
             if (source_check){
                 var local_id='enwords_one_source_ensentence';

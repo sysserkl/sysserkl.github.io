@@ -719,9 +719,9 @@ function radio_value_set_b(radio_name,csvalue){
 function specialstr_j(csstr,ignore_single_quote=false){
     //var www='"do\\gl\\\\h\'ello';
     var bljg=csstr.toString().replace(/\\/g,'\\\\');
-    bljg=bljg.replace(new RegExp('"',"g"),'\\"');
+    bljg=bljg.replace(new RegExp('"','g'),'\\"');
     if (ignore_single_quote==false){
-        bljg=bljg.replace(new RegExp("'","g"),"\\'");
+        bljg=bljg.replace(new RegExp("'",'g'),"\\'");
     }
     return bljg;
 }
@@ -733,7 +733,7 @@ function specialstr_lt_gt_j(csstr,csand=false){
         csstr=csstr.replace(/&/g,'&amp;');
     }
     csstr=csstr.replace(/</g,'&lt;');
-    csstr=csstr.replace(new RegExp('>',"g"),'&gt;');
+    csstr=csstr.replace(/>/g,'&gt;');
     return csstr;
 }
 

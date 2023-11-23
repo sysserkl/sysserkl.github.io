@@ -651,14 +651,29 @@ function ellipsis_lines_kltxt_b(){
     var op=document.querySelector('p.p_ellipsis');
     if (op){return;}
     
+    var ospans=txtsearch_kltxt_lineno_doms_get_kltxt_b();
+    for (let one_pair of ospans){
+        if (one_pair[1]+1==one_pair[3]){continue;}    
+        if (!one_pair[0]){continue;}
+        one_pair[0].parentNode.insertAdjacentHTML('afterend','<p class="p_ellipsis">……</p>');        
+    }
+}
+
+function txtsearch_kltxt_lineno_doms_get_kltxt_b(){
+    var result_t=[];
     var ospans=document.querySelectorAll('div#divhtml span.txtsearch_kltxt_lineno');
+    if (ospans.length==0){return [];}
+
+    var blcurrent=parseInt(ospans[0].innerText.replace(/[\(\)]/g,''));    
+    result_t.push([false,0,ospans[0],blcurrent]);
+    
     for (let blxl=0;blxl<ospans.length-1;blxl++){
         var blcurrent=parseInt(ospans[blxl].innerText.replace(/[\(\)]/g,''));
         var blnext=parseInt(ospans[blxl+1].innerText.replace(/[\(\)]/g,''));
         if (isNaN(blcurrent) || isNaN(blnext)){continue;}
-        if (blcurrent+1==blnext){continue;}
-        ospans[blxl].parentNode.insertAdjacentHTML('afterend','<p class="p_ellipsis">……</p>');
+        result_t.push([ospans[blxl],blcurrent,ospans[blxl+1],blnext]);
     }
+    return result_t;
 }
 
 function menu_insert_kltxt_b(menu_count=3){
@@ -667,91 +682,80 @@ function menu_insert_kltxt_b(menu_count=3){
         bljg=bljg+'<span class="txtsearch_kltxt_lineno" id="txtsearch_kltxt_lineno_'+(line_no+1)+'" style="cursor:pointer;font-style: italic;color:'+scheme_global['shadow']+';'+bldisplay+'" onclick="getlines_kltxt_b('+(line_no+1)+');">('+(line_no+1)+')</span></p>';    
         return bljg;
     }
+    
+    function sub_menu_insert_kltxt_b_one_range(no_current,no_next){
+        var in_range=[];
+        var title_no=false;
+        for (let one_no of menu_no){
+            if (no_current>=0 && one_no<=no_current){continue;}
+            if (one_no==no_next){
+                title_no=one_no;
+                continue;
+            }
+            if (one_no>no_next){continue;}
+            in_range.push(one_no);
+        }
+        in_range.sort(function (a,b){return a>b;});        
+        if (menu_count>0){
+            in_range=in_range.slice(-1*menu_count,);
+        }
+        return [in_range,title_no];
+    }
+    
+    function sub_menu_insert_kltxt_b_one_insert(in_range,odom,csposition='beforebegin'){
+        for (let blno of in_range){
+            if (filelist[blno].substring(0,7)=='<title>' && filelist[blno].slice(-8,)=='</title>'){
+                var title_name=filelist[blno].slice(7,-8);
+            }
+            else {
+                var title_name=filelist[blno];
+            }
+            menu_no.delete(blno);
+            var bljg=sub_menu_insert_kltxt_b_one_title(title_name,blno);
+            if (csposition=='outerHTML'){
+                odom.parentNode.outerHTML=bljg;
+            }
+            else {
+                odom.parentNode.insertAdjacentHTML(csposition,bljg);
+            }
+        }
+    }
     //---------------------
     var op=document.querySelector('p.p_inserted_menu');
     if (op){return;}
 
-    var menu_no=[];
+    var menu_no=new Set();
     for (let item of kltxt_menulist_index_global){
-        menu_no.push(item[0]);
+        menu_no.add(item[0]);
     }
-    if (menu_no.length==0){return;}
-    
-    var oli_op=document.querySelectorAll('div#divhtml p, div#divhtml li');
-    if (oli_op.length==0){return;}
-    
-    var pre_no=-1;
-    var menu_list=[];
+    if (menu_no.size==0){return;}
+
+    var ospans=txtsearch_kltxt_lineno_doms_get_kltxt_b();
+    if (ospans.length==0){return;}
 
     var p_style='<p class="p_inserted_menu" style="padding:0.5rem 0; border-top:0.2rem dotted '+scheme_global['memo']+'; border-bottom:0.2rem dotted '+scheme_global['memo']+';">';
     var bldisplay='display:'+(checkbox_value_get_b('check_hide_lineno',true)?'none':'')+';';
     
-    for (let arow of oli_op){
-        var ospan=arow.querySelector('span.txtsearch_kltxt_lineno');
-        if (!ospan){continue;}
-        
-        var lineno=ospan.innerText;
-        lineno=parseInt(lineno.replace('(','').replace(')','').trim());
-        if (isNaN(lineno)){continue;}
-        lineno=lineno-1;
-        
-        if (menu_no.includes(lineno)){
-            var bljg=sub_menu_insert_kltxt_b_one_title(arow.querySelector('span.txt_content').innerHTML,lineno);
-            arow.outerHTML=bljg;
-            
-            pre_no=lineno;
-            menu_list=[];
-            continue;
-        }
-
-        for (let item of menu_no){
-            if (item<=pre_no){continue;}
-            if (item>lineno){
-                if (menu_count>0){
-                    menu_list=menu_list.slice(-1*menu_count,);
-                }
-                if (menu_list.length>0){
-                    arow.insertAdjacentHTML('beforebegin',menu_list.join(''));
-                    menu_list=[];
-                }
-                break;
-            }
-            
-            if (filelist[item].substring(0,7)=='<title>' && filelist[item].slice(-8,)=='</title>'){
-                var title_name=filelist[item].slice(7,-8);
-            }
-            else {
-                var title_name=filelist[item];
-            }
-            var bljg=sub_menu_insert_kltxt_b_one_title(title_name,item);
-            menu_list.push(bljg);
-            pre_no=item;
+    var span_nos=[];
+    var title_list=[];
+    var in_range,title_no;
+    for (let one_pair of ospans){
+        [in_range,title_no]=sub_menu_insert_kltxt_b_one_range(one_pair[1]-1,one_pair[3]-1);
+        sub_menu_insert_kltxt_b_one_insert(in_range,one_pair[2]);
+        if (title_no!==false){
+            title_list.push([[title_no],one_pair[2]]);
+            menu_no.delete(title_no);
         }
     }
     
-    if (menu_list.length>0){
-        oli_op[oli_op.length-1].insertAdjacentHTML('beforebegin',menu_list.join(''));
-        menu_list=[];    
-    }
-            
     if (menu_count<=0){
-        for (let item of menu_no){
-            if (item<=pre_no){continue;}
-            
-            if (filelist[item].substring(0,7)=='<title>' && filelist[item].slice(-8,)=='</title>'){
-                var title_name=filelist[item].slice(7,-8);
-            }
-            else {
-                var title_name=filelist[item];
-            }
-            var bljg=sub_menu_insert_kltxt_b_one_title(title_name,item);
-            menu_list.push(bljg);
-        }
-        if (menu_list.length>0){
-            var arow=oli_op[oli_op.length-1];
-            arow.insertAdjacentHTML('afterend',menu_list.join(''));
-            menu_list=[];        
-        }
+        in_range=Array.from(menu_no);
+        in_range.sort(function (a,b){return a<b;});
+        sub_menu_insert_kltxt_b_one_insert(in_range,ospans[ospans.length-1][2],'afterend');        
+    }
+    
+    for (let item of title_list){
+        sub_menu_insert_kltxt_b_one_insert(item[0],item[1],'outerHTML');    //最后处理，否则 span.odom.parentNode.outerHTML 修改后，找不到 span - 保留注释
     }
 }
 
@@ -1314,57 +1318,6 @@ function find_cn_words_kltxt_b(){
         bljg='<ol>'+bljg+'</ol>';
         bljg=bljg+'<p align=right class="fmini"><span class="aclick" onclick=\'document.getElementById("div_cn_words").innerHTML="";\'>Clear</span></p>';
         document.getElementById('div_cn_words').innerHTML=bljg;
-    }
-}
-
-function search_next_kltxt_b(csxl,csstr){
-	csxl=Math.max(csxl,0);
-    var blno=-1;
-    for (let blxl=csxl+1;blxl<filelist.length;blxl++){ //不能使用 blxl in filelist
-        if (csstr.trim()==filelist[blxl].trim() || csstr.replace(/\t[, \.　]/g,' ')==filelist[blxl].replace(/\t[, \.　]/g,' ')){
-            blno=blxl;
-            break;
-        }
-    }
-    //---
-    if (blno===-1){
-        csstr=csstr.replace(/\t[,\.　]/g,' ');
-        csstr=csstr.replace('　',' ');
-        csstr=csstr.split(' ')[0].trim();
-        for (let blxl=csxl+1;blxl<filelist.length;blxl++){
-            if (csstr==filelist[blxl].trim() || csstr.replace(/ /g,'')==filelist[blxl].replace(/\t[, \.　]/g,'')){
-                blno=blxl;
-                break;
-            }
-        }
-    }
-    //---
-    if (blno===-1){    
-        for (let blxl=csxl+1;blxl<filelist.length;blxl++){
-            if (csstr==filelist[blxl].substring(0,csstr.length)){
-                blno=blxl;
-                break;            
-            }
-            else {
-                var blstr_t=csstr.replace(/ /g,'');
-                if (blstr_t == filelist[blxl].replace(/\t[, \.　]/g,'').substring(0,blstr_t.length)){
-                    blno=blxl;
-                    break;                
-                }
-            }
-        }
-    }
-    //---
-    if (blno===-1){    
-        for (let blxl=csxl+1;blxl<filelist.length;blxl++){
-            if (csstr==filelist[blxl].replace(/\t[, \.　]/g,' ').split(' ')[0]){
-                blno=blxl;
-                break;                 
-            }
-        }
-    }
-    if (blno>-1){
-        getlines_kltxt_b(blno+1);
     }
 }
 
@@ -2642,10 +2595,6 @@ function format_lines_kltxt_b(cslist,csstyle='',csaname=-1,is_group_file=''){
         }
         else if (booktype=='bible'){
             blstr=sub_format_lines_kltxt_b_bible(blstr);
-        }
-        
-        if (is_digest===false && csxl<100 && blstr.length<50){
-            menu_t=' <span class="txtsearch_kltxt_lineno" style="cursor:pointer;'+(cshidelineno?'display:none;':'')+'" onclick=\'search_next_kltxt_b('+csxl+',"'+blstr+'");\'>⇓</span>';
         }
 
         if (csklwiki_format && imgpath!==''){
