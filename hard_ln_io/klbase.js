@@ -1431,7 +1431,7 @@ function service_worker_delete_b(appname='',file_key='',confirm_str='是否更�
     var keyname='pwa_'+appname+'_store'; //keyname 支持如 pwa_xxx_store_v任意字符 - 保留注释
 
     var show_str='';
-    var delimiter=(show_type=='value'?:'\n':'<br />');
+    var delimiter=(show_type=='value'?'\n':'<br />');
     caches.keys().then(function(keyList){
         for (let one_key of keyList){
             if (is_all || one_key==keyname || one_key.substring(0,keyname.length+2)==keyname+'_v'){
