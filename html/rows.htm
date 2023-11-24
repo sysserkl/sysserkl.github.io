@@ -5,7 +5,7 @@
 <meta charset="UTF-8" />
 <script src="../hard_ln_io/klbase.js"></script>
 <script>
-klbase_addons_import_js_b(['css','en_de_str','rows','eng'],['html2canvas.js'],['jieba_pb_dict_data.js'],['rows_ico/rows512.png']);
+klbase_addons_import_js_b(['css','en_de_str','date','rows','eng'],['html2canvas.js'],['jieba_pb_dict_data.js'],['rows_ico/rows512.png']);
 </script>
 <script src="rows_code.js"></script>
 <script>
@@ -45,7 +45,7 @@ div.div_leaflet{border:0.1rem dotted grey; border-radius:1rem; padding:0.2rem 0.
 <span class="aclick" onclick="blank_rows_add_klr_b();">add blank rows</span>
 <span class="aclick" onclick="strquick_klr_b('space2underline');">空格转换为下划线</span>
 <span class="aclick" onclick="strquick_klr_b('count');">字数统计</span>
-常用操作：<SELECT id="oquick" style="width:150px;"></SELECT>
+常用操作：<select id="oquick" style="width:150px;"></select>
 <span class="aclick" onclick="strquick_klr_b(document.getElementById('oquick').value);">执行</span>
 <span class="aclick" onclick="temp_save_klr2('write','textarea_rows_content');">暂存</span>
 </p>
@@ -57,16 +57,21 @@ div.div_leaflet{border:0.1rem dotted grey; border-radius:1rem; padding:0.2rem 0.
 </div>
 
 <div id="div_leaflet_lineno" class="div_leaflet">
-在每一行的 <SELECT id="fwhere"> 
-<OPTION value=1>前面</OPTION>
-<OPTION value=2>末尾</OPTION>
-</SELECT>
+在每一行的 <select id="fwhere"> 
+<option value=1>前面</option>
+<option value=2>末尾</option>
+</select>
 插入行号：起始数字：<input type="number" id="tno1" value=1 />
 位数：<input type="number" id="tno2" value=1 />
-<span class="aclick" onclick="do_type_klr2('行号');">插入</span>
+<span class="aclick" onclick="do_type_klr2('行号');">插入行号</span>
 <span class="aclick" onclick="do_type_klr2('ed2k');">ed2k</span>
 <span class="aclick" onclick="do_type_klr2('magnet');">magnet</span>
 <span class="aclick" onclick="do_type_klr2('ffmpeg_combine');">ffmpeg combine</span>
+起始日期：<input type="text" id="input_date_start_klr2" />
+step：<input type="number" id="input_date_step_klr2" value=1 />
+日期格式：<input type="text" id="input_date_format_klr2" value="%y-%2m-%2d" />
+
+<span class="aclick" onclick="do_type_klr2('date');">插入日期</span>
 </div>
 
 <div id="div_leaflet_duplicate" class="div_leaflet" />
@@ -75,14 +80,14 @@ div.div_leaflet{border:0.1rem dotted grey; border-radius:1rem; padding:0.2rem 0.
 </div>
 
 <div id="div_leaflet_filter" class="div_leaflet">
-<SELECT id="oget1">
-<OPTION value="sel">提取</OPTION>
-<OPTION value="del">删除</OPTION>
-</SELECT>
-<SELECT id="oget2">
-<OPTION value="in">包含</OPTION>
-<OPTION value="out">不含</OPTION>
-</SELECT>
+<select id="oget1">
+<option value="sel">提取</option>
+<option value="del">删除</option>
+</select>
+<select id="oget2">
+<option value="in">包含</option>
+<option value="out">不含</option>
+</select>
 <input type="text" id="oget3" />
 的行
 <span class="aclick" onclick="do_type_klr2('筛选');">筛选</span>
@@ -94,10 +99,10 @@ div.div_leaflet{border:0.1rem dotted grey; border-radius:1rem; padding:0.2rem 0.
 
 <div id="div_leaflet_remove" class="div_leaflet">
 移除
-<SELECT id="char_o">
-<OPTION value="begin">行首</OPTION>
-<OPTION value="end">行尾</OPTION>
-</SELECT>
+<select id="char_o">
+<option value="begin">行首</option>
+<option value="end">行尾</option>
+</select>
 <input type="number" id="char_t" value=1 />&nbsp;个字符
 <span class="aclick" onclick="do_type_klr2('移除');">执行</span>
 </div>

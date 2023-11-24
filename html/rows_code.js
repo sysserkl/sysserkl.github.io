@@ -14,7 +14,9 @@ function input_style_klr2(){
     ['input_rnd_lines',5],
     ['input_rnd_count_min',5],
     ['input_rnd_count_max',5],
-
+    ['input_date_start_klr2',8],
+    ['input_date_step_klr2',3],
+    ['input_date_format_klr2',8],
     ];
     var dom_list=input_size_b(input_list,'id',false,true);
     for (let one_dom of dom_list){
@@ -50,6 +52,35 @@ function do_type_klr2(cstype){
             else {
                 strquick_klr_b(cstype,'textarea_rows_content','textarea_status',blno1,blno2);
             }
+            break;
+        case 'date':
+            var blop=document.getElementById('fwhere').value;        
+            var bldate=validdate_b(document.getElementById('input_date_start_klr2').value.trim());
+            if (bldate===false){
+                alert('日期格式错误');
+                return;
+            }
+            var blstep=parseInt(document.getElementById('input_date_step_klr2').value.trim());
+            if (isNaN(blstep)){
+                alert('日期step错误');
+                return;
+            }
+            var blformat=document.getElementById('input_date_format_klr2').value.trim();
+            var otextarea=document.getElementById('textarea_rows_content');
+            document.getElementById('textarea_status').value=otextarea.value;
+            var content_list=otextarea.value.split('\n');
+            var date_list=next_days_b(bldate,content_list.length,false,'',blstep);
+            if (blop=='1'){
+                for (let blxl=0;blxl<content_list.length;blxl++){
+                    content_list[blxl]=date_2_str_format_b(date_list[blxl],blformat,'date')+content_list[blxl];
+                }
+            }
+            else {  //'2'
+                for (let blxl=0;blxl<content_list.length;blxl++){
+                    content_list[blxl]=content_list[blxl]+date_2_str_format_b(date_list[blxl],blformat,'date');
+                }            
+            }
+            otextarea.value=content_list.join('\n');
             break;
         case '筛选':
             var cstype=document.getElementById('oget1').value;

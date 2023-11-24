@@ -1099,7 +1099,7 @@ function input_size_b(cslist,cstype='name',font_size=false,return_dom=false){
     return dom_list;
 }
 
-function input_with_x_b(csid,cswidth,xid='',csexpand=false,regid=false,isreg=false){
+function input_with_x_b(csid,cswidth,xid='',csexpand=false,regid=false,isreg=false,is_focus=false){
     //csexpand 可以是 数值型 - 保留注释
     var oinput=document.getElementById(csid);
     if (!oinput){return false;}
@@ -1132,6 +1132,9 @@ function input_with_x_b(csid,cswidth,xid='',csexpand=false,regid=false,isreg=fal
     }
     if (input_reg!==''){
         oinput.parentNode.insertAdjacentHTML('afterend',' '+input_reg);
+    }
+    if (is_focus){
+        oinput.focus();
     }
     return oinput;
 }
