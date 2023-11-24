@@ -221,7 +221,7 @@ function value_calculator(csstr){
         }
         return [blvalue,''];
     }
-    catch (error) {
+    catch (error){
         return [false,error];
     }
 }

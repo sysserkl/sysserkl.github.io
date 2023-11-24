@@ -1423,6 +1423,25 @@ function service_worker_delete_b(appname='',file_key='',confirm_str='是否更�
         show_str=show_str+current_str+delimiter;
         message_show_b(show_str,show_type,show_id,'',0,false);    
     }
+    
+    function sub_service_worker_delete_b_one_key(request, index, array){
+        if (file_key==''){
+            if (blxl % 100 == 0){
+                var current_str=blxl+' '+one_key+' delete url: '+array[index]['url'];
+                sub_service_worker_delete_b_message(current_str);
+            }
+            
+            blxl=blxl+1;
+            cache.delete(request);
+        }
+        else if (array[index]['url'].includes(file_key)){
+            var current_str=blxl+' '+one_key+' delete url: '+array[index]['url'];
+            sub_service_worker_delete_b_message(current_str);               
+                             
+            blxl=blxl+1;
+            cache.delete(request);                                
+        }
+    }
     //---------------------------
     if (confirm_str!==''){
         if (!confirm(confirm_str)){return;}
@@ -1438,24 +1457,25 @@ function service_worker_delete_b(appname='',file_key='',confirm_str='是否更�
                 caches.open(one_key).then(function(cache){
                     cache.keys().then(function(keys){
                         var blxl=1;
-                        keys.forEach(function(request, index, array){
-                            if (file_key==''){
-                                if (blxl % 100 == 0){
-                                    var current_str=blxl+' '+one_key+' delete url: '+array[index]['url'];
-                                    sub_service_worker_delete_b_message(current_str);
-                                }
+                        keys.forEach(sub_service_worker_delete_b_one_key);
+                        //function(request, index, array){
+                            //if (file_key==''){
+                                //if (blxl % 100 == 0){
+                                    //var current_str=blxl+' '+one_key+' delete url: '+array[index]['url'];
+                                    //sub_service_worker_delete_b_message(current_str);
+                                //}
                                 
-                                blxl=blxl+1;
-                                cache.delete(request);
-                            }
-                            else if (array[index]['url'].includes(file_key)){
-                                var current_str=blxl+' '+one_key+' delete url: '+array[index]['url'];
-                                sub_service_worker_delete_b_message(current_str);               
+                                //blxl=blxl+1;
+                                //cache.delete(request);
+                            //}
+                            //else if (array[index]['url'].includes(file_key)){
+                                //var current_str=blxl+' '+one_key+' delete url: '+array[index]['url'];
+                                //sub_service_worker_delete_b_message(current_str);               
                                                  
-                                blxl=blxl+1;
-                                cache.delete(request);                                
-                            }
-                        });
+                                //blxl=blxl+1;
+                                //cache.delete(request);                                
+                            //}
+                        //});
                         
                         if (file_key==''){
                             caches.delete(one_key);

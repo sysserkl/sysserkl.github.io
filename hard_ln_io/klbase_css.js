@@ -1875,6 +1875,14 @@ function select_option_numbers_b(cslen,batch_open_num){
     return bljg;
 }
 
+function list_2_option_b(cslist){
+    var option_t=[];
+    for (let item of cslist){
+        option_t.push('<option>'+item+'</option>');
+    }
+    return option_t;
+}
+
 function highlight_obj_b(obj,search_str,new_str){
     if (search_str==''){return 0;}
     var old_txt=obj.innerText;

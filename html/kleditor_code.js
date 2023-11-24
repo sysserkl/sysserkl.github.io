@@ -180,46 +180,85 @@ function options_kleditor(){
     }
 }
 
-function remove_invisible_kleditor(){
+function remove_obj_kleditor(cstype='none'){
+    function sub_remove_obj_kleditor_check(one_dom){
+        switch (cstype){
+            case 'none':
+                return one_dom.style.display=='none';
+                break;
+            case 'empty':
+                return one_dom.innerHTML=='';
+                break;
+            case 'space':
+                return one_dom.innerHTML.trim()=='' || one_dom.innerHTML.trim().match(/^(&nbsp;)+$/)!==null;
+                break;
+        }
+        return false;
+    }
+    //---------------------
     if (is_in_source_mode_kleditor()){return;}
-    if (confirm('是否移除不可见doms？')==false){return;}
+    
+    var odoms,query_str;
+    [odoms,query_str]=doms_get_kleditor();
+    if (odoms===false){return;}
+        
+    if (confirm('是否移除不可见的 '+query_str+' doms？')==false){return;}
 
-    var odiv=document.getElementById('div_text_box');
     var bldone=0;
     while (true){
-        var blfound=false;
-        var odoms=odiv.querySelectorAll('*');
+        odoms=doms_get_kleditor()[0];
+        if (odoms===false){break;}
+
+        var found_doms=[];
         for (let one_dom of odoms){
-            if (one_dom.style.display=='none'){
-                one_dom.parentNode.removeChild(one_dom);
-                blfound=true;
-                bldone=bldone+1;
-                break;
+            if (sub_remove_obj_kleditor_check(one_dom)){
+                found_doms.push(one_dom);
             }
         }
-        if (blfound==false){break;}
+        if (found_doms.length==0){break;}
+        
+        bldone=bldone+found_doms.length;
+        for (let one_dom of found_doms){
+            one_dom.parentNode.removeChild(one_dom);
+        }
     }
-    js_alert_b('操作完成，处理了'+bldone+'个dom','span_info');
+    js_alert_b('操作完成，处理了 '+bldone+' 个dom','span_info');
 }
 
-function remove_class_kleditor(){
+function doms_get_kleditor(){
+    var query_str=document.getElementById('input_query_str_kleditor').value.trim();
+    try {
+        var odiv=document.getElementById('div_text_box');
+        return [odiv.querySelectorAll(query_str),query_str];        
+    }
+    catch (e){
+        alert('e');
+        return [false,query_str];
+    }
+}
+
+function remove_attribute_kleditor(){
     if (is_in_source_mode_kleditor()){return;}
-    if (confirm('是否移除class？')==false){return;}
     
-    var odiv=document.getElementById('div_text_box');
-    var odoms=odiv.querySelectorAll('*');
+    var odoms,query_str;
+    [odoms,query_str]=doms_get_kleditor();
+    if (odoms===false){return;}
+    
+    var cstype=document.getElementById('select_attribuute_kleditor').value;
+    if (confirm('是否移除 '+query_str+' 对象的 '+cstype+'？')==false){return;}
+    
     var bldone=0;
     var blignore=0;
     for (let item of odoms){
-        if (item.classList.length>0){
-            item.removeAttribute('class');
+        if (item.getAttribute(cstype)){
+            item.removeAttribute(cstype);
             bldone=bldone+1;
         }
         else {
             blignore=blignore+1;
         }
     }
-    js_alert_b('操作完成，处理了'+bldone+'个dom，无需处理'+blignore+'个','span_info');
+    js_alert_b('操作完成，处理了 '+bldone+' 个dom，无需处理 '+blignore+' 个','span_info');
 }
 
 function emoji_list_kleditor(){
@@ -235,9 +274,16 @@ function emoji_list_kleditor(){
 
 function menu_kleditor(){
     var str_t=klmenu_hide_b('');
+    var blparent=menu_parent_node_b(str_t);
+    
+    var option_list=list_2_option_b(['alt','class','rel','style','title']);
+    
     var klmenu1=[
-    '<span class="span_menu" onclick="'+str_t+'remove_class_kleditor();">移除class</span>',
-    '<span class="span_menu" onclick="'+str_t+'remove_invisible_kleditor();">移除不可见doms</span>',
+    '<span class="span_menu">批量移除 <select id="select_attribuute_kleditor">'+option_list.join('')+'</select> <span class="aclick" onclick="'+blparent+'remove_attribute_kleditor();">执行</span></span>',
+    '<span class="span_menu" onclick="'+str_t+'remove_obj_kleditor(\'none\');">批量移除不可见doms</span>',
+    '<span class="span_menu" onclick="'+str_t+'remove_obj_kleditor(\'empty\');">批量移除innerHTML为空的doms</span>',
+    '<span class="span_menu" onclick="'+str_t+'remove_obj_kleditor(\'space\');">批量移除innerHTML为空格的doms</span>',
+    '<span class="span_menu">query string: <input id="input_query_str_kleditor" value="*" /></span>',
     '<span class="span_menu" onclick="'+str_t+'save_kleditor();">Save</span>',
     '<span class="span_menu" onclick="'+str_t+'save_kleditor(\'\',true);">ENSave</span>',
     '<span class="span_menu" onclick="'+str_t+'emoji_list_kleditor();">emoji list</span>',
@@ -254,7 +300,10 @@ function menu_kleditor(){
     ];    
     klmenu_image.push(menu_container_b(str_t,group_list,'img: '));    
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'📝','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_image,'🖼','14rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'📝','22rem','1rem','1rem','60rem')+klmenu_b(klmenu_image,'🖼','14rem','1rem','1rem','60rem'),'','0rem')+' ');
+    
+    var input_list=[['input_query_str_kleditor',10.1,5]];
+    input_size_b(input_list,'id');    
 }
 
 function init_kleditor(){
