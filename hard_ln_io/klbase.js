@@ -1397,23 +1397,24 @@ function reverse_str_b(csstr){
 }
 
 function service_worker_unregister_b(appname){
+    function sub_service_worker_unregister_b_scan(registrations){
+        var blfound=false;
+        for (let one_registration of registrations){
+            if (one_registration.active['scriptURL'].includes(fname) || one_registration.waiting && one_registration.waiting['scriptURL'].includes(fname)){
+                one_registration.unregister();
+                console.log('unregister',fname); //此行保留 - 保留注释
+                blfound=true;
+            }
+        }
+        if (blfound===false){
+            console.log('not found',fname);
+        }
+        console.log('==========');
+    }
+    //---------------------------
     var fname=appname+'_service_worker.js';
-    if (window.navigator && navigator.serviceWorker){        
-        navigator.serviceWorker.getRegistrations()
-        .then(function(registrations) {
-            var blfound=false;
-            for (let one_registration of registrations) {
-                if (one_registration.active['scriptURL'].includes(fname) || one_registration.waiting && one_registration.waiting['scriptURL'].includes(fname)){
-                    one_registration.unregister();
-                    console.log('unregister',fname); //此行保留 - 保留注释
-                    blfound=true;
-                }
-            }
-            if (blfound===false){
-                console.log('not found',fname);
-            }
-            console.log('==========');
-        });
+    if (window.navigator && navigator.serviceWorker){
+        navigator.serviceWorker.getRegistrations().then(sub_service_worker_unregister_b_scan);
     }
 }
 
@@ -1424,23 +1425,55 @@ function service_worker_delete_b(appname='',file_key='',confirm_str='是否更�
         message_show_b(show_str,show_type,show_id,'',0,false);    
     }
     
-    function sub_service_worker_delete_b_one_key(request, index, array){
+    function sub_service_worker_delete_b_one_file(request, index, array, one_key, cache,csxl){
         if (file_key==''){
-            if (blxl % 100 == 0){
-                var current_str=blxl+' '+one_key+' delete url: '+array[index]['url'];
+            if (csxl % 100 == 0){
+                var current_str=key_no+'.'+csxl+' '+one_key+' delete url: '+array[index]['url'];
                 sub_service_worker_delete_b_message(current_str);
             }
-            
-            blxl=blxl+1;
             cache.delete(request);
+            csxl=csxl+1;
         }
         else if (array[index]['url'].includes(file_key)){
-            var current_str=blxl+' '+one_key+' delete url: '+array[index]['url'];
-            sub_service_worker_delete_b_message(current_str);               
-                             
-            blxl=blxl+1;
-            cache.delete(request);                                
+            var current_str=key_no+'.'+csxl+' '+one_key+' delete url: '+array[index]['url'];
+            sub_service_worker_delete_b_message(current_str);
+            cache.delete(request);         
+            csxl=csxl+1;
         }
+        return csxl;
+    }
+    
+    function sub_service_worker_delete_b_one_key(){
+        if (key_no>=key_len){return;}
+        
+        var one_key=key_list[key_no];
+        key_no=key_no+1;
+        
+        var is_match=(is_all || one_key==keyname || one_key.substring(0,keyname.length+2)==keyname+'_v');
+        if (!is_match){
+            setTimeout(sub_service_worker_delete_b_one_key,10);
+            return;
+        }
+        
+        caches.open(one_key).then(function(cache){
+            cache.keys().then(function(keys){
+                var blxl=1;
+                keys.forEach(function (request, index, array){
+                    blxl=sub_service_worker_delete_b_one_file(request, index, array,one_key,cache,blxl);
+                });
+                
+                if (file_key==''){
+                    caches.delete(one_key);
+                    
+                    var current_str='caches.delete '+one_key;
+                    sub_service_worker_delete_b_message(current_str);
+          
+                    appname=one_key.replace(/^pwa_(.*?)_store.*$/g,'$1');
+                    service_worker_unregister_b(appname);
+                }
+                setTimeout(sub_service_worker_delete_b_one_key,10);
+            });
+        });
     }
     //---------------------------
     if (confirm_str!==''){
@@ -1451,45 +1484,15 @@ function service_worker_delete_b(appname='',file_key='',confirm_str='是否更�
 
     var show_str='';
     var delimiter=(show_type=='value'?'\n':'<br />');
-    caches.keys().then(function(keyList){
-        for (let one_key of keyList){
-            if (is_all || one_key==keyname || one_key.substring(0,keyname.length+2)==keyname+'_v'){
-                caches.open(one_key).then(function(cache){
-                    cache.keys().then(function(keys){
-                        var blxl=1;
-                        keys.forEach(sub_service_worker_delete_b_one_key);
-                        //function(request, index, array){
-                            //if (file_key==''){
-                                //if (blxl % 100 == 0){
-                                    //var current_str=blxl+' '+one_key+' delete url: '+array[index]['url'];
-                                    //sub_service_worker_delete_b_message(current_str);
-                                //}
-                                
-                                //blxl=blxl+1;
-                                //cache.delete(request);
-                            //}
-                            //else if (array[index]['url'].includes(file_key)){
-                                //var current_str=blxl+' '+one_key+' delete url: '+array[index]['url'];
-                                //sub_service_worker_delete_b_message(current_str);               
-                                                 
-                                //blxl=blxl+1;
-                                //cache.delete(request);                                
-                            //}
-                        //});
-                        
-                        if (file_key==''){
-                            caches.delete(one_key);
-                            
-                            var current_str='caches.delete '+one_key;
-                            sub_service_worker_delete_b_message(current_str);
-                  
-                            appname=one_key.replace(/^pwa_(.*?)_store.*$/g,'$1');
-                            service_worker_unregister_b(appname);
-                        }
-                    });
-                });
-            }
-        }
+    
+    var key_len=0;
+    var key_no=0;
+    var key_list=[];
+    
+    caches.keys().then(function(cskeys){
+        key_list=cskeys;
+        key_len=key_list.length;
+        sub_service_worker_delete_b_one_key();
     });
 }
 
@@ -1500,7 +1503,9 @@ function pwa_clear_cache_all_b(){
 
 function pwa_register_b(jsfile,cscaption,csid,cstype,autohide=-1){
     // Register service worker to control making site work offline
-    if (!is_local_b() && 'serviceWorker' in navigator){
+    var check_is_local=(local_storage_get_b('enable_local_pwa_register')!=='1'?true:false);
+    
+    if ((!check_is_local || !is_local_b()) && 'serviceWorker' in navigator){
         navigator.serviceWorker.register(jsfile).then(function(){
             message_show_b(cscaption+' Service Worker Registered',cstype,csid,scheme_global['a'],autohide);
         });
