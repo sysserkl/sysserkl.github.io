@@ -472,17 +472,21 @@ function words_queue_do_type_kle(){
 
 function words_array_2_lines_kle(){
     var otextarea=document.getElementById('textarea_words_queue');
-    var blstr_old=otextarea.value.trim().split('\n')[0];
+    var blstr_old=otextarea.value.trim().split('\n');
     try {
         var list_t=eval('['+blstr_old+']');
-        if (list_t.length>0){
-            list_t=list_t[0];
-            if (Array.isArray(list_t)){
-                var blstr_new=list_t.join('\n');
-                if (confirm('是否将 '+blstr_old+'\n转换为\n'+blstr_new+'\n？')){
-                    otextarea.value=blstr_new;
-                }
-            }
+        var words_list=[];
+        var names=[];
+        for (let arow of list_t){
+            if (!Array.isArray(arow) || arow.length!==3){continue;}
+            words_list.push(arow.join('\n'));
+            names.push(arow[0]);
+        }
+        
+        if (words_list.length>0){
+            if (!confirm('是否转换单词 '+names.join(' ')+' 为多行形式？')){return;}
+            var blstr_new=words_list.join('\n---\n');
+            otextarea.value=blstr_new;
         }
     }
     catch (error){
@@ -651,6 +655,11 @@ function menu_kle(){
 }
 
 function old_words_name_list_form_kle(){
+    var ocheck=document.getElementById('check_js_wiki');
+    if (ocheck){
+        ocheck.checked=true;
+    }
+    
     var postpath=postpath_b();
     var form_head='<form method="POST" action="'+postpath+'temp_txt_share.php" target=_blank>\n';
     
