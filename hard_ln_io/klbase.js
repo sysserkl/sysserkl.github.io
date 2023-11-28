@@ -3457,14 +3457,17 @@ function array_col_value_get_b(csarr,col_no,default_value=false,cstype='int'){
                 bltmp=parseInt(bltmp);
                 if (!isNaN(bltmp)){
                     blvalue=bltmp;
-                }                
+                }
                 break;
             case 'float':
                 bltmp=parseFloat(bltmp);   
                 if (!isNaN(bltmp)){
                     blvalue=bltmp;
-                }                
-                break;         
+                }
+                break;
+            case 'str':
+                blvalue=bltmp.toString();
+                break;
             default:
                 blvalue=bltmp;
         }

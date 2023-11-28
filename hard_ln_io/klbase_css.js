@@ -18,7 +18,7 @@ function color_name2hex_b(csname){
 function scheme_div_b(){
     Object.entries(scheme_global).forEach(([key, value]) => {
         var hsl=rgb2hsl_b(value);
-        document.write('<div style="background-color:'+value+';"><span style="color:black;background-color:white;padding-right:0.5rem;">scheme_global["'+key+'"]: "'+value+'", rgb: '+hex2rgb_b(value)+' hsl: '+hsl["h"].toFixed(4)+' '+hsl["s"].toFixed(4)+' '+hsl["l"].toFixed(4)+'</span></div>');
+        document.write('<div style="background-color:'+value+';"><span style="color:black;background-color:white;padding-right:0.5rem;">scheme_global["'+key+'"]: "'+value+'", rgb: '+hex2rgb_b(value)+' hsl: '+hsl['h'].toFixed(4)+' '+hsl['s'].toFixed(4)+' '+hsl['l'].toFixed(4)+'</span></div>');
     });
 }
 
@@ -743,7 +743,7 @@ function hex2rgb_b(hex,return_str=false){
         hex=color_name2hex_b(hex);
         result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
     }
-    
+
     var bljg = result ? [parseInt(result[1], 16), parseInt(result[2], 16), parseInt(result[3], 16)] : false;
     if (return_str){
         if (bljg===false){return '';}

@@ -434,9 +434,14 @@ function dots_district_weather(){
     var h_dots='';
     var l_dots='';
     
-    var temperature_color_list=document.getElementById('input_temperature_color_range_jsad_dweather').value.trim().split(',');
-    var min_value,max_value,color_range,color1,color2;    
-    [min_value,max_value,color_range,color1,color2]=array_batch_value_get_b(temperature_color_list,[[-10,'int'],[40,'int'],[8,'int'],['green',''],['red','']]);
+    var temperature_color_str=document.getElementById('input_temperature_color_range_jsad_dweather').value.trim();
+    var temperature_color_list=temperature_color_str.split(',');
+    if (temperature_color_list.length!==5){
+        alert('需要5个元素');
+        return;
+    }
+    var min_value,max_value,color_range,color1,color2;
+    [min_value,max_value,color_range,color1,color2]=array_batch_value_get_b(temperature_color_list,[[-10,'int'],[40,'int'],[8,'int'],['green','str'],['red','str']]);
     
     var color_list=[];
     if (color1!==color2){
