@@ -44,7 +44,7 @@ function append_or_edit_notepad(ospan){
 function page_notepad(csno){
     var cslen=current_result_notepad_global.length;
     var bljg=page_combination_b(cslen,rows_per_page_notepad_global,csno,'page_notepad','locate_notepad',false,1,10);  
-    //-------------
+    //-----------------------
     var result_t=[];
     var blend=Math.min(csno-1+rows_per_page_notepad_global,cslen);
     var blno=0;
@@ -165,7 +165,7 @@ function idb_edit_notepad(db,is_delete=false){
             };
         }
     }
-    //---------------
+    //-----------------------
     var blcontent=document.getElementById('textarea_content_notepad').value;
     var old_id_set=new Set();
     return new Promise((resolve, reject) => {
@@ -299,7 +299,7 @@ function idb_notepad(cstype='',cskey=false,is_delete=false){
                 break;
         }
     }
-    //-------------------------
+    //-----------------------
     return new Promise((resolve, reject) => {
         var bljg=idb_main_b(cstype,'notepad_dbc','notepad_dbf',sub_idb_notepad_switch);
         resolve(bljg);

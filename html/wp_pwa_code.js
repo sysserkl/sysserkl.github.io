@@ -289,7 +289,7 @@ function check_wp_pwa(cstype='添加',do_ask=true){
         return false;    
     }
 
-    //-----------
+    //-----------------------
     form_content_check_money_b();
     
     var result_t=[
@@ -324,7 +324,7 @@ function check_wp_pwa(cstype='添加',do_ask=true){
     blcontent=blcontent.replace(/\n/g,'<p class=tb01>');
     result_t.push('备注:'+blcontent);    
     
-    //-----------
+    //-----------------------
     var bldata=localstorage_get_wp_pwa();
     var old_count=count_wp_pwa();
     if (old_count>200){

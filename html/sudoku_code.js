@@ -709,7 +709,7 @@ function reform_sd(csstr=''){
         }
         return block_list;
     }
-    //-------------
+    //-----------------------
     
     var blarray = csstr.split("");
     //以下console.log 都保留 - 保留注释

@@ -181,7 +181,7 @@ function compare_fortune_500(){
         }
         return [result_t,flot_data];
     }
-    //------------------------------
+    //-----------------------
     var year_dict={};
     var year_set=new Set();
     var name_set=new Set();

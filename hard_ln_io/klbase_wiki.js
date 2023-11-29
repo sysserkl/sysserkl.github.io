@@ -263,7 +263,7 @@ function wiki_ed2k_magnet_b(csstr,cstyle=''){
         }
         return csstr;
     }
-    //---------------
+    //-----------------------
     if (cstyle=='and'){
         //ed2k
         if (csstr.includes('&lt;ed2k name=&quot;') && csstr.includes('&lt;/ed2k&gt;')){
@@ -418,7 +418,7 @@ function wiki_ul_b(csstr,csstyle=''){
         }
         return bljg;
     }
-    //------------------
+    //-----------------------
     csstr=sub_wiki_ul_b_type(csstr,'#',csstyle);
     csstr=sub_wiki_ul_b_type(csstr,'*',csstyle);
     return csstr;

@@ -360,7 +360,7 @@ function popup_selection_money_b(){
             oclass.insertAdjacentHTML('afterend',popup_b(popup_name,bljg,'','70%'));
         }
     }
-    //---------------
+    //-----------------------
     var list_t=["健康","食品","休闲","水电物","衣物","电脑","蔬菜","水果","礼金","交通","餐馆","工具","卫生","办公","卧室","化妆","厨房","家装","阅读","牛奶","通信","影视","投资","生活"];
     sub_popup_selection_money_b_generate(list_t,'span_class','popup_class','input_class');
     

@@ -113,7 +113,7 @@ function batch_open_sites_klsearch(cscategory){
             setTimeout(sub_batch_open_sites_klsearch_one_site,2000);
         }
     }
-    //--------------------------------
+    //-----------------------
     if (!confirm('是否批量搜索？')){return;}
     
     var blkey=document.getElementById('input_searchtxt').value;
@@ -211,25 +211,35 @@ function args_klsearch(){
         document.title=blkey+' - KLSearch';
     }
     else {
-        var is_proxy=false;
+        var links_t=[];
         for (let one_type of bltype){
+            var is_proxy=false;        
             if (one_type.slice(-3,)=='(p)'){
                 is_proxy=true;
                 one_type=one_type.slice(0,-3);
             }
+            
             for (let blxl=0;blxl<search_sites_list_global.length;blxl++){
                 var item=search_sites_list_global[blxl];
                 if (one_type==item[4].toLowerCase()){
                     if (blcategory!=='' && blcategory!==item[6].toLowerCase()){continue;}
                     var blhref=search_site_klsearch(blxl,is_proxy,blkey,false);
-                    if (blclose=='1'){
-                        document.location=blhref;
-                    }
-                    else {
-                        window.open(blhref);
-                    }
+                    links_t.push(blhref);
                 }
             }
+        }
+        
+        if (links_t.length==0){return;}
+        
+        for (let blxl=0;blxl<links_t.length-1;blxl++){
+            window.open(links_t[blxl]);
+        }
+        
+        if (blclose=='1'){
+            document.location=links_t[links_t.length-1];
+        }
+        else {
+            window.open(links_t[links_t.length-1]);
         }
     }
 }
@@ -431,7 +441,7 @@ function batch_keys_links_klsearch(){
             document.getElementById('div_status').insertAdjacentHTML('beforeend','<textarea id="container_batch_links_klsearch" style="height:20rem;">'+bljg.join('\n')+'</textarea>');        
         }
     }
-    //-------------------
+    //-----------------------
     var list_t=document.getElementById('textarea_batch_keys').value.trim().split('\n');
     if (list_t.length==1 && list_t[0]==''){return;}
     

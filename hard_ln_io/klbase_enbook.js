@@ -92,7 +92,7 @@ function get_new_words_arr_set_enbook_b(cstype,csstr='',div_id='div_new_words2')
 function get_new_words_arr_obj_enbook_b(cstype,csstr='',csobjects=false,addline=false,append_parent=false,execstring='',ew=false){
     //cstype 1 全部单词 2 未收录 3 已收录 4 旧单词js_wiki格式 5 稀有旧单词 6 稀有旧单词js_wiki格式 - 保留注释
     //csobjects 在 selenium bible mediawiki_common 等中被调用 - 保留注释
-    //------------------
+    //-----------------------
     function sub_get_new_words_arr_obj_enbook_b_objects(){
         var blno=-1;
         for (let item of csobjects){
@@ -166,7 +166,7 @@ function get_new_words_arr_obj_enbook_b(cstype,csstr='',csobjects=false,addline=
         }
         console.log('sub_get_new_words_arr_obj_enbook_b_objects() 费时：'+(performance.now() - t0) + ' milliseconds');
     }
-    //-----------------------------------
+    //-----------------------
     var t0 = performance.now();
     
     var class_name=(cstype=='2'?'new':'rare')+'_word_search_links';;
@@ -201,7 +201,7 @@ function new_old_word_list_enbook_b(bljgarr2,check_types=true){
 		endata_t.add(item[0].replace(new RegExp(' ','g'),'_'));
 	}
 
-    //-------------
+    //-----------------------
     var new_words_all_set=new Set();
         
     var new_words_set=new Set();
@@ -246,12 +246,12 @@ function new_old_word_list_enbook_b(bljgarr2,check_types=true){
 
 function get_new_words_arr_html_enbook_b(cstype,all_words_set,new_words_set,old_words_set,rare_words_set,new_words_set10_size,div_id){
     //cstype: 1 全部单词 2 未收录 3 已收录 4 旧单词js_wiki格式 5 稀有旧单词 6 稀有旧单词js_wiki格式 - 保留注释
-    //----------------------
+    //-----------------------
     if (en_words_book_newwords_continue_global){
         new_words_continue_enbook_b(new_words_set.size,new_words_set10_size);
         return;
     }
-    //----------------------
+    //-----------------------
     var bljg='';
     switch (cstype){
         case 1:
@@ -515,7 +515,7 @@ function frequency_enwords_book_b(cstype='',simple_split=false,common_max=4000){
             sub_frequency_enwords_book_b_arow();
         } 
     }
-    //------------------
+    //-----------------------
     if (document.querySelector('span.span_common_old_words')){return;}
     var t0 = performance.now();
 

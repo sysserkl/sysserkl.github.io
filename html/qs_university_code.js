@@ -418,7 +418,7 @@ function name_district_statistics_qs_rank(csarray=false,set_list=false,id_no='',
         }
         return [bljg,flot_list,flot_id_name+'_'+id_no];
     }
-    //---------------------
+    //-----------------------
     if (set_list===false){
         set_list=statistics_set_get_qs_rank();
     }

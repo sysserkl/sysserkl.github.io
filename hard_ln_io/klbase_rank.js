@@ -202,7 +202,7 @@ function company_rate_rank_b(csarray,district_index,year_index,revenue_index,den
         var blyear=parseInt(item[year_index].substring(0,4));
         flot_array[key][2].push([blyear,blvalue/denominator]);
     }
-    //------------------
+    //-----------------------
     var list_t=[];
     for (let key in flot_array){
         if (flot_array[key][2].length==0){continue;}
@@ -241,7 +241,7 @@ function group_rank_b(csarray,group_district,group_year,district_index,year_inde
         }
         result_t[cskey].push(item);            
     }
-    //------------------------------------------------------
+    //-----------------------
     //分组 - 保留注释
     var blkey='';
     var result_t=[];

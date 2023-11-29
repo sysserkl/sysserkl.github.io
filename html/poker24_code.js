@@ -161,7 +161,7 @@ function all_combination2_poker24(){
             sub_all_results_poker24_one_step();
         }
     }
-    //------------------------------
+    //-----------------------
     var t0 = performance.now();    
     var bla=0, blb=0;
     var blxl=0;
@@ -188,7 +188,7 @@ function show_result_poker24(){
         }
         document.getElementById('p_result').innerHTML=result_poker24_global+' 计算次数：'+calculate_times_poker24_global+(t1-t0==0?'':'; 费时：'+(t1 - t0) + ' milliseconds');
     }
-    //-----------------
+    //-----------------------
     document.getElementById('p_result').innerHTML='计算中...';
     setTimeout(sub_show_result_poker24_generator,1);
 }
@@ -253,7 +253,7 @@ function is_in_dict_poker24(cslist){
         }    
         return '';
     }
-    //---------------------
+    //-----------------------
     try {    
         var blvalue1=eval(cslist[0]);
         var blvalue2=eval(cslist[1]);
@@ -379,7 +379,7 @@ function scan_all_poker24(){
         }
         setTimeout(scan_all_poker24_one_round,1000);
     }
-    //----------------------------
+    //-----------------------
     if (!confirm('是否扫描？')){return;}
 
     var t0 = performance.now();    
@@ -469,7 +469,7 @@ function scan_one_poker24(start_num=1,end_num=-1){    //打开console会导致�
         }
         setTimeout(sub_scan_one_poker24_one_step,1);
     }
-    //-------------------
+    //-----------------------
     if (isNaN(start_num)){return;}
     if (start_num<1 || start_num>max_num_poker24_global){return;}
     if (end_num==-1){

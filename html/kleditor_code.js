@@ -195,7 +195,7 @@ function remove_obj_kleditor(cstype='none'){
         }
         return false;
     }
-    //---------------------
+    //-----------------------
     if (is_in_source_mode_kleditor()){return;}
     
     var odoms,query_str;
@@ -388,7 +388,7 @@ function save_kleditor(cstitle='',encrypt=false){
     var savename=cstitle+'_'+today_str_b('dt','','','_')+'.htm';
     
     blstr=standalone_html_head_klr_b('💡 '+cstitle)+'<body>\n'+blstr+'\n<script>\n'+klarticle_funs_klr_b(true)+'\n'+`
-//-----------------
+//-----------------------
 klarticle_init_klr_b(true);
 </script>
 <p>&nbsp;</p>

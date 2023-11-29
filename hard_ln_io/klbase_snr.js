@@ -459,7 +459,7 @@ function classify_sites_klsnews_b(bottom_eng=false,sort_by_day=false,show_cn_en=
         bljg=bljg+'</div>';
         return bljg;
     }
-    //--------------------------------------------
+    //-----------------------
     var selected_list=filter_list_klsnews_b();
     //形如 - 保留注释：
     //[ "https://www.theverge.com/2019/3/23/18278557/apple-iphone-11-wireless-charging-other-devices-airpods-watch-rumor", "Apple’s next iPhone might be able to wirelessly charge other devices", "2019-03-25", "Apple next iPhone might be able to wirelessly charge other devices", "The Verge" ]
@@ -615,10 +615,10 @@ function classify_sites_klsnews_b(bottom_eng=false,sort_by_day=false,show_cn_en=
     odiv2.innerHTML='<div class="div_masonry" style="'+divstyle+'"><select onchange="document.location.href = this.value;">'+a_site_num_links+'</select>'+' <span id="span_open_all" onclick=\'this.style.display="none";open_all_more_klsnews_b();\' class="aclick">全部展开</span></div>'+bljg;
     masonrydiv_klsnews_b();
     
-    //enwords----
+    //enwords
     words_translate_klsnews_b();
     sentence_new_words_klsnews_b();
-    //----
+    //---
     document.location.href = '#content';
     fav_status_klsnews_b();
     
@@ -730,7 +730,7 @@ function rnd_links_klsnews_b(cscount=0){
         blxl=blxl+1;
         setTimeout(sub_rnd_links_klsnews_b_one_link,2000);
     }
-    //---------------------
+    //-----------------------
     var odiv2as=document.querySelectorAll('a.a_news_link');
     var list_t=[];
     var bgcolor=hex2rgb_b(scheme_global['pink'],true);
@@ -784,7 +784,7 @@ function filter_list_klsnews_b(){
         }
         return selected_list;
     }
-    //--------------------------
+    //-----------------------
     var oinput_focus=document.getElementById('input_focus');
     if (!oinput_focus){
         return sub_filter_list_klsnews_b_selected();
@@ -885,7 +885,7 @@ function getlines_klsnews_b(jssearchkey='',csno=1,cslines=50){
         var page_html=page_combination_b(bllength,cslines,csno,'getlines_klsnews_b(\''+jssearchkey+'\',','getlines_location_klsnews_b(\''+jssearchkey+'\',','text-align:right',2,0,'','aclick');
         return page_html;
     }
-    //---------
+    //-----------------------
     var bljg='';
     var selected_list=filter_list_klsnews_b();
     if (jssearchkey!==''){

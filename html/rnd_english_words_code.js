@@ -184,7 +184,7 @@ function show_sentence_rndwords(){
         blxl=blxl+1;
         setTimeout(sub_show_sentence_rndwords_one_word,5);
     }
-    //---------------
+    //-----------------------
     if (klmenu_check_b('span_show_en_sentence_b',false)==false){return;}
 
     var t0=performance.now();       
@@ -390,7 +390,7 @@ function slide_one_rndwords(){
             slide_no_rndwords_global=0;
         }
     }
-    //---------------------------------
+    //-----------------------
     if (words_temp_arr_global.length<1){return;}
     
     var bljg=one_line_rndwords(words_temp_arr_global[slide_no_rndwords_global]);

@@ -240,7 +240,7 @@ function douban_main_multimedia(){
     var bljg5=douban_sort_multimedia(4);
     var bljg10=douban_sort_multimedia(2);
     var bljg11=douban_sort_multimedia(5);
-    //---------
+    //-----------------------
     document.getElementById('divhtml').innerHTML=
     '<h3>有2部及以上作品的导演</h3><ol>'+bljg+'</ol>'
     +'<h3>国家排序</h3><ol>'+bljg3+'</ol>'

@@ -61,7 +61,7 @@ function init_gps_news(){
     var zoom_value=6;
     var map_name_value='mapbox';    //gd 或 mapbox - 保留注释
 
-    //----------
+    //-----------------------
     document.getElementById('div_icon').innerHTML='📰';
     document.getElementById('div_status').innerHTML='时局图';
     document.getElementById('div_buttons').innerHTML=buttons_gps_news();
@@ -85,7 +85,7 @@ function init_gps_news(){
     current_position_layer_gps_global = L.layerGroup();    //全局变量，不加 var - 保留注释
     current_position_layer_gps_global.addTo(omap_gps_news_global);
 
-    //-----------
+    //-----------------------
     var cskeys=href_split_b(location.href);
     var bltype='';
     if (cskeys.length>0){

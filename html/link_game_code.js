@@ -10,7 +10,7 @@ function box_linkgame(top_left=false,cspercent=0.8){
         list_t.push('</tr>');        
         return list_t;
     }
-    //-------------------
+    //-----------------------
     var max_elements=Math.round(rows_lg_global*cols_lg_global*cspercent);    
     switch (type_lg_global){
         case 'cn':

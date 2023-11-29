@@ -91,7 +91,7 @@ function statistics_supplier_hospital_medicine_price(){
         }    
         return blkey;
     }
-    //-------------------
+    //-----------------------
     var supplier_dict={};
     
     switch (title_name_jscm_global){

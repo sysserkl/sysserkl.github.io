@@ -347,7 +347,7 @@ function search_cnki(cskey=false,row_no=1){
 function page_cnki(csno,show_html=true){
     var cslen=current_result_cnki_global.length;
     var bljg=page_combination_b(cslen,rows_per_page_cnki_global,csno,'page_cnki','locate_cnki',false,1,10,'p_pages_cnki');  
-    //-------------
+    //-----------------------
     var result_t=[];
     var blend=Math.min(csno-1+rows_per_page_cnki_global,cslen);
     var blno=0;

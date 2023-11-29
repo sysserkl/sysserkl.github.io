@@ -156,7 +156,7 @@ function statistics_rmrb_online(is_year=false){
         bljg=bljg+'<textarea>'+textarea2.join('\n')+'</textarea>';        
         return bljg;
     }
-    //---------------------
+    //-----------------------
     var oinput=document.getElementById('input_search');
     var key_name=oinput.value.replace(/\s+/g,' ').trim();   //去掉重复的空格 -保留注释
     var is_multi_keys=klmenu_check_b('span_mutli_keys_flot_rmrb_online_common',false);

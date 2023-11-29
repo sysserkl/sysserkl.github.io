@@ -452,7 +452,7 @@ function arow_dbb(arow,show_txtbook=false){
 function page_dbb(csno){
     var cslen=current_result_dbb_global.length;
     var bljg=page_combination_b(cslen,rows_per_page_dbb_global,csno,'page_dbb','locate_dbb',false,1,15);  
-    //-------------
+    //-----------------------
     var result_t=[];
     var blend=Math.min(csno-1+rows_per_page_dbb_global,cslen);
     var blno=0;
@@ -528,7 +528,7 @@ function amazon_title_batch_dbb(){
         wait_times=0;
         setTimeout(sub_amazon_title_batch_dbb_one_title,2000);        
     }
-    //--------------------------
+    //-----------------------
     var list_t=title_simple_name_dbb(false);
     var bllen=list_t.length;
     if (list_t.length==0){return;}

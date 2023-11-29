@@ -200,7 +200,7 @@ function path_convert_b(csline,decode=-1,use_remote_host=false){
         
         return arow;    
     }
-    //---------------------------------------------------------
+    //-----------------------
     var klwebphp=klwebphp_path_b();  //末尾有/ - 保留注释
     var sele_path=klbase_sele_path_b(use_remote_host)[1];  //末尾无/ - 保留注释
     var blhost=location_host_b(use_remote_host);   //均末尾不含/ - 保留注释
@@ -483,7 +483,7 @@ function str_reg_search_b(csinput,cskeys,csreg){
         }
         return blfound2;
     }
-    //---------
+    //-----------------------
 	var blfound=false;
 	if (Array.isArray(csinput)==false){
 		csinput=[''+csinput];   //可能不是字符串，typeof csinput!=='string' - 保留注释
@@ -623,7 +623,7 @@ function sort_by_date_b(a,b,csdesc=false,arrayno=-1,arrayno2=-1,array2desc=false
             return new Date(a[arrayno])-new Date(b[arrayno]);
         }
     }
-    //-------
+    //---
     if (arrayno<0){
         if (csdesc){
             return new Date(b)-new Date(a);
@@ -1175,7 +1175,7 @@ function local_storage_get_b(csid,csmax=-1,return_list=false,remove_item='',isre
             }
         }
     }
-    //--------------------------------
+    //-----------------------
     var bljg=localStorage.getItem(csid) || '';
     while (bljg.includes('\n\n')){
         bljg=bljg.replace(/\n\n/g,'\n');
@@ -1411,7 +1411,7 @@ function service_worker_unregister_b(appname){
         }
         console.log('==========');
     }
-    //---------------------------
+    //-----------------------
     var fname=appname+'_service_worker.js';
     if (window.navigator && navigator.serviceWorker){
         navigator.serviceWorker.getRegistrations().then(sub_service_worker_unregister_b_scan);
@@ -1475,7 +1475,7 @@ function service_worker_delete_b(appname='',file_key='',confirm_str='是否更�
             });
         });
     }
-    //---------------------------
+    //-----------------------
     if (confirm_str!==''){
         if (!confirm(confirm_str)){return;}
     }
@@ -1519,7 +1519,7 @@ function message_show_b(csstr,cstype,csid='',cscolor='',autohide=0,show_in_conso
     function sub_message_show_b_clear(){
         document.getElementById(csid).innerHTML='';
     }
-    //---------------
+    //-----------------------
     if (csid!==''){
         var odom=document.getElementById(csid);
         switch (cstype){
@@ -1661,7 +1661,7 @@ function remote_ip_detector_b(host_left_part,csmin,csmax,do_alert=false){
         file_dom_create_b([host_left_part+(csmin+blxl)+'/klwebphp/klbase_you_found_me.js']);
         load_var_b('you_found_me_global',(is_local_b()?10:50),500,sub_remote_ip_detector_b_one_step);
     }
-    //-------------------
+    //-----------------------
     var t0 = performance.now();    
     var bllen=Math.min(256,csmax-csmin);
     var blxl=-1;
@@ -2732,7 +2732,7 @@ function standalone_search_funs_b(cstitle='Search Standalone',cscontent='',diy_f
         }
         
         var bljg=page_combination_b(cslen,rows_per_page,csno,'page_standalone','locate_standalone');
-        //-------------
+        //-----------------------
         var result_t=[];
         var blend=Math.min(csno-1+rows_per_page,cslen);
         var row_no_range=[-1,-1];
@@ -2894,7 +2894,7 @@ function standalone_search_funs_b(cstitle='Search Standalone',cscontent='',diy_f
             }
         }
     }
-    //----------------------
+    //-----------------------
     var fns=['ismobile_b','css_root_style_b','css_root_size_b','str_reg_search_b','str_reg_check_b','page_one_b','page_prev_next_b','page_location_b','page_remove_dot_b','page_combination_b','mouseover_mouseout_oblong_span_b','highlight_obj_b','highlight_oblong_span_b','highlight_color_b'];
     fns=fns.concat(diy_fn_list);
     
@@ -3086,7 +3086,7 @@ function load_fn_b(fn_name,csmax,cswait,run_fn_onsuccess){
             setTimeout(sub_load_fn_b_wait,cswait);
         }
     }
-    //-------------------
+    //-----------------------
     if (csmax==-1){
         csmax=(is_local_b()?20:50);    
     }
@@ -3111,7 +3111,7 @@ function load_var_b(var_name,csmax,cswait,run_fn){
             setTimeout(sub_load_var_b_wait,cswait);
         }
     }
-    //-------------------
+    //-----------------------
     if (csmax==-1){
         csmax=(is_local_b()?20:50);    
     }
@@ -3391,7 +3391,7 @@ function merge_js_data_files_in_one_b(varname,jsfile_list,run_fn){
         file_dom_create_b([jsfile_list[blxl]],true,'js');    
         load_var_b(varname,-1,1000,sub_merge_js_data_files_in_one_b);        
     }
-    //----------------
+    //-----------------------
     var blxl=0;
     var bllen=jsfile_list.length;
     
@@ -3437,7 +3437,7 @@ function wiki_page_title_link_generate_b(cspage,cstitle=''){
         //console.log(encodeURI(csstr).replace(/\.7C/g,'|'));
         return encodeURI(csstr);
     }
-    //-------------------------------
+    //-----------------------
     if (cstitle==''){
         var bllink=sub_wiki_page_title_link_generate_b_punctuation(cspage);
     }
@@ -3496,4 +3496,91 @@ function document_title_key_word_b(csstr,replaced_words=''){
         document.title=document.title.replace(replaced_words,specialstr_lt_gt_j(csstr)+' - '+replaced_words);
     }
     return csstr;
+}
+
+function longest_fraction_b(csarr,cstype='col',str2float=false){
+    function sub_longest_fraction_b_max(csvalue,csresult){
+        if (str2float && typeof csvalue == 'string'){
+            csvalue=parseFloat(csvalue);
+        }
+        if (typeof csvalue == 'number' && !isNaN(csvalue)){
+            var num_t=csvalue.toString().split('.');
+            if (num_t.length==2){
+                csresult=Math.max(csresult,num_t[1].length);
+            }
+        }
+        return csresult;
+    }
+    //-----------------------
+    switch (cstype){
+        case 'col':
+            //当 cstype 为 col 时：csarr 形如 [
+            //['a',23.1,45,'22.22'],
+            //['b',-2.1,25,'aaa'],
+            //['c',2.123,4.5,'aaa'],
+            //['d',8.11,4,'aaa'],
+            //] - 保留注释
+            var decimal_t=[];
+            for (let arow of csarr){
+                for (let blcol=0;blcol<arow.length;blcol++){
+                    if (decimal_t[blcol]==undefined){
+                        decimal_t[blcol]=0;
+                    }
+                    decimal_t[blcol]=sub_longest_fraction_b_max(arow[blcol],decimal_t[blcol]);
+                }
+            }
+            break;
+        case 'arr':
+            var decimal_t=0;
+            for (let arow of csarr){
+                decimal_t=sub_longest_fraction_b_max(arow,decimal_t);
+            } 
+            break;
+    }
+    return decimal_t;
+}
+
+function dicts_2_value_list_b(dicts_list,cskeys=false){
+    //dicts_list 为数组，每个元素为 dict，如 {'name': '阿华田酷脆心情夹心饼干','price': 7.9,'protein': 6.5,'sodium': 0.3,}；返回 每行按 cskeys 顺序排列的 数组们组成的数组。#table #th - 保留注释
+    
+    if (cskeys===false){
+        cskeys=new Set();
+        for (let arow of dicts_list){
+            for (let one_key in arow){
+                cskeys.add(one_key);
+            }
+        }
+    }
+
+    var result_t=[];
+    for (let arow of dicts_list){
+        var row_list=[];
+        for (let akey of cskeys){
+            row_list.push(arow[akey]);
+        }
+        result_t.push(row_list);
+    }
+    return [result_t,cskeys];
+}
+
+function list_2_dicts_b(cslist,cskeys=false,prefix='k_'){
+    //将如表格般排列的数组，转换为每行是 dict 的 数组 - 保留注释
+    if (cslist.length==0){return [];}
+    
+    if (cskeys===false){
+        cskeys=cslist[0]; //第一行为 th 行 - 保留注释
+        cslist=cslist.slice(1,);
+    }
+    
+    var bllen=cskeys.length;
+    
+    var result_t=[];
+    for (let arow of cslist){
+        var list_t={};
+        for (let blxl=0;blxl<Math.min(bllen,arow.length);blxl++){
+            list_t[prefix+cskeys[blxl]]=arow[blxl];
+        }
+        result_t.push(list_t);
+    }
+    return result_t;
 }

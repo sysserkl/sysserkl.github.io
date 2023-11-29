@@ -1,6 +1,7 @@
+//-----------------------
 //history
 //0.0.1-20190125
-//-------------------------
+//-----------------------
 function en_style_b(table_compare=false){
     document.write('\n<style>\n');
     document.write('a.similar {text-decoration:none;}\n');
@@ -326,7 +327,7 @@ function enwords_checkbox_open_b(csname,cstype){
             sub_enwords_checkbox_open_b_one();
         }
     }
-    //---------------------------
+    //-----------------------
     var ocheckbox=document.getElementsByName(csname);
     if (ocheckbox.length==0){return;}
     if (cstype=='1'){
@@ -593,7 +594,7 @@ function en_sentence_one_line_b(aline,wordname='',attachment_path='',wikisite=''
         }    
         return item;
     }
-    //--------------------------------
+    //-----------------------
     var item=aline[0];
     if (Array.isArray(item)){
         item=item.join(' ');
@@ -650,7 +651,7 @@ function en_sentence_one_line_b(aline,wordname='',attachment_path='',wikisite=''
     }
     var bljg='<span class="span_enwords_sentence">'+wiki_line_b(item,attachment_path)+'</span>';
     
-    //----
+    //---
     if (aline[1].slice(-1)!=='/'){
         aline[1]=aline[1]+'/';
     }
@@ -694,7 +695,7 @@ function en_sentence_result_b(wordname,csmax=-1,fontsize='',attachment_path='',w
     function sub_en_sentence_result_b_statistics(){
         console.log('扫描例句条数：',split_no_set.size,'；例句总条数：',en_sentence_global.length,'；占比：',(split_no_set.size*100/en_sentence_global.length).toFixed(2)+'%');    
     }
-    //----------------------------------
+    //-----------------------
     if (en_sentence_global.length==0){
         return ['',0,0];
     }
@@ -881,7 +882,7 @@ function en_day_old_words_b(daynumber,cstype,array_num_t){
         }
         return false;
     }
-    //----------
+    //-----------------------
     var list_t=[];
     var csinterval=4;
     if (cstype.includes('_OR')){
@@ -1313,7 +1314,7 @@ function en_word_temp_get_b(cstype=''){
             return result_t;
             break;
     }
-    //--------------------
+    //-----------------------
     en_words_temp_important_global=[];  //全局变量 - 保留注释
     en_words_temp_global=local_storage_get_b('enwords_temp',-1,true);
     for (let blxl=0;blxl<en_words_temp_global.length;blxl++){
@@ -1328,7 +1329,7 @@ function enwords_temp_2_local_storage_b(csarray){
     function sub_enwords_temp_2_local_storage_b_is_date(item){
         return item.substring(0,4)=='=== ' && item.slice(-4,)==' ===';
     }
-    //--------------------
+    //-----------------------
     if (csarray.length==0){return;}
     if (sub_enwords_temp_2_local_storage_b_is_date(csarray[0])){
         csarray=csarray.slice(1,);
@@ -1875,7 +1876,7 @@ function enwords_recent_search_b(csword='',cstype=''){
     function sub_enwords_recent_search_b_fn(fn_name){
         return recent_search_b('recent_search_enwords',csword,fn_name,'',logo_list,25,false);
     }
-    //----------------------------
+    //-----------------------
     var logo_list=['🥚','✏','🚧','〘 〙','🚩'];
     if (cstype=='mini'){
         var recent_search_str='<p id="p_recent_search" style="line-height:'+(ismobile_b()?'200':'210')+'%;">';
@@ -1987,7 +1988,7 @@ function sentence_split_b(csstr,csno=-1){   //sentence split - 保留注释
     function sub_sentence_split_b_check(csstr1,csstr2){
         return csstr1.length<10 || (csstr1.match(/\s/g) || []).length<5 || csstr2.length<10 || (csstr2.match(/\s/g) || []).length<5 || csstr2.trim().match(/^[a-z]/);   //如果csstr2 以小写字母开头 - 保留注释
     }
-    //----------------------------------
+    //-----------------------
     if (Array.isArray(csstr)){
         return csstr;
     }
@@ -2011,7 +2012,7 @@ function sentence_split_b(csstr,csno=-1){   //sentence split - 保留注释
                 list_t[blxl]='';    
             }
         }    
-        //-----------
+        //-----------------------
         for (let item of list_t){
             if (item==''){continue;}
             result_t.push(item);
@@ -2507,7 +2508,7 @@ function enwords_definition_split_b(csdefinition,include_cn=false,remove_type=tr
         }    
         //无法处理〘 cross my heart (and hope to die): 我发誓所说属实（否则不得好死）；said to show that what you have just said or promised is completely true or sincere 〙 - 保留注释
     }
-    //------------------------
+    //-----------------------
     if (remove_type){
         csdefinition=csdefinition.replace(new RegExp('<b>'+enword_type_b(true)+'\\. <\/b>','g'),'');    //不能加\\b - 保留注释
     }

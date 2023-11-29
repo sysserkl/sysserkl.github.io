@@ -23,7 +23,6 @@ function init_merge_img(){
     input_size_b(input_list,'id');
 }
 
-//--------------
 function step_merge_img(){            
     imagesLoaded_global += 1;
     if (imagesLoaded_global == img_len_global){

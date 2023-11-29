@@ -132,7 +132,7 @@ function share_style_temp_txt_share_b(){
         }    
         return list_t;
     }
-    //-------------------------------
+    //-----------------------
     var otextarea=document.getElementById('textarea_temp_txt_share');
     var blold=otextarea.value.trim();
     var list_t=sub_share_style_temp_txt_share_transform(blold);

@@ -61,7 +61,7 @@ function init_enwords_book(){
     new_words_form_enwords_book();
     enwords_init_b(true);
     args_enwords_book();
-    //---------------
+    //-----------------------
     if (en_words_book_newwords_continue_global===false){
         top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.4rem'),true,false,2);
         input_with_x_b('input_search_enbook',11);

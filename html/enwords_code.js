@@ -1,3 +1,4 @@
+//-----------------------
 //history
 //0.2.4-20200814
 //0.2.3-20190923
@@ -8,7 +9,7 @@
 //0.1.8-20190215
 //0.1.7-20190211
 //0.1.6-20181111
-//--------------------------------------
+//-----------------------
 function args_kle(){
     function sub_args_kle_search(csstr,add_recent=true){
         if (csstr=='' || csstr=='_reg'){
@@ -33,7 +34,7 @@ function args_kle(){
             wordsearch_enwords_b(search_str,is_reg,[],false,true,add_recent);
         }
     }
-    //--------------------------------------
+    //-----------------------
     var cskeys=href_split_b(location.href);
     if (cskeys.length>0 && cskeys[0]!==''){
         //形如：enwords.htm?s=english& - 保留注释
@@ -409,7 +410,7 @@ function words_editor_form_kle(){
     bljg=bljg+textarea_buttons_b('textarea_words_queue','全选,清空,复制,导入temp_txt_share,发送到临时记事本,发送地址','enwords_queue')+' ';    
     
     bljg=bljg+'<select id="select_queue_do_type">';
-    for (let item of ['展现为数组形式','数组转为多行形式','batch_en','batch_en_minor']){
+    for (let item of ['展现为数组形式','数组转为多行形式','batch_en_bo+','batch_en','batch_en_minor']){
         bljg=bljg+'<option>'+item+'</option>';
     }
     bljg=bljg+'</select> ';
@@ -458,12 +459,13 @@ function words_queue_do_type_kle(){
             words_array_2_lines_kle(); 
             break;
         case 'batch_en':
+        case 'batch_en_bo+':
         case 'batch_en_minor':
             var otextarea=document.getElementById('textarea_words_queue');
             var blstr=otextarea.value.trim().split('\n')[0];
             if (blstr!==''){
                 if (confirm('是否 '+bltype+' [ '+blstr+' ] ？')){
-                    window.open('klsearch.htm?k='+blstr+'&t='+bltype+(bltype=='batch_en'?'&iframe':'&close=0'));
+                    window.open('klsearch.htm?k='+blstr+'&t='+bltype+(bltype=='batch_en'?'&iframe':'&close=1'));
                 }
             }
             break;
@@ -776,7 +778,7 @@ function letters_26_kle(idno='',sort_by_count=false,percent=false){
             }
         }
     }
-    //---------------------------------------------------
+    //-----------------------
     if (idno==''){
         var blstr=[];
         for (let blxl=1;blxl<=4;blxl++){

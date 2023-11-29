@@ -177,7 +177,7 @@ function host_count_ensentence(sort_no=-1){
         }    
         return [host_t,article_from_t];
     }
-    //------------
+    //-----------------------
     var sentence_host_t={};
     var article_from_t=new Set();
     [sentence_host_t,article_from_t]=sub_host_count_ensentence_dict_generate(en_sentence_global);
@@ -401,7 +401,7 @@ function rare_old_words_ensentence(show_sentence=true,generate_js=false,max_coun
             sub_rare_old_words_ensentence_arow();
         }
     }
-    //------------------
+    //-----------------------
     var t0 = performance.now();    
 
     var result_t={};

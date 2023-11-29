@@ -143,7 +143,7 @@ function key_batch_search_by_engine_klwebsites(is_enword=true,csengine='bing',ma
             window_list.push(false);
         }    
     }
-    //---------------------------
+    //-----------------------
     
     var site_list=false;
     if (is_enword){
@@ -492,7 +492,7 @@ function waterfall_klwebsites(csnum=5){
         bllink='<p style="font-size:1.25rem;line-height:2rem;margin-bottom:0.5rem;">'+bllink+'</p>';        
         return bllink;    
     }
-    //-------------------------
+    //-----------------------
     var list_t=array_klwebsites('',csnum);
     var result_t={};
     result_t['local']=[sub_waterfall_klwebsites_one_site('?','网址库',false)];
@@ -559,7 +559,7 @@ function search_klwebsites(keyword='',csnumber=999){
         bljg=bljg+buttons_klwebsites(keyword);
         return bljg;
     }
-    //----------------------
+    //-----------------------
     var lineheight=(ismobile_b()?'1.3':'1.8');
 
     var result_t=array_klwebsites(keyword,csnumber);
@@ -593,7 +593,7 @@ function search_klwebsites(keyword='',csnumber=999){
         category_dict[blxl]='<a name="sites_category_'+blxl+'"></a><'+tagname+' class="p_sites" style="font-size:0.88rem;line-height:'+lineheight+'rem;"><span class="span_category_websites" style="font-weight:bold;cursor:pointer;" title="批量打开" onclick="batch_open_klwebsites(this.parentNode);">'+category_dict[blxl][0]+'</span> '+category_dict[blxl][1].join('')+sub_search_klwebsites_count(category_dict[blxl][1].length)+'</'+tagname+'>';
     }
     
-    //------------
+    //-----------------------
     select_str='<select style="width:5rem;height:2rem;margin-bottom:0.5rem;" onchange=\'document.location="#"+this.value;\'>'+select_str.join('\n')+'</select>';
     
     var bljg='<hr /><p style="line-height:1.45rem;">'+select_str+' '+sub_search_klwebsites_input_range(csnumber,keyword)+'</p><div id="div_sub_content">'+recent_refresh_klwebsites(lineheight)+category_dict.join('\n')+random_klwebsites(lineheight)+day_klwebsites(lineheight)+'<p>&nbsp;</p></div>';

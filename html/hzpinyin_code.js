@@ -271,7 +271,7 @@ function split_same_hzpy(){
             }
         }
     }
-    //------------------------
+    //-----------------------
     var result_t={};
     var hz_set=new Set();
     sub_split_same_hzpyy_one_dict(chaizi_ft_global);
@@ -318,7 +318,7 @@ function sentence_2_split_hzpy(csstr=false,show_html=true){
         }    
         return false;
     }
-    //------------------
+    //-----------------------
     if (typeof chaizi_jt_reverse_global == 'undefined'){
         chaizi_jt_reverse_global=sub_sentence_2_split_hzpy_init(chaizi_jt_global);
     }
@@ -397,7 +397,7 @@ function split_duplication_hzpy(){
             }
         }
     }
-    //------------------------
+    //-----------------------
     var result_t=[];
     var hz_set=new Set();
     sub_split_duplication_hzpy_one_dict(chaizi_ft_global);
@@ -647,7 +647,7 @@ function homophonic_words_hzpy(ratio=-1){
         extra_words=sub_homophonic_words_hzpy_head(head_list,result_t);
         return words.concat(extra_words);
     }
-    //-------------------------
+    //-----------------------
     var blstr=document.getElementById('textarea_search_hzpy').value.trim();
     if (blstr==''){return;}
     var blkey=blstr.split('\n')[0];

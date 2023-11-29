@@ -84,7 +84,7 @@ function days_kltxt_klwiki_en2(theday=new Date()){
         bljg=bljg+enwords_batch_div_b(englist_t);    
         return bljg;
     }
-    //--------------
+    //-----------------------
     var cscount=Math.ceil(filelist.length/365);
     
     var today_t=validdate_b(theday,false,true);
@@ -177,7 +177,7 @@ function word_length_show_kltxt_klwiki_en2(){
         blxl=blxl+1;
         setTimeout(sub_word_length_show_kltxt_klwiki_en2_one_p,10);
     }
-    //-------------------------------------------
+    //-----------------------
     var odiv = document.createElement('div');
 
     var ops=document.querySelectorAll('div#divhtml p');

@@ -453,7 +453,7 @@ function tag_list_lt_klmemo(){
         }
         return '<span class="oblong_box" onclick="init_lt_klmemo(\''+tagname+'\');">'+tagname+'<font color="grey"><small>('+cscount+')</small></font></span>\n';
     }
-    //---------------------------------
+    //-----------------------
     var tags_t=[];
     for (let item of content_klmemo_global){
         var list_t=item[0].match(/#[^\s]+/g);

@@ -23,13 +23,13 @@ function list_klmine(cslevel=0){
     mine_total_global=0;
     mine_list_global=[];
     
-    //---------
+    //-----------------------
     var list_t=[];
     for (let blxl=0;blxl<rows_global*cols_global;blxl++){
         list_t.push(blxl<rows_global*cols_global*cspercent?-1:0);
     }
     list_t.sort(randomsort_b);
-    //----------
+    //-----------------------
     
     var blxl=0;
     for (let blr=0;blr<rows_global;blr++){
@@ -155,7 +155,7 @@ function clean_klmine(blr,blc){
             count_klmine(csid,0);
         }
     }
-    //--------------
+    //-----------------------
     sub_clean_klmine_click(blr-1,blc-1);
     sub_clean_klmine_click(blr-1,blc);
     sub_clean_klmine_click(blr-1,blc+1);
@@ -245,7 +245,7 @@ function count_klmine(tdid,cstype){
         mine_total_global=mine_total_global+csvalue;
         document.getElementById('span_remain').innerHTML=mine_total_global;      
     }
-    //------------
+    //-----------------------
     //cstype -2:还原; -1:mine; 0:click;
     document.getElementById('div_menu').innerHTML='';
     if (cstype==-2){

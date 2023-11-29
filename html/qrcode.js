@@ -246,7 +246,7 @@ function calculate_klqr(){
     }
     document.getElementById('p_block_count').innerHTML=bljg;
     
-    //-------------
+    //-----------------------
     var postpath=postpath_b();
 	bljg='<form method="POST" action="'+postpath+'temp_txt_share.php" target=_blank>\n';
     bljg=bljg+'<textarea name="textarea_list_klqr" id="textarea_list_klqr" style="height:30rem;line-height:100%;"></textarea>';

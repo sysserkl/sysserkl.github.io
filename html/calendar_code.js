@@ -1,4 +1,4 @@
-function Lunar_klcalendar(objDate) {
+function Lunar_klcalendar(objDate){
     //算出农历, 传入日期控件, 返回农历日期控件
     //该控件属性有 .year .month .day .isLeap
     function sub_Lunar_klcalendar_lYearDays(y){
@@ -10,25 +10,25 @@ function Lunar_klcalendar(objDate) {
         return sum+sub_Lunar_klcalendar_leapDays(y);
     }
 
-    function sub_Lunar_klcalendar_monthDays(y,m) {
+    function sub_Lunar_klcalendar_monthDays(y,m){
         //返回农历 y年m月的总天数
         return (lunarInfo_global[y-1900] & (0x10000>>m))? 30: 29;
     }
     
     function sub_Lunar_klcalendar_leapDays(y){
         //返回农历 y年闰月的天数
-        if(sub_Lunar_klcalendar_leapMonth(y)){
+        if (sub_Lunar_klcalendar_leapMonth(y)){
             return (lunarInfo_global[y-1899]&0xf)==0xf? 30: 29;
         }
         else {return 0;}
     }
     
-    function sub_Lunar_klcalendar_leapMonth(y) {
+    function sub_Lunar_klcalendar_leapMonth(y){
         //返回农历 y年闰哪个月 1-12 , 没闰返回 0
         var lm = lunarInfo_global[y-1900] & 0xf;
         return lm==0xf?0:lm;
     }    
-    //----------
+    //-----------------------
     var i, leap=0, temp=0;
     var offset=(Date.UTC(objDate.getFullYear(),objDate.getMonth(),objDate.getDate()) - Date.UTC(1900,0,31))/86400000;
 
@@ -49,7 +49,7 @@ function Lunar_klcalendar(objDate) {
 
     for (i=1; i<13 && offset>0; i++){
         //闰月
-        if(leap>0 && i==(leap+1) && this.isLeap==false){
+        if (leap>0 && i==(leap+1) && this.isLeap==false){
              --i; 
              this.isLeap = true; 
              temp = sub_Lunar_klcalendar_leapDays(this.year); 
@@ -58,7 +58,7 @@ function Lunar_klcalendar(objDate) {
             temp = sub_Lunar_klcalendar_monthDays(this.year, i);
         }
         //解除闰月
-        if(this.isLeap==true && i==(leap+1)){
+        if (this.isLeap==true && i==(leap+1)){
             this.isLeap = false;
         }
         offset -= temp;
@@ -117,7 +117,7 @@ function oclass_klcalendar(y,m){
         this.color      = '';
         this.solarTerms    = ''; //节气
     }
-    //--------
+    //-----------------------
     var sDObj, lunar_obj, lY, lM, lD=1, lL, lX=0;
     //var cY, cM, cD; //年柱,月柱,日柱
     var lDPOS = new Array(3);
@@ -750,7 +750,7 @@ function memo_mdw_str_klcalendar(csstr,csdate=false){
         }
         return false;
     }
-    //--------------------------------
+    //-----------------------
     var s_list=csstr.match(/,s,(\d+),(\d+)[,\-]\s*(\d+)[,\-]\s*(\d+)$/) || [];
     if (s_list.length==5){
         csstr=csstr.replace(/,s,(\d+),(\d+)[,\-]\s*(\d+)[,\-]\s*(\d+)$/,'(s,$1,$2-$3-$4)');

@@ -144,7 +144,7 @@ function wait_array_common(){
             setTimeout(sub_wait_array_common_check,1000);
         }
     }
-    //------------------------
+    //-----------------------
     var blxl=1;
     var csmax=(is_local_b()?20:50);
     var blfound=false;
@@ -361,7 +361,7 @@ function http_link_common(csstr,enable_http){
         }
         return acell;
     }
-    //-------------------------
+    //-----------------------
     if (enable_http){
         if (typeof csstr == 'string'){
             csstr=sub_http_link_common_a_row(csstr);
@@ -400,7 +400,7 @@ function page_common(csno,show_html=true){
     //-----------------------
     var cslen=js_data_current_common_search_global.length;
     var bljg=page_combination_b(cslen,rows_per_page_jscm_global,csno,'page_common','locate_common',false,2,Math.round(raw_data_len_jscm_global/rows_per_page_jscm_global/10));  
-    //-------------
+    //-----------------------
     var result_t=[];
     var blend=Math.min(csno-1+rows_per_page_jscm_global,cslen);
     var blno=0;
@@ -545,7 +545,7 @@ function flot_load_common(file1=['flot'],flot_type=['time','symbol'],file2=[],fi
     function sub_flot_load_common_flot(){
         flot_import_js_b(flot_type,false,'dom'); 
     }
-    //------------------
+    //-----------------------
     var file_list=klbase_addons_import_js_b(file1,file2,file3,file4,true,false);
     file_dom_create_b(file_list,true,'js');
     load_fn_b('flot_import_js_b',-1,2000,sub_flot_load_common_flot);
@@ -559,7 +559,7 @@ function merge_data_common(varname,jsfile_list,ospan=false){
             ospan.outerHTML='';
         }
     }
-    //----------------
+    //-----------------------
     if (jsfile_list.length==0){return;} 
 
     if (!confirm('是否合并数据？')){return;}

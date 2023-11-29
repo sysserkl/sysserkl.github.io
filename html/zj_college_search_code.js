@@ -65,7 +65,7 @@ function mark_rank_list_zjedu(){
         }
         return [rank_min,rank_max];
     }
-    //---------------------
+    //-----------------------
     var mark_min=0;
     var mark_max=0;
     for (let item of zj_university_global){
@@ -293,12 +293,12 @@ function shcool_arr_zjedu(){
 			school_speciality_sum_arr_global.push(item[0]);
 		}
         
-        //-----
+        //---
 		if (speciality_popular_arr_global.indexOf(item[1])<0){
 			speciality_popular_arr_global.push(item[1]);
 		}
         
-        //-----
+        //---
 		if (school_sum_average_arr_global[item[0]]==undefined){
             school_sum_average_arr_global[item[0]]=[item[0],0,0,0];
         }
@@ -307,20 +307,20 @@ function shcool_arr_zjedu(){
         //分数线*计划数，再求和 - 保留注释
 		school_sum_average_arr_global[item[0]][2]=school_sum_average_arr_global[item[0]][2]+item[2]*item[3];
         
-        //-----
+        //---
 		if (school_median_rank_arr_global[item[0]]==undefined){
             school_median_rank_arr_global[item[0]]=[item[0],[]];
         }
         //计划数 分数线 列表 - 保留注释
 		school_median_rank_arr_global[item[0]][1].push([item[2],item[3]]);       
 
-        //-----
+        //---
         if (school_last_number_arr_global[item[0]]==undefined){
             school_last_number_arr_global[item[0]]=[item[0],0];
         }
         school_last_number_arr_global[item[0]][1]=Math.max(school_last_number_arr_global[item[0]][1],item[4]);
         
-        //-----
+        //---
         if (school_plan_arr_global[item[0]]==undefined){
             //学校，完成计划专业数，未完成计划专业数 - 保留注释
             school_plan_arr_global[item[0]]=[item[0],0,0];
@@ -339,7 +339,7 @@ function shcool_arr_zjedu(){
 		speciality_all_sum_arr_global[item[1]][1]=speciality_all_sum_arr_global[item[1]][1]+item[2];
 		speciality_all_sum_arr_global[item[1]][2]=speciality_all_sum_arr_global[item[1]][2]+item[2]*item[3];
 
-        //-----
+        //---
 		if (line_count_arr_global['f'+item[3]]==undefined){
             line_count_arr_global['f'+item[3]]=[item[3],0] ;
         }
@@ -475,7 +475,7 @@ function school_sum_average_zjedu(csreverse=false){
 
     document.getElementById('ol_anames').insertAdjacentHTML('beforeend','<li><a href="#'+'divnum'+(csreverse?'_reverse':'')+'">计划招收人数最'+(csreverse?'少':'多')+'的'+Math.min(num_zjc_global,arr2_t.length)+'个学校</a></li>');
 
-	//------------------
+	//-----------------------
     //总的分数/计划数 - 保留注释
     if (csreverse){
         arr2_t.sort(function(a,b){return a[3]-b[3];});
@@ -592,7 +592,7 @@ function speciality_all_sum_zjedu(csreverse=false){
 
     document.getElementById('ol_anames').insertAdjacentHTML('beforeend','<li><a href="#'+'divnum2'+(csreverse?'_reverse':'')+'">计划招收人数最'+(csreverse?'少':'多')+'的'+Math.min(num_zjc_global,arr2_t.length)+'个专业</a></li>');
 
-	//------------------
+	//-----------------------
     if (csreverse){
         arr2_t.sort(function(a,b){return a[3]-b[3];});
     }
@@ -1043,7 +1043,7 @@ function exam_range_check_zjedu(){
         }
         return bljg;
     }
-    //---------------------------------------
+    //-----------------------
     range_sort_high_2_low_zjedu();
     var result_t=[];
     var textarea_list=[];

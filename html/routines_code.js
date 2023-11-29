@@ -1,3 +1,4 @@
+//-----------------------
 //history
 //0.0.7-20221228 不重复显示同名未完成项
 //0.0.6-20220617 每周柱状图 每月柱状图
@@ -6,6 +7,7 @@
 //0.0.3-20200901 事项改为保存到 localStorage 中，添加 PWA
 //0.0.2-20200220 增加 菜单 和 统计功能
 //0.0.1-20191222
+//-----------------------
 function statistics_form_klroutines(){
     var bljg='';
     bljg=bljg+'<p>输入以往每周执行记录：</p>';
@@ -70,7 +72,7 @@ function statistics_items_klroutines(){
         if (item.length!==3){continue;}
         list2_t.push(item[0].trim());
     }
-    //---------------
+    //-----------------------
     list_t=[];
     list2_t.sort();
     for (let item of list2_t){
@@ -79,7 +81,7 @@ function statistics_items_klroutines(){
         }
         list_t[item][1]=list_t[item][1]+1;
     }
-    //---------------
+    //-----------------------
     list2_t=[];
     for (let blxl in list_t){
         list2_t.push([list_t[blxl][0],list_t[blxl][1]]);
@@ -94,7 +96,7 @@ function statistics_items_klroutines(){
         simple_list.push(item[0]);
         bltotal=bltotal+item[1];
     }
-    //---------------
+    //-----------------------
     var zero_list=[];
     for (let item of routines_data_global){
         if (simple_list.includes(item[2]) || zero_list.includes(item[2])){continue;}

@@ -60,7 +60,7 @@ function resize_batch_imgs_b(oimgs,new_width=false,alert_id=''){
         blxl=blxl+1;
         setTimeout(sub_resize_batch_imgs_b_one,10);
     }
-    //---------------------------
+    //-----------------------
     if (new_width===false){
         new_width=prompt('输入最大宽度','1600');
     }
@@ -202,7 +202,7 @@ function img2base64_b(oimgs,alert_info_id=''){
         blxl=blxl+1;
         setTimeout(sub_img2base64_b_one_img,100);        
     }
-    //-------------------------------
+    //-----------------------
     if (!confirm('是否转换图片为base64格式？')){return;}
     
     var bllen=oimgs.length;

@@ -366,7 +366,7 @@ function one_book_reader_idb(db,bookid){
             getlines_kltxt_b();
         }
     }
-    //--------------
+    //-----------------------
     var bookname_t='';
     for (let item of idbfilename_list_global){
         if (item[0]==bookid){
@@ -589,7 +589,7 @@ function center_reader_idb(cstype='',filename='',bookid=-1,cslist=[]){
                 break;
         }
     }
-    //-------------------------
+    //-----------------------
     return new Promise((resolve, reject) => {
         var bljg=idb_main_b(cstype,'reader_txt_dbc','reader_txt_dbf',sub_center_reader_idb_switch,filename,bookid,cslist);
         resolve(bljg);

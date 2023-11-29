@@ -553,7 +553,7 @@ function statistics_draw_b(data_type,idname='divhtml',show_table=false,date_min=
         }
         return [bljg,[cscaption].concat(flot_list)];
     }
-    //----------------
+    //-----------------------
     var t0=performance.now();    
     var bljg='';
     var str_t;

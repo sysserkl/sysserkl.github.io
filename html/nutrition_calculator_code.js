@@ -39,7 +39,7 @@ function compare_nutrition_calc(do_calc=true){
         var td_str=[];
         var nc_dict=value_dict_nutrition_calc();
         for (let akey in nc_dict){
-            nc_dict[akey]=parseFloat(document.getElementById('input_'+akey+'_nc_'+blxl).value.trim());        
+            nc_dict[akey]=parseFloat(document.getElementById('input_'+akey+'_nc_'+blxl).value.trim());
         }
         
         if (do_calc){
@@ -144,7 +144,7 @@ function menu_nutrition_calc(){
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🥗','11rem','1rem','1rem','30rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','30rem'),'','0rem')+' ');
 }
 
-function import_value_nutrition_calc(){
+function import_value_nutrition_calc(cstype=''){
     var en_cn=en_cn_dict_nutrition_calc();
     var en_names=Object.keys(en_cn);
     var cn_names=Object.values(en_cn);
@@ -181,9 +181,13 @@ function import_value_nutrition_calc(){
         if (found_error){break;}
     }
     
-    if (found_error){return;}
-    if (result_t.length==0){return;}
-    if (!confirm('是否导入'+result_t.length+'组数据？')){return;}
+    if (found_error){return false;}
+    if (result_t.length==0){return false;}
+    if (cstype=='table'){
+        return result_t;
+    }
+    
+    if (!confirm('是否导入'+result_t.length+'组数据？')){return false;}
     for (let item of result_t){
         one_col_nutrition_calc(item);
     }
@@ -228,9 +232,117 @@ function import_form_nutrition_calc(){
     var buttons='<p>';
     buttons=buttons+close_button_b('divhtml','');
     buttons=buttons+'<span class="aclick" onclick="import_value_nutrition_calc();">import</span>';
+    buttons=buttons+'<span class="aclick" onclick="table_show_nutrition_calc();">显示为表格</span>';
+    
     buttons=buttons+textarea_buttons_b('textarea_import_nc','清空,复制');
     buttons=buttons+'</p>';
 
     odiv.innerHTML='<textarea id="textarea_import_nc" style="height:25rem;">'+current_value_nutrition_calc()+'</textarea>'+buttons;
     odiv.scrollIntoView();
+}
+
+function table_show_nutrition_calc(sort_no=0,is_desc=false){
+    var list_t=import_value_nutrition_calc('table');
+    var keys=new Set();
+    var keys_one_diet=new Set(['one_diet_quality','one_diet_price']);
+    for (let blxl=0;blxl<list_t.length;blxl++){
+        var arow=list_t[blxl];
+
+        for (let one_key in arow){
+            keys.add(one_key);
+            if (one_key!=='name'){
+                list_t[blxl][one_key]=parseFloat(arow[one_key]);
+            }
+        }
+        
+        var one_diet_quality=arow['diet']*arow['quality']/arow['sub_group'];
+        var one_diet_price=parseFloat((arow['price']*arow['diet']/arow['sub_group']).toFixed(3));
+        var blpercent=one_diet_quality/arow['unit'];
+        
+        for (let one_key in arow){
+            if (!['name','diet','unit','sub_group'].includes(one_key)){
+                list_t[blxl]['one_diet_'+one_key]=parseFloat((arow[one_key]*blpercent).toFixed(3));
+                keys_one_diet.add('one_diet_'+one_key);
+            }
+        }
+
+        list_t[blxl]['one_diet_quality']=one_diet_quality;
+        list_t[blxl]['one_diet_price']=one_diet_price;
+    }
+    
+    keys=Array.from(keys);
+    keys=keys.concat(Array.from(keys_one_diet));
+
+    var result_t=dicts_2_value_list_b(list_t,keys)[0];
+
+    if (keys[sort_no]=='name'){
+        result_t.sort(function (a,b){return zh_sort_b(a,b,is_desc,0);});
+    }
+    else {
+        if (is_desc){
+            result_t.sort(function (a,b){return isNaN(b[sort_no]) || a[sort_no]>b[sort_no];});
+        }
+        else {
+            result_t.sort(function (a,b){return isNaN(a[sort_no]) || a[sort_no]<b[sort_no];});
+        }
+    }
+    
+    var decimal_t=longest_fraction_b(result_t,'col');
+    
+    for (let blxl=0;blxl<result_t.length;blxl++){
+        var arow=result_t[blxl];
+        for (let blcol=0;blcol<arow.length;blcol++){
+            var align_type=(keys[blcol]=='name'?'left':'right');
+            if (arow[blcol]==undefined || arow[blcol].toString()=='NaN' || arow[blcol]==''){//不能使用 isNaN - 保留注释
+                arow[blcol]='<td></td>';
+            }
+            else if (keys[blcol]=='name'){
+                arow[blcol]='<td>'+arow[blcol]+'</td>';
+            }
+            else {
+                arow[blcol]='<td align=right>'+arow[blcol].toFixed(decimal_t[blcol])+'</td>';
+            }
+        }
+        result_t[blxl]='<tr>'+arow.join('')+'</tr>';
+    }
+
+    var en_cn=en_cn_dict_nutrition_calc();
+    en_cn['one_diet_quality']='一次进食质量（体积）';
+    en_cn['one_diet_price']='一次进食价格';
+    for (let key in en_cn){
+        if (['name','diet','unit','sub_group'].includes(key)){continue;}
+        en_cn['one_diet_'+key]='一次进食'+en_cn[key];
+    }
+    
+    var sort_order=(is_desc?'false':'true');
+
+    var one_diet_position=[];
+    for (let blxl=0;blxl<keys.length;blxl++){
+        if (keys[blxl]=='diet' || keys[blxl].substring(0,8)=='one_diet'){
+            one_diet_position.push(blxl);
+        }
+    }
+    
+    var blmin=Math.min(...one_diet_position);
+    var blmax=Math.max(...one_diet_position);
+    if (blmax-blmin!==one_diet_position.length-1){
+        alert('一次进食不连贯');
+        return;
+    }
+
+    var th1_list=[];
+    for (let blxl=0;blxl<blmin;blxl++){
+        var akey=keys[blxl];
+        th1_list.push('<th rowspan=2 style="cursor:pointer;" onclick="table_show_nutrition_calc('+blxl+','+sort_order+');">'+en_cn[akey]+'</th>');
+    }
+    
+    th1_list.push('<th colspan='+(blmax-blmin+1)+'>一次进食</th>');
+
+    var th2_list=[];
+    for (let blxl=blmin;blxl<keys.length;blxl++){
+        var akey=keys[blxl];
+        th2_list.push('<th style="cursor:pointer;" onclick="table_show_nutrition_calc('+blxl+','+sort_order+');">'+en_cn[akey].replace('一次进食','')+'</th>');
+    }
+    
+    document.getElementById('div_status').innerHTML='<table class="table_common"><tr>'+th1_list.join('')+'</tr><tr>'+th2_list.join('')+'</tr>'+result_t.join('')+'</table>';
 }

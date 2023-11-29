@@ -1,4 +1,7 @@
-//csver:0.0.1-20190125
+//-----------------------
+//history
+//0.0.1-20190125
+//-----------------------
 function day_of_year_b(theday=false){
     //返回指定日期为当年第几天 - 保留注释
 	if (theday===false){
@@ -332,7 +335,7 @@ function previous_days_b(csstr='',csdays=1,return_str=true,sep='-',interval=1){
             result_t.push(theday2);
         }    
     }
-    //--------------------
+    //-----------------------
     var theday=default_date_b(csstr);
     if (theday==false){return [];}
     

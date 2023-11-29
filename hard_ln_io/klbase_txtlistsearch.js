@@ -433,7 +433,7 @@ function count_characters_kltxt_b(){
         blxl=blxl+blstep;
         setTimeout(sub_count_characters_kltxt_b_one_step,200);
     }
-    //---------------------
+    //-----------------------
     var bllen=filelist.length;
     var blxl=1;
     var blstep=250;
@@ -469,7 +469,7 @@ function klwiki_title_batch_open_kltxt_b(){
         blxl=blxl+1;
         setTimeout(sub_klwiki_title_batch_open_kltxt_b_open,1000);
     }
-    //---------------------
+    //-----------------------
     var ospans=document.querySelectorAll('div#divhtml span.txt_content');
     var result_t=[];
     for (let one_span of ospans){
@@ -606,7 +606,7 @@ function fullmenu_kltxt_b(is_simple=true,cstype='all'){
         }
         return '';
     }
-    //---------------------------------------------
+    //-----------------------
 	var bljg=[];
     if (csbookname_global.substring(0,6)=='klwiki'){
         for (let blxl=0;blxl<menulist.length;blxl++){
@@ -720,7 +720,7 @@ function menu_insert_kltxt_b(menu_count=3){
             }
         }
     }
-    //---------------------
+    //-----------------------
     var op=document.querySelector('p.p_inserted_menu');
     if (op){return;}
 
@@ -1220,7 +1220,7 @@ function findmenu_kltxt_b(csxl=-1,cslimit=20,cscontent_length=-1){
             setTimeout(sub_findmenu_kltxt_bsteps,10);
         }
     }
-    //----------------------
+    //-----------------------
 	if (csxl>menulist.length-1 || menulist.length==0){
         return;
     }
@@ -1563,7 +1563,7 @@ function bookmarks_get_kltxt_b(current_book_today_bookmark_only_one=false,return
     }
     bljg=bljg+'</form>\n';
     
-    //----
+    //---
     var current_book_percent=[];
     var reading_lines=[];
     [current_book_percent,reading_lines]=bookmarks_percent_lines_kltxt_b(bookmark_list,csbookname_global,return_full);
@@ -1571,7 +1571,7 @@ function bookmarks_get_kltxt_b(current_book_today_bookmark_only_one=false,return
         bljg=bljg+'<div id="div_flot_bookmark_line" style="width=100%;height:35rem;"></div>';
         bljg=bljg+'<div id="div_bookmark_statistics"></div>';
     }
-    //----
+    //---
     document.getElementById('divhtml').innerHTML='';
     var table_th='<tr><th>No.</th><th>书名</th><th nowrap>当前行号 / 总行数 / 完成%</th><th>Δ</th><th nowrap>'+theyear+' / '+(theyear+1)+' / '+(theyear+2)+'年年底<br />完成每日需阅读行数</th><th>添加日期</th></tr>';
     
@@ -2062,7 +2062,7 @@ function getlines_kltxt_b(csno=false,cslines=false,single=false,highlight=true,a
         var bljg=page_combination_b(filelist.length,cslines,csno,'getlines_kltxt_b','page_kltxt_b','font-size:0.9rem;line-height:1rem;text-align:right',0,0,'');
         return bljg;    
     }
-    //--------
+    //-----------------------
     if (csbooklist_sub_global.length==0){return;}
     
     var csno,cslines,aname_num,bllength;
@@ -2436,7 +2436,7 @@ function img_load_check_kltxt_b(){
         blxl=0;
         sub_img_load_check_kltxt_b_import_js();    
     }
-    //----------------------------
+    //-----------------------
     var oimgs=document.querySelectorAll('img.img_raw_kltxt');
     if (oimgs.length==0){return;}
     
@@ -2488,7 +2488,7 @@ function img_key_2_base64_kltxt_b(img_name,is_group_file,group_no=false){
         }    
         return base64_value;
     }
-    //--------------------
+    //-----------------------
     var base64_value='';
     
     var group_no_list=[];
@@ -2611,7 +2611,7 @@ function format_lines_kltxt_b(cslist,csstyle='',csaname=-1,is_group_file=''){
         return blstr;
     }
 
-    //---------
+    //-----------------------
     if (cslist.length==0){return '';}
     
     var t0 = performance.now();
@@ -2877,7 +2877,7 @@ function args_kltxt_b(cskeys){
             txtsearch_kltxt_b(csstr,-1,-1,add_recent);
         }
     }
-    //----------------------------
+    //-----------------------
     var blstart_line_no=0;
     for (let bltmpstr of cskeys){   //第1轮 - 保留注释
         bltmpstr=bltmpstr.trim();
@@ -2973,7 +2973,7 @@ function load_book_js_code_file_kltxt_b(){
     function sub_load_book_js_code_file_kltxt_b_do(){
         eval('menu_more_kltxt_'+txtbook_js_code_file_global+'()');
     }
-    //------------------
+    //-----------------------
     if (txtbook_js_code_file_global==''){return;}
     var file4=['txtlistsearch_additional_'+txtbook_js_code_file_global+'_code.js'];
     var file_list=klbase_addons_import_js_b([],[],[],file4,false,false);
@@ -3016,7 +3016,7 @@ function import_book_kltxt_b(cskeys,csrandom=false){
             csbookname_global='';
         }
     }
-    //-------
+    //---
     book_makelist_b(book_tag_global);
     if (csbookname_global=='' || csbookname_global=='0'){
         if (book_tag_global=='' || book_tag_global=='all' || csrandom==true){
@@ -3719,7 +3719,7 @@ function digest_enwords_remove_kltxt_b(cstype=''){
         excluded_words=result_t;
     }
     
-    //----
+    //---
     var new_list=[];
     var menu_list=new Set();    //如果使用 list 则极慢 - 保留注释
     if (typeof kltxt_menulist_index_global == 'object' && Array.isArray(kltxt_menulist_index_global)){  //添加目录行号 - 保留注释

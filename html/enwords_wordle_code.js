@@ -182,7 +182,7 @@ function answer_wordle(){
             en_sentence_mobile_b();
         }    
     }
-    //----------------------
+    //-----------------------
     en_word_temp_get_b();
     var bljg='<hr />\n'+one_enword_b(current_word_wordle_global,'',ismobile_b())+'\n';
     var odiv=document.getElementById('div_info');

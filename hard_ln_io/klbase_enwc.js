@@ -201,7 +201,7 @@ function line_count_enwc_b(){
         blxl=blxl+1;
         setTimeout(sub_line_count_enwc_b_one_p,10);
     }
-    //-------------------------------------------
+    //-----------------------
     var odiv = document.createElement('div');
     var ops=document.querySelectorAll('p.p_enwords_sentence');
     var plen=ops.length;
@@ -330,7 +330,7 @@ function show_sentence_enwc_b(maxlines=0,showcount=true,is_random=false,show_but
             sub_show_sentence_enwc_b_one_step(font_size,button_str);
         }
     }
-    //--------------------------
+    //-----------------------
     var osen=document.getElementsByClassName('div_sentence');
     if (osen.length>0 || en_sentence_global.length==0){
         console.log('已存在 .div_sentence 或 en_sentence_global 长度为 0');
@@ -356,7 +356,7 @@ function show_sentence_enwc_b(maxlines=0,showcount=true,is_random=false,show_but
             var csmax=(oaslen>10?10:20);
         }
     }
-    //-------------------
+    //-----------------------
     var remote_host, button_str, font_size;
     [remote_host,button_str,font_size]=sentence_property_b(show_button);
     
@@ -429,7 +429,7 @@ function days_enwc_b(only_plan=false){
             }
         }    
     }
-    //------------
+    //-----------------------
 	var date1_tmp=default_date_b('',true);
 	var year_tmp=date1_tmp.getFullYear();
 	

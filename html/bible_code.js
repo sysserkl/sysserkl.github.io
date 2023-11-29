@@ -262,7 +262,7 @@ function compare_data_bible(){
             return [];
         }
     }
-    //-
+    //---
     async function sub_compare_data_bible_get_old_data(){
         await idb_bible('read',true);
         var len_min=Math.min(kjv.length,cnbible_global.length,enbible_old_global.length,cnbible_old_global.length);
@@ -339,7 +339,7 @@ function compare_data_bible(){
         enbible_old_global=[];
         cnbible_old_global=[];
     }
-    //-----------------------------------
+    //-----------------------
     sub_compare_data_bible_get_old_data();
 }
 
@@ -1234,7 +1234,7 @@ function main_with_sub_check_bible(){
             console.log('sub 不一致：', blkey,dict_t[blkey],sub_list);
         }    
     }
-    //------------------------------
+    //-----------------------
     //检验 main_with_sub_check_bible() 是否正确 - 保留注释
     var dict_t=main_with_sub_chapters_bible();
     var keys=Object.keys(dict_t);
@@ -1618,7 +1618,7 @@ function idb_read_bible(db,is_old=false){
             }
         }
     }
-    //------------------------
+    //-----------------------
     var en_list=[];
     var cn_list=[];    
     return new Promise((resolve, reject) => {
@@ -1794,7 +1794,7 @@ function idb_bible(cstype='',is_old=false){
                 break;
         }    
     }
-    //----------------------
+    //-----------------------
     return new Promise((resolve, reject) => {
         var bljg=idb_main_b(cstype,'bible','bible_dbf',sub_idb_bible_switch,is_old);
         resolve(bljg);

@@ -1,4 +1,7 @@
-//csver: 0.0.1-20180908
+//-----------------------
+//history
+//0.0.1-20180908
+//-----------------------
 function random_chs_b(cslength,return_list=false){
 	var csnum=arguments.length;
 	if (csnum==0){
@@ -273,7 +276,7 @@ function split_words_b(csstr,cscombine=false){
         return [csstr,[]];
     }
     
-    //------------------
+    //-----------------------
     if (typeof jieba_pb_dict_global == 'undefined'){
         console.log('未载入：jieba_pb_dict_data.js');
         if (cscombine){
@@ -440,7 +443,7 @@ function NumberToChinese_b(csnum){//只支持大于等于0的整数 - 保留注�
         }
         return chnStr;
     }
-    //-------------------
+    //-----------------------
     var chnNumChar = ['零','一','二','三','四','五','六','七','八','九'];
     var chnUnitSection = ['','万','亿','万亿','亿亿'];
     var chnUnitChar = ['','十','百','千'];
@@ -641,7 +644,7 @@ function morse_transform_b(csstr,csencode=true){
         }
         return arow;    
     }
-    //-----------------------------------------
+    //-----------------------
     if (csstr==''){return ''};
     var morse_dict=morse_list_b();
     var row_list=csstr.split('\n');

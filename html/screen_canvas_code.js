@@ -40,7 +40,7 @@ function rnddraw_scanvas(){
 function init_scanvas(){
     resize_scanvas();
     document.body.style.overflow='hidden';
-    //-
+    //---
     slide_control_table_b('div_transparent','333');
     document.getElementById('div_transparent_td_l1').setAttribute('onclick','console.log(1);');
     document.getElementById('div_transparent_td_l2').setAttribute('onclick','console.log(2);');

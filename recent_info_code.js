@@ -47,7 +47,7 @@ function init_klrecent(){
             document.getElementById('span_title').innerText=recent_info_title_global[0][0];
         }    
     }
-    //------------------
+    //-----------------------
     if (catchphrase_no_global!==false){
         var bljg=quotestr_klrecent();
         if (bljg!==''){
@@ -83,7 +83,7 @@ function init_klrecent(){
     //0.0.3-20190402
     //0.0.2-20190320
     //0.0.1-20190318
-    //------------------------------------
+    //-----------------------
     if (bljg+blquote!==''){
         if (is_default_rct_global){
             var odiv=document.getElementById('divhtml');
@@ -139,7 +139,7 @@ function quotestr_klrecent(){
         }
         return blquote;
     }
-    //------------------
+    //-----------------------
     var bljg='';    
     if (catchphrase_no_global===false){
         var theday=date_2_ymd_b(false,'d');
@@ -214,7 +214,7 @@ function pwa_batch_open_klrecent(){
         blxl=blxl+1;
         setTimeout(sub_pwa_batch_open_klrecent_one_by_one,2000);
     }
-    //-----------------------------
+    //-----------------------
     if (!confirm('是否批量打开pwa网址？')){return;}
     var odiv=document.getElementById('divhtml');
     odiv.innerHTML='';

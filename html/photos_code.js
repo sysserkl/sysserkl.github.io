@@ -37,7 +37,7 @@ function gallery_2_canvas_klphotos(){
         var one_img_rect = oimgs[blxl].getBoundingClientRect();
         o_loaded_img.src=oimgs[blxl].src;       
     }
-    //-------------------------
+    //-----------------------
     var otable=document.getElementById('table_gallery_klphotos');
     var blheight=0;
     var blwidth=0;
@@ -143,7 +143,7 @@ function menu_klphotos(){
 
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(menu_gallery,'🖼','17rem',button_size,button_size)+klmenu_b(menu_tools,'🔧','17rem',button_size,button_size)+klmenu_b(menu_month,'🈷️','5rem',button_size,button_size)+klmenu_b(menu_config,'⚙️','15rem',button_size,button_size),'','0rem')+' ');
     
-    //------------------
+    //-----------------------
     var button_more='<div class=klmenu><button style=font-size:'+button_size+';" onclick="popup_show_hide_b(\'div_css\');">Text Style</button></div>';
     button_more=button_more+'<div class=klmenu><button style=font-size:'+button_size+';" onclick="popup_show_hide_b(\'div_tempphoto_list\');">临时图片文件列表</button></div>';
     button_more=button_more+'<div class=klmenu><button style=font-size:'+button_size+';" onclick="popup_show_hide_b(\'textarea_caption\');">文字说明</button></div>';
@@ -344,7 +344,7 @@ function month_day_line_klphotos(){
         }
         return mdlist;
     }
-    //----------
+    //-----------------------
     var mdlist=sub_month_day_line_klphotos_list(false);
 
     var bljg='';
@@ -561,7 +561,7 @@ function showbigphoto_klphotos(csxl=0){
         } 
         return bljg;
     }
-    //--------------
+    //-----------------------
 	var bljg='';
 	
 	black_bg_t=klmenu_check_b('span_black_bg_klphoto',false);

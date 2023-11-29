@@ -126,7 +126,7 @@ function column2number_arr_analyze(cstype){
                 break;
         }
     }
-    //--
+    //---
     var cskey=Math.max(0,parseInt(document.getElementById('input_column1').value)-1);
     for (var blxl in table_array_global){
         if (Array.isArray(table_array_global[blxl])==false){
@@ -284,7 +284,7 @@ function var_arr_analyze(csarray=false,show_html=true){
         bljg=bljg+'],';
         return bljg;
     }
-    //----------
+    //-----------------------
 	var bljg='';
     if (csarray===false){
         csarray=table_array_global;
@@ -409,7 +409,7 @@ function data_2_flot_arr_analyze(is_demo=false){
         }    
         return cslist;
     }
-    //-------------------------------
+    //-----------------------
     var otextarea=document.getElementById('textarea_arrays');
     var blvalue=otextarea.value;
     var bltype=document.getElementById('select_flot_aa').value;

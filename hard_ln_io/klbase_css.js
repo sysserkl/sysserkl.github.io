@@ -578,7 +578,7 @@ function top_bottom_arrow_b(idname,csmemo='',cseng=false,csfsize='1.3rem',show_s
     if (show_menu>0){
         bljg=bljg+'<section id="section_top_bottom_menu" style="display:none;font-weight:normal;padding:0rem;max-height:'+(ismobile?'20':'30')+'rem;overflow-x: hidden;overflow-y: scroll;"></section>';
     }
-    //-----
+    //---
     var time_str='';
     if (show_time){
         bljg=bljg+'<span onclick="page_eta_b(this,\'⏰\');" style="cursor:pointer;">⏰</span> ';    
@@ -645,7 +645,7 @@ function page_eta_b(ospan,default_value='',csmax=5400){
             setTimeout(sub_page_eta_b_check,3000); //比使用setInterval合理，避免未运行完程序就再次调用 - 保留注释
         }
     }
-    //-------------------------
+    //-----------------------
     if (typeof page_eta_global !== 'undefined'){
         if (page_eta_global){
             page_eta_global=false;
@@ -678,7 +678,7 @@ function rnd_margin_color_b(csmargin=20,csrgbcolor=[255,255,255]){
         }
         return one_rgb;
     }
-    //-------------
+    //-----------------------
     var r=sub_rnd_margin_color_b(csmargin,csrgbcolor[0]);
     var g=sub_rnd_margin_color_b(csmargin,csrgbcolor[1]);
     var b=sub_rnd_margin_color_b(csmargin,csrgbcolor[2]);
@@ -701,7 +701,7 @@ function rgb2hex_b(rgb,csg,csb){
         var hex = c.toString(16);
         return hex.length == 1 ? '0' + hex : hex;
     }
-    //--------------------
+    //-----------------------
     var csnum=arguments.length;
     if (csnum==3){
         rgb=[rgb,csg,csb];
@@ -882,7 +882,7 @@ function hsl2rgb_b(h,s,l){
             b: Math.round(b * 255)
         };
     }
-    //------------
+    //-----------------------
     if (arguments.length === 1){
         var s,l;
         [h,s,l]=[h.h, h.s, h.l];
@@ -950,7 +950,7 @@ function rgb2hsl_b(r,g,b){
         _l /= 2;
         return {h: _h, s: _s, l: _l};
     }
-    //----------
+    //-----------------------
     if (arguments.length === 1){
         var g,b;
         if (Array.isArray(r) && r.length==3){
@@ -1399,7 +1399,7 @@ function recent_search_b(localsavename,csstr,jsfunctionname,divname,commonlist=[
         }
         return csstr;
     }
-    //----------------------------------
+    //-----------------------
     if (Array.isArray(csstr)){
         for (let blxl=0;blxl<csstr.length;blxl++){
             csstr[blxl]=sub_recent_search_b_key_replace(csstr[blxl]);
@@ -1824,7 +1824,7 @@ function alarm_interval_sound_b(){
         blxl=blxl+1;
         setTimeout(sub_alarm_interval_sound_b_one_sound,1000);  //间隔1秒播放 - 保留注释
     }
-    //-----------------------------------------
+    //-----------------------
     if (kl_alarm_interval_global==-1){return;}
     
     var sound_list=['elephant','ding','drop','flash','whistle','dududu'];

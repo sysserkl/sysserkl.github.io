@@ -19,7 +19,7 @@ function number_poker_b(csnumber,cstype=''){
         bljg=bljg+'</table>';
         return bljg;
     }
-    //---------------
+    //-----------------------
     if (cstype=='random'){
         var list_t=['heart','spade','diamond','club'];
         list_t.sort(randomsort_b);

@@ -61,7 +61,7 @@ function reduce_study_js(){
             return currentValue;
         }
     }
-    //---------------------
+    //-----------------------
     const array1 = [1, 2, 3, 4];
     const reducer1 = (accumulator, currentValue) => accumulator + currentValue;
     const reducer2 = (accumulator, currentValue) => accumulator * currentValue;
@@ -86,7 +86,7 @@ function find_study_js(){
     function sub_find_study_js_isBigEnough(value){
         return value >= 10;
     }
-    //-----
+    //---
     var result1_t = [12, 5, 8, 130, 44].find(sub_find_study_js_isBigEnough);
     var result2_t = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'].find(one_word => one_word.length > 6);
     var result3_t = [12, 5, 8, 130, 44].find( element => element < 0 );
@@ -97,7 +97,7 @@ function filter_study_js(){
     function sub_filter_study_js_isBigEnough(value){
         return value >= 10;
     }
-    //-----
+    //---
     var filtered_list = [12, 5, 8, 130, 44].filter(sub_filter_study_js_isBigEnough);
     var long_words_list = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'].filter(one_word => one_word.length > 6);
     var filtered2_list = [12, 5, 8, 130, 44].filter( element => element < 0 );
@@ -125,7 +125,7 @@ function flat_study_js(){
     function sub_flat_study_js_elements(csarray){
         return '<tr><td valign="top" style="padding:0rem 5rem;">'+JSON.stringify(csarray)+'</td></tr>';
     }
-    //----------
+    //-----------------------
     var v1 = [1, 2, [3, 4]].flat();
     var v2 = [1, 2, [3, 4, [5, 6]]].flat();
     var v3 = [1, 2, [3, 4, [5, 6]]].flat(2);

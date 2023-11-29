@@ -136,7 +136,7 @@ function import_book_js_b(import_digest=true){
         document.write('\n    filelist2.push(item);\n');
         document.write('}\n</script>\n');
     }
-    //----
+    //---
     var jsdoc_num='';
     if (csbooklist_sub_global.length>0 && csbooklist_sub_global[book_no].length>=4){
         jsdoc_num=csbooklist_sub_global[book_no][3];

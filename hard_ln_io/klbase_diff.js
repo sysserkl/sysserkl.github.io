@@ -6,7 +6,7 @@ function tab2space_diff_b(){
         }
         return csstr;
     }
-    //---------
+    //-----------------------
     var texta=document.querySelector('textarea[name="textarea_diff_1"]');
     var textb=document.querySelector('textarea[name="textarea_diff_2"]');
     if (texta && textb){
@@ -24,7 +24,7 @@ function remove_cn_space_diff_b(){
         }
         return csstr;
     }
-    //---------
+    //-----------------------
     var texta=document.querySelector('textarea[name="textarea_diff_1"]');
     var textb=document.querySelector('textarea[name="textarea_diff_2"]');
     if (texta && textb){
@@ -39,7 +39,7 @@ function remove_all_space_diff_b(){
         csstr=csstr.trim();
         return csstr;
     }
-    //---------
+    //-----------------------
     var texta=document.querySelector('textarea[name="textarea_diff_1"]');
     var textb=document.querySelector('textarea[name="textarea_diff_2"]');
     if (texta && textb){
@@ -60,7 +60,7 @@ function remove_space_diff_b(){
         }
         return csstr;
     }
-    //---------
+    //-----------------------
     var texta=document.querySelector('textarea[name="textarea_diff_1"]');
     var textb=document.querySelector('textarea[name="textarea_diff_2"]');
     if (texta && textb){
@@ -77,7 +77,7 @@ function remove_empty_lines_diff_b(){
         }
         return csstr;
     }
-    //---------
+    //-----------------------
     var texta=document.querySelector('textarea[name="textarea_diff_1"]');
     var textb=document.querySelector('textarea[name="textarea_diff_2"]');
     if (texta && textb){
@@ -254,7 +254,7 @@ function eng_punctuatin_diff_b(){
         }
         return csstr;
     }
-    //---------
+    //-----------------------
     var texta=document.querySelector('textarea[name="textarea_diff_1"]');
     var textb=document.querySelector('textarea[name="textarea_diff_2"]');
     if (texta && textb){

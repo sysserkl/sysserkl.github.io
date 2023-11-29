@@ -247,7 +247,7 @@ function random_txt_files_klr2(cssize=100){
         blxl=blxl+1;
         setTimeout(sub_random_txt_files_klr2_one_file,2000*randint_b(1,5));
     }
-    //-------------------
+    //-----------------------
     var cscount=parseInt((prompt('输入生成份数：','10') || '').trim());
     if (isNaN(cscount)){return;}
     cscount=Math.min(50,Math.max(0,cscount));
@@ -295,7 +295,7 @@ function form_set_klr2(){
         var bljg=textarea_buttons_b('textarea_rows_content','全选,清空,复制,发送到临时记事本,发送地址');    
         op.insertAdjacentHTML('beforeend',bljg);
     }
-    //---------------
+    //-----------------------
     var oform=document.querySelector('form[name="form_status_klr"]');
     if (oform){
 	    oform.setAttribute('action',postpath+'temp_txt_share.php');
@@ -362,7 +362,7 @@ function init_klr2(){
         }
         return blvalue;
     }
-    //------------------------------------
+    //-----------------------
     leaflet_klr2();
     option_generate_klr2();
     form_set_klr2();

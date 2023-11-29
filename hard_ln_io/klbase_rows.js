@@ -737,7 +737,7 @@ function batch_open_www_klr_b(csid,ostatus,cstype=''){
         blxl=blxl+1;
         setTimeout(sub_batch_open_www_klr_b_one_link,1000);
     }
-    //---------------------------------------------------
+    //-----------------------
     var blstr=document.getElementById(csid).value.trim();
     if (blstr==''){return;}
     if (!confirm('是否批量打开'+cstype+'链接？')){return;}        
@@ -1075,7 +1075,7 @@ function klarticle_init_klr_b(is_simple=false){
         top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.5rem':'1.6rem'),false,false,0,[10,true],true);
         return;
     }
-    //-------------
+    //-----------------------
     if (title_global!==''){
         document.title='📝 '+de_double_str_b(title_global);
     }
@@ -1118,7 +1118,7 @@ function en_double_2_array_klr_b(cscontent,do_export=false,img_src_list=[],conve
 `.trim()+'\n'+"var title_global='"+specialstr_j(en_double_str_b(bltitle))+"';\nvar content_global=[\n"+list_t.join('\n')+'\n];\nvar images_global=[\n'+img_src_list.join('\n')+'\n];\n</script>\n<script>\n';
         var b_fn=klarticle_funs_klr_b(false)+'\n\n';
         var html_tail=`
-//----------------------------------------
+//-----------------------
 klarticle_init_klr_b();
 </script>
 </body>

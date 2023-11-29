@@ -118,7 +118,7 @@ function enwords_array_ebs_b(){
         }
         return '<div class="div_words_list_ebs">\n<hr />\n<p>'+bljg.join('</p><p>')+'</p>'+blbuttons+'<hr />\n</div>\n'
     }
-    //---------------
+    //-----------------------
     var odiv=document.getElementById('divhtml');
     var ospans=odiv.querySelectorAll('span.txt_content');
     var otextarea_value=document.getElementById('textarea_batch_search_ebs').value.trim();

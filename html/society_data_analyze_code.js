@@ -20,7 +20,7 @@ function batch_lines_klsda(){
             setTimeout(sub_batch_lines_klsda_one_item,blinterval);
         }
     }
-    //-----------------------------------------
+    //-----------------------
     var blinterval=document.getElementById('input_interval').value*1000;
     var oselect=document.getElementById('select_item');
     sub_batch_lines_klsda_one_item();

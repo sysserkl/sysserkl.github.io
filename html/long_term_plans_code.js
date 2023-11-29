@@ -240,7 +240,7 @@ function draw_lt_plans(csno,do_jump=false){
             return sub_draw_lt_plans_dots(dot_list);
         }    
     }
-    //---------------------------
+    //-----------------------
     if (csno<0 || csno>=long_term_plans_global.length){return;}
     
     var csitem=long_term_plans_global[csno];
@@ -282,7 +282,7 @@ function draw_lt_plans(csno,do_jump=false){
         bljg=bljg+'<span class="span_box" onclick="change_lt_plans(\''+csitem[0]+'\',2);">'+csitem[2]+'</span> ';
 
         var symbol_list=symbol_manage_lt_plans('get');
-        //------------------
+        //-----------------------
         var dot_list=[];
         for (let blxl=1;blxl<=blposition;blxl++){
             var day_str=date2str_b('/',start_day);
@@ -312,7 +312,7 @@ function draw_lt_plans(csno,do_jump=false){
             start_day.setTime(start_day.getTime()+24*60*60*1000);
         }
         bljg=bljg+sub_draw_lt_plans_section(dot_list,'grey');
-        //------------------
+        //-----------------------
     }
     
     if (show_type=='percent'){

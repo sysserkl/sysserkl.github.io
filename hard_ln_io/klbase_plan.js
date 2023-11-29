@@ -16,7 +16,7 @@ function count_klplan_b(){
         ospan.innerHTML=bldone+'/'+bltotal;
         return [bldone,bldone_today,bltotal];
     }
-    //------------------------------
+    //-----------------------
     //var cscolor='rgb('+hex2rgb_b(scheme_global["pink"]).join(', ')+')'; - 保留注释
     var bldone=0;
     var bldone_today=0;

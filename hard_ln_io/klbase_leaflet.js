@@ -533,7 +533,7 @@ function lines_gpsinfo_2_dots_leaflet_b(cslist){
 
 function draw_gpx_lines_simple_leaflet_b(cslist,csname,cscolors){
     //cslist 须是 lat,lon 格式，形如 [ [ 30.221588, 120.024205 ], [ 30.221542, 120.024116 ] ] - 保留注释
-    //----
+    //---
     if (cslist.length==0){return;}
     
     if (cscolors.length<3){
@@ -542,7 +542,7 @@ function draw_gpx_lines_simple_leaflet_b(cslist,csname,cscolors){
     var list_t=cscolors[0].split(':');
     cscolors[0]=list_t[gpx_line_color_no_global % list_t.length];
     gpx_line_color_no_global=gpx_line_color_no_global+1;
-    //----
+    //---
     
     navigation_layer_gps_global.addLayer(line_leaflet_b(omap_gps_points_global,true,cslist,cscolors[0],csname));
     if (cscolors[1]!==''){

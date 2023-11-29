@@ -139,7 +139,7 @@ function date_fetch_ysh_jf(search_key=false){
             alert('error:', error);
         });       
     }
-    //-----------------
+    //-----------------------
     var oinput=document.getElementById('input_search');
     if (search_key===false){
         search_key=oinput.value.trim();
@@ -178,7 +178,7 @@ function date_fetch_ysh_jf(search_key=false){
 function page_ysh_jf(csno){
     var cslen=current_result_ysh_jf_global.length;
     var pages=page_combination_b(cslen,rows_per_page_ysh_jf_global,csno,'page_ysh_jf','locate_ysh_jf',false,1,10);  
-    //-------------
+    //-----------------------
     var result_t=[];
     var blend=Math.min(csno-1+rows_per_page_ysh_jf_global,cslen);
     var blno=0;
@@ -278,7 +278,7 @@ function idb_write_ysh_jf(db,do_alert=false){
             }
         };
     }
-    //---------------
+    //-----------------------
     var found_list=[];
     var count_dict={'更新':0,'添加':0,'忽略':0,'错误':0};
     return new Promise((resolve, reject) => {
@@ -387,7 +387,7 @@ function idb_ysh_jf(cstype='',cskey=false,do_alert=false){
                 break;
         }
     }
-    //-------------------------
+    //-----------------------
     return new Promise((resolve, reject) => {
         var bljg=idb_main_b(cstype,'ysh_jf_dbc','ysh_jf_dbf',sub_idb_ysh_jf_switch);
         resolve(bljg);

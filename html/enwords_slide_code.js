@@ -214,7 +214,7 @@ function cocktail_enslide(cslines='',cspercent=''){
         }
 	}
     enwords_sort_b();
-	//--------------
+	//-----------------------
 	// var bllength=Math.min(Math.floor(cslines*percent_recent_t),enwords.length); - 保留注释   
     //指定日期旧单词0或2，除非 percent_recent_t 为 0 ，否则数量不受比例限制
     if (percent_recent_t>0){
@@ -226,7 +226,7 @@ function cocktail_enslide(cslines='',cspercent=''){
             }
         }
     }
-	//--------------
+	//-----------------------
     words_searched_arr_global=[];
     for (let item of wordsarr_t){
         words_searched_arr_global.push(item);

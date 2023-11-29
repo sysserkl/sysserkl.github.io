@@ -87,7 +87,7 @@ function randomPiece_tetris(){
             drawsquare_tetris(ctx_current,c,r,board_current_global[r][c]);
         }
     }
-    //--
+    //---
     pattern_list_generator_tetris();
     
     var first_pattern=pattern_list_global.shift();

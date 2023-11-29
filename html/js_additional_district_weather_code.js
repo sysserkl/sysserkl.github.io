@@ -75,7 +75,7 @@ function export_temperature_district_weather(){
             flot_arr.push(csdict[key].join(','));
         } 
     }
-    //-----------------
+    //-----------------------
     var ht=[];
     var lt=[];
         
@@ -174,7 +174,7 @@ function flot_line_temperature_district_weather(only_dot=false,csarr=false,legen
             flot_arr.push(csdict[key]);
         } 
     }
-    //-----------------
+    //-----------------------
     var ht=[];
     var lt=[];
     
@@ -407,7 +407,7 @@ function dots_district_weather(){
         result_t.sort();
         return result_t;
     }
-    //--------------------------
+    //-----------------------
     var temperature_range=document.getElementById('select_temperature_range_jsad_dweather').value;
     var ht={};
     var lt={};

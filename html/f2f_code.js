@@ -292,7 +292,7 @@ function page_f2f(csno){
 
     var cslen=content_current_f2f_global.length;
     var bljg=page_combination_b(cslen,rows_per_page_f2f_global,csno,'page_f2f','locate_f2f',false,1,10);  
-    //-------------
+    //-----------------------
     var result_t=[];
     var blend=Math.min(csno-1+rows_per_page_f2f_global,cslen);
     var blno=0;
@@ -482,7 +482,7 @@ function year_individual_f2f(){
         }
         return date_count_dots_b(date_list,cscolor,1,1,'次',true,true,true,true,false,'1.3rem');
     }
-    //----------------------------
+    //-----------------------
     var color_list=['red','green','blue','black','orange'];
     var dates=year_range_f2f();
     if (dates==false){return;}
