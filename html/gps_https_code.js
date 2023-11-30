@@ -1,4 +1,3 @@
-
 function buttons_gps(){
     var bljg='<input type="number" min=1 id="input_second" value=5 /> ';
     bljg=bljg+'<span class="aclick" onclick="run_times_global=0;run_gps_global=setInterval(record_write_gps,document.getElementById(\'input_second\').value*1000);">Start</span>';
@@ -65,12 +64,10 @@ function success_record_gps(position) {
     lat_gps_global  = position.coords.latitude;
     document.getElementById('span_status').innerHTML = 'Lon: '+lon_gps_global+', Lat: '+lat_gps_global;
 
-    var myLines = [
-        {
-            "type": "LineString",
-            "coordinates": [[old_lon, old_lat], [lon_gps_global,lat_gps_global]],
-        }, 
-    ];
+    var myLines = [{
+    'type': 'LineString',
+    'coordinates': [[old_lon, old_lat], [lon_gps_global,lat_gps_global]],
+    },];
     
     myLayer = L.geoJSON().addTo(omap_gps_global);
     myLayer.addData(myLines);
@@ -99,22 +96,20 @@ function error_init_gps() {
 }
 
 function map_gps(cslon=121.5,cslat=31.2){
-    var myLines = [
-    {
-        "type": "Point",
-        "coordinates": [cslon, cslat],
-    }, 
-    ];
+    var myLines = [{
+    'type': 'Point',
+    'coordinates': [cslon, cslat],
+    },];
 
     if (omap_gps_global==false){
         omap_gps_global = L.map('div_map').setView([cslat,cslon], 16);
         L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', 
-            {
-                attribution: '',
-                maxZoom: 20,
-                id: 'mapbox.streets',
-                accessToken: 'pk.eyJ1Ijoid3k3MzA1ZSIsImEiOiJjazJuMG9laTEwMWJqM2xtenZ2eXduMHdtIn0.yh0uJghsB8Ci-Kd2Scy_wA'
-            }
+        {
+        attribution: '',
+        maxZoom: 20,
+        id: 'mapbox.streets',
+        accessToken: 'pk.eyJ1Ijoid3k3MzA1ZSIsImEiOiJjazJuMG9laTEwMWJqM2xtenZ2eXduMHdtIn0.yh0uJghsB8Ci-Kd2Scy_wA',
+        }
         ).addTo(omap_gps_global);
     }
     
@@ -123,7 +118,7 @@ function map_gps(cslon=121.5,cslat=31.2){
 }
 
 function point_gps(cstype='init'){
-    if (!navigator.geolocation) {
+    if (!navigator.geolocation){
         document.getElementById('span_status').innerHTML = 'Geolocation is not supported by your browser';
     } 
     else {

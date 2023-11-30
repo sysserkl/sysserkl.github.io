@@ -63,7 +63,7 @@ function change_color_klbox(){
             }
         }
     }
-    else if (times_global>10) {
+    else if (times_global>10){
         var color_range=color_range_b([],[],divs.length);
         for (let blxl=0;blxl<divs.length;blxl++){
             divs[blxl].style.backgroundColor=rgb2hex_b(color_range[blxl]);

@@ -370,7 +370,7 @@ function gate_multimedia(){
 
 function load_multimedia(){
     var datanum=0;
-    var datalist=['douban_data_20181010','imdb_data_20180929','imdb_data_20221012'];
+    var datalist=['douban_data_20181010','imdb_data_20180929','imdb_data_20221012','imdb_data_20231129'];
 
     var bljg='· ';
     for (let blxl=0;blxl<datalist.length;blxl++){

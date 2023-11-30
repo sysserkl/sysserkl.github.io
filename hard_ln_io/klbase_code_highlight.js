@@ -1,37 +1,19 @@
 function prism_highlight_strings_klh_b(cscontent,filetype){
-    var codetype='';
     var code_object=false;
-
-    switch (filetype){
-        case '.py':
-            codetype='python';
-            break;
-        case '.js':
-            codetype='javascript';
-            break;
-        case '.txt':
-            codetype='text';
-            break;
-        case '.css':
-            codetype='css';
-            break;
-        case '.sh':
-            codetype='bash';
-            break;
-        case '.asp':
-        case '.htm':
-        case '.html':
-            codetype='html';
-            break;
-        case '.php':
-            codetype='php';
-            break;
-        case '.cpp':
-            codetype='cpp';
-            break;
-        default:
-            codetype='';
-    }
+    var codetype_dict={
+    '.asp':'html',
+    '.cpp':'cpp',
+    '.css':'css',
+    '.htm':'html',
+    '.html':'html',
+    '.js':'javascript',
+    '.php':'php',
+    '.py':'python',
+    '.sh':'bash',
+    '.txt':'text',
+    };
+    
+    var codetype=codetype_dict[filetype] || '';
     if (codetype==''){
         return 'not found code type';
     }
@@ -78,19 +60,13 @@ function source_search_klh_b(cssource,cskey,isreg=false){
     if (cskey==''){return true;}
 
     var blfound=str_reg_search_b(cssource,cskey,isreg); 
-    if (blfound==-1 || blfound==false){
-        return false;
-    }
+    if (blfound==-1 || blfound==false){return false;}
          
     var list_t=cssource.split('\n');
     for (let arow of list_t){
         var blfound=str_reg_search_b(arow,cskey,isreg); 
-        if (blfound==-1){
-            return false;
-        }
-        if (blfound){   //有一行符合即返回 true - 保留注释
-            return true;
-        }
+        if (blfound==-1){return false;}
+        if (blfound){return true;}   //有一行符合即返回 true - 保留注释
     }
     return false;
 }

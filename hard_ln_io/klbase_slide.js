@@ -74,14 +74,14 @@ function slide_center_img_style_b(csblack,user_style=''){
 }
 
 function slide_hide_show_objects_b(hidelist,showlist){
-    for (let blxl in hidelist){
-    	var obj=document.getElementById(hidelist[blxl]);
+    for (let item of hidelist){
+        var obj=document.getElementById(item);
         if (obj){
             obj.style.display='none';
         }
     }
-    for (let blxl in showlist){
-	    var obj=document.getElementById(showlist[blxl]);
+    for (let item of showlist){
+        var obj=document.getElementById(item);
         if (obj){
             obj.style.display='block';
         }
