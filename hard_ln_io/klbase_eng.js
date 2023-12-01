@@ -387,7 +387,7 @@ function open_link_en_b(cstype,csword,do_open=true){
             break;
         case '👁':
             blhref=klwebphp_path_b('book_search.php');
-            blhref=blhref+'?s='+web_href_key_b(csword,'s',true)+'&eng';
+            blhref=blhref+'?s='+web_href_key_b(csword,'s',true)+'(:r)&eng';
             break;
         case 'w👁':
             open_link_en_b('w',csword,do_open);
