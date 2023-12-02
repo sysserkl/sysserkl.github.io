@@ -1218,10 +1218,49 @@ function main_options_bible(){
 }
 
 function rand_chapter_list_bible(){
-    var rndchapter=parseInt(Math.random()*chapter_global.length);
+    var chapters=read_get_bible(-1);
+    var zero_no_t=[];
+    for (let blxl=0;blxl<chapters.length;blxl++){
+        if (chapters[blxl]=='0'){
+            zero_no_t.push(blxl);
+        }
+    }
+    
+    var is_rand=true;
+    if (zero_no_t.length==0){
+        var rndchapter=parseInt(Math.random()*chapter_global.length);
+    }
+    else {
+        zero_no_t.sort(randomsort_b);
+        var item=zero_no_t[0];
+        is_rand=chapter_sub_global[item];
+        var rndchapter=row_no_2_chapter_index_no_bible(is_rand);
+        
+        //以下几行验证用 - 保留注释
+        //for (let item of zero_no_t){
+            //is_rand=chapter_sub_global[item];
+            //var rndchapter=row_no_2_chapter_index_no_bible(is_rand);
+            //console.log(rndchapter,chapter_global[rndchapter],is_rand,cnbible_global[is_rand]);
+        //}
+    }
+    
     document.getElementById('select_chapter').value=chapter_global[rndchapter][0];
     document.getElementById('select_chapter_cn').value=chapter_global[rndchapter][0];
-    minor_options_bible(chapter_global[rndchapter][0],true);
+    minor_options_bible(chapter_global[rndchapter][0],is_rand);
+}
+
+function row_no_2_chapter_index_no_bible(csno){
+    var blmain=-1;
+    for (let blxl=1;blxl<chapter_global.length;blxl++){
+        if (csno<chapter_global[blxl][0]){
+            blmain=blxl-1;
+            break;
+        }
+    }
+    if (blmain==-1){
+        blmain=chapter_global.length-1;
+    }
+    return blmain;
 }
 
 function main_with_sub_check_bible(){
@@ -1329,15 +1368,19 @@ function minor_options_bible(csno=0,csrnd=false){
         bljg=bljg+'<option value='+blxl+'>'+kjv[blxl].substring(4,kjv[blxl].length-4).replace(enname,'')+'</option>\n';
     }
     
-    document.getElementById('select_sub').innerHTML=bljg;
+    var osub=document.getElementById('select_sub');
+    osub.innerHTML=bljg;
     document.getElementById('select_end_sub').innerHTML='<option value="-1"></option>'+bljg;
     
     if (line_no_list.length>0){
-        if (csrnd){
+        if (csrnd===true){
             line_no_list.sort(randomsort_b);
         }
-        document.getElementById('select_sub').value=line_no_list[0];
-        chapter_one_bible(line_no_list[0]);
+        if (csrnd===true || csrnd===false){
+            csrnd=line_no_list[0];
+        }
+        osub.value=csrnd;
+        chapter_one_bible(csrnd);
     }
 }
 
