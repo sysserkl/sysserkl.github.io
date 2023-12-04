@@ -210,7 +210,7 @@ function dict_generate_klcalendar(ymkey,csyear,csmonth){
     return cld_global[ymkey];
 }
 
-function changeCld_klcalendar(odom,hide_empty_row=true,legend_dict={}){
+function changeCld_klcalendar(odom,hide_empty_row=true){
     odom=table_find_klcalendar(odom,'select','select.select_year, select.select_month');
     var csyear, csmonth;
     [csyear, csmonth]=year_month_get_klcalendar(odom);
@@ -264,17 +264,17 @@ function changeCld_klcalendar(odom,hide_empty_row=true,legend_dict={}){
                 var important_list=memo_theday_klcalendar(theday,true,false);
                 if (sObj.innerText.trim()!=='' && important_list.length>0){
                     var legend_key='m_'+important_list[0];
-                    if (legend_dict[legend_key]==undefined){
+                    if (legend_dict_klcalendar_global[legend_key]==undefined){
                         var bgcolor=bgcolor_klcalendar_global[bgcolor_index_klcalendar_global];
                         bgcolor_index_klcalendar_global=bgcolor_index_klcalendar_global+1;
                         if (bgcolor_index_klcalendar_global>=bgcolor_klcalendar_global.length){
                             bgcolor_index_klcalendar_global=0;
                         }
-                        legend_dict[legend_key]=[bgcolor,important_list[0],1];
+                        legend_dict_klcalendar_global[legend_key]=[bgcolor,important_list[0],1];
                     }
                     else {
-                        var bgcolor=legend_dict[legend_key][0];
-                        legend_dict[legend_key][2]=legend_dict[legend_key][2]+1;
+                        var bgcolor=legend_dict_klcalendar_global[legend_key][0];
+                        legend_dict_klcalendar_global[legend_key][2]=legend_dict_klcalendar_global[legend_key][2]+1;
                     }
                     if (memo_bg_enabled_klcalendar_global){
                         sObj.style.backgroundColor=bgcolor;
@@ -326,7 +326,6 @@ function changeCld_klcalendar(odom,hide_empty_row=true,legend_dict={}){
         }
     }
     td_onclick_klcalendar(current_td_global);
-    return legend_dict;
 }
 
 function table_find_klcalendar(odom,cstagname,querystr,table_class='table_one_month'){
@@ -849,9 +848,9 @@ function year_klcalendar(){
     menu_klcalendar(false,'#div_head','Legends');
     
     var legend_set=new Set();
-    var legend_dict=months_klcalendar(list_t[0],list_t[1],section_info);    
-    for (let key in legend_dict){
-        legend_set.add('<span style="border: 0.5rem solid '+legend_dict[key][0]+'">'+legend_dict[key][1]+'('+legend_dict[key][2]+')</span>');
+    months_klcalendar(list_t[0],list_t[1],section_info);    
+    for (let key in legend_dict_klcalendar_global){
+        legend_set.add('<span style="border: 0.5rem solid '+legend_dict_klcalendar_global[key][0]+'">'+legend_dict_klcalendar_global[key][1]+'('+legend_dict_klcalendar_global[key][2]+')</span>');
     }
     
     ohead.insertAdjacentHTML('beforeend','<span style="font-size:1.35rem;">'+Array.from(legend_set).join(' ')+'</span>');
@@ -865,7 +864,6 @@ function months_klcalendar(start_ym,end_ym,section_info=true){
     var odiv=document.getElementById('divhtml');
     var ocontainer,otable;
     var ocontainer_list=[];
-    var legend_dict={};
     while (true){
         if (current_ym>end_ym || blxl>2400){break;}
         var list_t=current_ym.split('-');
@@ -877,7 +875,7 @@ function months_klcalendar(start_ym,end_ym,section_info=true){
         
         [ocontainer,otable]=month_generate_klcalendar(odiv,blyear,blyear,blmonth,blmonth,false,false,section_info);
         ocontainer_list.push(ocontainer);
-        legend_dict=changeCld_klcalendar(otable,false,legend_dict);
+        changeCld_klcalendar(otable,false);
         
         display_date_info_klcalendar(otable,'1');    
         
@@ -900,9 +898,7 @@ function months_klcalendar(start_ym,end_ym,section_info=true){
     var blmax=Math.max(...width_set);
     for (let one_td of otds){
         one_td.style.minWidth=blmax+'px';   //统一宽度 - 保留注释
-    }    
-    //---
-    return legend_dict;
+    }
 }
 
 function month_generate_klcalendar(odiv,year_min=1900,year_max=2100,month_min=1,month_max=12,ym_buttons=true,td_xx=true,section_info=true){
