@@ -1589,7 +1589,7 @@ function ip_address_autocomplete_b(csip){
     return csip;
 }
 
-function kl_remote_host_address_b(new_address=null,do_ask=false){
+function kl_remote_host_address_b(new_address=null,do_ask=false,odom=false){
     var old_address=local_storage_get_b('kl_remote_host',-1,false);
     
     if (new_address===null){
@@ -1637,6 +1637,18 @@ function kl_remote_host_address_b(new_address=null,do_ask=false){
     
     if (old_address==bladdress){return;}
     localStorage.setItem('kl_remote_host',bladdress);
+    
+    if (odom!==false){
+        var oa=odom.parentNode.querySelector('a.a_remote_host_address');
+        if (oa){
+            var list_t=oa.href.split('?');
+            var cstype=(list_t.length==2?list_t[1]:'');
+            var blhref,bltitle;
+            [blhref,bltitle]=remote_host_link_generate_b(bladdress,cstype);
+            oa.href=blhref;
+            oa.innerHTML=bltitle;
+        }
+    }
 }
 
 function remote_ip_detector_b(host_left_part,csmin,csmax,do_alert=false){
@@ -1728,8 +1740,6 @@ function postpath_b(){
 
 function textarea_buttons_b(textarea_id,csbuttons,cstype='',csstyle='',span_class='aclick'){
     //csstyle: ' style="font-size:1rem;"' - 保留注释
-    var remote_host=local_storage_get_b('kl_remote_host',-1,false);
-    var postpath=remote_host+'/klwebphp/';
     var isfile=is_file_type_b();
 
     var bljg='';
@@ -1768,17 +1778,27 @@ function textarea_buttons_b(textarea_id,csbuttons,cstype='',csstyle='',span_clas
     if (csbuttons.includes('打开临时记事本') || csbuttons.includes('open remote temp memo')){
         bljg=bljg+'<a'+csstyle+' href="'+postpath+'temp_txt_share.php'+(cstype==''?'':'?type='+cstype)+'" class="a_oblong_box" target=_blank>open remote temp memo('+remote_host.slice(-3,)+')</a> ';
     }
+    
+    var remote_host=local_storage_get_b('kl_remote_host',-1,false);
+        
     if (csbuttons.includes('➕')){
-        var bladdress=postpath+'temp_txt_append.php';
+        var bladdress=remote_host+'/klwebphp/temp_txt_append.php';
         bljg=bljg+'<a class="'+span_class+'"'+csstyle+' href="'+bladdress+'" title="'+bladdress+'" target=_blank">➕</a> ';
     }
         
     if (csbuttons.includes('发送地址') || csbuttons.includes('set remote address')){
-        var bladdress=postpath+'temp_txt_share.php'+(cstype==''?'':'?type='+cstype);
-        bljg=bljg+'<span class="'+span_class+'"'+csstyle+' onclick="kl_remote_host_address_b();" title="set remote address">⛓</span>：<a'+csstyle+' href="'+bladdress+'" target=_blank>'+(remote_host.includes('//')?remote_host.split('//')[1]:remote_host)+' | temp_txt_share.php '+(cstype==''?'':' | '+cstype)+'</a>';
+        var blhref,bltitle;
+        [blhref,bltitle]=remote_host_link_generate_b(remote_host,cstype);
+        bljg=bljg+'<span class="'+span_class+'"'+csstyle+' onclick="kl_remote_host_address_b(null,false,this);" title="set remote address">⛓</span>：<a'+csstyle+' href="'+blhref+'" class="a_remote_host_address" target=_blank>'+bltitle+'</a>';
     }
     
     return bljg;
+}
+
+function remote_host_link_generate_b(remote_host,cstype){
+    var blhref=remote_host+'/klwebphp/temp_txt_share.php'+(cstype==''?'':'?type='+cstype);
+    var bltitle=(remote_host.includes('//')?remote_host.split('//')[1]:remote_host)+' | temp_txt_share.php '+(cstype==''?'':' | '+cstype);
+    return [blhref,bltitle];
 }
 
 function import_temp_txt_share_content_b(csid){
