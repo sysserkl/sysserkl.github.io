@@ -40,10 +40,12 @@ function showcn_klexam(csid,show_sentence=-1,remote_host=false, button_str=false
     if (show_sentence===-1){
         show_sentence=is_show_sentence_klexam();
     }
+    
+    var blword='';
     var op=document.getElementById('p_en2cn_'+csid);
     var bljg=[];
     if (op){
-        var blword=op.innerText;
+        blword=op.innerText;
         for (let item of enwords){
             if (item[0]==blword){
                 bljg=item;
@@ -74,12 +76,29 @@ function showcn_klexam(csid,show_sentence=-1,remote_host=false, button_str=false
 }
 
 function show_all_cn_klexam(cscount){
+    function sub_show_all_cn_klexam_one_word(){
+        if (blxl>=cscount){
+            console.log('show_all_cn_klexam 费时：'+(performance.now() - t0) + ' milliseconds');
+            return;
+        }
+        
+        showcn_klexam(blxl,show_sentence,remote_host, button_str, font_size);
+        blxl=blxl+1;
+        if (blxl % 40 == 0){
+            setTimeout(sub_show_all_cn_klexam_one_word,1);
+        }
+        else {
+            sub_show_all_cn_klexam_one_word();
+        }
+    }
+    //-----------------------    
+    var t0=performance.now();    
     var show_sentence=is_show_sentence_klexam();
     var remote_host,button_str,font_size;
     [remote_host,button_str,font_size]=sentence_property_b(false);
-    for (let blxl=0;blxl<cscount;blxl++){
-        showcn_klexam(blxl,show_sentence,remote_host, button_str, font_size);
-    }
+    
+    var blxl=0;
+    sub_show_all_cn_klexam_one_word();
 }
 
 function config_klexam(cstestno,cstype=''){
