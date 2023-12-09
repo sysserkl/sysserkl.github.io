@@ -367,13 +367,13 @@ function open_link_en_b(cstype,csword,do_open=true){
             blhref='https://www.collinsdictionary.com/dictionary/english/'+web_href_key_b(csword,'-',true);
             break;
         case 'd':
-            blhref='http://dict.cn/'+encodeURIComponent(csword);
+            blhref='https://dict.cn/'+encodeURIComponent(csword);
             break;
         case 'b':
             blhref='https://cn.bing.com/dict/search?q='+encodeURIComponent(csword);
             break;
         case 'y':
-            blhref='http://dict.youdao.com/search?le=eng&q='+encodeURIComponent(csword);
+            blhref='https://dict.youdao.com/search?le=eng&q='+encodeURIComponent(csword);
             break;            
         case 'w':
             blhref=local_storage_get_b('kl_remote_host',-1,false)+'/wiki/index.php?search='+encodeURIComponent(csword)+'&title=特殊%3A搜索&profile=default&fulltext=1';

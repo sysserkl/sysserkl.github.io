@@ -3,9 +3,9 @@ var search_sites_list_global=[
 //key_word_type: 1+, 2-,3\s - 保留注释
 ['https://cn.bing.com/translator/','',0,'','BT','n0','English',''],
 ['https://cn.bing.com/dict/search?q=','',0,'','Bing(cn)','c0','English',''],
-['http://dict.youdao.com/search?le=eng&q=','',0,'','Youdao','c0','English',''],
+['https://dict.youdao.com/search?le=eng&q=','',0,'','Youdao','c0','English',''],
 ['https://dict.cn/','',0,'','Dict.cn','c0','English',''],
-['http://www.iciba.com/','',0,'','ICIBA','c0','English',''],
+['https://www.iciba.com/','',0,'','ICIBA','c0','English',''],
 ['https://www.merriam-webster.com/dictionary/','',0,'blue','Merriam-Webster','c0','English',''],
 ['https://www.collinsdictionary.com/dictionary/english/','',2,'purple','Collins','cp0','English',''],
 ['https://www.collinsdictionary.com/dictionary/english-chinese/','',2,'','Collins_CN','p0','English',''],
