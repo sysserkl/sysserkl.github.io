@@ -3207,6 +3207,14 @@ function window_is_closed_b(owindow,wait_times,csmax=10,do_close=true){
     }    
 }
 
+function window_list_init_b(max_result){
+    var window_list=[];
+    for (let blxl=0;blxl<max_result;blxl++){
+        window_list.push(false);
+    }    
+    return window_list;
+}
+    
 function copy_2_clipboard_b(csstr){
     var otextarea=document.createElement('textarea');
     otextarea.value=csstr;

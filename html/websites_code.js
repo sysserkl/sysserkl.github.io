@@ -94,7 +94,7 @@ function import_pwa_data_klwebsites(){
 function key_batch_search_by_engine_klwebsites(is_enword=true,csengine='bing',max_result=5){
     function sub_key_batch_search_by_engine_klwebsites_done(){
         var used_seconds=(new Date()-start_time)/1000;
-        console.log(new Date().toLocaleString(), '完成，费时：',(used_seconds/bllen).toFixed(2)+'秒');        
+        console.log(new Date().toLocaleString(), '完成，费时：',used_seconds.toFixed(2)+'秒');        
         document.title=old_title;    
     }
     
@@ -137,14 +137,7 @@ function key_batch_search_by_engine_klwebsites(is_enword=true,csengine='bing',ma
         document.title=blno+'/'+bllen+' - '+title_key+' - '+old_title;
         setTimeout(sub_key_batch_search_by_engine_klwebsites_one_site,wait_seconds*1000);
     }
-    
-    function sub_key_batch_search_by_engine_klwebsites_init(){
-        for (let blxl=0;blxl<max_result;blxl++){
-            window_list.push(false);
-        }    
-    }
     //-----------------------
-    
     var site_list=false;
     if (is_enword){
         site_list=array_klwebsites('^1,0,0$',999);
@@ -170,8 +163,7 @@ function key_batch_search_by_engine_klwebsites(is_enword=true,csengine='bing',ma
     if (bllen==0){return;}
     if (!confirm('是否对 '+blkey+' 在 '+bllen+' 个网站中进行批量搜索？')){return;}
     
-    var window_list=[];
-    sub_key_batch_search_by_engine_klwebsites_init();
+    var window_list=window_list_init_b(max_result);
 
     var blno=0;
     var is_closed=false;
@@ -179,6 +171,7 @@ function key_batch_search_by_engine_klwebsites(is_enword=true,csengine='bing',ma
     var wait_times=0;
     var wait_seconds=5;
     var old_title=document.title;
+    
     sub_key_batch_search_by_engine_klwebsites_one_site();
 }
 

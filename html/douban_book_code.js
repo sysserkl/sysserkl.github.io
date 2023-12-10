@@ -519,7 +519,7 @@ function amazon_title_batch_dbb(){
         
         if (blxl>=bllen){
             var used_seconds=(new Date()-start_time)/1000;
-            console.log(new Date().toLocaleString(), '完成，费时：',(used_seconds/bllen).toFixed(2)+'秒');
+            console.log(new Date().toLocaleString(), '完成，费时：',used_seconds.toFixed(2)+'秒');
             document.title=old_title;
             return;
         }
