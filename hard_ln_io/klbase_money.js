@@ -22,8 +22,7 @@ function content_media_money_b(csstr){
 		
 		if ('.jpg,.bmp,.png,.gif'.includes(bljg.substring(bljg.length-4).toLowerCase()) || '.avif,.jfif,.jpeg,.webp'.includes(bljg.substring(bljg.length-5).toLowerCase())){
 			bljg='<div style="max-width:20rem;max-height:30rem;overflow:hidden;"><img src=\"'+bljg+'\" onclick="resizeimg_wp(this.parentNode);" style="width:100%;" border="0"></div>';
-		}
-		else{
+		} else {
 			bljg='<a style="text-decoration:underline;" href=\"'+bljg+'\" target=_blank>'+bljg.substring(bljg.lastIndexOf('/')+1)+'</a>';
 		}
 		
@@ -45,8 +44,7 @@ function color_money_b(csarr){
     }
 	else if (blvalue>csarr[13]){
         bljg=bljg+' style="cursor:pointer;color:'+scheme_global['a']+';" onclick="alert(\'数量×单价 = '+blvalue+'\');"';
-    }
-	else{
+    } else {
         bljg=bljg+' style="color:'+scheme_global['button']+';"';
     }
 
@@ -83,8 +81,7 @@ function search_link_money_b(csstr,cstype,fn_name='search_wp'){
 			if (!csstr.includes(' ') && cstype=='分类+子类'){
 				var bltmp=fn_name+'(\"'+csstr+'(:分类) '+csstr+'(:子类)\");';
 				bljg='<span class="span_underline_box" onclick=\''+bltmp+'\'>'+csstr+'</span>';
-			}
-			else {
+			} else {
 				var blarr=csstr.split(' ');
 				var bltmp=fn_name+'(\"';
 				for (let item of blarr){
@@ -107,8 +104,7 @@ function list_tr_money_b(csarr,csxl,cssimple=false,csluru_php='wpluru.php',csnol
     if (csluru_php=='wp_pwa'){
         bljg=bljg+'<span class="span_link" onclick="edit_form_wp_pwa('+csarr[0]+','+asc_sum_b(csarr.join(''))+');"';
         bljg=bljg+' title="修改记录">'+(parseInt(csxl)+1).toString()+'</span>';    
-    }
-    else {
+    } else {
         bljg=bljg+'<a href="'+csluru_php+'?id='+csarr[0]+'&hash='+csarr[1]+'"';
         bljg=bljg+(csnew_window?' target=_blank':'');
         bljg=bljg+'>'+(parseInt(csxl)+1).toString()+'</a>';
@@ -117,8 +113,7 @@ function list_tr_money_b(csarr,csxl,cssimple=false,csluru_php='wpluru.php',csnol
 	bljg=bljg+'<td><p class="p_wp_name" style="font-size:1.45rem;margin-top:0.5rem;margin-bottom:0.5rem;"><b>';
     if (csarr[2]=='失效物品'){
         bljg=bljg+'<strike style="color:'+scheme_global['a']+';"><font color="'+scheme_global['memo']+'">'+csarr[4]+'</font></strike>';
-    }
-    else {
+    } else {
         bljg=bljg+csarr[4];
     }
     bljg=bljg+'</b>';
@@ -132,8 +127,7 @@ function list_tr_money_b(csarr,csxl,cssimple=false,csluru_php='wpluru.php',csnol
         bljg=bljg+csarr[2];
         bljg=bljg+csarr[3];
         bljg=bljg+' / '+csarr[5];
-    }
-    else {
+    } else {
         bljg=bljg+search_link_money_b(csarr[2],'分类');
 	    bljg=bljg+search_link_money_b(csarr[3],'子类');
         bljg=bljg+' / '+search_link_money_b(csarr[5],'出处');
@@ -146,8 +140,7 @@ function list_tr_money_b(csarr,csxl,cssimple=false,csluru_php='wpluru.php',csnol
 	    bljg=bljg+' <font class="font_bookkeeping_info_wp" color=#c0c0c0>/ ';
         if (csluru_php=='wpluru.php'){
             bljg=bljg+'<span class="span_box span_template_wp" onclick="template_set_money_b(this);" title="发送当前记录到录入界面">登记</span> ';        
-        }
-        else {
+        } else {
             bljg=bljg+'登记 ';
         }
         bljg=bljg+csarr[7]+' '+csarr[8]+' '+csarr[9]+'</font>';
@@ -177,8 +170,7 @@ function template_set_money_b(csspan){
                 var odom=one_tr.querySelector(dom_str);
                 if (!odom){
                     result_t.push(dom_str+':');
-                }
-                else {
+                } else {
                     result_t.push(dom_str+':'+odom.innerText);
                 }
             }
@@ -222,8 +214,7 @@ function date_row_money_b(purchase_date,csnolink){
     var bljg='<tr><td colspan=3 style="border-top:double 0.5rem #e0e0e0;padding:1rem 0;"><big><strong>';
     if (csnolink){
         bljg=bljg+purchase_date;
-    }
-    else {
+    } else {
         bljg=bljg+search_link_money_b(purchase_date,'购置日期');
     }
     bljg=bljg+' <span onclick="from_day_money_b(\''+purchase_date+'\');" style="cursor:pointer;">'+day_2_week_b(purchase_date)+'</span></strong></big>'+popup_b('popup_'+purchase_date,'','','70%')+'</td></tr>';
@@ -449,8 +440,7 @@ function electricity_get_money_b(csstr){
     var blat=csstr.indexOf('。本期');
     if (blat==-1){
         csstr=csstr.replace(/.*，户名：.*?，地址：.*?。/,'');
-    }   
-    else {
+    } else {
         csstr=csstr.substring(blat+1,);
     }
     csstr=csstr.replace(/交费到期日为.*?，如已交费，敬请忽略，/g,'');
@@ -621,8 +611,7 @@ function import_statistics_money_b(do_alert=true,textarea_id='textarea_idb_conte
         var blvalue=parseFloat(item.substring(3,).trim());
         if (blname=='数量:'){
             amount=amount+blvalue;
-        }
-        else {
+        } else {
             total_price=total_price+blvalue;
         }        
     }
@@ -687,8 +676,7 @@ function import_filter_records_money_b(from_check_box=false,textarea_id='textare
             }
         }
         oinput.value=blstr;
-    }
-    else {
+    } else {
         var blstr=oinput.value.trim();
     }
     var is_reg=false;
@@ -703,8 +691,7 @@ function import_filter_records_money_b(from_check_box=false,textarea_id='textare
         if (blfound==-1){break;}
         if (is_include && blfound || !is_include && !blfound){
             included_t.push(item);
-        }
-        else {
+        } else {
             excluded_t.push(item);        
         }
     }

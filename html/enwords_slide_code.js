@@ -80,8 +80,7 @@ function show_enslide(csxl){
                     csxl=Math.max(0,parseInt(document.getElementById('input_lineno').value-1));
                 }
 				var bljg=en_one_word_b(enwords[csxl],[-1,0,true]);
-			}
-			else{
+			} else {
 				if (csxl>enwords.length-1){
 					csxl=0;
 					enwords_sort_b('r');
@@ -152,15 +151,13 @@ function args_enslide(){
                 let list_t=bltmpstr.substring(9).split(',');
                 if (list_t.length>1){
                     cocktail_enslide(list_t[0],list_t[1]);
-                }
-                else {
+                } else {
                     cocktail_enslide(list_t[0]);
                 }
                 break;
             }
         }
-    }
-    else{
+    } else {
         getlines_enwc_b(1,40);
     }
 }

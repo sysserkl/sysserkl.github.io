@@ -5,7 +5,10 @@
 <meta charset="UTF-8" />
 <script src="../hard_ln_io/klbase.js"></script>
 <script>
-klbase_addons_import_js_b(['css'],[],['js_data_file_common_search_data.js']);
+var js_file_list_common_kl_global=[];
+</script>
+<script>
+klbase_addons_import_js_b(['css'],[],['js_data_file_common_search_pb_data.js'],['../../../../data/js_data_file_common_search_kl_data.js']);
 </script>
 <script src="js_data_file_common_search_code.js"></script>
 <script>
@@ -16,6 +19,7 @@ klbase_addons_import_js_b(['css'],[],['js_data_file_common_search_data.js']);
 var is_all_result_jscm_global=false;
 var clicked_row_no_jscm_global=-1;
 var rows_per_page_jscm_global=100;
+var js_file_list_common_global=array_union_b(js_file_list_common_pb_global,js_file_list_common_kl_global);
 var scheme_global={};
 scheme_generation_b();
 css_root_style_b('18','13',['base','menu'],['#divhtml li:hover {background-color:'+scheme_global['button']+';}'],1);

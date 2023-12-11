@@ -53,8 +53,7 @@ function slide_gery_div_b(csdivid,csblack,csimg,user_style=''){
     common_str=common_str+(user_style.includes('opacity')?'':'opacity:1; ');
 	if (csblack){
 		document.getElementById(csdivid).style.cssText=common_str+'background-color:#000000;'+user_style;
-	}
-	else {
+	} else {
         //background-img - 保留注释
 		document.getElementById(csdivid).style.cssText=common_str+(user_style.includes('blur')?'':'filter: blur(5px);')+user_style;
 		document.getElementById(csdivid).style.backgroundImage='url("'+csimg+'")';
@@ -65,8 +64,7 @@ function slide_center_img_style_b(csblack,user_style=''){
 	if (csblack){
 		var border_size_t=0;
 		var bljg='style="max-height:'+document.documentElement.clientHeight+'px;max-width:'+document.documentElement.clientWidth+'px;'+user_style+'"';
-	}
-	else {
+	} else {
 		var border_size_t=Math.min(20,Math.max(1,Math.round(Math.min(document.documentElement.clientHeight,document.documentElement.clientWidth)*0.025)));
 		var bljg='style="max-height:'+(document.documentElement.clientHeight-border_size_t*2)+'px;max-width:'+(document.documentElement.clientWidth-border_size_t*2)+'px;border:'+border_size_t+'px '+scheme_global['memo']+' solid;'+user_style+'"';
 	}

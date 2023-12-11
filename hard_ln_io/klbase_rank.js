@@ -122,8 +122,7 @@ function div_flot_css_rank_b(csid,csshow=true,fullscreen=false){
     if (fullscreen){
         odiv.style.width='';
         odiv.style.height='';    
-    }
-    else {
+    } else {
         odiv.style.width='900px';
         odiv.style.height='700px';
     }
@@ -218,8 +217,7 @@ function company_rate_rank_b(csarray,district_index,year_index,revenue_index,den
         var blpow=multiyear_average_growth_rate_b(first_item[0],first_item[1],last_item[0],last_item[1]);
         if (blvalue!==false){
             rate_list.push([item[0],item[1],first_item[0],last_item[0],blpow]);    //企业，地区，初始年分，结束年份，增长率 - 保留注释
-        }
-        else {
+        } else {
             console.log(item); //负数未计算 - 保留注释
         }
     }
@@ -257,8 +255,7 @@ function group_rank_b(csarray,group_district,group_year,district_index,year_inde
             blkey=item[district_index];
             sub_group_rank_b_push(blkey,item);               
         }            
-    }        
-    else {
+    } else {
         for (let item of csarray){
             blkey=item[year_index];
             sub_group_rank_b_push(blkey,item);
@@ -477,8 +474,7 @@ function number_td_range_rank_b(otables,td_classname,caption='',default_value=''
             if (isNaN(blvalue)){continue;}
             if (bllen==0 || blrange.has(blvalue)){
                 one_tr.style.display='';
-            }
-            else {
+            } else {
                 one_tr.style.display='none';
             }
         }

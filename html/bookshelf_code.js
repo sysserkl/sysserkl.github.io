@@ -41,8 +41,7 @@ function generate_bookshelf(){
         var bookpath=book_path_b(item[3],is_private);
         if (is_private){
             var book_cover=bookpath+'cover/'+item[0]+'.jpg';
-        }
-        else {
+        } else {
             var book_cover=att_path+'cover'+item[3]+'/'+item[0]+'.jpg';
         }
         var book_address=bookpath+item[0]+'.js'

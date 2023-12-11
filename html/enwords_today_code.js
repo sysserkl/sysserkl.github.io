@@ -63,25 +63,22 @@ function rnd_batch_today_words(cstype=''){
     if (blcount==1){
         if (cstype=='cn'){
             return rnd_cn_search_enwc_b();
-        }
-        else {
+        } else {
             return getlines_rnd_enwc_b();
         }
     }
 
     if (cstype=='cn'){
-        title_change_enwords_b((blcount>1?'批量':'')+"中文释义单词");
-    }
-    else {
-        title_change_enwords_b((blcount>1?'批量':'')+"随机单词");
+        title_change_enwords_b((blcount>1?'批量':'')+'中文释义单词');
+    } else {
+        title_change_enwords_b((blcount>1?'批量':'')+'随机单词');
     }
     var list_t=[];
     var bljg='';
     for (let blxl=1;blxl<=blcount;blxl++){
         if (cstype=='cn'){
             rnd_cn_search_enwc_b(blnum,false);
-        }
-        else {
+        } else {
             getlines_rnd_enwc_b(blnum,false);
         }
         list_t=list_t.concat(words_searched_arr_global);

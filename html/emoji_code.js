@@ -130,8 +130,7 @@ function init_emoji(){
                 break;
             }
         }
-    }
-    else {
+    } else {
         search_emoji();
     }
 
@@ -181,8 +180,7 @@ function show_emoji(cstype){
             aspan.style.color=scheme_global['a-hover'];
             document.getElementById('div_'+cstype+'_emoji').style.display='';
             document.getElementById('divhtml_'+cstype).style.display='';            
-        }
-        else {
+        } else {
             aspan.style.color='';
         }
     }
@@ -241,8 +239,7 @@ function unicode_overlape_search_emoji(){
             var rect_combination=odiv.querySelector('span').getBoundingClientRect();      
             if (rect_combination.width<rect_normal.width+rect2.width){  //不考虑 rect2.width==0 的情况 - 保留注释
                 sub_unicode_overlape_search_emoji_push(blstr,rect2.width);
-            }
-            else {
+            } else {
                 odiv.innerHTML='<span>'+blstr+'美</span>';
                 var rect_combination=odiv.querySelector('span').getBoundingClientRect();      
                 if (rect_combination.width<rect_normal.width+rect2.width){  //不考虑 rect2.width==0 的情况 - 保留注释

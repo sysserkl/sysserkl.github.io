@@ -15,8 +15,7 @@ function qr_html_websites_b(divid,aclass,ahref=''){
     for (let one_a of oas){
         if (ahref=='' || one_a.href.includes(ahref)){
             one_a.outerHTML='<div style="positon:relative;float:left;padding:0.2rem;text-align:center;"><div class="div_qr" style="width:'+canvas_size_websites_global+'px;height:'+canvas_size_websites_global+'px;" title="'+one_a.href+'"></div>'+one_a.outerHTML+'</div>';
-        }
-        else {
+        } else {
             one_a.outerHTML='<div style="positon:relative;float:left;padding:0.2rem;text-align:center;">'+one_a.outerHTML+'</div>';        
         }
     }
@@ -60,8 +59,7 @@ function fav_www_refresh_websites_b(){
         }
         if (blfound){
             has_title.push(one_href);
-        }
-        else {
+        } else {
             without_title.push(one_href);
         }
     }
@@ -81,8 +79,7 @@ function fav_www_refresh_websites_b(){
 function fav_www_set_websites_b(cstype,csjump,is_pwa){
     if (is_pwa){
         var oa=document.querySelector('span.span_websites_link_container a.a_oblong_box');
-    }
-    else {
+    } else {
         var oa=document.querySelector('.p_sites a.a_oblong_box');
     }
     if (!oa){return;}
@@ -100,8 +97,7 @@ function fav_www_set_websites_b(cstype,csjump,is_pwa){
         if (!confirm('是否添加 '+bltitle+' ？')){return;}
         fav_set.add(blhref);
         fav_websites_global.push([blhref,bltitle]);
-    }
-    else {  //'remove'
+    } else {  //'remove'
         if (!fav_set.has(blhref)){return;}        
         if (!confirm('是否移除'+bltitle+' ？')){return;}
         fav_set.delete(blhref);
@@ -121,8 +117,7 @@ function qr_img_veil_websites_b(oimg){
     for (let one_img of oimgs){
         if (one_img==oimg){
             one_img.style.filter='';
-        }
-        else {
+        } else {
             one_img.style.filter='brightness(0%) contrast(0%)'; //brightness(0%) 只用 brightness(0%) 会变成黑色 - 保留注释
         }
     }
@@ -185,8 +180,7 @@ function recent_websites_b(obj_a=false,return_type='none',user_js=''){
         
         localStorage.setItem('recent_websites',recent_websites_list.join('\n'));
         obj_a.style.backgroundColor=scheme_global['pink'];
-    }
-    else {
+    } else {
         var recent_websites_list=local_storage_get_b('recent_websites',500,true);
     }
 
@@ -235,8 +229,7 @@ function same_name_websites_b(cshref,cstitle='',use_small=false){
     var list_t=cshref.split('/');
     if (list_t.slice(-1)=='' && list_t.length>1){
         var bltail=list_t.slice(-2)[0];
-    }
-    else {
+    } else {
         var bltail=list_t.slice(-1)[0];
     }
     
@@ -340,8 +333,7 @@ function category_websites_b(enable_jieba,cstitle,cscategory,cskey){
         if (result_t==''){
             result_t=cscategory.split(',')[0];
         }
-    }
-    else {
+    } else {
         var result_t=cscategory.split(',')[0];
     }
     if (result_t.length<2){

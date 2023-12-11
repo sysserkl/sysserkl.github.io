@@ -12,8 +12,7 @@ function utf16to8_qr_b(csstr){
             bljg += String.fromCharCode(0xE0 | ((blvalue >> 12) & 0x0F));
             bljg += String.fromCharCode(0x80 | ((blvalue >>  6) & 0x3F));
             bljg += String.fromCharCode(0x80 | ((blvalue >>  0) & 0x3F));
-        } 
-        else {
+        } else {
             bljg += String.fromCharCode(0xC0 | ((blvalue >>  6) & 0x1F));
             bljg += String.fromCharCode(0x80 | ((blvalue >>  0) & 0x3F));
         }

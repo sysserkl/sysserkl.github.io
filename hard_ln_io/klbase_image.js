@@ -2,8 +2,7 @@ function img_size_get_b(obj_img,use_natural){
     if (use_natural){
         var blw=obj_img.naturalWidth || obj_img.width;
         var blh=obj_img.naturalHeight || obj_img.height;    
-    }
-    else {
+    } else {
         var blw=obj_img.width;
         var blh=obj_img.height;        
     }
@@ -103,12 +102,10 @@ function filter_select_value_img_b(new_value=false){
         if (blat==0 && item.slice(-2,)=='%)'){
             if (new_value===false){
                 blvalue=parseInt(item.slice(blat+cstype.length+1,-2));
-            }
-            else {
+            } else {
                 if (new_value==0){
                     list_t[blxl]='';
-                }
-                else {
+                } else {
                     list_t[blxl]=cstype+'('+new_value+'%)';
                 }
                 blvalue=new_value;
@@ -143,8 +140,7 @@ function image_2_canvas_img_b(obj_img,return_type='jpeg',csfilter='',use_natural
     if (new_width<=0 || new_height<=0){
         canvas.width = blw;
         canvas.height = blh;
-    }
-    else {
+    } else {
         canvas.width = new_width;
         canvas.height = new_height;    
     }
@@ -156,8 +152,7 @@ function image_2_canvas_img_b(obj_img,return_type='jpeg',csfilter='',use_natural
     //先设置 filter，再 draw - 保留注释
     if (new_width<=0 || new_height<=0){
         ctx.drawImage(obj_img, 0, 0, blw, blh);
-    }
-    else {
+    } else {
         ctx.drawImage(obj_img, 0, 0, blw, blh, 0,0, new_width, new_height);
     }
     switch (return_type){
@@ -188,14 +183,12 @@ function img2base64_b(oimgs,alert_info_id=''){
             if (blsrc.substring(0,11).toLowerCase()!=='data:image/'){
                 if (blsrc.slice(-4,).toLowerCase()=='.gif' && location.href.substring(0,5)!=='file:'){
                     fetch_file_data_b(blsrc,oimgs[blxl],'src');
-                }
-                else {
+                } else {
                     ocanvas=image_2_canvas_img_b(oimgs[blxl],'canvas')[0];
                     oimgs[blxl].setAttribute('src',ocanvas.toDataURL('image/jpeg'));
                 }
                 changed=changed+1;
-            }
-            else {
+            } else {
                 unchanged=unchanged+1;
             }
         }
@@ -230,8 +223,7 @@ function filter_array_img_b(csarray,filter_str){
                 if (item.match(filter_str)){
                     list_t.push(item);
                 }
-            }
-            else {
+            } else {
                 list_t.push(item);
             }
         }
@@ -265,8 +257,7 @@ function qr_read_b(oimg){
     var ode = jsQR(iimageData.data, oimg.naturalWidth, oimg.naturalHeight);
     if (ode){
         return ode.data;        
-    }
-    else {
+    } else {
         return '';
     }    
 }
@@ -377,14 +368,12 @@ function img_split_list_get_b(oimg,split_width=0,split_height=0,only_2=false,csm
             for (let blc=0;blc<oimg.width;blc=blc+split_width){    
                 if (blr>0){
                     new_h=oimg.height-blr;
-                }
-                else {
+                } else {
                     new_h=Math.min(split_height,oimg.height-blr);
                 }
                 if (blc>0){
                     new_w=oimg.width-blc;
-                }
-                else {
+                } else {
                     new_w=Math.min(split_width,oimg.width-blc);
                 }
                 list_t.push([blc,blr,new_w,new_h]);
@@ -392,8 +381,7 @@ function img_split_list_get_b(oimg,split_width=0,split_height=0,only_2=false,csm
             }
             if (blr>0){break;}
         } 
-    }
-    else {
+    } else {
         for (let blr=0;blr<oimg.height;blr=blr+split_height){
             for (let blc=0;blc<oimg.width;blc=blc+split_width){
                 new_w=Math.min(split_width,oimg.width-blc);

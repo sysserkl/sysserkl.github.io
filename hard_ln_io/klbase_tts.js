@@ -29,8 +29,7 @@ function update_temp_txt_share_b(csid){
     
     if (blfound){
         if (confirm('是否更新 '+cscaption+'？')===false){return;}
-    }
-    else {
+    } else {
         var rndstr=randstr_b(4,true,false);
         if ((prompt('输入 '+rndstr+' 确认更新 '+cscaption) || '').trim()!==rndstr){return;}
     }
@@ -123,8 +122,7 @@ function share_style_temp_txt_share_b(){
             for (let blxl=0;blxl<list_t.length;blxl++){
                 list_t[blxl]='# '+list_t[blxl];
             }
-        }            
-        else {
+        } else {
             var today=date2str_b('').slice(-2,);
             for (let blxl=0;blxl<list_t.length;blxl++){
                 list_t[blxl]='# '+today+'日，'+list_t[blxl];
@@ -175,7 +173,7 @@ function menu_temp_txt_share_b(is_php=true){
     }
     
     var klmenu_link=[
-    '<a href="'+klwebphp+'temp_txt_append.php" onclick="'+str_t+'" target=_blank>temp txt append</a>',
+    '<a href="'+klwebphp+'temp_txt_append.php" onclick="'+str_t+'" target=_blank>➕ temp txt append</a>',
     '<a href="'+klwebphp+'file_share_list.php" onclick="'+str_t+'" target=_blank>file share list</a>',
     ];
     

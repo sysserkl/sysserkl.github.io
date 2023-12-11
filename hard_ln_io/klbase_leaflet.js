@@ -71,8 +71,7 @@ function circle_leaflet_b(csomap,islayer=false,cslon=121.5,cslat=31.2,csradius=1
     });
     if (islayer){
         return circle;
-    }
-    else {
+    } else {
         circle.addTo(csomap);
     }
 }
@@ -91,8 +90,7 @@ function line_leaflet_b(csomap,islayer=false,cslist,cscolor='red',cscaption=''){
     var blstr='';
     if (bllen>500){
         blstr=(bllen/1000).toFixed(2)+' km';
-    }
-    else {
+    } else {
         blstr=bllen.toFixed(2)+' m';
     }
     
@@ -128,8 +126,7 @@ function line_leaflet_b(csomap,islayer=false,cslist,cscolor='red',cscaption=''){
     
     if (islayer){
         return polyline;
-    }
-    else {
+    } else {
         polyline.addTo(csomap);
     }
 }
@@ -213,8 +210,7 @@ function gcj02towgs84_b(lng, lat){
     
     if (out_of_china_b(lng, lat)){
         return [lng, lat];
-    }
-    else {
+    } else {
         var dlat = transformlat_b(lng - 105.0, lat - 35.0);
         var dlng = transformlng_b(lng - 105.0, lat - 35.0);
         var radlat = lat / 180.0 * PI;
@@ -239,8 +235,7 @@ function wgs84togcj02_b(lng, lat){
     
     if (out_of_china_b(lng, lat)) {
         return [lng, lat];
-    } 
-    else {
+    } else {
         var dlat = transformlat_b(lng - 105.0, lat - 35.0);
         var dlng = transformlng_b(lng - 105.0, lat - 35.0);
         var radlat = lat / 180.0 * PI;
@@ -406,8 +401,7 @@ function district_cn_name_2_lnglat_b(csname){
     }
     else if (similar1_list.length==0 && similar2_list.length==1){
         return similar2_list[0];
-    }
-    else {
+    } else {
         return [false,false];
     }
 }
@@ -476,8 +470,7 @@ function datetime_gpx_leaflet_b(csstr){
     var theday=validdate_b(csstr);
     if (theday===false){
         var bljg=csstr.replace('T',' ');
-    }
-    else {
+    } else {
         var bljg=now_time_str_b(':',true,theday);
     }
     return [theday,bljg];
@@ -573,8 +566,7 @@ function map_range_leaflet_b(min_max=false){
         lat_list.sort(function (a,b){return a>b;});
         lon_list.sort(function (a,b){return a>b;});
         return [lat_list,lon_list];
-    }
-    else {
+    } else {
         var result_t=[];
         for (let item of [[0,0],[xy.x,0],[0,xy.y],[xy.x,xy.y]]){
             var lat_lon=omap_gps_points_global.containerPointToLatLng(item);
@@ -599,8 +591,7 @@ function gpx_file_draw_leaflet_b(csstr,cstype,csname='',cscolors=[]){
         }
         else if (blname.length<2){
             blname=csname;
-        }
-        else {
+        } else {
             blname=blname[1];
         }
         blname=blname.replace(new RegExp('_','g'),' ');
@@ -618,8 +609,7 @@ function gpx_file_draw_leaflet_b(csstr,cstype,csname='',cscolors=[]){
                     [theday2,blstr2]=datetime_gpx_leaflet_b(bltime.slice(-1)[0]);
                     if (blstr1.split(' ')[0]==blstr2.split(' ')[0]){
                         blname=blname+' - '+blstr2.substring(blstr2.indexOf(' '),).trim();
-                    }
-                    else {
+                    } else {
                         blname=blname+' - '+blstr2;
                     }
                     if (theday1!==false && theday2!==false){

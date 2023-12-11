@@ -78,8 +78,7 @@ function done_list_klplan_b(csid='',cstype='',cssavename='',minday=''){
 function hide_klplan_b(only_today=false,show_all=false){
     if (!show_all){
         hide_li_golbal=!hide_li_golbal;
-    }
-    else {
+    } else {
         console.log('hide_klplan_b()','show_all');
     }
     var today=date2str_b('-');
@@ -111,19 +110,16 @@ function hide_klplan_b(only_today=false,show_all=false){
                 var blcontent=ocontent.innerText;
                 if (undone_set.has(blcontent)){
                     item.style.display='none';
-                }
-                else {
+                } else {
                     item.style.display='';
                     if (ospan_date.innerHTML==''){
                         undone_set.add(blcontent);
                     }
                 }
-            }
-            else {
+            } else {
                 item.style.display='';
             }
-        }
-        else {
+        } else {
             item.style.display='';
         }
     }
@@ -202,8 +198,7 @@ function check_klplan_b(csid,csfound,cscaption,cssavename,blminday='',odom=false
                 }
                 show_namesake_undone_item_klplan_b(oa);
             }
-        }
-        else {
+        } else {
             if (confirm("是否恢复【"+cscaption+"】为未标记项目？")){
                 oa.style.backgroundColor='';
                 done_list_klplan_b(csid,'remove',cssavename,blminday);
@@ -226,8 +221,7 @@ function done_date_klplan_b(arow,today,span_name){
     //比较日期 - 保留注释
     if (today==item0.split(' ')[0]){
         done_date=done_date+'<small><strong>('+item0+')</strong></small></span>';
-    }
-    else {
+    } else {
         done_date=done_date+'<small>('+item0+')</small></span>';
     }
     return done_date;
@@ -340,8 +334,7 @@ function filter_klplan_b(textarea_id,ospan=false){
         if (cskey==result_t[1] || cskey==result_t[2] || cskey==result_t[1]+' '+result_t[2]){
             current_item_list.push(item);
             category_set.add(result_t[1]);
-        }
-        else {
+        } else {
             others_item_list.push(item);
         }
         if (category_set.size>1){
@@ -398,8 +391,7 @@ function edit_item_klplan_b(csarray,plan_id,csid){
                 change_klplan_b(csarray,plan_id,csid,false);
                 alert('已删除');
                 return true;
-            }
-            else {
+            } else {
                 alert('取消删除');
                 return false;
             }        
@@ -415,8 +407,7 @@ function edit_item_klplan_b(csarray,plan_id,csid){
             change_klplan_b(csarray,plan_id,csid,[item[0],new_category,new_name]);
             alert('已更新');
             return true;
-        }
-        else {
+        } else {
             alert('取消修改');
             return false;
         }
@@ -521,8 +512,7 @@ function new_item_klplan_b(csarray,plan_id,multiple=false){
             return true;
         }
         return false;        
-    }
-    else {
+    } else {
         if (confirm('是否添加新事项 '+new_category+' '+specialstr92_b(new_name)+'？')){
             change_klplan_b(csarray,plan_id,'',['',new_category,new_name]);
             return true;
@@ -584,8 +574,7 @@ function statistics_cym_get_klplan_b(cslist,csat=0,csbegin='',csend=''){
                 total_t[item_date]=[item_date,0];
             }
             total_t[item_date][1]=total_t[item_date][1]+1;        
-        }
-        else {
+        } else {
             if (total_t['ALL']==undefined){
                 total_t['ALL']=['ALL',0];
             }

@@ -81,8 +81,7 @@ function click_cn_idiom(csno=-1){
     
     if (csno==clicked_td_no_global){    //取消点击 - 保留注释
         clicked_td_no_global=-1;
-    }
-    else if (csno>=0){
+    } else if (csno>=0){
         var old_td=document.getElementById('td_cn_idiom_'+clicked_td_no_global);
 
         var current_td=document.getElementById('td_cn_idiom_'+csno);
@@ -94,8 +93,7 @@ function click_cn_idiom(csno=-1){
                 clicked_td_no_global=-1;
                 times_td_no_global=times_td_no_global+1;
                 check_cn_idiom();
-            }
-            else {
+            } else {
                 current_td.style.borderColor=scheme_global['a-hover'];
                 clicked_td_no_global=csno;
             }
@@ -122,8 +120,7 @@ function check_cn_idiom(){
     }
     if (blcorrect){
         answer_cn_idiom();
-    }
-    else {
+    } else {
         document.getElementById('divhtml').innerHTML='<p>进行中，次数：'+times_td_no_global+'</p>';
     }
 }

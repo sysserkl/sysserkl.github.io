@@ -41,12 +41,10 @@ function sites_compare_sort_klsnews_b(sort_type){
     sort_type=Math.min(3,Math.max(0,parseInt(sort_type)));
     if (sort_type==0){
         sites_compare_list_global.sort(function (a,b){return zh_sort_b(a,b,sites_compare_list_isdesc,0);});
-    }
-    else {
+    } else {
         if (sites_compare_list_isdesc){
             sites_compare_list_global.sort(function (a,b){return b[sort_type]-a[sort_type];});
-        }
-        else {
+        } else {
             sites_compare_list_global.sort(function (a,b){return a[sort_type]-b[sort_type];});
         }
     }
@@ -212,8 +210,7 @@ function showhide_klsnews_b(){
 	var odiv=document.getElementById('div_show_hide');
 	if (odiv.style.display=='none'){
         odiv.style.display='block';
-    }
-	else {
+    } else {
         odiv.style.display='none';
     }
 }
@@ -261,8 +258,7 @@ function longtxts_klsnews_b(cslist,addsitename=false){
         if (addsitename){
             str_t=str_t+' - '+cslist[3];
         }
-    }
-    else {
+    } else {
         str_t=str_t+title_t;
         if (addsitename){
             str_t=str_t+' - '+cslist[3];
@@ -305,8 +301,7 @@ function fav_link_title_klsnews_b(ospan){
                 var osmall=ospan_content.querySelector('small.small_word_search_links');
                 if (osmall){
                     osmall.parentNode.removeChild(osmall);
-                }
-                else {break;}
+                } else {break;}
             }
             
             var sitename_t='';
@@ -402,8 +397,7 @@ function finish_site_klsnews_b(sitename,ospan){
             localStorage.setItem('finished_selenews',list_t.join('\n'));
         }
         ospan_isfinished.innerHTML='';
-    }
-    else {
+    } else {
         if (!finished_sites.includes(key_value+','+sitename)){
             localStorage.setItem('finished_selenews',key_value+','+sitename+'\n'+finished_sites.join('\n'));
         }
@@ -431,8 +425,7 @@ function classify_sites_klsnews_b(bottom_eng=false,sort_by_day=false,show_cn_en=
         var str_t='<p ';
         if (bly % 2 == 1){
             str_t=str_t+'style="padding:0.5rem;font-size:1rem;background-color:#efefef;"';
-        }
-        else {
+        } else {
             str_t=str_t+'style="padding:0.5rem;font-size:1rem;"';
         }
         str_t=str_t+'>'+bly+'. '+longtxts_klsnews_b(selected_list[blxl]);
@@ -446,8 +439,7 @@ function classify_sites_klsnews_b(bottom_eng=false,sort_by_day=false,show_cn_en=
         bljg=bljg+'<span class="span_site_name" style="cursor:pointer;" onclick="fav_all_klsnews_b(this);">'+thetag+'</span>';
         if (isfinished){
             bljg=bljg+' <span style="cursor:pointer;" onclick="finish_site_klsnews_b(\''+thetag+'\',this);">('+(bly-1)+') <span class="span_isfinished" style="color:'+scheme_global['a-hover']+';">已阅</span></span>';
-        }
-        else {
+        } else {
             bljg=bljg+' <span style="cursor:pointer;" onclick="finish_site_klsnews_b(\''+thetag+'\',this);">('+(bly-1)+') <span class="span_isfinished" style="color:'+scheme_global['a-hover']+';"></span></span>';
         }
         bljg=bljg+'</p>';
@@ -479,20 +471,18 @@ function classify_sites_klsnews_b(bottom_eng=false,sort_by_day=false,show_cn_en=
     var ospan=document.getElementById('span_search_key');
     if (ospan){
         var key_html_t=ospan.innerHTML;
-    }
-    else {return;}
+    } else {return;}
+    
     var dividednum_list=key_html_t.match(/\d/g);
     if (dividednum_list){
         var today_t=asc_sum_b(dividednum_list.join());
-    }
-    else {
+    } else {
         var today_t=asc_sum_b(key_html_t);
     }
     today_t=100+today_t%31; //如果+1，而不是+100，则出现后面的整除后都余0的情况
 	if (ismobile_b()){
 		var divstyle='padding:0rem; margin:0.2rem 0rem; border:2px dashed #c0c0c0;';
-	}
-    else {
+	} else {
         var divstyle='padding:0rem;margin:0.5rem 0rem; border:2px dashed #c0c0c0;word-break:normal; word-wrap:normal;';
         //position:relative;float:left;max-width:330px; - 保留注释
     }
@@ -504,8 +494,7 @@ function classify_sites_klsnews_b(bottom_eng=false,sort_by_day=false,show_cn_en=
         if (thetag!==selected_list[blxl][3]){
             if (sort_by_day){
                 bljg_list.push([asc_sum_b(thetag)%today_t,thetag,str_t,more_t,bly]);
-            }
-            else {
+            } else {
                 bljg_list.push([0,thetag,str_t,more_t,bly]);
             }
             
@@ -518,8 +507,7 @@ function classify_sites_klsnews_b(bottom_eng=false,sort_by_day=false,show_cn_en=
         }
         if (bly<=20){
             str_t=str_t+sub_classify_sites_klsnews_b_link(bly,blxl);
-        }
-        else {
+        } else {
             more_t=more_t+sub_classify_sites_klsnews_b_link(bly,blxl);
         }
         bly=bly+1;
@@ -528,8 +516,7 @@ function classify_sites_klsnews_b(bottom_eng=false,sort_by_day=false,show_cn_en=
     if (str_t!==''){
         if (sort_by_day){
             bljg_list.push([asc_sum_b(thetag)%today_t,thetag,str_t,more_t,bly]);
-        }
-        else {
+        } else {
             bljg_list.push([0,thetag,str_t,more_t,bly]);
         }
     }
@@ -679,8 +666,7 @@ function words_translate_klsnews_b(){
         }
         masonrydiv_klsnews_b();
         document.getElementById('label_translation').innerHTML='<span style="color:red;font-size:0.8rem;font-weight:normal;">(已翻译)</span>';
-    }
-    else {
+    } else {
         document.getElementById('label_translation').innerHTML='';
     }
 }
@@ -802,8 +788,7 @@ function filter_list_klsnews_b(){
                 }
             }
         }
-    }
-    else {
+    } else {
         return sub_filter_list_klsnews_b_selected();
     }
     return selected_list;    
@@ -819,8 +804,7 @@ function rowid_change_klsnews_b(cstype=1){
     //上一页
     else if (cstype==-1) {
         oinput.value=sourcelist[0][5];
-    }
-    else {
+    } else {
         oinput.value='';
     }
     document.getElementById('input_direction').value=cstype;
@@ -914,8 +898,7 @@ function getlines_klsnews_b(jssearchkey='',csno=1,cslines=50){
 		if (blxl>=bllength){break;}
         if (blxl % 2==0) {
             bljg=bljg+'<p style="font-size:1.1rem;padding:0.2rem 0.5rem;">';
-        }
-        else {
+        } else {
             bljg=bljg+'<p style="font-size:1.1rem;background-color:#efefef;padding:0.2rem 0.5rem;">';
         }
         bljg=bljg+(blxl+1)+'. ';
@@ -969,10 +952,10 @@ function dbc_list_klsnews_b(cskeys,csshow_websites=false,csoneday=false){
         if (dbc_count>1){
             if (cskeys.substring(0,10)==file_date){
                 bljg=bljg+'<b>'+file_date2+': </b>';
-            }
-            else {
-                if (csoneday){continue;}
-                else{
+            } else {
+                if (csoneday){
+                    continue;
+                } else {
                     bljg=bljg+file_date2+': ';
                 }
             }
@@ -984,8 +967,7 @@ function dbc_list_klsnews_b(cskeys,csshow_websites=false,csoneday=false){
             var str_t=file_date+'_'+item[0];
             if (dbc_count==1){
                 var html_title=file_date2;
-            }
-            else {
+            } else {
                 var html_title=item[1];
             }
 
@@ -998,8 +980,7 @@ function dbc_list_klsnews_b(cskeys,csshow_websites=false,csoneday=false){
             bljg=bljg+' href="?day_dbf='+str_t+'">';
             if (csshow_websites==false && cskeys.substring(0,10)==file_date && cskeys.split('_')[1]==item[0]){
                 bljg=bljg+'<font color=red><b>'+html_title+'</b></font>';
-            }
-            else {
+            } else {
                 bljg=bljg+html_title;
             }
             bljg=bljg+'</a>'+space_str;
@@ -1064,8 +1045,7 @@ function dbc_select_submit_b(csvalue){
     for (let alink of oas){
         if (alink.innerHTML==selenium_dbc_global[csvalue][1]){
             alink.style.color=scheme_global['color'];
-        }
-        else {
+        } else {
             alink.style.color=scheme_global['memo'];
         }
     }
@@ -1102,6 +1082,7 @@ function menu_klsnews_b(cskeys,js_or_php=''){
     var str_t=klmenu_hide_b('');
     var menu_list1=[
     '<span class="span_menu" onclick="'+str_t+'fav_show_klsnews_b();">收藏</span>',
+    '<a href="temp_txt_append.php" onclick="'+str_t+'" target=_blank>➕ temp txt append</a>',
     ];
     
     var group_list=[
@@ -1148,8 +1129,7 @@ function menu_klsnews_b(cskeys,js_or_php=''){
     if (js_or_php=='js' && cskeys!==''){
         menu_list2=dbc_list2_klsnews_b(cskeys);
         var bljg=klmenu_multi_button_div_b(menu_combination+klmenu_b(menu_list2,'🛢','17rem','1.1rem','0.9rem','30rem'),'','0rem');
-    }
-    else {
+    } else {
         var bljg=klmenu_multi_button_div_b(menu_combination,'','0rem');
     }
     
@@ -1162,8 +1142,7 @@ function rnd_open_or_search_klsnews_b(is_search=false){
     if (is_search){
         rnd_search_window_klsnews_b();
         rnd_open_window_klsnews_global=setInterval(rnd_search_window_klsnews_b,20000);    
-    }
-    else {
+    } else {
         rnd_window_klsnews_b();
         rnd_open_window_klsnews_global=setInterval(rnd_window_klsnews_b,60000);
     }

@@ -54,8 +54,7 @@ function delete_open_php_rlater_b(cshref,csid,prefix='readlater'){
             return;
         }
         oiframe.setAttribute('src',php_href);
-    }
-    else {
+    } else {
         var new_window=window.open(php_href,'readlater_delete','width=600,height=600');
         new_window.blur();
     }
@@ -132,8 +131,7 @@ function clear_cached_deleted_rows_rlater_b(local_id){
         var blstr=local_storage_get_b(local_id,-1,false).trim();    //第一行为日期 - 保留注释
         if (blstr==''){
             alert('最近删除记录为空');
-        }
-        else {
+        } else {
             alert('现有最近删除记录'+(blstr.split('\n').length-2)+'条');
         }
     }
@@ -300,8 +298,7 @@ function one_link_gerenrate_rlater_b(idno,cslink,cstitle,csstrong=false,prgname=
     
     if (csstrong){
         bljg=bljg+'<font color=red><strong>'+cstitle+'</strong></font>';
-    }
-    else {
+    } else {
         bljg=bljg+cstitle;
     }    
     bljg=bljg+'</a>';
