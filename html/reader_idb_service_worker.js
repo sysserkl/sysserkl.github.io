@@ -15,6 +15,7 @@ self.addEventListener('install', function(e) {
             '../hard_ln_io/klbase_flot.js',
             '../hard_ln_io/klbase_txtlistsearch.js',
             '../hard_ln_io/klbase_idb.js',
+            '../hard_ln_io/klbase_bible.js',
             
             '../jsdata/booklist_current_data.js',
             

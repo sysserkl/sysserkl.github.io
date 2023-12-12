@@ -4,8 +4,7 @@ function flot_two_lines_two_yaxis_b(cslist,csid,y1unit='',y2unit='',label_positi
         var label_str=cslist.shift();
         if (isright){
             return { label: label_str, data: cslist, lines: {show: true}, points: {show: true, symbol: flot_rand_flot_symbol_b()},yaxis: 2};        
-        }
-        else {
+        } else {
             return { label: label_str, data: cslist, lines: {show: true}, points: {show: true, symbol: flot_rand_flot_symbol_b()}};
         }
     }
@@ -70,8 +69,7 @@ function flot_two_lines_two_yaxis_b(cslist,csid,y1unit='',y2unit='',label_positi
                 'tickFormatter': function (v, axis) {return v.toFixed(axis.tickDecimals) + y2unit;}
             }
         ];
-    }
-    else {
+    } else {
         var blyaxes=[
             {
                 'tickFormatter': function (v, axis) {return v.toFixed(y1dec==-1?axis.tickDecimals:y1dec) + y1unit;}
@@ -111,8 +109,7 @@ function flot_two_lines_two_yaxis_b(cslist,csid,y1unit='',y2unit='',label_positi
     if (csymin2!==false || csymax2!==false){
         if (list1_t.length==1 && list2_t.length==1){
             oyxaxis2['tickFormatter']=function (v, axis) {return v.toFixed(axis.tickDecimals) + y2unit;}
-        }
-        else {
+        } else {
             oyxaxis2['tickFormatter']=function (v, axis) {return v.toFixed(y2dec==-1?axis.tickDecimals:y2dec) + y2unit;}
         }
     }
@@ -130,8 +127,7 @@ function flot_two_lines_two_yaxis_b(cslist,csid,y1unit='',y2unit='',label_positi
     }
     if (csymin1==false && csymax1==false && csymin2==false && csymax2==false){
         $.plot('#'+csid, dataset,{legend: { position: label_position }, xaxis: oxaxis,yaxes:blyaxes});    
-    }
-    else {
+    } else {
         $.plot('#'+csid, dataset,{legend: { position: label_position }, xaxis: oxaxis,yaxis:oyxaxis1,y2axis:oyxaxis2,yaxes:blyaxes});
     }
 }
@@ -147,8 +143,7 @@ function flot_timeformat_b(cstimeformat,cstype,isoneyear,isonemonth){
     else if (cstype=='m'){
         if (isoneyear){
             cstimeformat='%m月';
-        }
-        else {
+        } else {
             cstimeformat='%Y/%m';
         }
         //cstickSize: [1, 'month']; - 保留注释
@@ -159,8 +154,7 @@ function flot_timeformat_b(cstimeformat,cstype,isoneyear,isonemonth){
         }
         else if (isoneyear){
             cstimeformat='%m/%d';
-        }
-        else {
+        } else {
             cstimeformat='%Y/%m/%d';
         }
         //cstickSize: [1, 'day']; - 保留注释
@@ -285,8 +279,7 @@ function flot_lines_b(cslist,csid,label_position='nw',cstime=false,cstimeformat=
                 tickFormatter: function (v, axis) {return v.toFixed(axis.tickDecimals) + y1unit;}
             }, 
         ];
-    }
-    else {
+    } else {
         var blyaxes=[
             {
                 tickFormatter: function (v, axis) {return v.toFixed(y1dec) + y1unit;}
@@ -327,8 +320,7 @@ function flot_lines_b(cslist,csid,label_position='nw',cstime=false,cstimeformat=
         }
         
         $.plot('#'+csid, chart_data,{legend: { position: label_position }, xaxis: oxaxis, yaxis:oyxaxis, yaxes:blyaxes});
-    }
-    else {
+    } else {
         $.plot('#'+csid, chart_data,{legend: { position: label_position }, xaxis: oxaxis, yaxis:oyxaxis, yaxes:blyaxes});
     }
 }
@@ -377,8 +369,7 @@ function flot_import_js_b(cslist=[],isdefer=false,write_or_dom='write'){
     if (blpath.includes('/klwebphp/')){
         blpath=blpath.split('/klwebphp/')[0];
         blpath=blpath+'/klwebphp/PythonTools/data/selenium_news/module/flot/';
-    }
-    else {
+    } else {
         blpath=location.href.split('//')[0]+'//'+location.host+'/module/flot/';
     }
     var defer_str=(isdefer?'defer':'');
@@ -504,8 +495,7 @@ function statistics_idlist_format_b(idlist){
         if (bllen<2){
             if (is_arr){
                 item.push('unnamed');
-            }
-            else {
+            } else {
                 item.push(item[0]);
             }
         }
@@ -521,8 +511,7 @@ function statistics_idlist_format_b(idlist){
         if (bllen<6){
             if (is_arr){
                 item.push('unnamed');
-            }
-            else {
+            } else {
                 item.push(item[0]);
             }
         }
@@ -568,8 +557,7 @@ function statistics_draw_b(data_type,idname='divhtml',show_table=false,date_min=
     
     if (Array.isArray(data_type)){
         var idlist=data_type;
-    }
-    else {
+    } else {
         var idlist=statistics_data_type_b(data_type);
     }
     idlist=statistics_idlist_format_b(idlist);
@@ -589,8 +577,7 @@ function statistics_draw_b(data_type,idname='divhtml',show_table=false,date_min=
             }
             lines_list.push(oneline_list);
         }
-    }
-    else {
+    } else {
         for (let blxl=0;blxl<idlist.length;blxl++){
             var item=idlist[blxl];
             [str_t,oneline_list]=sub_statistics_draw_b_oneline(item);

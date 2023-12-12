@@ -16,8 +16,7 @@ function get_day_words_enwc_b(csday='',csmonth='',cstype='new',cs_write_html=tru
     var array_num_t=cstype.match(/\d/g);
     if (array_num_t==null){
         array_num_t=[0];
-    }
-    else {
+    } else {
         array_num_t=array_unique_b(array_num_t);
         //限定范围为0-2 - 保留注释
         for (let blxl in array_num_t){
@@ -149,8 +148,7 @@ function get_day_sentences_enwc_b(csday='',csmonth='',use_asc=true){
         }
         list_t.sort(function (a,b){return a[3]>b[3];}); //按 编号 排序 - 保留注释
         list_t.sort(function (a,b){return a[2]>b[2];}); //按 KLWiki title名 或 书名 排序 - 保留注释
-    }
-    else {
+    } else {
         en_sentence_to_default_order_b();    
         var blsection=en_sentence_global.length/365;
         var blstart=Math.floor((csdays-1)*blsection);
@@ -167,8 +165,7 @@ function get_day_sentences_enwc_b(csday='',csmonth='',use_asc=true){
     var pages='<p>'+pages_day_enwc_b('get_day_sentences_enwc_b','',blyear,csmonth,csday,use_asc)+'</p>';
     if (use_asc){
         bljg='<div class="div_sentence">'+bljg.join('\n')+pages+'</div><p><i>('+bljg.length+')</i></p>';
-    }
-    else {
+    } else {
         var result_t=[];
         var source='';
         var p_style=en_sentence_p_style_b();
@@ -214,8 +211,7 @@ function day_old_word_enwc_b(daynumber,cstype,array_num_t,changetitle=true){
         if (changetitle){
             title_change_enwords_b('今日旧单词 (序号: '+array_num_t.toString()+'_OR)');
         }
-    }
-    else {
+    } else {
         if (changetitle){
             title_change_enwords_b('今日旧单词 (序号: '+array_num_t.toString()+')');
         }
@@ -234,8 +230,7 @@ function getlines_enwc_b(csno,cslines){
 	var csnum=arguments.length;
 	if (csnum==0){
         var csno= Math.max(parseInt(document.getElementById('input_lineno').value.trim()),0);
-    }
-	else{
+    } else {
         csno=Math.max(0,csno);
     }
 	if (csnum<=1){
@@ -284,8 +279,7 @@ function show_sentence_enwc_b(maxlines=0,showcount=true,is_random=false,show_but
         for (let item of word_sentence_rank){
             if (rank_dict[item[0]]==undefined){
                 rank_dict['more']=rank_dict['more'].concat(item[1]);
-            }
-            else {
+            } else {
                 rank_dict[item[0]]=rank_dict[item[0]].concat(item[1]);
             }
         }
@@ -325,8 +319,7 @@ function show_sentence_enwc_b(maxlines=0,showcount=true,is_random=false,show_but
         blxl=blxl+1;
         if (blxl % 10==0){
             setTimeout(function (){sub_show_sentence_enwc_b_one_step(font_size,button_str);},1);
-        }
-        else {
+        } else {
             sub_show_sentence_enwc_b_one_step(font_size,button_str);
         }
     }
@@ -352,12 +345,10 @@ function show_sentence_enwc_b(maxlines=0,showcount=true,is_random=false,show_but
     
     if (maxlines>0){
         var csmax=maxlines;
-    }
-    else {
+    } else {
         if (ismobile_b()){
             var csmax=(oaslen>10?5:10);
-        }
-        else {
+        } else {
             var csmax=(oaslen>10?10:20);
         }
     }
@@ -447,13 +438,11 @@ function days_enwc_b(only_plan=false){
     if (years_used>=year_tmp-wordscount[0]){
         if (years_used==Math.ceil(years_used)){
             years_used=years_used+1;
-        }
-        else {
+        } else {
             years_used=Math.ceil(years_used);
         }
         not_this_year=true;
-    }
-    else {
+    } else {
         years_used=year_tmp-wordscount[0];
     }
     
@@ -508,8 +497,7 @@ function days_enwc_b(only_plan=false){
 
             blstr_tmp=blstr_tmp+td_last2_value;
             blstr_tmp=blstr_tmp+' / -'+(wcount_t-Math.floor(wcount_t)).toFixed(3)+'</td>';
-        }
-        else {
+        } else {
             blstr_tmp=blstr_tmp+'/</td><td class="td_last1" align=right>/</td><td class="td_last2" align=right>/</td>';
         }
         
@@ -573,8 +561,7 @@ function showhide_enwc_b(){
 	var odiv=document.getElementById('div_show_hide');
 	if (odiv.style.display=='none'){
         odiv.style.display='block';
-    }
-	else {
+    } else {
         odiv.style.display='none';
     }
 }

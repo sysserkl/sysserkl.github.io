@@ -56,6 +56,7 @@ function split_all_txtcard(cscount=30,csstr_length=150){
         bljg=bljg+'</div>';
     }
     document.getElementById('divhtml').innerHTML=bljg;
+    bible_title_link_generate_kltxt_b();
     digest_show_kltxt_b();
 }
 

@@ -854,7 +854,12 @@ function separate_search_kltxt_b(key_list=false){
     } else {
         odiv.innerHTML='<ol>'+result_t.join('\n')+'</ol>';
     }
+    bible_title_link_generate_kltxt_b();
     render_html_kltxt_b(key_list);
+}
+
+function bible_title_link_generate_kltxt_b(){
+    load_fn_b('link_generate_kltxt_bible',-1,2000,function (){eval('link_generate_kltxt_bible()');});
 }
 
 function booksthickness_form_kltxt_b(){
@@ -2050,6 +2055,7 @@ function getlines_kltxt_b(csno=false,cslines=false,single=false,highlight=true,a
     }
 
 	document.getElementById('divhtml').innerHTML=bljg;
+    bible_title_link_generate_kltxt_b();
     mouseover_mouseout_oblong_span_b(document.querySelectorAll('div#divhtml span.oblong_box'));
     
     if (aname_num!==csno){
@@ -2468,43 +2474,6 @@ function img_key_2_base64_kltxt_b(img_name,is_group_file,group_no=false){
 
 function format_lines_kltxt_b(cslist,csstyle='',csaname=-1,is_group_file=''){
     //cslist 的每个元素为数组，包含2个元素：0为字符串，1为序号
-    function sub_format_lines_kltxt_b_bible(blstr){
-        if (blstr.includes('<')){
-            return blstr;
-        }
-        if (blstr.match(/^==*\s(.*?)\s(\d*)\s?==*/g)){
-            var str_t=blstr.replace(/^==*\s(.*?)\s(\d*)\s?==*/g,'$1');
-            var num_t=blstr.replace(/^==*\s(.*?)\s(\d*)\s?==*/g,'$2');
-            var other_book_t='';
-            if (csbooklist_sub_global[csbookno_global][1]=='圣经和合本'){
-                other_book_t='Bible(kjv)';
-            } else {
-                other_book_t='圣经和合本';
-            }
-            var other_book_id_t='';
-            for (let item of csbooklist_sub_global){
-                if (item[1]==other_book_t){
-                    other_book_id_t=item[0];
-                    break;
-                }
-            }
-            if (other_book_id_t==''){
-                return blstr;
-            }
-            blstr='<a href="txtlistsearch.htm?'+other_book_id_t+'&s=+'+bible_en_cn_b(str_t).replace(new RegExp(' ','g'),' +');
-            if (num_t){
-                num_t=parseInt(num_t);
-                if (num_t>0){
-                    blstr=blstr+' +'+num_t+'" target=_blank>'+str_t+' '+num_t+'</a>';
-                } else {
-                    blstr=blstr+'" target=_blank>'+str_t+' </a>';
-                }
-            } else {
-                blstr=blstr+'" target=_blank>'+str_t+' </a>';
-            }
-        }    
-        return blstr;
-    }
 
     function sub_format_lines_kltxt_b_img(csstr,imgpath){
         var scan_times=0;        
@@ -2540,9 +2509,6 @@ function format_lines_kltxt_b(cslist,csstyle='',csaname=-1,is_group_file=''){
         }
         else if (booktype=='jsdoc_html'){
             blstr=wiki_line_b(blstr,remote_host+'/wikiuploads/');
-        }
-        else if (booktype=='bible'){
-            blstr=sub_format_lines_kltxt_b_bible(blstr);
         }
 
         if (csklwiki_format && imgpath!==''){
@@ -2599,16 +2565,7 @@ function format_lines_kltxt_b(cslist,csstyle='',csaname=-1,is_group_file=''){
         }
     }
     
-    var booktype='';
-    if (csbookno_global>=0 && (csbooklist_sub_global[csbookno_global][0].substring(0,6)=='klwiki' || csbooklist_sub_global[csbookno_global][0].slice(-6,).toLowerCase()=='klwiki')){
-        booktype='wiki';
-    }
-    else if (csbookno_global>=0 && (csbooklist_sub_global[csbookno_global][1]=='圣经和合本' || csbooklist_sub_global[csbookno_global][1]=='Bible(kjv)')){
-        booktype='bible';
-    }
-    else if (csbookno_global>=0 && csbooklist_sub_global[csbookno_global][0]=='jsdoc_search_html_data'){
-        booktype='jsdoc_html';
-    }
+    var booktype=book_type_check_kltxt_b();
 
     var bljg='';
     for (let item of cslist){
@@ -2668,6 +2625,22 @@ function format_lines_kltxt_b(cslist,csstyle='',csaname=-1,is_group_file=''){
         console.log('format_lines_kltxt_b() 费时：'+ms + ' milliseconds');
     }
     return bljg;
+}
+
+function book_type_check_kltxt_b(){
+    var booktype='';
+    if (csbookno_global<0){return '';}
+    
+    if (csbooklist_sub_global[csbookno_global][0].substring(0,6)=='klwiki' || csbooklist_sub_global[csbookno_global][0].slice(-6,).toLowerCase()=='klwiki'){
+        booktype='wiki';
+    }
+    else if (csbooklist_sub_global[csbookno_global][1]=='圣经和合本' || csbooklist_sub_global[csbookno_global][1]=='Bible(kjv)'){
+        booktype='bible';
+    }
+    else if (csbooklist_sub_global[csbookno_global][0]=='jsdoc_search_html_data'){
+        booktype='jsdoc_html';
+    }
+    return booktype;
 }
 
 function img_path_kltxt_b(){
@@ -3151,6 +3124,7 @@ function lines_2_html_kltxt_b(cslist){
     } else {
         odiv.innerHTML='<ol>'+bljg+'</ol>';
     }
+    bible_title_link_generate_kltxt_b();
     return bljg.length;
 }
 
