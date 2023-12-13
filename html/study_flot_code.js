@@ -41,14 +41,14 @@ function pie_interactive_study_flot(){
     });
     document.getElementById("td_interactive_info").setAttribute('align','center');
 
-    $("#td_flot").bind("plothover", function(event, pos, obj) {
-        if (!obj) {return;}
+    $("#td_flot").bind("plothover", function(event, pos, obj){
+        if (!obj){return;}
         var blpercent = parseFloat(obj.series.percent).toFixed(2);
         document.getElementById("td_interactive_info").innerHTML="<span style='font-weight:bold; color:" + obj.series.color + "'>" + obj.series.label + " (" + blpercent + "%)</span>";
     });
             
-    $("#td_flot").bind("plotclick", function(event, pos, obj) {
-        if (!obj) {return;}
+    $("#td_flot").bind("plotclick", function(event, pos, obj){
+        if (!obj){return;}
         var blpercent = parseFloat(obj.series.percent).toFixed(2);
         alert(obj.series.label + ": " + blpercent + "%");
     });    
@@ -57,7 +57,7 @@ function pie_interactive_study_flot(){
 function line_sin_cos_study_flot(){
     var d1=[];
     var d2=[];
-    for (let blxl=0; blxl<8;blxl += 0.1) {
+    for (let blxl=0; blxl<8;blxl += 0.1){
         d1.push([blxl, Math.sin(blxl)]);
         d2.push([blxl, Math.cos(blxl)]);
     }
@@ -80,10 +80,10 @@ function line_two_axes_study_flot(){
     
     var blyaxes=[
     {
-    'tickFormatter': function (v, axis) {return v.toFixed(2) +'日元';},
+    'tickFormatter': function (v, axis){return v.toFixed(2) +'日元';},
     }, 
     {
-    'tickFormatter': function (v, axis) {return v.toFixed(1) + '美元';},
+    'tickFormatter': function (v, axis){return v.toFixed(1) + '美元';},
     'position': "right",
     }
     ];
@@ -94,7 +94,7 @@ function line_two_axes_study_flot(){
 function without_xyaxis_study_flot(){
     var d1=[];
     var d2=[];
-    for (let blxl=-1; blxl<=1;blxl += 0.01) {
+    for (let blxl=-1; blxl<=1;blxl += 0.01){
         d1.push([blxl, Math.asin(blxl)]);
         d2.push([blxl, Math.acos(blxl)]);
     }
@@ -106,7 +106,7 @@ function without_xyaxis_study_flot(){
 
 function line_tan_study_flot(){
     var d1=[];
-    for (let blxl=0; blxl<8;blxl += 0.1) {
+    for (let blxl=0; blxl<8;blxl += 0.1){
         d1.push([blxl, Math.tan(blxl)]);
     }
 	$.plot("#td_flot", [d1], {
@@ -119,7 +119,7 @@ function line_tan_study_flot(){
 
 function line_interactive_study_flot(){
     var d1=[];
-    for (let blxl=-1; blxl<5;blxl += 0.1) {
+    for (let blxl=-1; blxl<5;blxl += 0.1){
         d1.push([blxl, Math.log1p(blxl)]);
     }
     
@@ -132,26 +132,25 @@ function line_interactive_study_flot(){
         grid: {hoverable: true, clickable: true }
     });    
     
-    $("#td_flot").bind("plothover", function (event, pos, obj) {
+    $("#td_flot").bind("plothover", function (event, pos, obj){
         var blstr = "x = " + pos.x.toFixed(2) + " y = " + pos.y.toFixed(2);
         document.getElementById("td_interactive_info").innerText=blstr;
         
         var odiv=document.getElementById("div_interactive_info");
-        if (obj) {
+        if (obj){
             var x = obj.datapoint[0].toFixed(2);
             var y = obj.datapoint[1].toFixed(2);
             odiv.innerHTML=" x = " + x + ' ' + obj.series.label+" = " + y;
             odiv.style.top=obj.pageY+5+'px';
             odiv.style.left=obj.pageX+5+'px';
             odiv.style.display='';
-        }
-        else {
+        } else {
             odiv.style.display='none';
         }
     });
 
-    $("#td_flot").bind("plotclick", function (event, pos, obj) {
-        if (!obj) {return;}
+    $("#td_flot").bind("plotclick", function (event, pos, obj){
+        if (!obj){return;}
         document.getElementById("td_interactive_info").innerText="data index: " + obj.dataIndex + " in " + obj.series.label;
         objplot.highlight(obj.series, obj.datapoint);
     });    
@@ -159,7 +158,7 @@ function line_interactive_study_flot(){
 
 function zoom_study_flot(){
     var d1=[];
-    for (let blxl=-10; blxl<=10;blxl +=0.5) {
+    for (let blxl=-10; blxl<=10;blxl +=0.5){
         d1.push([blxl, Math.sinh(blxl)]);
     }
 	$.plot("#td_flot", [d1], {
@@ -174,7 +173,7 @@ function zoom_study_flot(){
 
 function line_steps_study_flot(){
     var d1=[];
-    for (let blxl=0; blxl<200;blxl += 10) {
+    for (let blxl=0; blxl<200;blxl += 10){
         d1.push([blxl, Math.log10(blxl)]);
     }
 	$.plot('#td_flot', [d1],{
@@ -210,7 +209,7 @@ function bars_with_name_study_flot(){
 function line_points_study_flot(){
     var d1=[];
     var d2=[];
-    for (let blxl=-20; blxl<20;blxl+=0.4) {
+    for (let blxl=-20; blxl<20;blxl+=0.4){
         d1.push([blxl, blxl*blxl]);
     }
 	$.plot("#td_flot", [d1],{

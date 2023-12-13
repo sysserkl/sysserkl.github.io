@@ -110,7 +110,7 @@ function rows_klbase64(textareaid,lines_num){
     document.getElementById('textarea_base64_result').value='base64_BEGIN\n'+bljg+'base64_END\n';
 }
 
-function trans_klbase64() {  
+function trans_klbase64(){  
     var ofile=document.getElementById('input_img').files[0];   
     var error=upload_img_file_check_b(ofile);
     if (error!==''){

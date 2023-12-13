@@ -18,8 +18,7 @@ function data_load_nobel_prize(array_name){
     for (let blxl=0;blxl<nobel_prize_global.length;blxl++){
         if (nobel_prize_global[blxl].length==4){
             nobel_prize_global[blxl].push('');
-        }
-        else if (nobel_prize_global[blxl].length<4){
+        } else if (nobel_prize_global[blxl].length<4){
             console.log('error',nobel_prize_global[blxl]);
         }
     }
@@ -64,8 +63,7 @@ function ten_years_nobel_prize(){
 
         if (arow[0].slice(-1)=='0'){
             var blgroup=(parseInt(arow[0])-1).toString();
-        }
-        else {
+        } else {
             var blgroup=arow[0];
         }
         blgroup=blgroup.substring(0,3)+'1-'+Math.min(max_year,parseInt(blgroup.substring(0,3))*10+10);
@@ -137,8 +135,7 @@ function pie_nobel_prize(countries,cstotal,odiv,hide_table_data=false,flot_id='d
     for (let blxl=0;blxl<countries.length;blxl++){
         if (blxl>=10){
             others=others+countries[blxl][1];
-        }
-        else {
+        } else {
             flot_list.push({'label':countries[blxl][0],'data':countries[blxl][1]});
         }
     
@@ -156,8 +153,7 @@ function pie_nobel_prize(countries,cstotal,odiv,hide_table_data=false,flot_id='d
         var bljg='<table class="table_common">'+head_caption;
         bljg=bljg+'<tr><th>No.</th><th>Country</th><th>Count</th><th>Percent</th></tr>';
         bljg=bljg+countries.join('\n');
-    }
-    else {
+    } else {
         var bljg='<table>'+head_caption;    
     }
     bljg=bljg+'<tr><td colspan=4 align="center"><div id="'+flot_id+'" style="width:'+flot_size+';height:'+flot_size+';"></div></td></tr>';

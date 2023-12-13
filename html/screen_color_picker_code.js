@@ -2,8 +2,7 @@ function list_colorpicker(){
     show_name_color_global=!show_name_color_global;
     if (show_name_color_global){
         var list_t=color_name2hex_b('ALLKEYS');
-    }
-    else {
+    } else {
         var list_t=all_colors_colorpicker();
     }
     
@@ -39,8 +38,7 @@ function copy_colorpicker(cstype){
         if (adiv.style.display=='none'){continue;}
         if (blno==-1){
             result_t.push(adiv.innerText);
-        }
-        else {
+        } else {
             var list_t=adiv.innerText.split('; ')        
             result_t.push(list_t[blno]);
         }
@@ -52,8 +50,7 @@ function copy_colorpicker(cstype){
 function show_hide_name_colorpicker(csid=''){
     if (csid==''){
         var ocolors=document.getElementsByClassName('div_rgb');
-    }
-    else {
+    } else {
         var ocolors=document.getElementById(csid).getElementsByClassName('div_rgb');
     }
 
@@ -89,8 +86,7 @@ function show_hide_name_colorpicker(csid=''){
             item.innerHTML=colorname1+'; '+colorname2+'; '+colorname3;
             item.style.color='';
             item.style.display='block';
-        }
-        else {
+        } else {
             item.style.display='none';
         }
     }

@@ -96,8 +96,7 @@ function hide_klplan_b(only_today=false,show_all=false){
             if (only_today && !ospan_date.innerText.includes(today)){
                 item.style.display='none';
             }
-        }
-        else if (is_unique){
+        } else if (is_unique){
             var ocontent=item.querySelector('span.span_link');
             var odate=item.querySelector('span.span_date');
             if (odate){

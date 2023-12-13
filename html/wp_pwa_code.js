@@ -79,8 +79,7 @@ function batch_append_wp_pwa(line_style_list=false,result_t=false,show_in_textar
         if (check_wp_pwa('处理',false)==false){
             if (result_t==false){
                 alert('出错：'+item);
-            }
-            else {
+            } else {
                 alert('出错：'+result_t[blxl]);
             }
             blfound=true;
@@ -101,8 +100,7 @@ function batch_append_wp_pwa(line_style_list=false,result_t=false,show_in_textar
         localstorage_set_wp_pwa(blstr);
         alert('批量添加完成，原有记录'+old_count+'条，现有记录'+count_wp_pwa()+'条');
         read_wp_pwa();        
-    }
-    else {
+    } else {
         otextarea.value=old_value;
     }
 }
@@ -162,8 +160,7 @@ function update_wp_pwa(){
     if ((prompt('输入 '+rndstr+' 确认更新') || '').trim()==rndstr){
         if (bldata==''){
             localStorage.removeItem('wp_pwa_data'); //用来对付手机版 firefox 有时清除失败，不知是否有效 - 保留注释
-        }
-        else {
+        } else {
             localstorage_set_wp_pwa(bldata);
         }
         read_wp_pwa();
@@ -251,12 +248,10 @@ function check_wp_pwa(cstype='添加',do_ask=true){
     
     if (k_price==''){
         k_price=parseFloat((k_total_price/k_amount).toFixed(2));
-    }
-    else if (isNaN(k_price)){
+    } else if (isNaN(k_price)){
         info_wp_pwa('单价非数字');
         return false;
-    }
-    else {
+    } else {
         k_price=parseFloat(k_price);
     }
     
@@ -270,8 +265,7 @@ function check_wp_pwa(cstype='添加',do_ask=true){
         if (list_t.length>2){
             info_wp_pwa(one_number[1]+'小数点超过1个');
             return false;
-        }
-        else if (list_t.length==2){
+        } else if (list_t.length==2){
             if (list_t[1].length>one_number[4]){
                 info_wp_pwa(one_number[1]+'小数位数超过'+one_number[4]);
                 return false;            
@@ -352,8 +346,7 @@ function check_wp_pwa(cstype='添加',do_ask=true){
         var bldata=bldata+'\n---\n'+result_t.join('\n')+'\n';
         bldata=bldata.replace(/\n{2,}/g,'\n');
         localstorage_set_wp_pwa(bldata);
-    }
-    else if (cstype=='修改'){
+    } else if (cstype=='修改'){
         if (current_id_wp_pwa_global>=0 && csdata.length>=0 && current_id_wp_pwa_global<csdata.length){
             var one_record=push_one_record_wp_pwa(result_t,csdata.length+1,result_t.join('\n'));
             if (one_record.length==15){
@@ -361,8 +354,7 @@ function check_wp_pwa(cstype='添加',do_ask=true){
                 array2localstorage_wp_pwa();     
                 current_id_wp_pwa_global=-1;
             }
-        }
-        else {
+        } else {
             info_wp_pwa('指定修改记录号不一致');
             return false;
         }
@@ -510,11 +502,9 @@ function edit_form_wp_pwa(csno,cs_asc_sum){
         if (blid.slice(-3,)==':忽略'){continue;}
         if (blxl>=11 && blxl<=13){
             document.getElementById(blid).value=arow[blxl];
-        }
-        else if (blxl<14) {
+        } else if (blxl<14){
             document.getElementById(blid).value=restore_str_b(arow[blxl]);
-        }
-        else {
+        } else {
             document.getElementById(blid).value=restore_str_b(arow[blxl]).replace(new RegExp('<p class=tb01>','g'),'\n');
         }
     }

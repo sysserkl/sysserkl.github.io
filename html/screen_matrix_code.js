@@ -42,11 +42,9 @@ function add_text_matrix(){
         
         if (Math.random()>=0.5){
             var str_t=random_chs_b(1);
-        }
-        else if (Math.random()>=0.996){
+        } else if (Math.random()>=0.996){
             var str_t=now_time_str_b();
-        }
-        else {
+        } else {
             var str_t=randstr_b(1);
         }
         

@@ -117,8 +117,7 @@ function share_style_temp_txt_share_b(){
             for (let blxl=0;blxl<list_t.length;blxl++){
                 list_t[blxl]=list_t[blxl].replace(/^# (\d+日，)?/g,'');
             }
-        }
-        else if (add_day==false){
+        } else if (add_day==false){
             for (let blxl=0;blxl<list_t.length;blxl++){
                 list_t[blxl]='# '+list_t[blxl];
             }

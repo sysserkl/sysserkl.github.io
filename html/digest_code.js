@@ -11,8 +11,7 @@ function load_data_digest(){
 function date_size_digest(without_digest=false,sortno=0){    
     if (without_digest){
         var csarray=without_digest_book_list_global;
-    }
-    else {
+    } else {
         var csarray=csbooklist_sub_global;
     }
 
@@ -33,12 +32,10 @@ function date_size_digest(without_digest=false,sortno=0){
     
     if (sortno==1 || sortno==2){
         result_t.sort(function (a,b){return zh_sort_b(a,b,digest_statistics_sort_asc_dec_global,sortno);});    
-    }
-    else {
+    } else {
         if (digest_statistics_sort_asc_dec_global){
             result_t.sort(function (a,b){return a[sortno]<b[sortno]});
-        }
-        else {
+        } else {
             result_t.sort(function (a,b){return a[sortno]>b[sortno]});    
         }
     }
@@ -50,8 +47,7 @@ function date_size_digest(without_digest=false,sortno=0){
         for (let col_no=0;col_no<result_t[blxl].length;col_no++){
             if (col_no<result_t[blxl].length-1){
                 arow=arow+'<td>'+result_t[blxl][col_no]+'</td>';
-            }
-            else {
+            } else {
                 arow=arow+'<td align=right>'+result_t[blxl][col_no]+'</td>';            
             }
         }

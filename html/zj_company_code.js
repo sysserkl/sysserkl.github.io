@@ -181,8 +181,7 @@ function array_2_html_zjcompany(csarray,cssum=false,table_id='table_zj_company',
     var blhead='<tr><th class="td_no">No.</th><th>Company</th><th class="td_district">City</th><th class="td_revenue">Revenue(万元)</th><th class="td_rank">当年名次</th><th class="td_year">Year</th></tr>\n';
     if (only_tr){
         bljg=blhead+bljg.join('\n');
-    }
-    else {
+    } else {
         bljg='<table'+(table_id==''?'':' id="'+table_id+'"')+' class="table_zj_company table_common" cellpadding=0 cellspacing=0>'+blhead+bljg.join('\n')+'</table>\n';
     }
     if (show_button){
@@ -271,8 +270,7 @@ function format_data_2_array_zjcompany(){
         }
         if (!isNaN(blarr[3].trim())){
             result_t.push('["'+blarr[1].trim()+'","'+blarr[2].trim()+'",'+blarr[3].trim()+'],');
-        }
-        else {
+        } else {
             result_t.push('["'+blarr[1].trim()+'","'+blarr[3].trim()+'",'+blarr[2].trim()+'],');
         }
     }
@@ -297,8 +295,7 @@ function line_district_statistics_zjcompany(is_percent=false,csindex=2){
     
     if (is_percent){
         flot_lines_b(line_district_statistics_percent_rank_b(flot_revenue_data),'div_flot_zj_company','nw',false,'','m','%',-1,[],-1,false,false,true);
-    }
-    else {
+    } else {
         flot_lines_b(flot_revenue_data,'div_flot_zj_company','nw',false,'','m',(csindex==-1?'家':'万亿元'),-1,[],-1,false,false,true);
     }
 

@@ -43,12 +43,10 @@ function run_or_view_source_klh_b(view_source,fun_list,obj=false){
         }
         if (obj){
             obj.innerHTML=prism_highlight_strings_klh_b(codestrs,'.js');
-        }
-        else {
+        } else {
             return codestrs;
         }
-    }
-    else {
+    } else {
         for (let item of fun_list){
             if (item.substring(0,1)=='*'){continue;}      
             eval(item+'()');

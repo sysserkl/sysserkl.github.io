@@ -5,8 +5,7 @@ function td_background_sd(csid,cstype='samenum'){
         var otd=document.getElementById('input_'+blxl);
         if (list_t[blxl]=='0'){
             otd.style.backgroundColor='';
-        }
-        else {
+        } else {
             otd.style.backgroundColor='#e0e0e0';
         }
     }
@@ -66,11 +65,9 @@ function inputvalue_color_sd(){
         var otd=document.getElementById('td_inputvalue_sd'+(blxl+1));
         if (list_count[blxl]==9){
             otd.style.color='green';
-        }
-        else if (list_count[blxl]>9){
+        } else if (list_count[blxl]>9){
             otd.style.color='grey';
-        }
-        else {
+        } else {
             otd.style.color='';
         }
     }
@@ -165,8 +162,7 @@ function fill_sd(){
                 tmp_t=branchs_sd(tmp_t[1].toString());
                 testfound=true;
                 break;
-            }
-            else {
+            } else {
                 tmp_t[1][item[0]*3+item[1]]="0";
                 testfound=false;
             }
@@ -212,21 +208,17 @@ function possible_values_sd(list_t){
         }
         if (blrow<3){
             var blockx=0;
-        }
-        else if (blrow<6){
+        } else if (blrow<6){
             var blockx=3;
-        }
-        else {
+        } else {
             var blockx=6;
         }
         
         if (blcol<3){
             var blocky=0;
-        }
-        else if (blcol<6){
+        } else if (blcol<6){
             var blocky=3;
-        }
-        else {
+        } else {
             var blocky=6;
         }
         var blocks=[];
@@ -476,12 +468,10 @@ function branchs_sd(csstr,do_select_value_sd=true){
                     if (value1==true && value2==false){
                         list_t[item[0]*9+item[1]]=item[2][0];
                         found=true;
-                    }
-                    else if (value1==false && value2==true){
+                    } else if (value1==false && value2==true){
                         list_t[item[0]*9+item[1]]=item[2][1];
                         found=true;
-                    }
-                    else if (value1==false && value2==false){
+                    } else if (value1==false && value2==false){
                         return [false,item.toString()];
                     }                    
                 }
@@ -499,16 +489,13 @@ function branchs_sd(csstr,do_select_value_sd=true){
                     if (value1==true && value2==false && value3==false){
                         list_t[item[0]*9+item[1]]=item[2][0];
                         found=true;
-                    }
-                    else if (value1==false && value2==true && value3==false){
+                    } else if (value1==false && value2==true && value3==false){
                         list_t[item[0]*9+item[1]]=item[2][1];
                         found=true;
-                    }
-                    else if (value1==false && value2==false && value3==true){
+                    } else if (value1==false && value2==false && value3==true){
                         list_t[item[0]*9+item[1]]=item[2][2];
                         found=true;
-                    }
-                    else if (value1==false && value2==false && value3==false){
+                    } else if (value1==false && value2==false && value3==false){
                         return [false,item.toString()];
                     }                     
                 }
@@ -526,8 +513,7 @@ function getvalue_check_sd(){
     var bljg=check_sd(list_t);
     if (bljg[0]){
         document.getElementById('span_state').innerHTML='<font color="blue">✔</font>';
-    }
-    else {
+    } else {
         document.getElementById('span_state').innerHTML='<font color="red">✘</font>: '+bljg[1];
     }
 }
@@ -551,21 +537,17 @@ function related_tds_sd(csnumber,cstype=''){
        
         if (blrow<3){
             var blockx=0;
-        }
-        else if (blrow<6){
+        } else if (blrow<6){
             var blockx=3;
-        }
-        else {
+        } else {
             var blockx=6;
         }
         
         if (blcol<3){
             var blocky=0;
-        }
-        else if (blcol<6){
+        } else if (blcol<6){
             var blocky=3;
-        }
-        else {
+        } else {
             var blocky=6;
         }
         
@@ -803,8 +785,7 @@ function show_sd(csnumber,csreform=false){
         for (let blxl=1;blxl<=81;blxl++){
             blys=blys+"0";
         }
-    }
-    else {
+    } else {
         var blys = sudoku_data_global[csnumber];
     }
 
@@ -815,8 +796,7 @@ function show_sd(csnumber,csreform=false){
        for (let item of blarray){
             current_sd_global=current_sd_global+item;
         }
-    }
-    else {
+    } else {
 	    var blarray = blys.split("");
         current_sd_global=blys;
     }
@@ -832,7 +812,7 @@ function show_sd(csnumber,csreform=false){
             blstr = blstr + '<tr>';
         }
 		bltmp = blarray[blxl];
-		if (bltmp == "0") {
+		if (bltmp == "0"){
             bltmp = empty_sd_global;
         }
         blstyle='';
@@ -850,8 +830,7 @@ function show_sd(csnumber,csreform=false){
 		}
         if (blarray[blxl]!=="0"){
             blstr = blstr + '<td class="td_sudoku" width=1 id="input_'+blxl+'" nowrap align=center style="'+blstyle+'background-color:#e0e0e0;" onclick="td_background_sd(this.id,\'onlysamenum\');">'+bltmp+'</td>';
-        }
-        else {
+        } else {
 		    blstr = blstr + '<td class="td_sudoku"  width=1 id="input_'+blxl+'" nowrap align=center style="'+blstyle+'color:blue;" onclick="td_background_sd(this.id);">'+bltmp+'</td>';
         }
 		if (blxl%9 == 8){

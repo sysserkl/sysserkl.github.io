@@ -62,8 +62,7 @@ function line_district_statistics_forbes_billionaire(is_percent=false,csindex=1)
     
     if (is_percent){
         flot_lines_b(line_district_statistics_percent_rank_b(flot_revenue_data),'div_flot_forbes_billionaire','nw',false,'','m','%',-1,[],-1,false,false,true);
-    }
-    else {
+    } else {
         flot_lines_b(flot_revenue_data,'div_flot_forbes_billionaire','nw',false,'','m',(csindex==-1?'人':'亿美元'),-1,[],-1,false,false,true);
     }
 
@@ -146,8 +145,7 @@ function array_2_html_forbes_billionaire(csarray,cssum=false,table_id='table_for
     var blhead='<tr><th class="td_no">No.</th><th class="td_rank">当年名次</th><th>Name</th><th>姓名</th><th class="td_revenue">财富<small>(亿美元)</small></th><th class="td_source">来源</th><th class="td_district">地区</th><th class="td_year">Year</th></tr>\n';
     if (only_tr){
         bljg=blhead+bljg.join('\n');
-    }
-    else {
+    } else {
         bljg='<table'+(table_id==''?'':' id="'+table_id+'"')+' class="table_forbes_billionaire table_common" cellpadding=0 cellspacing=0>'+blhead+bljg.join('\n')+'</table>\n';
     }
     if (show_button){

@@ -69,8 +69,7 @@ function args_ensentence(){
                 break;
             }
         }
-    }
-    else{
+    } else {
         //bbb_ensentence(1,40); //此行保留 - 保留注释
     }
 }
@@ -153,11 +152,9 @@ function host_count_ensentence(sort_no=-1){
             var list_t=item[1].match(/^\/\[https?:\/\/([^\/]+)/) || [];  
             if (list_t.length==2){
                 var blstr=list_t[1];
-            }
-            else if (item[2].slice(-4,)=='_TLS'){
+            } else if (item[2].slice(-4,)=='_TLS'){
                 var blstr=item[2];   //TLS - 保留注释
-            }
-            else {  //无链接的KLWiki 文章 - 保留注释
+            } else {  //无链接的KLWiki 文章 - 保留注释
                 var blstr='KLWiki_TLS';
             }
 
@@ -169,8 +166,7 @@ function host_count_ensentence(sort_no=-1){
             var blhref=item[1].match(/^\/\[(https?:\/\/[^\s]+)/) || [];
             if (blhref.length==2){
                 var blstr=blhref[1];
-            }
-            else {                
+            } else {                
                 var blstr=item[2];   //TLS - 保留注释
             }
             article_from_t.add(blstr);  
@@ -204,8 +200,7 @@ function host_count_ensentence(sort_no=-1){
         var blhost=sentence_host_t[blxl][0];
         if (blhost.slice(-4,)!=='_TLS'){
             blhost='<span class="span_link" onclick="sentence_source_list_ensentence(\''+specialstr_j(blhost)+'\');">'+blhost+'</span>';
-        }
-        else {
+        } else {
             blhost=blhost.slice(0,-4);
         }
         one_tr.push(blhost);
@@ -215,8 +210,7 @@ function host_count_ensentence(sort_no=-1){
         if (article_host==undefined){
             one_tr.push(null);
             one_tr.push(null);
-        }
-        else {
+        } else {
             one_tr.push(article_host);
             one_tr.push(article_host*100/article_count);        
         }
@@ -260,8 +254,7 @@ function length_sort_ensentence(){
 
         if (Array.isArray(aline[0])){
             var blstr=aline[0].join(' ');
-        }
-        else {
+        } else {
             var blstr=aline[0];
         }
         
@@ -321,8 +314,7 @@ function rare_old_words_ensentence(show_sentence=true,generate_js=false,max_coun
                 var blkey='w_'+words_searched_arr_global[blxl];
                 if (selenium_dict[blkey]==undefined){
                     words_searched_arr_global[blxl]=[words_searched_arr_global[blxl],0];
-                }
-                else {
+                } else {
                     words_searched_arr_global[blxl]=[words_searched_arr_global[blxl],selenium_dict[blkey]];                
                 }
             }
@@ -331,8 +323,7 @@ function rare_old_words_ensentence(show_sentence=true,generate_js=false,max_coun
             for (let blxl=0;blxl<words_searched_arr_global.length;blxl++){
                 words_searched_arr_global[blxl]=[words_searched_arr_global[blxl][0],'',words_searched_arr_global[blxl][1].toString()];
             }
-        }
-        else {
+        } else {
             words_searched_arr_global.sort();
         }
     }
@@ -368,8 +359,7 @@ function rare_old_words_ensentence(show_sentence=true,generate_js=false,max_coun
             
             if (source_check){
                 var local_id='enwords_one_source_ensentence';
-            }
-            else {
+            } else {
                 var local_id=(max_count>1?'enwords_rare_ensentence':'enwords_non_ensentence');
             }
             local_storage_today_b(local_id,40,words_searched_arr_global.length,'/');
@@ -386,8 +376,7 @@ function rare_old_words_ensentence(show_sentence=true,generate_js=false,max_coun
         if (source_check){
             var words_list=new Set(line_split.join('\n').toLowerCase().match(/[a-zA-Z\-']+/mg) || []);
             sub_rare_old_words_ensentence_words(words_list);
-        }
-        else {
+        } else {
             for (let aline of line_split){
                 var words_list=new Set(aline.match(/[a-zA-Z\-']+/g) || []);
                 sub_rare_old_words_ensentence_words(words_list);
@@ -396,8 +385,7 @@ function rare_old_words_ensentence(show_sentence=true,generate_js=false,max_coun
         blxl=blxl+1;
         if (blxl % 200 == 0){
             setTimeout(sub_rare_old_words_ensentence_arow,1);
-        }
-        else {
+        } else {
             sub_rare_old_words_ensentence_arow();
         }
     }

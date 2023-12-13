@@ -62,21 +62,21 @@ function flot_two_lines_two_yaxis_b(cslist,csid,y1unit='',y2unit='',label_positi
     if (list1_t.length==1 && list2_t.length==1){
         var blyaxes=[
             {
-                'tickFormatter': function (v, axis) {return v.toFixed(axis.tickDecimals) + y1unit;}
+                'tickFormatter': function (v, axis){return v.toFixed(axis.tickDecimals) + y1unit;}
             }, 
             { 
                 'position': 'right',
-                'tickFormatter': function (v, axis) {return v.toFixed(axis.tickDecimals) + y2unit;}
+                'tickFormatter': function (v, axis){return v.toFixed(axis.tickDecimals) + y2unit;}
             }
         ];
     } else {
         var blyaxes=[
             {
-                'tickFormatter': function (v, axis) {return v.toFixed(y1dec==-1?axis.tickDecimals:y1dec) + y1unit;}
+                'tickFormatter': function (v, axis){return v.toFixed(y1dec==-1?axis.tickDecimals:y1dec) + y1unit;}
             }, 
             { 
                 'position': 'right',
-                'tickFormatter': function (v, axis) {return v.toFixed(y2dec==-1?axis.tickDecimals:y2dec) + y2unit;}
+                'tickFormatter': function (v, axis){return v.toFixed(y2dec==-1?axis.tickDecimals:y2dec) + y2unit;}
             }
         ];
     }
@@ -108,9 +108,9 @@ function flot_two_lines_two_yaxis_b(cslist,csid,y1unit='',y2unit='',label_positi
     }
     if (csymin2!==false || csymax2!==false){
         if (list1_t.length==1 && list2_t.length==1){
-            oyxaxis2['tickFormatter']=function (v, axis) {return v.toFixed(axis.tickDecimals) + y2unit;}
+            oyxaxis2['tickFormatter']=function (v, axis){return v.toFixed(axis.tickDecimals) + y2unit;}
         } else {
-            oyxaxis2['tickFormatter']=function (v, axis) {return v.toFixed(y2dec==-1?axis.tickDecimals:y2dec) + y2unit;}
+            oyxaxis2['tickFormatter']=function (v, axis){return v.toFixed(y2dec==-1?axis.tickDecimals:y2dec) + y2unit;}
         }
     }
 
@@ -139,20 +139,17 @@ function flot_timeformat_b(cstimeformat,cstype,isoneyear,isonemonth){
     if (cstype=='y'){
         cstimeformat='%Y年';
         //cstickSize: [1, 'year']; - 保留注释
-    }
-    else if (cstype=='m'){
+    } else if (cstype=='m'){
         if (isoneyear){
             cstimeformat='%m月';
         } else {
             cstimeformat='%Y/%m';
         }
         //cstickSize: [1, 'month']; - 保留注释
-    }
-    else if (cstype=='d'){
+    } else if (cstype=='d'){
         if (isonemonth){
             cstimeformat='%d日';
-        }
-        else if (isoneyear){
+        } else if (isoneyear){
             cstimeformat='%m/%d';
         } else {
             cstimeformat='%Y/%m/%d';
@@ -246,16 +243,14 @@ function flot_lines_b(cslist,csid,label_position='nw',cstime=false,cstimeformat=
         if (label_t.includes('#show:true#')){
             label_showline=true;
             label_t=label_t.replace('#show:true#','');
-        }
-        else if (label_t.includes('#show:false#')){
+        } else if (label_t.includes('#show:false#')){
             label_showline=false;
             label_t=label_t.replace('#show:false#','');
         }
         if (label_t.includes('#points:true#')){
             label_showpoints=true;
             label_t=label_t.replace('#points:true#','');
-        }
-        else if (label_t.includes('#points:false#')){
+        } else if (label_t.includes('#points:false#')){
             label_showpoints=false;
             label_t=label_t.replace('#points:false#','');
         }
@@ -276,13 +271,13 @@ function flot_lines_b(cslist,csid,label_position='nw',cstime=false,cstimeformat=
     if (y1dec==-1 || only_one_data){
         var blyaxes=[
             {
-                tickFormatter: function (v, axis) {return v.toFixed(axis.tickDecimals) + y1unit;}
+                tickFormatter: function (v, axis){return v.toFixed(axis.tickDecimals) + y1unit;}
             }, 
         ];
     } else {
         var blyaxes=[
             {
-                tickFormatter: function (v, axis) {return v.toFixed(y1dec) + y1unit;}
+                tickFormatter: function (v, axis){return v.toFixed(y1dec) + y1unit;}
             }, 
         ];
     }
@@ -360,7 +355,7 @@ function flot_pie_b(chart_data,csid,label_radius=11/15){
     });
 }
 
-function flot_labelFormatter_b(label, series) {
+function flot_labelFormatter_b(label, series){
     return "<div class='div_flot_pie_label'>" + label + "<br/>" + (series.percent).toFixed(2) + "%</div>";
 }
 
@@ -381,8 +376,7 @@ function flot_import_js_b(cslist=[],isdefer=false,write_or_dom='write'){
     }
     if (write_or_dom=='write'){
         write_js_css_b(result_t);
-    }
-    else if (write_or_dom=='dom'){
+    } else if (write_or_dom=='dom'){
         file_dom_create_b([result_t[0]],true,'js');
         if (result_t.length>1){        
             load_var_b('$.plot.plugins',5,1000,function (){file_dom_create_b(result_t.slice(1,),true,'js');});

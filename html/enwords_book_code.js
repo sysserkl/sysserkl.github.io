@@ -26,8 +26,7 @@ function args_enwords_book(){
                 show_enwords_book();
                 import_book_js_b(true);
                 break;
-            }
-            else if (bltmpstr.substring(0,7)=='allnew='){
+            } else if (bltmpstr.substring(0,7)=='allnew='){
                 var new_words_str=bltmpstr.substring(7,);
                 var otextarea=document.getElementById('textarea_new_words1');
                 if (otextarea){
@@ -37,14 +36,12 @@ function args_enwords_book(){
                 get_new_words_arr_set_enbook_b(2);
                 show_enwords_book();
                 break;
-            }
-            else if (bltmpstr=='excluded'){
+            } else if (bltmpstr=='excluded'){
                 exclude_enwords_book();
                 break;
             }            
         }
-    }
-    else {
+    } else {
         show_enwords_book();
     }
     if (title_setted==false){
@@ -237,8 +234,7 @@ function import_to_digest_global_enwords_book(){
     var blstr=document.getElementById('textarea_new_words3').value.trim();
     if (blstr==''){
         var list_t=[];
-    }
-    else {
+    } else {
         var list_t=blstr.split('\n');
     }
     if (!confirm('是否修改 digest_global 变量值为 '+list_t.length+' 行单词？')){return;}
@@ -374,8 +370,7 @@ function import_enwords_book(cstype,csmax=-1){
                     words_t.sort(randomsort_b);
                 }
                 otextarea.value=words_t.slice(0,csmax).join(' ');
-            }
-            else {
+            } else {
                 otextarea.value=all_new_words_global.join(' ');            
             }
             break;    
@@ -472,11 +467,9 @@ function compare_statistics_enwords_book(){
             //形如 24tian_tu_po_gao_kao_dgch3cc_343788 /// 24天突破高考大纲词汇3500(陈灿) /// 2426 - 保留注释
             if (list_temp.length<3){
                 cslist[blxl]=['','',0,0];
-            }
-            else if (list_temp.length<4){
+            } else if (list_temp.length<4){
                 cslist[blxl]=[list_temp[0].trim(),list_temp[1].trim(),parseInt(list_temp[2].trim()),0];
-            }            
-            else {
+            } else {
                 cslist[blxl]=[list_temp[0].trim(),list_temp[1].trim(),parseInt(list_temp[2].trim()),parseInt(list_temp[3].trim())];
             }
         }
@@ -516,8 +509,7 @@ function compare_result_list_to_table_enwords_book(sortno=4){
             }
             return a[sortno]>b[sortno];
         });   
-    }
-    else {
+    } else {
         enbook_compare_result_list_global.sort(function (a,b){
             if (sortno>=2){
                 if (isNaN(a[sortno])){return 0;}
@@ -593,8 +585,7 @@ function in_all_new_enwords_book(cstype='exclude'){
     for (let item of new_words_set){
         if (all_new_words_global.includes(item) || all_new_words_global.includes(item.toLowerCase())){
             result_t_include.push(item);
-        }
-        else {
+        } else {
             result_t_exclude.push(item);        
         }
     }
@@ -684,8 +675,7 @@ function textarea_first_lines_enwords_book(){
         var blpercent=document.getElementById('input_first_lines').value.trim();
         if (blpercent.slice(-1)=='%'){
             blpercent=parseFloat(blpercent.slice(0,-1))/100;
-        }
-        else {
+        } else {
             blpercent=parseInt(blpercent);
         }
         if (blpercent<1){

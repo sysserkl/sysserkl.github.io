@@ -74,8 +74,7 @@ function args_dbb(){
                 document.getElementById(input_dict[one_key.substring(0,4)]).value=one_key.substring(5,);
             }    
         }
-    }
-    else{
+    } else {
         //bbb_kltemplate(1,40); //此行保留 - 保留注释
     }
 }
@@ -179,8 +178,7 @@ function jieba_dbb(cstype='cn',csmin=10,csmax=-1){
         for (let arow of current_result_dbb_global){
             list_t.push(Object.values(arow[0]).toString());
         }
-    }
-    else {
+    } else {
         for (let arow of current_result_dbb_global){
             list_t.push(arow[0][cstype]);
         }
@@ -259,8 +257,7 @@ function search_dbb(cskey=false,cstype=''){
         
         if (cstype=='ignore'){
             if (!ignored_books_dbb_global.has(item['title'])){continue;}
-        }
-        else if (cstype=='txtbook'){
+        } else if (cstype=='txtbook'){
             if (!csbooklist_source_global.has(item['title'])){continue;}        
         }   
         
@@ -337,15 +334,13 @@ function ignore_books_list_dbb(){
     
     if (blnotfound){
         var bljg='共有'+old_size+'个忽略书籍。';
-    }
-    else {
+    } else {
         var bljg='原共有'+old_size+'个忽略书籍。';    
     }
     
     if (diff_with_all_set.size==0){
         bljg=bljg+'未发现不在全部书籍中的忽略书籍名单。';
-    }
-    else {
+    } else {
         bljg=bljg+'发现'+diff_with_all_set.size+'个不在全部书籍中的忽略书籍。';
         ignored_books_dbb_global=array_difference_b(ignored_books_dbb_global,diff_with_all_set,true);       
         bljg=bljg+'<h3>清除名单</h3>';
@@ -354,8 +349,7 @@ function ignore_books_list_dbb(){
     
     if (intersect_with_txtbook_set.size==0){
         bljg=bljg+'未发现在txtbook书籍中的忽略书籍名单。';
-    }
-    else {
+    } else {
         bljg=bljg+'发现'+intersect_with_txtbook_set.size+'个在txtbook书籍中的忽略书籍。';    
         ignored_books_dbb_global=array_difference_b(ignored_books_dbb_global,intersect_with_txtbook_set,true); 
         bljg=bljg+'<h3>清除名单</h3>';
@@ -424,8 +418,7 @@ function ignore_set_dbb(cshref,ospan){
     if (bltype=='忽略'){
         ospan.innerText='取消忽略';
         ignored_books_dbb_global.add(blname);
-    }
-    else {
+    } else {
         ospan.innerText='忽略';
         ignored_books_dbb_global.delete(blname);
     }
@@ -467,8 +460,7 @@ function page_dbb(csno){
 
     if (result_t.length==0){
         odiv.innerHTML='';
-    }
-    else {
+    } else {
         odiv.innerHTML=bljg+'<ol>'+result_t.join('\n')+'</ol>\n'+bljg;
         mouseover_mouseout_oblong_span_b(odiv.querySelectorAll('span.oblong_box'));        
         odiv.scrollIntoView();
@@ -503,8 +495,7 @@ function title_simple_name_dbb(simplify=true){
         result_t=Array.from(result_t);
         otextarea.value=result_t.join('\n');
         return result_t;        
-    }
-    else {
+    } else {
         return list_t;
     }
 }
@@ -548,8 +539,7 @@ function statistics_textarea_values_dbb(cstype,is_current_page=false){
     if (cstype!=='rating'){
         var delimiter='\n';    
         list_t=array_unique_b(list_t);
-    }
-    else {
+    } else {
         var delimiter=',';
     }
     
@@ -568,13 +558,11 @@ function statistics_key_value_dbb(cskey,is_current_page=false){
         var ofont=document.querySelector('font.font_current_no_b');
         if (ofont){
             var blstart=parseInt(ofont.innerText)-1;
-        }
-        else {
+        } else {
             var blstart=0;
         }
         var csarray=current_result_dbb_global.slice(blstart*rows_per_page_dbb_global,(blstart+1)*rows_per_page_dbb_global);
-    }
-    else {
+    } else {
         var csarray=current_result_dbb_global;
     }
     for (let arow of csarray){
@@ -603,11 +591,9 @@ function year_get_dbb(csyear){
     if (result_t.length<4 || isNaN(result_t)){
         if (csyear.match(/[,\s]\d{4}$/)!==null){
             result_t=csyear.slice(-4,);
-        }
-        else if (csyear.match(/\b\d{4}\b/)!==null){
+        } else if (csyear.match(/\b\d{4}\b/)!==null){
             result_t=csyear.replace(/.*\b(\d{4})\b.*/g,'$1');
-        }
-        else {
+        } else {
             result_t='';
         }
     }
@@ -645,8 +631,7 @@ function statistics_key_year_line_dbb(cskey,cstype,csunit){
     for (let key in result_t){
         if (result_t[key][1]!==0){
             result_t[key].push(result_t[key][2]/result_t[key][1]);
-        }
-        else {
+        } else {
             result_t[key].push(0);
         }
     }
@@ -694,11 +679,9 @@ function statistics_key_year_line_dbb(cskey,cstype,csunit){
     for (let item of cstype){
         if (item=='count'){
             flot_list.push(count_list);
-        }
-        else if (item=='sum'){
+        } else if (item=='sum'){
             flot_list.push(sum_list);
-        }
-        else if (item=='average'){
+        } else if (item=='average'){
             flot_list.push(average_list);
         }
     }

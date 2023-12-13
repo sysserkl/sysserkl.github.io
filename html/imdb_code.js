@@ -30,12 +30,10 @@ function imdb_sort_multimedia(iname='Director',cssplit=false){
                 if (parallel_dict[iname] in arow){
                     blvalue=arow[parallel_dict[iname]];
                 }
-            }
-            else if (iname+'s' in arow){
+            } else if (iname+'s' in arow){
                 blvalue=arow[iname+'s'];
             }
-        }
-        else {
+        } else {
             blvalue=arow[iname];
         }
         
@@ -44,24 +42,20 @@ function imdb_sort_multimedia(iname='Director',cssplit=false){
                 blvalue=blvalue.substring(6,);
             }
             blvalue=blvalue.trim().split(' ')[0];
-        }
-        else if (iname=='Gross USA' && blvalue.trim().substring(0,1)=='$'){
+        } else if (iname=='Gross USA' && blvalue.trim().substring(0,1)=='$'){
             blvalue=(blvalue.trim().substring(1,).split(' ')[0]).replace(new RegExp(',','g'),'');
-        }
-        else if (iname=='Runtime'){
+        } else if (iname=='Runtime'){
             var blhour=blvalue.replace(/^(\d+)\s*hours?.*$/g,'$1');
             var blmin=blvalue.replace(/^(\d+\s*hours?\s*)?(\d+)\s*minutes\s*$/g,'$2');
             if (blhour!=='' && !isNaN(blhour)){
                 blhour=parseInt(blhour)*60;
-            }
-            else {
+            } else {
                 blhour=0;
             }
             
             if (blmin!=='' && !isNaN(blmin)){
                 blmin=parseInt(blmin);
-            }
-            else {
+            } else {
                 blmin=0;
             }
             if (blhour>0 || blmin>0){
@@ -69,16 +63,14 @@ function imdb_sort_multimedia(iname='Director',cssplit=false){
             }
             
             blvalue=blvalue.trim().split('\|')[0].split(' ')[0];
-        }
-        else if (iname=='Release Date'){
+        } else if (iname=='Release Date'){
             blvalue=(blvalue.match(/\d{4}/) || [''])[0];
         }
         
         if (blvalue!==''){
             if (cssplit==false){
                 dlist.push([blvalue,blrating,arow['Title']]);
-            }
-            else {
+            } else {
                 blvalue=blvalue.replace(/\|/g,',');
                 var value_list=blvalue.split(',');
                 for (let item of value_list){
@@ -114,23 +106,19 @@ function imdb_sort_multimedia(iname='Director',cssplit=false){
             function(a,b){
                 if (parseFloat(b[0])==parseFloat(a[0])){
                     return b[3]-a[3];
-                }
-                else {
+                } else {
                     return parseFloat(b[0])-parseFloat(a[0]);
                 }
             }
         );
-    }
-    else if (iname=='Release Date'){
+    } else if (iname=='Release Date'){
         dlist3.sort();
-    }
-    else {
+    } else {
         dlist3.sort(
             function(a,b){
                 if (b[1]==a[1]){
                     return b[3]-a[3];
-                }
-                else {
+                } else {
                     return b[1]-a[1];
                 }
             }
@@ -160,8 +148,7 @@ function douban_sort_multimedia(csno){
                 dlist2[nation_or_type][2]=dlist2[nation_or_type][2]+1;
                 dlist2[nation_or_type][3]=dlist2[nation_or_type][3]+arow[5];
             }
-        }
-        else {
+        } else {
             if (dlist2[zd_t]==undefined){
                 //片名，csno，数量，分数
                 dlist2[zd_t]=['',zd_t,0,0];
@@ -187,17 +174,14 @@ function douban_sort_multimedia(csno){
     
     if (csno==2){
         dlist3.sort(function (a,b){return a[1]-b[1];});
-    }
-    else if (csno==5){
+    } else if (csno==5){
         dlist3.sort(function (a,b){return b[1]-a[1];});
-    }
-    else {
+    } else {
         dlist3.sort(
             function(a,b){
                 if (b[2]==a[2]){
                     return b[3]-a[3];
-                }
-                else {
+                } else {
                     return b[2]-a[2];
                 }
             }
@@ -223,8 +207,7 @@ function douban_sort_multimedia(csno){
         }
         if (item[0]==''){
             bljg=bljg+'</li>\n';
-        }
-        else {
+        } else {
             bljg=bljg+', '+item[0]+'</li>\n';
         }
         if (csno==2){
@@ -362,8 +345,7 @@ function imdb_main_multimedia(){
 function gate_multimedia(){
     if (multimedia_current_id_global.includes('imdb')){
         imdb_main_multimedia();
-    }
-    else if (multimedia_current_id_global.includes('douban')){
+    } else if (multimedia_current_id_global.includes('douban')){
         douban_main_multimedia();
     }
 }

@@ -5,7 +5,7 @@ function basic_init_study_canvas(){
     otd.innerHTML='<canvas width="'+rect.width+'px" height="'+rect.height+'px"></canvas>';
 }
 
-function palette_study_canvas() {
+function palette_study_canvas(){
     basic_init_study_canvas();
     
     var ctx = document.querySelector('td#td_canvas canvas').getContext('2d');
@@ -13,8 +13,8 @@ function palette_study_canvas() {
     var blstep=255/rows_cols;
     var box_size=60;
     var bcolor=Math.floor(Math.random()*255);
-    for (let arow = 0; arow < rows_cols; arow++) {
-        for (let acol = 0; acol < rows_cols; acol++) {
+    for (let arow = 0; arow < rows_cols; arow++){
+        for (let acol = 0; acol < rows_cols; acol++){
             ctx.fillStyle = 'rgb(' + Math.floor(255 - blstep * arow) + ', ' +Math.floor(255 - blstep * acol) + ', '+bcolor+')';
             ctx.fillRect(arow * box_size, acol * box_size, box_size, box_size);
         }

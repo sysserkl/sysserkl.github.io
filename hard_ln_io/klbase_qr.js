@@ -3,12 +3,11 @@
 //<script src="PythonTools/data/selenium_news/module/jeromeetienne_qrcode.min.js"></script>
 function utf16to8_qr_b(csstr){
     var bljg = '';
-    for(let blxl = 0; blxl < csstr.length; blxl++){
+    for (let blxl = 0; blxl < csstr.length; blxl++){
         var blvalue = csstr.charCodeAt(blxl);
         if ((blvalue >= 0x0001) && (blvalue <= 0x007F)){
             bljg += csstr.charAt(blxl);
-        } 
-        else if (blvalue > 0x07FF){
+        } else if (blvalue > 0x07FF){
             bljg += String.fromCharCode(0xE0 | ((blvalue >> 12) & 0x0F));
             bljg += String.fromCharCode(0x80 | ((blvalue >>  6) & 0x3F));
             bljg += String.fromCharCode(0x80 | ((blvalue >>  0) & 0x3F));

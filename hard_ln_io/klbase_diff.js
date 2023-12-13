@@ -114,8 +114,7 @@ function compare_diff_b(do_submit=false){
     if (list_t1.length>=list_t2.length){
         var max_list=list_t1;
         var min_list=list_t2;
-    }
-    else {
+    } else {
         var max_list=list_t2;
         var min_list=list_t1;    
     }

@@ -41,8 +41,7 @@ function color_money_b(csarr){
 	var bljg='<span title="数量×单价 = '+blvalue+'"';
 	if (blvalue<csarr[13]){
         bljg=bljg+' style="cursor:pointer;color:'+scheme_global['a-hover']+';" onclick="alert(\'数量×单价 = '+blvalue+'\');"';
-    }
-	else if (blvalue>csarr[13]){
+    } else if (blvalue>csarr[13]){
         bljg=bljg+' style="cursor:pointer;color:'+scheme_global['a']+';" onclick="alert(\'数量×单价 = '+blvalue+'\');"';
     } else {
         bljg=bljg+' style="color:'+scheme_global['button']+';"';
@@ -240,7 +239,7 @@ function from_day_money_b(csday){
     }
     
     var fromarr2=object2array_b(fromarr);
-    fromarr2.sort(function (a,b) {return zh_sort_b(a,b,false,0);});
+    fromarr2.sort(function (a,b){return zh_sort_b(a,b,false,0);});
     
     var bljg=[];
     var blsum=0;
@@ -375,8 +374,7 @@ function eval_calculator_money_b(){
     }
     try {
         var blvalue=eval(str_t).toFixed(3);
-    }
-    catch (error) {
+    } catch (error){
         var blvalue=error;
     }
     document.getElementById('span_calculator').innerHTML=blvalue;
@@ -391,7 +389,7 @@ function calculator_generate_money_b(){
     input_with_x_b('input_calculator',14,'',0.8);
 }
 
-function form_content_check_money_b(){
+function form_content_check_money_b(event=false){
 	var blo_t=document.getElementById('textarea_content');
 	if (blo_t){
 		var blstr_t=blo_t.value.trim();
@@ -422,6 +420,14 @@ function form_content_check_money_b(){
     if (oaddress){
         var blfrom=oaddress.value.trim();
         local_storage_insert_unique_b('recent_from_wp',blfrom,25);
+    }
+
+    if (typeof(add_or_modify_wp_global)=='string'){
+        if (event && add_or_modify_wp_global.includes('修改') && local_storage_get_b('modify_confirm_wp')=='1'){
+            if (!confirm('是否修改记录')){
+                event.preventDefault();
+            }
+        }
     }
 }
 
@@ -482,8 +488,7 @@ function elm_get_money_b(csstr,csdate,csaddress,to_line_style=false){
         if (item.includes('/')){    //含有单位，如 /盒 - 保留注释
             blname=item;
             continue;
-        }
-        else if (blxl<list_t.length-1){
+        } else if (blxl<list_t.length-1){
             if (list_t[blxl+1].match(/^x \d/)){ //不含有单位，但下一行是如 x 1 格式 - 保留注释
                 blname=item;
                 continue;
@@ -650,8 +655,7 @@ function import_merge_money_b(textarea_id='textarea_idb_content'){
         var list_t=blvalue[blxl].split(':');
         if (list_t[0]=='数量'){
             blvalue[blxl]='数量:'+amount.toFixed(3);
-        }
-        else if (list_t[0]=='总价'){
+        } else if (list_t[0]=='总价'){
             blvalue[blxl]='总价:'+total_price.toFixed(2);
         }
     }

@@ -73,13 +73,11 @@ function click_linkgame(otd){
         if (selected_td_lg_global==otd.id){
             selected_td_lg_global='';
         }
-    }
-    else {
+    } else {
         otd.style.borderColor='red';
         if (selected_td_lg_global==''){
             selected_td_lg_global=otd.id;
-        }
-        else {
+        } else {
             check_linkgame(otd);
         }
     }
@@ -157,8 +155,7 @@ function recombine_linkgame(remain_list){
         if (blank_list[blxl]==blank_symbol_lg_global){
             one_td.removeAttribute('onclick');
             one_td.style.cursor='';
-        }
-        else {
+        } else {
             one_td.setAttribute('onclick','click_linkgame(this);');
             one_td.style.cursor='pointer';
         }
@@ -202,8 +199,7 @@ function between_linkgame(td1,td2){
             }
         }
         return false;
-    }
-    else { //td1[1]==td2[1] - 保留注释
+    } else { //td1[1]==td2[1] - 保留注释
         for (let blxl=Math.min(td1[0],td2[0])+1;blxl<Math.max(td1[0],td2[0]);blxl++){
             var td_between=document.getElementById('td_'+blxl+'_'+td1[1]);
             if (td_between){
@@ -278,8 +274,7 @@ function check_linkgame(otd){
     
     if (compare_linkgame(selected_td_lg_global,otd.id)==false){
         remove_linkgame(otd,prev_td);
-    }
-    else {
+    } else {
         prev_td.style.borderColor='#e0e0e0';
         selected_td_lg_global=otd.id;        
     }
@@ -356,8 +351,7 @@ function init_linkgame(){
     if (ismobile_b()){
         var fsize='1.65rem';
         var blpadding='0.5rem';
-    }
-    else {
+    } else {
         var fsize='2rem';
         var blpadding='2rem';
     }
@@ -390,8 +384,7 @@ function menu_linkgame(){
 function tip_linkgame(){
     if (klmenu_check_b('span_show_tip_lg',true)){
         resolve_linkgame();
-    }
-    else {
+    } else {
         document.getElementById('span_tip').innerHTML='';
     }
 }

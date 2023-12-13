@@ -42,14 +42,11 @@ function args_ebsjs(){
             one_key=one_key.trim();
             if (one_key=='eng'){
                 is_eng=true;
-            }
-            else if (one_key=='all'){
+            } else if (one_key=='all'){
                 is_eng=false;
-            }
-            else if (one_key.substring(0,2)=='s='){
+            } else if (one_key.substring(0,2)=='s='){
                 blkey=one_key.substring(2,);
-            }
-            else if (one_key.substring(0,2)=='b='){
+            } else if (one_key.substring(0,2)=='b='){
                 book_filter=one_key.substring(2,);
             }
         }
@@ -136,8 +133,7 @@ function search_ebsjs(csstr='',csmax_total=50,csmax_current=5){
     var ospan=document.getElementById('readingdata');
     if (is_eng){
         var filter_key='+englishwords +已整理'+(book_filter==''?'':'+'+book_filter);
-    }
-    else {
+    } else {
         var filter_key=book_filter;
     }
     

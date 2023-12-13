@@ -49,8 +49,7 @@ function en_font_set_b(csno=''){
             if (blstr==''){
                 bljg=bljg+letters52_style_transform_b(blhtml,0,blarray);
                 break;
-            }
-            else {
+            } else {
                 var blat=blhtml.indexOf(blstr);
                 bljg=bljg+letters52_style_transform_b(blhtml.substring(0,blat),0,blarray);
                 bljg=bljg+blstr;
@@ -178,17 +177,13 @@ function enwords_init_b(simple=false){
 function en_similar_word_b(cskey,cskey_set,compared_word){
     if (compared_word==cskey || compared_word.toLowerCase()==cskey.toLowerCase()){
         return 0;
-    }
-    else if (cskey_set.has(compared_word) || cskey_set.has(compared_word.toLowerCase())){
+    } else if (cskey_set.has(compared_word) || cskey_set.has(compared_word.toLowerCase())){
         return 1;
-    }    
-    else if (cskey==compared_word.substring(0,cskey.length) || cskey.toLowerCase()==compared_word.substring(0,cskey.length).toLowerCase()){
+    } else if (cskey==compared_word.substring(0,cskey.length) || cskey.toLowerCase()==compared_word.substring(0,cskey.length).toLowerCase()){
         return 2;
-    }
-    else if (cskey==compared_word.slice(-1*cskey.length,) || cskey.toLowerCase()==compared_word.slice(-1*cskey.length,).toLowerCase()){
+    } else if (cskey==compared_word.slice(-1*cskey.length,) || cskey.toLowerCase()==compared_word.slice(-1*cskey.length,).toLowerCase()){
         return 3;
-    }
-    else {
+    } else {
         for (let item of cskey_set){
             if (item.includes(compared_word) || item.includes(compared_word.toLowerCase())){
                 return 4;
@@ -208,8 +203,7 @@ function enwords_batch_select_b(csname,csvalue=0,batch_open_num=10){
     
     if (batch_open_num>=0){
         var blmax=Math.min(ocheckboxs.length,csvalue+batch_open_num);
-    }
-    else {
+    } else {
         var blamx=ocheckboxs.length;
     }
     for (let blxl=0;blxl<ocheckboxs.length;blxl++){
@@ -225,8 +219,7 @@ function enwords_batch_div_b(wordslist_t,checkboxno='',showno=true,startno=0){
         var id_name=checkboxno+'_'+parseInt(Math.random()*999)+'_'+parseInt(Math.random()*999)+'_'+parseInt(Math.random()*999);
         if (Array.isArray(item)){
             var enstr_t=item[0];
-        }
-        else {
+        } else {
             var enstr_t=item;
         }
         if (enstr_t.substring(0,1)=='"' && enstr_t.slice(-1)=='"'){
@@ -321,8 +314,7 @@ function enwords_checkbox_open_b(csname,cstype){
             open_link_en_b(cstype,ocheckbox[blxl].value);
             blxl=blxl+1;
             setTimeout(sub_enwords_checkbox_open_b_one,1000);
-        }
-        else {
+        } else {
             blxl=blxl+1;
             sub_enwords_checkbox_open_b_one();
         }
@@ -335,8 +327,7 @@ function enwords_checkbox_open_b(csname,cstype){
             item.checked=true;
         }
         return;
-    }
-    else if (cstype=='0'){
+    } else if (cstype=='0'){
         for (let item of ocheckbox){
             item.checked=false;
         }
@@ -428,8 +419,7 @@ function sup_kleng_hide_b(){
 	for (var item of o_sups){
 		if (item.style.display=='none'){
 			item.style.display='inline';
-		}
-		else{
+		} else {
 			item.style.display='none';
 		}
 	}
@@ -455,8 +445,7 @@ function sup_kleng_words_b(csdisplay='none'){
         }
         if (one_sup.style && one_sup.style.color=='blue'){
             var supcolor='blue';
-        }
-        else {
+        } else {
             var supcolor='#cc0000';
         }
         for (let item of enwords){
@@ -483,8 +472,7 @@ function lines_enword_total_b(clicked_ospan=false){
     if (clicked_ospan){
         if (clicked_ospan.style.backgroundColor==''){
             clicked_ospan.style.backgroundColor=scheme_global['pink'];
-        }
-        else {
+        } else {
             clicked_ospan.style.backgroundColor='';
         }
     }
@@ -500,8 +488,7 @@ function lines_enword_total_b(clicked_ospan=false){
         if (ospan){
             ospan.innerText=blsum;        
         }
-    }
-    else {
+    } else {
         for (let aspan of ospans){
             var blvalue=parseInt(aspan.innerText);    
             blsum=blsum+blvalue;
@@ -518,8 +505,7 @@ function enwords_b(csstr,cstype=''){
     if (!csstr.includes('&lt;eword') || !csstr.includes('&lt;/eword&gt;')){
         if (cstype=='array'){
             return [];
-        }
-        else {
+        } else {
             return csstr;
         }
     }
@@ -528,7 +514,7 @@ function enwords_b(csstr,cstype=''){
         var list_t=[];
         var myRegexp = /&lt;eword w=((&quot;|")?)(.*?)\1&gt;.*?&lt;\/eword&gt;/g;
         var result=[];
-        while (result = myRegexp.exec(csstr)) {
+        while (result = myRegexp.exec(csstr)){
             if (result.length>=3+1){
                 //循环单词库，寻找同名单词 - 保留注释
                 for (let item of enwords){
@@ -541,8 +527,7 @@ function enwords_b(csstr,cstype=''){
             }
         }
         return list_t;
-    }
-    else {
+    } else {
         var bljg=csstr.replace(/&lt;eword w=(&quot;|")(.*?)\1&gt;&lt;\/eword&gt;/g,sup_kleng_style_b()+'$2</sup>');
         bljg=bljg.replace(/&lt;eword w=(.*?)(&gt;|\s).*?&lt;\/eword&gt;/g,sup_kleng_style_b()+'$1</sup>');
         return bljg;
@@ -556,8 +541,7 @@ function sup_kleng_style_b(){
 function en_lines_days_b(csarray,cstheday=''){
     if (cstheday==''){
         var today_t=new Date();
-    }
-    else {
+    } else {
         var today_t=validdate_b(cstheday);
     }
     
@@ -621,8 +605,7 @@ function en_sentence_one_line_b(aline,wordname='',attachment_path='',wikisite=''
     if (blmatch==false){
         if (return_arr){
             return [];
-        }
-        else {
+        } else {
             return '';
         }
     }
@@ -666,13 +649,11 @@ function en_sentence_one_line_b(aline,wordname='',attachment_path='',wikisite=''
         if (aline[2].slice(-4,)=='_TLS'){
             var blstr=aline[2].slice(0,-4);
             wiki_source='<a href="'+wikisite+encodeURIComponent(blstr.replace(/[\+\s\?\*\-\\\[\]\(\)\']/g,'.'))+'_reg&s='+wordname+'" target=_blank>'+blstr+'</a>';
-        }
-        else {
+        } else {
             var wiki_link=aline[1].match(/^\/\[[^\s]*\s(.+)\]\/$/) || [];
             if (wiki_link.length==2){
                 wiki_link=wiki_page_title_link_generate_b(aline[2],wiki_link[1]);
-            }
-            else {
+            } else {
                 wiki_link=wiki_page_title_link_generate_b(aline[2]);
             }
             wiki_source='<a href="'+wikisite+wiki_link+'" target=_blank>'+aline[2]+'</a>';
@@ -684,8 +665,7 @@ function en_sentence_one_line_b(aline,wordname='',attachment_path='',wikisite=''
     
     if (return_arr){
         return [bljg,web_source,wiki_source];
-    }
-    else {
+    } else {
         bljg=bljg+web_source+wiki_source+button_str;
         return bljg;
     }
@@ -698,13 +678,11 @@ function en_sentence_result_b(wordname,csmax=-1,fontsize='',attachment_path='',w
     //-----------------------
     if (en_sentence_global.length==0){
         return ['',0,0];
-    }
-    else if (Array.isArray(wordname)){
+    } else if (Array.isArray(wordname)){
         if (wordname.length==0){
             return ['',0,0];
         }
-    }
-    else if (wordname.trim()==''){
+    } else if (wordname.trim()==''){
         return ['',0,0];
     }
     
@@ -742,8 +720,7 @@ function en_sentence_result_b(wordname,csmax=-1,fontsize='',attachment_path='',w
         
         sub_en_sentence_result_b_statistics();
         return sentence_list;
-    }
-    else {
+    } else {
         var bljg='';
         var blxl=0; //例句条数 - 保留注释
         var no_next=0;
@@ -812,8 +789,7 @@ function en_word_temp_important_change_b(ospan){
         if (old_word==csword){return;}
         en_words_temp_important_global.push(csword);
         ospan.style.color=scheme_global['a-hover'];
-    }
-    else {
+    } else {
         var blat=en_words_temp_important_global.indexOf(csword);
         if (blat>=0){
             en_words_temp_important_global.splice(blat,1);
@@ -846,8 +822,7 @@ function en_word_temp_change_b(ospan,csword,cstype=''){
                 enwords_temp_2_local_storage_b(en_words_temp_global);
             }
         }
-    }
-    else {
+    } else {
         var recent_bookmark=enwords_recent_bookmark_get_b();
         if (csword==recent_bookmark){
             //如果单词是书签，则不可剔除 - 保留注释
@@ -899,8 +874,7 @@ function en_day_old_words_b(daynumber,cstype,array_num_t){
                 }
             }
         }
-    }
-    else {
+    } else {
         for (let oneword of enwords){
             var asc_t=0;
             //对选定的元素进行求和计算 - 保留注释
@@ -949,12 +923,10 @@ function en_words_temp_list_b(add_date_line=true,return_dead_words=false){
             if (blxl<=100){
                 //将 最新的100个单词 排在前头 - 保留注释
                 list_t.push([item,bllen-blxl]);
-            }
-            else if (en_words_temp_important_global.includes(item[0])){
+            } else if (en_words_temp_important_global.includes(item[0])){
                 //将 重要临时单词 排在前头 - 保留注释            
                 list_t.push([item,bllen-101]);
-            }
-            else {
+            } else {
                 list_t.push([item,en_words_temp_global.indexOf(item[0])]); //单词数组 和 序号 - 保留注释
             }            
 
@@ -981,8 +953,7 @@ function en_words_temp_list_b(add_date_line=true,return_dead_words=false){
     var dead_list=array_difference_b(en_words_temp_global,list_simple_t);
     if (return_dead_words){
         return dead_list;
-    }
-    else {
+    } else {
         console.log('en_words_temp_list_b()',dead_list);
         return list2_t;
     }
@@ -995,12 +966,10 @@ function en_word_def_b(csword,csdef,csrecent_word=''){
     if (csrecent_word!==''){
         if (csword==csrecent_word){
             bljg=bljg+' <span class="span_explanation" style="background-color:'+scheme_global['skyblue']+';">'+csdef+'</span>';
-        }
-        else {
+        } else {
             bljg=bljg+' <span class="span_explanation">'+csdef+'</span>';
         }
-    }
-    else {
+    } else {
         bljg=bljg+' <span class="span_explanation">'+csdef+'</span>';
     }
     
@@ -1037,8 +1006,7 @@ function en_sentence_source_b(cskey='',isreg=false){
         
         if (cskey==''){
             list_t.push(item[1]);
-        }
-        else {
+        } else {
             var blfound=str_reg_search_b(item[1],cskey,isreg);
             if (blfound==-1){break;}        
             if (blfound){
@@ -1068,8 +1036,7 @@ function sentence_set_path_and_get_b(csword,csmax,font_size,remote_host,button_s
 function sentence_path_get_b(remote_host,is_local){
     if (is_local){
         return [remote_host+'/wikiuploads/',remote_host+'/wiki/index.php/',remote_host+'/klwebphp/PythonTools/data/selenium_news/html/txtlistsearch.htm?_tag'];
-    }
-    else {
+    } else {
         return ['','',klbase_sele_path_b()[1]+'/html/txtlistsearch.htm?_tag'];   
     }
 }
@@ -1102,8 +1069,7 @@ function sentence_popup_b(csword,ospan=false,no_start=0){
                 ospan.style.color=scheme_global['a-hover'];
             }
             return;
-        }
-        else {
+        } else {
             no_start=0;
             [bljg,blcount,no_next]=sentence_set_path_and_get_b(csword,blmax_rows,font_size,remote_host,button_str,no_start);
         }
@@ -1122,8 +1088,7 @@ function sentence_popup_b(csword,ospan=false,no_start=0){
     
     if (no_start==0 && no_next==0 && blcount<blmax_rows){
         var more_link='';
-    }
-    else {
+    } else {
         var more_link='<p align="right" class="p_more"><span class="span_link" onclick="sentence_popup_b(\''+specialstr_j(csword)+'\',false,'+no_next+');">more ('+(no_next+1)+'+)</span></p>'; //   //刚好5条例句有可能会再次出现 more_link - 保留注释
     }
     odiv.insertAdjacentHTML('beforeend','<div class="div_enwords_sentence">'+bljg+more_link+'</div>');
@@ -1192,12 +1157,10 @@ function en_one_word_b(csword,csno=[-1,0],csrecent_word='',change_color=true,ew=
     var blword0=csword[0].replace(new RegExp("'",'g'),"\\'");
     if (csword[0].substring(0,4)=='=== ' && csword[0].slice(-4,)==' ==='){
         return '<span style="padding-left:0.5rem;padding-right:0.5rem;font-weight:bold;background-color:'+scheme_global['skyblue']+';">'+csword[0]+'</span>';
-    }
-    else if (change_color && csword[1]=='' && csword[2]==''){
+    } else if (change_color && csword[1]=='' && csword[2]==''){
         //just word - 保留注释
         bljg=bljg+'<span class="a_word" onclick="popup_words_links_b(event,\''+blword0+'\','+ew+','+def_button+'); en_word_temp_change_b(this,\''+blword0+'\');"';
-    }    
-    else {
+    } else {
         bljg=bljg+'<span class="a_word" onclick="popup_words_links_b(event,\''+blword0+'\','+ew+','+def_button+');"';
     }
     
@@ -1350,8 +1313,7 @@ function enwords_temp_2_local_storage_b(csarray){
         if (item==''){continue;}
         if (en_words_temp_important_global.includes(item)){
             result_t.push('*'+item);
-        }
-        else {
+        } else {
             result_t.push(item);
         }
     }
@@ -1363,8 +1325,7 @@ function enwords_array_to_links_b(csarray,oldset=new Set(),fn_name='',return_old
     var blxl=0;
     if (fn_name==''){
         blsmall='<small class="small_enword_no_b">';
-    }
-    else {
+    } else {
         blsmall='<small class="small_enword_no_b" style="cursor:pointer;" onclick="'+fn_name+'(this);">';
     }
     var old_count=0;
@@ -1387,14 +1348,12 @@ function enwords_array_to_links_b(csarray,oldset=new Set(),fn_name='',return_old
 function enwords_array_to_html_b(csarray,showstatus=true,isrecent=false,csword=''){
     if (document.getElementById('check_hide_no')){
 	    var cshideno=document.getElementById('check_hide_no').checked;
-    }
-    else {
+    } else {
         var cshideno=false;
     }
     if (document.getElementById('check_hide_lineno')){
 	    var cshidelineno=document.getElementById('check_hide_lineno').checked;
-    }
-    else {
+    } else {
         var cshidelineno=true;
     }
 
@@ -1404,8 +1363,7 @@ function enwords_array_to_html_b(csarray,showstatus=true,isrecent=false,csword='
     
     if (isrecent==false){
         var recent_bookmark='';
-    }
-    else {
+    } else {
         var recent_bookmark=enwords_recent_bookmark_get_b();
         //如果没有预设单词书签，则第一个最近记忆单词为书签 - 保留注释
         if (recent_bookmark=='' && length_t>0){
@@ -1433,34 +1391,29 @@ function enwords_array_to_html_b(csarray,showstatus=true,isrecent=false,csword='
         
         if (cshideno){
             bljg=bljg+'<p class="article">';
-        }
-        else{
+        } else {
             bljg=bljg+'<li>';
         }
         
         if (cshidelineno){
             bljg=bljg+en_one_word_b(blitem_t,[-1,0],recent_bookmark);
-        }
-        else if (blitem_t.length>3) {
+        } else if (blitem_t.length>3){
             bljg=bljg+en_one_word_b(blitem_t,[blitem_t[3],0],recent_bookmark);
-        }
-        else {
+        } else {
             bljg=bljg+en_one_word_b(blitem_t,[blxl,0],recent_bookmark);
         }
         bljg=bljg+namesake_enwords_b(blitem_t[0],csword);
         
         if (cshideno){
             bljg=bljg+'</p>';
-        }
-        else{
+        } else {
             bljg=bljg+'</li>';
         }
 	}
     
 	if (cshideno){
         bljg='<div>'+bljg+'</div>';
-    }
-	else{
+    } else {
         bljg='<ol>'+bljg+'</ol>';
     }
 
@@ -1476,8 +1429,7 @@ function enwords_array_to_html_b(csarray,showstatus=true,isrecent=false,csword='
 function enwords_lines_2_js_array_b(aword,emoji_list,three_lines=false){
     if (three_lines){
         str_t=aword[0]+'\n'+aword[1]+'\n';
-    }
-    else {
+    } else {
         var str_t='["';
         str_t=str_t+specialstr_j(aword[0],true)+'",';
         str_t=str_t+' "'+specialstr_j(aword[1],true)+'", "';
@@ -1493,8 +1445,7 @@ function enwords_lines_2_js_array_b(aword,emoji_list,three_lines=false){
     
     if (three_lines){
         str_t=str_t+en_word_def_istrong_b(definition,true);
-    }
-    else {
+    } else {
         str_t=str_t+specialstr_j(en_word_def_istrong_b(definition,true),true);
         str_t=str_t+'"],';
     }
@@ -1553,8 +1504,7 @@ function enwords_js_type_words_b(cswlist,onetextarea=false,remove_emoji=false,th
     //cswlist 形如：["Doris", "biocompatibility", "deworm", "dewdrop", ] - 保留注释
     if (remove_emoji){
         var emoji_list=words_queue_emoji_b();
-    }
-    else {
+    } else {
         var emoji_list=[];
     }
 
@@ -1565,12 +1515,10 @@ function enwords_js_type_words_b(cswlist,onetextarea=false,remove_emoji=false,th
             js_type=enwords_lines_2_js_array_b(item,emoji_list,three_lines);
             if (onetextarea==false){
                 js_type='<br /><textarea style="height:3rem;" onclick="this.select();document.execCommand(\'copy\');">'+js_type+'</textarea>';
-            }
-            else {
+            } else {
                 if (three_lines){
                     js_type=js_type+'\n---\n';
-                }
-                else {
+                } else {
                     js_type=js_type+'\n';
                 }
             }
@@ -1614,14 +1562,12 @@ function enwords_wiki_type_words_b(cswlist,onetextarea=false,asterisk=false){
         if (cswlist.includes(item[0]) || cswlist.includes(item[0].replace(new RegExp(' ','g'),'_'))){
             if (asterisk){
                 wiki_type='*'+item[0];
-            }
-            else {
+            } else {
                 wiki_type='&lt;eword w="'+item[0]+'"&gt;&lt;/eword&gt;';
             }
             if (onetextarea==false){
                 wiki_type='<br /><textarea style="height:3rem;" onclick="this.select();document.execCommand(\'copy\');">'+wiki_type+'</textarea>';
-            }
-            else {
+            } else {
                 wiki_type=wiki_type+'\n';
             }
             list_t.push([wiki_type,(2+cswlist.indexOf(item[0]))*-1]);
@@ -1640,8 +1586,7 @@ function enwords_js_wiki_textarea_b(cslist,is_simple=false){
     
     if (is_simple){
         var list_t=[].concat(cslist);    
-    }
-    else {
+    } else {
         var list_t=[];
         for (let item of cslist){
             list_t.push(item[0]);
@@ -1659,18 +1604,15 @@ function enwords_search_show_html_b(odiv,batch_div_name,recent_search_str,csword
             csword_filter=csword;
         }
         var bljg=recent_search_str+enwords_batch_div_b([csword_filter],batch_div_name);
-    }
-    else {
+    } else {
         var bljg=recent_search_str+enwords_array_to_html_b(csarray,false,false,csword);
         var bltextarea=(without_textarea?'':enwords_js_wiki_textarea_b(csarray));
         if (csequal){
             bljg=bljg+enwords_batch_div_b(csarray,batch_div_name)+bltextarea;
-        }
-        else {
+        } else {
             if (csword_filter!==''){
                 bljg=bljg+enwords_batch_div_b([csword_filter].concat(csarray),batch_div_name,true,-1)+bltextarea;
-            }
-            else {
+            } else {
                 bljg=bljg+enwords_batch_div_b(csarray,batch_div_name)+bltextarea;
             }
         }
@@ -1683,25 +1625,21 @@ function enword_search_type_b(cs_w_p_d){
 	if (cs_w_p_d.length==0){
         if (document.getElementById('input_s_word')){
 		    cs_w_p_d.push(document.getElementById('input_s_word').checked);
-        }
-        else {
+        } else {
             cs_w_p_d.push(true);
         }
 	}
 	if (cs_w_p_d.length<2){
         if (document.getElementById('input_s_p')){
 		    cs_w_p_d.push(document.getElementById('input_s_p').checked);
-            
-        }
-        else {
+        } else {
             cs_w_p_d.push(true);
         }
 	}
 	if (cs_w_p_d.length<3){
         if (document.getElementById('input_s_def')){
 		    cs_w_p_d.push(document.getElementById('input_s_def').checked);
-        }
-        else {
+        } else {
             cs_w_p_d.push(true);
         }
 	}
@@ -1737,8 +1675,7 @@ function enwords_search_one_b(csitem,cswordlist,csreg,csword_filter,csword_filte
         var blnumber=en_similar_word_b(csword_filter,csword_filter_set,bltmp1);
         if (blnumber==5 && cscount<=csmax || blnumber!==5){
             //do nothing - 保留注释
-        }
-        else {
+        } else {
             blnumber=-1;
         }
         cscount=cscount+1;
@@ -1827,12 +1764,10 @@ function enwords_mini_search_frame_show_hide_b(csexpand=true){
         enwords_mini_search_frame_style_b('',true);
         if (csexpand){
             enwords_mini_search_frame_form_b('');
-        }
-        else {
+        } else {
             enwords_mini_search_frame_form_b('s');
         }
-    }
-    else {
+    } else {
         odiv.style.cssText='';
         odiv.innerHTML='';
     }
@@ -1857,8 +1792,7 @@ function enwords_mini_search_frame_form_b(cstype='s'){
     if (cstype=='s'){
         odiv.innerHTML='<span onclick="enwords_mini_search_frame_form_b(\'\');" style="padding:1rem 0.5rem;cursor:pointer;color:tomato;"><b>S</b></span>';
         odiv.style.opacity='0.5';
-    }
-    else {
+    } else {
         var bljg='';
         bljg=bljg+'<input id="input_enwords_mini_search" type="text" onkeyup="if (event.key==\'Enter\'){enwords_mini_search_b();}"> ';
         bljg=bljg+'<span class="aclick" onclick="enwords_mini_search_frame_form_b();">Close</span>';
@@ -1881,8 +1815,7 @@ function enwords_recent_search_b(csword='',cstype=''){
     if (cstype=='mini'){
         var recent_search_str='<p id="p_recent_search" style="line-height:'+(ismobile_b()?'200':'210')+'%;">';
         return recent_search_str+sub_enwords_recent_search_b_fn('enwords_mini_search_b')+'</p>';
-    }
-    else {
+    } else {
         var odiv=document.getElementById('div_recent_search');
         if (odiv){
             odiv.innerHTML=sub_enwords_recent_search_b_fn('wordsearch_enwords_b');    
@@ -1896,8 +1829,7 @@ function p_enwords_sentence_style_b(do_write=true){
     var blstr='.div_sentence p.p_enwords_sentence:nth-child(even), #div_enword_search_links p.p_enwords_sentence:nth-child(even) {background-color:'+scheme_global['button']+';}';
     if (do_write){
         document.write(blstr+'\n');
-    }
-    else {
+    } else {
         return blstr;
     }
 }
@@ -1929,8 +1861,7 @@ function en_sentence_button_click_b(ospan){
     if (blnum!=='⚪'){
         ospan.innerText='⚪';
         ospan.setAttribute('class','span_sentence_button_init');
-    }
-    else {
+    } else {
         ospan.innerText='';
         ospan.setAttribute('class','span_sentence_button_clicked');    
     }
@@ -1948,8 +1879,7 @@ function sentence_list_2_html_b(cslist,csword_list=[''],csmax=500,show_button=tr
     if (ismobile_b()){
         if (csmobile_font===false){
             mobile_pc_font_size='1.1';
-        }
-        else {
+        } else {
             mobile_pc_font_size=csmobile_font;
         }
     }
@@ -1964,8 +1894,7 @@ function sentence_list_2_html_b(cslist,csword_list=[''],csmax=500,show_button=tr
         //符合宽泛的条件后，再判断是否含有 过滤后的单词，若没有返回空字符 - 保留注释
         if (islocal){
             var str_t=en_sentence_one_line_b(item,csword_list,remote_host+'/wikiuploads/',remote_host+(item[2].slice(-4,)=='_TLS'?'/klwebphp/PythonTools/data/selenium_news/html/txtlistsearch.htm?_tag':'/wiki/index.php/'),button_str,return_arr,keep_kleng);
-        }
-        else {
+        } else {
             var str_t=en_sentence_one_line_b(item,csword_list,'',(item[2].slice(-4,)=='_TLS'?sele_path+'/html/txtlistsearch.htm?_tag':''),button_str,return_arr,keep_kleng);        
         }
         
@@ -1974,8 +1903,7 @@ function sentence_list_2_html_b(cslist,csword_list=[''],csmax=500,show_button=tr
                 bljg.push(str_t);
                 blcount=blcount+1;
             }
-        }
-        else if (str_t!=''){
+        } else if (str_t!=''){
             bljg.push(p_style+str_t+'</p>');
             blcount=blcount+1;
         }        
@@ -1991,8 +1919,7 @@ function sentence_split_b(csstr,csno=-1){   //sentence split - 保留注释
     //-----------------------
     if (Array.isArray(csstr)){
         return csstr;
-    }
-    else if (csstr.length<=300){
+    } else if (csstr.length<=300){
         if (csno>=0){
             en_sentence_global[csno][0]=[csstr];
         }
@@ -2026,8 +1953,7 @@ function sentence_split_b(csstr,csno=-1){   //sentence split - 保留注释
             }
         }
         result_t=[];
-    }
-    else {
+    } else {
         for (let blxl=list_t.length-1;blxl>0;blxl--){
             if (sub_sentence_split_b_check(list_t[blxl-1],list_t[blxl]) || list_t[blxl-1].trim().slice(-5,)==' etc.'){
                 list_t[blxl-1]=list_t[blxl-1]+list_t[blxl];
@@ -2050,8 +1976,7 @@ function sentence_split_b(csstr,csno=-1){   //sentence split - 保留注释
                 if (a_semicolon==''){continue;}
                 result_t.push(a_semicolon);
             }
-        }
-        else {
+        } else {
             result_t.push(item);
         }
     }
@@ -2075,8 +2000,7 @@ function sentence_search_b(csword='',csreg=false,csmax=500,show_button=true,csmo
         if (item.substring(0,1)=='-'){continue;}
         if (item.substring(0,1)=='+'){
             blwordlist2.push(item.substring(1,));
-        }
-        else {
+        } else {
             blwordlist2.push(item);
         }
     }
@@ -2113,21 +2037,18 @@ function simple_words_b(is_set=true,to_lower_case=false){
             for (let item of enwords){
                 result_t.add(item[0].toLowerCase());
             }        
-        }
-        else {
+        } else {
             for (let item of enwords){
                 result_t.add(item[0]);
             }
         }
-    }
-    else {
+    } else {
         var result_t=[];
         if (to_lower_case){
             for (let item of enwords){
                 result_t.push(item[0].toLowerCase());
             }        
-        }
-        else {
+        } else {
             for (let item of enwords){
                 result_t.push(item[0]);
             }
@@ -2164,11 +2085,9 @@ function one_enword_b(item,recent_bookmark='',ismobile=false,csword=''){
 function namesake_enwords_b(word1,word2){
     if (word1==word2){
         return ' <span style="color:'+scheme_global['a-hover']+';">✔</span>';
-    }
-    else if (word1.toLowerCase()==word2.toLowerCase()){
+    } else if (word1.toLowerCase()==word2.toLowerCase()){
         return ' <span style="color:'+scheme_global['a']+';">✔</span>';
-    }
-    else {
+    } else {
         return '';
     }    
 }
@@ -2190,8 +2109,7 @@ function title_change_enwords_b(csstr=''){
     }
     if (csstr==''){
         csstr=bltitle;
-    }
-    else {
+    } else {
         csstr=csstr+' - '+bltitle;
     }
     document.title=csstr;
@@ -2242,8 +2160,7 @@ function recent_words_list_enwords_b(cspageno=0,words_count_per_page=100,isrando
 
         words_searched_arr_global.sort(randomsort_b);
         words_searched_arr_global=words_searched_arr_global.slice(0,words_count_per_page);
-    }
-    else if (cspageno!==-1){
+    } else if (cspageno!==-1){
         words_searched_arr_global=words_searched_arr_global.slice(cspageno-1,cspageno-1+words_count_per_page);
     }
 
@@ -2292,8 +2209,7 @@ function similar_enwords_b(csword,cshideno,cshidelineno,cshidesimilarno,csshow){
         var ocheck_hide_no=document.getElementById('check_hide_no');
         if (ocheck_hide_no){
             var cshideno=ocheck_hide_no.checked;
-        }
-        else {
+        } else {
             var cshideno=false;
         }
     }
@@ -2301,8 +2217,7 @@ function similar_enwords_b(csword,cshideno,cshidelineno,cshidesimilarno,csshow){
         var ocheck_hide_lineno=document.getElementById('check_hide_lineno');
         if (ocheck_hide_lineno){
             var cshidelineno=ocheck_hide_lineno.checked;
-        }
-        else {
+        } else {
             var cshidelineno=true;
         }
     }
@@ -2310,8 +2225,7 @@ function similar_enwords_b(csword,cshideno,cshidelineno,cshidesimilarno,csshow){
         var ocheck_hide_similarno=document.getElementById('check_hide_similarno');
         if (ocheck_hide_similarno){
             var cshidesimilarno=ocheck_hide_similarno.checked;
-        }
-        else {
+        } else {
             var cshidesimilarno=true;
         }
     }
@@ -2358,8 +2272,7 @@ function similar_enwords_b(csword,cshideno,cshidelineno,cshidesimilarno,csshow){
 
 		if (cshideno){
             bljg=bljg+'<p class="article">';
-        }
-		else{
+        } else {
             bljg=bljg+'<li>';
         }
 		
@@ -2370,15 +2283,13 @@ function similar_enwords_b(csword,cshideno,cshidelineno,cshidesimilarno,csshow){
 
 		if (cshidelineno){
             bljg=bljg+en_one_word_b(enwords[blno],[-1, tmp_similarno]);
-        }
-		else{
+        } else {
             bljg=bljg+en_one_word_b(enwords[blno],[blno, tmp_similarno]);
         }
         
 		if (cshideno){
             bljg=bljg+'</p>';
-        }
-		else{
+        } else {
             bljg=bljg+'</li>';
         }
         words_searched_arr_global.push(enwords[blno]);
@@ -2386,8 +2297,7 @@ function similar_enwords_b(csword,cshideno,cshidelineno,cshidesimilarno,csshow){
 
 	if (cshideno){
         bljg='<div>'+bljg+'</div>';
-    }
-	else{
+    } else {
         bljg='<ol>'+bljg+'</ol>';
     }
 	bljg=bljg+'<p>';
@@ -2457,8 +2367,7 @@ function en_sentence_show_check_b(){
     if (klmenu_check_b('span_show_en_sentence_b',false)){
         console.log('显示例句');
         show_sentence_enwc_b(0,true,true);
-    }
-    else {
+    } else {
         console.log('不显示例句');            
     }
 }
@@ -2498,12 +2407,10 @@ function enwords_definition_split_b(csdefinition,include_cn=false,remove_type=tr
         if (csstr.includes('；') && ! item.includes('〘')){
             if (include_cn){
                 result_t=result_t.concat(csstr.split('；'));
-            }
-            else {
+            } else {
                 result_t.push(csstr.split('；').slice(-1));
             }
-        }
-        else{
+        } else {
             result_t.push(csstr);
         }    
         //无法处理〘 cross my heart (and hope to die): 我发誓所说属实（否则不得好死）；said to show that what you have just said or promised is completely true or sincere 〙 - 保留注释
@@ -2511,8 +2418,7 @@ function enwords_definition_split_b(csdefinition,include_cn=false,remove_type=tr
     //-----------------------
     if (remove_type){
         csdefinition=csdefinition.replace(new RegExp('<b>'+enword_type_b(true)+'\\. <\/b>','g'),'');    //不能加\\b - 保留注释
-    }
-    else {
+    } else {
         csdefinition=csdefinition.replace(new RegExp('<b>'+enword_type_b(true)+'\\. <\/b>','g'),'<b>$1\. </b>; 📋 ');    //不能加\\b - 保留注释    
     }
     
@@ -2544,13 +2450,11 @@ function enwords_definition_split_b(csdefinition,include_cn=false,remove_type=tr
         if (blstr!==''){
             if (blxl<def_list.length-1){
                 blstr=blstr+item+'; ';
-            }
-            else {
+            } else {
                 sub_enwords_definition_split_b_push(blstr+item);
                 blstr='';
             }
-        }
-        else {
+        } else {
             sub_enwords_definition_split_b_push(item);
         }
     }

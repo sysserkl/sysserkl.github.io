@@ -9,14 +9,14 @@ function menu_lt_klmemo(){
     ];
 
     var klmenu_sort=[
-        '<span class="span_menu" onclick="'+str_t+'sort_type_klmemo_global=\'0a\';init_lt_klmemo();">sort by name</span>',     
-        '<span class="span_menu" onclick="'+str_t+'sort_type_klmemo_global=\'0\';init_lt_klmemo();">sort by name desc</span>',     
-        '<span class="span_menu" onclick="'+str_t+'sort_type_klmemo_global=\'1a\';init_lt_klmemo();">sort by start date</span>',     
-        '<span class="span_menu" onclick="'+str_t+'sort_type_klmemo_global=\'1\';init_lt_klmemo();">sort by start date desc</span>',     
-        '<span class="span_menu" onclick="'+str_t+'sort_type_klmemo_global=\'2a\';init_lt_klmemo();">sort by end date</span>',     
-        '<span class="span_menu" onclick="'+str_t+'sort_type_klmemo_global=\'2\';init_lt_klmemo();">sort by end date desc</span>',         
-        '<span class="span_menu" onclick="'+str_t+'sort_type_klmemo_global=\'tag\';init_lt_klmemo();">sort by tags</span>',
-        '<span class="span_menu" onclick="'+str_t+'sort_type_klmemo_global=\'random\';init_lt_klmemo();">random sort</span>',
+    '<span class="span_menu" onclick="'+str_t+'sort_type_klmemo_global=\'0a\';init_lt_klmemo();">sort by name</span>',     
+    '<span class="span_menu" onclick="'+str_t+'sort_type_klmemo_global=\'0\';init_lt_klmemo();">sort by name desc</span>',     
+    '<span class="span_menu" onclick="'+str_t+'sort_type_klmemo_global=\'1a\';init_lt_klmemo();">sort by start date</span>',     
+    '<span class="span_menu" onclick="'+str_t+'sort_type_klmemo_global=\'1\';init_lt_klmemo();">sort by start date desc</span>',     
+    '<span class="span_menu" onclick="'+str_t+'sort_type_klmemo_global=\'2a\';init_lt_klmemo();">sort by end date</span>',     
+    '<span class="span_menu" onclick="'+str_t+'sort_type_klmemo_global=\'2\';init_lt_klmemo();">sort by end date desc</span>',         
+    '<span class="span_menu" onclick="'+str_t+'sort_type_klmemo_global=\'tag\';init_lt_klmemo();">sort by tags</span>',
+    '<span class="span_menu" onclick="'+str_t+'sort_type_klmemo_global=\'random\';init_lt_klmemo();">random sort</span>',
     ];
     
     var klmenu_config=[
@@ -77,8 +77,7 @@ function local_storage_2_array_lt_klmemo(do_delete=false,do_join_sort=false){
             }
             content_klmemo_global.push(one_item);
         }
-    }
-    else {
+    } else {
         content_klmemo_global=result_t;
     }
     
@@ -88,7 +87,8 @@ function local_storage_2_array_lt_klmemo(do_delete=false,do_join_sort=false){
 
 function sort_lt_klmemo(){
     if (sort_type_klmemo_global==''){return;}
-    else if (sort_type_klmemo_global=='tag'){
+    
+    if (sort_type_klmemo_global=='tag'){
         content_klmemo_global.sort(function (a,b){
             let list_a=a[0].match(/(#[^#\s]{2,})/g) || ['']; //忽略#1 #r 等 - 保留注释
             let list_b=b[0].match(/(#[^#\s]{2,})/g) || [''];
@@ -98,11 +98,9 @@ function sort_lt_klmemo(){
             if (list_b[0]==''){return true;}
             return list_a[0]<list_b[0];
         });    
-    }
-    else if (sort_type_klmemo_global=='random'){
+    } else if (sort_type_klmemo_global=='random'){
         content_klmemo_global.sort(randomsort_b);
-    }
-    else {
+    } else {
         var blno=parseInt((sort_type_klmemo_global+'0').substring(0,1));
         if (isNaN(blno)){
             blno=0;
@@ -140,8 +138,7 @@ function backup_lt_klmemo(){
     var odiv=document.getElementById('div_backup');
     if (odiv){
         odiv.outerHTML=bljg;
-    }
-    else {
+    } else {
         document.getElementById('divhtml').insertAdjacentHTML('afterbegin',bljg);
     }
 }
@@ -193,8 +190,7 @@ function draw_lt_klmemo(csno){
     var all_days=Math.ceil((end_day-start_day+1)/(1000*3600*24));
     if (all_days<0){
         all_days='';
-    }
-    else {
+    } else {
         all_days=' ('+all_days+'天)';
     }
     
@@ -216,8 +212,7 @@ function draw_lt_klmemo(csno){
     var odiv=document.getElementById('div_memo_'+csno);
     if (odiv){
         odiv.innerHTML=bljg;
-    }
-    else {
+    } else {
         document.getElementById('divhtml').insertAdjacentHTML('afterbegin','<div id="div_memo_'+csno+'" width=100%>'+bljg+'</div>\n');
     }
 }
@@ -262,8 +257,7 @@ function change_content_lt_klmemo(csno){
             if (blxl==csno){
                 alert('未做修改，未保存');
                 return;                
-            }
-            else {
+            } else {
                 alert('存在同名的Memo，取消修改');
                 return;
             }
@@ -342,8 +336,7 @@ function init_lt_klmemo(cskey='',refresh_tag=false,reload=true){
                 draw_lt_klmemo(blxl);
             }
         }
-    }
-    else {
+    } else {
         for (let blxl=0;blxl<content_klmemo_global.length;blxl++){
             draw_lt_klmemo(blxl);
         }
@@ -398,8 +391,7 @@ function change_lt_klmemo(csid,csnumber){
                         alert('禁止使用---');
                         return;
                     }
-                }
-                else if ([1,2].includes(csnumber)){
+                } else if ([1,2].includes(csnumber)){
                     currentvalue=validdate_b(currentvalue);
                     if (currentvalue===false){
                         alert('日期格式错误');
@@ -468,8 +460,7 @@ function tag_list_lt_klmemo(){
     for (let item of tags_t){
         if (item==tagname){
             blcount=blcount+1;
-        }
-        else {
+        } else {
             result_t.push(sub_tag_list_lt_klmemo_one_tag(tagname,blcount));
             tagname=item;
             blcount=1;

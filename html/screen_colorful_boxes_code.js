@@ -11,8 +11,7 @@ function colorful_klbox(){
     if (Math.random()>1/3){
         if (Math.random()>0.5){
             boxw=window_w;
-        }
-        else {
+        } else {
             boxh=window_h;
         }
     }
@@ -53,17 +52,14 @@ function change_color_klbox(){
             if (Math.random()>0.5){
                 if (Math.random()>0.5){
                     item.style.filter='brightness(90%)';
-                }
-                else {
+                } else {
                     item.style.filter='brightness(110%)';
                 }
-            }
-            else {
+            } else {
                 item.style.backgroundColor=rndcolor_b();
             }
         }
-    }
-    else if (times_global>10){
+    } else if (times_global>10){
         var color_range=color_range_b([],[],divs.length);
         for (let blxl=0;blxl<divs.length;blxl++){
             divs[blxl].style.backgroundColor=rgb2hex_b(color_range[blxl]);

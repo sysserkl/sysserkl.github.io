@@ -1,8 +1,7 @@
 function character_wordle(cscharacter){
     if (cscharacter==' '){
         cscharacter='<div class="div_space"> </div>';                    
-    }
-    else {
+    } else {
         cscharacter='<div class="div_done">'+cscharacter+'</div>';        
     }
     return cscharacter;
@@ -45,14 +44,12 @@ function generate_wordle(show_answer=false){
             list_t[blxl]=character_wordle(list_t[blxl]);        
         }
         answer_wordle();
-    }
-    else {
+    } else {
         length_wordle_global=(current_word_wordle_global[0].match(/[a-z]/ig) || []).length;
         var show_no=[];
         if (length_wordle_global>5){
             var show_count=Math.min(Math.floor(length_wordle_global/2),length_wordle_global-5);
-        }
-        else {
+        } else {
             var show_count=1;
         }
         for (let blxl=0;blxl<length_wordle_global;blxl++){
@@ -75,8 +72,7 @@ function generate_wordle(show_answer=false){
             
             if (show_no.includes(letter_no)){
                 list_t[blxl]=character_wordle(list_t[blxl]);                  
-            }
-            else {
+            } else {
                 list_t[blxl]='<div id="div_wordle_'+blxl+'" class="div_wordle" onclick="border_wordle(this.id);">&nbsp;</div>';
             }
             letter_no=letter_no+1;
@@ -128,8 +124,7 @@ function click_wordle(odom=false){
         if (odom){
             odom.click();
         }   
-    }
-    else {
+    } else {
         while (true){
             odom=odom.nextSibling;
             if (!odom){
@@ -162,11 +157,9 @@ function change_wordle(csvalue){
         }
         
         click_wordle(oletter);
-    }
-    else if (current_word_wordle_global[0].toLowerCase().includes(csvalue.toLowerCase())){
+    } else if (current_word_wordle_global[0].toLowerCase().includes(csvalue.toLowerCase())){
         oletter.style.color=scheme_global['brown'];
-    }    
-    else {
+    } else {
         oletter.style.color=scheme_global['memo'];
     }
     times_wordle_global=times_wordle_global+1;

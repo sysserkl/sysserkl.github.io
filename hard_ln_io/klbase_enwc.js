@@ -417,8 +417,7 @@ function days_enwc_b(only_plan=false){
                 if (value_t==td_last_min){
                     item.style.color=scheme_global['a-hover'];
                     item.style.fontWeight='bold';
-                }
-                else if (value_t==td_100_min || value_t==td_1000_min){
+                } else if (value_t==td_100_min || value_t==td_1000_min){
                     item.style.color=scheme_global['a'];
                     item.style.fontWeight='bold';
                 }

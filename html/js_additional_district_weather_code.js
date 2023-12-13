@@ -106,8 +106,7 @@ function export_temperature_district_weather(){
         if (temperature_range=='全部' || temperature_range=='最低温度'){        
             sub_export_temperature_district_weather_flotarr(year_l_dict,'最低温度');
         }
-    }
-    else {
+    } else {
         for (let item of js_data_current_common_search_global){
             var bldate=item[0][0];
             ht.push('["'+bldate+'",'+item[0][1]+']');
@@ -214,8 +213,7 @@ function flot_line_temperature_district_weather(only_dot=false,csarr=false,legen
         if (temperature_range=='全部' || temperature_range=='最低温度'){
             sub_flot_line_temperature_district_weather_flotarr(year_l_dict,'最低温度');
         }
-    }
-    else {
+    } else {
         for (let item of csarr){
             var bldate=validdate_b(item[0][0]);
             ht.push([bldate,item[0][1]]);
@@ -277,8 +275,7 @@ function sort_district_weather(csdesc=false){
     var blno=parseInt(document.getElementById('select_sort_type_jsad_dweather').value);
     if (csdesc){
         district_weather_global.sort(function (a,b){return a[blno]<b[blno];});        
-    }
-    else {
+    } else {
         district_weather_global.sort(function (a,b){return a[blno]>b[blno];});                
     }
     search_common();
@@ -395,8 +392,7 @@ function dots_district_weather(){
             for (let item of csdict[key]){
                 if (item[1]==null){
                     bljg.push('<span title="'+item[0]+'">◌</span>');
-                }
-                else {
+                } else {
                     var blcolor=value_in_color_range_b(item[1],color_list,min_value,false); //max_value - 保留注释
                     bljg.push('<span style="color:'+blcolor+';" title="'+item[0]+' '+item[1]+'">●</span>');
                 }

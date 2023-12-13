@@ -53,8 +53,7 @@ function options_klsda(csyear=-1,csvalue=-1){
     for (let item of analyze_item_year_global){
         if (csyear==item){
             bljg=bljg+'<option selected>'+item+'</option>';
-        }
-        else {
+        } else {
             bljg=bljg+'<option>'+item+'</option>';
         }
     }
@@ -64,8 +63,7 @@ function options_klsda(csyear=-1,csvalue=-1){
     for (let item of analyze_item_name_global){
         if (csvalue==item){
             bljg=bljg+'<option selected>'+item+'</option>';
-        }
-        else {
+        } else {
             bljg=bljg+'<option>'+item+'</option>';
         }
     }
@@ -95,8 +93,7 @@ function draw_lines_klsda(){
             if (blfound==-1){break;}
             if (selected_item_len==1){
                 var city_t=one_city_data[0].split('_')[0];
-            }
-            else {
+            } else {
                 var city_t=one_city_data[0];
             }
             if (include_citys_t=='' ||blfound){        
@@ -142,8 +139,7 @@ function draw_lines_klsda(){
             if (item_name_current.substring(item_name_current.lastIndexOf('('),)==item_name_prev.substring(item_name_prev.lastIndexOf('('),)){continue;}
             if (split_no==0){
                 split_no=blxl;
-            }
-            else {
+            } else {
                 list_t=list_t.slice(0,blxl);    //不含当前组 - 保留注释
                 break;
             }
@@ -151,8 +147,7 @@ function draw_lines_klsda(){
     }
     if (split_no==0){
         flot_lines_b(list_t,'div_flot');
-    }
-    else {
+    } else {
         var unit1=list_t[0][0].substring(list_t[0][0].lastIndexOf('('),).replace('(','').replace(')','');
         var unit2=list_t[list_t.length-1][0].substring(list_t[list_t.length-1][0].lastIndexOf('('),).replace('(','').replace(')','');
         flot_two_lines_two_yaxis_b(list_t,'div_flot',unit1,unit2,'nw',false,'m',2,2,'',[],-1,false,false,false,false,list_t.length-split_no);
@@ -197,8 +192,7 @@ function slide_interval_klsda(){
     blyear=blyear+1;
     if (blyear>analyze_item_year_global[0]){
         clearInterval(global_interval);
-    }
-    else {
+    } else {
         oyear.value=blyear;
     }
 }
@@ -287,8 +281,7 @@ function raw_data_check_klsda(){
     for (let key in result_t){
         if (result_t[key].length!==bllen){
             //console.log(result_t[key]); //此行保留 - 保留注释
-        }
-        else {
+        } else {
             analyze_item_data_global.push(result_t[key]);
             
             var blat=key.indexOf('_');
@@ -307,8 +300,7 @@ function raw_data_check_klsda(){
 function init_klsda(){
     if (document.getElementById('h2_title').innerHTML!=='zj_11_raw'){
         format_klsda();
-    }
-    else {
+    } else {
         raw_data_check_klsda();
     }
     menu_klsda();
@@ -320,8 +312,7 @@ function change_option_klsda(csvalue){
 
     if (oselect.selectedIndex>0 && csvalue==-1){
         oselect.selectedIndex--;
-    }
-    else if (oselect.selectedIndex<oselect.length-1 && csvalue==1){
+    } else if (oselect.selectedIndex<oselect.length-1 && csvalue==1){
         oselect.selectedIndex++;
     }
 }

@@ -34,17 +34,13 @@ function init_common(){
             one_key=one_key.trim();
             if (one_key.substring(0,2)=='d='){
                 data_file_jscm_global=one_key.substring(2,)
-            }
-            else if (one_key.substring(0,2)=='i='){
+            } else if (one_key.substring(0,2)=='i='){
                 icon_emoji_jscm_global=one_key.substring(2,)
-            }
-            else if (one_key.substring(0,2)=='t='){
+            } else if (one_key.substring(0,2)=='t='){
                 title_name_jscm_global=one_key.substring(2,)
-            }    
-            else if (one_key.substring(0,2)=='v='){
+            } else if (one_key.substring(0,2)=='v='){
                 var_name_jscm_global=one_key.substring(2,)
-            }                
-            else if (one_key.substring(0,2)=='j='){
+            } else if (one_key.substring(0,2)=='j='){
                 js_additional_jscm_global=one_key.substring(2,)
             }
         }
@@ -66,8 +62,7 @@ function wait_array_common(){
             if (fn_style_load!==''){
                 try {
                     eval(fn_style_load+'()');
-                }
-                catch (error){
+                } catch (error){
                     console.log(error);
                 }
             }
@@ -77,8 +72,7 @@ function wait_array_common(){
         if (fn_data_load!==''){
             try {
                 eval(fn_data_load+'("'+var_name_jscm_global+'")');
-            }
-            catch (error){
+            } catch (error){
                 console.log(error);
             }
         }
@@ -88,8 +82,7 @@ function wait_array_common(){
         if (fn_menu_more!==''){
             try {
                 menu_more_str=eval(fn_menu_more+'()');
-            }
-            catch (error){
+            } catch (error){
                 menu_more_str='';
                 console.log(error);
             }
@@ -137,8 +130,7 @@ function wait_array_common(){
             document.getElementById('span_count').innerText='('+raw_data_len_jscm_global+')';
             blfound=true;
             sub_wait_array_common_check();
-        }
-        catch (error){
+        } catch (error){
             console.log(blxl,'error',error);        
             blxl=blxl+1;
             setTimeout(sub_wait_array_common_check,1000);
@@ -244,8 +236,7 @@ function th_set_common(){
     var new_dict=false;
     try {
         eval('new_dict='+new_value);
-    }
-    catch (error){
+    } catch (error){
         console.log(error);
         return;
     }
@@ -292,8 +283,7 @@ function search_common(cskey=false,row_no=1,show_html=true){
     
     try {
         var csarray=eval(var_name_jscm_global);
-    }
-    catch (error){
+    } catch (error){
         var csarray=[];
         console.log(error);
     }
@@ -309,8 +299,7 @@ function search_common(cskey=false,row_no=1,show_html=true){
         var list_t=[];
         try {
             list_t=eval(fn+'()');
-        }
-        catch (error){
+        } catch (error){
             console.log(error);
             list_t=[];
         }
@@ -339,12 +328,10 @@ function fn_name_get_common(prefix){
         if (eval('typeof '+blname) !== 'function'){
             console.log('not found function:',blname);
             blname='';
-        }
-        else {
+        } else {
             console.log('found function:',blname);        
         }
-    }
-    catch (error){
+    } catch (error){
         blname='';
         console.log(error);
     }
@@ -365,8 +352,7 @@ function http_link_common(csstr,enable_http){
     if (enable_http){
         if (typeof csstr == 'string'){
             csstr=sub_http_link_common_a_row(csstr);
-        }
-        else if (Array.isArray(csstr)){
+        } else if (Array.isArray(csstr)){
             var result_t=[];
             for (let acol of csstr){
                 result_t.push(sub_http_link_common_a_row(acol));
@@ -388,8 +374,7 @@ function page_common(csno,show_html=true){
             for (let one_col of item[0]){
                 bltds.push('<td>'+http_link_common(one_col,http_links)+'</td>');
             }
-        }
-        else {
+        } else {
             for (let blxl=0;blxl<item[0].length;blxl++){
                 one_col=item[0][blxl];
                 bltds.push('<td align="'+td_align[blxl]+'">'+http_link_common(one_col,http_links)+'</td>');
@@ -420,20 +405,17 @@ function page_common(csno,show_html=true){
                 if (table_columns && Array.isArray(item[0])){
                     var bltds=sub_page_common_td_generate(blxl,item);
                     result_t.push('<tr id="tr_common_'+item[1]+'">'+bltds.join('')+'</tr>');
-                }
-                else {
+                } else {
                     result_t.push('<tr id="tr_common_'+item[1]+'">'+(show_table_row_no?'<td nowrap>'+(blxl+1)+'</td>':'')+'<td>'+http_link_common(item[0],http_links)+'</td></tr>');
                 }
             }        
-        }
-        else {
+        } else {
             for (let blxl=csno-1;blxl<blend;blxl++){
                 var item=js_data_current_common_search_global[blxl];
                 result_t.push('<li id="li_common_'+item[1]+'">'+http_link_common(item[0],http_links)+'</li>');
             }
         }
-    }
-    else {
+    } else {
         if (is_table){
             for (let blxl=csno-1;blxl<blend;blxl++){
                 var item=js_data_current_common_search_global[blxl];
@@ -441,13 +423,11 @@ function page_common(csno,show_html=true){
                     var bltds=sub_page_common_td_generate(blxl,item);
                     bltds.push(no_jump_common(item[1],'td'));
                     result_t.push('<tr>'+bltds.join('')+'</tr>');
-                }
-                else {                
+                } else {                
                     result_t.push('<tr>'+(show_table_row_no?'<td nowrap>'+(blxl+1)+'</td>':'')+'<td>'+http_link_common(item[0],http_links)+no_jump_common(item[1])+'</td></tr>');
                 }
             }        
-        }
-        else {
+        } else {
             for (let blxl=csno-1;blxl<blend;blxl++){
                 var item=js_data_current_common_search_global[blxl];
                 result_t.push('<li>'+http_link_common(item[0],http_links)+no_jump_common(item[1])+'</li>');
@@ -463,8 +443,7 @@ function page_common(csno,show_html=true){
 
     if (result_t.length==0){
         odiv.innerHTML='';
-    }
-    else {
+    } else {
         odiv.innerHTML=bljg+table_or_ol_common(id_no,is_table,table_columns,show_table_row_no,result_t)+bljg;
         mouseover_mouseout_oblong_span_b(odiv.querySelectorAll('span.oblong_box'));
         
@@ -473,7 +452,7 @@ function page_common(csno,show_html=true){
         }
 
         var oli=document.getElementById(tag_name[0]+'_common_'+clicked_row_no_jscm_global);
-        if(oli){
+        if (oli){
             oli.scrollIntoView();
         }
     }
@@ -517,8 +496,7 @@ function table_or_ol_common(id_no,is_table,table_columns,show_table_row_no,cslis
     if (is_table){
         var th_str=th_generate_common([id_no,is_table,table_columns,show_table_row_no]);
         return '<table class="table_common">'+th_str+cslist.join('\n')+'</table>\n';    
-    }
-    else {
+    } else {
         return '<ol>'+cslist.join('\n')+'</ol>\n';
     }
 }
@@ -528,8 +506,7 @@ function no_jump_common(csno,cstype=''){
     var blstr='<span style="cursor:pointer;font-size:0.8rem;color:'+scheme_global['memo']+';" onclick="search_common(\'\','+csno+');">('+csno+')</span>';
     if (cstype=='td'){
         return '<td>'+blstr+'</td>';
-    }
-    else {
+    } else {
         return ' '+blstr;
     }
 }

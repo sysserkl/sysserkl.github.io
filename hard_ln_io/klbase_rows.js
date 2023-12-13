@@ -83,7 +83,7 @@ function blank_rows_remove_klr_b(csid='textarea_rows_content'){
 function chinese_sort_klr_b(csdesc=false,csid='textarea_rows_content'){
 	var otextarea = document.getElementById(csid);
 	var list_t = otextarea.value.trimRight().split('\n');
-    list_t.sort(function (a,b) {return zh_sort_b(a,b,csdesc);});
+    list_t.sort(function (a,b){return zh_sort_b(a,b,csdesc);});
 	otextarea.value = list_t.join('\n');
 }
 
@@ -98,7 +98,7 @@ function characters_unique_klr_b(csid='textarea_rows_content'){
 	var otextarea = document.getElementById(csid);
 	var list_t = otextarea.value.split('');
     list_t=array_unique_b(list_t);
-    list_t.sort(function (a,b) {return zh_sort_b(a,b);});
+    list_t.sort(function (a,b){return zh_sort_b(a,b);});
 	otextarea.value = list_t.join(' ');
 }
 

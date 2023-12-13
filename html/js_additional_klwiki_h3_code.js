@@ -54,8 +54,7 @@ function years_count_klwiki_h3(){
                 result_t[blym]=0;
             }
             result_t[blym]=result_t[blym]+1;            
-        }
-        else {
+        } else {
             not_found_count=not_found_count+1;
             console.log('not found:',not_found_count,blstr);
         }
@@ -72,8 +71,7 @@ function years_count_klwiki_h3(){
             }
             bljg.push('<h3>🔵 '+item[0]+'年: '+item[1]+'</h3>');
             ym_list=[];
-        }
-        else {
+        } else {
             ym_list.push('⚪ '+item[0].slice(-2,)+'月: '+item[1]);
         }
     }    
@@ -148,8 +146,7 @@ function rank_2_html_klwiki_h3(cslist,cstype='',ignore_value=1){
         
         if (cstype=='weibo'){
             cslist[blxl]='<a href="https://weibo.com/n/'+encodeURIComponent(cslist[blxl][0])+'" target=_blank>'+cslist[blxl][0]+'</a>：<span class="span_rank_count_klwiki_h3">'+cslist[blxl][1]+'</span>';
-        }
-        else {
+        } else {
             cslist[blxl]=cslist[blxl][0]+'：<span class="span_rank_count_klwiki_h3">'+cslist[blxl][1]+'</span>';        
         }
     }
@@ -296,8 +293,7 @@ function host_klwiki_h3(){
         if (blhref.length==1){
             try {
                 var ourl = new URL(blhref[0]);
-            }
-            catch (e){
+            } catch (e){
                 console.log(e);
                 continue;
             }
@@ -307,8 +303,7 @@ function host_klwiki_h3(){
                 category_list[blkey]=0;
             }
             category_list[blkey]=category_list[blkey]+1;                
-        }
-        else {
+        } else {
             not_found_count=not_found_count+1;
             console.log('not found:',not_found_count,blstr);
         }

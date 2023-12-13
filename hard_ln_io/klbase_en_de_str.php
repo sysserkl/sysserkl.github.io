@@ -1,13 +1,11 @@
 <?php
 //csver: 0.0.1-20180919
-function randstr_g($len,$csnumber=true,$csletter=true) {
+function randstr_g($len,$csnumber=true,$csletter=true){
     if ($csnumber==true and $csletter==true){
         $charset = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-    }
-    else if ($csletter==true){
+    } elseif ($csletter==true){
         $charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-    }
-    else {
+    } else {
         $charset = '0123456789';
     }
     $charset_len_t = strlen($charset);
@@ -31,7 +29,7 @@ function random_chs_g($num){
     return $blstr;
 }
 
-function getRandomSubarray_g($arr, $size) {
+function getRandomSubarray_g($arr, $size){
     shuffle($arr);
     return array_slice($arr, 0, $size);
 }
@@ -47,7 +45,7 @@ function random_strs_g(){
 
 function utf8_strrev_g($str){
     $r = '';
-    for ($i = mb_strlen($str); $i>=0; $i--) {
+    for ($i = mb_strlen($str); $i>=0; $i--){
         $r .= mb_substr($str, $i, 1);
     }
     return $r;
@@ -76,11 +74,10 @@ function confuse_str_g($csstr,$cssegments=-1){
     sort($lenlist);
     
     $bljg=mb_substr($csstr,0,$lenlist[0]);
-    for ($blxl=0;$blxl<count($lenlist);$blxl++) {
+    for ($blxl=0;$blxl<count($lenlist);$blxl++){
         if ($blxl<count($lenlist)-1){
             $bljg=$bljg.random_strs_g().mb_substr($csstr,$lenlist[$blxl],$lenlist[$blxl+1]-$lenlist[$blxl]);
-        }
-        else {
+        } else {
             $bljg=$bljg.random_strs_g().mb_substr($csstr,$lenlist[$blxl]);
         }
     }

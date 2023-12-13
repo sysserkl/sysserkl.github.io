@@ -98,7 +98,7 @@ function init_gps_news(){
         document.getElementById('select_transform').value=bltype;
     }
 
-    omap_gps_news_global.addEventListener('click', function(ev) {
+    omap_gps_news_global.addEventListener('click', function(ev){
         var bltype=document.getElementById('select_transform').value;    
         var bllon;
         var bllat;

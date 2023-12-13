@@ -64,8 +64,7 @@ function surname_vcard(){
 		
 		if (bl_x_arr[rnd_x_tmp].length>3){
 			bljg=bljg+'<br />N:;'+bl_x_arr[rnd_x_tmp]+m_tmp+';;;';
-		}
-		else{
+		} else {
 			bljg=bljg+'<br />N:'+bl_x_arr[rnd_x_tmp]+';'+m_tmp+';;;';
 		}
 		bljg=bljg+'<br />FN:'+bl_x_arr[rnd_x_tmp]+m_tmp;

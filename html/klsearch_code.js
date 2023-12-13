@@ -21,8 +21,7 @@ function show_sites_klsearch(){
         var one_site='<span class="'+(item[5].includes('b')?'oblong_box':'span_link')+'" onclick="search_site_klsearch('+blxl+');" title="'+item[7]+'">';
         if (item[3]==''){
             one_site=one_site+item[4];
-        }
-        else {
+        } else {
             one_site=one_site+'<span style="font-weight:bold;color:'+item[3]+';">'+item[4].substring(0,1)+'</span>';
             one_site=one_site+item[4].substring(1,);
         }
@@ -59,8 +58,7 @@ function search_site_klsearch(csno,csproxy=false,cskey='',openwindow=-1,showhtml
     var item=search_sites_list_global[csno];
     if (item[2]==4){ 
         cskey=gbkcode(cskey);
-    }
-    else {
+    } else {
         cskey=web_href_key_b(cskey,item[2]);
     }
     
@@ -74,8 +72,7 @@ function search_site_klsearch(csno,csproxy=false,cskey='',openwindow=-1,showhtml
 
     if (item[5].includes('n')){
         var blhref=item[0]+item[1];
-    }
-    else {
+    } else {
         var blhref=item[0]+cskey+item[1];
     }
     
@@ -103,8 +100,7 @@ function batch_open_sites_klsearch(cscategory){
         if (item[6]!==cscategory){
             blxl=blxl+1
             sub_batch_open_sites_klsearch_one_site();
-        }
-        else {
+        } else {
             search_site_klsearch(blxl,false,blkey);
             if (item[5].includes('p')){
                 search_site_klsearch(blxl,true,blkey);
@@ -134,8 +130,7 @@ function args_klsearch(){
             item=item.trim();
             if (item.substring(0,2)=='k='){
                 blkey=item.substring(2,);
-            }
-            else if (item.substring(0,2)=='t='){
+            } else if (item.substring(0,2)=='t='){
                 bltype=item.substring(2,).toLowerCase();
                 switch (bltype){
                     case 'batch_en':
@@ -150,17 +145,13 @@ function args_klsearch(){
                         bltype='AHD,definitions,dictionary.com,learnersdictionary,lexico,longman,Wiktionary(Local),kaikki(Local),wordhippo,wordnik,yourdictionary';
                         break;
                 }
-            }
-            else if (item.substring(0,2)=='c='){
+            } else if (item.substring(0,2)=='c='){
                 blcategory=item.substring(2,).toLowerCase();
-            }
-            else if (item.substring(0,6)=='close='){
+            } else if (item.substring(0,6)=='close='){
                 blclose=item.substring(6,).toLowerCase();
-            }
-            else if (item.substring(0,15)=='herokuapp_host='){
+            } else if (item.substring(0,15)=='herokuapp_host='){
                 localStorage.setItem('herokuapp_host',item.substring(15,))
-            }
-            else if (item=='iframe'){
+            } else if (item=='iframe'){
                 is_iframe=true;
             }            
         }
@@ -204,8 +195,7 @@ function args_klsearch(){
         document.getElementById('div_recent_search').style.display='none';
         document.getElementById('div_search').style.display='none';
         document.title=blkey+' - KLSearch';
-    }
-    else {
+    } else {
         var links_t=[];
         for (let one_type of bltype){
             var is_proxy=false;        
@@ -232,8 +222,7 @@ function args_klsearch(){
         
         if (blclose=='1'){
             document.location=links_t[links_t.length-1];
-        }
-        else {
+        } else {
             window.open(links_t[links_t.length-1]);
         }
     }
@@ -296,8 +285,7 @@ function local_or_remote_host_klsearch(ospan){
     if (ospan.innerText=='使用本地地址'){
         ospan.innerText='使用('+remote_address+')地址';
         user_remote_host_klsearch_global=false;
-    }
-    else {
+    } else {
         ospan.innerText='使用本地地址';
         user_remote_host_klsearch_global=true;
     }
@@ -309,8 +297,7 @@ function href_replace_host_klsearch(cshref,cstype){
     if (user_remote_host_klsearch_global===false){
         if (cshref.substring(0,remote_address.length)==remote_address){
             return '../../../../../'+cshref.substring(remote_address.length,);
-        }
-        else if (cstype=='Local' && cshref.substring(0,7)=='http://'){
+        } else if (cstype=='Local' && cshref.substring(0,7)=='http://'){
             cshref=cshref.substring(7,);
             var blat=cshref.indexOf('/');
             if (blat>=0){
@@ -410,12 +397,10 @@ function batch_open_links_klsearch(is_init=false){
         oa_batch_links_klsearch_global=false;
         current_no_oa_klsearch_global=0;
         document.getElementById('select_links_range_klsearch').value=0;
-    }
-    else if (current_no_oa_klsearch_global % 10 == 0){
+    } else if (current_no_oa_klsearch_global % 10 == 0){
         document.getElementById('select_links_range_klsearch').value=current_no_oa_klsearch_global;
         return;
-    }
-    else {    
+    } else {    
         var blmax=parseInt(document.getElementById('input_max_seconds').value);
         var blrand=randint_b(0,blmax*1000);
         setTimeout(batch_open_links_klsearch,blrand);
@@ -431,8 +416,7 @@ function batch_keys_links_klsearch(){
         
         if (bltype=='链接'){
             document.getElementById('div_status').insertAdjacentHTML('beforeend','<ol id="container_batch_links_klsearch">'+bljg.join('\n')+'<ol>');
-        }
-        else {
+        } else {
             document.getElementById('div_status').insertAdjacentHTML('beforeend','<textarea id="container_batch_links_klsearch" style="height:20rem;">'+bljg.join('\n')+'</textarea>');        
         }
     }
@@ -494,8 +478,7 @@ function batch_keys_links_klsearch(){
             if (oa_batch_links_klsearch_global.length>batch_open_num){
                 bljg=select_option_numbers_b(Math.min(100,oa_batch_links_klsearch_global.length),batch_open_num);
                 oselect.style.display='';
-            }
-            else {
+            } else {
                 oselect.style.display='none';
             }
             oselect.innerHTML=bljg;    
@@ -511,13 +494,11 @@ function batch_keys_links_klsearch(){
                 for (let item of result_t){
                     if (item[1].includes('[') || item[1].includes(']')){
                         bljg.push('['+item[0]+' <nowiki>'+item[1]+'</nowiki>]');                    
-                    }
-                    else {
+                    } else {
                         bljg.push('['+item[0]+' '+item[1]+']');
                     }
                 }
-            }
-            else {
+            } else {
                 for (let item of result_t){
                     bljg.push('['+item[0]+' '+item[0]+']');
                 }

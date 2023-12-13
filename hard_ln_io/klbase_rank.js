@@ -98,8 +98,7 @@ function search_rank_b(csarray,cskey,csreg,revenue_index=-1,rank_index=-1,year_i
     
     if (profit_index>=0){
         result_t.sort(function (a,b){return a[profit_index]<b[profit_index];});//利润 - 保留注释        
-    }
-    else if (revenue_index>=0){ //收入、利润排序二选一 - 保留注释
+    } else if (revenue_index>=0){ //收入、利润排序二选一 - 保留注释
         result_t.sort(function (a,b){return a[revenue_index]<b[revenue_index];});//收入 - 保留注释
     }
     
@@ -249,8 +248,7 @@ function group_rank_b(csarray,group_district,group_year,district_index,year_inde
             blkey=item[district_index]+'_'+item[year_index];
             sub_group_rank_b_push(blkey,item);                
         }
-    }
-    else if (group_district){
+    } else if (group_district){
         for (let item of csarray){
             blkey=item[district_index];
             sub_group_rank_b_push(blkey,item);               

@@ -152,8 +152,7 @@ function array_2_html_qs_rank(csarray,table_id='table_qs_rank',only_tr=false,sho
 
     if (only_tr){
         bljg=blhead+bljg.join('\n');
-    }
-    else {
+    } else {
         bljg='<table'+(table_id==''?'':' id="'+table_id+'"')+' class="table_qs_rank table_common" cellpadding=0 cellspacing=0>'+blhead+bljg.join('\n')+'</table>\n';
     }
     if (show_html){    
@@ -349,8 +348,7 @@ function flot_line_qs_rank(cslist,set_list,odiv){
             if (set_list[5]){
                 bljg='<section style="max-height:40rem;overflow:auto;">'+bljg+'</section>';
             }
-        }
-        else {
+        } else {
             bljg='';
         }
         odiv.insertAdjacentHTML('beforeend',bljg);
@@ -389,8 +387,7 @@ function name_district_statistics_qs_rank(csarray=false,set_list=false,id_no='',
             bljg.push('<tr><td>'+(blxl+1)+'</td><td>'+csobj[blxl][0]+'</td><td align="right">'+csobj[blxl][1]+'</td><td align="right">'+blprecent+'</td></tr>');
             if (max_rows>0 && blxl>=max_rows){
                 others_count=others_count+csobj[blxl][1];
-            }
-            else {
+            } else {
                 flot_list.push({'label':csobj[blxl][0],'data':csobj[blxl][1]});
             }
         }
@@ -403,8 +400,7 @@ function name_district_statistics_qs_rank(csarray=false,set_list=false,id_no='',
             if (set_list[5]){
                 bljg='<section style="max-height:40rem;overflow:auto;">'+bljg+'</section>';
             }
-        }
-        else {
+        } else {
             bljg='';
         }
         if (set_list[4]){
@@ -453,8 +449,7 @@ function name_district_statistics_qs_rank(csarray=false,set_list=false,id_no='',
         if (list_t.length>=2){
             district_name=blstr;
             country_name=list_t[1].trim();
-        }
-        else if (list_t.length==1){
+        } else if (list_t.length==1){
             country_name=list_t[0].trim();
         }
         

@@ -220,8 +220,7 @@ function value_calculator(csstr){
             return [blvalue.toFixed(bllen),''];
         }
         return [blvalue,''];
-    }
-    catch (error){
+    } catch (error){
         return [false,error];
     }
 }
@@ -289,12 +288,11 @@ function decimal_len_calculator(csstr){
 }
 
 function dbl_calculator(ospan){
-    try{
+    try {
         var oinput=document.getElementById('input_calc');
         oinput.value=ospan.innerText;
         oinput.scrollIntoView();
-    }
-    catch (error){
+    } catch (error){
         document.getElementById('span_status').innerHTML=error;
     }
 }

@@ -20,8 +20,7 @@ function exam_rndwords(dohide=false){
         document.getElementById('div_recent_search').style.display='';
         odivhtml.style.margin='';
         odiv.style.margin='';
-    }
-    else {
+    } else {
         buttons_klexam();
         input_size_b([['testno',5]],'id');
         input_klexam();
@@ -325,8 +324,7 @@ function word_search_rndwords(csstr='',times=10){
             blxl=blxl+1;
             if (blxl>=times){break;}
         }
-    }
-    else {
+    } else {
         var words_temp_equal_arr=enwords_search_arr_init_b();
         var csword_filter=(csstr.match(/[a-zA-Z0-9 '_\-]+/) || [""])[0];
         var csword_filter_set=new Set(csword_filter.split(' '));
@@ -348,8 +346,7 @@ function word_search_rndwords(csstr='',times=10){
 
     if (csstr==''){
         var bottom_str='<a href="#" onclick="word_search_rndwords();">刷新</a>';
-    }
-    else {
+    } else {
         var bottom_str='<a href="#top">Go Top</a> ';
         if (words_temp_arr_global.length>=times && times<=250){
             bottom_str=bottom_str+'<a href="#word_'+(words_temp_arr_global.length-1)+'" onclick="word_search_rndwords(\'\','+times*2+');">Load More</a>'; //跳转到上次搜索的最后一个单词 - 保留注释
@@ -357,8 +354,7 @@ function word_search_rndwords(csstr='',times=10){
     }
     if (learn_something==''){
         links_rndwords();
-    }
-    else {
+    } else {
         document.getElementById('divhtml').innerHTML=learn_something+'<p align=center>'+bottom_str+' ('+enwords.length+') ver: 0.0.5-20200418</p>';
         show_sentence_rndwords();
         document.location.href='#top';
@@ -372,8 +368,7 @@ function slide_start_rndwords(){
         if (one_div.style.display=='none'){
             one_div.style.display='';
             blstop=true;
-        }
-        else {
+        } else {
             one_div.style.display='none';
         }
     }

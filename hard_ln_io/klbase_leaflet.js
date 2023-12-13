@@ -98,8 +98,7 @@ function line_leaflet_b(csomap,islayer=false,cslist,cscolor='red',cscaption=''){
     var oselect=document.getElementById('select_transform');    //line_leaflet_b
     if (oselect){
         restore_type=oselect.value;
-    }
-    else if (typeof gps_tranform_type_global !== 'undefined'){
+    } else if (typeof gps_tranform_type_global !== 'undefined'){
         restore_type=gps_tranform_type_global;
     }
     
@@ -146,7 +145,7 @@ function distance_leaflet_b(lat1, lng1, lat2, lng2){
     return distance;
 }
 
-function rad_leaflet_b(d) {
+function rad_leaflet_b(d){
     return d*Math.PI/180.0;
 }
 
@@ -233,7 +232,7 @@ function wgs84togcj02_b(lng, lat){
     var a = 6378245.0;
     var ee = 0.00669342162296594323;
     
-    if (out_of_china_b(lng, lat)) {
+    if (out_of_china_b(lng, lat)){
         return [lng, lat];
     } else {
         var dlat = transformlat_b(lng - 105.0, lat - 35.0);
@@ -250,7 +249,7 @@ function wgs84togcj02_b(lng, lat){
     }
 }
 
-function bd09togcj02_b(bd_lng, bd_lat) {
+function bd09togcj02_b(bd_lng, bd_lat){
     //百度坐标系 (BD-09) 转 火星坐标系 (GCJ-02)
     var bd_lng = +bd_lng;
     var bd_lat = +bd_lat;
@@ -264,7 +263,7 @@ function bd09togcj02_b(bd_lng, bd_lat) {
     return [gg_lng, gg_lat];
 }
 
-function gcj02tobd09_b(lng, lat) {
+function gcj02tobd09_b(lng, lat){
     //火星坐标系 (GCJ-02) 转百度坐标系 (BD-09) 
     var lng = +lng;
     var lat = +lat;
@@ -288,7 +287,7 @@ function bd09towgs84_b(lng, lat){
     return gcj02towgs84_b(lng,lat);
 }
   
-function out_of_china_b(lng, lat) {
+function out_of_china_b(lng, lat){
     // 纬度 3.86~53.55, 经度 73.66~135.05 
     return !(lng > 73.66 && lng < 135.05 && lat > 3.86 && lat < 53.55);
 }
@@ -385,21 +384,17 @@ function district_cn_name_2_lnglat_b(csname){
         if (item[4]==csname){
             exact_lnglat=item.slice(-2,);
             break;
-        }
-        else if (item[3]==csname){
+        } else if (item[3]==csname){
             similar1_list.push(item.slice(-2,));
-        }
-        else if (item[3].includes(csname) || item[4].includes(csname)){
+        } else if (item[3].includes(csname) || item[4].includes(csname)){
             similar2_list.push(item.slice(-2,));
         }        
     }
     if (exact_lnglat.length>0){
         return exact_lnglat;
-    }
-    else if (similar1_list.length==1){
+    } else if (similar1_list.length==1){
         return similar1_list[0];
-    }
-    else if (similar1_list.length==0 && similar2_list.length==1){
+    } else if (similar1_list.length==0 && similar2_list.length==1){
         return similar2_list[0];
     } else {
         return [false,false];
@@ -420,14 +415,11 @@ function district_cn_level_b(level=2){
         for (let blno=0;blno<list_t.length;blno++){
             if (list_t[blno].match(nationality)!==null){
                 list_t[blno]=list_t[blno].replace(new RegExp(nationality,'g'),'$1');
-            }
-            else if (list_t[blno].match(/自治([区州盟县])$/)!==null){
+            } else if (list_t[blno].match(/自治([区州盟县])$/)!==null){
                 list_t[blno]=list_t[blno].replace(/自治[区州盟县]$/g,'');
-            }
-            else if (list_t[blno].match(/.{2}(地区|新区|矿区|林区|城区|郊县|行政委员会|特别行政区)$/)!==null){
+            } else if (list_t[blno].match(/.{2}(地区|新区|矿区|林区|城区|郊县|行政委员会|特别行政区)$/)!==null){
                 list_t[blno]=list_t[blno].replace(/(.{2})(地区|新区|矿区|林区|城区|郊县|行政委员会|特别行政区)$/g,'$1');
-            }
-            else if (list_t[blno].match(/.{2}[省市区县盟]$/)!==null){
+            } else if (list_t[blno].match(/.{2}[省市区县盟]$/)!==null){
                 list_t[blno]=list_t[blno].replace(/(.{2})[省市区县盟]$/g,'$1');
             }
         }
@@ -489,8 +481,7 @@ function lines_latlon_2_dots_leaflet_b(cslist,cstype){
         if (cstype=='lonlat'){
             bllon=parseFloat(ll_list[0].trim());
             bllat=parseFloat(ll_list[1].trim());
-        }
-        else if (cstype=='latlon'){
+        } else if (cstype=='latlon'){
             bllat=parseFloat(ll_list[0].trim());            
             bllon=parseFloat(ll_list[1].trim());
         }
@@ -510,8 +501,7 @@ function lines_gpsinfo_2_dots_leaflet_b(cslist){
         if (item==''){continue;}
         if (item.indexOf('GPS_GPSLatitude:')==0){
             bllat=parseFloat(item.split('GPS_GPSLatitude:')[1].trim());
-        }
-        else if (item.indexOf('GPS_GPSLongitude:')==0){
+        } else if (item.indexOf('GPS_GPSLongitude:')==0){
             bllon=parseFloat(item.split('GPS_GPSLongitude:')[1].trim());
         }
         if (bllat!==0 && bllon!==0){
@@ -588,8 +578,7 @@ function gpx_file_draw_leaflet_b(csstr,cstype,csname='',cscolors=[]){
         var blname=list_t[blxl].match(/<name>(.*?)<\/name>/m);
         if (blname==null){
             blname=csname;
-        }
-        else if (blname.length<2){
+        } else if (blname.length<2){
             blname=csname;
         } else {
             blname=blname[1];

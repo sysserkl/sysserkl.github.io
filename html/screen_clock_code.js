@@ -15,16 +15,13 @@ function run_clock(){
         bls=Math.round(bls);
         if (nosecond_global){
             var mytime=('0'+blh).slice(-2)+':'+('0'+blm).slice(-2);
-        }
-        else {
+        } else {
             var mytime=('0'+blh).slice(-2)+':'+('0'+blm).slice(-2)+'<span style="font-size:'+font_size2_global+'rem;">'+':'+('0'+bls).slice(-2)+'</span>';
         }
-    }
-    else {
+    } else {
         if (nosecond_global){
             var mytime=('0'+today.getHours()).slice(-2)+':'+('0'+today.getMinutes()).slice(-2);
-        }
-        else {
+        } else {
             var mytime=('0'+today.getHours()).slice(-2)+':'+('0'+today.getMinutes()).slice(-2)+'<span style="font-size:'+font_size2_global+'rem;">'+':'+('0'+today.getSeconds()).slice(-2)+'</span>';
         }
     }
@@ -35,11 +32,9 @@ function run_clock(){
 function fontsize_change_clock(cstype='+'){
     if (cstype=='+'){
         font_size1_global=font_size1_global+1;
-    }
-    else if (cstype=='-') {
+    } else if (cstype=='-'){
         font_size1_global=Math.max(1,font_size1_global-1);
-    }
-    else {
+    } else {
         font_size1_global=18;
     }
     font_size2_global=Math.round(font_size1_global/2,2);
@@ -49,11 +44,9 @@ function fontsize_change_clock(cstype='+'){
 function getcolor_clock(cscolor){
     if (isNaN(cscolor)==false){
         return "#"+cscolor;
-    }
-    else if (cscolor.replace(new RegExp("[0123456789abcdef]","ig"),'')==''){
+    } else if (cscolor.replace(new RegExp("[0123456789abcdef]","ig"),'')==''){
         return "#"+cscolor;
-    }
-    else {
+    } else {
         return cscolor;
     }
 }

@@ -6,18 +6,15 @@ function keys_klexam(){
         for (let bltmpstr of cskeys){
             if (bltmpstr.substring(0,2)=='n='){
                 blnumber=bltmpstr.substring(2,); //此处无 break; - 保留注释
-            }
-            else if (bltmpstr=='type=recent'){
+            } else if (bltmpstr=='type=recent'){
                 input_klexam(blnumber,'recent');
                 isdone=true;
                 break;
-            }
-            else if (bltmpstr=='type=en2cn'){
+            } else if (bltmpstr=='type=en2cn'){
                 en2cn_klexam(blnumber);
                 isdone=true;
                 break;
-            }
-            else if (bltmpstr=='type=en2cn_recent'){
+            } else if (bltmpstr=='type=en2cn_recent'){
                 en2cn_klexam(blnumber,'en2cn_recent');
                 isdone=true;
                 break;
@@ -26,8 +23,7 @@ function keys_klexam(){
         if (isdone==false){
             input_klexam(blnumber);
         }
-    }
-    else {
+    } else {
         input_klexam();
     }
 }
@@ -86,8 +82,7 @@ function show_all_cn_klexam(cscount){
         blxl=blxl+1;
         if (blxl % 40 == 0){
             setTimeout(sub_show_all_cn_klexam_one_word,1);
-        }
-        else {
+        } else {
             sub_show_all_cn_klexam_one_word();
         }
     }
@@ -253,11 +248,9 @@ function input_klexam(cstestno='',cstype='all'){
         
         if (item[0].includes('\\') || item[0].includes('(') || item[0].includes('(') || item[0].includes('[') || item[0].includes(']')){
             var bldef=item[2];
-        }
-        else if (item[2].toLowerCase().includes(item[0].toLowerCase())) {
+        } else if (item[2].toLowerCase().includes(item[0].toLowerCase())){
             var bldef=item[2].replace(new RegExp('('+item[0]+')','ig'),'<span class="span_word_blur" ondblclick="unblur_klexam(this);">$1</span>');
-        }
-        else {
+        } else {
             var bldef=item[2];
         }
 		bljg=bljg+'<span style="font-size:1rem;">'+bldef+'</span><span id=check'+blno+'></span>';
@@ -297,8 +290,7 @@ function input_klexam(cstestno='',cstype='all'){
             if (blxl==cstestno){break;}
         }
         console.log('input_klexam()',recent_type,blxl,Math.min(...include_no),Math.max(...include_no)); //此行保留 - 保留注释
-    }
-    else {
+    } else {
         for (let blno=0;blno<enwords.length;blno++){
             var item=enwords[blno];
 
@@ -396,14 +388,12 @@ function checkwords_klexam(){
                     checko.innerHTML='<font color="'+scheme_global['a']+'"><big>✓</big></font>';
                     blgood=blgood+1;
                     checko.setAttribute('class','check_right');
-                }
-                else{
+                } else {
                     if (is_ignore_empty && blinput[blxl].value.trim()==''){
                         checko.innerHTML='<big>❓</big>';
                         ignore_count=ignore_count+1;
                         checko.setAttribute('class','check_ignore');
-                    }
-                    else {
+                    } else {
                         checko.innerHTML='<font color="'+scheme_global['a-hover']+'"><big>✗</big></font>';
                         blbad=blbad+1;
                         checko.setAttribute('class','check_wrong');

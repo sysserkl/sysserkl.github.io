@@ -100,14 +100,11 @@ function klwebphp_path_b(subdir_or_file=''){
     var klbase_path=location.href;
     if (klbase_path.includes('/klwebphp/')){
         return klbase_path.split('/klwebphp/')[0]+'/klwebphp/'+subdir_or_file;
-    }
-    else if (klbase_path.includes('/klwebphp_backup/')){
+    } else if (klbase_path.includes('/klwebphp_backup/')){
         return klbase_path.split('/klwebphp_backup/')[0]+'/klwebphp_backup/'+subdir_or_file;
-    }
-    else if (local_storage_get_b('use_klwebphp_path').trim()=='1' && (klbase_path+'/_').match(/:\d+\//)!==null){
+    } else if (local_storage_get_b('use_klwebphp_path').trim()=='1' && (klbase_path+'/_').match(/:\d+\//)!==null){
         return '/'+subdir_or_file;
-    }
-    else if (klbase_path.includes('/wp_remote/')){
+    } else if (klbase_path.includes('/wp_remote/')){
         return '../'+subdir_or_file;
     }
     
@@ -248,8 +245,7 @@ function klbase_addons_import_js_b(klbase_list=[],module_list=[],jsdata_list=[],
         [item,defer_str]=js_file_import_defer_b(item);
         if (item.slice(-3,)=='.js'){
             result_t[1].push(['js',module_path+item,defer_str]);
-        }
-        else if (item.slice(-4,)=='.css'){
+        } else if (item.slice(-4,)=='.css'){
             result_t[1].push(['css',module_path+item,'']);
         }        
     }
@@ -266,11 +262,9 @@ function klbase_addons_import_js_b(klbase_list=[],module_list=[],jsdata_list=[],
         [item,defer_str]=js_file_import_defer_b(item);
         if (item.slice(-3,)=='.js'){
             result_t[3].push(['js',same_dir+item,defer_str]);
-        }
-        else if (item.slice(-4,)=='.css'){
+        } else if (item.slice(-4,)=='.css'){
             result_t[3].push(['css',same_dir+item,'']);
-        }
-        else if (item.slice(-4,)=='.png'){
+        } else if (item.slice(-4,)=='.png'){
             result_t[3].push(['png',same_dir+item,'']);
         }        
     }
@@ -473,8 +467,7 @@ function str_reg_search_b(csinput,cskeys,csreg){
                 } else {
                     blfound=true;
                 } 
-			}
-			else if (word_t.substring(0,1)=='-'){
+			} else if (word_t.substring(0,1)=='-'){
                 var blfound2=sub_str_reg_search_b_normal(csinput,word_t.substring(1,));
                 if (blfound2==true){
                     blfound=false;
@@ -498,8 +491,7 @@ function str_reg_search_b(csinput,cskeys,csreg){
                     } else {
                         blfound=true;
                     } 
-				}
-				else if (word_t.substring(0,1)=='-'){
+				} else if (word_t.substring(0,1)=='-'){
                     var blfound2=sub_str_reg_search_b_re(csinput,word_t.substring(1,));
                     if (blfound2==true){
                         blfound=false;
@@ -513,8 +505,7 @@ function str_reg_search_b(csinput,cskeys,csreg){
                         blfound=true;
                     }
 				}
-			}
-			catch (error){
+			} catch (error){
 				alert(word_t+' '+error.message);
 				return -1;
 			}
@@ -981,8 +972,7 @@ function local_storage_all_b(cstype='',key_list=[]){
         var line_count=0;
         if (keyname == 'list_long_term_plans'){
             line_count=7;
-        }
-        else if (keyname =='list_klmemo'){
+        } else if (keyname =='list_klmemo'){
             line_count=3;
         }
         
@@ -1056,8 +1046,7 @@ function lines_range_b(cslist,csmin=false,csmax=false){
                 result_t.push(item);
             }
         }
-    }
-    else if (csmin!==false){
+    } else if (csmin!==false){
         for (let item of cslist){
             if (item>=csmin){
                 result_t.push(item);
@@ -1101,8 +1090,7 @@ function local_storage_get_b(csid,csmax=-1,return_list=false,remove_item='',isre
                     
                     if (blfound==false){break;}
                 }            
-            }
-			catch (error){return;}
+            } catch (error){return;}
         } else {
             while (true){
                 var blat=list_t.indexOf(item);
@@ -1367,8 +1355,7 @@ function service_worker_delete_b(appname='',file_key='',confirm_str='是否更�
             }
             cache.delete(request);
             csxl=csxl+1;
-        }
-        else if (array[index]['url'].includes(file_key)){
+        } else if (array[index]['url'].includes(file_key)){
             var current_str=key_no+'.'+csxl+' '+one_key+' delete url: '+array[index]['url'];
             sub_service_worker_delete_b_message(current_str);
             cache.delete(request);         
@@ -1692,8 +1679,7 @@ function textarea_buttons_b(textarea_id,csbuttons,cstype='',csstyle='',span_clas
     }
     if (csbuttons.includes('clear textarea')){    
         bljg=bljg+'<span class="'+span_class+'"'+csstyle+' onclick="document.getElementById(\''+textarea_id+'\').value=\'\';">Clear textarea</span> ';
-    }    
-    else if (csbuttons.includes('清空') || csbuttons.includes('clear')){    
+    } else if (csbuttons.includes('清空') || csbuttons.includes('clear')){    
         bljg=bljg+'<span class="'+span_class+'"'+csstyle+' onclick="document.getElementById(\''+textarea_id+'\').value=\'\';">Clear</span> ';
     }
     if (csbuttons.includes('复制') || csbuttons.includes('copy')){
@@ -1877,8 +1863,7 @@ function klsofts_recent_b(cshref=''){
             if (cshref.tagName.toLowerCase()=='a'){
                 cshref=decodeURIComponent(cshref.href);
             } else {return;}
-        }
-        catch (error){
+        } catch (error){
             alert(error);
             return;
         }
@@ -1999,8 +1984,7 @@ function klsofts_local_or_remote_b(is_local,only_popup=false){
         if (!is_local && blhref.substring(0,local_len)==local_str){
             blhref=blhref.replace(local_str,remote_str);
             one_a.setAttribute('href',blhref);
-        }
-        else if (is_local && blhref.substring(0,remote_len)==remote_str){
+        } else if (is_local && blhref.substring(0,remote_len)==remote_str){
             blhref=blhref.replace(remote_str,local_str);
             one_a.setAttribute('href',blhref);
         }
@@ -2371,8 +2355,7 @@ function local_storage_2_array_b(idname,elements_count=-1,do_join_sort=false,joi
     //支持以---分隔的行 - 保留注释
     if (typeof idname == 'string'){
         var items=('\n'+local_storage_get_b(idname,-1,false)).split('\n---\n');
-    }
-    else if (Array.isArray(idname)){
+    } else if (Array.isArray(idname)){
         var items=idname;
     } else {
         return [false,'type error'];
@@ -2607,8 +2590,7 @@ function fun_2_string_b(cslist,add_js=false){
         try {
             var blstr=eval(item);
             result_t.push(blstr);
-        }
-        catch (err){
+        } catch (err){
             alert(err.message);
             break;
         }        
@@ -2648,8 +2630,7 @@ function standalone_search_funs_b(cstitle='Search Standalone',cscontent='',diy_f
         if (data_raw_standalone_global.length>0 && !add_li_standalone_global){        
             if (data_raw_standalone_global[0].slice(-5,)=='</tr>'){
                 type_standalone_global='tr';
-            }          
-            else if (data_raw_standalone_global[0].slice(-5,)=='</li>'){
+            } else if (data_raw_standalone_global[0].slice(-5,)=='</li>'){
                 type_standalone_global='li';
             }            
         }   
@@ -3270,8 +3251,7 @@ function array_check_b(cslist){
             current=arow;
             eval('['+arow+']');
         }
-    }
-    catch (error){
+    } catch (error){
         return current;
     }
     return '';

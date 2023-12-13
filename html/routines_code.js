@@ -123,8 +123,7 @@ function statistics_category_klroutines(only_return_obj=false,csat=0){
     var list_t=statistics_filter_klroutines();
     if (csat==0){
         var bljg=statistics_category_count_klplan_b(list_t);
-    }
-    else {
+    } else {
         var bljg=statistics_category_year_month_klplan_b(list_t,csat);
     }
     var buttons='<p><span class="aclick" onclick="statistics_category_klroutines(false,7);">逐月</span><span class="aclick" onclick="statistics_category_klroutines(false,4);">逐年</span></p>';
@@ -152,8 +151,7 @@ function statistics_date_klroutines(){
             var bldate=validdate_b(item);
             if (bldate===false){
                 bldate=new Date('2018-12-31');  //错误日期 - 保留注释
-            }
-            else {
+            } else {
                 days.add(item);
             }
             year_set.add(bldate.getFullYear());
@@ -188,8 +186,7 @@ function statistics_date_klroutines(){
         if (is_one_year){
             var week_keyname='w'+year_week_no[theyear][start_no];        
             var month_keyname='m'+(item[0].getMonth()+1);
-        }
-        else {
+        } else {
             var week_keyname=theyear+'w'+year_week_no[theyear][start_no];
             var month_keyname=theyear+'m'+(item[0].getMonth()+1);
         }
@@ -258,7 +255,7 @@ function statistics_date_klroutines(){
 
     var oseries={bars: {show: true, barWidth: 0.5, align: 'center'}};
     var oaxis={mode: 'categories', tickLength: 0};
-    var oyaxis={tickFormatter: function (v, axis) {return v.toFixed(axis.tickDecimals) + '项';}};
+    var oyaxis={tickFormatter: function (v, axis){return v.toFixed(axis.tickDecimals) + '项';}};
     $.plot('#div_flot_week_count_klroutines', [ weeks_count ], {series: oseries, xaxis: oaxis, yaxis: oyaxis});
     $.plot('#div_flot_every_week_klroutines', [ every_week_list ], {series: oseries, xaxis: oaxis, yaxis: oyaxis});
     $.plot('#div_flot_every_month_klroutines', [ every_month_list ], {series: oseries, xaxis: oaxis, yaxis: oyaxis});    
@@ -287,8 +284,7 @@ function statistics_category_date_klroutines(){
         if (blvalue!==null){
             if (current_category==''){
                 console.log('category is empty',item); //- 保留注释
-            }
-            else {
+            } else {
                 if (result_t[current_category]==undefined){
                     result_t[current_category]=[];
                 }
@@ -312,8 +308,7 @@ function statistics_category_date_klroutines(){
             if (result_t[key].length!==category_dict[key][1]){
                 different_key.push('key数量不一致：'+key+' '+result_t[key].length+' vs '+category_dict[key][1]);
             }
-        }
-        else {
+        } else {
             different_key.push('key缺失：'+key);
         }
     }
@@ -330,11 +325,9 @@ function statistics_category_date_klroutines(){
             if (current_date==''){
                 current_date=item;
                 same_date_count=1;
-            }
-            else if (current_date==item){
+            } else if (current_date==item){
                 same_date_count=same_date_count+1;
-            }
-            else {
+            } else {
                 var bldate=validdate_b(current_date);
                 if (bldate===false){
                     bldate=new Date('2018-12-31');  //错误日期 - 保留注释
@@ -357,8 +350,7 @@ function statistics_category_date_klroutines(){
         
         if (list_t.length==1){
             one_date_category.push(key+' '+date2str_b('-',list_t[0][0])); //+': '+list_t[0][1]
-        }
-        else {
+        } else {
             flot_day_array.push([key].concat(list_t));
         }
     }
@@ -419,8 +411,7 @@ function menu_klroutines(){
     if (ismobile_b()){
         var fontsize='0.8rem';
         var menu1width='13rem';
-    }
-    else {
+    } else {
         var fontsize='1rem';
         var menu1width='17rem';
     }
@@ -510,8 +501,7 @@ function show_klroutines(ispreweek=false){
         bljg=bljg+'<li>';
         if (ispreweek){
             bljg=bljg+'<span';
-        }
-        else {
+        } else {
             bljg=bljg+'<span class="span_link" onclick="check_klroutines(\''+item[0]+'\',\''+category+'\');" id="span_item_'+item[0]+'"';
         }
         var done_date='<span id="span_'+item[0]+'" class="span_date" style="color:'+scheme_global['shadow']+';"></span>';
@@ -533,8 +523,7 @@ function show_klroutines(ispreweek=false){
         var span_edit=' <span class="span_box span_edit_klroutines" onclick="edit_item_klroutines(\''+item[0]+'\');" style="font-size:0.9rem;display:none;">🖍</span> ';
         if (ispreweek){
             bljg=bljg+'</span>'+span_edit+done_date;
-        }
-        else {
+        } else {
             bljg=bljg+'</span>'+span_edit+done_date;
         }
         bljg=bljg+'</li>';
@@ -569,8 +558,7 @@ function show_klroutines(ispreweek=false){
     if (ispreweek){
         oapre.style.color=scheme_global['a-hover'];
         oathis.style.color='';
-    }
-    else {
+    } else {
         oapre.style.color='';
         oathis.style.color=scheme_global['a-hover'];
     }

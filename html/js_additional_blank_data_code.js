@@ -28,18 +28,15 @@ function import_as_js_blank_data(is_append=false){
     try {
         if (is_append){
             blank_data_global=blank_data_global.concat(eval('['+list_t.join('\n')+']'));        
-        }
-        else {
+        } else {
             blank_data_global=eval('['+list_t.join('\n')+']');
         }
         raw_data_len_jscm_global=blank_data_global.length;
-    }
-    catch (error){
+    } catch (error){
         var info=array_check_b(list_t);
         if (info==''){
             alert(error);
-        }
-        else {
+        } else {
             alert(info);
         }
         console.log(error);
@@ -93,8 +90,7 @@ function import_js_file_to_textarea_blank_data(){
     if (bltype=='p'){
         var selepath=klbase_sele_path_b()[1]+'/jsdata/blank_data_pb/';
         blstr=read_txt_file_b(selepath+blvalue+'_data.js');
-    }
-    else {
+    } else {
         var klwebphp_path=klwebphp_path_b('data/blank_data_kl/'+blvalue+'_data.js');
         console.log(klwebphp_path);
         if (klwebphp_path!==false){

@@ -48,8 +48,7 @@ function do_type_klr2(cstype){
             var blno2=document.getElementById('tno2').value;   
             if (cstype=='行号'){
                 add_line_no_klr_b(blop,blno1,blno2);
-            }
-            else {
+            } else {
                 strquick_klr_b(cstype,'textarea_rows_content','textarea_status',blno1,blno2);
             }
             break;
@@ -74,8 +73,7 @@ function do_type_klr2(cstype){
                 for (let blxl=0;blxl<content_list.length;blxl++){
                     content_list[blxl]=date_2_str_format_b(date_list[blxl],blformat,'date')+content_list[blxl];
                 }
-            }
-            else {  //'2'
+            } else {  //'2'
                 for (let blxl=0;blxl<content_list.length;blxl++){
                     content_list[blxl]=content_list[blxl]+date_2_str_format_b(date_list[blxl],blformat,'date');
                 }            
@@ -125,16 +123,14 @@ function str_en_de_kl2(cstype='double',en=true){
         case 'double':
             if (en){
                 document.getElementById('textarea_status').value=en_double_str_b(blstr);    
-            }
-            else {
+            } else {
                 document.getElementById('textarea_status').value=de_double_str_b(blstr);    
             }
             break;
         case 'url':
             if (en){
                 document.getElementById('textarea_status').value=encodeURIComponent(blstr);    
-            }
-            else {
+            } else {
                 document.getElementById('textarea_status').value=decodeURIComponent(blstr);    
             }        
             break;
@@ -356,8 +352,7 @@ function init_klr2(){
         if (oinput.value==1){
             blvalue=randint_b(csmin,csmax);
             oinput.value=blvalue;
-        }
-        else {
+        } else {
             blvalue=oinput.value;
         }
         return blvalue;
@@ -433,12 +428,10 @@ function transform_type_kl2(csencode=true){
             try {
                 if (csencode){
                     var bljg=btoa(blcontent);
-                }
-                else {
+                } else {
                     var bljg=atob(blcontent.trim());
                 }
-            }
-            catch (error){
+            } catch (error){
                 var bljg=error;
             }   
             document.getElementById('textarea_status').value=bljg;

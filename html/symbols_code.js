@@ -14,8 +14,7 @@ function show_symbols(cstype='simple'){
             bljg=bljg+'<div style="'+divstyle_global+'">'+symbols_global[blkey].slice(0,4).join('</div><div style="'+divstyle_global+'">')+'</div>';
             bljg=bljg+' <span id="span_'+blkey+'" style="cursor:pointer;" onclick="more_symbols(this);">...</span> ';
             bljg=bljg+'<div style="'+divstyle_global+'">'+symbols_global[blkey].slice(-4,).join('</div><div style="'+divstyle_global+'">')+'</div>';
-        }
-        else {
+        } else {
             bljg=bljg+'<div style="'+divstyle_global+'">'+symbols_global[blkey].join('</div><div style="'+divstyle_global+'">')+'</div>';
         }
         

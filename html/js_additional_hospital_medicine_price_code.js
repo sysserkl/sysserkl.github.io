@@ -71,12 +71,10 @@ function sort_hospital_medicine_price(csdesc=false){
     var blno=parseInt(document.getElementById('select_sort_type_jsad_yzmp').value);
     if (blno!==col_num_no){
         csarray.sort(function (a,b){return zh_sort_b(a,b,csdesc,blno)});
-    }
-    else {
+    } else {
         if (csdesc){
             csarray.sort(function (a,b){return a[col_num_no]<b[col_num_no];});        
-        }
-        else {
+        } else {
             csarray.sort(function (a,b){return a[col_num_no]>b[col_num_no];});                
         }
     }
@@ -141,8 +139,7 @@ function statistics_supplier_hospital_medicine_price(){
         var bllen=supplier_dict[blxl][1].length;
         if (current_len==raw_len){
             var blpercent=' ('+bllen+'/'+(bllen*100/raw_len).toFixed(2)+'%)';
-        }
-        else {
+        } else {
             var blpercent=' ('+bllen+'/'+(bllen*100/current_len).toFixed(2)+'%/'+(bllen*100/raw_len).toFixed(2)+'%)';
         }
         var supplier_str='<tr><th class="th_supplier_jsad_yzmp" colspan=4>'+(blxl+1)+'. '+supplier_dict[blxl][0]+blpercent+'</th></tr>';
@@ -161,8 +158,7 @@ function expand_hospital_medicine_price(ospan){
     if (sub_div.style.maxHeight==''){
         sub_div.style.maxHeight='40rem';
         ospan.innerText='展开';
-    }
-    else {
+    } else {
         sub_div.style.maxHeight='';
         ospan.innerText='折叠';        
     }

@@ -35,7 +35,7 @@ function object_entries_study_js(){
     // iterate through key-value gracefully
     var obj = { a: 5, b: 7, c: 9 };
     var bljg1='';
-    for (const [key, value] of Object.entries(obj)) {
+    for (const [key, value] of Object.entries(obj)){
         bljg1=bljg1+'<br />'+key+' --- '+value; // "a 5", "b 7", "c 9"
     }
 
@@ -54,10 +54,9 @@ function object_entries_study_js(){
 
 function reduce_study_js(){
     function sub_reduce_study_js_max(accumulator, currentValue){
-        if (accumulator > currentValue) {
+        if (accumulator > currentValue){
             return accumulator;
-        }
-        else {
+        } else {
             return currentValue;
         }
     }
@@ -113,7 +112,7 @@ function map_study_js(){
     var v2=['10','1.1', '2.2e2', '3e300'].map( str => parseInt(str) );
 
     var numbers = [1, 4, 9];
-    var v3 = numbers.map(function(num) {
+    var v3 = numbers.map(function(num){
         return Math.sqrt(num);
     });
 

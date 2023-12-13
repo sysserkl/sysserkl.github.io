@@ -45,8 +45,7 @@ function backup_lt_f2f(){
     var odiv=document.getElementById('div_backup');
     if (odiv){
         odiv.outerHTML=bljg;
-    }
-    else {
+    } else {
         document.getElementById('divhtml').insertAdjacentHTML('afterbegin',bljg);
     }
 }
@@ -68,8 +67,7 @@ function filter_klplan_f2f(){
         
         if (blfound){
             current_item_list.push(item);
-        }
-        else {
+        } else {
             others_item_list.push(item);
         }
     }
@@ -155,8 +153,7 @@ function draw_lt_f2f(csno){
     var odiv=document.getElementById('div_f2f_'+csno);
     if (odiv){
         odiv.innerHTML=bljg;
-    }
-    else {
+    } else {
         document.getElementById('divhtml').insertAdjacentHTML('beforeend','<div id="div_f2f_'+csno+'" width=100%>'+bljg+'</div>\n');
     }
 }
@@ -209,15 +206,13 @@ function change_content_lt_f2f(csno){
         content_all_f2f_global.splice(csno,1);
         array_2_local_storage_lt_f2f();        
         reload_f2f();
-    }
-    else {
+    } else {
         for (let blxl=0;blxl<content_all_f2f_global.length;blxl++){
             if (currentvalue+' '+bldate==content_all_f2f_global[blxl].join(' ')){
                 if (blxl==csno){
                     alert('未做修改，未保存');
                     return;
-                }
-                else {
+                } else {
                     alert('存在同名的内容，取消修改');
                     return;
                 }
@@ -266,8 +261,7 @@ function search_f2f(cskey=false){
         for (let blxl=0;blxl<content_all_f2f_global.length;blxl++){
             content_current_f2f_global.push(blxl);
         }    
-    }
-    else {
+    } else {
         recent_f2f(cskey);
         var isreg=klmenu_check_b('span_reg_f2f',false);
         [csstr,isreg]=str_reg_check_b(cskey,isreg,true);        
@@ -375,8 +369,7 @@ function new_lt_f2f(){
     if (blat>=0){
         var encounter_memo=encounter_str.substring(blat,);    
         encounter_str=encounter_str.substring(0,blat);
-    }
-    else {
+    } else {
         var encounter_memo='';    
     }
 
@@ -405,8 +398,7 @@ function new_lt_f2f(){
                 date_list.push(date2str_b('-',range_t[0]));
                 range_t[0].setTime(range_t[0].getTime()+24*60*60*1000);        
             }
-        }
-        else {
+        } else {
             date_list.push(date2str_b('-',range_t[0]));
         }
     }
@@ -422,8 +414,7 @@ function new_lt_f2f(){
     
     if (date_list.length>=2){
         var date_range=date_list[0]+' '+day_2_week_b(date_list[0],'cnbrief')+' ~ '+date_list[date_list.length-1]+' '+day_2_week_b(date_list[date_list.length-1],'cnbrief');
-    }
-    else {
+    } else {
         var date_range=date_list[0]+' '+day_2_week_b(date_list[0],'cnbrief');
     }
     if (confirm('是否添加'+encounter_list.size+'人（'+Array.from(encounter_list)+'）、'+date_list.length+'天（'+date_range+'）记录?')==false){return;}

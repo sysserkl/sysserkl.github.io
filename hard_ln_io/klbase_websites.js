@@ -189,8 +189,7 @@ function recent_websites_b(obj_a=false,return_type='none',user_js=''){
         for (let blxl=0;blxl<blat;blxl++){
             today_clicked_websites_global.add(recent_websites_list[blxl].split(' ')[0]);
         }
-    }
-    else if (obj_a){
+    } else if (obj_a){
         today_clicked_websites_global.add(obj_a.href);  //当同时使用 网址库 和 pwa 时，相互之间 localStorage 可以同步，但 全局变量 today_clicked_websites_global 不同步 - 保留注释
     }      
 
@@ -243,12 +242,10 @@ function same_name_websites_b(cshref,cstitle='',use_small=false){
         list_t=hostname.split('.');
         if (list_t.length==2){
             hostname=list_t[0];
-        }
-        else if (list_t.length>=3){
+        } else if (list_t.length>=3){
             hostname=list_t[1];
         }
-    }
-    catch (error){
+    } catch (error){
         var hostname='';
     }
     

@@ -354,8 +354,7 @@ function fav_add_klsnews_b(ospan){
         ospan.innerText='🔴';
         if (fav_selenews.includes(str_t)){return;}
         localStorage.setItem('fav_selenews',(fav_selenews+str_t).replace(/\n\n/g,'\n'));
-    }
-    else if (cstype=='🔴'){
+    } else if (cstype=='🔴'){
         ospan.innerText='⚪';
         if (!fav_selenews.includes(str_t)){return;}
         localStorage.setItem('fav_selenews',fav_selenews.replace(str_t,'\n').replace(/\n\n/g,'\n'));
@@ -545,30 +544,24 @@ function classify_sites_klsnews_b(bottom_eng=false,sort_by_day=false,show_cn_en=
             //适用 www 数据库 - 保留注释
             if (sites_en_cn_global['cn'].includes(item[1])){
                 site_type='cn0';
-            }
-            else if (sites_en_cn_global['en'].includes(item[1])){
+            } else if (sites_en_cn_global['en'].includes(item[1])){
                 site_type='en0';
                 if (bottom_eng){
                     do_add=true;
                 }
-            }
-            //适用 www 数据库以外；网站名中含有中文 - 保留注释
-            else if ((item[1].replace(new RegExp(removestr,'g'),'').trim().match(/[^\x00-\xff]/) || []).length>0){
-                site_type='cn1';
-            }
-            //适用全部数据库；第一条记录中含有中文数量少于2个 - 保留注释
-            else if ((item[2].split('</p>')[0].trim().replace(new RegExp(removestr,'g'),'').match(/[^\x00-\xff]/g) || []).length<=1){
+            } else if ((item[1].replace(new RegExp(removestr,'g'),'').trim().match(/[^\x00-\xff]/) || []).length>0){
+                site_type='cn1';    //适用 www 数据库以外；网站名中含有中文 - 保留注释
+            } else if ((item[2].split('</p>')[0].trim().replace(new RegExp(removestr,'g'),'').match(/[^\x00-\xff]/g) || []).length<=1){
                 site_type='en1';
                 if (bottom_eng){
-                    do_add=true;
+                    do_add=true;    //适用全部数据库；第一条记录中含有中文数量少于2个 - 保留注释
                 }
             }
             
             console.log(site_type,item[1]); //此行保留 - 保留注释
             if (show_cn_en=='cn' && site_type.substring(0,2)=='en' || show_cn_en=='en' && site_type.substring(0,2)=='cn'){
                 list_t[blxl]='';
-            }
-            else if (do_add){
+            } else if (do_add){
                 list_t[blxl][0]=item[0]+maxnum;
             }
             //以下四行保留注释
@@ -755,8 +748,7 @@ function masonrydiv_klsnews_b(){
               itemSelector: '.div_masonry',
               columnWidth: 200
             });
-        }
-        catch (error) {
+        } catch (error){
             //do nothing
         }
     }
@@ -780,7 +772,7 @@ function filter_list_klsnews_b(){
     if (focus===true){       
         var focus_list=sort_keys_klsnews_b();
         for (let one_row of sourcelist){
-            for (let one_key of focus_list) {
+            for (let one_key of focus_list){
 		        if (one_key.trim()==''){continue;}
                 if (one_row[0].toLowerCase().includes(one_key) || one_row[1].toLowerCase().includes(one_key)){
                     selected_list.push(one_row);
@@ -797,12 +789,9 @@ function filter_list_klsnews_b(){
 function rowid_change_klsnews_b(cstype=1){
     if (sourcelist.length==0){return;}
     var oinput=document.getElementById('input_rowid');
-    //下一页
-    if (cstype==1){
+    if (cstype==1){     //下一页
         oinput.value=sourcelist[sourcelist.length-1][5];
-    }
-    //上一页
-    else if (cstype==-1) {
+    } else if (cstype==-1){    //上一页
         oinput.value=sourcelist[0][5];
     } else {
         oinput.value='';
@@ -896,7 +885,7 @@ function getlines_klsnews_b(jssearchkey='',csno=1,cslines=50){
     
 	for (let blxl=csno-1;blxl<csno+cslines-1;blxl++){
 		if (blxl>=bllength){break;}
-        if (blxl % 2==0) {
+        if (blxl % 2==0){
             bljg=bljg+'<p style="font-size:1.1rem;padding:0.2rem 0.5rem;">';
         } else {
             bljg=bljg+'<p style="font-size:1.1rem;background-color:#efefef;padding:0.2rem 0.5rem;">';
@@ -1072,8 +1061,7 @@ function menu_klsnews_b(cskeys,js_or_php=''){
     var another_page=[];
     if (js_or_php=='js'){
         another_page=['<a href="selenium_news_reader.php">PHP版</a>'];
-    }
-    else if (js_or_php=='php'){
+    } else if (js_or_php=='php'){
         another_page=[
         '<a href="selenium_news_reader_offline.htm">离线版</a>',
         '<a href="?search=0(:iscn)&limit=1000&input_random">随机1000条英文信息</a>',

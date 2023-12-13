@@ -109,8 +109,7 @@ function enwords_array_ebs_b(){
         bljg.sort();    
         if (otextarea_value==''){
             var blbuttons='';
-        }
-        else {
+        } else {
             var blbuttons='<p style="margin-top:0.5rem;">';
             blbuttons=blbuttons+'<span class="oblong_box" onclick="remove_or_search_textarea_words_ebs_b(this.parentNode.parentNode,\'remove\');">清除编辑框中的这些单词</span> ';
             blbuttons=blbuttons+'<span class="oblong_box" onclick="remove_or_search_textarea_words_ebs_b(this.parentNode.parentNode,\'search\');">单词测试</span> ';
@@ -130,18 +129,16 @@ function enwords_array_ebs_b(){
             if (words.size==0){continue;}
             aspan.parentNode.insertAdjacentHTML('beforebegin',sub_enwords_array_ebs_b_get_words());
             words=new Set();
-        }
-        else {
+        } else {
             var blcontent=aspan.innerText;            
             var highlights=aspan.querySelectorAll('span.span_key_highlight');   //informative uninformative - 保留注释
             for (let one_hightlight of highlights){
                 var blkey=one_hightlight.innerText;
-                try{
+                try {
                     if (blcontent.match('\\b'+blkey+'\\b')!==null){
                         words.add(blkey);
                     }
-                }
-                catch (error) {
+                } catch (error){
                     //do nothing
                 }
             }

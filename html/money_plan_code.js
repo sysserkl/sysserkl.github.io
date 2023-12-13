@@ -57,8 +57,7 @@ function calc_expenditure_mplan(){
         }
         if (blyears<bl_plan_years){
             percent_max=percent_max-(percent_max-percent_min)/2;
-        }
-        else {
+        } else {
             percent_min=percent_min+(percent_max-percent_min)/2;
         }
         if (blxl>100 || percent_min == percent_max){break;}
@@ -133,8 +132,7 @@ function calc_years_mplan(cs_year_expenditure=false,showhtml=true){
     }
     if (blprincipal<0){
         return blxl-2;
-    }
-    else {
+    } else {
         return blxl-1;
     }
 }

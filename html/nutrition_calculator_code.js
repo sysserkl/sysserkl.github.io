@@ -113,8 +113,7 @@ function remove_nutrition_calc(is_last=false){
         for (let blxl=otables.length-1; blxl>otables.length-1-blcount; blxl--){
             otables[blxl].outerHTML='';
         }
-    }
-    else {
+    } else {
         if (!confirm('是否清除当前数据？')){return;}
         document.getElementById('div_table').innerHTML='';
     }    
@@ -277,12 +276,10 @@ function table_show_nutrition_calc(sort_no=0,is_desc=false){
 
     if (keys[sort_no]=='name'){
         result_t.sort(function (a,b){return zh_sort_b(a,b,is_desc,0);});
-    }
-    else {
+    } else {
         if (is_desc){
             result_t.sort(function (a,b){return isNaN(b[sort_no]) || a[sort_no]>b[sort_no];});
-        }
-        else {
+        } else {
             result_t.sort(function (a,b){return isNaN(a[sort_no]) || a[sort_no]<b[sort_no];});
         }
     }
@@ -295,11 +292,9 @@ function table_show_nutrition_calc(sort_no=0,is_desc=false){
             var align_type=(keys[blcol]=='name'?'left':'right');
             if (arow[blcol]==undefined || arow[blcol].toString()=='NaN' || arow[blcol]==''){//不能使用 isNaN - 保留注释
                 arow[blcol]='<td></td>';
-            }
-            else if (keys[blcol]=='name'){
+            } else if (keys[blcol]=='name'){
                 arow[blcol]='<td>'+arow[blcol]+'</td>';
-            }
-            else {
+            } else {
                 arow[blcol]='<td align=right>'+arow[blcol].toFixed(decimal_t[blcol])+'</td>';
             }
         }

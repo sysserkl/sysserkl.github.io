@@ -12,8 +12,7 @@ function show_hide_dpr(show_textarea=true){
         odiv.style.display='none';
         otextarea.style.display='';
         obuttons.style.display='';
-    }
-    else {
+    } else {
         odiv.style.display='';
         otextarea.style.display='none';
         obuttons.style.display='none';
@@ -48,14 +47,13 @@ function html_replace_dpr(csarray){
     
     for (let item of csarray){
         if (!newhtml.includes(item[0])){continue;}
-        try{
+        try {
             newhtml=newhtml.replace(item[0],item[1]);
             odiv.innerHTML=newhtml;
             if (odiv.innerText!==oldtxt){
                 odiv.innerHTML=oldhtml;
             }
-        }
-        catch (error) {
+        } catch (error){
             console.log('html_replace_dpr','error:',item);
         }    
     }
@@ -79,14 +77,13 @@ function high_light_dpr(csarray,csstyle='',csclass=''){
 
     for (let item of csarray){
         if (!newhtml.includes(item)){continue;}
-        try{
+        try {
             newhtml=newhtml.replace(new RegExp(item,'g'),span_str+item+'</span>');
             odiv.innerHTML=newhtml;
             if (odiv.innerText!==oldtxt){
                 odiv.innerHTML=oldhtml;
             }
-        }
-        catch (error) {
+        } catch (error){
             console.log('high_light_dpr','error:',item);
         }
     }    
@@ -106,8 +103,7 @@ function proofread_dpr(){
         var bldate=validdate_b(chinese_ymd_2_number_b(item));
         if (bldate===false){
             result_t.push('🔴 日期格式错误：'+item);
-        }
-        else {
+        } else {
             ymd_cn_varified_list.push([item,date2str_b(bldate)]);
         }
     }
@@ -123,8 +119,7 @@ function proofread_dpr(){
         var bldate=validdate_b(item);
         if (bldate===false){
             result_t.push('🔴 日期格式错误：'+item);
-        }
-        else {
+        } else {
             ymd_num_varified_list.push([item,date2str_b(bldate)]);        
         }
     }
@@ -147,8 +142,7 @@ function proofread_dpr(){
     }
     if (date_double_equal_set.size==0){
         result_t.push('⚪ 未发现成对日期');
-    }
-    else {
+    } else {
         result_t.push('⚪ 成对日期：'+Array.from(date_double_equal_set).join(' ◽ '));
     }
     if (klmenu_check_b('span_highlight_date_dpr',false)){
@@ -198,8 +192,7 @@ function proofread_dpr(){
     var duration_list=content_str.match(/自.*起至.*止/g) || [];
     if (duration_list.length==0){
         result_t.push('❓ 未发现刑期起止日期');
-    }
-    else {
+    } else {
         for (let one_duration of duration_list){
             var blfound=false;
             var from_to_date_list=chinese_find_ymd_b(one_duration);
@@ -216,12 +209,10 @@ function proofread_dpr(){
             if (blfound===false){
                 if (from_to_date_list.length!==2){
                     result_t.push('🔴 刑期起止日期不完整');
-                }
-                else {
+                } else {
                     if (from_to_date_list[1][1]<=from_to_date_list[0][1]){
                         result_t.push('🔴 刑期起始日期小于等于结束日期：'+one_duration);
-                    }
-                    else {
+                    } else {
                         var days=(from_to_date_list[1][1]-from_to_date_list[0][1])/86400000;
                         var next_month=next_month_b(date2str_b('-',from_to_date_list[0][1]).substring(0,7),Math.ceil(days/30));
                         result_t.push('⚪ 刑期('+one_duration+')：'+days.toFixed(1)+'天≈'+(days/30).toFixed(1)+'月。');
@@ -276,8 +267,7 @@ function proofread_dpr(){
     defendant_list=array_unique_b(defendant_list);
     if (defendant_list.length==0){
         result_t.push('🔴 未发现被告人');    
-    }
-    else {
+    } else {
         result_t.push('⚪ 被告人：'+array_sort_count_dpr(defendant_list,'cn'));
         if (klmenu_check_b('span_highlight_defendant_dpr',false)){
             high_light_dpr(defendant_list,'background-color:#afeeee;');
@@ -302,8 +292,7 @@ function proofread_dpr(){
     var male_female_list=content_str.match(/[男女]/g) || []; 
     if (male_female_list.length==0){
         result_t.push('🔴 未发现男女');    
-    }
-    else {
+    } else {
         result_t.push('⚪ 男女：'+array_sort_count_dpr(male_female_list,'cn'));
     }
     
@@ -328,8 +317,7 @@ function proofread_dpr(){
     }
     if (criminal_name_list.length==0){
         result_t.push('🔴 未发现罪名');    
-    }
-    else {
+    } else {
         result_t.push('⚪ 罪名：'+array_sort_count_dpr(criminal_name_list,'cn'));
         if (klmenu_check_b('span_highlight_criminal_name_dpr',false)){
             high_light_dpr(array_unique_b(criminal_name_list),'background-color:#66aaff;');
@@ -362,8 +350,7 @@ function proofread_dpr(){
     for (let item of character_en_list){
         if (item[1]<=2){
             character_en_rare_list.push(item[0]);
-        }
-        else {break;}
+        } else {break;}
     }
     result_t.push('⚪ 出现次数最少的非汉字字符：'+array_sort_count_dpr(character_en_rare_list,''));
     

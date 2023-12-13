@@ -19,8 +19,7 @@ function Lunar_klcalendar(objDate){
         //返回农历 y年闰月的天数
         if (sub_Lunar_klcalendar_leapMonth(y)){
             return (lunarInfo_global[y-1899]&0xf)==0xf? 30: 29;
-        }
-        else {return 0;}
+        } else {return 0;}
     }
     
     function sub_Lunar_klcalendar_leapMonth(y){
@@ -53,8 +52,7 @@ function Lunar_klcalendar(objDate){
              --i; 
              this.isLeap = true; 
              temp = sub_Lunar_klcalendar_leapDays(this.year); 
-        }
-        else {
+        } else {
             temp = sub_Lunar_klcalendar_monthDays(this.year, i);
         }
         //解除闰月
@@ -67,8 +65,7 @@ function Lunar_klcalendar(objDate){
     if (offset==0 && leap>0 && i==leap+1){
         if (this.isLeap){ 
             this.isLeap = false; 
-        }
-        else { 
+        } else { 
             this.isLeap = true; 
             --i; 
         }
@@ -84,13 +81,12 @@ function Lunar_klcalendar(objDate){
    
    if (this.isLeap){
         this.days=sub_Lunar_klcalendar_leapDays(this.year);
-    }
-    else {
+    } else {
         this.days=sub_Lunar_klcalendar_monthDays(this.year,this.month);    
     }
 }
 
-function sTerm_klcalendar(y,n) {
+function sTerm_klcalendar(y,n){
     //某年的第n个节气为几日(从0小寒起算)
     var sTermInfo = [0,21208,42467,63836,85337,107014,128867,150921,173149,195551,218072,240693,263343,285989,308563,331033,353350,375494,397447,419210,440795,462224,483532,504758];
 	var offDate = new Date((31556925974.7*(y-1900) + sTermInfo[n]*60000) + Date.UTC(1900,0,6,2,5));
@@ -218,14 +214,13 @@ function changeCld_klcalendar(odom,hide_empty_row=true){
 
     var yDisplay='';
     if (memo_mg_enabled_klcalendar_global){
-        if (csyear<=1874){}
-        else if (csyear<=1908){
+        if (csyear<=1874){
+            //
+        } else if (csyear<=1908){
             yDisplay = '光绪' + (((csyear-1874)==1)?'元':csyear-1874)+'年';
-        }
-        else if (csyear<=1911){
+        } else if (csyear<=1911){
             yDisplay = '宣统' + (((csyear-1908)==1)?'元':csyear-1908)+'年';
-        }
-        else {
+        } else {
             yDisplay = '民国' + (((csyear-1911)==1)?'元':csyear-1911)+'年';
             if (csyear>2017){
                 yDisplay = yDisplay + ' <font color=pink>新冷战' + (((csyear-2017)==1)?'元':csyear-2017)+'年</font>';
@@ -271,15 +266,13 @@ function changeCld_klcalendar(odom,hide_empty_row=true){
                             bgcolor_index_klcalendar_global=0;
                         }
                         legend_dict_klcalendar_global[legend_key]=[bgcolor,important_list[0],1];
-                    }
-                    else {
+                    } else {
                         var bgcolor=legend_dict_klcalendar_global[legend_key][0];
                         legend_dict_klcalendar_global[legend_key][2]=legend_dict_klcalendar_global[legend_key][2]+1;
                     }
                     if (memo_bg_enabled_klcalendar_global){
                         sObj.style.backgroundColor=bgcolor;
-                    }
-                    else {
+                    } else {
                         sObj.style.borderBottom='0.2rem dotted '+bgcolor;
                     }
                 }
@@ -295,11 +288,10 @@ function changeCld_klcalendar(odom,hide_empty_row=true){
             sObj.style.color = date_obj.color; //法定假日颜色
 
             if (date_obj.lDay==1){
-                lObj.innerHTML = '<b>'+(date_obj.isLeap?'闰':'') + date_obj.lMonth + '月<small>' + (date_obj.lmdays==29?'小':'大')+'</small></b>';
-            }//显示农历月
-            else {
-                lObj.innerHTML = changeCld_cDay_klcalendar(date_obj.lDay);
-            }//显示农历日
+                lObj.innerHTML = '<b>'+(date_obj.isLeap?'闰':'') + date_obj.lMonth + '月<small>' + (date_obj.lmdays==29?'小':'大')+'</small></b>'; //显示农历月
+            } else {
+                lObj.innerHTML = changeCld_cDay_klcalendar(date_obj.lDay);  //显示农历日
+            }
 
             var blstr='';
             if (date_obj.solarTerms!==''){
@@ -309,8 +301,7 @@ function changeCld_klcalendar(odom,hide_empty_row=true){
             if (blstr.length>0){
                 lObj.innerHTML = blstr;
             }
-        }
-        else { //非日期
+        } else { //非日期
             sObj.innerHTML = '&nbsp;';
             lObj.innerHTML = '&nbsp;';   
         }
@@ -320,8 +311,7 @@ function changeCld_klcalendar(odom,hide_empty_row=true){
     for (let one_tr of otrs){
         if (hide_empty_row && one_tr.innerText.trim()==''){
             one_tr.style.display='none';
-        }
-        else {
+        } else {
             one_tr.style.display='';
         }
     }
@@ -377,10 +367,9 @@ function pushBtn_klcalendar(cstype,odom){
         case 'month-':
             if (blmselect.selectedIndex>0){
                 blmselect.selectedIndex--;
-            }
-            else {
+            } else {
                 blmselect.selectedIndex=11;
-                if(blyselect.selectedIndex>0){
+                if (blyselect.selectedIndex>0){
                     blyselect.selectedIndex--;
                 }
             }
@@ -388,8 +377,7 @@ function pushBtn_klcalendar(cstype,odom){
         case 'month+':
             if (blmselect.selectedIndex<blmselect.length-1){
                 blmselect.selectedIndex++;
-            }
-            else {
+            } else {
                 blmselect.selectedIndex=0;
                 if (blyselect.selectedIndex<blyselect.length-1){
                     blyselect.selectedIndex++;
@@ -403,8 +391,7 @@ function pushBtn_klcalendar(cstype,odom){
     changeCld_klcalendar(odom);
     if (cstype=='today'){
         display_date_info_klcalendar(odom,Today.getDate().toString());
-    }
-    else {
+    } else {
         display_date_info_klcalendar(odom,'1');    
     }
 }
@@ -419,8 +406,7 @@ function day_info_klcalendar(td_number=false,odom=false){
     if (odom.tagName.toLowerCase()=='span'){
         var tagname='span';
         var query_str='span.span_td_day';    
-    }
-    else {
+    } else {
         var tagname='td';
         var query_str='td.td_one_day';    
     }
@@ -437,8 +423,7 @@ function day_info_klcalendar(td_number=false,odom=false){
     if (td_number===false){
         if (current_td_global===false){return;}
         var sObj=current_td_global;
-    }
-    else {
+    } else {
         var sObj=odom.querySelector('.span_td_day'+ td_number);
     }
     
@@ -491,8 +476,7 @@ function td_onclick_klcalendar(otd_clicked){
     
     if (otd_clicked.style.backgroundColor==''){
         otd_clicked.style.backgroundColor=bgcolor_klcalendar_global[0];
-    }
-    else {
+    } else {
         otd_clicked.style.backgroundColor='';
     }
 }
@@ -508,8 +492,7 @@ function tr_days_klcalendar(otable){
             bljg=bljg+'<td class="td_one_day" nowrap><span onmouseover="day_info_klcalendar(' + gNum +',this);" onclick="td_onclick_klcalendar(this);" class="span_td_day' + gNum +' span_td_day"';
             if (col==0){
                 bljg=bljg+' color=red';
-            }
-            else if (col==6){
+            } else if (col==6){
                 bljg=bljg+' color=#00D900';
             }
             //农历
@@ -553,8 +536,7 @@ function memo_update_klcalendar(){
                 item=item.replace(/^(\d+,\s*\d+,\s*)(.*)$/g,'$1"$2"');
             }
             item=eval('['+item+']');    
-        }
-        catch (err){
+        } catch (err){
             result_t.push('#'+raw_str);
             continue;
         }
@@ -566,8 +548,7 @@ function memo_update_klcalendar(){
         
         if (item.length>=8){
             period='(s,'+item[4]+','+item[5]+'-'+item[6]+'-'+item[7]+')';
-        }
-        else {
+        } else {
             period='';
         }
         
@@ -624,8 +605,7 @@ function menu_klcalendar(otable=false,query_str='td.td_head',cscaption='公元')
     var bljg=klmenu_b(klmenu1,cscaption,'18rem')+' ';
     if (otable){
         otable.querySelector(query_str).insertAdjacentHTML('afterbegin',bljg);
-    }
-    else {
+    } else {
         document.querySelector(query_str).insertAdjacentHTML('afterbegin',bljg);    
     }
     
@@ -649,8 +629,7 @@ function bgcolor_set_klcalendar(){
 function memo_range_set_klcalendar(is_init=false){
     if (is_init){
         var list_t=memo_range_klcalendar_global;
-    }
-    else {
+    } else {
         var oinput=document.getElementById('input_memo_range_klcalendar');
         if (!oinput){return;}
         var blstr=oinput.value.trim();
@@ -698,8 +677,7 @@ function memo_theday_klcalendar(csdate=false,is_important=false,with_hm=true){
     var result_t=[];
     if (is_important){
         var list_t=memo_list_important_global;
-    }
-    else {
+    } else {
         var list_t=memo_list_global;
     }
     
@@ -977,8 +955,7 @@ function td_xx_klcalendar(ocontainer){
     var blstr='<tr>';
     if (ismobile_b()){
         blstr=blstr+'<td class="td_xx">';
-    }
-    else {
+    } else {
         blstr=blstr+'<td colspan=2 class="td_xx">';
     }
     blstr=blstr+'</td>';
@@ -996,8 +973,7 @@ function section_klcalendar(ocontainer){
         ocontainer.style.width='100%';
         var bltype='afterend';
         blstr='<tr>'+blstr+'</tr>';
-    }
-    else {
+    } else {
         var bltype='beforeend';
     }
     ocontainer.querySelector('tr').insertAdjacentHTML(bltype,blstr);

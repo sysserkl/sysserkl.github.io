@@ -13,8 +13,7 @@ function random_chs_b(cslength,return_list=false){
     }
     if (return_list){
         return bljg;
-    }
-    else {
+    } else {
         return bljg.join('');
     }
 }
@@ -75,21 +74,19 @@ function randwrongstr_b(cslen){
     return bljg;
 }
 
-function randstr_b(cslen=8,csnumber=true,csletter=true) {
+function randstr_b(cslen=8,csnumber=true,csletter=true){
     var bljg='';
     if (csnumber==true && csletter==true){
         var list_t=characters_b('aA1').split('');
         for (let blxl=1;blxl<=cslen;blxl++){
             bljg=bljg+list_t[randint_b(0,61)];
         }
-    }
-    else if (csletter==true){
+    } else if (csletter==true){
         var list_t=characters_b('aA').split('');
         for (let blxl=1;blxl<=cslen;blxl++){
             bljg=bljg+list_t[randint_b(0,51)];
         }
-    }
-    else {
+    } else {
         for (let blxl=1;blxl<=cslen;blxl++){
             bljg=bljg+randint_b(0,9);
         }        
@@ -112,7 +109,7 @@ function en_confuse_str_b(csstr,cssegments=-1){
         var temp;
         var index;
         
-        while (bllen--) {
+        while (bllen--){
             index = Math.floor((bllen + 1) * Math.random());
             temp = shuffled[index];
             shuffled[index] = shuffled[bllen];
@@ -140,11 +137,10 @@ function en_confuse_str_b(csstr,cssegments=-1){
 
     var bljg=csstr.substring(0,lenlist[0]);
     
-    for (let blxl=0;blxl<lenlist.length;blxl++) {
+    for (let blxl=0;blxl<lenlist.length;blxl++){
         if (blxl<lenlist.length-1){
             bljg=bljg+random_strs_b()+csstr.substring(lenlist[blxl],lenlist[blxl+1]);
-        }
-        else {
+        } else {
             bljg=bljg+random_strs_b()+csstr.substring(lenlist[blxl]);
         }
     }
@@ -187,15 +183,12 @@ function en_interval_str_b(csstr){
         if (item.length==2){
             if (Math.random()>0.667){
                 bljg=bljg+item+randwrongstr_b(1);
-            }
-            else if (Math.random()>0.5){
+            } else if (Math.random()>0.5){
                 bljg=bljg+item+randstr_b(1);
-            }
-            else {
+            } else {
                 bljg=bljg+item+random_chs_b(1);
             }
-        }
-        else {
+        } else {
             bljg=bljg+item;
         }
     }
@@ -214,8 +207,7 @@ function de_interval_str_b(csstr){
     for (let item of list_t){
         if (item.length==3){
             bljg=bljg+item.substring(0,2);
-        }
-        else {
+        } else {
             bljg=bljg+item;
         }
     }
@@ -234,21 +226,17 @@ function en_double_str_b(csstr,split_lines=false){
             var blstr=list_t[blxl];
             if (!blstr.includes("'")){
                 blstr="'"+blstr+"',";
-            }
-            else if (!blstr.includes('"')){
+            } else if (!blstr.includes('"')){
                 blstr='"'+blstr+'",';
-            }
-            else if (!blstr.includes("`")){
+            } else if (!blstr.includes("`")){
                 blstr="`"+blstr+"`,";
-            }
-            else {
+            } else {
                 blstr='`'+blstr.replace(new RegExp('`','g'),'`+"`"+`')+'`,';
             }
             list_t[blxl]=blstr;
         }    
         return list_t;
-    }
-    else {
+    } else {
         return result_value;
     }
 }
@@ -281,8 +269,7 @@ function split_words_b(csstr,cscombine=false){
         console.log('未载入：jieba_pb_dict_data.js');
         if (cscombine){
             return [];
-        }
-        else {
+        } else {
             return [[],[]];
         }
     }
@@ -341,8 +328,7 @@ function split_words_b(csstr,cscombine=false){
     
     if (cscombine){
         return array_union_b(list_en,list_t);
-    }
-    else {
+    } else {
         return [list_en,list_t];
     }
 }
@@ -388,7 +374,7 @@ function ChineseToNumber_b(chnStr){
     var secUnit = false;
     var str = chnStr.split('');
 
-    try{
+    try {
         for (let blxl = 0; blxl < str.length; blxl++){
             var num = chnNumChar[str[blxl]];
                 if (typeof num !== 'undefined'){
@@ -396,24 +382,21 @@ function ChineseToNumber_b(chnStr){
                     if (blxl === str.length - 1){
                         section += number;
                     }
-            }
-            else {
+            } else {
                 var unit = chnNameValue[str[blxl]].value;
                 secUnit = chnNameValue[str[blxl]].secUnit;
                 if (secUnit){
                     section = (section + number) * unit;
                     rtn += section;
                     section = 0;
-                }
-                else {
+                } else {
                     section += (number * unit);
                 }
                 number = 0;
             }
         }
         return rtn + section;
-    }
-    catch (error){
+    } catch (error){
         return false;
     }
 }
@@ -431,8 +414,7 @@ function NumberToChinese_b(csnum){//只支持大于等于0的整数 - 保留注�
                     zero = true;
                     chnStr = chnNumChar[v] + chnStr;
                 }
-            }
-            else {
+            } else {
                 zero = false;
                 strIns = chnNumChar[v];
                 strIns += chnUnitChar[unitPos];
@@ -507,13 +489,13 @@ function letters52_style_transform_b(csstr,csno=0,csarray=[]){
     if (csno>=0){
         if (csarray.length>0){
             list_t=csarray;
-        }
-        else {
+        } else {
             var list_t=letters52_style_list_b();    
             if (csno<list_t.length){
                 list_t=list_t[csno];
+            } else {
+                return csstr;
             }
-            else {return csstr;}
         }
         
         for (let blxl=65;blxl<91;blxl++){
@@ -530,8 +512,7 @@ function letters52_style_transform_b(csstr,csno=0,csarray=[]){
                 csstr=csstr.replace(new RegExp(blchar,'g'),list_t[blxl+52]);            
             }        
         }
-    }
-    else if (csno==-1){    //decode - 保留注释
+    } else if (csno==-1){    //decode - 保留注释
         var list_t=letters52_style_list_b();    
         for (let arow of list_t){
             for (let blxl=0;blxl<26;blxl++){
@@ -583,8 +564,7 @@ function braille_transform_b(csstr,csencode=true){
             csstr=csstr.replace(new RegExp(key,'g'),blvalue);
             csstr=csstr.replace(new RegExp(key.toUpperCase(),'g'),blvalue);
         }
-    }
-    else {
+    } else {
         for (let key in list_t){
             var blvalue=list_t[key];
             csstr=csstr.replace(new RegExp(blvalue,'g'),key);
@@ -622,8 +602,7 @@ function morse_transform_b(csstr,csencode=true){
                 translation.push(list_t.join(' '));
             }
             return translation.join(' / ');
-        }
-        else {
+        } else {
             var morse_dict=morse_list_b();
             var translation = [];
             var words = arow.split(' / ');
@@ -658,8 +637,7 @@ function morse_transform_b(csstr,csencode=true){
 function invisible_character_list_b(cstype='',restrict=false){
     if (restrict){
         var list_t=['034F','180E','200B','200D'];
-    }
-    else {
+    } else {
         var list_t=['00AD','034F','17B4','17B5','180E','200B','200C','200D','200E','2060','2061','2062','2063','2064','206A','206B','206C','206D','206E','206F','FEFF','1D173','1D174','1D175','1D176','1D177','1D178','1D179','1D17A'];    //需要测试PC/Mobile 浏览器、微信群、朋友圈、微博效果 - 保留注释
     }
     switch (cstype){
@@ -780,8 +758,7 @@ function s2t_t2s_search_b(csstr){
     
     if (Array.isArray(csstr)){
         var list_t=csstr;
-    }
-    else {
+    } else {
         var list_t=new Set(csstr.match(/[^\x00-\xff]/g) || []);
     }
     
@@ -813,8 +790,7 @@ function decode_quoted_printable_b(data){
     // decode escape sequences
     try {
         return decodeURIComponent(escape(data));
-    } 
-    catch (dummy){
+    } catch (dummy){
         return null;
     }
 };

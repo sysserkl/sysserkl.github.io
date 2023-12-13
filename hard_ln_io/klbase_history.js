@@ -8,8 +8,7 @@ function big_day_week_b(csdate){
         bldate.setTime(bldate.getTime()-7*24*60*60*1000);
         if (bldate.getMonth()==themonth){
             blxl=blxl+1;
-        }
-        else {break;}
+        } else {break;}
     }
     
     var blxl2=1;
@@ -18,8 +17,7 @@ function big_day_week_b(csdate){
         bldate.setTime(bldate.getTime()+7*24*60*60*1000);
         if (bldate.getMonth()==themonth){
             blxl2=blxl2+1;
-        }
-        else {break;}
+        } else {break;}
     }
 
     //节日名称 月份 星期0-6 第几个星期0-6 倒数第几个星期0-6
@@ -45,7 +43,7 @@ function big_day_week_b(csdate){
     return [themonth+1,theweek,blxl,blxl2,bljg];
 }
 
-function big_day_imgs_b(csdate=false,imgpath='') {
+function big_day_imgs_b(csdate=false,imgpath=''){
     var bigday_imgpath=location.origin+imgpath;
 
     if (csdate==false){

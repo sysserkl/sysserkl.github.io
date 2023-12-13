@@ -82,8 +82,7 @@ function date2str_b(sep='-',theday=false){
     }
     if (sep.length==3){
         return theday.getFullYear()+sep.substring(0,1)+('0'+(theday.getMonth()+1)).slice(-2)+sep.substring(1,2)+('0'+theday.getDate()).slice(-2)+sep.substring(2,);    
-    }
-    else {
+    } else {
         return theday.getFullYear()+sep+('0'+(theday.getMonth()+1)).slice(-2)+sep+('0'+theday.getDate()).slice(-2);
     }
 }
@@ -105,8 +104,7 @@ function day_2_week_b(csstr='',cstype=''){
     if (typeof csstr == 'number'){
         var blweek=parseInt(csstr);
         if (blweek<0 || blweek>6){return '';}
-    }
-    else {
+    } else {
         var theday=default_date_b(csstr);
         if (theday==false){return '';}
         var blweek=theday.getDay();
@@ -200,8 +198,7 @@ function day_2_week_range_b(csstr,cstype='',delimiter='-',sunday_is_first_day=fa
     var theweek=theday.getDay();
     if (sunday_is_first_day){
         theday.setTime(theday.getTime()-theweek*24*60*60*1000);        
-    }
-    else {
+    } else {
         if (theweek==0){
             theweek=7;
         }
@@ -210,16 +207,14 @@ function day_2_week_range_b(csstr,cstype='',delimiter='-',sunday_is_first_day=fa
     
     if (cstype=='pre'){
         theday.setTime(theday.getTime()-7*24*60*60*1000);
-    }
-    else if (cstype=='next'){
+    } else if (cstype=='next'){
         theday.setTime(theday.getTime()+7*24*60*60*1000);
     }
     var theday2 = new Date(theday.getTime());
     theday2.setTime(theday.getTime()+7*24*60*60*1000-1);    //差1毫秒 - 保留注释
     if (delimiter===false){
         return [theday,theday2];    
-    }
-    else {
+    } else {
         return [date2str_b(delimiter,theday),date2str_b(delimiter,theday2)];
     }
 }
@@ -259,8 +254,7 @@ function preweekday_b(csstr='',weekno=0){
     now_weekday=(now_weekday==0?7:now_weekday);
     if (weekno<now_weekday){
         theday.setTime(theday.getTime()-(now_weekday-weekno)*24*60*60*1000);
-    }
-    else {
+    } else {
         theday.setTime(theday.getTime()-(now_weekday+7-weekno)*24*60*60*1000);
     }
     return theday;
@@ -289,8 +283,7 @@ function previous_year_b(csstr,csyears=1,return_str=true,sep='-'){
     
     if (return_str){
         return date2str_b(sep,bljg);
-    }
-    else {
+    } else {
         return bljg;
     }
 }
@@ -317,8 +310,7 @@ function previous_day_b(csstr='',csdays=1,return_str=true,sep='-'){
     theday.setTime(theday.getTime()-csdays*24*60*60*1000);
     if (return_str){
         return date2str_b(sep,theday);
-    }
-    else {
+    } else {
         return theday;
     }
 }
@@ -329,8 +321,7 @@ function previous_days_b(csstr='',csdays=1,return_str=true,sep='-',interval=1){
         
         if (return_str){
             result_t.push(date2str_b(sep,theday));
-        }
-        else {
+        } else {
             var theday2 = new Date(theday.getTime()); //deepcopy - 保留注释
             result_t.push(theday2);
         }    
@@ -344,8 +335,7 @@ function previous_days_b(csstr='',csdays=1,return_str=true,sep='-',interval=1){
         for (let blxl=0;blxl<csdays;blxl++){
             sub_previous_days_b_one_date(1*interval);
         }
-    }
-    else {
+    } else {
         for (let blxl=0;blxl>csdays;blxl--){
             sub_previous_days_b_one_date(-1*interval);
         }    
@@ -356,8 +346,7 @@ function previous_days_b(csstr='',csdays=1,return_str=true,sep='-',interval=1){
 function default_date_b(csstr='',ignore_time=false){
     if (csstr==''){
         var theday=new Date();
-    }
-    else {    
+    } else {    
         var theday=validdate_b(csstr);  //已经deepcopy - 保留注释
     }
     if (ignore_time){
@@ -410,8 +399,7 @@ function year365_b(csyear=0, returndate=false,month_list=[]){
         for (let blday=1;blday<=list_m[blxl];blday++){
             if (returndate){
                 blresult.push(new Date(csyear+'-'+(blxl+1)+'-'+blday));
-            }
-            else {
+            } else {
                 blresult.push(csyear+'-'+('00'+(blxl+1)).slice(-2,)+'-'+('00'+blday).slice(-2,));
             }
         }
@@ -427,31 +415,25 @@ function validdate_b(datestr,first_day_of_month=false,ismonth_day=false){
     
     if (datestr.length==8 && !datestr.includes('-')){   //年月日 - 保留注释
 		datestr=datestr.slice(0,4)+'-'+datestr.slice(4,6)+'-'+datestr.slice(-2,);
-	}
-    else if (datestr.length==6 && !datestr.includes('-')){  //年月 - 保留注释
+	} else if (datestr.length==6 && !datestr.includes('-')){  //年月 - 保留注释
         var blyear=datestr.slice(0,4);
         var blmonth=datestr.slice(4,6);
         if (first_day_of_month){
             datestr=blyear+'-'+blmonth+'-01';
-        }
-        else {
+        } else {
             datestr=blyear+'-'+blmonth+'-'+month_day_b(parseInt(blmonth),parseInt(blyear));
         }
-    }
-    else if (datestr.length==7){    //年-月 - 保留注释
+    } else if (datestr.length==7){    //年-月 - 保留注释
         var blyear=datestr.slice(0,4);
         var blmonth=datestr.slice(-2,);
         if (first_day_of_month){
             datestr=blyear+'-'+blmonth+'-01';
-        }
-        else {
+        } else {
             datestr=blyear+'-'+blmonth+'-'+month_day_b(parseInt(blmonth),parseInt(blyear));
         }
-    }
-    else if (datestr.match(/^\d{4}年\d{1,2}月\d{1,2}日$/)){
+    } else if (datestr.match(/^\d{4}年\d{1,2}月\d{1,2}日$/)){
         datestr=datestr.replace(/[年月]/g,'-').slice(0,-1);
-    }
-    else if (ismonth_day){
+    } else if (ismonth_day){
         var blyear=new Date().getFullYear();
         if (datestr.length==4 || datestr.length==5){    //月日，月-日 - 保留注释
             var blmonth=datestr.slice(0,2);
@@ -465,12 +447,10 @@ function validdate_b(datestr,first_day_of_month=false,ismonth_day=false){
 	if ( Object.prototype.toString.call(datetmp) === '[object Date]' ){
 		if ( isNaN( datetmp.getTime() ) ){
             return false;
-        }
-		else {
+        } else {
             return datetmp;
         }
-	}
-	else {
+	} else {
         return false;
     }
 }
@@ -507,15 +487,13 @@ function isLeapYear_b(csyear=false,prev_or_next=0,return_number=false){
     if (csyear % 4==0 && csyear % 100!=0 || csyear % 400==0){
         if (return_number){
             return 366;
-        }
-        else {
+        } else {
             return true;
         }
     }
     if (return_number){
         return 365;
-    }
-    else {
+    } else {
         return false;
     }
 }
@@ -603,8 +581,7 @@ function time_2_emoji_b(cstime=false){
     var blh='';
     if (Object.prototype.toString.call(cstime) === '[object Date]' && !isNaN(cstime)){
         blh=cstime.getHours().toString();
-    }
-    else {
+    } else {
         //形如 2021-04-28 12:21:19 - 保留注释
         var list_t=cstime.toString().trim().split(' ').slice(-1)[0].split(':');//分割年月日与时间，再提取小时 - 保留注释
         if (list_t.length==0){

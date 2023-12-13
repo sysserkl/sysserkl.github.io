@@ -78,8 +78,7 @@ function symbol_manage_lt_plans(cstype='set'){
     var list_t=blstr.split(',');
     if (list_t.length==2){
         var old_symbol=blstr;
-    }
-    else {
+    } else {
         var old_symbol=default_symbol;
     }
     switch (cstype){
@@ -90,8 +89,7 @@ function symbol_manage_lt_plans(cstype='set'){
             var new_symbol=(prompt('设置符号，并以英文逗号间隔（输入 默认，恢复默认设置）：',old_symbol) || '').replace(/\s/g,'').split(',');
             if (new_symbol[0]=='默认'){
                 new_symbol=default_symbol.split(',');
-            }
-            else if (new_symbol.length!==2 || new_symbol == old_symbol){return;}
+            } else if (new_symbol.length!==2 || new_symbol == old_symbol){return;}
             ospan.innerText='Symbol: '+new_symbol.join(',');
             localStorage.setItem('symbol_long_term_plans',new_symbol.join(','));
             break;
@@ -143,10 +141,10 @@ function local_storage_2_array_lt_plans(do_join_sort=false){
 
 function sort_lt_plans(){
     if (ltp_sort_type_global==''){return;}
-    else if (ltp_sort_type_global.includes('-1')){
+    
+    if (ltp_sort_type_global.includes('-1')){
         long_term_plans_global.sort(function (a,b){return percent_lt_plans(a)<percent_lt_plans(b);});    
-    }
-    else {
+    } else {
         var blno=parseInt((ltp_sort_type_global+'0').substring(0,1));
         if (isNaN(blno)){
             blno=0;
@@ -186,8 +184,7 @@ function backup_lt_plans(){
     var odiv=document.getElementById('div_backup');
     if (odiv){
         odiv.outerHTML=bljg;
-    }
-    else {
+    } else {
         document.getElementById('divhtml').insertAdjacentHTML('afterbegin',bljg);
     }
 }
@@ -235,8 +232,7 @@ function draw_lt_plans(csno,do_jump=false){
         var days=10;
         if (show_type=='simple' && dot_list.length>=days*2+days){
             return sub_draw_lt_plans_dots(dot_list.slice(0,days))+'<span style="color:'+cscolor+';" title="'+dot_list[days][3]+'—'+dot_list.slice(-1*days-1,-1*days)[0][3]+'">…'+'('+(dot_list.length-days*2)+'天)…</span>'+sub_draw_lt_plans_dots(dot_list.slice(-1*days,));
-        }
-        else {
+        } else {
             return sub_draw_lt_plans_dots(dot_list);
         }    
     }
@@ -290,8 +286,7 @@ function draw_lt_plans(csno,do_jump=false){
                 bljg=bljg+sub_draw_lt_plans_section(dot_list,'green');
                 dot_list=[];
                 bljg=bljg+sub_draw_lt_plans_dots([[blxl,'red',symbol_list[1],day_str]]);
-            }
-            else {
+            } else {
                 dot_list.push([blxl,'green',symbol_list[1],day_str]);
             }
             start_day.setTime(start_day.getTime()+24*60*60*1000);
@@ -305,8 +300,7 @@ function draw_lt_plans(csno,do_jump=false){
                 bljg=bljg+sub_draw_lt_plans_section(dot_list,'grey');
                 dot_list=[];        
                 bljg=bljg+sub_draw_lt_plans_dots([[blxl,'red',symbol_list[1],day_str]]);
-            }
-            else {
+            } else {
                 dot_list.push([blxl,'grey',symbol_list[0],day_str]);
             }
             start_day.setTime(start_day.getTime()+24*60*60*1000);
@@ -317,8 +311,7 @@ function draw_lt_plans(csno,do_jump=false){
     
     if (show_type=='percent'){
         bljg=bljg+'<span class="span_box" onclick="change_lt_plans(\''+csitem[0]+'\',6);">'+csitem[6]+' '+(blpercent*100).toFixed(2)+'%</span>';
-    }
-    else {
+    } else {
         bljg=bljg+'<span class="span_box" onclick="change_lt_plans(\''+csitem[0]+'\',4);">';
         bljg=bljg+(is_normal_or_simple?'<small>'+csitem[4]+'</small>':csitem[4]);
         bljg=bljg+'</span>';
@@ -335,8 +328,7 @@ function draw_lt_plans(csno,do_jump=false){
         if (do_jump){
             otable.scrollIntoView();
         }
-    }
-    else {
+    } else {
         document.getElementById('divhtml').insertAdjacentHTML('beforeend','<table id="table_'+csitem[0]+'">'+bljg+'</table>');
         if (do_jump){
             var otable=document.getElementById('table_'+csitem[0]);
@@ -378,8 +370,7 @@ function init_lt_plans(cskey='',reload=true){
                 draw_lt_plans(blxl);
             }
         }
-    }
-    else {
+    } else {
         for (let blxl=0;blxl<long_term_plans_global.length;blxl++){
             draw_lt_plans(blxl);
         }
@@ -400,8 +391,7 @@ function change_lt_plans(csid,csnumber){
             }
             if (csnumber==1){
                 var currentvalue=(prompt('输入'+list_t[1]+'，若删除则输入【删除】或【delete】',item[csnumber]) || '').trim();
-            }
-            else {
+            } else {
                 var currentvalue=(prompt('输入'+list_t[csnumber],item[csnumber]) || '').trim();
             }
             if (currentvalue!==''){
@@ -411,8 +401,7 @@ function change_lt_plans(csid,csnumber){
                         alert('初值终值不能相同');
                         return;                        
                     }
-                }
-                else if ([2,4].includes(csnumber)){
+                } else if ([2,4].includes(csnumber)){
                     currentvalue=validdate_b(currentvalue);
                     if (currentvalue===false){
                         alert('日期格式错误');
@@ -431,8 +420,7 @@ function change_lt_plans(csid,csnumber){
                         array_2_local_storage_lt_plans();
                         init_lt_plans();                        
                     }
-                }
-                else {
+                } else {
                     if (currentvalue=='---'){
                         alert('禁止使用---');
                         return;
@@ -459,8 +447,7 @@ function blank_lt_plans(){
     while (true){
         if (id_list.includes(blid+blxl)){
             blxl=blxl+1;
-        }
-        else {break;}
+        } else {break;}
     }
     var list_t=[blid+blxl,'空白计划'+blxl,date2str_b(),0,next_day_b('',10),100,0];
     long_term_plans_global.push(list_t);

@@ -80,8 +80,7 @@ function menu_todolist(){
     for (let item of ['all','done','undone']){
         if (show_type==item){
             blselect.push('<option selected>'+item+'</option>');
-        }
-        else {
+        } else {
             blselect.push('<option>'+item+'</option>');
         }
     }
@@ -119,8 +118,7 @@ function show_todolist(save_to_local_storage=false){
             //<span class="span_category"> 的 innerHTML 只能是 分类名 - 保留注释
             bljg=bljg+category_klplan_b(category);
             category_list.push(category);
-        }
-        else if (category!==item[1]){
+        } else if (category!==item[1]){
             bljg=bljg+'</ol></div>';
             category=item[1];
             bljg=bljg+category_klplan_b(category);
@@ -130,9 +128,7 @@ function show_todolist(save_to_local_storage=false){
         var blfound=false;
         var done_date='<span id="span_'+item[0]+'" class="span_date" style="color:'+scheme_global["shadow"]+';"></span>';
         for (let arow of csdone_list){
-            if (arow.split(',')[1]!==item[0]){
-                continue;
-            }
+            if (arow.split(',')[1]!==item[0]){continue;}
 
             done_date=done_date_klplan_b(arow,today,item[0]);
             blfound=true;
@@ -141,8 +137,7 @@ function show_todolist(save_to_local_storage=false){
         
         if (blfound && show_done || !blfound && show_undone){
             var bldisplay='';
-        }
-        else {
+        } else {
             var bldisplay='none';
         }
         bljg=bljg+'<li style="display:'+bldisplay+';">';

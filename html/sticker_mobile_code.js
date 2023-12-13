@@ -2,15 +2,13 @@ function buttons_show_klsticker_m(){
     var ob1=document.getElementById('td_title_buttons');
     if (ob1.style.display=='none'){
         ob1.style.display='';
-    }
-    else {
+    } else {
         ob1.style.display='none';
     }
     var ob2=document.getElementById('div_content_buttons');
     if (ob2.style.display=='none'){
         ob2.style.display='';
-    }
-    else {
+    } else {
         ob2.style.display='none';
     }
 }
@@ -29,8 +27,7 @@ function plain_text_klsticker_m(){
         for (let one_obj of blos){
             if (one_obj.innerHTML==''){
                 one_obj.outerHTML='';
-            }
-            else {
+            } else {
                 one_obj.outerHTML='<p>'+one_obj.innerText+'</p>';
             }
         }
@@ -82,8 +79,7 @@ function vertical_klsticker_m(dochange=true){
         var ospan=document.querySelector('span.span_line_sticker_m');
         if (ospan){
             ospan.outerHTML=ospan.innerHTML;
-        }
-        else {break;}
+        } else {break;}
     }
     
     var otable=document.getElementById('table_article');
@@ -108,8 +104,7 @@ function vertical_klsticker_m(dochange=true){
         otd_title.style.paddingLeft='0.5rem';
         otd_title.style.marginLeft='0.5rem'; 
         otd_title.style.textAlign='';
-    }
-    else {
+    } else {
         otd_content.setAttribute('class','horizontal');
         for (let item of blos){
             item.style.margin='';
@@ -148,26 +143,22 @@ function color_font_select_klsticker_m(cstype){
                 var blid=item.getAttribute('id').split('_').slice(-1)[0];
                 if (blid==current_scheme_sticker_m_global[3]){
                     item.style.borderColor='red';
-                }
-                else {
+                } else {
                     item.style.borderColor='white';
                 }
             }
-        }
-        else if (cstype=='webfonts' && webfont_id_global!==''){
+        } else if (cstype=='webfonts' && webfont_id_global!==''){
             var ocolors=odiv.querySelectorAll('img.img_webfont_box');
             for (let item of ocolors){
                 var blid=item.getAttribute('src');
                 if (blid.includes('_'+webfont_id_global+'.jpeg')){
                     item.style.borderColor='red';
-                }
-                else {
+                } else {
                     item.style.borderColor='grey';
                 }
             }
         }        
-    }
-    else {
+    } else {
         odiv.style.display='none';
         for (let item of list_t){
             document.getElementById(item).style.display='';
@@ -199,7 +190,7 @@ function webfont_box_klsticker_m(){
     document.getElementById('div_webfonts').innerHTML=div_list.join('\n');
 }
 
-function webfont_set_klsticker_m() {
+function webfont_set_klsticker_m(){
     $youziku.load('#table_article', webfont_id_global,'');
     $youziku.draw(0);
     $youziku.submit('#table_article');
@@ -221,11 +212,9 @@ function font_size_klsticker_m(csid,csvalue=''){
     var blfont=parseFloat(blo.style.fontSize.split('rem')[0].trim());
     if (csvalue=='+'){
         blfont=blfont+0.1;
-    }
-    else if (csvalue=='-'){
+    } else if (csvalue=='-'){
         blfont=Math.max(0.1,blfont-0.1);
-    }
-    else {
+    } else {
         if (csvalue==''){
             csvalue=(prompt('输入字号值',blfont) || '').trim();
         }
@@ -243,8 +232,7 @@ function html_source_klsticker_m(ospan){
     if (blcaption=='View Source'){
         otd.innerText=otd.innerHTML;
         ospan.innerText='Source2HTML';
-    }
-    else if (blcaption=='Source2HTML'){
+    } else if (blcaption=='Source2HTML'){
         otd.innerHTML=otd.innerText;
         ospan.innerText='View Source';
     }
@@ -257,8 +245,7 @@ function td_center_klsticker_m(){
     if (blstatus=='middle'){
         otd.setAttribute('align','');
         otd.setAttribute('valign','top');
-    }
-    else {
+    } else {
         otd.setAttribute('align','center');
         otd.setAttribute('valign','middle');
     }
@@ -273,8 +260,7 @@ function save_load_klsticker_m(cstype){
         if (blstr.substring(0,4).toLowerCase()=='http' || blstr==odiv.innerHTML.trim()){
             localStorage.setItem('klsticker_m_qr',blstr);
         }
-    }
-    else if (cstype=='load' && confirm("是否导入？")){
+    } else if (cstype=='load' && confirm("是否导入？")){
         document.getElementById('td_title').innerText=local_storage_get_b('klsticker_input_title');
         document.getElementById('td_content').innerHTML=local_storage_get_b('klsticker_textarea_full');
         document.getElementById('div_qr').innerText=local_storage_get_b('klsticker_m_qr');
@@ -350,8 +336,7 @@ function qr_trigger_klsticker_m(odiv){
     if (blstr=='add qr'){
         qr_generate_klsticker_m();
         odiv.innerText='remove qr';
-    }
-    else {
+    } else {
         qr_remove_klsticker_m();
         odiv.innerText='add qr';
     }

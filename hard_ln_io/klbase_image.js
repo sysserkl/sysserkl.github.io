@@ -348,11 +348,9 @@ function img_split_list_get_b(oimg,split_width=0,split_height=0,only_2=false,csm
     var error='';
     if (oimg.width<split_width || oimg.height<split_height){
         error='尺寸超出';
-    }
-    else if (oimg.width==split_width && oimg.height==split_height){
+    } else if (oimg.width==split_width && oimg.height==split_height){
         error='尺寸一致';
-    }
-    else if (only_2===false && (oimg.width/split_width>csmax || oimg.height/split_height>csmax)){
+    } else if (only_2===false && (oimg.width/split_width>csmax || oimg.height/split_height>csmax)){
         error='超出'+csmax+'份';
     }
 

@@ -30,8 +30,7 @@ function php_remove_klindex(cskey,is_local){
         if (location_host_b()!==location_host_b(true)){
             if (is_local){
                 divlist.push(['javascript:components_klindex(false,false);','local','⛺','0']);
-            }
-            else {
+            } else {
                 divlist.push(['javascript:components_klindex(false,true);','remote','☁','0']);        
             }
             divlist.push(['javascript:kl_remote_host_address_b();','remote ip address','⛓','1']);
@@ -119,19 +118,16 @@ function args_klindex(){
         for (let item of cskeys){
             if (item.substring(0,7)=='enable='){
                 enable_check_klindex(item.substring(7,).trim());
-            }
-            else if (item=='disable'){
+            } else if (item=='disable'){
                 if (confirm('是否 disable klapps？')){
                     localStorage.removeItem('enable_klapps');
                     localStorage.setItem('reactive_klapps_date',next_day_b('',10)); //停止10天 - 保留注释
                 }
-            }
-            else if (item.substring(0,2)=='s='){
+            } else if (item.substring(0,2)=='s='){
                 components_klindex(item.substring(2,).trim());
             }
         }
-    }
-    else {
+    } else {
         components_klindex();
     }
 }

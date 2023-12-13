@@ -97,8 +97,7 @@ function args_websites_pwa(){
                 break;
             }
         }
-    }
-    else {
+    } else {
         search_websites_pwa();
     }
 }
@@ -110,8 +109,7 @@ function localstorage_get_websites_pwa(return_list){
 function localstorage_set_websites_pwa(cslist){
     if (typeof cslist == 'string'){
         localStorage.setItem('websites_list_pwa',cslist);    
-    }
-    else {
+    } else {
         localStorage.setItem('websites_list_pwa',cslist.join('\n'));
     }
 }
@@ -256,8 +254,7 @@ function update_websites_pwa(){
             console.log(hostname,bltail);
             if (hostname!=='' && !name_set.has(hostname)){
                 site_list[blxl][2]=hostname;
-            }
-            else {
+            } else {
                 site_list[blxl][2]=bltail;
             }
         }
@@ -280,8 +277,7 @@ function array_2_local_storage_websites_pwa(csarray,cskey='',return_max=-1){
         csarray.sort(function (a,b){return zh_sort_b(a,b,false);});
         csarray=csarray.slice(-2000,);
         localstorage_set_websites_pwa(csarray);
-    }
-    else if (return_max>0) {
+    } else if (return_max>0){
         csarray=csarray.slice(0,return_max);
     }
     return csarray.length;
@@ -291,8 +287,7 @@ function alert_websites_pwa(cslist,cscaption){
     var bllen=cslist.length;
     if (bllen>5){
         alert('忽略了'+bllen+'个'+cscaption+'：\n\n'+cslist.slice(0,5).join('\n')+'\n...');
-    }
-    else if (bllen>0){
+    } else if (bllen>0){
         alert('忽略了'+bllen+'个'+cscaption+'：\n\n'+cslist.join('\n'));        
     }
 }
@@ -318,8 +313,7 @@ function search_websites_pwa(cskey='',is_random=false,return_max=-1){
                 }
             }
         } 
-    }
-    else if (cskey!==''){
+    } else if (cskey!==''){
         if (cskey.match(/^\d{4}\-\d{2}\-\d{2}$/)!==null){
             var theday=validdate_b(cskey);
             if (theday!==false){
@@ -368,8 +362,7 @@ function search_websites_pwa(cskey='',is_random=false,return_max=-1){
     
     if (is_random){
         list_t.sort(randomsort_b);
-    }
-    else {
+    } else {
         list_t.sort(function (a,b){return zh_sort_b(a,b,false,2);});
         list_t.sort(function (a,b){return zh_sort_b(a,b,false,0);});
     }
@@ -429,8 +422,7 @@ function organize_websites_pwa(){
             }
         }
         search_websites_pwa();
-    }
-    else {
+    } else {
         for (let item of ospans){
             item.insertAdjacentHTML('beforeend',' <span class="span_box" onclick="delete_websites_pwa(this.parentNode);">☒</span>');
         }
@@ -461,8 +453,7 @@ function delete_websites_pwa(ospan){
 function qr_html_websites_pwa(ahref=''){
     if (qr_html_websites_b('divhtml','a.a_oblong_box',ahref)){
         qr_generate_websites_pwa(klmenu_check_b('span_veil_web',false));
-    }
-    else {  //切换 - 保留注释
+    } else {  //切换 - 保留注释
         search_websites_pwa();
     }
 }
@@ -479,8 +470,7 @@ function weixin_select_pwa(){
         if (!blhref){continue;}
         if (blhref.includes('/weixin.qq.com/')){
             wx_list.push([blhref,item.innerText]);
-        }
-        else {
+        } else {
             other_list.push(item.outerHTML);
         }
     }

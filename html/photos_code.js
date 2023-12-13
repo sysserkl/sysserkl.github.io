@@ -8,8 +8,7 @@ function export_array_klphotos(){
             }
             str_t=str_t+'],';
             list_t.push(str_t);
-        }
-        else {
+        } else {
             list_t.push('"'+specialstr92_b(item)+'",');
         }
     }
@@ -173,8 +172,7 @@ function getExif_klphotos(is_all=false){
 		var model = EXIF.getTag(this, 'Model');
 		if (model){
 			document.getElementById('span_exif').innerHTML=model;
-		}
-        else {
+		} else {
             document.getElementById('span_exif').innerHTML='';
         }
 	});
@@ -191,8 +189,7 @@ function import_img_item_klphotos(blitem,img_xl_tmp,csimport=true){
 			}
 			img_xl_tmp=img_xl_tmp+1;
 		}
-	}
-	else if (typeof blitem == 'string'){
+	} else if (typeof blitem == 'string'){
 		if (csimport){
             blitem=blitem.split(' /// ')[0];
             if (blitem.match(/\.(jpg|jpeg|png|bmp|gif|webp)$/i)){
@@ -226,8 +223,7 @@ function showhide_klphotos(){
 	var odiv=document.getElementById('div_show_hide');
 	if (odiv.style.display=='none'){
         odiv.style.display='block';
-    }
-	else {
+    } else {
         odiv.style.display='none';
     }
 }
@@ -264,8 +260,7 @@ function imgsearch_klphotos(csword,csreg){
 	for (let item of photo_source_global){
 		if (typeof item == 'string'){
             var bltmp = item;
-        }
-		else{
+        } else {
             var bltmp = item[0];
         }
 
@@ -274,8 +269,7 @@ function imgsearch_klphotos(csword,csreg){
 
 		if (blfound){
 			img_xl_tmp=import_img_item_klphotos(item,img_xl_tmp);
-		}
-		else{
+		} else {
 			img_xl_tmp=import_img_item_klphotos(item,img_xl_tmp,false);
 		}
 	}
@@ -298,8 +292,7 @@ function sort_date_count_klphotos(cstype){
     }
     if (cstype=='date'){
         result_t.sort();
-    }
-    else {
+    } else {
         result_t.sort(function (a,b){return a[1]>b[1];});
     }
     var bljg='';
@@ -318,16 +311,14 @@ function month_day_line_klphotos(){
         if (bljg.length>=8){
             if (hasyear){
                 bljg=bljg.substring(0,8);
-            }
-            else {
+            } else {
                 bljg=bljg.substring(4,8);
             }
             if (isNaN(bljg)){
                 return '';
             }
             return bljg;
-        }
-        else {
+        } else {
             return '';
         }
     }
@@ -357,8 +348,7 @@ function month_day_line_klphotos(){
     
     if (year1==year2){
         var line_t=[year1];
-    }
-    else {
+    } else {
         var line_t=[year2+'-'+year1];
     }
     var blday_no=1;
@@ -369,8 +359,7 @@ function month_day_line_klphotos(){
             if (mdlist['d'+strmd]==undefined){
                 bljg=bljg+'<p>'+blday_no+'. <span class="span_date_count_photo">'+strmd.substring(0,2)+'月'+strmd.slice(-2)+'日: 0</span>\n</p>';
                 line_t.push([new Date('2000-'+strmd.substring(0,2)+'-'+strmd.slice(-2)),0]);
-            }
-            else {
+            } else {
                 bljg=bljg+'<p>'+blday_no+'. <span class="span_date_count_photo">'+strmd.substring(0,2)+'月'+strmd.slice(-2)+'日: '+mdlist['d'+strmd][1]+'</span>\n</p>';
                 line_t.push([new Date('2000-'+strmd.substring(0,2)+'-'+strmd.slice(-2)),mdlist['d'+strmd][1]]);
             }
@@ -399,8 +388,7 @@ function month_day_line_klphotos(){
                 var strmd=blxl+('0'+(blm+1)).slice(-2)+('0'+blx).slice(-2);
                 if (mdlist2['d'+strmd]==undefined){
                     list_t.push([new Date('2000-'+strmd.substring(4,6)+'-'+strmd.slice(-2)),0]);
-                }
-                else {
+                } else {
                     list_t.push([new Date('2000-'+strmd.substring(4,6)+'-'+strmd.slice(-2)),mdlist2['d'+strmd][1]]);
                     empty_t=false;
                 }
@@ -502,8 +490,7 @@ function thumbnail_klphotos(csno=0){
 		bljg=bljg+'<img src="'+imgpath_global+photodata_global[blxl][0]+'" class="img_thumb"'+filter_str;
 		if (photodata_global[blxl][1]==''){
             bljg=bljg+' title="'+photodata_global[blxl][0]+'"';
-        }
-		else{
+        } else {
             bljg=bljg+' title="'+photodata_global[blxl][1]+'"';
         }
 		bljg=bljg+' onclick="showbigphoto_klphotos('+blxl+');" style="cursor:pointer;" id="images'+blxl+'">';
@@ -554,8 +541,7 @@ function showbigphoto_klphotos(csxl=0){
         for (var blxl=1;blxl<=monthdays_t;blxl++){
             if (blxl==theday_t){
                 bljg=bljg+'<font color=red>'+blxl+'</font> ';
-            }
-            else {
+            } else {
                 bljg=bljg+blxl+' ';
             }
         } 
@@ -589,17 +575,15 @@ function showbigphoto_klphotos(csxl=0){
 	bljg=bljg+'">';
 	bljg=bljg+'<table border=0 width=100%><tr><td align=left style="font-size:0.6rem;"><b>';
 
-    if (photodata_global[csxl][0].includes('/')) {
+    if (photodata_global[csxl][0].includes('/')){
         var imgname=photodata_global[csxl][0].slice(photodata_global[csxl][0].lastIndexOf('/')+1);
-    }
-    else{
+    } else {
         var imgname=photodata_global[csxl][0];
     }
             
 	if (photodata_global[csxl][1]==''){
 		bljg=bljg+imgname;
-	}
-	else{
+	} else {
         bljg=bljg+photodata_global[csxl][1]+'/'+imgname;
     }
 	bljg=bljg+'</b> <i>(img='+photodata_global[csxl][2]+')</i></td><td align=right style="font-size:0.6rem;"><span id="span_exif"></span></td></tr></table></div>';
@@ -676,7 +660,7 @@ function getEvent_klphotos(){
 	while (func!=null){ 
 		var arg0=func.arguments[0]; 
 		if (arg0){ 
-			if(arg0.constructor==Event || (typeof(arg0)=="object" && arg0.preventDefault && arg0.stopPropagation)) { 
+			if (arg0.constructor==Event || (typeof(arg0)=="object" && arg0.preventDefault && arg0.stopPropagation)){ 
 				return arg0; 
 			} 
 		} 
@@ -717,8 +701,7 @@ function change_klphotos(realkey){
                 imgnum_global=photodata_global.length;
                 thumbnail_klphotos((Math.ceil(photodata_global.length/pageitems_global)-1)*pageitems_global);
                 showbigphoto_klphotos(photodata_global.length-1);
-            }
-            else if (imgnum_global-1>=0){
+            } else if (imgnum_global-1>=0){
                 if (imgnum_global<=current_page_first_img_num_global){
                     var no_tmp=imgnum_global;
                     thumbnail_klphotos(Math.max(0,imgnum_global-pageitems_global));
@@ -732,8 +715,7 @@ function change_klphotos(realkey){
                 imgnum_global=-1;
                 thumbnail_klphotos(0);
                 showbigphoto_klphotos(0);
-            }
-            else if (imgnum_global+1<=photodata_global.length-1){
+            } else if (imgnum_global+1<=photodata_global.length-1){
                 if (imgnum_global>=current_page_first_img_num_global+pageitems_global-1){
                     var no_tmp=imgnum_global;
                     thumbnail_klphotos(imgnum_global+1);
@@ -759,25 +741,20 @@ function args_klphotos(cskeys){
 			if (bls_reg.length>1){
 				if (bls_reg[1]=='reg'){
                     imgsearch_klphotos(bls_reg[0],true);
-                }
-				else{
+                } else {
                     imgsearch_klphotos(bltmpstr.substring(2));
                 }
-			}
-			else{
+			} else {
                 imgsearch_klphotos(bls_reg[0]);
             }
-		}
-		else if (bltmpstr.substring(0,4)=='img='){
+		} else if (bltmpstr.substring(0,4)=='img='){
 			var num_tmp=Math.min(photodata_global.length-1,Math.max(0,parseInt(bltmpstr.substring(4))));
 			var page_tmp=pageitems_global*(Math.ceil((num_tmp+1)/pageitems_global)-1);
 			thumbnail_klphotos(page_tmp);
 			showbigphoto_klphotos(num_tmp);
-		}
-		else if (bltmpstr.substring(0,3)=='rnd'){
+		} else if (bltmpstr.substring(0,3)=='rnd'){
 			rndsearch_klphotos();
-		}
-		else if (bltmpstr.substring(0,4)=='auto'){
+		} else if (bltmpstr.substring(0,4)=='auto'){
 			showbigphoto_klphotos(0);
 			autoshow_klphotos();
 		}
@@ -920,8 +897,7 @@ function data_set_klphotos(){
                         if (item.match(blfilter_str)){
                             temp_t.push(item);
                         }
-                    }
-                    else {
+                    } else {
                         temp_t.push(item);
                     }
                 }
@@ -932,8 +908,7 @@ function data_set_klphotos(){
             photo_source_global=list_t;
         }
         photo_source_global.sort(function(a,b){return zh_sort_b(a,b,true,0);});
-    }
-    else {
+    } else {
         //元素为字符串型 - 保留注释
         photo_source_global=filter_array_img_b(photo_source_global,blfilter_str)
         photo_source_global.sort(function(a,b){return zh_sort_b(a,b,false,0);});
@@ -998,13 +973,11 @@ function timeline_oneyear_klphotos(csstr='',isyear=true){
             var bltext=item.innerText.trim();
             if (bltext.substring(0,4)==csstr){
                 item.style.display='';
-            }
-            else {
+            } else {
                 item.style.display='none';
             }
         }
-    }
-    else {
+    } else {
         obj_search_show_hide_b(olis,'',csstr,blreg);
     }
 }

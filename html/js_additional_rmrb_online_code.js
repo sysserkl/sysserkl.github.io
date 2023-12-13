@@ -27,8 +27,7 @@ function table_head_set_rmrb_online(csid=''){
     var is_merge=klmenu_check_b(csid,true);
     if (is_merge){
         table_th_jscm_global={'年月':'','标题':''};    
-    }
-    else {
+    } else {
         table_th_jscm_global={'网址':'','年月':'','标题':''};
     }
 }
@@ -80,8 +79,7 @@ function statistics_rmrb_online(is_year=false){
             for (let blxl=0;blxl<result_t.length;blxl++){
                 result_t[blxl][0]=validdate_b(result_t[blxl][0]+'01');
             }
-        }
-        else {
+        } else {
             for (let blxl=0;blxl<result_t.length;blxl++){
                 result_t[blxl][0]=validdate_b(result_t[blxl][0]+'0101');
             }
@@ -105,16 +103,14 @@ function statistics_rmrb_online(is_year=false){
             var blvalue=arow[1][0];
             if (blmin===false){
                 blmin=blvalue;
-            }
-            else if (blvalue<blmin){
+            } else if (blvalue<blmin){
                 blmin=blvalue;
             }
 
             var blvalue=arow[arow.length-1][0];
             if (blmax===false){
                 blmax=blvalue;
-            }
-            else if (blvalue>blmax){
+            } else if (blvalue>blmax){
                 blmax=blvalue;
             }            
         }
@@ -163,8 +159,7 @@ function statistics_rmrb_online(is_year=false){
     if (is_multi_keys){
         key_name=key_name.split(' ');
         search_common(key_name[0],1,false);
-    }
-    else {
+    } else {
         key_name=[key_name];
     }
     

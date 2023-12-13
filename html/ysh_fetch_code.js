@@ -124,8 +124,7 @@ function data_show_ysh_jf(csarr){
         idb_ysh_jf('write');
         result_percent_b('span_count',current_result_ysh_jf_global.length,raw_data_ysh_jf_global.length);        
         page_ysh_jf(1);
-    }
-    catch (err){
+    } catch (err){
         alert(err.message);
     }
 }
@@ -193,8 +192,7 @@ function page_ysh_jf(csno){
 
     if (result_t.length==0){
         odiv.innerHTML='';
-    }
-    else {
+    } else {
         odiv.innerHTML='<table class="table_common"><tr><th>No.</th><th>Title</th><th>Author</th><th>Date</th></tr>'+result_t.join('\n')+'</table>'+pages;
         mouseover_mouseout_oblong_span_b(odiv.querySelectorAll('span.oblong_box'));                
     }
@@ -263,8 +261,7 @@ function idb_write_ysh_jf(db,do_alert=false){
                                 console.log('error',blxl,item);
                                 count_dict['错误']=count_dict['错误']+1;
                             };
-                        }
-                        else {
+                        } else {
                             count_dict['忽略']=count_dict['忽略']+1;
                         }
                         found_list.push(blxl);
@@ -272,8 +269,7 @@ function idb_write_ysh_jf(db,do_alert=false){
                     }
                 }
                 cursor.continue();
-            }
-            else {
+            } else {
                 sub_idb_write_ysh_jf_append(otable);
             }
         };
@@ -304,8 +300,7 @@ function idb_read_ysh_jf(db,cskey=false){
         if (cursor){
             raw_data_ysh_jf_global.push([cursor.value.title,cursor.value.author,cursor.value.date]);
             cursor.continue();
-        }
-        else {
+        } else {
             sub_idb_read_ysh_jf_search();
         }
     }

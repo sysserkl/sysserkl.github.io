@@ -2,12 +2,10 @@ function list_klmine(cslevel=0){
     if (cslevel==0){
         var cspercent=0.15;
         level_caption_global='Easy';
-    }
-    else if (cslevel==1){
+    } else if (cslevel==1){
         var cspercent=0.2;
         level_caption_global='Middle';
-    }
-    else {
+    } else {
         var cspercent=0.25;
         level_caption_global='Hard';
     }
@@ -100,14 +98,11 @@ function menu_klmine(otd){
     var rect=otd.getBoundingClientRect();
     if (ismine_klmine(otd.innerHTML)){
         var bljg='<button style="padding:0.5rem;width:3rem;" onclick="count_klmine(\''+otd.id+'\',0)">✓</button><br /><button style="padding:0.5rem;width:3rem;" onclick="count_klmine(\''+otd.id+'\',-2)">&nbsp;</button>';
-    }
-    else if (otd.style.backgroundColor==P_klmine_g.mask_bcolor) {
+    } else if (otd.style.backgroundColor==P_klmine_g.mask_bcolor){
         var bljg='<button style="padding:0.5rem;width:3rem;" onclick="count_klmine(\''+otd.id+'\',0)">✓</button><br /><button style="padding:0.5rem;width:3rem;" onclick="count_klmine(\''+otd.id+'\',-1)">'+mine_character_global+'</button>';
-    }
-    else if (td_get_value_klmine(otd.id)>0 && iscleaned_klmine(otd.id)==false) {
+    } else if (td_get_value_klmine(otd.id)>0 && iscleaned_klmine(otd.id)==false){
         var bljg='<button style="padding:0.5rem;width:4rem;" onclick="open_klmine(\''+otd.id+'\')">✓+</button>';
-    }
-    else {return;}
+    } else {return;}
     document.getElementById('div_menu').innerHTML=bljg;
     document.getElementById('div_menu').style.left=rect.left+'px';
     document.getElementById('div_menu').style.top=rect.top+'px';
@@ -118,8 +113,7 @@ function cell_iscleaned_klmine(csr,csc){
     var blid='td_'+csr+'_'+csc;
     if (ismine_klmine(document.getElementById(blid).innerHTML)){
         return true;
-    }
-    else if (document.getElementById(blid).style.backgroundColor==P_klmine_g.mask_bcolor){
+    } else if (document.getElementById(blid).style.backgroundColor==P_klmine_g.mask_bcolor){
         return false;
     }
     return true;
@@ -238,8 +232,7 @@ function count_klmine(tdid,cstype){
     function sub_count_klmine_plus_minus(tdid,csvalue=-1){
         if (csvalue==-1){
             document.getElementById(tdid).innerHTML=random_mine_klmine();
-        }
-        else {
+        } else {
             document.getElementById(tdid).innerHTML=empty_td_content_global;
         }
         mine_total_global=mine_total_global+csvalue;
@@ -260,8 +253,7 @@ function count_klmine(tdid,cstype){
             sub_count_klmine_plus_minus(tdid,-1);
             sub_count_klmine_done();
             return;
-        }
-        else {
+        } else {
             sub_count_klmine_plus_minus(tdid,-1);
             document.getElementById(tdid).style.borderColor='red';
             document.getElementById('span_game_over').innerHTML='Game Over';
@@ -291,8 +283,7 @@ function count_klmine(tdid,cstype){
     if (blaround>0){
         td_set_value_klmine(tdid,blaround);
         document.getElementById(tdid).style.color=P_klmine_g.unmask_fcolor;
-    }
-    else{
+    } else {
         clean_klmine(blr,blc);
         document.getElementById(tdid).style.color=P_klmine_g.unmask_bcolor;
     }
@@ -303,11 +294,9 @@ function td_get_value_klmine(csid){
     var blvalue=document.getElementById(csid).innerHTML.replace(new RegExp('&nbsp;','g'),'').trim();
     if (ismine_klmine(blvalue)){
         return -1;
-    }
-    else if (blvalue==''){
+    } else if (blvalue==''){
         return -2;
-    }
-    else {
+    } else {
         return parseInt(blvalue);
     }
 }
@@ -375,11 +364,9 @@ function random_mine_klmine(){
 function td_set_value_klmine(csid,csvalue){
     if (ismine_klmine(csvalue) || csvalue==-1){
         document.getElementById(csid).innerHTML=random_mine_klmine();
-    }
-    else if (csvalue==-2){
+    } else if (csvalue==-2){
         document.getElementById(csid).innerHTML=empty_td_content_global;
-    }
-    else {
+    } else {
         document.getElementById(csid).innerHTML='&nbsp;'.repeat(nbsp_count_global)+csvalue+'&nbsp;'.repeat(nbsp_count_global);
     }
 }

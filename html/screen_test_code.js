@@ -33,8 +33,7 @@ function pure_colors_screentest(csnum=1){
 
     if (color_no_global>=pure_color_list_global.length){
         color_no_global=0;
-    }
-    else if (color_no_global<0){
+    } else if (color_no_global<0){
         color_no_global=Math.max(0,pure_color_list_global.length+color_no_global);
     }
     
@@ -43,8 +42,7 @@ function pure_colors_screentest(csnum=1){
     }
     if (pure_color_list_global[color_no_global].substring(0,2)=='l_'){
         hsl_screentest(pure_color_list_global[color_no_global].substring(2,),'l');
-    }
-    else {
+    } else {
         document.body.style.backgroundColor=pure_color_list_global[color_no_global];
     }
 }

@@ -58,8 +58,7 @@ function page_notepad(csno){
 
     if (result_t.length==0){
         odiv.innerHTML='';
-    }
-    else {
+    } else {
         odiv.innerHTML=bljg+'<ol>'+result_t.join('\n')+'</ol>\n'+bljg;
         mouseover_mouseout_oblong_span_b(odiv.querySelectorAll('span.oblong_box'));        
     }
@@ -89,8 +88,7 @@ function show_hide_notepad(is_edit=true){
             }
             document.getElementById('span_append_or_edit_notepad').innerText='修改';
             document.getElementById('span_delete_notepad').style.display='';
-        }
-        else {
+        } else {
             document.getElementById('span_append_or_edit_notepad').innerText='添加';
             document.getElementById('span_delete_notepad').style.display='none';
         }
@@ -129,22 +127,19 @@ function idb_edit_notepad(db,is_delete=false){
                 if (cursor){
                     old_id_set.add(cursor.value.id);
                     cursor.continue();
-                }
-                else {
+                } else {
                     current_id_notepad_global=Math.max(-1,Math.max(...old_id_set))+1;
                     sub_idb_edit_notepad_append(otable);
                 }
             };
-        }
-        else {        
+        } else {        
             otable.openCursor().onsuccess = function (event){
                 var cursor = event.target.result;
                 if (cursor){
                     if (cursor.value.id==current_id_notepad_global){
                         if (is_delete){
                             var request=cursor.delete();
-                        }
-                        else {
+                        } else {
                             var updateData = cursor.value;
                             updateData.content = blcontent;
                             updateData.date=new Date().toLocaleString();
@@ -157,8 +152,7 @@ function idb_edit_notepad(db,is_delete=false){
                         request.onerror = () => {
                             console.log('error');
                         };                    
-                    }
-                    else {
+                    } else {
                         cursor.continue();
                     }
                 }
@@ -173,12 +167,10 @@ function idb_edit_notepad(db,is_delete=false){
             if (current_id_notepad_global!==false){
                 idb_write_b(db,'notepad_dbf',false,false,sub_idb_edit_notepad_onsuccess,false);
             }
-        }
-        else {
+        } else {
             if (blcontent.length>100*1024*1024){
                 alert('尺寸太大');
-            }
-            else {
+            } else {
                 idb_write_b(db,'notepad_dbf',false,false,sub_idb_edit_notepad_onsuccess,false);
             }
         }
@@ -215,8 +207,7 @@ function idb_read_notepad(db,cskey=false){
         if (cursor){
             raw_data_notepad_global.push([cursor.value.id,cursor.value.content,cursor.value.date]);
             cursor.continue();
-        }
-        else {
+        } else {
             sub_idb_read_notepad_search();
         }
     }

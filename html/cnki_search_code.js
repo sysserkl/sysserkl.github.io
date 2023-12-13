@@ -8,8 +8,7 @@ function init_cnki(){
         character_2_icon_b(database_name_cnki_global.substring(0,1));    
         document.title=database_name_cnki_global+' - cnki search';
         document.getElementById('span_title').innerHTML='cnki search - '+database_name_cnki_global;
-    }
-    else {
+    } else {
         character_2_icon_b('🛢');        
     }
     document.getElementById('span_count').innerHTML='('+cnki_article_list_raw_global.length+')';
@@ -86,8 +85,7 @@ function remove_rows_cnki(is_after=false){
     if (is_after){
         var row_start=blno*rows_per_page_cnki_global;
         var row_end=current_result_cnki_global.length-1;
-    }
-    else {
+    } else {
         var row_start=0;
         var row_end=(blno-1)*rows_per_page_cnki_global-1;
     }
@@ -247,8 +245,7 @@ function statistics_year_month_cnki(){
         text_y_all_list.push(blstr+' /// '+item[1]);
         if (item[1]>0){
             text_y_not_zero_list.push(blstr+' /// '+item[1]);        
-        }
-        else {
+        } else {
             blfound_zero=true;
         }        
     }
@@ -260,8 +257,7 @@ function statistics_year_month_cnki(){
         text_m_all_list.push(blstr+' /// '+item[1]);
         if (item[1]>0){
             text_m_not_zero_list.push(blstr+' /// '+item[1]);
-        }        
-        else {
+        } else {
             blfound_zero=true;
         }
     }    
@@ -294,8 +290,7 @@ function load_cnki(){
             one_key=one_key.trim();
             if (one_key.substring(0,2)=='k='){
                 database_name_cnki_global=one_key.substring(2,);
-            }
-            else if (one_key.substring(0,2)=='t='){
+            } else if (one_key.substring(0,2)=='t='){
                 cstype=one_key.substring(2,);
             }            
         }
@@ -303,8 +298,7 @@ function load_cnki(){
     if (database_name_cnki_global!==''){
         if (cstype=='pb'){
             klbase_addons_import_js_b([],[],['cnki_pb/cnki_'+database_name_cnki_global+'_data.js']);
-        }
-        else {
+        } else {
             var blfile=klwebphp_path_b('data/cnki_kl/cnki_'+database_name_cnki_global+'_data.js');
             write_js_css_b([['js',blfile,'']]);
         }
@@ -358,8 +352,7 @@ function page_cnki(csno,show_html=true){
         blstr=blstr+'<td style="max-width:40rem;">'+(item[0].includes('《')?item[0]:'《'+item[0]+'》')+'</td><td>'+item[1]+'</td><td>'+item[2]+'</td><td>'+item[3]+'</td><td>'+item[4]+'</td><td align="right">'+item[5]+'</td><td align="right">'+item[6]+'</td>';
         if (!is_all_result_cnki_global){
             blstr=blstr+'<td align="right">'+no_jump_cnki(current_result_cnki_global[blxl][1])+'</td>';
-        }
-        else {
+        } else {
             blstr=blstr+'<td align="right">'+current_result_cnki_global[blxl][1]+'</td>';        
         }
         blstr=blstr+'</tr>';
@@ -374,8 +367,7 @@ function page_cnki(csno,show_html=true){
 
     if (result_t.length==0){
         odiv.innerHTML='';
-    }
-    else {
+    } else {
         odiv.innerHTML=bljg+'<table class="table_common">'+table_th_cnki()+'\n'+result_t.join('\n')+'</table>\n'+bljg;
         mouseover_mouseout_oblong_span_b(odiv.querySelectorAll('span.oblong_box'));        
 
@@ -393,8 +385,7 @@ function table_th_cnki(is_simple=false){
         for (let item of th_names){
             th_list.push('<th nowrap>'+item+'</th>');
         }    
-    }
-    else {
+    } else {
         for (let blxl=0;blxl<th_names.length;blxl++){
             th_list.push('<th style="cursor:pointer;" onclick="sort_cnki('+blxl+');" nowrap>'+th_names[blxl]+'</th>');
         }
@@ -409,12 +400,10 @@ function sort_cnki(csno){
         current_result_cnki_global.sort(
             function (a,b){return (parseInt(a[0][csno] || 0)*sort_type)<(parseInt(b[0][csno] || 0)*sort_type);}
         );
-    }
-    else {
+    } else {
         if (sort_desc_cnki_global){
             current_result_cnki_global.sort(function (a,b){return a[0][csno]<b[0][csno];});
-        }
-        else {
+        } else {
             current_result_cnki_global.sort(function (a,b){return a[0][csno]>b[0][csno];});    
         }
     }

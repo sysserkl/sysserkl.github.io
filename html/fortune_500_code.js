@@ -15,16 +15,14 @@ function search_fortune_500(cskey=false,csreg=-1,show_html=true){
     if (sort_type==1){ //按收入排序 - 保留注释
         var profit_index=-1;
         var rank_index=4;   
-    }
-    else {
+    } else {
         var profit_index=sort_type;
         var rank_index=-1;
     }
     
     if (klmenu_check_b('span_sort_by_year_fortune_500',false)){
         var year_index=5;
-    }
-    else {
+    } else {
         var year_index=-1;
     }
     
@@ -161,15 +159,13 @@ function compare_fortune_500(){
                     tr_list.push(null);
                     tr_list.push(null);
                     one_flot.push([parseInt(one_year.split('年')[0]),null]);
-                }
-                else {
+                } else {
                     tr_list.push(blvalue[col_no]);
                     var blvalue0=year_dict[one_year]['n_'+name_set[0]];         
                     if (blvalue0==null){
                         tr_list.push(null);
                         one_flot.push([parseInt(one_year.split('年')[0]),null]);                        
-                    }           
-                    else {
+                    } else {
                         var percent=blvalue[col_no]/blvalue0[col_no]*100;
                         tr_list.push(percent);
                         one_flot.push([parseInt(one_year.split('年')[0]),percent]);
@@ -320,8 +316,7 @@ function array_2_html_fortune_500(csarray,cssum=false,table_id='table_fortune_50
     var blhead='<tr><th class="td_no">No.</th><th>Company</th><th class="td_district">Country</th><th class="td_revenue">营收<small>(百万美元)</small></th><th class="td_interest">利润<small>(百万美元)</small></th><th class="td_percent">利润率<small>(%)</small></th><th class="td_rank">当年名次</th><th class="td_year">Year</th></tr>\n';
     if (only_tr){
         bljg=blhead+bljg.join('\n');
-    }
-    else {
+    } else {
         bljg='<table'+(table_id==''?'':' id="'+table_id+'"')+' class="table_fortune_500 table_common" cellpadding=0 cellspacing=0>'+blhead+bljg.join('\n')+'</table>\n';
     }
     if (show_button){
@@ -424,8 +419,7 @@ function line_district_statistics_fortune_500(is_percent=false,csindex=1){
     
     if (is_percent){
         flot_lines_b(line_district_statistics_percent_rank_b(flot_revenue_data),'div_flot_fortune_500','nw',false,'','m','%',-1,[],-1,false,false,true);
-    }
-    else {
+    } else {
         flot_lines_b(flot_revenue_data,'div_flot_fortune_500','nw',false,'','m',(csindex==-1?'家':'百万美元'),-1,[],-1,false,false,true);
     }
 
@@ -529,8 +523,7 @@ function merge_data_generate_fortune_500(){
             dict_t[blkey]=[].concat(item);
             dict_t[blkey][0]=bltitle;
             dict_t[blkey][4]=-1;
-        }
-        else {
+        } else {
             dict_t[blkey][1]=dict_t[blkey][1]+item[1];
             dict_t[blkey][2]=dict_t[blkey][2]+item[2];
         }

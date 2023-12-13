@@ -67,8 +67,7 @@ function near_values_poker24(){
                 if (blvalue!==calculate_number_global){
                     result_t.push([one_answer].join(',')+'='+blvalue);
                 }
-            }
-            catch (error){
+            } catch (error){
                 console.log(error);
             }            
         }
@@ -88,8 +87,7 @@ function max_min_sort_poker24(){
         if (value1<0){
             return [false,false];
         }
-    }
-    catch (error){
+    } catch (error){
         return [false,false];
     }    
     return [value1,value2];
@@ -156,8 +154,7 @@ function all_combination2_poker24(){
         if (blxl % 1000 == 0){
             console.log(blxl);
             setTimeout(sub_all_results_poker24_one_step,1);
-        }
-        else {
+        } else {
             sub_all_results_poker24_one_step();
         }
     }
@@ -235,8 +232,7 @@ function eval_poker24(eval_str){
         if (blvalue==calculate_number_global+'.000'){
             return true;
         }
-    }
-    catch (error){
+    } catch (error){
         console.log(error);
     }
     return false;
@@ -266,8 +262,7 @@ function is_in_dict_poker24(cslist){
             blvalue=sub_is_in_dict_poker24_one_round(blvalue2,blvalue1,cslist[1],cslist[0]);
         }
         return blvalue;
-    }
-    catch (error){
+    } catch (error){
         console.log(error);
         return '';
     }
@@ -422,8 +417,7 @@ function scan_one_poker24(start_num=1,end_num=-1){    //打开console会导致�
                         var part1=parseInt(answer_set_list[an_no].split(',')[0]);
                         if (part1>=start_num && part1<=end_num){
                             answer_set_list[an_no]='';
-                        }
-                        else if (part1<1 || part1>max_num_poker24_global){
+                        } else if (part1<1 || part1>max_num_poker24_global){
                             answer_set_list[an_no]='';
                         }
                     }
@@ -505,17 +499,14 @@ function args_poker24(){
        for (let item of cskeys){
             if (item.substring(0,2)=='c='){
                 calculate_number_global=parseInt(item.substring(2,).trim());
-            }
-            else if (item.substring(0,2)=='n='){
+            } else if (item.substring(0,2)=='n='){
                 input_poker24(item.substring(2,).trim());
-            }
-            else if (item.substring(0,5)=='scan='){
+            } else if (item.substring(0,5)=='scan='){
                 var list_t=item.substring(5,).trim().split(',');
                 list_t[0]=parseInt(list_t[0]);
                 if (list_t.length==1){
                     scan_one_poker24(list_t[0],list_t[0]);
-                }
-                else {
+                } else {
                     scan_one_poker24(list_t[0],parseInt(list_t[1]));
                 }
             }

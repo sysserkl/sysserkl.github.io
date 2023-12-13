@@ -3,8 +3,7 @@ function color_name2hex_b(csname){
     var colorname={'aliceblue':'#f0f8ff', 'antiquewhite':'#faebd7', 'aqua':'#00ffff', 'aquamarine':'#7fffd4', 'azure':'#f0ffff', 'beige':'#f5f5dc', 'bisque':'#ffe4c4', 'black':'#000000', 'blanchedalmond':'#ffebcd', 'blue':'#0000ff', 'blueviolet':'#8a2be2', 'brown':'#a52a2a', 'burlywood':'#deb887', 'cadetblue':'#5f9ea0', 'chartreuse':'#7fff00', 'chocolate':'#d2691e', 'coral':'#ff7f50', 'cornflowerblue':'#6495ed', 'cornsilk':'#fff8dc', 'crimson':'#dc143c', 'cyan':'#00ffff', 'darkblue':'#00008b', 'darkcyan':'#008b8b', 'darkgoldenrod':'#b8860b', 'darkgray':'#a9a9a9', 'darkgreen':'#006400', 'darkgrey':'#a9a9a9', 'darkkhaki':'#bdb76b', 'darkmagenta':'#8b008b', 'darkolivegreen':'#556b2f', 'darkorange':'#ff8c00', 'darkorchid':'#9932cc', 'darkred':'#8b0000', 'darksalmon':'#e9967a', 'darkseagreen':'#8fbc8f', 'darkslateblue':'#483d8b', 'darkslategray':'#2f4f4f', 'darkslategrey':'#2f4f4f', 'darkturquoise':'#00ced1', 'darkviolet':'#9400d3', 'deeppink':'#ff1493', 'deepskyblue':'#00bfff', 'dimgray':'#696969', 'dimgrey':'#696969', 'dodgerblue':'#1e90ff', 'firebrick':'#b22222', 'floralwhite':'#fffaf0', 'forestgreen':'#228b22', 'fuchsia':'#ff00ff', 'gainsboro':'#dcdcdc', 'ghostwhite':'#f8f8ff', 'gold':'#ffd700', 'goldenrod':'#daa520', 'gray':'#808080', 'green':'#008000', 'greenyellow':'#adff2f', 'grey':'#808080', 'honeydew':'#f0fff0', 'hotpink':'#ff69b4', 'indianred':'#cd5c5c', 'indigo':'#4b0082', 'ivory':'#fffff0', 'khaki':'#f0e68c', 'lavender':'#e6e6fa', 'lavenderblush':'#fff0f5', 'lawngreen':'#7cfc00', 'lemonchiffon':'#fffacd', 'lightblue':'#add8e6', 'lightcoral':'#f08080', 'lightcyan':'#e0ffff', 'lightgoldenrodyellow':'#fafad2', 'lightgray':'#d3d3d3', 'lightgreen':'#90ee90', 'lightgrey':'#d3d3d3', 'lightpink':'#ffb6c1', 'lightsalmon':'#ffa07a', 'lightseagreen':'#20b2aa', 'lightskyblue':'#87cefa', 'lightslategray':'#778899', 'lightslategrey':'#778899', 'lightsteelblue':'#b0c4de', 'lightyellow':'#ffffe0', 'lime':'#00ff00', 'limegreen':'#32cd32', 'linen':'#faf0e6', 'magenta':'#ff00ff', 'maroon':'#800000', 'mediumaquamarine':'#66cdaa', 'mediumblue':'#0000cd', 'mediumorchid':'#ba55d3', 'mediumpurple':'#9370db', 'mediumseagreen':'#3cb371', 'mediumslateblue':'#7b68ee', 'mediumspringgreen':'#00fa9a', 'mediumturquoise':'#48d1cc', 'mediumvioletred':'#c71585', 'midnightblue':'#191970', 'mintcream':'#f5fffa', 'mistyrose':'#ffe4e1', 'moccasin':'#ffe4b5', 'navajowhite':'#ffdead', 'navy':'#000080', 'oldlace':'#fdf5e6', 'olive':'#808000', 'olivedrab':'#6b8e23', 'orange':'#ffa500', 'orangered':'#ff4500', 'orchid':'#da70d6', 'palegoldenrod':'#eee8aa', 'palegreen':'#98fb98', 'paleturquoise':'#afeeee', 'palevioletred':'#db7093', 'papayawhip':'#ffefd5', 'peachpuff':'#ffdab9', 'peru':'#cd853f', 'pink':'#ffc0cb', 'plum':'#dda0dd', 'powderblue':'#b0e0e6', 'purple':'#800080', 'rebeccapurple':'#663399', 'red':'#ff0000', 'rosybrown':'#bc8f8f', 'royalblue':'#4169e1', 'saddlebrown':'#8b4513', 'salmon':'#fa8072', 'sandybrown':'#f4a460', 'seagreen':'#2e8b57', 'seashell':'#fff5ee', 'sienna':'#a0522d', 'silver':'#c0c0c0', 'skyblue':'#87ceeb', 'slateblue':'#6a5acd', 'slategray':'#708090', 'slategrey':'#708090', 'snow':'#fffafa', 'springgreen':'#00ff7f', 'steelblue':'#4682b4', 'tan':'#d2b48c', 'teal':'#008080', 'thistle':'#d8bfd8', 'tomato':'#ff6347', 'turquoise':'#40e0d0', 'violet':'#ee82ee', 'wheat':'#f5deb3', 'white':'#ffffff', 'whitesmoke':'#f5f5f5', 'yellow':'#ffff00', 'yellowgreen':'#9acd32'};
     if (csname=='ALL'){
         return colorname;
-    }
-    else if (['ALLKEYS','ALLNAMES'].includes(csname)){
+    } else if (['ALLKEYS','ALLNAMES'].includes(csname)){
         return Object.keys(colorname);
     }
     
@@ -66,8 +65,7 @@ function css_root_size_b(pcsize='16',mobilesize='30',increment=false){
     
     if (increment === false){
         increment=parseFloat(local_storage_get_b('root_font_size_increment'));
-    }
-    else {
+    } else {
         increment=0;
     }
     
@@ -93,8 +91,7 @@ function css_root_style_b(pcsize='16',mobilesize='30',cssname=[''],usercss=[],ch
                 list_t.push('input[type=checkbox] {-webkit-transform: scale('+checkbox_radio+'); margin:25px;}');
                 list_t.push('input[type=radio] {-webkit-transform: scale('+checkbox_radio+'); margin:25px;}');
             }
-        }
-        else{
+        } else {
             //list_t.push(':root {font-size:'+pcsize+'px;}'); - 保留注释
             list_t.push('section {font-size:1rem;line-height:200%;}');
         }
@@ -167,8 +164,7 @@ function css_root_style_b(pcsize='16',mobilesize='30',cssname=[''],usercss=[],ch
     if (usercss.length==2){    
         if (ismobile_b()){
             list_t.push(usercss[0]);
-        }
-        else {
+        } else {
             list_t.push(usercss[1]);
         }
     }
@@ -181,8 +177,7 @@ function style_generate_b(csstr,dom_type){
         var ostyle = document.createElement('style');
         ostyle.innerHTML=csstr;
         document.head.appendChild(ostyle);        
-    }
-    else {
+    } else {
         document.write('\n<style>\n');    
         document.write(csstr+'\n');    
         document.write('</style>\n');
@@ -196,8 +191,7 @@ function mobile_style_b(csstr1,csstr2=''){
 		if (csstr1!==''){
             document.write('\n'+csstr1+'\n');
         }
-	}
-	else{
+	} else {
 		if (csstr2!==''){
             document.write('\n'+csstr2+'\n');
         }
@@ -238,8 +232,7 @@ function checkbox_kl_b(csid,cscaption,cstitle='',selected=false,jsstr=''){
     if (selected){
         var blc='blue';
         var blchecked=' checked';
-    }
-    else {
+    } else {
         var blc='grey';
          var blchecked='';
     }
@@ -261,17 +254,14 @@ function checkbox_kl_color_b(csid,setvalue=-1){
                 if (obj.style.color=='grey'){
                     obj.style.color='blue';
                     ocheck.checked=true;
-                }
-                else {
+                } else {
                     obj.style.color='grey';
                     ocheck.checked=false;
                 }
-            }
-            else if (setvalue==1 || setvalue==true){
+            } else if (setvalue==1 || setvalue==true){
                 obj.style.color='blue';
                 ocheck.checked=true;
-            }
-            else if (setvalue==0 || setvalue==false){
+            } else if (setvalue==0 || setvalue==false){
                 obj.style.color='grey';
                 ocheck.checked=false;
             }
@@ -358,8 +348,7 @@ function klmenu_hide_b(csname='',more_parent=false){
     var blhref=(csname==''?'':"document.location.href = '"+csname+"';");
     if (more_parent){
         return "this.parentNode.parentNode.parentNode.style.display='none';"+blhref;    
-    }
-    else {
+    } else {
         return "this.parentNode.parentNode.style.display='none';"+blhref;
     }
 }
@@ -387,8 +376,7 @@ function klmenu_multi_button_div_b(csstr,cstyle='',cspadding='',csmargin='',csid
 function popup_show_hide_b(csid,cstype='block'){
     if (typeof csid =='string'){
         var obj=document.getElementById(csid);
-    }
-    else {
+    } else {
         var obj=csid;
     }
     
@@ -396,14 +384,13 @@ function popup_show_hide_b(csid,cstype='block'){
     if (obj.style.display==cstype){
         obj.style.display='none';
         cstype='none';
-    }
-    else {
+    } else {
         obj.style.display=cstype;
     }
     return cstype;
 }
 
-function border_style_b(spanid,popupid) {
+function border_style_b(spanid,popupid){
     var list_t=['none','dotted','dashed','solid','double','groove','ridge','inset','outset','wavy'];
     var bltop='<span id="'+spanid+'" style="cursor:pointer;" onclick="popup_show_hide_b(\''+popupid+'\')">none</span>';
     var bljg='';
@@ -413,7 +400,7 @@ function border_style_b(spanid,popupid) {
     return bltop+popup_b(popupid,bljg)
 }
 
-function background_img_style_b(spanid,popupid) {
+function background_img_style_b(spanid,popupid){
     //no-repeat-expand 是特殊属性 - 保留注释
     var list_t=['repeat','repeat-x','repeat-y','no-repeat','no-repeat-expand','space','round'];
     var bltop='<span id="'+spanid+'" style="cursor:pointer;" onclick="popup_show_hide_b(\''+popupid+'\')">repeat</span>';
@@ -602,8 +589,7 @@ function top_bottom_arrow_b(idname,csmemo='',cseng=false,csfsize='1.3rem',show_s
     }
     if (is_local_b()){
         var caption=(location.host=='127.0.0.1'?'❌':'❎');
-    }
-    else {
+    } else {
         var caption='x';
     }
     bljg=bljg+'<span onclick="if (confirm(\'是否关闭？\')){document.getElementById(\''+idname+'\').parentNode.removeChild(document.getElementById(\''+idname+'\'));}" style="cursor:pointer;">'+caption+'</span> ';
@@ -640,8 +626,7 @@ function page_eta_b(ospan,default_value='',csmax=5400){
         if (page_eta_global==false || document.scrollingElement.clientHeight+document.scrollingElement.scrollTop>=document.scrollingElement.scrollHeight){
             page_eta_global=false;
             ospan.innerText=default_value;
-        }
-        else {
+        } else {
             setTimeout(sub_page_eta_b_check,3000); //比使用setInterval合理，避免未运行完程序就再次调用 - 保留注释
         }
     }
@@ -658,10 +643,10 @@ function page_eta_b(ospan,default_value='',csmax=5400){
     setTimeout(sub_page_eta_b_check,3000); 
 }
 
-function rndcolor_b() {
+function rndcolor_b(){
     var letters = '0123456789ABCDEF';
     var color = '';
-    for (let blxl = 0; blxl < 6; blxl++) {
+    for (let blxl = 0; blxl < 6; blxl++){
         color += letters[Math.floor(Math.random() * 16)];
     }
     return '#'+color;
@@ -705,12 +690,10 @@ function rgb2hex_b(rgb,csg,csb){
     var csnum=arguments.length;
     if (csnum==3){
         rgb=[rgb,csg,csb];
-    }
-    else if (csnum==1){
+    } else if (csnum==1){
         if (!Array.isArray(rgb) && typeof rgb =='object'){
             rgb=[rgb['r'],rgb['g'],rgb['b']];
-        }
-        else if (typeof rgb == 'string' ){//rgb(153, 153, 153) - 保留注释
+        } else if (typeof rgb == 'string' ){//rgb(153, 153, 153) - 保留注释
             var hexname=color_name2hex_b(rgb);
             if (hexname!==''){
                 return hexname;
@@ -746,12 +729,12 @@ function hex2rgb_b(hex,return_str=false){
 
     var bljg = result ? [parseInt(result[1], 16), parseInt(result[2], 16), parseInt(result[3], 16)] : false;
     if (return_str){
-        if (bljg===false){return '';}
-        else {
+        if (bljg===false){
+            return '';
+        } else {
             return 'rgb('+bljg.join(', ')+')';
         }
-    }
-    else {
+    } else {
         return bljg;
     }
 }
@@ -838,8 +821,7 @@ function hsl2rgb_b(h,s,l){
         _v = (l + s) / 2;
         if (s==0){
             _s=0;
-        }
-        else {
+        } else {
             _s = (2 * s) / (l + s);
         }
         return [_h, _s, _v];
@@ -955,11 +937,9 @@ function rgb2hsl_b(r,g,b){
         var g,b;
         if (Array.isArray(r) && r.length==3){
             [r,g,b]=r;
-        }
-        else if (typeof r =='string'){        //hex - 保留注释
+        } else if (typeof r =='string'){        //hex - 保留注释
             [r,g,b]=hex2rgb_b(r);
-        }
-        else if (typeof r == 'object'){
+        } else if (typeof r == 'object'){
             [r,g,b]=[r.r, r.g, r.b];
         }
     }
@@ -981,11 +961,9 @@ function div_title_href_id_b(item,id_list){
     var a_name_asc=0;
     if (item[0]!==''){
         a_name_asc=asc_sum_b(item[0]); //依赖 klbase.js - 保留注释
-    }
-    else if (item[1]!==''){
+    } else if (item[1]!==''){
         a_name_asc=asc_sum_b(item[1]);
-    }
-    else {
+    } else {
         a_name_asc=asc_sum_b(item[2].substring(0,20));
     }
     var bltype='t_';
@@ -994,8 +972,7 @@ function div_title_href_id_b(item,id_list){
             console.log(item[0],item[1],a_name_asc,a_name_asc+1); //此段显示 - 保留注释
             a_name_asc=a_name_asc+1;
             bltype='m_';
-        }
-        else {
+        } else {
             break;
         }
     }
@@ -1012,12 +989,10 @@ function div_title_href_b(item,csfsize='',underline=false,csid='',fnname='',item
         if (item[1]!==''){
             bljg=bljg+'<span class="span_a_article_title_b" style="color:'+scheme_global["a"]+'">'+item[1]+'</span> ';
         }
-    }
-    else {
+    } else {
         if (item[1]==''){
             bljg=bljg+'<a class="span_a_article_title_b" href="'+item[0]+'" target=_blank>'+item[0]+'</a> ';
-        }
-        else {
+        } else {
             bljg=bljg+'<a class="span_a_article_title_b" href="'+item[0]+'" target=_blank>'+item[1]+'</a> ';
         }
     }
@@ -1026,8 +1001,7 @@ function div_title_href_b(item,csfsize='',underline=false,csid='',fnname='',item
         if (item[2]!==''){
             if (item2_nofomat){
                 var blcontent=item[2];
-            }
-            else {
+            } else {
                 var blcontent=wiki_all_format_b(item[2],'',-1,underline);
             }
             if (csfsize!==false){
@@ -1071,12 +1045,12 @@ function input_size_b(cslist,cstype='name',font_size=false,return_dom=false){
     if (cstype=='name'){
         var querystr='input[name="';
         var querystr_end='"]';
-    }
-    else if (cstype=='id'){
+    } else if (cstype=='id'){
         var querystr='input#';
         var querystr_end='';
+    } else {
+        return [];
     }
-    else {return [];}
     
     var dom_list=[];
     for (let item of cslist){
@@ -1084,11 +1058,9 @@ function input_size_b(cslist,cstype='name',font_size=false,return_dom=false){
         if (oinput){
             if (item.length>=4){
                 oinput.style.cssText=css_input_text_b(item[1],is_mobile,item[2],item[3],font_size);
-            }
-            else if (item.length>=3){
+            } else if (item.length>=3){
                 oinput.style.cssText=css_input_text_b(item[1],is_mobile,item[2],'',font_size);
-            }
-            else {
+            } else {
                 oinput.style.cssText=css_input_text_b(item[1],is_mobile,false,'',font_size);
             }
             if (return_dom){
@@ -1331,14 +1303,12 @@ function localstorage_value_load_save_b(cs_id_list,cs_checkbox_list,savename,cst
                     blpara.push(checkbox_kl_value_b(item)?1:0);
                 }
                 var bljg=blpara.join(' /// ');  //不能使用英文逗号，因为字体名称中可能会有英文逗号 - 保留注释
-            }
-            else {
+            } else {
                 var bljg=document.getElementById(cs_id_list).value;
             }
             localStorage.setItem(savename,bljg);
         }
-    }
-    else if (cstype=='load'){
+    } else if (cstype=='load'){
         var bljg=local_storage_get_b(savename);
         if (Array.isArray(cs_id_list)){
             var list_t=bljg.split(' /// ');
@@ -1350,12 +1320,10 @@ function localstorage_value_load_save_b(cs_id_list,cs_checkbox_list,savename,cst
                 for (let blxl=0;blxl<cs_checkbox_list.length;blxl++){
                     checkbox_kl_color_b(cs_checkbox_list[blxl],list_t[bllen+blxl]);
                 }
-            }
-            else {
+            } else {
                 console.log(list_t.length,cs_id_list.length,cs_checkbox_list.length,bljg); //此行保留 - 保留注释
             }
-        }
-        else {
+        } else {
             document.getElementById(cs_id_list).value=bljg;
         }
     }
@@ -1365,8 +1333,7 @@ function highlight_oblong_span_b(ospan,ishover=true,cscolor=''){
     if (ishover){
         ospan.style.color=scheme_global['a-hover'];
         ospan.style.boxShadow='0.1rem 0.1rem 0.1rem '+scheme_global['shadow'];
-    }
-    else {
+    } else {
         ospan.style.color=cscolor;
         ospan.style.boxShadow='';
     }
@@ -1410,8 +1377,7 @@ function recent_search_b(localsavename,csstr,jsfunctionname,divname,commonlist=[
             list_t.push(item);
         }
         csstr=list_t;
-    }
-    else {
+    } else {
         csstr=sub_recent_search_b_key_replace(csstr);
     }
 
@@ -1429,8 +1395,7 @@ function recent_search_b(localsavename,csstr,jsfunctionname,divname,commonlist=[
     if (csstr.length>0){
         if (Array.isArray(csstr)){
             recent_search=csstr.concat(recent_search);
-        }
-        else {
+        } else {
             recent_search=[csstr].concat(recent_search);
         }
         is_changed=true;
@@ -1450,8 +1415,7 @@ function recent_search_b(localsavename,csstr,jsfunctionname,divname,commonlist=[
             if (localsavename!==''){
                 localStorage.setItem(localsavename,blstr);
             }
-        }
-        else {
+        } else {
             console.log('remove',recent_search.shift());    //删除第一个（刚刚添加的）元素 - 保留注释
             console.log('remove',recent_search.pop());    //删除最后一个元素 - 保留注释
             if (localsavename!==''){
@@ -1509,8 +1473,7 @@ function page_one_b(pages_count,cspageno,current_no,span_script,show_number=3,in
     page_html=page_html+'<span class="'+classname+'" '+span_script+'>';
     if (current_no==cspageno){
         page_html=page_html+'<font class="font_current_no_b" color="'+scheme_global['a-hover']+'">'+current_no+'</font>';
-    }
-    else {
+    } else {
         page_html=page_html+current_no;
     }
     page_html=page_html+'</span> ';
@@ -1525,14 +1488,12 @@ function page_prev_next_b(pages_count,cspageno,span_script_prev,span_script_next
     
     if (cspageno>1){
         page_html=page_html+'<span class="'+classname+'" '+span_script_prev+'>prev</span> ';
-    }
-    else {
+    } else {
         page_html=page_html+'<span class="'+classname+'" style="color:'+scheme_global['memo']+';">prev</span> ';
     }
     if (cspageno<=pages_count-1){
         page_html=page_html+'<span class="'+classname+'" '+span_script_next+'>next</span> ';
-    }
-    else {
+    } else {
         page_html=page_html+'<span class="'+classname+'" style="color:'+scheme_global['memo']+';">next</span> ';
     }
     return page_html;
@@ -1570,8 +1531,7 @@ function page_combination_b(cslen,rows_per_page,csno,page_fn,locate_fn,p_style=f
         for (let blxl=1;blxl<=pages;blxl++){
             bljg=bljg+page_one_b(pages,(csno-1)/rows_per_page+1,blxl,'onclick="'+page_fn+((blxl-1)*rows_per_page+1)+fn_right_part+';"',show_number,interval_number,button_class,rand_page_no_list);
         }
-    }
-    else {
+    } else {
         for (let blxl=0;blxl<pages;blxl++){
             bljg=bljg+page_one_b(pages,csno/rows_per_page+1,blxl+1,'onclick="'+page_fn+(blxl*rows_per_page)+fn_right_part+';"',show_number,interval_number,button_class,rand_page_no_list);
         }    
@@ -1608,11 +1568,9 @@ function emoji_category_b(cstype,csno=false){
     if (csno===-1){
         list_t.sort(randomsort_b);
         return list_t[0];
-    }
-    else if (csno<-1){
+    } else if (csno<-1){
         return list_t;
-    }
-    else {
+    } else {
         csno=csno % list_t.length;
         return list_t[csno];
     }
@@ -1636,8 +1594,7 @@ function root_font_size_change_b(change_value=0,csask=false){
         
         increment=newsize-(oldsize-increment);
         root.style.fontSize=newsize.toFixed(2)+'px';
-    }
-    else {
+    } else {
         increment=increment+change_value;
         root.style.fontSize=(oldsize+change_value).toFixed(2)+'px';
     }
@@ -1693,8 +1650,7 @@ function root_font_size_menu_b(csstr='',font_menu=true,full_screen_menu=true,rem
 function body_fullscreen_b(){
     if (document.fullscreenElement==null){
         document.documentElement.requestFullscreen();
-    } 
-    else {
+    } else {
         document.exitFullscreen();
     }
 }
@@ -1731,8 +1687,7 @@ function obj_search_show_hide_b(objs,subobj_querystr='',cskey='',csreg=false,che
         }
         if (objs.length>0){
             return [objs.length,objs[0]];
-        }
-        else {
+        } else {
             return [objs.length,false];
         }
     }
@@ -1744,18 +1699,15 @@ function obj_search_show_hide_b(objs,subobj_querystr='',cskey='',csreg=false,che
         if (subobj_querystr==''){
             if (get_html){
                 bltext=item.innerHTML.trim();            
-            }
-            else {
+            } else {
                 bltext=item.innerText.trim();
             }
-        }
-        else {
+        } else {
             var osub=item.querySelector(subobj_querystr);
             if (osub){
                 if (get_html){
                     bltext=osub.innerHTML.trim();
-                }
-                else {
+                } else {
                     bltext=osub.innerText.trim();
                 }
             }
@@ -1768,8 +1720,7 @@ function obj_search_show_hide_b(objs,subobj_querystr='',cskey='',csreg=false,che
                 first_dom=item;
             }            
             blcount=blcount+1;
-        }
-        else {
+        } else {
             item.style.display='none';
         }
     }
@@ -1800,8 +1751,7 @@ function alarm_interval_sound_b(){
         var blminutes=(new Date().getTime()-kl_alarm_start_time_global)/1000/60;
         if (blminutes<0){
             var blinterval=Math.abs(blminutes)+kl_alarm_interval_global;
-        }
-        else{
+        } else {
             var m_times=blminutes/kl_alarm_interval_global;
             var blinterval=kl_alarm_interval_global-(m_times-Math.floor(m_times))*kl_alarm_interval_global;
         }
@@ -1834,8 +1784,7 @@ function alarm_interval_sound_b(){
         var sound_type=[sound_list[parseInt(blstr.slice(0,1))],sound_list[parseInt(blstr.slice(-1,))]];
         var blxl=0;
         sub_alarm_interval_sound_b_one_sound();
-    }
-    else {
+    } else {
         sub_alarm_interval_sound_b_next();
     }
 }
@@ -1844,8 +1793,7 @@ function alarm_interval_set_b(csinterval=5){
     if (csinterval==0){
         if (typeof(kl_alarm_interval_global) == 'undefined'){
             var blvalue='5';
-        }
-        else {
+        } else {
             var blvalue=Math.max(5,parseInt(kl_alarm_interval_global));
         }
         csinterval=prompt('输入整点报时时间间隔，须能被5整除，取消报时输入任意不符合要求数字',blvalue);
@@ -1887,11 +1835,10 @@ function highlight_obj_b(obj,search_str,new_str){
     if (search_str==''){return 0;}
     var old_txt=obj.innerText;
     var old_html=obj.innerHTML;
-    try{
+    try {
         if (old_html.match(search_str)==null){return 0;}
         var new_html=old_html.replace(new RegExp(search_str,'g'),new_str);
-    }
-    catch (error){
+    } catch (error){
         console.log(error.message);
         return -1;
     }
@@ -1957,8 +1904,7 @@ function highlight_text_b(cswordlist=[],query_str=''){
     for (let one_key of blkey2){
         try {
             var bltmp=''.replace(new RegExp(one_key,'g'),'');
-        }
-        catch (error){
+        } catch (error){
             console.log(error.message); //此行保留 - 保留注释
             reg_error=true;
             break;
@@ -1979,8 +1925,7 @@ function highlight_text_b(cswordlist=[],query_str=''){
                 if (old_text.includes(one_key)){
                     if (reg_error){
                         new_html=new_html.replace(one_key,'<span class="span_key_highlight" style="font-weight:bold;background-color:'+highlight_color_b(blxl)+';">'+one_key+'</span>');                    
-                    }
-                    else {
+                    } else {
                         new_html=new_html.replace(new RegExp(one_key,'g'),'<span class="span_key_highlight" style="font-weight:bold;background-color:'+highlight_color_b(blxl)+';">'+one_key+'</span>');
                     }
                 }
@@ -2006,8 +1951,7 @@ function select_prev_or_next_b(oselect,cstype,filter_visible=false){
         if (oselect.selectedIndex>0 && cstype=='p'){
             oselect.selectedIndex--;            
             bldone=true;
-        }
-        else if (oselect.selectedIndex<oselect.length-1 && cstype=='n'){
+        } else if (oselect.selectedIndex<oselect.length-1 && cstype=='n'){
             oselect.selectedIndex++;
             bldone=true;
         }
@@ -2088,8 +2032,7 @@ function date_count_dots_b(cslist,cscolor='red',color_range=13,csstep=20,csunit=
         var is01=month01_day_b(the_day);
         if (blno==0){
             cslist[blxl]='<span style="'+is01+'" title="'+the_day+' '+item[1].toFixed(sum_decimal_len)+'">◌</span>'+sunday_str;
-        }
-        else {
+        } else {
             cslist[blxl]='<span style="color:'+color_list[blno]+';'+is01+'" title="'+the_day+' '+item[1].toFixed(sum_decimal_len)+'">●</span>'+sunday_str;
         }
         total_lines=total_lines+item[1];
@@ -2119,13 +2062,11 @@ function date_count_dots_b(cslist,cscolor='red',color_range=13,csstep=20,csunit=
         for (let blxl=0;blxl<used_color.length;blxl++){
             if (used_color[blxl]==0){
                 color_legend_list.push([blxl,'<span>◌</span> 0('+(zero_days==step_list[blxl]?'':zero_days+'/')+step_list[blxl]+'日)']);
-            }
-            else if (step_list[blxl]>0){
+            } else if (step_list[blxl]>0){
                 color_legend_list.push([blxl,'<span style="color:'+color_list[used_color[blxl]]+';" title="'+step_list[blxl]+'">●</span> '+used_color[blxl]*csstep]);
             }
         }
-    }
-    else {
+    } else {
         csunit='';
     }
     
@@ -2184,8 +2125,7 @@ function doms_rect_b(odoms,return_list=false){
     
     if (return_list){
         return [blleft,bltop,blwidth,blheight];
-    }
-    else {
+    } else {
         return {'left':blleft,'top':bltop,'width':blwidth,'height':blheight};
     }
 }

@@ -17,8 +17,7 @@ function book_makelist_b(cstag='all',reg_mark='_reg'){
         for (let item of csbooklist_source_global){
             csbooklist_sub_global.push(item);
         }
-    }
-    else {
+    } else {
         for (let item of csbooklist_source_global){
             search_t=str_reg_search_b(item,cstag,blreg);
             if (search_t==-1){break;}
@@ -42,16 +41,13 @@ function book_href_check_b(is_attach=true){
     if ((cshref.includes('/klwebphp/') || cshref.includes('/klwebphp_backup/')) && !cshref.includes('/PythonTools/')){
         if (is_attach){
             return 'PythonTools/data/selenium_news/jsdoc_attachment/';
-        }
-        else {
+        } else {
             return 'PythonTools/data/selenium_news/jsdoc3/';
         }
-    }
-    else {
+    } else {
         if (is_attach){    
             return new URL('../',cshref)['href']+'jsdoc_attachment/';
-        }
-        else {
+        } else {
             return new URL('../',cshref)['href']+'jsdoc3/';
         }
     }
@@ -66,38 +62,30 @@ function book_path_b(jsdoc_num,is_private=false){
     var is_file=(blhref.substring(0,5)=='file:');
     if (jsdoc_num=='3'){
         return book_href_check_b(false);
-    }
-    else if (jsdoc_num.toString().includes('digest')){
+    } else if (jsdoc_num.toString().includes('digest')){
         if (is_private){
             if (is_file){
                 return blhref.split('/klwebphp/')[0]+'/jsdoc/jsdoc'+jsdoc_num.replace('digest','')+'/digest/';
-            }
-            else {
+            } else {
                 return blhref.split('/klwebphp/')[0]+'/klwebphp/jsdoc'+jsdoc_num.replace('digest','')+'/digest/';
             }        
-        }
-        else {
+        } else {
             return book_href_check_b(true)+jsdoc_num+'/';
         }
-    }
-    else {
+    } else {
         if (blhref.includes('/klwebphp/')){
             if (is_file){
                 blhref=blhref.split('/klwebphp/')[0]+'/jsdoc/jsdoc'+jsdoc_num+'/';
-            }
-            else {
+            } else {
                 blhref=blhref.split('/klwebphp/')[0]+'/klwebphp/jsdoc'+jsdoc_num+'/';
             }
-        }
-        else if (blhref.includes('/klwebphp_backup/')){
+        } else if (blhref.includes('/klwebphp_backup/')){
             if (is_file){
                 blhref=blhref.split('/klwebphp_backup/')[0]+'/jsdoc_backup/jsdoc'+jsdoc_num+'/'; //是 /jsdoc_backup/ 而不是 /jsdoc/ - 保留注释
-            }
-            else {
+            } else {
                 blhref=blhref.split('/klwebphp_backup/')[0]+'/klwebphp_backup/jsdoc'+jsdoc_num+'/';
             }
-        }
-        else {
+        } else {
             blhref=new URL('../',blhref)['href']+'jsdoc'+jsdoc_num+'/';
         }    
         return blhref;
@@ -132,7 +120,7 @@ function import_book_js_b(import_digest=true){
 
         document.write('\n<script>\n');
         document.write('\nvar filelist2=[];\n');
-        document.write('\nfor (let item of filelist) {\n');
+        document.write('\nfor (let item of filelist){\n');
         document.write('\n    filelist2.push(item);\n');
         document.write('}\n</script>\n');
     }
@@ -152,12 +140,11 @@ function import_book_js_b(import_digest=true){
         if (jsdoc_num.includes('digest')){
             document.write('\n<script>\n');
             document.write('var filelist=[];\n');
-            document.write('for (let item of digest_global) {\n');
+            document.write('for (let item of digest_global){\n');
             document.write('    filelist.push(item);\n');
             document.write('}\n');
             document.write('</script>\n');        
-        }
-        else {
+        } else {
             menu_digest_file_full_name_b(book_no,jsdoc_num,bookid,jsdoc_path,import_digest,true);
         }
         
@@ -166,8 +153,7 @@ function import_book_js_b(import_digest=true){
             var list_t=book_type.match(/J([a-z]+)/) || [];
             if (list_t.length==2){
                 txtbook_js_code_file_global=list_t[1];            
-            }
-            else {
+            } else {
                 txtbook_js_code_file_global=bookid;
             }
         }
@@ -180,8 +166,7 @@ function digest_get_enwords_b(is_set=true,is_lower=false){
         if (item.substring(0,1)=='*'){
             if (is_lower){
                 result_t.push(item.substring(1,).trim().toLowerCase());            
-            }
-            else {
+            } else {
                 result_t.push(item.substring(1,).trim());
             }
         }
@@ -204,8 +189,7 @@ function menu_digest_file_full_name_b(book_no=false,jsdoc_num=false,bookid=false
     if (jsdoc_num==false){
         if (csbooklist_sub_global[book_no].length>=4){
             jsdoc_num=csbooklist_sub_global[book_no][3];    
-        }
-        else {
+        } else {
             jsdoc_num='';
         }
     }
@@ -231,8 +215,7 @@ function menu_digest_file_full_name_b(book_no=false,jsdoc_num=false,bookid=false
             js_digest_file=jsdoc_path+'digest/'+bookid+'_digest.js';
             result_t.push(['js',js_digest_file,'']);
         }
-    }
-    else {
+    } else {
         js_menu_file=book_path_py_b('menu',jsdoc_num)+bookid+'_menu.js';
         result_t.push(['js',js_menu_file,'']);
 
@@ -249,8 +232,7 @@ function menu_digest_file_full_name_b(book_no=false,jsdoc_num=false,bookid=false
     var today=(is_local_b()?'?'+today_str_b('d',''):'');    
     if (import_digest){
         return [js_menu_file+today,js_digest_file+today];
-    }
-    else {
+    } else {
         return [js_menu_file+today,''];
     }
 }
@@ -307,13 +289,11 @@ function books_b(showall=false,cstype='txt',cstag='all'){   //书目生成，cat
                 bljg=bljg+'<a class="a_oblong_box" '+(item[3]=='3'?'style="background-color:'+scheme_global['button']+';" ':'')+'href="?'+item[0]+'_tag'+cstag;
                 if (blword+blreg==''){
                     bljg=bljg+'&line=1';
-                }
-                else {
+                } else {
                     bljg=bljg+'&s='+blword+blreg;
                 }
                 bljg=bljg+'">';
-            }
-			else if (cstype=='eng'){
+            } else if (cstype=='eng'){
                 bljg=bljg+'<a class="a_oblong_box" href="?book='+(parseInt(blno)+1)+'">';
             }
 			if (csbookno_global==blno){
@@ -329,8 +309,7 @@ function books_b(showall=false,cstype='txt',cstag='all'){   //书目生成，cat
 			if (cstype=='txt' || cstype=='eng'){
                 bljg=bljg+'</a> ';
             }
-		}
-		else {
+		} else {
             bljg=bljg+'. . . ';
         }
 	}
@@ -342,8 +321,7 @@ function books_b(showall=false,cstype='txt',cstag='all'){   //书目生成，cat
 	tmp_o=document.getElementById('booklinks');
 	if (tmp_o){
         tmp_o.innerHTML=bljg;
-    }
-	else {
+    } else {
         return bljg;
     }
 	return '';
@@ -373,8 +351,7 @@ function book_category_b(csid='',otherlists=[],cstag='',cstype=''){
         if (item=='📝' && blstr==''){continue;} //无临时摘要则不显示临时摘要图标，但 csbooklist_source_global 中书籍的 tag 中还有 📝 标记 - 保留注释
         if ((' '+cstag+' ').includes(' +'+item+' ') || (' '+cstag+' ').includes(' '+item+' ') && !cstag.includes('+')){
             var redstr=' style="color:red;"';
-        }
-        else {
+        } else {
             var redstr='';
         }
         bljg.push('<a class="a_book_category" href="?_tag'+item+'"'+redstr+'>'+item+'</a> ');
@@ -465,8 +442,7 @@ function booklist_source_config_b(is_digest=false){
 function book_type_b(arow,includes_character=false){
     if (includes_character===false){
         return arow[4];
-    }
-    else {
+    } else {
         return arow[4].includes(includes_character);
     }
 }
@@ -488,11 +464,9 @@ function load_current_book_b(load_digest_file=false,do_write=true){
     var blhref=location.href;
     if (blhref.includes('/klwebphp/')){
         blhref=blhref.split('/klwebphp/')[0]+'/klwebphp/data/';
-    }
-    else if (blhref.includes('/klwebphp_backup/')){
+    } else if (blhref.includes('/klwebphp_backup/')){
         blhref=blhref.split('/klwebphp_backup/')[0]+'/klwebphp_backup/data/';
-    }    
-    else {
+    } else {
         blhref=new URL('../',blhref)['href']+'jsdata/';
     }
     

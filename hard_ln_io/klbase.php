@@ -2,8 +2,7 @@
 function file_check_g($file_path_name,$show_full_name=false,$check_write=false,$check_is_file=true,$max_size=50){   //$max_size 单位 MB - 保留注释
     if ($show_full_name){
         $bname=$file_path_name;
-    }
-    else {
+    } else {
         $bname = pathinfo($file_path_name)['basename'];
     }
     if ($check_is_file){
@@ -41,23 +40,15 @@ function strcmp_array_g($arr1,$arr2){
     
     if ($cmp1comma2==0 and $cmp12==0){
         return 0;
-    }
-    elseif ($cmp12==0){
+    } elseif ($cmp12==0){
         return $cmp1comma2;
     }
     return $cmp12;
 }
 
 function js_alert_g($csstr,$id=''){
-    echo "\n".'<script language="javascript">'."\n";
+    echo "\n".'<script>'."\n";
     echo 'js_alert_b("'.specialstr92_g($csstr).'","'.specialstr92_g($id).'")'."\n";
-    //if ($id===''){
-        //echo 'alert("'.$csstr.'");'."\n";
-    //}
-    //else {
-        //echo 'document.getElementById("'.$id.'").innerHTML=new Date().toLocaleTimeString()+" "+"'.$csstr.'";'."\n";
-        //echo 'setTimeout(function(){document.getElementById("'.$id.'").innerHTML="";},5000);'."\n";
-    //}
     echo '</script>'."\n";
 }
 
@@ -66,18 +57,14 @@ function client_g(){
     $bljg='';
     $list_t=['chrome','chromium','firefox','safari'];
     foreach ($list_t as $item){
-        if (false===strpos($blclient,$item)){
-            continue;
-        }
+        if (false===strpos($blclient,$item)){continue;}
         $bljg=substr($item,0,2);
         break;
     }
 
     $list_t=['ubuntu','android','linux','win','bsd','unix'];
     foreach ($list_t as $item){
-        if (false===strpos($blclient,$item)){
-            continue;
-        }
+        if (false===strpos($blclient,$item)){continue;}
         $bljg=$bljg.substr($item,0,2);
         break;
     }
@@ -88,6 +75,7 @@ function client_g(){
 }
 
 function parentdir_g($csdir){
+    //如果 $csdir 是文件，则返回目录，末尾不含 / - 保留注释
     $at=strrpos($csdir,'/');
     if ($at==false){
         return '';
@@ -104,6 +92,25 @@ function specialstr_g($csstr){
     $bljg=str_replace("'",'&#39;',$bljg);
 
     return $bljg;
+}
+
+function txt2jsarray_g($csstr,$remove_r=false,$replace_n=false){
+    #str2js - 保留注释
+    if ($remove_r){
+        $csstr=str_replace("\r",'',$csstr);
+    }
+    
+    if (strpos($csstr, "\\") !== false){
+        $csstr=str_replace("\\",'\\\\',$csstr);
+    }
+    if (strpos($csstr, '"') !== false){
+        $csstr=str_replace('"','\"',$csstr);
+    }
+
+    if ($replace_n){
+        $csstr=str_replace("\n",'\n',$csstr);   //放在后部 - 保留注释
+    }    
+    return '"'.$csstr.'"';
 }
 
 function filelist_g($csdir,$cstype='',$csfilter='',$onlyname=false,$csmax=-1){
@@ -125,10 +132,10 @@ function filelist_g($csdir,$cstype='',$csfilter='',$onlyname=false,$csmax=-1){
     
     $include_dir=false;
     $include_file=false;
-    if (strpos($cstype, 'd') !== false) {
+    if (strpos($cstype, 'd') !== false){
         $include_dir=true;
     }
-    if (strpos($cstype, 'f') !== false) {
+    if (strpos($cstype, 'f') !== false){
         $include_file=true;
     }
     if ($include_dir==false and $include_file==false){
@@ -137,14 +144,14 @@ function filelist_g($csdir,$cstype='',$csfilter='',$onlyname=false,$csmax=-1){
     
     if ($csfilter!==''){
         preg_match($csfilter, '');
-        if (preg_last_error() !== PREG_NO_ERROR) {
+        if (preg_last_error() !== PREG_NO_ERROR){
             return [];
         }
     }
     
-    if (false != ($handle = opendir ( $csdir ))) {
+    if (false != ($handle = opendir ( $csdir ))){
         $blxl=0;
-        while ( false !== ($file = readdir ( $handle )) ) {
+        while ( false !== ($file = readdir ( $handle )) ){
             //去掉"“.”、“..”以及带“.xxx”后缀的文件
             if ($file == '.' or $file == '..'){continue;}
             if (!is_readable($csdir.$file)){continue;}
@@ -157,8 +164,7 @@ function filelist_g($csdir,$cstype='',$csfilter='',$onlyname=false,$csmax=-1){
                 if ($include_dir){
                     $is_push=true;
                 }
-            }
-            elseif ($include_file and is_file($csdir.$file)){
+            } elseif ($include_file and is_file($csdir.$file)){
                 $is_push=true;
             }
 
@@ -171,16 +177,16 @@ function filelist_g($csdir,$cstype='',$csfilter='',$onlyname=false,$csmax=-1){
             if ($is_push){
                 array_push($file_list,$csdir.$file);
                 $blxl++;
-                if($blxl>=$csmax){break;}
+                if ($blxl>=$csmax){break;}
             }
             
-            //--------------
+            //-----------------------
             if (is_dir($csdir.$file)){
                 //返回含完整路径的结果 - 保留注释
                 $templist=filelist_g($csdir.$file,$cstype,$csfilter,false,$csmax);
                 $file_list=array_merge($file_list,$templist);
                 $blxl=$blxl+count($templist);
-                if($blxl>=$csmax){break;}
+                if ($blxl>=$csmax){break;}
             }
         }
         //关闭句柄
@@ -207,196 +213,167 @@ function specialstr92_g($csstr){
     return $bljg;
 }
 
-function filter_query_g($csstr){    
-    $list_t=explode(' ',$csstr);
-    $filter_t=["query","select","drop","delete","where","limit","function","global","require_once","require","if","return","echo","foreach","as","insert","update","values","break","into","order","and","or","not","true","false","\\"];
-    $bljg=[];
-    foreach ($list_t as $item){
-        if (trim($item)==''){continue;}
-        if (in_array(strtolower($item),$filter_t) or in_array('+'.strtolower($item),$filter_t) or in_array('-'.strtolower($item),$filter_t)){
-            continue;
-        }
-        if (strpos($item,'(:')!==false){
-            $tmp_t=explode('(:',$item)[0];
-            if (in_array(strtolower($tmp_t),$filter_t) or in_array('+'.strtolower($tmp_t),$filter_t) or in_array('-'.strtolower($tmp_t),$filter_t)){
-                continue;
-            }
-        }
-        array_push($bljg, specialstr_g($item));
-    }
-    $and_t=false;
-    foreach ($bljg as $item){
-        if (substr($item,0,1)=='+' or substr($item,0,1)=='-') {
-            $and_t=true;
-            break;
-        }
-    }
-    if ($and_t){
-        $bljg2=[];
-        foreach ($bljg as $item){
-            if (substr($item,0,1)=='+' or substr($item,0,1)=='-') {
-                array_push($bljg2, $item);
-            }
-        }
-        if (count($bljg2)==0){
-            return [''];
-        }
-        return $bljg2;
-    }
-    if (count($bljg)==0){
-        return [''];
-    }
-    return $bljg;
+function regexp_g($pattern, $subject){
+    return preg_match("/{$pattern}/i", $subject);
 }
 
-function key_type_g($akey,$acol,$reg=false){
-    //echo '<br />'.$akey.$acol;
-    if ($reg){
-        $middle=' REGEXP "';
-        $end='"';
-        $akey=str_replace('&#92;','\\',$akey);
+function testre_g($cskey,$do_echo=false){
+    $do_reg=false;
+    if ($do_echo){
+        echo '`'."\n";
     }
-    else {
-        $middle=' LIKE "%';
-        $end='%"';
+    preg_match('/'.$cskey.'/i', 'some words');
+    if ($do_echo){
+        echo "\n";
+    }    
+    if (preg_last_error()==PREG_NO_ERROR){
+        $do_reg=true;
     }
-    $is_like_t=true;
-
-    $operations=[['&gt;=','>='],['&lt;=','<='],['&lt;&gt;','<>'],['=','='],['&gt;','>'],['&lt;','<']];
-    foreach ($operations as $a_oper){
-        $oper_len=strlen($a_oper[0]);
-        if (substr($akey,0,$oper_len)==$a_oper[0]){
-            $middle=$a_oper[1].'"';
-            $end='"';
-            $akey=substr($akey,$oper_len,strlen($akey)-$oper_len);
-            $is_like_t=false;
-            break;
-        }
-    }
-
-    if (substr($acol,-3,3)=='(n)'){
-            $acol=substr($acol,0,strlen($acol)-3);
-            if ($is_like_t){
-                $acol='CONVERT('.$acol.',char)';
-            }
-            elseif (is_numeric($akey)) {
-                $middle=substr($middle,0,strlen($middle)-1);
-                $end='';
-            }
-            else {return '';}
-    }
-    elseif (substr($acol,-3,3)=='(d)' or substr($acol,-3,3)=='(t)'){
-            $acol=substr($acol,0,strlen($acol)-3);
-            if ($is_like_t){
-                $acol='CONVERT('.$acol.',char)';
-            }
-    }
-        
-    return $acol.$middle.$akey.$end;
+    if ($do_echo){
+        echo '`;'."\n";
+    }    
+    return $do_reg;
 }
 
-function query_make_g($keys,$columns,$reg=false){
-    //query_make_g($key,["title","href(n)"]);
-    //query_make_g($key,["title,标题","href(n),链接"]);
-    $bljg='';
-    if (count($keys)==1 and $keys[0]==''){return '';}
-    foreach ($keys as $akey){
-        if ($keys==''){continue;}
-        $pre=' or ';
-        if (substr($akey,0,1)=='+'){
-            $pre=' and ';
-            $akey=substr($akey,1,strlen($akey)-1);
-        }
-        elseif (substr($akey,0,1)=='-'){
-            $pre=' and not ';
-            $akey=substr($akey,1,strlen($akey)-1);
-        }
+function str_reg_check_g($cskey,$is_reg=false,$do_trim=true,$cstype='(:r)'){
+    $bllen=strlen($cstype)*-1;
+    if (substr($cskey,$bllen)==$cstype){
+        $is_reg=true;
+        $cskey=substr($cskey,0,$bllen);
+    }
+    if ($do_trim){
+        $cskey=rtrim($cskey);
+    }
+    return [$cskey,$is_reg];
+}
 
-        $blstr_t='';
-        foreach ($columns as $acol){ 
-            $acol_list_t=explode(',',$acol);
-
-            if (substr($akey,-1)==')' and strpos($akey,'(:')!==false){
-                $tmp1_t=substr($akey,0,strrpos($akey,'(:'));
-                $tmp2_t=substr($akey,strrpos($akey,'(:'));
-                
-                if (count($acol_list_t)>1){
-                    if ($tmp2_t!=='(:'.$acol_list_t[0].')' and $tmp2_t!=='(:'.$acol_list_t[1].')'){
-                        continue;
-                    }
-                }
-                else {
-                    if ($tmp2_t!=='(:'.$acol_list_t[0].')'){
-                        continue;
-                    }
-                }
-                $akey=$tmp1_t;
-                
-                $akey_and_acol=key_type_g($akey,$acol_list_t[0],$reg);
-                if ($akey_and_acol!==''){
-                    if ($blstr_t=='') {
-                        $blstr_t=$akey_and_acol.' ';
-                    }
-                    else {
-                        $blstr_t=$blstr_t.' or '.$akey_and_acol.' ';
-                    }
-                }
+function str_reg_search_g($csinput,$cskeys,$csreg){
+    //$csinput 和 $cskeys 可以是字符串，也可以是数组 - 保留注释
+    //如果返回 -1 ，表示正则表达式出错 - 保留注释
+    $sub_str_reg_search_g_normal=function ($csinput,$word_t){
+        $blfound_t2=false;
+        foreach ($csinput as $item_t){
+            if (strpos($item_t.'',$word_t)!==false){
+                $blfound_t2=true;
                 break;
             }
-
-            $akey_and_acol=key_type_g($akey,$acol_list_t[0],$reg);
-            if ($akey_and_acol!==''){
-                if ($blstr_t=='') {
-                    $blstr_t=$akey_and_acol.' ';
-                }
-                else {
-                    $blstr_t=$blstr_t.' or '.$akey_and_acol.' ';
-                }
+        }
+        return $blfound_t2;
+    };
+    
+    $sub_str_reg_search_g_re=function ($csinput,$word_t){
+        $blfound_t2=false;
+        foreach ($csinput as $item_t){
+            if (preg_match("/{$word_t}/i", $item_t.'')){
+                $blfound_t2=true;
+                break;
             }
         }
-        if (substr($blstr_t,-1)==' '){
-            $blstr_t=substr($blstr_t,0,strlen($blstr_t)-1);
-        }
-        if ($blstr_t!==''){
-            $blstr_t='('.$blstr_t.')';
-
-            if ($bljg=='') {
-                if ($pre==' and not '){$bljg='not '.$blstr_t.' ';}
-                else {$bljg=$blstr_t;}
-            }
-            else {
-                $bljg=$bljg.$pre.$blstr_t.' ';
-            }  
-        }
-    }
-    if (count($keys)==1 and substr($bljg,0,4)!=='not '){
-        $bljg=substr($bljg,1,strlen($bljg)-2);
+        return $blfound_t2;
+    };
+    //-----------------------
+	$blfound_t=false;
+	if (is_array($csinput)==false){
+		$csinput=[''.$csinput];   //可能不是字符串，typeof $csinput!=='string' - 保留注释
+	}
+    //如果 查询关键字 是 字符串，则转换为数组 - 保留注释
+    if (is_string($cskeys)){
+        $cskeys=explode(' ',$cskeys);
     }
 
-    return $bljg;
+    foreach ($cskeys as $word_t){
+		if ($word_t=='' or $word_t=='+' or $word_t=='-'){continue;}
+        
+		if ($csreg==false){
+			if (substr($word_t,0,1)=='+'){
+                $blfound_t2=$sub_str_reg_search_g_normal($csinput,substr($word_t,1,));
+                if ($blfound_t2==false){
+                    $blfound_t=false;
+                    break;
+                } else {
+                    $blfound_t=true;
+                } 
+			} else if (substr($word_t,0,1)=='-'){
+                $blfound_t2=$sub_str_reg_search_g_normal($csinput,substr($word_t,1,));
+                if ($blfound_t2==true){
+                    $blfound_t=false;
+                    break;
+                } else {
+                    $blfound_t=true;
+                }
+			} else {
+                $blfound_t2=$sub_str_reg_search_g_normal($csinput,$word_t);
+                if ($blfound_t2==true){
+                    $blfound_t=true;
+                }
+			}
+		} else {
+			try {
+				if (substr($word_t,0,1)=='+'){
+                    $blfound_t2=$sub_str_reg_search_g_re($csinput,substr($word_t,1,));
+                    if ($blfound_t2==false){
+                        $blfound_t=false;
+                        break;
+                    } else {
+                        $blfound_t=true;
+                    } 
+				} else if (substr($word_t,0,1)=='-'){
+                    $blfound_t2=$sub_str_reg_search_g_re($csinput,substr($word_t,1,));
+                    if ($blfound_t2==true){
+                        $blfound_t=false;
+                        break;
+                    } else {
+                        $blfound_t=true;
+                    } 
+				} else {
+                    $blfound_t2=$sub_str_reg_search_g_re($csinput,$word_t);
+                    if ($blfound_t2==true){
+                        $blfound_t=true;
+                    }
+				}
+			} catch (Exception $err){
+                echo '#error: ',  $word_t.' '.$err->getMessage(), "\n";
+				return -1;
+			}
+		}
+	}
+	return $blfound_t;
 }
 
-function regexp_g($pattern, $subject) {
-    return preg_match("/{$pattern}/", $subject);
-}
-
-function memory_used_g() {
+function memory_used_g(){
     $mem_usage = memory_get_usage(true);
-    if ($mem_usage < 1024) {
-        $mem_usage .= ' B';
-    } elseif ($mem_usage < 1048576) {
-        $mem_usage = round($mem_usage/1024,2) . ' KB';
-    } else {
-        $mem_usage = round($mem_usage/1048576,2) . ' MB';
+    return kbmbgb_g($mem_usage,2);
+}
+
+function kbmbgb_g($cssize,$afterpoint=2){
+    $bldw='';
+    if ($cssize>=1000){
+        $cssize=$cssize/1024;
+        $bldw='KB';
     }
-    return $mem_usage;
+    if ($cssize>=1000){
+        $cssize=$cssize/1024;
+        $bldw='MB';
+    }
+    if ($cssize>=1000){
+        $cssize=$cssize/1024;
+        $bldw='GB';
+    }
+    if ($cssize>=1000){
+        $cssize=$cssize/1024;
+        $bldw='TB';
+    }    
+    if ($bldw==''){
+        return $cssize;
+    }
+    return round($cssize,$afterpoint).$bldw;
 }
 
 function getcsv_g($fname){
     $list_t=[];
     if (file_exists($fname) and strtolower(substr($fname,-4))=='.csv'){
-        if (($handle = fopen($fname, "r")) !== FALSE) {
-            while (($data = fgetcsv($handle)) !== FALSE) {
+        if (($handle = fopen($fname, "r")) !== FALSE){
+            while (($data = fgetcsv($handle)) !== FALSE){
                 array_push($list_t,$data);
             }
             fclose($handle);
@@ -407,9 +384,69 @@ function getcsv_g($fname){
 
 function str_replace_once_g($find, $replace, $csstr){
     $pos = strpos($csstr, $find);
-    if ($pos !== false) {
+    if ($pos !== false){
         $csstr = substr_replace($csstr, $replace, $pos, strlen($find));
     }
     return $csstr;
+}
+
+function array_sort_by_length_g($a, $b){
+    if (strlen($a) == strlen($b)){
+        return 0;
+    }
+    return (strlen($a) < strlen($b)) ? -1 : 1;
+}
+
+function img_ext_g(){
+    return ['avif','bmp','gif','jfif','jpeg','jpg','png','webp'];
+}
+
+function post_get_str_get_g($post_name,$get_name='',$default_value='',$cstype='',$ignore_empty=true){
+    $key=$default_value;
+    
+    $post_or_get='';
+    
+    if (($cstype=='' or $cstype=='post') and isset($_POST[$post_name]) and ($ignore_empty==false or $_POST[$post_name]!=='')){
+        $key=$_POST[$post_name];
+        $post_or_get='post';
+    }
+    
+    if (($cstype=='' or $cstype=='get') and isset($_GET[$get_name]) and ($ignore_empty==false or $_GET[$get_name]!=='')){
+        $key=$_GET[$get_name];
+        $post_or_get='get';
+    }
+    
+    return [$key,$post_or_get];
+}
+
+function post_get_boolean_get_g($post_name,$get_name='',$default_value=false,$cstype=''){
+    $key=$default_value;
+    
+    $post_or_get='';
+    
+    if ($cstype=='' or $cstype=='post'){
+        $key=isset($_POST[$post_name]);
+        $post_or_get='post';
+    }
+    
+    if ($cstype=='' or $cstype=='get'){
+        $key=isset($_GET[$get_name]);
+        $post_or_get='get';
+    }
+    
+    return [$key,$post_or_get];
+}
+
+function str_reg_post_g($cskey,$post_or_get='',$post_name='',$is_reg=false){
+    if ($post_or_get=='post' and $post_name!==''){    
+        $is_reg=isset($_POST[$post_name]);
+    }
+    
+    [$cskey,$is_reg]=str_reg_check_g($cskey,$is_reg);
+    
+    if ($is_reg){
+        $is_reg=testre_g($cskey,true);
+    }
+    return [$cskey,$is_reg];
 }
 ?>

@@ -25,13 +25,11 @@ function wordtypes_enbook_b(blitem){
         word_tmp=blitem.substring(0,blitem.length-3);
         sub_wordtypes_enbook_b_push(word_tmp);
         sub_wordtypes_enbook_b_push(word_tmp+'e');
-    }
-    else if ('ing'.includes(blitem.slice(-3))){
+    } else if ('ing'.includes(blitem.slice(-3))){
         word_tmp=blitem.substring(0,blitem.length-3);
         sub_wordtypes_enbook_b_push(word_tmp);
         sub_wordtypes_enbook_b_push(word_tmp+'e');
-    }
-    else if ('ies,ier,ied'.includes(blitem.slice(-3))){
+    } else if ('ies,ier,ied'.includes(blitem.slice(-3))){
         word_tmp=blitem.substring(0,blitem.length-3);
         sub_wordtypes_enbook_b_push(word_tmp+'y');
     }
@@ -136,8 +134,7 @@ function get_new_words_arr_obj_enbook_b(cstype,csstr='',csobjects=false,addline=
                     //依然会修改一些页面表达，如链接 - 保留注释
                     //item.innerHTML=oldhtml.replace(new RegExp('\\b'+one_new_or_rare_word+'\\b'),'<span class="span_new_word_search_links" onclick="popup_words_links_b(event,\''+specialstr_j(one_new_or_rare_word)+'\');">'+one_new_or_rare_word+'</span>'); //依赖 klbase_eng.js - 保留注释
                     oldstr=item.innerText;
-                }
-                else {
+                } else {
                     item.innerHTML=oldhtml;
                     if (addline){
                         new_line.push(new_html_str);
@@ -150,8 +147,7 @@ function get_new_words_arr_obj_enbook_b(cstype,csstr='',csobjects=false,addline=
                 var p_str='<p class="p_'+class_name+'" style="line-height:250%;">* '+new_line.join(' ')+'</p>';
                 if (append_parent==false){
                     item.innerHTML=item.innerHTML+p_str;
-                }
-                else {
+                } else {
                     item.parentNode.insertAdjacentHTML('afterend',p_str);
                 }
             }
@@ -159,8 +155,7 @@ function get_new_words_arr_obj_enbook_b(cstype,csstr='',csobjects=false,addline=
         if (execstring!==''){
             try {
                 eval(execstring);
-            }
-            catch (error) {
+            } catch (error){
                 console.log('get_new_words_arr_obj_enbook_b()',error);
             }                 
         }
@@ -218,8 +213,7 @@ function new_old_word_list_enbook_b(bljgarr2,check_types=true){
         }
         if (check_types){
             var list_t=wordtypes_enbook_b(item);
-        }
-        else {
+        } else {
             var list_t=new Set();
             list_t.add(item);
         }
@@ -285,8 +279,7 @@ function new_words_continue_enbook_b(cslength,percent10length=0){
             if (confirm('是否批量统计生词数量？')==false){
                 location.href='?';
                 return;
-            }
-            else {
+            } else {
                 all_new_words_count_save_old_data_enbook_b();
                 all_new_words_count_set_enbook_b(true,'');
             }
@@ -303,8 +296,7 @@ function new_words_continue_enbook_b(cslength,percent10length=0){
         
         if (csbooklist_sub_global.length-1>csbookno_global){
             location.href='?book='+(csbookno_global+1+1)+'&continue';
-        }
-        else {
+        } else {
             alert('done');
             location.href='?';
         }
@@ -322,8 +314,7 @@ function all_new_words_count_save_old_data_enbook_b(){
 function all_new_words_count_get_enbook_b(iscurrent=true,return_list=true){
     if (iscurrent){
         return local_storage_get_b('enwords_books_all_new_words_current',-1,return_list);
-    }
-    else {
+    } else {
         return local_storage_get_b('enwords_books_all_new_words_old',-1,return_list);    
     }
 }
@@ -331,8 +322,7 @@ function all_new_words_count_get_enbook_b(iscurrent=true,return_list=true){
 function all_new_words_count_set_enbook_b(iscurrent=true,csvalue=''){
     if (iscurrent){
         localStorage.setItem('enwords_books_all_new_words_current',csvalue);
-    }
-    else {
+    } else {
         localStorage.setItem('enwords_books_all_new_words_old',csvalue);    
     }
 }
@@ -478,12 +468,10 @@ function frequency_enwords_book_b(cstype='',simple_split=false,common_max=4000){
             
             if (new_word_set.has(aword)){
                 blstr=aword;
-            }
-            else if (oldwords.has(aword) || old_variety.has(aword)){
+            } else if (oldwords.has(aword) || old_variety.has(aword)){
                 blstr=aword;
                 is_new=false;
-            }
-            else if (!simple_split){
+            } else if (!simple_split){
                 var variety=wordtypes_enbook_b(aword);
                 for (let one_type of variety){
                     if (oldwords.has(one_type)){
@@ -510,8 +498,7 @@ function frequency_enwords_book_b(cstype='',simple_split=false,common_max=4000){
         blxl=blxl+1;
         if (blxl % 200 == 0){
             setTimeout(sub_frequency_enwords_book_b_arow,1);
-        }
-        else {
+        } else {
             sub_frequency_enwords_book_b_arow();
         } 
     }
@@ -609,8 +596,7 @@ function selenium_enwords_count_enbook_b(is_original=false){
         if (typeof selenium_enwords_data_original_global !== 'undefined'){
             csarray=selenium_enwords_data_original_global;        
         }    
-    }
-    else {
+    } else {
         if (typeof selenium_enwords_data_global !== 'undefined'){
             csarray=selenium_enwords_data_global;
         }

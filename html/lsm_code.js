@@ -62,8 +62,7 @@ function search_value_lsm(csstr=''){
         if (blfound==-1){break;}
         if (blfound){
             item.style.display='';
-        }
-        else {
+        } else {
             item.style.display='none';
         }            
     }    
@@ -86,8 +85,7 @@ function filter_lsm(csstr='',checked=false){
             item.querySelector('input[type="checkbox"]').checked=(item.style.display=='none'?false:true);
         }
         document.getElementById('checkbox_select_all').checked=true;
-    }
-    else {
+    } else {
         for (let item of olis){
             item.querySelector('input[type="checkbox"]').checked=false;
         }

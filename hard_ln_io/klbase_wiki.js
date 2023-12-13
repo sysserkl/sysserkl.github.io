@@ -266,16 +266,13 @@ function wiki_ed2k_magnet_b(csstr,cstyle=''){
         if (csstr.includes('&lt;ed2k name=&quot;') && csstr.includes('&lt;/ed2k&gt;')){
             csstr=csstr.replace(/&lt;ed2k name=&quot;(.*?)&quot;&gt;(ed2k:\/\/\|.*?\|.*?\|(.*?)\|.*?)&lt;\/ed2k&gt;/g,'<a href="$2">$1</a><filesize>$3</filesize>');
             csstr=sub_wiki_ed2k_magnet_b_filesize(csstr);
-        }
-        else if (csstr.includes('&lt;ed2k name="') && csstr.includes('&lt;/ed2k&gt;')){
+        } else if (csstr.includes('&lt;ed2k name="') && csstr.includes('&lt;/ed2k&gt;')){
             csstr=csstr.replace(/&lt;ed2k name="(.*?)"&gt;(ed2k:\/\/\|.*?\|.*?\|(.*?)\|.*?)&lt;\/ed2k&gt;/g,'<a href="$2">$1</a><filesize>$3</filesize>');
             csstr=sub_wiki_ed2k_magnet_b_filesize(csstr);
-        }
-        else if (csstr.includes('&lt;ed2k name=') && csstr.includes('&lt;/ed2k&gt;')){
+        } else if (csstr.includes('&lt;ed2k name=') && csstr.includes('&lt;/ed2k&gt;')){
             csstr=csstr.replace(/&lt;ed2k name=(.*?)&gt;(ed2k:\/\/\|.*?\|.*?\|(.*?)\|.*?)&lt;\/ed2k&gt;/g,'<a href="$2">$1</a><filesize>$3</filesize>');
             csstr=sub_wiki_ed2k_magnet_b_filesize(csstr);
-        }	
-        else if (csstr.includes('&lt;ed2k&gt;') && csstr.includes('&lt;/ed2k&gt;')){
+        } else if (csstr.includes('&lt;ed2k&gt;') && csstr.includes('&lt;/ed2k&gt;')){
             csstr=csstr.replace(/&lt;ed2k&gt;(ed2k:\/\/\|.*?\|.*?\|(.*?)\|.*?)&lt;\/ed2k&gt;/g,'<a href="$1">ed2k</a><filesize>$2</filesize>');
             csstr=sub_wiki_ed2k_magnet_b_filesize(csstr);
         }
@@ -283,14 +280,11 @@ function wiki_ed2k_magnet_b(csstr,cstyle=''){
         //magnet
         if (csstr.includes('&lt;magnet&gt;') && csstr.includes('&lt;/magnet&gt;')){
             csstr=csstr.replace(/&lt;magnet&gt;(.*?)&lt;\/magnet&gt;/g,'<a href="$1">magnet</a>');
-        }
-        else if (csstr.includes('&lt;magnet name=&quot;') && csstr.includes('&lt;/magnet&gt;')){
+        } else if (csstr.includes('&lt;magnet name=&quot;') && csstr.includes('&lt;/magnet&gt;')){
             csstr=csstr.replace(/&lt;magnet name=&quot;(.*?)&quot;&gt;(.*?)&lt;\/magnet&gt;/g,'<a href="$2">$1</a>');
-        }
-        else if (csstr.includes('&lt;magnet name="') && csstr.includes('&lt;/magnet&gt;')){
+        } else if (csstr.includes('&lt;magnet name="') && csstr.includes('&lt;/magnet&gt;')){
             csstr=csstr.replace(/&lt;magnet name="(.*?)"&gt;(.*?)&lt;\/magnet&gt;/g,'<a href="$2">$1</a>');
-        }        
-        else if (csstr.includes('&lt;magnet name=') && csstr.includes('&lt;/magnet&gt;')){
+        } else if (csstr.includes('&lt;magnet name=') && csstr.includes('&lt;/magnet&gt;')){
             csstr=csstr.replace(/&lt;magnet name=(.*?)&gt;(.*?)&lt;\/magnet&gt;/g,'<a href="$2">$1</a>');
         }
     } else {
@@ -298,13 +292,10 @@ function wiki_ed2k_magnet_b(csstr,cstyle=''){
         if (csstr.includes('<ed2k name="') && csstr.includes('</ed2k>')){
             csstr=csstr.replace(/<ed2k name="(.*?)">(ed2k:\/\/\|.*?\|.*?\|(.*?)\|.*?)<\/ed2k>/g,'<a href="$2">$1</a><filesize>$3</filesize>');
             csstr=sub_wiki_ed2k_magnet_b_filesize(csstr);
-        }
-        
-        else if (csstr.includes('<ed2k name=') && csstr.includes('</ed2k>')){
+        } else if (csstr.includes('<ed2k name=') && csstr.includes('</ed2k>')){
             csstr=csstr.replace(/<ed2k name=(.*?)>(ed2k:\/\/\|.*?\|.*?\|(.*?)\|.*?)<\/ed2k>/g,'<a href="$2">$1</a><filesize>$3</filesize>');
             csstr=sub_wiki_ed2k_magnet_b_filesize(csstr);
-        }	
-        else if (csstr.includes('<ed2k>') && csstr.includes('</ed2k>')){
+        } else if (csstr.includes('<ed2k>') && csstr.includes('</ed2k>')){
             csstr=csstr.replace(/<ed2k>(ed2k:\/\/\|.*?\|.*?\|(.*?)\|.*?)<\/ed2k>/g,'<a href="$1">ed2k</a><filesize>$2</filesize>');
             csstr=sub_wiki_ed2k_magnet_b_filesize(csstr);
         }
@@ -312,11 +303,9 @@ function wiki_ed2k_magnet_b(csstr,cstyle=''){
         //magnet
         if (csstr.includes('<magnet>') && csstr.includes('</magnet>')){
             csstr=csstr.replace(/<magnet>(.*?)<\/magnet>/g,'<a href="$1">magnet</a>');
-        }
-        else if (csstr.includes('<magnet name="') && csstr.includes('</magnet>')){
+        } else if (csstr.includes('<magnet name="') && csstr.includes('</magnet>')){
             csstr=csstr.replace(/<magnet name="(.*?)">(.*?)<\/magnet>/g,'<a href="$2">$1</a>');
-        }
-        else if (csstr.includes('<magnet name=') && csstr.includes('</magnet>')){
+        } else if (csstr.includes('<magnet name=') && csstr.includes('</magnet>')){
             csstr=csstr.replace(/<magnet name=(.*?)>(.*?)<\/magnet>/g,'<a href="$2">$1</a>');
         }
     }
@@ -327,21 +316,17 @@ function wiki_mrt_b(csstr,cstyle=""){
     if (cstyle=='and'){
         if (csstr.includes('&lt;mrt r&gt;') && csstr.includes('&lt;/mrt&gt;')){
             csstr=csstr.replace(/&lt;mrt r&gt;(.*?)&lt;\/mrt&gt;/g,'<font color=blue><b>REVIEW:</b></font> <span style="color:#303030; border-bottom:1px dotted #303030;background-color:#fdfd32;">$1</span>');
-        }
-        else if (csstr.includes('&lt;mrt m&gt;') && csstr.includes('&lt;/mrt&gt;')){
+        } else if (csstr.includes('&lt;mrt m&gt;') && csstr.includes('&lt;/mrt&gt;')){
             csstr=csstr.replace(/&lt;mrt m&gt;(.*?)&lt;\/mrt&gt;/g,'<font color=green><b>MEMO:</b></font> <span style="color:#303030; border-bottom:1px dotted #303030;background-color:#fdfd32;">$1</span>');
-        }
-        else if (csstr.includes('&lt;mrt t&gt;') && csstr.includes('&lt;/mrt&gt;')){
+        } else if (csstr.includes('&lt;mrt t&gt;') && csstr.includes('&lt;/mrt&gt;')){
             csstr=csstr.replace(/&lt;mrt t&gt;(.*?)&lt;\/mrt&gt;/g,'<font color=red><b>TODO:</b></font> <span style="color:#303030; border-bottom:1px dotted #303030;background-color:#fdfd32;">$1</span>');
         }
     } else {
         if (csstr.includes('<mrt r>') && csstr.includes('</mrt>')){
             csstr=csstr.replace(/<mrt r>(.*?)<\/mrt>/g,'<font color=blue><b>REVIEW:</b></font> <span style="color:#303030; border-bottom:1px dotted #303030;background-color:#fdfd32;">$1</span>');
-        }
-        else if (csstr.includes('<mrt m>') && csstr.includes('</mrt>')){
+        } else if (csstr.includes('<mrt m>') && csstr.includes('</mrt>')){
             csstr=csstr.replace(/<mrt m>(.*?)<\/mrt>/g,'<font color=green><b>MEMO:</b></font> <span style="color:#303030; border-bottom:1px dotted #303030;background-color:#fdfd32;">$1</span>');
-        }
-        else if (csstr.includes('<mrt t>') && csstr.includes('</mrt>')){
+        } else if (csstr.includes('<mrt t>') && csstr.includes('</mrt>')){
             csstr=csstr.replace(/<mrt t>(.*?)<\/mrt>/g,'<font color=red><b>TODO:</b></font> <span style="color:#303030; border-bottom:1px dotted #303030;background-color:#fdfd32;">$1</span>');
         }
     }
@@ -446,10 +431,10 @@ function wiki_website_b(csstr,cstyle=''){
 
 function wiki_sns_b(csstr){
     //{{t|n=}} {{w|n=}}
-    if (csstr.includes('{{t|n=')) {
+    if (csstr.includes('{{t|n=')){
         csstr=csstr.replace(/{{t\|n=(.*?)}}/g,'<a href="https://twitter.com/$1" target=_blank>@$1</a>');
     }   
-    if (csstr.includes('{{w|n=')) {
+    if (csstr.includes('{{w|n=')){
         csstr=csstr.replace(/{{w\|n=(.*?)}}/g,'<a href="https://weibo.com/n/$1" target=_blank>@$1</a>');
     }    
     return csstr;
@@ -500,18 +485,14 @@ function wiki_table_b(csstr='',tablestyle='',tdstyle='',thstyle=''){
         if (item.substring(0,2)=='{|'){
             blstart=true;
             list_t[blxl]='<table '+list_t[blxl].substring(2,)+' '+tablestyle+'>';
-        }
-        else if (blstart==false){
+        } else if (blstart==false){
             continue;
-        }
-        else if (item.trim()=='|-'){
+        } else if (item.trim()=='|-'){
             list_t[blxl]='<tr>';
-        }
-        else if (item.trim()=='|}'){
+        } else if (item.trim()=='|}'){
             list_t[blxl]='</table>';
             blstart=false;
-        }
-        else if (item.substring(0,2)=='! '){
+        } else if (item.substring(0,2)=='! '){
             item=item.substring(2,);
             item=item.replace(/ \|\| /g,' !! ');
             var td_list=item.split(' !! ');
@@ -520,8 +501,7 @@ function wiki_table_b(csstr='',tablestyle='',tdstyle='',thstyle=''){
                 blstr_t=blstr_t+'<th'+thstyle+'>'+one_td.trim()+'</th>\n';
             }
             list_t[blxl]=blstr_t+'</tr>';
-        }
-        else if (item.substring(0,2)=='| '){
+        } else if (item.substring(0,2)=='| '){
             item=item.substring(2,);
             var td_list=item.split(' || ');
             var blstr_t='';

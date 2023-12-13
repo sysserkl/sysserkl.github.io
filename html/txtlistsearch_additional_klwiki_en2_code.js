@@ -49,8 +49,7 @@ function batch_search_result_kltxt_klwiki_en2(){
     var csword=[];
     if (exclude_eword){
         csword=['+\\b('+blwordlist.join('|')+')\\b','-eword'];
-    }
-    else {
+    } else {
         csword=['+\\b('+blwordlist.join('|')+')\\b'];    //比 csword.push('\\b'+item+'\\b'); 快 - 保留注释
     }
 

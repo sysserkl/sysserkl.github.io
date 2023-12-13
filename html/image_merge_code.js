@@ -97,8 +97,7 @@ function read_merge_img(){
     if (vh=='vertical'){
         ocanvas.width=max_width+blmargin*2;
         ocanvas.height=sum_height+(img_file_list_global.length-1)*blspan+blmargin*2;
-    }
-    else {
+    } else {
         ocanvas.width=sum_width+(img_file_list_global.length-1)*blspan+blmargin*2;
         ocanvas.height=max_height+blmargin*2;
     }
@@ -120,8 +119,7 @@ function read_merge_img(){
         if (vh=='vertical'){
             ctx.drawImage(one_img, 0, 0,one_img.width,one_img.height,align_merge_img(ocanvas.width,resize_w,align_type),bltop,resize_w,resize_h);
             bltop=bltop+resize_h+blspan;
-        }
-        else {
+        } else {
             ctx.drawImage(one_img, 0, 0,one_img.width,one_img.height,blleft,align_merge_img(ocanvas.height,resize_h,align_type),resize_w,resize_h);
             blleft=blleft+resize_w+blspan;        
         }

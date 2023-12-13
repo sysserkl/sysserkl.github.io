@@ -55,8 +55,8 @@ function moveDown_tetris(){
         full_row_count=full_row_count+1;
         // if the rows_global is full
         // we move down all the rows_globals above it
-        for(let arow = the_full_row; arow > 1; arow--){
-            for(let acol = 0; acol < cols_global; acol++){
+        for (let arow = the_full_row; arow > 1; arow--){
+            for (let acol = 0; acol < cols_global; acol++){
                 board_current_global[arow][acol] = board_current_global[arow-1][acol];
             }
         }
@@ -123,8 +123,7 @@ function draw_board_next_tetris(){
             for (let c=0;c<current_piece.length;c++){
                 if (current_piece[r][c]==0){
                     board_next_global[r+blxl*5][c]=background_color_global;
-                }
-                else {
+                } else {
                     board_next_global[r+blxl*5][c]=thecolor;
                 }
             }
@@ -190,8 +189,7 @@ function move_brick_tetris(cstype){
             blstat=true;
         }
         dropStart_global = Date.now();
-    }
-    else if (cstype == 38){
+    } else if (cstype == 38){
         //rotate
         let nextPattern = current_brick_list_global[(current_brick_no_global + 1)%current_brick_list_global.length];
         let kick = 0;
@@ -200,8 +198,7 @@ function move_brick_tetris(cstype){
             if (position_x_global > cols_global/2){
                 // it's the right wall
                 kick = -1; // we need to move the piece to the left
-            }
-            else {
+            } else {
                 // it's the left wall
                 kick = 1; // we need to move the piece to the right
             }
@@ -216,8 +213,7 @@ function move_brick_tetris(cstype){
         }
                 
         dropStart_global = Date.now();
-    }
-    else if (cstype == 39){
+    } else if (cstype == 39){
         //moveRight
         if (!collision_tetris(1,0,current_brick_pattern_global)){
             piecefill_tetris(background_color_global);
@@ -227,17 +223,13 @@ function move_brick_tetris(cstype){
         }
             
         dropStart_global = Date.now();
-    }
-    else if (cstype == 40){
+    } else if (cstype == 40){
         moveDown_tetris();
-    }
-    else if (cstype == 'bottom'){
+    } else if (cstype == 'bottom'){
         while (moveDown_tetris()){}
-    }
-    else if (cstype == 'leftmost'){
+    } else if (cstype == 'leftmost'){
         while (move_brick_tetris(37)){}
-    }
-    else if (cstype == 'rightmost'){
+    } else if (cstype == 'rightmost'){
         while (move_brick_tetris(39)){}
     }    
     return blstat;
@@ -290,8 +282,7 @@ function pattern_list_generator_tetris(){
             if (false_random_key_global===false){
                 piece_types_global.sort(randomsort_b);
                 var sort_key=0;
-            }
-            else {
+            } else {
                 var sort_key=Math.round(10*random_value_tetris())%piece_types_global.length;
             }
             switch (piece_types_global[sort_key]){
@@ -333,8 +324,7 @@ function pattern_list_generator_tetris(){
                     ];
                     break;
             }
-        }
-        else {
+        } else {
             var rnd_row_col=Math.max(2,Math.floor(random_value_tetris() * 4));
             var selected_brick =[];
             var count1=0;
@@ -344,8 +334,7 @@ function pattern_list_generator_tetris(){
                     if (random_value_tetris()>0.5){
                         selected_brick[blxl].push(1);
                         count1=count1+1;
-                    }
-                    else {
+                    } else {
                         selected_brick[blxl].push(0);
                     }
                 }
@@ -363,8 +352,7 @@ function pattern_list_generator_tetris(){
         var piece4_no = Math.floor(random_value_tetris() * piece4.length);
         if (random_value_tetris()>0.5){
             var piece4_color=rnd_margin_color_b();
-        }
-        else {
+        } else {
             var piece4_color=rndcolor_light_b(0.4,0.4);
         }
         return [piece4,piece4_no,piece4_color];
@@ -455,14 +443,12 @@ function random_value_tetris(){
             for (let item of false_random_list_global){
                 if (item>0.5){
                     blcount1=blcount1+1;
-                }
-                else if (item==0.5){
+                } else if (item==0.5){
                     blcount2=blcount2+1;
                 }
             }
             console.log('重新生成伪随机列表',false_random_key_global,false_random_list_global.slice(0,20).toString()+'...，其中>0.5占'+blcount1+'个，==0.5占'+blcount2+'个'); //此行保留 - 保留注释
-        }
-        else {
+        } else {
             console.log('重新生成伪随机列表',false_random_key_global); //此行保留 - 保留注释            
         }
     }
@@ -472,8 +458,7 @@ function random_value_tetris(){
 function false_random_key_set_tetris(){
     if (document.getElementById('input_seed_checkbox').checked){
         false_random_key_global=parseInt(document.getElementById('input_seed_no').value);
-    }
-    else {
+    } else {
         false_random_key_global=false;
         false_random_list_global=[];
     }

@@ -14,8 +14,7 @@ function args_kle(){
     function sub_args_kle_search(csstr,add_recent=true){
         if (csstr=='' || csstr=='_reg'){
             getlines_enwc_b(1,40);
-        }
-        else {
+        } else {
             var bls_reg=csstr.split('_'); //dog_reg
             var search_str;
             var is_reg=-1;
@@ -23,12 +22,10 @@ function args_kle(){
                 if (bls_reg[1]=='reg'){
                     search_str=bls_reg[0];
                     is_reg=true;
-                }
-                else{
+                } else {
                     search_str=csstr;
                 }
-            }
-            else{
+            } else {
                 search_str=bls_reg[0];
             }
             wordsearch_enwords_b(search_str,is_reg,[],false,true,add_recent);
@@ -58,52 +55,42 @@ function args_kle(){
                 bltmpstr=bltmpstr.substring(2,);
                 sub_args_kle_search(bltmpstr);
                 break;
-            }
-            else if (bltmpstr=='sls'){
+            } else if (bltmpstr=='sls'){
                 var blstr=temp_search_link_value_get_b();
                 sub_args_kle_search(blstr,false);
                 break;
-            }
-            else if (bltmpstr.substring(0,3)=='si='){
+            } else if (bltmpstr.substring(0,3)=='si='){
                 similar_enwords_b(bltmpstr.substring(3));
                 break;
-            }
-            else if (bltmpstr.substring(0,5)=='line='){
+            } else if (bltmpstr.substring(0,5)=='line='){
                 let blno_lines=bltmpstr.substring(5).split('_'); //30_20
                 if (blno_lines.length>1){
                     getlines_enwc_b(parseInt(blno_lines[0]), parseInt(blno_lines[1]));
-                }
-                else{
+                } else {
                     getlines_enwc_b(parseInt(blno_lines[0]));
                 }
                 break;
-            }
-            else if (bltmpstr.substring(0,8)=='rndline='){
+            } else if (bltmpstr.substring(0,8)=='rndline='){
                 let blno_lines=bltmpstr.substring(8); //20
                 getlines_rnd_enwc_b(blno_lines);
                 break;
-            }
-            else if (bltmpstr.substring(0,6)=='rndcn='){
+            } else if (bltmpstr.substring(0,6)=='rndcn='){
                 let blno_lines=bltmpstr.substring(6); //20
                 rnd_cn_search_enwc_b(blno_lines);
                 break;
-            }        
-            else if (bltmpstr.substring(0,7)=='recent='){
+            } else if (bltmpstr.substring(0,7)=='recent='){
                 bltmpstr=bltmpstr.substring(7,);
                 recent_words_list_enwords_b(parseInt(bltmpstr));
                 break;
-            }
-            else if (bltmpstr=='update_recent_words'){
+            } else if (bltmpstr=='update_recent_words'){
                 en_words_temp_textarea_b('divhtml','words_count_enwords_b');
                 words_count_enwords_b();
                 document.querySelector('form[name="form_word_temp"]').submit();
                 break;
-            }
-            else if (bltmpstr.substring(0,6)=='recent'){
+            } else if (bltmpstr.substring(0,6)=='recent'){
                 recent_words_list_enwords_b();
                 break;
-            }
-            else if (bltmpstr.substring(0,14)=='day_old_words='){
+            } else if (bltmpstr.substring(0,14)=='day_old_words='){
                 let list_t=bltmpstr.substring(14).split('_'); //20_012 20_0
                 let old_type_t='old';
                 //第1个参数：日期 - 保留注释
@@ -129,8 +116,7 @@ function args_kle(){
         if (show_sentence){
             show_sentence_enwc_b();
         }
-    }
-    else{
+    } else {
         getlines_enwc_b(1,40);
     }
 }
@@ -170,8 +156,7 @@ function words_queue_new_or_old_kle(is_new=true,only_word=false){
         var new_str=document.getElementById('textarea_words_queue').value.trim();
         if (new_str==''){return [[],error];}
         [result_t,error]=words_queue_split_kle(new_str,'sublist');    
-    }
-    else {
+    } else {
         [result_t,error]=words_queue_split_kle(words_queue_get_kle(false),'sublist');
     }
     
@@ -232,15 +217,12 @@ function words_queue_split_kle(csstr,cstype='string'){
         if (aword.length==3){
             if (cstype=='sublist'){
                 result_t.push(aword);
-            }
-            else if (cstype=='string'){
+            } else if (cstype=='string'){
                 result_t.push(item);
-            }
-            else {
+            } else {
                 result_t=result_t.concat(aword);
             }
-        }
-        else {
+        } else {
             error_str='error: '+item+(aword.length>3?'\n第4行开始是：'+aword[3].slice(0,10):'');
             alert(error_str);
             break;
@@ -249,8 +231,7 @@ function words_queue_split_kle(csstr,cstype='string'){
     
     if (error_str==''){
         return [result_t,error_str];
-    }
-    else {
+    } else {
         return [[],error_str];
     }
 }
@@ -340,8 +321,7 @@ function words_queue_update_kle(){
     
     if (selected_word=='NEW WORD' || selected_word==word_t[0]){
         var blmessage='是否更新('+word_t[0]+')？';
-    }
-    else {
+    } else {
         var blmessage='是否将单词 '+selected_word+' 修改为 '+word_t[0]+' ？';
     }
     if (confirm(blmessage)){
@@ -490,8 +470,7 @@ function words_array_2_lines_kle(){
             var blstr_new=words_list.join('\n---\n');
             otextarea.value=blstr_new;
         }
-    }
-    catch (error){
+    } catch (error){
         alert(error.message);
     }    
 }
@@ -521,8 +500,7 @@ function week_plan_get_kle(){
     var list_t=local_storage_get_b('enwords_plan_week').split(' ');
     if (list_t.length==1){
         list_t.push(enwords.length);
-    }
-    else {
+    } else {
         list_t[1]=parseInt(list_t[1]);
         if (isNaN(list_t[1])){
             list_t[1]=enwords.length;
@@ -702,8 +680,7 @@ function old_words_name_list_compare_kle(){
         var blstr=document.getElementById('textarea_old_words'+(blxl+1)+'_kle').value.trim();
         if (blstr==''){
             words_list[blxl]=new Set();
-        }
-        else {
+        } else {
             words_list[blxl]=new Set(blstr.split('\n'));
         }
     }
@@ -744,8 +721,7 @@ function letters_26_kle(idno='',sort_by_count=false,percent=false){
         for (let item of csarray){
             if (element_is_array){
                 var initial=item[0].substring(0,1).toLowerCase();
-            }
-            else {
+            } else {
                 var initial=item.substring(0,1).toLowerCase();                
             }
             if (initial==''){continue;}

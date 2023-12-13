@@ -10,12 +10,10 @@ function rnddraw_scanvas(){
     }
     
     if (drawnum_global>=10){
-        if (Math.random()>1/(drawnum_global+'').length){
-            return;
-        }
+        if (Math.random()>1/(drawnum_global+'').length){return;}
     }
     
-    if(canvas.getContext){
+    if (canvas.getContext){
         var painter=canvas.getContext("2d");
         painter.beginPath();
         
@@ -23,11 +21,9 @@ function rnddraw_scanvas(){
         var rndvalue=Math.random();
         if (rndvalue<=1/3){
             painter.arc(randint_b(0,window_w_global),randint_b(0,window_h_global),randint_b(1,Math.min(window_h_global,window_w_global)),0,2*Math.PI,false);
-        }
-        else if (rndvalue<=2/3){
+        } else if (rndvalue<=2/3){
             painter.lineTo(randint_b(0,window_w_global),randint_b(1,window_h_global));
-        }
-        else {
+        } else {
             painter.strokeRect(randint_b(1,window_w_global),randint_b(1,window_w_global),randint_b(1,window_w_global),randint_b(1,window_w_global));        
         }
         painter.strokeStyle=rndcolor_b();

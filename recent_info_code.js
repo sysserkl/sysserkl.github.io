@@ -3,17 +3,14 @@ function args_klrecent(){
     if (cskeys.length>0){
         if (cskeys[0].substring(0,12)=='catchphrase='){
             catchphrase_no_global=cskeys[0].substring(12,);   //如果使用 parseInt 则不能并用 || false - 保留注释
-        }
-        else if (cskeys[0]!==''){
+        } else if (cskeys[0]!==''){
             current_datafile_rct_global='archived/'+cskeys[0]+'.js';
             is_default_rct_global=false;
             document.title=cskeys[0];//+' - Info';            
-        }
-        else {
+        } else {
             if (recent_info_title_global[0].length>=3 && recent_info_title_global[0][1]!==''){
                 document.title=recent_info_title_global[0][1];
-            }
-            else {
+            } else {
                 document.title=recent_info_title_global[0][0];
             }
         }
@@ -22,8 +19,7 @@ function args_klrecent(){
     for (let item of cskeys){
         if (item.substring(0,10)=='font-size='){
             headline_size_rct_global=item.substring(10,);
-        }
-        else if (item.substring(0,5)=='menu='){
+        } else if (item.substring(0,5)=='menu='){
             showmenu_rct_global=(item.substring(5,).trim()=='1');
         }        
     }
@@ -37,13 +33,11 @@ function init_klrecent(){
                 if (list_t.length>0){
                     document.getElementById('span_title').innerText=list_t[1].split('.')[0];
                 }
-            }
-            else {
+            } else {
                 //current_datafile_rct_global='archived/'+cskeys[0]+'.js'; - 保留注释
                 document.getElementById('span_title').innerText=current_datafile_rct_global.substring(current_datafile_rct_global.indexOf('/')+1,current_datafile_rct_global.length-3);
             }
-        }
-        else {
+        } else {
             document.getElementById('span_title').innerText=recent_info_title_global[0][0];
         }    
     }
@@ -89,8 +83,7 @@ function init_klrecent(){
             var odiv=document.getElementById('divhtml');
             odiv.innerHTML=blinput+'<div id="div_rct_content">'+bljg+'</div>'+blquote+more_tools_klrecent()+'<p align=center>('+recent_info_list.length+') <span style="cursor:pointer;" onclick="alert(navigator.userAgent);">ver: 0.0.6-20200310</span> <span onclick="history_klrecent();" style="cursor:pointer;color:blue;">Title History</span></p>';
             mouseover_mouseout_oblong_span_b(odiv.querySelectorAll('span.oblong_box'));
-        }
-        else {
+        } else {
             document.getElementById('divhtml').innerHTML=blinput+'<div id="div_rct_content">'+bljg+'</div>';
         }
         title_klrecent(location.href);
@@ -112,8 +105,7 @@ function style_klrecent(){
         document.write('div.link_title table{font-size:1.2rem;}\n');
         document.write('div.div_columns_rct{column-count:1;}\n');
         document.write('.headline_on{font-size:1.4rem;}\n');
-    }
-    else {
+    } else {
         document.write('div.link_title .span_a_article_title_b{font-size:2.15rem;}\n');
         document.write('div.link_title br{margin-top:1rem;margin-bottom:1rem;}\n');
         document.write('div.link_title p{line-height:180%;margin-top:1rem;margin-bottom:1rem;}\n');
@@ -154,8 +146,7 @@ function quotestr_klrecent(){
         var blno=-1;
         if (theday<=catchphrase_global.length){
             var blno=theday-1;
-        }
-        else if (catchphrase_global.length>0){
+        } else if (catchphrase_global.length>0){
             var blno=randint_b(0,catchphrase_global.length-1);
         }
         
@@ -165,15 +156,13 @@ function quotestr_klrecent(){
                 bljg=bljg+sub_quotestr_klrecent_one_str(catchphrase_global[catchphrase_global.length-1]);  
             }            
         }
-    }
-    else {
+    } else {
         var blno=parseInt(catchphrase_no_global);
         if (!isNaN(blno)){
             if (blno>=0 && blno<catchphrase_global.length){
                 bljg=bljg+sub_quotestr_klrecent_one_str(catchphrase_global[blno]);
             }
-        }
-        else {
+        } else {
             var blkey=catchphrase_no_global;
             var isreg=false;
             [blkey,isreg]=str_reg_check_b(blkey,isreg);
@@ -289,11 +278,9 @@ function search_klrecent(cskey='',showhtml=true){
         a_name_list.push(a_name_asc);
         if (item[1]!==''){
             title_list.push([item[1],a_name_asc]);
-        }
-        else if (item[0]!==''){
+        } else if (item[0]!==''){
             title_list.push([item[0],a_name_asc]);
-        }
-        else if (item[2]!=='') {
+        } else if (item[2]!==''){
             title_list.push([item[2].substring(0,20),a_name_asc]);
         }
         
@@ -302,8 +289,7 @@ function search_klrecent(cskey='',showhtml=true){
         if (item[1].substring(0,4)=='[置顶]'){
             item[1]='📢 '+item[1].substring(4,);
             bljgtop.push(blstr);
-        }
-        else {
+        } else {
             bljg.push(blstr);
         }
         blxl=blxl+1;
@@ -333,8 +319,7 @@ function menu_klrecent(title_list){
     }
     if (menu_t.length>0){
         return div_title_href_b(['','<span class="span_link" style="font-weight:bold;" onclick="popup_show_hide_b(\'div_menu_rct\');">Menu</span>','<div id="div_menu_rct" style="display:block;">'+menu_t.join('\n')+'</div>'],false,false,'','',true);
-    }
-    else {
+    } else {
         return '';
     }
 }

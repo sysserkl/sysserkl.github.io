@@ -175,8 +175,7 @@ function pronunciation_hzpy(cstype){
     var bljg='<table><tr><td style="line-height:1.8rem;">';
     if (Array.isArray(result_t)){
         bljg=bljg+result_t.join('\n')+'</td></tr><tr><td>'+result_t.length;
-    }
-    else {
+    } else {
         bljg=bljg+result_t;
     }
     bljg=bljg+'</td></tr></table>';
@@ -333,8 +332,7 @@ function sentence_2_split_hzpy(csstr=false,show_html=true){
     
     if (typeof csstr == 'string'){
         var rows_list=csstr.split('\n');
-    }
-    else {
+    } else {
         var rows_list=csstr;
     }
     
@@ -353,14 +351,12 @@ function sentence_2_split_hzpy(csstr=false,show_html=true){
             if (blvalue===false){
                 if (blxl>2){
                     blxl=blxl-1;
-                }
-                else {
+                } else {
                     result_t.push(bltmp);
                     arow=arow.substring(blxl,);
                     blxl=4;
                 }
-            }
-            else {        
+            } else {        
                 result_t.push(blvalue);
                 arow=arow.substring(blxl,);
             }
@@ -479,8 +475,7 @@ function st_split_by_line_hzpy(){
         }
         if (blfound_t){
             with_t_list.push(arow);
-        }
-        else {
+        } else {
             without_t_list.push(arow);
         }
     }
@@ -744,8 +739,7 @@ function half_py_hzpy(cstype='py'){
                         break;
                 }
                 blcount=blcount+1;
-            }
-            else {
+            } else {
                 result_t.push(one_character);
                 done_py=false;
             }
@@ -791,8 +785,7 @@ function vertical_generation_hzpy(csstr,v_len=-1,delimiter=' ',align='top',repla
                 one_col=[];
                 blxl=0;
                 continue;   //不添加 分隔符 - 保留注释
-            }
-            else if (v_len>0 && blxl % v_len == 0){
+            } else if (v_len>0 && blxl % v_len == 0){
                 if (one_col.length>0){
                     result_t.push(one_col);
                 }
@@ -837,8 +830,7 @@ function vertical_generation_hzpy(csstr,v_len=-1,delimiter=' ',align='top',repla
                 for (let blno=result_t[blxl].length;blno<v_len;blno++){
                     if (blno % 2 == 0){
                         result_t[blxl]=['　'].concat(result_t[blxl]);
-                    }
-                    else {
+                    } else {
                         result_t[blxl].push('　');
                     }
                 }     
