@@ -62,6 +62,15 @@ function show_result_ebs_b(content_arr,book_arr,cskey,selepath){
     return content_arr;
 }
 
+function init_ebs_b(){
+    enwords_init_b(true);
+    enwords_mini_search_frame_style_b();
+    enwords_mini_search_frame_form_b();
+    
+    top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.4rem'));
+    document.getElementById('p_buttons_ebs').insertAdjacentHTML('afterbegin',textarea_buttons_b('textarea_batch_search_ebs','清空,复制'));
+}
+
 function txtbook_link_b(ospan,bookid){
     var span_id=ospan.getAttribute('id');
     if (!span_id){return;}

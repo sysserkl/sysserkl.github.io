@@ -37,11 +37,11 @@ css_root_style_b('18','13',['base','menu'],[],1);
 <p>
 <input type="text" id="input_search" placeholder="Search" onkeyup="if (event.key=='Enter'){search_ebsjs(this.value);}" />
 <label><input type="checkbox" id="input_only_eng" checked />英语单词</label>
-书名过滤：<input type="text" id="input_book_filter" onclick="search_batch_ebsjs();" />
+书名过滤：<input type="text" id="input_book_filter" onclick="if (event.key=='Enter'){search_batch_ebsjs();}" />
 </p>
 <div id="div_batch_search_ebs" style="display:none;">
 <p><textarea id="textarea_batch_search_ebs" style="height:10rem;"></textarea></p>
-<p><span class="aclick" onclick="search_batch_ebsjs();">搜索</span> <span class="aclick" onclick="hide_batch_search_form_ebs_b();">关闭</span></p>
+<p id="p_buttons_ebs"><span class="aclick" onclick="search_batch_ebsjs();">搜索</span> <span class="aclick" onclick="hide_batch_search_form_ebs_b();">关闭</span></p>
 </div>
 
 <div id="div_recent_search" style="font-size:0.85rem;margin:0.5rem 0rem;line-height:1.8rem;"></div>

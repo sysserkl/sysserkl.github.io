@@ -18,4 +18,5 @@ var digest_global=`
 *Disneyland
 *Latino
 *undernourished
+*coffeepot
 `.trim().split('\n');

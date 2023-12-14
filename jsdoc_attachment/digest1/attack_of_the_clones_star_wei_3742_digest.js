@@ -5,4 +5,5 @@ var digest_global=`
 *self-improvement
 *footprint
 *spearman
+*gunship
 `.trim().split('\n');

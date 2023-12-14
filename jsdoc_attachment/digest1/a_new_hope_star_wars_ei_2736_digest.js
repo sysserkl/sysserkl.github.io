@@ -38,4 +38,5 @@ var digest_global=`
 *awesomeness
 *uncountable
 *centrally
+*escalate
 `.trim().split('\n');

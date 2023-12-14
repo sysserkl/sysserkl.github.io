@@ -423,7 +423,7 @@ function form_content_check_money_b(event=false){
     }
 
     if (typeof(add_or_modify_wp_global)=='string'){
-        if (event && add_or_modify_wp_global.includes('修改') && local_storage_get_b('modify_confirm_wp')=='1'){
+        if (event && add_or_modify_wp_global.includes('修改') && local_storage_get_b('modify_confirm_wp')!==today_str_b()){
             if (!confirm('是否修改记录')){
                 event.preventDefault();
             }

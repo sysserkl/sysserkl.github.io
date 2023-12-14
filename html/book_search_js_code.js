@@ -1,9 +1,5 @@
 function init_ebsjs(){
-    enwords_init_b(true);
-    enwords_mini_search_frame_style_b();
-    enwords_mini_search_frame_form_b();
-    
-    top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.6rem'));
+    init_ebs_b();
     
     var input_list=[
     ['input_book_filter',12,0.8],
