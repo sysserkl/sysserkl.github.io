@@ -47,7 +47,8 @@ function menu_klwebsites(change_no=false){
     
     var list_t=[
     ['RSS','rss_klwebsites();',true],
-    ['Weibo','weibo_klwebsites();',true],
+    ['Weibo ALL','weibo_klwebsites();',true],
+    ['Weibo RND','weibo_klwebsites(true);',true],
     ];    
     klmenu1.push(menu_container_b(str_t,list_t,'List: '));    
     
@@ -415,8 +416,17 @@ function href_klwebsites(csarray,csnumber=-1,keyword=''){
     return href_str;
 }
 
-function array_klwebsites(keyword='',csnumber=999){
+function array_klwebsites(keyword='',csnumber=999,enable_rnd=false){
     function sub_array_klwebsites_add(item,cshref,csxl){
+        if (enable_rnd){
+            var r_list=item[2].match(/\bR(0\.\d+)\b/) || [];
+            if (r_list.length==2){
+                if (Math.random()<parseFloat(r_list[1])){
+                    console.log('忽略',item);
+                    return;
+                }
+            }
+        }
         var blcategory=category_websites_b(enable_jieba,item[1],item[2],keyword);
         if (category_list['w_'+blcategory]==undefined){
             category_list['w_'+blcategory]=[];
@@ -436,16 +446,15 @@ function array_klwebsites(keyword='',csnumber=999){
     if (enable_jieba){
         jieba_websites_b(sites_all_global,1);
     }
-    
+
     var href_str='';
     if (fav_set.size==0){
         for (let blxl=0;blxl<sites_all_global.length;blxl++){
             var item=sites_all_global[blxl];
             href_str=href_klwebsites(item,csnumber,keyword);
             
-            if (href_str===false){
-                break;
-            } else if (href_str===''){continue;}
+            if (href_str===false){break;}
+            else if (href_str===''){continue;}
             
             sub_array_klwebsites_add(item,href_str,blxl);
         }
@@ -596,7 +605,7 @@ function search_klwebsites(keyword='',csnumber=999){
     }
 }
 
-function weibo_klwebsites(){
+function weibo_klwebsites(enable_rnd=false){
     var blkey='';
     var oinput=document.getElementById('input_search');
     if (oinput){
@@ -606,9 +615,10 @@ function weibo_klwebsites(){
         blkey='weibo';
     }
     
-    let arrays=array_klwebsites(blkey);
+    let arrays=array_klwebsites(blkey,999,enable_rnd);
+    //arrays的元素形如：[ "https://weibo.com/u/5722964389?is_all=1", 260, "编程" ] - 保留注释
+    
     var result_t=[];
-
     for (let arow of arrays){
         var item=sites_all_global[arow[1]];
         if (item[1].slice(-5,)!==' - 微博'){continue;}
