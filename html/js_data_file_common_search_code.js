@@ -95,7 +95,7 @@ function wait_array_common(){
     
     function sub_wait_array_common_check(){
         if (blfound){
-            sub_wait_array_common_fn();        
+            sub_wait_array_common_fn(); //数组载入后，再载入code.js - 保留注释
             return;
         }
         
@@ -141,7 +141,7 @@ function wait_array_common(){
     var csmax=(is_local_b()?20:50);
     var blfound=false;
     document.getElementById('span_count').innerText='数据载入中...';
-    setTimeout(sub_wait_array_common_check,1);
+    setTimeout(sub_wait_array_common_check,1);  //先载入数组 - 保留注释
 }
 
 function js_file_links_common(csarray){

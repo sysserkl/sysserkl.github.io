@@ -14,4 +14,5 @@ var js_file_list_common_pb_global=[
 ['../jsdata/britannica_nobel_prize_data.js','🏆','nobel prize','nobel_prize_global','nobel_prize',''],
 ['../jsdata/rmrb_online/rmrb_online_194605_196612_data.js','🗞','rmrb online','rmrb_online_global','rmrb_online',''],
 ['../jsdata/dp_zj_data.js','🥧','dp rank','dp_rank_global','dp_rank',''],
+['../jsdata/cn_medicine_data.js','💊','cn medicine','cn_medicine_raw_global','cn_medicine',''],
 ];
