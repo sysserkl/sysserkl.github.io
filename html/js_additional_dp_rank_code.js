@@ -28,7 +28,7 @@ function menu_more_dp_rank(){
     var col_name=[];
     
     var klmenu1=[    
-    '<span class="span_menu"><select id="select_sort_type_jsad_dp_rank" style="height:2rem;">'+col_name_list.join('\n')+'</select> <span class="aclick" onclick="'+blparent+'sort_dp_rank();">↑</span><span class="aclick" onclick="'+blparent+'sort_dp_rank(true);">↓</span></span></span>',
+    '<span class="span_menu"><select id="select_sort_type_jsad_dp_rank" style="height:2rem;">'+col_name_list.join('\n')+'</select> <span class="aclick" onclick="'+blparent+'sort_dp_rank();">↑</span><span class="aclick" onclick="'+blparent+'sort_dp_rank(true);">↓</span></span>',
     '<span class="span_menu" onclick="statistics_type_dp_rank(0);">当前条件餐馆城市统计</span>',
     '<span class="span_menu" onclick="statistics_type_dp_rank(4);">当前条件餐馆类型统计</span>',
     '<span class="span_menu" onclick="statistics_type_dp_rank(5);">当前条件餐馆地址统计</span>',
