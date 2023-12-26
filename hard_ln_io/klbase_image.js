@@ -215,7 +215,7 @@ function filter_str_img_b(csstr){
 }
 
 function filter_array_img_b(csarray,filter_str){
-    filter_str=filter_str_img_b(filter_str);     
+    filter_str=filter_str_img_b(filter_str);
     if (filter_str!==''){
         var list_t=[];
         for (let item of csarray){
