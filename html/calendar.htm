@@ -5,7 +5,6 @@
 <meta charset="UTF-8" />
 <script src="../hard_ln_io/klbase.js"></script>
 <script>
-var bigday_img_global=[];
 klbase_addons_import_js_b(['css','date','history'],[],['history_pb_data.js'],['calendar_ico/calendar256.png']);
 </script>
 <script src="calendar_code.js"></script>
@@ -48,11 +47,13 @@ var memo_list_global=[];
 var memo_list_important_global=[];
 var memo_bg_enabled_klcalendar_global=true;
 var memo_mg_enabled_klcalendar_global=true;
-var bgcolor_klcalendar_global=['skyblue','tomato','yellow','pink','green'];
+var bgcolor_klcalendar_global=['skyblue','cadetblue','tomato','pink','olivedrab'];
+var bgcolor_index_klcalendar_global=1;  //0留给选中时的颜色 - 保留注释
 var legend_dict_klcalendar_global={};
 var memo_range_klcalendar_global=[''];
 var ym_range_klcalendar_global='';
-var bgcolor_index_klcalendar_global=0;
+var bigday_img_global=[];   //在 klbase_history.js 中使用 - 保留注释
+var colored_otds_global=[];
 var scheme_global={};
 scheme_generation_b();
 css_root_style_b('13','6.8',['base','menu']);

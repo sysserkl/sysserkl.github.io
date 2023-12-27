@@ -298,8 +298,8 @@ function next_day_b(csstr='',csdays=1,return_str=true,sep='-'){
     return previous_day_b(csstr,csdays*-1,return_str,sep);
 }
 
-function next_days_b(csstr='',csdays=1,return_str=true,sep='-',interval=1){
-    return previous_days_b(csstr,csdays*-1,return_str,sep,interval);
+function next_days_b(csstr='',csdays=1,return_str=true,sep='-',interval=1,interval_type='d'){
+    return previous_days_b(csstr,csdays*-1,return_str,sep,interval,interval_type);
 }
 
 function previous_day_b(csstr='',csdays=1,return_str=true,sep='-'){
@@ -315,9 +315,19 @@ function previous_day_b(csstr='',csdays=1,return_str=true,sep='-'){
     }
 }
 
-function previous_days_b(csstr='',csdays=1,return_str=true,sep='-',interval=1){
+function previous_days_b(csstr='',csdays=1,return_str=true,sep='-',interval=1,interval_type='d'){
     function sub_previous_days_b_one_date(csstep){
-        theday.setTime(theday.getTime()-csstep*24*60*60*1000);
+        switch (interval_type){
+            case 'd':
+                theday.setTime(theday.getTime()-csstep*24*60*60*1000);
+                break;
+            case 'm':
+                theday=new Date(theday.getFullYear(), theday.getMonth()-csstep,theday.getDate());
+                break;
+            case 'y':
+                theday=new Date(theday.getFullYear()-csstep, theday.getMonth(),theday.getDate());
+                break;
+        }
         
         if (return_str){
             result_t.push(date2str_b(sep,theday));

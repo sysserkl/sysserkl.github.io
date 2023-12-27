@@ -60,6 +60,7 @@ function do_type_klr2(cstype){
                 return;
             }
             var blstep=parseInt(document.getElementById('input_date_step_klr2').value.trim());
+            var step_type=document.getElementById('select_date_step_ymd_klr2').value;
             if (isNaN(blstep)){
                 alert('日期step错误');
                 return;
@@ -68,7 +69,8 @@ function do_type_klr2(cstype){
             var otextarea=document.getElementById('textarea_rows_content');
             document.getElementById('textarea_status').value=otextarea.value;
             var content_list=otextarea.value.split('\n');
-            var date_list=next_days_b(bldate,content_list.length,false,'',blstep);
+            var date_list=next_days_b(bldate,content_list.length,false,'',blstep,step_type);
+        
             if (blop=='1'){
                 for (let blxl=0;blxl<content_list.length;blxl++){
                     content_list[blxl]=date_2_str_format_b(date_list[blxl],blformat,'date')+content_list[blxl];

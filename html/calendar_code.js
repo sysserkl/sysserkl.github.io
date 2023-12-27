@@ -206,7 +206,7 @@ function dict_generate_klcalendar(ymkey,csyear,csmonth){
     return cld_global[ymkey];
 }
 
-function changeCld_klcalendar(odom,hide_empty_row=true){
+function changeCld_klcalendar(odom,hide_empty_row=true,append_mode=false){
     odom=table_find_klcalendar(odom,'select','select.select_year, select.select_month');
     var csyear, csmonth;
     [csyear, csmonth]=year_month_get_klcalendar(odom);
@@ -239,6 +239,10 @@ function changeCld_klcalendar(odom,hide_empty_row=true){
     
     var theday=new Date(csyear+'-'+(csmonth+1)+'-01');
 
+    if (!append_mode){
+        colored_otds_global=[];
+    }
+    
     for (let blxl=0;blxl<42;blxl++){    //6rows*7cols - 保留注释
         var sObj=odom.querySelector('.span_td_day'+ blxl);
         var lObj=odom.querySelector('.span_td_lunar_day'+ blxl);
@@ -275,6 +279,7 @@ function changeCld_klcalendar(odom,hide_empty_row=true){
                     } else {
                         sObj.style.borderBottom='0.2rem dotted '+bgcolor;
                     }
+                    colored_otds_global.push([sObj,bgcolor]);
                 }
             }
             theday.setTime(theday.getTime()+24*60*60*1000);
@@ -460,11 +465,23 @@ function day_info_klcalendar(td_number=false,odom=false){
 }
 
 function td_onclick_klcalendar(otd_clicked){
+    function sub_td_onclick_klcalendar_current(){
+        var blcolor='';
+        for (let one_dom of colored_otds_global){
+            if (one_dom[0]==current_td_global){
+                blcolor=one_dom[1];
+                break;
+            }
+        }
+        return blcolor;    
+    }
+    //-----------------------
     if (otd_clicked===false){return;}
     if (otd_clicked.innerText.trim()==''){return;}
     
     if (current_td_global){
-        current_td_global.style.backgroundColor='';
+        var blcolor=sub_td_onclick_klcalendar_current();
+        current_td_global.style.backgroundColor=blcolor;
     }
     
     if (current_td_global==otd_clicked){   //取消加亮 - 保留注释
@@ -473,11 +490,13 @@ function td_onclick_klcalendar(otd_clicked){
     }
     
     current_td_global=otd_clicked;
-    
-    if (otd_clicked.style.backgroundColor==''){
-        otd_clicked.style.backgroundColor=bgcolor_klcalendar_global[0];
+
+    var blcolor=sub_td_onclick_klcalendar_current();
+
+    if (current_td_global.style.backgroundColor==blcolor){
+        current_td_global.style.backgroundColor=bgcolor_klcalendar_global[0];
     } else {
-        otd_clicked.style.backgroundColor='';
+        current_td_global.style.backgroundColor=blcolor;
     }
 }
 
@@ -842,6 +861,7 @@ function months_klcalendar(start_ym,end_ym,section_info=true){
     var odiv=document.getElementById('divhtml');
     var ocontainer,otable;
     var ocontainer_list=[];
+    colored_otds_global=[];
     while (true){
         if (current_ym>end_ym || blxl>2400){break;}
         var list_t=current_ym.split('-');
@@ -853,7 +873,7 @@ function months_klcalendar(start_ym,end_ym,section_info=true){
         
         [ocontainer,otable]=month_generate_klcalendar(odiv,blyear,blyear,blmonth,blmonth,false,false,section_info);
         ocontainer_list.push(ocontainer);
-        changeCld_klcalendar(otable,false);
+        changeCld_klcalendar(otable,false,true);
         
         display_date_info_klcalendar(otable,'1');    
         

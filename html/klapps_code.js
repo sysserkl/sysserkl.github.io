@@ -1,21 +1,32 @@
 function init_klindex(){
     //将常用app储存在localstorage中，便于KLWiki等调用 - 保留注释
     var bljg='';
-    var tags='';
+    var tags=[];
     var common_apps=common_apps_kl_global.concat(common_apps_pb_global);
     for (let item of common_apps){
+        var basename=file_path_name_b(item[0])[3];      //xxx.htm - 保留注释
+        if (pwa_id_global.includes(basename.slice(0,-4))){
+            if (item.length==4){
+                item.push('PWA');
+            }
+            else if (item.length>4){
+                item[4]=item[4]+',PWA';
+            }
+        }
         bljg=bljg+item.join(',')+'\n';
         if (item.length>=5){
-            tags=tags+item[4]+'|';
+            tags=tags.concat(item[4].split(','));
         }
     }
+
     if (local_storage_get_b('common_softs')!==bljg.trim()){
         console.log('更新 common_softs');
         localStorage.setItem('common_softs',bljg);
     }
     input_with_x_b('input_search',20);
     args_klindex();
-    recent_search_klindex('',array_unique_b(tags.split('|')));
+    tags.sort();
+    recent_search_klindex('',array_unique_b(tags));
 }
 
 function recent_search_klindex(csstr='',constant_value=[]){
