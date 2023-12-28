@@ -34,6 +34,7 @@ function menu_wp_pwa(){
     '<span class="span_menu" onclick="'+str_t+'read_lines_2_form_wp_pwa();">读取行列格式到表单</span>',    
     '<span class="span_menu" onclick="'+str_t+'batch_append_wp_pwa(false,false,false);">批量添加当前行列格式到缓存</span>',    
     '<span class="span_menu" onclick="'+str_t+'electricity_wp_pwa();">电费</span>',
+    '<span class="span_menu" onclick="'+str_t+'remove_line_money_b(\'textarea_content\');">清除指定行</span>',
     ];
     
     var group_list=[

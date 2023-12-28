@@ -728,3 +728,34 @@ function import_jieba_records_money_b(textarea_id='textarea_idb_content'){
     var odiv=document.getElementById('div_jieba_wpimport');
     odiv.innerHTML=list_t.join('\n')+buttons;
 }
+
+function remove_line_money_b(textarea_id){
+    var otextarea=document.getElementById(textarea_id);
+    if (!otextarea){return;}
+    
+    var blstr=otextarea.value;
+    if (blstr==''){return;}
+    
+    var old_value=local_storage_get_b('wp_remove_line');
+    var new_value=prompt('输入待删除的行：',old_value) || '不支持7天无理由';
+    if (new_value==''){return;}
+    localStorage.setItem('wp_remove_line',new_value);
+    
+    var blcount=0;
+    var result_t=[];
+    var list_t=blstr.split('\n');
+    for (let item of list_t){
+        if (item==new_value){
+            blcount=blcount+1;
+            continue;
+        }
+        result_t.push(item);
+    }
+    
+    if (blcount==0){
+        alert('未发现指定行');
+    } else {
+        if (!confirm('发现指定行共 '+blcount+' 处，是否删除？')){return;}
+        otextarea.value=result_t.join('\n');
+    }
+}

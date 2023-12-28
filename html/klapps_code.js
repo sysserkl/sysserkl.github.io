@@ -4,8 +4,8 @@ function init_klindex(){
     var tags=[];
     var common_apps=common_apps_kl_global.concat(common_apps_pb_global);
     for (let item of common_apps){
-        var basename=file_path_name_b(item[0])[3];      //xxx.htm - 保留注释
-        if (pwa_id_global.includes(basename.slice(0,-4))){
+        var finfo=file_path_name_b(item[0]);
+        if (finfo[2]=='htm' && pwa_id_global.includes(finfo[1])){
             if (item.length==4){
                 item.push('PWA');
             }
