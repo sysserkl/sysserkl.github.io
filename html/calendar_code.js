@@ -734,8 +734,7 @@ function memo_mdw_str_klcalendar(csstr,csdate=false){
     //AAA(l33)(m,10-12,1-3)(w,1-3,5) - 保留注释
     //XXXXXX(d,24,25,26) - 保留注释
     function sub_memo_mdw_str_klcalendar_min_max(date_list,date_value){
-        var blmin;
-        var blmax;    
+        var blmin, blmax;
         for (let one_element of date_list){
             if (!one_element.includes('-')){continue;}
             [blmin,blmax]=one_element.split('-').slice(0,2);
@@ -747,31 +746,37 @@ function memo_mdw_str_klcalendar(csstr,csdate=false){
         return false;
     }
     //-----------------------
-    var s_list=csstr.match(/,s,(\d+),(\d+)[,\-]\s*(\d+)[,\-]\s*(\d+)$/) || [];
+    var s_list=csstr.match(/,s,(\-?\d+),(\d+)[,\-]\s*(\d+)[,\-]\s*(\d+)$/) || [];  //,s,21,2023,1,5 或 ,s,21,2023-1-5 - 保留注释
     if (s_list.length==5){
-        csstr=csstr.replace(/,s,(\d+),(\d+)[,\-]\s*(\d+)[,\-]\s*(\d+)$/,'(s,$1,$2-$3-$4)');
+        csstr=csstr.replace(/,s,(\-?\d+),(\d+)[,\-]\s*(\d+)[,\-]\s*(\d+)$/,'(s,$1,$2-$3-$4)');
     }
-    
-    var list_t=csstr.match(/\([wdms],\d+.*?\)/g);
+    var list_t=csstr.match(/\([ywdms],\-?\d+.*?\)/g);
+    //list_t 形如 [ "(m,2)", "(d,5-10)" ] 或 [ "(s,28,2024-01-01)" ] - 保留注释
     if (list_t==null){
         return [csstr,null];
     }
     if (csdate===false){
         csdate=new Date();
     }
-
-    var blpd={'d':null,'m':null,'w':null,'s':null};
+    var date_str=date2str_b('-',csdate);
+    
+    var blpd={'y':null,'d':null,'m':null,'w':null,'s':null};
     for (let item of list_t){
         csstr=csstr.replace(item,'');
         date_list=item.slice(1,-1).split(',');
+        //date_list 形如：[ "d", "5-10" ] 或 [ "s", "28", "2023-12-31" ] - 保留注释
         switch (date_list[0]){
+            case 'y':
+                var theyear=csdate.getFullYear();
+                blpd['y']=date_list.includes(theyear.toString()) || sub_memo_mdw_str_klcalendar_min_max(date_list,theyear);
+                break;
             case 'd':
                 var theday=csdate.getDate();
                 blpd['d']=date_list.includes(theday.toString()) || sub_memo_mdw_str_klcalendar_min_max(date_list,theday);
                 break;
             case 'm':
                 var themonth=(csdate.getMonth()+1);
-                blpd['m']=date_list.includes(themonth.toString()) || sub_memo_mdw_str_klcalendar_min_max(date_list,themonth);            
+                blpd['m']=date_list.includes(themonth.toString()) || sub_memo_mdw_str_klcalendar_min_max(date_list,themonth);
                 break;
             case 'w':
                 var theweek=csdate.getDay();
@@ -787,8 +792,12 @@ function memo_mdw_str_klcalendar(csstr,csdate=false){
                     if (!isNaN(interval_days)){
                         interval_days=parseInt(interval_days);
                         var startday=validdate_b(date_list[2]);
-                        if (interval_days>0 && startday!==false){
-                            blpd['s']=(0==Math.floor((csdate-startday)/86400000) % interval_days);
+                        if (startday!==false){
+                            if (interval_days>=1){
+                                blpd['s']=(0==Math.floor((csdate-startday)/86400000) % interval_days);
+                            } else {
+                                blpd['s']=(date_str==date_list[2]); //<1时相当于指定年月日，只出现一次，不循环 - 保留注释
+                            }
                         }
                     }
                 }
@@ -845,6 +854,7 @@ function year_klcalendar(){
     menu_klcalendar(false,'#div_head','Legends');
     
     var legend_set=new Set();
+    legend_dict_klcalendar_global={};
     months_klcalendar(list_t[0],list_t[1],section_info);    
     for (let key in legend_dict_klcalendar_global){
         legend_set.add('<span style="border: 0.5rem solid '+legend_dict_klcalendar_global[key][0]+'">'+legend_dict_klcalendar_global[key][1]+'('+legend_dict_klcalendar_global[key][2]+')</span>');
@@ -937,7 +947,7 @@ function ym_buttons_klcalendar(otable){
 
 function table_head_klcalendar(otable,year_min=1900,year_max=2100,month_min=1,month_max=12){
     var blstr='<tr>';
-    blstr=blstr+'<td class="td_head" colspan=7 align=left nowrap style="font-size:2rem;color:#ffffff;background-color:#4e81bb;padding:0 0.5rem 0.5rem 0.5rem;min-width: 460px;">';
+    blstr=blstr+'<td class="td_head" colspan=7 align=left nowrap style="font-size:2rem;color:#ffffff;background-color:#4e81bb;padding:0 0.5rem 0.5rem 0.5rem;'+(ismobile_b()?'':'min-width: 460px;')+'">';
     blstr=blstr+'<select class="select_year" onchange="changeCld_klcalendar(this);" style="max-width:6.5rem;">';
     var year_list=[];
     for (let blyear=year_min; blyear<=year_max; blyear++){

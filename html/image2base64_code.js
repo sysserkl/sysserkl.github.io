@@ -115,13 +115,13 @@ function trans_klbase64(){
     var error=upload_img_file_check_b(ofile);
     if (error!==''){
         document.getElementById('textarea_base64_original').value=error;
-        return;        
+        return;
     }
 
     var imgFile = new FileReader();
     imgFile.readAsDataURL(ofile);  
     imgFile.onload = function (){
-        var imgData = this.result; //base64数据    
+        var imgData = this.result; //base64数据
         original_img_size_klbase64(imgData);
     }
 }
