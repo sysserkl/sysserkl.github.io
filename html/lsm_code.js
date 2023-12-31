@@ -151,6 +151,9 @@ function update_remote_file_lsm(){
 }
 
 function init_lsm(){
+    menu_lsm();
+    top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.4rem'));
+
     var oform=document.querySelector('form[name="form_lsm"]');
     if (oform){
 	    oform.setAttribute('action',postpath_b()+'temp_txt_share.php');
@@ -164,6 +167,9 @@ function init_lsm(){
     if (ismobile_b()){
         document.getElementById('td_lsm_name').width='30%';    
         document.getElementById('td_lsm_value').width='70%';
+    
+        var otextarea=document.getElementById('textarea_lsm_state');
+        otextarea.style.height='20rem';
     }
     keys_lsm();
     args_lsm();

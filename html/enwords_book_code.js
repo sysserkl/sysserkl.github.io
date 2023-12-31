@@ -700,7 +700,7 @@ function onetab_enwords_book(){
 
 function onetab_filter_enwords_book(){
     olis=document.querySelectorAll('#ol_onetab_links li');
-    obj_search_show_hide_b(olis,'',document.getElementById('input_filter_ontab').value,false,true);
+    obj_search_show_hide_b(olis,'',document.getElementById('input_filter_ontab').value,false,true,true);
 }
 
 function onetab_links_enwords_book(){
