@@ -124,6 +124,7 @@ function import_book_js_b(import_digest=true){
         document.write('\n    filelist2.push(item);\n');
         document.write('}\n</script>\n');
     }
+    txtbook_js_code_file_global=''; //全局变量 - 保留注释
     //---
     var jsdoc_num='';
     if (csbooklist_sub_global.length>0 && csbooklist_sub_global[book_no].length>=4){
@@ -147,8 +148,6 @@ function import_book_js_b(import_digest=true){
         } else {
             menu_digest_file_full_name_b(book_no,jsdoc_num,bookid,jsdoc_path,import_digest,true);
         }
-        
-        txtbook_js_code_file_global='';
         if (book_type.includes('J')){
             var list_t=book_type.match(/J([a-z]+)/) || [];
             if (list_t.length==2){

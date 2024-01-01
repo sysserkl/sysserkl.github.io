@@ -17,6 +17,8 @@ function menu_notepad(){
     var klmenu1=[
     '<span id="span_reg_notepad" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ reg</span>',    
     '<span class="span_menu" onclick="'+str_t+'current_id_notepad_global=false;show_hide_notepad(true);">新建</span>',
+    '<span class="span_menu" onclick="'+str_t+'idb_notepad(\'read\',false,false,\'form\');">导入导出</span>',
+    '<span class="span_menu" onclick="'+str_t+'idb_notepad(\'clear\');">清空数据库</span>',
     ];
         
     var klmenu_config=root_font_size_menu_b(str_t);
@@ -24,7 +26,7 @@ function menu_notepad(){
     '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'notepad\');">更新版本</span>',        
     ]);
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🗐','14rem','1rem','1rem','30rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','30rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🗐','10rem','1rem','1rem','30rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','30rem'),'','0rem')+' ');
     klmenu_check_b('span_reg_notepad',true);
 }
 
@@ -107,6 +109,113 @@ function delete_notepad(){
     idb_notepad('edit',false,true);
 }
 
+function export_form_notepad(){
+    var result_t=[];
+    for (let arow of current_result_notepad_global){
+        result_t.push(arow[0][1]+'\n'+arow[0][2]);
+    }
+
+    var postpath=postpath_b();
+
+    var odiv=document.getElementById('div_status');
+    var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php" target=_blank>';
+    
+    bljg=bljg+'<textarea name="textarea_export_notepad" id="textarea_export_notepad" style="height:20rem;"></textarea>';
+    var buttons=close_button_b('div_status','');
+    buttons=buttons+'<span class="aclick" onclick="idb_notepad(\'import\');">import to database</span>';
+    buttons=buttons+textarea_buttons_b('textarea_export_notepad','清空,复制,发送到临时记事本,发送地址,save as txt file');
+
+    odiv.innerHTML=bljg+'<p><b>当前数据项：'+result_t.length+'个</b> '+buttons+'</p></form>';
+    odiv.querySelector('textarea').value=result_t.join('\n=== notepad ===\n');  //textarea.value 和 '<textarea>'+value+'</textarea>' //效果不同，后者会转换 &amp; 为 & - 保留注释
+    odiv.scrollIntoView();
+}
+
+function idb_import_notepad(db){
+    function sub_idb_import_notepad_check(){
+        var otextarea=document.getElementById('textarea_export_notepad');
+        if (!otextarea){return false;}
+        var blstr=otextarea.value;
+        if (blstr==''){return false;}
+        
+        var repeated_count=0;
+        var big_found=false;
+        var list_t=blstr.split('\n=== notepad ===\n');
+        
+        for (let item of list_t){
+            var repeated_found=false;
+            for (let arow of current_result_notepad_global){
+                if (item==arow[0][1]+'\n'+arow[0][2]){
+                    repeated_count=repeated_count+1;
+                    repeated_found=true;
+                    break;
+                }
+            }
+            if (repeated_found==false){
+                if (item.length>100*1024*1024){
+                    alert('尺寸太大：'+item.substring(1,200)+'...');
+                    big_found=true;
+                    break;
+                } else {
+                    import_list.push(item);
+                }
+            }
+            if (big_found){break;}
+        }
+        if (big_found){return false;}
+        
+        alert('发现已存在项目 '+repeated_count+' 个，可导入项目 '+import_list.length+' 个');
+        if (import_list.length==0){return false;}
+        return confirm('是否执行导入操作？');
+    }
+
+    function sub_idb_import_notepad_batch(otable){
+        if (sub_idb_import_notepad_check()==false){return;}
+        for (let blxl=0;blxl<import_list.length;blxl++){
+            var list_t=import_list[blxl].split('\n');
+            var bldate=list_t.slice(-1)[0];
+            if (validdate_b(bldate)===false){
+                bldate=new Date().toLocaleString();
+            } else {
+                list_t=list_t.slice(0,-1);
+            }
+            var objectStoreRequest = otable.add({'id':current_id_notepad_global,'content':list_t.join('\n'),'date':bldate});
+
+            objectStoreRequest.onsuccess = function(event){
+                console.log(blxl,'objectStoreRequest success');
+                if (blxl==import_list.length-1){
+                    alert('导入完成');
+                }
+            };
+            objectStoreRequest.onerror = function(event){
+                console.log(blxl,'objectStoreRequest error');        
+            };
+            current_id_notepad_global=current_id_notepad_global+1;
+        }
+    }
+
+    function sub_idb_import_notepad_onsuccess(otable){            
+        otable.openCursor().onsuccess = function (event){
+            var cursor = event.target.result;
+            if (cursor){
+                raw_data_notepad_global.push([cursor.value.id,cursor.value.content,cursor.value.date]);
+                old_id_set.add(cursor.value.id);
+                cursor.continue();
+            } else {
+                current_id_notepad_global=Math.max(-1,Math.max(...old_id_set))+1;
+                sub_idb_import_notepad_batch(otable);
+            }
+        };        
+    }
+    //-----------------------
+    raw_data_notepad_global=[];
+    var old_id_set=new Set();
+    var import_list=[];
+    return new Promise((resolve, reject) => {
+        idb_write_b(db,'notepad_dbf',false,false,sub_idb_import_notepad_onsuccess,false);
+        resolve(true);
+    });
+}
+
 function idb_edit_notepad(db,is_delete=false){
     function sub_idb_edit_notepad_append(otable){
         var objectStoreRequest = otable.add({'id':current_id_notepad_global,'content':blcontent,'date':new Date().toLocaleString()});
@@ -132,7 +241,7 @@ function idb_edit_notepad(db,is_delete=false){
                     sub_idb_edit_notepad_append(otable);
                 }
             };
-        } else {        
+        } else {
             otable.openCursor().onsuccess = function (event){
                 var cursor = event.target.result;
                 if (cursor){
@@ -178,7 +287,7 @@ function idb_edit_notepad(db,is_delete=false){
     });
 }
 
-function idb_read_notepad(db,cskey=false){
+function idb_read_notepad(db,cskey=false,do_type=''){
     function sub_idb_read_notepad_search(){
         show_hide_notepad(false);
         
@@ -196,10 +305,15 @@ function idb_read_notepad(db,cskey=false){
         is_all_result_notepad_global=true;
 
         [current_result_notepad_global,is_all_result_notepad_global]=common_search_b(cskey,isreg,raw_data_notepad_global,-1);
+        //current_result_notepad_global 每个元素为：[idno,content,datetime] - 保留注释
         
         result_percent_b('span_count',current_result_notepad_global.length,raw_data_notepad_global.length);
-        
         page_notepad(1);
+        switch (do_type){
+            case 'form':
+                export_form_notepad();
+                break;
+        }
     }
     
     function sub_idb_read_notepad_onsuccess(event){
@@ -252,13 +366,13 @@ function idb_clear_notepad(db){
     });
 }
 
-function idb_notepad(cstype='',cskey=false,is_delete=false){
+function idb_notepad(cstype='',cskey=false,is_delete=false,do_type=''){
     async function sub_idb_notepad_switch(cstype, db, resolve, blcount){
         switch (cstype){
             case 'read':
                 async function sub_idb_notepad_read(){
                     console.log('sub_idb_notepad_read()');
-                    await idb_read_notepad(db,cskey);
+                    await idb_read_notepad(db,cskey,do_type);
                     resolve(true);
                 }
                 sub_idb_notepad_read();
@@ -288,6 +402,14 @@ function idb_notepad(cstype='',cskey=false,is_delete=false){
                 }
                 sub_idb_notepad_count();
                 break;
+            case 'import':
+                async function sub_idb_notepad_import(){
+                    console.log('sub_idb_notepad_import()');
+                    await idb_import_notepad(db);
+                    resolve(true);
+                }
+                sub_idb_notepad_import();
+                break;                
         }
     }
     //-----------------------
