@@ -108,7 +108,7 @@ function weixin_rank_klwiki_h3(){
         } 
         
         if (list_t.length==0){
-            var list_t=blstr.match(/\s\|\s.*\s\-\s(.*?),/) || [];
+            var list_t=blstr.match(/\s\|\s.*\s\-\s(.*?)[,\]]/) || [];
             if (list_t.length==2){  //[ " | 要担心「WiFi 辐射」的危害么? - 小道消息,", "小道消息" ] - 保留注释
                 blkey=list_t[1].trim();
             }
