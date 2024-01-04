@@ -1168,3 +1168,28 @@ function buttons_txt_klr_b(textarea_id,clear_copy_tab_title_url=false){
 function slice_lines_temp_txt_klr_b(textarea_id){
     slice_lines_klr_b(textarea_id,['["about:blank","undefined"],']);
 }
+
+function sort_menu_klr_b(textarea_id,str_t){
+    var klmenu_sort=[];
+    
+    var group_list=[
+    ['升序','sort_rows_klr_b(\''+textarea_id+'\',\'\');',true],
+    ['倒序','sort_rows_klr_b(\''+textarea_id+'\',\'desc\');',true],
+    ];    
+    klmenu_sort.push(menu_container_b(str_t,group_list,''));    //依赖 klbase_css.js - 保留注释
+
+    var group_list=[
+    ['升序','sort_rows_klr_b(\''+textarea_id+'\',\'asc_num\');',true],
+    ['倒序','sort_rows_klr_b(\''+textarea_id+'\',\'desc_num\');',true],
+    ];    
+    klmenu_sort.push(menu_container_b(str_t,group_list,'数字：'));
+    
+    klmenu_sort=klmenu_sort.concat([
+    '<span class="span_menu" onclick="'+str_t+'reverse_klr_b(\''+textarea_id+'\');">倒转</span>',
+    '<span class="span_menu" onclick="'+str_t+'chinese_sort_klr_b(false,\''+textarea_id+'\');">汉字升序</span>',
+    '<span class="span_menu" onclick="'+str_t+'lines_unique_klr_b(\''+textarea_id+'\');">unique</span>',
+    '<span class="span_menu" onclick="'+str_t+'sort_rows_klr_b(\''+textarea_id+'\',\'length\');">长度排序</span>',    
+    '<span class="span_menu" onclick="'+str_t+'sort_rows_klr_b(\''+textarea_id+'\',\'random\');">随机排序</span>',
+    ]);    
+    return klmenu_sort;
+}

@@ -706,7 +706,7 @@ function onetab_filter_enwords_book(){
 function onetab_links_enwords_book(){
     var result_t=new Set();
     for (let item of onetab_global){
-        result_t.add('<a href="'+item[0]+'" target=_blank>'+item[1]+'</a>');
+        result_t.add('<a href="'+item[0]+'" onmousedown="this.style.backgroundColor=\''+scheme_global['pink']+'\';" target=_blank>'+item[1]+'</a>');
     }
     result_t=Array.from(result_t);
     result_t.sort();    

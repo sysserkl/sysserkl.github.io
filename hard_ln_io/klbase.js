@@ -1692,7 +1692,7 @@ function textarea_buttons_b(textarea_id,csbuttons,cstype='',csstyle='',span_clas
             var savename='';
         } else {
             var web_type=(is_file_type_b()?'local':location.host);
-            var savename=cstype+'_'+(navigator.platform || '').replace(/\s/g,'_')+'_'+web_type+'_'+today_str_b('dt','','','_')+'.'+fext[1];
+            var savename=cstype+'_'+local_storage_get_b('machine_name')+'_'+(navigator.platform || '').replace(/\s/g,'_')+'_'+web_type+'_'+today_str_b('dt','','','_')+'.'+fext[1];
         }
         bljg=bljg+'<span class="'+span_class+'"'+csstyle+' onclick="dom_value_2_txt_file_b(\''+textarea_id+'\',\''+specialstr_j(savename)+'\',\''+specialstr_j(fext[1])+'\');">'+fext[0]+'</span> ';
     }    

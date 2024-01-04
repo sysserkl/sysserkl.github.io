@@ -137,11 +137,22 @@ function menu_lsm(){
     var klmenu_config=root_font_size_menu_b(str_t);
 
     klmenu_config=klmenu_config.concat([ 
+    '<span class="span_menu" onclick="'+str_t+'machine_name_lsm();">machine name</span>',
     '<span class="span_menu" onclick="'+str_t+'update_remote_file_lsm();">更新指定文件</span>',
     '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'lsm\');">更新版本</span>',
     ]);
         
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_local,'','20rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','60rem'),'','0rem')+' ');
+}
+
+function machine_name_lsm(){
+    var blold=local_storage_get_b('machine_name');
+    var blnew=prompt('输入新的machine name',blold);
+    if (blnew==null){return;}
+    var blnew=blnew.trim();
+    if (blold==blnew){return;}
+    if (!confirm('是否将 machine_name 从 '+blold+' 修改为 '+blnew+'？')){return;}
+    localStorage.setItem('machine_name',blnew);
 }
 
 function update_remote_file_lsm(){

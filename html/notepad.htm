@@ -5,7 +5,7 @@
 <meta charset="UTF-8" />
 <script src="../hard_ln_io/klbase.js"></script>
 <script>
-klbase_addons_import_js_b(['css','en_de_str','idb','date'],[],[],['notepad_code.js']);
+klbase_addons_import_js_b(['css','en_de_str','idb','date','rows'],[],[],['notepad_code.js']);
 </script>
 <script>
 //-----------------------
@@ -29,6 +29,7 @@ css_root_style_b('18','13',['base','menu'],[],1);
 <p><input type="text" id="input_search" placeholder="search" onkeyup="if (event.key=='Enter'){search_notepad();}" /></p>
 <div id="div_recent_search" style="font-size:0.85rem;margin:0.5rem 0rem;line-height:1.8rem;"></div>
 
+<p id="p_menu_notepad" style="display:none;"></p>
 <form method="POST"  id="form_notepad" target=_blank>
 <p><textarea name="textarea_content_notepad" id="textarea_content_notepad" style="display:none;height:20rem; padding:1rem;font-size:1rem;"></textarea></p>
 <p id="p_buttons_notepad" style="display:none;"><span id="span_append_or_edit_notepad" class="aclick" onclick="append_or_edit_notepad(this);">保存</span><span class="aclick" onclick="show_hide_notepad(false);">取消</span><span id="span_delete_notepad" class="aclick" onclick="delete_notepad();">删除</span></p>

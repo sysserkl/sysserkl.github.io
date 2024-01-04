@@ -174,28 +174,9 @@ function menu_klr2(){
     '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'rows\');">更新版本</span>',
     ]);
 
-    var klmenu_sort=[];
-    
-    var group_list=[
-    ['升序','sort_rows_klr_b(\'textarea_rows_content\',\'\');',true],
-    ['倒序','sort_rows_klr_b(\'textarea_rows_content\',\'desc\');',true],
-    ];    
-    klmenu_sort.push(menu_container_b(str_t,group_list,''));
-
-    var group_list=[
-    ['升序','sort_rows_klr_b(\'textarea_rows_content\',\'asc_num\');',true],
-    ['倒序','sort_rows_klr_b(\'textarea_rows_content\',\'desc_num\');',true],
-    ];    
-    klmenu_sort.push(menu_container_b(str_t,group_list,'数字：'));
-    
-    klmenu_sort=klmenu_sort.concat([
-    '<span class="span_menu" onclick="'+str_t+'reverse_klr_b();">倒转</span>',
-    '<span class="span_menu" onclick="'+str_t+'chinese_sort_klr_b();">汉字升序</span>',
-    '<span class="span_menu" onclick="'+str_t+'lines_unique_klr_b();">unique</span>',
-    '<span class="span_menu" onclick="'+str_t+'sort_rows_klr_b(\'textarea_rows_content\',\'length\');">长度排序</span>',    
-    '<span class="span_menu" onclick="'+str_t+'sort_rows_klr_b(\'textarea_rows_content\',\'random\');">随机排序</span>',
-    ]);    
-   
+    var klmenu_sort=sort_menu_klr_b('textarea_rows_content',str_t);
+      
+    var klmenu_convert=[];
     var group_list=[
     ['js2href','JavaScript 数组 =&gt; 网址链接'],
     ['js2wikihref','JavaScript 数组 =&gt; wiki链接'],
@@ -204,8 +185,6 @@ function menu_klr2(){
     ['title_href2js','名称 网址 =&gt; JavaScript 数组'],
     ['title_href2csv','名称 网址 =&gt; csv网址格式'],
     ];
-    
-    var klmenu_convert=[];
     for (let arow of group_list){
         klmenu_convert.push('<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\''+arow[0]+'\');">'+arow[1]+'</span>');
     }

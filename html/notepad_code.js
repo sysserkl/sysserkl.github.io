@@ -28,6 +28,10 @@ function menu_notepad(){
 
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🗐','10rem','1rem','1rem','30rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','30rem'),'','0rem')+' ');
     klmenu_check_b('span_reg_notepad',true);
+    //-----------------------
+    var klmenu_sort=sort_menu_klr_b('textarea_content_notepad',str_t);
+    document.getElementById('p_menu_notepad').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu_sort,'↕','10rem','1rem','1rem','30rem'),'','0rem')+' ');
+    
 }
 
 function recent_notepad(csstr=''){
@@ -95,8 +99,12 @@ function show_hide_notepad(is_edit=true){
             document.getElementById('span_delete_notepad').style.display='none';
         }
     }
-    otextarea.style.display=(is_edit?'':'none');
-    document.getElementById('p_buttons_notepad').style.display=(is_edit?'':'none');
+    
+    var bldisplay=(is_edit?'':'none');
+    otextarea.style.display=bldisplay;
+    document.getElementById('p_buttons_notepad').style.display=bldisplay;
+    document.getElementById('p_menu_notepad').style.display=bldisplay;
+    
     document.getElementById('divhtml').style.display=(is_edit?'none':'');
 }
 
@@ -173,6 +181,14 @@ function idb_import_notepad(db){
         for (let blxl=0;blxl<import_list.length;blxl++){
             var list_t=import_list[blxl].split('\n');
             var bldate=list_t.slice(-1)[0];
+            if (bldate.match(/^\d+\/\d+\/\d+\s(上午|下午)\d+:\d+:\d+$/)){
+                if (bldate.includes('上午')){
+                    bldate=bldate.replace('上午','')+' AM';
+                } else if (bldate.includes('下午')){
+                    bldate=bldate.replace('下午','')+' PM';                
+                }
+            }
+
             if (validdate_b(bldate)===false){
                 bldate=new Date().toLocaleString();
             } else {
