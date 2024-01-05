@@ -149,7 +149,7 @@ function import_book_js_b(import_digest=true){
             menu_digest_file_full_name_b(book_no,jsdoc_num,bookid,jsdoc_path,import_digest,true);
         }
         if (book_type.includes('J')){
-            var list_t=book_type.match(/J([a-z]+)/) || [];
+            var list_t=book_type.match(/J([a-z_]+)/) || [];
             if (list_t.length==2){
                 txtbook_js_code_file_global=list_t[1];            
             } else {
