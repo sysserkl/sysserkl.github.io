@@ -47,7 +47,9 @@ function is_firefox_b(check_isenabled=false,exclude_win=true){
         return false;
     }
     
-    return  blstr.match(/Firefox\/\d{3,}\.\d+$/g)!==null || blstr.match(/Firefox\/[69]\d\.\d+$/g)!==null;  //60+ 或 90+ 或 100+ - 保留注释
+    var machine_name=local_storage_get_b('machine_name');
+    
+    return  machine_name.match(/(\b|_|[0-9])firefox(\b|_|[0-9])/) || blstr.match(/Firefox\/\d{3,}\.\d+$/g)!==null || blstr.match(/Firefox\/[69]\d\.\d+$/g)!==null;  //不能使用[_\b]。60+ 或 90+ 或 100+ - 保留注释
 }
 
 function is_old_firefox_b(){

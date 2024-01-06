@@ -394,6 +394,7 @@ function words_editor_form_kle(){
         bljg=bljg+'<option>'+item+'</option>';
     }
     bljg=bljg+'</select> ';
+    bljg=bljg+'<select id="select_iframe_or_close_kle"><option></option><option>iframe</option><option>close=1</option></select>'
     bljg=bljg+'<span class="aclick" onclick="words_queue_do_type_kle();">执行</span> ';    
 
     bljg=bljg+'<select id="select_queue_insert">';
@@ -445,7 +446,11 @@ function words_queue_do_type_kle(){
             var blstr=otextarea.value.trim().split('\n')[0];
             if (blstr!==''){
                 if (confirm('是否 '+bltype+' [ '+blstr+' ] ？')){
-                    window.open('klsearch.htm?k='+blstr+'&t='+bltype+(bltype=='batch_en'?'&iframe':'&close=1'));
+                    var iframe_or_close=document.getElementById('select_iframe_or_close_kle').value;
+                    if (iframe_or_close==''){
+                        iframe_or_close=(bltype=='batch_en'?'iframe':'close=1');
+                    }
+                    window.open('klsearch.htm?k='+blstr+'&t='+bltype+'&'+iframe_or_close);
                 }
             }
             break;

@@ -55,7 +55,20 @@ function search_site_klsearch(csno,csproxy=false,cskey='',openwindow=-1,showhtml
     }
     
     recent_search_klsearch(cskey);
-    var item=search_sites_list_global[csno];
+    var item=[].concat(search_sites_list_global[csno]);
+    
+    //item 形如：[ "http://xxx/klsearch.htm?k=", "&t=batch_en_bo+&close=1" ] - 保留注释
+    if (item[0].endsWith('/klsearch.htm?k=') && (item[1].includes('&close=1') || item[1].includes('&iframe'))){
+        var iframe_or_select='';
+        var oselect=document.getElementById('select_iframe_or_close_klsearch');
+        if (oselect){
+            iframe_or_select=oselect.value;
+        }
+        if (iframe_or_select!==''){
+            item[1]=item[1].replace(/&(close=1|iframe)\b/,'&'+iframe_or_select);
+        }
+    }
+    
     if (item[2]==4){ 
         cskey=gbkcode(cskey);
     } else {
@@ -221,7 +234,7 @@ function args_klsearch(){
         }
         
         if (blclose=='1'){
-            document.location=links_t[links_t.length-1];
+            setTimeout(function (){document.location=links_t[links_t.length-1];},2000);
         } else {
             window.open(links_t[links_t.length-1]);
         }
@@ -318,10 +331,11 @@ function menu_klsearch(){
     ];
     
     var klmenu2=[
+    '<span class="span_menu">batch search type: <select id="select_iframe_or_close_klsearch"><option></option><option>iframe</option><option>close=1</option></select></span>',    
     '<span class="span_menu" onclick="'+str_t+'same_name_klsearch();">相同名称的搜索</span>',
     ];
     
-    document.getElementById('div_title_klsearch').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','18rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'⚙','12rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('div_title_klsearch').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','18rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'⚙','18rem','1rem','1rem','60rem'),'','0rem')+' ');
 }
 
 function same_name_klsearch(){
