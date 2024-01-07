@@ -192,15 +192,24 @@ function args_klsearch(){
                     if (is_local_file && blsrc.substring(0,4).toLowerCase()!=='http'){
                         if (blsrc.split('?')[0].slice(-4,).toLowerCase()=='.php'){continue;}
                     }
-                    buttons_t.push('<span class="aclick" onclick="show_iframe_klsearch(this,'+blxl+');">'+one_type+'</span>');
-                    result_t.push('<iframe class="iframe_site" id="iframe_site_'+blxl+'" style="width:95%;height:40rem;display:none;" src="'+blsrc+'"></iframe>');
+                    buttons_t.push('<span class="aclick span_one_iframe_kls" onclick="show_iframe_klsearch(this,'+blxl+');">'+one_type+'</span>');
+                    result_t.push('<iframe id="iframe_site_'+blxl+'" style="width:95%;height:40rem;display:none;" src="'+blsrc+'"></iframe>');  //class="iframe_site"
                     break;
                 }
             }
         }
         var odiv=document.getElementById('div_status');
         odiv.innerHTML='<p id="p_buttons_kls">'+buttons_t.join(' ')+'</p>'+result_t.join('\n');
-        var ospan=document.querySelector('p#p_buttons_kls span.aclick');
+        input_size_b([['input_iframe_link_kls',6,0.5]],'id');
+        //-----------------------
+        var str_t=klmenu_hide_b('');
+        var klmenu1=[
+        '<span class="span_menu" onclick="'+str_t+'copy_iframe_link_klsearch();">copy</span>',
+        '<span class="span_menu" onclick="'+str_t+'copy_iframe_link_klsearch(true);">open</span>',
+        ];
+        document.getElementById('p_buttons_kls').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','8rem','1rem','1rem','30rem'),'','0rem')+' ');
+        //-----------------------
+        var ospan=document.querySelector('span.span_one_iframe_kls');
         if (ospan){
             ospan.click();
         }
@@ -242,21 +251,36 @@ function args_klsearch(){
 }
 
 function show_iframe_klsearch(ospan,csno){
-    var oiframe=document.getElementById('iframe_site_'+csno);
-    if (!oiframe){return;}
-    var oiframes=document.querySelectorAll('iframe.iframe_site');
-    for (let one_iframe of oiframes){
-        one_iframe.style.display='none';
+    var oold_span=document.querySelector('span.span_selected_iframe_kls');
+    if (oold_span){
+        oold_span.style.color='';
+        oold_span.style.fontWeight='';
+        oold_span.classList.remove('span_selected_iframe_kls');        
     }
-    oiframe.style.display='';
-    
-    var ospans=document.querySelectorAll('p#p_buttons_kls span.aclick');
-    for (let one_span of ospans){
-        one_span.style.color='';
-        one_span.style.fontWeight='';
-    }
+
     ospan.style.color=scheme_global['a-hover'];
     ospan.style.fontWeight='bold';
+    ospan.classList.add('span_selected_iframe_kls');
+        
+    var oold_iframe=document.querySelector('iframe.iframe_selected_iframe_kls');
+    if (oold_iframe){
+        oold_iframe.style.display='none';
+        oold_iframe.classList.remove('iframe_selected_iframe_kls');        
+    }
+
+    var oiframe=document.getElementById('iframe_site_'+csno);
+    oiframe.classList.add('iframe_selected_iframe_kls');    
+    oiframe.style.display='';
+}
+
+function copy_iframe_link_klsearch(is_open=false){
+    var oiframe=document.querySelector('iframe.iframe_selected_iframe_kls');
+    if (!oiframe){return;}
+    if (is_open){
+        window.open(oiframe.src);
+    } else {
+        copy_2_clipboard_b(oiframe.src);
+    }
 }
 
 function init_klsearch(){
