@@ -120,6 +120,7 @@ function menu_dbb(){
     group_list=[
     ['出版社','statistics_key_pie_dbb(\'出版社\');',true],
     ['出版年','statistics_key_pie_dbb(\'publication_year\');',true],
+    ['作者','statistics_key_pie_dbb(\'作者\');',true],
     ['评分','statistics_key_pie_dbb(\'rating\');',true],
     ];    
     klmenu_statistics.push(menu_container_b(str_t,group_list,'统计：'));    
@@ -736,15 +737,29 @@ function statistics_key_pie_dbb(cstype){
     result_t=object2array_b(result_t);  //每个元素如：[ 9.1, 15 ] - 保留注释
     
     var pyramid_str='';
-    if (cstype=='rating'){
-        result_t.sort(function (a,b){return a[0]<b[0];});    
-        pyramid_str=rating_pyramid_dbb(result_t);
+    switch (cstype){
+        case 'rating':
+            result_t.sort(function (a,b){return a[0]<b[0];});    
+            pyramid_str=rating_pyramid_dbb(result_t);
+            break;
+        case '作者':
+        case '出版社':
+            result_t.sort(function (a,b){return zh_sort_b(a,b,false,0);});
+            break;
+        case 'publication_year':
+            result_t.sort(function (a,b){return a[0]>b[0];});
+            break;
     }
-    
     result_t.sort(function (a,b){return a[1]<b[1];});
     
-    var blat=-1;
+    var table_list=[];
+    var bllen=publisher_list.length;
     for (let blxl=0;blxl<result_t.length;blxl++){
+        table_list.push('<tr><td>'+(blxl+1)+'</td><td>'+result_t[blxl][0]+'</td><td align="right">'+result_t[blxl][1]+'</td><td align="right">'+(result_t[blxl][1]*100/bllen).toFixed(2)+'%</td></tr>');
+    }
+        
+    var blat=-1;
+    for (let blxl=10;blxl<result_t.length;blxl++){  //至少显示前 10 个 - 保留注释
         if (result_t[blxl][1]/bllen<0.01){
             blat=blxl;
             break;
@@ -760,11 +775,11 @@ function statistics_key_pie_dbb(cstype){
         result_t=result_t.slice(0,blat);
         result_t.push(['others',other_count]);
     }
-    
+
     for (let blxl=0;blxl<result_t.length;blxl++){
         result_t[blxl]={'label': result_t[blxl][0], 'data': result_t[blxl][1]};
     }
     
-    div_flot_generate_dbb(true,pyramid_str);
+    div_flot_generate_dbb(true,pyramid_str,'<table class="table_common" width=90%><tr><th>No.</th><th>Name</th><th>Count</th><th>Percent</th></tr>'+table_list.join('\n')+'</table>');
     flot_pie_b(result_t,'div_flot');
 }
