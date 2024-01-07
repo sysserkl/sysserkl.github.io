@@ -1962,28 +1962,50 @@ function select_prev_or_next_b(oselect,cstype,filter_visible=false){
     return bldone;
 }
 
-function character_2_icon_b(csstr){
+function character_2_icon_b(csstr,cssize=24,line_width=5,mobile_style=true){
     var olink=document.querySelector('link[rel="icon"], link[rel="shortcut icon"]');
     if (!olink){
         var olink = document.createElement('link');
         olink.setAttribute('rel','shortcut icon');
-        document.head.appendChild(olink);    
+        document.head.appendChild(olink);
     }
     
     var ocanvas = document.createElement('canvas');
-    ocanvas.setAttribute('width',24);
-    ocanvas.setAttribute('height',24);
+    ocanvas.setAttribute('width',cssize);
+    ocanvas.setAttribute('height',cssize);
 
-    var ctx = ocanvas.getContext('2d');      
-    ctx.font = '22px FreeSerif';    
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle'; 
+    var ctx = ocanvas.getContext('2d');
+
     ctx.fillStyle = '#cecece';
     ctx.fillRect(0, 0, ocanvas.width, ocanvas.height);
-    ctx.fillStyle = 'black';
-    ctx.fillText(csstr, 12, 12);
-    var imgsrc=ocanvas.toDataURL('image/jpeg');
 
+    if (mobile_style && ismobile_b()){
+        var blno=location.host.split(':')[0].split('.').slice(-1)[0];
+        if (isNaN(blno)){
+            blno=asc_sum_b(blno).toString();
+        }
+        blno=parseInt(('00'+blno).slice(-2,));
+
+        ctx.globalAlpha = 0.8; // 设置透明 - 保留注释
+        ctx.lineWidth = line_width;
+        if (blno % 2 == 0){
+            ctx.setLineDash([2,2]);
+        }
+        var color_list=['red','brown','green','black','grey','blue','orange'];
+        ctx.strokeStyle = color_list[blno % color_list.length];
+        ctx.rect(0, 0, cssize,cssize); // 绘制矩形，参数分别为左上角x坐标、y坐标、宽度、高度 - 保留注释
+        ctx.stroke();
+        ctx.globalAlpha = 1;
+    }
+    
+    ctx.font = (cssize-line_width)+'px FreeSerif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle'; 
+
+    ctx.fillStyle = 'black';
+    ctx.fillText(csstr, cssize/2,cssize/2);
+   
+    var imgsrc=ocanvas.toDataURL('image/jpeg');
     olink.href=imgsrc;
 }
 

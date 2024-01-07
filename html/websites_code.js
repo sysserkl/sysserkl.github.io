@@ -884,7 +884,7 @@ function init_klwebsites(){
     if (typeof sites_all_global == 'undefined'){    //在menu前 - 保留注释
         sites_all_global=[];
     }
-    
+    character_2_icon_b('🕸');
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.5rem':'1.4rem'));
 
     sites_type_klwebsites();

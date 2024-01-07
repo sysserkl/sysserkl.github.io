@@ -996,6 +996,7 @@ function init_kle(){
     local_storage_today_b('enwords_sentence_rows',40,en_sentence_global.length,'/');
 
     input_with_x_b('input_search',(ismobile_b()?11:22),'',false,'input_reg',true);
+    character_2_icon_b('🇬🇧');
     top_bottom_arrow_b('div_top_bottom','',true,(ismobile_b()?'1.8rem':'1.4rem'),true,true,2);
 
     words_searched_arr_global=[];  //全局变量 - 保留注释

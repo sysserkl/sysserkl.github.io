@@ -24,6 +24,7 @@ function init_klindex(){
         localStorage.setItem('common_softs',bljg);
     }
     input_with_x_b('input_search',20);
+    character_2_icon_b('🔮');
     args_klindex();
     tags.sort();
     recent_search_klindex('',array_unique_b(tags));
