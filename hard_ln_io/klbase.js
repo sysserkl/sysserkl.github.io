@@ -310,6 +310,11 @@ function write_js_css_b(cslist,do_write=true){
     return links_t;
 }
 
+function test_load_b(){
+    var flist=klbase_addons_import_js_b(['test'],[],[],[],false,false);
+    file_dom_create_b(flist);
+}
+
 function file_dom_create_b(file_list,in_head=true,cstype='js'){
     var today=(is_local_b()?'?'+today_str_b('d',''):'');
 

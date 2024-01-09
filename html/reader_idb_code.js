@@ -1,3 +1,5 @@
+说说代码有什么问题
+
 function args_reader_idb(){
     var cskeys=href_split_b(location.href);
     for (let bltmpstr of cskeys){
@@ -252,9 +254,17 @@ function choose_reader_idb(bookid){
     center_reader_idb('read','',bookid);
 }
 
+function idb_count_rlater(db){
+    function sub_idb_count_rlater_onsuccess(cscount){
+        document.getElementById('span_idb_status').innerHTML='IDB现有记录 '+cscount+' 条';
+    }
+
+    return idb_count_b(db, 'rlater_dbf', sub_idb_count_rlater_onsuccess);
+}
+
 function filename_list_reader_idb(db){
     return new Promise((resolve, reject) => {
-        var transaction = db.transaction(['reader_txt_dbf'], "readonly");
+        var transaction = db.transaction(['reader_txt_dbf'], 'readonly');
         transaction.onerror = function(event){
             console.log('transaction error');
         };
@@ -342,7 +352,7 @@ function bookname_set_reader_idb(){
 }
 
 function one_book_reader_idb(db,bookid){
-    function sub_one_book_reader_idb_onsuccess(event){
+    function sub_one_book_reader_idb_onsuccess(resolve, reject, event, other_var1,other_var2){
         var cursor = event.target.result;
         if (cursor){
             if (cursor.value.id==bookid && cursor.value.type==''){
@@ -379,7 +389,7 @@ function one_book_reader_idb(db,bookid){
 
 function delete_reader_idb(db,bookid){
     return new Promise((resolve, reject) => {
-        var transaction = db.transaction(['reader_txt_dbf'], "readwrite");
+        var transaction = db.transaction(['reader_txt_dbf'], 'readwrite');
         transaction.onerror = function(event){
             console.log('transaction error');
         };
@@ -425,7 +435,7 @@ function delete_reader_idb(db,bookid){
 
 function write_reader_idb(db,filename,cslist){    
     return new Promise((resolve, reject) => {
-        var transaction = db.transaction(['reader_txt_dbf'], "readwrite");
+        var transaction = db.transaction(['reader_txt_dbf'], 'readwrite');
         transaction.oncomplete = function(event){
             console.log('transaction ok');
             resolve(true);
@@ -503,10 +513,7 @@ function count_reader_idb(db){
         document.title='IDB现有22记录 '+cscount+' 条';
     }
 
-    return new Promise((resolve, reject) => {
-        var blcount=idb_count_b(db,'reader_txt_dbf',sub_count_reader_idb_onsuccess);
-        resolve(blcount);
-    });
+    return idb_count_b(db,'reader_txt_dbf',sub_count_reader_idb_onsuccess);
 }
 
 function clear_all_reader_idb(db){
@@ -525,11 +532,10 @@ function clear_all_reader_idb(db){
 }
 
 function center_reader_idb(cstype='',filename='',bookid=-1,cslist=[]){
-    async function sub_center_reader_idb_switch(cstype, db, resolve, blcount, filename,bookid,cslist){
+    async function sub_center_reader_idb_switch(cstype, db, resolve, reject, filename,bookid,cslist){
         switch (cstype){
             case 'list':
                 async function center_reader_idb_list(){
-                    console.log('center_reader_idb_list()');
                     await filename_list_reader_idb(db);
                     resolve(true);
                 }
@@ -537,7 +543,6 @@ function center_reader_idb(cstype='',filename='',bookid=-1,cslist=[]){
                 break;
             case 'read':
                 async function center_reader_idb_read(){
-                    console.log('center_reader_idb_read()');
                     await one_book_reader_idb(db,bookid);
                     resolve(true);
                 }
@@ -545,7 +550,6 @@ function center_reader_idb(cstype='',filename='',bookid=-1,cslist=[]){
                 break;                    
             case 'write':
                 async function center_reader_idb_write(){
-                    console.log('center_reader_idb_write()');
                     await write_reader_idb(db,filename,cslist);
                     resolve(true);
                 }
@@ -553,7 +557,6 @@ function center_reader_idb(cstype='',filename='',bookid=-1,cslist=[]){
                 break;
             case 'delete':
                 async function center_reader_idb_delete(){
-                    console.log('center_reader_idb_delete()');
                     await delete_reader_idb(db,bookid);
                     resolve(true);
                 }
@@ -564,7 +567,6 @@ function center_reader_idb(cstype='',filename='',bookid=-1,cslist=[]){
                 if ((prompt('输入 '+rndstr+' 确认清空全部书籍') || '').trim()!==rndstr){break;}
                 
                 async function center_reader_idb_clear_all(){
-                    console.log('center_reader_idb_clear_all()');
                     await clear_all_reader_idb(db);
                     resolve(true);
                 }
@@ -572,8 +574,7 @@ function center_reader_idb(cstype='',filename='',bookid=-1,cslist=[]){
                 break;
             case 'count':
                 async function center_reader_idb_count(){
-                    console.log('center_reader_idb_count()');
-                    blcount = await count_reader_idb(db);
+                    var blcount = await count_reader_idb(db);
                     resolve(blcount);
                 }
                 center_reader_idb_count();

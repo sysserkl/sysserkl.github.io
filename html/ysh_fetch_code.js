@@ -134,9 +134,7 @@ function date_fetch_ysh_jf(search_key=false){
         fetch(blhref)
         .then((response) => response.json())
         .then((data) => data_show_ysh_jf(data))
-        .catch((error) => {
-            alert('error:', error);
-        });       
+        .catch((error) => { alert('error:', error);});       
     }
     //-----------------------
     var oinput=document.getElementById('input_search');
@@ -277,10 +275,7 @@ function idb_write_ysh_jf(db,do_alert=false){
     //-----------------------
     var found_list=[];
     var count_dict={'更新':0,'添加':0,'忽略':0,'错误':0};
-    return new Promise((resolve, reject) => {
-        idb_write_b(db,'ysh_jf_dbf',false,false,sub_idb_write_ysh_jf_onsuccess,false);
-        resolve(true);
-    });
+    return idb_write_b(db,'ysh_jf_dbf',false,false,sub_idb_write_ysh_jf_onsuccess,false);
 }
 
 function idb_read_ysh_jf(db,cskey=false){
@@ -295,7 +290,7 @@ function idb_read_ysh_jf(db,cskey=false){
         page_ysh_jf(1);
     }
     
-    function sub_idb_read_ysh_jf_onsuccess(event){
+    function sub_idb_read_ysh_jf_onsuccess(resolve, reject, event, other_var1,other_var2){
         var cursor = event.target.result;
         if (cursor){
             raw_data_ysh_jf_global.push([cursor.value.title,cursor.value.author,cursor.value.date]);
@@ -306,10 +301,7 @@ function idb_read_ysh_jf(db,cskey=false){
     }
     //-----------------------
     raw_data_ysh_jf_global=[];
-    return new Promise((resolve, reject) => {
-        idb_read_b(db,'ysh_jf_dbf',sub_idb_read_ysh_jf_onsuccess);
-        resolve(true);
-    });
+    return idb_read_b(db,'ysh_jf_dbf',sub_idb_read_ysh_jf_onsuccess);
 }
 
 function idb_count_ysh_jf(db){
@@ -317,10 +309,7 @@ function idb_count_ysh_jf(db){
         alert('IDB 现有记录 '+cscount+' 条');
     }
 
-    return new Promise((resolve, reject) => {
-        var blcount=idb_count_b(db,'ysh_jf_dbf',sub_idb_count_ysh_jf_onsuccess);
-        resolve(blcount);
-    });
+    return idb_count_b(db,'ysh_jf_dbf',sub_idb_count_ysh_jf_onsuccess);
 }
 
 function idb_clear_ysh_jf(db){
@@ -332,9 +321,7 @@ function idb_clear_ysh_jf(db){
         //document.getElementById('span_idb_status').innerHTML='IDB数据清除完毕，现有记录 '+cscount+' 条';
     }
     
-    function sub_idb_clear_ysh_jf_onsuccess(otable){
-        //
-    }
+    function sub_idb_clear_ysh_jf_onsuccess(otable){ /* ... */ }
     
     return new Promise((resolve, reject) => {
         var rndstr=randstr_b(4,true,false);
@@ -346,11 +333,10 @@ function idb_clear_ysh_jf(db){
 }
 
 function idb_ysh_jf(cstype='',cskey=false,do_alert=false){
-    async function sub_idb_ysh_jf_switch(cstype, db, resolve, blcount){
+    async function sub_idb_ysh_jf_switch(cstype, db, resolve, reject){
         switch (cstype){
             case 'read':
                 async function sub_idb_ysh_jf_read(){
-                    console.log('sub_idb_ysh_jf_read()');
                     await idb_read_ysh_jf(db,cskey);
                     resolve(true);
                 }
@@ -358,7 +344,6 @@ function idb_ysh_jf(cstype='',cskey=false,do_alert=false){
                 break;
             case 'write':
                 async function sub_idb_ysh_jf_write(){
-                    console.log('sub_idb_ysh_jf_write()');
                     await idb_write_ysh_jf(db,do_alert);
                     resolve(true);
                 }
@@ -366,7 +351,6 @@ function idb_ysh_jf(cstype='',cskey=false,do_alert=false){
                 break;
             case 'clear':
                 async function sub_idb_ysh_jf_clear(){
-                    console.log('sub_idb_ysh_jf_clear()');
                     await idb_clear_ysh_jf(db);
                     resolve(true);
                 }
@@ -374,8 +358,7 @@ function idb_ysh_jf(cstype='',cskey=false,do_alert=false){
                 break;
             case 'count':
                 async function sub_idb_ysh_jf_count(){
-                    console.log('sub_idb_ysh_jf_count()');
-                    blcount=await idb_count_ysh_jf(db);
+                    var blcount=await idb_count_ysh_jf(db);
                     resolve(blcount);
                 }
                 sub_idb_ysh_jf_count();

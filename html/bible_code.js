@@ -1596,7 +1596,7 @@ function refresh_use_bible(csupdate=false){
 }
 
 function idb_read_bible(db,is_old=false){
-    function sub_idb_read_bible_onsuccess(event){
+    function sub_idb_read_bible_onsuccess(resolve, reject, event, other_var1,other_var2){
         var cursor = event.target.result;
         if (cursor){
             if (cursor.value.type=='en'){
@@ -1657,10 +1657,7 @@ function idb_write_bible(db,adddata=true){
         }
     }
     
-    return new Promise((resolve, reject) => {
-        idb_write_b(db,'bible_dbf',sub_idb_write_bible_count1,sub_idb_write_bible_count2,sub_idb_write_bible_onsuccess);
-        resolve(true);
-    });
+    return idb_write_b(db,'bible_dbf',sub_idb_write_bible_count1,sub_idb_write_bible_count2,sub_idb_write_bible_onsuccess);
 }
 
 function main_sub_chapter_var_generate_bible(){
@@ -1750,11 +1747,10 @@ function load_filelist_bible(do_init=true){
 }
 
 function idb_bible(cstype='',is_old=false){
-    async function sub_idb_bible_switch(cstype, db, resolve, blcount, id_old){
+    async function sub_idb_bible_switch(cstype, db, resolve, reject, id_old){
         switch (cstype){
             case 'read':
                 async function sub_idb_bible_read(){
-                    console.log('sub_idb_bible_read()');
                     await idb_read_bible(db,is_old);
                     resolve(true);
                 }
@@ -1762,7 +1758,6 @@ function idb_bible(cstype='',is_old=false){
                 break;
             case 'write':
                 async function sub_idb_bible_write(){
-                    console.log('sub_idb_bible_write()');
                     await idb_write_bible(db);
                     resolve(true);
                 }
@@ -1770,7 +1765,6 @@ function idb_bible(cstype='',is_old=false){
                 break;
             case 'clear':
                 async function sub_idb_bible_clear(){
-                    console.log('sub_idb_bible_clear()');
                     await idb_write_bible(db,false);
                     resolve(true);
                 }
@@ -1778,8 +1772,7 @@ function idb_bible(cstype='',is_old=false){
                 break;
             case 'count':
                 async function sub_idb_bible_count(){
-                    console.log('sub_idb_bible_count()');
-                    blcount = await idb_count_bible(db);
+                    var blcount = await idb_count_bible(db);
                     document.getElementById('span_status').innerHTML='IDB 记录数：'+blcount;
                     resolve(blcount);
                 }

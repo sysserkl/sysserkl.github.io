@@ -226,23 +226,22 @@ function idb_import_notepad(db){
     raw_data_notepad_global=[];
     var old_id_set=new Set();
     var import_list=[];
-    return new Promise((resolve, reject) => {
-        idb_write_b(db,'notepad_dbf',false,false,sub_idb_import_notepad_onsuccess,false);
-        resolve(true);
-    });
+    return idb_write_b(db,'notepad_dbf',false,false,sub_idb_import_notepad_onsuccess,false);
 }
 
 function idb_edit_notepad(db,is_delete=false){
-    function sub_idb_edit_notepad_append(otable){
-        var objectStoreRequest = otable.add({'id':current_id_notepad_global,'content':blcontent,'date':new Date().toLocaleString()});
-        
-        objectStoreRequest.onsuccess = function(event){
-            console.log('objectStoreRequest success');
-            search_notepad();
-        };
-        objectStoreRequest.onerror = function(event){
-            console.log('objectStoreRequest error');        
-        };
+    function sub_idb_edit_notepad_append(otable){        
+        try {
+            var objectStoreRequest = otable.add({'id': current_id_notepad_global, 'content': blcontent, 'date': new Date().toLocaleString()});
+            
+            objectStoreRequest.onsuccess = function(event) {
+                console.log('objectStoreRequest success');
+                search_notepad();
+            };
+        } catch (error){
+            console.error('Error appending to notepad:', error);
+            throw error;
+        }        
     }
 
     function sub_idb_edit_notepad_onsuccess(otable){
@@ -276,7 +275,7 @@ function idb_edit_notepad(db,is_delete=false){
                         };
                         request.onerror = () => {
                             console.log('error');
-                        };                    
+                        };
                     } else {
                         cursor.continue();
                     }
@@ -287,20 +286,25 @@ function idb_edit_notepad(db,is_delete=false){
     //-----------------------
     var blcontent=document.getElementById('textarea_content_notepad').value;
     var old_id_set=new Set();
+    
     return new Promise((resolve, reject) => {
         if (is_delete){
-            if (current_id_notepad_global!==false){
-                idb_write_b(db,'notepad_dbf',false,false,sub_idb_edit_notepad_onsuccess,false);
+            if (current_id_notepad_global !== false) {
+                idb_write_b(db, 'notepad_dbf', false, false, sub_idb_edit_notepad_onsuccess, false)
+                .then(() => resolve(true))
+                .catch(reject);
             }
         } else {
-            if (blcontent.length>100*1024*1024){
+            if (blcontent.length > 100 * 1024 * 1024){
                 alert('尺寸太大');
+                resolve(false); // 或 reject(new Error('Content size too large.'));
             } else {
-                idb_write_b(db,'notepad_dbf',false,false,sub_idb_edit_notepad_onsuccess,false);
+                idb_write_b(db, 'notepad_dbf', false, false, sub_idb_edit_notepad_onsuccess, false)
+                .then(() => resolve(true))
+                .catch(reject);
             }
         }
-        resolve(true);
-    });
+    });    
 }
 
 function idb_read_notepad(db,cskey=false,do_type=''){
@@ -332,7 +336,7 @@ function idb_read_notepad(db,cskey=false,do_type=''){
         }
     }
     
-    function sub_idb_read_notepad_onsuccess(event){
+    function sub_idb_read_notepad_onsuccess(resolve, reject, event, other_var1,other_var2){
         var cursor = event.target.result;
         if (cursor){
             raw_data_notepad_global.push([cursor.value.id,cursor.value.content,cursor.value.date]);
@@ -343,10 +347,7 @@ function idb_read_notepad(db,cskey=false,do_type=''){
     }
     //-----------------------
     raw_data_notepad_global=[];
-    return new Promise((resolve, reject) => {
-        idb_read_b(db,'notepad_dbf',sub_idb_read_notepad_onsuccess);
-        resolve(true);
-    });
+    return idb_read_b(db,'notepad_dbf',sub_idb_read_notepad_onsuccess);
 }
 
 function idb_count_notepad(db){
@@ -354,10 +355,7 @@ function idb_count_notepad(db){
         //document.getElementById('span_idb_status').innerHTML='IDB现有记录 '+cscount+' 条';
     }
 
-    return new Promise((resolve, reject) => {
-        var blcount=idb_count_b(db,'notepad_dbf',sub_idb_count_notepad_onsuccess);
-        resolve(blcount);
-    });
+    return idb_count_b(db,'notepad_dbf',sub_idb_count_notepad_onsuccess);
 }
 
 function idb_clear_notepad(db){
@@ -369,62 +367,71 @@ function idb_clear_notepad(db){
         //document.getElementById('span_idb_status').innerHTML='IDB数据清除完毕，现有记录 '+cscount+' 条';
     }
     
-    function sub_idb_clear_notepad_onsuccess(otable){
-        //
-    }
-    
+    function sub_idb_clear_notepad_onsuccess(otable){ /* ... */ }
+
+    var rndstr = randstr_b(4, true, false);    
     return new Promise((resolve, reject) => {
-        var rndstr=randstr_b(4,true,false);
-        if ((prompt('输入 '+rndstr+' 确认清除全部数据') || '').trim()==rndstr){       
-            idb_write_b(db,'notepad_dbf',sub_idb_clear_notepad_count1,sub_idb_clear_notepad_count2,sub_idb_clear_notepad_onsuccess);
+        if ((prompt('输入 ' + rndstr + ' 确认清除全部数据') || '').trim() === rndstr) {
+            idb_write_b(db, 'notepad_dbf', sub_idb_clear_notepad_count1, sub_idb_clear_notepad_count2, sub_idb_clear_notepad_onsuccess)
+                .then(() => resolve(true));
+        } else {
+            reject(new Error('User did not confirm data clearing.'));
         }
-        resolve(true);
-    });
+    });    
 }
 
 function idb_notepad(cstype='',cskey=false,is_delete=false,do_type=''){
-    async function sub_idb_notepad_switch(cstype, db, resolve, blcount){
+    async function sub_idb_notepad_switch(cstype, db, resolve, reject){
         switch (cstype){
             case 'read':
-                async function sub_idb_notepad_read(){
-                    console.log('sub_idb_notepad_read()');
+                try {
                     await idb_read_notepad(db,cskey,do_type);
                     resolve(true);
+                } catch (error){
+                    reject(error);
+                } finally {
+                    idb_close_b(db);
                 }
-                sub_idb_notepad_read();
                 break;
             case 'edit':
-                async function sub_idb_notepad_edit(){
-                    console.log('sub_idb_notepad_edit()');
+                try {
                     await idb_edit_notepad(db,is_delete);
-                    //await idb_read_notepad(db);
                     resolve(true);
+                } catch (error){
+                    reject(error);
+                } finally {
+                    idb_close_b(db);
                 }
-                sub_idb_notepad_edit();
                 break;
             case 'clear':
-                async function sub_idb_notepad_clear(){
-                    console.log('sub_idb_notepad_clear()');
+                try {
                     await idb_clear_notepad(db);
                     resolve(true);
+                } catch (error){
+                    reject(error);
+                } finally {
+                    idb_close_b(db);
                 }
-                sub_idb_notepad_clear();
                 break;
             case 'count':
-                async function sub_idb_notepad_count(){
-                    console.log('sub_idb_notepad_count()');
-                    blcount=await idb_count_notepad(db);
+                try {
+                    var blcount=await idb_count_notepad(db);
                     resolve(blcount);
+                } catch (error){
+                    reject(error);
+                } finally {
+                    idb_close_b(db);
                 }
-                sub_idb_notepad_count();
                 break;
             case 'import':
-                async function sub_idb_notepad_import(){
-                    console.log('sub_idb_notepad_import()');
+                try {
                     await idb_import_notepad(db);
                     resolve(true);
+                } catch (error){
+                    reject(error);
+                } finally {
+                    idb_close_b(db);
                 }
-                sub_idb_notepad_import();
                 break;                
         }
     }
