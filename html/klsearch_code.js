@@ -155,7 +155,7 @@ function args_klsearch(){
                         bltype='Bing(cn),Oxford,Cambridge';
                         break;
                     case 'batch_en_minor':
-                        bltype='AHD,definitions,dictionary.com,learnersdictionary,lexico,longman,Wiktionary(Local),kaikki(Local),wordhippo,wordnik,yourdictionary';
+                        bltype='AHD,definitions,dictionary.com,learnersdictionary,lexico,longman,wordhippo,wordnik'; //Wiktionary(Local),kaikki(Local),yourdictionary,
                         break;
                 }
             } else if (item.substring(0,2)=='c='){
