@@ -284,9 +284,7 @@ function idb_read_ysh_jf(db,cskey=false){
         [cskey,isreg]=str_reg_check_b(cskey,isreg,true);
         
         current_result_ysh_jf_global=common_search_b(cskey,isreg,raw_data_ysh_jf_global,-1)[0];
-        
         result_percent_b('span_count',current_result_ysh_jf_global.length,raw_data_ysh_jf_global.length);
-        
         page_ysh_jf(1);
     }
     
@@ -308,7 +306,7 @@ function idb_count_ysh_jf(db){
     function sub_idb_count_ysh_jf_onsuccess(cscount){
         alert('IDB 现有记录 '+cscount+' 条');
     }
-
+    //-----------------------
     return idb_count_b(db,'ysh_jf_dbf',sub_idb_count_ysh_jf_onsuccess);
 }
 
@@ -322,53 +320,47 @@ function idb_clear_ysh_jf(db){
     }
     
     function sub_idb_clear_ysh_jf_onsuccess(otable){ /* ... */ }
-    
-    return new Promise((resolve, reject) => {
-        var rndstr=randstr_b(4,true,false);
-        if ((prompt('输入 '+rndstr+' 确认清除全部数据') || '').trim()==rndstr){       
-            idb_write_b(db,'ysh_jf_dbf',sub_idb_clear_ysh_jf_count1,sub_idb_clear_ysh_jf_count2,sub_idb_clear_ysh_jf_onsuccess);
-        }
-        resolve(true);
-    });
+    //-----------------------
+    if ((prompt('输入 ' + rndstr + ' 确认清除全部数据') || '').trim() === rndstr){
+        return idb_write_b(db,'ysh_jf_dbf',sub_idb_clear_ysh_jf_count1,sub_idb_clear_ysh_jf_count2,sub_idb_clear_ysh_jf_onsuccess);
+    } else {
+        return new Promise((resolve, reject) => {reject(new Error('User did not confirm data clearing.'));});    
+    }
 }
 
 function idb_ysh_jf(cstype='',cskey=false,do_alert=false){
     async function sub_idb_ysh_jf_switch(cstype, db, resolve, reject){
+        var sub_operation;
         switch (cstype){
             case 'read':
-                async function sub_idb_ysh_jf_read(){
-                    await idb_read_ysh_jf(db,cskey);
-                    resolve(true);
-                }
-                sub_idb_ysh_jf_read();
+                sub_operation=idb_read_ysh_jf(db,cskey);
                 break;
             case 'write':
-                async function sub_idb_ysh_jf_write(){
-                    await idb_write_ysh_jf(db,do_alert);
-                    resolve(true);
-                }
-                sub_idb_ysh_jf_write();
+                sub_operation=idb_write_ysh_jf(db,do_alert);
                 break;
             case 'clear':
-                async function sub_idb_ysh_jf_clear(){
-                    await idb_clear_ysh_jf(db);
-                    resolve(true);
-                }
-                sub_idb_ysh_jf_clear();
+                sub_operation=idb_clear_ysh_jf(db);
                 break;
             case 'count':
-                async function sub_idb_ysh_jf_count(){
-                    var blcount=await idb_count_ysh_jf(db);
-                    resolve(blcount);
-                }
-                sub_idb_ysh_jf_count();
+                sub_operation=idb_count_ysh_jf(db);
                 break;
+            default:
+                console.error('Invalid operation type:', cstype);
+                idb_close_b(db);
+                reject(new Error(`Unsupported operation: ${cstype}`));
+                break;                
+        }
+        
+        try {
+            var bljg=await sub_operation;
+            resolve(bljg);
+        } catch (error){
+            reject(error);
+        } finally {
+            idb_close_b(db);
         }
     }
     //-----------------------
-    return new Promise((resolve, reject) => {
-        var bljg=idb_main_b(cstype,'ysh_jf_dbc','ysh_jf_dbf',sub_idb_ysh_jf_switch);
-        resolve(bljg);
-    });
+    return idb_main_b(cstype,'ysh_jf_dbc','ysh_jf_dbf',sub_idb_ysh_jf_switch);
     //idb_ysh_jf('count').then(value => {console.log('行数：',value);}); //此行保留 - 保留注释    
 }

@@ -1,5 +1,3 @@
-说说代码有什么问题
-
 function args_reader_idb(){
     var cskeys=href_split_b(location.href);
     for (let bltmpstr of cskeys){
@@ -258,66 +256,54 @@ function idb_count_rlater(db){
     function sub_idb_count_rlater_onsuccess(cscount){
         document.getElementById('span_idb_status').innerHTML='IDB现有记录 '+cscount+' 条';
     }
-
+    //-----------------------
     return idb_count_b(db, 'rlater_dbf', sub_idb_count_rlater_onsuccess);
 }
 
 function filename_list_reader_idb(db){
-    return new Promise((resolve, reject) => {
-        var transaction = db.transaction(['reader_txt_dbf'], 'readonly');
-        transaction.onerror = function(event){
-            console.log('transaction error');
-        };
-
-        var otable = transaction.objectStore('reader_txt_dbf');
-        otable.onsuccess = function (event){
-            console.log('dbf 打开成功');
-        };
-        otable.onerror = function (event){
-            console.log('dbf 打开失败');
-        }
-        
-        var fname_bookname_list=local_storage_get_b('reader_idb_filename_bookname',-1,true);
-        for (let blxl=0;blxl<fname_bookname_list.length;blxl++){
-            fname_bookname_list[blxl]=fname_bookname_list[blxl].split(' /// ');
-        }
-        idbfilename_list_global=[];
-        otable.openCursor().onsuccess = function (event){
-            var cursor = event.target.result;
-            if (cursor){
-                if (cursor.value.type=='n'){
-                    var bookname_t='';
-                    for (let item of fname_bookname_list){
-                        if (item[0]==cursor.value.content && item.length>1){
-                            bookname_t=item[1];
-                            break;
-                        }
+    function sub_filename_list_reader_idb_onsuccess(resolve, reject, event, other_var1,other_var2){
+        var cursor = event.target.result;
+        if (cursor){
+            if (cursor.value.type=='n'){
+                var bookname_t='';
+                for (let item of fname_bookname_list){
+                    if (item[0]==cursor.value.content && item.length>1){
+                        bookname_t=item[1];
+                        break;
                     }
-                    if (bookname_t==''){
-                        bookname_t=filename_2_bookname_b(cursor.value.content);
-                    }
-                    idbfilename_list_global.push([cursor.value.id,cursor.value.content,bookname_t]);
                 }
-                cursor.continue();
-            } else {     
-                refresh_book_list_reader_idb();
-                var current_idb_book_id=args_reader_idb();
-                if (current_idb_book_id>=0){
-                    center_reader_idb('read','',current_idb_book_id);
-                } else if (idbfilename_list_global.length>0){
-                    center_reader_idb('read','',idbfilename_list_global[0][0]);
-                } else {  //不能使用 locaiton.reload()  或 location.href='?' - 保留注释
-                    document.getElementById('divhtml').innerHTML='';
-                    document.getElementById('span_filename').innerHTML='';
-                    document.getElementById('span_filelength').innerHTML='';  
-                    document.title='';
-                    csbooklist_sub_global[csbookno_global][0]='';
-                    csbooklist_sub_global[csbookno_global][1]='';        
+                if (bookname_t==''){
+                    bookname_t=filename_2_bookname_b(cursor.value.content);
                 }
-                resolve(true);
+                idbfilename_list_global.push([cursor.value.id,cursor.value.content,bookname_t]);
             }
-        };
-    });
+            cursor.continue();
+        } else {
+            refresh_book_list_reader_idb();
+            var current_idb_book_id=args_reader_idb();
+            if (current_idb_book_id>=0){
+                center_reader_idb('read','',current_idb_book_id);
+            } else if (idbfilename_list_global.length>0){
+                center_reader_idb('read','',idbfilename_list_global[0][0]);
+            } else {  //不能使用 locaiton.reload()  或 location.href='?' - 保留注释
+                document.getElementById('divhtml').innerHTML='';
+                document.getElementById('span_filename').innerHTML='';
+                document.getElementById('span_filelength').innerHTML='';  
+                document.title='';
+                csbooklist_sub_global[csbookno_global][0]='';
+                csbooklist_sub_global[csbookno_global][1]='';        
+            }
+            resolve(true);
+        }
+    }
+    //-----------------------
+    var fname_bookname_list=local_storage_get_b('reader_idb_filename_bookname',-1,true);
+    for (let blxl=0;blxl<fname_bookname_list.length;blxl++){
+        fname_bookname_list[blxl]=fname_bookname_list[blxl].split(' /// ');
+    }
+    idbfilename_list_global=[];
+
+    return idb_read_b(db,'reader_txt_dbf',sub_filename_list_reader_idb_onsuccess);
 }
 
 function bookname_set_reader_idb(){
@@ -380,103 +366,79 @@ function one_book_reader_idb(db,bookid){
     }
     
     filelist=[];
-            
-    return new Promise((resolve, reject) => {
-        idb_read_b(db,'reader_txt_dbf',sub_one_book_reader_idb_onsuccess);
-        resolve(true);
-    });
+    return idb_read_b(db,'reader_txt_dbf',sub_one_book_reader_idb_onsuccess);
 }
 
 function delete_reader_idb(db,bookid){
-    return new Promise((resolve, reject) => {
-        var transaction = db.transaction(['reader_txt_dbf'], 'readwrite');
-        transaction.onerror = function(event){
-            console.log('transaction error');
-        };
+    async function sub_delete_reader_idb_cursor(cursor){
+        if (cursor && cursor.value.id === bookid){
+            var blcontent = cursor.value.content;
+            var delete_request = cursor.delete();
 
-        var otable = transaction.objectStore('reader_txt_dbf');
-        otable.onsuccess = function (event){
-            console.log('dbf 打开成功');
-        };
-        otable.onerror = function (event){
-            console.log('dbf 打开失败');
-        }
-
-        var bookname_t='';
-        for (let item of idbfilename_list_global){
-            if (item[0]==bookid){
-                csbookname_global=item[1];
-                bookname_t=item[2];
-                break;
-            }
-        }
-        
-        otable.openCursor().onsuccess = function (event){
-            var cursor = event.target.result;
-            if (cursor){
-                if (cursor.value.id==bookid){
-                    var blcontent=cursor.value.content;
-                    var delete_request = cursor.delete();
-                    delete_request.onsuccess = function(){
-                        //do nothing - 保留注释
+            try {
+                await new Promise((resolveDelete, rejectDelete) => {
+                    delete_request.onsuccess = () => {
+                        resolveDelete();
                     };
-                    delete_request.onerror = function(){
-                        console.log('delete error:',bookid,blcontent);
-                    }                    
-                }
-                cursor.continue();
-            } else {
-                center_reader_idb('list');
-                resolve(true);
+                    delete_request.onerror = (event) => {
+                        console.log('delete error:', bookid, cursor.value.content);
+                        rejectDelete(event.target.error);
+                    };
+                });
+            } catch (error){
+                // 处理错误（如果需要）
             }
+        }
+        return cursor.continue();
+    }
+    
+    function sub_delete_reader_idb_onsuccess(otable){
+        otable.openCursor().onsuccess = function (event){
+            let cursor = event.target.result;
+            if (cursor){
+                sub_delete_reader_idb_cursor(cursor).then(() => {
+                    if (!cursor){ // 遍历结束
+                        center_reader_idb('list');
+                        //resolve(true);
+                    }
+                });
+            } else {
+                // 如果一开始就无数据，则可以直接 resolve
+                center_reader_idb('list');
+                //resolve(true);
+            }        
         };
-    });
+    }
+    //-----------------------
+    var bookname_t='';
+    for (let item of idbfilename_list_global){
+        if (item[0]==bookid){
+            csbookname_global=item[1];
+            bookname_t=item[2];
+            break;
+        }
+    }
+            
+    return idb_write_b(db,'reader_txt_dbf',false,false,sub_delete_reader_idb_onsuccess,false); 
 }
 
 function write_reader_idb(db,filename,cslist){    
-    return new Promise((resolve, reject) => {
-        var transaction = db.transaction(['reader_txt_dbf'], 'readwrite');
-        transaction.oncomplete = function(event){
-            console.log('transaction ok');
-            resolve(true);
-        };
-        transaction.onerror = function(event){
-            console.log('transaction error');
-        };
-
-        var otable = transaction.objectStore('reader_txt_dbf');
-
+    function sub_write_reader_idb_onsuccess(otable){
         var ocount1=otable.count();
         ocount1.onsuccess = function(){
-            console.log('写入前记录数：',ocount1.result);
-        }
-
-        //otable.openCursor().onsuccess = function (event){ 
-            var id_set=new Set();
-            id_set.add(-1);
+            console.log(new Date().toLocaleTimeString(), '写入前记录数：',ocount1.result);
             
-            var blfound=false;
-            for (let item of idbfilename_list_global){
-                id_set.add(item[0]);
-                if (item[1]==filename){
-                    blfound=true;
-                    break;
-                }
+            var maxid=Math.max(...id_set)+1;    //会自动将字符型数字转化为数值型 - 保留注释
+            otable.add({'id':maxid,'content':filename,'type':'n'});   //n: book file name - 保留注释
+            for (let item of cslist){
+                otable.add({'id':maxid,'content':item,'type':''});
             }
             
-            if (blfound===false){
-                var maxid=Math.max(...id_set)+1;    //会自动将字符型数字转化为数值型 - 保留注释
-                otable.add({'id':maxid,'content':filename,'type':'n'});   //n: book file name - 保留注释
-                for (let item of cslist){
-                    otable.add({'id':maxid,'content':item,'type':''});
-                }
-                
-                var ocount2=otable.count();
-                ocount2.onsuccess = function(){
-                    console.log(new Date().toLocaleTimeString(),'添加后记录数：',ocount2.result);
-                    document.title='IDB数据写入完毕，现有记录 '+ocount2.result+' 条';
-                }
-                
+            var ocount2=otable.count();
+            ocount2.onsuccess = function(){
+                console.log(new Date().toLocaleTimeString(),'添加后记录数：',ocount2.result);
+                document.title='IDB数据写入完毕，现有记录 '+ocount2.result+' 条';
+            
                 var bookname_t='';
                 var fname_bookname_list=local_storage_get_b('reader_idb_filename_bookname',-1,true);
                 for (let item of fname_bookname_list){
@@ -492,27 +454,41 @@ function write_reader_idb(db,filename,cslist){
                 idbfilename_list_global.push([maxid,filename,bookname_t]);
                 refresh_book_list_reader_idb();
                 choose_reader_idb(maxid);
-            } else {
-                console.log(new Date().toLocaleTimeString(),'书籍已存在');
-                document.title='书籍已存在';            
             }
-            //resolve(true);
-        //};
-        
-        otable.onsuccess = function (event){
-            console.log('dbf 打开成功');
-        };
-        otable.onerror = function (event){
-            console.log('dbf 打开失败');
         }
-    });
+    }
+    //-----------------------
+    var id_set=new Set();
+    id_set.add(-1);
+    
+    var blfound=false;
+    for (let item of idbfilename_list_global){
+        id_set.add(item[0]);
+        if (item[1]==filename){
+            blfound=true;
+            break;
+        }
+    }
+    
+    if (blfound){
+        console.log(new Date().toLocaleTimeString(),'书籍已存在');
+        document.title='书籍已存在';    
+        return Promise.resolve(false);
+        //使用了Promise的静态方法resolve。这个方法接收一个参数，并基于该参数创建并返回一个新的Promise实例。当传入的是原始值（如false）、另一个Promise实例或具有.then方法的对象时，它会立即返回一个已解决状态（resolved）的Promise对象，并且其最终结果即为传入的false。
+        
+        //return new Promise((resolve, reject) => {resolve(false);});
+        //直接构造了一个新的Promise实例，并通过传递给Promise构造函数一个executor函数来定义异步操作逻辑。在这个executor函数中，调用了resolve(false)来显式地将Promise的状态设置为已解决，并将结果设为false。尽管这里的executor函数是同步执行的，但这种写法通常用来处理异步操作，比如网络请求或者定时器等。
+        //在当前语境下，两者效果相同，都是为了生成一个已完成并且结果为false的Promise对象。然而，在更复杂的场景下，Promise.resolve更适合用于快速包装已存在的同步结果或Promise，而构造函数则适合构建涉及异步过程的Promise。如果仅是为了返回一个简单的预定义值，那么Promise.resolve是一个更简洁、更推荐的方式。
+    } else {
+        return idb_write_b(db,'reader_txt_dbf',false,false,sub_write_reader_idb_onsuccess,false);
+    }
 }
 
 function count_reader_idb(db){
     function sub_count_reader_idb_onsuccess(cscount){
         document.title='IDB现有22记录 '+cscount+' 条';
     }
-
+    //-----------------------
     return idb_count_b(db,'reader_txt_dbf',sub_count_reader_idb_onsuccess);
 }
 
@@ -524,67 +500,54 @@ function clear_all_reader_idb(db){
     function sub_idb_write_rlater_count2(cscount){
         document.title='IDB数据清除完毕，现有记录 '+cscount+' 条';
     }
-       
-    return new Promise((resolve, reject) => {
-        idb_write_b(db,'reader_txt_dbf',sub_idb_write_rlater_count1,sub_idb_write_rlater_count2,false);
-        resolve(true);
-    });
+    //-----------------------
+    var rndstr = randstr_b(4, true, false);    
+    if ((prompt('输入 ' + rndstr + ' 确认清空全部书籍') || '').trim() === rndstr){
+        return idb_write_b(db,'reader_txt_dbf',sub_idb_write_rlater_count1,sub_idb_write_rlater_count2,false);
+    } else {
+        return new Promise((resolve, reject) => {reject(new Error('User did not confirm data clearing.'));});    
+    }   
 }
 
 function center_reader_idb(cstype='',filename='',bookid=-1,cslist=[]){
     async function sub_center_reader_idb_switch(cstype, db, resolve, reject, filename,bookid,cslist){
+        var sub_operation;    
         switch (cstype){
             case 'list':
-                async function center_reader_idb_list(){
-                    await filename_list_reader_idb(db);
-                    resolve(true);
-                }
-                center_reader_idb_list();
+                sub_operation=filename_list_reader_idb(db);
                 break;
             case 'read':
-                async function center_reader_idb_read(){
-                    await one_book_reader_idb(db,bookid);
-                    resolve(true);
-                }
-                center_reader_idb_read();
+                sub_operation=one_book_reader_idb(db,bookid);
                 break;                    
             case 'write':
-                async function center_reader_idb_write(){
-                    await write_reader_idb(db,filename,cslist);
-                    resolve(true);
-                }
-                center_reader_idb_write();
+                sub_operation=write_reader_idb(db,filename,cslist);
                 break;
             case 'delete':
-                async function center_reader_idb_delete(){
-                    await delete_reader_idb(db,bookid);
-                    resolve(true);
-                }
-                center_reader_idb_delete();
+                sub_operation=delete_reader_idb(db,bookid);
                 break;                                        
             case 'clear_all':
-                var rndstr=randstr_b(4,true,false);
-                if ((prompt('输入 '+rndstr+' 确认清空全部书籍') || '').trim()!==rndstr){break;}
-                
-                async function center_reader_idb_clear_all(){
-                    await clear_all_reader_idb(db);
-                    resolve(true);
-                }
-                center_reader_idb_clear_all();
+                sub_operation=clear_all_reader_idb(db);
                 break;
             case 'count':
-                async function center_reader_idb_count(){
-                    var blcount = await count_reader_idb(db);
-                    resolve(blcount);
-                }
-                center_reader_idb_count();
+                sub_operation=count_reader_idb(db);
+                break;
+            default:
+                console.error('Invalid operation type:', cstype);
+                idb_close_b(db);
+                reject(new Error(`Unsupported operation: ${cstype}`));
                 break;
         }
+        
+        try {
+            var bljg=await sub_operation;
+            resolve(bljg);
+        } catch (error){
+            reject(error);
+        } finally {
+            idb_close_b(db);
+        }        
     }
     //-----------------------
-    return new Promise((resolve, reject) => {
-        var bljg=idb_main_b(cstype,'reader_txt_dbc','reader_txt_dbf',sub_center_reader_idb_switch,filename,bookid,cslist);
-        resolve(bljg);
-    });
+    return idb_main_b(cstype,'reader_txt_dbc','reader_txt_dbf',sub_center_reader_idb_switch,filename,bookid,cslist);
     //center_reader_idb('count').then(value => {console.log('行数：',value);}); //此行保留 - 保留注释    
 }

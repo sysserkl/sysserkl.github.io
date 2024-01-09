@@ -254,8 +254,7 @@ function compare_data_bible(){
         }
     }
     //---
-    async function sub_compare_data_bible_get_old_data(){
-        await idb_bible('read',true);
+    function sub_compare_data_bible_get_old_data(){
         var len_min=Math.min(kjv.length,cnbible_global.length,enbible_old_global.length,cnbible_old_global.length);
         var diff_td_list=[];
         var diff_str_js_list=[];
@@ -332,7 +331,11 @@ function compare_data_bible(){
         cnbible_old_global=[];
     }
     //-----------------------
-    sub_compare_data_bible_get_old_data();
+    return new Promise((resolve, reject) => {
+        idb_bible('read',true)
+        .then((result) => {sub_compare_data_bible_get_old_data();})
+        .catch((error) => {reject(error);});
+    });
 }
 
 function args_bible(){
@@ -1606,6 +1609,7 @@ function idb_read_bible(db,is_old=false){
             }
             cursor.continue();
         } else {
+            console.log('读取en',en_list.length,'读取cn',cn_list.length);
             if (is_old){
                 enbible_old_global=en_list;
                 cnbible_old_global=cn_list;
@@ -1613,22 +1617,31 @@ function idb_read_bible(db,is_old=false){
                 kjv=en_list;
                 cnbible_global=cn_list;
             }
+            resolve();
         }
     }
     //-----------------------
     var en_list=[];
-    var cn_list=[];    
-    return new Promise((resolve, reject) => {
-        idb_read_b(db,'bible_dbf',sub_idb_read_bible_onsuccess);
-        resolve(true);
-    });
+    var cn_list=[];
+    return idb_read_b(db,'bible_dbf',sub_idb_read_bible_onsuccess);
 }
 
 function idb_count_bible(db){
-    return new Promise((resolve, reject) => {
-        var blcount=idb_count_b(db,'bible_dbf',false);
-        resolve(blcount);
-    });
+    function sub_idb_count_bible_onsuccess(cscount){
+        document.getElementById('span_status').innerHTML='IDB 记录数：'+cscount;
+    }
+    //-----------------------
+    return idb_count_b(db,'bible_dbf',sub_idb_count_bible_onsuccess);
+    //当调用 await idb_bible('count') 或者 .then()、.catch() 等方法时，这个 Promise 会处于挂起状态，等待异步操作（即计数）完成。
+    //对于返回的 Promise，不需要手动“释放”，因为它会在其内部通过 resolve 或 reject 来结束 Promise 的生命周期。Promise 结束后，浏览器会自动进行垃圾回收，清理相关资源。    
+    
+    //如果不带 await 执行 idb_bible('count')，那么返回的 Promise 对象将不会被等待，而是立即返回到调用栈。这意味着计数操作将在后台异步进行，而主线程将继续执行后续代码。
+    //这时需要通过 .then() 方法为 Promise 注册回调函数来处理成功或失败的情况。当异步操作完成（即数据库计数完成）后，相应的回调函数会被调用。如果不再需要 Promise 的结果，也不必手动“释放”它，浏览器会在适当的时候自动回收相关资源。
+    
+    //如果不带 await 执行 idb_bible('count') 并且不添加 .then() 或 .catch()，那么将无法捕获到异步操作的结果或错误。
+    //Promise 会在后台继续执行，并保持挂起状态直到其内部操作完成。即使没有明确地处理（resolve 或 reject）这个 Promise，一旦它完成了异步操作，JavaScript 引擎会自动管理相关资源的释放，也就是说，Promise 对象本身及其引用的相关资源在将来会被垃圾回收机制进行清理。    
+    //由于没有注册回调函数来处理结果或错误，因此一旦该 Promise 完成（resolve 或 reject），其结果将会丢失。
+    //如果确实不需要获取计数结果，可以选择忽略它，但是通常建议至少使用 .catch() 处理可能发生的错误，以确保程序稳定性。
 }
 
 function idb_write_bible(db,adddata=true){
@@ -1655,8 +1668,12 @@ function idb_write_bible(db,adddata=true){
             document.getElementById('span_status').innerHTML='IDB 添加后记录数：'+ocount3.result;
             console.log('添加后记录数：',ocount3.result);
         }
+        
+        //在 sub_idb_write_bible_onsuccess 函数中，不需要添加 resolve。原因在于该函数不是 Promise 的 resolve 或 reject 回调函数，而是作为参数传递给 idb_write_b 函数，并在其内部被调用。
+        //idb_write_b 函数本身是一个返回 Promise 的异步操作，在其内部已经包含了对 transaction.oncomplete 和 transaction.onerror 的处理，并分别使用了 resolve 和 reject 来结束 Promise。
+        //当 sub_idb_write_bible_onsuccess 被调用时，它主要负责执行实际的数据写入操作。数据写入完成后，transaction.oncomplete 会自动触发并调用 resolve，从而使得整个 idb_write_b 函数的 Promise 正常完成（resolved）。因此，无需在 sub_idb_write_bible_onsuccess 中额外添加 resolve。        
     }
-    
+    //-----------------------
     return idb_write_b(db,'bible_dbf',sub_idb_write_bible_count1,sub_idb_write_bible_count2,sub_idb_write_bible_onsuccess);
 }
 
@@ -1683,19 +1700,32 @@ function main_sub_chapter_var_generate_bible(){
 }
 
 function idb_count_and_write_bible(){
-    ///在 bible_data.js 中被调用 - 保留注释
-    async function sub_idb_count_and_write_bible(){
+    //在 bible_data.js 中被调用 - 保留注释
+    return new Promise(async (resolve) => {
         console.log('idb_count_and_write_bible()');
-        var blcount=await idb_bible('count');
-        if (blcount==0){
+        var blcount = await idb_bible('count');
+        if (blcount === 0){
             await idb_bible('write');
-            //如果数据库为空，第一载入页面无法显示，重载正常 - 保留注释
             location.reload();
         }
         init_bible();
-    }
-    sub_idb_count_and_write_bible();
+        resolve(); // 当所有操作完成时，解决此 promise
+    });
 }
+
+//function idb_count_and_write_bible(){
+    //async function sub_idb_count_and_write_bible(){
+        //console.log('idb_count_and_write_bible()');
+        //var blcount=await idb_bible('count');
+        //if (blcount==0){
+            //await idb_bible('write');
+            ////如果数据库为空，第一载入页面无法显示，重载正常 - 保留注释
+            //location.reload();
+        //}
+        //init_bible();
+    //}
+    //sub_idb_count_and_write_bible();
+//}
 
 function load_data_bible(load_from_idb=false){
     async function sub_load_data_bible_read(){
@@ -1725,20 +1755,14 @@ function load_filelist_bible(do_init=true){
     console.log(sele_path+'/jsdoc3/bible_kjv_890.js'+today);
     
     document.write('<script>\n');
-    document.write('kjv=[];\n');
-    document.write('for (let item of filelist){\n');
-    document.write('    kjv.push(item);\n');
-    document.write('}\n');
+    document.write('kjv=[].concat(filelist);\n');
     document.write('</script>\n');
     
     document.write('\n<script src="'+sele_path+'/jsdoc3/sheng_jing_he_he_ben_124338.js'+today+'"><\/script>\n');
     console.log(sele_path+'/jsdoc3/sheng_jing_he_he_ben_124338.js'+today);
     
     document.write('<script>\n');
-    document.write('cnbible_global=[];\n');
-    document.write('for (let item of filelist){\n');
-    document.write('    cnbible_global.push(item);\n');
-    document.write('}\n');
+    document.write('cnbible_global=[].concat(filelist);\n');
     document.write('filelist=[];\n');
     if (do_init){
         document.write('init_bible();\n');    //idb_count_and_write_bible();
@@ -1748,43 +1772,44 @@ function load_filelist_bible(do_init=true){
 
 function idb_bible(cstype='',is_old=false){
     async function sub_idb_bible_switch(cstype, db, resolve, reject, id_old){
+        var sub_operation;
         switch (cstype){
             case 'read':
-                async function sub_idb_bible_read(){
-                    await idb_read_bible(db,is_old);
-                    resolve(true);
-                }
-                sub_idb_bible_read();
+                sub_operation=idb_read_bible(db,is_old);
                 break;
             case 'write':
-                async function sub_idb_bible_write(){
-                    await idb_write_bible(db);
-                    resolve(true);
-                }
-                sub_idb_bible_write();
+                sub_operation=idb_write_bible(db);
                 break;
             case 'clear':
-                async function sub_idb_bible_clear(){
-                    await idb_write_bible(db,false);
-                    resolve(true);
-                }
-                sub_idb_bible_clear();
+                sub_operation=idb_write_bible(db,false);
                 break;
             case 'count':
-                async function sub_idb_bible_count(){
-                    var blcount = await idb_count_bible(db);
-                    document.getElementById('span_status').innerHTML='IDB 记录数：'+blcount;
-                    resolve(blcount);
-                }
-                sub_idb_bible_count();
+                sub_operation=idb_count_bible(db);
                 break;
-        }    
+            default:
+                console.error('Invalid operation type:', cstype);
+                idb_close_b(db);
+                reject(new Error(`Unsupported operation: ${cstype}`));
+                break;
+                //在调用 reject 之后，会立即跳出当前的 async function sub_idb_bible_switch 函数，并且执行 .catch() 链接在外部 Promise 上的回调函数（如果存在）。而 finally 块中的 idb_close_b(db) 将不会在这个上下文中执行。
+        }
+        
+        try {
+            var bljg=await sub_operation;
+            resolve(bljg);
+        } catch (error){
+            reject(error);
+        } finally {
+            idb_close_b(db);
+        }
     }
     //-----------------------
-    return new Promise((resolve, reject) => {
-        var bljg=idb_main_b(cstype,'bible','bible_dbf',sub_idb_bible_switch,is_old);
-        resolve(bljg);
-    });
+    
+    //return new Promise((resolve, reject) => {
+    return idb_main_b(cstype,'bible','bible_dbf',sub_idb_bible_switch,is_old);
+    //.then((result) => { /* 不需要在这里 resolve(result)，因为在 sub_idb_bible_switch 中已经处理了 */ })
+    //.catch(reject); // 直接传递错误给外部 promise。.catch((error) => {reject(error);});
+    //});
     //idb_bible('count').then(value => {console.log('行数：',value);});  //此行保留 - 保留注释
 }
 

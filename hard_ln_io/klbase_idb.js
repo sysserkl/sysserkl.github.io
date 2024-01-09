@@ -1,12 +1,3 @@
-function idb_table_success_error_b(otable,dbf_name){
-    otable.onsuccess = function (event){
-        console.log('dbf 打开成功:',dbf_name);
-    };
-    otable.onerror = function (event){
-        console.log('dbf 打开失败:',dbf_name);
-    }
-}
-
 function idb_read_b(odb,dbf_name,fn_onsuccess=false,other_var1=false,other_var2=false){
     return new Promise((resolve, reject) => {
         var transaction = odb.transaction([dbf_name], 'readonly');
@@ -22,7 +13,6 @@ function idb_read_b(odb,dbf_name,fn_onsuccess=false,other_var1=false,other_var2=
         };
 
         var otable = transaction.objectStore(dbf_name);
-        //idb_table_success_error_b(otable,dbf_name);
         
         otable.openCursor().onsuccess = function (event){
             if (fn_onsuccess!==false){
@@ -48,7 +38,6 @@ function idb_count_b(odb,dbf_name,fn_onsuccess=false){
         };
 
         var otable = transaction.objectStore(dbf_name);
-        //idb_table_success_error_b(otable,dbf_name);
 
         var ocount=otable.count();
         ocount.onsuccess = function(){
@@ -64,6 +53,7 @@ function idb_count_b(odb,dbf_name,fn_onsuccess=false){
 }
 
 function idb_write_b(odb,dbf_name,fn_count1,fn_count2,fn_onsuccess=false,do_clear=true){
+    //fn_count1,fn_count2 仅用于清除记录时 - 保留注释
     return new Promise((resolve, reject) => {
         var transaction = odb.transaction([dbf_name], 'readwrite');
         
@@ -82,7 +72,19 @@ function idb_write_b(odb,dbf_name,fn_count1,fn_count2,fn_onsuccess=false,do_clea
         //idb_table_success_error_b 函数，它为 otable 设置了 onsuccess 和 onerror 事件监听器。然而，在 idb_write_b 函数中，事务（transaction）层面已经设置了错误处理和完成回调，对于对象存储表（object store）级别的打开成功或失败通常不需要单独处理。
         //实际上，在调用 transaction.objectStore(dbf_name) 的时候就已经打开了对应的 object store，如果此时 object store 打开失败，整个事务会立即触发错误事件，而在 transaction.onerror 中已经对此进行了处理。
         //因此，idb_table_success_error_b 函数在这里可能是冗余的。
-
+        //以下部分保留 - 保留注释
+        //function idb_table_success_error_b(otable,dbf_name){
+            //otable.onsuccess = function (event){
+                //console.log('dbf 打开成功:',dbf_name);
+            //};
+            //otable.onerror = function (event){
+                //console.log('dbf 打开失败:',dbf_name);
+            //}
+        //}    
+        
+        //otable.onsuccess 事件处理器并不是必要的，因为 transaction.objectStore(dbf_name) 是一个同步操作，它不会触发任何异步成功或错误事件。当调用 db.transaction() 并获取到对象存储引用时，这个对象存储就已经准备好了使用，无需等待额外的“打开成功”事件。
+        //在 IndexedDB 中，通常只有那些涉及网络请求（例如事务提交）或者执行异步查询（如 openCursor() 或 get() 等方法）的操作才会触发相应的成功或错误事件。而直接访问事务中的对象存储并不涉及这些异步操作，所以不需要为其设置 onsuccess 事件处理器。        
+        
         if (do_clear){
             var ocount1=otable.count();
             ocount1.onsuccess = async function(){
@@ -92,13 +94,15 @@ function idb_write_b(odb,dbf_name,fn_count1,fn_count2,fn_onsuccess=false,do_clea
                 console.log('清除前记录数：',ocount1.result);
 
                 var oclear = otable.clear();
-
+                //.clear() 方法用于清除对象存储中的所有数据。这个方法是同步的，意味着它在执行时不会立即返回一个 Promise，而是立即完成其操作（当然，在事务提交之前，数据实际上并未从数据库中删除）。因此，调用 .clear() 后不需要等待异步结果。
+                //oclear 不是一个 Promise，而是一个 IDBCursorDeleteRequest 对象，它有 onsucces 和 onerror 回调函数，可以用来监听清除操作的成功或失败。
+                
                 oclear.onerror= function(event){
                     console.log('数据清除失败');
                     reject(event.target.error);
                 };
 
-                oclear.onsuccess = async function(event) {
+                oclear.onsuccess = async function(event){
                     console.log('数据清除成功');
                        
                     var ocount2=otable.count();

@@ -176,7 +176,7 @@ function idb_import_notepad(db){
         return confirm('是否执行导入操作？');
     }
 
-    function sub_idb_import_notepad_batch(otable){
+    async function sub_idb_import_notepad_batch(otable){
         if (sub_idb_import_notepad_check()==false){return;}
         for (let blxl=0;blxl<import_list.length;blxl++){
             var list_t=import_list[blxl].split('\n');
@@ -194,18 +194,33 @@ function idb_import_notepad(db){
             } else {
                 list_t=list_t.slice(0,-1);
             }
-            var objectStoreRequest = otable.add({'id':current_id_notepad_global,'content':list_t.join('\n'),'date':bldate});
+            
+            try {
+                const objectStoreRequest = otable.add({
+                'id': current_id_notepad_global,
+                'content': list_t.join('\n'),
+                'date': bldate
+                });
 
-            objectStoreRequest.onsuccess = function(event){
-                console.log(blxl,'objectStoreRequest success');
-                if (blxl==import_list.length-1){
+                await new Promise((resolve, reject) => {
+                    objectStoreRequest.onsuccess = () => {
+                        console.log(blxl, 'objectStoreRequest success');
+                        resolve();
+                    };
+                    objectStoreRequest.onerror = (event) => {
+                        console.log(blxl, 'objectStoreRequest error');
+                        reject(event.target.error);
+                    };
+                });
+
+                if (blxl === import_list.length - 1){
                     alert('导入完成');
                 }
-            };
-            objectStoreRequest.onerror = function(event){
-                console.log(blxl,'objectStoreRequest error');        
-            };
-            current_id_notepad_global=current_id_notepad_global+1;
+            } catch (error){
+                console.error('Error importing item at index:', blxl, error);
+            } finally {
+                current_id_notepad_global = current_id_notepad_global + 1;
+            }
         }
     }
 
@@ -230,81 +245,104 @@ function idb_import_notepad(db){
 }
 
 function idb_edit_notepad(db,is_delete=false){
-    function sub_idb_edit_notepad_append(otable){        
+    async function sub_idb_edit_notepad_append(otable){
         try {
-            var objectStoreRequest = otable.add({'id': current_id_notepad_global, 'content': blcontent, 'date': new Date().toLocaleString()});
-            
-            objectStoreRequest.onsuccess = function(event) {
-                console.log('objectStoreRequest success');
-                search_notepad();
-            };
+            var objectStoreRequest = otable.add({
+            'id': current_id_notepad_global, 
+            'content': blcontent, 
+            'date': new Date().toLocaleString()
+            });
+
+            await new Promise((resolve, reject) => {
+                objectStoreRequest.onsuccess = () => {
+                    console.log('objectStoreRequest success');
+                    resolve();
+                };
+                objectStoreRequest.onerror = (event) => {
+                    console.log('objectStoreRequest error');
+                    reject(event.target.error);
+                };
+            });
+            search_notepad();  
         } catch (error){
             console.error('Error appending to notepad:', error);
             throw error;
         }        
     }
 
-    function sub_idb_edit_notepad_onsuccess(otable){
-        if (current_id_notepad_global===false){
-            otable.openCursor().onsuccess = function (event){
-                var cursor = event.target.result;
+    async function sub_idb_edit_notepad_onsuccess(otable){
+        otable.openCursor().onsuccess = function (event){
+            var cursor = event.target.result;
+            if (current_id_notepad_global === false){
                 if (cursor){
                     old_id_set.add(cursor.value.id);
                     cursor.continue();
                 } else {
-                    current_id_notepad_global=Math.max(-1,Math.max(...old_id_set))+1;
+                    current_id_notepad_global = Math.max(-1, Math.max(...old_id_set)) + 1;
                     sub_idb_edit_notepad_append(otable);
                 }
-            };
-        } else {
-            otable.openCursor().onsuccess = function (event){
-                var cursor = event.target.result;
+            } else {
                 if (cursor){
-                    if (cursor.value.id==current_id_notepad_global){
+                    if (cursor.value.id === current_id_notepad_global){
                         if (is_delete){
-                            var request=cursor.delete();
+                            const deleteRequest = cursor.delete();
+                            new Promise((resolve, reject) => {
+                                deleteRequest.onsuccess = () => {
+                                    console.log('deleted');
+                                    resolve();
+                                };
+                                deleteRequest.onerror = (event) => {
+                                    console.log('delete error:', event.target.error);
+                                    reject(event.target.error);
+                                };
+                            });
                         } else {
-                            var updateData = cursor.value;
+                            const updateData = cursor.value;
                             updateData.content = blcontent;
-                            updateData.date=new Date().toLocaleString();
-                            var request = cursor.update(updateData);                            
-                        }
-                        request.onsuccess = () => {
-                            console.log('updated');
+                            updateData.date = new Date().toLocaleString();
+                            const updateRequest = cursor.update(updateData);
+
+                            new Promise((resolve, reject) => {
+                                updateRequest.onsuccess = () => {
+                                    console.log('updated');
+                                    resolve();
+                                };
+                                updateRequest.onerror = (event) => {
+                                    console.log('update error:', event.target.error);
+                                    reject(event.target.error);
+                                };
+                            });
                             search_notepad();
-                        };
-                        request.onerror = () => {
-                            console.log('error');
-                        };
+                        }
                     } else {
                         cursor.continue();
                     }
                 }
-            };
+            }
         }
     }
     //-----------------------
     var blcontent=document.getElementById('textarea_content_notepad').value;
     var old_id_set=new Set();
     
-    return new Promise((resolve, reject) => {
-        if (is_delete){
-            if (current_id_notepad_global !== false) {
-                idb_write_b(db, 'notepad_dbf', false, false, sub_idb_edit_notepad_onsuccess, false)
-                .then(() => resolve(true))
-                .catch(reject);
-            }
-        } else {
-            if (blcontent.length > 100 * 1024 * 1024){
-                alert('尺寸太大');
-                resolve(false); // 或 reject(new Error('Content size too large.'));
-            } else {
-                idb_write_b(db, 'notepad_dbf', false, false, sub_idb_edit_notepad_onsuccess, false)
-                .then(() => resolve(true))
-                .catch(reject);
-            }
+    var do_write=false;
+    if (is_delete){
+        if (current_id_notepad_global !== false){
+            do_write=true;
         }
-    });    
+    } else {
+        if (blcontent.length > 100 * 1024 * 1024){
+            alert('尺寸太大');
+        } else {
+            do_write=true;
+        }
+    }
+    
+    if (do_write){
+        return idb_write_b(db, 'notepad_dbf', false, false, sub_idb_edit_notepad_onsuccess, false);        
+    } else {
+        return Promise.resolve(false);
+    }
 }
 
 function idb_read_notepad(db,cskey=false,do_type=''){
@@ -354,7 +392,7 @@ function idb_count_notepad(db){
     function sub_idb_count_notepad_onsuccess(cscount){
         //document.getElementById('span_idb_status').innerHTML='IDB现有记录 '+cscount+' 条';
     }
-
+    //-----------------------
     return idb_count_b(db,'notepad_dbf',sub_idb_count_notepad_onsuccess);
 }
 
@@ -368,77 +406,51 @@ function idb_clear_notepad(db){
     }
     
     function sub_idb_clear_notepad_onsuccess(otable){ /* ... */ }
-
+    //-----------------------
     var rndstr = randstr_b(4, true, false);    
-    return new Promise((resolve, reject) => {
-        if ((prompt('输入 ' + rndstr + ' 确认清除全部数据') || '').trim() === rndstr) {
-            idb_write_b(db, 'notepad_dbf', sub_idb_clear_notepad_count1, sub_idb_clear_notepad_count2, sub_idb_clear_notepad_onsuccess)
-                .then(() => resolve(true));
-        } else {
-            reject(new Error('User did not confirm data clearing.'));
-        }
-    });    
+    if ((prompt('输入 ' + rndstr + ' 确认清除全部数据') || '').trim() === rndstr){
+        return idb_write_b(db, 'notepad_dbf', sub_idb_clear_notepad_count1, sub_idb_clear_notepad_count2, sub_idb_clear_notepad_onsuccess);
+    } else {
+        return new Promise((resolve, reject) => {reject(new Error('User did not confirm data clearing.'));});    
+    } 
 }
 
 function idb_notepad(cstype='',cskey=false,is_delete=false,do_type=''){
     async function sub_idb_notepad_switch(cstype, db, resolve, reject){
+        var sub_operation;    
         switch (cstype){
             case 'read':
-                try {
-                    await idb_read_notepad(db,cskey,do_type);
-                    resolve(true);
-                } catch (error){
-                    reject(error);
-                } finally {
-                    idb_close_b(db);
-                }
+                sub_operation=idb_read_notepad(db,cskey,do_type);
                 break;
             case 'edit':
-                try {
-                    await idb_edit_notepad(db,is_delete);
-                    resolve(true);
-                } catch (error){
-                    reject(error);
-                } finally {
-                    idb_close_b(db);
-                }
+                sub_operation=idb_edit_notepad(db,is_delete);
                 break;
             case 'clear':
-                try {
-                    await idb_clear_notepad(db);
-                    resolve(true);
-                } catch (error){
-                    reject(error);
-                } finally {
-                    idb_close_b(db);
-                }
+                sub_operation=idb_clear_notepad(db);
                 break;
             case 'count':
-                try {
-                    var blcount=await idb_count_notepad(db);
-                    resolve(blcount);
-                } catch (error){
-                    reject(error);
-                } finally {
-                    idb_close_b(db);
-                }
+                sub_operation=idb_count_notepad(db);
                 break;
             case 'import':
-                try {
-                    await idb_import_notepad(db);
-                    resolve(true);
-                } catch (error){
-                    reject(error);
-                } finally {
-                    idb_close_b(db);
-                }
-                break;                
+                sub_operation=idb_import_notepad(db);
+                break;              
+            default:
+                console.error('Invalid operation type:', cstype);
+                idb_close_b(db);
+                reject(new Error(`Unsupported operation: ${cstype}`));
+                break;                  
+        }
+
+        try {
+            var bljg=await sub_operation;
+            resolve(bljg);
+        } catch (error){
+            reject(error);
+        } finally {
+            idb_close_b(db);
         }
     }
     //-----------------------
-    return new Promise((resolve, reject) => {
-        var bljg=idb_main_b(cstype,'notepad_dbc','notepad_dbf',sub_idb_notepad_switch);
-        resolve(bljg);
-    });
+    return idb_main_b(cstype,'notepad_dbc','notepad_dbf',sub_idb_notepad_switch);
     //idb_notepad('count').then(value => {console.log('行数：',value);}); //此行保留 - 保留注释    
 }
