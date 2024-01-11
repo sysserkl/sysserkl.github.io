@@ -207,7 +207,7 @@ var digest_list_source_global=[
 ["tong_wang_nu_yi_zhi_lhyk_240475_digest",1,"2023-05-31",49798],
 ["foundation_and_empire_2028_digest",1,"2023-08-24",121],
 ["jin_yong_zuo_pin_ji_sdxlxdbq4_575838_digest",1,"2020-10-24",3533],
-["qiang_pao_bing_jun_yu_gtjlddmd_227675_digest",1,"2023-12-29",48824],
+["qiang_pao_bing_jun_yu_gtjlddmd_227675_digest",1,"2024-01-10",51431],
 ["life_of_pi_illustrated_2055_digest",1,"2023-09-07",428],
 ["da_dian_ying_shuang_yu_ydim2gtx2_306287_digest",1,"2023-08-29",117],
 ["i_robotisaac_asimov_667_digest",1,"2023-06-29",101],

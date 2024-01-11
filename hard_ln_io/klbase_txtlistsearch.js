@@ -182,7 +182,10 @@ function digest_statistics_kltxt_b(){
 
 function reading_mode_kltxt_b(){
     digest_temp_add_kltxt_b(true);   
-    document.getElementById('div_show_hide').style.display='none';
+    var odiv=document.getElementById('div_show_hide');
+    if (odiv){
+        odiv.style.display='none';
+    }
     location.href='#content';
 }
 
@@ -1351,37 +1354,33 @@ function bookmarks_read_kltxt_b(current_book_today_bookmark_only_one,return_full
         if (abook.length!==6){continue;}
         abook[2]=parseInt(abook[2]);
         abook[4]=parseInt(abook[4]);
+        //abook 形如：[ "枪炮、病菌与钢铁(贾雷德·戴蒙德)", "qiang_pao_bing_jun_yu_gtjlddmd_227675", 761, "20", 2018, "2023-11-17 21:11:51" ] - 保留注释
         
         if (csbookname_global==abook[1] && abook[5].substring(0,11)==today+' '){ //如果是当前书籍且是今天的书签 - 保留注释
             current_book_today_bookmark_count=current_book_today_bookmark_count+1;
             if (current_book_today_bookmark_only_one){
                 if (current_book_today_row.length==0){  //初始添加 - 保留注释
-                    current_book_today_row=[];
-                    for (let one_col of abook){
-                        current_book_today_row.push(one_col);
-                    }
+                    current_book_today_row=[].concat(abook);
                 } else if (current_book_today_row[5]<abook[5]){   //保留最新日期的书签 - 保留注释
-                    current_book_today_row=[];
-                    for (let one_col of abook){
-                        current_book_today_row.push(one_col);
-                    }
+                    current_book_today_row=[].concat(abook);
                 }
                 continue;
             }
         }
-        
         bookmark_list.push(abook);
     }
+    
     if (current_book_today_row.length>0){
         bookmark_list.push(current_book_today_row);
     }
 
     var bookmark_name={};
     for (let item of bookmark_list){
-        if (bookmark_name[item[1]]==undefined){
-            bookmark_name[item[1]]=[];
+        var key_name='b_'+item[1];
+        if (bookmark_name[key_name]==undefined){
+            bookmark_name[key_name]=[];
         }
-        bookmark_name[item[1]].push(item);  //同名书籍分组 - 保留注释
+        bookmark_name[key_name].push(item);  //同名书籍分组 - 保留注释
     }
     
     var preday=previous_day_b('',366)+' ';   //366天以前 - 保留注释
@@ -2387,7 +2386,6 @@ function img_load_check_kltxt_b(){
     function sub_img_load_check_kltxt_b_start(){
         group_t=Array.from(sub_img_load_check_kltxt_b_group());
         group_t.sort();
-        console.log(group_t);
         
         bllen=group_t.length;
         blxl=0;

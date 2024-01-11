@@ -35,7 +35,6 @@ function menu_reader_idb(){
     '<span class="span_menu" onclick="'+str_t+'bookmarks_get_kltxt_b(false,false,\'reader_idb_lastbook\');">读取最新书签</span>',
     '<span class="span_menu" onclick="'+str_t+'bookmarks_set_kltxt_b(\'reader_idb_lastbook\');">添加书签</span>',
     '<span class="span_menu" onclick="'+str_t+'reading_mode_kltxt_b();">进入阅读状态</span>',    
-    '<span class="span_menu" onclick="'+str_t+'bookname_set_reader_idb();">当前书籍书名修改</span>',
     ];
 
     var blhref=location.href;
@@ -47,10 +46,11 @@ function menu_reader_idb(){
     '<span class="span_menu" onclick="'+str_t+'popup_show_hide_b(\'div_upload_buttons\');">上传书籍</span>',            
     '<span class="span_menu" onclick="'+str_t+'remove_current_book_reader_idb();">移除当前书籍</span>',    
     '<span class="span_menu" onclick="'+str_t+'center_reader_idb(\'clear_all\');">清空所有书籍</span>',    
+    '<span class="span_menu" onclick="'+str_t+'bookname_set_reader_idb();">当前书籍书名修改</span>',    
     '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'reader_idb\');">更新版本</span>',        
     ];
 
-    document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','12rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'⚙','10rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','10rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'⚙','12rem','1rem','1rem','60rem'),'','0rem')+' ');
 }
 
 function remove_current_book_reader_idb(){
@@ -248,6 +248,7 @@ function refresh_book_list_reader_idb(){
 }
 
 function choose_reader_idb(bookid){
+    digest_global=[];
     document.getElementById('input_lineno').value=1;
     center_reader_idb('read','',bookid);
 }

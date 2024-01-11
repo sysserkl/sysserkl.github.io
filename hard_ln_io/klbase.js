@@ -3489,3 +3489,26 @@ function list_2_dicts_b(cslist,cskeys=false,prefix='k_'){
     }
     return result_t;
 }
+
+function character_num_sort_b(compared_a,compared_b,csdesc=false,is_cn=false){
+    //如：TFA1, TFA12, TFA9, SSD1 排序。不考虑小数点和负数 - 保留注释
+    let sa=(compared_a.match(/^[^\d]+/i) || [''])[0];
+    let sb=(compared_b.match(/^[^\d]+/i) || [''])[0];
+    if (sa==sb){
+        if (csdesc){
+            return parseInt((compared_a.match(/\d+/) || ['0'])[0]) < parseInt((compared_b.match(/\d+/) || ['0'])[0]);
+        } else {
+            return parseInt((compared_a.match(/\d+/) || ['0'])[0]) > parseInt((compared_b.match(/\d+/) || ['0'])[0]);
+        }
+    } else {
+        if (is_cn){
+            return zh_sort_b(sa,sb,csdesc);
+        } else {
+            if (csdesc){
+                return sa<sb;
+            } else {    
+                return sa>sb;
+            }
+        }
+    }
+}
