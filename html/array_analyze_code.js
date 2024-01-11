@@ -66,9 +66,9 @@ function sort_arr_analyze(cstype,cskey){
 			}
 		} else {
 			if (cstype==1){
-				table_array_global.sort(function(a,b){return b[cskey]-a[cskey];});
+				table_array_global.sort(function(a,b){return b[cskey]>a[cskey] ? 1 : -1;});
 			} else {
-				table_array_global.sort(function(a,b){return a[cskey]-b[cskey];});
+				table_array_global.sort(function(a,b){return a[cskey]>b[cskey] ? 1 : -1;});
 			}
 		}
 	} else {
@@ -82,9 +82,9 @@ function sort_arr_analyze(cstype,cskey){
 			}
 		} else {
 			if (cstype==1){
-				table_array_global.sort(function(a,b){return b-a;});
+				table_array_global.sort(function(a,b){return b>a ? 1 : -1;});
 			} else {
-				table_array_global.sort(function(a,b){return a-b;});
+				table_array_global.sort(function(a,b){return a>b ? 1 : -1;});
 			}
 		}
 	}
@@ -339,7 +339,7 @@ function row_count_or_sum_arr_analyze(group_no,cum_col_no=-1,add_detail=true){
 
     var list2_t=object2array_b(list_t);
     list2_t.sort(function (a,b){return zh_sort_b(a.toString(),b.toString());});
-	list2_t.sort(function(a,b){return b[1]-a[1];});
+	list2_t.sort(function(a,b){return b[1]>a[1] ? 1 : -1;});
         
     return list2_t;
 }
@@ -506,7 +506,7 @@ function code_lines_read_arr_analyze(){
     
     var flot_list=[];
     for (let key in result_t){
-        result_t[key].sort(function (a,b){return a[0]>b[0];});
+        result_t[key].sort(function (a,b){return a[0]>b[0] ? 1 : -1;});
         if (result_t[key].length<2){continue;}//只有一个记录的忽略 - 保留注释
         flot_list.push([key].concat(result_t[key]));
     }
@@ -519,7 +519,7 @@ function code_lines_read_arr_analyze(){
     
     table_array_global.sort();
 
-    total_list.sort(function (a,b){return a[0]>b[0];});
+    total_list.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});
     total_list=['Total'].concat(total_list);
     
     flot_lines_show_arr_analyze([total_list].concat(flot_list),true);

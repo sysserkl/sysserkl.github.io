@@ -1,6 +1,6 @@
 function data_load_dp_rank(array_name){
-    eval(array_name).sort(function (a,b){return a[3]<b[3];});
-    eval(array_name).sort(function (a,b){return a[2]<b[2];});
+    eval(array_name).sort(function (a,b){return a[3]<b[3] ? 1 : -1;});
+    eval(array_name).sort(function (a,b){return a[2]<b[2] ? 1 : -1;});
     eval(array_name).sort(function (a,b){return zh_sort_b(a,b,false,0);});
 }
 
@@ -42,7 +42,7 @@ function statistics_type_dp_rank(csno=4,add_city=false,sort_no=1){
     function sub_statistics_type_dp_rank_style(csarray,cshead=''){
         var result_t=object2array_b(csarray,false,2);
         result_t.sort(function (a,b){return zh_sort_b(a,b,false,0);});
-        result_t.sort(function (a,b){return a[sort_no]<b[sort_no];});
+        result_t.sort(function (a,b){return a[sort_no]<b[sort_no] ? 1 : -1;});
         for (let blxl=0;blxl<result_t.length;blxl++){
             result_t[blxl]='<tr><td>'+(blxl+1)+'</td><td>'+result_t[blxl][0]+'</td><td align=right>'+result_t[blxl][1]+'</td><td align=right>'+result_t[blxl][2]+'</td></tr>';
         }
@@ -95,9 +95,9 @@ function sort_dp_rank(is_desc=false){
     var rank_no=document.getElementById('select_sort_type_jsad_dp_rank').value;
     if (rank_no >=2 && rank_no <=3){
         if (is_desc){
-            dp_rank_global.sort(function (a,b){return a[rank_no]<b[rank_no];});
+            dp_rank_global.sort(function (a,b){return a[rank_no]<b[rank_no] ? 1 : -1;});
         } else {
-            dp_rank_global.sort(function (a,b){return a[rank_no]>b[rank_no];});    
+            dp_rank_global.sort(function (a,b){return a[rank_no]>b[rank_no] ? 1 : -1;});    
         }
     } else {
         if (rank_no==6){

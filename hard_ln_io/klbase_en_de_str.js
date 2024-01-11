@@ -68,7 +68,7 @@ function randwrongstr_b(cslen){
     
     var bljg='';
     for (let blxl=1;blxl<=cslen;blxl++){
-        list_t.sort(function (a,b){return Math.random()>0.5 ? -1 : 1;});
+        list_t.sort(function (a,b){return Math.random()>0.5 ? 1 : -1;});
         bljg=bljg+list_t[0];
     }
     return bljg;
@@ -133,7 +133,7 @@ function en_confuse_str_b(csstr,cssegments=-1){
     for (let blxl=0;blxl<len_t;blxl++){
         lenlist[blxl]=blxl;
     }
-    lenlist=sub_en_confuse_str_b_getRandomSubarray(lenlist,cssegments).sort(function(a,b){return a-b;});
+    lenlist=sub_en_confuse_str_b_getRandomSubarray(lenlist,cssegments).sort(function(a,b){return a>b ? 1 : -1;});
 
     var bljg=csstr.substring(0,lenlist[0]);
     
@@ -343,7 +343,7 @@ function count_words_b(csstr,words_list,csmin=1,csmax=-1){
         list_t.push([item,blcount]);
     }
     list_t.sort();
-    list_t.sort(function (a,b){return a[1]<b[1];});
+    list_t.sort(function (a,b){return a[1]<b[1] ? 1 : -1;});
     return list_t;
 }
 

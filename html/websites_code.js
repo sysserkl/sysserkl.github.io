@@ -865,7 +865,7 @@ function sites_tail_klwebsites(){
     var t0 = performance.now();
     var hostname,bltail;
     var name_set=new Set();
-    sites_all_global.sort(function (a,b){return a[0].length>b[0].length});  //网址长度 - 保留注释
+    sites_all_global.sort(function (a,b){return a[0].length>b[0].length ? 1 : -1});  //网址长度 - 保留注释
     for (let blxl=0;blxl<sites_all_global.length;blxl++){
         if (name_set.has(sites_all_global[blxl][1])){
             [hostname,bltail]=same_name_websites_b(sites_all_global[blxl][0],sites_all_global[blxl][1],true);

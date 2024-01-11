@@ -95,7 +95,7 @@ function update_lt_f2f(){
 }
 
 function array_2_local_storage_lt_f2f(){
-    content_all_f2f_global.sort(function (a,b){return a[1]<b[1];});    
+    content_all_f2f_global.sort(function (a,b){return a[1]<b[1] ? 1 : -1;});    
     var result_t=[];
     for (let item of content_all_f2f_global){
         result_t.push(item.join(' '));
@@ -452,7 +452,7 @@ function times_pie_f2f(){
     for (let blxl=0;blxl<result_t.length;blxl++){
         result_t[blxl]={label: result_t[blxl][0], data: result_t[blxl][1].length};
     }
-    result_t.sort(function (a,b){return a['data']<b['data'];}); //data 必须 加 引号 - 保留注释
+    result_t.sort(function (a,b){return a['data']<b['data'] ? 1 : -1;}); //data 必须 加 引号 - 保留注释
     document.getElementById('divhtml').innerHTML='<div id="div_flot" style="width:600px;height:600px;"></div>';
     flot_pie_b(result_t,'div_flot');
 }
@@ -490,7 +490,7 @@ function year_individual_f2f(){
     }
     result_t=object2array_b(result_t);
     result_t.sort(function (a,b){return zh_sort_b(a,b,false,0);});    
-    result_t.sort(function (a,b){return a[1].length<b[1].length;});
+    result_t.sort(function (a,b){return a[1].length<b[1].length ? 1 : -1;});
     //result_t 每个元素形如："AAA", [ "2022-09-22", "2021-03-27" ] - 保留注释
     
     var color_no=0;

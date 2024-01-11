@@ -111,4 +111,6 @@ var digest_global=`
 *forebear
 *colossus
 *fire truck
+*breadboard
+*wallboard
 `.trim().split('\n');

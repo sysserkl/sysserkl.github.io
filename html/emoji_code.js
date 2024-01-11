@@ -211,7 +211,7 @@ function unicode_overlape_search_emoji(){
             for (let key in result_t){
                 list_t.push([parseInt(key.substring(1,)),result_t[key]]);
             }
-            list_t.sort(function (a,b){return a[0]>b[0];});
+            list_t.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});
             
             var textarea_list=[];    
             var blcount=0;    

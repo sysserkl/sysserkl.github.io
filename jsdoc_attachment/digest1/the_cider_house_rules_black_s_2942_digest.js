@@ -47,4 +47,7 @@ var digest_global=`
 *watercolor
 *undernourished
 *applesauce
+*hyperactivity
+*intrauterine
+*palmist
 `.trim().split('\n');

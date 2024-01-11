@@ -430,7 +430,7 @@ function localstorage2array_wp_pwa(){
             csdata.push(one_record);        
         }
     }
-    csdata.sort(function (a,b){return a[6]<b[6];});
+    csdata.sort(function (a,b){return a[6]<b[6] ? 1 : -1;});
     var blamount=0;
     var blsum=0;
     for (let blxl=0;blxl<csdata.length;blxl++){

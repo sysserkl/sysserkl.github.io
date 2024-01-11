@@ -173,9 +173,9 @@ function douban_sort_multimedia(csno){
     }
     
     if (csno==2){
-        dlist3.sort(function (a,b){return a[1]-b[1];});
+        dlist3.sort(function (a,b){return a[1]>b[1] ? 1 : -1;});
     } else if (csno==5){
-        dlist3.sort(function (a,b){return b[1]-a[1];});
+        dlist3.sort(function (a,b){return b[1]>a[1] ? 1 : -1;});
     } else {
         dlist3.sort(
             function(a,b){

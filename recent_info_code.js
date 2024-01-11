@@ -219,7 +219,7 @@ function more_tools_klrecent(){
     ['recent_news.htm?expand', '更多资讯'],
 
     ];
-    tools.sort(function (a,b){return a[1].toLowerCase()>b[1].toLowerCase();});
+    tools.sort(function (a,b){return a[1].toLowerCase()>b[1].toLowerCase() ? 1 : -1;});
     var bljg='<p style="line-height:2.4rem;">';
     for (let item of tools){
         bljg=bljg+'<a class="a_oblong_box" href="'+item[0]+'" target=_blank>'+item[1]+'</a> ';

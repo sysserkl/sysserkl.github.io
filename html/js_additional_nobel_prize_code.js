@@ -23,8 +23,8 @@ function data_load_nobel_prize(array_name){
         }
     }
         
-    nobel_prize_global.sort(function (a,b){return a[1]>b[1];});
-    nobel_prize_global.sort(function (a,b){return a[0]>b[0];});
+    nobel_prize_global.sort(function (a,b){return a[1]>b[1] ? 1 : -1;});
+    nobel_prize_global.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});
     
     year_group={};
     for (let item of nobel_prize_global){
@@ -128,7 +128,7 @@ function countries_nobel_prize(){
 function pie_nobel_prize(countries,cstotal,odiv,hide_table_data=false,flot_id='div_flot',flot_size='600px',head_caption='',tail_caption=''){
     countries=object2array_b(countries,true,2);
     countries.sort();
-    countries.sort(function (a,b){return a[1]<b[1];});
+    countries.sort(function (a,b){return a[1]<b[1] ? 1 : -1;});
     
     var flot_list=[];
     var others=0;

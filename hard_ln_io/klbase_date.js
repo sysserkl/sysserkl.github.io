@@ -609,7 +609,7 @@ function date_list_insert_zero_b(cslist,add0101=false,add1231=false,months_list=
     //[date1,value1],
     //[date2,value2],    
     //];
-    cslist.sort(function (a,b){return a[0]>b[0];});
+    cslist.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});
     if (cslist.length==0){
         return cslist;
     }
@@ -655,7 +655,7 @@ function date_list_insert_zero_b(cslist,add0101=false,add1231=false,months_list=
             cslist.push([new Date(mindate.getTime()),0]);
         }
     }
-    cslist.sort(function (a,b){return a[0]>b[0];});
+    cslist.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});
     return cslist;
 }
 

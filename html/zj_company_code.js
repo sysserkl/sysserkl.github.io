@@ -260,7 +260,7 @@ function format_data_2_array_zjcompany(){
     blstr=blstr.replace(/\s+$/mg,'');
     blstr=blstr.replace(/\t+/mg,'\t');
     var list_t=blstr.trim().split('\n');
-    list_t.sort(function (a,b){return parseFloat(a)>parseFloat(b);});
+    list_t.sort(function (a,b){return parseFloat(a)>parseFloat(b) ? 1 : -1;});
     var result_t=[];
     for (let item of list_t){
         var blarr=item.split('\t');  //此处未考虑公司名等含有\t - 保留注释

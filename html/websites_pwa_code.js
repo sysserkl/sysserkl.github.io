@@ -239,7 +239,7 @@ function update_websites_pwa(){
         result_t.push(item);
     }
 
-    site_list.sort(function (a,b){return a[1].length>b[1].length});  //网址长度 - 保留注释
+    site_list.sort(function (a,b){return a[1].length>b[1].length ? 1 : -1});  //网址长度 - 保留注释
 
     var hostname,bltail;
     var name_set=new Set();

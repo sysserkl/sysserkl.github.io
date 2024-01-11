@@ -59,4 +59,6 @@ var digest_global=`
 *stopcock
 *timberline
 *propagandist
+*glassy-eyed
+*itsy-bitsy
 `.trim().split('\n');

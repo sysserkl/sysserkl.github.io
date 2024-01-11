@@ -171,7 +171,7 @@ function statistics_type_cnki(csno,csmax=20){
 
     source_t=object2array_b(source_t,true,2);
     source_t.sort(function (a,b){return zh_sort_b(a,b,false,0);});
-    source_t.sort(function (a,b){return a[1]<b[1];});
+    source_t.sort(function (a,b){return a[1]<b[1] ? 1 : -1;});
 
     var text_str='<table width=100%><tr><td id="td_flot_pie_cnki" valign="top" style="width:600px;height:600px;"></td><td valign="top"><div style="max-height:600px;overflow:scroll;">'+array_2_li_b(source_t)+'</div></td></tr></table>';
     
@@ -395,16 +395,16 @@ function table_th_cnki(is_simple=false){
 }
 
 function sort_cnki(csno){    
-    var sort_type=(sort_desc_cnki_global?1:-1);
+    var sort_type=(sort_desc_cnki_global ? 1 : -1);
     if (csno>=5){
         current_result_cnki_global.sort(
-            function (a,b){return (parseInt(a[0][csno] || 0)*sort_type)<(parseInt(b[0][csno] || 0)*sort_type);}
+            function (a,b){return (parseInt(a[0][csno] || 0)*sort_type)<(parseInt(b[0][csno] || 0)*sort_type) ? 1 : -1;}
         );
     } else {
         if (sort_desc_cnki_global){
-            current_result_cnki_global.sort(function (a,b){return a[0][csno]<b[0][csno];});
+            current_result_cnki_global.sort(function (a,b){return a[0][csno]<b[0][csno] ? 1 : -1;});
         } else {
-            current_result_cnki_global.sort(function (a,b){return a[0][csno]>b[0][csno];});    
+            current_result_cnki_global.sort(function (a,b){return a[0][csno]>b[0][csno] ? 1 : -1;});    
         }
     }
     sort_desc_cnki_global=!sort_desc_cnki_global;    

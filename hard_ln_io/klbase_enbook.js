@@ -376,10 +376,10 @@ function sort_enwords_enbook_b(oa,cstype=''){
             csarray.sort();
             break;
         case 'tail':
-            csarray.sort(function (a,b){return reverse_str_b(a)>reverse_str_b(b);});
+            csarray.sort(function (a,b){return reverse_str_b(a)>reverse_str_b(b) ? 1 : -1;});
             break;
         case 'length':
-            csarray.sort(function (a,b){return a.length>b.length;});
+            csarray.sort(function (a,b){return a.length>b.length ? 1 : -1;});
             break;            
         case 'random': //随机排序
             csarray.sort(randomsort_b);
@@ -533,7 +533,7 @@ function frequency_enwords_book_b(cstype='',simple_split=false,common_max=4000){
 function new_and_common_enwords_book_b(csresult,cslength,common_max){
     csresult=object2array_b(csresult,true,2);
     csresult.sort();    
-    csresult.sort(function (a,b){return a[1]<b[1];});
+    csresult.sort(function (a,b){return a[1]<b[1] ? 1 : -1;});
     
     var common_set=[];
     for (let blxl=0;blxl<csresult.length;blxl++){

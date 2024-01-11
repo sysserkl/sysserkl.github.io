@@ -3,4 +3,5 @@ var digest_global=`
 *diesel
 *Dumpster
 *softball
+*tabletop
 `.trim().split('\n');

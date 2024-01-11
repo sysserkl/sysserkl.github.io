@@ -8,4 +8,6 @@ var digest_global=`
 *brainchild
 *minimalism
 *ringleader
+*planar
+*tabletop
 `.trim().split('\n');

@@ -86,7 +86,7 @@ function statistics_items_klroutines(){
     for (let blxl in list_t){
         list2_t.push([list_t[blxl][0],list_t[blxl][1]]);
     }
-    list2_t.sort(function (a,b){return a[1]<b[1];});
+    list2_t.sort(function (a,b){return a[1]<b[1] ? 1 : -1;});
     
     var bljg=[];
     var simple_list=[];

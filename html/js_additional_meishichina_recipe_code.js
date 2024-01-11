@@ -49,7 +49,7 @@ function statistics_ingredient_meishichina_recipe(){
     }
     count_d=object2array_b(count_d,true,2);
     count_d.sort(function (a,b){return zh_sort_b(a,b,false,0);});
-    count_d.sort(function (a,b){return a[1]<b[1];});
+    count_d.sort(function (a,b){return a[1]<b[1] ? 1 : -1;});
     
     var bllen=ingredient_d.length;
     for (let blxl=0;blxl<count_d.length;blxl++){
@@ -89,7 +89,7 @@ function same_ingredient_meishichina_recipe(return_list=false){
     }
     
     ingredient_d.sort(function (a,b){return zh_sort_b(a,b,false,0);});
-    ingredient_d.sort(function (a,b){return a.length<b.length;});
+    ingredient_d.sort(function (a,b){return a.length<b.length ? 1 : -1;});
     
     for (let blxl=0;blxl<ingredient_d.length;blxl++){
         if (ingredient_d[blxl].length==2){

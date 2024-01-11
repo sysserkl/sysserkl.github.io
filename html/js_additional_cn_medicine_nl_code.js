@@ -49,10 +49,10 @@ function sort_cn_medicine_nl(is_desc=false){
         cn_medicine_name_link_global.sort(function (a,b){return zh_sort_b(a[rank_no],b[rank_no],is_desc);});
     } else {
         if (is_desc){
-            cn_medicine_name_link_global.sort(function (a,b){return a[rank_no]<b[rank_no];});
+            cn_medicine_name_link_global.sort(function (a,b){return a[rank_no]<b[rank_no] ? 1 : -1;});
         }
         else {
-            cn_medicine_name_link_global.sort(function (a,b){return a[rank_no]>b[rank_no];});
+            cn_medicine_name_link_global.sort(function (a,b){return a[rank_no]>b[rank_no] ? 1 : -1;});
         }
     }
 }

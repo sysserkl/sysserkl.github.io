@@ -293,7 +293,7 @@ function sort_date_count_klphotos(cstype){
     if (cstype=='date'){
         result_t.sort();
     } else {
-        result_t.sort(function (a,b){return a[1]>b[1];});
+        result_t.sort(function (a,b){return a[1]>b[1] ? 1 : -1;});
     }
     var bljg='';
     for (let blxl=0;blxl<result_t.length;blxl++){

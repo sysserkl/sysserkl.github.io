@@ -78,7 +78,7 @@ function compare_nutrition_calc(do_calc=true){
         var rank_list=[];
         for (let key in untrition_price){
             untrition_price[key].sort(function (a,b){return zh_sort_b(a,b,false,0);});
-            untrition_price[key].sort(function (a,b){return a[1]<b[1];});
+            untrition_price[key].sort(function (a,b){return a[1]<b[1] ? 1 : -1;});
             for (let blxl=0;blxl<untrition_price[key].length;blxl++){
                 untrition_price[key][blxl]='<tr><td>'+(blxl+1)+'</td><td>'+untrition_price[key][blxl][0]+'</td><td align="right">'+untrition_price[key][blxl][1].toFixed(3)+'</td></tr>';
             }
@@ -278,9 +278,9 @@ function table_show_nutrition_calc(sort_no=0,is_desc=false){
         result_t.sort(function (a,b){return zh_sort_b(a,b,is_desc,0);});
     } else {
         if (is_desc){
-            result_t.sort(function (a,b){return isNaN(b[sort_no]) || a[sort_no]>b[sort_no];});
+            result_t.sort(function (a,b){return (isNaN(b[sort_no]) || a[sort_no]>b[sort_no]) ? 1 : -1;});
         } else {
-            result_t.sort(function (a,b){return isNaN(a[sort_no]) || a[sort_no]<b[sort_no];});
+            result_t.sort(function (a,b){return (isNaN(a[sort_no]) || a[sort_no]<b[sort_no]) ? 1 : -1;});
         }
     }
     

@@ -4,4 +4,5 @@ var digest_global=`
 *outerwear
 *punchline
 *rematch
+*teleportation
 `.trim().split('\n');

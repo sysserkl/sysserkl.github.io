@@ -22,4 +22,5 @@ var digest_global=`
 *vanadium
 *plutonium
 *colossi
+*scot-free
 `.trim().split('\n');

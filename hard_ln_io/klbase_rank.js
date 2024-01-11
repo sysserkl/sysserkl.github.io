@@ -97,16 +97,16 @@ function search_rank_b(csarray,cskey,csreg,revenue_index=-1,rank_index=-1,year_i
     }
     
     if (profit_index>=0){
-        result_t.sort(function (a,b){return a[profit_index]<b[profit_index];});//利润 - 保留注释        
+        result_t.sort(function (a,b){return a[profit_index]<b[profit_index] ? 1 : -1;});//利润 - 保留注释        
     } else if (revenue_index>=0){ //收入、利润排序二选一 - 保留注释
-        result_t.sort(function (a,b){return a[revenue_index]<b[revenue_index];});//收入 - 保留注释
+        result_t.sort(function (a,b){return a[revenue_index]<b[revenue_index] ? 1 : -1;});//收入 - 保留注释
     }
     
     if (rank_index>=0){
-        result_t.sort(function (a,b){return a[rank_index]>b[rank_index];});//排名 - 保留注释
+        result_t.sort(function (a,b){return a[rank_index]>b[rank_index] ? 1 : -1;});//排名 - 保留注释
     }
     if (year_index>=0){
-        result_t.sort(function (a,b){return a[year_index]<b[year_index];});//年份 - 保留注释
+        result_t.sort(function (a,b){return a[year_index]<b[year_index] ? 1 : -1;});//年份 - 保留注释
     }
     //result_t 是 csarray 的子集 - 保留注释
     //blsum 是 收入 合计 - 保留注释
@@ -134,7 +134,7 @@ function obj2array_rank_b(csarray,revenue_index=-1){
     var result_t=[];
     for (let key in csarray){
         if (revenue_index>=0){
-            csarray[key].sort(function (a,b){return a[revenue_index]<b[revenue_index];});
+            csarray[key].sort(function (a,b){return a[revenue_index]<b[revenue_index] ? 1 : -1;});
         }
         for (let blxl=0;blxl<csarray[key].length;blxl++){
             var arow=csarray[key][blxl];
@@ -220,8 +220,8 @@ function company_rate_rank_b(csarray,district_index,year_index,revenue_index,den
             console.log(item); //负数未计算 - 保留注释
         }
     }
-    rate_list.sort(function (a,b){return a[4]<b[4];});  //增长率逆序 - 保留注释
-    rate_list.sort(function (a,b){return a[3]<b[3];});  //结束年份逆序 - 保留注释
+    rate_list.sort(function (a,b){return a[4]<b[4] ? 1 : -1;});  //增长率逆序 - 保留注释
+    rate_list.sort(function (a,b){return a[3]<b[3] ? 1 : -1;});  //结束年份逆序 - 保留注释
     
     for (let blxl=0;blxl<rate_list.length;blxl++){
         var item=rate_list[blxl];
@@ -273,8 +273,8 @@ function line_district_revenue_percent_rank_b(flot_array,fraction_len,denominato
         rate_list.push([key,first_item[0],first_item[1],last_item[0],last_item[1],last_item[1]/first_item[1]]);
     }        
 
-    rate_list.sort(function (a,b){return a[5]<b[5];});  //增长率逆序 - 保留注释
-    rate_list.sort(function (a,b){return a[3]<b[3];});  //结束年份逆序 - 保留注释
+    rate_list.sort(function (a,b){return a[5]<b[5] ? 1 : -1;});  //增长率逆序 - 保留注释
+    rate_list.sort(function (a,b){return a[3]<b[3] ? 1 : -1;});  //结束年份逆序 - 保留注释
     
     for (let blxl=0;blxl<rate_list.length;blxl++){
         var item=rate_list[blxl];
@@ -361,7 +361,7 @@ function pie_district_statistics_array_rank_b(csarray,district_index,revenue_ind
     }
     
     var list_t=object2array_b(list_t);
-    list_t.sort(function (a,b){return a[1]<b[1];});
+    list_t.sort(function (a,b){return a[1]<b[1] ? 1 : -1;});
     return list_t;
     //list_t 每个元素形如 ['地区', 收入] - 保留注释
 }

@@ -571,7 +571,7 @@ function related_tds_sd(csnumber,cstype=''){
         }
     }
     
-    list_t.sort(function (a,b){return a-b;});
+    list_t.sort(function (a,b){return a>b ? 1 : -1;});
     return array_unique_b(list_t);
 }
 

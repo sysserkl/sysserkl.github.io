@@ -110,11 +110,11 @@ function components_klindex(cskey=false,is_local=-1){
     var result_t=[];
     for (let keyname in list_file){
         if (list_file[keyname].length==0){continue;}    
-        list_file[keyname].sort(function (a,b){return a[1].toLowerCase()<b[1].toLowerCase();});
+        list_file[keyname].sort(function (a,b){return a[1].toLowerCase()<b[1].toLowerCase() ? 1 : -1;});
         var blhtml=sub_components_klindex_table(list_file[keyname],tdcolumns);
         result_t.push([parseInt(keyname.substring(4,)),blhtml]);
     }
-    result_t.sort(function (a,b){return a[0]>b[0];});   //按key数字序号排序 - 保留注释
+    result_t.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});   //按key数字序号排序 - 保留注释
     result_t=result_t.slice(0,5);   //显示-1,0,1,2,3 - 保留注释
     for (let blxl=0;blxl<result_t.length;blxl++){
         result_t[blxl]=result_t[blxl][1];

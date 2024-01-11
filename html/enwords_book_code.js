@@ -431,7 +431,7 @@ function import_enwords_book(cstype,csmax=-1){
 
 function max_length_new_enwords_book(){
     var list_t=[].concat(all_new_words_global);
-    list_t.sort(function (a,b){return a.length<b.length;});
+    list_t.sort(function (a,b){return a.length<b.length ? 1 : -1;});
     list_t=list_t.slice(0,100);
     if (list_t.length==0){return;}
     document.getElementById('textarea_new_words1').value='最长('+list_t[0].length+'-'+list_t.slice(-1)[0].length+')的 '+list_t.length+' 个单词：\n'+list_t.join('\n');
@@ -507,7 +507,7 @@ function compare_result_list_to_table_enwords_book(sortno=4){
                 if (isNaN(a[sortno])){return 1;}
                 if (isNaN(b[sortno])){return 0;}
             }
-            return a[sortno]>b[sortno];
+            return a[sortno]>b[sortno] ? 1 : -1;
         });   
     } else {
         enbook_compare_result_list_global.sort(function (a,b){
@@ -515,7 +515,7 @@ function compare_result_list_to_table_enwords_book(sortno=4){
                 if (isNaN(a[sortno])){return 0;}
                 if (isNaN(b[sortno])){return 1;}
             }
-            return a[sortno]<b[sortno];
+            return a[sortno]<b[sortno] ? 1 : -1;
         });   
     }
     enbook_compare_result_list_sort_order_global=!enbook_compare_result_list_sort_order_global;
@@ -613,7 +613,7 @@ function words_sort_count_enwords_book(){
         bljg[item][1]=bljg[item][1]+1;
     }
     var bljg2=object2array_b(bljg);
-    bljg2.sort(function (a,b){return b[1]>a[1];});
+    bljg2.sort(function (a,b){return b[1]>a[1] ? 1 : -1;});
     document.getElementById('textarea_new_words2').value=bljg2.join(' ')+'\n已截取\n';
 }
 

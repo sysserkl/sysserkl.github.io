@@ -90,7 +90,7 @@ function statistics_bigday_history(cstype){
                 result_t.push(item);
             }
             
-            result_t.sort(function (a,b){return a[0]>b[0];});
+            result_t.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});
             result_t=date_list_insert_zero_b(result_t);
             caption='逐日分布';
             is_time=true;
@@ -113,7 +113,7 @@ function statistics_bigday_history(cstype){
             for (let blxl=0;blxl<result_t.length;blxl++){
                 result_t[blxl][0]=parseInt(result_t[blxl][0]);
             }
-            result_t.sort(function (a,b){return a[0]>b[0];});
+            result_t.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});
             caption='逐月分布';
             break;
         case 'y':
@@ -130,7 +130,7 @@ function statistics_bigday_history(cstype){
             for (let blxl=0;blxl<result_t.length;blxl++){
                 result_t[blxl][0]=parseInt(result_t[blxl][0]);
             }
-            result_t.sort(function (a,b){return a[0]>b[0];});
+            result_t.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});
             caption='逐年分布';
             break;
     }

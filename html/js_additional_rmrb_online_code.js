@@ -73,7 +73,7 @@ function statistics_rmrb_online(is_year=false){
         }
 
         result_t=object2array_b(result_t,true);
-        result_t.sort(function (a,b){return a[0]>b[0];});
+        result_t.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});
         //---        
         if (!is_year){
             for (let blxl=0;blxl<result_t.length;blxl++){

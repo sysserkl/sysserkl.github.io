@@ -47,13 +47,13 @@ function sort_rows_klr_b(csid='textarea_rows_content',cstype=''){
             }        
             break;    
         case 'asc_num':
-            list_t.sort(function (a,b){return parseFloat(a)>parseFloat(b);});
+            list_t.sort(function (a,b){return parseFloat(a)>parseFloat(b) ? 1 : -1;});
             break;
         case 'desc_num':
-            list_t.sort(function (a,b){return parseFloat(a)<parseFloat(b);});
+            list_t.sort(function (a,b){return parseFloat(a)<parseFloat(b) ? 1 : -1;});
             break;      
         case 'length':
-            list_t.sort(function (a,b){return a.length>b.length;});        
+            list_t.sort(function (a,b){return a.length>b.length ? 1 : -1;});        
             break;
     }
 
@@ -985,7 +985,7 @@ function invisible_klr_b(old_str,is_restrict,cstype=''){
 
 function encrypt_content_quick_transform_klr_b(csold,do_ask=true){
     var http_list=csold.match(/\bhttps?:\/\/[^\s]+/g) || [];
-    http_list.sort(function (a,b){return a.length<b.length;});  //最长的链接居前，避免有被包含关系的链接被先替换 - 保留注释
+    http_list.sort(function (a,b){return a.length<b.length ? 1 : -1;});  //最长的链接居前，避免有被包含关系的链接被先替换 - 保留注释
     
     result_t=invisible_klr_b(csold,true,'cn_phrase');
     if (result_t[4]==false){

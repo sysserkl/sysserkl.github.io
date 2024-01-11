@@ -770,7 +770,7 @@ function gpx_file_selection_gps_points(cskeys=''){
         len_list.push('unknow：'+(unknow_len/1000).toFixed(3)+'公里');
     }
     
-    province_list.sort(function (a,b){return a[1]<b[1];});
+    province_list.sort(function (a,b){return a[1]<b[1] ? 1 : -1;});
     
     var oinfo=document.getElementById('section_gpx_line_info');
     if (len_list.length==0){
@@ -818,8 +818,8 @@ function gpx_file_statistics_gps_points(){
     if (bljg!==''){
         bljg='<table border=1 cellspacing=0 cellpadding=0 style="margin:1rem 0rem;"><tr><th  style="padding:0.2rem;" nowrap>日期</th><th  style="padding:0.2rem;" nowrap>总长度</th><th  style="padding:0.2rem;" nowrap>条数</th></tr>'+bljg+'</table>';
     }
-    flot_list1.sort(function (a,b){return a[0]>b[0];});
-    flot_list2.sort(function (a,b){return a[0]>b[0];});
+    flot_list1.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});
+    flot_list2.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});
     flot_list1=['总长度'].concat(flot_list1);
     flot_list2=['条数'].concat(flot_list2);
     
@@ -1071,7 +1071,7 @@ function gpx_list_gps_points(cstype=''){
             for (let key in gpx_files_district_global){ //假设 gpx_files_district_global 已生成数据 - 保留注释
                 result_t.push([key,gpx_files_district_global[key].length]);
             }
-            result_t.sort(function (a,b){return a[1]>b[1];});
+            result_t.sort(function (a,b){return a[1]>b[1] ? 1 : -1;});
             for (let blxl=0;blxl<result_t.length;blxl++){
                 if (blxl>=50 && result_t[blxl][1]>0){
                     result_t=result_t.slice(0,blxl);
@@ -1144,7 +1144,7 @@ function gpx_district_set_gps_points(cskey='',oselect=false){
         }
 
         list_num.sort(function (a,b){return zh_sort_b(a,b,false,0);});
-        list_num.sort(function (a,b){return a[1]<b[1];});
+        list_num.sort(function (a,b){return a[1]<b[1] ? 1 : -1;});
         var blxl=1;
         var bljg=[];        
         for (let item of list_num){
@@ -1269,7 +1269,7 @@ function gpx_near_gps_points(){
         if (!li_names.has(item[0])){continue;}            
         result_t.push([item[0],sub_gpx_near_gps_points_min_distance(clicked_lat_lng_global,item[3]),'kl']);
     }
-    result_t.sort(function (a,b){return a[1]>b[1];});
+    result_t.sort(function (a,b){return a[1]>b[1] ? 1 : -1;});
     
     var span_list=[];
     for (let item of result_t){
@@ -1403,7 +1403,7 @@ function batch_2points_distance_list_gps_points(){
             distance_list.push([distance_leaflet_b(item_a[0], item_a[1], item_b[0], item_b[1])/1000,memo_list]);
         }    
     }
-    distance_list.sort(function (a,b){return a[0]>b[0];});
+    distance_list.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});
     if (distance_list.length>10000){
         document.getElementById('div_status').innerHTML='只显示前10000条记录';
         distance_list=distance_list.slice(0,10000);

@@ -73,9 +73,9 @@ function sort_hospital_medicine_price(csdesc=false){
         csarray.sort(function (a,b){return zh_sort_b(a,b,csdesc,blno)});
     } else {
         if (csdesc){
-            csarray.sort(function (a,b){return a[col_num_no]<b[col_num_no];});        
+            csarray.sort(function (a,b){return a[col_num_no]<b[col_num_no] ? 1 : -1;});        
         } else {
-            csarray.sort(function (a,b){return a[col_num_no]>b[col_num_no];});                
+            csarray.sort(function (a,b){return a[col_num_no]>b[col_num_no] ? 1 : -1;});                
         }
     }
     search_common();
@@ -126,7 +126,7 @@ function statistics_supplier_hospital_medicine_price(){
     
     supplier_dict=object2array_b(supplier_dict);
     supplier_dict.sort(function (a,b){return zh_sort_b(a,b,false,0)});    
-    supplier_dict.sort(function (a,b){return a[1].length<b[1].length;});
+    supplier_dict.sort(function (a,b){return a[1].length<b[1].length ? 1 : -1;});
     
     var blbutton='<p><span class="aclick" onclick="expand_hospital_medicine_price(this);">展开</span></p>';
 

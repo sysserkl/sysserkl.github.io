@@ -189,7 +189,7 @@ function host_count_ensentence(sort_no=-1){
     }
         
     sentence_host_t=object2array_b(sentence_host_t,true,2);
-    sentence_host_t.sort(function (a,b){return a[1]<b[1];});
+    sentence_host_t.sort(function (a,b){return a[1]<b[1] ? 1 : -1;});
     
     var sentence_len=en_sentence_global.length;
     var result_t=[];
@@ -219,7 +219,7 @@ function host_count_ensentence(sort_no=-1){
     
     if (sort_no>=0){
         result_t.sort();
-        result_t.sort(function (a,b){return a[sort_no]<b[sort_no];});
+        result_t.sort(function (a,b){return a[sort_no]<b[sort_no] ? 1 : -1;});
     }
     
     for (let blxl=0;blxl<result_t.length;blxl++){
@@ -263,7 +263,7 @@ function length_sort_ensentence(){
         result_t.push([blstr.length,aline]);
     }
     
-    result_t.sort(function (a,b){return a[0]>b[0];});
+    result_t.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});
     result_t=result_t.slice(0,200);
     for (blxl=0;blxl<result_t.length;blxl++){
         result_t[blxl]=result_t[blxl][1];
@@ -319,7 +319,7 @@ function rare_old_words_ensentence(show_sentence=true,generate_js=false,max_coun
                 }
             }
             
-            words_searched_arr_global.sort(function (a,b){return a[1]<b[1];});
+            words_searched_arr_global.sort(function (a,b){return a[1]<b[1] ? 1 : -1;});
             for (let blxl=0;blxl<words_searched_arr_global.length;blxl++){
                 words_searched_arr_global[blxl]=[words_searched_arr_global[blxl][0],'',words_searched_arr_global[blxl][1].toString()];
             }
@@ -332,7 +332,7 @@ function rare_old_words_ensentence(show_sentence=true,generate_js=false,max_coun
         if (blxl>=bllen){
             result_t=object2array_b(result_t);
             result_t.sort();
-            result_t.sort(function (a,b){return a[1]>b[1];});   //出现次数从少到多排列 - 保留注释
+            result_t.sort(function (a,b){return a[1]>b[1] ? 1 : -1;});   //出现次数从少到多排列 - 保留注释
             var oldset=simple_words_b(true,true);
             en_word_temp_get_b();
             words_searched_arr_global=[];            

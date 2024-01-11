@@ -80,7 +80,7 @@ function export_temperature_district_weather(){
     var lt=[];
         
     var temperature_range=document.getElementById('select_temperature_range_jsad_dweather').value;
-    js_data_current_common_search_global.sort(function (a,b){return a[0][0]>b[0][0];});
+    js_data_current_common_search_global.sort(function (a,b){return a[0][0]>b[0][0] ? 1 : -1;});
     if (klmenu_check_b('span_multi_year_lines_jsad_dweather',false)){
         var year_h_dict={};
         var year_l_dict={};
@@ -187,7 +187,7 @@ function flot_line_temperature_district_weather(only_dot=false,csarr=false,legen
     if (csarr===false){
         csarr=js_data_current_common_search_global;
     }
-    csarr.sort(function (a,b){return a[0][0]>b[0][0];});
+    csarr.sort(function (a,b){return a[0][0]>b[0][0] ? 1 : -1;});
     if (klmenu_check_b('span_multi_year_lines_jsad_dweather',false)){
         var year_h_dict={};
         var year_l_dict={};
@@ -274,9 +274,9 @@ function integrity_district_weather(){
 function sort_district_weather(csdesc=false){   
     var blno=parseInt(document.getElementById('select_sort_type_jsad_dweather').value);
     if (csdesc){
-        district_weather_global.sort(function (a,b){return a[blno]<b[blno];});        
+        district_weather_global.sort(function (a,b){return a[blno]<b[blno] ? 1 : -1;});        
     } else {
-        district_weather_global.sort(function (a,b){return a[blno]>b[blno];});                
+        district_weather_global.sort(function (a,b){return a[blno]>b[blno] ? 1 : -1;});                
     }
     search_common();
 }

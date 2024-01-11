@@ -49,4 +49,6 @@ var digest_global=`
 *aggressor
 *Mecca
 *transience
+*Bohr
+*Helios
 `.trim().split('\n');

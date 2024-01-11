@@ -142,7 +142,7 @@ function pronunciation_hzpy(cstype){
                 }
             }    
             result_t.sort();
-            result_t.sort(function (a,b){return a[1]>b[1];});   
+            result_t.sort(function (a,b){return a[1]>b[1] ? 1 : -1;});   
             for (let blxl=0;blxl<result_t.length;blxl++){
                 result_t[blxl]=result_t[blxl][0];
             }
@@ -152,7 +152,7 @@ function pronunciation_hzpy(cstype){
             for (let key in py2hz_global){
                 result_t.push([key,py2hz_global[key].length]);
             }
-            result_t.sort(function (a,b){return a[1]>b[1];});
+            result_t.sort(function (a,b){return a[1]>b[1] ? 1 : -1;});
             for (let blxl=0;blxl<result_t.length;blxl++){
                 var words='';
                 if (result_t[blxl][1]<=10){
@@ -164,7 +164,7 @@ function pronunciation_hzpy(cstype){
             break;
         case 'length':
             var result_t=Object.keys(py2hz_global);
-            result_t.sort(function(a,b){return a.length<b.length;});
+            result_t.sort(function(a,b){return a.length<b.length ? 1 : -1;});
             for (let blxl=0;blxl<result_t.length;blxl++){
                 result_t[blxl]=result_t[blxl]+': '+py2hz_global[result_t[blxl]];
             }
@@ -376,7 +376,7 @@ function idiom_2_split_hzpy(){
         if (bltmp[0]==item){continue;}
         result_t.push([bltmp[0],item]);
     }
-    result_t.sort(function (a,b){return a[0].length>b[0].length;});
+    result_t.sort(function (a,b){return a[0].length>b[0].length ? 1 : -1;});
     document.getElementById('divhtml').innerHTML=array_2_li_b(result_t);
 }
 
@@ -398,7 +398,7 @@ function split_duplication_hzpy(){
     var hz_set=new Set();
     sub_split_duplication_hzpy_one_dict(chaizi_ft_global);
     sub_split_duplication_hzpy_one_dict(chaizi_jt_global);
-    result_t.sort(function (a,b){return a[2]-a[3]<b[2]-b[3];});
+    result_t.sort(function (a,b){return a[2]-a[3]<b[2]-b[3] ? 1 : -1;});
     document.getElementById('divhtml').innerHTML=array_2_li_b(result_t);    
 }
 
@@ -591,7 +591,7 @@ function homophonic_words_hzpy(ratio=-1){
                 if (blfound){break;}
             }
         }
-        result_t.sort(function (a,b){return a[1]<b[1];});
+        result_t.sort(function (a,b){return a[1]<b[1] ? 1 : -1;});
         final_list=[];
         for (let item of result_t){
             final_list.push(item[0]);

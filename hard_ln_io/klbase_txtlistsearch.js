@@ -50,7 +50,7 @@ function possible_menu_kltxt_b(){
             blno=Math.max(blno,item[1]);
         }
     }
-    double_t.sort(function (a,b){return a[0]>b[0];});
+    double_t.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});
     var bljg='';
     for (let item of double_t){
         bljg=bljg+'<li>'+item[1]+'<span style="cursor:pointer;color:'+scheme_global['memo']+';font-size:0.9rem;" onclick="getlines_kltxt_b('+item[0]+');">('+(item[0]+1)+')</span></li>';
@@ -686,7 +686,7 @@ function menu_insert_kltxt_b(menu_count=3){
             if (one_no>no_next){continue;}
             in_range.push(one_no);
         }
-        in_range.sort(function (a,b){return a>b;});        
+        in_range.sort(function (a,b){return a>b ? 1 : -1;});        
         if (menu_count>0){
             in_range=in_range.slice(-1*menu_count,);
         }
@@ -739,7 +739,7 @@ function menu_insert_kltxt_b(menu_count=3){
     
     if (menu_count<=0){
         in_range=Array.from(menu_no);
-        in_range.sort(function (a,b){return a<b;});
+        in_range.sort(function (a,b){return a<b ? 1 : -1;});
         sub_menu_insert_kltxt_b_one_insert(in_range,ospans[ospans.length-1][2],'afterend');        
     }
     
@@ -954,7 +954,7 @@ function get_books_thickness_kltxt_b(){
 		blarr3_t.push(blarr2_t);
 	}
     if (blarr3_t.length==0){return;}
-	blarr3_t.sort(function(a,b){return a[1]-b[1];});
+	blarr3_t.sort(function(a,b){return a[1]>b[1] ? 1 : -1;});
 	var bljg='';
 	for (let blxl=0;blxl<blarr3_t.length;blxl++){
 		bljg=bljg+blarr3_t[blxl][0]+' '+blarr3_t[blxl][1]+'\n';
@@ -1039,7 +1039,7 @@ function menu_all_only_one_kltxt_b(csmax=3000){
                     var list_t=menu_only_one_kltxt_b(one_no,startno,endno);
                     if (list_t.length==2){
                         kltxt_menulist_index_global.push(list_t);
-                        kltxt_menulist_index_global.sort(function (a,b){return a[1]>b[1];});
+                        kltxt_menulist_index_global.sort(function (a,b){return a[1]>b[1] ? 1 : -1;});
                         notfound_list[blno]=-1;
                         changed=true;
                     }
@@ -1347,7 +1347,6 @@ function bookmarks_read_kltxt_b(current_book_today_bookmark_only_one,return_full
     var today=date2str_b();
     var bookmark_list=[];
 
-    var current_book_today_bookmark_count=0;
     var current_book_today_row=[];
     for (let item of last_book){
         var abook=item.split('&');
@@ -1357,21 +1356,19 @@ function bookmarks_read_kltxt_b(current_book_today_bookmark_only_one,return_full
         //abook 形如：[ "枪炮、病菌与钢铁(贾雷德·戴蒙德)", "qiang_pao_bing_jun_yu_gtjlddmd_227675", 761, "20", 2018, "2023-11-17 21:11:51" ] - 保留注释
         
         if (csbookname_global==abook[1] && abook[5].substring(0,11)==today+' '){ //如果是当前书籍且是今天的书签 - 保留注释
-            current_book_today_bookmark_count=current_book_today_bookmark_count+1;
-            if (current_book_today_bookmark_only_one){
-                if (current_book_today_row.length==0){  //初始添加 - 保留注释
-                    current_book_today_row=[].concat(abook);
-                } else if (current_book_today_row[5]<abook[5]){   //保留最新日期的书签 - 保留注释
-                    current_book_today_row=[].concat(abook);
-                }
-                continue;
-            }
+            current_book_today_row.push(abook);
+        } else {
+            bookmark_list.push(abook);
         }
-        bookmark_list.push(abook);
     }
     
-    if (current_book_today_row.length>0){
-        bookmark_list.push(current_book_today_row);
+    var current_book_today_bookmark_count=current_book_today_row.length;
+    if (current_book_today_bookmark_count>0){
+        if (current_book_today_bookmark_only_one){
+            current_book_today_row.sort(function (a,b){return a[5]<b[5] ? 1 : -1;}); //按日期排序 - 保留注释
+            current_book_today_row=current_book_today_row.slice(0,1);
+        }
+        bookmark_list=bookmark_list.concat(current_book_today_row);
     }
 
     var bookmark_name={};
@@ -1385,7 +1382,7 @@ function bookmarks_read_kltxt_b(current_book_today_bookmark_only_one,return_full
     
     var preday=previous_day_b('',366)+' ';   //366天以前 - 保留注释
     for (let key in bookmark_name){
-        bookmark_name[key].sort(function (a,b){return a[5]<b[5];}); //按日期排序 - 保留注释
+        bookmark_name[key].sort(function (a,b){return a[5]<b[5] ? 1 : -1;}); //按日期排序 - 保留注释
         var oldest_bookmark=bookmark_name[key].slice(-1);
         var bllen=bookmark_name[key].length;
         for (let blxl=3;blxl<bookmark_name[key].length;blxl++){
@@ -1406,12 +1403,12 @@ function bookmarks_read_kltxt_b(current_book_today_bookmark_only_one,return_full
         bookmark_list_only2=bookmark_list_only2.concat(bookmark_name[key].slice(0,2));  //最新的2个 - 保留注释
     }
 
-    bookmark_list.sort(function (a,b){return a[5]<b[5];});
-    bookmark_list.sort(function (a,b){return a[0]>b[0];});
+    bookmark_list.sort(function (a,b){return a[5]<b[5] ? 1 : -1;});
+    bookmark_list.sort(function (a,b){return zh_sort_b(a,b,false,0);});
     
-    bookmark_list_only2.sort(function (a,b){return a[5]<b[5];});
-    bookmark_list_only2.sort(function (a,b){return a[0]>b[0];});
-
+    bookmark_list_only2.sort(function (a,b){return a[5]<b[5] ? 1 : -1;});
+    bookmark_list_only2.sort(function (a,b){return zh_sort_b(a,b,false,0);});
+    
     if (Array.isArray(cslsname)==false && current_book_today_bookmark_only_one && current_book_today_bookmark_count>1){
         if (confirm('当前书籍今日书签是否仅保留最新的一个？')){
             current_book_today_bookmark_count=0;
@@ -1611,8 +1608,8 @@ function bookmarks_percent_lines_kltxt_b(bookmark_list,bookid,return_full){
             current_book_percent.push([bldate,percent]);
             reading_lines.push([bldate,item[2]-1]);
         }
-        current_book_percent.sort(function (a,b){return a[0]>b[0];});
-        reading_lines.sort(function (a,b){return a[0]>b[0];});
+        current_book_percent.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});
+        reading_lines.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});
     }
     if (reading_lines.length>0){
         if (reading_lines[0][1]>=1){
@@ -1851,7 +1848,7 @@ function bookmarks_all_book_statistics_data_kltxt_b(cslsname='reader_lastbook',s
     
     if (show_sum){
         sum_list=object2array_b(sum_list);
-        sum_list.sort(function (a,b){return a[0]>b[0];});
+        sum_list.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});
         sum_list=['合计'].concat(sum_list);
         result_t=[sum_list].concat(result_t);
     }
@@ -3086,7 +3083,7 @@ function digest_lines_kltxt_b(recent_lines=-1){
         }
     }
     
-    list_t.sort(function (a,b){return a[1]>b[1];});
+    list_t.sort(function (a,b){return a[1]>b[1] ? 1 : -1;});
 
     lines_2_html_kltxt_b(list_t);
     old_words_kltxt_b(true);

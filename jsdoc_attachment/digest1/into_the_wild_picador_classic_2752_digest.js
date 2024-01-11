@@ -66,4 +66,6 @@ var digest_global=`
 *westernmost
 *windshield
 *survivalist
+*off-road
+*wildflower
 `.trim().split('\n');

@@ -34,9 +34,9 @@ function date_size_digest(without_digest=false,sortno=0){
         result_t.sort(function (a,b){return zh_sort_b(a,b,digest_statistics_sort_asc_dec_global,sortno);});    
     } else {
         if (digest_statistics_sort_asc_dec_global){
-            result_t.sort(function (a,b){return a[sortno]<b[sortno]});
+            result_t.sort(function (a,b){return a[sortno]<b[sortno] ? 1 : -1});
         } else {
-            result_t.sort(function (a,b){return a[sortno]>b[sortno]});    
+            result_t.sort(function (a,b){return a[sortno]>b[sortno] ? 1 : -1});    
         }
     }
     

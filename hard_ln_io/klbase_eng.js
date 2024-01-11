@@ -907,7 +907,7 @@ function enwords_sort_b(cstype=''){
             }
             break;
         default:
-            enwords.sort(function (a,b){return a[3]-b[3];});
+            enwords.sort(function (a,b){return a[3]>b[3] ? 1 : -1;});
             break;
     }
 }
@@ -944,7 +944,7 @@ function en_words_temp_list_b(add_date_line=true,return_dead_words=false){
     }
     
     //reverse - 保留注释
-    list_t.sort(function (a,b){return b[1]-a[1];});
+    list_t.sort(function (a,b){return b[1]>a[1] ? 1 : -1;});
     var list2_t=[];
     for (let item of list_t){
         list2_t.push(item[0]); //单词数组 - 保留注释
@@ -1529,7 +1529,7 @@ function enwords_js_type_words_b(cswlist,onetextarea=false,remove_emoji=false,th
 }
 
 function enwords_different_types_result_b(cslist,onetextarea){
-    cslist.sort(function (a,b){return a[1]<b[1];});
+    cslist.sort(function (a,b){return a[1]<b[1] ? 1 : -1;});
     var bljg='';    
     for (let item of cslist){
         bljg=bljg+item[0];
@@ -1836,8 +1836,8 @@ function p_enwords_sentence_style_b(do_write=true){
 
 function en_sentence_to_default_order_b(){
     var t0 = performance.now();
-    en_sentence_global.sort(function (a,b){return a[3]>b[3];}); //按 编号 排序 - 保留注释
-    en_sentence_global.sort(function (a,b){return a[2]>b[2];}); //按 KLWiki title名 或 书名 排序 - 保留注释
+    en_sentence_global.sort(function (a,b){return a[3]>b[3] ? 1 : -1;}); //按 编号 排序 - 保留注释
+    en_sentence_global.sort(function (a,b){return a[2]>b[2] ? 1 : -1;}); //按 KLWiki title名 或 书名 排序 - 保留注释
     console.log('en_sentence_to_default_order_b() 费时：'+(performance.now() - t0) + ' milliseconds');    
 }
 
@@ -2264,7 +2264,7 @@ function similar_enwords_b(csword,cshideno,cshidelineno,cshidesimilarno,csshow){
         document.getElementById('divhtml').innerHTML='';
         return '';
     }
-	bllist.sort(function(a,b){return b[0]-a[0];});
+	bllist.sort(function(a,b){return b[0]>a[0] ? 1 : -1;});
     bllist=bllist.slice(0,100);
 	var bljg='';
 	for (let blxl=0;blxl<bllist.length;blxl++){

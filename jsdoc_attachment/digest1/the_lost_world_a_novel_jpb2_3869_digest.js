@@ -23,4 +23,5 @@ var digest_global=`
 *taillight
 *tyrannosaur
 *tyrannosaurus
+*catastrophically
 `.trim().split('\n');

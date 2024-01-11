@@ -143,14 +143,14 @@ function sort_lt_plans(){
     if (ltp_sort_type_global==''){return;}
     
     if (ltp_sort_type_global.includes('-1')){
-        long_term_plans_global.sort(function (a,b){return percent_lt_plans(a)<percent_lt_plans(b);});    
+        long_term_plans_global.sort(function (a,b){return percent_lt_plans(a)<percent_lt_plans(b) ? 1 : -1;});    
     } else {
         var blno=parseInt((ltp_sort_type_global+'0').substring(0,1));
         if (isNaN(blno)){
             blno=0;
         }
         blno=Math.min(4,Math.max(0,blno));
-        long_term_plans_global.sort(function (a,b){return a[blno]<b[blno];});
+        long_term_plans_global.sort(function (a,b){return a[blno]<b[blno] ? 1 : -1;});
     }
     
     if (ltp_sort_type_global.includes('a')){

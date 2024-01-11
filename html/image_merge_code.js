@@ -1,10 +1,10 @@
 function sort_merge_img(cstype){
     switch (cstype){
         case 'asc':
-            img_file_list_global.sort(function (a,b){return a.fileName<b.fileName;});
+            img_file_list_global.sort(function (a,b){return a.fileName<b.fileName ? 1 : -1;});
             break;
         case 'desc':
-            img_file_list_global.sort(function (a,b){return a.fileName>b.fileName;});        
+            img_file_list_global.sort(function (a,b){return a.fileName>b.fileName ? 1 : -1;});        
             break;
     }
     read_merge_img();

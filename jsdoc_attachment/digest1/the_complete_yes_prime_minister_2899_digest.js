@@ -33,4 +33,5 @@ var digest_global=`
 *Marxism
 *Heathrow
 *never ever
+*misread
 `.trim().split('\n');

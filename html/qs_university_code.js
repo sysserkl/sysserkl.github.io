@@ -330,7 +330,7 @@ function flot_line_qs_rank(cslist,set_list,odiv){
             line_list.push([one_key.substring(2,),list_t,blsum,blsum/blrange]);
         }
         line_list.sort();
-        line_list.sort(function (a,b){return a[2]<b[2];});
+        line_list.sort(function (a,b){return a[2]<b[2] ? 1 : -1;});
         
         var bljg=[];
         var flot_list=[];
@@ -378,7 +378,7 @@ function name_district_statistics_qs_rank(csarray=false,set_list=false,id_no='',
     function sub_name_district_statistics_qs_rank_to_array(csobj,cscount,caption,flot_id_name){
         csobj=object2array_b(csobj,true,2);
         csobj.sort();
-        csobj.sort(function (a,b){return a[1]<b[1];});
+        csobj.sort(function (a,b){return a[1]<b[1] ? 1 : -1;});
         var bljg=[];
         var others_count=0;
         var flot_list=[];
@@ -508,7 +508,7 @@ function jieba_name_qs_rank(){
     for (let blxl=0;blxl<list_t.length;blxl++){
         var word_list=list_t[blxl].replace(/[\s\-\(\),]+/g, ' ').split(' ');
         var name_dict=list_category_count_b(word_list,false);
-        name_dict.sort(function (a,b){return a[1]<b[1];});
+        name_dict.sort(function (a,b){return a[1]<b[1] ? 1 : -1});
         var name_list=[];
         for (let item of name_dict){
             name_list.push(item[0]);

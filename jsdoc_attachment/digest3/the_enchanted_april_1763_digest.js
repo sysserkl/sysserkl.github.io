@@ -4,4 +4,6 @@ var digest_global=`
 *microbe
 *monopolise
 *unmet
+*Turin
+*grey-haired
 `.trim().split('\n');

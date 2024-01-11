@@ -553,8 +553,8 @@ function map_range_leaflet_b(min_max=false){
             lat_list.push(lat_lon['lat']);
             lon_list.push(lat_lon['lng']);
         }
-        lat_list.sort(function (a,b){return a>b;});
-        lon_list.sort(function (a,b){return a>b;});
+        lat_list.sort(function (a,b){return a>b ? 1 : -1;});
+        lon_list.sort(function (a,b){return a>b ? 1 : -1;});
         return [lat_list,lon_list];
     } else {
         var result_t=[];

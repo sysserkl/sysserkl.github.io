@@ -131,7 +131,7 @@ function median_zjedu(blplan, median_line_list){
         if (median_line_list.length==1){
             median_value=median_line_list[0][1];
         } else {
-            median_line_list.sort(function (a,b){return b[1]>a[1];});
+            median_line_list.sort(function (a,b){return b[1]>a[1] ? 1 : -1;});
             for (let blxl=0;blxl<median_line_list.length;blxl++){
                 if (blxl>0){
                     median_line_list[blxl][0]=median_line_list[blxl][0]+median_line_list[blxl-1][0];
@@ -236,7 +236,7 @@ function txtsearch_zjedu(csword=false){
         position_percent_list.push([]);
     }
     
-    position_list.sort(function (a,b){return a[1]>b[1];});
+    position_list.sort(function (a,b){return a[1]>b[1] ? 1 : -1;});
     for (let blxl=0;blxl<position_list.length;blxl++){
         if (blxl>0){
             position_list[blxl][0]=position_list[blxl][0]+position_list[blxl-1][0];
@@ -397,9 +397,9 @@ function school_speciality_sum_zjedu(csreverse=false){
 	}
     s_num_t.sort(function(a,b){return zh_sort_b(a,b,false,0);});
     if (csreverse){
-        s_num_t.sort(function(a,b){return a[1]-b[1];});
+        s_num_t.sort(function(a,b){return a[1]>b[1] ? 1 : -1;});
     } else {
-	    s_num_t.sort(function(a,b){return b[1]-a[1];});
+	    s_num_t.sort(function(a,b){return b[1]>a[1] ? 1 : -1;});
     }
 	var bljg='';
 	for (let blxl=0;blxl<Math.min(num_zjc_global,s_num_t.length);blxl++){
@@ -426,9 +426,9 @@ function speciality_popular_zjedu(csreverse=false){
     
     s_num_t.sort(function(a,b){return zh_sort_b(a,b,false,0);});
     if (csreverse){
-        s_num_t.sort(function(a,b){return a[1]-b[1];});
+        s_num_t.sort(function(a,b){return a[1]>b[1] ? 1 : -1;});
     } else {
-	    s_num_t.sort(function(a,b){return b[1]-a[1];});
+	    s_num_t.sort(function(a,b){return b[1]>a[1] ? 1 : -1;});
     }
 	var bljg='';
 	for (let blxl=0;blxl<Math.min(num_zjc_global,s_num_t.length);blxl++){
@@ -444,9 +444,9 @@ function speciality_popular_zjedu(csreverse=false){
 function school_sum_average_zjedu(csreverse=false){
 	var arr2_t=object2array_b(school_sum_average_arr_global);
     if (csreverse){
-        arr2_t.sort(function(a,b){return a[1]-b[1];});
+        arr2_t.sort(function(a,b){return a[1]>b[1] ? 1 : -1;});
     } else {
-	    arr2_t.sort(function(a,b){return b[1]-a[1];});
+	    arr2_t.sort(function(a,b){return b[1]>a[1] ? 1 : -1;});
     }
     
 	var bljg='';
@@ -462,9 +462,9 @@ function school_sum_average_zjedu(csreverse=false){
 	//-----------------------
     //总的分数/计划数 - 保留注释
     if (csreverse){
-        arr2_t.sort(function(a,b){return a[3]-b[3];});
+        arr2_t.sort(function(a,b){return a[3]>b[3] ? 1 : -1;});
     } else {
-	    arr2_t.sort(function(a,b){return b[3]-a[3];});
+	    arr2_t.sort(function(a,b){return b[3]>a[3] ? 1 : -1;});
     }
 	var bljg='';
 	for (let blxl=0;blxl<Math.min(num_zjc_global,arr2_t.length);blxl++){
@@ -490,9 +490,9 @@ function school_median_rank_zjedu(csreverse=false){
         arr2_t.push([speciality_list[0],blmedian]);
     }
     if (csreverse){
-        arr2_t.sort(function (a,b){return a[1]>b[1];});
+        arr2_t.sort(function (a,b){return a[1]>b[1] ? 1 : -1;});
     } else {
-        arr2_t.sort(function (a,b){return b[1]>a[1];});
+        arr2_t.sort(function (a,b){return b[1]>a[1] ? 1 : -1;});
     }
     
     var bljg='';
@@ -512,9 +512,9 @@ function school_plan_zjedu(sort_by_count=false){
         arr2_t.push([item[0],item[1],item[2],item[1]*100/(item[1]+item[2])]);
 	}
     if (sort_by_count){
-        arr2_t.sort(function (a,b){return a[1]<b[1];});
+        arr2_t.sort(function (a,b){return a[1]<b[1] ? 1 : -1;});
     } else {
-        arr2_t.sort(function (a,b){return a[3]<b[3];});
+        arr2_t.sort(function (a,b){return a[3]<b[3] ? 1 : -1;});
     }
    
 	var bljg='';
@@ -536,9 +536,9 @@ function school_last_number_zjedu(csreverse=false){
         }
 	}
     if (csreverse){
-        arr2_t.sort(function (a,b){return a[1]<b[1];});
+        arr2_t.sort(function (a,b){return a[1]<b[1] ? 1 : -1;});
     } else {
-        arr2_t.sort(function (a,b){return a[1]>b[1];});
+        arr2_t.sort(function (a,b){return a[1]>b[1] ? 1 : -1;});
     }
     
 	var bljg='';
@@ -556,9 +556,9 @@ function speciality_all_sum_zjedu(csreverse=false){
 	var arr2_t=object2array_b(speciality_all_sum_arr_global);
     arr2_t.sort(function(a,b){return zh_sort_b(a,b,false,0);});
     if (csreverse){
-        arr2_t.sort(function(a,b){return a[1]-b[1];});
+        arr2_t.sort(function(a,b){return a[1]>b[1] ? 1 : -1;});
     } else {
-	    arr2_t.sort(function(a,b){return b[1]-a[1];});
+	    arr2_t.sort(function(a,b){return b[1]>a[1] ? 1 : -1;});
     }
     
 	var bljg='';
@@ -573,9 +573,9 @@ function speciality_all_sum_zjedu(csreverse=false){
 
 	//-----------------------
     if (csreverse){
-        arr2_t.sort(function(a,b){return a[3]-b[3];});
+        arr2_t.sort(function(a,b){return a[3]>b[3] ? 1 : -1;});
     } else {
-	    arr2_t.sort(function(a,b){return b[3]-a[3];});
+	    arr2_t.sort(function(a,b){return b[3]>a[3] ? 1 : -1;});
     }
 	var bljg='';
 	for (let blxl=0;blxl<Math.min(num_zjc_global,arr2_t.length);blxl++){
@@ -590,7 +590,7 @@ function speciality_all_sum_zjedu(csreverse=false){
 
 function line_count_zjedu(){
     var arr2_t=object2array_b(line_count_arr_global);
-    arr2_t.sort(function(a,b){return b[0]-a[0];});
+    arr2_t.sort(function(a,b){return b[0]>a[0] ? 1 : -1;});
 	var bljg='';
 	var blscore_t=0;
 	for (let item of arr2_t){
@@ -651,7 +651,7 @@ function gini_index_zjedu(){
         var list_t=[blxl+'年#points:false#',[0,0]];
 
         var blarr=zj_exam_range_global[blxl.toString()];
-        blarr.sort(function (a,b){return a[0]>b[0];});    //分数线从低到高排列 - 保留注释
+        blarr.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});    //分数线从低到高排列 - 保留注释
         [population,blarr2]=population_sum_arr_get_zjedu(blarr);
         var score_total=0;
         for (let item of blarr2){
@@ -780,7 +780,7 @@ function year_range_get_zjedu(){
 
 function range_sort_high_2_low_zjedu(){
     for (let key in zj_exam_range_global){
-        zj_exam_range_global[key].sort(function (a,b){return a[0]<b[0];});    //分数线从高到低排列 - 保留注释
+        zj_exam_range_global[key].sort(function (a,b){return a[0]<b[0] ? 1 : -1;});    //分数线从高到低排列 - 保留注释
     }
 }
 
@@ -803,7 +803,7 @@ function range_status_type_zjedu(cstype){
         blstep=parseInt(list_t[1]);
     }
     var half_list=Array.from(str2num_range_b(list_t[0],blstep,100));
-    half_list.sort(function (a,b){return a>b;});
+    half_list.sort(function (a,b){return a>b ? 1 : -1;});
     
     var found_positive=false;
     for (let blxl=0;blxl<half_list.length;blxl++){
@@ -1067,9 +1067,9 @@ function sortdata_zjedu(cstype){
 		case 5:
 		case 6:
 			if (csorder_zjc_global==-1){
-				jgarray_zjc_global.sort(function(a,b){return a[cstype]-b[cstype];});
+				jgarray_zjc_global.sort(function(a,b){return a[cstype]>b[cstype] ? 1 : -1;});
 			} else {
-				jgarray_zjc_global.sort(function(a,b){return b[cstype]-a[cstype];});
+				jgarray_zjc_global.sort(function(a,b){return b[cstype]>a[cstype] ? 1 : -1;});
 			}
 			break;
 	}

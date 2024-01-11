@@ -102,9 +102,9 @@ function statistics_ingredient_cn_medicine(sort_no=1,is_desc=true){
     } else {
         ingredient_t.sort(function (a,b){return zh_sort_b(a,b,false,0);});    
         if (is_desc){
-            ingredient_t.sort(function (a,b){return a[sort_no]<b[sort_no];});
+            ingredient_t.sort(function (a,b){return a[sort_no]<b[sort_no] ? 1 : -1;});
         } else {
-            ingredient_t.sort(function (a,b){return a[sort_no]>b[sort_no];});    
+            ingredient_t.sort(function (a,b){return a[sort_no]>b[sort_no] ? 1 : -1;});    
         }
     }
     

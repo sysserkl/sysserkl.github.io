@@ -94,9 +94,9 @@ function sort_lt_klmemo(){
             let list_b=b[0].match(/(#[^#\s]{2,})/g) || [''];
             list_a.sort();
             list_b.sort();
-            if (list_a[0]==''){return false;}
-            if (list_b[0]==''){return true;}
-            return list_a[0]<list_b[0];
+            if (list_a[0]==''){return 0;}
+            if (list_b[0]==''){return 1;}
+            return list_a[0]<list_b[0] ? 1 : -1;
         });    
     } else if (sort_type_klmemo_global=='random'){
         content_klmemo_global.sort(randomsort_b);
@@ -106,7 +106,7 @@ function sort_lt_klmemo(){
             blno=0;
         }
         blno=Math.min(2,Math.max(0,blno));
-        content_klmemo_global.sort(function (a,b){return a[blno]>b[blno];});
+        content_klmemo_global.sort(function (a,b){return a[blno]>b[blno] ? 1 : -1;});
         if (sort_type_klmemo_global.includes('a')){
             content_klmemo_global.reverse();
         }

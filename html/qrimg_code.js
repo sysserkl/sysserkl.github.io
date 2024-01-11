@@ -24,9 +24,9 @@ function sort_by_name_qrimg(desc=false){
         list_t.push([item.src,item.getAttribute('alt')]);
     }
     if (desc){
-        list_t.sort(function (a,b){return a[1]<b[1];});
+        list_t.sort(function (a,b){return a[1]<b[1] ? 1 : -1;});
     } else {
-        list_t.sort(function (a,b){return a[1]>b[1];});    
+        list_t.sort(function (a,b){return a[1]>b[1] ? 1 : -1;});    
     }
 
     var img_border=klmenu_check_b('span_img_border',false);        

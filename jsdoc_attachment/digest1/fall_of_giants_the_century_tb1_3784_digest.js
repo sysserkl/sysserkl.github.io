@@ -53,4 +53,5 @@ var digest_global=`
 *bowlful
 *Sarajevo
 *Austria-Hungary
+*lady-in-waiting
 `.trim().split('\n');

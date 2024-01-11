@@ -279,31 +279,31 @@ function search_dbb(cskey=false,cstype=''){
     
     var sort_type=document.getElementById('select_sort_type_dbb').value;
     if (['书名','人数','出版年','页数','定价'].includes(sort_type)){
-        current_result_dbb_global.sort(function (a,b){return a[0]['rating']<b[0]['rating'];});    //评分排序 - 保留注释
+        current_result_dbb_global.sort(function (a,b){return a[0]['rating']<b[0]['rating'] ? 1 : -1;});    //评分排序 - 保留注释
         current_result_dbb_global.sort(function (a,b){return zh_sort_b(a,b,false,1);}); //书名排序 - 保留注释       
     }
     switch (sort_type){
         case '评分/书名':
-            current_result_dbb_global.sort(function (a,b){return a[0]['people']<b[0]['people'];});    //人数排序 - 保留注释
+            current_result_dbb_global.sort(function (a,b){return a[0]['people']<b[0]['people'] ? 1 : -1;});    //人数排序 - 保留注释
             current_result_dbb_global.sort(function (a,b){return zh_sort_b(a,b,false,1);}); //书名排序 - 保留注释
-            current_result_dbb_global.sort(function (a,b){return a[0]['rating']<b[0]['rating'];});  //评分排序 - 保留注释
+            current_result_dbb_global.sort(function (a,b){return a[0]['rating']<b[0]['rating'] ? 1 : -1;});  //评分排序 - 保留注释
             break;
         case '评分/人数':
             current_result_dbb_global.sort(function (a,b){return zh_sort_b(a,b,false,1);}); //书名排序 - 保留注释
-            current_result_dbb_global.sort(function (a,b){return a[0]['people']<b[0]['people'];});    //人数排序 - 保留注释
-            current_result_dbb_global.sort(function (a,b){return a[0]['rating']<b[0]['rating'];});  //评分排序 - 保留注释
+            current_result_dbb_global.sort(function (a,b){return a[0]['people']<b[0]['people'] ? 1 : -1;});    //人数排序 - 保留注释
+            current_result_dbb_global.sort(function (a,b){return a[0]['rating']<b[0]['rating'] ? 1 : -1;});  //评分排序 - 保留注释
             break;            
         case '人数':
-            current_result_dbb_global.sort(function (a,b){return a[0]['people']<b[0]['people'];});
+            current_result_dbb_global.sort(function (a,b){return a[0]['people']<b[0]['people'] ? 1 : -1;});
             break;
         case '出版年':
-            current_result_dbb_global.sort(function (a,b){return a[0]['publication_year']<b[0]['publication_year'];});
+            current_result_dbb_global.sort(function (a,b){return a[0]['publication_year']<b[0]['publication_year'] ? 1 : -1;});
             break;
         case '页数':
-            current_result_dbb_global.sort(function (a,b){return a[2]<b[2];});      
+            current_result_dbb_global.sort(function (a,b){return a[2]<b[2] ? 1 : -1;});      
             break;            
         case '定价':
-            current_result_dbb_global.sort(function (a,b){return a[3]<b[3];});      
+            current_result_dbb_global.sort(function (a,b){return a[3]<b[3] ? 1 : -1;});      
             break;
         case '随机':
             current_result_dbb_global.sort(randomsort_b);
@@ -739,7 +739,7 @@ function statistics_key_pie_dbb(cstype){
     var pyramid_str='';
     switch (cstype){
         case 'rating':
-            result_t.sort(function (a,b){return a[0]<b[0];});    
+            result_t.sort(function (a,b){return a[0]<b[0] ? 1 : -1;});    
             pyramid_str=rating_pyramid_dbb(result_t);
             break;
         case '作者':
@@ -747,10 +747,10 @@ function statistics_key_pie_dbb(cstype){
             result_t.sort(function (a,b){return zh_sort_b(a,b,false,0);});
             break;
         case 'publication_year':
-            result_t.sort(function (a,b){return a[0]>b[0];});
+            result_t.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});
             break;
     }
-    result_t.sort(function (a,b){return a[1]<b[1];});
+    result_t.sort(function (a,b){return a[1]<b[1] ? 1 : -1;});
     
     var table_list=[];
     var bllen=publisher_list.length;

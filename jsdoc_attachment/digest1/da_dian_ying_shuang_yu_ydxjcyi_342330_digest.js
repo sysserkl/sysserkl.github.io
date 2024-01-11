@@ -11,4 +11,5 @@ var digest_global=`
 *voyager
 *wastefulness
 *yup
+*Sumer
 `.trim().split('\n');

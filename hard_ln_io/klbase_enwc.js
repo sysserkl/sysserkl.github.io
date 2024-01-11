@@ -146,8 +146,8 @@ function get_day_sentences_enwc_b(csday='',csmonth='',use_asc=true){
                 }
             }
         }
-        list_t.sort(function (a,b){return a[3]>b[3];}); //按 编号 排序 - 保留注释
-        list_t.sort(function (a,b){return a[2]>b[2];}); //按 KLWiki title名 或 书名 排序 - 保留注释
+        list_t.sort(function (a,b){return a[3]>b[3] ? 1 : -1;}); //按 编号 排序 - 保留注释
+        list_t.sort(function (a,b){return a[2]>b[2] ? 1 : -1;}); //按 KLWiki title名 或 书名 排序 - 保留注释
     } else {
         en_sentence_to_default_order_b();    
         var blsection=en_sentence_global.length/365;

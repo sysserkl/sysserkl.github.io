@@ -526,7 +526,7 @@ function statistics_category_count_klplan_b(cslist,csbegin='',csend=''){
     [result_t,total_t]=statistics_cym_get_klplan_b(cslist,0,csbegin,csend).slice(0,2);
         
     result_t=object2array_b(result_t);
-    result_t.sort(function (a,b){return a[2]<b[2];});
+    result_t.sort(function (a,b){return a[2]<b[2] ? 1 : -1;});
    
     for (let blxl=0;blxl<result_t.length;blxl++){
         var blpercent=(result_t[blxl][2]*100/total_t['ALL'][1]).toFixed(2)+'%';
@@ -635,7 +635,7 @@ function statistics_category_year_month_klplan_b(cslist,csat=0,csbegin='',csend=
         tr_list.push([td_list.join('')+'<td align="right" style="font-weight:bold;">'+row_total+'</td>',row_total]);
     }
 
-    tr_list.sort(function (a,b){return a[1]<b[1];});
+    tr_list.sort(function (a,b){return a[1]<b[1] ? 1 : -1;});
 
     for (let blxl=0;blxl<tr_list.length;blxl++){
         tr_list[blxl]='<td>'+(blxl+1)+'</td>'+tr_list[blxl][0]+'<td align="right">'+(tr_list[blxl][1]*100/all_total).toFixed(2)+'%</td>';

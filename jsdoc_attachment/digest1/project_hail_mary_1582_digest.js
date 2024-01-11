@@ -31,4 +31,6 @@ var digest_global=`
 *guesstimate
 *aesthetically
 *launchpad
+*off-the-shelf
+*waveform
 `.trim().split('\n');

@@ -604,9 +604,9 @@ function zh_sort_b(a,b,csdesc=false,arrayno=-1){
     if (arrayno<0){
         if (a.toString().substring(0,1).match(/[^\x00-\xff]/g)==null || b.toString().substring(0,1).match(/[^\x00-\xff]/g)==null){
             if (csdesc){
-                return b>a;
+                return b>a ? 1 : -1;
             } else {
-                return a>b;
+                return a>b ? 1 : -1;
             }
         } else {
             if (csdesc){
@@ -618,9 +618,9 @@ function zh_sort_b(a,b,csdesc=false,arrayno=-1){
     } else {
         if (a[arrayno].toString().substring(0,1).match(/[^\x00-\xff]/g)==null || b[arrayno].toString().substring(0,1).match(/[^\x00-\xff]/g)==null){
             if (csdesc){
-                return b[arrayno]>a[arrayno];
+                return b[arrayno]>a[arrayno] ? 1 : -1;
             } else {
-                return a[arrayno]>b[arrayno];
+                return a[arrayno]>b[arrayno] ? 1 : -1;
             }        
         } else {
             if (csdesc){
@@ -633,19 +633,17 @@ function zh_sort_b(a,b,csdesc=false,arrayno=-1){
 }
 
 function radio_value_get_b(radio_name){
-	var elements = document.getElementsByName(radio_name);
-    if (elements){
-        var cstype_t='0';
-        for (var i=0;i<elements.length; i++){
-            if (elements[i].checked){
-                cstype_t=elements[i].value;
-                break;
-            }
+	var odomes = document.getElementsByName(radio_name);
+    if (odomes.length==0){return '-1';}
+
+    var cstype_t='0';
+    for (let one_dom of odomes){
+        if (one_dom.checked){
+            cstype_t=one_dom.value;
+            break;
         }
-        return cstype_t;
-    } else {
-        return '-1';
     }
+    return cstype_t;
 }
 
 function radio_value_set_b(radio_name,csvalue){
@@ -911,9 +909,9 @@ function local_storage_key_length_b(key_list,is_reverse=true){
     
     blcontent.sort();
     if (is_reverse){
-        blcontent.sort(function (a,b){return a[1]<b[1];});
+        blcontent.sort(function (a,b){return a[1]<b[1] ? 1 : -1;});
     } else {
-        blcontent.sort(function (a,b){return a[1]>b[1];});
+        blcontent.sort(function (a,b){return a[1]>b[1] ? 1 : -1;});
     }
     
     for (let blxl=0;blxl<blcontent.length;blxl++){
@@ -1750,11 +1748,11 @@ function klsofts_cols_count_b(){
 function klsofts_ingore_php_b(divlist,ignore_php=false,do_sort=true){
     if (do_sort){
         divlist.sort(function(a,b){
-            if (a[3]=='-1'){return false;}   //不排序 - 保留注释        
-            if (a[1]=='KL Apps'){return false;}   //不排序 - 保留注释
-            return a[1].toLowerCase()>b[1].toLowerCase();
+            if (a[3]=='-1'){return 0;}   //不排序 - 保留注释        
+            if (a[1]=='KL Apps'){return 0;}   //不排序 - 保留注释
+            return a[1].toLowerCase()>b[1].toLowerCase() ? 1 : -1;
         });
-        divlist.sort(function (a,b){return ['remote','local'].includes(a[1]);});
+        divlist.sort(function (a,b){return ['remote','local'].includes(a[1]) ? 1 : -1;});
     }
     if (!ignore_php){return divlist;}
     
@@ -2281,7 +2279,7 @@ function int_number_list_insert_zero_b(cslist,csmin=false,csmax=false){
     //[int_number1,value1],
     //[int_number,value2],    
     //];
-    cslist.sort(function (a,b){return a[0]>b[0];});
+    cslist.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});
     if (cslist.length<2){
         return cslist;
     }
@@ -2308,7 +2306,7 @@ function int_number_list_insert_zero_b(cslist,csmin=false,csmax=false){
         blxl=blxl+1;
         if (blxl>100000){break};
     }
-    cslist.sort(function (a,b){return a[0]>b[0];});
+    cslist.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});
     return cslist;
 }
 
@@ -2402,7 +2400,7 @@ function local_storage_2_array_b(idname,elements_count=-1,do_join_sort=false,joi
     }
     
     if (do_join_sort){
-        result_t.sort(function (a,b){return a.join()>b.join();});
+        result_t.sort(function (a,b){return a.join()>b.join() ? 1 : -1;});
     }
     
     return [true,result_t];
@@ -2975,7 +2973,7 @@ function date_rows_tr_generate_b(csname,max_rows=40,cssquash=false,fraction_len=
     
     tr_list.reverse();
     date_list.reverse();
-    flot_list.sort(function (a,b){return a[0]>b[0];});
+    flot_list.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});
     
     //date_list 每个元素形如：[ "2022-09-29", "561", 0 ] 第3个元素是增量 - 保留注释
     //tr_list 每个元素形如："<tr><td style=\"padding:0.2rem;\" nowrap>2022-09-29 (四)</td><td align=right style=\"padding:0.2rem;\" nowrap>561</td><td align=right style=\"padding:0.2rem;\" nowrap>0</td></tr>" - 保留注释
@@ -3496,18 +3494,18 @@ function character_num_sort_b(compared_a,compared_b,csdesc=false,is_cn=false){
     let sb=(compared_b.match(/^[^\d]+/i) || [''])[0];
     if (sa==sb){
         if (csdesc){
-            return parseInt((compared_a.match(/\d+/) || ['0'])[0]) < parseInt((compared_b.match(/\d+/) || ['0'])[0]);
+            return parseInt((compared_a.match(/\d+/) || ['0'])[0]) < parseInt((compared_b.match(/\d+/) || ['0'])[0]) ? 1 : -1;
         } else {
-            return parseInt((compared_a.match(/\d+/) || ['0'])[0]) > parseInt((compared_b.match(/\d+/) || ['0'])[0]);
+            return parseInt((compared_a.match(/\d+/) || ['0'])[0]) > parseInt((compared_b.match(/\d+/) || ['0'])[0]) ? 1 : -1;
         }
     } else {
         if (is_cn){
             return zh_sort_b(sa,sb,csdesc);
         } else {
             if (csdesc){
-                return sa<sb;
+                return sa<sb ? 1 : -1;
             } else {    
-                return sa>sb;
+                return sa>sb ? 1 : -1;
             }
         }
     }

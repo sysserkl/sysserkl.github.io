@@ -129,7 +129,9 @@ function draw_lines_klsda(){
     document.getElementById('divhtml').innerHTML=bljg;
     document.getElementById('div_flot').style.cssText='width:100%;height:'+document.documentElement.scrollHeight*0.5+'px;margin-bottom:30px;';
     list_t=object2array_b(list_t);
-    list_t.sort(function (a,b){return a[0].substring(a[0].lastIndexOf('('),)>b[0].substring(b[0].lastIndexOf('('),);});
+    list_t.sort(function (a,b){
+        return (a[0].substring(a[0].lastIndexOf('('),)>b[0].substring(b[0].lastIndexOf('('),)) ? 1 : -1;
+    });
     
     var split_no=0;
     if (selected_item_len>1){
@@ -179,7 +181,7 @@ function draw_pie_klsda(){
     document.getElementById('divhtml').innerHTML=bljg;
 
     if (document.getElementById('input_sort').checked){
-        chart_data.sort(function(a,b){return b.data-a.data;});
+        chart_data.sort(function(a,b){return b.data>a.data ? 1 : -1;});
     }
     document.getElementById('div_flot').style.cssText='width:100%;height:'+document.documentElement.scrollHeight*0.5+'px;margin:30px;';
     flot_pie_b(chart_data,'div_flot');

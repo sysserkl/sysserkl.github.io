@@ -25,7 +25,7 @@ function array_sort_count_dpr(csarray,sort_type='num'){
     var list_t=array_count_b(csarray,true,true);
     switch (sort_type){
         case 'num':
-            list_t.sort(function (a,b){return parseInt(a)>parseInt(b);});
+            list_t.sort(function (a,b){return parseInt(a)>parseInt(b) ? 1 : -1;});
             break;
         case 'str':
             list_t.sort();
@@ -345,7 +345,7 @@ function proofread_dpr(){
     //出现次数最少的非汉字字符
     var character_en_list=content_str.match(/[\x00-\xff]/g) || [];
     character_en_list=(array_count_b(character_en_list,false,false,true));
-    character_en_list.sort(function (a,b){return a[1]>b[1];});
+    character_en_list.sort(function (a,b){return a[1]>b[1] ? 1 : -1;});
     var character_en_rare_list=[];
     for (let item of character_en_list){
         if (item[1]<=2){

@@ -8,7 +8,7 @@ function col_rearrange_klwiki_h3(){
 }
 
 function data_load_klwiki_h3(array_name){
-    eval(array_name).sort(function (a,b){return a[1]<b[1];});
+    eval(array_name).sort(function (a,b){return a[1]<b[1] ? 1 : -1;});
 }
 
 function menu_more_klwiki_h3(){
@@ -60,7 +60,7 @@ function years_count_klwiki_h3(){
         }
     }
     result_t=object2array_b(result_t,true,2);
-    result_t.sort(function (a,b){return a[0]>b[0];});
+    result_t.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});
     
     var bljg=[];
     var ym_list=[];
@@ -136,7 +136,7 @@ function weixin_rank_klwiki_h3(){
 function rank_2_html_klwiki_h3(cslist,cstype='',ignore_value=1){
     cslist=object2array_b(cslist,true,2);
     cslist.sort(function (a,b){return zh_sort_b(a,b,false,0);});
-    cslist.sort(function (a,b){return a[1]<b[1];});
+    cslist.sort(function (a,b){return a[1]<b[1] ? 1 : -1;});
     var blat=-1;
     for (let blxl=0;blxl<cslist.length;blxl++){
         if (cslist[blxl][1]==ignore_value){

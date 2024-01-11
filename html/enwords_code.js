@@ -739,7 +739,7 @@ function letters_26_kle(idno='',sort_by_count=false,percent=false){
         l26.sort();
         
         if (sort_by_count){
-            l26.sort(function (a,b){return a[1]<b[1];});
+            l26.sort(function (a,b){return a[1]<b[1] ? 1 : -1;});
         }
 
         var bljg=[];

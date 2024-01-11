@@ -303,8 +303,8 @@ function compare_data_bible(){
         }
         character_unique=Array.from(character_unique);
         
-        character_list.sort(function (a,b){return a[0].length<b[0].length;});   //长的不同字在前先替换 - 保留注释
-        character_unique.sort(function (a,b){return a.length<b.length;});   //长的不同字在前先替换 - 保留注释
+        character_list.sort(function (a,b){return a[0].length<b[0].length ? 1 : -1;});   //长的不同字在前先替换 - 保留注释
+        character_unique.sort(function (a,b){return a.length<b.length ? 1 : -1;});   //长的不同字在前先替换 - 保留注释
         
         console.log('sub_compare_data_bible_get_old_data() 查找不同字 费时：'+(performance.now() - t0) + ' milliseconds');
         
@@ -743,7 +743,7 @@ function word_frequency_bible(ospan=false,scroll_to_textarea=false){
     }
     
     result_t=object2array_b(result_t,true);
-    result_t.sort(function(a,b){return a[1]<b[1];});
+    result_t.sort(function(a,b){return a[1]<b[1] ? 1 : -1;});
     for (let blxl=0;blxl<result_t.length;blxl++){
         if (result_t[blxl][1]==1){
             result_t=result_t.slice(0,blxl);
@@ -795,9 +795,9 @@ function search_statistics_bible(cscolumn=-1,hidezero=false){
         result_t.sort(function (a,b){return zh_sort_b(a,b,fav_desc_sort_global,2);});
     } else {
         if (fav_desc_sort_global){
-            result_t.sort(function (a,b){return a[cscolumn]>b[cscolumn];});
+            result_t.sort(function (a,b){return a[cscolumn]>b[cscolumn] ? 1 : -1;});
         } else {
-            result_t.sort(function (a,b){return a[cscolumn]<b[cscolumn];});
+            result_t.sort(function (a,b){return a[cscolumn]<b[cscolumn] ? 1 : -1;});
         }    
     }
 
@@ -833,7 +833,7 @@ function fav_sort_bible(csarray){
         if (isNaN(blvalue)){continue;}
         result_t.push(blvalue);
     }
-    result_t.sort(function (a,b){return a-b;}); //不能使用 a<b，或默认的 sort(); - 保留注释
+    result_t.sort(function (a,b){return a>b ? 1 : -1;});
     return result_t;
 }
 
@@ -1291,7 +1291,7 @@ function main_with_sub_chapters_bible(main_line_no=false){
         main_no_list.push(item[0]);
     }
     
-    line_no_list.sort(function (a,b){return a>b;});
+    line_no_list.sort(function (a,b){return a>b ? 1 : -1;});
     
     if (main_line_no===false){
         var result_t={};
