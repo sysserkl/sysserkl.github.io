@@ -3225,6 +3225,37 @@ function fix_divhtml2_kltxt_b(do_fix=true,ospan=false){
     }    
 }
 
+function selected_range_get_kltxt_b(){
+    var oselection=window.getSelection();
+    var oparent=oselection.anchorNode?.parentNode;
+    if (!oparent){return;}
+    
+    if (oparent.classList.contains('txt_content')){
+        oselected_kltxt_global=selection_dict_get_b();
+    }
+}
+
+function selected_range_expand_kltxt_b(do_expand=true,do_copy=false){
+    if (typeof(oselected_kltxt_global)=='undefined'){
+        selected_range_get_kltxt_b();
+    }
+
+    if (typeof(oselected_kltxt_global)=='undefined'){return;}
+    
+    if (Object.keys(oselected_kltxt_global).length==0){
+        selected_range_get_kltxt_b();
+    }
+    if (selection_generate_b(oselected_kltxt_global)===false){return;}
+    if (do_expand){
+        selection_expand_b();
+    }
+    if (do_copy){
+        var blstr=selection_content_b();
+        document.getElementById('textarea_digest_txtlistsearch').value=blstr;
+    }
+    oselected_kltxt_global={};
+}
+
 function digest_temp_add_kltxt_b(do_fix=false){
     fix_divhtml2_kltxt_b(false);
     var list_t=local_storage_get_b('digest_temp_txtlistsearch',-1,true);
@@ -3234,6 +3265,8 @@ function digest_temp_add_kltxt_b(do_fix=false){
     bljg=bljg+textarea_buttons_b('textarea_digest_txtlistsearch','清空','','','oblong_box');
     bljg=bljg+'<span class="oblong_box" onclick="digest_temp_update_kltxt_b();">➕临时摘要</span> ';
     bljg=bljg+'<span class="oblong_box" onclick="digest_temp_jump_to_line_kltxt_b();">返回阅读</span> ';
+    bljg=bljg+'<span class="oblong_box" onmouseenter="selected_range_get_kltxt_b();" onclick="selected_range_expand_kltxt_b();">↔</span> ';
+    bljg=bljg+'<span class="oblong_box" onmouseenter="selected_range_get_kltxt_b();" onclick="selected_range_expand_kltxt_b(false,true);">cp</span> ';
     bljg=bljg+'<span class="oblong_box" id="span_digest_temp_fix" onclick="fix_divhtml2_kltxt_b(this.innerText==\'固定\',this);">固定</span> '; 
     bljg=bljg+'<span id="span_current_book_temp_digest_count"></span>';     
     bljg=bljg+'</p>';

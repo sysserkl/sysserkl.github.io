@@ -3099,13 +3099,19 @@ function window_list_init_b(max_result){
     return window_list;
 }
     
-function copy_2_clipboard_b(csstr){
-    var otextarea=document.createElement('textarea');
-    otextarea.value=csstr;
-    document.body.appendChild(otextarea);
-    otextarea.select();
-    document.execCommand('copy');
-    otextarea.parentNode.removeChild(otextarea);
+function copy_2_clipboard_b(csstr,nav_mode=false){
+    if (nav_mode==false){
+        var otextarea=document.createElement('textarea');
+        otextarea.value=csstr;
+        document.body.appendChild(otextarea);
+        otextarea.select();
+        document.execCommand('copy');
+        otextarea.parentNode.removeChild(otextarea);
+    } else {
+        navigator.clipboard.writeText(csstr)
+        .then(() => {console.log('文本已成功复制到剪贴板');})
+        .catch((error) => {console.log(error);});
+    }
 }
 
 function split_dom_vertical_or_horizontal_b(odom,cscount,split_type,adjust_by_p=false){
@@ -3509,4 +3515,106 @@ function character_num_sort_b(compared_a,compared_b,csdesc=false,is_cn=false){
             }
         }
     }
+}
+
+function selection_dict_get_b(){
+    let dict_t = {};
+
+    const selection = window.getSelection();
+    if (selection.rangeCount > 0){
+        const range = selection.getRangeAt(0);
+        dict_t={
+        'startContainer': range.startContainer,
+        'startOffset': range.startOffset,
+        'endContainer': range.endContainer,
+        'endOffset': range.endOffset,
+        };
+    }
+    
+    return dict_t;
+}
+
+function selection_generate_b(csdict){
+    const range = document.createRange();
+    try {
+        range.setStart(csdict.startContainer, csdict.startOffset);
+        range.setEnd(csdict.endContainer, csdict.endOffset);
+    } catch (e){
+        console.log(e);
+        return false;
+    }
+    
+    const newSelection = window.getSelection();
+    newSelection.removeAllRanges();
+    newSelection.addRange(range);
+    return true;
+}
+
+function selection_content_b(){
+    var oselection = window.getSelection();
+    if (oselection.rangeCount == 0){return '';}
+    
+    var range = oselection.getRangeAt(0);
+    var selectedText = range.cloneContents();
+
+    var tempElement = document.createElement('div');
+    tempElement.appendChild(selectedText);
+
+    return tempElement.innerText;
+}
+
+function selection_expand_b(){
+    // 获取当前选区
+    var oselection = window.getSelection();
+    
+    if (oselection.rangeCount == 0){return;}
+
+    // 获取当前选区的第一个范围
+    var range = oselection.getRangeAt(0);
+
+    // 确保容器是一个节点类型为 TEXT_NODE 的元素
+    var ostart= range.startContainer;
+    if (ostart.nodeType !== Node.TEXT_NODE){
+        console.log('ostart 非文本节点');
+        return;
+    }
+
+    var oend = range.endContainer;
+    if (oend.nodeType !== Node.TEXT_NODE){
+        console.log('oend 非文本节点');
+        return;
+    }
+    
+    var blstart = range.startOffset;
+    var blend = range.endOffset;
+        
+    var blreg=/[。，；？！]|[\.,;\?\!]\s/g;
+    var punctuation_list=[];
+    var result_t;
+    while (result = blreg.exec(ostart.data)){
+        var blat=blreg.lastIndex;
+        if (blat>blstart){break;}   //不能使用 >= - 保留注释
+        punctuation_list.push(blat);        
+    }
+
+    if (punctuation_list.length>0){
+        range.setStart(ostart, punctuation_list.slice(-1)[0]);
+    }
+    //-----
+    var blreg=/[。，；？！]|[\.,;\?\!]\s/g;  //必须重新定义 - 保留注释
+    var punctuation_list=[];
+    while (result = blreg.exec(oend.data)){
+        var blat=blreg.lastIndex;
+        if (blat<=blend){continue;}
+        punctuation_list.push(blat);     
+        break;   
+    }
+    
+    if (punctuation_list.length>0){    
+        range.setEnd(oend, punctuation_list[0]-1);
+    }
+    // 更新选区
+    oselection.removeAllRanges();
+    oselection.addRange(range);
+    //手机浏览器自身负责渲染文本选区，并且通常不会直接响应JavaScript创建的Range对象而显示选择图标。某些移动浏览器可能对JavaScript修改文本选区的支持有限，尤其是在没有用户交互的情况下。此外，为了用户体验和安全原因，现代浏览器可能会限制非用户触发的文本选区更改行为。
 }
