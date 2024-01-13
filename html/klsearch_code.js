@@ -152,10 +152,10 @@ function args_klsearch(){
                         bltype=(is_local_b()?'KLWiki,':'')+same_part1+','+same_part2; //+'collins(p),wiktionary(p),' - 此两项保留 - 保留注释
                         break;
                     case 'batch_en_bo+':
-                        bltype='Bing(cn),Oxford,Cambridge';
+                        bltype='Bing(cn),Oxford,Cambridge,longman';
                         break;
                     case 'batch_en_minor':
-                        bltype='AHD,dictionary.com,learnersdictionary,lexico,longman,wordnik';  //yourdictionary
+                        bltype='AHD,dictionary.com,learnersdictionary,lexico,wordnik';  //yourdictionary
                         break;
                     case 'batch_en_wiktionary':
                         bltype='Wiktionary(Local),kaikki(Local),wordhippo,definitions';
