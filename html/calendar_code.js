@@ -97,21 +97,21 @@ function oclass_klcalendar(y,m){
     //返回阴历控件 (y年,m+1月)
     function sub_calendar_calElement(sYear,sMonth,sDay,week,lYear,lMonth,lDay,isLeap,lmdays){
         //阴历属性
-        this.isToday    = false;
+        this.isToday = false;
         //瓣句
-        this.sYear      = sYear;   //公元年4位数字
-        this.sMonth     = sMonth;  //公元月数字
-        this.sDay       = sDay;    //公元日数字
-        this.week       = week;    //星期, 1个中文
+        this.sYear = sYear; //公元年4位数字
+        this.sMonth = sMonth; //公元月数字
+        this.sDay = sDay; //公元日数字
+        this.week = week; //星期, 1个中文
         this.odate=new Date(sYear+'-'+sMonth+'-'+sDay);
         //农历
-        this.lYear      = lYear;   //公元年4位数字
-        this.lMonth     = lMonth;  //农历月数字
-        this.lDay       = lDay;    //农历日数字
-        this.isLeap     = isLeap;  //是否为农历闰月?
+        this.lYear = lYear; //公元年4位数字
+        this.lMonth = lMonth; //农历月数字
+        this.lDay = lDay; //农历日数字
+        this.isLeap = isLeap; //是否为农历闰月?
         this.lmdays= lmdays; //农历月天数
-        this.color      = '';
-        this.solarTerms    = ''; //节气
+        this.color = '';
+        this.solarTerms = ''; //节气
     }
     //-----------------------
     var sDObj, lunar_obj, lY, lM, lD=1, lL, lX=0;
@@ -391,7 +391,7 @@ function pushBtn_klcalendar(cstype,odom){
             break;
         case 'today':
             blyselect.value=Today.getFullYear();
-            blmselect.value=Today.getMonth()+1;
+            blmselect.value=('0'+(Today.getMonth()+1)).slice(-2,);
     }
     changeCld_klcalendar(odom);
     if (cstype=='today'){
