@@ -8,10 +8,16 @@ function menu_more_district_weather(){
         col_name_list[blxl]='<option value="'+blxl+'">'+col_name_list[blxl]+'</option>';
     }
     
-    var bllink='https://m.tianqi.com/lishi/'+title_name_jscm_global.split(' ').slice(-1)[0]+'/'+today_str_b('d','').substring(0,6)+'.html';
+    if (title_name_jscm_global.startsWith('tianqihoubao ')){
+        var bllink='http://www.tianqihoubao.com/weather/top/'+title_name_jscm_global.split(' ').slice(-1)[0]+'.html';    
+        var site_name='天气后报';
+    } else {
+        var bllink='https://m.tianqi.com/lishi/'+title_name_jscm_global.split(' ').slice(-1)[0]+'/'+today_str_b('d','').substring(0,6)+'.html';
+        var site_name='天气网'
+    }
     var blparent=menu_parent_node_b(str_t);
     var klmenu1=[
-    '<a href="'+bllink+'" onclick="'+str_t+'" target=_blank>天气网</a>',        
+    '<a href="'+bllink+'" onclick="'+str_t+'" target=_blank>'+site_name+'</a>',        
     '<span class="span_menu"><select id="select_sort_type_jsad_dweather" style="height:2rem;">'+col_name_list.join('')+'</select> <span class="aclick" onclick="'+blparent+'sort_district_weather();">↑</span><span class="aclick" onclick="'+blparent+'sort_district_weather(true);">↓</span></span>',
     '<span class="span_menu">图形日期格式：<select id="select_flot_date_type_jsad_dweather" style="height:2rem;"><option>y</option><option>m</option><option selected>d</option></select></span>',
     '<span class="span_menu">温度选择：<select id="select_temperature_range_jsad_dweather" style="height:2rem;"><option>全部</option><option>最高温度</option><option>最低温度</option></select></span>',
