@@ -9,7 +9,7 @@ function menu_more_district_weather(){
     }
     
     if (title_name_jscm_global.startsWith('tianqihoubao ')){
-        var bllink='http://www.tianqihoubao.com/weather/top/'+title_name_jscm_global.split(' ').slice(-1)[0]+'.html';    
+        var bllink='http://www.tianqihoubao.com/lishi/'+title_name_jscm_global.split(' ').slice(-1)[0]+'/month/'+today_str_b('d','').slice(0,6)+'.html';    
         var site_name='天气后报';
     } else {
         var bllink='https://m.tianqi.com/lishi/'+title_name_jscm_global.split(' ').slice(-1)[0]+'/'+today_str_b('d','').substring(0,6)+'.html';

@@ -277,8 +277,14 @@ function txtmenus_kltxt_b(cstype=''){
     ];
     
     var menu_config=root_font_size_menu_b(str_t);
-    menu_config.push('<span class="span_menu" onclick="'+str_t+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>');
-    menu_config.push('<span class="span_menu" onclick="'+str_t+'float_bookname_kltxt_b();">浮动书名</span>');
+    menu_config=menu_config.concat([
+    '<span class="span_menu" onclick="'+str_t+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>',
+    '<span class="span_menu" onclick="'+str_t+'float_bookname_kltxt_b();">浮动书名</span>',
+    ]);
+
+    if (cstype=='reader'){
+        menu_config.push('<span class="span_menu" onclick="'+str_t+'line_no_show_hide_kltxt_b();">段落号隐显</span>');
+    }
     
     if (cstype!=='reader' && cstype!=='digest'){
         var book_list_file=load_current_book_b(true,false)[0];
@@ -375,6 +381,15 @@ function txtmenus_kltxt_b(cstype=''){
     }
     bljg=bljg+'<span id="span_for_more_menu_kltxt"></span>';
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(bljg,'','0rem')+' ');
+}
+
+function line_no_show_hide_kltxt_b(){
+    var ospans=document.querySelectorAll('span.txtsearch_kltxt_lineno');
+    if (ospans.length==0){return;}
+    var bldisplay=(ospans[0].style.display=='none'?'':'none');
+    for (let one_span of ospans){
+        one_span.style.display=bldisplay;
+    }
 }
 
 function img2base64_kltxt_b(){
@@ -3156,7 +3171,7 @@ function digest_show_kltxt_b(do_number_2_txt=true,recent_lines=-1,b_style=false)
             if (b_style){
                 newhtml=newhtml.replace(one_digest,'<b>'+one_digest+'</b>');            
             } else {
-                newhtml=newhtml.replace(one_digest,'<span style="font-weight:bold;border-bottom:0.15rem solid '+scheme_global['pink']+';">'+one_digest+'</span>');
+                newhtml=newhtml.replace(one_digest,'<span class="span_digest">'+one_digest+'</span>');
             }
             digest_list[blno]='';   //不重复显示同样的摘要 - 保留注释
             if (is_whole_line){break;}
