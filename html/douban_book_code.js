@@ -1,4 +1,8 @@
 function init_dbb(){
+    douban_book_global=[].concat(douban_book1_global).concat(douban_book2_global);
+    douban_book1_global=[];
+    douban_book2_global=[];
+    
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.6rem'),true,false,2);
     menu_dbb();
 
