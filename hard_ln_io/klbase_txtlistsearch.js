@@ -331,13 +331,18 @@ function txtmenus_kltxt_b(cstype=''){
     var menu_digest=[
     '<span class="span_menu" onclick="'+str_t+'reading_mode_kltxt_b();">进入阅读状态</span>',    
     '<span class="span_menu" onclick="'+str_t+'digest_temp_add_kltxt_b();">添加临时摘要</span>',
-    '<span class="span_menu" onclick="'+str_t+'digest_lines_kltxt_b();">显示全部摘要段落</span>',
-    '<span class="span_menu" onclick="'+str_t+'digest_lines_kltxt_b(500);">显示含有最新添加的500条摘要的段落</span>',    
     '<span class="span_menu" onclick="'+str_t+'digest_excluded_kltxt_b();">查看未包含或重复的摘要</span>',
     '<span class="span_menu" onclick="'+str_t+'digest_statistics_kltxt_b();">摘要分布统计</span>',
     '<span class="span_menu" onclick="'+str_t+'digest_sort_kltxt_b();">按文章顺序重新生成不重复的摘要</span>',    
     '<span class="span_menu" onclick="'+str_t+'wiki_style_kltxt_b();">当前页面WIKI格式生成</span>',
     ];
+    
+    var group_list=[
+    ['全部','digest_lines_kltxt_b();',true],
+    ['最新的500条','digest_lines_kltxt_b(500);',true],
+    ['最新的10条','digest_lines_kltxt_b(10);',true],
+    ];    
+    menu_digest.push(menu_container_b(str_t,group_list,'显示摘要段落：'));        
     
     //color menu - 保留注释
     var list_t=['default'].concat(popular_colors_b());
@@ -363,7 +368,7 @@ function txtmenus_kltxt_b(cstype=''){
     if (cstype!=='digest'){
         bljg=bljg+klmenu_b(menu_general,'','14rem','',fontsize);
         bljg=bljg+klmenu_b(menu_dir,'🔍',menu_dir_width,'',fontsize);
-        bljg=bljg+klmenu_b(menu_digest,'🖊','20rem','',fontsize);       
+        bljg=bljg+klmenu_b(menu_digest,'🖊','24rem','',fontsize);       
         bljg=bljg+colors;
         bljg=bljg+klmenu_b(menu_config,'⚙','15rem','',fontsize);
         if (cstype!=='reader'){
