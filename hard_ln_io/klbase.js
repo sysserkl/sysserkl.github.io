@@ -225,7 +225,7 @@ function js_file_import_defer_b(item){
     return [item,defer_str];     
 }
     
-function klbase_addons_import_js_b(klbase_list=[],module_list=[],jsdata_list=[],same_dir_file_list=[],import_jquery=false,do_write=true){
+function klbase_addons_import_js_b(klbase_list=[],module_list=[],jsdata_list=[],same_dir_file_list=[],import_jquery=false,do_write=true,only_file=false){
     var klbase_path='';
     var sele_path='';
     [klbase_path,sele_path]=klbase_sele_path_b();
@@ -277,7 +277,14 @@ function klbase_addons_import_js_b(klbase_list=[],module_list=[],jsdata_list=[],
             write_js_css_b(item);
         }
     }
-    return result_t[0].concat(result_t[1]).concat(result_t[2]).concat(result_t[3]);
+    
+    var bljg=result_t[0].concat(result_t[1]).concat(result_t[2]).concat(result_t[3]);
+    if (only_file){
+        for (let blxl=0;blxl<bljg.length;blxl++){
+            bljg[blxl]=bljg[blxl][1];
+        }
+    }
+    return bljg;
 }
 
 function write_js_css_b(cslist,do_write=true){
@@ -3284,7 +3291,7 @@ function list_category_count_b(cslist,return_dict=false){
 }
 
 
-function merge_js_data_files_in_one_b(varname,jsfile_list,run_fn){
+function merge_js_data_files_in_one_b(varname,jsfile_list,run_fn,merge_current=false){
     function sub_merge_js_data_files_in_one_b(){
         console.log(eval(varname).length);    //此行保留 - 保留注释
         for (let item of eval(varname)){
@@ -3304,10 +3311,12 @@ function merge_js_data_files_in_one_b(varname,jsfile_list,run_fn){
     //-----------------------
     var blxl=0;
     var bllen=jsfile_list.length;
-    
     var merge_t=[];
-    for (let item of eval(varname)){
-        merge_t.push(item);
+    
+    if (merge_current){
+        for (let item of eval(varname)){
+            merge_t.push(item);
+        }
     }
     
     eval(varname+'=undefined');

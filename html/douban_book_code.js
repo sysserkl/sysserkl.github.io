@@ -1,8 +1,10 @@
-function init_dbb(){
-    douban_book_global=[].concat(douban_book1_global).concat(douban_book2_global);
-    douban_book1_global=[];
-    douban_book2_global=[];
-    
+function data_load_dbb(){
+    document.getElementById('span_count').innerText='数据载入中...';
+    var jsfile_list=klbase_addons_import_js_b([],[],['douban_book1_data.js','douban_book2_data.js'],[],false,false,true);   
+    merge_js_data_files_in_one_b('douban_book_global',jsfile_list,init_dbb);
+}
+
+function init_dbb(){    
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.6rem'),true,false,2);
     menu_dbb();
 

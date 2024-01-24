@@ -542,5 +542,6 @@ function merge_data_common(varname,jsfile_list,ospan=false){
     if (!confirm('是否合并数据？')){return;}
     document.getElementById('span_count').innerText='数据载入中...';
 
-    merge_js_data_files_in_one_b(varname,jsfile_list,sub_merge_data_common_done);
+    //jsfile_list 每个元素如："../jsdata/rmrb_online/rmrb_online_198801_200312_data.js" - 保留注释
+    merge_js_data_files_in_one_b(varname,jsfile_list,sub_merge_data_common_done,true);
 }

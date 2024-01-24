@@ -3,7 +3,8 @@ function menu_more_kltxt_klwiki_en2(){
     if (!ospan){return;}
 
     var str_t=klmenu_hide_b('');
-    var klmenu1=[
+    var klmenu1=[    
+    '<span class="span_menu" onclick="'+str_t+'days_kltxt_klwiki_en2();">今日段落阅读</span>',
     '<span class="span_menu" onclick="'+str_t+'batch_search_form_kltxt_klwiki_en2();">单词批量查找</span>',
     '<a href="enwords_book.htm" onclick="'+str_t+'" target=_blank>生词统计</a>',    
     '<a href="ensentence.htm" onclick="'+str_t+'" target=_blank>ensentence</a>',
