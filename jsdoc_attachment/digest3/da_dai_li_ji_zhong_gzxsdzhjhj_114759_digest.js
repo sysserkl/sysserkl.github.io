@@ -1,0 +1,1 @@
+var digest_global=``;
