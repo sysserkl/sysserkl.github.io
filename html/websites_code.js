@@ -629,12 +629,9 @@ function weibo_klwebsites(enable_rnd=false){
     }
 
     result_t.sort(function (a,b){return zh_sort_b(a,b);});
-    
-    bljg=array_2_li_b(result_t);
-    if (ismobile_b()==false){
-        bljg='<div style="column-count:2;">'+bljg+'</div>';
-    }
-    document.getElementById('divhtml').innerHTML=bljg;
+
+    var buttons='<p>'+textarea_buttons_b('textarea_weibo_websites','全选,清空,复制')+'</p>';    
+    document.getElementById('divhtml').innerHTML='<textarea id="textarea_weibo_websites" style="height:30rem;">'+result_t.join('\n')+'</textarea>'+buttons;
 }
 
 function http_klwebsites(){
