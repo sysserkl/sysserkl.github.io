@@ -698,11 +698,11 @@ function location_href_b(){
 }
 
 function href_split_b(cshref){
-    if (cshref.includes("#")){
-        var cshref=cshref.substring(0,cshref.indexOf("#"));
+    if (cshref.includes('#')){
+        var cshref=cshref.substring(0,cshref.indexOf('#'));
     }
-    if (cshref.includes("?")){
-        cshref=cshref.substring(cshref.indexOf("?")+1);
+    if (cshref.includes('?')){
+        cshref=cshref.substring(cshref.indexOf('?')+1);
     } else {
         cshref='';
     }

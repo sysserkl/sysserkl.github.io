@@ -1964,6 +1964,15 @@ function select_prev_or_next_b(oselect,cstype,filter_visible=false){
 }
 
 function character_2_icon_b(csstr,cssize=24,line_width=5,mobile_style=true){
+    function sub_character_2_icon_b_num_get(csstr){
+        if (isNaN(csstr)){
+            csstr=asc_sum_b(csstr);
+        } else {
+            csstr=parseInt(csstr);    
+        }
+        return csstr;
+    }
+    //-----------------------
     var olink=document.querySelector('link[rel="icon"], link[rel="shortcut icon"]');
     if (!olink){
         var olink = document.createElement('link');
@@ -1980,22 +1989,38 @@ function character_2_icon_b(csstr,cssize=24,line_width=5,mobile_style=true){
     ctx.fillStyle = '#cecece';
     ctx.fillRect(0, 0, ocanvas.width, ocanvas.height);
 
-    if (mobile_style && ismobile_b()){
-        var blno=location.host.split(':')[0].split('.').slice(-1)[0];
-        if (isNaN(blno)){
-            blno=asc_sum_b(blno).toString();
-        }
-        blno=parseInt(('00'+blno).slice(-2,));
-
+    if (mobile_style && ismobile_b()){        
         ctx.globalAlpha = 0.8; // 设置透明 - 保留注释
         ctx.lineWidth = line_width;
-        if (blno % 2 == 0){
-            ctx.setLineDash([2,2]);
-        }
         var color_list=['red','brown','green','black','grey','blue','orange'];
-        ctx.strokeStyle = color_list[blno % color_list.length];
-        ctx.rect(0, 0, cssize,cssize); // 绘制矩形，参数分别为左上角x坐标、y坐标、宽度、高度 - 保留注释
-        ctx.stroke();
+
+        var last_ip='00'+location.host.split(':')[0].split('.').slice(-1)[0];
+        var blno_end=sub_character_2_icon_b_num_get(last_ip.slice(-1));
+        var blno_second=sub_character_2_icon_b_num_get(last_ip.slice(-2,-1));
+        
+        var dash_list=[[],[],[],[]];
+        var selected_color=['','','',''];
+        if (blno_end % 2 == 0){
+            dash_list[0]=[2,2];
+            dash_list[2]=[2,2];
+            //ctx.setLineDash([2,2]);
+        }
+        selected_color[0]=color_list[blno_end % color_list.length];
+        selected_color[2]=color_list[blno_end % color_list.length];
+
+        if (blno_second % 2 == 0){
+            dash_list[1]=[2,2];
+            dash_list[3]=[2,2];
+            //ctx.setLineDash([2,2]);
+        }
+        selected_color[1]=color_list[blno_second % color_list.length];
+        selected_color[3]=color_list[blno_second % color_list.length];
+        
+        //ctx.strokeStyle = color_list[blno_end % color_list.length];
+        
+        //ctx.rect(0, 0, cssize,cssize); //绘制矩形，参数分别为左上角x坐标、y坐标、宽度、高度 - 保留注释
+        //ctx.stroke();
+        canvas_box_with_4_lines_b(ocanvas,ctx,selected_color,dash_list);
         ctx.globalAlpha = 1;
     }
     
@@ -2008,6 +2033,48 @@ function character_2_icon_b(csstr,cssize=24,line_width=5,mobile_style=true){
    
     var imgsrc=ocanvas.toDataURL('image/jpeg');
     olink.href=imgsrc;
+}
+
+function canvas_box_with_4_lines_b(ocanvas,ctx,color_list,dash_list){
+    // 获取画布的尺寸
+    var canvasWidth = ocanvas.width;
+    var canvasHeight = ocanvas.height;
+    
+    // 设置线条样式
+    ctx.strokeStyle = color_list[0];
+    ctx.setLineDash(dash_list[0]);
+    // 绘制上边框
+    ctx.beginPath();
+    ctx.moveTo(0, 0);
+    ctx.lineTo(canvasWidth, 0);
+    ctx.stroke();
+
+    // 设置线条样式
+    ctx.strokeStyle = color_list[1];
+    ctx.setLineDash(dash_list[1]);
+    // 绘制右边框
+    ctx.beginPath();
+    ctx.moveTo(canvasWidth, 0);
+    ctx.lineTo(canvasWidth, canvasHeight);
+    ctx.stroke();
+    
+    // 设置线条样式
+    ctx.strokeStyle = color_list[2];
+    ctx.setLineDash(dash_list[2]);
+    // 绘制下边框
+    ctx.beginPath();
+    ctx.moveTo(0, canvasHeight);
+    ctx.lineTo(canvasWidth, canvasHeight);
+    ctx.stroke();
+    
+    // 设置线条样式
+    ctx.strokeStyle = color_list[3];
+    ctx.setLineDash(dash_list[3]);    
+    // 绘制左边框
+    ctx.beginPath();
+    ctx.moveTo(0, 0);
+    ctx.lineTo(0, canvasHeight);
+    ctx.stroke();
 }
 
 function close_button_b(query_str='',cstype='',class_name='aclick',is_id=true){
