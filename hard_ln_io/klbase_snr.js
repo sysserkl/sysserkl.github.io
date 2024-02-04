@@ -419,7 +419,7 @@ function expand_all_klsnews_b(cskeys){
     }
 }
 
-function classify_sites_klsnews_b(bottom_eng=false,sort_by_day=false,show_cn_en=''){
+function classify_sites_klsnews_b(bottom_eng=true,sort_by_day=false,show_cn_en=''){
     function sub_classify_sites_klsnews_b_link(bly,blxl){
         var str_t='<p ';
         if (bly % 2 == 1){
@@ -1074,7 +1074,7 @@ function menu_klsnews_b(cskeys,js_or_php=''){
     ];
     
     var group_list=[
-    ['按网站分类：','classify_sites_klsnews_b();',true],
+    ['按网站分类：','classify_sites_klsnews_b(false);',true],
     ['中上英下','classify_sites_klsnews_b(true);',true],
     ['英文','classify_sites_klsnews_b(false,true,\'en\');',true],
     ['中文','classify_sites_klsnews_b(false,true,\'cn\');',true],

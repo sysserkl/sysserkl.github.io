@@ -172,7 +172,7 @@ function menu_common(){
     ];
 
     var group_list=[
-    ['⚪ table','klmenu_check_b(this.id,true);',false,'span_table_style_common'],
+    ['⚪ table','klmenu_check_b(this.id,true);',true,'span_table_style_common'],
     ['⚪ columns','klmenu_check_b(this.id,true);',false,'span_table_columns_common'],
     ['⚪ row no','klmenu_check_b(this.id,true);',false,'span_table_row_no_common'],
 

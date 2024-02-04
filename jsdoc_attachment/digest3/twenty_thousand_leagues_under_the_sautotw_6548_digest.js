@@ -434,7 +434,6 @@ var digest_global=`
 *steadily
 *steamboat
 *steamer
-*steep slope
 *stepmother
 *stocky
 *strictly

@@ -11,6 +11,7 @@ klbase_addons_import_js_b(['css','date','eng','enbook','enwc','wiki'],[],['words
 <script>
 //在 klbase_books.js 前
 //var enwords_article=[];
+var rnd_cn__today_words_global=[5,5];
 en_word_temp_get_b();
 </script>
 <script>
@@ -46,7 +47,7 @@ mobile_style_enwc_b();
 <label><input type="checkbox" id="check_js_wiki" />js_wiki</label>
 <input type="hidden" id="input_search">
 <p>
-<span class="aclick" onclick="olds_words_batch_today_words(10,5);">指定日期单词+随机单词10个+随机中文释义单词≤5个</span>
+<span id="span_batch_button_today_words" class="aclick" onclick="olds_words_batch_today_words(rnd_cn__today_words_global[0],rnd_cn__today_words_global[1]);"></span>
 </p>
 </div>
 <div id="divhtml"></div>

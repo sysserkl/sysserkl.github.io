@@ -143,7 +143,7 @@ function menu_today_words(){
 function init_today_words(){
     enwords_mini_search_frame_style_b();
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.4rem'),true,false,2);
-    
+    document.getElementById('span_batch_button_today_words').innerText='指定日期单词+随机单词'+rnd_cn__today_words_global[0]+'个+随机中文释义单词≤'+rnd_cn__today_words_global[1]+'个';
     words_searched_arr_global=[];  //全局变量 - 保留注释
 
     enwords_init_b();
@@ -152,5 +152,5 @@ function init_today_words(){
     menu_today_words();
     set_today_words();
     enwords_mini_search_frame_form_b();
-    olds_words_batch_today_words(10,5);
+    olds_words_batch_today_words(rnd_cn__today_words_global[0],rnd_cn__today_words_global[1]);
 }
