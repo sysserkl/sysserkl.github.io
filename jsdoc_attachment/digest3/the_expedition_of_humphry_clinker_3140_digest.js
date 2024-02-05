@@ -13,4 +13,5 @@ var digest_global=`
 *stagecoach
 *Versailles
 *charger
+*Chaucer
 `.trim().split('\n');

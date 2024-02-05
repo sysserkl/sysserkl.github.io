@@ -51,4 +51,5 @@ var digest_global=`
 *transience
 *Bohr
 *Helios
+*kinsmen
 `.trim().split('\n');

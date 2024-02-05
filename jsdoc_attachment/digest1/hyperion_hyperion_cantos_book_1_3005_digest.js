@@ -86,4 +86,5 @@ var digest_global=`
 *wafer-thin
 *Holy Office
 *loading dock
+*nonlethal
 `.trim().split('\n');

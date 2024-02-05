@@ -24,4 +24,5 @@ var digest_global=`
 *maiden name
 *miscarriage
 *unsalable
+*unutterable
 `.trim().split('\n');

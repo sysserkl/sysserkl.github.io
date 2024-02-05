@@ -54,4 +54,5 @@ var digest_global=`
 *Ockham
 *nebular
 *colossi
+*Pompeii
 `.trim().split('\n');

@@ -5,4 +5,5 @@ var digest_global=`
 *lamplit
 *marigold
 *seraph
+*bewilder
 `.trim().split('\n');

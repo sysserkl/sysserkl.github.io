@@ -4,4 +4,5 @@ var digest_global=`
 *extensible
 *nucleic acid
 *urbanization
+*nonmetallic
 `.trim().split('\n');

@@ -64,4 +64,6 @@ var digest_global=`
 *treetop
 *crewmate
 *decapitate
+*microgravity
+*mudbank
 `.trim().split('\n');

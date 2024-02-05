@@ -26,4 +26,5 @@ var digest_global=`
 *discolor
 *canister
 *Artemis
+*tight-fitting
 `.trim().split('\n');

@@ -712,7 +712,7 @@ function batch_open_www_klr_b(csid,ostatus,cstype=''){
     function sub_batch_open_www_klr_b_one_link(){
         if (blxl>=bllen){
             if (ostatus){
-                ostatus.value='批量打开网址完成，已打开 '+blsites_count+' 个网址\n'+ostatus.value;
+                ostatus.value='批量打开网址完成，已打开 '+blsites_count+' 个网址\n'+blstr.replace(/\n/mg,',')+'\n'+ostatus.value;
             }        
             return;
         }

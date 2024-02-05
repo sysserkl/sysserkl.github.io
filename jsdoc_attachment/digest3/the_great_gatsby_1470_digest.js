@@ -13,4 +13,5 @@ var digest_global=`
 *yellowy
 *weatherproof
 *complication
+*eyesore
 `.trim().split('\n');

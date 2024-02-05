@@ -149,7 +149,8 @@ function share_style_temp_txt_share_b(){
 
 function menu_temp_txt_share_b(is_php=true){
     var str_t=klmenu_hide_b('');
-    var klwebphp=klwebphp_path_b();
+    var klwebphp,sele_path;
+    [klwebphp,sele_path]=klbase_sele_path_b();
     var klmenu0=[
     '<span class="span_menu" onclick="'+str_t+'multi_rows_2_one_column_temp_txt_share_b();">multl rows to one column</span>',
     '<span class="span_menu" onclick="'+str_t+'spilt_rows_temp_txt_share_b();">one textarea with one row</span>',
@@ -173,6 +174,7 @@ function menu_temp_txt_share_b(is_php=true){
     
     var klmenu_link=[
     '<a href="'+klwebphp+'temp_txt_append.php" onclick="'+str_t+'" target=_blank>➕ temp txt append</a>',
+    '<a href="'+sele_path+'/html/rows.htm" onclick="'+str_t+'" target=_blank>kl rows</a>',
     '<a href="'+klwebphp+'file_share_list.php" onclick="'+str_t+'" target=_blank>file share list</a>',
     ];
     

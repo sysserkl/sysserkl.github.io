@@ -5,4 +5,5 @@ var digest_global=`
 *reactivate
 *reframe
 *restroom
+*telekinesis
 `.trim().split('\n');

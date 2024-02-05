@@ -13,4 +13,5 @@ var digest_global=`
 *schoolchild
 *speechwriter
 *tyre
+*planetologist
 `.trim().split('\n');
