@@ -109,9 +109,13 @@ function words_queue_emoji_b(){
     return list_t;
 }
 
+function words_queue_get_b(return_list=true){
+    return local_storage_get_b('enwords_queue',-1,return_list);
+}
+
 function words_queue_read_b(){
     console.log('添加临时单词前，单词库总数：',enwords.length);
-    var list_t=local_storage_get_b('enwords_queue',-1,true);
+    var list_t=words_queue_get_b();
     var one_word=[];
     for (let item of list_t){
         item=item.trim();

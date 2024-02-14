@@ -144,9 +144,14 @@ function menu_lsm(){
 
     klmenu_config=klmenu_config.concat([ 
     '<span class="span_menu" onclick="'+str_t+'machine_name_lsm();">machine name</span>',
-    '<span class="span_menu" onclick="'+str_t+'update_remote_file_lsm();">更新指定文件</span>',
     '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'lsm\');">更新版本</span>',
     ]);
+    
+    var group_list=[
+    ['更新指定文件','update_remote_file_lsm();',true],
+    ['DRY RUN','update_remote_file_lsm(true);',true],
+    ];    
+    klmenu_config.push(menu_container_b(str_t,group_list,''));        
         
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_local,'','20rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','60rem'),'','0rem')+' ');
 }
@@ -195,10 +200,11 @@ function machine_name_lsm(){
     localStorage.setItem('machine_name',blnew);
 }
 
-function update_remote_file_lsm(){
+function update_remote_file_lsm(is_dry_run=false){
     var blstr=(prompt('输入指定文件名称关键词，如 enwords') || '').trim();
     if (blstr==''){return;}
-    service_worker_delete_b('',blstr,'是否更新指定文件？','value','textarea_lsm_status');
+    var blcaption=(is_dry_run?'DRY':'是否更新指定文件？');
+    service_worker_delete_b('',blstr,blcaption,'value','textarea_lsm_status');
 }
 
 function init_lsm(){

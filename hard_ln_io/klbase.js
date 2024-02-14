@@ -1365,12 +1365,16 @@ function service_worker_delete_b(appname='',file_key='',confirm_str='是否更�
                 var current_str=key_no+'.'+csxl+' '+one_key+' delete url: '+array[index]['url'];
                 sub_service_worker_delete_b_message(current_str);
             }
-            cache.delete(request);
+            if (!is_dry_run){
+                cache.delete(request);
+            }
             csxl=csxl+1;
         } else if (array[index]['url'].includes(file_key)){
             var current_str=key_no+'.'+csxl+' '+one_key+' delete url: '+array[index]['url'];
             sub_service_worker_delete_b_message(current_str);
-            cache.delete(request);         
+            if (!is_dry_run){
+                cache.delete(request);         
+            }
             csxl=csxl+1;
         }
         return csxl;
@@ -1396,8 +1400,9 @@ function service_worker_delete_b(appname='',file_key='',confirm_str='是否更�
                 });
                 
                 if (file_key==''){
-                    caches.delete(one_key);
-                    
+                    if (!is_dry_run){
+                        caches.delete(one_key);
+                    }
                     var current_str='caches.delete '+one_key;
                     sub_service_worker_delete_b_message(current_str);
           
@@ -1409,7 +1414,8 @@ function service_worker_delete_b(appname='',file_key='',confirm_str='是否更�
         });
     }
     //-----------------------
-    if (confirm_str!==''){
+    var is_dry_run=(confirm_str=='DRY');
+    if (confirm_str!=='' && !is_dry_run){
         if (!confirm(confirm_str)){return;}
     }
     var is_all=(appname=='');
@@ -2587,8 +2593,11 @@ function js_alert_b(csstr,id='',duration=5000){
     if (id===''){
         alert(csstr);
     } else {
-        document.getElementById(id).innerHTML=new Date().toLocaleTimeString()+' '+csstr;
-        setTimeout(function(){document.getElementById(id).innerHTML='';},duration);
+        var odom=document.getElementById(id);
+        if (odom){
+            odom.innerHTML=new Date().toLocaleTimeString()+' '+csstr;
+            setTimeout(function(){odom.innerHTML='';},duration);
+        }
     }
 }
 

@@ -157,7 +157,7 @@ function words_queue_new_or_old_kle(is_new=true,only_word=false){
         if (new_str==''){return [[],error];}
         [result_t,error]=words_queue_split_kle(new_str,'sublist');    
     } else {
-        [result_t,error]=words_queue_split_kle(words_queue_get_kle(false),'sublist');
+        [result_t,error]=words_queue_split_kle(words_queue_get_b(false),'sublist');
     }
     
     if (only_word){
@@ -274,7 +274,7 @@ function words_queue_update_kle(){
     
     //---
     var temp_words;
-    [temp_words,error]=words_queue_split_kle(words_queue_get_kle(false),'');
+    [temp_words,error]=words_queue_split_kle(words_queue_get_b(false),'');
     var bllen=temp_words.length;
     if (error!==''){
         //alert('临时单词行数不为 3 的倍数，取消更新');
@@ -339,11 +339,11 @@ function words_queue_read_one_word_kle(csword){
     }    
     
     if (csword==''){
-        otextarea.value=words_queue_get_kle(false);
+        otextarea.value=words_queue_get_b(false);
         return;
     }
     
-    var temp_words=words_queue_split_kle(words_queue_get_kle(false),'sublist')[0];
+    var temp_words=words_queue_split_kle(words_queue_get_b(false),'sublist')[0];
     for (let item of temp_words){
         if (item[0]==csword){
             otextarea.value=item.join('\n');
@@ -353,7 +353,7 @@ function words_queue_read_one_word_kle(csword){
 }
 
 function words_queue_select_kle(csword=''){    
-    var temp_words=words_queue_split_kle(words_queue_get_kle(false),'sublist')[0];
+    var temp_words=words_queue_split_kle(words_queue_get_b(false),'sublist')[0];
 
     var bljg='<option></option><option>NEW WORD</option>\n';
     for (let item of temp_words){
@@ -372,12 +372,8 @@ function words_queue_insert_kle(){
     dom_insert_str_b(otextarea,list_t[0],list_t[1],false);
 }
 
-function words_queue_get_kle(return_list=true){
-    return local_storage_get_b('enwords_queue',-1,return_list);
-}
-
 function words_editor_form_kle(){
-    var list_t=words_queue_get_kle();
+    var list_t=words_queue_get_b();
     var postpath=postpath_b();
     var bljg='';
     bljg=bljg+'\n<select id="select_queue_words" onchange="words_queue_read_one_word_kle(this.value);"></select>\n';
@@ -581,6 +577,7 @@ function menu_kle(){
     
     var klmenu_new=[
     '<span class="span_menu" onclick="'+str_t+'words_editor_form_kle();">录入临时新单词或旧单词编辑</span>',        
+    '<span class="span_menu" onclick="'+str_t+'words_queue_read_b();">再次载入临时单词</span>',        
     '<a href="enwords_book.htm" onclick="'+str_t+'" target=_blank>生词统计</a>',
     '<span class="span_menu" onclick="'+str_t+'show_new_words_enwc_b(\'span.span_enwords_sentence\');">显示例句中的生词</span>',
     '<span class="span_menu" onclick="'+str_t+'show_new_words_enwc_b(\'span.span_explanation\');">显示释义中的生词</span>',    
