@@ -1362,7 +1362,7 @@ function service_worker_delete_b(appname='',file_key='',confirm_str='是否更�
     function sub_service_worker_delete_b_one_file(request, index, array, one_key, cache,csxl){
         if (file_key==''){
             if (csxl % 100 == 0){
-                var current_str=key_no+'.'+csxl+' '+one_key+' delete url: '+array[index]['url'];
+                var current_str=key_no+'.'+csxl+' '+one_key+' delete'+del_caption+' url: '+array[index]['url'];
                 sub_service_worker_delete_b_message(current_str);
             }
             if (!is_dry_run){
@@ -1370,7 +1370,7 @@ function service_worker_delete_b(appname='',file_key='',confirm_str='是否更�
             }
             csxl=csxl+1;
         } else if (array[index]['url'].includes(file_key)){
-            var current_str=key_no+'.'+csxl+' '+one_key+' delete url: '+array[index]['url'];
+            var current_str=key_no+'.'+csxl+' '+one_key+' delete'+del_caption+' url: '+array[index]['url'];
             sub_service_worker_delete_b_message(current_str);
             if (!is_dry_run){
                 cache.delete(request);         
@@ -1403,7 +1403,7 @@ function service_worker_delete_b(appname='',file_key='',confirm_str='是否更�
                     if (!is_dry_run){
                         caches.delete(one_key);
                     }
-                    var current_str='caches.delete '+one_key;
+                    var current_str='caches.delete'+del_caption+' '+one_key;
                     sub_service_worker_delete_b_message(current_str);
           
                     appname=one_key.replace(/^pwa_(.*?)_store.*$/g,'$1');
@@ -1414,10 +1414,18 @@ function service_worker_delete_b(appname='',file_key='',confirm_str='是否更�
         });
     }
     //-----------------------
-    var is_dry_run=(confirm_str=='DRY');
+    if (confirm_str=='DRY'){
+        var is_dry_run=true;
+        var del_caption='(DRY)';
+    } else {
+        var is_dry_run=false;
+        var del_caption='';
+    }
+    
     if (confirm_str!=='' && !is_dry_run){
         if (!confirm(confirm_str)){return;}
     }
+    
     var is_all=(appname=='');
     var keyname='pwa_'+appname+'_store'; //keyname 支持如 pwa_xxx_store_v任意字符 - 保留注释
 
