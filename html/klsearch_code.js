@@ -130,6 +130,90 @@ function batch_open_sites_klsearch(cscategory){
     sub_batch_open_sites_klsearch_one_site();
 }
 
+function batch_type_get_klsearch(cstype){
+    switch (cstype){
+        case 'batch_en':
+            var same_part1='dict.cn,youdao,iciba,merriam-webster';   //cambridge EBS - 保留注释
+            var same_part2='wr_cn,TFD,Wordnet'; //cambridge_cn - 保留注释
+            cstype=(is_local_b()?'KLWiki,':'')+same_part1+','+same_part2; //+'collins(p),wiktionary(p),' - 此两项保留 - 保留注释
+            break;
+        case 'batch_en_bo+':
+            cstype='Bing(cn),Oxford,Cambridge,longman';
+            break;
+        case 'batch_en_minor':
+            cstype='AHD,dictionary.com,learnersdictionary,lexico,wordnik';  //yourdictionary
+            break;
+        case 'batch_en_wiktionary':
+            cstype='Wiktionary(Local),kaikki(Local),wordhippo,definitions';
+            break;
+    }
+    
+    if (cstype==''){return [];}
+    
+    cstype=cstype.toLowerCase().split(',');
+    return cstype;
+}
+
+function iframe_generate_klsearch(cstype,cskey=false){
+    cstype=batch_type_get_klsearch(cstype);
+    if (cskey===false){
+        cskey=document.getElementById('input_searchtxt').value.trim();
+    }
+    
+    var oiframes=document.querySelectorAll('iframe.iframe_site_klsearch');
+    for (let one_iframe of oiframes){
+        one_iframe.outerHTML='';
+    }
+    
+    var buttons_t=[];
+    var result_t=[];
+    var is_local_file=is_file_type_b();
+    for (let one_type of cstype){
+        var is_proxy=false;
+        if (one_type.slice(-3,)=='(p)'){
+            is_proxy=true;
+            one_type=one_type.slice(0,-3);
+        }
+        for (let blxl=0;blxl<search_sites_list_global.length;blxl++){
+            var item=search_sites_list_global[blxl];
+            if (one_type==item[4].toLowerCase()){
+                var blsrc=search_site_klsearch(blxl,is_proxy,cskey,false);
+                if (is_local_file && blsrc.substring(0,4).toLowerCase()!=='http'){
+                    if (blsrc.split('?')[0].slice(-4,).toLowerCase()=='.php'){continue;}
+                }
+                buttons_t.push('<span class="aclick span_one_iframe_kls" onclick="show_iframe_klsearch(this,'+blxl+');">'+one_type+'</span>');
+                result_t.push('<iframe id="iframe_site_'+blxl+'" class="iframe_site_klsearch" style="width:95%;height:40rem;display:none;" src="'+blsrc+'"></iframe>');  //class="iframe_site"
+                break;
+            }
+        }
+    }
+    var odiv=document.getElementById('div_status');
+    odiv.innerHTML='<p id="p_buttons_kls">'+buttons_t.join(' ')+'</p>'+result_t.join('\n');
+    input_size_b([['input_iframe_link_kls',6,0.5]],'id');
+    //-----------------------
+    var str_t=klmenu_hide_b('');
+    var klmenu1=[
+    '<span class="span_menu" onclick="'+str_t+'copy_iframe_link_klsearch();">copy</span>',
+    '<span class="span_menu" onclick="'+str_t+'copy_iframe_link_klsearch(true);">open</span>',
+    '<span class="span_menu" onclick="'+str_t+'iframe_generate_klsearch(this.innerText);">batch_en</span>',
+    '<span class="span_menu" onclick="'+str_t+'iframe_generate_klsearch(this.innerText);">batch_en_bo+</span>',
+    '<span class="span_menu" onclick="'+str_t+'iframe_generate_klsearch(this.innerText);">batch_en_minor</span>',
+    '<span class="span_menu" onclick="'+str_t+'iframe_generate_klsearch(this.innerText);">batch_en_wiktionary</span>',
+    
+    ];
+    document.getElementById('p_buttons_kls').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','8rem','1rem','1rem','30rem'),'','0rem')+' ');
+    //-----------------------
+    var ospan=document.querySelector('span.span_one_iframe_kls');
+    if (ospan){
+        ospan.click();
+    }
+    //document.getElementById('div_title_klsearch').style.display='none';
+    document.getElementById('checkbox_openwindow').parentNode.style.display='none';
+    document.getElementById('div_recent_search').style.display='none';
+    document.getElementById('div_search').style.display='none';
+    document.title=cskey+' - KLSearch';
+}
+
 function args_klsearch(){
     var blkey='';
     var bltype='';
@@ -145,22 +229,6 @@ function args_klsearch(){
                 blkey=item.substring(2,);
             } else if (item.substring(0,2)=='t='){
                 bltype=item.substring(2,).toLowerCase();
-                switch (bltype){
-                    case 'batch_en':
-                        var same_part1='dict.cn,youdao,iciba,merriam-webster';   //cambridge EBS - 保留注释
-                        var same_part2='wr_cn,TFD,Wordnet'; //cambridge_cn - 保留注释
-                        bltype=(is_local_b()?'KLWiki,':'')+same_part1+','+same_part2; //+'collins(p),wiktionary(p),' - 此两项保留 - 保留注释
-                        break;
-                    case 'batch_en_bo+':
-                        bltype='Bing(cn),Oxford,Cambridge,longman';
-                        break;
-                    case 'batch_en_minor':
-                        bltype='AHD,dictionary.com,learnersdictionary,lexico,wordnik';  //yourdictionary
-                        break;
-                    case 'batch_en_wiktionary':
-                        bltype='Wiktionary(Local),kaikki(Local),wordhippo,definitions';
-                        break;
-                }
             } else if (item.substring(0,2)=='c='){
                 blcategory=item.substring(2,).toLowerCase();
             } else if (item.substring(0,6)=='close='){
@@ -176,50 +244,10 @@ function args_klsearch(){
     document.getElementById('input_searchtxt').value=blkey;
     
     if (bltype==''){return;}
-    bltype=bltype.toLowerCase().split(',');   
+    //bltype=bltype.toLowerCase().split(',');   
     
     if (is_iframe){ //只考虑 type 参数，忽略 category 等其他 - 保留注释
-        var buttons_t=[];
-        var result_t=[];
-        var is_local_file=is_file_type_b();
-        for (let one_type of bltype){
-            var is_proxy=false;
-            if (one_type.slice(-3,)=='(p)'){
-                is_proxy=true;
-                one_type=one_type.slice(0,-3);
-            }
-            for (let blxl=0;blxl<search_sites_list_global.length;blxl++){
-                var item=search_sites_list_global[blxl];
-                if (one_type==item[4].toLowerCase()){
-                    var blsrc=search_site_klsearch(blxl,is_proxy,blkey,false);
-                    if (is_local_file && blsrc.substring(0,4).toLowerCase()!=='http'){
-                        if (blsrc.split('?')[0].slice(-4,).toLowerCase()=='.php'){continue;}
-                    }
-                    buttons_t.push('<span class="aclick span_one_iframe_kls" onclick="show_iframe_klsearch(this,'+blxl+');">'+one_type+'</span>');
-                    result_t.push('<iframe id="iframe_site_'+blxl+'" style="width:95%;height:40rem;display:none;" src="'+blsrc+'"></iframe>');  //class="iframe_site"
-                    break;
-                }
-            }
-        }
-        var odiv=document.getElementById('div_status');
-        odiv.innerHTML='<p id="p_buttons_kls">'+buttons_t.join(' ')+'</p>'+result_t.join('\n');
-        input_size_b([['input_iframe_link_kls',6,0.5]],'id');
-        //-----------------------
-        var str_t=klmenu_hide_b('');
-        var klmenu1=[
-        '<span class="span_menu" onclick="'+str_t+'copy_iframe_link_klsearch();">copy</span>',
-        '<span class="span_menu" onclick="'+str_t+'copy_iframe_link_klsearch(true);">open</span>',
-        ];
-        document.getElementById('p_buttons_kls').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','8rem','1rem','1rem','30rem'),'','0rem')+' ');
-        //-----------------------
-        var ospan=document.querySelector('span.span_one_iframe_kls');
-        if (ospan){
-            ospan.click();
-        }
-        document.getElementById('div_title_klsearch').style.display='none';
-        document.getElementById('div_recent_search').style.display='none';
-        document.getElementById('div_search').style.display='none';
-        document.title=blkey+' - KLSearch';
+        iframe_generate_klsearch(bltype,blkey);
     } else {
         var links_t=[];
         for (let one_type of bltype){
