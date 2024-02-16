@@ -201,7 +201,7 @@ function iframe_generate_klsearch(cstype,cskey=false){
     '<span class="span_menu" onclick="'+str_t+'iframe_generate_klsearch(this.innerText);">batch_en_wiktionary</span>',
     
     ];
-    document.getElementById('p_buttons_kls').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','10rem','1rem','1rem','30rem'),'','0rem')+' ');
+    document.getElementById('p_buttons_kls').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','13rem','1rem','1rem','30rem'),'','0rem')+' ');
     //-----------------------
     var ospan=document.querySelector('span.span_one_iframe_kls');
     if (ospan){
