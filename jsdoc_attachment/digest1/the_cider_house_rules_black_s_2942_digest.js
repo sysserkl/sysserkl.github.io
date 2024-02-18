@@ -50,4 +50,5 @@ var digest_global=`
 *hyperactivity
 *intrauterine
 *palmist
+*Gabriella
 `.trim().split('\n');

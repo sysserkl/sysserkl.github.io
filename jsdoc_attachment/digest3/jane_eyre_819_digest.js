@@ -54,4 +54,5 @@ var digest_global=`
 *shuttlecock
 *protégée
 *firelit
+*sinless
 `.trim().split('\n');

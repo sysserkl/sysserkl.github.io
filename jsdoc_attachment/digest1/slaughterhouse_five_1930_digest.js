@@ -35,4 +35,5 @@ var digest_global=`
 *armband
 *motherfucker
 *slaughterhouse
+*barometric
 `.trim().split('\n');

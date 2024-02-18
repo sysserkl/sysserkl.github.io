@@ -34,4 +34,5 @@ var digest_global=`
 *Heathrow
 *never ever
 *misread
+*irrelevantly
 `.trim().split('\n');
