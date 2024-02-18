@@ -244,40 +244,41 @@ function args_klsearch(){
     document.getElementById('input_searchtxt').value=blkey;
     
     if (bltype==''){return;}
-    //bltype=bltype.toLowerCase().split(',');   
     
     if (is_iframe){ //只考虑 type 参数，忽略 category 等其他 - 保留注释
         iframe_generate_klsearch(bltype,blkey);
+        return;
+    }
+    
+    bltype=batch_type_get_klsearch(bltype);
+    var links_t=[];
+    for (let one_type of bltype){
+        var is_proxy=false;        
+        if (one_type.slice(-3,)=='(p)'){
+            is_proxy=true;
+            one_type=one_type.slice(0,-3);
+        }
+        
+        for (let blxl=0;blxl<search_sites_list_global.length;blxl++){
+            var item=search_sites_list_global[blxl];
+            if (one_type==item[4].toLowerCase()){
+                if (blcategory!=='' && blcategory!==item[6].toLowerCase()){continue;}
+                var blhref=search_site_klsearch(blxl,is_proxy,blkey,false);
+                links_t.push(blhref);
+            }
+        }
+    }
+    
+    if (links_t.length==0){return;}
+    
+    for (let blxl=0;blxl<links_t.length-1;blxl++){
+        window.open(links_t[blxl]);
+    }
+    
+    if (blclose=='1'){
+        setTimeout(function (){document.location=links_t[links_t.length-1];},2000);
     } else {
-        var links_t=[];
-        for (let one_type of bltype){
-            var is_proxy=false;        
-            if (one_type.slice(-3,)=='(p)'){
-                is_proxy=true;
-                one_type=one_type.slice(0,-3);
-            }
-            
-            for (let blxl=0;blxl<search_sites_list_global.length;blxl++){
-                var item=search_sites_list_global[blxl];
-                if (one_type==item[4].toLowerCase()){
-                    if (blcategory!=='' && blcategory!==item[6].toLowerCase()){continue;}
-                    var blhref=search_site_klsearch(blxl,is_proxy,blkey,false);
-                    links_t.push(blhref);
-                }
-            }
-        }
-        
-        if (links_t.length==0){return;}
-        
-        for (let blxl=0;blxl<links_t.length-1;blxl++){
-            window.open(links_t[blxl]);
-        }
-        
-        if (blclose=='1'){
-            setTimeout(function (){document.location=links_t[links_t.length-1];},2000);
-        } else {
-            window.open(links_t[links_t.length-1]);
-        }
+        window.open(links_t[links_t.length-1]);
     }
 }
 
