@@ -168,14 +168,19 @@ function enwords_init_b(simple=false){
     }
     //添加元素，写入 序号 和 asc 值数组(0,1,2 以及 0 的第一个字符) - 保留注释
     for (let blxl=0;blxl<enwords.length;blxl++){
-        if (enwords[blxl][1]==''){
+        var blitem=enwords[blxl];
+        if (blitem[1]==''){
             enwords[blxl][1]='[null]';
         }
-        enwords[blxl][2]=en_word_def_istrong_b(enwords[blxl][2]);
-        enwords[blxl].push(blxl,[asc_sum_b(enwords[blxl][0]),asc_sum_b(enwords[blxl][1]),asc_sum_b(enwords[blxl][2]), asc_sum_b(enwords[blxl][0].substring(0,1))]);
+        enwords[blxl][2]=en_word_def_istrong_b(blitem[2]);
+        enwords[blxl].push(blxl,enwords_asc_value_b(blitem));   //[3],[4] - 保留注释
     }
 
     console.log('enwords_init_b() 费时：'+(performance.now() - t0) + ' milliseconds');
+}
+
+function enwords_asc_value_b(csitem){
+    return [asc_sum_b(csitem[0]),asc_sum_b(csitem[1]),asc_sum_b(csitem[2]), asc_sum_b(csitem[0].substring(0,1))];
 }
 
 function en_similar_word_b(cskey,cskey_set,compared_word){
