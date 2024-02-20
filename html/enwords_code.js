@@ -577,7 +577,7 @@ function menu_kle(){
     
     var klmenu_new=[
     '<span class="span_menu" onclick="'+str_t+'words_editor_form_kle();">录入临时新单词或旧单词编辑</span>',        
-    '<span class="span_menu" onclick="'+str_t+'words_queue_read_b();">再次载入临时单词</span>',        
+    '<span class="span_menu" onclick="'+str_t+'words_queue_read_b(true);">再次载入临时单词</span>',        
     '<a href="enwords_book.htm" onclick="'+str_t+'" target=_blank>生词统计</a>',
     '<span class="span_menu" onclick="'+str_t+'show_new_words_enwc_b(\'span.span_enwords_sentence\');">显示例句中的生词</span>',
     '<span class="span_menu" onclick="'+str_t+'show_new_words_enwc_b(\'span.span_explanation\');">显示释义中的生词</span>',    

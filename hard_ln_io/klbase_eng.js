@@ -113,10 +113,32 @@ function words_queue_get_b(return_list=true){
     return local_storage_get_b('enwords_queue',-1,return_list);
 }
 
-function words_queue_read_b(){
+function words_queue_remove_b(remove_add=true,remove_edit=true){
+    while (true){
+        var blfound=false;
+        for (let blxl=0;blxl<enwords.length;blxl++){
+            if (remove_add && enwords[blxl][2].endsWith('🥚') || remove_edit && enwords[blxl][2].endsWith('✏')){
+                enwords.splice(blxl,1);
+                blfound=true;
+                removed_enwords=true;
+                break;
+            }
+        }
+        if (blfound===false){break;}
+    }
+    console.log('剔除旧临时单词后，单词库总数：',enwords.length);        
+}
+
+function words_queue_read_b(reinit=false){
     console.log('添加临时单词前，单词库总数：',enwords.length);
+    var removed_enwords=false;
+    if (reinit){
+        words_queue_remove_b(true,false);   //不移除修改的单词 - 保留注释
+    }
+    
     var list_t=words_queue_get_b();
     var one_word=[];
+    var word_name_list=[];
     for (let item of list_t){
         item=item.trim();
         if (item.includes('-') && item.replace(/-/g,'')==''){continue;}
@@ -135,10 +157,39 @@ function words_queue_read_b(){
             if (blfound===false){
                 enwords.splice(0,0,[one_word[0],one_word[1],one_word[2]+'🥚']);  //添加到头部 - 保留注释
             }
+            word_name_list.push(one_word[0]);
             one_word=[];
         }
     }
-    console.log('添加临时单词后，单词库总数：',enwords.length);
+    
+    if (reinit){
+        words_queue_reinit_b(word_name_list,removed_enwords);
+    }
+    console.log('添加临时单词后，单词库总数：',enwords.length,word_name_list);    
+}
+
+function words_queue_reinit_b(word_name_list,removed_enwords){
+    if (word_name_list.length>0 || removed_enwords){
+        var t0 = performance.now();
+        for (let blxl=0;blxl<enwords.length;blxl++){
+            enwords[blxl][3]=blxl;
+        }
+        
+        for (let one_word of word_name_list){
+            for (let blxl=0;blxl<enwords.length;blxl++){
+                var blitem=enwords[blxl];
+                if (blitem[0]!==one_word){continue;}
+
+                if (blitem[1]==''){
+                    enwords[blxl][1]='[null]';
+                }
+                enwords[blxl][2]=en_word_def_istrong_b(blitem[2]);
+                enwords[blxl][4]=enwords_asc_value_b(blitem);
+                break;
+            }
+        }
+        console.log('words_queue_reinit_b()  费时：'+(performance.now() - t0) + ' milliseconds');        
+    }
 }
 
 function enwords_init_b(simple=false){
@@ -146,10 +197,11 @@ function enwords_init_b(simple=false){
         console.log('enwords 长度为0');
         return;
     }
-    if (enwords[0].length>3){
+    
+    if (enwords[0].length>3){   //已初始化 - 保留注释
         console.log('已初始化');
         return;
-    }   //已初始化 - 保留注释
+    }
     
     var t0 = performance.now();    
     words_queue_read_b();   //导入临时添加的单词 - 保留注释
@@ -157,11 +209,11 @@ function enwords_init_b(simple=false){
     if (simple){
         //写入序号 - 保留注释
         for (let blxl=0;blxl<enwords.length;blxl++){
-            enwords[blxl].push(blxl);
             if (enwords[blxl][1]==''){
                 enwords[blxl][1]='[null]';
             }
             enwords[blxl][2]=en_word_def_istrong_b(enwords[blxl][2]);
+            enwords[blxl][3]=blxl;
         }
         console.log('enwords_init_b() 费时：'+(performance.now() - t0) + ' milliseconds');
         return;
@@ -173,7 +225,8 @@ function enwords_init_b(simple=false){
             enwords[blxl][1]='[null]';
         }
         enwords[blxl][2]=en_word_def_istrong_b(blitem[2]);
-        enwords[blxl].push(blxl,enwords_asc_value_b(blitem));   //[3],[4] - 保留注释
+        enwords[blxl][3]=blxl;
+        enwords[blxl][4]=enwords_asc_value_b(blitem);
     }
 
     console.log('enwords_init_b() 费时：'+(performance.now() - t0) + ' milliseconds');
