@@ -134,11 +134,11 @@ function batch_type_get_klsearch(cstype){
     switch (cstype){
         case 'batch_en':
             var same_part1='dict.cn,youdao,iciba,merriam-webster';   //cambridge EBS - 保留注释
-            var same_part2='wr_cn,TFD,Wordnet'; //cambridge_cn - 保留注释
+            var same_part2='wr_cn,TFD,longman,Wordnet'; //cambridge_cn - 保留注释
             cstype=(is_local_b()?'KLWiki,':'')+same_part1+','+same_part2; //+'collins(p),wiktionary(p),' - 此两项保留 - 保留注释
             break;
         case 'batch_en_bo+':
-            cstype='Bing(cn),Oxford,Cambridge,longman';
+            cstype='Bing(cn),Oxford,Cambridge';
             break;
         case 'batch_en_minor':
             cstype='AHD,dictionary.com,learnersdictionary,lexico,wordnik';  //yourdictionary

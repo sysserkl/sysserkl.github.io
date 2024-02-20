@@ -467,6 +467,9 @@ function open_link_en_b(cstype,csword,do_open=true){
             blhref=klbase_sele_path_b()[1];
             blhref=blhref+'/html/klsearch.htm?k='+encodeURIComponent(csword)+'&t=batch_en&iframe';           
             break; 
+        case 'l':
+            blhref='https://www.ldoceonline.com/dictionary/'+web_href_key_b(csword,'-',true);        
+            break;
     }
     if (blhref!=='' && do_open){
         window.open(blhref);

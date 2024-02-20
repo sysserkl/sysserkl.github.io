@@ -766,7 +766,7 @@ function batch_open_www_klr_b(csid,ostatus,cstype=''){
             if (cstype=='bing_collins_oxford_klsearch_en'){
                 list_t=list_t.concat(collins_links);
                 list_t=list_t.concat(cambridge_links);
-            }            
+            }
             
             list_t.sort();
             for (let blno=0;blno<list_t.length;blno++){
