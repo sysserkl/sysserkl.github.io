@@ -14,4 +14,5 @@ var digest_global=`
 *speechwriter
 *tyre
 *planetologist
+*genotype
 `.trim().split('\n');

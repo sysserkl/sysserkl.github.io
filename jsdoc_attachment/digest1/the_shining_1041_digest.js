@@ -113,4 +113,6 @@ var digest_global=`
 *fire truck
 *breadboard
 *wallboard
+*jet-set
+*surrealistic
 `.trim().split('\n');

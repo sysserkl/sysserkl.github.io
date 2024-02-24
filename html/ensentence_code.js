@@ -253,9 +253,9 @@ function klwiki_txtbook_oldwords_diff_ensentence(){
     var txtbook_rare_set=get_new_old_rare_words_set_enbook_b(list_t[1].toString())[2];
     var intersection_t=array_intersection_b(klwiki_rare_set,txtbook_rare_set,true);
     
-    var bljg='<h3>klwiki 中的稀有单词</h3>';
+    var bljg='<h3>klwiki 含有的稀有单词</h3>';
     bljg=bljg+sub_klwiki_txtbook_oldwords_diff_ensentence_display(klwiki_rare_set);
-    bljg=bljg+'<h3>txtbook 中的稀有单词</h3>';
+    bljg=bljg+'<h3>txtbook 含有的稀有单词</h3>';
     bljg=bljg+sub_klwiki_txtbook_oldwords_diff_ensentence_display(txtbook_rare_set);
     
     bljg=bljg+'<h3>klwiki 和 txtbook 都含有的稀有单词</h3>';

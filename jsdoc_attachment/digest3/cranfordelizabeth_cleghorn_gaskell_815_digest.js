@@ -6,4 +6,5 @@ var digest_global=`
 *saleswoman
 *hundredweight
 *House of Lords
+*bewilder
 `.trim().split('\n');
