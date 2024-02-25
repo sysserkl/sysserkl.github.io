@@ -478,3 +478,95 @@ function number_td_range_rank_b(otables,td_classname,caption='',default_value=''
         }
     }
 }
+
+function year_name_set_get_ranke_b(csarr,year_no,name_no,head_name){
+    var year_dict={};
+    var year_set=new Set();
+    var name_set=new Set();
+    for (let item of csarr){
+        var key_y=item[year_no];
+        if (year_dict[key_y]==undefined){
+            year_dict[key_y]={};
+        }
+        year_set.add(key_y);
+        
+        var key_n='n_'+item[name_no];
+        year_dict[key_y][key_n]=[].concat(item);
+        name_set.add(item[name_no]);
+    }
+
+    if (year_set.size==0){return [{},[],[]];}
+
+    year_set=Array.from(year_set);
+    year_set.sort();
+       
+    name_set=Array.from(name_set);
+    name_set.sort(zh_sort_b);
+    name_set.sort(function (a,b){return b==head_name;}); 
+    
+    return [year_dict,year_set,name_set];
+}
+
+function compare_ranke_b(year_dict,year_set,name_set,head_name,table_names,odiv){
+    function sub_compare_ranke_b_one_col(col_no){
+        var result_t=[];
+        var flot_data=[];
+        for (let one_name of name_set){
+            var tr_list=[one_name];
+            var one_flot=[one_name];
+            for (let one_year of year_set){
+                var blvalue=year_dict[one_year]['n_'+one_name];
+                if (blvalue==undefined){
+                    tr_list.push(null);
+                    tr_list.push(null);
+                    one_flot.push([parseInt(one_year.split('年')[0]),null]);
+                } else {
+                    tr_list.push(blvalue[col_no]);
+                    var blvalue0=year_dict[one_year]['n_'+name_set[0]];         
+                    if (blvalue0==null){
+                        tr_list.push(null);
+                        one_flot.push([parseInt(one_year.split('年')[0]),null]);                        
+                    } else {
+                        var percent=blvalue[col_no]/blvalue0[col_no]*100;
+                        tr_list.push(percent);
+                        one_flot.push([parseInt(one_year.split('年')[0]),percent]);
+                    }
+                }
+            }
+            result_t.push(tr_list);
+            flot_data.push(one_flot);
+        }
+        return [result_t,flot_data];
+    }
+    //-----------------------
+    if (year_set.size==0){return;}
+
+    var th_list=['<th>名称</th>'];    
+    for (let one_year of year_set){
+        th_list.push('<th colspan=2>'+one_year+'</th>');
+    }
+    
+    var result_t,flot_data;
+    var blwidth=document.body.clientWidth*0.7;
+    var blheight=blwidth*0.6;
+    for (let key in table_names){
+        var bljg=[];    
+        bljg.push('<h3>'+key+'及占'+head_name+'的比例</h3>\n');
+        bljg.push('<table class="table_common">');
+        bljg.push('<tr>'+th_list.join('')+'</tr>');
+        [result_t,flot_data]=sub_compare_ranke_b_one_col(table_names[key]);
+        for (let arow of result_t){
+            bljg.push('<tr>');        
+            bljg.push('<td nowrap>'+arow[0]+'</td>');
+            for (let blxl=1;blxl<arow.length;blxl++){
+                bljg.push('<td align="right" nowrap>'+(arow[blxl]==null?'/':arow[blxl].toFixed(1))+'</td>');                
+            }
+            bljg.push('</tr>');
+        }
+        bljg.push('</table>');
+        var flot_id='flot_percent_'+table_names[key]+'fortune';
+        bljg.push('<div id="'+flot_id+'" style="width:'+blwidth+'px;height:'+blheight+'px;"></div>');
+        odiv.insertAdjacentHTML('beforeend',bljg.join(''));
+        flot_lines_b(flot_data,flot_id,'nw',false,'','','%');
+    }
+}

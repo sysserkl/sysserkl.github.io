@@ -375,6 +375,7 @@ function menu_zjcompany(){
     '<span id="span_group_district_zjcompany" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 按地区分组</span>',    
     '<span id="span_group_year_zjcompany" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 按年份分组</span>',        
     '<span class="span_menu" onclick="'+str_t+'group_zjcompany();">执行分组</span>',     
+    '<span class="span_menu" onclick="'+str_t+'compare_zjcompany();">当前企业对比</span>',         
     ];
     
     var menu_data=[];
@@ -395,4 +396,26 @@ function init_zjcompany(){
     recent_search_key_zjcompany();
     menu_zjcompany();
     data_check_rank_b(zj_company_raw_global,5,[2]);    
+}
+
+function compare_zjcompany(){
+    var head_name=document.getElementById('input_search').value.trim().split(' ')[0];
+
+    var year_dict, year_set, name_set;    
+    [year_dict,year_set,name_set]=year_name_set_get_ranke_b(search_result_zj_company_global,4,0,head_name);
+    if (year_set.length==0){return;}
+    
+    var table_names={'收入':2};
+
+    var th_list=['<th>名称</th>'];    
+    for (let one_year of year_set){
+        th_list.push('<th colspan=2>'+one_year+'</th>');
+    }
+
+    var odiv=document.getElementById('div_flot_zj_company');
+    odiv.innerHTML='';
+    div_flot_css_zjcompany(true,false);
+    compare_ranke_b(year_dict,year_set,name_set,head_name,table_names,odiv)
+    
+    odiv.scrollIntoView();
 }
