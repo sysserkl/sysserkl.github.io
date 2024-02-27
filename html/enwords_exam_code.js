@@ -194,6 +194,7 @@ function init_klexam(){
     enwords_mini_search_frame_form_b();
     keys_klexam();
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.4rem'));
+    words_count_enwords_b();
 }
 
 function check_recent_klexam(csat,csword,recent_type,recent_half_len,en_words_temp_global_len,important_list,today_list){
