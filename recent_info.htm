@@ -22,9 +22,10 @@ var catchphrase_no_global=false;
 args_klrecent();
 
 if (current_datafile_rct_global!==''){
-    document.write('\n<script src="'+current_datafile_rct_global+'"><\/script>\n');
+    klbase_addons_import_js_b([],[],[],[current_datafile_rct_global]);
 }
-
+</script>
+<script>
 var scheme_global={};
 scheme_generation_b();
 css_root_style_b('14','13',['base']);

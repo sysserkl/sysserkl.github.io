@@ -1186,7 +1186,7 @@ function local_storage_list_in_one_day_b(csid){
     return list_t;
 }
 
-function local_storage_today_b(csid,csmax=-1,csnewcontent='',cssplit='',squash=[],cstype='d'){
+function local_storage_today_b(csid,csmax=-1,csnewcontent='',cssplit='',squash=[],cstype='d',add_mode=false){
     if (csnewcontent==''){return;}
     if (squash.length==3){  //否则不执行压缩，仅截取 - 保留注释
         var list_t=local_storage_get_b(csid,-1,true);
@@ -1195,14 +1195,7 @@ function local_storage_today_b(csid,csmax=-1,csnewcontent='',cssplit='',squash=[
         }
     }
     var list_t=local_storage_get_b(csid,csmax,true);
-    var today=today_str_b(cstype);
-    
-    //日期+英文冒号+间隔标记
-    csnewcontent=csnewcontent+'';
-    if (csnewcontent.slice(-1)!=='\n'){
-        csnewcontent=csnewcontent+'\n';
-    }
-    
+
     var remove_xl_list=[];
     if (cssplit!=='' && list_t.length>=1+3){
         for (let blxl=1;blxl<list_t.length-2;blxl++){
@@ -1215,19 +1208,35 @@ function local_storage_today_b(csid,csmax=-1,csnewcontent='',cssplit='',squash=[
         }
     }
 
+    var today=today_str_b(cstype);
     var bljg='';
+    var old_value=0;
     for (let blxl=0;blxl<list_t.length;blxl++){
         //去除连续3行值相同的行中的倒数第2行 - 保留注释
         if (remove_xl_list.includes(blxl)){continue;}
             
         var item=list_t[blxl];
         //忽略日期相同的行 - 保留注释
-        if (item.match('^'+today+cssplit)!==null){continue;}
+        if (item.match('^'+today+cssplit)!==null){
+            if (add_mode){
+                old_value=parseFloat(item.replace(today+cssplit,'').trim());
+            }
+            continue;
+        }
         bljg=bljg+item+'\n';
     }
     
     bljg=bljg.trim();
-    localStorage.setItem(csid,today+cssplit+csnewcontent+bljg);
+
+    if (add_mode){
+        csnewcontent=parseFloat(parseFloat)+old_value;
+    }
+    csnewcontent=csnewcontent+'';
+    if (csnewcontent.slice(-1)!=='\n'){
+        csnewcontent=csnewcontent+'\n';
+    }
+    var result_t=today+cssplit+csnewcontent;
+    localStorage.setItem(csid,result_t+bljg);
 }
 
 function track_source_b(cskey,include_local=true,count_per_day=1){

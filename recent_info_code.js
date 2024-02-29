@@ -4,9 +4,9 @@ function args_klrecent(){
         if (cskeys[0].substring(0,12)=='catchphrase='){
             catchphrase_no_global=cskeys[0].substring(12,);   //如果使用 parseInt 则不能并用 || false - 保留注释
         } else if (cskeys[0]!==''){
-            current_datafile_rct_global='archived/'+cskeys[0]+'.js';
+            current_datafile_rct_global='archived/'+encodeURIComponent(cskeys[0])+'.js';
             is_default_rct_global=false;
-            document.title=cskeys[0];//+' - Info';            
+            document.title=cskeys[0];
         } else {
             if (recent_info_title_global[0].length>=3 && recent_info_title_global[0][1]!==''){
                 document.title=recent_info_title_global[0][1];
@@ -31,11 +31,10 @@ function init_klrecent(){
             if (recent_info_list.length>0){
                 let list_t=current_datafile_rct_global.split('/');
                 if (list_t.length>0){
-                    document.getElementById('span_title').innerText=list_t[1].split('.')[0];
+                    document.getElementById('span_title').innerText=decodeURIComponent(list_t[1].split('.')[0]);    //获取第2个元素并去掉扩展名 - 保留注释
                 }
             } else {
-                //current_datafile_rct_global='archived/'+cskeys[0]+'.js'; - 保留注释
-                document.getElementById('span_title').innerText=current_datafile_rct_global.substring(current_datafile_rct_global.indexOf('/')+1,current_datafile_rct_global.length-3);
+                document.getElementById('span_title').innerText=decodeURIComponent(current_datafile_rct_global.substring(current_datafile_rct_global.indexOf('/')+1,current_datafile_rct_global.length-3)); //从第一个 / 右侧开始读取，去掉 .js - 保留注释
             }
         } else {
             document.getElementById('span_title').innerText=recent_info_title_global[0][0];
