@@ -46,7 +46,6 @@ var search_sites_list_global=[
 ['https://www.bing.com/search?q=',' site: www.gov.cn',0,'','国务院','','Search',''],
 ['https://www.bing.com/search?q=',' site: sina.com.cn',0,'','新浪','','Search',''],
 ['https://www.douban.com/search?q=','',0,'','豆瓣','0','Search',''],
-//['https://www.dogedoge.com/results?q=','',0,'','Dogedoge','','Search',''],
 ['https://astiango.com/search.php?q=','',1,'','AstianGO','','Search',''],
 ['https://www.ecosia.org/search?q=','',0,'','Ecosia','','Search',''],
 ['https://www.so.com/s?q=','',0,'','360','','Search',''],
