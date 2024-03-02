@@ -456,8 +456,8 @@ function statistics_data_type_b(data_type){
             ['readlater_statistics','ReadLater 信息条数',0,': '],
             ['booklist_statistics','txt书籍数',0,'/'],
             ['offline_file_browser_statistics','移动硬盘文件数',0,' / ',1],    //末尾是列号 - 保留注释
-            ['offline_file_browser_statistics','移动硬盘文件大小(GB)',0,' / ',2],
-            ['offline_file_browser_statistics','移动硬盘文件时长(小时)',0,' / ',3],
+            ['offline_file_browser_statistics','移动硬盘文件大小(GB)',2,' / ',2],
+            ['offline_file_browser_statistics','移动硬盘文件时长(小时)',3,' / ',3],
             ['gpx_file_statistics','GPX文件数',0,'/',2],
             ['local_storage_used_length','local storage 使用量(KiB)',2,':'],
             ['klwiki_submit_failure','KLWiki submit 失败次数',0,':'],
