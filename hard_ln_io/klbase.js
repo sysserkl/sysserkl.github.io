@@ -1220,6 +1220,9 @@ function local_storage_today_b(csid,csmax=-1,csnewcontent='',cssplit='',squash=[
         if (item.match('^'+today+cssplit)!==null){
             if (add_mode){
                 old_value=parseFloat(item.replace(today+cssplit,'').trim());
+                if (isNaN(old_value)){
+                    old_value=0;
+                }
             }
             continue;
         }
@@ -1229,8 +1232,13 @@ function local_storage_today_b(csid,csmax=-1,csnewcontent='',cssplit='',squash=[
     bljg=bljg.trim();
 
     if (add_mode){
-        csnewcontent=parseFloat(parseFloat)+old_value;
+        csnewcontent=parseFloat(csnewcontent);
+        if (isNaN(csnewcontent)){
+            csnewcontent=0;
+        }        
+        csnewcontent=csnewcontent+old_value;
     }
+    
     csnewcontent=csnewcontent+'';
     if (csnewcontent.slice(-1)!=='\n'){
         csnewcontent=csnewcontent+'\n';

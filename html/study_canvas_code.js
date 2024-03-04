@@ -5,6 +5,28 @@ function basic_init_study_canvas(){
     otd.innerHTML='<canvas width="'+rect.width+'px" height="'+rect.height+'px"></canvas>';
 }
 
+function geometry_two_lines_intersection_study_canvas(){
+    basic_init_study_canvas();
+    
+    var ocanvas=document.querySelector('td#td_canvas canvas');
+    ocanvas.style.border='1px solid blue';
+    
+    var ctx = ocanvas.getContext('2d');
+    canvas_center_axis_b(ocanvas,ctx,50,0.6);
+
+    var blstyle=[3,3];
+
+    canvas_draw_line_b([418,89],[103,106],ctx,'red');
+    canvas_draw_line_b([7,2],[25,75],ctx,'red');
+    
+    var x,y;
+    [x,y]=two_lines_intersection_b(418,89,103,106,7,2,25,75);
+    
+    canvas_draw_line_b([103,106],[x,y],ctx,'blue',blstyle);
+    canvas_draw_line_b([25,75],[x,y],ctx,'blue',blstyle);
+    console.log(x,y);
+}
+
 function palette_study_canvas(){
     basic_init_study_canvas();
     
@@ -63,6 +85,7 @@ function li_show_study_canvas(){
     //study_dict_start
     'palette':['palette_study_canvas','*basic_init_study_canvas'],
     'arc_simple':['arc_simple_study_canvas','*basic_init_study_canvas'],
+    'geometry_two_lines_intersection':['geometry_two_lines_intersection_study_canvas','*basic_init_study_canvas','*two_lines_intersection_b','*canvas_draw_line_b','*canvas_center_axis_b'],
     //study_dict_end
     }    
     var bljg=[];
