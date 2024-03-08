@@ -112,6 +112,7 @@ function menu_enwords_book(){
     ['旧单词释义','import_enwords_book(\'old_def\',2500);',true],
     ['例句','import_enwords_book(\'sentence\',1000);',true],
     ['kaikki phrase','import_enwords_book(\'kaikki phrase\',1000);',true],
+    ['usr share dict','import_enwords_book(\'usr share dict\',3000);',true],
     ];    
     klmenu_new.push(menu_container_b(str_t,format_list,'随机导入：'));    
 
@@ -160,7 +161,7 @@ function menu_enwords_book(){
     '<span class="span_menu" onclick="'+str_t+'character2space_enwords_book(\'-\',\'连字符\');">替换连字符为空格</span> ',  
     ];
     
-    var menus=klmenu_b(klmenu1,'','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_new,'🔤','28rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'🧮','16rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','60rem');
+    var menus=klmenu_b(klmenu1,'','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_new,'🔤','32rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'🧮','16rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','60rem');
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(menus,'','0rem')+' ');
 }
 
@@ -287,6 +288,9 @@ function search_enwords_book(cskey=false){
         case '全部新单词':
             blarr=all_new_words_global;
             break;
+        case 'usr share dict':
+            blarr=usr_share_dict_global;
+            break;
     }
     if (blarr===false){return;}
     
@@ -406,6 +410,9 @@ function import_enwords_book(cstype,csmax=-1){
             otextarea.value=result_t.join('\n');            
             break;
         case 'sentence':
+            if (csmax==-1){
+                csmax=en_sentence_global.length;
+            }
             var list_t=array_numbers_b(Math.min(csmax,en_sentence_global.length),Math.floor((Math.random()*10)+1));
 
             var result_t=[];
@@ -418,13 +425,17 @@ function import_enwords_book(cstype,csmax=-1){
             otextarea.value=senior_high_school_en_global.join('\n');        
             break;
         case 'cet6':
-            otextarea.value=cet6_en_global.join('\n');     
+            otextarea.value=cet6_en_global.join('\n');     //全部导入 - 保留注释
             var progress_list=ltp_status_get_b('+生词 +CET6','pink','white',100);
             ospan.innerHTML=progress_list.join(' ');   
             break;   
         case 'kaikki phrase':
             kaikki_phrase_global.sort(randomsort_b);
-            otextarea.value=kaikki_phrase_global.slice(0,1000).join('\n').replace(/ /g,'_');
+            otextarea.value=(csmax>0?kaikki_phrase_global.slice(0,csmax):kaikki_phrase_global).join('\n').replace(/ /g,'_');
+            break;
+        case 'usr share dict':
+            usr_share_dict_global.sort(randomsort_b);
+            otextarea.value=(csmax>0?usr_share_dict_global.slice(0,csmax):usr_share_dict_global).join('\n').replace(/ /g,'_');
             break;
     }
 }

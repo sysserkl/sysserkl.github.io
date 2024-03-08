@@ -9,7 +9,7 @@ document.title=local_storage_get_b('enbook_title_name');
 var onetab_global=[];
 var enwords_selenium_scan_global=[];
 
-klbase_addons_import_js_b(['css','date','eng','wiki','books','enbook','enwc','en_de_str'],[],['words/enwords_data.js','words/all_new_words_data.js','words/enwords_sentence_data.js','words/senior_high_school_en_data.js','words/cet6_en_data.js','words/kaikki_phrase_data.js','words/enwords_count_sentence_data.js'],['enwords_book_code.js','enwords_book_ico/enwords_book512.png','../../../../data/words/onetab_data.js']);
+klbase_addons_import_js_b(['css','date','eng','wiki','books','enbook','enwc','en_de_str'],[],['words/enwords_data.js','words/all_new_words_data.js','words/enwords_sentence_data.js','words/senior_high_school_en_data.js','words/cet6_en_data.js','words/kaikki_phrase_data.js','words/enwords_count_sentence_data.js','words/usr_share_dict_data.js'],['enwords_book_code.js','enwords_book_ico/enwords_book512.png','../../../../data/words/onetab_data.js']);
 </script>
 <script>
 load_current_book_b();
@@ -54,7 +54,11 @@ mobile_style_enwc_b();
 <label><input type="checkbox" id="input_s_def" checked />释义</label>
 
 <input type="text" id="input_search_enbook" onkeyup="if (event.key=='Enter'){search_enwords_book();}"  />
-<select id="select_search_type_enbook"><option>kaikki phrase</option><option>全部新单词</option></select>
+<select id="select_search_type_enbook">
+<option>kaikki phrase</option>
+<option>全部新单词</option>
+<option>usr share dict</option>
+</select>
 <span class="aclick" onclick="search_enwords_book();">搜索</span>
 
 <span id="span_progress_enbook"></span>
