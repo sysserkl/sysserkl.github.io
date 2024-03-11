@@ -21,7 +21,7 @@ function content_media_money_b(csstr){
 		}
 		
 		if ('.jpg,.bmp,.png,.gif'.includes(bljg.substring(bljg.length-4).toLowerCase()) || '.avif,.jfif,.jpeg,.webp'.includes(bljg.substring(bljg.length-5).toLowerCase())){
-			bljg='<div style="max-width:20rem;max-height:30rem;overflow:hidden;"><img src=\"'+bljg+'\" onclick="resizeimg_wp(this.parentNode);" style="width:100%;" border="0"></div>';
+			bljg='<div style="max-width:20rem;max-height:30rem;overflow:hidden;"><img src=\"'+bljg+'\" onclick="resizeimg_wp(this.parentNode);" style="max-width:100%;" border="0"></div>';
 		} else {
 			bljg='<a style="text-decoration:underline;" href=\"'+bljg+'\" target=_blank>'+bljg.substring(bljg.lastIndexOf('/')+1)+'</a>';
 		}
