@@ -556,6 +556,9 @@ function import_elm_money_b(textarea_id='textarea_idb_content'){   //饿了么 -
     }
     
     var bladdress=local_storage_get_b('wp_import_address');
+    if (bladdress==''){
+        bladdress=provider;
+    }
     bladdress=prompt('输入地址（'+provider+'）：',bladdress);
     if (bladdress==null){return [false,false,''];}
     bladdress=bladdress.trim();
@@ -568,7 +571,7 @@ function import_elm_money_b(textarea_id='textarea_idb_content'){   //饿了么 -
         return [false,false,'未发现饿了么数据'];
     }
     
-    if (!confirm('是否导入以下记录：\n'+result_t.join('\n'))){return [false,false,''];}
+    if (!confirm('是否转换以下记录以备导入：\n'+result_t.join('\n'))){return [false,false,''];}
 
     otextarea.value=line_style_list.join('\n');
     return [result_t,line_style_list,''];
@@ -737,8 +740,11 @@ function remove_line_money_b(textarea_id){
     if (blstr==''){return;}
     
     var old_value=local_storage_get_b('wp_remove_line');
-    var new_value=prompt('输入待删除的行：',old_value) || '不支持7天无理由';
-    if (new_value==''){return;}
+    if (old_value==''){
+        old_value='不支持7天无理由';
+    }
+    var new_value=prompt('输入待删除的行：',old_value);
+    if (new_value==null || new_value==''){return;}
     localStorage.setItem('wp_remove_line',new_value);
     
     var blcount=0;
