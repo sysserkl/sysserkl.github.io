@@ -58,7 +58,7 @@ function search_site_klsearch(csno,csproxy=false,cskey='',openwindow=-1,showhtml
     var item=[].concat(search_sites_list_global[csno]);
     
     //item 形如：[ "http://xxx/klsearch.htm?k=", "&t=batch_en_bo+&close=1" ] - 保留注释
-    if (item[0].endsWith('/klsearch.htm?k=') && (item[1].includes('&close=1') || item[1].includes('&iframe'))){
+    if (item[0].endsWith('klsearch.htm?k=') && (item[1].includes('&close=1') || item[1].includes('&iframe'))){  //klsearch.htm 不能在其前部添加/ - 保留注释
         var iframe_or_select='';
         var oselect=document.getElementById('select_iframe_or_close_klsearch');
         if (oselect){
@@ -67,9 +67,7 @@ function search_site_klsearch(csno,csproxy=false,cskey='',openwindow=-1,showhtml
         if (iframe_or_select!==''){
             item[1]=item[1].replace(/&(close=1|iframe)\b/,'&'+iframe_or_select);
         }
-        console.log(iframe_or_select,item[1]);
     }
-    console.log(item);
     
     if (item[2]==4){ 
         cskey=gbkcode(cskey);
@@ -156,7 +154,7 @@ function batch_type_get_klsearch(cstype){
     return cstype;
 }
 
-function iframe_generate_klsearch(cstype,cskey=false){
+function iframe_generate_klsearch(cstype='',cskey=false){
     cstype=batch_type_get_klsearch(cstype);
     if (cskey===false){
         cskey=document.getElementById('input_searchtxt').value.trim();
@@ -389,6 +387,7 @@ function menu_klsearch(){
     ];
     
     var klmenu2=[
+    '<span class="span_menu" onclick="'+str_t+'iframe_generate_klsearch();">batch en iframe 模式</span>',
     '<span class="span_menu">batch search type: <select id="select_iframe_or_close_klsearch"><option></option><option>iframe</option><option>close=1</option></select></span>',    
     '<span class="span_menu" onclick="'+str_t+'same_name_klsearch();">相同名称的搜索</span>',
     ];
