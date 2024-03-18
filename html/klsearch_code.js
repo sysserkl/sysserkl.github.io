@@ -67,7 +67,9 @@ function search_site_klsearch(csno,csproxy=false,cskey='',openwindow=-1,showhtml
         if (iframe_or_select!==''){
             item[1]=item[1].replace(/&(close=1|iframe)\b/,'&'+iframe_or_select);
         }
+        console.log(iframe_or_select,item[1]);
     }
+    console.log(item);
     
     if (item[2]==4){ 
         cskey=gbkcode(cskey);

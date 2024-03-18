@@ -1608,20 +1608,20 @@ function kl_remote_host_address_b(new_address=null,do_ask=false,odom=false){
             [blhref,bltitle]=remote_host_link_generate_b(bladdress,cstype);
             oa.href=blhref;
             oa.innerHTML=bltitle;
-        }
-        
-        var oa=odom.parentNode.querySelector('a.a_temp_txt_append');
-        if (oa){
-            oa.href=oa.href.replace(/^.*\/\/.*?\//,bladdress+'/');
-        }
-        
-        var oform=oa.parentNode.parentNode;
-        if (oform && oform.tagName.toLowerCase()=='form'){
-            blaction=oform.getAttribute('action');
-            if (blaction){
-                oform.setAttribute('action',blaction.replace(/^.*\/\/.*?\//,bladdress+'/'));            
+            //-----------------------
+            var oform=oa.parentNode.parentNode;
+            if (oform && oform.tagName.toLowerCase()=='form'){
+                blaction=oform.getAttribute('action');
+                if (blaction){
+                    oform.setAttribute('action',blaction.replace(/^.*\/\/.*?\//,bladdress+'/'));            
+                }
             }
         }
+        
+        var oa2=odom.parentNode.querySelector('a.a_temp_txt_append');
+        if (oa2){
+            oa2.href=oa2.href.replace(/^.*\/\/.*?\//,bladdress+'/');
+        }        
     }
 }
 
@@ -1784,10 +1784,19 @@ function klsofts_cols_count_b(){
 }
 
 function klsofts_ingore_php_b(divlist,ignore_php=false,do_sort=true){
+    //divlist 元素形如：
+    //[
+    //"http://127.0.0.1/klwebphp/PythonTools/data/selenium_news/html/screen_matrix.htm",
+    //"Matrix",
+    //"http://127.0.0.1/klwebphp/PythonTools/data/selenium_news/html/screen_matrix_ico/screen_matrix256.png",
+    //"2",
+    //"PWA"
+    //];
+
     if (do_sort){
         divlist.sort(function(a,b){
-            if (a[3]=='-1'){return 0;}   //不排序 - 保留注释        
-            if (a[1]=='KL Apps'){return 0;}   //不排序 - 保留注释
+            if (a[3]=='-1'){return -1;}   //不排序 - 保留注释        
+            if (a[1]=='KL Apps'){return -1;}   //不排序 - 保留注释
             return a[1].toLowerCase()>b[1].toLowerCase() ? 1 : -1;
         });
         divlist.sort(function (a,b){return ['remote','local'].includes(a[1]) ? 1 : -1;});
@@ -1949,7 +1958,7 @@ function klsofts_config_b(){
 
 function klsofts_is_local_p(){
     var ops = document.querySelectorAll('div.div_klsofts_one p'); 
-    var list_t=Array.from(ops).filter(one_p => one_p.innerText=='remote'); 
+    var list_t=Array.from(ops).filter(one_p => one_p.innerText=='remote');  //对数组中的每个元素 one_p 进行检查，看其 innerText 属性是否等于字符串 'remote'，符合的元素会被包含到新生成的数组 list_t 中 - 保留注释
     return (list_t.length==1?false:true);
 }
 

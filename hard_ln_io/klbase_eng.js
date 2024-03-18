@@ -192,7 +192,18 @@ function words_queue_reinit_b(word_name_list,removed_enwords){
     }
 }
 
-function enwords_init_b(simple=false){
+function enwords_init_b(simple=false,load_enwords=true){
+    function sub_enwords_init_b_load(){
+        enwords_init_b(simple,false);
+    }
+    
+    if (typeof enwords == 'undefined' && load_enwords){
+        var file_list=klbase_addons_import_js_b([],[],['words/enwords_data.js'],[],false,false);    
+        file_dom_create_b(file_list,true,'js');
+        load_var_b('enwords',-1,2000,sub_enwords_init_b_load);
+        return;
+    }
+    //-----------------------
     if (enwords.length==0){
         console.log('enwords 长度为0');
         return;

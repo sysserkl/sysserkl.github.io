@@ -891,7 +891,7 @@ function init_klwebsites(){
     recent_websites_b();
     args_klwebsites();
 
-    enwords_init_b(true);
+    enwords_init_b(true,true);
     enwords_mini_search_frame_style_b();
     enwords_mini_search_frame_form_b();
 }
