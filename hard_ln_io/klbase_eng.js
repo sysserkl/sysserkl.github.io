@@ -614,26 +614,6 @@ function sup_kleng_style_b(){
     return '<sup style="font-size:0.8rem;color:#cc0000;" class="kleng">';
 }
 
-function en_lines_days_b(csarray,cstheday=''){
-    if (cstheday==''){
-        var today_t=new Date();
-    } else {
-        var today_t=validdate_b(cstheday);
-    }
-    
-    var month_days=month_day_b(today_t.getMonth()+1,today_t.getFullYear());
-    var blday=today_t.getDate();
-
-    var cscount=csarray.length/month_days;
-    var blstart=Math.floor((blday-1)*cscount);
-    var blend=Math.floor(blday*cscount);
-	var bljg=[];   
-	for (let blxl=blstart;blxl<blend;blxl++){
-        bljg.push(csarray[blxl]);
-	}
-    return enwords_b(bljg.join('\n'),'array');
-}
-
 function en_sentence_p_style_b(fontsize='0.95'){
     return '<p class="p_enwords_sentence" style="line-height:130%;font-size:'+fontsize+'rem;margin-top:0.3rem;padding:0.2rem 0.5rem;">';
 }

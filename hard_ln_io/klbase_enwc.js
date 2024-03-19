@@ -111,19 +111,46 @@ function pages_day_enwc_b(jsname,cstype,csyear,csmonth,csday,use_asc=true){
 function article_words_list_enwc_b(csmonth=0,csday=0){
     en_word_temp_get_b();
     
-    var blyear;
-    var bldate;
-    
+    var blyear, bldate;
     [blyear,csmonth,csday,bldate]=get_month_day_enwc_b(csday,csmonth);
     if (csmonth==0 || csday==0){return;}
-        
-	var blhtml = document.getElementById('divhtml');
-    words_searched_arr_global=en_lines_days_b(enwords_article,bldate);
+
+    if (typeof enwords_article_global== 'undefined'){
+        enwords_article_global=[];
+        for (let item of en_sentence_global){
+            if (item[0].includes('&gt;&lt;/eword&gt;')){
+                enwords_article_global.push(item[0]);
+            }    
+        }
+    }
+    
+    words_searched_arr_global=en_lines_days_enwc_b(enwords_article_global,bldate);
 	var bljg=enwords_array_to_html_b(words_searched_arr_global);
+    var pages='<p>'+pages_day_enwc_b('article_words_list_enwc_b','',blyear,csmonth,csday)+'</p>';
+
+	var odiv = document.getElementById('divhtml');
+    odiv.innerHTML=bljg+pages+enwords_batch_div_b(words_searched_arr_global,'')+enwords_js_wiki_textarea_b(words_searched_arr_global);
+}
+
+function en_lines_days_enwc_b(csarray,cstheday=''){
+    if (cstheday==''){
+        var today_t=new Date();
+    } else {
+        var today_t=validdate_b(cstheday);
+    }
     
-    bljg=bljg+'<p>'+pages_day_enwc_b('article_words_list_enwc_b','',blyear,csmonth,csday)+'</p>';
+    var year_days=isLeapYear_b(today_t.getFullYear(),0,true);
+    var blday=day_of_year_b(today_t);
+
+    var cscount=csarray.length/year_days;
+    var blstart=Math.floor((blday-1)*cscount);
+    var blend=Math.floor(blday*cscount);
     
-    blhtml.innerHTML=bljg+enwords_batch_div_b(words_searched_arr_global,'')+enwords_js_wiki_textarea_b(words_searched_arr_global);
+	var bljg=[];
+	for (let blxl=blstart;blxl<blend;blxl++){
+        bljg.push(csarray[blxl]);
+	}
+    return enwords_b(bljg.join('\n'),'array');
 }
 
 function get_day_sentences_enwc_b(csday='',csmonth='',use_asc=true){
@@ -579,8 +606,6 @@ function menu_base_enwc_b(){
     '<span class="span_menu" onclick="'+str_t+'get_day_words_enwc_b(0,\'\',\'old02_OR\');">今日旧单词0和2</span>',
     '<span class="span_menu" onclick="'+str_t+'rnd_cn_search_enwc_b();">随机中文词汇搜索</span>',
     '<a href="'+sele_path+'/html/enwords_today.htm" onclick="'+str_t+'" target=_blank>Today Words</a>',
-    '<a href="'+sele_path+'/html/enwords_article.htm" onclick="'+str_t+'" target=_blank>文章和单词</a>',
-    
     ];
     
     var menu2=['<span class="span_menu" onclick="'+str_t+'en_words_temp_textarea_b(\'divhtml\',\'words_count_enwords_b\'); words_count_enwords_b();">临时词库</span>',    

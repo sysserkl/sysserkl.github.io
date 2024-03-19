@@ -1795,11 +1795,11 @@ function klsofts_ingore_php_b(divlist,ignore_php=false,do_sort=true){
 
     if (do_sort){
         divlist.sort(function(a,b){
-            if (a[3]=='-1'){return -1;}   //不排序 - 保留注释        
-            if (a[1]=='KL Apps'){return -1;}   //不排序 - 保留注释
+            if (a[3]=='-1'){return -1;}   //0不排序 - 保留注释        
+            if (a[1]=='KL Apps'){return -1;}   //0不排序 - 保留注释
             return a[1].toLowerCase()>b[1].toLowerCase() ? 1 : -1;
         });
-        divlist.sort(function (a,b){return ['remote','local'].includes(a[1]) ? 1 : -1;});
+        //divlist.sort(function (a,b){return ['remote','local'].includes(a[1]) ? 1 : -1;});
     }
     if (!ignore_php){return divlist;}
     

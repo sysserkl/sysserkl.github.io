@@ -21,6 +21,7 @@ function menu_ensentence(){
     var group_list=[
     ['asc','get_day_sentences_enwc_b();',true],
     ['段落','get_day_sentences_enwc_b(\'\',\'\',false);',true],
+    ['例句中的旧单词','article_words_list_enwc_b();',true],
     ];    
     klmenu1.push(menu_container_b(str_t,group_list,'指定日期例句：'));
     
@@ -55,7 +56,7 @@ function menu_ensentence(){
     '<a href="enwords_book.htm" onclick="'+str_t+'" target=_blank>生词统计</a>',
     ];
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🗨','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','15rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🗨','22rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','15rem','1rem','1rem','60rem'),'','0rem')+' ');
     klmenu_check_b('span_reg_ensentence',true);
 }
 
