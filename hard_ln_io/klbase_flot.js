@@ -191,15 +191,16 @@ function flot_lines_b(cslist,csid,label_position='nw',cstime=false,cstimeformat=
             //console.log(Array.isArray(acol),acol);
         //}
     //}
+    
     if (cslist.length==0){return;}
     if (cslist[0].length<2){return;}    //内容为空，或者只有名称 - 保留注释
-        
+
     if (label_position==''){
         label_position='nw';
     }
     if (cstime){
         for (let blxl=0;blxl<cslist.length;blxl++){
-            if (cslist[blxl].length==2){    //如果只有两个元素，第一个是名称，第二个是年份和数值，则与其他含有更多记录的线条同时出现时，日期格式失效 - 保留注释
+            if (Array.isArray(cslist[blxl]) && cslist[blxl].length==2){    //如果只有两个元素，第一个是名称，第二个是年份和数值，则与其他含有更多记录的线条同时出现时，日期格式失效 - 保留注释
                 //只能是数字，不能加年份和字符 - 保留注释
                 cslist[blxl][1][0]=date_2_ymd_b(cslist[blxl][1][0],cstype);
                 cstime=false;
@@ -588,4 +589,8 @@ function statistics_draw_b(data_type,idname='divhtml',show_table=false,date_min=
     }
     console.log('statistics_draw_b() 费时：'+(performance.now() - t0) + ' milliseconds');    
     return idlist;
+}
+
+function flot_legend_select_b(id_name){
+    return '<select id="'+id_name+'"><option>nw</option><option>ne</option><option>sw</option><option>se</option></select> '        
 }

@@ -297,7 +297,12 @@ function getlines_enwc_b(csno,cslines){
     en_sentence_show_check_b();
 }
 
-function show_sentence_enwc_b(maxlines=0,showcount=true,is_random=false,show_button=true){
+function show_sentence_enwc_b(maxlines=0,showcount=true,is_random=false,show_button=true,load_js=true){
+    function sub_show_sentence_enwc_b_load(){
+        local_storage_today_b('enwords_sentence_rows',40,en_sentence_global.length,'/');
+        show_sentence_enwc_b(maxlines,showcount,is_random,show_button,false);
+    }
+    
     function sub_show_sentence_enwc_b_count(){
         var odiv=document.querySelector('div.div_word_sentence_rank');
         if (!odiv){return;}
@@ -351,6 +356,16 @@ function show_sentence_enwc_b(maxlines=0,showcount=true,is_random=false,show_but
         }
     }
     //-----------------------
+    if (typeof en_sentence_global == 'undefined'){
+        console.log('en_sentence_global 未定义');
+        if (load_js){    
+            var file_list=klbase_addons_import_js_b([],[],['words/enwords_sentence_data.js'],[],false,false);    
+            file_dom_create_b(file_list,true,'js');
+            load_var_b('en_sentence_global',-1,2000,sub_show_sentence_enwc_b_load);
+        }
+        return;
+    }
+    
     if (en_sentence_global.length==0){
         console.log('en_sentence_global 长度为 0');
         return;

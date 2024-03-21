@@ -1891,6 +1891,9 @@ function p_enwords_sentence_style_b(do_write=true){
 }
 
 function en_sentence_to_default_order_b(){
+    if (typeof en_sentence_global == 'undefined'){
+        return 'en_sentence_global 未定义';
+    }
     var t0 = performance.now();
     en_sentence_global.sort(function (a,b){return a[3]>b[3] ? 1 : -1;}); //按 编号 排序 - 保留注释
     en_sentence_global.sort(function (a,b){return a[2]>b[2] ? 1 : -1;}); //按 KLWiki title名 或 书名 排序 - 保留注释
@@ -2045,7 +2048,10 @@ function sentence_split_b(csstr,csno=-1){   //sentence split - 保留注释
 }
 
 function sentence_search_b(csword='',csreg=false,csmax=500,show_button=true,csmobile_font=false){
-	if (csword==''){return;}
+    if (typeof en_sentence_global == 'undefined'){
+        return 'en_sentence_global 未定义';
+    }
+    if (csword==''){return '';}
 
 	var blcount=0;
 	var blwordlist=csword.split(' ');

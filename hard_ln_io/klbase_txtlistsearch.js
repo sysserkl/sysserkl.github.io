@@ -1536,7 +1536,7 @@ function bookmarks_get_kltxt_b(current_book_today_bookmark_only_one=false,return
         bljg=bljg+'<span class="aclick" onclick="bookmarks_get_kltxt_b(false,false,\''+cslsname+'\');">最新书签</span> ';
         bljg=bljg+'<span class="aclick" onclick="bookmarks_separate_kltxt_b(\''+textarea_name+'\');">分离当前书签</span> ';       
         bljg=bljg+'<span class="aclick" onclick="bookmarks_textarea_flot_kltxt_b(\''+textarea_name+'\');">当前书签阅读图形</span> ';       
-        bljg=bljg+'<select id="select_flot_legend_position_kltxt"><option>nw</option><option>ne</option><option>sw</option><option>se</option></select> '        
+        bljg=bljg+flot_legend_select_b('select_flot_legend_position_kltxt');
         bljg=bljg+textarea_buttons_b(textarea_name,'全选,清空,复制,发送到临时记事本,发送地址',bltype)+' ';
     } else {
         bljg=bljg+'<span class="aclick" onclick="bookmarks_get_kltxt_b(false,true,\''+cslsname+'\');">全部书签</span> ';
