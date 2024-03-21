@@ -192,15 +192,28 @@ function words_queue_reinit_b(word_name_list,removed_enwords){
     }
 }
 
+function load_enword_file_b(varname,filename,csfn=false,do_echo=true){
+    if (eval('typeof '+varname) == 'undefined'){
+        if (do_echo){
+            console.log(varname+' 未定义');
+        }
+        var file_list=klbase_addons_import_js_b([],[],['words/'+filename+'_data.js'],[],false,false);    
+        file_dom_create_b(file_list,true,'js');
+        load_var_b(varname,-1,2000,csfn);
+    } else {
+        if (do_echo){
+            console.log(varname+' 已存在');        
+        }
+    }
+}
+
 function enwords_init_b(simple=false,load_enwords=true){
     function sub_enwords_init_b_load(){
         enwords_init_b(simple,false);
     }
     
     if (typeof enwords == 'undefined' && load_enwords){
-        var file_list=klbase_addons_import_js_b([],[],['words/enwords_data.js'],[],false,false);    
-        file_dom_create_b(file_list,true,'js');
-        load_var_b('enwords',-1,2000,sub_enwords_init_b_load);
+        load_enword_file_b('enwords','enwords',sub_enwords_init_b_load);
         return;
     }
     //-----------------------
@@ -732,6 +745,8 @@ function en_sentence_result_b(wordname,csmax=-1,fontsize='',attachment_path='',w
         console.log('扫描例句条数：',split_no_set.size,'；例句总条数：',en_sentence_global.length,'；占比：',(split_no_set.size*100/en_sentence_global.length).toFixed(2)+'%');    
     }
     //-----------------------
+    if (typeof en_sentence_global == 'undefined'){return ['',0,0];}
+    
     if (en_sentence_global.length==0){
         return ['',0,0];
     } else if (Array.isArray(wordname)){

@@ -3036,7 +3036,9 @@ function load_fn_b(fn_name,csmax,cswait,run_fn_onsuccess){
         blxl=blxl+1;
         if (eval('typeof '+fn_name) == 'function'){
             console.log('发现 '+fn_name+' ，扫描次数：'+blxl);       
-            run_fn_onsuccess();
+            if (typeof run_fn_onsuccess == 'function'){
+                run_fn_onsuccess();
+            }
         } else {
             if (blxl>=csmax){
                 console.log('未发现 '+fn_name+' ，扫描次数：'+blxl);
@@ -3059,11 +3061,15 @@ function load_var_b(var_name,csmax,cswait,run_fn){
         
         if (eval('typeof '+var_name) !== 'undefined'){
             console.log('发现 '+var_name+' ，扫描次数：'+blxl);       
-            run_fn(true);     
+            if (typeof run_fn == 'function'){            
+                run_fn(true);     
+            }
         } else {
             if (blxl>=csmax){
                 console.log('未发现 '+var_name+' ，扫描次数：'+blxl);
-                run_fn(false);
+                if (typeof run_fn == 'function'){            
+                    run_fn(false);
+                }
                 return;
             }
             setTimeout(sub_load_var_b_wait,cswait);
@@ -3333,7 +3339,6 @@ function list_category_count_b(cslist,return_dict=false){
     return object2array_b(key_dict,true,2);
 }
 
-
 function merge_js_data_files_in_one_b(varname,jsfile_list,run_fn,merge_current=false){
     function sub_merge_js_data_files_in_one_b(){
         console.log(eval(varname).length);    //此行保留 - 保留注释
@@ -3344,7 +3349,9 @@ function merge_js_data_files_in_one_b(varname,jsfile_list,run_fn,merge_current=f
         blxl=blxl+1;
         if (blxl>=bllen){
             eval(varname+'=merge_t');
-            run_fn();
+            if (typeof run_fn == 'function'){            
+                run_fn();
+            }
             return;
         }
         eval(varname+'=undefined');

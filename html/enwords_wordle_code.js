@@ -193,8 +193,10 @@ function init_wordle(){
 }
 
 function menu_wordle(){
+    var str_t=klmenu_hide_b('');
     var blparent=klmenu_hide_b('',true);
     var klmenu1=[
+    '<span class="span_menu" onclick="'+str_t+'load_enword_file_b(\'en_sentence_global\',\'enwords_sentence\');">载入例句</span>',
     '<span class="span_menu">单词范围：<select id="select_range_wordle" style="height:2rem;" onchange="'+blparent+'"><option>全部</option><option>最近记忆</option><option>四六级</option><option>高中</option></select></span>',
     ];
 

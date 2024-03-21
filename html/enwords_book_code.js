@@ -67,9 +67,7 @@ function init_enwords_book(){
         enwords_mini_search_frame_style_b();
         menu_enwords_book();
         enwords_mini_search_frame_form_b();
-        
-        local_storage_today_b('all_new_words_statistics',40,all_new_words_global.length,'/');
-    }    
+    }
 }
 
 function menu_enwords_book(){
@@ -156,6 +154,9 @@ function menu_enwords_book(){
     ];
     
     var klmenu_config=[
+    '<span class="span_menu" onclick="'+str_t+'load_enword_file_b(\'en_sentence_global\',\'enwords_sentence\');">载入例句</span>',    
+    '<span class="span_menu" onclick="'+str_t+'load_all_new_enwords_book();">载入全部新单词</span>',    
+    '<span class="span_menu" onclick="'+str_t+'load_enword_file_b(\'kaikki_phrase_global\',\'kaikki_phrase\',false);">载入kaikki</span>',    
     '<span class="span_menu" onclick="'+str_t+'space2underline_enwords_book();">替换单词间空格为下划线</span> ',  
     '<span class="span_menu" onclick="'+str_t+'character2space_enwords_book(\'_\',\'下划线\');">替换下划线为空格</span> ',  
     '<span class="span_menu" onclick="'+str_t+'character2space_enwords_book(\'-\',\'连字符\');">替换连字符为空格</span> ',  
@@ -163,6 +164,27 @@ function menu_enwords_book(){
     
     var menus=klmenu_b(klmenu1,'','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_new,'🔤','32rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'🧮','16rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','60rem');
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(menus,'','0rem')+' ');
+}
+
+function load_all_new_enwords_book(){
+    function sub_load_all_new_enwords_book_set(){
+        local_storage_today_b('all_new_words_statistics',40,all_new_words_global.length,'/');
+    }
+    load_enword_file_b('all_new_words_global','all_new_words',sub_load_all_new_enwords_book_set);
+}
+
+function check_all_new_enwords_book(){
+    if (typeof all_new_words_global == 'undefined'){
+        return false;
+    }
+    return true;
+}
+
+function check_kaikki_enwords_book(){
+    if (typeof kaikki_phrase_global == 'undefined'){
+        return false;
+    }
+    return true;
 }
 
 function phrase_in_current_enwords_book(){
@@ -283,10 +305,14 @@ function search_enwords_book(cskey=false){
     var blarr=false;
     switch (bltype){
         case 'kaikki phrase':
-            blarr=kaikki_phrase_global;
+            if (check_kaikki_enwords_book()){
+                blarr=kaikki_phrase_global;
+            }
             break;
         case '全部新单词':
-            blarr=all_new_words_global;
+            if (check_all_new_enwords_book()){
+                blarr=all_new_words_global;
+            }
             break;
         case 'usr share dict':
             blarr=usr_share_dict_global;
@@ -367,17 +393,19 @@ function import_enwords_book(cstype,csmax=-1){
     var otextarea=document.getElementById('textarea_new_words1');
     switch (cstype){
         case 'new':
-            if (csmax>0){
-                var words_t=[].concat(all_new_words_global);
-                var bltotal_t=Math.floor((Math.random()*10)+1);
-                for (let blxl=0;blxl<bltotal_t;blxl++){
-                    words_t.sort(randomsort_b);
+            if (check_all_new_enwords_book()){
+                if (csmax>0){
+                    var words_t=[].concat(all_new_words_global);
+                    var bltotal_t=Math.floor((Math.random()*10)+1);
+                    for (let blxl=0;blxl<bltotal_t;blxl++){
+                        words_t.sort(randomsort_b);
+                    }
+                    otextarea.value=words_t.slice(0,csmax).join(' ');
+                } else {
+                    otextarea.value=all_new_words_global.join(' ');            
                 }
-                otextarea.value=words_t.slice(0,csmax).join(' ');
-            } else {
-                otextarea.value=all_new_words_global.join(' ');            
             }
-            break;    
+            break;
         case 'old':
         case 'old_def':
             var result_t=[];
@@ -410,16 +438,18 @@ function import_enwords_book(cstype,csmax=-1){
             otextarea.value=result_t.join('\n');            
             break;
         case 'sentence':
-            if (csmax==-1){
-                csmax=en_sentence_global.length;
-            }
-            var list_t=array_numbers_b(Math.min(csmax,en_sentence_global.length),Math.floor((Math.random()*10)+1));
+            if (typeof en_sentence_global !== 'undefined'){
+                if (csmax==-1){
+                    csmax=en_sentence_global.length;
+                }
+                var list_t=array_numbers_b(Math.min(csmax,en_sentence_global.length),Math.floor((Math.random()*10)+1));
 
-            var result_t=[];
-            for (let item of list_t){
-                result_t.push(en_sentence_global[item]);
+                var result_t=[];
+                for (let item of list_t){
+                    result_t.push(en_sentence_global[item]);
+                }
+                otextarea.value=result_t.join('\n\n');
             }
-            otextarea.value=result_t.join('\n\n');
             break;
         case 'senior_high_school':
             otextarea.value=senior_high_school_en_global.join('\n');        
@@ -430,8 +460,10 @@ function import_enwords_book(cstype,csmax=-1){
             ospan.innerHTML=progress_list.join(' ');   
             break;   
         case 'kaikki phrase':
-            kaikki_phrase_global.sort(randomsort_b);
-            otextarea.value=(csmax>0?kaikki_phrase_global.slice(0,csmax):kaikki_phrase_global).join('\n').replace(/ /g,'_');
+            if (check_kaikki_enwords_book()){
+                kaikki_phrase_global.sort(randomsort_b);
+                otextarea.value=(csmax>0?kaikki_phrase_global.slice(0,csmax):kaikki_phrase_global).join('\n').replace(/ /g,'_');
+            }
             break;
         case 'usr share dict':
             usr_share_dict_global.sort(randomsort_b);
@@ -441,6 +473,7 @@ function import_enwords_book(cstype,csmax=-1){
 }
 
 function max_length_new_enwords_book(){
+    if (check_all_new_enwords_book()===false){return;}
     var list_t=[].concat(all_new_words_global);
     list_t.sort(function (a,b){return a.length<b.length ? 1 : -1;});
     list_t=list_t.slice(0,100);
@@ -567,6 +600,7 @@ function current_statistics_data_enwords_book(csid,iscurrent){
 }
 
 function day_new_enwords_book(do_filter=false){
+    if (check_all_new_enwords_book()===false){return;}
     //var days=day_of_year_b();   //当年第几天，此行保留 - 保留注释
     var days=date_2_ymd_b(false,'d');
     
@@ -586,6 +620,8 @@ function day_new_enwords_book(do_filter=false){
 }
 
 function in_all_new_enwords_book(cstype='exclude'){
+    if (check_all_new_enwords_book()===false){return;}
+    
     var csstr=document.getElementById('textarea_new_words1').value.trim();
     
     var bljgarr2=str_2_array_enbook_b(csstr);

@@ -178,6 +178,7 @@ function unblur_klexam(ospan){
 function menu_klexam(){
     var str_t=klmenu_hide_b('');
     var klmenu1=[
+    '<span class="span_menu" onclick="'+str_t+'load_enword_file_b(\'en_sentence_global\',\'enwords_sentence\');">载入例句</span>',
     '<span id="span_show_en_sentence_b" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 显示例句</span>',    
     ];
 

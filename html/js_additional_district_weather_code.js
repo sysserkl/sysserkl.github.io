@@ -8,16 +8,9 @@ function menu_more_district_weather(){
         col_name_list[blxl]='<option value="'+blxl+'">'+col_name_list[blxl]+'</option>';
     }
     
-    if (title_name_jscm_global.startsWith('tianqihoubao ')){
-        var bllink='http://www.tianqihoubao.com/lishi/'+title_name_jscm_global.split(' ').slice(-1)[0]+'/month/'+today_str_b('d','').slice(0,6)+'.html';    
-        var site_name='天气后报';
-    } else {
-        var bllink='https://m.tianqi.com/lishi/'+title_name_jscm_global.split(' ').slice(-1)[0]+'/'+today_str_b('d','').substring(0,6)+'.html';
-        var site_name='天气网'
-    }
     var blparent=menu_parent_node_b(str_t);
     var klmenu1=[
-    '<a href="'+bllink+'" onclick="'+str_t+'" target=_blank>'+site_name+'</a>',        
+    '<a id="a_link_jsad_dweather" href="" onclick="'+str_t+'" target=_blank></a>',        
     '<span class="span_menu"><select id="select_sort_type_jsad_dweather" style="height:2rem;">'+col_name_list.join('')+'</select> <span class="aclick" onclick="'+blparent+'sort_district_weather();">↑</span><span class="aclick" onclick="'+blparent+'sort_district_weather(true);">↓</span></span>',
     '<span class="span_menu">图形日期格式：<select id="select_flot_date_type_jsad_dweather" style="height:2rem;"><option>y</option><option>m</option><option selected>d</option></select></span>',
     '<span class="span_menu">温度选择：<select id="select_temperature_range_jsad_dweather" style="height:2rem;"><option>全部</option><option>最高温度</option><option>最低温度</option></select></span>',
@@ -55,6 +48,26 @@ function menu_more_district_weather(){
         klmenu2.push('<span class="span_menu" onclick="'+str_t+'search_common(\''+specialstr_j(item)+'\');">'+item+'</span>');
     }
     return klmenu_b(klmenu1,'🌀','30rem','1rem','1rem','30rem')+klmenu_b(klmenu2,'🔍','16rem','1rem','1rem','30rem');
+}
+
+function fn_more_district_weather(){
+    function sub_fn_more_district_weather_load_link(){
+        var blcity=title_name_jscm_global.split(' ').slice(-1)[0];
+        var prev_month=prev_month_b().replace('-','');
+        if (title_name_jscm_global.startsWith('tianqihoubao ')){
+            var bllink='http://www.tianqihoubao.com/lishi/'+blcity+'/month/'+prev_month+'.html';    
+            var site_name='天气后报';
+        } else {
+            var bllink='https://m.tianqi.com/lishi/'+blcity+'/'+prev_month+'.html';
+            var site_name='天气网'
+        }
+        var oa=document.getElementById('a_link_jsad_dweather');
+        if (oa){
+            oa.href=bllink;
+            oa.innerText=site_name;
+        }
+    }
+    load_fn_b('prev_month_b',-1,1000,sub_fn_more_district_weather_load_link);
 }
 
 function statistics_temperature_district_weather(){
@@ -141,6 +154,18 @@ function export_temperature_district_weather(){
 }
 
 function month_average_temperature_district_weather(only_dot=false){
+    function sub_month_average_temperature_district_weather_py_dict(csdict){
+        var result_t=[];
+        for (let year_key in csdict){
+            var arow=['"year":"'+year_key.substring(2,)+'"'];
+            for (let month_key in csdict[year_key]){
+                arow.push('"'+month_key.substring(2,)+'":'+csdict[year_key][month_key]);
+            }
+            result_t.push('{'+arow.join(',')+'},');
+        }
+        return 'import KLfuns_plot\nimport pandas as pd\nbldata=['+result_t.join('\n')+']\ndf = pd.DataFrame(bldata)\nKLfuns_plot.radar_chart(df,csyticks_count=7,step10=False,do_fill=False)';
+    }
+    
     var ym_dict={};
     for (let item of js_data_current_common_search_global){
         var blkey='ym_'+item[0][0].substring(0,7);
@@ -151,11 +176,26 @@ function month_average_temperature_district_weather(only_dot=false){
         ym_dict[blkey][1]=ym_dict[blkey][1]+item[0][2];
         ym_dict[blkey][2]=ym_dict[blkey][2]+1;
     }
+    //ym_dict 形如："ym_2024-01": [ 386, 104, 30 ] - 保留注释
+    
     ym_dict=object2array_b(ym_dict,true,3);
+    var py_dict_h={};
+    var py_dict_l={};
     var tr_list=['<tr><th>年月</th><th align=right>最高温度平均值℃</th><th align=right>最低温度平均值℃</th><th align=right>统计天数</th></tr>'];
     for (let blxl=0;blxl<ym_dict.length;blxl++){
         ym_dict[blxl][1]=ym_dict[blxl][1]/ym_dict[blxl][3];
         ym_dict[blxl][2]=ym_dict[blxl][2]/ym_dict[blxl][3];
+
+        var blyear=ym_dict[blxl][0].slice(0,4)+'年';
+        if (py_dict_h['y_'+blyear]==undefined){
+            py_dict_h['y_'+blyear]={};
+        }
+        if (py_dict_l['y_'+blyear]==undefined){
+            py_dict_l['y_'+blyear]={};
+        }
+        var blkey='m_'+ym_dict[blxl][0].slice(-2,)+'月';
+        py_dict_h['y_'+blyear][blkey]=ym_dict[blxl][1];
+        py_dict_l['y_'+blyear][blkey]=ym_dict[blxl][2];
         
         tr_list.push('<tr><td>'+ym_dict[blxl][0]+'</td><td align=right>'+ym_dict[blxl][1].toFixed(2)+'</td><td align=right>'+ym_dict[blxl][2].toFixed(2)+'</td><td align=right>'+ym_dict[blxl][3]+'</td></tr>');
 
@@ -164,7 +204,10 @@ function month_average_temperature_district_weather(only_dot=false){
         ym_dict[blxl].push('');
         ym_dict[blxl]=[ym_dict[blxl],-1];
     }
-    document.getElementById('divhtml').innerHTML='<table class="table_common">'+tr_list.join('\n')+'</table>';
+    
+    var blpy='<h4>最高温度平均值</h4><textarea>'+sub_month_average_temperature_district_weather_py_dict(py_dict_h)+'</textarea>';
+    blpy=blpy+'<h4>最低温度平均值</h4><textarea>'+sub_month_average_temperature_district_weather_py_dict(py_dict_l)+'</textarea>';
+    document.getElementById('divhtml').innerHTML='<table class="table_common">'+tr_list.join('\n')+'</table>'+blpy;
     flot_line_temperature_district_weather(only_dot,ym_dict,'月均温');
 }
 
@@ -250,7 +293,9 @@ function flot_line_temperature_district_weather(only_dot=false,csarr=false,legen
 }
 
 function integrity_district_weather(){
-    var not_found_date=check_district_weather(false);
+    var not_found_date,value_lost_date;
+    [not_found_date,value_lost_date]=check_district_weather(false);
+    
     var date_set=new Set();
     var result_t=[];
     for (let one_date of not_found_date){
@@ -273,6 +318,37 @@ function integrity_district_weather(){
         }
     }
     
+    if (district_weather_global.length>1){
+        for (let one_date of value_lost_date){
+            for (let blxl=0;blxl<district_weather_global.length;blxl++){
+                if (district_weather_global[blxl][0]!==one_date){continue;}
+
+                if (blxl==0){
+                    for (let blno of [1,2]){
+                        if (isNaN(district_weather_global[blxl][blno])){
+                            district_weather_global[blxl][blno]=district_weather_global[blxl+1][blno];
+                            date_set.add(one_date);
+                        }
+                    }
+                } else if (blxl<district_weather_global.length-1){
+                    for (let blno of [1,2]){
+                        if (isNaN(district_weather_global[blxl][blno])){
+                            district_weather_global[blxl][blno]=(district_weather_global[blxl-1][blno]+district_weather_global[blxl+1][blno])/2;
+                            date_set.add(one_date);                            
+                        }
+                    }
+                } else {
+                    for (let blno of [1,2]){
+                        if (isNaN(district_weather_global[blxl][blno])){
+                            district_weather_global[blxl][blno]=district_weather_global[blxl-1][blno];
+                            date_set.add(one_date);                            
+                        }
+                    }            
+                }
+            }
+        }
+    }
+    
     if (date_set.size==0){return;}
     search_common(Array.from(date_set).join(' '));
 }
@@ -290,9 +366,10 @@ function sort_district_weather(csdesc=false){
 function check_district_weather(show_html=true){
     js_data_current_common_search_global=[];
     
-    if (district_weather_global.length==0){return;}
+    if (district_weather_global.length==0){return [[],[]];}
     district_weather_global.sort();
 
+    var value_lost_date=[];
     var date_set=new Set();
     for (let blxl=0;blxl<district_weather_global.length;blxl++){
         var arow=district_weather_global[blxl];
@@ -304,13 +381,18 @@ function check_district_weather(show_html=true){
             error=error+'日期重复：';        
         }
         date_set.add(bldate);
-
+        
         bldate=validdate_b(bldate);
 
         if (bldate==false){
             error=error+'日期格式错误：';
         }
-                
+
+        if (isNaN(arow[1]) || isNaN(arow[2])){
+            error=error+'非数字：';
+            value_lost_date.push(arow[0]);
+        }
+        
         if (arow[1]<arow[2]){
             error=error+'最高温<最低温：';        
         }
@@ -351,7 +433,7 @@ function check_district_weather(show_html=true){
     if (show_html){
         page_common(1);
     }
-    return not_found_date;
+    return [not_found_date,value_lost_date];
 }
 
 function dots_district_weather(){

@@ -514,8 +514,10 @@ function frequency_enwords_book_b(cstype='',simple_split=false,common_max=4000){
     switch (cstype){
         case 'sentence_rare':
         case 'sentence_common':
-            for (let item of en_sentence_global){
-                article_arr.push(item[0]);
+            if (typeof en_sentence_global !== 'undefined'){
+                for (let item of en_sentence_global){
+                    article_arr.push(item[0]);
+                }
             }
             break;
         case 'textarea':

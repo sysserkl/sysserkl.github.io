@@ -90,7 +90,16 @@ function wait_array_common(){
         var ospan=document.getElementById('span_menu_more_common');
         if (ospan){
             ospan.outerHTML=menu_more_str;
-        }    
+        }
+        
+        var fn_more_run=fn_name_get_common('fn_more_'); //在menu载入后运行 - 保留注释
+        if (fn_more_run!==''){
+            try {
+                eval(fn_more_run+'()');
+            } catch (error){
+                console.log(error);
+            }
+        }        
     }
     
     function sub_wait_array_common_check(){

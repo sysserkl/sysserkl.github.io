@@ -359,9 +359,7 @@ function show_sentence_enwc_b(maxlines=0,showcount=true,is_random=false,show_but
     if (typeof en_sentence_global == 'undefined'){
         console.log('en_sentence_global 未定义');
         if (load_js){    
-            var file_list=klbase_addons_import_js_b([],[],['words/enwords_sentence_data.js'],[],false,false);    
-            file_dom_create_b(file_list,true,'js');
-            load_var_b('en_sentence_global',-1,2000,sub_show_sentence_enwc_b_load);
+            load_enword_file_b('en_sentence_global','enwords_sentence',sub_show_sentence_enwc_b_load,false);
         }
         return;
     }
