@@ -550,7 +550,7 @@ function import_elm_money_b(textarea_id='textarea_idb_content'){   //饿了么 -
         bldate=bldate_default;
     }
 
-    var provider=(blstr.match(/^.*\(.*店\)$/m) || [''])[0];
+    var provider=(blstr.match(/^.*\(.*店\)$/mg) || ['']).slice(-1)[0];    //提取最后一次出现的店名，最先出现的可能是广告 - 保留注释
     if (provider!==''){
         provider='饿了么 '+provider.replace(/[\(\)]/g,'');
     }
