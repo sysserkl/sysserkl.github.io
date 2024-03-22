@@ -614,12 +614,16 @@ function menu_base_enwc_b(){
     var menu1=[
     '<a href="'+sele_path+'/html/enwords_exam.htm?n=100&type=recent" onclick="'+str_t+'" target=_blank>单词填空</a>',
     '<span class="span_menu" onclick="'+'getlines_rnd_enwc_b(\'\',true,false);'+str_t+'">随机旧单词</span>',    
-    '<span class="span_menu" onclick="'+str_t+'get_day_words_enwc_b(\'\',\'\',\'old\');">今日旧单词0</span>',
-    '<span class="span_menu" onclick="'+str_t+'get_day_words_enwc_b(\'\',\'\',\'old2\');">今日旧单词2</span>',
-    '<span class="span_menu" onclick="'+str_t+'get_day_words_enwc_b(0,\'\',\'old02_OR\');">今日旧单词0和2</span>',
     '<span class="span_menu" onclick="'+str_t+'rnd_cn_search_enwc_b();">随机中文词汇搜索</span>',
     '<a href="'+sele_path+'/html/enwords_today.htm" onclick="'+str_t+'" target=_blank>Today Words</a>',
     ];
+    
+    var group_list=[
+    ['0','get_day_words_enwc_b(\'\',\'\',\'old\');',true],
+    ['2','get_day_words_enwc_b(\'\',\'\',\'old2\');',true],
+    ['0和2','get_day_words_enwc_b(0,\'\',\'old02_OR\');',true],
+    ];    
+    menu1.push(menu_container_b(str_t,group_list,'今日旧单词：'));
     
     var menu2=['<span class="span_menu" onclick="'+str_t+'en_words_temp_textarea_b(\'divhtml\',\'words_count_enwords_b\'); words_count_enwords_b();">临时词库</span>',    
     '<a href="'+blhost+'/klwebphp/temp_txt_share.php?type=enwords_temp" onclick="'+str_t+'" target=_blank>打开临时记事本('+blhost.slice(-3,)+')</a>',    

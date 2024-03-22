@@ -628,6 +628,7 @@ function menu_kle(){
     }
     
     klmenu_old.push('<span class="span_menu" onclick="'+str_t+'old_words_name_list_form_kle();">旧单词列表</span>');
+    klmenu_old.push('<span class="span_menu" onclick="'+str_t+'old_words_without_phrase_kle();">无词组的旧单词</span>');
     
     var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu1,'','16rem','1rem','1rem','60rem')+klmenu_b(klmenu_old,'旧','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_brain,'🧠','17rem','1rem','1rem')+klmenu_b(klmenu_new,'🆕','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_statistics,'🧮','14rem','1rem','1rem')+klmenu_b(klmenu_search,'🔽','18rem','1rem','1rem','30rem'),'','0rem')+' ';
     
@@ -1008,4 +1009,33 @@ function init_kle(){
     input_date_set_enwords_b();
     enwords_mini_search_frame_style_b();    
     enwords_mini_search_frame_form_b();
+}
+
+function old_words_without_phrase_kle(){
+    var words_set=new Set();
+    var phrase_list=[];
+    for (let item of enwords){
+        if (item[0].includes(' ') || item[0].includes('-')){
+            phrase_list.push(item[0]);
+        } else {
+            words_set.add(item[0]);
+        }
+    }
+    
+    phrase_list=new Set(phrase_list.join(' ').split(/[\s\-]+/));
+    
+    var without_phrase=Array.from(array_difference_b(words_set,phrase_list,true));
+    var with_phrase=Array.from(array_intersection_b(words_set,phrase_list,true));
+
+    var bljg='<h4>无词组的单词 <small>('+without_phrase.length+')</small></h4>';
+    without_phrase.sort(randomsort_b);
+    bljg=bljg+'<textarea style="height:25rem;">'+without_phrase.slice(0,1000)+'...</textarea>';
+    bljg=bljg+'<h4>有词组的单词 <small>('+with_phrase.length+')</small></h4>';
+    with_phrase.sort(randomsort_b);    
+    bljg=bljg+'<textarea style="height:25rem;">'+with_phrase.slice(0,1000)+'...</textarea>';
+
+    var odiv=document.getElementById('divhtml');
+    odiv.innerHTML=bljg;    
+
+    local_storage_today_b('enwords_has_phrase',40,with_phrase.length,'/');
 }
