@@ -1,3 +1,39 @@
+function book_load_enwords_book(csno){
+    let list_t=csno.split('_');    //如2_5 - 保留注释
+    csbookno_global=Math.min(csbooklist_sub_global.length-1,parseInt(list_t[0])-1);
+    if (list_t.length>1){
+        csbookno2_global=Math.min(csbooklist_sub_global.length-1,parseInt(list_t[1])-1);
+    }
+    title_set_enwords_book();
+    show_enwords_book();
+    import_book_js_b(true);
+}
+
+function refresh_book_new_enwords_book(csno=10){
+    var value_old=all_new_words_count_get_enbook_b(false,false);
+    var value_new=all_new_words_count_get_enbook_b(true,false);
+    
+    compare_statistics_enwords_book(value_old,value_new,csno,false);
+    
+    var filter_str=[];
+    for (let item of enbook_compare_result_list_global){
+        filter_str.push(item[0]);
+    }
+    if (filter_str.length==0){return;}
+
+    console.log(filter_str);    //此行保留 - 保留注释
+    localStorage.setItem('enbook_filter','^('+filter_str.join('|')+')$_reg');
+    location.href='?book=1&continue';
+}
+
+function filter_get_enwords_book(){
+    var blstr=local_storage_get_b('enbook_filter');
+    if (blstr==''){
+        blstr=book_filter_str_enbook_b();
+    }
+    return blstr;
+}
+
 function args_enwords_book(){
     var cskeys=href_split_b(location.href);
     var title_setted=false;
@@ -11,20 +47,22 @@ function args_enwords_book(){
                 break;
             }
         }
+        
         //第二次处理 - 保留注释
         for (let bltmpstr of cskeys){
             bltmpstr=bltmpstr.trim();
 
             if (bltmpstr.substring(0,5)=='book='){
-                let list_t=bltmpstr.substring(5,).split('_');    //如book=2_5 - 保留注释
-                csbookno_global=Math.min(csbooklist_sub_global.length-1,parseInt(list_t[0])-1);
-                if (list_t.length>1){
-                    csbookno2_global=Math.min(csbooklist_sub_global.length-1,parseInt(list_t[1])-1);
-                }
-                title_set_enwords_book();
+                book_load_enwords_book(bltmpstr.substring(5,)); //如book=2_5 - 保留注释
+                //let list_t=bltmpstr.substring(5,).split('_');    //如book=2_5 - 保留注释
+                //csbookno_global=Math.min(csbooklist_sub_global.length-1,parseInt(list_t[0])-1);
+                //if (list_t.length>1){
+                    //csbookno2_global=Math.min(csbooklist_sub_global.length-1,parseInt(list_t[1])-1);
+                //}
+                //title_set_enwords_book();
                 title_setted=true;
-                show_enwords_book();
-                import_book_js_b(true);
+                //show_enwords_book();
+                //import_book_js_b(true);
                 break;
             } else if (bltmpstr.substring(0,7)=='allnew='){
                 var new_words_str=bltmpstr.substring(7,);
@@ -138,8 +176,9 @@ function menu_enwords_book(){
         cache_type_list[blxl]='<option>'+cache_type_list[blxl]+'</option>';
     }
     
-    var klmenu2=[
+    var klmenu2=[    
     '<a href="?book=1&continue" onclick="'+str_t+'">批量统计生词</a>',
+    '<span class="span_menu" onclick="'+str_t+'refresh_book_new_enwords_book(10);">重新批量统计变动最少的10本书籍</span>',
     '<span class="span_menu" onclick="'+str_t+'news_words_statistics_enwords_book();">显示统计结果</span>',
     '<span class="span_menu" onclick="'+str_t+'compare_form_statistics_enwords_book();">比较统计数据</span>',
     '<span class="span_menu" onclick="'+str_t+'exclude_enwords_book();">电子书中未包含的旧单词</span>',    
@@ -154,7 +193,7 @@ function menu_enwords_book(){
     ];
     
     var klmenu_config=[
-    '<span class="span_menu" onclick="'+str_t+'load_enword_file_b(\'en_sentence_global\',\'enwords_sentence\');">载入例句</span>',    
+    load_sentence_menu_b(str_t),    
     '<span class="span_menu" onclick="'+str_t+'load_all_new_enwords_book();">载入全部新单词</span>',    
     '<span class="span_menu" onclick="'+str_t+'load_enword_file_b(\'kaikki_phrase_global\',\'kaikki_phrase\',false);">载入kaikki</span>',    
     '<span class="span_menu" onclick="'+str_t+'space2underline_enwords_book();">替换单词间空格为下划线</span> ',  
@@ -162,7 +201,7 @@ function menu_enwords_book(){
     '<span class="span_menu" onclick="'+str_t+'character2space_enwords_book(\'-\',\'连字符\');">替换连字符为空格</span> ',  
     ];
     
-    var menus=klmenu_b(klmenu1,'','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_new,'🔤','32rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'🧮','16rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','60rem');
+    var menus=klmenu_b(klmenu1,'','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_new,'🔤','32rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'🧮','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','60rem');
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(menus,'','0rem')+' ');
 }
 
@@ -503,7 +542,7 @@ function title_set_enwords_book(){
     localStorage.setItem('enbook_title_name',bltitle);
 }
 
-function compare_statistics_enwords_book(){
+function compare_statistics_enwords_book(value_old=false,value_new=false,csmax=-1,show_html=true){
     function sub_compare_statistics_enwords_book_get_list(cslist){
         for (let blxl=0;blxl<cslist.length;blxl++){
             var item=cslist[blxl];
@@ -519,13 +558,21 @@ function compare_statistics_enwords_book(){
         }
         return cslist;
     }
-    var list1=document.getElementById('textarea_compare_1').value.trim().split('\n');
-    var list2=document.getElementById('textarea_compare_2').value.trim().split('\n');
+    
+    if (value_old===false){
+        value_old=document.getElementById('textarea_compare_1').value.trim();
+    }
+    if (value_new===false){
+        value_new=document.getElementById('textarea_compare_2').value.trim();
+    }
+    var list1=value_old.split('\n');
+    var list2=value_new.split('\n');
     
     list1=sub_compare_statistics_enwords_book_get_list(list1);
     list2=sub_compare_statistics_enwords_book_get_list(list2);
+    //元素格式如：[ "a_princess_of_mars_1616", "A Princess of Mars", 2203, 449 ] - 保留注释
     
-    enbook_compare_result_list_global=[];
+    enbook_compare_result_list_global=[];   //全局变量用于避免重新排序时重新计算 - 保留注释
     for (let item2 of list2){
         var bookid=item2[0];
         if (bookid==''){continue;}
@@ -538,10 +585,23 @@ function compare_statistics_enwords_book(){
             }
         }
         if (!blfound){
-            enbook_compare_result_list_global.push([bookid,item2[1],'',item2[2],'--','',item2[3],'--']);
+            if (csmax==-1){
+                enbook_compare_result_list_global.push([bookid,item2[1],'',item2[2],'--','',item2[3],'--']);
+            }
         }
     }
-    compare_result_list_to_table_enwords_book();
+    if (csmax>0){
+        enbook_compare_result_list_global.sort(function (a,b){return a[4]<b[4];});
+        enbook_compare_result_list_global=enbook_compare_result_list_global.slice(0,csmax);
+    }
+    
+    
+    //No.	书名	Data1	Data2	Δ	Data1(10%)	Data2(10%)	Δ - 保留注释
+    //enbook_compare_result_list_global 元素形如：[ "ye_zhi_shi_xuan_ying_hdz_241502", "叶芝诗选(英汉对照)", 1129, 1126, -3, 153, 153, 0 ] - 保留注释
+    
+    if (show_html){
+        compare_result_list_to_table_enwords_book();
+    }
 }
 
 function compare_result_list_to_table_enwords_book(sortno=4){
@@ -665,8 +725,7 @@ function words_sort_count_enwords_book(){
 }
 
 function show_enwords_book(){
-    var bltag='englishwords en_minor';
-    books_b(show_all_books_global,'eng',bltag);
+    books_b(show_all_books_global,'eng',book_filter_str_enbook_b());
 }
 
 function space2underline_enwords_book(){

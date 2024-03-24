@@ -95,7 +95,7 @@ function menu_rndwords(){
     ];
     
     var klmenu3=[
-    '<span class="span_menu" onclick="'+str_t+'load_enword_file_b(\'en_sentence_global\',\'enwords_sentence\');">载入例句</span>',    
+    load_sentence_menu_b(str_t),    
     '<span id="span_reg_rndwords" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 正则</span>',                
     '<span class="span_menu" onclick="'+str_t+'window.open(location.href,\'\',\'width=550, height=200\');">新窗口</span>', 
     '<span class="span_menu" onclick="'+str_t+'enwords_definition_2_multilines_b();">释义分段</span>',

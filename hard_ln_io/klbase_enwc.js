@@ -298,7 +298,9 @@ function getlines_enwc_b(csno,cslines){
 }
 
 function show_sentence_enwc_b(maxlines=0,showcount=true,is_random=false,show_button=true,load_js=true){
-    function sub_show_sentence_enwc_b_load(){
+    function sub_show_sentence_enwc_b_load(is_ok=true){
+        if (!is_ok){return;}
+        
         local_storage_today_b('enwords_sentence_rows',40,en_sentence_global.length,'/');
         show_sentence_enwc_b(maxlines,showcount,is_random,show_button,false);
     }

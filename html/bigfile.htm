@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>bigfile</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','idb','date','en_de_str'],[],[],['bigfile_code.js']);
+</script>
+<script>
+//-----------------------
+//history
+//0.0.1-20240324
+//-----------------------
+var scheme_global={};
+scheme_generation_b();
+css_root_style_b('18','13',['base','menu'],[],1);
+</script>
+<style>
+#divhtml li {font-size:1rem;line-height:2rem;}
+</style>
+<link rel="manifest" href="bigfile.webmanifest" />
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+</head>
+<body>
+<a name=top></a>
+<h2 style="margin-top:0px; font-size:1.2rem;"><span id="span_title" style="cursor:pointer;">bigfile</span> <span id="span_count" style="font-weight:normal; font-size:0.9rem;"></span></h2>
+<div style="margin:0.5rem;">
+<p>Select file: <input type="file" id="input_upload_bigfile" /> <span class="aclick" onclick="upload_a_bigfile();">上传文件</span></p>
+<div id="divhtml" style="margin:1rem;"></div>
+</div>
+<script>
+pwa_register_b('bigfile_service_worker.js','bigfile','span_count','html');
+
+//-----------------------
+file_name_bigfile_global='';
+file_content_bigfile_global='';
+init_bigfile();
+</script>
+<a name=footer></a>
+</body>
+</html>

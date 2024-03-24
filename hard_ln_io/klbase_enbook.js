@@ -82,7 +82,7 @@ function get_new_words_arr_set_enbook_b(cstype,csstr='',div_id='div_new_words2')
         new_words_set10=new_old_word_list_enbook_b(bljgarr2_10,bltypecheck)[0]; //old_words_set10
     }
     
-    get_new_words_arr_html_enbook_b(cstype,bljgarr2,new_words_set,old_words_set,rare_words_set,new_words_set10.size,div_id);  //old_words_set10
+    get_new_words_arr_html_enbook_b(cstype,bljgarr2,new_words_set,old_words_set,rare_words_set,new_words_set10.size,div_id);
     
     console.log('get_new_words_arr_set_enbook_b() 费时：'+(performance.now() - t0) + ' milliseconds');
 }
@@ -274,40 +274,67 @@ function get_new_words_arr_html_enbook_b(cstype,all_words_set,new_words_set,old_
 }
 
 function new_words_continue_enbook_b(cslength,percent10length=0){
-    if (csbookno_global>=0 && en_words_book_newwords_continue_global){
-        if (csbookno_global==0){
-            if (confirm('是否批量统计生词数量？')==false){
-                location.href='?';
-                return;
-            } else {
-                all_new_words_count_save_old_data_enbook_b();
-                all_new_words_count_set_enbook_b(true,'');
-            }
-        }
-        var newwords_statistics=all_new_words_count_get_enbook_b(true,false);
-        
-        var today=date2str_b();
-        if (newwords_statistics.split('\n')[0].trim()!==today){
-            newwords_statistics=today;
-        }
-        newwords_statistics=newwords_statistics+'\n'+csbooklist_sub_global[csbookno_global][0]+' /// '+csbooklist_sub_global[csbookno_global][1]+' /// '+cslength+' /// '+percent10length+'\n';
-        
-        all_new_words_count_set_enbook_b(true,newwords_statistics);
-        
-        if (csbooklist_sub_global.length-1>csbookno_global){
-            location.href='?book='+(csbookno_global+1+1)+'&continue';
-        } else {
-            alert('done');
+    if (csbookno_global<0 || !en_words_book_newwords_continue_global){return;}
+    
+    if (csbookno_global==0){
+        if (confirm('是否批量统计生词数量？')==false){
             location.href='?';
+            return;
+        } else {
+            all_new_words_count_save_old_data_enbook_b();
+            //all_new_words_count_set_enbook_b(true,'');
         }
     }
+    var newwords_statistics=all_new_words_count_get_enbook_b(true,true);
+    var today=date2str_b();
+    if (newwords_statistics[0].trim()!==today){
+        if (book_filter_str_enbook_b(true) && confirm('原先缓存非今日记录，是否清空？')){
+            newwords_statistics=[today];  //非今日则清空缓存原先记录，并设置为今日日期 - 保留注释
+        } else {
+            newwords_statistics[0]=today;
+        }
+    }
+    
+    var id_name=csbooklist_sub_global[csbookno_global][0]+' /// '+csbooklist_sub_global[csbookno_global][1]; 
+    
+    var blfound=false;
+    for (let blxl=0;blxl<newwords_statistics.length;blxl++){
+        if (newwords_statistics[blxl].startsWith(id_name+' /// ')){
+            blfound=true;
+            newwords_statistics[blxl]=id_name+' /// '+cslength+' /// '+percent10length;
+            break;
+        }
+    }
+    
+    if (!blfound){
+        newwords_statistics.push(id_name+' /// '+cslength+' /// '+percent10length);
+    }
+    
+    all_new_words_count_set_enbook_b(true,newwords_statistics.join('\n'));
+    
+    if (csbooklist_sub_global.length-1>csbookno_global){
+        location.href='?book='+(csbookno_global+1+1)+'&continue';
+    } else {
+        alert('done');
+        localStorage.setItem('enbook_filter',book_filter_str_enbook_b());
+        location.href='?';
+    }
+}
+
+function book_filter_str_enbook_b(return_boolean=false){
+    if (return_boolean){
+        return local_storage_get_b('enbook_filter')=='englishwords en_minor';
+    }
+    return 'englishwords en_minor';
 }
 
 function all_new_words_count_save_old_data_enbook_b(){
     var blnew=all_new_words_count_get_enbook_b()[0];
     var blold=all_new_words_count_get_enbook_b(false)[0];
-    if (blold=='' || confirm('是否将'+blold+'记录替换为'+blnew+'记录？')){
-        all_new_words_count_set_enbook_b(false,all_new_words_count_get_enbook_b(true,false));
+    if (book_filter_str_enbook_b(true)){
+        if (blold=='' || confirm('是否将'+blold+'记录替换为'+blnew+'记录？')){
+            all_new_words_count_set_enbook_b(false,all_new_words_count_get_enbook_b(true,false));
+        }
     }
 }
 

@@ -991,24 +991,27 @@ function search_similar_new_sentence_kle(cstype){
 }
 
 function init_kle(){
+    function sub_init_kle_fn(){
+        local_storage_today_b('enwords_statistics',40,enwords.length,'/');
+        words_count_enwords_b();
+        local_storage_today_b('enwords_recent_statistics',40,en_words_temp_global.length,'/');
+            
+        menu_kle();
+        args_kle();
+        recent_bookmark_position();
+        days_enwc_b();
+        input_date_set_enwords_b();
+        enwords_mini_search_frame_style_b();    
+        enwords_mini_search_frame_form_b();    
+    }
+    
     input_with_x_b('input_search',(ismobile_b()?11:22),'',false,'input_reg',true);
     character_2_icon_b('🇬🇧');
     top_bottom_arrow_b('div_top_bottom','',true,(ismobile_b()?'1.8rem':'1.4rem'),true,true,2);
 
     words_searched_arr_global=[];  //全局变量 - 保留注释
     
-    enwords_init_b();
-    local_storage_today_b('enwords_statistics',40,enwords.length,'/');
-    words_count_enwords_b();
-    local_storage_today_b('enwords_recent_statistics',40,en_words_temp_global.length,'/');
-        
-    menu_kle();
-    args_kle();
-    recent_bookmark_position();
-    days_enwc_b();
-    input_date_set_enwords_b();
-    enwords_mini_search_frame_style_b();    
-    enwords_mini_search_frame_form_b();
+    enwords_init_b(false,true,sub_init_kle_fn);
 }
 
 function old_words_without_phrase_kle(){

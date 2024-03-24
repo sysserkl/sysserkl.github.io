@@ -57,7 +57,7 @@ function page_notepad(csno){
 
     for (let blxl=csno-1;blxl<blend;blxl++){
         var item=current_result_notepad_global[blxl][0];
-        result_t.push('<li id="li_notepad_'+item[0]+'" onclick="change_notepad(this);">'+specialstr92_b(item[1].substring(0,100))+' <span style="font-size:0.8rem;color:'+scheme_global['memo']+';">('+item[2]+')</span>');
+        result_t.push('<li id="li_notepad_'+item[0]+'" onclick="change_notepad(this);">'+specialstr92_b(item[1].substring(0,100))+' <span style="font-size:0.8rem;color:'+scheme_global['memo']+';">('+item[2]+')</span></li>');
     }
     
     var odiv=document.getElementById('divhtml');
@@ -305,6 +305,7 @@ function idb_edit_notepad(db,is_delete=false){
                             new Promise((resolve, reject) => {
                                 updateRequest.onsuccess = () => {
                                     console.log('updated');
+                                    search_notepad();
                                     resolve();
                                 };
                                 updateRequest.onerror = (event) => {
@@ -312,7 +313,7 @@ function idb_edit_notepad(db,is_delete=false){
                                     reject(event.target.error);
                                 };
                             });
-                            search_notepad();
+                            //search_notepad();
                         }
                     } else {
                         cursor.continue();

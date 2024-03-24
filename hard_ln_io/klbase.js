@@ -3055,7 +3055,7 @@ function load_fn_b(fn_name,csmax,cswait,run_fn_onsuccess){
     setTimeout(sub_load_fn_b_wait,cswait);
 }
 
-function load_var_b(var_name,csmax,cswait,run_fn){
+function load_var_b(var_name,csmax,cswait,run_fn,fail_fn=false){
     function sub_load_var_b_wait(){
         blxl=blxl+1;
         
@@ -3067,8 +3067,12 @@ function load_var_b(var_name,csmax,cswait,run_fn){
         } else {
             if (blxl>=csmax){
                 console.log('未发现 '+var_name+' ，扫描次数：'+blxl);
-                if (typeof run_fn == 'function'){            
+                if (typeof run_fn == 'function'){
                     run_fn(false);
+                }
+                
+                if (typeof fail_fn == 'function'){
+                    fail_fn();
                 }
                 return;
             }

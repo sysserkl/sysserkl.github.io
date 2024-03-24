@@ -192,14 +192,41 @@ function words_queue_reinit_b(word_name_list,removed_enwords){
     }
 }
 
-function load_enword_file_b(varname,filename,csfn=false,do_echo=true){
+function load_sentence_menu_b(jsstr){    
+    var group_list=[
+    ['载入例句','load_enword_file_b(\'en_sentence_global\',\'enwords_sentence\');',true],
+    ['bigfile','load_enword_file_b(\'en_sentence_global\',\'enwords_sentence\',false,true,true);',true],
+    ];    
+    return menu_container_b(jsstr,group_list,'');
+    
+    //return '<span class="span_menu" onclick="'+jsstr+'load_enword_file_b(\'en_sentence_global\',\'enwords_sentence\');">载入例句</span>';
+}
+
+function load_enword_file_b(varname,filename,csfn=false,do_echo=true,direct_from_bigfile=false){
+    function sub_load_enword_file_b_bigfile(){
+        if (eval('typeof '+varname) == 'undefined'){
+            if (typeof idb_bigfile_b !== 'function'){
+                console.log('未发现函数 idb_bigfile_b');
+                return;
+            }
+            console.log('尝试从bigfile载入',varname);
+            
+            idb_bigfile_b('read','eval',filename+'_data.js');
+            load_var_b(varname,-1,2000,csfn);
+        }
+    }
+    //-----------------------
     if (eval('typeof '+varname) == 'undefined'){
         if (do_echo){
             console.log(varname+' 未定义');
         }
-        var file_list=klbase_addons_import_js_b([],[],['words/'+filename+'_data.js'],[],false,false);    
-        file_dom_create_b(file_list,true,'js');
-        load_var_b(varname,-1,2000,csfn);
+        if (direct_from_bigfile){
+            sub_load_enword_file_b_bigfile();
+        } else {
+            var file_list=klbase_addons_import_js_b([],[],['words/'+filename+'_data.js'],[],false,false);    
+            file_dom_create_b(file_list,true,'js');
+            load_var_b(varname,-1,2000,csfn,sub_load_enword_file_b_bigfile);
+        }
     } else {
         if (do_echo){
             console.log(varname+' 已存在');        
@@ -207,9 +234,11 @@ function load_enword_file_b(varname,filename,csfn=false,do_echo=true){
     }
 }
 
-function enwords_init_b(simple=false,load_enwords=true){
-    function sub_enwords_init_b_load(){
-        enwords_init_b(simple,false);
+function enwords_init_b(simple=false,load_enwords=true,run_fn=false){
+    function sub_enwords_init_b_load(is_ok=true){
+        if (is_ok){
+            enwords_init_b(simple,false,run_fn);
+        }
     }
     
     if (typeof enwords == 'undefined' && load_enwords){
@@ -253,6 +282,9 @@ function enwords_init_b(simple=false,load_enwords=true){
         enwords[blxl][4]=enwords_asc_value_b(blitem);
     }
 
+    if (typeof run_fn == 'function'){
+        run_fn();
+    }
     console.log('enwords_init_b() 费时：'+(performance.now() - t0) + ' milliseconds');
 }
 

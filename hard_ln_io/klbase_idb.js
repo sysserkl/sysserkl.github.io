@@ -190,3 +190,203 @@ function idb_close_b(db){
         db.close();  
     }  
 }  
+
+//-----------------------
+function idb_bigfile_b(crud_type='',do_type='',cskey='',run_fn=false){
+    async function sub_idb_bigfile_b_switch(crud_type, db, resolve, reject){
+        var sub_operation;    
+        switch (crud_type){
+            case 'read':
+                sub_operation=idb_read_bigfile_b(db,do_type,cskey,run_fn);
+                break;
+            case 'edit':
+                sub_operation=idb_edit_bigfile_b(db,do_type,cskey,run_fn);
+                break;                
+            case 'clear':
+                sub_operation=idb_clear_bigfile_b(db);
+                break;
+            case 'count':
+                sub_operation=idb_count_bigfile_b(db);
+                break;
+            default:
+                console.error('Invalid operation type:', crud_type);
+                idb_close_b(db);
+                reject(new Error(`Unsupported operation: ${crud_type}`));
+                break;                  
+        }
+
+        try {
+            var bljg=await sub_operation;
+            resolve(bljg);
+        } catch (error){
+            reject(error);
+        } finally {
+            idb_close_b(db);
+        }
+    }
+    //-----------------------
+    return idb_main_b(crud_type,'bigfile_dbc','bigfile_dbf',sub_idb_bigfile_b_switch);
+    //idb_bigfile_b('count').then(value => {console.log('行数：',value);}); //此行保留 - 保留注释    
+}
+
+function idb_read_bigfile_b(db,do_type='',cskey='',run_fn=false){
+    function sub_idb_read_bigfile_b_search(){
+        //current_result_bigfile_global 每个元素为：[id,name,content,datetime] - 保留注释
+        
+        if (do_type!=='eval'){
+            if (typeof run_fn == 'function'){            
+                run_fn(raw_data_bigfile);
+            }
+        }
+    }
+    
+    function sub_idb_read_bigfile_b_onsuccess(resolve, reject, event, other_var1,other_var2){
+        var cursor = event.target.result;
+        if (cursor){
+            if (cskey=='' || cursor.value.name==cskey){
+                if (do_type=='eval'){
+                    var odom = document.createElement('script');
+                    document.head.appendChild(odom);    
+                    //odom.src=cursor.value.content; //此行保留 - 保留注释
+                    odom.innerHTML=cursor.value.content; //此行保留 - 保留注释                    
+                } else {
+                    raw_data_bigfile.push([cursor.value.id,cursor.value.name,cursor.value.content.slice(0,100),(cursor.value.content.length/1024/1024).toFixed(2)+'M',cursor.value.date]);
+                }
+            }
+            cursor.continue();
+        } else {
+            sub_idb_read_bigfile_b_search();
+        }
+    }
+    //-----------------------
+    var raw_data_bigfile=[];
+    return idb_read_b(db,'bigfile_dbf',sub_idb_read_bigfile_b_onsuccess);
+}
+
+
+function idb_count_bigfile_b(db){
+    function sub_idb_count_bigfile_b_onsuccess(cscount){
+        //document.getElementById('span_idb_status').innerHTML='IDB现有记录 '+cscount+' 条';
+    }
+    //-----------------------
+    return idb_count_b(db,'bigfile_dbf',sub_idb_count_bigfile_b_onsuccess);
+}
+
+function idb_edit_bigfile_b(db,do_type='',cskey='',run_fn=false){
+    async function sub_idb_edit_bigfile_b_append(otable){
+        try {
+            var objectStoreRequest = otable.add({
+            'id': 0, //无效字段，以免出现 undefined - 保留注释
+            'name': file_name_bigfile_global, 
+            'content': file_content_bigfile_global, 
+            'date': new Date().toLocaleString()
+            });
+
+            await new Promise((resolve, reject) => {
+                objectStoreRequest.onsuccess = () => {
+                    console.log('objectStoreRequest success');
+                    resolve();
+                };
+                objectStoreRequest.onerror = (event) => {
+                    console.log('objectStoreRequest error');
+                    reject(event.target.error);
+                };
+            });
+            idb_bigfile_b('read',do_type,cskey,run_fn);
+        } catch (error){
+            console.error('Error appending to bigfile:', error);
+            throw error;
+        }        
+    }
+
+    async function sub_idb_edit_bigfile_b_onsuccess(otable){
+        otable.openCursor().onsuccess = function (event){
+            var cursor = event.target.result;
+            if (do_type=='append'){
+                if (cursor){
+                    cursor.continue();
+                } else {
+                    sub_idb_edit_bigfile_b_append(otable);
+                }
+            } else {
+                if (cursor){
+                    if (cursor.value.name === file_name_bigfile_global){
+                        found_old_data=true;
+                        if (do_type=='delete'){
+                            const deleteRequest = cursor.delete();
+                            new Promise((resolve, reject) => {
+                                deleteRequest.onsuccess = () => {
+                                    console.log('deleted');
+                                    idb_bigfile_b('read',do_type,cskey,run_fn);
+                                    resolve();
+                                };
+                                deleteRequest.onerror = (event) => {
+                                    console.log('delete error:', event.target.error);
+                                    reject(event.target.error);
+                                };
+                            });
+                        } else {
+                            const updateData = cursor.value;
+                            updateData.content = file_content_bigfile_global;
+                            updateData.date = new Date().toLocaleString();
+                            const updateRequest = cursor.update(updateData);
+
+                            new Promise((resolve, reject) => {
+                                updateRequest.onsuccess = () => {
+                                    console.log('updated');
+                                    idb_bigfile_b('read',do_type,cskey,run_fn);
+                                    resolve();
+                                };
+                                updateRequest.onerror = (event) => {
+                                    console.log('update error:', event.target.error);
+                                    reject(event.target.error);
+                                };
+                            });
+                        }
+                    } else {
+                        cursor.continue();
+                    }
+                } else {
+                    if (!found_old_data){
+                        idb_edit_bigfile_b(db,'append',cskey,run_fn);
+                    }
+                }
+            }
+        }
+    }
+    //-----------------------
+    var found_old_data=false;
+    var do_write=false;
+    if (do_type=='delete'){
+        if (file_name_bigfile_global !== ''){
+            do_write=true;
+        }
+    } else {
+        do_write=true;
+    }
+    
+    if (do_write){
+        return idb_write_b(db, 'bigfile_dbf', false, false, sub_idb_edit_bigfile_b_onsuccess, false);        
+    } else {
+        return Promise.resolve(false);
+    }
+}
+
+function idb_clear_bigfile_b(db){
+    function sub_idb_clear_bigfile_b_count1(cscount){
+        //document.getElementById('span_idb_status').innerHTML='IDB 清除前记录数：'+cscount;
+    }
+
+    function sub_idb_clear_bigfile_b_count2(cscount){
+        //document.getElementById('span_idb_status').innerHTML='IDB数据清除完毕，现有记录 '+cscount+' 条';
+    }
+    
+    function sub_idb_clear_bigfile_b_onsuccess(otable){ /* ... */ }
+    //-----------------------
+    var rndstr = randstr_b(4, true, false);    
+    if ((prompt('输入 ' + rndstr + ' 确认清除全部数据') || '').trim() === rndstr){
+        return idb_write_b(db, 'bigfile_dbf', sub_idb_clear_bigfile_b_count1, sub_idb_clear_bigfile_b_count2, sub_idb_clear_bigfile_b_onsuccess);
+    } else {
+        return new Promise((resolve, reject) => {reject(new Error('User did not confirm data clearing.'));});    
+    } 
+}
