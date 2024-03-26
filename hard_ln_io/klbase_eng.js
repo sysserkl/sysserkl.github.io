@@ -198,8 +198,6 @@ function load_sentence_menu_b(jsstr){
     ['bigfile','load_enword_file_b(\'en_sentence_global\',\'enwords_sentence\',false,true,true);',true],
     ];    
     return menu_container_b(jsstr,group_list,'');
-    
-    //return '<span class="span_menu" onclick="'+jsstr+'load_enword_file_b(\'en_sentence_global\',\'enwords_sentence\');">载入例句</span>';
 }
 
 function load_enword_file_b(varname,filename,csfn=false,do_echo=true,direct_from_bigfile=false){
@@ -220,7 +218,7 @@ function load_enword_file_b(varname,filename,csfn=false,do_echo=true,direct_from
         if (do_echo){
             console.log(varname+' 未定义');
         }
-        if (direct_from_bigfile){
+        if (direct_from_bigfile || local_storage_get_b('first_source_bigfile')=='1'){
             sub_load_enword_file_b_bigfile();
         } else {
             var file_list=klbase_addons_import_js_b([],[],['words/'+filename+'_data.js'],[],false,false);    
@@ -231,6 +229,12 @@ function load_enword_file_b(varname,filename,csfn=false,do_echo=true,direct_from
         if (do_echo){
             console.log(varname+' 已存在');        
         }
+    }
+}
+
+function import_enwords_data_b(){
+    if (local_storage_get_b('first_source_bigfile')!=='1'){
+        klbase_addons_import_js_b([],[],['words/enwords_data.js']);
     }
 }
 

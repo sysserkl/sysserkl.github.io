@@ -18,11 +18,22 @@ function menu_bigfile(){
         
     var klmenu_config=root_font_size_menu_b(str_t);
     klmenu_config=klmenu_config.concat([
-    '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'bigfile\');">更新版本</span>',        
+    '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'bigfile\');">更新版本</span>',
+    '<span id="span_first_source_bigfile" class="span_menu" onclick="'+str_t+'first_source_set_bigfile();">⚪ 将bigfile作为第一数据源</span>',    
     ]);
 
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'𖧶','10rem','1rem','1rem','30rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','30rem'),'','0rem')+' ');
-    klmenu_check_b('span_reg_bigfile',true);
+    first_source_set_bigfile(false);
+}
+
+function first_source_set_bigfile(do_change=true){
+    if (do_change){
+        var current_value=(local_storage_get_b('first_source_bigfile')=='0'?'1':'0');
+        localStorage.setItem('first_source_bigfile',current_value);
+    } else {
+        var current_value=(local_storage_get_b('first_source_bigfile')!=='1'?'0':'1');
+    }
+    klmenu_check_b('span_first_source_bigfile',current_value=='1');
 }
 
 function upload_a_bigfile(){
