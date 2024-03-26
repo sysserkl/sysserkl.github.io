@@ -1307,17 +1307,13 @@ function en_word_temp_batch_add_b(){
     var ospan=document.getElementsByClassName('span_pronounce');
     blxl=0;
     for (let item of ospan){
-        if (item.style.backgroundColor!==''){
-            continue;
-        }
+        if (item.style.backgroundColor!==''){continue;}
         blxl=blxl+1
     }
     if (blxl==0){return;}
-    if (confirm("是否添加当前页面的 "+blxl+" 个单词到 最近记忆单词？")){
+    if (confirm('是否添加当前页面的 '+blxl+' 个单词到 最近记忆单词？')){
         for (let item of ospan){
-            if (item.style.backgroundColor!==''){
-                continue;
-            }
+            if (item.style.backgroundColor!==''){continue;}
             item.click();
         }
     }

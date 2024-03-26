@@ -203,7 +203,7 @@ function idb_bigfile_b(crud_type='',do_type='',cskey='',run_fn=false){
                 sub_operation=idb_edit_bigfile_b(db,do_type,cskey,run_fn);
                 break;                
             case 'clear':
-                sub_operation=idb_clear_bigfile_b(db);
+                sub_operation=idb_clear_bigfile_b(db,do_type,cskey,run_fn);
                 break;
             case 'count':
                 sub_operation=idb_count_bigfile_b(db);
@@ -372,7 +372,7 @@ function idb_edit_bigfile_b(db,do_type='',cskey='',run_fn=false){
     }
 }
 
-function idb_clear_bigfile_b(db){
+function idb_clear_bigfile_b(db,do_type='',cskey='',run_fn=false){
     function sub_idb_clear_bigfile_b_count1(cscount){
         //document.getElementById('span_idb_status').innerHTML='IDB 清除前记录数：'+cscount;
     }
@@ -381,7 +381,9 @@ function idb_clear_bigfile_b(db){
         //document.getElementById('span_idb_status').innerHTML='IDB数据清除完毕，现有记录 '+cscount+' 条';
     }
     
-    function sub_idb_clear_bigfile_b_onsuccess(otable){ /* ... */ }
+    function sub_idb_clear_bigfile_b_onsuccess(otable){
+        idb_bigfile_b('read',do_type,cskey,run_fn);
+    }
     //-----------------------
     var rndstr = randstr_b(4, true, false);    
     if ((prompt('输入 ' + rndstr + ' 确认清除全部数据') || '').trim() === rndstr){

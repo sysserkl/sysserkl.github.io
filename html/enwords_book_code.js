@@ -54,15 +54,7 @@ function args_enwords_book(){
 
             if (bltmpstr.substring(0,5)=='book='){
                 book_load_enwords_book(bltmpstr.substring(5,)); //如book=2_5 - 保留注释
-                //let list_t=bltmpstr.substring(5,).split('_');    //如book=2_5 - 保留注释
-                //csbookno_global=Math.min(csbooklist_sub_global.length-1,parseInt(list_t[0])-1);
-                //if (list_t.length>1){
-                    //csbookno2_global=Math.min(csbooklist_sub_global.length-1,parseInt(list_t[1])-1);
-                //}
-                //title_set_enwords_book();
                 title_setted=true;
-                //show_enwords_book();
-                //import_book_js_b(true);
                 break;
             } else if (bltmpstr.substring(0,7)=='allnew='){
                 var new_words_str=bltmpstr.substring(7,);

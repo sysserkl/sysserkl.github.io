@@ -6,10 +6,14 @@ function init_bigfile(){
     idb_bigfile_b('read','','',read_fn_bigfile);
 }
 
+function clear_data_bigfile(){
+    idb_bigfile_b('clear','','',read_fn_bigfile);
+}
+
 function menu_bigfile(){
     var str_t=klmenu_hide_b('');
     var klmenu1=[
-    '<span class="span_menu" onclick="'+str_t+'idb_bigfile_b(\'clear\');">清空数据库</span>',
+    '<span class="span_menu" onclick="'+str_t+'clear_data_bigfile();">清空数据库</span>',
     ];
         
     var klmenu_config=root_font_size_menu_b(str_t);

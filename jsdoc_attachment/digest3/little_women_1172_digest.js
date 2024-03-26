@@ -87,4 +87,5 @@ var digest_global=`
 *Ursa Major
 *Socratic
 *damsel
+*fume
 `.trim().split('\n');

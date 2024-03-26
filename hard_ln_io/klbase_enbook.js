@@ -329,12 +329,12 @@ function book_filter_str_enbook_b(return_boolean=false){
 }
 
 function all_new_words_count_save_old_data_enbook_b(){
+    //批量统计生词 - 保留注释
     var blnew=all_new_words_count_get_enbook_b()[0];
     var blold=all_new_words_count_get_enbook_b(false)[0];
-    if (book_filter_str_enbook_b(true)){
-        if (blold=='' || confirm('是否将'+blold+'记录替换为'+blnew+'记录？')){
-            all_new_words_count_set_enbook_b(false,all_new_words_count_get_enbook_b(true,false));
-        }
+    //不能添加 if (book_filter_str_enbook_b(true)) 判断，以免当月01日的记录被修改无备份 - 保留注释
+    if (blold=='' || confirm('是否将'+blold+'的旧记录替换为当前的'+blnew+'新记录？')){
+        all_new_words_count_set_enbook_b(false,all_new_words_count_get_enbook_b(true,false));
     }
 }
 
