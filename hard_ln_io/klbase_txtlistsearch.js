@@ -3595,6 +3595,11 @@ function init_kltxt_b(cstype,cskeys){
 }
 
 function layout_kltxt_b(cstype=''){
+    function sub_layout_kltxt_b_fn(){
+        enwords_mini_search_frame_style_b();
+        enwords_mini_search_frame_form_b();    
+    }
+    //-----------------------
     if (layout_done_kltxt_global){return;}
     layout_done_kltxt_global=true;
 
@@ -3618,9 +3623,7 @@ function layout_kltxt_b(cstype=''){
     
     top_bottom_arrow_b('div_top_bottom','',true,(ismobile_b()?'1.7rem':'1.4rem'),true,html_name_kltxt_global=='reader',2);    
 
-    enwords_init_b(true);
-    enwords_mini_search_frame_style_b();
-    enwords_mini_search_frame_form_b();
+    enwords_init_b(true,true,sub_layout_kltxt_b_fn);
 }
 
 function digest_enwords_remove_kltxt_b(cstype=''){   

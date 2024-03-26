@@ -84,20 +84,23 @@ function recent_enwords_book(csstr=''){
 }
 
 function init_enwords_book(){
+    function sub_init_enwords_book_fn(){
+        args_enwords_book();
+        //-----------------------
+        if (en_words_book_newwords_continue_global===false){
+            top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.4rem'),true,false,2);
+            input_with_x_b('input_search_enbook',11);
+            recent_enwords_book();
+            
+            enwords_mini_search_frame_style_b();
+            menu_enwords_book();
+            enwords_mini_search_frame_form_b();
+        }    
+    }
+    //-----------------------
     words_searched_arr_global=[];
     new_words_form_enwords_book();
-    enwords_init_b(true);
-    args_enwords_book();
-    //-----------------------
-    if (en_words_book_newwords_continue_global===false){
-        top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.4rem'),true,false,2);
-        input_with_x_b('input_search_enbook',11);
-        recent_enwords_book();
-        
-        enwords_mini_search_frame_style_b();
-        menu_enwords_book();
-        enwords_mini_search_frame_form_b();
-    }
+    enwords_init_b(true,true,sub_init_enwords_book_fn);
 }
 
 function menu_enwords_book(){

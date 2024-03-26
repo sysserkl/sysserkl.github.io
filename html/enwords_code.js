@@ -1004,7 +1004,7 @@ function init_kle(){
         enwords_mini_search_frame_style_b();    
         enwords_mini_search_frame_form_b();    
     }
-    
+    //-----------------------
     input_with_x_b('input_search',(ismobile_b()?11:22),'',false,'input_reg',true);
     character_2_icon_b('🇬🇧');
     top_bottom_arrow_b('div_top_bottom','',true,(ismobile_b()?'1.8rem':'1.4rem'),true,true,2);

@@ -63,12 +63,15 @@ function show_result_ebs_b(content_arr,book_arr,cskey,selepath){
 }
 
 function init_ebs_b(){
-    enwords_init_b(true);
-    enwords_mini_search_frame_style_b();
-    enwords_mini_search_frame_form_b();
-    
+    function sub_init_ebs_b_fn(){
+        enwords_mini_search_frame_style_b();
+        enwords_mini_search_frame_form_b();
+    }
+    //-----------------------
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.4rem'));
     document.getElementById('p_buttons_ebs').insertAdjacentHTML('afterbegin',textarea_buttons_b('textarea_batch_search_ebs','清空,复制'));
+    
+    enwords_init_b(true,true,sub_init_ebs_b_fn);
 }
 
 function txtbook_link_b(ospan,bookid){

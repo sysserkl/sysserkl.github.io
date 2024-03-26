@@ -878,6 +878,18 @@ function sites_tail_klwebsites(){
 }
 
 function init_klwebsites(){
+    function sub_init_klwebsites_fn(){
+        enwords_mini_search_frame_style_b();
+        enwords_mini_search_frame_form_b();
+    }
+    //-----------------------
+    oa_qr_list_websites_global=[];
+    oa_qr_no_websites_global=0;
+    fav_websites_global=[];
+    jieba_websites_global=new Set();
+    today_clicked_websites_global=new Set();
+    canvas_size_websites_global=(ismobile_b()?90:150);
+
     if (typeof sites_all_global == 'undefined'){    //在menu前 - 保留注释
         sites_all_global=[];
     }
@@ -891,9 +903,7 @@ function init_klwebsites(){
     recent_websites_b();
     args_klwebsites();
 
-    enwords_init_b(true,true);
-    enwords_mini_search_frame_style_b();
-    enwords_mini_search_frame_form_b();
+    enwords_init_b(true,true,sub_init_klwebsites_fn);
 }
 
 function args_klwebsites(){

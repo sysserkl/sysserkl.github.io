@@ -61,10 +61,21 @@ function links_rndwords(){
 }
 
 function init_rndwords(){
+    function sub_init_rndwords_fn(){
+        menu_rndwords();
+        args_rndwords();    
+        en_word_temp_get_b();        
+    }
+    //-----------------------
+    slide_no_rndwords_global=0;
+    words_temp_arr_global=[];
+    slide_interval_seconds_rndwords_global=8;
+    ismobile_global=ismobile_b();
+
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.6rem':'1.5rem'),true,true);
     input_with_x_b('input_eng_search',(ismobile_b()?16:20));
-    menu_rndwords();
-    args_rndwords();
+    
+    enwords_init_b(false,true,sub_init_rndwords_fn);
 }
 
 function menu_rndwords(){

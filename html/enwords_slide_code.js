@@ -235,6 +235,14 @@ function cocktail_enslide(cslines='',cspercent=''){
 }
 
 function init_enslide(){
+    function sub_init_enslide_fn(){
+        menu_enslide();
+        local_storage_today_b('enwords_statistics',40,enwords.length,'/');
+        args_enslide();
+        words_count_enwords_b();
+        hide_enslide();    
+    }
+    //-----------------------
     input_with_x_b('input_search',11,'',false,'input_reg',true);
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.4rem'),true,false,2);
     //---
@@ -252,11 +260,6 @@ function init_enslide(){
     if (document.getElementById('input_month').value==''){
         document.getElementById('input_month').value=today.getMonth()+1;
     }    
-    //---
-    enwords_init_b();
-    menu_enslide();
-    local_storage_today_b('enwords_statistics',40,enwords.length,'/');
-    args_enslide();
-    words_count_enwords_b();
-    hide_enslide();    
+    //-----------------------
+    enwords_init_b(false,true,sub_init_enslide_fn);
 }

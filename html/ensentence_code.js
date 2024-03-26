@@ -1,4 +1,9 @@
 function init_ensentence(){
+    function sub_init_ensentence_fn(){
+        enwords_mini_search_frame_style_b();
+        enwords_mini_search_frame_form_b();    
+    }
+    //-----------------------
     top_bottom_arrow_b('div_top_bottom','',true,(ismobile_b()?'1.8rem':'1.6rem'),true,false,2);
     var input_list=[
     ['input_bcolor',12,0.5],
@@ -7,11 +12,10 @@ function init_ensentence(){
     input_with_x_b('input_search',11,'',false,'input_reg',true);
     menu_ensentence();
     input_date_set_enwords_b();
-    enwords_init_b();
-    enwords_mini_search_frame_style_b();
-    enwords_mini_search_frame_form_b();
-    en_sentence_source_current_global=[];   //全局变量 - 保留注释
     character_2_icon_b('🗨');
+    en_sentence_source_current_global=[];   //全局变量 - 保留注释
+
+    enwords_init_b(false,true,sub_init_ensentence_fn);
 }
 
 function menu_ensentence(){

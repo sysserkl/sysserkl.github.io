@@ -240,7 +240,7 @@ function enwords_init_b(simple=false,load_enwords=true,run_fn=false){
             enwords_init_b(simple,false,run_fn);
         }
     }
-    
+    //-----------------------
     if (typeof enwords == 'undefined' && load_enwords){
         load_enword_file_b('enwords','enwords',sub_enwords_init_b_load);
         return;
@@ -259,8 +259,7 @@ function enwords_init_b(simple=false,load_enwords=true,run_fn=false){
     var t0 = performance.now();    
     words_queue_read_b();   //导入临时添加的单词 - 保留注释
     
-    if (simple){
-        //写入序号 - 保留注释
+    if (simple){    //写入序号 - 保留注释
         for (let blxl=0;blxl<enwords.length;blxl++){
             if (enwords[blxl][1]==''){
                 enwords[blxl][1]='[null]';
@@ -268,20 +267,18 @@ function enwords_init_b(simple=false,load_enwords=true,run_fn=false){
             enwords[blxl][2]=en_word_def_istrong_b(enwords[blxl][2]);
             enwords[blxl][3]=blxl;
         }
-        console.log('enwords_init_b() 费时：'+(performance.now() - t0) + ' milliseconds');
-        return;
-    }
-    //添加元素，写入 序号 和 asc 值数组(0,1,2 以及 0 的第一个字符) - 保留注释
-    for (let blxl=0;blxl<enwords.length;blxl++){
-        var blitem=enwords[blxl];
-        if (blitem[1]==''){
-            enwords[blxl][1]='[null]';
+    } else {    //添加元素，写入 序号 和 asc 值数组(0,1,2 以及 0 的第一个字符) - 保留注释
+        for (let blxl=0;blxl<enwords.length;blxl++){
+            var blitem=enwords[blxl];
+            if (blitem[1]==''){
+                enwords[blxl][1]='[null]';
+            }
+            enwords[blxl][2]=en_word_def_istrong_b(blitem[2]);
+            enwords[blxl][3]=blxl;
+            enwords[blxl][4]=enwords_asc_value_b(blitem);
         }
-        enwords[blxl][2]=en_word_def_istrong_b(blitem[2]);
-        enwords[blxl][3]=blxl;
-        enwords[blxl][4]=enwords_asc_value_b(blitem);
     }
-
+    
     if (typeof run_fn == 'function'){
         run_fn();
     }

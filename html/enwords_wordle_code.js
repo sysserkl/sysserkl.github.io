@@ -185,11 +185,14 @@ function answer_wordle(){
 }
 
 function init_wordle(){
+    function sub_init_wordle_fn(){
+        generate_wordle();    
+    }
+    //-----------------------
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.6rem'));
     menu_wordle();
-    enwords_init_b();
     buttons_wordle();
-    generate_wordle();
+    enwords_init_b(false,true,sub_init_wordle_fn);
 }
 
 function menu_wordle(){
