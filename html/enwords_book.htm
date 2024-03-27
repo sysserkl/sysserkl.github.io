@@ -9,7 +9,7 @@ document.title=local_storage_get_b('enbook_title_name');
 var onetab_global=[];
 //var enwords_selenium_scan_global=[];
 
-klbase_addons_import_js_b(['css','date','eng','wiki','books','enbook','enwc','en_de_str','idb'],[],['words/senior_high_school_en_data.js','words/cet6_en_data.js','words/enwords_count_sentence_data.js','words/usr_share_dict_data.js'],['enwords_book_code.js','enwords_book_ico/enwords_book512.png','../../../../data/words/onetab_data.js']);
+klbase_addons_import_js_b(['css','date','eng','wiki','books','enbook','enwc','en_de_str','idb'],[],['words/enwords_data.js','words/senior_high_school_en_data.js','words/cet6_en_data.js','words/enwords_count_sentence_data.js','words/usr_share_dict_data.js'],['enwords_book_code.js','enwords_book_ico/enwords_book512.png','../../../../data/words/onetab_data.js']);
 </script>
 <script>
 load_current_book_b();
@@ -37,14 +37,16 @@ scheme_generation_b();
 css_root_style_b('17.2','13',['base','menu'],[],1);
 en_style_b(true);
 </script>
-<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-</head>
-<body>
 <script>
 book_makelist_b(filter_get_enwords_book());
 mobile_style_enwc_b();
 </script>
-
+<script>
+load_filelist_enwords_book();
+</script>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+</head>
+<body>
 <a name=top></a>
 <h2 style="margin-top:0px;font-size:1.2rem;"><span id="span_title" onclick="showhide_enwc_b();" style="cursor:pointer;">生词统计</span></h2>
 <div id='div_show_hide' style="display:block;margin:0rem 0.5rem;">
@@ -68,13 +70,6 @@ mobile_style_enwc_b();
 <div id="divhtml2" style="margin-left:2rem;margin-right:2rem;"></div>
 <script>
 init_enwords_book();
-</script>
-
-<script>
-import_filelist_enwords_book();
-if (en_words_book_newwords_continue_global){
-    get_new_words_arr_set_enbook_b(2);
-}
 </script>
 <a name=footer></a>
 </body>

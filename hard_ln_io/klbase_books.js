@@ -119,9 +119,9 @@ function import_book_js_b(import_digest=true){
 	    //document.write('\n<script src="'+jsdoc_path+'digest/'+csbooklist_sub_global[csbookno2_global][0]+'_digest.js"><\/script>\n');
 
         document.write('\n<script>\n');
-        document.write('\nvar filelist2=[];\n');
-        document.write('\nfor (let item of filelist){\n');
-        document.write('\n    filelist2.push(item);\n');
+        document.write('\nvar filelist2=[].concat(filelist);\n');
+        //document.write('\nfor (let item of filelist){\n');
+        //document.write('\n    filelist2.push(item);\n');
         document.write('}\n</script>\n');
     }
     txtbook_js_code_file_global=''; //全局变量 - 保留注释
@@ -140,10 +140,10 @@ function import_book_js_b(import_digest=true){
         
         if (jsdoc_num.includes('digest')){
             document.write('\n<script>\n');
-            document.write('var filelist=[];\n');
-            document.write('for (let item of digest_global){\n');
-            document.write('    filelist.push(item);\n');
-            document.write('}\n');
+            document.write('var filelist=[].concat(digest_global);\n');
+            //document.write('for (let item of digest_global){\n');
+            //document.write('    filelist.push(item);\n');
+            //document.write('}\n');
             document.write('</script>\n');        
         } else {
             menu_digest_file_full_name_b(book_no,jsdoc_num,bookid,jsdoc_path,import_digest,true);

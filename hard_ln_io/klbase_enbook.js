@@ -274,10 +274,14 @@ function get_new_words_arr_html_enbook_b(cstype,all_words_set,new_words_set,old_
 }
 
 function new_words_continue_enbook_b(cslength,percent10length=0){
-    if (csbookno_global<0 || !en_words_book_newwords_continue_global){return;}
+    if (csbookno_global<0 || !en_words_book_newwords_continue_global){
+        console.log('csbookno_global:',csbookno_global, 'en_words_book_newwords_continue_global:',en_words_book_newwords_continue_global);   //此行保留 - 保留注释
+        return;
+    }
     
     if (csbookno_global==0){
         if (confirm('是否批量统计生词数量？')==false){
+            localStorage.setItem('enbook_filter',book_filter_str_enbook_b());
             location.href='?';
             return;
         } else {

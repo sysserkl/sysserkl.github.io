@@ -34,9 +34,27 @@ function filter_get_enwords_book(){
     return blstr;
 }
 
+function load_filelist_enwords_book(){
+    var cskeys=href_split_b(location.href);
+    enbook_title_setted_global=false;
+    if (cskeys.length>0 && cskeys[0]!==''){
+        for (let bltmpstr of cskeys){
+            bltmpstr=bltmpstr.trim();
+            if (bltmpstr.substring(0,5)=='book='){
+                book_load_enwords_book(bltmpstr.substring(5,)); //如book=2_5 - 保留注释
+                enbook_title_setted_global=true;
+                break;
+            }         
+        }
+    }
+    if (enbook_title_setted_global==false){
+        title_set_enwords_book();
+    }
+}
+
 function args_enwords_book(){
     var cskeys=href_split_b(location.href);
-    var title_setted=false;
+    //var title_setted=false;
     if (cskeys.length>0 && cskeys[0]!==''){
         //形如：enwords.htm?s=english& - 保留注释
         //第一次处理 - 保留注释
@@ -52,11 +70,11 @@ function args_enwords_book(){
         for (let bltmpstr of cskeys){
             bltmpstr=bltmpstr.trim();
 
-            if (bltmpstr.substring(0,5)=='book='){
-                book_load_enwords_book(bltmpstr.substring(5,)); //如book=2_5 - 保留注释
-                title_setted=true;
-                break;
-            } else if (bltmpstr.substring(0,7)=='allnew='){
+            //if (bltmpstr.substring(0,5)=='book='){
+                //book_load_enwords_book(bltmpstr.substring(5,)); //如book=2_5 - 保留注释
+                //title_setted=true;
+                //break;
+            if (bltmpstr.substring(0,7)=='allnew='){
                 var new_words_str=bltmpstr.substring(7,);
                 var otextarea=document.getElementById('textarea_new_words1');
                 if (otextarea){
@@ -74,9 +92,10 @@ function args_enwords_book(){
     } else {
         show_enwords_book();
     }
-    if (title_setted==false){
-        title_set_enwords_book();
-    }
+    //if (title_setted==false){
+        //title_set_enwords_book();
+    //}
+    //return title_setted;
 }
 
 function recent_enwords_book(csstr=''){
@@ -84,6 +103,14 @@ function recent_enwords_book(csstr=''){
 }
 
 function init_enwords_book(){
+    function sub_init_enwords_book_fn_load(is_ok){
+        if (!is_ok){return;}
+        import_filelist_enwords_book();
+        if (en_words_book_newwords_continue_global){
+            get_new_words_arr_set_enbook_b(2);
+        }    
+    }
+    
     function sub_init_enwords_book_fn(){
         args_enwords_book();
         //-----------------------
@@ -96,6 +123,10 @@ function init_enwords_book(){
             menu_enwords_book();
             enwords_mini_search_frame_form_b();
         }    
+
+        if (enbook_title_setted_global){
+            load_var_b('filelist',-1,2000,sub_init_enwords_book_fn_load);
+        }
     }
     //-----------------------
     words_searched_arr_global=[];
@@ -283,7 +314,6 @@ function new_words_form_enwords_book(){
 
     bljg=bljg+'<p>结果：</p><div id="div_new_words2" style="max-width:900px;font-family:Noto Sans;"></div>';
     document.getElementById('divhtml').innerHTML=bljg;
-    
     input_size_b([['input_first_lines',5]],'id');
 }
 
@@ -867,13 +897,14 @@ function news_words_statistics_enwords_book(){
 function import_filelist_enwords_book(){
     if (filelist!==null && filelist.length>0){
         var bljg=filelist.join('\n');
-        var otextarea_t=document.getElementById('textarea_new_words1')
+        var otextarea_t=document.getElementById('textarea_new_words1');
         if (otextarea_t){
             otextarea_t.value=bljg;
             document.getElementById('span_book_lines_count').innerHTML='共有 '+bljg.trim().split('\n').length+' 行';
         }
         filelist=[];
     }
+    
     if (filelist2!==null && filelist2.length>0){
         var bljg=filelist2.join('\n');
         var otextarea_t=document.getElementById('textarea_new_words2')
