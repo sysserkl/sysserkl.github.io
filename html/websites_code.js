@@ -64,6 +64,7 @@ function menu_klwebsites(change_no=false){
     var klmenu_tag=tag_menu_websites_b(tag_list,'search_klwebsites',str_t);
     
     var klmenu_config=[
+    load_sentence_menu_b(str_t),
     '<span class="span_menu" onclick="'+str_t+'demo_style_klwebsites();">PWA Demo Style</span>',   
     '<span class="span_menu" onclick="'+str_t+'import_pwa_data_klwebsites();">导入 PWA 网址</span>',   
     '<span id="span_jieba_web" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ jieba分词</span>',

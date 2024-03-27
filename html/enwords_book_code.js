@@ -52,28 +52,24 @@ function load_filelist_enwords_book(){
     }
 }
 
-function args_enwords_book(){
+function is_continue_mode_enwords_book(){
     var cskeys=href_split_b(location.href);
-    //var title_setted=false;
     if (cskeys.length>0 && cskeys[0]!==''){
-        //形如：enwords.htm?s=english& - 保留注释
-        //第一次处理 - 保留注释
         for (let bltmpstr of cskeys){
-            bltmpstr=bltmpstr.trim();
-            if (bltmpstr=='continue'){
+            if (bltmpstr.trim()=='continue'){
                 en_words_book_newwords_continue_global=true;
                 break;
             }
         }
-        
-        //第二次处理 - 保留注释
+    }
+}
+
+function args_enwords_book(){
+    var cskeys=href_split_b(location.href);
+    if (cskeys.length>0 && cskeys[0]!==''){
         for (let bltmpstr of cskeys){
             bltmpstr=bltmpstr.trim();
 
-            //if (bltmpstr.substring(0,5)=='book='){
-                //book_load_enwords_book(bltmpstr.substring(5,)); //如book=2_5 - 保留注释
-                //title_setted=true;
-                //break;
             if (bltmpstr.substring(0,7)=='allnew='){
                 var new_words_str=bltmpstr.substring(7,);
                 var otextarea=document.getElementById('textarea_new_words1');
@@ -92,10 +88,6 @@ function args_enwords_book(){
     } else {
         show_enwords_book();
     }
-    //if (title_setted==false){
-        //title_set_enwords_book();
-    //}
-    //return title_setted;
 }
 
 function recent_enwords_book(csstr=''){

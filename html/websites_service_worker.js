@@ -2,16 +2,26 @@ self.addEventListener('install', function(e) {
     e.waitUntil(
         caches.open('pwa_websites_store').then(function(cache) {
             return cache.addAll([
-            'websites_pwa.htm',
-            'websites_pwa_code.js',
-            '../module/jquery.js',            
-            '../hard_ln_io/klbase_css.js',
+            'websites.htm',
+            'websites_code.js',
+            '../module/jquery.js',       
+                 
             '../hard_ln_io/klbase.js',
+            '../hard_ln_io/klbase_css.js',
+            '../hard_ln_io/klbase_date.js',
             '../hard_ln_io/klbase_en_de_str.js',
             '../hard_ln_io/klbase_qr.js',
             '../hard_ln_io/klbase_websites.js',
-            '../jsdata/websites_demo_data.js',
+            '../hard_ln_io/klbase_eng.js',
+            '../hard_ln_io/klbase_wiki.js',
+            '../hard_ln_io/klbase_idb.js',
+
             '../module/jeromeetienne_qrcode.min.js',
+            '../module/masonry.pkgd.js',
+            
+            '../jsdata/sites_all_data.js',
+            '../jsdata/jieba_pb_dict_data.js',
+
             ]);
         })
     );

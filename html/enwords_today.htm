@@ -20,6 +20,7 @@ scheme_generation_b();
 css_root_style_b('17.2','13',['base','menu'],[],1);
 en_style_b(false);
 </script>
+<link rel="manifest" href="enwords_today.webmanifest" />
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 </head>
 <body style="margin:0px;">
@@ -52,6 +53,9 @@ mobile_style_enwc_b();
 </div>
 <div id="divhtml"></div>
 <script>
+pwa_register_b('enwords_today_service_worker.js','enwords_today','countwords','html');
+
+//-----------------------
 init_today_words();
 </script>
 <a name=footer></a>

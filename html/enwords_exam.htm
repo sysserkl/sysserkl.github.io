@@ -22,6 +22,7 @@ span.span_word_blur {color:grey;background-color:grey;}
 <script>
 en_style_b();
 </script>
+<link rel="manifest" href="enwords_exam.webmanifest" />
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 </head>
 <body>
@@ -32,6 +33,9 @@ mobile_style_enwc_b();
 <div id="div_exam_buttons"></div>
 <div id="divhtml"></div>
 <script>
+pwa_register_b('enwords_exam_service_worker.js','enwords_exam','countwords','html');
+
+//-----------------------
 init_klexam();
 </script>
 </body>
