@@ -170,6 +170,7 @@ function menu_temp_txt_share_b(is_php=true){
     ];
     if (!is_php){
         klmenu_config.push('<span class="span_menu" onclick="'+str_t+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>');
+        klmenu_config.push(load_sentence_menu_b(str_t));
     }
     
     var klmenu_link=[
