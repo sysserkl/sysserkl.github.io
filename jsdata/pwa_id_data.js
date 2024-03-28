@@ -1,6 +1,10 @@
 var pwa_id_global=[
 "bible",
+"bigfile",
 "calculator",
+"enwords_exam",
+"enwords_today",
+"enwords",
 "f2f",
 "gps_points",
 "long_term_plans",
@@ -21,5 +25,6 @@ var pwa_id_global=[
 "temp_txt_share",
 "todolist",
 "websites_pwa",
+"websites",
 "wp_pwa",
 ];
