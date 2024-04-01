@@ -109,11 +109,7 @@ function batch_append_wp_pwa(line_style_list=false,result_t=false,show_in_textar
 function electricity_wp_pwa(){
     var otextarea=document.getElementById('textarea_content');
     var blstr=otextarea.value;
-    var error='';
-    var blname='';
-    var bladdress='';        
-    var blamount='';
-    var total_price='';
+    var error,blname,bladdress,blamount,total_price;
     [error,blname,bladdress,blamount,total_price,blstr]=electricity_get_money_b(blstr);    
     if (error!==''){
         alert(error);

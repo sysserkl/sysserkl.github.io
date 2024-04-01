@@ -21,6 +21,7 @@ css_root_style_b('18','12',['base','menu'],[],1);
 <style>
 div#div_search p{font-size:1.15rem;}
 </style>
+<link rel="manifest" href="klsearch.webmanifest" />
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 </head>
 <body>
@@ -32,6 +33,8 @@ div#div_search p{font-size:1.15rem;}
 <div id="div_search" style="margin:0.5rem;"></div>
 <div id="div_status" style="margin:0.5rem;font-size:0.8rem;color:grey;"></div>
 <script>
+pwa_register_b('klsearch_service_worker.js','klsearch','div_status','html');
+
 track_source_b('klsearch',false);
 init_klsearch();
 </script>

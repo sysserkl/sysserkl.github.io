@@ -577,11 +577,50 @@ function import_elm_money_b(textarea_id='textarea_idb_content'){   //饿了么 -
     return [result_t,line_style_list,''];
 }
 
+function import_is_only_one_thing_money_b(textarea_id){
+    var name_list=import_name_list_money_b(false,textarea_id,false);
+    if (name_list.length!==1){
+        alert('编辑框有'+name_list.length+'种物品，应只有一种');
+        return '';
+    }
+    return name_list[0];
+}
+
+function import_number1_money_b(textarea_id){
+    var blname=import_is_only_one_thing_money_b(textarea_id);
+    if (blname==''){return;}
+
+    if (!confirm('是否转换【'+blname+'】的数量为1？')){return;}
+    
+    var otextarea=document.getElementById(textarea_id);
+    var blstr=otextarea.value.trim();
+    blstr=blstr.replace(/^数量:.*$/mg,'数量:1.000');
+    otextarea.value=blstr;
+}
+
+function import_vegetable_fruit_money_b(textarea_id){
+    var blcategory=document.getElementById('select_wp_import_category_name').value;
+    if (blcategory==''){return;}
+    
+    var blname=import_is_only_one_thing_money_b(textarea_id);
+    if (blname==''){return;}
+
+    if (!confirm('是否转换【'+blname+'】的分类为【'+blcategory+'】？')){return;}
+    
+    var otextarea=document.getElementById(textarea_id);
+    var blstr=otextarea.value.trim();
+    blstr=blstr.replace(/^(名称|分类):(.*)$/mg,'$1:'+blcategory);
+    otextarea.value=blstr;
+}
+
 function elm_buttons_money_b(dom_id,textarea_id){
     var blstr=`<span class="aclick" onclick="import_name_list_money_b(true,'`+textarea_id+`');">名称列表</span>
 <span class="aclick" onclick="import_statistics_money_b(true,'`+textarea_id+`');">数量与总价</span>
 <span class="aclick" onclick="import_merge_money_b('`+textarea_id+`');">合并为一条记录</span>
-<select id="select_wp_import"><option>保留</option><option selected>剔除</option></select>
+分类和名称修改为：<select id="select_wp_import_category_name"><option></option><option>蔬菜</option><option>水果</option></select>
+<span class="aclick" onclick="import_vegetable_fruit_money_b('`+textarea_id+`');">修改</span>
+<span class="aclick" onclick="import_number1_money_b('`+textarea_id+`');">数量改为1</span>
+<select id="select_wp_import_retain_or_remove"><option>保留</option><option selected>剔除</option></select>
 <input type="text" id="input_filter_wp_import" onkeydown="if (event.key=='Enter'){return false;}" />
 <span class="aclick" onclick="import_filter_records_money_b(false,'`+textarea_id+`');">筛选</span>
 <span class="aclick" onclick="import_jieba_records_money_b('`+textarea_id+`');">分词</span>`;
@@ -595,12 +634,12 @@ function elm_buttons_money_b(dom_id,textarea_id){
     return op;
 }
 
-function import_name_list_money_b(do_alert=true,textarea_id='textarea_idb_content'){
+function import_name_list_money_b(do_alert=true,textarea_id='textarea_idb_content',with_no=true){
     var otextarea=document.getElementById(textarea_id);
     var blstr=otextarea.value.trim();
     var list_t=blstr.match(/^名称:.*$/mg) || [];
     for (let blxl=0;blxl<list_t.length;blxl++){
-        list_t[blxl]=(blxl+1)+'. '+list_t[blxl].substring(3,);
+        list_t[blxl]=(with_no?(blxl+1)+'. ':'')+list_t[blxl].substring(3,);
     }
     if (do_alert){
         alert(list_t.join('\n'));
@@ -689,7 +728,7 @@ function import_filter_records_money_b(from_check_box=false,textarea_id='textare
     var is_reg=false;
     [blstr,is_reg]=str_reg_check_b(blstr,false);
 
-    var is_include=(document.getElementById('select_wp_import').value=='保留');
+    var is_include=(document.getElementById('select_wp_import_retain_or_remove').value=='保留');
     var included_t=[];
     var excluded_t=[];
     for (let blxl=0;blxl<raw_list.length;blxl++){
