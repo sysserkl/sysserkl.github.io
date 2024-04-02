@@ -1,5 +1,4 @@
 var csbooklist_source_global=[
-// booklist_current
 ["da_dai_li_ji_zhong_gzxsdzhjhj_114759", "大戴礼记(中国哲学书电子化计划)","已整理","3",""],
 ["twenty_thousand_leagues_under_the_sautotw_6548","Twenty Thousand Leagues Under the Seas: An Underwater Tour of the World","englishwords,已整理","3",""],
 ["adventures_of_huckleberry_finn_2913", "Adventures of Huckleberry Finn(Mark Twain)","已整理,englishwords","3",""],
