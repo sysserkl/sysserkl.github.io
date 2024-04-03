@@ -1974,7 +1974,7 @@ function select_prev_or_next_b(oselect,cstype,filter_visible=false){
     return bldone;
 }
 
-function character_2_icon_b(csstr,cssize=24,line_width=5,mobile_style=true){
+function character_2_icon_b(csstr,cssize=24,line_width=5,mobile_style=true,change_ico=true,csfill='#cecece'){
     function sub_character_2_icon_b_num_get(csstr){
         if (isNaN(csstr)){
             csstr=asc_sum_b(csstr);
@@ -1984,20 +1984,13 @@ function character_2_icon_b(csstr,cssize=24,line_width=5,mobile_style=true){
         return csstr;
     }
     //-----------------------
-    var olink=document.querySelector('link[rel="icon"], link[rel="shortcut icon"]');
-    if (!olink){
-        var olink = document.createElement('link');
-        olink.setAttribute('rel','shortcut icon');
-        document.head.appendChild(olink);
-    }
-    
     var ocanvas = document.createElement('canvas');
     ocanvas.setAttribute('width',cssize);
     ocanvas.setAttribute('height',cssize);
 
     var ctx = ocanvas.getContext('2d');
 
-    ctx.fillStyle = '#cecece';
+    ctx.fillStyle = csfill;
     ctx.fillRect(0, 0, ocanvas.width, ocanvas.height);
 
     if (mobile_style && ismobile_b()){        
@@ -2042,8 +2035,18 @@ function character_2_icon_b(csstr,cssize=24,line_width=5,mobile_style=true){
     ctx.fillStyle = 'black';
     ctx.fillText(csstr, cssize/2,cssize/2);
    
-    var imgsrc=ocanvas.toDataURL('image/jpeg');
-    olink.href=imgsrc;
+    var imgsrc=ocanvas.toDataURL('image/png');
+    //-----------------------
+    if (change_ico){
+        var olink=document.querySelector('link[rel="icon"], link[rel="shortcut icon"]');
+        if (!olink){
+            var olink = document.createElement('link');
+            olink.setAttribute('rel','shortcut icon');
+            document.head.appendChild(olink);
+        }
+        olink.href=imgsrc;
+    }
+    return imgsrc;
 }
 
 function canvas_box_with_4_lines_b(ocanvas,ctx,color_list,dash_list){
