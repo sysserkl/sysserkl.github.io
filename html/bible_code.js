@@ -40,6 +40,7 @@ function bookmarks_get_bible(only_change_title=false){
 
 function new_words_bible(){
     if (klmenu_check_b('span_show_new_enwords',false)){
+        if (typeof enwords == 'undefined'){return;}
         get_new_words_arr_obj_enbook_b(2,document.getElementById('divhtml').innerText,document.querySelectorAll('.txt_content'));
     }
 }
@@ -74,6 +75,7 @@ function menu_bible(){
     }
     var klmenu2=[
     '<span id="span_reg_bible" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 正则</span>',            
+    '<span id="span_confuse_bible" class="span_menu" onclick="'+str_t+'confuse_bible();">⚪ 混淆显示</span>',        
     '<span class="span_menu" onclick="'+str_t+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>',    
     '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'bible\');">更新版本</span>',
     '<span class="span_menu" onclick="'+str_t+'help_bible();">Help</span>',
@@ -112,6 +114,12 @@ function menu_bible(){
 
     klmenu_check_b('span_reg_bible',true);
     klmenu_check_b('span_highlight_keys',true);
+}
+
+function confuse_bible(){
+    if (klmenu_check_b('span_confuse_bible',true)){
+        quote_load_b();
+    }
 }
 
 function compare_data_bible(){
@@ -1385,6 +1393,12 @@ function chapter_one_bible(startno=0,endno=0){
     var enstr='';
     var cnstr='';
     var fav_list=array_unique_b(fav_get_bible(),true);
+    
+    var do_confuse,quote_len;
+    [do_confuse,quote_len]=quote_attribute_b('span_confuse_bible');    
+    
+    var colspan=((use_kjv_cn_global[0] && use_kjv_cn_global[1])?2:1);
+    
     for (let blxl=startno;blxl<cnbible_global.length;blxl++){
         if (blxl==0 || found2==false && kjv[blxl].substring(0,3)=='== ' && kjv[blxl].slice(-3,)==' =='){
             continue;
@@ -1420,6 +1434,10 @@ function chapter_one_bible(startno=0,endno=0){
         }
         bljg=bljg+'</tr>\n';
 
+        if (do_confuse){
+            bljg=bljg+'<tr><td colspan='+colspan+'><div style="column-count:'+colspan+';"><p style="line-height:1.5rem;margin-bottom:0.5rem;">'+quote31_global[blxl % quote_len].join('</p><p style="line-height:1.5rem;margin-bottom:0.5rem;">')+'</p></div></td></tr>';
+        }
+        
         if (kjv[blxl].substring(0,3)=='== ' && kjv[blxl].slice(-3,)==' =='){
             found2=true;
         }

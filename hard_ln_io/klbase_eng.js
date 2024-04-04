@@ -201,35 +201,8 @@ function load_sentence_menu_b(jsstr){
 }
 
 function load_enword_file_b(varname,filename,csfn=false,do_echo=true,direct_from_bigfile=false){
-    function sub_load_enword_file_b_bigfile(){
-        if (eval('typeof '+varname) == 'undefined'){
-            if (typeof idb_bigfile_b !== 'function'){
-                console.log('未发现函数 idb_bigfile_b');
-                return;
-            }
-            console.log('尝试从bigfile载入',varname);
-            
-            idb_bigfile_b('read','eval',filename+'_data.js');
-            load_var_b(varname,-1,2000,csfn);
-        }
-    }
-    //-----------------------
-    if (eval('typeof '+varname) == 'undefined'){
-        if (do_echo){
-            console.log(varname+' 未定义');
-        }
-        if (direct_from_bigfile || local_storage_get_b('first_source_bigfile')=='1'){
-            sub_load_enword_file_b_bigfile();
-        } else {
-            var file_list=klbase_addons_import_js_b([],[],['words/'+filename+'_data.js'],[],false,false);    
-            file_dom_create_b(file_list,true,'js');
-            load_var_b(varname,-1,2000,csfn,sub_load_enword_file_b_bigfile);
-        }
-    } else {
-        if (do_echo){
-            console.log(varname+' 已存在');        
-        }
-    }
+    var file_list=klbase_addons_import_js_b([],[],['words/'+filename+'_data.js'],[],false,false);        
+    load_js_var_file_b(varname,file_list,filename+'_data.js',csfn,do_echo,direct_from_bigfile);
 }
 
 function import_enwords_data_b(){

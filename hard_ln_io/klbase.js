@@ -322,6 +322,22 @@ function test_load_b(){
     file_dom_create_b(flist);
 }
 
+function quote_load_b(csfn=false,do_echo=true,direct_from_bigfile=false){
+    var fname='quote'+date_2_ymd_b(false,'m')+'_data.js';
+    var flist=klbase_addons_import_js_b([],[],['bible_quote/'+fname],[],false,false);    
+    load_js_var_file_b('quote31_global',flist,fname,csfn,do_echo,direct_from_bigfile);
+}
+
+function quote_attribute_b(csid){
+    var do_confuse=klmenu_check_b(csid,false) && typeof quote31_global !== 'undefined';
+    var quote_len=-1;
+    if (do_confuse){
+        quote31_global.sort(randomsort_b);
+        quote_len=quote31_global.length;
+    }
+    return [do_confuse,quote_len];
+}
+
 function file_dom_create_b(file_list,in_head=true,cstype='js'){
     var today=(is_local_b()?'?'+today_str_b('d',''):'');
 
@@ -3680,4 +3696,35 @@ function selection_expand_b(){
     oselection.removeAllRanges();
     oselection.addRange(range);
     //手机浏览器自身负责渲染文本选区，并且通常不会直接响应JavaScript创建的Range对象而显示选择图标。某些移动浏览器可能对JavaScript修改文本选区的支持有限，尤其是在没有用户交互的情况下。此外，为了用户体验和安全原因，现代浏览器可能会限制非用户触发的文本选区更改行为。
+}
+
+function load_js_var_file_b(varname,file_list,filename,csfn=false,do_echo=true,direct_from_bigfile=false){
+    function sub_load_js_var_file_b_bigfile(){
+        if (eval('typeof '+varname) == 'undefined'){
+            if (typeof idb_bigfile_b !== 'function'){
+                console.log('未发现函数 idb_bigfile_b');
+                return;
+            }
+            console.log('尝试从bigfile载入',varname);
+            
+            idb_bigfile_b('read','eval',filename);
+            load_var_b(varname,-1,2000,csfn);
+        }
+    }
+    //-----------------------
+    if (eval('typeof '+varname) == 'undefined'){
+        if (do_echo){
+            console.log(varname+' 未定义');
+        }
+        if (direct_from_bigfile || local_storage_get_b('first_source_bigfile')=='1'){
+            sub_load_js_var_file_b_bigfile();
+        } else {
+            file_dom_create_b(file_list,true,'js');
+            load_var_b(varname,-1,2000,csfn,sub_load_js_var_file_b_bigfile);
+        }
+    } else {
+        if (do_echo){
+            console.log(varname+' 已存在');        
+        }
+    }
 }

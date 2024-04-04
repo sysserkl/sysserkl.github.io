@@ -141,6 +141,10 @@ function en2cn_klexam(csnumber='',cstype='en2cn'){
     var important_list=(isrecent?en_word_temp_get_b('important'):[]);
     var include_no=new Set();
     var hr_str=(is_rnd_eng_klexam()?'border-top: 0.1rem dotted '+scheme_global['memo']+';':'');
+    
+    var do_confuse,quote_len;
+    [do_confuse,quote_len]=quote_attribute_b('span_confuse_klexam');
+    
 	for (let item of enwords){
         if (isrecent){
             var blat=en_words_temp_global.indexOf(item[0]);
@@ -153,7 +157,10 @@ function en2cn_klexam(csnumber='',cstype='en2cn'){
         bljg=bljg+'<p style="font-size:1rem;margin-bottom:1rem;margin-top:0.5rem;"><span class="oblong_box" style="cursor:pointer;" onclick="showcn_klexam(\''+blxl+'\');">释义</span> <span id="span_en2cn_'+blxl+'"></span></p>';
         bljg=bljg+'<div id="div_en2cn_sentence_'+blxl+'" class="div_sentence" style="display:none;'+hr_str+'"></div>';
         blxl=blxl+1;
-        if (blxl==csnumber){break;}
+        if (do_confuse){
+            bljg=bljg+'<p style="line-height:1.5rem;margin-bottom:0.5rem;">'+quote31_global[blxl % quote_len].join('</p><p style="line-height:1.5rem;margin-bottom:0.5rem;">')+'</p>';
+        }
+        if (blxl==csnumber){break;}        
 	}
     console.log('en2cn_klexam()',recent_type,blxl,Math.min(...include_no),Math.max(...include_no)); //此行保留 - 保留注释
 
@@ -175,11 +182,18 @@ function unblur_klexam(ospan){
     ospan.style.backgroundColor=scheme_global['background'];
 }
 
+function confuse_klexam(){
+    if (klmenu_check_b('span_confuse_klexam',true)){
+        quote_load_b();
+    }
+}
+
 function menu_klexam(){
     var str_t=klmenu_hide_b('');
     var klmenu1=[
     load_sentence_menu_b(str_t),
     '<span id="span_show_en_sentence_b" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 显示例句</span>',    
+    '<span id="span_confuse_klexam" class="span_menu" onclick="'+str_t+'confuse_klexam();">⚪ 混淆显示</span>',    
     ];
 
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','11rem','1rem','1rem','30rem'),'','0rem')+' ');
