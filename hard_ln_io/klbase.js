@@ -287,10 +287,14 @@ function klbase_addons_import_js_b(klbase_list=[],module_list=[],jsdata_list=[],
     return bljg;
 }
 
+function file_date_parameter_b(){
+    return is_local_b()?'?'+today_str_b('d','')+local_storage_get_b('file_date_paramter'):'';
+}
+
 function write_js_css_b(cslist,do_write=true){
     //元素形如：[ "js", "http://127.0.0.1/klwebphp/klbase_css.js", "" ] - 保留注释
     var links_t=[];
-    var today=(is_local_b()?'?'+today_str_b('d',''):'');
+    var today=file_date_parameter_b();
     
     for (let item of cslist){   //不能sort - 保留注释
         if (['js','css'].includes(item[0])){
@@ -339,7 +343,7 @@ function quote_attribute_b(csid){
 }
 
 function file_dom_create_b(file_list,in_head=true,cstype='js'){
-    var today=(is_local_b()?'?'+today_str_b('d',''):'');
+    var today=file_date_parameter_b();
 
     var blurl=location.pathname;
     var blat=blurl.lastIndexOf('/');

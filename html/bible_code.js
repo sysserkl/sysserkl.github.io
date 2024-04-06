@@ -1767,7 +1767,7 @@ function load_data_bible(load_from_idb=false){
 }
 
 function load_filelist_bible(do_init=true){
-    var today=(is_local_b()?'?'+today_str_b('d',''):'');
+    var today=file_date_parameter_b();
     var sele_path=klbase_sele_path_b()[1];
     document.write('\n<script src="'+sele_path+'/jsdoc3/bible_kjv_890.js'+today+'"><\/script>\n');
     console.log(sele_path+'/jsdoc3/bible_kjv_890.js'+today);

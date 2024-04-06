@@ -107,7 +107,7 @@ function remove_from_array_rlater_b(csid,prefix){
 }
 
 function import_data_rlater_b(csarray,load_fn_name){
-    var today=(is_local_b()?'?'+today_str_b('d',''):'');
+    var today=file_date_parameter_b();
     var blhref=new URL('./',location.href)['href'];
 
     for (let item of csarray){

@@ -95,7 +95,7 @@ function book_path_b(jsdoc_num,is_private=false){
 function import_one_book_b(bookname,jsdoc_num,do_write=true){
     //bookname: klwiki_en.js - 保留注释
     filelist=[];    //全局变量 - 保留注释
-    var blpath_name=book_path_b(jsdoc_num)+bookname+(is_local_b()?'?'+today_str_b('d',''):'');
+    var blpath_name=book_path_b(jsdoc_num)+bookname+file_date_parameter_b();
     if (do_write){
         document.write('\n<script src="'+blpath_name+'"><\/script>\n');
         console.log(blpath_name);
@@ -105,7 +105,7 @@ function import_one_book_b(bookname,jsdoc_num,do_write=true){
 
 function import_book_js_b(import_digest=true){
     var book_no = csbookno_global;
-    var today=(is_local_b()?'?'+today_str_b('d',''):'');
+    var today=file_date_parameter_b();
     if (csbookno2_global>=0){
         var jsdoc_num='';
         if (csbooklist_sub_global[csbookno2_global].length>=4){
@@ -228,7 +228,7 @@ function menu_digest_file_full_name_b(book_no=false,jsdoc_num=false,bookid=false
         write_js_css_b(result_t);
     }
 
-    var today=(is_local_b()?'?'+today_str_b('d',''):'');    
+    var today=file_date_parameter_b();
     if (import_digest){
         return [js_menu_file+today,js_digest_file+today];
     } else {
@@ -469,7 +469,7 @@ function load_current_book_b(load_digest_file=false,do_write=true){
         blhref=new URL('../',blhref)['href']+'jsdata/';
     }
     
-    var today=(is_local_b()?'?'+today_str_b('d',''):'');
+    var today=file_date_parameter_b();
     
     var file_list=[];
     var book_list_js=blhref+'booklist_current_data.js';
