@@ -145,6 +145,7 @@ function menu_lsm(){
     klmenu_config=klmenu_config.concat([ 
     '<span class="span_menu" onclick="'+str_t+'machine_name_lsm();">machine name</span>',
     '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'lsm\');">更新版本</span>',
+    '<span class="span_menu" onclick="'+str_t+'file_date_paramter_refresh_lsm();">刷新 file date paramter</span>',
     ]);
     
     var group_list=[
@@ -154,6 +155,10 @@ function menu_lsm(){
     klmenu_config.push(menu_container_b(str_t,group_list,''));        
         
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_local,'','20rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','60rem'),'','0rem')+' ');
+}
+
+function file_date_paramter_refresh_lsm(){
+    localStorage.setItem('file_date_paramter','_'+randstr_b());
 }
 
 function local_storage_hash_lsm(cstype){
