@@ -901,10 +901,8 @@ function en_word_temp_change_b(ospan,csword,cstype=''){
         }
     } else {
         var recent_bookmark=enwords_recent_bookmark_get_b();
-        if (csword==recent_bookmark){
-            //如果单词是书签，则不可剔除 - 保留注释
-            return;
-        }
+        if (csword==recent_bookmark){return;} //如果单词是书签，则不可剔除 - 保留注释
+        
         ospan.style.backgroundColor='';
         if (cstype=='switch' || cstype=='remove'){
             var blat=en_words_temp_global.indexOf(csword);
@@ -1304,6 +1302,7 @@ function en_words_temp_textarea_b(divname,calljsname=''){
         calljsname=calljsname+'();';
     }    
     bljg=bljg+'<span class="aclick" onclick="en_words_temp_update_b(\''+divname+'\');'+calljsname+'">Update</span> ';
+    bljg=bljg+'<span class="aclick" onclick="recent_words_remove_old_date_b(400);'+calljsname+'">清除400天以前的日期标记</span> ';
     bljg=bljg+textarea_buttons_b('textarea_word_temp','全选,清空,复制,导入temp_txt_share','enwords_temp');    
     bljg=bljg+'<span class="aclick" onclick="en_words_temp_send_to_txt_b();" title="send to remote temp memo">📤</span> ';
 
@@ -1313,6 +1312,29 @@ function en_words_temp_textarea_b(divname,calljsname=''){
     bljg=bljg+'</form>\n';
     
     document.getElementById(divname).innerHTML=bljg;
+}
+
+function recent_words_remove_old_date_b(csnum){
+    var otextarea=document.getElementById('textarea_word_temp');
+    var list_t=otextarea.value.split('\n');
+    list_t.reverse();
+    var result_t=[];
+    var blxl=0;
+    for (let item of list_t){
+        if (item.substring(0,4)=='=== ' && item.slice(-4,)==' ==='){
+            if (blxl>csnum){continue;}
+            blxl=blxl+1;
+        }
+        result_t.push(item);
+    }
+    result_t.reverse();
+    if (result_t.length==list_t.length){
+        alert('无可删除的日期行');
+        return;
+    }
+    
+    if (!confirm('原有行数 '+list_t.length+' 行，剔除后剩余行数 '+result_t.length+' 行，是否替换编辑框内容？')){return;}
+    otextarea.value=result_t.join('\n');    
 }
 
 function en_words_temp_send_to_txt_b(){

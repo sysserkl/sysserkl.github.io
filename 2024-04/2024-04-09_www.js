@@ -1,0 +1,16 @@
+var sourcelist=[
+["https://www.solidot.org/story?sid=77803","中国电动汽车厂商下注电池更换","2024-04-09","Solidot","1",],
+["https://www.solidot.org/story?sid=77804","怀孕期间的蛋白质摄入与后代的脸部外貌相关","2024-04-09","Solidot","1",],
+["https://www.solidot.org/story?sid=77805","报告称去年 Microsoft Exchange 遭到入侵是完全可预防的","2024-04-09","Solidot","1",],
+["https://www.solidot.org/story?sid=77806","LIGO 探测到中子星和超轻质量黑洞合并","2024-04-09","Solidot","1",],
+["https://www.solidot.org/story?sid=77807","车臣禁止节奏太快或太慢的音乐","2024-04-09","Solidot","1",],
+["https://www.solidot.org/story?sid=77808","内存损坏导致旅行者1号向地球发送乱码","2024-04-09","Solidot","1",],
+["https://www.solidot.org/story?sid=77809","一场恒星大爆炸将在未来五个月内发生","2024-04-09","Solidot","1",],
+["https://www.solidot.org/story?sid=77810","台积电从美国获得 116 亿美元补贴建造第三座芯片工厂","2024-04-09","Solidot","1",],
+["https://www.solidot.org/story?sid=77811","香港男子感染罕见致命的猴疱疹病毒","2024-04-09","Solidot","1",],
+["https://www.solidot.org/story?sid=77812","Google 起诉中国加密货币应用开发者","2024-04-09","Solidot","1",],
+["https://www.solidot.org/story?sid=77802","美国在 AI 领域独占鳌头","2024-04-09","Solidot","1",],
+["https://www.solidot.org/story?sid=77801","新 Windows 驱动阻止修改默认程序","2024-04-09","Solidot","1",],
+["https://www.solidot.org/story?sid=77800","Andrew Tridgell 重返 rsync 项目","2024-04-09","Solidot","1",],
+["https://www.solidot.org/story?sid=77796","PCIe 7.0 规范预计 2025 年发布","2024-04-09","Solidot","1",],
+];

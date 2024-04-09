@@ -634,7 +634,7 @@ function menu_base_enwc_b(){
     var menu3=menu_recent_enwc_b(str2_t,'show_recent_words_enwc_b');
     menu3=menu3.concat([ 
     '<span class="span_menu" onclick="'+'en_word_recent_bookmark_b();'+str2_t+'">设置书签</span>',
-    '<span class="span_menu" onclick="'+'recent_words_dead_enwc_b();'+str2_t+'">失效的最近记忆的单词</span>',    
+    '<span class="span_menu" onclick="'+'recent_words_dead_enwc_b();'+str2_t+'">失效的最近记忆单词</span>',    
     ]);
     return [menu1,menu2,menu3];
 }
