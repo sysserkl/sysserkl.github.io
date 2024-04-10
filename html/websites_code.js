@@ -67,6 +67,7 @@ function menu_klwebsites(change_no=false){
     load_sentence_menu_b(str_t),
     '<span class="span_menu" onclick="'+str_t+'demo_style_klwebsites();">PWA Demo Style</span>',   
     '<span class="span_menu" onclick="'+str_t+'import_pwa_data_klwebsites();">导入 PWA 网址</span>',   
+    '<span class="span_menu" onclick="'+str_t+'import_bigfile_klwebsites();">导入 bigfile 网址文件</span>',   
     '<span id="span_jieba_web" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ jieba分词</span>',
     '<span id="span_category_with_p_web" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 分类分段</span>',
     ];    
@@ -86,11 +87,26 @@ function import_pwa_data_klwebsites(){
         sites_all_global.push([result_t[1],result_t[2],result_t[0]+(result_t[3]==''?'':','+result_t[3]),10,'']);
     }
     
+    sites_reload_klwebsites(true);
+}
+
+function import_bigfile_klwebsites(){
+    sites_all_global=undefined;
+    load_js_var_file_b('sites_all_global',[],'sites_all_data.js',sites_reload_klwebsites,true,true);
+}
+
+function sites_reload_klwebsites(is_pwa=false,do_search=true){
     sites_type_klwebsites();
-    document.getElementById('div_websites_menu').outerHTML='';
-    menu_klwebsites(true);
+    var omenu=document.getElementById('div_websites_menu');
+    if (omenu){
+        omenu.outerHTML='';
+    }
+    menu_klwebsites(is_pwa);
     sites_tail_klwebsites();
-    search_klwebsites('',7);
+    
+    if (do_search){
+        search_klwebsites('',7);    
+    }
 }
 
 function key_batch_search_by_engine_klwebsites(is_enword=true,csengine='bing',max_result=5){
@@ -897,9 +913,7 @@ function init_klwebsites(){
     character_2_icon_b('🕸');
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.5rem':'1.4rem'));
 
-    sites_type_klwebsites();
-    menu_klwebsites();  //等 #http 之类网站被修正后，引入 menu - 保留注释
-    sites_tail_klwebsites();
+    sites_reload_klwebsites(false,false);
     
     recent_websites_b();
     args_klwebsites();

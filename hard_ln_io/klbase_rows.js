@@ -268,7 +268,7 @@ function lines_del_chars_klr_b(cstype,cscount,csid='textarea_rows_content'){
 function replace_strs_klr_b(csrep1,csrep2,textarea_id='textarea_rows_content',status_id='textarea_status'){
     //csrep1 被替换
     //csrep2 替换为，当 csrep1 为数组时，csrep2无作用
-	if (csrep1==''){return;}
+	if (csrep1==''){return [false,false];}
 
 	var otextarea = document.getElementById(textarea_id);
 	var blstr = otextarea.value;
@@ -472,6 +472,7 @@ function strquick_klr_b(cstype='',csid='textarea_rows_content',status_id='textar
         ostatus.value=cstype + ' 处理前行数：' + document.getElementById(csid).value.split('\n').length;
     }
     
+    var result_t=null;
 	switch (cstype){
         case 'number_sub':
             var otextarea = document.getElementById(csid);
@@ -632,7 +633,7 @@ function strquick_klr_b(cstype='',csid='textarea_rows_content',status_id='textar
             ['^\\["','<br /><a href='],
             ['"],','</a>'],
             ];
-			replace_strs_klr_b(arr_t,'',csid);
+			result_t=replace_strs_klr_b(arr_t,'',csid);
 			break;
 		case 'js2wikihref':
             var arr_t=[
@@ -695,6 +696,7 @@ function strquick_klr_b(cstype='',csid='textarea_rows_content',status_id='textar
     if (ostatus){
         ostatus.value=ostatus.value + ' 处理后行数：' + document.getElementById(csid).value.split('\n').length;
     }
+    return result_t;
 }
 
 function clear_copy_tab_title_url_klr_b(csid){

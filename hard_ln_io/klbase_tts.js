@@ -147,6 +147,15 @@ function share_style_temp_txt_share_b(){
     otextarea.value=list_t.join('\n');
 }
 
+function js2link_temp_txt_share_b(){
+    strquick_klr_b('js2href','textarea_temp_txt_share');
+
+    var blbuttons='<p>'+close_button_b('div_status','')+'</p>\n';
+    var odiv=document.getElementById('div_status');
+    odiv.innerHTML=document.getElementById('textarea_temp_txt_share').value+blbuttons;
+    odiv.scrollIntoView();
+}
+
 function menu_temp_txt_share_b(is_php=true){
     var str_t=klmenu_hide_b('');
     var klwebphp,sele_path;
@@ -156,6 +165,7 @@ function menu_temp_txt_share_b(is_php=true){
     '<span class="span_menu" onclick="'+str_t+'spilt_rows_temp_txt_share_b();">one textarea with one row</span>',
     '<span class="span_menu" onclick="'+str_t+'spilt_rows_temp_txt_share_b(\'\\n-----\\n\');">split rows by -----</span>',
     '<span class="span_menu" onclick="'+str_t+'clear_copy_tab_title_url_klr_b(\'textarea_temp_txt_share\');">clear copy tab title url</span>',
+    '<span class="span_menu" onclick="'+str_t+'js2link_temp_txt_share_b();">JavaScript 数组 => 网址链接</span>',    
     ];
     
     var klmenu_share=[
