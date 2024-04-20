@@ -14,9 +14,11 @@ function menu_bmark(){
     var klmenu1=[
     '<span class="span_menu" onclick="'+str_t+'hash_bmark(\'crypto\');">hash测试(window.crypto)</span>',
     '<span class="span_menu" onclick="'+str_t+'hash_bmark(\'sha.js\',5000);">hash测试(sha.js)</span>',
+    '<span class="span_menu" onclick="'+str_t+'measureFrame_bmark();">requestAnimationFrame测试</span>',
+    '<span class="span_menu" onclick="'+str_t+'color_boxs_bmark();">color_boxs测试</span>',
     ];
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🔩','16rem','1rem','1rem','30rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🔩','18rem','1rem','1rem','30rem'),'','0rem')+' ');
 }
 
 function hash_bmark(cstype='crypto',csmax=2500){
@@ -83,4 +85,73 @@ async function hashArrayElements_bmark(arr){
         //这样，当需要处理大量字符串时，可以利用异步并行计算提高效率。
         return await hashStringWithSHA512_bmark(str); //由于 hashStringWithSHA512_bmark 是异步的（由其返回 Promise 推断），我们使用 await 关键字等待其完成并返回结果。
     }));
+}
+
+function measureFrame_bmark(csend=500){
+    function sub_measureFrame_bmark(){
+        //浏览器会在下一帧即将被渲染前调用注册的回调函数，这意味着回调函数执行的时间点总是与显示器的刷新周期保持一致。对于大多数现代显示器来说，刷新率通常是60Hz，即每秒刷新60次，所以回调函数大约每16.7毫秒（1000ms / 60Hz）会被调用一次。这样确保了动画的每一帧都能够恰当地与屏幕刷新结合，避免了因不同步导致的动画撕裂或卡顿。
+        //当浏览器窗口不是当前活动窗口（例如用户切换到了另一个标签页或应用），或者页面元素不在可视区域时，浏览器会智能地暂停 requestAnimationFrame 回调的执行，直到页面重新变为可见。这有助于减少不必要的计算和渲染工作，进而节省CPU和GPU资源。
+        //使用 requestAnimationFrame 制作动画时，开发者可以在每个动画帧的回调函数中修改 DOM 或 CSS 样式，浏览器会尽可能合并这些改动并在一次重排（layout）和重绘（paint）过程中完成更新，避免连续帧之间产生过多的布局和渲染工作，提高动画性能。
+        //在高频触发的事件如滚动(scroll)或窗口大小变化(resize)中，使用 requestAnimationFrame 可以确保在一个刷新间隔内，动画相关的逻辑仅被执行一次，有助于避免过高的CPU占用以及提升用户体验。——通义千问
+        requestAnimationFrame(function callback(){
+            if (blxl>=csend){
+                var otextarea_result=document.getElementById('textarea_result_bmark');
+                otextarea_result.value='measureFrame_bmark('+csend+') 费时：'+milliseconds2hms_b(performance.now() - t0) + '\n'+otextarea_result.value;
+            } else {
+                if (blxl % 100 == 0){
+                    otextarea_process.value=otextarea_process.value+blxl+' ';
+                }
+                blxl=blxl+1;
+                sub_measureFrame_bmark();
+            }
+        });    
+    }
+    
+    var blxl=0;
+    var otextarea_process=document.getElementById('textarea_process_bmark');
+    var t0 = performance.now();
+    sub_measureFrame_bmark();
+}
+
+function color_boxs_bmark(csstep=10){
+    function sub_color_boxs_bmark_one_color(){
+        if (blxl>=bllen){
+            otextarea_result.value='color_boxs_bmark('+csstep+') 费时：'+milliseconds2hms_b(performance.now() - t0) + '\n'+otextarea_result.value;    
+        
+            odiv.insertAdjacentHTML('afterbegin',close_button_b('divhtml'));
+            return;
+        }
+        
+        odiv.insertAdjacentHTML('afterbegin','<div style="position:relative;float:left;width:1rem;height:1rem;margin:0.1rem;background-color:rgb('+list_t[blxl]+');"></div>');
+        blxl=blxl+1;
+        try {
+            if (blxl % 500 == 0){   //这个数值不能太大 - 保留注释
+                otextarea_process.value=otextarea_process.value+blxl+' ';
+                setTimeout(sub_color_boxs_bmark_one_color,1);
+            } else {
+                sub_color_boxs_bmark_one_color();
+            }
+        } catch (error){
+            otextarea_result.value='color_boxs_bmark('+csstep+') error：'+error.message + '\n'+otextarea_result.value;
+        }
+    }
+    
+    var t0 = performance.now();
+    var list_t=[];
+    for (let blr=0;blr<256;blr=blr+csstep){
+        for (let blg=0;blg<256;blg=blg+csstep){
+            for (let blb=0;blb<256;blb=blb+csstep){
+                list_t.push(blr+','+blg+','+blb);
+            }
+        }    
+    }
+    var blxl=0;
+    var bllen=list_t.length;
+
+    var otextarea_process=document.getElementById('textarea_process_bmark');
+    otextarea_process.value=otextarea_process.value+'Total: '+bllen+' ';
+    var otextarea_result=document.getElementById('textarea_result_bmark');        
+
+    var odiv=document.getElementById('divhtml');
+    sub_color_boxs_bmark_one_color();
 }
