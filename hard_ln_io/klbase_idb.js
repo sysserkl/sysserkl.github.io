@@ -244,13 +244,20 @@ function idb_read_bigfile_b(db,do_type='',cskey='',run_fn=false){
         var cursor = event.target.result;
         if (cursor){
             if (cskey=='' || cursor.value.name==cskey){
-                if (do_type=='eval'){
-                    var odom = document.createElement('script');
-                    document.head.appendChild(odom);    
-                    //odom.src=cursor.value.content; //此行保留 - 保留注释
-                    odom.innerHTML=cursor.value.content; //此行保留 - 保留注释                    
-                } else {
-                    raw_data_bigfile.push([cursor.value.id,cursor.value.name,cursor.value.content.slice(0,100),(cursor.value.content.length/1024/1024).toFixed(2)+'M',cursor.value.date]);
+                switch (do_type){
+                    case 'eval':
+                        var odom = document.createElement('script');
+                        document.head.appendChild(odom);    
+                        //odom.src=cursor.value.content; //此行保留 - 保留注释
+                        odom.innerHTML=cursor.value.content; //此行保留 - 保留注释                    
+                        break;
+                    case 'content':
+                        raw_data_bigfile=cursor.value.content;
+                        break;
+                    default:
+                        //返回文件序号、名称、起始部分、大小、日期等 - 保留注释
+                        raw_data_bigfile.push([cursor.value.id,cursor.value.name,cursor.value.content.slice(0,100),(cursor.value.content.length/1024/1024).toFixed(2)+'M',cursor.value.date]);
+                        break;
                 }
             }
             cursor.continue();
@@ -259,7 +266,11 @@ function idb_read_bigfile_b(db,do_type='',cskey='',run_fn=false){
         }
     }
     //-----------------------
-    var raw_data_bigfile=[];
+    if (do_type=='content'){
+        var raw_data_bigfile='';
+    } else {
+        var raw_data_bigfile=[];
+    }
     return idb_read_b(db,'bigfile_dbf',sub_idb_read_bigfile_b_onsuccess);
 }
 

@@ -13,7 +13,7 @@ function buttons_gps_points(){
     bljg=bljg+'<textarea name="textarea_gps_points" id="textarea_gps_points" style="height:20rem;"></textarea>';    
     bljg=bljg+'<p>';
     bljg=bljg+'<span class="aclick" onclick="add_current_latlng_gps_points();">添加当前点</span>';
-    bljg=bljg+textarea_buttons_b('textarea_gps_points','全选,清空,复制,save as gpx file,发送到临时记事本,发送地址')+'</p>';
+    bljg=bljg+textarea_buttons_b('textarea_gps_points','全选,清空,复制,save as gpx file,从 bigfile 导入文件内容,发送到临时记事本,发送地址')+'</p>';
     bljg=bljg+'</form>\n';    
     return bljg;
 }

@@ -1770,6 +1770,9 @@ function textarea_buttons_b(textarea_id,csbuttons,cstype='',csstyle='',span_clas
     if (csbuttons.includes('打开临时记事本') || csbuttons.includes('open remote temp memo')){
         bljg=bljg+'<a'+csstyle+' href="'+postpath+'temp_txt_share.php'+(cstype==''?'':'?type='+cstype)+'" class="a_oblong_box" target=_blank>open remote temp memo('+remote_host.slice(-3,)+')</a> ';
     }
+    if (csbuttons.includes('从 bigfile 导入文件内容') || csbuttons.includes('import file content from bigfile')){
+        bljg=bljg+'<span class="'+span_class+'"'+csstyle+' onclick="import_bigfile_content_b(false,\''+textarea_id+'\');">从 bigfile 导入文件内容</span> ';
+    }
     
     var remote_host=local_storage_get_b('kl_remote_host',-1,false);
         
@@ -3700,6 +3703,29 @@ function selection_expand_b(){
     oselection.removeAllRanges();
     oselection.addRange(range);
     //手机浏览器自身负责渲染文本选区，并且通常不会直接响应JavaScript创建的Range对象而显示选择图标。某些移动浏览器可能对JavaScript修改文本选区的支持有限，尤其是在没有用户交互的情况下。此外，为了用户体验和安全原因，现代浏览器可能会限制非用户触发的文本选区更改行为。
+}
+
+function import_bigfile_content_b(filename=false,csid=false){
+    function sub_import_bigfile_content_b(cscontent){
+        if (csid!==false){
+            var otextarea=document.getElementById(csid);
+            if (otextarea){
+                otextarea.value=cscontent;
+            }
+        }
+    }
+    
+    if (typeof idb_bigfile_b !== 'function'){
+        console.log('未发现函数 idb_bigfile_b');
+        return;
+    }
+    
+    if (filename===false){
+        filename=prompt('输入要读取的文件名称');
+        if (filename==null){return;}        
+    }
+    
+    idb_bigfile_b('read','content',filename,sub_import_bigfile_content_b);
 }
 
 function load_js_var_file_b(varname,file_list,filename,csfn=false,do_echo=true,direct_from_bigfile=false){

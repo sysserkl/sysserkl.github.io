@@ -87,7 +87,7 @@ async function hashArrayElements_bmark(arr){
     }));
 }
 
-function measureFrame_bmark(csend=500){
+function measureFrame_bmark(csend=1000){
     function sub_measureFrame_bmark(){
         //浏览器会在下一帧即将被渲染前调用注册的回调函数，这意味着回调函数执行的时间点总是与显示器的刷新周期保持一致。对于大多数现代显示器来说，刷新率通常是60Hz，即每秒刷新60次，所以回调函数大约每16.7毫秒（1000ms / 60Hz）会被调用一次。这样确保了动画的每一帧都能够恰当地与屏幕刷新结合，避免了因不同步导致的动画撕裂或卡顿。
         //当浏览器窗口不是当前活动窗口（例如用户切换到了另一个标签页或应用），或者页面元素不在可视区域时，浏览器会智能地暂停 requestAnimationFrame 回调的执行，直到页面重新变为可见。这有助于减少不必要的计算和渲染工作，进而节省CPU和GPU资源。
@@ -101,6 +101,8 @@ function measureFrame_bmark(csend=500){
                 if (blxl % 100 == 0){
                     otextarea_process.value=otextarea_process.value+blxl+' ';
                 }
+                ctx.fillStyle = 'rgb('+color_list[blxl%color_len]+')';
+                ctx.fillRect(0,0,100,100);
                 blxl=blxl+1;
                 sub_measureFrame_bmark();
             }
@@ -109,6 +111,16 @@ function measureFrame_bmark(csend=500){
     
     var blxl=0;
     var otextarea_process=document.getElementById('textarea_process_bmark');
+    
+    var ocanvas = document.createElement('canvas');
+    ocanvas.width=100;
+    ocanvas.height=100;
+    var ctx=ocanvas.getContext('2d');
+    
+    var color_list=color_list_bmark(20);
+    var color_len=color_list.length;
+    document.getElementById('divhtml').appendChild(ocanvas);
+
     var t0 = performance.now();
     sub_measureFrame_bmark();
 }
@@ -137,14 +149,8 @@ function color_boxs_bmark(csstep=10){
     }
     
     var t0 = performance.now();
-    var list_t=[];
-    for (let blr=0;blr<256;blr=blr+csstep){
-        for (let blg=0;blg<256;blg=blg+csstep){
-            for (let blb=0;blb<256;blb=blb+csstep){
-                list_t.push(blr+','+blg+','+blb);
-            }
-        }    
-    }
+    var list_t=color_list_bmark(csstep);
+
     var blxl=0;
     var bllen=list_t.length;
 
@@ -154,4 +160,16 @@ function color_boxs_bmark(csstep=10){
 
     var odiv=document.getElementById('divhtml');
     sub_color_boxs_bmark_one_color();
+}
+
+function color_list_bmark(csstep){
+    var list_t=[];
+    for (let blr=0;blr<256;blr=blr+csstep){
+        for (let blg=0;blg<256;blg=blg+csstep){
+            for (let blb=0;blb<256;blb=blb+csstep){
+                list_t.push(blr+','+blg+','+blb);
+            }
+        }    
+    }
+    return list_t;
 }
