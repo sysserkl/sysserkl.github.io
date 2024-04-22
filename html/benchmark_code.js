@@ -200,7 +200,7 @@ function prime_get_bmark(csno=500000){
         
         current_value=current_value+1;
         try {        
-            if (current_value % 10000 == 0){
+            if (current_value % 5000 == 0){
                 setTimeout(sub_prime_get_bmark_one_number,1);
                 otextarea_process.value=otextarea_process.value+current_value+' ';
             } else {
