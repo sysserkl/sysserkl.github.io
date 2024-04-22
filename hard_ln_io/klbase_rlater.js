@@ -37,28 +37,43 @@ function fav_add_rlater_b(csid,csa,prefix='readlater',addtag=false){
 }
 
 function delete_open_php_rlater_b(cshref,csid,prefix='readlater'){
-    var php_href=klwebphp_path_b( 'txt_row_delete.php?key='+encodeURIComponent(cshref)+'&prefix='+encodeURIComponent(prefix));
-    if (is_delete_to_iframe_global){
-        var odiv=document.getElementById('div_search_links');
-        if (!odiv){
-            console.log('未发现 div_search_links，未删除',cshref);
-            return;
+    if (is_http_file_global){
+        var php_href=klwebphp_path_b('txt_row_delete.php?key='+encodeURIComponent(cshref)+'&prefix='+encodeURIComponent(prefix));
+        if (is_delete_to_iframe_global){
+            var odiv=document.getElementById('div_search_links');
+            if (!odiv){
+                console.log('未发现 div_search_links，未删除',cshref);
+                return;
+            }
+            var oiframe=document.getElementById('iframe_delete_record_rlater');
+            if (!oiframe){
+                odiv.insertAdjacentHTML('afterend','<iframe id="iframe_delete_record_rlater" style="margin:0.5rem;width:90%;height:16rem;" src=""></iframe>');
+            }
+            var oiframe=document.getElementById('iframe_delete_record_rlater');
+            if (!oiframe){
+                console.log('未发现 iframe，未删除',cshref);
+                return;
+            }
+            oiframe.setAttribute('src',php_href);
+        } else {
+            var new_window=window.open(php_href,'readlater_delete','width=600,height=600');
+            new_window.blur();
         }
-        var oiframe=document.getElementById('iframe_delete_record_rlater');
-        if (!oiframe){
-            odiv.insertAdjacentHTML('afterend','<iframe id="iframe_delete_record_rlater" style="margin:0.5rem;width:90%;height:16rem;" src=""></iframe>');
-        }
-        var oiframe=document.getElementById('iframe_delete_record_rlater');
-        if (!oiframe){
-            console.log('未发现 iframe，未删除',cshref);
-            return;
-        }
-        oiframe.setAttribute('src',php_href);
+        remove_from_array_rlater_b(csid,prefix);
     } else {
-        var new_window=window.open(php_href,'readlater_delete','width=600,height=600');
-        new_window.blur();
+        if (readlater_marked_rows_global.length>=5000){
+            alert('已标记达5000条，操作取消');
+        } else {
+            if (!readlater_marked_rows_global.includes(cshref)){
+                readlater_marked_rows_global.push(cshref);
+                localStorage.setItem('readlater_marked_rows',readlater_marked_rows_global.join('\n'));
+            }
+        }
     }
-    remove_from_array_rlater_b(csid,prefix);
+}
+
+function marked_rows_get_rlater_b(){
+    readlater_marked_rows_global=local_storage_get_b('readlater_marked_rows',-1,true);
 }
 
 function remove_from_array_rlater_b(csid,prefix){
@@ -106,16 +121,19 @@ function remove_from_array_rlater_b(csid,prefix){
     }
 }
 
-function import_data_rlater_b(csarray,load_fn_name){
+function import_data_rlater_b(csarray,load_fn_name,cshref=false){
     var today=file_date_parameter_b();
-    var blhref=new URL('./',location.href)['href'];
-
+    if (cshref===false){
+        cshref=new URL('./',location.href)['href'];
+        cshref=cshref+'data/php_writable/';
+    }
+    
     for (let item of csarray){
-        document.write('\n<script src="'+blhref+'data/php_writable/'+item+'.js'+today+'"><\/script>\n');
+        document.write('\n<script src="'+cshref+item+'.js'+today+'"><\/script>\n');
         document.write('<script>\n');
         document.write(load_fn_name+'("'+item+'");\n');
         document.write('<\/SCRIPT>\n');
-        console.log(blhref+'data/php_writable/'+item+'.js'+today);
+        console.log(cshref+item+'.js'+today);
     }
 }
 
@@ -229,6 +247,27 @@ function qr_rlater_b(csid){
     oiframe.src=klbase_sele_path_b()[1]+'/html/qrcode.htm?s='+encodeURIComponent(oa.href)+'&simple&iframe&size=516';
 }
 
+function title_key_rlater_b(csstr){
+    var result_t=[];
+    for (let key in klwiki_page_position_global){
+        for (let item of klwiki_page_position_global[key]){
+            if (csstr.includes(item)){
+                result_t.push([item,key]);
+            }
+        }
+    }
+
+    //result_t 每个元素形如：[ "Cats (1998)", "klwiki04" ] - 保留注释
+    result_t.sort(function (a,b){return zh_sort_b(a,b,false,0);});
+    //var is_file=is_file_type_b();
+    for (let blxl=0;blxl<result_t.length;blxl++){
+        var blstr='';
+        blstr=blstr+'<span class="span_box" onclick="open_wkp(this,\''+result_t[blxl][1]+'\',\'wiki\');close_popup_rlater_b();">'+result_t[blxl][0]+'</span>';
+        result_t[blxl]=blstr;
+    }
+    return result_t;
+}
+
 function delete_one_rlater_b(event=false,csid='',is_yes=false,button_id='',prgname='readlater'){
     var oa=document.getElementById(csid);
     if (!oa){return;}
@@ -245,7 +284,7 @@ function delete_one_rlater_b(event=false,csid='',is_yes=false,button_id='',prgna
             }
             bljg=bljg+'</p>';
         }
-        var wikilink=title_key_wkp(blstr,false,'close_popup_rlater_b();');
+        var wikilink=title_key_rlater_b(blstr);
         if (wikilink.length>0){
             bljg=bljg+'<p>klwiki: '+wikilink.join(' ')+'</p>';
         }
@@ -265,7 +304,7 @@ function delete_one_rlater_b(event=false,csid='',is_yes=false,button_id='',prgna
     }
 
     // || confirm("是否删除：\n"+specialstr_html_b(oa.href)+'\n'+specialstr_html_b(oa.innerText)+"？")){ - 此行保留    
-    if (is_yes){    
+    if (is_yes){
         delete_open_php_rlater_b(oa.href,csid,prgname);
         oa.style.textDecoration='line-through';
         if (button_id!==''){
@@ -295,19 +334,22 @@ function one_link_gerenrate_rlater_b(idno,cslink,cstitle,csstrong=false,prgname=
         bljg=bljg+'<li>';
     }
     bljg=bljg+'<a class="a_rlater_link" id="a_rlater_link_'+idno+'" href="'+cslink+'" target=_blank onmousedown="this.style.backgroundColor=\''+scheme_global['pink']+'\';">'; //替代 onclick, ondragstart，支持鼠标右键 - 保留注释
-    
-    if (csstrong){
+
+    if (readlater_marked_rows_global.includes(cslink)){
+        bljg=bljg+'<span style="background-color:'+scheme_global['shadow']+'; border-radius: 0.5rem;">'+cstitle+'</span>';
+    } else if (csstrong){
         bljg=bljg+'<font color=red><strong>'+cstitle+'</strong></font>';
     } else {
         bljg=bljg+cstitle;
-    }    
+    }
     bljg=bljg+'</a>';
     
-    if (is_http_file_global){
+    //if (is_http_file_global){
         bljg=bljg+' <span class="span_box span_rlater_button" id="span_rlater_button_'+idno+'" onclick="delete_one_rlater_b(event,\'a_rlater_link_'+idno+'\',false,this.id,\''+prgname+'\');" style="font-size:0.8rem;">☒</span>';
         bljg=bljg+' <span class="span_box" onclick="fav_add_rlater_b(\'a_rlater_link_'+idno+'\',this,\''+prgname+'\');" style="font-size:0.8rem;">⚪</span>';
         bljg=bljg+' <span class="span_box" onclick="fav_add_rlater_b(\'a_rlater_link_'+idno+'\',this,\''+prgname+'\',true);" style="font-size:0.8rem;">🏷</span>';
-    }
+    //}
+
     bljg=bljg+other_str;
     if (with_li){
         bljg=bljg+'</li>';

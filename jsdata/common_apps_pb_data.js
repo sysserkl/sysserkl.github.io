@@ -89,5 +89,5 @@ var common_apps_pb_global=[
 ["{{selenium_news}}/module/pdfjs/web/viewer.html","PDF.js","🔖","5","txtbook"],
 ["{{selenium_news}}/html/bigfile.htm","big file","bigfile512.png","0"],
 ["{{selenium_news}}/html/benchmark.htm","benchmark","🔩","2"],
-
+["{{selenium_news}}/html/readlater.htm","Read Later","🛋","5","info"],
 ];
