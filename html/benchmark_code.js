@@ -16,8 +16,9 @@ function menu_bmark(){
     '<span class="span_menu" onclick="'+str_t+'hash_bmark(\'sha.js\',5000);">hash测试(sha.js)</span>',
     '<span class="span_menu" onclick="'+str_t+'measureFrame_bmark();">requestAnimationFrame测试</span>',
     '<span class="span_menu" onclick="'+str_t+'color_boxs_bmark();">color_boxs测试</span>',
-    ];
+    '<span class="span_menu" onclick="'+str_t+'prime_get_bmark();">质数测试</span>',
 
+    ];
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🔩','18rem','1rem','1rem','30rem'),'','0rem')+' ');
 }
 
@@ -172,4 +173,49 @@ function color_list_bmark(csstep){
         }    
     }
     return list_t;
+}
+
+function prime_get_bmark(csno=500000){
+    //10000 104729
+    //100000 1299709
+    function sub_prime_get_bmark_one_number(){
+        var blfound=true;
+        
+        //任何大于 sqrt(n) 的因子都必然有一个对应的小于等于 sqrt(n) 的因子。如果 n 在循环到这个点之前都没有被任何数整除，那么它不可能被大于 sqrt(n) 的数整除，因此我们可以提前结束循环，判断 n 是质数。 - 文心一言
+        for (let blxl=2;blxl*blxl<=current_value;blxl++){
+            if (current_value % blxl == 0){
+                blfound=false;
+                break;
+            }
+        }
+        
+        if (blfound){
+            blcount=blcount+1;
+        }
+
+        if (blcount>=csno){
+            otextarea_result.value='prime_get_bmark('+csno+') '+current_value+' 费时：'+milliseconds2hms_b(performance.now() - t0) + '\n'+otextarea_result.value;        
+            return;
+        }
+        
+        current_value=current_value+1;
+        try {        
+            if (current_value % 10000 == 0){
+                setTimeout(sub_prime_get_bmark_one_number,1);
+                otextarea_process.value=otextarea_process.value+current_value+' ';
+            } else {
+                sub_prime_get_bmark_one_number();
+            }
+        } catch (error){
+            otextarea_result.value='prime_get_bmark('+csno+') error：'+error.message + '\n'+otextarea_result.value;
+        }        
+    }
+
+    var t0 = performance.now();
+    var blcount=0;
+    var current_value=2;
+    var otextarea_process=document.getElementById('textarea_process_bmark');
+    otextarea_process.value=otextarea_process.value+'Total: '+csno+' ';
+    var otextarea_result=document.getElementById('textarea_result_bmark');            
+    sub_prime_get_bmark_one_number();
 }
