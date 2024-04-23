@@ -37,7 +37,7 @@ function fav_add_rlater_b(csid,csa,prefix='readlater',addtag=false){
 }
 
 function delete_open_php_rlater_b(cshref,csid,prefix='readlater'){
-    if (is_http_file_global){
+    if (is_http_file_global && klmenu_check_b('span_only_tag_rlater',false)===false){
         var php_href=klwebphp_path_b('txt_row_delete.php?key='+encodeURIComponent(cshref)+'&prefix='+encodeURIComponent(prefix));
         if (is_delete_to_iframe_global){
             var odiv=document.getElementById('div_search_links');

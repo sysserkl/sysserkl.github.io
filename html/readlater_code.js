@@ -233,6 +233,7 @@ function menu_rlater(){
     var klmenu_idb=[
     '<span id="span_reg_rlater" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ reg</span>',        
     '<span id="span_delete_to_iframe" class="span_menu" onclick="'+str_t+'is_delete_to_iframe_global=klmenu_check_b(this.id,true);">⚪ 删除到iframe</span>',    
+    '<span id="span_only_tag_rlater" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 仅做标记不删除记录</span>',
     '<a href="?load=-1" onclick="'+str_t+'">仅导入最新data文件</a>',    
     '<span class="span_menu" onclick="'+str_t+'clear_cached_deleted_rows_rlater_b(\'readlater_deleted_rows\');">清除今日删除记录</span>',
     '<span class="span_menu" onclick="'+str_t+'delete_batch_from_array_form_rlater();">导入数组批量删除</span>',    
@@ -257,14 +258,17 @@ function menu_rlater(){
 }
 
 function delete_batch_from_array_form_rlater(){
-    var blstr='<textarea id="textarea_delete_batch_rlater" style="height:20rem;"></textarea>';
+    var postpath=postpath_b();
+	var blstr='<form method="POST" action="'+postpath+'temp_txt_share.php" target=_blank>\n';    
+    blstr=blstr+'<textarea name="textarea_delete_batch_rlater" id="textarea_delete_batch_rlater" style="height:20rem;"></textarea>';
     blstr=blstr+'<p>';
+    blstr=blstr+textarea_buttons_b('textarea_delete_batch_rlater','清空,复制,发送到临时记事本,发送地址');
     blstr=blstr+'<span class="aclick" onclick="delete_batch_from_array_transform_rlater();">数组转换为列表</span>';
     blstr=blstr+'<span class="aclick" onclick="delete_batch_from_url_transform_rlater();">链接转换为列表</span>';
     blstr=blstr+'<span class="aclick" onclick="import_marked_rows_rlater();">导入已标记链接</span>';
     blstr=blstr+'<span class="aclick" onclick="delete_marked_rows_rlater();">清空已标记链接</span>';
 
-    blstr=blstr+'</p>';
+    blstr=blstr+'</p></form>';
     blstr=blstr+'<div id="div_delete_batch_info_rlater"></div>';
     document.getElementById('div_links').innerHTML=blstr;
 }
@@ -295,6 +299,7 @@ function delete_batch_from_url_transform_rlater(){
     if (blstr==''){return;}
     
     var urls=new Set(blstr.split('\n'));
+    var old_len=urls.size;
     var searched_t=[];
     for (let arow of readlater_data_global){
         if (urls.has(arow[0])){
@@ -305,7 +310,7 @@ function delete_batch_from_url_transform_rlater(){
     }
     
     if (urls.size>0){
-        document.getElementById('div_delete_batch_info_rlater').innerHTML='<h3>未发现</h3>\n'+array_2_li_b(Array.from(urls));
+        document.getElementById('div_delete_batch_info_rlater').innerHTML='<h3>共有 '+old_len+' 条，未发现 '+urls.size+' 条</h3>\n'+array_2_li_b(Array.from(urls));
     } else {
         document.getElementById('input_max_delete').value=searched_t.length;
         search_array_2_html_rlater(searched_t,'2');
@@ -762,6 +767,12 @@ function delete_batch_rlater(){
         alert('删除条数设置错误');
         return;
     }
+    
+    if (klmenu_check_b('span_only_tag_rlater',false)){
+        alert('须先取消选中“仅做标记不删除”选项');
+        return;
+    }
+    
     var rndstr=randstr_b(4,true,false);
     if ((prompt('输入 '+rndstr+' 确认清空') || '').trim()!==rndstr){return;}
     
