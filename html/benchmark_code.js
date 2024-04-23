@@ -200,9 +200,11 @@ function prime_get_bmark(csno=500000){
         
         current_value=current_value+1;
         try {        
-            if (current_value % 5000 == 0){
+            if (current_value % 5000 == 0){ //10000 时 chromium 会 Maximum call stack size exceeded - 保留注释
                 setTimeout(sub_prime_get_bmark_one_number,1);
-                otextarea_process.value=otextarea_process.value+current_value+' ';
+                if (current_value % 500000 == 0){
+                    otextarea_process.value=otextarea_process.value+current_value+' ';
+                }
             } else {
                 sub_prime_get_bmark_one_number();
             }
@@ -215,7 +217,6 @@ function prime_get_bmark(csno=500000){
     var blcount=0;
     var current_value=2;
     var otextarea_process=document.getElementById('textarea_process_bmark');
-    otextarea_process.value=otextarea_process.value+'Total: '+csno+' ';
     var otextarea_result=document.getElementById('textarea_result_bmark');            
     sub_prime_get_bmark_one_number();
 }
