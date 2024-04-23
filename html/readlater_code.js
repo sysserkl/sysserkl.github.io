@@ -285,6 +285,7 @@ function delete_marked_rows_rlater(){
     var rndstr=randstr_b(4,true,false);
     if ((prompt('输入 '+rndstr+' 确认清空 '+readlater_marked_rows_global.length+' 条已标记链接') || '').trim()==rndstr){
         localStorage.removeItem('readlater_marked_rows');
+        readlater_marked_rows_global=[];
     }
 }
 
