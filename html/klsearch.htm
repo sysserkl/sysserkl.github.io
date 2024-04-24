@@ -28,12 +28,13 @@ div#div_search p{font-size:1.15rem;}
 <div id="div_title_klsearch">
 <input type="text" id="input_searchtxt" placeholder="输入查询字符串">
 <label><input type="checkbox" id="checkbox_openwindow" checked />打开</label>
+<span id="span_info"></span>
 </div>
 <div id="div_recent_search" style="margin:0.5rem;line-height:180%;"></div>
 <div id="div_search" style="margin:0.5rem;"></div>
 <div id="div_status" style="margin:0.5rem;font-size:0.8rem;color:grey;"></div>
 <script>
-pwa_register_b('klsearch_service_worker.js','klsearch','div_status','html');
+pwa_register_b('klsearch_service_worker.js','klsearch','span_info','html');
 
 track_source_b('klsearch',false);
 init_klsearch();

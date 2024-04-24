@@ -200,7 +200,7 @@ function manage_item_rlater_b(csid,cstype='copy text'){
             break;
         case 'selenium':
             var selestr=selenium_search_str_rlater_b(oa.innerText);
-            window.open('klbase_html_jump.htm?selenium_news_search.php?search='+selestr);
+            window.open('../../../../klbase_html_jump.htm?selenium_news_search.php?search='+selestr);
             break;
         case 'edit title':
             var new_title=(prompt('输入新标题',oa.innerText) || '').trim();
@@ -259,13 +259,19 @@ function title_key_rlater_b(csstr){
 
     //result_t 每个元素形如：[ "Cats (1998)", "klwiki04" ] - 保留注释
     result_t.sort(function (a,b){return zh_sort_b(a,b,false,0);});
-    //var is_file=is_file_type_b();
     for (let blxl=0;blxl<result_t.length;blxl++){
         var blstr='';
-        blstr=blstr+'<span class="span_box" onclick="open_wkp(this,\''+result_t[blxl][1]+'\',\'wiki\');close_popup_rlater_b();">'+result_t[blxl][0]+'</span>';
+        blstr=blstr+'<span class="span_box" onclick="open_wiki_rlater_b(this);close_popup_rlater_b();">'+result_t[blxl][0]+'</span>';
         result_t[blxl]=blstr;
     }
     return result_t;
+}
+
+function open_wiki_rlater_b(odom){
+    var cskey=odom.innerText;
+    if (cskey==''){return;}
+    var bllink=location.origin+'/wiki/index.php/'+encodeURIComponent(cskey);        
+    window.open(bllink);
 }
 
 function delete_one_rlater_b(event=false,csid='',is_yes=false,button_id='',prgname='readlater'){
@@ -297,7 +303,9 @@ function delete_one_rlater_b(event=false,csid='',is_yes=false,button_id='',prgna
         bljg=bljg+'<span class="oblong_box" onclick="manage_item_rlater_b(\''+csid+'\',\'copy url\');">链接</span> ';
         bljg=bljg+'<span class="oblong_box" onclick="manage_item_rlater_b(\''+csid+'\',\'copy wiki\');">WIKI</span> ';
         
-        bljg=bljg+'<span class="oblong_box" onclick="manage_item_rlater_b(\''+csid+'\',\'selenium\');" title="Selenium">S</span> ';
+        if (is_local_b()){
+            bljg=bljg+'<span class="oblong_box" onclick="manage_item_rlater_b(\''+csid+'\',\'selenium\');" title="Selenium">S</span> ';
+        }
         bljg=bljg+'<span class="span_box" onclick="close_popup_rlater_b();">❌</span></p>';
         popup_event_div_b(event,'div_confirm_delete_one_record_rlater',bljg,'');
         mouseover_mouseout_oblong_span_b(document.querySelectorAll('div#div_confirm_delete_one_record_rlater span.oblong_box'));
@@ -344,11 +352,9 @@ function one_link_gerenrate_rlater_b(idno,cslink,cstitle,csstrong=false,prgname=
     }
     bljg=bljg+'</a>';
     
-    //if (is_http_file_global){
-        bljg=bljg+' <span class="span_box span_rlater_button" id="span_rlater_button_'+idno+'" onclick="delete_one_rlater_b(event,\'a_rlater_link_'+idno+'\',false,this.id,\''+prgname+'\');" style="font-size:0.8rem;">☒</span>';
-        bljg=bljg+' <span class="span_box" onclick="fav_add_rlater_b(\'a_rlater_link_'+idno+'\',this,\''+prgname+'\');" style="font-size:0.8rem;">⚪</span>';
-        bljg=bljg+' <span class="span_box" onclick="fav_add_rlater_b(\'a_rlater_link_'+idno+'\',this,\''+prgname+'\',true);" style="font-size:0.8rem;">🏷</span>';
-    //}
+    bljg=bljg+' <span class="span_box span_rlater_button" id="span_rlater_button_'+idno+'" onclick="delete_one_rlater_b(event,\'a_rlater_link_'+idno+'\',false,this.id,\''+prgname+'\');" style="font-size:0.8rem;">☒</span>';
+    bljg=bljg+' <span class="span_box" onclick="fav_add_rlater_b(\'a_rlater_link_'+idno+'\',this,\''+prgname+'\');" style="font-size:0.8rem;">⚪</span>';
+    bljg=bljg+' <span class="span_box" onclick="fav_add_rlater_b(\'a_rlater_link_'+idno+'\',this,\''+prgname+'\',true);" style="font-size:0.8rem;">🏷</span>';
 
     bljg=bljg+other_str;
     if (with_li){

@@ -270,7 +270,7 @@ function delete_batch_from_array_form_rlater(){
 
     blstr=blstr+'</p></form>';
     blstr=blstr+'<div id="div_delete_batch_info_rlater"></div>';
-    document.getElementById('div_links').innerHTML=blstr;
+    document.getElementById('div_search_links').innerHTML=blstr;
 }
 
 function import_marked_rows_rlater(){
@@ -464,7 +464,7 @@ function fav_show_rlater(){
 
     var postpath=postpath_b();
 	var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php" name="form_fav_readlater" target=_blank>\n';
-    bljg=bljg+'<textarea name="textarea_fav_readlater" id="textarea_fav_readlater" style="width:100%;height:20rem;">'+fav_sites+'</textarea>';
+    bljg=bljg+'<textarea name="textarea_fav_readlater" id="textarea_fav_readlater" style="height:20rem;">'+fav_sites+'</textarea>';
     bljg=bljg+'<p>';
     bljg=bljg+'<span class="aclick" onclick="fav_update_rlater();">Update</span> ';
     bljg=bljg+'<span class="aclick" onclick="fav_clear_rlater();">Clear</span> ';
