@@ -156,6 +156,16 @@ function js2link_temp_txt_share_b(){
     odiv.scrollIntoView();
 }
 
+function local_js_file_load_txt_share_b(is_php=true){
+    if (is_local_b()){
+        var data_file='data/klwiki/klwiki_page_position_data.js';
+        if (!is_php){
+            data_file='../../../../'+data_file;
+        }
+        klbase_addons_import_js_b(['rlater'],[],[],[data_file]);
+    }
+}
+
 function menu_temp_txt_share_b(is_php=true){
     var str_t=klmenu_hide_b('');
     var klwebphp,sele_path;
@@ -178,6 +188,11 @@ function menu_temp_txt_share_b(is_php=true){
     '<span class="span_menu" onclick="'+str_t+'blank_rows_remove_klr_b(\'textarea_temp_txt_share\');">remove blank rows</span>',
     '<span class="span_menu" onclick="'+str_t+'local_storage_import_b(\'textarea_temp_txt_share\',true);">import data to localStorage</span>',    
     ];
+    
+    if (is_local_b()){
+        klmenu_config.push('<span class="span_menu" onclick="'+str_t+'wiki_page_name_temp_txt_share_b();">wiki page name</span>');
+    }
+    
     if (!is_php){
         klmenu_config.push('<span class="span_menu" onclick="'+str_t+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>');
         klmenu_config.push(load_sentence_menu_b(str_t));
@@ -191,6 +206,14 @@ function menu_temp_txt_share_b(is_php=true){
     
     var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu0,(is_php?'📗':'📙'),'16rem','1rem','1rem','60rem')+klmenu_b(klmenu_share,'🫂','19rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem'),'','0rem')+' ';
     document.getElementById('h2_title').insertAdjacentHTML('afterbegin',bljg);
+}
+
+function wiki_page_name_temp_txt_share_b(){
+    var otextarea=document.getElementById('textarea_temp_txt_share');
+    var list_t=otextarea.value.match(/^=+\s*(.+)\s*=+$/mg) ||[];
+    var result_t=title_key_rlater_b(list_t.join(' '),false);
+    
+    document.getElementById('div_status').innerHTML=result_t.join(' ')+' '+close_button_b('div_status','');
 }
 
 function encrypt_content_temp_txt_share_b(){

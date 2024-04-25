@@ -12,7 +12,8 @@ self.addEventListener('install', function(e) {
             '../hard_ln_io/klbase_rows.js',
             '../hard_ln_io/klbase_tts.js',
             '../hard_ln_io/klbase_wiki.js',            
-            
+            '../hard_ln_io/klbase_rlater.js',            
+
             '../jsdoc3/jieba_pb_dict_data.js',
             '../jsdata/words/enwords_data.js',
             
