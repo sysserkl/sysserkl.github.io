@@ -3729,7 +3729,18 @@ function import_bigfile_content_b(filename=false,csid=false){
 }
 
 function load_js_var_file_b(varname,file_list,filename,csfn=false,do_echo=true,direct_from_bigfile=false){
-    function sub_load_js_var_file_b_bigfile(){
+    function sub_load_js_var_file_b_bigfile_test(cslist){
+        if (cslist.length>0){
+            idb_bigfile_b('read','eval',filename);
+            load_var_b(varname,-1,2000,csfn);        
+        } else {
+            if (typeof csfn == 'function'){
+                csfn(false);
+            }
+        }
+    }
+    
+    function sub_load_js_var_file_b_bigfile_eval(){
         if (eval('typeof '+varname) == 'undefined'){
             if (typeof idb_bigfile_b !== 'function'){
                 console.log('未发现函数 idb_bigfile_b');
@@ -3737,8 +3748,10 @@ function load_js_var_file_b(varname,file_list,filename,csfn=false,do_echo=true,d
             }
             console.log('尝试从bigfile载入',varname);
             
-            idb_bigfile_b('read','eval',filename);
-            load_var_b(varname,-1,2000,csfn);
+            idb_bigfile_b('read','',filename,sub_load_js_var_file_b_bigfile_test);
+            
+            //idb_bigfile_b('read','eval',filename);
+            //load_var_b(varname,-1,2000,csfn);
         }
     }
     //-----------------------
@@ -3747,10 +3760,10 @@ function load_js_var_file_b(varname,file_list,filename,csfn=false,do_echo=true,d
             console.log(varname+' 未定义');
         }
         if (direct_from_bigfile || local_storage_get_b('first_source_bigfile')=='1'){
-            sub_load_js_var_file_b_bigfile();
+            sub_load_js_var_file_b_bigfile_eval();
         } else {
             file_dom_create_b(file_list,true,'js');
-            load_var_b(varname,-1,2000,csfn,sub_load_js_var_file_b_bigfile);
+            load_var_b(varname,-1,2000,csfn,sub_load_js_var_file_b_bigfile_eval);
         }
     } else {
         if (do_echo){

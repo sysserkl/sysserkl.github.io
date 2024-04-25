@@ -5,7 +5,7 @@ function book_load_enwords_book(csno){
         csbookno2_global=Math.min(csbooklist_sub_global.length-1,parseInt(list_t[1])-1);
     }
     title_set_enwords_book();
-    show_enwords_book();
+    //show_enwords_book();
     import_book_js_b(true);
 }
 
@@ -78,14 +78,16 @@ function args_enwords_book(){
                 }
                 in_all_new_enwords_book();
                 get_new_words_arr_set_enbook_b(2);
-                show_enwords_book();
+                //show_enwords_book();
                 break;
             } else if (bltmpstr=='excluded'){
                 exclude_enwords_book();
                 break;
             }            
         }
-    } else {
+    }
+    
+    if (en_words_book_newwords_continue_global===false){
         show_enwords_book();
     }
 }

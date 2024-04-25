@@ -120,8 +120,6 @@ function import_book_js_b(import_digest=true){
 
         document.write('\n<script>\n');
         document.write('\nvar filelist2=[].concat(filelist);\n');
-        //document.write('\nfor (let item of filelist){\n');
-        //document.write('\n    filelist2.push(item);\n');
         document.write('}\n</script>\n');
     }
     txtbook_js_code_file_global=''; //全局变量 - 保留注释
@@ -141,9 +139,6 @@ function import_book_js_b(import_digest=true){
         if (jsdoc_num.includes('digest')){
             document.write('\n<script>\n');
             document.write('var filelist=[].concat(digest_global);\n');
-            //document.write('for (let item of digest_global){\n');
-            //document.write('    filelist.push(item);\n');
-            //document.write('}\n');
             document.write('</script>\n');        
         } else {
             menu_digest_file_full_name_b(book_no,jsdoc_num,bookid,jsdoc_path,import_digest,true);
@@ -237,6 +232,22 @@ function menu_digest_file_full_name_b(book_no=false,jsdoc_num=false,bookid=false
 }
 
 function books_b(showall=false,cstype='txt',cstag='all'){   //书目生成，category - 保留注释
+    var current_show=document.querySelector('span.span_show_all_kltxt')!==null;
+    var ocurrent=document.querySelector('span.span_current_book_item');
+    if (ocurrent){
+        var oa=ocurrent.parentNode;
+        if (oa){
+            var blhref=decodeURIComponent(oa.href);
+            if (blhref){
+                var blstr='?'+csbooklist_sub_global[csbookno_global][0]+'_tag'+cstag;
+                if ((blhref.includes(blstr+'&') || blhref.endsWith(blstr)) && showall==current_show){
+                    console.log('books_b() 未更新');
+                    return;
+                }
+            }
+        }
+    }
+    
 	var blword = '';
 	var tmp_o=document.getElementById('input_search');
 	if (tmp_o){
@@ -246,7 +257,9 @@ function books_b(showall=false,cstype='txt',cstag='all'){   //书目生成，cat
 	var blreg='';
 	tmp_o=document.getElementById('input_reg');
 	if (tmp_o){
-		if (tmp_o.checked==true){blreg='_reg';}
+		if (tmp_o.checked==true){
+            blreg='_reg';
+        }
 	}
 	
 	var bljg='';
@@ -268,7 +281,7 @@ function books_b(showall=false,cstype='txt',cstag='all'){   //书目生成，cat
         var asc_t=asc_sum_b(item[0]+item[1]);
 		if (csbooklist_sub_global.length<=5 || showall || blno==0 || Math.abs(csbookno_global-blno)<=blshow_no || csbooklist_sub_global.length-1==blno || csbookno_global==blno || asc_t%182+1==day_t2){
 			if (csbookno_global==blno){
-                bljg=bljg+'<font color=#ff0000>';
+                bljg=bljg+'<span style="color:'+scheme_global['a-hover']+';">';
             }
             //#dfdf7f 棕青色 - 保留注释
 			if (asc_t%182+1==day_t2){
@@ -282,7 +295,7 @@ function books_b(showall=false,cstype='txt',cstag='all'){   //书目生成，cat
 			}
 
 			if (csbookno_global==blno){
-                bljg=bljg+'</font>';
+                bljg=bljg+'</span>';
             }
 			if (cstype=='txt'){
                 bljg=bljg+'<a class="a_oblong_box" '+(item[3]=='3'?'style="background-color:'+scheme_global['button']+';" ':'')+'href="?'+item[0]+'_tag'+cstag;
@@ -296,11 +309,11 @@ function books_b(showall=false,cstype='txt',cstag='all'){   //书目生成，cat
                 bljg=bljg+'<a class="a_oblong_box" href="?book='+(parseInt(blno)+1)+'">';
             }
 			if (csbookno_global==blno){
-				bljg=bljg+'<font color=#ff0000>';
+				bljg=bljg+'<span class="span_current_book_item" style="color:'+scheme_global['a-hover']+';">';
 			}
 			bljg=bljg+item[1];
 			if (csbookno_global==blno){
-                bljg=bljg+'</font>';
+                bljg=bljg+'</span>';
             }
             if (item[2].includes('已整理')){   //待完成整理后，删除
                 bljg=bljg+'✔';
@@ -316,11 +329,15 @@ function books_b(showall=false,cstype='txt',cstag='all'){   //书目生成，cat
 	while (bljg.includes('. . . . ')){
         bljg=bljg.replace(/(\. ){4}/g,'. . . ');
     }
-	
+    if (showall){
+	    bljg=bljg+'<span class="span_show_all_kltxt"></span>';
+    }
 	tmp_o=document.getElementById('booklinks');
 	if (tmp_o){
         tmp_o.innerHTML=bljg;
+        console.log('books_b() 已更新');
     } else {
+        console.log('未发现 id: booklinks');
         return bljg;
     }
 	return '';
