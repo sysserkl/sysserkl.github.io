@@ -217,11 +217,11 @@ function import_bigfile_kltxt_b(){
     function sub_import_bigfile_kltxt_b_load_content(is_ok){
         if (is_ok){
             create_menulist_kltxt_b();
-            book_title_set_kltxt_b(fname);
+            book_title_set_kltxt_b(csbooklist_sub_global[0][1]);
             menu_all_only_one_kltxt_b();
             digest_temp=[].concat(digest_global);
             digest_global=undefined;
-            load_js_var_file_b('digest_global',[],fname+'_digest',sub_import_bigfile_kltxt_b_load_digest,true,true);
+            load_js_var_file_b('digest_global',[],csbooklist_sub_global[0][0]+'_digest.js',sub_import_bigfile_kltxt_b_load_digest,true,true);
         }
     }
     
