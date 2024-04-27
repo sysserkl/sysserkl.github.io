@@ -3771,3 +3771,13 @@ function load_js_var_file_b(varname,file_list,filename,csfn=false,do_echo=true,d
         }
     }
 }
+
+function prompt_from_local_storage_b(cscaption,csid){
+    var old_value=local_storage_get_b(csid);
+    var current_value=prompt(cscaption,old_value);
+    if (current_value==null){return current_value;}
+    if (current_value!==old_value){
+        localStorage.setItem(csid,current_value);
+    }
+    return current_value;
+}

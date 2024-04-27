@@ -1,4 +1,5 @@
 var common_apps_pb_global=[
+
 ["popup:bookshelf","bookshelf","📚","1"],
 ["popup:database","database","🛢","1"],
 ["popup:ENG","ENG","𝔼","0"],
@@ -10,7 +11,9 @@ var common_apps_pb_global=[
 ["popup:txtbook","book","🕮","0"],
 ["popup:txteditor","txteditor","🖺","0"],
 ["{{selenium_news}}/html/array_analyze.htm","Array Analyze","array_analyze512.png","3"],
+["{{selenium_news}}/html/benchmark.htm","benchmark","🔩","2"],
 ["{{selenium_news}}/html/bible.htm","Bible","✝️","0_1"],
+["{{selenium_news}}/html/bigfile.htm","big file","bigfile512.png","0"],
 ["{{selenium_news}}/html/book_search_js.htm","EBS_JS","👁","5_5_f","ENG"],
 ["{{selenium_news}}/html/bookshelf.htm","bookshelf","📚","5","bookshelf"],
 ["{{selenium_news}}/html/calculator.htm","Calculator","➗","1"],
@@ -57,8 +60,10 @@ var common_apps_pb_global=[
 ["{{selenium_news}}/html/qrimg.htm","qrimg","qrimg512.png","1"],
 ["{{selenium_news}}/html/qs_university.htm","QS University","🏛","5","database|education"],
 ["{{selenium_news}}/html/reader_card.htm","reader card","🗂","5","txtbook"],
+["{{selenium_news}}/html/reader.htm?_tagNONE","reader(NONE)","⛔","5","txtbook"],
 ["{{selenium_news}}/html/reader.htm?_tag🔖","reader","reader256.png","5","txtbook"],
 ["{{selenium_news}}/html/reader_idb.htm","reader idb","reader_idb512.png","5","txtbook"],
+["{{selenium_news}}/html/readlater.htm","Read Later","🛋","5","info"],
 ["{{selenium_news}}/html/rnd_english_words.htm","Random English Words","🇬🇧","5","ENG"],
 ["{{selenium_news}}/html/routines.htm","Routines","♾","5","PIM"],
 ["{{selenium_news}}/html/rows.htm","rows","rows512.png","0"],
@@ -79,6 +84,7 @@ var common_apps_pb_global=[
 ["{{selenium_news}}/html/temp_txt_share.htm","Temp Txt Share Offline","📙","5"],
 ["{{selenium_news}}/html/tetris.htm","Tetris","tetris512.png","5","game"],
 ["{{selenium_news}}/html/todolist.htm","ToDoList","✅","5","PIM"],
+["{{selenium_news}}/html/txtlistsearch.htm?_tagNONE","txtlistsearch(NONE)","⛔","5","txtbook"],
 ["{{selenium_news}}/html/txtlistsearch.htm?_tag🔖","txtlistsearch","txtlistsearch256.png","5","txtbook"],
 ["{{selenium_news}}/html/vcard.htm","vcard","📱","2"],
 ["{{selenium_news}}/html/websites.htm","网址库","websites512.png","0"],
@@ -87,7 +93,4 @@ var common_apps_pb_global=[
 ["{{selenium_news}}/html/zj_college_search.htm","ZJ College","💯","5","database|education"],
 ["{{selenium_news}}/html/zj_company.htm","ZJ Company","🏭","5","database"],
 ["{{selenium_news}}/module/pdfjs/web/viewer.html","PDF.js","🔖","5","txtbook"],
-["{{selenium_news}}/html/bigfile.htm","big file","bigfile512.png","0"],
-["{{selenium_news}}/html/benchmark.htm","benchmark","🔩","2"],
-["{{selenium_news}}/html/readlater.htm","Read Later","🛋","5","info"],
 ];

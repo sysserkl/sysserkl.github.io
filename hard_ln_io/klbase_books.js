@@ -232,6 +232,8 @@ function menu_digest_file_full_name_b(book_no=false,jsdoc_num=false,bookid=false
 }
 
 function books_b(showall=false,cstype='txt',cstag='all'){   //书目生成，category - 保留注释
+    if (cstag=='NONE'){return '';}
+    
     var current_show=document.querySelector('span.span_show_all_kltxt')!==null;
     var ocurrent=document.querySelector('span.span_current_book_item');
     if (ocurrent){
