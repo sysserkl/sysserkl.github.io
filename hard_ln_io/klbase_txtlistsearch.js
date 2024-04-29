@@ -3305,7 +3305,7 @@ function selected_range_get_kltxt_b(){
     }
 }
 
-function selected_range_expand_kltxt_b(do_expand=true,do_copy=false){
+function selected_range_expand_kltxt_b(do_expand=true,add_to_textarea=false,do_save=false){
     if (typeof(oselected_kltxt_global)=='undefined'){
         selected_range_get_kltxt_b();
     }
@@ -3319,9 +3319,13 @@ function selected_range_expand_kltxt_b(do_expand=true,do_copy=false){
     if (do_expand){
         selection_expand_b();
     }
-    if (do_copy){
+    
+    if (add_to_textarea){
         var blstr=selection_content_b();
         document.getElementById('textarea_digest_txtlistsearch').value=blstr;
+    }
+    if (do_save){
+        setTimeout(digest_temp_update_kltxt_b,1);
     }
     oselected_kltxt_global={};
 }
@@ -3333,10 +3337,11 @@ function digest_temp_add_kltxt_b(do_fix=false){
 	var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php" name="form_digest_textarea" target=_blank style="margin-left:0.5rem;">\n';
     bljg=bljg+'<p id="p_digest_button" style="font-size:0.9rem;line-height:1.5rem;margin-top:0.2rem;">';
     bljg=bljg+textarea_buttons_b('textarea_digest_txtlistsearch','清空','','','oblong_box');
-    bljg=bljg+'<span class="oblong_box" onclick="digest_temp_update_kltxt_b();">➕临时摘要</span> ';
-    bljg=bljg+'<span class="oblong_box" onclick="digest_temp_jump_to_line_kltxt_b();">返回阅读</span> ';
+    bljg=bljg+'<span class="oblong_box" onclick="digest_temp_update_kltxt_b();" title="添加临时摘要">➕</span> ';
+    bljg=bljg+'<span class="oblong_box" onclick="digest_temp_jump_to_line_kltxt_b();" title="返回阅读">⤴</span> ';
     bljg=bljg+'<span class="oblong_box" onmouseenter="selected_range_get_kltxt_b();" onclick="selected_range_expand_kltxt_b();">↔</span> ';
     bljg=bljg+'<span class="oblong_box" onmouseenter="selected_range_get_kltxt_b();" onclick="selected_range_expand_kltxt_b(false,true);">cp</span> ';
+    bljg=bljg+'<span class="oblong_box" onmouseenter="selected_range_get_kltxt_b();" onclick="selected_range_expand_kltxt_b(false,true,true);">cp➕</span> ';
     bljg=bljg+'<span class="oblong_box" id="span_digest_temp_fix" onclick="fix_divhtml2_kltxt_b(this.innerText==\'固定\',this);">固定</span> '; 
     bljg=bljg+'<span id="span_current_book_temp_digest_count"></span>';     
     bljg=bljg+'</p>';
