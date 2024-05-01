@@ -30,9 +30,19 @@ function menu_notepad(){
     klmenu_check_b('span_reg_notepad',true);
     //-----------------------
     var klmenu_sort=sort_menu_klr_b('textarea_content_notepad',str_t);
-    var buttons=edit_buttons_b('edit_tools_click_notepad',true).join(' ');
+    var buttons=edit_buttons_b('edit_tools_click_notepad',true,true,'oblong_box').join(' ');
+    
+    var dom_show_hide='<span class="oblong_box" onclick="wiki_style_notepad();">wiki</span> <span class="oblong_box" onclick="popup_show_hide_b(\'span_edit_buttons_notepad\',\'\');">🖊</span> ';
     var op=document.getElementById('p_menu_notepad');
-    op.insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu_sort,'↕','10rem','1rem','1rem','30rem'),'','0rem')+' '+buttons);
+    op.insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu_sort,'↕','10rem','1rem','1rem','30rem'),'','0rem')+' '+dom_show_hide+'<span id="span_edit_buttons_notepad" style="display:none;">'+buttons+'</span>');
+    mouseover_mouseout_oblong_span_b(op.querySelectorAll('span.oblong_box'));
+}
+
+function wiki_style_notepad(){
+    var odiv=document.getElementById('div_status');
+    var blstr=document.getElementById('textarea_content_notepad').value;
+    var buttons=close_button_b('div_status','');
+    odiv.innerHTML=wiki_all_format_b(blstr)+'<p>'+buttons+'</p>';
 }
 
 function edit_tools_click_notepad(obutton){
@@ -41,9 +51,15 @@ function edit_tools_click_notepad(obutton){
         console.log('not find id: textarea_content_notepad');
         return;
     }
-    var list_t=obutton.innerHTML.replace(/&lt;/g,'<').replace(/&gt;/g,'>').split('+');
+    
+    var blstr=obutton.innerHTML;
+    var every_line=(blstr=='*' || blstr=='#');
+    var list_t=blstr.replace(/&lt;/g,'<').replace(/&gt;/g,'>').split('+');
     list_t.push('');
-    dom_insert_str_b(otextarea,list_t[0],list_t[1],false);
+    if (every_line){
+        list_t[0]=list_t[0]+' ';
+    }
+    dom_insert_str_b(otextarea,list_t[0],list_t[1],false,every_line);
 }
 
 function recent_notepad(csstr=''){

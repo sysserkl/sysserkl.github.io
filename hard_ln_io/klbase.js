@@ -2946,13 +2946,23 @@ function fun_soruce_show_b(csid){
     }
 }
 
-function dom_insert_str_b(odom,str1,str2,check_selected=false){
+function dom_insert_str_b(odom,str1,str2,check_selected=false,every_line=false){
     var st=odom.selectionStart;
     var ed=odom.selectionEnd;
     if (check_selected && st==ed){return;}
     
     var blvalue=odom.value;
-    odom.value=blvalue.substring(0,st)+str1+blvalue.substring(st,ed)+str2+blvalue.substring(ed,);
+    var selected_str=blvalue.substring(st,ed);
+    if (every_line){
+        var list_t=selected_str.split('\n');
+        for (let blxl=0;blxl<list_t.length;blxl++){
+            list_t[blxl]=str1+list_t[blxl]+str2;
+        }
+        selected_str=list_t.join('\n');
+    } else {
+        selected_str=str1+selected_str+str2;
+    }
+    odom.value=blvalue.substring(0,st)+selected_str+blvalue.substring(ed,);
 }
 
 function textarea_shift_b(idname1,idname2){
