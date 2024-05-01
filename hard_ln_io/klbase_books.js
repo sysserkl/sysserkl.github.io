@@ -231,7 +231,7 @@ function menu_digest_file_full_name_b(book_no=false,jsdoc_num=false,bookid=false
     }
 }
 
-function books_b(showall=false,cstype='txt',cstag='all'){   //书目生成，category - 保留注释
+function books_b(showall=false,cstype='txt',cstag='all',enforce_refresh=false){   //书目生成，category - 保留注释
     if (cstag=='NONE'){return '';}
     
     var current_show=document.querySelector('span.span_show_all_kltxt')!==null;
@@ -242,9 +242,11 @@ function books_b(showall=false,cstype='txt',cstag='all'){   //书目生成，cat
             var blhref=decodeURIComponent(oa.href);
             if (blhref){
                 var blstr='?'+csbooklist_sub_global[csbookno_global][0]+'_tag'+cstag;
-                if ((blhref.includes(blstr+'&') || blhref.endsWith(blstr)) && showall==current_show){
-                    console.log('books_b() 未更新');
-                    return;
+                if (!enforce_refresh){
+                    if ((blhref.includes(blstr+'&') || blhref.endsWith(blstr)) && showall==current_show){
+                        console.log('books_b() 未更新');
+                        return;
+                    }
                 }
             }
         }

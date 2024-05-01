@@ -2275,11 +2275,11 @@ function txtsearch_kltxt_b(csword='',csreg=-1,cscontinue=-1,add_recent=true){
         }
 	}
     if (do_continue==false){
-        render_html_kltxt_b(blwordlist);
+        render_html_kltxt_b(blwordlist,true,true,false,true);
     }
 }
 
-function render_html_kltxt_b(wordlist=[],layout=true,highlight=true,b_style=false){
+function render_html_kltxt_b(wordlist=[],layout=true,highlight=true,b_style=false,enforce_refresh=false){
     if (layout){
         layout_kltxt_b();
     }
@@ -2288,7 +2288,7 @@ function render_html_kltxt_b(wordlist=[],layout=true,highlight=true,b_style=fals
         highlight_text_b(wordlist);
     }
     digest_show_kltxt_b(true,-1,b_style);
-    books_b(false,'txt',book_tag_global);
+    books_b(false,'txt',book_tag_global,enforce_refresh);
     new_words_kltxt_b();
     img_load_check_kltxt_b();
 }
