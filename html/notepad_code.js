@@ -40,7 +40,7 @@ function menu_notepad(){
 
 function wiki_style_notepad(){
     var odiv=document.getElementById('div_status');
-    var blstr=document.getElementById('textarea_content_notepad').value;
+    var blstr=document.getElementById('textarea_content_notepad').value.replace(/\n/g,'<br />\n');
     var buttons=close_button_b('div_status','');
     odiv.innerHTML=wiki_all_format_b(blstr)+'<p>'+buttons+'</p>';
 }
