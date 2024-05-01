@@ -30,8 +30,20 @@ function menu_notepad(){
     klmenu_check_b('span_reg_notepad',true);
     //-----------------------
     var klmenu_sort=sort_menu_klr_b('textarea_content_notepad',str_t);
-    document.getElementById('p_menu_notepad').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu_sort,'↕','10rem','1rem','1rem','30rem'),'','0rem')+' ');
-    
+    var buttons=edit_buttons_b('edit_tools_click_notepad',true).join(' ');
+    var op=document.getElementById('p_menu_notepad');
+    op.insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu_sort,'↕','10rem','1rem','1rem','30rem'),'','0rem')+' '+buttons);
+}
+
+function edit_tools_click_notepad(obutton){
+    var otextarea=document.getElementById('textarea_content_notepad');
+    if (!otextarea){
+        console.log('not find id: textarea_content_notepad');
+        return;
+    }
+    var list_t=obutton.innerHTML.replace(/&lt;/g,'<').replace(/&gt;/g,'>').split('+');
+    list_t.push('');
+    dom_insert_str_b(otextarea,list_t[0],list_t[1],false);
 }
 
 function recent_notepad(csstr=''){

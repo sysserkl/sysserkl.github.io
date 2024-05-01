@@ -2233,3 +2233,20 @@ function doms_rect_b(odoms,return_list=false){
         return {'left':blleft,'top':bltop,'width':blwidth,'height':blheight};
     }
 }
+
+function edit_buttons_b(js_fn='',more_buttons=false){
+    var the_year=new Date().getFullYear();
+    var result_t=['{{wikiuploads}}', '{{wikiuploads}}'+the_year+'/', '<photo>{{wikiuploads}}'+the_year+'/+</photo>', '<photo>+</photo>', '<u>+</u>', '<poem>+</poem>', '{{quote}}+{{/quote}}', '{{span}}+{{/span}}', '<ed2k name="ed2k">+</ed2k>', '<magnet>+</magnet>', '<kltab sep=comma>+</kltab>', '<syntaxhighlight lang="">+</syntaxhighlight>', '<div class="div_kl_wrap" style="max-height:;">+</div>', '<code>+</code>', ];
+    
+    if (more_buttons){
+        result_t=['== + ==','=== + ===',"''+''","'''+'''",'<nowiki>+</nowiki>','<big>+</big>','<sup>+</sup>','<sub>+</sub>',
+        ].concat(result_t);
+    }
+    
+    if (js_fn!==''){
+        for (let blxl=0;blxl<result_t.length;blxl++){
+            result_t[blxl]='<button type="button" onclick="'+js_fn+'(this);">'+specialstr_lt_gt_j(result_t[blxl])+'</button>';
+        }
+    }
+    return result_t;
+}

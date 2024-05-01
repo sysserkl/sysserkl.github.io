@@ -2952,7 +2952,7 @@ function dom_insert_str_b(odom,str1,str2,check_selected=false){
     if (check_selected && st==ed){return;}
     
     var blvalue=odom.value;
-    odom.value=blvalue.substring(0,st)+str1+blvalue.substring(st,ed)+str2+blvalue.substring(ed,);    
+    odom.value=blvalue.substring(0,st)+str1+blvalue.substring(st,ed)+str2+blvalue.substring(ed,);
 }
 
 function textarea_shift_b(idname1,idname2){
