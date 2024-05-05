@@ -1,5 +1,5 @@
 function init_notepad(){
-    top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.6rem'),false,false,2);
+    top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.6rem'));
     input_with_x_b('input_search',11);
     recent_notepad();
 
@@ -392,6 +392,7 @@ function idb_read_notepad(db,cskey=false,do_type=''){
         is_all_result_notepad_global=true;
 
         [current_result_notepad_global,is_all_result_notepad_global]=common_search_b(cskey,isreg,raw_data_notepad_global,-1);
+        current_result_notepad_global.reverse();
         //current_result_notepad_global 每个元素为：[idno,content,datetime] - 保留注释
         
         result_percent_b('span_count',current_result_notepad_global.length,raw_data_notepad_global.length);

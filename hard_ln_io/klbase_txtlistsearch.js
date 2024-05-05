@@ -225,8 +225,9 @@ function import_bigfile_kltxt_b(){
         }
     }
     
-    var fname=prompt_from_local_storage_b('输入书籍文件名','bigfile_txtbook');
-    if (fname==null){return;}
+    var fname=prompt_from_local_storage_b('输入书籍文件名','bigfile_txtbook') || '';
+    if (fname.trim()==''){return;}
+
     filelist=undefined;
     filelist2=[];
     menulist=[];

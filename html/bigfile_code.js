@@ -66,6 +66,7 @@ function upload_a_bigfile(){
 function read_fn_bigfile(raw_data_bigfile){
     document.getElementById('span_count').innerHTML='('+raw_data_bigfile.length+')';      
     var result_t=[];  
+    raw_data_bigfile.sort(function(a,b){return zh_sort_b(a,b,false,1);});
     for (let item of raw_data_bigfile){
         result_t.push('<li><span class="span_name_bigfile" style="font-weight:bold;">'+specialstr92_b(item[1])+'</span>: '+specialstr92_b(item[2])+' <span style="font-size:0.8rem;color:'+scheme_global['memo']+';">('+item[3]+' '+item[4]+')</span><span class="oblong_box" onclick="delete_bigfile(this);">✗</span> <span class="oblong_box" onclick="copy_bigfile(this);">C</span></li>');
     }

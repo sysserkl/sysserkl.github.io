@@ -427,10 +427,16 @@ function one_key_to_all_links_klsearch(){
         }
     }
     var bljg='';
-    for (let item of list_t){
-        bljg=bljg+'<li>'+item[0]+' <a href="'+item[1]+'" target=_blank>'+item[1]+'</a></li>';
+    bljg=bljg+'<table width=100%>';
+    for (let blxl=0;blxl<list_t.length;blxl++){
+        var item=list_t[blxl];
+        bljg=bljg+'<tr><td>'+(blxl+1)+'</td><td>'+item[0]+' <a href="'+item[1]+'" target=_blank>'+item[1]+'</a></td>';
+        bljg=bljg+'<td align=left><textarea style="height:1rem;" onclick="this.select();document.execCommand(\'copy\');">'+item[0]+'</textarea></td>';
+        bljg=bljg+'<td align=left><textarea style="height:1rem;" onclick="this.select();document.execCommand(\'copy\');">'+item[1]+'</textarea></td>';
+        bljg=bljg+'</tr>';
     }
-    document.getElementById('div_status').innerHTML='<ol>'+bljg+'</ol>';
+    bljg=bljg+'</table>';
+    document.getElementById('div_status').innerHTML=bljg;
 }
 
 function batch_keys_form_klsearch(){

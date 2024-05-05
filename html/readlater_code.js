@@ -51,8 +51,8 @@ function import_bigfile_rlater(){
         }
     }
     
-    var fname=prompt('输入文件名称');
-    if (fname==null){return;}
+    var fname=prompt_from_local_storage_b('输入文件名','bigfile_readlater') || '';
+    if (fname.trim()==''){return;}
     
     readlater_data_global=[];
     readlater_data_original_global=undefined;
@@ -262,7 +262,7 @@ function delete_batch_from_array_form_rlater(){
 	var blstr='<form method="POST" action="'+postpath+'temp_txt_share.php" target=_blank>\n';    
     blstr=blstr+'<textarea name="textarea_delete_batch_rlater" id="textarea_delete_batch_rlater" style="height:20rem;"></textarea>';
     blstr=blstr+'<p>';
-    blstr=blstr+textarea_buttons_b('textarea_delete_batch_rlater','清空,复制,发送到临时记事本,发送地址');
+    blstr=blstr+textarea_buttons_b('textarea_delete_batch_rlater','清空,复制,导入temp_txt_share,发送到临时记事本,发送地址');
     blstr=blstr+'<span class="aclick" onclick="delete_batch_from_array_transform_rlater();">数组转换为列表</span>';
     blstr=blstr+'<span class="aclick" onclick="delete_batch_from_url_transform_rlater();">链接转换为列表</span>';
     blstr=blstr+'<span class="aclick" onclick="import_marked_rows_rlater();">导入已标记链接</span>';
@@ -310,7 +310,9 @@ function delete_batch_from_url_transform_rlater(){
     }
     
     if (urls.size>0){
-        document.getElementById('div_delete_batch_info_rlater').innerHTML='<h3>共有 '+old_len+' 条，未发现 '+urls.size+' 条</h3>\n'+array_2_li_b(Array.from(urls));
+        var bljg='<h3>共有 '+old_len+' 条，未发现 '+urls.size+' 条</h3>\n'+array_2_li_b(Array.from(urls));
+        bljg=bljg+'<h3>发现的记录</h3>\n<ol>'+searched_t.join('')+'</ol>';
+        document.getElementById('div_delete_batch_info_rlater').innerHTML=bljg;
     } else {
         document.getElementById('input_max_delete').value=searched_t.length;
         search_array_2_html_rlater(searched_t,'2');
