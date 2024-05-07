@@ -21,6 +21,17 @@ function init_merge_img(){
     ];
     
     input_size_b(input_list,'id');
+    menu_merge_img();
+}
+
+function menu_merge_img(){
+    var str_t=klmenu_hide_b('');
+
+    var klmenu2=[
+    '<span class="span_menu">保存图片类型：<select  id="select_canvas_save_type"><option>jpeg</option><option>png</option></select></span>',    
+    ];
+
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu2,'⚙','15rem','1rem','1rem','60rem'),'','0rem')+' ');
 }
 
 function step_merge_img(){            
@@ -125,7 +136,7 @@ function read_merge_img(){
         }
     }
     
-    var imgtype=document.getElementById('select_ext').value;
+    var imgtype=document.getElementById('select_canvas_save_type').value;
     var img = ocanvas.toDataURL('image/'+imgtype);
     document.getElementById('divhtml').innerHTML='<img src="' + img + '" style="max-width:900px;max-height:1400px;" />';        
 }

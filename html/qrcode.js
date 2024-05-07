@@ -46,7 +46,7 @@ function canvas2img_klqr(cscolor){
     
     background_img_load_klqr(ocanvas);
     
-    var imgsrc=ocanvas.toDataURL('image/jpeg');
+    var imgsrc=ocanvas.toDataURL('image/'+document.getElementById('select_canvas_save_type').value);
     if (parameter_klqr_global.has('iframe')){        
         document.body.innerHTML='<img src="'+imgsrc+'" style="width:100%;" />';
     } else {
@@ -160,7 +160,7 @@ function background_img_merge_klqr(ocanvas,oimg){
     ictx.putImageData(iimageData, 0, 0);
     
     var img_border=klmenu_check_b('span_img_border',false);        
-    var bljg='<p><img id="img_backgound_qr" src="'+icanvas.toDataURL('image/png')+'"'+(img_border?' style="border:0.1px solid '+scheme_global['color']+';"':'')+' title="'+bltitle+'" /></p>';
+    var bljg='<p><img id="img_backgound_qr" src="'+icanvas.toDataURL('image/'+document.getElementById('select_canvas_save_type').value)+'"'+(img_border?' style="border:0.1px solid '+scheme_global['color']+';"':'')+' title="'+bltitle+'" /></p>';
     
     document.getElementById('div_qrcode').insertAdjacentHTML('afterbegin',bljg);
 }
@@ -570,12 +570,13 @@ function menu_klqr(){
 
     var klmenu2=[
     '<span class="span_menu" onclick="'+str_t+'hide_show_div_img_upload_klqr_klqr();">背景图片</span>',
+    '<span class="span_menu">保存图片类型：<select  id="select_canvas_save_type"><option>jpeg</option><option>png</option></select></span>',    
     '<span id="span_img_border" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ img border</span>',        
     '<span class="span_menu" onclick="'+str_t+'help_klqr();">help</span>',
     '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'qrcode\');">更新版本</span>',    
     ];
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','11rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'⚙','11rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','11rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'⚙','15rem','1rem','1rem','60rem'),'','0rem')+' ');
     //klmenu_check_b('span_table_klqr'); //此行保留 - 保留注释
 }
 
