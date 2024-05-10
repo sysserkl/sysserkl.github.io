@@ -3791,3 +3791,17 @@ function prompt_from_local_storage_b(cscaption,csid){
     }
     return current_value;
 }
+
+function tf_page_count_b(prefix='',suffix=''){
+    //注意：${HOME}/klwebphp/data/klwiki/mediawiki_pagelist.txt - 保留注释
+    var blcount=2;   //只能是个位数 - 保留注释
+    if (prefix=='' && suffix==''){
+        return blcount;
+    } else {
+        var list_t=[];
+        for (let blxl=1;blxl<=blcount;blxl++){
+            list_t.push(prefix+'0'+blxl+suffix);
+        }
+        return list_t;
+    }
+}

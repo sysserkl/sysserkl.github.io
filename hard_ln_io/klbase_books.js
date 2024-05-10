@@ -120,7 +120,7 @@ function import_book_js_b(import_digest=true){
 
         document.write('\n<script>\n');
         document.write('\nvar filelist2=[].concat(filelist);\n');
-        document.write('}\n</script>\n');
+        document.write('</script>\n');
     }
     txtbook_js_code_file_global=''; //全局变量 - 保留注释
     //---
