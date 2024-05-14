@@ -7,16 +7,28 @@ function init_notepad(){
     document.getElementById('form_notepad').setAttribute('action',postpath+'temp_txt_share.php');
     
     var buttons=textarea_buttons_b('textarea_content_notepad','清空,复制,发送到临时记事本,发送地址,save as txt file');
-    document.getElementById('p_buttons_notepad').insertAdjacentHTML('afterbegin',buttons);
+    document.getElementById('p_edit_buttons_notepad').insertAdjacentHTML('afterbegin',buttons);
     
     character_2_icon_b('N');    
+    mouseover_mouseout_oblong_span_b(document.getElementById('p_search_buttons_notepad').querySelectorAll('span.oblong_box'));        
+}
+
+function new_notepad(){
+    current_id_notepad_global=false;
+    show_hide_notepad(true);
+    
+    if (klmenu_check_b('span_new_empty_notepad',false)){
+        document.getElementById('textarea_content_notepad').value='';
+    }
 }
 
 function menu_notepad(){
     var str_t=klmenu_hide_b('');
     var klmenu1=[
     '<span id="span_reg_notepad" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ reg</span>',    
-    '<span class="span_menu" onclick="'+str_t+'current_id_notepad_global=false;show_hide_notepad(true);">新建</span>',
+    '<span id="span_new_empty_notepad" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 新建时自动清空</span>',    
+
+    //'<span class="span_menu" onclick="'+str_t+'new_notepad();">新建</span>',
     '<span class="span_menu" onclick="'+str_t+'idb_notepad(\'read\',false,false,\'form\');">导入导出</span>',
     '<span class="span_menu" onclick="'+str_t+'idb_notepad(\'clear\');">清空数据库</span>',
     ];
@@ -26,7 +38,7 @@ function menu_notepad(){
     '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'notepad\');">更新版本</span>',        
     ]);
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🗐','10rem','1rem','1rem','30rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','30rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🗐','12rem','1rem','1rem','30rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','30rem'),'','0rem')+' ');
     klmenu_check_b('span_reg_notepad',true);
     //-----------------------
     var klmenu_sort=sort_menu_klr_b('textarea_content_notepad',str_t);
@@ -130,7 +142,7 @@ function show_hide_notepad(is_edit=true){
     
     var bldisplay=(is_edit?'':'none');
     otextarea.style.display=bldisplay;
-    document.getElementById('p_buttons_notepad').style.display=bldisplay;
+    document.getElementById('p_edit_buttons_notepad').style.display=bldisplay;
     document.getElementById('p_menu_notepad').style.display=bldisplay;
     
     document.getElementById('divhtml').style.display=(is_edit?'none':'');
