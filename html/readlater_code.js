@@ -231,14 +231,13 @@ function menu_rlater(){
     }
     
     var klmenu_idb=[
-    '<span id="span_reg_rlater" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ reg</span>',        
-    '<span id="span_delete_to_iframe" class="span_menu" onclick="'+str_t+'is_delete_to_iframe_global=klmenu_check_b(this.id,true);">⚪ 删除到iframe</span>',    
-    '<span id="span_only_tag_rlater" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 仅做标记不删除记录</span>',
+    '<span id="span_reg_rlater" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ reg</span>',      
+    select_delete_type_generate_rlater_b(),
     '<a href="?load=-1" onclick="'+str_t+'">仅导入最新data文件</a>',    
     '<span class="span_menu" onclick="'+str_t+'clear_cached_deleted_rows_rlater_b(\'readlater_deleted_rows\');">清除今日删除记录</span>',
-    '<span class="span_menu" onclick="'+str_t+'delete_batch_from_array_form_rlater();">导入数组批量删除</span>',    
+    '<span class="span_menu" onclick="'+str_t+'delete_batch_from_array_form_rlater_b(\'readlater\');">导入数组批量删除</span>',    
     '<span class="span_menu" onclick="'+str_t+'import_bigfile_rlater();">导入 bigfile 文件</span>',    
-
+    
     ];    
     
     var group_list=[
@@ -253,112 +252,7 @@ function menu_rlater(){
     var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu1,'🛋','10rem','1rem','1rem','60rem')+klmenu_b(klmenu_statistics,'🧮','16rem','1rem','1rem','30rem')+klmenu_b(klmenu_idb,'⚙','17rem','1rem','1rem','60rem')+local_menu_group,'','0rem');
     
     document.getElementById('h2_title').insertAdjacentHTML('afterbegin',bljg+' ');    
-    is_delete_to_iframe_global=klmenu_check_b('span_delete_to_iframe',true);
     klmenu_check_b('span_reg_rlater',true);
-}
-
-function delete_batch_from_array_form_rlater(){
-    var postpath=postpath_b();
-	var blstr='<form method="POST" action="'+postpath+'temp_txt_share.php" target=_blank>\n';    
-    blstr=blstr+'<textarea name="textarea_delete_batch_rlater" id="textarea_delete_batch_rlater" style="height:20rem;"></textarea>';
-    blstr=blstr+'<p>';
-    blstr=blstr+textarea_buttons_b('textarea_delete_batch_rlater','清空,复制,导入temp_txt_share,发送到临时记事本,发送地址');
-    blstr=blstr+'<span class="aclick" onclick="delete_batch_from_array_transform_rlater();">数组转换为列表</span>';
-    blstr=blstr+'<span class="aclick" onclick="delete_batch_from_url_transform_rlater();">链接转换为列表</span>';
-    blstr=blstr+'<span class="aclick" onclick="import_marked_rows_rlater();">导入已标记链接</span>';
-    blstr=blstr+'<span class="aclick" onclick="delete_marked_rows_rlater();">清空已标记链接</span>';
-
-    blstr=blstr+'</p></form>';
-    blstr=blstr+'<div id="div_delete_batch_info_rlater"></div>';
-    document.getElementById('div_search_links').innerHTML=blstr;
-}
-
-function import_marked_rows_rlater(){
-    if (readlater_marked_rows_global.length==0){return;}
-    if (readlater_marked_rows_global.length==1 && readlater_marked_rows_global[0]==''){return;}
-    
-    if (confirm('是否导入 '+readlater_marked_rows_global.length+' 条已标记链接？')){
-        document.getElementById('textarea_delete_batch_rlater').value=readlater_marked_rows_global.join('\n');
-    }
-}
-
-function delete_marked_rows_rlater(){
-    if (readlater_marked_rows_global.length==0){return;}
-    if (readlater_marked_rows_global.length==1 && readlater_marked_rows_global[0]==''){return;}
-    
-    var rndstr=randstr_b(4,true,false);
-    if ((prompt('输入 '+rndstr+' 确认清空 '+readlater_marked_rows_global.length+' 条已标记链接') || '').trim()==rndstr){
-        localStorage.removeItem('readlater_marked_rows');
-        readlater_marked_rows_global=[];
-    }
-}
-
-function delete_batch_from_url_transform_rlater(){
-    var otextarea=document.getElementById('textarea_delete_batch_rlater');
-    var blstr=otextarea.value.trim();
-    if (blstr==''){return;}
-    
-    var urls=new Set(blstr.split('\n'));
-    var old_len=urls.size;
-    var searched_t=[];
-    for (let arow of readlater_data_global){
-        if (urls.has(arow[0])){
-            searched_t.push(sites_type_rlater(arow,'2'));
-            urls.delete(arow[0]);
-        }
-        if (urls.size==0){break;}
-    }
-    
-    if (urls.size>0){
-        var bljg='<h3>共有 '+old_len+' 条，未发现 '+urls.size+' 条</h3>\n'+array_2_li_b(Array.from(urls));
-        bljg=bljg+'<h3>发现的记录</h3>\n<ol>'+searched_t.join('')+'</ol>';
-        document.getElementById('div_delete_batch_info_rlater').innerHTML=bljg;
-    } else {
-        document.getElementById('input_max_delete').value=searched_t.length;
-        search_array_2_html_rlater(searched_t,'2');
-    }
-}
-
-function delete_batch_from_array_transform_rlater(){
-    var otextarea=document.getElementById('textarea_delete_batch_rlater');
-    var list_t=otextarea.value.trim().split('\n');
-    var result_t=[];
-    for (let item of list_t){
-        item=item.trim();
-        if (item.substring(0,2)=='["' && item.slice(-3,)=='"],'){
-            result_t.push(item);
-        }
-    }
-    if (result_t.length==0){
-        alert('未发现记录');
-        return;
-    }
-    try {
-        result_t=eval('['+result_t.join('\n')+'];');
-        var searched_t=[];
-        var not_found_t=[];
-        for (let item of result_t){
-            var blfound=false;
-            for (let arow of readlater_data_global){
-                if (arow[0]==item[0]){
-                    searched_t.push(sites_type_rlater(arow,'2'));
-                    blfound=true;
-                    break;
-                }
-            }
-            if (blfound==false){
-                not_found_t.push(item);
-            }
-        }
-        if (not_found_t.length>0){
-            document.getElementById('div_delete_batch_info_rlater').innerHTML='<h3>未发现</h3>\n'+array_2_li_b(not_found_t);
-        } else {
-            document.getElementById('input_max_delete').value=searched_t.length;
-            search_array_2_html_rlater(searched_t,'2');
-        }
-    } catch (error){
-        alert(error);
-    }
 }
 
 function jieba_sites_rlater(){
@@ -562,14 +456,14 @@ function init_data_rlater(){
     statistics_set_rlater();
     
     //-----------------------
-    marked_rows_get_rlater_b(); //放在 args_rlater 前 - 保留注释
+    marked_rows_get_rlater_b('readlater'); //放在 args_rlater 前 - 保留注释
     args_rlater();
     span_subtitle_rlater();
 }
 
 function init_style_rlater(){
     input_with_x_b('input_search',15);
-    input_size_b([['input_max_rows',4,0.5],['input_max_delete',4,0.5]],'id');
+    input_size_b([['input_max_rows',4,0.5],['input_max_delete_rlater',4,0.5]],'id');
     init_data_rlater();
     menu_rlater();
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.6rem':'1.4rem'));
@@ -725,65 +619,6 @@ function sites_type_rlater(cslist,cstype,csstrong=false){
             break;            
     }
     return bljg;
-}
-
-function delete_batch_rlater(){
-    function sub_delete_batch_rlater_one(){
-        var ospan=document.getElementById('span_delete_batch_doing');
-        if (!ospan){
-            document.title=old_title;
-            alert('操作中断，删除了'+blxl+'条');
-            return;
-        }
-        if (blxl<oas_len){
-            var oa_id=oas[blxl].getAttribute('id');
-            if (oa_id){ //形如：a_rlater_link_12116 - 保留注释
-                var span_id='';
-                var ospan=oas[blxl].parentNode.querySelector('.span_rlater_button');
-                if (ospan){
-                    span_id=ospan.getAttribute('id');
-                    if (!span_id){
-                        span_id='';
-                    }
-                }
-                delete_one_rlater_b(false,oa_id,true,span_id,'readlater');
-            }
-            blxl=blxl+1;
-            document.getElementById('span_batch_delete_process').innerHTML=blxl+'/'+oas_len;
-            
-            if (blxl>=max_delete){
-                document.title=old_title;
-                alert('删除了'+blxl+'条');
-                return;
-            }
-            document.title=blxl+'/'+oas_len+' '+old_title;
-            setTimeout(sub_delete_batch_rlater_one,3000);
-        } else {
-            document.title=old_title;
-            alert('删除了'+blxl+'条');
-        }
-    }
-    //-----------------------
-    var max_delete=parseInt(document.getElementById('input_max_delete').value.trim());
-    if (isNaN(max_delete) || max_delete<1){
-        alert('删除条数设置错误');
-        return;
-    }
-    
-    if (klmenu_check_b('span_only_tag_rlater',false)){
-        alert('须先取消选中“仅做标记不删除”选项');
-        return;
-    }
-    
-    var rndstr=randstr_b(4,true,false);
-    if ((prompt('输入 '+rndstr+' 确认清空') || '').trim()!==rndstr){return;}
-    
-    var old_title=document.title;
-    var oas=document.querySelectorAll('div#div_links a.a_rlater_link');
-    var blxl=0;
-    var oas_len=oas.length;
-    document.getElementById('div_links').insertAdjacentHTML('afterbegin','<span id="span_delete_batch_doing"></span>');
-    sub_delete_batch_rlater_one();
 }
 
 function title_words_rlater(cscount=20){
@@ -1143,7 +978,7 @@ function search_array_2_html_rlater(csarr,cstype){
         bljg='\n<textarea style="height:38rem;">\n'+bljg+'</textarea>\n<p class=mini>('+csarr.length+')</p>\n';
     }
     
-    bljg=years_rlater_b(readlater_data_global.length,csarr.length)+bljg+'<p><span class="aclick" onclick="delete_batch_rlater();">批量删除</span> <span id="span_batch_delete_process"></span></p>';
+    bljg=years_rlater_b(readlater_data_global.length,csarr.length)+bljg+'<p><span class="aclick" onclick="delete_batch_rlater_b();">批量删除</span> <span id="span_batch_delete_process"></span></p>';
     bljg='<div id="div_links">'+bljg+'</div>';    
     
     div_column_count_rlater(bljg,cstype!=='2');
