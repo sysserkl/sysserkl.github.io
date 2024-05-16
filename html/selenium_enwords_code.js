@@ -331,13 +331,15 @@ function menu_seen(){
     var klmenu_config=[
     load_sentence_menu_b(str_t),
     '<span class="span_menu" onclick="'+str_t+'host_count_seen(\'status\');">host count</span>',
-    '<a href="data/words/enwords_selenium_scan.js?'+date2str_b('')+'" onclick="'+str_t+'" target=_blank>enwords_selenium_scan.js</a>',    
     '<span id="span_reg_rlater" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ reg</span>',    
     select_delete_type_generate_rlater_b(),
     '<span class="span_menu" onclick="'+str_t+'delete_batch_from_array_form_rlater_b(\'selenium_enwords\');">导入数组批量删除</span>',
     '<span class="span_menu" onclick="'+str_t+'clear_cached_deleted_rows_rlater_b(\'selenium_enwords_deleted_rows\');">清除今日删除记录</span>',
     '<span class="span_menu" onclick="'+str_t+'import_bigfile_seen();">导入 bigfile 文件</span>',        
     ];    
+    if (is_local_b()){
+        klmenu_config.push('<a href="'+klwebphp_path_b('data/words/enwords_selenium_scan_data.js')+'?'+date2str_b('')+'" onclick="'+str_t+'" target=_blank>enwords_selenium_scan.js</a>');
+    }
     
     var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu1,'🐿','21rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','18rem','1rem','1rem','60rem'),'','0rem');
     

@@ -3738,11 +3738,11 @@ function import_bigfile_content_b(filename=false,csid=false){
     idb_bigfile_b('read','content',filename,sub_import_bigfile_content_b);
 }
 
-function load_js_var_file_b(varname,file_list,filename,csfn=false,do_echo=true,direct_from_bigfile=false){
+function load_js_var_file_b(varname,file_list,filename,csfn=false,do_echo=true,direct_from_bigfile=false,csmax=-1,cswait=2000){
     function sub_load_js_var_file_b_bigfile_test(cslist){
         if (cslist.length>0){
             idb_bigfile_b('read','eval',filename);
-            load_var_b(varname,-1,2000,csfn);        
+            load_var_b(varname,csmax,cswait,csfn);        
         } else {
             if (typeof csfn == 'function'){
                 csfn(false);
@@ -3759,9 +3759,6 @@ function load_js_var_file_b(varname,file_list,filename,csfn=false,do_echo=true,d
             console.log('尝试从bigfile载入',varname);
             
             idb_bigfile_b('read','',filename,sub_load_js_var_file_b_bigfile_test);
-            
-            //idb_bigfile_b('read','eval',filename);
-            //load_var_b(varname,-1,2000,csfn);
         }
     }
     //-----------------------
@@ -3773,7 +3770,7 @@ function load_js_var_file_b(varname,file_list,filename,csfn=false,do_echo=true,d
             sub_load_js_var_file_b_bigfile_eval();
         } else {
             file_dom_create_b(file_list,true,'js');
-            load_var_b(varname,-1,2000,csfn,sub_load_js_var_file_b_bigfile_eval);
+            load_var_b(varname,csmax,cswait,csfn,sub_load_js_var_file_b_bigfile_eval);
         }
     } else {
         if (do_echo){

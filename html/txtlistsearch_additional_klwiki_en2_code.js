@@ -13,7 +13,7 @@ function menu_more_kltxt_klwiki_en2(){
     ];
     
     if (is_local_b()){
-        klmenu1.push('<a href="../../../../selenium_enwords.htm" onclick="'+str_t+'" target=_blank>selenium enwords</a>');
+        klmenu1.push('<a href="selenium_enwords.htm" onclick="'+str_t+'" target=_blank>selenium enwords</a>');
     }
     
     var blstr=klmenu_b(klmenu1,'🇬🇧','17rem','1rem','1rem','30rem');
