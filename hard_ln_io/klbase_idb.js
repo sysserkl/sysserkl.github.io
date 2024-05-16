@@ -291,7 +291,7 @@ function idb_edit_bigfile_b(db,do_type='',cskey='',run_fn=false){
             'id': 0, //无效字段，以免出现 undefined - 保留注释
             'name': file_name_bigfile_global, 
             'content': file_content_bigfile_global, 
-            'date': new Date().toLocaleString()
+            'date': new Date().toLocaleString(),
             });
 
             await new Promise((resolve, reject) => {
