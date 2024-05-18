@@ -2236,7 +2236,7 @@ function doms_rect_b(odoms,return_list=false){
 
 function edit_buttons_b(js_fn='',more_buttons=false,olul=false,dom_type='button'){
     var the_year=new Date().getFullYear();
-    var result_t=['{{wikiuploads}}', '{{wikiuploads}}'+the_year+'/', '<photo>{{wikiuploads}}'+the_year+'/+</photo>', '<photo>+</photo>', '<u>+</u>', '<poem>+</poem>', '{{quote}}+{{/quote}}', '{{span}}+{{/span}}', '<ed2k name="ed2k">+</ed2k>', '<magnet>+</magnet>', '<kltab sep=comma>+</kltab>', '<syntaxhighlight lang="">+</syntaxhighlight>', '<div class="div_kl_wrap" style="max-height:;">+</div>', '<code>+</code>', ];
+    var result_t=['{{wikiuploads}}', '{{wikiuploads}}'+the_year+'/', '<photo>{{wikiuploads}}'+the_year+'/+</photo>', '<photo>+</photo>', 'upload/','<br />','<u>+</u>', '<poem>+</poem>', '{{quote}}+{{/quote}}', '{{span}}+{{/span}}', '<ed2k name="ed2k">+</ed2k>', '<magnet>+</magnet>', '<kltab sep=comma>+</kltab>', '<syntaxhighlight lang="">+</syntaxhighlight>', '<div class="div_kl_wrap" style="max-height:;">+</div>', '<code>+</code>', ];
     
     if (more_buttons){
         result_t=['== + ==','=== + ===',"''+''","'''+'''",'<nowiki>+</nowiki>','<big>+</big>','<sup>+</sup>','<sub>+</sub>',

@@ -630,7 +630,7 @@ function strquick_klr_b(cstype='',csid='textarea_rows_content',status_id='textar
             ['","','">'],
             ['^# ',''],
             ['^#',''],
-            ['^\\["','<br /><a href='],
+            ['^\\["','<br /><a href="'],
             ['"],','</a>'],
             ];
 			result_t=replace_strs_klr_b(arr_t,'',csid);

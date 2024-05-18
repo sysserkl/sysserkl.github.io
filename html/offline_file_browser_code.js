@@ -1325,7 +1325,7 @@ function init_offline_file_browser(){
     var t0 = performance.now();
     input_with_x_b('input_search',15);
 
-    top_bottom_arrow_b('div_top_bottom');
+    top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.6rem'));
     var blerror=false;
     for (let item of offline_file_data_raw_global){
         if (item[0]=='error'){

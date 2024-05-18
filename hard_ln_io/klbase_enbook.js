@@ -622,7 +622,7 @@ function common_word_sign_set_enwords_book_b(csset){
     console.log('common_word_sign_set_enwords_book_b() 费时：'+(performance.now() - t0) + ' milliseconds');
 }
 
-function selenium_enwords_count_enbook_b(is_original=false){
+function selenium_enwords_count_enbook_b(is_original=false,marked_links=[]){
     var csarray=false;
     
     if (is_original){
@@ -639,6 +639,7 @@ function selenium_enwords_count_enbook_b(is_original=false){
 
     var selenium_dict={};
     for (let arow of csarray){
+        if (marked_links.includes(arow[0])){continue;}
         for (let one_word of arow[3]){
             var blkey='w_'+one_word;
             if (selenium_dict[blkey]==undefined){
@@ -646,6 +647,6 @@ function selenium_enwords_count_enbook_b(is_original=false){
             }
             selenium_dict[blkey]=selenium_dict[blkey]+1;
         }
-    }           
+    }
     return selenium_dict;  
 }    

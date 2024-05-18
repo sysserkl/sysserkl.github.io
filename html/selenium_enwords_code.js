@@ -483,7 +483,7 @@ function count_one_seen(odom,words_dict=false){
     if (!oword){return;}
     var blword=oword.innerText;
     if (words_dict===false){
-        words_dict=selenium_enwords_count_enbook_b();
+        words_dict=selenium_enwords_count_enbook_b(false,readlater_marked_rows_global);
     }
     
     var blold=odom.innerText.split('(')[0].split('.')[0];

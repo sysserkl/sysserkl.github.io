@@ -153,6 +153,10 @@ function js2link_temp_txt_share_b(){
     var blbuttons='<p>'+close_button_b('div_status','')+'</p>\n';
     var odiv=document.getElementById('div_status');
     odiv.innerHTML=document.getElementById('textarea_temp_txt_share').value+blbuttons;
+    var oas=odiv.querySelectorAll('a');
+    for (let one_a of oas){
+        one_a.insertAdjacentHTML('afterend','<table width=100%><tr><td><textarea onclick="this.select();document.execCommand(\'copy\');">'+specialstr92_b(one_a.innerText)+'</textarea></td><td><textarea onclick="this.select();document.execCommand(\'copy\');">'+specialstr92_b(one_a.href)+'</textarea></td></tr></table>');
+    }
     odiv.scrollIntoView();
 }
 
@@ -202,10 +206,33 @@ function menu_temp_txt_share_b(is_php=true){
     '<a href="'+klwebphp+'temp_txt_append.php" onclick="'+str_t+'" target=_blank>➕ temp txt append</a>',
     '<a href="'+sele_path+'/html/rows.htm" onclick="'+str_t+'" target=_blank>kl rows</a>',
     '<a href="'+klwebphp+'file_share_list.php" onclick="'+str_t+'" target=_blank>file share list</a>',
+    '<span class="span_menu" onclick="'+str_t+'sync_pages_batch_open_temp_txt_share_b();">批量打开需同步页面</span>',    
     ];
     
     var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu0,(is_php?'📗':'📙'),'16rem','1rem','1rem','60rem')+klmenu_b(klmenu_share,'🫂','19rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem'),'','0rem')+' ';
     document.getElementById('h2_title').insertAdjacentHTML('afterbegin',bljg);
+}
+
+function sync_pages_batch_open_temp_txt_share_b(){
+    function sub_sync_pages_batch_open_temp_txt_share_b_one_page(){
+        if (blxl>=bllen){return;}
+        window.open(sele_path+'/html/'+list_t[blxl]);
+        blxl=blxl+1;
+        setTimeout(sub_sync_pages_batch_open_temp_txt_share_b_one_page,2000);
+    }
+    
+    var sele_path=klbase_sele_path_b()[1];
+    var list_t=[
+    'enwords.htm',
+    'reader.htm?_tagNONE',
+    'selenium_enwords.htm',
+    'readlater.htm',
+    'notepad.htm',
+    ];
+    
+    var blxl=0;
+    var bllen=list_t.length;
+    sub_sync_pages_batch_open_temp_txt_share_b_one_page();
 }
 
 function wiki_page_name_temp_txt_share_b(){

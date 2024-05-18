@@ -802,6 +802,7 @@ function duplicate_words_kle(){
     '； ':[],    //中文分号+空格 - 保留注释
     '	':[],   //\t  - 保留注释
     ' :':[],   //空格+冒号  - 保留注释
+    '．':[], //点号 - 保留注释
     };
     var end_list=[];
     var semicolon_without_space_list=[];
