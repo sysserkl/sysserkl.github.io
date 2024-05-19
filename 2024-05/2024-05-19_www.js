@@ -1,0 +1,16 @@
+var sourcelist=[
+["https://www.solidot.org/story?sid=78203","Twitter 终于死了","2024-05-19","Solidot","1",],
+["https://www.solidot.org/story?sid=78204","去年吃超辣玉米片死亡的男孩有先天心脏缺陷","2024-05-19","Solidot","1",],
+["https://www.solidot.org/story?sid=78205","法国海外领土屏蔽 TikTok","2024-05-19","Solidot","1",],
+["https://www.solidot.org/story?sid=78206","美亚利桑那州女子被控帮助朝鲜 IT 工人获得远程工作","2024-05-19","Solidot","1",],
+["https://blog.documentfoundation.org/blog/2024/05/16/coming-up-libreoffice-technology-budapest-2024-hackfest/","Coming up: LibreOffice Technology Budapest 2024 Hackfest","2024-05-19","LibreOffice","0",],
+["https://blog.documentfoundation.org/blog/2024/05/15/half-way-point-in-the-month-of-libreoffice-may-2024/","Half-way point in the Month of LibreOffice, May 2024!","2024-05-19","LibreOffice","0",],
+["https://blog.documentfoundation.org/blog/2024/05/14/libreoffice-conference-2024/","LibreOffice Conference 2024","2024-05-19","LibreOffice","0",],
+["https://blog.documentfoundation.org/blog/2024/05/10/libreoffice-7-6-7/","LibreOffice 7.6.7 for productivity environments","2024-05-19","LibreOffice","0",],
+["https://blog.documentfoundation.org/blog/2024/05/07/projects-selected-for-libreoffice-in-the-google-summer-of-code-2024/","Projects selected for LibreOffice in the Google Summer of Code 2024","2024-05-19","LibreOffice","0",],
+["https://blog.documentfoundation.org/blog/2024/05/02/libreoffice-24-2-3-community/","Announcement of LibreOffice 24.2.3 Community","2024-05-19","LibreOffice","0",],
+["https://blog.documentfoundation.org/blog/2024/05/01/do-something-awesome-join-the-month-of-libreoffice-may-2024/","Do something awesome – Join the Month of LibreOffice, May 2024!","2024-05-19","LibreOffice","0",],
+["https://blog.documentfoundation.org/blog/2024/04/30/libreoffice-project-and-community-recap-april-2024/","LibreOffice project and community recap: April 2024","2024-05-19","LibreOffice","0",],
+["https://blog.documentfoundation.org/blog/2024/04/25/calc-guide-and-writer-guides-available-for-browsing/","Calc Guide and Writer Guides available for browsing","2024-05-19","LibreOffice","0",],
+["https://blog.documentfoundation.org/blog/2024/04/22/community-member-monday-kira-tubo/","Community Member Monday: Kira Tubo","2024-05-19","LibreOffice","0",],
+];
