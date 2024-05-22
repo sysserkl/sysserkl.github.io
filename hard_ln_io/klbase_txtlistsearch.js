@@ -298,16 +298,27 @@ function txtmenus_kltxt_b(cstype=''){
         ]);
     }
     var menu_dir_width='14rem';
-    var search_list=[
-    '<span class="span_menu" onclick="'+str_t+'absearch_kltxt_b();">AB Search</span>',
-    '<span class="span_menu" onclick="'+str_t+'absearch_kltxt_b(\'\',-1,true);">AB搜索(单一结果)</span>',
+    var search_list=[];
+    
+    var group_list=[
+    ['AB Search','absearch_kltxt_b();',true],
+    ['单一结果','absearch_kltxt_b(\'\',-1,true);',true],
+    ];    
+    search_list.push(menu_container_b(str_t,group_list,''));
+
+    var group_list=[
+    ['提取（不支持AB搜索）','select_array_kltxt_b(\'select\');',true],
+    ['删除','select_array_kltxt_b(\'remove\');',true],
+    ];    
+    search_list.push(menu_container_b(str_t,group_list,'符合条件的记录：'));
+    
+    search_list=search_list.concat([
+    '<span class="span_menu" onclick="'+str_t+'name_form_kltxt_b();">姓名溯源</span>',    
     '<span class="span_menu" onclick="'+str_t+'rearray_kltxt_b();">重新分组</span>',
-    '<span class="span_menu" onclick="'+str_t+'select_array_kltxt_b(\'select\');">提取符合条件的记录(不支持AB搜索)</span>',
-    '<span class="span_menu" onclick="'+str_t+'select_array_kltxt_b(\'remove\');">删除符合条件的记录</span>',
     '<hr />',
     '<span class="span_menu" onclick="'+str_t+'separate_search_kltxt_b();">分离搜索</span>',    
-    ];
-    
+    ]);
+
     var menu_config=root_font_size_menu_b(str_t);
     menu_config=menu_config.concat([
     '<span class="span_menu" onclick="'+str_t+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>',
@@ -326,7 +337,7 @@ function txtmenus_kltxt_b(cstype=''){
         var book_list_file=load_current_book_b(true,false)[0];
         var digest_file=menu_digest_file_full_name_b()[1];
         menu_dir=menu_dir.concat(search_list);
-        menu_dir_width='19rem';
+        menu_dir_width='24rem';
         menu_config=menu_config.concat([
         '<a href="'+book_list_file+'" onclick="'+str_t+'" target=_blank>booklist_current_data.js</a>',    
         '<a href="'+digest_file+'" onclick="'+str_t+'" target=_blank>_digest.js</a>',
@@ -436,6 +447,168 @@ function line_no_show_hide_kltxt_b(){
 function img2base64_kltxt_b(){
     var oimgs=document.querySelectorAll('#divhtml img');
     img2base64_b(oimgs,'');
+}
+
+function name_form_kltxt_b(){
+    var bljg='<textarea id="textarea_name_kltxt" style="height:20rem;"></textarea>';
+
+    bljg=bljg+'<p>';
+    bljg=bljg+close_button_b('divhtml2','')+' ';
+    bljg=bljg+'最大间隔数：<input type="number" id="input_max_interval_name_kltxt" value=10 /> ';
+    bljg=bljg+'<span class="aclick" onclick="cn_get_kltxt_b();">提取汉字</span> ';
+    bljg=bljg+'<span class="aclick" onclick="name_sort_kltxt_b();">排序</span> ';
+    bljg=bljg+'<span class="aclick" onclick="name_unique_kltxt_b();">unique</span> ';
+    bljg=bljg+'<span class="aclick" onclick="name_remove_surname_kltxt_b();">剔除行首1个字符</span> ';
+    bljg=bljg+'<span class="aclick" onclick="name_remove_single_kltxt_b();">剔除单字</span> ';    
+    bljg=bljg+'<span class="aclick" onclick="name_search_kltxt_b();">溯源</span> ';
+    bljg=bljg+textarea_buttons_b('textarea_name_kltxt','全选,清空,复制')+'</p>';
+    bljg=bljg+'<div id="div_name_kltxt"></div>';
+
+    var odiv=document.getElementById('divhtml2');
+    odiv.innerHTML='<div style="margin:0.5rem;">'+bljg+'</div>';
+    input_size_b([['input_max_interval_name_kltxt',5]],'id');
+    
+    odiv.scrollIntoView();
+}
+
+function name_sort_kltxt_b(){
+    if (!confirm('是否排序？')){return;}
+    var otextarea=document.getElementById('textarea_name_kltxt');
+    var list_t=otextarea.value.trim().split('\n');
+    list_t.sort(zh_sort_b);
+    otextarea.value=list_t.join('\n');
+}
+
+function name_unique_kltxt_b(){
+    if (!confirm('是否剔除重复行？')){return;}
+
+    var otextarea=document.getElementById('textarea_name_kltxt');
+    var list_t=otextarea.value.trim().split('\n');
+    var len_old=list_t.length;
+    
+    list_t.sort();
+    var result_t=[];
+    var duplicate=[];
+    var current='';
+    for (let item of list_t){
+        if (item==current){
+            duplicate.push(item);
+        } else {
+            result_t.push(item);
+            current=item;
+        }
+    }
+    otextarea.value=result_t.join('\n');
+    alert('剔除前行数：'+len_old+'，剔除后行数：'+result_t.length+'，重复项('+duplicate.length+')：'+duplicate.slice(0,100).join('\n'));
+}
+
+function name_remove_single_kltxt_b(){
+    if (!confirm('是否剔除单字？')){return;}
+
+    var otextarea=document.getElementById('textarea_name_kltxt');
+    var list_t=otextarea.value.trim().split('\n');
+    var len_old=list_t.length;    
+    var result_t=[];
+    for (let item of list_t){
+        if (item.length>1){
+            result_t.push(item);
+        }
+    }
+    otextarea.value=result_t.join('\n');
+    alert('剔除前行数：'+len_old+'，剔除后行数：'+result_t.length);
+}
+
+function name_remove_surname_kltxt_b(){
+    if (!confirm('是否剔除行首1个字符？')){return;}
+
+    var otextarea=document.getElementById('textarea_name_kltxt');
+    var list_t=otextarea.value.trim().split('\n');
+    for (let blxl=0;blxl<list_t.length;blxl++){
+        list_t[blxl]=list_t[blxl].slice(1,);
+    }
+    otextarea.value=list_t.join('\n');
+}
+
+function cn_get_kltxt_b(){
+    var otextarea=document.getElementById('textarea_name_kltxt');
+    var blstr=otextarea.value.trim();
+    var list_t=blstr.match(/[^\x00-\xff]+/g) || [];
+    if (list_t.length==0){return;}
+    if (!confirm('发现汉字 '+list_t.length+' 个，是否替换当前编辑框内容？')){return;}
+    otextarea.value=list_t.join('\n');
+}
+
+function name_search_kltxt_b(){
+    function sub_name_search_kltxt_b_one_row(){
+        if (blxl>=bllen){
+            var blno=0;
+            var bljg=[];
+            var not_found=[];
+            for (let key in result_t){
+                if (result_t[key].size==0){
+                    not_found.push(key.slice(2,));
+                    continue;
+                }
+                
+                bljg.push('<h3>'+(blno+1)+'. '+key.slice(2,)+'</h3><div style="margin:1rem;">'+array_2_li_b(Array.from(result_t[key]),'li','ol','ol_name_kltxt_'+blno)+'</div>');
+                high_light_list.push([key.slice(2,).match(/[^\x00-\xff]/g) || [],'ol#ol_name_kltxt_'+blno+' li']);
+                blno=blno+1;
+            }
+            odiv.innerHTML=bljg.join('\n')+'<hr /><h3>not found('+not_found.length+')</h3><textarea onclick="this.select();document.execCommand(\'copy\');">'+not_found.join('\n')+'</textarea><hr /><h3>error('+error_list.length+')</h3>'+array_2_li_b(error_list);
+            for (let item of high_light_list){
+                highlight_text_b(item[0],item[1])
+            }
+            
+            return;
+        }
+
+        var blkey='n_'+name_list[blxl];
+        var blname=name_list[blxl].replace(/([^\x00-\xff])/g,'$1'+interval_str);
+        if (blname.slice(interval_str_len,)==interval_str){
+            blname=blname.slice(0,interval_str_len);
+        }
+        
+        try {
+            for (let blxl=0;blxl<filelist.length;blxl++){
+                var arow=filelist[blxl];
+                if (arow.match(new RegExp(blname,'g'))==null){continue;}
+                result_t[blkey].add(arow);
+            }
+        } catch (error){
+            console.log(error);
+            error_list.push(error.toString());
+        }
+        
+        if (blxl % 100 == 0){
+            odiv.innerHTML=(blxl+1)+'/'+bllen;
+        }
+        blxl=blxl+1;
+        setTimeout(sub_name_search_kltxt_b_one_row,1);
+    }
+    
+
+    var blinterval=parseInt(document.getElementById('input_max_interval_name_kltxt').value.trim());
+    var interval_str='.{0,'+blinterval+'}';
+    var interval_str_len=-1*interval_str.length;
+    var result_t={};
+
+    var list_t=array_unique_b(document.getElementById('textarea_name_kltxt').value.trim().split('\n'));
+    list_t.sort(zh_sort_b);
+    var name_list=[];
+    for (let item of list_t){
+        item=item.trim();
+        if (item.length<2){continue;}
+        name_list.push(item);
+        result_t['n_'+item]=new Set();
+    }
+
+    var blxl=0;
+    var bllen=name_list.length;
+
+    var error_list=[];
+    var high_light_list=[];
+    var odiv=document.getElementById('div_name_kltxt');
+    sub_name_search_kltxt_b_one_row();
 }
 
 function innerHTML_2_arr_kltxt_b(){

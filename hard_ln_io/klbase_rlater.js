@@ -215,7 +215,7 @@ function manage_item_rlater_b(csid,cstype='copy text'){
             break;
         case 'selenium':
             var selestr=selenium_search_str_rlater_b(oa.innerText);
-            window.open('../../../../klbase_html_jump.htm?selenium_news_search.php?search='+selestr);
+            window.open('../../../../klbase_html_jump.htm?'+encodeURIComponent('selenium_news_search.php?search='+selestr));
             break;
         case 'edit title':
             var new_title=(prompt('输入新标题',oa.innerText) || '').trim();

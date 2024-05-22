@@ -1906,9 +1906,7 @@ function highlight_text_b(cswordlist=[],query_str=''){
     var blkey2=[];
     for (let item of blkey){
         if (item.trim()==''){continue;}
-        if (item.includes('\\') || item.includes('(') || item.includes(')')){
-            continue;
-        }
+        if (item.includes('\\') || item.includes('(') || item.includes(')')){continue;}
         blkey2.push(item);
     }
     
