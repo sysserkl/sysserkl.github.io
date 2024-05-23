@@ -1156,7 +1156,7 @@ function batch_open_klwiki_cd_pages_offline_file_browser(){
     if (confirm('是否批量打开KLWiki刻录页面？')==false){return;}
     var blyear=date_2_ymd_b(false,'y');
     
-    var list_t=tf_page_count_b('光盘柜').concat(['光盘柜 - 楚门','家庭影片目录',blyear+'年KL影视记录','家庭影视记录']);
+    var list_t=tf_page_count_b('光盘柜').concat(['家庭影片目录',blyear+'年KL影视记录','家庭影视记录']);
     var bllen=list_t.length;
     var blxl=0;
     sub_batch_open_klwiki_cd_pages_offline_file_browser_one_page();
