@@ -72,7 +72,36 @@ function upload_gpx_gps_points(){
     }
 }
 
-function horizontal_delimiter_split_gps_points(csstr){
+function horizontal_delimiter_split_gps_points(csstr,with_name=false){
+    if (with_name){
+        var list_t=csstr.split('\n');
+        var result_t=[];
+        var bljg='';
+        var old_name='';
+        for (let arow of list_t){
+            if (arow=='-----'){
+                if (bljg!==''){
+                    result_t.push([bljg,old_name]);
+                    bljg='';
+                }
+                old_name='';
+            } else if (arow.match(/^---\s*\d+\s*---$/)){
+                var current_name=arow.replace(/^---\s*(\d+)\s*---$/,'$1');
+                if (bljg!==''){
+                    result_t.push([bljg,old_name]);
+                    bljg='';
+                }
+                old_name=current_name;
+            } else {
+                bljg=bljg+arow+'\n';
+            }
+        }
+        if (bljg!==''){
+            result_t.push([bljg,old_name]);
+        }
+        return result_t;
+    }
+    
     var list_t=('\n'+csstr+'\n').replace(/\n---\s*\d+\s*---\n/g,'\n-----\n').split('\n-----\n');
     var result_t=[];
     for (let item of list_t){
@@ -83,14 +112,36 @@ function horizontal_delimiter_split_gps_points(csstr){
 }
 
 function draw_multiple_lines_gps_points(){
+    function sub_draw_multiple_lines_gps_points_one_line(){
+        if (blxl>=bllen){
+            document.title=old_caption;
+            return;
+        }
+        
+        var result_t=data_lines_2_latlon_gps_points(list_t[blxl][0],'latlon');
+        draw_gpx_gps_points(result_t,list_t[blxl][1],true);
+        
+        blxl=blxl+1;
+        if (blxl % 10 == 0){
+            document.title=blxl+'/'+bllen+' - '+old_caption;
+            setTimeout(sub_draw_multiple_lines_gps_points_one_line,1);
+        } else {
+            sub_draw_multiple_lines_gps_points_one_line();
+        }
+    }
+    
     var csstr=document.getElementById('textarea_gps_points').value.trim();
     if (csstr==''){return;}
     
-    var list_t=horizontal_delimiter_split_gps_points(csstr);
-    for (let item of list_t){
-        var result_t=data_lines_2_latlon_gps_points(item,'latlon');
-        draw_gpx_gps_points(result_t,'',true);
-    }
+    var list_t=horizontal_delimiter_split_gps_points(csstr,true);
+    var blxl=0;
+    var bllen=list_t.length;
+    var old_caption=document.title;
+    sub_draw_multiple_lines_gps_points_one_line();
+    //for (let item of list_t){
+        //var result_t=data_lines_2_latlon_gps_points(item[0],'latlon');
+        //draw_gpx_gps_points(result_t,item[1],true);
+    //}
 }
 
 function draw_gpx_gps_points(cslist=false,csname='',dotransform=false,draw_lines=true,cscolors=-1){

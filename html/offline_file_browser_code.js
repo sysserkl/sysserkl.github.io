@@ -885,6 +885,7 @@ function batch_search_result_offline_file_browser(){
     var found_two_t=[];
     var found_more_t=[];
     var list_t=blstr.split('\n');
+    list_t.sort();
     for (let item of list_t){
         var rawitem=item;
         item=item.trim();
@@ -921,7 +922,7 @@ function batch_search_result_offline_file_browser(){
     }
     offline_file_data_current_global.sort(function (a,b){return a[2]>b[2] ? 1 : -1;});
     search_html_offline_file_browser(offline_file_data_current_global,current_td_global);
-    
+
     var bljg='';
     bljg=bljg+'<h4 style="color:red;">未发现的记录('+not_found_t.length+')</h4>'+array_2_li_b(not_found_t,'li','ol');
     bljg=bljg+'<h4 style="color:brown;">出现次数为1的记录('+found_one_t.length+')</h4>'+array_2_li_b(found_one_t,'li','ol');
@@ -1083,7 +1084,7 @@ function menu_offline_file_browser(){
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'💾','18rem','','1rem')+klmenu_b(klmenu2,'🔀','10rem','','1rem')+klmenu_b(klmenu_statistics,'🧮','12rem','','1rem')+klmenu_b(klmenu_config,'⚙','18rem','','1rem')+(is_local_b()?klmenu_b(klmenu_link,'L','16rem','','1rem'):''),'','0rem')+' ');
     
     klmenu_check_b('span_kmg_ofb',true);            
-    klmenu_check_b('span_saved_disk_path_ofb',true);            
+    //klmenu_check_b('span_saved_disk_path_ofb',true);            
     klmenu_check_b('span_reg_ofb',true);       
     klmenu_check_b('span_fav_ofb',true);            
     klmenu_check_b('span_ssd_tf_show_ofb',true);            
@@ -1156,7 +1157,7 @@ function batch_open_klwiki_cd_pages_offline_file_browser(){
     if (confirm('是否批量打开KLWiki刻录页面？')==false){return;}
     var blyear=date_2_ymd_b(false,'y');
     
-    var list_t=tf_page_count_b('光盘柜').concat(['家庭影片目录',blyear+'年KL影视记录','家庭影视记录']);
+    var list_t=tf_page_count_b('光盘柜').concat([blyear+'年KL影视记录','家庭影视记录']);
     var bllen=list_t.length;
     var blxl=0;
     sub_batch_open_klwiki_cd_pages_offline_file_browser_one_page();

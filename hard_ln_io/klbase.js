@@ -3802,3 +3802,42 @@ function tf_page_count_b(prefix='',suffix=''){
         return list_t;
     }
 }
+
+function lines_split_b(cslist,cskey,is_reg=false,include_head=false){
+    var no_list=[];
+    var bllen=cslist.length;
+    if (is_reg){
+        for (let blxl=0;blxl<bllen;blxl++){
+            if (cslist[blxl].match(cskey)){
+                no_list.push(blxl);
+            }
+        }
+    } else {
+        for (let blxl=0;blxl<bllen;blxl++){
+            if (cslist[blxl]==cskey){
+                no_list.push(blxl);
+            }
+        }    
+    }
+    
+    if (!no_list.includes(bllen-1)){
+        no_list.push(bllen-1);
+    }
+    
+    var result_t=[];
+    if (include_head){
+        for (let blxl=0;blxl<no_list.length-1;blxl++){
+            result_t.push(cslist.slice(no_list[blxl],no_list[blxl+1]));
+        }
+    } else {
+        for (let blxl=0;blxl<no_list.length-1;blxl++){
+            result_t.push(cslist.slice(no_list[blxl]+1,no_list[blxl+1]));
+        }    
+    }
+    
+    var top_part=[];
+    if (no_list[0]!==0){
+        top_part=cslist.slice(0,no_list[0]);
+    }
+    return result_t;
+}
