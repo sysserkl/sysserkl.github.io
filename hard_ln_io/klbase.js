@@ -3803,7 +3803,7 @@ function tf_page_count_b(prefix='',suffix=''){
     }
 }
 
-function lines_split_b(cslist,cskey,is_reg=false,include_head=false){
+function lines_split_b(cslist,cskey,is_reg=false,include_head=false,show_test=false){
     var no_list=[];
     var bllen=cslist.length;
     if (is_reg){
@@ -3820,9 +3820,7 @@ function lines_split_b(cslist,cskey,is_reg=false,include_head=false){
         }    
     }
     
-    if (!no_list.includes(bllen-1)){
-        no_list.push(bllen-1);
-    }
+    no_list.push(bllen);
     
     var result_t=[];
     if (include_head){
@@ -3832,12 +3830,20 @@ function lines_split_b(cslist,cskey,is_reg=false,include_head=false){
     } else {
         for (let blxl=0;blxl<no_list.length-1;blxl++){
             result_t.push(cslist.slice(no_list[blxl]+1,no_list[blxl+1]));
-        }    
+        }
     }
     
     var top_part=[];
     if (no_list[0]!==0){
         top_part=cslist.slice(0,no_list[0]);
     }
-    return result_t;
+    
+    if (show_test){
+        var bljg=[].concat(top_part);
+        for (let item of result_t){
+            bljg=bljg.concat(item);
+        }
+        console.log(array_difference_b(bljg,cslist,false,true),bljg.join('\n')==cslist.join('\n'));
+    }
+    return [result_t,top_part];
 }
