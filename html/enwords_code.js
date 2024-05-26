@@ -390,7 +390,7 @@ function words_editor_form_kle(){
         bljg=bljg+'<option>'+item+'</option>';
     }
     bljg=bljg+'</select> ';
-    bljg=bljg+'<select id="select_iframe_or_close_kle"><option></option><option selected>iframe</option><option>close=1</option></select>'
+    bljg=bljg+'<select id="select_iframe_or_close_kle"><option></option><option selected>iframe</option><option>close=1</option></select> '
     bljg=bljg+'<span class="aclick" onclick="words_queue_do_type_kle();">执行</span> ';    
 
     bljg=bljg+'<select id="select_queue_insert">';

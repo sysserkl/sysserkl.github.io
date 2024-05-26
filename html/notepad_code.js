@@ -122,6 +122,18 @@ function locate_notepad(pages){
     }
 }
 
+function textarea_info_count_notepad(ospan=false,otextarea=false){
+    if (otextarea===false){
+        otextarea=document.getElementById('textarea_content_notepad');
+    }
+    var blstr=otextarea.value;
+    
+    if (ospan===false){
+        ospan=document.getElementById('span_textarea_info_notepad');
+    }
+    ospan.innerHTML='行数：'+blstr.split('\n').length+'；字数：'+blstr.length;
+}
+
 function show_hide_notepad(is_edit=true){
     var otextarea=document.getElementById('textarea_content_notepad');
     if (is_edit){
@@ -129,6 +141,7 @@ function show_hide_notepad(is_edit=true){
             for (let item of raw_data_notepad_global){
                 if (item[0]==current_id_notepad_global){
                     otextarea.value=item[1];
+                    textarea_info_count_notepad(false,otextarea);
                     break;
                 }
             }
