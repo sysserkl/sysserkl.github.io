@@ -6,6 +6,7 @@ function buttons_gps_points(){
     bljg=bljg+'<option>WGS84_TO_GCJ02</option>\n';
     bljg=bljg+'<option>GCJ02_TO_WGS84</option>\n';
     bljg=bljg+'</select>\n';
+    bljg=bljg+'<span id="span_quick_buttons_gpx"></span>';
     bljg=bljg+'<span class="aclick" onclick="this.parentNode.parentNode.style.display=\'none\';">Close</span> ';
     
     var postpath=postpath_b();
@@ -605,7 +606,7 @@ function init_gps_points(is_simple=false,map_type='',map_id='osm'){
 
     var lat_lon_value=[31.2,121.5];
     var zoom_value=12;
-    var map_name_value=map_id;
+    //var map_name_value=map_id;
 
     //-----------------------
     if (is_simple==false){
@@ -620,7 +621,7 @@ function init_gps_points(is_simple=false,map_type='',map_id='osm'){
     omap_gps_points_global = L.map('div_map', {
         center: lat_lon_value,
         zoom: zoom_value,
-        layers: [L.layerGroup([klmaps_global[map_name_value]])],
+        layers: [L.layerGroup([klmaps_global[map_id]])],
     });
 
     L.control.layers(baselayers_leaflet_b(map_type), null).addTo(omap_gps_points_global);
@@ -991,7 +992,7 @@ function gpx_quadrangle_gps_points(is_simple=false){
             show_hide_map_gps_points();
             omap_gps_points_global.panTo(new L.LatLng(lat,lon));
             document.title=old_title;
-            console.log('gpx_quadrangle_gps_points() 费时：'+(performance.now() - t0) + " milliseconds");           
+            console.log('gpx_quadrangle_gps_points() 费时：'+(performance.now() - t0) + ' milliseconds');           
         } else {
             var item=list_t[blxl];
             if (li_names.has(item[0])){
@@ -1255,8 +1256,8 @@ function gpx_file_array_2_html_gps_points(cskeys,cslist,csdistrict=''){
     buttons=buttons+gpx_district_option_gps_points(csdistrict);    
     buttons=buttons+'</select>\n'; 
     buttons=buttons+'<label><input type="checkbox" id="checkbox_show_line_info" />统计线路长度</label>\n';
-    buttons=buttons+'<a class="aclick" href="#section_gpx_line_info">bottom</a>';
-    buttons=buttons+'</p>';
+    buttons=buttons+'<a class="aclick" href="#section_gpx_line_info">bottom</a> ';
+    buttons=buttons+'<span id="span_gpx_files_info"></span></p>';
     buttons=buttons+'<div id="div_recent_gpx_sreach"></div>';
     
     var odiv=document.getElementById('div_selection');
@@ -1284,7 +1285,7 @@ function gpx_district_option_gps_points(csdistrict=''){
     return options+result_t.join('\n');
 }
 
-function gpx_near_gps_points(){
+function gpx_near_gps_points(info_id='span_gpx_files_info',show_list=true){
     function sub_gpx_near_gps_points_min_distance(current_point,gpx_point){
         var distance_list=[];
         for (let one_range of gpx_point){
@@ -1322,13 +1323,19 @@ function gpx_near_gps_points(){
     }
     result_t.sort(function (a,b){return a[1]>b[1] ? 1 : -1;});
     
-    var span_list=[];
-    for (let item of result_t){
-        span_list.push('<span class="span_link" onclick="read_txt_file_gps_points(\''+item[0]+'\',\''+item[2]+'\');">'+item[0]+'</span>');
+    if (result_t.length>0){
+        document.getElementById(info_id).innerHTML=result_t[0][0]+': '+(result_t[0][1]/1000).toFixed(2)+'km';
     }
+    
+    if (show_list){
+        var span_list=[];
+        for (let item of result_t){
+            span_list.push('<span class="span_link" onclick="read_txt_file_gps_points(\''+item[0]+'\',\''+item[2]+'\');">'+item[0]+'</span>');
+        }
 
-    gpx_file_array_2_html_gps_points('',span_list);
-    console.log('gpx_near_gps_points() 费时：'+(performance.now() - t0) + " milliseconds");    
+        gpx_file_array_2_html_gps_points('',span_list);
+    }
+    console.log('gpx_near_gps_points() 费时：'+(performance.now() - t0) + ' milliseconds');    
 }
 
 function lonlat_2_latlon_gps_points(){
@@ -1558,6 +1565,8 @@ function menu_gps_points(){
     var klmenu_config=root_font_size_menu_b(str_t,false,true,false,true,'textarea_gps_points');
     klmenu_config=klmenu_config.concat([
     '<span id="span_colors_gps_points" class="span_menu" style="font-size:small;word-break:break-all;" onclick="'+str_t+'colors_settings_gps_points();">line color: '+colors_default_value_gps_points()+'</span>',
+    '<span class="span_menu"><select onchange="quick_buttons_select_gps_points(this.value);"><option></option><option>lat,lon处理</option></select></span>',
+    
     ]);
     
     group_list=[
@@ -1579,8 +1588,36 @@ function menu_gps_points(){
     ['整点报时','alarm_interval_set_b(0)',true],
     ];    
     klmenu_config.push(menu_container_b(str_t,more_config,''));
+    
         
     document.getElementById('input_upload_gpx').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_gpx,'⛰','16rem','1rem','1rem','60rem')+klmenu_b(klmenu_dots,'','34rem','1rem','1rem','60rem')+klmenu_b(klmenu_district,'📍','24rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','27rem','1rem','1rem','60rem'),'','0rem')+' ');
+}
+
+function quick_buttons_select_gps_points(cstype){
+    var blstr='';
+    switch (cstype){
+        case 'lat,lon处理':
+            blstr='<span class="aclick" onclick="draw_multiple_lines_gps_points();">lat,lon 显示为 line</span>';
+            blstr=blstr+'当前可见区域：<span class="aclick" onclick="lat_lon_group_visible_gps_points();">提取</span><span class="aclick" onclick="lat_lon_group_visible_gps_points(true);">删除</span>';
+            blstr=blstr+'<span class="aclick" onclick="gd_switch_gps_points();">高德切换</span>';
+            blstr=blstr+'<span class="aclick" onclick="gpx_near_gps_points(\'span_gpx_files_info2\',false);">最近gpx</span>';
+            blstr=blstr+'<span id="span_gpx_files_info2"></span>';
+            break;
+    }
+    var ospan=document.getElementById('span_quick_buttons_gpx');
+    ospan.innerHTML=blstr;
+}
+
+function gd_switch_gps_points(){
+    for (let one_map in klmaps_global){
+        if (omap_gps_points_global.hasLayer(klmaps_global[one_map])){
+            console.log('发现',one_map);
+            omap_gps_points_global.removeLayer(klmaps_global[one_map]);
+            var add_map=(one_map=='gd'?'gd_earth':'gd');
+            omap_gps_points_global.addLayer(klmaps_global[add_map]);
+            break;
+        }
+    }
 }
 
 function lat_lon_range_gps_points(){
