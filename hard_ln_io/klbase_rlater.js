@@ -36,23 +36,15 @@ function fav_add_rlater_b(csid,csa,prefix='readlater',addtag=false){
     }
 }
 
-function is_delete_to_iframe_get_rlater_b(csstr){
-    is_delete_to_iframe_global=(csstr=='删除到iframe');
-}
-
-function is_only_mark_get_rlater_b(){
-    return (document.getElementById('select_delete_type_rlater').value=='仅做标记不删除记录');
-}
-
 function select_delete_type_generate_rlater_b(only_mark_option=true){
     var extra_str=(only_mark_option?'<option>仅做标记不删除记录</option>':'');
-    return '<span class="span_menu"><select id="select_delete_type_rlater" onchange="is_delete_to_iframe_get_rlater_b(this.value);"><option>删除到iframe</option><option>新窗口打开删除页面</option>'+extra_str+'</select></span>';
+    return '<span class="span_menu"><select id="select_delete_type_rlater" onchange="delete_type_rlater_global=this.value;"><option>删除到iframe</option><option>新窗口打开删除页面</option>'+extra_str+'</select></span>';
 }
 
 function delete_open_php_rlater_b(cshref,csid,prefix='readlater'){
-    if (is_http_file_global && is_only_mark_get_rlater_b()===false){
+    if (is_http_file_global && delete_type_rlater_global!=='仅做标记不删除记录'){
         var php_href=klwebphp_path_b('txt_row_delete.php?key='+encodeURIComponent(cshref)+'&prefix='+encodeURIComponent(prefix));
-        if (is_delete_to_iframe_global){
+        if (delete_type_rlater_global=='删除到iframe'){
             var odiv=document.getElementById('div_search_links');
             if (!odiv){
                 console.log('未发现 div_search_links，未删除',cshref);
@@ -311,7 +303,7 @@ function delete_one_rlater_b(event=false,csid='',is_yes=false,button_id='',prgna
             bljg=bljg+'<p>klwiki: '+wikilink.join(' ')+'</p>';
         }
         bljg=bljg+'<p style="line-height:1.8rem;margin-top:0.5rem;">';
-        bljg=bljg+'<span class="oblong_box" style="margin-right:1rem;" onclick="delete_one_rlater_b(false,\''+csid+'\',true,\''+button_id+'\',\''+prgname+'\');close_popup_rlater_b();"><b>删除</b></span> ';      
+        bljg=bljg+'<span class="oblong_box" style="margin-right:1rem;" onclick="delete_one_rlater_b(false,\''+csid+'\',true,\''+button_id+'\',\''+prgname+'\');close_popup_rlater_b();"><b>'+(delete_type_rlater_global=='仅做标记不删除记录'?'添加删除标记':'删除')+'</b></span> ';      
         bljg=bljg+'修改：<span class="oblong_box" onclick="manage_item_rlater_b(\''+csid+'\',\'edit title\');">标题</span> ';          
         bljg=bljg+'<span class="oblong_box" onclick="manage_item_rlater_b(\''+csid+'\',\'edit link\');">链接</span> ';          
 
@@ -582,7 +574,7 @@ function delete_batch_rlater_b(prefix='readlater'){
         return;
     }
     
-    if (is_only_mark_get_rlater_b()){//klmenu_check_b('span_only_tag_rlater',false)){
+    if (delete_type_rlater_global=='仅做标记不删除记录'){
         alert('须先取消选中“仅做标记不删除”选项');
         return;
     }

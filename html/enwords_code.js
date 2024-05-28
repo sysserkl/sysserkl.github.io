@@ -238,6 +238,10 @@ function words_queue_split_kle(csstr,cstype='string'){
 
 function words_queue_update_kle(){
     var blstr=document.getElementById('textarea_words_queue').value.trim();
+    if (blstr.match(/\n\s*\n/mg)){
+        alert('存在空行，取消更新');
+        return;
+    }
     var selected_word=document.getElementById('select_queue_words').value;
     var new_list,old_list,error='';
     if (selected_word==''){

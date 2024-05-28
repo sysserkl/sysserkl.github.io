@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="JavaScript">
+<trk><name>line0</name>
+<trkseg>
+<trkpt lat="39.7419609" lon="98.1977817"></trkpt>
+<trkpt lat="39.7419929" lon="98.1976677"></trkpt>
+<trkpt lat="39.7419826" lon="98.1975738"></trkpt>
+<trkpt lat="39.741962" lon="98.1974575"></trkpt>
+<trkpt lat="39.7419579" lon="98.1973127"></trkpt>
+<trkpt lat="39.7418753" lon="98.1969247"></trkpt>
+<trkpt lat="39.7418465" lon="98.1966287"></trkpt>
+<trkpt lat="39.7418347" lon="98.1965364"></trkpt>
+<trkpt lat="39.7418259" lon="98.1964678"></trkpt>
+<trkpt lat="39.7417495" lon="98.1962971"></trkpt>
+<trkpt lat="39.7416877" lon="98.1961996"></trkpt>
+<trkpt lat="39.7416073" lon="98.1960628"></trkpt>
+<trkpt lat="39.7415577" lon="98.1959082"></trkpt>
+<trkpt lat="39.741498" lon="98.195588"></trkpt>
+<trkpt lat="39.7413865" lon="98.1950552"></trkpt>
+<trkpt lat="39.7413124" lon="98.1947485"></trkpt>
+<trkpt lat="39.7412916" lon="98.1946985"></trkpt>
+<trkpt lat="39.7411761" lon="98.1945805"></trkpt>
+<trkpt lat="39.7410773" lon="98.1944856"></trkpt>
+<trkpt lat="39.7410132" lon="98.1943042"></trkpt>
+<trkpt lat="39.7409225" lon="98.1940896"></trkpt>
+<trkpt lat="39.7407988" lon="98.1938956"></trkpt>
+<trkpt lat="39.7405059" lon="98.1936247"></trkpt>
+<trkpt lat="39.74038" lon="98.1934834"></trkpt>
+<trkpt lat="39.7403079" lon="98.1933296"></trkpt>
+<trkpt lat="39.740279" lon="98.1931562"></trkpt>
+<trkpt lat="39.7403878" lon="98.1931163"></trkpt>
+<trkpt lat="39.7405349" lon="98.1931801"></trkpt>
+<trkpt lat="39.7407606" lon="98.1930972"></trkpt>
+<trkpt lat="39.7409961" lon="98.1930206"></trkpt>
+<trkpt lat="39.7411776" lon="98.1930143"></trkpt>
+<trkpt lat="39.7414719" lon="98.1932631"></trkpt>
+<trkpt lat="39.7416681" lon="98.193397"></trkpt>
+<trkpt lat="39.7418382" lon="98.1934621"></trkpt></trkseg>
+</trk>
+</gpx>

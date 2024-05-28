@@ -7,7 +7,7 @@ function buttons_gps_points(){
     bljg=bljg+'<option>GCJ02_TO_WGS84</option>\n';
     bljg=bljg+'</select>\n';
     bljg=bljg+'<span id="span_quick_buttons_gpx"></span>';
-    bljg=bljg+'<span class="aclick" onclick="this.parentNode.parentNode.style.display=\'none\';">Close</span> ';
+    bljg=bljg+'<span class="aclick" onclick="close_buttons_gps_points(this);">Close</span> ';
     
     var postpath=postpath_b();
     bljg=bljg+'<form method="POST" action="'+postpath+'temp_txt_share.php" name="form_gps_news" target=_blank>\n';
@@ -17,6 +17,11 @@ function buttons_gps_points(){
     bljg=bljg+textarea_buttons_b('textarea_gps_points','全选,清空,复制,save as gpx file,从 bigfile 导入文件内容,发送到临时记事本,发送地址')+'</p>';
     bljg=bljg+'</form>\n';    
     return bljg;
+}
+
+function close_buttons_gps_points(obutton){
+    if (confirm('是否关闭按钮区？')==false){return;}
+    this.parentNode.parentNode.style.display='none';
 }
 
 function add_current_latlng_gps_points(){
@@ -590,24 +595,15 @@ function current_position_gps_points(){
     );
 }
 
-function init_gps_points(is_simple=false,map_type='',map_id='osm'){
+function init_page_gps_points(is_simple=false,map_type='',map_id='osm'){
     gpx_pb_global.sort(function (a,b){return zh_sort_b(a,b,false,0)});
     gpx_kl_global.sort(function (a,b){return zh_sort_b(a,b,false,0)});
 
     var window_h=document_body_offsetHeight_b();
-    if (is_simple==false){
-        var odiv=document.getElementById('div_selection');
-        odiv.style.maxHeight=Math.round(window_h*0.8)+'px';
-        var rect =document.getElementById('div_gps_points').getBoundingClientRect();
-        document.getElementById('div_map').style.height=Math.max(300,(window_h-rect.height))+'px';
-    } else {
-        document.getElementById('div_map').style.height=Math.max(300,window_h)+'px';    
-    }
-
+    map_resize_gps_points(window_h,is_simple,false,true);
+    
     var lat_lon_value=[31.2,121.5];
     var zoom_value=12;
-    //var map_name_value=map_id;
-
     //-----------------------
     if (is_simple==false){
         document.getElementById('div_icon').innerHTML='🧿';
@@ -1572,6 +1568,7 @@ function menu_gps_points(){
     group_list=[
     ['距离圈设置','circle_distance_settings_gps_points();',true],
     ['缩放设置','zoom_gps_points();',true],
+    ['调整地图显示区域','map_resize_gps_points(window.innerHeight,false,true);',true],
     ];    
     klmenu_config.push(menu_container_b(str_t,group_list,''));        
     
@@ -1593,11 +1590,37 @@ function menu_gps_points(){
     document.getElementById('input_upload_gpx').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_gpx,'⛰','16rem','1rem','1rem','60rem')+klmenu_b(klmenu_dots,'','34rem','1rem','1rem','60rem')+klmenu_b(klmenu_district,'📍','24rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','27rem','1rem','1rem','60rem'),'','0rem')+' ');
 }
 
+function map_resize_gps_points(window_h=false,is_simple=false,map_resize=false,set_selection=false){
+    if (window_h==false){
+        window_h=document_body_offsetHeight_b();
+    }
+    
+    var omap=document.getElementById('div_map');
+    if (is_simple==false){
+        if (set_selection){
+            var odiv=document.getElementById('div_selection');
+            odiv.style.maxHeight=Math.round(window_h*0.8)+'px';
+        }
+        //var rect =document.getElementById('div_gps_points').getBoundingClientRect();  //此行暂时保留 - 保留注释
+        
+        var rect2 =omap.getBoundingClientRect();
+        omap.style.height=Math.max(300,(window_h-rect2.top))+'px';  //rect.height-  //此注释暂时保留 - 保留注释
+    } else {
+        omap.style.height=Math.max(300,window_h)+'px';    
+    }
+    
+    if (map_resize){
+        omap_gps_points_global.invalidateSize(true);
+    }
+}
+
 function quick_buttons_select_gps_points(cstype){
     var blstr='';
     switch (cstype){
         case 'lat,lon处理':
-            blstr='<span class="aclick" onclick="draw_multiple_lines_gps_points();">lat,lon 显示为 line</span>';
+            blstr='lat,lon: <span class="aclick" onclick="draw_multiple_lines_gps_points();">显示为 line</span>';
+            blstr=blstr+'<span class="aclick" onclick="remove_navigation_gps_points();">清除路线</span>';            
+            blstr=blstr+'<span class="aclick" onclick="latlon_2_gpx_gps_points();">to GPX file</span>';
             blstr=blstr+'当前可见区域：<span class="aclick" onclick="lat_lon_group_visible_gps_points();">提取</span><span class="aclick" onclick="lat_lon_group_visible_gps_points(true);">删除</span>';
             blstr=blstr+'<span class="aclick" onclick="gd_switch_gps_points();">高德切换</span>';
             blstr=blstr+'<span class="aclick" onclick="gpx_near_gps_points(\'span_gpx_files_info2\',false);">最近gpx</span>';
