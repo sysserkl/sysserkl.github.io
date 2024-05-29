@@ -144,10 +144,6 @@ function draw_multiple_lines_gps_points(){
     var bllen=list_t.length;
     var old_caption=document.title;
     sub_draw_multiple_lines_gps_points_one_line();
-    //for (let item of list_t){
-        //var result_t=data_lines_2_latlon_gps_points(item[0],'latlon');
-        //draw_gpx_gps_points(result_t,item[1],true);
-    //}
 }
 
 function draw_gpx_gps_points(cslist=false,csname='',dotransform=false,draw_lines=true,cscolors=-1){
@@ -190,7 +186,7 @@ function draw_gpx_gps_points(cslist=false,csname='',dotransform=false,draw_lines
 
 function transform_dotlines_gps_points(cslist=false,cstype=false,write_to_textarea=false){
     if (cslist===false){
-        cslist=data_lines_2_latlon_gps_points('','latlon');   //返回为 lat,lon 格式 - 保留注释
+        cslist=data_lines_2_latlon_gps_points('','latlon');   //返回为 lat,lon 格式，每个元素形如：[ 31.27391856542109, 121.22964409945823 ] - 保留注释
     }
     if (cstype===false){
         cstype=document.getElementById('select_transform').value;
@@ -1289,10 +1285,16 @@ function gpx_near_gps_points(info_id='span_gpx_files_info',show_list=true){
             var min_lon=one_range[1];
             var max_lat=one_range[2];
             var max_lon=one_range[3];
-            distance_list.push(distance_leaflet_b(current_point[0], current_point[1],min_lat, min_lon));
-            distance_list.push(distance_leaflet_b(current_point[0], current_point[1],max_lat, max_lon));
-            distance_list.push(distance_leaflet_b(current_point[0], current_point[1],min_lat, max_lon));
-            distance_list.push(distance_leaflet_b(current_point[0], current_point[1],max_lat, min_lon));
+            
+            var min_min=transform_lon_lat_one_dot_b(cstype,min_lon,min_lat,true);
+            var max_max=transform_lon_lat_one_dot_b(cstype,max_lon,max_lat,true);
+            var min_max=transform_lon_lat_one_dot_b(cstype,max_lon,min_lat,true);
+            var max_min=transform_lon_lat_one_dot_b(cstype,min_lon,max_lat,true);
+            
+            distance_list.push(distance_leaflet_b(current_point,min_min));
+            distance_list.push(distance_leaflet_b(current_point,max_max));
+            distance_list.push(distance_leaflet_b(current_point,min_max));
+            distance_list.push(distance_leaflet_b(current_point,max_min));
         }
         return Math.min(...distance_list);
     }
@@ -1301,10 +1303,17 @@ function gpx_near_gps_points(info_id='span_gpx_files_info',show_list=true){
 
     if (clicked_lat_lng_global.length!==2){return;}
 
+    var cstype=document.getElementById('select_transform').value;
+
     var li_names=new Set();
     var olis=document.querySelectorAll('ol#ol_gpx_file_list li');
     for (let item of olis){
         li_names.add(item.innerText);
+    }
+    
+    if (li_names.size==0){
+        alert('未获取gpx文件列表');
+        return;
     }
     
     var result_t=[];
@@ -1558,12 +1567,10 @@ function menu_gps_points(){
     '<a href="https://www.mct.gov.cn/tourism/" onclick="'+str_t+'" target=_blank>中华人民共和国文化和旅游部</a>',        
     ];
     
-    var klmenu_config=root_font_size_menu_b(str_t,false,true,false,true,'textarea_gps_points');
-    klmenu_config=klmenu_config.concat([
+    var klmenu_config=[
     '<span id="span_colors_gps_points" class="span_menu" style="font-size:small;word-break:break-all;" onclick="'+str_t+'colors_settings_gps_points();">line color: '+colors_default_value_gps_points()+'</span>',
     '<span class="span_menu"><select onchange="quick_buttons_select_gps_points(this.value);"><option></option><option>lat,lon处理</option></select></span>',
-    
-    ]);
+    ];
     
     group_list=[
     ['距离圈设置','circle_distance_settings_gps_points();',true],
@@ -1586,6 +1593,7 @@ function menu_gps_points(){
     ];    
     klmenu_config.push(menu_container_b(str_t,more_config,''));
     
+    klmenu_config=klmenu_config.concat(root_font_size_menu_b(str_t,false,true,false,true,'textarea_gps_points'));
         
     document.getElementById('input_upload_gpx').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_gpx,'⛰','16rem','1rem','1rem','60rem')+klmenu_b(klmenu_dots,'','34rem','1rem','1rem','60rem')+klmenu_b(klmenu_district,'📍','24rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','27rem','1rem','1rem','60rem'),'','0rem')+' ');
 }
@@ -1644,7 +1652,7 @@ function gd_switch_gps_points(){
 }
 
 function lat_lon_range_gps_points(){
-    var list_t=map_range_leaflet_b();
+    var list_t=map_range_leaflet_b(false,document.getElementById('select_transform').value);
     var otextarea=document.getElementById('textarea_gps_points');
     otextarea.value=list_t.join('\n');
 }
@@ -1662,16 +1670,19 @@ function zoom_gps_points(){
 
 function lat_lon_group_visible_gps_points(is_remove=false){
     var otextarea=document.getElementById('textarea_gps_points');
-    var range_t=map_range_leaflet_b(true);
+    var cstype=document.getElementById('select_transform').value;
+    var range_t=map_range_leaflet_b(true,cstype);
     var csstr=otextarea.value.trim();
-    var group_list=horizontal_delimiter_split_gps_points(csstr);
+    var group_list=horizontal_delimiter_split_gps_points(csstr,true);
     var group_in=[];
+    var in_name_list=[];
     var group_out=[];
     for (let one_group of group_list){
-        var list_t=one_group.trim().split('\n');
+        var list_t=one_group[0].trim().split('\n');
         list_t=dots_2_list_gps_points(list_t);
         var in_range=false;
         for (let arow of list_t){
+            [arow[1],arow[0]]=transform_lon_lat_one_dot_b(cstype,arow[1],arow[0]);
             if (arow[0]>=range_t[0][0] && arow[0]<=range_t[0][1] && arow[1]>=range_t[1][0] && arow[1]<=range_t[1][1]){
                 in_range=true;
                 break;
@@ -1679,17 +1690,18 @@ function lat_lon_group_visible_gps_points(is_remove=false){
         }
         if (in_range){
             group_in.push(one_group);
+            in_name_list.push(one_group[1]);
         } else {
-            group_out.push(one_group);            
+            group_out.push(one_group);
         }
     }
     
-    if (confirm('当前共有分组 '+group_list.length+' 个，发现 '+group_in.length+' 个在可见范围内，是否'+(is_remove?'移除':'提取')+'？')==false){return;}
+    if (confirm('当前共有分组 '+group_list.length+' 个，发现 '+group_in.length+' 个在可见范围内（'+in_name_list.join(',')+'），是否'+(is_remove?'移除':'提取')+'？')==false){return;}
 
     var blarray=(is_remove?group_out:group_in);
     
     for (let blxl=0;blxl<blarray.length;blxl++){
-        blarray[blxl]='--- '+blxl+' ---\n'+blarray[blxl];
+        blarray[blxl]=(blarray[blxl][1]==''?'-----':'--- '+blarray[blxl][1]+' ---')+'\n'+blarray[blxl][0].trim();
     }
     otextarea.value=blarray.join('\n');
 }

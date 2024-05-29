@@ -130,7 +130,11 @@ function line_leaflet_b(csomap,islayer=false,cslist,cscolor='red',cscaption=''){
     }
 }
 
-function distance_leaflet_b(lat1, lng1, lat2, lng2){    
+function distance_leaflet_b(lat1, lng1, lat2=false, lng2=false){
+    if (lat2===false && lng2===false){
+        [lat2,lng2]=lng1;
+        [lat1,lng1]=lat1;
+    }
     var radLat1 = rad_leaflet_b(lat1);
     var radLat2 = rad_leaflet_b(lat2);
     var a = radLat1 - radLat2;
@@ -332,7 +336,7 @@ function transform_lng_lat_dots_b(csstr,cstype=''){
     return result_t;
 }
 
-function transform_lon_lat_one_dot_b(cstype,lon,lat){
+function transform_lon_lat_one_dot_b(cstype,lon,lat,return_lat_lon=false){
     cstype=cstype.toUpperCase();
     switch (cstype){
         case 'WGS84_TO_GCJ02':
@@ -372,7 +376,11 @@ function transform_lon_lat_one_dot_b(cstype,lon,lat){
             [lon,lat]=wgs84tobd09_b(lon, lat);
             break;        
     }
-    return [lon,lat];
+    if (return_lat_lon){
+        return [lat,lon];    
+    } else {
+        return [lon,lat];
+    }
 }
 
 function district_cn_name_2_lnglat_b(csname){
@@ -543,13 +551,16 @@ function one_point_leaflet_b(lon,lat,csradius,cscolor){
     omap_gps_points_global.panTo(new L.LatLng(lat,lon));
 }
 
-function map_range_leaflet_b(min_max=false){
+function map_range_leaflet_b(min_max=false,cstype=false){
     var xy=omap_gps_points_global.getSize();
     if (min_max){
         var lat_list=[];
         var lon_list=[];
         for (let item of [[0,0],[xy.x,xy.y]]){
             var lat_lon=omap_gps_points_global.containerPointToLatLng(item);
+            if (cstype!==false){
+                [lat_lon['lng'],lat_lon['lat']]=transform_lon_lat_one_dot_b(cstype,lat_lon['lng'],lat_lon['lat']);
+            }
             lat_list.push(lat_lon['lat']);
             lon_list.push(lat_lon['lng']);
         }
@@ -560,6 +571,10 @@ function map_range_leaflet_b(min_max=false){
         var result_t=[];
         for (let item of [[0,0],[xy.x,0],[0,xy.y],[xy.x,xy.y]]){
             var lat_lon=omap_gps_points_global.containerPointToLatLng(item);
+            
+            if (cstype!==false){
+                [lat_lon['lng'],lat_lon['lat']]=transform_lon_lat_one_dot_b(cstype,lat_lon['lng'],lat_lon['lat']);
+            }
             result_t.push([lat_lon['lat'],lat_lon['lng']]);
         }
         return result_t;
