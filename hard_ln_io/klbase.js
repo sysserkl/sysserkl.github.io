@@ -3847,3 +3847,10 @@ function lines_split_b(cslist,cskey,is_reg=false,include_head=false,show_test=fa
     }
     return [result_t,top_part];
 }
+
+function close_window_alert_b(){
+    window.addEventListener('beforeunload', function (event){
+        event.preventDefault(); // 阻止默认的卸载行为（如果需要用户确认后才决定是否离开页面）
+        event.returnValue = '您确定要离开此页面吗？'; // 弹出的提示信息，部分浏览器可能不显示自定义信息
+    });    
+}

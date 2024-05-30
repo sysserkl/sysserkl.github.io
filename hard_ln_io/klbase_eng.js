@@ -2270,14 +2270,22 @@ function recent_words_list_enwords_b(cspageno=0,words_count_per_page=100,isrando
     }
     
 	var bljg=enwords_array_to_html_b(words_searched_arr_global,true,true);
-    var blweek=date_2_ymd_b(false,'w');    
+
+    //以下2行保留 - 保留注释
+    //var blweek=date_2_ymd_b(false,'w');    
+    //blweek=(blweek==0?7:blweek);
     
     var blday=date_2_ymd_b(false,'d');
-    blday=(blday==1?11:blday);
-    blday=(blday>11?blday%10:blday);
-    blday=(blday<2?10+blday:blday);
 
-    var page_html=page_combination_b(bllen,words_count_per_page,cspageno,'recent_words_list_enwords_b','page_location_enwords_b','',1,15,'','aclick',1,true,[(blweek==0?7:blweek),blday]);
+    var bl15=blday%15;
+    bl15=(bl15==0?15:bl15);
+
+    //以下3行保留 - 保留注释
+    //blday=(blday==1?11:blday);
+    //blday=(blday>11?blday%10:blday);
+    //blday=(blday<2?10+blday:blday);
+    
+    var page_html=page_combination_b(bllen,words_count_per_page,cspageno,'recent_words_list_enwords_b','page_location_enwords_b','',1,15,'','aclick',1,true,[bl15]);   //blweek,bl15,blday - 保留注释
 
 	document.getElementById('divhtml').innerHTML=bljg+page_html;
     

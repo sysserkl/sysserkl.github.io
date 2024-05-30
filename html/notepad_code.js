@@ -10,7 +10,8 @@ function init_notepad(){
     document.getElementById('p_edit_buttons_notepad').insertAdjacentHTML('afterbegin',buttons);
     
     character_2_icon_b('N');    
-    mouseover_mouseout_oblong_span_b(document.getElementById('p_search_buttons_notepad').querySelectorAll('span.oblong_box'));        
+    mouseover_mouseout_oblong_span_b(document.getElementById('p_search_buttons_notepad').querySelectorAll('span.oblong_box'));      
+    close_window_alert_b();
 }
 
 function new_notepad(){

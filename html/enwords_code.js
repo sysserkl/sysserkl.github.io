@@ -377,6 +377,11 @@ function words_queue_insert_kle(){
 }
 
 function words_editor_form_kle(){
+    if (typeof window_close_alert_kle_global == 'undefined'){
+        close_window_alert_b();
+        window_close_alert_kle_global=true;
+    }
+    
     var list_t=words_queue_get_b();
     var postpath=postpath_b();
     var bljg='';

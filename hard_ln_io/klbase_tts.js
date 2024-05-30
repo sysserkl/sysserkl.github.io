@@ -191,6 +191,8 @@ function menu_temp_txt_share_b(is_php=true){
     '<span class="span_menu" onclick="'+str_t+'sort_rows_klr_b(\'textarea_temp_txt_share\',\'\');">sort</span> ',
     '<span class="span_menu" onclick="'+str_t+'blank_rows_remove_klr_b(\'textarea_temp_txt_share\');">remove blank rows</span>',
     '<span class="span_menu" onclick="'+str_t+'local_storage_import_b(\'textarea_temp_txt_share\',true);">import data to localStorage</span>',    
+    '<span class="span_menu" onclick="'+str_t+'remove_notepad_tag_temp_txt_share_b();">清除notepad标记和日期</span>',    
+    
     ];
     
     if (is_local_b()){
@@ -211,6 +213,34 @@ function menu_temp_txt_share_b(is_php=true){
     
     var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu0,(is_php?'📗':'📙'),'16rem','1rem','1rem','60rem')+klmenu_b(klmenu_share,'🫂','19rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem'),'','0rem')+' ';
     document.getElementById('h2_title').insertAdjacentHTML('afterbegin',bljg);
+}
+
+function remove_notepad_tag_temp_txt_share_b(){
+    var otextarea=document.getElementById('textarea_temp_txt_share');
+    var list_t=otextarea.value.split('\n');
+    var tag_list=[];
+    //格式如下：
+    //5/29/2024, 11:01:22 AM
+    //=== notepad ===
+    for (let blxl=1;blxl<list_t.length;blxl++){
+        if (list_t[blxl]=='=== notepad ==='){
+            if (list_t[blxl-1].match(/^\d{1,2}\/\d{1,2}\/\d{4}, \d{2}:\d{2}:\d{2} (AM|PM)$/)){
+                tag_list.push(blxl-1);
+                tag_list.push(blxl);
+            }
+        }
+    }
+    
+    tag_list=array_unique_b(tag_list);
+
+    var content_list=[];
+    for (let blxl=0;blxl<list_t.length;blxl++){
+        if (tag_list.includes(blxl)){continue;}
+        content_list.push(list_t[blxl]);
+    }
+    
+    if (confirm('共有行数 '+list_t.length+' 行，其中内容 '+content_list.length+' 行，notepad tag '+tag_list.length+' 行，是否清除？')===false){return;}
+    otextarea.value=content_list.join('\n');
 }
 
 function sync_pages_batch_open_temp_txt_share_b(){
