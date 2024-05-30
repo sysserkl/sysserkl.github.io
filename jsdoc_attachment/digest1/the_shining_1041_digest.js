@@ -115,4 +115,5 @@ var digest_global=`
 *wallboard
 *jet-set
 *surrealistic
+*enfold
 `.trim().split('\n');

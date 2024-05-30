@@ -54,4 +54,5 @@ var digest_global=`
 *alphabetical
 *alphabetic
 *Munro
+*immature
 `.trim().split('\n');

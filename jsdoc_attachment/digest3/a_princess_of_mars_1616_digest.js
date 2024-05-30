@@ -264,4 +264,5 @@ var digest_global=`
 *sharpshooter
 *grove
 *speaking tube
+*swordsmen
 `.trim().split('\n');

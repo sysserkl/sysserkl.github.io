@@ -14,4 +14,5 @@ var digest_global=`
 *Versailles
 *charger
 *Chaucer
+*ruffian
 `.trim().split('\n');

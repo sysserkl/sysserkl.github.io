@@ -6,4 +6,5 @@ var digest_global=`
 *footprint
 *spearman
 *gunship
+*fittingly
 `.trim().split('\n');

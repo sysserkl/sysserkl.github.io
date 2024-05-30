@@ -7,4 +7,5 @@ var digest_global=`
 *Casanova
 *lengthways
 *knowingly
+*rose-tinted
 `.trim().split('\n');

@@ -12,4 +12,6 @@ var digest_global=`
 *seasonally
 *sidestep
 *bounty hunter
+*supernovae
+*skeptically
 `.trim().split('\n');

@@ -526,6 +526,7 @@ function sup_kleng_show_hide_b(ospan){
 }
 
 function sup_kleng_words_b(csdisplay='none'){
+    if (typeof enwords == 'undefined'){return;}
     var o_sups=document.querySelectorAll('sup.kleng');
 	if (o_sups.length==0){return;}
     
@@ -1547,20 +1548,39 @@ function enwords_lines_2_js_array_b(aword,emoji_list,three_lines=false){
     return str_t;
 }
 
-function enwords_different_types_div_b(cswlist){
-    var blbuttons='<p>';
-    blbuttons=blbuttons+'<select onchange="enwords_different_types_textarea_b(this);">';
-    for (let item of ['','asterisk','js','temp','wiki','reg','space']){
-        blbuttons=blbuttons+'<option>'+item+'</option>\n';
+function enwords_different_types_div_b(cswlist,add_form=false,textarea_id='',textarea_name='',button_type='',more_buttons=''){
+    var blstr='<p>';
+    blstr=blstr+'<select onchange="enwords_different_types_textarea_b(this);">';
+    for (let item of ['','asterisk','js','temp','wiki','reg','space','rare_words']){
+        blstr=blstr+'<option>'+item+'</option>\n';
     }
-    blbuttons=blbuttons+'</select>\n';    
-    blbuttons=blbuttons+'<label><input type="checkbox" class="input_enwords_different_types_one_textarea" checked>one textarea</label>';
-    blbuttons=blbuttons+'<label><input type="checkbox" class="input_enwords_different_types_remove_emoji" checked>remove emoji</label>';
-    blbuttons=blbuttons+'</p>';
-    blbuttons=blbuttons+'<textarea class="textarea_enwords_raw_types">'+cswlist.join('\n')+'</textarea>';    
-    blbuttons=blbuttons+'<div class="div_textarea_enwords_different_types"></div>';
-    blbuttons=blbuttons+'<div class="div_word_sentence_rank"></div>';
-    return '<div style="margin-top:0.5rem;">'+blbuttons+'</div>';
+    blstr=blstr+'</select>\n';    
+    blstr=blstr+'<label><input type="checkbox" class="input_enwords_different_types_one_textarea" checked>one textarea</label>';
+    blstr=blstr+'<label><input type="checkbox" class="input_enwords_different_types_remove_emoji" checked>remove emoji</label>';
+    blstr=blstr+'</p>';
+
+    if (add_form){
+        var postpath=postpath_b();
+        blstr=blstr+'<form method="POST" action="'+postpath+'temp_txt_share.php" target=_blank>\n';    
+    }
+    
+    blstr=blstr+'<textarea class="textarea_enwords_raw_types"'+(textarea_id==''?'':' id="'+textarea_id+'"')+(textarea_name==''?'':' name="'+textarea_name+'"')+'>'+cswlist.join('\n')+'</textarea>';
+    
+    var buttons=more_buttons;
+    if (textarea_id!=='' && button_type!==''){
+        buttons=buttons+textarea_buttons_b(textarea_id,button_type);
+    }
+    if (buttons!==''){
+        buttons='<p>'+buttons+'</p>';
+    }
+    blstr=blstr+buttons;
+    if (add_form){
+        blstr=blstr+'</form>\n';
+    }
+    
+    blstr=blstr+'<div class="div_textarea_enwords_different_types"></div>';
+    blstr=blstr+'<div class="div_word_sentence_rank"></div>';
+    return '<div style="margin-top:0.5rem;">'+blstr+'</div>';
 }
 
 function enwords_different_types_textarea_b(oselect){
@@ -1589,6 +1609,14 @@ function enwords_different_types_textarea_b(oselect){
             break;
         case 'space':
             bljg=raw_list.join(' ');
+            bljg='<br /><textarea style="height:3rem;" onclick="this.select();document.execCommand(\'copy\');">'+bljg+'</textarea>';        
+            break;
+        case 'rare_words':
+            var result_t=[];
+            for (let aword of raw_list){
+                result_t.push('"'+specialstr_j(aword)+'"');
+            }
+            bljg='    var rare_words=new Set(['+result_t.join(',')+']);';
             bljg='<br /><textarea style="height:3rem;" onclick="this.select();document.execCommand(\'copy\');">'+bljg+'</textarea>';        
             break;
     }
@@ -2227,11 +2255,34 @@ function words_count_enwords_b(){
     }
 }
 
+function day_no_enwords_b(csinterval=15,csdate=false,do_test=false){
+    if (do_test){
+        for (let blxl=1;blxl<=31;blxl++){
+            var bldate=next_day_b('',blxl,false);
+            var result_t=day_no_enwords_b(csinterval,bldate,false)[0];
+            console.log(date_2_ymd_b(bldate,'d'),result_t);
+        }
+        return;
+    }
+    
+    var blday=date_2_ymd_b(csdate,'d');
+    blday=blday%csinterval;
+    blday=(blday==0?csinterval:blday);
+    blday=(blday==1?csinterval+1:blday);
+    return [blday,csinterval];
+    
+    //以下4行保留 - 保留注释
+    //var blday=date2str_b().slice(-1,);
+    //if (blday=='0' || blday=='1'){
+        //blday='1'+blday;
+    //}    
+}
+
 function recent_words_list_enwords_b(cspageno=0,words_count_per_page=100,israndom=false,show_html=true,add_date_line=true){
     words_searched_arr_global=en_words_temp_list_b(add_date_line);
     var bllen=words_searched_arr_global.length;
     var pages_count=Math.ceil(words_searched_arr_global.length/words_count_per_page);
-    //cspageno 从 1 开始，0表示当前书签单词所在页，-1表示全部 - 保留注释
+    //cspageno 是记录序号 从 1 开始，0表示当前书签单词所在页，-1表示全部 - 保留注释
     var recent_bookmark=enwords_recent_bookmark_get_b();
     if (cspageno==0){
         if (recent_bookmark=='' && words_searched_arr_global.length>0){
@@ -2275,21 +2326,11 @@ function recent_words_list_enwords_b(cspageno=0,words_count_per_page=100,isrando
     //var blweek=date_2_ymd_b(false,'w');    
     //blweek=(blweek==0?7:blweek);
     
-    var blday=date_2_ymd_b(false,'d');
-
-    var bl15=blday%15;
-    bl15=(bl15==0?15:bl15);
-
-    //以下3行保留 - 保留注释
-    //blday=(blday==1?11:blday);
-    //blday=(blday>11?blday%10:blday);
-    //blday=(blday<2?10+blday:blday);
-    
-    var page_html=page_combination_b(bllen,words_count_per_page,cspageno,'recent_words_list_enwords_b','page_location_enwords_b','',1,15,'','aclick',1,true,[bl15]);   //blweek,bl15,blday - 保留注释
+    var page_html=page_combination_b(bllen,words_count_per_page,cspageno,'recent_words_list_enwords_b','page_location_enwords_b','',1,15,'','aclick',1,true,[day_no_enwords_b()[0]]);
 
 	document.getElementById('divhtml').innerHTML=bljg+page_html;
     
-    cspageno=Math.ceil((cspageno+1)/words_count_per_page);
+    cspageno=Math.ceil((cspageno+1)/words_count_per_page);  //记录号更改为页号 - 保留注释
 
     title_change_enwords_b('最近记忆的单词'+(cspageno==-1?'(全部)':'_第'+cspageno+'页'));
     document.location.href='#top';

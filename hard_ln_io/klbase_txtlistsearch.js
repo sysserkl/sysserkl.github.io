@@ -262,12 +262,17 @@ function txtmenus_kltxt_b(cstype=''){
     menu_general=menu_general.concat([
     '<span id="span_add_zero_reading_lines_txtlistsearch" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 阅读行数补零</span>',
     '<span class="span_menu" onclick="'+str_t+'getlines_kltxt_b();">返回阅读页面</span>',
-    '<span class="span_menu" onclick="'+str_t+'frequent_new_enwords_kltxt_b();">常见英语生词</span>',
-    '<span class="span_menu" onclick="'+str_t+'rare_enwords_search_kltxt_b();">稀有旧单词搜索</span>',
-    '<span class="span_menu" onclick="'+str_t+'find_cn_words_kltxt_b();">显示汉字生字</span>',
     ]);    
 
     var group_list=[
+    ['常见英语生词','frequent_new_enwords_kltxt_b();',true],
+    ['稀有旧单词搜索','rare_enwords_search_kltxt_b();',true],
+    ];    
+    menu_general.push(menu_container_b(str_t,group_list,''));
+    menu_general.push(load_sentence_menu_b(str_t));
+    
+    var group_list=[
+    ['显示汉字生字','find_cn_words_kltxt_b();',true],
     ['⚪ 显示生词','klmenu_check_b(this.id,true);new_words_kltxt_b();',true,'span_show_new_enwords'],
     ['⚪ 显示旧单词','klmenu_check_b(this.id,true);old_words_kltxt_b();',true,'span_show_old_enwords'],
     ];    
@@ -413,7 +418,7 @@ function txtmenus_kltxt_b(cstype=''){
     var bljg='';
     var colors=klmenu_b(color_menu,'🎨',(ismobile_b()?'16rem':'20rem'),'',fontsize,'20rem');
     if (cstype!=='digest'){
-        bljg=bljg+klmenu_b(menu_general,'','14rem','',fontsize);
+        bljg=bljg+klmenu_b(menu_general,'','22rem','',fontsize);
         bljg=bljg+klmenu_b(menu_dir,'🔍',menu_dir_width,'',fontsize);
         bljg=bljg+klmenu_b(menu_digest,'🖊','24rem','',fontsize);       
         bljg=bljg+colors;

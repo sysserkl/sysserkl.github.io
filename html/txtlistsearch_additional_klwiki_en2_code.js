@@ -8,7 +8,7 @@ function menu_more_kltxt_klwiki_en2(){
     '<span class="span_menu" onclick="'+str_t+'batch_search_form_kltxt_klwiki_en2();">单词批量查找</span>',
     '<a href="enwords_book.htm" onclick="'+str_t+'" target=_blank>生词统计</a>',    
     '<a href="ensentence.htm" onclick="'+str_t+'" target=_blank>ensentence</a>',
-    '<a href="../jsdata/words/enwords_sentence_data.js?'+date2str_b('')+'" onclick="'+str_t+'" target=_blank>enwords_sentence_data.js</a>',    
+    '<a href="../jsdata/words/enwords_sentence_data.js'+file_date_parameter_b()+'" onclick="'+str_t+'" target=_blank>enwords_sentence_data.js</a>',    
     
     ];
     

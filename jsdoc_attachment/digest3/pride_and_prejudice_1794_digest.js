@@ -33,4 +33,5 @@ var digest_global=`
 *monosyllable
 *decease
 *discontinuance
+*empty-headed
 `.trim().split('\n');

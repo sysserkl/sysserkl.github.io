@@ -58,4 +58,5 @@ var digest_global=`
 *yellowy
 *yesteryear
 *computerize
+*alarmist
 `.trim().split('\n');

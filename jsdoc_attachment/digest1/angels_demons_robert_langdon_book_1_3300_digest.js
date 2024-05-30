@@ -52,4 +52,6 @@ var digest_global=`
 *Bohr
 *Helios
 *kinsmen
+*bazooka
+*world-renowned
 `.trim().split('\n');

@@ -4,4 +4,5 @@ var digest_global=`
 *toolshed
 *glider
 *tyrannosaur
+*radio-controlled
 `.trim().split('\n');

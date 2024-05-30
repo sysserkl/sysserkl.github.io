@@ -27,4 +27,5 @@ var digest_global=`
 *stylist
 *win-win
 *jaw-dropping
+*braincase
 `.trim().split('\n');

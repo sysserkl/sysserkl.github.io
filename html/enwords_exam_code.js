@@ -250,8 +250,9 @@ function check_recent_klexam(csat,csword,recent_type,recent_half_len,en_words_te
 }
 
 function recent_1_today_words_klexam(){
-    var blday=parseInt(day_no_klexam());
-    var words=recent_words_list_enwords_b(1,100,false,false).concat(recent_words_list_enwords_b(blday,100,false,false));
+    var blday,blinterval;
+    [blday,blinterval]=day_no_enwords_b();
+    var words=recent_words_list_enwords_b(1,100,false,false).concat(recent_words_list_enwords_b((blday-1)*100+1,100,false,false));
     var result_t=[];
     for (let item of words){
         result_t.push(item[0]);
@@ -465,14 +466,6 @@ function showletter_klexam(csno){
     }
 }
 
-function day_no_klexam(){
-    var blday=date2str_b().slice(-1,);
-    if (blday=='0' || blday=='1'){
-        blday='1'+blday;
-    }    
-    return blday;
-}
-
 function buttons_klexam(){  //不能转换为htm，随机单词也用到 - 保留注释
     var bl1000='';
     if (en_words_temp_global.length>2000){
@@ -480,7 +473,7 @@ function buttons_klexam(){  //不能转换为htm，随机单词也用到 - 保�
         <option value='-1000'>最旧1000最近记忆单词</option>`
     }
 
-    var blday=day_no_klexam();
+    var blday=day_no_enwords_b()[0];//day_no_klexam();
     
     var bljg=`<p style="margin-bottom:0.5rem;">题目数量：<input type="number" id="testno" value=10 onkeyup="if (event.key=='Enter'){input_klexam();}"> 
     <span class="aclick" onclick="input_klexam();">生成</span>

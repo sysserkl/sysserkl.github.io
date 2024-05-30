@@ -68,4 +68,5 @@ var digest_global=`
 *survivalist
 *off-road
 *wildflower
+*frostbite
 `.trim().split('\n');

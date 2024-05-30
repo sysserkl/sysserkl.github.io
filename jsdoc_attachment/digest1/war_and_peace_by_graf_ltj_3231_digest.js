@@ -236,4 +236,5 @@ var digest_global=`
 *Madagascar
 *bathhouse
 *shamefully
+*Dewey
 `.trim().split('\n');

@@ -61,4 +61,5 @@ var digest_global=`
 *propagandist
 *glassy-eyed
 *itsy-bitsy
+*shortcut
 `.trim().split('\n');

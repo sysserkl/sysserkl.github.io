@@ -55,7 +55,7 @@ function menu_ensentence(){
     }
     
     var klmenu_link=[
-    '<a href="../jsdata/words/enwords_sentence_data.js?'+date2str_b('')+'" onclick="'+str_t+'" target=_blank>enwords_sentence_data.js</a>',    
+    '<a href="../jsdata/words/enwords_sentence_data.js'+file_date_parameter_b()+'" onclick="'+str_t+'" target=_blank>enwords_sentence_data.js</a>',    
     '<a href="'+location.origin+'/wiki/index.php/%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9" onclick="'+str_t+'" target=_blank>KLWiki最近更改</a>',        
     '<a href="enwords_book.htm" onclick="'+str_t+'" target=_blank>生词统计</a>',
     ];
@@ -143,7 +143,7 @@ function phrase_not_in_ensentence(){
     
     var odiv=document.getElementById('divhtml');   
     odiv.innerHTML=enwords_array_to_html_b(full_t,false);
-    odiv.insertAdjacentHTML('beforeend','<textarea onclick="this.select();document.execCommand(\'copy\');">'+words_found.join('\n')+'</textarea>'+words_2_js_array_ensentence(words_found));
+    odiv.insertAdjacentHTML('beforeend','<textarea onclick="this.select();document.execCommand(\'copy\');">'+words_found.join('\n')+'</textarea>'); //+words_2_js_array_ensentence(words_found)
     console.log('phrase_not_in_ensentence() 费时：'+(performance.now() - t0) + ' milliseconds');
 }
 
@@ -309,13 +309,13 @@ function length_sort_ensentence(){
     console.log('length_sort_ensentence() 费时：'+(performance.now() - t0) + ' milliseconds');    
 }
 
-function words_2_js_array_ensentence(csarray){
-    var result_t=[];
-    for (let aword of csarray){
-        result_t.push('"'+specialstr_j(aword)+'"');
-    }
-    return '<textarea onclick="this.select();document.execCommand(\'copy\');">    var rare_words=new Set(['+result_t.join(',')+']);</textarea>';
-}
+//function words_2_js_array_ensentence(csarray){
+    //var result_t=[];
+    //for (let aword of csarray){
+        //result_t.push('"'+specialstr_j(aword)+'"');
+    //}
+    //return '<textarea onclick="this.select();document.execCommand(\'copy\');">    var rare_words=new Set(['+result_t.join(',')+']);</textarea>';
+//}
 
 function rare_old_words_sort_ensentence(csarr){
     var result_t=[].concat(csarr);
@@ -343,15 +343,11 @@ function rare_old_words_sort_ensentence(csarr){
     
 function rare_old_words_ensentence(show_sentence=true,generate_js=false,max_count=2,rows_min=10,rows_max=3000,source_check=false){
     function sub_rare_old_words_ensentence_form(){
-        var postpath=postpath_b();
-        var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php" target=_blank>\n';    
-        bljg=bljg+'<p><textarea name="textarea_rare_words" id="textarea_rare_words" style="height:10rem;">'+words_searched_arr_global.join('\n')+'</textarea></p>';
-        bljg=bljg+'<p>'   
+        var more_buttons='';
         if (generate_js){
-            bljg=bljg+'<span class="aclick" onclick="enwords_count_sentence_data_save_ensentence();">save as enwords_count_sentence_data.js file</span>';
+            more_buttons='<span class="aclick" onclick="enwords_count_sentence_data_save_ensentence();">save as enwords_count_sentence_data.js file</span>';
         }
-        bljg=bljg+textarea_buttons_b('textarea_rare_words','复制,发送到临时记事本,发送地址');
-        bljg=bljg+'</p></form>';
+        var bljg=enwords_different_types_div_b(words_searched_arr_global,true,'textarea_rare_words','textarea_rare_words','复制,发送到临时记事本,发送地址',more_buttons);
         return bljg;
     }
     
@@ -392,7 +388,7 @@ function rare_old_words_ensentence(show_sentence=true,generate_js=false,max_coun
             
             var progress_list=ltp_status_get_b('+例句 +单词','green','white',100);
 
-            document.getElementById('divhtml').innerHTML='<p>'+progress_list.join(' ')+'</p>'+enwords_array_to_html_b(words_searched_arr_global,false)+bltextarea+words_2_js_array_ensentence(words_searched_arr_global);
+            document.getElementById('divhtml').innerHTML='<p>'+progress_list.join(' ')+'</p>'+enwords_array_to_html_b(words_searched_arr_global,false)+bltextarea;  //+words_2_js_array_ensentence(words_searched_arr_global);
             
             if (source_check){
                 var local_id='enwords_one_source_ensentence';

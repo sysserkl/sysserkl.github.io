@@ -34,4 +34,5 @@ var digest_global=`
 *sirocco
 *Valentino
 *womanizer
+*streetlamp
 `.trim().split('\n');

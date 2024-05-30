@@ -37,4 +37,6 @@ var digest_global=`
 *up-and-comer
 *gumball
 *aeronautics
+*semiautomatic
+*headlock
 `.trim().split('\n');

@@ -43,4 +43,5 @@ var digest_global=`
 *Dartmouth
 *up-and-coming
 *bosomy
+*soundproof
 `.trim().split('\n');

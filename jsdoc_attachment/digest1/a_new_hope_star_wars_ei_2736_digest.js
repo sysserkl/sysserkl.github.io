@@ -39,4 +39,6 @@ var digest_global=`
 *uncountable
 *centrally
 *escalate
+*coolant
+*long-lost
 `.trim().split('\n');

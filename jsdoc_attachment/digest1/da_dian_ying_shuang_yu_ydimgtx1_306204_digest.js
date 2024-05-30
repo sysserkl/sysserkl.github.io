@@ -3,4 +3,5 @@ var digest_global=`
 *subbasement
 *videophone
 *purposefully
+*do-gooder
 `.trim().split('\n');
