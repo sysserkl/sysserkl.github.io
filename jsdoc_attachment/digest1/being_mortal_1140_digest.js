@@ -73,4 +73,5 @@ var digest_global=`
 *colonoscopy
 *stopcock
 *ill-considered
+*after-school
 `.trim().split('\n');

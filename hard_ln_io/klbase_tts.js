@@ -218,28 +218,28 @@ function menu_temp_txt_share_b(is_php=true){
 function remove_notepad_tag_temp_txt_share_b(){
     var otextarea=document.getElementById('textarea_temp_txt_share');
     var list_t=otextarea.value.split('\n');
-    var tag_list=[];
+    var tag_list=new Set();
     //格式如下：
     //5/29/2024, 11:01:22 AM
     //=== notepad ===
     for (let blxl=1;blxl<list_t.length;blxl++){
         if (list_t[blxl]=='=== notepad ==='){
-            if (list_t[blxl-1].match(/^\d{1,2}\/\d{1,2}\/\d{4}, \d{2}:\d{2}:\d{2} (AM|PM)$/)){
-                tag_list.push(blxl-1);
-                tag_list.push(blxl);
+            if (list_t[blxl-1].match(/^\d{1,2}\/\d{1,2}\/\d{4}, \d{1,2}:\d{2}:\d{2} (AM|PM)$/)){
+                tag_list.add(blxl-1);
+                tag_list.add(blxl);
             }
         }
     }
-    
-    tag_list=array_unique_b(tag_list);
+    console.log(tag_list);
+    //tag_list=array_unique_b(tag_list);
 
     var content_list=[];
     for (let blxl=0;blxl<list_t.length;blxl++){
-        if (tag_list.includes(blxl)){continue;}
+        if (tag_list.has(blxl)){continue;}
         content_list.push(list_t[blxl]);
     }
     
-    if (confirm('共有行数 '+list_t.length+' 行，其中内容 '+content_list.length+' 行，notepad tag '+tag_list.length+' 行，是否清除？')===false){return;}
+    if (confirm('共有行数 '+list_t.length+' 行，其中内容 '+content_list.length+' 行，notepad tag '+tag_list.size+' 行，是否清除？')===false){return;}
     otextarea.value=content_list.join('\n');
 }
 

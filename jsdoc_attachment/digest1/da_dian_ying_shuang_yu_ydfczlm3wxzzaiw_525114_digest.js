@@ -5,4 +5,5 @@ var digest_global=`
 *punchline
 *rematch
 *teleportation
+*Wanda
 `.trim().split('\n');

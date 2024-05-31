@@ -39,4 +39,5 @@ var digest_global=`
 *aeronautics
 *semiautomatic
 *headlock
+*worrisome
 `.trim().split('\n');
