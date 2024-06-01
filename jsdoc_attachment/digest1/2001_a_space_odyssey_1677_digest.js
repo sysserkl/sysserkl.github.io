@@ -45,4 +45,5 @@ var digest_global=`
 *meatless
 *Paine
 *Everest
+*single-breasted
 `.trim().split('\n');

@@ -230,8 +230,6 @@ function remove_notepad_tag_temp_txt_share_b(){
             }
         }
     }
-    console.log(tag_list);
-    //tag_list=array_unique_b(tag_list);
 
     var content_list=[];
     for (let blxl=0;blxl<list_t.length;blxl++){

@@ -3854,3 +3854,84 @@ function close_window_alert_b(){
         event.returnValue = '您确定要离开此页面吗？'; // 弹出的提示信息，部分浏览器可能不显示自定义信息
     });    
 }
+
+function two_list_diff_b(list1=false,list2=false,textarea_id1='textarea_old_diff_b',textarea_id2='textarea_new_diff_b',more_buttons1='',more_buttons2='',caption1='左侧',caption2='右侧'){
+    function sub_two_list_diff_b_compare(list1,list2,unit='行'){
+        var diff_str='<p>';
+        var diff1_str='';
+        var diff2_str='';
+        var is_ok=false;
+        if (list1.join('\n')==list2.join('\n')){
+            diff_str=diff_str+'两者一致。';
+            is_ok=true;
+        } else {
+            diff_str=diff_str+'两者不一致。';
+            list1.sort();
+            list2.sort();
+            if (list1.join('\n')==list2.join('\n')){
+                diff_str=diff_str+'两者排序后一致。';
+                is_ok=true;
+            } else {
+                diff_str=diff_str+'两者排序后不一致。';        
+                list1=array_unique_b(list1);    //不会修改作为参数传入的原始的 list1 - 保留注释
+                list2=array_unique_b(list2);
+                list1.sort();
+                list2.sort();
+                if (list1.join('\n')==list2.join('\n')){
+                    diff_str=diff_str+'去除重复'+unit+'并排序后两者一致。';
+                } else {
+                    diff_str=diff_str+'去除重复'+unit+'并排序后两者不一致。';
+                    
+                    var diff_row1,diff_row2;
+                    [diff_row1,diff_row2]=array_difference_b(list1,list2,false,true);
+                    if (diff_row2.length==0){
+                        diff_str=diff_str+'去除重复'+unit+'后'+caption2+'是'+caption1+'的子集。';
+                    } else if (diff_row1.length==0){
+                        diff_str=diff_str+'去除重复'+unit+'后'+caption1+'是'+caption2+'的子集。';
+                    } else {
+                        diff_str=diff_str+'去除重复'+unit+'后两者无包含关系。';
+                    }
+                    if (diff_row1.length>0){
+                        diff1_str='<p>去除重复'+unit+'后'+caption1+'含有'+caption2+'不含有 '+diff_row1.length+' 行。前几'+unit+'：</p>'+array_2_li_b(diff_row1);
+                    }
+                    if (diff_row2.length>0){
+                        diff2_str='<p>去除重复'+unit+'后'+caption2+'含有'+caption1+'不含有 '+diff_row2.length+' 行。前几'+unit+'：</p>'+array_2_li_b(diff_row2);
+                    }
+                }
+            }    
+        }
+        return [diff_str+diff1_str+diff2_str,is_ok];
+    }
+    
+    if (list1===false){
+        list1=document.getElementById(textarea_id1).value.split('\n');
+    }
+    if (list2===false){
+        list2=document.getElementById(textarea_id2).value.split('\n');
+    }
+
+    var bljg='<table width=100%><tr>';
+    bljg=bljg+'<td valign=top width=50%>';
+    bljg=bljg+'<p><b>删除行</b>('+list1.length+') <button type="button" onclick="document.getElementById(\''+textarea_id1+'\').select();document.execCommand(\'copy\');">Copy</button>'+(more_buttons1==''?'':more_buttons1)+'</p>';
+    bljg=bljg+'<textarea id="'+textarea_id1+'" style="height:15rem;">'+list1.join('\n')+'</textarea>';
+    bljg=bljg+'</td>';
+    bljg=bljg+'<td valign=top width=50%>';
+    bljg=bljg+'<p><b>添加行</b>('+list2.length+') <button type="button" onclick="document.getElementById(\''+textarea_id2+'\').select();document.execCommand(\'copy\');">Copy</button>'+(more_buttons2==''?'':more_buttons2)+'</p>';
+    bljg=bljg+'<textarea id="'+textarea_id2+'" style="height:15rem;">'+list2.join('\n')+'</textarea>';
+    bljg=bljg+'</td>';
+    bljg=bljg+'</tr></table>';
+
+    var diff_row_str='';
+    var diff_word_str='';
+    var is_ok=true;
+    
+    [diff_row_str,is_ok]=sub_two_list_diff_b_compare(list1,list2,'行');
+    if (!is_ok){
+        var words1=list1.join(' ').split(/\s+/g);
+        var words2=list2.join(' ').split(/\s+/g);
+        [diff_word_str,is_ok]=sub_two_list_diff_b_compare(words1,words2,'单词');
+        diff_word_str='<h4>单词比较</h4>'+diff_word_str;
+    }
+    
+    return [bljg,'<h4>行比较</h4>'+diff_row_str+diff_word_str];
+}

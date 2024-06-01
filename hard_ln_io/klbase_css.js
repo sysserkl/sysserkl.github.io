@@ -999,7 +999,7 @@ function div_title_href_b(item,csfsize='',underline=false,csid='',fnname='',item
     var review='';
     if (item[0]==''){
         if (item[1]!==''){
-            bljg=bljg+'<span class="span_a_article_title_b" style="color:'+scheme_global["a"]+'">'+item[1]+'</span> ';
+            bljg=bljg+'<span class="span_a_article_title_b" style="color:'+scheme_global['a']+'">'+item[1]+'</span> ';
         }
     } else {
         if (item[1]==''){

@@ -32,4 +32,5 @@ var digest_global=`
 *timberline
 *up-and-comer
 *gumball
+*Rowland
 `.trim().split('\n');

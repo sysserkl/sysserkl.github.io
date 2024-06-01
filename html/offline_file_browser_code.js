@@ -552,6 +552,7 @@ function saved_movie_html_offline_file_browser(cscategory=''){
         cscategory=document.getElementById('input_search').value;
     }
     var isreg=klmenu_check_b('span_reg_ofb',false);
+    keys_offline_file_browser(cscategory+(isreg?'(:r)':''));
     
     var odiv=document.getElementById(current_td_global);
     if (!odiv){return;}

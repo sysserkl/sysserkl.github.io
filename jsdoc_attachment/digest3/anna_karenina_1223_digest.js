@@ -185,4 +185,5 @@ var digest_global=`
 *wrathfully
 *Zola
 *zoology
+*hostilely
 `.trim().split('\n');

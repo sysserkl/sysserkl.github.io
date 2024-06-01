@@ -8,4 +8,5 @@ var digest_global=`
 *seaport
 *Octavius
 *Inca
+*Cornelia
 `.trim().split('\n');

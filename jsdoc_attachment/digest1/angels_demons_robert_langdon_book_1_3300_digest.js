@@ -54,4 +54,5 @@ var digest_global=`
 *kinsmen
 *bazooka
 *world-renowned
+*heliocentric
 `.trim().split('\n');

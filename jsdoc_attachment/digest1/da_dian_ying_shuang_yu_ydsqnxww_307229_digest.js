@@ -28,4 +28,6 @@ var digest_global=`
 *Artemis
 *tight-fitting
 *derail
+*blindingly
+
 `.trim().split('\n');

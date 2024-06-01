@@ -214,7 +214,7 @@ function words_queue_split_kle(csstr,cstype='string'){
         item=item.trim();
         if (item==''){continue;}
         var aword=item.split('\n');
-        if (aword.length==3){
+        if (aword.length==3){   //形如：[ "clubman", "['klʌbˌmæn]", "n. 俱乐部会员；拿棍棒的人" ] - 保留注释
             if (cstype=='sublist'){
                 result_t.push(aword);
             } else if (cstype=='string'){
@@ -236,63 +236,83 @@ function words_queue_split_kle(csstr,cstype='string'){
     }
 }
 
-function words_queue_update_kle(){
+function words_queue_update_kle(do_type='change'){
+    function sub_words_queue_update_kle_arr2str(csarr){
+        for (let blxl=0;blxl<csarr.length;blxl++){
+            if (Array.isArray(csarr[blxl])){
+                csarr[blxl]=csarr[blxl].toString();
+            }
+        }    
+        return csarr;
+    }
+    
+    function sub_words_queue_update_kle_diff(old_list,new_list){
+        old_list=sub_words_queue_update_kle_arr2str(old_list);
+        new_list=sub_words_queue_update_kle_arr2str(new_list);
+
+        var diff_str=two_list_diff_b(old_list,new_list,'textarea_old_words_queue_diff_kle','textarea_new_words_queue_diff_kle','','','旧版','新版')[1];
+        var buttons='<p>'+close_button_b('div_words_queue_diff_kle','')+'</p>';
+        document.getElementById('div_words_queue_diff_kle').innerHTML=diff_str+buttons;        
+    }
+    
     var blstr=document.getElementById('textarea_words_queue').value.trim();
     if (blstr.match(/\n\s*\n/mg)){
-        alert('存在空行，取消更新');
+        alert('存在空行，取消操作');
         return;
     }
+    
     var selected_word=document.getElementById('select_queue_words').value;
-    var new_list,old_list,error='';
+    var new3_list,old3_list,words_new_list,words_old_list,error='';
     if (selected_word==''){
-        [new_list,error]=words_queue_new_or_old_kle(true,false);    
+        [new3_list,error]=words_queue_new_or_old_kle(true,false);    
         if (error!==''){return;}
         
-        [old_list,error]=words_queue_new_or_old_kle(false,false);
+        [old3_list,error]=words_queue_new_or_old_kle(false,false);
         if (error!==''){return;}
         
-        if (new_list.toString()==old_list.toString()){
-            alert('完全一致，未修改');
+        if (new3_list.toString()==old3_list.toString()){
+            alert('完全一致'+(do_type=='change'?'，未修改':''));
             return;
         }
-        [new_list,error]=words_queue_new_or_old_kle(true,true);    
+        [words_new_list,error]=words_queue_new_or_old_kle(true,true);    
         if (error!==''){return;}
         
-        [old_list,error]=words_queue_new_or_old_kle(false,true);
+        [words_old_list,error]=words_queue_new_or_old_kle(false,true);
         if (error!==''){return;}
         
-        if (confirm('是否将原有'+old_list.length+'个单词('+old_list+')批量覆盖为'+new_list.length+'个单词('+new_list+')('+blstr.length+')？')){
+        if (do_type=='change' && confirm('是否将原有'+words_old_list.length+'个单词('+words_old_list+')批量覆盖为'+words_new_list.length+'个单词('+words_new_list+')('+blstr.length+')？')){
             localStorage.setItem('enwords_queue',blstr);
             words_queue_select_kle();
             js_alert_b('更新完成','span_queue_words_info');
+        } else if (do_type=='diff'){
+            sub_words_queue_update_kle_diff(old3_list,new3_list);
         }
         return;
     }
     //---
     var word_t,error;
     [word_t,error]=words_queue_split_kle(blstr,'');
-    if (error!==''){
-        //alert(selected_word+' 行数不为 3，取消更新');
-        return;
-    }
+    if (error!==''){return;}
     
     //---
     var temp_words;
     [temp_words,error]=words_queue_split_kle(words_queue_get_b(false),'');
+    //temp_words 是 单词个数*3行的数组，以名称、读音、释义逐行分布 - 保留注释
     var bllen=temp_words.length;
-    if (error!==''){
-        //alert('临时单词行数不为 3 的倍数，取消更新');
-        return;
-    }
+    if (error!==''){return;}
     
     var blfound=false;
     if (selected_word!=='NEW WORD'){
         for (let blxl=0;blxl<bllen;blxl++){
             if (blxl % 3 == 0 && temp_words[blxl]==selected_word && blxl+2<bllen){
                 if (temp_words[blxl]==word_t[0] && temp_words[blxl+1]==word_t[1] && temp_words[blxl+2]==word_t[2]){
-                    alert('完全一致，未修改');
+                    alert('完全一致'+(do_type=='change'?'，未修改':''));
                     return;
                 }
+                
+                old3_list=[].concat(temp_words.slice(blxl,blxl+3));
+                new3_list=[].concat(word_t);
+
                 temp_words[blxl]=word_t[0];
                 temp_words[blxl+1]=word_t[1];
                 temp_words[blxl+2]=word_t[2];
@@ -303,7 +323,7 @@ function words_queue_update_kle(){
     }
     
     if (blfound===false){
-        temp_words=temp_words.concat(word_t);
+        temp_words=temp_words.concat(word_t);   //视为新单词添加 - 保留注释
     }
     
     var list_t=[];
@@ -312,7 +332,7 @@ function words_queue_update_kle(){
         var item=temp_words[blxl];
         if (blxl % 3 == 0){ //单词名称行 - 保留注释
             if (name_set.has(item)){
-                alert('发现重复的单词：'+item+'，取消更新');
+                alert('发现重复的单词：'+item+(do_type=='change'?'，取消更新':''));
                 return;
             }
             name_set.add(item);
@@ -323,15 +343,20 @@ function words_queue_update_kle(){
         }
     }
     
-    if (selected_word=='NEW WORD' || selected_word==word_t[0]){
-        var blmessage='是否更新('+word_t[0]+')？';
-    } else {
-        var blmessage='是否将单词 '+selected_word+' 修改为 '+word_t[0]+' ？';
-    }
-    if (confirm(blmessage)){
-        localStorage.setItem('enwords_queue',list_t.join('\n'));
-        words_queue_select_kle(word_t[0]);
-        js_alert_b('更新完成','span_queue_words_info');
+    if (do_type=='change' ){
+        if (selected_word=='NEW WORD' || selected_word==word_t[0]){
+            var blmessage='是否更新('+word_t[0]+')？';
+        } else {
+            var blmessage='是否将单词 '+selected_word+' 修改为 '+word_t[0]+' ？';
+        }
+        
+        if (confirm(blmessage)){
+            localStorage.setItem('enwords_queue',list_t.join('\n'));
+            words_queue_select_kle(word_t[0]);
+            js_alert_b('更新完成','span_queue_words_info');
+        }
+    } else if (do_type=='diff'){
+        sub_words_queue_update_kle_diff(old3_list,new3_list);
     }
 }
  
@@ -391,11 +416,12 @@ function words_editor_form_kle(){
     bljg=bljg+'<textarea name="textarea_words_queue" id="textarea_words_queue" style="height:20rem;">'+list_t.join('\n')+'</textarea>';
     bljg=bljg+'<p>';
     bljg=bljg+'<span class="aclick" onclick="words_queue_update_kle();">更新</span> ';
+    bljg=bljg+'<span class="aclick" onclick="words_queue_update_kle(\'diff\');">diff</span> ';
     bljg=bljg+'<span class="aclick" onclick="words_queue_append_kle();">批量添加</span> ';
     bljg=bljg+textarea_buttons_b('textarea_words_queue','全选,清空,复制,导入temp_txt_share,发送到临时记事本,发送地址','enwords_queue')+' ';    
     
     bljg=bljg+'<select id="select_queue_do_type">';
-    for (let item of ['展现为数组形式','数组转为多行形式','batch_en_bo+','batch_en','batch_en_minor']){
+    for (let item of ['数组转为多行形式','展现为数组形式','batch_en_bo+','batch_en','batch_en_minor']){
         bljg=bljg+'<option>'+item+'</option>';
     }
     bljg=bljg+'</select> ';
@@ -413,7 +439,7 @@ function words_editor_form_kle(){
     bljg=bljg+' 行数：'+list_t.length;    
     bljg=bljg+'</p>';
     bljg=bljg+'</form>\n';   
-    
+    bljg=bljg+'<div id="div_words_queue_diff_kle"></div>\n';
     bljg=bljg+'<p>格式：</p><hr />'+['单词1','音标','释义','---','单词2','音标','释义','---'].join('<br />');
     if (enwords.length>=2){
         bljg=bljg+'<br />'+[enwords[0][0],enwords[0][1],enwords[0][2],'---',enwords[1][0],enwords[1][1],enwords[1][2]].join('<br />');
@@ -567,11 +593,12 @@ function menu_kle(){
     var group_list=[
     ['随机排序','show_sentence_enwc_b(0,true,true);',true],
     ['最多3条','show_sentence_enwc_b(3,true,true);',true],
+    ['恢复原始排序','en_sentence_to_default_order_b();alert(\'done\');',true],
+
     ];    
     klmenu1.push(menu_container_b(str_t,group_list,'例句：'));
     
     klmenu1=klmenu1.concat([
-    '<span class="span_menu" onclick="'+str_t+'en_sentence_to_default_order_b();alert(\'done\');">例句恢复原始排序</span>',
     '<span class="span_menu" onclick="'+str_t+'enwords_definition_2_multilines_b();">释义分段</span>',    
     '<span class="span_menu" onclick="'+str_t+'similar_words_batch_kle();">全部相似单词</span>',
     '<span class="span_menu" onclick="'+str_t+'duplicate_words_kle();">重复单词和格式检查</span>',
@@ -639,7 +666,7 @@ function menu_kle(){
     klmenu_old.push('<span class="span_menu" onclick="'+str_t+'old_words_name_list_form_kle();">旧单词列表</span>');
     klmenu_old.push('<span class="span_menu" onclick="'+str_t+'old_words_without_phrase_kle();">无词组的旧单词</span>');
     
-    var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu1,'','16rem','1rem','1rem','60rem')+klmenu_b(klmenu_old,'旧','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_brain,'🧠','17rem','1rem','1rem')+klmenu_b(klmenu_new,'🆕','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_statistics,'🧮','14rem','1rem','1rem')+klmenu_b(klmenu_search,'🔽','18rem','1rem','1rem','30rem'),'','0rem')+' ';
+    var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu1,'','22rem','1rem','1rem','60rem')+klmenu_b(klmenu_old,'旧','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_brain,'🧠','17rem','1rem','1rem')+klmenu_b(klmenu_new,'🆕','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_statistics,'🧮','14rem','1rem','1rem')+klmenu_b(klmenu_search,'🔽','18rem','1rem','1rem','30rem'),'','0rem')+' ';
     
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',bljg);
     

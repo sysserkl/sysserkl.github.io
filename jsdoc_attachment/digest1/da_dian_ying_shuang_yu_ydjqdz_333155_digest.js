@@ -9,4 +9,5 @@ var digest_global=`
 *bunny
 *touchpad
 *ketchup
+*CD-ROM
 `.trim().split('\n');

@@ -45,15 +45,28 @@ function menu_notepad(){
     var klmenu_sort=sort_menu_klr_b('textarea_content_notepad',str_t);
     var buttons=edit_buttons_b('edit_tools_click_notepad',true,true,'oblong_box').join(' ');
     
-    var dom_show_hide='<span class="oblong_box" onclick="wiki_style_notepad();">wiki</span> <span class="oblong_box" onclick="popup_show_hide_b(\'span_edit_buttons_notepad\',\'\');">🖊</span> ';
+    var dom_show_hide='<span class="oblong_box" onclick="wiki_style_notepad();">wiki</span> <span class="oblong_box" onclick="diff_notepad();">diff</span> <span class="oblong_box" onclick="popup_show_hide_b(\'span_edit_buttons_notepad\',\'\');">🖊</span> ';
     var op=document.getElementById('p_menu_notepad');
     op.insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu_sort,'↕','10rem','1rem','1rem','30rem'),'','0rem')+' '+dom_show_hide+'<span id="span_edit_buttons_notepad" style="display:none;">'+buttons+'</span>');
     mouseover_mouseout_oblong_span_b(op.querySelectorAll('span.oblong_box'));
 }
 
+function diff_notepad(){
+    var result_t1=current_id_content_get_notepad().split('\n');
+    var result_t2=document.getElementById('textarea_content_notepad').value.split('\n');
+
+    var diff_str=two_list_diff_b(result_t1,result_t2,'textarea_old_diff_notepad','textarea_new_diff_notepad','','','旧版','新版')[1];
+
+    var buttons='<p>'+close_button_b('div_status','')+'</p>';
+
+    var odiv=document.getElementById('div_status');
+    odiv.innerHTML=diff_str+buttons;
+    odiv.scrollIntoView();
+}
+
 function wiki_style_notepad(){
     var odiv=document.getElementById('div_status');
-    var blstr=document.getElementById('textarea_content_notepad').value.replace(/\n/g,'<br />\n');
+    var blstr=document.getElementById('textarea_content_notepad').value.replace(/\n/g,'\n<p>'); //不能使用<br /> - 保留注释
     var buttons=close_button_b('div_status','');
     odiv.innerHTML=wiki_all_format_b(blstr)+'<p>'+buttons+'</p>';
 }
@@ -135,16 +148,27 @@ function textarea_info_count_notepad(ospan=false,otextarea=false){
     ospan.innerHTML='行数：'+blstr.split('\n').length+'；字数：'+blstr.length;
 }
 
+function current_id_content_get_notepad(){
+    var blstr=false;
+    if (current_id_notepad_global!==false){
+        for (let item of raw_data_notepad_global){
+            if (item[0]==current_id_notepad_global){
+                blstr=item[1];
+                break;
+            }
+        }
+    }
+    return blstr;
+}
+
 function show_hide_notepad(is_edit=true){
     var otextarea=document.getElementById('textarea_content_notepad');
     if (is_edit){
         if (current_id_notepad_global!==false){
-            for (let item of raw_data_notepad_global){
-                if (item[0]==current_id_notepad_global){
-                    otextarea.value=item[1];
-                    textarea_info_count_notepad(false,otextarea);
-                    break;
-                }
+            var blstr=current_id_content_get_notepad();
+            if (blstr!==false){
+                otextarea.value=blstr;
+                textarea_info_count_notepad(false,otextarea);                
             }
             document.getElementById('span_append_or_edit_notepad').innerText='修改';
             document.getElementById('span_delete_notepad').style.display='';
