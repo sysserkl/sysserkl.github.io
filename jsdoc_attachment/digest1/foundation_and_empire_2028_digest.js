@@ -7,4 +7,5 @@ var digest_global=`
 *monogram
 *utilization
 *minty
+*horticultural
 `.trim().split('\n');

@@ -53,4 +53,5 @@ var digest_global=`
 *VCR
 *Jordanian
 *cellphone
+*Bloomington
 `.trim().split('\n');

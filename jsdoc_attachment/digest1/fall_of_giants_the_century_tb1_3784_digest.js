@@ -54,4 +54,7 @@ var digest_global=`
 *Sarajevo
 *Austria-Hungary
 *lady-in-waiting
+*condom
+*Willard
+*flatmate
 `.trim().split('\n');

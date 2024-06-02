@@ -13,4 +13,5 @@ var digest_global=`
 *recalculate
 *rulebook
 *filtration
+*climatology
 `.trim().split('\n');

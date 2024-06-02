@@ -7,4 +7,5 @@ var digest_global=`
 *transgressor
 *unoriginal
 *civil engineering
+*loverless
 `.trim().split('\n');

@@ -137,4 +137,5 @@ var digest_global=`
 *brother-in-arms
 *costermonger
 *outdo
+*misspeak
 `.trim().split('\n');

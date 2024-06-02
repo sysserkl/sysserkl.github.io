@@ -10,4 +10,5 @@ var digest_global=`
 *ringleader
 *planar
 *tabletop
+*corneal
 `.trim().split('\n');

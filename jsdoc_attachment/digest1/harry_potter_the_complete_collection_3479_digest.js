@@ -68,4 +68,5 @@ var digest_global=`
 *noticeboard
 *blackmailer
 *shelve
+*moonless
 `.trim().split('\n');
