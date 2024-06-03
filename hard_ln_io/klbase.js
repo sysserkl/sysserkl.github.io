@@ -262,13 +262,23 @@ function klbase_addons_import_js_b(klbase_list=[],module_list=[],jsdata_list=[],
     var same_dir=location_href_b();
     for (let item of same_dir_file_list){
         [item,defer_str]=js_file_import_defer_b(item);
-        if (item.slice(-3,)=='.js'){
-            result_t[3].push(['js',same_dir+item,defer_str]);
-        } else if (item.slice(-4,)=='.css'){
-            result_t[3].push(['css',same_dir+item,'']);
-        } else if (item.slice(-4,)=='.png'){
-            result_t[3].push(['png',same_dir+item,'']);
-        }        
+        if (item.match(/^https?:\/\//i)){
+            if (item.slice(-3,)=='.js'){
+                result_t[3].push(['js',item,defer_str]);
+            } else if (item.slice(-4,)=='.css'){
+                result_t[3].push(['css',item,'']);
+            } else if (item.slice(-4,)=='.png'){
+                result_t[3].push(['png',item,'']);
+            }
+        } else {
+            if (item.slice(-3,)=='.js'){
+                result_t[3].push(['js',same_dir+item,defer_str]);
+            } else if (item.slice(-4,)=='.css'){
+                result_t[3].push(['css',same_dir+item,'']);
+            } else if (item.slice(-4,)=='.png'){
+                result_t[3].push(['png',same_dir+item,'']);
+            }
+        }
     }
     
     if (do_write){
@@ -3738,11 +3748,15 @@ function import_bigfile_content_b(filename=false,csid=false){
     idb_bigfile_b('read','content',filename,sub_import_bigfile_content_b);
 }
 
-function load_js_var_file_b(varname,file_list,filename,csfn=false,do_echo=true,direct_from_bigfile=false,csmax=-1,cswait=2000){
+function load_js_var_file_b(varname,file_list,filename='',csfn=false,do_echo=true,direct_from_bigfile=false,csmax=-1,cswait=2000){
     function sub_load_js_var_file_b_bigfile_test(cslist){
         if (cslist.length>0){
-            idb_bigfile_b('read','eval',filename);
-            load_var_b(varname,csmax,cswait,csfn);        
+            if (filename!==''){
+                idb_bigfile_b('read','eval',filename);
+                load_var_b(varname,csmax,cswait,csfn);        
+            } else {
+                conosole.log('filename 为空');
+            }
         } else {
             if (typeof csfn == 'function'){
                 csfn(false);
@@ -3756,12 +3770,16 @@ function load_js_var_file_b(varname,file_list,filename,csfn=false,do_echo=true,d
                 console.log('未发现函数 idb_bigfile_b');
                 return;
             }
-            console.log('尝试从bigfile载入',varname);
-            
-            idb_bigfile_b('read','',filename,sub_load_js_var_file_b_bigfile_test);
+            if (filename!==''){
+                console.log('尝试从bigfile载入',varname);
+                idb_bigfile_b('read','',filename,sub_load_js_var_file_b_bigfile_test);
+            } else {
+                conosole.log('filename 为空');
+            }
         }
     }
     //-----------------------
+    //file_list 每个元素形如：[ "js", "http://aaa/bbb.js", "" ] - 保留注释
     if (eval('typeof '+varname) == 'undefined'){
         if (do_echo){
             console.log(varname+' 未定义');
@@ -3934,4 +3952,8 @@ function two_list_diff_b(list1=false,list2=false,textarea_id1='textarea_old_diff
     }
     
     return [bljg,'<h4>行比较</h4>'+diff_row_str+diff_word_str];
+}
+
+function readlater_start_year_b(){
+    return 2019;
 }

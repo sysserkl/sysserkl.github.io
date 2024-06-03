@@ -89,9 +89,6 @@ function en_word_def_istrong_b(csdef,is_remove=false){
         if (csdef.includes('; '+item+'. ') || csdef.includes('；'+item+'. ')){
             csdef=csdef.replace(new RegExp('(; |；)'+item+'\\. ','g'),'$1<b>'+item+'. </b>');
         }
-        //if (csdef.includes('；'+item+'. ')){
-            //csdef=csdef.replace(new RegExp('；'+item+'\\. ','g'),'；<b>'+item+'. </b>');
-        //}            
         if (csdef.indexOf(item+'. ')==0){
             //从左到右替换一次 - 保留注释
             csdef=csdef.replace(item+'. ','<b>'+item+'. </b>');
@@ -201,7 +198,7 @@ function load_sentence_menu_b(jsstr){
 }
 
 function load_enword_file_b(varname,filename,csfn=false,do_echo=true,direct_from_bigfile=false){
-    var file_list=klbase_addons_import_js_b([],[],['words/'+filename+'_data.js'],[],false,false);        
+    var file_list=klbase_addons_import_js_b([],[],['words/'+filename+'_data.js'],[],false,false);
     load_js_var_file_b(varname,file_list,filename+'_data.js',csfn,do_echo,direct_from_bigfile);
 }
 

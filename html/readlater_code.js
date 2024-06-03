@@ -1,6 +1,6 @@
 function import_files_rlater(){
     if (is_local_b()){
-        var flist=['data/readlater/readlater_words_count_data.js', 'data/readlater/readlater_spam_keys_data.js', 'data/readlater/readlater_important_keys_data.js', 'data/klwiki/klwiki_page_position_data.js','data/album/wiki_album_data.js'];    //'klwiki_page_code.js', 
+        var flist=['data/readlater/readlater_words_count_data.js', 'data/readlater/readlater_spam_keys_data.js', 'data/readlater/readlater_important_keys_data.js', 'data/klwiki/klwiki_page_position_data.js','data/album/wiki_album_data.js'];
         for (let blxl=0;blxl<flist.length;blxl++){
             flist[blxl]='../../../../'+flist[blxl];
         }
@@ -12,20 +12,20 @@ function import_data_rlater(){
     var blno=args_rlater(true);
     var the_year=date_2_ymd_b(false,'y');
     readlater_data_file_list_global=[];   //全局变量 - 保留注释
-    if (is_local_b()){
-        var blpath=klwebphp_path_b('data/php_writable/');
-        for (blxl=2019;blxl<=the_year;blxl++){
-            readlater_data_file_list_global.push(blpath+'readlater_data_'+blxl);
-        }
-        
-        if (blno !== '' && !isNaN(blno)){
-            if (blno<=0){
-                readlater_data_file_list_global=readlater_data_file_list_global.slice(blno,);
-            }
-        }
-        
-        import_data_rlater_b(readlater_data_file_list_global,'load_data_rlater','');
+    if (!is_local_b()){return;}
+    
+    var blpath=klwebphp_path_b('data/php_writable/');
+    for (blxl=readlater_start_year_b();blxl<=the_year;blxl++){
+        readlater_data_file_list_global.push(blpath+'readlater_data_'+blxl);
+        //形如：http://aaa/readlater_data_2024 - 保留注释
     }
+    
+    if (blno !== '' && !isNaN(blno)){
+        if (blno<=0){
+            readlater_data_file_list_global=readlater_data_file_list_global.slice(blno,);
+        }
+    }
+    import_data_rlater_b(readlater_data_file_list_global,'load_data_rlater','');
 }
 
 function load_data_rlater(fname=''){

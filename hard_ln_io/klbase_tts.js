@@ -54,7 +54,7 @@ function temp_save_temp_txt_share_b(cstype=''){
     }
 }
 
-function init_temp_txt_share_b(is_php=true){
+function init_temp_txt_share_b(is_php=true,menu_more=''){
     temp_txt_share_type_dict_global={   //全局变量 - 保留注释
     //id: caption,搜索验证关键词 - 保留注释
     'done_routines': ['routines完成项','\\d{4}-\\d{2}-\\d{2}\\s\\d{2}:\\d{2}:\\d{2}\\s[a-z]{3},(:r)'],
@@ -88,7 +88,7 @@ function init_temp_txt_share_b(is_php=true){
     
     document.getElementById('span_update').insertAdjacentHTML('beforebegin',buttons+textarea_buttons_b('textarea_temp_txt_share','清空,复制,save as txt file'+(is_php?'':',发送到临时记事本,发送地址,➕')));
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.4rem'));
-    menu_temp_txt_share_b(is_php);
+    menu_temp_txt_share_b(is_php,menu_more);
     document.getElementById('i_client_info').insertAdjacentHTML('beforeend',' userAgent: '+navigator.userAgent);
     temp_save_temp_txt_share_b('read');
     character_2_icon_b(is_php?'📗':'📙');
@@ -170,7 +170,7 @@ function local_js_file_load_txt_share_b(is_php=true){
     }
 }
 
-function menu_temp_txt_share_b(is_php=true){
+function menu_temp_txt_share_b(is_php=true,menu_more=''){
     var str_t=klmenu_hide_b('');
     var klwebphp,sele_path;
     [klwebphp,sele_path]=klbase_sele_path_b();
@@ -192,26 +192,15 @@ function menu_temp_txt_share_b(is_php=true){
     '<span class="span_menu" onclick="'+str_t+'blank_rows_remove_klr_b(\'textarea_temp_txt_share\');">remove blank rows</span>',
     '<span class="span_menu" onclick="'+str_t+'local_storage_import_b(\'textarea_temp_txt_share\',true);">import data to localStorage</span>',    
     '<span class="span_menu" onclick="'+str_t+'remove_notepad_tag_temp_txt_share_b();">清除notepad标记和日期</span>',    
-    
     ];
-    
-    if (is_local_b()){
-        klmenu_config.push('<span class="span_menu" onclick="'+str_t+'wiki_page_name_temp_txt_share_b();">wiki page name</span>');
-    }
-    
-    if (!is_php){
-        klmenu_config.push('<span class="span_menu" onclick="'+str_t+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>');
-        klmenu_config.push(load_sentence_menu_b(str_t));
-    }
     
     var klmenu_link=[
     '<a href="'+klwebphp+'temp_txt_append.php" onclick="'+str_t+'" target=_blank>➕ temp txt append</a>',
     '<a href="'+sele_path+'/html/rows.htm" onclick="'+str_t+'" target=_blank>kl rows</a>',
     '<a href="'+klwebphp+'file_share_list.php" onclick="'+str_t+'" target=_blank>file share list</a>',
-    '<span class="span_menu" onclick="'+str_t+'sync_pages_batch_open_temp_txt_share_b();">批量打开需同步页面</span>',    
     ];
     
-    var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu0,(is_php?'📗':'📙'),'16rem','1rem','1rem','60rem')+klmenu_b(klmenu_share,'🫂','19rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem'),'','0rem')+' ';
+    var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu0,(is_php?'📗':'📙'),'16rem','1rem','1rem','60rem')+klmenu_b(klmenu_share,'🫂','19rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem')+menu_more,'','0rem')+' ';
     document.getElementById('h2_title').insertAdjacentHTML('afterbegin',bljg);
 }
 
@@ -239,36 +228,6 @@ function remove_notepad_tag_temp_txt_share_b(){
     
     if (confirm('共有行数 '+list_t.length+' 行，其中内容 '+content_list.length+' 行，notepad tag '+tag_list.size+' 行，是否清除？')===false){return;}
     otextarea.value=content_list.join('\n');
-}
-
-function sync_pages_batch_open_temp_txt_share_b(){
-    function sub_sync_pages_batch_open_temp_txt_share_b_one_page(){
-        if (blxl>=bllen){return;}
-        window.open(sele_path+'/html/'+list_t[blxl]);
-        blxl=blxl+1;
-        setTimeout(sub_sync_pages_batch_open_temp_txt_share_b_one_page,2000);
-    }
-    
-    var sele_path=klbase_sele_path_b()[1];
-    var list_t=[
-    'enwords.htm',
-    'reader.htm?_tagNONE',
-    'selenium_enwords.htm',
-    'readlater.htm',
-    'notepad.htm',
-    ];
-    
-    var blxl=0;
-    var bllen=list_t.length;
-    sub_sync_pages_batch_open_temp_txt_share_b_one_page();
-}
-
-function wiki_page_name_temp_txt_share_b(){
-    var otextarea=document.getElementById('textarea_temp_txt_share');
-    var list_t=otextarea.value.match(/^=+\s*(.+)\s*=+$/mg) ||[];
-    var result_t=title_key_rlater_b(list_t.join(' '),false);
-    
-    document.getElementById('div_status').innerHTML=result_t.join(' ')+' '+close_button_b('div_status','');
 }
 
 function encrypt_content_temp_txt_share_b(){

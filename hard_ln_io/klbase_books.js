@@ -103,17 +103,39 @@ function import_one_book_b(bookname,jsdoc_num,do_write=true){
     return blpath_name;
 }
 
+function num_type_path_id_get_book_b(book_no){
+    var jsdoc_num='';
+    var book_type='';
+    var jsdoc_path='';
+    var bookid='';
+    
+    if (csbooklist_sub_global.length>0){
+        if (csbooklist_sub_global[book_no].length>=4){
+            jsdoc_num=csbooklist_sub_global[book_no][3];
+        }
+
+        var book_type=book_type_b(csbooklist_sub_global[book_no]);
+        var jsdoc_path=book_path_b(jsdoc_num,book_type.includes('P'));
+        var bookid=csbooklist_sub_global[book_no][0];
+    }
+    return [jsdoc_num,book_type,jsdoc_path,bookid];
+}
+
 function import_book_js_b(import_digest=true){
     var book_no = csbookno_global;
     var today=file_date_parameter_b();
+    var jsdoc_num,book_type,jsdoc_path,bookid;
     if (csbookno2_global>=0){
-        var jsdoc_num='';
-        if (csbooklist_sub_global[csbookno2_global].length>=4){
-            jsdoc_num=csbooklist_sub_global[csbookno2_global][3];
-        }
-        var jsdoc_path=book_path_b(jsdoc_num);
-	    document.write('\n<script src="'+jsdoc_path+csbooklist_sub_global[csbookno2_global][0]+'.js'+today+'"><\/script>\n');
-        console.log(jsdoc_path+csbooklist_sub_global[csbookno2_global][0]+'.js'+today);
+        [jsdoc_num,book_type,jsdoc_path,bookid]=num_type_path_id_get_book_b(csbookno2_global);
+        //var jsdoc_num='';
+        //if (csbooklist_sub_global[csbookno2_global].length>=4){
+            //jsdoc_num=csbooklist_sub_global[csbookno2_global][3];
+        //}
+        //var jsdoc_path=book_path_b(jsdoc_num);
+        //var bookid=csbooklist_sub_global[csbookno2_global][0];
+        
+	    document.write('\n<script src="'+jsdoc_path+bookid+'.js'+today+'"><\/script>\n');
+        console.log(jsdoc_path+bookid+'.js'+today);
         //以下2行保留，第2本书忽略目录和摘要 - 保留注释
 	    //document.write('\n<script src="'+jsdoc_path+'menu/'+csbooklist_sub_global[csbookno2_global][0]+'_menu.js"><\/script>\n');
 	    //document.write('\n<script src="'+jsdoc_path+'digest/'+csbooklist_sub_global[csbookno2_global][0]+'_digest.js"><\/script>\n');
@@ -124,15 +146,16 @@ function import_book_js_b(import_digest=true){
     }
     txtbook_js_code_file_global=''; //全局变量 - 保留注释
     //---
-    var jsdoc_num='';
-    if (csbooklist_sub_global.length>0 && csbooklist_sub_global[book_no].length>=4){
-        jsdoc_num=csbooklist_sub_global[book_no][3];
-    }
+    [jsdoc_num,book_type,jsdoc_path,bookid]=num_type_path_id_get_book_b(book_no);
+    //var jsdoc_num='';
+    //if (csbooklist_sub_global.length>0 && csbooklist_sub_global[book_no].length>=4){
+        //jsdoc_num=csbooklist_sub_global[book_no][3];
+    //}
     if (csbooklist_sub_global.length>0){
-        var book_type=book_type_b(csbooklist_sub_global[book_no]);
+        //var book_type=book_type_b(csbooklist_sub_global[book_no]);
 
-        var jsdoc_path=book_path_b(jsdoc_num,book_type.includes('P'));
-        var bookid=csbooklist_sub_global[book_no][0];
+        //var jsdoc_path=book_path_b(jsdoc_num,book_type.includes('P'));
+        //var bookid=csbooklist_sub_global[book_no][0];
         document.write('\n<script src="'+jsdoc_path+bookid+'.js'+today+'"><\/script>\n');
         console.log(jsdoc_path+bookid+'.js'+today);
         
@@ -171,16 +194,16 @@ function digest_get_enwords_b(is_set=true,is_lower=false){
     return result_t;
 }
 
-function menu_digest_file_full_name_b(book_no=false,jsdoc_num=false,bookid=false,jsdoc_path=false,import_digest=true,do_write=false){
+function menu_digest_file_full_name_b(book_no=false,jsdoc_num=false,bookid=false,jsdoc_path=false,import_digest=true,do_write=false,add_date=true){
     if (csbooklist_sub_global.length==0){
         return ['',''];
     }
     
-    if (book_no==false){
+    if (book_no===false){
         book_no=csbookno_global;
     }
     
-    if (jsdoc_num==false){
+    if (jsdoc_num===false){
         if (csbooklist_sub_global[book_no].length>=4){
             jsdoc_num=csbooklist_sub_global[book_no][3];    
         } else {
@@ -190,10 +213,10 @@ function menu_digest_file_full_name_b(book_no=false,jsdoc_num=false,bookid=false
 
     var book_type=book_type_b(csbooklist_sub_global[book_no]);
 
-    if (jsdoc_path==false){
+    if (jsdoc_path===false){
         jsdoc_path=book_path_b(jsdoc_num,book_type.includes('P'));
     }
-    if (bookid==false){
+    if (bookid===false){
         bookid=csbooklist_sub_global[book_no][0];
     }
     
@@ -223,7 +246,7 @@ function menu_digest_file_full_name_b(book_no=false,jsdoc_num=false,bookid=false
         write_js_css_b(result_t);
     }
 
-    var today=file_date_parameter_b();
+    var today=(add_date?file_date_parameter_b():'');
     if (import_digest){
         return [js_menu_file+today,js_digest_file+today];
     } else {
@@ -394,7 +417,7 @@ function filename_2_bookname_b(filename){
     return bookname_t;
 }
 
-function booklist_source_config_b(is_digest=false){
+function reader_lastbook_id_get_b(){
     var last_book=local_storage_get_b('reader_lastbook',-1,true);
     var marked_set=new Set();
     for (let item of last_book){
@@ -403,6 +426,11 @@ function booklist_source_config_b(is_digest=false){
             marked_set.add(list_t[1]);
         }
     }
+    return marked_set;
+}
+
+function booklist_source_config_b(is_digest=false){
+    var marked_set=reader_lastbook_id_get_b();
     
     var temp_digest_set=new Set();
     var list_t=local_storage_get_b('digest_temp_txtlistsearch',-1,true);
@@ -480,7 +508,7 @@ function books_global_value_init_b(){
     digest_global=[];
 }
 
-function load_current_book_b(load_digest_file=false,do_write=true){
+function load_current_book_b(load_digest_file=false,do_write=true,add_date=true){
     var blhref=location.href;
     if (blhref.includes('/klwebphp/')){
         blhref=blhref.split('/klwebphp/')[0]+'/klwebphp/data/';
@@ -490,7 +518,7 @@ function load_current_book_b(load_digest_file=false,do_write=true){
         blhref=new URL('../',blhref)['href']+'jsdata/';
     }
     
-    var today=file_date_parameter_b();
+    var today=(add_date?file_date_parameter_b():'');
     
     var file_list=[];
     var book_list_js=blhref+'booklist_current_data.js';
@@ -504,5 +532,5 @@ function load_current_book_b(load_digest_file=false,do_write=true){
     if (do_write){
         write_js_css_b(file_list);
     }
-    return [book_list_js+today,(digest_js==''?'':digest_js+today)];
+    return [book_list_js+today,(digest_js==''?'':digest_js+today),file_list];
 } 
