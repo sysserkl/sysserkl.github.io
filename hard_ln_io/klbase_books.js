@@ -420,17 +420,17 @@ function filename_2_bookname_b(filename){
 function reader_lastbook_id_get_b(){
     var last_book=local_storage_get_b('reader_lastbook',-1,true);
     var marked_set=new Set();
-    for (let item of last_book){
-        var list_t=item.split('&');
-        if (list_t.length>=2){
-            marked_set.add(list_t[1]);
+    for (let blxl=0;blxl<last_book.length;blxl++){
+        last_book[blxl]=last_book[blxl].split('&');
+        if (last_book[blxl].length>=2){
+            marked_set.add(last_book[blxl][1]);
         }
     }
-    return marked_set;
+    return [marked_set,last_book];
 }
 
 function booklist_source_config_b(is_digest=false){
-    var marked_set=reader_lastbook_id_get_b();
+    var marked_set=reader_lastbook_id_get_b()[0];
     
     var temp_digest_set=new Set();
     var list_t=local_storage_get_b('digest_temp_txtlistsearch',-1,true);

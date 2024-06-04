@@ -15,12 +15,6 @@ function insert_new_lines_klr_b(csinterval,csinsert_str,csid='textarea_rows_cont
     otextarea.value=bljg.join('\n');
 }
 
-function reverse_klr_b(csid='textarea_rows_content'){
-	var otextarea = document.getElementById(csid);
-	var list_t = otextarea.value.split('\n').reverse();
-	otextarea.value = list_t.join('\n');
-}
-
 function line_count_klr_b(content_id='',status_id=''){
     var ocontent = document.getElementById(content_id);
     var ostatus=document.getElementById(status_id);
@@ -55,6 +49,15 @@ function sort_rows_klr_b(csid='textarea_rows_content',cstype=''){
         case 'length':
             list_t.sort(function (a,b){return a.length>b.length ? 1 : -1;});        
             break;
+        case 'reverse':
+            list_t.reverse();
+            break;
+        case 'cn':
+            list_t.sort(function (a,b){return zh_sort_b(a,b,false);});
+            break;
+        case 'unique':
+            list_t=array_unique_b(list_t);
+            break;
     }
 
 	var result_t=[];
@@ -78,20 +81,6 @@ function blank_rows_remove_klr_b(csid='textarea_rows_content'){
 	var otextarea = document.getElementById(csid);
 	var blstr = otextarea.value;
 	otextarea.value = basen_klr_b(blstr);
-}
-
-function chinese_sort_klr_b(csdesc=false,csid='textarea_rows_content'){
-	var otextarea = document.getElementById(csid);
-	var list_t = otextarea.value.trimRight().split('\n');
-    list_t.sort(function (a,b){return zh_sort_b(a,b,csdesc);});
-	otextarea.value = list_t.join('\n');
-}
-
-function lines_unique_klr_b(csid='textarea_rows_content'){
-	var otextarea = document.getElementById(csid);
-	var list_t = otextarea.value.split('\n');
-    list_t=array_unique_b(list_t);
-	otextarea.value = list_t.join('\n');
 }
 
 function characters_unique_klr_b(csid='textarea_rows_content'){
@@ -1179,27 +1168,58 @@ function slice_lines_temp_txt_klr_b(textarea_id){
     slice_lines_klr_b(textarea_id,['["about:blank","undefined"],']);
 }
 
+function sort_type_get_klr_b(return_group=true){
+    var list_t1=[
+    ['',[['','升序'],['desc','倒序']]],
+    ['数字：',[['asc_num','升序'],['desc_num','倒序']]],
+    ];
+    
+    var list_t2=[['reverse','倒转'],['cn','汉字升序'],['unique','unique'],['length','长度排序'],['random','随机排序']];
+    if (return_group){
+        return [list_t1,list_t2];
+    } else {
+        var result_t=[];
+        for (let arow of list_t1){
+            if (['：',':'].includes(arow[0].slice(-1,))){
+                arow[0]=arow[0].slice(0,-1);
+            }
+            if (arow[0].slice(-2,)==': '){
+                arow[0]=arow[0].slice(0,-2);
+            }            
+            for (let acol of arow[1]){
+                acol[1]=arow[0]+acol[1];
+                result_t.push(acol);
+            }
+        }
+        return result_t.concat(list_t2);
+    }
+}
+
 function sort_menu_klr_b(textarea_id,str_t){
     var klmenu_sort=[];
-    
-    var group_list=[
-    ['升序','sort_rows_klr_b(\''+textarea_id+'\',\'\');',true],
-    ['倒序','sort_rows_klr_b(\''+textarea_id+'\',\'desc\');',true],
-    ];    
-    klmenu_sort.push(menu_container_b(str_t,group_list,''));    //依赖 klbase_css.js - 保留注释
 
-    var group_list=[
-    ['升序','sort_rows_klr_b(\''+textarea_id+'\',\'asc_num\');',true],
-    ['倒序','sort_rows_klr_b(\''+textarea_id+'\',\'desc_num\');',true],
-    ];    
-    klmenu_sort.push(menu_container_b(str_t,group_list,'数字：'));
+    var list_t1,list_t2;
+    [list_t1,list_t2]=sort_type_get_klr_b();
     
-    klmenu_sort=klmenu_sort.concat([
-    '<span class="span_menu" onclick="'+str_t+'reverse_klr_b(\''+textarea_id+'\');">倒转</span>',
-    '<span class="span_menu" onclick="'+str_t+'chinese_sort_klr_b(false,\''+textarea_id+'\');">汉字升序</span>',
-    '<span class="span_menu" onclick="'+str_t+'lines_unique_klr_b(\''+textarea_id+'\');">unique</span>',
-    '<span class="span_menu" onclick="'+str_t+'sort_rows_klr_b(\''+textarea_id+'\',\'length\');">长度排序</span>',    
-    '<span class="span_menu" onclick="'+str_t+'sort_rows_klr_b(\''+textarea_id+'\',\'random\');">随机排序</span>',
-    ]);    
+    for (let item of list_t1){
+        var group_list=[];
+        for (let acol of item[1]){
+            group_list.push([acol[1],'sort_rows_klr_b(\''+textarea_id+'\',\''+acol[0]+'\');',true]);
+        }
+        klmenu_sort.push(menu_container_b(str_t,group_list,item[0]));    //依赖 klbase_css.js - 保留注释        
+    }
+    
+    for (let item of list_t2){
+        klmenu_sort.push('<span class="span_menu" onclick="'+str_t+'sort_rows_klr_b(\''+textarea_id+'\',\''+item[0]+'\');">'+item[1]+'</span>');
+    }
     return klmenu_sort;
+}
+
+function sort_select_klr_b(){
+    var list_t=sort_type_get_klr_b(false);
+    var result_t=[];
+    for (let item of list_t){
+        result_t.push('<option value="'+item[0]+'">'+item[1]+'</option>');
+    }
+    return result_t;
 }

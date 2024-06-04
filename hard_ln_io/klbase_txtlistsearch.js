@@ -3332,6 +3332,8 @@ function digest_lines_kltxt_b(recent_lines=-1){
         }
     }
     
+    digest_in_bookmark_kltxt_b(Math.max(...scanned_number));
+    
     list_t.sort(function (a,b){return a[1]>b[1] ? 1 : -1;});
 
     lines_2_html_kltxt_b(list_t);
@@ -3339,6 +3341,20 @@ function digest_lines_kltxt_b(recent_lines=-1){
     digest_show_kltxt_b(false,recent_lines);
 
     console.log('digest_lines_kltxt_b() 费时：'+(performance.now() - t0) + ' milliseconds');
+}
+
+function digest_in_bookmark_kltxt_b(pageno){
+    var bookmark=reader_lastbook_id_get_b()[1];
+    for (let item of bookmark){
+        if (item.length<3){continue;}
+        if (item[1]==csbookname_global){
+            if (pageno+1>parseInt(item[2])){
+                alert('摘要位置 '+(pageno+1)+' 超过书签位置 '+parseInt(item[2]));
+            }
+            console.log(pageno+1,parseInt(item[2]));
+            break;
+        }
+    }
 }
 
 function lines_2_html_kltxt_b(cslist){
