@@ -1054,31 +1054,82 @@ function th_zjedu(divid,cslist,cstr_string,cstitle=''){
 }
 
 function sortdata_zjedu(cstype){
-	switch (cstype){
-		case 1:
-		case 3:
-			if (csorder_zjc_global==-1){
-				jgarray_zjc_global.sort(function(a,b){return zh_sort_b(a,b,false,cstype);});
-			} else {
-				jgarray_zjc_global.sort(function(a,b){return zh_sort_b(a,b,true,cstype);});
-			}
-			break;
-		case 4:
-		case 5:
-		case 6:
-			if (csorder_zjc_global==-1){
-				jgarray_zjc_global.sort(function(a,b){return a[cstype]>b[cstype] ? 1 : -1;});
-			} else {
-				jgarray_zjc_global.sort(function(a,b){return b[cstype]>a[cstype] ? 1 : -1;});
-			}
-			break;
-	}
-	var bljg='';
-	for (let blxl=0;blxl<jgarray_zjc_global.length;blxl++){
-        var item=jgarray_zjc_global[blxl];
-		bljg=bljg+'<tr><td align=right nowrap>'+(parseInt(blxl)+1)+'</td><td>'+item[1]+'</td><td>'+item[3]+'</td><td nowrap align=right>'+item[4]+'</td><td nowrap align=right>'+item[5]+'</td><td nowrap align=right>'+item[6]+'</td></tr>';
-	}
-
+    function sub_sortdata_zjedu_tr(csxl,item){
+        return ['<tr><td align=right nowrap>'+(parseInt(csxl)+1)+'</td><td>'+item[1]+'</td><td>'+item[3]+'</td><td nowrap align=right>'+item[4]+'</td><td nowrap align=right>'+item[5]+'</td><td nowrap align=right>'+item[6]+'</td></tr>',item[cstype]];
+    }
+    
+    function sub_sortdata_zjedu_sort(csarr,col_no){
+        switch (col_no){
+            case 1:
+            case 3:
+                if (csorder_zjc_global==-1){
+                    csarr.sort(function(a,b){return zh_sort_b(a,b,false,col_no);});
+                } else {
+                    csarr.sort(function(a,b){return zh_sort_b(a,b,true,col_no);});
+                }
+                break;
+            case 4:
+            case 5:
+            case 6:
+                if (csorder_zjc_global==-1){
+                    csarr.sort(function(a,b){return a[col_no]>b[col_no] ? 1 : -1;});
+                } else {
+                    csarr.sort(function(a,b){return b[col_no]>a[col_no] ? 1 : -1;});
+                }
+                break;
+        }
+        return csarr;
+    }
+    
+    jgarray_zjc_global=sub_sortdata_zjedu_sort(jgarray_zjc_global,cstype);
+    
+    var show_type=document.getElementById('select_table_rows_show_type_zjedu').value;
+	var bljg=[];
+    switch (show_type){
+        case '1':
+        case '1_1':
+            jgarray_zjc_global=sub_sortdata_zjedu_sort(jgarray_zjc_global,1);
+            var csarr=[];
+            var school_name='';
+            var used_row_no=new Set();
+            var last_row_no=-1;
+            for (let blno=0;blno<jgarray_zjc_global.length;blno++){
+                var item=jgarray_zjc_global[blno];
+                if (item[0]==school_name){
+                    if (show_type=='1_1'){
+                        last_row_no=blno;
+                    }
+                    continue;
+                } else {
+                    if (last_row_no!==-1 && !used_row_no.has(last_row_no)){
+                        csarr.push(jgarray_zjc_global[last_row_no]);
+                        used_row_no.add(last_row_no);
+                        last_row_no=-1;
+                    }
+                }
+                csarr.push(item);
+                used_row_no.add(blno);
+                school_name=item[0];
+            }
+            
+            if (last_row_no!==-1 && !used_row_no.has(last_row_no)){
+                csarr.push(jgarray_zjc_global[last_row_no]);
+            }
+                                
+            csarr=sub_sortdata_zjedu_sort(csarr,cstype);
+            
+            for (let blxl=0;blxl<csarr.length;blxl++){
+                bljg.push(sub_sortdata_zjedu_tr(blxl,csarr[blxl])[0]);
+            }
+            break;
+        default:
+            for (let blxl=0;blxl<jgarray_zjc_global.length;blxl++){
+                var item=jgarray_zjc_global[blxl];
+                bljg.push(sub_sortdata_zjedu_tr(blxl,item)[0]);
+            }
+            break;
+    }
+    
 	var blhtml = document.getElementById('divhtml');
     var blths='<tr><th nowrap>序号</th>';
     blths=blths+'<th style="cursor:pointer;" onclick="csorder_zjc_global=csorder_zjc_global*-1;sortdata_zjedu(1);" nowrap>学校名称</th>';
@@ -1086,7 +1137,7 @@ function sortdata_zjedu(cstype){
     blths=blths+'<th style="cursor:pointer;" onclick="csorder_zjc_global=csorder_zjc_global*-1;sortdata_zjedu(4);" nowrap>计划数</th>';
     blths=blths+'<th style="cursor:pointer;" onclick="csorder_zjc_global=csorder_zjc_global*-1;sortdata_zjedu(5);" nowrap nowrap>分数线</th>';
     blths=blths+'<th style="cursor:pointer;" onclick="csorder_zjc_global=csorder_zjc_global*-1;sortdata_zjedu(6);" nowrap>位次</th></tr>';
-    blhtml.innerHTML='<table class="table_common" id="table_main_zjc">'+blths+bljg+'</table>';
+    blhtml.innerHTML='<table class="table_common" id="table_main_zjc">'+blths+bljg.join('\n')+'</table>';
 }
 
 function jump_to_tr_zjedu(jump_to_end=false){
@@ -1220,10 +1271,15 @@ function menu_zjedu(){
     var klmenu_config=root_font_size_menu_b(str_t);
     klmenu_config=klmenu_config.concat([
     '<span id="span_reg_zjedu" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ reg</span>',       
+    '<span class="span_menu"><select id="select_table_rows_show_type_zjedu"><option value=""></option><option value="1">相同学校记录排序后仅显示第1条</option><option value="1_1">相同学校记录排序后仅显示首尾2条</option></select></span>',
     '<span class="span_menu" onclick="'+str_t+'search_demo_zjedu();">语法示例</span>',
-    '<span class="span_menu" onclick="'+str_t+'jump_to_tr_zjedu(true);">跳转到表格末尾</span>',    
-    '<span class="span_menu" onclick="'+str_t+'jump_to_tr_zjedu();">跳转到指定行号</span>',        
     ]);
+    
+    var group_list=[
+    ['指定行号','jump_to_tr_zjedu();',true],
+    ['表格末尾','jump_to_tr_zjedu(true);',true],
+    ];    
+    klmenu_config.push(menu_container_b(str_t,group_list,'跳转到：'));    
 
     document.getElementById('span_h2').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_year,'💯','6rem','1rem','1rem','60rem')+klmenu_b(klmenu1,'','24rem','1rem','1rem','60rem')+klmenu_b(klmenu_statistics,'🧮','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','15rem','1rem','1rem','60rem'),'','0rem')+' ');
     klmenu_check_b('span_reg_zjedu',true);        
