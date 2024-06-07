@@ -171,9 +171,13 @@ function td_offline_file_browser(csid,opposite=false){
     document.getElementById(current_td_global).style.border='0.2rem solid '+scheme_global['skyblue'];
 }
 
-function search_offline_file_browser(csstr='',isreg=-1,csmax=10000,csunique=-1,showhtml=true){
+function search_offline_file_browser(csstr='',isreg=-1,csmax=-1,csunique=-1,showhtml=true){
     var t0 = performance.now();
-
+    
+    if (csmax==-1){
+        csmax=parseInt(document.getElementById('input_return_max_rows_ofb').value) || 10000;
+    }
+    
     var oinput=document.getElementById('input_search');
     if (oinput && csstr==''){
         csstr=document.getElementById('input_search').value;
@@ -342,10 +346,13 @@ function parent_offline_file_browser(csdisk,csdir=''){
     return str_t;
 }
 
-function dir_offline_file_browser(csdisk='ALL',csdir='',isreg=-1,use_current=false,csmax=100000){
+function dir_offline_file_browser(csdisk='ALL',csdir='',isreg=-1,use_current=false){
     if (csdisk=='' && csdir==''){
         return dir_html_offline_file_browser([],current_td_global,'','');
     }
+    
+    var csmax=parseInt(document.getElementById('input_return_max_rows_ofb').value) || 100000;
+    
     if (csdisk=='ALL' && csdir==''){
         csdir=document.getElementById('input_search').value;
         keys_offline_file_browser(csdir);   //仅当从 input_search 读取时添加到最近搜索 - 保留注释
@@ -1026,14 +1033,18 @@ function review_plan_bookmark_offline_file_browser(){
 
 function menu_offline_file_browser(){
     var str_t=klmenu_hide_b('#top');
+    var blparent=menu_parent_node_b(str_t);
     
-    var col_name=['Disk','Path','Filename','File Size','Modified Date','FMultimedia Length','Tag'];
+    var col_name=['Disk','Path','Filename','File Size','Modified Date','FMultimedia Length','Tag','TF Name'];
     for (let blxl=0;blxl<col_name.length;blxl++){
         col_name[blxl]='<option value='+blxl+'>'+col_name[blxl]+'</option>';
     }
     
      var klmenu1=[
-    '<span class="span_menu"><select id="select_raw_sort_id_ofb" style="height:2rem;">'+col_name.join('\n')+'</select> <span class="aclick" onclick="sort_offline_file_browser(document.getElementById(\'select_raw_sort_id_ofb\').value,false);'+menu_parent_node_b(str_t)+'">排序</span></span>',    
+    '<span class="span_menu"><select id="select_raw_sort_id_ofb" style="height:2rem;">'+col_name.join('\n')+'</select> <span class="aclick" onclick="sort_offline_file_browser(document.getElementById(\'select_raw_sort_id_ofb\').value,false);'+blparent+'">排序</span></span>',    
+    
+    '<span class="span_menu" style="font-size:0.85rem; line-height:2rem;">分组2：<select id="select_raw_sub_group1_id_ofb">'+col_name.join('\n')+'</select><br />分组3：<select id="select_raw_sub_group2_id_ofb">'+col_name.join('\n')+'</select><br />次数：<input type="number" id="input_group_count_min_ofb" min=1 value=2 / > - <input type="number" id="input_group_count_max_ofb" min=1 value=2 / ><br /><span class="oblong_box" onclick="group_count_offline_file_browser();'+blparent+'">当前条件分组统计指定次数列</span></span>',    
+
     '<span class="span_menu" onclick="'+str_t+'review_plan_list_offline_file_browser();">完整影视温习列表</span>',    
     '<span class="span_menu" onclick="'+str_t+'review_plan_bookmark_offline_file_browser();">设定完整影视温习列表当前书签</span>',        
     '<span class="span_menu" onclick="'+str_t+'batch_search_form_offline_file_browser();">批量文件名匹配搜索</span>',    
@@ -1055,9 +1066,11 @@ function menu_offline_file_browser(){
     ['⚪ SSD/TF','klmenu_check_b(this.id,true);',true,'span_ssd_tf_show_ofb'],
     ];    
     klmenu_config.push(menu_container_b(str_t,group_list,''));    
+    
+    klmenu_config.push('<span class="span_menu">最大结果数：<input type="number" id="input_return_max_rows_ofb" min=1 value=10000 / ></span>');
 
     var multimedia='mkv|rmvb|mp4|rm|avi|flv';
-    var jscode='<span class="span_menu" onclick="'+str_t+'sort_offline_file_browser(-1);search_offline_file_browser';
+    var jscode='<span class="span_menu" onclick="'+str_t+'sort_offline_file_browser(-1); search_offline_file_browser';
     var klmenu2=[
     jscode+'(\'.*\',true,200);">随机记录</a>',
     jscode+'(\'\\.('+multimedia+')$\',true,200);">随机影视</a>',
@@ -1089,6 +1102,48 @@ function menu_offline_file_browser(){
     klmenu_check_b('span_reg_ofb',true);       
     klmenu_check_b('span_fav_ofb',true);            
     klmenu_check_b('span_ssd_tf_show_ofb',true);            
+    
+    var input_list=[
+    ['input_group_count_min_ofb',3],
+    ['input_group_count_max_ofb',3],
+    ['input_return_max_rows_ofb',6],
+    ];
+    input_size_b(input_list,'id');
+}
+
+function group_count_offline_file_browser(){
+    var group1=parseInt(document.getElementById('select_raw_sort_id_ofb').value);
+    var group2=parseInt(document.getElementById('select_raw_sub_group1_id_ofb').value);    
+    var group3=parseInt(document.getElementById('select_raw_sub_group2_id_ofb').value);
+    
+    var result_t={};
+    for (let arow of offline_file_data_current_global){
+        if (group2==group1){
+            var blkey='g_'+arow[group1];
+        } else {
+            var blkey='g_'+arow[group1]+'_'+arow[group2];        
+        }
+        
+        if (group3!==group1 && group3!==group2){
+            blkey=blkey+'_'+arow[group3];
+        }
+        
+        if (result_t[blkey]==undefined){
+            result_t[blkey]=[];
+        }
+        result_t[blkey].push(arow);
+    }    
+    
+    var blmin=parseInt(document.getElementById('input_group_count_min_ofb').value) || 1;
+    var blmax=parseInt(document.getElementById('input_group_count_max_ofb').value) || blmin;
+    
+    offline_file_data_current_global=[];
+    for (let key in result_t){
+        if (result_t[key].length<blmin){continue;}
+        if (!isNaN(blmax) && result_t[key].length>blmax){continue;}
+        offline_file_data_current_global=offline_file_data_current_global.concat(result_t[key]);
+    }
+    current_2_html_offline_file_browser();
 }
 
 function import_bigfile_offline_file_browser(){
@@ -1328,6 +1383,8 @@ function init_offline_file_browser(){
     input_with_x_b('input_search',15);
 
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.6rem'));
+    menu_offline_file_browser();
+
     var blerror=false;
     for (let item of offline_file_data_raw_global){
         if (item[0]=='error'){
@@ -1348,7 +1405,6 @@ function init_offline_file_browser(){
             dir_offline_file_browser(offline_file_category_global[0][0]);
         }
     }
-    menu_offline_file_browser();
     keys_offline_file_browser();
     character_2_icon_b('💾');
 }
