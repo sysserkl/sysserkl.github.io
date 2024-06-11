@@ -198,7 +198,7 @@ function menu_enwords_book(){
     
     var klmenu2=[    
     '<a href="?book=1&continue" onclick="'+str_t+'">批量统计生词</a>',
-    '<span class="span_menu" onclick="'+str_t+'refresh_book_new_enwords_book(10);">重新批量统计变动最少的10本书籍</span>',
+    '<span class="span_menu" onclick="'+str_t+'refresh_book_new_enwords_book(10);">按书名顺序重新批量统计变动最少的10本书籍</span>',
     '<span class="span_menu" onclick="'+str_t+'news_words_statistics_enwords_book();">显示统计结果</span>',
     '<span class="span_menu" onclick="'+str_t+'compare_form_statistics_enwords_book();">比较统计数据</span>',
     '<span class="span_menu" onclick="'+str_t+'exclude_enwords_book();">电子书中未包含的旧单词</span>',    
@@ -221,7 +221,7 @@ function menu_enwords_book(){
     '<span class="span_menu" onclick="'+str_t+'character2space_enwords_book(\'-\',\'连字符\');">替换连字符为空格</span> ',  
     ];
     
-    var menus=klmenu_b(klmenu1,'','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_new,'🔤','32rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'🧮','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','60rem');
+    var menus=klmenu_b(klmenu1,'','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_new,'🔤','32rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'🧮','23rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','60rem');
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(menus,'','0rem')+' ');
 }
 
@@ -609,11 +609,12 @@ function compare_statistics_enwords_book(value_old=false,value_new=false,csmax=-
             }
         }
     }
+    
     if (csmax>0){
-        enbook_compare_result_list_global.sort(function (a,b){return a[4]<b[4];});
+        enbook_compare_result_list_global.sort(function (a,b){return a[1].toLowerCase()<b[1].toLowerCase()?-1:1;});
+        enbook_compare_result_list_global.sort(function (a,b){return a[4]<b[4]?1:-1;});
         enbook_compare_result_list_global=enbook_compare_result_list_global.slice(0,csmax);
     }
-    
     
     //No.	书名	Data1	Data2	Δ	Data1(10%)	Data2(10%)	Δ - 保留注释
     //enbook_compare_result_list_global 元素形如：[ "ye_zhi_shi_xuan_ying_hdz_241502", "叶芝诗选(英汉对照)", 1129, 1126, -3, 153, 153, 0 ] - 保留注释
