@@ -2259,3 +2259,41 @@ function edit_buttons_b(js_fn='',more_buttons=false,olul=false,dom_type='button'
     }
     return result_t;
 }
+
+function iframe_show_b(ospan,csno){
+    var span_class_name='span_selected_iframe_kl_b';
+    var oold_span=document.querySelector('span.'+span_class_name);
+    if (oold_span){
+        oold_span.style.color='';
+        oold_span.style.fontWeight='';
+        oold_span.classList.remove(span_class_name);        
+    }
+
+    ospan.style.color=scheme_global['a-hover'];
+    ospan.style.fontWeight='bold';
+    ospan.classList.add(span_class_name);
+    
+    var iframe_class_name='iframe_selected_iframe_kl_b';
+    var oold_iframe=document.querySelector('iframe.'+iframe_class_name);
+    if (oold_iframe){
+        oold_iframe.style.display='none';
+        oold_iframe.classList.remove(iframe_class_name);        
+    }
+
+    var oiframe=document.getElementById('iframe_site_kl_b_'+csno);
+    oiframe.classList.add(iframe_class_name);    
+    oiframe.style.display='';
+}
+
+function iframe_generate_b(csxl,cstitle,cssrc){
+    var buttons_t='<span class="aclick span_one_iframe_kl_b" onclick="iframe_show_b(this,'+csxl+');">'+cstitle+'</span>';
+    var result_t='<iframe id="iframe_site_kl_b_'+csxl+'" class="iframe_site_kl_b" style="width:95%;height:40rem;display:none;" src="'+cssrc+'"></iframe>';
+    return [buttons_t,result_t];
+}
+
+function iframe_init_b(){
+    var ospan=document.querySelector('span.span_one_iframe_kl_b');
+    if (ospan){
+        ospan.click();
+    }
+}

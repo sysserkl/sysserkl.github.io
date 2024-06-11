@@ -42,10 +42,10 @@ div.div_leaflet{border:0.1rem dotted grey; border-radius:1rem; padding:0.2rem 0.
 <span class="aclick span_leaflet" id="span_leaflet_group" onclick="leaflet_klr2('en')">EN</span>
 
 <span class="aclick" onclick="add_to_html_klr_b();">显示为 HTML</span>
-<span class="aclick" onclick="line_count_klr_b('textarea_rows_content','textarea_status');">行数</span>
+<span class="aclick" onclick="add_to_html_klr_b('textarea_rows_content','div#divhtml',true)">执行 JavaScript</span>
 <span class="aclick" onclick="blank_rows_add_klr_b();">add blank rows</span>
 <span class="aclick" onclick="strquick_klr_b('space2underline');">空格转换为下划线</span>
-<span class="aclick" onclick="strquick_klr_b('count');">字数统计</span>
+<span class="aclick" onclick="strquick_klr_b('count');">字数、行数统计</span>
 常用操作：<select id="oquick" style="width:150px;"></select>
 <span class="aclick" onclick="strquick_klr_b(document.getElementById('oquick').value);">执行</span>
 <span class="aclick" onclick="temp_save_klr2('write','textarea_rows_content');">暂存</span>

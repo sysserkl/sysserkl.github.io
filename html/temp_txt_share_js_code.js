@@ -13,14 +13,20 @@ function form_generate_js_tts(){
 function menu_more_js_tts(){
     var str_t=klmenu_hide_b('');
     var klmenu1=[
-    '<span class="span_menu" onclick="'+str_t+'sync_pages_batch_open_js_tts();">批量打开需同步页面</span>', 
     '<span class="span_menu" onclick="'+str_t+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>',    
     load_sentence_menu_b(str_t), 
     ];
-    return klmenu_b(klmenu1,'🌑','12rem','1rem','1rem','30rem');
+    
+    var group_list=[
+    ['批量打开需同步页面','sync_pages_batch_open_js_tts();',true],
+    ['iframe','sync_pages_batch_open_js_tts(true);',true],
+    ];    
+    klmenu1.push(menu_container_b(str_t,group_list,''));
+    
+    return klmenu_b(klmenu1,'🌑','17rem','1rem','1rem','30rem');
 }
 
-function sync_pages_batch_open_js_tts(){
+function sync_pages_batch_open_js_tts(is_iframe=false){
     function sub_sync_pages_batch_open_js_tts_one_page(){
         if (blxl>=bllen){return;}
         window.open(sele_path+'/html/'+list_t[blxl]);
@@ -36,6 +42,23 @@ function sync_pages_batch_open_js_tts(){
     'readlater.htm',
     'notepad.htm',
     ];
+    
+    if (is_iframe){
+        var buttons_t=[];
+        var result_t=[];
+        var button_str,iframe_str;
+        for (let blxl=0;blxl<list_t.length;blxl++){
+            [button_str,iframe_str]=iframe_generate_b(blxl,list_t[blxl],list_t[blxl]);
+            buttons_t.push(button_str);
+            result_t.push(iframe_str);        
+        }
+        
+        var odiv=document.getElementById('div_status');
+        odiv.innerHTML='<p id="p_buttons_kls">'+buttons_t.join(' ')+'</p>'+result_t.join('\n');
+        odiv.scrollIntoView();        
+        iframe_init_b();
+        return;
+    }
     
     var blxl=0;
     var bllen=list_t.length;

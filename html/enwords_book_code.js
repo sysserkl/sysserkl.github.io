@@ -5,7 +5,6 @@ function book_load_enwords_book(csno){
         csbookno2_global=Math.min(csbooklist_sub_global.length-1,parseInt(list_t[1])-1);
     }
     title_set_enwords_book();
-    //show_enwords_book();
     import_book_js_b(true);
 }
 
@@ -611,11 +610,10 @@ function compare_statistics_enwords_book(value_old=false,value_new=false,csmax=-
     }
     
     if (csmax>0){
-        enbook_compare_result_list_global.sort(function (a,b){return a[1].toLowerCase()<b[1].toLowerCase()?-1:1;});
+        enbook_compare_result_list_global.sort(function (a,b){return zh_sort_b(a,b,false,1);});
         enbook_compare_result_list_global.sort(function (a,b){return a[4]<b[4]?1:-1;});
         enbook_compare_result_list_global=enbook_compare_result_list_global.slice(0,csmax);
     }
-    
     //No.	书名	Data1	Data2	Δ	Data1(10%)	Data2(10%)	Δ - 保留注释
     //enbook_compare_result_list_global 元素形如：[ "ye_zhi_shi_xuan_ying_hdz_241502", "叶芝诗选(英汉对照)", 1129, 1126, -3, 153, 153, 0 ] - 保留注释
     

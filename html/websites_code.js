@@ -37,6 +37,7 @@ function menu_klwebsites(change_no=false){
     '<span class="span_menu" onclick="'+str_t+'new_filter_form_klwebsites();">新网址过滤</span>',   
     '<span class="span_menu" onclick="'+str_t+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>',    
     '<span class="span_menu" onclick="'+str_t+'window_open_klwebsites();">New Window</span>',
+    '<span class="span_menu">batch eword search max windows: <input type="number" id="input_key_batch_search_max_klwebsites" value=5 /></span>',
     ];
 
     var list_t=[
@@ -73,9 +74,12 @@ function menu_klwebsites(change_no=false){
     ];    
     //---
     
-    document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🕸','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_tag,'#','10rem','1rem','1rem','60rem')+klmenu_b(klmenu_search,'𓅸','10rem','1rem','1rem','60rem')+fav_www_menu_websites_b('',false)+klmenu_b(klmenu_config,'⚙','13rem','1rem','1rem','30rem'),'','0rem','','div_websites_menu')+' ');
+    document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🕸','24rem','1rem','1rem','60rem')+klmenu_b(klmenu_tag,'#','10rem','1rem','1rem','60rem')+klmenu_b(klmenu_search,'𓅸','10rem','1rem','1rem','60rem')+fav_www_menu_websites_b('',false)+klmenu_b(klmenu_config,'⚙','13rem','1rem','1rem','30rem'),'','0rem','','div_websites_menu')+' ');
     klmenu_check_b('span_veil_web',true);        
     klmenu_check_b('span_category_with_p_web',true);        
+    
+    var input_list=[['input_key_batch_search_max_klwebsites',3]];
+    input_size_b(input_list,'id');
 }
 
 function import_pwa_data_klwebsites(){
@@ -109,7 +113,7 @@ function sites_reload_klwebsites(is_pwa=false,do_search=true){
     }
 }
 
-function key_batch_search_by_engine_klwebsites(is_enword=true,csengine='bing',max_result=5){
+function key_batch_search_by_engine_klwebsites(is_enword=true,csengine='bing'){
     function sub_key_batch_search_by_engine_klwebsites_done(){
         var used_seconds=(new Date()-start_time)/1000;
         console.log(new Date().toLocaleString(), '完成，费时：',used_seconds.toFixed(2)+'秒');        
@@ -154,6 +158,7 @@ function key_batch_search_by_engine_klwebsites(is_enword=true,csengine='bing',ma
         setTimeout(sub_key_batch_search_by_engine_klwebsites_one_site,wait_seconds*1000);
     }
     //-----------------------
+    var max_result=Math.min(20,Math.max(1,parseInt(document.getElementById('input_key_batch_search_max_klwebsites').value.trim()) || 5));
     var site_list=false;
     if (is_enword){
         site_list=array_klwebsites('^1,0,0$',999);

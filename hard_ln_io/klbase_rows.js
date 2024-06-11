@@ -15,12 +15,6 @@ function insert_new_lines_klr_b(csinterval,csinsert_str,csid='textarea_rows_cont
     otextarea.value=bljg.join('\n');
 }
 
-function line_count_klr_b(content_id='',status_id=''){
-    var ocontent = document.getElementById(content_id);
-    var ostatus=document.getElementById(status_id);
-    ostatus.value=ocontent.value.trim().split('\n').length;
-}
-
 function sort_rows_klr_b(csid='textarea_rows_content',cstype=''){
 	var otextarea = document.getElementById(csid);
     var list_t = otextarea.value.split('\n');
@@ -189,11 +183,20 @@ function add_ahref_klr_b(csid,encode=false){
 	add_to_html_klr_b();
 }
 
-function add_to_html_klr_b(csid='textarea_rows_content',querystr='div#divhtml'){
+function add_to_html_klr_b(csid='textarea_rows_content',querystr='div#divhtml',is_js=false){
 	var otextarea = document.getElementById(csid);
-	var odom = document.querySelector(querystr);
-	if (odom){
-        odom.innerHTML=otextarea.value;
+    if (is_js){
+        try {
+            eval(otextarea.value);
+        } catch (e){
+            console.log(e);
+            alert(e);
+        }
+    } else {
+        var odom = document.querySelector(querystr);
+        if (odom){
+            odom.innerHTML=otextarea.value;
+        }
     }
 }
 
@@ -668,7 +671,7 @@ function strquick_klr_b(cstype='',csid='textarea_rows_content',status_id='textar
             if (ostatus){
                 var blstr=document.getElementById(csid).value;
                 var blstr2=blstr.replace(/\s/g,'');
-                ostatus.value='字数：' + blstr.length+', 去除空格后字数：'+blstr2.length+'\n'+ostatus.value;
+                ostatus.value='字数：' + blstr.length+', 去除空格后字数：'+blstr2.length+'\n行数：'+blstr.split('\n').length+'\n'+ostatus.value;
             }
             break;
         case 'eword':

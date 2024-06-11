@@ -637,7 +637,8 @@ function sort_by_date_b(a,b,csdesc=false,arrayno=-1,arrayno2=-1,array2desc=false
     }
 }
 
-function zh_sort_b(a,b,csdesc=false,arrayno=-1){
+function zh_sort_b(a, b, csdesc=false, arrayno=-1){
+    //英文在前，中文在后 - 保留注释
     if (arrayno<0){
         if (a.toString().substring(0,1).match(/[^\x00-\xff]/g)==null || b.toString().substring(0,1).match(/[^\x00-\xff]/g)==null){
             if (csdesc){
@@ -647,9 +648,9 @@ function zh_sort_b(a,b,csdesc=false,arrayno=-1){
             }
         } else {
             if (csdesc){
-                return b.localeCompare(a,'zh-CN');
+                return b.localeCompare(a,'zh-CN', { sensitivity: 'accent' });   //{ sensitivity: 'accent' } 参数确保了比较时考虑到重音等细节，以实现更准确的排序 - 保留注释
             } else {
-                return a.localeCompare(b,'zh-CN');
+                return a.localeCompare(b,'zh-CN', { sensitivity: 'accent' });
             }
         }
     } else {
@@ -661,9 +662,9 @@ function zh_sort_b(a,b,csdesc=false,arrayno=-1){
             }        
         } else {
             if (csdesc){
-                return b[arrayno].localeCompare(a[arrayno],'zh-CN');
+                return b[arrayno].localeCompare(a[arrayno],'zh-CN', { sensitivity: 'accent' });
             } else {
-                return a[arrayno].localeCompare(b[arrayno],'zh-CN');
+                return a[arrayno].localeCompare(b[arrayno],'zh-CN', { sensitivity: 'accent' });
             }
         }
     }
