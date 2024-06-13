@@ -37,30 +37,53 @@ function first_source_set_bigfile(do_change=true){
 }
 
 function upload_a_bigfile(){
-    var ofile=document.getElementById('input_upload_bigfile').files[0];
-    var error='';
-    if (!ofile){
-        error='未发现文件';
+    function upload_a_bigfile_check(one_file){
+        var error='';
+        if (!one_file){
+            error='未发现文件';
+        }
+        if (one_file.size>20*1024*1024){
+            error='文件太大：'+one_file.name+' '+one_file.size;  
+        }
+        if (error!==''){
+            alert(error);
+        }        
+        return error;    
     }
-    if (ofile.size>20*1024*1024){
-        error='文件太大：'+ofile.name+' '+ofile.size;  
+    
+    function upload_a_bigfile_one_step(){
+        if (blxl>=bllen){return;}
+        if (upload_a_bigfile_check(ofiles[blxl])!==''){return;}
+                
+        file_name_bigfile_global=ofiles[blxl].name;
+        var textFileReader = new FileReader();
+        //textFileReader.readAsDataURL(ofiles[blxl]); //此行保留 - 保留注释
+        textFileReader.readAsText(ofiles[blxl])    //此行保留 , 'UTF-8'); // 使用 readAsText 并指定编码为 UTF-8 - 保留注释
+        textFileReader.onload = function (){
+            file_content_bigfile_global = this.result;
+            if (blxl==bllen-1){
+                idb_bigfile_b('edit','','',read_fn_bigfile);
+            } else {
+                blxl=blxl+1;
+                idb_bigfile_b('edit','','',upload_a_bigfile_one_step);
+            }
+        }    
     }
-        
-    if (error!==''){
-        alert(error);
+    
+    var ofiles=document.getElementById('input_upload_bigfile').files;
+    var bllen=ofiles.length;
+    if (bllen>10){
+        alert('文件超过10个');
         return;
     }
 
-    if (!confirm('是否上传'+ofile.name+'？')){return;}
-    
-    file_name_bigfile_global=ofile.name;
-    var textFileReader = new FileReader();
-    //textFileReader.readAsDataURL(ofile); //此行保留 - 保留注释
-    textFileReader.readAsText(ofile)    //此行保留 , 'UTF-8'); // 使用 readAsText 并指定编码为 UTF-8 - 保留注释
-    textFileReader.onload = function (){
-        file_content_bigfile_global = this.result;
-        idb_bigfile_b('edit','','',read_fn_bigfile);
+    for (let one_file of ofiles){
+        if (upload_a_bigfile_check(one_file)!==''){return;}
     }
+
+    if (!confirm('是否上传 '+bllen+' 个文件？')){return;}
+    var blxl=0;
+    upload_a_bigfile_one_step();
 }
 
 function read_fn_bigfile(raw_data_bigfile){
