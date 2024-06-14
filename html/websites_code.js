@@ -152,6 +152,9 @@ function key_batch_search_by_engine_klwebsites(is_enword=true,csengine='bing'){
         
         var blurl=search_in_site_new_window_klwebsites(csengine,blkey,site_list[blno],false);
         window_list[window_id]=window.open(blurl);
+        if (otextarea){
+            otextarea.value=otextarea.value+(blno+1)+'. '+blurl+'\n';
+        }
         blno=blno+1;
         wait_times=0;
         document.title=blno+'/'+bllen+' - '+title_key+' - '+old_title;
@@ -177,7 +180,7 @@ function key_batch_search_by_engine_klwebsites(is_enword=true,csengine='bing'){
         blkey='"'+blkey+'"';
     }
     
-    site_list=Array.from(search_in_site_options_klwebsites(true,site_list));
+    site_list=Array.from(search_in_site_options_klwebsites(true,site_list,true));
     site_list.sort(randomsort_b);
     
     var bllen=site_list.length;
@@ -192,7 +195,11 @@ function key_batch_search_by_engine_klwebsites(is_enword=true,csengine='bing'){
     var wait_times=0;
     var wait_seconds=5;
     var old_title=document.title;
-    
+    var odiv=document.getElementById('div_sub_content');
+    if (odiv){
+        odiv.innerHTML='<textarea id="textarea_key_batch_klwebsites" style="height:30rem;"></textarea>';
+    }
+    var otextarea=document.getElementById('textarea_key_batch_klwebsites');
     sub_key_batch_search_by_engine_klwebsites_one_site();
 }
 
@@ -796,7 +803,7 @@ function qr_generate_klwebsites(do_veil=false){
     setTimeout(function(){qr_generate_klwebsites(do_veil);},10);
 }
 
-function search_in_site_options_klwebsites(only_set=false,site_list=false){
+function search_in_site_options_klwebsites(only_set=false,site_list=false,remove_sites_from_textarea=false){
     var set_t=new Set();
     
     if (Array.isArray(site_list)){
@@ -811,6 +818,19 @@ function search_in_site_options_klwebsites(only_set=false,site_list=false){
             if (!blhref){continue;}
             blhref=blhref.replace(/^.*\/\/([^\/]+)\/?.*$/g,'$1');
             set_t.add(blhref);
+        }
+    }
+    
+    if (remove_sites_from_textarea){
+        var otextarea=document.getElementById('textarea_key_batch_klwebsites');
+        if (otextarea){
+            var list_t=otextarea.value.trim().match(/ site: (.+)/g) || [];    //元素格式如：" site: www.news.com.au" - 保留注释
+            for (let item of list_t){
+                item=item.slice(7,);
+                if (set_t.has(item)){
+                    set_t.delete(item);
+                }
+            }
         }
     }
     

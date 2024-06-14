@@ -11,4 +11,5 @@ var digest_global=`
 *planar
 *tabletop
 *corneal
+*antonym
 `.trim().split('\n');

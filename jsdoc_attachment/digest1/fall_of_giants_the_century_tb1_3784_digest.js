@@ -57,4 +57,6 @@ var digest_global=`
 *condom
 *Willard
 *flatmate
+*unerring
+*Nicolai
 `.trim().split('\n');

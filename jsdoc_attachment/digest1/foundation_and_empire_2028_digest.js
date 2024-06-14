@@ -8,4 +8,5 @@ var digest_global=`
 *utilization
 *minty
 *horticultural
+*mayoral
 `.trim().split('\n');

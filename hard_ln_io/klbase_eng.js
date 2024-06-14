@@ -1548,7 +1548,9 @@ function enwords_lines_2_js_array_b(aword,emoji_list,three_lines=false){
 function enwords_different_types_div_b(cswlist,add_form=false,textarea_id='',textarea_name='',button_type='',more_buttons=''){
     var blstr='<p>';
     blstr=blstr+'<select onchange="enwords_different_types_textarea_b(this);">';
-    for (let item of ['','asterisk','js','temp','wiki','reg','space','rare_words']){
+    var type_names=['','asterisk','js','temp','wiki','reg','space','rare_words','filter'];
+    type_names.sort();
+    for (let item of type_names){
         blstr=blstr+'<option>'+item+'</option>\n';
     }
     blstr=blstr+'</select>\n';    
@@ -1615,6 +1617,24 @@ function enwords_different_types_textarea_b(oselect){
             }
             bljg='    var rare_words=new Set(['+result_t.join(',')+']);';
             bljg='<br /><textarea style="height:3rem;" onclick="this.select();document.execCommand(\'copy\');">'+bljg+'</textarea>';        
+            break;
+        case 'filter':
+            var blkey=prompt('输入筛选关键词，如何(,,\\d+$(:r))');
+            if (blkey==null){
+                bljg='';
+            } else {
+                var is_reg=false;
+                [blkey,is_reg]=str_reg_check_b(blkey);
+                var result_t=[];
+                for (let item of raw_list){
+                    var blfound=str_reg_search_b(item,blkey,is_reg);
+                    if (blfound==-1){break;}        
+                    if (blfound){
+                        result_t.push(item);
+                    }
+                }
+                bljg='<br /><textarea style="height:3rem;" onclick="this.select();document.execCommand(\'copy\');">'+result_t.join('\n')+'</textarea>';        
+            }
             break;
     }
     odiv.innerHTML=bljg;

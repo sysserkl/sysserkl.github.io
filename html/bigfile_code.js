@@ -62,9 +62,11 @@ function upload_a_bigfile(){
         textFileReader.onload = function (){
             file_content_bigfile_global = this.result;
             if (blxl==bllen-1){
+                document.title=old_title;            
                 idb_bigfile_b('edit','','',read_fn_bigfile);
             } else {
                 blxl=blxl+1;
+                document.title=blxl+'/'+bllen+' - '+old_title;
                 idb_bigfile_b('edit','','',upload_a_bigfile_one_step);
             }
         }    
@@ -83,6 +85,7 @@ function upload_a_bigfile(){
 
     if (!confirm('是否上传 '+bllen+' 个文件？')){return;}
     var blxl=0;
+    var old_title=document.title;
     upload_a_bigfile_one_step();
 }
 

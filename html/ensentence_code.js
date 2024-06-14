@@ -38,7 +38,7 @@ function menu_ensentence(){
     ]);
     
     var group_list=[
-    ['无例句的单词','rare_old_words_ensentence(true,false,1,0,3000);',true],
+    ['无例句的单词','rare_old_words_ensentence(false,false,1,0,3000);',true],
     ['词组','phrase_not_in_ensentence();',true],
     ];    
     klmenu1.push(menu_container_b(str_t,group_list,''));
@@ -390,7 +390,7 @@ function rare_old_words_ensentence(show_sentence=true,generate_js=false,max_coun
             
             var progress_list=ltp_status_get_b('+例句 +单词','green','white',100);
 
-            document.getElementById('divhtml').innerHTML='<p>'+progress_list.join(' ')+'</p>'+enwords_array_to_html_b(words_searched_arr_global,false)+bltextarea;  //+words_2_js_array_ensentence(words_searched_arr_global);
+            document.getElementById('divhtml').innerHTML='<p>'+progress_list.join(' ')+'</p>'+enwords_array_to_html_b(words_searched_arr_global,false)+bltextarea;
             
             if (source_check){
                 var local_id='enwords_one_source_ensentence';

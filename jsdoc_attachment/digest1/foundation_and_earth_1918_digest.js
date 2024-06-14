@@ -14,4 +14,5 @@ var digest_global=`
 *rulebook
 *filtration
 *climatology
+*chaotically
 `.trim().split('\n');
