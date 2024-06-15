@@ -152,6 +152,7 @@ function menu_enwords_book(){
     
     klmenu_new=klmenu_new.concat([
     '<span class="span_menu" onclick="'+str_t+'import_enwords_book(\'new\');">导入KLWiki和txtbook全部新单词</span>',   
+    '<span class="span_menu" onclick="'+str_t+'import_enwords_book(\'new_hot\');">导入常见新单词</span>',   
     '<span class="span_menu" onclick="'+str_t+'max_length_new_enwords_book();">全部新单词中最长的单词</span>',     
     '<span class="span_menu" onclick="'+str_t+'phrase_in_current_enwords_book();">由当前单词组成的词组</span>',     
     ]);
@@ -213,15 +214,27 @@ function menu_enwords_book(){
     
     var klmenu_config=[
     load_sentence_menu_b(str_t),    
-    '<span class="span_menu" onclick="'+str_t+'load_all_new_enwords_book();">载入全部新单词</span>',    
-    '<span class="span_menu" onclick="'+str_t+'load_enword_file_b(\'kaikki_phrase_global\',\'kaikki_phrase\',false);">载入kaikki</span>',    
     '<span class="span_menu" onclick="'+str_t+'space2underline_enwords_book();">替换单词间空格为下划线</span> ',  
     '<span class="span_menu" onclick="'+str_t+'character2space_enwords_book(\'_\',\'下划线\');">替换下划线为空格</span> ',  
     '<span class="span_menu" onclick="'+str_t+'character2space_enwords_book(\'-\',\'连字符\');">替换连字符为空格</span> ',  
     ];
     
-    var menus=klmenu_b(klmenu1,'','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_new,'🔤','32rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'🧮','23rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','60rem');
+    format_list=[
+    ['全部新单词','load_all_new_enwords_book();',true],
+    ['kaikki','load_enword_file_b(\'kaikki_phrase_global\',\'kaikki_phrase\',false);',true],
+    ['new_words_count','load_new_words_count_enwords_book();',true],
+    ];    
+    klmenu_config.push(menu_container_b(str_t,format_list,'文件载入：'));    
+    
+    var menus=klmenu_b(klmenu1,'','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_new,'🔤','32rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'🧮','23rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','27rem','1rem','1rem','60rem');
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(menus,'','0rem')+' ');
+}
+
+function load_new_words_count_enwords_book(){
+    function sub_load_new_words_count_enwords_book_set(){
+        local_storage_today_b('new_hot_words_count_statistics',40,new_words_count_global.length,'/');
+    }
+    load_enword_file_b('new_words_count_global','new_words_count',sub_load_new_words_count_enwords_book_set);
 }
 
 function load_all_new_enwords_book(){
@@ -461,6 +474,13 @@ function import_enwords_book(cstype,csmax=-1){
                 } else {
                     otextarea.value=all_new_words_global.join(' ');            
                 }
+            }
+            break;
+        case 'new_hot':
+            if (typeof new_words_count_global !== 'undefined'){
+                var result_t=object2array_b(new_words_count_global,true,2);
+                result_t.sort(function(a,b){return a[1]<b[1]?1:-1;});
+                otextarea.value=result_t.join('\n');
             }
             break;
         case 'old':
@@ -772,21 +792,22 @@ function filter_key_enwords_book(){
     if (blkey==''){return;}
     
     var is_reg=false;
-    if (blkey.slice(-4,)=='(:r)'){
-        blkey=blkey.slice(0,-4);
-        is_reg=true;
-    }
+    [blkey,is_reg]=str_reg_check_b(blkey,is_reg);
+
     var result_t=new Set();
-    var list_t=blstr.split(' ');
+    var list_t=blstr.split(/\s+/);
     for (let item of list_t){
 		var blfound=str_reg_search_b(item,blkey,is_reg);
-		if (blfound==-1){break;}        
+		if (blfound==-1){
+            alert('表达式错误');
+            break;
+        }
         if (blfound){
             result_t.add(item);
         }
     }
     var otextarea2=document.getElementById('textarea_new_words2');
-    otextarea2.value=Array.from(result_t).join(' ');
+    otextarea2.value=Array.from(result_t).join('\n');
 }
 
 function textarea_first_lines_enwords_book(){

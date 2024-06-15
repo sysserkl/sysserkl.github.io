@@ -445,6 +445,7 @@ function statistics_data_type_b(data_type){
             ['selenium_enwords_articles','selenium英语单词文章链接数',0,'/'],
             ['enwords_selenium_new_words','selenium 新单词数',0,'/'],
             ['all_new_words_statistics','全部新单词',0,'/'],
+            ['new_hot_words_count_statistics','常见新单词',0,'/'],
             ['enwords_sentence_rows','例句行数',0,'/'],
             ['en_article_statistics','文章数',0,': '],
             ['klwiki_en2_rows','klwiki_en2 行数',0,'/'],
