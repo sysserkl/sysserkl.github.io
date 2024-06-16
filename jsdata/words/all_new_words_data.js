@@ -134383,6 +134383,7 @@ var all_new_words_global=[
 "new-vehicle",
 "new-washed",
 "new-waxen",
+"new_words_count_data",
 "new-year",
 "newyear",
 "new-year's",

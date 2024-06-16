@@ -294,9 +294,10 @@ function new_words_form_enwords_book(){
 
     bljg=bljg+'<span class="aclick" onclick="in_all_new_enwords_book(\'include\');">已在全部新单词中的新单词</span> ';        
     bljg=bljg+'<span class="aclick" onclick="in_all_new_enwords_book();">不在全部新单词中的新单词</span> ';    
-    //bljg=bljg+'<span class="aclick" onclick="in_rare_words_enwords_book();">稀有旧单词</span> ';    
 
     bljg=bljg+'<span class="aclick" onclick="textarea_shift_b(\'textarea_new_words1\',\'textarea_new_words2\');">对调</span> ';    
+    bljg=bljg+'分隔符：<input type="text" id="input_filter_delimiter" value=" " /> ';
+
     bljg=bljg+'<span class="aclick" onclick="filter_key_enwords_book();">Filter</span> ';
     bljg=bljg+textarea_buttons_b('textarea_new_words1','清空,复制');
 
@@ -320,7 +321,7 @@ function new_words_form_enwords_book(){
 
     bljg=bljg+'<p>结果：</p><div id="div_new_words2" style="max-width:900px;font-family:Noto Sans;"></div>';
     document.getElementById('divhtml').innerHTML=bljg;
-    input_size_b([['input_first_lines',5]],'id');
+    input_size_b([['input_first_lines',5],['input_filter_delimiter',3]],'id');
 }
 
 function import_to_digest_global_enwords_book(){
@@ -795,7 +796,8 @@ function filter_key_enwords_book(){
     [blkey,is_reg]=str_reg_check_b(blkey,is_reg);
 
     var result_t=new Set();
-    var list_t=blstr.split(/\s+/);
+    var bldelimiter=delimiter_get_b(document.getElementById('input_filter_delimiter').value);
+    var list_t=blstr.split(bldelimiter);
     for (let item of list_t){
 		var blfound=str_reg_search_b(item,blkey,is_reg);
 		if (blfound==-1){
@@ -807,7 +809,7 @@ function filter_key_enwords_book(){
         }
     }
     var otextarea2=document.getElementById('textarea_new_words2');
-    otextarea2.value=Array.from(result_t).join('\n');
+    otextarea2.value=Array.from(result_t).join(bldelimiter);
 }
 
 function textarea_first_lines_enwords_book(){

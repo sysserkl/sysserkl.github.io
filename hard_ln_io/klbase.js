@@ -3958,3 +3958,12 @@ function two_list_diff_b(list1=false,list2=false,textarea_id1='textarea_old_diff
 function readlater_start_year_b(){
     return 2019;
 }
+
+function delimiter_get_b(csdelimiter){
+    if (csdelimiter=='\\n'){
+        csdelimiter='\n';
+    } else if (csdelimiter=='\\t'){
+        csdelimiter='\t';
+    }
+    return csdelimiter;
+}
