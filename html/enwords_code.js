@@ -636,6 +636,7 @@ function menu_kle(){
     '<span class="span_menu" onclick="'+str_t+'letters_26_kle();">26字首统计</span>',
     '<span class="span_menu" onclick="'+str_t+'other_characters_kle();">除字母外的其他字符</span>',
     '<span class="span_menu" onclick="'+str_t+'week_plan_show_kle();">每周记忆计划</span>',    
+    '<span class="span_menu" onclick="'+str_t+'search_similar_new_sentence_kle(\'例句\',\'’\');">含有中文标点的例句</span>',    
     ]);
 
     var list_t=[
@@ -1008,21 +1009,33 @@ function recent_bookmark_position(){
     }
 }
 
-function search_similar_new_sentence_kle(cstype){
+function search_similar_new_sentence_kle(cstype=false,csword=''){
+    if (cstype===false){
+        cstype=document.getElementById('select_search_more_enwords').value;
+    }
+    if (csword==''){
+        csword=document.getElementById('input_search').value.trim();
+    }
+    
+    var odiv=document.getElementById('divhtml');
+    if (csword==''){
+        odiv.innerHTML='';
+        return;
+    }
+    
     switch (cstype){
         case '相似':
-            similar_enwords_b();
+            similar_enwords_b(csword);
             break;
         case '例句':
-            sentence_search_kle('',checkbox_kl_value_b('input_reg'));
+            sentence_search_kle(csword,checkbox_kl_value_b('input_reg'));
             break;
         case '链接':
-            var csstr=document.getElementById('input_search').value;
-            csstr=csstr.trim();   
-            if (csstr!==''){
-                var bljg='<p style="font-size:1.5rem;">'+en_word_links_b(csstr)+'</p>';
-                document.getElementById('divhtml').innerHTML=bljg;
-            }
+            var bljg='<p style="font-size:1.5rem;">'+en_word_links_b(csword)+'</p>';
+            odiv.innerHTML=bljg;
+            break;
+        default:
+            wordsearch_enwords_b(csword);
             break;
     }
 }

@@ -57,14 +57,14 @@ mobile_style_enwc_b();
 </p>
 <a name=content></a>
 <p>
-<input type="text" id="input_search" autocomplete="off" onkeyup="if (event.key=='Enter'){wordsearch_enwords_b();}" />
-<span class="aclick" onclick="wordsearch_enwords_b();">Search</span> 
-<select id="select_search_more_enwords" style="height:2rem;" onchange="search_similar_new_sentence_kle(this.value);">
+<input type="text" id="input_search" autocomplete="off" onkeyup="if (event.key=='Enter'){search_similar_new_sentence_kle();}" />
+<select id="select_search_more_enwords" style="height:2rem;">
 <option></option>
 <option>相似</option>
 <option>例句</option>
 <option>链接</option>
 </select>
+<span class="aclick" onclick="search_similar_new_sentence_kle();">Search</span> 
 </p>
 <div id="div_recent_search" style="font-size:0.85rem;margin:0.5rem 0rem;line-height:1.8rem;"></div>
 </div>

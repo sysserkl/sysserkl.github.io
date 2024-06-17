@@ -2957,13 +2957,18 @@ function fun_soruce_show_b(csid){
     }
 }
 
-function dom_insert_str_b(odom,str1,str2,check_selected=false,every_line=false){
+function dom_insert_str_b(odom,str1,str2,check_selected=false,every_line=false,run_fn=false){
     var st=odom.selectionStart;
     var ed=odom.selectionEnd;
     if (check_selected && st==ed){return;}
     
     var blvalue=odom.value;
     var selected_str=blvalue.substring(st,ed);
+
+    if (typeof run_fn == 'function'){
+        selected_str=run_fn(selected_str);
+    }
+                
     if (every_line){
         var list_t=selected_str.split('\n');
         for (let blxl=0;blxl<list_t.length;blxl++){

@@ -313,6 +313,14 @@ function editor_money_b(){
 }
 
 function style_money_b(csedittype){
+    function sub_style_money_b_multimedia(csstr){
+        var blreg=/^\/home\/.+\/wpatt\/(.+)$/;
+        if (csstr.match(blreg)){
+            csstr=csstr.replace(blreg,'$1');
+        }
+        return csstr;
+    }
+    
 	var blarray={
     '加粗':['<<B>>','<</B>>'],
     '下划线':['<<U>>','<</U>>'],
@@ -330,7 +338,11 @@ function style_money_b(csedittype){
 
 	var txa = document.getElementById('textarea_content');
 	if (txa){
-        dom_insert_str_b(txa,fontbegin,fontend);
+        if (csedittype=='多媒体'){
+            dom_insert_str_b(txa,fontbegin,fontend,false,false,sub_style_money_b_multimedia);
+        } else {
+            dom_insert_str_b(txa,fontbegin,fontend);        
+        }
 	}
 }
 
