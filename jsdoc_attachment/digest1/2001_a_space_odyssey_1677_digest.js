@@ -46,4 +46,5 @@ var digest_global=`
 *Paine
 *Everest
 *single-breasted
+*cameramen
 `.trim().split('\n');

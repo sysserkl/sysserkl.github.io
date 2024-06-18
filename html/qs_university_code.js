@@ -11,6 +11,17 @@ function init_qs_rank(){
         }
     }
     qs_university_raw_global=obj2array_rank_b(qs_university_raw_global,-1);    
+    
+    var t0 = performance.now();
+    for (let blxl=0;blxl<qs_university_raw_global.length;blxl++){
+        for (let col=1;col<=2;col++){
+            qs_university_raw_global[blxl][col]=qs_university_raw_global[blxl][col].replace(/,,/, ',');
+            qs_university_raw_global[blxl][col]=qs_university_raw_global[blxl][col].replace(/\s{2,}/, ' ');
+            qs_university_raw_global[blxl][col]=qs_university_raw_global[blxl][col].replace(/([^\s]),([^\s])/, '$1, $2');
+        }
+    }
+    console.log('init_qs_rank() 字符调整 费时：'+(performance.now() - t0) + ' milliseconds');
+
     recent_search_key_qs_rank();
     menu_qs_rank();    
     data_check_rank_b(qs_university_raw_global,6,[3]);    
@@ -102,11 +113,11 @@ function years_qs_rank(){
         bljg.push(blstr);
     }
 
-    var blhead1='<tr><th rowspan=2>学校</th>';
+    var blhead1='<tr><th nowrap rowspan=2>学校</th>';
     var blhead2='<tr>';
     for (let item of year_t){
         blhead1=blhead1+'<th colspan=3>'+item+'</th>';
-        blhead2=blhead2+'<th>排名</th><th>分数</th><th>顺序排位</th>';
+        blhead2=blhead2+'<th nowrap>排名</th><th nowrap>分数</th><th nowrap>顺序<br />排位</th>';
     }
     blhead1=blhead1+'</tr>\n';
     blhead2=blhead2+'</tr>\n';
@@ -127,6 +138,10 @@ function search_qs_rank(cskey=false,csreg=-1){
 		if (cskey=='' || blfound){        
             search_result_qs_rank_global.push(item);
         }
+    }
+
+    if (klmenu_check_b('span_simple_name_qs_university',false)){
+        search_result_qs_rank_global=simple_name_rank_b(cskey,search_result_qs_rank_global,1);
     }
     
     array_2_html_qs_rank(search_result_qs_rank_global);
@@ -190,6 +205,7 @@ function menu_qs_rank(){
     '<span class="span_menu" onclick="'+str_t+'name_district_statistics_qs_rank(false);">当前条件学校、地区统计</span>',          
     '<span class="span_menu" onclick="'+str_t+'name_district_statistics_by_years_qs_rank();">当前条件学校、地区分年统计</span>',          
     '<span class="span_menu" onclick="'+str_t+'jieba_name_qs_rank();">当前条件学校名称分词</span>',
+    '<span id="span_simple_name_qs_university" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 名称简化</span>',
     ];
 
     group_list=[
