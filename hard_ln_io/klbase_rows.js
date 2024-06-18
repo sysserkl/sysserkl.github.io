@@ -469,7 +469,10 @@ function strquick_klr_b(cstype='',csid='textarea_rows_content',status_id='textar
         case 'number_sub':
             var otextarea = document.getElementById(csid);
 			otextarea.value=otextarea.value.trim().replace(/(\d+)/g,'<sub>$1</sub>');
-            break;            
+            break;        
+        case 'blank_rows_add':
+            blank_rows_add_klr_b(csid);
+            break;
         case 'blank_rows_remove':
             blank_rows_remove_klr_b(csid);
             break;
@@ -1225,4 +1228,22 @@ function sort_select_klr_b(){
         result_t.push('<option value="'+item[0]+'">'+item[1]+'</option>');
     }
     return result_t;
+}
+
+function blank_rows_add_remove_klr_b(cstype='',textarea_id='',str_t=''){
+    var list_t=['blank_rows_add','blank_rows_remove','blank_rows_wiki_type'];
+    switch (cstype){
+        case 'menu':
+            for (let blxl=0;blxl<list_t.length;blxl++){
+                list_t[blxl]='<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\''+list_t[blxl]+'\',\''+textarea_id+'\');">'+list_t[blxl].replace(/_/g,' ')+'</span>';
+            }
+            return list_t;
+            break;
+        case 'select':
+            for (let blxl=0;blxl<list_t.length;blxl++){
+                list_t[blxl]='<option value="'+list_t[blxl]+'">'+list_t[blxl].replace(/_/g,' ')+'</option>';
+            }
+            return list_t;
+            break;
+    }
 }

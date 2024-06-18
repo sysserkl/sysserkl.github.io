@@ -43,11 +43,13 @@ function menu_notepad(){
     klmenu_check_b('span_reg_notepad',true);
     //-----------------------
     var klmenu_sort=sort_menu_klr_b('textarea_content_notepad',str_t);
+    var klmenu_blank=blank_rows_add_remove_klr_b('menu','textarea_content_notepad',str_t);
+    
     var buttons=edit_buttons_b('edit_tools_click_notepad',true,true,'oblong_box').join(' ');
     
     var dom_show_hide='<span class="oblong_box" onclick="wiki_style_notepad();">wiki</span> <span class="oblong_box" onclick="diff_notepad();">diff</span> <span class="oblong_box" onclick="popup_show_hide_b(\'span_edit_buttons_notepad\',\'\');">🖊</span> ';
     var op=document.getElementById('p_menu_notepad');
-    op.insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu_sort,'↕','10rem','1rem','1rem','30rem'),'','0rem')+' '+dom_show_hide+'<span id="span_edit_buttons_notepad" style="display:none;">'+buttons+'</span>');
+    op.insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu_sort,'↕','10rem','1rem','1rem','30rem')+klmenu_b(klmenu_blank,'','15rem','1rem','1rem','30rem'),'','0rem')+' '+dom_show_hide+'<span id="span_edit_buttons_notepad" style="display:none;">'+buttons+'</span>');
     mouseover_mouseout_oblong_span_b(op.querySelectorAll('span.oblong_box'));
 }
 
