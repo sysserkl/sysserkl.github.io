@@ -884,17 +884,17 @@ function duplicate_words_kle(){
 	bljg=bljg+'<br />格式：<br />';
     for (let key in format_list1){
         if (format_list1[key].length==0){continue;}
-        bljg=bljg+'<p><b>【'+key+'】：</b> "'+list_join_2_reg_style_b(format_list1[key])+'"</p>\n';
+        bljg=bljg+'<p><b>【'+key+'】('+format_list1[key].length+')：</b> "'+list_join_2_reg_style_b(format_list1[key])+'"</p>\n';
     }    
     for (let key in format_list2){
         if (format_list2[key].length==0){continue;}
-        bljg=bljg+'<p><b>【'+key+'】：</b> "'+list_join_2_reg_style_b(format_list2[key])+'"</p>\n';
+        bljg=bljg+'<p><b>【'+key+'】('+format_list2[key].length+')：</b> "'+list_join_2_reg_style_b(format_list2[key])+'"</p>\n';
     }
     if (end_list.length>0){
-        bljg=bljg+'<p><b>【[,;\s]$】：</b> "'+list_join_2_reg_style_b(end_list)+'"</p>\n';        
+        bljg=bljg+'<p><b>【[,;\\s]"\\],】('+end_list.length+')：</b> "'+list_join_2_reg_style_b(end_list)+'"</p>\n';        
     }
     if (semicolon_without_space_list.length>0){
-        bljg=bljg+'<p><b>【;[^\s]】：</b> "'+list_join_2_reg_style_b(semicolon_without_space_list)+'"</p>\n';        
+        bljg=bljg+'<p><b>【;[^\\s]】('+semicolon_without_space_list.length+')：</b> "'+list_join_2_reg_style_b(semicolon_without_space_list)+'"</p>\n';        
     }
     
     bljg=bljg+'<p><b>重复释义单词('+definition_redundant.size+')：</b>"'+list_join_2_reg_style_b(Array.from(definition_redundant))+'"</p>\n';  

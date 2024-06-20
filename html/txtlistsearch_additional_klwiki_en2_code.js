@@ -43,8 +43,19 @@ function words_not_in_article_kltxt_klwiki_en2(){
     var content_set=filelist.join('\n').match(/[a-zA-Z\-']+/g) || [];
     var words_set=blstr.split('\n');
     var bldiff=array_difference_b(words_set,content_set);
-    var bljg=enwords_array_to_html_b(bldiff,false);
-    document.getElementById('divhtml').innerHTML='<div style="column-count:3;">'+bljg+'</div>';
+
+    var split_list=[];
+    for (let blxl=0;blxl<bldiff.length;blxl=blxl+100){
+        split_list.push(bldiff.slice(blxl,blxl+100).join('|').replace(/\s/g,'\\s'));
+    }
+    
+    for (let blxl=0;blxl<bldiff.length;blxl++){
+        bldiff[blxl]=[bldiff[blxl],'',''];
+    }
+    var bljg='<div style="column-count:3;">'+enwords_array_to_html_b(bldiff,false)+'</div>';
+    bljg=bljg+enwords_js_wiki_textarea_b(bldiff);
+
+    document.getElementById('divhtml').innerHTML=bljg+array_2_li_b(split_list);
 }
 
 function batch_search_result_kltxt_klwiki_en2(){
