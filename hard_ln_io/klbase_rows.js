@@ -718,7 +718,8 @@ function batch_open_www_klr_b(csid,ostatus,cstype=''){
         if (blxl>=bllen){
             if (ostatus){
                 ostatus.value='批量打开网址完成，已打开 '+blsites_count+' 个网址\n'+blstr.replace(/\n/mg,',')+'\n'+ostatus.value;
-            }        
+            }
+            document.title=old_title;
             return;
         }
         var item=list_t[blxl].trim();
@@ -730,6 +731,7 @@ function batch_open_www_klr_b(csid,ostatus,cstype=''){
             }
         }
         blxl=blxl+1;
+        document.title=blxl+'/'+bllen+' - '+old_title;
         setTimeout(sub_batch_open_www_klr_b_one_link,1000);
     }
     //-----------------------
@@ -793,6 +795,7 @@ function batch_open_www_klr_b(csid,ostatus,cstype=''){
     var bllen=list_t.length;
     var blxl=0;
     var blsites_count=0;
+    var old_title=document.title;
     sub_batch_open_www_klr_b_one_link();
 }
 
