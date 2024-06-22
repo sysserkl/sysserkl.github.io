@@ -583,7 +583,11 @@ function import_elm_money_b(textarea_id='textarea_idb_content'){   //饿了么 -
         return [false,false,'未发现饿了么数据'];
     }
     
-    if (!confirm('是否转换以下记录以备导入：\n'+result_t.join('\n'))){return [false,false,''];}
+    var alert_str=[];
+    for (let blxl=0;blxl<result_t.length;blxl++){
+            alert_str.push((blxl+1)+'. '+result_t[blxl]);
+    }
+    if (!confirm('是否转换以下记录以备导入：\n'+alert_str.join('\n'))){return [false,false,''];}
 
     otextarea.value=line_style_list.join('\n');
     return [result_t,line_style_list,''];

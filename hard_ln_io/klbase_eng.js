@@ -1548,7 +1548,7 @@ function enwords_lines_2_js_array_b(aword,emoji_list,three_lines=false){
 function enwords_different_types_div_b(cswlist,add_form=false,textarea_id='',textarea_name='',button_type='',more_buttons=''){
     var blstr='<p>';
     blstr=blstr+'<select onchange="enwords_different_types_textarea_b(this);">';
-    var type_names=['','asterisk','js','temp','wiki','reg','space','rare_words','filter'];
+    var type_names=['','asterisk','js','temp','wiki','reg','space','rare_words','filter','group'];
     type_names.sort();
     for (let item of type_names){
         blstr=blstr+'<option>'+item+'</option>\n';
@@ -1634,6 +1634,21 @@ function enwords_different_types_textarea_b(oselect){
                     }
                 }
                 bljg='<br /><textarea style="height:3rem;" onclick="this.select();document.execCommand(\'copy\');">'+result_t.join('\n')+'</textarea>';        
+            }
+            break;
+        case 'group':
+            var blcount=parseInt(prompt('输入每组单词个数：') || '-1');
+            if (blcount<=0){
+                bljg='';
+            } else {
+                var group_count=Math.ceil(raw_list.length/blcount);
+                if (group_count>100){
+                    bljg='分组结果 '+group_count+' 超过 100 组';
+                } else {
+                    for (let blxl=0;blxl<raw_list.length;blxl=blxl+blcount){
+                        bljg=bljg+'<br /><textarea style="height:3rem;" onclick="this.select();document.execCommand(\'copy\');">'+raw_list.slice(blxl,blxl+blcount).join('\n')+'</textarea>';
+                    }
+                }
             }
             break;
     }

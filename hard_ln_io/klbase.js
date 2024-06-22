@@ -2981,13 +2981,22 @@ function dom_insert_str_b(odom,str1,str2,check_selected=false,every_line=false,r
     odom.value=blvalue.substring(0,st)+selected_str+blvalue.substring(ed,);
 }
 
-function textarea_shift_b(idname1,idname2){
+function textarea_shift_b(idname1,idname2,cstype='',merge_delimiter=''){
     var otextarea1=document.getElementById(idname1);
     var otextarea2=document.getElementById(idname2);
     var blstr1=otextarea1.value;
     var blstr2=otextarea2.value;
-    otextarea1.value=blstr2;
-    otextarea2.value=blstr1;
+    
+    switch (cstype){
+        case 'merge':
+            otextarea1.value=blstr1+merge_delimiter+blstr2;
+            otextarea2.value='';
+            break;
+        default:
+            otextarea1.value=blstr2;
+            otextarea2.value=blstr1;
+            break;
+    }
 }
 
 function str2num_range_b(csstr,csstep=1,maxlen=-1){ //numinrange。csstep仅对-有效 - 保留注释
