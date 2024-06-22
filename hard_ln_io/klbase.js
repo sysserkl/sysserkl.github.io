@@ -2981,7 +2981,7 @@ function dom_insert_str_b(odom,str1,str2,check_selected=false,every_line=false,r
     odom.value=blvalue.substring(0,st)+selected_str+blvalue.substring(ed,);
 }
 
-function textarea_shift_b(idname1,idname2,cstype='',merge_delimiter=''){
+function textarea_shift_b(idname1,idname2,cstype='',merge_delimiter='',do_ask=true){
     var otextarea1=document.getElementById(idname1);
     var otextarea2=document.getElementById(idname2);
     var blstr1=otextarea1.value;
@@ -2989,6 +2989,9 @@ function textarea_shift_b(idname1,idname2,cstype='',merge_delimiter=''){
     
     switch (cstype){
         case 'merge':
+            if (blstr2==''){return;}
+            if (do_ask && !confirm('是否合并？')){return;}
+            
             otextarea1.value=blstr1+merge_delimiter+blstr2;
             otextarea2.value='';
             break;
@@ -3511,6 +3514,33 @@ function array_batch_value_get_b(csarr,default_list){
         var default_value=default_list[blxl][0];
         var cstype=default_list[blxl][1];
         result_t.push(array_col_value_get_b(csarr,blxl,default_value,cstype));
+    }
+    return result_t;
+}
+
+function array_split_by_col_b(csarr,col_no_list,ignore_empty=true){
+    var result_t=[];
+    if (col_no_list.length==1){
+        var blno=col_no_list[0];
+        if (blno<0){return [];}
+        
+        for (let arow of csarr){
+            if (blno<arow.length){
+                result_t.push(arow[blno]);
+            }
+        }
+    } else {
+        for (let arow of csarr){
+            var new_row=[];
+            var bllen=arow.length;
+            for (let one_no of col_no_list){
+                if (one_no>=0 && one_no<bllen){
+                    new_row.push(arow[one_no]);
+                }
+            }
+            if (new_row.length==0 && ignore_empty){continue;}
+            result_t.push(new_row);
+        }
     }
     return result_t;
 }

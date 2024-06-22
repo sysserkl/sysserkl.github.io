@@ -35,4 +35,5 @@ var digest_global=`
 *wildebeest
 *womenfolk
 *cicada
+*self-made
 `.trim().split('\n');

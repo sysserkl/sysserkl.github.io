@@ -903,8 +903,9 @@ function txtsearch_kltxt_lineno_doms_get_kltxt_b(){
 
 function menu_insert_kltxt_b(menu_count=3){
     function sub_menu_insert_kltxt_b_one_title(title_name,line_no){
-        var bljg=p_style+'<span style="font-weight:bold;font-size:1.5rem;">'+title_name+'</span> ';
+        var bljg=p_style+'<span class="span_inserted_menu" style="font-weight:bold;font-size:1.5rem;">'+title_name+'</span> ';
         bljg=bljg+'<span class="txtsearch_kltxt_lineno" id="txtsearch_kltxt_lineno_'+(line_no+1)+'" style="cursor:pointer;font-style: italic;color:'+scheme_global['shadow']+';'+bldisplay+'" onclick="getlines_kltxt_b('+(line_no+1)+');">('+(line_no+1)+')</span></p>';    
+        name_list.push([title_name,line_no]);
         return bljg;
     }
     
@@ -944,8 +945,8 @@ function menu_insert_kltxt_b(menu_count=3){
         }
     }
     //-----------------------
-    var op=document.querySelector('p.p_inserted_menu');
-    if (op){return;}
+    var omenu=document.querySelector('span.span_inserted_menu');
+    if (omenu){return;}
 
     var menu_no=new Set();
     for (let item of kltxt_menulist_index_global){
@@ -961,12 +962,14 @@ function menu_insert_kltxt_b(menu_count=3){
     
     var span_nos=[];
     var title_list=[];
+    var name_list=[];
+
     var in_range,title_no;
     for (let one_pair of ospans){
         [in_range,title_no]=sub_menu_insert_kltxt_b_one_range(one_pair[1]-1,one_pair[3]-1);
         sub_menu_insert_kltxt_b_one_insert(in_range,one_pair[2]);
         if (title_no!==false){
-            title_list.push([[title_no],one_pair[2]]);
+            title_list.push([[title_no],one_pair[2]]);  //[[no],ospan] - 保留注释
             menu_no.delete(title_no);
         }
     }
@@ -979,6 +982,28 @@ function menu_insert_kltxt_b(menu_count=3){
     
     for (let item of title_list){
         sub_menu_insert_kltxt_b_one_insert(item[0],item[1],'outerHTML');    //最后处理，否则 span.odom.parentNode.outerHTML 修改后，找不到 span - 保留注释
+    }
+    name_list.sort(function (a,b){return a[1]>b[1]?1:-1;});
+    for (let blxl=0;blxl<name_list.length;blxl++){
+        name_list[blxl]='<span class="span_box" onclick="inserted_menu_seek_kltxt_b(this.innerText);">'+name_list[blxl][0].replace(/^(=+)(.*?)(=+)$/g,'<span style="font-size:0.1rem;">$1</span>$2<span style="font-size:0.1rem;">$3</span>')+'</span>';
+    }
+    
+    var close_button='<p>'+close_button_b('section_inserted_menu_kltxt','')+'</p>';
+    var osection=document.getElementById('section_inserted_menu_kltxt');
+    if (!osection){
+        document.body.insertAdjacentHTML('beforeend','<section id="section_inserted_menu_kltxt" style="position:fixed;top:0%;right:0%;max-width:20%;max-height:100%;overflow:scroll;background-color:'+scheme_global['button']+'; padding:0.1rem;" onmouseover="this.style.opacity=0.9;" onmouseout="this.style.opacity=0.5;"></section>');
+    }
+    osection=document.getElementById('section_inserted_menu_kltxt');
+    osection.innerHTML=close_button+array_2_li_b(name_list,'li','ol','','','font-size:0.8rem;margin-bottom:0.2rem;')+close_button;
+}
+
+function inserted_menu_seek_kltxt_b(csstr){
+    var ospans=document.querySelectorAll('#divhtml span.span_inserted_menu');
+    for (let one_span of ospans){
+        if (one_span.innerText==csstr){
+            one_span.scrollIntoView();
+            break;
+        }
     }
 }
 

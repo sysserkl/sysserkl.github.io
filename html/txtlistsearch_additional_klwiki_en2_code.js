@@ -87,6 +87,7 @@ function batch_search_result_kltxt_klwiki_en2(){
     lines_2_html_kltxt_b(result_t);
 
     render_html_kltxt_b(blwordlist);
+    menu_insert_kltxt_b(1);
 }
 
 function days_kltxt_klwiki_en2(theday=new Date()){

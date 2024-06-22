@@ -398,12 +398,18 @@ function menu_klroutines(){
     var klmenu1=[
     '<span class="span_menu" onclick="'+str_t+'search_klplan_b();">search</span>',   
     '<span class="span_menu" onclick="'+str_t+'statistics_form_klroutines();">statistics</span>',    
-    '<span class="span_menu" onclick="'+str_t+'edit_switch_klroutines();">organize(one by one)</span>',    
-    '<span class="span_menu" onclick="'+str_t+'form_list_klroutines();">organize(batch)</span>',
     '<span class="span_menu" onclick="'+str_t+'demo_klroutines();">import demo</span>',
     '<span class="span_menu" onclick="'+str_t+'form_done_klroutines();">import/export finished items</span>',    
-    '<span class="span_menu" onclick="'+str_t+'update_klroutines();">reload</span>',        
+    '<span class="span_menu" onclick="'+str_t+'update_klroutines();">reload</span>',      
+    '<span class="span_menu" onclick="'+str_t+'today_link_klroutines();">今日图片外链</span>',           
     ];
+    
+    var group_list=[
+    ['one by one','edit_switch_klroutines();',true],
+    ['batch','form_list_klroutines();',true],
+    ];    
+    klmenu1.push(menu_container_b(str_t,group_list,'organize: '));
+    
     if (is_local_b()){
         klmenu1.push('<a href="../../../../../wiki/index.php/KL_Routines" onclick="'+str_t+'" target=_blank>KL Routines - KLWiki</a>');
     }
@@ -428,6 +434,38 @@ function menu_klroutines(){
     klmenu_check_b('span_unique_klplan',true);
 }
 
+function today_link_klroutines(){
+    var list_t=local_storage_get_b('album_s_keys',-1,true);
+    if (list_t.length==0){
+        alert('未发现外链缓存');
+        return;
+    }
+
+    var ospan=document.getElementById('span_total');
+    var blmatch=ospan.innerText.match(/^\(\d+\/(\d+)\/(\d+)\)$/) || ['','0','0'];
+    var bldone=parseInt(blmatch[1]);
+    var blall=parseInt(blmatch[2]);
+    
+    if (bldone<10){
+        alert('完成数小于10');
+        return;
+    }
+    
+    if (blall/bldone>60){
+        alert('完成数占比不足');
+        return;
+    }
+    
+    while (list_t.length<366){
+        list_t=list_t.concat(list_t).slice(0,366);
+    }
+    var blno=day_of_year_b();
+    var blstr=list_t[blno];
+    var blhref=location_href_b()+'photos.htm?'+blstr;
+    
+    window.open(blhref);
+}
+
 function week_klroutines(do_settimeout=false){
     var blstr=document.getElementById('button_routines_menu1').innerText;
     var thisweek=day_2_week_b('','en3');
@@ -438,7 +476,7 @@ function week_klroutines(do_settimeout=false){
     document.getElementById('div_week').innerHTML=fortnight_klroutines();
     menu_klroutines();
     show_klroutines();
-    //count_klplan_b();   //重新计数 - 保留注释
+    //count_get_klplan_b();   //重新计数 - 保留注释
     if (do_settimeout){
         var bltime=days_between_two_dates_b('',next_day_b(),'')+1;    //是否需要加1毫秒？ - 保留注释
         console.log('week_klroutines()','等候',(bltime/1000/60/60).toFixed(1),'小时');
@@ -551,7 +589,7 @@ function show_klroutines(ispreweek=false){
     document.getElementById('divhtml').innerHTML=bljg;
     column_count_switch_klroutines(true);
     
-    count_klplan_b();
+    count_get_klplan_b();
     
     var oapre=document.getElementById('span_preweek');
     var oathis=document.getElementById('span_thisweek');

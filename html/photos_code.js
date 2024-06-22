@@ -16,13 +16,32 @@ function export_array_klphotos(){
     otextarea.value='var photo_source_global=[\n'+list_t.join('\n')+'\n];\n';
 }
 
+function export_current_klphotos(){
+    var name_str='';
+    var list_t=array_split_by_col_b(photodata_global,[0]);
+    if (confirm('是否encodeURIComponent？')){
+        for (let blxl=0;blxl<list_t.length;blxl++){
+            list_t[blxl]=encodeURIComponent(album_current_global[0])+'&s='+encodeURIComponent(list_t[blxl]);
+        }
+        name_str='== 分隔行 '+date2str_b('')+' ==\nalbum_s_keys\n';
+    }
+
+    document.getElementById('textarea_export_klphotos').value=name_str+list_t.join('\n');
+}
+
 function export_form_klphotos(){
-    var bltextarea='<textarea id="textarea_export_klphotos" style="width:90%;height:25rem;"></textarea>';
-    var bljg=close_button_b('div_array','')+'<span class="aclick" onclick="export_array_klphotos();">导出全部数组</span>';
+    var postpath=postpath_b();
+	var blform='<form method="POST" action="'+postpath+'temp_txt_share.php" target=_blank>\n';
+    
+    var bltextarea='<textarea id="textarea_export_klphotos" name="textarea_export_klphotos" style="width:90%;height:25rem;"></textarea>';
+    var bljg=close_button_b('div_array','');
+    bljg=bljg+textarea_buttons_b('textarea_export_klphotos','清空,复制,发送到临时记事本,发送地址');
+    bljg=bljg+'<span class="aclick" onclick="export_array_klphotos();">导出全部数组</span>';
+    bljg=bljg+'<span class="aclick" onclick="export_current_klphotos();">导出当前图片文件名</span>';
     bljg=bljg+'<span class="aclick" onclick="import_marked_rows_klphotos();">导入已标记图片名</span>';
     bljg=bljg+'<span class="aclick" onclick="delete_marked_rows_klphotos();">清空已标记图片名</span>';
-    '</p>';
-    document.getElementById('div_array').innerHTML=bltextarea+'<p>'+bljg+'</p>';
+
+    document.getElementById('div_array').innerHTML=blform+bltextarea+'<p>'+bljg+'</p></form>';
 }
 
 function album_marked_rows_get_klphotos(){
@@ -136,6 +155,30 @@ function album_select_klphotos(odom,isrand=false){
     location.href='?'+ospan.innerText+(isrand?'&rnd':'')
 }
 
+function slice_klphotos(){
+    var bllen=photodata_global.length;
+    var blrange=prompt('输入分割范围0,'+bllen+'：');
+    if (blrange==null){return;}
+        
+    blrange=blrange.replace(/\s/g,'').split(',');
+    if (blrange[0]==''){
+        blrange[0]=0;
+    } else {
+        blrange[0]=parseInt(blrange[0]);
+    }
+    
+    if (blrange.length==1){
+        blrange[1]=bllen;
+    } else {
+        blrange[1]=parseInt(blrange[1]);    
+    }
+
+    if (confirm('是否保留当前结果的 '+blrange+' 部分？')){
+        photodata_global=photodata_global.slice(blrange[0],blrange[1]);
+        refresh_klphotos();
+    }
+}
+
 function menu_klphotos(){
     var button_size='1rem';
     var str_t=klmenu_hide_b('');
@@ -155,6 +198,7 @@ function menu_klphotos(){
     '<span class="span_menu" onclick="'+str_t+'screen_album_start_klphotos();">屏幕相框</span>',
     '<span class="span_menu" onclick="'+str_t+'export_form_klphotos();">导出数组和标记图片</span>',
     '<span class="span_menu" onclick="'+str_t+'gallery_klphotos();">当前图片合并显示</span>',  
+    '<span class="span_menu" onclick="'+str_t+'slice_klphotos();">当前结果部分图片截取</span>',  
     ];
 
     var menu_month=[];
@@ -445,11 +489,11 @@ function month_day_line_klphotos(){
 }
 
 function rndsearch_klphotos(){
-	photodata_global=[];
-	var img_xl_tmp=0;
-	for (let item of photo_source_global){
-		img_xl_tmp=import_img_item_klphotos(item,img_xl_tmp);
-	}
+	//photodata_global=[];
+	//var img_xl_tmp=0;
+	//for (let item of photo_source_global){
+		//img_xl_tmp=import_img_item_klphotos(item,img_xl_tmp);
+	//}
 	
 	for (let blxl=0;blxl<photodata_global.length;blxl++){
 		photodata_global[blxl][1]='';
@@ -459,7 +503,10 @@ function rndsearch_klphotos(){
 	for (let blxl=0;blxl<bltotal_t;blxl++){
 		photodata_global.sort(randomsort_b);
 	}
+    refresh_klphotos();
+}
 
+function refresh_klphotos(){
 	hide_div_big_photo();
 	thumbnail_klphotos();
 

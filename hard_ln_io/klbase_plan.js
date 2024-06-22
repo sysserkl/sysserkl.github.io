@@ -1,5 +1,5 @@
-function count_klplan_b(){
-    function sub_count_klplan_b_one_div(odiv){
+function count_get_klplan_b(){
+    function sub_count_get_klplan_b_one_div(odiv){
         var items=odiv.getElementsByClassName('span_date');
         var bltotal=items.length;
         var bldone=0;
@@ -27,7 +27,7 @@ function count_klplan_b(){
     var today=date2str_b('-');
     var odivs=document.getElementsByClassName('div_category');
     for (let one_div of odivs){
-        [one_done,one_done_today,one_total]=sub_count_klplan_b_one_div(one_div);
+        [one_done,one_done_today,one_total]=sub_count_get_klplan_b_one_div(one_div);
         bldone=bldone+one_done;
         bldone_today=bldone_today+one_done_today;
         bltotal=bltotal+one_total;
@@ -208,7 +208,7 @@ function check_klplan_b(csid,csfound,cscaption,cssavename,blminday='',odom=false
             }
         }
     }
-    count_klplan_b();
+    count_get_klplan_b();
 }
 
 function done_date_klplan_b(arow,today,span_name){

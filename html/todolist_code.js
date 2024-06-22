@@ -157,7 +157,7 @@ function show_todolist(save_to_local_storage=false){
         bljg=bljg+'</ol></div>';
     }
     document.getElementById('divhtml').innerHTML=bljg;
-    count_klplan_b();
+    count_get_klplan_b();
     return category_list;
 }
 
