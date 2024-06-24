@@ -1,0 +1,18 @@
+var sourcelist=[
+["https://freeyork.org/education/5-tips-for-returning-to-education-after-a-break/","5 Tips for Returning to Education After a Break","2024-06-24","FREEYORK","0",],
+["https://www.solidot.org/story?sid=78499","中国可能在 2027 年建造世界最大粒子加速器","2024-06-24","Solidot","1",],
+["https://www.solidot.org/story?sid=78500","乌克兰用 AI 筛选地雷清理的优先地点","2024-06-24","Solidot","1",],
+["https://www.solidot.org/story?sid=78501","IBM 前高管起诉年龄歧视","2024-06-24","Solidot","1",],
+["https://www.solidot.org/story?sid=78502","大部分人不认同 AI 制作的新闻","2024-06-24","Solidot","1",],
+["https://www.solidot.org/story?sid=78503","黑客披露窃取 Ticketmaster 数据细节","2024-06-24","Solidot","1",],
+["https://www.solidot.org/story?sid=78504","AI 热推动了火电的复苏","2024-06-24","Solidot","1",],
+["https://www.solidot.org/story?sid=78505","JAXA 近两年多次遭网络攻击","2024-06-24","Solidot","1",],
+["https://www.solidot.org/story?sid=78506","适度锻炼有助于减少职业倦怠","2024-06-24","Solidot","1",],
+["https://www.solidot.org/story?sid=78507","苹果与 Meta 商谈在 AI 上合作","2024-06-24","Solidot","1",],
+["https://www.solidot.org/story?sid=78508","YouTube 打击通过 VPN 购买低价区的订阅服务","2024-06-24","Solidot","1",],
+["https://www.solidot.org/story?sid=78498","京东限制第三方比价工具","2024-06-24","Solidot","1",],
+["https://www.solidot.org/story?sid=78497","TikTok 证实它向美国政府提议提供一个关闭开关","2024-06-24","Solidot","1",],
+["https://openingsource.org/11734/","苹果公司正式加入 seL4 基金会","2024-06-24","开源工场","1",],
+["https://openingsource.org/11724/","知名女性开源社区 Women Who Code 宣布关闭","2024-06-24","开源工场","1",],
+["https://openingsource.org/11715/","开放的全功能自建云平台：Nextcloud 29 正式发布","2024-06-24","开源工场","1",],
+];
