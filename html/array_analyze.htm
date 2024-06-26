@@ -49,7 +49,8 @@ css_root_style_b('17','12',['base','menu'],[],1);
 </p>
 <p>
 间隔标记：<input type="text" id="input_interval" value="," />
-<span class="aclick" onclick="table_refresh_arr_analyze(true);">刷新</span>
+<span class="aclick" onclick="table_refresh_arr_analyze();">刷新</span>
+<span class="aclick" onclick="table_refresh_arr_analyze('add_col');">添加列</span>
 行数：<input type="number" id="input_row_count" min=2 step=1 value=2 />
 <span class="aclick" onclick="merge_rows_2_one_column_arr_analyze();">合并多行为一列</span>
 <span class="aclick" onclick="column2number_arr_analyze('int');">转换为指定列为整数</span>
@@ -64,6 +65,7 @@ css_root_style_b('17','12',['base','menu'],[],1);
 </div>
 <p>
 <span class="aclick" onclick="flot_lines_data_arr_analyze();">转换为flot lines格式数组</span>
+<input type="text" placeholder="legend 名称" id="input_flot_legend_caption_aa" />
 <select id="select_flot_aa">
 <option>flot lines</option>
 <option>flot lines date</option>

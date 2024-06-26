@@ -6,7 +6,7 @@
 <!-- script src="module/lazyload.js" /script -->
 <script src="../hard_ln_io/klbase.js"></script>
 <script>
-klbase_addons_import_js_b(['css','date','slide','en_de_str','flot','image'],['exif.js'],['photos_pb_data.js'],[],true);
+klbase_addons_import_js_b(['css','date','slide','en_de_str','flot','image','album'],['exif.js'],['photos_pb_data.js'],['photos_code.js'],true);
 </script>
 <script>
 var albumlist_kl_global=[];
@@ -16,7 +16,6 @@ var album_marked_rows_global=[];
 <script>
 flot_import_js_b(['time','symbol'],true);
 </script>
-<script src="photos_code.js"></script>
 <script>
 data_load_klphotos();
 </script>
@@ -40,15 +39,15 @@ css_root_style_b('17','10',['base','menu'],[],1);
 </style>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 </head>
-<body onkeypress="mykeycontrol_klphotos();">
+<body onkeypress="mykeycontrol_klphotos_b();">
 <a name=top></a>
-<h2 id="h2_photo" style="margin:0rem;margin-bottom:0.5rem;font-size:1.35rem;"><span id="span_title" onclick="showhide_klphotos();" style="cursor:pointer;"></span> <span id="span_img_count" style="color:#707070;font-size:0.8rem;"></span></h2>
+<h2 id="h2_photo" style="margin:0rem;margin-bottom:0.5rem;font-size:1.35rem;"><span id="span_title" onclick="showhide_klphotos_b();" style="cursor:pointer;"></span> <span id="span_img_count" style="color:#707070;font-size:0.8rem;"></span></h2>
 <div id='div_show_hide' style="display:block;margin:0rem 0.5rem;">
-<p><input type="text" id="input_search" onkeyup="if (event.key=='Enter'){imgsearch_klphotos();}">
+<p><input type="text" id="input_search" onkeyup="if (event.key=='Enter'){imgsearch_klphotos_b();}">
 <label><input type="checkbox" id="input_reg">正则</label>
-<span class="aclick" onclick="imgsearch_klphotos();">搜索</span>
+<span class="aclick" onclick="imgsearch_klphotos_b();">搜索</span>
 <span class="aclick" onclick="rndsearch_klphotos();" title="0?&rnd">随机</span>
-<span class="aclick" onclick="import_img_data_klphotos();">全部记录</span> 
+<span class="aclick" onclick="import_img_data_klphotos_b();">全部记录</span> 
 幻灯片间隔(秒)：<input type="number" id="input_slide_interval" style="width:5rem;" value=60>
 月份字号: <input type="number" id="input_calendar_month_font_size" style="width:4rem;" value=5>
 </p>
@@ -64,8 +63,8 @@ css_root_style_b('17','10',['base','menu'],[],1);
 
 <div id="div_tempphoto_list" style="display:none;">
 <textarea id="textarea_temp_klphotos" style="height:3rem;" placeholder="临时图片文件列表"></textarea>
-<p><span class="aclick" onclick="show_temp_klphotos();">显示</span> 
-<span class="aclick" onclick="show_temp_klphotos(true);">随机</span></p>
+<p><span class="aclick" onclick="show_temp_klphotos_b();">显示</span> 
+<span class="aclick" onclick="show_temp_klphotos_b(true);">随机</span></p>
 </div>
 
 <textarea id="textarea_caption" style="height:3rem;display:none;" placeholder="文字说明"></textarea>
@@ -76,7 +75,7 @@ css_root_style_b('17','10',['base','menu'],[],1);
 
 <div id="div_big_photo" style="position: fixed; top: 50%; left: 50%; -webkit-transform: translateX(-50%) translateY(-50%); z-index: 99;background-color:#ffffff;"></div>
 <div id="div_grey_album"></div>
-<div id="div_array"></div>
+<div id="div_array" style="margin:0.5rem;"></div>
 <div id="div_klphotos_info">
 <p style="margin:0rem 0.5rem;"><span id="span_page_no1"></span></p>
 <table border=0>

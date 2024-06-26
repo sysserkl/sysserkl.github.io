@@ -1,5 +1,5 @@
 function merge_rows_2_one_column_arr_analyze(){
-    var interval_str=document.getElementById('input_interval').value;
+    var interval_str=delimiter_get_arr_analyze();
     var cols=document.getElementById('input_row_count').value;
     var otextarea=document.getElementById('textarea_arrays');
     var list_t=otextarea.value.trim().split('\n');
@@ -22,7 +22,7 @@ function merge_rows_2_one_column_arr_analyze(){
 
 function list_arr_analyze(csarray=false){
 	var bljg=[];
-    var delimiter=document.getElementById('input_interval').value;
+    var delimiter=delimiter_get_arr_analyze();
     
     if (csarray==false){
         csarray=table_array_global;
@@ -153,7 +153,7 @@ function flot_lines_data_arr_analyze(){
         list_t['f_'+str_t].push(temp_t);
     }
     
-    var flot_list=['',];
+    var flot_list=[document.getElementById('input_flot_legend_caption_aa').value,];
     for (let key in list_t){ //不能使用 of - 保留注释
         flot_list.push(list_t[key]);
     }
@@ -297,7 +297,7 @@ function group_sum_arr_analyze(){
 
 	var result_t=row_count_or_sum_arr_analyze(group_no,sum_no,false);
 
-    var delimiter=document.getElementById('input_interval').value;
+    var delimiter=delimiter_get_arr_analyze();
     for (let blxl=0;blxl<result_t.length;blxl++){
         result_t[blxl]=result_t[blxl][0]+delimiter+result_t[blxl][1];
     }
@@ -359,7 +359,7 @@ function group_arr_analyze(showlist){
                 bljg=bljg+'</p>';
         }
     } else {
-        var delimiter=document.getElementById('input_interval').value;
+        var delimiter=delimiter_get_arr_analyze();
 	    for (let item of list_t){
 			bljg=bljg+'<br />'+item[0]+delimiter+item[1];
 		}
@@ -696,7 +696,7 @@ function init_arr_analyze(){
     ['input_interval',2,0.5],
     ['input_row_count',4,0.5],
     ['input_filter',12,0.5],
-
+    ['input_flot_legend_caption_aa',11,0.95],
     ];
     input_size_b(input_list,'id');
     
@@ -713,20 +713,42 @@ function show_source_arr_anaylze(show_source){
     }
 }
 
-function table_refresh_arr_analyze(reload=true){
-    if (reload || table_array_global.length==0){
+function delimiter_get_arr_analyze(){
+    return delimiter_get_b(document.getElementById('input_interval').value);
+}
+
+function table_refresh_arr_analyze(cstype='reload'){
+    if (table_array_global.length==0){
+        cstype=='reload';
+    }
+    
+    if (cstype=='reload' || cstype=='add_col'){
         var list_t=document.getElementById('textarea_arrays').value.split('\n');
-        var delimiter=document.getElementById('input_interval').value;
-        table_array_global=[];
+        var delimiter=delimiter_get_arr_analyze();
+        var arr_t=[];
         for (let item of list_t){
             if (item.trim()==''){continue;}
             if (delimiter==''){
-                table_array_global.push([item]);
+                arr_t.push([item]);
             } else {
-                table_array_global.push(item.split(delimiter));
+                arr_t.push(item.split(delimiter));
+            }
+        }
+        
+        if (cstype=='reload'){
+            table_array_global=arr_t;
+        } else {
+            if (table_array_global.length!==arr_t.length){
+                alert('行数不一致（'+table_array_global.length+':'+arr_t.length+'），操作取消');
+                return;
+            }
+            
+            for (let blxl=0;blxl<table_array_global.length;blxl++){
+                table_array_global[blxl]=table_array_global[blxl].concat(arr_t[blxl]);
             }
         }
     }
+    
     var otable=document.getElementById('table_arrays');
     var oths=otable.querySelectorAll('th button');
     
@@ -761,9 +783,9 @@ function th_menu_arr_analyze(csno,thname=false){
     var klmenu1=[];
 
     var sort_list=[
-    ['⬆','sort_arr_analyze(0,'+csno+');table_refresh_arr_analyze(false);',true],
-    ['⬇','sort_arr_analyze(1,'+csno+');table_refresh_arr_analyze(false);',true],
-    ['rename','rename_col_analyze('+csno+');table_refresh_arr_analyze(false);',true],
+    ['⬆','sort_arr_analyze(0,'+csno+');table_refresh_arr_analyze(\'\');',true],
+    ['⬇','sort_arr_analyze(1,'+csno+');table_refresh_arr_analyze(\'\');',true],
+    ['rename','rename_col_analyze('+csno+');table_refresh_arr_analyze(\'\');',true],
     ];    
     klmenu1.push(menu_container_b(str_t,sort_list,'sort: '));    
     

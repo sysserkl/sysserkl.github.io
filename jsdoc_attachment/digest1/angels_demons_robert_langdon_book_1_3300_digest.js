@@ -55,4 +55,9 @@ var digest_global=`
 *bazooka
 *world-renowned
 *heliocentric
+*footrest
+*pre-Christian
+*ungentlemanly
+*two-dimensional
+*Rosetta
 `.trim().split('\n');
