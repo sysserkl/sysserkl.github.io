@@ -19,5 +19,5 @@ var js_file_list_common_pb_global=[
 ['../jsdata/weather/district_weather_hangzhou_data.js','☔','district weather hangzhou','district_weather_global','district_weather','🌡'],
 ['../jsdata/weather/tianqihoubao_hangzhou_data.js','☔','tianqihoubao hangzhou','district_weather_global','district_weather','🌡'],
 ['../jsdata/cnbond_data.js','💰','cnbond','cnbond_global','cnbond',''],
-
+['../jsdata/cmpedu_data.js','🗜','cmpedu','cmpedu_global','cmpedu',''],
 ];

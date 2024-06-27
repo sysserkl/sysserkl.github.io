@@ -14,6 +14,16 @@ function add_button_temp_txt_share_b(){
     }
 }
 
+function textarea_diff_txt_share_b(id1,id2){
+    var diff_str=two_list_diff_b(false,false,id1,id2,'','','旧版','新版')[1];
+
+    var buttons='<p>'+close_button_b('div_status','')+'</p>';
+
+    var odiv=document.getElementById('div_status');
+    odiv.innerHTML=diff_str+buttons;
+    odiv.scrollIntoView();
+}
+
 function update_temp_txt_share_b(csid){
     var otextarea=document.getElementById('textarea_temp_txt_share');
     if (!otextarea){return;}
