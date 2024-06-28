@@ -70,4 +70,5 @@ var digest_global=`
 *westerly
 *wheaten
 *environ
+*Elizabethan
 `.trim().split('\n');

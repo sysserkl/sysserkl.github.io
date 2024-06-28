@@ -69,4 +69,5 @@ var digest_global=`
 *blackmailer
 *shelve
 *moonless
+*latecomer
 `.trim().split('\n');

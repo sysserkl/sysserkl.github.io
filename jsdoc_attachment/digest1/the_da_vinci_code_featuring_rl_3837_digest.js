@@ -48,4 +48,5 @@ var digest_global=`
 *watermark
 *sought-after
 *answering machine
+*Monet
 `.trim().split('\n');

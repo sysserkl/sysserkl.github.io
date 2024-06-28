@@ -530,4 +530,6 @@ var digest_global=`
 *Cartier
 *Bahamas
 *unpopulated
+*bimonthly
+*helmsmen
 `.trim().split('\n');

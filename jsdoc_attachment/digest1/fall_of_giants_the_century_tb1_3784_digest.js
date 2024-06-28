@@ -59,4 +59,7 @@ var digest_global=`
 *flatmate
 *unerring
 *Nicolai
+*kowtow
+*letterbox
+*Azov
 `.trim().split('\n');

@@ -24,4 +24,5 @@ var digest_global=`
 *tyrannosaur
 *tyrannosaurus
 *catastrophically
+*dauntingly
 `.trim().split('\n');

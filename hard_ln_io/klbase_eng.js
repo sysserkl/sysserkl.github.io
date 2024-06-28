@@ -1938,7 +1938,8 @@ function enwords_mini_search_frame_style_b(csid='',set_css=true){
     }
     odiv=document.getElementById(csid);
     if (set_css){
-        odiv.style.cssText='position:fixed;right:0%;top:0%;border:0.2rem pink dashed;background-color:white;max-width:70%;padding:0.5rem;'+(location.href.includes(location.origin+'/wiki/')?'z-index:998;':'');
+        var blmax=get_max_zindex_b()+1;
+        odiv.style.cssText='position:fixed;right:0%;top:0%;border:0.2rem pink dashed;background-color:white;max-width:70%;padding:0.5rem;z-index:'+blmax+';';
     }
 }
 

@@ -21,4 +21,5 @@ var digest_global=`
 *tableware
 *trainee
 *elbow room
+*springbok
 `.trim().split('\n');

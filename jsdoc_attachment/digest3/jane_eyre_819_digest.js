@@ -55,4 +55,5 @@ var digest_global=`
 *protégée
 *firelit
 *sinless
+*charwomen
 `.trim().split('\n');

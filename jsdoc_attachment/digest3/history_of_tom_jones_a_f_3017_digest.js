@@ -9,4 +9,5 @@ var digest_global=`
 *parricide
 *ploughman
 *vascular
+*fatten
 `.trim().split('\n');

@@ -69,4 +69,5 @@ var digest_global=`
 *off-road
 *wildflower
 *frostbite
+*restaurateur
 `.trim().split('\n');

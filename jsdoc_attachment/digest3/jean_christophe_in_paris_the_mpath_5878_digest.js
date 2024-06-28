@@ -71,4 +71,5 @@ var digest_global=`
 *lampshade
 *attainable
 *falsify
+*Anglo-American
 `.trim().split('\n');

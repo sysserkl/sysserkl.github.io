@@ -237,4 +237,7 @@ var digest_global=`
 *bathhouse
 *shamefully
 *Dewey
+*ferrymen
+*kennelmen
+*Kepler
 `.trim().split('\n');

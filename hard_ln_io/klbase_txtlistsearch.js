@@ -991,7 +991,7 @@ function menu_insert_kltxt_b(menu_count=3){
     var close_button='<p>'+close_button_b('section_inserted_menu_kltxt','')+'</p>';
     var osection=document.getElementById('section_inserted_menu_kltxt');
     if (!osection){
-        document.body.insertAdjacentHTML('beforeend','<section id="section_inserted_menu_kltxt" style="position:fixed;top:0%;right:0%;max-width:20%;max-height:100%;overflow:scroll;background-color:'+scheme_global['button']+'; padding:0.1rem;" onmouseover="this.style.opacity=0.9;" onmouseout="this.style.opacity=0.5;"></section>');
+        document.body.insertAdjacentHTML('beforeend','<section id="section_inserted_menu_kltxt" style="position:fixed;top:10%;right:0%;max-width:20%;max-height:70%;overflow:scroll;background-color:'+scheme_global['button']+'; padding:0.1rem; z-index:1;" onmouseover="this.style.opacity=0.9;" onmouseout="this.style.opacity=0.5;"></section>');
     }
     osection=document.getElementById('section_inserted_menu_kltxt');
     osection.innerHTML=close_button+array_2_li_b(name_list,'li','ol','','','font-size:0.8rem;margin-bottom:0.2rem;')+close_button;

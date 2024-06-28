@@ -2297,3 +2297,19 @@ function iframe_init_b(){
         ospan.click();
     }
 }
+
+function get_max_zindex_b(){
+    //这种方法假设z-index值是有效的整数，并且只检查了行内样式（style属性）。如果z-index值是在CSS文件或<style>标签中定义的，你可能需要使用getComputedStyle方法来获取计算后的样式，这将使问题变得更复杂，因为需要为每个元素计算样式。此外，实际应用中还需考虑浏览器兼容性等问题。 - 通义千问
+    var maxZ = 0;
+    var elementsWithZIndex = document.querySelectorAll('[style*="z-index"]');
+    for (let one_dom of elementsWithZIndex){
+        var zIndex = parseInt(one_dom.style.zIndex, 10); // 获取z-index值，并确保转换为整数
+        
+        // 注意：某些情况下zIndex可能未定义或不是数值，这里进行简单检查
+        if (!isNaN(zIndex) && zIndex > maxZ){
+            maxZ = zIndex;
+        }
+    }
+
+    return maxZ;
+}

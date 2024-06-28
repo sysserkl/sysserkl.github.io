@@ -5,4 +5,5 @@ var digest_global=`
 *nucleic acid
 *urbanization
 *nonmetallic
+*substation
 `.trim().split('\n');

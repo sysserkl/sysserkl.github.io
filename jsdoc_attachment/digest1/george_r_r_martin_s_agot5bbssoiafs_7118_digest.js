@@ -138,4 +138,5 @@ var digest_global=`
 *costermonger
 *outdo
 *misspeak
+*kneecap
 `.trim().split('\n');

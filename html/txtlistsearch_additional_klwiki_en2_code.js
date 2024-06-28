@@ -24,7 +24,7 @@ function batch_search_form_kltxt_klwiki_en2(){
     var postpath=postpath_b();
     var bljg='<p><textarea id="textarea_batch_search_words_kltxt_klen2" style="height:10rem;"></textarea></p>';
     bljg=bljg+'<p>'   
-    bljg=bljg+'<label><input type="checkbox" id="input_exclude_eword_kltxt_klen2" checked />不含eword</label> ';
+    bljg=bljg+'<span class="span_box" ondblclick="selective_default_value_kltxt_klwiki_en2();">过滤：</span><input type="text" id="input_selective_words_kltxt_klen2" /> ';
     bljg=bljg+'<span class="aclick" onclick="batch_search_result_kltxt_klwiki_en2();">单词批量查找</span> ';
     bljg=bljg+'<span class="aclick" onclick="words_not_in_article_kltxt_klwiki_en2();">正文中不存在的单词</span> ';
     bljg=bljg+textarea_buttons_b('textarea_batch_search_words_kltxt_klen2','复制,清空');
@@ -33,6 +33,9 @@ function batch_search_form_kltxt_klwiki_en2(){
     
     var odiv=document.getElementById('divhtml2');
     odiv.innerHTML='<div style="margin:0.5rem;">'+bljg+'</div>';
+    selective_default_value_kltxt_klwiki_en2();
+    var input_list=[['input_selective_words_kltxt_klen2',11,0.5]];
+    input_size_b(input_list,'id');    
     odiv.scrollIntoView();
 }
 
@@ -58,10 +61,14 @@ function words_not_in_article_kltxt_klwiki_en2(){
     document.getElementById('divhtml').innerHTML=bljg+array_2_li_b(split_list);
 }
 
-function batch_search_result_kltxt_klwiki_en2(){
-    var list_t=array_unique_b(document.getElementById('textarea_batch_search_words_kltxt_klen2').value.trim().split('\n'));
+function selective_default_value_kltxt_klwiki_en2(){
+    document.getElementById('input_selective_words_kltxt_klen2').value=['-^(\\d|\\*|\\[)','-[“”（）\(\)">]', '-https?:','-&gt;','-:$'].join(' '); //忽略数字或星号或方括号开头，忽略引号、括号和>，忽略链接，忽略:结尾 - 保留注释
+}
 
-    var exclude_eword=document.getElementById('input_exclude_eword_kltxt_klen2').checked;
+function batch_search_result_kltxt_klwiki_en2(){
+    var list_t=array_unique_b(document.getElementById('textarea_batch_search_words_kltxt_klen2').value.trim().split('\n')); 
+
+    var more_filter=document.getElementById('input_selective_words_kltxt_klen2').value.trim().split(' ');
 
     var blwordlist=[];
     for (let item of list_t){
@@ -70,13 +77,9 @@ function batch_search_result_kltxt_klwiki_en2(){
         blwordlist.push(item);
     }    
 
-    var csword=[];
-    if (exclude_eword){
-        csword=['+\\b('+blwordlist.join('|')+')\\b','-eword'];
-    } else {
-        csword=['+\\b('+blwordlist.join('|')+')\\b'];    //比 csword.push('\\b'+item+'\\b'); 快 - 保留注释
-    }
-
+    var csword=['+\\b('+blwordlist.join('|')+')\\b'];    //比 csword.push('\\b'+item+'\\b'); 快 - 保留注释
+    csword=csword.concat(more_filter);
+    
     var start_lineno, end_lineno,blmax;
     [start_lineno, end_lineno,blmax]=start_end_lineno_kltxt_b();
 

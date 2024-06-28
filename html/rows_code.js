@@ -121,20 +121,27 @@ function do_type_klr2(cstype){
 
 function str_en_de_kl2(cstype='double',en=true){
     var blstr=document.getElementById('textarea_rows_content').value;
+    var ostatus=document.getElementById('textarea_status');
     switch (cstype){
         case 'double':
             if (en){
-                document.getElementById('textarea_status').value=en_double_str_b(blstr);    
+                ostatus.value=en_double_str_b(blstr);    
             } else {
-                document.getElementById('textarea_status').value=de_double_str_b(blstr);    
+                ostatus.value=de_double_str_b(blstr);    
             }
             break;
         case 'url':
+            var list_t=blstr.split('\n');
             if (en){
-                document.getElementById('textarea_status').value=encodeURIComponent(blstr);    
+                for (let blxl=0;blxl<list_t.length;blxl++){
+                    list_t[blxl]=encodeURIComponent(list_t[blxl]);
+                }
             } else {
-                document.getElementById('textarea_status').value=decodeURIComponent(blstr);    
-            }        
+                for (let blxl=0;blxl<list_t.length;blxl++){
+                    list_t[blxl]=decodeURIComponent(list_t[blxl]);
+                }
+            }
+            ostatus.value=list_t.join('\n');
             break;
     }
 }
@@ -282,8 +289,19 @@ function form_set_klr2(){
         var bljg=textarea_buttons_b('textarea_status','全选,清空,复制,发送到临时记事本');
         bljg=bljg+'<span class="aclick" onclick="textarea_shift_b(\'textarea_rows_content\',\'textarea_status\');">对调</span>';        
         bljg=bljg+'<span class="aclick" onclick="temp_save_klr2(\'write\',\'textarea_status\');">暂存</span>';
+        bljg=bljg+'<span class="aclick" onclick="diff_klr2();">diff</span>';
         op.insertAdjacentHTML('beforeend',bljg);
     }  
+}
+
+function diff_klr2(){
+    var diff_str=two_list_diff_b(false,false,'textarea_rows_content','textarea_status','','','上','下')[1];
+
+    var buttons='<p>'+close_button_b('div_status','')+'</p>';
+
+    var odiv=document.getElementById('div_status');
+    odiv.innerHTML=diff_str+buttons;
+    odiv.scrollIntoView();
 }
 
 function option_generate_klr2(){
@@ -344,7 +362,7 @@ function init_klr2(){
     form_set_klr2();
     input_style_klr2();
     menu_klr2();
-    top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.4rem'));
+    top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.4rem'),true,false,2);
     document.getElementById('p_version').insertAdjacentHTML('beforeend',navigator.userAgent);
     
     var oinput=document.getElementById('input_rnd_lines');

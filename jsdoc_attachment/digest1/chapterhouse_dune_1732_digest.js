@@ -10,4 +10,6 @@ var digest_global=`
 *unenforceable
 *loading dock
 *headscarf
+*topsoil
+*unwavering
 `.trim().split('\n');
