@@ -88,4 +88,5 @@ var digest_global=`
 *wash-and-wear
 *jackhammer
 *keypad
+*L-shaped
 `.trim().split('\n');

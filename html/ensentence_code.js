@@ -441,3 +441,59 @@ function rare_old_words_ensentence(show_sentence=true,generate_js=false,max_coun
     var bllen=en_sentence_global.length;
     sub_rare_old_words_ensentence_arow();
 }
+
+
+function sentence_flag_get_ensentence(csmax=-1,show_button=true,csmobile_font=false){
+    function sentence_flag_get_ensentence_word(csstr){
+        var matchs=csstr.match(new RegExp('&lt;eword w=(.*?)&gt;&lt;/eword&gt;','g')) || [];
+        var words_t=[];
+        for (let one_match of matchs){
+            var blword=one_match.replace(new RegExp('&lt;eword w=("|&quot;)?(.*?)("|&quot;)?&gt;&lt;/eword&gt;','g'),'$2');
+            if (csstr.match(new RegExp('\\b'+blword+one_match))==null){
+                if (csstr.match(new RegExp('&lt;u&gt;'+blword+'&lt;/u&gt;'+one_match))==null){
+                    console.log(csstr,blword);
+                    words_t.push(blword);
+                }
+            }
+        }
+        return new Set(words_t);
+    }
+    
+    if (typeof en_sentence_global == 'undefined'){
+        return 'en_sentence_global 未定义';
+    }
+
+	var blcount=0;
+    var result_t=[];
+    var do_break=false;
+    var keys=new Set();
+	for (let blxl=0;blxl<en_sentence_global.length;blxl++){
+        var aline=en_sentence_global[blxl];
+        var line_split=sentence_split_b(aline[0],blxl);
+        for (let arow of line_split){
+            if (!arow.includes('&lt;eword w=')){continue;}
+            var word_set=(sentence_flag_get_ensentence_word(arow));
+            if (word_set.size==0){continue;}
+            keys=array_union_b(keys,word_set,true);
+            
+            result_t.push([arow].concat(aline.slice(1,)));
+            blcount=blcount+1;
+            if (csmax>=0 && blcount>=csmax){
+                do_break=true;
+                break;
+            } 
+        }
+        if (do_break){break;}
+	}
+    console.log(keys);
+    //result_t=sentence_list_2_html_b(result_t,[''],csmax,show_button,csmobile_font);
+    var bljg=[];
+    console.log(result_t[0]);
+    for (let item of result_t){
+        if (!item.includes('🚩')){continue;}
+        bljg.push(item);
+    }
+    console.log(bljg.length);
+    
+	//return '<div class="div_sentence">'+bljg.join('\n')+'</div><p><i>('+bljg.length+')</i></p>';
+}

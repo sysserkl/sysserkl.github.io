@@ -977,29 +977,6 @@ function similar_words_batch_kle(csno){
 	document.getElementById('divhtml').innerHTML=bljg;
 }
 
-function sentence_search_kle(csword,csreg){
-    var csnum=arguments.length;
-	if (csnum==0){
-        var csword='';
-    }
-	if (csword==''){
-        csword= document.getElementById('input_search').value.trim();
-    }
-	document.getElementById('input_search').value=csword;
-	
-	if (csword==''){return '';}
-
-	if (csnum<=1){
-        var csreg=checkbox_kl_value_b('input_reg');
-    }
-    checkbox_kl_color_b('input_reg',csreg)
-    
-	document.getElementById('divhtml').innerHTML=sentence_search_b(csword,csreg);
-    
-    setTimeout(en_sentence_mobile_b,10);
-    title_change_enwords_b('例句搜索');
-}
-
 function recent_bookmark_position(){
     var recent_bookmark=enwords_recent_bookmark_get_b();
     if (recent_bookmark==''){return;}
@@ -1007,6 +984,14 @@ function recent_bookmark_position(){
     if (blat>=0){
         local_storage_today_b('enwords_recent_bookmark_position',40,blat,'/');
     }
+}
+
+function sentence_search_kle(csword){
+    var is_reg=checkbox_kl_value_b('input_reg');
+    var blmax=parseInt(document.getElementById('input_max_result').value);
+    document.getElementById('divhtml').innerHTML=sentence_search_b(csword,is_reg,blmax);
+    setTimeout(en_sentence_mobile_b,10);
+    title_change_enwords_b('例句搜索');
 }
 
 function search_similar_new_sentence_kle(cstype=false,csword=''){
@@ -1023,19 +1008,21 @@ function search_similar_new_sentence_kle(cstype=false,csword=''){
         return;
     }
     
+    enwords_recent_search_b(csword);
+    
     switch (cstype){
         case '相似':
             similar_enwords_b(csword);
             break;
         case '例句':
-            sentence_search_kle(csword,checkbox_kl_value_b('input_reg'));
+            sentence_search_kle(csword);
             break;
         case '链接':
             var bljg='<p style="font-size:1.5rem;">'+en_word_links_b(csword)+'</p>';
             odiv.innerHTML=bljg;
             break;
         default:
-            wordsearch_enwords_b(csword);
+            wordsearch_enwords_b(csword,-1,'',false,true,false);
             break;
     }
 }

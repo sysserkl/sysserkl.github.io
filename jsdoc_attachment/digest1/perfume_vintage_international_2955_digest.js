@@ -25,4 +25,5 @@ var digest_global=`
 *isolationist
 *uniqueness
 *passerby
+*Andes
 `.trim().split('\n');

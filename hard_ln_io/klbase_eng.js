@@ -2032,6 +2032,17 @@ function en_sentence_button_click_b(ospan){
     }
 }
 
+function en_sentence_attachment_wikisite_path_get_b(islocal,remote_host,sele_path,item){
+    if (islocal){
+        var attachment_path=remote_host+'/wikiuploads/';
+        var wikisite=remote_host+(item[2].slice(-4,)=='_TLS'?'/klwebphp/PythonTools/data/selenium_news/html/txtlistsearch.htm?_tag':'/wiki/index.php/');
+    } else {
+        var attachment_path='';
+        var wikisite=(item[2].slice(-4,)=='_TLS'?sele_path+'/html/txtlistsearch.htm?_tag':'');        
+    }
+    return [attachment_path,wikisite];
+}
+
 function sentence_list_2_html_b(cslist,csword_list=[''],csmax=500,show_button=true,csmobile_font=false,return_arr=false,keep_kleng=false){
     var remote_host=local_storage_get_b('kl_remote_host',-1,false);
     var mobile_pc_font_size='';
@@ -2049,13 +2060,12 @@ function sentence_list_2_html_b(cslist,csword_list=[''],csmax=500,show_button=tr
     var p_style=en_sentence_p_style_b(mobile_pc_font_size);
     var islocal=is_local_b();
     var sele_path=klbase_sele_path_b()[1];
+    var attachment_path,wikisite;
 	for (let item of cslist){
         //符合宽泛的条件后，再判断是否含有 过滤后的单词，若没有返回空字符 - 保留注释
-        if (islocal){
-            var str_t=en_sentence_one_line_b(item,csword_list,remote_host+'/wikiuploads/',remote_host+(item[2].slice(-4,)=='_TLS'?'/klwebphp/PythonTools/data/selenium_news/html/txtlistsearch.htm?_tag':'/wiki/index.php/'),button_str,return_arr,keep_kleng);
-        } else {
-            var str_t=en_sentence_one_line_b(item,csword_list,'',(item[2].slice(-4,)=='_TLS'?sele_path+'/html/txtlistsearch.htm?_tag':''),button_str,return_arr,keep_kleng);        
-        }
+        [attachment_path,wikisite]=en_sentence_attachment_wikisite_path_get_b(islocal,remote_host,sele_path,item);
+
+        var str_t=en_sentence_one_line_b(item,csword_list,attachment_path,wikisite,button_str,return_arr,keep_kleng);
         
         if (return_arr){
             if (str_t.length>0){
@@ -2066,7 +2076,7 @@ function sentence_list_2_html_b(cslist,csword_list=[''],csmax=500,show_button=tr
             bljg.push(p_style+str_t+'</p>');
             blcount=blcount+1;
         }        
-        if (blcount>=csmax){break;}
+        if (csmax>=0 && blcount>=csmax){break;}
 	}
     return bljg;
 }
@@ -2182,12 +2192,15 @@ function sentence_search_b(csword='',csreg=false,csmax=500,show_button=true,csmo
             if (blfound){
                 result_t.push([arow].concat(aline.slice(1,)));
                 blcount=blcount+1;
-                if (blcount>=csmax){break;}
+                if (blcount>=csmax){
+                    do_break=true;
+                    break;
+                }
             }
         }
         if (do_break){break;}
 	}
-    
+    console.log(result_t.length);
     var bljg=sentence_list_2_html_b(result_t,blwordlist2,csmax,show_button,csmobile_font);
 	return '<div class="div_sentence">'+bljg.join('\n')+'</div><p><i>('+bljg.length+')</i></p>';
 }

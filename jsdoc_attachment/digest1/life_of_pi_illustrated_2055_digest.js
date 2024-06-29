@@ -35,4 +35,5 @@ var digest_global=`
 *year-round
 *zookeeper
 *peafowl
+*worrier
 `.trim().split('\n');

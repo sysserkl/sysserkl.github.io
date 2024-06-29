@@ -57,4 +57,5 @@ var digest_global=`
 *whaleboat
 *Whitsuntide
 *workmanlike
+*mincer
 `.trim().split('\n');
