@@ -137,7 +137,7 @@ function background_img_merge_klqr(ocanvas,oimg){
     var row_no=-1;
     var col_no=0;
     var odata_no=0;
-    for (let blxl=0;blxl<idata.length;blxl=blxl+4){
+    for (let blxl=0,lent=idata.length;blxl<lent;blxl=blxl+4){
         if (blxl % one_row_points == 0){
             row_no=row_no+1;
             col_no=0;
@@ -368,10 +368,10 @@ function table_2_ascii_klqr(){
 
     var blcolor=document.getElementById('select_box_color_klqr').value;
     var blbox=ascii_box_option_klqr_global[blcolor];
-    for (let blr=0;blr<tr_oblocks.length;blr++){
+    for (let blr=0,lent=tr_oblocks.length;blr<lent;blr++){
         var td_oblocks=tr_oblocks[blr].querySelectorAll('td');        
         var row_list=[];
-        for (let blc=0;blc<td_oblocks.length;blc++){
+        for (let blc=0,lenb=td_oblocks.length;blc<lenb;blc++){
             if (td_oblocks[blc].style.backgroundColor==qrfcolor || td_oblocks[blc].style.backgroundColor==f_rgb){
                 if (blbox!=='' && (blc<=6 && (blr<=6 || blr>=tr_oblocks.length-7) || blc>=td_oblocks.length-7 && blr<=6)){
                     row_list.push(blbox);
@@ -440,9 +440,9 @@ function show_number_klqr(){
     }
     
     if (shownumber){        
-        for (let blr=0;blr<tr_oblocks.length;blr++){
+        for (let blr=0,lent=tr_oblocks.length;blr<lent;blr++){
             var td_oblocks=tr_oblocks[blr].querySelectorAll('td');        
-            for (let blc=0;blc<td_oblocks.length;blc++){
+            for (let blc=0,lenb=td_oblocks.length;blc<lenb;blc++){
                 if (td_oblocks[blc].style.backgroundColor==qrfcolor || td_oblocks[blc].style.backgroundColor==f_rgb){
                     td_oblocks[blc].innerHTML='<span style="color: '+qrbcolor+'; font-size:0.8rem;">'+(blr+1)+'+'+(blc+1)+'</span>';
                     qr_list_global.push([blr,blc,1]);
@@ -454,9 +454,9 @@ function show_number_klqr(){
             }
         }
     } else {
-        for (let blr=0;blr<tr_oblocks.length;blr++){
+        for (let blr=0,lent=tr_oblocks.length;blr<lent;blr++){
             var td_oblocks=tr_oblocks[blr].querySelectorAll('td');        
-            for (let blc=0;blc<td_oblocks.length;blc++){
+            for (let blc=0,lenb=td_oblocks.length;blc<lenb;blc++){
                 td_oblocks[blc].innerHTML='';
             }
         }

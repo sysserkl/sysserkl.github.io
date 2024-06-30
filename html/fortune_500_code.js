@@ -103,8 +103,8 @@ function line_district_profit_percent_fortune_500(){
     var flot_array=line_district_revenue_rank_b(search_result_fortune_500_global,3,5,[1,2],1);
     div_flot_css_fortune_500(true,false);    
     flot_array=object2array_b(flot_array);
-    for (let one_district=0;one_district<flot_array.length;one_district++){
-        for (let one_year=1;one_year<flot_array[one_district].length;one_year++){
+    for (let one_district=0,lent=flot_array.length;one_district<lent;one_district++){
+        for (let one_year=1,lenb=flot_array[one_district].length;one_year<lenb;one_year++){
             //flot_array[one_district][one_year] 形如：[ "2011", 157030, 41278 ]
             flot_array[one_district][one_year]=[flot_array[one_district][one_year][0],flot_array[one_district][one_year][2]*100/flot_array[one_district][one_year][1]];
         }
@@ -225,7 +225,7 @@ function array_2_html_fortune_500(csarray,cssum=false,table_id='table_fortune_50
     var blaverage=(cssum===false?false:(cssum/csarray.length).toFixed(fraction_len));
     var average_count=0;
     
-    for (let blxl=0;blxl<csarray.length;blxl++){
+    for (let blxl=0,lent=csarray.length;blxl<lent;blxl++){
         var item=csarray[blxl];
         if (cssum!==false && item[1]>=blaverage){
             average_count=average_count+1;
@@ -320,7 +320,7 @@ function array_2_csv_fortune_500(){
     
     var fraction_len=1;
     
-    for (let blxl=0;blxl<search_result_fortune_500_global.length;blxl++){
+    for (let blxl=0,lent=search_result_fortune_500_global.length;blxl<lent;blxl++){
         var item=search_result_fortune_500_global[blxl];
         bljg.push((blxl+1)+',"'+specialstr_j(item[0])+'",'+item[1].toFixed(fraction_len)+','+value_to_fixed_fortune_500(item[2],fraction_len)+',"'+specialstr_j(item[3])+'",'+item[4]+',"'+item[5]+'"');
     }
@@ -395,11 +395,11 @@ function menu_fortune_500(){
     [menu_years,menu_district]=year_district_list_fortune_500();
     menu_years.reverse();
     
-    for (let blxl=0;blxl<menu_years.length;blxl++){
+    for (let blxl=0,lent=menu_years.length;blxl<lent;blxl++){
         menu_years[blxl]='<span class="span_menu" onclick="'+str_t+'search_fortune_500(\''+menu_years[blxl]+'\',false);">'+menu_years[blxl]+'</span>';   
     }
 
-    for (let blxl=0;blxl<menu_district.length;blxl++){
+    for (let blxl=0,lent=menu_district.length;blxl<lent;blxl++){
         menu_district[blxl]='<span class="span_menu" onclick="'+str_t+'search_fortune_500(\''+menu_district[blxl]+'\',false);">'+menu_district[blxl]+'</span>';   
     }
     
@@ -514,7 +514,7 @@ function init_fortune_500(){
 
     buttons_rank_b('Fortune 500','search_fortune_500();');
     fortune_500_raw_global=obj2array_rank_b(fortune_500_raw_global,1);
-    for (let blxl=0;blxl<fortune_500_raw_global.length;blxl++){
+    for (let blxl=0,lent=fortune_500_raw_global.length;blxl<lent;blxl++){
         fortune_500_raw_global[blxl].push(fortune_500_raw_global[blxl][2]*100/fortune_500_raw_global[blxl][1]);
     }
     recent_search_key_fortune_500();

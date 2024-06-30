@@ -41,7 +41,7 @@ function draw_puzzle(){
     
     var bljg=[];
     var row_str='';
-    for (let blxl=0;blxl<pieces.length;blxl++){
+    for (let blxl=0,lent=pieces.length;blxl<lent;blxl++){
         var str_t='';
         if (blxl % cols_puzzle_global == 0){
             if (row_str!==''){

@@ -42,9 +42,9 @@ function date_size_digest(without_digest=false,sortno=0){
     
     digest_statistics_sort_asc_dec_global=!digest_statistics_sort_asc_dec_global;
     
-    for (let blxl=0;blxl<result_t.length;blxl++){
+    for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
         var arow='<td>'+(blxl+1)+'</td>';
-        for (let col_no=0;col_no<result_t[blxl].length;col_no++){
+        for (let col_no=0,lenb=result_t[blxl].length;col_no<lenb;col_no++){
             if (col_no<result_t[blxl].length-1){
                 arow=arow+'<td>'+result_t[blxl][col_no]+'</td>';
             } else {
@@ -56,7 +56,7 @@ function date_size_digest(without_digest=false,sortno=0){
     
     var arow='';
     var th_list=['no','id','name','tag','jsdoc','type','date','size'];
-    for (let blxl=0;blxl<th_list.length;blxl++){
+    for (let blxl=0,lent=th_list.length;blxl<lent;blxl++){
         arow=arow+'<th style="cursor:pointer;" onclick="date_size_digest('+without_digest+','+(blxl-1)+');">'+th_list[blxl]+'</th>';
     }
     result_t=['<tr>'+arow+'</tr>'].concat(result_t);    

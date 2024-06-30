@@ -163,7 +163,7 @@ function upload_merge_img(){
     
     var oimgs=document.getElementById('input_img').files;
     var result_t=[];
-    for (let blxl=0;blxl<oimgs.length;blxl++){
+    for (let blxl=0,lent=oimgs.length;blxl<lent;blxl++){
         var ofile=oimgs[blxl];
         
         var error=upload_img_file_check_b(ofile);

@@ -13,7 +13,7 @@ function menu_more_hospital_medicine_price(){
     }
     
     var col_name_list=Object.keys(table_th_jscm_global);
-    for (let blxl=0;blxl<col_name_list.length;blxl++){
+    for (let blxl=0,lent=col_name_list.length;blxl<lent;blxl++){
         col_name_list[blxl]='<option value="'+blxl+'">'+col_name_list[blxl]+'</option>';
     }
     
@@ -37,14 +37,14 @@ function fraction_hospital_medicine_price(){
     
     switch (title_name_jscm_global){
         case 'yhzyy medicine price':
-            for (let blxl=0;blxl<js_data_current_common_search_global.length;blxl++){
+            for (let blxl=0,lent=js_data_current_common_search_global.length;blxl<lent;blxl++){
                 var item=js_data_current_common_search_global[blxl][0];
                 if (typeof item[3] == 'string'){break;}
                 js_data_current_common_search_global[blxl][0]=[item[0],item[1],item[2],item[3].toFixed(bllen)];
             }
             break;
         case 'yhrmyy medicine price':
-            for (let blxl=0;blxl<js_data_current_common_search_global.length;blxl++){
+            for (let blxl=0,lent=js_data_current_common_search_global.length;blxl<lent;blxl++){
                 var item=js_data_current_common_search_global[blxl][0];
                 if (typeof item[4] == 'string'){break;}                
                 js_data_current_common_search_global[blxl][0]=[item[0],item[1],item[2],item[3],item[4].toFixed(bllen),item[5]];
@@ -119,7 +119,7 @@ function statistics_supplier_hospital_medicine_price(){
     }
         
     for (let akey in supplier_dict){
-        for (let blxl=0;blxl<supplier_dict[akey][1].length;blxl++){
+        for (let blxl=0,lent=supplier_dict[akey][1].length;blxl<lent;blxl++){
             supplier_dict[akey][1][blxl]='<tr><td>'+(blxl+1)+'</td>'+supplier_dict[akey][1][blxl]+'</tr>';
         }
     }
@@ -135,7 +135,7 @@ function statistics_supplier_hospital_medicine_price(){
     var csarray=eval(var_name_jscm_global);    
     var raw_len=csarray.length;
     
-    for (let blxl=0;blxl<supplier_dict.length;blxl++){
+    for (let blxl=0,lent=supplier_dict.length;blxl<lent;blxl++){
         var bllen=supplier_dict[blxl][1].length;
         if (current_len==raw_len){
             var blpercent=' ('+bllen+'/'+(bllen*100/raw_len).toFixed(2)+'%)';

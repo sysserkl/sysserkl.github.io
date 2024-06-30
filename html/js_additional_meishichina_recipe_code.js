@@ -52,7 +52,7 @@ function statistics_ingredient_meishichina_recipe(){
     count_d.sort(function (a,b){return a[1]<b[1] ? 1 : -1;});
     
     var bllen=ingredient_d.length;
-    for (let blxl=0;blxl<count_d.length;blxl++){
+    for (let blxl=0,lent=count_d.length;blxl<lent;blxl++){
         count_d[blxl].push((count_d[blxl][1]*100/bllen).toFixed(2)+'%');
     }
     document.getElementById('divhtml').innerHTML='<h3>不重复原料菜谱数：'+bllen+'</h3><div style="column-count:'+(ismobile_b()?2:4)+';">'+array_2_li_b(count_d)+'</div>';
@@ -62,7 +62,7 @@ function same_ingredient_meishichina_recipe(return_list=false){
     var ingredient_d={};
     for (let arow of js_data_current_common_search_global){
         var list_t=arow[0][1].replace(/\([^\(\)]+\)/g,'').replace(/（[^（）]+）/g,'').replace(/或者?/g,' ').split(' ');
-        for (let blxl=0;blxl<list_t.length;blxl++){
+        for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
             list_t[blxl]=list_t[blxl].replace(/\(.+/g,'').replace(/（.+/g,'');
         }
         list_t=array_unique_b(list_t);
@@ -91,14 +91,14 @@ function same_ingredient_meishichina_recipe(return_list=false){
     ingredient_d.sort(function (a,b){return zh_sort_b(a,b,false,0);});
     ingredient_d.sort(function (a,b){return a.length<b.length ? 1 : -1;});
     
-    for (let blxl=0;blxl<ingredient_d.length;blxl++){
+    for (let blxl=0,lent=ingredient_d.length;blxl<lent;blxl++){
         if (ingredient_d[blxl].length==2){
             ingredient_d=ingredient_d.slice(0,blxl);
             break;
         }
     }
 
-    for (let blxl=0;blxl<ingredient_d.length;blxl++){
+    for (let blxl=0,lent=ingredient_d.length;blxl<lent;blxl++){
         ingredient_d[blxl][0]=ingredient_d[blxl][0].replace(/_/g,' ');
         ingredient_d[blxl]=ingredient_d[blxl][0]+'：'+ingredient_d[blxl].slice(1,).join(' /// ');
     }

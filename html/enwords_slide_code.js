@@ -44,7 +44,7 @@ function menu_enslide(){
 
     var klmenu4=[];
     var menu_t=['已背单词','条件结果','鸡尾酒'];
-    for (let blxl=0;blxl<menu_t.length;blxl++){
+    for (let blxl=0,lent=menu_t.length;blxl<lent;blxl++){
         klmenu4.push('<span class="span_menu" onclick="'+str_t+'auto_enslide(\''+menu_t[blxl]+'\');">'+menu_t[blxl]+'</span>');
     }
     

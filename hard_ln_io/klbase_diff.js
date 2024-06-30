@@ -120,7 +120,7 @@ function compare_diff_b(do_submit=false){
     }
 
     var blfound=false;
-    for (let blxl=0;blxl<min_list.length;blxl++){
+    for (let blxl=0,lent=min_list.length;blxl<lent;blxl++){
         if (min_list[blxl]!==max_list[blxl]){
             blfound=true;
             result_t.push('<p>从第'+(blxl+1)+'行起不同</p>');

@@ -30,7 +30,7 @@ function sort_by_name_qrimg(desc=false){
     }
 
     var img_border=klmenu_check_b('span_img_border',false);        
-    for (let blxl=0;blxl<list_t.length;blxl++){
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         list_t[blxl]=style_qrimg(list_t[blxl][0],list_t[blxl][1],img_border);
     }
     document.getElementById('divhtml').innerHTML=list_t.join('');
@@ -230,7 +230,7 @@ function upload_qrimg(){
     var bljg='';
     var img_border=klmenu_check_b('span_img_border',false);        
     
-    for (let blxl=0;blxl<oimgs.length;blxl++){
+    for (let blxl=0,lent=oimgs.length;blxl<lent;blxl++){
         var ofile=oimgs[blxl];
         var error=upload_img_file_check_b(ofile);
         if (error!==''){

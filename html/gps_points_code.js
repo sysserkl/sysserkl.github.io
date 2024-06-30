@@ -81,7 +81,7 @@ GPS_GPSLongitude:120.45
 function upload_gpx_gps_points(){
     var otextarea=document.getElementById('textarea_gps_points');
     var ogpxfiles=document.getElementById('input_upload_gpx').files;
-    for (let blxl=0;blxl<ogpxfiles.length;blxl++){
+    for (let blxl=0,lent=ogpxfiles.length;blxl<lent;blxl++){
         var ofile=ogpxfiles[blxl];
         if (ofile.type!=='application/gpx+xml' && ofile.name.substring(ofile.name.toLowerCase().lastIndexOf('.gpx'),).toLowerCase()!=='.gpx'){
             otextarea.value = '非gpx文件：'+ofile.type+'\n'+ofile.name;  
@@ -151,7 +151,7 @@ function draw_gpx_gps_points(cslist=false,csname='',dotransform=false,draw_lines
             cscolors=cscolors.concat([-1,-1,-1]).slice(0,3);
         }
         var blfound_list=[];
-        for (let blxl=0;blxl<cscolors.length;blxl++){
+        for (let blxl=0,lent=cscolors.length;blxl<lent;blxl++){
             if (cscolors[blxl]==-1 || cscolors[blxl]==false){
                 blfound_list.push(blxl);
             }
@@ -178,14 +178,14 @@ function transform_dotlines_gps_points(cslist=false,cstype=false,write_to_textar
     }
     var bllon;
     var bllat;
-    for (let blxl=0;blxl<cslist.length;blxl++){
+    for (let blxl=0,lent=cslist.length;blxl<lent;blxl++){
         [bllon,bllat]=transform_lon_lat_one_dot_b(cstype,cslist[blxl][1],cslist[blxl][0]);
         cslist[blxl]=[bllat,bllon];
     }
 
     if (write_to_textarea){
         var list_t=[];
-        for (let blxl=0;blxl<cslist.length;blxl++){
+        for (let blxl=0,lent=cslist.length;blxl<lent;blxl++){
             list_t[blxl]=cslist[blxl][0]+','+cslist[blxl][1];
         }
         var otextarea=document.getElementById('textarea_gps_points');    
@@ -349,7 +349,7 @@ function dots_draw_gps_points(cslist){
     var bltype=document.getElementById('select_transform').value;  
     var bllon;
     var bllat;
-    for (let blxl=0;blxl<cslist.length;blxl++){
+    for (let blxl=0,lent=cslist.length;blxl<lent;blxl++){
         [bllon,bllat]=transform_lon_lat_one_dot_b(bltype,cslist[blxl][1],cslist[blxl][0]);
         cslist[blxl]=[bllat,bllon];
     }
@@ -662,7 +662,7 @@ function circle_distance_settings_gps_points(show_prompt=true){
 function circle_distance_show_gps_points(cslon,cslat){
     if (klmenu_check_b('span_show_circle',false)===false){return;}
     var list_t=circle_distance_settings_gps_points(false).split(';')
-    for (let blxl=0;blxl<list_t.length;blxl++){
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         list_t[blxl]=cslon+','+cslat+','+list_t[blxl];
     }
     if (klmenu_check_b('span_is_rectangle',false)){
@@ -772,7 +772,7 @@ function gpx_file_selection_gps_points(cskeys=''){
     len_list=object2array_b(len_list,true);
     len_list.sort(function (a,b){return zh_sort_b(a,b,false,0);});
     var province_list=[];
-    for (let blxl=0;blxl<len_list.length;blxl++){
+    for (let blxl=0,lent=len_list.length;blxl<lent;blxl++){
         if (!len_list[blxl][0].includes('_')){
             province_list.push([len_list[blxl][0],len_list[blxl][1]]);
         }
@@ -789,7 +789,7 @@ function gpx_file_selection_gps_points(cskeys=''){
         oinfo.innerHTML='';
     } else {
         var bljg='<div style="column-count:'+(ismobile_b()?'2':'4')+';">\n'+array_2_li_b(len_list)+'<p><b>Total：</b>'+(len_total/1000).toFixed(3)+'公里</p>\n</div>\n';
-        for (let blxl=0;blxl<province_list.length;blxl++){
+        for (let blxl=0,lent=province_list.length;blxl<lent;blxl++){
             province_list[blxl]=(blxl+1)+'.'+province_list[blxl][0]+'：'+(province_list[blxl][1]/1000).toFixed(3)+'公里';
         }
         bljg=bljg+'<hr />\n<p><b>省份排序：</b>'+province_list.join(' ')+'</p>\n';
@@ -1084,7 +1084,7 @@ function gpx_list_gps_points(cstype=''){
                 result_t.push([key,gpx_files_district_global[key].length]);
             }
             result_t.sort(function (a,b){return a[1]>b[1] ? 1 : -1;});
-            for (let blxl=0;blxl<result_t.length;blxl++){
+            for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
                 if (blxl>=50 && result_t[blxl][1]>0){
                     result_t=result_t.slice(0,blxl);
                     break;
@@ -1335,7 +1335,7 @@ function lonlat_2_latlon_gps_points(){
 function latlon_2_gpx_gps_points(do_save=false){
     var csstr=document.getElementById('textarea_gps_points').value.trim();
     var list_t=horizontal_delimiter_split_gps_points_b(csstr);
-    for (let blxl=0;blxl<list_t.length;blxl++){
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         if (list_t[blxl].trim()==''){continue;}
         list_t[blxl]=data_lines_2_latlon_gps_points_b(list_t[blxl],'latlon'); //返回结果数组每一个元素都是 [lat,lon] 格式 - 保留注释
         list_t[blxl]=latlon_2_gpx_file_leaflet_b(list_t[blxl],'line'+blxl,false);
@@ -1379,7 +1379,7 @@ function district_search_gps_points(cskeys=false,show_html=true){
         result_t.push([item[6]+','+item[5],item[4]]);
     }
     result_t.sort(function (a,b){return zh_sort_b(a,b,false,1);});            
-    for (let blxl=0;blxl<result_t.length;blxl++){
+    for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
         result_t[blxl]=result_t[blxl].join('@');
     }
     if (show_html){
@@ -1444,7 +1444,7 @@ function batch_2points_distance_list_gps_points(){
         document.getElementById('div_status').innerHTML='只显示前10000条记录';
         distance_list=distance_list.slice(0,10000);
     }
-    for (let blxl=0;blxl<distance_list.length;blxl++){
+    for (let blxl=0,lent=distance_list.length;blxl<lent;blxl++){
         distance_list[blxl]='<p>'+(blxl+1)+'. '+distance_list[blxl][1].join('——')+': '+distance_list[blxl][0].toFixed(2)+'公里</p>';
     }
     var blbuttons='<p>'+close_button_b('divhtml','')+'</p>';
@@ -1679,7 +1679,7 @@ function lat_lon_group_visible_gps_points(is_remove=false){
 
     var blarray=(is_remove?group_out:group_in);
     
-    for (let blxl=0;blxl<blarray.length;blxl++){
+    for (let blxl=0,lent=blarray.length;blxl<lent;blxl++){
         blarray[blxl]=(blarray[blxl][1]==''?'-----':'--- '+blarray[blxl][1]+' ---')+'\n'+blarray[blxl][0].trim();
     }
     otextarea.value=blarray.join('\n');
@@ -1735,7 +1735,7 @@ function baidu_data_transform_gps_points(cstype){
     var list_t=transform_lng_lat_dots_b(otextarea.value,cstype);
     var result_t=[];
     for (let one_line of list_t){
-        for (let blxl=0;blxl<one_line.length;blxl++){
+        for (let blxl=0,lent=one_line.length;blxl<lent;blxl++){
             one_line[blxl]=one_line[blxl].join(' ');
         }
         result_t.push(one_line);
@@ -1749,7 +1749,7 @@ function lng_lat_gps_points(){
     var list_t=transform_lng_lat_dots_b(otextarea.value,'');
     for (let one_line of list_t){
         if (one_line.length==0){continue;}    
-        for (let blxl=0;blxl<one_line.length;blxl++){
+        for (let blxl=0,lent=one_line.length;blxl<lent;blxl++){
             one_line[blxl]=[one_line[blxl][1],one_line[blxl][0]];
         }
         draw_gpx_gps_points(one_line,'',true);

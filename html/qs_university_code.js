@@ -13,7 +13,7 @@ function init_qs_rank(){
     qs_university_raw_global=obj2array_rank_b(qs_university_raw_global,-1);    
     
     var t0 = performance.now();
-    for (let blxl=0;blxl<qs_university_raw_global.length;blxl++){
+    for (let blxl=0,lent=qs_university_raw_global.length;blxl<lent;blxl++){
         for (let col=1;col<=2;col++){
             qs_university_raw_global[blxl][col]=qs_university_raw_global[blxl][col].replace(/,,/, ',');
             qs_university_raw_global[blxl][col]=qs_university_raw_global[blxl][col].replace(/\s{2,}/, ' ');
@@ -150,7 +150,7 @@ function search_qs_rank(cskey=false,csreg=-1){
 function array_2_html_qs_rank(csarray,table_id='table_qs_rank',only_tr=false,show_html=true){
     var bljg=[];
     
-    for (let blxl=0;blxl<csarray.length;blxl++){
+    for (let blxl=0,lent=csarray.length;blxl<lent;blxl++){
         var item=csarray[blxl];
         var blstr='';
         blstr=blstr+'<td align="center">'+item[0]+'</td>';
@@ -227,7 +227,7 @@ function menu_qs_rank(){
     [menu_years,menu_district]=year_district_list_rank_b(qs_university_raw_global,5,2);
     menu_years.reverse();
     
-    for (let blxl=0;blxl<menu_years.length;blxl++){
+    for (let blxl=0,lent=menu_years.length;blxl<lent;blxl++){
         menu_years[blxl]='<span class="span_menu" onclick="'+str_t+'search_qs_rank(\''+menu_years[blxl]+'\',false);">'+menu_years[blxl]+'</span>';   
     }
 
@@ -337,7 +337,7 @@ function flot_line_qs_rank(cslist,set_list,odiv){
             
             var list_t=object2array_b(category_dict[one_category][one_key],true,2);
             var blsum=0;
-            for (let blxl=0;blxl<list_t.length;blxl++){
+            for (let blxl=0,lenb=list_t.length;blxl<lenb;blxl++){
                 list_t[blxl][0]=parseInt(list_t[blxl][0]);
                 blsum=blsum+list_t[blxl][1];
             }
@@ -350,7 +350,7 @@ function flot_line_qs_rank(cslist,set_list,odiv){
         
         var bljg=[];
         var flot_list=[];
-        for (let blxl=0;blxl<line_list.length;blxl++){
+        for (let blxl=0,lenb=line_list.length;blxl<lenb;blxl++){
             flot_list.push([line_list[blxl][0]].concat(line_list[blxl][1]));
             var td_list=[];
             for (let item of line_list[blxl][1]){
@@ -398,7 +398,7 @@ function name_district_statistics_qs_rank(csarray=false,set_list=false,id_no='',
         var bljg=[];
         var others_count=0;
         var flot_list=[];
-        for (let blxl=0;blxl<csobj.length;blxl++){
+        for (let blxl=0,lent=csobj.length;blxl<lent;blxl++){
             var blprecent=(csobj[blxl][1]*100/cscount).toFixed(2)+'%';
             bljg.push('<tr><td>'+(blxl+1)+'</td><td>'+csobj[blxl][0]+'</td><td align="right">'+csobj[blxl][1]+'</td><td align="right">'+blprecent+'</td></tr>');
             if (max_rows>0 && blxl>=max_rows){
@@ -521,7 +521,7 @@ function jieba_name_qs_rank(){
     
     var caption=['校名重复','校名不重复'];
     var list_t=[name_list.join(' '),array_unique_b(name_list).join(' ')];
-    for (let blxl=0;blxl<list_t.length;blxl++){
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         var word_list=list_t[blxl].replace(/[\s\-\(\),]+/g, ' ').split(' ');
         var name_dict=list_category_count_b(word_list,false);
         name_dict.sort(function (a,b){return a[1]<b[1] ? 1 : -1});

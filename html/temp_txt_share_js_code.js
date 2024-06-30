@@ -47,7 +47,7 @@ function sync_pages_batch_open_js_tts(is_iframe=false){
         var buttons_t=[];
         var result_t=[];
         var button_str,iframe_str;
-        for (let blxl=0;blxl<list_t.length;blxl++){
+        for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
             [button_str,iframe_str]=iframe_generate_b(blxl,list_t[blxl],list_t[blxl]);
             buttons_t.push(button_str);
             result_t.push(iframe_str);        

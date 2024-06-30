@@ -124,16 +124,16 @@ function share_style_temp_txt_share_b(){
         var list_t=csstr.split('\n');
         var is_remove=(list_t[0].substring(0,2)=='# ');
         if (is_remove){
-            for (let blxl=0;blxl<list_t.length;blxl++){
+            for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
                 list_t[blxl]=list_t[blxl].replace(/^# (\d+日，)?/g,'');
             }
         } else if (add_day==false){
-            for (let blxl=0;blxl<list_t.length;blxl++){
+            for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
                 list_t[blxl]='# '+list_t[blxl];
             }
         } else {
             var today=date2str_b('').slice(-2,);
-            for (let blxl=0;blxl<list_t.length;blxl++){
+            for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
                 list_t[blxl]='# '+today+'日，'+list_t[blxl];
             }
         }    
@@ -221,7 +221,7 @@ function remove_notepad_tag_temp_txt_share_b(){
     //格式如下：
     //5/29/2024, 11:01:22 AM
     //=== notepad ===
-    for (let blxl=1;blxl<list_t.length;blxl++){
+    for (let blxl=1,lent=list_t.length;blxl<lent;blxl++){
         if (list_t[blxl]=='=== notepad ==='){
             if (list_t[blxl-1].match(/^\d{1,2}\/\d{1,2}\/\d{4}, \d{1,2}:\d{2}:\d{2} (AM|PM)$/)){
                 tag_list.add(blxl-1);
@@ -231,7 +231,7 @@ function remove_notepad_tag_temp_txt_share_b(){
     }
 
     var content_list=[];
-    for (let blxl=0;blxl<list_t.length;blxl++){
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         if (tag_list.has(blxl)){continue;}
         content_list.push(list_t[blxl]);
     }
@@ -258,7 +258,7 @@ function multi_rows_2_one_column_temp_txt_share_b(){
     
     var result_t=[];
     var new_row=[];
-    for (let blxl=0;blxl<list_t.length;blxl++){
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         if (blxl % rows == 0){
             if (new_row.length>0){
                 result_t.push(new_row.join('\t'));

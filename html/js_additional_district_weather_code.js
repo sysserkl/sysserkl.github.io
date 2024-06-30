@@ -4,7 +4,7 @@ function menu_more_district_weather(){
     table_th_jscm_global={'日期':'','最高气温℃':'right','最低气温℃':'right','天气':'','风向':''};
     
     var col_name_list=Object.keys(table_th_jscm_global);
-    for (let blxl=0;blxl<col_name_list.length;blxl++){
+    for (let blxl=0,lent=col_name_list.length;blxl<lent;blxl++){
         col_name_list[blxl]='<option value="'+blxl+'">'+col_name_list[blxl]+'</option>';
     }
     
@@ -182,7 +182,7 @@ function month_average_temperature_district_weather(only_dot=false){
     var py_dict_h={};
     var py_dict_l={};
     var tr_list=['<tr><th>年月</th><th align=right>最高温度平均值℃</th><th align=right>最低温度平均值℃</th><th align=right>统计天数</th></tr>'];
-    for (let blxl=0;blxl<ym_dict.length;blxl++){
+    for (let blxl=0,lent=ym_dict.length;blxl<lent;blxl++){
         ym_dict[blxl][1]=ym_dict[blxl][1]/ym_dict[blxl][3];
         ym_dict[blxl][2]=ym_dict[blxl][2]/ym_dict[blxl][3];
 
@@ -214,7 +214,7 @@ function month_average_temperature_district_weather(only_dot=false){
 function flot_line_temperature_district_weather(only_dot=false,csarr=false,legend_caption='温度'){
     function sub_flot_line_temperature_district_weather_flotarr(csdict,cscaption){
         for (let key in csdict){
-            for (let blxl=0;blxl<csdict[key].length;blxl++){
+            for (let blxl=0,lent=csdict[key].length;blxl<lent;blxl++){
                 csdict[key][blxl][0].setFullYear(2000);
             }
             
@@ -300,7 +300,7 @@ function integrity_district_weather(){
     var result_t=[];
     for (let one_date of not_found_date){
         var blfound=false;
-        for (let blxl=0;blxl<district_weather_global.length-1;blxl++){
+        for (let blxl=0,lent=district_weather_global.length-1;blxl<lent;blxl++){
             if (district_weather_global[blxl][0]<one_date &&  district_weather_global[blxl+1][0]>one_date){
                 result_t=[one_date, (district_weather_global[blxl][1]+district_weather_global[blxl+1][1])/2, (district_weather_global[blxl][2]+district_weather_global[blxl+1][2])/2, '', ''];
                 
@@ -320,7 +320,7 @@ function integrity_district_weather(){
     
     if (district_weather_global.length>1){
         for (let one_date of value_lost_date){
-            for (let blxl=0;blxl<district_weather_global.length;blxl++){
+            for (let blxl=0,lent=district_weather_global.length;blxl<lent;blxl++){
                 if (district_weather_global[blxl][0]!==one_date){continue;}
 
                 if (blxl==0){
@@ -371,7 +371,7 @@ function check_district_weather(show_html=true){
 
     var value_lost_date=[];
     var date_set=new Set();
-    for (let blxl=0;blxl<district_weather_global.length;blxl++){
+    for (let blxl=0,lent=district_weather_global.length;blxl<lent;blxl++){
         var arow=district_weather_global[blxl];
         var error='';
 

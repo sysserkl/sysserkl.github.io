@@ -5,7 +5,7 @@ function merge_rows_2_one_column_arr_analyze(){
     var list_t=otextarea.value.trim().split('\n');
     var bljg=[];
     var arow=[];
-    for (let blxl=0;blxl<list_t.length;blxl++){
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         if (blxl%cols==0){
             if (arow.length>0){
                 bljg.push(arow.join(interval_str));
@@ -147,7 +147,7 @@ function flot_lines_data_arr_analyze(){
         }
         
         var temp_t=item.slice(0,cskey);
-        for (let bly=cskey+1;bly<item.length;bly++){
+        for (let bly=cskey+1,lent=item.length;bly<lent;bly++){
             temp_t.push(item[bly]);
         }
         list_t['f_'+str_t].push(temp_t);
@@ -162,9 +162,9 @@ function flot_lines_data_arr_analyze(){
 }
 
 function lower_arr_analyze(){
-	for (let blxl=0;blxl<table_array_global.length;blxl++){
+	for (let blxl=0,lent=table_array_global.length;blxl<lent;blxl++){
 		if (Array.isArray(table_array_global[blxl])){
-			for (let bly=0;bly<table_array_global[blxl].length;bly++){
+			for (let bly=0,lenb=table_array_global[blxl].length;bly<lenb;bly++){
 				if (isNaN(table_array_global[blxl][bly])){
 					table_array_global[blxl][bly]=table_array_global[blxl][bly].toLowerCase();
 				}
@@ -201,7 +201,7 @@ function column_filter_arr_analyze(cssplit=false,do_update=true){
 	for (let item_t of table_array_global){
 		if (Array.isArray(item_t)){
 			var tmp_t=[];
-			for (let bly=0;bly<item_t.length;bly++){
+			for (let bly=0,lent=item_t.length;bly<lent;bly++){
                 if (exclude_no.length==0){
                     var is_include=false; //当只有 + 项时，默认删除 - 保留注释
                 } else {
@@ -298,7 +298,7 @@ function group_sum_arr_analyze(){
 	var result_t=row_count_or_sum_arr_analyze(group_no,sum_no,false);
 
     var delimiter=delimiter_get_arr_analyze();
-    for (let blxl=0;blxl<result_t.length;blxl++){
+    for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
         result_t[blxl]=result_t[blxl][0]+delimiter+result_t[blxl][1];
     }
             
@@ -353,7 +353,7 @@ function group_arr_analyze(showlist){
         for (let item of list_t){
                 bljg=bljg+'<h3>'+item[0]+' '+item[1]+'</h3>';
                 bljg=bljg+'<p>';
-                for (let bly=2;bly<item.length;bly++){
+                for (let bly=2,lent=item.length;bly<lent;bly++){
                     bljg=bljg+'<br />'+item[bly];
                 }
                 bljg=bljg+'</p>';
@@ -369,7 +369,7 @@ function group_arr_analyze(showlist){
 
 function time_value_cols_array_2_flot_lines_data_format_arr_analyze(){
     var col_list=document.getElementById('input_column1').value.trim().split(',');
-    for (let blxl=0;blxl<col_list.length;blxl++){
+    for (let blxl=0,lent=col_list.length;blxl<lent;blxl++){
         col_list[blxl]=parseInt(col_list[blxl])-1;
     }
     if (col_list.length!==2){return;}
@@ -394,7 +394,7 @@ function data_2_flot_arr_analyze(is_demo=false){
     function sub_data_2_flot_arr_analyze_row2arr(cslist){
         var row1=['Item'];
         var row2=[cslist[0]];
-        for (blno=1;blno<cslist.length;blno++){
+        for (blno=1,lent=cslist.length;blno<lent;blno++){
             if (Array.isArray(cslist[blno]) && cslist[blno].length==2){
                 row1.push(cslist[blno][0]);
                 row2.push(cslist[blno][1]);
@@ -404,7 +404,7 @@ function data_2_flot_arr_analyze(is_demo=false){
     }
 
     function sub_data_2_flot_arr_analyze_str2date(cslist){
-        for (blno=1;blno<cslist.length;blno++){
+        for (blno=1,lent=cslist.length;blno<lent;blno++){
             if (Array.isArray(cslist[blno]) && cslist[blno].length==2){
                 cslist[blno][0]=validdate_b(cslist[blno][0]);
             }
@@ -459,7 +459,7 @@ function data_2_flot_arr_analyze(is_demo=false){
             switch (bltype){
                 case 'flot lines':
                 case 'flot lines date':
-                    for (let blxl=0;blxl<list_t.length;blxl++){
+                    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
                         list_t[blxl]=eval('['+list_t[blxl]+']');
                         if (bltype=='flot lines date'){
                             list_t[blxl]=sub_data_2_flot_arr_analyze_str2date(list_t[blxl]);
@@ -480,7 +480,7 @@ function data_2_flot_arr_analyze(is_demo=false){
                     time_value_cols_array_2_flot_lines_data_format_arr_analyze();
                     break;
                 case 'pie':
-                    for (let blxl=0;blxl<list_t.length;blxl++){
+                    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
                         list_t[blxl]='{'+list_t[blxl]+'},'
                     }
                     list_t=eval('['+list_t.join('\n')+']');
@@ -491,7 +491,7 @@ function data_2_flot_arr_analyze(is_demo=false){
                 case 'two lines date':
                     list_t=list_t.slice(0,2);
                     unit_list=[];
-                    for (let blxl=0;blxl<list_t.length;blxl++){
+                    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
                         list_t[blxl]=eval('['+list_t[blxl]+']');
                         if (list_t[blxl].length>=3){
                             unit_list.push(list_t[blxl][1]);
@@ -664,7 +664,7 @@ function split_table_arr_analyze(split_type,cscount){
 function table2csv_arr_analyze(){
     if (table_array_global.length==0){return;}
     var list_t=[];
-    for (let blxl=0;blxl<table_array_global[0].length;blxl++){
+    for (let blxl=0,lent=table_array_global[0].length;blxl<lent;blxl++){
         list_t.push(blxl+1);     //忽略第一列的序号 - 保留注释
     }
     table_2_csv_b('#table_arrays',list_t);
@@ -743,7 +743,7 @@ function table_refresh_arr_analyze(cstype='reload'){
                 return;
             }
             
-            for (let blxl=0;blxl<table_array_global.length;blxl++){
+            for (let blxl=0,lent=table_array_global.length;blxl<lent;blxl++){
                 table_array_global[blxl]=table_array_global[blxl].concat(arr_t[blxl]);
             }
         }
@@ -798,7 +798,7 @@ function th_menu_arr_analyze(csno,thname=false){
 function remove_arr_analyze(cstype){
     if (table_array_global.length==0){return;}
     var colno=parseInt(document.getElementById('input_column1').value.trim())-1;
-    for (let blxl=0;blxl<table_array_global.length;blxl++){
+    for (let blxl=0,lent=table_array_global.length;blxl<lent;blxl++){
         if (colno<0 || colno>=table_array_global[blxl].length){continue;}
         if (typeof table_array_global[blxl][colno] == 'string'){
             table_array_global[blxl][colno]=table_array_global[blxl][colno].replace(new RegExp(cstype,'g'),'');
@@ -824,7 +824,7 @@ function ascii_table_arr_analyze(){
     var bllen_list=[];
     var blmax_col=0;
     for (let arow of table_array_global){
-        for (let blxl=0;blxl<arow.length;blxl++){
+        for (let blxl=0,lent=arow.length;blxl<lent;blxl++){
             if (bllen_list['c'+blxl]==undefined){
                 bllen_list['c'+blxl]=0;
             }
@@ -844,7 +844,7 @@ function ascii_table_arr_analyze(){
     result_t.push(hr_str);
     for (let arow of table_array_global){
         var row_str=[];
-        for (let blxl=0;blxl<arow.length;blxl++){
+        for (let blxl=0,lent=arow.length;blxl<lent;blxl++){
             var bllen=bllen_list['c'+blxl]-arow[blxl].replace(/[^\x00-\xff]/g,'01').length;
             row_str.push(' '.repeat(bllen)+arow[blxl]);
         }

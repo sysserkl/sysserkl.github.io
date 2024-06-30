@@ -135,7 +135,7 @@ function oclass_klcalendar(y,m){
     var dayCyclical = Date.UTC(y,m,1,0,0,0,0)/86400000+25567+10;
     var nStr1 = ['日','一','二','三','四','五','六','七','八','九','十','十一','十二'];
     
-    for (let blxl=0;blxl<this.length;blxl++){
+    for (let blxl=0,lent=this.length;blxl<lent;blxl++){
         if (lD>lX){
             sDObj = new Date(y,m,blxl+1);    //当月一日日期
             lunar_obj = new Lunar_klcalendar(sDObj);     //农历
@@ -344,7 +344,7 @@ function table_find_klcalendar(odom,cstagname,querystr,table_class='table_one_mo
 
 function display_date_info_klcalendar(odom,csday){
     var ospans=odom.querySelectorAll('span.span_td_day');
-    for (let blxl=0;blxl<ospans.length;blxl++){
+    for (let blxl=0,lent=ospans.length;blxl<lent;blxl++){
         if (ospans[blxl].innerText==csday){
             day_info_klcalendar(blxl,odom);
             break;
@@ -455,7 +455,7 @@ function day_info_klcalendar(td_number=false,odom=false){
     var theyear=parseInt(odom.querySelector('.select_year').value);
     var bigday_list=big_day_b(date_obj.odate);
     
-    for (let blxl=0;blxl<bigday_list.length;blxl++){
+    for (let blxl=0,lent=bigday_list.length;blxl<lent;blxl++){
         var item=bigday_list[blxl];
         if (item.match(/^\d{4}年/)==null){continue;}
         bigday_list[blxl]=bigday_list[blxl]+'<small style="color:grey;">('+(theyear-parseInt(item.substring(0,4)))+')</small>';
@@ -700,7 +700,7 @@ function memo_theday_klcalendar(csdate=false,is_important=false,with_hm=true){
         var list_t=memo_list_global;
     }
     
-    for (let blxl=0;blxl<list_t.length;blxl++){
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         var item=list_t[blxl];
         blstr=item[2];
         while (true){

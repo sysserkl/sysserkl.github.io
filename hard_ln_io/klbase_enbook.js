@@ -302,7 +302,7 @@ function new_words_continue_enbook_b(cslength,percent10length=0){
     var id_name=csbooklist_sub_global[csbookno_global][0]+' /// '+csbooklist_sub_global[csbookno_global][1]; 
     
     var blfound=false;
-    for (let blxl=0;blxl<newwords_statistics.length;blxl++){
+    for (let blxl=0,lent=newwords_statistics.length;blxl<lent;blxl++){
         if (newwords_statistics[blxl].startsWith(id_name+' /// ')){
             blfound=true;
             newwords_statistics[blxl]=id_name+' /// '+cslength+' /// '+percent10length;
@@ -569,14 +569,14 @@ function new_and_common_enwords_book_b(csresult,cslength,common_max){
     csresult.sort(function (a,b){return a[1]<b[1] ? 1 : -1;});
     
     var common_set=[];
-    for (let blxl=0;blxl<csresult.length;blxl++){
+    for (let blxl=0,lent=csresult.length;blxl<lent;blxl++){
         if (csresult[blxl][1]<=1){
             common_set=csresult.slice(0,blxl);
             break;
         }
     }
     
-    for (let blxl=0;blxl<common_set.length;blxl++){
+    for (let blxl=0,lent=common_set.length;blxl<lent;blxl++){
         common_set[blxl]=common_set[blxl][0];
     }
     common_set=new Set(common_set);
@@ -585,7 +585,7 @@ function new_and_common_enwords_book_b(csresult,cslength,common_max){
     
     var common_list=[];
     var new_t=[];
-    for (let blxl=0;blxl<csresult.length;blxl++){
+    for (let blxl=0,lent=csresult.length;blxl<lent;blxl++){
         var item=csresult[blxl];
         common_list.push('"'+specialstr_lt_gt_j(item[0])+'",');
         

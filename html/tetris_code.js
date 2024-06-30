@@ -19,12 +19,10 @@ function moveDown_tetris(){
     }
 
     //piecelock
-    for (let r = 0; r < current_brick_pattern_global.length; r++){
-        for (let c = 0; c < current_brick_pattern_global.length; c++){
+    for (let r = 0,lent= current_brick_pattern_global.length; r <lent; r++){
+        for (let c = 0,lenb= current_brick_pattern_global.length; c <lenb; c++){
             // we skip the background_color_global square_size_globaluares
-            if (!current_brick_pattern_global[r][c]){
-                continue;
-            }
+            if (!current_brick_pattern_global[r][c]){continue;}
             // pieces to lock on top = game over
             if (position_y_global + r < 0){
                 alert('Game Over');
@@ -105,13 +103,13 @@ function randomPiece_tetris(){
 function draw_board_next_tetris(){
     var list_t=[];
     
-    for (let r=0;r<board_next_global.length;r++){
-        for (let c=0;c<board_next_global[0].length;c++){
+    for (let r=0,lent=board_next_global.length;r<lent;r++){
+        for (let c=0,lenb=board_next_global[0].length;c<lenb;c++){
             board_next_global[r][c]=background_color_global;
         }
     }
     
-    for (var blxl=0;blxl<3;blxl++){
+    for (let blxl=0;blxl<3;blxl++){
         var one_pattern=pattern_list_global[blxl];
 
         var piece4 = one_pattern[0];
@@ -119,8 +117,8 @@ function draw_board_next_tetris(){
         var current_piece = piece4[piece4_no];
         var thecolor=one_pattern[2];    
     
-        for (let r=0;r<current_piece.length;r++){
-            for (let c=0;c<current_piece.length;c++){
+        for (let r=0,lent=current_piece.length;r<lent;r++){
+            for (let c=0,lenb=current_piece.length;c<lenb;c++){
                 if (current_piece[r][c]==0){
                     board_next_global[r+blxl*5][c]=background_color_global;
                 } else {
@@ -131,8 +129,8 @@ function draw_board_next_tetris(){
     }
 
     var ctx_next = document.getElementById('tetris_next').getContext('2d');    
-    for (let r=0;r<board_next_global.length;r++){
-        for (let c=0;c<board_next_global[0].length;c++){
+    for (let r=0,lent=board_next_global.length;r<lent;r++){
+        for (let c=0,lenb=board_next_global[0].length;c<lenb;c++){
             drawsquare_tetris(ctx_next,c,r,board_next_global[r][c]);
         }
     }
@@ -140,8 +138,8 @@ function draw_board_next_tetris(){
 
 function piecefill_tetris(cscolor){
     var ctx_current = document.getElementById('tetris_current').getContext('2d');
-    for (let r = 0; r < current_brick_pattern_global.length; r++){
-        for (let c = 0; c < current_brick_pattern_global.length; c++){
+    for (let r = 0,lent= current_brick_pattern_global.length; r <lent; r++){
+        for (let c = 0,lenb= current_brick_pattern_global.length; c <lenb; c++){
             // we draw only occupied square_size_globaluares
             if ( current_brick_pattern_global[r][c]){
                 drawsquare_tetris(ctx_current,position_x_global + c,position_y_global + r, cscolor);
@@ -151,8 +149,8 @@ function piecefill_tetris(cscolor){
 }
 
 function collision_tetris(x,y,piece){
-    for (let r = 0; r < piece.length; r++){
-        for (let c = 0; c < piece.length; c++){
+    for (let r = 0,lent= piece.length; r <lent; r++){
+        for (let c = 0,lenb= piece.length; c <lenb; c++){
             // if the square_size_globaluare is 0(empty), we skip it.
             if (!piece[r][c]){continue;}
             // coordinates of the piece after movement

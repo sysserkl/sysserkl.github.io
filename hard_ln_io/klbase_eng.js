@@ -19,7 +19,7 @@ function en_style_b(table_compare=false){
 function en_font_menu_b(str_t){
     var klmenu_font=['<span class="span_menu" onclick="'+str_t+'en_font_set_b();">abcde</span>'];
     var en_font_list=letters52_style_list_b();
-    for (let blxl=0;blxl<en_font_list.length;blxl++){
+    for (let blxl=0,lent=en_font_list.length;blxl<lent;blxl++){
         klmenu_font.push('<span class="span_menu" onclick="'+str_t+'en_font_set_b('+blxl+');">'+en_font_list[blxl].slice(0,5).join('')+'</span>');
     }
     return klmenu_font;
@@ -113,7 +113,7 @@ function words_queue_get_b(return_list=true){
 function words_queue_remove_b(remove_add=true,remove_edit=true){
     while (true){
         var blfound=false;
-        for (let blxl=0;blxl<enwords.length;blxl++){
+        for (let blxl=0,lent=enwords.length;blxl<lent;blxl++){
             if (remove_add && enwords[blxl][2].endsWith('🥚') || remove_edit && enwords[blxl][2].endsWith('✏')){
                 enwords.splice(blxl,1);
                 blfound=true;
@@ -143,7 +143,7 @@ function words_queue_read_b(reinit=false){
         one_word.push(item);
         if (one_word.length==3){    //每3行处理一次 - 保留注释
             var blfound=false;
-            for (let blxl=0;blxl<enwords.length;blxl++){
+            for (let blxl=0,lent=enwords.length;blxl<lent;blxl++){
                 if (enwords[blxl][0]==one_word[0]){
                     enwords[blxl][1]=one_word[1];
                     enwords[blxl][2]=one_word[2]+'✏';
@@ -168,12 +168,12 @@ function words_queue_read_b(reinit=false){
 function words_queue_reinit_b(word_name_list,removed_enwords){
     if (word_name_list.length>0 || removed_enwords){
         var t0 = performance.now();
-        for (let blxl=0;blxl<enwords.length;blxl++){
+        for (let blxl=0,lent=enwords.length;blxl<lent;blxl++){
             enwords[blxl][3]=blxl;
         }
         
         for (let one_word of word_name_list){
-            for (let blxl=0;blxl<enwords.length;blxl++){
+            for (let blxl=0,lent=enwords.length;blxl<lent;blxl++){
                 var blitem=enwords[blxl];
                 if (blitem[0]!==one_word){continue;}
 
@@ -234,7 +234,7 @@ function enwords_init_b(simple=false,load_enwords=true,run_fn=false){
     words_queue_read_b();   //导入临时添加的单词 - 保留注释
     
     if (simple){    //写入序号 - 保留注释
-        for (let blxl=0;blxl<enwords.length;blxl++){
+        for (let blxl=0,lent=enwords.length;blxl<lent;blxl++){
             if (enwords[blxl][1]==''){
                 enwords[blxl][1]='[null]';
             }
@@ -242,7 +242,7 @@ function enwords_init_b(simple=false,load_enwords=true,run_fn=false){
             enwords[blxl][3]=blxl;
         }
     } else {    //添加元素，写入 序号 和 asc 值数组(0,1,2 以及 0 的第一个字符) - 保留注释
-        for (let blxl=0;blxl<enwords.length;blxl++){
+        for (let blxl=0,lent=enwords.length;blxl<lent;blxl++){
             var blitem=enwords[blxl];
             if (blitem[1]==''){
                 enwords[blxl][1]='[null]';
@@ -295,7 +295,7 @@ function enwords_batch_select_b(csname,csvalue=0,batch_open_num=10){
     } else {
         var blamx=ocheckboxs.length;
     }
-    for (let blxl=0;blxl<ocheckboxs.length;blxl++){
+    for (let blxl=0,lent=ocheckboxs.length;blxl<lent;blxl++){
         ocheckboxs[blxl].checked=(blxl>=csvalue && blxl<blmax);
     }
 }
@@ -774,7 +774,7 @@ function en_sentence_result_b(wordname,csmax=-1,fontsize='',attachment_path='',w
         }
         
         for (let aword of wordname){
-            for (let blno=no_start;blno<en_sentence_global.length;blno++){
+            for (let blno=no_start,lent=en_sentence_global.length;blno<lent;blno++){
                 var aline=en_sentence_global[blno];            
                 if (csmax>0 && sentence_list['w_'+aword][1]>=csmax){continue;}
             
@@ -799,7 +799,7 @@ function en_sentence_result_b(wordname,csmax=-1,fontsize='',attachment_path='',w
         var bljg='';
         var blxl=0; //例句条数 - 保留注释
         var no_next=0;
-        for (let blno=no_start;blno<en_sentence_global.length;blno++){
+        for (let blno=no_start,lent=en_sentence_global.length;blno<lent;blno++){
             var aline=en_sentence_global[blno];
             var search_site=(aline[2].slice(-4,)=='_TLS'?txtlistsearch_site:wikisite);
             var do_break=false;
@@ -1008,7 +1008,7 @@ function en_words_temp_list_b(add_date_line=true,return_dead_words=false){
     }
     
     if (add_date_line){
-        for (let blxl=0;blxl<en_words_temp_global.length;blxl++){
+        for (let blxl=0,lent=en_words_temp_global.length;blxl<lent;blxl++){
             var item=en_words_temp_global[blxl];
             if (item.substring(0,4)=='=== ' && item.slice(-4,)==' ==='){
                 list_t.push([item,blxl]);
@@ -1087,11 +1087,11 @@ function en_sentence_source_b(cskey='',isreg=false){
             }
         }
     }
-    for (let blxl=0;blxl<list_t.length;blxl++){
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         list_t[blxl]=[
-            list_t[blxl].replace(/.*\[https?:\/\/(.*?)\/.*$/g,'$1'),
-            list_t[blxl].replace(/.*\[(https?:\/\/.*?)\s.*$/g,'$1'),
-            list_t[blxl].replace(/.*\[https?:\/\/.*?\s(.*)\].*$/g,'$1'),
+        list_t[blxl].replace(/.*\[https?:\/\/(.*?)\/.*$/g,'$1'),
+        list_t[blxl].replace(/.*\[(https?:\/\/.*?)\s.*$/g,'$1'),
+        list_t[blxl].replace(/.*\[https?:\/\/.*?\s(.*)\].*$/g,'$1'),
         ];
     }
     
@@ -1373,7 +1373,7 @@ function en_word_temp_get_b(cstype=''){
     //-----------------------
     en_words_temp_important_global=[];  //全局变量 - 保留注释
     en_words_temp_global=local_storage_get_b('enwords_temp',-1,true);
-    for (let blxl=0;blxl<en_words_temp_global.length;blxl++){
+    for (let blxl=0,lent=en_words_temp_global.length;blxl<lent;blxl++){
         if (en_words_temp_global[blxl].substring(0,1)=='*'){
             en_words_temp_global[blxl]=en_words_temp_global[blxl].substring(1,);
             en_words_temp_important_global.push(en_words_temp_global[blxl]);
@@ -1392,7 +1392,7 @@ function enwords_temp_2_local_storage_b(csarray){
     }
     
     if (Math.random()<0.1){ //偶尔扫描 - 保留注释
-        for (let blxl=1;blxl<(csarray.length-1)/2;blxl++){  //忽略第1个和最后一个元素，且只检查一半最旧的记录 - 保留注释
+        for (let blxl=1,lent=(csarray.length-1)/2;blxl<lent;blxl++){  //忽略第1个和最后一个元素，且只检查一半最旧的记录 - 保留注释
             if (sub_enwords_temp_2_local_storage_b_is_date(csarray[blxl-1]) && sub_enwords_temp_2_local_storage_b_is_date(csarray[blxl]) && sub_enwords_temp_2_local_storage_b_is_date(csarray[blxl+1])){
                 console.log(csarray[blxl]);
                 csarray[blxl]='';
@@ -1645,7 +1645,7 @@ function enwords_different_types_textarea_b(oselect){
                 if (group_count>100){
                     bljg='分组结果 '+group_count+' 超过 100 组';
                 } else {
-                    for (let blxl=0;blxl<raw_list.length;blxl=blxl+blcount){
+                    for (let blxl=0,lent=raw_list.length;blxl<lent;blxl=blxl+blcount){
                         bljg=bljg+'<br /><textarea style="height:3rem;" onclick="this.select();document.execCommand(\'copy\');">'+raw_list.slice(blxl,blxl+blcount).join('\n')+'</textarea>';
                     }
                 }
@@ -2115,7 +2115,7 @@ function sentence_split_b(csstr,csno=-1){   //sentence split - 保留注释
         }
         list_t=[].concat(result_t);
         
-        for (let blxl=0;blxl<list_t.length-1;blxl++){
+        for (let blxl=0,lent=list_t.length-1;blxl<lent;blxl++){
             if (['Mr.','Dr.','St.'].includes(list_t[blxl].trim().slice(-3,))){
                 list_t[blxl+1]=list_t[blxl]+list_t[blxl+1];
                 list_t[blxl]='';    
@@ -2178,7 +2178,7 @@ function sentence_search_b(csword='',csreg=false,csmax=500,show_button=true,csmo
     }
     
     var result_t=[];
-	for (let blxl=0;blxl<en_sentence_global.length;blxl++){
+	for (let blxl=0,lent=en_sentence_global.length;blxl<lent;blxl++){
         var aline=en_sentence_global[blxl];
         var line_split=sentence_split_b(aline[0],blxl);
         var do_break=false;
@@ -2335,7 +2335,7 @@ function recent_words_list_enwords_b(cspageno=0,words_count_per_page=100,isrando
             recent_bookmark=words_searched_arr_global[0][0];
         }
         var blat=0;
-        for (let blxl=0;blxl<words_searched_arr_global.length;blxl++){
+        for (let blxl=0,lent=words_searched_arr_global.length;blxl<lent;blxl++){
             if (words_searched_arr_global[blxl][0]==recent_bookmark){
                 blat=blxl;
                 break;
@@ -2348,7 +2348,7 @@ function recent_words_list_enwords_b(cspageno=0,words_count_per_page=100,isrando
     if (israndom){
         if (cspageno>1){
             words_searched_arr_global=words_searched_arr_global.slice(cspageno-1,);
-            for (let blxl=0;blxl<words_searched_arr_global.length;blxl++){
+            for (let blxl=0,lent=words_searched_arr_global.length;blxl<lent;blxl++){
                 if (words_searched_arr_global[blxl][0]==recent_bookmark){
                     words_searched_arr_global=words_searched_arr_global.slice(blxl,);                    
                     break;
@@ -2440,7 +2440,7 @@ function similar_enwords_b(csword,cshideno,cshidelineno,cshidesimilarno,csshow){
     words_searched_arr_global=[];
     
 	// door 分解为 d oo r 和 d o o r 最终合并为 d o r oo - 保留注释
-    for (let blxl=0;blxl<enwords.length;blxl++){
+    for (let blxl=0,lent=enwords.length;blxl<lent;blxl++){
 		var word2=enwords[blxl][0];
 		if (word2==csword){continue;}
 		var wordlength2=word2.length;
@@ -2463,7 +2463,7 @@ function similar_enwords_b(csword,cshideno,cshidelineno,cshidesimilarno,csshow){
 	bllist.sort(function(a,b){return b[0]>a[0] ? 1 : -1;});
     bllist=bllist.slice(0,100);
 	var bljg='';
-	for (let blxl=0;blxl<bllist.length;blxl++){
+	for (let blxl=0,lent=bllist.length;blxl<lent;blxl++){
 		var blno=bllist[blxl][1];
 
 		if (cshideno){
@@ -2621,7 +2621,7 @@ function enwords_definition_split_b(csdefinition,include_cn=false,remove_type=tr
     var def_list=csdefinition.split('; 📋 ');
     var result_t=[];
     var blstr='';
-    for (let blxl=0;blxl<def_list.length;blxl++){
+    for (let blxl=0,lent=def_list.length;blxl<lent;blxl++){
         var item=def_list[blxl];
         if (item.includes('〘') && item.includes('〙')){
             sub_enwords_definition_split_b_push(blstr+item);

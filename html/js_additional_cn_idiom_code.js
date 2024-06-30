@@ -11,7 +11,7 @@ function graph_relation_cn_idiom(){
     if (js_data_current_common_search_global.length==0){return;}
     var characters=[];
     var ids=[];
-    for (let blxl=0;blxl<js_data_current_common_search_global.length;blxl++){
+    for (let blxl=0,lent=js_data_current_common_search_global.length;blxl<lent;blxl++){
         var blvalue=js_data_current_common_search_global[blxl][0].trim();
         var blid='id'+blxl;
         ids.push(blid+' [label="'+blvalue+'",shape=circle];');

@@ -192,7 +192,7 @@ function menu_enwords_book(){
     klmenu_new.push(menu_container_b(str_t,format_list,'导入'));    
     
     var cache_type_list=['','随机','旧单词在前','单词数','标题和链接长度','标题首字母','稀有度','一对多','包含'];
-    for (let blxl=0;blxl<cache_type_list.length;blxl++){
+    for (let blxl=0,lent=cache_type_list.length;blxl<lent;blxl++){
         cache_type_list[blxl]='<option>'+cache_type_list[blxl]+'</option>';
     }
     
@@ -392,7 +392,7 @@ function search_enwords_book(cskey=false){
     if (blarr===false){return;}
     
     var result_t=common_search_b(cskey,isreg,blarr,1000)[0];
-    for (let blxl=0;blxl<result_t.length;blxl++){
+    for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
         result_t[blxl]=result_t[blxl][0].replace(/\s/g,'_');
     }
     document.getElementById('textarea_new_words1').value=result_t.join('\n');
@@ -583,7 +583,7 @@ function title_set_enwords_book(){
 
 function compare_statistics_enwords_book(value_old=false,value_new=false,csmax=-1,show_html=true){
     function sub_compare_statistics_enwords_book_get_list(cslist){
-        for (let blxl=0;blxl<cslist.length;blxl++){
+        for (let blxl=0,lent=cslist.length;blxl<lent;blxl++){
             var item=cslist[blxl];
             var list_temp=item.split(' /// ');
             //形如 24tian_tu_po_gao_kao_dgch3cc_343788 /// 24天突破高考大纲词汇3500(陈灿) /// 2426 - 保留注释
@@ -872,7 +872,7 @@ function exclude_enwords_book(){
     var blwords='';
     var textarea_value=[];
     var book_search=(klwebphp_path_b()===false?'book_search_js.htm':'../../../../book_search.php');
-    for (let blxl=0;blxl<list_t.length;blxl++){
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         var item=list_t[blxl].split(' /// ');
         if (item.length<2){continue;}
         if (bookname!==item[0]){

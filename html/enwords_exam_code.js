@@ -297,7 +297,7 @@ function input_klexam(cstestno='',cstype='all'){
         var important_list=en_word_temp_get_b('important');
 
         var include_no=new Set();
-        for (let blno=0;blno<enwords.length;blno++){
+        for (let blno=0,lent=enwords.length;blno<lent;blno++){
             var item=enwords[blno];
             var blat=en_words_temp_global.indexOf(item[0]);
             if (check_recent_klexam(blat,item[0],recent_type,recent_half_len,bllen,important_list,today_list)==false){continue;}
@@ -312,7 +312,7 @@ function input_klexam(cstestno='',cstype='all'){
         }
         console.log('input_klexam()',recent_type,blxl,Math.min(...include_no),Math.max(...include_no)); //此行保留 - 保留注释
     } else {
-        for (let blno=0;blno<enwords.length;blno++){
+        for (let blno=0,lent=enwords.length;blno<lent;blno++){
             var item=enwords[blno];
 
             en_words_no_list_global.push(item[3]);
@@ -400,7 +400,7 @@ function checkwords_klexam(){
 	var blbad=0;
     var ignore_count=0;
     var is_ignore_empty=checkbox_kl_value_b('o_ignore_empty');
-	for (let blxl=0;blxl<blinput.length;blxl++){
+	for (let blxl=0,lent=blinput.length;blxl<lent;blxl++){
 		var blno=blinput[blxl].getAttribute('id').substring(4,); 
 		var checko=document.getElementById('check'+blno); 
         for (let one_word of enwords){
@@ -432,7 +432,7 @@ function showwords_klexam(){
 	var blinput=document.body.querySelectorAll('input[id^=word]');
     var is_ignore_empty=checkbox_kl_value_b('o_ignore_empty');
     
-	for (let blxl=0;blxl<blinput.length;blxl++){
+	for (let blxl=0,lent=blinput.length;blxl<lent;blxl++){
         if (is_ignore_empty && blinput[blxl].value.trim()==''){continue;}
 		var blno=blinput[blxl].getAttribute('id').substring(4); 
 		document.getElementById('answer'+blno).style.display="inline";

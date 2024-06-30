@@ -18,7 +18,7 @@ function menu_lt_plans(){
     
     var show_type=show_type_lt_plans();
     var option_list=['normal','simple','checklist','percent'];
-    for (let blxl=0;blxl<option_list.length;blxl++){
+    for (let blxl=0,lent=option_list.length;blxl<lent;blxl++){
         option_list[blxl]='<option'+(show_type==option_list[blxl]?' selected':'')+'>'+option_list[blxl]+'</option>';
     }
     
@@ -127,7 +127,7 @@ function local_storage_2_array_lt_plans(do_join_sort=false){
         return false;
     }
     
-    for (let blxl=0;blxl<result_t.length;blxl++){
+    for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
         result_t[blxl][3]=parseFloat(result_t[blxl][3]);
         result_t[blxl][5]=parseFloat(result_t[blxl][5]);
         result_t[blxl][6]=parseFloat(result_t[blxl][6]);    
@@ -362,7 +362,7 @@ function init_lt_plans(cskey='',reload=true){
     }
 
     if (cskey!==''){
-        for (let blxl=0;blxl<long_term_plans_global.length;blxl++){
+        for (let blxl=0,lent=long_term_plans_global.length;blxl<lent;blxl++){
             var item=long_term_plans_global[blxl][1];   //项目名称 - 保留注释
             blfound=str_reg_search_b(item,cskey,isreg);
             if (blfound==-1){break;}
@@ -371,7 +371,7 @@ function init_lt_plans(cskey='',reload=true){
             }
         }
     } else {
-        for (let blxl=0;blxl<long_term_plans_global.length;blxl++){
+        for (let blxl=0,lent=long_term_plans_global.length;blxl<lent;blxl++){
             draw_lt_plans(blxl);
         }
     }
@@ -383,7 +383,7 @@ function change_lt_plans(csid,csnumber){
     var list_t=['项目编号','项目名称','起始日期','初值','结束日期','终值','当前值'];
     if (csnumber<1 || csnumber>=list_t.length){return;}
     
-    for (let blxl=0;blxl<long_term_plans_global.length;blxl++){
+    for (let blxl=0,lent=long_term_plans_global.length;blxl<lent;blxl++){
         var item=long_term_plans_global[blxl];
         if (item[0]==csid){
             if (csnumber!==list_t.length-1){

@@ -97,7 +97,7 @@ function menu_bible(){
     
     var color_menu=[];
     var list_t=['default'].concat(popular_colors_b());
-    for (let blxl=0;blxl<list_t.length;blxl++){
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         var item=list_t[blxl];
         color_menu.push('<span class="span_menu" onclick="'+'change_colors_b(\''+item+'\');" style="color:'+item.split(',')[0]+';background-color:'+item.split(',')[1]+';">'+(blxl+1)+'. '+item+'</span>');
     }
@@ -216,7 +216,7 @@ function compare_data_bible(){
         var list2=str2.split('');
         if (list1.length==list2.length){
             var no_list=[];
-            for (let blxl=0;blxl<list1.length;blxl++){
+            for (let blxl=0,lent=list1.length;blxl<lent;blxl++){
                 if (list1[blxl]==list2[blxl]){continue;}
                 no_list.push(blxl);
             }
@@ -472,7 +472,7 @@ function reading_statistics_bible(do_alert=true){
 
 function chapter_relative_bible(event,csno){
     var bljg=[];
-    for (let blxl=0;blxl<chapter_global.length;blxl++){
+    for (let blxl=0,lent=chapter_global.length;blxl<lent;blxl++){
         if (blxl<csno-3 || blxl>csno+3){continue;}
         var item=chapter_global[blxl];
         var blstr='<p>';
@@ -588,7 +588,7 @@ function search_bible(cskey='',csstartno=0,fav_start=1,csmax=500){
     var chapter_no_current=-1;
     
     current_search_no_global=new Set();
-    for (let blxl=csstartno;blxl<kjv.length;blxl++){
+    for (let blxl=csstartno,lent=kjv.length;blxl<lent;blxl++){
         var item=kjv[blxl];
         if (item.substring(0,3)=='== ' && item.slice(-3,)==' =='){
             h2=blxl;
@@ -752,7 +752,7 @@ function word_frequency_bible(ospan=false,scroll_to_textarea=false){
     
     result_t=object2array_b(result_t,true);
     result_t.sort(function(a,b){return a[1]<b[1] ? 1 : -1;});
-    for (let blxl=0;blxl<result_t.length;blxl++){
+    for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
         if (result_t[blxl][1]==1){
             result_t=result_t.slice(0,blxl);
             break;
@@ -766,7 +766,7 @@ function word_frequency_bible(ospan=false,scroll_to_textarea=false){
 
 function search_statistics_bible(cscolumn=-1,hidezero=false){
     var blchapter={};
-    for (let blxl=0;blxl<chapter_global.length;blxl++){
+    for (let blxl=0,lent=chapter_global.length;blxl<lent;blxl++){
         var one_chapter_name=chapter_global[blxl][1];
         blchapter[one_chapter_name]=[blxl,0];
     }
@@ -775,7 +775,7 @@ function search_statistics_bible(cscolumn=-1,hidezero=false){
         var blvalue=parseInt(item);
         if (blvalue<0){continue;}
         var blfound=false;
-        for (let blxl=0;blxl<chapter_global.length;blxl++){
+        for (let blxl=0,lent=chapter_global.length;blxl<lent;blxl++){
             var one_chapter_number=chapter_global[blxl][0];
             if (blvalue<one_chapter_number && blxl>0){
                 var prev_chapter_name=chapter_global[blxl-1][1];
@@ -848,7 +848,7 @@ function fav_sort_bible(csarray){
 function fav_all_bible(){
     var t0=performance.now();   
     var result_t=[];
-    for (let blxl=0;blxl<chapter_global.length;blxl++){
+    for (let blxl=0,lent=chapter_global.length;blxl<lent;blxl++){
         var startline=chapter_global[blxl][0];
         if (blxl+1<chapter_global.length){
             var endline=chapter_global[blxl+1][0]-1;
@@ -860,7 +860,7 @@ function fav_all_bible(){
     console.log('fav_all_bible 费时：'+(performance.now() - t0) + ' milliseconds');
     
     var aname=[];
-    for (let blxl=0;blxl<result_t.length;blxl++){
+    for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
         var trclass='';
         var item=result_t[blxl];
         result_t[blxl][2]='';
@@ -918,7 +918,7 @@ function fav_one_book_bible(startline,endline){
             }
         }
     }
-    for (let blxl=0;blxl+2<result_t.length;blxl++){
+    for (let blxl=0,lent=result_t.length;blxl+2<lent;blxl++){
         if (result_t[blxl][0].substring(0,4)=='=== ' && result_t[blxl+1][0]=='' && result_t[blxl+1][1]=='' && result_t[blxl+2][0].substring(0,2)=='=='){
             result_t[blxl]=['',''];
             result_t[blxl+1]=['',''];
@@ -1151,7 +1151,7 @@ function abbr_bible(csstr){
     ["The General Epistle of Jude", "Jude", "Jud", "Jue", "犹太书", "犹"],
     ["The Revelation of Saint John the Devine", "Revelation", "Rev", "Re", "Rv", "启示录", "启"],
     ];   
-    for (let blxl=0;blxl<bible_abbr.length;blxl++){
+    for (let blxl=0,lent=bible_abbr.length;blxl<lent;blxl++){
         if (bible_abbr[blxl].includes(csstr)){
             return blxl;
         }
@@ -1159,7 +1159,7 @@ function abbr_bible(csstr){
     
     if (csstr.match(/[a-zA-Z]/)!==null){
         csstr=csstr.toLowerCase();
-        for (let blxl=0;blxl<bible_abbr.length;blxl++){
+        for (let blxl=0,lent=bible_abbr.length;blxl<lent;blxl++){
             for (let item of bible_abbr[blxl]){
                 if (item.toLowerCase()==csstr){
                     return blxl;
@@ -1168,7 +1168,7 @@ function abbr_bible(csstr){
         }
     }
     
-    for (let blxl=0;blxl<bible_abbr.length;blxl++){
+    for (let blxl=0,lent=bible_abbr.length;blxl<lent;blxl++){
         for (let item of bible_abbr[blxl]){
             if (item.includes(csstr)){
                 return blxl;
@@ -1181,7 +1181,7 @@ function abbr_bible(csstr){
 function main_options_bible(){
     var bloption_kjv='<option value=-1></option>';
     var bloption_cn='<option value=-1></option>';
-    for (let blxl=0;blxl<chapter_global.length;blxl++){
+    for (let blxl=0,lent=chapter_global.length;blxl<lent;blxl++){
         var item=chapter_global[blxl];
         bloption_kjv=bloption_kjv+'<option value='+item[0]+'>';
         bloption_kjv=bloption_kjv+(blxl < 9 ? '0' : '')+(blxl+1)+'. '+item[1]+'</option>\n';
@@ -1201,7 +1201,7 @@ function main_options_bible(){
 function rand_chapter_list_bible(){
     var chapters=read_get_bible(-1);
     var zero_no_t=[];
-    for (let blxl=0;blxl<chapters.length;blxl++){
+    for (let blxl=0,lent=chapters.length;blxl<lent;blxl++){
         if (chapters[blxl]=='0'){
             zero_no_t.push(blxl);
         }
@@ -1231,7 +1231,7 @@ function rand_chapter_list_bible(){
 
 function row_no_2_chapter_index_no_bible(csno){
     var blmain=-1;
-    for (let blxl=1;blxl<chapter_global.length;blxl++){
+    for (let blxl=1,lent=chapter_global.length;blxl<lent;blxl++){
         if (csno<chapter_global[blxl][0]){
             blmain=blxl-1;
             break;
@@ -1271,7 +1271,7 @@ function main_with_sub_check_bible(){
 
     var main_row_no=-1;
     var sub_list=[];
-    for (let blxl=0;blxl<kjv.length;blxl++){
+    for (let blxl=0,lent=kjv.length;blxl<lent;blxl++){
         if (kjv[blxl].substring(0,4)=='=== ' && kjv[blxl].slice(-4,)==' ==='){
             sub_list.push(blxl);
         } else if (kjv[blxl].substring(0,3)=='== ' && kjv[blxl].slice(-3,)==' =='){
@@ -1303,7 +1303,7 @@ function main_with_sub_chapters_bible(main_line_no=false){
     
     if (main_line_no===false){
         var result_t={};
-        for (let blxl=0;blxl<main_no_list.length-1;blxl++){
+        for (let blxl=0,lent=main_no_list.length-1;blxl<lent;blxl++){
             var blat1=line_no_list.indexOf(main_no_list[blxl]);
             var blat2=line_no_list.indexOf(main_no_list[blxl+1]);
             result_t['m_'+main_no_list[blxl]]=line_no_list.slice(blat1+1,blat2);
@@ -1364,7 +1364,7 @@ function line_no_2_book_no(line_no=0){
     if (line_no<0 || line_no>=kjv.length){
         return -1;
     }
-    for (let blxl=0;blxl<chapter_global.length;blxl++){
+    for (let blxl=0,lent=chapter_global.length;blxl<lent;blxl++){
         var book_first_line_no=chapter_global[blxl][0];
         if (line_no<book_first_line_no && blxl>0){
             return blxl-1;
@@ -1399,7 +1399,7 @@ function chapter_one_bible(startno=0,endno=0){
     
     var colspan=((use_kjv_cn_global[0] && use_kjv_cn_global[1])?2:1);
     
-    for (let blxl=startno;blxl<cnbible_global.length;blxl++){
+    for (let blxl=startno,lent=cnbible_global.length;blxl<lent;blxl++){
         if (blxl==0 || found2==false && kjv[blxl].substring(0,3)=='== ' && kjv[blxl].slice(-3,)==' =='){
             continue;
         }
@@ -1696,7 +1696,7 @@ function idb_write_bible(db,adddata=true){
 }
 
 function main_sub_chapter_var_generate_bible(){
-    for (let blxl=0;blxl<kjv.length;blxl++){
+    for (let blxl=0,lent=kjv.length;blxl<lent;blxl++){
         var item=kjv[blxl];
         if (item.substring(0,3)=='== ' && item.slice(-3,)==' =='){
             chapter_global.push([blxl,item.substring(3,item.length-3),cnbible_global[blxl].substring(3,cnbible_global[blxl].length-3),0]);
@@ -1707,7 +1707,7 @@ function main_sub_chapter_var_generate_bible(){
     
     var main_sub_dict=main_with_sub_chapters_bible();
     
-    for (let blxl=0;blxl<chapter_global.length;blxl++){
+    for (let blxl=0,lent=chapter_global.length;blxl<lent;blxl++){
         var blkey='m_'+chapter_global[blxl][0];
         if (main_sub_dict[blkey]==undefined){
             console.log('error',blkey);
@@ -1871,7 +1871,7 @@ function web_sites_href_one_chapter_bible(website_name,book_no=0,chapter_no=0){
             break;
         case 'BibleGateway_CUVS':
             var BibleGateway_bookname=list_t[book_no].split('');
-            for (let name_no=0;name_no<BibleGateway_bookname.length;name_no++){
+            for (let name_no=0,lent=BibleGateway_bookname.length;name_no<lent;name_no++){
                 BibleGateway_bookname[name_no]=encodeURIComponent(BibleGateway_bookname[name_no]);
             }
             bljg='https://www.biblegateway.com/passage/?search='+BibleGateway_bookname.join('+')+'+'+(chapter_no+1)+'&version=CUVS';
@@ -1929,7 +1929,7 @@ function web_sites_href_list_bible(website_name){
     switch (website_name){
         case 'shengjing_jidujiao_com':
             var blhttp=(ismobile_b()?'sj':'shengjing');
-            for (let blxl=0;blxl<list_t.length;blxl++){
+            for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
                 result_t.push('<h3>'+(blxl+1)+'. '+chapter_global[blxl][2]+'</h3>');
                 for (let blno=0;blno<chapter_global[blxl][3];blno++){
                     result_t.push('<a class="a_oblong_box" '+blstyle+' href="http://'+blhttp+'.jidujiao.com/'+list_t[blxl]+(blno+1)+'.html" target=_blank>'+(blno+1)+'</a> ');
@@ -1937,10 +1937,10 @@ function web_sites_href_list_bible(website_name){
             }
             break;
         case 'BibleGateway_CUVS':
-            for (let blxl=0;blxl<list_t.length;blxl++){
+            for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
                 result_t.push('<h3>'+(blxl+1)+'. '+chapter_global[blxl][2]+'</h3>');
                 var BibleGateway_bookname=list_t[blxl].split('');
-                for (let name_no=0;name_no<BibleGateway_bookname.length;name_no++){
+                for (let name_no=0,lent=BibleGateway_bookname.length;name_no<lent;name_no++){
                     BibleGateway_bookname[name_no]=encodeURIComponent(BibleGateway_bookname[name_no]);
                 }
                 
@@ -1950,7 +1950,7 @@ function web_sites_href_list_bible(website_name){
             }                
             break;
         case 'BibleGateway_KJV':
-            for (let blxl=0;blxl<list_t.length;blxl++){
+            for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
                 result_t.push('<h3>'+(blxl+1)+'. '+chapter_global[blxl][1]+'</h3>');
                 var BibleGateway_bookname=list_t[blxl];
                 for (let blno=0;blno<chapter_global[blxl][3];blno++){
@@ -1960,7 +1960,7 @@ function web_sites_href_list_bible(website_name){
             break;
         case 'o-bible.com':
         case 'o-bible.com_kjv':
-            for (let blxl=0;blxl<list_t.length;blxl++){
+            for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
                 result_t.push('<h3>'+(blxl+1)+'. '+chapter_global[blxl][blen_cn]+'</h3>');                    
                 for (let blno=0;blno<chapter_global[blxl][3];blno++){
                     result_t.push('<a class="a_oblong_box" '+blstyle+' href="http://www.o-bible.com/cgibin/ob.cgi?version='+blver+'&book='+list_t[blxl]+'&chapter='+(blno+1)+'" target=_blank>'+(blno+1)+'</a> ');
@@ -1968,7 +1968,7 @@ function web_sites_href_list_bible(website_name){
             }
             break;
         case 'biblestudytools.com':
-            for (let blxl=0;blxl<list_t.length;blxl++){
+            for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
                 result_t.push('<h3>'+(blxl+1)+'. '+chapter_global[blxl][1]+'</h3>');                    
                 for (let blno=0;blno<chapter_global[blxl][3];blno++){
                     result_t.push('<a class="a_oblong_box" '+blstyle+' href="https://www.biblestudytools.com/kjv/'+list_t[blxl]+'/'+(blno+1)+'.html" target=_blank>'+(blno+1)+'</a> ');
@@ -1976,7 +1976,7 @@ function web_sites_href_list_bible(website_name){
             }
             break;    
         case 'hkbs':
-            for (let blxl=0;blxl<list_t.length;blxl++){
+            for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
                 result_t.push('<h3>'+(blxl+1)+'. '+chapter_global[blxl][2]+'</h3>');                    
                 for (let blno=0;blno<chapter_global[blxl][3];blno++){
                     result_t.push('<a class="a_oblong_box" '+blstyle+' href="'+href_head+list_t[blxl]+'/'+(blno+1)+'/" target=_blank>'+(blno+1)+'</a> ');
@@ -1984,9 +1984,9 @@ function web_sites_href_list_bible(website_name){
             }        
             break;
         case 'wwbible':
-            for (let blxl=0;blxl<list_t.length;blxl++){
+            for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
                 result_t.push('<h3>'+(blxl+1)+'. '+chapter_global[blxl][2]+'</h3>');                    
-                for (let blno=0;blno<list_t[blxl].length;blno++){
+                for (let blno=0,lenb=list_t[blxl].length;blno<lenb;blno++){
                     var blstr=encodeURIComponent('第'+NumberToChinese_b(blno+1)+'章');
                     result_t.push('<a class="a_oblong_box" '+blstyle+' href="https://www.wwbible.org/'+blstr+'-'+list_t[blxl][blno]+'" target=_blank>'+(blno+1)+'</a> ');
                 }
@@ -2006,7 +2006,7 @@ function chapter_all_check_bible(){
     var chapters=read_get_bible(-1);
 
     var sub_no=0;
-    for (let blxl=0;blxl<kjv.length;blxl++){
+    for (let blxl=0,lent=kjv.length;blxl<lent;blxl++){
         var item=kjv[blxl];
         if (item.substring(0,3)=='== ' && item.slice(-3,)==' =='){
             main_chapter=blxl;
@@ -2026,7 +2026,7 @@ function chapter_all_check_bible(){
     if (result_t.length==result2_t.length){
         console.log('行数：一致');
         var content_error=false;
-        for (let blxl=0;blxl<result_t.length;blxl++){
+        for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
             if (result_t[blxl]==result2_t[blxl]){continue;}
             console.log('内容：不一致',blxl,result_t[blxl], result2_t[blxl]);        
             content_error=true;    

@@ -20,7 +20,7 @@ function export_current_klphotos(){
     var name_str='';
     var list_t=array_split_by_col_b(photodata_global,[0]);
     if (confirm('是否encodeURIComponent？')){
-        for (let blxl=0;blxl<list_t.length;blxl++){
+        for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
             list_t[blxl]=encodeURIComponent(album_current_global[0])+'&s='+encodeURIComponent(list_t[blxl]);
         }
         name_str='== 分隔行 '+date2str_b('')+' ==\nalbum_s_keys\n';
@@ -216,7 +216,7 @@ function sort_date_count_klphotos(cstype){
         result_t.sort(function (a,b){return a[1]>b[1] ? 1 : -1;});
     }
     var bljg='';
-    for (let blxl=0;blxl<result_t.length;blxl++){
+    for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
         var item=result_t[blxl];
         bljg=bljg+'<p>'+(blxl+1)+'. <span class="span_date_count_photo">'+item[0]+': '+item[1]+'</span></p>';
     }
@@ -333,13 +333,7 @@ function month_day_line_klphotos(){
 }
 
 function rndsearch_klphotos(){
-	//photodata_global=[];
-	//var img_xl_tmp=0;
-	//for (let item of photo_source_global){
-		//img_xl_tmp=import_img_item_klphotos_b(item,img_xl_tmp);
-	//}
-	
-	for (let blxl=0;blxl<photodata_global.length;blxl++){
+	for (let blxl=0,lent=photodata_global.length;blxl<lent;blxl++){
 		photodata_global[blxl][1]='';
 	}
     

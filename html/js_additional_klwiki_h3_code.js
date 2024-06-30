@@ -138,7 +138,7 @@ function rank_2_html_klwiki_h3(cslist,cstype='',ignore_value=1){
     cslist.sort(function (a,b){return zh_sort_b(a,b,false,0);});
     cslist.sort(function (a,b){return a[1]<b[1] ? 1 : -1;});
     var blat=-1;
-    for (let blxl=0;blxl<cslist.length;blxl++){
+    for (let blxl=0,lent=cslist.length;blxl<lent;blxl++){
         if (cslist[blxl][1]==ignore_value){
             blat=blxl;
             break;
@@ -154,7 +154,7 @@ function rank_2_html_klwiki_h3(cslist,cstype='',ignore_value=1){
     var others=0;
     if (blat>-1){
         var others=0;
-        for (let blxl=blat;blxl<cslist.length;blxl++){
+        for (let blxl=blat,lent=cslist.length;blxl<lent;blxl++){
             others=others+cslist[blxl][1];
         }
         cslist=cslist.slice(0,blat);

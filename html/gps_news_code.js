@@ -148,7 +148,7 @@ function popup_gps_news(show_content=true){
     var blyear=date_2_ymd_b(false,'y');
     for (let key in district_list){
         district_list[key][2].sort().reverse();
-        for (let blxl=0;blxl<district_list[key][2].length;blxl++){
+        for (let blxl=0,lent=district_list[key][2].length;blxl<lent;blxl++){
             if (district_list[key][2][blxl].substring(0,4)==blyear && district_list[key][2][blxl].substring(8,11)==' | '){  //排除可能是 无日期 的记录 - 保留注释
                 district_list[key][2][blxl]=district_list[key][2][blxl].substring(4,);
             }

@@ -73,7 +73,7 @@ function batch_append_wp_pwa(line_style_list=false,result_t=false,show_in_textar
     }
     
     var blfound=false;
-    for (let blxl=0;blxl<line_style_list.length;blxl++){
+    for (let blxl=0,lent=line_style_list.length;blxl<lent;blxl++){
         var item=line_style_list[blxl];
         otextarea.value=item;
         read_lines_2_form_wp_pwa(false);
@@ -387,7 +387,7 @@ function count_wp_pwa(){
 
 function push_one_record_wp_pwa(csarray,csno,csstr){
     var one_record=[].concat(csarray);
-    for (let blxl=0;blxl<one_record.length;blxl++){
+    for (let blxl=0,lent=one_record.length;blxl<lent;blxl++){
         var blat=one_record[blxl].indexOf(':');
         if (blat<0){
             alert('缺失:\n'+csstr);
@@ -429,7 +429,7 @@ function localstorage2array_wp_pwa(){
     csdata.sort(function (a,b){return a[6]<b[6] ? 1 : -1;});
     var blamount=0;
     var blsum=0;
-    for (let blxl=0;blxl<csdata.length;blxl++){
+    for (let blxl=0,lent=csdata.length;blxl<lent;blxl++){
         csdata[blxl][0]=blxl;
         csdata[blxl][1]=blxl;
         blamount=blamount+csdata[blxl][11];
@@ -494,7 +494,7 @@ function edit_form_wp_pwa(csno,cs_asc_sum){
 
     if (!confirm('是否修改记录'+arow[4]+'？')){return;}
 
-    for (let blxl=0;blxl<arow.length;blxl++){
+    for (let blxl=0,lent=arow.length;blxl<lent;blxl++){
         var blid=items[blxl];
         if (blid.slice(-3,)==':忽略'){continue;}
         if (blxl>=11 && blxl<=13){
@@ -522,7 +522,7 @@ function array2localstorage_wp_pwa(){
         for (let blno of [0,1,7,8,9]){
             list_t[blno]='忽略';
         }
-        for (let blxl=0;blxl<list_t.length;blxl++){
+        for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
             list_t[blxl]=item_name[blxl]+':'+list_t[blxl];
         }
         result_t.push(list_t.join('\n')+'\n');

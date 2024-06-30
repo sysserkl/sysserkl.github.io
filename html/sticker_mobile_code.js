@@ -171,7 +171,7 @@ function color_box_klsticker_m(){
     var div_list=[];
     div_list.push('<div class="div_color_box" id="div_color_box_null" onclick="color_font_select_klsticker_m(\'colors\');"><p style="color:black;background-color:white;padding:0.2rem;">0</p><p style="color:black;background-color:white;margin:0;padding:0.2rem;">取消</p></div>');
     
-    for (let blxl=0;blxl<list_t.length;blxl++){
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         var item=list_t[blxl].split(',');
         if (item.length<3){continue;}
         div_list.push('<div class="div_color_box" id="div_color_box_'+blxl+'" onclick="change_scheme_klsticker_m(\''+(list_t[blxl]+','+blxl)+'\');color_font_select_klsticker_m(\'colors\');"><p style="color:'+item[0]+';background-color:'+item[1]+';padding:0.2rem;">'+(blxl+1)+'</p><p style="color:'+item[2]+';background-color:'+item[1]+';margin:0;padding:0.2rem;">正文</p></div>');
@@ -183,7 +183,7 @@ function webfont_box_klsticker_m(){
     var div_list=[];
     div_list.push('<div style="position:relative;float:left;border:0.1rem solid grey;margin:0.1rem;padding:0.2rem;color:black;background-color:white;cursor:pointer;" onclick="color_font_select_klsticker_m(\'webfonts\');">取消</div> ');
 
-    for (let blxl=0;blxl<webfont_global.length;blxl++){
+    for (let blxl=0,lent=webfont_global.length;blxl<lent;blxl++){
         var item=webfont_global[blxl];
         div_list.push('<img class="img_webfont_box" src="../jsdata/webfont/'+item.join('_')+'.jpeg" onclick="webfont_id_global=\''+item[2]+'\';webfont_set_klsticker_m();color_font_select_klsticker_m(\'webfonts\');" /> ');
     }

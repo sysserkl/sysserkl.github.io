@@ -27,7 +27,7 @@ function merge_data_learning_list(ospan){
     var flist=flist_get_learning_list();
     flist=flist.slice(1,);
     
-    for (let blxl=0;blxl<flist.length;blxl++){
+    for (let blxl=0,lent=flist.length;blxl<lent;blxl++){
         flist[blxl]=flist[blxl][1];
     }
 

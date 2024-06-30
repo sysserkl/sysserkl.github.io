@@ -37,7 +37,7 @@ function remove_or_search_textarea_words_ebs_b(odiv,cstype=''){
 
 function show_result_ebs_b(content_arr,book_arr,cskey,selepath){
     var blno=0;
-    for (let blxl=0;blxl<content_arr.length;blxl++){
+    for (let blxl=0,lent=content_arr.length;blxl<lent;blxl++){
         var item=content_arr[blxl];
         if (item.substring(0,3)=='BN:'){
             var bookid=item.substring(3,);
@@ -80,7 +80,7 @@ function txtbook_link_b(ospan,bookid){
     
     var blfound=false;
     var odoms=document.querySelectorAll('span.span_ebs_book_name, div.div_words_list_ebs');
-    for (let blxl=0;blxl<odoms.length-1;blxl++){
+    for (let blxl=0,lent=odoms.length-1;blxl<lent;blxl++){
         var one_dom=odoms[blxl];
         var blid=one_dom.getAttribute('id');
         if (!blid){continue;}

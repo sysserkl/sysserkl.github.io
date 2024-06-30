@@ -28,7 +28,7 @@ function cols_select_cnbond(){
     //result_t 每个元素形如：[ "日期", 1 ] 或 [ "10年", 9 ] - 保留注释
     var name_list=[];
     var flot_dict={};
-    for (let blxl=0;blxl<result_t.length;blxl++){
+    for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
         name_list.push('"'+result_t[blxl][0]+'"');
         flot_dict['c'+(result_t[blxl][1]-1)]=[result_t[blxl][0]];
         result_t[blxl]=result_t[blxl][1]-1;
@@ -37,7 +37,7 @@ function cols_select_cnbond(){
     var bljg=['['+name_list+'],'];
     for (let arow of js_data_current_common_search_global){
         var one_tr=[];
-        for (blxl=0;blxl<arow[0].length;blxl++){
+        for (blxl=0,lent=arow[0].length;blxl<lent;blxl++){
             if (result_t.includes(blxl)){
                 if (isNaN(arow[0][blxl])){
                     one_tr.push('"'+arow[0][blxl]+'"');
@@ -59,7 +59,7 @@ function cols_select_cnbond(){
     delete flot_dict['c0'];
     
     var list_t=Object.values(flot_dict);
-    for (let blxl=0;blxl<list_t.length;blxl++){
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         list_t[blxl][0]=list_t[blxl][0]+'#points:false#';
     }
     flot_lines_b(list_t,'div_status_common_sub',document.getElementById('input_legend_jsad_cnbond').value,true,'',document.getElementById('input_ymd_jsad_cnbond').value,'',2);
@@ -69,7 +69,7 @@ function col_rearrange_cnbond(){
     var list_t=[];
     for (let arow of js_data_current_common_search_global){
         new_row=[arow[0][0]];
-        for (let blxl=1;blxl<arow[0].length;blxl++){
+        for (let blxl=1,lent=arow[0].length;blxl<lent;blxl++){
             new_row.push(arow[0][blxl].toFixed(2));
         }
         list_t.push([new_row,arow[1]]);
@@ -88,7 +88,7 @@ function multi_year_compare_cnbond(){
         var bldate=item[0][0];
         var blyear=bldate.substring(0,4)+'年';
         
-        for (let blxl=1;blxl<item[0].length;blxl++){
+        for (let blxl=1,lent=item[0].length;blxl<lent;blxl++){
             if (type_dict['t_'+col_names[blxl]][blyear]==undefined){
                 type_dict['t_'+col_names[blxl]][blyear]=[];
             }
@@ -100,7 +100,7 @@ function multi_year_compare_cnbond(){
     var odiv=document.getElementById('div_status_common');
     var blbutton=close_button_b('div_status_common','','aclick');
     var flot_dom=[];
-    for (let blxl=1;blxl<col_names.length;blxl++){
+    for (let blxl=1,lent=col_names.length;blxl<lent;blxl++){
         flot_dom.push('<div>');
         flot_dom.push('<h4>'+col_names[blxl]+'期中国国债收益率</h4>');    
         flot_dom.push('<div id="div_status_common_sub_'+blxl+'" style="width:100%; height:600px;"></div>');
@@ -112,10 +112,10 @@ function multi_year_compare_cnbond(){
     var legend=document.getElementById('input_legend_jsad_cnbond').value;
     var ymd=document.getElementById('input_ymd_jsad_cnbond').value;
 
-    for (let blxl=1;blxl<col_names.length;blxl++){
+    for (let blxl=1,lent=col_names.length;blxl<lent;blxl++){
         var list_t=type_dict['t_'+col_names[blxl]];
         list_t=object2array_b(list_t,true);
-        for (let blno=0;blno<list_t.length;blno++){
+        for (let blno=0,lenb=list_t.length;blno<lenb;blno++){
             list_t[blno][0]=list_t[blno][0]+'#points:false#';
         }
         flot_lines_b(list_t,'div_status_common_sub_'+blxl,legend,true,'',ymd,'',2);

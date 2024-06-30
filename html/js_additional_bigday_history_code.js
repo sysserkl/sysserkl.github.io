@@ -38,7 +38,7 @@ function col_rearrange_bigday_history(){
         list_t[bldate].push(arow[0]);
     }
     list_t=object2array_b(list_t,true);
-    for (let blxl=0;blxl<list_t.length;blxl++){
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         var md=list_t[blxl].shift();
         md=('0'+md.split('月')[0]).slice(-2,)+'月'+('0'+md.split('月')[1]).slice(-3,);
         list_t[blxl]=[[md,list_t[blxl].join('<br />'),list_t[blxl].length],-1];
@@ -110,7 +110,7 @@ function statistics_bigday_history(cstype){
                 m_list[the_month]=m_list[the_month]+1;
             }
             result_t=object2array_b(m_list,true,2);
-            for (let blxl=0;blxl<result_t.length;blxl++){
+            for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
                 result_t[blxl][0]=parseInt(result_t[blxl][0]);
             }
             result_t.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});
@@ -127,7 +127,7 @@ function statistics_bigday_history(cstype){
                 y_list[one_year]=y_list[one_year]+1;
             }
             result_t=object2array_b(y_list,true,2);
-            for (let blxl=0;blxl<result_t.length;blxl++){
+            for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
                 result_t[blxl][0]=parseInt(result_t[blxl][0]);
             }
             result_t.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});

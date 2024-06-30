@@ -39,7 +39,7 @@ function file_load_rmrb_online(){
 
 function flist_get_rmrb_online(){
     var list_t=['194605_196612','196701_198712','198801_200312'];
-    for (let blxl=0;blxl<list_t.length;blxl++){
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         list_t[blxl]=[list_t[blxl],'../jsdata/rmrb_online/rmrb_online_'+list_t[blxl]+'_data.js'];
     }
     return list_t;
@@ -76,11 +76,11 @@ function statistics_rmrb_online(is_year=false){
         result_t.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});
         //---        
         if (!is_year){
-            for (let blxl=0;blxl<result_t.length;blxl++){
+            for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
                 result_t[blxl][0]=validdate_b(result_t[blxl][0]+'01');
             }
         } else {
-            for (let blxl=0;blxl<result_t.length;blxl++){
+            for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
                 result_t[blxl][0]=validdate_b(result_t[blxl][0]+'0101');
             }
         }
@@ -118,7 +118,7 @@ function statistics_rmrb_online(is_year=false){
         var textarea1=[];
         var textarea2=[];    
     
-        for (let blxl=0;blxl<textarea_data.length;blxl++){
+        for (let blxl=0,lent=textarea_data.length;blxl<lent;blxl++){
             var blname=textarea_data[blxl][0];
             var result_t=textarea_data[blxl].slice(1,);
             if (result_t[0][0]>blmin){
@@ -187,7 +187,7 @@ function merge_data_rmrb_online(ospan){
     var flist=flist_get_rmrb_online();
     flist=flist.slice(1,);
     
-    for (let blxl=0;blxl<flist.length;blxl++){
+    for (let blxl=0,lent=flist.length;blxl<lent;blxl++){
         flist[blxl]=flist[blxl][1];
     }
 

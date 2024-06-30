@@ -11,7 +11,7 @@ function local_storage_get_calculator(do_split=false){
     }
     
     var result_t=[];
-    for (let blxl=0;blxl<list_t.length;blxl++){
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         list_t[blxl]=list_t[blxl].split(' /// ');
         if (list_t[blxl].length!==3){continue;}
         result_t.push(list_t[blxl]);
@@ -90,7 +90,7 @@ function help_calculator(){
     'String.fromCodePoint(Math.round(Math.random()*20901+19968)) //随机汉字',
 
     ];
-    for (let blxl=0;blxl<list_t.length;blxl++){
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         var bltime=now_time_str_b(':',true);
         var blemoji=emoji_category_b('vegetable',blxl);
         [blvalue,blinfo]=value_calculator(list_t[blxl]);

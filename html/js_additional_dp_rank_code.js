@@ -21,7 +21,7 @@ function menu_more_dp_rank(){
     table_th_jscm_global={'城市':'','店名':'','评论人数':'right','人均消费￥':'right','类型':'','地址':'','推荐菜':''};
     
     var col_name_list=Object.keys(table_th_jscm_global);
-    for (let blxl=0;blxl<col_name_list.length;blxl++){
+    for (let blxl=0,lent=col_name_list.length;blxl<lent;blxl++){
         col_name_list[blxl]='<option value="'+blxl+'">'+col_name_list[blxl]+'</option>';
     }
     
@@ -43,7 +43,7 @@ function statistics_type_dp_rank(csno=4,add_city=false,sort_no=1){
         var result_t=object2array_b(csarray,false,2);
         result_t.sort(function (a,b){return zh_sort_b(a,b,false,0);});
         result_t.sort(function (a,b){return a[sort_no]<b[sort_no] ? 1 : -1;});
-        for (let blxl=0;blxl<result_t.length;blxl++){
+        for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
             result_t[blxl]='<tr><td>'+(blxl+1)+'</td><td>'+result_t[blxl][0]+'</td><td align=right>'+result_t[blxl][1]+'</td><td align=right>'+result_t[blxl][2]+'</td></tr>';
         }
         if (cshead!==''){

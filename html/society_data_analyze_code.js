@@ -83,7 +83,7 @@ function draw_lines_klsda(){
     var csreg=document.getElementById('input_reg').checked;
     var include_citys_t=document.getElementById('input_citys').value.trim();
     
-    var list_t=[];
+    var list_t={};
     var blat=analyze_item_year_global.indexOf(csyear);
     var year_section=analyze_item_year_global.slice(0,blat+1);
     for (let selected_item of selected_item_list){
@@ -96,12 +96,12 @@ function draw_lines_klsda(){
             } else {
                 var city_t=one_city_data[0];
             }
-            if (include_citys_t=='' ||blfound){        
+            if (include_citys_t=='' || blfound){        
                 if (list_t[city_t]==undefined){
                     list_t[city_t]=[city_t];
                 }
                 list_t[city_t]=one_city_data.slice(1,blat+1+1);
-                for (let blxl=0;blxl<list_t[city_t].length;blxl++){
+                for (let blxl=0,lenb=list_t[city_t].length;blxl<lenb;blxl++){
                     list_t[city_t][blxl]=[year_section[blxl],list_t[city_t][blxl]];
                 }
                 list_t[city_t].sort();
@@ -120,7 +120,7 @@ function draw_lines_klsda(){
     bljg=bljg+'</tr>';
     for (let key in list_t){
         bljg=bljg+'<tr class=odd><td class=blackline0>'+key+'</td>';
-        for (let blxl=1;blxl<list_t[key].length;blxl++){
+        for (let blxl=1,lent=list_t[key].length;blxl<lent;blxl++){
             bljg=bljg+'<td align=right class=blackline0>'+list_t[key][blxl][1].toFixed(2)+'</td>';
         }
         bljg=bljg+'</tr>';
@@ -135,7 +135,7 @@ function draw_lines_klsda(){
     
     var split_no=0;
     if (selected_item_len>1){
-        for (let blxl=1;blxl<list_t.length;blxl++){ //忽略第一组数据 - 保留注释
+        for (let blxl=1,lent=list_t.length;blxl<lent;blxl++){ //忽略第一组数据 - 保留注释
             var item_name_current=list_t[blxl][0];
             var item_name_prev=list_t[blxl-1][0];
             if (item_name_current.substring(item_name_current.lastIndexOf('('),)==item_name_prev.substring(item_name_prev.lastIndexOf('('),)){continue;}
@@ -211,18 +211,18 @@ function format_klsda(){
     analyze_item_data_global=analyze_item_data_global.trim().split('\n');
     var years=analyze_item_data_global.shift().trim().split(','); //年份 - 保留注释
     analyze_item_year_global=[];
-    for (let blxl=1;blxl<years.length;blxl++){
+    for (let blxl=1,lent=years.length;blxl<lent;blxl++){
         analyze_item_year_global.push(parseInt(years[blxl]));
     }
     //analyze_item_year_global 不能sort - 保留注释
     
     analyze_item_name_global=new Set();
-    for (let arow=0;arow<analyze_item_data_global.length;arow++){
+    for (let arow=0,lent=analyze_item_data_global.length;arow<lent;arow++){
         analyze_item_data_global[arow]=analyze_item_data_global[arow].trim().split(',');
         var item=analyze_item_data_global[arow][0];
         var blat=item.indexOf('_');
         analyze_item_name_global.add(item.substring(blat+1,));
-        for (let acol=1;acol<analyze_item_data_global[arow].length;acol++){
+        for (let acol=1,lenb=analyze_item_data_global[arow].length;acol<lenb;acol++){
             analyze_item_data_global[arow][acol]=parseFloat(analyze_item_data_global[arow][acol]);
         }
     }
@@ -234,7 +234,7 @@ function raw_data_check_klsda(){
     var year_list=[];
     for (let key in sda_raw_data_global){
         year_list.push(key);
-        for (let blxl=0;blxl<sda_raw_data_global[key].length;blxl++){
+        for (let blxl=0,lent=sda_raw_data_global[key].length;blxl<lent;blxl++){
             var arow=sda_raw_data_global[key][blxl];
             if (arow.length!==13){
                 console.log(key,arow);
@@ -263,9 +263,9 @@ function raw_data_check_klsda(){
     var result_t={};
     for (let ayear of year_list){
         var one_year_data=sda_raw_data_global[ayear];
-        for (let arow=1;arow<one_year_data.length;arow++){//忽略第一行 城市名称 - 保留注释
+        for (let arow=1,lent=one_year_data.length;arow<lent;arow++){//忽略第一行 城市名称 - 保留注释
             if (one_year_data[arow].slice(2,).join('')==''){continue;}    //所有值为空 - 保留注释
-            for (let acol=2;acol<one_year_data[arow].length;acol++){//忽略前2列（指标名称 单位） - 保留注释
+            for (let acol=2,lenb=one_year_data[arow].length;acol<lenb;acol++){//忽略前2列（指标名称 单位） - 保留注释
                 var city_name=one_year_data[0][acol];
                 var category_name=one_year_data[arow][0]+(one_year_data[arow][1]==''?'':'('+one_year_data[arow][1]+')');
                 if (result_t[city_name+'_'+category_name]==undefined){

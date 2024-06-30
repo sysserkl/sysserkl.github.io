@@ -56,7 +56,7 @@ function php_remove_klindex(cskey,is_local){
 function components_klindex(cskey=false,is_local=-1){
     function sub_components_klindex_table(csarray,tdcolumns){
         var bljg='';
-        for (let blxl=0;blxl<csarray.length;blxl++){
+        for (let blxl=0,lent=csarray.length;blxl<lent;blxl++){
             if (blxl % tdcolumns==0){
                 bljg=bljg+'</tr><tr>';
             }
@@ -116,7 +116,7 @@ function components_klindex(cskey=false,is_local=-1){
     }
     result_t.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});   //按key数字序号排序 - 保留注释
     result_t=result_t.slice(0,5);   //显示-1,0,1,2,3 - 保留注释
-    for (let blxl=0;blxl<result_t.length;blxl++){
+    for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
         result_t[blxl]=result_t[blxl][1];
     }
     document.getElementById('div_list').innerHTML=result_t.join('<hr />');

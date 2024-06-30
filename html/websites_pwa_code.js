@@ -243,7 +243,7 @@ function update_websites_pwa(){
 
     var hostname,bltail;
     var name_set=new Set();
-    for (let blxl=0;blxl<site_list.length;blxl++){
+    for (let blxl=0,lent=site_list.length;blxl<lent;blxl++){
         var blname=name_remove_quote_websites_b(site_list[blxl][1],site_list[blxl][2]);
         if (blname!==site_list[blxl][2] && !name_set.has(blname)){
             site_list[blxl][2]=blname;

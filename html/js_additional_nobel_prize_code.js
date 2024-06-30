@@ -15,7 +15,7 @@ function file_load_nobel_prize(){
 }
 
 function data_load_nobel_prize(array_name){
-    for (let blxl=0;blxl<nobel_prize_global.length;blxl++){
+    for (let blxl=0,lent=nobel_prize_global.length;blxl<lent;blxl++){
         if (nobel_prize_global[blxl].length==4){
             nobel_prize_global[blxl].push('');
         } else if (nobel_prize_global[blxl].length<4){
@@ -38,7 +38,7 @@ function data_load_nobel_prize(array_name){
         year_group['y_'+item[0]]['t_'+item[1]]=year_group['y_'+item[0]]['t_'+item[1]]+1;
     }
     
-    for (let blxl=0;blxl<nobel_prize_global.length;blxl++){
+    for (let blxl=0,lent=nobel_prize_global.length;blxl<lent;blxl++){
         var ykey='y_'+nobel_prize_global[blxl][0];
         var tkey='t_'+nobel_prize_global[blxl][1];
         if (isNaN(year_group[ykey][tkey])){
@@ -132,7 +132,7 @@ function pie_nobel_prize(countries,cstotal,odiv,hide_table_data=false,flot_id='d
     
     var flot_list=[];
     var others=0;
-    for (let blxl=0;blxl<countries.length;blxl++){
+    for (let blxl=0,lent=countries.length;blxl<lent;blxl++){
         if (blxl>=10){
             others=others+countries[blxl][1];
         } else {

@@ -162,7 +162,7 @@ function array_2_html_zjcompany(csarray,cssum=false,table_id='table_zj_company',
     var blaverage=(cssum===false?false:(cssum/csarray.length).toFixed(fraction_len));
     var average_count=0;
     
-    for (let blxl=0;blxl<csarray.length;blxl++){
+    for (let blxl=0,lent=csarray.length;blxl<lent;blxl++){
         var item=csarray[blxl];
         if (cssum!==false && item[2]>=blaverage){
             average_count=average_count+1;
@@ -232,7 +232,7 @@ function array_2_csv_zjcompany(){
     
     var fraction_len=fraction_len_zjcompany(search_result_zj_company_global);
     
-    for (let blxl=0;blxl<search_result_zj_company_global.length;blxl++){
+    for (let blxl=0,lent=search_result_zj_company_global.length;blxl<lent;blxl++){
         var item=search_result_zj_company_global[blxl];
         bljg.push((blxl+1)+',"'+specialstr_j(item[0])+'","'+specialstr_j(item[1])+'",'+item[2].toFixed(fraction_len)+','+item[3]+',"'+specialstr_j(item[4])+'"');
     }
@@ -362,11 +362,11 @@ function menu_zjcompany(){
     [menu_years,menu_district]=year_district_list_zjcompany();
     menu_years.reverse();
     
-    for (let blxl=0;blxl<menu_years.length;blxl++){
+    for (let blxl=0,lent=menu_years.length;blxl<lent;blxl++){
         menu_years[blxl]='<span class="span_menu" onclick="'+str_t+'search_zjcompany(\''+menu_years[blxl]+'\',false);">'+menu_years[blxl]+'</span>';   
     }
 
-    for (let blxl=0;blxl<menu_district.length;blxl++){
+    for (let blxl=0,lent=menu_district.length;blxl<lent;blxl++){
         menu_district[blxl]='<span class="span_menu" onclick="'+str_t+'search_zjcompany(\''+menu_district[blxl]+'\',false);">'+menu_district[blxl]+'</span>';   
     }
     

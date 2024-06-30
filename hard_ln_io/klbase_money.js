@@ -191,7 +191,7 @@ function template_get_money_b(){
     'input_address',    
     ];
     if (list_t.length!==id_list.length){return;}
-    for (let blxl=0;blxl<list_t.length;blxl++){
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         var odom=document.querySelector('input[name="'+id_list[blxl]+'"');
         if (!odom){
             console.log('not found '+id_list[blxl]);
@@ -265,7 +265,7 @@ function table_detail_money_b(cspage=1,csstatus='',cspagenum=-1,cssimple=false,c
     var blamount_total=0;
     var blamount_this_page=0;
     var blsum_this_page=0;
-	for (let blxl=0;blxl<csdata.length;blxl++){
+	for (let blxl=0,lent=csdata.length;blxl<lent;blxl++){
         var item=csdata[blxl];
         blamount_total=blamount_total+item[11];
 		if (cspage<=0 || blxl>=cspage-1 && blxl<cspage-1+cspagenum){
@@ -495,7 +495,7 @@ function elm_get_money_b(csstr,csdate,csaddress,to_line_style=false){
     var result_t=[];
     var blname='';
     var blamount='';
-    for (let blxl=0;blxl<list_t.length;blxl++){
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         var item=list_t[blxl].trim();
         if (item.includes('/')){    //含有单位，如 /盒 - 保留注释
             blname=item;
@@ -584,7 +584,7 @@ function import_elm_money_b(textarea_id='textarea_idb_content'){   //饿了么 -
     }
     
     var alert_str=[];
-    for (let blxl=0;blxl<result_t.length;blxl++){
+    for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
             alert_str.push((blxl+1)+'. '+result_t[blxl]);
     }
     if (!confirm('是否转换以下记录以备导入：\n'+alert_str.join('\n'))){return [false,false,''];}
@@ -654,7 +654,7 @@ function import_name_list_money_b(do_alert=true,textarea_id='textarea_idb_conten
     var otextarea=document.getElementById(textarea_id);
     var blstr=otextarea.value.trim();
     var list_t=blstr.match(/^名称:.*$/mg) || [];
-    for (let blxl=0;blxl<list_t.length;blxl++){
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         list_t[blxl]=(with_no?(blxl+1)+'. ':'')+list_t[blxl].substring(3,);
     }
     if (do_alert){
@@ -709,7 +709,7 @@ function import_merge_money_b(textarea_id='textarea_idb_content'){
     [otextarea,amount,total_price]=import_statistics_money_b(false,textarea_id);
     
     var blvalue=raw_list[0].split('\n');
-    for (let blxl=0;blxl<blvalue.length;blxl++){
+    for (let blxl=0,lent=blvalue.length;blxl<lent;blxl++){
         var list_t=blvalue[blxl].split(':');
         if (list_t[0]=='数量'){
             blvalue[blxl]='数量:'+amount.toFixed(3);
@@ -747,7 +747,7 @@ function import_filter_records_money_b(from_check_box=false,textarea_id='textare
     var is_include=(document.getElementById('select_wp_import_retain_or_remove').value=='保留');
     var included_t=[];
     var excluded_t=[];
-    for (let blxl=0;blxl<raw_list.length;blxl++){
+    for (let blxl=0,lent=raw_list.length;blxl<lent;blxl++){
         var item=raw_list[blxl];
         var blfound=str_reg_search_b(item,blstr,is_reg);
         if (blfound==-1){break;}

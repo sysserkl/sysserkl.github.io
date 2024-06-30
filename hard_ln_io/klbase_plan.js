@@ -528,7 +528,7 @@ function statistics_category_count_klplan_b(cslist,csbegin='',csend=''){
     result_t=object2array_b(result_t);
     result_t.sort(function (a,b){return a[2]<b[2] ? 1 : -1;});
    
-    for (let blxl=0;blxl<result_t.length;blxl++){
+    for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
         var blpercent=(result_t[blxl][2]*100/total_t['ALL'][1]).toFixed(2)+'%';
         result_t[blxl]='<tr><td align="right">'+(blxl+1)+'</td><td>'+result_t[blxl][0]+'</td><td>'+number_2_emoji_b(result_t[blxl][2])+'</td><td align="right">'+result_t[blxl][2]+'</td><td align="right">'+blpercent+'</td></tr>';
     }
@@ -637,7 +637,7 @@ function statistics_category_year_month_klplan_b(cslist,csat=0,csbegin='',csend=
 
     tr_list.sort(function (a,b){return a[1]<b[1] ? 1 : -1;});
 
-    for (let blxl=0;blxl<tr_list.length;blxl++){
+    for (let blxl=0,lent=tr_list.length;blxl<lent;blxl++){
         tr_list[blxl]='<td>'+(blxl+1)+'</td>'+tr_list[blxl][0]+'<td align="right">'+(tr_list[blxl][1]*100/all_total).toFixed(2)+'%</td>';
     }
     

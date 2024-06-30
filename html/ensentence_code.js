@@ -45,7 +45,8 @@ function menu_ensentence(){
 
     var klmenu_config=[
     '<span class="span_menu" onclick="'+str_t+'sentence_source_list_ensentence();">例句出处文章列表</span>',    
-    '<span class="span_menu" onclick="'+str_t+'host_count_ensentence();">例句出处统计</span>',   
+    '<span class="span_menu" onclick="'+str_t+'host_count_ensentence();">例句出处统计</span>',
+    '<span class="span_menu" onclick="'+str_t+'sentence_flag_get_ensentence(-1);">例句🚩统计</span>',
     '<span id="span_reg_ensentence" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ reg</span>',
     ];  
       
@@ -84,7 +85,7 @@ function sentence_source_list_ensentence(csstr=''){
     var isreg=klmenu_check_b('span_reg_ensentence',false);
 
     en_sentence_source_current_global=en_sentence_source_b(csstr,isreg);
-    for (let blxl=0;blxl<en_sentence_source_current_global.length;blxl++){
+    for (let blxl=0,lent=en_sentence_source_current_global.length;blxl<lent;blxl++){
         var item=en_sentence_source_current_global[blxl];
         en_sentence_source_current_global[blxl]='<a href=" '+item[1]+'" target=_blank>'+item[2]+'</a>';
     }
@@ -199,7 +200,7 @@ function host_count_ensentence(sort_no=-1){
     
     var sentence_len=en_sentence_global.length;
     var result_t=[];
-    for (let blxl=0;blxl<sentence_host_t.length;blxl++){
+    for (let blxl=0,lent=sentence_host_t.length;blxl<lent;blxl++){
         var one_tr=[];
         var article_host=article_host_t['h_'+sentence_host_t[blxl][0]];
         
@@ -228,7 +229,7 @@ function host_count_ensentence(sort_no=-1){
         result_t.sort(function (a,b){return a[sort_no]<b[sort_no] ? 1 : -1;});
     }
     
-    for (let blxl=0;blxl<result_t.length;blxl++){
+    for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
         var item=result_t[blxl];
         result_t[blxl]='<tr><td align=right>'+(blxl+1)+'</td><td>'+item[0]+'</td><td align=right>'+item[1]+'</td><td align=right>'+item[2].toFixed(2)+'%</td><td align=right>'+item[3]+'</td><td align=right>'+item[4].toFixed(2)+'%</td></tr>';
     }
@@ -242,7 +243,7 @@ function klwiki_txtbook_oldwords_diff_ensentence(){
         csarr_raw=Array.from(csarr);
         csarr_sorted=rare_old_words_sort_ensentence(csarr_raw);
         var blstr=enwords_array_to_html_b(csarr_sorted);
-        for (let blxl=0;blxl<csarr_raw.length;blxl++){
+        for (let blxl=0,lent=csarr_raw.length;blxl<lent;blxl++){
             csarr_raw[blxl]=[csarr_raw[blxl]];
         }
         blstr=blstr+enwords_js_wiki_textarea_b(csarr_raw);
@@ -275,7 +276,7 @@ function enwords_count_sentence_data_save_ensentence(){
     if (!otextarea){return;}
     if (!confirm('是否保存为enwords_count_sentence_data.js？')){return;}
     var list_t=otextarea.value.trim().split('\n');
-    for (let blxl=0;blxl<list_t.length;blxl++){
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         list_t[blxl]='"'+specialstr_j(list_t[blxl])+'",';
     }   
     string_2_txt_file_b('var en_sentence_count_global=[\n'+list_t.join('\n')+'\n];\n','enwords_count_sentence_data.js','txt');
@@ -285,7 +286,7 @@ function length_sort_ensentence(){
     var t0 = performance.now();
 
     var result_t=[];
-    for (let blno=0;blno<en_sentence_global.length;blno++){
+    for (let blno=0,lent=en_sentence_global.length;blno<lent;blno++){
         var aline=en_sentence_global[blno];
         //if (aline[2].slice(-4,)=='_TLS'){continue;}   //此行保留 - 保留注释
 
@@ -302,7 +303,7 @@ function length_sort_ensentence(){
     
     result_t.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});
     result_t=result_t.slice(0,200);
-    for (blxl=0;blxl<result_t.length;blxl++){
+    for (blxl=0,lent=result_t.length;blxl<lent;blxl++){
         result_t[blxl]=result_t[blxl][1];
     }
     var bljg=sentence_list_2_html_b(result_t,[''],500,false);
@@ -324,7 +325,7 @@ function rare_old_words_sort_ensentence(csarr){
     if (klmenu_check_b('span_sort_by_selenium_ensentence',false)){
         var selenium_dict=selenium_enwords_count_enbook_b(true);
         
-        for (let blxl=0;blxl<result_t.length;blxl++){
+        for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
             var blkey='w_'+result_t[blxl];
             if (selenium_dict[blkey]==undefined){
                 result_t[blxl]=[result_t[blxl],0];
@@ -334,7 +335,7 @@ function rare_old_words_sort_ensentence(csarr){
         }
         
         result_t.sort(function (a,b){return a[1]<b[1] ? 1 : -1;});
-        for (let blxl=0;blxl<result_t.length;blxl++){
+        for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
             result_t[blxl]=[result_t[blxl][0],'',result_t[blxl][1].toString()];
         }
     } else {
@@ -451,7 +452,6 @@ function sentence_flag_get_ensentence(csmax=-1,show_button=true,csmobile_font=fa
             var blword=one_match.replace(new RegExp('&lt;eword w=("|&quot;)?(.*?)("|&quot;)?&gt;&lt;/eword&gt;','g'),'$2');
             if (csstr.match(new RegExp('\\b'+blword+one_match))==null){
                 if (csstr.match(new RegExp('&lt;u&gt;'+blword+'&lt;/u&gt;'+one_match))==null){
-                    console.log(csstr,blword);
                     words_t.push(blword);
                 }
             }
@@ -463,11 +463,13 @@ function sentence_flag_get_ensentence(csmax=-1,show_button=true,csmobile_font=fa
         return 'en_sentence_global 未定义';
     }
 
+    var t0 = performance.now();
+
 	var blcount=0;
     var result_t=[];
     var do_break=false;
     var keys=new Set();
-	for (let blxl=0;blxl<en_sentence_global.length;blxl++){
+	for (let blxl=0,lent=en_sentence_global.length;blxl<lent;blxl++){
         var aline=en_sentence_global[blxl];
         var line_split=sentence_split_b(aline[0],blxl);
         for (let arow of line_split){
@@ -485,15 +487,14 @@ function sentence_flag_get_ensentence(csmax=-1,show_button=true,csmobile_font=fa
         }
         if (do_break){break;}
 	}
-    console.log(keys);
-    //result_t=sentence_list_2_html_b(result_t,[''],csmax,show_button,csmobile_font);
+    
+    result_t=sentence_list_2_html_b(result_t,Array.from(keys),csmax,show_button,csmobile_font);
     var bljg=[];
-    console.log(result_t[0]);
     for (let item of result_t){
         if (!item.includes('🚩')){continue;}
         bljg.push(item);
     }
-    console.log(bljg.length);
-    
-	//return '<div class="div_sentence">'+bljg.join('\n')+'</div><p><i>('+bljg.length+')</i></p>';
+
+	document.getElementById('divhtml').innerHTML='<div class="div_sentence">'+bljg.join('\n')+'</div><p><i>('+bljg.length+')</i></p>';
+    console.log('sentence_flag_get_ensentence() 费时：'+(performance.now() - t0) + ' milliseconds');
 }

@@ -48,11 +48,11 @@ function words_not_in_article_kltxt_klwiki_en2(){
     var bldiff=array_difference_b(words_set,content_set);
 
     var split_list=[];
-    for (let blxl=0;blxl<bldiff.length;blxl=blxl+100){
+    for (let blxl=0,lent=bldiff.length;blxl<lent;blxl=blxl+100){
         split_list.push(bldiff.slice(blxl,blxl+100).join('|').replace(/\s/g,'\\s'));
     }
     
-    for (let blxl=0;blxl<bldiff.length;blxl++){
+    for (let blxl=0,lent=bldiff.length;blxl<lent;blxl++){
         bldiff[blxl]=[bldiff[blxl],'',''];
     }
     var bljg='<div style="column-count:3;">'+enwords_array_to_html_b(bldiff,false)+'</div>';
@@ -105,7 +105,7 @@ function days_kltxt_klwiki_en2(theday=new Date()){
         var bljg='';
         var englist_t=blenstr_t.match(/<sup style="font-size:0.8rem;color:#cc0000;" class="kleng">(.*?)<\/sup>/g);
         if (englist_t==null){return '';}
-        for (let blxl=0;blxl<englist_t.length;blxl++){
+        for (let blxl=0,lent=englist_t.length;blxl<lent;blxl++){
             englist_t[blxl]=englist_t[blxl].replace(/<sup style="font-size:0.8rem;color:#cc0000;" class="kleng">(.*?)<\/sup>/g,'$1');
         }
         bljg=bljg+enwords_batch_div_b(englist_t);    

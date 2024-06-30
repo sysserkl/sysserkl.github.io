@@ -29,7 +29,7 @@ function generate_cn_idiom(){
     
     var blno=0;
     arow=[];
-    for (let blxl=4;blxl<cn_idiom_global.length;blxl++){
+    for (let blxl=4,lent=cn_idiom_global.length;blxl<lent;blxl++){
         var item=cn_idiom_global[blxl].split('');
         item.sort(randomsort_b);
         if (!result_t.includes(item[0])){
@@ -54,7 +54,7 @@ function generate_cn_idiom(){
         document.getElementById('divhtml').innerHTML='error: '+otds.length+' : '+result_t.length;
         return;
     }
-    for (let blxl=0;blxl<otds.length;blxl++){
+    for (let blxl=0,lent=otds.length;blxl<lent;blxl++){
         otds[blxl].innerText=result_t[blxl];
     }
 }

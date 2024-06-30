@@ -1,7 +1,7 @@
 function wiki_all_format_b(csstr,cstyle='',ismobile=-1,underline=false){
     //先解密 - 保留注释
     var list_t=wiki_code_highlight_b(csstr);
-    for (let blxl=0;blxl<list_t.length;blxl++){
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         var one_arr=list_t[blxl];
         if (one_arr[1]==1){continue;}
         var blstr=one_arr[0];
@@ -48,7 +48,7 @@ function wiki_line_b(csstr,attachment_server){
 	//nowiki - 保留注释
 	if (csstr.includes('&lt;nowiki&gt;') && csstr.includes('&lt;/nowiki&gt;')){
 		list_t=csstr.match(/&lt;nowiki&gt;.*?&lt;\/nowiki&gt;/g);
-		for (let blxl=0;blxl<list_t.length;blxl++){
+		for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
 			var tmp_t=list_t[blxl];
 			tmp_t=tmp_t.replace(/\[/g,'&#91;');
 			tmp_t=tmp_t.replace(/\]/g,'&#93;');
@@ -480,7 +480,7 @@ function wiki_table_b(csstr='',tablestyle='',tdstyle='',thstyle=''){
     }
     var list_t=csstr.split('\n');
     var blstart=false;
-    for (let blxl=0;blxl<list_t.length;blxl++){
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         var item=list_t[blxl];
         if (item.substring(0,2)=='{|'){
             blstart=true;

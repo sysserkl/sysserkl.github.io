@@ -228,7 +228,7 @@ function recent_words_rndwords(csstartno=-1,cscount=20){
     }
 
     if (csstartno==-1){
-        for (let blxl=0;blxl<list_t.length;blxl++){
+        for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
             if (list_t[blxl][0]==recent_bookmark){
                 csstartno=blxl;
                 break;
@@ -237,7 +237,7 @@ function recent_words_rndwords(csstartno=-1,cscount=20){
     }
 
     csstartno=Math.max(csstartno,0);
-    for (let blxl=csstartno;blxl<list_t.length;blxl++){
+    for (let blxl=csstartno,lent=list_t.length;blxl<lent;blxl++){
         learn_something=learn_something+one_line_rndwords(list_t[blxl],recent_bookmark);
         if (blxl-csstartno+1>=cscount){break;}
     }
@@ -351,7 +351,7 @@ function word_search_rndwords(csstr='',times=10){
     
         words_temp_arr_global=enwords_merge_b(words_temp_equal_arr,times);
         
-        for (let blxl=0;blxl<words_temp_arr_global.length;blxl++){
+        for (let blxl=0,lent=words_temp_arr_global.length;blxl<lent;blxl++){
             learn_something=learn_something+'<a name="word_'+blxl+'"></a>'+one_line_rndwords(words_temp_arr_global[blxl],'',csstr);         
         }
     }

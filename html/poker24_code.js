@@ -2,7 +2,7 @@ function number_poker24(israndom=true){
     result_poker24_global='';
     calculate_times_poker24_global=0;
     document.getElementById('p_result').innerHTML='&nbsp;';
-    for (let blxl=0;blxl<poker_24_global.length;blxl++){
+    for (let blxl=0,lent=poker_24_global.length;blxl<lent;blxl++){
         if (israndom){
             poker_24_global[blxl]=randint_b(1,max_num_poker24_global);
         }
@@ -413,7 +413,7 @@ function scan_one_poker24(start_num=1,end_num=-1){    //打开console会导致�
                 
                 for (let item of ['0','1','2','99']){
                     var answer_set_list=local_storage_get_b('answers_'+item+'_poker24',-1,true);
-                    for (let an_no=0;an_no<answer_set_list.length;an_no++){
+                    for (let an_no=0,lenb=answer_set_list.length;an_no<lenb;an_no++){
                         var part1=parseInt(answer_set_list[an_no].split(',')[0]);
                         if (part1>=start_num && part1<=end_num){
                             answer_set_list[an_no]='';

@@ -24,10 +24,10 @@ function flot_two_lines_two_yaxis_b(cslist,csid,y1unit='',y2unit='',label_positi
     }
     if (cstime && list1_t.length==2 && list2_t.length==2){
         //只能是数字，不能加年份和字符 - 保留注释
-        for (let blxl=0;blxl<left_group.length;blxl++){
+        for (let blxl=0,lent=left_group.length;blxl<lent;blxl++){
             left_group[blxl][1][0]=date_2_ymd_b(left_group[blxl][1][0],cstype);
         }
-        for (let blxl=0;blxl<right_group.length;blxl++){
+        for (let blxl=0,lent=right_group.length;blxl<lent;blxl++){
             right_group[blxl][1][0]=date_2_ymd_b(right_group[blxl][1][0],cstype);
         }
         cstime=false;
@@ -199,7 +199,7 @@ function flot_lines_b(cslist,csid,label_position='nw',cstime=false,cstimeformat=
         label_position='nw';
     }
     if (cstime){
-        for (let blxl=0;blxl<cslist.length;blxl++){
+        for (let blxl=0,lent=cslist.length;blxl<lent;blxl++){
             if (Array.isArray(cslist[blxl]) && cslist[blxl].length==2){    //如果只有两个元素，第一个是名称，第二个是年份和数值，则与其他含有更多记录的线条同时出现时，日期格式失效 - 保留注释
                 //只能是数字，不能加年份和字符 - 保留注释
                 cslist[blxl][1][0]=date_2_ymd_b(cslist[blxl][1][0],cstype);
@@ -208,7 +208,7 @@ function flot_lines_b(cslist,csid,label_position='nw',cstime=false,cstimeformat=
         }
     }
     var only_one_data=true;
-    for (let blxl=0;blxl<cslist.length;blxl++){
+    for (let blxl=0,lent=cslist.length;blxl<lent;blxl++){
         if (cslist[blxl].length>2){
             only_one_data=false;
             break;
@@ -237,7 +237,7 @@ function flot_lines_b(cslist,csid,label_position='nw',cstime=false,cstimeformat=
     }
         
     var chart_data=[];
-    for (let blxl=0;blxl<cslist.length;blxl++){
+    for (let blxl=0,lent=cslist.length;blxl<lent;blxl++){
         var label_t=cslist[blxl].shift();
         var label_showline=csshowline;
         var label_showpoints=true;
@@ -563,7 +563,7 @@ function statistics_draw_b(data_type,idname='divhtml',show_table=false,date_min=
     //或形如：[ "local_storage_used_length", "local storage 使用量(KiB)", 2, ":", 1, "local_storage_used_length" ] - 保留注释
 
     if (show_table){
-        for (let blxl=0;blxl<idlist.length;blxl++){
+        for (let blxl=0,lent=idlist.length;blxl<lent;blxl++){
             var item=idlist[blxl];
             [str_t,oneline_list]=sub_statistics_draw_b_oneline(item);
             if (ismobile){
@@ -576,7 +576,7 @@ function statistics_draw_b(data_type,idname='divhtml',show_table=false,date_min=
             lines_list.push(oneline_list);
         }
     } else {
-        for (let blxl=0;blxl<idlist.length;blxl++){
+        for (let blxl=0,lent=idlist.length;blxl<lent;blxl++){
             var item=idlist[blxl];
             [str_t,oneline_list]=sub_statistics_draw_b_oneline(item);
             bljg=bljg+'<div style="position:relative;float:left; width:'+blwidth+'px;height:'+blheight+'px;" id="'+statistics_div_idname_b(item,blxl)+'" class="div_statistics_plot_b"></div>';
@@ -585,7 +585,7 @@ function statistics_draw_b(data_type,idname='divhtml',show_table=false,date_min=
     }
     
     odiv.innerHTML=bljg;
-    for (let blxl=0;blxl<idlist.length;blxl++){
+    for (let blxl=0,lent=idlist.length;blxl<lent;blxl++){
         var item=idlist[blxl];
         flot_lines_b([lines_list[blxl]],statistics_div_idname_b(item,blxl),'nw',true,'','d','',item[2],[1, 'day'],7);
     }

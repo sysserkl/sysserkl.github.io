@@ -82,7 +82,7 @@ function line_leaflet_b(csomap,islayer=false,cslist=[],cscolor='red',cscaption='
     
     var polyline = L.polyline(cslist, {color: cscolor});
     var bllen=0;
-    for (let blno=1;blno<cslist.length;blno++){
+    for (let blno=1,lent=cslist.length;blno<lent;blno++){
         var latlng1 = L.latLng(cslist[blno-1][0], cslist[blno-1][1]);
         var latlng2 = L.latLng(cslist[blno][0], cslist[blno][1]);
         bllen=bllen+latlng1.distanceTo(latlng2);
@@ -421,9 +421,9 @@ function district_cn_level_b(level=2){
         }
     }
     var nationality=/(.{2})(蒙古|藏|苗|壮|回|维吾尔|彝|布依|朝鲜|侗|白|哈尼|傣|傈僳|畲|拉祜|满|瑶|土家|哈萨克|黎|佤|高山|水|东乡|景颇|土|仫佬|布朗|毛南|锡伯|普米|纳西|柯尔克孜|达斡尔|羌|撒拉|仡佬|阿昌|塔吉克|怒|俄罗斯|德昂|裕固|塔塔尔|鄂伦春|门巴|基诺|乌孜别克|鄂温克|保安|京|独龙|赫哲|珞巴|各)(族|自治).*$/;    //有一个 各族 - 保留注释
-    for (let blxl=0;blxl<result_t.length;blxl++){
+    for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
         var list_t=result_t[blxl].split(' ');
-        for (let blno=0;blno<list_t.length;blno++){
+        for (let blno=0,lenb=list_t.length;blno<lenb;blno++){
             if (list_t[blno].match(nationality)!==null){
                 list_t[blno]=list_t[blno].replace(new RegExp(nationality,'g'),'$1');
             } else if (list_t[blno].match(/自治([区州盟县])$/)!==null){
@@ -591,7 +591,7 @@ function gpx_file_draw_leaflet_b(csstr,cstype,csname='',cscolors=[]){
     var line_color_list=cscolors[0].split(':');
     var blstr1='';
     var blstr2='';
-    for (let blxl=1;blxl<list_t.length;blxl++){ //忽略第1个元素 - 保留注释
+    for (let blxl=1,lent=list_t.length;blxl<lent;blxl++){ //忽略第1个元素 - 保留注释
         var result_list=[];
         var blname=list_t[blxl].match(/<name>(.*?)<\/name>/m);
         if (blname==null){
@@ -724,7 +724,7 @@ function remove_data_in_textarea_leaflet_b(transform_type='',odom=false,textarea
     var textarea_str=otextarea.value.trim();
     var content_t=horizontal_delimiter_split_gps_points_b(textarea_str,true);
     var result_t=[];
-    for (let blxl=0;blxl<content_t.length;blxl++){
+    for (let blxl=0,lent=content_t.length;blxl<lent;blxl++){
         var line_str=content_t[blxl][0];
         var blname=content_t[blxl][1];
         
@@ -734,7 +734,7 @@ function remove_data_in_textarea_leaflet_b(transform_type='',odom=false,textarea
         
         var distance=0;
         var error_found=false;
-        for (let blno=0;blno<content_t[blxl].length;blno++){
+        for (let blno=0,lenb=content_t[blxl].length;blno<lenb;blno++){
             content_t[blxl][blno]=transform_lon_lat_one_dot_b(transform_type,content_t[blxl][blno][1],content_t[blxl][blno][0],true);
             var two_points_len=distance_leaflet_b(content_t[blxl][blno],list_t[blno]);
             if (two_points_len>1000){   //超过一定距离（米），则忽略 - 保留注释
@@ -813,7 +813,7 @@ function data_2_gpx_file_leaflet_b(transform_type='',odom=false){
 
 function latlon_2_gpx_file_leaflet_b(cslist,csname,with_head_tail=true){
     //cslist 数组每一个元素都是 [lat,lon] 格式 - 保留注释
-    for (let blxl=0;blxl<cslist.length;blxl++){
+    for (let blxl=0,lent=cslist.length;blxl<lent;blxl++){
         cslist[blxl]='<trkpt lat="'+cslist[blxl][0]+'" lon="'+cslist[blxl][1]+'"></trkpt>';
     }
 

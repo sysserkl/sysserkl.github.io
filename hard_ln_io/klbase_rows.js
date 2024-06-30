@@ -3,7 +3,7 @@ function insert_new_lines_klr_b(csinterval,csinsert_str,csid='textarea_rows_cont
 	var list_t = otextarea.value.split('\n');
 	var bljg=[];
 	var blno=1;
-	for (let blxl=0;blxl<list_t.length;blxl++){
+	for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
 		if (blxl%csinterval==0){
 			bljg.push(csinsert_str.replace(new RegExp('NO','g'),blno));
 			blno=blno+1;
@@ -146,7 +146,7 @@ function add_line_no_klr_b(blop=1,blno1=1,blno2=1,csid='textarea_rows_content'){
 	var list_t = otextarea.value.split('\n');
 	var bljg='';
 	var bln;
-	for (let blx=0;blx<list_t.length;blx++){
+	for (let blx=0,lent=list_t.length;blx<lent;blx++){
         var item=list_t[blx];
 		bln=(parseInt(blno1)+parseInt(blx)).toString();
 		var nlen=bln.length;
@@ -172,7 +172,7 @@ function add_ahref_klr_b(csid,encode=false){
     var blstr=otextarea.value;
     if (encode){
         var list_t=blstr.split('\n')
-        for (let blxl=0;blxl<list_t.length;blxl++){
+        for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
             list_t[blxl]='<a href="'+encodeURI(list_t[blxl])+'" target=_blank>'+list_t[blxl]+'</a>';
         }
         blstr=list_t.join('\n');
@@ -386,11 +386,11 @@ function wiki_photo_klr_b(csid){
 function capitalize_first_letter_klr_b(csid,lower_art_prep=true){
     var otextarea=document.getElementById(csid);
     var list_t=otextarea.value.split('\n');
-    for (let blx=0;blx<list_t.length;blx++){
+    for (let blx=0,lent=list_t.length;blx<lent;blx++){
         if (list_t[blx].match(/[a-z]/ig)==null){continue;}
         
         list_t[blx]=list_t[blx].split(' ');
-        for (let bly=0;bly<list_t[blx].length;bly++){
+        for (let bly=0,lenb=list_t[blx].length;bly<lenb;bly++){
             if (lower_art_prep && bly>0 && ['a','the','by','in','of','for','at','on','to','with'].includes(list_t[blx][bly].toLowerCase())){
                 list_t[blx][bly]=list_t[blx][bly].toLowerCase();
                 continue;
@@ -413,7 +413,7 @@ function common_string_from_lines_klr_b(csid,only_file_name=false,status_id=''){
     
     var lines=blstr.split('\n');
     if (only_file_name){
-        for (let blxl=0;blxl<lines.length;blxl++){
+        for (let blxl=0,lent=lines.length;blxl<lent;blxl++){
             var blat=lines[blxl].lastIndexOf('/');
             if (blat>=0){
                 lines[blxl]=lines[blxl].substring(blat+1,);
@@ -452,7 +452,7 @@ function common_string_from_lines_klr_b(csid,only_file_name=false,status_id=''){
 function ltrim_rows_klr_b(csid){
     var otextarea=document.getElementById(csid);
     var list_t=otextarea.value.split('\n');
-    for (let blxl=0;blxl<list_t.length;blxl++){
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         list_t[blxl]=list_t[blxl].trimLeft();
     }
     otextarea.value=list_t.join('\n');
@@ -526,7 +526,7 @@ function strquick_klr_b(cstype='',csid='textarea_rows_content',status_id='textar
         case 'reverse_str':
             var otextarea = document.getElementById(csid);
             var list_t=otextarea.value.split('\n');
-            for (let blxl=0;blxl<list_t.length;blxl++){
+            for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
                 list_t[blxl]=list_t[blxl].split('').reverse().join('');
             }            
             otextarea.value=list_t.join('\n');            
@@ -642,7 +642,7 @@ function strquick_klr_b(cstype='',csid='textarea_rows_content',status_id='textar
             var otextarea,blstr;
 			[otextarea,blstr]=replace_strs_klr_b(arr_t,'',csid);
             var list_t=blstr.split('\n');
-            for (let blxl=0;blxl<list_t.length;blxl++){
+            for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
                 if (list_t[blxl].match(/^(.*?\s)(.*?[\[\]].*)\]$/)){
                     list_t[blxl]=list_t[blxl].replace(/^(.*?\s)(.*?[\[\]].*)\]$/mg,'$1<nowiki>$2</nowiki>]');
                 }
@@ -742,7 +742,7 @@ function batch_open_www_klr_b(csid,ostatus,cstype=''){
     
     switch (cstype){
         case 'klwikititle':
-            for (let blno=0;blno<list_t.length;blno++){
+            for (let blno=0,lent=list_t.length;blno<lent;blno++){
                 var atitle=list_t[blno].trim();
                 atitle=atitle.split('</title>')[0];
                 if (atitle.substring(0,7)=='<title>'){
@@ -758,7 +758,7 @@ function batch_open_www_klr_b(csid,ostatus,cstype=''){
             var collins_links=[];
             var klsearch_links=[];
             var cambridge_links=[];
-            for (let blno=0;blno<list_t.length;blno++){
+            for (let blno=0,lent=list_t.length;blno<lent;blno++){
                 var aword=list_t[blno].trim();
                 list_t[blno]=[aword,open_link_en_b('o',aword,false)];   //klbase_eng.js - 保留注释
                 bing_links.push([aword,open_link_en_b('b',aword,false)]);
@@ -776,17 +776,17 @@ function batch_open_www_klr_b(csid,ostatus,cstype=''){
             }
             
             list_t.sort();
-            for (let blno=0;blno<list_t.length;blno++){
+            for (let blno=0,lent=list_t.length;blno<lent;blno++){
                 list_t[blno]=list_t[blno][1];
             }
             break;
         case 'collins':
-            for (let blno=0;blno<list_t.length;blno++){
+            for (let blno=0,lent=list_t.length;blno<lent;blno++){
                 list_t[blno]=open_link_en_b('c',list_t[blno].trim(),false);
             }
             break;
         case 'cambridge':
-            for (let blno=0;blno<list_t.length;blno++){
+            for (let blno=0,lent=list_t.length;blno<lent;blno++){
                 list_t[blno]=open_link_en_b('+',list_t[blno].trim(),false);
             }
             break;        
@@ -857,7 +857,7 @@ function str2js_klr_b(csid,cstype){
             return;
     }
     
-    for (let blxl=0;blxl<list_t.length;blxl++){
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         list_t[blxl]=specialstr_j(list_t[blxl],true);
         list_t[blxl]='["'+list_t[blxl].slice(blstart,blend)+'"],';
         list_t[blxl]=list_t[blxl].replace(' ','","');
@@ -937,7 +937,7 @@ function slice_lines_klr_b(csid,break_line=[]){
 
     var blat=blvalue.length;
     if (break_line.length>0){
-        for (let blxl=0;blxl<blvalue.length;blxl++){
+        for (let blxl=0,lent=blvalue.length;blxl<lent;blxl++){
             var do_break=false;
             for (let item of break_line){
                 if (blvalue[blxl]==item){
@@ -1082,7 +1082,7 @@ function klarticle_init_klr_b(is_simple=false){
     odiv.style.cssText='margin:'+div_margin+'rem '+div_margin+'rem 2rem '+div_margin+'rem;';
     odiv.innerHTML=blstr;
     var oimgs=odiv.querySelectorAll('img');
-    for (let blxl=0;blxl<oimgs.length;blxl++){
+    for (let blxl=0,lent=oimgs.length;blxl<lent;blxl++){
         if (blxl>=images_global.length){break;}
         oimgs[blxl].setAttribute('src',images_global[blxl]);
     }
@@ -1094,7 +1094,7 @@ function klarticle_init_klr_b(is_simple=false){
 }
     
 function en_double_2_array_klr_b(cscontent,do_export=false,img_src_list=[],convert_emoji=true){
-    for (let blxl=0;blxl<img_src_list.length;blxl++){
+    for (let blxl=0,lent=img_src_list.length;blxl<lent;blxl++){
         img_src_list[blxl]='"'+specialstr_j(img_src_list[blxl])+'",';
     }
     
@@ -1149,7 +1149,7 @@ function important_line_js_array_klr_b(textarea_id){
     var list_t=blstr.split('\n');
     var important_str='💎"],';
     var bllen=important_str.length*-1;
-    for (let blxl=0;blxl<list_t.length;blxl++){
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         var item=list_t[blxl];
         if (item.slice(-3,)!=='"],'){continue;}
         if (item.slice(bllen,)==important_str){
@@ -1237,13 +1237,13 @@ function blank_rows_add_remove_klr_b(cstype='',textarea_id='',str_t=''){
     var list_t=['blank_rows_add','blank_rows_remove','blank_rows_wiki_type'];
     switch (cstype){
         case 'menu':
-            for (let blxl=0;blxl<list_t.length;blxl++){
+            for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
                 list_t[blxl]='<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\''+list_t[blxl]+'\',\''+textarea_id+'\');">'+list_t[blxl].replace(/_/g,' ')+'</span>';
             }
             return list_t;
             break;
         case 'select':
-            for (let blxl=0;blxl<list_t.length;blxl++){
+            for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
                 list_t[blxl]='<option value="'+list_t[blxl]+'">'+list_t[blxl].replace(/_/g,' ')+'</option>';
             }
             return list_t;

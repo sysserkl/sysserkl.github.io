@@ -102,8 +102,8 @@ function resolve_linkgame(){
         return [true,true];
     }
     
-    for (let blx=0;blx<list_t.length;blx++){
-        for (let bly=0;bly<list_t.length;bly++){
+    for (let blx=0,lent=list_t.length;blx<lent;blx++){
+        for (let bly=0,lenb=list_t.length;bly<lenb;bly++){
             if (blx==bly){continue;}
             var td1='td_'+list_t[blx][0]+'_'+list_t[blx][1];
             var td2='td_'+list_t[bly][0]+'_'+list_t[bly][1];

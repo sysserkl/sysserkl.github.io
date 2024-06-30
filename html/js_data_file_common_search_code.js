@@ -262,7 +262,7 @@ function standalone_search_common(){
     var old_value=rows_per_page_jscm_global;
     rows_per_page_jscm_global=js_data_current_common_search_global.length;
     var result_t=page_common(1,false);
-    for (let blxl=0;blxl<result_t.length;blxl++){
+    for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
         result_t[blxl]='"'+specialstr_j(result_t[blxl])+'",';
     }
     standalone_search_funs_b(bltitle.trim(),result_t.join('\n'),['style_generate_b'],false,th_generate_common());
@@ -384,7 +384,7 @@ function page_common(csno,show_html=true){
                 bltds.push('<td>'+http_link_common(one_col,http_links)+'</td>');
             }
         } else {
-            for (let blxl=0;blxl<item[0].length;blxl++){
+            for (let blxl=0,lent=item[0].length;blxl<lent;blxl++){
                 one_col=item[0][blxl];
                 bltds.push('<td align="'+td_align[blxl]+'">'+http_link_common(one_col,http_links)+'</td>');
             }

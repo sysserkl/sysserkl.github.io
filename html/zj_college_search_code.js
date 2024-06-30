@@ -132,12 +132,12 @@ function median_zjedu(blplan, median_line_list){
             median_value=median_line_list[0][1];
         } else {
             median_line_list.sort(function (a,b){return b[1]>a[1] ? 1 : -1;});
-            for (let blxl=0;blxl<median_line_list.length;blxl++){
+            for (let blxl=0,lent=median_line_list.length;blxl<lent;blxl++){
                 if (blxl>0){
                     median_line_list[blxl][0]=median_line_list[blxl][0]+median_line_list[blxl-1][0];
                 }
                 
-                for (let blxl2=0;blxl2<median_no.length;blxl2++){
+                for (let blxl2=0,lenb=median_no.length;blxl2<lenb;blxl2++){
                     if (median_no[blxl2][0]==median_line_list[blxl][0]){
                         median_no[blxl2][1]=median_line_list[blxl][1];
                     } else if (median_no[blxl2][0]<median_line_list[blxl][0]){
@@ -237,7 +237,7 @@ function txtsearch_zjedu(csword=false){
     }
     
     position_list.sort(function (a,b){return a[1]>b[1] ? 1 : -1;});
-    for (let blxl=0;blxl<position_list.length;blxl++){
+    for (let blxl=0,lent=position_list.length;blxl<lent;blxl++){
         if (blxl>0){
             position_list[blxl][0]=position_list[blxl][0]+position_list[blxl-1][0];
         }
@@ -402,7 +402,7 @@ function school_speciality_sum_zjedu(csreverse=false){
 	    s_num_t.sort(function(a,b){return b[1]>a[1] ? 1 : -1;});
     }
 	var bljg='';
-	for (let blxl=0;blxl<Math.min(num_zjc_global,s_num_t.length);blxl++){
+	for (let blxl=0,lent=Math.min(num_zjc_global,s_num_t.length);blxl<lent;blxl++){
 		bljg=bljg+'<tr><td>'+s_num_t[blxl][0]+'</td><td nowrap align=right>'+s_num_t[blxl][1]+'</td></tr>';
 	}
     
@@ -431,7 +431,7 @@ function speciality_popular_zjedu(csreverse=false){
 	    s_num_t.sort(function(a,b){return b[1]>a[1] ? 1 : -1;});
     }
 	var bljg='';
-	for (let blxl=0;blxl<Math.min(num_zjc_global,s_num_t.length);blxl++){
+	for (let blxl=0,lent=Math.min(num_zjc_global,s_num_t.length);blxl<lent;blxl++){
 		bljg=bljg+'<tr><td>'+s_num_t[blxl][0]+'</td><td nowrap align=right>'+s_num_t[blxl][1]+'</td></tr>';
 	}
     
@@ -450,7 +450,7 @@ function school_sum_average_zjedu(csreverse=false){
     }
     
 	var bljg='';
-	for (let blxl=0;blxl<Math.min(num_zjc_global,arr2_t.length);blxl++){
+	for (let blxl=0,lent=Math.min(num_zjc_global,arr2_t.length);blxl<lent;blxl++){
 		bljg=bljg+'<tr><td>'+arr2_t[blxl][0]+'</td><td nowrap align=right>'+arr2_t[blxl][1]+'</td></tr>';
 	}
     
@@ -467,7 +467,7 @@ function school_sum_average_zjedu(csreverse=false){
 	    arr2_t.sort(function(a,b){return b[3]>a[3] ? 1 : -1;});
     }
 	var bljg='';
-	for (let blxl=0;blxl<Math.min(num_zjc_global,arr2_t.length);blxl++){
+	for (let blxl=0,lent=Math.min(num_zjc_global,arr2_t.length);blxl<lent;blxl++){
 		bljg=bljg+'<tr><td>'+arr2_t[blxl][0]+'</td><td nowrap align=right>'+arr2_t[blxl][3].toFixed(2)+'</td><td nowrap align=right>'+mark_2_rank_zjedu(arr2_t[blxl][3])[2]+'</td></tr>';
 	}
     
@@ -496,7 +496,7 @@ function school_median_rank_zjedu(csreverse=false){
     }
     
     var bljg='';
-	for (let blxl=0;blxl<Math.min(num_zjc_global,arr2_t.length);blxl++){
+	for (let blxl=0,lent=Math.min(num_zjc_global,arr2_t.length);blxl<lent;blxl++){
 		bljg=bljg+'<tr><td>'+arr2_t[blxl][0]+'</td><td nowrap align=right>'+arr2_t[blxl][1].toFixed(2)+'</td><td nowrap align=right>'+mark_2_rank_zjedu(arr2_t[blxl][1])[2]+'</td></tr>';
 	}
     
@@ -518,7 +518,7 @@ function school_plan_zjedu(sort_by_count=false){
     }
    
 	var bljg='';
-	for (let blxl=0;blxl<Math.min(num_zjc_global,arr2_t.length);blxl++){
+	for (let blxl=0,lent=Math.min(num_zjc_global,arr2_t.length);blxl<lent;blxl++){
 		bljg=bljg+'<tr><td>'+arr2_t[blxl][0]+'</td><td nowrap align=right>'+arr2_t[blxl][3].toFixed(2)+'%</td><td nowrap align=right>'+arr2_t[blxl][1]+'</td><td nowrap align=right>'+(arr2_t[blxl][1]+arr2_t[blxl][2])+'</td></tr>';
 	}
     
@@ -542,7 +542,7 @@ function school_last_number_zjedu(csreverse=false){
     }
     
 	var bljg='';
-	for (let blxl=0;blxl<Math.min(num_zjc_global,arr2_t.length);blxl++){
+	for (let blxl=0,lent=Math.min(num_zjc_global,arr2_t.length);blxl<lent;blxl++){
 		bljg=bljg+'<tr><td>'+arr2_t[blxl][0]+'</td><td nowrap align=right>'+arr2_t[blxl][1]+'</td></tr>';
 	}
     
@@ -562,7 +562,7 @@ function speciality_all_sum_zjedu(csreverse=false){
     }
     
 	var bljg='';
-	for (let blxl=0;blxl<Math.min(num_zjc_global,arr2_t.length);blxl++){
+	for (let blxl=0,lent=Math.min(num_zjc_global,arr2_t.length);blxl<lent;blxl++){
 		bljg=bljg+'<tr><td>'+arr2_t[blxl][0]+'</td><td nowrap align=right>'+arr2_t[blxl][1]+'</td></tr>';
 	}
     
@@ -578,7 +578,7 @@ function speciality_all_sum_zjedu(csreverse=false){
 	    arr2_t.sort(function(a,b){return b[3]>a[3] ? 1 : -1;});
     }
 	var bljg='';
-	for (let blxl=0;blxl<Math.min(num_zjc_global,arr2_t.length);blxl++){
+	for (let blxl=0,lent=Math.min(num_zjc_global,arr2_t.length);blxl<lent;blxl++){
 		bljg=bljg+'<tr><td>'+arr2_t[blxl][0]+'</td><td nowrap align=right>'+arr2_t[blxl][3].toFixed(2)+'</td></tr>';
 	}
     
@@ -712,7 +712,7 @@ function median_value_get_zjedu(csyear,csarr,half_list=false,range_col=true){
 function row_and_value_get_zjedu(population,csarr,csvalue,range_col,show_value_in_td=true,compare_col=2,value_col=0){
     var found_value=0;
     var the_row='';
-    for (let blno=0;blno<csarr.length-1;blno++){
+    for (let blno=0,lent=csarr.length-1;blno<lent;blno++){
         if (csarr[blno][compare_col]==csvalue){
             the_row=csarr[blno].toString();
             found_value=csarr[blno][value_col];
@@ -809,7 +809,7 @@ function range_status_type_zjedu(cstype){
     half_list.sort(function (a,b){return a>b ? 1 : -1;});
     
     var found_positive=false;
-    for (let blxl=0;blxl<half_list.length;blxl++){
+    for (let blxl=0,lent=half_list.length;blxl<lent;blxl++){
         if (half_list[blxl]>0){
             half_list=half_list.slice(blxl,);
             found_positive=true;
@@ -823,7 +823,7 @@ function range_status_type_zjedu(cstype){
     range_list_zjedu_global=new_range;
     switch (cstype){
         case 'percent':
-            for (let blxl=0;blxl<half_list.length;blxl++){
+            for (let blxl=0,lent=half_list.length;blxl<lent;blxl++){
                 half_list[blxl]=half_list[blxl]/100;
             }
             var status_list=[];
@@ -956,10 +956,10 @@ function same_record_data_zjedu(){
     score_max=Math.min(...score_max);   //最大值数组中取最小的 - 保留注释
     score_min=Math.max(...score_min);
 
-    for (let blno=0;blno<common_arr.length;blno++){
+    for (let blno=0,lent=common_arr.length;blno<lent;blno++){
         var item=common_arr[blno];
         var blat_range=[];
-        for (let blxl=0;blxl<item[1].length;blxl++){
+        for (let blxl=0,lenb=item[1].length;blxl<lenb;blxl++){
             if (item[1][blxl][0]==score_max || item[1][blxl][0]==score_min){
                 blat_range.push(blxl);
                 if (blat_range.length==2){break;}
@@ -1091,7 +1091,7 @@ function sortdata_zjedu(cstype){
             var school_name='';
             var used_row_no=new Set();
             var last_row_no=-1;
-            for (let blno=0;blno<jgarray_zjc_global.length;blno++){
+            for (let blno=0,lent=jgarray_zjc_global.length;blno<lent;blno++){
                 var item=jgarray_zjc_global[blno];
                 if (item[0]==school_name){
                     if (show_type=='1_1'){
@@ -1116,12 +1116,12 @@ function sortdata_zjedu(cstype){
                                 
             csarr=sub_sortdata_zjedu_sort(csarr,cstype);
             
-            for (let blxl=0;blxl<csarr.length;blxl++){
+            for (let blxl=0,lent=csarr.length;blxl<lent;blxl++){
                 bljg.push(sub_sortdata_zjedu_tr(blxl,csarr[blxl])[0]);
             }
             break;
         default:
-            for (let blxl=0;blxl<jgarray_zjc_global.length;blxl++){
+            for (let blxl=0,lent=jgarray_zjc_global.length;blxl<lent;blxl++){
                 var item=jgarray_zjc_global[blxl];
                 bljg.push(sub_sortdata_zjedu_tr(blxl,item)[0]);
             }
@@ -1195,7 +1195,7 @@ function td_right_html_zjedu(){
 
 function check_data_zjedu(){
     var list_t=[0,0,0];
-    for (let blxl=0;blxl<zj_university_global.length;blxl++){
+    for (let blxl=0,lent=zj_university_global.length;blxl<lent;blxl++){
         var item=zj_university_global[blxl];
         if (item.length==6){
             zj_university_global[blxl].push(0); //位次，没招满 - 保留注释

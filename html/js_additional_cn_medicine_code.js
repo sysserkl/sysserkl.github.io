@@ -60,7 +60,7 @@ function menu_more_cn_medicine(){
     var blparent=menu_parent_node_b(str_t);
 
     var col_name_list=Object.keys(table_th_jscm_global);
-    for (let blxl=0;blxl<col_name_list.length;blxl++){
+    for (let blxl=0,lent=col_name_list.length;blxl<lent;blxl++){
         col_name_list[blxl]='<option value="'+blxl+'">'+col_name_list[blxl]+'</option>';
     }
     var klmenu1=[
@@ -108,7 +108,7 @@ function statistics_ingredient_cn_medicine(sort_no=1,is_desc=true){
         }
     }
     
-    for (let blxl=0;blxl<ingredient_t.length;blxl++){
+    for (let blxl=0,lent=ingredient_t.length;blxl<lent;blxl++){
         ingredient_t[blxl]='<tr><td>'+(blxl+1)+'</td><td>'+ingredient_t[blxl][0]+'</td><td align=right>'+ingredient_t[blxl][1]+'</td></tr>';
     }
     

@@ -477,7 +477,7 @@ function thumbnail_klphotos_b(csno=0){
 	}
     var filter_str=get_filter_style_klphotos_b(true);
     
-	for (let blxl=csno;blxl<=photodata_global.length-1;blxl++){
+	for (let blxl=csno,lent==photodata_global.length-1;blxl<lent;blxl++){
 		if (bltitle_tmp=='' || bltitle_tmp!==photodata_global[blxl][1]){
 			bltitle_tmp=photodata_global[blxl][1];
 			if (bltitle_tmp!=''){

@@ -29,7 +29,7 @@ function init_dbb(){
     
     var list_t=[];
     var blat;
-    for (let blxl=0;blxl<csbooklist_source_global.length;blxl++){
+    for (let blxl=0,lent=csbooklist_source_global.length;blxl<lent;blxl++){
         if (csbooklist_source_global[blxl][3]=='2'){
             csbooklist_source_global[blxl]='';
             continue;
@@ -249,7 +249,7 @@ function search_dbb(cskey=false,cstype=''){
     var bought_show=klmenu_check_b('span_bought_show_dbb',false);            
     var ignore_show=klmenu_check_b('span_txtbook_ignore_dbb',false);                
 
-    for (let blxl=0;blxl<douban_book_global.length;blxl++){
+    for (let blxl=0,lent=douban_book_global.length;blxl<lent;blxl++){
         var item=douban_book_global[blxl];
         if (item['publication_year']==undefined){
             item['publication_year']=year_get_dbb(item['出版年']);
@@ -760,12 +760,12 @@ function statistics_key_pie_dbb(cstype){
     
     var table_list=[];
     var bllen=publisher_list.length;
-    for (let blxl=0;blxl<result_t.length;blxl++){
+    for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
         table_list.push('<tr><td>'+(blxl+1)+'</td><td>'+result_t[blxl][0]+'</td><td align="right">'+result_t[blxl][1]+'</td><td align="right">'+(result_t[blxl][1]*100/bllen).toFixed(2)+'%</td></tr>');
     }
         
     var blat=-1;
-    for (let blxl=10;blxl<result_t.length;blxl++){  //至少显示前 10 个 - 保留注释
+    for (let blxl=10,lent=result_t.length;blxl<lent;blxl++){  //至少显示前 10 个 - 保留注释
         if (result_t[blxl][1]/bllen<0.01){
             blat=blxl;
             break;
@@ -782,7 +782,7 @@ function statistics_key_pie_dbb(cstype){
         result_t.push(['others',other_count]);
     }
 
-    for (let blxl=0;blxl<result_t.length;blxl++){
+    for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
         result_t[blxl]={'label': result_t[blxl][0], 'data': result_t[blxl][1]};
     }
     

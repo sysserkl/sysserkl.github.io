@@ -299,7 +299,7 @@ function filename_list_reader_idb(db){
     }
     //-----------------------
     var fname_bookname_list=local_storage_get_b('reader_idb_filename_bookname',-1,true);
-    for (let blxl=0;blxl<fname_bookname_list.length;blxl++){
+    for (let blxl=0,lent=fname_bookname_list.length;blxl<lent;blxl++){
         fname_bookname_list[blxl]=fname_bookname_list[blxl].split(' /// ');
     }
     idbfilename_list_global=[];
@@ -329,7 +329,7 @@ function bookname_set_reader_idb(){
     new_list.push(csbookname_global+' /// '+new_bookname);
     localStorage.setItem('reader_idb_filename_bookname',new_list.join('\n'));
     
-    for (let blxl=0;blxl<idbfilename_list_global.length;blxl++){
+    for (let blxl=0,lent=idbfilename_list_global.length;blxl<lent;blxl++){
         if (idbfilename_list_global[blxl][1]==csbookname_global){
             idbfilename_list_global[blxl][2]=new_bookname;
             break;

@@ -101,7 +101,7 @@ function duplicate_cnki(){
     if (cnki_article_list_raw_global.length<2){return;}
     
     var cols4_list=[];
-    for (let blxl=0;blxl<cnki_article_list_raw_global.length;blxl++){
+    for (let blxl=0,lent=cnki_article_list_raw_global.length;blxl<lent;blxl++){
         cols4_list.push([cnki_article_list_raw_global[blxl].slice(0,4).join(','),blxl]);
     }
     
@@ -151,7 +151,7 @@ function standalone_cnki(){
     var old_value=rows_per_page_cnki_global;
     rows_per_page_cnki_global=current_result_cnki_global.length;
     var result_t=page_cnki(1);
-    for (let blxl=0;blxl<result_t.length;blxl++){
+    for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
         result_t[blxl]='"'+specialstr_j(result_t[blxl])+'",';
     }
 
@@ -223,13 +223,13 @@ function statistics_year_month_cnki(){
         ym_t[blkey]=ym_t[blkey]+1;
     }
     year_t=object2array_b(year_t,true,2);
-    for (let blxl=0;blxl<year_t.length;blxl++){
+    for (let blxl=0,lent=year_t.length;blxl<lent;blxl++){
         year_t[blxl][0]=validdate_b(year_t[blxl][0]+'-01-01');
     }
     year_t=date_list_insert_zero_b(year_t,false,false,['01'],['01']);    
     
     ym_t=object2array_b(ym_t,true,2);
-    for (let blxl=0;blxl<ym_t.length;blxl++){
+    for (let blxl=0,lent=ym_t.length;blxl<lent;blxl++){
         ym_t[blxl][0]=validdate_b(ym_t[blxl][0]);
     }
     ym_t=date_list_insert_zero_b(ym_t,false,false,[],['01']);
@@ -386,7 +386,7 @@ function table_th_cnki(is_simple=false){
             th_list.push('<th nowrap>'+item+'</th>');
         }    
     } else {
-        for (let blxl=0;blxl<th_names.length;blxl++){
+        for (let blxl=0,lent=th_names.length;blxl<lent;blxl++){
             th_list.push('<th style="cursor:pointer;" onclick="sort_cnki('+blxl+');" nowrap>'+th_names[blxl]+'</th>');
         }
     }

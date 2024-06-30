@@ -303,7 +303,7 @@ function books_b(showall=false,cstype='txt',cstag='all',enforce_refresh=false){ 
     var today_xl=1;
     
     var blshow_no=(location.href.includes('/txtlistsearch.htm')?1:0);
-	for (let blno=0;blno<csbooklist_sub_global.length;blno++){
+	for (let blno=0,lent=csbooklist_sub_global.length;blno<lent;blno++){
         var item=csbooklist_sub_global[blno];
         var asc_t=asc_sum_b(item[0]+item[1]);
 		if (csbooklist_sub_global.length<=5 || showall || blno==0 || Math.abs(csbookno_global-blno)<=blshow_no || csbooklist_sub_global.length-1==blno || csbookno_global==blno || asc_t%182+1==day_t2){
@@ -420,7 +420,7 @@ function filename_2_bookname_b(filename){
 function reader_lastbook_id_get_b(){
     var last_book=local_storage_get_b('reader_lastbook',-1,true);
     var marked_set=new Set();
-    for (let blxl=0;blxl<last_book.length;blxl++){
+    for (let blxl=0,lent=last_book.length;blxl<lent;blxl++){
         last_book[blxl]=last_book[blxl].split('&');
         if (last_book[blxl].length>=2){
             marked_set.add(last_book[blxl][1]);
@@ -439,7 +439,7 @@ function booklist_source_config_b(is_digest=false){
     }
 
     var type_list=[['P','🏳P'],['L','🏳L'],['*','🏳E']];
-    for (let blxl=0;blxl<csbooklist_source_global.length;blxl++){
+    for (let blxl=0,lent=csbooklist_source_global.length;blxl<lent;blxl++){
         var item=csbooklist_source_global[blxl];
         var book_type=book_type_b(item);
         if (marked_set.has(item[0])){

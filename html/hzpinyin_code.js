@@ -26,7 +26,7 @@ function s2t_t2s_pair_hzpy(){
 function s2t_t2s_search_hzpy(){
     var blstr=document.getElementById('textarea_search_hzpy').value.trim();
     var result_t=s2t_t2s_search_b(blstr);
-    for (let blxl=0;blxl<result_t.length;blxl++){
+    for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
         result_t[blxl]='<strong>'+result_t[blxl][0]+'：</strong>'+result_t[blxl][1];
     }
     var odiv=document.getElementById('divhtml');
@@ -116,7 +116,7 @@ function pronunciation_single_3500_hzpy(show_html=true){
     }
     
     bljg=object2array_b(bljg,true);
-    for (let blxl=0;blxl<bljg.length;blxl++){
+    for (let blxl=0,lent=bljg.length;blxl<lent;blxl++){
         bljg[blxl]='"'+bljg[blxl][0]+'":["'+bljg[blxl].slice(1,).join('","')+'"],\n';
     }
     document.getElementById('divhtml').innerHTML=array_2_li_b(bljg.join('').trim().split('\n'));
@@ -143,7 +143,7 @@ function pronunciation_hzpy(cstype){
             }    
             result_t.sort();
             result_t.sort(function (a,b){return a[1]>b[1] ? 1 : -1;});   
-            for (let blxl=0;blxl<result_t.length;blxl++){
+            for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
                 result_t[blxl]=result_t[blxl][0];
             }
             break;
@@ -153,7 +153,7 @@ function pronunciation_hzpy(cstype){
                 result_t.push([key,py2hz_global[key].length]);
             }
             result_t.sort(function (a,b){return a[1]>b[1] ? 1 : -1;});
-            for (let blxl=0;blxl<result_t.length;blxl++){
+            for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
                 var words='';
                 if (result_t[blxl][1]<=10){
                     words='<span class="oblong_box">'+py2hz_global[result_t[blxl][0]].join(' ')+'</span>';
@@ -165,7 +165,7 @@ function pronunciation_hzpy(cstype){
         case 'length':
             var result_t=Object.keys(py2hz_global);
             result_t.sort(function(a,b){return a.length<b.length ? 1 : -1;});
-            for (let blxl=0;blxl<result_t.length;blxl++){
+            for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
                 result_t[blxl]=result_t[blxl]+': '+py2hz_global[result_t[blxl]];
             }
             result_t=array_2_li_b(result_t);
@@ -287,7 +287,7 @@ function split_same_hzpy(){
     }
     
     bljg=object2array_b(bljg,true);
-    for (let blxl=0;blxl<bljg.length;blxl++){
+    for (let blxl=0,lent=bljg.length;blxl<lent;blxl++){
         bljg[blxl]=bljg[blxl][0]+': '+bljg[blxl].slice(1,).join(', ');
     }
     document.getElementById('divhtml').innerHTML=array_2_li_b(bljg);    
@@ -812,21 +812,21 @@ function vertical_generation_hzpy(csstr,v_len=-1,delimiter=' ',align='top',repla
 
     switch (align){
         case 'top':
-            for (let blxl=0;blxl<result_t.length;blxl++){
+            for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
                 for (let blno=result_t[blxl].length;blno<v_len;blno++){
                     result_t[blxl].push('　');
                 }     
             }
             break;
         case 'bottom':
-            for (let blxl=0;blxl<result_t.length;blxl++){
+            for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
                 for (let blno=result_t[blxl].length;blno<v_len;blno++){
                     result_t[blxl]=['　'].concat(result_t[blxl]);
                 }     
             }
             break;
         case 'center':
-            for (let blxl=0;blxl<result_t.length;blxl++){
+            for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
                 for (let blno=result_t[blxl].length;blno<v_len;blno++){
                     if (blno % 2 == 0){
                         result_t[blxl]=['　'].concat(result_t[blxl]);

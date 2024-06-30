@@ -1,7 +1,7 @@
 function import_files_rlater(){
     if (is_local_b()){
         var flist=['data/readlater/readlater_words_count_data.js', 'data/readlater/readlater_spam_keys_data.js', 'data/readlater/readlater_important_keys_data.js', 'data/klwiki/klwiki_page_position_data.js','data/album/wiki_album_data.js'];
-        for (let blxl=0;blxl<flist.length;blxl++){
+        for (let blxl=0,lent=flist.length;blxl<lent;blxl++){
             flist[blxl]='../../../../'+flist[blxl];
         }
         klbase_addons_import_js_b([],[],[],flist);
@@ -76,7 +76,7 @@ function comment_rlater(){
     var csmax=parseInt(document.getElementById('input_max_rows').value);
     var result_t=new Set();
     var blno=0;
-    for (let blxl=1;blxl<readlater_data_global.length;blxl++){//忽略第1条 - 保留注释
+    for (let blxl=1,lent=readlater_data_global.length;blxl<lent;blxl++){//忽略第1条 - 保留注释
         if (cskey!=='' && !readlater_data_global[blxl][0].includes(cskey)){continue;}
         var current_hash=readlater_data_global[blxl][0].includes('#');
         var prev_hash=readlater_data_global[blxl-1][0].includes('#');        
@@ -258,7 +258,7 @@ function menu_rlater(){
 function jieba_sites_rlater(){
     var list_t=[];
     var ospans=document.querySelectorAll('#section_jieba span.span_jieba_key_rlater');
-    for (let blxl=0;blxl<ospans.length;blxl++){
+    for (let blxl=0,lent=ospans.length;blxl<lent;blxl++){
         list_t.push(ospans[blxl].innerText);
         if (blxl>300){break;}
     }
@@ -445,7 +445,7 @@ function statistics_set_rlater(){
 }
 
 function init_data_rlater(){
-    for (let blxl=0;blxl<readlater_data_global.length;blxl++){
+    for (let blxl=0,lent=readlater_data_global.length;blxl<lent;blxl++){
         var item=readlater_data_global[blxl];
         if (item.length==6){continue;}
         readlater_data_global[blxl].push(find_host_rlater(item[0])); //添加 host - 保留注释
@@ -583,7 +583,7 @@ function host_100_line_rlater(){
 
 function host_sites_rlater(){
     var list_t=[];
-    for (let blxl=0;blxl<readlater_host_global.length;blxl++){
+    for (let blxl=0,lent=readlater_host_global.length;blxl<lent;blxl++){
         list_t.push(readlater_host_global[blxl][0]);
         if (blxl>300){break;}
     }
@@ -652,7 +652,7 @@ function duplication_rlater(){
     var cstype=radio_value_get_b('radio_search_type');
     
     var result_t=new Set();
-    for (let blxl=1;blxl<readlater_data_global.length;blxl++){//忽略第1条 - 保留注释
+    for (let blxl=1,lent=readlater_data_global.length;blxl<lent;blxl++){//忽略第1条 - 保留注释
         if (readlater_data_global[blxl][0]==readlater_data_global[blxl-1][0]){
             result_t.add(red_one_rlater(readlater_data_global[blxl],cstype,today_t));
             result_t.add(red_one_rlater(readlater_data_global[blxl-1],cstype,today_t));
@@ -804,7 +804,7 @@ function tags_websites_rlater(taglist=[],showrecent=true,csmax=10,showhtml=true,
         }
     }
 
-    for (let blxl=0;blxl<readlater_data_global.length-recentlength;blxl++){
+    for (let blxl=0,lent=readlater_data_global.length-recentlength;blxl<lent;blxl++){
         for (let tagname of taglist){
             if (tagname=='TOP'){continue;}
             if (readlater_data_global[blxl][0].toLowerCase().includes(tagname.toLowerCase()) || readlater_data_global[blxl][1].toLowerCase().includes(tagname.toLowerCase())){
@@ -861,7 +861,7 @@ function search_batch_rlater(key_list,randomsort=false,csmax=-1,istest=false){
             if (blxl>=bllen){
                 test_t=object2array_b(test_t,true);
                 test_t.sort(function (a,b){return a[1]>b[1] ? 1 : -1;});
-                for (let blxl=0;blxl<test_t.length;blxl++){
+                for (let blxl=0,lent=test_t.length;blxl<lent;blxl++){
                     test_t[blxl]=test_t[blxl][0].substring(2,)+': '+test_t[blxl][1];
                 }
                 div_column_count_rlater(array_2_li_b(test_t));
@@ -1083,7 +1083,7 @@ function img_today_show_rlater(){
         });
         blcount=Math.max(0,blcount-csno*grids_count);
         num_list=num_list.slice(blcount,);
-        for (let blxl=0;blxl<num_list.length;blxl++){
+        for (let blxl=0,lent=num_list.length;blxl<lent;blxl++){
             num_list[blxl]=num_list[blxl]-csno*grids_count;
         }
         num_list.sort(function (a,b){return a>b ? 1 : -1;});

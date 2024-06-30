@@ -30,7 +30,7 @@ function split_all_txtcard(cscount=30,csstr_length=150){
         [blstr,list_t]=split_one_txtcard(list_t,cscount-blxl+1,csstr_length);
         if (blstr.length==0){continue;}
 
-        for (let blxl2=0;blxl2<blstr.length;blxl2++){
+        for (let blxl2=0,lenb=blstr.length;blxl2<lenb;blxl2++){
             blstr[blxl2][1]=left_len+blstr[blxl2][1];
         }
         left_len=filelist_len-list_t.length;
@@ -44,7 +44,7 @@ function split_all_txtcard(cscount=30,csstr_length=150){
     result_list.sort(randomsort_b);
     var bljg='';
     var is_group_file=is_group_file_kltxt_b();
-    for (let blxl=0;blxl<result_list.length;blxl++){
+    for (let blxl=0,lent=result_list.length;blxl<lent;blxl++){
         var item=result_list[blxl];
         if (item.length<1){continue;}
         bljg=bljg+'<div class="div_masonry" style="'+divstyle+'">';

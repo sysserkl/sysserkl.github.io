@@ -8,7 +8,7 @@ function random_chs_b(cslength,return_list=false){
         var cslength= 1;
     }
     var bljg=[];
-    for (let blxl=0;blxl<cslength;blxl++){
+    for (let blxl=0,lent=cslength;blxl<lent;blxl++){
         bljg.push(String.fromCodePoint(Math.round(Math.random()*20901+19968)));
     }
     if (return_list){
@@ -137,7 +137,7 @@ function en_confuse_str_b(csstr,cssegments=-1){
 
     var bljg=csstr.substring(0,lenlist[0]);
     
-    for (let blxl=0;blxl<lenlist.length;blxl++){
+    for (let blxl=0,lent=lenlist.length;blxl<lent;blxl++){
         if (blxl<lenlist.length-1){
             bljg=bljg+random_strs_b()+csstr.substring(lenlist[blxl],lenlist[blxl+1]);
         } else {
@@ -164,7 +164,7 @@ function odd_str_b(csstr){
         list_t.push('');
     }
     var bljg='';
-    for (let blxl=1;blxl<list_t.length;blxl=blxl+2){
+    for (let blxl=1,lent=list_t.length;blxl<lent;blxl=blxl+2){
         bljg=bljg+list_t[blxl]+list_t[blxl-1];
     }
     return bljg;
@@ -222,7 +222,7 @@ function en_double_str_b(csstr,split_lines=false){
     if (split_lines){
         var list_t=result_value.split('\n');  //必须先加密再分段 - 保留注释
         //以下部分，emoji字符可能显示错误 - 保留注释
-        for (let blxl=0;blxl<list_t.length;blxl++){
+        for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
             var blstr=list_t[blxl];
             if (!blstr.includes("'")){
                 blstr="'"+blstr+"',";
@@ -252,7 +252,7 @@ function split_words_b(csstr,cscombine=false){
         if (list_cn!==null){
             list_cn=array_unique_b(list_cn);
 
-            for (let blxl=0;blxl<list_cn.length;blxl++){
+            for (let blxl=0,lent=list_cn.length;blxl<lent;blxl++){
                 if (list_cn[blxl].length==2){
                     list_t.push(list_cn[blxl]);
                     list_cn[blxl]='';
@@ -375,7 +375,7 @@ function ChineseToNumber_b(chnStr){
     var str = chnStr.split('');
 
     try {
-        for (let blxl = 0; blxl < str.length; blxl++){
+        for (let blxl = 0,lent= str.length; blxl <lent; blxl++){
             var num = chnNumChar[str[blxl]];
                 if (typeof num !== 'undefined'){
                     number = num;
@@ -643,12 +643,12 @@ function invisible_character_list_b(cstype='',restrict=false){
     switch (cstype){
         case '':
         case 'html':
-            for (let blxl=0;blxl<list_t.length;blxl++){
+            for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
                 list_t[blxl]='&#x'+list_t[blxl];
             }
             break;
         case 'js':
-            for (let blxl=0;blxl<list_t.length;blxl++){
+            for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
                 list_t[blxl]=String.fromCodePoint('0x'+list_t[blxl]);
                 //eval('"\\u{'+list_t[blxl]+'}"'); 此行保留 - 保留注释
             }        
@@ -698,7 +698,7 @@ function invisible_character_add_or_remove_b(csstr,cstype='',restrict=false){
 
 function invisible_character_test_b(){
     var list_t=invisible_character_list_b('js');
-    for (let blxl=0;blxl<list_t.length;blxl++){
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         list_t[blxl]=(blxl+'.['+list_t[blxl]+']:'+list_t[blxl].charCodeAt().toString(16));
     } 
     return list_t;

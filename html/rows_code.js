@@ -72,11 +72,11 @@ function do_type_klr2(cstype){
             var date_list=next_days_b(bldate,content_list.length,false,'',blstep,step_type);
         
             if (blop=='1'){
-                for (let blxl=0;blxl<content_list.length;blxl++){
+                for (let blxl=0,lent=content_list.length;blxl<lent;blxl++){
                     content_list[blxl]=date_2_str_format_b(date_list[blxl],blformat,'date')+content_list[blxl];
                 }
             } else {  //'2'
-                for (let blxl=0;blxl<content_list.length;blxl++){
+                for (let blxl=0,lent=content_list.length;blxl<lent;blxl++){
                     content_list[blxl]=content_list[blxl]+date_2_str_format_b(date_list[blxl],blformat,'date');
                 }            
             }
@@ -133,11 +133,11 @@ function str_en_de_kl2(cstype='double',en=true){
         case 'url':
             var list_t=blstr.split('\n');
             if (en){
-                for (let blxl=0;blxl<list_t.length;blxl++){
+                for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
                     list_t[blxl]=encodeURIComponent(list_t[blxl]);
                 }
             } else {
-                for (let blxl=0;blxl<list_t.length;blxl++){
+                for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
                     list_t[blxl]=decodeURIComponent(list_t[blxl]);
                 }
             }
@@ -338,7 +338,7 @@ function option_generate_klr2(){
     ['common_string_from_lines','提取每一行中的相同字符串'],
     ['number_sub','数字替换为下标'],
     ];    
-    for (let blxl=0;blxl<list_t.length;blxl++){
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         list_t[blxl]='<OPTION value="'+list_t[blxl][0]+'">'+list_t[blxl][1]+'</OPTION>';
     }
     document.getElementById('oquick').innerHTML=list_t.join('\n');
@@ -381,7 +381,7 @@ function init_klr2(){
 function leaflet_en_buttons_klr2(){
     var list_t=letters52_style_list_b();
     var result_t=['<option value=-1>abcde</option>'];
-    for (let blxl=0;blxl<list_t.length;blxl++){
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         result_t.push('<option value='+blxl+'>'+list_t[blxl].slice(0,5).join('')+'</option>');
     }
     var buttons='<select id="select_transform_klr">'+result_t.join('\n')+'</select>\n';

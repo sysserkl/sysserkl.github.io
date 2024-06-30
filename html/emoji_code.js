@@ -137,7 +137,7 @@ function init_emoji(){
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.4rem'));
     
     var key_list=Object.keys(unicode_global);
-    for (let blxl=0;blxl<key_list.length;blxl++){
+    for (let blxl=0,lent=key_list.length;blxl<lent;blxl++){
         key_list[blxl]='<option>'+key_list[blxl]+'</option>';
     }
     key_list.sort();
@@ -215,7 +215,7 @@ function unicode_overlape_search_emoji(){
             
             var textarea_list=[];    
             var blcount=0;    
-            for (let blno=0;blno<list_t.length;blno++){
+            for (let blno=0,lent=list_t.length;blno<lent;blno++){
                 textarea_list=textarea_list.concat(list_t[blno][1]);    
                 var blhead='<h3>'+list_t[blno][0]+'<small>('+(blcount+1)+'-'+(blcount+list_t[blno][1].length)+')</small></h3>';
                 blcount=blcount+list_t[blno][1].length;

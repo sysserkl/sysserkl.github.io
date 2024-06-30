@@ -96,7 +96,7 @@ function filter_select_value_img_b(new_value=false){
     var list_t=oinput.value.trim().split(' ');
     var blvalue=0;
     var blfound=false;
-    for (let blxl=0;blxl<list_t.length;blxl++){
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         var item=list_t[blxl];
         var blat=item.indexOf(cstype+'(');
         if (blat==0 && item.slice(-2,)=='%)'){
@@ -274,7 +274,7 @@ function grey_img_b(img_original_obj,ocanvas,ctx,white_and_black=false){
 
     // 将图像转换为黑白二色
     var r,g,b;
-    for (let blxl = 0; blxl < data.length; blxl += 4){
+    for (let blxl = 0,lent= data.length; blxl <lent; blxl += 4){
         [r, g, b] = [data[blxl], data[blxl + 1], data[blxl + 2]];
         var gray = 0.299 * r + 0.587 * g + 0.114 * b; // 计算灰度值。在图像处理中，灰度化是将彩色图像转换为灰度图像的过程，即将每个像素点的RGB值转换为一个灰度值。常用的灰度化方法有平均值法、加权平均法、最大值法和最小值法等。其中，0.299、0.587、0.114是RGB三个颜色通道的权值比例，这些权值比例是经过科学实验得到的最佳值，使得转换后的灰度图像最能够反映彩色图像的亮度和对比度信息。在灰度化过程中，将每个像素点的RGB值乘以对应的权值比例，然后将三个结果相加，得到该像素点的灰度值。这个灰度值可以用来代替原来的RGB值，从而得到灰度图像。
         data[blxl] = gray;
@@ -283,7 +283,7 @@ function grey_img_b(img_original_obj,ocanvas,ctx,white_and_black=false){
     }
     
     if (white_and_black){
-        for (let blxl = 0; blxl < data.length; blxl += 4){
+        for (let blxl = 0,lent= data.length; blxl <lent; blxl += 4){
             var gray = data[blxl];
             var bw = gray > 128 ? 255 : 0; // 将灰度值大于128的像素点设为白色，否则设为黑色
             data[blxl] = bw;

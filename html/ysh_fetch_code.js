@@ -78,7 +78,7 @@ function data_import_ysh_jf(){
         return;
     }
     
-    for (let blxl=2;blxl<list_t.length;blxl=blxl+3){
+    for (let blxl=2,lent=list_t.length;blxl<lent;blxl=blxl+3){
         if (validdate_b(list_t[blxl])==false){
             alert('日期格式错误',list_t[blxl]);
             return;
@@ -87,7 +87,7 @@ function data_import_ysh_jf(){
     if (!confirm('是否导入 '+list_t.length/3+' 条记录？')){return;}
     
     raw_data_ysh_jf_global=[];
-    for (let blxl=0;blxl<list_t.length;blxl=blxl+3){
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl=blxl+3){
         var arow=[list_t[blxl],list_t[blxl+1],list_t[blxl+2]];
         raw_data_ysh_jf_global.push(arow);
     }
@@ -110,7 +110,7 @@ function data_show_ysh_jf(csarr){
     
     var today=date2str_b('-');
     try {
-        for (let blxl=0;blxl<csarr['docs'].length;blxl++){
+        for (let blxl=0,lent=csarr['docs'].length;blxl<lent;blxl++){
             let item=csarr['docs'][blxl]['pnx']['sort'];
             let bltitle=(item['title']==undefined?'':item['title'][0]);
             let blauthor=(item['author']==undefined?'':item['author'][0]);
@@ -220,7 +220,7 @@ function idb_write_ysh_jf(db,do_alert=false){
             return;
         }
         
-        for (let blxl=0;blxl<raw_data_ysh_jf_global.length;blxl++){
+        for (let blxl=0,lent=raw_data_ysh_jf_global.length;blxl<lent;blxl++){
             if (found_list.includes(blxl)){continue;}
             
             var item=raw_data_ysh_jf_global[blxl];
@@ -243,7 +243,7 @@ function idb_write_ysh_jf(db,do_alert=false){
         otable.openCursor().onsuccess = function (event){
             var cursor = event.target.result;
             if (cursor){
-                for (let blxl=0;blxl<raw_data_ysh_jf_global.length;blxl++){
+                for (let blxl=0,lent=raw_data_ysh_jf_global.length;blxl<lent;blxl++){
                     var item=raw_data_ysh_jf_global[blxl];
                     if (cursor.value.title+','+cursor.value.author==item.slice(0,2).join(',')){
                         if (cursor.value.date!==item[2]){

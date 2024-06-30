@@ -50,7 +50,7 @@ function sites_compare_sort_klsnews_b(sort_type){
     }
 
     var bljg='';
-    for (let blxl=0;blxl<sites_compare_list_global.length;blxl++){
+    for (let blxl=0,lent=sites_compare_list_global.length;blxl<lent;blxl++){
         bljg=bljg+'<tr class="odd">';
         var foundname=false;
         for (let www of sites_all_global){
@@ -142,7 +142,7 @@ function newwords_klsnews_b(){
         return;
     }
     var enwords_temp=[];
-    for (let blxl=0;blxl<enwords.length;blxl++){
+    for (let blxl=0,lent=enwords.length;blxl<lent;blxl++){
         enwords_temp.push(enwords[blxl][0].toLowerCase());
         enwords_temp.push(enwords[blxl][0].toLowerCase()+'d');
         enwords_temp.push(enwords[blxl][0].toLowerCase()+'ed');
@@ -199,7 +199,7 @@ function statistics_sites_klsnews_b(){
     sites_count_t.sort(function (a,b){return zh_sort_b(a,b,false,0);});
     
     var bljg='0. <span onclick=\'getlines_klsnews_b();\' style="cursor:pointer;">全部</span>('+sourcelist.length+') ';
-    for (let blxl=0;blxl<sites_count_t.length;blxl++){
+    for (let blxl=0,lent=sites_count_t.length;blxl<lent;blxl++){
         var item=sites_count_t[blxl];
         bljg=bljg+(parseInt(blxl)+1)+'. <span onclick=\'getlines_klsnews_b("'+item[0]+'",1,50);\' style="cursor:pointer;">'+item[0]+'</span>('+item[1]+') ';
     }
@@ -217,7 +217,7 @@ function showhide_klsnews_b(){
 
 function open_all_more_klsnews_b(){
     var oas=document.querySelectorAll('p[id^="p_more_"] span.span_link');
-    for (let blxl=0;blxl<oas.length;blxl++){
+    for (let blxl=0,lent=oas.length;blxl<lent;blxl++){
         oas[blxl].click();
     }
 }
@@ -486,7 +486,7 @@ function classify_sites_klsnews_b(bottom_eng=true,sort_by_day=false,show_cn_en='
         //position:relative;float:left;max-width:330px; - 保留注释
     }
     
-    for (let blxl=0;blxl<selected_list.length;blxl++){
+    for (let blxl=0,lent=selected_list.length;blxl<lent;blxl++){
         if (thetag==''){
             thetag=selected_list[blxl][3];
         }
@@ -537,7 +537,7 @@ function classify_sites_klsnews_b(bottom_eng=true,sort_by_day=false,show_cn_en='
         }
         var removestr='[”“’‘„–—‒…‚・⨯]';
         var list_t=[].concat(bljg_list);
-        for (let blxl=0;blxl<list_t.length;blxl++){
+        for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
             var item=list_t[blxl];
             var site_type='';
             var do_add=false;
@@ -582,7 +582,7 @@ function classify_sites_klsnews_b(bottom_eng=true,sort_by_day=false,show_cn_en='
     var finished_sites=local_storage_get_b('finished_selenews',-1,true);
     var key_value=document.getElementById('span_search_key').innerText;
     key_value=(key_value.match(/\d{4}\-\d{2}\-\d{2}/g) || [''])[0];
-    for (let blxl=0;blxl<bljg_list.length;blxl++){
+    for (let blxl=0,lent=bljg_list.length;blxl<lent;blxl++){
         if (blxl % 10 == 0){
             bljg=bljg+'<div class="div_masonry" style="width:100%;"><h3>第 '+(1+blxl/10)+' 部分</h3></div>';
         }
@@ -606,7 +606,7 @@ function classify_sites_klsnews_b(bottom_eng=true,sort_by_day=false,show_cn_en='
 }
 
 function init_klsnews_b(){
-    for (let blxl=0;blxl<enwords_easy_global.length;blxl++){
+    for (let blxl=0,lent=enwords_easy_global.length;blxl<lent;blxl++){
         enwords_easy_global[blxl]=enwords_easy_global[blxl].toLowerCase();
     }
     enwords_easy_global=new Set(enwords_easy_global);
@@ -621,7 +621,7 @@ function words_translate_klsnews_b(){
     if (do_translate===true){
         var enwords_temp=[];
         var enwords_temp_no=[];
-        for (let blxl=0;blxl<enwords.length;blxl++){
+        for (let blxl=0,lent=enwords.length;blxl<lent;blxl++){
             if (enwords_easy_global.has(enwords[blxl][0].toLowerCase())){continue;}
             
             enwords_temp.push(enwords[blxl][0].toLowerCase());
@@ -639,7 +639,7 @@ function words_translate_klsnews_b(){
                 if (list_t==null || list_t.length<6){continue;}
                 
                 var bly=0;
-                for (let blx=0;blx<list_t.length;blx++){
+                for (let blx=0,lenb=list_t.length;blx<lenb;blx++){
                     if (list_t[blx]=='' || enwords_easy_global.has(list_t[blx]) || enwords_easy_global.has(list_t[blx].toLowerCase())){
                         continue;
                     }
@@ -713,7 +713,7 @@ function rnd_links_klsnews_b(cscount=0){
     var odiv2as=document.querySelectorAll('a.a_news_link');
     var list_t=[];
     var bgcolor=hex2rgb_b(scheme_global['pink'],true);
-    for (let blno=0;blno<odiv2as.length;blno++){
+    for (let blno=0,lent=odiv2as.length;blno<lent;blno++){
         if (odiv2as[blno].style.backgroundColor==bgcolor){continue;}
         list_t.push(blno);
     }
@@ -806,7 +806,7 @@ function next_dbc_search_klsnews_b(){
     if (oselect){
         var options=oselect.getElementsByTagName('option');
         var blxl=0;
-        for (blxl=0;blxl<options.length;blxl++){
+        for (blxl=0,lent=options.length;blxl<lent;blxl++){
             if (options[blxl].selected){break;}
         }
         if (blxl==options.length-1){return;}
@@ -922,15 +922,8 @@ function dbc_list_klsnews_b(cskeys,csshow_websites=false,csoneday=false){
     var bljg='';
     var dbc_count=selenium_dbc_global.length;
     var space_str=(dbc_count==1?'':' ');
-    //if (dbc_count==1){
-        //var html_file='recent_news.htm';
-        //var space_str='';
-    //}
-    //else {
-        //var html_file='selenium_news_reader_offline.htm';
-        //var space_str=' ';
-    //}
-    for (let blxl=0;blxl<dbc_js_files.length;blxl++){//天数 - 保留注释
+
+    for (let blxl=0,lent=dbc_js_files.length;blxl<lent;blxl++){//天数 - 保留注释
         var file_date=dbc_js_files[blxl];
         var file_date2=file_date;
         if (csoneday==false && blxl>0){
@@ -1014,7 +1007,7 @@ function dbc_list2_klsnews_b(cskeys){
 function dbc_list3_klsnews_b(){
     var bljg='';
     var currentvalue=document.getElementById('select_dbfname').value;
-    for (let blxl=0;blxl<selenium_dbc_global.length;blxl++){
+    for (let blxl=0,lent=selenium_dbc_global.length;blxl<lent;blxl++){
         bljg=bljg+'<span class="oblong_box"';
         if (currentvalue==selenium_dbc_global[blxl][0]){
             bljg=bljg+' style="color:'+scheme_global['a-hover']+';"';

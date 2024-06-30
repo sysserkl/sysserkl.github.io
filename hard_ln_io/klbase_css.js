@@ -491,7 +491,7 @@ function top_bottom_menu_b(csno=-1,trigger=true,threshold=0){
     if (osection.innerHTML==''){
         var result_t=[];
         var full_t=[];
-        for (let blxl=0;blxl<ohs.length;blxl++){
+        for (let blxl=0,lent=ohs.length;blxl<lent;blxl++){
             var item=ohs[blxl];
             var bltxt=item.innerText.trim();
             var blat=bltxt.indexOf(' | ');
@@ -775,7 +775,7 @@ function color_range_with_value_range_b(color_list,min_value,max_value){
     var blstep=Math.ceil((max_value-min_value+1)/(color_list.length-1));
     var legend=[];
     var csarr=[].concat(color_list);
-    for (let blxl=0;blxl<csarr.length-1;blxl++){
+    for (let blxl=0,lent=csarr.length-1;blxl<lent;blxl++){
         csarr[blxl]=[csarr[blxl],min_value+blstep*blxl];
         legend.push('<span style="color:'+csarr[blxl][0]+';">●</span>'+csarr[blxl][1]);
     }
@@ -1325,11 +1325,11 @@ function localstorage_value_load_save_b(cs_id_list,cs_checkbox_list,savename,cst
         if (Array.isArray(cs_id_list)){
             var list_t=bljg.split(' /// ');
             if (list_t.length==cs_id_list.length+cs_checkbox_list.length){
-                for (let blxl=0;blxl<cs_id_list.length;blxl++){
+                for (let blxl=0,lent=cs_id_list.length;blxl<lent;blxl++){
                     document.getElementById(cs_id_list[blxl]).value=list_t[blxl];
                 }
                 var bllen=cs_id_list.length;
-                for (let blxl=0;blxl<cs_checkbox_list.length;blxl++){
+                for (let blxl=0,lent=cs_checkbox_list.length;blxl<lent;blxl++){
                     checkbox_kl_color_b(cs_checkbox_list[blxl],list_t[bllen+blxl]);
                 }
             } else {
@@ -1380,7 +1380,7 @@ function recent_search_b(localsavename,csstr,jsfunctionname,divname,commonlist=[
     }
     //-----------------------
     if (Array.isArray(csstr)){
-        for (let blxl=0;blxl<csstr.length;blxl++){
+        for (let blxl=0,lent=csstr.length;blxl<lent;blxl++){
             csstr[blxl]=sub_recent_search_b_key_replace(csstr[blxl]);
         }
         var list_t=[];
@@ -1451,7 +1451,7 @@ function recent_search_b(localsavename,csstr,jsfunctionname,divname,commonlist=[
     }
     
     var recent_search_str2='';
-    for (let blxl=show_items;blxl<recent_search.length;blxl++){
+    for (let blxl=show_items,lent=recent_search.length;blxl<lent;blxl++){
         recent_search_str2=recent_search_str2+sub_recent_search_b_one_key(recent_search[blxl],jsfunctionname);
     }
     
@@ -1930,7 +1930,7 @@ function highlight_text_b(cswordlist=[],query_str=''){
             var old_text=one_dom.innerText;
             var old_html=one_dom.innerHTML;
             var new_html=old_html;
-            for (let blxl=0;blxl<blkey2.length;blxl++){
+            for (let blxl=0,lent=blkey2.length;blxl<lent;blxl++){
                 var one_key=blkey2[blxl];
                 if (old_text.includes(one_key)){
                     if (reg_error){
@@ -2118,14 +2118,14 @@ function date_count_dots_b(cslist,cscolor='red',color_range=13,csstep=20,csunit=
     var color_list=['#ffffff'].concat(color_with_different_light_b(cscolor,color_range));
     
     var step_list={};
-    for (let blxl=0;blxl<color_list.length;blxl++){
+    for (let blxl=0,lent=color_list.length;blxl<lent;blxl++){
         step_list[blxl]=0;
     }
 
     var used_color=new Set();
     var total_lines=0;
     var zero_days=0;
-    for (let blxl=0;blxl<cslist.length;blxl++){
+    for (let blxl=0,lent=cslist.length;blxl<lent;blxl++){
         var item=cslist[blxl];
         var the_day=date2str_b('-',item[0]);
         var blno=Math.max(0,Math.min(color_range,Math.round(item[1]/csstep)));  //负数视为0 - 保留注释
@@ -2161,7 +2161,7 @@ function date_count_dots_b(cslist,cscolor='red',color_range=13,csstep=20,csunit=
     if (show_legend){
         used_color=Array.from(used_color);
         used_color.sort(function (a,b){return a>b ? 1 : -1;});
-        for (let blxl=0;blxl<used_color.length;blxl++){
+        for (let blxl=0,lent=used_color.length;blxl<lent;blxl++){
             if (used_color[blxl]==0){
                 color_legend_list.push([blxl,'<span>◌</span> 0('+(zero_days==step_list[blxl]?'':zero_days+'/')+step_list[blxl]+'日)']);
             } else if (step_list[blxl]>0){
@@ -2173,7 +2173,7 @@ function date_count_dots_b(cslist,cscolor='red',color_range=13,csstep=20,csunit=
     }
     
     color_legend_list.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});
-    for (let blxl=0;blxl<color_legend_list.length;blxl++){
+    for (let blxl=0,lent=color_legend_list.length;blxl<lent;blxl++){
         color_legend_list[blxl]=color_legend_list[blxl][1];
     }
     blstr=blstr+'<p style="line-height:'+line_height+';">'+color_legend_list.join(' ')+csunit+'</p>';
@@ -2253,7 +2253,7 @@ function edit_buttons_b(js_fn='',more_buttons=false,olul=false,dom_type='button'
             var dom_str_l='<span class="'+dom_type+'"';
             var dom_str_r='</span>';
         }
-        for (let blxl=0;blxl<result_t.length;blxl++){
+        for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
             result_t[blxl]=dom_str_l+' onclick="'+js_fn+'(this);">'+specialstr_lt_gt_j(result_t[blxl])+dom_str_r;
         }
     }

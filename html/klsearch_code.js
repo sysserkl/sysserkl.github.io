@@ -9,7 +9,7 @@ function search_add_key_klsearch(csstr){
 function show_sites_klsearch(){
     var sites_rows={};
     var blhero=local_storage_get_b('herokuapp_host').trim();
-    for (let blxl=0;blxl<search_sites_list_global.length;blxl++){
+    for (let blxl=0,lent=search_sites_list_global.length;blxl<lent;blxl++){
         var item=search_sites_list_global[blxl];
         if (item.length!==8){
             console.log('不合规行：',item);
@@ -174,7 +174,7 @@ function iframe_generate_klsearch(cstype='',cskey=false){
             is_proxy=true;
             one_type=one_type.slice(0,-3);
         }
-        for (let blxl=0;blxl<search_sites_list_global.length;blxl++){
+        for (let blxl=0,lent=search_sites_list_global.length;blxl<lent;blxl++){
             var item=search_sites_list_global[blxl];
             if (one_type==item[4].toLowerCase()){
                 var blsrc=search_site_klsearch(blxl,is_proxy,cskey,false);
@@ -256,7 +256,7 @@ function args_klsearch(){
             one_type=one_type.slice(0,-3);
         }
         
-        for (let blxl=0;blxl<search_sites_list_global.length;blxl++){
+        for (let blxl=0,lent=search_sites_list_global.length;blxl<lent;blxl++){
             var item=search_sites_list_global[blxl];
             if (one_type==item[4].toLowerCase()){
                 if (blcategory!=='' && blcategory!==item[6].toLowerCase()){continue;}
@@ -268,7 +268,7 @@ function args_klsearch(){
     
     if (links_t.length==0){return;}
     
-    for (let blxl=0;blxl<links_t.length-1;blxl++){
+    for (let blxl=0,lent=links_t.length-1;blxl<lent;blxl++){
         window.open(links_t[blxl]);
     }
     
@@ -301,7 +301,7 @@ function init_klsearch(){
         }
         search_sites_list_global=search_sites_list_global.concat(search_sites_list_kl_global);  //合并 - 保留注释
 
-        for (let blxl=0;blxl<search_sites_list_global.length;blxl++){
+        for (let blxl=0,lent=search_sites_list_global.length;blxl<lent;blxl++){
             var item=search_sites_list_global[blxl][0];
             if (item.substring(0,4)=='http'){continue;}
             search_sites_list_global[blxl][0]=blhref+search_sites_list_global[blxl][0];
@@ -393,7 +393,7 @@ function one_key_to_all_links_klsearch(){
     var blkey=document.getElementById('input_searchtxt').value.trim();
     if (blkey==''){return;}
     var list_t=[];
-    for (let blxl=0;blxl<search_sites_list_global.length;blxl++){
+    for (let blxl=0,lent=search_sites_list_global.length;blxl<lent;blxl++){
         var item=search_sites_list_global[blxl];
         list_t.push([item[4],search_site_klsearch(blxl,false,blkey,false,false)]);
         if (item[5].includes('p')){
@@ -402,7 +402,7 @@ function one_key_to_all_links_klsearch(){
     }
     var bljg='';
     bljg=bljg+'<table width=100%>';
-    for (let blxl=0;blxl<list_t.length;blxl++){
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         var item=list_t[blxl];
         bljg=bljg+'<tr><td>'+(blxl+1)+'</td><td>'+item[0]+' <a href="'+item[1]+'" target=_blank>'+item[1]+'</a></td>';
         bljg=bljg+'<td align=left><textarea style="height:1rem;" onclick="this.select();document.execCommand(\'copy\');">'+item[0]+'</textarea></td>';
@@ -480,7 +480,7 @@ function batch_keys_links_klsearch(){
     
     var csno=-1;
     var csno2=-1;
-    for (let blxl=0;blxl<search_sites_list_global.length;blxl++){
+    for (let blxl=0,lent=search_sites_list_global.length;blxl<lent;blxl++){
         var item=search_sites_list_global[blxl];
         if (item[4]==bltype){
             csno=blxl;

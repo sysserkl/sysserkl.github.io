@@ -403,7 +403,7 @@ function year365_b(csyear=0, returndate=false,month_list=[]){
     }
     var blresult=[];
     var list_m=month_day_b(0,csyear,true);
-    for (let blxl=0;blxl<list_m.length;blxl++){
+    for (let blxl=0,lent=list_m.length;blxl<lent;blxl++){
         if (month_list.length>0 && !month_list.includes(blxl)){continue;}
         
         for (let blday=1;blday<=list_m[blxl];blday++){

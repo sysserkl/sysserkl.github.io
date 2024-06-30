@@ -21,11 +21,11 @@ function menu_forbes_billionaire(){
     [menu_years,menu_district]=year_district_list_forbes_billionaire();
     menu_years.reverse();
     
-    for (let blxl=0;blxl<menu_years.length;blxl++){
+    for (let blxl=0,lent=menu_years.length;blxl<lent;blxl++){
         menu_years[blxl]='<span class="span_menu" onclick="'+str_t+'search_forbes_billionaire(\''+menu_years[blxl]+'\',false);">'+menu_years[blxl]+'</span>';   
     }
 
-    for (let blxl=0;blxl<menu_district.length;blxl++){
+    for (let blxl=0,lent=menu_district.length;blxl<lent;blxl++){
         menu_district[blxl]='<span class="span_menu" onclick="'+str_t+'search_forbes_billionaire(\''+menu_district[blxl]+'\',false);">'+menu_district[blxl]+'</span>';   
     }
     
@@ -126,7 +126,7 @@ function array_2_html_forbes_billionaire(csarray,cssum=false,table_id='table_for
     var blaverage=(cssum===false?false:(cssum/csarray.length));
     var average_count=0;
     
-    for (let blxl=0;blxl<csarray.length;blxl++){
+    for (let blxl=0,lent=csarray.length;blxl<lent;blxl++){
         var item=csarray[blxl];
         if (cssum!==false && item[3]>=blaverage){
             average_count=average_count+1;

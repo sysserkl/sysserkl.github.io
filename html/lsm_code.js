@@ -163,7 +163,7 @@ function file_date_paramter_refresh_lsm(){
 
 function local_storage_hash_lsm(cstype){
     var current_dict={};
-    for (let blxl = 0; blxl < localStorage.length; blxl++){
+    for (let blxl = 0,lent= localStorage.length; blxl <lent; blxl++){
         var keyname=localStorage.key(blxl);
         var blhash=SHA1(localStorage.getItem(keyname));
         current_dict['k_'+keyname]=blhash;
@@ -172,7 +172,7 @@ function local_storage_hash_lsm(cstype){
     switch (cstype){
         case 'generate':
             current_dict=object2array_b(current_dict,true,2);
-            for (let blxl=0;blxl<current_dict.length;blxl++){
+            for (let blxl=0,lent=current_dict.length;blxl<lent;blxl++){
                 current_dict[blxl]=current_dict[blxl][0]+' '+current_dict[blxl][1];
             }
             localStorage.setItem('ls_hash',current_dict.join('\n'));
@@ -258,7 +258,7 @@ function keys_lsm(){
     var otd=document.getElementById('section_lsm_name');
 
     var lsm_key=[];
-    for (let blxl = 0; blxl < localStorage.length; blxl++){
+    for (let blxl = 0,lent= localStorage.length; blxl <lent; blxl++){
         lsm_key.push('<input type="checkbox" value="'+localStorage.key(blxl)+'" /> <span class="span_link" onclick="local_storage_read_key_lsm(this.innerText);">'+localStorage.key(blxl)+'</span>');
     }
     lsm_key.sort();

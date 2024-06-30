@@ -95,7 +95,7 @@ function imdb_sort_multimedia(iname='Director',cssplit=false){
     for (let key in dlist2){
         dlist3.push(dlist2[key]);
     }
-    for (let blxl=0;blxl<dlist3.length;blxl++){
+    for (let blxl=0,lent=dlist3.length;blxl<lent;blxl++){
         dlist3[blxl][3]=(dlist3[blxl][3]/dlist3[blxl][1]).toFixed(2);
         if (dlist3[blxl][4].slice(-1)==','){
             dlist3[blxl][4]=dlist3[blxl][4].substring(0,dlist3[blxl][4].length-1);
@@ -165,7 +165,7 @@ function douban_sort_multimedia(csno){
     for (let key in dlist2){
         dlist3.push(dlist2[key]);
     }
-    for (let blxl=0;blxl<dlist3.length;blxl++){
+    for (let blxl=0,lent=dlist3.length;blxl<lent;blxl++){
         dlist3[blxl][3]=dlist3[blxl][3]/dlist3[blxl][2];
         if (dlist3[blxl][0].slice(-2)==', '){
             dlist3[blxl][0]=dlist3[blxl][0].substring(0,dlist3[blxl][0].length-2);
@@ -242,21 +242,21 @@ function tr_generate_multimedia(cslist,cstype,ignore_lt_2=false){
     var bljg=[];
     switch (cstype){
         case '4013':
-            for (let blxl=0;blxl<cslist.length;blxl++){
+            for (let blxl=0,lent=cslist.length;blxl<lent;blxl++){
                 var item=cslist[blxl];
                 if (ignore_lt_2 && item[1]<2){break;}
                 bljg.push('<tr><td>'+(blxl+1)+'</td><td>'+item[4]+'</td><td>'+item[0]+'</td><td>'+item[1]+'</td><td>'+item[3]+'</td></tr>');
             }
             break;
         case '01':
-            for (let blxl=0;blxl<cslist.length;blxl++){
+            for (let blxl=0,lent=cslist.length;blxl<lent;blxl++){
                 var item=cslist[blxl];
                 if (ignore_lt_2 && item[1]<2){break;}
                 bljg.push('<tr><td>'+(blxl+1)+'</td><td>'+item[0]+'</td><td>'+item[1]+'</td></tr>');
             }        
             break;
         case '013':
-            for (let blxl=0;blxl<cslist.length;blxl++){
+            for (let blxl=0,lent=cslist.length;blxl<lent;blxl++){
                 var item=cslist[blxl];
                 if (ignore_lt_2 && item[1]<2){break;}
                 bljg.push('<tr><td>'+(blxl+1)+'</td><td>'+item[0]+'</td><td>'+item[1]+'</td><td>'+item[3]+'</td></tr>');
@@ -355,7 +355,7 @@ function load_multimedia(){
     var datalist=['douban_data_20181010','imdb_data_20180929','imdb_data_20221012','imdb_data_20231129'];
 
     var bljg='· ';
-    for (let blxl=0;blxl<datalist.length;blxl++){
+    for (let blxl=0,lent=datalist.length;blxl<lent;blxl++){
         bljg=bljg+'<a href="imdb.htm?'+blxl+'">'+datalist[blxl]+'</a> · ';
     }
     document.getElementById('span_data_list').innerHTML=bljg;

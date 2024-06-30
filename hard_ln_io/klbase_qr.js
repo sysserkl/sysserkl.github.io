@@ -3,7 +3,7 @@
 //<script src="PythonTools/data/selenium_news/module/jeromeetienne_qrcode.min.js"></script>
 function utf16to8_qr_b(csstr){
     var bljg = '';
-    for (let blxl = 0; blxl < csstr.length; blxl++){
+    for (let blxl = 0,lent= csstr.length; blxl <lent; blxl++){
         var blvalue = csstr.charCodeAt(blxl);
         if ((blvalue >= 0x0001) && (blvalue <= 0x007F)){
             bljg += csstr.charAt(blxl);

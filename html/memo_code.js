@@ -252,7 +252,7 @@ function change_content_lt_klmemo(csno){
     
     currentvalue=quote_2_cn_character_b(currentvalue);
     
-    for (let blxl=0;blxl<content_klmemo_global.length;blxl++){
+    for (let blxl=0,lent=content_klmemo_global.length;blxl<lent;blxl++){
         if (currentvalue==content_klmemo_global[blxl][0]){
             if (blxl==csno){
                 alert('未做修改，未保存');
@@ -279,7 +279,7 @@ function change_content_lt_klmemo(csno){
 
 function done_lt_klmemo(){
     var blfound=false;
-    for (let blxl=0;blxl<content_klmemo_global.length;blxl++){
+    for (let blxl=0,lent=content_klmemo_global.length;blxl<lent;blxl++){
         var item=content_klmemo_global[blxl];
         var start_day = validdate_b(item[1]);
         var end_day = validdate_b(item[2]);
@@ -326,7 +326,7 @@ function init_lt_klmemo(cskey='',refresh_tag=false,reload=true){
         isreg=true;
     }
     if (cskey!==''){
-        for (let blxl=0;blxl<content_klmemo_global.length;blxl++){
+        for (let blxl=0,lent=content_klmemo_global.length;blxl<lent;blxl++){
             var item=content_klmemo_global[blxl][0];   //Memo Name - 保留注释
             blfound=str_reg_search_b(item,cskey,isreg);
             if (blfound==-1){
@@ -337,7 +337,7 @@ function init_lt_klmemo(cskey='',refresh_tag=false,reload=true){
             }
         }
     } else {
-        for (let blxl=0;blxl<content_klmemo_global.length;blxl++){
+        for (let blxl=0,lent=content_klmemo_global.length;blxl<lent;blxl++){
             draw_lt_klmemo(blxl);
         }
     }
@@ -361,7 +361,7 @@ function change_lt_klmemo(csid,csnumber){
     
     var nameset=old_value_get_klmemo();
     
-    for (let blxl=0;blxl<content_klmemo_global.length;blxl++){
+    for (let blxl=0,lent=content_klmemo_global.length;blxl<lent;blxl++){
         var item=content_klmemo_global[blxl];
         if (item[0]==csid){
             var oldvalue=item[csnumber];

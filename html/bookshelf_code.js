@@ -35,7 +35,7 @@ function recent_search_bookshelf(csstr=''){
 
 function generate_bookshelf(){
     var att_path=book_href_check_b(true);
-    for (let blxl=0;blxl<csbooklist_source_global.length;blxl++){
+    for (let blxl=0,lent=csbooklist_source_global.length;blxl<lent;blxl++){
         var item=csbooklist_source_global[blxl];
         var is_private=item[4].includes('P');
         var bookpath=book_path_b(item[3],is_private);

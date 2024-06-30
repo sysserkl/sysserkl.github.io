@@ -1,7 +1,7 @@
 function td_background_sd(csid,cstype='samenum'){
     //恢复原背景色
     var list_t=current_sd_global.split("");
-    for (var blxl=0;blxl<list_t.length;blxl++){
+    for (var blxl=0,lent=list_t.length;blxl<lent;blxl++){
         var otd=document.getElementById('input_'+blxl);
         if (list_t[blxl]=='0'){
             otd.style.backgroundColor='';
@@ -75,7 +75,7 @@ function inputvalue_color_sd(){
 
 function getvalue_sd(){
     var list_t=current_sd_global.split("");
-    for (let blxl=0;blxl<list_t.length;blxl++){
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         if (list_t[blxl]=='0'){
             var oinput=document.getElementById('input_'+blxl);
             if (oinput && oinput.innerHTML.trim()!==empty_sd_global){
@@ -653,7 +653,7 @@ function random_sd(){
 function console_sd(cslist){
     var bljg='';
     console.log('=====================');
-    for (let blxl=0;blxl<cslist.length;blxl++){
+    for (let blxl=0,lent=cslist.length;blxl<lent;blxl++){
         bljg=bljg+cslist[blxl]+' ';
         if ((blxl+1)%3==0 && (blxl+1)%9 !== 0){
             bljg=bljg+'| ';

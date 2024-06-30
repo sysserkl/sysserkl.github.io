@@ -12,7 +12,7 @@ function switch_columns_rank_b(table_id,tdclass1,tdclass2){
                 result_t.push(one_td);
             }
         }
-        for (let blxl=0;blxl<result_t.length;blxl=blxl+2){
+        for (let blxl=0,lent=result_t.length;blxl<lent;blxl=blxl+2){
             var blstr=result_t[blxl].outerHTML;
             result_t[blxl].outerHTML=result_t[blxl+1].outerHTML;
             result_t[blxl+1].outerHTML=blstr;
@@ -136,7 +136,7 @@ function obj2array_rank_b(csarray,revenue_index=-1){
         if (revenue_index>=0){
             csarray[key].sort(function (a,b){return a[revenue_index]<b[revenue_index] ? 1 : -1;});
         }
-        for (let blxl=0;blxl<csarray[key].length;blxl++){
+        for (let blxl=0,lent=csarray[key].length;blxl<lent;blxl++){
             var arow=csarray[key][blxl];
             arow.push(blxl+1);
             arow.push(key+'年');
@@ -189,7 +189,7 @@ function table_buttons_set_rank_b(table_id,td_list=[],show_default=true){
 function company_rate_rank_b(csarray,district_index,year_index,revenue_index,denominator){
     //企业收入多年平均增长率，企业利润多年平均增长率 - 保留注释
     var flot_array={};
-    for (let blxl=0;blxl<csarray.length;blxl++){
+    for (let blxl=0,lent=csarray.length;blxl<lent;blxl++){
         var item=csarray[blxl];
         var key='k_'+item[0];
         if (flot_array[key]==undefined){
@@ -223,7 +223,7 @@ function company_rate_rank_b(csarray,district_index,year_index,revenue_index,den
     rate_list.sort(function (a,b){return a[4]<b[4] ? 1 : -1;});  //增长率逆序 - 保留注释
     rate_list.sort(function (a,b){return a[3]<b[3] ? 1 : -1;});  //结束年份逆序 - 保留注释
     
-    for (let blxl=0;blxl<rate_list.length;blxl++){
+    for (let blxl=0,lent=rate_list.length;blxl<lent;blxl++){
         var item=rate_list[blxl];
         rate_list[blxl]='<tr><td align=right>'+(blxl+1)+'</td><td>'+item[0]+'</td><td>'+item[1]+'</td><td>'+item[2]+'</td><td>'+item[3]+'</td><td align=right>'+(item[4]*100).toFixed(2)+'%</td></tr>';
     }
@@ -276,7 +276,7 @@ function line_district_revenue_percent_rank_b(flot_array,fraction_len,denominato
     rate_list.sort(function (a,b){return a[5]<b[5] ? 1 : -1;});  //增长率逆序 - 保留注释
     rate_list.sort(function (a,b){return a[3]<b[3] ? 1 : -1;});  //结束年份逆序 - 保留注释
     
-    for (let blxl=0;blxl<rate_list.length;blxl++){
+    for (let blxl=0,lent=rate_list.length;blxl<lent;blxl++){
         var item=rate_list[blxl];
         rate_list[blxl]='<tr><td align=right>'+(blxl+1)+'</td><td>'+item[0]+'</td><td align=center>'+item[1]+'</td><td align=right>'+(item[2]*denominator).toFixed(fraction_len)+'</td><td align=center>'+item[3]+'</td><td align=right>'+(item[4]*denominator).toFixed(fraction_len)+'</td><td align=right>'+(item[5]*100).toFixed(2)+'%</td></tr>';
     }
@@ -287,7 +287,7 @@ function line_district_revenue_percent_rank_b(flot_array,fraction_len,denominato
 function line_district_statistics_percent_rank_b(flot_revenue_data){
     var year_sum=[];
     for (let item of flot_revenue_data){
-        for (let blxl=1;blxl<item.length;blxl++){
+        for (let blxl=1,lent=item.length;blxl<lent;blxl++){
             var blyear=item[blxl][0]+'年';
             if (year_sum[blyear]==undefined){
                 year_sum[blyear]=0;
@@ -297,9 +297,9 @@ function line_district_statistics_percent_rank_b(flot_revenue_data){
     }
 
     var flot_percent_data=[];
-    for (let blxl=0;blxl<flot_revenue_data.length;blxl++){
+    for (let blxl=0,lent=flot_revenue_data.length;blxl<lent;blxl++){
         var arr_p=[flot_revenue_data[blxl][0]]; 
-        for (let one_year=1;one_year<flot_revenue_data[blxl].length;one_year++){
+        for (let one_year=1,lenb=flot_revenue_data[blxl].length;one_year<lenb;one_year++){
             var blpercent=flot_revenue_data[blxl][one_year][1]*100/year_sum[flot_revenue_data[blxl][one_year][0]+'年'];
             arr_p.push([flot_revenue_data[blxl][one_year][0],blpercent]);
         }
@@ -370,7 +370,7 @@ function pie_district_statistics_string_rank_b(csarray,fraction_len,caption,deno
     //csarray 每个元素形如 ['地区', 收入] - 保留注释
     var bljg=[].concat(csarray);
     var blsum=0;
-    for (let blxl=0;blxl<csarray.length;blxl++){
+    for (let blxl=0,lent=csarray.length;blxl<lent;blxl++){
         blsum=blsum+csarray[blxl][1];
         var blvalue=(revenue_index==-1?csarray[blxl][1]:csarray[blxl][1]/denominator);
         if (blvalue=='' || isNaN(blvalue)){continue;}
@@ -378,7 +378,7 @@ function pie_district_statistics_string_rank_b(csarray,fraction_len,caption,deno
     }
     bljg.push(['合计',blsum]);
 
-    for (let blxl=0;blxl<bljg.length;blxl++){
+    for (let blxl=0,lent=bljg.length;blxl<lent;blxl++){
         bljg[blxl]=bljg[blxl][0]+': '+(revenue_index==-1?bljg[blxl][1]+'家，':(bljg[blxl][1]/denominator).toFixed(fraction_len)+caption+'，')+(bljg[blxl][1]*100/blsum).toFixed(2)+'%';
     }
     
@@ -447,7 +447,7 @@ function line_district_revenue_rank_b(csarray,district_index,year_index,revenue_
 
 function simple_name_rank_b(cskey,csarray,csno=0){
     var name_list=cskey.replace(/[\(\)\|\,\s\+\-]/g,' ').trim().split(' ');
-    for (let blxl=0;blxl<csarray.length;blxl++){
+    for (let blxl=0,lent=csarray.length;blxl<lent;blxl++){
         for (let one_name of name_list){
             if (csarray[blxl][csno].includes(one_name)){
                 csarray[blxl][csno]=one_name;
@@ -558,7 +558,7 @@ function compare_ranke_b(year_dict,year_set,name_set,head_name,table_names,odiv)
         for (let arow of result_t){
             bljg.push('<tr>');        
             bljg.push('<td nowrap>'+arow[0]+'</td>');
-            for (let blxl=1;blxl<arow.length;blxl++){
+            for (let blxl=1,lent=arow.length;blxl<lent;blxl++){
                 bljg.push('<td align="right" nowrap>'+(arow[blxl]==null?'/':arow[blxl].toFixed(1))+'</td>');                
             }
             bljg.push('</tr>');

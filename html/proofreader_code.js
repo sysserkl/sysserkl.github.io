@@ -196,7 +196,7 @@ function proofread_dpr(){
         for (let one_duration of duration_list){
             var blfound=false;
             var from_to_date_list=chinese_find_ymd_b(one_duration);
-            for (let blxl=0;blxl<from_to_date_list.length;blxl++){
+            for (let blxl=0,lent=from_to_date_list.length;blxl<lent;blxl++){
                 var bldate=validdate_b(chinese_ymd_2_number_b(from_to_date_list[blxl]));
                 if (bldate===false){
                     result_t.push('🔴 刑期起止日期格式错误：'+from_to_date_list[blxl]);
@@ -259,7 +259,7 @@ function proofread_dpr(){
     
     //被告人
     var defendant_list=content_str.match(/(被告人[^\x00-\xff]{2,4}?)，/g) || []; 
-    for (let blxl=0;blxl<defendant_list.length;blxl++){
+    for (let blxl=0,lent=defendant_list.length;blxl<lent;blxl++){
         if (defendant_list[blxl].slice(-1)=='，'){
             defendant_list[blxl]=defendant_list[blxl].slice(0,-1);
         }
@@ -310,7 +310,7 @@ function proofread_dpr(){
     
    //罪名
     var criminal_name_list=content_str.match(/犯([^，]{1,}罪)/g) || []; 
-    for (let blxl=0;blxl<criminal_name_list.length;blxl++){
+    for (let blxl=0,lent=criminal_name_list.length;blxl<lent;blxl++){
         if (criminal_name_list[blxl].substring(0,1)=='犯'){
             criminal_name_list[blxl]=criminal_name_list[blxl].substring(1,);
         }
@@ -327,7 +327,7 @@ function proofread_dpr(){
     //书名号 条款
     if (klmenu_check_b('span_add_book_link_dpr',false)){
         var bookname_list=content_str.match(/(《[^《》]+》[^《》。]*条)/g) || []; 
-        for (let blxl=0;blxl<bookname_list.length;blxl++){
+        for (let blxl=0,lent=bookname_list.length;blxl<lent;blxl++){
             var one_book=bookname_list[blxl];
             var bookname_str=(one_book.match(/《.*?》/) || [''])[0];
             if (bookname_str==''){continue;}

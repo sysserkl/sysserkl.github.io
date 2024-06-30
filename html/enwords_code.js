@@ -161,7 +161,7 @@ function words_queue_new_or_old_kle(is_new=true,only_word=false){
     }
     
     if (only_word){
-        for (let blxl=0;blxl<result_t.length;blxl++){
+        for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
             result_t[blxl]=result_t[blxl][0];
         }
     }
@@ -197,7 +197,7 @@ function words_queue_append_kle(){
     
     if (confirm('是否批量添加('+new_list.length+')个单词？')){
         var list_t=new_list.concat(old_list);
-        for (let blxl=0;blxl<list_t.length;blxl++){
+        for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
             list_t[blxl]=list_t[blxl].join('\n');
         }
         localStorage.setItem('enwords_queue',list_t.join('\n---\n')+'\n---\n');
@@ -238,7 +238,7 @@ function words_queue_split_kle(csstr,cstype='string'){
 
 function words_queue_update_kle(do_type='change'){
     function sub_words_queue_update_kle_arr2str(csarr){
-        for (let blxl=0;blxl<csarr.length;blxl++){
+        for (let blxl=0,lent=csarr.length;blxl<lent;blxl++){
             if (Array.isArray(csarr[blxl])){
                 csarr[blxl]=csarr[blxl].toString();
             }
@@ -328,7 +328,7 @@ function words_queue_update_kle(do_type='change'){
     
     var list_t=[];
     var name_set=new Set();
-    for (let blxl=0;blxl<temp_words.length;blxl++){  
+    for (let blxl=0,lent=temp_words.length;blxl<lent;blxl++){  
         var item=temp_words[blxl];
         if (blxl % 3 == 0){ //单词名称行 - 保留注释
             if (name_set.has(item)){
@@ -778,7 +778,7 @@ function letters_26_kle(idno='',sort_by_count=false,percent=false){
         }
 
         var bljg=[];
-        for (let blxl=0;blxl<l26.length;blxl++){
+        for (let blxl=0,lent=l26.length;blxl<lent;blxl++){
             bljg.push('<font color="'+scheme_global['memo']+'">'+(blxl+1)+'. </font><b>'+l26[blxl][0]+'</b>: '+(percent?(l26[blxl][1]*100/csarray.length).toFixed(2)+'%':l26[blxl][1]));
         } 
         
@@ -844,7 +844,7 @@ function duplicate_words_kle(){
     var end_list=[];
     var semicolon_without_space_list=[];
 
-	for (let blxl=1;blxl<enwords.length;blxl++){
+	for (let blxl=1,lent=enwords.length;blxl<lent;blxl++){
         var item=enwords[blxl];
         if (enwords[blxl][0]==enwords[blxl-1][0]){
             duplication.add(enwords[blxl][0]);
@@ -961,7 +961,7 @@ function similar_words_batch_kle(csno){
 	var cshidesimilarno=document.getElementById('check_hide_similarno').checked;
 	var bljg='';
 	var pageitems=50;
-	for (let blxl=csno;blxl<enwords.length;blxl++){
+	for (let blxl=csno,lent=enwords.length;blxl<lent;blxl++){
 		var tmpstr=similar_enwords_b(enwords[blxl][0],cshideno,cshidelineno,cshidesimilarno,false);
 		if (tmpstr!=''){
             bljg=bljg+'<h3>'+enwords[blxl][0]+'</h3>\n'+tmpstr;
@@ -1022,7 +1022,7 @@ function search_similar_new_sentence_kle(cstype=false,csword=''){
             odiv.innerHTML=bljg;
             break;
         default:
-            wordsearch_enwords_b(csword,-1,'',false,true,false);
+            wordsearch_enwords_b(csword,-1,[],false,true,false);
             break;
     }
 }

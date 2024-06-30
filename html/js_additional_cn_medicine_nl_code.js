@@ -34,7 +34,7 @@ function menu_more_cn_medicine_nl(){
     table_th_jscm_global={'名称':'','链接':'right','Bing':'center','Baidu':'center'};
 
     var col_name_list=Object.keys(table_th_jscm_global);
-    for (let blxl=0;blxl<col_name_list.length;blxl++){
+    for (let blxl=0,lent=col_name_list.length;blxl<lent;blxl++){
         col_name_list[blxl]='<option value="'+blxl+'">'+col_name_list[blxl]+'</option>';
     }
     var klmenu1=[

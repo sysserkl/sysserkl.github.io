@@ -101,7 +101,7 @@ function remove_from_array_rlater_b(csid,prefix){
     var csarray=eval(prefix+'_data_global');
     var ospan=document.getElementById('span_todolist_rlater');
     
-    for (let blxl=0;blxl<csarray.length;blxl++){
+    for (let blxl=0,lent=csarray.length;blxl<lent;blxl++){
         var item=csarray[blxl];
         if (item[0]==oa.href && item[id_dict[prefix]]==blid){
             csarray.splice(blxl,1);
@@ -118,7 +118,7 @@ function remove_from_array_rlater_b(csid,prefix){
 
         var blid=' id="'+csid+'" ';
         var csarray=eval(prefix+'_current_global');
-        for (let blxl=0;blxl<csarray.length;blxl++){
+        for (let blxl=0,lent=csarray.length;blxl<lent;blxl++){
             var item=csarray[blxl][0];
             if (item.includes(blid)){
                 csarray.splice(blxl,1);
@@ -267,7 +267,7 @@ function title_key_rlater_b(csstr,close_popup=true){
     //result_t 每个元素形如：[ "Cats (1998)", "klwiki04" ] - 保留注释
     result_t.sort(function (a,b){return zh_sort_b(a,b,false,0);});
     var close_str=(close_popup?'close_popup_rlater_b();':'');
-    for (let blxl=0;blxl<result_t.length;blxl++){
+    for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
         var blstr='';
         blstr=blstr+'<span class="span_box" onclick="open_wiki_rlater_b(this);'+close_str+'">'+result_t[blxl][0]+'</span>';
         result_t[blxl]=blstr;

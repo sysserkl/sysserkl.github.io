@@ -32,7 +32,7 @@ function category_progress(csname){
     max_lines=(max_lines==''?false:max_lines);
 
     var result_t=statistics_draw_b(csname,'divhtml',show_table,date_min,date_max,max_lines,2,'810px','100%','500px',true);
-    for (let blxl=0;blxl<result_t.length;blxl++){
+    for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
         result_t[blxl]='<span class="oblong_box" onclick="jump_to_item_progress('+blxl+');">'+result_t[blxl][1]+'</span>'
     }
     var op=document.getElementById('p_bookmark_progress');

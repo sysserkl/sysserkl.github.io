@@ -1,7 +1,7 @@
 function import_files_seen(){
     if (is_local_b()){
         var flist=['data/klwiki/klwiki_page_position_data.js'];
-        for (let blxl=0;blxl<flist.length;blxl++){
+        for (let blxl=0,lent=flist.length;blxl<lent;blxl++){
             flist[blxl]='../../../../'+flist[blxl];
         }
         klbase_addons_import_js_b([],[],['words/enwords_data.js'],flist);
@@ -88,7 +88,7 @@ function sort_seen(desc=false){
     switch (bltype){
         case 'rare words':
         case 'old words':
-            for (let blxl=0;blxl<selenium_enwords_data_global.length-1;blxl++){ //不含最后一条记录 - 保留注释
+            for (let blxl=0,lent=selenium_enwords_data_global.length-1;blxl<lent;blxl++){ //不含最后一条记录 - 保留注释
                 if (selenium_enwords_data_global[blxl][7]==0 && selenium_enwords_data_global[blxl+1][7]!==0){
                     margin_id=selenium_enwords_data_global[blxl][4];
                     break;
@@ -135,16 +135,16 @@ function host_count_seen(cstype=''){
 function contain_seen(desc=false){
     selenium_enwords_data_global.sort(function (a,b){return a[6]<b[6] ? 1 : -1;});    
     
-    for (let blxl=0;blxl<selenium_enwords_data_global.length;blxl++){
+    for (let blxl=0,lent=selenium_enwords_data_global.length;blxl<lent;blxl++){
         selenium_enwords_data_global[blxl][7]=-1;
     }
     
-    for (let blxl=0;blxl<selenium_enwords_data_global.length;blxl++){
+    for (let blxl=0,lent=selenium_enwords_data_global.length;blxl<lent;blxl++){
         if (selenium_enwords_data_global[blxl][7]!==-1){continue;}
         var mother_words=selenium_enwords_data_global[blxl][3];
         var blcount=0;
         var found_no=-1;
-        for (let blno=0;blno<selenium_enwords_data_global.length;blno++){
+        for (let blno=0,lenb=selenium_enwords_data_global.length;blno<lenb;blno++){
             if (selenium_enwords_data_global[blno][7]!==-1){continue;}
             
             var son_words=selenium_enwords_data_global[blno][3];
@@ -219,18 +219,18 @@ function group_seen(is_contain){
 function one2more_seen(desc=false){
     selenium_enwords_data_global.sort(function (a,b){return a[6]>b[6] ? 1 : -1;});
     
-    for (let blxl=0;blxl<selenium_enwords_data_global.length;blxl++){
+    for (let blxl=0,lent=selenium_enwords_data_global.length;blxl<lent;blxl++){
         selenium_enwords_data_global[blxl][7]=-1;
     }
     
-    for (let blxl=0;blxl<selenium_enwords_data_global.length;blxl++){
+    for (let blxl=0,lent=selenium_enwords_data_global.length;blxl<lent;blxl++){
         if (selenium_enwords_data_global[blxl][7]!==-1){continue;}
         if (selenium_enwords_data_global[blxl][6]>1){break;}
         
         var one_word=selenium_enwords_data_global[blxl][3][0];
         var blcount=0;
         var found_no=-1;
-        for (let blno=0;blno<selenium_enwords_data_global.length;blno++){
+        for (let blno=0,lenb=selenium_enwords_data_global.length;blno<lenb;blno++){
             if (selenium_enwords_data_global[blno][7]!==-1){continue;}
             if (!selenium_enwords_data_global[blno][3].includes(one_word)){continue;}
             selenium_enwords_data_global[blno][7]=selenium_enwords_data_global[blxl][4];
@@ -252,7 +252,7 @@ function one2more_seen(desc=false){
 
 function title_words_seen(){
     var word_dict={};
-    for (let blxl=0;blxl<selenium_enwords_data_global.length;blxl++){
+    for (let blxl=0,lent=selenium_enwords_data_global.length;blxl<lent;blxl++){
         var arow=selenium_enwords_data_global[blxl];
         var set_t=new Set(arow[1].match(/[a-z]{2,}/ig) || []);
         
@@ -267,7 +267,7 @@ function title_words_seen(){
     word_dict=object2array_b(word_dict,true,2);
     word_dict.sort(function (a,b){return a[1]<b[1] ? 1 : -1;});
     word_dict=word_dict.slice(0,1000);
-    for (let blxl=0;blxl<word_dict.length;blxl++){
+    for (let blxl=0,lent=word_dict.length;blxl<lent;blxl++){
         word_dict[blxl]=word_dict[blxl][0];
     }
     recent_search_b('',word_dict,'search_seen','div_recent_search',[],1000,true,1000);
@@ -279,7 +279,7 @@ function rare_words_seen(){
 }
 
 function rare_score_seen(word_dict,word_col_no){
-    for (let blxl=0;blxl<selenium_enwords_data_global.length;blxl++){
+    for (let blxl=0,lent=selenium_enwords_data_global.length;blxl<lent;blxl++){
         var words=selenium_enwords_data_global[blxl][word_col_no];
         var blcount=0;
         for (let one_word of words){
@@ -296,7 +296,7 @@ function rare_score_seen(word_dict,word_col_no){
 
 function old_words_seen(){
     var oldset=simple_words_b();
-    for (let blxl=0;blxl<selenium_enwords_data_global.length;blxl++){
+    for (let blxl=0,lent=selenium_enwords_data_global.length;blxl<lent;blxl++){
         var words=selenium_enwords_data_global[blxl][3];
         var blcount=0;
         for (let one_word of words){
@@ -415,7 +415,7 @@ function search_seen(cskeys='',margin_id=-1){
     is_all_result_seen_global=true;    
     
     var pageno=1;
-    for (let blxl=0;blxl<selenium_enwords_data_global.length;blxl++){
+    for (let blxl=0,lent=selenium_enwords_data_global.length;blxl<lent;blxl++){
         var item=selenium_enwords_data_global[blxl];
         var blfound=str_reg_search_b(item,cskeys,csreg);
         if (blfound==-1){break;}
@@ -580,7 +580,7 @@ function words_count_more_than_one_line_seen(csno=1){
             if (sub_words_count_more_than_one_line_seen_one_hand(one_div)){break;}
         } 
     } else {
-        for (let blxl=0;blxl<odivs.length;blxl++){
+        for (let blxl=0,lent=odivs.length;blxl<lent;blxl++){
             var one_div=odivs[blxl];
             if (sub_words_count_more_than_one_line_seen_one_hand(one_div)){break;}
         }

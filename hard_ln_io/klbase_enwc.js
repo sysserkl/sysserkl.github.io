@@ -163,7 +163,7 @@ function get_day_sentences_enwc_b(csday='',csmonth='',use_asc=true){
 
     var list_t=[];
     if (use_asc){
-        for (let blno=0;blno<en_sentence_global.length;blno++){
+        for (let blno=0,lent=en_sentence_global.length;blno<lent;blno++){
             var aline=en_sentence_global[blno];    
             var line_split=sentence_split_b(aline[0],blno);
             for (let arow of line_split){

@@ -17,7 +17,7 @@ function basecolor_screentest(){
 }
 
 function jump_to_l_screentest(){
-    for (let blxl=0;blxl<pure_color_list_global.length;blxl++){
+    for (let blxl=0,lent=pure_color_list_global.length;blxl<lent;blxl++){
         if (pure_color_list_global[blxl].substring(0,2)=='l_'){
             color_no_global=blxl;
             pure_colors_screentest(0);

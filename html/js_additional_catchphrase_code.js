@@ -21,7 +21,7 @@ function data_load_catchphrase(array_name){
         var t0=performance.now();           
         var result_t=[];
         for (let arow of eval(array_name)){
-            for (let blxl=0;blxl<arow.length;blxl++){
+            for (let blxl=0,lent=arow.length;blxl<lent;blxl++){
                 arow[blxl]=wiki_all_format_b(arow[blxl]);
             }
             result_t.push(arow);

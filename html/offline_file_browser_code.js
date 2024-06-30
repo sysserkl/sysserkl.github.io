@@ -1,7 +1,7 @@
 function import_files_offline_file_browser(){
     if (!is_local_b()){return;}
     var flist=['bash/data/file_browser_data/offline_file_data.js','data/important_movie_data.js'];
-    for (let blxl=0;blxl<flist.length;blxl++){
+    for (let blxl=0,lent=flist.length;blxl<lent;blxl++){
         flist[blxl]='../../../../'+flist[blxl];
     }
     klbase_addons_import_js_b([],[],[],flist);
@@ -272,7 +272,7 @@ function search_html_offline_file_browser(cslist,csid,show_review_bookmark=false
     var bljg='<table border=0 width=100% cellpading=0 cellspacing=0><tr style="background-color:'+scheme_global['button']+';"><th>No.</th>';
     var jsfn='td_offline_file_browser(\''+current_td_global+'\');current_2_html_offline_file_browser();'; //search_offline_file_browser()';
     var list_t=['Disk','Path','Filename','File Size','Modified Date','Multimedia<br />Length'];
-    for (let blxl=0;blxl<list_t.length;blxl++){
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         bljg=bljg+'<th style="cursor:pointer;" onclick="sort_offline_file_browser('+blxl+',true); '+jsfn+';">'+list_t[blxl]+'</th>';
     }
 
@@ -324,7 +324,7 @@ function search_html_offline_file_browser(cslist,csid,show_review_bookmark=false
     mouseover_mouseout_oblong_span_b(odiv.querySelectorAll('span.oblong_box'));
     
     var otds=document.querySelectorAll('#'+current_td_global+' .td_no');
-    for (let blxl=0;blxl<otds.length;blxl++){
+    for (let blxl=0,lent=otds.length;blxl<lent;blxl++){
         otds[blxl].innerHTML=blxl+1;
     }
     
@@ -339,7 +339,7 @@ function parent_offline_file_browser(csdisk,csdir=''){
     var str_t='';
     if (list_t.length>2){
         var str_t='';
-        for (let blxl=0;blxl<list_t.length-1-1;blxl++){
+        for (let blxl=0,lent=list_t.length-1-1;blxl<lent;blxl++){
             str_t=str_t+list_t[blxl]+'/';
         }
     }
@@ -538,7 +538,7 @@ function dir_html_offline_file_browser(cslist,csid,csdisk,csdir){
     odiv.innerHTML=bltitle+bljg+'</table>';
     mouseover_mouseout_oblong_span_b(odiv.querySelectorAll('span.oblong_box'));
     var otds=document.querySelectorAll('#'+current_td_global+' .td_no');
-    for (let blxl=0;blxl<otds.length;blxl++){
+    for (let blxl=0,lent=otds.length;blxl<lent;blxl++){
         otds[blxl].innerHTML=blxl+1;
     }
     statistics_offline_file_browser(cslist);
@@ -704,7 +704,7 @@ function saved_movie_list_offline_file_browser(){
         }
         
         var blfound=false;
-        for (let blxl=0;blxl<saved_movie_data_global.length;blxl++){
+        for (let blxl=0,lent=saved_movie_data_global.length;blxl<lent;blxl++){
             if (category==saved_movie_data_global[blxl][0] && fname==saved_movie_data_global[blxl][1]){
                 if (!saved_movie_data_global[blxl][3].includes(item[0]+' /// '+item[1])){
                     saved_movie_data_global[blxl][3].push(item[0]+' /// '+item[1]);
@@ -766,7 +766,7 @@ function diff_all_offline_file_browser(){
     var diskname2='';
     var disk_category=[];
     disk_category_list_global=[];
-    for (let blxl=0;blxl<list_t.length;blxl=blxl+2){
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl=blxl+2){
         [list_diff1,list_diff2,diskname1,diskname2]=diff_offline_file_browser(list_t[blxl],list_t[blxl+1],false);
         
         disk_category_list_global.push([diskname1,list_t[blxl],diskname2,list_t[blxl+1]]);
@@ -1036,7 +1036,7 @@ function menu_offline_file_browser(){
     var blparent=menu_parent_node_b(str_t);
     
     var col_name=['Disk','Path','Filename','File Size','Modified Date','FMultimedia Length','Tag','TF Name'];
-    for (let blxl=0;blxl<col_name.length;blxl++){
+    for (let blxl=0,lent=col_name.length;blxl<lent;blxl++){
         col_name[blxl]='<option value='+blxl+'>'+col_name[blxl]+'</option>';
     }
     
@@ -1271,11 +1271,11 @@ function disks_size_date_offline_file_browser(cscol=0,csdesc=false){
     var th_list=[];
     
     var th_names=['Disk','Size','TXT文件修改日期','最旧文件','最新文件'];
-    for (let blxl=0;blxl<th_names.length;blxl++){
+    for (let blxl=0,lent=th_names.length;blxl<lent;blxl++){
         th_list.push(sub_disks_size_date_offline_file_browser_th(blxl,th_names[blxl]));
     }   
     
-    for (let blxl=0;blxl<merge_list.length;blxl++){
+    for (let blxl=0,lent=merge_list.length;blxl<lent;blxl++){
         merge_list[blxl]='<tr><td>'+merge_list[blxl][0]+'</td><td align=right>'+(is_kmg?kbmbgb_b(merge_list[blxl][1]):merge_list[blxl][1])+'</td></tr>';
     }
     
@@ -1318,7 +1318,7 @@ function review_plan_list_offline_file_browser(){
     
     result_t.sort(function (a,b){return a[0][2]>b[0][2] ? 1 : -1;});
     result_t.sort(function (a,b){return a[1]>b[1] ? 1 : -1;});
-    for (let blxl=0;blxl<result_t.length;blxl++){
+    for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
         result_t[blxl]=result_t[blxl][0];
     }
     statistics_offline_file_browser(result_t,true);
@@ -1341,7 +1341,7 @@ function important_movies_offline_file_browser(do_ssd_tf=false){
         }
     }
     //ssd_tf_set 每个元素为 set，形如：FA0: [ "2009 43rd Annual CMA Awards.第43届年度乡村音乐颁奖礼.cbr", "2009年第51届格莱美奖颁奖礼.cbr", ] - 保留注释 
-    for (let blxl=0;blxl<offline_file_data_raw_global.length;blxl++){
+    for (let blxl=0,lent=offline_file_data_raw_global.length;blxl<lent;blxl++){
         var item=offline_file_data_raw_global[blxl];
         //-----------------------
         if (do_ssd_tf){

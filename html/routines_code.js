@@ -114,7 +114,7 @@ function statsitics_flot_show_ide_klroutines(cstype=['none']){
     while (cstype.length<div_canvas_list_klroutines_global.length){
         cstype.push(cstype[0]);
     }
-    for (let blxl=0;blxl<div_canvas_list_klroutines_global.length;blxl++){
+    for (let blxl=0,lent=div_canvas_list_klroutines_global.length;blxl<lent;blxl++){
         document.getElementById(div_canvas_list_klroutines_global[blxl]).style.display=cstype[blxl];
     }
 }
@@ -229,7 +229,7 @@ function statistics_date_klroutines(){
     for (let item of weeks_t){
         if (item.length>2){    //否则x轴标记出错 - 保留注释
             var is_all_zero=true;
-            for (let blno=1;blno<item.length;blno++){
+            for (let blno=1,lent=item.length;blno<lent;blno++){
                 if (item[blno][1]!==0){
                     is_all_zero=false;
                     break;
@@ -357,7 +357,7 @@ function statistics_category_date_klroutines(){
 
     //flot_day_arry 每个元素形如：[["截图照片",[ Date Mon May 16 2022 00:00:00 GMT+0800 (China Standard Time), 2 ],[ Date Tue Jun 07 2022 00:00:00 GMT+0800 (China Standard Time), 1 ]...] - 保留注释
     
-    for (let blxl=0;blxl<flot_day_array.length;blxl++){
+    for (let blxl=0,lent=flot_day_array.length;blxl<lent;blxl++){
         if (flot_day_array[blxl].length<=3){continue;}
         flot_day_array[blxl]=[flot_day_array[blxl][0]].concat(date_list_insert_zero_b(flot_day_array[blxl].slice(1,)));
     }

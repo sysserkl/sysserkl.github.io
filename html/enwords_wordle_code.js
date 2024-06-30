@@ -40,7 +40,7 @@ function generate_wordle(show_answer=false){
     var odiv=document.getElementById('td_content');
     var list_t=current_word_wordle_global[0].split('');
     if (show_answer){
-        for (let blxl=0;blxl<list_t.length;blxl++){
+        for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
             list_t[blxl]=character_wordle(list_t[blxl]);        
         }
         answer_wordle();
@@ -64,7 +64,7 @@ function generate_wordle(show_answer=false){
         show_no=show_no.slice(0,show_count);
                     
         var letter_no=0;
-        for (let blxl=0;blxl<list_t.length;blxl++){
+        for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
             if (list_t[blxl].match(/^[a-zA-Z]$/)==null){
                 list_t[blxl]=character_wordle(list_t[blxl]);        
                 continue; 
@@ -103,7 +103,7 @@ function buttons_wordle(){
     var list_t=characters_b('a').split('');
     var cols=(ismobile_b()?6:7);
     var bltd='<td class="td_button_wordle" width=1 align="center" valign="middle" onclick="change_wordle(this.innerText);" onmouseover="this.style.color=scheme_global[\'a-hover\'];this.style.borderColor=scheme_global[\'a-hover\'];" onmouseout="this.style.color=\'\';this.style.borderColor=scheme_global[\'memo\'];" style="border-color:'+scheme_global['memo']+';background-color:'+scheme_global['button']+';">';
-    for (let blxl=0;blxl<list_t.length;blxl++){
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         list_t[blxl]=bltd+list_t[blxl]+'</td>\n';
         if (blxl % cols == 0){
             list_t[blxl]='<tr>'+list_t[blxl];

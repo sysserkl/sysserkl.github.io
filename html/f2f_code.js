@@ -207,7 +207,7 @@ function change_content_lt_f2f(csno){
         array_2_local_storage_lt_f2f();        
         reload_f2f();
     } else {
-        for (let blxl=0;blxl<content_all_f2f_global.length;blxl++){
+        for (let blxl=0,lent=content_all_f2f_global.length;blxl<lent;blxl++){
             if (currentvalue+' '+bldate==content_all_f2f_global[blxl].join(' ')){
                 if (blxl==csno){
                     alert('未做修改，未保存');
@@ -258,7 +258,7 @@ function search_f2f(cskey=false){
 
     content_current_f2f_global=[];
     if (cskey==''){
-        for (let blxl=0;blxl<content_all_f2f_global.length;blxl++){
+        for (let blxl=0,lent=content_all_f2f_global.length;blxl<lent;blxl++){
             content_current_f2f_global.push(blxl);
         }    
     } else {
@@ -266,7 +266,7 @@ function search_f2f(cskey=false){
         var isreg=klmenu_check_b('span_reg_f2f',false);
         [csstr,isreg]=str_reg_check_b(cskey,isreg,true);        
 
-        for (let blxl=0;blxl<content_all_f2f_global.length;blxl++){
+        for (let blxl=0,lent=content_all_f2f_global.length;blxl<lent;blxl++){
             var blfound=str_reg_search_b(content_all_f2f_global[blxl],cskey,isreg);
             if (blfound==-1){break;}
             if (blfound){
@@ -449,7 +449,7 @@ function times_data_f2f(){
 
 function times_pie_f2f(){
     var result_t=times_data_f2f();
-    for (let blxl=0;blxl<result_t.length;blxl++){
+    for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
         result_t[blxl]={label: result_t[blxl][0], data: result_t[blxl][1].length};
     }
     result_t.sort(function (a,b){return a['data']<b['data'] ? 1 : -1;}); //data 必须 加 引号 - 保留注释
@@ -539,7 +539,7 @@ function year_all_f2f(){
     }
     
     result_t=object2array_b(result_t,true);
-    for (let blxl=0;blxl<result_t.length;blxl++){
+    for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
         result_t[blxl][0]=validdate_b(result_t[blxl][0]);
     }
     document.getElementById('divhtml').innerHTML=date_count_dots_b(result_t,'brown',5,1,'次',true,true,true,true,false,'1.3rem');

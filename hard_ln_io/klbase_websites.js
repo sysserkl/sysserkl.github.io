@@ -101,7 +101,7 @@ function fav_www_set_websites_b(cstype,csjump,is_pwa){
         if (!fav_set.has(blhref)){return;}        
         if (!confirm('是否移除'+bltitle+' ？')){return;}
         fav_set.delete(blhref);
-        for (let blxl=0;blxl<fav_websites_global.length;blxl++){
+        for (let blxl=0,lent=fav_websites_global.length;blxl<lent;blxl++){
             if (fav_websites_global[blxl][0]==blhref){
                 fav_websites_global.splice(blxl,1);
                 break;
