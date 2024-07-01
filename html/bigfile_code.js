@@ -1,5 +1,5 @@
 function init_bigfile(){
-    top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.6rem'));
+    top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.6rem'),true,false,2);
     input_with_x_b('input_search',11);
     character_2_icon_b('B');    
     menu_bigfile();
