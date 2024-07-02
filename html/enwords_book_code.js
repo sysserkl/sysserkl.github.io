@@ -435,6 +435,11 @@ function compare_form_statistics_enwords_book(){
     bljg=bljg+'</table>';
     var odiv=document.getElementById('divhtml2');
     odiv.innerHTML=bljg;
+    
+    current_statistics_data_enwords_book('1',false);
+    current_statistics_data_enwords_book('2',true);
+    compare_statistics_enwords_book();
+    
     odiv.scrollIntoView();
 }
 

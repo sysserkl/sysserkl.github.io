@@ -703,14 +703,13 @@ function radio_value_get_b(radio_name){
 function radio_value_set_b(radio_name,csvalue){
     var blfound=false;
 	var elements = document.getElementsByName(radio_name);
-    if (elements){
-        for (let item of elements){
-            if (item.value==csvalue){
-                blfound=true;
-            }
-            item.checked=(item.value==csvalue);
+    for (let item of elements){
+        if (item.value==csvalue){
+            blfound=true;
         }
+        item.checked=(item.value==csvalue); //选中指定 value 的 input，其他的 input 不选中 - 保留注释
     }
+    //radio_name, csvalue, blfound 分别可能是：radio_type sha512 true - 保留注释
     return blfound;
 }
 

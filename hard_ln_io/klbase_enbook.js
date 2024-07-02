@@ -286,7 +286,6 @@ function new_words_continue_enbook_b(cslength,percent10length=0){
             return;
         } else {
             all_new_words_count_save_old_data_enbook_b();
-            //all_new_words_count_set_enbook_b(true,'');
         }
     }
     var newwords_statistics=all_new_words_count_get_enbook_b(true,true);
