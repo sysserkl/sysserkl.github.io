@@ -1093,6 +1093,7 @@ function menu_offline_file_browser(){
      var klmenu_link=[
     '<span class="span_menu" onclick="'+str_t+'batch_open_klwiki_cd_pages_offline_file_browser();">批量打开KLWiki刻录页面</span>',
     '<span class="span_menu" onclick="'+str_t+'klwiki_link_b(\'光盘柜\',true);">光盘柜</span>',
+    '<span class="span_menu" onclick="'+str_t+'klwiki_link_b(\'文件包内容列表\',true);">文件包内容列表</span>',
     '<span class="span_menu" onclick="'+str_t+'klwiki_link_b(\'KL 移动硬盘数据总量\',true);">KL 移动硬盘数据总量</span>',
     ];
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'💾','18rem','','1rem')+klmenu_b(klmenu2,'🔀','10rem','','1rem')+klmenu_b(klmenu_statistics,'🧮','12rem','','1rem')+klmenu_b(klmenu_config,'⚙','18rem','','1rem')+(is_local_b()?klmenu_b(klmenu_link,'L','16rem','','1rem'):''),'','0rem')+' ');
@@ -1213,19 +1214,38 @@ function batch_open_klwiki_cd_pages_offline_file_browser(){
     if (confirm('是否批量打开KLWiki刻录页面？')==false){return;}
     var blyear=date_2_ymd_b(false,'y');
     
-    var list_t=tf_page_count_b('光盘柜').concat([blyear+'年KL影视记录','家庭影视记录']);
+    var list_t=tf_page_count_b('光盘柜').concat([blyear+'年KL影视记录','家庭影视记录','文件包内容列表']);
     var bllen=list_t.length;
     var blxl=0;
     sub_batch_open_klwiki_cd_pages_offline_file_browser_one_page();
 }
 
-function disks_size_date_offline_file_browser(cscol=0,csdesc=false){
-    function sub_disks_size_date_offline_file_browser_th(csno,cscaption){
-        return '<th onclick="disks_size_date_offline_file_browser('+csno+','+is_desc+');" style="cursor:pointer;">'+cscaption+'</th>';
+function disks_size_date_offline_file_browser(cscol=0,csdesc=false,cstable_no=0){
+    function sub_disks_size_date_offline_file_browser_th(csno,cscaption,tableno){
+        return '<th onclick="disks_size_date_offline_file_browser('+csno+','+is_desc+','+tableno+');" style="cursor:pointer;">'+cscaption+'</th>';
+    }
+    
+    function sub_disks_size_date_offline_file_browser_simple(csarr,cscaption,col_name_list,tableno){
+        var th_list1=[];   
+        for (let blxl=0,lent=col_name_list.length;blxl<lent;blxl++){
+            th_list1.push(sub_disks_size_date_offline_file_browser_th(blxl,col_name_list[blxl],tableno));
+        }
+        
+        var lenb=col_name_list.length-1;
+        for (let blxl=0,lent=csarr.length;blxl<lent;blxl++){
+            var arow='';
+            for (let blno=0;blno<lenb;blno++){
+                arow=arow+'<td>'+csarr[blxl][blno]+'</td>';
+            }
+            csarr[blxl]='<tr>'+arow+'<td align=right>'+(is_kmg?kbmbgb_b(csarr[blxl][lenb]):csarr[blxl][lenb])+'</td></tr>';
+        }
+        
+        return '<h3 class="h3_disk_size_ofb">'+cscaption+'</h3><table class="table_common"><tr>'+th_list1.join('')+'</tr>'+csarr.join('\n')+'</table>';    
     }
     //-----------------------
-    var disk_list=[];
-    var merge_list=[];
+    var path_list={};
+    var disk_list={};
+    var merge_list={};
     offline_file_data_raw_global.sort(function (a,b){return a[4]>b[4] ? 1 : -1;});
     for (let item of offline_file_data_raw_global){
         var disk_key='d_'+item[0];
@@ -1242,23 +1262,38 @@ function disks_size_date_offline_file_browser(cscol=0,csdesc=false){
         if (merge_list[merge_key]==undefined){
             merge_list[merge_key]=0;
         }
-                
+                        
         disk_list[disk_key][1]=disk_list[disk_key][1]+item[3];
         disk_list[disk_key][4]=item[4];
         merge_list[merge_key]=merge_list[merge_key]+item[3];
+        
+        if (item[1].startsWith('save-') || item[1].startsWith('待看') || item[1].startsWith('待整理')){
+            var path_key='p_'+item[1].split('/')[0];
+            if (path_list[path_key]==undefined){
+                path_list[path_key]=[item[0],0];    //假设相同目录名称的磁盘也相同 - 保留注释
+            }                
+            path_list[path_key][1]=path_list[path_key][1]+item[3];
+        }
     }
     
     disk_list=object2array_b(disk_list);
     merge_list=object2array_b(merge_list,true,2);
+    path_list=object2array_b(path_list,true,2);
     
     var merge_col_no=(cscol>1?1:cscol);
+    var path_col_no=(cscol>2?2:cscol);
+
     if (csdesc){
         disk_list.sort(function (a,b){return a[cscol]<b[cscol] ? 1 : -1;});
         merge_list.sort(function (a,b){return a[merge_col_no]<b[merge_col_no] ? 1 : -1;});
+        path_list.sort(function (a,b){return a[path_col_no]<b[path_col_no] ? 1 : -1;});
+
         var is_desc='false';
     } else {
         disk_list.sort(function (a,b){return a[cscol]>b[cscol] ? 1 : -1;});
         merge_list.sort(function (a,b){return a[merge_col_no]>b[merge_col_no] ? 1 : -1;});
+        path_list.sort(function (a,b){return a[path_col_no]>b[path_col_no] ? 1 : -1;});
+        
         var is_desc='true';
     }
 
@@ -1267,26 +1302,27 @@ function disks_size_date_offline_file_browser(cscol=0,csdesc=false){
     for (let item of disk_list){
         tr_list.push('<tr><td>'+item[0]+'</td><td align=right>'+(is_kmg?kbmbgb_b(item[1]):item[1])+'</td><td align=center>'+item[2]+'</td><td align=center>'+item[3]+'</td><td align=center>'+item[4]+'</td></tr>');
     }
-    
-    var th_list=[];
-    
+
     var th_names=['Disk','Size','TXT文件修改日期','最旧文件','最新文件'];
+
+    var th_list0=[];   
     for (let blxl=0,lent=th_names.length;blxl<lent;blxl++){
-        th_list.push(sub_disks_size_date_offline_file_browser_th(blxl,th_names[blxl]));
+        th_list0.push(sub_disks_size_date_offline_file_browser_th(blxl,th_names[blxl],0));
     }   
     
-    for (let blxl=0,lent=merge_list.length;blxl<lent;blxl++){
-        merge_list[blxl]='<tr><td>'+merge_list[blxl][0]+'</td><td align=right>'+(is_kmg?kbmbgb_b(merge_list[blxl][1]):merge_list[blxl][1])+'</td></tr>';
-    }
-    
-    var merge_table='<h3>合并统计</h3><table class="table_common"><tr>'+th_list.slice(0,2).join('')+'</tr>'+merge_list.join('\n')+'</table>';
-    
-    var bljg='<table class="table_common"><tr>'+th_list.join('')+'</tr>'+tr_list.join('\n')+'</table>'+merge_table+'<p>'+close_button_b('div_statistics','none')+'</p>\n';
+    var merge_table=sub_disks_size_date_offline_file_browser_simple(merge_list,'合并统计',['Disk','Size'],1);
+    var path_table=sub_disks_size_date_offline_file_browser_simple(path_list,'目录统计',['Path','Disk','Size'],2);
+
+    var bljg='<h3 class="h3_disk_size_ofb">磁盘大小</h3><table class="table_common"><tr>'+th_list0.join('')+'</tr>'+tr_list.join('\n')+'</table>'+merge_table+path_table+'<p>'+close_button_b('div_statistics','none')+'</p>\n';
     
     var odiv=document.getElementById('div_statistics');
     odiv.innerHTML=bljg;
     odiv.style.display='block';
-    odiv.scrollIntoView();
+    var oh3s=odiv.querySelectorAll('h3.h3_disk_size_ofb');
+    if (cstable_no>=0 && cstable_no<oh3s.length){
+        oh3s[cstable_no].scrollIntoView();
+    }
+    //odiv.scrollIntoView();
 }
 
 function disks_offline_file_browser(){    
