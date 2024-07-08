@@ -397,3 +397,94 @@ function img_split_canvas_b(oimg,ocanvas,ctx,one_part,csext='jpeg'){
     ctx.drawImage(oimg, one_part[0],one_part[1], one_part[2], one_part[3], 0,0, one_part[2], one_part[3]);
     return ocanvas.toDataURL('image/'+csext);
 }
+
+function canvas_line_chart_b(ocanvas,ctx=false,csdata=[],str2date=true,csmargin=2,csline_color='blue',csline_width=1.5){
+    function sub_canvas_line_chart_b_point(csxl){
+        var blvalue=result_t[csxl][1];
+        if (blvalue==null || isNaN(blvalue)){return [false,false];}
+        
+        var x = csmargin + csxl * (graphWidth / (lent - 1));
+        var y = csmargin+graphHeight - (blvalue / maxValue) * graphHeight;    
+        //用 margin+graphHeight 作为Y轴的起点，是因为Y轴是从顶部向下增加的 - 通义千问
+        return [x,y];
+    }
+    
+    //csdata 元素形如：['2023-01-01', 20] - 保留注释
+    if (csdata.length==0){return;}
+    
+    if (typeof ocanvas == 'string'){
+        ocanvas=document.querySelector(ocanvas);
+    }
+    if (!ocanvas){return;}
+    
+    if (ctx==false){
+        ctx = ocanvas.getContext('2d');
+    }
+    
+    //document.body.appendChild(ocanvas);
+    //ocanvas.style.border='0.1rem solid black';
+    //ocanvas.width=100;
+    //ocanvas.height=50;
+
+    // 定义一些变量
+    var graphWidth = ocanvas.width - 2 * csmargin;
+    var graphHeight = ocanvas.height - 2 * csmargin;
+
+    var result_t=[].concat(csdata);
+    if (str2date){
+        for (let blxl = 0, lent=result_t.length; blxl < lent; blxl++){
+            result_t[blxl][0]=validdate_b(result_t[blxl][0]);
+        }
+    }
+    
+    result_t=date_list_insert_zero_b(result_t,false,false,[],[],null);
+    var lent=result_t.length;
+
+    var value_list=[];
+    for (let blxl = 0; blxl < lent; blxl++){
+        var blvalue=result_t[blxl][1];
+        if (blvalue==null || isNaN(blvalue)){continue;}
+        value_list.push(blvalue);
+    }
+    if (value_list.length==0){return;}
+    
+    var minValue = Math.min(...value_list); // 最小值
+    var maxValue = Math.max(...value_list); // 最大值用于比例计算
+
+    if (minValue<0){
+        for (let blxl = 0; blxl < lent; blxl++){
+            if (result_t[blxl][1]==null || isNaN(result_t[blxl][1])){continue;}        
+            result_t[blxl][1]=result_t[blxl][1]-minValue;
+        }
+        maxValue=maxValue-minValue;
+    }
+    
+    //如果 maxValue 为 0，则会导致除法运算中的 NaN - 保留注释
+    if (maxValue==0){return;}
+
+    // 清空画布
+    ctx.clearRect(0, 0, ocanvas.width, ocanvas.height);
+
+    // 绘制折线图
+    ctx.beginPath();
+    
+    var blstart=0;
+    var x,y;
+    for (let blxl = 0; blxl < lent; blxl++){
+        [x,y]=sub_canvas_line_chart_b_point(blxl);
+        if (x===false){continue;}
+        ctx.moveTo(x,y);
+        blstart=blxl+1;
+        break;
+    }
+    
+    for (let blxl = blstart; blxl < lent; blxl++){
+        [x,y]=sub_canvas_line_chart_b_point(blxl);
+        if (x===false){continue;}        
+        ctx.lineTo(x, y);
+    }
+    
+    ctx.strokeStyle = csline_color;
+    ctx.lineWidth = csline_width;
+    ctx.stroke();
+}

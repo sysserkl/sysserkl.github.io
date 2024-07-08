@@ -604,7 +604,7 @@ function time_2_emoji_b(cstime=false){
     return blemoji[blh];
 }
 
-function date_list_insert_zero_b(cslist,add0101=false,add1231=false,months_list=[],days_list=[]){   //日期补全 - 保留注释
+function date_list_insert_zero_b(cslist,add0101=false,add1231=false,months_list=[],days_list=[],default_value=0){   //日期补全 - 保留注释
     //[
     //[date1,value1],
     //[date2,value2],    
@@ -617,14 +617,14 @@ function date_list_insert_zero_b(cslist,add0101=false,add1231=false,months_list=
     if (add0101){
         var day_begin=date2str_b('-',cslist[0][0]);
         if (day_begin.slice(-6,)!=='-01-01'){
-            cslist=[[validdate_b(day_begin.substring(0,4)+'-01-01'),0]].concat(cslist);
+            cslist=[[validdate_b(day_begin.substring(0,4)+'-01-01'),default_value]].concat(cslist);
         }
     }
     
     if (add1231){
         var day_end=date2str_b('-',cslist.slice(-1)[0][0]);
         if (day_end.slice(-6,)!=='-12-31'){
-            cslist.push([validdate_b(day_end.substring(0,4)+'-12-31'),0]);
+            cslist.push([validdate_b(day_end.substring(0,4)+'-12-31'),default_value]);
         }
     }
 
@@ -652,7 +652,7 @@ function date_list_insert_zero_b(cslist,add0101=false,add1231=false,months_list=
         if (days_list.length>0 && !days_list.includes(blstr.slice(-2,))){continue;}
         
         if (!days.has(blstr) && blstr>=minstr && blstr<=maxstr){
-            cslist.push([new Date(mindate.getTime()),0]);
+            cslist.push([new Date(mindate.getTime()),default_value]);
         }
     }
     cslist.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});
