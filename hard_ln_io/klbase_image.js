@@ -398,8 +398,26 @@ function img_split_canvas_b(oimg,ocanvas,ctx,one_part,csext='jpeg'){
     return ocanvas.toDataURL('image/'+csext);
 }
 
-function canvas_line_chart_b(ocanvas,ctx=false,csdata=[],str2date=true,csmargin=2,csline_color='blue',csline_width=1.5){
-    function sub_canvas_line_chart_b_point(csxl){
+function canvas_arr_max_min_get_b(csarr){
+    var value_list=[];
+    for (let blxl = 0,lent=csarr.length; blxl < lent; blxl++){
+        for (let blno=0,lenb=csarr[blxl].length; blno < lenb; blno++){
+            var blvalue=csarr[blxl][blno][1];
+            if (blvalue==null || isNaN(blvalue)){continue;}
+            value_list.push(blvalue);
+        }
+    }
+    
+    if (value_list.length==0){return [false,false];}
+    
+    minValue = Math.min(...value_list); // 最小值
+    maxValue = Math.max(...value_list); // 最大值用于比例计算
+    
+    return [minValue,maxValue];
+}
+
+function canvas_one_line_chart_b(ocanvas,ctx=false,csdata=[],str2date=true,minValue=false,maxValue=false,csmargin=2,csline_color='blue',csline_width=1.5){
+    function sub_canvas_one_line_chart_b_point(csxl){
         var blvalue=result_t[csxl][1];
         if (blvalue==null || isNaN(blvalue)){return [false,false];}
         
@@ -410,6 +428,7 @@ function canvas_line_chart_b(ocanvas,ctx=false,csdata=[],str2date=true,csmargin=
     }
     
     //csdata 元素形如：['2023-01-01', 20] - 保留注释
+    //多次执行 canvas_one_line_chart_b 函数，则 csdata 元素个数应当一样 - 保留注释
     if (csdata.length==0){return;}
     
     if (typeof ocanvas == 'string'){
@@ -420,11 +439,6 @@ function canvas_line_chart_b(ocanvas,ctx=false,csdata=[],str2date=true,csmargin=
     if (ctx==false){
         ctx = ocanvas.getContext('2d');
     }
-    
-    //document.body.appendChild(ocanvas);
-    //ocanvas.style.border='0.1rem solid black';
-    //ocanvas.width=100;
-    //ocanvas.height=50;
 
     // 定义一些变量
     var graphWidth = ocanvas.width - 2 * csmargin;
@@ -440,17 +454,18 @@ function canvas_line_chart_b(ocanvas,ctx=false,csdata=[],str2date=true,csmargin=
     result_t=date_list_insert_zero_b(result_t,false,false,[],[],null);
     var lent=result_t.length;
 
-    var value_list=[];
-    for (let blxl = 0; blxl < lent; blxl++){
-        var blvalue=result_t[blxl][1];
-        if (blvalue==null || isNaN(blvalue)){continue;}
-        value_list.push(blvalue);
+    if (minValue===false || maxValue===false){
+        var value_list=canvas_arr_max_min_get_b([result_t]);
+        if (value_list[0]===false){return;}
+        
+        if (minValue===false){
+            minValue = value_list[0];//Math.min(...value_list); // 最小值
+        }
+        if (maxValue===false){
+            maxValue = value_list[1];//Math.max(...value_list); // 最大值用于比例计算
+        }
     }
-    if (value_list.length==0){return;}
     
-    var minValue = Math.min(...value_list); // 最小值
-    var maxValue = Math.max(...value_list); // 最大值用于比例计算
-
     if (minValue<0){
         for (let blxl = 0; blxl < lent; blxl++){
             if (result_t[blxl][1]==null || isNaN(result_t[blxl][1])){continue;}        
@@ -463,7 +478,7 @@ function canvas_line_chart_b(ocanvas,ctx=false,csdata=[],str2date=true,csmargin=
     if (maxValue==0){return;}
 
     // 清空画布
-    ctx.clearRect(0, 0, ocanvas.width, ocanvas.height);
+    //ctx.clearRect(0, 0, ocanvas.width, ocanvas.height);
 
     // 绘制折线图
     ctx.beginPath();
@@ -471,7 +486,7 @@ function canvas_line_chart_b(ocanvas,ctx=false,csdata=[],str2date=true,csmargin=
     var blstart=0;
     var x,y;
     for (let blxl = 0; blxl < lent; blxl++){
-        [x,y]=sub_canvas_line_chart_b_point(blxl);
+        [x,y]=sub_canvas_one_line_chart_b_point(blxl);
         if (x===false){continue;}
         ctx.moveTo(x,y);
         blstart=blxl+1;
@@ -479,7 +494,7 @@ function canvas_line_chart_b(ocanvas,ctx=false,csdata=[],str2date=true,csmargin=
     }
     
     for (let blxl = blstart; blxl < lent; blxl++){
-        [x,y]=sub_canvas_line_chart_b_point(blxl);
+        [x,y]=sub_canvas_one_line_chart_b_point(blxl);
         if (x===false){continue;}        
         ctx.lineTo(x, y);
     }
