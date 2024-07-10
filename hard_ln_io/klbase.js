@@ -4026,3 +4026,23 @@ function delimiter_get_b(csdelimiter){
     csdelimiter=csdelimiter.replace(/\\n/g,'\n').replace(/\\t/g,'\t');
     return csdelimiter;
 }
+
+function arr_max_min_get_b(csarr,arr_in_col=-1,value_in_col=1,ignore_nan=true,ignore_null=true){
+    var value_list=[];
+    for (let arow of csarr){
+        var blarray=(arr_in_col==-1?arow:arow[arr_in_col]);
+        for (let item of blarray){
+            var blvalue=item[value_in_col];
+            if (ignore_null && blvalue==null || ignore_nan && isNaN(blvalue)){continue;}
+            value_list.push(blvalue);
+        }
+    }
+    
+    if (value_list.length==0){return [false,false];}
+    
+    value_list.sort(function (a,b){return a<b?-1:1;});
+    minValue = value_list[0];
+    maxValue = value_list[value_list.length-1];
+    
+    return [minValue,maxValue];
+}

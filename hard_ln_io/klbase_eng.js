@@ -2205,31 +2205,29 @@ function sentence_search_b(csword='',csreg=false,csmax=500,show_button=true,csmo
 	return '<div class="div_sentence">'+bljg.join('\n')+'</div><p><i>('+bljg.length+')</i></p>';
 }
 
-function simple_words_b(is_set=true,to_lower_case=false){
-    if (is_set){
-        var result_t=new Set();
-        if (to_lower_case){
-            for (let item of enwords){
-                result_t.add(item[0].toLowerCase());
-            }        
-        } else {
-            for (let item of enwords){
-                result_t.add(item[0]);
-            }
-        }
+function simple_words_b(is_set=true,to_lower_case=false,space_2_underline=false){
+    var result_t=[];
+    if (to_lower_case){
+        for (let item of enwords){
+            result_t.push(item[0].toLowerCase());
+        }        
     } else {
-        var result_t=[];
-        if (to_lower_case){
-            for (let item of enwords){
-                result_t.push(item[0].toLowerCase());
-            }        
-        } else {
-            for (let item of enwords){
-                result_t.push(item[0]);
-            }
+        for (let item of enwords){
+            result_t.push(item[0]);
         }
     }
-    return result_t;
+    
+    if (space_2_underline){
+        for (let blxl=0,lent=result_t.length; blxl<lent; blxl++){
+            result_t[blxl]=result_t[blxl].replace(new RegExp(' ','g'),'_');
+        }
+    }
+    
+    if (is_set){
+        return new Set(result_t);
+    } else {
+        return result_t;
+    }
 }
 
 function one_enword_b(item,recent_bookmark='',ismobile=false,csword=''){

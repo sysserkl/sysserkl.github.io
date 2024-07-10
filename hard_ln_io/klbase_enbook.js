@@ -46,30 +46,42 @@ function wordtypes_enbook_b(blitem){
     return bltmparr;
 }
 
-function get_new_old_rare_words_set_enbook_b(csstr){
+function get_new_old_rare_words_para_enbook_b(){
+    var is_remove_square=checkbox_kl_value_b('remove_square');
+    var words_type=checkbox_kl_value_b('words_type_check');
+    var csendata_set=simple_words_b(true,false,true);   //将空格替换为下划线 - 保留注释
+    return [is_remove_square,words_type,csendata_set];    
+}
+
+function get_new_old_rare_words_set_enbook_b(csstr,is_remove_square=-1,words_type=-1,csendata_set=false){
     if (csstr==''){
         var otextarea=document.getElementById('textarea_new_words1');
         if (!otextarea){return [false,false,false,false,csstr];}
         csstr=otextarea.value;
     }
     
-	if (checkbox_kl_value_b('remove_square')==false){
+    if (is_remove_square===-1){
+        is_remove_square=checkbox_kl_value_b('remove_square');
+    }
+	if (is_remove_square==false){
 		csstr=csstr.replace(new RegExp("(\\[[^\\[\\]]+\\])","g"),' ');
 	}
     
     var bljgarr2=str_2_array_enbook_b(csstr);
     
-    var bltypecheck=checkbox_kl_value_b('words_type_check');
-    bltypecheck=(bltypecheck===0?true:bltypecheck);
-    return new_old_word_list_enbook_b(bljgarr2,bltypecheck).concat([bltypecheck,csstr]);    //[new_words_set,old_words_set,rare_words_set,bltypecheck,csstr] - 保留注释
+    if (words_type===-1){
+        words_type=checkbox_kl_value_b('words_type_check');
+    }
+    words_type=(words_type===0?true:words_type);
+    return new_old_word_list_enbook_b(bljgarr2,words_type,csendata_set).concat([words_type,csstr]);    //[new_words_set,old_words_set,rare_words_set,bltypecheck,csstr] - 保留注释
 }
 
-function get_new_words_arr_set_enbook_b(cstype,csstr='',div_id='div_new_words2'){
+function get_new_words_arr_set_enbook_b(cstype,csstr='',div_id='div_new_words2',is_remove_square=-1,words_type=-1,csendata_set=false){
     //cstype 1 全部单词 2 未收录 3 已收录 4 旧单词js_wiki格式 5 稀有旧单词 6 稀有旧单词js_wiki格式 - 保留注释
     var t0 = performance.now();
 
     var new_words_set, old_words_set, rare_words_set, bltypecheck;
-    [new_words_set,old_words_set,rare_words_set,bltypecheck,csstr]=get_new_old_rare_words_set_enbook_b(csstr);
+    [new_words_set,old_words_set,rare_words_set,bltypecheck,csstr]=get_new_old_rare_words_set_enbook_b(csstr,is_remove_square,words_type,csendata_set);
     if (new_words_set===false){return;}    
     
     var bljgarr2=array_union_b(new_words_set,old_words_set,true);
@@ -102,7 +114,7 @@ function get_new_words_arr_obj_enbook_b(cstype,csstr='',csobjects=false,addline=
                 if (csstart % 200 == 0){
                     console.log('sub_get_new_words_arr_obj_enbook_b_objects()',csstart);
                 }
-                setTimeout(sub_get_new_words_arr_obj_enbook_b_objects,100);
+                setTimeout(sub_get_new_words_arr_obj_enbook_b_objects,1);
                 return;
             }
             var oldstr=item.innerText;
@@ -188,14 +200,11 @@ function get_new_words_arr_obj_enbook_b(cstype,csstr='',csobjects=false,addline=
     console.log('get_new_words_arr_obj_enbook_b() 费时：'+(performance.now() - t0) + ' milliseconds');
 }
 
-function new_old_word_list_enbook_b(bljgarr2,check_types=true){
+function new_old_word_list_enbook_b(bljgarr2,check_types=true,csendata_set=false){
     //提取单词列表
-	var endata_t=new Set();
-	for (let item of enwords){
-        //将空格替换为下划线
-		endata_t.add(item[0].replace(new RegExp(' ','g'),'_'));
-	}
-
+    if (csendata_set==false){
+	    csendata_set=simple_words_b(true,false,true);   //将空格替换为下划线 - 保留注释
+    }
     //-----------------------
     var new_words_all_set=new Set();
         
@@ -219,7 +228,7 @@ function new_old_word_list_enbook_b(bljgarr2,check_types=true){
         }
         var blfound=false;
         for (let one_word of list_t){
-            if (endata_t.has(one_word)){
+            if (csendata_set.has(one_word)){
                 old_words_set.add(one_word);
                 if (en_sentence_count_global.includes(one_word)){
                     rare_words_set.add(one_word);
@@ -467,10 +476,10 @@ function frequency_enwords_book_b(cstype='',simple_split=false,common_max=4000){
             switch (cstype){
                 case 'sentence_common':
                     document.getElementById('textarea_new_words1').value='//常见新单词('+new_t.length+')\n'+new_t.join('\n');
-                    get_new_words_arr_set_enbook_b(2);
+                    get_new_words_arr_set_enbook_b(2,'','div_new_words2',is_remove_square,words_type,csendata_set);
                     break;
                 case 'textarea':
-                    get_new_words_arr_set_enbook_b(2,new_t.join(' '));
+                    get_new_words_arr_set_enbook_b(2,new_t.join(' '),'div_new_words2',is_remove_square,words_type,csendata_set);
                     break;
                 case 'sentence_rare':
                     console.log('frequency_enwords_book() 费时：'+(performance.now() - t0) + ' milliseconds');
@@ -540,22 +549,30 @@ function frequency_enwords_book_b(cstype='',simple_split=false,common_max=4000){
     var old_variety=new Set();
     var result_t={};
     var new_word_set=new Set();
+    
+    if (['sentence_common','textarea'].includes(cstype)){
+        var is_remove_square,words_type,csendata_set;
+        [is_remove_square,words_type,csendata_set]=get_new_old_rare_words_para_enbook_b();
+    }
+    
     var article_arr=[];
-    switch (cstype){
-        case 'sentence_rare':
-        case 'sentence_common':
-            if (typeof en_sentence_global !== 'undefined'){
-                for (let item of en_sentence_global){
-                    article_arr.push(item[0]);
+    if (Array.isArray(cstype)){
+        article_arr=[].concat(cstype);       
+        cstype='klwiki_en_new';
+    } else {
+        switch (cstype){
+            case 'sentence_rare':
+            case 'sentence_common':
+                if (typeof en_sentence_global !== 'undefined'){
+                    for (let item of en_sentence_global){
+                        article_arr.push(item[0]);
+                    }
                 }
-            }
-            break;
-        case 'textarea':
-            article_arr=document.getElementById('textarea_new_words1').value.trim().split('\n');
-            break;
-        case 'klwiki_en_new':
-            article_arr=[].concat(filelist);
-            break;
+                break;
+            case 'textarea':
+                article_arr=document.getElementById('textarea_new_words1').value.trim().split('\n');
+                break;
+        }
     }
     var blxl=0;
     var bllen=article_arr.length;

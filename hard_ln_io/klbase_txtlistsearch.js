@@ -237,6 +237,41 @@ function import_bigfile_kltxt_b(){
     load_js_var_file_b('filelist',[],fname,sub_import_bigfile_kltxt_b_load_content,true,true);
 }
 
+function new_words_lines_kltxt_b(csmin=1,csmax=1){
+    function sub_new_words_lines_kltxt_b_arow(){
+        if (blxl>=bllen || result_t.length>=blmax){
+            document.title=old_title;
+            lines_2_html_kltxt_b(result_t);
+            console.log('digest_statistics_kltxt_b() 费时：'+(performance.now() - t0) + ' milliseconds');
+            return;
+        }
+        
+        var new_old_list=get_new_old_rare_words_set_enbook_b(filelist[blxl],is_remove_square,words_type,csendata_set);
+        var new_words_length=new_old_list[0].size;
+        if (new_words_length>=csmin && new_words_length<=csmax){
+            result_t.push([filelist[blxl],blxl]);
+        }
+        
+        blxl=blxl+1;
+        if (blxl % 10000 == 0){
+            document.title=blxl+'/'+bllen+' - '+old_title;
+            setTimeout(sub_new_words_lines_kltxt_b_arow,1);
+        } else {
+            sub_new_words_lines_kltxt_b_arow();
+        }
+    }
+    
+    var t0 = performance.now();    
+    var blxl=0;
+    var bllen=filelist.length;
+    var old_title=document.title;
+    var blmax=rows_max_kltxt_b();
+    var result_t=[];
+    var is_remove_square,words_type,csendata_set;
+    [is_remove_square,words_type,csendata_set]=get_new_old_rare_words_para_enbook_b();
+    sub_new_words_lines_kltxt_b_arow();
+}
+
 function txtmenus_kltxt_b(cstype=''){
     var str_t=klmenu_hide_b('');
     if (cstype=='reader'){
@@ -262,13 +297,15 @@ function txtmenus_kltxt_b(cstype=''){
     menu_general=menu_general.concat([
     '<span id="span_add_zero_reading_lines_txtlistsearch" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 阅读行数补零</span>',
     '<span class="span_menu" onclick="'+str_t+'getlines_kltxt_b();">返回阅读页面</span>',
+    '<span class="span_menu" onclick="'+str_t+'rare_enwords_search_kltxt_b();">稀有旧单词搜索</span>',
+    '<span class="span_menu" onclick="'+str_t+'new_words_lines_kltxt_b(1,1);">仅有1个新单词的行</span>',
     ]);    
 
     var group_list=[
-    ['常见英语生词','frequent_new_enwords_kltxt_b();',true],
-    ['稀有旧单词搜索','rare_enwords_search_kltxt_b();',true],
+    ['全部','frequent_new_enwords_kltxt_b();',true],
+    ['当前页面','frequent_new_enwords_kltxt_b(true);',true],
     ];    
-    menu_general.push(menu_container_b(str_t,group_list,''));
+    menu_general.push(menu_container_b(str_t,group_list,'常见英语生词：'));
     menu_general.push(load_sentence_menu_b(str_t));
     
     var group_list=[
@@ -688,9 +725,18 @@ function wiki_style_kltxt_b(){
     }
 }
 
-function frequent_new_enwords_kltxt_b(){
+function frequent_new_enwords_kltxt_b(is_current_page=false){
+    if (is_current_page){
+        var ospans=document.querySelectorAll('#divhtml span.txt_content');
+        var csarr=[];
+        for (let one_span of ospans){
+            csarr.push(one_span.innerText);
+        }
+    } else {
+        var csarr=filelist;
+    } 
     document.getElementById('divhtml').innerHTML='<h3>统计中...</h3>';
-    setTimeout(function (){frequency_enwords_book_b('klwiki_en_new');},1);
+    setTimeout(function (){frequency_enwords_book_b(csarr);},1);
 }
 
 function klwiki_title_batch_open_kltxt_b(){
@@ -3256,12 +3302,17 @@ function start_end_lineno_kltxt_b(){
         }
     }
     
+    var blmax=rows_max_kltxt_b();
+    return [start_lineno,end_lineno,blmax];
+}
+
+function rows_max_kltxt_b(){
     var omax=document.getElementById('input_max_lines');
     var blmax=500;
     if (omax){
         blmax=parseInt(omax.value);
     }
-    return [start_lineno,end_lineno,blmax];
+    return blmax;
 }
 
 function digest_number_2_txt_kltxt_b(){

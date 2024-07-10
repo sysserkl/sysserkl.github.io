@@ -255,8 +255,12 @@ function klwiki_txtbook_oldwords_diff_ensentence(){
         var colno=(arow[2].slice(-4,)=='_TLS'?1:0);
         list_t[colno].push(arow[0]);
     }
-    var klwiki_rare_set=get_new_old_rare_words_set_enbook_b(list_t[0].toString())[2];
-    var txtbook_rare_set=get_new_old_rare_words_set_enbook_b(list_t[1].toString())[2];
+    
+    var is_remove_square,words_type,csendata_set;
+    [is_remove_square,words_type,csendata_set]=get_new_old_rare_words_para_enbook_b();
+    
+    var klwiki_rare_set=get_new_old_rare_words_set_enbook_b(list_t[0].toString(),is_remove_square,words_type,csendata_set)[2];
+    var txtbook_rare_set=get_new_old_rare_words_set_enbook_b(list_t[1].toString(),is_remove_square,words_type,csendata_set)[2];
     var intersection_t=array_intersection_b(klwiki_rare_set,txtbook_rare_set,true);
     
     var difference_t=array_difference_b(klwiki_rare_set,txtbook_rare_set,true,true);
