@@ -35,4 +35,5 @@ var digest_global=`
 *never ever
 *misread
 *irrelevantly
+*gobbledegook
 `.trim().split('\n');

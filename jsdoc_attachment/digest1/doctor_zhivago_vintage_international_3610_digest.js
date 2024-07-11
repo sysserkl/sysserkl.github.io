@@ -110,4 +110,5 @@ var digest_global=`
 *toilet water
 *trade union
 *outdo
+*unfeasible
 `.trim().split('\n');

@@ -15,4 +15,5 @@ var digest_global=`
 *Eiffel
 *Whitney
 *headphone
+*viewscreen
 `.trim().split('\n');

@@ -13,4 +13,5 @@ var digest_global=`
 *shepherdess
 *unsearchable
 *unthankful
+*Mussulmen
 `.trim().split('\n');

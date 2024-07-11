@@ -134,9 +134,7 @@ function tw_kltxt_b(){
 
 function digest_statistics_kltxt_b(){
     var t0 = performance.now();
-	var start_lineno;
-	var end_lineno;
-    var blmax;
+	var start_lineno, end_lineno;
     [start_lineno,end_lineno]=start_end_lineno_kltxt_b().slice(0,2);
     var all_empty=false;
     var result_t=[];
@@ -262,10 +260,14 @@ function new_words_lines_kltxt_b(csmin=1,csmax=1){
     }
     
     var t0 = performance.now();    
-    var blxl=0;
-    var bllen=filelist.length;
+
+    var start_lineno, end_lineno, blmax;
+    [start_lineno,end_lineno,blmax]=start_end_lineno_kltxt_b();
+    
+    var blxl=start_lineno;
+    var bllen=end_lineno;
     var old_title=document.title;
-    var blmax=rows_max_kltxt_b();
+
     var result_t=[];
     var is_remove_square,words_type,csendata_set;
     [is_remove_square,words_type,csendata_set]=get_new_old_rare_words_para_enbook_b();
@@ -1093,9 +1095,7 @@ function counthz_kltxt_b(){
 	bd_t=bd_t+'＊＆＝▲６７８⒄〖〗＜■◎●〓々⑩⑦⑧⑨﹔ＡＧⅠⅡⅢＯＶＸετāⅣα';
 	bd_t=bd_t+'ɑɒʤəɜɪŋɔʃʊʌʒβθˌ⇒❶❷❸❹❺';
 
-	var start_lineno;
-	var end_lineno;
-    var blmax;
+	var start_lineno, end_lineno, blmax;
     [start_lineno,end_lineno,blmax]=start_end_lineno_kltxt_b();
     
 	for (let blxl=start_lineno;blxl<end_lineno;blxl++){
@@ -1136,10 +1136,9 @@ function separate_search_kltxt_b(key_list=false){
         key_list=key_list.split(' ');
     }
 	klwiki_syntaxhighlight_global=false;   
-    var list_t=start_end_lineno_kltxt_b();
-	var start_lineno=list_t[0];
-	var end_lineno=list_t[1];
-    var csmaxlines=list_t[2];
+    
+    var start_lineno, end_lineno, csmaxlines;
+    [start_lineno, end_lineno, csmaxlines]=start_end_lineno_kltxt_b();
 	var cshideno=document.getElementById('check_hide_no').checked;
     
     var result_t=[];
@@ -2979,9 +2978,7 @@ function absearch_kltxt_b(csword='',csreg=-1,csonlyone=false){
 
 	if (csword==''){return;}
 
-	var start_lineno;
-	var end_lineno;
-    var csmaxlines;
+	var start_lineno, end_lineno, csmaxlines;
     [start_lineno,end_lineno,csmaxlines]=start_end_lineno_kltxt_b();
 
     //这样才能更新搜索关键字
@@ -3366,9 +3363,7 @@ function digest_sort_kltxt_b(){
 
 function digest_lines_kltxt_b(recent_lines=-1){
     var t0 = performance.now();
-	var start_lineno;
-	var end_lineno;
-    var blmax;
+	var start_lineno, end_lineno, blmax;
     [start_lineno,end_lineno,blmax]=start_end_lineno_kltxt_b();
     
     var list_t=[];

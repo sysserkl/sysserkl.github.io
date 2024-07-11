@@ -40,4 +40,5 @@ var digest_global=`
 *semiautomatic
 *headlock
 *worrisome
+*doormen
 `.trim().split('\n');
