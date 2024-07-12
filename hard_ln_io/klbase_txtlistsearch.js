@@ -244,12 +244,13 @@ function new_words_lines_kltxt_b(csmin=1,csmax=1){
             return;
         }
         
-        var new_old_list=get_new_old_rare_words_set_enbook_b(filelist[blxl],is_remove_square,words_type,csendata_set);
-        var new_words_length=new_old_list[0].size;
-        if (new_words_length>=csmin && new_words_length<=csmax){
-            result_t.push([filelist[blxl],blxl]);
+        if (!menu_no.has(blxl)){
+            var new_old_list=get_new_old_rare_words_set_enbook_b(filelist[blxl],is_remove_square,words_type,csendata_set);
+            var new_words_length=new_old_list[0].size;
+            if (new_words_length>=csmin && new_words_length<=csmax){
+                result_t.push([filelist[blxl],blxl]);
+            }
         }
-        
         blxl=blxl+1;
         if (blxl % 10000 == 0){
             document.title=blxl+'/'+bllen+' - '+old_title;
@@ -267,7 +268,7 @@ function new_words_lines_kltxt_b(csmin=1,csmax=1){
     var blxl=start_lineno;
     var bllen=end_lineno;
     var old_title=document.title;
-
+    var menu_no=new Set(menu_no_get_kltxt_b());
     var result_t=[];
     var is_remove_square,words_type,csendata_set;
     [is_remove_square,words_type,csendata_set]=get_new_old_rare_words_para_enbook_b();
@@ -301,6 +302,7 @@ function txtmenus_kltxt_b(cstype=''){
     '<span class="span_menu" onclick="'+str_t+'getlines_kltxt_b();">返回阅读页面</span>',
     '<span class="span_menu" onclick="'+str_t+'rare_enwords_search_kltxt_b();">稀有旧单词搜索</span>',
     '<span class="span_menu" onclick="'+str_t+'new_words_lines_kltxt_b(1,1);">仅有1个新单词的行</span>',
+    '<span class="span_menu" onclick="'+str_t+'new_words_lines_kltxt_b(0,0);">无新单词的行</span>',
     ]);    
 
     var group_list=[
@@ -995,10 +997,12 @@ function menu_insert_kltxt_b(menu_count=3){
     var omenu=document.querySelector('span.span_inserted_menu');
     if (omenu){return;}
 
-    var menu_no=new Set();
-    for (let item of kltxt_menulist_index_global){
-        menu_no.add(item[0]);
-    }
+    //var menu_no=new Set();
+    //for (let item of kltxt_menulist_index_global){
+        //menu_no.add(item[0]);
+    //}
+    var menu_no=new Set(menu_no_get_kltxt_b());
+    
     if (menu_no.size==0){return;}
 
     var ospans=txtsearch_kltxt_lineno_doms_get_kltxt_b();
@@ -2863,9 +2867,10 @@ function format_lines_kltxt_b(cslist,csstyle='',csaname=-1,is_group_file=''){
     var menu_no_list=[];
     var obold=document.getElementById('input_menu_bold');
     if (obold && obold.checked){
-        for (let item of kltxt_menulist_index_global){
-            menu_no_list.push(item[0]);
-        }
+        //for (let item of kltxt_menulist_index_global){
+            //menu_no_list.push(item[0]);
+        //}
+        var menu_list=menu_no_get_kltxt_b();
     }
     
     var booktype=book_type_check_kltxt_b();
@@ -3967,12 +3972,13 @@ function digest_enwords_remove_kltxt_b(cstype=''){
     
     //---
     var new_list=[];
-    var menu_list=new Set();    //如果使用 list 则极慢 - 保留注释
-    if (typeof kltxt_menulist_index_global == 'object' && Array.isArray(kltxt_menulist_index_global)){  //添加目录行号 - 保留注释
-        for (let item of kltxt_menulist_index_global){
-            menu_list.add(item[0]);
-        }
-    }
+    //var menu_list=new Set();    //如果使用 list 则极慢 - 保留注释
+    //if (typeof kltxt_menulist_index_global == 'object' && Array.isArray(kltxt_menulist_index_global)){  //添加目录行号 - 保留注释
+        //for (let item of kltxt_menulist_index_global){
+            //menu_list.add(item[0]);
+        //}
+    //}
+    var menu_list=new Set(menu_no_get_kltxt_b());
     
     for (let item of digest_global){
         if (item.substring(0,1)!=='*'){
@@ -4028,4 +4034,11 @@ function digest_enwords_remove_kltxt_b(cstype=''){
     }
     digest_global=new_list;
     console.log('digest_enwords_remove_kltxt_b() 费时：'+(performance.now() - t0) + ' milliseconds');
+}
+
+function menu_no_get_kltxt_b(){
+    if (typeof kltxt_menulist_index_global == 'object' && Array.isArray(kltxt_menulist_index_global)){  //添加目录行号 - 保留注释
+        return array_split_by_col_b(kltxt_menulist_index_global,[0]);
+    }
+    return [];
 }
