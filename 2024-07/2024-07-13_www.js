@@ -1,0 +1,16 @@
+var sourcelist=[
+["https://www.solidot.org/story?sid=78675","台积电市值突破 1 万亿美元","2024-07-13","Solidot","1",],
+["https://www.solidot.org/story?sid=78676","英特尔 i9 稳定性问题促使数据中心提供商转向 AMD Ryzen 9","2024-07-13","Solidot","1",],
+["https://www.solidot.org/story?sid=78677","Switch 成为任天堂最长寿游戏机","2024-07-13","Solidot","1",],
+["https://www.solidot.org/story?sid=78679","微软中国数据中心合作伙伴不太环保","2024-07-13","Solidot","1",],
+["https://www.solidot.org/story?sid=78680","随着出生率下降全球人口到本世纪末将比预期的减少 2 亿","2024-07-13","Solidot","1",],
+["https://www.solidot.org/story?sid=78681","研究发现苏打税让儿童糖消费量减少了一半","2024-07-13","Solidot","1",],
+["https://www.solidot.org/story?sid=78682","Thunderbird 128 释出","2024-07-13","Solidot","1",],
+["https://www.solidot.org/story?sid=78683","AT&T 称几乎所有客户的电话记录被盗","2024-07-13","Solidot","1",],
+["https://www.solidot.org/story?sid=78673","锂离子电池成为 PFAS 污染日益增长的来源","2024-07-13","Solidot","1",],
+["https://plainenglish.com/what-happens-when-your-trial-ends/","What happens when your trial ends","2024-07-13","Plain English","0",],
+["https://plainenglish.com/live-conversation-call-what-you-need-to-know/","Live conversation call: What you need to know","2024-07-13","Plain English","0",],
+["https://plainenglish.com/speak-fluently-with-plain-english/","Speak fluently with Plain English","2024-07-13","Plain English","0",],
+["https://plainenglish.com/tips-to-learn-with-your-free-trial/","Tips to learn with your free trial","2024-07-13","Plain English","0",],
+["https://plainenglish.com/your-starter-membership-got-an-upgrade/","Your Starter membership got an upgrade","2024-07-13","Plain English","0",],
+];
