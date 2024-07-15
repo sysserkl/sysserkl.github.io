@@ -62,6 +62,7 @@ function district_get_corruption(cstype,csstr,reg_exp,city_name=''){
             
             var result_t=blstr.split('，')[0].match(reg_exp) || ['',''];
             //结果如：[ "原国家食品药品监督管理总局", "局" ] - 保留注释
+            blstr=result_t[0];
             
             var dict_t={'广西自治区':'广西壮族自治区','国家粮食和物资储备局':'国家粮食局'};
             if (blstr in dict_t){

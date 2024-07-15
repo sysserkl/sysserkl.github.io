@@ -708,6 +708,9 @@ function clear_copy_tab_title_url_klr_b(csid){
         if (item.substring(0,10)=='["file:///'){continue;}
         if (item==''){continue;}
         if (item.trim().match(/^-+$/g)){continue;}
+        if (item.match(/^(\[[^\s]+)#:~:text=[^\s]+(",".+\],)$/)){
+            item=item.replace(/^(\[[^\s]+)#:~:text=[^\s]+(",".+\],)$/,'$1$2');
+        }
         bljg.push(item);
     }
     otextarea.value=bljg.join('\n');
