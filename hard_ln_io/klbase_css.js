@@ -2204,7 +2204,7 @@ function ltp_status_get_b(cskey,cscolor1='blue',cscolor2='white',cswidth=100,csh
     }
     var result_t=[];
     for (let arow of list_t){
-        var blpercent=100*percent_calculation_b(parseFloat(arow[3]),parseFloat(arow[5]),parseFloat(arow[6]));
+        var blpercent=100*percent_calculation_b(parseFloat(arow[3]),parseFloat(arow[5]),parseFloat(arow[6]))[0];
         var blbase64=progress_b(blpercent,cscolor1,cscolor2,cswidth,csheight,csalpha);
         result_t.push('<img src="'+blbase64+'" title="'+specialstr_j(arow[1])+'" style="border:0.1rem '+scheme_global['color']+' solid;" /> '+arow[1]+' <b>'+blpercent.toFixed(2)+'%</b>');
     }

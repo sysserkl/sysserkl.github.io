@@ -17,7 +17,7 @@ function menu_lt_plans(){
     }
     
     var show_type=show_type_lt_plans();
-    var option_list=['normal','simple','checklist','percent'];
+    var option_list=['normal','simple','checklist','percent','workload'];
     for (let blxl=0,lent=option_list.length;blxl<lent;blxl++){
         option_list[blxl]='<option'+(show_type==option_list[blxl]?' selected':'')+'>'+option_list[blxl]+'</option>';
     }
@@ -28,7 +28,7 @@ function menu_lt_plans(){
     '<span class="span_menu" onclick="'+str_t+'blank_lt_plans();">new plan</span>', 
     '<span class="span_menu" onclick="'+str_t+'backup_lt_plans();">edit/import/export</span>', 
     '<span id="span_symbol_lt_plans" class="span_menu" onclick="'+str_t+'symbol_manage_lt_plans();">Symbol: '+blsymbol+'</span>',   
-    '<span class="span_menu">show type: <select id="select_show_type_lt_plans" onchange="'+klmenu_hide_b('',true)+'show_type_lt_plans(this.value,true);"><option></option>'+option_list.join('')+'</select></span>',        
+    '<span class="span_menu">show type: <select onchange="'+klmenu_hide_b('',true)+'show_type_lt_plans(this.value,true);">'+option_list.join('')+'</select></span>',        
     ];
         
     var klmenu_sort=[
@@ -143,7 +143,7 @@ function sort_lt_plans(){
     if (ltp_sort_type_global==''){return;}
     
     if (ltp_sort_type_global.includes('-1')){
-        long_term_plans_global.sort(function (a,b){return percent_lt_plans(a)<percent_lt_plans(b) ? 1 : -1;});    
+        long_term_plans_global.sort(function (a,b){return percent_lt_plans(a)[0]<percent_lt_plans(b)[0] ? 1 : -1;});    
     } else {
         var blno=parseInt((ltp_sort_type_global+'0').substring(0,1));
         if (isNaN(blno)){
@@ -248,8 +248,10 @@ function draw_lt_plans(csno,do_jump=false){
     if (all_days<=0){return;}
     var used_days=Math.ceil((today-start_day)/(1000*3600*24));
     
-    var blpercent=percent_lt_plans(csitem);
+    var blpercent,blremain;
+    [blpercent,blremain]=percent_lt_plans(csitem);
     if (blpercent===false){return;}
+    var workload=(blremain/(all_days-used_days)).toFixed(2);
     
     var blposition=Math.min(all_days,Math.max(0,parseInt(blpercent*all_days)));
     
@@ -268,7 +270,9 @@ function draw_lt_plans(csno,do_jump=false){
         bljg=bljg+'<small>[';
         bljg=bljg+'<span class="span_box" onclick="change_lt_plans(\''+csitem[0]+'\',3);">初值: '+csitem[3]+'; '+'</span>';    
         bljg=bljg+'<span class="span_box" onclick="change_lt_plans(\''+csitem[0]+'\',5);">终值: '+csitem[5]+'; '+'</span>';    
-        bljg=bljg+'<span class="span_box" onclick="change_lt_plans(\''+csitem[0]+'\',6);">进度: '+csitem[6]+', '+(blpercent*100).toFixed(2)+'%</span>';
+        bljg=bljg+'<span class="span_box" onclick="change_lt_plans(\''+csitem[0]+'\',6);">进度: '+csitem[6]+', '+(blpercent*100).toFixed(2)+'%; </span>';
+        bljg=bljg+'每日量: '+workload;
+
         bljg=bljg+']</small>';
         
         bljg=bljg+'</td></tr>';
@@ -311,6 +315,8 @@ function draw_lt_plans(csno,do_jump=false){
     
     if (show_type=='percent'){
         bljg=bljg+'<span class="span_box" onclick="change_lt_plans(\''+csitem[0]+'\',6);">'+csitem[6]+' '+(blpercent*100).toFixed(2)+'%</span>';
+    } else if (show_type=='workload'){
+        bljg=bljg+workload;    
     } else {
         bljg=bljg+'<span class="span_box" onclick="change_lt_plans(\''+csitem[0]+'\',4);">';
         bljg=bljg+(is_normal_or_simple?'<small>'+csitem[4]+'</small>':csitem[4]);
@@ -318,7 +324,7 @@ function draw_lt_plans(csno,do_jump=false){
     }
     
     if (is_normal_or_simple){
-        bljg=bljg+' ('+all_days+'天)';
+        bljg=bljg+' ('+used_days+'/'+all_days+'天)';
     }
     bljg=bljg+'</td></tr>';
     

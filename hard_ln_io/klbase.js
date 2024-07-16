@@ -3386,10 +3386,11 @@ function split_div_position_wh_b(cstype,split_list,csxl,odiv_split,orect){
 
 function percent_calculation_b(starting_value,final_value,current_value){
     var blcount=final_value-starting_value;
-    if (blcount==0){return false;}
-    var blcurrent=current_value-starting_value;
+    if (blcount==0){return [false,false];}
 
-    return Math.abs(blcurrent/blcount);
+    var blcurrent=current_value-starting_value;
+    var blremain=blcount-blcurrent;
+    return [Math.abs(blcurrent/blcount),blremain];
 }
 
 function array_check_b(cslist){
