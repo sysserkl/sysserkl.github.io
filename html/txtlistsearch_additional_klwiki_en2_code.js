@@ -66,7 +66,7 @@ function selective_default_value_kltxt_klwiki_en2(){
 }
 
 function batch_search_result_kltxt_klwiki_en2(){
-    var list_t=array_unique_b(document.getElementById('textarea_batch_search_words_kltxt_klen2').value.trim().split('\n')); 
+    var list_t=array_unique_b(document.getElementById('textarea_batch_search_words_kltxt_klen2').value.trim().replace(/ /g,'\\s').split('\n')); 
 
     var more_filter=document.getElementById('input_selective_words_kltxt_klen2').value.trim().split(' ');
 

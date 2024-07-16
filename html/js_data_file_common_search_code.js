@@ -66,8 +66,7 @@ function init_common(){
     }
     console.log(status_t.join('\n'));
 
-    document.title=icon_emoji_jscm_global+' '+title_name_jscm_global;
-    document.getElementById('span_title').innerText=title_name_jscm_global;
+    web_page_name_set_common();
 
     if (!is_standalone_html_file_global){
         file_dom_create_b([data_file_jscm_global,(js_additional_jscm_global==''?'':'js_additional_'+js_additional_jscm_global+'_code.js')]);
@@ -76,6 +75,16 @@ function init_common(){
     js_data_current_common_search_global=[];
     menu_common();
     wait_array_common();
+}
+
+function web_page_name_set_common(){
+    document.title=icon_emoji_jscm_global+' '+title_name_jscm_global;
+    document.getElementById('span_title').innerText=title_name_jscm_global;
+}
+
+function web_page_count_set_common(cslen){
+    raw_data_len_jscm_global=cslen;
+    document.getElementById('span_count').innerText='('+raw_data_len_jscm_global+')';
 }
 
 function wait_array_common(){
@@ -157,9 +166,8 @@ function wait_array_common(){
                 }
             }
                         
-            raw_data_len_jscm_global=csarray.length;
+            web_page_count_set_common(csarray.length);
             console.log('发现数组 '+var_name_jscm_global+'，等待次数：',blxl);
-            document.getElementById('span_count').innerText='('+raw_data_len_jscm_global+')';
             blfound=true;
             sub_wait_array_common_check();
         } catch (error){

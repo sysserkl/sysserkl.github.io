@@ -26,9 +26,48 @@ function menu_more_corruption(){
     '<span id="span_merge_show_corruption_common" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 合并展示</span>',
     '<span class="span_menu" onclick="'+str_t+'group_corruption();">分组</span>',
     '<span class="span_menu">项目标记：<input type="text" id="input_bullet_point_corruption_common" style="width:3rem;" placeholder="🐁🐀🐭" /></span>',
+    '<span class="span_menu" onclick="'+str_t+'form_temp_data_corruption();">导入临时数据</span>',
     ];
 
     return klmenu_b(klmenu1,'🛎',bllen+'rem','1rem','1rem','30rem');
+}
+
+function import_temp_data_corruption(){
+    var blcontent=document.getElementById('textarea_temp_data_corruption').value.trim();
+    blcontent=blcontent.match(/^\[.+\],\s*$/mg) || [];
+    if (blcontent.length==0){return;}
+
+    var bltype=document.getElementById('input_type_temp_data_corruption').value.trim();
+    if (bltype==''){
+        alert('未设置 title_name_jscm_global');
+        return
+    }
+    if (!confirm('是否导入'+blcontent.length+'条临时数据？')){return;}
+    title_name_jscm_global=bltype;
+    
+    corruption_global=eval('['+blcontent.join('\n')+'];');
+    raw_data_len_jscm_global=corruption_global.length;
+    web_page_name_set_common();
+    web_page_count_set_common(corruption_global.length);
+    alert('done');
+}
+
+function form_temp_data_corruption(){
+    var blbuttons='<p>';
+    blbuttons=blbuttons+'title_name_jscm_global: <input type="text" id="input_type_temp_data_corruption" value="'+title_name_jscm_global+'" /> ';
+    blbuttons=blbuttons+'<span class="aclick" onclick="import_temp_data_corruption();">导入</span>';
+    blbuttons=blbuttons+textarea_buttons_b('textarea_temp_data_corruption','清空,复制,导入temp_txt_share');        
+    blbuttons=blbuttons+close_button_b('div_form_common','','aclick');
+    blbuttons=blbuttons+'</p>';
+    var odiv=document.getElementById('div_form_common');
+
+    var blstr='<textarea id="textarea_temp_data_corruption" style="height:20rem;"></textarea>';
+    odiv.innerHTML=blstr+blbuttons;
+    
+    var input_list=[['input_type_temp_data_corruption',11,0.9],];
+    input_size_b(input_list,'id');
+    
+    odiv.scrollIntoView();
 }
 
 function type_get_corruption(){
