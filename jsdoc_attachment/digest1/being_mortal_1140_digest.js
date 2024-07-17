@@ -74,4 +74,5 @@ var digest_global=`
 *stopcock
 *ill-considered
 *after-school
+*medically
 `.trim().split('\n');

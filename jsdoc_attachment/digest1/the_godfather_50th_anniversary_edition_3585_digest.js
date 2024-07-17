@@ -44,4 +44,5 @@ var digest_global=`
 *up-and-coming
 *bosomy
 *soundproof
+*extortionist
 `.trim().split('\n');

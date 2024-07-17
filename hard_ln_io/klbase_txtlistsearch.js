@@ -95,6 +95,10 @@ function new_words_kltxt_b(){
     if (klmenu_check_b('span_show_new_enwords',false)){
         get_new_words_arr_obj_enbook_b(2,document.getElementById('divhtml').innerText,document.querySelectorAll('.txt_content'),true);
     }
+    
+    if (klmenu_check_b('span_show_rare_enwords',false)){
+        get_new_words_arr_obj_enbook_b(5,document.getElementById('divhtml').innerText,document.querySelectorAll('.txt_content'),true);
+    }
 }
 
 function old_words_kltxt_b(is_init=false){
@@ -313,11 +317,12 @@ function txtmenus_kltxt_b(cstype=''){
     menu_general.push(load_sentence_menu_b(str_t));
     
     var group_list=[
-    ['显示汉字生字','find_cn_words_kltxt_b();',true],
-    ['⚪ 显示生词','klmenu_check_b(this.id,true);new_words_kltxt_b();',true,'span_show_new_enwords'],
-    ['⚪ 显示旧单词','klmenu_check_b(this.id,true);old_words_kltxt_b();',true,'span_show_old_enwords'],
+    ['汉字生字','find_cn_words_kltxt_b();',true],
+    ['⚪ 生词','klmenu_check_b(this.id,true);new_words_kltxt_b();',true,'span_show_new_enwords'],
+    ['⚪ 稀有旧单词','klmenu_check_b(this.id,true);new_words_kltxt_b();',true,'span_show_rare_enwords'],
+    ['⚪ 旧单词','klmenu_check_b(this.id,true);old_words_kltxt_b();',true,'span_show_old_enwords'],
     ];    
-    menu_general.push(menu_container_b(str_t,group_list,''));
+    menu_general.push(menu_container_b(str_t,group_list,'显示：'));
         
     if (is_local_b()){
         menu_general.push('<span class="span_menu" onclick="'+str_t+'klwiki_link_b(\'KL Reading\',true);">KL Reading</span>');
@@ -459,7 +464,7 @@ function txtmenus_kltxt_b(cstype=''){
     var bljg='';
     var colors=klmenu_b(color_menu,'🎨',(ismobile_b()?'16rem':'20rem'),'',fontsize,'20rem');
     if (cstype!=='digest'){
-        bljg=bljg+klmenu_b(menu_general,'','22rem','',fontsize);
+        bljg=bljg+klmenu_b(menu_general,'','25rem','',fontsize);
         bljg=bljg+klmenu_b(menu_dir,'🔍',menu_dir_width,'',fontsize);
         bljg=bljg+klmenu_b(menu_digest,'🖊','24rem','',fontsize);       
         bljg=bljg+colors;

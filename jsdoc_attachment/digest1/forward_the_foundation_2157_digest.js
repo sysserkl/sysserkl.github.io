@@ -12,4 +12,5 @@ var digest_global=`
 *tabletop
 *corneal
 *antonym
+*uncharted
 `.trim().split('\n');

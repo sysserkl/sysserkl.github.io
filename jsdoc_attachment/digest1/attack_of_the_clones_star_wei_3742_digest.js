@@ -7,4 +7,5 @@ var digest_global=`
 *spearman
 *gunship
 *fittingly
+*four-legged
 `.trim().split('\n');
