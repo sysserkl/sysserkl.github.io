@@ -397,7 +397,7 @@ function init_seen(){
 }
 
 function recent_search_key_seen(csstr=''){
-    recent_search_b('recent_search_selenium_enwords',csstr,'search_seen','div_recent_search',['^[a-z]+(ed|ing|s)$(:r)',],20);
+    recent_search_b('recent_search_selenium_enwords',csstr,'search_seen','div_recent_search',['^[a-z]+(ed|ing|s)$(:r)','\/(author|tag)\/(:r)'],20);
 }
 
 function search_seen(cskeys='',margin_id=-1){

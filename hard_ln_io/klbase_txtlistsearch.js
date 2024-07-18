@@ -244,6 +244,7 @@ function new_words_lines_kltxt_b(csmin=1,csmax=1){
         if (blxl>=bllen || result_t.length>=blmax){
             document.title=old_title;
             lines_2_html_kltxt_b(result_t);
+            new_words_kltxt_b();
             console.log('digest_statistics_kltxt_b() 费时：'+(performance.now() - t0) + ' milliseconds');
             return;
         }
@@ -2872,9 +2873,6 @@ function format_lines_kltxt_b(cslist,csstyle='',csaname=-1,is_group_file=''){
     var menu_no_list=[];
     var obold=document.getElementById('input_menu_bold');
     if (obold && obold.checked){
-        //for (let item of kltxt_menulist_index_global){
-            //menu_no_list.push(item[0]);
-        //}
         var menu_list=menu_no_get_kltxt_b();
     }
     

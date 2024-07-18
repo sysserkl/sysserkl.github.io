@@ -5,6 +5,8 @@ function menu_more_kltxt_klwiki_en2(){
     var str_t=klmenu_hide_b('');
     var klmenu1=[    
     '<span class="span_menu" onclick="'+str_t+'days_kltxt_klwiki_en2();">今日段落阅读</span>',
+    '<span class="span_menu" onclick="'+str_t+'rare_words_kltxt_klwiki_en2();">稀有单词行</span>',
+    '<span class="span_menu" onclick="'+str_t+'new_words_count_kltxt_klwiki_en2();">常见生词统计</span>',
     '<span class="span_menu" onclick="'+str_t+'batch_search_form_kltxt_klwiki_en2();">单词批量查找</span>',
     '<a href="enwords_book.htm" onclick="'+str_t+'" target=_blank>生词统计</a>',    
     '<a href="ensentence.htm" onclick="'+str_t+'" target=_blank>ensentence</a>',
@@ -18,6 +20,34 @@ function menu_more_kltxt_klwiki_en2(){
     
     var blstr=klmenu_b(klmenu1,'🇬🇧','17rem','1rem','1rem','30rem');
     ospan.outerHTML=blstr;
+}
+
+function rare_words_kltxt_klwiki_en2(){
+    txtsearch_kltxt_b('\\(-[^\\(\\)]+\\)$ \\([^\\(\\)]+\s-[^\\(\\)]+\\)$(:r)'); //-可能出现在(后或空格后 - 保留注释
+}
+
+function new_words_count_kltxt_klwiki_en2(){
+    var t0 = performance.now();
+    var result_t={};
+    for (let arow of filelist){
+        var list_t=arow.match(/\(([^\(\)]+?)\)$/) || ['',''];
+        if (list_t[1]==''){continue;}
+        //结果如：[ "(+amp +lying)", "+amp +lying" ] - 保留注释
+        var words=list_t[1].match(/\+[^\s]+/g) || [];
+        for (let one_word of words){
+            if (result_t['w'+one_word]==undefined){
+                result_t['w'+one_word]=0;
+            }
+            result_t['w'+one_word]=result_t['w'+one_word]+1;
+        }
+	}
+    result_t=object2array_b(result_t,true,2);
+    result_t.sort(function (a,b){return a[1]>b[1]?-1:1;});
+    result_t=result_t.slice(0,2500);
+    result_t=array_split_by_col_b(result_t,[0]);
+    document.getElementById('divhtml').innerHTML=new_old_words_html_enbook_b(new Set(result_t),'常见新单词');
+    //enwords_array_to_links_b(result_t).join(' ');
+    console.log('new_words_count_kltxt_klwiki_en2() 费时：'+(performance.now() - t0) + ' milliseconds');
 }
 
 function batch_search_form_kltxt_klwiki_en2(){
