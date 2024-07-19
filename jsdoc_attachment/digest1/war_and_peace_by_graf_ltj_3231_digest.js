@@ -240,4 +240,10 @@ var digest_global=`
 *ferrymen
 *kennelmen
 *Kepler
+*Buonaparte
+*nice-looking
+*wide-mouthed
+*crybaby
+*deafeningly
+*asparagus
 `.trim().split('\n');

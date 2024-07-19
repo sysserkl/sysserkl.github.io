@@ -366,20 +366,22 @@ function all_new_words_count_set_enbook_b(iscurrent=true,csvalue=''){
     }
 }
 
-function new_old_words_html_enbook_b(csarray,csname,csaname='',onlytitle=false){    
+function new_old_words_html_enbook_b(csarray,csname,csaname='',onlytitle=false,oldset=new Set(),show_len=true){    
     var bltitle='';
     if (csaname!==''){
         bltitle=bltitle+'<a name="'+csaname+'"></a>';
     }
     bltitle=bltitle+'<h3>'+csname;
-    bltitle=bltitle+'<span style="font-size:0.8rem;">('+csarray.size+')</span>';
-    bltitle=bltitle+'</h3>';        
+    if (show_len){
+        bltitle=bltitle+'<span style="font-size:0.8rem;">('+csarray.size+')</span>';
+    }
+    bltitle=bltitle+'</h3>';
     
     if (onlytitle){
         return bltitle;
     }
     
-    var bljg=enwords_array_to_links_b(csarray);
+    var bljg=enwords_array_to_links_b(csarray,oldset);
     var blsort='<span class="aclick" onclick="sort_enwords_enbook_b(this,0);">原始顺序</span>';
     blsort=blsort+'<span class="aclick" onclick="sort_enwords_enbook_b(this);">排序</span>';
     blsort=blsort+'<span class="aclick" onclick="sort_enwords_enbook_b(this,\'tail\');">尾部排序</span>';
