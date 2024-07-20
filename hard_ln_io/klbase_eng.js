@@ -189,11 +189,12 @@ function words_queue_reinit_b(word_name_list,removed_enwords){
     }
 }
 
-function load_sentence_menu_b(jsstr){    
+function load_sentence_menu_b(jsstr,others_list=[]){    
     var group_list=[
     ['载入例句','load_enword_file_b(\'en_sentence_global\',\'enwords_sentence\');',true],
     ['bigfile','load_enword_file_b(\'en_sentence_global\',\'enwords_sentence\',false,true,true);',true],
     ];    
+    group_list=group_list.concat(others_list);
     return menu_container_b(jsstr,group_list,'');
 }
 

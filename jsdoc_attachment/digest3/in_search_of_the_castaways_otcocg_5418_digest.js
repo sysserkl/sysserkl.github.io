@@ -32,4 +32,5 @@ var digest_global=`
 *handcuff
 *ubiquity
 *proper noun
+*unbutton
 `.trim().split('\n');

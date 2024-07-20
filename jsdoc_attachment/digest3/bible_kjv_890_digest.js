@@ -421,4 +421,5 @@ var digest_global=`
 *Horeb
 *Ezra
 *environ
+*sodomite
 `.trim().split('\n');

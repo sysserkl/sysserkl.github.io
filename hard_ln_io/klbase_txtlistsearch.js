@@ -315,7 +315,8 @@ function txtmenus_kltxt_b(cstype=''){
     ['当前页面','frequent_new_enwords_kltxt_b(true);',true],
     ];    
     menu_general.push(menu_container_b(str_t,group_list,'常见英语生词：'));
-    menu_general.push(load_sentence_menu_b(str_t));
+    
+    menu_general.push(load_sentence_menu_b(str_t,[['最佳','best_sentences_kltxt_b(\'divhtml2\');',true]]));
     
     var group_list=[
     ['汉字生字','find_cn_words_kltxt_b();',true],
@@ -4044,4 +4045,47 @@ function menu_no_get_kltxt_b(){
         return array_split_by_col_b(kltxt_menulist_index_global,[0]);
     }
     return [];
+}
+
+function best_sentences_kltxt_b(csid){
+    var result_t=new Set();
+    var odiv=document.getElementById('divhtml');
+    var ospans=odiv.querySelectorAll('span.txt_content,span.span_inserted_menu');
+    var has_menu=odiv.querySelector('span.span_inserted_menu')!==null;
+    var words_in_book=new Set();
+    for (let one_span of ospans){
+        if (one_span.classList.contains('span_inserted_menu')){
+            words_in_book=new Set();
+        }
+        
+        var owords=one_span.querySelectorAll('span.span_key_highlight, span.span_rare_word_search_links, span.span_new_word_search_links');
+        var word_set=new Set();
+        for (let one_word of owords){
+            var blstr=one_word.innerText;
+            if (has_menu){
+                if (words_in_book.has(blstr)){continue;}
+                words_in_book.add(blstr);
+            }
+            word_set.add(blstr);
+        }
+        if (word_set.size==0){continue;}
+        var list_t=one_span.innerText.match(/\b[A-Z][a-zA-Z\s,]{80,}[\.\?\!]/g) || [];
+        if (list_t.length==0){continue;}
+        for (let one_sentence of list_t){
+            for (let one_word of word_set){
+                try {
+                    var blreg=new RegExp('\\b'+one_word+'\\b');
+                    if (one_sentence.match(blreg)){
+                        result_t.add(one_sentence.replace(blreg,'<span style="background-color:'+scheme_global['pink']+'; font-weight:bold;">'+one_word+'</span>'));
+                        break;
+                    }
+                } catch (error){break;}
+            }
+        }
+    }
+    
+    var buttons='<p>'+close_button_b(csid,'')+'</p>';
+    var ocontainer=document.getElementById(csid);
+    ocontainer.innerHTML='<div style="margin:2rem;">'+array_2_li_b(Array.from(result_t))+buttons+'</div>';
+    ocontainer.scrollIntoView();
 }

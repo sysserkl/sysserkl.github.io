@@ -45,4 +45,6 @@ var digest_global=`
 *bosomy
 *soundproof
 *extortionist
+*townsmen
+*Margot
 `.trim().split('\n');

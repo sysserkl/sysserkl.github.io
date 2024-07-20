@@ -59,10 +59,11 @@ function batch_search_form_kltxt_klwiki_en2(){
     bljg=bljg+'<span class="span_box" ondblclick="selective_default_value_kltxt_klwiki_en2();">过滤：</span><input type="text" id="input_selective_words_kltxt_klen2" /> ';
     bljg=bljg+'<span class="aclick" onclick="batch_search_result_kltxt_klwiki_en2();">单词批量查找</span> ';
     bljg=bljg+'<span class="aclick" onclick="words_not_in_article_kltxt_klwiki_en2();">正文中不存在的单词</span> ';
+    bljg=bljg+'<span class="aclick" onclick="best_sentences_kltxt_b(\'div_sub_batch_search_kltxt_klwiki_en2\');">提取最佳例句</span> ';
     bljg=bljg+textarea_buttons_b('textarea_batch_search_words_kltxt_klen2','复制,清空');
     bljg=bljg+close_button_b('divhtml2','')
     bljg=bljg+'</p>';
-    
+    bljg=bljg+'<div id="div_sub_batch_search_kltxt_klwiki_en2"></div>';
     var odiv=document.getElementById('divhtml2');
     odiv.innerHTML='<div style="margin:0.5rem;">'+bljg+'</div>';
     selective_default_value_kltxt_klwiki_en2();
@@ -94,7 +95,7 @@ function words_not_in_article_kltxt_klwiki_en2(){
 }
 
 function selective_default_value_kltxt_klwiki_en2(){
-    document.getElementById('input_selective_words_kltxt_klen2').value=['-^(\\d|\\*|\\[)','-[“”（）\(\)">]', '-https?:','-&gt;','-:$'].join(' '); //忽略数字或星号或方括号开头，忽略引号、括号和>，忽略链接，忽略:结尾 - 保留注释
+    document.getElementById('input_selective_words_kltxt_klen2').value=['-^(\\d|\\*|\\[)','-[“”（）">]', '-https?:','-&gt;','-:$'].join(' '); //忽略数字或星号或方括号开头，忽略引号、括号和>，忽略链接，忽略:结尾 - 保留注释
 }
 
 function batch_search_result_kltxt_klwiki_en2(){

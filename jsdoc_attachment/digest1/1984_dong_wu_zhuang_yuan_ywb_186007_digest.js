@@ -116,4 +116,5 @@ var digest_global=`
 *wristwatch
 *youthfulness
 *deafeningly
+*reinstate
 `.trim().split('\n');

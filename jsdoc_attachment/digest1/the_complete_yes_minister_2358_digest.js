@@ -16,4 +16,5 @@ var digest_global=`
 *bowlful
 *biochemist
 *modernise
+*appointee
 `.trim().split('\n');
