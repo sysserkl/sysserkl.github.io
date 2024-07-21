@@ -4048,6 +4048,7 @@ function menu_no_get_kltxt_b(){
 }
 
 function best_sentences_kltxt_b(csid){
+    en_word_temp_get_b();
     var result_t=new Set();
     var odiv=document.getElementById('divhtml');
     var ospans=odiv.querySelectorAll('span.txt_content,span.span_inserted_menu');
@@ -4069,14 +4070,15 @@ function best_sentences_kltxt_b(csid){
             word_set.add(blstr);
         }
         if (word_set.size==0){continue;}
-        var list_t=one_span.innerText.match(/\b[A-Z][a-zA-Z\s,]{80,}[\.\?\!]/g) || [];
+        var list_t=one_span.innerText.match(/\b[A-Z][a-zA-Z\s,\-'’]{80,}[\.\?\!]/g) || [];
         if (list_t.length==0){continue;}
         for (let one_sentence of list_t){
             for (let one_word of word_set){
                 try {
                     var blreg=new RegExp('\\b'+one_word+'\\b');
                     if (one_sentence.match(blreg)){
-                        result_t.add(one_sentence.replace(blreg,'<span style="background-color:'+scheme_global['pink']+'; font-weight:bold;">'+one_word+'</span>'));
+                        var new_str=en_one_word_b([one_word,'',''],[-1,0],'',true,false,true);
+                        result_t.add(one_sentence.replace(blreg,new_str));//'<span style="background-color:'+scheme_global['pink']+'; font-weight:bold;">'+one_word+'</span>'));
                         break;
                     }
                 } catch (error){break;}

@@ -1174,10 +1174,16 @@ function popup_def_b(ospan){
     var oparent=ospan.parentNode;
     if (!oparent){return;}
     var oword=oparent.querySelector('span.span_popup_word');
-    if (!oword){return;}
+    if (!oword){
+        console.log('未发现','span.span_popup_word');
+        return;
+    }
     
     var odiv=document.getElementById('div_enword_search_links');
-    if (!odiv){return;}
+    if (!odiv){
+        console.log('未发现 id','div_enword_search_links');
+        return;
+    }
     
     var blword=oword.innerText;
     var bldef='';

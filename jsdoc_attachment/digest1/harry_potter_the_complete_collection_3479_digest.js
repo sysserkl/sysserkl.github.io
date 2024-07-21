@@ -70,4 +70,5 @@ var digest_global=`
 *shelve
 *moonless
 *latecomer
+*vacuum cleaner
 `.trim().split('\n');

@@ -10,4 +10,5 @@ var digest_global=`
 *self-devotion
 *storybook
 *summertime
+*stable door
 `.trim().split('\n');

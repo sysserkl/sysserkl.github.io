@@ -13,4 +13,5 @@ var digest_global=`
 *corneal
 *antonym
 *uncharted
+*death grip
 `.trim().split('\n');

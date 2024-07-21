@@ -1903,10 +1903,15 @@ function highlight_text_b(cswordlist=[],query_str=''){
         blkey=blkey.concat(item.split(' '));
     }
     blkey=array_unique_b(blkey);
+    
     var blkey2=[];
     for (let item of blkey){
         if (item.trim()==''){continue;}
-        if (item.includes('\\') || item.includes('(') || item.includes(')')){continue;}
+        item=item.replace(/\\s/g,' ');
+        if (item.includes('\\') || item.includes('(') || item.includes(')')){
+            console.log('忽略',item);
+            continue;
+        }
         blkey2.push(item);
     }
     
@@ -1921,20 +1926,22 @@ function highlight_text_b(cswordlist=[],query_str=''){
         }
     }
     
-    if (blkey2.length>0){
+    var bllen=blkey2.length;
+    
+    if (bllen>0){
         if (query_str==''){
-            query_str='div#divhtml p span.txt_content,li span.txt_content'
+            query_str='div#divhtml p span.txt_content, li span.txt_content';
         }
         var ospans=document.querySelectorAll(query_str);
         for (let one_dom of ospans){
             var old_text=one_dom.innerText;
             var old_html=one_dom.innerHTML;
             var new_html=old_html;
-            for (let blxl=0,lent=blkey2.length;blxl<lent;blxl++){
+            for (let blxl=0;blxl<bllen;blxl++){
                 var one_key=blkey2[blxl];
                 if (old_text.includes(one_key)){
                     if (reg_error){
-                        new_html=new_html.replace(one_key,'<span class="span_key_highlight" style="font-weight:bold;background-color:'+highlight_color_b(blxl)+';">'+one_key+'</span>');                    
+                        new_html=new_html.replace(one_key,'<span class="span_key_highlight" style="font-weight:bold;background-color:'+highlight_color_b(blxl)+';">'+one_key+'</span>');
                     } else {
                         new_html=new_html.replace(new RegExp(one_key,'g'),'<span class="span_key_highlight" style="font-weight:bold;background-color:'+highlight_color_b(blxl)+';">'+one_key+'</span>');
                     }

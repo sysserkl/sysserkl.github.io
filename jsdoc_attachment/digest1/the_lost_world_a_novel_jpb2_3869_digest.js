@@ -25,4 +25,5 @@ var digest_global=`
 *tyrannosaurus
 *catastrophically
 *dauntingly
+*community college
 `.trim().split('\n');

@@ -54,4 +54,5 @@ var digest_global=`
 *Jordanian
 *cellphone
 *Bloomington
+*invisibility
 `.trim().split('\n');

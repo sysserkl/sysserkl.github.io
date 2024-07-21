@@ -87,4 +87,5 @@ var digest_global=`
 *Holy Office
 *loading dock
 *nonlethal
+*fellow traveler
 `.trim().split('\n');

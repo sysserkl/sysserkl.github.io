@@ -653,7 +653,7 @@ function search_bible(cskey='',csstartno=0,fav_start=1,csmax=500){
     mouseover_mouseout_oblong_span_b(document.querySelectorAll('div#divhtml span.oblong_box'));
 
     if (klmenu_check_b('span_highlight_keys',false)){
-        highlight_text_b(document.getElementById('input_bible_search').value,'div#divhtml p span.span_cn_content');
+        highlight_text_b(document.getElementById('input_bible_search').value,'div#divhtml p span.span_cn_content,div#divhtml p span.txt_content');
     }
     new_words_bible();
     console.log('search_bible 费时：'+(performance.now() - t0) + ' milliseconds');
