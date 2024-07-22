@@ -366,16 +366,20 @@ function all_new_words_count_set_enbook_b(iscurrent=true,csvalue=''){
     }
 }
 
-function new_old_words_html_enbook_b(csarray,csname,csaname='',onlytitle=false,oldset=new Set(),show_len=true){    
-    var bltitle='';
-    if (csaname!==''){
-        bltitle=bltitle+'<a name="'+csaname+'"></a>';
-    }
-    bltitle=bltitle+'<h3>'+csname;
+function new_old_words_html_enbook_b(csarray,csname='',csaname='',onlytitle=false,oldset=new Set(),show_len=true){    
+
+    var bltitle=csname;
     if (show_len){
         bltitle=bltitle+'<span style="font-size:0.8rem;">('+csarray.size+')</span>';
     }
-    bltitle=bltitle+'</h3>';
+
+    if (bltitle!==''){
+        bltitle='<h3>'+bltitle+'</h3>';
+    }
+
+    if (csaname!==''){
+        bltitle='<a name="'+csaname+'"></a>'+bltitle;
+    }
     
     if (onlytitle){
         return bltitle;
@@ -488,7 +492,10 @@ function frequency_enwords_book_b(cstype='',simple_split=false,common_max=4000){
                     common_word_sign_set_enwords_book_b(common_set);
                     break;
                 case 'klwiki_en_new':
-                    document.getElementById('divhtml').innerHTML='<h3>常见新单词<small>('+new_t.length+')</small></h3><p>'+enwords_array_to_links_b(new_t).join(' ')+'</p>';
+                    var oldset=simple_words_b();
+                    document.getElementById('divhtml').innerHTML=new_old_words_html_enbook_b(new Set(new_t),'常见新单词','',false,oldset,true);
+                    
+                    //document.getElementById('divhtml').innerHTML='<h3>常见新单词<small>('+new_t.length+')</small></h3><p>'+enwords_array_to_links_b(new_t).join(' ')+'</p>';   //此行保留 - 保留注释
                     break;
             }
             if (!['sentence_rare','klwiki_en_new'].includes(cstype)){

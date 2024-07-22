@@ -98,9 +98,6 @@ function sort_seen(desc=false){
                 }
             }
             break;
-        //case 'contain':
-        //case 'one2more':
-            //break;    
     }
     
     search_seen('',margin_id);
@@ -319,6 +316,7 @@ function menu_seen(){
     '<span class="span_menu" onclick="'+str_t+'frequency_enwords_book_b(\'sentence_rare\',true);">非稀有旧单词</span>',
     '<span class="span_menu" onclick="'+str_t+'list_popular_seen();">常见新单词</span>',    
     '<span class="span_menu" onclick="'+str_t+'title_words_seen();">常见标题单词</span>',    
+    '<span class="span_menu" onclick="'+str_t+'words_count_statistics_seen(1,true);">当前条件的单一新单词</span>',    
     ];
     
     var group_list=[
@@ -421,7 +419,7 @@ function search_seen(cskeys='',margin_id=-1){
         if (blfound==-1){break;}
         if (blfound==false){continue;}
         
-        var words=list_container_generation_seen(item[9]);//,oldset);
+        var words=list_container_generation_seen(item[9]);
         if (item[4]==margin_id){
             pageno=rows_per_page_seen_global*Math.floor((blxl+1)/rows_per_page_seen_global)+1;
         }
@@ -478,6 +476,41 @@ function locate_seen(pages){
     }        
 }
 
+function words_count_statistics_seen(csno=1,only_new=true){
+    var words_set=new Set();
+    for (let arow of selenium_enwords_current_global){
+        var list_t=arow[0].match(/<span class="a_word" .+?><b>(.+?)<\/b><\/span>/g) || [];
+        //list_t 的每一个元素如：<span class="a_word" onclick="popup_words_links_b(event,'aromatics',true,true); en_word_temp_change_b(this,'aromatics');"><b>aromatics</b></span> - 保留注释
+        for (let one_word of list_t){
+            words_set.add(one_word.match(/<span class="a_word" .+?><b>(.+?)<\/b><\/span>/)[1]);
+        }
+    }
+
+    var words_dict=selenium_enwords_count_enbook_b();
+    var result_t=new Set();
+    for (let one_word of words_set){
+        if ('w_'+one_word in words_dict){
+            var blcount=words_dict['w_'+one_word];
+            if (blcount==csno){
+                result_t.add(one_word);
+            }
+        }
+    }  
+    
+    var oldset=simple_words_b();
+    if (only_new){
+        result_t=array_difference_b(result_t,oldset,true,false);
+    }
+
+    document.getElementById('div_search_links').innerHTML=new_old_words_html_enbook_b(result_t,'','',false,oldset,false);
+    
+    //以下4行保留 - 保留注释
+    //result_t=Array.from(result_t);
+    //result_t.sort();
+    //var bljg=enwords_array_to_links_b(result_t,oldset,'count_one_seen');
+    //document.getElementById('div_search_links').innerHTML=list_container_generation_seen(bljg);
+}
+
 function count_one_seen(odom,words_dict=false){
     var oword=odom.parentNode.querySelector('span.a_word');
     if (!oword){return;}
@@ -496,12 +529,13 @@ function count_one_seen(odom,words_dict=false){
     odom.innerText=blold+'('+(blcount==1?'𝟭':blcount)+'). '
 }
 
-function list_container_generation_seen(words){//,oldset){
+function list_container_generation_seen(words){
+    //words 每个元素形如：<span class="span_word_combination_enword"><small class="small_enword_no_b" style="cursor:pointer;" onclick="count_one_seen(this);">3. </small><span class="a_word" onclick="popup_words_links_b(event,'cerevisiae',true,true); en_word_temp_change_b(this,'cerevisiae');"><b>cerevisiae</b></span> </span> - 保留注释
     var blstr='<div class="div_word_list_seen" style="border:0.1rem dotted '+scheme_global['shadow']+';border-radius:1rem;padding:0.5rem;">';
     var blstyle=(words.length<=1?' style="display:none;"':'');
 
     blstr=blstr+'<span class="span_box span_batch_count_enwords_book" onclick="count_batch_seen(this);"'+blstyle+'>👆</span> ';    
-    blstr=blstr+words.join(' ');     //enwords_array_to_links_b(words,oldset,'count_one_seen')
+    blstr=blstr+words.join(' ');
     blstr=blstr+'</div>';
     return blstr;
 }

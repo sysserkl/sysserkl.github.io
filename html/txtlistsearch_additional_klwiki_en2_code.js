@@ -5,32 +5,65 @@ function menu_more_kltxt_klwiki_en2(){
     var str_t=klmenu_hide_b('');
     var klmenu1=[    
     '<span class="span_menu" onclick="'+str_t+'days_kltxt_klwiki_en2();">今日段落阅读</span>',
-    '<span class="span_menu" onclick="'+str_t+'rare_words_kltxt_klwiki_en2();">稀有单词行</span>',
-    '<span class="span_menu" onclick="'+str_t+'new_words_count_kltxt_klwiki_en2();">常见生词统计</span>',
     '<span class="span_menu" onclick="'+str_t+'batch_search_form_kltxt_klwiki_en2();">单词批量查找</span>',
     '<a href="enwords_book.htm" onclick="'+str_t+'" target=_blank>生词统计</a>',    
     '<a href="ensentence.htm" onclick="'+str_t+'" target=_blank>ensentence</a>',
     '<a href="../jsdata/words/enwords_sentence_data.js'+file_date_parameter_b()+'" onclick="'+str_t+'" target=_blank>enwords_sentence_data.js</a>',    
     
     ];
+
+    var group_list=[
+    ['全部','new_words_count_kltxt_klwiki_en2();',true],
+    ['当前','new_words_count_kltxt_klwiki_en2(true);',true],    
+    ];    
+    klmenu1.push(menu_container_b(str_t,group_list,'常见生词统计：'));
+    
+    var group_list=[
+    ['稀有单词行','rare_words_kltxt_klwiki_en2();',true],
+    ['无新单词行','new_words_kltxt_klwiki_en2(0);',true],    
+    ['仅有1个新单词行','new_words_kltxt_klwiki_en2(1);',true],
+    ];    
+    klmenu1.push(menu_container_b(str_t,group_list,''));
     
     if (is_local_b()){
         klmenu1.push('<a href="selenium_enwords.htm" onclick="'+str_t+'" target=_blank>selenium enwords</a>');
     }
     
-    var blstr=klmenu_b(klmenu1,'🇬🇧','17rem','1rem','1rem','30rem');
+    var blstr=klmenu_b(klmenu1,'🇬🇧','22rem','1rem','1rem','30rem');
     ospan.outerHTML=blstr;
+}
+
+function new_words_kltxt_klwiki_en2(cscount){
+    switch (cscount){
+        case 0:
+            txtsearch_kltxt_b('\\([^\\(\\)\\+]+\\)$(:r)');
+            break;
+        case 1:
+            txtsearch_kltxt_b('\\(\\+[^\\(\\)\\+]+\\)$(:r)');
+            break;
+    }
 }
 
 function rare_words_kltxt_klwiki_en2(){
     txtsearch_kltxt_b('\\(-[^\\(\\)]+\\)$ \\s-[^\\(\\)]+\\)$(:r)'); //-可能出现在(后或空格后 - 保留注释
 }
 
-function new_words_count_kltxt_klwiki_en2(){
+function new_words_count_kltxt_klwiki_en2(is_current=false){
     var t0 = performance.now();
     en_word_temp_get_b();
     var result_t={};
-    for (let arow of filelist){
+    
+    if (is_current){
+        var blarr=[];
+        var ospans=document.querySelectorAll('#divhtml span.txt_content');
+        for (let one_span of ospans){
+            blarr.push(one_span.innerText);
+        }
+    } else {
+        var blarr=filelist;
+    }
+    
+    for (let arow of blarr){
         var list_t=arow.match(/\(([^\(\)]+?)\)$/) || ['',''];
         if (list_t[1]==''){continue;}
         //结果如：[ "(+amp +lying)", "+amp +lying" ] - 保留注释
