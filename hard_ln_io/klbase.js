@@ -1758,6 +1758,12 @@ function postpath_b(){
     return local_storage_get_b('kl_remote_host',-1,false)+'/klwebphp/';
 }
 
+function textarea_top_bottom_b(textareaId, csposition=0){
+    var otextarea = document.getElementById(textareaId);
+    var pos = csposition == 0 ? 0 : otextarea.value.length;
+    otextarea.setSelectionRange(pos, pos);
+}
+
 function textarea_buttons_b(textarea_id,csbuttons,cstype='',csstyle='',span_class='aclick'){
     //csstyle: ' style="font-size:1rem;"' - 保留注释
     var isfile=is_file_type_b();
@@ -1773,6 +1779,14 @@ function textarea_buttons_b(textarea_id,csbuttons,cstype='',csstyle='',span_clas
     }
     if (csbuttons.includes('复制') || csbuttons.includes('copy')){
         bljg=bljg+'<span class="'+span_class+'"'+csstyle+' onclick="document.getElementById(\''+textarea_id+'\').select();document.execCommand(\'copy\');">Copy</span> ';
+    }
+    
+    if (csbuttons.includes('↑')){
+        bljg=bljg+'<span class="'+span_class+'"'+csstyle+' onclick="textarea_top_bottom_b(\''+textarea_id+'\',0);">⤴ </span> ';        
+    }
+
+    if (csbuttons.includes('↓')){
+        bljg=bljg+'<span class="'+span_class+'"'+csstyle+' onclick="textarea_top_bottom_b(\''+textarea_id+'\',1);">⤵ </span> ';        
     }
     
     var fext=csbuttons.match(/save as (.*?) file/);

@@ -111,7 +111,10 @@ function run_txtsearch_zjedu(csstr=false){
     setTimeout(txtsearch_zjedu,1);
 }
 
-function num_change_zjedu(csvalue){
+function num_change_zjedu(csvalue=false){
+    if (csvalue===false){
+        csvalue=document.getElementById('input_max_num_zjc').value.trim();
+    }
     csvalue=parseInt(csvalue);
     if (isNaN(csvalue)){return;}
     if (csvalue>0){
@@ -160,13 +163,14 @@ function median_zjedu(blplan, median_line_list){
 }
 
 function recent_search_zjedu(csstr=''){
-    recent_search_b('recent_search_zjedu',csstr,'run_txtsearch_zjedu','div_recent_search',['浙江大学','(一流大学建设高校)','(一流学科建设高校)','北京大学|清华大学(:r)']);
+    recent_search_b('recent_search_zjedu',csstr,'run_txtsearch_zjedu','div_recent_search',['浙江大学','(一流大学建设高校)','(一流学科建设高校)','北京大学|清华大学(:r)',',.+?,.*法学(:r)']);
 }
 
 function txtsearch_zjedu(csword=false){
 	if (csword===false){
         csword= document.getElementById('input_search').value.trim();
     }
+    num_change_zjedu();
     
     var csreg=klmenu_check_b('span_reg_zjedu',false);
     
@@ -266,127 +270,147 @@ function txtsearch_zjedu(csword=false){
 	setTimeout(school_zjedu,10);
 }
 
-function shcool_arr_zjedu(){
-    school_speciality_sum_arr_global=[];
-    speciality_popular_arr_global=[];
-    school_sum_average_arr_global=[];
-    school_median_rank_arr_global=[];
-    school_last_number_arr_global=[];
-    school_plan_arr_global=[];
-    speciality_all_sum_arr_global=[];
-    line_count_arr_global=[];
+function school_arr_zjedu(csarr,selected_key=[]){
+    var data_dict={
+    'school_speciality_sum':[],
+    'speciality_popular':[],
+    'school_sum_average':{},
+    'school_median_rank':{},
+    'school_last_number':{},
+    'school_plan':{},
+    'speciality_all_sum':{},
+    'line_count':{},
+    };
 
-	for (let item of school_zjc_global){
-		if (!school_speciality_sum_arr_global.includes(item[0])){
-			school_speciality_sum_arr_global.push(item[0]);
-		}
+    var selected_len=selected_key.length;
+    
+	for (let item of csarr){
+        if (selected_len==0 || selected_key.includes('school_speciality_sum')){
+            if (!data_dict['school_speciality_sum'].includes(item[0])){
+                data_dict['school_speciality_sum'].push(item[0]);
+            }
+        }
+        //---
+        if (selected_len==0 || selected_key.includes('speciality_popular')){
+            if (!data_dict['speciality_popular'].includes(item[1])){
+                data_dict['speciality_popular'].push(item[1]);
+            }
+        }
+        //---
+        var key='k_'+item[0];
+        
+        if (selected_len==0 || selected_key.includes('school_sum_average')){
+            if (data_dict['school_sum_average'][key]==undefined){
+                data_dict['school_sum_average'][key]=[item[0],0,0,0];
+            }
+            //计划数求和 - 保留注释
+            data_dict['school_sum_average'][key][1]=data_dict['school_sum_average'][key][1]+item[2];
+            //分数线*计划数，再求和 - 保留注释
+            data_dict['school_sum_average'][key][2]=data_dict['school_sum_average'][key][2]+item[2]*item[3];
+        }
         
         //---
-		if (speciality_popular_arr_global.indexOf(item[1])<0){
-			speciality_popular_arr_global.push(item[1]);
-		}
-        
+        if (selected_len==0 || selected_key.includes('school_median_rank')){
+            if (data_dict['school_median_rank'][key]==undefined){
+                data_dict['school_median_rank'][key]=[item[0],[]];
+            }
+            //计划数 分数线 列表 - 保留注释
+            data_dict['school_median_rank'][key][1].push([item[2],item[3]]);       
+        }
         //---
-		if (school_sum_average_arr_global[item[0]]==undefined){
-            school_sum_average_arr_global[item[0]]=[item[0],0,0,0];
+        if (selected_len==0 || selected_key.includes('school_last_number')){
+            if (data_dict['school_last_number'][key]==undefined){
+                data_dict['school_last_number'][key]=[item[0],0];
+            }
+            data_dict['school_last_number'][key][1]=Math.max(data_dict['school_last_number'][key][1],item[4]);
         }
-        //计划数求和 - 保留注释
-		school_sum_average_arr_global[item[0]][1]=school_sum_average_arr_global[item[0]][1]+item[2];
-        //分数线*计划数，再求和 - 保留注释
-		school_sum_average_arr_global[item[0]][2]=school_sum_average_arr_global[item[0]][2]+item[2]*item[3];
-        
         //---
-		if (school_median_rank_arr_global[item[0]]==undefined){
-            school_median_rank_arr_global[item[0]]=[item[0],[]];
+        if (selected_len==0 || selected_key.includes('school_plan')){
+            if (data_dict['school_plan'][key]==undefined){
+                //学校，完成计划专业数，未完成计划专业数 - 保留注释
+                data_dict['school_plan'][key]=[item[0],0,0];
+            }
+            if (item[4]==0){
+                data_dict['school_plan'][key][1]=data_dict['school_plan'][key][1]+1;
+            } else {
+                data_dict['school_plan'][key][2]=data_dict['school_plan'][key][2]+1;
+            }    
         }
-        //计划数 分数线 列表 - 保留注释
-		school_median_rank_arr_global[item[0]][1].push([item[2],item[3]]);       
-
+        //-----      
+        var key='k_'+item[1];  
+        if (selected_len==0 || selected_key.includes('speciality_all_sum')){
+            if (data_dict['speciality_all_sum'][key]==undefined){
+                data_dict['speciality_all_sum'][key]=[item[1],0,0,0] ;
+            }
+            data_dict['speciality_all_sum'][key][1]=data_dict['speciality_all_sum'][key][1]+item[2];
+            data_dict['speciality_all_sum'][key][2]=data_dict['speciality_all_sum'][key][2]+item[2]*item[3];
+        }
         //---
-        if (school_last_number_arr_global[item[0]]==undefined){
-            school_last_number_arr_global[item[0]]=[item[0],0];
+        var key='k_'+item[3];  
+        if (selected_len==0 || selected_key.includes('line_count')){
+            if (data_dict['line_count'][key]==undefined){
+                data_dict['line_count'][key]=[item[3],0] ;
+            }
+            data_dict['line_count'][key][1]=data_dict['line_count'][key][1]+item[2];
         }
-        school_last_number_arr_global[item[0]][1]=Math.max(school_last_number_arr_global[item[0]][1],item[4]);
-        
-        //---
-        if (school_plan_arr_global[item[0]]==undefined){
-            //学校，完成计划专业数，未完成计划专业数 - 保留注释
-            school_plan_arr_global[item[0]]=[item[0],0,0];
-        }
-        if (item[4]==0){
-            school_plan_arr_global[item[0]][1]=school_plan_arr_global[item[0]][1]+1;
-        } else {
-            school_plan_arr_global[item[0]][2]=school_plan_arr_global[item[0]][2]+1;
-        }    
-
-        //-----        
-		if (speciality_all_sum_arr_global[item[1]]==undefined){
-            speciality_all_sum_arr_global[item[1]]=[item[1],0,0,0] ;
-        }
-		speciality_all_sum_arr_global[item[1]][1]=speciality_all_sum_arr_global[item[1]][1]+item[2];
-		speciality_all_sum_arr_global[item[1]][2]=speciality_all_sum_arr_global[item[1]][2]+item[2]*item[3];
-
-        //---
-		if (line_count_arr_global['f'+item[3]]==undefined){
-            line_count_arr_global['f'+item[3]]=[item[3],0] ;
-        }
-		line_count_arr_global['f'+item[3]][1]=line_count_arr_global['f'+item[3]][1]+item[2];
 	}
     
-    for (let blxl in school_sum_average_arr_global){
-        school_sum_average_arr_global[blxl][3]=school_sum_average_arr_global[blxl][2]/school_sum_average_arr_global[blxl][1];
+    for (let key in data_dict['school_sum_average']){
+        data_dict['school_sum_average'][key][3]=data_dict['school_sum_average'][key][2]/data_dict['school_sum_average'][key][1];
     }
     
-    for (let blxl in speciality_all_sum_arr_global){
-        speciality_all_sum_arr_global[blxl][3]=speciality_all_sum_arr_global[blxl][2]/speciality_all_sum_arr_global[blxl][1];
-    }    
+    for (let key in data_dict['speciality_all_sum']){
+        data_dict['speciality_all_sum'][key][3]=data_dict['speciality_all_sum'][key][2]/data_dict['speciality_all_sum'][key][1];
+    }
+    
+    return data_dict;
 }
 
 function school_zjedu(){
-    shcool_arr_zjedu();
+    var data_dict=school_arr_zjedu(school_zjc_global);
     
     //专业最多的学校
-    school_speciality_sum_zjedu();
+    school_speciality_sum_zjedu(data_dict['school_speciality_sum']);
     //专业最少的学校
-    school_speciality_sum_zjedu(true);
+    school_speciality_sum_zjedu(data_dict['school_speciality_sum'],true);
     
     //流行专业
-    speciality_popular_zjedu();
+    speciality_popular_zjedu(data_dict['speciality_popular']);
     //罕见专业
-    speciality_popular_zjedu(true);
+    speciality_popular_zjedu(data_dict['speciality_popular'],true);
     
 	//学校
-    school_sum_average_zjedu();
-    school_sum_average_zjedu(true);
+    school_sum_average_zjedu(data_dict['school_sum_average']);
+    school_sum_average_zjedu(data_dict['school_sum_average'],true);
     
     //中位数分数线排名
-    school_median_rank_zjedu();
-    school_median_rank_zjedu(true);
+    school_median_rank_zjedu(data_dict['school_median_rank']);
+    school_median_rank_zjedu(data_dict['school_median_rank'],true);
     
 	//学校录取最低名次排名
-    school_last_number_zjedu();
+    school_last_number_zjedu(data_dict['school_last_number']);
 	//学校录取最低名次排名，倒数
-    school_last_number_zjedu(true);    
+    school_last_number_zjedu(data_dict['school_last_number'],true);    
     
     //未完成招生计划的学校(比例)
-    school_plan_zjedu();
+    school_plan_zjedu(data_dict['school_plan']);
     //未完成招生计划的学校(专业数量)
-    school_plan_zjedu(true);
+    school_plan_zjedu(data_dict['school_plan'],true);
     
 	//专业
-    speciality_all_sum_zjedu();
-    speciality_all_sum_zjedu(true);
+    speciality_all_sum_zjedu(data_dict['speciality_all_sum']);
+    speciality_all_sum_zjedu(data_dict['speciality_all_sum'],true);
     
 	//分数线人数
-    line_count_zjedu();
+    line_count_zjedu(data_dict['line_count']);
     
     //---
     mouseover_mouseout_oblong_span_b(document.querySelectorAll('td#td_right span.oblong_box'));
 }
 
-function school_speciality_sum_zjedu(csreverse=false){
+function school_speciality_sum_zjedu(data_school_speciality_sum,csreverse=false){
 	var s_num_t=[];
-	for (let one_school of school_speciality_sum_arr_global){
+	for (let one_school of data_school_speciality_sum){
 		var blcount=0;
 		for (let item of school_zjc_global){
 			if (item[0]==one_school){
@@ -407,14 +431,14 @@ function school_speciality_sum_zjedu(csreverse=false){
 	}
     
     var bltitle='当专业分类最'+(csreverse?'少':'多')+'的'+Math.min(num_zjc_global,s_num_t.length)+'个学校';
-	document.getElementById('divschool'+(csreverse?'_reverse':'')).innerHTML='<h4>当前页面学校数：'+school_speciality_sum_arr_global.length+'</h4>'+th_zjedu('divschool'+(csreverse?'_reverse':''),['学校','专业数'],bljg,bltitle);
+	document.getElementById('divschool'+(csreverse?'_reverse':'')).innerHTML='<h4>当前页面学校数：'+data_school_speciality_sum.length+'</h4>'+th_zjedu('divschool'+(csreverse?'_reverse':''),['学校','专业数'],bljg,bltitle);
 
     document.getElementById('ol_anames').insertAdjacentHTML('beforeend','<li><a href="#'+'divschool'+(csreverse?'_reverse':'')+'">专业分类最'+(csreverse?'少':'多')+'的'+Math.min(num_zjc_global,s_num_t.length)+'个学校</a></li>');
 }
 
-function speciality_popular_zjedu(csreverse=false){
+function speciality_popular_zjedu(data_speciality_popular,csreverse=false){
 	var s_num_t=[];
-	for (let one_speciality of speciality_popular_arr_global){
+	for (let one_speciality of data_speciality_popular){
 		var blcount=0;
 		for (let item of school_zjc_global){
 			if (item[1]==one_speciality){
@@ -436,29 +460,34 @@ function speciality_popular_zjedu(csreverse=false){
 	}
     
     var bltitle='出现次数最'+(csreverse?'少':'多')+'的'+Math.min(num_zjc_global,s_num_t.length)+'个专业';
-	document.getElementById('divmajor'+(csreverse?'_reverse':'')).innerHTML='<h4>当前页面专业数：'+speciality_popular_arr_global.length+'</h4>'+th_zjedu('divmajor'+(csreverse?'_reverse':''),['专业','个数'],bljg,bltitle);
+	document.getElementById('divmajor'+(csreverse?'_reverse':'')).innerHTML='<h4>当前页面专业数：'+data_speciality_popular.length+'</h4>'+th_zjedu('divmajor'+(csreverse?'_reverse':''),['专业','个数'],bljg,bltitle);
 
     document.getElementById('ol_anames').insertAdjacentHTML('beforeend','<li><a href="#'+'divmajor'+(csreverse?'_reverse':'')+'">出现次数最'+(csreverse?'少':'多')+'的'+Math.min(num_zjc_global,s_num_t.length)+'个专业</a></li>');
 }
 
-function school_sum_average_zjedu(csreverse=false){
-	var arr2_t=object2array_b(school_sum_average_arr_global);
+function school_sum_average_zjedu(data_school_sum_average,csreverse=false,show_html=true,show_csv=true,add_table=true,title_prefix=''){
+	var arr2_t=object2array_b(data_school_sum_average);
     if (csreverse){
         arr2_t.sort(function(a,b){return a[1]>b[1] ? 1 : -1;});
     } else {
 	    arr2_t.sort(function(a,b){return b[1]>a[1] ? 1 : -1;});
     }
     
-	var bljg='';
+	var bljg1='';
+    var value1_list=[];
 	for (let blxl=0,lent=Math.min(num_zjc_global,arr2_t.length);blxl<lent;blxl++){
-		bljg=bljg+'<tr><td>'+arr2_t[blxl][0]+'</td><td nowrap align=right>'+arr2_t[blxl][1]+'</td></tr>';
+        value1_list.push([arr2_t[blxl][0],arr2_t[blxl][1]]);
+		bljg1=bljg1+'<tr><td>'+arr2_t[blxl][0]+'</td><td nowrap align=right>'+arr2_t[blxl][1]+'</td></tr>';
 	}
     
-    var bltitle='计划招收人数最'+(csreverse?'少':'多')+'的'+Math.min(num_zjc_global,arr2_t.length)+'个学校';
-	document.getElementById('divnum'+(csreverse?'_reverse':'')).innerHTML=th_zjedu('divnum'+(csreverse?'_reverse':''),['学校','计划数'],bljg,bltitle);
+    var bltitle=title_prefix+'计划招收人数最'+(csreverse?'少':'多')+'的'+Math.min(num_zjc_global,arr2_t.length)+'个学校';
+    
+    bljg1=th_zjedu('divnum'+(csreverse?'_reverse':''),['学校','计划数'],bljg1,bltitle,show_csv,add_table);
+    if (show_html){
+        document.getElementById('divnum'+(csreverse?'_reverse':'')).innerHTML=bljg1;
 
-    document.getElementById('ol_anames').insertAdjacentHTML('beforeend','<li><a href="#'+'divnum'+(csreverse?'_reverse':'')+'">计划招收人数最'+(csreverse?'少':'多')+'的'+Math.min(num_zjc_global,arr2_t.length)+'个学校</a></li>');
-
+        document.getElementById('ol_anames').insertAdjacentHTML('beforeend','<li><a href="#'+'divnum'+(csreverse?'_reverse':'')+'">计划招收人数最'+(csreverse?'少':'多')+'的'+Math.min(num_zjc_global,arr2_t.length)+'个学校</a></li>');
+    }
 	//-----------------------
     //总的分数/计划数 - 保留注释
     if (csreverse){
@@ -466,22 +495,31 @@ function school_sum_average_zjedu(csreverse=false){
     } else {
 	    arr2_t.sort(function(a,b){return b[3]>a[3] ? 1 : -1;});
     }
-	var bljg='';
+    
+	var bljg2='';
+    var value2_list=[];
 	for (let blxl=0,lent=Math.min(num_zjc_global,arr2_t.length);blxl<lent;blxl++){
-		bljg=bljg+'<tr><td>'+arr2_t[blxl][0]+'</td><td nowrap align=right>'+arr2_t[blxl][3].toFixed(2)+'</td><td nowrap align=right>'+mark_2_rank_zjedu(arr2_t[blxl][3])[2]+'</td></tr>';
+        var blrank=mark_2_rank_zjedu(arr2_t[blxl][3])[2];
+        value2_list.push([arr2_t[blxl][0],arr2_t[blxl][3],blrank]);
+		bljg2=bljg2+'<tr><td>'+arr2_t[blxl][0]+'</td><td nowrap align=right>'+arr2_t[blxl][3].toFixed(2)+'</td><td nowrap align=right>'+blrank+'</td></tr>';
 	}
     
-    var bltitle='平均分数线最'+(csreverse?'低':'高')+'的'+Math.min(num_zjc_global,arr2_t.length)+'个学校';
-	document.getElementById('divaverage'+(csreverse?'_reverse':'')).innerHTML=th_zjedu('divaverage'+(csreverse?'_reverse':''),['学校','平均分数线','对应位次'],bljg,bltitle);
+    var bltitle=title_prefix+'平均分数线最'+(csreverse?'低':'高')+'的'+Math.min(num_zjc_global,arr2_t.length)+'个学校';
     
-    document.getElementById('ol_anames').insertAdjacentHTML('beforeend','<li><a href="#'+'divaverage'+(csreverse?'_reverse':'')+'">平均分数线最'+(csreverse?'低':'高')+'的'+Math.min(num_zjc_global,arr2_t.length)+'个学校</a></li>');
+    bljg2=th_zjedu('divaverage'+(csreverse?'_reverse':''),['学校','平均分数线','对应位次'],bljg2,bltitle,show_csv,add_table);
+    if (show_html){
+	    document.getElementById('divaverage'+(csreverse?'_reverse':'')).innerHTML=bljg2;
+    
+        document.getElementById('ol_anames').insertAdjacentHTML('beforeend','<li><a href="#'+'divaverage'+(csreverse?'_reverse':'')+'">平均分数线最'+(csreverse?'低':'高')+'的'+Math.min(num_zjc_global,arr2_t.length)+'个学校</a></li>');
+    }
+    return [bljg1,value1_list,bljg2,value2_list];
 }
 
-function school_median_rank_zjedu(csreverse=false){
+function school_median_rank_zjedu(data_school_median_rank,csreverse=false){
     var arr2_t=[];
     //不能使用of - 保留注释
-    for (let blxl in school_median_rank_arr_global){
-        var speciality_list=school_median_rank_arr_global[blxl];
+    for (let key in data_school_median_rank){
+        var speciality_list=data_school_median_rank[key];
 		var blplan=0;
         for (let arow of speciality_list[1]){
             blplan=blplan+arow[0];
@@ -489,6 +527,7 @@ function school_median_rank_zjedu(csreverse=false){
         var blmedian=median_zjedu(blplan,speciality_list[1]);
         arr2_t.push([speciality_list[0],blmedian]);
     }
+    
     if (csreverse){
         arr2_t.sort(function (a,b){return a[1]>b[1] ? 1 : -1;});
     } else {
@@ -505,10 +544,10 @@ function school_median_rank_zjedu(csreverse=false){
     document.getElementById('ol_anames').insertAdjacentHTML('beforeend','<li><a href="#'+'divmedian'+(csreverse?'_reverse':'')+'">中位数分数线最'+(csreverse?'低':'高')+'的'+Math.min(num_zjc_global,arr2_t.length)+'个学校</a></li>');
 }
 
-function school_plan_zjedu(sort_by_count=false){
+function school_plan_zjedu(data_school_plan,sort_by_count=false){
 	var arr2_t=[];
-	for (let blxl in school_plan_arr_global){
-        var item=school_plan_arr_global[blxl];
+	for (let key in data_school_plan){
+        var item=data_school_plan[key];
         arr2_t.push([item[0],item[1],item[2],item[1]*100/(item[1]+item[2])]);
 	}
     if (sort_by_count){
@@ -528,11 +567,11 @@ function school_plan_zjedu(sort_by_count=false){
     document.getElementById('ol_anames').insertAdjacentHTML('beforeend','<li><a href="#divplan'+(sort_by_count?'_reverse':'')+'">未完成招生计划的前'+Math.min(num_zjc_global,arr2_t.length)+'个学校'+(sort_by_count?'(数量)':'(比例)')+'</a></li>');
 }
 
-function school_last_number_zjedu(csreverse=false){
+function school_last_number_zjedu(data_school_last_number,csreverse=false){
 	var arr2_t=[];
-	for (let blxl in school_last_number_arr_global){
-        if (school_last_number_arr_global[blxl][1]>0){
-		    arr2_t.push(school_last_number_arr_global[blxl]);
+	for (let key in data_school_last_number){
+        if (data_school_last_number[key][1]>0){
+		    arr2_t.push(data_school_last_number[key]);
         }
 	}
     if (csreverse){
@@ -552,8 +591,8 @@ function school_last_number_zjedu(csreverse=false){
     document.getElementById('ol_anames').insertAdjacentHTML('beforeend','<li><a href="#'+'divposition'+(csreverse?'_reverse':'')+'">录取位次排名，'+(csreverse?'后':'前')+Math.min(num_zjc_global,arr2_t.length)+'个学校</a></li>');
 }
 
-function speciality_all_sum_zjedu(csreverse=false){
-	var arr2_t=object2array_b(speciality_all_sum_arr_global);
+function speciality_all_sum_zjedu(data_speciality_all_sum,csreverse=false,show_csv=true){
+	var arr2_t=object2array_b(data_speciality_all_sum);
     arr2_t.sort(function(a,b){return zh_sort_b(a,b,false,0);});
     if (csreverse){
         arr2_t.sort(function(a,b){return a[1]>b[1] ? 1 : -1;});
@@ -567,7 +606,7 @@ function speciality_all_sum_zjedu(csreverse=false){
 	}
     
     var bltitle='计划招收人数最'+(csreverse?'少':'多')+'的'+Math.min(num_zjc_global,arr2_t.length)+'个专业';
-	document.getElementById('divnum2'+(csreverse?'_reverse':'')).innerHTML=th_zjedu('divnum2'+(csreverse?'_reverse':''),['专业','计划数'],bljg,bltitle);
+	document.getElementById('divnum2'+(csreverse?'_reverse':'')).innerHTML=th_zjedu('divnum2'+(csreverse?'_reverse':''),['专业','计划数'],bljg,bltitle,show_csv);
 
     document.getElementById('ol_anames').insertAdjacentHTML('beforeend','<li><a href="#'+'divnum2'+(csreverse?'_reverse':'')+'">计划招收人数最'+(csreverse?'少':'多')+'的'+Math.min(num_zjc_global,arr2_t.length)+'个专业</a></li>');
 
@@ -583,13 +622,13 @@ function speciality_all_sum_zjedu(csreverse=false){
 	}
     
     var bltitle='平均分数线最'+(csreverse?'低':'高')+'的'+Math.min(num_zjc_global,arr2_t.length)+'个专业';
-	document.getElementById('divaverage2'+(csreverse?'_reverse':'')).innerHTML=th_zjedu('divaverage2'+(csreverse?'_reverse':''),['专业','平均分数线'],bljg,bltitle);
+	document.getElementById('divaverage2'+(csreverse?'_reverse':'')).innerHTML=th_zjedu('divaverage2'+(csreverse?'_reverse':''),['专业','平均分数线'],bljg,bltitle,show_csv);
     
     document.getElementById('ol_anames').insertAdjacentHTML('beforeend','<li><a href="#'+'divaverage2'+(csreverse?'_reverse':'')+'">平均分数线最'+(csreverse?'低':'高')+'的'+Math.min(num_zjc_global,arr2_t.length)+'个专业</a></li>');    
 }
 
-function line_count_zjedu(){
-    var arr2_t=object2array_b(line_count_arr_global);
+function line_count_zjedu(data_line_count){
+    var arr2_t=object2array_b(data_line_count);
     arr2_t.sort(function(a,b){return b[0]>a[0] ? 1 : -1;});
 	var bljg='';
 	var blscore_t=0;
@@ -624,7 +663,14 @@ function line_count_zjedu(){
     }
 
     canvas_size_set_zjedu();
-    flot_lines_b([['分数线和招收人数'].concat(object2array_b(arr3_t))],'div_line_count_flot','ne',false,'','m',y1unit='人');
+    arr3_t=object2array_b(arr3_t);
+    //arr3_t 每个元素形如：[ 664, 254 ] - 保留注释
+    var result_t=[];
+    for (let arow of arr3_t){
+        result_t.push('['+arow[0]+','+arow[1]+'],');
+    }
+    document.getElementById('div_status').innerHTML='<textarea>"'+zj_current_year_global+'",'+result_t.join('')+'</textarea>';
+    flot_lines_b([['分数线和招收人数'].concat(arr3_t)],'div_line_count_flot','ne',false,'','m',y1unit='人');
 }
 
 function population_sum_arr_get_zjedu(csarr){
@@ -1044,11 +1090,19 @@ function exam_range_check_zjedu(){
     mouseover_mouseout_oblong_span_b(odiv.querySelectorAll('span.oblong_box'));    
 }
 
-function th_zjedu(divid,cslist,cstr_string,cstitle=''){
+function th_zjedu(divid,cslist,cstr_string,cstitle='',show_csv=true,add_table=true){
     if (cstitle!==''){
-        cstitle='<tr><th colspan='+cslist.length+'>'+cstitle+'</th></tr>';
+        cstitle='<tr class="tr_title_zjedu"><th colspan='+cslist.length+'>'+cstitle+'</th></tr>';
     }
-    return '<table class="table_common">'+cstitle+'<tr><th nowrap>'+cslist.join('</th><th nowrap>')+'</th></tr>'+cstr_string+'</table>\n<p style="margin-top:0.5rem;font-size:0.8rem;"><span class="oblong_box" onclick="table_2_csv_b(\'div#'+divid+' table\');">CSV</span></p>\n';
+    var bljg=cstitle+'<tr><th nowrap>'+cslist.join('</th><th nowrap>')+'</th></tr>'+cstr_string;
+    
+    if (add_table){
+        bljg='<table class="table_common">'+bljg+'</table>\n';
+    }
+    if (show_csv){
+        bljg=bljg+'<p style="margin-top:0.5rem;font-size:0.8rem;"><span class="oblong_box" onclick="table_2_csv_b(\'div#'+divid+' table\');">CSV</span></p>\n';
+    }
+    return bljg;
 }
 
 function sortdata_zjedu(cstype){
@@ -1263,7 +1317,14 @@ function menu_zjedu(){
     var klmenu_statistics=[
     '<span class="span_menu" onclick="'+str_t+'search_type_zjedu(\'50000\');">最低录取位次前50000名的专业</span>',    
     '<span class="span_menu" onclick="'+str_t+'search_type_zjedu(\'700\');">700分</span>',    
+    '<span class="span_menu" onclick="'+str_t+'speciality_status_zjedu();">在全部数据中统计当前专业名称平均分数线分布</span>',        
     ];    
+    
+    var group_list=[
+    ['学校','current_names_zjedu(0);',true],
+    ['专业','current_names_zjedu(1);',true],
+    ];    
+    klmenu_statistics.push(menu_container_b(str_t,group_list,'当前名称集：'));    
 
     var klmenu_config=root_font_size_menu_b(str_t);
     klmenu_config=klmenu_config.concat([
@@ -1278,7 +1339,7 @@ function menu_zjedu(){
     ];    
     klmenu_config.push(menu_container_b(str_t,group_list,'跳转到：'));    
 
-    document.getElementById('span_h2').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_year,'💯','6rem','1rem','1rem','60rem')+klmenu_b(klmenu1,'','24rem','1rem','1rem','60rem')+klmenu_b(klmenu_statistics,'🧮','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','15rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_h2').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_year,'💯','6rem','1rem','1rem','60rem')+klmenu_b(klmenu1,'','24rem','1rem','1rem','60rem')+klmenu_b(klmenu_statistics,'🧮','25rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','15rem','1rem','1rem','60rem'),'','0rem')+' ');
     klmenu_check_b('span_reg_zjedu',true);        
 }
 
@@ -1298,6 +1359,135 @@ function init_zjedu(){
     td_right_html_zjedu();
     document.getElementById('span_array_count').innerHTML='<i>('+zj_university_global.length+'条)</i>';
     run_txtsearch_zjedu();
+}
+
+function current_names_zjedu(col_no,simplify=false,show_html=true){
+    var result_t=array_unique_b(array_split_by_col_b(school_zjc_global,[col_no],true));
+    var ignore_list=[];
+    
+    if (simplify){
+        var list_t=new Set();
+        for (let item of result_t){
+            item=item.replace(/[\(（].+$/,'').replace(/类$/,'');
+            list_t.add(item);
+        }
+        
+        result_t=[];
+        for (let item1 of list_t){
+            var len1=item1.length;
+            var is_ignore=false;
+            for (let item2 of list_t){
+                if (item1==item2 || len1<=item2.length){continue;}
+                if (item1.includes(item2)){
+                    is_ignore=true;
+                    break;
+                }
+            }
+            if (is_ignore){
+                ignore_list.push(item1);
+            } else {
+                result_t.push(item1);
+            }
+        }
+        result_t.sort(zh_sort_b);   //function (a,b){return a.length>b.length?1:-1;});    //长度短的排前 - 保留注释        
+        ignore_list.sort(zh_sort_b);   
+    }
+
+    if (show_html){
+        var odiv=document.getElementById('div_status');
+        odiv.innerHTML='<h4>结果（'+result_t.length+'）：</h4><textarea>'+result_t+'</textarea>'+(simplify?'<h4>忽略（'+ignore_list.length+'）：</h4><textarea>'+ignore_list+'</textarea>':'');
+        odiv.scrollIntoView();
+    }
+    return [result_t,ignore_list];
+}
+
+function speciality_status_zjedu(){
+    function sub_speciality_status_zjedu_school_html(){
+        var table_t=[];
+        for (let key in school_dict){
+            var blno=key.slice(2,);
+            if (!['1','2','3'].includes(blno)){continue;}
+            table_t.push('<table class="table_common">');
+            table_t.push('<tr class="tr_title_zjedu"><th colspan=3>平均分数线排名第 <span style="color:'+scheme_global['a-hover']+';">'+blno+'</span> 的学校及专业<span style="font-size:small; font-weight: normal;">（忽略相同专业只有一个学校的情况）</span></th></tr>');
+            table_t.push('<tr class="tr_title_zjedu"><th>学校</th><th nowrap>专业数</th><th>专业名称</th></tr>');
+            school_dict[key]=object2array_b(school_dict[key]);
+            school_dict[key].sort(function(a,b){return zh_sort_b(a,b,false,0);});
+            school_dict[key].sort(function (a,b){return a[1].length<b[1].length?1:-1;});
+            for (let blno=0,lent=school_dict[key].length;blno<lent;blno++){
+                table_t.push('<tr><td nowrap>'+school_dict[key][blno][0]+'</td><td align=right>'+school_dict[key][blno][1].length+'</td><td>'+school_dict[key][blno][1].join('・')+'</td></tr>');
+            }
+            table_t.push('</table>');
+        }
+        return table_t.join('\n');
+    }
+    
+    function sub_speciality_status_zjedu_school_arr(cslist,speciality_name){
+        var lent=cslist.length;
+        if (lent<2){return;}    //忽略相同专业只有一个学校的情况 - 保留注释
+        for (let blno=0;blno<lent;blno++){
+            var key_no='n_'+(blno+1);
+            if (school_dict[key_no]==undefined){
+                school_dict[key_no]=[];
+            }            
+            var key_name='s_'+cslist[blno][0];
+            if (school_dict[key_no][key_name]==undefined){
+                school_dict[key_no][key_name]=[cslist[blno][0],[]];
+            }                        
+            school_dict[key_no][key_name][1].push(speciality_name);
+        }
+    }
+    
+    function sub_speciality_status_zjedu_one(){
+        if (blxl>=bllen){
+            document.title=old_title;
+            var odiv=document.getElementById('divhtml');
+            odiv.innerHTML='<table class="table_common">'+bljg.join('\n')+'</table>'+sub_speciality_status_zjedu_school_html();
+
+            var oths=odiv.querySelectorAll('tr.tr_title_zjedu th');
+            for (let one_th of oths){
+                if (one_th.getAttribute('colspan')=='3'){
+                    one_th.setAttribute('align','left');
+                }
+                one_th.style.borderTop='0.2rem double black';
+                one_th.style.padding='0.5rem';
+                one_th.style.backgroundColor=scheme_global['button'];
+            }
+            
+            console.log('speciality_status_zjedu() 费时：'+(performance.now() - t0) + ' milliseconds');
+            return;
+        }
+    
+        var result_t=[];
+        for (let item of zj_university_global){
+            var blfound=str_reg_search_b(item[3],list_t[blxl],false);
+            if (blfound==-1){break;}
+            if (blfound){
+                result_t.push([item[1],item[3],item[4],item[5],item[6]]);
+            }
+        }
+        var data_dict=school_arr_zjedu(result_t,['school_sum_average']);
+        var result_t=school_sum_average_zjedu(data_dict['school_sum_average'],false,false,false,false,(blxl+1).toString().padStart(zero_len, '0')+'. 【'+list_t[blxl]+'】');
+        bljg.push(result_t[2]);
+        sub_speciality_status_zjedu_school_arr(result_t[3],list_t[blxl]);
+        blxl=blxl+1;
+        document.title=blxl+'/'+bllen+'/'+list_t[blxl]+' - '+old_title;
+        if (blxl % 20 == 0){
+            setTimeout(sub_speciality_status_zjedu_one,1);
+        } else {
+            sub_speciality_status_zjedu_one();
+        }
+    }
+
+    var t0 = performance.now();
+    num_change_zjedu();
+    var list_t=current_names_zjedu(1,true,false)[0];
+    var blxl=0;
+    var bllen=list_t.length;
+    var zero_len=bllen.toString().length;
+    var bljg=[];
+    var school_dict={};
+    var old_title=document.title;
+    sub_speciality_status_zjedu_one();
 }
 
 function search_type_zjedu(cstype){
