@@ -89,7 +89,7 @@ function randstr_b(cslen=8,csnumber=true,csletter=true){
     } else {
         for (let blxl=1;blxl<=cslen;blxl++){
             bljg=bljg+randint_b(0,9);
-        }        
+        }
     }
     return bljg;
 }

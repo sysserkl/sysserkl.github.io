@@ -397,7 +397,8 @@ function idb_clear_bigfile_b(db,do_type='',cskey='',run_fn=false){
         idb_bigfile_b('read',do_type,cskey,run_fn);
     }
     //-----------------------
-    var rndstr = randstr_b(4, true, false);    
+    var rndstr = Math.floor(Math.random()*(1000 - (9999+1)) +9999+1); //randstr_b(4, true, false); - 保留注释
+    
     if ((prompt('输入 ' + rndstr + ' 确认清除全部数据') || '').trim() === rndstr){
         return idb_write_b(db, 'bigfile_dbf', sub_idb_clear_bigfile_b_count1, sub_idb_clear_bigfile_b_count2, sub_idb_clear_bigfile_b_onsuccess);
     } else {

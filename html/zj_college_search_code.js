@@ -467,6 +467,7 @@ function speciality_popular_zjedu(data_speciality_popular,csreverse=false){
 
 function school_sum_average_zjedu(data_school_sum_average,csreverse=false,show_html=true,show_csv=true,add_table=true,title_prefix=''){
 	var arr2_t=object2array_b(data_school_sum_average);
+    arr2_t.sort(function(a,b){return zh_sort_b(a,b,false,0);});
     if (csreverse){
         arr2_t.sort(function(a,b){return a[1]>b[1] ? 1 : -1;});
     } else {
@@ -527,7 +528,7 @@ function school_median_rank_zjedu(data_school_median_rank,csreverse=false){
         var blmedian=median_zjedu(blplan,speciality_list[1]);
         arr2_t.push([speciality_list[0],blmedian]);
     }
-    
+    arr2_t.sort(function(a,b){return zh_sort_b(a,b,false,0);});
     if (csreverse){
         arr2_t.sort(function (a,b){return a[1]>b[1] ? 1 : -1;});
     } else {
@@ -550,6 +551,8 @@ function school_plan_zjedu(data_school_plan,sort_by_count=false){
         var item=data_school_plan[key];
         arr2_t.push([item[0],item[1],item[2],item[1]*100/(item[1]+item[2])]);
 	}
+    
+    arr2_t.sort(function(a,b){return zh_sort_b(a,b,false,0);});
     if (sort_by_count){
         arr2_t.sort(function (a,b){return a[1]<b[1] ? 1 : -1;});
     } else {
@@ -574,6 +577,7 @@ function school_last_number_zjedu(data_school_last_number,csreverse=false){
 		    arr2_t.push(data_school_last_number[key]);
         }
 	}
+    arr2_t.sort(function(a,b){return zh_sort_b(a,b,false,0);});
     if (csreverse){
         arr2_t.sort(function (a,b){return a[1]<b[1] ? 1 : -1;});
     } else {
@@ -1422,10 +1426,19 @@ function speciality_status_zjedu(){
     }
     
     function sub_speciality_status_zjedu_school_arr(cslist,speciality_name){
+        //cslist 每个元素为数组，内容为学校名称，分数线，对应位次；形如：[ "厦门大学", 665, 6287 ] - 保留注释
         var lent=cslist.length;
         if (lent<2){return;}    //忽略相同专业只有一个学校的情况 - 保留注释
         for (let blno=0;blno<lent;blno++){
             var key_no='n_'+(blno+1);
+            if (blno>0){
+                for (let bly=0;bly<blno;bly++){
+                    if (cslist[bly][1]==cslist[blno][1]){   //如果分数线相同 - 保留注释
+                        key_no='n_'+(bly+1);
+                        break;
+                    }
+                }
+            }
             if (school_dict[key_no]==undefined){
                 school_dict[key_no]=[];
             }            
