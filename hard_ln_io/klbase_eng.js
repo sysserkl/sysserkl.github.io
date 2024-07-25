@@ -1849,17 +1849,18 @@ function enwords_search_arr_init_b(){
     return [[],[],[],[],[],[]];
 }
 
-function enwords_search_old_b(cs_w_p_d,csword,csreg){
+function enwords_search_old_b(cs_w_p_d,csword,csreg,csmax=500){
     var blcount=0;
     var words_temp_equal_arr=enwords_search_arr_init_b();
 	
     var cswordlist=csword.split(' ');
     var csword_filter=(csword.match(/[a-zA-Z0-9 '_\-]+/) || [''])[0];
     var csword_filter_set=new Set(csword_filter.split(' '));
+
     var blnumber=-1;
     
     for (let blitem_t of enwords){
-        [blcount,blnumber]=enwords_search_one_b(blitem_t,cswordlist,csreg,csword_filter,csword_filter_set,cs_w_p_d,blcount);
+        [blcount,blnumber]=enwords_search_one_b(blitem_t,cswordlist,csreg,csword_filter,csword_filter_set,cs_w_p_d,blcount,csmax);
         if (blcount==-1){break;}
         if (blnumber!==-1){
             words_temp_equal_arr[blnumber].push(blitem_t);
@@ -2539,7 +2540,7 @@ function wordsearch_enwords_b(csword='',csreg=-1,cs_w_p_d=[],csnew_words=false,s
     cs_w_p_d=enword_search_type_b(cs_w_p_d);
 
     var csword_filter=(csword.match(/[a-zA-Z0-9 '_\-]+/) || [''])[0];   //不能放在if中 - 保留注释
-    var words_temp_equal_arr=enwords_search_old_b(cs_w_p_d,csword,csreg);
+    var words_temp_equal_arr=enwords_search_old_b(cs_w_p_d,csword,csreg,max_result_enwords_b());
     var words_temp_arr=enwords_merge_b(words_temp_equal_arr,max_result_enwords_b());
     
     var blequal=false;
