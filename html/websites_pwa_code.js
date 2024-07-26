@@ -121,7 +121,8 @@ function demo_websites_pwa(){
         return;
     }
     if (confirm('是否导入Demo网址？')){
-        localstorage_set_websites_pwa(websites_demo_global.trim());
+        var demo_str=['SNS https://www.douban.com/ 豆瓣','Tools https://www.bing.com/translator/ Bing Microsoft Translator','编程 https://github.com/ GitHub','出行旅游 http://www.amap.com/ 高德','搜索引擎 https://www.bing.com Bing','消费 http://www.decathlon.com.cn/ 迪卡侬','消费 https://www.smzdm.com/ 什么值得买','影音 https://www.imdb.com/ IMDb','阅读 http://www.aisixiang.com/ 爱思想','阅读 http://www.cnki.net/ 知网','阅读 https://shuge.org/ebooks/ 书格','资讯 https://www.solidot.org/ Solidot','微信公众号 http://weixin.qq.com/r/4HUIDMbEIQ5dKYJvbyBk ABBS'].join('\n');
+        localstorage_set_websites_pwa(demo_str);
         search_websites_pwa();
     }
 }

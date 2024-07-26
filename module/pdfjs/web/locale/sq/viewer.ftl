@@ -51,12 +51,6 @@ pdfjs-download-button-label = Shkarkoje
 pdfjs-bookmark-button =
     .title = Faqja e Tanishme (Shihni URL nga Faqja e Tanishme)
 pdfjs-bookmark-button-label = Faqja e Tanishme
-# Used in Firefox for Android.
-pdfjs-open-in-app-button =
-    .title = Hape në aplikacion
-# Used in Firefox for Android.
-# Length of the translation matters since we are in a mobile context, with limited screen estate.
-pdfjs-open-in-app-button-label = Hape në aplikacion
 
 ##  Secondary toolbar and context menu
 
@@ -292,6 +286,29 @@ pdfjs-editor-ink-button-label = Vizatoni
 pdfjs-editor-stamp-button =
     .title = Shtoni ose përpunoni figura
 pdfjs-editor-stamp-button-label = Shtoni ose përpunoni figura
+pdfjs-editor-highlight-button =
+    .title = Theksim
+pdfjs-editor-highlight-button-label = Theksoje
+pdfjs-highlight-floating-button =
+    .title = Theksim
+pdfjs-highlight-floating-button1 =
+    .title = Theksim
+    .aria-label = Theksim
+pdfjs-highlight-floating-button-label = Theksim
+
+## Remove button for the various kind of editor.
+
+pdfjs-editor-remove-ink-button =
+    .title = Hiq vizatim
+pdfjs-editor-remove-freetext-button =
+    .title = Hiq tekst
+pdfjs-editor-remove-stamp-button =
+    .title = Hiq figurë
+pdfjs-editor-remove-highlight-button =
+    .title = Hiqe theksimin
+
+##
+
 # Editor Parameters
 pdfjs-editor-free-text-color-input = Ngjyrë
 pdfjs-editor-free-text-size-input = Madhësi
@@ -301,6 +318,10 @@ pdfjs-editor-ink-opacity-input = Patejdukshmëri
 pdfjs-editor-stamp-add-image-button =
     .title = Shtoni figurë
 pdfjs-editor-stamp-add-image-button-label = Shtoni figurë
+# This refers to the thickness of the line used for free highlighting (not bound to text)
+pdfjs-editor-free-highlight-thickness-input = Trashësi
+pdfjs-editor-free-highlight-thickness-title =
+    .title = Ndryshoni trashësinë kur theksoni objekte tjetër nga tekst
 pdfjs-free-text =
     .aria-label = Përpunues Tekstesh
 pdfjs-free-text-default-content = Filloni të shtypni…
@@ -338,3 +359,29 @@ pdfjs-editor-resizer-label-bottom-right = Cepi i poshtëm djathtas — ripërmas
 pdfjs-editor-resizer-label-bottom-middle = Mesi i pjesës poshtë — ripërmasojeni
 pdfjs-editor-resizer-label-bottom-left = Cepi i poshtëm — ripërmasojeni
 pdfjs-editor-resizer-label-middle-left = Majtas në mes — ripërmasojeni
+
+## Color picker
+
+# This means "Color used to highlight text"
+pdfjs-editor-highlight-colorpicker-label = Ngjyrë theksimi
+pdfjs-editor-colorpicker-button =
+    .title = Ndryshoni ngjyrë
+pdfjs-editor-colorpicker-dropdown =
+    .aria-label = Zgjedhje ngjyre
+pdfjs-editor-colorpicker-yellow =
+    .title = E verdhë
+pdfjs-editor-colorpicker-green =
+    .title = E gjelbër
+pdfjs-editor-colorpicker-blue =
+    .title = Blu
+pdfjs-editor-colorpicker-pink =
+    .title = Rozë
+pdfjs-editor-colorpicker-red =
+    .title = E kuqe
+
+## Show all highlights
+## This is a toggle button to show/hide all the highlights.
+
+pdfjs-editor-highlight-show-all-button-label = Shfaqi krejt
+pdfjs-editor-highlight-show-all-button =
+    .title = Shfaqi krejt

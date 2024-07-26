@@ -9,7 +9,6 @@ self.addEventListener('install', function(e) {
             '../hard_ln_io/klbase_date.js',
             '../hard_ln_io/klbase_en_de_str.js',
             '../hard_ln_io/klbase_plan.js',
-            '../jsdata/todolist_demo_data.js',
             ]);
         })
     );

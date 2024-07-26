@@ -51,12 +51,6 @@ pdfjs-download-button-label = Sækja
 pdfjs-bookmark-button =
     .title = Núverandi síða (Skoða vefslóð frá núverandi síðu)
 pdfjs-bookmark-button-label = Núverandi síða
-# Used in Firefox for Android.
-pdfjs-open-in-app-button =
-    .title = Opna í smáforriti
-# Used in Firefox for Android.
-# Length of the translation matters since we are in a mobile context, with limited screen estate.
-pdfjs-open-in-app-button-label = Opna í smáforriti
 
 ##  Secondary toolbar and context menu
 
@@ -284,7 +278,7 @@ pdfjs-text-annotation-type =
 
 ## Password
 
-pdfjs-password-label = Sláðu inn lykilorð til að opna þessa PDF skrá.
+pdfjs-password-label = Settu inn lykilorð til að opna þessa PDF-skrá.
 pdfjs-password-invalid = Ógilt lykilorð. Reyndu aftur.
 pdfjs-password-ok-button = Í lagi
 pdfjs-password-cancel-button = Hætta við
@@ -301,8 +295,27 @@ pdfjs-editor-ink-button-label = Teikna
 pdfjs-editor-stamp-button =
     .title = Bæta við eða breyta myndum
 pdfjs-editor-stamp-button-label = Bæta við eða breyta myndum
-pdfjs-editor-remove-button =
-    .title = Fjarlægja
+pdfjs-editor-highlight-button =
+    .title = Áherslulita
+pdfjs-editor-highlight-button-label = Áherslulita
+pdfjs-highlight-floating-button1 =
+    .title = Áherslulita
+    .aria-label = Áherslulita
+pdfjs-highlight-floating-button-label = Áherslulita
+
+## Remove button for the various kind of editor.
+
+pdfjs-editor-remove-ink-button =
+    .title = Fjarlægja teikningu
+pdfjs-editor-remove-freetext-button =
+    .title = Fjarlægja texta
+pdfjs-editor-remove-stamp-button =
+    .title = Fjarlægja mynd
+pdfjs-editor-remove-highlight-button =
+    .title = Fjarlægja áherslulit
+
+##
+
 # Editor Parameters
 pdfjs-editor-free-text-color-input = Litur
 pdfjs-editor-free-text-size-input = Stærð
@@ -312,6 +325,10 @@ pdfjs-editor-ink-opacity-input = Ógegnsæi
 pdfjs-editor-stamp-add-image-button =
     .title = Bæta við mynd
 pdfjs-editor-stamp-add-image-button-label = Bæta við mynd
+# This refers to the thickness of the line used for free highlighting (not bound to text)
+pdfjs-editor-free-highlight-thickness-input = Þykkt
+pdfjs-editor-free-highlight-thickness-title =
+    .title = Breyta þykkt við áherslulitun annarra atriða en texta
 pdfjs-free-text =
     .aria-label = Textaritill
 pdfjs-free-text-default-content = Byrjaðu að skrifa…
@@ -349,3 +366,29 @@ pdfjs-editor-resizer-label-bottom-right = Neðst í hægra horni - breyta stær�
 pdfjs-editor-resizer-label-bottom-middle = Neðst á miðju - breyta stærð
 pdfjs-editor-resizer-label-bottom-left = Neðst í vinstra horni - breyta stærð
 pdfjs-editor-resizer-label-middle-left = Miðja til vinstri - breyta stærð
+
+## Color picker
+
+# This means "Color used to highlight text"
+pdfjs-editor-highlight-colorpicker-label = Áherslulitur
+pdfjs-editor-colorpicker-button =
+    .title = Skipta um lit
+pdfjs-editor-colorpicker-dropdown =
+    .aria-label = Val lita
+pdfjs-editor-colorpicker-yellow =
+    .title = Gult
+pdfjs-editor-colorpicker-green =
+    .title = Grænt
+pdfjs-editor-colorpicker-blue =
+    .title = Blátt
+pdfjs-editor-colorpicker-pink =
+    .title = Bleikt
+pdfjs-editor-colorpicker-red =
+    .title = Rautt
+
+## Show all highlights
+## This is a toggle button to show/hide all the highlights.
+
+pdfjs-editor-highlight-show-all-button-label = Birta allt
+pdfjs-editor-highlight-show-all-button =
+    .title = Birta allt

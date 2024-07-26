@@ -1,4 +1,6 @@
 function menu_more_nobel_prize(){
+    table_th_jscm_global={'year':'','category':'','name':'','country':'','achievement':'','group':''};
+    
     var str_t=klmenu_hide_b('');
     var klmenu1=[
     '<span id="span_table_data_hide_nobel_prize" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 不显示表格数据</span>',    

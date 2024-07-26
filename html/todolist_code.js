@@ -45,7 +45,8 @@ function demo_todolist(){
         return;
     }
     if (confirm('是否导入Demo事项？')){
-        localStorage.setItem('list_todolist',todolist_demo_data_global.trim());
+        var demo_str=['emergency1 应急外出 病222历单、病历卡','emergency2 应急外出 公交卡','emergency10 应急外出 保温杯','emergency13 应急外出 垃圾袋','comeback1 外出后回家整理事宜 打开电源','comeback3 外出后回家整理事宜 开窗、开门、开阳台','comeback4 外出后回家整理事宜 开水阀门、烧水','comeback5 外出后回家整理事宜 整理冰箱','equipment4 旅游物资准备 风油精|白花油|清凉油','equipment5 旅游物资准备 邦迪','equipment19 旅游物资准备 塑料袋','equipment28 旅游物资准备 手电筒 or 头灯',].join('\n');
+        localStorage.setItem('list_todolist',demo_str);
         todolist_data_global=load_lists_klplan_b('list_todolist');
         init_todolist(false);
     }
@@ -88,14 +89,18 @@ function menu_todolist(){
     var klmenu1=[
     '<span class="span_menu" onclick="'+str_t+'search_klplan_b();">search</span>',    
     '<span id="span_reg_klplan" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ reg</span>',
-    '<span class="span_menu" onclick="'+str_t+'edit_switch_todolist();">organize(one by one)</span>',    
-    '<span class="span_menu" onclick="'+str_t+'form_list_todolist();">organize(batch)</span>',
     '<span class="span_menu" onclick="'+str_t+'demo_todolist();">import demo</span>',
     '<span class="span_menu" onclick="'+str_t+'form_done_todolist();">import/export finished items</span>',    
     '<span class="span_menu">show: <select id="select_show_type_todolist" onchange="show_todolist(true);">'+blselect.join('')+'</select></span>',
     '<span class="span_menu" onclick="'+str_t+'update_todolist();">reload</span>',            
     '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'todolist\');">update</span>',
     ];
+    
+    var group_list=[
+    ['one by one','edit_switch_todolist();',true],
+    ['batch','form_list_todolist();',true],
+    ];    
+    klmenu1.push(menu_container_b(str_t,group_list,'organize: '));
     
     document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'✅','18rem','1rem','1rem','60rem'),'','0rem')+' '); //♾ - 保留注释
     klmenu_check_b('span_reg_klplan',true);
