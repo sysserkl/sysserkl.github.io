@@ -54,6 +54,15 @@ function div_size_gps_news(){
     document.getElementById('div_map').style.height=Math.max(300,(window_h-rect.height))+'px';
 }
 
+function date_range_gps_news(){
+    var list_t=array_split_by_col_b(gps_news_global,[0]);
+    list_t.sort();
+    var bllen=list_t.length;
+    if (bllen==0){return;}
+    document.getElementById('input_day_start_gps_news').value=list_t[0];
+    document.getElementById('input_day_end_gps_news').value=list_t[bllen-1];
+}
+
 function init_gps_news(){
     div_size_gps_news();
 
@@ -65,12 +74,11 @@ function init_gps_news(){
     document.getElementById('div_icon').innerHTML='📰';
     document.getElementById('div_status').innerHTML='时局图';
     document.getElementById('div_buttons').innerHTML=buttons_gps_news();
-    document.getElementById('input_day_start_gps_news').value=date_2_ymd_b(false,'y')+'0101';
     menu_gps_news();
     
     init_maps_leaflet_b();
 
-    omap_gps_news_global = L.map("div_map", {
+    omap_gps_news_global = L.map('div_map', {
         center: lat_lon_value,
         zoom: zoom_value,
         layers: [L.layerGroup([klmaps_global[map_name_value]])],
@@ -107,6 +115,7 @@ function init_gps_news(){
         current_layer_refresh_gps_news();
     });
     
+    date_range_gps_news();
     popup_gps_news();
 }
 
@@ -123,8 +132,7 @@ function popup_gps_news(show_content=true){
     var day_start=document.getElementById('input_day_start_gps_news').value.trim();
     var day_end=document.getElementById('input_day_end_gps_news').value.trim();
     
-    var lng;
-    var lat;
+    var lng, lat;
     var district_list={};
     var bljg=[];
     for (let item of gps_news_global){

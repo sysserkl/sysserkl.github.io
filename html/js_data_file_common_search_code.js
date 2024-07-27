@@ -406,7 +406,7 @@ function http_link_common(csstr,enable_http){
     return csstr;
 }
 
-function page_common(csno,show_html=true){
+function page_common(csno=1,show_html=true){
     function sub_page_common_td_generate(csxl,item){
         var bltds=[];
         if (show_table_row_no){

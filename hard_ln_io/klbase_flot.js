@@ -683,3 +683,20 @@ function canvas_one_line_chart_b(ocanvas,ctx=false,csdata=[],str2date=true,minVa
     ctx.lineWidth = csline_width;
     ctx.stroke();
 }
+
+function year_dict_2_2000_b(year_t,cscaption='',line_type=''){
+    var flot_arr=[];
+    for (let key in year_t){
+        var lent=year_t[key].length;
+        if (lent<=1){continue;}
+        for (let blxl=0;blxl<lent;blxl++){
+            year_t[key][blxl][0].setFullYear(2000);
+        }
+        
+        year_t[key]=[key.substring(2,)+'年'+cscaption+line_type].concat(year_t[key]);
+        //key 形如 'y_2023' - 保留注释
+        flot_arr.push(year_t[key]);
+    }
+    flot_arr.sort(function (a,b){return a[0]<b[0]?-1:1;});
+    return flot_arr;
+}

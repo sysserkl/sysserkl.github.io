@@ -1,5 +1,5 @@
 function file_load_corruption(){
-    flot_load_common([],[],[],['map/district_cn_geo_data.js'],[],false);
+    flot_load_common(['date','flot'],['time','symbol'],[],['map/district_cn_geo_data.js'],[],true);
 }
 
 function menu_more_corruption(){
@@ -24,9 +24,11 @@ function menu_more_corruption(){
     var klmenu1=[
     bllink,
     '<span id="span_merge_show_corruption_common" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 合并展示</span>',
-    '<span class="span_menu" onclick="'+str_t+'group_corruption();">分组</span>',
+    '<span class="span_menu" onclick="'+str_t+'group_corruption();">当前条件下分组</span>',
     '<span class="span_menu">项目标记：<input type="text" id="input_bullet_point_corruption_common" style="width:3rem;" placeholder="🐁🐀🐭" /></span>',
     '<span class="span_menu" onclick="'+str_t+'form_temp_data_corruption();">导入临时数据</span>',
+    '<span class="span_menu" onclick="'+str_t+'flot_line_corruption();">月度统计</span>',    
+    '<span class="span_menu" id="span_multi_year_lines_jsad_corruption" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 折线图分年</span>',    
     ];
 
     return klmenu_b(klmenu1,'🛎',bllen+'rem','1rem','1rem','30rem');
@@ -175,9 +177,70 @@ function district_get_corruption(cstype,csstr,reg_exp,city_name=''){
     return blstr;
 }
 
-function group_corruption(){
+function flot_line_corruption(){
+    function sub_flot_line_corruption_01(dict_t){
+        dict_t=object2array_b(dict_t,true,2);
+        for (let blxl=0,lent=dict_t.length;blxl<lent;blxl++){
+            dict_t[blxl][0]=validdate_b(dict_t[blxl][0]+'-01');
+        }
+        dict_t.sort(function (a,b){return a[0]<b[0]?-1:1;});   
+        return dict_t; 
+    }
+    
+    function sub_flot_line_corruption_count(csdate,dict_t){
+        var blkey=date2str_b('-',csdate).substring(0,7);
+        if (dict_t['d_'+blkey]==undefined){
+            dict_t['d_'+blkey]=0;
+        }
+        dict_t['d_'+blkey]=dict_t['d_'+blkey]+1;    
+        return dict_t;
+    }
+    
+    if (klmenu_check_b('span_multi_year_lines_jsad_corruption',false)){
+        var year_t={};
+        for (let arow of js_data_current_common_search_global){
+            var bldate=validdate_b(arow[0][arow[0].length-1]);
+            if (bldate===false){continue;}
+                    
+            var y_key='y_'+bldate.getFullYear();
+            if (year_t[y_key]==undefined){
+                year_t[y_key]={};
+            }
+
+            year_t[y_key]=sub_flot_line_corruption_count(bldate,year_t[y_key]);
+        }
+        
+        for (let key in year_t){
+            year_t[key]=sub_flot_line_corruption_01(year_t[key]);
+        }
+        var flot_arr=year_dict_2_2000_b(year_t);
+    } else {
+        var ym_t={};
+        for (let arow of js_data_current_common_search_global){
+            var bldate=validdate_b(arow[0][arow[0].length-1]);
+            if (bldate===false){continue;}
+
+            ym_t=sub_flot_line_corruption_count(bldate,ym_t);
+        }
+        ym_t=sub_flot_line_corruption_01(ym_t);
+        //ym_t=date_list_insert_zero_b(ym_t);   //此行保留 - 保留注释
+        ym_t=[''].concat(ym_t);
+        var flot_arr=[ym_t];
+    }
+    
+    var odiv=document.getElementById('div_status_common');
+    odiv.innerHTML='<div id="div_status_common_sub" style="width:100%; height:600px;"></div>';
+    
+    flot_lines_b(flot_arr,'div_status_common_sub','nw',true,'','m','',0);
+    
+    odiv.scrollIntoView();      
+    
+}
+
+function group_corruption(csplacename=''){
     var list_t=[];
-    var district_t={}
+    var district_t={};
+    var selected_place_list=[];
     var error_list=[];
     
     var bltype=type_get_corruption();
@@ -197,29 +260,38 @@ function group_corruption(){
                 district_t['d_'+place_name]=[[]];
             }
             district_t['d_'+place_name][0].push(arow[0]);
+            
+            if (csplacename==place_name){
+                selected_place_list.push(arow);
+            }
         }
     }
+    
+    if (csplacename==''){
+        district_t=object2array_b(district_t,true,2);
+        var bullet_point=document.getElementById('input_bullet_point_corruption_common').value;
+
+        for (let blxl=0,lent=district_t.length;blxl<lent;blxl++){
+            district_t[blxl][1].sort(function (a,b){return a.slice(-1)[0]>b.slice(-1)[0]?-1:1;});
+            for (let blno=0,lenb=district_t[blxl][1].length;blno<lenb;blno++){
+                district_t[blxl][1][blno][0]=bullet_point+district_t[blxl][1][blno][0];
+                district_t[blxl][1][blno]=district_t[blxl][1][blno].join(' ');
+            }
+        }
         
-    district_t=object2array_b(district_t,true,2);
-    var bullet_point=document.getElementById('input_bullet_point_corruption_common').value;
-
-    for (let blxl=0,lent=district_t.length;blxl<lent;blxl++){
-        district_t[blxl][1].sort(function (a,b){return a.slice(-1)[0]>b.slice(-1)[0]?-1:1;});
-        for (let blno=0,lenb=district_t[blxl][1].length;blno<lenb;blno++){
-            district_t[blxl][1][blno][0]=bullet_point+district_t[blxl][1][blno][0];
-            district_t[blxl][1][blno]=district_t[blxl][1][blno].join(' ');
+        district_t.sort(function (a,b){return zh_sort_b(a, b, false, 0);}); //按key排序 - 保留注释
+        district_t.sort(function (a,b){return a[1].length<b[1].length?1:-1;}); //按个数排序 - 保留注释
+        
+        for (let blxl=0,lent=district_t.length;blxl<lent;blxl++){
+            district_t[blxl]='<h4>'+(blxl+1)+'. <span class="span_box" onclick="group_corruption(this.innerText);">'+district_t[blxl][0]+'</span>('+district_t[blxl][1].length+')'+'</h4>'+array_2_li_b(district_t[blxl][1]);
         }
+        
+        document.getElementById('divhtml').innerHTML=district_t.join('\n');
+    } else {
+        js_data_current_common_search_global=selected_place_list;
+        page_common();
     }
     
-    district_t.sort(function (a,b){return zh_sort_b(a, b, false, 0);}); //按key排序 - 保留注释
-    district_t.sort(function (a,b){return a[1].length<b[1].length?1:-1;}); //按个数排序 - 保留注释
-    
-    for (let blxl=0,lent=district_t.length;blxl<lent;blxl++){
-        district_t[blxl]='<h4>'+(blxl+1)+'. '+district_t[blxl][0]+'('+district_t[blxl][1].length+')'+'</h4>'+array_2_li_b(district_t[blxl][1]);
-    }
-    
-    document.getElementById('divhtml').innerHTML=district_t.join('\n');
-
     console.log('error',error_list.length,error_list.join('\n'));
 }
 
