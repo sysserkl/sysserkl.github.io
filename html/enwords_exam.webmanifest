@@ -1,7 +1,7 @@
 {
   "background_color": "transparent",
   "description": "enexam",
-  "display": "fullscreen",
+  "display": "standalone",
   "icons": [
     {
       "src": "enwords_exam_ico/enwords_exam512.png",

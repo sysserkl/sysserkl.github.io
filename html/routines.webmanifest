@@ -1,7 +1,7 @@
 {
   "background_color": "transparent",
   "description": "KL Routines",
-  "display": "fullscreen",
+  "display": "standalone",
   "icons": [
     {
       "src": "routines_ico/routines512.png",

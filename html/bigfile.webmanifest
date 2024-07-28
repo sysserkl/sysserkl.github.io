@@ -1,7 +1,7 @@
 {
   "background_color": "transparent",
   "description": "bigfile",
-  "display": "fullscreen",
+  "display": "standalone",
   "icons": [
     {
       "src": "bigfile_ico/bigfile512.png",

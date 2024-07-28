@@ -1,7 +1,7 @@
 {
     "background_color": "transparent",
     "description": "Reader IDB",
-    "display": "fullscreen",
+    "display": "standalone",
     "icons": [
         {
             "src": "reader_idb_ico/reader_idb512.png",

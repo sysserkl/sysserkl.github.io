@@ -1,7 +1,7 @@
 {
   "background_color": "transparent",
   "description": "KL Calculator",
-  "display": "fullscreen",
+  "display": "standalone",
   "icons": [
     {
       "src": "calculator_ico/calculator512.png",

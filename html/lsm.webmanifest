@@ -1,7 +1,7 @@
 {
   "background_color": "transparent",
   "description": "LSM",
-  "display": "fullscreen",
+  "display": "standalone",
   "icons": [
     {
       "src": "lsm_ico/lsm512.png",

@@ -1,7 +1,7 @@
 {
   "background_color": "transparent",
   "description": "Long Term Plans",
-  "display": "fullscreen",
+  "display": "standalone",
   "icons": [
     {
       "src": "long_term_plans_ico/long_term_plans512.png",

@@ -1,7 +1,7 @@
 {
     "background_color": "transparent",
     "description": "offline file browser",
-    "display": "fullscreen",
+    "display": "standalone",
     "icons": [
         {
             "src": "offline_file_browser_ico/offline_file_browser512.png",

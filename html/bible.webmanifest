@@ -1,7 +1,7 @@
 {
   "background_color": "transparent",
   "description": "EN CN Bible",
-  "display": "fullscreen",
+  "display": "standalone",
   "icons": [
     {
       "src": "bible_ico/bible256.png",

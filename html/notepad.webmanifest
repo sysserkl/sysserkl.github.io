@@ -1,7 +1,7 @@
 {
   "background_color": "transparent",
   "description": "notepad",
-  "display": "fullscreen",
+  "display": "standalone",
   "icons": [
     {
       "src": "notepad_ico/notepad512.png",

@@ -1,7 +1,7 @@
 {
   "background_color": "transparent",
   "description": "klsearch",
-  "display": "fullscreen",
+  "display": "standalone",
   "icons": [
     {
       "src": "klsearch_ico/klsearch512.png",

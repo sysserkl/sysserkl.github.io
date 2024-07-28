@@ -1,7 +1,7 @@
 {
   "background_color": "transparent",
   "description": "entoday",
-  "display": "fullscreen",
+  "display": "standalone",
   "icons": [
     {
       "src": "enwords_today_ico/enwords_today512.png",

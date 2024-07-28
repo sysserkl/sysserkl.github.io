@@ -1,7 +1,7 @@
 {
     "background_color": "transparent",
     "description": "Readlater",
-    "display": "fullscreen",
+    "display": "standalone",
     "icons": [
         {
             "src": "readlater_ico/readlater512.png",

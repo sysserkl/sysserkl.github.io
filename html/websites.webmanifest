@@ -1,7 +1,7 @@
 {
   "background_color": "transparent",
   "description": "Websites",
-  "display": "fullscreen",
+  "display": "standalone",
   "icons": [
     {
       "src": "websites_ico/websites512.png",

@@ -1,7 +1,7 @@
 {
     "background_color": "transparent",
     "description": "selenium enwords",
-    "display": "fullscreen",
+    "display": "standalone",
     "icons": [
         {
             "src": "selenium_enwords_ico/selenium_enwords512.png",

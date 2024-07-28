@@ -1,7 +1,7 @@
 {
   "background_color": "transparent",
   "description": "KL ToDoList",
-  "display": "fullscreen",
+  "display": "standalone",
   "icons": [
     {
       "src": "todolist_ico/todolist512.png",

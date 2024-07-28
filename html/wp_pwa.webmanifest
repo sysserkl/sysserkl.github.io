@@ -1,7 +1,7 @@
 {
   "background_color": "transparent",
   "description": "KL wp pwa",
-  "display": "fullscreen",
+  "display": "standalone",
   "icons": [
     {
     "src": "wp_pwa_ico/wp_pwa512.png",

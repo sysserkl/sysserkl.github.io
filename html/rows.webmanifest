@@ -1,7 +1,7 @@
 {
   "background_color": "transparent",
   "description": "KL Rows",
-  "display": "fullscreen",
+  "display": "standalone",
   "icons": [
     {
         "src": "rows_ico/rows512.png",

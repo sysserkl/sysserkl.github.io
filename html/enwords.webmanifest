@@ -1,7 +1,7 @@
 {
   "background_color": "transparent",
   "description": "enwords",
-  "display": "fullscreen",
+  "display": "standalone",
   "icons": [
     {
       "src": "enwords_ico/enwords512.png",

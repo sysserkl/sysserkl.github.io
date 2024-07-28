@@ -1,7 +1,7 @@
 {
   "background_color": "transparent",
   "description": "KL Websites for PWA",
-  "display": "fullscreen",
+  "display": "standalone",
   "icons": [
     {
       "src": "websites_pwa_ico/websites_pwa512.png",

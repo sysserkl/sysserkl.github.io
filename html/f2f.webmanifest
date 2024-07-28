@@ -1,7 +1,7 @@
 {
   "background_color": "transparent",
   "description": "Face to Face",
-  "display": "fullscreen",
+  "display": "standalone",
   "icons": [
     {
         "src": "f2f_ico/f2f512.png",

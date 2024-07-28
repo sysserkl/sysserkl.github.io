@@ -1,7 +1,7 @@
 {
     "background_color": "transparent",
     "description": "temp txt share",
-    "display": "fullscreen",
+    "display": "standalone",
     "icons": [
     {
         "src": "tts_ico/tts512.png",

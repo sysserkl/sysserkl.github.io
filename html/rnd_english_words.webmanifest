@@ -1,7 +1,7 @@
 {
   "background_color": "transparent",
   "description": "Random English Words",
-  "display": "fullscreen",
+  "display": "standalone",
   "icons": [
     {
       "src": "rnd_english_words_ico/english_words256.png",
