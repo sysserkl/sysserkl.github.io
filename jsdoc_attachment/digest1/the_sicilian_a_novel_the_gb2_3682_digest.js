@@ -35,4 +35,5 @@ var digest_global=`
 *Valentino
 *womanizer
 *streetlamp
+*white-faced
 `.trim().split('\n');

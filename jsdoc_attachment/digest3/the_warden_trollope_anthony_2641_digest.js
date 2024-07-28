@@ -6,4 +6,6 @@ var digest_global=`
 *godchild
 *pelican
 *premeditate
+*damnable
+*Lucia
 `.trim().split('\n');

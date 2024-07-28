@@ -422,4 +422,6 @@ var digest_global=`
 *Ezra
 *environ
 *sodomite
+*Gilgal
+*Jezebel
 `.trim().split('\n');

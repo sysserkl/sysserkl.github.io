@@ -77,4 +77,6 @@ var digest_global=`
 *discontinue
 *indignation
 *undervalue
+*inexcusably
+*maturely
 `.trim().split('\n');

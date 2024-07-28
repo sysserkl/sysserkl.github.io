@@ -71,4 +71,6 @@ var digest_global=`
 *wheaten
 *environ
 *Elizabethan
+*uncommitted
+*misanthrope
 `.trim().split('\n');

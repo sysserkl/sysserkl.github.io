@@ -532,4 +532,5 @@ var digest_global=`
 *unpopulated
 *bimonthly
 *helmsmen
+*clearheaded
 `.trim().split('\n');

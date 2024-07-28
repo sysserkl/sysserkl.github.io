@@ -62,4 +62,5 @@ var digest_global=`
 *toad
 *ultrasonic
 *wavy
+*bizarrely
 `.trim().split('\n');

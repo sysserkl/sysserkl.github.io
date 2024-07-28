@@ -36,4 +36,6 @@ var digest_global=`
 *womenfolk
 *cicada
 *self-made
+*moon-faced
+*white-robed
 `.trim().split('\n');

@@ -55,4 +55,5 @@ var digest_global=`
 *nebular
 *colossi
 *Pompeii
+*northeastward
 `.trim().split('\n');

@@ -3,4 +3,5 @@ var digest_global=`
 *hospitably
 *Hades
 *Pharos
+*lean-to
 `.trim().split('\n');

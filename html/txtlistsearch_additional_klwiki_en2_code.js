@@ -89,20 +89,32 @@ function batch_search_form_kltxt_klwiki_en2(){
     var postpath=postpath_b();
     var bljg='<p><textarea id="textarea_batch_search_words_kltxt_klen2" style="height:10rem;"></textarea></p>';
     bljg=bljg+'<p>'   
-    bljg=bljg+'<span class="span_box" ondblclick="selective_default_value_kltxt_klwiki_en2();">过滤：</span><input type="text" id="input_selective_words_kltxt_klen2" /> ';
+    bljg=bljg+'<span class="span_box" ondblclick="selective_default_value_kltxt_klwiki_en2();">查找过滤：</span><input type="text" id="input_selective_words_kltxt_klen2" /> ';
     bljg=bljg+'<span class="aclick" onclick="batch_search_result_kltxt_klwiki_en2();">单词批量查找</span> ';
     bljg=bljg+'<span class="aclick" onclick="words_not_in_article_kltxt_klwiki_en2();">正文中不存在的单词</span> ';
-    bljg=bljg+'<span class="aclick" onclick="best_sentences_kltxt_b(\'div_sub_batch_search_kltxt_klwiki_en2\');">提取最佳例句</span> ';
+    bljg=bljg+'<span class="span_box">提取过滤：</span><input type="text" id="input_selective_sentences_kltxt_klen2" /> ';
+    bljg=bljg+'<span class="aclick" onclick="best_sentences_kltxt_klwiki_en2();">提取最佳例句</span> ';
     bljg=bljg+textarea_buttons_b('textarea_batch_search_words_kltxt_klen2','复制,清空');
     bljg=bljg+close_button_b('divhtml2','')
     bljg=bljg+'</p>';
     bljg=bljg+'<div id="div_sub_batch_search_kltxt_klwiki_en2"></div>';
     var odiv=document.getElementById('divhtml2');
     odiv.innerHTML='<div style="margin:0.5rem;">'+bljg+'</div>';
-    selective_default_value_kltxt_klwiki_en2();
-    var input_list=[['input_selective_words_kltxt_klen2',11,0.5]];
-    input_size_b(input_list,'id');    
+    var input_list=[['input_selective_words_kltxt_klen2',11,1],['input_selective_sentences_kltxt_klen2',11,1]];
+    input_size_b(input_list,'id');
+    document.getElementById('input_selective_sentences_kltxt_klen2').value='-[“”‘’"](:r)';
     odiv.scrollIntoView();
+}
+
+function best_sentences_kltxt_klwiki_en2(){
+    var filter_str=document.getElementById('input_selective_sentences_kltxt_klen2').value;
+    var is_reg=false;
+    [filter_str,is_reg]=str_reg_check_b(filter_str,is_reg);
+    var blfound=str_reg_search_b('',filter_str,is_reg);
+    if (blfound==-1){return;}
+    
+    console.log(filter_str,is_reg);
+    best_sentences_kltxt_b('div_sub_batch_search_kltxt_klwiki_en2',filter_str,is_reg);
 }
 
 function words_not_in_article_kltxt_klwiki_en2(){

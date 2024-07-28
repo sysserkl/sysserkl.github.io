@@ -62,4 +62,6 @@ var digest_global=`
 *glassy-eyed
 *itsy-bitsy
 *shortcut
+*medievalist
+*legalistic
 `.trim().split('\n');

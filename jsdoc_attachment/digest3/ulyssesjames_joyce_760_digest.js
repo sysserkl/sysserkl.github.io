@@ -55,4 +55,6 @@ var digest_global=`
 *alphabetic
 *Munro
 *immature
+*toadstool
+*lychgate
 `.trim().split('\n');

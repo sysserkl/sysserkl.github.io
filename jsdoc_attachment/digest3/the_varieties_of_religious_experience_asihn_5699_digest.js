@@ -17,4 +17,5 @@ var digest_global=`
 *reintroduce
 *restate
 *self-contradiction
+*gullibility
 `.trim().split('\n');

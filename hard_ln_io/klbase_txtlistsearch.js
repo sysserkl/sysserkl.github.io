@@ -4047,16 +4047,40 @@ function menu_no_get_kltxt_b(){
     return [];
 }
 
-function best_sentences_kltxt_b(csid){
+function best_sentences_kltxt_b(csid,filter_str='',csreg=false){
+    function sub_best_sentences_kltxt_b_remove(ospan){
+        var oparent=ospan.parentNode;
+        if (!oparent){return;}
+        if (['li','p'].includes(oparent.tagName.toLowerCase())){
+            oparent.outerHTML='';
+        }
+    }
+    
+    function sub_best_sentences_kltxt_b_textarea(){
+        if (pushed_words.size>0){
+            pushed_words=Array.from(pushed_words);
+            var blstr='<textarea style="max-width:10rem;" onclick="this.select();document.execCommand(\'copy\');">*'+pushed_words.join('\n*')+'</textarea>';
+            blstr=blstr+'<textarea style="max-width:10rem;" onclick="this.select();document.execCommand(\'copy\');">'+pushed_words.join('|').replace(/\s/g,'\\s')+'</textarea>';
+            result_t.push(blstr);
+            pushed_words=new Set();
+        }
+    }
+    
     en_word_temp_get_b();
-    var result_t=new Set();
+    var result_t=[];
     var odiv=document.getElementById('divhtml');
     var ospans=odiv.querySelectorAll('span.txt_content,span.span_inserted_menu');
     var has_menu=odiv.querySelector('span.span_inserted_menu')!==null;
     var words_in_book=new Set();
+    var page_name='';
+    var pushed_words=new Set();    
+    var page_no=0;
+    var sentence_no=0;
     for (let one_span of ospans){
         if (one_span.classList.contains('span_inserted_menu')){
             words_in_book=new Set();
+            page_name=one_span.innerText;
+            sub_best_sentences_kltxt_b_textarea();
         }
         
         var owords=one_span.querySelectorAll('span.span_key_highlight, span.span_rare_word_search_links, span.span_new_word_search_links');
@@ -4069,25 +4093,61 @@ function best_sentences_kltxt_b(csid){
             }
             word_set.add(blstr);
         }
-        if (word_set.size==0){continue;}
-        var list_t=one_span.innerText.match(/\b[A-Z][a-zA-Z\s,\-'’]{80,}[\.\?\!]/g) || [];
-        if (list_t.length==0){continue;}
+        
+        if (word_set.size==0){
+            sub_best_sentences_kltxt_b_remove(one_span);
+            continue;
+        }
+        
+        var whole_str=one_span.innerText;
+        if (filter_str!==''){   //条件形如：-[“”‘’](:r)，当不符合条件时，剔除 - 保留注释
+            var blfound=str_reg_search_b(whole_str,filter_str,csreg);
+            if (!blfound){
+                sub_best_sentences_kltxt_b_remove(one_span);
+                continue;
+            }
+        }
+        
+        var list_t=whole_str.match(/\b[A-Z][a-zA-Z\s,\-'’]{80,}[\.\?\!]/g) || [];
+        if (list_t.length==0){
+            sub_best_sentences_kltxt_b_remove(one_span);
+            continue;
+        }
+        
+        var is_pushed=false;
         for (let one_sentence of list_t){
             for (let one_word of word_set){
                 try {
                     var blreg=new RegExp('\\b'+one_word+'\\b');
                     if (one_sentence.match(blreg)){
                         var new_str=en_one_word_b([one_word,'',''],[-1,0],'',true,false,true);
-                        result_t.add(one_sentence.replace(blreg,new_str));//'<span style="background-color:'+scheme_global['pink']+'; font-weight:bold;">'+one_word+'</span>'));
+                        new_str=one_sentence.replace(blreg,new_str);
+                        if (!result_t.includes(new_str)){
+                            if (page_name!==''){
+                                page_no=page_no+1;
+                                result_t.push('<span style="font-size:large;font-weight:bold;">'+page_no+'. '+page_name+'</span>');
+                                page_name='';
+                            }
+                            sentence_no=sentence_no+1;                            
+                            result_t.push(sentence_no+'. '+new_str);
+                            pushed_words.add(one_word);
+                            is_pushed=true;
+                        }
                         break;
                     }
                 } catch (error){break;}
             }
         }
+        
+        if (is_pushed==false){
+            sub_best_sentences_kltxt_b_remove(one_span);
+        }
     }
-    
+
+    sub_best_sentences_kltxt_b_textarea();
+            
     var buttons='<p>'+close_button_b(csid,'')+'</p>';
     var ocontainer=document.getElementById(csid);
-    ocontainer.innerHTML='<div style="margin:2rem;">'+array_2_li_b(Array.from(result_t))+buttons+'</div>';
+    ocontainer.innerHTML='<div style="margin:2rem;"><p>'+result_t.join('</p><p>')+'</p>'+buttons+'</div>';
     ocontainer.scrollIntoView();
 }

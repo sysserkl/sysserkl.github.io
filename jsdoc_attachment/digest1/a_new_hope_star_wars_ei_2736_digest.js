@@ -41,4 +41,6 @@ var digest_global=`
 *escalate
 *coolant
 *long-lost
+*tridimensional
+*troposphere
 `.trim().split('\n');

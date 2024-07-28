@@ -246,4 +246,8 @@ var digest_global=`
 *crybaby
 *deafeningly
 *asparagus
+*round-faced
+*unwary
+*cogwheel
+*levelheaded
 `.trim().split('\n');

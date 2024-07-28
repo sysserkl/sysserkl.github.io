@@ -26,4 +26,5 @@ var digest_global=`
 *catastrophically
 *dauntingly
 *community college
+*polysaccharide
 `.trim().split('\n');

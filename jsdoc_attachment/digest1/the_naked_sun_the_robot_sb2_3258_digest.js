@@ -4,4 +4,5 @@ var digest_global=`
 *Campbell
 *replaceable
 *semiannual
+*photoelectric
 `.trim().split('\n');

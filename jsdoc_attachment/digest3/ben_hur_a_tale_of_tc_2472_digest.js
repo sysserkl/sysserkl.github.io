@@ -10,4 +10,8 @@ var digest_global=`
 *southwardly
 *westwardly
 *gymnasia
+*Philippi
+*foredeck
+*bondmen
+*cheerlessly
 `.trim().split('\n');
