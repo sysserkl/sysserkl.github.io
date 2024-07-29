@@ -69,4 +69,5 @@ var digest_global=`
 *incestuous
 *monopolize
 *jingle
+*ill-bred
 `.trim().split('\n');

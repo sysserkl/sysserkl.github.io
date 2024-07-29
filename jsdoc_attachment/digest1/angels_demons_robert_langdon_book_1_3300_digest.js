@@ -60,4 +60,5 @@ var digest_global=`
 *ungentlemanly
 *two-dimensional
 *Rosetta
+*defenseman
 `.trim().split('\n');

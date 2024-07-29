@@ -36,4 +36,5 @@ var digest_global=`
 *misread
 *irrelevantly
 *gobbledegook
+*leaker
 `.trim().split('\n');

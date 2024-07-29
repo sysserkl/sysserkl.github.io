@@ -22,4 +22,5 @@ var digest_global=`
 *barroom
 *wineskin
 *sought-after
+*oxcart
 `.trim().split('\n');

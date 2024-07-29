@@ -5,4 +5,5 @@ var digest_global=`
 *psychoanalyst
 *Kashmir
 *Brandon
+*Laplace
 `.trim().split('\n');

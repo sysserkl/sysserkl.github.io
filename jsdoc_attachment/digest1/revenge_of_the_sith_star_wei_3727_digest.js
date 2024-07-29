@@ -28,4 +28,5 @@ var digest_global=`
 *win-win
 *jaw-dropping
 *braincase
+*stomach-churning
 `.trim().split('\n');
