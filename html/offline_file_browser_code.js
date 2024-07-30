@@ -1091,7 +1091,6 @@ function menu_offline_file_browser(){
     ];
     
      var klmenu_link=[
-    '<span class="span_menu" onclick="'+str_t+'batch_open_klwiki_cd_pages_offline_file_browser();">批量打开KLWiki刻录页面</span>',
     '<span class="span_menu" onclick="'+str_t+'klwiki_link_b(\'光盘柜\',true);">光盘柜</span>',
     '<span class="span_menu" onclick="'+str_t+'klwiki_link_b(\'文件包内容列表\',true);">文件包内容列表</span>',
     '<span class="span_menu" onclick="'+str_t+'klwiki_link_b(\'KL 移动硬盘数据总量\',true);">KL 移动硬盘数据总量</span>',
@@ -1201,23 +1200,6 @@ function filelist_filter_offline_file_browser(cskey){
     if (cskey==''){return;}
     
     obj_search_show_hide_b(olis,'',cskey,is_reg);
-}
-
-function batch_open_klwiki_cd_pages_offline_file_browser(){
-    function sub_batch_open_klwiki_cd_pages_offline_file_browser_one_page(){
-        if (blxl>=bllen){return;}
-        klwiki_link_b(list_t[blxl],true);
-        blxl=blxl+1;
-        setTimeout(sub_batch_open_klwiki_cd_pages_offline_file_browser_one_page,1000);
-    }
-    //-----------------------
-    if (confirm('是否批量打开KLWiki刻录页面？')==false){return;}
-    var blyear=date_2_ymd_b(false,'y');
-    
-    var list_t=tf_page_count_b('光盘柜').concat([blyear+'年KL影视记录','家庭影视记录','文件包内容列表']);
-    var bllen=list_t.length;
-    var blxl=0;
-    sub_batch_open_klwiki_cd_pages_offline_file_browser_one_page();
 }
 
 function disks_size_date_offline_file_browser(cscol=0,csdesc=false,cstable_no=0){
