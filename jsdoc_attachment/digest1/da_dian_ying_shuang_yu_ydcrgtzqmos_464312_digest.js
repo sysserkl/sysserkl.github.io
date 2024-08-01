@@ -33,4 +33,7 @@ var digest_global=`
 *up-and-comer
 *gumball
 *Rowland
+*hammerhead
+*two-dimensional
+*wheelhouse
 `.trim().split('\n');

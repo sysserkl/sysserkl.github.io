@@ -6,4 +6,5 @@ var digest_global=`
 *Kashmir
 *Brandon
 *Laplace
+*centurion
 `.trim().split('\n');

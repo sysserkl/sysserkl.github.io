@@ -56,4 +56,6 @@ var digest_global=`
 *colossi
 *Pompeii
 *northeastward
+*meteorite
+*V-shaped
 `.trim().split('\n');

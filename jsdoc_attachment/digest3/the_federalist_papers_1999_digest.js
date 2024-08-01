@@ -79,4 +79,5 @@ var digest_global=`
 *undervalue
 *inexcusably
 *maturely
+*infringe
 `.trim().split('\n');

@@ -19,4 +19,5 @@ var digest_global=`
 *Latino
 *undernourished
 *coffeepot
+*self-deprecating
 `.trim().split('\n');

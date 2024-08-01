@@ -42,4 +42,6 @@ var digest_global=`
 *baseboard
 *strapless
 *coeducational
+*salesmen
+*disinfectant
 `.trim().split('\n');

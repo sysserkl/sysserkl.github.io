@@ -111,4 +111,5 @@ var digest_global=`
 *trade union
 *outdo
 *unfeasible
+*chairmanship
 `.trim().split('\n');

@@ -47,4 +47,5 @@ var digest_global=`
 *extortionist
 *townsmen
 *Margot
+*sexpot
 `.trim().split('\n');

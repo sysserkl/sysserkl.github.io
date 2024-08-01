@@ -15,4 +15,5 @@ var digest_global=`
 *charger
 *Chaucer
 *ruffian
+*tankard
 `.trim().split('\n');

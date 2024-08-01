@@ -5,4 +5,5 @@ var digest_global=`
 *replaceable
 *semiannual
 *photoelectric
+*Bentley
 `.trim().split('\n');

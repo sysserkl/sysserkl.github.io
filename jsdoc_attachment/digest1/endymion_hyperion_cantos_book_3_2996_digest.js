@@ -67,4 +67,5 @@ var digest_global=`
 *microgravity
 *mudbank
 *condom
+*preset
 `.trim().split('\n');

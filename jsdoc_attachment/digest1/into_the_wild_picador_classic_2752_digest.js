@@ -70,4 +70,5 @@ var digest_global=`
 *wildflower
 *frostbite
 *restaurateur
+*airfare
 `.trim().split('\n');
