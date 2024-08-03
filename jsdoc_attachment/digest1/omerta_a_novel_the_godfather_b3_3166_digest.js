@@ -20,4 +20,5 @@ var digest_global=`
 *undernourished
 *coffeepot
 *self-deprecating
+*headlock
 `.trim().split('\n');

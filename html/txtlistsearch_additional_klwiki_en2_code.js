@@ -113,7 +113,6 @@ function best_sentences_kltxt_klwiki_en2(){
     var blfound=str_reg_search_b('',filter_str,is_reg);
     if (blfound==-1){return;}
     
-    console.log(filter_str,is_reg);
     best_sentences_kltxt_b('div_sub_batch_search_kltxt_klwiki_en2',filter_str,is_reg);
 }
 

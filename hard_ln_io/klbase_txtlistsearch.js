@@ -4076,10 +4076,25 @@ function best_sentences_kltxt_b(csid,filter_str='',csreg=false){
     var pushed_words=new Set();    
     var page_no=0;
     var sentence_no=0;
+    var scan_sentence=(typeof en_sentence_global !== 'undefined');
+    var sentence_in_one_page=['',[]];
     for (let one_span of ospans){
         if (one_span.classList.contains('span_inserted_menu')){
             words_in_book=new Set();
             page_name=one_span.innerText;
+            sentence_in_one_page=[page_name,[]];
+            if (scan_sentence){
+                for (let arow of en_sentence_global){
+                    if (arow[2].endsWith('_TLS') && '=== '+arow[2].slice(0,-4)+' ==='==page_name || '=== '+arow[2]+' ==='==page_name){
+                        if (Array.isArray(arow[0])){
+                            sentence_in_one_page[1].push(arow[0].join(' '));
+                        } else {
+                            sentence_in_one_page[1].push(arow[0]);
+                        }
+                    }
+                }
+            }
+            sentence_in_one_page[1]=sentence_in_one_page.join('\n');
             sub_best_sentences_kltxt_b_textarea();
         }
         
@@ -4118,7 +4133,12 @@ function best_sentences_kltxt_b(csid,filter_str='',csreg=false){
         for (let one_sentence of list_t){
             for (let one_word of word_set){
                 try {
-                    var blreg=new RegExp('\\b'+one_word+'\\b');
+                    var blreg=new RegExp('\\b'+one_word+'\\b');                
+                    if (sentence_in_one_page[1].match(blreg)){
+                        console.log('发现单词：',one_word); //,word_set,sentence_in_one_page[0],sentence_in_one_page[1],one_sentence); //余下部分保留 - 保留注释
+                        continue;   //应该使用 continue 而不是 break，有可能klwiki_en2中存在其他不存在于例句中的单词 - 保留注释
+                    }
+
                     if (one_sentence.match(blreg)){
                         var new_str=en_one_word_b([one_word,'',''],[-1,0],'',true,false,true);
                         new_str=one_sentence.replace(blreg,new_str);
