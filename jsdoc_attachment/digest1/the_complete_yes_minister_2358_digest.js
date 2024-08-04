@@ -17,4 +17,6 @@ var digest_global=`
 *biochemist
 *modernise
 *appointee
+*Anglo-American
+*gobbledegook
 `.trim().split('\n');

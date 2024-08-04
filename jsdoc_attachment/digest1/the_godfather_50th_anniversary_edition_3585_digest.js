@@ -48,4 +48,5 @@ var digest_global=`
 *townsmen
 *Margot
 *sexpot
+*moon-faced
 `.trim().split('\n');

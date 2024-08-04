@@ -29,4 +29,5 @@ var digest_global=`
 *viscount
 *viva
 *Whitsuntide
+*noblemen
 `.trim().split('\n');

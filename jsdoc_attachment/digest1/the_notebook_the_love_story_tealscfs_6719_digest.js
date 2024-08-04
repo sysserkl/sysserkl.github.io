@@ -34,4 +34,5 @@ var digest_global=`
 *windowsill
 *Zambia
 *zebra
+*fatten
 `.trim().split('\n');

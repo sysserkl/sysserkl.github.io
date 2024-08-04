@@ -6,4 +6,5 @@ var digest_global=`
 *semiannual
 *photoelectric
 *Bentley
+*greenness
 `.trim().split('\n');

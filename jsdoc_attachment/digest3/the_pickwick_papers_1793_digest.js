@@ -3,4 +3,6 @@ var digest_global=`
 *taproom
 *ungrammatical
 *inexpressibles
+*single-breasted
+*white-faced
 `.trim().split('\n');

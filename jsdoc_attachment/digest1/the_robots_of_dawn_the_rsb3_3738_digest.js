@@ -16,4 +16,5 @@ var digest_global=`
 *noninterference
 *gymnasia
 *agoraphobic
+*irrelevantly
 `.trim().split('\n');

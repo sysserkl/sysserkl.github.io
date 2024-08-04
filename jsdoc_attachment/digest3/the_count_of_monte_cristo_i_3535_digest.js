@@ -15,4 +15,5 @@ var digest_global=`
 *woodcutter
 *pea
 *Maximilian
+*Sardinia
 `.trim().split('\n');

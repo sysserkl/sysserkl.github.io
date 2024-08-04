@@ -533,4 +533,6 @@ var digest_global=`
 *bimonthly
 *helmsmen
 *clearheaded
+*Pompeii
+*Andes
 `.trim().split('\n');

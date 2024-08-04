@@ -73,4 +73,6 @@ var digest_global=`
 *Elizabethan
 *uncommitted
 *misanthrope
+*townsmen
+*outlive
 `.trim().split('\n');

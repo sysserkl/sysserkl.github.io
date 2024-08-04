@@ -17,4 +17,6 @@ var digest_global=`
 *Carnegie
 *cardigan
 *afternoon tea
+*confusedly
+*half-filled
 `.trim().split('\n');

@@ -14,4 +14,5 @@ var digest_global=`
 *bounty hunter
 *supernovae
 *skeptically
+*viewscreen
 `.trim().split('\n');

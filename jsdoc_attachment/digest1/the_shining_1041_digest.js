@@ -116,4 +116,7 @@ var digest_global=`
 *jet-set
 *surrealistic
 *enfold
+*Handel
+*Brice
+*strapless
 `.trim().split('\n');

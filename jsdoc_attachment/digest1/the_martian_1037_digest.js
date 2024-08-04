@@ -34,4 +34,5 @@ var digest_global=`
 *nonflammable
 *hexadecimal
 *airflow
+*claustrophobic
 `.trim().split('\n');

@@ -38,4 +38,6 @@ var digest_global=`
 *self-made
 *moon-faced
 *white-robed
+*worthlessness
+*extortioner
 `.trim().split('\n');

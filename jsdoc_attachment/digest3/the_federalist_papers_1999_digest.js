@@ -80,4 +80,5 @@ var digest_global=`
 *inexcusably
 *maturely
 *infringe
+*enfeeble
 `.trim().split('\n');

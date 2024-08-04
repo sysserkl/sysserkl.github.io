@@ -44,4 +44,5 @@ var digest_global=`
 *coeducational
 *salesmen
 *disinfectant
+*snowmen
 `.trim().split('\n');

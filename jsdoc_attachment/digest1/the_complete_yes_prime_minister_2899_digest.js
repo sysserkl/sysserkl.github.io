@@ -37,4 +37,5 @@ var digest_global=`
 *irrelevantly
 *gobbledegook
 *leaker
+*double-breasted
 `.trim().split('\n');

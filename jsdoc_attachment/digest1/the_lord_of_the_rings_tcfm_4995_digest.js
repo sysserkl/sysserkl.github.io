@@ -13,4 +13,6 @@ var digest_global=`
 *yestereve
 *yestermorn
 *scornful
+*daylong
+*forefather
 `.trim().split('\n');

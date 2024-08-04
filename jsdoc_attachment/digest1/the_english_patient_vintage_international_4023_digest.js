@@ -74,4 +74,7 @@ var digest_global=`
 *hearing aid
 *lionlike
 *Gestapo
+*brownness
+*noisiness
+*radiophone
 `.trim().split('\n');

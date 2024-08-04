@@ -474,4 +474,5 @@ var digest_global=`
 *oxen
 *Yorkshire
 *John Bull
+*thenceforth
 `.trim().split('\n');

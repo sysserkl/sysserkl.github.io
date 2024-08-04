@@ -36,4 +36,5 @@ var digest_global=`
 *womanizer
 *streetlamp
 *white-faced
+*L-shaped
 `.trim().split('\n');

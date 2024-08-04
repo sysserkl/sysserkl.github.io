@@ -16,4 +16,5 @@ var digest_global=`
 *Chaucer
 *ruffian
 *tankard
+*Antonine
 `.trim().split('\n');

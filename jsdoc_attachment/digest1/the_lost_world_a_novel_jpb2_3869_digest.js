@@ -28,4 +28,5 @@ var digest_global=`
 *community college
 *polysaccharide
 *reformat
+*uncoil
 `.trim().split('\n');

@@ -250,4 +250,6 @@ var digest_global=`
 *unwary
 *cogwheel
 *levelheaded
+*circumspect
+*twelvemonth
 `.trim().split('\n');

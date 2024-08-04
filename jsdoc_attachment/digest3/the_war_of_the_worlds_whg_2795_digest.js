@@ -58,4 +58,8 @@ var digest_global=`
 *northeastward
 *meteorite
 *V-shaped
+*acuteness
+*blindingly
+*therefrom
+*superheated
 `.trim().split('\n');
