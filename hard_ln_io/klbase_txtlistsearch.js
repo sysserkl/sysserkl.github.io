@@ -2444,6 +2444,9 @@ function txtsearch_one_kltxt_b(csword='',csreg=false){
 
 function txtsearch_list_kltxt_b(csword,csreg,csmaxlines,start_lineno=0,end_lineno=-1,add_recent=true){
     if (csword.length==0){return [];}
+
+    var t0 = performance.now();
+    
     if (typeof csword == 'string'){
         var cswordlist=csword.split(' ');   
     } else {
@@ -2470,6 +2473,8 @@ function txtsearch_list_kltxt_b(csword,csreg,csmaxlines,start_lineno=0,end_linen
     if (add_recent){
         recent_search_kltxt_b(csword+(csreg?'(:r)':''));
     }
+    console.log('txtsearch_list_kltxt_b() 费时：'+(performance.now() - t0) + ' milliseconds');
+
     return result_t;
 }
 
@@ -2539,6 +2544,8 @@ function txtsearch_kltxt_b(csword='',csreg=-1,cscontinue=-1,add_recent=true){
 }
 
 function render_html_kltxt_b(wordlist=[],layout=true,highlight=true,b_style=false,enforce_refresh=false){
+    var t0 = performance.now();
+
     if (layout){
         layout_kltxt_b();
     }
@@ -2550,6 +2557,7 @@ function render_html_kltxt_b(wordlist=[],layout=true,highlight=true,b_style=fals
     books_b(false,'txt',book_tag_global,enforce_refresh);
     new_words_kltxt_b();
     img_load_check_kltxt_b();
+    console.log('render_html_kltxt_b() 费时：'+(performance.now() - t0) + ' milliseconds');
 }
 
 function img_load_check_kltxt_b(){
@@ -3437,6 +3445,8 @@ function digest_in_bookmark_kltxt_b(pageno){
 }
 
 function lines_2_html_kltxt_b(cslist){
+    var t0 = performance.now();
+
     var is_group_file=is_group_file_kltxt_b();
 	var bljg=format_lines_kltxt_b(cslist,'',-1,is_group_file);
 	var cshideno=document.getElementById('check_hide_no').checked;
@@ -3447,6 +3457,7 @@ function lines_2_html_kltxt_b(cslist){
         odiv.innerHTML='<ol>'+bljg+'</ol>';
     }
     bible_title_link_generate_kltxt_b();
+    console.log('lines_2_html_kltxt_b() 费时：'+(performance.now() - t0) + ' milliseconds');    
     return bljg.length;
 }
 

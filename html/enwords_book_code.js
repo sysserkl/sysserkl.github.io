@@ -493,14 +493,17 @@ function import_enwords_book(cstype,csmax=-1){
         case 'old_def':
             var result_t=[];
             var blno=(cstype=='old'?0:2);
-            for (let item of enwords){
-                result_t.push(item[blno]);
+            for (let blxl=0,lent=enwords.length;blxl<lent;blxl++){
+                result_t.push(enwords[blxl][blno]);
+                if (blno==2 && blxl % 5000 == 0){
+                    result_t=array_unique_b(result_t.join(' ').split(' ')); //减少总体长度 - 保留注释
+                }
             }
             if (csmax>0){
                 result_t.sort(randomsort_b);
                 result_t=result_t.slice(0,csmax);
             }
-            otextarea.value=result_t.join('\n');
+            otextarea.value=result_t.join(' ');
             break;
         case 'phrase':
             var result_t=[];        
@@ -510,7 +513,7 @@ function import_enwords_book(cstype,csmax=-1){
                 }    
             }
             otextarea.value=result_t.join('\n');            
-            break;        
+            break;
         case 'not_phrase':
             var result_t=[];        
             for (let item of enwords){    
