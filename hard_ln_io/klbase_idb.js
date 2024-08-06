@@ -212,7 +212,7 @@ function idb_bigfile_b(crud_type='',do_type='',cskey='',run_fn=false){
                 console.error('Invalid operation type:', crud_type);
                 idb_close_b(db);
                 reject(new Error(`Unsupported operation: ${crud_type}`));
-                break;                  
+                break;
         }
 
         try {
