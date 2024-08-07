@@ -315,7 +315,7 @@ function idb_import_notepad(db){
                 current_id_notepad_global=Math.max(-1,Math.max(...old_id_set))+1;
                 sub_idb_import_notepad_batch(otable);
             }
-        };        
+        };
     }
     //-----------------------
     raw_data_notepad_global=[];

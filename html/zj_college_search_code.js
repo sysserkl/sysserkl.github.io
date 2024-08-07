@@ -200,6 +200,7 @@ function txtsearch_zjedu(csword=false){
 	var blwordlist=csword.split(' ');
 
 	for (let item of zj_university_global){
+        //item 形如：[ "0001", "浙江大学", "001", "人文科学试验班", 76, 672, 4221 ] - 保留注释
 		var bltmp = ','+item[1]+','+item[3]+','+item[4]+','+item[5]+','+item[6]+',';
 		
 		var blfound=str_reg_search_b(bltmp,blwordlist,csreg);
@@ -1319,9 +1320,11 @@ function menu_zjedu(){
     }
 
     var klmenu_statistics=[
+    '<span class="span_menu" onclick="'+str_t+'search_type_zjedu(\'10000\');">最低录取位次前10000名的专业</span>',    
     '<span class="span_menu" onclick="'+str_t+'search_type_zjedu(\'50000\');">最低录取位次前50000名的专业</span>',    
     '<span class="span_menu" onclick="'+str_t+'search_type_zjedu(\'700\');">700分</span>',    
     '<span class="span_menu" onclick="'+str_t+'speciality_status_zjedu();">在全部数据中统计当前专业名称平均分数线分布</span>',        
+    '<span class="span_menu" onclick="'+str_t+'speciality_simple_count_zjedu();">在当前结果中统计简化专业计划数</span>',        
     ];    
     
     var group_list=[
@@ -1373,7 +1376,7 @@ function current_names_zjedu(col_no,simplify=false,show_html=true){
         var list_t=new Set();
         for (let item of result_t){
             item=item.replace(/[\(（].+$/,'').replace(/类$/,'');
-            list_t.add(item);
+            list_t.add(item.trim());
         }
         
         result_t=[];
@@ -1403,6 +1406,43 @@ function current_names_zjedu(col_no,simplify=false,show_html=true){
         odiv.scrollIntoView();
     }
     return [result_t,ignore_list];
+}
+
+function speciality_simple_count_zjedu(){
+    var name_list=current_names_zjedu(1,true,false)[0];    //获取专业的简化名称 - 保留注释
+    var result_t={};
+    for (let one_name of name_list){
+        result_t['n_'+one_name]=0;
+    }
+
+    for (let item of school_zjc_global){
+        //item 形如：[ "浙江大学", "人文科学试验班", 76, 672, 4221 ] - 保留注释
+        for (let one_name of name_list){
+            var blfound=str_reg_search_b(item[1],one_name,false);
+            if (blfound==-1){break;}
+            if (blfound){
+                result_t['n_'+one_name]=result_t['n_'+one_name]+item[2];
+                break;
+            }
+        }
+    }
+    
+    result_t=object2array_b(result_t,true,2);
+    result_t.sort(function(a,b){return zh_sort_b(a,b,true,0);});    //逆序 - 保留注释
+    result_t.sort(function (a,b){return a[1]>b[1]?-1:1;});
+    
+    var hot_list=[];
+    var blsum=0;
+    for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
+        hot_list.push(result_t[blxl][0]+','+result_t[blxl][1]);
+        blsum=blsum+result_t[blxl][1];
+            
+        result_t[blxl]='<tr><td>'+(blxl+1)+'</td><td>'+result_t[blxl][0]+'</td><td align=right>'+result_t[blxl][1]+'</td></tr>';
+    }
+    
+    hot_list=hot_list.slice(0,num_zjc_global);
+    var odiv=document.getElementById('divhtml');
+    odiv.innerHTML='<table class="table_common"><tr><th>No.</th><th>专业</th><th>计划数</th></tr>'+result_t.join('\n')+'</table><textarea>'+hot_list.join('\n')+'</textarea><p>合计：'+blsum+'</p>';
 }
 
 function speciality_status_zjedu(){
@@ -1472,18 +1512,18 @@ function speciality_status_zjedu(){
     
         var result_t=[];
         for (let item of zj_university_global){
-            var blfound=str_reg_search_b(item[3],list_t[blxl],false);
+            var blfound=str_reg_search_b(item[3],name_list[blxl],false);
             if (blfound==-1){break;}
             if (blfound){
                 result_t.push([item[1],item[3],item[4],item[5],item[6]]);
             }
         }
         var data_dict=school_arr_zjedu(result_t,['school_sum_average']);
-        var result_t=school_sum_average_zjedu(data_dict['school_sum_average'],false,false,false,false,(blxl+1).toString().padStart(zero_len, '0')+'. 【'+list_t[blxl]+'】');
+        var result_t=school_sum_average_zjedu(data_dict['school_sum_average'],false,false,false,false,(blxl+1).toString().padStart(zero_len, '0')+'. 【'+name_list[blxl]+'】');
         bljg.push(result_t[2]);
-        sub_speciality_status_zjedu_school_arr(result_t[3],list_t[blxl]);
+        sub_speciality_status_zjedu_school_arr(result_t[3],name_list[blxl]);
         blxl=blxl+1;
-        document.title=blxl+'/'+bllen+'/'+list_t[blxl]+' - '+old_title;
+        document.title=blxl+'/'+bllen+'/'+name_list[blxl]+' - '+old_title;
         if (blxl % 20 == 0){
             setTimeout(sub_speciality_status_zjedu_one,1);
         } else {
@@ -1493,9 +1533,9 @@ function speciality_status_zjedu(){
 
     var t0 = performance.now();
     num_change_zjedu();
-    var list_t=current_names_zjedu(1,true,false)[0];
+    var name_list=current_names_zjedu(1,true,false)[0];    //获取专业的简化名称 - 保留注释
     var blxl=0;
-    var bllen=list_t.length;
+    var bllen=name_list.length;
     var zero_len=bllen.toString().length;
     var bljg=[];
     var school_dict={};
@@ -1507,7 +1547,10 @@ function search_type_zjedu(cstype){
     var oinput=document.getElementById('input_search');
     switch (cstype){
         case '50000':
-            oinput.value=',([1-9]|\\d{2,4}|[1-4]\\d{4}|50000),$';
+            oinput.value=',([1-9]|\\d{2,4}|[1-4]\\d{4}|50000),$';   //要忽略 0 - 保留注释
+            break;
+        case '10000':
+            oinput.value=',([1-9]|\\d{2,4}|10000),$';
             break;
         case '700':
             oinput.value=',(7\\d{2}|699),.+';

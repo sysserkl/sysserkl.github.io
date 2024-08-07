@@ -645,7 +645,7 @@ function weibo_klwebsites(enable_rnd=false){
     }
     
     let arrays=array_klwebsites(blkey,999,enable_rnd);
-    //arrays的元素形如：[ "https://weibo.com/u/5722964389?is_all=1", 260, "编程" ] - 保留注释
+    //arrays的元素形如：[ "https://weibo.com/u/5722964389", 260, "编程" ] - 保留注释
     
     var result_t=[];
     for (let arow of arrays){

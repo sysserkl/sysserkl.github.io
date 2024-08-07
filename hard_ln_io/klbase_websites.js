@@ -362,5 +362,5 @@ function split_pwa_websites_b(csstr){
     var blname=csstr.substring(blat,).trim();
     csstr=csstr.substring(0,blat).trim();
     return [blcategory,csstr,blname,bltag];
-    //形如：[ "资讯", "https://weibo.com/u/2938715943?is_all=1", "人民网舆情数据中心 - 微博", "CN" ] - 保留注释
+    //形如：[ "资讯", "https://weibo.com/u/2938715943", "人民网舆情数据中心 - 微博", "CN" ] - 保留注释
 }

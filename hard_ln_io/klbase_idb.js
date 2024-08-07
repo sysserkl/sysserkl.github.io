@@ -124,7 +124,8 @@ function idb_write_b(odb,dbf_name,fn_count1,fn_count2,fn_onsuccess=false,do_clea
     });
 }
 
-function idb_main_b(cstype='',dbc_name,dbf_name,switch_fn,other_var1=false,other_var2=false,other_var3=false){
+function idb_main_b(cstype='',dbc_name,dbf_name,switch_fn,other_var1=false,other_var2=false,other_var3=false,cskeypath=false){
+    //删除数据库：indexedDB.deleteDatabase(数据库名称); - 保留注释
     return new Promise((resolve, reject) => {
         var db;
         var DBOpenRequest = window.indexedDB.open(dbc_name);
@@ -147,7 +148,12 @@ function idb_main_b(cstype='',dbc_name,dbf_name,switch_fn,other_var1=false,other
                 //};
                             
                 try {
-                    db.createObjectStore(dbf_name, { autoIncrement: true });
+                    if (cskeypath==false){
+                        db.createObjectStore(dbf_name, { autoIncrement: true });
+                    } else {
+                        console.log('keyPath',cskeypath);
+                        db.createObjectStore(dbf_name, { keyPath: cskeypath });                    
+                    }
                 } catch (error){
                     console.log('升级时创建对象存储失败: ' + error);
                     reject(new Error('升级时创建对象存储失败'));
