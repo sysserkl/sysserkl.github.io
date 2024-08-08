@@ -2320,3 +2320,20 @@ function get_max_zindex_b(){
 
     return maxZ;
 }
+
+function insert_style_dom_b(rule_list){
+    var newStyle = document.createElement('style');
+    document.head.appendChild(newStyle);
+
+    // 获取新 <style> 标签的 CSSStyleSheet 对象
+    var styleSheet = newStyle.sheet;
+    // 向 <style> 标签中插入 CSS 规则
+    for (let arow of rule_list){
+        // arow 形如：'#myElement { color: red; }' - 保留注释
+        try {
+            styleSheet.insertRule(arow, styleSheet.cssRules.length);
+        } catch (e){
+            console.error('插入规则失败:', arow, e);
+        }
+    }
+}

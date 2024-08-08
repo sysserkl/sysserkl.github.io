@@ -2313,13 +2313,13 @@ function array_2_li_b(csarray,row_type='li',container_type='ol',container_id='',
 }
 
 function string_2_txt_file_b(csstr,savename,cstype='csv'){
-    var pom = document.createElement('a');
+    var odom = document.createElement('a');
     var blob = new Blob([csstr],{type: 'text/'+cstype+';charset=utf-8;'});
-    pom.href = URL.createObjectURL(blob);
-    pom.setAttribute('download', savename);
-    document.body.appendChild(pom); 
-    pom.click();
-    document.body.removeChild(pom);
+    odom.href = URL.createObjectURL(blob);
+    odom.setAttribute('download', savename);
+    document.body.appendChild(odom); 
+    odom.click();
+    document.body.removeChild(odom);
     blob='';
 }
 
