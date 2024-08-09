@@ -2337,3 +2337,35 @@ function insert_style_dom_b(rule_list){
         }
     }
 }
+
+function buttons_do_type_generate_b(cscaption,button_name_list,do_type_fn,one_character=false){
+    var odiv=document.getElementById('div_'+cscaption+'_kl');
+    if (odiv){return [false,false];}
+    
+	var sp1 = document.createElement('div');
+	sp1.setAttribute('id', 'div_'+cscaption+'_kl');
+	var blobj = document.querySelector('body');
+	var parentDiv = blobj.parentNode;
+	parentDiv.insertBefore(sp1, blobj);
+	sp1.style.cssText='position:fixed;float:right;z-index:99999;border: dotted 0.05rem black;border-radius:1rem;padding:0.2rem;cursor:pointer;background:#f0f0f0;opacity: 0.4;margin-top:10rem;';
+    sp1.setAttribute('onmouseover','this.style.opacity=1');
+    sp1.setAttribute('onmouseout','this.style.opacity=0.4');
+    
+    var spanstyle='margin:0.2rem; border:0.1rem solid black; border-radius:0.5rem;padding:0.1rem';
+	
+    //button_name_list 形如 ['Scan','Status','Erase','Import','Error ids','Stop'] - 保留注释
+    for (let item of button_name_list){
+        var ospan=document.createElement('span');
+        sp1.appendChild(ospan);
+        if (one_character){
+            ospan.innerHTML=item.substring(0,1);
+            ospan.title=item;        
+        } else {
+            ospan.innerHTML=item;
+        }
+        ospan.style.cssText=spanstyle;
+        ospan.addEventListener('click',function(e){do_type_fn(item);},false); //需要放在一行，否则压缩出错 - 保留注释
+    }
+
+    return [sp1,spanstyle];
+}
