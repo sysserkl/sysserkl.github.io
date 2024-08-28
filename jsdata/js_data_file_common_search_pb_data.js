@@ -1,0 +1,27 @@
+var js_file_list_common_pb_global=[
+//data.js,icon,title name,var name,function suffix,category,load_remote_data
+['../jsdata/bible_quote/catchphrase_data.js','💬','Catchphrase','catchphrase_global','catchphrase','','1'],
+['../jsdata/history_pb_data.js',' 𓀀','历史 pb','bigday_history_pb_global','bigday_history','','1'],
+['../jsdata/klwiki_h3_pb_data.js','🖇','KL Wiki h3 pb','klwiki_h3_pb_global','klwiki_h3','','1'],
+['../jsdata/learning_links/learning_links_1_data.js','🖫','learning links','learning_list_global','learning_list','','1'],
+['../jsdata/meishichina_recipe_data.js','🍳','meishichina recipe','meishichina_recipe_global','meishichina_recipe','','1'],
+['../jsdata/words/all_new_words_data.js','🇬🇧','All New Words','all_new_words_global','','言'],
+['../jsdata/words/cet6_en_data.js','🇬🇧','英语四六级单词','cet6_en_global','','言'],
+['../jsdata/words/cn_bullshit_data.js','💩','CN BS Search','cn_bullshit_global','','','1'],
+['../jsdata/words/cn_ci_data.js',' 🇨🇳','汉语词语','cn_ci_global','','言'],
+['../jsdata/words/cn_idoim_data.js',' 🇨🇳','汉语成语','cn_idiom_global','cn_idiom','言'],
+['../jsdata/words/enwords_sentence_data.js','🇬🇧','英语例句','en_sentence_global','','言'],
+['../jsdata/js_data_file_common_search_blank_data.js','📦','blank data','blank_data_global','blank_data','','1'],
+['../jsdata/britannica_nobel_prize_data.js','🏆','nobel prize','nobel_prize_global','nobel_prize','','1'],
+['../jsdata/rmrb_online/rmrb_online_194605_196612_data.js','🗞','rmrb online','rmrb_online_global','rmrb_online','','0'],
+['../jsdata/dp_zj_data.js','🥧','dp rank','dp_rank_global','dp_rank','','1'],
+['../jsdata/cn_medicine_data.js','💊','cn medicine','cn_medicine_raw_global','cn_medicine','🩺'],
+['../jsdata/cn_medicine_name_link_data.js','💊','cn medicine names and links','cn_medicine_name_link_global','cn_medicine_nl','🩺'],
+['../jsdata/weather/district_weather_hangzhou_data.js','☔','district weather hangzhou','district_weather_global','district_weather','🌡'],
+['../jsdata/weather/tianqihoubao_hangzhou_data.js','☔','tianqihoubao hangzhou','district_weather_global','district_weather','🌡'],
+['../jsdata/cnbond_data.js','💰','cnbond','cnbond_global','cnbond','','1'],
+['../jsdata/cmpedu_data.js','🗜','cmpedu','cmpedu_global','cmpedu','','1'],
+['../jsdata/corruption_ccdi_data.js','🇨🇳','corruption ccdi','corruption_global','corruption','','1'],
+['../jsdata/wbus1_data.js','📟','wbus','wbus_global','wbus','','1'],
+
+];

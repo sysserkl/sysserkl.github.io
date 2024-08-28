@@ -1,0 +1,30 @@
+{
+    "background_color": "transparent",
+    "description": "temp txt share",
+    "display": "standalone",
+    "icons": [
+    {
+        "src": "tts_ico/tts512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    },
+    {
+        "src": "tts_ico/tts256.png",
+        "sizes": "256x256",
+        "type": "image/png"
+    },
+    {
+        "src": "tts_ico/tts128.png",
+        "sizes": "128x128",
+        "type": "image/png"
+    },
+    {
+        "src": "tts_ico/tts64.png",
+        "sizes": "64x64",
+        "type": "image/png"
+    }
+  ],
+    "name": "temp txt share",
+    "short_name": "TTS",
+    "start_url": "temp_txt_share.htm"
+}

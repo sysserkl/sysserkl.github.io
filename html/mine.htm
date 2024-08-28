@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date']);
+</script>
+<script src="mine_code.js"></script>
+<script>
+//-----------------------
+//history
+//0.0.1-20191006
+//-----------------------
+var scheme_global={};
+scheme_generation_b();
+css_root_style_b('15','9.5',['base'],[],1);
+
+var P_klmine_g = new function (){
+    this.unmask_fcolor='black';
+    this.unmask_bcolor='ivory';
+    this.mask_bcolor='slategray';
+}
+var mine_type_global_list=["💣","🍄","🇺🇸","🇬🇧","🎃","🐷","🤢","😈","💀","👹","👽"];
+var mine_character_global=mine_type_global_list[0];
+
+document.write('\n<style>\n');
+document.write('::selection {background-color:'+P_klmine_g.mask_bcolor+';color:'+P_klmine_g.mask_bcolor+';}\n');
+document.write('\n</style>\n');
+</script>
+<style>
+td{font-size:1rem;}
+button{font-size:1rem;}
+</style>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+</head>
+<body>
+<div id="div_menu" style="position:absolute;"></div>
+<div id="div_cp" style="margin: 0 0.5rem;"></div>
+<script>
+var box_border_global=1;
+document.title=mine_character_global+" Mine";
+if (ismobile_b()){
+    var boxsize_global=20;
+    var nbsp_count_global=2;
+} else {
+    var boxsize_global=14;
+    var nbsp_count_global=1;
+}
+var empty_td_content_global='&nbsp;'.repeat(nbsp_count_global)+'0'+'&nbsp;'.repeat(nbsp_count_global);
+var window_w_global=document.body.offsetWidth;
+var window_h_global=document_body_offsetHeight_b();
+var rows_global=-1;
+var cols_global=-1;
+var mine_level_global;
+var mine_list_global;
+var mine_total_global=0;
+var time_start_global;
+var time_interval_global;
+var level_caption_global;
+list_klmine();
+max_rows_cols_klmine();
+list_klmine();
+</script>
+<script>
+track_source_b('mine',false);
+</script>
+</body>
+</html>

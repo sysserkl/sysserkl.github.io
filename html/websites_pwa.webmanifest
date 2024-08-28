@@ -1,0 +1,30 @@
+{
+  "background_color": "transparent",
+  "description": "KL Websites for PWA",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "websites_pwa_ico/websites_pwa512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "websites_pwa_ico/websites_pwa256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "websites_pwa_ico/websites_pwa128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },    
+    {
+      "src": "websites_pwa_ico/websites_pwa64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }        
+  ],
+  "name": "KL Websites for PWA",
+  "short_name": "KL Sites",
+  "start_url": "websites_pwa.htm"
+}

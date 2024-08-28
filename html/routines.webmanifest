@@ -1,0 +1,30 @@
+{
+  "background_color": "transparent",
+  "description": "KL Routines",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "routines_ico/routines512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },  
+    {
+      "src": "routines_ico/routines256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "routines_ico/routines128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "routines_ico/routines64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }        
+  ],
+  "name": "KL Routines",
+  "short_name": "KL ♾",
+  "start_url": "routines.htm"
+}

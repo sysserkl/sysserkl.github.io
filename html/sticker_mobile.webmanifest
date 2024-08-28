@@ -1,0 +1,30 @@
+{
+  "background_color": "transparent",
+  "description": "KL Sticker",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "sticker_mobile_ico/sticker_mobile512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },  
+    {
+      "src": "sticker_mobile_ico/sticker_mobile256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "sticker_mobile_ico/sticker_mobile128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "sticker_mobile_ico/sticker_mobile64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }        
+  ],
+  "name": "KL Sticker",
+  "short_name": "KSticker",
+  "start_url": "sticker_mobile.htm"
+}

@@ -1,0 +1,30 @@
+{
+    "background_color": "transparent",
+    "description": "Readlater",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "readlater_ico/readlater512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "readlater_ico/readlater256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "readlater_ico/readlater128.png",
+            "sizes": "128x128",
+            "type": "image/png"
+        },
+        {
+            "src": "readlater_ico/readlater64.png",
+            "sizes": "64x64",
+            "type": "image/png"
+        }
+    ],
+    "name": "Readlater",
+    "short_name": "Readlater",
+    "start_url": "readlater.htm"
+}

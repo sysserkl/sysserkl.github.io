@@ -1,0 +1,30 @@
+{
+  "background_color": "transparent",
+  "description": "Websites",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "websites_ico/websites512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "websites_ico/websites256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "websites_ico/websites128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },    
+    {
+      "src": "websites_ico/websites64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }        
+  ],
+  "name": "Websites",
+  "short_name": "Websites",
+  "start_url": "websites.htm"
+}

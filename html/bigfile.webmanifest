@@ -1,0 +1,30 @@
+{
+  "background_color": "transparent",
+  "description": "bigfile",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "bigfile_ico/bigfile512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "bigfile_ico/bigfile256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "bigfile_ico/bigfile128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "bigfile_ico/bigfile64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }
+  ],
+  "name": "bigfile",
+  "short_name": "bigfile",
+  "start_url": "bigfile.htm"
+}
