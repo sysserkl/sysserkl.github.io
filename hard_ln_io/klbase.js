@@ -1663,6 +1663,16 @@ function remote_ip_detector_b(host_left_part,csmin,csmax,do_alert=false){
     sub_remote_ip_detector_b_one_step(false);
 }
 
+function textarea_with_form_generate_b(textarea_id,textarea_style='',left_strings='',common_buttons='',right_strings='',form_type='',form_name=''){
+	var bljg='<form method="POST" action="'+postpath_b()+'temp_txt_share.php'+(form_type==''?'':'?type='+form_type)+'"'+(form_name==''?'':' name="'+form_name+'"')+' target=_blank>\n';
+    bljg=bljg+'<textarea name="'+textarea_id+'" id="'+textarea_id+'" style="'+textarea_style+'"></textarea>';
+    bljg=bljg+left_strings;
+    bljg=bljg+textarea_buttons_b(textarea_id,common_buttons,form_type);
+    bljg=bljg+right_strings;
+    bljg=bljg+'</form>';
+    return bljg;
+}
+
 function local_storage_view_form_b(keytype='',csid=''){
 	var bljg='<form method="POST" action="'+postpath_b()+'temp_txt_share.php" name="form_backup_localstorage" target=_blank>\n';
     bljg=bljg+'<textarea name="textarea_backup_localstorage" id="textarea_backup_localstorage" style="height:20rem;">'+local_storage_all_b('',keytype)[0]+'</textarea>';
@@ -1670,7 +1680,7 @@ function local_storage_view_form_b(keytype='',csid=''){
     bljg=bljg+'<span class="aclick" onclick="document.getElementById(\''+csid+'\').innerHTML=\'\';">Close</span> ';
     bljg=bljg+'<span class="aclick" onclick="local_storage_import_b(\'textarea_backup_localstorage\',true);">导入 localStorage</span> ';
     bljg=bljg+textarea_buttons_b('textarea_backup_localstorage','清空,复制,发送到临时记事本,发送地址');
-    bljg=bljg+'</form>';
+    bljg=bljg+'</p></form>';
     var obj=document.getElementById(csid);
     if (obj){
         obj.innerHTML=bljg;

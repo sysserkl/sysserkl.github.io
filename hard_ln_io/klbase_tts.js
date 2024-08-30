@@ -101,6 +101,7 @@ function init_temp_txt_share_b(is_php=true,menu_more=''){
     buttons=buttons+'</span>';
     
     document.getElementById('span_update').insertAdjacentHTML('beforebegin',buttons+textarea_buttons_b('textarea_temp_txt_share','清空,复制,↑,↓,save as txt file'+(is_php?'':',发送到临时记事本,发送地址,➕')));
+    
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.4rem'));
     menu_temp_txt_share_b(is_php,menu_more);
     document.getElementById('i_client_info').insertAdjacentHTML('beforeend',' userAgent: '+navigator.userAgent);

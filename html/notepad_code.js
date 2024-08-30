@@ -216,17 +216,15 @@ function export_form_notepad(){
         result_t.push(arow[0][1]+'\n'+arow[0][2]);
     }
 
-    var postpath=postpath_b();
-
     var odiv=document.getElementById('div_status');
-    var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php" target=_blank>';
     
-    bljg=bljg+'<textarea name="textarea_export_notepad" id="textarea_export_notepad" style="height:20rem;"></textarea>';
-    var buttons=close_button_b('div_status','');
-    buttons=buttons+'<span class="aclick" onclick="idb_notepad(\'import\');">import to database</span>';
-    buttons=buttons+textarea_buttons_b('textarea_export_notepad','清空,复制,发送到临时记事本,发送地址,save as txt file');
+    var left_str='<p><b>当前数据项：'+result_t.length+'个</b> '+close_button_b('div_status','');
+    left_str=left_str+'<span class="aclick" onclick="idb_notepad(\'import\');">import to database</span>';
+    var right_str='</p>';
+    
+    var blstr=textarea_with_form_generate_b('textarea_export_notepad','height:20rem;',left_str,'清空,复制,发送到临时记事本,发送地址,save as txt file',right_str);
+    odiv.innerHTML=blstr;
 
-    odiv.innerHTML=bljg+'<p><b>当前数据项：'+result_t.length+'个</b> '+buttons+'</p></form>';
     odiv.querySelector('textarea').value=result_t.join('\n=== notepad ===\n');  //textarea.value 和 '<textarea>'+value+'</textarea>' //效果不同，后者会转换 &amp; 为 & - 保留注释
     odiv.scrollIntoView();
 }

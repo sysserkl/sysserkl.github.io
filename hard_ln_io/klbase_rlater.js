@@ -375,18 +375,16 @@ function one_link_gerenrate_rlater_b(idno,cslink,cstitle,csstrong=false,prgname=
 }
 
 function delete_batch_from_array_form_rlater_b(prefix='readlater'){
-    var postpath=postpath_b();
-	var blstr='<form method="POST" action="'+postpath+'temp_txt_share.php" target=_blank>\n';    
-    blstr=blstr+'<textarea name="textarea_delete_batch_rlater" id="textarea_delete_batch_rlater" style="height:20rem;"></textarea>';
-    blstr=blstr+'<p>';
-    blstr=blstr+textarea_buttons_b('textarea_delete_batch_rlater','清空,复制,导入temp_txt_share,发送到临时记事本,发送地址');
-    blstr=blstr+'<span class="aclick" onclick="delete_batch_from_array_transform_rlater_b(\''+specialstr92_b(prefix)+'\');">数组转换为列表</span>';
-    blstr=blstr+'<span class="aclick" onclick="delete_batch_from_url_transform_rlater_b(\''+specialstr92_b(prefix)+'\');">链接转换为列表</span>';
-    blstr=blstr+'<span class="aclick" onclick="import_marked_rows_rlater_b();">导入已标记链接</span>';
-    blstr=blstr+'<span class="aclick" onclick="delete_marked_rows_rlater_b(\''+specialstr92_b(prefix)+'\');">清空已标记链接</span>';
+    var left_str='<p>';
+    var right_str='<span class="aclick" onclick="delete_batch_from_array_transform_rlater_b(\''+specialstr92_b(prefix)+'\');">数组转换为列表</span>';
+    right_str=right_str+'<span class="aclick" onclick="delete_batch_from_url_transform_rlater_b(\''+specialstr92_b(prefix)+'\');">链接转换为列表</span>';
+    right_str=right_str+'<span class="aclick" onclick="import_marked_rows_rlater_b();">导入已标记链接</span>';
+    right_str=right_str+'<span class="aclick" onclick="delete_marked_rows_rlater_b(\''+specialstr92_b(prefix)+'\');">清空已标记链接</span>';
 
-    blstr=blstr+'</p></form>';
-    blstr=blstr+'<div id="div_delete_batch_info_rlater"></div>';
+    right_str=right_str+'</p>';
+    right_str=right_str+'<div id="div_delete_batch_info_rlater"></div>';
+
+    var blstr=textarea_with_form_generate_b('textarea_delete_batch_rlater','height:20rem;',left_str,'清空,复制,导入temp_txt_share,发送到临时记事本,发送地址',right_str);
     document.getElementById('div_search_links').innerHTML=blstr;
 }
 

@@ -184,16 +184,17 @@ function status_websites_pwa(csstr){
 
 function form_websites_pwa(){
     var websites_list=localstorage_get_websites_pwa(false);
-    var postpath=postpath_b();
-	var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php" name="form_websites_pwa" target=_blank>\n';
-    bljg=bljg+'<textarea name="textarea_websites_pwa" id="textarea_websites_pwa" style="width:90%;height:24rem;">'+websites_list+'</textarea>';
-    bljg=bljg+'<p>';
-    bljg=bljg+'<span class="aclick" onclick="search_websites_pwa();">Close</span> ';
-    bljg=bljg+'<span class="aclick" onclick="update_websites_pwa();">Update</span> ';
-    bljg=bljg+textarea_buttons_b('textarea_websites_pwa','清空,复制,发送到临时记事本,发送地址')+' rows: '+websites_list.split('\n').length;
-    bljg=bljg+'</p></form>';
-    bljg=bljg+'<p><input type="text" id="input_filter" placeholder="filter" onkeyup="if (event.key==\'Enter\'){filter_websites_pwa(this.value);}" /></p>';    
-    document.getElementById('divhtml').innerHTML=bljg;
+    
+    var left_str='<p>';
+    left_str=left_str+'<span class="aclick" onclick="search_websites_pwa();">Close</span> ';
+    left_str=left_str+'<span class="aclick" onclick="update_websites_pwa();">Update</span> ';
+        
+    var right_str=' rows: '+websites_list.split('\n').length+'</p>';
+    right_str=right_str+'<p><input type="text" id="input_filter" placeholder="filter" onkeyup="if (event.key==\'Enter\'){filter_websites_pwa(this.value);}" /></p>';    
+
+    var blstr=textarea_with_form_generate_b('textarea_websites_pwa','width:90%;height:24rem;',left_str,'清空,复制,发送到临时记事本,发送地址',right_str,'','form_websites_pwa');
+    document.getElementById('divhtml').innerHTML=blstr;
+    document.getElementById('textarea_websites_pwa').value=websites_list;
     input_with_x_b('input_filter',(ismobile_b()?10:20));
 }
 

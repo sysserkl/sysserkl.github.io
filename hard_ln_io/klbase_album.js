@@ -173,18 +173,16 @@ function slide_klphotos_b(is_simple=false,csm1=''){
     document.getElementById('div_transparent_td_m3').setAttribute('onclick',blclear+'hide_div_big_photo_b();');
 }
 
-function export_form_klphotos_b(other_buttons=''){
-    var postpath=postpath_b();
-	var blform='<form method="POST" action="'+postpath+'temp_txt_share.php" target=_blank>\n';
+function export_form_klphotos_b(other_buttons=''){   
+    var left_str='<p>'+close_button_b('div_array','');
     
-    var bltextarea='<textarea id="textarea_export_klphotos" name="textarea_export_klphotos" style="width:90%;height:25rem;"></textarea>';
-    var bljg=close_button_b('div_array','');
-    bljg=bljg+textarea_buttons_b('textarea_export_klphotos','清空,复制,发送到临时记事本,发送地址');
-    bljg=bljg+other_buttons;
-    bljg=bljg+'<span class="aclick" onclick="import_marked_rows_klphotos_b();">导入已标记图片名</span>';
-    bljg=bljg+'<span class="aclick" onclick="delete_marked_rows_klphotos_b();">清空已标记图片名</span>';
+    var right_str=other_buttons;
+    right_str=right_str+'<span class="aclick" onclick="import_marked_rows_klphotos_b();">导入已标记图片名</span>';
+    right_str=right_str+'<span class="aclick" onclick="delete_marked_rows_klphotos_b();">清空已标记图片名</span>';
+    right_str=right_str+'</p>';
 
-    document.getElementById('div_array').innerHTML=blform+bltextarea+'<p>'+bljg+'</p></form>';
+    var blstr=textarea_with_form_generate_b('textarea_export_klphotos','width:90%;height:25rem;',left_str,'清空,复制,发送到临时记事本,发送地址',right_str);
+    document.getElementById('div_array').innerHTML=blstr;
 }
 
 function delete_marked_rows_klphotos_b(){

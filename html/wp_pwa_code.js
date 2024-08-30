@@ -173,16 +173,15 @@ function innertext_wp_pwa(){
 
 function export_import_form_wp_pwa(){
     var bldata=specialstr92_b(localstorage_get_wp_pwa());
-    var postpath=postpath_b();
-	var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php" name="form_fav_bible" target=_blank>\n';
-    bljg=bljg+'<textarea name="textarea_wp_pwa" id="textarea_wp_pwa" style="height:20rem;">'+bldata+'</textarea>';
-    bljg=bljg+'<p>';
-    bljg=bljg+close_button_b('div_export_import','')+' ';      
-    bljg=bljg+'<span class="aclick" onclick="update_wp_pwa();">Update</span> ';          
-    bljg=bljg+'<span class="aclick" onclick="innertext_wp_pwa();">innerText</span> ';    
-    bljg=bljg+textarea_buttons_b('textarea_wp_pwa','清空,复制,发送到临时记事本,发送地址');
-    bljg=bljg+'</p></form>\n';
-    document.getElementById('div_export_import').innerHTML=bljg;
+    var left_str='<p>';
+    left_str=left_str+close_button_b('div_export_import','')+' ';      
+    left_str=left_str+'<span class="aclick" onclick="update_wp_pwa();">Update</span> ';          
+    left_str=left_str+'<span class="aclick" onclick="innertext_wp_pwa();">innerText</span> ';    
+    var right_str='</p>';
+    
+    var blstr=textarea_with_form_generate_b('textarea_wp_pwa','height:20rem;',left_str,'清空,复制,发送到临时记事本,发送地址',right_str);
+    document.getElementById('div_export_import').innerHTML=blstr;
+    document.getElementById('textarea_wp_pwa').value=bldata;
 }
 
 function info_wp_pwa(csstr){

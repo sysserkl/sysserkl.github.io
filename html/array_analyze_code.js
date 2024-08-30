@@ -576,6 +576,8 @@ function menu_arr_analyze(){
     var klmenu1=[
     '<span class="span_menu" onclick="'+str_t+'table2csv_arr_analyze();">table 2 csv</span>',
     '<span class="span_menu" onclick="'+str_t+'ascii_table_arr_analyze();">ascii table</span>',
+    '<span class="span_menu" onclick="'+str_t+'batch_print_form_arr_analyze();">列数据嵌入批量打印</span>',
+
     ];
     if (is_local_b()){
         klmenu1.push('<a href="../../../../data/klwiki/dir_line_count.csv" onclick="'+str_t+'" target=_blank>下载 dir_line_count.csv</a>');
@@ -690,6 +692,25 @@ function th_name_set_arr_analyze(){
     var bllen=Math.min(new_name.length,obuttons.length);
     for (let blxl=0;blxl<bllen;blxl++){
         obuttons[blxl].innerText=new_name[blxl];
+    }
+}
+
+function batch_print_form_arr_analyze(){
+    var left_str='<p>'+'<span class="aclick" onclick="batch_print_show_arr_analyze();">生成</span>';
+    var right_str='</p><div id="div_batch_print_arr_analyze"></div>';
+    var blstr=textarea_with_form_generate_b('textarea_template_arr_analyze','height:10rem;',left_str,'清空,复制,发送到临时记事本,发送地址',right_str);
+    document.getElementById('divhtml').innerHTML=blstr;
+    document.getElementById('textarea_template_arr_analyze').setAttribute('placeholder','应该嵌入如：${item[1]}');
+}
+
+function batch_print_show_arr_analyze(){
+    var odiv=document.getElementById('div_batch_print_arr_analyze');
+    odiv.innerHTML='';
+    var blcontent=document.getElementById('textarea_template_arr_analyze').value;
+
+    for (let item of table_array_global){
+        var list_t=eval('`'+blcontent+'`').split('\n');
+        odiv.insertAdjacentHTML('beforeend',list_t.join(''));
     }
 }
 

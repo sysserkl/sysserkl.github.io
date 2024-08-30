@@ -365,16 +365,12 @@ function opml_klwebsites(){
 function demo_style_klwebsites(){
     var list_t=demo_content_klwebsites();
     
-    var postpath=postpath_b();
-    var bljg='';
-    bljg=bljg+'<form method="POST" action="'+postpath+'temp_txt_share.php" name="form_demo_style_sites" target=_blank>\n';
-    bljg=bljg+'<textarea name="textarea_demo_style_sites" id="textarea_demo_style_sites" style="height:20rem;">'+list_t.join('\n')+'</textarea>';
-    bljg=bljg+'<p>';
-    bljg=bljg+textarea_buttons_b('textarea_demo_style_sites','全选,清空,复制,发送到临时记事本,发送地址');    
-    bljg=bljg+'</form>\n';
-    bljg=bljg+' rows：'+list_t.length;        
-    bljg=bljg+'</p>';
-    document.getElementById('div_sub_content').innerHTML=bljg;
+    var left_str='<p>';
+    var right_str=' rows：'+list_t.length+'</p>';
+    
+    var blstr=textarea_with_form_generate_b('textarea_demo_style_sites','width:90%;height:24rem;',left_str,'全选,清空,复制,发送到临时记事本,发送地址',right_str,'','form_demo_style_sites');
+    document.getElementById('div_sub_content').innerHTML=blstr;
+    document.getElementById('textarea_demo_style_sites').value=list_t.join('\n');    
 }
 
 function selenium_show_hide_klwebsites(){
@@ -547,7 +543,11 @@ function demo_content_klwebsites(cskey=false){
     var demo_list=[];
     for (let href_list of result_t){
         var href_str=href_list[0];
-        demo_list.push(sites_all_global[href_list[1]][2]+' '+href_str+' '+sites_all_global[href_list[1]][1].replace(/<\/?small>/g,''));
+        var category=sites_all_global[href_list[1]][2];
+        if (category==''){
+            category='未分类';
+        }
+        demo_list.push(category+' '+href_str+' '+sites_all_global[href_list[1]][1].replace(/<\/?small>/g,''));
     }
     return demo_list;
 }

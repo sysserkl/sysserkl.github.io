@@ -237,15 +237,12 @@ function calculate_klqr(){
     document.getElementById('p_block_count').innerHTML=bljg;
     
     //-----------------------
-    var postpath=postpath_b();
-	bljg='<form method="POST" action="'+postpath+'temp_txt_share.php" target=_blank>\n';
-    bljg=bljg+'<textarea name="textarea_list_klqr" id="textarea_list_klqr" style="height:30rem;line-height:100%;"></textarea>';
-    bljg=bljg+'<p>';
-    bljg=bljg+textarea_buttons_b('textarea_list_klqr','清空,复制,发送到临时记事本,发送地址')+'</p>';
-    bljg=bljg+'</form>';
-    
+    var left_str='<p>';
+    var right_str='</p>';
     var odiv=document.getElementById('div_list_klqr');
-    odiv.innerHTML=bljg;
+    var blstr=textarea_with_form_generate_b('textarea_list_klqr','height:30rem;line-height:100%;',left_str,'清空,复制,发送到临时记事本,发送地址',right_str);
+    odiv.innerHTML=blstr;
+    
     odiv.style.display='none';  //保持最初的设置 - 保留注释
     document.getElementById('span_list').style.display='none';  //保持最初的设置 - 保留注释
     document.getElementById('div_tail_buttons_klqr').style.display='';    

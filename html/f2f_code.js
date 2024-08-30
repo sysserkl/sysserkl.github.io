@@ -27,27 +27,28 @@ function menu_lt_f2f(){
 function backup_lt_f2f(){
     reload_f2f();
     
-    var items=local_storage_get_b('list_f2f',-1,false);
-    var postpath=postpath_b();
     var bljg='<div id="div_backup" style="width:90%;margin:0.5rem;">';
     bljg=bljg+'<p><b>Items:</b></p>';
-    bljg=bljg+'<form method="POST" action="'+postpath+'temp_txt_share.php" target=_blank>\n';
-    bljg=bljg+'<textarea id="textarea_backup_f2f" name="textarea_backup_f2f" style="width:100%;height:10rem;">'+items+'</textarea>';
-    bljg=bljg+'<p>';
-    bljg=bljg+close_button_b('div_backup','none')+' ';
-    bljg=bljg+'<span class="aclick" onclick="filter_klplan_f2f();">Filter</span> ';       
-    bljg=bljg+'<span class="aclick" onclick="update_lt_f2f();">Update</span> ';   
-    bljg=bljg+textarea_buttons_b('textarea_backup_f2f','清空,复制,发送到临时记事本,发送地址')+' ';
-    bljg=bljg+'</p>';
-    bljg=bljg+'</form>';
-    bljg=bljg+'<p><textarea id="textarea_filter_items_f2f" style="display:none; width:100%;height:10rem;" onclick="this.select();document.execCommand(\'copy\');"></textarea></p>\n';
+
+    var left_str='<p>';
+    left_str=left_str+close_button_b('div_backup','none')+' ';
+    left_str=left_str+'<span class="aclick" onclick="filter_klplan_f2f();">Filter</span> ';       
+    left_str=left_str+'<span class="aclick" onclick="update_lt_f2f();">Update</span> ';   
+    var right_str='</p>';
+    var blstr=textarea_with_form_generate_b('textarea_backup_f2f','width:100%;height:10rem;',left_str,'清空,复制,发送到临时记事本,发送地址',right_str);
+
+    bljg=bljg+blstr+'<p><textarea id="textarea_filter_items_f2f" style="display:none; width:100%;height:10rem;" onclick="this.select();document.execCommand(\'copy\');"></textarea></p>\n';
     bljg=bljg+'</div>';
+
     var odiv=document.getElementById('div_backup');
     if (odiv){
         odiv.outerHTML=bljg;
     } else {
         document.getElementById('divhtml').insertAdjacentHTML('afterbegin',bljg);
     }
+
+    var items=local_storage_get_b('list_f2f',-1,false);
+    document.getElementById('textarea_backup_f2f').value=items;
 }
 
 function filter_klplan_f2f(){

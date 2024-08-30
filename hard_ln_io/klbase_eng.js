@@ -1301,25 +1301,23 @@ function en_word_temp_batch_add_b(){
 
 function en_words_temp_textarea_b(divname,calljsname=''){
     en_word_temp_get_b();
-    var postpath=postpath_b();
-	var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php?type=enwords_temp" name="form_word_temp" target=_blank>\n';
-    bljg=bljg+'<textarea name="textarea_word_temp" id="textarea_word_temp" style="height:'+(ismobile_b()?'10':'20')+'rem;">'+en_word_temp_get_b('raw')+'</textarea>';
-    bljg=bljg+'<p>';
-    bljg=bljg+close_button_b(divname,'')+' ';
+
+    var left_str='<p>';
+    left_str=left_str+close_button_b(divname,'')+' ';
     if (calljsname!==''){
         calljsname=calljsname+'();';
     }    
-    bljg=bljg+'<span class="aclick" onclick="en_words_temp_update_b(\''+divname+'\');'+calljsname+'">Update</span> ';
-    bljg=bljg+'<span class="aclick" onclick="recent_words_remove_old_date_b(400);'+calljsname+'">清除400天以前的日期标记</span> ';
-    bljg=bljg+textarea_buttons_b('textarea_word_temp','全选,清空,复制,导入temp_txt_share','enwords_temp');    
-    bljg=bljg+'<span class="aclick" onclick="en_words_temp_send_to_txt_b();" title="send to remote temp memo">📤</span> ';
+    left_str=left_str+'<span class="aclick" onclick="en_words_temp_update_b(\''+divname+'\');'+calljsname+'">Update</span> ';
+    left_str=left_str+'<span class="aclick" onclick="recent_words_remove_old_date_b(400);'+calljsname+'">清除400天以前的日期标记</span> ';
+    var right_str='<span class="aclick" onclick="en_words_temp_send_to_txt_b();" title="send to remote temp memo">📤</span> ';
 
-    bljg=bljg+textarea_buttons_b('textarea_word_temp','发送地址','enwords_temp');
-    bljg=bljg+' row: '+en_words_temp_global.length;
-    bljg=bljg+'</p>';    
-    bljg=bljg+'</form>\n';
-    
-    document.getElementById(divname).innerHTML=bljg;
+    right_str=right_str+textarea_buttons_b('textarea_word_temp','发送地址','enwords_temp');
+    right_str=right_str+' row: '+en_words_temp_global.length;
+    right_str=right_str+'</p>';    
+
+    var blstr=textarea_with_form_generate_b('textarea_word_temp','height:'+(ismobile_b()?'10':'20')+'rem;',left_str,'全选,清空,复制,导入temp_txt_share',right_str,'enwords_temp','form_word_temp');
+    document.getElementById('divhtml').innerHTML=blstr;
+    document.getElementById('textarea_word_temp').value=en_word_temp_get_b('raw');
 }
 
 function recent_words_remove_old_date_b(csnum){
