@@ -41,13 +41,13 @@ function local_storage_form_bigfile(){
         idb_bigfile_b('read','','',read_fn_bigfile);
         return;
     }
-    var postpath=postpath_b();
-	var blform='<form method="POST" action="'+postpath+'temp_txt_share.php" target=_blank>\n';
-    
-    var buttons='<span class="aclick" onclick="local_storage_import_b(\'textarea_temp_bigfile\',true);">import data to localStorage</span>';
-    buttons=buttons+'<span class="aclick" onclick="update_temp_txt_share_b(\'enwords_temp\',\'textarea_temp_bigfile\');">更新最近记忆单词</span>',
-    buttons=buttons+textarea_buttons_b('textarea_temp_bigfile','清空,复制,save as txt file,导入temp_txt_share,发送到临时记事本,发送地址,➕');
-    document.getElementById('divhtml').innerHTML=blform+'<textarea name="textarea_temp_bigfile" id="textarea_temp_bigfile" style="height:25rem;"></textarea><p>'+buttons+'</p></form>';
+
+    var left_strings='<p><span class="aclick" onclick="local_storage_import_b(\'textarea_temp_bigfile\',true);">import data to localStorage</span>';
+    left_strings=left_strings+'<span class="aclick" onclick="update_temp_txt_share_b(\'enwords_temp\',\'textarea_temp_bigfile\');">更新最近记忆88单词</span>';
+
+    var blstr=textarea_with_form_generate_b('textarea_temp_bigfile','height:25rem;',left_strings,'清空,复制,save as txt file,导入temp_txt_share,发送到临时记事本,发送地址,➕','</p>');
+
+    document.getElementById('divhtml').innerHTML=blstr;
 }
 
 function first_source_set_bigfile(do_change=true){

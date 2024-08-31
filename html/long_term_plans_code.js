@@ -165,28 +165,27 @@ function backup_lt_plans(){
     }
     
     var items=local_storage_get_b(ltp_ls_name_global,-1,false);
-    var postpath=postpath_b();
+
     var bljg='<div id="div_backup" style="width:90%;margin:0.5rem;">';
     bljg=bljg+'<div id=div_help></div>'
     bljg=bljg+'<p><b>Items:</b></p>';
-    bljg=bljg+'<form method="POST" action="'+postpath+'temp_txt_share.php?type='+ltp_ls_name_global+'" target=_blank>\n';
-    bljg=bljg+'<textarea id="textarea_backup_ltp" name="textarea_backup_ltp" style="width:100%;height:10rem;">'+items+'</textarea>';
-    bljg=bljg+'<p align=right>';
-    bljg=bljg+close_button_b('div_backup','none')+' ';
-    bljg=bljg+'<span class="aclick" onclick="local_storage_view_form_b(\'PIM\',\'div_backup\');">View localStorage(PIM)</span> ';
-    bljg=bljg+'<span class="aclick" onclick="help_lt_plans();">Help</span> ';
-
-    bljg=bljg+'<span class="aclick" onclick="update_lt_plans();">Update</span> ';   
-    bljg=bljg+textarea_buttons_b('textarea_backup_ltp','清空,复制,发送到临时记事本,发送地址',ltp_ls_name_global)+' ';
-    bljg=bljg+'</p>';
-    bljg=bljg+'</form>';
-    bljg=bljg+'</div>';
+    
+    var left_strings='<p align=right>';
+    left_strings=left_strings+close_button_b('div_backup','none')+' ';
+    left_strings=left_strings+'<span class="aclick" onclick="local_storage_view_form_b(\'PIM\',\'div_backup\');">View localStorage(PIM)</span> ';
+    left_strings=left_strings+'<span class="aclick" onclick="help_lt_plans();">Help</span> ';
+    left_strings=left_strings+'<span class="aclick" onclick="update_lt_plans();">Update</span> ';   
+    var right_strings=' </p>';
+    var blstr=textarea_with_form_generate_b('textarea_backup_ltp','width:100%;height:10rem;',left_strings,'清空,复制,发送到临时记事本,发送地址',right_strings,ltp_ls_name_global);
+    
+    bljg=bljg+blstr+'</div>';
     var odiv=document.getElementById('div_backup');
     if (odiv){
         odiv.outerHTML=bljg;
     } else {
         document.getElementById('divhtml').insertAdjacentHTML('afterbegin',bljg);
     }
+    document.getElementById('textarea_backup_ltp').value=items;
 }
 
 function help_lt_plans(){

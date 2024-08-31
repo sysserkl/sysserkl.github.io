@@ -570,6 +570,7 @@ function show_klroutines(ispreweek=false){
     if (bljg.slice(-11,)!=='</ol></div>'){
         bljg=bljg+'</ol></div>';
     }
+    
     if (ispreweek){
         var bltotal=0;
         for (let item of category_list){
@@ -578,15 +579,15 @@ function show_klroutines(ispreweek=false){
         }
         blwiki='=== '+preweek_global[0]+'——'+preweek_global[1]+' ('+bltotal+') ===\n'+blwiki;
         
-        var postpath=postpath_b();
-	    bljg=bljg+'<form method="POST" action="'+postpath+'temp_txt_share.php" name="form_preweek_routines" target=_blank>\n';        
-        bljg=bljg+'<textarea name="textarea_preweek_routines" id="textarea_preweek_routines" style="height:10rem;margin-bottom:0.5rem;" onclick="this.select();document.execCommand(\'copy\');">'+blwiki+'</textarea>';
-        bljg=bljg+'<p style="line-height:2.4rem;">';
-        bljg=bljg+textarea_buttons_b('textarea_preweek_routines','发送到临时记事本,发送地址');
-        bljg=bljg+'</p></form>';
+        var left_strings='<p style="line-height:2.4rem;">';
+        var right_strings='</p>';
+        var blstr=textarea_with_form_generate_b('textarea_preweek_routines','height:10rem;margin-bottom:0.5rem;',left_strings,'发送到临时记事本,发送地址',right_strings,'','form_preweek_routines',true);
+        document.getElementById('divhtml').innerHTML=bljg+blstr;
+        var otextarea=document.getElementById('textarea_preweek_routines').value=blwiki;
+    } else {
+        document.getElementById('divhtml').innerHTML=bljg;
     }
     
-    document.getElementById('divhtml').innerHTML=bljg;
     column_count_switch_klroutines(true);
     
     count_get_klplan_b();

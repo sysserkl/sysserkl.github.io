@@ -228,7 +228,7 @@ function words_queue_split_kle(csstr,cstype='string'){
             break;
         }
     }
-    
+        
     if (error_str==''){
         return [result_t,error_str];
     } else {
@@ -344,16 +344,18 @@ function words_queue_update_kle(do_type='change'){
     }
     
     if (do_type=='change' ){
-        if (selected_word=='NEW WORD' || selected_word==word_t[0]){
-            var blmessage='是否更新('+word_t[0]+')？';
-        } else {
-            var blmessage='是否将单词 '+selected_word+' 修改为 '+word_t[0]+' ？';
-        }
-        
-        if (confirm(blmessage)){
-            localStorage.setItem('enwords_queue',list_t.join('\n'));
-            words_queue_select_kle(word_t[0]);
-            js_alert_b('更新完成','span_queue_words_info');
+        if (word_t.length>0){
+            if (selected_word=='NEW WORD' || selected_word==word_t[0]){
+                var blmessage='是否更新('+word_t[0]+')？';
+            } else {
+                var blmessage='是否将单词 '+selected_word+' 修改为 '+word_t[0]+' ？';
+            }
+            
+            if (confirm(blmessage)){
+                localStorage.setItem('enwords_queue',list_t.join('\n'));
+                words_queue_select_kle(word_t[0]);
+                js_alert_b('更新完成','span_queue_words_info');
+            }
         }
     } else if (do_type=='diff'){
         sub_words_queue_update_kle_diff(old3_list,new3_list);
@@ -408,38 +410,36 @@ function words_editor_form_kle(){
     }
     
     var list_t=words_queue_get_b();
-    var postpath=postpath_b();
     var bljg='';
     bljg=bljg+'\n<select id="select_queue_words" onchange="words_queue_read_one_word_kle(this.value);"></select>\n';
     bljg=bljg+'<span id="span_queue_words_info"></span>';
-    bljg=bljg+'<form method="POST" action="'+postpath+'temp_txt_share.php?type=enwords_queue" name="form_words_queue" target=_blank>\n';
-    bljg=bljg+'<textarea name="textarea_words_queue" id="textarea_words_queue" style="height:20rem;">'+list_t.join('\n')+'</textarea>';
-    bljg=bljg+'<p>';
-    bljg=bljg+'<span class="aclick" onclick="words_queue_update_kle();">更新</span> ';
-    bljg=bljg+'<span class="aclick" onclick="words_queue_update_kle(\'diff\');">diff</span> ';
-    bljg=bljg+'<span class="aclick" onclick="words_queue_append_kle();">批量添加</span> ';
-    bljg=bljg+textarea_buttons_b('textarea_words_queue','全选,清空,复制,导入temp_txt_share,发送到临时记事本,发送地址','enwords_queue')+' ';    
     
-    bljg=bljg+'<select id="select_queue_do_type">';
+    var left_strings='<p>';
+    left_strings=left_strings+'<span class="aclick" onclick="words_queue_update_kle();">更新</span> ';
+    left_strings=left_strings+'<span class="aclick" onclick="words_queue_update_kle(\'diff\');">diff</span> ';
+    left_strings=left_strings+'<span class="aclick" onclick="words_queue_append_kle();">批量添加</span> ';
+        
+    var right_strings=' <select id="select_queue_do_type">';
     for (let item of ['数组转为多行形式','展现为数组形式','batch_en_bo+','batch_en','batch_en_minor']){
-        bljg=bljg+'<option>'+item+'</option>';
+        right_strings=right_strings+'<option>'+item+'</option>';
     }
-    bljg=bljg+'</select> ';
-    bljg=bljg+'<select id="select_iframe_or_close_kle"><option></option><option selected>iframe</option><option>close=1</option></select> '
-    bljg=bljg+'<span class="aclick" onclick="words_queue_do_type_kle();">执行</span> ';    
+    right_strings=right_strings+'</select> ';
+    right_strings=right_strings+'<select id="select_iframe_or_close_kle"><option></option><option selected>iframe</option><option>close=1</option></select> '
+    right_strings=right_strings+'<span class="aclick" onclick="words_queue_do_type_kle();">执行</span> ';    
 
-    bljg=bljg+'<select id="select_queue_insert">';
+    right_strings=right_strings+'<select id="select_queue_insert">';
     for (let item of ['[',']','[,]','] [','(,)','(',')','ə','(ə)','（,）','（','）','〘 , 〙',"'",'ˌ','；']){
-        bljg=bljg+'<option>'+item+'</option>';
+        right_strings=right_strings+'<option>'+item+'</option>';
     }
-    bljg=bljg+'</select> ';
-    bljg=bljg+'<span class="aclick" onclick="words_queue_insert_kle();">插入</span> ';    
-    
-    bljg=bljg+'<a href="lsm.htm?key=enwords_queue" target=_blank>LocalStorage</a> ';
-    bljg=bljg+' 行数：'+list_t.length;    
-    bljg=bljg+'</p>';
-    bljg=bljg+'</form>\n';   
-    bljg=bljg+'<div id="div_words_queue_diff_kle"></div>\n';
+    right_strings=right_strings+'</select> ';
+    right_strings=right_strings+'<span class="aclick" onclick="words_queue_insert_kle();">插入</span> ';    
+    right_strings=right_strings+'<a href="lsm.htm?key=enwords_queue" target=_blank>LocalStorage</a> ';
+    right_strings=right_strings+' 行数：'+list_t.length;    
+    right_strings=right_strings+'</p>';
+
+    var blstr=textarea_with_form_generate_b('textarea_words_queue','height:20rem;',left_strings,'全选,清空,复制,导入temp_txt_share,发送到临时记事本,发送地址',right_strings,'enwords_queue','form_words_queue',false,list_t.join('\n'));
+
+    bljg=bljg+blstr+'<div id="div_words_queue_diff_kle"></div>\n';
     bljg=bljg+'<p>格式：</p><hr />'+['单词1','音标','释义','---','单词2','音标','释义','---'].join('<br />');
     if (enwords.length>=2){
         bljg=bljg+'<br />'+[enwords[0][0],enwords[0][1],enwords[0][2],'---',enwords[1][0],enwords[1][1],enwords[1][2]].join('<br />');
@@ -679,39 +679,25 @@ function old_words_name_list_form_kle(){
     if (ocheck){
         ocheck.checked=true;
     }
-    
-    var postpath=postpath_b();
-    var form_head='<form method="POST" action="'+postpath+'temp_txt_share.php" target=_blank>\n';
-    
+
     var old_list=simple_words_b(false);
     
     var bljg='<h3>全部旧单词列表</h3>';
-    bljg=bljg+form_head;
-    bljg=bljg+'<textarea name="textarea_old_words1_kle" id="textarea_old_words1_kle" style="height:15rem; background-color:'+scheme_global['button']+';" readonly>'+old_list.join('\n')+'</textarea>';
-    bljg=bljg+'<p>'+textarea_buttons_b('textarea_old_words1_kle','全选,清空,复制,发送到临时记事本,发送地址')+'</p>';
-    bljg=bljg+'</form>';
-    
-    bljg=bljg+'<h3>待比较的单词列表</h3>';
-    bljg=bljg+form_head;
-    bljg=bljg+'<textarea name="textarea_old_words2_kle" id="textarea_old_words2_kle" style="height:15rem;"></textarea>';
-    bljg=bljg+'<p><span class="aclick" onclick="old_words_name_list_compare_kle();">比较</span>'+textarea_buttons_b('textarea_old_words2_kle','全选,清空,复制,导入temp_txt_share,发送到临时记事本,发送地址')+'</p>';
-    bljg=bljg+'</form>';
-    
+    bljg=bljg+textarea_with_form_generate_b('textarea_old_words1_kle','height:15rem; background-color:'+scheme_global['button']+';','<p>','全选,复制,发送到临时记事本,发送地址','</p>','','',false,old_list.join('\n'));
+
+    bljg=bljg+'<h3>88待比较的单词列表</h3>';
+    bljg=bljg+textarea_with_form_generate_b('textarea_old_words2_kle','height:15rem;','<p><span class="aclick" onclick="old_words_name_list_compare_kle();">比较</span>','全选,清空,复制,导入temp_txt_share,发送到临时记事本,发送地址','</p>');
+
     bljg=bljg+'<h3>比较结果（全部旧单词列表 有，待比较的单词列表 无）<span id="span_old_words3_kle"></span></h3>';    
-    bljg=bljg+form_head;    
-    bljg=bljg+'<textarea name="textarea_old_words3_kle" id="textarea_old_words3_kle" style="height:15rem;"></textarea>';
-    bljg=bljg+'<p>'+textarea_buttons_b('textarea_old_words3_kle','全选,清空,复制,发送到临时记事本,发送地址')+'</p>';
-    bljg=bljg+'</form>';    
+    bljg=bljg+textarea_with_form_generate_b('textarea_old_words3_kle','height:15rem;','<p>','全选,清空,复制,发送到临时记事本,发送地址','</p>');
     bljg=bljg+'<div id="div_old_words3_kle"></div>';
 
     bljg=bljg+'<h3>比较结果（全部旧单词列表 无，待比较的单词列表 有）<span id="span_old_words4_kle"></span></h3>';    
-    bljg=bljg+form_head;    
-    bljg=bljg+'<textarea name="textarea_old_words4_kle" id="textarea_old_words4_kle" style="height:15rem;"></textarea>';
-    bljg=bljg+'<p>'+textarea_buttons_b('textarea_old_words4_kle','全选,清空,复制,发送到临时记事本,发送地址')+'</p>';    
-    bljg=bljg+'</form>';    
+    bljg=bljg+textarea_with_form_generate_b('textarea_old_words4_kle','height:15rem;','<p>','全选,清空,复制,发送到临时记事本,发送地址','</p>');
     bljg=bljg+'<div id="div_old_words4_kle"></div>';    
     
     document.getElementById('divhtml').innerHTML=bljg;
+    document.getElementById('textarea_old_words1_kle').readOnly=true;
 }
 
 function old_words_name_list_compare_kle(){

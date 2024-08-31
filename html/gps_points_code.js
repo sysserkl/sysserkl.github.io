@@ -9,16 +9,14 @@ function buttons_gps_points(){
     bljg=bljg+'<span id="span_quick_buttons_gpx"></span>';
     bljg=bljg+'<span class="aclick" onclick="close_buttons_gps_points(this);">Close</span> ';
     
-    var postpath=postpath_b();
-    bljg=bljg+'<form method="POST" action="'+postpath+'temp_txt_share.php" name="form_gps_news" target=_blank>\n';
-    bljg=bljg+'<textarea name="textarea_gps_points" id="textarea_gps_points" style="height:20rem;"></textarea>';    
-    bljg=bljg+'<p>';
-    bljg=bljg+'<span class="aclick" onclick="add_current_latlng_gps_points();">添加当前点</span>';
-    bljg=bljg+'<span class="aclick" onclick="save_to_memory_gps_points();">暂存到内存</span>';
-    bljg=bljg+'<span class="aclick" onclick="recover_from_memory_gps_points();">从内存恢复</span>';
-
-    bljg=bljg+textarea_buttons_b('textarea_gps_points','全选,清空,复制,save as gpx file,从 bigfile 导入文件内容,发送到临时记事本,发送地址')+'</p>';
-    bljg=bljg+'</form>\n';    
+    var left_strings='<p>';
+    left_strings=left_strings+'<span class="aclick" onclick="add_current_latlng_gps_points();">添加当88前点</span>';
+    left_strings=left_strings+'<span class="aclick" onclick="save_to_memory_gps_points();">暂存到内存</span>';
+    left_strings=left_strings+'<span class="aclick" onclick="recover_from_memory_gps_points();">从内存恢复</span>';
+    var right_strings='</p>';
+    var blstr=textarea_with_form_generate_b('textarea_gps_points','height:20rem;',left_strings,'全选,清空,复制,save as gpx file,从 bigfile 导入文件内容,发送到临时记事本,发送地址',right_strings,'','form_gps_news');
+    
+    bljg=bljg+blstr+'\n';    
     return bljg;
 }
 

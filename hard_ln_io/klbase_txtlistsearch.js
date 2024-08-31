@@ -667,15 +667,11 @@ function innerHTML_2_arr_kltxt_b(){
         result_t.push('"'+specialstr_j(one_span.innerHTML)+'",');
     }
     
-    var postpath=postpath_b();
-	var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php" target=_blank style="margin-left:0.5rem;">\n';
-    bljg=bljg+'<textarea name="textarea_innerhtml_arr_kltxt" id="textarea_innerhtml_arr_kltxt" style="height:15rem;">var filelist=[\n'+result_t.join('\n')+'\n];\n</textarea>';
-    bljg=bljg+'<p>'+close_button_b('divhtml2','');
-    bljg=bljg+textarea_buttons_b('textarea_innerhtml_arr_kltxt','全选,复制,save as js file,发送到临时记事本,发送地址');
-    bljg=bljg+'</p>';        
-    bljg=bljg+'</form>';
+    var left_strings='<p>'+close_button_b('divhtml2','');
+    var blstr=textarea_with_form_generate_b('textarea_innerhtml_arr_kltxt','height:15rem;',left_strings,'全选,复制,save as js file,发送到临时记事本,发送地址','</p>','','',false,'var filelist=[\n'+result_t.join('\n')+'\n];\n',false,'','aclick',true,'margin:0.5rem');
+
     var odiv=document.getElementById('divhtml2');
-    odiv.innerHTML=bljg;
+    odiv.innerHTML=blstr;
     odiv.scrollIntoView();
 }
 
@@ -3624,9 +3620,8 @@ function selected_range_expand_kltxt_b(do_expand=true,add_to_textarea=false,do_s
 function digest_temp_add_kltxt_b(do_fix=false){
     fix_divhtml2_kltxt_b(false);
     var list_t=local_storage_get_b('digest_temp_txtlistsearch',-1,true);
-    var postpath=postpath_b();
-	var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php" name="form_digest_textarea" target=_blank style="margin-left:0.5rem;">\n';
-    bljg=bljg+'<p id="p_digest_button" style="font-size:0.9rem;line-height:1.5rem;margin-top:0.2rem;">';
+    
+    var bljg='<p id="p_digest_button" style="font-size:0.9rem;line-height:1.5rem;margin:0.5rem;">';
     bljg=bljg+textarea_buttons_b('textarea_digest_txtlistsearch','清空','','','oblong_box');
     bljg=bljg+'<span class="oblong_box" onclick="digest_temp_update_kltxt_b();" title="添加临时摘要">➕</span> ';
     bljg=bljg+'<span class="oblong_box" onclick="digest_temp_jump_to_line_kltxt_b();" title="返回阅读">⤴</span> ';
@@ -3636,17 +3631,16 @@ function digest_temp_add_kltxt_b(do_fix=false){
     bljg=bljg+'<span class="oblong_box" id="span_digest_temp_fix" onclick="fix_divhtml2_kltxt_b(this.innerText==\'固定\',this);">固定</span> '; 
     bljg=bljg+'<span id="span_current_book_temp_digest_count"></span>';     
     bljg=bljg+'</p>';
-    bljg=bljg+'<textarea name="textarea_digest_txtlistsearch" id="textarea_digest_txtlistsearch" style="height:4rem;">';
-    for (let item of list_t){
-        bljg=bljg+'\n';
-    }
-    bljg=bljg+'</textarea>';
-    bljg=bljg+'<p id="p_temp_digest_bottom_buttons" style="font-size:0.9rem;line-height:1.5rem;margin-top:0.2rem;">';
-    bljg=bljg+'<span class="oblong_box" onclick="document.getElementById(\'divhtml2\').innerHTML=\'\';">关闭</span> ';       
-    bljg=bljg+textarea_buttons_b('textarea_digest_txtlistsearch','全选,复制,发送到临时记事本,发送地址','','','oblong_box')+' rows: '+list_t.length+' <span id="span_digest_temp_status"></span></p>';    
-    bljg=bljg+'</form>\n';
+    
+    var left_strings='<p id="p_temp_digest_bottom_buttons" style="font-size:0.9rem;line-height:1.5rem;margin-top:0.2rem;">';
+    left_strings=left_strings+'<span class="oblong_box" onclick="document.getElementById(\'divhtml2\').innerHTML=\'\';">关闭</span> ';       
+    
+    var right_strings=' rows: '+list_t.length+' <span id="span_digest_temp_status"></span></p>';    
+
+    var blstr=textarea_with_form_generate_b('textarea_digest_txtlistsearch','height:4rem;',left_strings,'全选,复制,发送到临时记事本,发送地址',right_strings,'','form_digest_textarea',false,'',false,'','oblong_box',true,'margin:0.5rem');  //'\n'.repeat(list_t.length)
+
     var odiv=document.getElementById('divhtml2');
-    odiv.innerHTML=bljg;
+    odiv.innerHTML=bljg+blstr;
     mouseover_mouseout_oblong_span_b(odiv.querySelectorAll('span.oblong_box'));
 
     var str_t=klmenu_hide_b('');

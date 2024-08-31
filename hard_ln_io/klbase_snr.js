@@ -327,15 +327,13 @@ function fav_link_title_klsnews_b(ospan){
 function fav_show_klsnews_b(){
     var fav_selenews=(localStorage.getItem('fav_selenews') || '').trim();
     
-    var postpath=postpath_b();
-	var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php" name="form_selenium_fav" target=_blank>\n';
-    bljg=bljg+'<textarea name="textarea_selenium_fav" id="textarea_selenium_fav" style="width:95%;height:20rem;" onclick="this.select();document.execCommand(\'copy\');">'+fav_selenews+'</textarea>';
-    bljg=bljg+'<p><span class="aclick" onclick="fav_clear_klsnews_b();">Clear</span> ';
-    bljg=bljg+textarea_buttons_b('textarea_selenium_fav','发送到临时记事本,发送地址')+' rows: '+fav_selenews.split('\n').length;
+    var left_strings='<p><span class="aclick" onclick="fav_clear_klsnews_b();">Clear</span> ';
+    var right_strings=' rows: '+fav_selenews.split('\n').length+'</p>\n';
+    
+    var blstr=textarea_with_form_generate_b('textarea_selenium_fav','width:95%;height:20rem;',left_strings,'发送到临时记事本,发送地址',right_strings,'','form_selenium_fav',true,fav_selenews);
 
-    bljg=bljg+'</p></form>\n';
     document.getElementById('divhtml').innerHTML='';
-    document.getElementById('divhtml2').innerHTML=bljg;
+    document.getElementById('divhtml2').innerHTML=blstr;
 }
 
 function fav_clear_klsnews_b(){
@@ -1162,19 +1160,16 @@ function buttons_klsnews_b(){
     document.getElementById('div_show_hide').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(button_more,'block','0','','div_menu_checkboxes'));
 }
 
-function keywords_form_klsnews_b(){
-    var odiv=document.getElementById('div_selenium_keywords');
-    var postpath=postpath_b();
-	var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php" name="form_selenium_keywords" target=_blank>\n';
-    bljg=bljg+'<textarea name="textarea_selenium_keywords" id="textarea_selenium_keywords"></textarea>';
-    bljg=bljg+'<p>格式：按英文逗号间隔，不支持空格或换行 ';
-    bljg=bljg+'<span class="aclick" onclick="keywords_read_klsnews_b();">读取</span> ';
-    bljg=bljg+'<span class="aclick" onclick="keywords_update_klsnews_b();">更新</span> ';   
-    bljg=bljg+textarea_buttons_b('textarea_selenium_keywords','发送到临时记事本,发送地址');    
+function keywords_form_klsnews_b(){   
+    var left_strings='<p>格式：按英文逗号间隔，不支持空格或换行 ';
+    left_strings=left_strings+'<span class="aclick" onclick="keywords_read_klsnews_b();">读取</span> ';
+    left_strings=left_strings+'<span class="aclick" onclick="keywords_update_klsnews_b();">更新</span> ';   
+    var right_strings='</p>';
+    
+    var blstr=textarea_with_form_generate_b('textarea_selenium_keywords','',left_strings,'发送到临时记事本,发送地址',right_strings,'','form_selenium_keywords');
 
-    bljg=bljg+'</p>';
-    bljg=bljg+'</form>';
-    odiv.innerHTML=bljg;
+    var odiv=document.getElementById('div_selenium_keywords');
+    odiv.innerHTML=blstr;
     keywords_read_klsnews_b();
 }
 

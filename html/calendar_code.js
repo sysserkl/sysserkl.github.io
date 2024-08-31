@@ -524,18 +524,17 @@ function tr_days_klcalendar(otable){
 
 function memo_form_klcalendar(){
     var memo_list=local_storage_get_b('memo_klcalendar',-1,true);
-    var postpath=postpath_b();
-	var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php" name="form_memo_klcalendar" target=_blank>\n';
-    bljg=bljg+'<textarea name="textarea_memo_klcalendar" id="textarea_memo_klcalendar" style="height:20rem;font-size:1.1rem;">'+memo_list.join('\n')+'</textarea>';
-    bljg=bljg+'<p>';
-    bljg=bljg+'<span class="aclick" style="font-size:1.5rem;" onclick="document.getElementById(\'div_memo\').innerHTML=\'\';">Close</span> ';    
-    bljg=bljg+'<span class="aclick" style="font-size:1.5rem;" onclick="memo_update_klcalendar();">Update</span> ';    
-    bljg=bljg+textarea_buttons_b('textarea_memo_klcalendar','清空,复制,发送到临时记事本,发送地址','',' style="font-size:1.5rem;"');
-    bljg=bljg+' 行数：<span id="span_line_count">'+memo_list.length+'</span>';
-    bljg=bljg+'</p>';
-    bljg=bljg+'</form>';
+
+    var left_strings='<p>';
+    left_strings=left_strings+'<span class="aclick" style="font-size:1.5rem;" onclick="document.getElementById(\'div_memo\').innerHTML=\'\';">Close</span> ';    
+    left_strings=left_strings+'<span class="aclick" style="font-size:1.5rem;" onclick="memo_update_klcalendar();">Update</span> ';    
+    var right_strings=' 行88数：<span id="span_line_count">'+memo_list.length+'</span>';
+    right_strings=right_strings+'</p>';
+    
+    var blstr=textarea_with_form_generate_b('textarea_memo_klcalendar','height:20rem;font-size:1.1rem;',left_strings,'清空,复制,发送到临时记事本,发送地址',right_strings,'','form_memo_klcalendar',false,memo_list.join('\n'),false,' style="font-size:1.5rem;"');
+
     var omemo=document.getElementById('div_memo');
-    omemo.innerHTML=bljg;
+    omemo.innerHTML=blstr;
     omemo.scrollIntoView();
 }
 

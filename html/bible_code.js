@@ -941,20 +941,17 @@ function fav_one_book_bible(startline,endline){
 
 function fav_export_import_form_bible(){
     var fav_list=fav_get_bible();
-    var postpath=postpath_b();
-	var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php?type=fav_lines_bible" name="form_fav_bible" target=_blank>\n';
-    bljg=bljg+'<textarea name="textarea_fav_bible" id="textarea_fav_bible" style="height:20rem;">#'+fav_list.join('#\n#')+'#</textarea>';
-    bljg=bljg+'<p>';
-    bljg=bljg+close_button_b('div_search_statistics','')+' ';        
-    bljg=bljg+'<span class="aclick" onclick="fav_update_bible();">Update</span> ';    
-    bljg=bljg+'<span class="aclick" onclick="local_storage_view_form_b(\'\',\'div_search_statistics\');">查看 localStorage</span> ';
+    var left_strings='<p>';
+    left_strings=left_strings+close_button_b('div_search_statistics','')+' ';        
+    left_strings=left_strings+'<span class="aclick" onclick="fav_update_bible();">Update</span> ';    
+    left_strings=left_strings+'<span class="aclick" onclick="local_storage_view_form_b(\'\',\'div_search_statistics\');">查看 localStorage</span> ';
+    //var right_strings='<div id="div_word_temp" style="display:inline;">';
+    var right_strings=' 行数：'+fav_list.length;
+    right_strings=right_strings+'</p>';
+    
+    var blstr=textarea_with_form_generate_b('textarea_fav_bible','height:20rem;',left_strings,'清空,复制,发送到临时记事本,发送地址,save as txt file',right_strings,'fav_lines_bible','form_fav_bible','','#'+fav_list.join('#\n#')+'#');
 
-    bljg=bljg+textarea_buttons_b('textarea_fav_bible','清空,复制,发送到临时记事本,save as txt file');
-    bljg=bljg+'<div id="div_word_temp" style="display:inline;">';
-    bljg=bljg+textarea_buttons_b('textarea_fav_bible','发送地址','fav_lines_bible')+' 行数：'+fav_list.length+'</div>';
-    bljg=bljg+'</p>';
-    bljg=bljg+'</form>';
-    document.getElementById('div_search_statistics').innerHTML=bljg;
+    document.getElementById('div_search_statistics').innerHTML=blstr;
 }
 
 function help_bible(){

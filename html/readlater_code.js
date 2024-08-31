@@ -309,17 +309,15 @@ function span_subtitle_rlater(){
 
 function tags_editor_rlater(){
     var bltags=local_storage_get_b('keywords_selenium',-1,false);
-    var postpath=postpath_b();
-	var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php?keywords_selenium" name="form_tags_readlater" target=_blank>\n';    
-    bljg=bljg+'<p>输入关键字，以英文逗号或回车换行隔开：</p>';
-    bljg=bljg+'<p><textarea name="textarea_tags_readlater" id="textarea_tags_readlater" style="height:10rem;">'+bltags+'</textarea></p>';
-    bljg=bljg+'<p>'
-    bljg=bljg+'<span class="aclick" onclick="tags_update_rlater();">Update</span> ';
-    
-    bljg=bljg+textarea_buttons_b('textarea_tags_readlater','清空,复制,发送到临时记事本,发送地址','keywords_selenium');
 
-    bljg=bljg+'</p></form>';
-    div_column_count_rlater(bljg);
+    var bljg='<p>输入关88键字，以英文逗号或回车换行隔开：</p>';
+    
+    var left_strings='<p>'
+    left_strings=left_strings+'<span class="aclick" onclick="tags_update_rlater();">Update</span> ';
+    var right_strings='</p>';
+    var blstr=textarea_with_form_generate_b('textarea_tags_readlater','height:10rem;',left_strings,'清空,复制,发送到临时记事本,发送地址',right_strings,'keywords_selenium','form_tags_readlater',false,bltags);
+    
+    div_column_count_rlater(bljg+blstr);
 }
 
 function tags_update_rlater(){
@@ -358,16 +356,13 @@ function fav_update_rlater(){
 function fav_show_rlater(){
     var fav_sites=local_storage_get_b('fav_sites_rlater',-1,false);
 
-    var postpath=postpath_b();
-	var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php" name="form_fav_readlater" target=_blank>\n';
-    bljg=bljg+'<textarea name="textarea_fav_readlater" id="textarea_fav_readlater" style="height:20rem;">'+fav_sites+'</textarea>';
-    bljg=bljg+'<p>';
-    bljg=bljg+'<span class="aclick" onclick="fav_update_rlater();">Update</span> ';
-    bljg=bljg+'<span class="aclick" onclick="fav_clear_rlater();">Clear</span> ';
-    bljg=bljg+textarea_buttons_b('textarea_fav_readlater','复制,发送到临时记事本,发送地址')+' rows: '+fav_sites.split('\n').length;
+    var left_strings='<p>';
+    left_strings=left_strings+'<span class="aclick" onclick="fav_update_rlater();">Update</span> ';
+    left_strings=left_strings+'<span class="aclick" onclick="fav_clear_rlater();">Clear</span> ';
+    var right_strings=' rows: '+fav_sites.split('\n').length+'</p>\n';
 
-    bljg=bljg+'</p>\n</form>\n';
-    
+    var bljg=textarea_with_form_generate_b('textarea_fav_readlater','height:20rem;',left_strings,'复制,发送到临时记事本,发送地址',right_strings,'','form_fav_readlater',false,fav_sites);
+
     bljg=bljg+'<textarea onclick="this.select();document.execCommand(\'copy\');">=== '+date2str_b('')+' ===</textarea>\n'
     div_column_count_rlater(bljg);
 }

@@ -46,29 +46,19 @@ function data_export_csv_ysh_jf(){
 }
 
 function data_export_form_ysh_jf(){   
-    var bljg='';
     var islocal=is_local_b();
-    if (islocal){
-        var postpath=postpath_b();
-	    bljg=bljg+'<form method="POST" action="'+postpath+'temp_txt_share.php" target=_blank style="margin-left:0.5rem;">\n';
-    }
     
-    bljg=bljg+'<textarea name="textarea_ysh_jf" id="textarea_ysh_jf" style="height:15rem;"></textarea>';
-    bljg=bljg+'<p>';
+    var left_strings='<p>';
+    left_strings=left_strings+'<span class="aclick" onclick="data_load_current_ysh_jf();">显示当前数据</span>';
+    left_strings=left_strings+'<span class="aclick" onclick="data_import_ysh_jf();">导入当前数据到 indexeddb 数据库</span>';
+    left_strings=left_strings+'<span class="aclick" onclick="data_export_csv_ysh_jf();">导出当前数据为 csv</span>';
     
-    bljg=bljg+'<span class="aclick" onclick="data_load_current_ysh_jf();">显示当前数据</span>';
-    bljg=bljg+'<span class="aclick" onclick="data_import_ysh_jf();">导入当前数据到 indexeddb 数据库</span>';
-    bljg=bljg+'<span class="aclick" onclick="data_export_csv_ysh_jf();">导出当前数据为 csv</span>',    
-    
-    bljg=bljg+textarea_buttons_b('textarea_ysh_jf','全选,清空,复制,save as txt file'+(islocal?',发送到临时记事本,发送地址':''));
-    bljg=bljg+'</p>';        
-    
-    if (islocal){
-        bljg=bljg+'</form>';
-    }
+    var right_strings='</p>';        
+
+    var blstr=textarea_with_form_generate_b('textarea_ysh_jf','height:15rem;',left_strings,'全选,清空,复制,save as txt file'+(islocal?',发送到临时记事本,发送地址':''),right_strings,'','',false,'',false,'','aclick',islocal);
     
     var odiv=document.getElementById('divhtml');
-    odiv.innerHTML=bljg;
+    odiv.innerHTML=blstr;
 }
 
 function data_import_ysh_jf(){

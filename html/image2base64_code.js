@@ -209,7 +209,6 @@ function init_klbase64(){
     
     var postpath=postpath_b();
     document.querySelector('form[name="form_original_klbase64"]').setAttribute('action', postpath+'temp_txt_share.php');
-
     document.querySelector('form[name="form_result_klbase64"]').setAttribute('action', postpath+'temp_txt_share.php');
 }
 
@@ -230,13 +229,12 @@ function filter_form_klbase64(){
 }
 
 function modified_form_klbase64(caption){
-    var postpath=postpath_b();
-	var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php" target=_blank>\n';
-    return bljg+'<p style="line-height:1.8rem;"><b>'+caption+' Image Base64 Data:</b>'+textarea_buttons_b('textarea_base64_modified','清空,复制,save as txt file,发送到临时记事本,发送地址','','','oblong_box')+`
-<span class="oblong_box" onclick="rows_klbase64('textarea_base64_modified',50);">Split Data to 50 rows</span>
-<span class="oblong_box" onclick="replace_klbase64('textarea_base64_modified');">replace the original image</span>
-</p>
-<textarea name="textarea_base64_modified" id="textarea_base64_modified"></textarea>`+'</form>';
+    var left_strings='<p style="line-height:1.8rem;"><b>'+caption+' Image Base64 Data:</b>';
+    var right_strings=' <span class="oblong_box" onclick="rows_klbase64(\'textarea_base64_modified\',50);">Split Data to 50 rows</span> ';
+    right_strings=right_strings+'<span class="oblong_box" onclick="replace_klbase64(\'textarea_base64_modified\');">replace the original image</span> ';
+    right_strings=right_strings+'</p>';
+    var blstr=textarea_with_form_generate_b('textarea_base64_modified','',left_strings,'清空,复制,save as txt file,发送到临时记事本,发送地址',right_strings,'','',false,'',true,'','oblong_box');
+    return blstr;
 }
 
 function replace_klbase64(textarea_id){

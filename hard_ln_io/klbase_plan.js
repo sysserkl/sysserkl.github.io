@@ -297,18 +297,16 @@ function form_list_klplan_b(csarray,cstype,plan_id,update_fn_name){
     for (let item of csarray){
         list_plans.push(item.join(' '));
     }
-    
-    var postpath=postpath_b();
-	var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php?type=list_'+cstype+'" name="form_list_'+cstype+'" target=_blank>\n';
-    bljg=bljg+'<textarea name="textarea_list_'+cstype+'" id="textarea_list_'+cstype+'" style="width:90%;height:24rem;">'+list_plans.join('\n')+'</textarea>';
-    bljg=bljg+'<p>';
-    bljg=bljg+close_button_b('divhtml2','')+' ';
-    bljg=bljg+'<span class="aclick" onclick="local_storage_view_form_b(\'PIM\',\'divhtml2\');">View localStorage(PIM)</span> ';
-    bljg=bljg+'<span class="aclick" onclick="filter_klplan_b(\'textarea_list_'+cstype+'\',this);">Filter</span> ';    
-    bljg=bljg+'<span class="aclick" onclick="'+update_fn_name+'(\'textarea_list_'+cstype+'\',\''+plan_id+'\');">Update</span> ';
-    bljg=bljg+textarea_buttons_b('textarea_list_'+cstype,'清空,复制,发送到临时记事本,发送地址','list_'+cstype)+' rows: <span id="span_rows_klplan">'+list_plans.length+'</span>';
-    bljg=bljg+'</p></form>';
-    
+        
+    var left_strings='<p>';
+    left_strings=left_strings+close_button_b('divhtml2','')+' ';
+    left_strings=left_strings+'<span class="aclick" onclick="local_storage_view_form_b(\'PIM\',\'divhtml2\');">View localStorage(PIM)</span> ';
+    left_strings=left_strings+'<span class="aclick" onclick="filter_klplan_b(\'textarea_list_'+cstype+'\',this);">Filter</span> ';    
+    left_strings=left_strings+'<span class="aclick" onclick="'+update_fn_name+'(\'textarea_list_'+cstype+'\',\''+plan_id+'\');">Update</span> ';
+    var right_strings=' rows: <span id="span_rows_klplan">'+list_plans.length+'</span></p>';
+
+    var bljg=textarea_with_form_generate_b('textarea_list_'+cstype,'width:90%;height:24rem;',left_strings,'清空,复制,发送到临时记事本,发送地址',right_strings,'list_'+cstype,'form_list_'+cstype,false,list_plans.join('\n'));
+
     bljg=bljg+'<p><textarea id="textarea_filter_items_klplan" style="display:none;" onclick="this.select();document.execCommand(\'copy\');"></textarea></p>\n';
     
     bljg=bljg+"<p><b>1.</b> 格式：id 分类 名称 <b>2.</b> id必须唯一，名称可重复 <b>3. </b>忽略元素个数小于3的行 <b>4.</b> 如果前3个元素之一开头为#，则忽略</p>";
@@ -359,16 +357,16 @@ function filter_klplan_b(textarea_id,ospan=false){
 
 function form_done_klplan_b(cstype,done_id,update_fn_name){
     var done_list=local_storage_get_b(done_id,-1,false);
-    var postpath=postpath_b();
-	var bljg='<form method="POST" action="'+postpath+'temp_txt_share.php?type=done_'+cstype+'" name="form_done_'+cstype+'" target=_blank>\n';
-    bljg=bljg+'<textarea name="textarea_done_'+cstype+'" id="textarea_done_'+cstype+'" style="width:90%;height:24rem;">'+done_list+'</textarea>';
-    bljg=bljg+'<p>';
-    bljg=bljg+close_button_b('divhtml2','')+' ';
-    bljg=bljg+'<span class="aclick" onclick="local_storage_view_form_b(\'done_PIM\',\'divhtml2\');">View localStorage(done_PIM)</span> ';        
-    bljg=bljg+'<span class="aclick" onclick="'+update_fn_name+'(\'textarea_done_'+cstype+'\',\''+done_id+'\',false);">Update done items</span> ';
-    bljg=bljg+textarea_buttons_b('textarea_done_'+cstype,'清空,复制,发送到临时记事本,发送地址','done_'+cstype)+' rows: '+done_list.split('\n').length;
-    bljg=bljg+'</p></form>';
-    document.getElementById('divhtml2').innerHTML=bljg;
+
+    var left_strings='<p>';
+    left_strings=left_strings+close_button_b('divhtml2','')+' ';
+    left_strings=left_strings+'<span class="aclick" onclick="local_storage_view_form_b(\'done_PIM\',\'divhtml2\');">View localStorage(done_PIM)</span> ';        
+    left_strings=left_strings+'<span class="aclick" onclick="'+update_fn_name+'(\'textarea_done_'+cstype+'\',\''+done_id+'\',false);">Update done items</span> ';
+    var right_strings=' rows: '+done_list.split('\n').length+'</p>';
+    
+    var blstr=textarea_with_form_generate_b('textarea_done_'+cstype,'width:90%;height:24rem;',left_strings,'清空,复制,发送到临时记事本,发送地址',right_strings,'done_'+cstype,'form_done_'+cstype,false,done_list);
+
+    document.getElementById('divhtml2').innerHTML=blstr;
 }
 
 function edit_item_klplan_b(csarray,plan_id,csid){

@@ -1581,6 +1581,7 @@ function enwords_different_types_div_b(cswlist,add_form=false,textarea_id='',tex
         buttons='<p>'+buttons+'</p>';
     }
     blstr=blstr+buttons;
+    
     if (add_form){
         blstr=blstr+'</form>\n';
     }
@@ -1709,11 +1710,9 @@ function enwords_different_types_result_b(cslist,onetextarea){
             textarea_id='textarea_enwords_different_types_'+blxl+'_'+Math.round(Math.random()*9999);
             if (!document.getElementById(textarea_id)){break;}
         }
-        var postpath=postpath_b();
-	    var blform='<form method="POST" action="'+postpath+'temp_txt_share.php" target=_blank>\n';
-        bljg=firstword+blform+'<br /><textarea name="'+textarea_id+'" id="'+textarea_id+'" style="height:20rem;">'+bljg.trim()+'</textarea>';
-        bljg=bljg+'<p>'+textarea_buttons_b(textarea_id,'全选,清空,复制,发送到临时记事本,发送地址')+'</p>';
-        bljg=bljg+'</form>'; 
+
+        var blstr=textarea_with_form_generate_b(textarea_id,'height:20rem;','<p>','全选,清空,复制,发送到临时记事本,发送地址','</p>','','',false,bljg.trim());
+        bljg=firstword+blstr;
     }
     return bljg;
 }

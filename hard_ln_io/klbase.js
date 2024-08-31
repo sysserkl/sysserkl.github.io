@@ -1663,27 +1663,43 @@ function remote_ip_detector_b(host_left_part,csmin,csmax,do_alert=false){
     sub_remote_ip_detector_b_one_step(false);
 }
 
-function textarea_with_form_generate_b(textarea_id,textarea_style='',left_strings='',common_buttons='',right_strings='',form_type='',form_name=''){
-	var bljg='<form method="POST" action="'+postpath_b()+'temp_txt_share.php'+(form_type==''?'':'?type='+form_type)+'"'+(form_name==''?'':' name="'+form_name+'"')+' target=_blank>\n';
-    bljg=bljg+'<textarea name="'+textarea_id+'" id="'+textarea_id+'" style="'+textarea_style+'"></textarea>';
-    bljg=bljg+left_strings;
-    bljg=bljg+textarea_buttons_b(textarea_id,common_buttons,form_type);
-    bljg=bljg+right_strings;
-    bljg=bljg+'</form>';
+function textarea_with_form_generate_b(textarea_id,textarea_style='',left_strings='',common_buttons='',right_strings='',form_type='',form_name='',enable_copy=false,textarea_value='',button_first=false,button_style='',span_class='aclick',add_form=true,form_style=''){
+    var bljg='';
+    if (add_form){
+        bljg=bljg+'<form method="POST" action="'+postpath_b()+'temp_txt_share.php'+(form_type==''?'':'?type='+form_type)+'"'+(form_name==''?'':' name="'+form_name+'"')+(form_style==''?'':' style="'+form_style+'"')+' target=_blank>\n';
+    }
+    
+    var textarea_str='<textarea name="'+textarea_id+'" id="'+textarea_id+'" style="'+textarea_style+'"'+(enable_copy?' onclick="this.select();document.execCommand(\'copy\');"':'')+'>'+textarea_value+'</textarea>';
+    
+    var buttons_str=left_strings;
+    buttons_str=buttons_str+textarea_buttons_b(textarea_id,common_buttons,form_type,button_style,span_class);
+    buttons_str=buttons_str+right_strings;
+    
+    if (button_first){
+        bljg=bljg+buttons_str+textarea_str;
+    } else {
+        bljg=bljg+textarea_str+buttons_str;
+    }
+
+    if (add_form){
+        bljg=bljg+'</form>';
+    }
     return bljg;
 }
 
-function local_storage_view_form_b(keytype='',csid=''){
-	var bljg='<form method="POST" action="'+postpath_b()+'temp_txt_share.php" name="form_backup_localstorage" target=_blank>\n';
-    bljg=bljg+'<textarea name="textarea_backup_localstorage" id="textarea_backup_localstorage" style="height:20rem;">'+local_storage_all_b('',keytype)[0]+'</textarea>';
-    bljg=bljg+'<p>';
-    bljg=bljg+'<span class="aclick" onclick="document.getElementById(\''+csid+'\').innerHTML=\'\';">Close</span> ';
-    bljg=bljg+'<span class="aclick" onclick="local_storage_import_b(\'textarea_backup_localstorage\',true);">导入 localStorage</span> ';
-    bljg=bljg+textarea_buttons_b('textarea_backup_localstorage','清空,复制,发送到临时记事本,发送地址');
-    bljg=bljg+'</p></form>';
+function local_storage_view_form_b(keytype='',csid=''){    
+    var left_strings='<p>';
+    left_strings=left_strings+'<span class="aclick" onclick="document.getElementById(\''+csid+'\').innerHTML=\'\';">Close</span> ';
+    left_strings=left_strings+'<span class="aclick" onclick="local_storage_import_b(\'textarea_backup_localstorage\',true);">导入 localStorage</span> ';
+
+    var blstr=textarea_with_form_generate_b('textarea_backup_localstorage','height:20rem;',left_strings,'清空,复制,发送到临时记事本,发送地址',right_strings,'','form_backup_localstorage');
+
+    var right_strings='</p>';
+    '</form>';
     var obj=document.getElementById(csid);
     if (obj){
-        obj.innerHTML=bljg;
+        obj.innerHTML=blstr;
+        obj.querySelector('#textarea_backup_localstorage').value=local_storage_all_b('',keytype)[0];
     }
 }
 
@@ -2913,6 +2929,7 @@ function standalone_search_funs_b(cstitle='Search Standalone',cscontent='',diy_f
 +'<title>🔎 '+cstitle+'</title>'
 +`<meta charset="UTF-8" />
 <script>
+//js函数插入处
 `+fun_2_string_b(fns)+'\n\n'+search_standalone.toString()+'\n\n'+page_standalone.toString()+'\n\n'+locate_standalone.toString()+'\n\n'+highlight_standalone.toString()+'\n\n'+jump_standalone.toString()+'\n\n'+type_standalone.toString()+'\n\n'+th_columns_set_standalone.toString()
 +`
 </script>

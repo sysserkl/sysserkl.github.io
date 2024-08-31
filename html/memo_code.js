@@ -121,26 +121,29 @@ function backup_lt_klmemo(){
     var items=local_storage_get_b('list_klmemo',-1,false);
     var postpath=postpath_b();
     var bljg='<div id="div_backup" style="width:90%;margin:0.5rem;">';
+    
     bljg=bljg+'<div id=div_help></div>'
     bljg=bljg+'<p><b>Items:</b></p>';
-    bljg=bljg+'<form method="POST" action="'+postpath+'temp_txt_share.php?type=list_klmemo" target=_blank>\n';
-    bljg=bljg+'<textarea id="textarea_backup_memo" name="textarea_backup_memo" style="width:100%;height:10rem;">'+items+'</textarea>';
-    bljg=bljg+'<p>';
-    bljg=bljg+close_button_b('div_backup','none')+' ';
-    bljg=bljg+'<span class="aclick" onclick="local_storage_view_form_b(\'PIM\',\'div_backup\');">查看 localStorage(PIM系列)</span> ';
-    bljg=bljg+'<span class="aclick" onclick="help_lt_klmemo();">Help</span> ';
+    
+    var left_strings='<p>';
+    left_strings=left_strings+close_button_b('div_backup','none')+' ';
+    left_strings=left_strings+'<span class="aclick" onclick="local_storage_view_form_b(\'PIM\',\'div_backup\');">查看 localStorage(PIM系列)</span> ';
+    left_strings=left_strings+'<span class="aclick" onclick="help_lt_klmemo();">Help</span> ';
 
-    bljg=bljg+'<span class="aclick" onclick="update_lt_klmemo();">Update</span> ';   
-    bljg=bljg+textarea_buttons_b('textarea_backup_memo','清空,复制,发送到临时记事本,发送地址','list_klmemo')+' ';
-    bljg=bljg+'</p>';
-    bljg=bljg+'</form>';
-    bljg=bljg+'</div>';
+    left_strings=left_strings+'<span class="aclick" onclick="update_lt_klmemo();">Update</span> ';   
+    var right_strings=' </p>';
+
+    var blstr=textarea_with_form_generate_b('textarea_backup_memo','width:100%;height:10rem;',left_strings,'清空,复制,发送到临时记事本,发送地址',right_strings,'list_klmemo','');
+
+    bljg=bljg+blstr+'</div>';
+    
     var odiv=document.getElementById('div_backup');
     if (odiv){
         odiv.outerHTML=bljg;
     } else {
         document.getElementById('divhtml').insertAdjacentHTML('afterbegin',bljg);
     }
+    document.getElementById('textarea_backup_memo').value=items;
 }
 
 function help_lt_klmemo(){

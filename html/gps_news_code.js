@@ -7,12 +7,9 @@ function buttons_gps_news(){
     bljg=bljg+'<input type="text" id="input_day_start_gps_news" placeholder="开始日期，格式如：20210525"> ';
     bljg=bljg+'<input type="text" id="input_day_end_gps_news" placeholder="结束日期，格式如：20210525"> ';
     bljg=bljg+'<span class="aclick" onclick="this.parentNode.parentNode.style.display=\'none\';">Close</span> ';
-    
-    var postpath=postpath_b();
-    bljg=bljg+'<form method="POST" action="'+postpath+'temp_txt_share.php" name="form_gps_news" target=_blank>\n';
-    bljg=bljg+'<textarea name="textarea_gps_news" id="textarea_gps_news" style="height:20rem;"></textarea>';    
-    bljg=bljg+'<p>'+textarea_buttons_b('textarea_gps_news','全选,清空,复制,发送到临时记事本,发送地址')+'</p>';
-    bljg=bljg+'</form>\n';
+        
+    bljg=bljg+textarea_with_form_generate_b('textarea_gps_news','height:20rem;','<p>','全选,清空,复制,发送到临时记事本,发送地址','222</p>','','form_gps_news');
+
     return bljg;
 }
 
