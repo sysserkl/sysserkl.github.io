@@ -15,3 +15,4 @@ jsdata/gpx_pb/*
 jsdata/words/lexico_data.zip
 jsdata/map/district_cn_geo_polygon_data.zip
 jsdata/words/xinhua_data.zip
+jsdata/wbus[0-9]_data.js

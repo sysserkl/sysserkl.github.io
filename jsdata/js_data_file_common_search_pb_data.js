@@ -22,6 +22,6 @@ var js_file_list_common_pb_global=[
 ['../jsdata/cnbond_data.js','💰','cnbond','cnbond_global','cnbond','','1'],
 ['../jsdata/cmpedu_data.js','🗜','cmpedu','cmpedu_global','cmpedu','','1'],
 ['../jsdata/corruption_ccdi_data.js','🇨🇳','corruption ccdi','corruption_global','corruption','','1'],
-['../jsdata/wbus1_data.js','📟','wbus','wbus_global','wbus','','1'],
+['../jsdata/wbus1_data.js','📟','wbus','wbus_global','wbus','','0'],
 
 ];
