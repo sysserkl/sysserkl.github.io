@@ -310,7 +310,7 @@ function span_subtitle_rlater(){
 function tags_editor_rlater(){
     var bltags=local_storage_get_b('keywords_selenium',-1,false);
 
-    var bljg='<p>输入关88键字，以英文逗号或回车换行隔开：</p>';
+    var bljg='<p>输入关键字，以英文逗号或回车换行隔开：</p>';
     
     var left_strings='<p>'
     left_strings=left_strings+'<span class="aclick" onclick="tags_update_rlater();">Update</span> ';

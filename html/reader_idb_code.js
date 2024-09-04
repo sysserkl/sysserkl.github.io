@@ -487,7 +487,7 @@ function write_reader_idb(db,filename,cslist){
 
 function count_reader_idb(db){
     function sub_count_reader_idb_onsuccess(cscount){
-        document.title='IDB现有22记录 '+cscount+' 条';
+        document.title='IDB现有记录 '+cscount+' 条';
     }
     //-----------------------
     return idb_count_b(db,'reader_txt_dbf',sub_count_reader_idb_onsuccess);

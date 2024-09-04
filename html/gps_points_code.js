@@ -10,7 +10,7 @@ function buttons_gps_points(){
     bljg=bljg+'<span class="aclick" onclick="close_buttons_gps_points(this);">Close</span> ';
     
     var left_strings='<p>';
-    left_strings=left_strings+'<span class="aclick" onclick="add_current_latlng_gps_points();">添加当88前点</span>';
+    left_strings=left_strings+'<span class="aclick" onclick="add_current_latlng_gps_points();">添加当前点</span>';
     left_strings=left_strings+'<span class="aclick" onclick="save_to_memory_gps_points();">暂存到内存</span>';
     left_strings=left_strings+'<span class="aclick" onclick="recover_from_memory_gps_points();">从内存恢复</span>';
     var right_strings='</p>';
