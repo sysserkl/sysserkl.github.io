@@ -1704,7 +1704,11 @@ function local_storage_view_form_b(keytype='',csid=''){
 }
 
 function local_storage_import_b(textarea_id,sucess_alert=false){
-    var otextarea=document.getElementById(textarea_id);
+    if (typeof textarea_id == 'string'){
+        var otextarea=document.getElementById(textarea_id);
+    } else {
+        otextarea=textarea_id;
+    }
     if (!otextarea){return false;}
     
     var blstr=otextarea.value.trim();
