@@ -85,18 +85,47 @@ function box_linkgame(top_left=false,empty_tip=true){
 }
 
 function click_linkgame(otd){
-    //if (otd.style.borderColor==selected_color_lg_global || otd.style.borderColor=='red'){
+    function sub_click_linkgame_check(otd){
+        if (selected_td_lg_global===false || selected_td_lg_global.textContent!==otd.textContent){
+            selected_td_lg_global.style.borderColor='#e0e0e0';
+            selected_td_lg_global=otd;
+            return;
+        }
+        
+        if (compare_linkgame(selected_td_lg_global,otd.id,true)===false){
+            sub_click_linkgame_remove(otd,selected_td_lg_global);
+        } else {
+            if (selected_td_lg_global!==false){
+                selected_td_lg_global.style.borderColor='#e0e0e0';
+            }
+            selected_td_lg_global=otd;
+        }
+    }
+    
+    function sub_click_linkgame_remove(otd1,otd2){
+        for (let odom of [otd1,otd2]){
+            odom.innerHTML=blank_symbol_lg_global;
+            odom.removeAttribute('onclick');
+            odom.style.borderColor='#e0e0e0';
+            odom.style.cursor='';
+            odom.style.visibility='hidden';
+        }
+
+        selected_td_lg_global=false;
+        
+        recombine_times_lg_global=0;
+        resolve_linkgame();
+    }
+
     if (selected_td_lg_global==otd){
         otd.style.borderColor='#e0e0e0';
-        //if (selected_td_lg_global==otd){//.id){
-        selected_td_lg_global=false; //'';
-        //}
+        selected_td_lg_global=false;
     } else {
         otd.style.borderColor='red';
-        if (selected_td_lg_global===false){//''){
-            selected_td_lg_global=otd;//.id;
+        if (selected_td_lg_global===false){
+            selected_td_lg_global=otd;
         } else {
-            check_linkgame(otd);
+            sub_click_linkgame_check(otd);
         }
     }
 }
@@ -199,6 +228,7 @@ function remain_linkgame(){
 }
 
 function blank_linkgame(csrow,cscol){
+    //csrow,cscol 左上角空白坐标为 -1,-1 - 保留注释
     var otd=document.getElementById('td_'+csrow+'_'+cscol);
     if (!otd){return false;}
     return otd.textContent==blank_symbol_lg_global; //当 visibility:hidden 时 innerText 为空 - 保留注释
@@ -206,12 +236,12 @@ function blank_linkgame(csrow,cscol){
 }
 
 function between_linkgame(td1,td2){
-    if (td1[0]!==td2[0] && td1[1]!==td2[1]){return true;}
+    if (td1[0]!==td2[0] && td1[1]!==td2[1]){return true;}   //不在同一行且不在同一列 - 保留注释
 
     var odom1=document.getElementById('td_'+td1[0]+'_'+td1[1]);
     var odom2=document.getElementById('td_'+td2[0]+'_'+td2[1]);
     if (!odom1 || !odom2){return true;}
-    if (odom1.textContent!==odom2.textContent && odom1.textContent!==blank_symbol_lg_global && odom2.textContent!==blank_symbol_lg_global){return true;}
+    if (odom1.textContent!==odom2.textContent && odom1.textContent!==blank_symbol_lg_global && odom2.textContent!==blank_symbol_lg_global){return true;}    //非空且不等 - 保留注释
 
     if (td1[0]==td2[0]){
         for (let blxl=Math.min(td1[1],td2[1])+1;blxl<Math.max(td1[1],td2[1]);blxl++){
@@ -256,19 +286,31 @@ function neighbour_list_linkgame(cstd){
     return result_t;  
 }
 
-function neighbour_route_linkgame(td1,td2){
-    var blfound=true;
+function neighbour_route_linkgame(td1,td2,show_line){
+    var blfound=between_linkgame(td1,td2);
+    if (blfound===false){
+        line_draw_linkgame([td1,td2],show_line);
+        return false;
+    }
+    
+    blfound=true;
     var list_t1=neighbour_list_linkgame(td1);
     for (let item of list_t1){
         blfound=between_linkgame(item,td2);
-        if (blfound===false){break;}
+        if (blfound===false){
+            line_draw_linkgame([td1,item,td2],show_line);
+            break;
+        }
     }
     
     if (blfound){
         var list_t2=neighbour_list_linkgame(td2);
         for (let item of list_t2){
             blfound=between_linkgame(td1,item);
-            if (blfound===false){break;}
+            if (blfound===false){
+                line_draw_linkgame([td1,item,td2],show_line);
+                break;
+            }
         }
     }
     
@@ -276,7 +318,10 @@ function neighbour_route_linkgame(td1,td2){
         for (let item1 of list_t1){
             for (let item2 of list_t2){
                 blfound=between_linkgame(item1,item2);
-                if (blfound===false){break;}
+                if (blfound===false){
+                    line_draw_linkgame([td1,item1,item2,td2],show_line);
+                    break;
+                }
             }
             if (blfound===false){break;}
         }
@@ -284,25 +329,34 @@ function neighbour_route_linkgame(td1,td2){
     return blfound;
 }
 
-function check_linkgame(otd){
-    //var prev_td=document.getElementById(selected_td_lg_global);
-    if (selected_td_lg_global===false || selected_td_lg_global.textContent!==otd.textContent){   //prev_td
-        selected_td_lg_global.style.borderColor='#e0e0e0';
-        selected_td_lg_global=otd;//.id;
-        return;
-    }
+function line_draw_linkgame(csarr,show_line){
+    if (!show_line || klmenu_check_b('span_show_line_lg',false)===false){return;}
     
-    if (compare_linkgame(selected_td_lg_global,otd.id)===false){
-        remove_linkgame(otd,selected_td_lg_global);
-    } else {
-        if (selected_td_lg_global!==false){
-            selected_td_lg_global.style.borderColor='#e0e0e0';
-        }
-        selected_td_lg_global=otd;//.id;        
+    var td_list=[];
+    for (let item of csarr){
+        var one_td=document.getElementById('td_'+item[0]+'_'+item[1]);
+        td_list.push(dom_center_xy_get_b(one_td));
+    }
+
+    var x1,y1,x2,y2;
+    for (let blxl=0,lent=td_list.length-1;blxl<lent;blxl++){
+        // 获取线段元素
+        [x1,y1]=td_list[blxl];
+        [x2,y2]=td_list[blxl+1];
+        // 计算两个点之间的距离和角度
+        var length = Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2); // 线段长度
+        var angle = Math.atan2(y2 - y1, x2 - x1) * 180 / Math.PI; // 线段角度
+
+        var oline = document.createElement('line');
+        oline.setAttribute('class','line_linkgame');
+        document.body.appendChild(oline);
+
+        oline.style.cssText='position: absolute; left:'+x1+'px; top:'+y1+'px; background-color: black; width:'+length+'px; transform: rotate('+angle+'deg);';
+        console.log(oline);
     }
 }
 
-function compare_linkgame(td1,td2){
+function compare_linkgame(td1,td2,show_line=false){
     if (td1===false){return false;}
     if (typeof td1 !== 'string'){
         td1=td1.id;
@@ -314,25 +368,8 @@ function compare_linkgame(td1,td2){
     td1[1]=parseInt(td1[1]);
     td2[0]=parseInt(td2[0]);
     td2[1]=parseInt(td2[1]);
-    var blfound=between_linkgame(td1,td2);
     
-    if (blfound===false){return false;}
-    return neighbour_route_linkgame(td1,td2);   
-}
-
-function remove_linkgame(otd1,otd2){
-    for (let odom of [otd1,otd2]){
-        odom.innerHTML=blank_symbol_lg_global;
-        odom.removeAttribute('onclick');
-        odom.style.borderColor='#e0e0e0';
-        odom.style.cursor='';
-        odom.style.visibility='hidden';
-    }
-
-    selected_td_lg_global=false;//'';
-    
-    recombine_times_lg_global=0;
-    resolve_linkgame();
+    return neighbour_route_linkgame(td1,td2,show_line);   
 }
 
 function table_size_linkgame(){
@@ -420,6 +457,7 @@ function menu_linkgame(){
     '<span class="span_menu" onclick="'+str_t+'type_lg_global=\'cn\';box_linkgame();">汉字</span>',
     '<span id="span_show_tip_lg" class="span_menu" onclick="'+str_t+'tip_linkgame();">⚪ 连续提示</span>',
     '<span class="span_menu" onclick="'+str_t+'tip_linkgame(true);">提示一次</span>',
+    '<span id="span_show_line_lg" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 连线</span>',
     '<span class="span_menu" onclick="'+str_t+'resize_linkgame();">resize</span>',
     ];
 

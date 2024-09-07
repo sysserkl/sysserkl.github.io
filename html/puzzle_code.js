@@ -50,7 +50,7 @@ function draw_puzzle(){
                 row_str='';
             }
         }
-        str_t=str_t+'<td align=center valign=middle onclick="td_border_puzzle(this)" style="padding:0;margin:0;">';
+        str_t=str_t+'<td align=center valign=middle onclick="td_border_puzzle(this)">';
         str_t=str_t+'<canvas id="canvas_'+pieces[blxl]['row']+'_'+pieces[blxl]['col']+'" width="'+pieceWidth2_puzzle_global+'" height="'+pieceHeight2_puzzle_global+'"></canvas>';
         str_t=str_t+'</td>';
         row_str=row_str+str_t;

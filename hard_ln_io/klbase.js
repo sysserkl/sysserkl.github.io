@@ -4131,3 +4131,89 @@ function upload_files_to_list_b(input_id,run_fn=false,csext='',csmax_count=10,cs
     var result_t=[];
     sub_upload_files_to_list_b_one_step();
 }
+
+function search_key_split_b(cswordlist=[]){
+    var reg_error=false;
+
+    if (cswordlist.length==0){
+        var oinput=document.getElementById('input_search');
+        if (!oinput){return [reg_error,[]];}
+        
+        var cswordlist=oinput.value.trim();
+    }
+    
+    if (typeof cswordlist == 'string'){
+        if (cswordlist.slice(-4,)=='(:r)'){
+            cswordlist=cswordlist.slice(0,-4);
+        }
+        if (cswordlist==''){return [reg_error,[]];}
+        cswordlist=cswordlist.split(' ');
+    }
+
+    var blkey=[];
+    for (let item of cswordlist){
+        if (Array.isArray(item)){
+            blkey=blkey.concat(item);
+            continue;
+        }
+        if (item.substring(0,1)=='-'){continue;}
+        
+        if (item.substring(0,1)=='+'){
+            item=item.substring(1,);
+        }
+        if (item.substring(0,1)=='(' && item.slice(-1)==')'){
+            item=item.slice(1,-1);
+        }
+        item=item.replace(/\.\*|\||\.\+|\[|\]/g,' ');
+        blkey=blkey.concat(item.split(' '));
+    }
+    blkey=array_unique_b(blkey);
+    
+    var blkey2=[];
+    for (let item of blkey){
+        if (item.trim()==''){continue;}
+        item=item.replace(/\\s/g,' ');
+        if (item.includes('\\') || item.includes('(') || item.includes(')')){
+            console.log('忽略',item);
+            continue;
+        }
+        blkey2.push(item);
+    }
+    
+    for (let one_key of blkey2){
+        try {
+            var bltmp=''.replace(new RegExp(one_key,'g'),'');
+        } catch (error){
+            console.log(error.message); //此行保留 - 保留注释
+            reg_error=true;
+            break;
+        }
+    }
+    return [reg_error,blkey2];
+}
+
+function arr_key_includes_sort_b(csarr,key_list,colno=-1){
+    var t0 = performance.now();
+
+    if (key_list.length==0){return csarr;}
+
+    var result_t=[];
+    for (let arow of csarr){
+        if (colno==-1){
+            var bltext=arow.toString();
+        } else {
+            var bltext=arow[colno].toString();
+        }
+        var blcount=0;
+        for (let one_key of key_list){
+            if (bltext.includes(one_key)){
+                blcount=blcount+1;
+            }
+        }
+        result_t.push([arow,blcount]);
+    }
+    result_t.sort(function(a,b){return a[1]<b[1]?1:-1;});   //逆序 - 保留注释
+    result_t=array_split_by_col_b(result_t,[0]);
+    console.log('arr_key_includes_sort_b()',key_list,'费时：'+(performance.now() - t0) + ' milliseconds');
+    return result_t;
+}

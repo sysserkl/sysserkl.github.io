@@ -233,6 +233,7 @@ function menu_common(){
     klmenu_config=klmenu_config.concat([
     '<span class="span_menu" onclick="'+str_t+'th_set_common();">设定表格列名称</span>',
     '<span class="span_menu" onclick="'+str_t+'upload_data_files_form_common();">上传数据文件</span>',
+    '<span class="span_menu" onclick="'+str_t+'sort_by_key_count_common();">当前条件按关键词出现次数排序</span>',    
     ]);
     
     if (!is_standalone_html_file_global){
@@ -269,6 +270,10 @@ function menu_common(){
     if (data_file_jscm_global!==''){
         recent_common();
     }
+}
+
+function sort_by_key_count_common(){
+    js_data_current_common_search_global=arr_key_includes_sort_b(js_data_current_common_search_global,search_key_split_b()[1],0);
 }
 
 function upload_data_files_form_common(){

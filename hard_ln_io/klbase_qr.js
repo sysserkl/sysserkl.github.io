@@ -19,7 +19,7 @@ function utf16to8_qr_b(csstr){
     return bljg;
 }
 
-function create_qr_b(jquery_obj,cstext='just for fun',qrsize=400,qrfcolor='',qrbcolor='',csencode=false,cstype='table'){
+function create_qr_b(jquery_obj,cstext='just for fun',qrsize=400,qrfcolor='',qrbcolor='',csencode=false,cstype='table',cscorrect_level=3){
 	if (csencode){
 		cstext=encodeURIComponent(cstext);
 	}
@@ -30,8 +30,11 @@ function create_qr_b(jquery_obj,cstext='just for fun',qrsize=400,qrfcolor='',qrb
 	if (qrbcolor=='' || qrbcolor=='-1'){
 		qrbcolor=rndcolor_b();
 	}
-
-    jquery_obj.qrcode({render: cstype,correctLevel : 3, background:qrbcolor,foreground: qrfcolor, width: qrsize,height: qrsize,text: utf16to8_qr_b(cstext)});
+    try {        
+        jquery_obj.qrcode({render: cstype,correctLevel : cscorrect_level, background:qrbcolor,foreground: qrfcolor, width: qrsize,height: qrsize,text: utf16to8_qr_b(cstext)});
+    } catch (error){
+        console.log(error.toString());  //Error: code length overflow. (13332>13328) - 保留注释
+    }
 }
 
 function round_qr_b(csid){

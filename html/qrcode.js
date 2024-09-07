@@ -274,21 +274,15 @@ function reverse_klqr(){
 	create_klqr();
 }
 
-function create_klqr(csstr=''){
-	document.getElementById('div_qrcode').innerHTML='';
-    document.getElementById('div_statistics').innerHTML='';
-    document.getElementById('div_tail_buttons_klqr').style.display='none';
-	var qrsize=parseInt(document.getElementById('input_qrsize').value.trim());
-    
+function parameter_get_klqr(csstr=''){
     var oinput=document.getElementById('input_qrtxt');
     if (csstr==''){
 	    csstr=oinput.value.trim();
     }
     oinput.value=csstr;
-    
-    if (klmenu_check_b('span_encode_klqr',false)){
-		csstr=encodeURIComponent(csstr);
-	}
+
+	var qrsize=parseInt(document.getElementById('input_qrsize').value.trim());
+
     if (klmenu_check_b('span_table_klqr',false)){
         var blrender='table';
 	} else {
@@ -297,9 +291,34 @@ function create_klqr(csstr=''){
     
     var qrfcolor,qrbcolor,f_rgb,b_rgb;
     [qrfcolor,qrbcolor,f_rgb,b_rgb]=color_get_klqr().slice(0,2);
+    return [csstr,qrsize,blrender,qrfcolor,qrbcolor,f_rgb,b_rgb];
+}
 
-    $('#div_qrcode').qrcode({render: blrender,correctLevel : correct_level_klqr(true), background:qrbcolor,foreground: qrfcolor, width: qrsize,height: qrsize,text: utf16to8_qr_b(csstr)});
+function create_klqr(csstr=''){
+	document.getElementById('div_qrcode').innerHTML='';
+    document.getElementById('div_statistics').innerHTML='';
+    document.getElementById('div_tail_buttons_klqr').style.display='none';
+	//var qrsize=parseInt(document.getElementById('input_qrsize').value.trim());
     
+    //var oinput=document.getElementById('input_qrtxt');
+    //if (csstr==''){
+	    //csstr=oinput.value.trim();
+    //}
+    //oinput.value=csstr;
+    
+    //if (klmenu_check_b('span_table_klqr',false)){
+        //var blrender='table';
+	//} else {
+        //var blrender='canvas';
+    //}
+    
+    //var qrfcolor,qrbcolor,f_rgb,b_rgb;
+    //[qrfcolor,qrbcolor,f_rgb,b_rgb]=color_get_klqr().slice(0,2);
+   
+    var qrsize,blrender,qrfcolor,qrbcolor,f_rgb,b_rgb;
+    [csstr,qrsize,blrender,qrfcolor,qrbcolor,f_rgb,b_rgb]=parameter_get_klqr(csstr);
+    
+    create_qr_b($('#div_qrcode'),csstr,qrsize,qrfcolor,qrbcolor,klmenu_check_b('span_encode_klqr',false),blrender,correct_level_klqr(true));
     canvas2img_klqr(qrfcolor);  
     
     if (!parameter_klqr_global.has('iframe')){
@@ -567,14 +586,53 @@ function menu_klqr(){
 
     var klmenu2=[
     '<span class="span_menu" onclick="'+str_t+'hide_show_div_img_upload_klqr_klqr();">背景图片</span>',
+    '<span class="span_menu" onclick="'+str_t+'batch_form_klqr();">文本分割批量QR</span>',
+    '<span class="span_menu">文本分割每份字符数：<input type="number" id="input_batch_split_max_len_klqr" min=0 value=300 /></span>',
     '<span class="span_menu">保存图片类型：<select  id="select_canvas_save_type"><option>jpeg</option><option>png</option></select></span>',    
     '<span id="span_img_border" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ img border</span>',        
     '<span class="span_menu" onclick="'+str_t+'help_klqr();">help</span>',
     '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'qrcode\');">更新版本</span>',    
     ];
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','11rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'⚙','15rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','11rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'⚙','19rem','1rem','1rem','60rem'),'','0rem')+' ');
     //klmenu_check_b('span_table_klqr'); //此行保留 - 保留注释
+    
+    var input_list=[['input_batch_split_max_len_klqr',4,0.5],];
+    input_size_b(input_list,'id');
+}
+
+function batch_form_klqr(){    
+    var left_strings='<p>'+close_button_b('div_content_klqr','');
+    left_strings=left_strings+'<span class="aclick" onclick="batch_split_klqr();">分割生成</span>';
+    var blstr=textarea_with_form_generate_b('textarea_split_klqr','height:15rem;',left_strings,'全选,复制,导入temp_txt_share,发送到临时记事本,发送地址','</p>');
+
+    var odiv=document.getElementById('div_content_klqr');
+    odiv.innerHTML=blstr;
+    odiv.scrollIntoView();
+}
+
+function batch_split_klqr(){
+    var max_len=parseInt(document.getElementById('input_batch_split_max_len_klqr').value.trim());
+    var blstr,qrsize,blrender,qrfcolor,qrbcolor,f_rgb,b_rgb;
+    [blstr,qrsize,blrender,qrfcolor,qrbcolor,f_rgb,b_rgb]=parameter_get_klqr('');
+    var is_encode=klmenu_check_b('span_encode_klqr',false);
+    
+    var blcontent=document.getElementById('textarea_split_klqr').value.trim();
+    var list_t=[];
+    var odiv=document.getElementById('div_qrcode');
+    odiv.innerHTML='';
+    
+    var blxl=0;
+    while (true){
+        var current_str=blcontent.slice(0,max_len);
+        if (current_str==''){break;}
+        
+        blcontent=blcontent.slice(max_len,);
+        var sub_div=div_table_2_cols_b(blxl.toString().padStart(2, '0'),'td_batch_klqr_'+blxl,qrsize);
+        odiv.insertAdjacentHTML('beforeend',sub_div);
+        create_qr_b($('#td_batch_klqr_'+blxl),current_str,qrsize,qrfcolor,qrbcolor,is_encode,blrender,correct_level_klqr(true));
+        blxl=blxl+1;
+    }
 }
 
 function help_klqr(){

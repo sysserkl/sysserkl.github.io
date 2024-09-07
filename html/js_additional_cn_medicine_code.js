@@ -7,16 +7,6 @@ function col_rearrange_cn_medicine(){
     return list_t;
 }
 
-function col_name_get_cn_medicine(){
-    var col_names=new Set();
-    for (let arow of cn_medicine_raw_global){
-        for (let key in arow[1]){
-            col_names.add(key);
-        }
-    }
-    console.log(col_names); //此行保留 - 保留注释
-}
-
 function img_replace_cn_medicine(csstr){
     while (true){
         var blfound=false;
@@ -33,7 +23,17 @@ function img_replace_cn_medicine(csstr){
 }
 
 function data_load_cn_medicine(){
-    col_name_get_cn_medicine(); //供验证用 - 保留注释
+    function sub_data_load_cn_medicine_col_name(){
+        var col_names=new Set();
+        for (let arow of cn_medicine_raw_global){
+            for (let key in arow[1]){
+                col_names.add(key);
+            }
+        }
+        console.log(col_names); //此行保留 - 保留注释
+    }
+
+    sub_data_load_cn_medicine_col_name(); //供验证用 - 保留注释
     
     table_th_jscm_global={'药名':'','处方':'','功能与主治':'','用法与用量':'','贮藏':'','性味与归经':'','性味':'','禁忌':''};
     var col_names=new Set(Object.keys(table_th_jscm_global));
@@ -55,14 +55,23 @@ function data_load_cn_medicine(){
     cn_medicine_raw_global=result_t;
 }
 
+function names_get_cn_medicine(){
+    var result_t=array_split_by_col_b(js_data_current_common_search_global,[0]);
+    result_t=array_split_by_col_b(result_t,[0]);
+    var odiv=document.getElementById('div_status_common');
+    var blbutton=close_button_b('div_status_common','','aclick');
+    odiv.innerHTML='<p>'+result_t.join(' ')+'</p>'+blbutton;
+    odiv.scrollIntoView();
+}
+
 function menu_more_cn_medicine(){    
     var str_t=klmenu_hide_b('');
     var col_name_list=Object.keys(table_th_jscm_global);
 
     var klmenu1=[
     klmenu_select_sort_b('select_sort_type_jsad_cn_medicine',col_name_list,str_t,'sort_cn_medicine'),
-
     '<span class="span_menu" onclick="'+str_t+'statistics_ingredient_cn_medicine();">当前条件处方用药统计</span>',    
+    '<span class="span_menu" onclick="'+str_t+'names_get_cn_medicine();">当前结果药名列表</span>',    
     ];
     return klmenu_b(klmenu1,'🏥','14rem','1rem','1rem','30rem');
 }
