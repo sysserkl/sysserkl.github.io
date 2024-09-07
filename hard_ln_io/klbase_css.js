@@ -1740,7 +1740,7 @@ function root_font_size_menu_b(csstr='',font_menu=true,full_screen_menu=true,rem
         list_t.push('<span class="span_menu" onclick="'+csstr+'kl_remote_host_address_b();">set form post address</span>');
     }
     if (location_href_menu){
-        list_t.push('<span class="span_menu" onclick="'+csstr+'window.open(location.href);">location.href</span>');
+        list_t.push('<span class="span_menu" onclick="'+csstr+'window.open(location.href);copy_2_clipboard_b(location.href);">location.href</span>');   //移动端复制失败 - 保留注释
     }
     if (fn_source_textarea_id!==''){
         list_t.push('<span class="span_menu" onclick="'+csstr+'fun_soruce_show_b(\''+fn_source_textarea_id+'\');">function source</span>');        

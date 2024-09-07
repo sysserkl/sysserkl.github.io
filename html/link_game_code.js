@@ -331,7 +331,7 @@ function neighbour_route_linkgame(td1,td2,show_line){
 
 function line_draw_linkgame(csarr,show_line){
     if (!show_line || klmenu_check_b('span_show_line_lg',false)===false){return;}
-    
+        
     var td_list=[];
     for (let item of csarr){
         var one_td=document.getElementById('td_'+item[0]+'_'+item[1]);
@@ -339,6 +339,7 @@ function line_draw_linkgame(csarr,show_line){
     }
 
     var x1,y1,x2,y2;
+    var line_list=[];
     for (let blxl=0,lent=td_list.length-1;blxl<lent;blxl++){
         // 获取线段元素
         [x1,y1]=td_list[blxl];
@@ -346,13 +347,22 @@ function line_draw_linkgame(csarr,show_line){
         // 计算两个点之间的距离和角度
         var length = Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2); // 线段长度
         var angle = Math.atan2(y2 - y1, x2 - x1) * 180 / Math.PI; // 线段角度
-
+        console.log(x1,y1,x2,y2,length,angle);
         var oline = document.createElement('line');
         oline.setAttribute('class','line_linkgame');
         document.body.appendChild(oline);
 
-        oline.style.cssText='position: absolute; left:'+x1+'px; top:'+y1+'px; background-color: black; width:'+length+'px; transform: rotate('+angle+'deg);';
-        console.log(oline);
+        oline.style.cssText='position: absolute; left:'+x1+'px; top:'+y1+'px; background-color: '+scheme_global['a']+'; width: '+length+'px; height:1px; transform-origin: 0 0; transform: rotate('+angle+'deg);';
+        line_list.push(oline);
+    }
+    setTimeout(function (){line_remove_linkgame(line_list);},2000);
+}
+
+function line_remove_linkgame(line_list){
+    for (let one_line of line_list){
+        if (one_line){
+            one_line.outerHTML='';
+        }
     }
 }
 
@@ -473,6 +483,7 @@ function menu_linkgame(){
     
     var input_list=[['input_percent_linkgame',5,0.5],];
     input_size_b(input_list,'id');
+    klmenu_check_b('span_show_line_lg',true);        
 }
 
 function scheme_change_linkgame(item){
