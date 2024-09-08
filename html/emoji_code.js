@@ -15,7 +15,7 @@ function search_emoji(){
                 if (blfound==-1){break;}
                 
                 if (blfound){
-                    bljg=bljg+'<p><span class="span_no">'+(blcount+1)+'. </span>'+item[0]+'<span class="span_no"> => </span>'+item[1]+'</p>';
+                    bljg=bljg+'<p>'+img_name_generate_emoji(blcount+1,item)+'</p>';
                     blcount=blcount+1;
                     if (blcount>=20000){break;}
                 }
@@ -84,10 +84,14 @@ function one_chapter_emoji(sub_category=''){
     var bljg=[];
     var blno=1;
     for (let item of list_t){
-        bljg.push('<p><span class="span_no">'+blno+'. </span>'+item[0]+'<span class="span_no"> => </span>'+item[1]+'</p>');
+        bljg.push('<p>'+img_name_generate_emoji(blno,item)+'</p>');
         blno=blno+1;
     }
     document.getElementById('divhtml_category').innerHTML=bljg.join('\n');
+}
+
+function img_name_generate_emoji(csno,item){
+    return '<span class="span_no">'+csno+'. </span><span class="span_emoji_img">'+item[0]+'</span><span class="span_no"> => </span><span class="span_emoji_name">'+item[1]+'</span>';
 }
 
 function menu_emoji(){
@@ -95,6 +99,7 @@ function menu_emoji(){
     var klmenu1=[
     '<span id="span_reg_emoji" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 正则</span>',         
     '<span class="span_menu" onclick="'+str_t+'unicode_overlape_search_emoji();">重叠码</span>',             
+    '<span class="span_menu" onclick="'+str_t+'js_arr_generate_emoji();">复制当前页emoji为js数组</span>',             
     ];
     
     var klmenu_link=[
@@ -104,9 +109,19 @@ function menu_emoji(){
     '<a href="https://symbl.cc/en/" onclick="'+str_t+'" target=_blank>SYMBL (◕‿◕)</a>',        
     ];
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🎁️','11rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L️','11rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🎁️','15rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L️','11rem','1rem','1rem','60rem'),'','0rem')+' ');
     
     klmenu_check_b('span_reg_emoji',true);
+}
+
+function js_arr_generate_emoji(){
+    var odoms=document.querySelectorAll('div.div_unicode, span.span_emoji_img');
+    var result_t=[];
+    for (let one_dom of odoms){
+        result_t.push('\''+one_dom.textContent+'\'');
+    }
+    copy_2_clipboard_b(result_t.join(','));
+    alert('done');
 }
 
 function init_emoji(){

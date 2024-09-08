@@ -1653,7 +1653,7 @@ function emoji_category_b(cstype,csno=false){
         list_t=list_t.concat(['🍞','🥐','🥖','🥨','🥯','🥞','🧇','🧀','🍖','🍗','🥩','🥓','🍔','🍟','🍕','🌭','🥪','🌮','🌯','🥙','🧆','🥚','🍳','🥘','🍲','🥣','🥗','🍿','🧈','🧂','🥫','🍱','🍘','🍙','🍚','🍛','🍜','🍝','🍠','🍢','🍣','🍤','🍥','🥮','🍡','🥟','🥠','🥡','🦀','🦞','🦐','🦑','🦪','🍦','🍧','🍨','🍩','🍪','🎂','🍰','🧁','🥧','🍫','🍬','🍭','🍮','🍯','🍼','🥛','☕','🍵','🍶','🍾','🍷','🍸','🍹','🍺','🍻','🥂','🥃','🥤','🧃','🧉']);
     }
     if (cstype.includes('animal')){
-        list_t=list_t.concat(['🐀','🐁','🐂','🐃','🐄','🐅','🐆','🐇','🐈','🐉','🐊','🐋','🐌','🐍','🐎','🐏','🐐','🐑','🐒','🐓','🐔','🐕','🐖','🐗','🐘','🐙','🐚','🐛','🐜','🐝','🐞','🐟','🐠','🐡','🐢','🐣','🐤','🐥','🐦','🐧','🐨','🐩','🐪','🐫','🐬','🐭','🐮','🐯','🐰','🐱','🐲','🐳','🐴','🐵','🐶','🐷','🐸','🐹','🐺','🐻','🐼','🐽','🐾','🐿']);
+        list_t=list_t.concat(['🦧','🐀','🐁','🐂','🐃','🐄','🐅','🐆','🐇','🐈','🐈‍⬛','🐉','🐊','🐋','🐌','🐍','🐎','🐏','🐐','🐑','🐒','🐓','🐔','🐕','🐕‍🦺','🐖','🐗','🐘','🐙','🐚','🐛','🐜','🐝','🐞','🐟','🐠','🐡','🐢','🐣','🐤','🐥','🐦','🐧','🐨','🐩','🐪','🐫','🐬','🐭','🐮','🐯','🐰','🐱','🐲','🐳','🐴','🐵','🐶','🐷','🐸','🐹','🐺','🐻','🐻‍❄️','🐼','🐽','🐾','🐿','🕊','🕷','🕸','🦁','🦂','🦃','🦄','🦅','🦆','🦇','🦈','🦉','🦊','🦋','🦌','🦍','🦎','🦏']);
     }
     if (cstype.includes('transport')){
         list_t=list_t.concat(['🚀','🚁','🚂','🚃','🚄','🚅','🚆','🚇','🚈','🚉','🚊','🚋','🚌','🚍','🚎','🚏','🚐','🚑','🚒','🚓','🚔','🚕','🚖','🚗','🚘','🚙','🚚','🚛','🚜','🚝','🚞','🚟','🚠','🚡','🚢','🚣','🚤','🚥','🚦','🚧','🚨','🚲','🚳','🚴','🚵','🚶','🚷','🚸']);
@@ -2049,7 +2049,6 @@ function character_2_icon_b(csstr,cssize=24,line_width=5,mobile_style=true,chang
         if (blno_end % 2 == 0){
             dash_list[0]=[2,2];
             dash_list[2]=[2,2];
-            //ctx.setLineDash([2,2]);
         }
         selected_color[0]=color_list[blno_end % color_list.length];
         selected_color[2]=color_list[blno_end % color_list.length];
@@ -2057,15 +2056,11 @@ function character_2_icon_b(csstr,cssize=24,line_width=5,mobile_style=true,chang
         if (blno_second % 2 == 0){
             dash_list[1]=[2,2];
             dash_list[3]=[2,2];
-            //ctx.setLineDash([2,2]);
         }
         selected_color[1]=color_list[blno_second % color_list.length];
         selected_color[3]=color_list[blno_second % color_list.length];
-        
-        //ctx.strokeStyle = color_list[blno_end % color_list.length];
-        
+                
         //ctx.rect(0, 0, cssize,cssize); //绘制矩形，参数分别为左上角x坐标、y坐标、宽度、高度 - 保留注释
-        //ctx.stroke();
         canvas_box_with_4_lines_b(ocanvas,ctx,selected_color,dash_list);
         ctx.globalAlpha = 1;
     }
