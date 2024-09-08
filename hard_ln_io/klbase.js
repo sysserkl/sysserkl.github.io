@@ -1406,7 +1406,12 @@ function service_worker_delete_b(appname='',file_key='',confirm_str='是否更�
     }
     
     function sub_service_worker_delete_b_one_key(){
-        if (key_no>=key_len){return;}
+        if (key_no>=key_len){
+            if (!is_all && file_key==''){   //在删除app后，再删除base - 保留注释
+                service_worker_delete_b('','base','是否清理base函数？',show_type,show_id);
+            }
+            return;
+        }
         
         var one_key=key_list[key_no];
         key_no=key_no+1;
