@@ -176,6 +176,7 @@ function resolve_linkgame(){
 }
 
 function recombine_linkgame(remain_list){
+    line_remove_linkgame();
     var blank_list=[];
     var blcount=rows_lg_global*cols_lg_global-remain_list.length;
     for (let blxl=0;blxl<blcount;blxl++){
@@ -211,7 +212,7 @@ function recombine_linkgame(remain_list){
         }
         blxl=blxl+1;
     }
-    selected_td_lg_global=false;//'';
+    selected_td_lg_global=false;
 }
 
 function remain_linkgame(){
@@ -331,7 +332,8 @@ function neighbour_route_linkgame(td1,td2,show_line){
 
 function line_draw_linkgame(csarr,show_line){
     if (!show_line || klmenu_check_b('span_show_line_lg',false)===false){return;}
-        
+    line_remove_linkgame();
+    
     var td_list=[];
     for (let item of csarr){
         var one_td=document.getElementById('td_'+item[0]+'_'+item[1]);
@@ -345,7 +347,7 @@ function line_draw_linkgame(csarr,show_line){
         [x1,y1]=td_list[blxl];
         [x2,y2]=td_list[blxl+1];
         // 计算两个点之间的距离和角度
-        var length = Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2); // 线段长度
+        var length = Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2); // 线段长度 - 保留注释
         var angle = Math.atan2(y2 - y1, x2 - x1) * 180 / Math.PI; // 线段角度
         var oline = document.createElement('line');
         oline.setAttribute('class','line_linkgame');
@@ -357,7 +359,10 @@ function line_draw_linkgame(csarr,show_line){
     setTimeout(function (){line_remove_linkgame(line_list);},2000);
 }
 
-function line_remove_linkgame(line_list){
+function line_remove_linkgame(line_list=false){
+    if (line_list===false){
+        line_list=document.querySelectorAll('line.line_linkgame');
+    }
     for (let one_line of line_list){
         if (one_line){
             one_line.outerHTML='';
