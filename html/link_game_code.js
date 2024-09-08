@@ -76,7 +76,7 @@ function box_linkgame(top_left=false,empty_tip=true){
         otable.style.left=(window_w-rect.width)/2+'px';
         otable.style.top=(window_h-rect.height)/2+'px';
     }
-    selected_td_lg_global=false;    //'';
+    selected_td_lg_global=false;
     if (empty_tip){
         document.getElementById('span_tip').innerHTML='';
     }
@@ -347,7 +347,6 @@ function line_draw_linkgame(csarr,show_line){
         // 计算两个点之间的距离和角度
         var length = Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2); // 线段长度
         var angle = Math.atan2(y2 - y1, x2 - x1) * 180 / Math.PI; // 线段角度
-        console.log(x1,y1,x2,y2,length,angle);
         var oline = document.createElement('line');
         oline.setAttribute('class','line_linkgame');
         document.body.appendChild(oline);
@@ -382,47 +381,8 @@ function compare_linkgame(td1,td2,show_line=false){
     return neighbour_route_linkgame(td1,td2,show_line);   
 }
 
-function table_size_linkgame(){
-    var otable=document.getElementById('table_lg');
-    otable.innerHTML='';
-    otable.style.left='';   //不能写成 0px - 保留注释
-    otable.style.top='';
-    var window_w=document.documentElement.clientWidth;
-    var window_h=document.documentElement.clientHeight;
-    
-    var blstr='';
-    var row=1;
-    while (row<100){
-        blstr=blstr+'<tr><td>'+blank_symbol_lg_global+'</td></tr>';
-        otable.innerHTML=blstr;
-        var rect=otable.getBoundingClientRect();
-        if (rect.top*2+rect.height>=window_h){  //上下对称 - 保留注释
-            row=row-1;
-            break;
-        }
-        row=row+1;
-    }
-    
-    blstr='';
-    var col=1;
-    while (col<100){
-        blstr=blstr+'<td>'+blank_symbol_lg_global+'</td>';
-        otable.innerHTML='<tr>'+blstr+'</tr>';
-        var rect=otable.getBoundingClientRect();
-        if (rect.left*2+rect.width>=window_w){  //左右对称 - 保留注释
-            col=col-1;
-            break;
-        }
-        col=col+1;
-    }
-    otable.innerHTML='';
-    rows_lg_global=row-2;
-    cols_lg_global=col-2;
-}
-
 function init_linkgame(){
-    //selected_color_lg_global='rgb('+hex2rgb_b('red').join(', ')+')';
-    selected_td_lg_global=false; //'';
+    selected_td_lg_global=false;
     blank_symbol_lg_global='⬜';
     recombine_times_lg_global=0;
     type_lg_global='';
@@ -446,8 +406,49 @@ function init_linkgame(){
     resize_linkgame(false);
 }
 
-function resize_linkgame(empty_tip=true){
-    table_size_linkgame();
+function resize_linkgame(empty_tip=true,set_global_value=true){
+    function sub_resize_linkgame_table_size(){
+        var otable=document.getElementById('table_lg');
+        otable.innerHTML='';
+        otable.style.left='';   //不能写成 0px - 保留注释
+        otable.style.top='';
+        var window_w=document.documentElement.clientWidth;
+        var window_h=document.documentElement.clientHeight;
+        
+        var blstr='';
+        var row=1;
+        while (row<100){
+            blstr=blstr+'<tr><td>'+blank_symbol_lg_global+'</td></tr>';
+            otable.innerHTML=blstr;
+            var rect=otable.getBoundingClientRect();
+            if (rect.top*2+rect.height>=window_h){  //上下对称 - 保留注释
+                row=row-1;
+                break;
+            }
+            row=row+1;
+        }
+        
+        blstr='';
+        var col=1;
+        while (col<100){
+            blstr=blstr+'<td>'+blank_symbol_lg_global+'</td>';
+            otable.innerHTML='<tr>'+blstr+'</tr>';
+            var rect=otable.getBoundingClientRect();
+            if (rect.left*2+rect.width>=window_w){  //左右对称 - 保留注释
+                col=col-1;
+                break;
+            }
+            col=col+1;
+        }
+        otable.innerHTML='';
+        rows_lg_global=row-2;
+        cols_lg_global=col-2;    
+    }
+    
+    if (set_global_value){
+        sub_resize_linkgame_table_size();
+    }
+    
     var percent_num=emoji_lg_global.length/(rows_lg_global*cols_lg_global);
     var percent_str=percent_num.toFixed(3);
     var oinput=document.getElementById('input_percent_linkgame');
@@ -458,6 +459,69 @@ function resize_linkgame(empty_tip=true){
         oinput.value=percent_str;
     }
     box_linkgame(true,empty_tip);
+}
+
+function remain_cells_set_linkgame(){
+    if (!confirm('是否保存当前进度？')){return;}
+    
+    var result_t=[];
+    for (let blx=0;blx<rows_lg_global;blx++){
+        row_list=[];
+        for (let bly=0;bly<cols_lg_global;bly++){
+            var otd=document.getElementById('td_'+blx+'_'+bly);
+            row_list.push(otd.textContent);
+        }
+        result_t.push(row_list.join(','));
+    }
+    var old_value=remain_cells_get_linkgame();
+    old_value=[today_str_b('dt') +' '+result_t.join(';')].concat(old_value);
+    localStorage.setItem('remain_link_game',old_value.join('\n'));
+    menu_remain_refresh_linkgame();
+}
+
+function remain_cells_restore_linkgame(csdatetime){
+    var blstr=remain_cells_get_linkgame(csdatetime);
+    if (blstr==''){return;}
+    var list_t=blstr.split(';');
+    
+    rows_lg_global=list_t.length;
+
+    for (let blxl=0;blxl<rows_lg_global;blxl++){
+        list_t[blxl]=list_t[blxl].split(',');
+    }
+    cols_lg_global=list_t[0].length;
+    resize_linkgame(true,false);
+    
+    for (let blx=0;blx<rows_lg_global;blx++){
+        for (let bly=0;bly<cols_lg_global;bly++){
+            var otd=document.getElementById('td_'+blx+'_'+bly);
+            otd.textContent=list_t[blx][bly];
+            if (list_t[blx][bly]==blank_symbol_lg_global){
+                otd.removeAttribute('onclick');
+                otd.style.cursor='';
+                otd.style.visibility='hidden';
+            }
+        }
+    }
+}
+
+function remain_cells_get_linkgame(csdatetime=''){
+    var list_t=local_storage_get_b('remain_link_game',10,true);
+    if (list_t.length==1 && list_t[0]==''){
+        list_t=[];
+    }
+    
+    if (csdatetime!==''){
+        var result_t=''
+        for (let item of list_t){
+            if (item.startsWith(csdatetime+' ')){
+                result_t=item.substring(csdatetime.length+1,);  //不能再+1 - 保留注释
+                break;
+            }
+        }
+        return result_t;
+    }
+    return list_t;
 }
 
 function menu_linkgame(){
@@ -473,17 +537,34 @@ function menu_linkgame(){
 
     var color_menu=colors_menu_b('scheme_change_linkgame',['default']);
 
+    var remain_menu=[];
+
     var klmenu_config=root_font_size_menu_b(str_t);
     klmenu_config=klmenu_config.concat([
     '<span class="span_menu">难度系数：<input type="text" id="input_percent_linkgame" value="MAX" /></span>',   
     
     ]);
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','8rem','1rem','1rem','60rem')+klmenu_b(color_menu,'🎨','20rem','1rem','1rem','20rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','8rem','1rem','1rem','60rem')+klmenu_b(color_menu,'🎨','20rem','1rem','1rem','20rem')+klmenu_b(remain_menu,'♟','12rem','1rem','1rem','60rem','','menu_remain_linkgame')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','60rem'),'','0rem')+' ');
     
     var input_list=[['input_percent_linkgame',5,0.5],];
     input_size_b(input_list,'id');
     klmenu_check_b('span_show_line_lg',true);        
+    menu_remain_refresh_linkgame();
+}
+
+function menu_remain_refresh_linkgame(){
+    var str_t=klmenu_hide_b('');
+
+    var remain_menu=['<span class="span_menu" onclick="'+str_t+'remain_cells_set_linkgame();">保存当前棋局</span>',
+    ];
+    
+    var list_t=remain_cells_get_linkgame();
+    for (let item of list_t){
+        var bltime=item.substring(0,19);
+        remain_menu.push('<span class="span_menu" onclick="'+str_t+'remain_cells_restore_linkgame(\''+bltime+'\');">'+bltime+'</span>');
+    }
+    document.getElementById('menu_remain_linkgame').outerHTML=klmenu_b(remain_menu,'♟','12rem','1rem','1rem','60rem','','menu_remain_linkgame');
 }
 
 function scheme_change_linkgame(item){
