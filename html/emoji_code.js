@@ -59,27 +59,31 @@ function minor_options_emoji(cscategory=''){
     }
     var key_list=Object.keys(emoji_global[cscategory]);
 
-    var bljg=[];
+    var bljg=['<option value=""></option>'];
     for (let item of key_list){
         bljg.push('<option value="'+item+'">'+item+'</option>');
     }
     document.getElementById('select_sub').innerHTML=bljg.join('\n');
-    if (key_list.length>0){
-        document.getElementById('select_sub').value=key_list[0];
-        one_chapter_emoji(key_list[0]);
-    }
+    one_chapter_emoji();
 }
 
 function one_chapter_emoji(sub_category=''){
     var main_category=document.getElementById('select_chapter').value;
 
-    if (main_category=='' || sub_category==''){
+    if (main_category==''){
         document.getElementById('divhtml_category').innerHTML='';
         document.getElementById('select_sub').innerHTML='';
         return;
     }
     
-    var list_t=emoji_global[main_category][sub_category];
+    if (sub_category==''){
+        var list_t=[];
+        for (let key in emoji_global[main_category]){
+            list_t=list_t.concat(emoji_global[main_category][key]);
+        }
+    } else {
+        var list_t=emoji_global[main_category][sub_category];
+    }
     
     var bljg=[];
     var blno=1;

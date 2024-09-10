@@ -293,6 +293,18 @@ function klmenu_check_b(span_id,change_value=true){
     return blvalue;
 }
 
+function local_storage_span_get_b(app_name,span_suffix,cstype){
+    var old_set=local_storage_get_b(app_name+'_set_'+cstype);
+    if (old_set=='1'){
+        klmenu_check_b('span_'+cstype+'_'+span_suffix,true);
+    }
+}
+
+function local_storage_span_set_b(app_name,span_suffix,cstype){
+    var blvalue=klmenu_check_b('span_'+cstype+'_'+span_suffix,true);
+    localStorage.setItem(app_name+'_set_'+cstype,(blvalue?'1':'0'));
+}
+
 function klmenu_b(csarray,menu_name='',min_width='',button_fontsize='',item_fontsize='',max_height='',cstitle='',menuid='',buttonid=''){
     if (menu_name==''){
         menu_name='☰';

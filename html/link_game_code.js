@@ -536,7 +536,7 @@ function menu_linkgame(){
     '<span class="span_menu" onclick="'+str_t+'type_lg_global=\'cn\';box_linkgame();">汉字</span>',
     '<span id="span_show_tip_lg" class="span_menu" onclick="'+str_t+'tip_linkgame();">⚪ 连续提示</span>',
     '<span class="span_menu" onclick="'+str_t+'tip_linkgame(true);">提示一次</span>',
-    '<span id="span_show_line_lg" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 连线</span>',
+    '<span id="span_show_line_lg" class="span_menu" onclick="'+str_t+'local_storage_set_linkgame(\'show_line\');">⚪ 连线</span>',
     '<span class="span_menu" onclick="'+str_t+'resize_linkgame();">resize</span>',
     ];
 
@@ -554,8 +554,16 @@ function menu_linkgame(){
     
     var input_list=[['input_percent_linkgame',5,0.5],];
     input_size_b(input_list,'id');
-    klmenu_check_b('span_show_line_lg',true);        
+    local_storage_get_linkgame('show_line');
     menu_remain_refresh_linkgame();
+}
+
+function local_storage_get_linkgame(cstype){
+    local_storage_span_get_b('link_game','lg','show_line');
+}
+
+function local_storage_set_linkgame(cstype){
+    local_storage_span_set_b('link_game','lg','show_line');
 }
 
 function menu_remain_refresh_linkgame(){
