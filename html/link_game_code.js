@@ -54,15 +54,30 @@ function box_linkgame(top_left=false,empty_tip=true){
     }
     var blxl=0;
     var table_list=sub_box_linkgame_blank_tr(-1);
+    
+    var do_rotate,rotate_list;
+    [do_rotate,rotate_list]=rotate_deg_get_linkgame();
+    
     for (let arow=0;arow<rows_lg_global;arow++){
         var list_t=[];
         table_list.push('<tr>');   
         table_list.push('<td id="td_'+arow+'_-1" align="center" style="visibility:hidden;">'+blank_symbol_lg_global+'</td>');
-        for (let acol=0;acol<cols_lg_global;acol++){
-            table_list.push('<td id="td_'+arow+'_'+acol+'" class="td_content_lg" align="center" style="cursor:pointer;" onclick="click_linkgame(this);">'+result_t[blxl]+'</td>');
-            list_t.push(result_t[blxl]);
-            blxl=blxl+1;
+        
+        if (do_rotate){
+            for (let acol=0;acol<cols_lg_global;acol++){
+                rotate_list.sort(randomsort_b);
+                table_list.push('<td id="td_'+arow+'_'+acol+'" class="td_content_lg" align="center" style="cursor:pointer;" onclick="click_linkgame(this);"><div style="transform:rotate('+rotate_list[0]+'deg);">'+result_t[blxl]+'</div></td>');
+                list_t.push(result_t[blxl]);
+                blxl=blxl+1;
+            }
+        } else {
+            for (let acol=0;acol<cols_lg_global;acol++){
+                table_list.push('<td id="td_'+arow+'_'+acol+'" class="td_content_lg" align="center" style="cursor:pointer;" onclick="click_linkgame(this);">'+result_t[blxl]+'</td>');
+                list_t.push(result_t[blxl]);
+                blxl=blxl+1;
+            }        
         }
+        
         table_list.push('<td id="td_'+arow+'_'+cols_lg_global+'" align="center" style="visibility:hidden;">'+blank_symbol_lg_global+'</td>');
         table_list.push('</tr>');    
     }
@@ -104,7 +119,7 @@ function click_linkgame(otd){
     
     function sub_click_linkgame_remove(otd1,otd2){
         for (let odom of [otd1,otd2]){
-            odom.innerHTML=blank_symbol_lg_global;
+            odom.textContent=blank_symbol_lg_global;
             odom.removeAttribute('onclick');
             odom.style.borderColor='#e0e0e0';
             odom.style.cursor='';
@@ -196,12 +211,16 @@ function recombine_linkgame(remain_list){
         console.log(otds.length,blank_list.length);
         return;
     }
+
+    var do_rotate,rotate_list;
+    [do_rotate,rotate_list]=rotate_deg_get_linkgame();
     
     var blxl=0;
     for (let one_td of otds){
-        one_td.innerHTML=blank_list[blxl];
         one_td.style.borderColor='#e0e0e0';
+        
         if (blank_list[blxl]==blank_symbol_lg_global){
+            one_td.textContent=blank_list[blxl];        
             one_td.removeAttribute('onclick');
             one_td.style.cursor='';
             one_td.style.visibility='hidden';
@@ -209,6 +228,8 @@ function recombine_linkgame(remain_list){
             one_td.setAttribute('onclick','click_linkgame(this);');
             one_td.style.cursor='pointer';
             one_td.style.visibility='';
+            
+            rotate_cell_insert_linkgame(do_rotate,rotate_list,one_td,blank_list[blxl]);
         }
         blxl=blxl+1;
     }
@@ -386,12 +407,48 @@ function compare_linkgame(td1,td2,show_line=false){
     return neighbour_route_linkgame(td1,td2,show_line);   
 }
 
+function emoji_usable_linkgame(){
+    var result_t=[];
+    var lent=emoji_lg_global.length;
+    for (let blxl=0;blxl<lent;blxl++){
+        if (blxl % (cols_lg_global+2) == 0){    //左右两侧空白列 - 保留注释
+            result_t.push('</tr><tr>')
+        }
+        result_t.push('<td style="cursor:pointer;" onclick="select_one_emoji_linkgame(this);">'+emoji_lg_global[blxl]+'</td>');
+    }
+    var bljg=result_t.join('');
+    if (!bljg.startsWith('<tr>')){
+        bljg='<tr>'+bljg;
+    }
+    if (!bljg.endsWith('</tr>')){
+        bljg=bljg+'</tr>';
+    }
+    
+    var buttons='共有'+lent+'个 <span class="aclick" onclick="emoji_selected_2_clipboard_linkgame();">复制选中的emoji到剪贴板</span>';
+    document.getElementById('table_lg').innerHTML=bljg+'<tr><td colspan='+(cols_lg_global+2)+'><p>'+buttons+'</p></td></tr>';
+}
+
+function emoji_selected_2_clipboard_linkgame(){
+    var otds=document.querySelectorAll('#table_lg td');
+    var result_t=[];
+    for (let one_td of otds){
+        if (one_td.style.borderColor=='red'){
+            result_t.push(one_td.textContent);
+        }
+    }
+    copy_2_clipboard_b(result_t.join(' '));
+}
+
+function select_one_emoji_linkgame(otd){
+    otd.style.borderColor=(otd.style.borderColor=='red'?'#e0e0e0':'red');
+}
+
 function init_linkgame(){
     selected_td_lg_global=false;
     blank_symbol_lg_global='⬜';
     recombine_times_lg_global=0;
     type_lg_global='';
-    emoji_lg_global=emoji_category_b(['food','vegetable','animal','transport'],-2);
+    emoji_lg_global=emoji_category_b(['food','vegetable','animal','transport','human'],-2);
     tip_content_lg_global=[];
     percent_max_lg_global=1;
 
@@ -409,6 +466,7 @@ function init_linkgame(){
     otable.style.fontSize=fsize;
     
     resize_linkgame(false);
+    //top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.6rem':'1.4rem'),true,false,2);
 }
 
 function resize_linkgame(empty_tip=true,set_global_value=true){
@@ -496,11 +554,15 @@ function remain_cells_restore_linkgame(csdatetime){
     }
     cols_lg_global=list_t[0].length;
     resize_linkgame(true,false);
+
+    var do_rotate,rotate_list;
+    [do_rotate,rotate_list]=rotate_deg_get_linkgame();
     
     for (let blx=0;blx<rows_lg_global;blx++){
         for (let bly=0;bly<cols_lg_global;bly++){
             var otd=document.getElementById('td_'+blx+'_'+bly);
-            otd.textContent=list_t[blx][bly];
+            rotate_cell_insert_linkgame(do_rotate,rotate_list,otd,list_t[blx][bly]);
+
             if (list_t[blx][bly]==blank_symbol_lg_global){
                 otd.removeAttribute('onclick');
                 otd.style.cursor='';
@@ -508,6 +570,20 @@ function remain_cells_restore_linkgame(csdatetime){
             }
         }
     }
+}
+
+function rotate_cell_insert_linkgame(do_rotate,rotate_list,otd,cscontent){
+    if (do_rotate){
+        rotate_list.sort(randomsort_b);
+        otd.innerHTML='<div style="transform:rotate('+rotate_list[0]+'deg);">'+cscontent+'</div>';
+    } else {
+        otd.textContent=cscontent;
+    }
+}
+
+function rotate_deg_get_linkgame(){
+    return [klmenu_check_b('span_rotate_lg',false),[0,90,180,270]];
+    //[0,45,90,135,180,225,270,315] //此行保留 - 保留注释
 }
 
 function remain_cells_get_linkgame(csdatetime=''){
@@ -536,7 +612,6 @@ function menu_linkgame(){
     '<span class="span_menu" onclick="'+str_t+'type_lg_global=\'cn\';box_linkgame();">汉字</span>',
     '<span id="span_show_tip_lg" class="span_menu" onclick="'+str_t+'tip_linkgame();">⚪ 连续提示</span>',
     '<span class="span_menu" onclick="'+str_t+'tip_linkgame(true);">提示一次</span>',
-    '<span id="span_show_line_lg" class="span_menu" onclick="'+str_t+'local_storage_set_linkgame(\'show_line\');">⚪ 连线</span>',
     '<span class="span_menu" onclick="'+str_t+'resize_linkgame();">resize</span>',
     ];
 
@@ -548,22 +623,30 @@ function menu_linkgame(){
     klmenu_config=klmenu_config.concat([
     '<span class="span_menu">难度系数：<input type="text" id="input_percent_linkgame" value="MAX" /></span>',   
     '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'link_game\');">更新版本</span>',    
+    '<span class="span_menu" onclick="'+str_t+'emoji_usable_linkgame();">可用emoji清单</span>',        
     ]);
 
+    var group_list=[
+    ['⚪ 连线','local_storage_set_linkgame(\'show_line\');',true,'span_show_line_lg'],
+    ['⚪ 旋转','local_storage_set_linkgame(\'rotate\');',true,'span_rotate_lg'],
+    ];    
+    klmenu_config.push(menu_container_b(str_t,group_list,''));
+    
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','8rem','1rem','1rem','60rem')+klmenu_b(color_menu,'🎨','20rem','1rem','1rem','20rem')+klmenu_b(remain_menu,'♟','12rem','1rem','1rem','60rem','','menu_remain_linkgame')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','60rem'),'','0rem')+' ');
     
     var input_list=[['input_percent_linkgame',5,0.5],];
     input_size_b(input_list,'id');
     local_storage_get_linkgame('show_line');
+    local_storage_get_linkgame('rotate');
     menu_remain_refresh_linkgame();
 }
 
 function local_storage_get_linkgame(cstype){
-    local_storage_span_get_b('link_game','lg','show_line');
+    local_storage_span_get_b('link_game','lg',cstype);
 }
 
 function local_storage_set_linkgame(cstype){
-    local_storage_span_set_b('link_game','lg','show_line');
+    local_storage_span_set_b('link_game','lg',cstype);
 }
 
 function menu_remain_refresh_linkgame(){

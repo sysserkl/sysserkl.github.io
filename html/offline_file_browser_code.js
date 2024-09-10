@@ -62,7 +62,7 @@ function window_offline_file_browser(csnumber){
 }
 
 function keys_offline_file_browser(cskeys=''){
-    recent_search_b('keys_offline_file_browser',cskeys,'search_offline_file_browser','div_recent_search',['^0[3-9]:(:r)', '+save-\\d\\d-a/ +(\\.|[^0-9])\\d{4}(\\.|年) +/完整影视/ +.(mkv|rmvb|mp4|rm|avi|flv)$(:r)', '+待看0 -副本', '+待看0 +副本/', '+生活记录 +Photos -\\.txt(:r)','.rmvb','+💖 +save +-a/','+^\\d+:(:r)','-(TFA|ssd)\\d+ +save-\\d+-[ab](:r)'],20);
+    recent_search_b('keys_offline_file_browser',cskeys,'search_offline_file_browser','div_recent_search',['^0[3-9]:(:r)', '+save-\\d\\d-a/ +(\\.|[^0-9])\\d{4}(\\.|年) +/完整影视/ +.(mkv|rmvb|mp4|rm|avi|flv)$(:r)', '+待看0 -副本', '+待看0 +副本/', '+生活记录 +Photos -\\.txt(:r)','.rmvb','+💖 +save +-a/','+^\\d+:(:r)','-(TFA|ssd)\\d+ +save-\\d+-[ab](:r)','+wikiuploads +\\b'+(date_2_ymd_b(false,'y')-20)+'-[0-9]{2}-[0-9]{2}\\b(:r)'],20);
 }
 
 function statistics_offline_file_browser(csarray=false,showhtml=true,size_col=3,time_col=5){
@@ -1159,6 +1159,17 @@ function import_bigfile_offline_file_browser(){
     load_js_var_file_b('offline_file_data_raw_global',[],fname,sub_bigfile_offline_file_browser_load,true,true);
 }
 
+function filelist_2_virtual_path_offline_file_browser(){
+    var ool=document.getElementById('ol_flist_ofb');
+    var olis=ool.querySelectorAll('li');
+    var result_t=[];
+    for (let one_li of olis){
+        if (one_li.style.display=='none'){continue;}
+        result_t.push(one_li.textContent);
+    }
+    document.getElementById('div_sub_statistics').innerHTML='<textarea>'+result_t.join('\n').replace(/^wikiuploads\//mg,'{{wikiuploads}}')+'</textarea>';
+}
+
 function file_list_offline_file_browser(){
     if (offline_file_data_current_global.length==0){return;}
     var result_t=[];
@@ -1172,8 +1183,10 @@ function file_list_offline_file_browser(){
     bljg=bljg+array_2_li_b(result_t,'li','ol','ol_flist_ofb');
     bljg=bljg+'<p align=right>';
     bljg=bljg+'<span class="aclick" onclick="document.getElementById(\'input_flist_filter_ofb\').scrollIntoView();">head</span>';
-    bljg=bljg+'<span class="aclick" onclick="filelist_disk_count__offline_file_browser();">磁盘数</span>';    
+    bljg=bljg+'<span class="aclick" onclick="filelist_disk_count_offline_file_browser();">磁盘数</span>';    
+    bljg=bljg+'<span class="aclick" onclick="filelist_2_virtual_path_offline_file_browser();">转换当前可见结果的wikiuploads/为虚拟路径</span>';    
     bljg=bljg+close_button_b('div_statistics','none')+'</p>';
+    bljg=bljg+'<div id="div_sub_statistics"></div>';
     bljg=bljg+'<p>&nbsp;</p><p>&nbsp;</p>';
     odiv.innerHTML=bljg;
     odiv.style.display='block';
@@ -1181,7 +1194,7 @@ function file_list_offline_file_browser(){
     odiv.scrollIntoView();
 }
 
-function filelist_disk_count__offline_file_browser(){
+function filelist_disk_count_offline_file_browser(){
     var olis=document.querySelectorAll('ol#ol_flist_ofb li');
     var disk_set=new Set();
     for (let one_li of olis){

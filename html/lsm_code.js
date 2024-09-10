@@ -37,7 +37,7 @@ function selected_keys_lsm(cstype=''){
                     localStorage.removeItem(blkey);
                 }
                 document.getElementById('textarea_lsm_status').value='移除名为 '+key_list.join(', ')+' 的 localStorage 值';        
-                keys_lsm();                
+                keys_generate_lsm();                
             }
             break;
         case 'length':
@@ -127,6 +127,7 @@ function menu_lsm(){
     var str_t=klmenu_hide_b();
 
     var klmenu_local=[ 
+    '<span class="span_menu" onclick="'+str_t+'keys_generate_lsm();">刷新 localStorage key</span>',
     '<span class="span_menu" onclick="'+str_t+'local_storage_view_lsm(\'name\');">查看全部 localStorage key</span>',
     '<span class="span_menu" onclick="'+str_t+'local_storage_view_lsm(\'name_length\');">查看全部 localStorage key 和 长度</span>',
     '<span class="span_menu" onclick="'+str_t+'local_storage_view_lsm();">查看全部 localStorage</span>',
@@ -233,7 +234,7 @@ function init_lsm(){
         var otextarea=document.getElementById('textarea_lsm_status');
         otextarea.style.height='20rem';
     }
-    keys_lsm();
+    keys_generate_lsm();
     args_lsm();
     mouseover_mouseout_oblong_span_b(document.querySelectorAll('td#td_lsm_name span.oblong_box'));    
 }
@@ -254,11 +255,11 @@ function args_lsm(){
     }
 }
 
-function keys_lsm(){
+function keys_generate_lsm(){
     var otd=document.getElementById('section_lsm_name');
 
     var lsm_key=[];
-    for (let blxl = 0,lent= localStorage.length; blxl <lent; blxl++){
+    for (let blxl = 0,lent=localStorage.length; blxl<lent; blxl++){
         lsm_key.push('<input type="checkbox" value="'+localStorage.key(blxl)+'" /> <span class="span_link" onclick="local_storage_read_key_lsm(this.innerText);">'+localStorage.key(blxl)+'</span>');
     }
     lsm_key.sort();

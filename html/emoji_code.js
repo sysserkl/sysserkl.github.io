@@ -103,7 +103,7 @@ function menu_emoji(){
     var klmenu1=[
     '<span id="span_reg_emoji" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 正则</span>',         
     '<span class="span_menu" onclick="'+str_t+'unicode_overlape_search_emoji();">重叠码</span>',             
-    '<span class="span_menu" onclick="'+str_t+'js_arr_generate_emoji();">复制当前页emoji为js数组</span>',             
+    '<span class="span_menu" onclick="'+str_t+'js_arr_generate_emoji();">获取当前emoji为js数组</span>',             
     ];
     
     var klmenu_link=[
@@ -119,13 +119,50 @@ function menu_emoji(){
 }
 
 function js_arr_generate_emoji(){
-    var odoms=document.querySelectorAll('div.div_unicode, span.span_emoji_img');
+    var odiv=document.getElementById('divhtml_category');
+    if (odiv.style.display=='none'){
+        var odoms=document.querySelectorAll('#divhtml_range div.div_unicode');    
+    } else {
+        var odoms=odiv.querySelectorAll('span.span_emoji_img');
+    }
+    
     var result_t=[];
     for (let one_dom of odoms){
         result_t.push('\''+one_dom.textContent+'\'');
     }
-    copy_2_clipboard_b(result_t.join(','));
-    alert('done');
+
+    var left_str='<p>'+close_button_b('div_status_emoji','');
+    left_str=left_str+'<span class="aclick" onclick="compare_arr_emoji();">比较</span>';
+    var right_str='</p>';    
+    var blstr=textarea_with_form_generate_b('textarea_content1_emoji','height:'+(ismobile_b()?'10':'20')+'rem;',left_str,'全选,清空,复制,发送到临时记事本,发送地址',right_str,'','',false,result_t.join(','));
+
+    var ostatus=document.getElementById('div_status_emoji');
+    ostatus.innerHTML=blstr+'<p><textarea id="textarea_content2_emoji"></textarea></p><div id="div_sub_js_arr_emoji"></div>';
+    ostatus.scrollIntoView();
+}
+
+function compare_arr_emoji(){
+    try {
+        var js1=document.getElementById('textarea_content1_emoji').value.trim().match(/'.*?'/g) || [];
+        var js2=document.getElementById('textarea_content2_emoji').value.trim().match(/'.*?'/g) || [];
+        
+        var used_set=new Set();
+        var repeated=[];
+        for (let item of js2){
+            if (used_set.has(item)){
+                repeated.push(item);
+            }
+            used_set.add(item);
+        }
+        var blunion=array_union_b(js1,js2);
+        var blintersection=array_intersection_b(js1,js2);
+        var diff1,diff2;
+        [diff1,difff2]=array_difference_b(js1,js2,false,true);
+        var odiv=document.getElementById('div_sub_js_arr_emoji');
+        odiv.innerHTML='<h4>并集</h4><textarea>'+blunion+'</textarea>'+'<h4>交集</h4><textarea>'+blintersection+'</textarea>'+'<h4>差集（1含有2没有）</h4><textarea>'+diff1+'</textarea>'+'<h4>差集（2含有1没有）</h4><textarea>'+difff2+'</textarea>'+'<h4>重复</h4><textarea>'+repeated+'</textarea>';
+    } catch (error){
+        alert(error);
+    }
 }
 
 function init_emoji(){
