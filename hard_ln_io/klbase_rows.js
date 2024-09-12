@@ -310,7 +310,7 @@ function hash_filename2wiki_table_klr_b(csid,filename_hash=false){
     otextarea.value=result_t.join('\n');
 }
 
-function html2wiki_klr_b(csid){
+function html2wiki_arr_get_klr_b(csid){
     var year_t=new Date().getFullYear();       
     var arr_t=[
     ['\n',''],
@@ -341,7 +341,11 @@ function html2wiki_klr_b(csid){
     ['<img [^<>]* src="[^<>]*\/(.*?)">',"\n{{wikiuploads}}"+year_t+"/$1\n"],
     ['<img [^<>]* src="[^<>]*\/(.*?)" .*?>',"\n{{wikiuploads}}"+year_t+"/$1\n"],
     ];
+    return arr_t;
+}
 
+function html2wiki_klr_b(csid){
+    var arr_t=html2wiki_arr_get_klr_b();
     replace_strs_klr_b(arr_t,'',csid);
 }
 
