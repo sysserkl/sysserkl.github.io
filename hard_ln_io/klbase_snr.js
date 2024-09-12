@@ -330,7 +330,7 @@ function fav_show_klsnews_b(){
     var left_strings='<p><span class="aclick" onclick="fav_clear_klsnews_b();">Clear</span> ';
     var right_strings=' rows: '+fav_selenews.split('\n').length+'</p>\n';
     
-    var blstr=textarea_with_form_generate_b('textarea_selenium_fav','width:95%;height:20rem;',left_strings,'发送到临时记事本,发送地址',right_strings,'','form_selenium_fav',true,fav_selenews);
+    var blstr=textarea_with_form_generate_b('textarea_selenium_fav','width:95%;height:20rem;',left_strings,'发送到临时记事本,发送地址,↑,↓',right_strings,'','form_selenium_fav',true,fav_selenews);
 
     document.getElementById('divhtml').innerHTML='';
     document.getElementById('divhtml2').innerHTML=blstr;

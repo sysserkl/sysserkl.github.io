@@ -293,15 +293,27 @@ function klmenu_check_b(span_id,change_value=true){
     return blvalue;
 }
 
-function local_storage_span_get_b(app_name,span_suffix,cstype){
-    var old_set=local_storage_get_b(app_name+'_set_'+cstype);
-    if (old_set=='1'){
-        klmenu_check_b('span_'+cstype+'_'+span_suffix,true);
+function local_storage_span_get_b(app_name,span_suffix,cstype,csdict=false){
+    if (typeof cstype == 'string'){
+        cstype=[cstype];
+    }
+    for (let one_type of cstype){
+        var old_set=(local_storage_get_b(app_name+'_set_'+one_type)=='1');
+        var current_value=klmenu_check_b('span_'+one_type+'_'+span_suffix,false);
+        if (old_set!==current_value){
+            current_value=klmenu_check_b('span_'+one_type+'_'+span_suffix,true);
+        }
+        if (csdict!==false){
+            csdict[one_type]=current_value;
+        }
     }
 }
 
-function local_storage_span_set_b(app_name,span_suffix,cstype){
+function local_storage_span_set_b(app_name,span_suffix,cstype,csdict=false){
     var blvalue=klmenu_check_b('span_'+cstype+'_'+span_suffix,true);
+    if (csdict!==false){
+        csdict[cstype]=blvalue;
+    }
     localStorage.setItem(app_name+'_set_'+cstype,(blvalue?'1':'0'));
 }
 

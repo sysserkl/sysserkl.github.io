@@ -6,7 +6,7 @@ function init_notepad(){
     var postpath=postpath_b();
     document.getElementById('form_notepad').setAttribute('action',postpath+'temp_txt_share.php');
     
-    var buttons=textarea_buttons_b('textarea_content_notepad','清空,复制,发送到临时记事本,发送地址,save as txt file');
+    var buttons=textarea_buttons_b('textarea_content_notepad','清空,复制,发送到临时记事本,发送地址,save as txt file,↑,↓');
     document.getElementById('p_edit_buttons_notepad').insertAdjacentHTML('afterbegin',buttons);
     
     character_2_icon_b('N');    
@@ -84,6 +84,7 @@ function wiki_style_notepad(){
     var blstr=document.getElementById('textarea_content_notepad').value.replace(/\n/g,'\n<p>'); //不能使用<br /> - 保留注释
     var buttons=close_button_b('div_status','');
     odiv.innerHTML=wiki_all_format_b(blstr)+'<p>'+buttons+'</p>';
+    odiv.scrollIntoView();
 }
 
 function edit_tools_click_notepad(obutton){
