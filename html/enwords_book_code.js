@@ -158,9 +158,10 @@ function menu_enwords_book(){
     ]);
 
     var format_list=[
-    ['例句中','frequency_enwords_book_b(\'sentence_common\');',true],
-    ['当前内容','frequency_enwords_book_b(\'textarea\');',true],
-    ];    
+    ['例句中','frequency_count_get_enwords(\'sentence_common\');',true],
+    ['当前内容','frequency_count_get_enwords(\'textarea\');',true],
+    ['返回结果数：<input type="number" id="input_frequency_count_enwords" min=-1 step=1 value=4000 />','',false],
+    ];
     klmenu_new.push(menu_container_b(str_t,format_list,'常见单词：'));    
     
     var format_list=[
@@ -228,6 +229,16 @@ function menu_enwords_book(){
     
     var menus=klmenu_b(klmenu1,'','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_new,'🔤','32rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'🧮','23rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','27rem','1rem','1rem','60rem');
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(menus,'','0rem')+' ');
+    
+    var input_list=[['input_frequency_count_enwords',5,0.5],];
+    input_size_b(input_list,'id');
+}
+
+function frequency_count_get_enwords(cstype){
+    var oinput=document.getElementById('input_frequency_count_enwords');
+    var common_max=parseInt(oinput.value.trim()) || 4000;
+    
+    frequency_enwords_book_b(cstype,false,common_max);
 }
 
 function load_new_words_count_enwords_book(){

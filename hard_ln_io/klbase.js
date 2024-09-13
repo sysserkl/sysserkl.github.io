@@ -903,10 +903,7 @@ function href2host_b(cshref,cswithhttp=false){
 }
 
 function local_storage_key_name_list_b(){
-    var result_t=[];
-    for (let blxl = 0,lent= localStorage.length; blxl <lent; blxl++){
-        result_t.push(localStorage.key(blxl));
-    }
+    var result_t=Object.keys(localStorage);
     result_t.sort();
     return result_t;
 }

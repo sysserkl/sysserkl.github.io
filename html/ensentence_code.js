@@ -80,8 +80,11 @@ function menu_ensentence(){
     klmenu_config.push(menu_container_b(str_t,group_list,''));
     
     if (is_local_b()){
-        klmenu_config.push('<span id="span_sort_by_selenium_ensentence" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 按selenium单词数排序</span>');    
-        klmenu_config.push('<span class="span_menu" onclick="'+str_t+'length_sort_ensentence();">最短例句</span>');
+        klmenu_config=klmenu_config.concat([
+        '<span id="span_sort_by_selenium_ensentence" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 按selenium单词数排序</span>',
+        '<span class="span_menu" onclick="'+str_t+'length_sort_ensentence();">最短例句</span>',
+        '<span class="span_menu" onclick="'+str_t+'length_sort_ensentence(false);">最长例句</span>',
+        ]);
     }
     
     var klmenu_link=[
@@ -363,7 +366,7 @@ function enwords_count_sentence_data_save_ensentence(){
     string_2_txt_file_b('var en_sentence_count_global=[\n'+list_t.join('\n')+'\n];\n','enwords_count_sentence_data.js','txt');
 }
 
-function length_sort_ensentence(){
+function length_sort_ensentence(is_short=true){
     var t0 = performance.now();
 
     var result_t=[];
@@ -378,11 +381,16 @@ function length_sort_ensentence(){
         }
         
         blstr=blstr.replace(/&lt;eword w=.*?&gt;&lt;\/eword&gt;/g,'');
-        if (blstr.length>50+10){continue;}  //最短例句长度是50 - 保留注释
+        //if (blstr.length>50+10){continue;}  //最短例句长度是50 - 保留注释
         result_t.push([blstr.length,aline]);
     }
     
-    result_t.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});
+    if (is_short){
+        result_t.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});
+    } else {
+        result_t.sort(function (a,b){return a[0]<b[0] ? 1 : -1;});    
+    }
+    
     result_t=result_t.slice(0,200);
     for (blxl=0,lent=result_t.length;blxl<lent;blxl++){
         result_t[blxl]=result_t[blxl][1];
