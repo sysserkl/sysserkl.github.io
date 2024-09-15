@@ -28,8 +28,8 @@ function menu_notepad(){
     var klmenu1=[
     '<span id="span_reg_notepad" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ reg</span>',    
     '<span id="span_new_empty_notepad" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 新建时自动清空</span>',    
+    '<span id="span_edit_show_wiki_notepad" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 添加或修改时自动展示wiki效果</span>',    
 
-    //'<span class="span_menu" onclick="'+str_t+'new_notepad();">新建</span>',
     '<span class="span_menu" onclick="'+str_t+'idb_notepad(\'read\',false,false,\'form\');">导入导出</span>',
     '<span class="span_menu" onclick="'+str_t+'idb_notepad(\'clear\');">清空数据库</span>',
     ];
@@ -39,7 +39,7 @@ function menu_notepad(){
     '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'notepad\');">更新版本</span>',        
     ]);
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🗐','12rem','1rem','1rem','30rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','30rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🗐','19rem','1rem','1rem','30rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','30rem'),'','0rem')+' ');
     klmenu_check_b('span_reg_notepad',true);
     //-----------------------
     var klmenu_sort=sort_menu_klr_b('textarea_content_notepad',str_t);
@@ -114,6 +114,9 @@ function search_notepad(cskey=false){
 
 function append_or_edit_notepad(ospan){
     if (!confirm('是否'+ospan.innerText+'？')){return;}
+    if (klmenu_check_b('span_edit_show_wiki_notepad',false)){
+        wiki_style_notepad();
+    }
     idb_notepad('edit');
 }
 
