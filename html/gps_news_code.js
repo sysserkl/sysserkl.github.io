@@ -78,7 +78,7 @@ function init_gps_news(){
     omap_gps_news_global = L.map('div_map', {
         center: lat_lon_value,
         zoom: zoom_value,
-        layers: [L.layerGroup([klmaps_global[map_name_value]])],
+        layers: [klmaps_global[map_name_value]],    //[L.layerGroup([klmaps_global[map_name_value]])],
         closePopupOnClick: false,
     });
 

@@ -6,8 +6,8 @@ function simple_study_leaflet(){
     }).addTo(map);
 
     L.marker([51.5, -0.09]).addTo(map)
-        .bindPopup('<b>study</b> <span style="font-size:2rem;">leaflet</span> <a href="https://leafletjs.com/" target=_blank>marker</a>')
-        .openPopup();
+    .bindPopup('<b>study</b> <span style="font-size:2rem;">leaflet</span> <a href="https://leafletjs.com/" target=_blank>marker</a>')
+    .openPopup();
 }
 
 function li_filter_study_leaflet(cskey){

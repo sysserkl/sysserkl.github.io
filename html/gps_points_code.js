@@ -132,7 +132,7 @@ function draw_multiple_lines_gps_points(){
     sub_draw_multiple_lines_gps_points_one_line();
 }
 
-function draw_gpx_gps_points(cslist=false,csname='',dotransform=false,draw_lines=true,cscolors=-1){
+function draw_gpx_gps_points(cslist=false,csname='',dotransform=false,draw_lines=true,cscolors=-1,dopanto=true){
     //cslist 须是 lat,lon 格式，形如 [ [ 30.221588, 120.024205 ], [ 30.221542, 120.024116 ] ] - 保留注释
     if (cslist===false){
         cslist=data_lines_2_latlon_gps_points_b('','latlon');   //返回为 lat,lon 格式 - 保留注释
@@ -167,7 +167,7 @@ function draw_gpx_gps_points(cslist=false,csname='',dotransform=false,draw_lines
         return cslist;
     }
     
-    draw_gpx_lines_simple_leaflet_b(cslist,csname,cscolors,'textarea_gps_points');
+    draw_gpx_lines_simple_leaflet_b(cslist,csname,cscolors,'textarea_gps_points',dopanto);
 }
 
 function transform_dotlines_gps_points(cslist=false,cstype=false,write_to_textarea=false){
@@ -508,6 +508,7 @@ function rectangle_gps_points(csstr,dotransform=true,layertype='navigation',dopa
                 [lon,lat]=transform_lon_lat_one_dot_b(bltype,lon,lat);            
             }
             
+            console.log(lon,lat,longline,shortline);
             var orectangle=rectangle_leaflet_b(omap_gps_points_global,true,lon,lat,longline,shortline,blcolor);
             if (layertype=='navigation'){
                 navigation_layer_gps_global.addLayer(orectangle);
@@ -584,8 +585,15 @@ function init_page_gps_points(is_simple=false,map_type='',map_id='osm'){
     omap_gps_points_global = L.map('div_map', {
         center: lat_lon_value,
         zoom: zoom_value,
-        layers: [L.layerGroup([klmaps_global[map_id]])],
+        layers: [klmaps_global[map_id]],//[L.layerGroup([klmaps_global[map_id]])],    //此行保留 - 保留注释
     });
+    
+    //omap_gps_points_global.addLayer(klmaps_global[map_id]);   //此行保留 - 保留注释
+    
+    //以下3行保留 - 保留注释
+    //omap_gps_points_global.on('layeradd', function(event){
+        //console.log('Layer added:', event.layer);
+    //});
 
     L.control.layers(baselayers_leaflet_b(map_type), null).addTo(omap_gps_points_global);
 
@@ -1525,6 +1533,7 @@ function menu_gps_points(){
 
     var klmenu_district=[
     '<span class="span_menu" onclick="'+str_t+'lat_lon_range_gps_points();">当前地区可见区域坐标</span>',    
+    '<span class="span_menu" onclick="'+str_t+'enlarge_current_range_gps_points();">当前地区放大1级地图遍历</span>',    
     '<span class="span_menu" onclick="'+str_t+'district_search_gps_points();">地区坐标搜索</span>',
     '<span class="span_menu" onclick="'+str_t+'batch_2points_distance_list_gps_points();">两两坐标距离排序</span>',
     '<span class="span_menu" onclick="'+str_t+'location_gpx_gps_points();">lat,lon 坐标定位</span>',        
@@ -1655,12 +1664,171 @@ function lat_lon_range_gps_points(){
     otextarea.value=list_t.join('\n');
 }
 
-function zoom_gps_points(){
+function split_map_gps_points(csrows, cscols, return_points=true, return_lines=true, return_rectangle=true){
+    var bounds = omap_gps_points_global.getBounds();
+    var southWest = bounds.getSouthWest();
+    var northEast = bounds.getNorthEast();
+
+    var latDiff = (northEast.lat - southWest.lat) / csrows;
+    var lngDiff = (northEast.lng - southWest.lng) / cscols;
+
+    var points_list = [];
+    var lines_list=[];
+    var rectangles_list=[];
+    var used_points=new Set();
+    var used_lines=new Set();
+    var nw,se;
+    for (let arow = 0; arow < csrows; arow++){
+        for (let acol = 0; acol < cscols; acol++){
+            var sw=L.latLng(southWest.lat + latDiff * arow, southWest.lng + lngDiff * acol);
+            var ne=L.latLng(southWest.lat + latDiff * (arow + 1), southWest.lng + lngDiff * (acol + 1));
+            [nw,se]=rectangle_angles_leaflet_b(sw,ne,false);
+            
+            if (return_points){
+                var list_t=[sw,ne,nw,se];
+                for (let item of list_t){
+                    if (used_points.has(item.toString())){continue;}
+                    points_list.push(item);
+                    used_points.add(item.toString());
+                }
+            }
+
+            var list_t=[
+            [[nw.lat,nw.lng],[ne.lat,ne.lng]],
+            [[nw.lat,nw.lng],[sw.lat,sw.lng]],
+            [[ne.lat,ne.lng],[se.lat,se.lng]],
+            [[sw.lat,sw.lng],[se.lat,se.lng]],
+            ];
+                
+            if (return_lines){
+                for (let item of list_t){
+                    if (used_lines.has(item.toString())){continue;}
+                    lines_list.push(item);
+                    //draw_gpx_gps_points(item,'',false,true,-1,false); //此行保留 - 保留注释
+                    used_lines.add(item.toString());
+                }
+            }
+            
+            if (return_rectangle){
+                rectangles_list.push(list_t);
+            }
+                        
+            //gridBounds.push({'sw':sw,'ne':ne,'nw':nwse['nw'],'se':nwse['se']}); //此行保留 - 保留注释
+            
+            //以下几行保留 - 保留注释
+            //矩形的西南角和东北角坐标 - 保留注释
+            //gridBounds.push([
+                //L.latLng(southWest.lat + latDiff * arow, southWest.lng + lngDiff * acol),
+                //L.latLng(southWest.lat + latDiff * (arow + 1), southWest.lng + lngDiff * (acol + 1))
+            //]);
+        }
+    }
+    
+    return [points_list,lines_list,rectangles_list];
+    
+    //以下几行保留 - 保留注释
+    //gridBounds.forEach(function(bounds, index){
+        //var rectangle = L.rectangle(bounds, {color: 'red', weight: 1});
+        //rectangle.addTo(omap_gps_points_global);
+        //rectangle.bindPopup('Part ' + index);
+    //});
+}
+
+function enlarge_current_range_gps_points(rows_cols_seconds=false){  
+    function sub_enlarge_current_range_gps_points_draw(){
+        if (rectangles_xl>=rectangles_len){
+            document.title=old_title;
+            zoom_gps_points(blcurrent);
+            setTimeout(function(){omap_gps_points_global.panTo(ocenter);},1000);
+            return;
+        }
+        for (let item of rectangles_list[rectangles_xl]){
+            draw_gpx_gps_points(item,'',false,true,-1,true);
+        }
+        rectangles_xl=rectangles_xl+1;
+        setTimeout(sub_enlarge_current_range_gps_points_draw,wait_seconds*1000);
+    }
+      
+    //function sub_enlarge_current_range_gps_points_loop(){
+
+        //sub_enlarge_current_range_gps_points_draw();
+    //}
+    
+    function sub_enlarge_current_range_gps_points_check(){
+        var bound_new=map_size_or_bound_leaflet_b(false,'bound');
+        if (bound_old.toString()!==bound_new.toString()){
+            var new_x_length=bound_new[0].distanceTo(bound_new[1]);
+            var new_y_length=bound_new[0].distanceTo(bound_new[2]);
+            console.log('尝试次数',bltimes);
+            //console.log(old_x_length,old_y_length,new_x_length,new_y_length); //此行保留 - 保留注释
+            sub_enlarge_current_range_gps_points_draw();
+            return;
+        }
+        
+        bltimes=bltimes+1;
+        if (bltimes>5){
+            console.log('尝试次数',bltimes);
+            return;
+        }
+        setTimeout(sub_enlarge_current_range_gps_points_check,1);
+    }
+    
+    if (rows_cols_seconds===false){
+        rows_cols_seconds=prompt('输入行数 列数 间隔秒数，以空格间隔：');
+        if (rows_cols_seconds==null){return;}      
+        rows_cols_seconds=rows_cols_seconds.trim().split(/\s+/);
+        if (rows_cols_seconds.length<3){
+            alert('未输入3项数据');
+            return;
+        }
+        for (let blxl=0,lent=rows_cols_seconds.length;blxl<lent;blxl++){
+            rows_cols_seconds[blxl]=parseInt(rows_cols_seconds[blxl]);
+            if (isNaN(rows_cols_seconds[blxl])){
+                alert('格式错误');
+                return;
+            }
+        }
+    }
+    var csrows, cscols,wait_seconds;
+    [csrows, cscols,wait_seconds]=rows_cols_seconds.slice(0,3);
+    
+    var blcurrent=omap_gps_points_global.getZoom();
+    var blmax=omap_gps_points_global._layersMaxZoom;
+    if (blcurrent==blmax){
+        alert('已到最大放大程度');
+        return;
+    }
+    
+    var bound_old=map_size_or_bound_leaflet_b(false,'bound');
+    var old_x_length=bound_old[0].distanceTo(bound_old[1]);
+    var old_y_length=bound_old[0].distanceTo(bound_old[2]);
+
+    zoom_gps_points(blcurrent+1);
+    var bltimes=0;
+    
+    var rectangles_list, rectangles_xl, rectangles_len;
+
+    rectangles_list=split_map_gps_points(csrows, cscols,true,false)[2];
+    rectangles_xl=0;
+    rectangles_len=rectangles_list.length;
+    
+    if (confirm('是否以每次'+wait_seconds+'秒间隔，遍历读取'+rectangles_len+'块地图内容？')==false){return;}
+        
+    var old_title=document.title;
+    var ocenter=omap_gps_points_global.getCenter();
+    
+    setTimeout(sub_enlarge_current_range_gps_points_check,1);
+}
+
+function zoom_gps_points(new_value=false){
     var blmax=omap_gps_points_global._layersMaxZoom;
     var blmin=omap_gps_points_global._layersMinZoom;
     var blcurrent=omap_gps_points_global.getZoom();
     
-    var new_value=parseInt((prompt('输入缩放值（'+blmin+'-'+blmax+'）：',blcurrent) || '').trim());
+    if (new_value===false){
+        var new_value=parseInt((prompt('输入缩放值（'+blmin+'-'+blmax+'）：',blcurrent) || '').trim());
+    }
+    
     if (isNaN(new_value) || new_value==blcurrent){return;}    
     if (new_value<blmin || new_value>blmax){return;}
     omap_gps_points_global.setZoom(new_value);

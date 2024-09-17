@@ -41,20 +41,20 @@ function init_maps_leaflet_b(csmax=18,csmin=5){
         accessToken: 'pk.eyJ1Ijoid3k3MzA1ZSIsImEiOiJjazJuMG9laTEwMWJqM2xtenZ2eXduMHdtIn0.yh0uJghsB8Ci-Kd2Scy_wA'
     });
 
-    klmaps_global["gd"] = L.tileLayer.chinaProvider('GaoDe.Normal.Map', {maxZoom: 18,minZoom: 5});
-    klmaps_global["gd_earth"] = L.tileLayer.chinaProvider('GaoDe.Satellite.Map', {maxZoom: 18,minZoom: 5});
-    klmaps_global["gd_road"] = L.tileLayer.chinaProvider('GaoDe.Satellite.Annotion', {maxZoom: 18,minZoom: 5});
+    klmaps_global['gd'] = L.tileLayer.chinaProvider('GaoDe.Normal.Map', {maxZoom: 18,minZoom: 5});
+    klmaps_global['gd_earth'] = L.tileLayer.chinaProvider('GaoDe.Satellite.Map', {maxZoom: 18,minZoom: 5});
+    klmaps_global['gd_road'] = L.tileLayer.chinaProvider('GaoDe.Satellite.Annotion', {maxZoom: 18,minZoom: 5});
     
-    klmaps_global["osm"] = L.tileLayer.chinaProvider('OSM.Normal.Map', {maxZoom: 18,minZoom: 5});
+    klmaps_global['osm'] = L.tileLayer.chinaProvider('OSM.Normal.Map', {maxZoom: 18,minZoom: 5});
 
-    klmaps_global["google"] = L.tileLayer.chinaProvider('Google.Normal.Map', {maxZoom: 18,minZoom: 5});
-    klmaps_global["google_earth"] = L.tileLayer.chinaProvider('Google.Satellite.Map', {maxZoom: 18,minZoom: 5});
+    klmaps_global['google'] = L.tileLayer.chinaProvider('Google.Normal.Map', {maxZoom: 18,minZoom: 5});
+    klmaps_global['google_earth'] = L.tileLayer.chinaProvider('Google.Satellite.Map', {maxZoom: 18,minZoom: 5});
 
-    klmaps_global["geoq"] = L.tileLayer.chinaProvider('Geoq.Normal.Map', {maxZoom: 18,minZoom: 5});
-    klmaps_global["geoq_PurplishBlue"] = L.tileLayer.chinaProvider('Geoq.Normal.PurplishBlue', {maxZoom: 18,minZoom: 5});
-    klmaps_global["geoq_Gray"] = L.tileLayer.chinaProvider('Geoq.Normal.Gray', {maxZoom: 18,minZoom: 5});
-    klmaps_global["geoq_Warm"] = L.tileLayer.chinaProvider('Geoq.Normal.Warm', {maxZoom: 18,minZoom: 5});
-    klmaps_global["geoq_Hydro"] = L.tileLayer.chinaProvider('Geoq.Theme.Hydro', {maxZoom: 18,minZoom: 5});
+    klmaps_global['geoq'] = L.tileLayer.chinaProvider('Geoq.Normal.Map', {maxZoom: 18,minZoom: 5});
+    klmaps_global['geoq_PurplishBlue'] = L.tileLayer.chinaProvider('Geoq.Normal.PurplishBlue', {maxZoom: 18,minZoom: 5});
+    klmaps_global['geoq_Gray'] = L.tileLayer.chinaProvider('Geoq.Normal.Gray', {maxZoom: 18,minZoom: 5});
+    klmaps_global['geoq_Warm'] = L.tileLayer.chinaProvider('Geoq.Normal.Warm', {maxZoom: 18,minZoom: 5});
+    klmaps_global['geoq_Hydro'] = L.tileLayer.chinaProvider('Geoq.Theme.Hydro', {maxZoom: 18,minZoom: 5});
 }
 
 function rectangle_leaflet_b(csomap,islayer=false,cslon=121.5,cslat=31.2,longline=1000,shortline=500,cscolor='red'){
@@ -167,10 +167,10 @@ function get_y_leaflet_b(lat1,lng1,s_len,lat2){
     s_len=Math.sin(s_len);
     s_len=s_len**2;
 
-    radLat1 = rad_leaflet_b(lat1);
-    radLat2 = rad_leaflet_b(lat2);
-    a = radLat1 - radLat2;
-    tmp1=Math.pow(Math.sin(a/2),2);
+    var radLat1 = rad_leaflet_b(lat1);
+    var radLat2 = rad_leaflet_b(lat2);
+    var a = radLat1 - radLat2;
+    var tmp1=Math.pow(Math.sin(a/2),2);
 
     s_len=s_len-tmp1;
     s_len=s_len/Math.cos(radLat1);
@@ -182,21 +182,22 @@ function get_y_leaflet_b(lat1,lng1,s_len,lat2){
     s_len=rad_leaflet_b(lng1)-s_len;
     s_len=s_len*180/Math.PI;
     
-    return s_len;
+    return s_len;    
 }
-
+    
 function get_x_leaflet_b(lat1, radius){
     radius=radius/1000;
     radius=radius/earth_radius_leaflet_b();
-    lat2=(rad_leaflet_b(lat1)-radius)*180.0/Math.PI;
+    var lat2=(rad_leaflet_b(lat1)-radius)*180.0/Math.PI;
     return lat2;
 }
 
-function rectangle_xy_leaflet_b(lat1,lng1,longline_half,shortline_half){
-    x2=get_x_leaflet_b(lat1,shortline_half);
-    y2=get_y_leaflet_b(lat1,lng1,longline_half,lat1);
+function rectangle_xy_leaflet_b(lat1,lng1,longline_half,shortline_half){    
+    //lat1,lng1 是中心点 - 保留注释
+    var x2=get_x_leaflet_b(lat1,shortline_half);
+    var y2=get_y_leaflet_b(lat1,lng1,longline_half,lat1);
 
-    bllist=[[x2,y2]];
+    var bllist=[[x2,y2]];
     
     bllist.push([x2,2*lng1-y2]);
     bllist.push([2*lat1-x2,2*lng1-y2]);
@@ -525,7 +526,7 @@ function lines_gpsinfo_2_dots_leaflet_b(cslist){
     return result_t;
 }
 
-function draw_gpx_lines_simple_leaflet_b(cslist,csname,cscolors,textarea_id_for_remove=''){
+function draw_gpx_lines_simple_leaflet_b(cslist,csname,cscolors,textarea_id_for_remove='',dopanto=true){
     //cslist 须是 lat,lon 格式，形如 [ [ 30.221588, 120.024205 ], [ 30.221542, 120.024116 ] ] - 保留注释
     //---
     if (cslist.length==0){return;}
@@ -541,26 +542,61 @@ function draw_gpx_lines_simple_leaflet_b(cslist,csname,cscolors,textarea_id_for_
     navigation_layer_gps_global.addLayer(line_leaflet_b(omap_gps_points_global,true,cslist,cscolors[0],csname,textarea_id_for_remove));
     if (cscolors[1]!==''){
         //lon,lat,radius,color - 保留注释
-        one_point_leaflet_b(cslist[0][1],cslist[0][0],2,cscolors[1]);
+        one_point_leaflet_b(cslist[0][1],cslist[0][0],2,cscolors[1],dopanto);
     }
     if (cscolors[2]!==''){
-        one_point_leaflet_b(cslist[cslist.length-1][1],cslist[cslist.length-1][0],2,cscolors[2]);
+        one_point_leaflet_b(cslist[cslist.length-1][1],cslist[cslist.length-1][0],2,cscolors[2],dopanto);
     }
 }
 
-function one_point_leaflet_b(lon,lat,csradius,cscolor){    
+function one_point_leaflet_b(lon,lat,csradius,cscolor,dopanto=true){    
     var ocircle=circle_leaflet_b(omap_gps_points_global,true,lon,lat,csradius,cscolor,'',0);
     navigation_layer_gps_global.addLayer(ocircle);
-    omap_gps_points_global.panTo(new L.LatLng(lat,lon));
+    if (dopanto){
+        omap_gps_points_global.panTo(new L.LatLng(lat,lon));
+    }
+}
+
+function map_size_or_bound_leaflet_b(min_max=false,bound_or_size='size'){
+    if (bound_or_size=='size'){
+        var list_t=[];
+        var xy=omap_gps_points_global.getSize();
+        if (min_max){
+            for (let item of [[0,0],[xy.x,xy.y]]){
+                var lat_lon=omap_gps_points_global.containerPointToLatLng(item);
+                list_t.push(lat_lon);
+            }
+        } else {
+            for (let item of [[0,0],[xy.x,0],[0,xy.y],[xy.x,xy.y]]){    //左上角 右上角 左下角 右下角
+                var lat_lon=omap_gps_points_global.containerPointToLatLng(item);
+                list_t.push(lat_lon);
+            }
+        }
+        return list_t;        
+    } else {
+        var bounds=omap_gps_points_global.getBounds(); 
+        var nw=bounds.getNorthWest();
+        var ne=bounds.getNorthEast();
+        var sw=bounds.getSouthWest();
+        var se=bounds.getSouthEast();
+        
+        if (min_max){
+            return [nw,se];
+        } else {
+            return [nw,ne,sw,se];
+        }
+    }
 }
 
 function map_range_leaflet_b(min_max=false,cstype=false){
-    var xy=omap_gps_points_global.getSize();
+    var list_t=map_size_or_bound_leaflet_b(min_max,'dd');
+    //var xy=omap_gps_points_global.getSize();
     if (min_max){
         var lat_list=[];
         var lon_list=[];
-        for (let item of [[0,0],[xy.x,xy.y]]){
-            var lat_lon=omap_gps_points_global.containerPointToLatLng(item);
+        //for (let item of [[0,0],[xy.x,xy.y]]){
+            //var lat_lon=omap_gps_points_global.containerPointToLatLng(item);
+        for (let lat_lon of list_t){
             if (cstype!==false){
                 [lat_lon['lng'],lat_lon['lat']]=transform_lon_lat_one_dot_b(cstype,lat_lon['lng'],lat_lon['lat']);
             }
@@ -572,8 +608,9 @@ function map_range_leaflet_b(min_max=false,cstype=false){
         return [lat_list,lon_list];
     } else {
         var result_t=[];
-        for (let item of [[0,0],[xy.x,0],[0,xy.y],[xy.x,xy.y]]){
-            var lat_lon=omap_gps_points_global.containerPointToLatLng(item);
+        //for (let item of [[0,0],[xy.x,0],[0,xy.y],[xy.x,xy.y]]){    //左上角 右上角 左下角 右下角
+        for (let lat_lon of list_t){
+            //var lat_lon=omap_gps_points_global.containerPointToLatLng(item);
             
             if (cstype!==false){
                 [lat_lon['lng'],lat_lon['lat']]=transform_lon_lat_one_dot_b(cstype,lat_lon['lng'],lat_lon['lat']);
@@ -780,15 +817,6 @@ function current_line_lat_lon_get_leaflet_b(transform_type=''){
 }
 
 function data_2_gpx_file_leaflet_b(transform_type='',odom=false){
-    //if (typeof gpx_current_geometry_data_global == 'undefined'){return;}
-    //if (Array.isArray(gpx_current_geometry_data_global)==false){return;}
-    //var list_t=[];
-    //var lat, lon;
-    //for (let item of gpx_current_geometry_data_global){
-        //[lon,lat]=transform_lon_lat_one_dot_b(transform_type,item['lng'],item['lat']);
-        //list_t.push([lat,lon]);
-    //}
-    
     var list_t=current_line_lat_lon_get_leaflet_b(transform_type);
     if (list_t.length==0){return;}
     
@@ -834,4 +862,14 @@ function gpx_head_tail_leaflet_b(cscontent){
     bljg=bljg+cscontent;
     bljg=bljg+'</gpx>\n';
     return bljg;
+}
+
+function rectangle_angles_leaflet_b(southWest,northEast,return_dict=true){
+    var northWest = L.latLng(northEast.lat, southWest.lng);
+    var southEast = L.latLng(southWest.lat, northEast.lng);
+    if (return_dict){
+        return {'nw':northWest,'se':southEast};
+    } else {
+        return [northWest,southEast];
+    }
 }
