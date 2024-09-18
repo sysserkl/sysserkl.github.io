@@ -377,9 +377,15 @@ function klmenu_hide_b(csname='',more_parent=false){
     }
 }
 
-function klmenu_select_sort_b(select_id,col_name_list,str_t,fn_name,add_span=true){
-    for (let blxl=0,lent=col_name_list.length;blxl<lent;blxl++){
-        col_name_list[blxl]='<option value="'+blxl+'">'+col_name_list[blxl]+'</option>';
+function klmenu_select_sort_b(select_id,col_name_list,str_t,fn_name,add_span=true,no_mode=true){
+    if (no_mode){
+        for (let blxl=0,lent=col_name_list.length;blxl<lent;blxl++){
+            col_name_list[blxl]='<option value="'+blxl+'">'+col_name_list[blxl]+'</option>';
+        }
+    } else {
+        for (let blxl=0,lent=col_name_list.length;blxl<lent;blxl++){
+            col_name_list[blxl]='<option>'+col_name_list[blxl]+'</option>';
+        }
     }
 
     var blparent=menu_parent_node_b(str_t);

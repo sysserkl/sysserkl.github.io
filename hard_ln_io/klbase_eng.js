@@ -2394,7 +2394,7 @@ function recent_words_list_enwords_b(cspageno=0,words_count_per_page=100,isrando
     //var blweek=date_2_ymd_b(false,'w');    
     //blweek=(blweek==0?7:blweek);
     
-    var page_html=page_combination_b(bllen,words_count_per_page,cspageno,'recent_words_list_enwords_b','page_location_enwords_b','',1,15,'','aclick',1,true,[day_no_enwords_b()[0]]);
+    var page_html=page_combination_b(bllen,words_count_per_page,cspageno,'recent_words_list_enwords_b','page_location_enwords_b','',1,50,'','aclick',1,true,[day_no_enwords_b()[0]]);
 
 	document.getElementById('divhtml').innerHTML=bljg+page_html;
     
@@ -2488,28 +2488,15 @@ function similar_enwords_b(csword,cshideno,cshidelineno,cshidesimilarno,csshow){
 	for (let blxl=0,lent=bllist.length;blxl<lent;blxl++){
 		var blno=bllist[blxl][1];
 
-		if (cshideno){
-            bljg=bljg+'<p class="article">';
-        } else {
-            bljg=bljg+'<li>';
-        }
-		
+        bljg=bljg+(cshideno?'<p class="article">':'<li>');
+
 		var tmp_similarno=bllist[blxl][0];
 		if (cshidesimilarno){
             tmp_similarno=0;
         }
 
-		if (cshidelineno){
-            bljg=bljg+en_one_word_b(enwords[blno],[-1, tmp_similarno]);
-        } else {
-            bljg=bljg+en_one_word_b(enwords[blno],[blno, tmp_similarno]);
-        }
-        
-		if (cshideno){
-            bljg=bljg+'</p>';
-        } else {
-            bljg=bljg+'</li>';
-        }
+        bljg=bljg+en_one_word_b(enwords[blno],[(cshidelineno?-1:blno), tmp_similarno]);
+        bljg=bljg+(cshideno?'</p>':'</li>');
         words_searched_arr_global.push(enwords[blno]);
 	}
 

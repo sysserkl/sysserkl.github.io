@@ -377,7 +377,9 @@ function time_value_cols_array_2_flot_lines_data_format_arr_analyze(){
     for (let blxl=0,lent=col_list.length;blxl<lent;blxl++){
         col_list[blxl]=parseInt(col_list[blxl])-1;
     }
+    
     if (col_list.length!==2){return;}
+    
     if (isNaN(col_list[0]) || isNaN(col_list[1])){return;}
     if (col_list[0]<0 || col_list[1]<0){return;}
     
@@ -481,7 +483,7 @@ function data_2_flot_arr_analyze(is_demo=false){
                     }
                     document.getElementById('divhtml').innerHTML='<textarea>'+result_t.join('\n')+'</textarea>';
                     break;
-                case 'time value cols array 2 flot lines data format':
+                case '根据指定两个列号（time value cols）转换数组为 flot lines data format':
                     time_value_cols_array_2_flot_lines_data_format_arr_analyze();
                     break;
                 case 'pie':

@@ -316,7 +316,7 @@ function menu_seen(){
     var option_t=list_2_option_b(sort_type);
 
     var klmenu1=[
-   '<span class="span_menu"><select id="select_raw_sort_id_seen" style="height:2rem;">'+option_t.join('')+'</select> <span class="aclick" onclick="'+blparent+'sort_seen();">↑</span><span class="aclick" onclick="'+blparent+'sort_seen(true);">↓</span></span>',
+    klmenu_select_sort_b('select_raw_sort_id_seen',sort_type,str_t,'sort_seen',true,false),
     '<span class="span_menu" onclick="'+str_t+'frequency_enwords_book_b(\'sentence_rare\',true);">非稀有旧单词</span>',
     '<span class="span_menu" onclick="'+str_t+'list_popular_seen();">常见新单词</span>',    
     '<span class="span_menu" onclick="'+str_t+'title_words_seen();">常见标题单词</span>',    
