@@ -345,7 +345,7 @@ function split_pwa_websites_b(csstr){
         return ['','','',''];
     }
     var list_t=csstr.substring(0,blat).trim().split(',');
-    blcategory=list_t[0];
+    var blcategory=list_t[0];
     if (blcategory==''){
         blcategory='未分类';
     }

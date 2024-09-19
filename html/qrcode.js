@@ -327,6 +327,19 @@ function create_klqr(csstr=''){
     }
 }
 
+function emoji_random_klqr(){
+    var list_t=emoji_category_b(['food','vegetable','animal','transport','human'],-2);
+    var blcount=parseInt((prompt('输入个数：') || '').trim());
+    if (isNaN(blcount)){return;}
+    blcount=Math.max(1,blcount);
+    while (list_t.length<blcount){
+        list_t=list_t.concat(list_t);
+    }
+    list_t.sort(randomsort_b);
+    list_t=list_t.slice(0,blcount);
+    document.getElementById('textarea_ascii_klqr').value=list_t.join(',');
+}
+
 function show_border_klqr(){
     var oblocks=document.querySelectorAll('div.emp, div.dot');
     if (oblocks.length==0){

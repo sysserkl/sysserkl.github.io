@@ -29,10 +29,13 @@ function menu_websites_pwa(){
         var row_list=split_pwa_websites_b(item);
         if (fav_set.has(row_list[1])){
             fav_websites_global.push([row_list[1],row_list[2]]);
-        }  
-        var bltag=row_list[3];
+        }
+        
+        var bltag=row_list[3];  //tag - 保留注释
         if (bltag==''){continue;}
         var list_t=bltag.split(',');
+        list_t.push(row_list[0]);   //category - 保留注释
+        list_t=new Set(list_t);
         for (let atag of list_t){
             if (tag_list[atag]==undefined){
                 tag_list[atag]=0;
@@ -40,12 +43,12 @@ function menu_websites_pwa(){
             tag_list[atag]=tag_list[atag]+1;
         }
     }
-    
+
     var klmenu_tag=tag_menu_websites_b(tag_list,'search_websites_pwa',str_t);
     //---
     var klmenu_recent=[];
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_tag,'#','10rem','1rem','1rem','60rem')+klmenu_b(klmenu_recent,'🌐','16rem','1rem','1rem','30rem','','div_menu_recent_sites_pwa')+fav_www_menu_websites_b('#top',true)+klmenu_b(klmenu2,'⚙','16rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_tag,'#','10rem','1rem','1rem','30rem')+klmenu_b(klmenu_recent,'🌐','16rem','1rem','1rem','30rem','','div_menu_recent_sites_pwa')+fav_www_menu_websites_b('#top',true)+klmenu_b(klmenu2,'⚙','16rem','1rem','1rem','60rem'),'','0rem')+' ');
     klmenu_check_b('span_reg_web',true);
     klmenu_check_b('span_veil_web',true);    
     recent_websites_b(false,'menu','div_menu_recent_sites_pwa');
