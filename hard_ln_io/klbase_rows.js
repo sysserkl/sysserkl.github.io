@@ -574,11 +574,11 @@ function strquick_klr_b(cstype='',csid='textarea_rows_content',status_id='textar
             break;
         case 'double2single':
             var otextarea = document.getElementById(csid);
-            otextarea.value=character_double_2_single_b(otextarea.value);    
+            otextarea.value=character_double_2_single_klr_b(otextarea.value);    
             break;
         case 'double2single_w':
             var otextarea = document.getElementById(csid);
-            otextarea.value=character_double_2_single_b(otextarea.value,true);    
+            otextarea.value=character_double_2_single_klr_b(otextarea.value,true);    
             break;
         case 'single2double':
             var otextarea = document.getElementById(csid);
@@ -1312,4 +1312,27 @@ function blank_rows_add_remove_klr_b(cstype='',textarea_id='',str_t=''){
             return list_t;
             break;
     }
+}
+
+function character_double_2_single_klr_b(str,only_az09=false){
+    var result = '';
+    var len = str.length;
+    var double_az09='';
+    if (only_az09){
+        double_az09=character_double_b();
+    }
+    
+    for (let blxl=0;blxl<len;blxl++){
+        if (only_az09 && !double_az09.includes(str[blxl])){
+            result=result+str[blxl];
+            continue;
+        }
+        var cCode = str.charCodeAt(blxl);
+        //全角与半角相差（除空格外）：65248（十进制）
+        cCode = (cCode>=0xFF01 && cCode<=0xFF5E)?(cCode - 65248) : cCode;
+        //处理空格
+        cCode = (cCode==0x03000)?0x0020:cCode;
+        result += String.fromCharCode(cCode);
+    }
+    return result;
 }

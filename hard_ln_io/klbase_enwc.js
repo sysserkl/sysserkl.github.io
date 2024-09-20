@@ -489,7 +489,7 @@ function days_enwc_b(only_plan=false){
     local_storage_today_b('enwords_plan_per_day',40,max_everyday.toFixed(3),'/',[15,0,0.5]);
 
     var blint=Math.ceil(enwords.length/1000)*1000;
-    var blvalue=math_ceil10_b(blint);
+    var blvalue=math_ceil10_enwc_b(blint);
     var blplan=sub_days_enwc_b_plan(max_everyday,blint,blvalue,true);
     
     var max_everyday_ceil=Math.max(2,Math.ceil(max_everyday));
@@ -705,4 +705,16 @@ function rnd_cn_search_enwc_b(cslines='',showhtml=true){
         title_change_enwords_b('随机中文词汇');
     }
     enwords_sort_b();
+}
+
+function math_ceil10_enwc_b(csnum){
+    //8339 -> 9000 - 保留注释
+    //1002 -> 2000 - 保留注释
+    //只支持正数 - 保留注释
+    if (csnum<0){
+        return csnum;
+    }
+    var blstr=csnum.toString();
+    var bllen=blstr.length;
+    return (parseInt(blstr.substring(0,1))+1)*(10**(bllen-1));
 }

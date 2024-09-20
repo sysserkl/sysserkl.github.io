@@ -11,13 +11,14 @@ function fav_and_tag_klwebsites(change_no=false){
             }
         }
         
-        var blat=item[2].indexOf(',');
-        if (blat==-1){continue;}
-        var bltag=item[2].substring(blat+1,).trim();
-        if (bltag==''){continue;}
+        //var blat=item[2].indexOf(',');
+        //if (blat==-1){continue;}
+        //var bltag=item[2].substring(blat+1,).trim();
+        //if (bltag==''){continue;}
         
-        var list_t=bltag.split(',');
+        var list_t=item[2].split(',');
         for (let atag of list_t){
+            if (atag==''){continue;}
             if (tag_list[atag]==undefined){
                 tag_list[atag]=0;
             }
@@ -74,7 +75,7 @@ function menu_klwebsites(change_no=false){
     ];    
     //---
     
-    document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🕸','24rem','1rem','1rem','60rem')+klmenu_b(klmenu_tag,'#','10rem','1rem','1rem','60rem')+klmenu_b(klmenu_search,'𓅸','10rem','1rem','1rem','60rem')+fav_www_menu_websites_b('',false)+klmenu_b(klmenu_config,'⚙','13rem','1rem','1rem','30rem'),'','0rem','','div_websites_menu')+' ');
+    document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🕸','24rem','1rem','1rem','60rem')+klmenu_b(klmenu_tag,'#','10rem','1rem','1rem','30rem')+klmenu_b(klmenu_search,'𓅸','10rem','1rem','1rem','60rem')+fav_www_menu_websites_b('',false)+klmenu_b(klmenu_config,'⚙','13rem','1rem','1rem','30rem'),'','0rem','','div_websites_menu')+' ');
     klmenu_check_b('span_veil_web',true);        
     klmenu_check_b('span_category_with_p_web',true);        
     

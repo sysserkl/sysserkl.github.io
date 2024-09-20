@@ -1271,18 +1271,6 @@ function track_source_b(cskey,include_local=true,count_per_day=1){
     document.write('\n<ifra'+'me src="ht'+'tps:\/\/gla'+'cial-re'+'treat-38'+'863'+'.'+'her'+'oku'+'ap'+'p.c'+'om\/pg?key='+specialstr_html_b(cskey)+'" style="display:none;"><\/ifra'+'me>\n');
 }
 
-function math_ceil10_b(csnum){
-    //8339 -> 9000 - 保留注释
-    //1002 -> 2000 - 保留注释
-    //只支持正数 - 保留注释
-    if (csnum<0){
-        return csnum;
-    }
-    var blstr=csnum.toString();
-    var bllen=blstr.length;
-    return (parseInt(blstr.substring(0,1))+1)*(10**(bllen-1));
-}
-
 function character_single_2_double_b(str){
     var result = '';
     var len = str.length;
@@ -1299,53 +1287,6 @@ function character_single_2_double_b(str){
 
 function character_double_b(){
     return 'ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ０１２３４５６７８９';
-}
-
-function character_double_2_single_b(str,only_az09=false){
-    var result = '';
-    var len = str.length;
-    var double_az09='';
-    if (only_az09){
-        double_az09=character_double_b();
-    }
-    
-    for (let blxl=0;blxl<len;blxl++){
-        if (only_az09 && !double_az09.includes(str[blxl])){
-            result=result+str[blxl];
-            continue;
-        }
-        var cCode = str.charCodeAt(blxl);
-        //全角与半角相差（除空格外）：65248（十进制）
-        cCode = (cCode>=0xFF01 && cCode<=0xFF5E)?(cCode - 65248) : cCode;
-        //处理空格
-        cCode = (cCode==0x03000)?0x0020:cCode;
-        result += String.fromCharCode(cCode);
-    }
-    return result;
-}
-
-function permutator_b(inputArr){
-    //https://stackoverflow.com/questions/9960908/permutations-in-javascript/37580979#37580979 - 保留注释
-    var length = inputArr.length;
-    var result = [inputArr.slice()];
-    var c = new Array(length).fill(0);
-    var i = 1, k, p;
-
-    while (i < length){
-        if (c[i] < i){
-            k = i % 2 && c[i];
-            p = inputArr[i];
-            inputArr[i] = inputArr[k];
-            inputArr[k] = p;
-            ++c[i];
-            i = 1;
-            result.push(inputArr.slice());
-        } else {
-            c[i] = 0;
-            ++i;
-        }
-    }
-    return result;
 }
 
 function reverse_str_b(csstr){
@@ -1374,14 +1315,14 @@ function service_worker_unregister_b(appname){
     }
 }
 
-function service_worker_delete_b(appname='',file_key='',confirm_str='是否更新版本？',show_type='',show_id=''){
+function service_worker_delete_b(appname='',file_key='',confirm_str='是否更新版本？',show_type='',show_id='',check_remote=true){
     function sub_service_worker_delete_b_message(current_str){
         console.log(current_str);
         show_str=show_str+current_str+delimiter;
         message_show_b(show_str,show_type,show_id,'',0,false);    
     }
     
-    function sub_service_worker_delete_b_one_file(request, index, array, one_key, cache,csxl){
+    function sub_service_worker_delete_b_one_file(request, index, array, one_key, cache, csxl){
         if (file_key==''){
             if (csxl % 100 == 0){
                 var current_str=key_no+'.'+csxl+' '+one_key+' delete'+del_caption+' url: '+array[index]['url'];
@@ -1405,7 +1346,7 @@ function service_worker_delete_b(appname='',file_key='',confirm_str='是否更�
     function sub_service_worker_delete_b_one_key(){
         if (key_no>=key_len){
             if (!is_all && file_key==''){   //在删除app后，再删除base - 保留注释
-                service_worker_delete_b('','base','是否清理base函数？',show_type,show_id);
+                service_worker_delete_b('','base','是否清理base函数？',show_type,show_id,false);
             }
             return;
         }
@@ -1441,6 +1382,7 @@ function service_worker_delete_b(appname='',file_key='',confirm_str='是否更�
         });
     }
     //-----------------------
+    console.log('service_worker_delete_b() 参数：',appname,file_key,confirm_str,show_type,show_id,check_remote);
     if (confirm_str=='DRY'){
         var is_dry_run=true;
         var del_caption='(DRY)';
@@ -1448,11 +1390,7 @@ function service_worker_delete_b(appname='',file_key='',confirm_str='是否更�
         var is_dry_run=false;
         var del_caption='';
     }
-    
-    if (confirm_str!=='' && !is_dry_run){
-        if (!confirm(confirm_str)){return;}
-    }
-    
+
     var is_all=(appname=='');
     var keyname='pwa_'+appname+'_store'; //keyname 支持如 pwa_xxx_store_v任意字符 - 保留注释
 
@@ -1462,12 +1400,84 @@ function service_worker_delete_b(appname='',file_key='',confirm_str='是否更�
     var key_len=0;
     var key_no=0;
     var key_list=[];
+
+    if (!is_dry_run){
+        if (confirm_str!==''){
+            if (!confirm(confirm_str)){return;}
+        }
+        if (check_remote){
+            remote_server_check_b(function (is_ok=true){
+                console.log(is_ok);
+                if (is_ok){
+                    service_worker_delete_b(appname,file_key,'',show_type,show_id,false);
+                } else {
+                    alert('未能连接到远程服务器，取消更新');
+                    return;
+                }
+            });
+            return;
+        }
+    }
     
+    console.log('service_worker_delete_b()',typeof remote_server_check_global);
+
     caches.keys().then(function(cskeys){
         key_list=cskeys;
         key_len=key_list.length;
         sub_service_worker_delete_b_one_key();
-    });
+    });   
+}
+
+function remote_server_check_b(csfn){
+    function sub_remote_server_check_b_one_file(request, index, array, one_key, cache, csxl){
+        if (array[index]['url'].includes('remote_server_check_data.js')){
+            var current_str=key_no+'.'+csxl+' '+one_key+' delete url: '+array[index]['url'];
+
+            console.log(current_str);
+            show_str=show_str+current_str+'<br />';
+            message_show_b(show_str,'','','',0,false);    
+        
+            cache.delete(request);
+            csxl=csxl+1;
+        }
+        return csxl;
+    }
+    
+    function sub_remote_server_check_b_one_key(){
+        if (key_no>=key_len){
+            var file_list=klbase_addons_import_js_b([],[],['remote_server_check_data.js'],[],false,false);
+            load_js_var_file_b('remote_server_check_global',file_list,'remote_server_check_data.js',csfn,true,false);
+            return;
+        }
+        
+        var one_key=key_list[key_no];
+        key_no=key_no+1;
+
+        caches.open(one_key).then(function(cache){
+            cache.keys().then(function(keys){
+                var blxl=1;
+                keys.forEach(function (request, index, array){
+                    blxl=sub_remote_server_check_b_one_file(request, index, array,one_key,cache,blxl);
+                });
+
+                setTimeout(sub_remote_server_check_b_one_key,10);
+            });
+        });
+    }
+    //-----------------------
+    var show_str='';
+    var key_len=0;
+    var key_no=0;
+    var key_list=[];
+    
+    remote_server_check_global=undefined;
+    console.log('remote_server_check_b()',typeof remote_server_check_global);
+    
+    caches.keys().then(function(cskeys){
+        key_list=cskeys;
+        key_len=key_list.length;
+        sub_remote_server_check_b_one_key();
+    });    
 }
 
 function pwa_clear_cache_all_b(){

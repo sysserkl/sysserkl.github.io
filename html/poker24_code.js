@@ -284,11 +284,11 @@ function is_no_result_poker24(cslist){
 function combination_mode_generate_poker24(){
     let result_t=[];
     let one_group4=['a','b','c','d'];
-    let list_t4=permutator_b(one_group4);
+    let list_t4=permutator_poker24(one_group4);
     for (let item4 of list_t4){
         let groups3=assemble_poker24(item4);
         for (let one_group3 of groups3){
-            let list_t3=permutator_b(one_group3);
+            let list_t3=permutator_poker24(one_group3);
             for (let item3 of list_t3){
                 let groups2=assemble_poker24(item3);
                 for (let one_group2 of groups2){    
@@ -330,7 +330,7 @@ function calculate_poker24(one_group4){
         
         if (is_no_result_poker24(one_group2)){continue;}                                
         
-        let list_t2=permutator_b(one_group2);
+        let list_t2=permutator_poker24(one_group2);
         for (let item2 of list_t2){
             let groups1=assemble_poker24(item2);
             for (let one_group1 of groups1){
@@ -512,4 +512,28 @@ function args_poker24(){
             }
        }
     }
+}
+
+function permutator_poker24(inputArr){
+    //https://stackoverflow.com/questions/9960908/permutations-in-javascript/37580979#37580979 - 保留注释
+    var length = inputArr.length;
+    var result = [inputArr.slice()];
+    var c = new Array(length).fill(0);
+    var i = 1, k, p;
+
+    while (i < length){
+        if (c[i] < i){
+            k = i % 2 && c[i];
+            p = inputArr[i];
+            inputArr[i] = inputArr[k];
+            inputArr[k] = p;
+            ++c[i];
+            i = 1;
+            result.push(inputArr.slice());
+        } else {
+            c[i] = 0;
+            ++i;
+        }
+    }
+    return result;
 }
