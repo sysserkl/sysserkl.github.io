@@ -401,8 +401,8 @@ function days_enwc_b(only_plan=false){
 	var date1_tmp=default_date_b('',true);
 	var year_tmp=date1_tmp.getFullYear();
 	
-    var wordscount=[2020,10000];
-    var year_increment=1250;
+    var wordscount=[2023,15000];
+    var year_increment=1250;    //确保显示万位整数 - 保留注释
 
     var not_this_year=false;
     var years_used=(enwords.length - wordscount[1])/year_increment;  //已完成的单词数>计划数 - 保留注释
