@@ -530,7 +530,7 @@ function draw_gpx_lines_simple_leaflet_b(onavigation,omap,cslist,csname,cscolors
     //cslist 须是 lat,lon 格式，形如 [ [ 30.221588, 120.024205 ], [ 30.221542, 120.024116 ] ] - 保留注释
     //---
     if (cslist.length==0){return;}
-    
+
     if (cscolors.length<3){
         cscolors=cscolors.concat([-1,-1,-1]).slice(0,3);
     }
@@ -618,7 +618,7 @@ function map_range_leaflet_b(omap,min_max=false,cstype=false){
     }
 }
 
-function gpx_file_draw_leaflet_b(omap,csstr,cstype,csname='',cscolors=[]){
+function gpx_file_draw_leaflet_b(onavigation,omap,csstr,cstype,csname='',cscolors=[]){
     var all_points=[];
     var list_t=csstr.split('<trk>');    //有几条线路就有几个 trk - 保留注释
 
@@ -677,7 +677,7 @@ function gpx_file_draw_leaflet_b(omap,csstr,cstype,csname='',cscolors=[]){
         cscolors[0]=line_color_list[gpx_line_color_no_global % line_color_list.length];
         gpx_line_color_no_global=gpx_line_color_no_global+1;          
         
-        draw_gpx_lines_simple_leaflet_b(omap,result_list,blname,cscolors);  
+        draw_gpx_lines_simple_leaflet_b(onavigation,omap,result_list,blname,cscolors);  
     }
 
     return all_points;

@@ -14,7 +14,7 @@ function buttons_gps_points(){
     left_strings=left_strings+'<span class="aclick" onclick="save_to_memory_gps_points();">暂存到内存</span>';
     left_strings=left_strings+'<span class="aclick" onclick="recover_from_memory_gps_points();">从内存恢复</span>';
     var right_strings='</p>';
-    var blstr=textarea_with_form_generate_b('textarea_gps_points','height:20rem;',left_strings,'全选,清空,复制,save as gpx file,从 bigfile 导入文件内容,发送到临时记事本,发送地址',right_strings,'','form_gps_news');
+    var blstr=textarea_with_form_generate_b('textarea_gps_points','height:20rem;',left_strings,'全选,清空,复制,save as gpx file,发送到临时记事本,发送地址',right_strings,'','form_gps_news'); //从 bigfile 导入文件内容 - 保留注释
     
     bljg=bljg+blstr+'\n';    
     return bljg;
@@ -237,7 +237,7 @@ function read_gpx_gps_points(csstr,csname='',cscolors=false){
         //cscolors 形似 [ "blue:red:green:brown:cyan:black:purple", "cyan", "red" ] - 保留注释
     }
     
-    var all_points=gpx_file_draw_leaflet_b(omap_gps_points_global,csstr,bltype,csname,cscolors);
+    var all_points=gpx_file_draw_leaflet_b(navigation_layer_gps_global,omap_gps_points_global,csstr,bltype,csname,cscolors);
 
     if (klmenu_check_b('span_gpx_2_latlon',false)){
         document.getElementById('textarea_gps_points').value = all_points.join('\n');
@@ -1483,6 +1483,8 @@ function location_gpx_gps_points(csstr=false){
 
 function menu_gps_points(){
     var str_t=klmenu_hide_b('');
+    var blparent=menu_parent_node_b(str_t);
+
     var klmenu_gpx=[];    
     if (document.location.href.substring(0,5).toLowerCase()!=='file:'){
         klmenu_gpx.push('<span class="span_menu" onclick="'+str_t+'gpx_file_selection_gps_points();">select GPX file</span>');
@@ -1499,6 +1501,7 @@ function menu_gps_points(){
     klmenu_gpx.push(menu_container_b(str_t,group_list,'路线：'));    
     
     klmenu_gpx=klmenu_gpx.concat([
+    '<span class="span_menu"><span class="span_link" onclick="window.open(\'bigfile.htm\');">bigfile</span> gpx：<select id="select_big_file_gpx_gps_points" style="max-width:10rem;height:2rem;" onclick="big_file_gpx_options_generate_gps_points();"></select> <span class="aclick" onclick="'+blparent+'import_bigfile_gps_points();">导入</span></span>',
     '<span class="span_menu" onclick="'+str_t+'gpx_from_textarea_gps_points();">从编辑框显示GPX图形</span>',
     '<span class="span_menu" onclick="'+str_t+'latlon_2_gpx_gps_points();">lat,lon to GPX file format</span>',
     '<span id="span_gpx_2_latlon" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id);">⚪ 转换gpx为纬度,经度点</span>',    
@@ -1595,7 +1598,32 @@ function menu_gps_points(){
     
     klmenu_config=klmenu_config.concat(root_font_size_menu_b(str_t,false,true,false,true,'textarea_gps_points'));
         
-    document.getElementById('input_upload_gpx').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_gpx,'⛰','16rem','1rem','1rem','60rem')+klmenu_b(klmenu_dots,'','34rem','1rem','1rem','60rem')+klmenu_b(klmenu_district,'📍','24rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','27rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('input_upload_gpx').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_gpx,'⛰','22rem','1rem','1rem','60rem')+klmenu_b(klmenu_dots,'','34rem','1rem','1rem','60rem')+klmenu_b(klmenu_district,'📍','24rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','27rem','1rem','1rem','60rem'),'','0rem')+' ');
+}
+
+function big_file_gpx_options_generate_gps_points(){
+    function sub_big_file_gpx_options_generate_gps_points_html(csarr){
+        for (let blxl=0,lent=csarr.length;blxl<lent;blxl++){
+            csarr[blxl]='<option>'+csarr[blxl]+'</option>';
+        }
+        csarr.push('<option>手动输入 bigfile gpx 文件名</option>');
+        var oselect=document.getElementById('select_big_file_gpx_gps_points');
+        oselect.innerHTML=csarr.join('\n');
+        oselect.removeAttribute('onclick');
+    }
+    idb_bigfile_b('read','gpxlist','',sub_big_file_gpx_options_generate_gps_points_html);
+}
+
+function import_bigfile_gps_points(){
+    function sub_import_bigfile_gps_points_onsuccess(cscontent){
+        gpx_from_textarea_gps_points();
+    }
+    
+    var fname=document.getElementById('select_big_file_gpx_gps_points').value;
+    if (fname=='手动输入 bigfile gpx 文件名'){
+        fname=false;
+    }
+    import_bigfile_content_b(fname,'textarea_gps_points',sub_import_bigfile_gps_points_onsuccess);
 }
 
 function arg_from_textarea_gps_points(){

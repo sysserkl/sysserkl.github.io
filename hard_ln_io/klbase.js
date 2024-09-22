@@ -3813,12 +3813,15 @@ function selection_expand_b(){
     //手机浏览器自身负责渲染文本选区，并且通常不会直接响应JavaScript创建的Range对象而显示选择图标。某些移动浏览器可能对JavaScript修改文本选区的支持有限，尤其是在没有用户交互的情况下。此外，为了用户体验和安全原因，现代浏览器可能会限制非用户触发的文本选区更改行为。
 }
 
-function import_bigfile_content_b(filename=false,csid=false){
+function import_bigfile_content_b(filename=false,csid=false,run_fn=false){
     function sub_import_bigfile_content_b(cscontent){
         if (csid!==false){
             var otextarea=document.getElementById(csid);
             if (otextarea){
                 otextarea.value=cscontent;
+            }
+            if (typeof run_fn == 'function'){
+                run_fn(cscontent);
             }
         }
     }

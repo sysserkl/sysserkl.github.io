@@ -285,6 +285,11 @@ function idb_read_bigfile_b(db,do_type='',cskey='',run_fn=false){
                             raw_data_bigfile.push([cursor.value.name,book_name]);
                         }
                         break;
+                    case 'gpxlist':
+                        if (cursor.value.name.endsWith('.gpx')){
+                            raw_data_bigfile.push(cursor.value.name);
+                        }                        
+                        break;
                     default:
                         //返回文件序号、名称、起始部分、大小、日期等 - 保留注释
                         var bllen=cursor.value.content.length;
