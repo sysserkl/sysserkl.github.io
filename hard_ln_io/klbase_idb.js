@@ -238,12 +238,30 @@ function idb_bigfile_b(crud_type='',do_type='',cskey='',run_fn=false){
 function idb_read_bigfile_b(db,do_type='',cskey='',run_fn=false){
     function sub_idb_read_bigfile_b_search(){
         //current_result_bigfile_global 每个元素为：[id,name,content,datetime] - 保留注释
-        
         if (do_type!=='eval'){
             if (typeof run_fn == 'function'){            
                 run_fn(raw_data_bigfile);
             }
         }
+    }
+    
+    function sub_idb_read_bigfile_b_is_book_data_file(fname,cscontent){
+        //与 txtbook_standalone_terminal.py 对应 - 保留注释
+        if (!fname.endsWith('_data.js')){return '';}
+        var list_t=cscontent.split('\n').slice(0,4);
+        if (list_t.length<4){return '';}
+        var book_name='';
+        if (!list_t[0].startsWith('//')){
+            return '';
+        } else {
+            book_name=list_t[0].slice(2,);
+        }
+        
+        if (!list_t[1].startsWith('csbookname_global')){return '';}
+        if (!list_t[2].startsWith('csbooklist_sub_global')){return '';}
+        if (!list_t[3].startsWith('csbookno_global')){return '';}
+        
+        return book_name;
     }
     
     function sub_idb_read_bigfile_b_onsuccess(resolve, reject, event, other_var1,other_var2){
@@ -259,6 +277,13 @@ function idb_read_bigfile_b(db,do_type='',cskey='',run_fn=false){
                         break;
                     case 'content':
                         raw_data_bigfile=cursor.value.content;
+                        break;
+                    case 'booklist':
+                        var book_name=sub_idb_read_bigfile_b_is_book_data_file(cursor.value.name,cursor.value.content);
+                        //返回文件名、书籍名称 - 保留注释
+                        if (book_name!==''){
+                            raw_data_bigfile.push([cursor.value.name,book_name]);
+                        }
                         break;
                     default:
                         //返回文件序号、名称、起始部分、大小、日期等 - 保留注释

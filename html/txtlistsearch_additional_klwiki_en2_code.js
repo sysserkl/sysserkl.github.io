@@ -18,8 +18,9 @@ function menu_more_kltxt_klwiki_en2(){
     klmenu1.push(menu_container_b(str_t,group_list,'行：'));
     
     var group_list=[
-    ['全部','new_words_count_kltxt_klwiki_en2();',true],
-    ['当前','new_words_count_kltxt_klwiki_en2(true);',true],    
+    ['全部','new_words_count_kltxt_klwiki_en2(\'all\');',true],
+    ['当前','new_words_count_kltxt_klwiki_en2(\'current\');',true],    
+    ['txtbook','new_words_count_kltxt_klwiki_en2(\'txtbook\');',true],
     ];    
     klmenu1.push(menu_container_b(str_t,group_list,'常见生词统计：'));
     
@@ -120,21 +121,35 @@ function rare_words_kltxt_klwiki_en2(){
     txtsearch_kltxt_b('\\(-[^\\(\\)]+\\)$ \\s-[^\\(\\)]+\\)$(:r)'); //-可能出现在(后或空格后 - 保留注释
 }
 
-function new_words_count_kltxt_klwiki_en2(is_current=false){
+function new_words_count_kltxt_klwiki_en2(cstype='all'){
     var t0 = performance.now();
     en_word_temp_get_b();
-    var result_t={};
     
-    if (is_current){
-        var blarr=[];
-        var ospans=document.querySelectorAll('#divhtml span.txt_content');
-        for (let one_span of ospans){
-            blarr.push(one_span.innerText);
-        }
-    } else {
-        var blarr=filelist;
+    var blarr=[];
+    switch (cstype){
+        case 'current':
+            var ospans=document.querySelectorAll('#divhtml span.txt_content');
+            for (let one_span of ospans){
+                blarr.push(one_span.innerText);
+            }
+            break;
+        case 'all':
+            blarr=filelist;
+            break;
+        case 'txtbook':
+            var blstart=false;
+            for (let arow of filelist){
+                if (arow=='== TXTBOOK =='){
+                    blstart=true;
+                }
+                if (blstart){
+                    blarr.push(arow);
+                }
+            }
+            break;
     }
-    
+
+    var result_t={};
     for (let arow of blarr){
         var list_t=arow.match(/\(([^\(\)]+?)\)$/) || ['',''];
         if (list_t[1]==''){continue;}

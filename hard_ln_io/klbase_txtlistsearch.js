@@ -227,7 +227,11 @@ function import_bigfile_kltxt_b(){
         }
     }
     
-    var fname=prompt_from_local_storage_b('输入书籍文件名','bigfile_txtbook') || '';
+    var fname=document.getElementById('select_big_file_book_kltxt').value;
+    if (fname=='手动输入 bigfile 文件名'){
+        fname=prompt_from_local_storage_b('输入书籍文件名','bigfile_txtbook') || '';
+    }
+    
     if (fname.trim()==''){return;}
 
     filelist=undefined;
@@ -282,6 +286,8 @@ function new_words_lines_kltxt_b(csmin=1,csmax=1){
 
 function txtmenus_kltxt_b(cstype=''){
     var str_t=klmenu_hide_b('');
+    var blparent=menu_parent_node_b(str_t);
+
     if (cstype=='reader'){
         var jump_list=['txtlistsearch','Search Page'];
     } else {
@@ -383,7 +389,7 @@ function txtmenus_kltxt_b(cstype=''){
     }
 
     if (cstype!=='digest'){
-        menu_config.push('<span class="span_menu" onclick="'+str_t+'import_bigfile_kltxt_b();">导入 bigfile 书籍</span>');    
+        menu_config.push('<span class="span_menu"><span class="span_link" onclick="window.open(\'bigfile.htm\');">bigfile</span> 书籍：<select id="select_big_file_book_kltxt" style="max-width:10rem;height:2rem;"></select> <span class="aclick" onclick="'+blparent+'import_bigfile_kltxt_b();">导入</span></span>');
     }
     
     if (cstype!=='reader' && cstype!=='digest'){
@@ -463,7 +469,7 @@ function txtmenus_kltxt_b(cstype=''){
         bljg=bljg+klmenu_b(menu_dir,'🔍',menu_dir_width,'',fontsize);
         bljg=bljg+klmenu_b(menu_digest,'🖊','28rem','',fontsize);       
         bljg=bljg+colors;
-        bljg=bljg+klmenu_b(menu_config,'⚙','15rem','',fontsize);
+        bljg=bljg+klmenu_b(menu_config,'⚙','22rem','',fontsize);
         if (cstype!=='reader'){
             bljg=bljg+klmenu_b(menu_statistics,'🧮','18rem','',fontsize);
         }
@@ -479,6 +485,19 @@ function txtmenus_kltxt_b(cstype=''){
     }
     bljg=bljg+'<span id="span_for_more_menu_kltxt"></span>';
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(bljg,'','0rem')+' ');
+    
+    setTimeout(big_file_book_options_generate_kltxt_b,1000);    //不必要 setTimeout，仅仅用于延后加载 - 保留注释
+}
+
+function big_file_book_options_generate_kltxt_b(){
+    function sub_big_file_book_options_generate_kltxt_b_html(csarr){
+        for (let blxl=0,lent=csarr.length;blxl<lent;blxl++){
+            csarr[blxl]='<option value="'+csarr[blxl][0]+'">'+csarr[blxl][1]+'</option>';
+        }
+        csarr.push('<option>手动输入 bigfile 文件名</option>');
+        document.getElementById('select_big_file_book_kltxt').innerHTML=csarr.join('\n');
+    }
+    idb_bigfile_b('read','booklist','',sub_big_file_book_options_generate_kltxt_b_html);
 }
 
 function line_no_show_hide_kltxt_b(is_dry=false){

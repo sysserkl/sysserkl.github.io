@@ -119,7 +119,7 @@ function read_fn_bigfile(raw_data_bigfile){
     raw_data_bigfile.sort(function(a,b){return zh_sort_b(a,b,false,1);});
     var today=new Date().toLocaleString().split(',')[0];
     for (let item of raw_data_bigfile){
-        result_t.push('<li><span class="span_name_bigfile" style="font-weight:bold;">'+specialstr92_b(item[1])+'</span>: '+specialstr92_b(item[2])+' <span style="font-size:0.8rem;color:'+scheme_global['memo']+';">('+item[3]+' '+(item[4].startsWith(today)?'<span style="color:'+scheme_global['a-hover']+';">'+item[4]+'</span>':item[4])+')</span><span class="oblong_box" onclick="delete_bigfile(this);">✗</span> <span class="oblong_box" onclick="copy_bigfile(this);">C</span></li>');
+        result_t.push('<li><span class="span_name_bigfile" style="font-weight:bold;">'+specialstr92_b(item[1])+'</span>: '+specialstr92_b(item[2])+' <span style="font-size:0.8rem;color:'+scheme_global['memo']+';">('+item[3]+' '+(item[4].startsWith(today)?'<span style="color:'+scheme_global['a-hover']+';">'+item[4]+'</span>':item[4])+')</span><span class="oblong_box" onclick="delete_bigfile(this);" title="删除记录">🗑</span> <span class="oblong_box" onclick="copy_bigfile(this);" title="复制文件名">📎</span>  <span class="oblong_box" onclick="export_bigfile(this);" title="另存为文件">📤</span></li>');
     }
     
     var odiv=document.getElementById('divhtml');
@@ -145,4 +145,22 @@ function delete_bigfile(ospan){
     if ((prompt('输入 '+rndstr+' 确认删除该记录') || '').trim()!==rndstr){return;}    
     
     idb_bigfile_b('edit','delete','',read_fn_bigfile);
+}
+
+function export_bigfile(ospan){
+    function sub_export_bigfile_save(csstr){
+        var bllen=csstr.length;
+        if (bllen==0){
+            alert('未获取文件内容');
+            return;
+        }
+        
+        var rndstr=randstr_b(4,true,false);
+        if ((prompt('输入 '+rndstr+' 确认导出长度为 '+bllen+' 的该记录') || '').trim()!==rndstr){return;}            
+        string_2_txt_file_b(csstr,fname,blext);
+    }
+    
+    var fname=ospan.parentNode.querySelector('span.span_name_bigfile').innerText;
+    var blext=file_path_name_b(fname)[2];
+    idb_bigfile_b('read','content',fname,sub_export_bigfile_save);
 }

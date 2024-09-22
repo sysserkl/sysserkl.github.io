@@ -441,7 +441,7 @@ function compare_form_statistics_enwords_book(){
     var bljg='<table width=95% height=600px>';
     bljg=bljg+'<tr><td width=50% valign=top><textarea id="textarea_compare_1" style="width:100%;height:100%;"></textarea><p><span class="aclick" onclick="current_statistics_data_enwords_book(\'1\',false);">旧数据</span></p></td>';
     bljg=bljg+'<td width=50% valign=top><textarea id="textarea_compare_2" style="width:100%;height:100%;"></textarea><p><span class="aclick" onclick="current_statistics_data_enwords_book(\'2\',true);">新数据</span></p></td></tr>';
-    bljg=bljg+'<tr><td colspan=2 align=right>前 <input type="number" id="input_table_rows_enwords_book" min=0 /> 行 <span class="aclick" onclick="booknames_get_enwords_book();">获取书名</span><span class="aclick" onclick="compare_statistics_enwords_book();">比较</span>'+close_button_b('divhtml2','')+'</p></tr>';
+    bljg=bljg+'<tr><td colspan=2 align=right>前 <input type="number" id="input_table_rows_enwords_book" min=0 /> 行 <span class="aclick" onclick="booknames_get_enwords_book();">获取书名</span><span class="aclick" onclick="sentences_get_by_bookname_enwords_book();">获取例句</span><span class="aclick" onclick="compare_statistics_enwords_book();">比较</span>'+close_button_b('divhtml2','')+'</p></tr>';
     bljg=bljg+'<tr><td colspan=2 valign=top id="td_result" style="padding:1rem;"></tr>';    
     bljg=bljg+'</table>';
     var odiv=document.getElementById('divhtml2');
@@ -474,6 +474,33 @@ function booknames_get_enwords_book(){
         if (blno>=blrows){break;}
     }
     document.getElementById('div_compare_enbook').innerHTML='<textarea>'+result_t.join('\n')+'</textarea>';
+}
+
+function sentences_get_by_bookname_enwords_book(){
+    if (typeof en_sentence_global == 'undefined'){
+        console.log('例句未载入');
+        return;
+    }
+    
+    var otextarea=document.querySelector('#div_compare_enbook textarea');
+    if (!otextarea){
+        console.log('未发现书名编辑框');
+        return;
+    }
+    var list_t=otextarea.value.split('\n');
+    
+    var result_t=[];
+    for (let arow of en_sentence_global){
+        if (!arow[2].endsWith('_TLS')){continue;}
+        var blname=arow[2].slice(0,-4);
+        if (list_t.includes(blname)){
+            result_t.push(arow[0]);
+        }
+    }
+    console.log('获取了',result_t.length,'条结果');
+    var otextarea=document.getElementById('textarea_new_words1');
+    otextarea.value=result_t.toString();
+    otextarea.scrollIntoView();
 }
 
 function new_words_in_phrase_enwords_book(){
