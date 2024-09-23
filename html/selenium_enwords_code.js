@@ -385,8 +385,8 @@ function init_seen(){
         menu_seen();
     }
     //-----------------------
-    input_size_b([['input_max_delete_rlater',4,0.5]],'id');
-    input_with_x_b('input_search',15);
+    input_size_b([['input_max_delete_rlater',4,0.8]],'id');
+    input_with_x_b('input_search',(ismobile_b()?10:15));
     var progress_list=ltp_status_get_b('+selenium +生词统计','tomato','white',100);
     document.getElementById('p_buttons').insertAdjacentHTML('beforeend',progress_list.join(''));
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.6rem':'1.4rem'));

@@ -1563,9 +1563,11 @@ function enwords_different_types_div_b(cswlist,add_form=false,textarea_id='',tex
     }
     blstr=blstr+'</select>\n';    
     blstr=blstr+'<label><input type="checkbox" class="input_enwords_different_types_one_textarea" checked>one textarea</label>';
-    blstr=blstr+'<label><input type="checkbox" class="input_enwords_different_types_remove_emoji" checked>remove emoji</label>';
+    blstr=blstr+'<label><input type="checkbox" class="input_enwords_different_types_remove_emoji" checked>remove emoji</label> ';
+    blstr=blstr+'<span class="span_box" onclick="enwords_search_result_save_b(this);">save</span> ';
+    blstr=blstr+'<span class="span_box" onclick="enwords_search_result_load_b(this);">load</span>';
     blstr=blstr+'</p>';
-
+    
     if (add_form){
         var postpath=postpath_b();
         blstr=blstr+'<form method="POST" action="'+postpath+'temp_txt_share.php" target=_blank>\n';    
@@ -1589,6 +1591,24 @@ function enwords_different_types_div_b(cswlist,add_form=false,textarea_id='',tex
     blstr=blstr+'<div class="div_textarea_enwords_different_types"></div>';
     blstr=blstr+'<div class="div_word_sentence_rank"></div>';
     return '<div style="margin-top:0.5rem;">'+blstr+'</div>';
+}
+
+function enwords_search_result_save_b(ospan){
+    var otextarea=ospan.parentNode.parentNode.querySelector('textarea.textarea_enwords_raw_types');
+    var list_t=otextarea.value.split('\n');
+    if (list_t.length>500){
+        list_t=list_t.slice(0,500);
+    }
+    if (!confirm('是否保存（最多） '+list_t.length+' 个单词到缓存？')){return;}
+    localStorage.setItem('enwords_search_result',list_t.join('\n'));
+    alert('done');
+}
+
+function enwords_search_result_load_b(ospan){
+    var otextarea=ospan.parentNode.parentNode.querySelector('textarea.textarea_enwords_raw_types');
+    var list_t=local_storage_get_b('enwords_search_result',-1,true);
+    if (!confirm('是否从缓存中读取 '+list_t.length+' 个单词？')){return;}
+    otextarea.value=list_t.join('\n');
 }
 
 function enwords_different_types_textarea_b(oselect){

@@ -213,7 +213,7 @@ function import_bigfile_kltxt_b(){
             digest_global=digest_temp;
         }
         digest_temp_load_kltxt_b();
-        getlines_kltxt_b();
+        getlines_kltxt_b(1);
     }
     
     function sub_import_bigfile_kltxt_b_load_content(is_ok){
