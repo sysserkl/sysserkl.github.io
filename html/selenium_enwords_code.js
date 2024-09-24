@@ -366,9 +366,7 @@ function import_bigfile_seen(){
         }
     }
     
-    var fname=prompt_from_local_storage_b('输入文件名','bigfile_seen') || '';
-    if (fname.trim()==''){return;}
-    
+    var fname='selenium_enwords_data.js';
     selenium_enwords_data_global=[];
     selenium_enwords_data_original_global=undefined;
     load_js_var_file_b('selenium_enwords_data_original_global',[],fname,sub_import_bigfile_seen_load,true,true);
