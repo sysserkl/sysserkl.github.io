@@ -449,4 +449,13 @@ function str_reg_post_g($cskey,$post_or_get='',$post_name='',$is_reg=false){
     }
     return [$cskey,$is_reg];
 }
+
+function asc_sum_g($csstr){
+    $asc_t=0;
+    $length_t=strlen($csstr);
+    for ($blxl = 0; $blxl < $length_t; $blxl++){    
+        $asc_t=$asc_t+ord($csstr[$blxl]);
+    }
+    return $asc_t;
+}
 ?>

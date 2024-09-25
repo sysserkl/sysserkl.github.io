@@ -4232,3 +4232,15 @@ function arr_key_includes_sort_b(csarr,key_list,colno=-1){
     console.log('arr_key_includes_sort_b()',key_list,'费时：'+(performance.now() - t0) + ' milliseconds');
     return result_t;
 }
+
+function urllib_parse_quote_b(csstr){
+    csstr=encodeURIComponent(csstr);
+    csstr = csstr.replace(/%2F/g, '/');
+
+    csstr = csstr.replace(/!/g, '%2F');
+    csstr = csstr.replace(/\*/g, '%2A');
+    csstr = csstr.replace(/'/g, '%27');
+    csstr = csstr.replace(/\(/g, '%28');
+    csstr = csstr.replace(/\)/g, '%29');
+    return csstr;
+}
