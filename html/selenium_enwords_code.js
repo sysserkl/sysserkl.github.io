@@ -104,13 +104,24 @@ function sort_seen(desc=false){
 }
 
 function host_count_seen(cstype=''){
-    var host_dict={};
-    for (let item of selenium_enwords_data_global){
+    function sub_host_count_seen_item(item){
         var blkey='h_'+item[10];
         if (host_dict[blkey]==undefined){
             host_dict[blkey]=0;
         }
-        host_dict[blkey]=host_dict[blkey]+1;
+        host_dict[blkey]=host_dict[blkey]+1;    
+    }
+    
+    var host_dict={};
+    
+    if (cstype=='status'){
+        for (let item of selenium_enwords_current_global){
+            sub_host_count_seen_item(item[2]);
+        }
+    } else {
+        for (let item of selenium_enwords_data_global){
+            sub_host_count_seen_item(item);
+        }
     }
     
     switch (cstype){
@@ -332,7 +343,7 @@ function menu_seen(){
 
     var klmenu_config=[
     load_sentence_menu_b(str_t),
-    '<span class="span_menu" onclick="'+str_t+'host_count_seen(\'status\');">host count</span>',
+    '<span class="span_menu" onclick="'+str_t+'host_count_seen(\'status\');">当前条件 host count</span>',
     select_delete_type_generate_rlater_b(),
     '<span class="span_menu" onclick="'+str_t+'delete_batch_from_array_form_rlater_b(\'selenium_enwords\');">导入数组批量删除</span>',
     '<span class="span_menu" onclick="'+str_t+'clear_cached_deleted_rows_rlater_b(\'selenium_enwords_deleted_rows\');">清除今日删除记录</span>',
@@ -436,7 +447,7 @@ function search_seen(cskeys='',margin_id=-1){
         }
         var arow=one_link_gerenrate_rlater_b(item[4],item[0],item[1],false,'selenium_enwords',words,false,show_host);
 
-        selenium_enwords_current_global.push([arow,blxl+1]);
+        selenium_enwords_current_global.push([arow,blxl+1,item]);
     }
     
     var bljg=years_rlater_b(selenium_enwords_data_global.length,selenium_enwords_current_global.length);
