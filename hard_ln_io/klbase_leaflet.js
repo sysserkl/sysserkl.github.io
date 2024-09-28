@@ -138,6 +138,7 @@ function distance_leaflet_b(lat1, lng1, lat2=false, lng2=false){
         [lat2,lng2]=lng1;
         [lat1,lng1]=lat1;
     }
+    
     var radLat1 = rad_leaflet_b(lat1);
     var radLat2 = rad_leaflet_b(lat2);
     var a = radLat1 - radLat2;
