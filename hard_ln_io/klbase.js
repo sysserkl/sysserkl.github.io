@@ -845,15 +845,24 @@ function array_difference_b(array1,array2,isset=false,bidirectional=false){
     }
 }
 
-function array_union_b(array1,array2,isset=false){
+function array_union_b(array1,array2,isset=false,do_console=false){
     //并集
     if (isset){
-        return new Set([...array1, ...array2]);
+        result_t=new Set([...array1, ...array2]);
+        if (do_console){
+            console.log(array1.size,array2.size,result_t.size);
+        }
+        return result_t;
     }
-    
+        
     var en_source1 = new Set(array1);
     var en_source2 = new Set(array2);
     var en_union = new Set([...en_source1, ...en_source2]);
+    
+    if (do_console){
+        console.log('arr1: ',array1.length,en_source1.size,'arr2:',array2.length,en_source2.size,'union:',en_union.size);
+    }
+    
     return Array.from(en_union);
 }
 
@@ -2736,7 +2745,7 @@ function scheme_list_for_standalone_b(){
     return scheme_list;
 }
 
-function standalone_search_funs_b(cstitle='Search Standalone',cscontent='',diy_fn_list=[],add_li=true,csth=''){
+function standalone_search_funs_b(cstitle='Search Standalone',cscontent='',diy_fn_list=[],add_li=true,csth='',rows_per_page=100,show_jump=true,bottom_pages=true,diy_style='',on_data_load_run_js='',on_page_show_fn_name=''){
     function search_standalone(cskey=false){
         data_current_standalone_global=[];    //全局变量 - 保留注释
         if (cskey==false){
@@ -2770,21 +2779,21 @@ function standalone_search_funs_b(cstitle='Search Standalone',cscontent='',diy_f
         }   
     }
     
-    function page_standalone(csno,rows_per_page=false,row_index=-1){
+    function page_standalone(csno,row_index=-1){
         if (data_current_standalone_global===false){
             var cslen=data_raw_standalone_global.length;
         } else {
             var cslen=data_current_standalone_global.length;
         }
         
-        if (rows_per_page===false){
-            rows_per_page=Math.max(100,Math.ceil(cslen/100));
-        }
+        //if (rows_per_page===false){
+            //rows_per_page=Math.max(100,Math.ceil(cslen/100));
+        //}
         
-        var bljg=page_combination_b(cslen,rows_per_page,csno,'page_standalone','locate_standalone');
+        var bljg=page_combination_b(cslen,rows_per_page_global,csno,'page_standalone','locate_standalone');
         //-----------------------
         var result_t=[];
-        var blend=Math.min(csno-1+rows_per_page,cslen);
+        var blend=Math.min(csno-1+rows_per_page_global,cslen);
         var row_no_range=[-1,-1];
         var raw_len=data_raw_standalone_global.length;
         var is_raw=true;
@@ -2801,20 +2810,22 @@ function standalone_search_funs_b(cstitle='Search Standalone',cscontent='',diy_f
                 row_no_range=[data_current_standalone_global[csno-1][1],data_current_standalone_global[blend-1][1]];
             }
             for (let blxl=csno-1;blxl<blend;blxl++){
+                var jump_str=(show_jump_global?'<span class="span_row_no_standalone" onclick="jump_standalone('+data_current_standalone_global[blxl][1]+');">('+data_current_standalone_global[blxl][1]+')</span>':'');
+                
                 switch (type_standalone_global){
                     case '':
-                        result_t.push(data_current_standalone_global[blxl][0]+' <span class="span_row_no_standalone" onclick="jump_standalone('+data_current_standalone_global[blxl][1]+');">('+data_current_standalone_global[blxl][1]+')</span>');    //rows_per_page
+                        result_t.push(data_current_standalone_global[blxl][0]+' '+jump_str);    //rows_per_page
                         break;
                     case 'tr':
                         if (is_raw){
                             var jump_td='';
                         } else {
-                            var jump_td='<td><span class="span_row_no_standalone" onclick="jump_standalone('+data_current_standalone_global[blxl][1]+');">('+data_current_standalone_global[blxl][1]+')</span></td>';
+                            var jump_td='<td>'+jump_str+'</td>';
                         }
                         result_t.push(data_current_standalone_global[blxl][0].slice(0,-5)+jump_td+'</tr>');
                         break;                    
                     case 'li':
-                        result_t.push(data_current_standalone_global[blxl][0].slice(0,-5)+' <span class="span_row_no_standalone" onclick="jump_standalone('+data_current_standalone_global[blxl][1]+');">('+data_current_standalone_global[blxl][1]+')</span></li>');
+                        result_t.push(data_current_standalone_global[blxl][0].slice(0,-5)+' '+jump_str+'</li>');
                         break;
                 }
             }
@@ -2828,7 +2839,7 @@ function standalone_search_funs_b(cstitle='Search Standalone',cscontent='',diy_f
         
         var odiv=document.getElementById('divhtml');
         if (add_li_standalone_global){
-            odiv.innerHTML=bljg+'<ol id="ol_result_standalone">\n<li>'+result_t.join('</li>\n<li>')+'</li>\n</ol>'+bljg;
+            odiv.innerHTML=bljg+'<ol id="ol_result_standalone">\n<li>'+result_t.join('</li>\n<li>')+'</li>\n</ol>'+(bottom_pages_global?bljg:'');
         } else {
             if (type_standalone_global=='tr'){
                 if (is_raw){
@@ -2841,10 +2852,10 @@ function standalone_search_funs_b(cstitle='Search Standalone',cscontent='',diy_f
                         th_str=th_str+'<th>row no</th></tr>';
                     }
                 }
-                odiv.innerHTML=bljg+'<table class="table_common" id="ol_result_standalone">'+th_str+result_t.join('\n')+'</table>\n'+bljg;
+                odiv.innerHTML=bljg+'<table class="table_common" id="ol_result_standalone">'+th_str+result_t.join('\n')+'</table>\n'+(bottom_pages_global?bljg:'');
                 setTimeout(th_columns_set_standalone,100);
             } else {
-                odiv.innerHTML=bljg+'<ol id="ol_result_standalone">\n'+result_t.join('\n')+'\n</ol>'+bljg;
+                odiv.innerHTML=bljg+'<ol id="ol_result_standalone">\n'+result_t.join('\n')+'\n</ol>'+(bottom_pages_global?bljg:'');
             }
         }
         
@@ -2852,7 +2863,7 @@ function standalone_search_funs_b(cstitle='Search Standalone',cscontent='',diy_f
         highlight_standalone();
         
         var jumped=false;
-        if (row_index>=1 && row_index<=rows_per_page){
+        if (row_index>=1 && row_index<=rows_per_page_global){
             if (type_standalone_global=='tr'){
                 var olis=document.querySelectorAll('table#ol_result_standalone tr');
                 if (table_th_global!==''){
@@ -2874,6 +2885,10 @@ function standalone_search_funs_b(cstitle='Search Standalone',cscontent='',diy_f
         
         if (jumped==false){
             location.href='#top';
+        }
+        
+        if (on_page_show_fn_name_global!==''){
+            eval(on_page_show_fn_name_global);
         }
     }
     
@@ -2899,22 +2914,22 @@ function standalone_search_funs_b(cstitle='Search Standalone',cscontent='',diy_f
         otr.innerHTML=result_t.join('');
     }
     
-    function locate_standalone(pages,rows_per_page){
+    function locate_standalone(pages){
         var blno=page_location_b(pages);
         if (blno!==false){
-            page_standalone((blno-1)*rows_per_page+1,rows_per_page);
+            page_standalone((blno-1)*rows_per_page_global+1);
         }
     }
     
     function jump_standalone(csno){
-        var rows_per_page=Math.max(100,Math.ceil(data_raw_standalone_global.length/100));
+        //var rows_per_page=Math.max(100,Math.ceil(data_raw_standalone_global.length/100));
         data_current_standalone_global=false;
-        var pageno=Math.ceil(csno/rows_per_page);
-        var row_index=csno%rows_per_page;
+        var pageno=Math.ceil(csno/rows_per_page_global);
+        var row_index=csno%rows_per_page_global;
         if (row_index==0){
-            row_index=rows_per_page;
+            row_index=rows_per_page_global;
         }
-        page_standalone((pageno-1)*rows_per_page+1,rows_per_page,row_index);
+        page_standalone((pageno-1)*rows_per_page_global+1,row_index);
     }
     
     function highlight_standalone(){
@@ -2936,8 +2951,9 @@ function standalone_search_funs_b(cstitle='Search Standalone',cscontent='',diy_f
         }
     }
     //-----------------------
-    var fns=['ismobile_b','css_root_style_b','css_root_size_b','str_reg_search_b','str_reg_check_b','page_one_b','page_prev_next_b','page_location_b','page_remove_dot_b','page_combination_b','mouseover_mouseout_oblong_span_b','highlight_obj_b','highlight_oblong_span_b','highlight_color_b'];
-    fns=fns.concat(diy_fn_list);
+    var fns=['ismobile_b','css_root_style_b','css_root_size_b','style_generate_b','str_reg_search_b','str_reg_check_b','page_one_b','page_prev_next_b','page_location_b','page_remove_dot_b','page_combination_b','mouseover_mouseout_oblong_span_b','highlight_obj_b','highlight_oblong_span_b','highlight_color_b'];
+    //fns=fns.concat(diy_fn_list);
+    fns=array_union_b(fns,diy_fn_list,false,true);
     
     var blcontent=`<!DOCTYPE html>
 <html>
@@ -2950,7 +2966,7 @@ function standalone_search_funs_b(cstitle='Search Standalone',cscontent='',diy_f
 +`
 </script>
 <script>
-`+'var add_li_standalone_global='+add_li+';\nvar table_th_global="'+specialstr_j(csth)+'"'+`
+`+'var add_li_standalone_global='+add_li+';\nvar table_th_global="'+specialstr_j(csth)+'";\nvar on_page_show_fn_name_global="'+on_page_show_fn_name+'";\nvar rows_per_page_global='+rows_per_page+';\nshow_jump_global='+show_jump.toString()+';\nbottom_pages_global='+bottom_pages.toString()+';'+`
 scheme_global={
 `
 +scheme_list_for_standalone_b().join('\n')
@@ -2962,6 +2978,7 @@ css_root_style_b(18,13,['base'],[],3,0);
 ol#ol_result_standalone li{margin-bottom:0.5rem;}
 ol#ol_result_standalone li:hover {background-color: #E9EEF2;}
 span.span_row_no_standalone{font-size:0.8rem;color:grey;font-style:italic;cursor:pointer;}
+`+diy_style+`
 </style>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 </head>
@@ -2978,6 +2995,7 @@ var data_raw_standalone_global=[
 +cscontent
 +`
 ];
+`+on_data_load_run_js+`
 type_standalone();
 search_standalone();
 </script>

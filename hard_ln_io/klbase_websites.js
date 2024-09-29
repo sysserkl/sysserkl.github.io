@@ -14,14 +14,18 @@ function qr_html_websites_b(divid,aclass,ahref=''){
     oas=odiv.querySelectorAll('a.a_oblong_box');
     for (let one_a of oas){
         if (ahref=='' || one_a.href.includes(ahref)){
-            one_a.outerHTML='<div style="positon:relative;float:left;padding:0.2rem;text-align:center;"><div class="div_qr" style="width:'+canvas_size_websites_global+'px;height:'+canvas_size_websites_global+'px;" title="'+one_a.href+'"></div>'+one_a.outerHTML+'</div>';
+            one_a.outerHTML=div_qr_ane_name_generate_websites_b(canvas_size_websites_global,one_a.href,one_a.outerHTML);
         } else {
-            one_a.outerHTML='<div style="positon:relative;float:left;padding:0.2rem;text-align:center;">'+one_a.outerHTML+'</div>';        
+            one_a.outerHTML='<div style="positon:relative;float:left;padding:0.2rem;text-align:center;">'+one_a.outerHTML+'</div>';
         }
     }
 
     oa_qr_list_websites_global=odiv.querySelectorAll('div.div_qr');
     return true;
+}
+
+function div_qr_ane_name_generate_websites_b(qr_size,cshref,cslink,cstable=''){
+    return '<div class="div_qr_and_name" style="positon:relative;float:left;padding:0.2rem;text-align:center;"><div class="div_qr" style="width:'+qr_size+'px;height:'+qr_size+'px;" title="'+cshref+'">'+cstable+'</div>'+cslink+'</div>';
 }
 
 function fav_www_get_websites_b(){
@@ -112,8 +116,8 @@ function fav_www_set_websites_b(cstype,csjump,is_pwa){
     document.getElementById('div_fav_www_menu').outerHTML=fav_www_menu_websites_b(csjump,is_pwa);
 }
 
-function qr_img_veil_websites_b(oimg){
-    var oimgs=document.querySelectorAll('img.img_qr');
+function qr_img_veil_add_one_websites_b(oimg){
+    var oimgs=document.querySelectorAll('div.div_qr img.img_qr, div.div_qr table');
     for (let one_img of oimgs){
         if (one_img==oimg){
             one_img.style.filter='';
@@ -123,7 +127,16 @@ function qr_img_veil_websites_b(oimg){
     }
 }
 
-function qr_generate_websites_b(query_str,do_veil=false){
+function qr_img_veil_add_batch_websites_b(){
+    var oimgs=document.querySelectorAll('div.div_qr img.img_qr, div.div_qr table');
+    for (let one_img of oimgs){
+        one_img.addEventListener('click',function(){
+            qr_img_veil_add_one_websites_b(this);
+        });
+    }
+}
+
+function qr_generate_websites_b(query_str,do_veil=false,qr_type='canvas'){
     if (oa_qr_no_websites_global>=oa_qr_list_websites_global.length){
         oa_qr_no_websites_global=0;
         oa_qr_list_websites_global=[];
@@ -133,18 +146,13 @@ function qr_generate_websites_b(query_str,do_veil=false){
             item.outerHTML='<img class="img_qr" src="'+canvas2img_b(item)+'" />';
         }
         if (do_veil){
-            var oimgs=document.querySelectorAll('img.img_qr');
-            for (let one_img of oimgs){
-                one_img.addEventListener('click',function(){
-                    qr_img_veil_websites_b(this);
-                });
-            }
+            qr_img_veil_add_batch_websites_b();
         }
         return false;
     }
     
     var one_oa=oa_qr_list_websites_global[oa_qr_no_websites_global];
-    create_qr_b($(one_oa),one_oa.title,canvas_size_websites_global,'black','white',false,'canvas');
+    create_qr_b($(one_oa),one_oa.title,canvas_size_websites_global,'black','white',false,qr_type);
     oa_qr_no_websites_global=oa_qr_no_websites_global+1;
     return true;
 }

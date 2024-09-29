@@ -11,11 +11,6 @@ function fav_and_tag_klwebsites(change_no=false){
             }
         }
         
-        //var blat=item[2].indexOf(',');
-        //if (blat==-1){continue;}
-        //var bltag=item[2].substring(blat+1,).trim();
-        //if (bltag==''){continue;}
-        
         var list_t=item[2].split(',');
         for (let atag of list_t){
             if (atag==''){continue;}
@@ -33,14 +28,21 @@ function menu_klwebsites(change_no=false){
     var klmenu1=[
     '<span class="span_menu" onclick="'+str_t+'search_in_site_options_klwebsites();">search in site</span>',        
     '<span class="span_menu" onclick="'+str_t+'search_klwebsites(\'http://\');">http_https check</span>',
-    '<span class="span_menu" onclick="'+str_t+'qr_html_klwebsites();">qr</span>',
-    '<span id="span_veil_web" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ QR遮罩</span>',
     '<span class="span_menu" onclick="'+str_t+'new_filter_form_klwebsites();">新网址过滤</span>',   
     '<span class="span_menu" onclick="'+str_t+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>',    
     '<span class="span_menu" onclick="'+str_t+'window_open_klwebsites();">New Window</span>',
     '<span class="span_menu">batch eword search max windows: <input type="number" id="input_key_batch_search_max_klwebsites" value=5 /></span>',
     ];
 
+    var list_t=[
+    ['QR','qr_html_klwebsites();',true],
+    ['Table','qr_html_klwebsites(\'table\');',true],
+    ['⚪ 遮罩','klmenu_check_b(this.id,true);',false,'span_veil_web'],
+    ['js','qr_table_2_js_klwebsites();',true],
+
+    ];    
+    klmenu1.push(menu_container_b(str_t,list_t,''));    
+    
     var list_t=[
     ['bing','key_batch_search_by_engine_klwebsites(true,\'bing\');',true],
     ['百度','key_batch_search_by_engine_klwebsites(true,\'baidu\');',true],
@@ -81,6 +83,60 @@ function menu_klwebsites(change_no=false){
     
     var input_list=[['input_key_batch_search_max_klwebsites',3]];
     input_size_b(input_list,'id');
+}
+
+function qr_table_2_js_klwebsites(){
+    var qrfcolor='black';
+    var qrbcolor='white';
+    var f_rgb='rgb('+hex2rgb_b(qrfcolor).join(', ')+')'; //,后有空格 - 保留注释
+    var b_rgb='rgb('+hex2rgb_b(qrbcolor).join(', ')+')';
+    var result_t=[];
+
+    var odivs=document.querySelectorAll('div.div_qr_and_name');
+    for (let one_div of odivs){
+        var odiv_qr=one_div.querySelector('div.div_qr');
+        if (!odiv_qr){continue;}
+        var otable=odiv_qr.querySelector('div.div_qr table');
+        if (!otable){continue;}
+
+        var blhref=odiv_qr.getAttribute('title');
+
+        var tr_oblocks=otable.querySelectorAll('tr');
+        var blstr=qr_list_get_from_table_b(tr_oblocks,false,[qrfcolor,qrbcolor,f_rgb,b_rgb],true);
+
+        var oname=one_div.querySelector('a.a_oblong_box');
+        var blname=(oname?oname.textContent:'unknown');
+        result_t.push('["'+specialstr_j(blname)+'","'+specialstr_j(blhref)+'","'+blstr+'"],');
+    }
+    
+    if (result_t.length==0){return;}
+    
+    var left_str='<p>';
+    left_str=left_str+'<span class="aclick" onclick="qr_table_standalone_klwebsites();">Standalone</span> ';
+    var right_str='</p>';
+    
+    var blstr=textarea_with_form_generate_b('textarea_qr_js_sites','width:90%;height:24rem;',left_str,'全选,清空,复制,发送到临时记事本,发送地址',right_str);
+    document.getElementById('divhtml').innerHTML=blstr;
+    document.getElementById('textarea_qr_js_sites').value=result_t.join('\n');    
+}
+
+function qr_table_standalone_klwebsites(){
+    function sub_qr_table_standalone_klwebsites_on_load(){
+        var blsize=150;
+        for (let blxl=0,lent=data_raw_standalone_global.length;blxl<lent;blxl++){
+            var bllink='<a href="'+data_raw_standalone_global[blxl][1]+'" target="_blank" class="a_oblong_box">'+data_raw_standalone_global[blxl][0]+'</a>';
+        
+            var table_str=list_2_table_qr_b(str_2_list_qr_b(data_raw_standalone_global[blxl][2]),blsize);
+            var result_t=div_qr_ane_name_generate_websites_b(blsize,data_raw_standalone_global[blxl][1],bllink,table_str);
+            data_raw_standalone_global[blxl]=result_t;
+        }
+    }
+    
+    var on_data_load_run_js=sub_qr_table_standalone_klwebsites_on_load.toString()+'sub_qr_table_standalone_klwebsites_on_load();\n';
+    var diy_style='.div_qr_and_name {margin:0.1rem; border: 0.1rem solid black;}';
+    var fns=['str_2_list_qr_b','qr_list_get_from_table_b','list_2_table_qr_b','array_split_by_col_b','div_qr_ane_name_generate_websites_b','qr_img_veil_add_one_websites_b','qr_img_veil_add_batch_websites_b'];
+    var bldata=document.getElementById('textarea_qr_js_sites').value;
+    standalone_search_funs_b('QR Sites Search',bldata,fns,false,'',25,false,false,diy_style,on_data_load_run_js,'qr_img_veil_add_batch_websites_b()');
 }
 
 function import_pwa_data_klwebsites(){
@@ -794,14 +850,14 @@ function window_open_klwebsites(){
     window.open(blurl, blurl, 'width=900, height=420');
 }
 
-function qr_html_klwebsites(){
+function qr_html_klwebsites(qr_type='canvas'){
     qr_html_websites_b('div_sub_content','p.p_sites a.a_oblong_box');
-    qr_generate_klwebsites(klmenu_check_b('span_veil_web',false));
+    qr_generate_klwebsites(klmenu_check_b('span_veil_web',false),qr_type);
 }
 
-function qr_generate_klwebsites(do_veil=false){
-    if (qr_generate_websites_b('div#div_sub_content canvas',do_veil)===false){return;}
-    setTimeout(function(){qr_generate_klwebsites(do_veil);},10);
+function qr_generate_klwebsites(do_veil=false,qr_type='canvas'){
+    if (qr_generate_websites_b('div#div_sub_content canvas',do_veil,qr_type)===false){return;}
+    setTimeout(function(){qr_generate_klwebsites(do_veil,qr_type);},10);
 }
 
 function search_in_site_options_klwebsites(only_set=false,site_list=false,remove_sites_from_textarea=false){

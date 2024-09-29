@@ -799,29 +799,3 @@ function decode_quoted_printable_b(data){
     }
 };
 
-function compress01str_b(str){
-    let compressed = '';
-    let count = 1;
-    
-    for (let blxl = 1,lent=str.length;blxl <= lent; blxl++){
-        if (str[blxl] === str[blxl - 1] && count<9){
-            count++;
-        } else {
-            compressed += `${str[blxl - 1]}${count}`;
-            count = 1;
-        }
-    }
-
-    return compressed;
-}
-
-function recover01str_b(compressedStr){
-    let decompressed = '';
-    for (let blxl = 0,lent=compressedStr.length; blxl<lent; blxl += 2){
-        const char = compressedStr[blxl];
-        const num = parseInt(compressedStr[blxl + 1], 10);
-        decompressed += char.repeat(num);
-    }
-
-    return decompressed;
-}

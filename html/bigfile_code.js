@@ -80,6 +80,16 @@ function upload_a_bigfile(){
         if (sub_upload_a_bigfile_check(ofiles[blxl])!==''){return;}
                 
         file_name_bigfile_global=ofiles[blxl].name;
+        var reg_exp1=/\s*\(\d+\)(\.[^\.]+)$/;   //同名文件(1) - 保留注释
+        if (file_name_bigfile_global.match(reg_exp1)){
+            file_name_bigfile_global=file_name_bigfile_global.replace(reg_exp1,'$1');
+        }
+
+        var reg_exp2=/\s*\(copy \d+\)(\.[^\.]+)$/;   //同名文件(copy 1) - 保留注释
+        if (file_name_bigfile_global.match(reg_exp2)){
+            file_name_bigfile_global=file_name_bigfile_global.replace(reg_exp2,'$1');
+        }
+                
         var textFileReader = new FileReader();
         //textFileReader.readAsDataURL(ofiles[blxl]); //此行保留 - 保留注释
         textFileReader.readAsText(ofiles[blxl]);    //此行保留 , 'UTF-8'); // 使用 readAsText 并指定编码为 UTF-8 - 保留注释

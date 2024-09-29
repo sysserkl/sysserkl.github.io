@@ -152,6 +152,37 @@ function li_filter_study_js(cskey){
     obj_search_show_hide_b(olis,'',cskey,klmenu_check_b('span_reg_study',false),true);
 }
 
+function compress01str_study_js(str='0101000111'){
+    let compressed = '';
+    let count = 1;
+    
+    for (let blxl = 1,lent=str.length;blxl <= lent; blxl++){
+        if (str[blxl] === str[blxl - 1] && count<9){
+            count++;
+        } else {
+            compressed += `${str[blxl - 1]}${count}`;
+            count = 1;
+        }
+    }
+    
+    var recover_str=recover01str_study_js(compressed);
+    var result_t=[str,compressed,recover_str,str==recover_str];
+    console.log(result_t);
+    document.getElementById('td_interactive_info').innerHTML=result_t.join('<br />');
+    return compressed;
+}
+
+function recover01str_study_js(compressedStr){
+    let decompressed = '';
+    for (let blxl = 0,lent=compressedStr.length; blxl<lent; blxl += 2){
+        const char = compressedStr[blxl];
+        const num = parseInt(compressedStr[blxl + 1], 10);
+        decompressed += char.repeat(num);
+    }
+
+    return decompressed;
+}
+
 function li_show_study_js(){
     study_js_type_dict_global={   //全局变量，*表示显示源代码但不执行 - 保留注释
     //study_dict_start
@@ -163,7 +194,7 @@ function li_show_study_js(){
     'Object.entries':['object_entries_study_js'],
     'Object.fromEntries':['objects_from_entries_study_js'],
     'new Map':['new_map_study_js'],
-
+    '01compress':['compress01str_study_js','*recover01str_study_js'],
     //study_dict_end
     }
         

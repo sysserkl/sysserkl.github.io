@@ -1,0 +1,18 @@
+var sourcelist=[
+["https://www.solidot.org/story?sid=79372","Meta 因用纯文本存储 6 亿用户密码被罚 1.015 亿美元","2024-09-29","Solidot","1",],
+["https://www.solidot.org/story?sid=79371","Arch Linux 与 Valve 建立直接合作关系","2024-09-29","Solidot","1",],
+["https://www.solidot.org/story?sid=79370","戴尔强制要求销售团队每周五天在办公室工作","2024-09-29","Solidot","1",],
+["https://www.solidot.org/story?sid=79369","人类身上发现来自食品包装的数千种毒素","2024-09-29","Solidot","1",],
+["https://www.solidot.org/story?sid=79368","更换清洗床上用品的频率","2024-09-29","Solidot","1",],
+["https://www.solidot.org/story?sid=79367","宫本茂称任天堂在采用 AI 上会走不同的方向","2024-09-29","Solidot","1",],
+["https://www.whudat.de/karamo-brown-bei-lewis-howes-nicht-jeder-verdient-deine-verletzlichkeit/","Karamo Brown bei Lewis Howes: Nicht jeder verdient Deine Verletzlichkeit","2024-09-29","MC Winkels weBlog","0",],
+["https://www.whudat.de/montell-fish-veroeffentlicht-charlotte-ein-album-zwischen-liebe-verlust-und-selbsterkenntnis/","Montell Fish veröffentlicht “Charlotte” – Ein Album zwischen Liebe, Verlust und Selbsterkenntnis","2024-09-29","MC Winkels weBlog","0",],
+["https://www.whudat.de/marxismus-erklaert-verarschen-uns-die-reichen/","Marxismus erklärt: Verarschen uns die Reichen?","2024-09-29","MC Winkels weBlog","0",],
+["https://www.whudat.de/mc-lyte-veroeffentlicht-neues-album-1-of-1-feat-ghostface-killah-muni-long-queen-latifah-q-tip-stevie-wonder-common-big-daddy-kane-more/","MC Lyte veröffentlicht neues Album “1 of 1” // Feat. Ghostface Killah, Muni Long, Queen Latifah, Q-Tip, Stevie Wonder, Common, Big Daddy Kane + more","2024-09-29","MC Winkels weBlog","0",],
+["https://www.whudat.de/blu-exile-veroeffentlichen-love-the-ominous-world-album/","Blu & Exile veröffentlichen “Love (the) Ominous World” Album","2024-09-29","MC Winkels weBlog","0",],
+["https://www.whudat.de/janet-jackson-behauptet-kamala-harris-sei-keine-schwarze-frau-und-feuert-manager/","Janet Jackson behauptet, Kamala Harris sei keine schwarze Frau und feuert Manager","2024-09-29","MC Winkels weBlog","0",],
+["https://www.whudat.de/nachdem-the-line-gescheitert-ist-saudi-arabien-plant-bau-eines-2km-wolkenkratzers/","Nachdem “The Line” gescheitert ist: Saudi-Arabien plant Bau eines 2km Wolkenkratzers","2024-09-29","MC Winkels weBlog","0",],
+["https://www.whudat.de/orion-sun-veroeffentlicht-neues-album-orion/","Orion Sun veröffentlicht neues Album “Orion”","2024-09-29","MC Winkels weBlog","0",],
+["https://www.whudat.de/was-ist-der-unterschied-zwischen-tai-chi-und-qi-gong/","Was ist der Unterschied zwischen Tai Chi und Qi Gong?","2024-09-29","MC Winkels weBlog","0",],
+["https://www.whudat.de/the-alchemist-veroeffentlicht-the-genuine-articulate-album-feat-larry-june-action-bronson-conway-the-machine-havoc-schoolboy-q-more/","The Alchemist veröffentlicht “The Genuine Articulate” Album // Feat. Larry June, Action Bronson, Conway The Machine, Havoc, Schoolboy Q + more","2024-09-29","MC Winkels weBlog","0",],
+];

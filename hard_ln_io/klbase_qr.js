@@ -47,3 +47,67 @@ function round_qr_b(csid){
         item.style.borderRadius='2rem';
     }
 }
+
+function str_2_list_qr_b(csstr){
+    var list_t=csstr.split('');
+    var bllen=list_t.length;
+    var rows=parseInt(Math.sqrt(bllen));
+    if (rows*rows!==bllen){
+        return csstr;
+    }
+    
+    var result_t=[];
+    for (let blxl=0;blxl<bllen;blxl=blxl+rows){
+        result_t.push(list_t.slice(blxl,blxl+rows));
+    }
+    return result_t;
+}
+
+function qr_list_get_from_table_b(tr_oblocks,shownumber,color_list,return_str=false){
+    var qrfcolor,qrbcolor,f_rgb,b_rgb;
+    [qrfcolor,qrbcolor,f_rgb,b_rgb]=color_list;
+    
+    var result_t=[];
+    for (let blr=0,lent=tr_oblocks.length;blr<lent;blr++){
+        var td_oblocks=tr_oblocks[blr].querySelectorAll('td');        
+        for (let blc=0,lenb=td_oblocks.length;blc<lenb;blc++){
+            if ([qrfcolor,f_rgb].includes(td_oblocks[blc].style.backgroundColor)){
+                if (shownumber){
+                    td_oblocks[blc].innerHTML='<span style="color: '+qrbcolor+'; font-size:0.8rem;">'+(blr+1)+'+'+(blc+1)+'</span>';
+                }
+                result_t.push([blr,blc,1]);
+            } else if ([qrbcolor,b_rgb].includes(td_oblocks[blc].style.backgroundColor)){
+                if (shownumber){
+                    td_oblocks[blc].innerHTML='<span style="color: '+qrfcolor+'; font-size:0.8rem;">'+(blr+1)+'-'+(blc+1)+'</span>';
+                }
+                result_t.push([blr,blc,0]);
+            }
+            if (shownumber){
+                td_oblocks[blc].align='center';
+            }
+        }
+    }
+    if (return_str){
+        return array_split_by_col_b(result_t,[2]).join('');
+    } else {
+        return result_t;
+    }
+}
+
+function list_2_table_qr_b(cslist,table_wh,fcolor='black',bcolor='white'){
+    var bllen=cslist.length;
+    if (bllen==0){return '';}
+    var td_size=table_wh/bllen;
+    
+    var result_t=[];
+    for (let arow of cslist){
+        result_t.push('<tr style="height: '+td_size+'px;">');
+        var tr_list=[];
+        for (let acol of arow){
+            tr_list.push('<td style="width: '+td_size+'px; background-color: '+(acol=='1'?fcolor:bcolor)+';"></td>');
+        }
+        result_t.push(tr_list.join(''));
+        result_t.push('</tr>');
+    }
+    return '<table style="width: '+table_wh+'px; height: '+table_wh+'px; border: 0px; border-collapse: collapse; background-color: white;">'+result_t.join('')+'</table>';
+}
