@@ -1,0 +1,15 @@
+var sourcelist=[
+["https://www.solidot.org/story?sid=79377","SpaceX Crew-9 执行将两名波音 Starliner 宇航员带回地面的任务","2024-09-30","Solidot","1",],
+["https://www.solidot.org/story?sid=79376","人类心脏在太空一个月就显示衰老迹象","2024-09-30","Solidot","1",],
+["https://www.solidot.org/story?sid=79375","Steam 移除了通过仲裁解决争议的条款","2024-09-30","Solidot","1",],
+["https://www.solidot.org/story?sid=79374","美国专利商标局取消了漫威和 DC 的超级英雄商标","2024-09-30","Solidot","1",],
+["https://www.solidot.org/story?sid=79373","受争议的 Windows Recall AI 搜索工具又回来了","2024-09-30","Solidot","1",],
+["http://www.pbc.gov.cn/diaochatongjisi/116219/116227/5427674/index.html","2024年第二季度企业家问卷调查报告","2024-09-30","中国人民银行-调查统计司","1",],
+["http://www.pbc.gov.cn/diaochatongjisi/116219/116227/5427661/index.html","2024年第二季度银行家问卷调查报告","2024-09-30","中国人民银行-调查统计司","1",],
+["http://www.pbc.gov.cn/diaochatongjisi/116219/116227/5427648/index.html","2024年第二季度城镇储户问卷调查报告","2024-09-30","中国人民银行-调查统计司","1",],
+["https://freeyork.org/architecture/gentle-monster-transforms-retail-with-haus-nowhere-shenzhen-sculptural-experience/","Gentle Monster Transforms Retail with HAUS NOWHERE SHENZHEN Sculptural Experience","2024-09-30","FREEYORK","0",],
+["https://freeyork.org/art/turning-pages-into-poetry-reconstructing-knowledge-in-barbara-wildenboers-sculptures/","Turning Pages into Poetry: Reconstructing Knowledge in Barbara Wildenboer’s Sculptures","2024-09-30","FREEYORK","0",],
+["https://freeyork.org/art/from-streetwear-to-garden-the-bonzai-sneaker-collection/","From Streetwear to Garden: The Bonzai Sneaker Collection","2024-09-30","FREEYORK","0",],
+["https://freeyork.org/architecture/casa-de-los-milagros-the-enchanting-house-of-dreams-in-mexico/","Casa de los Milagros: The Enchanting House of Dreams in Mexico","2024-09-30","FREEYORK","0",],
+["https://freeyork.org/architecture/latest-trends-in-living-room-design/","Latest Trends in Living Room Design","2024-09-30","FREEYORK","0",],
+];

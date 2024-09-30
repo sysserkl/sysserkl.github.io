@@ -199,14 +199,14 @@ function iframe_generate_klsearch(cstype='',cskey=false){
     var str_t=klmenu_hide_b('');
     var klmenu1=[
     '<span class="span_menu" onclick="'+str_t+'copy_iframe_link_klsearch();">copy</span>',
-    '<span class="span_menu" onclick="'+str_t+'copy_iframe_link_klsearch(true);">open</span>',
+    //'<span class="span_menu" onclick="'+str_t+'copy_iframe_link_klsearch(true);">open</span>',
     '<span class="span_menu" onclick="'+str_t+'iframe_generate_klsearch(this.innerText);">batch_en</span>',
     '<span class="span_menu" onclick="'+str_t+'iframe_generate_klsearch(this.innerText);">batch_en_bo+</span>',
     '<span class="span_menu" onclick="'+str_t+'iframe_generate_klsearch(this.innerText);">batch_en_minor</span>',
     '<span class="span_menu" onclick="'+str_t+'iframe_generate_klsearch(this.innerText);">batch_en_wiktionary</span>',
     
     ];
-    document.getElementById('p_buttons_kls').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🇬🇧','13rem','1rem','1rem','30rem'),'','0rem')+' ');
+    document.getElementById('p_buttons_kls').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🇬🇧','13rem','1rem','1rem','30rem'),'','0rem')+' <span class="aclick" onclick="copy_iframe_link_klsearch(true);">↪</span>');
     //-----------------------
     iframe_init_b();
     document.getElementById('checkbox_openwindow').parentNode.style.display='none';
