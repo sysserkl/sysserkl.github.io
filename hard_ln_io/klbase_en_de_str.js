@@ -267,16 +267,17 @@ function split_words_b(csstr,cscombine=false){
     //-----------------------
     if (typeof jieba_pb_dict_global == 'undefined'){
         console.log('未载入：jieba_pb_dict_data.js');
-        if (cscombine){
-            return [];
-        } else {
-            return [[],[]];
-        }
+        //if (cscombine){
+            //return [];
+        //} else {
+            //return [[],[]];
+        //}
+        jieba_pb_dict_global={};
     }
     //------------------    
     var t0 = performance.now();
     var list_done=[];
-    csstr=csstr.replace(new RegExp("[—、；：。，？！【】（）《》“”‘’…ɑəŋɔʒθ〈〉「」〔〕『』〜～・．－]",'g'),' ');  //〜～ 这两个不一样 - 保留注释
+    csstr=csstr.replace(/["—、；：。，？！【】（）《》“”‘’…ɑəŋɔʒθ〈〉「」〔〕『』〜～・．－]｜/g,' ');  //〜～ 这两个不一样 - 保留注释
     
     var list_en=csstr.match(/\b[a-zA-Z'\-_]{2,}\b/g);   //英文分词简单处理 - 保留注释
     if (list_en==null){
@@ -288,12 +289,15 @@ function split_words_b(csstr,cscombine=false){
     list_t=list_t.concat(list_done);
     
     for (let blxl=8;blxl>=5;blxl--){
+        if (jieba_pb_dict_global['l'+blxl]==undefined){continue;}
+
         for (let item of jieba_pb_dict_global['l'+blxl]){
             if (csstr.includes(item)){
                 csstr=csstr.replace(new RegExp(item,'g'),' ').trim();
                 list_t.push(item);
             }
         }
+        
         if (csstr.match(/[^\x00-\xff]{3,}/g)==null){break;}
         
         [csstr,list_done]=sub_split_words_b_two(csstr); 
@@ -302,6 +306,7 @@ function split_words_b(csstr,cscombine=false){
     }
     
     for (let blxl=4;blxl>=2;blxl--){
+        if (jieba_pb_dict_global['l'+blxl]==undefined){continue;}    
         for (let key in jieba_pb_dict_global['l'+blxl]){
             if (!csstr.includes(key)){continue;}
             

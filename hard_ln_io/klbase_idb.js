@@ -290,6 +290,11 @@ function idb_read_bigfile_b(db,do_type='',cskey='',run_fn=false){
                             raw_data_bigfile.push(cursor.value.name);
                         }                        
                         break;
+                    case 'readlaterlist':
+                        if (cursor.value.name.match(/^readlater_data_.+\.js$/)){
+                            raw_data_bigfile.push(cursor.value.name);
+                        }
+                        break;
                     default:
                         //返回文件序号、名称、起始部分、大小、日期等 - 保留注释
                         var bllen=cursor.value.content.length;
@@ -318,6 +323,29 @@ function idb_count_bigfile_b(db){
     }
     //-----------------------
     return idb_count_b(db,'bigfile_dbf',sub_idb_count_bigfile_b_onsuccess);
+}
+
+function idb_menu_generate_bigfile_b(cstype,select_id_name,csparent,import_fn_name){
+    return '<span class="span_menu"><span class="span_link" onclick="window.open(\'bigfile.htm\');">bigfile</span>: <select id="'+select_id_name+'" style="max-width:12rem;height:2rem;" onclick="idb_option_generate_bigfile_b(\''+cstype+'\',\''+select_id_name+'\');"></select> <span class="aclick" onclick="'+csparent+import_fn_name+'();">导入</span></span>';
+}
+
+function idb_option_generate_bigfile_b(cstype,select_id_name){
+    function sub_idb_option_generate_bigfile_b_html(csarr){
+        if (cstype=='book'){
+            for (let blxl=0,lent=csarr.length;blxl<lent;blxl++){
+                csarr[blxl]='<option value="'+csarr[blxl][0]+'">'+csarr[blxl][1]+'</option>';
+            }        
+        } else {
+            for (let blxl=0,lent=csarr.length;blxl<lent;blxl++){
+                csarr[blxl]='<option>'+csarr[blxl]+'</option>';
+            }
+        }
+        csarr.push('<option>手动输入 bigfile '+cstype+' 文件名</option>');
+        var oselect=document.getElementById(select_id_name);
+        oselect.innerHTML=csarr.join('\n');
+        oselect.removeAttribute('onclick');
+    }
+    idb_bigfile_b('read',cstype+'list','',sub_idb_option_generate_bigfile_b_html);
 }
 
 function idb_edit_bigfile_b(db,do_type='',cskey='',run_fn=false){

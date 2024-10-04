@@ -50,8 +50,12 @@ function import_bigfile_rlater(){
             search_websites_rlater();
         }
     }
-    
-    var fname=prompt_from_local_storage_b('输入文件名','bigfile_readlater') || '';
+
+    var fname=document.getElementById('select_big_file_readlater').value;
+    if (fname=='手动输入 bigfile readlater 文件名'){
+        var fname=prompt_from_local_storage_b('输入文件名','bigfile_readlater') || '';
+    }
+
     if (fname.trim()==''){return;}
     
     readlater_data_global=[];
@@ -155,6 +159,7 @@ function weibo_weixin_user_rlater(){
 
 function menu_rlater(){
     var str_t=klmenu_hide_b('#top');
+    var blparent=menu_parent_node_b(str_t);
 
     var klmenu1=[
     '<span class="span_menu" onclick="'+str_t+'search_in_site_rlater();">站内搜索</span>',   
@@ -236,8 +241,9 @@ function menu_rlater(){
     '<a href="?load=-1" onclick="'+str_t+'">仅导入最新data文件</a>',    
     '<span class="span_menu" onclick="'+str_t+'clear_cached_deleted_rows_rlater_b(\'readlater_deleted_rows\');">清除今日删除记录</span>',
     '<span class="span_menu" onclick="'+str_t+'delete_batch_from_array_form_rlater_b(\'readlater\');">导入数组批量删除</span>',    
-    '<span class="span_menu" onclick="'+str_t+'import_bigfile_rlater();">导入 bigfile 文件</span>',    
-    
+    //'<span class="span_menu" onclick="'+str_t+'import_bigfile_rlater();">导入 bigfile 文件</span>',    
+    idb_menu_generate_bigfile_b('readlater','select_big_file_readlater',blparent,'import_bigfile_rlater'),
+
     ];    
     
     var group_list=[
@@ -249,7 +255,7 @@ function menu_rlater(){
     ];    
     klmenu_idb.push(menu_container_b(str_t,group_list,'IDB: '));    
 
-    var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu1,'🛋','10rem','1rem','1rem','60rem')+klmenu_b(klmenu_statistics,'🧮','16rem','1rem','1rem','30rem')+klmenu_b(klmenu_idb,'⚙','17rem','1rem','1rem','60rem')+local_menu_group,'','0rem');
+    var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu1,'🛋','10rem','1rem','1rem','60rem')+klmenu_b(klmenu_statistics,'🧮','16rem','1rem','1rem','30rem')+klmenu_b(klmenu_idb,'⚙','22rem','1rem','1rem','60rem')+local_menu_group,'','0rem');
     
     document.getElementById('h2_title').insertAdjacentHTML('afterbegin',bljg+' ');    
     klmenu_check_b('span_reg_rlater',true);
@@ -279,9 +285,7 @@ function jieba_keys_rlater(isall=false){
         for (let item of oas){
             list_t.push(item.innerText);
             blxl=blxl+1;
-            if (blxl>=5000){
-                break;
-            }
+            if (blxl>=5000){break;}
         }
         var blstr=list_t.join('\n');
         var arr_t = count_words_b(blstr,split_words_b(blstr,true),2);

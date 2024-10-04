@@ -228,7 +228,7 @@ function import_bigfile_kltxt_b(){
     }
     
     var fname=document.getElementById('select_big_file_book_kltxt').value;
-    if (fname=='手动输入 bigfile 文件名'){
+    if (fname=='手动输入 bigfile book 文件名'){
         fname=prompt_from_local_storage_b('输入书籍文件名','bigfile_txtbook') || '';
     }
     
@@ -389,7 +389,7 @@ function txtmenus_kltxt_b(cstype=''){
     }
 
     if (cstype!=='digest'){
-        menu_config.push('<span class="span_menu"><span class="span_link" onclick="window.open(\'bigfile.htm\');">bigfile</span> 书籍：<select id="select_big_file_book_kltxt" style="max-width:10rem;height:2rem;" onclick="big_file_book_options_generate_kltxt_b();"></select> <span class="aclick" onclick="'+blparent+'import_bigfile_kltxt_b();">导入</span></span>');
+        menu_config.push(idb_menu_generate_bigfile_b('book','select_big_file_book_kltxt',blparent,'import_bigfile_kltxt_b'));
     }
     
     if (cstype!=='reader' && cstype!=='digest'){
@@ -485,19 +485,6 @@ function txtmenus_kltxt_b(cstype=''){
     }
     bljg=bljg+'<span id="span_for_more_menu_kltxt"></span>';
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(bljg,'','0rem')+' ');
-}
-
-function big_file_book_options_generate_kltxt_b(){
-    function sub_big_file_book_options_generate_kltxt_b_html(csarr){
-        for (let blxl=0,lent=csarr.length;blxl<lent;blxl++){
-            csarr[blxl]='<option value="'+csarr[blxl][0]+'">'+csarr[blxl][1]+'</option>';
-        }
-        csarr.push('<option>手动输入 bigfile 文件名</option>');
-        var oselect=document.getElementById('select_big_file_book_kltxt');
-        oselect.innerHTML=csarr.join('\n');
-        oselect.removeAttribute('onclick');
-    }
-    idb_bigfile_b('read','booklist','',sub_big_file_book_options_generate_kltxt_b_html);
 }
 
 function line_no_show_hide_kltxt_b(is_dry=false){

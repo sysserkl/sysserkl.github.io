@@ -31,8 +31,8 @@ function menu_ensentence(){
     klmenu1.push(menu_container_b(str_t,group_list,'指定日期例句：'));
     
     klmenu1=klmenu1.concat([
-    '<span class="span_menu" onclick="'+str_t+'rare_old_words_ensentence(false,true);">例句最少的单词3000</span>',
-    '<span class="span_menu" onclick="'+str_t+'rare_old_words_ensentence(false,true,2,10,3000,true);">例句出处唯一的单词3000</span>',
+    '<span class="span_menu" onclick="'+str_t+'rare_old_words_ensentence(false,true,2,10,5000,false);">例句最少的单词5000</span>',
+    '<span class="span_menu" onclick="'+str_t+'rare_old_words_ensentence(false,true,2,10,5000,true);">例句出处唯一的单词5000</span>',
     '<span class="span_menu" onclick="'+str_t+'show_sentence_enwc_b();">显示例句</span>',
     '<span class="span_menu" onclick="'+str_t+'show_new_words_enwc_b(\'span.span_enwords_sentence\',false);">显示例句中的生词</span>',  //get_new_words_arr_enbook_b - 保留注释
     '<span class="span_menu" onclick="'+str_t+'klwiki_txtbook_oldwords_diff_ensentence();">klwiki 和 txtbook 中的稀有单词</span>',    
@@ -425,7 +425,7 @@ function rare_old_words_sort_ensentence(csarr){
     return result_t;
 }
     
-function rare_old_words_ensentence(show_sentence=true,generate_js=false,max_count=2,rows_min=10,rows_max=3000,source_check=false){
+function rare_old_words_ensentence(show_sentence=false,generate_js=false,max_count=2,rows_min=10,rows_max=5000,source_check=false){
     function sub_rare_old_words_ensentence_form(){
         var more_buttons='';
         if (generate_js){

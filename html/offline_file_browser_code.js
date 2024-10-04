@@ -28,16 +28,26 @@ function disk_category_offline_file_browser(csxl=0){
     var bljg='<tr><th style="cursor:pointer;" onclick="disk_category_offline_file_browser(0);">磁盘1</th><th style="cursor:pointer;" onclick="disk_category_offline_file_browser(1);">目录1</th><th style="cursor:pointer;" onclick="disk_category_offline_file_browser(2);">磁盘2</th><th style="cursor:pointer;" onclick="disk_category_offline_file_browser(3);">目录2</th></tr>';
     
     var blfilter=document.getElementById('input_disk_category').value.trim();
+    var class_set=new Set();
     for (let item of disk_category_list_global){
 		var blfound=str_reg_search_b(item,blfilter,true);
-		if (blfound==-1){
-			break;
-		}
+		if (blfound==-1){break;}
         if (blfilter=='' || blfound){
-            bljg=bljg+'<tr><td>'+item[0]+'</td><td>'+item[1]+'</td><td>'+item[2]+'</td><td>'+item[3]+'</td></tr>';
+            var bltype=item[1].split(/\-?\d+/)[0];
+            bltype='tr_'+item[0]+'_'+item[2]+'_'+bltype;
+            class_set.add(bltype);
+            bljg=bljg+'<tr class="'+bltype+'"><td>'+item[0]+'</td><td>'+item[1]+'</td><td>'+item[2]+'</td><td>'+item[3]+'</td></tr>';
         }
     }
     document.getElementById('table_disk_category').innerHTML=bljg;
+    
+    for (let one_class of class_set){
+        var otrs=document.querySelectorAll('tr.'+one_class);
+        if (otrs.length<=1){continue;}
+        for (let one_tr of otrs){
+            one_tr.style.background=scheme_global['skyblue'];
+        }
+    }
 }
 
 function window_offline_file_browser(csnumber){
@@ -787,7 +797,7 @@ function diff_all_offline_file_browser(){
 }
 
 function diff_offline_file_browser(csdir1='',csdir2='',showhtml=true){
-    console.log(csdir1,csdir2);
+    //console.log(csdir1,csdir2);
     //save-02-a/ save-02-b/ - 保留注释
     if (csdir1==''){
         var ospan1=document.getElementById('span_current_td_content_1');

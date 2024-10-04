@@ -1500,7 +1500,7 @@ function menu_gps_points(){
     klmenu_gpx.push(menu_container_b(str_t,group_list,'路线：'));    
     
     klmenu_gpx=klmenu_gpx.concat([
-    '<span class="span_menu"><span class="span_link" onclick="window.open(\'bigfile.htm\');">bigfile</span> gpx：<select id="select_big_file_gpx_gps_points" style="max-width:10rem;height:2rem;" onclick="big_file_gpx_options_generate_gps_points();"></select> <span class="aclick" onclick="'+blparent+'import_bigfile_gps_points();">导入</span></span>',
+    idb_menu_generate_bigfile_b('gpx','select_big_file_gpx_gps_points',blparent,'import_bigfile_gps_points'),
     '<span class="span_menu" onclick="'+str_t+'gpx_from_textarea_gps_points();">从编辑框显示GPX图形</span>',
     '<span class="span_menu" onclick="'+str_t+'latlon_2_gpx_gps_points();">lat,lon to GPX file format</span>',
     '<span id="span_gpx_2_latlon" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id);">⚪ 转换gpx为纬度,经度点</span>',    
@@ -1604,19 +1604,6 @@ function menu_gps_points(){
     klmenu_config=klmenu_config.concat(root_font_size_menu_b(str_t,false,true,false,true,'textarea_gps_points'));
         
     document.getElementById('input_upload_gpx').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_gpx,'⛰','22rem','1rem','1rem','60rem')+klmenu_b(klmenu_dots,'','34rem','1rem','1rem','60rem')+klmenu_b(klmenu_district,'📍','24rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','27rem','1rem','1rem','60rem'),'','0rem')+' ');
-}
-
-function big_file_gpx_options_generate_gps_points(){
-    function sub_big_file_gpx_options_generate_gps_points_html(csarr){
-        for (let blxl=0,lent=csarr.length;blxl<lent;blxl++){
-            csarr[blxl]='<option>'+csarr[blxl]+'</option>';
-        }
-        csarr.push('<option>手动输入 bigfile gpx 文件名</option>');
-        var oselect=document.getElementById('select_big_file_gpx_gps_points');
-        oselect.innerHTML=csarr.join('\n');
-        oselect.removeAttribute('onclick');
-    }
-    idb_bigfile_b('read','gpxlist','',sub_big_file_gpx_options_generate_gps_points_html);
 }
 
 function import_bigfile_gps_points(){

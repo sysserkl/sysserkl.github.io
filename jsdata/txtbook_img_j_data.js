@@ -1,5 +1,89 @@
 var photo_source_global=[
 [
+"Japanese Girls and Women Revised and Enlarged Edition(Alice Mabel Bacon)",
+"cover3/japanese_girls_and_women_revised_aee_4948.jpg /// 359 600 2",
+"images3/japanese_girls_and_women_revised_aee_4948/00000.jpeg /// 45 2 22",
+"images3/japanese_girls_and_women_revised_aee_4948/00001.jpeg /// 90 9 10",
+"images3/japanese_girls_and_women_revised_aee_4948/00002.jpeg /// 132 175 1",
+"images3/japanese_girls_and_women_revised_aee_4948/00004.jpeg /// 90 2 45",
+],
+[
+"白话精编二十四史(全10册）(龚书铎 等)",
+"cover1/bai_hua_jing_bian_er_sssq1_322894.jpg /// 312 426 1",
+],
+[
+"本草纲目(白话手绘彩图典藏本)(李时珍)",
+"cover1/ben_cao_gang_mu_bai_hshctdcb_374973.jpg /// 906 1186 1",
+],
+[
+"源氏物语(插图典藏版)(紫式部)",
+"cover1/yuan_shi_wu_yu_cha_tdcb_253349.jpg /// 717 1000 1",
+],
+[
+"不必读书目(刀尔登)",
+"cover1/bu_bi_du_shu_mu_ded_130849.jpg /// 829 1275 2",
+],
+[
+"三国志(文白对照)(套装全3册)(章惠康（主编）)",
+"cover1/san_guo_zhi_wen_bai_dztzq3_275494.jpg /// 736 753 1",
+],
+[
+"七侠五义(石玉昆)",
+"cover3/qi_xia_wu_yi_zhong_ggdxspjwk_322508.jpg /// 1172 1619 1",
+],
+[
+"两宋货币史（修订版）（全2册） (社科文献学术文库)(汪圣铎 著)",
+"cover1/liang_song_huo_bi_shi_xdbq2skwxxswk_731341.jpg /// 1478 2200 1",
+],
+[
+"三侠五义([清]石玉昆)",
+"cover3/san_xia_wu_yi_jian_tbbggdcs_287176.jpg /// 600 843 1",
+],
+[
+"丰乳肥臀-莫言(作家出版社)",
+"images1/feng_ru_fei_tun_mo_yzjcbs_175328/000000.jpg /// 600 810 1",
+],
+[
+"被追赶的经济体(【美】辜朝明)",
+"cover1/bei_zhui_gan_de_jing_jtmgcm_219154.jpg /// 1470 2048 1",
+],
+[
+"尚书直解(张居正)",
+"cover1/shang_shu_zhi_jie_zhang_jz_109399.jpg /// 600 875 1",
+],
+[
+"边城(沈从文)",
+"cover1/bian_cheng_shen_cong_wen_59271.jpg /// 590 750 1",
+],
+[
+"迷因：基因和迷因共謀的人類心智和文化演化史(蘇珊．布拉克莫)",
+"cover1/mi_yin_ji_yin_he_mygmdrlxzhwhyhs_586685.jpg /// 1626 2200 1",
+],
+[
+"新狂人日记：王朔6年来的私人日记(王朔)",
+"cover1/xin_kuang_ren_ri_ji_ws6ldsrrj_452893.jpg /// 149 220 1",
+],
+[
+"王朔精品合集(王朔)",
+"cover1/wang_shuo_jing_pin_he_jws_169708.jpg /// 800 868 1",
+],
+[
+"史铁生作品全编(史铁生)",
+"cover1/shi_tie_sheng_zuo_pin_qbsts_184941.jpg /// 1112 965 1",
+],
+[
+"十三邀：我们时代的头脑与心灵（全四辑）(许知远)",
+"cover1/shi_san_yao_wo_men_sddtnyxlqsj_605102.jpg /// 446 586 1",
+],
+[
+"大戴礼记(中国哲学书电子化计划)",
+"cover3/da_dai_li_ji_zhong_gzxsdzhjhj_114759.jpg /// 800 1148 1",
+],
+[
+"沈从文精选散文系列：全6册(沈从文)",
+"cover1/shen_cong_wen_jing_xuan_swxlq6_354788.jpg /// 989 1298 1",
+],
+[
 "1793乾隆英使觐见记(刘半农译&马戛尔尼)",
 "cover1/1793qian_long_ying_shi_jin_jjlbnymjen_429990.jpg /// 600 800 1",
 "images1/1793qian_long_ying_shi_jin_jjlbnymjen_429990/00000.jpeg /// 38 30 1",
@@ -3250,8 +3334,8 @@ var photo_source_global=[
 "cover1/quan_song_shi_bu_que_bsrbssbsp_507204.jpg /// 627 929 1",
 ],
 [
-"全唐诗",
-"cover1/quan_tang_shi_78415.jpg /// 768 1028 1",
+"全唐诗(曹寅,彭定求等)",
+"cover1/quan_tang_shi_cao_yin_pdqd_78415.jpg /// 768 1028 1",
 ],
 [
 "全元曲戏文",
@@ -4188,7 +4272,7 @@ var photo_source_global=[
 "images1/the_notebook_the_love_story_tealscfs_6719/00013.jpeg /// 300 437 1",
 ],
 [
-"The Odyssey  Rendered into English prose for the use of those who cannot read the original(Homer)",
+"The Odyssey Rendered into English prose for the use of those who cannot read the original(Homer)",
 "cover3/the_odyssey_rendered_into_english_pftuotwcrto_8375.jpg /// 500 700 1",
 ],
 [
@@ -5694,7 +5778,7 @@ var photo_source_global=[
 "cover1/zong_jiao_sheng_huo_de_jbxsfameteg_235365.jpg /// 1280 1860 1",
 ],
 [
-"走出非洲 Out of Africa(中英双语)  (凯伦·布里克森 (Karen Blixen))",
+"走出非洲 Out of Africa(中英双语) (凯伦·布里克森 (Karen Blixen))",
 "cover1/zou_chu_fei_zhou_out_oazysy_236053.jpg /// 800 980 1",
 ],
 [
