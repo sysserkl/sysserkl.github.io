@@ -240,18 +240,21 @@ function show_sentence_enwc_b(maxlines=0,showcount=true,is_random=false,show_but
         var odiv=document.querySelector('div.div_word_sentence_rank');
         if (!odiv){return;}
         word_sentence_rank=object2array_b(word_sentence_rank,false,2);
-        var rank_dict={'0':[],'1':[],'2':[],'3':[],'4':[],'5':[],'more':[]};
+        var rank_dict={'K_0':[],'K_1':[],'K_0+1':[],'K_2':[],'K_3':[],'K_4':[],'K_5':[],'K_more':[]};
         for (let item of word_sentence_rank){
-            if (rank_dict[item[0]]==undefined){
-                rank_dict['more']=rank_dict['more'].concat(item[1]);
+            if (rank_dict['K_'+item[0]]==undefined){
+                rank_dict['K_more']=rank_dict['K_more'].concat(item[1]);
             } else {
-                rank_dict[item[0]]=rank_dict[item[0]].concat(item[1]);
+                rank_dict['K_'+item[0]]=rank_dict['K_'+item[0]].concat(item[1]);
             }
         }
+        
+        rank_dict['K_0+1']=rank_dict['K_0'].concat(rank_dict['K_1']);        
+        
         var bljg=[];
         for (let key in rank_dict){
             if (rank_dict[key].length==0){continue;}
-            bljg.push('<p><b> '+rank_dict[key].length+' 个单词 '+key+' 条例句</b></p>');
+            bljg.push('<p><b> '+rank_dict[key].length+' 个单词 '+key.slice(2,)+' 条例句</b></p>');
             bljg.push('<textarea style="height:5rem;">'+rank_dict[key].join('\n')+'</textarea>');
         }
         odiv.innerHTML='<hr />'+bljg.join('\n')+'<p>'+close_button_b('div.div_word_sentence_rank','','aclick',false)+'</p>';
