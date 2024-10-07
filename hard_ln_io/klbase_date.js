@@ -620,32 +620,45 @@ function time_2_emoji_b(cstime=false){
     return blemoji[blh];
 }
 
-function date_list_insert_zero_b(cslist,add0101=false,add1231=false,months_list=[],days_list=[],default_value=0){   //日期补全 - 保留注释
+function date_list_insert_zero_b(cslist,add0101=false,add1231=false,months_list=[],days_list=[],default_value=0,return_inserted=false){   //日期补全 - 保留注释
     //[
     //[date1,value1],
     //[date2,value2],    
     //];
+    var inserted_list=[];
     cslist.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});
     if (cslist.length==0){
-        return cslist;
+        if (return_inserted){
+            return [cslist,inserted_list];
+        } else {
+            return cslist;
+        }
     }
 
     if (add0101){
-        var day_begin=date2str_b('-',cslist[0][0]);
-        if (day_begin.slice(-6,)!=='-01-01'){
-            cslist=[[validdate_b(day_begin.substring(0,4)+'-01-01'),default_value]].concat(cslist);
+        var day_begin_str=date2str_b('-',cslist[0][0]);
+        if (day_begin_str.slice(-6,)!=='-01-01'){
+            var day_begin_date=validdate_b(day_begin_str.substring(0,4)+'-01-01');
+            cslist=[[day_begin_date,default_value]].concat(cslist);
+            inserted_list.push(day_begin_date);
         }
     }
     
     if (add1231){
-        var day_end=date2str_b('-',cslist.slice(-1)[0][0]);
-        if (day_end.slice(-6,)!=='-12-31'){
-            cslist.push([validdate_b(day_end.substring(0,4)+'-12-31'),default_value]);
+        var day_end_str=date2str_b('-',cslist.slice(-1)[0][0]);
+        if (day_end_str.slice(-6,)!=='-12-31'){
+            var day_end_date=validdate_b(day_end_str.substring(0,4)+'-12-31');
+            cslist.push([day_end_date,default_value]);
+            inserted_list.push(day_end_date);            
         }
     }
 
     if (cslist.length<2){
-        return cslist;
+        if (return_inserted){    
+            return [cslist,inserted_list];        
+        } else {
+            return cslist;
+        }
     }
     
     var days=new Set();
@@ -668,11 +681,18 @@ function date_list_insert_zero_b(cslist,add0101=false,add1231=false,months_list=
         if (days_list.length>0 && !days_list.includes(blstr.slice(-2,))){continue;}
         
         if (!days.has(blstr) && blstr>=minstr && blstr<=maxstr){
-            cslist.push([new Date(mindate.getTime()),default_value]);
+            var the_date=new Date(mindate.getTime());
+            cslist.push([the_date,default_value]);
+            inserted_list.push(the_date);
         }
     }
     cslist.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});
-    return cslist;
+
+    if (return_inserted){    
+        return [cslist,inserted_list];        
+    } else {
+        return cslist;
+    }
 }
 
 function days_between_firstday_to_sunday_b(csdate){

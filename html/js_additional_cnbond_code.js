@@ -7,9 +7,34 @@ function menu_more_cnbond(){
     '<span class="span_menu" onclick="'+str_t+'cols_select_cnbond();">当前结果指定列数据提取</span>',   
     '<span class="span_menu" onclick="'+str_t+'multi_year_compare_cnbond();">当前结果多年同日比较</span>',       
     '<span class="span_menu">legend: <input type="text" id="input_legend_jsad_cnbond" value="nw" size="3" /> ymd: <input type="text" id="input_ymd_jsad_cnbond" value="m" size="2" /></span>',
+    '<span class="span_menu" onclick="'+str_t+'date_check_cnbond();">缺失日期检查</span>',       
     ];
 
     return klmenu_b(klmenu1,'💵','16rem','1rem','1rem','30rem');
+}
+
+function date_check_cnbond(){
+    var list_t=array_split_by_col_b(cnbond_global,[0,1]);
+    var date_t=[];
+    var error_date=[];
+    for (let item of list_t){
+        var blvalue=validdate_b(item[0]);
+        if (blvalue===false){
+            error_date.push(item[0]);
+        } else {
+            date_t.push([blvalue,item[1]]);
+        }
+    }
+    
+    var inserted_t=date_list_insert_zero_b(date_t,false,false,[],[],0,true)[1];
+    var not67=[];
+    for (let item of inserted_t){
+        if ([6,0].includes(item.getDay())){continue;}
+        not67.push(date2str_b('-',item));
+    }
+    
+    var bljg='<p>缺失天数：'+inserted_t.length+'，其中非周六周日：</p>';
+    document.getElementById('divhtml').innerHTML=bljg+'<div style="column-count:'+(ismobile_b()?3:6)+';">'+array_2_li_b(not67)+'</div>';
 }
 
 function file_load_cnbond(){

@@ -1467,19 +1467,24 @@ function mouseover_mouseout_oblong_span_b(ospans){
 }
 
 function recent_search_b(localsavename,csstr,jsfunctionname,divname,commonlist=[],csmax=15,return_with_p=true,show_items=-1,remove_reg_str=''){
-    function sub_recent_search_b_one_key(item,jsfunctionname){
+    function sub_recent_search_b_one_key(item,jsfunctionname,cssquash){
         var str_t=item.replace(/\\/g,'\\\\');
         str_t=str_t.replace(new RegExp('"','g'),'&quot;');
         str_t=str_t.replace(new RegExp("'",'g'),'\\\'');
         if (str_t.trim()==''){
             return '';
         }
-        return '<span class="oblong_box" onclick="'+jsfunctionname+'(\''+str_t+'\');">'+specialstr_html_b(item)+'</span>&nbsp;'; //不能使用空格，而应该使用 &nbsp; - 保留注释
+        if (cssquash && item.length>100){
+            item=specialstr_html_b(item.slice(0,50))+'<span class="span_recent_search_squash_container">...<span class="span_recent_search_squash_content" style="display:none;">'+specialstr_html_b(item.slice(50,-50))+'</span></span>'+specialstr_html_b(item.slice(-50,));
+        } else {
+            item=specialstr_html_b(item);
+        }
+        return '<span class="oblong_box" onclick="'+jsfunctionname+'(\''+str_t+'\');">'+item+'</span>&nbsp;'; //不能使用空格，而应该使用 &nbsp; - 保留注释
     }
     
     function sub_recent_search_b_key_replace(csstr){
-        csstr=csstr.trim().replace(new RegExp("<",'g'),'&lt;');
-        csstr=csstr.replace(new RegExp(">",'g'),'&gt;');
+        csstr=csstr.trim().replace(new RegExp('<','g'),'&lt;');
+        csstr=csstr.replace(new RegExp('>','g'),'&gt;');
         if (csstr=='(:r)'){
             csstr='';
         }
@@ -1552,20 +1557,22 @@ function recent_search_b(localsavename,csstr,jsfunctionname,divname,commonlist=[
         show_items=(ismobile_b()?5:10);
     }
     show_items=Math.min(recent_search.length,show_items);
-
-    for (let blxl=0;blxl<show_items;blxl++){
-        recent_search_str=recent_search_str+sub_recent_search_b_one_key(recent_search[blxl],jsfunctionname);
-    }
-    
+   
     var recent_search_str2='';
     for (let blxl=show_items,lent=recent_search.length;blxl<lent;blxl++){
-        recent_search_str2=recent_search_str2+sub_recent_search_b_one_key(recent_search[blxl],jsfunctionname);
+        recent_search_str2=recent_search_str2+sub_recent_search_b_one_key(recent_search[blxl],jsfunctionname,true);
     }
     
+    var do_squash=false;
     if (recent_search_str2!==''){
-        recent_search_str2='<span class="oblong_box" onclick="this.parentNode.querySelector(\'span.span_recent_search_more\').style.display=\'\';this.outerHTML=\'\';" style="margin-right:0.2rem;"> ... </span><span class="span_recent_search_more" style="display:none;word-break:break-all;word-wrap:break-word;">'+recent_search_str2+'</span>';
+        recent_search_str2='<span class="oblong_box" onclick="recent_search_full_content_b(this);" style="margin-right:0.2rem;"> ... </span><span class="span_recent_search_more" style="display:none;word-break:break-all;word-wrap:break-word;">'+recent_search_str2+'</span>';
+        do_squash=true;
     }
-    
+
+    for (let blxl=0;blxl<show_items;blxl++){
+        recent_search_str=recent_search_str+sub_recent_search_b_one_key(recent_search[blxl],jsfunctionname,do_squash);
+    }
+        
     recent_search_str=recent_search_str+recent_search_str2;
     if (return_with_p){
         recent_search_str=recent_search_str+'</p>';
@@ -1578,6 +1585,17 @@ function recent_search_b(localsavename,csstr,jsfunctionname,divname,commonlist=[
         }
     }
     return recent_search_str;
+}
+
+function recent_search_full_content_b(ospan){
+    var odiv=ospan.parentNode;
+    odiv.querySelector('span.span_recent_search_more').style.display='';
+    ospan.outerHTML='';
+    var ospans=odiv.querySelectorAll('span.span_recent_search_squash_container');
+    for (let one_span of ospans){
+        var ocontent=one_span.querySelector('span.span_recent_search_squash_content');
+        one_span.outerHTML=ocontent.innerHTML;
+    }
 }
 
 function page_one_b(pages_count,cspageno,current_no,span_script,show_number=3,interval_number=5,classname='aclick',show_page_no_list=[]){
