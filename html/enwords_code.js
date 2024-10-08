@@ -602,11 +602,10 @@ function menu_kle(){
     '<span class="span_menu" onclick="'+str_t+'enwords_definition_2_multilines_b();">释义分段</span>',    
     '<span class="span_menu" onclick="'+str_t+'similar_words_batch_kle();">全部相似单词</span>',
     '<span class="span_menu" onclick="'+str_t+'duplicate_words_kle();">重复单词和格式检查</span>',
-    '<a href="enwords_slide.htm" onclick="'+str_t+'" target=_blank>幻灯片</a>',  
+    '<a href="ensentence.htm" onclick="'+str_t+'" target=_blank>ensentence</a>',  
     ]);
     if (is_local_b()){
         klmenu1=klmenu1.concat(['<a href="txtlistsearch.htm?klwiki_en2" onclick="'+str_t+'" target=_blank>今日段落阅读</a>',
-        '<a href="../../../../enwords_wiki_articles.htm" onclick="'+str_t+'" target=_blank>英语阅读文章列表</a>',
         '<a href="../../../../readlater_temp_web_pic_pages.php" onclick="'+str_t+'" target=_blank>临时网页文件</a>',
         ]);
     }
