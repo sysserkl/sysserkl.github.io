@@ -199,11 +199,93 @@ function dict_generate_klcalendar(ymkey,csyear,csmonth){
     if (Object.keys(cld_global).length>50){
         cld_global={};
     }
-    
+
     if (cld_global[ymkey]==undefined){
         cld_global[ymkey] = new oclass_klcalendar(csyear,csmonth);
     }
     return cld_global[ymkey];
+}
+
+function ldate_2_sdate_one_year_klcalendar(lunar_m,lunar_d,csisLeap,csyear){
+    var result_t=[];
+    for (let one_month=0;one_month<=11;one_month++){
+        var odates=new oclass_klcalendar(csyear,one_month);
+        for (let one_key in odates){
+            if (odates[one_key].isLeap!==csisLeap){continue;}
+            if (odates[one_key].lMonth==lunar_m && odates[one_key].lDay==lunar_d){
+                result_t.push(odates[one_key]);
+            }
+        }
+    }
+    return result_t;
+}
+
+function ldate_2_sdate_batch_klcalendar(){
+    function sub_ldate_2_sdate_batch_klcalendar_one(){
+        if (blxl>=bllen){
+            for (let blno=0,lent=result_t.length;blno<lent;blno++){
+                var blm=('00'+result_t[blno].sMonth).slice(-2,);
+                var bld=('00'+result_t[blno].sDay).slice(-2,);
+                var blw=result_t[blno].week;
+                result_t[blno]=result_t[blno].sYear+'-'+blm+'-'+bld+' '+blw;
+                for (let akey of [blm,blm+bld,blw]){
+                    if (dict_t[akey]==undefined){
+                        dict_t[akey]=0;
+                    }
+                    dict_t[akey]=dict_t[akey]+1;
+                }
+                md_set.add(blm+bld);
+                //+' '+result_t[blno].lYear+'-'+(result_t[blno].isLeap?'闰':'')+('00'+result_t[blno].lMonth).slice(-2)+'-'+('00'+result_t[blno].lDay).slice(-2,); //此行保留 - 保留注释
+            }
+            
+            dict_t=object2array_b(dict_t,true);
+            dict_t.sort(function(a,b){return a[1]>b[1]?-1:1;});
+            md_set=Array.from(md_set);
+            md_set.sort();
+            if (md_set.length>0){
+                md_set=[md_set[0]].concat(md_set.slice(-1));
+            }
+            document.getElementById('div_memo').innerHTML='<div style="column-count:'+(ismobile_b()?3:6)+';"><h2>公历日期</h2>'+array_2_li_b(result_t)+'<h2>统计</h2>'+array_2_li_b(dict_t)+'<h2>日期范围</h2>'+md_set+'</div>';
+            return;
+        }
+        
+        result_t=result_t.concat(ldate_2_sdate_one_year_klcalendar(lunar_m,lunar_d,csisLeap,year_begin+blxl));
+        blxl=blxl+1;
+        if (blxl%10==0){
+            setTimeout(sub_ldate_2_sdate_batch_klcalendar_one,1);
+        } else {
+            sub_ldate_2_sdate_batch_klcalendar_one();
+        }
+    }
+    
+    var year_range=document.getElementById('input_memo_range_klcalendar').value.trim().split('-');
+    if (year_range.length==1){
+        year_range.push(year_range[0]);
+    }
+    
+    var year_begin=parseInt(year_range[0].slice(0,4));
+    var year_end=parseInt(year_range[1].slice(0,4));
+
+    var cslmd=(prompt('输入农历月日，以英文逗号间隔，闰月在末尾添加1，如 4,18,0 或 9,3,1：') || '').trim().split(',');
+    if (cslmd.length<2){
+        alert('格式错误');
+        return;
+    }
+    
+    if (cslmd.length==2){
+        cslmd.push('0');
+    }
+    
+    var lunar_m=parseInt(cslmd[0]);
+    var lunar_d=parseInt(cslmd[1]);
+    var csisLeap=(parseInt(cslmd[2])==1);
+    
+    var result_t=[];
+    var dict_t={};
+    var md_set=new Set();
+    var blxl=0;
+    var bllen=year_end-year_begin+1;
+    sub_ldate_2_sdate_batch_klcalendar_one();
 }
 
 function changeCld_klcalendar(odom,hide_empty_row=true,append_mode=false){
@@ -612,6 +694,8 @@ function menu_klcalendar(otable=false,query_str='td.td_head',cscaption='公元')
     '<span class="span_menu" onclick="'+str_t+'year_klcalendar();">年历</span>',
     '<span class="span_menu">背景色系列：<input type="text" id="input_bgcolor_klcalendar" value="'+bgcolor_klcalendar_global.join(',')+'" /> <span class="aclick" onclick="'+parent_str+'bgcolor_set_klcalendar();">设置</span></span>',
     '<span class="span_menu">Memo起止日期：<input type="text" id="input_memo_range_klcalendar" value="'+date2str_b('',memo_range_klcalendar_global[0])+'-'+date2str_b('',memo_range_klcalendar_global[1])+'" /> <span class="aclick" onclick="'+parent_str+'memo_range_set_klcalendar();">设置</span></span>',    
+    '<span class="span_menu" onclick="'+str_t+'ldate_2_sdate_batch_klcalendar();">批量计算指定农历的对应公历日期</span>',
+    
     ];
     
     var group_list=[
