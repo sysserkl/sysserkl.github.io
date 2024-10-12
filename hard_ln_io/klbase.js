@@ -911,6 +911,10 @@ function href2host_b(cshref,cswithhttp=false){
     return head+str_t.split('/')[0].trim();    
 }
 
+function href2date_b(cshref){
+    return (cshref.match(/\b\d{4}[\/\-_]\d{1,2}[\/\-_]\d{1,2}\b/) || [''])[0];    //添加 href 中的 年月日 日期，不支持 /17-Jul-2024/ - 保留注释
+}
+
 function local_storage_key_name_list_b(){
     var result_t=Object.keys(localStorage);
     result_t.sort();

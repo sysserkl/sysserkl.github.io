@@ -343,7 +343,7 @@ function years_rlater_b(all_len,current_len=false,ospan=false){
     return '<p>ToDoList: <span id="span_todolist_rlater">'+blstr+'</span></p><div id="div_info"></div>';
 }
 
-function one_link_gerenrate_rlater_b(idno,cslink,cstitle,csstrong=false,prgname='readlater',other_str='',with_li=true,show_host=false){    
+function one_link_gerenrate_rlater_b(idno,cslink,cstitle,csstrong=false,prgname='readlater',other_str='',with_li=true){
     var bljg='';
     if (with_li){
         bljg=bljg+'<li>';
@@ -362,9 +362,7 @@ function one_link_gerenrate_rlater_b(idno,cslink,cstitle,csstrong=false,prgname=
     bljg=bljg+' <span class="span_box span_rlater_button" id="span_rlater_button_'+idno+'" onclick="delete_one_rlater_b(event,\'a_rlater_link_'+idno+'\',false,this.id,\''+prgname+'\');" style="font-size:0.8rem;">☒</span>';
     bljg=bljg+' <span class="span_box" onclick="fav_add_rlater_b(\'a_rlater_link_'+idno+'\',this,\''+prgname+'\');" style="font-size:0.8rem;">⚪</span>';
     bljg=bljg+' <span class="span_box" onclick="fav_add_rlater_b(\'a_rlater_link_'+idno+'\',this,\''+prgname+'\',true);" style="font-size:0.8rem;">🏷</span>';
-    if (show_host){
-        bljg=bljg+' <small>('+href2host_b(cslink)+')</small>';
-    }
+
     bljg=bljg+other_str;
     if (with_li){
         bljg=bljg+'</li>';

@@ -30,12 +30,13 @@ function load_data_seen(fname=''){
             item.push(item[3].length); //6 添加 words 个数 - 保留注释    
             item.push(-1); //7 添加 临时统计用数值 - 保留注释    
             item.push(fname); //8 添加 来源文件名 - 保留注释
-            item.push(enwords_array_to_links_b(item[3],oldset,'count_one_seen'));   //9 - 保留注释
+            item.push(enwords_array_to_links_b(item[3],oldset,'count_one_seen'));   //9 添加 words html - 保留注释
             if (item[0].includes('//')){
-                item.push(item[0].split('//')[1].split('/')[0]);
+                item.push(item[0].split('//')[1].split('/')[0]);    //10 添加 host - 保留注释
             } else {
                 item.push('');
-            }        
+            }
+            item.push(href2date_b(item[0]));    //11 添加 href 中的 年月日 日期，不支持 /17-Jul-2024/ - 保留注释
             selenium_enwords_data_global.push(item);
             blxl=blxl+1;
         }
@@ -52,7 +53,7 @@ function load_data_seen(fname=''){
 
 function sort_seen(desc=false){
     var bltype=document.getElementById('select_raw_sort_id_seen').value;
-    var no_list={'href': 0, 'title': 1, 'host': 2, 'string length': 5, 'count': 6, 'rare words': 7, 'old words': 7};
+    var no_list={'href': 0, 'title': 1, 'host': 2, 'string length': 5, 'count': 6, 'rare words': 7, 'old words': 7,'date': 11};
 
     var margin_id=-1;
     switch (bltype){
@@ -101,6 +102,14 @@ function sort_seen(desc=false){
     }
     
     search_seen('',margin_id);
+}
+
+function href_date_sort_seen(isdesc=false){
+    if (isdesc){
+        selenium_enwords_data_global.sort((a,b) => {return a[11]<b[11] ? 1 : -1;});
+    } else {
+        selenium_enwords_data_global.sort((a,b) => {return a[11]>b[11] ? 1 : -1;});
+    }
 }
 
 function host_count_seen(cstype=''){
@@ -323,7 +332,7 @@ function menu_seen(){
     var str_t=klmenu_hide_b('#top');
     var blparent=menu_parent_node_b(str_t);
 
-    var sort_type=['contain','count','host','host count','href','old words','one2more','random','rare words','string length','title'];
+    var sort_type=['contain','count','host','host count','href','old words','one2more','random','rare words','string length','title','date'];
     var option_t=list_2_option_b(sort_type);
 
     var klmenu1=[
@@ -353,6 +362,7 @@ function menu_seen(){
     var group_list=[
     ['⚪ reg','klmenu_check_b(this.id,true);',true,'span_reg_rlater'],
     ['⚪ 显示host','klmenu_check_b(this.id,true);',true,'span_show_host_rlater'],
+    ['⚪ 显示日期','klmenu_check_b(this.id,true);',true,'span_show_date_rlater'],
     ];    
     klmenu_config.push(menu_container_b(str_t,group_list,''));
     
@@ -429,7 +439,8 @@ function search_seen(cskeys='',margin_id=-1){
     recent_search_key_seen(cskeys+(csreg?'(:r)':''));
 
     var show_host=klmenu_check_b('span_show_host_rlater',false);    
-
+    var show_date=klmenu_check_b('span_show_date_rlater',false);    
+    
     selenium_enwords_current_global=[];
     is_all_result_seen_global=true;    
 
@@ -445,7 +456,15 @@ function search_seen(cskeys='',margin_id=-1){
         if (item[4]==margin_id){
             pageno=rows_per_page_seen_global*Math.floor((blxl+1)/rows_per_page_seen_global)+1;
         }
-        var arow=one_link_gerenrate_rlater_b(item[4],item[0],item[1],false,'selenium_enwords',words,false,show_host);
+        
+        var tail_str='';
+        if (show_host){
+            tail_str=tail_str+' <small>('+item[10]+')</small>';
+        }
+        if (show_date){
+            tail_str=tail_str+(item[11]==''?'':' <small>('+item[11]+')</small>');
+        }
+        var arow=one_link_gerenrate_rlater_b(item[4],item[0],item[1],false,'selenium_enwords',tail_str+words,false);
 
         selenium_enwords_current_global.push([arow,blxl+1,item]);
     }
