@@ -7,7 +7,10 @@ jsdata/sites_all_data.js
 git.log
 hard_ln_io/wp_remote/*
 log/*
+!jsdoc3/
 jsdoc3/*
+!jsdoc3/sheng_jing_he_he_ben_124338.js
+!jsdoc3/bible_kjv_890.js
 jsdoc_attachment/*
 jsdata/rmrb_online/*
 jsdata/douban_book[0-9]_data.js
