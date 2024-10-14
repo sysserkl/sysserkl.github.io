@@ -4206,7 +4206,7 @@ function best_sentences_kltxt_b(csid,filter_str='',csreg=false){
     for (let blxl=0,lent=all_found_new_words.length;blxl<lent;blxl++){
         all_found_new_words[blxl]=[all_found_new_words[blxl]];
     }
-    var buttons='<p>'+enwords_js_wiki_textarea_b(all_found_new_words)+close_button_b(csid,'')+'</p>';
+    var buttons='<p>'+enwords_js_wiki_textarea_b(all_found_new_words)+close_button_b(csid,'')+'<span class="aclick" onclick="document.getElementById(\''+csid+'\').scrollIntoView();">跳转到第1行</span></p>';
     var ocontainer=document.getElementById(csid);
     ocontainer.innerHTML='<div style="margin:2rem;"><p>'+result_t.join('</p><p>')+'</p>'+buttons+'</div>';
     ocontainer.scrollIntoView();
