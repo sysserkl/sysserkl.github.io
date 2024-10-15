@@ -46,7 +46,7 @@ function menu_notepad(){
     var klmenu_blank=blank_rows_add_remove_klr_b('menu','textarea_content_notepad',str_t);
     
     var buttons=edit_buttons_b('edit_tools_click_notepad',true,true,'oblong_box').join(' ');
-    buttons=buttons+' 替换 <input type="text" id="input_rep1_notepad" /> 为 <input type="text" id="input_rep2_notepad" /> <span class="oblong_box" onclick="replace_str_notepad();">执行</span>';
+    buttons=buttons+' 替换 <input type="text" id="input_rep1_notepad" /> <span class="span_box" onclick="find_in_textarea_notepad(1);" title="从编辑框指定位置开始查找字符串">📍</span> 为 <input type="text" id="input_rep2_notepad" /> <span class="span_box" onclick="find_in_textarea_notepad(2);" title="从编辑框指定位置开始查找字符串">📍</span> <span class="oblong_box" onclick="replace_str_notepad();">执行</span>';
     var dom_show_hide='<span class="oblong_box" onclick="wiki_style_notepad();">wiki</span> <span class="oblong_box" onclick="diff_notepad();">diff</span> <span class="oblong_box" onclick="popup_show_hide_b(\'span_edit_buttons_notepad\',\'\');">🖊</span> ';
     var op=document.getElementById('p_menu_notepad');
     op.insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu_sort,'↕','10rem','1rem','1rem','30rem')+klmenu_b(klmenu_blank,'','15rem','1rem','1rem','30rem'),'','0rem')+' '+dom_show_hide+'<span id="span_edit_buttons_notepad" style="display:none;">'+buttons+'</span>');
@@ -57,6 +57,13 @@ function menu_notepad(){
     ];
     input_size_b(input_list,'id');    
     mouseover_mouseout_oblong_span_b(op.querySelectorAll('span.oblong_box'));
+}
+function find_in_textarea_notepad(csno){
+    var blstr=document.getElementById('input_rep'+csno+'_notepad').value;
+    var otextarea=document.getElementById('textarea_content_notepad');
+    //var startPos = otextarea.selectionStart; //此行保留 - 保留注释
+    var endPos = otextarea.selectionEnd;
+    textarea_top_bottom_b('textarea_content_notepad',blstr,endPos);
 }
 
 function replace_str_notepad(){

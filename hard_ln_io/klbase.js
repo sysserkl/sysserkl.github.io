@@ -1775,15 +1775,16 @@ function postpath_b(){
     return local_storage_get_b('kl_remote_host',-1,false)+'/klwebphp/';
 }
 
-function textarea_top_bottom_b(textareaId, csposition=0){
+function textarea_top_bottom_b(textareaId, csposition=0,csstart=0){
     var otextarea = document.getElementById(textareaId);
     var pos_start=0;
     var pos_end=-1;
     if (csposition===1){
         pos_start=otextarea.value.length;
     } else {
+        var blleft='';
         var blkey=csposition.toString();
-        var blat = otextarea.value.indexOf(blkey);
+        var blat = otextarea.value.indexOf(blkey,csstart);
         if (blat !== -1){
             pos_start=blat;
             pos_end=blat+blkey.length;
