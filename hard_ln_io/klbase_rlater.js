@@ -54,7 +54,7 @@ function delete_open_php_rlater_b(cshref,csid,prefix='readlater'){
             }
             var oiframe=document.getElementById('iframe_delete_record_rlater');
             if (!oiframe){
-                odiv.insertAdjacentHTML('afterend','<iframe id="iframe_delete_record_rlater" style="margin:0.5rem;width:90%;height:16rem;" src=""></iframe>');
+                odiv.insertAdjacentHTML('afterend','<iframe id="iframe_delete_record_rlater" style="margin:0.5rem;width:90%;height:16rem;" src="" onload="iframe_error_alert_b(this);" onerror="iframe_error_alert_b(this,true);"></iframe>');
             }
             var oiframe=document.getElementById('iframe_delete_record_rlater');
             if (!oiframe){

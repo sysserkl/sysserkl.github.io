@@ -1777,8 +1777,24 @@ function postpath_b(){
 
 function textarea_top_bottom_b(textareaId, csposition=0){
     var otextarea = document.getElementById(textareaId);
-    var pos = csposition == 0 ? 0 : otextarea.value.length;
-    otextarea.setSelectionRange(pos, pos);
+    var pos_start=0;
+    var pos_end=-1;
+    if (csposition===1){
+        pos_start=otextarea.value.length;
+    } else {
+        var blkey=csposition.toString();
+        var blat = otextarea.value.indexOf(blkey);
+        if (blat !== -1){
+            pos_start=blat;
+            pos_end=blat+blkey.length;
+        }
+    }
+    
+    if (pos_end===-1){
+        pos_end=pos_start;
+    }
+    otextarea.focus();
+    otextarea.setSelectionRange(pos_start, pos_end);
 }
 
 function textarea_buttons_b(textarea_id,csbuttons,cstype='',csstyle='',span_class='aclick'){
@@ -4024,10 +4040,10 @@ function two_list_diff_b(list1=false,list2=false,textarea_id1='textarea_old_diff
                         diff_str=diff_str+'去除重复'+unit+'后两者无包含关系。';
                     }
                     if (diff_row1.length>0){
-                        diff1_str='<p>去除重复'+unit+'后'+caption1+'含有'+caption2+'不含有 '+diff_row1.length+' 行。前几'+unit+'：</p>'+array_2_li_b(diff_row1);
+                        diff1_str='<p>去除重复'+unit+'后'+caption1+'含有'+caption2+'不含有 '+diff_row1.length+' 行。前几'+unit+'：</p><div class="div_two_list_diff_1">'+array_2_li_b(diff_row1)+'</div>';
                     }
                     if (diff_row2.length>0){
-                        diff2_str='<p>去除重复'+unit+'后'+caption2+'含有'+caption1+'不含有 '+diff_row2.length+' 行。前几'+unit+'：</p>'+array_2_li_b(diff_row2);
+                        diff2_str='<p>去除重复'+unit+'后'+caption2+'含有'+caption1+'不含有 '+diff_row2.length+' 行。前几'+unit+'：</p><div class="div_two_list_diff_2">'+array_2_li_b(diff_row2)+'</div>';
                     }
                 }
             }    
