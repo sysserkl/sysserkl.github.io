@@ -37,15 +37,11 @@ function is_firefox_b(check_isenabled=false,exclude_win=true){
         if (local_storage_get_b('enable_klapps')!=='1'){
             var reactive_date=local_storage_get_b('reactive_klapps_date');
             var day_str=today_str_b();
-            if (reactive_date!=='' && day_str<=reactive_date){
-                return false;
-            }
+            if (reactive_date!=='' && day_str<=reactive_date){return false;}
         }
     }
     var blstr=navigator.userAgent;
-    if (exclude_win && blstr.includes('Windows')){
-        return false;
-    }
+    if (exclude_win && blstr.includes('Windows')){return false;}
     
     var machine_name=local_storage_get_b('machine_name');
     
@@ -1779,7 +1775,10 @@ function textarea_top_bottom_b(textareaId, csposition=0,csstart=0){
     var otextarea = document.getElementById(textareaId);
     var pos_start=0;
     var pos_end=-1;
-    if (csposition===1){
+    
+    if (csposition===0){    //必要判断 - 保留注释
+        pos_start=0;
+    } else if (csposition===1){
         pos_start=otextarea.value.length;
     } else {
         var blleft='';
@@ -2418,15 +2417,18 @@ function web_href_key_b(cskey,cstype,encode=false){
     }
 }
 
-function int_number_list_insert_zero_b(cslist,csmin=false,csmax=false){
+function int_number_list_insert_zero_b(cslist,csmin=false,csmax=false,minlen=1){
     //[
     //[int_number1,value1],
     //[int_number,value2],    
     //];
-    cslist.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});
-    if (cslist.length<2){
+    //年份补全 - 保留注释
+    if (cslist.length<=minlen){
         return cslist;
     }
+    
+    cslist.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});
+    
     var num_set=new Set();
     for (let item of cslist){
         num_set.add(item[0]);
@@ -2442,7 +2444,8 @@ function int_number_list_insert_zero_b(cslist,csmin=false,csmax=false){
     var blxl=0;    
     var blcurrent=csmin;
     while (true){
-        if (blcurrent>=csmax){break;}
+        if (blcurrent>csmax){break;}    //不能用 >= ，会忽略无最大值的数组 - 保留注释
+
         if (!num_set.has(blcurrent)){
             cslist.push([blcurrent,0]);
         }

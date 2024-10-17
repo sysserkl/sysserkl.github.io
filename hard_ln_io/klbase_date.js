@@ -625,6 +625,7 @@ function date_list_insert_zero_b(cslist,add0101=false,add1231=false,months_list=
     //[date1,value1],
     //[date2,value2],    
     //];
+    //另：int_number_list_insert_zero_b
     var inserted_list=[];
     cslist.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});
     if (cslist.length==0){
@@ -674,7 +675,7 @@ function date_list_insert_zero_b(cslist,add0101=false,add1231=false,months_list=
     var mindate=new Date(cslist[0][0].getTime());
     var maxdate=new Date(cslist[cslist.length-1][0].getTime());
     while (true){
-        if (mindate>=maxdate){break;}
+        if (mindate>=maxdate){break;}   //此处 maxdate 已经存在于数组中 - 保留注释
         mindate.setTime(mindate.getTime()+24*60*60*1000);
         var blstr=date2str_b('-',mindate);
         if (months_list.length>0 && !months_list.includes(blstr.slice(5,7))){continue;}        
