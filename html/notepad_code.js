@@ -58,6 +58,7 @@ function menu_notepad(){
     input_size_b(input_list,'id');    
     mouseover_mouseout_oblong_span_b(op.querySelectorAll('span.oblong_box'));
 }
+
 function find_in_textarea_notepad(csno){
     var blstr=document.getElementById('input_rep'+csno+'_notepad').value;
     var otextarea=document.getElementById('textarea_content_notepad');

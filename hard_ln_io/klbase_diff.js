@@ -202,12 +202,19 @@ function buttons_diff_b(){
     
     var odiv=document.getElementById('div_line_compare_form');
     if (odiv){
-        var blbuttons='<p><input type="text" id="input_line1_compare" style="width:90%;" /></p>\n';
-        blbuttons=blbuttons+'<p><input type="text" id="input_line2_compare" style="width:90%;" /></p>\n';
+        var blbuttons='<p><input type="text" id="input_line1_compare" style="width:90%;" /><span class="span_box" onclick="find_in_textarea_diff_b(1);" title="从编辑框指定位置开始查找字符串">📍</span></p>\n';
+        blbuttons=blbuttons+'<p><input type="text" id="input_line2_compare" style="width:90%;" /><span class="span_box" onclick="find_in_textarea_diff_b(2);" title="从编辑框指定位置开始查找字符串">📍</span></p>\n';
         blbuttons=blbuttons+'<p><span class="aclick" onclick="line_compare_diff_b();">行对比</span></p>';
         blbuttons=blbuttons+'<div id="div_line_compare_result"></div>';
         odiv.innerHTML=blbuttons;
     }
+}
+
+function find_in_textarea_diff_b(csno){
+    var blstr=document.getElementById('input_line'+csno+'_compare').value;
+    var otextarea=document.getElementById('textarea_diff_'+csno);
+    var endPos = otextarea.selectionEnd;
+    textarea_top_bottom_b('textarea_diff_'+csno,blstr,endPos);
 }
 
 function textarea_diff_b(){

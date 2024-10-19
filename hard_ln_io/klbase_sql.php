@@ -71,13 +71,9 @@ function query_make_g($keys,$columns,$reg=false){
                 $tmp2_t=substr($akey,strrpos($akey,'(:'));
                 
                 if (count($acol_list_t)>1){
-                    if ($tmp2_t!=='(:'.$acol_list_t[0].')' and $tmp2_t!=='(:'.$acol_list_t[1].')'){
-                        continue;
-                    }
+                    if ($tmp2_t!=='(:'.$acol_list_t[0].')' and $tmp2_t!=='(:'.$acol_list_t[1].')'){continue;}
                 } else {
-                    if ($tmp2_t!=='(:'.$acol_list_t[0].')'){
-                        continue;
-                    }
+                    if ($tmp2_t!=='(:'.$acol_list_t[0].')'){continue;}
                 }
                 $akey=$tmp1_t;
                 
@@ -150,18 +146,29 @@ function key_type_g($akey,$acol,$reg=false){
     }
 
     if (substr($acol,-3,3)=='(n)'){
-            $acol=substr($acol,0,strlen($acol)-3);
-            if ($is_like_t){
-                $acol='CONVERT('.$acol.',char)';
-            } elseif (is_numeric($akey)){
-                $middle=substr($middle,0,strlen($middle)-1);
-                $end='';
-            } else {return '';}
+        $acol=substr($acol,0,strlen($acol)-3);
+        if ($is_like_t){
+            $acol='CONVERT('.$acol.',char)';
+        } elseif (is_numeric($akey)){
+            $middle=substr($middle,0,strlen($middle)-1);
+            $end='';
+        } else {
+            return '';
+        }
     } elseif (substr($acol,-3,3)=='(d)' or substr($acol,-3,3)=='(t)'){
-            $acol=substr($acol,0,strlen($acol)-3);
-            if ($is_like_t){
-                $acol='CONVERT('.$acol.',char)';
-            }
+        $acol=substr($acol,0,strlen($acol)-3);
+        
+        if ($is_like_t){
+            $acol='CONVERT('.$acol.',char)';
+        } else {
+            //echo '<br />'.$acol, ' | ', $middle, ' || ', $akey, ' ||| ', $end; //此行用于检查错误 - 保留注释
+            //日期大小或等于判断只支持完整的日期形式 - 保留注释
+            $pattern = '/^\d{4}-\d{2}-\d{2}$/';
+            // 检查字符串是否匹配正则表达式
+            if (!preg_match($pattern, $akey)){
+                return '';
+            }        
+        }
     }
         
     return $acol.$middle.$akey.$end;
