@@ -250,9 +250,10 @@ function words_queue_update_kle(do_type='change'){
         old_list=sub_words_queue_update_kle_arr2str(old_list);
         new_list=sub_words_queue_update_kle_arr2str(new_list);
 
-        var diff_str=two_list_diff_b(old_list,new_list,'textarea_old_words_queue_diff_kle','textarea_new_words_queue_diff_kle','','','旧版','新版')[1];
+        var diff_str=two_list_diff_b(old_list,new_list,false,false,'','','旧版','新版')[1];
         var buttons='<p>'+close_button_b('div_words_queue_diff_kle','')+'</p>';
-        document.getElementById('div_words_queue_diff_kle').innerHTML=diff_str+buttons;        
+        document.getElementById('div_words_queue_diff_kle').innerHTML=diff_str+buttons;       
+        key_location_diff_b([[2,'textarea_words_queue']]); 
     }
     
     var blstr=document.getElementById('textarea_words_queue').value.trim();

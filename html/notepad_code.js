@@ -78,13 +78,14 @@ function diff_notepad(){
     var result_t1=current_id_content_get_notepad().split('\n');
     var result_t2=document.getElementById('textarea_content_notepad').value.split('\n');
 
-    var diff_str=two_list_diff_b(result_t1,result_t2,'textarea_old_diff_notepad','textarea_new_diff_notepad','','','旧版','新版')[1];
+    var diff_str=two_list_diff_b(result_t1,result_t2,false,false,'','','旧版','新版')[1];
 
     var buttons='<p>'+close_button_b('div_status','')+'</p>';
 
     var odiv=document.getElementById('div_status');
     odiv.innerHTML=diff_str+buttons;
     odiv.scrollIntoView();
+    key_location_diff_b([[2,'textarea_content_notepad']]); 
 }
 
 function wiki_style_notepad(){

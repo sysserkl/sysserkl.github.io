@@ -4044,13 +4044,17 @@ function two_list_diff_b(list1=false,list2=false,textarea_id1='textarea_old_diff
                         diff_str=diff_str+'去除重复'+unit+'后两者无包含关系。';
                     }
                     if (diff_row1.length>0){
-                        diff1_str='<p>去除重复'+unit+'后'+caption1+'含有'+caption2+'不含有 '+diff_row1.length+' 行。前几'+unit+'：</p><div class="div_two_list_diff_1">'+array_2_li_b(diff_row1)+'</div>';
+                        diff1_str='<p>去除重复'+unit+'后'+caption1+'含有'+caption2+'不含有 '+diff_row1.length+' 行。前几'+unit+'：</p><div class="div_two_list_diff_1">';
+                        diff1_str=diff1_str+array_2_li_b(diff_row1);
+                        diff1_str=diff1_str+'</div>';
                     }
                     if (diff_row2.length>0){
-                        diff2_str='<p>去除重复'+unit+'后'+caption2+'含有'+caption1+'不含有 '+diff_row2.length+' 行。前几'+unit+'：</p><div class="div_two_list_diff_2">'+array_2_li_b(diff_row2)+'</div>';
+                        diff2_str='<p>去除重复'+unit+'后'+caption2+'含有'+caption1+'不含有 '+diff_row2.length+' 行。前几'+unit+'：</p><div class="div_two_list_diff_2">';
+                        diff2_str=diff2_str+array_2_li_b(diff_row2);
+                        diff2_str=diff2_str+'</div>';
                     }
                 }
-            }    
+            }
         }
         return [diff_str+diff1_str+diff2_str,is_ok];
     }
@@ -4064,12 +4068,24 @@ function two_list_diff_b(list1=false,list2=false,textarea_id1='textarea_old_diff
 
     var bljg='<table width=100%><tr>';
     bljg=bljg+'<td valign=top width=50%>';
-    bljg=bljg+'<p><b>删除行</b>('+list1.length+') <button type="button" onclick="document.getElementById(\''+textarea_id1+'\').select();document.execCommand(\'copy\');">Copy</button>'+(more_buttons1==''?'':more_buttons1)+'</p>';
-    bljg=bljg+'<textarea id="'+textarea_id1+'" style="height:15rem;">'+list1.join('\n')+'</textarea>';
+    bljg=bljg+'<p><b>删除行</b>('+list1.length+') ';
+    if (textarea_id1!==false){
+        bljg=bljg+'<button type="button" onclick="document.getElementById(\''+textarea_id1+'\').select();document.execCommand(\'copy\');">Copy</button>';
+    }
+    bljg=bljg+(more_buttons1==''?'':more_buttons1)+'</p>';
+    if (textarea_id1!==false){
+        bljg=bljg+'<textarea id="'+textarea_id1+'" style="height:15rem;">'+list1.join('\n')+'</textarea>';
+    }
     bljg=bljg+'</td>';
     bljg=bljg+'<td valign=top width=50%>';
-    bljg=bljg+'<p><b>添加行</b>('+list2.length+') <button type="button" onclick="document.getElementById(\''+textarea_id2+'\').select();document.execCommand(\'copy\');">Copy</button>'+(more_buttons2==''?'':more_buttons2)+'</p>';
-    bljg=bljg+'<textarea id="'+textarea_id2+'" style="height:15rem;">'+list2.join('\n')+'</textarea>';
+    bljg=bljg+'<p><b>添加行</b>('+list2.length+') ';
+    if (textarea_id2!==false){
+        bljg=bljg+'<button type="button" onclick="document.getElementById(\''+textarea_id2+'\').select();document.execCommand(\'copy\');">Copy</button>';
+    }
+    bljg=bljg+(more_buttons2==''?'':more_buttons2)+'</p>';
+    if (textarea_id2!==false){    
+        bljg=bljg+'<textarea id="'+textarea_id2+'" style="height:15rem;">'+list2.join('\n')+'</textarea>';
+    }
     bljg=bljg+'</td>';
     bljg=bljg+'</tr></table>';
 
@@ -4086,6 +4102,22 @@ function two_list_diff_b(list1=false,list2=false,textarea_id1='textarea_old_diff
     }
     
     return [bljg,'<h4>行比较</h4>'+diff_row_str+diff_word_str];
+}
+
+function key_location_diff_b(csarr){
+    //csarr 形如 [[1,'textarea_diff_1'],[2,'textarea_diff_2']]; - 保留注释
+    for (let item of csarr){
+        var olis=document.querySelectorAll('.div_two_list_diff_'+item[0]+' li');
+        for (let one_li of olis){
+            one_li.style.cursor='pointer';
+            one_li.addEventListener('click',
+                function(e){
+                    document.getElementById(item[1]).scrollIntoView();
+                    textarea_top_bottom_b(item[1],this.innerHTML);
+                },false
+            );
+        }
+    }
 }
 
 function readlater_start_year_b(){

@@ -16,9 +16,11 @@ function tab2space_diff_b(){
 }
 
 function clear_textarea_diff_b(csno,cstype){
-    if (csno=='12' && confirm('是否清空两个编辑框？')){
-        document.querySelector('textarea[name="textarea_'+cstype+'_1"]').value='';
-        document.querySelector('textarea[name="textarea_'+cstype+'_2"]').value='';
+    if (csno=='12'){
+        if (confirm('是否清空两个编辑框？')){
+            document.querySelector('textarea[name="textarea_'+cstype+'_1"]').value='';
+            document.querySelector('textarea[name="textarea_'+cstype+'_2"]').value='';
+        }
     } else {
         if (confirm('是否清空编辑框？')){
             document.querySelector('textarea[name="textarea_'+cstype+'_'+csno+'"]').value='';
@@ -151,7 +153,7 @@ function compare_diff_b(do_submit=false){
         result_t.push('<div class="div_two_list_diff_2">'+array_2_li_b(diff2)+'</div>');
     }
     odiv.innerHTML=result_t.join('\n');
-    key_location_diff_b();
+    key_location_diff_b([[1,'textarea_diff_1'],[2,'textarea_diff_2']]);
 }
 
 function do_type_diff_b(){
@@ -220,22 +222,7 @@ function find_in_textarea_diff_b(csno){
 function textarea_diff_b(){
     var diff_str=two_list_diff_b(false,false,'textarea_diff_1','textarea_diff_2')[1];
     document.getElementById('div_diff').innerHTML=diff_str;
-    key_location_diff_b();
-}
-
-function key_location_diff_b(){
-    for (let blxl=1;blxl<=2;blxl++){
-        var olis=document.querySelectorAll('.div_two_list_diff_'+blxl+' li');
-        for (let one_li of olis){
-            one_li.style.cursor='pointer';
-            one_li.addEventListener('click',
-                function(e){
-                    document.getElementById('textarea_diff_'+blxl).scrollIntoView();
-                    textarea_top_bottom_b('textarea_diff_'+blxl,this.innerHTML);
-                },false
-            );                
-        }
-    }
+    key_location_diff_b([[1,'textarea_diff_1'],[2,'textarea_diff_2']]);
 }
 
 function upload_txt_diff_b(csno){
