@@ -99,29 +99,61 @@ function get_new_words_arr_set_enbook_b(cstype,csstr='',div_id='div_new_words2',
     console.log('get_new_words_arr_set_enbook_b() 费时：'+(performance.now() - t0) + ' milliseconds');
 }
 
+function old_rare_words_jump_enbook_b(cstype,ignore_old=true){
+    //cstype: new, rare
+    var class_name=cstype+'_word_search_links';
+    if (typeof current_new_rare_word_no_global == 'undefined'){
+        current_new_rare_word_no_global={'new': -1,'rare': -1};    //new, rare - 保留注释
+    }
+    
+    var ospan_jumps=document.querySelectorAll('span.span_'+class_name);
+    var lent=ospan_jumps.length;
+    if (lent==0){return;}
+    
+    if (current_new_rare_word_no_global[cstype]+1>=lent){
+        current_new_rare_word_no_global[cstype]=-1;
+    }
+    
+    var blfound=false;
+    for (let blno=current_new_rare_word_no_global[cstype]+1;blno<lent;blno++){
+        if (ignore_old){
+            var onext=ospan_jumps[blno].nextSibling;
+            if (onext && onext.tagName?.toLowerCase()=='sup' && onext.classList.contains('kleng')){continue;}
+        }
+        ospan_jumps[blno].scrollIntoView();
+        current_new_rare_word_no_global[cstype]=blno;
+        blfound=true;
+        break;
+    }
+    
+    if (!blfound){
+        current_new_rare_word_no_global[cstype]=-1; //不能再递归，避免死循环 - 保留注释
+    }
+}
+
 function get_new_words_arr_obj_enbook_b(cstype,csstr='',csobjects=false,addline=false,append_parent=false,execstring='',ew=false){
     //cstype 1 全部单词 2 未收录 3 已收录 4 旧单词js_wiki格式 5 稀有旧单词 6 稀有旧单词js_wiki格式 - 保留注释
     //csobjects 在 selenium bible mediawiki_common 等中被调用 - 保留注释
     //-----------------------
     function sub_get_new_words_arr_obj_enbook_b_objects(){
-        var blno=-1;
-        for (let item of csobjects){
-            blno=blno+1;
-            if (blno<csstart){continue;}
-            
-            if (blno>=csstart+100){
-                csstart=csstart+100;
-                if (csstart % 200 == 0){
-                    console.log('sub_get_new_words_arr_obj_enbook_b_objects()',csstart);
-                }
-                setTimeout(sub_get_new_words_arr_obj_enbook_b_objects,1);
-                return;
+        if (blxl>=bllen){
+            if (execstring!==''){
+                try {
+                    eval(execstring);
+                } catch (error){
+                    console.log('get_new_words_arr_obj_enbook_b()',error);
+                }                 
             }
-            var oldstr=item.innerText;
-            var new_line=[];
-            var words_list=oldstr.match(/[a-zA-Z\-']+/g) || [];
-            if (words_list.length==0){continue;}
             
+            console.log('get_new_words_arr_obj_enbook_b() 费时：'+(performance.now() - t0) + ' milliseconds');
+            return;
+        }
+
+        var item=csobjects[blxl];
+        var oldstr=item.innerText;
+        var new_line=[];
+        var words_list=oldstr.match(/[a-zA-Z\-']+/g) || [];
+        if (words_list.length>0){
             var cs_word_set=(cstype=='2'?new_words_set:rare_words_set);
             var cs_word_color=(cstype=='2'?scheme_global['memo']:scheme_global['a-hover']);
 
@@ -152,8 +184,6 @@ function get_new_words_arr_obj_enbook_b(cstype,csstr='',csobjects=false,addline=
                         new_line.push(new_html_str);
                     }
                 }
-                
-                //cs_word_set.delete(one_new_or_rare_word);
             }
             if (new_line.length>0){
                 var p_str='<p class="p_'+class_name+'" style="line-height:250%;">* '+new_line.join(' ')+'</p>';
@@ -164,26 +194,27 @@ function get_new_words_arr_obj_enbook_b(cstype,csstr='',csobjects=false,addline=
                 }
             }
         }
-        if (execstring!==''){
-            try {
-                eval(execstring);
-            } catch (error){
-                console.log('get_new_words_arr_obj_enbook_b()',error);
-            }                 
-        }
-        console.log('sub_get_new_words_arr_obj_enbook_b_objects() 费时：'+(performance.now() - t0) + ' milliseconds');
+        
+        blxl=blxl+1;
+
+        if (blxl % 100==0){
+            setTimeout(sub_get_new_words_arr_obj_enbook_b_objects,1);
+        } else {
+            sub_get_new_words_arr_obj_enbook_b_objects();
+        }       
     }
     //-----------------------
+    var bllen=csobjects.length;
+    
+    if (bllen==0){return;}
+    
     var t0 = performance.now();
     
     var class_name=(cstype=='2'?'new':'rare')+'_word_search_links';;
     
     var is_scanned=false;
-    for (let item of csobjects){
-        if (item.querySelector('span.span_'+class_name)){
-            is_scanned=true;
-            break;
-        }
+    if (csobjects[0].querySelector('span.span_'+class_name)){
+        is_scanned=true;
     }
     if (is_scanned){
         console.log('get_new_words_arr_obj_enbook_b() 曾扫描过，费时：'+(performance.now() - t0) + ' milliseconds');
@@ -194,10 +225,8 @@ function get_new_words_arr_obj_enbook_b(cstype,csstr='',csobjects=false,addline=
     [new_words_set,old_words_set,rare_words_set,bltypecheck,csstr]=get_new_old_rare_words_set_enbook_b(csstr);
     if (new_words_set===false){return;}    
 
-    var csstart=0;
+    var blxl=0;
     sub_get_new_words_arr_obj_enbook_b_objects();
-    
-    console.log('get_new_words_arr_obj_enbook_b() 费时：'+(performance.now() - t0) + ' milliseconds');
 }
 
 function new_old_word_list_enbook_b(bljgarr2,check_types=true,csendata_set=false){

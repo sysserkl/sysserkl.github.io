@@ -1418,6 +1418,7 @@ function service_worker_delete_b(appname='',file_key='',confirm_str='是否更�
             remote_server_check_b(function (is_ok=true){
                 console.log(is_ok);
                 if (is_ok){
+                    console.log(appname,file_key,'',show_type,show_id);
                     service_worker_delete_b(appname,file_key,'',show_type,show_id,false);
                 } else {
                     alert('未能连接到远程服务器，取消更新');

@@ -2071,7 +2071,7 @@ function select_prev_or_next_b(oselect,cstype,filter_visible=false){
 function character_2_icon_b(csstr,cssize=24,line_width=5,mobile_style=true,change_ico=true,csfill='#cecece'){
     function sub_character_2_icon_b_num_get(csstr){
         if (isNaN(csstr)){
-            csstr=asc_sum_b(csstr);
+            csstr=asc_sum_b(csstr); //如果 csstr 为空，返回 0 - 保留注释
         } else {
             csstr=parseInt(csstr);    
         }
@@ -2087,27 +2087,37 @@ function character_2_icon_b(csstr,cssize=24,line_width=5,mobile_style=true,chang
     ctx.fillStyle = csfill;
     ctx.fillRect(0, 0, ocanvas.width, ocanvas.height);
 
-    if (mobile_style && ismobile_b()){        
+    if (mobile_style && ismobile_b()){
         ctx.globalAlpha = 0.8; // 设置透明 - 保留注释
         ctx.lineWidth = line_width;
         var color_list=['red','brown','green','black','grey','blue','orange'];
 
-        var last_ip='00'+location.host.split(':')[0].split('.').slice(-1)[0];
+        var last_ip='00'+location.host.split(':')[0].split('.').slice(-1)[0];   //如 00io - 保留注释
+        //last_ip.slice(-1) 形如 o - 保留注释
+        //last_ip.slice(-2,-1) 形如i，可能为空 - 保留注释
         var blno_end=sub_character_2_icon_b_num_get(last_ip.slice(-1));
         var blno_second=sub_character_2_icon_b_num_get(last_ip.slice(-2,-1));
+        
+        var blhost_all=sub_character_2_icon_b_num_get(location.host);
         
         var dash_list=[[],[],[],[]];
         var selected_color=['','','',''];
         if (blno_end % 2 == 0){
-            dash_list[0]=[2,2];
-            dash_list[2]=[2,2];
+            dash_list[0]=[2,2]; //上边框
+            //dash_list[2]=[2,2]; //下边框 - 此行保留 - 保留注释
         }
+        
+        if (blhost_all % 2 == 0){
+            dash_list[2]=[2,2]; //下边框
+        }
+        
         selected_color[0]=color_list[blno_end % color_list.length];
-        selected_color[2]=color_list[blno_end % color_list.length];
+        //selected_color[2]=color_list[blno_end % color_list.length];   //此行保留 - 保留注释
+        selected_color[2]=color_list[blhost_all % color_list.length];
 
         if (blno_second % 2 == 0){
-            dash_list[1]=[2,2];
-            dash_list[3]=[2,2];
+            dash_list[1]=[2,2]; //右边框
+            dash_list[3]=[2,2]; //左边框
         }
         selected_color[1]=color_list[blno_second % color_list.length];
         selected_color[3]=color_list[blno_second % color_list.length];
