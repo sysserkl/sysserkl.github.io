@@ -3918,7 +3918,7 @@ function load_js_var_file_b(varname,file_list,filename='',csfn=false,do_echo=tru
         if (do_echo){
             console.log(varname+' 未定义');
         }
-        if (direct_from_bigfile || local_storage_get_b('first_source_bigfile')=='1'){
+        if (varname!=='remote_server_check_global' && (direct_from_bigfile || local_storage_get_b('first_source_bigfile')=='1')){
             sub_load_js_var_file_b_bigfile_eval();
         } else {
             file_dom_create_b(file_list,true,'js');

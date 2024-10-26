@@ -83,7 +83,7 @@ function args_kle(){
                 recent_words_list_enwords_b(parseInt(bltmpstr));
                 break;
             } else if (bltmpstr=='update_recent_words'){
-                en_words_temp_textarea_b('divhtml','words_count_enwords_b');
+                en_words_temp_textarea_b('divhtml',true);
                 words_count_enwords_b();
                 document.querySelector('form[name="form_word_temp"]').submit();
                 break;

@@ -216,6 +216,7 @@ function update_remote_file_lsm(is_dry_run=false){
 function init_lsm(){
     menu_lsm();
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.4rem'));
+    character_2_icon_b('☁');
 
     var oform=document.querySelector('form[name="form_lsm"]');
     if (oform){

@@ -1299,16 +1299,16 @@ function en_word_temp_batch_add_b(){
     }
 }
 
-function en_words_temp_textarea_b(divname,calljsname=''){
+function en_words_temp_textarea_b(divname,csrecount=false){
     en_word_temp_get_b();
 
     var left_str='<p>';
     left_str=left_str+close_button_b(divname,'')+' ';
-    if (calljsname!==''){
-        calljsname=calljsname+'();';
-    }    
-    left_str=left_str+'<span class="aclick" onclick="en_words_temp_update_b(\''+divname+'\');'+calljsname+'">Update</span> ';
-    left_str=left_str+'<span class="aclick" onclick="recent_words_remove_old_date_b(400);'+calljsname+'">清除400天以前的日期标记</span> ';
+
+    left_str=left_str+'<span class="aclick" onclick="en_words_temp_update_b(\''+divname+'\','+csrecount.toString()+');">Update</span> ';
+    left_str=left_str+'<span class="aclick" onclick="recent_words_remove_old_date_b(400);">清除400天以前的日期标记</span> ';
+    left_str=left_str+'<span class="aclick" onclick="en_words_temp_diff_b();">diff</span> ';
+    
     var right_str='<span class="aclick" onclick="en_words_temp_send_to_txt_b();" title="send to remote temp memo">📤</span> ';
 
     right_str=right_str+textarea_buttons_b('textarea_word_temp','发送地址','enwords_temp');
@@ -1316,8 +1316,21 @@ function en_words_temp_textarea_b(divname,calljsname=''){
     right_str=right_str+'</p>';    
 
     var blstr=textarea_with_form_generate_b('textarea_word_temp','height:'+(ismobile_b()?'10':'20')+'rem;',left_str,'全选,清空,复制,导入temp_txt_share',right_str,'enwords_temp','form_word_temp');
+    blstr=blstr+'<div id="div_words_temp_diff"></div>';
     document.getElementById('divhtml').innerHTML=blstr;
     document.getElementById('textarea_word_temp').value=en_word_temp_get_b('raw');
+}
+
+function en_words_temp_diff_b(){
+    var result_t1=en_word_temp_get_b('raw').split('\n');
+    var result_t2=document.getElementById('textarea_word_temp').value.split('\n');
+
+    var diff_str=two_list_diff_b(result_t1,result_t2,false,false,'','','旧版','新版')[1];
+
+    var buttons='<p>'+close_button_b('div_words_temp_diff','')+'</p>';
+    var odiv=document.getElementById('div_words_temp_diff');
+    odiv.innerHTML=diff_str+buttons;
+    key_location_diff_b([[2,'textarea_word_temp']]); 
 }
 
 function recent_words_remove_old_date_b(csnum){
@@ -1349,7 +1362,7 @@ function en_words_temp_send_to_txt_b(){
     }
 }
 
-function en_words_temp_update_b(divname){
+function en_words_temp_update_b(divname,recount=false){
     var otextarea=document.getElementById('textarea_word_temp');
     if (otextarea){
         var list_t=otextarea.value.trim().split('\n');
@@ -1358,6 +1371,9 @@ function en_words_temp_update_b(divname){
             enwords_temp_2_local_storage_b(list_t);
             en_words_temp_textarea_b(divname);
         }
+    }
+    if (recount){
+        words_count_enwords_b();
     }
 }
 

@@ -561,7 +561,7 @@ function menu_base_enwc_b(){
     ];    
     menu1.push(menu_container_b(str_t,group_list,'今日旧单词：'));
     
-    var menu2=['<span class="span_menu" onclick="'+str_t+'en_words_temp_textarea_b(\'divhtml\',\'words_count_enwords_b\'); words_count_enwords_b();">临时词库</span>',    
+    var menu2=['<span class="span_menu" onclick="'+str_t+'en_words_temp_textarea_b(\'divhtml\',true); words_count_enwords_b();">临时词库</span>',    
     '<a href="'+blhost+'/klwebphp/temp_txt_share.php?type=enwords_temp" onclick="'+str_t+'" target=_blank>打开临时记事本('+blhost.slice(-3,)+')</a>',    
     ];
     
