@@ -360,9 +360,9 @@ function menu_seen(){
     ];    
     
     var group_list=[
-    ['⚪ reg','klmenu_check_b(this.id,true);',true,'span_reg_rlater'],
-    ['⚪ 显示host','klmenu_check_b(this.id,true);',true,'span_show_host_rlater'],
-    ['⚪ 显示日期','klmenu_check_b(this.id,true);',true,'span_show_date_rlater'],
+    ['⚪ reg','klmenu_check_b(this.id,true);',false,'span_reg_rlater'],
+    ['⚪ 显示host','klmenu_check_b(this.id,true);',false,'span_show_host_rlater'],
+    ['⚪ 显示日期','klmenu_check_b(this.id,true);',false,'span_show_date_rlater'],
     ];    
     klmenu_config.push(menu_container_b(str_t,group_list,''));
     
