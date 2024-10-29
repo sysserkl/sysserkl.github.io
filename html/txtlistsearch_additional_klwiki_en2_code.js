@@ -246,7 +246,7 @@ function words_not_in_article_kltxt_klwiki_en2(){
 
     var split_list=[];
     for (let blxl=0,lent=bldiff.length;blxl<lent;blxl=blxl+100){
-        split_list.push(bldiff.slice(blxl,blxl+100).join('|').replace(/\s/g,'\\s'));
+        split_list.push('\\b('+bldiff.slice(blxl,blxl+100).join('|').replace(/\s/g,'\\s')+')\\b');
     }
     
     for (let blxl=0,lent=bldiff.length;blxl<lent;blxl++){
