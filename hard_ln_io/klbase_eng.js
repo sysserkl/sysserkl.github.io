@@ -1572,7 +1572,7 @@ function enwords_lines_2_js_array_b(aword,emoji_list,three_lines=false){
 function enwords_different_types_div_b(cswlist,add_form=false,textarea_id='',textarea_name='',button_type='',more_buttons=''){
     var blstr='<p>';
     blstr=blstr+'<select onchange="enwords_different_types_textarea_b(this);">';
-    var type_names=['','asterisk','js','temp','wiki','reg','space','rare_words','filter','group'];
+    var type_names=['','asterisk','cut','js','temp','wiki','reg','space','rare_words','filter','group'];
     type_names.sort();
     for (let item of type_names){
         blstr=blstr+'<option>'+item+'</option>\n';
@@ -1637,6 +1637,30 @@ function enwords_different_types_textarea_b(oselect){
     switch (oselect.value){
         case 'asterisk':
             bljg=enwords_wiki_type_words_b(raw_list,one_textarea,true);
+            break;
+        case 'cut':
+            var blkey=prompt('输入 slice 范围（0～'+(raw_list.length-1)+'），格式如 10,20，可输入负数：');
+            if (blkey==null){
+                bljg='';
+            } else {
+                blkey=blkey.split(',');
+                if (blkey.length<2){
+                    blkey.push('');
+                }
+                
+                blkey[0]=parseInt(blkey[0]);
+                if (blkey[1]==''){
+                    blkey[1]=raw_list.length;
+                } else {
+                    blkey[1]=parseInt(blkey[1]);
+                }
+                if (isNaN(blkey[0]) || isNaN(blkey[1])){
+                    bljg='';
+                } else {
+                    var result_t=raw_list.slice(blkey[0],blkey[1]);
+                    bljg='<br /><textarea style="height:3rem;" onclick="this.select();document.execCommand(\'copy\');">'+result_t.join('\n')+'</textarea>';
+                }
+            }
             break;
         case 'js':
             bljg=enwords_js_type_words_b(raw_list,one_textarea,remove_emoji);
