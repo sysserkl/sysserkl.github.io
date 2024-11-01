@@ -31,8 +31,8 @@ function menu_ensentence(){
     klmenu1.push(menu_container_b(str_t,group_list,'指定日期例句：'));
     
     klmenu1=klmenu1.concat([
-    '<span class="span_menu" onclick="'+str_t+'rare_old_words_ensentence(false,true,2,10,5000,false);">例句最少的单词5000</span>',
-    '<span class="span_menu" onclick="'+str_t+'rare_old_words_ensentence(false,true,2,10,5000,true);">例句出处唯一的单词5000</span>',
+    '<span class="span_menu" onclick="'+str_t+'rare_old_words_ensentence(\'例句最少的单词\',false,true,2,10,5000,false);">例句最少的单词5000</span>',
+    '<span class="span_menu" onclick="'+str_t+'rare_old_words_ensentence(\'例句出处唯一的单词\',false,true,2,10,5000,true);">例句出处唯一的单词5000</span>',
     '<span class="span_menu" onclick="'+str_t+'show_sentence_enwc_b();">显示例句</span>',
     '<span class="span_menu" onclick="'+str_t+'show_new_words_enwc_b(\'span.span_enwords_sentence\',false);">显示例句中的生词</span>',  //get_new_words_arr_enbook_b - 保留注释
     '<span class="span_menu" onclick="'+str_t+'klwiki_txtbook_oldwords_diff_ensentence();">klwiki 和 txtbook 中的稀有单词</span>',    
@@ -47,7 +47,7 @@ function menu_ensentence(){
 
     
     var group_list=[
-    ['无例句的单词','rare_old_words_ensentence(false,false,1,0,3000);',true],
+    ['无例句的单词','rare_old_words_ensentence(\'无例句的单词\',false,false,1,0,3000);',true],
     ['词组','phrase_not_in_ensentence();',true],
     ];    
     klmenu1.push(menu_container_b(str_t,group_list,''));
@@ -425,7 +425,7 @@ function rare_old_words_sort_ensentence(csarr){
     return result_t;
 }
     
-function rare_old_words_ensentence(show_sentence=false,generate_js=false,max_count=2,rows_min=10,rows_max=5000,source_check=false){
+function rare_old_words_ensentence(cscaption='',show_sentence=false,generate_js=false,max_count=2,rows_min=10,rows_max=5000,source_check=false){
     function sub_rare_old_words_ensentence_form(){
         var more_buttons='';
         if (generate_js){
@@ -472,7 +472,13 @@ function rare_old_words_ensentence(show_sentence=false,generate_js=false,max_cou
             
             var progress_list=ltp_status_get_b('+例句 +单词','green','white',100);
 
-            document.getElementById('divhtml').innerHTML='<p>'+progress_list.join(' ')+'</p>'+enwords_array_to_html_b(words_searched_arr_global,false)+bltextarea;
+            var remained_days=days_remained_of_year_b();
+            var theyear=new Date().getFullYear();
+            var nextyear_days=isLeapYear_b(theyear,1,true);
+            
+            var remain_str='当前'+cscaption+'占全部旧单词比为 '+(words_searched_arr_global.length*100/enwords.length).toFixed(2)+'%，今年剩余天数 '+remained_days+' 天，按 4个单词/日 计算， '+theyear+' 年内最多产生 '+(words_searched_arr_global.length+4*remained_days)+' 个'+cscaption+'，至 '+(theyear+1)+' 年底，最多产生 '+(words_searched_arr_global.length+4*(remained_days+nextyear_days))+' 个';
+            
+            document.getElementById('divhtml').innerHTML='<p>'+progress_list.join(' ')+'</p><p>'+remain_str+'</p>'+enwords_array_to_html_b(words_searched_arr_global,false)+bltextarea;
             
             if (source_check){
                 var local_id='enwords_one_source_ensentence';

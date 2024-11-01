@@ -399,15 +399,15 @@ function day_range_in_one_month_b(csmonth,csday,csrange=5){
     var list_t=[];
     
     var blstart=Math.max(1,csday-csrange);
-	for (let blxl=blstart;blxl<=csday;blxl++){
+    for (let blxl=blstart;blxl<=csday;blxl++){
         list_t.push(blxl);
-	}
+    }
 
     var the_month_day=month_day_b(csmonth);
     var blmax=Math.min(csday+csrange,the_month_day);
-	for (let blxl=csday+1;blxl<=blmax;blxl++){
+    for (let blxl=csday+1;blxl<=blmax;blxl++){
         list_t.push(blxl);
-	}
+    }
     return list_t;
 }
 

@@ -1684,7 +1684,7 @@ function enwords_different_types_textarea_b(oselect){
             for (let aword of raw_list){
                 result_t.push('"'+specialstr_j(aword)+'"');
             }
-            bljg='    var rare_words=new Set(['+result_t.join(',')+']); //fn_in_one_line_content';
+            bljg='    var rare_words=new Set(['+result_t.join(',')+']); //'+today_str_b('dt')+' //fn_in_one_line_content';
             bljg='<br /><textarea style="height:3rem;" onclick="this.select();document.execCommand(\'copy\');">'+bljg+'</textarea>';        
             break;
         case 'filter':
