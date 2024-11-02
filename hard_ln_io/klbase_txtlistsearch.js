@@ -2543,20 +2543,26 @@ function txtsearch_kltxt_b(csword='',csreg=-1,cscontinue=-1,add_recent=true){
 }
 
 function render_html_kltxt_b(wordlist=[],layout=true,highlight=true,b_style=false,enforce_refresh=false){
+    function sub_render_html_kltxt_b_after_highlight(){
+        digest_show_kltxt_b(true,-1,b_style);
+        books_b(false,'txt',book_tag_global,enforce_refresh);
+        new_words_kltxt_b();
+        img_load_check_kltxt_b();
+        console.log('render_html_kltxt_b() 费时：'+(performance.now() - t0) + ' milliseconds');    
+    }
+    
     var t0 = performance.now();
 
     if (layout){
         layout_kltxt_b();
     }
     old_words_kltxt_b(true);
+    
     if (highlight){    
-        highlight_text_b(wordlist);
+        highlight_text_b(wordlist,'',true,sub_render_html_kltxt_b_after_highlight);
+    } else {
+        sub_render_html_kltxt_b_after_highlight();
     }
-    digest_show_kltxt_b(true,-1,b_style);
-    books_b(false,'txt',book_tag_global,enforce_refresh);
-    new_words_kltxt_b();
-    img_load_check_kltxt_b();
-    console.log('render_html_kltxt_b() 费时：'+(performance.now() - t0) + ' milliseconds');
 }
 
 function img_load_check_kltxt_b(){

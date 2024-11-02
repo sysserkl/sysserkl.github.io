@@ -341,6 +341,7 @@ function menu_seen(){
     '<span class="span_menu" onclick="'+str_t+'list_popular_seen();">常见新单词</span>',    
     '<span class="span_menu" onclick="'+str_t+'title_words_seen();">常见标题单词</span>',    
     '<span class="span_menu" onclick="'+str_t+'words_count_statistics_seen(1,true);">当前条件的单一新单词</span>',    
+    '<span class="span_menu" onclick="'+str_t+'enwords_search_result_load_b(false,\'input\',\'input_search\');">暂存搜索单词查询</span>',    
     ];
     
     var group_list=[

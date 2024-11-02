@@ -2004,25 +2004,18 @@ function highlight_obj_b(obj,search_str,new_str){
     return true;
 }
 
-function highlight_text_b(cswordlist=[],query_str=''){
-    var ohighlight=document.getElementById('input_highlight');
-    if (ohighlight){
-        if (document.getElementById('input_highlight').checked==false){return;}
-    }
-
-    var t0 = performance.now();
-
-    var reg_error,blkey2;
-    [reg_error,blkey2]=search_key_split_b(cswordlist);
-    var bllen=blkey2.length;
-    
-    if (bllen==0){return;}
-    
-    if (query_str==''){
-        query_str='div#divhtml p span.txt_content, li span.txt_content';
-    }
-    var ospans=document.querySelectorAll(query_str);
-    for (let one_dom of ospans){
+function highlight_text_b(cswordlist=[],query_str='',is_async=false,run_fn=false){
+    function sub_highlight_text_b_one(){
+        if (blno>=blcount){
+            console.log('highlight_text_b() 关键字加亮 ',(is_async?'异步模式':'同步模式'),blkey2,'费时：'+(performance.now() - t0) + ' milliseconds');
+            
+            if (typeof run_fn == 'function'){
+                run_fn();
+            }
+            return;
+        }
+        
+        var one_dom=ospans[blno];
         var old_text=one_dom.innerText;
         var old_html=one_dom.innerHTML;
         var new_html=old_html;
@@ -2040,9 +2033,36 @@ function highlight_text_b(cswordlist=[],query_str=''){
         if (one_dom.innerText!==old_text){
             one_dom.innerHTML=old_html;
         }
+                
+        blno=blno+1;
+        if (is_async && blno % 500 == 0){
+            setTimeout(sub_highlight_text_b_one,1);
+        } else {
+            sub_highlight_text_b_one();
+        }
+    }
+    
+    var ohighlight=document.getElementById('input_highlight');
+    if (ohighlight){
+        if (document.getElementById('input_highlight').checked==false){return;}
     }
 
-    console.log('highlight_text_b() 关键字加亮',blkey2,'费时：'+(performance.now() - t0) + ' milliseconds');
+    var t0 = performance.now();
+
+    var reg_error,blkey2;
+    [reg_error,blkey2]=search_key_split_b(cswordlist);
+    var bllen=blkey2.length;
+    
+    if (bllen==0){return;}
+    
+    if (query_str==''){
+        query_str='div#divhtml p span.txt_content, li span.txt_content';
+    }
+    
+    var ospans=document.querySelectorAll(query_str);
+    var blno=0;
+    var blcount=ospans.length;
+    sub_highlight_text_b_one();
 }
 
 function highlight_color_b(csxl){

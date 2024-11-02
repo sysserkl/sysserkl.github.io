@@ -1620,11 +1620,44 @@ function enwords_search_result_save_b(ospan){
     alert('done');
 }
 
-function enwords_search_result_load_b(ospan){
-    var otextarea=ospan.parentNode.parentNode.querySelector('textarea.textarea_enwords_raw_types');
+function enwords_search_result_load_b(ospan=false,cstype='',dom_id=''){
     var list_t=local_storage_get_b('enwords_search_result',-1,true);
-    if (!confirm('是否从缓存中读取 '+list_t.length+' 个单词？')){return;}
-    otextarea.value=list_t.join('\n');
+
+    if (ospan===false){
+        switch (cstype){
+            case 'reg':
+                return enwords_list_2_reg_b(list_t);
+                break;
+            case 'input':
+                if (dom_id!==''){
+                    var odom=document.getElementById(dom_id);
+                    if (odom){
+                        odom.value=enwords_list_2_reg_b(list_t);
+                    }
+                }
+                break;
+            case 'textarea':
+                if (dom_id!==''){
+                    var odom=document.getElementById(dom_id);
+                    if (odom){
+                        odom.value=list_t.join('\n');
+                    }
+                }
+                break;
+            default:
+                return list_t;
+        }
+    } else {
+        var otextarea=ospan.parentNode.parentNode.querySelector('textarea.textarea_enwords_raw_types');
+        if (!confirm('是否从缓存中读取 '+list_t.length+' 个单词？')){return;}
+        otextarea.value=list_t.join('\n');
+    }
+}
+
+function enwords_list_2_reg_b(cslist){
+    var bljg=cslist.join('|').replace(/\s/g,'\\s');
+    bljg='\\b('+bljg+')\\b';
+    return bljg;
 }
 
 function enwords_different_types_textarea_b(oselect){
@@ -1672,8 +1705,8 @@ function enwords_different_types_textarea_b(oselect){
             bljg=enwords_wiki_type_words_b(raw_list,one_textarea,false);        
             break;
         case 'reg':
-            bljg=raw_list.join('|').replace(/\s/g,'\\s');
-            bljg='<br /><textarea style="height:3rem;" onclick="this.select();document.execCommand(\'copy\');">\\b('+bljg+')\\b</textarea>';
+            bljg=enwords_list_2_reg_b(raw_list);
+            bljg='<br /><textarea style="height:3rem;" onclick="this.select();document.execCommand(\'copy\');">'+bljg+'</textarea>';
             break;
         case 'space':
             bljg=raw_list.join(' ');

@@ -604,13 +604,13 @@ function menu_kle(){
     
     klmenu1=klmenu1.concat([
     '<span class="span_menu" onclick="'+str_t+'enwords_definition_2_multilines_b();">释义分段</span>',    
-    '<span class="span_menu" onclick="'+str_t+'similar_words_batch_kle();">全部相似单词</span>',
     '<span class="span_menu" onclick="'+str_t+'duplicate_words_kle();">重复单词和格式检查</span>',
+    '<span class="span_menu" onclick="'+str_t+'enwords_search_result_load_b(false,\'input\',\'input_search\');">暂存搜索单词查询</span>',
     '<a href="ensentence.htm" onclick="'+str_t+'" target=_blank>ensentence</a>',  
     ]);
+    
     if (is_local_b()){
         klmenu1=klmenu1.concat(['<a href="txtlistsearch.htm?klwiki_en2" onclick="'+str_t+'" target=_blank>今日段落阅读</a>',
-        '<a href="../../../../readlater_temp_web_pic_pages.php" onclick="'+str_t+'" target=_blank>临时网页文件</a>',
         ]);
     }
     
@@ -640,6 +640,7 @@ function menu_kle(){
     '<span class="span_menu" onclick="'+str_t+'other_characters_kle();">除字母外的其他字符</span>',
     '<span class="span_menu" onclick="'+str_t+'week_plan_show_kle();">每周记忆计划</span>',    
     '<span class="span_menu" onclick="'+str_t+'search_similar_new_sentence_kle(\'例句\',\'’\');">含有中文标点的例句</span>',    
+    '<span class="span_menu" onclick="'+str_t+'similar_words_batch_kle();">全部相似单词</span>',    
     ]);
 
     var list_t=[
