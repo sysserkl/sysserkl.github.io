@@ -1612,10 +1612,12 @@ function enwords_different_types_div_b(cswlist,add_form=false,textarea_id='',tex
 function enwords_search_result_save_b(ospan){
     var otextarea=ospan.parentNode.parentNode.querySelector('textarea.textarea_enwords_raw_types');
     var list_t=otextarea.value.split('\n');
-    if (list_t.length>500){
+    var bllen=list_t.length;
+    if (bllen>500){
         list_t=list_t.slice(0,500);
     }
-    if (!confirm('是否保存（最多） '+list_t.length+' 个单词到缓存？')){return;}
+    
+    if (!confirm('是否保存'+(bllen>500?'最多 ':' ')+list_t.length+' 个单词到缓存？')){return;}
     localStorage.setItem('enwords_search_result',list_t.join('\n'));
     alert('done');
 }

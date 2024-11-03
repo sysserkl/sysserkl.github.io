@@ -375,6 +375,8 @@ function menu_seen(){
     
     document.getElementById('h2_title').insertAdjacentHTML('afterbegin',bljg+' ');    
     klmenu_check_b('span_reg_rlater',true);    
+    klmenu_check_b('span_show_host_rlater',true);    
+    klmenu_check_b('span_show_date_rlater',true);    
     
     sort_type.sort(randomsort_b);
     document.getElementById('select_raw_sort_id_seen').value=sort_type[0];

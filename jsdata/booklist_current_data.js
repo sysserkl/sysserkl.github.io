@@ -1,4 +1,5 @@
 var csbooklist_source_global=[
+["deng_xiao_ping_wen_xuan_dsjqsw_220497", "邓小平文选第三卷(求是网)","已整理","3",""],
 ["japanese_girls_and_women_revised_aee_4948", "Japanese Girls and Women Revised and Enlarged Edition(Alice Mabel Bacon)","已整理,englishwords","3",""],
 ["san_xia_wu_yi_jian_tbbggdcs_287176", "三侠五义([清]石玉昆)","已整理,D版","3",""],
 ["qi_xia_wu_yi_zhong_ggdxspjwk_322508", "七侠五义(石玉昆)","已整理,D版","3",""],
@@ -8,7 +9,6 @@ var csbooklist_source_global=[
 ["essays_of_michel_de_montaigne_c_11799", "Essays of Michel de Montaigne — Complete(Michel de Montaigne)","已整理,englishwords","3",""],
 ["deng_xiao_ping_wen_xuan_dyjqsw_220488", "邓小平文选第一卷(求是网)","已整理","3",""],
 ["deng_xiao_ping_wen_xuan_dejqsw_220628", "邓小平文选第二卷(求是网)","已整理","3",""],
-["deng_xiao_ping_wen_xuan_dsjqsw_220497", "邓小平文选第三卷(求是网)","已整理","3",""],
 ["ben_hur_a_tale_of_tc_2472", "Ben-Hur - A tale of the Christ(Lew Wallace)","已整理,englishwords","3",""],
 ["a_child_s_history_of_tw_2671", "A Child's History of the World(V. M. Hillyer)","已整理,englishwords","3",""],
 ["the_pickwick_papers_1793", "The Pickwick Papers(Charles Dickens)","已整理,englishwords","3",""],
