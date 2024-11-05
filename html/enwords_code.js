@@ -404,6 +404,10 @@ function words_queue_insert_kle(){
     dom_insert_str_b(otextarea,list_t[0],list_t[1],false);
 }
 
+function textarea_queue_search_kle(cskey){
+    textarea_top_bottom_b('textarea_words_queue',cskey.trim(),-1);
+}
+
 function words_editor_form_kle(){
     if (typeof window_close_alert_kle_global == 'undefined'){
         close_window_alert_b();
@@ -440,7 +444,7 @@ function words_editor_form_kle(){
 
     var blstr=textarea_with_form_generate_b('textarea_words_queue','height:20rem;',left_strings,'全选,清空,复制,导入temp_txt_share,发送到临时记事本,发送地址',right_strings,'enwords_queue','form_words_queue',false,list_t.join('\n'));
 
-    blstr=blstr+'<p><input type="text" id="input_find_in_textarea_queue" placeholder="搜索字符串" onkeyup="if (event.key==\'Enter\'){textarea_top_bottom_b(\'textarea_words_queue\',this.value.trim());}" /></p>';
+    blstr=blstr+'<p><input type="text" id="input_find_in_textarea_queue" placeholder="搜索字符串" onkeyup="if (event.key==\'Enter\'){textarea_queue_search_kle(this.value);}" /></p>';
 
     bljg=bljg+blstr+'<div id="div_words_queue_diff_kle"></div>\n';
     bljg=bljg+'<p>格式：</p><hr />'+['单词1','音标','释义','---','单词2','音标','释义','---'].join('<br />');

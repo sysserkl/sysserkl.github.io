@@ -602,11 +602,11 @@ function import_is_only_one_thing_money_b(textarea_id){
     return name_list[0];
 }
 
-function import_number1_money_b(textarea_id){
+function import_number1_money_b(textarea_id,do_ask=true){
     var blname=import_is_only_one_thing_money_b(textarea_id);
     if (blname==''){return;}
 
-    if (!confirm('是否转换【'+blname+'】的数量为1？')){return;}
+    if (do_ask && !confirm('是否转换【'+blname+'】的数量为1？')){return;}
     
     var otextarea=document.getElementById(textarea_id);
     var blstr=otextarea.value.trim();
@@ -614,25 +614,30 @@ function import_number1_money_b(textarea_id){
     otextarea.value=blstr;
 }
 
-function import_vegetable_fruit_money_b(textarea_id){
-    var blcategory=document.getElementById('select_wp_import_category_name').value;
-    if (blcategory==''){return;}
+function import_vegetable_fruit_money_b(textarea_id,cscategory=false,do_ask=true){
+    if (cscategory===false){
+        cscategory=document.getElementById('select_wp_import_category_name').value;
+    }
+    if (cscategory==''){return;}
     
     var blname=import_is_only_one_thing_money_b(textarea_id);
     if (blname==''){return;}
 
-    if (!confirm('是否转换【'+blname+'】的分类为【'+blcategory+'】？')){return;}
+    if (do_ask && !confirm('是否转换【'+blname+'】的分类为【'+cscategory+'】？')){return;}
     
     var otextarea=document.getElementById(textarea_id);
     var blstr=otextarea.value.trim();
-    blstr=blstr.replace(/^(名称|分类):(.*)$/mg,'$1:'+blcategory);
+    blstr=blstr.replace(/^(名称|分类):(.*)$/mg,'$1:'+cscategory);
     otextarea.value=blstr;
 }
 
 function elm_buttons_money_b(dom_id,textarea_id){
     var blstr=`<span class="aclick" onclick="import_name_list_money_b(true,'`+textarea_id+`');">名称列表</span>
 <span class="aclick" onclick="import_statistics_money_b(true,'`+textarea_id+`');">数量与总价</span>
-<span class="aclick" onclick="import_merge_money_b('`+textarea_id+`');">合并为一条记录</span>
+合并为一条记录：<span class="aclick" onclick="import_merge_money_b('`+textarea_id+`');">执行</span>
+<span class="aclick" onclick="import_merge_money_b('`+textarea_id+`',1,'蔬菜');">数量为1的蔬菜</span>
+<span class="aclick" onclick="import_merge_money_b('`+textarea_id+`',1,'水果');">数量为1的水果</span>
+
 分类和名称修改为：<select id="select_wp_import_category_name"><option></option><option>蔬菜</option><option>水果</option></select>
 <span class="aclick" onclick="import_vegetable_fruit_money_b('`+textarea_id+`');">修改</span>
 <span class="aclick" onclick="import_number1_money_b('`+textarea_id+`');">数量改为1</span>
@@ -699,7 +704,7 @@ function import_data_get_money_b(textarea_id='textarea_idb_content'){
     return [otextarea,result_t,set_t];
 }
 
-function import_merge_money_b(textarea_id='textarea_idb_content'){
+function import_merge_money_b(textarea_id='textarea_idb_content',amount_to_1=false,new_category=''){
     var otextarea,raw_list,set_t;
     [otextarea,raw_list,set_t]=import_data_get_money_b(textarea_id);
     if (otextarea===false){return;}
@@ -712,12 +717,20 @@ function import_merge_money_b(textarea_id='textarea_idb_content'){
     for (let blxl=0,lent=blvalue.length;blxl<lent;blxl++){
         var list_t=blvalue[blxl].split(':');
         if (list_t[0]=='数量'){
-            blvalue[blxl]='数量:'+amount.toFixed(3);
+            if (amount_to_1){
+                blvalue[blxl]='数量:1.000';
+            } else {
+                blvalue[blxl]='数量:'+amount.toFixed(3);
+            }
         } else if (list_t[0]=='总价'){
             blvalue[blxl]='总价:'+total_price.toFixed(2);
+        } else if (list_t[0]=='分类'){
+            if (new_category!==''){
+                blvalue[blxl]='分类:'+new_category;
+            }
         }
     }
-
+    
     if (!confirm('是否合并 '+raw_list.length+' 条数据为\n---\n'+blvalue.join('\n')+'\n？')){return;}
     otextarea.value='---\n'+blvalue.join('\n');
 }

@@ -1777,6 +1777,14 @@ function textarea_top_bottom_b(textareaId, csposition=0,csstart=0){
     var pos_start=0;
     var pos_end=-1;
     
+    if (csstart===-1){
+        csstart=otextarea.selectionEnd;
+    }
+    
+    if (csstart>=otextarea.value.length){
+        csstart=0;
+    }
+    
     if (csposition===0){    //必要判断 - 保留注释
         pos_start=0;
     } else if (csposition===1){
@@ -3755,16 +3763,21 @@ function character_num_sort_b(compared_a,compared_b,csdesc=false,is_cn=false){
 }
 
 function selection_dict_get_b(){
-    let dict_t = {};
-
     const selection = window.getSelection();
     if (selection.rangeCount > 0){
         const range = selection.getRangeAt(0);
-        dict_t={
+        var dict_t={
         'startContainer': range.startContainer,
         'startOffset': range.startOffset,
         'endContainer': range.endContainer,
         'endOffset': range.endOffset,
+        };
+    } else {
+        var dict_t = {
+            'startContainer': false,
+            'startOffset': -1,
+            'endContainer': false,
+            'endOffset': -1,    
         };
     }
     

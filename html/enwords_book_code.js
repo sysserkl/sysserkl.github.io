@@ -243,7 +243,7 @@ function frequency_count_get_enwords(cstype){
 
 function load_new_words_count_enwords_book(){
     function sub_load_new_words_count_enwords_book_set(){
-        local_storage_today_b('new_hot_words_count_statistics',40,new_words_count_global.length,'/');
+        local_storage_today_b('new_hot_words_count_statistics',40,Object.keys(new_words_count_global).length,'/');
     }
     load_enword_file_b('new_words_count_global','new_words_count',sub_load_new_words_count_enwords_book_set);
 }

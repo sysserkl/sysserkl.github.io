@@ -214,9 +214,7 @@ function buttons_diff_b(){
 
 function find_in_textarea_diff_b(csno){
     var blstr=document.getElementById('input_line'+csno+'_compare').value;
-    var otextarea=document.getElementById('textarea_diff_'+csno);
-    var endPos = otextarea.selectionEnd;
-    textarea_top_bottom_b('textarea_diff_'+csno,blstr,endPos);
+    textarea_top_bottom_b('textarea_diff_'+csno,blstr,-1);
 }
 
 function textarea_diff_b(){

@@ -61,10 +61,9 @@ function menu_notepad(){
 
 function find_in_textarea_notepad(csno){
     var blstr=document.getElementById('input_rep'+csno+'_notepad').value;
-    var otextarea=document.getElementById('textarea_content_notepad');
+    //var otextarea=document.getElementById('textarea_content_notepad'); //此行保留 - 保留注释
     //var startPos = otextarea.selectionStart; //此行保留 - 保留注释
-    var endPos = otextarea.selectionEnd;
-    textarea_top_bottom_b('textarea_content_notepad',blstr,endPos);
+    textarea_top_bottom_b('textarea_content_notepad',blstr,-1);
 }
 
 function replace_str_notepad(){

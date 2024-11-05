@@ -114,12 +114,37 @@ function old_rare_words_jump_enbook_b(cstype,ignore_old=true){
         current_new_rare_word_no_global[cstype]=-1;
     }
     
+    var selection_top=false;
+    var selection_dict=selection_dict_get_b();
+    if (selection_dict['startOffset']!==selection_dict['endOffset']){
+        var odom=selection_dict['startContainer'];
+        if (odom){
+            if (!odom.tagName){
+                odom=odom.parentNode;
+            }
+        }
+        if (odom.tagName){
+            selection_top=odom.getBoundingClientRect().top;
+        }
+    }
+    
+    //以下4行用于检验 - 保留注释
+    //console.log(selection_top);
+    //for (let one_dom of ospan_jumps){
+        //console.log(one_dom.parentNode.getBoundingClientRect().top);
+    //}
+    
     var blfound=false;
     for (let blno=current_new_rare_word_no_global[cstype]+1;blno<lent;blno++){
         if (ignore_old){
             var onext=ospan_jumps[blno].nextSibling;
             if (onext && onext.tagName?.toLowerCase()=='sup' && onext.classList.contains('kleng')){continue;}
         }
+        
+        if (selection_top!==false){ //在有选中的情况下，从选中的行开始查找 - 保留注释
+            if (ospan_jumps[blno].parentNode.getBoundingClientRect().top<selection_top){continue;}
+        }
+        
         ospan_jumps[blno].scrollIntoView();
         current_new_rare_word_no_global[cstype]=blno;
         blfound=true;
@@ -507,6 +532,9 @@ function frequency_enwords_book_b(cstype='',simple_split=false,common_max=4000){
             switch (cstype){
                 case 'sentence_common':
                     document.getElementById('textarea_new_words1').value='//'+blcaption+'新单词('+new_t.length+')\n'+new_t.join('\n');
+                    if (blcaption=='全部' && new_t.length>0){
+                        local_storage_today_b('new_words_in_sentences',40,new_t.length,'/');
+                    }
                     get_new_words_arr_set_enbook_b(2,'','div_new_words2',is_remove_square,words_type,csendata_set);
                     break;
                 case 'textarea':
