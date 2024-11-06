@@ -704,7 +704,7 @@ function import_data_get_money_b(textarea_id='textarea_idb_content'){
     return [otextarea,result_t,set_t];
 }
 
-function import_merge_money_b(textarea_id='textarea_idb_content',amount_to_1=false,new_category=''){
+function import_merge_money_b(textarea_id='textarea_idb_content',amount_to_1=false,new_category_and_name=''){
     var otextarea,raw_list,set_t;
     [otextarea,raw_list,set_t]=import_data_get_money_b(textarea_id);
     if (otextarea===false){return;}
@@ -725,9 +725,13 @@ function import_merge_money_b(textarea_id='textarea_idb_content',amount_to_1=fal
         } else if (list_t[0]=='总价'){
             blvalue[blxl]='总价:'+total_price.toFixed(2);
         } else if (list_t[0]=='分类'){
-            if (new_category!==''){
-                blvalue[blxl]='分类:'+new_category;
+            if (new_category_and_name!==''){
+                blvalue[blxl]='分类:'+new_category_and_name;
             }
+        } else if (list_t[0]=='名称'){
+            if (new_category_and_name!==''){
+                blvalue[blxl]='名称:'+new_category_and_name;
+            }            
         }
     }
     

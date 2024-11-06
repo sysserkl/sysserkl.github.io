@@ -94,8 +94,7 @@ function filter_lsm(csstr='',checked=false){
 }
 
 function local_storage_view_lsm(cstype=''){
-    var blstr;
-    var bllen;
+    var blstr, bllen;
     [blstr,bllen]=local_storage_all_b(cstype);
     if (Array.isArray(blstr)){
         blstr=blstr.join('\n');
@@ -130,14 +129,21 @@ function menu_lsm(){
     '<span class="span_menu" onclick="'+str_t+'keys_generate_lsm();">刷新 localStorage key</span>',
     '<span class="span_menu" onclick="'+str_t+'local_storage_view_lsm(\'name\');">查看全部 localStorage key</span>',
     '<span class="span_menu" onclick="'+str_t+'local_storage_view_lsm(\'name_length\');">查看全部 localStorage key 和 长度</span>',
-    '<span class="span_menu" onclick="'+str_t+'local_storage_view_lsm();">查看全部 localStorage</span>',
     '<span class="span_menu" onclick="'+str_t+'local_storage_view_lsm(\'brief\');">简略显示全部 localStorage</span>',
     '<span class="span_menu" onclick="'+str_t+'local_storage_import_lsm();">导入 localStorage</span>',
     ];
+
+    var group_list=[
+    ['查看全部 localStorage','local_storage_view_lsm();',true],
+    ['无分隔符','local_storage_whole_hash_lsm(false);',true],
+    ];    
+    klmenu_local.push(menu_container_b(str_t,group_list,''));    
     
     var group_list=[
-    ['生成','local_storage_hash_lsm(\'generate\');',true],
-    ['比较','local_storage_hash_lsm(\'compare\');',true],
+    ['生成','local_storage_key_hash_lsm(\'generate\');',true],
+    ['比较','local_storage_key_hash_lsm(\'compare\');',true],
+    ['整体','local_storage_whole_hash_lsm();',true],
+    ['textarea','textarea_hash_lsm();',true],
     ];    
     klmenu_local.push(menu_container_b(str_t,group_list,'hash localStorage: '));    
 
@@ -155,14 +161,29 @@ function menu_lsm(){
     ];    
     klmenu_config.push(menu_container_b(str_t,group_list,''));        
         
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_local,'','20rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_local,'','25rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','60rem'),'','0rem')+' ');
 }
 
 function file_date_paramter_refresh_lsm(){
     localStorage.setItem('file_date_paramter','_'+randstr_b());
 }
 
-function local_storage_hash_lsm(cstype){
+function textarea_hash_lsm(){
+    var blhash=SHA1(document.getElementById('textarea_lsm_content').value);
+    document.getElementById('textarea_lsm_status').value='SHA1: '+blhash;
+}
+
+function local_storage_whole_hash_lsm(do_hash=true){
+    var blstr=local_storage_all_b('',[],false)[0];
+    if (do_hash){
+        var blhash='SHA1: '+SHA1(blstr);    //hash 字符串 和 hash 包含该字符串的文本文件 是两个概念 - 保留注释
+    } else {
+        var blhash=blstr;
+    }
+    document.getElementById('textarea_lsm_content').value=blhash;
+}
+
+function local_storage_key_hash_lsm(cstype){
     var current_dict={};
     for (let blxl = 0,lent= localStorage.length; blxl <lent; blxl++){
         var keyname=localStorage.key(blxl);
@@ -173,6 +194,7 @@ function local_storage_hash_lsm(cstype){
     switch (cstype){
         case 'generate':
             current_dict=object2array_b(current_dict,true,2);
+            current_dict.sort();
             for (let blxl=0,lent=current_dict.length;blxl<lent;blxl++){
                 current_dict[blxl]=current_dict[blxl][0]+' '+current_dict[blxl][1];
             }
