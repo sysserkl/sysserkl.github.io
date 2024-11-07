@@ -1617,7 +1617,8 @@ function enwords_search_result_save_b(ospan){
         list_t=list_t.slice(0,500);
     }
     
-    if (!confirm('是否保存'+(bllen>500?'最多 ':' ')+list_t.length+' 个单词到缓存？')){return;}
+    var old_len=enwords_search_result_load_b().length;
+    if (!confirm('是否保存'+(bllen>500?'最多 ':' ')+list_t.length+' 个单词到缓存，替换原有的 '+old_len+' 个单词？')){return;}
     localStorage.setItem('enwords_search_result',list_t.join('\n'));
     alert('done');
 }
