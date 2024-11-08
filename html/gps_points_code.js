@@ -7,6 +7,7 @@ function buttons_gps_points(){
     bljg=bljg+'<option>GCJ02_TO_WGS84</option>\n';
     bljg=bljg+'</select>\n';
     bljg=bljg+'<span id="span_quick_buttons_gpx"></span>';
+    bljg=bljg+'<span class="aclick" onclick="outdoor_gps_points();" title="户外一键设置">🎀</span> ';    
     bljg=bljg+'<span class="aclick" onclick="close_buttons_gps_points(this);">Close</span> ';
     
     var left_strings='<p>';
@@ -18,6 +19,18 @@ function buttons_gps_points(){
     
     bljg=bljg+blstr+'\n';    
     return bljg;
+}
+
+function outdoor_gps_points(){
+    document.getElementById('select_transform').value='WGS84_TO_GCJ02';
+    if (klmenu_check_b('span_show_circle',false)===false){
+        klmenu_check_b('span_show_circle',true);
+    }
+    if (klmenu_check_b('span_continue_position',false)===false){
+        klmenu_check_b('span_continue_position',true);
+    }
+    circle_distance_settings_gps_points(false,'');
+    gd_switch_gps_points();
 }
 
 function save_to_memory_gps_points(){
@@ -649,12 +662,18 @@ function init_page_gps_points(is_simple=false,map_type='',map_id='osm'){
     });
 }
 
-function circle_distance_settings_gps_points(show_prompt=true){
+function circle_distance_settings_gps_points(show_prompt=true,newstr=false){
     var default_value='100,yellow;200,cyan;300,deeppink;1000,yellow;2000,cyan;3000,deeppink';
-    var blstr=local_storage_get_b('circle_distance_gps_points');
+    if (newstr===false){
+        var blstr=local_storage_get_b('circle_distance_gps_points');
+    } else {
+        var blstr=newstr;
+    }
+    
     if (blstr==''){
         blstr=default_value;
     }
+    
     if (show_prompt){
         var newstr=(prompt('输入距离圈设置，格式：xxx米,颜色1;yyy米,颜色2; 如：100,red;200,blue\n输入 默认 则返回默认值：',blstr) || '').trim();
         if (newstr==''){
@@ -665,6 +684,7 @@ function circle_distance_settings_gps_points(show_prompt=true){
         }
         blstr=newstr;
     }
+    
     localStorage.setItem('circle_distance_gps_points',blstr);
     return blstr;
 }
@@ -930,7 +950,11 @@ function recent_gpx_file_get_gps_points(openfile=false){
         return ['',''];
     }
     if (openfile){
-        read_txt_file_gps_points(list_t[0],list_t[1]);
+        if (list_t[1]=='bigfile'){
+            import_bigfile_gps_points(list_t[0]);
+        } else {
+            read_txt_file_gps_points(list_t[0],list_t[1]);
+        }
     }
     return list_t;
 }
@@ -1606,12 +1630,18 @@ function menu_gps_points(){
     document.getElementById('input_upload_gpx').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_gpx,'⛰','22rem','1rem','1rem','60rem')+klmenu_b(klmenu_dots,'','34rem','1rem','1rem','60rem')+klmenu_b(klmenu_district,'📍','24rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','27rem','1rem','1rem','60rem'),'','0rem')+' ');
 }
 
-function import_bigfile_gps_points(){
+function import_bigfile_gps_points(fname=false){
     function sub_import_bigfile_gps_points_onsuccess(cscontent){
         gpx_from_textarea_gps_points();
+        if (fname!==false){
+            recent_gpx_file_set_gps_points(fname,'bigfile');
+        }
     }
     
-    var fname=document.getElementById('select_big_file_gpx_gps_points').value;
+    if (fname===false){
+        fname=document.getElementById('select_big_file_gpx_gps_points').value;
+    }
+    
     if (fname=='手动输入 bigfile gpx 文件名'){
         fname=false;
     }
@@ -1671,14 +1701,16 @@ function quick_buttons_select_gps_points(cstype){
     ospan.innerHTML=blstr;
 }
 
-function gd_switch_gps_points(ospan){
+function gd_switch_gps_points(ospan=false){
     for (let one_map in klmaps_global){
         if (omap_gps_points_global.hasLayer(klmaps_global[one_map])){
             console.log('发现',one_map);
             omap_gps_points_global.removeLayer(klmaps_global[one_map]);
             var add_map=(one_map=='gd'?'gd_earth':'gd');
             omap_gps_points_global.addLayer(klmaps_global[add_map]);
-            ospan.innerHTML=(add_map=='gd'?'🌏':'🌐');
+            if (ospan){
+                ospan.innerHTML=(add_map=='gd'?'🌏':'🌐');
+            }
             break;
         }
     }

@@ -3895,7 +3895,7 @@ function import_bigfile_content_b(filename=false,csid=false,run_fn=false){
     
     if (filename===false){
         filename=prompt('输入要读取的文件名称');
-        if (filename==null){return;}        
+        if (filename==null){return;}
     }
     
     idb_bigfile_b('read','content',filename,sub_import_bigfile_content_b);
