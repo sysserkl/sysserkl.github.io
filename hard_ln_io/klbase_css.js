@@ -2005,13 +2005,16 @@ function highlight_obj_b(obj,search_str,new_str){
 }
 
 function highlight_text_b(cswordlist=[],query_str='',is_async=false,run_fn=false){
+    function sub_highlight_text_b_run(){
+        if (typeof run_fn == 'function'){
+            run_fn();
+        }    
+    }
+    
     function sub_highlight_text_b_one(){
         if (blno>=blcount){
-            console.log('highlight_text_b() 关键字加亮 ',(is_async?'异步模式':'同步模式'),blkey2,'费时：'+(performance.now() - t0) + ' milliseconds');
-            
-            if (typeof run_fn == 'function'){
-                run_fn();
-            }
+            console.log('highlight_text_b() 关键字加亮',(is_async?'异步模式':'同步模式'),blkey2,'费时：'+(performance.now() - t0) + ' milliseconds');
+            sub_highlight_text_b_run();
             return;
         }
         
@@ -2044,7 +2047,11 @@ function highlight_text_b(cswordlist=[],query_str='',is_async=false,run_fn=false
     
     var ohighlight=document.getElementById('input_highlight');
     if (ohighlight){
-        if (document.getElementById('input_highlight').checked==false){return;}
+        if (document.getElementById('input_highlight').checked==false){
+            console.log('highlight_text_b() 关键字加亮',(is_async?'异步模式':'同步模式'),'input_highlight 未选中');
+            sub_highlight_text_b_run();
+            return;
+        }
     }
 
     var t0 = performance.now();
@@ -2053,7 +2060,11 @@ function highlight_text_b(cswordlist=[],query_str='',is_async=false,run_fn=false
     [reg_error,blkey2]=search_key_split_b(cswordlist);
     var bllen=blkey2.length;
     
-    if (bllen==0){return;}
+    if (bllen==0){
+        console.log('highlight_text_b() 关键字加亮',(is_async?'异步模式':'同步模式'),'key 长度为 0');
+        sub_highlight_text_b_run();
+        return;
+    }
     
     if (query_str==''){
         query_str='div#divhtml p span.txt_content, li span.txt_content';

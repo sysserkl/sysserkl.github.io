@@ -611,6 +611,7 @@ function menu_kle(){
     '<span class="span_menu" onclick="'+str_t+'duplicate_words_kle();">重复单词和格式检查</span>',
     '<span class="span_menu" onclick="'+str_t+'enwords_search_result_load_b(false,\'input\',\'input_search\');">暂存搜索单词查询</span>',
     '<a href="ensentence.htm" onclick="'+str_t+'" target=_blank>ensentence</a>',  
+    '<a href="selenium_enwords.htm" onclick="'+str_t+'" target=_blank>selenium enwords</a>',  
     ]);
     
     if (is_local_b()){

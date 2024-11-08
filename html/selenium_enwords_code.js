@@ -355,6 +355,7 @@ function menu_seen(){
     load_sentence_menu_b(str_t),
     '<span class="span_menu" onclick="'+str_t+'host_count_seen(\'status\');">当前条件 host count</span>',
     select_delete_type_generate_rlater_b(),
+    '<span class="span_menu" onclick="'+str_t+'rlater_links_get_seen();">复制当前页面链接</span>',
     '<span class="span_menu" onclick="'+str_t+'delete_batch_from_array_form_rlater_b(\'selenium_enwords\');">导入数组批量删除</span>',
     '<span class="span_menu" onclick="'+str_t+'clear_cached_deleted_rows_rlater_b(\'selenium_enwords_deleted_rows\');">清除今日删除记录</span>',
     '<span class="span_menu" onclick="'+str_t+'import_bigfile_seen();">导入 bigfile 文件</span>',        
@@ -380,6 +381,16 @@ function menu_seen(){
     
     sort_type.sort(randomsort_b);
     document.getElementById('select_raw_sort_id_seen').value=sort_type[0];
+}
+
+function rlater_links_get_seen(){
+    var oas=document.querySelectorAll('a.a_rlater_link');
+    var result_t=[];
+    for (let one_a of oas){
+        result_t.push(one_a.href);
+    }
+    copy_2_clipboard_b(result_t.join('\n'));
+    alert('已复制链接 '+result_t.length+' 条到剪贴板');
 }
 
 function import_bigfile_seen(){

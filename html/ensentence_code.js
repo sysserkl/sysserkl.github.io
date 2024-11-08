@@ -32,10 +32,11 @@ function menu_ensentence(){
     
     klmenu1=klmenu1.concat([
     '<span class="span_menu" onclick="'+str_t+'rare_old_words_ensentence(\'例句最少的单词\',false,true,2,10,5000,false);">例句最少的单词5000</span>',
+    '<span class="span_menu" onclick="'+str_t+'phrase_not_in_ensentence(1,100);">例句最少的词组100</span>',
     '<span class="span_menu" onclick="'+str_t+'rare_old_words_ensentence(\'例句出处唯一的单词\',false,true,2,10,5000,true);">例句出处唯一的单词5000</span>',
     '<span class="span_menu" onclick="'+str_t+'show_sentence_enwc_b();">显示例句</span>',
     '<span class="span_menu" onclick="'+str_t+'show_new_words_enwc_b(\'span.span_enwords_sentence\',false);">显示例句中的生词</span>',  //get_new_words_arr_enbook_b - 保留注释
-    '<span class="span_menu" onclick="'+str_t+'klwiki_txtbook_oldwords_diff_ensentence();">klwiki 和 txtbook 中的稀有单词</span>',    
+    '<span class="span_menu" onclick="'+str_t+'klwiki_txtbook_oldwords_diff_ensentence();">klwiki 和 txtbook 中的稀有单词</span>',
     ]);
 
     var group_list=[
@@ -48,7 +49,7 @@ function menu_ensentence(){
     
     var group_list=[
     ['无例句的单词','rare_old_words_ensentence(\'无例句的单词\',false,false,1,0,3000);',true],
-    ['词组','phrase_not_in_ensentence();',true],
+    ['词组500','phrase_not_in_ensentence(0,500);',true],
     ];    
     klmenu1.push(menu_container_b(str_t,group_list,''));
 
@@ -200,35 +201,68 @@ function sentence_source_location_ensentence(cspages,csmax){
     sentence_source_pages_ensentence((blno-1)*csmax+1,csmax);
 }
 
-function phrase_not_in_ensentence(){ 
-    var t0 = performance.now();
-
-    var full_t=[];
-    var words_found=[];
-    for (let item of enwords){
-        if (!item[0].includes(' ')){continue;}
+function phrase_not_in_ensentence(max_count=0,max_result=100){
+    function sub_phrase_not_in_ensentence_done(){
+        en_word_temp_get_b();
+        var full_t=[];
+        var words_found=[];
+        for (let key in phrase_dict){
+            if (phrase_dict[key][1]>max_count){continue;}
+            full_t.push(phrase_dict[key][0]);
+            words_found.push(phrase_dict[key][0][0]);
+        }
+        words_found.sort();
+        full_t.sort();
         
-        var blfound=false;
-        for (let one_sentence of en_sentence_global){
-            if (one_sentence[0].toString().match(new RegExp('\\b'+item[0]+'\\b','i'))!==null){
-                blfound=true;
-                break;
+        var odiv=document.getElementById('divhtml');   
+        odiv.innerHTML=enwords_array_to_html_b(full_t,false)+rare_old_words_form_ensentence(words_found,false);
+        
+        //odiv.insertAdjacentHTML('beforeend','<textarea onclick="this.select();document.execCommand(\'copy\');">'+words_found.join('\n')+'</textarea>');
+        console.log('phrase_not_in_ensentence() 费时：'+(performance.now() - t0) + ' milliseconds');       
+    }
+    
+    function sub_phrase_not_in_ensentence_one(){
+        if (blxl>=bllen){
+            sub_phrase_not_in_ensentence_done();
+            return;
+        }
+        
+        var item=enwords[blxl];
+        
+        if (item[0].includes(' ')){
+            phrase_dict['w_'+item[0]]=[item,0];
+            
+            for (let one_sentence of en_sentence_global){
+                if (one_sentence[0].toString().match(new RegExp('\\b'+item[0]+'\\b','i'))!==null){
+                    phrase_dict['w_'+item[0]][1]=phrase_dict['w_'+item[0]][1]+1;
+                    if (phrase_dict['w_'+item[0]][1]>max_count){break;}
+                }
+            }
+            
+            if (phrase_dict['w_'+item[0]][1]<=max_count){
+                blcount=blcount+1;
+                if (blcount>=max_result){
+                    sub_phrase_not_in_ensentence_done();
+                    return;
+                }
             }
         }
         
-        if (!blfound){
-            full_t.push(item);
-            words_found.push(item[0]);
+        blxl=blxl+1;
+        if (blxl % 100 == 0){
+            setTimeout(sub_phrase_not_in_ensentence_one,1);
+        } else {
+            sub_phrase_not_in_ensentence_one();
         }
     }
-    en_word_temp_get_b();
-    words_found.sort();
-    full_t.sort();
     
-    var odiv=document.getElementById('divhtml');   
-    odiv.innerHTML=enwords_array_to_html_b(full_t,false);
-    odiv.insertAdjacentHTML('beforeend','<textarea onclick="this.select();document.execCommand(\'copy\');">'+words_found.join('\n')+'</textarea>'); //+words_2_js_array_ensentence(words_found)
-    console.log('phrase_not_in_ensentence() 费时：'+(performance.now() - t0) + ' milliseconds');
+    var t0 = performance.now();
+    
+    var blxl=0;
+    var bllen=enwords.length;
+    var phrase_dict={};
+    var blcount=0;
+    sub_phrase_not_in_ensentence_one();
 }
 
 function host_count_ensentence(sort_no=-1){
@@ -424,16 +458,25 @@ function rare_old_words_sort_ensentence(csarr){
     }
     return result_t;
 }
+
+function rare_old_words_form_ensentence(cslist,generate_js){
+    var more_buttons='';
+    if (generate_js){
+        more_buttons='<span class="aclick" onclick="enwords_count_sentence_data_save_ensentence();">save as enwords_count_sentence_data.js file</span>';
+    }
+    var bljg=enwords_different_types_div_b(cslist,true,'textarea_rare_words','textarea_rare_words','复制,发送到临时记事本,发送地址',more_buttons);
+    return bljg;
+}
     
 function rare_old_words_ensentence(cscaption='',show_sentence=false,generate_js=false,max_count=2,rows_min=10,rows_max=5000,source_check=false){
-    function sub_rare_old_words_ensentence_form(){
-        var more_buttons='';
-        if (generate_js){
-            more_buttons='<span class="aclick" onclick="enwords_count_sentence_data_save_ensentence();">save as enwords_count_sentence_data.js file</span>';
-        }
-        var bljg=enwords_different_types_div_b(words_searched_arr_global,true,'textarea_rare_words','textarea_rare_words','复制,发送到临时记事本,发送地址',more_buttons);
-        return bljg;
-    }
+    //function sub_rare_old_words_ensentence_form(){
+        //var more_buttons='';
+        //if (generate_js){
+            //more_buttons='<span class="aclick" onclick="enwords_count_sentence_data_save_ensentence();">save as enwords_count_sentence_data.js file</span>';
+        //}
+        //var bljg=enwords_different_types_div_b(words_searched_arr_global,true,'textarea_rare_words','textarea_rare_words','复制,发送到临时记事本,发送地址',more_buttons);
+        //return bljg;
+    //}
     
     function sub_rare_old_words_ensentence_words(words_list){
         for (let aword of words_list){
@@ -468,7 +511,7 @@ function rare_old_words_ensentence(cscaption='',show_sentence=false,generate_js=
             }
             words_searched_arr_global=rare_old_words_sort_ensentence(words_searched_arr_global);
             
-            var bltextarea=sub_rare_old_words_ensentence_form();
+            var bltextarea=rare_old_words_form_ensentence(words_searched_arr_global,generate_js);
             
             var progress_list=ltp_status_get_b('+例句 +单词','green','white',100);
 
