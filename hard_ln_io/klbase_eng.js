@@ -1623,7 +1623,7 @@ function enwords_search_result_save_b(ospan){
     alert('done');
 }
 
-function enwords_search_result_load_b(ospan=false,cstype='',dom_id=''){
+function enwords_search_result_load_b(ospan=false,cstype='',dom_id='',delimiter='b'){
     var list_t=local_storage_get_b('enwords_search_result',-1,true);
 
     if (ospan===false){
@@ -1635,7 +1635,7 @@ function enwords_search_result_load_b(ospan=false,cstype='',dom_id=''){
                 if (dom_id!==''){
                     var odom=document.getElementById(dom_id);
                     if (odom){
-                        odom.value=enwords_list_2_reg_b(list_t);
+                        odom.value=enwords_list_2_reg_b(list_t,delimiter);
                     }
                 }
                 break;
@@ -1657,9 +1657,16 @@ function enwords_search_result_load_b(ospan=false,cstype='',dom_id=''){
     }
 }
 
-function enwords_list_2_reg_b(cslist){
+function enwords_list_2_reg_b(cslist,delimiter='b'){
     var bljg=cslist.join('|').replace(/\s/g,'\\s');
-    bljg='\\b('+bljg+')\\b';
+    switch (delimiter){
+        case 'b':
+            bljg='\\b('+bljg+')\\b';
+            break;
+        case '^$':
+            bljg='^('+bljg+')$';
+            break;
+    }
     return bljg;
 }
 
