@@ -339,9 +339,9 @@ function style_money_b(csedittype){
 	var txa = document.getElementById('textarea_content');
 	if (txa){
         if (csedittype=='多媒体'){
-            dom_insert_str_b(txa,fontbegin,fontend,false,false,sub_style_money_b_multimedia);
+            dom_insert_str_b(txa,fontbegin,fontend,true,true,sub_style_money_b_multimedia);
         } else {
-            dom_insert_str_b(txa,fontbegin,fontend);        
+            dom_insert_str_b(txa,fontbegin,fontend);
         }
 	}
 }
