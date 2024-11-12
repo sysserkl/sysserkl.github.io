@@ -505,17 +505,24 @@ function open_link_en_b(cstype,csword,do_open=true){
     return blhref;
 }
 
-function sup_kleng_hide_b(){
-	var o_sups=document.querySelectorAll('sup.kleng');
-	if (o_sups.length==0){return;}
-
-	for (var item of o_sups){
-		if (item.style.display=='none'){
-			item.style.display='inline';
-		} else {
-			item.style.display='none';
-		}
-	}
+function sup_kleng_hide_b(new_status='auto'){
+    var o_sups=document.querySelectorAll('sup.kleng');
+    if (o_sups.length==0){return;}
+    
+    if (new_status=='auto'){
+        var bldisplay=(o_sups[0].style.display=='none'?'':'none');
+    } else {
+        if (o_sups[0].style.display==new_status){
+            console.log('sup_kleng_hide_b','状态一致，忽略刷新');
+            return;
+        } else {
+            var bldisplay=new_status;
+        }
+    }
+    
+    for (let item of o_sups){
+        item.style.display=bldisplay;
+    }
 }
 
 function sup_kleng_show_hide_b(ospan){

@@ -711,3 +711,31 @@ function month01_day_b(the_day){
     var border_bottom=(the_day.slice(-2,)=='01'?'border-bottom:0.1rem dotted '+scheme_global['memo']+';':'');
     return border_bottom;
 }
+
+function parse_relative_date_b(datestr){
+    //const date = parseRelativeDate("2 day ago"); // 输出2天前的日期 - 保留注释
+    var now = new Date();
+    var [number, unit] = datestr.match(/\d+/g).map(Number); // 提取数字
+    var unitString = datestr.replace(/\d+/g, '').trim(); // 提取单位
+
+    var seconds=-1;
+    switch (unitString){
+        case 'day ago':
+        case 'days ago':
+            seconds=86400000;
+            break;
+        case 'hour ago':
+        case 'hours ago':
+            seconds=3600000;
+            break;
+        case 'minute ago':
+        case 'minutes ago':
+            seconds=60000;
+            break;
+    }
+    if (seconds>-1){
+         return new Date(now - number * seconds);
+    } else {
+        return false;
+    }
+}
