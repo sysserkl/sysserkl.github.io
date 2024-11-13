@@ -531,7 +531,7 @@ function classify_sites_klsnews_b(bottom_eng=true,sort_by_day=false,show_cn_en='
     if (bottom_eng || ['cn','en'].includes(show_cn_en)){
         var maxnum=0;
         for (let item of bljg_list){
-            maxnum=Math.max(maxnum,item[0])+1;  //如果不+1,则 maxnum 可能是 0 - 保留注释
+            maxnum=Math.max(maxnum,item[0])+2;  //EFULL+1，CN+2，如果不+1，则 maxnum 可能是 0 - 保留注释
         }
         var removestr='[”“’‘„–—‒…‚・⨯]';
         var list_t=[].concat(bljg_list);
@@ -542,6 +542,11 @@ function classify_sites_klsnews_b(bottom_eng=true,sort_by_day=false,show_cn_en='
             //适用 www 数据库 - 保留注释
             if (sites_en_cn_global['cn'].includes(item[1])){
                 site_type='cn0';
+            } else if (sites_en_cn_global['efull'].includes(item[1])){
+                site_type='efull';
+                if (bottom_eng){
+                    do_add=true;
+                }
             } else if (sites_en_cn_global['en'].includes(item[1])){
                 site_type='en0';
                 if (bottom_eng){
@@ -557,10 +562,10 @@ function classify_sites_klsnews_b(bottom_eng=true,sort_by_day=false,show_cn_en='
             }
             
             console.log(site_type,item[1]); //此行保留 - 保留注释
-            if (show_cn_en=='cn' && site_type.substring(0,2)=='en' || show_cn_en=='en' && site_type.substring(0,2)=='cn'){
+            if (show_cn_en=='cn' && site_type.substring(0,2)=='en' || show_cn_en=='cn' && site_type=='efull' || show_cn_en=='en' && site_type.substring(0,2)=='cn'){
                 list_t[blxl]='';
             } else if (do_add){
-                list_t[blxl][0]=item[0]+maxnum;
+                list_t[blxl][0]=item[0]+maxnum+(site_type=='efull'?-1:0);
             }
             //以下四行保留注释
             //else {

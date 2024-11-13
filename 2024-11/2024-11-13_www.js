@@ -1,0 +1,16 @@
+var sourcelist=[
+["https://www.solidot.org/story?sid=79747","披头士《Now And Then》成为首个获格莱美提名的 AI 辅助创作的歌曲","2024-11-13","Solidot","1",],
+["https://www.solidot.org/story?sid=79748","FTX 起诉币安及其前 CEO 赵长鹏","2024-11-13","Solidot","1",],
+["https://www.solidot.org/story?sid=79749","亚马逊证实员工信息泄露","2024-11-13","Solidot","1",],
+["https://www.solidot.org/story?sid=79750","病毒学家用其在实验室培养的病毒治疗自己的癌症","2024-11-13","Solidot","1",],
+["https://www.solidot.org/story?sid=79751","双 11 购物节没有恢复往日的火热","2024-11-13","Solidot","1",],
+["https://www.solidot.org/story?sid=79752","Ilya Sutskever 认为大模型规模已经达到平台期","2024-11-13","Solidot","1",],
+["https://www.solidot.org/story?sid=79753","Google 要求 Android 芯片组支持 Virtualization Framework","2024-11-13","Solidot","1",],
+["https://www.solidot.org/story?sid=79754","Firefox 将人和隐私置于利润之上","2024-11-13","Solidot","1",],
+["https://www.solidot.org/story?sid=79755","俄罗斯的可重复使用火箭计划","2024-11-13","Solidot","1",],
+["https://www.solidot.org/story?sid=79756","更多 X 用户逃到 Bluesky","2024-11-13","Solidot","1",],
+["https://www.solidot.org/story?sid=79746","友讯证实不会修复旧型号 NAS 设备的高危漏洞","2024-11-13","Solidot","1",],
+["https://www.solidot.org/story?sid=79745","大部分中风是可以预防的","2024-11-13","Solidot","1",],
+["https://www.solidot.org/story?sid=79744","凹语言完成全部语言特性","2024-11-13","Solidot","1",],
+["https://www.solidot.org/story?sid=79743","Rust 基金会更新商标政策","2024-11-13","Solidot","1",],
+];

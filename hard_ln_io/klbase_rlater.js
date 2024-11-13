@@ -263,6 +263,9 @@ function title_key_rlater_b(csstr,close_popup=true){
             if (csstr.includes(item)){
                 result_t.push([item,key]);
             }
+            if (csstr.includes(item+' - ENG')){
+                result_t.push([item+' - ENG',key]);
+            }            
         }
     }
 

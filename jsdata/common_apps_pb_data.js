@@ -21,7 +21,7 @@ var common_apps_pb_global=[
 ["{{selenium_news}}/html/canvas_draw.htm","canvas draw","🖍","3",""],
 ["{{selenium_news}}/html/cn_idiom.htm","cn idiom","😵","2",""],
 ["{{selenium_news}}/html/cnki_search.htm","cnki search","🛢️","5","database"],
-["{{selenium_news}}/html/diff_js.htm","diff js","diff_js512.png","1_0"],
+["{{selenium_news}}/html/diff_js.htm","diff js","diff_js512.png","0"],
 ["{{selenium_news}}/html/digest.htm","Digest","🗃️","5","txtbook"],
 ["{{selenium_news}}/html/douban_book.htm","douban book","douban_book512.png","5","bookshelf"],
 ["{{selenium_news}}/html/emoji.htm","emoji","🎁","5","character"],

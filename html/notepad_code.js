@@ -41,6 +41,9 @@ function menu_notepad(){
 
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🗐','19rem','1rem','1rem','30rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','30rem'),'','0rem')+' ');
     klmenu_check_b('span_reg_notepad',true);
+    klmenu_check_b('span_new_empty_notepad',true);
+    klmenu_check_b('span_edit_show_wiki_notepad',true);
+
     //-----------------------
     var klmenu_sort=sort_menu_klr_b('textarea_content_notepad',str_t);
     var klmenu_blank=blank_rows_add_remove_klr_b('menu','textarea_content_notepad',str_t);
