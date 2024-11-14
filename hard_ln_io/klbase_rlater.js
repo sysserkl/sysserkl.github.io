@@ -263,11 +263,20 @@ function title_key_rlater_b(csstr,close_popup=true){
             if (csstr.includes(item)){
                 result_t.push([item,key]);
             }
-            if (csstr.includes(item+' - ENG')){
-                result_t.push([item+' - ENG',key]);
-            }            
         }
     }
+    
+    var en_list=[];
+    for (let item of result_t){
+        if (item[0].endsWith(' - ENG')){continue;}
+        for (let key in klwiki_page_position_global){
+            if (klwiki_page_position_global[key].includes(item[0]+' - ENG')){
+                en_list.push([item[0]+' - ENG',key]);
+            }
+        }
+    }
+    
+    result_t=result_t.concat(en_list);
 
     //result_t 每个元素形如：[ "Cats (1998)", "klwiki04" ] - 保留注释
     result_t.sort(function (a,b){return zh_sort_b(a,b,false,0);});
