@@ -429,6 +429,7 @@ function classify_sites_klsnews_b(bottom_eng=true,sort_by_day=false,show_cn_en='
         str_t=str_t+'</p>';
         return str_t;
     }
+    
     function sub_classify_sites_klsnews_b_head(divstyle,blno,cstotal,thetag,isfinished,str_t,more_t,bly){
         var bljg='<div class="div_masonry" style="'+divstyle+'">';
         bljg=bljg+'<a name="a_site_num_'+blno+'"></a>';
@@ -453,10 +454,9 @@ function classify_sites_klsnews_b(bottom_eng=true,sort_by_day=false,show_cn_en='
     //形如 - 保留注释：
     //[ "https://www.theverge.com/2019/3/23/18278557/apple-iphone-11-wireless-charging-other-devices-airpods-watch-rumor", "Apple’s next iPhone might be able to wirelessly charge other devices", "2019-03-25", "Apple next iPhone might be able to wirelessly charge other devices", "The Verge" ]
     //以下两行排序必要 - 保留注释
+    
     selected_list.sort(function (a,b){return sort_by_date_b(a,b,true,2,1,false,true);});
-    selected_list.sort(function (a,b){
-        return zh_sort_b(a,b,false,3);
-    });
+    selected_list.sort(function (a,b){return zh_sort_b(a,b,false,3);});
 
     var thetag='';
     var str_t='';
@@ -464,7 +464,6 @@ function classify_sites_klsnews_b(bottom_eng=true,sort_by_day=false,show_cn_en='
     var bly=1;
     var bljg_list=[];
     var date_t = new Date(); 
-    //var today_t=date_t.getDate();
     var ospan=document.getElementById('span_search_key');
     if (ospan){
         var key_html_t=ospan.innerHTML;
@@ -529,10 +528,11 @@ function classify_sites_klsnews_b(bottom_eng=true,sort_by_day=false,show_cn_en='
     //分别是：排序分数，网站名，前20条内容，第21条开始的内容，显示序号
     // bljg_list.sort(function (a,b){return zh_sort_b(a,b,false,1);}); - 保留注释
     if (bottom_eng || ['cn','en'].includes(show_cn_en)){
-        var maxnum=0;
+        var maxnum=1;   //如果不+1，则 maxnum 可能是 0 - 保留注释
         for (let item of bljg_list){
-            maxnum=Math.max(maxnum,item[0])+2;  //EFULL+1，CN+2，如果不+1，则 maxnum 可能是 0 - 保留注释
+            maxnum=Math.max(maxnum,item[0]);
         }
+        
         var removestr='[”“’‘„–—‒…‚・⨯]';
         var list_t=[].concat(bljg_list);
         for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
@@ -565,7 +565,7 @@ function classify_sites_klsnews_b(bottom_eng=true,sort_by_day=false,show_cn_en='
             if (show_cn_en=='cn' && site_type.substring(0,2)=='en' || show_cn_en=='cn' && site_type=='efull' || show_cn_en=='en' && site_type.substring(0,2)=='cn'){
                 list_t[blxl]='';
             } else if (do_add){
-                list_t[blxl][0]=item[0]+maxnum+(site_type=='efull'?-1:0);
+                list_t[blxl][0]=item[0]+maxnum*(site_type=='efull'?1:2);  //EFULL+maxnum，CN+maxnum*2 - 保留注释
             }
             //以下四行保留注释
             //else {
@@ -579,7 +579,9 @@ function classify_sites_klsnews_b(bottom_eng=true,sort_by_day=false,show_cn_en='
             bljg_list.push(item);
         }
     }
+    
     bljg_list.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});
+
     var a_site_num_links='';
     
     var finished_sites=local_storage_get_b('finished_selenews',-1,true);
@@ -1071,10 +1073,10 @@ function menu_klsnews_b(cskeys,js_or_php=''){
     
     var group_list=[
     ['按网站分类：','classify_sites_klsnews_b(false);',true],
-    ['中上英下','classify_sites_klsnews_b(true);',true],
-    ['英文','classify_sites_klsnews_b(false,true,\'en\');',true],
-    ['中文','classify_sites_klsnews_b(false,true,\'cn\');',true],
-    ['ASC排序','classify_sites_klsnews_b(false,true);',true],
+    ['中上英下','classify_sites_klsnews_b(true,true);',true],
+    ['英文','classify_sites_klsnews_b(false,false,\'en\');',true],
+    ['中文','classify_sites_klsnews_b(false,false,\'cn\');',true],
+    ['ASC排序','classify_sites_klsnews_b(false,false);',true],
     ];    
     menu_list1.push(menu_container_b(str_t,group_list,''));
     
