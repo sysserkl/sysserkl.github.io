@@ -40,6 +40,7 @@ var search_sites_list_global=[
 ['https://www.bing.com/search?q=','',0,'salmon','Bing','0','Search',''],
 ['https://duckduckgo.com/?q=','',0,'','DuckDuckGo','0','Search',''],
 ['https://www.baidu.com/s?wd=','',0,'','百度','0','Search',''],
+['https://yandex.com/search/?text=','',1,'','Yandex','0','Search',''],
 ['https://www.bing.com/search?q=',' site: thepaper.cn',0,'','澎湃','0','Search',''],
 ['https://www.bing.com/search?q=',' site: www.people.com.cn',0,'','人民','','Search',''],
 ['https://www.bing.com/search?q=',' site: www.xinhuanet.com',0,'','新华','','Search',''],
