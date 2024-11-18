@@ -27,11 +27,16 @@ function list_arr_analyze(csarray=false){
     if (csarray==false){
         csarray=table_array_global;
     }
+    
 	for (let arow of csarray){
         var row_str=[];
         if (Array.isArray(arow)){
             for (let acol of arow){
-                row_str.push(acol.toString());
+                if (typeof acol=='string'){
+                    row_str.push(acol);
+                } else {
+                    row_str.push(acol?.toString()||'undefined');
+                }
             }
         } else {
             row_str=[arow];
@@ -251,8 +256,12 @@ function column_filter_arr_analyze(cssplit=false,do_update=true){
 function var_arr_analyze(csarray=false,show_html=true){
     function sub_var_arr_analyze_row_not_array(csrow){
         var bljg='';
-        if (typeof csrow !== 'number'){
+        if (csrow=='' || typeof csrow == 'string'){
             bljg=bljg+'"'+specialstr_j(csrow)+'",';
+        } else if (typeof csrow == 'undefined'){
+            bljg=bljg+'undefined,';
+        } else if (typeof csrow !== 'number'){
+            bljg=bljg+'"'+specialstr_j(csrow.toString())+'",';
         } else {
             bljg=bljg+csrow+',';
         }
@@ -415,7 +424,7 @@ function data_2_flot_arr_analyze(is_demo=false){
             if (Array.isArray(cslist[blno]) && cslist[blno].length==2){
                 cslist[blno][0]=validdate_b(cslist[blno][0]);
             }
-        }    
+        }
         return cslist;
     }
     //-----------------------
@@ -472,7 +481,14 @@ function data_2_flot_arr_analyze(is_demo=false){
                             list_t[blxl]=sub_data_2_flot_arr_analyze_str2date(list_t[blxl]);
                         }
                     }
-
+                    
+                    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){      
+                        if (list_t[blxl].length>=2){
+                            var value_list=list_t[blxl].slice(1,).sort(function (a,b){return a[0]>b[0]?-1:1;});
+                            list_t[blxl]=[list_t[blxl][0]].concat(value_list);                        
+                        }
+                    }
+                    
                     flot_lines_show_arr_analyze(list_t,(bltype=='flot lines date'));
                     break;
                 case 'flot lines data format 2 array':
@@ -570,7 +586,7 @@ function code_lines_read_arr_analyze(){
 
 function flot_lines_show_arr_analyze(cslist,istime=false){
     document.getElementById('div_flot').style.display='';
-    flot_lines_b(cslist,'div_flot',document.getElementById('select_flot_legend_position_aa').value,istime,'',document.getElementById('select_flot_date_type_aa').value);
+    flot_lines_b(cslist,'div_flot',document.getElementById('select_flot_legend_position_aa').value,istime,'',document.getElementById('select_flot_date_type_aa').value,document.getElementById('input_flot_y1unit_aa').value);
 }
 
 function menu_arr_analyze(){
@@ -600,6 +616,7 @@ function menu_arr_analyze(){
     var klmenu2=root_font_size_menu_b(str_t);
     klmenu2=klmenu2.concat([
     '<span class="span_menu" onclick="'+str_t+'import_arr_analyze();">以数组形式直接载入记录</span>',
+    '<span class="span_menu" onclick="'+str_t+'import_arr_analyze(true);">csv数据添加[],再载入</span>',    
     '<span class="span_menu" onclick="'+str_t+'split_arr_by_cols_form_analyze();">数组批量列分割</span>',
     '<span class="span_menu" onclick="'+str_t+'table_title_arr_analyze();">设置标题</span>',    
     ]);
@@ -702,7 +719,7 @@ function batch_print_form_arr_analyze(){
     var right_str='</p><div id="div_batch_print_arr_analyze"></div>';
     var blstr=textarea_with_form_generate_b('textarea_template_arr_analyze','height:10rem;',left_str,'清空,复制,发送到临时记事本,发送地址',right_str);
     document.getElementById('divhtml').innerHTML=blstr;
-    document.getElementById('textarea_template_arr_analyze').setAttribute('placeholder','应该嵌入如：${item[1]}');
+    document.getElementById('textarea_template_arr_analyze').setAttribute('placeholder','应该嵌入如：${item[0]}&lt;br /&gt;');
 }
 
 function batch_print_show_arr_analyze(){
@@ -734,23 +751,9 @@ function table2csv_arr_analyze(){
     table_2_csv_b('#table_arrays',list_t);
 }
 
-function import_arr_analyze(){
+function import_arr_analyze(is_csv=false){
     var blstr=document.getElementById('textarea_arrays').value.trim();
-    var list_t=blstr.split('\n');
-    if (!confirm('是否以数组形式直接载入'+list_t.length+'条记录？')){return;}
-    try {
-        table_array_global=eval('['+blstr+']');
-        alert('载入完成');
-        list_arr_analyze();
-    } catch (error){
-        var info=array_check_b(blstr);
-        if (info==''){
-            alert(error);
-        } else {
-            alert(info);
-        }
-        console.log(error);
-    }               
+    import_arr_b(blstr,'table_array_global',is_csv,list_arr_analyze);
 }
 
 function init_arr_analyze(){
@@ -761,6 +764,7 @@ function init_arr_analyze(){
     ['input_row_count',4,0.5],
     ['input_filter',12,0.5],
     ['input_flot_legend_caption_aa',11,0.95],
+    ['input_flot_y1unit_aa',3,0.95],
     ['input_fraction_length',3,0.5],
     ];
     input_size_b(input_list,'id');

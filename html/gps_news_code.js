@@ -9,7 +9,6 @@ function buttons_gps_news(){
     bljg=bljg+'<span class="aclick" onclick="this.parentNode.parentNode.style.display=\'none\';">Close</span> ';
         
     bljg=bljg+textarea_with_form_generate_b('textarea_gps_news','height:20rem;','<p>','全选,清空,复制,发送到临时记事本,发送地址','222</p>','','form_gps_news');
-
     return bljg;
 }
 
@@ -52,7 +51,7 @@ function div_size_gps_news(){
 }
 
 function date_range_gps_news(){
-    var list_t=array_split_by_col_b(gps_news_global,[0]);
+    var list_t=array_split_by_col_b(gps_news_data_global,[0]);
     list_t.sort();
     var bllen=list_t.length;
     if (bllen==0){return;}
@@ -71,6 +70,7 @@ function init_gps_news(){
     document.getElementById('div_icon').innerHTML='📰';
     document.getElementById('div_status').innerHTML='时局图';
     document.getElementById('div_buttons').innerHTML=buttons_gps_news();
+    document.getElementById('textarea_gps_news').setAttribute('placeholder','每一行："日期","地区","事件名称","网址","tag","lng","lat"');    
     menu_gps_news();
     
     init_maps_leaflet_b();
@@ -123,7 +123,7 @@ function remove_navigation_gps_news(){
 }
 
 function popup_gps_news(show_content=true){
-    //gps_news_global 中的每一组格式 ["日期","地区","事件名称","网址","tag"]
+    //gps_news_data_global 中的每一组格式 ["日期","地区","事件名称","网址","tag","lng","lat"]
     remove_navigation_gps_news();
     var bltype=document.getElementById('select_transform').value;
     var day_start=document.getElementById('input_day_start_gps_news').value.trim();
@@ -132,10 +132,16 @@ function popup_gps_news(show_content=true){
     var lng, lat;
     var district_list={};
     var bljg=[];
-    for (let item of gps_news_global){
+    for (let item of gps_news_data_global){
         if (item[0]<day_start || day_end!=='' && item[0]>day_end){continue;}
         
-        [lng,lat]=district_cn_name_2_lnglat_b(item[1]);
+        if (item.length>=7){
+            lng=item[5];
+            lat=item[6];
+        } else {
+            [lng,lat]=district_cn_name_2_lnglat_b(item[1]);
+        }
+        
         if (lng==false || lat==false){
             console.log('未找到位置',item);
             continue;
@@ -146,7 +152,11 @@ function popup_gps_news(show_content=true){
         if (district_list['d'+lng+'_'+lat]==undefined){
             district_list['d'+lng+'_'+lat]=[lat,lng,[]];
         }
-        district_list['d'+lng+'_'+lat][2].push((item[0]==''?'':item[0]+' | ')+'<a href="'+item[3]+'" target=_blank>'+item[2]+'</a>');
+        if (item[3]==''){
+            district_list['d'+lng+'_'+lat][2].push((item[0]==''?'':item[0]+' | ')+item[2]);
+        } else {
+            district_list['d'+lng+'_'+lat][2].push((item[0]==''?'':item[0]+' | ')+'<a href="'+item[3]+'" target=_blank>'+item[2]+'</a>');        
+        }
         bljg.push((item[0]==''?'':item[0]+' | ')+item[2]+' '+item[3]);
     }
     
@@ -184,9 +194,44 @@ function menu_gps_news(){
     '<span class="span_menu" onclick="'+str_t+'popup_gps_news();">重绘</span>',    
     '<span class="span_menu" onclick="'+str_t+'popup_gps_news(false);">重绘(仅标记点)</span>',
     '<span class="span_menu" onclick="'+str_t+'remove_navigation_gps_news();">清除路线</span>',
+    '<span class="span_menu" onclick="'+str_t+'import_arr_analyze_gps_news(true);">从编辑框载入csv数据</span>',    
+    '<span class="span_menu" onclick="'+str_t+'import_arr_analyze_gps_news();">从编辑框载入js数据</span>',
     ];
     
-    document.getElementById('select_transform').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_gpx,'⛰','10rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('select_transform').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_gpx,'⛰','14rem','1rem','1rem','60rem'),'','0rem')+' ');
 }
 
+function import_arr_analyze_gps_news(is_csv=false){
+    function sub_import_arr_analyze_gps_news_onsuccess(){
+        var found_error='';
+        for (let item of gps_news_data_global){
+            if (!Array.isArray(item)){
+                found_error='不是数组：'+item;
+                break;
+            }
+            if (item.length!==5){
+                found_error='不是5个元素：'+item;
+                break;
+            }
+            for (let blxl=0;blxl<5;blxl++){
+                if (typeof item[blxl] !== 'string'){
+                    found_error='第 '+(blxl)+' 元素非字符串：'+item;
+                    break;
+                }
+            }
+            if (found_error!==''){
+                alert(found_error);
+                gps_news_data_global=old_value;
+                break;
+            }
+        }
+    }
 
+    function sub_import_arr_analyze_gps_news_failure(){
+        gps_news_data_global=old_value;
+    }
+        
+    var blstr=document.getElementById('textarea_gps_news').value.trim();
+    var old_value=[].concat(gps_news_data_global);
+    import_arr_b(blstr,'gps_news_data_global',is_csv,sub_import_arr_analyze_gps_news_onsuccess,sub_import_arr_analyze_gps_news_failure);
+}

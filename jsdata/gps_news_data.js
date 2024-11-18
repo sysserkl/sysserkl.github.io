@@ -1,4 +1,4 @@
-var gps_news_global=[
+var gps_news_data_global=[
 //"日期","地区","事件名称","网址","tag"
 ["20201227","开原","开原暴力7死7伤","https://www.thepaper.cn/newsDetail_forward_10563445","暴力"],
 ["20210131","诸城","诸城违法倾倒化工废料致4人死亡","https://news.hangzhou.com.cn/gnxw/content/2021-02/01/content_7903976.html","事故"],

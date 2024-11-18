@@ -4338,3 +4338,35 @@ function urllib_parse_quote_b(csstr){
     csstr = csstr.replace(/\)/g, '%29');
     return csstr;
 }
+
+function import_arr_b(csstr,var_name,is_csv=false,run_fn_onsuccess=false,run_fn_onfailure=false){
+    var list_t=csstr.split('\n');
+    if (is_csv){
+        if (!confirm('是否每行添加[],，再载入'+list_t.length+'条记录？')){return;}
+        for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
+            list_t[blxl]='['+list_t[blxl]+'],';
+        }
+        csstr=list_t.join('\n');
+    } else {
+        if (!confirm('是否以数组形式直接载入'+list_t.length+'条记录？')){return;}
+    }
+    
+    try {
+        eval(var_name+'=['+csstr+']');
+        alert('载入完成');
+        if (typeof run_fn_onsuccess == 'function'){
+            run_fn_onsuccess();
+        }
+    } catch (error){
+        var info=array_check_b(csstr);
+        if (info==''){
+            alert(error);
+        } else {
+            alert(info);
+        }
+        console.log(error);
+        if (typeof run_fn_onfailure == 'function'){
+            run_fn_onfailure();
+        }
+    }
+}
