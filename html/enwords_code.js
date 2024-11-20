@@ -675,6 +675,7 @@ function menu_kle(){
     
     klmenu_old.push('<span class="span_menu" onclick="'+str_t+'old_words_name_list_form_kle();">旧单词列表</span>');
     klmenu_old.push('<span class="span_menu" onclick="'+str_t+'old_words_without_phrase_kle();">无词组的旧单词</span>');
+    klmenu_old.push('<span class="span_menu" onclick="'+str_t+'old_words_and_phrase_with_space_kle();">空格词组和对应单词</span>');
     
     var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu1,'','22rem','1rem','1rem','60rem')+klmenu_b(klmenu_old,'旧','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_brain,'🧠','17rem','1rem','1rem')+klmenu_b(klmenu_new,'🆕','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_statistics,'🧮','14rem','1rem','1rem')+klmenu_b(klmenu_search,'🔽','18rem','1rem','1rem','30rem'),'','0rem')+' ';
     
@@ -1036,6 +1037,28 @@ function init_kle(){
     words_searched_arr_global=[];  //全局变量 - 保留注释
     
     enwords_init_b(false,true,sub_init_kle_fn);
+}
+
+function old_words_and_phrase_with_space_kle(){
+    var words_set=simple_words_b(true);
+    var space_set=new Set();
+    for (let aword of words_set){
+        if (aword.includes(' ')){
+            space_set.add(aword);
+        }
+    }
+    var result_t=new Set();
+    for (let aword of space_set){
+        var bltmp=aword.replace(/\s+/g,'');
+        if (words_set.has(bltmp)){
+            result_t.add(bltmp);
+            result_t.add(aword);
+        }
+    }
+    
+    result_t=Array.from(result_t);
+    result_t.sort();
+    wordsearch_enwords_b(enwords_list_2_reg_b(result_t,'^$'));
 }
 
 function old_words_without_phrase_kle(){

@@ -1816,25 +1816,35 @@ function textarea_buttons_b(textarea_id,csbuttons,cstype='',csstyle='',span_clas
     //csstyle: ' style="font-size:1rem;"' - 保留注释
     var isfile=is_file_type_b();
 
+    if (span_class=='button'){
+        var button_left='<button type="button"'+csstyle;
+        var button_right='</button> ';    
+    } else {
+        var button_left='<span class="'+span_class+'"'+csstyle;
+        var button_right='</span> ';
+    }
+    
     var bljg='';
     if (csbuttons.includes('全选') || csbuttons.includes('select all')){
-        bljg=bljg+'<span class="'+span_class+'"'+csstyle+' onclick="document.getElementById(\''+textarea_id+'\').select();">Select All</span> ';
+        bljg=bljg+button_left+' onclick="document.getElementById(\''+textarea_id+'\').select();">Select All'+button_right;
     }
+    
     if (csbuttons.includes('clear textarea')){    
-        bljg=bljg+'<span class="'+span_class+'"'+csstyle+' onclick="document.getElementById(\''+textarea_id+'\').value=\'\';">Clear textarea</span> ';
+        bljg=bljg+button_left+' onclick="document.getElementById(\''+textarea_id+'\').value=\'\';">Clear textarea'+button_right;
     } else if (csbuttons.includes('清空') || csbuttons.includes('clear')){    
-        bljg=bljg+'<span class="'+span_class+'"'+csstyle+' onclick="document.getElementById(\''+textarea_id+'\').value=\'\';">Clear</span> ';
+        bljg=bljg+button_left+' onclick="document.getElementById(\''+textarea_id+'\').value=\'\';">Clear'+button_right;
     }
+    
     if (csbuttons.includes('复制') || csbuttons.includes('copy')){
-        bljg=bljg+'<span class="'+span_class+'"'+csstyle+' onclick="document.getElementById(\''+textarea_id+'\').select();document.execCommand(\'copy\');">Copy</span> ';
+        bljg=bljg+button_left+' onclick="document.getElementById(\''+textarea_id+'\').select();document.execCommand(\'copy\');">Copy'+button_right;
     }
     
     if (csbuttons.includes('↑')){
-        bljg=bljg+'<span class="'+span_class+'"'+csstyle+' onclick="textarea_top_bottom_b(\''+textarea_id+'\',0);">⤴ </span> ';        
+        bljg=bljg+button_left+' onclick="textarea_top_bottom_b(\''+textarea_id+'\',0);">⤴'+button_right;        
     }
 
     if (csbuttons.includes('↓')){
-        bljg=bljg+'<span class="'+span_class+'"'+csstyle+' onclick="textarea_top_bottom_b(\''+textarea_id+'\',1);">⤵ </span> ';
+        bljg=bljg+button_left+' onclick="textarea_top_bottom_b(\''+textarea_id+'\',1);">⤵'+button_right;
     }
     
     var fext=csbuttons.match(/save as (.*?) file/);
@@ -1845,11 +1855,11 @@ function textarea_buttons_b(textarea_id,csbuttons,cstype='',csstyle='',span_clas
             var web_type=(is_file_type_b()?'local':location.host);
             var savename=cstype+'_'+local_storage_get_b('machine_name')+'_'+(navigator.platform || '').replace(/\s/g,'_')+'_'+web_type+'_'+today_str_b('dt','','','_')+'.'+fext[1];
         }
-        bljg=bljg+'<span class="'+span_class+'"'+csstyle+' onclick="dom_value_2_txt_file_b(\''+textarea_id+'\',\''+specialstr_j(savename)+'\',\''+specialstr_j(fext[1])+'\');">'+fext[0]+'</span> ';
+        bljg=bljg+button_left+' onclick="dom_value_2_txt_file_b(\''+textarea_id+'\',\''+specialstr_j(savename)+'\',\''+specialstr_j(fext[1])+'\');">'+fext[0]+button_right;
     }    
     
     if (!isfile && csbuttons.includes('导入temp_txt_share')){
-        bljg=bljg+'<span class="'+span_class+'"'+csstyle+' onclick="import_temp_txt_share_content_b(\''+textarea_id+'\');">导入temp_txt_share</span> ';
+        bljg=bljg+button_left+' onclick="import_temp_txt_share_content_b(\''+textarea_id+'\');">导入temp_txt_share'+button_right;
     }
         
     if (csbuttons.includes('发送到临时记事本') || csbuttons.includes('send to remote temp memo')){
@@ -1859,7 +1869,7 @@ function textarea_buttons_b(textarea_id,csbuttons,cstype='',csstyle='',span_clas
         bljg=bljg+'<a'+csstyle+' href="'+postpath+'temp_txt_share.php'+(cstype==''?'':'?type='+cstype)+'" class="a_oblong_box" target=_blank>open remote temp memo('+remote_host.slice(-3,)+')</a> ';
     }
     if (csbuttons.includes('从 bigfile 导入文件内容') || csbuttons.includes('import file content from bigfile')){
-        bljg=bljg+'<span class="'+span_class+'"'+csstyle+' onclick="import_bigfile_content_b(false,\''+textarea_id+'\');">从 bigfile 导入文件内容</span> ';
+        bljg=bljg+button_left+' onclick="import_bigfile_content_b(false,\''+textarea_id+'\');">从 bigfile 导入文件内容'+button_right;
     }
     
     var remote_host=local_storage_get_b('kl_remote_host',-1,false);
@@ -1872,7 +1882,7 @@ function textarea_buttons_b(textarea_id,csbuttons,cstype='',csstyle='',span_clas
     if (csbuttons.includes('发送地址') || csbuttons.includes('set remote address')){
         var blhref,bltitle;
         [blhref,bltitle]=remote_host_link_generate_b(remote_host,cstype);
-        bljg=bljg+'<span class="'+span_class+'"'+csstyle+' onclick="kl_remote_host_address_b(null,false,this);" title="set remote address">⛓</span>：<a'+csstyle+' href="'+blhref+'" class="a_remote_host_address" target=_blank>'+bltitle+'</a>';
+        bljg=bljg+button_left+' onclick="kl_remote_host_address_b(null,false,this);" title="set remote address">⛓'+button_right+'：<a'+csstyle+' href="'+blhref+'" class="a_remote_host_address" target=_blank>'+bltitle+'</a>';
     }
     
     return bljg;
