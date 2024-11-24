@@ -33,7 +33,6 @@ var search_sites_list_global=[
 ['https://www.merriam-webster.com/thesaurus/','',0,'#00ff33','Merriam-Webster_Thesaurus','','English',''],
 ['https://www.oxfordlearnersdictionaries.com/us/pronunciation/english/','',2,'#006633','Oxford_Pronunciation','','English',''],
 
-['http://wordnetweb.princeton.edu/perl/webwn?s=','',0,'#663300','Wordnet','0','English',''],
 ['https://www.wordnik.com/words/','',0,'','Wordnik','0','English',''],
 ['https://www.oxfordreference.com/search?q_0=','&f_0=title&avail_5=free',0,'','oxfordreference','','English',''],
 

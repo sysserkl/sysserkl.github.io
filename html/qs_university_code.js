@@ -523,7 +523,7 @@ function jieba_name_qs_rank(){
     var list_t=[name_list.join(' '),array_unique_b(name_list).join(' ')];
     for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         var word_list=list_t[blxl].replace(/[\s\-\(\),]+/g, ' ').split(' ');
-        var name_dict=list_category_count_b(word_list,false);
+        var name_dict=list_category_count_b(word_list,-1,false);
         name_dict.sort(function (a,b){return a[1]<b[1] ? 1 : -1});
         var name_list=[];
         for (let item of name_dict){

@@ -319,7 +319,7 @@ function group_sum_arr_analyze(){
     document.getElementById('divhtml').innerHTML=array_2_li_b(result_t);
 }
 
-function row_count_or_sum_arr_analyze(group_no,cum_col_no=-1,add_detail=true){
+function row_count_or_sum_arr_analyze(group_no,sum_col_no=-1,add_detail=true){
 	var list_t=[];
 	for (let item_t of table_array_global){
 		if (typeof item_t=='string'){
@@ -343,10 +343,10 @@ function row_count_or_sum_arr_analyze(group_no,cum_col_no=-1,add_detail=true){
             if (add_detail){
 			    list_t[key_name].push(item_t);
             }
-            if (cum_col_no==-1){
+            if (sum_col_no==-1){
 			    list_t[key_name][1]=list_t[key_name][1]+1;
-            } else if (cum_col_no>=0 && cum_col_no<=item_t.length-1){
-                list_t[key_name][1]=list_t[key_name][1]+parseFloat(item_t[cum_col_no]);
+            } else if (sum_col_no>=0 && sum_col_no<=item_t.length-1){
+                list_t[key_name][1]=list_t[key_name][1]+parseFloat(item_t[sum_col_no]);
             }
 		}
 	}

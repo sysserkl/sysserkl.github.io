@@ -23,5 +23,6 @@ var js_file_list_common_pb_global=[
 ['../jsdata/cmpedu_data.js','🗜','cmpedu','cmpedu_global','cmpedu','','1'],
 ['../jsdata/corruption_ccdi_data.js','🇨🇳','corruption ccdi','corruption_global','corruption','','1'],
 ['../jsdata/wbus1_data.js','📟','wbus','wbus_global','wbus','','0'],
-
+['../jsdata/us_mass_killings_incidents_data.js','🪦','us mass killings incidents','us_mass_killings_incidents_global','us_mass_killings','','0'],
+['../jsdata/us_mass_killings_offenders_data.js','🪦','us mass killings offenders','us_mass_killings_offenders_global','us_mass_killings','','0'],
 ];
