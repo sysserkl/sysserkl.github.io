@@ -70,6 +70,7 @@ function menu_klwebsites(change_no=false){
     var klmenu_config=[
     load_sentence_menu_b(str_t),
     '<span class="span_menu" onclick="'+str_t+'demo_style_klwebsites();">PWA Demo Style</span>',   
+    '<span class="span_menu" onclick="'+str_t+'demo_style_klwebsites(true);">当前条件网址列表</span>',   
     '<span class="span_menu" onclick="'+str_t+'import_pwa_data_klwebsites();">导入 PWA 网址</span>',   
     '<span class="span_menu" onclick="'+str_t+'import_bigfile_klwebsites();">导入 bigfile 网址文件</span>',   
     '<span id="span_jieba_web" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ jieba分词</span>',
@@ -419,8 +420,8 @@ function opml_klwebsites(){
     string_2_txt_file_b(opml_str,'websites_opml.opml','opml');
 }
 
-function demo_style_klwebsites(){
-    var list_t=demo_content_klwebsites();
+function demo_style_klwebsites(only_http=false){
+    var list_t=demo_content_klwebsites(false,only_http);
     
     var left_str='<p>';
     var right_str=' rows：'+list_t.length+'</p>';
@@ -592,19 +593,25 @@ function waterfall_klwebsites(csnum=5){
     document.getElementById('h2_title').style.display='none';
 }
 
-function demo_content_klwebsites(cskey=false){
+function demo_content_klwebsites(cskey=false,only_http=false){
     if (cskey==false){
         cskey=document.getElementById('input_search').value;
     }
     var result_t=array_klwebsites(cskey,999);
     var demo_list=[];
-    for (let href_list of result_t){
-        var href_str=href_list[0];
-        var category=sites_all_global[href_list[1]][2];
-        if (category==''){
-            category='未分类';
+    if (only_http){
+        for (let href_list of result_t){
+            demo_list.push(href_list[0]);
         }
-        demo_list.push(category+' '+href_str+' '+sites_all_global[href_list[1]][1].replace(/<\/?small>/g,''));
+    } else {
+        for (let href_list of result_t){
+            var href_str=href_list[0];
+            var category=sites_all_global[href_list[1]][2];
+            if (category==''){
+                category='未分类';
+            }
+            demo_list.push(category+' '+href_str+' '+sites_all_global[href_list[1]][1].replace(/<\/?small>/g,''));
+        }
     }
     return demo_list;
 }

@@ -31,20 +31,33 @@ function gps_news_generate_mass_killings(){
 function data_load_us_mass_killings(array_name){
     if (var_name_jscm_global=='us_mass_killings_offenders_global'){
         table_th_jscm_global={'incident_id':'','outcome':'','sex':'','age':''};
+        var num_col=[0,3];
     } else {
         table_th_jscm_global={'incident_id':'','date':'','city':'','state':'','num_offenders':'','num_victims_killed':'','num_victims_injured':'','firstcod':'','secondcod':'','type':'','situation_type':'','location_type':'','location':'','longitude':'','latitude':''};
+        var num_col=[0,4,5,6];
     }
 
     var blarr=eval(array_name);
     var bllen=Object.keys(table_th_jscm_global).length;
     for (let blxl=0,lent=blarr.length;blxl<lent;blxl++){
-        var changed=false;
+        var changed='';
         while (blarr[blxl].length<bllen){
             blarr[blxl].push('');
-            changed=true;
+            changed='添加列；';
         }
-        if (changed){
-            console.log(blarr[blxl]);
+        
+        for (let one_col of num_col){
+            if (blarr[blxl][one_col] === ''){   //不能使用 == ，会把 数值 0 改为 -1 - 保留注释
+                blarr[blxl][one_col]=-1;
+                changed=changed+'转换为-1；';
+            } else if (typeof blarr[blxl][one_col] == 'string'){
+                blarr[blxl][one_col]=parseInt(blarr[blxl][one_col]);
+                //changed=changed+'转换为数值；'; //此行保留 - 保留注释
+            }
+        }
+        
+        if (changed!==''){
+            console.log(changed,blarr[blxl]);
         }
     }
     eval(array_name+'=blarr');
