@@ -429,7 +429,7 @@ function statistics_old_code_b(){
     return result_t;
 }
 
-function statistics_data_type_b(data_type){
+function statistics_data_type_b(data_type,selected_items_filter=''){
     var idlist=[];
     switch (data_type){
         case 'enwords':
@@ -482,6 +482,21 @@ function statistics_data_type_b(data_type){
             }
             break;
     }
+    
+    if (selected_items_filter!==''){
+        var is_reg=false;
+        [selected_items_filter,is_reg]=str_reg_check_b(selected_items_filter,is_reg);
+        var result_t=[];
+        for (let item of idlist){
+            var blfound=str_reg_search_b(item,selected_items_filter,is_reg);
+            if (blfound==-1){break;}
+            
+            if (blfound){
+                result_t.push(item);
+            }
+        }
+        return result_t;
+    }
     return idlist;
 }
 
@@ -524,7 +539,7 @@ function statistics_div_idname_b(item,csxl){
     return 'div_progress_'+item[5]+'_'+csxl;
 }
 
-function statistics_draw_b(data_type,idname='divhtml',show_table=false,date_min=false,date_max=false,max_lines=false,cols=2,section_w='810px',table_w='125%',div_h='500px',add_today=false){
+function statistics_draw_b(data_type,idname='divhtml',show_table=false,date_min=false,date_max=false,max_lines=false,cols=2,section_w='810px',table_w='125%',div_h='500px',add_today=false,selected_items_filter='',flot_type=''){
     function sub_statistics_draw_b_oneline(arow){
         var csname=arow[0];
         var cscaption=arow[1];
@@ -538,15 +553,18 @@ function statistics_draw_b(data_type,idname='divhtml',show_table=false,date_min=
 
         var bljg='';
         if (result_t.length>0){
-            bljg='<table border=1 cellspacing=0 cellpadding=0 style="margin:1rem 0rem;"><tr><th  style="padding:0.2rem;" nowrap>日期</th><th  style="padding:0.2rem;" nowrap>'+cscaption+'</th><th  style="padding:0.2rem;" nowrap>Δ</th></tr>'+result_t.join('\n')+'</table>';
+            bljg='<table border=1 cellspacing=0 cellpadding=0 style="margin:1rem 0rem;"><tr><th  style="padding:0.2rem;" nowrap>日期</th><th  style="padding:0.2rem;" nowrap>'+cscaption+'</th><th style="padding:0.2rem;" nowrap>Δ</th></tr>'+result_t.join('\n')+'</table>';
         }
         return [bljg,[cscaption].concat(flot_list)];
+    }
+    
+    function sub_statistics_draw_b_flot_div(item,csxl,cswidth,csheight,is_relative=false){
+        return '<div style="'+(is_relative?'position:relative;float:left;':'')+'width:'+cswidth+';height:'+csheight+';" id="'+statistics_div_idname_b(item,csxl)+'" class="div_statistics_plot_b"></div>';
     }
     //-----------------------
     var t0=performance.now();    
     var bljg='';
-    var str_t;
-    var oneline_list;
+    var str_t, oneline_list;
     var lines_list=[];
     var ismobile=ismobile_b();
     
@@ -558,38 +576,61 @@ function statistics_draw_b(data_type,idname='divhtml',show_table=false,date_min=
     if (Array.isArray(data_type)){
         var idlist=data_type;
     } else {
-        var idlist=statistics_data_type_b(data_type);
+        var idlist=statistics_data_type_b(data_type,selected_items_filter);
     }
     idlist=statistics_idlist_format_b(idlist);
     //idlist 元素形如：[ [ "2021-07-04/543/100640", "2021-07-11/555/100954", … ], "全部代码文件个数", 0, "/", 1, "old_code_count" ] - 保留注释
     //或形如：[ "local_storage_used_length", "local storage 使用量(KiB)", 2, ":", 1, "local_storage_used_length" ] - 保留注释
 
+    var lent=idlist.length;
     if (show_table){
-        for (let blxl=0,lent=idlist.length;blxl<lent;blxl++){
+        for (let blxl=0;blxl<lent;blxl++){
             var item=idlist[blxl];
             [str_t,oneline_list]=sub_statistics_draw_b_oneline(item);
             if (ismobile){
                 bljg=bljg+'<section style="width:'+section_w+';overflow:auto;">';
             }
-            bljg=bljg+'<table width='+table_w+'><tr><td valign=top width=1 height=50%>'+str_t+'</td><td valign=top width=99%><div style="width:100%;height:'+div_h+';" id="'+statistics_div_idname_b(item,blxl)+'" class="div_statistics_plot_b"></div></td></tr></table>';//table 的 width 可以大于 100% - 保留注释
+            bljg=bljg+'<table width='+table_w+'><tr><td valign=top width=1 height=50%>'+str_t+'</td><td valign=top width=99%>'+sub_statistics_draw_b_flot_div(item,blxl,'100%',div_h,false)+'</td></tr></table>';//table 的 width 可以大于 100% - 保留注释
+            //+'<div style="width:100%;height:'+div_h+';" id="'+statistics_div_idname_b(item,blxl)+'" class="div_statistics_plot_b"></div>';
             if (ismobile){
                 bljg=bljg+'</section>';
             }
             lines_list.push(oneline_list);
         }
     } else {
-        for (let blxl=0,lent=idlist.length;blxl<lent;blxl++){
+        for (let blxl=0;blxl<lent;blxl++){
             var item=idlist[blxl];
             [str_t,oneline_list]=sub_statistics_draw_b_oneline(item);
-            bljg=bljg+'<div style="position:relative;float:left; width:'+blwidth+'px;height:'+blheight+'px;" id="'+statistics_div_idname_b(item,blxl)+'" class="div_statistics_plot_b"></div>';
+            bljg=bljg+sub_statistics_draw_b_flot_div(item,blxl,blwidth+'px',blheight+'px',true);
+            //+'<div style="position:relative;float:left; width:'+blwidth+'px;height:'+blheight+'px;" id="'+statistics_div_idname_b(item,blxl)+'" class="div_statistics_plot_b"></div>';
             lines_list.push(oneline_list);
+        }
+    }
+
+    if (flot_type!==''){
+        if (show_table){
+            bljg=bljg+sub_statistics_draw_b_flot_div(['','','','','',flot_type],-1,'100%',div_h,false);
+        } else {
+            bljg=bljg+sub_statistics_draw_b_flot_div(['','','','','',flot_type],-1,blwidth+'px',blheight+'px',true);
         }
     }
     
     odiv.innerHTML=bljg;
+    
+    var flot_1y_2y=[];
     for (let blxl=0,lent=idlist.length;blxl<lent;blxl++){
         var item=idlist[blxl];
+        flot_1y_2y.push([].concat(lines_list[blxl]));
         flot_lines_b([lines_list[blxl]],statistics_div_idname_b(item,blxl),'nw',true,'','d','',item[2],[1, 'day'],7);
+    }
+    
+    switch (flot_type){
+        case '1y':
+            flot_lines_b(flot_1y_2y,statistics_div_idname_b(['','','','','',flot_type],-1),'nw',true,'','d','',item[2],[1, 'day'],7);
+            break;
+        case '2y':
+            flot_two_lines_two_yaxis_b(flot_1y_2y.slice(0,2),statistics_div_idname_b(['','','','','',flot_type],-1),'','','nw',true,'d');
+            break;
     }
     console.log('statistics_draw_b() 费时：'+(performance.now() - t0) + ' milliseconds');    
     return idlist;

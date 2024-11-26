@@ -3499,23 +3499,43 @@ function array_check_b(cslist){
     return '';
 }
 
-function list_category_count_b(cslist,col_no=-1,return_dict=false){
+function list_category_count_b(cslist,col_no=-1,return_dict=false,is_sum=false){
     var key_dict={};
-    if (col_no==-1){
-        for (let item of cslist){
-            var blkey='k_'+item;
-            if (key_dict[blkey]==undefined){
-                key_dict[blkey]=0;
+    if (col_no===-1){
+        if (is_sum){
+            for (let item of cslist){
+                var blkey='k_'+item;
+                if (key_dict[blkey]==undefined){
+                    key_dict[blkey]=0;
+                }
+                key_dict[blkey]=key_dict[blkey]+item;
+            }        
+        } else {
+            for (let item of cslist){
+                var blkey='k_'+item;
+                if (key_dict[blkey]==undefined){
+                    key_dict[blkey]=0;
+                }
+                key_dict[blkey]=key_dict[blkey]+1;
             }
-            key_dict[blkey]=key_dict[blkey]+1;
         }
     } else {
-        for (let item of cslist){
-            var blkey='k_'+item[col_no];
-            if (key_dict[blkey]==undefined){
-                key_dict[blkey]=0;
+        if (is_sum){
+            for (let item of cslist){
+                var blkey='k_'+item[col_no];
+                if (key_dict[blkey]==undefined){
+                    key_dict[blkey]=0;
+                }
+                key_dict[blkey]=key_dict[blkey]+item[col_no];
+            } 
+        } else {    
+            for (let item of cslist){
+                var blkey='k_'+item[col_no];
+                if (key_dict[blkey]==undefined){
+                    key_dict[blkey]=0;
+                }
+                key_dict[blkey]=key_dict[blkey]+1;
             }
-            key_dict[blkey]=key_dict[blkey]+1;
         }
     }
     

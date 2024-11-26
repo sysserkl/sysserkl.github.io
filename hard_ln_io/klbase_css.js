@@ -377,7 +377,7 @@ function klmenu_hide_b(csname='',more_parent=false){
     }
 }
 
-function klmenu_select_sort_b(select_id,col_name_list,str_t,fn_name,add_span=true,no_mode=true){
+function klmenu_select_sort_b(select_id,col_name_list,str_t,fn_name,add_span=true,no_mode=true,span_more=[]){
     if (no_mode){
         for (let blxl=0,lent=col_name_list.length;blxl<lent;blxl++){
             col_name_list[blxl]='<option value="'+blxl+'">'+col_name_list[blxl]+'</option>';
@@ -391,6 +391,13 @@ function klmenu_select_sort_b(select_id,col_name_list,str_t,fn_name,add_span=tru
     var blparent=menu_parent_node_b(str_t);
 
     var blstr='<select id="'+select_id+'" style="height:2rem;">'+col_name_list.join('')+'</select> <span class="aclick" onclick="'+blparent+fn_name+'();">↑</span><span class="aclick" onclick="'+blparent+fn_name+'(true);">↓</span>';
+    
+    var more_buttons=[];
+    for (let item of span_more){
+        more_buttons.push('<span class="aclick" onclick="'+blparent+item[0]+'();">'+item[1]+'</span>');
+    }
+    blstr=blstr+more_buttons.join('');
+    
     if (add_span){
         blstr='<span class="span_menu">'+blstr+'</span>';
     }
@@ -2458,7 +2465,7 @@ function iframe_error_alert_b(oiframe,do_alert=false){
     var blstr='';
     if (!do_alert && oiframe.contentWindow && oiframe.contentWindow.document){
         var blhtml=oiframe.contentWindow.document.body.innerHTML;
-        if (blhtml.includes('<h1>404</h1>')){
+        if (blhtml.replace(/\s/g,'').includes('<h1>404</h1>')){
             blstr=': 404';
             do_alert=true;
         } else if (blhtml.trim().startsWith('<h1>Not Found</h1>') && blhtml.includes('<p>The requested URL was not found on this server.</p>')){

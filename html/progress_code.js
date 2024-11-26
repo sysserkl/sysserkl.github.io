@@ -1,9 +1,10 @@
 function init_progress(){
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.6rem'));
     var input_list=[
-    ['input_min_date',10,0.5],
-    ['input_max_date',10,0.5],
-    ['input_max_lines',8,0.5],
+    ['input_min_date_prog',10,0.5],
+    ['input_max_date_prog',10,0.5],
+    ['input_max_lines_prog',8,0.5],
+    ['input_keys_prog',11,0.9],
     ];
     input_size_b(input_list,'id');    
     menu_progress();
@@ -24,14 +25,17 @@ function menu_progress(){
 
 function category_progress(csname){
     var show_table=klmenu_check_b('span_show_table_progress',false);
-    var date_min=document.getElementById('input_min_date').value.trim();
-    var date_max=document.getElementById('input_max_date').value.trim();
-    var max_lines=document.getElementById('input_max_lines').value.trim();
+    var date_min=document.getElementById('input_min_date_prog').value.trim();
+    var date_max=document.getElementById('input_max_date_prog').value.trim();
+    var max_lines=document.getElementById('input_max_lines_prog').value.trim();
+    var filter_str=document.getElementById('input_keys_prog').value.trim();
+    var flot_type=document.getElementById('selection_flot_type_prog').value;
+    
     date_min=(date_min==''?false:date_min);
     date_max=(date_max==''?false:date_max);
     max_lines=(max_lines==''?false:max_lines);
 
-    var result_t=statistics_draw_b(csname,'divhtml',show_table,date_min,date_max,max_lines,2,'810px','100%','500px',true);
+    var result_t=statistics_draw_b(csname,'divhtml',show_table,date_min,date_max,max_lines,2,'810px','100%','500px',true,filter_str,flot_type);
     for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
         result_t[blxl]='<span class="oblong_box" onclick="jump_to_item_progress('+blxl+');">'+result_t[blxl][1]+'</span>'
     }
