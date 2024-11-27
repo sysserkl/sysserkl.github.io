@@ -206,9 +206,35 @@ function buttons_diff_b(){
     if (odiv){
         var blbuttons='<p><input type="text" id="input_line1_compare" style="width:90%;" /><span class="span_box" onclick="find_in_textarea_diff_b(1);" title="从编辑框指定位置开始查找字符串">📍</span></p>\n';
         blbuttons=blbuttons+'<p><input type="text" id="input_line2_compare" style="width:90%;" /><span class="span_box" onclick="find_in_textarea_diff_b(2);" title="从编辑框指定位置开始查找字符串">📍</span></p>\n';
-        blbuttons=blbuttons+'<p><span class="aclick" onclick="line_compare_diff_b();">行对比</span></p>';
+        blbuttons=blbuttons+'<p><span class="aclick" onclick="line_compare_diff_b();">行对比</span>';
+        blbuttons=blbuttons+'<span class="aclick" onclick="replace_textarea_diff_b(1);">左侧替换</span>';
+        blbuttons=blbuttons+'<span class="aclick" onclick="replace_textarea_diff_b(2);">右侧替换</span>';
+        blbuttons=blbuttons+'<label><input type="checkbox" id="checkbox_reg_diff_b" />正则</label>';
+        blbuttons=blbuttons+'<input type="text" id="input_reg_type_diff_b" style="width:4rem;" placeholder="i|m|g" />';
+        blbuttons=blbuttons+'</p>';
         blbuttons=blbuttons+'<div id="div_line_compare_result"></div>';
         odiv.innerHTML=blbuttons;
+    }
+}
+
+function replace_textarea_diff_b(cstype){
+    var find_str=document.getElementById('input_line1_compare').value;
+    var replace_to=document.getElementById('input_line2_compare').value;
+    var is_reg=document.getElementById('checkbox_reg_diff_b').checked;
+    var reg_type=document.getElementById('input_reg_type_diff_b').value.trim();
+    var otextarea=document.getElementById('textarea_diff_'+cstype);
+    var old_str=otextarea.value;
+    if (old_str==''){return;}
+    if (confirm('是否替换？')){
+        if (is_reg){
+            try {
+                otextarea.value=old_str.replace(new RegExp(find_str,reg_type),replace_to);
+            } catch (error){
+                alert(error);
+            }
+        } else {
+            otextarea.value=old_str.replace(find_str,replace_to);
+        }
     }
 }
 
