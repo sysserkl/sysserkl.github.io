@@ -837,8 +837,19 @@ function en_sentence_result_b(wordname,csmax=-1,fontsize='',attachment_path='',w
     }
 }
 
-function en_sentence_mobile_b(enforce=false){
-    if (enforce===false && ismobile_b()==false){return;}
+function en_sentence_menu_generate_b(){
+    var group_list=[
+    ['⚪ 显示例句','klmenu_check_b(this.id,true);',true,'span_show_en_sentence_b'],
+    ['⚪ 显示例句详细出处','klmenu_check_b(this.id,true);',true,'span_source_en_b'],
+    ];    
+    return group_list;
+}
+
+function en_sentence_mobile_b(){    //enforce=false
+    if (klmenu_check_b('span_source_en_b',false)){return;}
+    
+    //if (enforce===false){return;}
+    //if (ismobile_b()==false){return;}
     
     var ospans=document.getElementsByClassName('span_from_url');
     for (let a_span of ospans){

@@ -44,9 +44,9 @@ function sentence_search_rndwords(){
     var show_button=klmenu_check_b('span_button_en_slide',false);
     var bljg=sentence_search_b(csstr,isreg,100,show_button,'0.9');
     document.getElementById('divhtml').innerHTML=div_title_href_b(['','',bljg]);
-    if (!klmenu_check_b('span_source_en_slide',false)){
-        setTimeout(function (){en_sentence_mobile_b(true);},10);
-    }
+    //if (!klmenu_check_b('span_source_en_b',false)){
+    setTimeout(function (){en_sentence_mobile_b();},10);
+    //}
 }
 
 function links_rndwords(){
@@ -86,10 +86,10 @@ function menu_rndwords(){
     '<span class="span_menu" onclick="'+str_t+'exam_rndwords(true);recent_words_rndwords();">最近记忆单词</span>',     
     '<span class="span_menu" onclick="'+str_t+'en_word_recent_bookmark_b(false);exam_rndwords(true);recent_words_rndwords();">设置书签</span>',    
     '<span class="span_menu" onclick="'+str_t+'exam_rndwords();">单词测试</span>',         
-    '<span id="span_show_en_sentence_b" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 显示例句</span>',    
-    '<span id="span_source_en_slide" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 显示例句详细出处</span>',            
     '<span id="span_button_en_slide" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 显示例句按钮</span>',        
     ];
+    
+    klmenu1.push(menu_container_b(str_t,en_sentence_menu_generate_b(),''));
     
     var klmenu2=[
     '<span class="span_menu" onclick="'+str_t+'slide_select_rndwords(\'all\');">全部单词幻灯片</span>',
@@ -116,12 +116,12 @@ function menu_rndwords(){
     ];
     klmenu3=root_font_size_menu_b(str_t,true,true,true).concat(klmenu3);
     
-    document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🇬🇧','12rem','1.1rem','1rem','60rem')+klmenu_b(klmenu2,'💡','12rem','1.1rem','1rem','60rem')+klmenu_b(klmenu_search,'🎯','10rem','1.1rem','1rem','60rem')+klmenu_b(en_font_menu_b(str_t),'🅰','10rem','1rem','1rem','30rem')+klmenu_b(klmenu3,'⚙','16rem','1.1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🇬🇧','17rem','1.1rem','1rem','60rem')+klmenu_b(klmenu2,'💡','12rem','1.1rem','1rem','60rem')+klmenu_b(klmenu_search,'🎯','10rem','1.1rem','1rem','60rem')+klmenu_b(en_font_menu_b(str_t),'🅰','10rem','1rem','1rem','30rem')+klmenu_b(klmenu3,'⚙','16rem','1.1rem','1rem','60rem'),'','0rem')+' ');
     
     klmenu_check_b('span_reg_rndwords',true);
     klmenu_check_b('span_show_en_sentence_b',true);
     if (!ismobile_b()){
-        klmenu_check_b('span_source_en_slide',true);
+        klmenu_check_b('span_source_en_b',true);
     }
 }
 
@@ -180,9 +180,9 @@ function one_line_rndwords(item,csrecent_word='',csword=''){
 function show_sentence_rndwords(){
     function sub_show_sentence_rndwords_one_word(){
         if (blxl>=bllen){
-            if (!klmenu_check_b('span_source_en_slide',false)){
-                en_sentence_mobile_b(true);
-            }
+            //if (!klmenu_check_b('span_source_en_b',false)){
+            en_sentence_mobile_b();
+            //}
             console.log('show_sentence_rndwords 费时：'+(performance.now() - t0) + ' milliseconds');
             return;
         }

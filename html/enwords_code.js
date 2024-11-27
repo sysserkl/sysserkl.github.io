@@ -597,12 +597,13 @@ function menu_kle(){
     var str2_t=klmenu_hide_b('#a_recent_bookmark');
     var klmenu_old, klmenu1, klmenu_brain;
     [klmenu_old,klmenu1,klmenu_brain]=menu_base_enwc_b();
-    klmenu1.push('<span id="span_show_en_sentence_b" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 显示例句</span>');
+
+    klmenu1.push(menu_container_b(str_t,en_sentence_menu_generate_b(),''));
+
     var group_list=[
     ['随机排序','show_sentence_enwc_b(0,true,true);',true],
     ['最多3条','show_sentence_enwc_b(3,true,true);',true],
     ['恢复原始排序','en_sentence_to_default_order_b();alert(\'done\');',true],
-
     ];    
     klmenu1.push(menu_container_b(str_t,group_list,'例句：'));
     
@@ -682,6 +683,10 @@ function menu_kle(){
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',bljg);
     
     document.getElementById('span_checkboxes').insertAdjacentHTML('beforeend',klmenu_multi_button_div_b(klmenu_b(en_font_menu_b(str_t),'🅰','10rem','1rem','1rem','30rem'),'','0rem')+' ');
+
+    if (!ismobile_b()){
+        klmenu_check_b('span_source_en_b',true);
+    }
 }
 
 function old_words_name_list_form_kle(){

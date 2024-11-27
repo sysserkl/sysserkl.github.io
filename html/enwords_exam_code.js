@@ -196,7 +196,7 @@ function menu_klexam(){
     '<span id="span_confuse_klexam" class="span_menu" onclick="'+str_t+'confuse_klexam();">⚪ 混淆显示</span>',    
     ];
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','11rem','1rem','1rem','30rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','18rem','1rem','1rem','30rem'),'','0rem')+' ');
     klmenu_check_b('span_show_en_sentence_b',true);        
 }
 

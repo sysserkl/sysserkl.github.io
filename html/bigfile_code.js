@@ -1,7 +1,8 @@
 function init_bigfile(){
     file_name_bigfile_global='';
     file_content_bigfile_global='';
-
+    raw_data_bigfile_global=[];
+    
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.6rem'),true,false,2);
     input_with_x_b('input_search',11);
     character_2_icon_b('B');    
@@ -21,9 +22,11 @@ function clear_data_bigfile(){
 function menu_bigfile(){
     var str_t=klmenu_hide_b('');
     var klmenu1=[
+    klmenu_select_sort_b('select_sort_type_bigfile',['','文件名','内容','大小','日期'],str_t,'sort_bigfile',true,true,[],4),
+    '<span class="span_menu" onclick="'+str_t+'refresh_bigfile();">refresh</span>',
     '<span class="span_menu" onclick="'+str_t+'clear_data_bigfile();">清空数据库</span>',
     ];
-        
+
     var klmenu_config=root_font_size_menu_b(str_t);
     klmenu_config=klmenu_config.concat([
     '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'bigfile\');">更新版本</span>',
@@ -31,7 +34,7 @@ function menu_bigfile(){
     '<span class="span_menu" onclick="'+str_t+'local_storage_form_bigfile();">缓存导入</span>',    
     ]);
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'𖧶','10rem','1rem','1rem','30rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','30rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'𖧶','15rem','1rem','1rem','30rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','30rem'),'','0rem')+' ');
     first_source_set_bigfile(false);
 }
 
@@ -124,11 +127,35 @@ function upload_a_bigfile(){
 }
 
 function read_fn_bigfile(raw_data_bigfile){
-    document.getElementById('span_count').innerHTML='('+raw_data_bigfile.length+')';      
-    var result_t=[];  
-    raw_data_bigfile.sort(function(a,b){return zh_sort_b(a,b,false,1);});
+    raw_data_bigfile_global=raw_data_bigfile;
+    sort_bigfile(true);
+}
+
+function sort_bigfile(is_desc=false){
+    document.getElementById('span_count').innerHTML='('+raw_data_bigfile_global.length+')';      
+    var result_t=[];
+    //raw_data_bigfile_global 每个元素为数组，形如：[ 0, "selenium_enwords_data.js", 'var selenium_enwords_data_original_global=[\n["http://bevcooks.com/2023/02/broccoli-cheddar-chicken-p……en and Chancellor Olaf Scholz of Germany Before Bilateral Meeting","The White House", ["conv"]],\n];\n', "2.46M", "9/23/2024, 3:57:26 PM" ]，//第一个元素为 id，值都是 0，为无效字段， - 保留注释
+    
+    raw_data_bigfile_global.sort(function(a,b){return zh_sort_b(a,b,false,1);});
+    var sort_col=parseInt(document.getElementById('select_sort_type_bigfile').value);
+    if ([1,2].includes(sort_col)){
+        raw_data_bigfile_global.sort(function(a,b){return zh_sort_b(a,b,is_desc,sort_col);});
+    } else if (sort_col==3){
+        if (is_desc){
+            raw_data_bigfile_global.sort(function (a,b){return parseFloat(a[3])>parseFloat(b[3])?-1:1;});
+        } else {
+            raw_data_bigfile_global.sort(function (a,b){return parseFloat(a[3])<parseFloat(b[3])?-1:1;});        
+        }
+    } else if (sort_col==4){
+        if (is_desc){
+            raw_data_bigfile_global.sort(function (a,b){return new Date(a[4])>new Date(b[4])?-1:1;});
+        } else {
+            raw_data_bigfile_global.sort(function (a,b){return new Date(a[4])<new Date(b[4])?-1:1;});        
+        }    
+    }
+    
     var today=new Date().toLocaleString().split(',')[0];
-    for (let item of raw_data_bigfile){
+    for (let item of raw_data_bigfile_global){
         result_t.push('<li><span class="span_name_bigfile" style="font-weight:bold;">'+specialstr92_b(item[1])+'</span>: '+specialstr92_b(item[2])+' <span style="font-size:0.8rem;color:'+scheme_global['memo']+';">('+item[3]+' '+(item[4].startsWith(today)?'<span style="color:'+scheme_global['a-hover']+';">'+item[4]+'</span>':item[4])+')</span><span class="oblong_box" onclick="delete_bigfile(this);" title="删除记录">🗑</span> <span class="oblong_box" onclick="copy_bigfile(this);" title="复制文件名">📎</span>  <span class="oblong_box" onclick="export_bigfile(this);" title="另存为文件">📤</span></li>');
     }
     
@@ -152,7 +179,7 @@ function delete_bigfile(ospan){
     file_name_bigfile_global=ospan.parentNode.querySelector('span.span_name_bigfile').innerText;
 
     var rndstr=randstr_b(4,true,false);
-    if ((prompt('输入 '+rndstr+' 确认删除该记录') || '').trim()!==rndstr){return;}    
+    if ((prompt('输入 '+rndstr+' 确认删除记录：'+file_name_bigfile_global) || '').trim()!==rndstr){return;}    
     
     idb_bigfile_b('edit','delete','',read_fn_bigfile);
 }

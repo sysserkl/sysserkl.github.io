@@ -377,26 +377,31 @@ function klmenu_hide_b(csname='',more_parent=false){
     }
 }
 
-function klmenu_select_sort_b(select_id,col_name_list,str_t,fn_name,add_span=true,no_mode=true,span_more=[]){
+function klmenu_select_sort_b(select_id,col_name_list,str_t=false,fn_name=false,add_span=true,no_mode=true,span_more=[],selected_id=0,prefix='',suffix=''){
     if (no_mode){
         for (let blxl=0,lent=col_name_list.length;blxl<lent;blxl++){
-            col_name_list[blxl]='<option value="'+blxl+'">'+col_name_list[blxl]+'</option>';
+            col_name_list[blxl]='<option value="'+blxl+'"'+(selected_id==blxl?' selected':'')+'>'+col_name_list[blxl]+'</option>';
         }
     } else {
         for (let blxl=0,lent=col_name_list.length;blxl<lent;blxl++){
-            col_name_list[blxl]='<option>'+col_name_list[blxl]+'</option>';
+            col_name_list[blxl]='<option'+(selected_id==blxl?' selected':'')+'>'+col_name_list[blxl]+'</option>';
         }
     }
 
-    var blparent=menu_parent_node_b(str_t);
-
-    var blstr='<select id="'+select_id+'" style="height:2rem;">'+col_name_list.join('')+'</select> <span class="aclick" onclick="'+blparent+fn_name+'();">↑</span><span class="aclick" onclick="'+blparent+fn_name+'(true);">↓</span>';
+    var blstr='<select id="'+select_id+'" style="height:2rem;">'+col_name_list.join('')+'</select>';
+    
+    if (str_t!==false && fn_name!==false){
+        var blparent=menu_parent_node_b(str_t);
+        blstr=blstr+' <span class="aclick" onclick="'+blparent+fn_name+'();">↑</span><span class="aclick" onclick="'+blparent+fn_name+'(true);">↓</span>';
+    }
     
     var more_buttons=[];
     for (let item of span_more){
         more_buttons.push('<span class="aclick" onclick="'+blparent+item[0]+'();">'+item[1]+'</span>');
     }
     blstr=blstr+more_buttons.join('');
+    
+    blstr=prefix+blstr+suffix;
     
     if (add_span){
         blstr='<span class="span_menu">'+blstr+'</span>';
