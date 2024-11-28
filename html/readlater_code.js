@@ -175,7 +175,8 @@ function menu_rlater(){
     klmenu1.push(menu_container_b(str_t,group_list,''));        
     
     var klmenu_statistics=[
-    '<span class="span_menu" onclick="'+str_t+'tags_editor_rlater();">Tags</span>',    
+    '<span class="span_menu" onclick="'+str_t+'tags_editor_rlater();">Tags</span>',   
+    '<span class="span_menu" onclick="'+str_t+'efull_get_rlater();">EFULL</span>',
     '<span class="span_menu" onclick="'+str_t+'statistics_show_rlater();">Statistics</span>',
     '<span class="span_menu" onclick="'+str_t+'split_rlater();">截取最新记录</span>',
     '<span class="span_menu" onclick="'+str_t+'duplication_rlater();">duplication</span>',        
@@ -269,6 +270,26 @@ function jieba_sites_rlater(){
         if (blxl>300){break;}
     }
     tags_websites_rlater(list_t,false,20);
+}
+
+function efull_get_rlater(){
+    function sub_efull_get_rlater_done(is_ok){
+        console.log(is_ok);
+        if (is_ok){
+            var efull_set=new Set();
+            for (let item of sites_all_global){
+                if ((','+item[2]+',').includes(',EFULL,')){
+                    efull_set.add((item[0].match(/\/\/(www\.)?(.*?)\/?$/) || ['','',''])[2]);
+                }
+            }
+            console.log(efull_set); //此行保留 - 保留注释
+            efull_set=Array.from(efull_set);
+            search_websites_rlater('\\b('+efull_set.join('|').replace(/\./g,'\\.')+')\\b');
+        }
+    }
+
+    var flist=klbase_addons_import_js_b([],[],['sites_all_data.js'],[],false,false);
+    load_js_var_file_b('sites_all_global',flist,'sites_all_data.js',sub_efull_get_rlater_done,true,false,-1,2000,true);
 }
 
 function array_sites_rlater(csarray){
@@ -906,7 +927,7 @@ function search_batch_rlater(key_list,randomsort=false,csmax=-1,istest=false){
 }
 
 function recent_search_key_rlater(csstr=''){
-    recent_search_b('recent_search_readlater',csstr,'sort_rlater','div_recent_search',["-[^\\x00-\\xff](:r)", ".*", "https?:\/\/[^\/]+\/?$(:r)", "javascript|python|linux|bash(:r)","javascript(:r)", "python(:r)", "linux(:r)","bash(:r)","^[美国万岁](:r)",],20);
+    recent_search_b('recent_search_readlater',csstr,'sort_rlater','div_recent_search',["-[^\\x00-\\xff]{2,}(:r)", ".*", "https?:\/\/[^\/]+\/?$(:r)", "javascript|python|linux|bash(:r)","javascript(:r)", "python(:r)", "linux(:r)","bash(:r)","^[美国万岁](:r)",],20);
 }
 
 function search_websites_rlater(cskeys='',israndom=-1,rnd_number=20,showhtml=true,add_recent_search=true){ //rnd_number 只在 random 时有效 - 保留注释

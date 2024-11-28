@@ -350,7 +350,7 @@ function test_load_b(){
 
 function quote_load_b(csfn=false,do_echo=true,direct_from_bigfile=false){
     var fname='quote'+date_2_ymd_b(false,'m')+'_data.js';
-    var flist=klbase_addons_import_js_b([],[],['bible_quote/'+fname],[],false,false);    
+    var flist=klbase_addons_import_js_b([],[],['bible_quote/'+fname],[],false,false);
     load_js_var_file_b('quote31_global',flist,fname,csfn,do_echo,direct_from_bigfile);
 }
 
@@ -3942,12 +3942,12 @@ function import_bigfile_content_b(filename=false,csid=false,run_fn=false){
     idb_bigfile_b('read','content',filename,sub_import_bigfile_content_b);
 }
 
-function load_js_var_file_b(varname,file_list,filename='',csfn=false,do_echo=true,direct_from_bigfile=false,csmax=-1,cswait=2000){
+function load_js_var_file_b(varname,file_list,filename='',csfn=false,do_echo=true,direct_from_bigfile=false,csmax=-1,cswait=2000,if_exist_then_run_fn=false){
     function sub_load_js_var_file_b_bigfile_test(cslist){
         if (cslist.length>0){
             if (filename!==''){
                 idb_bigfile_b('read','eval',filename);
-                load_var_b(varname,csmax,cswait,csfn);        
+                load_var_b(varname,csmax,cswait,csfn);
             } else {
                 conosole.log('filename 为空');
             }
@@ -3986,7 +3986,13 @@ function load_js_var_file_b(varname,file_list,filename='',csfn=false,do_echo=tru
         }
     } else {
         if (do_echo){
-            console.log(varname+' 已存在');        
+            console.log(varname+' 已存在');
+        }
+        
+        if (if_exist_then_run_fn){
+            if (typeof csfn == 'function'){
+                csfn(true);
+            }
         }
     }
 }
