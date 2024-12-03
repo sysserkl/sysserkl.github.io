@@ -55,12 +55,15 @@ function local_storage_form_bigfile(){
 
 function first_source_set_bigfile(do_change=true){
     if (do_change){
-        var current_value=(local_storage_get_b('first_source_bigfile')=='0'?'1':'0');
+        var current_value=(local_storage_get_b('first_source_bigfile')==='0'?'1':'0');
         localStorage.setItem('first_source_bigfile',current_value);
     } else {
         var current_value=(local_storage_get_b('first_source_bigfile')!=='1'?'0':'1');
     }
-    klmenu_check_b('span_first_source_bigfile',current_value=='1');
+    
+    if (klmenu_check_b('span_first_source_bigfile',false)!==(current_value=='1')){
+        klmenu_check_b('span_first_source_bigfile',true);
+    }
 }
 
 function upload_a_bigfile(){

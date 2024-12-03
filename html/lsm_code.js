@@ -246,7 +246,7 @@ function init_lsm(){
     }
     var op=document.getElementById('p_buttons');
     if (op){
-        var bljg=textarea_buttons_b('textarea_lsm_content','全选,清空,复制,save as txt file,发送到临时记事本,发送地址','lsm');    
+        var bljg=textarea_buttons_b('textarea_lsm_content','全选,清空,复制,save as txt file,导入 txt 文件,发送到临时记事本,发送地址','lsm');    
         op.insertAdjacentHTML('beforeend',bljg);
     }
     input_with_x_b('input_search',(ismobile_b()?5:9));

@@ -548,7 +548,7 @@ function show_hide_klqr(cstype=false){
     }
 }
 
-function hide_show_div_img_upload_klqr_klqr(){
+function hide_show_div_img_upload_klqr(){
     var status=popup_show_hide_b('div_img_upload_klqr');
     if (status=='none'){
         background_img_data_klqr_global='';
@@ -582,7 +582,7 @@ function menu_klqr(){
     ];
 
     var klmenu2=[
-    '<span class="span_menu" onclick="'+str_t+'hide_show_div_img_upload_klqr_klqr();">背景图片</span>',
+    '<span class="span_menu" onclick="'+str_t+'hide_show_div_img_upload_klqr();">背景图片</span>',
     '<span class="span_menu" onclick="'+str_t+'batch_form_klqr();">文本分割批量QR</span>',
     '<span class="span_menu">文本分割每份字符数：<input type="number" id="input_batch_split_max_len_klqr" min=0 value=300 /></span>',
     '<span class="span_menu">保存图片类型：<select  id="select_canvas_save_type"><option>jpeg</option><option>png</option></select></span>',    
