@@ -84,8 +84,8 @@ function upload_a_bigfile(){
     function sub_upload_a_bigfile_one_step(){
         if (blxl>=bllen){return;}
         if (sub_upload_a_bigfile_check(ofiles[blxl])!==''){return;}
-                
         file_name_bigfile_global=ofiles[blxl].name;
+
         var reg_exp1=/\s*\(\d+\)(\.[^\.]+)$/;   //同名文件(1) - 保留注释
         if (file_name_bigfile_global.match(reg_exp1)){
             file_name_bigfile_global=file_name_bigfile_global.replace(reg_exp1,'$1');
@@ -95,21 +95,27 @@ function upload_a_bigfile(){
         if (file_name_bigfile_global.match(reg_exp2)){
             file_name_bigfile_global=file_name_bigfile_global.replace(reg_exp2,'$1');
         }
-                
+
         var textFileReader = new FileReader();
         //textFileReader.readAsDataURL(ofiles[blxl]); //此行保留 - 保留注释
         textFileReader.readAsText(ofiles[blxl]);    //此行保留 , 'UTF-8'); // 使用 readAsText 并指定编码为 UTF-8 - 保留注释
         textFileReader.onload = function (){
             file_content_bigfile_global = this.result;
+            //console.log(file_content_bigfile_global);
             if (blxl==bllen-1){
-                document.title=old_title;            
+                document.title=old_title;
                 idb_bigfile_b('edit','','',read_fn_bigfile);
             } else {
                 blxl=blxl+1;
                 document.title=blxl+'/'+bllen+' - '+old_title;
                 idb_bigfile_b('edit','','',sub_upload_a_bigfile_one_step);
             }
-        }    
+        };
+        
+        textFileReader.onerror = function(event){
+            // 读取文件出错时执行的代码
+            alert('读取文件时发生错误: '+[blxl,bllen,file_name_bigfile_global, event.target.error]); //不支持文件名中含有.号 - 保留注释
+        };
     }
     
     var ofiles=document.getElementById('input_upload_bigfile').files;

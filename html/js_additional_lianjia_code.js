@@ -9,9 +9,99 @@ function menu_more_lianjia(){
     '<span class="span_menu">挂牌价分段范围：<input type="text" id="input_price_range_jsad_lianjia" value="10000,40000,8,blue,red" style="width:10rem;" /></span>',  
     '<span class="span_menu">半径：<input type="number" id="input_radius_jsad_lianjia" value="20" style="width:5rem;" min=0 /></span>',
     '<span id="span_radius_amount_lianjia" class="span_menu" onclick="klmenu_check_b(this.id,true);">⚪ 套数*半径</span>',
-    '<span class="span_menu" onclick="'+str_t+'statistics_price_range_lianjia();">挂牌价分区</span>',        
+    '<span class="span_menu" onclick="'+str_t+'statistics_price_range_lianjia();">挂牌价分区</span>', 
+    '<span class="span_menu" onclick="'+str_t+'price_amount_change_lianjia();">当前条件最近2个日期挂牌价和套数变动</span>',
+    '<span class="span_menu" onclick="'+str_t+'price_amount_change_lianjia(\'solo\');">当前条件只有1个日期的记录</span>',
     ];
-    return klmenu_b(klmenu1,'🛖','12rem','1rem','1rem','30rem');
+    return klmenu_b(klmenu1,'🛖','20rem','1rem','1rem','30rem');
+}
+
+function price_amount_change_lianjia(cstype='compare',sort_no=0,is_desc=false){
+    var name_dict={};
+    var district_set=new Set();
+    var date_set=new Set();
+    for (let arow of js_data_current_common_search_global){
+        var item=arow[0];
+        var blkey=item.slice(0,2).toString()+'_'+parseFloat(item[2]).toFixed(1)+'_'+parseFloat(item[3]).toFixed(1); //地市、版块、坐标（保留1位小数） - 保留注释
+        if (name_dict[blkey]==undefined){
+            name_dict[blkey]=[];
+        }
+        
+        name_dict[blkey].push(arow);
+
+        district_set.add(item[0]);
+        var bldate=item[6].split(',')[0].replace('<small>','');
+        date_set.add(bldate);
+    }
+    
+    date_set=Array.from(date_set);
+    date_set.sort(function (a,b){return a.split('/')[0]<b.split('/')[0]?-1:1}); //月份逆序 - 保留注释
+    date_set=date_set.slice(0,2);
+    date_set.sort(function (a,b){return a.split('/')[0]>b.split('/')[0]?-1:1}); //月份顺序 - 保留注释
+        
+    switch (cstype){
+        case 'solo':
+            var solo_list=[];
+            for (let key in name_dict){
+                if (name_dict[key].length==1){
+                    solo_list=solo_list.concat(name_dict[key]);
+                }
+            }
+            js_data_current_common_search_global=solo_list;
+            page_common();
+            break;
+        case 'compare':
+            if (date_set.length<2){return;}
+            
+            var result_t=[];
+            for (let key in name_dict){
+                var item=name_dict[key];
+                if (item.length==1){continue;}
+
+                item.sort(function (a,b){return a[0][6].split('/')[0]>b[0][6].split('/')[0]?-1:1}); //日期月份顺序 - 保留注释
+
+                var bldate1=item[0][0][6].split(',')[0].replace('<small>','');
+                var bldate2=item[1][0][6].split(',')[0].replace('<small>','');
+
+                if (!date_set.includes(bldate1) || !date_set.includes(bldate2)){
+                    console.log('日期不符记录：',item,date_set);
+                    continue;
+                }
+                
+                var price1=parseFloat(item[0][0][4]);
+                var price2=parseFloat(item[1][0][4]);
+
+                var amount1=parseFloat(item[0][0][5]);
+                var amount2=parseFloat(item[1][0][5]);
+                
+                var lat_lng1='<small>'+item[0][0][2]+'/'+item[0][0][3]+'</small>';
+                var lat_lng2='<small>'+item[1][0][2]+'/'+item[1][0][3]+'</small>';
+                
+                result_t.push([amount2-amount1,price2-price1,item[0][0][0],item[0][0][1],(district_set.size==1?'':'<td>'+item[0][0][0]+'</td>')+'<td>'+item[0][0][1]+'</td><td>'+lat_lng1+(lat_lng1==lat_lng2?'':'<br /><font color=blue>'+lat_lng2+'</font>')+'</td><td align=right>'+price1.toFixed(2)+'</td><td align=right>'+price2.toFixed(2)+'</td><td align=right>'+(price2-price1).toFixed(2)+'</td><td align=right>'+amount1+'</td><td align=right>'+amount2+'</td><td align=right>'+(amount2-amount1)+'</td>']);
+            }
+            
+            var desc_str=!is_desc;
+            var delta1='<th style="cursor:pointer;" onclick="price_amount_change_lianjia(\'compare\',1,'+desc_str+')">Δ</th>';
+            var delta2='<th style="cursor:pointer;" onclick="price_amount_change_lianjia(\'compare\',0,'+desc_str+')">Δ</th>';
+            
+            var blth='<tr><th>No.</th>'+(district_set.size==1?'':'<th>地市</th>')+'<th>版块</th><th>lat/lng</th><th>挂牌价<br />('+date_set[0]+')</th><th>挂牌价<br />('+date_set[1]+')</th>'+delta1+'<th>套数<br />('+date_set[0]+')</th><th>套数<br />('+date_set[1]+')</th>'+delta2+'<tr>';
+
+            result_t.sort(function (a,b){return zh_sort_b(a,b,!is_desc,2);});
+            result_t.sort(function (a,b){return zh_sort_b(a,b,!is_desc,3);});
+            
+            if (is_desc){
+                result_t.sort(function (a,b){return a[sort_no]>b[sort_no]?-1:1});
+            } else {
+                result_t.sort(function (a,b){return a[sort_no]<b[sort_no]?-1:1});
+            }
+            
+            result_t=array_split_by_col_b(result_t,[4]);
+            for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
+                result_t[blxl]='<tr><td>'+(blxl+1)+'</td>'+result_t[blxl]+'</tr>';
+            }
+            document.getElementById('divhtml').innerHTML='<table class="table_common">'+blth+result_t.join('\n')+blth+'</table>';    
+            break;
+    }
 }
 
 function file_load_lianjia(){

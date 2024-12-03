@@ -1857,7 +1857,7 @@ function textarea_buttons_b(textarea_id,csbuttons,cstype='',csstyle='',span_clas
         if (cstype==''){
             var savename='';
         } else {
-            var web_type=(is_file_type_b()?'local':location.host);
+            var web_type=(is_file_type_b()?'local':location.host.replace(/\./g,'_'));
             var savename=cstype+'_'+local_storage_get_b('machine_name')+'_'+(navigator.platform || '').replace(/\s/g,'_')+'_'+web_type+'_'+today_str_b('dt','','','_')+'.'+fext[1];
         }
         bljg=bljg+button_left+' onclick="dom_value_2_txt_file_b(\''+textarea_id+'\',\''+specialstr_j(savename)+'\',\''+specialstr_j(fext[1])+'\');">'+fext[0]+button_right;

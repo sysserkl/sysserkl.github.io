@@ -295,6 +295,11 @@ function idb_read_bigfile_b(db,do_type='',cskey='',run_fn=false){
                             raw_data_bigfile.push(cursor.value.name);
                         }
                         break;
+                    case 'lsmlist':
+                        if (cursor.value.name.match(/^lsm.*\.txt$/)){
+                            raw_data_bigfile.push(cursor.value.name);
+                        }
+                        break;
                     default:
                         //返回文件序号、名称、起始部分、大小、日期等 - 保留注释
                         var bllen=cursor.value.content.length;
@@ -345,7 +350,7 @@ function idb_option_generate_bigfile_b(cstype,select_id_name){
         oselect.innerHTML=csarr.join('\n');
         oselect.removeAttribute('onclick');
     }
-    idb_bigfile_b('read',cstype+'list','',sub_idb_option_generate_bigfile_b_html);
+    idb_bigfile_b('read',cstype+'list','',sub_idb_option_generate_bigfile_b_html);  //此处自动在类型后添加 list - 保留注释
 }
 
 function idb_edit_bigfile_b(db,do_type='',cskey='',run_fn=false){
@@ -440,7 +445,6 @@ function idb_edit_bigfile_b(db,do_type='',cskey='',run_fn=false){
     } else {
         do_write=true;
     }
-    
     if (do_write){
         return idb_write_b(db, 'bigfile_dbf', false, false, sub_idb_edit_bigfile_b_onsuccess, false);        
     } else {

@@ -124,6 +124,7 @@ function local_storage_read_key_lsm(cskey=''){
 
 function menu_lsm(){
     var str_t=klmenu_hide_b();
+    var blparent=menu_parent_node_b(str_t);
 
     var klmenu_local=[ 
     '<span class="span_menu" onclick="'+str_t+'keys_generate_lsm();">刷新 localStorage key</span>',
@@ -150,6 +151,7 @@ function menu_lsm(){
     var klmenu_config=root_font_size_menu_b(str_t);
 
     klmenu_config=klmenu_config.concat([ 
+    idb_menu_generate_bigfile_b('lsm','select_big_file_lsm',blparent,'import_bigfile_lsm'),    
     '<span class="span_menu" onclick="'+str_t+'machine_name_lsm();">machine name</span>',
     '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'lsm\');">更新版本</span>',
     '<span class="span_menu" onclick="'+str_t+'file_date_paramter_refresh_lsm();">刷新 file date paramter</span>',
@@ -162,6 +164,24 @@ function menu_lsm(){
     klmenu_config.push(menu_container_b(str_t,group_list,''));        
         
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_local,'','25rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','60rem'),'','0rem')+' ');
+}
+
+
+function import_bigfile_lsm(fname=false){
+    function sub_import_bigfile_lsm_onsuccess(cscontent){
+        if (fname!==false){
+            document.getElementById('textarea_lsm_status').value='从 bigfile 导入：'+fname;
+        }
+    }
+    
+    if (fname===false){
+        fname=document.getElementById('select_big_file_lsm').value;
+    }
+    
+    if (fname=='手动输入 bigfile lsm 文件名'){
+        fname=false;
+    }
+    import_bigfile_content_b(fname,'textarea_lsm_content',sub_import_bigfile_lsm_onsuccess);
 }
 
 function file_date_paramter_refresh_lsm(){
