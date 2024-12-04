@@ -412,6 +412,12 @@ function dots_2_circles_gps_points(len_list=false){
 
 function circle_gps_points(csstr,dotransform=true,layertype='navigation',dopanto=true,run_fn=false){
     //格式：lon,lat,radius,color;lon,lat,radius,color; - 保留注释
+    function sub_circle_gps_points_run(){
+        if (typeof(run_fn)=='function'){
+            run_fn();
+        }
+    }
+    
     function sub_circle_gps_points_one_row(){
         if (blxl>=bllen){
             document.title=old_title;
