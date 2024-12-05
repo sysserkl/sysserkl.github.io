@@ -65,7 +65,7 @@ function form_blank_data(){
         blbuttons=blbuttons+'<span class="aclick" onclick="import_js_file_to_textarea_blank_data();">import file to textarea</span>';    
     }
     
-    blbuttons=blbuttons+textarea_buttons_b('textarea_blank_data','清空,复制,导入temp_txt_share');        
+    blbuttons=blbuttons+textarea_buttons_b('textarea_blank_data','清空,复制,导入temp_txt_share,导入 txt 文件');        
     blbuttons=blbuttons+close_button_b('div_form_common','','aclick');
     blbuttons=blbuttons+'</p>';
     var odiv=document.getElementById('div_form_common');

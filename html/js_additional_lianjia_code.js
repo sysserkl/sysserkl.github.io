@@ -8,11 +8,17 @@ function menu_more_lianjia(){
     '<span class="span_menu" id="span_menu_for_sort_lianjia"></span>',
     '<span class="span_menu">挂牌价分段范围：<input type="text" id="input_price_range_jsad_lianjia" value="10000,40000,8,blue,red" style="width:10rem;" /></span>',  
     '<span class="span_menu">半径：<input type="number" id="input_radius_jsad_lianjia" value="20" style="width:5rem;" min=0 /></span>',
-    '<span id="span_radius_amount_lianjia" class="span_menu" onclick="klmenu_check_b(this.id,true);">⚪ 套数*半径</span>',
     '<span class="span_menu" onclick="'+str_t+'statistics_price_range_lianjia();">挂牌价分区</span>', 
     '<span class="span_menu" onclick="'+str_t+'price_amount_change_lianjia();">当前条件最近2个日期挂牌价和套数变动</span>',
     '<span class="span_menu" onclick="'+str_t+'price_amount_change_lianjia(\'solo\');">当前条件只有1个日期的记录</span>',
     ];
+    
+    var group_list=[
+    ['⚪ 套数*半径','klmenu_check_b(this.id,true);',false,'span_radius_amount_lianjia'],
+    ['⚪ rectangle','klmenu_check_b(this.id,true);',false,'span_is_rectangle_lianjia'],
+    ];    
+    klmenu1.push(menu_container_b(str_t,group_list,''));
+    
     return klmenu_b(klmenu1,'🛖','20rem','1rem','1rem','30rem');
 }
 
@@ -52,6 +58,10 @@ function price_amount_change_lianjia(cstype='compare',sort_no=0,is_desc=false){
             break;
         case 'compare':
             if (date_set.length<2){return;}
+
+            var blradius,radius_amount,circle_or_rectangle;
+            [blradius,radius_amount,circle_or_rectangle]=radius_amount_get_lianjia();
+            var gps_list=[];
             
             var result_t=[];
             for (let key in name_dict){
@@ -70,14 +80,21 @@ function price_amount_change_lianjia(cstype='compare',sort_no=0,is_desc=false){
                 
                 var price1=parseFloat(item[0][0][4]);
                 var price2=parseFloat(item[1][0][4]);
-
+                var price_delta=price2-price1;
+                
                 var amount1=parseFloat(item[0][0][5]);
                 var amount2=parseFloat(item[1][0][5]);
-                
+                var amount_delta=amount2-amount1;
+
                 var lat_lng1='<small>'+item[0][0][2]+'/'+item[0][0][3]+'</small>';
                 var lat_lng2='<small>'+item[1][0][2]+'/'+item[1][0][3]+'</small>';
                 
-                result_t.push([amount2-amount1,price2-price1,item[0][0][0],item[0][0][1],(district_set.size==1?'':'<td>'+item[0][0][0]+'</td>')+'<td>'+item[0][0][1]+'</td><td>'+lat_lng1+(lat_lng1==lat_lng2?'':'<br /><font color=blue>'+lat_lng2+'</font>')+'</td><td align=right>'+price1.toFixed(2)+'</td><td align=right>'+price2.toFixed(2)+'</td><td align=right>'+(price2-price1).toFixed(2)+'</td><td align=right>'+amount1+'</td><td align=right>'+amount2+'</td><td align=right>'+(amount2-amount1)+'</td>']);
+                result_t.push([amount_delta,price_delta,item[0][0][0],item[0][0][1],(district_set.size==1?'':'<td>'+item[0][0][0]+'</td>')+'<td>'+item[0][0][1]+'</td><td>'+lat_lng1+(lat_lng1==lat_lng2?'':'<br /><font color=blue>'+lat_lng2+'</font>')+'</td><td align=right>'+price1.toFixed(2)+'</td><td align=right>'+price2.toFixed(2)+'</td><td align=right>'+price_delta.toFixed(2)+'</td><td align=right>'+amount1+'</td><td align=right>'+amount2+'</td><td align=right>'+amount_delta+'</td>']);
+                
+                var lng_lat=transform_lon_lat_one_dot_b('BD09_TO_WGS84',item[0][0][3],item[0][0][2]);    //转换 百度坐标 - 保留注释
+                var blcolor=(amount_delta>0?'red':(amount_delta==0?'orange':'blue'));
+                var radius_value=Math.abs((radius_amount?Math.round(blradius*amount_delta):blradius));
+                gps_list.push(lng_lat[0]+','+lng_lat[1]+','+radius_value+','+blcolor);
             }
             
             var desc_str=!is_desc;
@@ -99,7 +116,7 @@ function price_amount_change_lianjia(cstype='compare',sort_no=0,is_desc=false){
             for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
                 result_t[blxl]='<tr><td>'+(blxl+1)+'</td>'+result_t[blxl]+'</tr>';
             }
-            document.getElementById('divhtml').innerHTML='<table class="table_common">'+blth+result_t.join('\n')+blth+'</table>';    
+            document.getElementById('divhtml').innerHTML='<table class="table_common">'+blth+result_t.join('\n')+blth+'</table><textarea>'+circle_or_rectangle+'='+gps_list.join(';')+'</textarea>';    
             break;
     }
 }
@@ -136,6 +153,13 @@ function sort_lianjia(is_desc=false){
     }
 }
 
+function radius_amount_get_lianjia(){
+    var blradius=parseInt(document.getElementById('input_radius_jsad_lianjia').value.trim());
+    var radius_amount=klmenu_check_b('span_radius_amount_lianjia',false);
+    var circle_or_rectangle=(klmenu_check_b('span_is_rectangle_lianjia',false)?'rectangle':'circle');
+    return [blradius,radius_amount,circle_or_rectangle];
+}
+
 function statistics_price_range_lianjia(){
     var range_list=document.getElementById('input_price_range_jsad_lianjia').value.trim().split(',');
     
@@ -156,23 +180,24 @@ function statistics_price_range_lianjia(){
     var lat_at=key_list.indexOf('lat');
     var lng_at=key_list.indexOf('lng');
     
-    var blradius=parseInt(document.getElementById('input_radius_jsad_lianjia').value.trim());
-    var radius_amount=klmenu_check_b('span_radius_amount_lianjia',false);
+    var blradius,radius_amount,circle_or_rectangle;
+    [blradius,radius_amount,circle_or_rectangle]=radius_amount_get_lianjia();
     
     var result_t={};
-    for (let arow of js_data_current_common_search_global){        
+    for (let arow of js_data_current_common_search_global){
         var blvalue=parseFloat(arow[0][price_at]);
         var blcolor=value_in_color_range_b(blvalue*10000,color_list,min_value,false);
         if (result_t['c_'+blcolor]==undefined){
             result_t['c_'+blcolor]=[];
         }
         
-        var lng_lat=transform_lon_lat_one_dot_b('BD09_TO_WGS84',arow[0][lng_at],arow[0][lat_at]);
-        result_t['c_'+blcolor].push(lng_lat[0]+','+lng_lat[1]+','+(radius_amount?Math.round(blradius*parseFloat(arow[0][amount_at])):blradius)+','+blcolor);
+        var lng_lat=transform_lon_lat_one_dot_b('BD09_TO_WGS84',arow[0][lng_at],arow[0][lat_at]);    //转换 百度坐标 - 保留注释
+        var radius_value=(radius_amount?Math.round(blradius*parseFloat(arow[0][amount_at])):blradius);
+        result_t['c_'+blcolor].push(lng_lat[0]+','+lng_lat[1]+','+radius_value+','+blcolor);
     }
     
     for (let key in result_t){
-        result_t[key]='circle='+result_t[key].join(';');
+        result_t[key]=circle_or_rectangle+'='+result_t[key].join(';');
     }
     result_t=object2array_b(result_t);
     document.getElementById('divhtml').innerHTML='<textarea>'+result_t.join('\n')+'</textarea><p><span>'+legend.join('')+'</span> <small>('+demo_list.join(' ')+')</small></p>';

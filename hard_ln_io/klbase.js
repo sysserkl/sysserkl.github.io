@@ -1840,7 +1840,6 @@ function textarea_buttons_b(textarea_id,csbuttons,cstype='',csstyle='',span_clas
     }
     
     if (csbuttons.includes('导入 txt 文件')){
-        bljg=bljg+button_left+' onclick="import_txt_file_b(\''+textarea_id+'\',0);">⤴'+button_right;
         bljg=bljg+button_left+' onclick="show_hide_upload_txt_file_doms_b(this);">📮</span><span class="span_upload_txt_file_b" style="display:none;"><input type="file" class="input_upload_txt_file_b" /> <span class="aclick" onclick="upload_txt_file_to_textarea_b(this,\''+textarea_id+'\');">upload</span>'+button_right;
     }
     

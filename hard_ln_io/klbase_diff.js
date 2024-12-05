@@ -209,7 +209,7 @@ function buttons_diff_b(){
         blbuttons=blbuttons+'<p><span class="aclick" onclick="line_compare_diff_b();">行对比</span>';
         blbuttons=blbuttons+'<span class="aclick" onclick="replace_textarea_diff_b(1);">左侧替换</span>';
         blbuttons=blbuttons+'<span class="aclick" onclick="replace_textarea_diff_b(2);">右侧替换</span>';
-        blbuttons=blbuttons+'<label><input type="checkbox" id="checkbox_reg_diff_b" />正则</label>';
+        blbuttons=blbuttons+'<label><input type="checkbox" id="checkbox_reg_diff_b" />正则</label> ';
         blbuttons=blbuttons+'<input type="text" id="input_reg_type_diff_b" style="width:4rem;" placeholder="i|m|g" />';
         blbuttons=blbuttons+'</p>';
         blbuttons=blbuttons+'<div id="div_line_compare_result"></div>';
