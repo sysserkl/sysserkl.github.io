@@ -1,4 +1,5 @@
 var csbooklist_source_global=[
+["guang_zhi_yi_wang_shi_xm_81188", "广志绎(王士性(明))","已整理","3",""],
 ["politics_a_treatise_on_government_3192", "Politics- A Treatise on Government(Aristotle)","已整理,englishwords","3",""],
 ["deng_xiao_ping_wen_xuan_dsjqsw_220497", "邓小平文选第三卷(求是网)","已整理","3",""],
 ["japanese_girls_and_women_revised_aee_4948", "Japanese Girls and Women Revised and Enlarged Edition(Alice Mabel Bacon)","已整理,englishwords","3",""],
