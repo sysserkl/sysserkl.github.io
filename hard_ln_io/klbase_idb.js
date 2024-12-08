@@ -152,7 +152,7 @@ function idb_main_b(cstype='',dbc_name,dbf_name,switch_fn,other_var1=false,other
                         db.createObjectStore(dbf_name, { autoIncrement: true });
                     } else {
                         console.log('keyPath',cskeypath);
-                        db.createObjectStore(dbf_name, { keyPath: cskeypath });                    
+                        db.createObjectStore(dbf_name, { keyPath: cskeypath });
                     }
                 } catch (error){
                     console.log('升级时创建对象存储失败: ' + error);
