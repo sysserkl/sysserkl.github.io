@@ -132,12 +132,16 @@ function option_days_today_words(csid,csm,csday=''){
 function menu_today_words(){
     var str_t=klmenu_hide_b('');
     var klmenu1=[
+    '<span class="span_menu" id="span_source_en_b" onclick="klmenu_check_b(this.id,true);">⚪ 显示例句详细出处</span>',
     '<span class="span_menu" onclick="'+str_t+'show_sentence_enwc_b();">显示例句</span>',
     '<span class="span_menu" onclick="'+str_t+'show_new_words_enwc_b(\'span.span_enwords_sentence\');">显示例句中的生词</span>',
     '<span class="span_menu" onclick="'+str_t+'show_new_words_enwc_b(\'span.span_explanation\');">显示释义中的生词</span>',
     ];
 
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','12rem','1rem','1rem','60rem'),'','0rem')+' ');
+    if (!ismobile_b()){
+        klmenu_check_b('span_source_en_b',true);
+    }    
 }
 
 function init_today_words(){

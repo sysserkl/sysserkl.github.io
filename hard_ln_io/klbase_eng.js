@@ -845,12 +845,9 @@ function en_sentence_menu_generate_b(){
     return group_list;
 }
 
-function en_sentence_mobile_b(){    //enforce=false
+function en_sentence_mobile_b(){
     if (klmenu_check_b('span_source_en_b',false)){return;}
-    
-    //if (enforce===false){return;}
-    //if (ismobile_b()==false){return;}
-    
+   
     var ospans=document.getElementsByClassName('span_from_url');
     for (let a_span of ospans){
         var oas=a_span.getElementsByTagName('a');

@@ -44,9 +44,7 @@ function sentence_search_rndwords(){
     var show_button=klmenu_check_b('span_button_en_slide',false);
     var bljg=sentence_search_b(csstr,isreg,100,show_button,'0.9');
     document.getElementById('divhtml').innerHTML=div_title_href_b(['','',bljg]);
-    //if (!klmenu_check_b('span_source_en_b',false)){
     setTimeout(function (){en_sentence_mobile_b();},10);
-    //}
 }
 
 function links_rndwords(){
@@ -180,9 +178,7 @@ function one_line_rndwords(item,csrecent_word='',csword=''){
 function show_sentence_rndwords(){
     function sub_show_sentence_rndwords_one_word(){
         if (blxl>=bllen){
-            //if (!klmenu_check_b('span_source_en_b',false)){
             en_sentence_mobile_b();
-            //}
             console.log('show_sentence_rndwords 费时：'+(performance.now() - t0) + ' milliseconds');
             return;
         }
