@@ -75,9 +75,8 @@ function args_enwords_book(){
                 if (otextarea){
                     otextarea.value=new_words_str;
                 }
-                in_all_new_enwords_book();
+                in_all_new_enwords_book('不在新单词库中');
                 get_new_words_arr_set_enbook_b(2);
-                //show_enwords_book();
                 break;
             } else if (bltmpstr=='excluded'){
                 exclude_enwords_book();
@@ -303,8 +302,8 @@ function new_words_form_enwords_book(){
     bljg=bljg+'<span class="aclick" onclick="get_new_words_arr_set_enbook_b(3);">旧</span> ';
     bljg=bljg+'<span class="aclick" onclick="get_new_words_arr_set_enbook_b(5);">稀有</span> ';
 
-    bljg=bljg+'<span class="aclick" onclick="in_all_new_enwords_book(\'include\');">已在全部新单词中的新单词</span> ';        
-    bljg=bljg+'<span class="aclick" onclick="in_all_new_enwords_book();">不在全部新单词中的新单词</span> ';    
+    bljg=bljg+'<select id="select_new_words_type_enbook"><option>不在新单词库中</option><option>已在新单词库中</option><option>不在例句中</option><option>已在例句中</option></select> ';
+    bljg=bljg+'<span class="aclick" onclick="in_all_new_enwords_book();">新单词</span>';
 
     bljg=bljg+'<span class="aclick" onclick="textarea_shift_b(\'textarea_new_words1\',\'textarea_new_words2\');">对调</span> ';    
     bljg=bljg+'分隔符：<input type="text" id="input_filter_delimiter" value=" " /> ';
@@ -786,31 +785,39 @@ function day_new_enwords_book(do_filter=false){
     return result_t;
 }
 
-function in_all_new_enwords_book(cstype='exclude'){
-    if (check_all_new_enwords_book()===false){return;}
+function in_all_new_enwords_book(cstype=false){
+    function sub_in_all_new_enwords_book_result(result_t_include,result_t_exclude){
+        var bljg=cstype+'的新单词(';
+        if (cstype.startsWith('已在')){
+            bljg=bljg+result_t_include.length+')：'+result_t_include.join(' ')+'\n';
+        } else {
+            bljg=bljg+result_t_exclude.length+')：'+result_t_exclude.join(' ')+'\n';
+        }
+        document.getElementById('textarea_new_words2').value=bljg;    
+    }
     
+    if (cstype===false){
+        cstype=document.getElementById('select_new_words_type_enbook').value;
+    }
+
     var csstr=document.getElementById('textarea_new_words1').value.trim();
-    
     var bljgarr2=str_2_array_enbook_b(csstr);
     var new_words_set=new_old_word_list_enbook_b(bljgarr2,checkbox_kl_value_b('words_type_check'))[0];
     
     var result_t_include=[];
     var result_t_exclude=[];
-    for (let item of new_words_set){
-        if (all_new_words_global.includes(item) || all_new_words_global.includes(item.toLowerCase())){
-            result_t_include.push(item);
-        } else {
-            result_t_exclude.push(item);        
+    if (cstype.includes('新单词库') && typeof all_new_words_global !== 'undefined'){
+        for (let item of new_words_set){
+            if (all_new_words_global.includes(item) || all_new_words_global.includes(item.toLowerCase())){
+                result_t_include.push(item);
+            } else {
+                result_t_exclude.push(item);        
+            }
         }
+        sub_in_all_new_enwords_book_result(result_t_include,result_t_exclude);
+    } else if (cstype.includes('例句')){
+        words_in_sentence_enbook_b(new_words_set,true,sub_in_all_new_enwords_book_result);
     }
-    var bljg='';
-    if (cstype=='' || cstype=='include'){
-        bljg=bljg+'已在新单词库中的新单词：'+result_t_include.join(' ')+'\n';
-    }
-    if (cstype=='' || cstype=='exclude'){
-        bljg=bljg+'不在新单词库中的新单词：'+result_t_exclude.join(' ')+'\n';
-    }
-    document.getElementById('textarea_new_words2').value=bljg;
 }
 
 function words_sort_count_enwords_book(){

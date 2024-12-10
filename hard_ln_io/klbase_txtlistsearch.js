@@ -91,13 +91,20 @@ function statistics_kltxt_b(){
     flot_lines_b([['书籍数'].concat(flot_list)],'div_flot_line','nw',true,'','d','本',0,[1, 'day'],5);
 }
 
-function new_words_kltxt_b(){
-    if (klmenu_check_b('span_show_new_enwords',false)){
-        get_new_words_arr_obj_enbook_b(2,document.getElementById('divhtml').innerText,document.querySelectorAll('.txt_content'),true);
+function new_words_kltxt_b(type_list=false,word_is_in_sentence=''){
+    if (type_list===false){
+        type_list=[];
+        if (klmenu_check_b('span_show_new_enwords',false)){
+            type_list.push(2);
+        }
+        
+        if (klmenu_check_b('span_show_rare_enwords',false)){
+            type_list.push(5);
+        }
     }
     
-    if (klmenu_check_b('span_show_rare_enwords',false)){
-        get_new_words_arr_obj_enbook_b(5,document.getElementById('divhtml').innerText,document.querySelectorAll('.txt_content'),true);
+    for (let one_type of type_list){
+        get_new_words_arr_obj_enbook_b(one_type,document.getElementById('divhtml').innerText,document.querySelectorAll('.txt_content'),true,false,'',false,'0.1rem dotted',word_is_in_sentence);
     }
 }
 
