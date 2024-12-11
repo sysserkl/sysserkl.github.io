@@ -91,7 +91,7 @@ function statistics_kltxt_b(){
     flot_lines_b([['书籍数'].concat(flot_list)],'div_flot_line','nw',true,'','d','本',0,[1, 'day'],5);
 }
 
-function new_words_kltxt_b(type_list=false,word_is_in_sentence=''){
+function new_words_kltxt_b(type_list=false,word_is_in_sentence='',do_clear=false){
     if (type_list===false){
         type_list=[];
         if (klmenu_check_b('span_show_new_enwords',false)){
@@ -103,8 +103,17 @@ function new_words_kltxt_b(type_list=false,word_is_in_sentence=''){
         }
     }
     
+    if (do_clear){
+        if (type_list.includes(2)){
+            rare_or_new_span_remove_enbook_b(document.getElementById('divhtml'),false);
+        }
+        if (type_list.includes(5)){
+            rare_or_new_span_remove_enbook_b(document.getElementById('divhtml'),true);
+        }        
+    }
+    
     for (let one_type of type_list){
-        get_new_words_arr_obj_enbook_b(one_type,document.getElementById('divhtml').innerText,document.querySelectorAll('.txt_content'),true,false,'',false,'0.1rem dotted',word_is_in_sentence);
+        get_new_words_arr_obj_enbook_b(one_type,document.getElementById('divhtml').innerText,document.querySelectorAll('.txt_content'),true,false,'',false,'0.15rem dotted',word_is_in_sentence);
     }
 }
 
@@ -319,6 +328,7 @@ function txtmenus_kltxt_b(cstype=''){
     '<span id="span_add_zero_reading_lines_txtlistsearch" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 阅读行数补零</span>',
     '<span class="span_menu" onclick="'+str_t+'getlines_kltxt_b();">返回阅读页面</span>',
     '<span class="span_menu" onclick="'+str_t+'rare_enwords_search_kltxt_b();">稀有旧单词搜索</span>',
+    '<span class="span_menu" onclick="'+str_t+'new_words_kltxt_b([2],\'exclude\',true);">当前页面不在例句中的生词</span>',
     '<span class="span_menu" onclick="'+str_t+'new_words_lines_kltxt_b(1,1);">仅有1个新单词的行</span>',
     '<span class="span_menu" onclick="'+str_t+'new_words_lines_kltxt_b(0,0);">无新单词的行</span>',
     ]);    

@@ -6,9 +6,10 @@ function menu_more_kltxt_klwiki_main(){
     var klmenu1=[
     '<span class="span_menu" onclick="'+str_t+'yymmdd_kltxt_klwiki_main();">联合早报yymmdd不一致检索</span>',    
     '<span class="span_menu" onclick="'+str_t+'weixin_kltxt_klwiki_main();">微信sharer_shareid</span>',    
+    '<span class="span_menu" onclick="'+str_t+'theregister_without_r_kltxt_klwiki_main();">当前范围 theregister without ® and Sponsor</span>',        
     ];
 
-    var blstr=klmenu_b(klmenu1,'W','18rem','1rem','1rem','30rem');
+    var blstr=klmenu_b(klmenu1,'W','25rem','1rem','1rem','30rem');
     ospan.outerHTML=blstr;
 }
 
@@ -18,4 +19,43 @@ function yymmdd_kltxt_klwiki_main(){
 
 function weixin_kltxt_klwiki_main(){
     txtsearch_kltxt_b('sharer_shareid',false,false,false);
+}
+
+function theregister_without_r_kltxt_klwiki_main(){
+    var start_lineno,end_lineno,blmax;
+    [start_lineno,end_lineno,blmax]=start_end_lineno_kltxt_b();
+    var result_t=[];
+    
+    var bltitle=['',-1];
+    var title_added=new Set();
+    var h3=[];
+    var found_r=false;
+	for (let blxl=start_lineno;blxl<end_lineno;blxl++){
+        if (filelist[blxl].match(/^<title>.*<\/title>$/)){
+            bltitle=[filelist[blxl],blxl];
+        }
+
+        if (filelist[blxl].endsWith('®') || filelist[blxl].startsWith("''Sponsored by") || filelist[blxl].startsWith("'''Sponsored Feature''' ")){
+            if (h3.length>0){
+                found_r=true;
+            }
+        }
+        
+        if (filelist[blxl].match(/^==.*==$/) || filelist[blxl].match(/^<title>.*<\/title>$/)){
+            if (found_r==false && h3.length>0){
+                if (!title_added.has(bltitle[0])){
+                    result_t.push(bltitle);
+                    title_added.add(bltitle[0]);
+                }
+                result_t.push(h3);
+            }
+            found_r=false;
+            
+            h3=[];            
+            if (filelist[blxl].match(/^===.*theregister\.com\/.*===$/)){
+                h3=[filelist[blxl],blxl];
+            }
+        }
+    }
+    lines_2_html_kltxt_b(result_t);
 }

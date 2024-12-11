@@ -156,11 +156,39 @@ function old_rare_words_jump_enbook_b(cstype,ignore_old=true){
     }
 }
 
-function rare_or_new_span_remove_enbook_b(){
+function rare_or_new_span_remove_enbook_b(odiv,is_rare){
+    var new_or_rare=(is_rare?'rare':'new')+'_word_search_links';
 
+    var removed_list=[];
+    var o_span_removes=odiv.querySelectorAll('span.span_'+new_or_rare);
+    console.log('需要移除的 span.span_'+new_or_rare+' 有',o_span_removes.length,'个');
+    for (let one_remove of o_span_removes){
+        removed_list.push(one_remove.innerText);
+        one_remove.outerHTML=one_remove.innerHTML;
+    }
+
+    var o_p_removes=odiv.querySelectorAll('p.p_'+new_or_rare);
+    console.log('需要移除的 p.p_'+new_or_rare+' 有',o_p_removes.length,'个');    
+    for (let one_remove of o_p_removes){
+        one_remove.outerHTML='';
+    }
+    //console.log('被移除的单词',removed_list);    //此行保留 - 保留注释
+    
+    //while (true){
+        //var isdone=odiv.querySelector('span.span_'+new_or_rare);
+        //if (isdone){
+            //isdone.outerHTML=isdone.innerHTML;
+        //} else {break;}
+    //}
+    //while (true){
+        //var isdone=odiv.querySelector('p.p_'+new_or_rare);
+        //if (isdone){
+            //isdone.parentNode.removeChild(isdone);
+        //} else {break;}
+    //}
 }
 
-function get_new_words_arr_obj_enbook_b(cstype,csstr='',csobjects=false,addline=false,append_parent=false,execstring='',ew=false,border_width_and_style='0.1rem dotted',word_is_in_sentence=''){
+function get_new_words_arr_obj_enbook_b(cstype,csstr='',csobjects=false,addline=false,append_parent=false,execstring='',ew=false,border_width_and_style='0.15rem dotted',word_is_in_sentence=''){
     //cstype 1 全部单词 2 未收录 3 已收录 4 旧单词js_wiki格式 5 稀有旧单词 6 稀有旧单词js_wiki格式 - 保留注释
     //csobjects 在 selenium bible mediawiki_common 等中被调用 - 保留注释
     //-----------------------
@@ -174,21 +202,25 @@ function get_new_words_arr_obj_enbook_b(cstype,csstr='',csobjects=false,addline=
                 }
             }
             
-            console.log('get_new_words_arr_obj_enbook_b() 添加了 '+new_span_count+' 个 span 和 '+new_line_count+' 个 p，费时：'+(performance.now() - t0) + ' milliseconds');
+            //console.log('add_list',add_list); //此行保留 - 保留注释
+            console.log('diff1_count',diff1_count,'diff2_count',diff2_count);
+            console.log('get_new_words_arr_obj_enbook_b() 添加了 '+new_span_count+' 个 span.span_'+class_name+' 和 '+new_line_count+' 个 p.p_'+class_name+'，与 add_list 相差 '+(add_list.length-new_span_count)+'，费时：'+(performance.now() - t0) + ' milliseconds');
             return;
         }
 
         var item=csobjects[blxl];
         var oldstr=item.innerText;
         var new_line=[];
-        var words_list=oldstr.match(/[a-zA-Z\-']+/g) || [];
-        if (words_list.length>0){
+        var words_added_in_line=[];
+        var words_in_txt=new Set(oldstr.match(/[a-zA-Z\-']+/g) || []); //后面的代码只替换相同的单词一次，因此重复无意义 - 保留注释
+        if (words_in_txt.size>0){
             for (let one_new_or_rare_word of cs_word_set){
-                if (!words_list.includes(one_new_or_rare_word)){continue;}
+                if (!words_in_txt.has(one_new_or_rare_word)){continue;}
                 
                 var new_html_str='<span class="span_'+class_name+'" style="'+style_str+'"  onclick="popup_words_links_b(event,\''+specialstr_j(one_new_or_rare_word)+'\','+ew+');">'+one_new_or_rare_word+'</span>';
-
                 var oldhtml=item.innerHTML;
+                
+                //只替换一次，且替换第一个出现的单词 - 保留注释
                 item.innerHTML=oldhtml.replace(new RegExp('\\b'+one_new_or_rare_word+'\\b'),new_html_str);
                 //---
                 var is_link=false;
@@ -204,22 +236,44 @@ function get_new_words_arr_obj_enbook_b(cstype,csstr='',csobjects=false,addline=
                     //依然会修改一些页面表达，如链接 - 保留注释
                     //item.innerHTML=oldhtml.replace(new RegExp('\\b'+one_new_or_rare_word+'\\b'),'<span class="span_new_word_search_links" onclick="popup_words_links_b(event,\''+specialstr_j(one_new_or_rare_word)+'\');">'+one_new_or_rare_word+'</span>'); //依赖 klbase_eng.js - 保留注释
                     oldstr=item.innerText;
-                    new_span_count=new_span_count+1;
+
+                    add_list.push(one_new_or_rare_word);
+                    words_added_in_line.push(one_new_or_rare_word);
                 } else {
                     item.innerHTML=oldhtml;
                     if (addline){
                         new_line.push(new_html_str);
+                        add_list.push(one_new_or_rare_word);
+                        //words_added_in_line 不考虑 p 中的单词 - 保留注释
                     }
                 }
             }
+
             if (new_line.length>0){
                 var p_str='<p class="p_'+class_name+'" style="line-height:250%;">* '+new_line.join(' ')+'</p>';
                 if (append_parent==false){
-                    item.innerHTML=item.innerHTML+p_str;
+                    //item.innerHTML=item.innerHTML+p_str;
+                    item.insertAdjacentHTML('afterend',p_str);   //添加一行 - 保留注释
                 } else {
-                    item.parentNode.insertAdjacentHTML('afterend',p_str);
+                    item.parentNode.insertAdjacentHTML('afterend',p_str);   //加在页面底部 - 保留注释
                 }
                 new_line_count=new_line_count+1;
+            }
+            
+            var added_items=item.querySelectorAll('span.span_'+class_name);
+            var added_count=added_items.length;
+            new_span_count=new_span_count+added_count;
+            new_span_count=new_span_count+new_line.length;
+            
+            if (words_added_in_line.length!==added_count){
+                var span_text_list=[];
+                for (let one_added of added_items){
+                    span_text_list.push(one_added.innerText);
+                }
+                [diff1,diff2]=array_difference_b(words_added_in_line,span_text_list,false,true);
+                console.log(diff1,diff2,item.innerText);
+                diff1_count=diff1_count+diff1.length;
+                diff2_count=diff2_count+diff2.length;
             }
         }
         
@@ -229,7 +283,7 @@ function get_new_words_arr_obj_enbook_b(cstype,csstr='',csobjects=false,addline=
             setTimeout(sub_get_new_words_arr_obj_enbook_b_objects,1);
         } else {
             sub_get_new_words_arr_obj_enbook_b_objects();
-        }       
+        }
     }
 
     function sub_get_new_words_arr_obj_enbook_b_start(csinclude,csexclude){
@@ -245,8 +299,8 @@ function get_new_words_arr_obj_enbook_b(cstype,csstr='',csobjects=false,addline=
     }
     //-----------------------
     var bllen=csobjects.length;
-    
     if (bllen==0){return;}
+    if (typeof enwords == 'undefined'){return;}
     
     var t0 = performance.now();
     
@@ -272,6 +326,10 @@ function get_new_words_arr_obj_enbook_b(cstype,csstr='',csobjects=false,addline=
     var blxl=0;
     var new_span_count=0;
     var new_line_count=0;
+    var add_list=[];
+    var diff1,diff2;
+    var diff1_count=0;
+    var diff2_count=0;
     if (word_is_in_sentence==''){   //一共3种状态：全部、include、exclude - 保留注释
         sub_get_new_words_arr_obj_enbook_b_start();
     } else {
