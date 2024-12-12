@@ -58,7 +58,10 @@ function sort_seen(desc=false){
     var margin_id=-1;
     switch (bltype){
         case 'random':
-            selenium_enwords_data_global.sort(randomsort_b);
+            var bltimes=randint_b(2,5);
+            for (let blxl=0;blxl<bltimes;blxl++){
+                selenium_enwords_data_global.sort(randomsort_b);
+            }
             break;  
         case 'rare words':
             rare_words_seen();

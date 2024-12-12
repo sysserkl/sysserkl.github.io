@@ -1885,7 +1885,7 @@ function enwords_js_wiki_textarea_b(cslist,cstype=''){
 }
 
 function enwords_search_show_html_b(odiv,batch_div_name,recent_search_str,csword,csarray,csequal,without_textarea=false){
-    var csword_filter=(csword.match(/[a-zA-Z0-9 '_\-]+/) || [''])[0];
+    var csword_filter=enword_filter_reg_b(csword)
     odiv.innerHTML='';
     if (csarray.length==0){
         //以下条件不能和上面条件合并 - 保留注释
@@ -1981,7 +1981,7 @@ function enwords_search_old_b(cs_w_p_d,csword,csreg,csmax=500){
     var words_temp_equal_arr=enwords_search_arr_init_b();
 	
     var cswordlist=csword.split(' ');
-    var csword_filter=(csword.match(/[a-zA-Z0-9 '_\-]+/) || [''])[0];
+    var csword_filter=enword_filter_reg_b(csword)
     var csword_filter_set=new Set(csword_filter.split(' '));
 
     var blnumber=-1;
@@ -2014,7 +2014,7 @@ function enwords_mini_search_b(csword=''){
     var csreg=checkbox_kl_value_b('input_enwords_mini_search_reg');
     var cs_w_p_d=enword_search_type_b([]);
 
-    var csword_filter=(csword.match(/[a-zA-Z0-9 '_\-]+/) || [''])[0];
+    var csword_filter=enword_filter_reg_b(csword)
 
     var words_temp_equal_arr=enwords_search_old_b(cs_w_p_d,csword,csreg);
     
@@ -2660,7 +2660,7 @@ function wordsearch_enwords_b(csword='',csreg=-1,cs_w_p_d=[],csnew_words=false,s
 
     cs_w_p_d=enword_search_type_b(cs_w_p_d);
 
-    var csword_filter=(csword.match(/[a-zA-Z0-9 '_\-]+/) || [''])[0];   //不能放在if中 - 保留注释
+    var csword_filter=enword_filter_reg_b(csword)   //不能放在if中 - 保留注释
     var words_temp_equal_arr=enwords_search_old_b(cs_w_p_d,csword,csreg,max_result_enwords_b());
     var words_temp_arr=enwords_merge_b(words_temp_equal_arr,max_result_enwords_b());
     
@@ -2683,6 +2683,15 @@ function wordsearch_enwords_b(csword='',csreg=-1,cs_w_p_d=[],csnew_words=false,s
     if (showhtml){
         title_change_enwords_b('');
         top_bottom_arrow_b('div_top_bottom',words_searched_arr_global.length+' ');
+    }
+}
+
+function enword_filter_reg_b(csword=false){
+    var blreg=/[a-zA-Z0-9 '_\-]+/;
+    if (csword===false){
+        return blreg;
+    } else {
+        return (csword.match(blreg) || [''])[0];
     }
 }
 
@@ -2783,4 +2792,15 @@ function enwords_definition_split_b(csdefinition,include_cn=false,remove_type=tr
     }
 
     return result_t;
+}
+
+function sentence_wt_b(){
+    var list_t={'w':[],'t':[]};
+    if (typeof en_sentence_global == 'undefined'){return list_t;}
+
+    for (let arow of en_sentence_global){
+        var colno=(arow[2].slice(-4,)=='_TLS'?'t':'w');
+        list_t[colno].push(arow[0]);
+    }
+    return list_t;
 }

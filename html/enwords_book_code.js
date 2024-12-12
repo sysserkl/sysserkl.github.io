@@ -181,14 +181,14 @@ function menu_enwords_book(){
     ];    
     klmenu_new.push(menu_container_b(str_t,format_list,''));    
     
-    if (is_local_b()){
-        klmenu_new.push('<span class="span_menu" onclick="'+str_t+'onetab_enwords_book();">导入onetab</span>');
-    }
-        
     format_list=[
     ['高中单词','import_enwords_book(\'senior_high_school\');',true],
     ['CET6单词','import_enwords_book(\'cet6\');',true],
     ];    
+
+    if (is_local_b()){
+        format_list.push(['onetab','onetab_enwords_book();',true]);
+    }
     klmenu_new.push(menu_container_b(str_t,format_list,'导入'));    
     
     var cache_type_list=['','随机','旧单词在前','单词数','标题和链接长度','标题首字母','稀有度','一对多','包含'];

@@ -761,7 +761,7 @@ function frequent_new_enwords_kltxt_b(is_current_page=false){
         }
     } else {
         var csarr=filelist;
-    } 
+    }
     document.getElementById('divhtml').innerHTML='<h3>统计中...</h3>';
     setTimeout(function (){frequency_enwords_book_b(csarr);},1);
 }
