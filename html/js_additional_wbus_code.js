@@ -44,7 +44,7 @@ function sort_wbus(is_desc=false,rank_no=false){
     if (rank_no===false){
         rank_no=parseInt(document.getElementById('select_sort_type_jsad_wbus').value);
     }
-    
+        
     if (rank_no!==0){
         if (is_desc){
             wbus_global.sort(function (a,b){return a[rank_no]<b[rank_no] ? 1 : -1;});

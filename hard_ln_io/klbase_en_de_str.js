@@ -264,14 +264,16 @@ function split_words_b(csstr,cscombine=false){
         return [csstr,[]];
     }
     
+    function sub_split_words_b_time(cscaption,csxl){
+        var duration=performance.now()-t0;
+        if (duration>100){
+            console.log('split_words_b() part'+cscaption,csxl,'费时：'+duration + ' milliseconds');        
+        }
+    }
+    
     //-----------------------
     if (typeof jieba_pb_dict_global == 'undefined'){
         console.log('未载入：jieba_pb_dict_data.js');
-        //if (cscombine){
-            //return [];
-        //} else {
-            //return [[],[]];
-        //}
         jieba_pb_dict_global={};
     }
     //------------------    
@@ -302,7 +304,9 @@ function split_words_b(csstr,cscombine=false){
         
         [csstr,list_done]=sub_split_words_b_two(csstr); 
         list_t=list_t.concat(list_done);
-        console.log('split_words_b() ',blxl,'费时：'+(performance.now() - t0) + ' milliseconds');
+        
+        var t1=performance.now();
+        sub_split_words_b_time('1',blxl);
     }
     
     for (let blxl=4;blxl>=2;blxl--){
@@ -319,7 +323,8 @@ function split_words_b(csstr,cscombine=false){
         }
         [csstr,list_done]=sub_split_words_b_two(csstr); 
         list_t=list_t.concat(list_done);
-        console.log('split_words_b() ',blxl,'费时：'+(performance.now() - t0) + ' milliseconds');
+    
+        sub_split_words_b_time('2',blxl);
     }
     
     if (list_t.length>0){
@@ -347,7 +352,7 @@ function count_words_b(csstr,words_list,csmin=1,csmax=-1){
         if (csmax>0 && blcount>csmax){continue;}
         list_t.push([item,blcount]);
     }
-    list_t.sort();
+    list_t.sort(function (a,b){return zh_sort_b(a,b,false,0);});
     list_t.sort(function (a,b){return a[1]<b[1] ? 1 : -1;});
     return list_t;
 }

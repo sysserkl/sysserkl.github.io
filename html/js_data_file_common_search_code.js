@@ -264,6 +264,7 @@ function menu_common(){
     klmenu_check_b('span_http_links_common',true);    
     klmenu_check_b('span_additional_fn_common',true);    
 
+    klmenu_check_b('span_table_style_common',true);    
     klmenu_check_b('span_table_columns_common',true);    
     klmenu_check_b('span_table_row_no_common',true);    
 
