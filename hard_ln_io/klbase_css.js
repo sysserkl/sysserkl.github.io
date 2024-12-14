@@ -1839,7 +1839,7 @@ function change_colors_b(csstr){
 }
 
 function obj_search_show_hide_b(objs,subobj_querystr='',cskey='',csreg=false,checkreg=false,get_html=false){  
-    //filter - 保留注释
+    //#filter #ol - 保留注释
     if (checkreg){
         if (cskey.slice(-4,)=='(:r)'){
             csreg=true;

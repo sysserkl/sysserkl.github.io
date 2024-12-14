@@ -3292,7 +3292,7 @@ function common_search_b(cskey,isreg,csarray,csmax=-1){
         for (let blxl=0,lent=csarray.length;blxl<lent;blxl++){
             result_t.push([csarray[blxl],blxl+1]);  
             blcount=blcount+1;
-            if (csmax>0 && blcount>=csmax){break;}            
+            if (csmax>0 && blcount>=csmax){break;}
         }
     } else {
         for (let blxl=0,lent=csarray.length;blxl<lent;blxl++){
