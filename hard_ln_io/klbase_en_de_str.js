@@ -245,7 +245,7 @@ function de_double_str_b(csstr){
     return de_interval_str_b(odd_str_b(de_interval_str_b(csstr)));
 }
 
-function split_words_b(csstr,cscombine=false){
+function split_words_b(csstr,cscombine=false,diy_words_list=[]){
     //依赖 jieba_pb_dict_data.js - 保留注释
     function sub_split_words_b_two(csstr){
         var list_cn=csstr.match(/[^\x00-\xff]{2,}/g);
@@ -325,6 +325,13 @@ function split_words_b(csstr,cscombine=false){
         list_t=list_t.concat(list_done);
     
         sub_split_words_b_time('2',blxl);
+    }
+    
+    for (let item of diy_words_list){
+        if (csstr.includes(item)){
+            csstr=csstr.replace(new RegExp(item,'g'),' ').trim();
+            list_t.push(item);
+        }
     }
     
     if (list_t.length>0){

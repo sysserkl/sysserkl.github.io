@@ -834,8 +834,7 @@ function color_list_generate_b(cslist,intround=0,demo_min_value=-1,demo_max_valu
     var color_list=[];
     if (color1!==color2){
         color_range=Math.round(color_range/2);
-        color_list=color_with_different_light_b(color1,color_range);
-        color_list.reverse();
+        color_list=color_with_different_light_b(color1,color_range,true);
     }
     color_list=color_list.concat(color_with_different_light_b(color2,color_range));
     //color_list 形如：[ "#000066", "#0000CC", "#3333FF", "#9999FF", "#FF9999", "#FF3333", "#CC0000", "#660000" ] - 保留注释
@@ -910,7 +909,7 @@ function value_in_color_range_b(csvalue,color_list,min_value=false,max_value=fal
     return blcolor;
 }
 
-function color_with_different_light_b(cscolor,cscount=10){
+function color_with_different_light_b(cscolor,cscount=10,is_reverse=false){
     var color_raw=rgb2hsl_b(cscolor);
     var result_t=[];
     //忽略白色和黑色 - 保留注释
@@ -918,6 +917,9 @@ function color_with_different_light_b(cscolor,cscount=10){
     for (let blxl=cscount-1;blxl>0;blxl--){
         var color_new=hsl2hex_b(color_raw['h'],color_raw['s'],blxl/cscount);
         result_t.push(color_new);
+    }
+    if (is_reverse){
+        result_t.reverse();
     }
     return result_t;
 }
@@ -1883,7 +1885,7 @@ function obj_search_show_hide_b(objs,subobj_querystr='',cskey='',csreg=false,che
             item.style.display='';
             if (blcount==0){
                 first_dom=item;
-            }            
+            }
             blcount=blcount+1;
         } else {
             item.style.display='none';
@@ -2500,6 +2502,10 @@ function get_max_zindex_b(){
 }
 
 function style_generate_b(csstr,dom_type){
+    if (Array.isArray(csstr)){
+        csstr=csstr.join('\n');
+    }
+    
     if (dom_type){
         var ostyle = document.createElement('style');
         ostyle.innerHTML=csstr;

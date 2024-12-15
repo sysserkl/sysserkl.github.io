@@ -72,7 +72,7 @@ function init_common(){
     web_page_name_set_common();
 
     if (load_remote_data_jscm_global=='0' && !is_local_b()){
-        eval(var_name_jscm_global+'=[]');
+        eval(var_name_jscm_global+'=[]');   //设置默认值为空，只对非本地段起作用 - 保留注释
         if (!is_standalone_html_file_global){
             file_dom_create_b([(js_additional_jscm_global==''?'':'js_additional_'+js_additional_jscm_global+'_code.js')]);
         }
@@ -141,7 +141,7 @@ function wait_array_common(){
             } catch (error){
                 console.log(error);
             }
-        }        
+        }
     }
     
     function sub_wait_array_common_check(){
@@ -151,8 +151,8 @@ function wait_array_common(){
         }
         
         if (blxl>csmax){
-            console.log('未发现数组 '+var_name_jscm_global+'，等待次数：',blxl);        
-            document.getElementById('span_count').innerHTML='数据载入失败，等待次数：'+blxl+' <a href="'+data_file_jscm_global+'" target=_blank>'+file_path_name_b(data_file_jscm_global)[3]+'</a>';    //'+location.origin+'/'
+            console.log('未发现数组 '+var_name_jscm_global+'，等待次数：',blxl);
+            document.getElementById('span_count').innerHTML='数据载入失败，等待次数：'+blxl+' <a href="'+data_file_jscm_global+'" target=_blank>'+file_path_name_b(data_file_jscm_global)[3]+'</a>';
             return;
         }
         
