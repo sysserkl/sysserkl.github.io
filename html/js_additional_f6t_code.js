@@ -51,6 +51,21 @@ function sort_f6t(is_desc=false,rank_no=false){
     }
 }
 
+function upload_data_files_f6t(csarr,from_big_file=false){
+    function sub_upload_data_files_f6t_run(csresult){
+        f6t_global=csresult;
+        arr_len_refresh_common();
+        alert('导入完成');
+    }
+    
+    if (from_big_file===false){
+        merge_js_lines_from_file_list_b(csarr,'[',sub_upload_data_files_f6t_run);    
+    } else {
+        arr_len_refresh_common();
+        alert('导入完成');
+    }
+}
+
 function col_rearrange_f6t(){
     var result_t=[];
     for (let item of js_data_current_common_search_global){
@@ -168,37 +183,77 @@ function hot_word_popup_event_f6t(event,oword,table_no,row_no,cstype){
 function flot_f6t(csno){
     var otable=document.getElementById('table_rank_f6t_'+csno);
     var otrs=otable.querySelectorAll('tr');
-    var result_t=[];
+    var result_m=[];
+    var result_y=[];
     for (let one_tr of otrs){
         if (one_tr.classList.contains('tr_rank_hot_words_f6t')){continue;}
         if (one_tr.style.display=='none'){continue;}
         
         var oname=one_tr.querySelector('td.td_rank_district_f6t');
 
-        var otds=one_tr.querySelectorAll('td.td_rank_month_f6t');
-        if (otds.length!==12){continue;}
-        
-        var month_t=[oname.innerText];
-        for (let blxl=0;blxl<12;blxl++){
-            month_t.push([blxl+1,parseFloat(otds[blxl].innerText) ||0]);
+        var otds_m=one_tr.querySelectorAll('td.td_rank_month_f6t');
+        if (otds_m.length==12){
+            var month_t=[oname.innerText];
+            for (let blxl=0;blxl<12;blxl++){
+                month_t.push([blxl+1,parseFloat(otds_m[blxl].innerText) ||0]);
+            }
+            result_m.push(month_t);
         }
-        result_t.push(month_t);
+        
+        var tr_year_list=[];
+        var otd_y=one_tr.querySelector('td.td_rank_year_f6t');
+        if (otd_y){
+            var y_list=otd_y.innerText.match(/(\d{4})年\((\d+(\.\d+)?)\)/g) || [];
+            for (let one_year of y_list){
+                one_year=one_year.match(/(\d{4})年\((\d+(\.\d+)?)\)/);
+                //形如：[ "2016年(11.7)", "2016", "11.7", ".7" ] - 保留注释
+                //形如：[ "2015年(4)", "2015", "4", undefined ] - 保留注释
+                tr_year_list.push([parseInt(one_year[1]),parseFloat(one_year[2])]);
+            }
+            
+            if (tr_year_list.length>0){
+                tr_year_list.sort(function (a,b){return a[0]<b[0]?-1:1;});
+                tr_year_list=[oname.innerText].concat(tr_year_list);
+                result_y.push(tr_year_list);
+            }
+        }
     }
-    
-    var odiv=document.getElementById('div_rank_f6t_flot_'+csno);
-    odiv.innerHTML='';
-    odiv.style.height='';
 
-    if (result_t.length==0){return;}
-    if (result_t[0].length<2){return;}
-    
-    odiv.style.height='600px';
-    
     var omain=document.getElementById('div_rank_f6t_'+csno);
     var h3_str=omain.querySelector('span.span_rank_table_name_f6t').innerText.slice(-2,);
+    var unit_str=(h3_str=='长度'?'km':'条');
     
-    flot_lines_b(result_t,'div_rank_f6t_flot_'+csno,'nw',false,'','',(h3_str=='长度'?'km':'条'));
-    odiv.scrollIntoView();
+    var odiv_m=document.getElementById('div_rank_f6t_flot_m_'+csno);
+    odiv_m.innerHTML='';
+    odiv_m.style.height='';
+
+    var do_flot_m=true;
+    if (result_m.length==0){
+        do_flot_m=false;
+    } else if (result_m[0].length<2){
+        do_flot_m=false;
+    }
+    
+    if (do_flot_m){
+        odiv_m.style.height='600px';
+        flot_lines_b(result_m,'div_rank_f6t_flot_m_'+csno,'nw',false,'','',unit_str);
+        odiv_m.scrollIntoView();
+    }
+
+    var odiv_y=document.getElementById('div_rank_f6t_flot_y_'+csno);
+    odiv_y.innerHTML='';
+    odiv_y.style.height='';
+
+    var do_flot_y=true;
+    if (result_y.length==0){
+        do_flot_y=false;
+    }
+    
+    if (do_flot_y){
+        odiv_y.style.height='600px';
+        flot_lines_b(result_y,'div_rank_f6t_flot_y_'+csno,'nw',false,'','',unit_str);
+        odiv_y.scrollIntoView();
+    }
 }
 
 function rank_f6t(){
@@ -368,7 +423,11 @@ function rank_f6t(){
             
             var th_str='<tr><th style="cursor:pointer;" ondblclick="no_refresh_f6t(this);">No.</th><th>地区</th><th nowrap>'+one_h3.slice(2,)+'</th>'+th_month+th_difficult+th_year+hot_th;
             
-            odiv.insertAdjacentHTML('beforeend','<div id="div_rank_f6t_'+table_no+'"><h3><span class="span_rank_table_name_f6t">'+one_h3+'</span> <input style="width:10rem;" placeholder=\'filter\' onkeyup="if (event.key==\'Enter\'){filter_table_f6t(this);}" /> <span class="aclick" onclick="flot_f6t('+table_no+');" style="font-weight:normal;">flot</span></h3><table class="table_common" id="table_rank_f6t_'+table_no+'">'+th_str+tr_list.join('\n')+'</table><div id="div_rank_f6t_flot_'+table_no+'" style="width:90%;"></div></div>');
+            var buttons_str='<input style="width:10rem;" placeholder=\'filter\' onkeyup="if (event.key==\'Enter\'){filter_table_f6t(this);}" /> <span class="aclick" onclick="flot_f6t('+table_no+');" style="font-weight:normal;">flot</span>';
+            
+            var flot_str='<div id="div_rank_f6t_flot_m_'+table_no+'" style="width:90%;"></div><div id="div_rank_f6t_flot_y_'+table_no+'" style="width:90%;"></div>';
+            
+            odiv.insertAdjacentHTML('beforeend','<div id="div_rank_f6t_'+table_no+'"><h3><span class="span_rank_table_name_f6t">'+one_h3+'</span> '+buttons_str+'</h3><table class="table_common" id="table_rank_f6t_'+table_no+'">'+th_str+tr_list.join('\n')+'</table>'+flot_str+'</div>');
             table_no=table_no+1;
         }
         

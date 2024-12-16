@@ -213,27 +213,34 @@ function js_file_row_2_arg_common(arow,return_str=false){
 
 function menu_common(){
     var str_t=klmenu_hide_b('');
-    var klmenu1=[
-    '<span id="span_reg_common" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ reg</span>',    
-    '<span id="span_highlight_common" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ highlight</span>',    
-    '<span id="span_row_no_common" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ row no</span>',        
-    '<span id="span_http_links_common" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ http links</span>',    
-    '<span id="span_additional_fn_common" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ additional fn</span>',       
+    var klmenu1=[];
+
+    var group_list=[
+    ['⚪ reg','klmenu_check_b(this.id,true);',false,'span_reg_common'],
+    ['⚪ highlight','klmenu_check_b(this.id,true);',false,'span_highlight_common'],
+    ['⚪ line no','klmenu_check_b(this.id,true);',false,'span_line_no_common'],
     ];
+    klmenu1.push(menu_container_b(str_t,group_list,''));
+    
+    var group_list=[
+    ['⚪ http links','klmenu_check_b(this.id,true);',false,'span_http_links_common'],
+    ['⚪ additional fn','klmenu_check_b(this.id,true);',false,'span_additional_fn_common'],
+    ];
+    klmenu1.push(menu_container_b(str_t,group_list,''));
 
     var group_list=[
     ['⚪ table','klmenu_check_b(this.id,true);',true,'span_table_style_common'],
     ['⚪ columns','klmenu_check_b(this.id,true);',false,'span_table_columns_common'],
     ['⚪ row no','klmenu_check_b(this.id,true);',false,'span_table_row_no_common'],
-
-    ];    
+    ];
     klmenu1.push(menu_container_b(str_t,group_list,''));
     
     var klmenu_config=root_font_size_menu_b(str_t);
     klmenu_config=klmenu_config.concat([
     '<span class="span_menu" onclick="'+str_t+'th_set_common();">设定表格列名称</span>',
-    '<span class="span_menu" onclick="'+str_t+'upload_data_files_form_common();">上传数据文件</span>',
-    '<span class="span_menu" onclick="'+str_t+'sort_by_key_count_common();">当前条件按关键词出现次数排序</span>',    
+    '<span class="span_menu" onclick="'+str_t+'upload_data_files_form_common();">上传数据文件或从bigfile导入</span>',
+    '<span class="span_menu" onclick="'+str_t+'split_current_arr_common();">当前结果数组分割</span>',
+    '<span class="span_menu" onclick="'+str_t+'sort_by_key_count_common();">当前条件按输入的关键词出现次数排序</span>',    
     ]);
     
     if (!is_standalone_html_file_global){
@@ -260,7 +267,7 @@ function menu_common(){
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,icon_emoji_jscm_global,'18rem','1rem','1rem','60rem')+menu_files.join('')+'<span id="span_menu_more_common"></span>'+klmenu_b(klmenu_config,'⚙','19rem','1rem','1rem','60rem'),'','0rem')+' ');
     klmenu_check_b('span_reg_common',true);
     klmenu_check_b('span_highlight_common',true);
-    klmenu_check_b('span_row_no_common',true);
+    klmenu_check_b('span_line_no_common',true);
     klmenu_check_b('span_http_links_common',true);    
     klmenu_check_b('span_additional_fn_common',true);    
 
@@ -275,25 +282,65 @@ function menu_common(){
 
 function sort_by_key_count_common(){
     js_data_current_common_search_global=arr_key_includes_sort_b(js_data_current_common_search_global,search_key_split_b()[1],0);
+    page_common();
 }
 
 function upload_data_files_form_common(){
-    var blstr='<p>Select file: <input type="file" id="input_upload_data_files_common" multiple /> <span class="aclick" onclick="upload_data_files_result_common();">上传文件</span></p>';
+    var blstr='<p>Select file: <input type="file" id="input_upload_data_files_common" multiple /> <span class="aclick" onclick="upload_data_files_result_common();">上传文件</span>';
+    var bname=file_path_name_b(data_file_jscm_global);
+    if (bname[3]!==''){
+        blstr=blstr+'<span class="aclick" onclick="upload_data_file_from_bigfile_common();">从bigfile导入'+bname[3]+'</span>';
+    }
+    blstr=blstr+'</p>';
     document.getElementById('divhtml').innerHTML=blstr;
 }
 
-function upload_data_files_result_common(){
+function upload_data_file_from_bigfile_common(){
+    function sub_upload_data_file_from_bigfile_common_done(is_ok){
+        if (is_ok){
+            upload_data_files_result_common(eval(var_name_jscm_global));
+        } else {
+            alert('导入失败');
+        }
+    }
+    
+    var bname=file_path_name_b(data_file_jscm_global)[3];
+    if (bname=='' || var_name_jscm_global==''){return;}
+
+    eval(var_name_jscm_global+'=undefined'); 
+    
+    load_js_var_file_b(var_name_jscm_global,[],bname,sub_upload_data_file_from_bigfile_common_done,true,true);
+}
+
+function split_current_arr_common(){
+    var bllen=js_data_current_common_search_global.length;
+    if (bllen<2){return;}
+
+    var blrange=slice_range_get_b(bllen);
+    if (blrange===false){return;}
+
+    if (confirm('是否保留当前结果的 '+blrange+' 部分？')){
+        js_data_current_common_search_global=js_data_current_common_search_global.slice(blrange[0],blrange[1]);
+        current_len_refresh_common();
+    }
+}
+
+function upload_data_files_result_common(csarr=false){
     var fn_upload_data_files=fn_name_get_common('upload_data_files_');
     if (fn_upload_data_files!==''){
         try {
-            run_fn=eval(fn_upload_data_files);
-            upload_files_to_list_b('input_upload_data_files_common',run_fn);
+            run_fn=eval(fn_upload_data_files);  //调用形如 function upload_data_files_xxx 的自定义函数，在上传完毕后执行 - 保留注释
+            if (csarr===false){
+                upload_files_to_list_b('input_upload_data_files_common',run_fn,'.js');
+            } else {
+                run_fn(csarr,true);
+            }
         } catch (error){
             alert(str(error));
             console.log(error);
         }
     } else {
-        alert('未发现函数'+fn_upload_data_files);
+        alert('未发现 upload_data_files_'+js_additional_jscm_global+' 函数');
     }
 }
 
@@ -389,7 +436,7 @@ function search_common(cskey=false,row_no=1,show_html=true){
         }
     }
     
-    result_percent_b('span_count',js_data_current_common_search_global.length,raw_data_len_jscm_global);
+    current_len_refresh_common();
 
     clicked_row_no_jscm_global=row_no;
     var page_no=Math.ceil(row_no/rows_per_page_jscm_global);
@@ -542,7 +589,7 @@ function page_common(csno=1,show_html=true){
 }
 
 function table_option_get_common(){
-    var id_no=klmenu_check_b('span_row_no_common',false);
+    var id_no=klmenu_check_b('span_line_no_common',false);
     var is_table=klmenu_check_b('span_table_style_common',false);
     var table_columns=klmenu_check_b('span_table_columns_common',false);
     var show_table_row_no=klmenu_check_b('span_table_row_no_common',false);
@@ -610,14 +657,19 @@ function flot_load_common(file1=['flot'],flot_type=['time','symbol'],file2=[],fi
     load_fn_b('flot_import_js_b',-1,2000,sub_flot_load_common_flot);
 }
 
-function arr_len_refresh_common(varname){
-    raw_data_len_jscm_global=eval(varname).length;
+function current_len_refresh_common(){
+    var current_len=js_data_current_common_search_global.length;
+    result_percent_b('span_count',current_len,raw_data_len_jscm_global);
+}
+
+function arr_len_refresh_common(){
+    raw_data_len_jscm_global=eval(var_name_jscm_global).length;
     document.getElementById('span_count').innerText='('+raw_data_len_jscm_global+')';
 }
 
-function merge_data_common(varname,jsfile_list,ospan=false){    
+function merge_data_common(jsfile_list,ospan=false){    
     function sub_merge_data_common_done(){
-        arr_len_refresh_common(varname);
+        arr_len_refresh_common();
         if (ospan){
             ospan.outerHTML='';
         }
@@ -629,5 +681,5 @@ function merge_data_common(varname,jsfile_list,ospan=false){
     document.getElementById('span_count').innerText='数据载入中...';
 
     //jsfile_list 每个元素如："../jsdata/rmrb_online/rmrb_online_198801_200312_data.js" - 保留注释
-    merge_js_data_files_in_one_b(varname,jsfile_list,sub_merge_data_common_done,true);
+    merge_js_data_files_in_one_b(var_name_jscm_global,jsfile_list,sub_merge_data_common_done,true);
 }

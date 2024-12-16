@@ -31,5 +31,5 @@ function merge_data_learning_list(ospan){
         flist[blxl]=flist[blxl][1];
     }
 
-    merge_data_common('learning_list_global',flist,ospan);
+    merge_data_common(flist,ospan);
 }

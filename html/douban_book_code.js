@@ -905,26 +905,15 @@ function upload_data_files_form_dbb(){
 }
 
 function upload_data_files_result_dbb(){
+    function sub_upload_data_files_result_dbb_run(csresult){
+        douban_book_global=csresult;
+        document.getElementById('span_count').innerHTML='('+douban_book_global.length+')';
+        alert('导入完成');
+    }
+    
     function sub_upload_data_files_result_dbb_done(csarr){
-        var result_t=[];
-        for (let afile of csarr){
-            afile=afile[1].split('\n');
-            for (let arow of afile){
-                if (arow.startsWith('{')){
-                    result_t.push(arow);
-                }
-            }
-        }
-        
-        try {
-            result_t=eval('['+result_t.join('\n')+']');
-            douban_book_global=result_t;
-            document.getElementById('span_count').innerHTML='('+douban_book_global.length+')';                
-            alert('导入完成');
-        } catch (error){
-            alert(error);
-        }    
+        merge_js_lines_from_file_list_b(csarr,'{',sub_upload_data_files_result_dbb_run); 
     }
 
-    upload_files_to_list_b('input_upload_data_files_dbb',sub_upload_data_files_result_dbb_done);
+    upload_files_to_list_b('input_upload_data_files_dbb',sub_upload_data_files_result_dbb_done,'.js');
 }

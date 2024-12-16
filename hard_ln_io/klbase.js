@@ -3582,19 +3582,19 @@ function merge_js_data_files_in_one_b(varname,jsfile_list,run_fn,merge_current=f
         blxl=blxl+1;
         if (blxl>=bllen){
             eval(varname+'=merge_t');
-            if (typeof run_fn == 'function'){            
+            if (typeof run_fn == 'function'){
                 run_fn();
             }
             return;
         }
-        eval(varname+'=undefined');
+        eval(varname+'=undefined'); //每次均取消目标变量的定义 - 保留注释
         file_dom_create_b([jsfile_list[blxl]],true,'js');    
         load_var_b(varname,-1,1000,sub_merge_js_data_files_in_one_b);        
     }
     //-----------------------
     var blxl=0;
     var bllen=jsfile_list.length;
-    var merge_t=[];
+    var merge_t=[]; //数据暂存于临时变量 - 保留注释
     
     if (merge_current){
         for (let item of eval(varname)){
@@ -3602,7 +3602,7 @@ function merge_js_data_files_in_one_b(varname,jsfile_list,run_fn,merge_current=f
         }
     }
     
-    eval(varname+'=undefined');
+    eval(varname+'=undefined'); //取消目标变量的定义 - 保留注释
     file_dom_create_b([jsfile_list[blxl]],true,'js');    
     load_var_b(varname,-1,1000,sub_merge_js_data_files_in_one_b);
 }
@@ -4248,6 +4248,27 @@ function zero_prefix_b(csnum,prefix='0'){
     return [-1*bllen,prefix.repeat(bllen)];
 }
 
+function merge_js_lines_from_file_list_b(csarr,start_character='[',run_fn=false){
+    var result_t=[];
+    for (let afile of csarr){
+        afile=afile[1].split('\n');
+        for (let arow of afile){
+            if (arow.startsWith(start_character)){
+                result_t.push(arow);
+            }
+        }
+    }
+    
+    try {
+        result_t=eval('['+result_t.join('\n')+']');
+        if (typeof run_fn == 'function'){
+            run_fn(result_t);
+        }
+    } catch (error){
+        alert(error);
+    }
+}
+
 function upload_files_to_list_b(input_id,run_fn=false,csext='',csmax_count=10,csmax_size=false){
     function sub_upload_files_to_list_b_check(one_file){
         var error='';
@@ -4260,7 +4281,7 @@ function upload_files_to_list_b(input_id,run_fn=false,csext='',csmax_count=10,cs
         
         var blext=one_file.name.substring(one_file.name.toLowerCase().lastIndexOf('.'),).toLowerCase();
         if (!(','+csext+',').includes(','+blext+',')){
-            error='类型错误：'+one_file.name+' '+csext;
+            error='类型错误：'+one_file.name+' / '+csext+' / '+blext;
         }
         
         if (error!==''){
@@ -4271,7 +4292,7 @@ function upload_files_to_list_b(input_id,run_fn=false,csext='',csmax_count=10,cs
     
     function sub_upload_files_to_list_b_2_arr(){
         if (typeof run_fn == 'function'){
-            result_t.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});  //文件名 - 保留注释        
+            result_t.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});  //文件名 - 保留注释
             run_fn(result_t);
         }
     }
@@ -4403,6 +4424,7 @@ function arr_key_includes_sort_b(csarr,key_list,colno=-1){
         result_t.push([arow,blcount]);
     }
     result_t.sort(function(a,b){return a[1]<b[1]?1:-1;});   //逆序 - 保留注释
+    
     result_t=array_split_by_col_b(result_t,[0]);
     console.log('arr_key_includes_sort_b()',key_list,'费时：'+(performance.now() - t0) + ' milliseconds');
     return result_t;
@@ -4450,4 +4472,23 @@ function import_arr_b(csstr,var_name,is_csv=false,run_fn_onsuccess=false,run_fn_
             run_fn_onfailure();
         }
     }
+}
+
+function slice_range_get_b(cslen){
+    var blrange=prompt('输入分割范围0,'+cslen+'：');
+    if (blrange==null){return false;}
+        
+    blrange=blrange.replace(/\s/g,'').split(',');
+    if (blrange[0]==''){
+        blrange[0]=0;
+    } else {
+        blrange[0]=parseInt(blrange[0]);
+    }
+    
+    if (blrange.length==1){
+        blrange[1]=cslen;
+    } else {
+        blrange[1]=parseInt(blrange[1]);    
+    }
+    return blrange;
 }

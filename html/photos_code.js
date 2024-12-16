@@ -118,21 +118,8 @@ function album_select_klphotos(odom,isrand=false){
 
 function slice_klphotos(){
     var bllen=photodata_global.length;
-    var blrange=prompt('输入分割范围0,'+bllen+'：');
-    if (blrange==null){return;}
-        
-    blrange=blrange.replace(/\s/g,'').split(',');
-    if (blrange[0]==''){
-        blrange[0]=0;
-    } else {
-        blrange[0]=parseInt(blrange[0]);
-    }
-    
-    if (blrange.length==1){
-        blrange[1]=bllen;
-    } else {
-        blrange[1]=parseInt(blrange[1]);    
-    }
+    var blrange=slice_range_get_b(bllen);
+    if (blrange===false){return;}
 
     if (confirm('是否保留当前结果的 '+blrange+' 部分？')){
         photodata_global=photodata_global.slice(blrange[0],blrange[1]);
