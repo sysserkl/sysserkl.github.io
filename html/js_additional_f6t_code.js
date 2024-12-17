@@ -24,12 +24,18 @@ function menu_more_f6t(){
     ['⚪ 年份','klmenu_check_b(this.id,true);',false,'span_show_year_f6t'],
     ['⚪ 月份','klmenu_check_b(this.id,true);',false,'span_show_month_f6t'],
     ['⚪ 难度','klmenu_check_b(this.id,true);',false,'span_show_difficult_f6t'],
-    ['⚪ 过滤地名','klmenu_check_b(this.id,true);',false,'span_filter_district_f6t'],
+    ['⚪ 用户','klmenu_check_b(this.id,true);',false,'span_show_user_f6t'],
     ['⚪ 过渡色','klmenu_check_b(this.id,true);',false,'span_month_color_range_f6t'],
     ];
     klmenu1.push(menu_container_b(str_t,group_list,'统计显示：'));
+
+    var group_list=[
+    ['⚪ 过滤地名','klmenu_check_b(this.id,true);',false,'span_filter_district_f6t'],
+    ['⚪ 气泡检索仅限有图记录','klmenu_check_b(this.id,true);',false,'span_only_img_f6t'],
+    ];
+    klmenu1.push(menu_container_b(str_t,group_list,'统计显示：'));
     
-    return klmenu_b(klmenu1,'🏔','32rem','1rem','1rem','30rem');
+    return klmenu_b(klmenu1,'🏔','35rem','1rem','1rem','30rem');
 }
 
 function file_load_f6t(){
@@ -92,27 +98,36 @@ function city_name_get_f6t(csname){
 }
 
 function month_difficult_popup_generate_f6t(csstr,table_no,row_no,cstype){
-    return '<span class="span_box" onclick="hot_word_popup_event_f6t(event,this,'+table_no+','+row_no+',\''+cstype+'\');">'+csstr+'</span>';
+    return '<span class="span_box span_popup_f6t_'+cstype+'" onclick="hot_word_popup_event_f6t(event,this,'+table_no+','+row_no+',\''+cstype+'\');">'+csstr+'</span>';
 }
 
-function hot_word_popup_links_f6t(cslist,table_no,row_no,cstype='h',decimal_len=0){
+function hot_word_popup_links_f6t(cslist,table_no,row_no,cstype='h',decimal_len=0,min_value=0){
     var result_t=[];
     for (let item of cslist){
-        result_t.push('<span class="span_box" onclick="hot_word_popup_event_f6t(event,this,'+table_no+','+row_no+',\''+cstype+'\');">'+item[0]+'</span><font color="grey">('+item[1].toFixed(decimal_len)+')</font>');
+        if (item[1]<min_value){continue;}
+        result_t.push('<span class="span_box span_popup_f6t_'+cstype+'" onclick="hot_word_popup_event_f6t(event,this,'+table_no+','+row_no+',\''+cstype+'\');">'+item[0]+'</span><font color="grey">('+item[1].toFixed(decimal_len)+')</font>');
     }
     return result_t.join(' ');
 }
 
-function hot_word_popup_event_f6t(event,oword,table_no,row_no,cstype){
+function distrct_name_get_f6t(table_no,row_no){
     var otr=document.getElementById('tr_rank_f6t_'+table_no+'_'+row_no);
-    if (!otr){return;}
+    if (!otr){return [false,false];}
     var otds=otr.querySelectorAll('td');
-    if (otds.length<2){return;}
+    if (otds.length<2){return [otr,false];}
     
-    var blkey=oword.innerText;
     var distrct_name=otds[1].innerText;
+    return [otr,distrct_name];
+}
+
+function hot_word_popup_event_f6t(event,oword,table_no,row_no,cstype){
+    var otr,distrct_name;
+    [otr,distrct_name]=distrct_name_get_f6t(table_no,row_no);
+    if (distrct_name===false){return [];}
     
     var col_no=0;
+    var blkey=oword.innerText;
+
     switch (cstype){
         case 'm':
             col_no=4;
@@ -125,12 +140,15 @@ function hot_word_popup_event_f6t(event,oword,table_no,row_no,cstype){
                     break;
                 }
             }
-            if (blmonth===-1){return;}
+            if (blmonth===-1){return [];}
             blkey='-'+('00'+(blmonth+1)).slice(-2,)+'-';
             break;
         case 'y':
             col_no=4;
             blkey=blkey.slice(0,-1)+'-';
+            break;
+        case 'u':
+            col_no=1;
             break;
         case 'd':
             col_no=3;
@@ -144,7 +162,7 @@ function hot_word_popup_event_f6t(event,oword,table_no,row_no,cstype){
                     break;
                 }
             }
-            if (difficult_no===-1){return;}
+            if (difficult_no===-1){return [];}
             blkey=difficult_range[difficult_no];
             if (blkey=='难+'){
                 var difficult_range=difficult_range_get_f6t();
@@ -156,28 +174,38 @@ function hot_word_popup_event_f6t(event,oword,table_no,row_no,cstype){
             break;
     }
     
+    var only_img=klmenu_check_b('span_only_img_f6t',false);
+    hot_word_html_f6t(event,distrct_name,cstype,blkey,col_no,cstype=='u',only_img);
+}
+
+function hot_word_html_f6t(event,distrct_name,cstype,cskey,col_no,show_user=false,only_img=false,csmax=10){
     var result_t=[];
     var blno=0;
+    
     for (let item of js_data_current_common_search_global){
         if (!item[0][8].startsWith(distrct_name) && !item[0][9].startsWith(distrct_name)){continue;}
-        if (cstype=='d'){
-            if (!blkey.includes(item[0][col_no])){continue;}
+        if (only_img && item[0][10]=='no img'){continue;}
+        
+        if (['d','u'].includes(cstype)){
+            if (!cskey.includes(item[0][col_no])){continue;}
         } else {
-            if (!item[0][col_no].includes(blkey)){continue;}
+            if (!item[0][col_no].includes(cskey)){continue;}
         }
         
         blno=blno+1;
         var blname=name_ym_distance_difficult_get_f6t(item[0])[0];
-        result_t.push([item[0][4]+' ('+item[0][3]+') '+item[0][0],item[0][4],blname]);
-        
-        if (blno>=10){break;}
+        result_t.push([item[0][4]+' ('+item[0][3]+') '+(show_user?'('+item[0][1]+') ':'')+item[0][0],item[0][4],blname]);
+        if (csmax>=0 && blno>=csmax){break;}
     }
     
-    if (result_t.length==0){return;}
+    if (result_t.length==0){return [];}
     result_t.sort(function (a,b){return zh_sort_b(a,b,true,2);});
     result_t.sort(function (a,b){return a[1]>b[1]?-1:1;});
     result_t=array_split_by_col_b(result_t,[0]);
-    popup_event_div_b(event,'div_mini_search_f6t', array_2_li_b(result_t));
+    if (event!==false){
+        popup_event_div_b(event,'div_mini_search_f6t', array_2_li_b(result_t));
+    }
+    return result_t;
 }
 
 function flot_f6t(csno){
@@ -292,6 +320,12 @@ function rank_f6t(){
                 county_list[one_district][year_type].sort(function (a,b){return a[0]>b[0]?-1:1;});
                 county_list[one_district][year_type].sort(function (a,b){return a[1]>b[1]?-1:1;});
             }
+            
+            for (let user_type of ['user_count','user_distance']){
+                county_list[one_district][user_type]=object2array_b(county_list[one_district][user_type],true,2);
+                county_list[one_district][user_type].sort(function (a,b){return zh_sort_b(a,b,true,0);});
+                county_list[one_district][user_type].sort(function (a,b){return a[1]>b[1]?-1:1;});
+            }
                         
             cs_dict[one_district.slice(0,1)].push([
             one_district.slice(2,), //地区
@@ -304,14 +338,16 @@ function rank_f6t(){
             object2array_b(county_list[one_district]['difficult_distance'],true,2),
             county_list[one_district]['year_count'],
             county_list[one_district]['year_distance'],
+            county_list[one_district]['user_count'],
+            county_list[one_district]['user_distance'],
             ]);
         }
         
         var h3_list={
-        '县市线路条数':['s',[0,1,3,5,6,8],0],
-        '地市线路条数':['c',[0,1,3,5,6,8],0],
-        '县市线路长度':['s',[0,2,4,5,7,9],1],
-        '地市线路长度':['c',[0,2,4,5,7,9],1],
+        '县市线路条数':['s',[0,1,3,5,6,8,10],0],
+        '地市线路条数':['c',[0,1,3,5,6,8,10],0],
+        '县市线路长度':['s',[0,2,4,5,7,9,11],1],
+        '地市线路长度':['c',[0,2,4,5,7,9,11],1],
         };
         
         var odiv=document.getElementById('div_status_common');
@@ -331,15 +367,17 @@ function rank_f6t(){
         }
         
         var th_year=(show_year?'<th>年份</th>':'');
+        var th_user=(show_user?'<th>用户</th>':'');
         
-        var th_len=(show_month?12:0)+(show_difficult?6:0)+(show_year?1:0)+2;
+        var th_len=(show_month?12:0)+(show_difficult?6:0)+(show_year?1:0)+(show_user?1:0)+2;
         
         var hot_th='</tr>';
-        if (!show_month && !show_difficult && !show_year && show_hot_words){
+        if (maybe_only_show_words && show_hot_words){
             hot_th='<th>热词</th></tr>';
         }
-        
+
         var table_no=0;
+        var div_column_count=(ismobile_b()?1:2);
         for (let one_h3 in h3_list){
             var one_row=h3_list[one_h3];
             var tr_list=array_split_by_col_b(cs_dict[one_row[0]],one_row[1]);
@@ -397,15 +435,21 @@ function rank_f6t(){
                     item[5]='';
                 }
                 
+                if (show_user){
+                    item[6]='<td class="td_rank_user_f6t" id="td_rank_user_f6t_'+table_no+'_'+row_no+'">'+hot_word_popup_links_f6t(item[6].slice(0,25),table_no,row_no,'u',one_row[2],3)+'</td>';
+                } else {
+                    item[6]='';
+                }
+                
                 var row_span=1;
                 var hot_tr='</tr>';
                 
-                if (!show_month && !show_difficult && !show_year){
+                if (maybe_only_show_words){
                     if (show_hot_words){
-                        hot_tr='<td>'+hot_word_popup_links_f6t(item[3],table_no,row_no)+'</td></tr>';
+                        hot_tr='<td class="td_rank_hot_words_f6t" id="td_rank_hot_words_f6t_'+table_no+'_'+row_no+'">'+hot_word_popup_links_f6t(item[3],table_no,row_no)+'</td></tr>';
                     }
                 } else if (item[3].length>0){
-                    hot_tr='</tr><tr class="tr_rank_hot_words_f6t"><td colspan='+(th_len+1)+'>'+hot_word_popup_links_f6t(item[3],table_no,row_no)+'</td></tr>';
+                    hot_tr='</tr><tr class="tr_rank_hot_words_f6t"><td class="td_rank_hot_words_f6t" id="td_rank_hot_words_f6t_'+table_no+'_'+row_no+'" colspan='+(th_len+1)+'>'+hot_word_popup_links_f6t(item[3],table_no,row_no)+'</td></tr>';
                     row_span=2;
                 }
                 
@@ -416,16 +460,16 @@ function rank_f6t(){
                     }  //在全部结果中，筛选哪些tr显示 - 保留注释
                 }
                 
-                tr_list[blno]='<tr id="tr_rank_f6t_'+table_no+'_'+row_no+'"><td nowrap rowspan='+row_span+'>'+(row_no+1)+'</td><td nowrap rowspan='+row_span+' class="td_rank_district_f6t">'+item[0]+'</td><td align=right nowrap rowspan='+row_span+'>'+item[1].toFixed(one_row[2])+'</td>'+item[2].join('')+item[4].join('')+item[5]+hot_tr;
+                tr_list[blno]='<tr id="tr_rank_f6t_'+table_no+'_'+row_no+'"><td nowrap rowspan='+row_span+'>'+(row_no+1)+'</td><td nowrap rowspan='+row_span+' class="td_rank_district_f6t">'+item[0]+'</td><td align=right nowrap rowspan='+row_span+'>'+item[1].toFixed(one_row[2])+'</td>'+item[2].join('')+item[4].join('')+item[5]+item[6]+hot_tr;
 
                 row_no=row_no+1;
             }
             
-            var th_str='<tr><th style="cursor:pointer;" ondblclick="no_refresh_f6t(this);">No.</th><th>地区</th><th nowrap>'+one_h3.slice(2,)+'</th>'+th_month+th_difficult+th_year+hot_th;
+            var th_str='<tr><th style="cursor:pointer;" ondblclick="no_refresh_f6t(this);">No.</th><th>地区</th><th nowrap>'+one_h3.slice(2,)+'</th>'+th_month+th_difficult+th_year+th_user+hot_th;
             
-            var buttons_str='<input style="width:10rem;" placeholder=\'filter\' onkeyup="if (event.key==\'Enter\'){filter_table_f6t(this);}" /> <span class="aclick" onclick="flot_f6t('+table_no+');" style="font-weight:normal;">flot</span>';
+            var buttons_str='<input style="width:10rem;" placeholder=\'filter\' onkeyup="if (event.key==\'Enter\'){filter_table_f6t(this);}" /> <span class="aclick" onclick="flot_f6t('+table_no+');" style="font-weight:normal;">flot</span> <select class="select_rank_f6t_html_type"><option>h</option><option>u</option></select> <span class="aclick" onclick="batch_links_generate_f6t(this,'+table_no+');" style="font-weight:normal;">html</span>';
             
-            var flot_str='<div id="div_rank_f6t_flot_m_'+table_no+'" style="width:90%;"></div><div id="div_rank_f6t_flot_y_'+table_no+'" style="width:90%;"></div>';
+            var flot_str='<div id="div_rank_f6t_flot_m_'+table_no+'" style="width:90%;"></div><div id="div_rank_f6t_flot_y_'+table_no+'" style="width:90%;"></div><div id="div_rank_f6t_html_'+table_no+'" style="width:90%;column-count:'+div_column_count+';"></div>';
             
             odiv.insertAdjacentHTML('beforeend','<div id="div_rank_f6t_'+table_no+'"><h3><span class="span_rank_table_name_f6t">'+one_h3+'</span> '+buttons_str+'</h3><table class="table_common" id="table_rank_f6t_'+table_no+'">'+th_str+tr_list.join('\n')+'</table>'+flot_str+'</div>');
             table_no=table_no+1;
@@ -461,7 +505,7 @@ function rank_f6t(){
 
         for (let one_district of from_to_list){
             if (county_list[one_district]==undefined){
-                county_list[one_district]={'name':[],'count':0,'distance':0,'year_count':{},'year_distance':{},'month_count':{},'month_distance':{},'difficult_count':{},'difficult_distance':{}};
+                county_list[one_district]={'name':[],'count':0,'distance':0,'year_count':{},'year_distance':{},'month_count':{},'month_distance':{},'difficult_count':{},'difficult_distance':{},'user_count':{},'user_distance':{}};
                 for (let month_no=1;month_no<=12;month_no++){
                     var blkey='m_'+('00'+month_no).slice(-2,)+'月';
                     county_list[one_district]['month_count'][blkey]=0;
@@ -507,8 +551,18 @@ function rank_f6t(){
                 county_list[one_district]['year_distance'][year_key]=0;
             }
             county_list[one_district]['year_count'][year_key]=county_list[one_district]['year_count'][year_key]+1;
-            county_list[one_district]['year_distance'][year_key]=county_list[one_district]['year_distance'][year_key]+value_list[2];            
-            
+            county_list[one_district]['year_distance'][year_key]=county_list[one_district]['year_distance'][year_key]+value_list[2];
+
+            var user_key='u_'+item[0][1];
+            if (county_list[one_district]['user_count'][user_key]==undefined){
+                county_list[one_district]['user_count'][user_key]=0;
+            }
+            if (county_list[one_district]['user_distance'][user_key]==undefined){
+                county_list[one_district]['user_distance'][user_key]=0;
+            }
+            county_list[one_district]['user_count'][user_key]=county_list[one_district]['user_count'][user_key]+1;
+            county_list[one_district]['user_distance'][user_key]=county_list[one_district]['user_distance'][user_key]+value_list[2];
+
             county_list[one_district]['distance']=county_list[one_district]['distance']+value_list[2];
         }
         
@@ -521,10 +575,14 @@ function rank_f6t(){
         }
     }
     
-    var show_hot_words=klmenu_check_b('span_show_hot_words_f6t',false);        
-    var show_year=klmenu_check_b('span_show_year_f6t',false);        
-    var show_month=klmenu_check_b('span_show_month_f6t',false);        
-    var show_difficult=klmenu_check_b('span_show_difficult_f6t',false);        
+    var show_hot_words=klmenu_check_b('span_show_hot_words_f6t',false);
+    
+    var show_year=klmenu_check_b('span_show_year_f6t',false);
+    var show_month=klmenu_check_b('span_show_month_f6t',false);
+    var show_difficult=klmenu_check_b('span_show_difficult_f6t',false);
+    var show_user=klmenu_check_b('span_show_user_f6t',false);
+        
+    var maybe_only_show_words=(!show_month && !show_difficult && !show_year && !show_user);
     
     if (klmenu_check_b('span_filter_district_f6t',false)){
         var filter_district=document.getElementById('input_search').value;
@@ -560,8 +618,9 @@ function filter_table_f6t(oinput){
     var otable=oinput.parentNode.parentNode.querySelector('table');
     var otrs=otable.querySelectorAll('tr');
     if (otrs.length==0){return;}
-    
-    obj_search_show_hide_b(otrs,'',oinput.value,false,true);
+
+    var is_reg=klmenu_check_b('span_reg_common',false);
+    obj_search_show_hide_b(otrs,'',oinput.value,is_reg,false);
     otrs[0].style.display='';   //th 行 - 保留注释
     //return;
     //if (!otable.querySelector('tr.tr_rank_hot_words_f6t')){return;}  //不存在热词 - 保留注释
@@ -592,4 +651,84 @@ function no_refresh_f6t(oth){
             blno=blno+1;
         }
     }
+}
+
+function batch_links_generate_f6t(obutton,table_no){
+    function sub_batch_links_generate_f6t_one(){
+        if (blxl>=bllen){
+            var osub=document.getElementById('div_rank_f6t_html_'+table_no);
+            osub.innerHTML=result_t.join('\n')+'<p><b>Total:</b> '+new Set(unique_links).size+'</p>';
+            osub.scrollIntoView();
+            document.title=old_title;
+            console.log('batch_links_generate_f6t() 费时：'+(performance.now() - t0) + ' milliseconds');
+            return;
+        }
+        
+        var one_tr=otrs[blxl];
+        if (one_tr.style.display!=='none'){
+            var otds=one_tr.querySelectorAll('td.'+csclass);
+            for (let one_td of otds){
+                var blid=one_td.getAttribute('id').split('_').slice(-2,);
+
+                var distrct_name=distrct_name_get_f6t(blid[0],blid[1])[1];
+                if (distrct_name===false){continue;}
+                var key_no=0;
+                var ospans=one_td.querySelectorAll('span.span_popup_f6t_'+cstype);
+                var district_t=[];
+                for (let one_span of ospans){
+                    var blkey=one_span.innerText;
+                    var links_t=hot_word_html_f6t(false,distrct_name,cstype,blkey,col_no,false,only_img);
+                    if (links_t.length>0){
+                        unique_links=unique_links.concat(links_t);
+                        key_no=key_no+1;
+                        if (cstype=='h'){
+                            var bllink='https://www.foooooot.com/search/trip/all/1/all/time/descent/?keyword='+encodeURIComponent(distrct_name+' '+blkey);
+                            bllink='<a href="'+bllink+'" target=_blank>'+blkey+'</a>';
+                        } else {
+                            var bllink=blkey;
+                        }
+                        district_t.push('<h3>'+bllink+'<span style="font-size:small;font-weight:normal;"> / '+distrct_name+'</span> '+key_no+'<span style="font-size:small;font-weight:normal;"> / '+district_no+'</span></h3>'+array_2_li_b(links_t));
+                    }
+                }
+                if (district_t.length>0){
+                    result_t.push(district_t.join('\n'));
+                    district_no=district_no+1;
+                }
+            }
+        }
+        
+        blxl=blxl+1;
+        if (blxl % 10 == 0){
+            document.title=blxl+'/'+bllen+' - '+old_title;
+            setTimeout(sub_batch_links_generate_f6t_one,1);
+        } else {
+            sub_batch_links_generate_f6t_one();
+        }
+    }
+
+    var t0=performance.now();       
+
+    var odiv=document.getElementById('div_rank_f6t_'+table_no);
+    var only_img=klmenu_check_b('span_only_img_f6t',false);
+    var result_t=[];
+    
+    var cstype=obutton.parentNode.querySelector('select.select_rank_f6t_html_type').value;
+    switch (cstype){
+        case 'h':
+            var col_no=0;
+            var csclass='td_rank_hot_words_f6t';
+            break;
+        case 'u':
+            var col_no=1;
+            var csclass='td_rank_user_f6t';
+            break;
+    }
+    
+    var district_no=1;
+    var otrs=odiv.querySelectorAll('tr');
+    var blxl=0;
+    var bllen=otrs.length;
+    var unique_links=[];
+    var old_title=document.title;
+    sub_batch_links_generate_f6t_one();
 }
