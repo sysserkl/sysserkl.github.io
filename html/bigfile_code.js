@@ -2,13 +2,20 @@ function init_bigfile(){
     file_name_bigfile_global='';
     file_content_bigfile_global='';
     raw_data_bigfile_global=[];
+    current_data_bigfile_global=[];
+    is_all_result_bigfile_global=true;
+    rows_per_page_bigfile_global=10;
     
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.6rem'),true,false,2);
     input_with_x_b('input_search',11);
-    character_2_icon_b('B');    
-    var_generate_temp_txt_share_b();
+    character_2_icon_b('B');
+    var_generate_temp_txt_share_b();    //用于 导入 临时单词 - 保留注释
     menu_bigfile();
     refresh_bigfile();
+}
+
+function recent_bigfile(csstr=''){
+    recent_search_b('recent_search_bigfile',csstr,'search_bigfile','div_recent_search',[],25,false); //此行保留 - 保留注释
 }
 
 function refresh_bigfile(){
@@ -29,6 +36,7 @@ function menu_bigfile(){
 
     var klmenu_config=root_font_size_menu_b(str_t);
     klmenu_config=klmenu_config.concat([
+    '<span id="span_reg_bigfile" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ reg</span>',        
     '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'bigfile\');">更新版本</span>',
     '<span id="span_first_source_bigfile" class="span_menu" onclick="'+str_t+'first_source_set_bigfile();">⚪ 将bigfile作为第一数据源</span>',    
     '<span class="span_menu" onclick="'+str_t+'local_storage_form_bigfile();">缓存导入</span>',    
@@ -141,7 +149,7 @@ function read_fn_bigfile(raw_data_bigfile){
 }
 
 function sort_bigfile(is_desc=false){
-    document.getElementById('span_count').innerHTML='('+raw_data_bigfile_global.length+')';      
+    document.getElementById('span_count').innerHTML='('+raw_data_bigfile_global.length+')';
     var result_t=[];
     //raw_data_bigfile_global 每个元素为数组，形如：[ 0, "selenium_enwords_data.js", 'var selenium_enwords_data_original_global=[\n["http://bevcooks.com/2023/02/broccoli-cheddar-chicken-p……en and Chancellor Olaf Scholz of Germany Before Bilateral Meeting","The White House", ["conv"]],\n];\n', "2.46M", "9/23/2024, 3:57:26 PM" ]，//第一个元素为 id，值都是 0，为无效字段， - 保留注释
     
@@ -162,20 +170,61 @@ function sort_bigfile(is_desc=false){
             raw_data_bigfile_global.sort(function (a,b){return new Date(a[4])<new Date(b[4])?-1:1;});        
         }    
     }
-    
-    var today=new Date().toLocaleString().split(',')[0];
-    for (let item of raw_data_bigfile_global){
-        result_t.push('<li><span class="span_name_bigfile" style="font-weight:bold;">'+specialstr92_b(item[1])+'</span>: '+specialstr92_b(item[2])+' <span style="font-size:0.8rem;color:'+scheme_global['memo']+';">('+item[3]+' '+(item[4].startsWith(today)?'<span style="color:'+scheme_global['a-hover']+';">'+item[4]+'</span>':item[4])+')</span><span class="oblong_box" onclick="delete_bigfile(this);" title="删除记录">🗑</span> <span class="oblong_box" onclick="copy_bigfile(this);" title="复制文件名">📎</span>  <span class="oblong_box" onclick="export_bigfile(this);" title="另存为文件">📤</span></li>');
+    search_bigfile();
+}
+
+function search_bigfile(cskey=false){
+    var oinput=document.getElementById('input_search');
+    if (cskey===false){
+        cskey=oinput.value.trim();
+    }
+    oinput.value=cskey;
+
+    recent_bigfile(cskey);
+    var isreg=klmenu_check_b('span_reg_bigfile',false);
+    [cskey,isreg]=str_reg_check_b(cskey,isreg,true);
+
+    current_data_bigfile_global=[];
+    is_all_result_bigfile_global=true;
+
+    [current_data_bigfile_global,is_all_result_bigfile_global]=common_search_b(cskey,isreg,raw_data_bigfile_global,-1);
+
+    result_percent_b('span_count',current_data_bigfile_global.length,raw_data_bigfile_global.length,1);
+    page_bigfile(1);
+}
+
+function page_bigfile(csno){
+    function sub_page_bigfile_one(csxl){
+        var item=current_data_bigfile_global[csxl][0];
+        return '<li><span class="span_name_bigfile" style="font-weight:bold;">'+specialstr92_b(item[1])+'</span>: '+specialstr92_b(item[2])+' <span style="font-size:0.8rem;color:'+scheme_global['memo']+';">('+item[3]+' '+(item[4].startsWith(today)?'<span style="color:'+scheme_global['a-hover']+';">'+item[4]+'</span>':item[4])+')</span><span class="oblong_box" onclick="delete_bigfile(this);" title="删除记录">🗑</span> <span class="oblong_box" onclick="copy_bigfile(this);" title="复制文件名">📎</span>  <span class="oblong_box" onclick="export_bigfile(this);" title="另存为文件">📤</span> <span style="font-size:0.8rem;color:'+scheme_global['memo']+';">('+current_data_bigfile_global[csxl][1]+')</span></li>';
     }
     
+    var today=new Date().toLocaleString().split(',')[0];
+    var cslen=current_data_bigfile_global.length;
+    var bljg=page_combination_b(cslen,rows_per_page_bigfile_global,csno,'page_bigfile','locate_bigfile',false,1,10);  
+    //-----------------------
+    var result_t=[];
+    var blend=Math.min(csno-1+rows_per_page_bigfile_global,cslen);
+
+    for (let blxl=csno-1;blxl<blend;blxl++){
+        result_t.push(sub_page_bigfile_one(blxl));
+    }
+
     var odiv=document.getElementById('divhtml');
 
     if (result_t.length==0){
         odiv.innerHTML='';
     } else {
-        odiv.innerHTML='<ol>'+result_t.join('\n')+'</ol>';
-        mouseover_mouseout_oblong_span_b(odiv.querySelectorAll('span.oblong_box'));        
+        odiv.innerHTML=bljg+'<ol>'+result_t.join('\n')+'</ol>\n'+bljg;
+        mouseover_mouseout_oblong_span_b(odiv.querySelectorAll('span.oblong_box'));
     }
+}
+
+function locate_bigfile(pages){
+    var blno=page_location_b(pages);
+    if (blno!==false){
+        page_bigfile((blno-1)*rows_per_page_bigfile_global+1,rows_per_page_bigfile_global);
+    }        
 }
 
 function copy_bigfile(ospan){
