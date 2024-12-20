@@ -34,8 +34,16 @@ function menu_more_f6t(){
     ['⚪ 气泡检索仅限有图记录','klmenu_check_b(this.id,true);',false,'span_only_img_f6t'],
     ];
     klmenu1.push(menu_container_b(str_t,group_list,'统计显示：'));
+
+    var group_list=[
+    ['气泡条数：<input id="input_popup_max_rows_f6t" style="width:2rem;" value=10 />','',false,''],
+    ['热词个数：<input id="input_max_hot_words_f6t" style="width:2rem;" value=15 />','',false,''],
+    ['条数最小值：<input id="input_min_count_f6t" style="width:2rem;" value=3 />','',false,''],
+    ['长度最小值：<input id="input_min_len_f6t" style="width:2rem;" value=10 />','',false,''],
+    ];
+    klmenu1.push(menu_container_b(str_t,group_list,'统计显示：'));
     
-    return klmenu_b(klmenu1,'🏔','35rem','1rem','1rem','30rem');
+    return klmenu_b(klmenu1,'🏔','42rem','1rem','1rem','30rem');
 }
 
 function file_load_f6t(){
@@ -178,9 +186,12 @@ function hot_word_popup_event_f6t(event,oword,table_no,row_no,cstype){
     hot_word_html_f6t(event,distrct_name,cstype,blkey,col_no,cstype=='u',only_img);
 }
 
-function hot_word_html_f6t(event,distrct_name,cstype,cskey,col_no,show_user=false,only_img=false,csmax=10){
+function hot_word_html_f6t(event,distrct_name,cstype,cskey,col_no,show_user=false,only_img=false,csmax=false){
     var result_t=[];
     var blno=0;
+    if (csmax===false){
+        csmax=parseInt(document.getElementById('input_popup_max_rows_f6t').value.trim()) || 10;
+    }
     
     for (let item of js_data_current_common_search_global){
         if (!item[0][8].startsWith(distrct_name) && !item[0][9].startsWith(distrct_name)){continue;}
@@ -293,7 +304,7 @@ function rank_f6t(){
         
         if (show_hot_words){
             var blstr=county_list[key_list[blxl]]['name'].join(' ').replace(/[—～（）、，]/g,' ');
-            county_list[key_list[blxl]]['name']=count_words_b(blstr,split_words_b(blstr,true,diy_words_list),2).slice(0,15);
+            county_list[key_list[blxl]]['name']=count_words_b(blstr,split_words_b(blstr,true,diy_words_list),2).slice(0,max_hot_words);
         } else {
             county_list[key_list[blxl]]['name']='';
         }
@@ -344,6 +355,7 @@ function rank_f6t(){
         }
         
         var h3_list={
+        //'c' city - 保留注释
         '县市线路条数':['s',[0,1,3,5,6,8,10],0],
         '地市线路条数':['c',[0,1,3,5,6,8,10],0],
         '县市线路长度':['s',[0,2,4,5,7,9,11],1],
@@ -383,6 +395,8 @@ function rank_f6t(){
             var tr_list=array_split_by_col_b(cs_dict[one_row[0]],one_row[1]);
             tr_list.sort(function (a,b){return zh_sort_b(a,b,true,0);});
             tr_list.sort(function (a,b){return a[1]>b[1]?-1:1;});
+            
+            var min_value=(one_h3.endsWith('条数')?min_count:min_len);
             
             var row_no=0;
             for (let blno=0,lent=tr_list.length;blno<lent;blno++){
@@ -430,13 +444,13 @@ function rank_f6t(){
                 }
                 
                 if (show_year){
-                    item[5]='<td class="td_rank_year_f6t">'+hot_word_popup_links_f6t(item[5],table_no,row_no,'y',one_row[2])+'</td>';
+                    item[5]='<td class="td_rank_year_f6t">'+hot_word_popup_links_f6t(item[5],table_no,row_no,'y',one_row[2],min_value)+'</td>';
                 } else {
                     item[5]='';
                 }
                 
                 if (show_user){
-                    item[6]='<td class="td_rank_user_f6t" id="td_rank_user_f6t_'+table_no+'_'+row_no+'">'+hot_word_popup_links_f6t(item[6].slice(0,25),table_no,row_no,'u',one_row[2],3)+'</td>';
+                    item[6]='<td class="td_rank_user_f6t" id="td_rank_user_f6t_'+table_no+'_'+row_no+'">'+hot_word_popup_links_f6t(item[6].slice(0,max_hot_words),table_no,row_no,'u',one_row[2],min_value)+'</td>';
                 } else {
                     item[6]='';
                 }
@@ -446,10 +460,10 @@ function rank_f6t(){
                 
                 if (maybe_only_show_words){
                     if (show_hot_words){
-                        hot_tr='<td class="td_rank_hot_words_f6t" id="td_rank_hot_words_f6t_'+table_no+'_'+row_no+'">'+hot_word_popup_links_f6t(item[3],table_no,row_no)+'</td></tr>';
+                        hot_tr='<td class="td_rank_hot_words_f6t" id="td_rank_hot_words_f6t_'+table_no+'_'+row_no+'">'+hot_word_popup_links_f6t(item[3],table_no,row_no,'h',one_row[2],min_value)+'</td></tr>';
                     }
                 } else if (item[3].length>0){
-                    hot_tr='</tr><tr class="tr_rank_hot_words_f6t"><td class="td_rank_hot_words_f6t" id="td_rank_hot_words_f6t_'+table_no+'_'+row_no+'" colspan='+(th_len+1)+'>'+hot_word_popup_links_f6t(item[3],table_no,row_no)+'</td></tr>';
+                    hot_tr='</tr><tr class="tr_rank_hot_words_f6t"><td class="td_rank_hot_words_f6t" id="td_rank_hot_words_f6t_'+table_no+'_'+row_no+'" colspan='+(th_len+1)+'>'+hot_word_popup_links_f6t(item[3],table_no,row_no,'h',one_row[2],min_value)+'</td></tr>';
                     row_span=2;
                 }
                 
@@ -581,7 +595,10 @@ function rank_f6t(){
     var show_month=klmenu_check_b('span_show_month_f6t',false);
     var show_difficult=klmenu_check_b('span_show_difficult_f6t',false);
     var show_user=klmenu_check_b('span_show_user_f6t',false);
-        
+    var max_hot_words=parseInt(document.getElementById('input_max_hot_words_f6t').value.trim()) || 15;
+    var min_count=parseInt(document.getElementById('input_min_count_f6t').value.trim()) || 0;
+    var min_len=parseInt(document.getElementById('input_min_len_f6t').value.trim()) || 0;
+    
     var maybe_only_show_words=(!show_month && !show_difficult && !show_year && !show_user);
     
     if (klmenu_check_b('span_filter_district_f6t',false)){
@@ -677,7 +694,7 @@ function batch_links_generate_f6t(obutton,table_no){
                 var district_t=[];
                 for (let one_span of ospans){
                     var blkey=one_span.innerText;
-                    var links_t=hot_word_html_f6t(false,distrct_name,cstype,blkey,col_no,false,only_img);
+                    var links_t=hot_word_html_f6t(false,distrct_name,cstype,blkey,col_no,false,only_img,popup_rows);
                     if (links_t.length>0){
                         unique_links=unique_links.concat(links_t);
                         key_no=key_no+1;
@@ -710,6 +727,8 @@ function batch_links_generate_f6t(obutton,table_no){
 
     var odiv=document.getElementById('div_rank_f6t_'+table_no);
     var only_img=klmenu_check_b('span_only_img_f6t',false);
+    var popup_rows=parseInt(document.getElementById('input_popup_max_rows_f6t').value.trim()) || 10;
+    
     var result_t=[];
     
     var cstype=obutton.parentNode.querySelector('select.select_rank_f6t_html_type').value;
