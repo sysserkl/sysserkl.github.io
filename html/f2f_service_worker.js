@@ -8,6 +8,7 @@ self.addEventListener('install', function(e) {
             '../hard_ln_io/klbase_css.js',
             '../hard_ln_io/klbase_date.js',
             '../hard_ln_io/klbase_flot.js',
+            '../hard_ln_io/klbase_idb.js',
             '../module/jquery.js',
             '../module/flot/jquery.flot.min.js',
             '../module/flot/jquery.flot.time.min.js',
