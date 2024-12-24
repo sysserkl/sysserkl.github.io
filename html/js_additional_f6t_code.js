@@ -3,6 +3,7 @@ function style_load_f6t(){
     '#divhtml {font-size:0.85rem;}',
     '#div_status_common {font-size:0.85rem;}',
     '#div_mini_search_f6t {font-size:0.85rem;}',
+    'a.a_link_f6t:visited {color:'+scheme_global['memo']+';}',  //:visited 不能有空格 - 保留注释
     ];
     style_generate_b(style_list,true);
 }
@@ -84,7 +85,7 @@ function col_rearrange_f6t(){
     var result_t=[];
     for (let item of js_data_current_common_search_global){
         var list_t=[].concat(item[0]);
-        list_t[1]='<a href="'+list_t[0]+'" target=_blank>'+list_t[1]+'</a>';
+        list_t[1]='<a class="a_link_f6t" href="'+list_t[0]+'" target=_blank>'+list_t[1]+'</a>';
         result_t.push([list_t.slice(1,),item[1]]);
     }
     return result_t;

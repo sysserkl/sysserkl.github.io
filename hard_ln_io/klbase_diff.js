@@ -100,7 +100,7 @@ function remove_empty_lines_diff_b(){
 }
 
 function compare_diff_b(do_submit=false){
-    var odiv=init_div_diff_b();
+    var odiv=div_get_diff_b();
     if (!odiv){return;}
 
     var blstr1=document.querySelector('textarea[name="textarea_diff_1"]').value;
@@ -307,7 +307,7 @@ function count_diff_b(){
     }
 }
 
-function init_div_diff_b(){
+function div_get_diff_b(){
     var odiv=document.getElementById('div_diff');
     if (!odiv){
         var odiv_lines=document.getElementById('div_line_compare_form');
@@ -317,6 +317,27 @@ function init_div_diff_b(){
         }
     }
     return odiv;
+}
+
+function init_diff_b(){
+    buttons_diff_b();
+    count_diff_b();
+    menu_diff_b();
+}
+
+function menu_diff_b(){
+    var str_t=klmenu_hide_b('');
+    var paste_list=['{{\\/?quote}}','^[\\*#] '];
+    var klmenu1=[];
+    for (let item of paste_list){
+        klmenu1.push('<span class="span_menu" onclick="'+str_t+'common_replace_diff_b(this.innerText);">'+item+'</span>');
+    }
+
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'⚖','14rem','1rem','1rem','30rem'),'','0rem')+' ');
+}
+
+function common_replace_diff_b(csstr){
+    document.getElementById('input_line1_compare').value=csstr;
 }
 
 function eng_punctuatin_diff_b(){

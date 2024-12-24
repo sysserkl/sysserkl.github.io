@@ -14,13 +14,13 @@ klbase_addons_import_js_b(['css','diff','rows'],[],[],['diff_js_ico/diff_js512.p
 //-----------------------
 var scheme_global={};
 scheme_generation_b();
-css_root_style_b('18','13',['base'],[],1);
+css_root_style_b('18','13',['base','menu'],[],1);
 </script>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 </head>
 <body>
 <a name=top></a>
-<h2 style="margin-top:0px;font-size:1.2rem;"><span id="span_title" style="cursor:pointer;">⚖ Diff JS</span></h2>
+<h2 style="margin-top:0px;font-size:1.2rem;"><span id="span_title" style="cursor:pointer;">Diff JS</span></h2>
 <div id="div_form" style="margin:0.5rem;">
 <table width=95%>
 <tr>
@@ -38,8 +38,7 @@ css_root_style_b('18','13',['base'],[],1);
 </div>
 <script>
 top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.6rem'));
-buttons_diff_b();
-count_diff_b();
+init_diff_b();
 </script>
 <script>
 track_source_b('diff_js',false);
