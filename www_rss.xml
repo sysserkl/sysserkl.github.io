@@ -8,292 +8,360 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Tue, 24 Dec 2024 09:42:31 +0800</lastBuildDate>
-<item><title>Are you better value for money than AI? - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2024/12/23/ai_job_replacement_comment/</link></item>
-<item><title>&amp;#39;That&amp;#39;s not a bug, it&amp;#39;s a feature&amp;#39; takes on a darker tone when malware&amp;#39;s involved - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2024/12/23/firmware_malware_opinion/</link></item>
-<item><title>Jury spares Qualcomm&amp;#39;s AI PC ambitions, but Arm eyes a retrial - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2024/12/23/qualcomm_arm_trial/</link></item>
-<item><title>SvarDOS: DR-DOS is reborn as an open source operating system - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2024/12/23/svardos_drdos_reborn/</link></item>
-<item><title>AI&amp;#39;s rising tide lifts all chips as AMD Instinct, cloudy silicon vie for a slice of Nvidia&amp;#39;s pie - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2024/12/23/nvidia_ai_hardware_competition/</link></item>
-<item><title>Parker Solar Probe set for blisteringly hot date with the Sun on Christmas Eve - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2024/12/23/parker_solar_probe_sun/</link></item>
-<item><title>Suspected LockBit dev, facing US extradition, &amp;#39;did it for the money&amp;#39; - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2024/12/23/lockbit_ransomware_dev_extradition/</link></item>
-<item><title>OneOdio Focus A5: Big battery, budget sound, and a bargain bin price - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2024/12/23/oneodio_focus_a5_headphones/</link></item>
-<item><title>UK ICO not happy with Google&amp;#39;s plans to allow device fingerprinting - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2024/12/23/uk_ico_not_happy_with/</link></item>
-<item><title>Space Operations Command preps for new shared domain awareness tool - Defense News</title><link>https://www.defensenews.com/space/2024/12/23/space-operations-command-preps-for-new-shared-domain-awareness-tool/</link></item>
-<item><title>Under Trump, decision on Air Force’s NGAD will shape fleet for decades - Defense News</title><link>https://www.defensenews.com/air/2024/12/23/under-trump-decision-on-air-forces-ngad-will-shape-fleet-for-decades/</link></item>
-<item><title>Dutch army to equip its soldiers with personal drone-protection kits - Defense News</title><link>https://www.defensenews.com/global/europe/2024/12/23/dutch-army-to-equip-its-soldiers-with-personal-drone-protection-kits/</link></item>
-<item><title>Critics Decry Vietnam&amp;#39;s &amp;#39;Draconian&amp;#39; New Internet Law - Slashdot</title><link>https://yro.slashdot.org/story/24/12/23/2143221/critics-decry-vietnams-draconian-new-internet-law?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Health Care Giant Ascension Says 5.6 Million Patients Affected In Cyberattack - Slashdot</title><link>https://yro.slashdot.org/story/24/12/23/2132232/health-care-giant-ascension-says-56-million-patients-affected-in-cyberattack?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Apple Sends Spyware Victims To Nonprofit Security Lab &amp;#39;Access Now&amp;#39; - Slashdot</title><link>https://it.slashdot.org/story/24/12/23/2124241/apple-sends-spyware-victims-to-nonprofit-security-lab-access-now?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>US Targets China With Probe Into Semiconductor Industry - Slashdot</title><link>https://news.slashdot.org/story/24/12/23/219246/us-targets-china-with-probe-into-semiconductor-industry?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Encyclopedia Britannica Is Now an AI Company - Slashdot</title><link>https://news.slashdot.org/story/24/12/23/211253/encyclopedia-britannica-is-now-an-ai-company?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Sweden Says China Denied Request For Prosecutors To Board Ship Linked To Severed Cables - Slashdot</title><link>https://tech.slashdot.org/story/24/12/23/2055237/sweden-says-china-denied-request-for-prosecutors-to-board-ship-linked-to-severed-cables?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>The Quest To Save the World&amp;#39;s Largest CRT TV From Destruction - Slashdot</title><link>https://entertainment.slashdot.org/story/24/12/23/2034248/the-quest-to-save-the-worlds-largest-crt-tv-from-destruction?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Google&amp;#39;s Counteroffer To the Government Trying To Break It Up is Unbundling Android Apps - Slashdot</title><link>https://tech.slashdot.org/story/24/12/23/1812222/googles-counteroffer-to-the-government-trying-to-break-it-up-is-unbundling-android-apps?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Electric Aircraft Startup Lilium Ceases Operations, 1,000 Workers Laid Off - Slashdot</title><link>https://tech.slashdot.org/story/24/12/23/186213/electric-aircraft-startup-lilium-ceases-operations-1000-workers-laid-off?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Government To Name &amp;#39;Key Witness&amp;#39; Who Provided FBI With Backdoored Encrypted Chat App Anom - Slashdot</title><link>https://yro.slashdot.org/story/24/12/23/1736221/government-to-name-key-witness-who-provided-fbi-with-backdoored-encrypted-chat-app-anom?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Meta To Add Display To Ray-Bans as Zuckerberg Bets Computing Shift - Slashdot</title><link>https://tech.slashdot.org/story/24/12/23/173229/meta-to-add-display-to-ray-bans-as-zuckerberg-bets-computing-shift?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>WhatsApp Scores Historic Victory Against NSO Group in Long-Running Spyware Hacking Case - Slashdot</title><link>https://yro.slashdot.org/story/24/12/23/1538200/whatsapp-scores-historic-victory-against-nso-group-in-long-running-spyware-hacking-case?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Nissan and Honda Agree To Merge - Slashdot</title><link>https://tech.slashdot.org/story/24/12/23/1643248/nissan-and-honda-agree-to-merge?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Xerox To Buy Printer Maker Lexmark From Chinese Owners in $1.5 Billion Deal - Slashdot</title><link>https://hardware.slashdot.org/story/24/12/23/1523259/xerox-to-buy-printer-maker-lexmark-from-chinese-owners-in-15-billion-deal?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>PayPal&amp;#39;s Honey Accused of Misleading Users, Hiding Discounts - Slashdot</title><link>https://slashdot.org/story/24/12/23/1511251/paypals-honey-accused-of-misleading-users-hiding-discounts?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>The Third Man: 1951 - Shorpy Old Photos</title><link>http://www.shorpy.com/node/27616</link></item>
-<item><title>Western Electric Installers Baseballers - Shorpy Old Photos</title><link>http://www.shorpy.com/node/5120#comment-236179</link></item>
-<item><title>A Merry Christmas to All - Shorpy Old Photos</title><link>http://www.shorpy.com/node/5120#comment-236178</link></item>
-<item><title>WW = Walter William - Shorpy Old Photos</title><link>http://www.shorpy.com/node/5120#comment-236177</link></item>
-<item><title>Sideways Glances - Shorpy Old Photos</title><link>http://www.shorpy.com/node/5120#comment-236175</link></item>
-<item><title>Facial angles - Shorpy Old Photos</title><link>http://www.shorpy.com/node/5120#comment-236174</link></item>
-<item><title>Christmas overload - Shorpy Old Photos</title><link>http://www.shorpy.com/node/5120#comment-236173</link></item>
-<item><title>Enjoy This Every Year - Shorpy Old Photos</title><link>http://www.shorpy.com/node/5120#comment-236171</link></item>
-<item><title>Boss Bill Lodding - Baseball Team Manager - Shorpy Old Photos</title><link>http://www.shorpy.com/node/5120#comment-236170</link></item>
-<item><title>Number nine, number nine ... - Shorpy Old Photos</title><link>http://www.shorpy.com/node/5120#comment-236169</link></item>
-<item><title>The iron horse - Shorpy Old Photos</title><link>http://www.shorpy.com/node/27615#comment-236168</link></item>
-<item><title>100 Laps Around the Sun - Shorpy Old Photos</title><link>http://www.shorpy.com/node/5120#comment-236167</link></item>
-<item><title>Spy Kraft(werk) - Shorpy Old Photos</title><link>http://www.shorpy.com/node/27616#comment-236166</link></item>
-<item><title>Its officially the season! - Shorpy Old Photos</title><link>http://www.shorpy.com/node/5120#comment-236165</link></item>
-<item><title>The Real Visions, Dancing in Their Heads! - Shorpy Old Photos</title><link>http://www.shorpy.com/node/5120#comment-236163</link></item>
-<item><title>Intelligence disguise? - Shorpy Old Photos</title><link>http://www.shorpy.com/node/27616#comment-236162</link></item>
-<item><title>Intelligence work - Shorpy Old Photos</title><link>http://www.shorpy.com/node/27616#comment-236161</link></item>
-<item><title>Thank you for the clarifications! - Shorpy Old Photos</title><link>http://www.shorpy.com/node/27616#comment-236160</link></item>
-<item><title>Don&amp;#39;t try anything - Shorpy Old Photos</title><link>http://www.shorpy.com/node/27616#comment-236159</link></item>
-<item><title>Untersuhl by Eisenach, East-West German border on Autobahn - Shorpy Old Photos</title><link>http://www.shorpy.com/node/27616#comment-236157</link></item>
-<item><title>More questions - Shorpy Old Photos</title><link>http://www.shorpy.com/node/27616#comment-236153</link></item>
-<item><title>Choices in Life - Shorpy Old Photos</title><link>http://www.shorpy.com/node/27614#comment-236150</link></item>
-<item><title>Geolocated: Racine, Wisconsin - Shorpy Old Photos</title><link>http://www.shorpy.com/node/27421#comment-236147</link></item>
-<item><title>While still a pup - Shorpy Old Photos</title><link>http://www.shorpy.com/node/27615#comment-236146</link></item>
-<item><title>Christmas portraits - Shorpy Old Photos</title><link>https://www.shorpy.com/image/tid/317</link></item>
-<item><title>Robert McNeill - Shorpy Old Photos</title><link>http://www.shorpy.com/image/tid/388</link></item>
-<item><title>Wheaton Plaza: 1967 - Shorpy Old Photos</title><link>http://www.shorpy.com/node/27613</link></item>
-<item><title>Santa&amp;#39;s Helpers: 1943 - Shorpy Old Photos</title><link>http://www.shorpy.com/node/27610</link></item>
-<item><title>Matt Mullenweg 宣布暂停 WordPress.org 大部分服务 - Solidot</title><link>https://www.solidot.org/story?sid=80134</link></item>
-<item><title>本田日产计划到 2026 年实现经营合并 - Solidot</title><link>https://www.solidot.org/story?sid=80133</link></item>
-<item><title>科学家在量子实验中观察到“负时间” - Solidot</title><link>https://www.solidot.org/story?sid=80132</link></item>
-<item><title>阿尔巴尼亚以煽动儿童暴力为由宣布封禁 TikTok 一年 - Solidot</title><link>https://www.solidot.org/story?sid=80131</link></item>
-<item><title>因创纪录的风电英国电价跌至负数 - Solidot</title><link>https://www.solidot.org/story?sid=80130</link></item>
-<item><title>科学家量化人类思维速度 - Solidot</title><link>https://www.solidot.org/story?sid=80128</link></item>
-<item><title>测试显示 AI 聊天机器人可能也有痴呆症 - Solidot</title><link>https://www.solidot.org/story?sid=80127</link></item>
-<item><title>日本计划以涉嫌垄断为由要求 Google 整改 - Solidot</title><link>https://www.solidot.org/story?sid=80126</link></item>
-<item><title>《战争雷霆》论坛泄漏台风战斗机雷达系统机密文件 - Solidot</title><link>https://www.solidot.org/story?sid=80125</link></item>
-<item><title>X 删除马堡袭击案嫌犯支持马斯克和极右翼的推文 - Solidot</title><link>https://www.solidot.org/story?sid=80124</link></item>
-<item><title>GitLab 停止为中国区用户提供 GitLab.com 账号服务 - Solidot</title><link>https://www.solidot.org/story?sid=80123</link></item>
-<item><title>4 Tips For Way Better PS Portal Battery Life - Kotaku</title><link>https://kotaku.com/ps-portal-sony-battery-life-improve-haptics-brightness-1851726237</link></item>
-<item><title>12 Must-Watch Vampire Movies For Bloodsucker Lovers - Kotaku</title><link>https://kotaku.com/best-vampire-movies-nosferatu-dracula-1851727317</link></item>
-<item><title>16 Great Games That Flew Under The Radar In 2024 - Kotaku</title><link>https://kotaku.com/2024-hidden-gem-indie-game-underappreciated-steam-1851725751</link></item>
-<item><title>The Best Shooters Of 2024 - Kotaku</title><link>https://kotaku.com/best-shooters-console-pc-2024-space-marine-steam-ps5-1851708899</link></item>
-<item><title>NBA Team Apologizes After Pretending To Give Kid A PS5, Then Taking It Away - Kotaku</title><link>https://kotaku.com/nba-team-hornets-ps5-prank-skit-sorry-kid-christmas-1851724737</link></item>
-<item><title>Microsoft Says The Quiet Part Loud About Xbox - Kotaku</title><link>https://kotaku.com/microsoft-xbox-game-pass-ps5-exclusives-streaming-1851722886</link></item>
-<item><title>More Switch 2 &amp;#39;Leaks&amp;#39; All Point To The Same Thing: A Bigger, More Powerful Version Of The Console Everyone Already Loves - Kotaku</title><link>https://kotaku.com/nintendo-switch-2-leaks-reveal-release-date-reddit-1851725408</link></item>
-<item><title>xAI raises another $6bn, including from Nvidia and AMD - DCD</title><link>https://www.datacenterdynamics.com/en/news/xai-raises-another-6bn-including-from-nvidia-and-amd/</link></item>
-<item><title>Trump&amp;#39;s Undersecretary of Defense for Policy repeatedly said TSMC fabs should be destroyed if China invades Taiwan - DCD</title><link>https://www.datacenterdynamics.com/en/news/trumps-undersecretary-of-defense-for-policy-repeatedly-said-tsmc-fabs-should-be-destroyed-if-china-invades-taiwan/</link></item>
-<item><title>Quantum Loophole no longer involved in Quantum Frederick Project, TPG Real Estate takes full control - DCD</title><link>https://www.datacenterdynamics.com/en/news/quantum-loophole-no-longer-involved-in-quantum-frederick-project-tpg-real-estate-takes-full-control/</link></item>
-<item><title>The End-of-Year Review: The biggest data center stories of 2024 - DCD</title><link>https://www.datacenterdynamics.com/en/news/the-end-of-year-review-the-biggest-data-center-stories-of-2024/</link></item>
-<item><title>US Senate passes bill for additional rip and replace funding - DCD</title><link>https://www.datacenterdynamics.com/en/news/us-senate-passes-bill-for-additional-rip-and-replace-funding/</link></item>
-<item><title>Bytes and Watts: Energy Efficiency Directive (EED) - DCD</title><link>https://www.datacenterdynamics.com/en/whitepapers/bytes-and-watts-energy-efficiency-directive-eed/</link></item>
-<item><title>Equinix to acquire BT Group&amp;#39;s Irish data center business - DCD</title><link>https://www.datacenterdynamics.com/en/news/equinix-to-acquire-bt-groups-irish-data-center-business/</link></item>
-<item><title>BT wins £1.3bn class action lawsuit that alleged it overcharged millions of customers - DCD</title><link>https://www.datacenterdynamics.com/en/news/bt-wins-13bn-class-action-lawsuit-that-alleged-it-overcharged-millions-of-customers/</link></item>
-<item><title>Oregon regulators approve PacifiCorp penalties for high-load energy users despite industry pushback - DCD</title><link>https://www.datacenterdynamics.com/en/news/oregon-regulators-approve-pacificorp-penalties-for-high-load-energy-users-despite-industry-pushback/</link></item>
-<item><title>Mercury Engineering to create 1,000 jobs over the next five years - DCD</title><link>https://www.datacenterdynamics.com/en/news/mercury-engineering-to-create-1000-jobs-over-the-next-five-years/</link></item>
-<item><title>Lumen weighs up sale of its consumer fiber unit - report - DCD</title><link>https://www.datacenterdynamics.com/en/news/lumen-weighs-up-sale-of-its-consumer-fiber-unit-report/</link></item>
-<item><title>Understanding the Impact of AI on Data Center Efficiency - DCD</title><link>https://www.datacenterdynamics.com/en/whitepapers/understanding-the-impact-of-ai-on-data-center-efficiency/</link></item>
-<item><title>Swisscom gets clearance from Italian authorities for €8bn Vodafone acquisition - DCD</title><link>https://www.datacenterdynamics.com/en/news/swisscom-gets-clearance-from-italian-authorities-for-8bn-vodafone-acquisition/</link></item>
-<item><title>Qualcomm claims win in copyright battle with Arm despite case ending in mistrial - DCD</title><link>https://www.datacenterdynamics.com/en/news/qualcomm-claims-win-in-copyright-battle-with-arm-despite-case-ending-in-mistrial/</link></item>
-<item><title>Edisun plans to supply AI-driven data centers with power from 941MW Madrid solar plant - DCD</title><link>https://www.datacenterdynamics.com/en/news/edisun-plans-to-supply-ai-driven-data-centers-with-power-from-941mw-madrid-solar-plant/</link></item>
-<item><title>DCD&amp;gt;Studio: Urban and Rural Data Center Development with John Sasser, Sabey Data Centers - DCD</title><link>https://www.datacenterdynamics.com/en/videos/dcdstudio-urban-and-rural-data-center-development-with-john-sasser-sabey-data-centers/</link></item>
-<item><title>Recycling and Circularity of Li-Ion Batteries - DCD</title><link>https://www.datacenterdynamics.com/en/whitepapers/recycling-and-circularity-of-li-ion-batteries/</link></item>
-<item><title>VueNow launches two Edge data centers in Uttar Pradesh, India, while in midst of investigation - DCD</title><link>https://www.datacenterdynamics.com/en/news/vuenow-launches-two-edge-data-centers-in-uttar-pradesh-india-while-in-midst-of-investigation/</link></item>
-<item><title>The cooling waiting game - DCD</title><link>https://www.datacenterdynamics.com/en/opinions/the-cooling-waiting-game/</link></item>
-<item><title>Sponsored: Verne achieves EN 50600 certification in Iceland for reliability and resilience - DCD</title><link>https://www.datacenterdynamics.com/en/product-news/verne-achieves-en-50600-certification-in-iceland-for-reliability-and-resilience/</link></item>
-<item><title>Linux 图片处理软件 GIMP 3.0发布候选版本带来主要新功能 - IMCN开源资讯网</title><link>https://imcn.me/html/y2024/40749.html</link></item>
-<item><title>elementary OS 8发布新的Dock，更多快速设置 - IMCN开源资讯网</title><link>https://imcn.me/html/y2024/40738.html</link></item>
-<item><title>Black Basta Ransomware Attack Brought Down Ascension IT Systems, Report Finds - Slashdot</title><link>https://it.slashdot.org/story/24/05/11/0111205/black-basta-ransomware-attack-brought-down-ascension-it-systems-report-finds</link></item>
-<item><title>printing ended - Slashdot</title><link>https://news.slashdot.org/story/12/03/13/2255247/after-244-years-the-end-for-the-dead-tree-encyclopedia-britannica</link></item>
-<item><title>cutting of two undersea cables in the Baltic - Slashdot</title><link>https://tech.slashdot.org/story/24/11/23/1953221/sabotage-or-accident-american-and-european-officials-disagree-on-what-caused-cuts-to-two-undersea-cables</link></item>
-<item><title>darling in the nascent industry of electric aircraft - Slashdot</title><link>https://tech.slashdot.org/story/19/05/18/0040230/german-startup-unveils-electric-flying-taxi-prototype</link></item>
-<item><title>secretly ran and backdoored - Slashdot</title><link>https://it.slashdot.org/story/21/06/08/1824223/fbi-and-australian-police-ran-an-encrypted-chat-platform-to-catch-criminal-gangs</link></item>
-<item><title>sued NSO Group - Slashdot</title><link>https://yro.slashdot.org/story/19/10/29/2032239/facebook-sues-israels-nso-group-over-alleged-whatsapp-hack</link></item>
-<item><title>acquired in 2019 for $4 billion - Slashdot</title><link>https://news.slashdot.org/story/19/11/20/2234223/paypal-to-acquire-shopping-and-rewards-program-honey-for-4-billion</link></item>
-<item><title>Some Passengers Riding in Waymo&amp;#39;s Driverless Cars Face Uncomfortable Situations - Slashdot</title><link>https://tech.slashdot.org/story/24/12/23/0129251/some-passengers-riding-in-waymos-driverless-cars-face-uncomfortable-situations?sbsrc=md</link></item>
-<item><title>OpenAI makes it possible to call or text ChatGPT - ReadWrite</title><link>https://readwrite.com/openai-makes-it-possible-to-call-or-text-chatgpt/</link></item>
-<item><title>US Supreme Court will hear arguments from TikTok as it aims to halt ban - ReadWrite</title><link>https://readwrite.com/us-supreme-court-will-hear-arguments-from-tiktok/</link></item>
-<item><title>Snapchat is changing how people earn money on its platform - ReadWrite</title><link>https://readwrite.com/snapchat-is-changing-how-people-earn-money/</link></item>
-<item><title>Nintendo Switch 2 leaks heat up as reveal is in sight - ReadWrite</title><link>https://readwrite.com/nintendo-switch-2-leaks-heat-up-as-reveal-is-in-sight/</link></item>
-<item><title>App Store Awards 2024: Apple names the winners - ReadWrite</title><link>https://readwrite.com/app-store-awards-2024-apple-names-the-winners/</link></item>
-<item><title>The best TV for Xbox Series X in 2024: Our recommendations - ReadWrite</title><link>https://readwrite.com/best-tv-for-xbox-series-x/</link></item>
-<item><title>ALEKSHA MCLOUGHLIN - ReadWrite</title><link>https://readwrite.com/author/alekshamcloughlin/</link></item>
-<item><title>PS5 vs PS5 Slim: What are the key differences? - ReadWrite</title><link>https://readwrite.com/ps5-vs-ps5-slim/</link></item>
-<item><title>The best VR Games we played in 2024 – spoiler – some of the old ones are still the best - ReadWrite</title><link>https://readwrite.com/the-best-vr-games-we-played-in-2024-spoiler-some-of-the-old-ones-are-still-the-best/</link></item>
-<item><title>How to use Discord on your PS5 console - ReadWrite</title><link>https://readwrite.com/how-to-use-discord-on-ps5/</link></item>
-<item><title>The best Xbox Series X games we played in 2024 - ReadWrite</title><link>https://readwrite.com/best-xbox-series-x-games/</link></item>
-<item><title>How to use Discord on your Xbox Series X console - ReadWrite</title><link>https://readwrite.com/how-to-use-discord-on-xbox-series-x/</link></item>
-<item><title>The Top Five games you missed this year – you still have time to play them - ReadWrite</title><link>https://readwrite.com/top-five-games-you-missed-this-year/</link></item>
-<item><title>Trump eyes crypto advocates for CFTC Chair role - ReadWrite</title><link>https://readwrite.com/trump-eyes-crypto-advocates-for-cftc-chair-role/</link></item>
-<item><title>Everything we know about The Witcher 4: Trailers, main character, and more - ReadWrite</title><link>https://readwrite.com/the-witcher-4-everything-we-know/</link></item>
-<item><title>Crypto enthusiast outsmarts AI bot Freysa, winning $47,000 prize pool - ReadWrite</title><link>https://readwrite.com/crypto-outsmarts-ai-bot-freysa-winning-47000-prize/</link></item>
-<item><title>Marvel Rivals SVP: What does it mean? - ReadWrite</title><link>https://readwrite.com/svp-marvel-rivals/</link></item>
-<item><title>AI model displays alignment faking, new Anthropic study finds - ReadWrite</title><link>https://readwrite.com/ai-model-displays-alignment-faking-new-anthropic-study-finds/</link></item>
-<item><title>US watchdog warns that AI will drain American power grid - ReadWrite</title><link>https://readwrite.com/us-watchdog-warns-that-ai-will-drain-american-power-grid/</link></item>
-<item><title>Nvidia’s new AI mini-PC brings pint sized power for developers - ReadWrite</title><link>https://readwrite.com/nvidias-new-ai-mini-pc-brings-pint-sized-power-for-developers/</link></item>
-<item><title>YouTube partners with celebrity agency to protect them from AI - ReadWrite</title><link>https://readwrite.com/youtube-partners-with-celebrity-agency-to-protect-them-from-ai/</link></item>
-<item><title>OpenAI expands access to ChatGPT Search for all users - ReadWrite</title><link>https://readwrite.com/openai-expands-access-to-chatgpt-search-for-all-users/</link></item>
-<item><title>Google’s new Whisk AI tool will “remix” your images - ReadWrite</title><link>https://readwrite.com/googles-new-whisk-ai-tool-will-remix-your-images/</link></item>
-<item><title>Google’s new AI video generation rivals OpenAI’s Sora - ReadWrite</title><link>https://readwrite.com/googles-new-ai-video-generation-rivals-openais-sora/</link></item>
-<item><title>AI-powered app MeMind ‘reduces suicide rates’ in Mexico’s Yucatán - ReadWrite</title><link>https://readwrite.com/ai-app-memind-reduces-suicide-rates-mexico-yucatan/</link></item>
-<item><title>MicroStrategy may stop hoarding Bitcoin amid blackout allegations - ReadWrite</title><link>https://readwrite.com/microstrategy-may-stop-hoarding-bitcoin-amid-blackout-allegations/</link></item>
-<item><title>El Salvador to limit Bitcoin with $1.4b IMF deal - ReadWrite</title><link>https://readwrite.com/el-salvador-to-limit-bitcoin-with-1-4b-imf-deal/</link></item>
-<item><title>Crypto.com drops lawsuit against SEC on heels of Trump meeting - ReadWrite</title><link>https://readwrite.com/crypto-com-drops-lawsuit-against-sec-on-heels-of-trump-meeting/</link></item>
-<item><title>Australian regulator sues Binance over lacking consumer protection - ReadWrite</title><link>https://readwrite.com/australian-regulator-sues-binance-over-lacking-consumer-protection/</link></item>
-<item><title>One in five US voters have used crypto in some form, poll reveals - ReadWrite</title><link>https://readwrite.com/one-in-five-us-voters-have-used-crypto-in-some-form-poll-reveals/</link></item>
-<item><title>The best PS3 games to play on your PS5 in 2024 - ReadWrite</title><link>https://readwrite.com/best-ps3-games-to-play-on-ps5/</link></item>
-<item><title>And… Readwrite’s Game of the Year is… - ReadWrite</title><link>https://readwrite.com/and-readwrites-game-of-the-year-is/</link></item>
-<item><title>Ancient Rome comes to life (and then gets buried) in Pompeii: The Legacy - ReadWrite</title><link>https://readwrite.com/ancient-rome-comes-to-life-and-then-gets-buried-in-pompeii-the-legacy/</link></item>
-<item><title>Starlink powers national coverage landmark in New Zealand - ReadWrite</title><link>https://readwrite.com/starlink-powers-national-coverage-landmark-in-new-zealand/</link></item>
-<item><title>Best Free Nintendo Switch Games - ReadWrite</title><link>https://readwrite.com/best-free-nintendo-switch-games/</link></item>
-<item><title>TP-Link on Chinese tech chopping block as US might ban router company - ReadWrite</title><link>https://readwrite.com/tp-link-on-chinese-tech-chopping-block-as-us-might-ban-router-company/</link></item>
-<item><title>X increases thresholds to meet Creator Revenue Share Program - ReadWrite</title><link>https://readwrite.com/x-increases-thresholds-to-meet-creator-revenue-share-program/</link></item>
-<item><title>Google and Samsung unveil Android XR, a platform for headsets and smart glasses - ReadWrite</title><link>https://readwrite.com/google-and-samsung-unveil-android-xr-a-platform-for-headsets-and-smart-glasses/</link></item>
-<item><title>Roto VR gets huge investment into its Explorer VR Chair business - ReadWrite</title><link>https://readwrite.com/roto-vr-gets-huge-investment-into-its-explorer-vr-chair-business/</link></item>
-<item><title>Apple opens talks to deliver AI to iPhones in China - ReadWrite</title><link>https://readwrite.com/apple-opens-talks-to-deliver-ai-to-iphones-in-china/</link></item>
-<item><title>Apple eyes 2028 for possible foldable iPad with creaseless design - ReadWrite</title><link>https://readwrite.com/apple-2028-foldable-ipad-creaseless-design/</link></item>
-<item><title>Android now offers more tools to thwart Bluetooth tracker stalking - ReadWrite</title><link>https://readwrite.com/android-now-offers-more-tools-to-thwart-bluetooth-tracker-stalking/</link></item>
-<item><title>Apple Watch Ultra 3 could let you send texts by satellite - ReadWrite</title><link>https://readwrite.com/apple-ultra-watch-3-could-let-you-send-texts-by-satellite/</link></item>
-<item><title>Emerging designers 2025 - Wallpaper*</title><link>https://www.wallpaper.com/design-interiors/stars-ascending-emerging-designers</link></item>
-<item><title>New London restaurant openings - Wallpaper*</title><link>https://www.wallpaper.com/travel/restaurants/new-restaurants-in-london</link></item>
-<item><title>Our Holiday Reading Picks - Law &amp; Liberty</title><link>https://lawliberty.org/best-books-of-2024/</link></item>
-<item><title>When Blood Runs Thin - Law &amp; Liberty</title><link>https://lawliberty.org/when-blood-runs-thin/</link></item>
-<item><title>Yemen bears world’s highest cholera burden, deepening humanitarian crisis - UN</title><link>https://news.un.org/en/story/2024/12/1158491</link></item>
-<item><title>Syria: UN investigators call for protecting evidence amid worsening humanitarian crisis - UN</title><link>https://news.un.org/en/story/2024/12/1158501</link></item>
-<item><title>UN surge teams mobilise as Vanuatu hit by second earthquake - UN</title><link>https://news.un.org/en/story/2024/12/1158471</link></item>
-<item><title>Article 7 of the UN Convention on the Rights of the Child - UN</title><link>https://research.un.org/c.php?g=1331357&amp;p=9804957</link></item>
-<item><title>Health Interventions - UN</title><link>https://www.un.org/en/property-cards-by-og-global-category/287/7042</link></item>
-<item><title>first decade - UN</title><link>https://www.un.org/en/observances/decade-people-african-descent</link></item>
-<item><title>Best Free and Open Source Alternatives to Microsoft Calendar - LinuxLinks</title><link>https://www.linuxlinks.com/best-free-open-source-alternatives-microsoft-calendar/</link></item>
-<item><title>Hop – terminal based file explorer - LinuxLinks</title><link>https://www.linuxlinks.com/hop-terminal-based-file-explorer/</link></item>
-<item><title>Pages CMS – content management system for static site generators - LinuxLinks</title><link>https://www.linuxlinks.com/pages-cms-content-management-system/</link></item>
-<item><title>13 Best Free and Open Source Linux Clocks - LinuxLinks</title><link>https://www.linuxlinks.com/clocks/</link></item>
-<item><title>Blaze UI – framework-free UI toolkit - LinuxLinks</title><link>https://www.linuxlinks.com/blaze-ui-framework-free-ui-toolkit/</link></item>
-<item><title>Deepin Picker – simple color picker - LinuxLinks</title><link>https://www.linuxlinks.com/deepin-picker-simple-color-picker/</link></item>
-<item><title>talking-clock – highly configurable talking clock - LinuxLinks</title><link>https://www.linuxlinks.com/talking-clock-highly-configurable-talking-clock/</link></item>
-<item><title>Vrite – collaborative developer content platform - LinuxLinks</title><link>https://www.linuxlinks.com/vrite-collaborative-developer-content-platform/</link></item>
-<item><title>4 Best Free and Open Source Shutdown Timers - LinuxLinks</title><link>https://www.linuxlinks.com/best-free-open-source-shutdown-timers/</link></item>
-<item><title>littleutils – utilities for file compression, file manipulation, text cleanup - LinuxLinks</title><link>https://www.linuxlinks.com/littleutils-utilities-file-compression-file-manipulation-text-cleanup/</link></item>
-<item><title>kleur – Node.js library for formatting terminal text with ANSI colors - LinuxLinks</title><link>https://www.linuxlinks.com/kleur-node-js-library-formatting-terminal-text/</link></item>
-<item><title>10 Best Free and Open Source Replacements for ls - LinuxLinks</title><link>https://www.linuxlinks.com/best-replacements-ls/</link></item>
-<item><title>Shutdown Scheduler – schedule shutdown and restart tasks - LinuxLinks</title><link>https://www.linuxlinks.com/shutdown-scheduler-schedule-shutdown-restart-tasks/</link></item>
-<item><title>6 Best Free and Open Source GUI Tools for System Resources Monitoring in Linux - LinuxLinks</title><link>https://www.linuxlinks.com/best-free-open-source-gui-tools-system-resources-monitoring/</link></item>
-<item><title>DeLinuxCo Workstation – Manjaro spin - LinuxLinks</title><link>https://www.linuxlinks.com/delinuxco-workstation-manjaro-spin/</link></item>
-<item><title>Plasma System Monitor – monitoring tool - LinuxLinks</title><link>https://www.linuxlinks.com/plasma-system-monitor-monitoring-tool/</link></item>
-<item><title>picocolors – tiny and fast library for terminal output formatting - LinuxLinks</title><link>https://www.linuxlinks.com/picocolors-tiny-fast-library-terminal-output-formatting/</link></item>
-<item><title>13 Best Free and Open Source Tools for Novelists - LinuxLinks</title><link>https://www.linuxlinks.com/novelists/</link></item>
-<item><title>Alternatives to popular CLI tools: tree - LinuxLinks</title><link>https://www.linuxlinks.com/alternatives-popular-cli-tools-tree/</link></item>
-<item><title>6 Best Free GUI Tools to Find and Delete Duplicate Files - LinuxLinks</title><link>https://www.linuxlinks.com/best-free-tools-find-delete-duplicate-files/</link></item>
-<item><title>gtree – generate trees and directories - LinuxLinks</title><link>https://www.linuxlinks.com/gtree-generate-trees-directories/</link></item>
-<item><title>Skribisto – writing tool for Linux - LinuxLinks</title><link>https://www.linuxlinks.com/skribisto-writing-tool-linux/</link></item>
-<item><title>Best Free and Open Source Alternatives to Apple Clock - LinuxLinks</title><link>https://www.linuxlinks.com/best-free-open-source-alternatives-apple-clock/</link></item>
-<item><title>lscoltui – change the colors of ls - LinuxLinks</title><link>https://www.linuxlinks.com/lscoltui-change-colors-ls/</link></item>
-<item><title>System Monitor – view and manage system resources - LinuxLinks</title><link>https://www.linuxlinks.com/system-monitor-view-manage-system-resources/</link></item>
-<item><title>sty – string styling for your terminal - LinuxLinks</title><link>https://www.linuxlinks.com/sty-string-styling-terminal/</link></item>
-<item><title>Bluefin – Fedora based Linux distribution - LinuxLinks</title><link>https://www.linuxlinks.com/bluefin-fedora-based-linux-distribution/</link></item>
-<item><title>13 Best Free and Open Source Java Micro-Frameworks - LinuxLinks</title><link>https://www.linuxlinks.com/free-open-source-java-microframeworks/</link></item>
-<item><title>as-tree – print a list of paths as a tree of paths - LinuxLinks</title><link>https://www.linuxlinks.com/as-tree-print-list-paths-tree/</link></item>
-<item><title>Digital Clock 5 – modern digital clock application - LinuxLinks</title><link>https://www.linuxlinks.com/digital-clock-modern-digital-clock-application/</link></item>
-<item><title>zpaqfranz – deduplicating archiver with encryption and paranoid-level tests - LinuxLinks</title><link>https://www.linuxlinks.com/zpaqfranz-deduplicating-archiver-encryption-paranoid-level-tests/</link></item>
-<item><title>Vanilla – extensible CSS framework - LinuxLinks</title><link>https://www.linuxlinks.com/vanilla-extensible-css-framework/</link></item>
-<item><title>Best Free and Open Source Alternatives to Microsoft Photos - LinuxLinks</title><link>https://www.linuxlinks.com/best-free-open-source-alternatives-microsoft-photos/</link></item>
-<item><title>14 Best Free and Open Source CLI Tools to Find and Delete Duplicate Files - LinuxLinks</title><link>https://www.linuxlinks.com/best-free-open-source-cli-tools-find-delete-duplicate-files/</link></item>
-<item><title>yachalk – terminal string styling done right - LinuxLinks</title><link>https://www.linuxlinks.com/yachalk-terminal-string-styling-done-right/</link></item>
-<item><title>Resources – monitor system resources - LinuxLinks</title><link>https://www.linuxlinks.com/resources-monitor-system/</link></item>
-<item><title>Best Free and Open Source Alternatives to Apple Intelligence - LinuxLinks</title><link>https://www.linuxlinks.com/best-free-open-source-alternatives-apple-intelligence/</link></item>
-<item><title>15 Best Free and Open Source Terminal-Based Diff Tools - LinuxLinks</title><link>https://www.linuxlinks.com/best-free-console-based-diff-tools/</link></item>
-<item><title>Rickrack – color palette generator - LinuxLinks</title><link>https://www.linuxlinks.com/rickrack-color-palette-generator/</link></item>
-<item><title>Primer – GitHub’s design system - LinuxLinks</title><link>https://www.linuxlinks.com/primer-github-design-system/</link></item>
-<item><title>Enabling kubectl Autocompletion for Zsh - Baeldung</title><link>https://feeds.feedblitz.com/~/909835289/0/baeldung/linux~Enabling-kubectl-Autocompletion-for-Zsh</link></item>
-<item><title>Systemd Can’t Find the Unit File Although It Exists - Baeldung</title><link>https://feeds.feedblitz.com/~/909800693/0/baeldung/linux~Systemd-Can%e2%80%99t-Find-the-Unit-File-Although-It-Exists</link></item>
-<item><title>How to Fix a Script Not Working in Crontab - Baeldung</title><link>https://feeds.feedblitz.com/~/909760982/0/baeldung/linux~How-to-Fix-a-Script-Not-Working-in-Crontab</link></item>
-<item><title>How to Copy From One File to Another File in Shell Script - Baeldung</title><link>https://feeds.feedblitz.com/~/909743366/0/baeldung/linux~How-to-Copy-From-One-File-to-Another-File-in-Shell-Script</link></item>
-<item><title>How to Determine if a Specific Module Is Loaded in the Linux Kernel - Baeldung</title><link>https://feeds.feedblitz.com/~/909572000/0/baeldung/linux~How-to-Determine-if-a-Specific-Module-Is-Loaded-in-the-Linux-Kernel</link></item>
-<item><title>Convert PFX to PEM Using OpenSSL - Baeldung</title><link>https://feeds.feedblitz.com/~/909572003/0/baeldung/linux~Convert-PFX-to-PEM-Using-OpenSSL</link></item>
-<item><title>How to Set the GOPATH Environment Variable on Linux - Baeldung</title><link>https://feeds.feedblitz.com/~/909570731/0/baeldung/linux~How-to-Set-the-GOPATH-Environment-Variable-on-Linux</link></item>
-<item><title>Find the Physical Volumes That Hold a Logical Volume in LVM - Baeldung</title><link>https://feeds.feedblitz.com/~/909407528/0/baeldung/linux~Find-the-Physical-Volumes-That-Hold-a-Logical-Volume-in-LVM</link></item>
-<item><title>Operating a MIDI Keyboard Input Device in Linux - Baeldung</title><link>https://feeds.feedblitz.com/~/909407531/0/baeldung/linux~Operating-a-MIDI-Keyboard-Input-Device-in-Linux</link></item>
-<item><title>Network Connection Problem Because of ovsdb-server.service - Baeldung</title><link>https://feeds.feedblitz.com/~/909019517/0/baeldung/linux~Network-Connection-Problem-Because-of-ovsdbserverservice</link></item>
-<item><title>Bare Metal GPUs - DigitalOcean</title><link>https://www.digitalocean.com/products/bare-metal-gpu</link></item>
-<item><title>Special Episode - The Nature of Courage | Defense News Weekly Full Episode - Defense News</title><link>https://www.defensenews.com/video/2024/12/23/special-episode-the-nature-of-courage-defense-news-weekly-full-episode/</link></item>
-<item><title>Casa Cariño by Dinamita Taller - HomeAdore</title><link>https://homeadore.com/2024/12/23/casa-carino-by-dinamita-taller/</link></item>
-<item><title>Villain House Redefines Domestic Space With Distinctive Design - HomeAdore</title><link>https://homeadore.com/2024/12/23/villain-house-redefines-domestic-space-with-distinctive-design/</link></item>
-<item><title>Feng House Combines West Coast Modern Architecture with Chinese Design - HomeAdore</title><link>https://homeadore.com/2024/12/23/feng-house-combines-west-coast-modern-architecture-with-chinese-design/</link></item>
-<item><title>Ode to the Moon Is a Garden of Feminity for Dual Personalities - HomeAdore</title><link>https://homeadore.com/2024/12/23/ode-to-the-moon-is-a-garden-of-feminity-for-dual-personalities/</link></item>
-<item><title>Casa da Sombra’s Concrete Walls Filter Sunlight - HomeAdore</title><link>https://homeadore.com/2024/12/17/casa-da-sombras-concrete-walls-filter-sunlight/</link></item>
-<item><title>Apartment in via dell’Oriuolo in Florence Reimagines Urban Living - HomeAdore</title><link>https://homeadore.com/2024/12/17/apartment-in-via-delloriuolo-in-florence-reimagines-urban-living/</link></item>
-<item><title>How Much Does a Land Survey Cost? Understanding the Fees and Factors - HomeAdore</title><link>https://homeadore.com/2024/12/17/how-much-does-a-land-survey-cost-understanding-the-fees-and-factors/</link></item>
-<item><title>Sawyer Retreat Floats Above Sandy Soil in Michigan - HomeAdore</title><link>https://homeadore.com/2024/12/14/sawyer-retreat-floats-above-sandy-soil-in-michigan/</link></item>
-<item><title>Twin Apartments in Kirchberg Fuses Modern Design with Tradition - HomeAdore</title><link>https://homeadore.com/2024/12/13/twin-apartments-in-kirchberg-fuses-modern-design-with-tradition/</link></item>
-<item><title>Reciprocal House by Gianni Botsford Nods to Norman Foster&amp;#39;s Work - HomeAdore</title><link>https://homeadore.com/2024/12/13/reciprocal-house-by-gianni-botsford-nods-to-norman-fosters-work/</link></item>
-<item><title>House With Two Ridges by Z3Z Architekci - HomeAdore</title><link>https://homeadore.com/2024/12/11/house-with-two-ridges-by-z3z-architekci/</link></item>
-<item><title>Central Park South Condo Marries Modernism With Comfort - HomeAdore</title><link>https://homeadore.com/2024/12/10/central-park-south-condo-marries-modernism-with-comfort/</link></item>
-<item><title>Eyrie House in Tasmania Offers Spectacular Views and Design - HomeAdore</title><link>https://homeadore.com/2024/12/06/eyrie-house-in-tasmania-offers-spectacular-views-and-design/</link></item>
-<item><title>My Love Combines Minimalism and Bohemian Style to Define Tropical Villa Design - HomeAdore</title><link>https://homeadore.com/2024/11/24/my-love-combines-minimalism-and-bohemian-style-to-define-tropical-villa-design/</link></item>
-<item><title>Casa Terralta: Traditional Elegance in Ostuni Hills - HomeAdore</title><link>https://homeadore.com/2024/01/10/casa-terralta-traditional-elegance-in-ostuni-hills/</link></item>
-<item><title>Pioneer Ranch: Rustic Charm Meets Modern Design in Sun Valley - HomeAdore</title><link>https://homeadore.com/2024/08/02/pioneer-ranch-rustic-charm-meets-modern-design-in-sun-valley/</link></item>
-<item><title>Research World - The Mail &amp; Guardian</title><link>https://mg.co.za/research-world/</link></item>
-<item><title>Power of Women 2024 - The Mail &amp; Guardian</title><link>https://mg.co.za/powerofwomen-2024/</link></item>
-<item><title>Q&amp;A: Can gender bonds unlock Africa’s potential? - The Mail &amp; Guardian</title><link>https://mg.co.za/business/2024-12-23-qa-can-gender-bonds-unlock-africas-potential/</link></item>
-<item><title>Lesego Chepape - The Mail &amp; Guardian</title><link>https://mg.co.za/author/lesego-chepape/</link></item>
-<item><title>Two KwaZulu-Natal businesses rise from the ashes in a show of the province’s resilience - The Mail &amp; Guardian</title><link>https://mg.co.za/business/2024-12-17-two-kwazulu-natal-businesses-rise-from-the-ashes-in-a-show-of-the-provinces-resilience/</link></item>
-<item><title>Netflix’s epic African journey - The Mail &amp; Guardian</title><link>https://mg.co.za/friday/2024-12-19-netflixs-epic-african-journey/</link></item>
-<item><title>Rolland Simpi Motaung - The Mail &amp; Guardian</title><link>https://mg.co.za/author/rolland-simpi-motaung/</link></item>
-<item><title>Call for nominations: Mail &amp; Guardian’s 200 Young South Africans 2025 - The Mail &amp; Guardian</title><link>https://mg.co.za/news/2024-12-13-call-for-nominations-mail-guardians-200-young-south-africans-2025/</link></item>
-<item><title>Staff Writer - The Mail &amp; Guardian</title><link>https://mg.co.za/author/staff-writer/</link></item>
-<item><title>Fort Hare embraces ‘A decade of renewal’ - The Mail &amp; Guardian</title><link>https://mg.co.za/partner-content/2024-08-01-fort-hare-embraces-a-decade-of-renewal/</link></item>
-<item><title>AngloGold Ashanti Research Chair in Dairy Science &amp; Technology launches into a bright future - The Mail &amp; Guardian</title><link>https://mg.co.za/partner-content/2024-08-01-anglogold-ashanti-research-chair-in-dairy-science-technology-launches-into-a-bright-future/</link></item>
-<item><title>University of Fort Hare to trailblaze with upcoming Bachelors in Dairy Science &amp; Technology - The Mail &amp; Guardian</title><link>https://mg.co.za/partner-content/2024-08-01-university-of-fort-hare-to-trailblaze-with-upcoming-bachelors-in-dairy-science-technology/</link></item>
-<item><title>Award-winning dairy producer welcomes new research possibilities - The Mail &amp; Guardian</title><link>https://mg.co.za/partner-content/2024-08-01-award-winning-dairy-producer-welcomes-new-research-possibilities/</link></item>
-<item><title>Africa’s blue economy: Strategies for tackling plastic waste - The Mail &amp; Guardian</title><link>https://mg.co.za/thought-leader/opinion/2024-12-23-africas-blue-economy-strategies-for-tackling-plastic-waste/</link></item>
-<item><title>Janine Osborne - The Mail &amp; Guardian</title><link>https://mg.co.za/author/janine-osborne/</link></item>
-<item><title>Durban is undergoing quite a revival - The Mail &amp; Guardian</title><link>https://mg.co.za/thought-leader/opinion/2024-12-22-durban-is-undergoing-quite-a-revival/</link></item>
-<item><title>Settlement of the Bela Act dispute has shifted to adults’ concerns, sidelining those of children - The Mail &amp; Guardian</title><link>https://mg.co.za/thought-leader/opinion/2024-12-22-settlement-of-the-bela-act-dispute-has-shifted-to-adults-concerns-sidelining-those-of-children/</link></item>
-<item><title>Theresa Michael - The Mail &amp; Guardian</title><link>https://mg.co.za/author/theresa-michael/</link></item>
-<item><title>From Brazil to South Africa: The power and perils of political charisma - The Mail &amp; Guardian</title><link>https://mg.co.za/thought-leader/opinion/2024-12-21-from-brazil-to-south-africa-the-power-and-perils-of-political-charisma/</link></item>
-<item><title>Richard Pithouse - The Mail &amp; Guardian</title><link>https://mg.co.za/author/richard-pithouse/</link></item>
-<item><title>Sanele Qwabe: Breathing life into nostalgia with Kind Kid - The Mail &amp; Guardian</title><link>https://mg.co.za/friday/2024-12-23-sanele-qwabe-breathing-life-into-nostalgia-with-kind-kid/</link></item>
-<item><title>Sci-fi classic worth dusting off - The Mail &amp; Guardian</title><link>https://mg.co.za/friday/2024-12-23-sci-fi-classic-worth-dusting-off/</link></item>
-<item><title>Artists’ blitzkrieg: Criminalised, cancelled, fired, censored - The Mail &amp; Guardian</title><link>https://mg.co.za/friday/2024-12-20-artists-blitzkrieg-criminalised-cancelled-fired-censored/</link></item>
-<item><title>Fusion food without the confusion - The Mail &amp; Guardian</title><link>https://mg.co.za/friday/2024-12-20-fusion-food-without-the-confusion/</link></item>
-<item><title>Vaal Dam’s levels are plummeting - The Mail &amp; Guardian</title><link>https://mg.co.za/the-green-guardian/2024-12-23-vaal-dams-levels-are-plummeting/</link></item>
-<item><title>Ten illegal miners still trapped in flooded Krugersdorp mine - The Mail &amp; Guardian</title><link>https://mg.co.za/the-green-guardian/2024-12-17-ten-illegal-miners-still-trapped-in-flooded-krugersdorp-mine/</link></item>
-<item><title>Sewage stench lingers at Milnerton Lagoon - The Mail &amp; Guardian</title><link>https://mg.co.za/the-green-guardian/2024-12-16-sewage-stench-lingers-at-milnerton-lagoon/</link></item>
-<item><title>Steve Kretzmann - The Mail &amp; Guardian</title><link>https://mg.co.za/author/steve-kretzmann/</link></item>
-<item><title>Hennops, the river of disease and death flowing through Gauteng - The Mail &amp; Guardian</title><link>https://mg.co.za/the-green-guardian/2024-12-15-hennops-the-river-of-disease-and-death-flowing-through-gauteng/</link></item>
-<item><title>Ramokgopa celebrates 5-year load-shedding milestone, but warns, ‘we are not out of the woods yet’ - The Mail &amp; Guardian</title><link>https://mg.co.za/news/2024-12-23-ramokgopa-celebrates-5-year-load-shedding-milestone-but-warns-we-are-not-out-of-the-woods-yet/</link></item>
-<item><title>Side-effects of medical aids in 2025 - The Mail &amp; Guardian</title><link>https://mg.co.za/business/2024-12-22-side-effects-of-medical-aids-in-2025/</link></item>
-<item><title>The slow massacre in SA’s mining belt - The Mail &amp; Guardian</title><link>https://mg.co.za/thought-leader/opinion/2024-12-21-the-slow-massacre-in-sas-mining-belt/</link></item>
-<item><title>Ramaphosa signs Bela Act without amendments after a three three-month consultation period - The Mail &amp; Guardian</title><link>https://mg.co.za/education/2024-12-21-ramaphosa-signs-bela-act-without-amendments-after-a-three-three-month-consultation-period/</link></item>
-<item><title>Mandela Bay Development - The Mail &amp; Guardian</title><link>https://mg.co.za/author/mandela-bay-development/</link></item>
-<item><title>Bay stadium on a roll with double-header success within a month - The Mail &amp; Guardian</title><link>https://mg.co.za/press-releases/2024-12-09-bay-stadium-on-a-roll-with-double-header-success-within-a-month/</link></item>
-<item><title>Where there’s a will, there’s a better way - The Mail &amp; Guardian</title><link>https://mg.co.za/press-releases/2024-12-04-where-theres-a-will-theres-a-better-way/</link></item>
-<item><title>North-West University at the forefront of agricultural innovation - The Mail &amp; Guardian</title><link>https://mg.co.za/press-releases/2024-12-04-north-west-university-at-the-forefront-of-agricultural-innovation/</link></item>
-<item><title>Back to our learning roots - The Mail &amp; Guardian</title><link>https://mg.co.za/press-releases/2024-12-02-back-to-our-learning-roots/</link></item>
-<item><title>Request for expression of Interest - The Mail &amp; Guardian</title><link>https://careers.mg.co.za/listing/request-for-expression-of-interest/</link></item>
-<item><title>Sustainable Energy Africa (SEA) - The Mail &amp; Guardian</title><link>https://careers.mg.co.za/listing/6391/</link></item>
-<item><title>Property prospecting notice - The Mail &amp; Guardian</title><link>https://careers.mg.co.za/listing/property-prospecting-notice/</link></item>
-<item><title>How SA became a haven for dodgy presidential cash from Mozambique - The Mail &amp; Guardian</title><link>https://mg.co.za/africa/2024-11-18-how-sa-became-a-haven-for-dodgy-presidential-cash-from-mozambique/</link></item>
-<item><title>The Continent Reporter - The Mail &amp; Guardian</title><link>https://mg.co.za/author/the-continent-reporter/</link></item>
-<item><title>African businesses favour intra-continental trade over global markets - The Mail &amp; Guardian</title><link>https://mg.co.za/africa/2024-11-16-african-businesses-favour-intra-continental-trade-over-global-markets/</link></item>
-<item><title>Conrad Onyango - The Mail &amp; Guardian</title><link>https://mg.co.za/author/conrad-onyango/</link></item>
-<item><title>Dehumanising Malawi hospitals fail mothers with impairments - The Mail &amp; Guardian</title><link>https://mg.co.za/africa/2024-11-11-dehumanising-malawi-hospitals-fail-mothers-with-impairments/</link></item>
-<item><title>Josephine Chinele - The Mail &amp; Guardian</title><link>https://mg.co.za/author/josephine-chinele/</link></item>
-<item><title>Chisomo Ngulube - The Mail &amp; Guardian</title><link>https://mg.co.za/author/chisomo-ngulube/</link></item>
-<item><title>Eskom posts a R25.5 billion loss - The Mail &amp; Guardian</title><link>https://mg.co.za/business/2024-12-19-eskom-posts-a-r25-5-billion-loss/</link></item>
-<item><title>Second political realignment is in the offing ahead of 2026 poll - The Mail &amp; Guardian</title><link>https://mg.co.za/politics/2024-12-20-second-political-realignment-is-in-the-offing-ahead-of-2026-poll/</link></item>
-<item><title>Lunga Mzangwe - The Mail &amp; Guardian</title><link>https://mg.co.za/author/lunga-mzangwe/</link></item>
-<item><title>Lines in the sand drawn and redrawn in the first five months of the GNU - The Mail &amp; Guardian</title><link>https://mg.co.za/politics/2024-12-20-lines-in-the-sand-drawn-and-redrawn-in-the-first-five-months-of-the-gnu/</link></item>
-<item><title>Ramaphosa found resolve after losing the ANC’s majority - The Mail &amp; Guardian</title><link>https://mg.co.za/politics/2024-12-20-ramaphosa-found-resolve-after-losing-the-ancs-majority/</link></item>
-<item><title>Study finds SA has improved primary school education - The Mail &amp; Guardian</title><link>https://mg.co.za/education/2024-12-09-study-finds-sa-has-improved-primary-school-education/</link></item>
-<item><title>South African research funds ‘at risk’ over Gaza stance - The Mail &amp; Guardian</title><link>https://mg.co.za/education/2024-12-09-south-african-research-funds-at-risk-over-gaza-stance/</link></item>
-<item><title>Tracking the amiable Mr Jordaan - The Mail &amp; Guardian</title><link>https://mg.co.za/sport/2024-11-30-tracking-the-amiable-mr-jordaan/</link></item>
-<item><title>Entries for Comrades Marathon 2025 are open - The Mail &amp; Guardian</title><link>https://mg.co.za/sport/2024-11-13-entries-for-2025-comrades-marathon-are-open/</link></item>
-<item><title>Akheel Sewsunker - The Mail &amp; Guardian</title><link>https://mg.co.za/author/akheel-sewsunker/</link></item>
-<item><title>South Africa cruise to seven-wicket win in Bangladesh Test - The Mail &amp; Guardian</title><link>https://mg.co.za/sport/2024-10-24-south-africa-cruise-to-seven-wicket-win-in-bangladesh-test/</link></item>
-<item><title>Trump says Musk, Ramaswamy will lead ‘Department of Government Efficiency’ - The Mail &amp; Guardian</title><link>https://mg.co.za/world/2024-11-13-trump-says-musk-ramaswamy-will-lead-department-of-government-efficiency/</link></item>
-<item><title>Ramaphosa welcomes Trump’s return to presidency, eyes closer SA-US collaboration - The Mail &amp; Guardian</title><link>https://mg.co.za/world/2024-11-07-ramaphosa-welcomes-trumps-return-to-presidency-eyes-closer-sa-us-collaboration/</link></item>
-<item><title>Khethukuthula Xulu - The Mail &amp; Guardian</title><link>https://mg.co.za/author/khethukuthula-xulu/</link></item>
-<item><title>Trump takes popular vote and Electoral College in race not as close as predicted - The Mail &amp; Guardian</title><link>https://mg.co.za/world/2024-11-06-trump-declares-election-victory-says-united-states-is-entering-golden-age/</link></item>
+<lastBuildDate>Wed, 25 Dec 2024 11:52:47 +0800</lastBuildDate>
+<item><title>NYT Strands hints, answers for December 24 - Mashable</title><link>https://mashable.com/article/strands-nyt-hint-december-24-2024</link></item>
+<item><title>Best Buy committed to 48-hours of price cuts with a major 48-Hour Flash Sale - Mashable</title><link>https://mashable.com/article/dec-23-best-buy-48-hour-flash-sale-deals</link></item>
+<item><title>Get up to 55% off board games that arrive before Dec. 25 including Ticket to Ride and Catan - Mashable</title><link>https://mashable.com/article/dec-23-board-games-deals</link></item>
+<item><title>YouTuber MrBeast shares first 10 minutes of controversial new game show - Mashable</title><link>https://mashable.com/video/beast-games-first-10-minutes</link></item>
+<item><title>Need a new laptop? Lenovo&amp;#39;s Winter Clearance Sale is your opening - Mashable</title><link>https://mashable.com/article/dec-24-lenovo-clearance-sale-deals</link></item>
+<item><title>Elon Musk’s xAI receives another $6B in funding as Grok app looms - Mashable</title><link>https://mashable.com/article/elon-musk-xai-funding-grok</link></item>
+<item><title>Echo Dot vs. Echo Pop: Which Amazon device should you buy in 2025? - Mashable</title><link>https://mashable.com/comparison/echo-dot-vs-echo-pop</link></item>
+<item><title>CES 2025: 7 AI-powered home products we expect to see from Samsung, LG, more - Mashable</title><link>https://mashable.com/article/ces-2025-preview-ai-powered-home-appliances-tvs-samsung-lg</link></item>
+<item><title>Halina Reijn explains &amp;#39;Babygirl’s&amp;#39; trojan horse of sexual tension - Mashable</title><link>https://mashable.com/video/babygirl-halina-reijn-harris-dickinson</link></item>
+<item><title>Hurdle hints and answers for December 24 - Mashable</title><link>https://mashable.com/article/hurdle-hints-answers-december-24</link></item>
+<item><title>Best movies by women creators on Netflix - Mashable</title><link>https://mashable.com/article/netflix-best-movies-women-directors-creators</link></item>
+<item><title>The serendipitous events that led Tyler Perry and Kerry Washington to make &amp;#39;The Six Triple Eight&amp;#39; - Mashable</title><link>https://mashable.com/video/six-triple-eight-interview-tyler-perry-kerry-washington</link></item>
+<item><title>NYT Connections hints today: Clues, answers for December 25, 2024 - Mashable</title><link>https://mashable.com/article/nyt-connections-hint-answer-today-december-25</link></item>
+<item><title>Wordle today: Answer, hints for December 25 - Mashable</title><link>https://mashable.com/article/wordle-today-answer-december-25-2024</link></item>
+<item><title>NYT Mini crossword answers, hints for December 24, 2024 - Mashable</title><link>https://mashable.com/article/nyt-mini-crossword-answers-hints-december-24-2024</link></item>
+<item><title>NYT Strands hints, answers for December 25 - Mashable</title><link>https://mashable.com/article/strands-nyt-hint-december-25-2024</link></item>
+<item><title>&amp;#39;A Complete Unknown&amp;#39; cast talks Dylan, Suze Rotolo, Joan Baez and Pete Seeger - Mashable</title><link>https://mashable.com/video/a-complete-unkown-cast-interview</link></item>
+<item><title>Martin Short brings holiday joy (and roasts) to his musical &amp;#39;SNL&amp;#39; monologue - Mashable</title><link>https://mashable.com/video/martin-short-snl-christmas-monologue-2024</link></item>
+<item><title>Colin Jost and Michael Che&amp;#39;s 2024 &amp;#39;SNL&amp;#39; Christmas joke swap is their most brutal yet - Mashable</title><link>https://mashable.com/video/snl-weekend-update-colin-jost-michael-che-joke-swap-2024</link></item>
+<item><title>Martin Short roasts Jimmy Fallon, John Mulaney, and more in &amp;#39;SNL&amp;#39; Five-Timers Club cold open - Mashable</title><link>https://mashable.com/video/martin-short-snl-cold-open-five-timers-club</link></item>
+<item><title>Naked Wines in Australia: Everything you need to know - Mashable</title><link>https://mashable.com/article/naked-wines-australia-everything-you-need-to-know</link></item>
+<item><title>Beyoncé&amp;#39;s Christmas halftime show on Netflix: Everything you need to know - Mashable</title><link>https://mashable.com/article/christmas-beyonce-halftime-show-nfl-netflix</link></item>
+<item><title>Who will join Beyoncé on stage for her epic Christmas halftime show on Netflix? - Mashable</title><link>https://mashable.com/article/nfl-netflix-christmas-halftime-show-beyonce-guests</link></item>
+<item><title>Order last minute Lego deals you can pick up at Target before Christmas - Mashable</title><link>https://mashable.com/article/dec-23-lego-target-deals</link></item>
+<item><title>The Kindle Paperwhite Signature Edition is great but is it worth $200? - Mashable</title><link>https://mashable.com/review/kindle-paperwhite-signature-edition-2024</link></item>
+<item><title>Amazon&amp;#39;s basic Kindle is the best e-reader on a budget - Mashable</title><link>https://mashable.com/review/amazon-kindle-2024</link></item>
+<item><title>Review: The Bose Smart Soundbar has a boring name and great sound - Mashable</title><link>https://mashable.com/review/bose-smart-soundbar</link></item>
+<item><title>From Grindr to Scruff: The best dating apps for gay, bi, and queer men to try in 2025 - Mashable</title><link>https://mashable.com/roundup/best-gay-dating-apps-dec-2024</link></item>
+<item><title>Cuffing for love? Here are the best dating apps for serious relationships - Mashable</title><link>https://mashable.com/roundup/best-dating-sites-for-serious-relationships-2024</link></item>
+<item><title>The best gaming laptops for 2025, no matter your budget - Mashable</title><link>https://mashable.com/roundup/best-gaming-laptops-2024</link></item>
+<item><title>Budget Laptops - Mashable</title><link>https://mashable.com/category/budget-laptops</link></item>
+<item><title>The best laptops you can buy for under $500 in 2025 - Mashable</title><link>https://mashable.com/roundup/best-laptops-under-500-2024</link></item>
+<item><title>Healthcare giant admits over 5 million patients affected by ransomware attack - Mashable</title><link>https://mashable.com/article/ascension-healthcare-ransomware-attack</link></item>
+<item><title>Moments of digital organizing that defined 2024 - Mashable</title><link>https://mashable.com/article/2024-digital-activism-organizing-palestine-election</link></item>
+<item><title>Netflix scores exclusive broadcasting rights for FIFA Women&amp;#39;s World Cup - Mashable</title><link>https://mashable.com/article/fifa-womens-world-cup-2027-streaming-netflix</link></item>
+<item><title>Albania is banning TikTok for one year, citing growing violence among teens - Mashable</title><link>https://mashable.com/article/albania-bans-tiktok-for-one-year-citing-growing-violence</link></item>
+<item><title>Mars is littered with junk. Historians want to save it. - Mashable</title><link>https://mashable.com/article/mars-catalog-man-made-material-junk-trash</link></item>
+<item><title>These are the best space images from 2024 - Mashable</title><link>https://mashable.com/article/space-best-images-2024</link></item>
+<item><title>Scientists find 2 stars &amp;#39;thriving&amp;#39; on the brink of a giant black hole - Mashable</title><link>https://mashable.com/article/binary-stars-black-hole-sagitarrius-a</link></item>
+<item><title>NASA performs extreme test on its moon spacecraft and releases footage - Mashable</title><link>https://mashable.com/article/nasa-orion-spacecraft-extreme-abort-test-artemis</link></item>
+<item><title>How to watch &amp;#39;Blink Twice&amp;#39;: Zoë Kravitz&amp;#39;s directorial debut is headed to Prime Video - Mashable</title><link>https://mashable.com/article/how-to-watch-blink-twice</link></item>
+<item><title>Last-minute gifting alert: DoorDash, Regal, and other gift cards are 15% off at Best Buy today - Mashable</title><link>https://mashable.com/article/dec-24-best-buy-gift-card-deals</link></item>
+<item><title>Game of the Year, &amp;#39;Astro Bot,&amp;#39; just hit an all-time low price - Mashable</title><link>https://mashable.com/article/dec-24-astro-bot-ps5-deal</link></item>
+<item><title>25 excellent Oscar–winning movies you can watch on Netflix - Mashable</title><link>https://mashable.com/article/oscar-winning-movies-on-netflix</link></item>
+<item><title>27 of the best mystery movies on Netflix for you to solve - Mashable</title><link>https://mashable.com/article/best-mystery-movies-netflix</link></item>
+<item><title>What&amp;#39;s new to streaming this week? (Dec. 20, 2024) - Mashable</title><link>https://mashable.com/article/new-to-streaming-december-20-2024</link></item>
+<item><title>The 33 best British TV shows of 2024, and where to watch them - Mashable</title><link>https://mashable.com/article/best-british-tv-shows-2024</link></item>
+<item><title>The best VPN services of 2024, tested and reviewed - Mashable</title><link>https://mashable.com/roundup/best-vpns</link></item>
+<item><title>CES 2025: Samsung to unveil AI-powered refrigerators - Mashable</title><link>https://mashable.com/article/ces-2025-ai-fridge</link></item>
+<item><title>Apple reportedly working on a smart doorbell with Face ID - Mashable</title><link>https://mashable.com/article/apple-working-on-smart-doorbell-with-face-id</link></item>
+<item><title>How to navigate a friendship breakup - Mashable</title><link>https://mashable.com/article/navigating-friendship-breakups</link></item>
+<item><title>NYT subscribers can now play old &amp;#39;Connections&amp;#39; puzzles - Mashable</title><link>https://mashable.com/article/connections-archive-for-nyt-subscribers</link></item>
+<item><title>Social media companies might use facial recognition to ban underage users under UK plan - Mashable</title><link>https://mashable.com/article/social-media-ban-underage-users-facial-recognition</link></item>
+<item><title>TikTok ban update: Trump wants to &amp;#39;keep this sucker around&amp;#39; - Mashable</title><link>https://mashable.com/article/tiktok-ban-update-trump</link></item>
+<item><title>Hurdle hints and answers for December 23 - Mashable</title><link>https://mashable.com/article/hurdle-hints-answers-december-23</link></item>
+<item><title>Canoo reportedly puts staff on &amp;#39;mandatory unpaid break&amp;#39; for weeks - Mashable</title><link>https://mashable.com/article/canoo-electric-vehicle-mandatory-unpaid-break</link></item>
+<item><title>&amp;#39;Dune: Prophecy&amp;#39;s twisty Season 1 finale, explained - Mashable</title><link>https://mashable.com/article/dune-prophecy-ending-explainer</link></item>
+<item><title>Kinomoto Tsuruya Bakery in Kinomoto, Japan - Atlas Obscura</title><link>https://www.atlasobscura.com/places/tsuruya-bakery-salad-bread</link></item>
+<item><title>Puppetry Art Center of Taipei in Taiwan - Atlas Obscura</title><link>https://www.atlasobscura.com/places/puppetry-art-center-of-taipei</link></item>
+<item><title>Our Favorite Holiday Cocktail Recipes and Stories - Atlas Obscura</title><link>https://www.atlasobscura.com/articles/our-favorite-holiday-cocktail-recipe-stories</link></item>
+<item><title>5 Unconventional Christmas Tree Stories - Atlas Obscura</title><link>https://www.atlasobscura.com/articles/unconventional-christmas-tree-stories</link></item>
+<item><title>Nekonoike Tunnel in Kamakura, Japan - Atlas Obscura</title><link>https://www.atlasobscura.com/places/nekonoike-tunnel</link></item>
+<item><title>‘E Pluribus Unum’ Mural in Stevens Point, Wisconsin - Atlas Obscura</title><link>https://www.atlasobscura.com/places/e-pluribus-unum-mural</link></item>
+<item><title>Searching for &amp;#39;Dark Oxygen&amp;#39; in One of the World&amp;#39;s Deepest Mines - Atlas Obscura</title><link>https://www.atlasobscura.com/articles/dark-oxygen-moab-khotsong</link></item>
+<item><title>What Atlas Obscura Staffers Ticked Off Their Bucket Lists This Year - Atlas Obscura</title><link>https://www.atlasobscura.com/articles/atlas-obscura-bucket-lists-2024</link></item>
+<item><title>Sefrou in Sefrou, Morocco - Atlas Obscura</title><link>https://www.atlasobscura.com/places/sefrou-morocco</link></item>
+<item><title>Norma Jean Circus Elephant Monument in Oquawka, Illinois - Atlas Obscura</title><link>https://www.atlasobscura.com/places/norma-jean-circus-elephant-monument</link></item>
+<item><title>Make Krampus Bread This Holiday Season - Atlas Obscura</title><link>https://www.atlasobscura.com/articles/make-krampus-bread-recipe</link></item>
+<item><title>Harry&amp;#39;s Wall in Holmes Chapel, England - Atlas Obscura</title><link>https://www.atlasobscura.com/places/harrys-wall</link></item>
+<item><title>Tuas Lamp Post 1 in Singapore - Atlas Obscura</title><link>https://www.atlasobscura.com/places/tuas-lamp-post-1-singapore</link></item>
+<item><title>Thonsepar in Malpe, India - Atlas Obscura</title><link>https://www.atlasobscura.com/places/thonsepar-st-marys-island</link></item>
+<item><title>Museum of Erotics and Mythology in Brussels, Belgium - Atlas Obscura</title><link>https://www.atlasobscura.com/places/museum-of-erotics-and-mythology</link></item>
+<item><title>Not Your Average Snow Day: 8 Wild Ways to Experience Winter Fun in Colorado - Atlas Obscura</title><link>https://www.atlasobscura.com/articles/not-your-average-snow-day-8-wild-ways-to-experience-winter-fun-in-colorado</link></item>
+<item><title>Western Winter: Your Guide to Colorado’s Cowboy Culture - Atlas Obscura</title><link>https://www.atlasobscura.com/articles/western-winter-your-guide-to-colorado-s-cowboy-culture</link></item>
+<item><title>Christmas Monsters: Our Favorite Reads - Atlas Obscura</title><link>https://www.atlasobscura.com/articles/christmas-winter-monsters</link></item>
+<item><title>Top &amp;#39;o Hill Terrace in Arlington, Texas - Atlas Obscura</title><link>https://www.atlasobscura.com/places/top-o-hill-terrace-texas</link></item>
+<item><title>The Xemxija Old Carob Tree in St Paul&amp;#39;s Bay, Malta - Atlas Obscura</title><link>https://www.atlasobscura.com/places/xemxija-old-carob-tree</link></item>
+<item><title>Krampus Has Come and Gone. Next Up, the Perchten. - Atlas Obscura</title><link>https://www.atlasobscura.com/articles/krampus-perchten-tradition</link></item>
+<item><title>Inside the Japanese-American Farm Preserving Endangered Fruit - Atlas Obscura</title><link>https://www.atlasobscura.com/articles/inside-the-japanese-american-farm-preserving-endangered-fruit</link></item>
+<item><title>The Real-Life Origins of Taboo Fairy Romance - Atlas Obscura</title><link>https://www.atlasobscura.com/articles/where-does-fairy-romance-come-from</link></item>
+<item><title>How to Make Fluorescent Food - Atlas Obscura</title><link>https://www.atlasobscura.com/articles/how-to-make-a-fluorescent-cake</link></item>
+<item><title>印度数百万人死于空气污染 - Solidot</title><link>https://www.solidot.org/story?sid=80142</link></item>
+<item><title>美国对中国制造的传统半导体展开调查 - Solidot</title><link>https://www.solidot.org/story?sid=80140</link></item>
+<item><title>YouTube 在俄罗斯的流量减少八成 - Solidot</title><link>https://www.solidot.org/story?sid=80139</link></item>
+<item><title>Google 不希望出售 Chrome - Solidot</title><link>https://www.solidot.org/story?sid=80138</link></item>
+<item><title>Darktable 5.0.0 释出 - Solidot</title><link>https://www.solidot.org/story?sid=80137</link></item>
+<item><title>Telegram 今年首次盈利 - Solidot</title><link>https://www.solidot.org/story?sid=80136</link></item>
+<item><title>施乐从中国财团手中收购利盟 - Solidot</title><link>https://www.solidot.org/story?sid=80135</link></item>
+<item><title>Why you shouldn&amp;#39;t respond to emails straight away [Q&amp;A] - BetaNews</title><link>https://betanews.com/2024/12/23/why-you-shouldnt-respond-to-emails-straight-away-qa/</link></item>
+<item><title>WhatsApp is rolling out a new reaction emoji just in time for the New Year - BetaNews</title><link>https://betanews.com/2024/12/23/whatsapp-is-rolling-out-a-new-reaction-emoji-just-in-time-for-the-new-year/</link></item>
+<item><title>Report: Apple is working on a Face ID powered smart doorbell and lock - BetaNews</title><link>https://betanews.com/2024/12/23/report-apple-is-working-on-a-face-id-powered-smart-doorbell-and-lock/</link></item>
+<item><title>O&amp;O DiskImage 20 Professional Edition launches with improvements and enhancements - BetaNews</title><link>https://betanews.com/2024/11/26/oo-diskimage-20-professional-edition-launches-with-improvements-and-enhancements/</link></item>
+<item><title>Why you might soon find yourself talking to adverts - BetaNews</title><link>https://betanews.com/2024/11/20/why-you-might-soon-find-yourself-talking-to-adverts/</link></item>
+<item><title>Can siduction OS seduce you into saying goodbye to Windows 11 in 2025? - BetaNews</title><link>https://betanews.com/2024/12/24/can-siduction-os-seduce-you-into-saying-goodbye-to-windows-11-in-2025/</link></item>
+<item><title>Linux-powered Serpent OS reaches its first major development milestone -- download it now! - BetaNews</title><link>https://betanews.com/2024/12/23/serpent-os-enters-alpha-linux/</link></item>
+<item><title>A hybrid approach could put your organization on cloud nine - BetaNews</title><link>https://betanews.com/2024/12/23/a-hybrid-approach-could-put-your-organization-on-cloud-nine/</link></item>
+<item><title>Trends and strategies for 2025: Building agile and efficient IT ecosystems for consumer data - BetaNews</title><link>https://betanews.com/2024/12/23/trends-and-strategies-for-2025-building-agile-and-efficient-it-ecosystems-for-consumer-data/</link></item>
+<item><title>Silicon Power debuts MEM3K0E M.2 PCIe 2230 E-Key SSD - BetaNews</title><link>https://betanews.com/2024/12/22/silicon-power-debuts-mem3k0e-m-2-pcie-2230-e-key-ssd/</link></item>
+<item><title>How Santa Claus could transform Christmas with Linux - BetaNews</title><link>https://betanews.com/2024/12/22/how-santa-claus-could-transform-christmas-with-linux/</link></item>
+<item><title>The latest obstacles to updating to Windows 11 24H2 are an audio bug and an Auto HDR glitch - BetaNews</title><link>https://betanews.com/2024/12/22/the-latest-obstacles-to-updating-to-windows-11-24h2-are-an-audio-bug-and-an-auto-hdr-glitch/</link></item>
+<item><title>ASUS NUC 14 Pro AI Windows 11 mini PC revealed with Microsoft Copilot+ and Intel Core Ultra processors - BetaNews</title><link>https://betanews.com/2024/12/21/asus-nuc-14-pro-ai-mini-pc-revealed-with-microsoft-copilot-and-intel-core-ultra-processors/</link></item>
+<item><title>Acorn 8 for macOS debuts machine learning tools for a limited-time $19.99 - BetaNews</title><link>https://betanews.com/2024/12/21/acorn-8-apple-macos-machine-learning-tools-1999-sale/</link></item>
+<item><title>primarily a Linux user - BetaNews</title><link>https://betanews.com/topic/linux/</link></item>
+<item><title>Hisense unveils HT Saturn wireless home theater system - BetaNews</title><link>https://betanews.com/2024/12/20/hisense-unveils-ht-saturn-wireless-home-theater-system/</link></item>
+<item><title>Discover the Windows tool everyone&amp;#39;s talking about: Flow Launcher adds powerful search and app-launching capabilities -- and then some - BetaNews</title><link>https://betanews.com/2024/12/20/discover-the-windows-tool-everyones-talking-about-flow-launcher-adds-powerful-search-and-app-launching-capabilities-and-then-some/</link></item>
+<item><title>The stunning Oreon 10 arrives to replace Microsoft Windows -- download it now! - BetaNews</title><link>https://betanews.com/2024/12/06/the-stunning-oreon-10-arrives-to-replace-microsoft-windows-download-it-now/</link></item>
+<item><title>Linux predictions for 2025 - BetaNews</title><link>https://betanews.com/2024/12/13/linux-predictions-2025/</link></item>
+<item><title>Windows 12 is everything Windows 11 should be -- and the Microsoft OS we deserve! - BetaNews</title><link>https://betanews.com/2024/12/01/windows-12-is-everything-windows-11-should-be-and-the-microsoft-os-we-deserve/</link></item>
+<item><title>Forget bloated Windows 11, Windows 12 Lite is the Microsoft operating system we need! - BetaNews</title><link>https://betanews.com/2024/11/24/forget-bloated-windows-11-windows-12-lite-is-the-microsoft-operating-system-we-need/</link></item>
+<item><title>Microsoft refuses to ease Windows 11’s strict hardware requirements, despite the ditching of Windows 10 - BetaNews</title><link>https://betanews.com/2024/12/05/microsoft-refuses-to-ease-windows-11s-strict-hardware-requirements-despite-the-ditching-of-windows-10/</link></item>
+<item><title>Today is the day! Say goodbye to Microsoft Windows 11 -- Nitrux Linux 3.8.0 is the OS you&amp;#39;ve been waiting for - BetaNews</title><link>https://betanews.com/2024/12/03/today-is-the-day-say-goodbye-to-microsoft-windows-11-nitrux-linux-3-8-0-is-the-os-youve-been-waiting-for/</link></item>
+<item><title>Waiting for Microsoft Windows 12 is a mistake when you can upgrade to Linux today - BetaNews</title><link>https://betanews.com/2024/12/02/microsoft-windows-12-mistake-linux/</link></item>
+<item><title>Linux Mint dethrones MX Linux as the most popular distro on DistroWatch - BetaNews</title><link>https://betanews.com/2024/12/10/linux-mint-mx-distrowatch/</link></item>
+<item><title>Best Wishes to All LibreOffice Community Members - LibreOffice</title><link>https://blog.documentfoundation.org/blog/2024/12/24/best-wishes-to-all-libreoffice-community-members/</link></item>
+<item><title>2024 – The Documentation Team Made LibreOffice Shine - LibreOffice</title><link>https://blog.documentfoundation.org/blog/2024/12/23/2024-the-documentation-team-made-libreoffice-shine/</link></item>
+<item><title>LibreOffice 24.8.4, optimised for the privacy-conscious user, is available for download - LibreOffice</title><link>https://blog.documentfoundation.org/blog/2024/12/19/libreoffice-24-8-4/</link></item>
+<item><title>24 more videos from the LibreOffice Conference 2024! - LibreOffice</title><link>https://blog.documentfoundation.org/blog/2024/12/17/24-more-videos-from-the-libreoffice-conference-2024/</link></item>
+<item><title>Season’s Greetings! Three new LibreOffice Guides released - LibreOffice</title><link>https://blog.documentfoundation.org/blog/2024/12/16/seasons-greetings-three-new-libreoffice-guides-released/</link></item>
+<item><title>LibreOffice at LinuxDays 2024 in Prague - LibreOffice</title><link>https://blog.documentfoundation.org/blog/2024/12/06/libreoffice-at-linuxdays-2024-in-prague/</link></item>
+<item><title>LibreOffice project and community recap: November 2024 - LibreOffice</title><link>https://blog.documentfoundation.org/blog/2024/12/05/libreoffice-project-and-community-recap-november-2024/</link></item>
+<item><title>Winners in the Month of LibreOffice, November 2024 – Get your free sticker pack! - LibreOffice</title><link>https://blog.documentfoundation.org/blog/2024/12/04/winners-in-the-month-of-libreoffice-november-2024-get-your-free-sticker-pack/</link></item>
+<item><title>Video: Government moving 30,000 PCs from Microsoft to LibreOffice - LibreOffice</title><link>https://blog.documentfoundation.org/blog/2024/12/03/video-government-moving-30000-pcs-from-microsoft-to-libreoffice/</link></item>
+<item><title>Community Member Monday: Moritz Duge - LibreOffice</title><link>https://blog.documentfoundation.org/blog/2024/12/02/community-member-monday-moritz-duge/</link></item>
+<item><title>Display Animated Christmas Tree In Terminal (2025) - OSTechNix</title><link>https://ostechnix.com/display-animated-christmas-tree-terminal/</link></item>
+<item><title>YQPkg: A Modern, Qt-based Package Manager To Replace YaST In OpenSUSE - OSTechNix</title><link>https://ostechnix.com/yqpkg-opensuse-package-manager/</link></item>
+<item><title>Linux Kernel 6.13 RC4 Released: A Tiny Christmas Gift From Kernel Developers - OSTechNix</title><link>https://ostechnix.com/linux-kernel-6-13-rc4-released/</link></item>
+<item><title>Python Script - OSTechNix</title><link>https://ostechnix.com/category/scripting/python-script/</link></item>
+<item><title>Audiogenipy: Create Audiobooks With Python And gTTS Effortlessly In Linux - OSTechNix</title><link>https://ostechnix.com/audiogenipy-create-audiobook-python-gtts/</link></item>
+<item><title>OpenAI Launches ChatGPT For Landline Phones - OSTechNix</title><link>https://ostechnix.com/openai-launches-chatgpt-for-landline-phones/</link></item>
+<item><title>Great News For Developers! Code Faster With FREE GitHub Copilot!! - OSTechNix</title><link>https://ostechnix.com/free-github-copilot/</link></item>
+<item><title>Fish Shell 4.0 Beta Released: Major Rewrite In Rust With Key Improvements - OSTechNix</title><link>https://ostechnix.com/fish-shell-4-0-beta-released/</link></item>
+<item><title>New words – 23 December 2024 - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2024/12/23/new-words-23-december-2024/</link></item>
+<item><title>It’s written in the stars: talking about things that might happen in the future - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2024/12/18/its-written-in-the-stars-talking-about-what-might-happen-in-the-future/</link></item>
+<item><title>New words – 16 December 2024 - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2024/12/16/new-words-16-december-2024/</link></item>
+<item><title>Cringeworthy and toe-curling (The language of embarrassment) - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2024/12/11/cringeworthy-and-toe-curling-the-language-of-embarrassment/</link></item>
+<item><title>New words – 9 December 2024 - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2024/12/09/new-words-9-december-2024/</link></item>
+<item><title>In real life or the virtual world: ways of being present - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2024/12/04/in-real-life-or-the-virtual-world-ways-of-being-present/</link></item>
+<item><title>New words – 02 December 2024 - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2024/12/02/new-words-25-november-2024/</link></item>
+<item><title>Playing with fire (The language of risk) - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2024/11/27/playing-with-fire-the-language-of-risk/</link></item>
+<item><title>AI Beats Human Experts At Distinguishing American Whiskey From Scotch - Slashdot</title><link>https://slashdot.org/story/24/12/24/2054235/ai-beats-human-experts-at-distinguishing-american-whiskey-from-scotch</link></item>
+<item><title>Scientists Observe &amp;#39;Negative Time&amp;#39; In Quantum Experiments - Slashdot</title><link>https://science.slashdot.org/story/24/12/24/211252/scientists-observe-negative-time-in-quantum-experiments</link></item>
+<item><title>South Korea Mulls Creating &amp;#39;KSMC&amp;#39; Contract Chipmaker To Compete With TSMC - Slashdot</title><link>https://hardware.slashdot.org/story/24/12/24/218237/south-korea-mulls-creating-ksmc-contract-chipmaker-to-compete-with-tsmc</link></item>
+<item><title>North Korean Hackers Stole $1.3 Billion Worth of Crypto This Year - Slashdot</title><link>https://it.slashdot.org/story/24/12/24/2049216/north-korean-hackers-stole-13-billion-worth-of-crypto-this-year</link></item>
+<item><title>More Than 140 Kenya Facebook Moderators Diagnosed With Severe PTSD - Slashdot</title><link>https://tech.slashdot.org/story/24/12/24/2029250/more-than-140-kenya-facebook-moderators-diagnosed-with-severe-ptsd</link></item>
+<item><title>One Third of Adults Can&amp;#39;t Delete Device Data - Slashdot</title><link>https://hardware.slashdot.org/story/24/12/24/2020240/one-third-of-adults-cant-delete-device-data</link></item>
+<item><title>El Salvador Strikes $1.4 Billion IMF Deal After Scaling Back Bitcoin Policies - Slashdot</title><link>https://slashdot.org/story/24/12/24/2015221/el-salvador-strikes-14-billion-imf-deal-after-scaling-back-bitcoin-policies</link></item>
+<item><title>Cloudflare Must Block &amp;#39;Piracy Shield&amp;#39; Domains and IP Addresses Across Its Service - Slashdot</title><link>https://yro.slashdot.org/story/24/12/24/206208/cloudflare-must-block-piracy-shield-domains-and-ip-addresses-across-its-service</link></item>
+<item><title>Piracy Shield&amp;#39; legislation - Slashdot</title><link>https://yro.slashdot.org/story/23/12/12/0419222/italys-piracy-shield-anti-piracy-system-launches-applies-to-all-dns-and-vpn-providers</link></item>
+<item><title>Post Office Creates CTO Role To Support &amp;#39;Extensive and Complex&amp;#39; Plans - Slashdot</title><link>https://news.slashdot.org/story/24/12/24/1824259/post-office-creates-cto-role-to-support-extensive-and-complex-plans</link></item>
+<item><title>&amp;#39;2024 Was the Year Gamers Really Started Pushing Back On the Erosion of Game Ownership&amp;#39; - Slashdot</title><link>https://games.slashdot.org/story/24/12/24/1820223/2024-was-the-year-gamers-really-started-pushing-back-on-the-erosion-of-game-ownership</link></item>
+<item><title>shutdowns and service terminations - Slashdot</title><link>https://games.slashdot.org/story/24/12/24/1814214/2024-was-the-year-the-bottom-fell-out-of-the-games-industry</link></item>
+<item><title>OpenAI Has Discussed Making a Humanoid Robot, Report Says - Slashdot</title><link>https://hardware.slashdot.org/story/24/12/24/187241/openai-has-discussed-making-a-humanoid-robot-report-says</link></item>
+<item><title>How Apple Developed an Nvidia Allergy - Slashdot</title><link>https://apple.slashdot.org/story/24/12/24/1735235/how-apple-developed-an-nvidia-allergy</link></item>
+<item><title>ASUS Christmas Campaign Sparks Malware Panic Among Windows Users - Slashdot</title><link>https://tech.slashdot.org/story/24/12/24/1745233/asus-christmas-campaign-sparks-malware-panic-among-windows-users</link></item>
+<item><title>Google is Using Anthropic&amp;#39;s Claude To Improve Its Gemini AI - Slashdot</title><link>https://slashdot.org/story/24/12/24/176205/google-is-using-anthropics-claude-to-improve-its-gemini-ai</link></item>
+<item><title>Takedown Notices Hit Luigi Mangione Merchandise and Photos - Including DMCAs - Slashdot</title><link>https://slashdot.org/story/24/12/23/0347234/takedown-notices-hit-luigi-mangione-merchandise-and-photos---including-dmcas?sbsrc=md</link></item>
+<item><title>France Adds First New Nuclear Reactor to Its Grid Since 1999 - Slashdot</title><link>https://hardware.slashdot.org/story/24/12/23/022202/france-adds-first-new-nuclear-reactor-to-its-grid-since-1999?sbsrc=md</link></item>
+<item><title>Drinking Tea and Coffee Linked To Lower Risk of Head and Neck Cancer in Study - Slashdot</title><link>https://science.slashdot.org/story/24/12/24/1523236/drinking-tea-and-coffee-linked-to-lower-risk-of-head-and-neck-cancer-in-study?utm_source=rss0.9mainlinkanon&amp;utm_medium=feed&amp;sbsrc=science</link></item>
+<item><title>Commercial Tea Bags Release Millions of Microplastics, Entering Human Intestinal Cells - Slashdot</title><link>https://science.slashdot.org/story/24/12/24/038201/commercial-tea-bags-release-millions-of-microplastics-entering-human-intestinal-cells?utm_source=rss0.9mainlinkanon&amp;utm_medium=feed&amp;sbsrc=science</link></item>
+<item><title>Space Station Keeps Dodging Debris From China&amp;#39;s 2007 Satellite Weapon Test - Slashdot</title><link>https://science.slashdot.org/story/24/12/24/0256209/space-station-keeps-dodging-debris-from-chinas-2007-satellite-weapon-test?utm_source=rss0.9mainlinkanon&amp;utm_medium=feed&amp;sbsrc=science</link></item>
+<item><title>50 Years Ago: The Influential Intel 8080 - Intel Newsroom</title><link>https://www.intel.com/content/www/us/en/newsroom/news/50-years-ago-the-influential-intel-8080.html</link></item>
+<item><title>Intel Foundry Unveils Advancements at IEDM 2024 - Intel Newsroom</title><link>https://www.intel.com/content/www/us/en/newsroom/news/intel-foundry-unveils-technology-advancements-iedm-2024.html</link></item>
+<item><title>CES 2025: Pioneering AI-Driven Innovation - Intel Newsroom</title><link>https://www.intel.com/content/www/us/en/newsroom/news/ces-2025-pioneering-ai-driven-innovation-work-mobility.html</link></item>
+<item><title>Intel Appoints Eric Meurice, Steve Sanghi to Board - Intel Newsroom</title><link>https://www.intel.com/content/www/us/en/newsroom/news/intel-board-members-december-2024.html</link></item>
+<item><title>Intel Launches Arc B-Series Graphics Cards - Intel Newsroom</title><link>https://www.intel.com/content/www/us/en/newsroom/news/intel-launches-arc-b-series-graphics-cards.html</link></item>
+<item><title>Intel Announces Retirement of CEO Pat Gelsinger - Intel Newsroom</title><link>https://www.intel.com/content/www/us/en/newsroom/news/intel-ceo-news-dec-2024.html</link></item>
+<item><title>This “Boring” Bathroom Transforms into a “Happy” Oasis - Apartment Therapy</title><link>https://www.apartmenttherapy.com/blue-bathroom-makeover-painted-grout-ba-37447945?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>I Set Up a Hot Chocolate Bar in My Kitchen, and the Vibes Are Immaculate - Apartment Therapy</title><link>https://www.apartmenttherapy.com/hot-chocolate-station-37448800?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>The 10 Best Bathrooms Makeovers of 2024 Prove the Power of DIYs (The Redos Start at Just $60!) - Apartment Therapy</title><link>https://www.apartmenttherapy.com/best-bathroom-makeovers-2024-37447879?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>10 Coffee Table Books That Should Be on Your Shelves and Tables Now - Apartment Therapy</title><link>https://www.apartmenttherapy.com/best-coffee-table-books-37447601?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>Aldi Has Mini Voluspa Candle Dupes Right Now (at a Fraction of the Price) - Apartment Therapy</title><link>https://www.apartmenttherapy.com/aldi-voluspa-candle-dupe-37449076?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>This Colorful New IKEA Find Is So Perfect for Small Living Rooms - Apartment Therapy</title><link>https://www.apartmenttherapy.com/ikea-skonaback-sleeper-sofa-37448408?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>The Most Popular Dollar Tree Storage Hack of 2024 (It’s So Smart!) - Apartment Therapy</title><link>https://www.apartmenttherapy.com/best-dollar-tree-storage-hack-2024-37447143?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>This HomeGoods Mug Comes in the Cutest Shape Ever - Apartment Therapy</title><link>https://www.apartmenttherapy.com/homegoods-boot-mug-with-hearts-37447983?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>A $127 Makeover Gives This &amp;quot;White Box&amp;quot; Bedroom Chic &amp;quot;Private Train Car&amp;quot; Vibes - Apartment Therapy</title><link>https://www.apartmenttherapy.com/bedroom-makeover-green-beadboard-headboard-127-dollars-ba-37448343?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>This “Surprisingly” Stylish Shed Can Be Converted Into a Tiny Home (It’s Less Than $3K!) - Apartment Therapy</title><link>https://www.apartmenttherapy.com/amazon-palisade-tiny-home-shed-37448822?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>Add a Few Tablespoons of This “Liquid Gold” to Prime Rib for the Best Flavor of Your Life - Apartment Therapy</title><link>https://www.apartmenttherapy.com/hanamaruki-liquid-shio-koji-review-37446968?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>This Trader Joe’s Find Is Perfect for Last-Minute Holiday Decor (It’s Just $3!) - Apartment Therapy</title><link>https://www.apartmenttherapy.com/trader-joes-mistletoe-37448951?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>These Are the Most Popular Decor Items in 2024, According to AT Readers - Apartment Therapy</title><link>https://www.apartmenttherapy.com/most-popular-decor-items-2024-37448396?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>This Was the Most-Liked Before &amp; After on Apartment Therapy’s Instagram This Year (I’m Not Surprised!) - Apartment Therapy</title><link>https://www.apartmenttherapy.com/most-liked-before-and-after-instagram-2024-37447828?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>The Very Best Sheets We Tested in 2024, for Every Need and Budget - Apartment Therapy</title><link>https://www.apartmenttherapy.com/best-editor-tested-sheets-2024-37448453?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>This Home’s Vintage Holiday Decor Is the Most Charmingly Festive I’ve Ever Seen - Apartment Therapy</title><link>https://www.apartmenttherapy.com/this-homes-vintage-holiday-decor-is-the-most-charmingly-festive-display-ive-ever-seen-37448732?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>The “4 and 5 Rule” Is the Foolproof Styling Trick for Entertaining Like a Pro - Apartment Therapy</title><link>https://www.apartmenttherapy.com/how-to-set-a-table-according-to-designers-37447557?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>I’m Obsessed with This “Beautiful” Cold-Weather Gem from Costco (So Cozy!) - Apartment Therapy</title><link>https://www.apartmenttherapy.com/costco-selling-fire-pit-37447833?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>Walmart Is Selling a &amp;quot;Beautiful&amp;quot; Dupe of IKEA’s Popular Kallax Shelf Unit - Apartment Therapy</title><link>https://www.apartmenttherapy.com/better-homes-and-gardens-16-cube-organizer-walmart-sale-2024-37448742?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>The $24 Gem That&amp;#39;ll Help Me Stay Productive in the New Year - Apartment Therapy</title><link>https://www.apartmenttherapy.com/wipeable-wall-calendar-qvc-reviews-37448430?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>Dickens at Delphi - Law &amp; Liberty</title><link>https://lawliberty.org/dickens-at-delphi/</link></item>
+<item><title>&amp;#39;2024 Was the Year the Bottom Fell Out of the Games Industry&amp;#39; - Slashdot</title><link>https://games.slashdot.org/story/24/12/24/1814214/2024-was-the-year-the-bottom-fell-out-of-the-games-industry?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
+<item><title>statistical physics - Quanta Magazine</title><link>https://www.quantamagazine.org/tag/statistical-physics/</link></item>
+<item><title>Mathematicians Uncover a New Way to Count Prime Numbers - Quanta Magazine</title><link>https://www.quantamagazine.org/mathematicians-uncover-a-new-way-to-count-prime-numbers-20241211/</link></item>
+<item><title>How to Remove Items From Lists in Python -  Real Python</title><link>https://realpython.com/remove-item-from-list-python/</link></item>
+<item><title>How to Flatten a List of Lists in Python -  Real Python</title><link>https://realpython.com/python-flatten-list/</link></item>
+<item><title>Strings and Character Data in Python -  Real Python</title><link>https://realpython.com/python-strings/</link></item>
+<item><title>Using Python&amp;#39;s pip to Manage Your Projects&amp;#39; Dependencies -  Real Python</title><link>https://realpython.com/what-is-pip/</link></item>
+<item><title>Working With JSON Data in Python -  Real Python</title><link>https://realpython.com/python-json/</link></item>
+<item><title>Basic Data Types in Python: A Quick Exploration -  Real Python</title><link>https://realpython.com/python-data-types/</link></item>
+<item><title>A Practical Introduction to Web Scraping in Python -  Real Python</title><link>https://realpython.com/python-web-scraping-practical-introduction/</link></item>
+<item><title>The Real Python Podcast – Episode #232: Exploring Modern Sentiment Analysis Approaches in Python -  Real Python</title><link>https://realpython.com/podcasts/rpp/232/</link></item>
+<item><title>Get Started With Django User Management -  Real Python</title><link>https://realpython.com/django-user-management/</link></item>
+<item><title>Quiz: How to Remove Items From Lists in Python -  Real Python</title><link>https://realpython.com/quizzes/remove-item-from-list-python/</link></item>
+<item><title>Programming Sockets in Python -  Real Python</title><link>https://realpython.com/courses/programming-sockets/</link></item>
+<item><title>Dictionaries in Python -  Real Python</title><link>https://realpython.com/python-dicts/</link></item>
+<item><title>Python&amp;#39;s property(): Add Managed Attributes to Your Classes -  Real Python</title><link>https://realpython.com/python-property/</link></item>
+<item><title>Diamonds and Eels: How China’s Goods Are Going Global - Sixth Tone</title><link>https://www.sixthtone.com/news/1016410/diamonds-and-eels%3A-how-china%E2%80%99s-goods-are-going-global?source=channel_home</link></item>
+<item><title>Harbin Firm Under Fire for Banning Employees From Ice Festival - Sixth Tone</title><link>https://www.sixthtone.com/news/1016409/harbin-firm-under-fire-for-banning-employees-from-ice-festival?source=channel_home</link></item>
+<item><title>China’s 2024 in Photos - Sixth Tone</title><link>https://www.sixthtone.com/news/1016399/china%E2%80%99s-2024-in-photos?source=channel_home</link></item>
+<item><title>China Puts E-Bike Makers on the Hook for Battery Recycling - Sixth Tone</title><link>https://www.sixthtone.com/news/1016403/china-puts-e-bike-makers-on-the-hook-for-battery-recycling?source=channel_home</link></item>
+<item><title>China Develops Groundbreaking New Breast Cancer Treatment - Sixth Tone</title><link>https://www.sixthtone.com/news/1016398/china-develops-groundbreaking-new-breast-cancer-treatment</link></item>
+<item><title>Chinese Astronauts Break Record for Longest Space Walk - Sixth Tone</title><link>https://www.sixthtone.com/news/1016388/chinese-astronauts-break-record-for-longest-space-walk</link></item>
+<item><title>China’s Middle Class Frets as Macau Colleges Ban Non-‘Gaokao’ Students - Sixth Tone</title><link>https://www.sixthtone.com/news/1016385/china%E2%80%99s-middle-class-frets-as-macau-colleges-ban-non-%E2%80%98gaokao%E2%80%99-students</link></item>
+<item><title>Copy Right: The Painstaking Method and Magic of Mastering a Replica - Sixth Tone</title><link>https://www.sixthtone.com/news/1016292/copy-right%3A-the-painstaking-method-and-magic-of-mastering-a-replica</link></item>
+<item><title>Factory Reset: A New Generation Races to Save China’s Family Businesses - Sixth Tone</title><link>https://www.sixthtone.com/news/1016267/factory-reset%3A-a-new-generation-races-to-save-china%E2%80%99s-family-businesses</link></item>
+<item><title>Chiung Yao, Iconic Author of Romance and Drama, Dies at 86 - Sixth Tone</title><link>https://www.sixthtone.com/news/1016320/chiung-yao%2C-iconic-author-of-romance-and-drama%2C-dies-at-86</link></item>
+<item><title>Clearing the Bar: Searching for China’s Next Track Star - Sixth Tone</title><link>https://www.sixthtone.com/news/1016299/clearing-the-bar%3A-searching-for-china%E2%80%99s-next-track-star</link></item>
+<item><title>In Ningxia’s Boar Wars, Farmers and Hunters Unite to Save Crops - Sixth Tone</title><link>https://www.sixthtone.com/news/1016257/in-ningxia%E2%80%99s-boar-wars%2C-farmers-and-hunters-unite-to-save-crops</link></item>
+<item><title>Will This Short Story Rewrite the History of Chinese Sci-Fi? - Sixth Tone</title><link>https://www.sixthtone.com/news/1016387/will-this-short-story-rewrite-the-history-of-chinese-sci-fi%3F?source=channel_home</link></item>
+<item><title>Emily Xueni Jin - Sixth Tone</title><link>https://www.sixthtone.com/users/1010831/emily-xueni-jin</link></item>
+<item><title>Do Sci-Fi Authors Dream of Electric Daoism? - Sixth Tone</title><link>https://www.sixthtone.com/news/1016319/do-sci-fi-authors-dream-of-electric-daoism%3F?source=channel_home</link></item>
+<item><title>The Woman Who Found ‘Home’ in an Unfinished Building - Sixth Tone</title><link>https://www.sixthtone.com/news/1016386/the-woman-who-found-%E2%80%98home%E2%80%99-in-an-unfinished-building</link></item>
+<item><title>Emotional Labor: Life Inside a Chinese Orphanage - Sixth Tone</title><link>https://www.sixthtone.com/news/1016366/emotional-labor%3A-life-inside-a-chinese-orphanage</link></item>
+<item><title>Meet Ms. Hu: She Built a Garden From Chongqing’s Discarded Past - Sixth Tone</title><link>https://www.sixthtone.com/news/1016111/meet-ms.-hu%3A-she-built-a-garden-from-chongqing%E2%80%99s-discarded-past</link></item>
+<item><title>The Passion of Chiung Yao - Sixth Tone</title><link>https://www.sixthtone.com/news/1016345/the-passion-of-chiung-yao</link></item>
+<item><title>Pantheon.S02E04.720p.AMZN.WEBRip.x264-GalaxyTV/Pantheon.S02E04.720p.AMZN.WEBRip.x264-GalaxyTV - 射手网(伪)</title><link>http://assrt.net/xml/sub/698/698972.xml</link></item>
+<item><title>诊疗中.Shrinking.S02E12.The.Last.Thanksgiving.1080p.ATVP.WEB-DL.DDP5.1.H.264-NTb【季终】/诊疗中.Shrinking.S02E12.The.Last.Thanksgiving.1080p.ATVP.WEB-DL.DDP5.1.H.264-NTb【季终】 - 射手网(伪)</title><link>http://assrt.net/xml/sub/698/698971.xml</link></item>
+<item><title>诊疗中.Shrinking. S02E11. The Drugs Don&amp;#39;t Work. 1080P. WebDl. HEVC-X265. POOTLED/诊疗中.Shrinking. S02E11. The Drugs Don&amp;#39;t Work. 1080P. WebDl. HEVC-X265. POOTLED - 射手网(伪)</title><link>http://assrt.net/xml/sub/698/698970.xml</link></item>
+<item><title>Red.Finger.2011.1080p.UNEXT.WEB-DL.AAC2.0.H.264/Red.Finger.2011.1080p.UNEXT.WEB-DL.AAC2.0.H.264 - 射手网(伪)</title><link>http://assrt.net/xml/sub/698/698967.xml</link></item>
+<item><title>Pantheon.S02E03.720p.AMZN.WEBRip.x264-GalaxyTV/Pantheon.S02E03.720p.AMZN.WEBRip.x264-GalaxyTV - 射手网(伪)</title><link>http://assrt.net/xml/sub/698/698966.xml</link></item>
+<item><title>Flashpoint.S05.2012.1080p.AMZN.WEB-DL.x264.DDP5.1/Flashpoint.S05.2012.1080p.AMZN.WEB-DL.x264.DDP5.1 - 射手网(伪)</title><link>http://assrt.net/xml/sub/698/698965.xml</link></item>
+<item><title>沙丘：预言.Dune.Prophecy.S01E06.The.High-Handed.Enemy.1080p.AMZN.WEB-DL.DDP5.1.H.264-NTb/沙丘：预言.Dune.Prophecy.S01E06.The.High-Handed.Enemy.1080p.AMZN.WEB-DL.DDP5.1.H.264-NTb - 射手网(伪)</title><link>http://assrt.net/xml/sub/698/698964.xml</link></item>
+<item><title>C.B.Strike.S06E01.The.Ink.Black.Heart.Episode.1.1080p.iP.WEB-DL.AAC2.0.HFR.H.264-RAWR/C.B.Strike.S06E01.The.Ink.Black.Heart.Episode.1.1080p.iP.WEB-DL.AAC2.0.HFR.H.264-RAWR - 射手网(伪)</title><link>http://assrt.net/xml/sub/698/698963.xml</link></item>
+<item><title>The.Day.of.the.Jackal.S01.1080p.AMZN.WEB-DL.DDP5.1.Atmos.H.264-FLUX.远鉴字幕组/The.Day.of.the.Jackal.S01.1080p.AMZN.WEB-DL.DDP5.1.Atmos.H.264-FLUX.远鉴字幕组 - 射手网(伪)</title><link>http://assrt.net/xml/sub/698/698962.xml</link></item>
+<item><title>The.Day.of.the.Jackal.S01.REPACK.2160p.PCOK.WEB-DL.DDP5.1.DV.HDR.H.265-FLUX.远鉴字幕组/The.Day.of.the.Jackal.S01.REPACK.2160p.PCOK.WEB-DL.DDP5.1.DV.HDR.H.265-FLUX.远鉴字幕组 - 射手网(伪)</title><link>http://assrt.net/xml/sub/698/698958.xml</link></item>
+<item><title>Pantheon.S02E02.720p.AMZN.WEBRip.x264-GalaxyTV/Pantheon.S02E02.720p.AMZN.WEBRip.x264-GalaxyTV - 射手网(伪)</title><link>http://assrt.net/xml/sub/698/698955.xml</link></item>
+<item><title>Pantheon.S02E01.720p.AMZN.WEBRip.x264-GalaxyTV/Pantheon.S02E01.720p.AMZN.WEBRip.x264-GalaxyTV - 射手网(伪)</title><link>http://assrt.net/xml/sub/698/698952.xml</link></item>
+<item><title>《死亡将至》Menjelang.Ajal.2024.【中英双语·微博@佛系杰杰刘】1080p.NF.WEB-DL.DDP5.1.H.264-PandaMoon/《死亡将至》Menjelang.Ajal.2024.【中英双语·微博@佛系杰杰刘】1080p.NF.WEB-DL.DDP5.1.H.264-PandaMoon - 射手网(伪)</title><link>http://assrt.net/xml/sub/698/698950.xml</link></item>
+<item><title>《着魔》Possession Kerasukan 2024 【中英双语·微博@佛系杰杰刘】1080p NF WEB-DL DDP5 1 H 264/《着魔》Possession Kerasukan 2024 【中英双语·微博@佛系杰杰刘】1080p NF WEB-DL DDP5 1 H 264 - 射手网(伪)</title><link>http://assrt.net/xml/sub/698/698949.xml</link></item>
+<item><title>《丽莎灵异实录》Jurnal.Risa.by.Risa.Saraswati.2024.【中英双语·微博@佛系杰杰刘】1080p.NF.WEB-DL.DDP5.1.H.264/《丽莎灵异实录》Jurnal.Risa.by.Risa.Saraswati.2024.【中英双语·微博@佛系杰杰刘】1080p.NF.WEB-DL.DDP5.1.H.264 - 射手网(伪)</title><link>http://assrt.net/xml/sub/698/698948.xml</link></item>
+<item><title>《夺命梦魇》Respati.2024.【中英双语·微博@佛系杰杰刘】1080p.NF.WEB-DL.DDP5.1.H.264/《夺命梦魇》Respati.2024.【中英双语·微博@佛系杰杰刘】1080p.NF.WEB-DL.DDP5.1.H.264 - 射手网(伪)</title><link>http://assrt.net/xml/sub/698/698947.xml</link></item>
+<item><title>Flashpoint.S01.2008.1080p.AMZN.WEB-DL.x264.DDP5.1/Flashpoint.S01.2008.1080p.AMZN.WEB-DL.x264.DDP5.1 - 射手网(伪)</title><link>http://assrt.net/xml/sub/698/698946.xml</link></item>
+<item><title>记账人.Bookie.S02E02.Go.to.the.Labia.1080p.AMZN.WEB-DL.DDP5.1.H.264-NTb/记账人.Bookie.S02E02.Go.to.the.Labia.1080p.AMZN.WEB-DL.DDP5.1.H.264-NTb - 射手网(伪)</title><link>http://assrt.net/xml/sub/698/698945.xml</link></item>
+<item><title>断魂小丑3.2024.1080p(蓝光特效双语字幕)/断魂小丑3.2024.1080p(蓝光特效双语字幕) - 射手网(伪)</title><link>http://assrt.net/xml/sub/698/698944.xml</link></item>
+<item><title>反恐特警组.S.W.A.T.2017.S08E07.1080p.x265-ELiTE【人人原创字幕】/反恐特警组.S.W.A.T.2017.S08E07.1080p.x265-ELiTE【人人原创字幕】 - 射手网(伪)</title><link>http://assrt.net/xml/sub/698/698938.xml</link></item>
+<item><title>【   01：40：33   】2020：心灵奇旅/【   01：40：33   】2020：心灵奇旅 - 射手网(伪)</title><link>http://assrt.net/xml/sub/698/698937.xml</link></item>
+<item><title>末日地堡.Silo.S02E06.Barricades.1080p.ATVP.WEB-DL.DDP5.1.Atmos.H.264-MGHW/末日地堡.Silo.S02E06.Barricades.1080p.ATVP.WEB-DL.DDP5.1.Atmos.H.264-MGHW - 射手网(伪)</title><link>http://assrt.net/xml/sub/698/698935.xml</link></item>
+<item><title>过去的事.Before.2024.S01E10.Before.1080p.ATVP.WEB-DL.DDP5.1.Atmos.H.264-FLUX/过去的事.Before.2024.S01E10.Before.1080p.ATVP.WEB-DL.DDP5.1.Atmos.H.264-FLUX - 射手网(伪)</title><link>http://assrt.net/xml/sub/698/698934.xml</link></item>
+<item><title>Yellowstone 2018 S05E14 Life Is A Promise 2160p AMZN WEB-DL DDP5 1 H 264-FLUX/Yellowstone 2018 S05E14 Life Is A Promise 2160p AMZN WEB-DL DDP5 1 H 264-FLUX - 射手网(伪)</title><link>http://assrt.net/xml/sub/698/698933.xml</link></item>
+<item><title>星球大战：骨干小队.Star Wars Skeleton Crew. S01E04. Can&amp;#39;t Say I Reme...DSNP WEB-DL. DDP5.1 Atmos. HEVC-X265. POOTLED/星球大战：骨干小队.Star Wars Skeleton Crew. S01E04. Can&amp;#39;t Say I Reme...DSNP WEB-DL. DDP5.1 Atmos. HEVC-X265. POOTLED - 射手网(伪)</title><link>http://assrt.net/xml/sub/698/698921.xml</link></item>
+<item><title>Green.Snake.2021.BluRay.1080p.x265.10bit.DDP7.1.MNHD-FRDS/Green.Snake.2021.BluRay.1080p.x265.10bit.DDP7.1.MNHD-FRDS - 射手网(伪)</title><link>http://assrt.net/xml/sub/698/698914.xml</link></item>
+<item><title>Anora.2024.2160p.AMZN.WEB-DL.DDP5.1.HDR.H.265-FLUX/Anora.2024.2160p.AMZN.WEB-DL.DDP5.1.HDR.H.265-FLUX - 射手网(伪)</title><link>http://assrt.net/xml/sub/698/698913.xml</link></item>
+<item><title>阿诺拉【CSEG】Anora.2024.2160p.AMZN.WEB-DL.DDP5.1.H.265-FLUX/阿诺拉【CSEG】Anora.2024.2160p.AMZN.WEB-DL.DDP5.1.H.265-FLUX - 射手网(伪)</title><link>http://assrt.net/xml/sub/698/698883.xml</link></item>
+<item><title>像这样的小事【CSEG】small.things.like.these.2024.hdr.2160p.web.h265-fantasticfierygrasshopperofwarranty/像这样的小事【CSEG】small.things.like.these.2024.hdr.2160p.web.h265-fantasticfierygrasshopperofwarranty - 射手网(伪)</title><link>http://assrt.net/xml/sub/698/698875.xml</link></item>
+<item><title>异教徒【CSEG】Heretic 2024 2160p WEB-DL DDP5 1 Atmos DV HDR H 265-FLUX/异教徒【CSEG】Heretic 2024 2160p WEB-DL DDP5 1 Atmos DV HDR H 265-FLUX - 射手网(伪)</title><link>http://assrt.net/xml/sub/698/698872.xml</link></item>
+<item><title>谣言【CSEG】Rumours.2024.2160p.WEB.H265-CurvyIndustriousGeckoOfEndeavor/谣言【CSEG】Rumours.2024.2160p.WEB.H265-CurvyIndustriousGeckoOfEndeavor - 射手网(伪)</title><link>http://assrt.net/xml/sub/698/698855.xml</link></item>
+<item><title>大都会【CSEG】Megalopolis.2024.2160p.WEB.h265-ETHEL/大都会【CSEG】Megalopolis.2024.2160p.WEB.h265-ETHEL - 射手网(伪)</title><link>http://assrt.net/xml/sub/698/698853.xml</link></item>
+<item><title>某种物质【CSEG】The.Substance.2024.2160p.WEB-DL.DD5.1.DV.HDR.H.265-FLUX/某种物质【CSEG】The.Substance.2024.2160p.WEB-DL.DD5.1.DV.HDR.H.265-FLUX - 射手网(伪)</title><link>http://assrt.net/xml/sub/698/698830.xml</link></item>
+<item><title>heretic.2024.1080p.web.h264-accomplishedyak.mkv/heretic.2024.1080p.web.h264-accomplishedyak.mkv - 射手网(伪)</title><link>http://assrt.net/xml/sub/697/697932.xml</link></item>
+<item><title>The.Day.of.the.Jackal.S01.ITA.ENG.2160p.PCOK.WEB-DL.DDP5.1.DV.HDR.H.265-MeM.GP/The.Day.of.the.Jackal.S01.ITA.ENG.2160p.PCOK.WEB-DL.DDP5.1.DV.HDR.H.265-MeM.GP - 射手网(伪)</title><link>http://assrt.net/xml/sub/697/697295.xml</link></item>
+<item><title>秘密关卡.Secret.Level.S01E15.Playtime.Fulfillment.1080p.AMZN.WEB-DL.DDP5.1.Atmos.H.264-FLUX/秘密关卡.Secret.Level.S01E15.Playtime.Fulfillment.1080p.AMZN.WEB-DL.DDP5.1.Atmos.H.264-FLUX - 射手网(伪)</title><link>http://assrt.net/xml/sub/697/697189.xml</link></item>
+<item><title>秘密关卡.Secret.Level.S01E14.Honor.of.Kings.The.Way.of.All.Things.1080p.AMZN.WEB-DL.DD.5.1.H.264-playWEB/秘密关卡.Secret.Level.S01E14.Honor.of.Kings.The.Way.of.All.Things.1080p.AMZN.WEB-DL.DD.5.1.H.264-playWEB - 射手网(伪)</title><link>http://assrt.net/xml/sub/697/697188.xml</link></item>
+<item><title>秘密关卡.Secret.Level.S01E13.Concord.Tale.of.the.Implacable.1080p.AMZN.WEB-DL.DDP5.1.Atmos.H.264-FLUX/秘密关卡.Secret.Level.S01E13.Concord.Tale.of.the.Implacable.1080p.AMZN.WEB-DL.DDP5.1.Atmos.H.264-FLUX - 射手网(伪)</title><link>http://assrt.net/xml/sub/697/697176.xml</link></item>
+<item><title>秘密关卡.Secret.Level.S01E12.Spelunky.Tally.1080p.AMZN.WEB-DL.DDP5.1.Atmos.H.264-FLUX/秘密关卡.Secret.Level.S01E12.Spelunky.Tally.1080p.AMZN.WEB-DL.DDP5.1.Atmos.H.264-FLUX - 射手网(伪)</title><link>http://assrt.net/xml/sub/697/697143.xml</link></item>
+<item><title>秘密关卡.Secret.Level.S01E11.Exodus.Odyssey.1080p.AMZN.WEB-DL.DD.5.1.H.264-playWEB/秘密关卡.Secret.Level.S01E11.Exodus.Odyssey.1080p.AMZN.WEB-DL.DD.5.1.H.264-playWEB - 射手网(伪)</title><link>http://assrt.net/xml/sub/697/697141.xml</link></item>
+<item><title>秘密关卡.Secret.Level.S01E10.Mega.Man.Start.1080p.AMZN.WEB-DL.DDP5.1.Atmos.H.264-FLUX/秘密关卡.Secret.Level.S01E10.Mega.Man.Start.1080p.AMZN.WEB-DL.DDP5.1.Atmos.H.264-FLUX - 射手网(伪)</title><link>http://assrt.net/xml/sub/697/697140.xml</link></item>
+<item><title>秘密关卡.Secret.Level.S01E09.The.Outer.Worlds.The.Company.We.Keep.1080p.AMZN.WEB-DL.DDP5.1.Atmos.H.264-FLUX/秘密关卡.Secret.Level.S01E09.The.Outer.Worlds.The.Company.We.Keep.1080p.AMZN.WEB-DL.DDP5.1.Atmos.H.264-FLUX - 射手网(伪)</title><link>http://assrt.net/xml/sub/697/697041.xml</link></item>
+<item><title>Yellowstone 2018 S05E14 Life Is A Promise 1080p AMZN WEB-DL DDP5 1 H 264-NTb/Yellowstone 2018 S05E14 Life Is A Promise 1080p AMZN WEB-DL DDP5 1 H 264-NTb - 射手网(伪)</title><link>http://assrt.net/xml/sub/696/696987.xml</link></item>
+<item><title>NCIS.S22E08.720p.HEVC.x265-MeGusta/NCIS.S22E08.720p.HEVC.x265-MeGusta - 射手网(伪)</title><link>http://assrt.net/xml/sub/696/696986.xml</link></item>
+<item><title>追凶1992.1992.2024.S01E06.1080p.WEB.h264-EDITH/追凶1992.1992.2024.S01E06.1080p.WEB.h264-EDITH - 射手网(伪)</title><link>http://assrt.net/xml/sub/696/696972.xml</link></item>
+<item><title>追凶1992.1992.2024.S01E05.1080p.WEB.h264-EDITH/追凶1992.1992.2024.S01E05.1080p.WEB.h264-EDITH - 射手网(伪)</title><link>http://assrt.net/xml/sub/696/696901.xml</link></item>
+<item><title>追凶1992.1992.2024.S01E04.1080p.WEB.h264-EDITH/追凶1992.1992.2024.S01E04.1080p.WEB.h264-EDITH - 射手网(伪)</title><link>http://assrt.net/xml/sub/696/696833.xml</link></item>
+<item><title>Special.Ops.Lioness.S01.2160p.AMZN.WEB-DL.DDP5.1.H.265-NTb/Special.Ops.Lioness.S01.2160p.AMZN.WEB-DL.DDP5.1.H.265-NTb - 射手网(伪)</title><link>http://assrt.net/xml/sub/696/696801.xml</link></item>
+<item><title>沙丘：预言.Dune.Prophecy.S01E05.In.Blood.Truth.1080p.AMZN.WEB-DL.DDP5.1.H.264-NTb/沙丘：预言.Dune.Prophecy.S01E05.In.Blood.Truth.1080p.AMZN.WEB-DL.DDP5.1.H.264-NTb - 射手网(伪)</title><link>http://assrt.net/xml/sub/696/696775.xml</link></item>
+<item><title>商用茶包会释放出数百万微塑料 - Solidot</title><link>https://www.solidot.org/story?sid=80143</link></item>
+<item><title>国际空间站再次躲避风云一号C星碎片 - Solidot</title><link>https://www.solidot.org/story?sid=80144</link></item>
+<item><title>Best NSFW Memes of 2024 [Part 1] - theCHIVE</title><link>https://thechive.com/humor/best-nsfw-memes-of-2024-part-1/?utm_postid=4869223&amp;utm_editor=4869223_ben</link></item>
+<item><title>It was the NOPE-mare before Christmas…(40 Photos) - theCHIVE</title><link>https://thechive.com/humor/it-was-the-nope-mare-before-christmas-40-photos/?utm_postid=4863747&amp;utm_editor=4863747_bob</link></item>
+<item><title>GIFs warn, “Expect…the Un-EXPECTED” (29 GIFs) - theCHIVE</title><link>https://thechive.com/humor/gifs-warn-expectthe-un-expected-29-gifs/?utm_postid=4868584&amp;utm_editor=4868584_rick</link></item>
+<item><title>Santa apologizes…“Sorry, for Crazy-est UBER Fans” (38 Photos) - theCHIVE</title><link>https://thechive.com/humor/santa-apologizes-sorry-for-crazy-est-uber-fans-38-photos/?utm_postid=4868774&amp;utm_editor=4868774_rick</link></item>
+<item><title>How the Grinch Stole These Memes (35 Photos) - theCHIVE</title><link>https://thechive.com/humor/how-the-grinch-stole-these-memes-35-photos/?utm_postid=4868935&amp;utm_editor=4868935_camry</link></item>
+<item><title>Best NSFW Memes of 2024 [Part 2] - theCHIVE</title><link>https://thechive.com/humor/best-nsfw-memes-of-2024-part-2/?utm_postid=4869289&amp;utm_editor=4869289_ben</link></item>
+<item><title>Hottest iterations of Mrs. Claus, because baby it’s cold outside - theCHIVE</title><link>https://thechive.com/entertainment/movies/hottest-iterations-of-mrs-claus-because-baby-its-cold-outside/?utm_postid=4869101&amp;utm_editor=4869101_zach</link></item>
+<item><title>Old-School Cool: Christmas Edition (33 Photos) - theCHIVE</title><link>https://thechive.com/humanity/nostalgia/old-school-cool-christmas-edition-33-photos/?utm_postid=4864821&amp;utm_editor=4864821_laura_lee</link></item>
+<item><title>Tuesdays are for tugging, inlcuding Christmas Eve (36 Photos) - theCHIVE</title><link>https://thechive.com/sexy-girls/tuesdays-are-for-tugging-inlcuding-christmas-eve-36-photos/?utm_postid=4869926&amp;utm_editor=4869926_jacob</link></item>
+<item><title>Some of these “bad” tattoos might be great? Well, at least two of them (25 Photos) - theCHIVE</title><link>https://thechive.com/humor/some-of-these-bad-tattoos-might-be-great-well-at-least-two-of-them-25-photos/?utm_postid=4866108&amp;utm_editor=4866108_jacob</link></item>
+<item><title>Hikers from the ’70s could make frostbite look cool (32 Photos) - theCHIVE</title><link>https://thechive.com/humanity/nostalgia/hikers-from-the-70s-could-make-frostbite-look-cool-32-photos/?utm_postid=4868619&amp;utm_editor=4868619_camry</link></item>
+<item><title>Run out the clock with Leather bound NFL memes from Week 16 (50 Photos) - theCHIVE</title><link>https://thechive.com/humor/meme/run-out-the-clock-with-leather-bound-nfl-memes-from-week-16-50-photos/?utm_postid=4869491&amp;utm_editor=4869491_stephen</link></item>
+<item><title>Holly Jolly Holiday Memes for a Chill Christmas Eve (36 Photos) - theCHIVE</title><link>https://thechive.com/humor/holly-jolly-holiday-memes-for-a-chill-christmas-eve-34-photos/?utm_postid=4864354&amp;utm_editor=4864354_laura_lee</link></item>
+<item><title>The Blondes Are Back, Baby! (35 Photos) - theCHIVE</title><link>https://thechive.com/sexy-girls/the-blondes-are-back-baby-35-photos/?utm_postid=4868778&amp;utm_editor=4868778_hendy</link></item>
+<item><title>Happy HIGH-RES…holiday HOOTERs (78 HQ Photos) - theCHIVE</title><link>https://thechive.com/sexy-girls/happy-high-resholiday-hooters-78-hq-photos/?utm_postid=4869597&amp;utm_editor=4869597_rick</link></item>
+<item><title>Shower Thoughts Are a Real Mindf**k! (17 GIFs) - theCHIVE</title><link>https://thechive.com/humor/shower-thoughts-are-a-real-mindfk-17-gifs-6/?utm_postid=4868742&amp;utm_editor=4868742_hendy</link></item>
+<item><title>Unwrap Christmas memes while hiding from family on the toilet (25 Photos) - theCHIVE</title><link>https://thechive.com/humor/unwrap-christmas-memes-while-hiding-from-family-on-the-toilet-25-photos/?utm_postid=4868140&amp;utm_editor=4868140_jon</link></item>
+<item><title>Memes on SANTA’s…Naughty LIST (33 Photos) - theCHIVE</title><link>https://thechive.com/humor/memes-on-santasnaughty-list-33-photos/?utm_postid=4869547&amp;utm_editor=4869547_rick</link></item>
+<item><title>For those who dabble in “Dirty”, we’ve got just the thing for you…(39 Photos) - theCHIVE</title><link>https://thechive.com/humor/for-those-who-dabble-in-dirty-weve-got-just-the-thing-for-you-40-photos/?utm_postid=4868190&amp;utm_editor=4868190_bob</link></item>
+<item><title>Cool Sh*t You Didn’t Know You Needed (16 Photos) - theCHIVE</title><link>https://thechive.com/treasure-trove/want-vs-need/cool-sht-you-didnt-know-you-needed-16-photos-4/?utm_postid=4864913&amp;utm_editor=4864913_jason</link></item>
+<item><title>Daily Morning Awesomeness (46 hotos) - theCHIVE</title><link>https://thechive.com/humor/daily-morning-awesomeness-46-hotos/?utm_postid=4864704&amp;utm_editor=4864704_bob</link></item>
+<item><title>The Best Animals That Kept Us Howling All Year (82 Photos) - theCHIVE</title><link>https://thechive.com/humanity/animals/the-best-animals-that-kept-us-howling-all-year-82-photos/?utm_postid=4869405&amp;utm_editor=4869405_camry</link></item>
+<item><title>S*xt your better half with some dirty, flirty memes (33 Photos) - theCHIVE</title><link>https://thechive.com/humor/sxt-your-better-half-with-some-dirty-flirty-memes-33-photos/?utm_postid=4868818&amp;utm_editor=4868818_ben</link></item>
+<item><title>‘Hang on for Dear Life!’: Pretty women in pigtails (30 Photos) - theCHIVE</title><link>https://thechive.com/sexy-girls/hang-on-for-dear-life-pretty-women-in-pigtails-30-photos/?utm_postid=4868854&amp;utm_editor=4868854_zach</link></item>
+<item><title>The gift that keeps on giving (11 Photos) - theCHIVE</title><link>https://thechive.com/humanity/inspirational/the-gift-that-keeps-on-giving-11-photos/?utm_postid=4869284&amp;utm_editor=4869284_brittany</link></item>
+<item><title>Peachy Prime is a big ol’ bear hug for the eyes (41 Photos) - theCHIVE</title><link>https://thechive.com/sexy-girls/peachy-prime-is-a-big-ol-bear-hug-for-the-eyes-41-photos/?utm_postid=4868698&amp;utm_editor=4868698_ben</link></item>
+<item><title>Artist makes incredible art out of sand canvases (24 Photos) - theCHIVE</title><link>https://thechive.com/humanity/art/artist-makes-incredible-art-out-of-sand-canvases-24-photos/?utm_postid=4865934&amp;utm_editor=4865934_jacob</link></item>
+<item><title>The Most Butt-Ugly Christmas Sweaters Ever Conceived (37 Photos) - theCHIVE</title><link>https://thechive.com/humanity/design/the-most-butt-ugly-christmas-sweaters-ever-conceived-37-photos/?utm_postid=4866812&amp;utm_editor=4866812_laura_lee</link></item>
+<item><title>Echosmith front woman Sydney Sierota is a redheaded rarity (30 Photos) - theCHIVE</title><link>https://thechive.com/entertainment/celebrity/echosmith-front-woman-sydney-sierota-is-a-redheaded-rarity-30-photos/?utm_postid=4868509&amp;utm_editor=4868509_zach</link></item>
+<item><title>In Memory of Three Great Psychologists We Lost This Year - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/in_memory_of_three_great_psychologists_we_lost_this_year</link></item>
+<item><title>Happiness Calendar for Educators for January 2025 - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/happiness_calendar_for_educators_for_january_2025</link></item>
+<item><title>The Top 10 Insights from the “Science of a Meaningful Life” in 2024 - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/the_top_10_insights_from_the_science_of_a_meaningful_life_in_2024</link></item>
+<item><title>The Contagious Power of Compassion (The Science of Happiness) - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/podcasts/item/the_contagious_power_of_compassion_the_science_of_happiness</link></item>
+<item><title>Our Favorite Parenting Books of 2024 - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/our_favorite_parenting_books_of_2024</link></item>
+<item><title>Helping Students Hear Each Other After the Election - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/helping_students_hear_each_other_after_the_election</link></item>
+<item><title>Our Favorite Books for Educators in 2024 - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/our_favorite_books_for_educators_in_2024</link></item>
+<item><title>Happiness Break: A Walking Meditation with Dan Harris of 10% Happier (Encore) - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/podcasts/item/happiness_break_a_walking_meditation_with_dan_harris_of_10_happier_encore</link></item>
+<item><title>What Can We Learn From the Joy of Rats? - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/what_can_we_learn_from_the_joy_of_rats</link></item>
+<item><title>Our Favorite Books of 2024 - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/our_favorite_books_of_2024</link></item>
+<item><title>Do We Need to Love Ourselves Before We Love Others? - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/do_we_need_to_love_ourselves_before_we_love_others</link></item>
+<item><title>How To Find Calm Through Walking - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/podcasts/item/how_to_find_calm_through_walking_meditation</link></item>
+<item><title>How the Sea Is Good for Your Mind and Body - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/how_the_sea_is_good_for_your_mind_and_body</link></item>
+<item><title>Can Forgiveness Help You Be More Resilient as a Parent? - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/can_forgiveness_help_your_resilience_as_a_parent</link></item>
+<item><title>Five Ways to Be More Vulnerable and Authentic - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/five_ways_to_be_more_vulnerable_and_authentic</link></item>
+<item><title>NATO’s Emergency Plan for an Orbital Backup Internet - IEEE Spectrum</title><link>https://spectrum.ieee.org/undersea-internet-cables-nato</link></item>
+<item><title>Video Tuesday: Even More Happy Holidays! - IEEE Spectrum</title><link>https://spectrum.ieee.org/video-friday-holidays-2024</link></item>
+<item><title>The Top 10 Energy Stories of 2024 - IEEE Spectrum</title><link>https://spectrum.ieee.org/top-ten-energy-2024</link></item>
+<item><title>The Top 10 Climate Tech Stories of 2024 - IEEE Spectrum</title><link>https://spectrum.ieee.org/top-climate-tech-stories-2024</link></item>
+<item><title>The Top 10 Biomedical Stories of 2024 - IEEE Spectrum</title><link>https://spectrum.ieee.org/top-biomedical-news-2024</link></item>
+<item><title>Unforgeable Quantum Tokens Delivered Over Fiber Network - IEEE Spectrum</title><link>https://spectrum.ieee.org/quantum-tokens</link></item>
+<item><title>This Backpack Lightens Its Own Load - IEEE Spectrum</title><link>https://spectrum.ieee.org/suspension-backpack</link></item>
+<item><title>IEEE Unveils Honorees for Excellence in Engineering and Technology - IEEE Spectrum</title><link>https://spectrum.ieee.org/ieee-award-recipients-2025</link></item>
+<item><title>It&amp;#39;s AI Versus the World&amp;#39;s Largest Tuberculosis Epidemic - IEEE Spectrum</title><link>https://spectrum.ieee.org/tuberculosis</link></item>
+<item><title>Sewing In Copper Threads Could Improve Carbon Capture - IEEE Spectrum</title><link>https://spectrum.ieee.org/carbon-capture-2670435467</link></item>
+<item><title>川西经典线路 趣畅游户外 - 户外资料网</title><link>https://hd.8264.com/dianpu-13396</link></item>
+<item><title>库拉岗日小环6日 3980元报名中 - 户外资料网</title><link>https://hd.8264.com/xianlu-189672</link></item>
+<item><title>尼泊尔EBC ABC MBC ACT MCT - 户外资料网</title><link>https://hd.8264.com/search?title=%E5%B0%BC%E6%B3%8A%E5%B0%94</link></item>
+<item><title>麦径，多少恩怨前尘往事你愿释怀几许烟雨清风绿水我复悠然 - 户外资料网</title><link>https://www.8264.com/viewnews-153511-page-1.html</link></item>
+<item><title>如果有天堂，我的帐篷外就是天堂，记乌孙古道百公里重装徒步行 - 户外资料网</title><link>https://www.8264.com/viewnews-153515-page-1.html</link></item>
+<item><title>全穿武功山沈明线，赏云海盛宴 - 户外资料网</title><link>https://www.8264.com/viewnews-153510-page-1.html</link></item>
+<item><title>越野夜赛搭子的意义，莫干山65K前两CP收尾后拉练有感 - 户外资料网</title><link>https://www.8264.com/viewnews-153516-page-1.html</link></item>
+<item><title>偶遇枫林红萋萋，记湖南永州舜妃山单兵2天重装 - 户外资料网</title><link>https://www.8264.com/viewnews-153518-page-1.html</link></item>
+<item><title>你在那里我就去了那里，五台山，我又来了 - 户外资料网</title><link>https://www.8264.com/viewnews-153514-page-1.html</link></item>
+<item><title>惊险的南太行蝎子楞攀爬记 - 户外资料网</title><link>https://www.8264.com/viewnews-153512-page-1.html</link></item>
+<item><title>在平凡路上寻觅那一抹亮色，老苏2024电动车旅行 - 户外资料网</title><link>https://www.8264.com/viewnews-153481-page-1.html</link></item>
+<item><title>2024国庆郭喀拉南北穿攻略，神山眷顾，终见念久 - 户外资料网</title><link>https://www.8264.com/viewnews-153482-page-1.html</link></item>
+<item><title>行走喜马拉雅·库拉岗日 白马林措+普莫雍错+介久措轻徒步（6日行程） - 户外资料网</title><link>http://hd.8264.com/xianlu-189672</link></item>
+<item><title>来古冰川南迦巴瓦5日旅拍小团（5日行程） - 户外资料网</title><link>http://hd.8264.com/xianlu-189670</link></item>
+<item><title>徒步中俄界湖 | 穿越兴凯湖，激情冰雪探险之旅，送骆驼羽绒服（6日行程） - 户外资料网</title><link>http://hd.8264.com/xianlu-189655</link></item>
+<item><title>[冬游喀纳斯]新疆喀纳斯、禾木、白哈巴小车旅行（5日行程） - 户外资料网</title><link>http://hd.8264.com/xianlu-189652</link></item>
+<item><title>滇东南全景 | 一场旅行览尽云南经典，人间值得的视觉盛宴（9日行程） - 户外资料网</title><link>http://hd.8264.com/xianlu-180528</link></item>
+<item><title>请老鸟帮忙给大概排名一下 - 户外资料网</title><link>http://www.8264.com/wenda/72849.html</link></item>
+<item><title>一款timberland鞋子求实用性鉴定 - 户外资料网</title><link>http://www.8264.com/wenda/72829.html</link></item>
+<item><title>有关于UPF数值的问题 - 户外资料网</title><link>http://www.8264.com/wenda/72838.html</link></item>
+<item><title>好久没发贴了，讨论一下什么样的温度计适合户外 - 户外资料网</title><link>http://www.8264.com/wenda/72856.html</link></item>
+<item><title>ARCTERYX(始祖鸟) Granville Backpack 背包 - 户外资料网</title><link>http://www.8264.com/zhuangbei-5294098</link></item>
+<item><title>ARCTERYX(始祖鸟) Alpha SV Jacket Men&amp;#39;s 冲锋衣裤 - 户外资料网</title><link>http://www.8264.com/zhuangbei-5294172</link></item>
+<item><title>Technical issue briefly grounds American Airlines flights across US - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2024/12/24/american_airlines_grounds/</link></item>
+<item><title>How Androxgh0st rose from Mozi&amp;#39;s ashes to become &amp;#39;most prevalent malware&amp;#39; - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2024/12/24/androxgh0st_botnet_mozi/</link></item>
+<item><title>Microsoft Edge takes a victory lap with some high-looking usage stats for 2024 - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2024/12/24/microsoft_edge_2024/</link></item>
+<item><title>What do ransomware and Jesus have in common? A birth month and an unwillingness to die - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2024/12/24/ransomware_in_2024/</link></item>
+<item><title>One third of adults can&amp;#39;t delete device data - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2024/12/24/uk_device_data_deletion/</link></item>
 </channel></rss>

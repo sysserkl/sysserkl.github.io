@@ -337,7 +337,9 @@ function write_js_css_b(cslist,do_write=true){
                 break;
         }
     }
+    
     if (do_write){
+        imported_files_add_b(links_t);
         console.log(links_t.join('\n')); //此行保留 - 保留注释
     }
     return links_t;
@@ -405,6 +407,7 @@ function file_dom_create_b(file_list,in_head=true,cstype='js'){
         if (afile.substring(0,4).toLowerCase()!=='http'){
             afile=blurl+afile;
         }
+        imported_files_add_b([afile]);
         console.log(afile+today);
         if (in_head){
             document.head.appendChild(odom);    
@@ -412,6 +415,27 @@ function file_dom_create_b(file_list,in_head=true,cstype='js'){
             document.body.appendChild(odom);
         }
     }
+}
+
+function imported_files_add_b(cslist){
+    if (typeof imported_files_global=='undefined'){
+        imported_files_global=new Set();
+    }
+    for (let afile of cslist){
+        var blat=afile.lastIndexOf('?');
+        if (blat>=0){
+            afile=afile.substring(0,blat);
+        }
+        imported_files_global.add(afile);
+    }
+}
+
+function imported_files_show_b(){
+    if (typeof imported_files_global=='undefined'){
+        imported_files_global=new Set();
+    }
+    console.log('imported_files_global',imported_files_global.size);
+    console.log(Array.from(imported_files_global).join('\n'));
 }
 
 function klwiki_link_b(cstitle,open_window=false){
@@ -2313,17 +2337,20 @@ function klsofts_div_b(divid,font_size,padding=0,filter_str='0',diy_list=[],auto
     if (add_todolist){
         var bltodolist=klsofts_routines_random_b();
         if (bltodolist!==''){
-            soft_list.push(['javascript:klsofts_routines_ignore_or_done_b(this)',bltodolist,'♾',0]);
+            soft_list.push(['javascript:klsofts_routines_ignore_or_done_b(this);',bltodolist,'♾',0]);
         }
     }
-    
+
     var jsstr=(autoclose?' onclick="popup_show_hide_b(\''+divid+'\');"':'');
+
+    soft_list.push(['javascript:imported_files_show_b();'+(autoclose?' popup_show_hide_b(\''+divid+'\');':''),'读取imported_files_global','🧰',0]);
+
 
     for (let item of soft_list){
         if (item[0].substring(0,11)=='javascript:' || item[0].substring(0,6)=='popup:'){
             soft_str=soft_str+klsofts_one_b(item,font_size,false,blhref,'');    
         } else {
-            soft_str=soft_str+klsofts_one_b(item,font_size,false,blhref,jsstr);            
+            soft_str=soft_str+klsofts_one_b(item,font_size,false,blhref,jsstr);
         }
     }
     soft_str=soft_str+'</div>';

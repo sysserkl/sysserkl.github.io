@@ -142,6 +142,7 @@ function import_data_rlater_b(csarray,load_fn_name,cshref=false){
         document.write('<script>\n');
         document.write(load_fn_name+'("'+item+'");\n');
         document.write('<\/SCRIPT>\n');
+        imported_files_add_b([cshref+item+'.js']);
         console.log(cshref+item+'.js'+today);
     }
 }
