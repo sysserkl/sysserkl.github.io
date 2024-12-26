@@ -2570,6 +2570,10 @@ function div_table_2_cols_b(left_str,csid,cssize,class_name=''){
     return '<div'+(class_name==''?'':' class="'+class_name+'"')+' style="margin:0 0.5rem 0.5rem 0; border:0.1rem solid black; display:inline-block;"><table cellpadding=5 cellspacing=0 style="line-height:0;"><tr><td valign=middle style="border-right:0.1rem solid black;">'+left_str+'</td><td id="'+csid+'" width='+cssize+' height='+cssize+' valign=middle></td></tr></table></div>';
 }
 
+function table_split_doms_one_row_b(cslist,cswidth='100%'){
+    return '<table style="line-height:0;" width="'+cswidth+'"><tr><td valign=top>'+cslist.join('</td><td valign=top>')+'</td></tr></table>';
+}
+
 function dom_center_xy_get_b(odom){
     var rect = odom.getBoundingClientRect();
     return [rect.left + rect.width / 2, rect.top + rect.height / 2];

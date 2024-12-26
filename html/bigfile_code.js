@@ -193,10 +193,195 @@ function search_bigfile(cskey=false){
     page_bigfile(1);
 }
 
+function html_get_bigfile(is_render=false){
+    function sub_html_get_bigfile_done(csdict){
+        var reg_exp1,reg_exp2;
+        [reg_exp1,reg_exp2]=html_reg_exp_bigfile();
+    
+        for (let blxl=0,lent=blsource.length;blxl<lent;blxl++){
+            if (blsource[blxl].match(reg_exp1)){
+                blsource[blxl]='';
+            }
+            if (blsource[blxl].match(reg_exp2)){
+                blsource[blxl]='';
+            }
+        }
+
+        var title_position=-1;
+        for (let blxl=0,lent=blsource.length;blxl<lent;blxl++){
+            if (blsource[blxl].match(/<\/title>\s*$/)){
+                title_position=blxl;
+                break;
+            }
+        }
+
+        var ostatus=document.getElementById('textarea_html_status_bigfile');
+        if (title_position===-1){
+            ostatus.value='未发现 title';
+            return;
+        }
+        
+        var found_js=[];
+        var found_css=[];
+        var not_found_list=[];
+        var not_append_list=[];
+        for (let afile of included_files){
+            if (csdict['f_'+afile]==undefined){
+                not_found_list.push(afile);
+                continue;
+            }
+            if (afile.endsWith('.js')){
+                found_js.push('//'+afile+'\n'+csdict['f_'+afile]);
+            } else if (afile.endsWith('.css')){
+                found_css.push('/* '+afile+' */\n'+csdict['f_'+afile]);
+            } else {
+                not_append_list.push(afile);
+            }
+        }
+        
+        ostatus.value='未发现文件：\n'+not_found_list.join('\n')+'\n未添加内容的文件：\n'+not_append_list.join('\n');
+        
+        //if (not_found_list.length>0){return;}
+
+        if (found_js.length>0){
+            blsource[title_position]=blsource[title_position]+'\n<script src="保存的js文件名"></script>\n';
+            var oresult2=document.getElementById('textarea_html_result2_bigfile');
+            oresult2.value='//js函数插入处\n'+found_js.join('\n');
+        }
+        
+        if (found_css.length>0){
+            blsource[title_position]=blsource[title_position]+'\n<style>\n'+found_css.join('\n')+'\n</style>\n';
+        }        
+        
+        var oresult1=document.getElementById('textarea_html_result1_bigfile');
+        oresult1.value=blsource.join('\n');
+        oresult1.scrollIntoView();
+    }
+    
+    var blsource=document.getElementById('textarea_html_file_content_bigfile').value.split('\n');
+
+    var imported_files=new Set();
+    if (is_render && typeof imported_files_global!=='undefined'){
+        for (let item of imported_files_global){
+            imported_files.add(file_path_name_b(item)[3]);
+        }
+    }
+    
+    console.log('imported files',imported_files);
+
+    var list_t=new Set(document.getElementById('textarea_html_file_include_bigfile').value.trim().split('\n'));
+    
+    var included_files=[];
+    for (let afile of list_t){
+        afile=afile.trim();
+        if (afile==''){continue;}
+        if (is_render){
+            if (afile=='klbase.js' || imported_files.has(afile)){continue;}
+        }
+        
+        included_files.push(afile);
+    }
+    
+    console.log('included files',included_files);
+    idb_bigfile_b('read','filedict',included_files,sub_html_get_bigfile_done);
+}
+
+function html_reg_exp_bigfile(){
+    var reg_exp1=/^\s*<script src=.*?><\/script>\s*$/mg;
+    var reg_exp2=/^\s*klbase_addons_import_js_b\(.*?$/mg;
+    return [reg_exp1,reg_exp2];
+}
+
+function html_form_bigfile(ospan){
+    function sub_html_form_bigfile_textarea(){    
+        var left_strings0='<p><span class="aclick" onclick="html_get_bigfile();">standalone</span>';
+        var blstr0=textarea_with_form_generate_b('textarea_html_file_content_bigfile','width:90%;height:10rem;',left_strings0,'清空,复制,↑,↓,发送到临时记事本,发送地址','</p>');
+        
+        var left_strings1='<p>';
+        var blstr1=textarea_with_form_generate_b('textarea_html_file_include_bigfile','width:100%;height:10rem;',left_strings1,'清空,复制,发送到临时记事本,发送地址','</p>');
+
+        var left_strings2='<p>';
+        var blstr2=textarea_with_form_generate_b('textarea_html_file_ignore_bigfile','width:100%;height:10rem;',left_strings2,'清空,复制,发送到临时记事本,发送地址','</p>');
+
+        var left_strings3='<p>';
+        var blstr3=textarea_with_form_generate_b('textarea_html_status_bigfile','width:90%;height:10rem;',left_strings3,'清空,复制,发送到临时记事本,发送地址','</p>');
+
+        var left_strings4='<p>';
+        var blstr4=textarea_with_form_generate_b('textarea_html_result1_bigfile','width:100%;height:10rem;',left_strings4,'清空,复制,↑,↓,save as htm file,发送到临时记事本,发送地址','</p>');
+
+        var left_strings5='<p>';
+        var blstr5=textarea_with_form_generate_b('textarea_html_result2_bigfile','width:100%;height:10rem;',left_strings5,'清空,复制,↑,↓,save as js file,发送到临时记事本,发送地址','</p>');
+                
+        document.getElementById('divhtml').innerHTML='<h4>HTML文件内容</h4>'+blstr0+table_split_doms_one_row_b(['<h4>包含文件列表</h4>'+blstr1,'<h4>忽略文件列表</h4>'+blstr2],'90%')+'<h4>状态</h4>'+blstr3+table_split_doms_one_row_b(['<h4>结果 HTML</h4>'+blstr4,'<h4>结果 JS</h4>'+blstr5],'90%');
+
+        document.getElementById('textarea_html_file_content_bigfile').value=html_file_content;
+        document.getElementById('textarea_html_file_include_bigfile').value=Array.from(file_set).join('\n');
+        document.getElementById('textarea_html_file_ignore_bigfile').value=Array.from(ignore_set).join('\n');
+    }
+
+    function sub_html_form_bigfile_js(cslist,quote_exp){
+        for (let one_quote of cslist){
+            var elements=one_quote.match(quote_exp) || [];
+            for (let one_element of elements){
+                var bname=file_path_name_b(one_element.slice(1,-1))[3];
+                if (bname.endsWith('_data.js') || bname.startsWith('readlater_data_')){
+                    ignore_set.add(one_element);
+                    continue;
+                }
+                if (!bname.includes('.')){
+                    bname='klbase_'+bname+'.js';
+                }
+                file_set.add(bname);
+            }
+        }
+    }
+    
+    function sub_html_form_bigfile_content(csstr){
+        var bllen=csstr.length;
+        if (bllen==0){
+            alert('未获取文件内容');
+            return;
+        }
+
+        var reg_exp1,reg_exp2;
+        [reg_exp1,reg_exp2]=html_reg_exp_bigfile();
+        var script_list=csstr.match(reg_exp1) || [];
+        sub_html_form_bigfile_js(script_list,/".*?"/g); //只支持 双引号 - 保留注释
+        
+        var import_list=csstr.match(reg_exp2) || [];
+        
+        for (let item of import_list){
+            if (item.match(/\(\[.*?\],\s*\[.*?\],\s*\[.*?\],\s*\[.*?\],\s*true/)){
+                file_set.add('jquery.js');
+                break;
+            }
+        }
+        
+        for (let item of import_list){
+            var list_t=item.match(/\[.*?\]/g) || [];  //不能使用.+? - 保留注释
+            sub_html_form_bigfile_js(list_t,/'.*?'/g); //只支持 单引号 - 保留注释
+        }
+        
+        html_file_content=csstr;
+        sub_html_form_bigfile_textarea();
+    }
+    
+    var html_file_content='';
+    var file_set=new Set();
+    var ignore_set=new Set();
+        
+    var fname=ospan.parentNode.querySelector('span.span_name_bigfile').innerText;
+    idb_bigfile_b('read','content',fname,sub_html_form_bigfile_content);
+}
+
 function page_bigfile(csno){
     function sub_page_bigfile_one(csxl){
         var item=current_data_bigfile_global[csxl][0];
-        return '<li><span class="span_name_bigfile" style="font-weight:bold;">'+specialstr92_b(item[1])+'</span>: '+specialstr92_b(item[2])+' <span style="font-size:0.8rem;color:'+scheme_global['memo']+';">('+item[3]+' '+(item[4].startsWith(today)?'<span style="color:'+scheme_global['a-hover']+';">'+item[4]+'</span>':item[4])+')</span><span class="oblong_box" onclick="delete_bigfile(this);" title="删除记录">🗑</span> <span class="oblong_box" onclick="copy_bigfile(this);" title="复制文件名">📎</span>  <span class="oblong_box" onclick="export_bigfile(this);" title="另存为文件">📤</span> <span style="font-size:0.8rem;color:'+scheme_global['memo']+';">('+current_data_bigfile_global[csxl][1]+')</span></li>';
+        var htm_icon='';
+        if (item[1].endsWith('.htm')){
+            htm_icon='<span class="oblong_box" onclick="html_form_bigfile(this);" title="转换htm文件并载入或下载">🌐</span> ';
+        }
+        return '<li><span class="span_name_bigfile" style="font-weight:bold;">'+specialstr92_b(item[1])+'</span>: '+specialstr92_b(item[2])+' <span style="font-size:0.8rem;color:'+scheme_global['memo']+';">('+item[3]+' '+(item[4].startsWith(today)?'<span style="color:'+scheme_global['a-hover']+';">'+item[4]+'</span>':item[4])+')</span><span class="oblong_box" onclick="delete_bigfile(this);" title="删除记录">🗑</span> <span class="oblong_box" onclick="copy_bigfile(this);" title="复制文件名">📎</span>  <span class="oblong_box" onclick="export_bigfile(this);" title="另存为文件">📤</span> '+htm_icon+'<span style="font-size:0.8rem;color:'+scheme_global['memo']+';">('+current_data_bigfile_global[csxl][1]+')</span></li>';
     }
     
     var today=new Date().toLocaleString().split(',')[0];
@@ -251,7 +436,7 @@ function export_bigfile(ospan){
         }
         
         var rndstr=randstr_b(4,true,false);
-        if ((prompt('输入 '+rndstr+' 确认导出长度为 '+bllen+' 的该记录') || '').trim()!==rndstr){return;}            
+        if ((prompt('输入 '+rndstr+' 确认导出长度为 '+bllen+' 的该记录') || '').trim()!==rndstr){return;}
         string_2_txt_file_b(csstr,fname,blext);
     }
     

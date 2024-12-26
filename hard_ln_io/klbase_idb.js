@@ -239,7 +239,7 @@ function idb_read_bigfile_b(db,do_type='',cskey='',run_fn=false){
     function sub_idb_read_bigfile_b_search(){
         //current_result_bigfile_global 每个元素为：[id,name,content,datetime] - 保留注释
         if (do_type!=='eval'){
-            if (typeof run_fn == 'function'){            
+            if (typeof run_fn == 'function'){
                 run_fn(raw_data_bigfile);
             }
         }
@@ -267,7 +267,12 @@ function idb_read_bigfile_b(db,do_type='',cskey='',run_fn=false){
     function sub_idb_read_bigfile_b_onsuccess(resolve, reject, event, other_var1,other_var2){
         var cursor = event.target.result;
         if (cursor){
-            if (cskey=='' || cursor.value.name==cskey){
+            if (do_type=='filedict'){
+                if (cskey.includes(cursor.value.name)){
+                    raw_data_bigfile['f_'+cursor.value.name]=cursor.value.content;
+                }
+            }
+            else if (cskey=='' || cursor.value.name==cskey){
                 switch (do_type){
                     case 'eval':
                         var odom = document.createElement('script');
@@ -313,11 +318,15 @@ function idb_read_bigfile_b(db,do_type='',cskey='',run_fn=false){
         }
     }
     //-----------------------
-    if (do_type=='content'){
+    if (do_type=='filedict'){
+        var raw_data_bigfile={};
+    }
+    else if (do_type=='content'){
         var raw_data_bigfile='';
     } else {
         var raw_data_bigfile=[];
     }
+
     return idb_read_b(db,'bigfile_dbf',sub_idb_read_bigfile_b_onsuccess);
 }
 

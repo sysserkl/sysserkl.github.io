@@ -713,9 +713,12 @@ function month01_day_b(the_day){
 }
 
 function parse_relative_date_b(datestr){
+    datestr=datestr.replace(/\b(one|a|an)\b/g,'1');
     //const date = parseRelativeDate("2 day ago"); // 输出2天前的日期 - 保留注释
     var now = new Date();
-    var [number, unit] = datestr.match(/\d+/g).map(Number); // 提取数字
+    var blnumber = datestr.match(/\d+/g); // 提取数字
+    if (blnumber==null){return false;}
+    blnumber=parseInt(blnumber);
     var unitString = datestr.replace(/\d+/g, '').trim(); // 提取单位
 
     var seconds=-1;
@@ -734,7 +737,7 @@ function parse_relative_date_b(datestr){
             break;
     }
     if (seconds>-1){
-         return new Date(now - number * seconds);
+         return new Date(now - blnumber * seconds);
     } else {
         return false;
     }
