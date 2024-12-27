@@ -36,13 +36,18 @@ function menu_bigfile(){
 
     var klmenu_config=root_font_size_menu_b(str_t);
     klmenu_config=klmenu_config.concat([
-    '<span id="span_reg_bigfile" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ reg</span>',        
     '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'bigfile\');">更新版本</span>',
-    '<span id="span_first_source_bigfile" class="span_menu" onclick="'+str_t+'first_source_set_bigfile();">⚪ 将bigfile作为第一数据源</span>',    
     '<span class="span_menu" onclick="'+str_t+'local_storage_form_bigfile();">缓存导入</span>',    
+    '<span class="span_menu">删除方式：'+list_2_option_b(['数字确认','简单确认','直接删除'],'select_delete_option_bigfile')+'</span>',    
     ]);
+    
+    var group_list=[
+    ['⚪ reg','klmenu_check_b(this.id,true);',false,'span_reg_bigfile'],
+    ['⚪ 将bigfile作为第一数据源','first_source_set_bigfile();',false,'span_first_source_bigfile'],
+    ];    
+    klmenu_config.push(menu_container_b(str_t,group_list,''));
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'𖧶','15rem','1rem','1rem','30rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','30rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'𖧶','15rem','1rem','1rem','30rem')+klmenu_b(klmenu_config,'⚙','19rem','1rem','1rem','30rem'),'','0rem')+' ');
     first_source_set_bigfile(false);
 }
 
@@ -193,7 +198,19 @@ function search_bigfile(cskey=false){
     page_bigfile(1);
 }
 
-function html_get_bigfile(is_render=false){
+function html_get_bigfile(is_render=false,is_two_files=true){
+    function sub_html_get_bigfile_wait(cstimes,fn_name){
+        if (cstimes>5){return;}
+        
+        if (eval('typeof '+fn_name) == 'undefined'){
+            setTimeout(function (){sub_html_get_bigfile_wait(cstimes+1,fn_name);},1000);
+            return;
+        }
+
+        console.log('等待 '+fn_name+' 次数',cstimes);      
+        html_head_body_render_b(blsource);
+    }
+    
     function sub_html_get_bigfile_done(csdict){
         var reg_exp1,reg_exp2;
         [reg_exp1,reg_exp2]=html_reg_exp_bigfile();
@@ -241,25 +258,41 @@ function html_get_bigfile(is_render=false){
         
         ostatus.value='未发现文件：\n'+not_found_list.join('\n')+'\n未添加内容的文件：\n'+not_append_list.join('\n');
         
-        //if (not_found_list.length>0){return;}
-
         if (found_js.length>0){
-            blsource[title_position]=blsource[title_position]+'\n<script src="保存的js文件名"></script>\n';
-            var oresult2=document.getElementById('textarea_html_result2_bigfile');
-            oresult2.value='//js函数插入处\n'+found_js.join('\n');
+            if (is_render){
+                html_render_js_b(found_js,sub_html_get_bigfile_wait);
+            } else {
+                if (is_two_files){
+                    blsource[title_position]=blsource[title_position]+'\n<script src="保存的js文件名"></script>\n';
+                    var oresult2=document.getElementById('textarea_html_result2_bigfile');
+                    oresult2.value='//js函数插入处\n'+found_js.join('\n');
+                } else {
+                    blsource[title_position]=blsource[title_position]+dom_quote_b(['//js函数插入处',found_js.join('\n')]);
+                }
+            }
         }
         
         if (found_css.length>0){
-            blsource[title_position]=blsource[title_position]+'\n<style>\n'+found_css.join('\n')+'\n</style>\n';
-        }        
+            if (is_render){
+                style_generate_b(found_css,true);
+            } else {        
+                blsource[title_position]=blsource[title_position]+'\n<style>\n'+found_css.join('\n')+'\n</style>\n';
+            }
+        }
         
-        var oresult1=document.getElementById('textarea_html_result1_bigfile');
-        oresult1.value=blsource.join('\n');
-        oresult1.scrollIntoView();
+        if (!is_render){
+            var oresult1=document.getElementById('textarea_html_result1_bigfile');
+            oresult1.value=blsource.join('\n');
+            oresult1.scrollIntoView();
+        }
+    }
+    
+    if (is_render){
+        is_two_files=true;
     }
     
     var blsource=document.getElementById('textarea_html_file_content_bigfile').value.split('\n');
-
+    
     var imported_files=new Set();
     if (is_render && typeof imported_files_global!=='undefined'){
         for (let item of imported_files_global){
@@ -269,7 +302,7 @@ function html_get_bigfile(is_render=false){
     
     console.log('imported files',imported_files);
 
-    var list_t=new Set(document.getElementById('textarea_html_file_include_bigfile').value.trim().split('\n'));
+    var list_t=array_unique_b(document.getElementById('textarea_html_file_include_bigfile').value.trim().split('\n'));
     
     var included_files=[];
     for (let afile of list_t){
@@ -294,7 +327,7 @@ function html_reg_exp_bigfile(){
 
 function html_form_bigfile(ospan){
     function sub_html_form_bigfile_textarea(){    
-        var left_strings0='<p><span class="aclick" onclick="html_get_bigfile();">standalone</span>';
+        var left_strings0='<p><span class="aclick" onclick="html_get_bigfile(false,true);">.htm+.js</span><span class="aclick" onclick="html_get_bigfile(false,false);">one file</span><span class="aclick" onclick="html_get_bigfile(true);">render</span>';
         var blstr0=textarea_with_form_generate_b('textarea_html_file_content_bigfile','width:90%;height:10rem;',left_strings0,'清空,复制,↑,↓,发送到临时记事本,发送地址','</p>');
         
         var left_strings1='<p>';
@@ -420,10 +453,18 @@ function copy_bigfile(ospan){
 
 function delete_bigfile(ospan){
     file_name_bigfile_global=ospan.parentNode.querySelector('span.span_name_bigfile').innerText;
-
-    var rndstr=randstr_b(4,true,false);
-    if ((prompt('输入 '+rndstr+' 确认删除记录：'+file_name_bigfile_global) || '').trim()!==rndstr){return;}    
     
+    var delete_option=document.getElementById('select_delete_option_bigfile').value;
+    switch (delete_option){
+        case '数字确认':
+            var rndstr=randstr_b(4,true,false);
+            if ((prompt('输入 '+rndstr+' 确认删除记录：'+file_name_bigfile_global) || '').trim()!==rndstr){return;}
+            break;
+        case '简单确认':
+            if (!confirm('是否删除记录：'+file_name_bigfile_global+'?')){return;}            
+            break;
+    }
+ 
     idb_bigfile_b('edit','delete','',read_fn_bigfile);
 }
 

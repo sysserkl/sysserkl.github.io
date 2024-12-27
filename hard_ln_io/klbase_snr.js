@@ -983,12 +983,7 @@ function dbc_list2_klsnews_b(cskeys){
     //cskyes 形如 2019-05-30_www - 保留注释
     var list_t=[];
     var dbc_count=selenium_dbc_global.length;
-    //if (dbc_count==1){
-        //var html_file='recent_news.htm';
-    //}
-    //else {
-        //var html_file='selenium_news_reader_offline.htm';
-    //}
+
     var jump_t=klmenu_hide_b('');    
     for (let file_date of dbc_js_files){
         var group_list=[];
@@ -1000,7 +995,6 @@ function dbc_list2_klsnews_b(cskeys){
             }
             
             var html_title=(cskeys==file_date+'_'+item[0]?'<font color=red><b>'+item[1]+'</b></font>':item[1]);  
-            //list_t.push('<span class="span_menu" onclick="location.href=\''+href_link+'\';">'+html_title+'</span>');
             group_list.push([html_title,'location.href=\''+href_link+'\';',true]);
         }
         
@@ -1186,7 +1180,7 @@ function keywords_update_klsnews_b(){
         var list_t=otextarea.value.trim().split(',');
         list_t=array_unique_b(list_t);
         list_t.sort();
-        if (confirm("是否更新("+list_t.length+")？")){
+        if (confirm('是否更新('+list_t.length+')？')){
             var blstr=list_t.join(',');
             localStorage.setItem('keywords_selenium',blstr);
             otextarea.value=blstr;

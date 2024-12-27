@@ -1168,20 +1168,20 @@ function en_double_2_array_klr_b(cscontent,do_export=false,img_src_list=[],conve
     if (do_export){
         var bltitle=prompt('输入标题：');
         if (bltitle==null){return;}
-        var html_top=standalone_html_head_klr_b('Article')+`
-<body>
-<div id="divhtml"></div>
-<script>
-`.trim()+'\n'+"var title_global='"+specialstr_j(en_double_str_b(bltitle))+"';\nvar content_global=[\n"+list_t.join('\n')+'\n];\nvar images_global=[\n'+img_src_list.join('\n')+'\n];\n</script>\n<script>\n';
-        var b_fn=klarticle_funs_klr_b(false)+'\n\n';
-        var html_tail=`
-//-----------------------
-klarticle_init_klr_b();
-</script>
-</body>
-</html>
-`.trim()+'\n';
-        var result_t=html_top+b_fn+html_tail;
+        
+        var html_top=standalone_html_head_klr_b('Article')+'<body>\n<div id="divhtml"></div>\n'
+        +dom_quote_b([
+        "var title_global='"+specialstr_j(en_double_str_b(bltitle))+"';",
+        "var content_global=[\n",
+        list_t.join('\n'),
+        '];',
+        'var images_global=[',
+        img_src_list.join('\n'),
+        '];',
+        ]);
+
+        var html_tail=dom_quote_b([klarticle_funs_klr_b(false),'//-----------------------','klarticle_init_klr_b();']);
+        var result_t=html_top+html_tail+html_tail_generate_b();
         string_2_txt_file_b(result_t,bltitle+'.htm','htm');
         return result_t;
     } else {
@@ -1190,18 +1190,12 @@ klarticle_init_klr_b();
 }
 
 function standalone_html_head_klr_b(cstitle){
-    return `<!DOCTYPE html>
-<html>
-<head>
-<title>`+cstitle+`</title>
-<meta charset="UTF-8" />
-<style>
-#section_top_bottom_menu p {line-height:150%;font-size:0.9rem;}
-#section_top_bottom_menu p span {cursor:pointer;}
-a {word-break:break-all;word-wrap:break-word;}
-</style>
-<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-</head>`;
+    var style_list=[
+    '#section_top_bottom_menu p {line-height:150%;font-size:0.9rem;}',
+    '#section_top_bottom_menu p span {cursor:pointer;}',
+    'a {word-break:break-all;word-wrap:break-word;}',
+    ];
+    return html_head_generate_b(cstitle,style_list,true,true);
 }
 
 function important_line_js_array_klr_b(textarea_id){

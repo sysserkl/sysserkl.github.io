@@ -3,6 +3,16 @@ function init_ensentence(){
         enwords_mini_search_frame_style_b();
         enwords_mini_search_frame_form_b();    
     }
+    
+    function sub_init_ensentence_done(){
+        menu_ensentence();
+        input_date_set_enwords_b();
+        character_2_icon_b('🗨');
+        en_sentence_source_current_global=[];   //全局变量 - 保留注释
+
+        enwords_init_b(false,true,sub_init_ensentence_fn);
+    }
+    
     //-----------------------
     top_bottom_arrow_b('div_top_bottom','',true,(ismobile_b()?'1.8rem':'1.6rem'),true,false,2);
     var input_list=[
@@ -10,12 +20,17 @@ function init_ensentence(){
     ];
     input_size_b(input_list,'id');
     input_with_x_b('input_search',11,'',false,'input_reg',true);
-    menu_ensentence();
-    input_date_set_enwords_b();
-    character_2_icon_b('🗨');
-    en_sentence_source_current_global=[];   //全局变量 - 保留注释
-
-    enwords_init_b(false,true,sub_init_ensentence_fn);
+    
+    var data_files=[
+    ['en_sentence_global','enwords_sentence'],
+    ['en_sentence_count_global','enwords_count_sentence'],
+    ];
+    for (let blno=0,lent=data_files.length;blno<lent;blno++){
+        data_files[blno][1]=klbase_addons_import_js_b([],[],['words/'+data_files[blno][1]+'_data.js'],[],false,false);
+        //data_files[blno][1]为数组，其元素是数组，形如：[ "js", "http://127.0.0.1/klwebphp/PythonTools/data/selenium_news/jsdata/words/enwords_count_sentence_data.js", "" ] - 保留注释
+    }
+    
+    load_js_var_one_by_one_b(data_files,0,sub_init_ensentence_done);
 }
 
 function menu_ensentence(){
@@ -465,15 +480,6 @@ function rare_old_words_form_ensentence(cslist,generate_js){
 }
     
 function rare_old_words_ensentence(cscaption='',show_sentence=false,generate_js=false,max_count=2,rows_min=10,rows_max=5000,source_check=false){
-    //function sub_rare_old_words_ensentence_form(){
-        //var more_buttons='';
-        //if (generate_js){
-            //more_buttons='<span class="aclick" onclick="enwords_count_sentence_data_save_ensentence();">save as enwords_count_sentence_data.js file</span>';
-        //}
-        //var bljg=enwords_different_types_div_b(words_searched_arr_global,true,'textarea_rare_words','textarea_rare_words','复制,发送到临时记事本,发送地址',more_buttons);
-        //return bljg;
-    //}
-    
     function sub_rare_old_words_ensentence_words(words_list){
         for (let aword of words_list){
             var blkey='w_'+aword.toLowerCase(); //否则 一些 Save 之类的在例句中出现次数很少，但 save 出现次数很多，结果 Save 被列为出现次数很少的单词 - 保留注释
@@ -757,33 +763,21 @@ function standalone_exam_html_generate(){
     
     var bltoday=date2str_b();
     var fns=['css_root_style_b','css_root_size_b','ismobile_b','style_generate_b','de_interval_str_b','de_double_str_b','odd_str_b','exam_answer_ensentence','en_style_b','p_enwords_sentence_style_b','style_generate_ensentence','mobile_style_enwc_b','mobile_style_b','local_storage_get_b','copy_2_clipboard_b'];
-    var blcontent=`<!DOCTYPE html>
-<html>
-<head>`
-+'<title>🇬🇧 Sentence Test '+bltoday+'</title>'
-+`<meta charset="UTF-8" />
-<script>
-//js函数插入处
-`+fun_2_string_b(fns)+'\n\n'+`
-</script>
-<script>
-scheme_global={
-`
-+scheme_list_for_standalone_b().join('\n')
-+`
-};
-css_root_style_b('17.2','13',['base'],[],1);
-en_style_b(true);
-</script>
-<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-</head>
-<body style="margin:0.5rem;">
-<script>
-style_generate_ensentence();
-</script>
-<h2>🇬🇧 Sentence Test `+bltoday+`</h2>
-<div id="divhtml">
-`+odiv.querySelector('div.div_sentence').outerHTML+'</div></body></html>';
+    
+    var blcontent=html_head_generate_b('🇧 Sentence Test '+bltoday,[],false,false)
+    +dom_quote_b(['//js函数插入处',fun_2_string_b(fns)])
+    +dom_quote_b([
+    'scheme_global={',
+    scheme_list_for_standalone_b().join('\n'),
+    '};',
+    "css_root_style_b('17.2','13',['base'],[],1);",
+    'en_style_b(true);',
+    ])
+    +html_head_generate_b(false,[],true,true)
+    +'<body style="margin:0.5rem;">'
+    +dom_quote_b(['style_generate_ensentence();'])
+    +'<h2>🇬🇧 Sentence Test '+bltoday+'</h2>\n<div id="divhtml">\n'
+    +odiv.querySelector('div.div_sentence').outerHTML+'</div>'+html_tail_generate_b();
 
     string_2_txt_file_b(blcontent,'sentence_test_'+bltoday+'.htm','htm');
 }

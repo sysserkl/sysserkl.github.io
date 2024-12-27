@@ -217,7 +217,10 @@ function de_interval_str_b(csstr){
 function en_double_str_b(csstr,split_lines=false){
     var t0 = performance.now();
     var result_value=en_interval_str_b(odd_str_b(en_interval_str_b(csstr)));
-    console.log('en_double_str_b() 编码 费时：'+(performance.now() - t0) + ' milliseconds');
+    var duration=performance.now() - t0;
+    if (duration>=500){
+        console.log('en_double_str_b() 编码 费时：'+duration + ' milliseconds');
+    }
     
     if (split_lines){
         var list_t=result_value.split('\n');  //必须先加密再分段 - 保留注释

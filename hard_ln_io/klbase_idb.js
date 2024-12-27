@@ -275,10 +275,11 @@ function idb_read_bigfile_b(db,do_type='',cskey='',run_fn=false){
             else if (cskey=='' || cursor.value.name==cskey){
                 switch (do_type){
                     case 'eval':
-                        var odom = document.createElement('script');
-                        document.head.appendChild(odom);    
+                        style_generate_b(cursor.value.content,true,dom_name='script');
+                        //var odom = document.createElement('script');
+                        //document.head.appendChild(odom);    
                         //odom.src=cursor.value.content; //此行保留 - 保留注释
-                        odom.innerHTML=cursor.value.content; //此行保留 - 保留注释                    
+                        //odom.innerHTML=cursor.value.content; //此行保留 - 保留注释                    
                         break;
                     case 'content':
                         raw_data_bigfile=cursor.value.content;

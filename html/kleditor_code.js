@@ -277,10 +277,14 @@ function menu_kleditor(){
     '<span class="span_menu" onclick="'+str_t+'remove_obj_kleditor(\'empty\');">批量移除innerHTML为空的doms</span>',
     '<span class="span_menu" onclick="'+str_t+'remove_obj_kleditor(\'space\');">批量移除innerHTML为空格的doms</span>',
     '<span class="span_menu">query string: <input id="input_query_str_kleditor" value="*" /></span>',
-    '<span class="span_menu" onclick="'+str_t+'save_kleditor();">Save</span>',
-    '<span class="span_menu" onclick="'+str_t+'save_kleditor(\'\',true);">ENSave</span>',
     '<span class="span_menu" onclick="'+str_t+'emoji_list_kleditor();">emoji list</span>',
     ];
+
+    var group_list=[
+    ['Save','save_kleditor();',true],
+    ['ENSave','save_kleditor(\'\',true);',true],
+    ];    
+    klmenu1.push(menu_container_b(str_t,group_list,''));
     
     var klmenu_image=[
     '<a href="image2base64.htm" onclick="'+str_t+'" target=_blank>convert gif 2 base64</a>',
@@ -371,6 +375,7 @@ function save_kleditor(cstitle='',encrypt=false){
         cstitle=prompt('输入保存文件名','kleditor');
         if (cstitle==null){return;}
     }
+    
     cstitle=cstitle.trim().split('\n')[0];
     if (cstitle==''){
         cstitle='kleditor';
@@ -378,15 +383,10 @@ function save_kleditor(cstitle='',encrypt=false){
     
     var savename=cstitle+'_'+today_str_b('dt','','','_')+'.htm';
     
-    blstr=standalone_html_head_klr_b('💡 '+cstitle)+'<body>\n'+blstr+'\n<script>\n'+klarticle_funs_klr_b(true)+'\n'+`
-//-----------------------
-klarticle_init_klr_b(true);
-</script>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-</body>
-</html>
-`
+    blstr=standalone_html_head_klr_b('💡 '+cstitle)+'<body>\n'+blstr;
+    blstr=blstr+dom_quote_b([klarticle_funs_klr_b(true),'//-----------------------','klarticle_init_klr_b(true);']);
+
+    blstr=blstr+'<p>&nbsp;</p>\n<p>&nbsp;</p>\n'+html_tail_generate_b();
     string_2_txt_file_b(blstr,savename,'html')
 }
 

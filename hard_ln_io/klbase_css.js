@@ -1990,12 +1990,16 @@ function select_option_numbers_b(cslen,batch_open_num){
     return bljg;
 }
 
-function list_2_option_b(cslist){
+function list_2_option_b(cslist,select_id=''){
     var option_t=[];
     for (let item of cslist){
         option_t.push('<option>'+item+'</option>');
     }
-    return option_t;
+    if (select_id!==''){
+        return '<select id="'+select_id+'">'+option_t.join('\n')+'</select>';
+    } else {
+        return option_t;
+    }
 }
 
 function highlight_obj_b(obj,search_str,new_str){
@@ -2501,19 +2505,27 @@ function get_max_zindex_b(){
     return maxZ;
 }
 
-function style_generate_b(csstr,dom_type){
+function style_generate_b(csstr,dom_type,dom_name='style',csparent='head'){
     if (Array.isArray(csstr)){
         csstr=csstr.join('\n');
     }
     
     if (dom_type){
-        var ostyle = document.createElement('style');
+        var ostyle = document.createElement(dom_name);
         ostyle.innerHTML=csstr;
-        document.head.appendChild(ostyle);        
+        switch (csparent){
+            case 'head':
+                document.head.appendChild(ostyle);
+                break;
+            case 'body':
+                document.body.appendChild(ostyle);
+                break;
+        }
+        return ostyle;
     } else {
-        document.write('\n<style>\n');    
-        document.write(csstr+'\n');    
-        document.write('</style>\n');
+        document.write('\n<'+dom_name+'>\n');    
+        document.write(csstr+'\n');
+        document.write('</'+dom_name+'>\n');
     }
 }
 
