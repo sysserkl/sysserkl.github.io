@@ -31,6 +31,22 @@ function args_bigfile(){
             }
         }
     }
+
+    var str_t=klmenu_hide_b('');
+    var htm_menu=[];
+    for (let item of raw_data_bigfile_global){
+        var fname=item[1];
+        if (!fname.endsWith('.htm')){continue;}
+        if (fname=='bigfile_standalone.htm'){continue;}
+        fname=fname.slice(0,-4);
+        htm_menu.push('<a href="?render&idb&htm='+fname+'" onclick="'+str_t+'" target=_blank>'+fname+'</a>');
+    }
+    
+    htm_menu.sort();
+    var omenu=document.getElementById('span_menu_htm_bigfile');
+    if (omenu){
+        omenu.outerHTML=klmenu_b(htm_menu,'🌐','12rem','1rem','1rem','30rem');
+    }
 }
 
 function recent_bigfile(csstr=''){
@@ -67,7 +83,7 @@ function menu_bigfile(){
     ];    
     klmenu_config.push(menu_container_b(str_t,group_list,''));
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'𖧶','15rem','1rem','1rem','30rem')+klmenu_b(klmenu_config,'⚙','19rem','1rem','1rem','30rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'𖧶','15rem','1rem','1rem','30rem')+'<span id="span_menu_htm_bigfile"></span>'+klmenu_b(klmenu_config,'⚙','19rem','1rem','1rem','30rem'),'','0rem')+' ');
     first_source_set_bigfile(false);
 }
 
@@ -90,9 +106,9 @@ function file_date_compare_bigfile(){
 
     var blfound=[];
     var not_found=[];
-    for (let afile of current_data_bigfile_global){
-        var fname2=afile[0][1];
-        var fdate2=validdate_b(afile[0][4]);
+    for (let afile of raw_data_bigfile_global){
+        var fname2=afile[1];
+        var fdate2=validdate_b(afile[4]);
 
         if (dict_t['f_'+fname2]==undefined){
             not_found.push(fname2);
@@ -109,7 +125,7 @@ function file_date_compare_bigfile(){
 }
 
 function file_date_form_bigfile(){
-    var left_strings='<p><span class="aclick" onclick="file_date_compare_bigfile();">当前条件文件日期对比</span>';
+    var left_strings='<p><span class="aclick" onclick="file_date_compare_bigfile();">文件日期对比</span>';
     var blstr=textarea_with_form_generate_b('textarea_file_date_compare_bigfile','height:25rem;',left_strings,'清空,复制,发送到临时记事本,发送地址','</p>');
     document.getElementById('divhtml').innerHTML=blstr+'<div id="div_file_date_compare_bigfile"></div>';
 }
@@ -214,9 +230,6 @@ function upload_a_bigfile(){
 function read_fn_bigfile(raw_data_bigfile){
     raw_data_bigfile_global=raw_data_bigfile;
     sort_bigfile(true);
-    if (!is_args_checked_bigfile){
-        args_bigfile();
-    }
 }
 
 function sort_bigfile(is_desc=false){
@@ -241,6 +254,11 @@ function sort_bigfile(is_desc=false){
             raw_data_bigfile_global.sort(function (a,b){return new Date(a[4])<new Date(b[4])?-1:1;});        
         }    
     }
+    
+    if (!is_args_checked_bigfile){
+        args_bigfile();
+    }
+    
     search_bigfile();
 }
 
@@ -399,31 +417,69 @@ function html_reg_exp_bigfile(){
 }
 
 function html_form_bigfile(ospan,do_render=false){
+    function sub_html_get_bigfile_spare(){
+        var prerequisite_ignore_set=array_union_b(new Set(),prerequisite_set,true);
+        for (let item of ignore_set){
+            while (true){
+                var blfound=false;
+                if (item.startsWith("'") || item.startsWith('"')){
+                    item=item.slice(1,);
+                    blfound=true;
+                }
+                if (item.endsWith("'") || item.endsWith('"')){
+                    item=item.slice(0,-1);
+                    blfound=true;
+                }
+                if (!blfound){break;}
+            }
+            
+            var blat=item.lastIndexOf('/');
+            if (blat>=0){
+                item=item.slice(blat+1,);
+            }
+            item=item.trim();
+            if (item==''){continue;}
+            prerequisite_ignore_set.add(item);
+        }
+        
+        var spare_list=[];
+        for (let item of current_data_bigfile_global){
+            var fname=item[0][1];
+            if (prerequisite_ignore_set.has(fname)){continue;}
+            spare_list.push(fname);
+        }
+        spare_list.sort(zh_sort_b);
+        document.getElementById('textarea_html_file_spare_bigfile').value=spare_list.join('\n');        
+    }
+    
     function sub_html_form_bigfile_textarea(){
         var left_strings0='<p><span class="aclick" onclick="html_get_bigfile(false,true);">.htm+.js</span><span class="aclick" onclick="html_get_bigfile(false,false);">one file</span><span class="aclick" onclick="html_get_bigfile(true);">render</span>';
         var blstr0=textarea_with_form_generate_b('textarea_html_file_content_bigfile','width:90%;height:10rem;',left_strings0,'清空,复制,↑,↓,发送到临时记事本,发送地址','</p>');
         
         var left_strings1='<p>';
-        var blstr1=textarea_with_form_generate_b('textarea_html_file_include_bigfile','width:100%;height:10rem;',left_strings1,'清空,复制,发送到临时记事本,发送地址','</p>');
+        var blstr1=textarea_with_form_generate_b('textarea_html_file_include_bigfile','width:100%;height:10rem;',left_strings1,'清空,复制,发送到临时记事本','</p>');
 
         var left_strings2='<p>';
-        var blstr2=textarea_with_form_generate_b('textarea_html_file_ignore_bigfile','width:100%;height:10rem;',left_strings2,'清空,复制,发送到临时记事本,发送地址','</p>');
+        var blstr2=textarea_with_form_generate_b('textarea_html_file_ignore_bigfile','width:100%;height:10rem;',left_strings2,'清空,复制,发送到临时记事本','</p>');
+
+        var left_strings_spare='<p>';
+        var blstr_spare=textarea_with_form_generate_b('textarea_html_file_spare_bigfile','width:100%;height:10rem;',left_strings_spare,'清空,复制,发送到临时记事本','</p>');
 
         var left_strings3='<p>';
-        var blstr3=textarea_with_form_generate_b('textarea_html_status_bigfile','width:90%;height:10rem;',left_strings3,'清空,复制,发送到临时记事本,发送地址','</p>');
+        var blstr3=textarea_with_form_generate_b('textarea_html_status_bigfile','width:90%;height:10rem;',left_strings3,'清空,复制,发送到临时记事本','</p>');
 
         var left_strings4='<p>';
-        var blstr4=textarea_with_form_generate_b('textarea_html_result1_bigfile','width:100%;height:10rem;',left_strings4,'清空,复制,↑,↓,save as htm file,发送到临时记事本,发送地址','</p>');
+        var blstr4=textarea_with_form_generate_b('textarea_html_result1_bigfile','width:100%;height:10rem;',left_strings4,'清空,复制,↑,↓,save as htm file,发送到临时记事本','</p>');
 
         var left_strings5='<p>';
-        var blstr5=textarea_with_form_generate_b('textarea_html_result2_bigfile','width:100%;height:10rem;',left_strings5,'清空,复制,↑,↓,save as js file,发送到临时记事本,发送地址','</p>');
+        var blstr5=textarea_with_form_generate_b('textarea_html_result2_bigfile','width:100%;height:10rem;',left_strings5,'清空,复制,↑,↓,save as js file,发送到临时记事本','</p>');
                 
-        document.getElementById('divhtml').innerHTML='<h4>HTML文件内容</h4>'+blstr0+table_split_doms_one_row_b(['<h4>包含文件列表</h4>'+blstr1,'<h4>忽略文件列表</h4>'+blstr2],'90%')+'<h4>状态</h4>'+blstr3+table_split_doms_one_row_b(['<h4>结果 HTML</h4>'+blstr4,'<h4>结果 JS</h4>'+blstr5],'90%');
+        document.getElementById('divhtml').innerHTML='<h4>HTML文件内容</h4>'+blstr0+table_split_doms_one_row_b(['<h4>包含文件列表</h4>'+blstr1,'<h4>忽略文件列表</h4>'+blstr2,'<h4>多余文件列表</h4>'+blstr_spare],'90%')+'<h4>状态</h4>'+blstr3+table_split_doms_one_row_b(['<h4>结果 HTML</h4>'+blstr4,'<h4>结果 JS</h4>'+blstr5],'90%');
 
         document.getElementById('textarea_html_file_content_bigfile').value=html_file_content;
-        document.getElementById('textarea_html_file_include_bigfile').value=Array.from(file_set).join('\n');
+        document.getElementById('textarea_html_file_include_bigfile').value=Array.from(prerequisite_set).join('\n');
         document.getElementById('textarea_html_file_ignore_bigfile').value=Array.from(ignore_set).join('\n');
-        
+        sub_html_get_bigfile_spare();
         if (do_render){
             html_get_bigfile(true);
         }
@@ -441,7 +497,7 @@ function html_form_bigfile(ospan,do_render=false){
                 if (!bname.includes('.')){
                     bname='klbase_'+bname+'.js';
                 }
-                file_set.add(bname);
+                prerequisite_set.add(bname);
             }
         }
     }
@@ -462,7 +518,7 @@ function html_form_bigfile(ospan,do_render=false){
         
         for (let item of import_list){
             if (item.match(/\(\[.*?\],\s*\[.*?\],\s*\[.*?\],\s*\[.*?\],\s*true/)){
-                file_set.add('jquery.js');
+                prerequisite_set.add('jquery.js');
                 break;
             }
         }
@@ -477,7 +533,7 @@ function html_form_bigfile(ospan,do_render=false){
     }
     
     var html_file_content='';
-    var file_set=new Set();
+    var prerequisite_set=new Set();
     var ignore_set=new Set();
     
     if (typeof ospan=='string'){
