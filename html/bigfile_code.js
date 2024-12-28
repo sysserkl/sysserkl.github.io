@@ -12,6 +12,25 @@ function init_bigfile(){
     var_generate_temp_txt_share_b();    //用于 导入 临时单词 - 保留注释
     menu_bigfile();
     refresh_bigfile();
+    is_args_checked_bigfile=false;
+}
+
+function args_bigfile(){
+    var cskeys=href_split_b(location.href);
+    if (cskeys.length>0 && cskeys[0]!==''){
+        for (let one_key of cskeys){
+            one_key=one_key.trim();
+            if (one_key.substring(0,4)=='htm='){
+                one_key=one_key.substring(4,);
+                if (!one_key.endsWith('.htm')){
+                    one_key=one_key+'.htm';
+                }
+                html_form_bigfile(one_key,true);
+                is_args_checked_bigfile=true;
+                break;
+            }
+        }
+    }
 }
 
 function recent_bigfile(csstr=''){
@@ -38,6 +57,7 @@ function menu_bigfile(){
     klmenu_config=klmenu_config.concat([
     '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'bigfile\');">更新版本</span>',
     '<span class="span_menu" onclick="'+str_t+'local_storage_form_bigfile();">缓存导入</span>',    
+    '<span class="span_menu" onclick="'+str_t+'file_date_form_bigfile();">文件日期对比</span>',    
     '<span class="span_menu">删除方式：'+list_2_option_b(['数字确认','简单确认','直接删除'],'select_delete_option_bigfile')+'</span>',    
     ]);
     
@@ -49,6 +69,49 @@ function menu_bigfile(){
 
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'𖧶','15rem','1rem','1rem','30rem')+klmenu_b(klmenu_config,'⚙','19rem','1rem','1rem','30rem'),'','0rem')+' ');
     first_source_set_bigfile(false);
+}
+
+function file_date_compare_bigfile(){
+    var otextarea=document.getElementById('textarea_file_date_compare_bigfile');
+    var blstr=otextarea.value;
+    //每一行形如：60. /home/kl/klwebphp/PythonTools/file_rar_sn_terminal.py 2024-03-26 16:55:01 - 保留注释
+    blstr=blstr.replace(/^.*[\/\\]/mg,'').trim();  //去掉目录 - 保留注释
+    if (blstr==''){return;}
+    
+    var dict_t={};
+    var list_t=blstr.split('\n');
+    for (let item of list_t){
+        item=item.trim();
+        if (item==''){continue;}
+        var fname1=item.slice(0,-19).trim();
+        var fdate1=item.slice(-19,).trim();
+        dict_t['f_'+fname1]=[validdate_b(fdate1),fdate1];
+    }
+
+    var blfound=[];
+    var not_found=[];
+    for (let afile of current_data_bigfile_global){
+        var fname2=afile[0][1];
+        var fdate2=validdate_b(afile[0][4]);
+
+        if (dict_t['f_'+fname2]==undefined){
+            not_found.push(fname2);
+        } else {
+            if (dict_t['f_'+fname2][0]>fdate2){
+                blfound.push('<b>'+fname2+':</b> '+now_time_str_b(':',true,fdate2,'-',' ')+' ➡ '+dict_t['f_'+fname2][1]);
+            }
+        }
+    }
+    
+    not_found.sort();
+    blfound.sort();
+    document.getElementById('div_file_date_compare_bigfile').innerHTML='<h4>未发现的文件</h4>'+array_2_li_b(not_found)+'<h4>需要更新的文件</h4>'+array_2_li_b(blfound);
+}
+
+function file_date_form_bigfile(){
+    var left_strings='<p><span class="aclick" onclick="file_date_compare_bigfile();">当前条件文件日期对比</span>';
+    var blstr=textarea_with_form_generate_b('textarea_file_date_compare_bigfile','height:25rem;',left_strings,'清空,复制,发送到临时记事本,发送地址','</p>');
+    document.getElementById('divhtml').innerHTML=blstr+'<div id="div_file_date_compare_bigfile"></div>';
 }
 
 function local_storage_form_bigfile(){
@@ -151,6 +214,9 @@ function upload_a_bigfile(){
 function read_fn_bigfile(raw_data_bigfile){
     raw_data_bigfile_global=raw_data_bigfile;
     sort_bigfile(true);
+    if (!is_args_checked_bigfile){
+        args_bigfile();
+    }
 }
 
 function sort_bigfile(is_desc=false){
@@ -257,17 +323,23 @@ function html_get_bigfile(is_render=false,is_two_files=true){
         }
         
         ostatus.value='未发现文件：\n'+not_found_list.join('\n')+'\n未添加内容的文件：\n'+not_append_list.join('\n');
+        if (is_render && not_found_list.length>0){
+            if (!confirm('存在未发现的文件：\n'+not_found_list.join('\n')+'\n是否渲染？')){
+                is_render=false;;
+            }
+        }
         
         if (found_js.length>0){
             if (is_render){
                 html_render_js_b(found_js,sub_html_get_bigfile_wait);
             } else {
+                var imported_str='imported_files_global=new Set(["'+included_files.join('","')+'"]);\n';
                 if (is_two_files){
                     blsource[title_position]=blsource[title_position]+'\n<script src="保存的js文件名"></script>\n';
                     var oresult2=document.getElementById('textarea_html_result2_bigfile');
-                    oresult2.value='//js函数插入处\n'+found_js.join('\n');
+                    oresult2.value='//js函数插入处\n'+imported_str+found_js.join('\n');
                 } else {
-                    blsource[title_position]=blsource[title_position]+dom_quote_b(['//js函数插入处',found_js.join('\n')]);
+                    blsource[title_position]=blsource[title_position]+dom_quote_b(['//js函数插入处',imported_str,found_js.join('\n')]);
                 }
             }
         }
@@ -316,6 +388,7 @@ function html_get_bigfile(is_render=false,is_two_files=true){
     }
     
     console.log('included files',included_files);
+    
     idb_bigfile_b('read','filedict',included_files,sub_html_get_bigfile_done);
 }
 
@@ -325,8 +398,8 @@ function html_reg_exp_bigfile(){
     return [reg_exp1,reg_exp2];
 }
 
-function html_form_bigfile(ospan){
-    function sub_html_form_bigfile_textarea(){    
+function html_form_bigfile(ospan,do_render=false){
+    function sub_html_form_bigfile_textarea(){
         var left_strings0='<p><span class="aclick" onclick="html_get_bigfile(false,true);">.htm+.js</span><span class="aclick" onclick="html_get_bigfile(false,false);">one file</span><span class="aclick" onclick="html_get_bigfile(true);">render</span>';
         var blstr0=textarea_with_form_generate_b('textarea_html_file_content_bigfile','width:90%;height:10rem;',left_strings0,'清空,复制,↑,↓,发送到临时记事本,发送地址','</p>');
         
@@ -350,6 +423,10 @@ function html_form_bigfile(ospan){
         document.getElementById('textarea_html_file_content_bigfile').value=html_file_content;
         document.getElementById('textarea_html_file_include_bigfile').value=Array.from(file_set).join('\n');
         document.getElementById('textarea_html_file_ignore_bigfile').value=Array.from(ignore_set).join('\n');
+        
+        if (do_render){
+            html_get_bigfile(true);
+        }
     }
 
     function sub_html_form_bigfile_js(cslist,quote_exp){
@@ -402,8 +479,13 @@ function html_form_bigfile(ospan){
     var html_file_content='';
     var file_set=new Set();
     var ignore_set=new Set();
-        
-    var fname=ospan.parentNode.querySelector('span.span_name_bigfile').innerText;
+    
+    if (typeof ospan=='string'){
+        var fname=ospan;
+    } else {
+        var fname=ospan.parentNode.querySelector('span.span_name_bigfile').innerText;
+    }
+    
     idb_bigfile_b('read','content',fname,sub_html_form_bigfile_content);
 }
 
@@ -411,7 +493,7 @@ function page_bigfile(csno){
     function sub_page_bigfile_one(csxl){
         var item=current_data_bigfile_global[csxl][0];
         var htm_icon='';
-        if (item[1].endsWith('.htm')){
+        if (item[1].endsWith('.htm') || item[1].endsWith('.html')){
             htm_icon='<span class="oblong_box" onclick="html_form_bigfile(this);" title="转换htm文件并载入或下载">🌐</span> ';
         }
         return '<li><span class="span_name_bigfile" style="font-weight:bold;">'+specialstr92_b(item[1])+'</span>: '+specialstr92_b(item[2])+' <span style="font-size:0.8rem;color:'+scheme_global['memo']+';">('+item[3]+' '+(item[4].startsWith(today)?'<span style="color:'+scheme_global['a-hover']+';">'+item[4]+'</span>':item[4])+')</span><span class="oblong_box" onclick="delete_bigfile(this);" title="删除记录">🗑</span> <span class="oblong_box" onclick="copy_bigfile(this);" title="复制文件名">📎</span>  <span class="oblong_box" onclick="export_bigfile(this);" title="另存为文件">📤</span> '+htm_icon+'<span style="font-size:0.8rem;color:'+scheme_global['memo']+';">('+current_data_bigfile_global[csxl][1]+')</span></li>';

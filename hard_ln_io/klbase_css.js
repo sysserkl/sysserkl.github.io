@@ -2546,7 +2546,7 @@ function insert_style_dom_b(rule_list){
     }
 }
 
-function buttons_do_type_generate_b(cscaption,button_name_list,do_type_fn,one_character=false){
+function buttons_do_type_generate_b(cscaption,button_name_list,do_type_fn,one_character=false,cstop='10rem'){
     var odiv=document.getElementById('div_'+cscaption+'_kl');
     if (odiv){return [false,false];}
     
@@ -2555,7 +2555,7 @@ function buttons_do_type_generate_b(cscaption,button_name_list,do_type_fn,one_ch
 	var blobj = document.querySelector('body');
 	var parentDiv = blobj.parentNode;
 	parentDiv.insertBefore(sp1, blobj);
-	sp1.style.cssText='position:fixed;float:right;z-index:99999;border: dotted 0.05rem black;border-radius:1rem;padding:0.2rem;cursor:pointer;background:#f0f0f0;opacity: 0.4;margin-top:10rem;';
+	sp1.style.cssText='position:fixed;float:right;z-index:99999;border: dotted 0.05rem black;border-radius:1rem;padding:0.2rem;cursor:pointer;background:#f0f0f0;opacity: 0.4;margin-top:'+cstop+';';
     sp1.setAttribute('onmouseover','this.style.opacity=1');
     sp1.setAttribute('onmouseout','this.style.opacity=0.4');
     

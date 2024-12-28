@@ -85,6 +85,14 @@ function html_head_body_render_b(html_source){
             break;
         }
     }
+
+    for (let blxl=0,lent=blleft.length;blxl<lent;blxl++){
+        if (blleft[blxl].match(/^\s*<link rel="manifest" href=".*?\.webmanifest" \/>\s*$/)){
+            console.log('移除',blleft[blxl]);
+            blleft[blxl]='';
+            break;
+        }
+    }
     
     var head_content=html_str_group_b(blleft,'head');
             
@@ -102,8 +110,20 @@ function html_head_body_render_b(html_source){
             break;
         }
     }
-    
-    document.write('<body></body>');    //head 更新后，似乎 body 被自动删除了 - 保留注释
+
+    for (let blxl=0,lent=blright.length;blxl<lent;blxl++){
+        if (blright[blxl].match(/^\s*pwa_register_b\('.*?_service_worker\.js',.*?\);\s*$/)){
+            console.log('移除',blright[blxl]);
+            blright[blxl]='';
+            break;
+        }
+    }  
+
+    if (!document.body){
+        document.write('<body></body>');    //head 更新后，似乎 body 被自动删除了 - 保留注释
+    } else {
+        document.body.innerHTML='';
+    }
     html_str_group_b(blright,'body');
 }
 

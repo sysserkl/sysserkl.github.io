@@ -271,8 +271,7 @@ function idb_read_bigfile_b(db,do_type='',cskey='',run_fn=false){
                 if (cskey.includes(cursor.value.name)){
                     raw_data_bigfile['f_'+cursor.value.name]=cursor.value.content;
                 }
-            }
-            else if (cskey=='' || cursor.value.name==cskey){
+            } else if (cskey=='' || cursor.value.name==cskey){
                 switch (do_type){
                     case 'eval':
                         style_generate_b(cursor.value.content,true,dom_name='script');
@@ -321,8 +320,7 @@ function idb_read_bigfile_b(db,do_type='',cskey='',run_fn=false){
     //-----------------------
     if (do_type=='filedict'){
         var raw_data_bigfile={};
-    }
-    else if (do_type=='content'){
+    } else if (do_type=='content'){
         var raw_data_bigfile='';
     } else {
         var raw_data_bigfile=[];
