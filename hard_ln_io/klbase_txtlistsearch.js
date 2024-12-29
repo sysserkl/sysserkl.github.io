@@ -327,12 +327,18 @@ function txtmenus_kltxt_b(cstype=''){
     menu_general=menu_general.concat([
     '<span id="span_add_zero_reading_lines_txtlistsearch" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 阅读行数补零</span>',
     '<span class="span_menu" onclick="'+str_t+'getlines_kltxt_b();">返回阅读页面</span>',
-    '<span class="span_menu" onclick="'+str_t+'rare_enwords_search_kltxt_b();">稀有旧单词搜索</span>',
+    //'<span class="span_menu" onclick="'+str_t+'rare_enwords_search_kltxt_b();">稀有旧单词搜索</span>',
     '<span class="span_menu" onclick="'+str_t+'new_words_kltxt_b([2],\'exclude\',true);">当前页面不在例句中的生词</span>',
     '<span class="span_menu" onclick="'+str_t+'new_words_lines_kltxt_b(1,1);">仅有1个新单词的行</span>',
     '<span class="span_menu" onclick="'+str_t+'new_words_lines_kltxt_b(0,0);">无新单词的行</span>',
     ]);    
 
+    var group_list=[
+    ['稀有旧单词搜索','rare_enwords_search_kltxt_b();',true],
+    ['稀有旧单词+例句+生词','rare_enwords_search_kltxt_b(true,true,true);',true],
+    ];    
+    menu_general.push(menu_container_b(str_t,group_list,''));
+    
     var group_list=[
     ['全部','frequent_new_enwords_kltxt_b();',true],
     ['当前页面','frequent_new_enwords_kltxt_b(true);',true],
@@ -2494,13 +2500,38 @@ function txtsearch_list_kltxt_b(csword,csreg,csmaxlines,start_lineno=0,end_linen
     return result_t;
 }
 
-function rare_enwords_search_kltxt_b(){
+function rare_enwords_search_kltxt_b(show_rare_word=false,import_sentence=false,show_new_word=false){
+    function sub_rare_enwords_search_kltxt_b_new(){
+        if (show_new_word){
+            new_words_kltxt_b([2],'exclude',true);
+        }    
+    }
+    
+    function sub_rare_enwords_search_kltxt_b_done(is_ok=true){
+        if (is_ok){
+            var blstr='-eword +\\b('+en_sentence_count_global.join('|')+')\\b';
+            txtsearch_kltxt_b(blstr,true,-1,false,sub_rare_enwords_search_kltxt_b_new);
+        }
+    }
+    
     if (typeof en_sentence_count_global == 'undefined'){return;}
-    var blstr='-eword +\\b('+en_sentence_count_global.join('|')+')\\b';
-    txtsearch_kltxt_b(blstr,true,-1,false);
+    
+    if (show_rare_word){
+        if (!klmenu_check_b('span_show_rare_enwords',false)){
+            klmenu_check_b('span_show_rare_enwords',true);
+        }
+    }
+    
+    if (import_sentence){
+        if (typeof en_sentence_global == 'undefined'){
+            load_enword_file_b('en_sentence_global','enwords_sentence',sub_rare_enwords_search_kltxt_b_done);
+            return;
+        }
+    }
+    sub_rare_enwords_search_kltxt_b_done();
 }
 
-function txtsearch_kltxt_b(csword='',csreg=-1,cscontinue=-1,add_recent=true){
+function txtsearch_kltxt_b(csword='',csreg=-1,cscontinue=-1,add_recent=true,run_fn=false){
     var oinput=document.getElementById('input_search');
     var oreg=document.getElementById('input_reg');
 	if (csword==''){
@@ -2555,16 +2586,19 @@ function txtsearch_kltxt_b(csword='',csreg=-1,cscontinue=-1,add_recent=true){
         }
 	}
     if (do_continue==false){
-        render_html_kltxt_b(blwordlist,true,true,false,true);
+        render_html_kltxt_b(blwordlist,true,true,false,true,run_fn);
     }
 }
 
-function render_html_kltxt_b(wordlist=[],layout=true,highlight=true,b_style=false,enforce_refresh=false){
+function render_html_kltxt_b(wordlist=[],layout=true,highlight=true,b_style=false,enforce_refresh=false,run_fn=false){
     function sub_render_html_kltxt_b_after_highlight(){
         digest_show_kltxt_b(true,-1,b_style);
-        books_b(false,'txt',book_tag_global,enforce_refresh);
+        books_generate_b(false,'txt',book_tag_global,enforce_refresh);
         new_words_kltxt_b();
         img_load_check_kltxt_b();
+        if (typeof run_fn == 'function'){
+            run_fn();
+        }
         console.log('render_html_kltxt_b() 费时：'+(performance.now() - t0) + ' milliseconds');    
     }
     
@@ -3021,7 +3055,7 @@ function absearch_kltxt_b(csword='',csreg=-1,csonlyone=false){
     [start_lineno,end_lineno,csmaxlines]=start_end_lineno_kltxt_b();
 
     //这样才能更新搜索关键字
-	books_b(false,'txt',book_tag_global);
+	books_generate_b(false,'txt',book_tag_global);
 	
 	klwiki_syntaxhighlight_global=false;
 	
@@ -3925,7 +3959,7 @@ function random_book_current_category_kltxt_b(){
 
 function category_generate_bltxt_b(){
     var op=document.getElementById('p_book_list');
-    var bljg='<span class="span_link" onclick="show_all_books_global=!show_all_books_global;books_b(show_all_books_global,\'txt\',book_tag_global);"><b>Books</b></span> <a href="?&line=0_0">RND</a> ';
+    var bljg='<span class="span_link" onclick="show_all_books_global=!show_all_books_global;books_generate_b(show_all_books_global,\'txt\',book_tag_global);"><b>Books</b></span> <a href="?&line=0_0">RND</a> ';
     if (book_tag_global!=='all'){
         bljg=bljg+'<span class="span_link" onclick="random_book_current_category_kltxt_b();">RND(current)</span> ';
     }
@@ -3933,7 +3967,7 @@ function category_generate_bltxt_b(){
     bljg=bljg+'<span id="span_book_category" style="display:none;"></span> <span id="booklinks"></span>';
     op.innerHTML=bljg;
     book_category_b('span_book_category',['演义','圣经','KLWiki'],book_tag_global);    
-    books_b(false,'txt',book_tag_global);    
+    books_generate_b(false,'txt',book_tag_global);    
 }
 
 function is_sc_kltxt_b(cskeys){

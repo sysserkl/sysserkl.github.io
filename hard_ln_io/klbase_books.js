@@ -254,7 +254,7 @@ function menu_digest_file_full_name_b(book_no=false,jsdoc_num=false,bookid=false
     }
 }
 
-function books_b(showall=false,cstype='txt',cstag='all',enforce_refresh=false){   //书目生成，category - 保留注释
+function books_generate_b(showall=false,cstype='txt',cstag='all',enforce_refresh=false){   //书目生成，category - 保留注释
     if (cstag=='NONE'){return '';}
     
     var current_show=document.querySelector('span.span_show_all_kltxt')!==null;
@@ -267,7 +267,7 @@ function books_b(showall=false,cstype='txt',cstag='all',enforce_refresh=false){ 
                 var blstr='?'+csbooklist_sub_global[csbookno_global][0]+'_tag'+cstag;
                 if (!enforce_refresh){
                     if ((blhref.includes(blstr+'&') || blhref.endsWith(blstr)) && showall==current_show){
-                        console.log('books_b() 未更新');
+                        console.log('books_generate_b() 未更新');
                         return;
                     }
                 }
@@ -278,7 +278,12 @@ function books_b(showall=false,cstype='txt',cstag='all',enforce_refresh=false){ 
 	var blword = '';
 	var tmp_o=document.getElementById('input_search');
 	if (tmp_o){
-        blword = specialstr_html_b(tmp_o.value.trim());
+        var blkey=tmp_o.value.trim();
+        if (blkey.length<200){
+            blword = specialstr_html_b(blkey);
+        } else {
+            console.log('忽略长链接：',blkey);
+        }
     }
     
 	var blreg='';
@@ -362,7 +367,7 @@ function books_b(showall=false,cstype='txt',cstag='all',enforce_refresh=false){ 
 	tmp_o=document.getElementById('booklinks');
 	if (tmp_o){
         tmp_o.innerHTML=bljg;
-        console.log('books_b() 已更新');
+        console.log('books_generate_b() 已更新');
     } else {
         console.log('未发现 id: booklinks');
         return bljg;

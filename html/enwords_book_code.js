@@ -839,7 +839,7 @@ function words_sort_count_enwords_book(){
 }
 
 function show_enwords_book(){
-    books_b(show_all_books_global,'eng',book_filter_str_enbook_b());
+    books_generate_b(show_all_books_global,'eng',book_filter_str_enbook_b());
 }
 
 function space2underline_enwords_book(){

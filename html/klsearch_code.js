@@ -145,7 +145,7 @@ function batch_type_get_klsearch(cstype){
             cstype='Bing(cn),Oxford,Cambridge';
             break;
         case 'batch_en_minor':
-            cstype='AHD,dictionary.com,learnersdictionary,lexico,wordnik';  //yourdictionary
+            cstype='wordnik,AHD,dictionary.com,learnersdictionary,lexico';  //yourdictionary
             break;
         case 'batch_en_wiktionary':
             cstype='Wiktionary(Local),kaikki(Local),wordhippo,definitions';
