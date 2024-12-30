@@ -33,6 +33,11 @@ function scheme_div_b(){
 }
 
 function scheme_generation_b(){
+    if (typeof scheme_global == 'undefined'){
+        console.log('初始化', 'scheme_global');
+        scheme_global={};
+    }
+    
     if (!scheme_global['color'] || scheme_global['color']==''){
        scheme_global={
        'color':'black',
@@ -89,7 +94,12 @@ function css_root_size_b(pcsize='16',mobilesize='30',increment=false){
     document.querySelector(':root').style.fontSize=rootsize+'px';
 }
 
-function css_root_style_b(pcsize='16',mobilesize='30',cssname=[''],usercss=[],checkbox_radio=3,increment=false,dom_type=false){
+function css_root_style_b(pcsize='16',mobilesize='30',cssname=[''],usercss=[],checkbox_radio=3,increment=false,dom_type=true){
+    if (typeof scheme_global == 'undefined'){
+        console.log('初始执行', 'scheme_generation_b()');    
+        scheme_generation_b();
+    }
+    
     var list_t=[];
     if (!cssname.includes('wiki')){
         css_root_size_b(pcsize,mobilesize,increment);
@@ -181,7 +191,7 @@ function css_root_style_b(pcsize='16',mobilesize='30',cssname=[''],usercss=[],ch
         }
     }
     
-    style_generate_b(list_t.join('\n'),dom_type);
+    style_generate_b(list_t,dom_type);
 }
 
 function mobile_style_b(csstr1,csstr2=''){
@@ -189,18 +199,18 @@ function mobile_style_b(csstr1,csstr2=''){
     //csstr2 pc style
 	if (ismobile_b()){
 		if (csstr1!==''){
-            document.write('\n'+csstr1+'\n');
+            style_generate_b(csstr1,true);
         }
 	} else {
 		if (csstr2!==''){
-            document.write('\n'+csstr2+'\n');
+            style_generate_b(csstr2,true);
         }
 	}
 }
 
 function css_select_b(cslen=4,cstype='pc'){
     if (cstype=='mobile'){
-        return 'font-size:1.1rem;width:'+(1.3*cslen)+'em;min-height:1.1rem;';
+        return 'font-size:1.1rem; width:'+(1.3*cslen)+'em; min-height:1.1rem;';
     }
     return 'width:'+(cslen+2)+'em;';
 }

@@ -127,13 +127,7 @@ function import_book_js_b(import_digest=true){
     var jsdoc_num,book_type,jsdoc_path,bookid;
     if (csbookno2_global>=0){
         [jsdoc_num,book_type,jsdoc_path,bookid]=num_type_path_id_get_book_b(csbookno2_global);
-        //var jsdoc_num='';
-        //if (csbooklist_sub_global[csbookno2_global].length>=4){
-            //jsdoc_num=csbooklist_sub_global[csbookno2_global][3];
-        //}
-        //var jsdoc_path=book_path_b(jsdoc_num);
-        //var bookid=csbooklist_sub_global[csbookno2_global][0];
-        
+
 	    document.write('\n<script src="'+jsdoc_path+bookid+'.js'+today+'"><\/script>\n');
         console.log(jsdoc_path+bookid+'.js'+today);
         //以下2行保留，第2本书忽略目录和摘要 - 保留注释
@@ -147,15 +141,8 @@ function import_book_js_b(import_digest=true){
     txtbook_js_code_file_global=''; //全局变量 - 保留注释
     //---
     [jsdoc_num,book_type,jsdoc_path,bookid]=num_type_path_id_get_book_b(book_no);
-    //var jsdoc_num='';
-    //if (csbooklist_sub_global.length>0 && csbooklist_sub_global[book_no].length>=4){
-        //jsdoc_num=csbooklist_sub_global[book_no][3];
-    //}
-    if (csbooklist_sub_global.length>0){
-        //var book_type=book_type_b(csbooklist_sub_global[book_no]);
 
-        //var jsdoc_path=book_path_b(jsdoc_num,book_type.includes('P'));
-        //var bookid=csbooklist_sub_global[book_no][0];
+    if (csbooklist_sub_global.length>0){
         document.write('\n<script src="'+jsdoc_path+bookid+'.js'+today+'"><\/script>\n');
         console.log(jsdoc_path+bookid+'.js'+today);
         

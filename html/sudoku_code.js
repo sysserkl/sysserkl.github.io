@@ -863,10 +863,10 @@ function show_sd(csnumber,csreform=false){
 }
 
 function style_sd(){
-    document.write('\n<style>\n');
-    //document.write("h2{margin:0rem;font-size:"+(font_size_sd_global-1)+"rem;}");
-    document.write(".table_sudoku td{font-weight:600;border:0.1rem #e0e0e0 solid;padding:0rem 0.95rem;font-size:"+font_size_sd_global+"rem;cursor:pointer;}");
-    document.write(".table_select td{font-weight:600;border:0;padding:0rem 0.5rem;font-size:"+(font_size_sd_global+0.3)+"rem;color:tomato;background-color:pink;cursor:pointer;}");
-    document.write('#span_no_sudoku{font-size:'+(font_size_sd_global-0.5)+'rem;border:0.2rem solid #c0c0c0;border-radius: 1rem; padding:0.1rem 0.5rem;margin:0rem 0.1rem;}');
-    document.write('\n</style>\n');
+    var style_list=[
+    '.table_sudoku td{font-weight:600;border:0.1rem #e0e0e0 solid;padding:0rem 0.95rem;font-size:'+font_size_sd_global+'rem;cursor:pointer;}',
+    '.table_select td{font-weight:600;border:0;padding:0rem 0.5rem;font-size:'+(font_size_sd_global+0.3)+'rem;color:tomato;background-color:pink;cursor:pointer;}',
+    '#span_no_sudoku{font-size:'+(font_size_sd_global-0.5)+'rem;border:0.2rem solid #c0c0c0;border-radius: 1rem; padding:0.1rem 0.5rem;margin:0rem 0.1rem;}',
+    ];
+    style_generate_b(style_list,true);
 }

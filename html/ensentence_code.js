@@ -783,7 +783,7 @@ function standalone_exam_html_generate(){
 }
 
 function style_generate_ensentence(){
-    var blmobile='.span_ensentence_words_exam {font-size:0.7rem;font-weight:bold;}\n';
+    var blmobile='.span_ensentence_words_exam {font-size:0.7rem;font-weight:bold;}';
     blmobile=blmobile+'.input_ensentence_one_word_exam {font-size:0.95rem;border:0;border-bottom:0.1rem solid '+scheme_global['color']+';width:3rem;}';
     mobile_style_enwc_b(blmobile,blmobile);
 }

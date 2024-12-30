@@ -3,17 +3,19 @@
 //0.0.1-20190125
 //-----------------------
 function en_style_b(add_table_compare_style=false){
-    document.write('\n<style>\n');
-    document.write('a.similar {text-decoration:none;}\n');
-    document.write('a.similar:link, a.similar:visited, a.similar:hover, a.similar:active{color:'+scheme_global['memo']+';}\n');
-    document.write('.txtsearch_lineno {color:'+scheme_global['memo']+';font-size:0.8rem;}\n');
-    document.write('.div_sentence{margin:1rem 0rem 1rem 2rem;border:0.2rem dashed '+scheme_global['shadow']+';padding:0.5rem 1rem;}\n');
-    p_enwords_sentence_style_b();
+    var style_list=[];
+    //style_list.push('\n<style>\n');
+    style_list.push('a.similar {text-decoration:none;}');
+    style_list.push('a.similar:link, a.similar:visited, a.similar:hover, a.similar:active{color:'+scheme_global['memo']+';}');
+    style_list.push('.txtsearch_lineno {color:'+scheme_global['memo']+';font-size:0.8rem;}');
+    style_list.push('.div_sentence{margin:1rem 0rem 1rem 2rem;border:0.2rem dashed '+scheme_global['shadow']+';padding:0.5rem 1rem;}');
+    style_list.push(p_enwords_sentence_style_b(false));
     if (add_table_compare_style){
-        document.write('#table_compare_enbook tr{background-color: '+scheme_global['background']+';}\n');
-        document.write('#table_compare_enbook tr:hover {background-color: '+scheme_global['skyblue']+';}\n');
+        style_list.push('#table_compare_enbook tr{background-color: '+scheme_global['background']+';}');
+        style_list.push('#table_compare_enbook tr:hover {background-color: '+scheme_global['skyblue']+';}');
     }
-    document.write('</style>\n');
+    //style_list.push('</style>\n');
+    style_generate_b(style_list,true,'style','head');
 }
 
 function en_font_menu_b(str_t){
@@ -2116,13 +2118,8 @@ function enwords_recent_search_b(csword='',cstype=''){
     }
 }
 
-function p_enwords_sentence_style_b(do_write=true){
-    var blstr='.div_sentence p.p_enwords_sentence:nth-child(even), #div_enword_search_links p.p_enwords_sentence:nth-child(even) {background-color:'+scheme_global['button']+';}';
-    if (do_write){
-        document.write(blstr+'\n');
-    } else {
-        return blstr;
-    }
+function p_enwords_sentence_style_b(){
+    return '.div_sentence p.p_enwords_sentence:nth-child(even), #div_enword_search_links p.p_enwords_sentence:nth-child(even) {background-color:'+scheme_global['button']+';}';
 }
 
 function en_sentence_to_default_order_b(){

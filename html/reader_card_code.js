@@ -58,6 +58,7 @@ function split_all_txtcard(cscount=30,csstr_length=150){
     document.getElementById('divhtml').innerHTML=bljg;
     bible_title_link_generate_kltxt_b();
     digest_show_kltxt_b();
+    img_load_check_kltxt_b();
 }
 
 function search_str_txtcard(csstr=''){
@@ -88,4 +89,27 @@ function key_txtcard(){
             break;
         }
     }
+}
+
+function init_txtcard(){
+    var style_list=[
+    '.txtsearch_kltxt_lineno {color:#707070;font-size:0.8rem}',
+    'i {border-bottom:0.15rem dashed tomato;}',
+    '#divhtml p{font-size:1rem;line-height:180%;margin-bottom:0.8rem;}',
+    '#divhtml img{max-width:100%;}',    
+    ];
+    
+    if (ismobile_b()){
+        style_list.push('#divhtml {margin:0.5rem;}');
+    } else {
+        style_list.push('#divhtml {margin:0rem 0.5rem;column-count:3;}');
+    }
+    style_generate_b(style_list,true);
+
+    top_bottom_arrow_b('div_top_bottom','',true,(ismobile_b()?'1.7rem':'1.4rem'),true,false,2);
+
+    input_with_x_b('input_search',11);
+    recent_search_b('recent_search_reader_card','','search_str_txtcard','div_recent_search',[],20);
+    split_all_txtcard();
+    key_txtcard();
 }

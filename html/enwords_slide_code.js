@@ -243,6 +243,14 @@ function init_enslide(){
         hide_enslide();    
     }
     //-----------------------
+    
+    var style_list=[
+    'a.similar {text-decoration:none;}',
+    'a.similar:link, a.similar:visited, a.similar:hover, a.similar:active{color:'+scheme_global['memo']+';}',
+    '.txtsearch_lineno {color:'+scheme_global['memo']+';font-size:0.8rem;}',
+    ];
+    style_generate_b(style_list,true);
+    
     input_with_x_b('input_search',11,'',false,'input_reg',true);
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.4rem'),true,false,2);
     //---

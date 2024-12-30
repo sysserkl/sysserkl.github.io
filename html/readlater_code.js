@@ -1,6 +1,19 @@
 function import_files_rlater(){
+    readlater_spam_keys_global=[];
+    readlater_important_keys_global=[];
+    photo_source_global=[];
+    klwiki_page_position_global=[];
+    readlater_words_count_global=[];
+    readlater_marked_rows_global=[];
+
     if (is_local_b()){
-        var flist=['data/readlater/readlater_words_count_data.js', 'data/readlater/readlater_spam_keys_data.js', 'data/readlater/readlater_important_keys_data.js', 'data/klwiki/klwiki_page_position_data.js','data/album/wiki_album_data.js'];
+        var flist=[
+        'data/readlater/readlater_words_count_data.js', 
+        'data/readlater/readlater_spam_keys_data.js', 
+        'data/readlater/readlater_important_keys_data.js', 
+        'data/klwiki/klwiki_page_position_data.js',
+        'data/album/wiki_album_data.js'
+        ];
         for (let blxl=0,lent=flist.length;blxl<lent;blxl++){
             flist[blxl]='../../../../'+flist[blxl];
         }
@@ -482,6 +495,13 @@ function init_data_rlater(){
 }
 
 function init_style_rlater(){
+    var style_list=[
+    '#div_search_links a {text-decoration:none;}',
+    '#div_search_links a:hover {text-decoration:underline;}',
+    'li {margin-bottom:0.4rem;'+(ismobile_b()?'font-size:1.1rem;':'')+'}',
+    ];
+    style_generate_b(style_list,true);
+    
     input_with_x_b('input_search',15);
     input_size_b([['input_max_rows',4,0.5],['input_max_delete_rlater',4,0.5]],'id');
     init_data_rlater();

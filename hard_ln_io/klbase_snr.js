@@ -1,13 +1,13 @@
 function mobile_style_klsnews_b(){
-    var mobile_t='\n<style>\n';
-    mobile_t=mobile_t+'#divhtml {margin:0px 0.5rem;}\n';
-    mobile_t=mobile_t+'sup.sup_sele_en {font-size:0.2rem;color:black;border-bottom:0.3rem #92addb solid;}\n';    
-    mobile_t=mobile_t+'</style>\n';
-
-	var pc_t='\n<style>\n';
-	pc_t=pc_t+'#divhtml {margin-left:'+(parseInt(document.body.clientWidth)*0.5)/2+'px; max-width:'+Math.max(700,(parseInt(document.body.clientWidth)*0.5))+'px;}\n';
-    pc_t=pc_t+'sup.sup_sele_en {font-size:0.8rem;color:black;border-bottom:3px #92addb solid;}\n';
-	pc_t=pc_t+'</style>\n';
+    var mobile_t=[
+    '#divhtml {margin:0px 0.5rem;}',
+    'sup.sup_sele_en {font-size:0.2rem;color:black;border-bottom:0.3rem #92addb solid;}',
+    ];
+    
+	var pc_t=[
+    '#divhtml {margin-left:'+(parseInt(document.body.clientWidth)*0.5)/2+'px; max-width:'+Math.max(700,(parseInt(document.body.clientWidth)*0.5))+'px;}',
+    'sup.sup_sele_en {font-size:0.8rem;color:black;border-bottom:3px #92addb solid;}',
+    ];
 	mobile_style_b(mobile_t, pc_t);
 }
 

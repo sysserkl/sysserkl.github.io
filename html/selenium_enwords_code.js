@@ -421,6 +421,14 @@ function init_seen(){
         menu_seen();
     }
     //-----------------------
+    var style_list=[
+    '#div_search_links a.a_rlater_link, #div_search_links li::marker{font-size:1.25rem;font-weight:bold;}',
+    '#div_search_links a {text-decoration:none;color:black;}',
+    '#div_search_links a:hover {text-decoration:underline;color:red;}',
+    'li {margin-bottom:0.4rem;'+(ismobile_b()?'font-size:1.1rem;':'')+'}',
+    ];
+    style_generate_b(style_list,true);
+        
     input_size_b([['input_max_delete_rlater',4,0.8]],'id');
     input_with_x_b('input_search',(ismobile_b()?10:15));
     var progress_list=ltp_status_get_b('+selenium +生词统计','tomato','white',100);

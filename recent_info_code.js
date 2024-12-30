@@ -96,26 +96,32 @@ function init_klrecent(){
 }
 
 function style_klrecent(){
-    document.write('\n<style>\n');
     if (ismobile_b()){
-        document.write('div.link_title .span_a_article_title_b{font-size:1.5rem;}\n');
-        document.write('div.link_title br{margin-top:1.5rem;margin-bottom:1.5rem;}\n');
-        document.write('div.link_title p{line-height:2.1rem;margin-top:1.5rem;margin-bottom:1.5rem;}\n');
-        document.write('div.link_title table{font-size:1.2rem;}\n');
-        document.write('div.div_columns_rct{column-count:1;}\n');
-        document.write('.headline_on{font-size:1.4rem;}\n');
+        var style_list=[
+        'div.link_title .span_a_article_title_b{font-size:1.5rem;}',
+        'div.link_title br{margin-top:1.5rem;margin-bottom:1.5rem;}',
+        'div.link_title p{line-height:2.1rem;margin-top:1.5rem;margin-bottom:1.5rem;}',
+        'div.link_title table{font-size:1.2rem;}',
+        'div.div_columns_rct{column-count:1;}',
+        '.headline_on{font-size:1.4rem;}',
+        ];
     } else {
-        document.write('div.link_title .span_a_article_title_b{font-size:2.15rem;}\n');
-        document.write('div.link_title br{margin-top:1rem;margin-bottom:1rem;}\n');
-        document.write('div.link_title p{line-height:180%;margin-top:1rem;margin-bottom:1rem;}\n');
-        document.write('div.link_title table{font-size:1.2rem;}\n');
-        document.write('div.div_columns_rct{column-count:2;}\n');
-        document.write('.headline_on{font-size:2.4rem;}\n');
+        var style_list=[
+        'div.link_title .span_a_article_title_b{font-size:2.15rem;}',
+        'div.link_title br{margin-top:1rem;margin-bottom:1rem;}',
+        'div.link_title p{line-height:180%;margin-top:1rem;margin-bottom:1rem;}',
+        'div.link_title table{font-size:1.2rem;}',
+        'div.div_columns_rct{column-count:2;}',
+        '.headline_on{font-size:2.4rem;}',
+        ];
     }
-    document.write('div.div_columns_rct a{font-size:1.2rem}\n');
-    document.write('div.link_title li{margin-bottom:0.25rem;margin-left:2rem;}\n');
-    document.write('div.link_title table br{margin-top:0rem;margin-bottom:0rem;}\n');
-    document.write('<\/style>\n');
+    style_list=style_list.concat([
+    'div.div_columns_rct a{font-size:1.2rem}',
+    'div.link_title li{margin-bottom:0.25rem;margin-left:2rem;}',
+    'div.link_title table br{margin-top:0rem;margin-bottom:0rem;}',
+    ]);
+    
+    style_generate_b(style_list,true);
 }
 
 function quotestr_klrecent(){

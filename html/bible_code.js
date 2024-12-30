@@ -1723,6 +1723,23 @@ function idb_count_and_write_bible(){
     });
 }
 
+function load_style_bible(){
+    var style_list=[
+    'table.table_zebra tr:nth-child(even) {background-color: #efefef;}',
+    'table.table_zebra tr:hover {background-color: #E9EEF2;}',
+    'table#table_fav tr.tr_head{background-color: #efefef;}',
+    'table#table_fav tr:hover {background-color: #E9EEF2;}',
+    'td p {font-size:inherit;}',
+    'span.span_number_bible{cursor:pointer;padding:0 0.1rem;border:0.1rem dashed grey;border-radius:1rem;}',
+    '#div_recent_search a{font-size:0.9rem;}',
+    ];
+
+    if (ismobile_b(true)=='mobile'){
+        style_list.push('td {font-size:1.5rem;}');
+    }
+    style_generate_b(style_list,true);
+}
+
 function load_data_bible(load_from_idb=false){
     async function sub_load_data_bible_read(){
         console.log('load_data_bible()');

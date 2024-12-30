@@ -1,4 +1,6 @@
 function init_common(){
+    style_generate_b('#divhtml li:hover {background-color:'+scheme_global['button']+';}',true);
+
     is_all_result_jscm_global=false;
     clicked_row_no_jscm_global=-1;
     rows_per_page_jscm_global=100;

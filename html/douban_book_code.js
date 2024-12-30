@@ -92,10 +92,11 @@ function args_dbb(){
 
 function style_dbb(){
     var ismobile=ismobile_b();
-    document.write('\n<style>\n');
-    document.write('#divhtml ol li:nth-child(even) a {background-color: '+scheme_global['button']+';}\n');
-    document.write('#divhtml ol li {font-size:'+(ismobile?1.1:0.95)+'rem; line-height:1.5rem;margin-bottom:'+(ismobile?0.5:0.2)+'rem;}\n');
-    document.write('</style>\n');
+    var style_list=[
+    '#divhtml ol li:nth-child(even) a {background-color: '+scheme_global['button']+';}',
+    '#divhtml ol li {font-size:'+(ismobile?1.1:0.95)+'rem; line-height:1.5rem;margin-bottom:'+(ismobile?0.5:0.2)+'rem;}',
+    ];
+    style_generate_b(style_list,true);
 }
 
 function menu_dbb(){

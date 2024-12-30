@@ -1411,12 +1411,10 @@ function important_movies_offline_file_browser(do_ssd_tf=false){
 }
 
 function style_offline_file_browser(){
-    var blstr=`
-<style>
-span.span_ssd_tf_mark_ofb{font-size:small; border: 0.15rem `+scheme_global['pink']+` dotted; border-radius:0.3rem;padding:0 0.1rem;background-color:`+scheme_global['button']+`;};
-</style>
-`;
-    document.write(blstr);
+    var style_list=[
+    'span.span_ssd_tf_mark_ofb {font-size:small; border: 0.15rem '+scheme_global['pink']+' dotted; border-radius:0.3rem; padding:0 0.1rem; background-color:'+scheme_global['button']+';}',
+    ];
+    style_generate_b(style_list,true);
 }
 
 function init_offline_file_browser(){

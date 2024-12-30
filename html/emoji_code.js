@@ -166,6 +166,18 @@ function compare_arr_emoji(){
 }
 
 function init_emoji(){
+    var style_list=[
+    '.divhtml {margin:0.5rem 1rem;}',
+    '.divhtml p{font-size:2rem;}',
+    '.span_no {font-size:1rem;color:gray;}',
+    'div.div_unicode{position:relative;float:left;font-size:2rem;padding:0.2rem 0.6rem;margin:0.2rem;border-radius:1rem;}',
+    'span.span_unicode{font-size:2rem;padding:0.2rem 0.6rem;margin:0.2rem;border-radius:1rem;}',
+    ];
+    if (ismobile_b(true)=='mobile'){
+        style_list.push('td {font-size:1.5rem;}');
+    }
+    style_generate_b(style_list,true);
+
     show_emoji('category');
     var input_list=[
     ['input_emoji_search',15],

@@ -3131,7 +3131,6 @@ function html_head_generate_b(cstitle=false,style_list=[],add_view=false,close_h
     if (close_head){
         list_t.push('</head>');
     }
-    console.log(list_t);
     return list_t.join('\n')+'\n';
 }
 

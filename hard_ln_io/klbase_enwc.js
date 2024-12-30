@@ -514,21 +514,24 @@ function days_enwc_b(only_plan=false){
 }
 
 function mobile_style_enwc_b(mobile_more='',pc_more=''){
-	var mobile_t='\n<style>\n';
-	mobile_t=mobile_t+'ul,ol,li{font-size:1.2rem;line-height:120%;margin-bottom:0.5rem;}\n';
-	mobile_t=mobile_t+'p.article{font-size:1rem;line-height:120%;}\n';
-	mobile_t=mobile_t+'#divhtml {margin:0 0.5rem;}\n';
-    mobile_t=mobile_t+'#table_plan_count{font-size:0.6rem;}\n';
-    mobile_t=mobile_t+'#table_plan_count td{border-bottom:black solid 0.1rem;padding:0.2rem;}\n';
-	mobile_t=mobile_t+mobile_more+'</style>\n';
+	var mobile_t=[
+	'ul,ol,li{font-size:1.2rem;line-height:120%;margin-bottom:0.5rem;}',
+	'p.article{font-size:1rem;line-height:120%;}',
+	'#divhtml {margin:0 0.5rem;}',
+    '#table_plan_count{font-size:0.6rem;}',
+    '#table_plan_count td{border-bottom:black solid 0.1rem;padding:0.2rem;}',
+    mobile_more,
+    ];
 
-	var pc_t='\n<style>\n';
-	pc_t=pc_t+'ul,ol,li{font-size:1rem;line-height:150%;padding:0px;}\n';
-	pc_t=pc_t+'p.article{font-size:1rem;line-height:150%;}\n';
-	pc_t=pc_t+'#divhtml {margin-left:3rem; max-width:900px;font-family:Noto Sans;}\n';
-    pc_t=pc_t+'#table_plan_count{font-size:1rem;font-family:Noto Sans}\n';  
-    pc_t=pc_t+'#table_plan_count td{border-bottom:black solid 0.1rem;padding:0.2rem;}\n';
-	pc_t=pc_t+pc_more+'</style>\n';
+	var pc_t=[
+	'ul,ol,li{font-size:1rem;line-height:150%;padding:0px;}',
+	'p.article{font-size:1rem;line-height:150%;}',
+	'#divhtml {margin-left:3rem; max-width:900px;font-family:Noto Sans;}',
+    '#table_plan_count{font-size:1rem;font-family:Noto Sans}',
+    '#table_plan_count td{border-bottom:black solid 0.1rem;padding:0.2rem;}',
+    pc_more,
+    ];
+    
 	mobile_style_b(mobile_t, pc_t);
 }
 

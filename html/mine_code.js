@@ -370,3 +370,32 @@ function td_set_value_klmine(csid,csvalue){
         document.getElementById(csid).innerHTML='&nbsp;'.repeat(nbsp_count_global)+csvalue+'&nbsp;'.repeat(nbsp_count_global);
     }
 }
+
+function init_mine(){
+    var style_list=[
+    '::selection {background-color:'+P_klmine_g.mask_bcolor+';color:'+P_klmine_g.mask_bcolor+';}',
+    'td {font-size:1rem;}',
+    'button {font-size:1rem;}',
+    ];
+    style_generate_b(style_list,true);
+    
+    box_border_global=1;
+    document.title=mine_character_global+' Mine';
+    if (ismobile_b()){
+        boxsize_global=20;
+        nbsp_count_global=2;
+    } else {
+        boxsize_global=14;
+        nbsp_count_global=1;
+    }
+    empty_td_content_global='&nbsp;'.repeat(nbsp_count_global)+'0'+'&nbsp;'.repeat(nbsp_count_global);
+    window_w_global=document.body.offsetWidth;
+    window_h_global=document_body_offsetHeight_b();
+    rows_global=-1;
+    cols_global=-1;
+    mine_total_global=0;
+    
+    list_klmine();
+    max_rows_cols_klmine();
+    list_klmine();
+}

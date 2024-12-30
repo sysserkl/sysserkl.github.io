@@ -1,26 +1,27 @@
 function mobile_style_kltxt_b(line_height=180){
-    var unity_t='span.span_jsdoc_html_line_no {font-size:0.8rem;color:'+scheme_global['memo']+';}\n';
-	var mobile_t='\n<style>\n';
-	mobile_t=mobile_t+'ul,ol,li{font-size:1.1rem;line-height:'+line_height+'%;}\n';
-    mobile_t=mobile_t+'li{margin-bottom:1.5rem;}\n';
-    mobile_t=mobile_t+'ul,ol{padding:0;margin-left:0rem;list-style-position: inside;}\n';    
-	mobile_t=mobile_t+'#divhtml,#div_cn_words {margin:0 1rem;}\n';
-	mobile_t=mobile_t+'#div_top_bottom{position:fixed; bottom:2%; right:1%; z-index:9999; padding:0; margin:0;opacity:0.7;}\n';
-    mobile_t=mobile_t+'#divhtml p {font-size:1.1rem;margin-bottom:1rem;line-height:'+line_height+'%;}\n';
-    mobile_t=mobile_t+'img {max-width:100%;}\n';
-    mobile_t=mobile_t+unity_t;
-	mobile_t=mobile_t+'</style>\n';
-
-	var pc_t='\n<style>\n';
-	pc_t=pc_t+'ul,ol,li{font-size:1.1rem;line-height:'+line_height+'%;padding:0px;}\n';
-    pc_t=pc_t+'li{margin-bottom:0.5rem;}\n';
-	pc_t=pc_t+'#divhtml,#div_cn_words {font-family:Noto Sans;margin-left:10%; margin-right:10%;max-width:'+Math.max(700,parseInt(document.body.clientWidth*0.5))+'px;}\n'; //margin-left:'+(parseInt(document.body.clientWidth)*0.5)/2+'px; - 保留注释
-	pc_t=pc_t+'#div_top_bottom{position:fixed; bottom:2%; right:1%; z-index:9999; padding:0; margin:0;opacity:0.7;}\n';
-    pc_t=pc_t+'#divhtml p {font-size:1.1rem;margin-bottom:1rem;line-height:'+line_height+'%;}\n';
-    pc_t=pc_t+'img {max-width:500px;}\n';
-    pc_t=pc_t+unity_t;    
-	pc_t=pc_t+'</style>\n';
+    var unity_t='span.span_jsdoc_html_line_no {font-size:0.8rem;color:'+scheme_global['memo']+';}';
     
+	var mobile_t=[
+	'ul,ol,li{font-size:1.1rem;line-height:'+line_height+'%;}',
+    'li{margin-bottom:1.5rem;}',
+    'ul,ol{padding:0;margin-left:0rem;list-style-position: inside;}',
+	'#divhtml,#div_cn_words {margin:0 1rem;}',
+	'#div_top_bottom{position:fixed; bottom:2%; right:1%; z-index:9999; padding:0; margin:0;opacity:0.7;}',
+    '#divhtml p {font-size:1.1rem;margin-bottom:1rem;line-height:'+line_height+'%;}',
+    'img {max-width:100%;}',
+    unity_t,
+    ];
+
+	pc_t=[
+    'ul,ol,li{font-size:1.1rem;line-height:'+line_height+'%;padding:0px;}',
+    'li{margin-bottom:0.5rem;}',
+	'#divhtml,#div_cn_words {font-family:Noto Sans;margin-left:10%; margin-right:10%;max-width:'+Math.max(700,parseInt(document.body.clientWidth*0.5))+'px;}', //margin-left:'+(parseInt(document.body.clientWidth)*0.5)/2+'px; - 保留注释
+	'#div_top_bottom{position:fixed; bottom:2%; right:1%; z-index:9999; padding:0; margin:0;opacity:0.7;}',
+    '#divhtml p {font-size:1.1rem;margin-bottom:1rem;line-height:'+line_height+'%;}',
+    'img {max-width:500px;}',
+    unity_t,
+    ];
+
 	mobile_style_b(mobile_t, pc_t);
 }
 

@@ -19,25 +19,9 @@ load_current_book_b();
 //-----------------------
 books_global_value_init_b();
 var digest_scan_hash_global=false;
-var scheme_global={};
-scheme_generation_b();
+
 css_root_style_b('17','14',['base'],[],1);
 </script>
-<script>
-document.write('\n<style>\n');
-if (ismobile_b()){
-    document.write('#divhtml {margin:0.5rem;}\n');
-} else {
-    document.write('#divhtml {margin:0rem 0.5rem;column-count:3;}\n');
-}
-document.write('</style>\n');
-</script>
-<style>
-.txtsearch_kltxt_lineno {color:#707070;font-size:0.8rem}
-i {border-bottom:0.15rem dashed tomato;}
-#divhtml p{font-size:1rem;line-height:180%;margin-bottom:0.8rem;}
-#divhtml img{max-width:100%;}
-</style>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 </head>
 <body>
@@ -72,15 +56,9 @@ decode_and_create_menu_kltxt_b();
 </div>
 <a name=content></a>
 <div id="divhtml"></div>
-<script>
-input_with_x_b('input_search',11);
-recent_search_b('recent_search_reader_card','','search_str_txtcard','div_recent_search',[],20);
-split_all_txtcard();
-key_txtcard();
-</script>
 <a name=footer></a>
 <script>
-top_bottom_arrow_b('div_top_bottom','',true,(ismobile_b()?'1.7rem':'1.4rem'),true,false,2);
+init_txtcard();
 track_source_b('reader_card',false);
 if (!is_firefox_b(false)){
     blank_page_b(false,false,false);
