@@ -2510,7 +2510,7 @@ function rare_enwords_search_kltxt_b(show_rare_word=false,import_sentence=false,
     
     function sub_rare_enwords_search_kltxt_b_done(is_ok=true){
         if (is_ok){
-            var blstr='-eword +\\b('+en_sentence_count_global.join('|')+')\\b';
+            var blstr='-class="kleng" -eword +\\b('+en_sentence_count_global.join('|')+')\\b';
             txtsearch_kltxt_b(blstr,true,-1,false,sub_rare_enwords_search_kltxt_b_new);
         }
     }

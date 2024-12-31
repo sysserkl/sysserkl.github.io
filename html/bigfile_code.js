@@ -89,39 +89,52 @@ function menu_bigfile(){
 
 function file_date_compare_bigfile(){
     var otextarea=document.getElementById('textarea_file_date_compare_bigfile');
-    var blstr=otextarea.value;
+    var blstr=otextarea.value.trim();
     //每一行形如：60. /home/kl/klwebphp/PythonTools/file_rar_sn_terminal.py 2024-03-26 16:55:01 - 保留注释
-    blstr=blstr.replace(/^.*[\/\\]/mg,'').trim();  //去掉目录 - 保留注释
-    if (blstr==''){return;}
-    
-    var dict_t={};
     var list_t=blstr.split('\n');
+    var file_dict={};
     for (let item of list_t){
-        item=item.trim();
-        if (item==''){continue;}
+        if (item.match(/^\d+\.\s*/)){
+            item=item.replace(/^\d+\.\s*/,'');
+        }
+        
         var fname1=item.slice(0,-19).trim();
+        if (fname1==''){continue;}
+        
         var fdate1=item.slice(-19,).trim();
-        dict_t['f_'+fname1]=[validdate_b(fdate1),fdate1];
+
+        var bname=fname1.replace(/^.*[\/\\]/g,'').trim();  //去掉目录 - 保留注释        
+        if (bname==''){continue;}
+
+        file_dict['f_'+bname]=[validdate_b(fdate1),fdate1,fname1];
     }
 
-    var blfound=[];
+    var name_found=[];
+    var full_found=[];
     var not_found=[];
     for (let afile of raw_data_bigfile_global){
         var fname2=afile[1];
         var fdate2=validdate_b(afile[4]);
 
-        if (dict_t['f_'+fname2]==undefined){
+        if (file_dict['f_'+fname2]==undefined){
             not_found.push(fname2);
         } else {
-            if (dict_t['f_'+fname2][0]>fdate2){
-                blfound.push('<b>'+fname2+':</b> '+now_time_str_b(':',true,fdate2,'-',' ')+' ➡ '+dict_t['f_'+fname2][1]);
+            if (file_dict['f_'+fname2][0]>fdate2){
+                name_found.push('<b>'+fname2+':</b> '+now_time_str_b(':',true,fdate2,'-',' ')+' ➡ '+file_dict['f_'+fname2][1]);
+                full_found.push(file_dict['f_'+fname2][2]);
             }
         }
     }
     
     not_found.sort();
-    blfound.sort();
-    document.getElementById('div_file_date_compare_bigfile').innerHTML='<h4>未发现的文件</h4>'+array_2_li_b(not_found)+'<h4>需要更新的文件</h4>'+array_2_li_b(blfound);
+    full_found.sort();
+    name_found.sort();
+    
+    var left_strings='<p>';
+    var textarea_str=textarea_with_form_generate_b('textarea_found_file_list_bigfile','width:100%;height:10rem;',left_strings,'清空,复制,发送到临时记事本,发送地址,save as txt file,','</p>');
+        
+    document.getElementById('div_file_date_compare_bigfile').innerHTML='<h4>未发现的文件</h4>'+array_2_li_b(not_found)+'<h4>需要更新的文件</h4>'+array_2_li_b(name_found)+left_strings+textarea_str;
+    document.getElementById('textarea_found_file_list_bigfile').value=full_found.join('\n');
 }
 
 function file_date_form_bigfile(){
@@ -212,8 +225,8 @@ function upload_a_bigfile(){
     
     var ofiles=document.getElementById('input_upload_bigfile').files;
     var bllen=ofiles.length;
-    if (bllen>10){
-        alert('文件超过10个');
+    if (bllen>50){
+        alert('文件超过50个');
         return;
     }
 

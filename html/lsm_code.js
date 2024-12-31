@@ -154,7 +154,7 @@ function menu_lsm(){
     idb_menu_generate_bigfile_b('lsm','select_big_file_lsm',blparent,'import_bigfile_lsm'),    
     '<span class="span_menu" onclick="'+str_t+'machine_name_lsm();">machine name</span>',
     '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'lsm\');">更新版本</span>',
-    '<span class="span_menu" onclick="'+str_t+'file_date_paramter_refresh_lsm();">刷新 file date paramter</span>',
+    fpara_menu_b(str_t),
     ]);
     
     var group_list=[
@@ -182,10 +182,6 @@ function import_bigfile_lsm(fname=false){
         fname=false;
     }
     import_bigfile_content_b(fname,'textarea_lsm_content',sub_import_bigfile_lsm_onsuccess);
-}
-
-function file_date_paramter_refresh_lsm(){
-    localStorage.setItem('file_date_paramter','_'+randstr_b());
 }
 
 function textarea_hash_lsm(){

@@ -378,6 +378,10 @@ function klmenu_button_click_b(obutton){
     }
 }
 
+function fpara_menu_b(str_t){
+    return '<span class="span_menu" onclick="'+str_t+'file_date_paramter_refresh_b();">刷新 file date paramter</span>';
+}
+
 function klmenu_hide_b(csname='',more_parent=false){
     var blhref=(csname==''?'':"document.location.href = '"+csname+"';");
     if (more_parent){

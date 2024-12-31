@@ -57,7 +57,7 @@ function search_site_klsearch(csno,csproxy=false,cskey='',openwindow=-1,showhtml
     recent_search_klsearch(cskey);
     var item=[].concat(search_sites_list_global[csno]);
     
-    //item 形如：[ "http://xxx/klsearch.htm?k=", "&t=batch_en_bo+&close=1" ] - 保留注释
+    //item 形如：[ "http://xxx/klsearch.htm?k=", "&t=batch_en_wiktionary&close=1" ] - 保留注释
     if (item[0].endsWith('klsearch.htm?k=') && (item[1].includes('&close=1') || item[1].includes('&iframe'))){  //klsearch.htm 不能在其前部添加/ - 保留注释
         var iframe_or_select='';
         var oselect=document.getElementById('select_iframe_or_close_klsearch');
@@ -137,15 +137,8 @@ function batch_open_sites_klsearch(cscategory){
 function batch_type_get_klsearch(cstype){
     switch (cstype){
         case 'batch_en':
-            var same_part1='dict.cn,youdao,iciba,merriam-webster';   //cambridge EBS - 保留注释
-            var same_part2='wr_cn,TFD,longman'; //Wordnet, cambridge_cn - 保留注释
-            cstype=(is_local_b()?'KLWiki,':'')+same_part1+','+same_part2; //+'collins(p),wiktionary(p),' - 此两项保留 - 保留注释
-            break;
-        case 'batch_en_bo+':
-            cstype='Bing(cn),Oxford,Cambridge';
-            break;
-        case 'batch_en_minor':
-            cstype='wordnik,AHD,dictionary.com,learnersdictionary,lexico';  //yourdictionary
+            var cstype='Bing(cn),dict.cn,youdao,iciba,,Oxford,Cambridge,merriam-webster,wr_cn,TFD,longman,wordnik,AHD,dictionary.com,learnersdictionary,lexico';
+            //(is_local_b()?'KLWiki,':'') +'collins(p),wiktionary(p),' - 此两项保留 - 保留注释
             break;
         case 'batch_en_wiktionary':
             cstype='Wiktionary(Local),kaikki(Local),wordhippo,definitions';
@@ -199,10 +192,7 @@ function iframe_generate_klsearch(cstype='',cskey=false){
     var str_t=klmenu_hide_b('');
     var klmenu1=[
     '<span class="span_menu" onclick="'+str_t+'copy_iframe_link_klsearch();">copy</span>',
-    //'<span class="span_menu" onclick="'+str_t+'copy_iframe_link_klsearch(true);">open</span>',
     '<span class="span_menu" onclick="'+str_t+'iframe_generate_klsearch(this.innerText);">batch_en</span>',
-    '<span class="span_menu" onclick="'+str_t+'iframe_generate_klsearch(this.innerText);">batch_en_bo+</span>',
-    '<span class="span_menu" onclick="'+str_t+'iframe_generate_klsearch(this.innerText);">batch_en_minor</span>',
     '<span class="span_menu" onclick="'+str_t+'iframe_generate_klsearch(this.innerText);">batch_en_wiktionary</span>',
     
     ];

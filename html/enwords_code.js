@@ -425,7 +425,7 @@ function words_editor_form_kle(){
     left_strings=left_strings+'<span class="aclick" onclick="words_queue_append_kle();">批量添加</span> ';
         
     var right_strings=' <select id="select_queue_do_type">';
-    for (let item of ['数组转为多行形式','展现为数组形式','batch_en_bo+','batch_en','batch_en_minor']){
+    for (let item of ['数组转为多行形式','展现为数组形式','batch_en']){
         right_strings=right_strings+'<option>'+item+'</option>';
     }
     right_strings=right_strings+'</select> ';
@@ -479,8 +479,6 @@ function words_queue_do_type_kle(){
             words_array_2_lines_kle(); 
             break;
         case 'batch_en':
-        case 'batch_en_bo+':
-        case 'batch_en_minor':
             var otextarea=document.getElementById('textarea_words_queue');
             var blstr=otextarea.value.trim().split('\n')[0];
             if (blstr!==''){
@@ -647,6 +645,7 @@ function menu_kle(){
     '<span class="span_menu" onclick="'+str_t+'week_plan_show_kle();">每周记忆计划</span>',    
     '<span class="span_menu" onclick="'+str_t+'search_similar_new_sentence_kle(\'例句\',\'’\');">含有中文标点的例句</span>',    
     '<span class="span_menu" onclick="'+str_t+'similar_words_batch_kle();">全部相似单词</span>',    
+    fpara_menu_b(str_t),
     ]);
 
     var list_t=[

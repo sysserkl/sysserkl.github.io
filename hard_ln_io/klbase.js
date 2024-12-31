@@ -4563,3 +4563,7 @@ function slice_range_get_b(cslen){
     }
     return blrange;
 }
+
+function file_date_paramter_refresh_b(){
+    localStorage.setItem('file_date_paramter','_'+randstr_b());
+}
