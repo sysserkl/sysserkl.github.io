@@ -1027,10 +1027,6 @@ function menu_insert_kltxt_b(menu_count=3){
     var omenu=document.querySelector('span.span_inserted_menu');
     if (omenu){return;}
 
-    //var menu_no=new Set();
-    //for (let item of kltxt_menulist_index_global){
-        //menu_no.add(item[0]);
-    //}
     var menu_no=new Set(menu_no_get_kltxt_b());
     
     if (menu_no.size==0){return;}
@@ -1385,9 +1381,7 @@ function menu_all_only_one_kltxt_b(csmax=3000){
                 }
             }
         }
-        if (changed===false){
-            break;
-        }
+        if (changed===false){break;}
     }
     console.log('menu_all_only_one_kltxt_b() 费时：'+(performance.now() - t0) + ' milliseconds');
 }
@@ -1546,9 +1540,7 @@ function findmenu_kltxt_b(csxl=-1,cslimit=20,cscontent_length=-1){
         }
     }
     //-----------------------
-	if (csxl>menulist.length-1 || menulist.length==0){
-        return;
-    }
+	if (csxl>menulist.length-1 || menulist.length==0){return;}
     
     if (csbookname_global.substring(0,6)=='klwiki'){
         if (csxl==-1 && cslimit==-1){

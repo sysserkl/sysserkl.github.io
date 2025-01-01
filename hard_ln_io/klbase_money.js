@@ -394,7 +394,10 @@ function eval_calculator_money_b(){
 
 function calculator_generate_money_b(){
     var odiv=document.getElementById('div_calculator');
-    if (!odiv){return;}
+    if (!odiv){
+        console.log('未发现 id: div_calculator');
+        return;
+    }
     var blstr=specialstr_j(local_storage_get_b('simple_calculator'));
     var bljg='计算器：<input type="text" name="input_calculator" id="input_calculator" value="'+blstr+'" onkeyup="if (event.key==\'Enter\'){eval_calculator_money_b();}"> = <span id="span_calculator"></span>';
     odiv.innerHTML=bljg;

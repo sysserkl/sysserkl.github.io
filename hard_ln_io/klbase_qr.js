@@ -39,9 +39,8 @@ function create_qr_b(jquery_obj,cstext='just for fun',qrsize=400,qrfcolor='',qrb
 
 function round_qr_b(csid){
     var otable=csid.querySelector('table');
-    if (!otable){
-        return;
-    }
+    if (!otable){return;}
+    
     var otds=otable.querySelectorAll('td');
     for (let item of otds){
         item.style.borderRadius='2rem';

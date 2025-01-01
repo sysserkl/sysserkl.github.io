@@ -35,7 +35,6 @@ function list_klmine(cslevel=0){
         for (let blc=0;blc<cols_global;blc++){
             bljg=bljg+'<td align=center id="td_'+blr+'_'+blc+'" style="color:'+P_klmine_g.mask_bcolor+';padding: 0.5rem '+boxsize_global/2+'px;border:'+box_border_global+'px solid skyblue;box-shadow: inset '+box_border_global*2+'px '+box_border_global*2+'px '+box_border_global+'px gray;border-radius: '+box_border_global*3+'px;background-color:'+P_klmine_g.mask_bcolor+';cursor:pointer;" onclick="menu_klmine(this);">';
             
-            //var blvalue=Math.random()>cspercent?-1:0;
             var blvalue=list_t[blxl];
             blxl=blxl+1;
             mine_list_global['td_'+blr+'_'+blc]=blvalue;
@@ -46,7 +45,6 @@ function list_klmine(cslevel=0){
     }
     bljg=bljg+'</table>';
 
-    
     document.getElementById('div_cp').innerHTML=bljg+buttons_klmine();
 }
 
@@ -103,9 +101,11 @@ function menu_klmine(otd){
     } else if (td_get_value_klmine(otd.id)>0 && iscleaned_klmine(otd.id)==false){
         var bljg='<button style="padding:0.5rem;width:4rem;" onclick="open_klmine(\''+otd.id+'\')">✓+</button>';
     } else {return;}
-    document.getElementById('div_menu').innerHTML=bljg;
-    document.getElementById('div_menu').style.left=rect.left+'px';
-    document.getElementById('div_menu').style.top=rect.top+'px';
+    
+    var odiv=document.getElementById('div_menu');
+    odiv.innerHTML=bljg;
+    odiv.style.left=rect.left+'px';
+    odiv.style.top=rect.top+'px';
 }
 
 function cell_iscleaned_klmine(csr,csc){
@@ -135,9 +135,8 @@ function iscleaned_klmine(csid){
     cell_iscleaned_klmine(blr+1,blc),
     cell_iscleaned_klmine(blr+1,blc+1),
     ];
-    if (cleaned.includes(false)){
-        return false;
-    }
+    
+    if (cleaned.includes(false)){return false;}
     return true;
 }
 
@@ -217,9 +216,7 @@ function count_klmine(tdid,cstype){
                         break;
                     }
                 }
-                if (blclean==false){
-                    break;
-                }
+                if (blclean==false){break;}
             }
             if (blclean){
                 document.getElementById('span_game_over').innerHTML='WIN';
@@ -320,9 +317,8 @@ function record_klmine(addnew=false){
 
     if (addnew){
         var blname=(prompt('输入姓名：') || '').trim();
-        if (blname==''){
-            return;
-        }
+        if (blname==''){return;}
+        
         blname=blname.replace(new RegExp(' ','g'),'_');
     
         var bljg=date2str_b()+' '+level_caption_global+' '+rows_global+'x'+cols_global+' '+document.getElementById('span_total').innerHTML+' '+document.getElementById('span_timer').innerHTML+' '+blname;
@@ -336,9 +332,8 @@ function record_klmine(addnew=false){
     for (let item of list_t){
         bltable=bltable+'<tr>';
         var row_list=item.trim().split(' ');
-        if (row_list.length!==6){
-            continue;
-        }
+        if (row_list.length!==6){continue;}
+        
         bltable=bltable+'<td align=center>'+row_list[0]+'</td>';
         bltable=bltable+'<td align=center>'+row_list[1]+'</td>';
         bltable=bltable+'<td align=center>'+row_list[2]+'</td>';

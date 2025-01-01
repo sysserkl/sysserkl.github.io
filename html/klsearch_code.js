@@ -137,8 +137,11 @@ function batch_open_sites_klsearch(cscategory){
 function batch_type_get_klsearch(cstype){
     switch (cstype){
         case 'batch_en':
-            var cstype='Bing(cn),dict.cn,youdao,iciba,,Oxford,Cambridge,merriam-webster,wr_cn,TFD,longman,wordnik,AHD,dictionary.com,learnersdictionary,lexico';
+            var cstype='dict.cn,youdao,iciba,merriam-webster,wr_cn,TFD,longman,wordnik,AHD,dictionary.com,learnersdictionary,lexico';
             //(is_local_b()?'KLWiki,':'') +'collins(p),wiktionary(p),' - 此两项保留 - 保留注释
+            break;
+        case 'batch_en+':
+            var cstype='Bing(cn),Oxford,Cambridge';
             break;
         case 'batch_en_wiktionary':
             cstype='Wiktionary(Local),kaikki(Local),wordhippo,definitions';
@@ -193,6 +196,7 @@ function iframe_generate_klsearch(cstype='',cskey=false){
     var klmenu1=[
     '<span class="span_menu" onclick="'+str_t+'copy_iframe_link_klsearch();">copy</span>',
     '<span class="span_menu" onclick="'+str_t+'iframe_generate_klsearch(this.innerText);">batch_en</span>',
+    '<span class="span_menu" onclick="'+str_t+'iframe_generate_klsearch(this.innerText);">batch_en+</span>',
     '<span class="span_menu" onclick="'+str_t+'iframe_generate_klsearch(this.innerText);">batch_en_wiktionary</span>',
     
     ];

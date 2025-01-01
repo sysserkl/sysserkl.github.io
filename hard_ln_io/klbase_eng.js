@@ -4,7 +4,6 @@
 //-----------------------
 function en_style_b(add_table_compare_style=false){
     var style_list=[];
-    //style_list.push('\n<style>\n');
     style_list.push('a.similar {text-decoration:none;}');
     style_list.push('a.similar:link, a.similar:visited, a.similar:hover, a.similar:active{color:'+scheme_global['memo']+';}');
     style_list.push('.txtsearch_lineno {color:'+scheme_global['memo']+';font-size:0.8rem;}');
@@ -14,7 +13,6 @@ function en_style_b(add_table_compare_style=false){
         style_list.push('#table_compare_enbook tr{background-color: '+scheme_global['background']+';}');
         style_list.push('#table_compare_enbook tr:hover {background-color: '+scheme_global['skyblue']+';}');
     }
-    //style_list.push('</style>\n');
     style_generate_b(style_list,true,'style','head');
 }
 

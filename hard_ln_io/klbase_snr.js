@@ -698,7 +698,6 @@ function rnd_search_window_klsnews_b(){
     'https://cn.bing.com/search?q=',
     'http://www.chinaso.com/search/pagesearch.htm?q=',
     'https://m.toutiao.com/search/?keyword=',
-    'https://www.ecosia.org/search?q=',
     ];
     var nmax=Math.ceil(Math.random()*5);
     for (let blxl=0;blxl<nmax;blxl++){

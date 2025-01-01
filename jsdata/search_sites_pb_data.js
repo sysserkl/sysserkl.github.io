@@ -92,5 +92,6 @@ var search_sites_list_global=[
 ['rnd_english_words.htm?s=','(:r)',0,'','🇬🇧','b','Local','随机单词'],
 ['bible.htm?s=','(:r)',0,'red','✝','b0','Local','Bible'],
 ['klsearch.htm?k=','&t=batch_en&iframe',0,'darkslategray','KLSearch(en)','0','Local',''],
+['klsearch.htm?k=','&t=batch_en+&iframe',0,'darkslategray','KLSearch(en+)','0','Local',''],
 ['klsearch.htm?k=','&t=batch_en_wiktionary&close=1',0,'','KLSearch(wiktionary)','1','Local',''],
 ];

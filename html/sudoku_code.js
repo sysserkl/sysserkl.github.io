@@ -56,7 +56,7 @@ function inputvalue_color_sd(){
     for (let blxl=0;blxl<9;blxl++){
         list_count.push(0);
     }
-    var list_t=bljg.split("");
+    var list_t=bljg.split('');
     for (let item of list_t){
         list_count[parseInt(item)-1]=list_count[parseInt(item)-1]+1;
     }
@@ -74,7 +74,7 @@ function inputvalue_color_sd(){
 }
 
 function getvalue_sd(){
-    var list_t=current_sd_global.split("");
+    var list_t=current_sd_global.split('');
     for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         if (list_t[blxl]=='0'){
             var oinput=document.getElementById('input_'+blxl);
@@ -97,17 +97,15 @@ function one_result_sd(csstr,csno,csvalue){
     var list_t=csstr.split(",");
     list_t[csno]=csvalue;
     var blvalue=check_sd(list_t);
-    if (blvalue[0]==false){
-        return false;
-    }
+    if (blvalue[0]==false){return false;}
+    
     var bljg=[];
 
     while (true){
         var result_t=possible_values_sd(list_t);
         var found=false;
-        if (result_t.length==0){
-            return false;
-        }
+        if (result_t.length==0){return false;}
+        
         for (let item of result_t){
             if (item[2].length==1){
                 list_t[item[0]*9+item[1]*1]=item[2][0];
@@ -117,13 +115,9 @@ function one_result_sd(csstr,csno,csvalue){
         }
 
         var blvalue=check_sd(list_t);
-        if (blvalue[0]==false){
-            return false;
-        }
+        if (blvalue[0]==false){return false;}
         
-        if (found==false){
-            break;
-        }
+        if (found==false){break;}
     }
     return bljg;
 }
@@ -139,13 +133,11 @@ function fill_sd(){
         if (tmp_t[0]==false){
             return tmp_t;
         }
-        if (tmp_t[2].length==0){
-            break;
-        }
+        
+        if (tmp_t[2].length==0){break;}
         
         //空白单元格 - 可选值猜测 - 保留注释
         for (let item of tmp_t[2]){
-            //console.log(item[0],item[1],item[2]);
             var foundtrue=0;
             var thevalue='';
             for (let avalue of item[2]){
@@ -257,7 +249,7 @@ function branchs_sd(csstr,do_select_value_sd=true){
             }
             for (let item of result_t){
                 if (item[0]==blr){
-                    for (var blnum of item[2]){
+                    for (let blnum of item[2]){
                         tmp_t[parseInt(blnum)]= tmp_t[parseInt(blnum)]+1;
                     }
                 }
@@ -353,9 +345,8 @@ function branchs_sd(csstr,do_select_value_sd=true){
             
             var value1=one_result_sd(list_t.toString(),item[0]*9+item[1],item[2][0]);
             var value2=one_result_sd(list_t.toString(),item[0]*9+item[1],item[2][1]);
-            if (value1==false || value2==false){
-                continue;
-            }
+            
+            if (value1==false || value2==false){continue;}
             if (value1.length<1 || value2.length<1){continue;}
 
             for (let array1 of value1){
@@ -378,9 +369,7 @@ function branchs_sd(csstr,do_select_value_sd=true){
             var value2=one_result_sd(list_t.toString(),item[0]*9+item[1],item[2][1]);
             var value3=one_result_sd(list_t.toString(),item[0]*9+item[1],item[2][2]);
             
-            if (value1==false || value2==false || value3==false){
-                continue;
-            }
+            if (value1==false || value2==false || value3==false){continue;}
             if (value1.length<1 || value2.length<1 || value3.length<1){continue;}
 
             for (let array1 of value1){
@@ -407,7 +396,6 @@ function branchs_sd(csstr,do_select_value_sd=true){
             var value4=one_result_sd(list_t.toString(),item[0]*9+item[1],item[2][3]);
 
             if (value1==false || value2==false || value3==false || value4==false){continue;}
-            
             if (value1.length<1 || value2.length<1 || value3.length<1 || value4.length<1){continue;}
 
             for (let array1 of value1){
@@ -437,7 +425,6 @@ function branchs_sd(csstr,do_select_value_sd=true){
             var value5=one_result_sd(list_t.toString(),item[0]*9+item[1],item[2][4]);
 
             if (value1==false || value2==false || value3==false || value4==false || value5==false){continue;}
-            
             if (value1.length<1 || value2.length<1 || value3.length<1 || value4.length<1 || value5.length<1){continue;}
 
             for (let array1 of value1){
@@ -589,7 +576,7 @@ function check_sd(list_t){
         if (arow.length<arowlen){
             return [false,'row'+(blrow+1)];
         }
-        arow=array_unique_b(array_union_b(arow,["1","2","3","4","5","6","7","8","9"]));
+        arow=array_unique_b(array_union_b(arow,['1','2','3','4','5','6','7','8','9']));
         if (arow.length>9){
             return [false,'row'+(blrow+1)];
         }
@@ -606,7 +593,7 @@ function check_sd(list_t){
         if (acol.length<acollen){
             return [false,'col'+(blcol+1)];
         }
-        acol=array_unique_b(array_union_b(acol,["1","2","3","4","5","6","7","8","9"]));
+        acol=array_unique_b(array_union_b(acol,['1','2','3','4','5','6','7','8','9']));
         if (acol.length>9){
             return [false,'col'+(blcol+1)];
         }
@@ -626,7 +613,7 @@ function check_sd(list_t){
             if (arow.length<arowlen){
                 return [false,'xy,'+(blx+1)+','+(bly+1)];
             }
-            arow=array_unique_b(array_union_b(arow,["1","2","3","4","5","6","7","8","9"]));
+            arow=array_unique_b(array_union_b(arow,['1','2','3','4','5','6','7','8','9']));
             if (arow.length>9){
                 return [false,'xy,'+(blx+1)+','+(bly+1)];
             }
@@ -693,7 +680,7 @@ function reform_sd(csstr=''){
     }
     //-----------------------
     
-    var blarray = csstr.split("");
+    var blarray = csstr.split('');
     //以下console.log 都保留 - 保留注释
     console.log(0);
     console_sd(blarray);    
@@ -797,7 +784,7 @@ function show_sd(csnumber,csreform=false){
             current_sd_global=current_sd_global+item;
         }
     } else {
-	    var blarray = blys.split("");
+	    var blarray = blys.split('');
         current_sd_global=blys;
     }
 	var blstr = '<table class="table_sudoku" align=center width=1 border=0 cellspacing="0" cellpadding="0">';

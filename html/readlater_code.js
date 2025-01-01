@@ -255,7 +255,6 @@ function menu_rlater(){
     '<a href="?load=-1" onclick="'+str_t+'">仅导入最新data文件</a>',    
     '<span class="span_menu" onclick="'+str_t+'clear_cached_deleted_rows_rlater_b(\'readlater_deleted_rows\');">清除今日删除记录</span>',
     '<span class="span_menu" onclick="'+str_t+'delete_batch_from_array_form_rlater_b(\'readlater\');">导入数组批量删除</span>',    
-    //'<span class="span_menu" onclick="'+str_t+'import_bigfile_rlater();">导入 bigfile 文件</span>',    
     idb_menu_generate_bigfile_b('readlater','select_big_file_readlater',blparent,'import_bigfile_rlater'),
 
     ];    

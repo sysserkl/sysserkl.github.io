@@ -206,7 +206,6 @@ function upload_a_bigfile(){
         textFileReader.readAsText(ofiles[blxl]);    //此行保留 , 'UTF-8'); // 使用 readAsText 并指定编码为 UTF-8 - 保留注释
         textFileReader.onload = function (){
             file_content_bigfile_global = this.result;
-            //console.log(file_content_bigfile_global);
             if (blxl==bllen-1){
                 document.title=old_title;
                 idb_bigfile_b('edit','','',read_fn_bigfile);
