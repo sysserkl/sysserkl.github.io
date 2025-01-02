@@ -2098,11 +2098,16 @@ function highlight_text_b(cswordlist=[],query_str='',is_async=false,run_fn=false
         return;
     }
     
-    if (query_str==''){
-        query_str='div#divhtml p span.txt_content, li span.txt_content';
+    if (query_str=='' || query_str===false){
+        query_str='div#divhtml p span.txt_content, div#divhtml li span.txt_content';
+    } 
+    
+    if (typeof query_str == 'string'){
+        var ospans=document.querySelectorAll(query_str);        
+    } else {
+        var ospans=query_str;
     }
     
-    var ospans=document.querySelectorAll(query_str);
     var blno=0;
     var blcount=ospans.length;
     sub_highlight_text_b_one();

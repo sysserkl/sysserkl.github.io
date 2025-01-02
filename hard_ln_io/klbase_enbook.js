@@ -173,19 +173,6 @@ function rare_or_new_span_remove_enbook_b(odiv,is_rare){
         one_remove.outerHTML='';
     }
     //console.log('被移除的单词',removed_list);    //此行保留 - 保留注释
-    
-    //while (true){
-        //var isdone=odiv.querySelector('span.span_'+new_or_rare);
-        //if (isdone){
-            //isdone.outerHTML=isdone.innerHTML;
-        //} else {break;}
-    //}
-    //while (true){
-        //var isdone=odiv.querySelector('p.p_'+new_or_rare);
-        //if (isdone){
-            //isdone.parentNode.removeChild(isdone);
-        //} else {break;}
-    //}
 }
 
 function get_new_words_arr_obj_enbook_b(cstype,csstr='',csobjects=false,addline=false,append_parent=false,execstring='',ew=false,border_width_and_style='0.15rem dotted',word_is_in_sentence=''){
@@ -252,7 +239,6 @@ function get_new_words_arr_obj_enbook_b(cstype,csstr='',csobjects=false,addline=
             if (new_line.length>0){
                 var p_str='<p class="p_'+class_name+'" style="line-height:250%;">* '+new_line.join(' ')+'</p>';
                 if (append_parent==false){
-                    //item.innerHTML=item.innerHTML+p_str;
                     item.insertAdjacentHTML('afterend',p_str);   //添加一行 - 保留注释
                 } else {
                     item.parentNode.insertAdjacentHTML('afterend',p_str);   //加在页面底部 - 保留注释

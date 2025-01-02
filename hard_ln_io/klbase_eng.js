@@ -3,12 +3,14 @@
 //0.0.1-20190125
 //-----------------------
 function en_style_b(add_table_compare_style=false){
-    var style_list=[];
-    style_list.push('a.similar {text-decoration:none;}');
-    style_list.push('a.similar:link, a.similar:visited, a.similar:hover, a.similar:active{color:'+scheme_global['memo']+';}');
-    style_list.push('.txtsearch_lineno {color:'+scheme_global['memo']+';font-size:0.8rem;}');
-    style_list.push('.div_sentence{margin:1rem 0rem 1rem 2rem;border:0.2rem dashed '+scheme_global['shadow']+';padding:0.5rem 1rem;}');
-    style_list.push(p_enwords_sentence_style_b(false));
+    var style_list=[
+    'a.similar {text-decoration:none;}',
+    'a.similar:link, a.similar:visited, a.similar:hover, a.similar:active{color:'+scheme_global['memo']+';}',
+    '.txtsearch_lineno {color:'+scheme_global['memo']+';font-size:0.8rem;}',
+    '.div_sentence{margin:1rem 0rem 1rem 2rem;border:0.2rem dashed '+scheme_global['shadow']+';padding:0.5rem 1rem;}',
+    p_enwords_sentence_style_b(false),
+    ];
+    
     if (add_table_compare_style){
         style_list.push('#table_compare_enbook tr{background-color: '+scheme_global['background']+';}');
         style_list.push('#table_compare_enbook tr:hover {background-color: '+scheme_global['skyblue']+';}');
@@ -530,9 +532,15 @@ function sup_kleng_show_hide_b(ospan){
     popup_show_hide_b(oword,'');
 }
 
-function sup_kleng_words_b(csdisplay='none'){
+function sup_kleng_words_b(csdisplay='none',ocontainer=false){
     if (typeof enwords == 'undefined'){return;}
-    var o_sups=document.querySelectorAll('sup.kleng');
+    
+    if (ocontainer===false){
+        var o_sups=document.querySelectorAll('sup.kleng');
+    } else {
+        var o_sups=ocontainer.querySelectorAll('sup.kleng');    
+    }
+    
 	if (o_sups.length==0){return;}
     
     var t0 = performance.now(); 
@@ -2009,15 +2017,32 @@ function enwords_mini_search_b(csword=''){
         return;
     }
 
+    var csreg=checkbox_kl_value_b('input_enwords_mini_search_reg');
+
+    var search_type='';
+    var otype=document.getElementById('checkbox_mini_search_type');
+    if (otype){
+        if (otype.checked){
+            search_type=otype.parentNode.innerText;
+        }
+    }
+    
+    if (search_type!==''){
+        switch (search_type){
+            case 'filelist 检索':
+                if (typeof txtsearch_kltxt_b == 'function'){
+                    txtsearch_kltxt_b(csword,csreg,false,false,false,osession);
+                }
+                break;
+        }
+        return;
+    }
+    
     en_word_temp_get_b();
     
-    var csreg=checkbox_kl_value_b('input_enwords_mini_search_reg');
     var cs_w_p_d=enword_search_type_b([]);
-
     var csword_filter=enword_filter_reg_b(csword)
-
-    var words_temp_equal_arr=enwords_search_old_b(cs_w_p_d,csword,csreg);
-    
+    var words_temp_equal_arr=enwords_search_old_b(cs_w_p_d,csword,csreg);   
     var words_temp_arr=enwords_merge_b(words_temp_equal_arr,500);
     
     var blequal=false;
@@ -2086,11 +2111,18 @@ function enwords_mini_search_frame_form_b(cstype='s'){
     } else {
         var bljg='';
         bljg=bljg+'<input id="input_enwords_mini_search" type="text" onkeyup="if (event.key==\'Enter\'){enwords_mini_search_b();}"> ';
+        if (typeof filelist !== 'undefined'){
+            bljg=bljg+'<label><input type="checkbox" id="checkbox_mini_search_type">filelist 检索</label> ';    
+        }
+        
         bljg=bljg+'<span class="aclick" onclick="enwords_mini_search_frame_form_b();">Close</span>';
         bljg=bljg+'<section style="overflow:auto;padding-top:0.1rem;max-height:'+parseInt(window.innerHeight*2/3)+'px;font-size:1rem;" id="session_mini_search">'+enwords_recent_search_b('','mini');+'</section>';
+
         odiv.innerHTML=bljg;
-        mouseover_mouseout_oblong_span_b(document.querySelectorAll('p#p_recent_search span.oblong_box'));
         odiv.style.opacity='';
+
+        mouseover_mouseout_oblong_span_b(document.querySelectorAll('p#p_recent_search span.oblong_box'));
+
         input_with_x_b('input_enwords_mini_search',11,'',0.8,'input_enwords_mini_search_reg');
         checkbox_kl_color_b('input_enwords_mini_search_reg',1);
         document.getElementById('input_enwords_mini_search').focus();

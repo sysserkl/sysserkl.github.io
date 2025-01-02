@@ -92,7 +92,7 @@ function statistics_kltxt_b(){
     flot_lines_b([['书籍数'].concat(flot_list)],'div_flot_line','nw',true,'','d','本',0,[1, 'day'],5);
 }
 
-function new_words_kltxt_b(type_list=false,word_is_in_sentence='',do_clear=false){
+function new_words_kltxt_b(type_list=false,word_is_in_sentence='',do_clear=false,ocontainer=false){
     if (type_list===false){
         type_list=[];
         if (klmenu_check_b('span_show_new_enwords',false)){
@@ -104,26 +104,28 @@ function new_words_kltxt_b(type_list=false,word_is_in_sentence='',do_clear=false
         }
     }
     
+    ocontainer=container_query_doms_get_kltxt_b(ocontainer);
+    
     if (do_clear){
         if (type_list.includes(2)){
-            rare_or_new_span_remove_enbook_b(document.getElementById('divhtml'),false);
+            rare_or_new_span_remove_enbook_b(ocontainer,false);                
         }
         if (type_list.includes(5)){
-            rare_or_new_span_remove_enbook_b(document.getElementById('divhtml'),true);
+            rare_or_new_span_remove_enbook_b(ocontainer,true);
         }        
     }
     
     for (let one_type of type_list){
-        get_new_words_arr_obj_enbook_b(one_type,document.getElementById('divhtml').innerText,document.querySelectorAll('.txt_content'),true,false,'',false,'0.15rem dotted',word_is_in_sentence);
+        get_new_words_arr_obj_enbook_b(one_type,ocontainer.innerText,ocontainer.querySelectorAll('.txt_content'),true,false,'',false,'0.15rem dotted',word_is_in_sentence);
     }
 }
 
-function old_words_kltxt_b(is_init=false){
+function old_words_kltxt_b(is_init=false,ocontainer=false){
     var blshow=(klmenu_check_b('span_show_old_enwords',false)?'':'none');
     if (is_init){
-        sup_kleng_words_b(blshow);
+        sup_kleng_words_b(blshow,ocontainer);
     } else {
-        var ospans=document.querySelectorAll('sup.kleng span.span_sup_word_full');
+        var ospans=container_query_doms_get_kltxt_b('sup.kleng span.span_sup_word_full',ocontainer);
         for (let one_span of ospans){
             one_span.style.display=blshow;
         }
@@ -328,7 +330,6 @@ function txtmenus_kltxt_b(cstype=''){
     menu_general=menu_general.concat([
     '<span id="span_add_zero_reading_lines_txtlistsearch" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 阅读行数补零</span>',
     '<span class="span_menu" onclick="'+str_t+'getlines_kltxt_b();">返回阅读页面</span>',
-    //'<span class="span_menu" onclick="'+str_t+'rare_enwords_search_kltxt_b();">稀有旧单词搜索</span>',
     '<span class="span_menu" onclick="'+str_t+'new_words_kltxt_b([2],\'exclude\',true);">当前页面不在例句中的生词</span>',
     '<span class="span_menu" onclick="'+str_t+'new_words_lines_kltxt_b(1,1);">仅有1个新单词的行</span>',
     '<span class="span_menu" onclick="'+str_t+'new_words_lines_kltxt_b(0,0);">无新单词的行</span>',
@@ -511,9 +512,10 @@ function txtmenus_kltxt_b(cstype=''){
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(bljg,'','0rem')+' ');
 }
 
-function line_no_show_hide_kltxt_b(is_dry=false){
-    var ospans=document.querySelectorAll('span.txtsearch_kltxt_lineno');
+function line_no_show_hide_kltxt_b(is_dry=false,ocontainer=false){
+    var ospans=container_query_doms_get_kltxt_b('span.txtsearch_kltxt_lineno',ocontainer);
     if (ospans.length==0){return false;}
+    
     if (is_dry){
         return ospans[0].style.display;
     }
@@ -2524,7 +2526,7 @@ function rare_enwords_search_kltxt_b(show_rare_word=false,import_sentence=false,
     sub_rare_enwords_search_kltxt_b_done();
 }
 
-function txtsearch_kltxt_b(csword='',csreg=-1,cscontinue=-1,add_recent=true,run_fn=false){
+function txtsearch_kltxt_b(csword='',csreg=-1,cscontinue=-1,add_recent=true,run_fn=false,ocontainer=false){
     var oinput=document.getElementById('input_search');
     var oreg=document.getElementById('input_reg');
 	if (csword==''){
@@ -2557,7 +2559,7 @@ function txtsearch_kltxt_b(csword='',csreg=-1,cscontinue=-1,add_recent=true,run_
 	var blwordlist=csword.split(' ');   
 
     var result_t=txtsearch_list_kltxt_b(csword,csreg,csmaxlines,start_lineno,end_lineno,add_recent);
-    var bllen=lines_2_html_kltxt_b(result_t);
+    var bllen=lines_2_html_kltxt_b(result_t,ocontainer);
 	var do_continue=false;
     
 	if (bllen==0 && cscontinue==true){
@@ -2565,29 +2567,27 @@ function txtsearch_kltxt_b(csword='',csreg=-1,cscontinue=-1,add_recent=true,run_
             layout_kltxt_b();
             return;
         }
-		if (csreg==true){
-            var blreg='_reg';
-        } else {
-            var blreg='';
-        }
         
+        var blreg=(csreg?'_reg':'');        
         do_continue=true;
+        
 		if (csbookno_global==csbooklist_sub_global.length-1){
             location.href='?'+csbooklist_sub_global[0][0]+'_tag'+book_tag_global+'&sc='+csword+blreg;
         } else {
             location.href='?'+csbooklist_sub_global[parseInt(csbookno_global)+1][0]+'_tag'+book_tag_global+'&sc='+csword+blreg;
         }
 	}
+    
     if (do_continue==false){
-        render_html_kltxt_b(blwordlist,true,true,false,true,run_fn);
+        render_html_kltxt_b(blwordlist,true,true,false,true,run_fn,ocontainer);
     }
 }
 
-function render_html_kltxt_b(wordlist=[],layout=true,highlight=true,b_style=false,enforce_refresh=false,run_fn=false){
+function render_html_kltxt_b(wordlist=[],layout=true,highlight=true,b_style=false,enforce_refresh=false,run_fn=false,ocontainer=false){
     function sub_render_html_kltxt_b_after_highlight(){
-        digest_show_kltxt_b(true,-1,b_style);
+        digest_show_kltxt_b(true,-1,b_style,false,ocontainer);
         books_generate_b(false,'txt',book_tag_global,enforce_refresh);
-        new_words_kltxt_b();
+        new_words_kltxt_b(false,'',false,ocontainer);
         img_load_check_kltxt_b();
         if (typeof run_fn == 'function'){
             run_fn();
@@ -2600,13 +2600,26 @@ function render_html_kltxt_b(wordlist=[],layout=true,highlight=true,b_style=fals
     if (layout){
         layout_kltxt_b();
     }
-    old_words_kltxt_b(true);
+    old_words_kltxt_b(true,ocontainer);
     
-    if (highlight){    
-        highlight_text_b(wordlist,'',true,sub_render_html_kltxt_b_after_highlight);
+    if (highlight){
+        var query_str=container_query_doms_get_kltxt_b('p span.txt_content, li span.txt_content',ocontainer);
+        
+        highlight_text_b(wordlist,query_str,true,sub_render_html_kltxt_b_after_highlight);
     } else {
         sub_render_html_kltxt_b_after_highlight();
     }
+}
+
+function container_query_doms_get_kltxt_b(query_str='',ocontainer=false){
+    if (ocontainer===false){
+        ocontainer=document.getElementById('divhtml');
+    }
+    
+    if (query_str==''){
+        return ocontainer;
+    }
+    return ocontainer.querySelectorAll(query_str);    
 }
 
 function img_load_check_kltxt_b(){
@@ -3380,6 +3393,7 @@ function rows_max_kltxt_b(){
 
 function digest_number_2_txt_kltxt_b(){
     if (digest_scan_hash_global){return;}
+    
     var t0 = performance.now();
     var bllen=filelist.length;
     for (let blxl=0,lent=digest_global.length;blxl<lent;blxl++){
@@ -3493,13 +3507,17 @@ function digest_in_bookmark_kltxt_b(pageno){
     }
 }
 
-function lines_2_html_kltxt_b(cslist){
+function lines_2_html_kltxt_b(cslist,odiv=false){
     var t0 = performance.now();
 
     var is_group_file=is_group_file_kltxt_b();
 	var bljg=format_lines_kltxt_b(cslist,'',-1,is_group_file);
 	var cshideno=document.getElementById('check_hide_no').checked;
-	var odiv = document.getElementById('divhtml');
+    
+    if (odiv===false){
+	    odiv = document.getElementById('divhtml');
+    }
+    
 	if (cshideno){
         odiv.innerHTML='<div>'+bljg+'</div>';
     } else {
@@ -3510,17 +3528,20 @@ function lines_2_html_kltxt_b(cslist){
     return bljg.length;
 }
 
-function digest_show_kltxt_b(do_number_2_txt=true,recent_lines=-1,b_style=false,do_jump=false){
+function digest_show_kltxt_b(do_number_2_txt=true,recent_lines=-1,b_style=false,do_jump=false,ocontainer=false){
     if (do_number_2_txt){
         digest_number_2_txt_kltxt_b();
     }
+    
     if (digest_global.length==0){return;}
+    
     var oinput=document.getElementById('input_digest');
     if (!oinput){return;}
     if (oinput.checked==false){return;}    
+    
     var t0 = performance.now();
-    var ospans=document.querySelectorAll('div#divhtml span.txt_content');
-
+    var ospans=container_query_doms_get_kltxt_b('span.txt_content',ocontainer);
+    
     if (recent_lines==-1){
         var digest_list=[].concat(digest_global);
     } else {
@@ -3571,12 +3592,14 @@ function digest_show_kltxt_b(do_number_2_txt=true,recent_lines=-1,b_style=false,
             ospans[blxl].insertAdjacentHTML('afterend','💡');
         }
     }
+    
     if (do_jump){
-        var odigests=document.querySelectorAll('span.span_digest');
+        var odigests=container_query_doms_get_kltxt_b('span.span_digest',ocontainer);
+        
         if (odigests.length>0){
             odigests[odigests.length-1].scrollIntoView();
-            if (line_no_show_hide_kltxt_b(true)=='none'){
-                line_no_show_hide_kltxt_b();
+            if (line_no_show_hide_kltxt_b(true,ocontainer)=='none'){
+                line_no_show_hide_kltxt_b(false,ocontainer);
             }
         }
     }
@@ -4078,7 +4101,6 @@ function digest_enwords_remove_kltxt_b(cstype=''){
             
             var arow=filelist[blxl];
             if (arow.match(new RegExp('\\b'+blword+'\\b','i'))==null){continue;}
-
             if (arow.match(new RegExp('\\-'+blword+'\\b','i'))!==null){continue;}   //如果字符前是- - 保留注释
             
             if (arow.includes('<') && arow.includes('>')){
