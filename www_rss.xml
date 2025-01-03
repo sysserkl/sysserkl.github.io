@@ -8,307 +8,101 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Thu, 02 Jan 2025 11:35:25 +0800</lastBuildDate>
-<item><title>Mixed Lessons from Intentionally Infecting People with Covid-19 - Undark</title><link>https://undark.org/2025/01/01/lessons-covid-challenge-trials/</link></item>
-<item><title>The Elusive Goal of Nationwide Disease Prediction - Undark</title><link>https://undark.org/2024/12/31/the-elusive-goal-of-nationwide-disease-prediction/</link></item>
-<item><title>Podcast: Wrapping Up Our First Season - Undark</title><link>https://undark.org/2024/12/30/podcast-wrapping-up-season-1/</link></item>
-<item><title>Book Review: A Reverent Tribute to Disappearing Creatures - Undark</title><link>https://undark.org/2024/12/27/book-review-vanishing-treasures/</link></item>
-<item><title>We Need Better Data to Assess Hurricane and Flooding Risk - Undark</title><link>https://undark.org/2024/12/26/opinion-hurricane-flood-better-data/</link></item>
-<item><title>For Science That Comes With Risks, a Key Question: Who Decides? - Undark</title><link>https://undark.org/2024/12/25/for-science-with-risks-key-question-who-decides/</link></item>
-<item><title>Can the Federal Government Make Raw Milk Safe? - Undark</title><link>https://undark.org/2024/12/24/federal-raw-milk-safe/</link></item>
-<item><title>The Elusive Payoff of Gain of Function Research - Undark</title><link>https://undark.org/2024/12/23/unleashed-pandemic-pathogen-gof/</link></item>
-<item><title>Podcast: Is Fluoride Toxic at Low Levels? - Undark</title><link>https://undark.org/2024/12/23/podcast-fluoride-toxic-low-levels/</link></item>
-<item><title>Interview: Overseeing the Research That Might Start a Pandemic - Undark</title><link>https://undark.org/2024/12/20/interview-gerald-epstein/</link></item>
-<item><title>Reveal Digital Collections - JSTOR Daily</title><link>https://daily.jstor.org/series/reveal-digital-collections/</link></item>
-<item><title>Plough Monday - JSTOR Daily</title><link>https://daily.jstor.org/plough-monday/</link></item>
-<item><title>We Made Fruit Soup - JSTOR Daily</title><link>https://daily.jstor.org/we-made-fruit-soup/</link></item>
-<item><title>A Holiday Pantomime - JSTOR Daily</title><link>https://daily.jstor.org/a-holiday-pantomime/</link></item>
-<item><title>Best of Suggested Readings 2024 - JSTOR Daily</title><link>https://daily.jstor.org/best-of-suggested-readings-2024/</link></item>
-<item><title>The Gruesome Truth at the Heart of Squid Game - JSTOR Daily</title><link>https://daily.jstor.org/the-gruesome-truth-at-the-heart-of-squid-game/</link></item>
-<item><title>Hoosier Cabinets and the Dream of Efficiency - JSTOR Daily</title><link>https://daily.jstor.org/hoosier-cabinets-and-the-dream-of-efficiency/</link></item>
-<item><title>Editors’ Picks of 2024 - JSTOR Daily</title><link>https://daily.jstor.org/editors-picks-of-2024/</link></item>
-<item><title>Keeping Time: A New Year’s Collection - JSTOR Daily</title><link>https://daily.jstor.org/keeping-time-a-new-years-collection/</link></item>
-<item><title>Our Most Popular Stories of 2024 - JSTOR Daily</title><link>https://daily.jstor.org/our-most-popular-stories-of-2024/</link></item>
-<item><title>diaspora*项目七成流量来自 AI 机器人 - Solidot</title><link>https://www.solidot.org/story?sid=80209</link></item>
-<item><title>中端智能手机销量大幅下滑 - Solidot</title><link>https://www.solidot.org/story?sid=80208</link></item>
-<item><title>《师父（SIFU ）》在 Epic Games Store 限免 - Solidot</title><link>https://www.solidot.org/story?sid=80207</link></item>
-<item><title>天文学家利用韦伯望远镜发现烛龙螺旋星系 - Solidot</title><link>https://www.solidot.org/story?sid=80206</link></item>
-<item><title>AI 数据中心影响美国居民的电力质量 - Solidot</title><link>https://www.solidot.org/story?sid=80205</link></item>
-<item><title>中国计划 2025 年在戈壁滩建造钍基熔盐反应堆 - Solidot</title><link>https://www.solidot.org/story?sid=80204</link></item>
-<item><title>黑客从地面劫持和修复 Beesat-1 立方体卫星 - Solidot</title><link>https://www.solidot.org/story?sid=80203</link></item>
-<item><title>中国原油需求可能提前达到峰值 - Solidot</title><link>https://www.solidot.org/story?sid=80202</link></item>
-<item><title>特斯拉用持 H-1B 签证的外国工人取代被裁的美国员工 - Solidot</title><link>https://www.solidot.org/story?sid=80201</link></item>
-<item><title>How McKinsey Resisted Disruption - Harvard Business Review</title><link>https://hbr.org/podcast/2025/01/how-mckinsey-resisted-disruption</link></item>
-<item><title>Why Expertise Can Make You a Less Effective Leader - Harvard Business Review</title><link>https://hbr.org/podcast/2025/01/why-expertise-can-make-you-a-less-effective-leader</link></item>
-<item><title>How To Enhance Your Leadership with “Personal Power” - Harvard Business Review</title><link>https://hbr.org/podcast/2024/12/how-to-enhance-your-leadership-with-personal-power</link></item>
-<item><title>What’s the Most Impactful Thing You Learned This Year? - Harvard Business Review</title><link>https://hbr.org/2024/12/whats-the-most-impactful-thing-you-learned-this-year</link></item>
-<item><title>The Most Popular HBR Videos in 2024: Happiness and Communication - Harvard Business Review</title><link>https://hbr.org/2024/12/the-most-popular-hbr-videos-in-2024-happiness-and-communication</link></item>
-<item><title>Our Favorite Management Tips of 2024 - Harvard Business Review</title><link>https://hbr.org/2024/12/our-favorite-management-tips-of-2024</link></item>
-<item><title>The Charts that Help Make Sense of 2024 - Harvard Business Review</title><link>https://hbr.org/2024/12/the-charts-that-help-make-sense-of-2024</link></item>
-<item><title>What It Takes to Thrive During a Crisis - Harvard Business Review</title><link>https://hbr.org/podcast/2024/12/what-it-takes-to-thrive-during-a-crisis</link></item>
-<item><title>What Oprah’s Leadership Journey Reveals about the Power of Authenticity - Harvard Business Review</title><link>https://hbr.org/podcast/2024/12/what-oprahs-leadership-journey-reveals-about-the-power-of-authenticity</link></item>
-<item><title>Video Quick Take: Schneider Electric’s Charise Le on Working In Sustainability - SPONSOR CONTENT FROM SCHNEIDER ELECTRIC - Harvard Business Review</title><link>https://hbr.org/sponsored/2024/12/video-quick-take-schneider-electrics-charise-le-on-working-in-sustainability</link></item>
-<item><title>Scaling a Family Business While Maintaining Founding Values - Harvard Business Review</title><link>https://hbr.org/podcast/2024/12/scaling-a-family-business-while-maintaining-founding-values</link></item>
-<item><title>New Managers: You Don’t Need to Know It All - Harvard Business Review</title><link>https://hbr.org/2024/12/new-managers-you-dont-need-to-know-it-all</link></item>
-<item><title>Best of IdeaCast: To Build Stronger Teams, Ask Better Questions - Harvard Business Review</title><link>https://hbr.org/podcast/2024/12/best-of-ideacast-to-build-stronger-teams-ask-better-questions</link></item>
-<item><title>The Power of Small Acts of Inclusion - Harvard Business Review</title><link>https://hbr.org/2024/12/the-power-of-small-acts-of-inclusion</link></item>
-<item><title>Are You the Cause of Your Team’s Change Fatigue? - Harvard Business Review</title><link>https://hbr.org/2024/12/are-you-the-cause-of-your-teams-change-fatigue</link></item>
-<item><title>CEOs Often Feel Lonely. Here’s How They Can Cope. - Harvard Business Review</title><link>https://hbr.org/2024/12/ceos-often-feel-lonely-heres-how-they-can-cope</link></item>
-<item><title>Why Global Sustainability Efforts Will Continue Despite Trump - Harvard Business Review</title><link>https://hbr.org/2024/12/why-global-sustainability-efforts-will-continue-despite-trump</link></item>
-<item><title>How Honda Is Approaching Resource Circulation - SPONSOR CONTENT FROM GEP - Harvard Business Review</title><link>https://hbr.org/sponsored/2024/12/how-honda-is-approaching-resource-circulation</link></item>
-<item><title>2024 Was a Bad Year for Sustainability - Harvard Business Review</title><link>https://hbr.org/2024/12/2024-was-a-bad-year-for-sustainability</link></item>
-<item><title>Research: Why Forming Diverse Teams Is Harder in Uncertain Times - Harvard Business Review</title><link>https://hbr.org/2024/12/research-why-forming-diverse-teams-is-harder-in-uncertain-times</link></item>
-<item><title>The 10 Most Popular HBR Articles of 2024 - Harvard Business Review</title><link>https://hbr.org/2024/12/the-10-most-popular-hbr-articles-of-2024</link></item>
-<item><title>Digital Twins Aren’t Just for Big Businesses - Harvard Business Review</title><link>https://hbr.org/2024/12/digital-twins-arent-just-for-big-businesses</link></item>
-<item><title>HBR’s Most Popular Podcast Episodes of 2024 - Harvard Business Review</title><link>https://hbr.org/2024/12/hbrs-most-popular-podcast-episodes-of-2024</link></item>
-<item><title>Why Your Finance Team Should Help Make Big AI Decisions - Harvard Business Review</title><link>https://hbr.org/2024/12/why-your-finance-team-should-help-make-big-ai-decisions</link></item>
-<item><title>Contract Negotiations Should Be Collaborative, Not Adversarial - Harvard Business Review</title><link>https://hbr.org/2024/12/contract-negotiations-should-be-collaborative-not-adversarial</link></item>
-<item><title>Scrutonian Conservatism Reconsidered - Law &amp; Liberty</title><link>https://lawliberty.org/forum/scrutonian-conservatism-reconsidered/</link></item>
-<item><title>The Best Medicine in the World? - Law &amp; Liberty</title><link>https://lawliberty.org/the-best-medicine-in-the-world/</link></item>
-<item><title>The Year in Classical Liberalism: A Reckoning with the New Political Right - Law &amp; Liberty</title><link>https://lawliberty.org/the-year-in-classical-liberalism-a-reckoning-with-the-new-political-right/</link></item>
-<item><title>How Sailor Poets Take Over U.S. Navy Deck Logs On New Year’s Day - The War Zone</title><link>https://www.twz.com/news-features/how-sailor-poets-take-over-u-s-navy-deck-logs-on-new-years-day</link></item>
-<item><title>Biden Spends Last Of Funds Set Aside To Purchase New Weapons For Ukraine - The War Zone</title><link>https://www.twz.com/news-features/biden-spends-last-of-funds-set-aside-to-purchase-new-weapons-for-ukraine</link></item>
-<item><title>Ukraine Claims Its Drone Boat Shot Down A Russian Mi-8 Helicopter With A Surface-To-Air Missile - The War Zone</title><link>https://www.twz.com/sea/ukraine-claims-its-drone-boat-shot-down-a-russian-mi-8-helicopter-with-a-surface-to-air-missile</link></item>
-<item><title>39 A-10 Warthogs Went To The Boneyard This Year, More Than Double Over Prior Year - The War Zone</title><link>https://www.twz.com/air/39-a-10-warthogs-went-to-the-boneyard-this-year-more-than-double-over-prior-year</link></item>
-<item><title>The Time Navy Lt. Jimmy Carter Was Lowered Into A Partially Melted-Down Nuclear Reactor - The War Zone</title><link>https://www.twz.com/sea/the-time-navy-lt-jimmy-carter-was-lowered-into-a-partially-melted-down-nuclear-reactor</link></item>
-<item><title>North Korea’s New Warship Appears To Be Designed For Vertical Launch System, Phased Array Radar - The War Zone</title><link>https://www.twz.com/sea/north-koreas-new-warship-appears-to-be-designed-for-vertical-launch-system-phased-array-radar</link></item>
-<item><title>Signs Russian Fighter Jets Still At Syrian Base, Top Rebel Leader Pushes Back On Total Exit For Moscow - The War Zone</title><link>https://www.twz.com/air/russian-fighter-jets-still-at-syrian-base-top-rebel-leader-pushes-back-on-total-exit-for-moscow</link></item>
-<item><title>Bunker Talk: Let’s Talk About All The Things We Did And Didn’t Cover This Week - The War Zone</title><link>https://www.twz.com/news-features/bunker-talk-lets-talk-about-all-the-things-we-did-and-didnt-cover-this-week-125</link></item>
-<item><title>U.S. Army’s First Combat Use Of THAAD Missile Defense System Just Occurred In Israel (Updated) - The War Zone</title><link>https://www.twz.com/land/u-s-armys-first-combat-use-of-thaad-missile-defense-system-just-occurred-in-israel</link></item>
-<item><title>Russian-Linked Oil Tanker Suspected Of Sabotage Was Brimming With Spy Equipment: Report - The War Zone</title><link>https://www.twz.com/sea/russian-linked-oil-tanker-suspected-of-sabotage-brimming-with-surveillance-equipment-report</link></item>
-<item><title>China’s New Domestically Developed Y-20 Airborne Early Warning Jet Spotted - The War Zone</title><link>https://www.twz.com/air/chinas-new-domestically-developed-y-20-airborne-early-warning-jet-spotted</link></item>
-<item><title>China’s Monster Type 076 Amphibious Assault Ship Seen Like Never Before At Launch Ceremony - The War Zone</title><link>https://www.twz.com/sea/chinas-monster-type-076-amphibious-assault-ship-seen-like-never-before-at-launch-ceremony</link></item>
-<item><title>China Stuns With Heavy Stealth Tactical Jet’s Sudden Appearance (Updated) - The War Zone</title><link>https://www.twz.com/air/china-stuns-with-heavy-stealth-tactical-jets-sudden-appearance</link></item>
-<item><title>Yes, China Just Flew Another Tailless Next-Generation Stealth Combat Aircraft - The War Zone</title><link>https://www.twz.com/air/yes-china-just-flew-another-tailless-next-generation-stealth-combat-aircraft</link></item>
-<item><title>Everything We Know About What Led Up To The Azerbaijan Airliner Crash - The War Zone</title><link>https://www.twz.com/air/what-we-know-about-the-azerbaijanin-airliner-that-crashed-in-kazakhstan</link></item>
-<item><title>Anti-Drone Weapon With 24 Barrels Firing Buckshot-Like Rounds Emerges On Russian Buggies - The War Zone</title><link>https://www.twz.com/land/anti-drone-weapon-with-24-barrels-firing-buckshot-like-rounds-emerges-on-russian-buggies</link></item>
-<item><title>U.S. Navy Ship Menus From Christmases Past - The War Zone</title><link>https://www.twz.com/sea/u-s-navy-ship-menus-from-christmases-past</link></item>
-<item><title>New Coast Guard Heavy Icebreaker Construction Finally Underway - The War Zone</title><link>https://www.twz.com/sea/new-coast-guard-heavy-icebreaker-construction-finally-underway</link></item>
-<item><title>What We Know About The Russian Cargo Ship That Sank In Mediterranean - The War Zone</title><link>https://www.twz.com/news-features/what-we-know-about-the-russian-cargo-ship-that-sank-in-mediterranean</link></item>
-<item><title>F/A-18F Was Shot Down By Friendly Fire As Jets Were About To Land On The Carrier - The War Zone</title><link>https://www.twz.com/air/f-a-18f-was-downed-by-friendly-fire-as-jets-were-about-to-land-on-the-carrier</link></item>
-<item><title>Railgun Ammo-Firing 155mm Air Defense Cannon Set To Be Awarded To BAE Systems - The War Zone</title><link>https://www.twz.com/land/railgun-ammo-firing-155mm-air-defense-cannon-set-to-be-awarded-to-bae-systems</link></item>
-<item><title>Ex-Mossad Agents Reveal Details Of How They Turned Hezbollah’s Communications Devices Into Bombs - The War Zone</title><link>https://www.twz.com/news-features/ex-mossad-agents-reveal-details-of-how-they-turned-hezbollahs-communications-devices-into-bombs</link></item>
-<item><title>North Korea To Send More Troops To Fight For Russia Against Ukraine: South Korean Intel - The War Zone</title><link>https://www.twz.com/news-features/north-korea-to-send-more-troops-to-fight-for-russia-against-ukraine-south-korean-intel</link></item>
-<item><title>What’s In The Bill That Aims To Revitalize America’s Decaying Naval Industry - The War Zone</title><link>https://www.twz.com/sea/whats-in-the-bill-that-aims-to-revitalize-americas-decaying-naval-industry</link></item>
-<item><title>F/A-18F Shot Down By Friendly Cruiser Was In The Middle Of A Refueling Mission - The War Zone</title><link>https://www.twz.com/sea/f-a-18f-shot-down-by-friendly-cruiser-was-in-the-middle-of-a-refueling-mission</link></item>
-<item><title>SvarDOS: DR-DOS is Reborn as an Open Source OS - Slashdot</title><link>https://tech.slashdot.org/story/25/01/02/0154242/svardos-dr-dos-is-reborn-as-an-open-source-os?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>People Are Playing a New DOOM-Themed CAPTCHA - Slashdot</title><link>https://it.slashdot.org/story/25/01/01/238238/people-are-playing-a-new-doom-themed-captcha?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>How AI is Unlocking Ancient Texts - Slashdot</title><link>https://slashdot.org/story/25/01/01/230210/how-ai-is-unlocking-ancient-texts?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Belgium Becomes First EU Country To Ban Sale of Disposable Vapes - Slashdot</title><link>https://slashdot.org/story/25/01/01/2030250/belgium-becomes-first-eu-country-to-ban-sale-of-disposable-vapes?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>India Again Delays Rules To Break Payments Duopoly - Slashdot</title><link>https://news.slashdot.org/story/25/01/01/1858248/india-again-delays-rules-to-break-payments-duopoly?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Tintin, Popeye Enter Public Domain as 1929 Works Released - Slashdot</title><link>https://it.slashdot.org/story/25/01/01/1711230/tintin-popeye-enter-public-domain-as-1929-works-released?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>SEC Writes Off $10 Billion in Fines It Can&amp;#39;t Collect - Slashdot</title><link>https://news.slashdot.org/story/25/01/01/168241/sec-writes-off-10-billion-in-fines-it-cant-collect?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Why Breakfast Is Busting Your Food Budget - Slashdot</title><link>https://news.slashdot.org/story/25/01/01/1513246/why-breakfast-is-busting-your-food-budget?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Students Overpaid Elite Colleges $685 Million, &amp;#39;Price-Fixing&amp;#39; Suit Says - Slashdot</title><link>https://news.slashdot.org/story/25/01/01/141239/students-overpaid-elite-colleges-685-million-price-fixing-suit-says?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>California Will Require Insurance Companies To Offer Coverage In Wildfire Zones - Slashdot</title><link>https://news.slashdot.org/story/24/12/31/2241227/california-will-require-insurance-companies-to-offer-coverage-in-wildfire-zones?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Microplastics Found In Multiple Human Organ Tissues Correlated With Lesions - Slashdot</title><link>https://science.slashdot.org/story/24/12/31/2234250/microplastics-found-in-multiple-human-organ-tissues-correlated-with-lesions?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>NATO Plans To Build Satellite Links As Backups To Undersea Cables - Slashdot</title><link>https://tech.slashdot.org/story/24/12/31/2227234/nato-plans-to-build-satellite-links-as-backups-to-undersea-cables?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Scientist&amp;#39;s &amp;#39;Ruthlessly Imaginative&amp;#39; 1925 Predictions For the Future - Slashdot</title><link>https://science.slashdot.org/story/24/12/31/2020202/scientists-ruthlessly-imaginative-1925-predictions-for-the-future?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>2025 Marks the Start of the Gen Beta Era - Slashdot</title><link>https://news.slashdot.org/story/24/12/31/2220243/2025-marks-the-start-of-the-gen-beta-era?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Alibaba Slashes Prices On LLMs By Up To 85% As China AI Rivalry Heats Up - Slashdot</title><link>https://slashdot.org/story/24/12/31/2214245/alibaba-slashes-prices-on-llms-by-up-to-85-as-china-ai-rivalry-heats-up?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Kevin, Joe and Nick Jonas rock leather jackets to bring in the New Year at Dick Clark&amp;#39;s New Year&amp;#39;s Rockin&amp;#39; Eve with Ryan Seacrest in Times Square, NY on Dec. 31. - PEOPLE</title><link>https://people.com/star-tracks-wednesday-january-1-2025-new-celebrity-photos-updated-daily-8767993</link></item>
-<item><title>Jocelyn Wildenstein&amp;#39;s Longtime Partner Lloyd Klein Says &amp;#39;She Died in Her Sleep Very Peacefully&amp;#39; (Exclusive) - PEOPLE</title><link>https://people.com/jocelyn-wildenstein-longtime-partner-lloyd-klein-says-she-died-in-her-sleep-peacefully-exclusive-8768036</link></item>
-<item><title>Celebrity Deaths - PEOPLE</title><link>https://people.com/celebrity-deaths/</link></item>
-<item><title>What We Know About Suspect in Deadly New Orleans Attack as New Details Emerge - PEOPLE</title><link>https://people.com/shamsud-din-jabbar-suspect-new-orleans-attack-what-we-know-8768035</link></item>
-<item><title>Mark Zuckerberg Rings in the New Year with Wife Priscilla Chan: ‘Here&amp;#39;s to Even Bigger Things in 2025’ - PEOPLE</title><link>https://people.com/mark-zuckerberg-wife-priscilla-chan-new-years-eve-2025-photo-8766071</link></item>
-<item><title>Baby Spider Monkey Wearing a Onesie Found During California Traffic Stop That Led to Arrest - PEOPLE</title><link>https://people.com/baby-spider-monkey-wearing-onesie-found-california-traffic-stop-8768011</link></item>
-<item><title>DeVonta Smith Gets Engaged to Girlfriend Mya Danielle in New Year&amp;#39;s Eve Rooftop Proposal - PEOPLE</title><link>https://people.com/devonta-smith-proposes-to-girlfriend-mya-danielle-new-years-eve-8768038</link></item>
-<item><title>Coi Leray Confirms She&amp;#39;s Pregnant, Expecting Baby with Trippie Redd: &amp;#39;We Ready for 2025&amp;#39; - PEOPLE</title><link>https://people.com/coi-leray-is-pregnant-expecting-first-baby-with-trippie-redd-8768037</link></item>
-<item><title>5 Jean Styles Jennifer Garner, Gwyneth Paltrow, and More Celebrities Are Convincing Us to Buy for 2025 - PEOPLE</title><link>https://people.com/jeans-trends-celebrities-2025-8767486</link></item>
-<item><title>Influencer Lexi Hidalgo Announces Engagement to Gabriel Garcia: ’I’ll Marry You in Every Single Lifetime’ - PEOPLE</title><link>https://people.com/lexi-hidalgo-gabriel-garcia-engagement-proposal-instagram-tiktok-8768028</link></item>
-<item><title>Rescue Pup With &amp;#39;Special Powers&amp;#39; and &amp;#39;Old Soul&amp;#39; Saves Owner&amp;#39;s Life and Wins Award for His Heroics (Exclusive) - PEOPLE</title><link>https://people.com/therapy-sheepdog-saves-owner-wins-akc-award-8767617</link></item>
-<item><title>98 Degrees Members Reveal Whether Their Kids Think Their Pop Star Dads Are Cool: &amp;#39;We&amp;#39;re Giving It the Old College Try&amp;#39; (Exclusive) - PEOPLE</title><link>https://people.com/98-degrees-if-their-kids-think-their-pop-star-dads-are-cool-exclusive-8767139</link></item>
-<item><title>20 Hot Celebrity Memoirs Coming in 2025 — Including Tina Knowles, Lionel Richie and Jordan Chiles - PEOPLE</title><link>https://people.com/20-celebrity-memoirs-coming-in-2025-8767535</link></item>
-<item><title>Rescuers End 2024 by Saving Golden Retriever Stuck In Frigid River Water After Crashing Through Ice - PEOPLE</title><link>https://people.com/rescuers-save-golden-retriever-who-crashed-through-ice-into-frozen-river-8768027</link></item>
-<item><title>Is This the Perfect Post-Engagement Nail Color? Selena Gomez Seems to Think So - PEOPLE</title><link>https://people.com/selena-gomezs-post-engagement-nails-bridal-chic-8767821</link></item>
-<item><title>JoJo Siwa Battles 6 ‘Exes’ at Once in New Music Video — and Celebrates Victory with Viral ‘Karma’ Dance Move - PEOPLE</title><link>https://people.com/jojo-siwa-battles-6-exes-does-viral-karma-dance-choose-ur-fighter-music-video-8768021</link></item>
-<item><title>1 Dead After Tesla Cybertruck Bursts Into Flames in Front of Trump Hotel in Las Vegas - PEOPLE</title><link>https://people.com/1-dead-tesla-cybertruck-bursts-into-flames-trump-hotel-las-vegas-8768018</link></item>
-<item><title>Man Says His Girlfriend Has Totaled 2 Cars, Now She Wants to Drive His: &amp;#39;She Keeps Asking&amp;#39; - PEOPLE</title><link>https://people.com/man-says-girlfriend-totaled-2-cars-now-wants-drive-his-8763936</link></item>
-<item><title>Jeremy Renner Honors His &amp;#39;ReBirthday&amp;#39; on Second Anniversary of Snowplow Accident and Thanks Those Who Saved His Life - PEOPLE</title><link>https://people.com/jeremy-renner-honors-his-rebirthday-second-anniversary-of-snowplow-accident-8768020</link></item>
-<item><title>Don Benjamin and Liane V Reveal They’re Expecting Baby No. 2 in Cute Family Video: ‘New Year, New Blessing on the Way’ - PEOPLE</title><link>https://people.com/don-benjamin-wife-liane-v-expecting-baby-number-2-instagram-video-8768005</link></item>
-<item><title>University of Georgia Student ID&amp;#39;d as Victim in New Orleans Attack - PEOPLE</title><link>https://people.com/university-of-georgia-student-id-d-as-victim-in-deadly-bourbon-street-attack-8768008</link></item>
-<item><title>LeBron James&amp;#39; Younger Son Bryce Commits to Playing Basketball at University of Arizona - PEOPLE</title><link>https://people.com/lebron-james-son-bryce-commits-university-arizona-basketball-8768019</link></item>
-<item><title>Khloé Kardashian Declares &amp;#39;Blessings Only in 2025&amp;#39; as She Celebrates the New Year with True and Tatum - PEOPLE</title><link>https://people.com/khloe-kardashian-declares-blessings-only-in-2025-as-she-celebrates-the-new-year-with-true-and-tatum-8763768</link></item>
-<item><title>Jonathan Scott &amp; Zooey Deschanel Still Haven’t ‘Figured Out’ Wedding Plans After 16 Months Engaged (Exclusive) - PEOPLE</title><link>https://people.com/jonathan-scott-zooey-deschanel-wedding-planning-new-years-resolution-8762379</link></item>
-<item><title>Hailey Bieber Rings in the New Year — with a Caviar-Topped In-N-Out Burger and a Bikini - PEOPLE</title><link>https://people.com/hailey-bieber-welcomes-2025-wearing-a-bikini-and-eating-a-burger-8767990</link></item>
-<item><title>All the Stars Who Got Married on New Year&amp;#39;s Eve - PEOPLE</title><link>https://people.com/celebrities-married-on-new-years-eve-5716754</link></item>
-<item><title>Gwen Stefani Spends New Year&amp;#39;s Eve on Her and Blake Shelton&amp;#39;s Oklahoma Ranch - PEOPLE</title><link>https://people.com/gwen-stefani-new-years-eve-2024-blake-shelton-oklahoma-ranch-8767108</link></item>
-<item><title>Tyler Perry &amp; Kerry Washington Interview Each Other - PEOPLE</title><link>https://people.com/tyler-perry-says-this-is-the-secret-to-long-lasting-friendships-exclusive-8764575</link></item>
-<item><title>2 Officers Shot During New Orleans New Year&amp;#39;s Event Now in &amp;#39;Stable&amp;#39; Condition, Police Chief Says - PEOPLE</title><link>https://people.com/2-officers-shot-during-new-orleans-new-years-event-now-in-stable-condition-8767938</link></item>
-<item><title>Man Charged with Killing His Mother and 4 Sisters Inside Hotel Room on New Year’s Eve: Reports - PEOPLE</title><link>https://people.com/man-arrested-killing-mother-4-sisters-inside-hotel-room-new-years-eve-reports-8767928</link></item>
-<item><title>Man Beaten to Death While Trying to Save Dog Allegedly Being Beaten by Suspect: Reports - PEOPLE</title><link>https://people.com/man-beaten-death-trying-save-dog-allegedly-abused-suspect-8767864</link></item>
-<item><title>Cause of Death Revealed for Woman Set on Fire on N.Y.C. Subway - PEOPLE</title><link>https://people.com/cause-of-death-revealed-woman-set-fire-asleep-nyc-subway-8767818</link></item>
-<item><title>Sen. Kevin Cramer’s Son Sentenced to 28 Years in Prison Over Death of North Dakota Sheriff’s Deputy - PEOPLE</title><link>https://people.com/senator-kevin-cramer-son-sentenced-28-years-death-north-dakota-sheriff-deputy-8767717</link></item>
-<item><title>Queen Camilla Grants Bee Venom Facialist, Wedding Dress Designer and Hairdresser of 30 Years Prestigious Royal Warrants - PEOPLE</title><link>https://people.com/queen-camilla-grants-facialist-wedding-dress-designer-hairdresser-prestigious-royal-warrants-8766419</link></item>
-<item><title>James Middleton Thinks He Might Be Even More Well-Known for Something Beyond His Close Links to the Royal Family - PEOPLE</title><link>https://people.com/james-middleton-thinks-he-might-be-more-well-known-for-something-beyond-links-royal-family-8767846</link></item>
-<item><title>Carrie Underwood Had 3 Shiny, Sparkly and Sequined Outfit Changes While Performing on New Year’s Eve Special - PEOPLE</title><link>https://people.com/carrie-underwood-3-outfit-changes-while-performing-on-new-years-eve-special-8767925</link></item>
-<item><title>5-Year-Old Girl Hit and Killed by Truck the Day After Christmas as She Crossed the Street with Her Mother - PEOPLE</title><link>https://people.com/5-year-old-girl-killed-in-truck-collision-day-after-christmas-8767941</link></item>
-<item><title>Groom&amp;#39;s Father Has &amp;#39;Issues&amp;#39; with Sister Being Best Woman in His Wedding Because &amp;#39;It Goes Against the Norms&amp;#39; - PEOPLE</title><link>https://people.com/groom-father-has-issues-with-sister-being-best-woman-in-wedding-because-it-goes-against-norms-8767776</link></item>
-<item><title>&amp;#39;Generation Beta&amp;#39; Begins in 2025, Expert Says: Here&amp;#39;s What to Expect from the Kids That Will Live Until 22nd Century - PEOPLE</title><link>https://people.com/generation-beta-begins-in-2025-heres-what-to-expect-from-expert-8767128</link></item>
-<item><title>Who Are All the Billionaires (with Their Big Boats!) in St. Barts This New Year&amp;#39;s Eve? - PEOPLE</title><link>https://people.com/a-look-at-all-the-billionaires-and-their-boats-parked-in-st-barth-s-for-new-year-s-eve-8767766</link></item>
-<item><title>Drew Barrymore Reveals the Surprising Sleeping Position She Discovered During Pregnancy and Still Uses - PEOPLE</title><link>https://people.com/drew-barrymore-reveals-the-surprising-sleeping-position-she-discovered-during-pregnancy-8766617</link></item>
-<item><title>How celebrities said goodbye and good riddance to 2020 and shared their optimism going into 2021 - PEOPLE</title><link>https://people.com/celebrity/new-years-eve-2020-see-how-celebrities-are-celebrating/</link></item>
-<item><title>肖裕声：从遵义会议深刻领悟“两个 - 爱思想</title><link>https://www.aisixiang.com/data/158235.html</link></item>
-<item><title>肖静宁：九十回望——那些难忘的过 - 爱思想</title><link>https://www.aisixiang.com/data/158231.html</link></item>
-<item><title>严家炎：胡风在四五十年代文学转型 - 爱思想</title><link>https://www.aisixiang.com/data/158181.html</link></item>
-<item><title>孟强：在新气候条件下走向大地—— - 爱思想</title><link>https://www.aisixiang.com/data/158225.html</link></item>
-<item><title>雷颐：“民族”何以成为“主义” - 爱思想</title><link>https://www.aisixiang.com/data/158246.html</link></item>
-<item><title>王毅：高举习近平外交思想光辉旗帜 - 爱思想</title><link>https://www.aisixiang.com/data/158198.html</link></item>
-<item><title>中医药对世界可有大贡献 - 爱思想</title><link>https://www.aisixiang.com/data/158356.html</link></item>
-<item><title>陈来：中华文化的当代价值与意义 - 爱思想</title><link>https://www.aisixiang.com/data/158355.html</link></item>
-<item><title>张国祚：离开人，文化建设就会失去 - 爱思想</title><link>https://www.aisixiang.com/data/158318.html</link></item>
-<item><title>王渝生：经脉：人体气血之通道—— - 爱思想</title><link>https://www.aisixiang.com/data/158310.html</link></item>
-<item><title>陶文昭：完整把握“第二个结合”的 - 爱思想</title><link>https://www.aisixiang.com/data/158283.html</link></item>
-<item><title>徐国宝：不断推出更多优质文化产品 - 爱思想</title><link>https://www.aisixiang.com/data/158282.html</link></item>
-<item><title>张瑞涛：“第二个结合”筑牢新时代 - 爱思想</title><link>https://www.aisixiang.com/data/158276.html</link></item>
-<item><title>钟小明：苏区精神的深刻内涵及当代 - 爱思想</title><link>https://www.aisixiang.com/data/158230.html</link></item>
-<item><title>刘存福 周谋灵：在创造性转化和创 - 爱思想</title><link>https://www.aisixiang.com/data/158223.html</link></item>
-<item><title>雷鸣 单菁菁：打造海洋资源开发保 - 爱思想</title><link>https://www.aisixiang.com/data/158205.html</link></item>
-<item><title>余德烁：“和合共生”彰显中华民族 - 爱思想</title><link>https://www.aisixiang.com/data/158201.html</link></item>
-<item><title>徐超：人工智能监管的三重维度 - 爱思想</title><link>https://www.aisixiang.com/data/158325.html</link></item>
-<item><title>刘现伟：强化企业科技创新主体地位 - 爱思想</title><link>https://www.aisixiang.com/data/158322.html</link></item>
-<item><title>罗志田：重访传统：从“相忘”认识近世中国的小政府特色 - 爱思想</title><link>https://www.aisixiang.com/data/158354.html</link></item>
-<item><title>节大磊：2024年美国大选与“后-后冷战时代”的美国外交战略 - 爱思想</title><link>https://www.aisixiang.com/data/158353.html</link></item>
-<item><title>刘世锦：以结构性改革扩消费稳增长 - 爱思想</title><link>https://www.aisixiang.com/data/158351.html</link></item>
-<item><title>张文显：中国“善治”的基本特质 - 爱思想</title><link>https://www.aisixiang.com/data/158345.html</link></item>
-<item><title>张翔：四部，还是一部？——我国宪法承继关系的理论重述 - 爱思想</title><link>https://www.aisixiang.com/data/158343.html</link></item>
-<item><title>马岭：我国《国歌法》以及与《国旗法》《国徽法》关系的几点思考 - 爱思想</title><link>https://www.aisixiang.com/data/158340.html</link></item>
-<item><title>莫纪宏：深化法治改革 推进法治创新——2025年法治建设愿景展望 - 爱思想</title><link>https://www.aisixiang.com/data/158337.html</link></item>
-<item><title>朱勇：中华优秀传统法律文化 - 爱思想</title><link>https://www.aisixiang.com/data/158295.html</link></item>
-<item><title>王一鸣：统筹扩内需、稳增长、促转型 - 爱思想</title><link>https://www.aisixiang.com/data/158344.html</link></item>
-<item><title>刘元春：2025年经济有望增长5%左右，提振消费要改善居民资产负债表、收入及预期 - 爱思想</title><link>https://www.aisixiang.com/data/158339.html</link></item>
-<item><title>王宁：文化视角下的中国消费密码 - 爱思想</title><link>https://www.aisixiang.com/data/158326.html</link></item>
-<item><title>沈洁：以新发展理念赋能生产质效提升 - 爱思想</title><link>https://www.aisixiang.com/data/158323.html</link></item>
-<item><title>习近平：以中国式现代化全面推进强国建设、民族复兴伟业 - 爱思想</title><link>https://www.aisixiang.com/data/158346.html</link></item>
-<item><title>刘志明 张颖娜：中国共产党接力探索中国式现代化的伟大成就及经验 - 爱思想</title><link>https://www.aisixiang.com/data/158342.html</link></item>
-<item><title>张志强 杨洪源：创立习近平新时代中国特色社会主义思想是文化主体性的最有力体现 - 爱思想</title><link>https://www.aisixiang.com/data/158330.html</link></item>
-<item><title>张波：中国共产党文明观的生成逻辑 - 爱思想</title><link>https://www.aisixiang.com/data/158329.html</link></item>
-<item><title>沈传亮 冀宇超：深刻认识进一步全面深化改革的指导思想 - 爱思想</title><link>https://www.aisixiang.com/data/158316.html</link></item>
-<item><title>王义桅：为什么说构建人类命运共同体，形成了共建美好世界的最大公约数 - 爱思想</title><link>https://www.aisixiang.com/data/158336.html</link></item>
-<item><title>韩立群：特朗普二任对华政策的延续与颠覆 - 爱思想</title><link>https://www.aisixiang.com/data/158334.html</link></item>
-<item><title>张晓涛：2024年中国对全球经济增长的引擎作用 - 爱思想</title><link>https://www.aisixiang.com/data/158312.html</link></item>
-<item><title>陈祥：2024年，中日关系是这样走过来的！ - 爱思想</title><link>https://www.aisixiang.com/data/158288.html</link></item>
-<item><title>杨共乐：关于中华民族共同体理论体系建设的几点思考 - 爱思想</title><link>https://www.aisixiang.com/data/158357.html</link></item>
-<item><title>林辉煌：做好新时代社会工作的五个工作原则 - 爱思想</title><link>https://www.aisixiang.com/data/158350.html</link></item>
-<item><title>朱富强：知识分子的批判性和媒体知识分子的堕落：兼论知识分子何以反对资本主义 - 爱思想</title><link>https://www.aisixiang.com/data/158297.html</link></item>
-<item><title>张辉刚 唐钰镥 王宇澳：家国同构：传统仪式与文化身份认同 - 爱思想</title><link>https://www.aisixiang.com/data/158259.html</link></item>
-<item><title>韩美群 余尚蔚：唯物史观视域下中华民族共同体建设的文明理路 - 爱思想</title><link>https://www.aisixiang.com/data/158258.html</link></item>
-<item><title>王凤娥：中国故事体系化的“物”理传播逻辑 - 爱思想</title><link>https://www.aisixiang.com/data/158333.html</link></item>
-<item><title>马梅：着力提升全社会网络素养 - 爱思想</title><link>https://www.aisixiang.com/data/158324.html</link></item>
-<item><title>曲青山：敏锐把握信息化发展的历史机遇 为建成网络强国贡献党史和文献力量 - 爱思想</title><link>https://www.aisixiang.com/data/158315.html</link></item>
-<item><title>杜占元：学思践悟习近平文化思想 构建更有效力的国际传播体系 - 爱思想</title><link>https://www.aisixiang.com/data/158247.html</link></item>
-<item><title>兰婷 李昱霏：铸牢信仰信念信心根基 增强思政引领力 - 爱思想</title><link>https://www.aisixiang.com/data/158321.html</link></item>
-<item><title>蒋菲：更加突出教育的基础性支撑作用 - 爱思想</title><link>https://www.aisixiang.com/data/158319.html</link></item>
-<item><title>黄加文：加快形成和充分释放人才红利 - 爱思想</title><link>https://www.aisixiang.com/data/158317.html</link></item>
-<item><title>耿化敏 刘高元：育才为国寸心丹——吴玉章的教育人生 - 爱思想</title><link>https://www.aisixiang.com/data/158301.html</link></item>
-<item><title>王桂艳 刘成若：将教育家精神贯穿立德树人全过程 - 爱思想</title><link>https://www.aisixiang.com/data/158220.html</link></item>
-<item><title>姜萌：“古音辨”与中国现代文史研究的发展 - 爱思想</title><link>https://www.aisixiang.com/data/158332.html</link></item>
-<item><title>乔焕江：网络文学批评的四重视野 - 爱思想</title><link>https://www.aisixiang.com/data/158331.html</link></item>
-<item><title>许春华：孔子的“诗兴”学说及其哲学贡献 - 爱思想</title><link>https://www.aisixiang.com/data/158308.html</link></item>
-<item><title>贾飞：王世贞对苏轼的“再现”及其影响 - 爱思想</title><link>https://www.aisixiang.com/data/158304.html</link></item>
-<item><title>黄云霞：传统“文学”观念的自主性转换 - 爱思想</title><link>https://www.aisixiang.com/data/158303.html</link></item>
-<item><title>左玉河：国史学理论体系建构的检视 - 爱思想</title><link>https://www.aisixiang.com/data/158352.html</link></item>
-<item><title>陈超：中国大运河的历史及现实意义 - 爱思想</title><link>https://www.aisixiang.com/data/158338.html</link></item>
-<item><title>王广：如何正确理解大历史观 - 爱思想</title><link>https://www.aisixiang.com/data/158335.html</link></item>
-<item><title>樊志辉：普遍性、确定性的现代性“春秋公羊学”是如何可能的——从康有为的经学叙事谈起 - 爱思想</title><link>https://www.aisixiang.com/data/158341.html</link></item>
-<item><title>赵馥洁：“明德”的四重价值意蕴 - 爱思想</title><link>https://www.aisixiang.com/data/158309.html</link></item>
-<item><title>卜宪群：价值体系：中国古代精神文化的深厚底蕴 - 爱思想</title><link>https://www.aisixiang.com/data/158294.html</link></item>
-<item><title>陈少明：人文学术的意义——在中山大学文科发展大会上的发言 - 爱思想</title><link>https://www.aisixiang.com/data/158349.html</link></item>
-<item><title>徐勇：建设具有中国风格的一流学科 - 爱思想</title><link>https://www.aisixiang.com/data/158290.html</link></item>
-<item><title>陈鼓应，1935年生，原籍福建长汀。师从方东美先生、殷海光先生，获台湾大学哲学系学士及哲学硕士学位。..... - 爱思想</title><link>https://www.aisixiang.com/thinktank/ChenGuying.html</link></item>
-<item><title>Why I’m Moving from X.com to SangerFeed.org - Larry Sanger Blog</title><link>https://larrysanger.org/2024/12/why-im-moving-from-x-com-to-sangerfeed-org/</link></item>
-<item><title>The Best (Old) Books We Read in 2024 - Literary  Hub</title><link>https://lithub.com/the-best-old-books-we-read-in-2024/</link></item>
-<item><title>50 Contemporary Poets on the Best Poems they Read in 2024 - Literary  Hub</title><link>https://lithub.com/49-contemporary-poets-on-the-best-poems-they-read-in-2024/</link></item>
-<item><title>The 167 Best Book Covers of 2024 - Literary  Hub</title><link>https://lithub.com/the-167-best-book-covers-of-2024/</link></item>
-<item><title>Our Favorite Lit Hub Stories from 2024 - Literary  Hub</title><link>https://lithub.com/our-favorite-lit-hub-stories-from-2024/</link></item>
-<item><title>The Best Reviewed Nonfiction of 2024 - Literary  Hub</title><link>https://lithub.com/the-best-reviewed-nonfiction-of-2024/</link></item>
-<item><title>Lit Hub’s 50 Noteworthy Nonfiction Books of 2024 - Literary  Hub</title><link>https://lithub.com/lit-hubs-50-noteworthy-nonfiction-books-of-2024/</link></item>
-<item><title>Lit Hub Weekly: December 16 – 20, 2024 - Literary  Hub</title><link>https://lithub.com/lit-hub-weekly-december-16-20-2024/</link></item>
-<item><title>Lit Hub Daily: December 20, 2024 - Literary  Hub</title><link>https://lithub.com/lit-hub-daily-december-20-2024/</link></item>
-<item><title>New Media, Old Anxieties: Why is “Brain Rot” the Word of the Year? - Literary  Hub</title><link>https://lithub.com/new-media-old-anxieties-why-is-brain-rot-the-word-of-the-year/</link></item>
-<item><title>Boffins ponder paltry brain data rate of 10 bits per second - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/01/boffins_peg_brain_data_rate/</link></item>
-<item><title>Eight things that should not have happened last year, but did - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/01/opinion_column_tech_fails_2024/</link></item>
-<item><title>US Army soldier who allegedly stole Trump&amp;#39;s AT&amp;amp;T call logs arrested - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/01/us_army_soldier_att_call_logs/</link></item>
-<item><title>Starlink direct-to-cell is coming to Ukraine - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/01/starlink_directtocell_ukraine/</link></item>
-<item><title>Second Jeju Air 737-800 experiences mechanical issues following deadly crash - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2024/12/31/second_jeju_air_mechanical_issues/</link></item>
-<item><title>US Treasury Department outs the blast radius of BeyondTrust&amp;#39;s key leak - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2024/12/31/us_treasury_department_hacked/</link></item>
-<item><title>Report claims FAA ignores most whistleblower complaints - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2024/12/31/faa_whistleblower_complaints/</link></item>
-<item><title>China&amp;#39;s cyber intrusions took a sinister turn in 2024 - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2024/12/31/china_cyber_intrusions_2024/</link></item>
-<item><title>UK watchdog launches inquiry into IBM&amp;#39;s HashiCorp acquisition - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2024/12/31/cma_inquiry_ibm_hashicorp/</link></item>
-<item><title>Life Kit&amp;#39;s guide to a successful Dry January - NPR</title><link>https://www.npr.org/2025/01/01/g-s1-40605/up-first-newsletter-life-kit-dry-january-resolution</link></item>
-<item><title>Ukraine halts transit of Russian gas to Europe after a prewar deal expired - NPR</title><link>https://www.npr.org/2025/01/01/nx-s1-5244936/ukraine-russia-natural-gas-pipeline</link></item>
-<item><title>A look at the Aztec Rebels, a family-oriented motorcycle club based in the Bronx - NPR</title><link>https://www.npr.org/sections/the-picture-show/2025/01/01/g-s1-27089/aztec-rebels-south-bronx-mexican-motorcycle-club</link></item>
-<item><title>Aztec Rebels: La travesía de un club de motociclistas Latinos encontrando un hogar en el Bronx - NPR</title><link>https://www.npr.org/sections/the-picture-show/2025/01/01/g-s1-38628/aztec-rebels-bronx-ny-club-de-motociclistas-mexicanos</link></item>
-<item><title>Following surge in gang violence, Trinidad and Tobago declare state of emergency - NPR</title><link>https://www.npr.org/2025/01/01/nx-s1-5243991/following-surge-in-gang-violence-trinidad-and-tobago-declare-state-of-emergency</link></item>
-<item><title>Why So Many Birthdays on This Particular Day? - NPR</title><link>https://www.npr.org/2025/01/01/1222389462/why-so-many-birthdays-on-this-particular-day</link></item>
-<item><title>Two Instruments Make a Singular Musical Style From A Small Mexican Town - NPR</title><link>https://www.npr.org/2024/12/31/1222340398/two-instruments-make-a-singular-musical-style-from-a-small-mexican-town</link></item>
-<item><title>A Lagos film festival spotlights stories of Nigeria that the mainstream is missing - NPR</title><link>https://www.npr.org/2024/12/31/nx-s1-5238311-e1/a-lagos-film-festival-spotlights-stories-of-nigeria-that-the-mainstream-is-missing</link></item>
-<item><title>Syrian refugees in Istanbul debate whether to stay or return home - NPR</title><link>https://www.npr.org/2024/12/31/nx-s1-5243364/syrian-refugees-in-istanbul-debate-whether-to-stay-or-return-home</link></item>
-<item><title>Today’s Hottest Deals: Apple iPad, Logitech G305 LIGHTSPEED Wireless Gaming Mouse, New Year Stock-Up, and MORE! - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/01/01/todays-hottest-deals-apple-ipad-logitech-g305-lightspeed-wireless-gaming-mouse-new-year-stock-up-and-more/</link></item>
-<item><title>GMAN Actor Teases Half-Life 3 for 2025: Could It Finally Be Happening? - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/01/01/gman-actor-teases-half-life-3-for-2025-could-it-finally-be-happening/</link></item>
-<item><title>The World’s Largest Bowed String Instrument: The Octobass [Video] - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/01/01/the-worlds-largest-bowed-string-instrument-the-octobass-video/</link></item>
-<item><title>Deep Breath [Comic] - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/01/01/deep-breath-comic-2/</link></item>
-<item><title>PC Gamers in a Nutshell [Comic] - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/01/01/pc-gamers-in-a-nutshell-comic/</link></item>
-<item><title>Wait… More Playlists?! [Comic] - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/01/01/wait-more-playlists-comic/</link></item>
-<item><title>One Bat Stand [Comic] - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2024/12/31/one-bat-stand-comic/</link></item>
-<item><title>Europe’s The Final Countdown Performed Bardcore Style [Video] - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2024/12/31/europes-the-final-countdown-performed-bardcore-style-video/</link></item>
-<item><title>Today’s Hottest Deals: SAMSUNG 65-Inch Class Crystal 4K Smart TV, Fitbit Versa 4 Fitness Smartwatch, Samsung Galaxy Buds FE Wireless Earbuds, and MORE! - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2024/12/31/todays-hottest-deals-samsung-65-inch-class-crystal-4k-smart-tv-fitbit-versa-4-fitness-smartwatch-samsung-galaxy-buds-fe-wireless-earbuds-and-more/</link></item>
-<item><title>ASUS: The Brand Name That Sounds Like You’re Talking About Butts - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2024/12/31/asus-the-brand-name-that-sounds-like-youre-talking-about-butts/</link></item>
-<item><title>PyLeap ESP32-S3 TFT Boxing Glove Tracker w/… - Adafruit Industries</title><link>https://blog.adafruit.com/2025/01/01/pyleap-esp32-s3-tft-boxing-glove-tracker-w-adafruit-io/</link></item>
-<item><title>DIY Distance Hat! #WearableWednesday - Adafruit Industries</title><link>https://blog.adafruit.com/2025/01/01/diy-distance-hat-wearablewednesday/</link></item>
-<item><title>#CircuitPython2025 - Adafruit Industries</title><link>https://blog.adafruit.com/2025/01/01/circuitpython2025/</link></item>
-<item><title>Happy New Year, 2025 - Adafruit Industries</title><link>https://blog.adafruit.com/2024/12/31/happy-new-year-2025/</link></item>
-<item><title>Adafruit’s Top Ten 3D Printing Posts of 2024… - Adafruit Industries</title><link>https://blog.adafruit.com/2024/12/29/adafruits-top-ten-3d-printing-posts-of-2024-adafruittopten/</link></item>
-<item><title>adafruit learn guide - Adafruit Industries</title><link>https://blog.adafruit.com/tag/adafruit-learn-guide/</link></item>
-<item><title>circuitpython2025 - Adafruit Industries</title><link>https://blog.adafruit.com/tag/circuitpython2025/</link></item>
-<item><title>Festival of Lights – Transparent OLED Stemma QT - Adafruit Industries</title><link>https://blog.adafruit.com/2024/12/31/festival-of-lights-transparent-oled-stemma-qt/</link></item>
-<item><title>JP’s Product Pick of the Week — 4pm Eastern TODAY! 12/31/24 @adafruit #adafruit #newproductpick - Adafruit Industries</title><link>https://blog.adafruit.com/2024/12/31/jps-product-pick-of-the-week-4pm-eastern-today-12-31-24-adafruit-adafruit-newproductpick/</link></item>
-<item><title>The Women Trailblazers of Computer Art - Adafruit Industries</title><link>https://blog.adafruit.com/2024/12/31/the-women-trailblazers-of-computer-art/</link></item>
-<item><title>NASA’s Parker Solar Probe Makes History With Closest Pass to Sun - Adafruit Industries</title><link>https://blog.adafruit.com/2024/12/31/nasas-parker-solar-probe-makes-history-with-closest-pass-to-sun/</link></item>
-<item><title>DIY Thermal Light Painting #ArtTuesday - Adafruit Industries</title><link>https://blog.adafruit.com/2024/12/31/diy-thermal-light-painting-arttuesday/</link></item>
-<item><title>Testing Sparkle Motion – Fuse for Views - Adafruit Industries</title><link>https://blog.adafruit.com/2024/12/31/testing-sparkle-motion-fuse-for-views/</link></item>
-<item><title>electronicload - Adafruit Industries</title><link>https://blog.adafruit.com/tag/electronicload/</link></item>
-<item><title>electronicsengineering - Adafruit Industries</title><link>https://blog.adafruit.com/tag/electronicsengineering/</link></item>
-<item><title>makersgonnamake - Adafruit Industries</title><link>https://blog.adafruit.com/tag/makersgonnamake/</link></item>
-<item><title>productdesign - Adafruit Industries</title><link>https://blog.adafruit.com/tag/productdesign/</link></item>
-<item><title>techprojects - Adafruit Industries</title><link>https://blog.adafruit.com/tag/techprojects/</link></item>
-<item><title>techtesting - Adafruit Industries</title><link>https://blog.adafruit.com/tag/techtesting/</link></item>
-<item><title>LED Noodle Snowflake - Adafruit Industries</title><link>https://blog.adafruit.com/2024/12/31/led-noodle-snowflake/</link></item>
-<item><title>MOAR Sparkle Motion testing – built-in I2S mic - Adafruit Industries</title><link>https://blog.adafruit.com/2024/12/31/moar-sparkle-motion-testing-built-in-i2s-mic/</link></item>
-<item><title>audioenthusiast - Adafruit Industries</title><link>https://blog.adafruit.com/tag/audioenthusiast/</link></item>
-<item><title>audioquality - Adafruit Industries</title><link>https://blog.adafruit.com/tag/audioquality/</link></item>
-<item><title>audioreactive - Adafruit Industries</title><link>https://blog.adafruit.com/tag/audioreactive/</link></item>
-<item><title>digitalaudio - Adafruit Industries</title><link>https://blog.adafruit.com/tag/digitalaudio/</link></item>
-<item><title>digitaltech - Adafruit Industries</title><link>https://blog.adafruit.com/tag/digitaltech/</link></item>
-<item><title>electronicsdiy - Adafruit Industries</title><link>https://blog.adafruit.com/tag/electronicsdiy/</link></item>
-<item><title>embeddeddesign - Adafruit Industries</title><link>https://blog.adafruit.com/tag/embeddeddesign/</link></item>
-<item><title>gadgettesting - Adafruit Industries</title><link>https://blog.adafruit.com/tag/gadgettesting/</link></item>
-<item><title>graphicalequalizer - Adafruit Industries</title><link>https://blog.adafruit.com/tag/graphicalequalizer/</link></item>
-<item><title>i2smicrophone - Adafruit Industries</title><link>https://blog.adafruit.com/tag/i2smicrophone/</link></item>
-<item><title>innovativetech - Adafruit Industries</title><link>https://blog.adafruit.com/tag/innovativetech/</link></item>
-<item><title>makersmovement - Adafruit Industries</title><link>https://blog.adafruit.com/tag/makersmovement/</link></item>
-<item><title>microelectronics - Adafruit Industries</title><link>https://blog.adafruit.com/tag/microelectronics/</link></item>
-<item><title>Christmas lights made from Adafruit MagTag - Adafruit Industries</title><link>https://blog.adafruit.com/2024/12/31/christmas-lights-made-from-adafruit-magtag/</link></item>
-<item><title>adafruit magtag - Adafruit Industries</title><link>https://blog.adafruit.com/tag/adafruit-magtag/</link></item>
-<item><title>Adafruit’s Top Ten New Products of 2024 #AdafruitTopTen - Adafruit Industries</title><link>https://blog.adafruit.com/2024/12/31/adafruits-top-ten-new-products-of-2024-adafruittopten/</link></item>
-<item><title>Adafriut Top Ten - Adafruit Industries</title><link>https://blog.adafruit.com/tag/adafriut-top-ten/</link></item>
-<item><title>top new products - Adafruit Industries</title><link>https://blog.adafruit.com/tag/top-new-products/</link></item>
-<item><title>More Sparkle Motion testing – 24V Neon Neopixel Tubes - Adafruit Industries</title><link>https://blog.adafruit.com/2024/12/30/more-sparkle-motion-testing-24v-neon-neopixel-tubes/</link></item>
-<item><title>brightideas - Adafruit Industries</title><link>https://blog.adafruit.com/tag/brightideas/</link></item>
-<item><title>colorfuldesign - Adafruit Industries</title><link>https://blog.adafruit.com/tag/colorfuldesign/</link></item>
-<item><title>hardwaredevelopment - Adafruit Industries</title><link>https://blog.adafruit.com/tag/hardwaredevelopment/</link></item>
-<item><title>ledlighting - Adafruit Industries</title><link>https://blog.adafruit.com/tag/ledlighting/</link></item>
-<item><title>lightdesign - Adafruit Industries</title><link>https://blog.adafruit.com/tag/lightdesign/</link></item>
-<item><title>smoothcolors - Adafruit Industries</title><link>https://blog.adafruit.com/tag/smoothcolors/</link></item>
-<item><title>testingphase - Adafruit Industries</title><link>https://blog.adafruit.com/tag/testingphase/</link></item>
-<item><title>Scientists Pin Down the Origins of a Fast Radio Burst - Slashdot</title><link>https://science.slashdot.org/story/25/01/02/0244251/scientists-pin-down-the-origins-of-a-fast-radio-burst</link></item>
-<item><title>stopped providing home coverage - Slashdot</title><link>https://news.slashdot.org/story/23/05/31/2346230/climate-crisis-makes-it-impossible-for-some-us-residents-to-get-home-insurance</link></item>
-<item><title>What Has Biden Wrought? - Slashdot</title><link>https://news.slashdot.org/story/24/12/31/0457231/what-has-biden-wrought?sbsrc=md</link></item>
-<item><title>Legacy Airlines Are Now Coming For Your Carry-on Bag - Slashdot</title><link>https://slashdot.org/story/24/12/31/1944255/legacy-airlines-are-now-coming-for-your-carry-on-bag?sbsrc=md</link></item>
-<item><title>The Collapse of Mid-Range Smartphones - Slashdot</title><link>https://mobile.slashdot.org/story/24/12/31/0810217/the-collapse-of-mid-range-smartphones?sbsrc=md</link></item>
-<item><title>Is 2025 the Year of the Linux Desktop? - Slashdot</title><link>https://linux.slashdot.org/story/24/12/31/205245/is-2025-the-year-of-the-linux-desktop?sbsrc=md</link></item>
-<item><title>Russia Admits Its Homegrown Consoles Can&amp;#39;t Match the PS5 or Xbox Series - Slashdot</title><link>https://games.slashdot.org/story/24/12/31/2012216/russia-admits-its-homegrown-consoles-cant-match-the-ps5-or-xbox-series?utm_source=rss0.9mainlinkanon&amp;utm_medium=feed&amp;sbsrc=yro</link></item>
-<item><title>US Army Soldier Arrested In AT&amp;T, Verizon Extortions - Slashdot</title><link>https://yro.slashdot.org/story/24/12/31/1954200/us-army-soldier-arrested-in-att-verizon-extortions?utm_source=rss0.9mainlinkanon&amp;utm_medium=feed&amp;sbsrc=yro</link></item>
-<item><title>The &amp;#39;Godfather&amp;#39; of AI is Backing Musk&amp;#39;s Lawsuit Against OpenAI - Slashdot</title><link>https://yro.slashdot.org/story/24/12/31/188209/the-godfather-of-ai-is-backing-musks-lawsuit-against-openai?utm_source=rss0.9mainlinkanon&amp;utm_medium=feed&amp;sbsrc=yro</link></item>
-<item><title>Read the latest news - Codrops</title><link>https://tympanus.net/codrops/news/</link></item>
+<lastBuildDate>Fri, 03 Jan 2025 08:27:48 +0800</lastBuildDate>
+<item><title>Blue Whale (redux) - Wrong Hands</title><link>https://wronghands1.com/2024/12/27/blue-whale-redux/</link></item>
+<item><title>the evolution of Santa - Wrong Hands</title><link>https://wronghands1.com/2024/12/24/the-evolution-of-santa/</link></item>
+<item><title>Merry Christmas - Wrong Hands</title><link>https://wronghands1.com/tag/merry-christmas/</link></item>
+<item><title>Sinterklaas - Wrong Hands</title><link>https://wronghands1.com/tag/sinterklaas/</link></item>
+<item><title>St. Nicholas - Wrong Hands</title><link>https://wronghands1.com/tag/st-nicholas/</link></item>
+<item><title>A Christmas Carol: The Expanded Universe - Wrong Hands</title><link>https://wronghands1.com/2024/12/20/a-christmas-carol-the-expanded-universe/</link></item>
+<item><title>The ‘Wicked’ Tell-All - Variety</title><link>https://variety.com/2025/film/news/ariana-grande-cynthia-erivo-wicked-oscar-buzz-queer-glinda-part-2-1236261951/</link></item>
+<item><title>Domestic Box Office Falls to $8.75 Billion in 2024 as Movie Theaters Struggle to Recover From Strikes - Variety</title><link>https://variety.com/2025/film/box-office/domestic-box-office-2024-final-ticket-sales-studio-marketshare-1236263875/</link></item>
+<item><title>Wayne Osmond, Original Member of the Osmonds Singing Group, Dies at 73 - Variety</title><link>https://variety.com/2025/music/news/wayne-osmond-dead-the-osmonds-original-member-1236264173/</link></item>
+<item><title>By Matt Minton - Variety</title><link>https://variety.com/author/matt-minton/</link></item>
+<item><title>Five Burning TV Questions for 2025: Cable’s Future, Paramount’s Leadership Structure and Media Under a Vindictive Trump - Variety</title><link>https://variety.com/2025/tv/news/tv-burning-questions-2025-future-of-cable-paramount-media-under-trump-1236263492/</link></item>
+<item><title>Diddy’s Bodyguard, Intern and Producer Speak Out in New Peacock Doc Trailer: ‘I Didn’t Want to Be Around Him Unless There Was Cameras’ - Variety</title><link>https://variety.com/2025/tv/news/diddy-documentary-trailer-party-footage-bodyguard-speaks-out-1236264056/</link></item>
+<item><title>Bill Skarsgård’s ‘Nosferatu’ Transformation: Six Hours of Makeup, a 62-Piece Prosthetic, a Bushy Mustache and More Count Orlok Secrets Revealed - Variety</title><link>https://variety.com/2025/artisans/news/bill-skarsgard-nosferatu-transformation-makeup-mustache-count-orlok-1236249285/</link></item>
+<item><title>Justin Baldoni Files $250 Million Lawsuit Against New York Times Over Blake Lively Story: It Relied on Her ‘Self-Serving Narrative… - Variety</title><link>https://variety.com/2024/film/news/justin-baldoni-sues-new-york-times-blake-lively-allegations-story-1236263099/</link></item>
+<item><title>David Fincher Says He Met With Warner Bros. to Direct &amp;#39;Harry Potter&amp;#39; and Told the Studio ‘I Want It to Be Kind of Creepy&amp;#39; - Variety</title><link>https://variety.com/2025/film/news/david-fincher-seven-harry-potter-1236262595/</link></item>
+<item><title>Armie Hammer Says His Acting Career Has Picked Up So Much He&amp;#39;s &amp;#39;Turning Jobs Down&amp;#39;: &amp;#39;Now the Conversation&amp;#39; in the Industry Is &amp;#39;Man, That Guy Got… - Variety</title><link>https://variety.com/2025/film/global/armie-hammer-career-picking-up-turning-jobs-down-agent-film-1236263767/</link></item>
+<item><title>&amp;#39;With Love, Meghan&amp;#39; Trailer: Meghan Markle’s Netflix Lifestyle Series Showcases Cooking and Gardening Skills — and an Appearance From Prince… - Variety</title><link>https://variety.com/2025/tv/global/with-love-meghan-trailer-meghan-markle-netflix-series-cooking-1236263976/</link></item>
+<item><title>Golden Globes Announces Presenters, Including Andrew Garfield, Anya Taylor-Joy, Michelle Yeoh, Vin Diesel and More - Variety</title><link>https://variety.com/2025/awards/news/golden-globe-presenters-andrew-garfield-anya-taylor-joy-1236263474/</link></item>
+<item><title>Billie Eilish’s ‘Birds of a Feather’ Slips Past Sabrina Carpenter’s ‘Espresso’ as Most-Streamed Spotify Song in 2024 - Variety</title><link>https://variety.com/2025/music/news/billie-eilish-birds-of-a-feather-spotify-most-streamed-song-2024-1236263521/</link></item>
+<item><title>British Indie Powerhouse Relentless Records Celebrates 25th Anniversary, Founder ‘Shabs’ Jobanputra Plots U.S. Expansion - Variety</title><link>https://variety.com/2025/music/news/british-indie-relentless-records-u-s-expansion-1236263436/</link></item>
+<item><title>Neil Young Says He Won’t Be Playing Glastonbury Over BBC’s ‘Corporate Control’: It’s ‘Not the Way I Remember It Being’ - Variety</title><link>https://variety.com/2025/music/global/neil-young-pulls-out-glastonbury-bbc-corporate-control-1236263684/</link></item>
+<item><title>Viola Davis Action Thriller ‘G20’ Sets April Premiere Date on Amazon Prime Video (EXCLUSIVE) - Variety</title><link>https://variety.com/2025/film/global/viola-davis-g20-premiere-date-amazon-prime-video-1236257709/</link></item>
+<item><title>Selena’s Killer Yolanda Saldívar Files for Parole, Begins Review Process - Variety</title><link>https://variety.com/2025/music/news/selena-yolanda-saldivar-files-for-parole-1236264446/</link></item>
+<item><title>Variety Announces FYC Fest: The Shortlist Lineup - Variety</title><link>https://variety.com/2025/biz/news/variety-fyc-fest-the-shortlist-lineup-1236264397/</link></item>
+<item><title>How Surprise Albums Fueled Kendrick, Beyoncé, Taylor Release Strategies - Variety</title><link>https://variety.com/vip/surprise-album-release-data-kendrick-beyonce-swift-drop-1236263041/</link></item>
+<item><title>Tom Holland Won’t Walk the Red Carpet at Zendaya’s Film Premieres ‘Because It’s Her Moment,’ Says ‘When I Have Kids You Will Not See Me in Movies Anymore’ - Variety</title><link>https://variety.com/2025/film/news/tom-holland-red-carpets-zendaya-1236263885/</link></item>
+<item><title>Kylie Kelce Tells Off Podcast Haters After Beating Joe Rogan: If You Search ‘Who the F— Is Kylie?’ Then ‘You’re Just Gonna Keep Getting Me on Your Timeline’ - Variety</title><link>https://variety.com/2025/digital/news/kylie-kelce-slams-podcast-haters-beats-joe-rogan-charts-1236264381/</link></item>
+<item><title>2025 Vision: A Special Report on Hollywood in the Attention Economy - Variety</title><link>https://variety.com/vip-special-reports/hollywood-attention-economy-media-streaming-film-podcasts-videogames-1236249177/</link></item>
+<item><title>Savannah Film Studios Expands Hollywood-Style Backlot With New 17,000 Square-Foot Production Facility - Variety</title><link>https://variety.com/2025/artisans/news/savannah-film-studios-expansion-costume-design-1236263935/</link></item>
+<item><title>‘Dick Clark’s New Year’s Rockin’ Eve’ Ratings: 17.9 Million Viewers on ABC - Variety</title><link>https://variety.com/2025/tv/news/dick-clarks-new-years-rockin-eve-ratings-viewers-1236264313/</link></item>
+<item><title>Meta Promotes GOP-Affiliated Exec Joel Kaplan to Head of Global Affairs Ahead of Trump Inauguration - Variety</title><link>https://variety.com/2025/digital/news/meta-joel-kaplan-global-affairs-trump-1236264252/</link></item>
+<item><title>Andrew Garfield Says ‘Spider-Man 4’ Casting Reports Are Not True: ‘But I Know No One’s Gonna Trust Anything I Say From Now on’ - Variety</title><link>https://variety.com/2025/film/news/andrew-garfield-denies-spider-man-4-casting-rumors-1236264041/</link></item>
+<item><title>Training AI Models Shows Benefit for Animation but Raises Ethical and Legal Questions - Variety</title><link>https://variety.com/vip/training-ai-models-shows-benefit-for-animation-raises-ethical-legal-questions-1236262337/</link></item>
+<item><title>Denis Leary Military Sitcom ‘Going Dutch’ Is a Culture Clash Farce That Could Be Something More: TV Review - Variety</title><link>https://variety.com/2025/tv/tv-reviews/going-dutch-review-denis-leary-fox-1236260934/</link></item>
+<item><title>How Ted Danson Has Thrived in a Five-Decade Career by Finding ‘the Laugh in the Sadness’ - Variety</title><link>https://variety.com/2025/tv/actors/ted-danson-golden-globe-carol-burnett-award-1236262385/</link></item>
+<item><title>‘Squid Game: Unleashed’ Video Game Adds Season 2 Players, Including Rapper Thanos and Mother-Son Duo,  and Deadly ‘Mingle… - Variety</title><link>https://variety.com/2025/gaming/news/squid-game-unleashed-video-game-season-2-characters-mingle-1236263881/</link></item>
+<item><title>Kim White Documentary ‘Breaking Into Beautiful’ to Be Distributed by Angel Studios – Film News in Brief - Variety</title><link>https://variety.com/2025/film/news/film-news-in-brief-dec-30-2024-1236257842/</link></item>
+<item><title>Music Industry Moves: Lauren Davis Upped to Associate Chair of NYU&amp;#39;s Clive Davis Institute - Variety</title><link>https://variety.com/2025/music/news/lauren-davis-associate-chair-nyu-clive-davis-institute-1236264063/</link></item>
+<item><title>The Music of ‘Wicked’: Stephen Schwartz and Arranger Stephen Oremus on What It Took to Make a Classic Broadway Song Score Even More… - Variety</title><link>https://variety.com/2024/music/news/wicked-music-stephen-schwartz-composer-oremus-1236262892/</link></item>
+<item><title>Oscars: The January Bake-Off is the Next Step in the Visual Effects Race - Variety</title><link>https://variety.com/2025/artisans/awards/oscars-visual-effects-race-2025-dune-better-man-1236260271/</link></item>
+<item><title>Meghan Markle Returns to Instagram With New Year’s Post After Five-Year Hiatus - Variety</title><link>https://variety.com/2025/digital/global/meghan-markle-returns-instagram-1236263722/</link></item>
+<item><title>Denis Villeneuve and Luca Guadagnino Compare Notes on Timothée Chalamet and Zendaya, Intimacy on Set and Why They’re ‘Grumpy’ About Modern Cinema - Variety</title><link>https://variety.com/2024/film/news/denis-villeneuve-luca-guadagnino-interview-dune-2-chalamet-1236249217/</link></item>
+<item><title>In Paintings and Quilts, Stephen Towns Spotlights Black Leisure in the Jim Crow South - Colossal</title><link>https://www.thisiscolossal.com/2025/01/stephen-towns-private-paradise/</link></item>
+<item><title>Apply for the 2026 Arts/Industry Residency at the John Michael Kohler Arts Center - Colossal</title><link>https://www.thisiscolossal.com/2025/01/2026-kohler-arts-industry/</link></item>
+<item><title>Ring in the New Year with Andrea Love’s Stop-Motion Felted Wool Pyrotechnics - Colossal</title><link>https://www.thisiscolossal.com/2024/12/andrea-love-fireworks/</link></item>
+<item><title>Community, Traditions, and Resilience Ring Through New Public Works for Tbilisi Mural Fest - Colossal</title><link>https://www.thisiscolossal.com/2024/12/tbilisi-mural-fest-2024/</link></item>
+<item><title>January 2nd, 1959: The Soviet Luna 1 is Launched - The Vintage News</title><link>https://www.thevintagenews.com/2025/01/02/january-2-1959/</link></item>
+<item><title>January 1st, 1994: Cesar Romero Passes Away - The Vintage News</title><link>https://www.thevintagenews.com/2025/01/01/january-1-1994/</link></item>
+<item><title>December 31st, 1904: The First New Years Celebration Held in Times Square - The Vintage News</title><link>https://www.thevintagenews.com/2024/12/31/december-31-1904/</link></item>
+<item><title>Mystery Ulfberht Viking Sword has Archaeologists Stumped - The Vintage News</title><link>https://www.thevintagenews.com/2018/02/21/ulfberht-viking/</link></item>
+<item><title>如果人类不会说话他们的集体认知可能不如蚂蚁 - Solidot</title><link>https://www.solidot.org/story?sid=80213</link></item>
+<item><title>2024 年 X.Org Server 的开发活跃度达到 10 年来的峰值 - Solidot</title><link>https://www.solidot.org/story?sid=80214</link></item>
+<item><title>阿里巴巴因竞争激烈对其大模型降价 85% - Solidot</title><link>https://www.solidot.org/story?sid=80215</link></item>
+<item><title>四分之三的 Steam Linux 用户使用 AMD CPU - Solidot</title><link>https://www.solidot.org/story?sid=80216</link></item>
+<item><title>因 Windows 11 24H2 Bug 刺客信条起源在 Steam 平台遭遇差评轰炸 - Solidot</title><link>https://www.solidot.org/story?sid=80217</link></item>
+<item><title>美国南方几乎都屏蔽了 Pornhub - Solidot</title><link>https://www.solidot.org/story?sid=80218</link></item>
+<item><title>小米修改了引导程序解锁政策 - Solidot</title><link>https://www.solidot.org/story?sid=80219</link></item>
+<item><title>人体组织中的微塑料与特定疾病相关 - Solidot</title><link>https://www.solidot.org/story?sid=80220</link></item>
+<item><title>无聊的城市建筑不利于你的健康 - Solidot</title><link>https://www.solidot.org/story?sid=80221</link></item>
+<item><title>大力水手、丁丁以及更多米老鼠动画进入公有领域 - Solidot</title><link>https://www.solidot.org/story?sid=80211</link></item>
+<item><title>Reed beds offer eco-friendly solution for sludge pollution management - Phys</title><link>https://phys.org/news/2025-01-reed-beds-eco-friendly-solution.html</link></item>
+<item><title>Bats surf storm fronts during continental migration - Phys</title><link>https://phys.org/news/2025-01-surf-storm-fronts-continental-migration.html</link></item>
+<item><title>Yellowstone&amp;#39;s volcanic activity is shifting to the northeast, geologists find - Phys</title><link>https://phys.org/news/2025-01-yellowstone-volcanic-shifting-northeast-geologists.html</link></item>
+<item><title>Detecting disease with a single molecule: Nanopore-based sensors could transform diagnostics - Phys</title><link>https://phys.org/news/2025-01-disease-molecule-nanopore-based-sensors.html</link></item>
+<item><title>Certain bacteria perform a trick that could keep plants healthy - Phys</title><link>https://phys.org/news/2025-01-bacteria-healthy.html</link></item>
+<item><title>Gene expression study reveals human brain cell types becoming more specialized, not just more numerous - Phys</title><link>https://phys.org/news/2025-01-gene-reveals-human-brain-cell.html</link></item>
+<item><title>Genetic mechanism of alternating sexes in walnut trees has some parallels to sex determination in humans - Phys</title><link>https://phys.org/news/2025-01-genetic-mechanism-alternating-sexes-walnut.html</link></item>
+<item><title>Two luminous flares detected from a nearby tidal disruption event - Phys</title><link>https://phys.org/news/2025-01-luminous-flares-nearby-tidal-disruption.html</link></item>
+<item><title>Nanoparticle technique gauges bite force in tiny C. elegans worms - Phys</title><link>https://phys.org/news/2025-01-nanoparticle-technique-gauges-tiny-elegans.html</link></item>
+<item><title>North Carolina&amp;#39;s coastal tourism could decline due to salty tap water - Phys</title><link>https://phys.org/news/2025-01-north-carolina-coastal-tourism-decline.html</link></item>
+<item><title>How does a hula hoop master gravity? Mathematicians prove that body shape matters - Phys</title><link>https://phys.org/news/2025-01-hula-hoop-master-gravity-mathematicians.html</link></item>
+<item><title>Unusual binary system hosts a massive fast-spinning white dwarf - Phys</title><link>https://phys.org/news/2025-01-unusual-binary-hosts-massive-fast.html</link></item>
+<item><title>Wildfire activity surged during Ice Age&amp;#39;s abrupt climate shifts, study suggests - Phys</title><link>https://phys.org/news/2025-01-wildfire-surged-ice-age-abrupt.html</link></item>
+<item><title>Diversifying DNA origami: Generative design tool relies on grammar rules for finding best shape - Phys</title><link>https://phys.org/news/2025-01-diversifying-dna-origami-generative-tool.html</link></item>
+<item><title>Building better infrared sensors: Novel photodiode design boosts responsivity - Phys</title><link>https://phys.org/news/2025-01-infrared-sensors-photodiode-boosts-responsivity.html</link></item>
+<item><title>Unlocking Spirulina secrets to supercharge vaccines - Phys</title><link>https://phys.org/news/2025-01-spirulina-secrets-supercharge-vaccines.html</link></item>
+<item><title>Red attire&amp;#39;s competitive edge has faded in combat sports, new study finds - Phys</title><link>https://phys.org/news/2025-01-red-attire-competitive-edge-combat.html</link></item>
+<item><title>New protocol measures 5G radiation from phones and base stations - Phys</title><link>https://phys.org/news/2025-01-protocol-5g-base-stations.html</link></item>
+<item><title>NASA anticipates lunar findings from next-generation retroreflector - Phys</title><link>https://phys.org/news/2025-01-nasa-lunar-generation-retroreflector.html</link></item>
+<item><title>Starlight to sight: Researchers develop short-wave infrared technology to allow starlight detection - Phys</title><link>https://phys.org/news/2025-01-starlight-sight-short-infrared-technology.html</link></item>
+<item><title>Secret lab developing UK&amp;#39;s first quantum clock - Phys</title><link>https://phys.org/news/2025-01-secret-lab-uk-quantum-clock.html</link></item>
+<item><title>Modern slavery is endemic in global supply chains. Companies should be praised, not shamed, for detecting it - Phys</title><link>https://phys.org/news/2025-01-modern-slavery-endemic-global-chains.html</link></item>
+<item><title>Rock art acoustics: South African study suggests that a distinct echo attracted ancient artists back to one site - Phys</title><link>https://phys.org/news/2025-01-art-acoustics-south-african-distinct.html</link></item>
+<item><title>Research on Colombian peace accord shows that addressing gender issues strengthens peace agreements - Phys</title><link>https://phys.org/news/2025-01-colombian-peace-accord-gender-issues.html</link></item>
+<item><title>Why we need to transform the Arctic Ocean into a North Pole marine reserve - Phys</title><link>https://phys.org/news/2025-01-arctic-ocean-north-pole-marine.html</link></item>
+<item><title>In the Arctic, planting more trees actually makes the world warmer - Phys</title><link>https://phys.org/news/2025-01-arctic-trees-world-warmer.html</link></item>
+<item><title>&amp;#39;We can&amp;#39;t believe you would just trust us&amp;#39;: Why social assistance shouldn&amp;#39;t come with strings attached - Phys</title><link>https://phys.org/news/2025-01-social-shouldnt.html</link></item>
+<item><title>Opinion: In 2025, let&amp;#39;s make it game on—not game over—for the natural world - Phys</title><link>https://phys.org/news/2025-01-opinion-game-natural-world.html</link></item>
+<item><title>Celebrity boxing matches and &amp;#39;doping-legal Olympics&amp;#39;: The increasingly blurred line between sports and entertainment - Phys</title><link>https://phys.org/news/2025-01-celebrity-doping-legal-olympics-blurred.html</link></item>
+<item><title>Learning to be an entrepreneur means building connections as well as studying business - Phys</title><link>https://phys.org/news/2025-01-entrepreneur-business.html</link></item>
+<item><title>HYPSO-2 satellite monitors harmful algae from space - Phys</title><link>https://phys.org/news/2025-01-hypso-satellite-algae-space.html</link></item>
+<item><title>Small milk fat globules promote growth of good bacteria, study reveals - Phys</title><link>https://phys.org/news/2025-01-small-fat-globules-growth-good.html</link></item>
+<item><title>Scientists reveal the distribution pattern of butterfly diversity in China - Phys</title><link>https://phys.org/news/2025-01-scientists-reveal-pattern-butterfly-diversity.html</link></item>
+<item><title>Feeling &amp;#39;hoodwinked&amp;#39; erodes trust in employee relations, observational study reveals - Phys</title><link>https://phys.org/news/2025-01-hoodwinked-erodes-employee-reveals.html</link></item>
+<item><title>Bioreactor allows automated long-term culturing of stem cells - Phys</title><link>https://phys.org/news/2025-01-bioreactor-automated-term-culturing-stem.html</link></item>
+<item><title>Passive radar breaks new ground in avalanche detection - Phys</title><link>https://phys.org/news/2025-01-passive-radar-ground-avalanche.html</link></item>
 </channel></rss>

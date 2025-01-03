@@ -103,8 +103,8 @@ function new_words_kltxt_b(type_list=false,word_is_in_sentence='',do_clear=false
             type_list.push(5);
         }
     }
-    
-    ocontainer=container_query_doms_get_kltxt_b(ocontainer);
+
+    ocontainer=container_query_doms_get_kltxt_b('',ocontainer);
     
     if (do_clear){
         if (type_list.includes(2)){
@@ -2594,7 +2594,6 @@ function render_html_kltxt_b(wordlist=[],layout=true,highlight=true,b_style=fals
         }
         console.log('render_html_kltxt_b() 费时：'+(performance.now() - t0) + ' milliseconds');    
     }
-    
     var t0 = performance.now();
 
     if (layout){
@@ -2611,14 +2610,15 @@ function render_html_kltxt_b(wordlist=[],layout=true,highlight=true,b_style=fals
     }
 }
 
-function container_query_doms_get_kltxt_b(query_str='',ocontainer=false){
+function container_query_doms_get_kltxt_b(query_str='',ocontainer=false){    
     if (ocontainer===false){
         ocontainer=document.getElementById('divhtml');
     }
-    
+
     if (query_str==''){
         return ocontainer;
     }
+
     return ocontainer.querySelectorAll(query_str);    
 }
 

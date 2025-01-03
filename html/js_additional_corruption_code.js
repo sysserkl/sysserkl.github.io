@@ -232,9 +232,8 @@ function flot_line_corruption(){
     odiv.innerHTML='<div id="div_status_common_sub" style="width:100%; height:600px;"></div>';
     
     flot_lines_b(flot_arr,'div_status_common_sub','nw',true,'','m','',0);
-    
+
     odiv.scrollIntoView();      
-    
 }
 
 function group_corruption(csplacename=''){
