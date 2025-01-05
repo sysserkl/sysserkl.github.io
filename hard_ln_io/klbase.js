@@ -1002,17 +1002,10 @@ function local_storage_all_b(cstype='',key_list=[],add_delimiter=true){
     }
     
     if (add_delimiter){
-        var affix=(cstype=='brief'?'--':'==');
-        var separation=affix+' 分隔行 '+parseInt(Math.random()*9999999)+' '+affix+'\n';
-        while (true){
-            if (blcontent.includes(separation)){
-                separation=affix+' 分隔行 '+parseInt(Math.random()*9999999)+' '+affix+'\n';
-            } else {break;}
-        }
+        var separation=delimiter_generate_b(blcontent,cstype);
     } else {
-        separation='';
+        var separation='';
     }
-
     blcontent='';
     //---
 
@@ -1055,6 +1048,29 @@ function local_storage_all_b(cstype='',key_list=[],add_delimiter=true){
     }
     bljg.sort();
     return [bljg.join('\n'),bllen];
+}
+
+function delimiter_generate_b(cscontent,cstype=''){
+    var affix=(cstype=='brief'?'--':'==');
+    var separation=affix+' 分隔行 '+parseInt(Math.random()*9999999)+' '+affix+'\n';
+    while (true){
+        if (cscontent.includes(separation)){
+            separation=affix+' 分隔行 '+parseInt(Math.random()*9999999)+' '+affix+'\n';
+        } else {break;}
+    }
+    return separation;
+}
+
+function delimiter_find_b(csstr){
+    var split_str=csstr.trim().split('\n')[0].trim();
+    if (split_str==''){
+        return [[],'未发现分隔行'];
+    }
+    if (split_str.substring(0,7)!=='== 分隔行 ' || split_str.slice(-3,)!==' =='){
+        return [[],'分隔行格式错误'];
+    }
+    var list_t=('\n'+csstr).split('\n'+split_str+'\n');
+    return [list_t,''];
 }
 
 function local_storage_squash_b(csid,csarray,top_left=10,bottom_left=10,cspercent=0.5){
@@ -1763,17 +1779,13 @@ function local_storage_import_b(textarea_id,sucess_alert=false){
     }
     if (!otextarea){return false;}
     
-    var blstr=otextarea.value.trim();
-    var split_str=blstr.split('\n')[0].trim();
-    if (split_str==''){
-        alert('未发现分隔行');
-        return false;
+    var list_t,error_info;
+    [list_t,error_info]=delimiter_find_b(otextarea.value);
+    if (error_info!==''){
+        alert(error_info);
+        return;
     }
-    if (split_str.substring(0,7)!=='== 分隔行 ' || split_str.slice(-3,)!==' =='){
-        alert('分隔行格式错误');
-        return false;
-    }
-    var list_t=('\n'+blstr).split('\n'+split_str+'\n');
+
     var name_list=[];
     var name_value_list=[];
     for (let item of list_t){

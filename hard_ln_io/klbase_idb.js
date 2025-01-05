@@ -207,7 +207,7 @@ function idb_bigfile_b(crud_type='',do_type='',cskey='',run_fn=false){
                 break;
             case 'edit':
                 sub_operation=idb_edit_bigfile_b(db,do_type,cskey,run_fn);
-                break;                
+                break;
             case 'clear':
                 sub_operation=idb_clear_bigfile_b(db,do_type,cskey,run_fn);
                 break;
@@ -362,6 +362,10 @@ function idb_option_generate_bigfile_b(cstype,select_id_name){
 }
 
 function idb_edit_bigfile_b(db,do_type='',cskey='',run_fn=false){
+    function sub_idb_edit_bigfile_b_run(){
+        idb_bigfile_b('read',do_type,cskey,run_fn);
+    }
+    
     async function sub_idb_edit_bigfile_b_append(otable){
         try {
             var objectStoreRequest = otable.add({
@@ -374,14 +378,16 @@ function idb_edit_bigfile_b(db,do_type='',cskey='',run_fn=false){
             await new Promise((resolve, reject) => {
                 objectStoreRequest.onsuccess = () => {
                     console.log('objectStoreRequest success');
+                    sub_idb_edit_bigfile_b_run();
                     resolve();
                 };
                 objectStoreRequest.onerror = (event) => {
                     console.log('objectStoreRequest error');
+                    sub_idb_edit_bigfile_b_run();
                     reject(event.target.error);
                 };
             });
-            idb_bigfile_b('read',do_type,cskey,run_fn);
+            //idb_bigfile_b('read',do_type,cskey,run_fn);
         } catch (error){
             console.error('Error appending to bigfile:', error);
             throw error;
@@ -406,7 +412,7 @@ function idb_edit_bigfile_b(db,do_type='',cskey='',run_fn=false){
                             new Promise((resolve, reject) => {
                                 deleteRequest.onsuccess = () => {
                                     console.log('deleted');
-                                    idb_bigfile_b('read',do_type,cskey,run_fn);
+                                    sub_idb_edit_bigfile_b_run();
                                     resolve();
                                 };
                                 deleteRequest.onerror = (event) => {
@@ -423,7 +429,7 @@ function idb_edit_bigfile_b(db,do_type='',cskey='',run_fn=false){
                             new Promise((resolve, reject) => {
                                 updateRequest.onsuccess = () => {
                                     console.log('updated');
-                                    idb_bigfile_b('read',do_type,cskey,run_fn);
+                                    sub_idb_edit_bigfile_b_run();
                                     resolve();
                                 };
                                 updateRequest.onerror = (event) => {

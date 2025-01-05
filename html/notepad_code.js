@@ -294,6 +294,7 @@ function idb_import_notepad(db){
 
     async function sub_idb_import_notepad_batch(otable){
         if (sub_idb_import_notepad_check()==false){return;}
+        
         for (let blxl=0,lent=import_list.length;blxl<lent;blxl++){
             var list_t=import_list[blxl].split('\n');
             var bldate=list_t.slice(-1)[0];

@@ -171,71 +171,128 @@ function first_source_set_bigfile(do_change=true){
     }
 }
 
-function upload_a_bigfile(){
+function upload_a_bigfile(do_split=false){
+    function sub_upload_a_bigfile_split_content(csstr){
+        var list_t,error_info;
+        [list_t,error_info]=delimiter_find_b(csstr);
+        if (error_info!==''){
+            alert(error_info);
+            return;
+        }
+        ofiles=[];
+        for (let item of list_t){
+            item=item.trimLeft().split('\n');
+            if (item.length<2){continue;}
+            var fname=item[0];
+            var fcontent=item.slice(1,).join('\n');
+            var one_file={'name':fname,'size':fcontent.length,'content':fcontent};
+            ofiles.push(one_file);
+        }
+        
+        file_no=0;
+        file_count=ofiles.length;
+        if (!confirm('是否将上传的文件分割为'+file_count+'部分？')){return;}
+        sub_upload_a_bigfile_one_split();
+    }
+    
     function sub_upload_a_bigfile_check(one_file){
         var error='';
         if (!one_file){
             error='未发现文件';
         }
-        if (one_file.size>20*1024*1024){
+        if (one_file.size>blmultiple*20*1024*1024){
             error='文件太大：'+one_file.name+' '+one_file.size;  
         }
         if (error!==''){
             alert(error);
         }        
-        return error;    
+        return error;
     }
-    
-    function sub_upload_a_bigfile_one_step(){
-        if (blxl>=bllen){return;}
-        if (sub_upload_a_bigfile_check(ofiles[blxl])!==''){return;}
-        file_name_bigfile_global=ofiles[blxl].name;
 
-        var reg_exp1=/\s*\(\d+\)(\.[^\.]+)$/;   //同名文件(1) - 保留注释
+    function sub_upload_a_bigfile_name_set(){
+        if (file_no>=file_count){return false;}
+        if (sub_upload_a_bigfile_check(ofiles[file_no])!==''){return false;}
+        file_name_bigfile_global=ofiles[file_no].name;
+
         if (file_name_bigfile_global.match(reg_exp1)){
             file_name_bigfile_global=file_name_bigfile_global.replace(reg_exp1,'$1');
         }
 
-        var reg_exp2=/\s*\(copy \d+\)(\.[^\.]+)$/;   //同名文件(copy 1) - 保留注释
         if (file_name_bigfile_global.match(reg_exp2)){
             file_name_bigfile_global=file_name_bigfile_global.replace(reg_exp2,'$1');
+        }    
+        return true;
+    }
+
+    function sub_upload_a_bigfile_one_split(){
+        if (!sub_upload_a_bigfile_name_set()){return;}
+
+        file_content_bigfile_global = ofiles[file_no].content;
+        if (file_no==file_count-1){
+            document.title=old_title;
+            idb_bigfile_b('edit','','',read_fn_bigfile);
+        } else {
+            file_no=file_no+1;
+            document.title=file_no+'/'+file_count+' - '+old_title;
+            idb_bigfile_b('edit','','',sub_upload_a_bigfile_one_split);
         }
+    }
+    
+    function sub_upload_a_bigfile_one_step(){
+        if (!sub_upload_a_bigfile_name_set()){return;}
 
         var textFileReader = new FileReader();
-        //textFileReader.readAsDataURL(ofiles[blxl]); //此行保留 - 保留注释
-        textFileReader.readAsText(ofiles[blxl]);    //此行保留 , 'UTF-8'); // 使用 readAsText 并指定编码为 UTF-8 - 保留注释
+        //textFileReader.readAsDataURL(ofiles[file_no]); //此行保留 - 保留注释
+        textFileReader.readAsText(ofiles[file_no]);    //此行保留 , 'UTF-8'); // 使用 readAsText 并指定编码为 UTF-8 - 保留注释
         textFileReader.onload = function (){
-            file_content_bigfile_global = this.result;
-            if (blxl==bllen-1){
-                document.title=old_title;
-                idb_bigfile_b('edit','','',read_fn_bigfile);
+            if (do_split){
+                sub_upload_a_bigfile_split_content(this.result);
             } else {
-                blxl=blxl+1;
-                document.title=blxl+'/'+bllen+' - '+old_title;
-                idb_bigfile_b('edit','','',sub_upload_a_bigfile_one_step);
+                file_content_bigfile_global = this.result;
+                if (file_no==file_count-1){
+                    document.title=old_title;
+                    idb_bigfile_b('edit','','',read_fn_bigfile);
+                } else {
+                    file_no=file_no+1;
+                    document.title=file_no+'/'+file_count+' - '+old_title;
+                    idb_bigfile_b('edit','','',sub_upload_a_bigfile_one_step);
+                }
             }
         };
         
         textFileReader.onerror = function(event){
             // 读取文件出错时执行的代码
-            alert('读取文件时发生错误: '+[blxl,bllen,file_name_bigfile_global, event.target.error]); //不支持文件名中含有.号 - 保留注释
+            alert('读取文件时发生错误: '+[file_no,file_count,file_name_bigfile_global, event.target.error]); //不支持文件名中含有.号 - 保留注释
         };
     }
     
     var ofiles=document.getElementById('input_upload_bigfile').files;
-    var bllen=ofiles.length;
-    if (bllen>50){
+    var file_count=ofiles.length;
+    if (file_count>50){
         alert('文件超过50个');
         return;
+    }
+    
+    if (do_split){
+        var blmultiple=10;
+        file_count=1;    //只读取第1个文件 - 保留注释
+        var blcaption='分割';
+    } else {
+        var blmultiple=1;
+        var blcaption='';
     }
 
     for (let one_file of ofiles){
         if (sub_upload_a_bigfile_check(one_file)!==''){return;}
     }
 
-    if (!confirm('是否上传 '+bllen+' 个文件？')){return;}
-    var blxl=0;
+    if (!confirm('是否'+blcaption+'上传 '+file_count+' 个文件？')){return;}
+    var file_no=0;
     var old_title=document.title;
+    
+    var reg_exp1=/\s*\(\d+\)(\.[^\.]+)$/;   //同名文件(1) - 保留注释
+    var reg_exp2=/\s*\(copy \d+\)(\.[^\.]+)$/;   //同名文件(copy 1) - 保留注释
+
     sub_upload_a_bigfile_one_step();
 }
 
