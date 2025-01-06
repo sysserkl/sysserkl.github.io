@@ -67,6 +67,7 @@ function menu_bigfile(){
     klmenu_select_sort_b('select_sort_type_bigfile',['','文件名','内容','大小','日期'],str_t,'sort_bigfile',true,true,[],4),
     '<span class="span_menu" onclick="'+str_t+'refresh_bigfile();">refresh</span>',
     '<span class="span_menu" onclick="'+str_t+'clear_data_bigfile();">清空数据库</span>',
+    '<span class="span_menu" onclick="'+str_t+'merge_files_bigfile();">合并导出当前文件内容</span>',
     ];
 
     var klmenu_config=root_font_size_menu_b(str_t);
@@ -477,6 +478,36 @@ function html_get_bigfile(is_render=false,is_two_files=true){
     console.log('included files',included_files);
     
     idb_bigfile_b('read','filedict',included_files,sub_html_get_bigfile_done);
+}
+
+function merge_files_bigfile(){
+    function sub_merge_files_bigfile_done(csdict){
+        var bldelimiter=delimiter_generate_b(10).trim();
+        
+        var result_t=[];
+        var bllen=0;
+        var blcount=0;
+        for (let key in csdict){
+            result_t.push(bldelimiter);
+            result_t.push(key.slice(2,));
+            result_t.push(csdict[key]);
+            bllen=bllen+csdict[key].length;
+            blcount=blcount+1;
+        }
+
+        var save_name='file_merge_'+today_str_b('dt','','','_',10)+'.txt';
+        if (!confirm('是否合并当前 '+blcount+'/'+current_data_bigfile_global.length+' 个文件的合计长度为 '+bllen+' 的内容导出为 '+save_name+'？')){return;}
+
+        string_2_txt_file_b(result_t.join('\n'),save_name,'txt');
+    }
+    
+    var fname_list=[];
+    for (let item of current_data_bigfile_global){
+        fname_list.push(item[0][1]);
+    }
+    
+    idb_bigfile_b('read','filedict',fname_list,sub_merge_files_bigfile_done);
+
 }
 
 function html_reg_exp_bigfile(){

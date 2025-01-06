@@ -1052,6 +1052,11 @@ function local_storage_all_b(cstype='',key_list=[],add_delimiter=true){
 
 function delimiter_generate_b(cscontent,cstype=''){
     var affix=(cstype=='brief'?'--':'==');
+    
+    if (typeof cscontent == 'number'){  //日期_时间_随机数字 - 保留注释
+        return affix+' 分隔行 '+today_str_b('dt','','','_',cscontent)+' '+affix+'\n';
+    }
+    
     var separation=affix+' 分隔行 '+parseInt(Math.random()*9999999)+' '+affix+'\n';
     while (true){
         if (cscontent.includes(separation)){
@@ -1223,7 +1228,7 @@ function array_squash_b(csarray,csmax=0.5){
     return bljg;
 }
 
-function today_str_b(cstype='d',delimiter1='-',delimiter2=':',delimiter3=' '){
+function today_str_b(cstype='d',delimiter1='-',delimiter2=':',delimiter3=' ',rnd_len=0){
     var theday=new Date();
     var today='';
     if (cstype.includes('d')){
@@ -1232,6 +1237,11 @@ function today_str_b(cstype='d',delimiter1='-',delimiter2=':',delimiter3=' '){
     if (cstype.includes('t')){
         today=today+(today==''?'':delimiter3)+('0'+theday.getHours()).slice(-2)+delimiter2+('0'+theday.getMinutes()).slice(-2)+delimiter2+('0'+theday.getSeconds()).slice(-2);
         today=today.trim();
+    }
+    if (rnd_len>0){
+        var blrnd=parseInt(Math.random()*(10**rnd_len));
+        blrnd=('0'.repeat(rnd_len)+blrnd).slice(-1*rnd_len,);
+        today=today+(today==''?'':delimiter3)+blrnd;
     }
     return today;
 }
@@ -4298,7 +4308,7 @@ function key_location_diff_b(csarr){
 }
 
 function readlater_start_year_b(){
-    return 2019;
+    return 2020;
 }
 
 function delimiter_get_b(csdelimiter){
