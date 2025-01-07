@@ -2510,6 +2510,12 @@ function web_href_key_b(cskey,cstype,encode=false){
         case 's':
             cskey=cskey.replace(new RegExp(' ','g'),'\\s');
             break;
+        case '5':
+        case '_':
+            if (cskey.includes(' ')){
+                cskey=cskey.split(' ').join('_');
+            }        
+            break;
     }
     if (encode){
         return encodeURIComponent(cskey);

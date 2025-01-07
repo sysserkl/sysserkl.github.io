@@ -1,6 +1,6 @@
 var search_sites_list_global=[
 //left_part,right_part,key_word_type,color,site_name,(c:check，用在usescript中；p:proxy b:button；0:important；n:without key, just link；l:toLowerCase()),category,title - 保留注释
-//key_word_type: 1+, 2-,3\s - 保留注释
+//key_word_type: 1+, 2-,3\s, 4gbk, 5_ - 保留注释
 ['https://cn.bing.com/translator/','',0,'','BT','n0','English',''],
 ['https://cn.bing.com/dict/search?q=','',0,'','Bing(cn)','c0','English',''],
 ['https://dict.youdao.com/search?le=eng&q=','',0,'','Youdao','c0','English',''],
@@ -26,8 +26,10 @@ var search_sites_list_global=[
 ['https://www.thefreedictionary.com/','',0,'#0099ff','TFD','0','English',''],
 ['https://en.wiktionary.org/wiki/','',0,'#6666cc','Wiktionary','p0','English',''],
 ['https://www.wordhippo.com/what-is/the-meaning-of-the-word/','.html',1,'','wordhippo','0','English',''], 
+['https://www.wordow.com/english/dictionary/','',0,'','wordow','','English',''],
 ['https://www.wordreference.com/definition/','',0, 'cadetblue','WR','0','English',''],
 ['https://www.wordreference.com/enzh/','',0,'','WR_CN','0','English',''],
+['https://www.wordsense.eu/','/',5,'','wordsense','','English',''],
 ['https://www.yourdictionary.com/','',0,'#990033','YourDictionary','','English',''],
 
 ['https://www.merriam-webster.com/thesaurus/','',0,'#00ff33','Merriam-Webster_Thesaurus','','English',''],
