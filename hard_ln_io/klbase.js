@@ -4574,7 +4574,7 @@ function import_arr_b(csstr,var_name,is_csv=false,run_fn_onsuccess=false,run_fn_
 }
 
 function slice_range_get_b(cslen){
-    var blrange=prompt('输入分割范围0,'+cslen+'：');
+    var blrange=prompt('输入分割范围：0,'+cslen+'：');
     if (blrange==null){return false;}
         
     blrange=blrange.replace(/\s/g,'').split(',');
@@ -4590,6 +4590,25 @@ function slice_range_get_b(cslen){
         blrange[1]=parseInt(blrange[1]);    
     }
     return blrange;
+}
+
+function array_split_by_range_b(arr_name,run_fn=false){
+    if (eval('typeof '+arr_name) == 'undefined'){return;}
+    
+    var arr_list=eval(arr_name);
+    var bllen=arr_list.length;
+    if (bllen<2){return;}
+
+    var blrange=slice_range_get_b(bllen);
+    if (blrange===false){return;}
+
+    if (confirm('是否保留当前结果的 '+blrange+' 部分？')){
+        arr_list=arr_list.slice(blrange[0],blrange[1]);
+        eval(arr_name+'=arr_list');
+        if (typeof run_fn == 'function'){
+            run_fn();
+        }
+    }
 }
 
 function file_date_paramter_refresh_b(){

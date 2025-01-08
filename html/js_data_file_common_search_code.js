@@ -315,16 +315,11 @@ function upload_data_file_from_bigfile_common(){
 }
 
 function split_current_arr_common(){
-    var bllen=js_data_current_common_search_global.length;
-    if (bllen<2){return;}
-
-    var blrange=slice_range_get_b(bllen);
-    if (blrange===false){return;}
-
-    if (confirm('是否保留当前结果的 '+blrange+' 部分？')){
-        js_data_current_common_search_global=js_data_current_common_search_global.slice(blrange[0],blrange[1]);
+    function sub_split_current_arr_common_refresh(){
         current_len_refresh_common();
+        page_common();
     }
+    array_split_by_range_b('js_data_current_common_search_global',sub_split_current_arr_common_refresh);
 }
 
 function upload_data_files_result_common(csarr=false){

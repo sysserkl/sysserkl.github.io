@@ -356,6 +356,7 @@ function menu_seen(){
 
     var klmenu_config=[
     load_sentence_menu_b(str_t),
+    '<span class="span_menu" onclick="'+str_t+'split_current_arr_seen();">当前结果数组分割</span>',
     '<span class="span_menu" onclick="'+str_t+'host_count_seen(\'status\');">当前条件 host count</span>',
     select_delete_type_generate_rlater_b(),
     '<span class="span_menu" onclick="'+str_t+'rlater_links_get_seen();">复制当前页面链接</span>',
@@ -384,6 +385,10 @@ function menu_seen(){
     
     sort_type.sort(randomsort_b);
     document.getElementById('select_raw_sort_id_seen').value=sort_type[0];
+}
+
+function split_current_arr_seen(){
+    array_split_by_range_b('selenium_enwords_current_global',page_seen);
 }
 
 function rlater_links_get_seen(){
@@ -507,7 +512,7 @@ function search_seen(cskeys='',margin_id=-1){
     }
 }
 
-function page_seen(csno){
+function page_seen(csno=1){
     var cslen=selenium_enwords_current_global.length;
     var bljg=page_combination_b(cslen,rows_per_page_seen_global,csno,'page_seen','locate_seen',false,1,10);  
     //-----------------------
