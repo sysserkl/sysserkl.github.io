@@ -8,361 +8,96 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Wed, 08 Jan 2025 12:45:41 +0800</lastBuildDate>
-<item><title>Religious Leaders Experiment With AI In Sermons - Slashdot</title><link>https://slashdot.org/story/25/01/08/0015223/religious-leaders-experiment-with-ai-in-sermons</link></item>
-<item><title>Science Paper Piracy Site Sci-Hub Shares Lots of Retracted Papers - Slashdot</title><link>https://yro.slashdot.org/story/25/01/07/238232/science-paper-piracy-site-sci-hub-shares-lots-of-retracted-papers</link></item>
-<item><title>attempts by publishers - Slashdot</title><link>https://science.slashdot.org/story/16/05/05/1613206/sci-hub-faces-millions-of-dollars-in-damages-elsevier-complaint-shuts-down-domain</link></item>
-<item><title>Man Used ChatGPT To Plan Las Vegas Cybertruck Blast - Slashdot</title><link>https://yro.slashdot.org/story/25/01/08/0019223/man-used-chatgpt-to-plan-las-vegas-cybertruck-blast</link></item>
-<item><title>Lenovo Officially Announces the Legion Go S Handheld With SteamOS - Slashdot</title><link>https://mobile.slashdot.org/story/25/01/07/2256243/lenovo-officially-announces-the-legion-go-s-handheld-with-steamos</link></item>
-<item><title>Lenovo&amp;#39;s Latest Laptop Has a Rollable OLED Screen - Slashdot</title><link>https://hardware.slashdot.org/story/25/01/07/2238228/lenovos-latest-laptop-has-a-rollable-oled-screen</link></item>
-<item><title>Review Roundup: OnePlus 13 - Slashdot</title><link>https://mobile.slashdot.org/story/25/01/07/2220242/review-roundup-oneplus-13</link></item>
-<item><title>Nvidia Launches RTX 50 Blackwell GPUs: From the $2,000 RTX 5090 To the $549 RTX - Slashdot</title><link>https://hardware.slashdot.org/story/25/01/07/2150223/nvidia-launches-rtx-50-blackwell-gpus-from-the-2000-rtx-5090-to-the-549-rtx</link></item>
-<item><title>Big Landlord Settles With US, Will Cooperate In Price-Fixing Investigation - Slashdot</title><link>https://yro.slashdot.org/story/25/01/07/2144217/big-landlord-settles-with-us-will-cooperate-in-price-fixing-investigation</link></item>
-<item><title>Are We Entering an AI Price-Fixing Dystopia? - Slashdot</title><link>https://slashdot.org/story/24/08/11/1910228/are-we-entering-an-ai-price-fixing-dystopia</link></item>
-<item><title>Thailand Bans Imports of Plastic Waste To Curb Toxic Pollution - Slashdot</title><link>https://news.slashdot.org/story/25/01/07/1933220/thailand-bans-imports-of-plastic-waste-to-curb-toxic-pollution</link></item>
-<item><title>Hackers Claim Massive Breach of Location Data Giant, Threaten To Leak Data - Slashdot</title><link>https://it.slashdot.org/story/25/01/07/1919247/hackers-claim-massive-breach-of-location-data-giant-threaten-to-leak-data</link></item>
-<item><title>Crunchyroll Is Getting (Back) Into the Manga App Game - Slashdot</title><link>https://slashdot.org/story/25/01/07/1916224/crunchyroll-is-getting-back-into-the-manga-app-game</link></item>
-<item><title>Chinese Venture Capitalists Force Failed Founders On To Debtor Blacklist - Slashdot</title><link>https://news.slashdot.org/story/25/01/07/1832212/chinese-venture-capitalists-force-failed-founders-on-to-debtor-blacklist</link></item>
-<item><title>AI Startup Anthropic Raising Funding Valuing it at $60 Billion - Slashdot</title><link>https://slashdot.org/story/25/01/07/1820244/ai-startup-anthropic-raising-funding-valuing-it-at-60-billion</link></item>
-<item><title>Meta Ends Fact-Checking on Facebook, Instagram in Free-Speech Pitch - Slashdot</title><link>https://tech.slashdot.org/story/25/01/07/189242/meta-ends-fact-checking-on-facebook-instagram-in-free-speech-pitch</link></item>
-<item><title>Popular DNA Sequencer Left Vulnerable By 7-Year-Old Firmware, Unfixed Security Flaws - Slashdot</title><link>https://it.slashdot.org/story/25/01/07/1726258/popular-dna-sequencer-left-vulnerable-by-7-year-old-firmware-unfixed-security-flaws</link></item>
-<item><title>America Is Stuck With an Elevator Crisis - Slashdot</title><link>https://news.slashdot.org/story/25/01/07/023245/america-is-stuck-with-an-elevator-crisis?sbsrc=md</link></item>
-<item><title>Millions of Windows 10 PCs Face Security Disaster in 2025 When Microsoft Ends Support - Slashdot</title><link>https://tech.slashdot.org/story/25/01/06/0040246/millions-of-windows-10-pcs-face-security-disaster-in-2025-when-microsoft-ends-support?sbsrc=md</link></item>
-<item><title>Unemployed Office Workers Are Having a Harder Time Finding New Jobs - Slashdot</title><link>https://news.slashdot.org/story/25/01/06/1553247/unemployed-office-workers-are-having-a-harder-time-finding-new-jobs?sbsrc=md</link></item>
-<item><title>Microsoft Would Really Like You To Stop Using Windows 10 This Year - Slashdot</title><link>https://tech.slashdot.org/story/25/01/06/1713234/microsoft-would-really-like-you-to-stop-using-windows-10-this-year?sbsrc=md</link></item>
-<item><title>US Adds Tencent, CATL To List of Chinese Firms Aiding Beijing&amp;#39;s Military - Slashdot</title><link>https://yro.slashdot.org/story/25/01/06/2216244/us-adds-tencent-catl-to-list-of-chinese-firms-aiding-beijings-military?utm_source=rss0.9mainlinkanon&amp;utm_medium=feed&amp;sbsrc=yro</link></item>
-<item><title>In 2025, People Will Try Living in This Underwater Habitat - IEEE Spectrum</title><link>https://spectrum.ieee.org/ocean-engineering</link></item>
-<item><title>Lenovo Makes Rollable OLED Screens a Laptop Reality - IEEE Spectrum</title><link>https://spectrum.ieee.org/lenovo-rollable-laptop</link></item>
-<item><title>Ambitious Projects Could Reshape Geopolitics - IEEE Spectrum</title><link>https://spectrum.ieee.org/geopolitics-and-technology</link></item>
-<item><title>A Hybrid Car That’s Also a Supercar - IEEE Spectrum</title><link>https://spectrum.ieee.org/hybrid-supercars</link></item>
-<item><title>As EV Sales Stall, Plug-In Hybrids Get a Reboot - IEEE Spectrum</title><link>https://spectrum.ieee.org/plug-in-hybrid</link></item>
-<item><title>SwitchBot Introduces Modular Mobile Home Robot - IEEE Spectrum</title><link>https://spectrum.ieee.org/switchbot-k20-pro-ces</link></item>
-<item><title>CES 2025 Preview: Needleless Injections, E-Skis, and More - IEEE Spectrum</title><link>https://spectrum.ieee.org/ces-2025</link></item>
-<item><title>Reversible Computing Escapes the Lab in 2025 - IEEE Spectrum</title><link>https://spectrum.ieee.org/reversible-computing</link></item>
-<item><title>Inside an American Rare-Earth Boomtown - IEEE Spectrum</title><link>https://spectrum.ieee.org/rare-earth-elements-2670490876</link></item>
-<item><title>IEEE Young Professionals Talked Sustainability Tech at Climate Week NYC - IEEE Spectrum</title><link>https://spectrum.ieee.org/climate-change-ieee-yp-panel</link></item>
-<item><title>Video Friday: Sleepy Robot Baby - IEEE Spectrum</title><link>https://spectrum.ieee.org/video-friday-sleepy-robot-baby</link></item>
-<item><title>This Year, RISC-V Laptops Really Arrive - IEEE Spectrum</title><link>https://spectrum.ieee.org/risc-v-laptops</link></item>
-<item><title>Build a Better DIY Seismometer - IEEE Spectrum</title><link>https://spectrum.ieee.org/build-a-better-diy-seismometer</link></item>
-<item><title>Nanoimprint Lithography Aims to Take on EUV - IEEE Spectrum</title><link>https://spectrum.ieee.org/nanoimprint-lithography</link></item>
-<item><title>Remembering Former IEEE President Emerson Pugh - IEEE Spectrum</title><link>https://spectrum.ieee.org/in-memoriam-emerson-pugh</link></item>
-<item><title>The Top 10 AI Stories of 2024 - IEEE Spectrum</title><link>https://spectrum.ieee.org/top-ai-stories-2024</link></item>
-<item><title>IEEE Continues to Strengthen Its Research Integrity Process - IEEE Spectrum</title><link>https://spectrum.ieee.org/ieee-research-integrity-process</link></item>
-<item><title>Rubber Duck Recognition Day - The Strong</title><link>https://www.museumofplay.org/event/rubber-duck-recognition-day/</link></item>
-<item><title>Play Lab: Secret Messages - The Strong</title><link>https://www.museumofplay.org/event/play-lab-secret-messages/2025-01-06/</link></item>
-<item><title>Play Lab: Fingerprint Art - The Strong</title><link>https://www.museumofplay.org/event/play-lab-fingerprint-art/2025-01-13/</link></item>
-<item><title>SCOOBY-DOO! Mansion Mayhem Member Preview - The Strong</title><link>https://www.museumofplay.org/event/scooby-doo-mansion-mayhem-member-preview/</link></item>
-<item><title>SCOOBY-DOO! Mansion Mayhem Exhibit Opening Event - The Strong</title><link>https://www.museumofplay.org/event/scooby-doo-mansion-mayhem-exhibit-opening-event/2025-01-18/</link></item>
-<item><title>Play Lab: Mystery Bag Challenge - The Strong</title><link>https://www.museumofplay.org/event/play-lab-mystery-bag-challenge/2025-01-20/</link></item>
-<item><title>MLK, Jr. Day of Compassion - The Strong</title><link>https://www.museumofplay.org/event/mlk-jr-day-of-compassion/</link></item>
-<item><title>Play Lab: Invisible Ink - The Strong</title><link>https://www.museumofplay.org/event/play-lab-invisible-ink/2025-01-27/</link></item>
-<item><title>SCOOBY-DOO! Mansion Mayhem - The Strong</title><link>https://www.museumofplay.org/venue/scooby-doo-mansion-mayhem/</link></item>
-<item><title>The Last Of Us - Screen Rant</title><link>https://screenrant.com/db/tv-show/the-last-of-us/</link></item>
-<item><title>The Last Of Us Is Already Hinting At How Much Ellie Will Change In Season 2 - Screen Rant</title><link>https://screenrant.com/the-last-of-us-season-2-ellie-nora-scene-tease-character-change-explainer/</link></item>
-<item><title>The Batman - Part II - Screen Rant</title><link>https://screenrant.com/db/movie/the-batman-part-ii/</link></item>
-<item><title>I’m So Glad To Hear Matt Reeves’ Newest The Batman 2 Comments After The DC Sequel’s Release Delay - Screen Rant</title><link>https://screenrant.com/the-batman-2-matt-reeves-newest-comments-glad-after-delay-op-ed/</link></item>
-<item><title>Severance Season 2 Rotten Tomatoes Score Debut Beats Near-Perfect Season 1 - Screen Rant</title><link>https://screenrant.com/severance-season-2-rotten-tomatoes-score-revealed/</link></item>
-<item><title>American Psycho - Screen Rant</title><link>https://screenrant.com/db/movie/american-psycho/</link></item>
-<item><title>American Psycho Author Says New Reboot Movie With Austin Butler Is &amp;quot;Fake News&amp;quot; - Screen Rant</title><link>https://screenrant.com/american-psycho-movie-reboot-bret-easton-ellis-response-fake/</link></item>
-<item><title>The Force Awakens Walked Back A Subtle George Lucas Change, Turning Blasters Into The Ultimate Nightmare Fuel - Screen Rant</title><link>https://screenrant.com/star-wars-force-awakens-blasters-change-nightmare-fuel-factoid/</link></item>
-<item><title>David Miller - Screen Rant</title><link>https://screenrant.com/author/david-miller/</link></item>
-<item><title>10 Best Fantasy Books About Magic School - Screen Rant</title><link>https://screenrant.com/best-fantasy-books-magic-school-list/</link></item>
-<item><title>The Last Showgirl - Screen Rant</title><link>https://screenrant.com/db/movie/the-last-showgirl/</link></item>
-<item><title>Where To Watch The Last Showgirl: Showtimes &amp; Streaming Status - Screen Rant</title><link>https://screenrant.com/where-to-watch-the-last-showgirl-showtimes-streaming/</link></item>
-<item><title>Heart Eyes Trailer: Scream &amp; Totally Killer Stars Are A Couple Hunted By Valentine&amp;#39;s Day Slasher - Screen Rant</title><link>https://screenrant.com/heart-eyes-movie-trailer-official/</link></item>
-<item><title>David Schwimmer&amp;#39;s Horror Debut In Goosebumps: The Vanishing Gets Exciting Tease From Star &amp; EPs: &amp;quot;It Gets Dark&amp;quot; - Screen Rant</title><link>https://screenrant.com/goosebumps-the-vanishing-david-schwimmer-horror-debut-creator-showrunner-tease/</link></item>
-<item><title>Why Goosebumps Season 1&amp;#39;s Cliffhanger Won&amp;#39;t Be Resolved In New Anthology Season Explained By Creator &amp; Showrunner - Screen Rant</title><link>https://screenrant.com/goosebumps-season-1-cliffhanger-season-2-no-resolution-why-creator-showrunner-explained/</link></item>
-<item><title>Moana 3 Chances Get Careful But Promising Response From Co-Director: &amp;quot;There&amp;#39;s A Lot Of Love For Moana&amp;quot; - Screen Rant</title><link>https://screenrant.com/moana-3-possibility-update-dana-ledoux-miller-response/</link></item>
-<item><title>Paul Heyman Addresses WWE&amp;#39;s Move To Netflix &amp; The Start Of A New Era: &amp;quot;How We Present The Product Must Change&amp;quot; - Screen Rant</title><link>https://screenrant.com/paul-heyman-wwe-netfix-era-comments/</link></item>
-<item><title>Shōgun&amp;#39;s Anna Sawai Comments On Potential Season 2 Return After Mariko&amp;#39;s Dramatic End - Screen Rant</title><link>https://screenrant.com/shogun-season-2-anna-sawai-mariko-return-response/</link></item>
-<item><title>Incredible SpongeBob SquarePants Video Updates Iconic Nosferatu Episode With Bill Skarsgård&amp;#39;s Count Orlok - Screen Rant</title><link>https://screenrant.com/nosferatu-2024-movie-spongebob-squarepants-crossover-video/</link></item>
-<item><title>SpongeBob SquarePants - Screen Rant</title><link>https://screenrant.com/db/tv-show/spongebob-squarepants/</link></item>
-<item><title>Jackie Chan&amp;#39;s Greatest Kung Fu Fantasy Movie Is The Best Live-Action Dragon Ball Adaptation We&amp;#39;re Going To Get - Screen Rant</title><link>https://screenrant.com/jackie-chan-the-forbidden-kingdom-journey-to-west-dragon-ball-op-ed/</link></item>
-<item><title>10 Comedy Movies That Will Also Make You Cry - Screen Rant</title><link>https://screenrant.com/comedy-movies-make-you-cry-list/</link></item>
-<item><title>Is The Front Man Il-nam’s Son? Squid Game Season 2 Theory Explained - Screen Rant</title><link>https://screenrant.com/squid-game-season-2-front-man-il-nam-son-player-001-theory/</link></item>
-<item><title>A Huge MCU Timeline Reveal Makes 1 Phase 5 Villain Way More Dangerous - Screen Rant</title><link>https://screenrant.com/mcu-kingpin-timeline-reveal-more-dangerous-explainer/</link></item>
-<item><title>Daredevil: Born Again - Screen Rant</title><link>https://screenrant.com/db/tv-show/daredevil-born-again/</link></item>
-<item><title>Brandon Howard - Screen Rant</title><link>https://screenrant.com/author/brandon-howard1/</link></item>
-<item><title>Sonic The Hedgehog Star Ben Schwartz Celebrates Massive Box Office Milestone By Reminiscing About The Ugly Sonic With Realistic Human Teeth - Screen Rant</title><link>https://screenrant.com/sonic-the-hedgehog-movie-franchise-1-billion-box-office-ben-schwartz-response/</link></item>
-<item><title>Anna Sawai Is Absolutely Right About Lady Mariko&amp;#39;s Possible Return In Shogun Season 2 - Screen Rant</title><link>https://screenrant.com/anna-sawai-shogun-season-2-lady-mariko-return-story-op-ed/</link></item>
-<item><title>City Of God Ending Explained - Screen Rant</title><link>https://screenrant.com/city-of-god-movie-ending-explained/</link></item>
-<item><title>Why Back To The Future 4 Never Happened - Screen Rant</title><link>https://screenrant.com/back-to-the-future-4-why-never-happened-explainer/</link></item>
-<item><title>Harlan Coben&amp;#39;s New 2025 Thriller Series Becomes Netflix Global Hit One Year After Fool Me Once - Screen Rant</title><link>https://screenrant.com/missing-you-2025-show-netflix-viewership-success-global-streaming-charts/</link></item>
-<item><title>We All Love the Hulk, And Now DC Comics Has Found Its Own Version Of the Hero - Screen Rant</title><link>https://screenrant.com/steel-black-lightning-new-costume-armor-powers-op-ed/</link></item>
-<item><title>Were Jason And Kimberly A Couple In Power Rangers? The Red And Pink Rangers’ History Explained - Screen Rant</title><link>https://screenrant.com/power-rangers-jason-kimberly-dated-couple-red-pink-ranger-explainer/</link></item>
-<item><title>Can Zombies Swim? The Walking Dead Creator Has a Compelling Answer to the Debate. - Screen Rant</title><link>https://screenrant.com/walking-dead-can-zombies-swim-water/</link></item>
-<item><title>The Walking Dead - Screen Rant</title><link>https://screenrant.com/tag/franchise/the-walking-dead/</link></item>
-<item><title>Scream 7 Filming Start Confirmed By Director With Emotional Post - Screen Rant</title><link>https://screenrant.com/scream-7-filming-start-update-kevin-williamson/</link></item>
-<item><title>5 Things To Remember Before Chicago Med Season 10 Winter 2025 Return - Screen Rant</title><link>https://screenrant.com/chicago-med-season-10-part-2-things-to-remember-list/</link></item>
-<item><title>10 MCU Avengers Characters Imagined In Disney&amp;#39;s Classic 2D Animation Style Art Is Surprisingly Perfect - Screen Rant</title><link>https://screenrant.com/mcu-heroes-disney-animation-redesigns-marvel-fan-art/</link></item>
-<item><title>Nightmare On Elm Street: Patricia Arquette Has One Major Condition For Potential Franchise Return - Screen Rant</title><link>https://screenrant.com/nightmare-on-elm-street-franchise-return-conditions-patricia-arquette/</link></item>
-<item><title>A Nightmare on Elm Street 3: Dream Warriors - Screen Rant</title><link>https://screenrant.com/db/movie/a-nightmare-on-elm-street-3-dream-warriors/</link></item>
-<item><title>The Painting In Outlander Season 7, Episode 15 Explained - Screen Rant</title><link>https://screenrant.com/outlander-season-7-episode-15-painting-expained/</link></item>
-<item><title>10 TV Shows That Never Should Have Had A Second Season - Screen Rant</title><link>https://screenrant.com/tv-shows-second-season-bad-idea-list/</link></item>
-<item><title>Stephen Holland - Screen Rant</title><link>https://screenrant.com/author/stephen-holland/</link></item>
-<item><title>Han Solo May Be a Scoundrel, But Star Wars Wants You to Know What a Softie the Hero Is - Screen Rant</title><link>https://screenrant.com/star-wars-han-solo-scoundrel-family-man-wife-factoid/</link></item>
-<item><title>Chris Hemsworth &amp; Tom Holland&amp;#39;s $94M Box Office Disappointment Becomes Netflix Global Hit 10 Years Later - Screen Rant</title><link>https://screenrant.com/in-the-heart-of-the-sea-netflix-viewership-global-success-streaming-charts/</link></item>
-<item><title>DreamWorks&amp;#39; 97% RT Animated Movie Marks A Very Important First For The Studio - Screen Rant</title><link>https://screenrant.com/wild-robot-dreamworks-a113-reference-factoid/</link></item>
-<item><title>Landman&amp;#39;s Controversial Scenes Look Set To Become Even Worse In The Season 1 Finale - Screen Rant</title><link>https://screenrant.com/landman-season-1-finale-controversial-scenes-ainsley-ryder-worse-op-ed/</link></item>
-<item><title>Ariana Grande&amp;#39;s Oscars 2025 Hopes For Wicked May Have Just Been Completely Dashed - Screen Rant</title><link>https://screenrant.com/wicked-ariana-grande-oscars-2025-best-supporting-actress-golden-globes-explainer/</link></item>
-<item><title>I’m Still Shocked Marvel Wasted One Of Their Best Actors 2 Times In 3 Years - Screen Rant</title><link>https://screenrant.com/marvel-best-actors-wasted-bill-skarsgard-wasted-eternals-deadpool-2-op-ed/</link></item>
-<item><title>5 Things To Remember Before Chicago Fire Season 13 Winter 2025 Return - Screen Rant</title><link>https://screenrant.com/chicago-fire-season-13-part-2-things-to-remember-list/</link></item>
-<item><title>US shifts over $100M in military aid from Israel, Egypt to Lebanon - Defense News</title><link>https://www.defensenews.com/global/mideast-africa/2025/01/07/us-shifts-over-100m-in-military-aid-from-israel-egypt-to-lebanon/</link></item>
-<item><title>Pentagon blacklists Chinese tech firms over alleged military ties - Defense News</title><link>https://www.defensenews.com/pentagon/2025/01/07/pentagon-blacklists-chinese-tech-firms-over-alleged-military-ties/</link></item>
-<item><title>Missile maker MBDA buys Safran’s stake in rocket-engine supplier Roxel - Defense News</title><link>https://www.defensenews.com/global/europe/2025/01/07/missile-maker-mbda-buys-safrans-stake-in-rocket-engine-supplier-roxel/</link></item>
-<item><title>Pentagon picks Kratos for hypersonic testbed program - Defense News</title><link>https://www.defensenews.com/pentagon/2025/01/07/pentagon-picks-kratos-for-hypersonic-testbed-program/</link></item>
-<item><title>British-led force to use AI in tracking Russia’s shadow fleet - Defense News</title><link>https://www.defensenews.com/global/europe/2025/01/07/british-led-force-to-use-ai-in-tracking-russias-shadow-fleet/</link></item>
-<item><title>German army gets nod to buy Israeli PULS rocket launchers - Defense News</title><link>https://www.defensenews.com/global/europe/2025/01/06/german-army-gets-nod-to-buy-israeli-puls-rocket-launchers/</link></item>
-<item><title>Laughlin says goodbye to last T-1 as Jayhawk retirement continues - Defense News</title><link>https://www.defensenews.com/air/2025/01/06/laughlin-says-goodbye-to-last-t-1-as-jayhawk-retirement-continues/</link></item>
-<item><title>I’m in the military, should I rent or buy my home? — Money Minute - Defense News</title><link>https://www.defensenews.com/video/2025/01/06/im-in-the-military-should-i-rent-or-buy-my-home-money-minute/</link></item>
-<item><title>Native American WWI troops to get Medal of Honor? | Defense News Weekly Full Episode 1.4.25 - Defense News</title><link>https://www.defensenews.com/video/2025/01/03/native-american-wwi-troops-to-get-medal-of-honor-defense-news-weekly-full-episode-1425/</link></item>
-<item><title>How many items are in this soldier’s winter rucksack? - Defense News</title><link>https://www.defensenews.com/video/2025/01/03/how-many-items-are-in-this-soldiers-winter-rucksack/</link></item>
-<item><title>WWI Native American Code Talkers get new look for Medal of Honor - Defense News</title><link>https://www.defensenews.com/video/2025/01/03/wwi-native-american-code-talkers-get-new-look-for-medal-of-honor/</link></item>
-<item><title>An amphibious assault ship that also launches jets? China now has one - Defense News</title><link>https://www.defensenews.com/video/2025/01/03/an-amphibious-assault-ship-that-also-launches-jets-china-now-has-one/</link></item>
-<item><title>What to know when procuring Linux laptops - Ubuntu blog</title><link>https://ubuntu.com/blog/what-to-know-when-procuring-linux-laptops</link></item>
-<item><title>Building RAG with enterprise open source AI infrastructure - Ubuntu blog</title><link>https://ubuntu.com/blog/rag-ai-infrastructure</link></item>
-<item><title>Life at Canonical: Victoria Antipova’s perspective as a new joiner in Product Marketing - Ubuntu blog</title><link>https://ubuntu.com/blog/life-at-canonical-victoria-antipovas-perspective-as-a-new-joiner-in-product-marketing</link></item>
-<item><title>What is patching automation? - Ubuntu blog</title><link>https://ubuntu.com/blog/what-is-patching-automation</link></item>
-<item><title>Amazon Is Doing A Really Big 4K Blu-Ray Sale - Kotaku</title><link>https://kotaku.com/amazon-4k-uhd-bluray-batman-dune-barbie-joker-godzilla-1851734723</link></item>
-<item><title>Nvidia&amp;#39;s Best New GeForce RTX 50-Series Graphics Card Costs $2,000 And Is An Absolute Power Hog - Kotaku</title><link>https://kotaku.com/nvidia-rtx-5090-5080-5070-prices-ces-2025-1851734041</link></item>
-<item><title>PlayStation 5 Is Getting A New Set Of Killer-Looking, All-Black Accessories - Kotaku</title><link>https://kotaku.com/ps5-black-portal-cover-plates-dualsense-edge-pulse-1851733979</link></item>
-<item><title>The Best Video Game Moments Of 2024 - Kotaku</title><link>https://kotaku.com/best-video-game-moment-2024-astro-bot-marvel-dragon-age-1851733392</link></item>
-<item><title>The Best Video Game Remakes And Remasters Of 2024 - Kotaku</title><link>https://kotaku.com/all-video-game-remakes-remasters-best-2024-ff7-rebirth-1851728879</link></item>
-<item><title>A Look Back At The Gaming Highs And Lows Of 2024 - Kotaku</title><link>https://kotaku.com/2024-video-games-playstation-xbox-nintendo-best-worst-1851729377</link></item>
-<item><title>The State Of The Nintendo Switch In 2024 - Kotaku</title><link>https://kotaku.com/nintendo-switch-2-state-of-year-review-piracy-zelda-1851728988</link></item>
-<item><title>New Xbox Controller Is Basically A Fancy PS5 Gamepad - Kotaku</title><link>https://kotaku.com/xbox-controller-ps5-hyperkin-competitor-dualsense-price-1851733419</link></item>
-<item><title>Our 27 Most Anticipated Games Of 2025 - Kotaku</title><link>https://kotaku.com/big-games-coming-out-2025-gta-6-borderlands-4-1851730256</link></item>
-<item><title>This Might Be Our First Real Look At The Improved Switch 2 Joy-Con - Kotaku</title><link>https://kotaku.com/nintendo-switch-2-joycon-price-leak-release-date-1851733208</link></item>
-<item><title>New &amp;#39;Handheld&amp;#39; Gaming PC Is So Big You Could Kill Someone With It - Kotaku</title><link>https://kotaku.com/astro-nitro-blaze-11-steam-deck-ces-2025-size-handheld-1851734392</link></item>
-<item><title>盖蒂和 Shutterstock 宣布合并 - Solidot</title><link>https://www.solidot.org/story?sid=80266</link></item>
-<item><title>中科院计划今年推出高性能 RISC-V 处理器香山 - Solidot</title><link>https://www.solidot.org/story?sid=80265</link></item>
-<item><title>西藏定日地震造成逾百人死亡 - Solidot</title><link>https://www.solidot.org/story?sid=80264</link></item>
-<item><title>开发者创造出基于噩梦难度 Doom 的可玩 CAPTCHA - Solidot</title><link>https://www.solidot.org/story?sid=80263</link></item>
-<item><title>安全公司建议不支持 Windows 11 的电脑安装 Linux - Solidot</title><link>https://www.solidot.org/story?sid=80262</link></item>
-<item><title>微软呼吁 Windows 10 用户换电脑 - Solidot</title><link>https://www.solidot.org/story?sid=80261</link></item>
-<item><title>罗马帝国大规模使用铅降低了欧洲居民的智商 - Solidot</title><link>https://www.solidot.org/story?sid=80260</link></item>
-<item><title>同样的食物为什么对每个人的影响不同 - Solidot</title><link>https://www.solidot.org/story?sid=80259</link></item>
-<item><title>日本 2024 年平均气温创新纪录 - Solidot</title><link>https://www.solidot.org/story?sid=80258</link></item>
-<item><title>1/10 新2型糖尿病可能是含糖饮料引起的 - Solidot</title><link>https://www.solidot.org/story?sid=80257</link></item>
-<item><title>AMD 宣布第二代掌机芯片 - Solidot</title><link>https://www.solidot.org/story?sid=80256</link></item>
-<item><title>美国国防部将腾讯列入中国军工公司名单 - Solidot</title><link>https://www.solidot.org/story?sid=80255</link></item>
-<item><title>英伟达宣布 GeForce RTX 50 系列显卡 - Solidot</title><link>https://www.solidot.org/story?sid=80254</link></item>
-<item><title>Steve Dompier 诞辰 79 周年 - Solidot</title><link>https://www.solidot.org/story?sid=80253</link></item>
-<item><title>戴尔杀死了 XPS、Inspiron、Latitude 等 PC 品牌名称 - Solidot</title><link>https://www.solidot.org/story?sid=80252</link></item>
-<item><title>气候危机严重破坏地球水循环 - Solidot</title><link>https://www.solidot.org/story?sid=80251</link></item>
-<item><title>物理学家首次测量电子的量子几何 - Solidot</title><link>https://www.solidot.org/story?sid=80250</link></item>
-<item><title>因 AI 使用上的争议期刊编辑集体辞职 - Solidot</title><link>https://www.solidot.org/story?sid=80249</link></item>
-<item><title>更多美国电信公司披露被中国黑客入侵 - Solidot</title><link>https://www.solidot.org/story?sid=80248</link></item>
-<item><title>Porch Piracy: Washington DC Leads The Nation In Package Theft - Science 2.0</title><link>https://www.science20.com/content/porch_piracy_washington_dc_leads_the_nation_in_package_theft</link></item>
-<item><title>A Pill That Mimics The Benefits Of Fasting Without Diets Or Mimetic Mumbo-Jumbo? - Science 2.0</title><link>https://www.science20.com/content/a_pill_that_mimics_the_benefits_of_fasting_without_diets_or_mimetic_mumbojumbo</link></item>
-<item><title>Government Golden Fleece: Acupuncture And Music Therapy For Cancer Patients? - Science 2.0</title><link>https://www.science20.com/content/government_golden_fleece_acupuncture_and_music_therapy_for_cancer_patients</link></item>
-<item><title>Climate Shifts May Bring New Apple Growing Areas - Science 2.0</title><link>https://www.science20.com/news_staff/climate_shifts_may_bring_new_apple_growing_areas-257275</link></item>
-<item><title>Homeopathic Chemophobia - Pregnant Women Impacted Most - Science 2.0</title><link>https://www.science20.com/hank_campbell/homeopathic_chemophobia_pregnant_women_impacted_most-257274</link></item>
-<item><title>Gen Z In France Hates Alcohol - And That&amp;#39;s Good For Public Health - Science 2.0</title><link>https://www.science20.com/content/gen_z_in_france_hates_alcohol_and_thats_good_for_public_health</link></item>
-<item><title>Holiday Chess Riddle - Science 2.0</title><link>https://www.science20.com/tommaso_dorigo/holiday_chess_riddle-257272</link></item>
-<item><title>Everyone Knows Alcohol Causes Cancer - The US Government Finally Says It - Science 2.0</title><link>https://www.science20.com/content/everyone_knows_alcohol_causes_cancer_the_us_government_finally_says_it</link></item>
-<item><title>Homeopathic Effects Of Pesticides? And Climate Change Will Make It Worse - Science 2.0</title><link>https://www.science20.com/hank_campbell/homeopathic_effects_of_pesticides_and_climate_change_will_make_it_worse-257270</link></item>
-<item><title>Why Measure The Top Quark Production Cross Section? - Science 2.0</title><link>https://www.science20.com/tommaso_dorigo/why_measure_the_top_quark_production_cross_section-257269</link></item>
-<item><title>Organic Believer Poisons Herself With A Copper Sulfate Rectal Enema - Science 2.0</title><link>https://www.science20.com/hank_campbell/organic_believer_poisons_herself_with_a_copper_sulfate_rectal_enema-257268</link></item>
-<item><title>Wash Your Hands, Organic Restaurants, And Quit Giving People Norovirus - Science 2.0</title><link>https://www.science20.com/content/wash_your_hands_organic_restaurants_and_quit_giving_people_norovirus</link></item>
-<item><title>Epidemiologists Can Link Weedkillers To Your Prostate Cancer Even If You Were Never Exposed - Science 2.0</title><link>https://www.science20.com/hank_campbell/epidemiologists_can_link_weedkillers_to_your_prostate_cancer_even_if_you_were_never_exposed-257266</link></item>
-<item><title>The Left Abandoning Their War On Vaccines and Nuclear Energy Will Bring a Golden Age To America - Science 2.0</title><link>https://www.science20.com/content/the_left_abandoning_their_war_on_vaccines_and_nuclear_energy_will_bring_a_golden_age_to_america</link></item>
-<item><title>What Did Biden Know And When Did He Know It About The COVID-19 Origin? - Science 2.0</title><link>https://www.science20.com/content/what_did_biden_know_and_when_did_he_know_it_about_the_covid19_origin</link></item>
-<item><title>The Buried Lottery - Science 2.0</title><link>https://www.science20.com/tommaso_dorigo/the_buried_lottery-257263</link></item>
-<item><title>For Christmas, 600,000 Kids Should Get A Biopesticide Against Mosquitoes That Kill - Science 2.0</title><link>https://www.science20.com/hank_campbell/for_christmas_600000_kids_should_get_a_biopesticide_against_mosquitoes_that_kill-257262</link></item>
-<item><title>Progressives Are Outraged That Mexico Sided With Science On GMOs - Science 2.0</title><link>https://www.science20.com/content/progressives_are_outraged_that_mexico_sided_with_science_on_gmos</link></item>
-<item><title>Environmentalists Should Embrace &amp;#39;eDNA&amp;#39; Technology - Science 2.0</title><link>https://www.science20.com/hank_campbell/environmentalists_should_embrace_edna_technology-257260</link></item>
-<item><title>Organic Food Provides Food Poisoning At Los Angeles &amp;#39;Best Restaurants&amp;#39; Event - Science 2.0</title><link>https://www.science20.com/content/organic_food_provides_food_poisoning_at_los_angeles_best_restaurants_event</link></item>
-<item><title>Twenty Years Blogging - Science 2.0</title><link>https://www.science20.com/tommaso_dorigo/twenty_years_blogging-257258</link></item>
-<item><title>Gift-Giving Is In Our Nature - Science 2.0</title><link>https://www.science20.com/hank_campbell/giftgiving_is_in_our_nature-257256</link></item>
-<item><title>War On Science: Mice Are Not Little People Even If An Academic Hates Glyphosate - Science 2.0</title><link>https://www.science20.com/hank_campbell/war_on_science_mice_are_not_little_people_even_if_an_academic_hates_glyphosate-257257</link></item>
-<item><title>Red Alert Fatigue - Why Americans Are Getting Immune To Political Hysteria - Science 2.0</title><link>https://www.science20.com/the_conversation/red_alert_fatigue_why_americans_are_getting_immune_to_political_hysteria-257254</link></item>
-<item><title>She&amp;#39;s Not Going To Propose This Holiday And Here&amp;#39;s Why - Science 2.0</title><link>https://www.science20.com/the_conversation/shes_not_going_to_propose_this_holiday_and_heres_why-257255</link></item>
-<item><title>Trump Bump Economic Confidence? Republican Presidents Correlated To Fertility Boost - Science 2.0</title><link>https://www.science20.com/content/trump_bump_economic_confidence_republican_presidents_correlated_to_fertility_boost</link></item>
-<item><title>Last Minute Christmas Gift: Build An Orgonne Accumulator - Science 2.0</title><link>https://www.science20.com/content/last_minute_christmas_gift_build_an_orgonne_accumulator</link></item>
-<item><title>California&amp;#39;s Dairy State of Emergency Is Because They Deny Pasteurization Science Like They Denied Vaccines - Science 2.0</title><link>https://www.science20.com/content/californias_dairy_state_of_emergency_is_because_they_deny_pasteurization_science_like_they_denied_vaccines</link></item>
-<item><title>Christmas Tree Syndrome: America Is So Healthy Air Filter Companies Need To Claim Christmas Trees Are Harming You - Science 2.0</title><link>https://www.science20.com/content/christmas_tree_syndrome_america_is_so_healthy_air_filter_companies_need_to_claim_christmas_trees_are_harming_you</link></item>
-<item><title>A Voice in the Modern Wilderness - Law &amp; Liberty</title><link>https://lawliberty.org/podcast/a-voice-in-the-modern-wilderness/</link></item>
-<item><title>Banned from Feeding the Hungry - Law &amp; Liberty</title><link>https://lawliberty.org/banned-from-feeding-the-hungry/</link></item>
-<item><title>Conservative Progressivism? - Law &amp; Liberty</title><link>https://lawliberty.org/conservative-progressivism/</link></item>
-<item><title>If Adam Smith Met Max Weber - Law &amp; Liberty</title><link>https://lawliberty.org/book-review/if-adam-smith-met-max-weber/</link></item>
-<item><title>刀剑神域II澄空外挂简体 - 射手网(伪)</title><link>http://assrt.net/xml/sub/665/665999.xml</link></item>
-<item><title>夏威夷神探第六季第九集/Magnum, P.I. - S06E09 - 射手网(伪)</title><link>http://assrt.net/xml/sub/665/665997.xml</link></item>
-<item><title>夏威夷神探第四季第三集/Magnum, P.I. - S04E03 - 射手网(伪)</title><link>http://assrt.net/xml/sub/665/665993.xml</link></item>
-<item><title>夏威夷神探第四季第十九集/Magnum, P.I. - S04E19 - 射手网(伪)</title><link>http://assrt.net/xml/sub/665/665988.xml</link></item>
-<item><title>/The.World.According.to.Garp.1982.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/665/665974.xml</link></item>
-<item><title>The.Stand.1994.720p.BluRay.x264-[YTS.LT]- CH - 射手网(伪)</title><link>http://assrt.net/xml/sub/665/665967.xml</link></item>
-<item><title>魔王学院の不適合者II ～史上最強の魔王の始祖、転生して子孫たちの学校へ通う～ (2023)/魔王学院的不适合者 第二季 /The Misfit of Demon King Academy II/Maou Gakuin no Futekigousha/[DBD-Raws][魔王学院的不适任者 第二季][01-24TV全集][1080P][BDRip][HEVC-10bit][FLAC][MKV] - 射手网(伪)</title><link>http://assrt.net/xml/sub/665/665965.xml</link></item>
-<item><title>Gladiator II/角斗士2/Gladiator.II.2024.2160p.WEB-DL.DDP5.1.Atmos.DV.HDR.H.265-FLUX.chs&amp;eng - 射手网(伪)</title><link>http://assrt.net/xml/sub/665/665962.xml</link></item>
-<item><title>ソードアート・オンライン オルタナティブ ガンゲイル・オンラインⅡ/刀剑神域外传 Gun Gale Online 第二季/Sword Art Online Alternative: Gun Gale Online Season 2/刀劍神域外傳 Gun Gale Online 第2季/刀剑神域外传GGO 第二季/刀剑神域外传 GGO 第二季 简体字幕 - 射手网(伪)</title><link>http://assrt.net/xml/sub/665/665954.xml</link></item>
-<item><title>株式会社マジルミエ/Kabushikigaisha Magi-Lumière/魔法光源股份有限公司/柔光魔女股份有限公司 第一季 简繁字幕 - 射手网(伪)</title><link>http://assrt.net/xml/sub/665/665896.xml</link></item>
-<item><title>ぷにるはかわいいスライム/Puniru wa Kawaii Slime/噗妮露是可愛史萊姆/可爱史莱姆噗尼露/噗妮露是可爱史莱姆 第一季 简繁字幕 - 射手网(伪)</title><link>http://assrt.net/xml/sub/665/665793.xml</link></item>
-<item><title>ネガポジアングラー/Negative Positive Angler/負正釣魚/悲喜漁生/悲喜渔生 简繁字幕 Bilibili - 射手网(伪)</title><link>http://assrt.net/xml/sub/665/665605.xml</link></item>
-<item><title>2.5次元の誘惑/2.5次元的诱惑 第一季/2.5-jigen no Yuuwaku/2.5次元的誘惑/2.5次元的诱惑 第1季 简繁字幕 - 射手网(伪)</title><link>http://assrt.net/xml/sub/665/665599.xml</link></item>
-<item><title>《纸牌屋》(House of Cards)/House Of Cards Season 1 to 6 Mp4 1080p - 射手网(伪)</title><link>http://assrt.net/xml/sub/665/665598.xml</link></item>
-<item><title>星球大战：骨干小队.Star.Wars.Skeleton.Crew.S01E05.You.Have.A.Lot.To.Learn.About.Pirates.1080p.DSNP.WEB-DL.DDP5.1.H.264-NTb/星球大战：骨干小队.Star.Wars.Skeleton.Crew.S01E05.You.Have.A.Lot.To.Learn.About.Pirates.1080p.DSNP.WEB-DL.DDP5.1.H.264-NTb - 射手网(伪)</title><link>http://assrt.net/xml/sub/698/698973.xml</link></item>
-<item><title>Virtual RAN Still Seems To Be North Worth the Effort - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/networking/virtual-ran-still-seems-to-be-north-worth-the-effort</link></item>
-<item><title>Nvidia Unveils New Chips, Desktop PC to Protect AI Lead - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-chips/nvidia-unveils-new-chips-desktop-pc-to-protect-ai-lead</link></item>
-<item><title>ISO 27001 Compliance: What Data Center Operators and Customers Need to Know - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/compliance/iso-27001-compliance-what-data-center-operators-and-customers-need-to-know</link></item>
-<item><title>Stonepeak’s Digital Edge Gets $1B Loans for Data Centers - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-construction/stonepeak-s-digital-edge-gets-1b-loans-for-data-centers</link></item>
-<item><title>Data Center Hardware in 2025: What’s Changing and Why It Matters - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-hardware/data-center-hardware-in-2025-what-s-changing-and-why-it-matters</link></item>
-<item><title>Microsoft to Spend $80B on AI Data Centers This Year - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-construction/microsoft-to-spend-80-on-ai-data-centers-this-years</link></item>
-<item><title>Power, Heat, and Sustainability: Five Forces Redefining Data Center Cooling in 2025 - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cooling/power-heat-sustainability-five-forces-redefining-data-center-cooling-2025</link></item>
-<item><title>Data Center News Roundup: Welcome to 2025 - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/business/data-center-news-roundup-welcome-to-2025</link></item>
-<item><title>AI Exploit Bypasses Guardrails of OpenAI, Other Top LLMs - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cybersecurity/ai-exploit-bypasses-guardrails-of-openai-other-top-llms</link></item>
-<item><title>Vistra Is First Utility to Top S&amp;amp;P 500 Since 2001 Amid AI Boom - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/vistra-is-first-utility-to-top-s-p-500-since-2001-amid-ai-boom</link></item>
-<item><title>5 Cloud Computing Trends that Will Impact Data Centers in 2025 - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cloud/5-cloud-computing-trends-that-will-impact-data-centers-in-2025</link></item>
-<item><title>Energy-Hungry AI Firms Bet on These Moonshot Technologies - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/energy-hungry-ai-firms-bet-on-these-moonshot-technologies</link></item>
-<item><title>Data Center Cooling: Trends and Strategies to Watch in 2025 - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cooling/data-center-cooling-trends-and-strategies-to-watch-in-2025</link></item>
-<item><title>Robotic Collaboration Launched for Maintenance in Chip Production - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-chips/robotic-collaboration-launched-for-maintenance-in-chip-production</link></item>
-<item><title>7 Key Data Center Security Trends to Watch in 2025 - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/security-and-risk-management/7-key-data-center-security-trends-to-watch-in-2025</link></item>
-<item><title>Utilities Embrace AI for More Integrated Operations: Cisco Study - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/automation/utilities-embrace-ai-for-more-integrated-operations-cisco-study</link></item>
-<item><title>In the Shadows of Arizona’s Data Center Boom, Thousands Live Without Power - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/in-the-shadows-of-arizona-s-data-center-boom-thousands-live-without-power</link></item>
-<item><title>Top 10 Data Center Security Stories of 2024 - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/security-and-risk-management/top-10-data-center-security-stories-of-2024</link></item>
-<item><title>Demand for Google’s TPU Chips ‘Challenges NVIDIA’s Dominance’ - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-chips/demand-for-google-s-tpu-chips-challenges-nvidia-s-dominance-</link></item>
-<item><title>Google’s Willow Chip: Quantum Leap or Quantum Hype? - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-chips/google-s-willow-chip-quantum-leap-or-quantum-hype-</link></item>
-<item><title>Top Data Center Sustainability Trends to Watch in 2025 - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/sustainability/top-data-center-sustainability-trends-to-watch-in-2025</link></item>
-<item><title>The Biggest AI Data Center Stories That Shaped 2024 - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/ai-data-centers/the-biggest-ai-data-center-stories-that-shaped-2024</link></item>
-<item><title>Southeast Asia Has $60B AI Boom, But Its Own Startups Are Missing Out - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/ai-data-centers/southeast-asia-has-60b-ai-boom-but-its-own-startups-are-missing-out</link></item>
-<item><title>US watchdog sticks probe into 2.6M Teslas over so-called Smart Summon crash reports - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/08/nhtsa_tesla_smart_summon/</link></item>
-<item><title>Uncle Sam now targets six landlord giants in war on alleged algorithmic rent fixing - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/08/feds_expand_algorithmic_rent_lawsuit/</link></item>
-<item><title>FCC boss urges speedy spectrum auction to fund &amp;#39;Rip&amp;#39;n&amp;#39;Replace&amp;#39; of Chinese kit - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/08/fcc_chief_urges_spectrum_auction/</link></item>
-<item><title>Now Trump&amp;#39;s import tariffs could raise the cost of a laptop for Americans by 68% - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/07/trumps_tariff_electronics_prices/</link></item>
-<item><title>Zuck takes a page from Musk: Meta dumps fact-checkers, loosens speech restrictions - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/07/meta_eliminate_fact_check/</link></item>
-<item><title>Many people are saying a luxury Dubai property developer will blow $20B on US datacenters - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/07/trump_20_billion_datacenter_investment/</link></item>
-<item><title>John Deere boasts driverless fleet - who needs operators, anyway? - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/07/john_deere_new_autonomous_tractors/</link></item>
-<item><title>Turbulence at UN aviation agency as probe into potential data theft begins - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/07/icao_data_theft_investigation/</link></item>
-<item><title>AI can improve on code it writes, but you have to know how to ask - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/07/ai_can_write_improved_code_research/</link></item>
-<item><title>Qualcomm’s latest Snapdragon X chip targets $600 Copilot+ PCs - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/07/qualcomms_snapdragon_x_chip/</link></item>
-<item><title>Apple shrugs off BBC complaint with promise to &amp;#39;further clarify&amp;#39; AI content - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/07/apple_responds_bbc_complaint/</link></item>
-<item><title>DEF CON&amp;#39;s hacker-in-chief faces fortune in medical bills after paralyzing neck injury - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/07/def_con_security_chief_injured/</link></item>
-<item><title>First launch of Blue Origin&amp;#39;s New Glenn rocket slated for January 10 - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/07/new_glenn_launch_date/</link></item>
-<item><title>Windows 11 24H2 can run – sort of – in 184MB - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/07/windows_11_24h2_can_run/</link></item>
-<item><title>Can AWS really fix AI hallucination? We talk to head of Automated Reasoning Byron Cook - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/07/interview_with_aws_byron_cook/</link></item>
-<item><title>Elon Musk&amp;#39;s galactic ego sows chaos in European politics - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/07/musk_political_adventures/</link></item>
-<item><title>UK gives Openreach £289M for 4 rural broadband contracts in &amp;#39;gigabit by 2030&amp;#39; push - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/07/openreach_handed_289_million_in/</link></item>
-<item><title>The unlicensed OneDrive free ride ends this month - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/07/unlicensed_onedrive_fun_ends/</link></item>
-<item><title>The latest language in the GNU Compiler Collection: Algol-68 - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/07/algol_68_comes_to_gcc/</link></item>
-<item><title>Intel debuts laptop silicon that doesn&amp;#39;t qualify for Microsoft&amp;#39;s &amp;#39;Copilot+ PC&amp;#39; badge - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/07/intel_arrow_lake_laptop_chips/</link></item>
-<item><title>US adds web and gaming giant Tencent to list of Chinese military companies - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/07/tencent_catl_chinese_military_company_list/</link></item>
-<item><title>Demand for AI servers sees Foxconn fly and suppliers come along for the ride - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/07/foxconn_q4_2024/</link></item>
-<item><title>Nvidia shrinks Grace-Blackwell Superchip to power $3K mini PC - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/07/nvidia_project_digits_mini_pc/</link></item>
-<item><title>Dude, you got a Dell, period! RIP XPS, Inspiron, Latitude, Precision - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/07/dell_renaming_pc_brands/</link></item>
-<item><title>3Blue1Brown copyright takedown blunder by AI biz blamed on human error - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/07/3blue1brown_video_takedown_mistake/</link></item>
-<item><title>New Orleans attacker used Meta smart glasses to plan New Year&amp;#39;s Day massacre - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/06/new_orleans_attacker_meta_glasses/</link></item>
-<item><title>Even at $200/mo, Altman admits ChatGPT Pro struggles to turn a profit - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/06/altman_gpt_profits/</link></item>
-<item><title>Microsoft declares 2025 &amp;#39;the year of the Windows 11 PC refresh&amp;#39; - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/06/microsoft_2025_windows_refresh/</link></item>
-<item><title>Charter, Consolidated, Windstream reportedly join China&amp;#39;s Salt Typhoon victim list - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/06/charter_consolidated_windstream_salt_typhoon/</link></item>
-<item><title>Tired of begging, Microsoft now trying to trick users into thinking Bing is Google - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/06/microsoft_bing_spoof_google/</link></item>
-<item><title>FireScam infostealer poses as Telegram Premium app to surveil Android devices - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/06/firescam_android_malware/</link></item>
-<item><title>Eutelsat OneWeb blames 366th day for 48-hour date disaster - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/06/eutelsat_oneweb_leap_year/</link></item>
-<item><title>MediaTek rings in the new year with a parade of chipset vulns - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/06/mediatek_chipset_vulnerabilities/</link></item>
-<item><title>AI spending spree continues as Microsoft commits $80B for 2025 - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/06/ai_spending_spree_continues_as/</link></item>
-<item><title>SpaceX will try satellite deployment on next Starship test - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/06/spacex_starship_test/</link></item>
-<item><title>Google&amp;#39;s 10-year Chromebook lifeline leaves old laptops headed for silicon cemetery - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/06/chromebook_end_of_life/</link></item>
-<item><title>Looming energy crunch makes future uncertain for datacenters - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/06/energy_crunch_datacenters/</link></item>
-<item><title>Microsoft&amp;#39;s spat with ValueLicensing limps toward 2026 showdown - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/06/valuelicensing_microsoft_trial_date/</link></item>
-<item><title>After China&amp;#39;s Salt Typhoon, the reconstruction starts now - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/06/opinion_column_cybersec/</link></item>
-<item><title>Brackets go &amp;lt;i&amp;gt;there&amp;lt;/i&amp;gt;? Oops. That’s not where I used them and now things are broken - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/06/who_me/</link></item>
-<item><title>Broadcom filing mentions major VMware Cloud Foundation releases in March and July - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/01/06/vmware_major_releases_2025/</link></item>
-<item><title>New words – 6 January 2025 - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2025/01/06/new-words-6-january-2025/</link></item>
-<item><title>A young man of twenty: talking about age - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2025/01/01/a-young-man-of-twenty-talking-about-age/</link></item>
-<item><title>New words – 30 December 2024 - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2024/12/30/new-words-30-december-2024/</link></item>
-<item><title>Bit by bit (Ways of saying ‘gradually’) - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2024/12/25/bit-by-bit-ways-of-saying-gradually/</link></item>
-<item><title>Wattpad WEBTOON Studios Appoints Shang Mang as Head of Licensing &amp; Merchandise - Anime News Network</title><link>https://www.animenewsnetwork.com/news/2025-01-07/wattpad-webtoon-studios-appoints-shang-mang-as-head-of-licensing-and-merchandise/.219536</link></item>
-<item><title>Singer Kana Adachi Announces Marriage to Tokyo Giants Player Naoki Yoshikawa - Anime News Network</title><link>https://www.animenewsnetwork.com/interest/2025-01-07/singer-kana-adachi-announces-marriage-to-tokyo-giants-player-naoki-yoshikawa/.219650</link></item>
-<item><title>Hololive VTuber Ceres Fauna Graduates - Anime News Network</title><link>https://www.animenewsnetwork.com/interest/2025-01-06/hololive-vtuber-ceres-fauna-graduates/.219736</link></item>
-<item><title>Happy New Year From Around the Anime World: Snakes on a Plane Part XV - Anime News Network</title><link>https://www.animenewsnetwork.com/interest/2025-01-03/happy-new-year-from-around-the-anime-world-snakes-on-a-plane-part-xv/.219700</link></item>
-<item><title>TMS Entertainment Announces Return of its 60th Anniversary YouTube Campaign, Introducing Latino YouTube Channel into Programming Schedule - Anime News Network</title><link>https://www.animenewsnetwork.com/press-release/2025-01-07/tms-entertainment-announces-return-of-its-60th-anniversary-youtube-campaign-introducing-latino-/.219801</link></item>
-<item><title>Sony Exhibits at CES 2025 - Anime News Network</title><link>https://www.animenewsnetwork.com/press-release/2025-01-07/sony-exhibits-at-ces-2025/.219800</link></item>
-<item><title>Your Anime Rankings - Best of Fall 2024 - Anime News Network</title><link>https://www.animenewsnetwork.com/weekly-ranking/2025/fall/.217269</link></item>
-<item><title>The Winter 2025 Anime Preview Guide - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/winter/.219025</link></item>
-<item><title>The Best Anime of 2024 - Anime News Network</title><link>https://www.animenewsnetwork.com/feature/2024-12-30/the-best-anime-of-2024/.219015</link></item>
-<item><title>Your Anime Rankings - Best of Fall 2024, Dec 17-23 - Anime News Network</title><link>https://www.animenewsnetwork.com/weekly-ranking/2024/fall/.219561</link></item>
-<item><title>Most Anticipated Anime of Winter 2025 - Anime News Network</title><link>https://www.animenewsnetwork.com/feature/2024-12-25/most-anticipated-anime-of-winter-2025/.218748</link></item>
-<item><title>The Worst Anime of Fall 2024 - Anime News Network</title><link>https://www.animenewsnetwork.com/feature/2024-12-24/the-worst-anime-of-fall-2024/.218747</link></item>
-<item><title>The Best Anime of Fall 2024 - Anime News Network</title><link>https://www.animenewsnetwork.com/feature/2024-12-23/the-best-anime-of-fall-2024/.218746</link></item>
-<item><title>Your Anime Rankings - Best of Fall 2024, Dec 10-16 - Anime News Network</title><link>https://www.animenewsnetwork.com/weekly-ranking/2024/fall/.219336</link></item>
-<item><title>Exploring How a Manga is Printed at the One Piece Only Exhibition - Anime News Network</title><link>https://www.animenewsnetwork.com/feature/2024-12-20/exploring-how-a-manga-is-printed-at-the-one-piece-only-exhibition/.218249</link></item>
-<item><title>Tying the Knot With an Amagami Sister Anime Series Review - Anime News Network</title><link>https://www.animenewsnetwork.com/review/tying-the-knot-with-an-amagami-sister-episodes-1-13/.219507</link></item>
-<item><title>This Week in Anime - Is Anime Incest Really Wincest? - Anime News Network</title><link>https://www.animenewsnetwork.com/this-week-in-anime/2025-01-07/.219751</link></item>
-<item><title>This Week in Games - Super Fighting Robots - Anime News Network</title><link>https://www.animenewsnetwork.com/this-week-in-games/2025-01-03/super-fighting-robots/.219564</link></item>
-<item><title>The ANN Aftershow - What&amp;#39;s Your Anime Character Arc? - Anime News Network</title><link>https://www.animenewsnetwork.com/aftershow/2024-12-20/.219280</link></item>
-<item><title>The Anime Backlog - Princess Tutu - Anime News Network</title><link>https://www.animenewsnetwork.com/anime-backlog/2024-12-13/.218942</link></item>
-<item><title>Honey Lemon Soda - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/winter/honey-lemon-soda/.219030</link></item>
-<item><title>FLOWER AND ASURA - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/winter/flower-and-asura/.219078</link></item>
-<item><title>Unnamed Memory Act.2 - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/winter/unnamed-memory-act.2/.219079</link></item>
-<item><title>I&amp;#39;m a Noble on the Brink of Ruin, So I Might as Well Try Mastering Magic - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/winter/im-a-noble-on-the-brink-of-ruin-so-i-might-as-well-try-mastering-magic/.219075</link></item>
-<item><title>Anyway, I&amp;#39;m Falling in Love with You. - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/winter/anyway-im-falling-in-love-with-you/.219029</link></item>
-<item><title>Medaka Kuroiwa Is Impervious to My Charms - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/winter/medaka-kuroiwa-is-impervious-to-my-charms/.219031</link></item>
-<item><title>Promise of Wizard - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/winter/promise-of-wizard/.219073</link></item>
-<item><title>Blue Exorcist: The Blue Night Saga - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/winter/blue-exorcist-the-blue-night-saga/.219286</link></item>
-<item><title>My Happy Marriage Season 2 - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/winter/my-happy-marriage-season-2/.219072</link></item>
-<item><title>I Want to Escape from Princess Lessons - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/winter/i-want-to-escape-from-princess-lessons/.219045</link></item>
-<item><title>OKITSURA: Fell in Love with an Okinawan Girl, but I Just Wish I Know What She&amp;#39;s Saying - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/winter/okitsura-fell-in-love-with-an-okinawan-girl-but-i-just-wish-i-know-what-she-saying/.219710</link></item>
-<item><title>I&amp;#39;m Living with an Otaku NEET Kunoichi!? - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/winter/im-living-with-an-otaku-neet-kunoichi/.219043</link></item>
-<item><title>Solo Leveling Season 2 -Arise from the Shadow- - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/winter/solo-leveling-season-2-arise-from-the-shadow/.219026</link></item>
-<item><title>Sorairo Utility - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/winter/sorairo-utility/.219284</link></item>
-<item><title>I&amp;#39;m Getting Married to a Girl I Hate in My Class - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/winter/im-getting-married-to-a-girl-i-hate-in-my-class/.219042</link></item>
-<item><title>Tasokare Hotel - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/winter/tasokare-hotel/.219082</link></item>
-<item><title>Momentary Lily - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/winter/momentary-lily/.219040</link></item>
-<item><title>Ave Mujica - The Die is Cast - - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/winter/ave-mujica-the-die-is-cast/.219041</link></item>
-<item><title>Ameku M.D.: Doctor Detective - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/winter/ameku-m.d-doctor-detective/.219036</link></item>
-<item><title>Possibly the Greatest Alchemist of All Time - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/winter/possibly-the-greatest-alchemist-of-all-time/.219039</link></item>
-<item><title>Headhunted to Another World: From Salaryman to Big Four! - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/winter/headhunted-to-another-world-from-salaryman-to-big-four/.219038</link></item>
-<item><title>Grisaia: Phantom Trigger the Animation - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/winter/grisaia-phantom-trigger-the-animation/.219035</link></item>
-<item><title>Bogus Skill &amp;lt;&amp;lt;fruitmaster&amp;gt;&amp;gt; - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/winter/bogus-skill-lt-lt-fruitmaster-gt-gt/.219077</link></item>
-<item><title>Beheneko: The Elf-Girl&amp;#39;s Cat is Secretly an S-Ranked Monster! - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/winter/beheneko-the-elf-girl-cat-is-secretly-an-s-ranked-monster/.219033</link></item>
-<item><title>ANN Reader&amp;#39;s Choice Awards 2024 - Anime News Network</title><link>https://www.animenewsnetwork.com/survey/973/</link></item>
-<item><title>The Worst Anime of 2024 - Anime News Network</title><link>https://www.animenewsnetwork.com/feature/2024-12-30/the-worst-anime-of-2024/.219023</link></item>
-<item><title>Shangri-La Frontier Season 2 ‒ Episode 38 - Anime News Network</title><link>https://www.animenewsnetwork.com/review/shangri-la-frontier-season-2/episode-38/.219805</link></item>
-<item><title>Crunchyroll to Launch New Manga App Later This Year - Anime News Network</title><link>https://www.animenewsnetwork.com/news/2025-01-06/crunchyroll-to-launch-new-manga-app-later-this-year/.219772</link></item>
-<item><title>Orb: On the Movements of the Earth ‒ Episode 15 - Anime News Network</title><link>https://www.animenewsnetwork.com/review/orb-on-the-movements-of-the-earth/episode-15/.219765</link></item>
-<item><title>Azuki Shibuya Resumes Voice-Acting After 1-Year Hiatus - Anime News Network</title><link>https://www.animenewsnetwork.com/news/2025-01-06/azuki-shibuya-resumes-voice-acting-after-1-year-hiatus/.219754</link></item>
-<item><title>Fairy Tail: 100 Years Quest ‒ SEASON FINALE - Anime News Network</title><link>https://www.animenewsnetwork.com/review/fairy-tail-100-years-quest/episode-25/.219738</link></item>
-<item><title>LDH Japan Launches LDH Animation Brand Focused on Anime Production - Anime News Network</title><link>https://www.animenewsnetwork.com/news/2025-01-06/ldh-japan-launches-ldh-animation-brand-focused-on-anime-production/.219749</link></item>
-<item><title>MAGES. Appoints New President &amp; CEO Makoto Asada - Anime News Network</title><link>https://www.animenewsnetwork.com/news/2025-01-06/mages-appoints-new-president-and-ceo-makoto-asada/.219742</link></item>
-<item><title>Magic/tragic email links: don&amp;#39;t make them the only option - Hacker News</title><link>https://recyclebin.zip/posts/annoyinglinks/</link></item>
-<item><title>Do It in Jeans First - Hacker News</title><link>https://www.gkogan.co/jeans/</link></item>
-<item><title>Mistakes engineers make in large established codebases - Hacker News</title><link>https://www.seangoedecke.com/large-established-codebases/</link></item>
-<item><title>seangoedecke.com - Hacker News</title><link>https://news.ycombinator.com/from?site=seangoedecke.com</link></item>
-<item><title>Show HN: Tramway SDK – An unholy union between Half-Life and Morrowind engines - Hacker News</title><link>https://racenis.github.io/tram-sdk/why.html</link></item>
-<item><title>racenis.github.io - Hacker News</title><link>https://news.ycombinator.com/from?site=racenis.github.io</link></item>
-<item><title>A day in the life of a prolific voice phishing crew - Hacker News</title><link>https://krebsonsecurity.com/2025/01/a-day-in-the-life-of-a-prolific-voice-phishing-crew/</link></item>
-<item><title>Ending our third party fact-checking program and moving to Community Notes model - Hacker News</title><link>https://about.fb.com/news/2025/01/meta-more-speech-fewer-mistakes/</link></item>
-<item><title>hyperview.org - Hacker News</title><link>https://news.ycombinator.com/from?site=hyperview.org</link></item>
-<item><title>Automated accessibility testing at Slack - Hacker News</title><link>https://slack.engineering/automated-accessibility-testing-at-slack/</link></item>
-<item><title>slack.engineering - Hacker News</title><link>https://news.ycombinator.com/from?site=slack.engineering</link></item>
-<item><title>Servo Revival: 2023-2024 - Hacker News</title><link>https://blogs.igalia.com/mrego/servo-revival-2023-2024/</link></item>
-<item><title>SAT Solver Etudes I - Hacker News</title><link>https://www.philipzucker.com/python_sat/</link></item>
-<item><title>philipzucker.com - Hacker News</title><link>https://news.ycombinator.com/from?site=philipzucker.com</link></item>
-<item><title>A video tour of the Standard Model (2021) - Hacker News</title><link>https://www.quantamagazine.org/a-video-tour-of-the-standard-model-20210716/</link></item>
-<item><title>Physicists Magnetize a Material with Light - Hacker News</title><link>https://news.mit.edu/2024/physicists-magnetize-material-using-light-1218</link></item>
-<item><title>news.mit.edu - Hacker News</title><link>https://news.ycombinator.com/from?site=news.mit.edu</link></item>
-<item><title>Streets GL – 3D OpenStreetMap - Hacker News</title><link>https://streets.gl/#47.35245,8.50958,21.25,42.00,459.10</link></item>
-<item><title>Annual &amp;#39;winners&amp;#39; for most egregious US healthcare profiteering announced - Hacker News</title><link>https://www.theguardian.com/us-news/2025/jan/07/annual-awards-healthcare-profiteering</link></item>
-<item><title>A minimax chess engine in regular expressions - Hacker News</title><link>https://nicholas.carlini.com/writing/2025/regex-chess.html</link></item>
-<item><title>carlini.com - Hacker News</title><link>https://news.ycombinator.com/from?site=carlini.com</link></item>
-<item><title>Building Ultra Long Range Toslink - Hacker News</title><link>https://blog.benjojo.co.uk/post/sfp-experiment-ultra-long-range-toslink</link></item>
-<item><title>benjojo.co.uk - Hacker News</title><link>https://news.ycombinator.com/from?site=benjojo.co.uk</link></item>
-<item><title>Type 2 Diabetes and cardiovascular disease attributable to sugar beverages - Hacker News</title><link>https://www.nature.com/articles/s41591-024-03345-4</link></item>
-<item><title>Optimizing uint64_t Digit Counting: A Method that Beats Lemire&amp;#39;s by up to 143% - Hacker News</title><link>https://github.com/RealTimeChris/BenchmarkSuite/blob/digit-counting/Benchmark/main.cpp</link></item>
-<item><title>github.com/realtimechris - Hacker News</title><link>https://news.ycombinator.com/from?site=github.com/realtimechris</link></item>
-<item><title>realtimechris - Hacker News</title><link>https://news.ycombinator.com/user?id=realtimechris</link></item>
-<item><title>Laid off for the first time in my career, and twice in one year - Hacker News</title><link>https://dillonshook.com/laid-off/</link></item>
-<item><title>dillonshook.com - Hacker News</title><link>https://news.ycombinator.com/from?site=dillonshook.com</link></item>
-<item><title>How is my Browser blocking RWX execution? - Hacker News</title><link>https://rwxstoned.github.io/2025-01-04-Reviewing-browser-hooks/</link></item>
-<item><title>rwxstoned.github.io - Hacker News</title><link>https://news.ycombinator.com/from?site=rwxstoned.github.io</link></item>
-<item><title>Oracle Will Not Voluntarily Withdraw JavaScript Trademark - Hacker News</title><link>https://twitter.com/deno_land/status/1876728474666217739</link></item>
-<item><title>twitter.com/deno_land - Hacker News</title><link>https://news.ycombinator.com/from?site=twitter.com/deno_land</link></item>
-<item><title>cfnewsperson1 - Hacker News</title><link>https://news.ycombinator.com/user?id=cfnewsperson1</link></item>
-<item><title>The Evaporative Cooling Effect in Social Networks (2010) - Hacker News</title><link>https://blogs.cornell.edu/info2040/2015/10/14/the-evaporative-cooling-effect-in-social-network/</link></item>
-<item><title>OmniAI (YC W24) Hiring Engineers to Build Open Source Document Extraction - Hacker News</title><link>https://www.ycombinator.com/companies/omniai/jobs/LG5jeP2-full-stack-engineer</link></item>
-<item><title>Choosing an op-amp for your project - Hacker News</title><link>https://lcamtuf.substack.com/p/choosing-an-op-amp-for-your-project</link></item>
-<item><title>lcamtuf.substack.com - Hacker News</title><link>https://news.ycombinator.com/from?site=lcamtuf.substack.com</link></item>
-<item><title>USB On-The-Go - Hacker News</title><link>https://computer.rip/2024-01-06-usb-on-the-go.html</link></item>
-<item><title>computer.rip - Hacker News</title><link>https://news.ycombinator.com/from?site=computer.rip</link></item>
-<item><title>Preventing conflicts in authoritative DNS config using formal verification - Hacker News</title><link>https://blog.cloudflare.com/topaz-policy-engine-design/</link></item>
-<item><title>Stimulation Clicker - Hacker News</title><link>https://neal.fun/stimulation-clicker/</link></item>
-<item><title>Online Behavioral Ads Fuel the Surveillance Industry - Hacker News</title><link>https://www.eff.org/deeplinks/2025/01/online-behavioral-ads-fuel-surveillance-industry-heres-how</link></item>
+<lastBuildDate>Thu, 09 Jan 2025 08:49:49 +0800</lastBuildDate>
+<item><title>Akamai 将终止在中国的 CDN 服务 - Solidot</title><link>https://www.solidot.org/story?sid=80275</link></item>
+<item><title>委内瑞拉限制了 TikTok 的访问 - Solidot</title><link>https://www.solidot.org/story?sid=80272</link></item>
+<item><title>睡眠不足能减弱排除不愉快记忆的能力 - Solidot</title><link>https://www.solidot.org/story?sid=80271</link></item>
+<item><title>Cyber​​truck 爆炸案嫌疑人使用 ChatGPT 出谋划策 - Solidot</title><link>https://www.solidot.org/story?sid=80270</link></item>
+<item><title>个人计算机 Altair 8800 发布 50 周年 - Solidot</title><link>https://www.solidot.org/story?sid=80269</link></item>
+<item><title>俄罗斯 ISP Nodex 遭乌克兰网络攻击导致全面断网 - Solidot</title><link>https://www.solidot.org/story?sid=80268</link></item>
+<item><title>联想与 Valve 合作推出首款预装 SteamOS 的第三方掌机 - Solidot</title><link>https://www.solidot.org/story?sid=80267</link></item>
+<item><title>How can Dutch battery startups win big? Focus on supply chain ‘pinch points,’ says CEO - TNW</title><link>https://thenextweb.com/news/dutch-battery-startups-lionvolt-2025-northvolt</link></item>
+<item><title>Inside the AI startup refining Hollywood — one f-bomb at a time - TNW</title><link>https://thenextweb.com/news/ai-startup-flawless-edits-hollywood-movies-dubbing-actors</link></item>
+<item><title>Swave, the startup building true holographic smart glasses, bags €27M - TNW</title><link>https://thenextweb.com/news/swave-startup-holographic-smart-glasses-funding</link></item>
+<item><title>4 key traits this Silicon Valley VC looks for in founders - TNW</title><link>https://thenextweb.com/news/4-key-founder-traits-silicon-valley-vc</link></item>
+<item><title>Looking for a new job? How about becoming an EV teledriver? - TNW</title><link>https://thenextweb.com/news/looking-for-a-new-job-how-about-becoming-an-ev-teledriver</link></item>
+<item><title>Generative AI is making traditional ways to measure business success obsolete - TNW</title><link>https://thenextweb.com/news/generative-ai-is-making-traditional-ways-to-measure-business-success-obsolete</link></item>
+<item><title>German startup behind electric ‘microliner’ lands €14M runway - TNW</title><link>https://thenextweb.com/news/german-startupvaeridion-electric-microliner-14-million-funding-round-2024</link></item>
+<item><title>One smart ring to rule them all? Finnish startup Oura raises $200M - TNW</title><link>https://thenextweb.com/news/smart-ring-startup-oura-raises-200-million-new-funding</link></item>
+<item><title>Dutch startups raised $3.5B in 2024. Here are the 10 largest funding rounds - TNW</title><link>https://thenextweb.com/news/dutch-startups-raised-3-5b-in-2024-here-are-the-10-largest-funding-rounds</link></item>
+<item><title>A rising tide of e-waste threatens our health, the environment and the economy - TNW</title><link>https://thenextweb.com/news/a-rising-tide-of-e-waste-threatens-our-health-the-environment-and-the-economy</link></item>
+<item><title>Futureproof your datacenter with DDC S-Series - DCD</title><link>https://www.datacenterdynamics.com/en/whitepapers/futureproof-your-datacenter-with-ddc-s-series/</link></item>
+<item><title>Data center M&amp;A 2024: A record-breaking year - DCD</title><link>https://www.datacenterdynamics.com/en/analysis/data-center-ma-2024-a-record-breaking-year/</link></item>
+<item><title>Unlocking ROI with advanced data center liquid cooling technologies - DCD</title><link>https://www.datacenterdynamics.com/en/opinions/unlocking-roi-with-advanced-data-center-liquid-cooling-technologies/</link></item>
+<item><title>Tract plans second Minnesota data center park outside Minneapolis - DCD</title><link>https://www.datacenterdynamics.com/en/news/tract-plans-second-minnesota-data-center-park-outside-minneapolis/</link></item>
+<item><title>Liberty Energy signs MoU with DC Grid to deliver off-grid gas generation for data centers - DCD</title><link>https://www.datacenterdynamics.com/en/news/liberty-energy-signs-mou-with-dc-grid-to-deliver-off-grid-gas-generation-for-data-centers/</link></item>
+<item><title>Samsung Q4 2024 results fall short of expectations, despite record-breaking memory sales - DCD</title><link>https://www.datacenterdynamics.com/en/news/samsung-q4-2024-results-fall-short-of-expectations-despite-record-breaking-memory-sales/</link></item>
+<item><title>Sponsored: DCD&amp;gt;Talks: Labor opportunities in the critical environment - DCD</title><link>https://www.datacenterdynamics.com/en/marketwatch/dcdtalks-labor-opportunities-in-the-critical-environment/</link></item>
+<item><title>Serverfarm plans natural gas-powered data center in Georgia - DCD</title><link>https://www.datacenterdynamics.com/en/news/serverfarm-plans-natural-gas-powered-data-center-in-georgia/</link></item>
+<item><title>Formula E and Google Cloud announce expanded multi-year partnership - DCD</title><link>https://www.datacenterdynamics.com/en/news/formula-e-and-google-cloud-announce-expanded-multi-year-partnership/</link></item>
+<item><title>Vantage tops out first Osaka facility in Japan - DCD</title><link>https://www.datacenterdynamics.com/en/news/vantage-tops-out-first-osaka-facility-in-japan/</link></item>
+<item><title>InterServer selects 365 Data Centers for expansion into New Jersey - DCD</title><link>https://www.datacenterdynamics.com/en/news/interserver-selects-365-data-centers-for-expansion-into-new-jersey/</link></item>
+<item><title>AWS launches cloud region in Thailand - DCD</title><link>https://www.datacenterdynamics.com/en/news/aws-launches-cloud-region-in-thailand/</link></item>
+<item><title>Verizon wins deal to deploy 4G and 5G to 35 US Air Force bases - DCD</title><link>https://www.datacenterdynamics.com/en/news/verizon-wins-deal-to-deploy-4g-and-5g-to-35-us-air-force-bases/</link></item>
+<item><title>Donato Solar submits concept plan for solar powered data center in Illinois - DCD</title><link>https://www.datacenterdynamics.com/en/news/donato-solar-submits-concept-plan-for-solar-powered-data-center-in-illinois/</link></item>
+<item><title>NBN signs six year PPA with operator of Australia&amp;#39;s largest wind farm - DCD</title><link>https://www.datacenterdynamics.com/en/news/nbn-signs-six-year-ppa-with-operator-of-australias-largest-wind-farm/</link></item>
+<item><title>Queen Mary University of London uses data center waste heat to warm buildings - DCD</title><link>https://www.datacenterdynamics.com/en/news/queen-mary-university-of-london-uses-data-center-waste-heat-to-warm-buildings/</link></item>
+<item><title>AWS reveals $11bn data center investment plan for Georgia - DCD</title><link>https://www.datacenterdynamics.com/en/news/aws-reveals-11bn-data-center-investment-plan-for-georgia/</link></item>
+<item><title>American Tower appoints Eugene Noel as global COO - DCD</title><link>https://www.datacenterdynamics.com/en/news/american-tower-appoints-eugene-noel-as-global-coo/</link></item>
+<item><title>Polysilicon producer Hemlock gets $325m in CHIPS act funding - DCD</title><link>https://www.datacenterdynamics.com/en/news/polysilicon-producer-hemlock-gets-325m-in-chips-act-funding/</link></item>
+<item><title>Planned Hut 8 data center  in West Feliciana Parish, Louisiana, gets green light - DCD</title><link>https://www.datacenterdynamics.com/en/news/planned-hut-8-data-center-in-west-feliciana-parish-louisiana-gets-green-light/</link></item>
+<item><title>现场｜宋徽宗与宋四家名作齐聚，浙博呈现茶文化精品文物 - 澎湃</title><link>https://www.thepaper.cn/newsDetail_forward_29870590</link></item>
+<item><title>Lesser Known Uses Of Better Known Attributes - Smashing Magazine</title><link>https://smashingmagazine.com/2025/01/lesser-known-uses-better-known-attributes/</link></item>
+<item><title>How To Design For High-Traffic Events And Prevent Your Website From Crashing - Smashing Magazine</title><link>https://smashingmagazine.com/2025/01/designing-high-traffic-events-cloudways/</link></item>
+<item><title>What Does AI Really Mean? - Smashing Magazine</title><link>https://smashingmagazine.com/2025/01/understanding-ai-meaning/</link></item>
+<item><title>New Front-End Features For Designers In 2025 - Smashing Magazine</title><link>https://smashingmagazine.com/2024/12/new-front-end-features-for-designers-in-2025/</link></item>
+<item><title>New Year, New Hopes, New Dreams (January 2025 Wallpapers Edition) - Smashing Magazine</title><link>https://smashingmagazine.com/2024/12/desktop-wallpaper-calendars-january-2025/</link></item>
+<item><title>The Design Leader Dilemma - Smashing Magazine</title><link>https://smashingmagazine.com/2024/12/the-design-leader-dilemma/</link></item>
+<item><title>Three Approaches To Amplify Your Design Projects - Smashing Magazine</title><link>https://smashingmagazine.com/2024/12/three-approaches-amplify-design-projects/</link></item>
+<item><title>An Introduction To CSS Scroll-Driven Animations: Scroll And View Progress Timelines - Smashing Magazine</title><link>https://smashingmagazine.com/2024/12/introduction-css-scroll-driven-animations/</link></item>
+<item><title>Mastering SVG Arcs - Smashing Magazine</title><link>https://smashingmagazine.com/2024/12/mastering-svg-arcs/</link></item>
+<item><title>The Importance Of Graceful Degradation In Accessible Interface Design - Smashing Magazine</title><link>https://smashingmagazine.com/2024/12/importance-graceful-degradation-accessible-interface-design/</link></item>
+<item><title>Creating An Effective Multistep Form For Better User Experience - Smashing Magazine</title><link>https://smashingmagazine.com/2024/12/creating-effective-multistep-form-better-user-experience/</link></item>
+<item><title>Dreaming Of Miracles (December 2024 Wallpapers Edition) - Smashing Magazine</title><link>https://smashingmagazine.com/2024/11/desktop-wallpaper-calendars-december-2024/</link></item>
+<item><title>The Hype Around Signals - Smashing Magazine</title><link>https://smashingmagazine.com/2024/11/the-hype-around-signals/</link></item>
+<item><title>Host Devices - The Pi Hut</title><link>https://thepihut.com/collections/home-automation-host-devices</link></item>
+<item><title>Relays &amp; Switches - The Pi Hut</title><link>https://thepihut.com/collections/home-automation-switches-dimmers</link></item>
+<item><title>Energy Meters - The Pi Hut</title><link>https://thepihut.com/collections/home-automation-energy-meters</link></item>
+<item><title>Input Devices - The Pi Hut</title><link>https://thepihut.com/collections/home-automation-input-devices</link></item>
+<item><title>Professional - The Pi Hut</title><link>https://thepihut.com/collections/professional-home-automation-devices</link></item>
+<item><title>Home Automation - The Pi Hut</title><link>https://thepihut.com/collections/home-automation-store</link></item>
+<item><title>Newcastle reels as ArcelorMittal SA’s steel factory closure looms - The Mail &amp; Guardian</title><link>https://mg.co.za/business/2025-01-08-newcastle-reels-as-arcelormittal-sas-steel-factory-closure-looms/</link></item>
+<item><title>South African Tourism - The Mail &amp; Guardian</title><link>https://mg.co.za/author/south-african-tourism/</link></item>
+<item><title>Meta ends fact-checking to ‘reduce censorship’ - The Mail &amp; Guardian</title><link>https://mg.co.za/world/2025-01-08-meta-ends-fact-checking-to-reduce-censorship/</link></item>
+<item><title>WATCH: Mystery ‘balls’ force closure of Umhlanga beaches - The Mail &amp; Guardian</title><link>https://mg.co.za/health/2025-01-08-mystery-balls-force-closure-of-umhlanga-beaches/</link></item>
+<item><title>A legacy should be more than just having children - The Mail &amp; Guardian</title><link>https://mg.co.za/thought-leader/2025-01-08-a-legacy-should-be-more-than-just-having-children/</link></item>
+<item><title>Emmanuel Anoghena Oboh - The Mail &amp; Guardian</title><link>https://mg.co.za/author/emmanuel-anoghena-oboh/</link></item>
+<item><title>Africa’s AI revolution needs to strike a balance between innovation and oversight - The Mail &amp; Guardian</title><link>https://mg.co.za/thought-leader/2025-01-07-africas-ai-revolution-needs-to-strike-a-balance-between-innovation-and-oversight/</link></item>
+<item><title>Zaakir Mohamed - The Mail &amp; Guardian</title><link>https://mg.co.za/author/zaakir-mohamed/</link></item>
+<item><title>Kabelo Dlothi - The Mail &amp; Guardian</title><link>https://mg.co.za/author/kabelo-dlothi/</link></item>
+<item><title>Lebogang Molebale - The Mail &amp; Guardian</title><link>https://mg.co.za/author/lebogang-molebale/</link></item>
+<item><title>ANC’s January 8 statement a litmus test for its relevance in government of national unity - The Mail &amp; Guardian</title><link>https://mg.co.za/thought-leader/2025-01-07-ancs-january-8-statement-a-litmus-test-for-its-relevance-in-government-of-national-unity/</link></item>
+<item><title>Dimakatso Manthosi - The Mail &amp; Guardian</title><link>https://mg.co.za/author/dimakatso-manthosi/</link></item>
+<item><title>Photojournalism: The price of bearing witness - The Mail &amp; Guardian</title><link>https://mg.co.za/thought-leader/2025-01-06-photojournalism-the-price-of-bearing-witness/</link></item>
+<item><title>Patience Ukama - The Mail &amp; Guardian</title><link>https://mg.co.za/author/patience-ukama/</link></item>
+<item><title>Systemic neglect of Johannesburg Art Gallery contrasts with creative industry growth - The Mail &amp; Guardian</title><link>https://mg.co.za/friday/2025-01-08-systemic-neglect-of-johannesburg-art-gallery-contrasts-with-creative-industry-growth/</link></item>
+<item><title>Aeiden Swan celebrates SA wildlife through art and design - The Mail &amp; Guardian</title><link>https://mg.co.za/friday/2025-01-07-aeiden-swan-celebrates-south-african-wildlife-through-art-and-design/</link></item>
+<item><title>The distant descendant of Banksy’s Flower Thrower - The Mail &amp; Guardian</title><link>https://mg.co.za/friday/2024-12-24-the-distant-descendant-of-banksys-flower-thrower/</link></item>
+<item><title>Diary: Journey to Jazz returns for 2025 and a behind the scenes listen at South African music history on the From the Hip with Benjy Mudie podcast - The Mail &amp; Guardian</title><link>https://mg.co.za/friday/2024-12-24-diary-journey-to-jazz-returns-for-2025-and-a-behind-the-scenes-listen-at-south-african-music-history-on-the-from-the-hip-with-benjy-mudie-podcast/</link></item>
+<item><title>Baobab is a superfood with growing global demand – that’s bad news for the sacred African tree - The Mail &amp; Guardian</title><link>https://mg.co.za/the-green-guardian/2025-01-08-baobab-is-a-superfood-with-growing-global-demand-thats-bad-news-for-the-sacred-african-tree/</link></item>
+<item><title>Patrick Maundu - The Mail &amp; Guardian</title><link>https://mg.co.za/author/patrick-maundu/</link></item>
+<item><title>Disaster teams mobilise as KZN braces for severe weather - The Mail &amp; Guardian</title><link>https://mg.co.za/the-green-guardian/2025-01-06-disaster-teams-mobilise-as-kzn-braces-for-severe-weather/</link></item>
+<item><title>Scientists uncover evolutionary clues from tiny South African Jurassic crocodile - The Mail &amp; Guardian</title><link>https://mg.co.za/the-green-guardian/2024-12-27-scientists-uncover-evolutionary-clues-from-tiny-south-african-jurassic-crocodile/</link></item>
+<item><title>Local scientist discovers new species of ancient reptile - The Mail &amp; Guardian</title><link>https://mg.co.za/the-green-guardian/2024-12-27-local-scientist-discovers-new-species-of-ancient-reptile/</link></item>
+<item><title>Zuma tells ANC to reverse his expulsion and reinstate him immediately — or else - The Mail &amp; Guardian</title><link>https://mg.co.za/politics/2025-01-08-zuma-tells-anc-to-reverse-his-expulsion-and-reinstate-him-immediately-or-else/</link></item>
+<item><title>ITB leaders back at work despite ‘suspension’ by Zulu king - The Mail &amp; Guardian</title><link>https://mg.co.za/news/2025-01-08-itb-leaders-back-at-work-despite-suspension-by-zulu-king/</link></item>
+<item><title>Ramaphosa: ANC still discussing disbanding Gauteng, KZN executive committees - The Mail &amp; Guardian</title><link>https://mg.co.za/politics/2025-01-07-ramaphosa-anc-still-discussing-disbanding-gauteng-kzn-executive-committees/</link></item>
+<item><title>Zulu king’s divorce sparks debate over tradition, modernity and royal life - The Mail &amp; Guardian</title><link>https://mg.co.za/news/2025-01-07-zulu-kings-divorce-sparks-debate-over-tradition-modernity-and-royal-life/</link></item>
+<item><title>SACP set to confirm independent 2026 election bid at tripartite alliance meeting - The Mail &amp; Guardian</title><link>https://mg.co.za/politics/2025-01-07-sacp-set-to-confirm-independent-2026-election-bid-at-tripartite-alliance-meeting/</link></item>
+<item><title>Fikile Mbalula cracks down on ANC ill-discipline with charges against Yengeni and Bapela - The Mail &amp; Guardian</title><link>https://mg.co.za/politics/2025-01-06-fikile-mbalula-cracks-down-on-anc-ill-discipline-with-charges-against-yengeni-and-bapela/</link></item>
+<item><title>Illegal succulent trade pushes SA’s rare plants towards extinction - The Mail &amp; Guardian</title><link>https://mg.co.za/news/2025-01-06-illegal-succulent-trade-is-rampant-in-south-africa/</link></item>
+<item><title>Academic Partners - The Mail &amp; Guardian</title><link>https://careers.mg.co.za/listing/senior-lecturer-6/</link></item>
+<item><title>Personal finance: sustainable budgeting tips to stretch your money in 2025 - The Mail &amp; Guardian</title><link>https://mg.co.za/business/2025-01-02-personal-finance-sustainable-budgeting-tips-to-stretch-your-money-in-2025/</link></item>
+<item><title>Petrol and diesel prices set to rise for third straight month from 1 January - The Mail &amp; Guardian</title><link>https://mg.co.za/business/2024-12-31-petrol-and-diesel-prices-set-to-rise-for-3rd-straight-month-from-1-january/</link></item>
+<item><title>Mandisa Nyathi - The Mail &amp; Guardian</title><link>https://mg.co.za/author/mandisa-nyathi/</link></item>
 </channel></rss>
