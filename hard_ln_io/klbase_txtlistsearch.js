@@ -452,7 +452,7 @@ function txtmenus_kltxt_b(cstype=''){
     var menu_statistics=[
     '<span class="span_menu" onclick="'+str_t+'statistics_kltxt_b();">Statistics</span>',    
     '<span class="span_menu" onclick="'+str_t+'counthz_kltxt_b();">不重复汉字数统计</span>',
-    '<span class="span_menu" onclick="'+str_t+'count_characters_kltxt_b();">innterText字符数统计</span>',
+    '<span class="span_menu" onclick="'+str_t+'count_characters_kltxt_b();">span.txt_content innterText 字符数统计</span>',
     '<span class="span_menu" onclick="'+str_t+'tw_kltxt_b();">繁体字统计</span>',     
     '<span class="span_menu" onclick="'+str_t+'booksthickness_form_kltxt_b();">书的厚度</span>',    
     '<span class="span_menu" onclick="'+str_t+'books_current_table_kltxt_b();">当前书目列表</span>',
@@ -496,7 +496,7 @@ function txtmenus_kltxt_b(cstype=''){
         bljg=bljg+colors;
         bljg=bljg+klmenu_b(menu_config,'⚙','22rem','',fontsize);
         if (cstype!=='reader'){
-            bljg=bljg+klmenu_b(menu_statistics,'🧮','18rem','',fontsize);
+            bljg=bljg+klmenu_b(menu_statistics,'🧮','24rem','',fontsize);
         }
         bljg=bljg+klmenu_b(book_menu,'📚','15rem','',fontsize);        
     } else {
@@ -723,18 +723,43 @@ function img_resize_kltxt_b(){
 function count_characters_kltxt_b(){
     function sub_count_characters_kltxt_b_one_step(){
         if (blxl>bllen){
-            result_t.push('Total: '+bltotal);        
+            for (let key in total_dict){
+                result_t.push(key+': '+total_dict[key]);
+            }
             odiv.innerHTML=array_2_li_b(result_t);
             return;
         }
         getlines_kltxt_b(blxl,blstep,true,false,false,false,false);
         var ospans=odiv.querySelectorAll('span.txt_content');
-        var blcount=0;
+        
+        var page_dict={'len':0,'cn':0,'enc':0,'enw':0,'numc':0,'numw':0};
         for (let one_span of ospans){
-            blcount=blcount+one_span.innerText.trim().length;
+            var blstr=one_span.innerText.trim();
+            page_dict['len']=page_dict['len']+blstr.length;
+            
+            var cn_count=(blstr.match(/[^\x00-\xff]/g) || []).length;
+            page_dict['cn']=page_dict['cn']+cn_count;
+
+            var enc=(blstr.match(/[a-z]/ig) || []).length;
+            page_dict['enc']=page_dict['enc']+enc;
+            
+            var enw=(blstr.match(/[a-z]{2,}/ig) || []).length;
+            page_dict['enw']=page_dict['enw']+enw;
+
+            var num=(blstr.match(/[0-9]/g) || []).length;
+            page_dict['numc']=page_dict['numc']+num;            
+
+            var num=(blstr.match(/[0-9]+/g) || []).length;
+            page_dict['numw']=page_dict['numw']+num;                        
         }
-        result_t.push(blxl+'-'+(blxl+blstep)+': '+blcount);
-        bltotal=bltotal+blcount;
+        
+        for (let key in total_dict){
+            total_dict[key]=total_dict[key]+page_dict[key];
+        }
+        
+        page_dict=object2array_b(page_dict,true);
+        result_t.push(blxl+'-'+(blxl+blstep)+': '+page_dict);
+        
         blxl=blxl+blstep;
         setTimeout(sub_count_characters_kltxt_b_one_step,200);
     }
@@ -742,7 +767,7 @@ function count_characters_kltxt_b(){
     var bllen=filelist.length;
     var blxl=1;
     var blstep=250;
-    var bltotal=0;
+    var total_dict={'len':0,'cn':0,'enc':0,'enw':0,'numc':0,'numw':0};
     var odiv=document.getElementById('divhtml');
     var result_t=[];
     sub_count_characters_kltxt_b_one_step();

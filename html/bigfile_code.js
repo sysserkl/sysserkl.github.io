@@ -354,18 +354,21 @@ function search_bigfile(cskey=false){
 
 function html_get_bigfile(is_render=false,is_two_files=true){
     function sub_html_get_bigfile_wait(cstimes,fn_name){
-        if (cstimes>5){return;}
+        if (cstimes>5){
+            console.log('等候了',cstimes,'次');
+            return;
+        }
         
-        if (eval('typeof '+fn_name) == 'undefined'){
+        if (eval('typeof '+fn_name) == 'undefined'){    //先载入基础的 js 函数，再渲染页面 - 保留注释
             setTimeout(function (){sub_html_get_bigfile_wait(cstimes+1,fn_name);},1000);
             return;
         }
 
-        console.log('等待 '+fn_name+' 次数',cstimes);      
+        console.log('等待 '+fn_name+' 次数',cstimes);
         html_head_body_render_b(blsource);
     }
-    
-    function sub_html_get_bigfile_done(csdict){
+
+    function sub_html_get_bigfile_format(){
         var reg_exp1,reg_exp2;
         [reg_exp1,reg_exp2]=html_reg_exp_bigfile();
     
@@ -376,16 +379,17 @@ function html_get_bigfile(is_render=false,is_two_files=true){
             if (blsource[blxl].match(reg_exp2)){
                 blsource[blxl]='';
             }
-        }
+        }    
 
-        var title_position=-1;
         for (let blxl=0,lent=blsource.length;blxl<lent;blxl++){
             if (blsource[blxl].match(/<\/title>\s*$/)){
                 title_position=blxl;
                 break;
             }
         }
-
+    }
+    
+    function sub_html_get_bigfile_done(csdict){
         var ostatus=document.getElementById('textarea_html_status_bigfile');
         if (title_position===-1){
             ostatus.value='未发现 title';
@@ -419,6 +423,7 @@ function html_get_bigfile(is_render=false,is_two_files=true){
         
         if (found_js.length>0){
             if (is_render){
+                is_html_rendered=true;
                 html_render_js_b(found_js,sub_html_get_bigfile_wait);
             } else {
                 var imported_str='imported_files_global=new Set(["'+included_files.join('","')+'"]);\n';
@@ -434,8 +439,8 @@ function html_get_bigfile(is_render=false,is_two_files=true){
         
         if (found_css.length>0){
             if (is_render){
-                style_generate_b(found_css,true);
-            } else {        
+                style_generate_b(found_css,true);   //css 无执行顺序要求，不用等待 - 保留注释
+            } else {
                 blsource[title_position]=blsource[title_position]+'\n<style>\n'+found_css.join('\n')+'\n</style>\n';
             }
         }
@@ -444,14 +449,20 @@ function html_get_bigfile(is_render=false,is_two_files=true){
             var oresult1=document.getElementById('textarea_html_result1_bigfile');
             oresult1.value=blsource.join('\n');
             oresult1.scrollIntoView();
+        } else {
+            if (!is_html_rendered){
+                html_head_body_render_b(blsource);
+            }
         }
     }
     
     if (is_render){
         is_two_files=true;
     }
-    
+
+    var title_position=-1;
     var blsource=document.getElementById('textarea_html_file_content_bigfile').value.split('\n');
+    sub_html_get_bigfile_format();
     
     var imported_files=new Set();
     if (is_render && typeof imported_files_global!=='undefined'){
@@ -476,7 +487,8 @@ function html_get_bigfile(is_render=false,is_two_files=true){
     }
     
     console.log('included files',included_files);
-    
+
+    var is_html_rendered=false;
     idb_bigfile_b('read','filedict',included_files,sub_html_get_bigfile_done);
 }
 

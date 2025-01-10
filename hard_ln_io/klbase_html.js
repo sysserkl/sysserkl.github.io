@@ -68,11 +68,26 @@ function html_str_group_b(cslist,csparent=''){
 function html_head_body_render_b(html_source){
     var blat=html_source.indexOf('</head>');
     if (blat==-1){
-        alert('未发现</head>');
-        return;
+        var blfoud=false;
+        for (let blxl=1,lent=html_source.length;blxl<lent;blxl++){  //第一行肯定不含</head> - 保留注释
+            if (html_source[blxl].includes('</head>')){
+                head_at=html_source[blxl].indexOf('</head>');
+                var blleft=html_source.slice(0,blxl).concat([html_source[blxl].slice(0,head_at)]);
+                var blright=[html_source[blxl].slice(head_at+7,)].concat(html_source.slice(blxl+1,));
+                //console.log(blleft,blright); - 此行用于检查 head 和 body 是否正确分割 - 保留注释
+                var blfound=true;
+                break;
+            }
+        }
+        if (!blfound){
+            alert('未发现</head>');
+            return;
+        }
+    } else {
+        var blleft=html_source.slice(0,blat);
+        var blright=html_source.slice(blat+1,);
     }
     
-    var blleft=html_source.slice(0,blat);
     for (let blxl=0,lent=blleft.length;blxl<lent;blxl++){
         if (blleft[blxl].match(/^\s*<head>\s*$/)){
             blleft=blleft.slice(blxl+1,);
@@ -96,7 +111,6 @@ function html_head_body_render_b(html_source){
     
     var head_content=html_str_group_b(blleft,'head');
             
-    var blright=html_source.slice(blat+1,);
     for (let blxl=0,lent=blright.length;blxl<lent;blxl++){
         if (blright[blxl].match(/^\s*<body /) || blright[blxl].match(/^\s*<body>\s*$/)){
             blright=blright.slice(blxl+1,);
