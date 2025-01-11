@@ -369,14 +369,15 @@ function html_get_bigfile(is_render=false,is_two_files=true){
     }
 
     function sub_html_get_bigfile_format(){
-        var reg_exp1,reg_exp2;
-        [reg_exp1,reg_exp2]=html_reg_exp_bigfile();
+        var reg_exp1,reg_exp2,reg_exp3;
+        [reg_exp1,reg_exp2,reg_exp3]=html_reg_exp_bigfile();
     
         for (let blxl=0,lent=blsource.length;blxl<lent;blxl++){
             if (blsource[blxl].match(reg_exp1)){
                 blsource[blxl]='';
-            }
-            if (blsource[blxl].match(reg_exp2)){
+            } else if (blsource[blxl].match(reg_exp2)){
+                blsource[blxl]='';
+            } else if (blsource[blxl].match(reg_exp3)){
                 blsource[blxl]='';
             }
         }    
@@ -525,7 +526,9 @@ function merge_files_bigfile(){
 function html_reg_exp_bigfile(){
     var reg_exp1=/^\s*<script src=.*?><\/script>\s*$/mg;
     var reg_exp2=/^\s*klbase_addons_import_js_b\(.*?$/mg;
-    return [reg_exp1,reg_exp2];
+    var reg_exp3=/^\s*flot_import_js_b\(\[.*?\].*?$/mg;
+
+    return [reg_exp1,reg_exp2,reg_exp3];
 }
 
 function html_form_bigfile(ospan,do_render=false){
@@ -621,8 +624,8 @@ function html_form_bigfile(ospan,do_render=false){
             return;
         }
 
-        var reg_exp1,reg_exp2;
-        [reg_exp1,reg_exp2]=html_reg_exp_bigfile();
+        var reg_exp1,reg_exp2,reg_exp3;
+        [reg_exp1,reg_exp2,reg_exp3]=html_reg_exp_bigfile();
         var script_list=csstr.match(reg_exp1) || [];
         sub_html_form_bigfile_js(script_list,/".*?"/g); //只支持 双引号 - 保留注释
         
@@ -640,12 +643,26 @@ function html_form_bigfile(ospan,do_render=false){
             sub_html_form_bigfile_js(list_t,/'.*?'/g); //只支持 单引号 - 保留注释
         }
         
+        var flot_list=csstr.match(reg_exp3) || [];
+        for (let item of flot_list){
+            item=item.match(/'(.*?)'/g);
+            for (let acol of item){
+                flot_set.add('jquery.flot.'+acol.slice(1,-1)+'.min.js');
+            }
+        }
+        
+        if (flot_set.size>0){
+            prerequisite_set.add('jquery.flot.min.js');
+            prerequisite_set=array_union_b(prerequisite_set,flot_set,true);
+        }
+
         html_file_content=csstr;
         sub_html_form_bigfile_textarea();
     }
     
     var html_file_content='';
     var prerequisite_set=new Set();
+    var flot_set=new Set();
     var ignore_set=new Set();
     
     if (typeof ospan=='string'){
