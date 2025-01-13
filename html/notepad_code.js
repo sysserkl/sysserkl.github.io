@@ -246,7 +246,7 @@ function export_form_notepad(){
     left_str=left_str+'<span class="aclick" onclick="idb_notepad(\'import\');">import to database</span>';
     var right_str='</p>';
     
-    var blstr=textarea_with_form_generate_b('textarea_export_notepad','height:20rem;',left_str,'清空,复制,发送到临时记事本,发送地址,save as txt file',right_str);
+    var blstr=textarea_with_form_generate_b('textarea_export_notepad','height:20rem;',left_str,'清空,复制,导入 txt 文件,发送到临时记事本,发送地址,save as txt file',right_str);
     odiv.innerHTML=blstr;
 
     odiv.querySelector('textarea').value=result_t.join('\n=== notepad ===\n');  //textarea.value 和 '<textarea>'+value+'</textarea>' //效果不同，后者会转换 &amp; 为 & - 保留注释

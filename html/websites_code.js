@@ -72,7 +72,7 @@ function menu_klwebsites(change_no=false){
     '<span class="span_menu" onclick="'+str_t+'demo_style_klwebsites();">PWA Demo Style</span>',   
     '<span class="span_menu" onclick="'+str_t+'demo_style_klwebsites(true);">当前条件网址列表</span>',   
     '<span class="span_menu" onclick="'+str_t+'import_pwa_data_klwebsites();">导入 PWA 网址</span>',   
-    '<span class="span_menu" onclick="'+str_t+'import_bigfile_klwebsites();">导入 bigfile 网址文件</span>',   
+    //'<span class="span_menu" onclick="'+str_t+'import_bigfile_klwebsites();">导入 bigfile 网址文件</span>',   
     '<span id="span_jieba_web" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ jieba分词</span>',
     '<span id="span_category_with_p_web" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 分类分段</span>',
     ];    
@@ -152,10 +152,10 @@ function import_pwa_data_klwebsites(){
     sites_reload_klwebsites(true);
 }
 
-function import_bigfile_klwebsites(){
-    sites_all_global=undefined;
-    load_js_var_file_b('sites_all_global',[],'sites_all_data.js',sites_reload_klwebsites,true,true);
-}
+//function import_bigfile_klwebsites(){
+    //sites_all_global=undefined;
+    //load_js_var_file_b('sites_all_global',[],'sites_all_data.js',sites_reload_klwebsites,true,true);
+//}
 
 function sites_reload_klwebsites(is_pwa=false,do_search=true){
     sites_type_klwebsites();
@@ -984,9 +984,24 @@ function sites_tail_klwebsites(){
 }
 
 function init_klwebsites(){
-    function sub_init_klwebsites_fn(){
+    function sub_init_klwebsites_en(){
         enwords_mini_search_frame_style_b();
         enwords_mini_search_frame_form_b();
+    }
+    
+    function sub_init_klwebsites_done(){
+        if (typeof sites_all_global == 'undefined'){    //在menu前 - 保留注释
+            sites_all_global=[];
+        }
+        character_2_icon_b('🕸');
+        top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.5rem':'1.4rem'));
+
+        sites_reload_klwebsites(false,false);
+        
+        recent_websites_b();
+        args_klwebsites();
+
+        enwords_init_b(true,true,sub_init_klwebsites_en);    
     }
     //-----------------------
     oa_qr_list_websites_global=[];
@@ -996,18 +1011,9 @@ function init_klwebsites(){
     today_clicked_websites_global=new Set();
     canvas_size_websites_global=(ismobile_b()?90:150);
 
-    if (typeof sites_all_global == 'undefined'){    //在menu前 - 保留注释
-        sites_all_global=[];
-    }
-    character_2_icon_b('🕸');
-    top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.5rem':'1.4rem'));
-
-    sites_reload_klwebsites(false,false);
-    
-    recent_websites_b();
-    args_klwebsites();
-
-    enwords_init_b(true,true,sub_init_klwebsites_fn);
+    var file_list=klbase_addons_import_js_b([],[],['sites_all_data.js'],[],false,false);
+    //file_list 的元素是数组，形如：[ "js", "http://127.0.0.1/klwebphp/PythonTools/data/selenium_news/jsdata/sites_all_data.js", "" ] - 保留注释
+    load_js_var_file_b('sites_all_global',file_list,'sites_all_data.js',sub_init_klwebsites_done);
 }
 
 function args_klwebsites(){

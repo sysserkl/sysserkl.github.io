@@ -30,5 +30,5 @@ function data_load_catchphrase(array_name){
         console.log('data_load_catchphrase 费时：'+(performance.now() - t0) + ' milliseconds');
     }
     //-----------------------
-    load_fn_b('wiki_all_format_b',-1,2000,sub_data_load_catchphrase_format);
+    load_fn_b('wiki_all_format_b',sub_data_load_catchphrase_format);
 }

@@ -517,8 +517,25 @@ function fav_location_bible(cspages,csmax){
     search_bible('FAV',0,(blno-1)*csmax+1);
 }
 
-function fav_get_bible(){
-    return local_storage_get_b('fav_lines_bible',-1,true);
+function fav_get_bible(unique=false,return_set=false,do_sort=false,do_set=false){
+    var list_t=local_storage_get_b('fav_lines_bible',-1,true);
+    
+    if (unique){
+        return array_unique_b(list_t,return_set);
+    }
+    
+    if (return_set){
+        return new Set(list_t);
+    }
+    
+    if (do_sort){   //只在数组时起作用 - 保留注释
+        list_t=fav_sort_bible(list_t);
+    }
+    
+    if (do_set){   //只在数组时起作用 - 保留注释
+        fav_set_bible(list_t);
+    }
+    return list_t;
 }
 
 function fav_set_bible(cslist){
@@ -945,7 +962,6 @@ function fav_export_import_form_bible(){
     left_strings=left_strings+close_button_b('div_search_statistics','')+' ';        
     left_strings=left_strings+'<span class="aclick" onclick="fav_update_bible();">Update</span> ';    
     left_strings=left_strings+'<span class="aclick" onclick="local_storage_view_form_b(\'\',\'div_search_statistics\');">查看 localStorage</span> ';
-    //var right_strings='<div id="div_word_temp" style="display:inline;">';
     var right_strings=' 行数：'+fav_list.length;
     right_strings=right_strings+'</p>';
     
@@ -1384,7 +1400,7 @@ function chapter_one_bible(startno=0,endno=0){
     var tdnum='';
     var enstr='';
     var cnstr='';
-    var fav_list=array_unique_b(fav_get_bible(),true);
+    var fav_list=fav_get_bible(true,true);
     
     var do_confuse,quote_len;
     [do_confuse,quote_len]=quote_attribute_b('span_confuse_bible');    
@@ -1504,17 +1520,11 @@ function read_set_bible(){
     localStorage.setItem('bible_chapter_readed',chapters.join(''));    
 }
 
-function fav_init_bible(){
-    var fav_list=array_unique_b(fav_get_bible());
-    fav_list=fav_sort_bible(fav_list);
-    fav_set_bible(fav_list);
-}
-
 function fav_add_bible(csno){
     csno=csno.toString();
     var ospan_en=document.getElementById('span_number_bible_en_'+csno);
     var ospan_cn=document.getElementById('span_number_bible_cn_'+csno);
-    var fav_list=array_unique_b(fav_get_bible());
+    var fav_list=fav_get_bible(true);
     var is_remove=false;
     if (ospan_en){
         if (ospan_en.style.backgroundColor==''){
@@ -1723,6 +1733,29 @@ function idb_count_and_write_bible(){
     });
 }
 
+function load_var_bible(){
+    function sub_load_var_bible_fn(){
+        menu_bible();
+        recent_search_bible();
+        fav_get_bible(true,false,true,true);    
+    }
+    
+    chapter_global=[];
+    chapter_sub_global=[];
+    current_search_no_global=new Set();
+    use_kjv_cn_global=[true,true];
+    kjv=[];
+    cnbible_global=[];
+    enbible_old_global=[];
+    cnbible_old_global=[];
+    fav_desc_sort_global=false;
+    en_words_temp_important_global=[]; 
+    
+    document.getElementById('span_status').style.color=scheme_global['memo'];
+    input_with_x_b('input_bible_search',25);
+    load_data_bible(false,sub_load_var_bible_fn);
+}
+
 function load_style_bible(){
     var style_list=[
     'table.table_zebra tr:nth-child(even) {background-color: #efefef;}',
@@ -1740,7 +1773,7 @@ function load_style_bible(){
     style_generate_b(style_list,true);
 }
 
-function load_data_bible(load_from_idb=false){
+function load_data_bible(load_from_idb=false,run_fn=false){
     async function sub_load_data_bible_read(){
         console.log('load_data_bible()');
         await idb_bible('read');
@@ -1751,36 +1784,56 @@ function load_data_bible(load_from_idb=false){
             document.getElementById('span_title').style.color=scheme_global['a'];
             init_bible();
         }
+        if (typeof run_fn=='function'){
+            run_fn();
+        }
     }
+    
     if (load_from_idb==false){ // is_local_b() - 保留注释
         console.log('load bible data from local js file');
         document.getElementById('span_title').style.color=scheme_global['color'];
-        load_filelist_bible();
+        load_filelist_bible(true,run_fn);
     } else {
         sub_load_data_bible_read();
     }
 }
 
-function load_filelist_bible(do_init=true){
-    var today=file_date_parameter_b();
-    var sele_path=klbase_sele_path_b()[1];
-    document.write('\n<script src="'+sele_path+'/jsdoc3/bible_kjv_890.js'+today+'"><\/script>\n');
-    console.log(sele_path+'/jsdoc3/bible_kjv_890.js'+today);
-    
-    document.write('<script>\n');
-    document.write('kjv=[].concat(filelist);\n');
-    document.write('</script>\n');
-    
-    document.write('\n<script src="'+sele_path+'/jsdoc3/sheng_jing_he_he_ben_124338.js'+today+'"><\/script>\n');
-    console.log(sele_path+'/jsdoc3/sheng_jing_he_he_ben_124338.js'+today);
-    
-    document.write('<script>\n');
-    document.write('cnbible_global=[].concat(filelist);\n');
-    document.write('filelist=[];\n');
-    if (do_init){
-        document.write('init_bible();\n');    //idb_count_and_write_bible();
+function load_filelist_bible(do_init=true,run_fn=false){
+    function sub_load_filelist_bible_cn(is_ok){
+        if (!is_ok){
+            console.log('载入cn失败');
+            return;
+        }
+        
+        cnbible_global=[].concat(filelist);
+        filelist=undefined;
+
+        if (do_init){
+            init_bible();
+        }
+        
+        if (typeof run_fn=='function'){
+            run_fn();
+        }
     }
-    document.write('</script>\n');
+    
+    function sub_load_filelist_bible_kjv(is_ok){
+        if (!is_ok){
+            console.log('载入kjv失败');
+            return;
+        }
+        
+        kjv=[].concat(filelist);
+        filelist=undefined;
+        
+        file_list=[['js',sele_path+'/jsdoc3/sheng_jing_he_he_ben_124338.js','']];
+        load_js_var_file_b('filelist',file_list,'sheng_jing_he_he_ben_124338.js',sub_load_filelist_bible_cn);
+    }
+    
+    var sele_path=klbase_sele_path_b()[1];
+
+    var file_list=[['js',sele_path+'/jsdoc3/bible_kjv_890.js','']];
+    load_js_var_file_b('filelist',file_list,'bible_kjv_890.js',sub_load_filelist_bible_kjv);
 }
 
 function idb_bible(cstype='',is_old=false){

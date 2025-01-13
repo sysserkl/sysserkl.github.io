@@ -117,7 +117,7 @@ function init_enwords_book(){
         }    
 
         if (enbook_title_setted_global){
-            load_var_b('filelist',-1,2000,sub_init_enwords_book_fn_load);
+            load_var_b('filelist',sub_init_enwords_book_fn_load);
         }
     }
     //-----------------------

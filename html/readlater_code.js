@@ -301,7 +301,7 @@ function efull_get_rlater(){
     }
 
     var flist=klbase_addons_import_js_b([],[],['sites_all_data.js'],[],false,false);
-    load_js_var_file_b('sites_all_global',flist,'sites_all_data.js',sub_efull_get_rlater_done,true,false,-1,2000,true);
+    load_js_var_file_b('sites_all_global',flist,'sites_all_data.js',sub_efull_get_rlater_done,true,false,-1,100,true);
 }
 
 function array_sites_rlater(csarray){

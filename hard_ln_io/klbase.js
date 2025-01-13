@@ -1731,7 +1731,7 @@ function remote_ip_detector_b(host_left_part,csmin,csmax,do_alert=false){
         //eval('typeof you_found_me_global') == 'undefined' - 肯定成立 - 保留注释
         blxl=blxl+1;
         file_dom_create_b([host_left_part+(csmin+blxl)+'/klwebphp/klbase_you_found_me.js']);
-        load_var_b('you_found_me_global',(is_local_b()?10:50),500,sub_remote_ip_detector_b_one_step);
+        load_var_b('you_found_me_global',sub_remote_ip_detector_b_one_step,(is_local_b()?10:50));
     }
     //-----------------------
     var t0 = performance.now();    
@@ -3309,7 +3309,7 @@ function date_rows_tr_generate_b(csname,max_rows=40,cssquash=false,fraction_len=
     return [date_list,tr_list,flot_list];
 }
 
-function load_fn_b(fn_name,csmax,cswait,run_fn_onsuccess){
+function load_fn_b(fn_name,run_fn_onsuccess=false,csmax=-1,cswait=100){
     function sub_load_fn_b_wait(){
         blxl=blxl+1;
         if (eval('typeof '+fn_name) == 'function'){
@@ -3333,7 +3333,7 @@ function load_fn_b(fn_name,csmax,cswait,run_fn_onsuccess){
     setTimeout(sub_load_fn_b_wait,cswait);
 }
 
-function load_var_b(var_name,csmax,cswait,run_fn,fail_fn=false){
+function load_var_b(var_name,run_fn,fail_fn=false,csmax=-1,cswait=100){
     function sub_load_var_b_wait(){
         blxl=blxl+1;
         
@@ -3670,7 +3670,7 @@ function merge_js_data_files_in_one_b(varname,jsfile_list,run_fn,merge_current=f
         }
         eval(varname+'=undefined'); //每次均取消目标变量的定义 - 保留注释
         file_dom_create_b([jsfile_list[blxl]],true,'js');    
-        load_var_b(varname,-1,1000,sub_merge_js_data_files_in_one_b);        
+        load_var_b(varname,sub_merge_js_data_files_in_one_b);        
     }
     //-----------------------
     var blxl=0;
@@ -3685,7 +3685,7 @@ function merge_js_data_files_in_one_b(varname,jsfile_list,run_fn,merge_current=f
     
     eval(varname+'=undefined'); //取消目标变量的定义 - 保留注释
     file_dom_create_b([jsfile_list[blxl]],true,'js');    
-    load_var_b(varname,-1,1000,sub_merge_js_data_files_in_one_b);
+    load_var_b(varname,sub_merge_js_data_files_in_one_b);
 }
 
 function array_remove_item_b(csarr,csitem){
@@ -4068,12 +4068,12 @@ function load_js_var_one_by_one_b(data_files,csxl,run_fn=false,is_ok=true){
     }
 }
 
-function load_js_var_file_b(varname,file_list,filename='',csfn=false,do_echo=true,direct_from_bigfile=false,csmax=-1,cswait=2000,if_exist_then_run_fn=false){
+function load_js_var_file_b(varname,file_list,filename='',csfn=false,do_echo=true,direct_from_bigfile=false,csmax=-1,cswait=100,if_exist_then_run_fn=false){
     function sub_load_js_var_file_b_bigfile_test(cslist){
         if (cslist.length>0){
             if (filename!==''){
                 idb_bigfile_b('read','eval',filename);
-                load_var_b(varname,csmax,cswait,csfn);
+                load_var_b(varname,csfn,csmax,cswait);
             } else {
                 console.log('filename 为空');
             }
@@ -4091,7 +4091,7 @@ function load_js_var_file_b(varname,file_list,filename='',csfn=false,do_echo=tru
                 return;
             }
             if (filename!==''){
-                console.log('尝试从bigfile载入',varname);
+                console.log('尝试从 bigfile 载入',varname);
                 idb_bigfile_b('read','',filename,sub_load_js_var_file_b_bigfile_test);
             } else {
                 console.log('filename 为空');
@@ -4108,7 +4108,7 @@ function load_js_var_file_b(varname,file_list,filename='',csfn=false,do_echo=tru
             sub_load_js_var_file_b_bigfile_eval();
         } else {
             file_dom_create_b(file_list,true,'js');
-            load_var_b(varname,csmax,cswait,csfn,sub_load_js_var_file_b_bigfile_eval);
+            load_var_b(varname,csfn,sub_load_js_var_file_b_bigfile_eval,csmax,cswait);
         }
     } else {
         if (do_echo){

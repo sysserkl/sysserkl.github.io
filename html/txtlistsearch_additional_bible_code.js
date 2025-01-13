@@ -17,7 +17,7 @@ function menu_more_kltxt_bible(){
 function link_generate_kltxt_bible(check_base=true){
     if (typeof(en_cn_bible_b)!=='function'){
         if (check_base){
-            load_fn_b('en_cn_bible_b',-1,2000,function (){eval('link_generate_kltxt_bible(false)');});
+            load_fn_b('en_cn_bible_b',function (){eval('link_generate_kltxt_bible(false)');});
         }
         return;
     }

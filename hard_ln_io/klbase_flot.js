@@ -380,7 +380,7 @@ function flot_import_js_b(cslist=[],isdefer=false,write_or_dom='write'){
     } else if (write_or_dom=='dom'){
         file_dom_create_b([result_t[0]],true,'js');
         if (result_t.length>1){        
-            load_var_b('$.plot.plugins',5,1000,function (){file_dom_create_b(result_t.slice(1,),true,'js');});
+            load_var_b('$.plot.plugins',function (){file_dom_create_b(result_t.slice(1,),true,'js');});
         }
     }
     return result_t;

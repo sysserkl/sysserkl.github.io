@@ -407,6 +407,7 @@ function txtmenus_kltxt_b(cstype=''){
     menu_config=menu_config.concat([
     '<span class="span_menu" onclick="'+str_t+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>',
     '<span class="span_menu" onclick="'+str_t+'float_bookname_kltxt_b();">浮动书名</span>',
+    fpara_menu_b(str_t),
     ]);
 
     if (cstype=='reader'){
@@ -1222,7 +1223,7 @@ function separate_search_kltxt_b(key_list=false){
 
 function bible_title_link_generate_kltxt_b(){
     if (book_type_check_kltxt_b()!=='bible'){return;}
-    load_fn_b('link_generate_kltxt_bible',-1,2000,function (){eval('link_generate_kltxt_bible()');});
+    load_fn_b('link_generate_kltxt_bible',function (){eval('link_generate_kltxt_bible()');});
 }
 
 function booksthickness_form_kltxt_b(){
@@ -2792,9 +2793,9 @@ function img_load_check_kltxt_b(){
 
         if (eval('typeof mini_img_list'+group_t[blxl]+'_global') == 'undefined'){    
             file_dom_create_b([imgpath+'mini_img_list'+group_t[blxl]+'_data.js']);
-            load_var_b('mini_img_list'+group_t[blxl]+'_global',csmax,1000,sub_img_load_check_kltxt_b_import_js);
+            load_var_b('mini_img_list'+group_t[blxl]+'_global',sub_img_load_check_kltxt_b_import_js,csmax);
         } else {
-            load_var_b('mini_img_list'+group_t[blxl]+'_global',1,1,sub_img_load_check_kltxt_b_import_js);        
+            load_var_b('mini_img_list'+group_t[blxl]+'_global',sub_img_load_check_kltxt_b_import_js,1,1);        
         }
         
         blxl=blxl+1;
@@ -2825,7 +2826,7 @@ function img_load_check_kltxt_b(){
 
     if (typeof mini_img_index_global == 'undefined'){
         file_dom_create_b([imgpath+'mini_img_index_data.js']);
-        load_var_b('mini_img_index_global',csmax,1000,sub_img_load_check_kltxt_b_start);            
+        load_var_b('mini_img_index_global',sub_img_load_check_kltxt_b_start,csmax);            
     } else {
         sub_img_load_check_kltxt_b_start();
     }
@@ -3282,7 +3283,7 @@ function load_book_js_code_file_kltxt_b(){
     var file4=['txtlistsearch_additional_'+txtbook_js_code_file_global+'_code.js'];
     var file_list=klbase_addons_import_js_b([],[],[],file4,false,false);
     file_dom_create_b(file_list,true,'js');
-    load_fn_b('menu_more_kltxt_'+txtbook_js_code_file_global,-1,2000,sub_load_book_js_code_file_kltxt_b_do);
+    load_fn_b('menu_more_kltxt_'+txtbook_js_code_file_global,sub_load_book_js_code_file_kltxt_b_do);
 }
 
 function recent_opened_book_set_kltxt_b(bookid,cskeys){
@@ -4062,7 +4063,7 @@ function layout_kltxt_b(cstype=''){
         getlines_kltxt_b();
     }    
     if (csbookname_global=='klwiki_en2'){
-        load_fn_b('days_kltxt_'+txtbook_js_code_file_global,-1,2000,function (){eval('days_kltxt_'+txtbook_js_code_file_global+'()');});
+        load_fn_b('days_kltxt_'+txtbook_js_code_file_global,function (){eval('days_kltxt_'+txtbook_js_code_file_global+'()');});
     }
     
     top_bottom_arrow_b('div_top_bottom','',true,(ismobile_b()?'1.7rem':'1.4rem'),true,html_name_kltxt_global=='reader',2);    

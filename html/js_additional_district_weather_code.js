@@ -63,7 +63,7 @@ function fn_more_district_weather(){
             oa.innerText=site_name;
         }
     }
-    load_fn_b('prev_month_b',-1,1000,sub_fn_more_district_weather_load_link);
+    load_fn_b('prev_month_b',sub_fn_more_district_weather_load_link);
 }
 
 function statistics_temperature_district_weather(){
