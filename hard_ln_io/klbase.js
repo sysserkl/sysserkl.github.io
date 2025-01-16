@@ -3340,7 +3340,7 @@ function load_var_b(var_name,run_fn,fail_fn=false,csmax=-1,cswait=100){
         if (eval('typeof '+var_name) !== 'undefined'){
             console.log('发现 '+var_name+' ，扫描次数：'+blxl);       
             if (typeof run_fn == 'function'){            
-                run_fn(true);     
+                run_fn(true);
             }
         } else {
             if (blxl>=csmax){

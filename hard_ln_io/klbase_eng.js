@@ -533,7 +533,10 @@ function sup_kleng_show_hide_b(ospan){
 }
 
 function sup_kleng_words_b(csdisplay='none',ocontainer=false){
-    if (typeof enwords == 'undefined'){return;}
+    if (typeof enwords == 'undefined'){
+        console.log('未发现 enwords');
+        return;
+    }
     
     if (ocontainer===false){
         var o_sups=document.querySelectorAll('sup.kleng');
