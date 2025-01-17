@@ -172,7 +172,7 @@ function wikiuploads_count_notepad(){
     var blstr=otextarea.value;
     var list_t=blstr.match(/^.*{{wikiuploads}}.*$/mg) || [];
     list_t.sort();
-    return array_2_li_b(list_t);
+    return '<h4>附件列表('+list_t.length+')</h4>'+array_2_li_b(list_t);
 }
 
 function textarea_info_count_notepad(ospan=false,otextarea=false){
@@ -250,7 +250,7 @@ function export_form_notepad(){
     odiv.innerHTML=blstr;
 
     odiv.querySelector('textarea').value=result_t.join('\n=== notepad ===\n');  //textarea.value 和 '<textarea>'+value+'</textarea>' //效果不同，后者会转换 &amp; 为 & - 保留注释
-    odiv.insertAdjacentHTML('beforeend','<h4>附件列表</h4>'+wikiuploads_count_notepad());
+    odiv.insertAdjacentHTML('beforeend',wikiuploads_count_notepad());
     odiv.scrollIntoView();
 }
 

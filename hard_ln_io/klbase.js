@@ -4416,7 +4416,7 @@ function upload_files_to_list_b(input_id,run_fn=false,csext='',csmax_count=10,cs
     }
     
     if (csmax_size===false){
-        csmax_size=100*1024*1024;
+        csmax_size=200*1024*1024;
     }
     
     if (typeof input_id == 'object'){

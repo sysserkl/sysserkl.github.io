@@ -200,7 +200,7 @@ function menu_klr2(){
     '<span class="span_menu" onclick="'+str_t+'enwords_get_klr2();">提取英文单词</span>',        
     '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'batchwww\');">批量打开网址</span>',
     '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'bing_oxford_klsearch_en\');">批量打开B_O_KLSearch(en)</span>',    
-    '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'bing_collins_oxford_klsearch_en\');">批量打开B_C_O+_KLSearch(en)</span>',    
+    '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'bing_collins_oxford_+_klsearch_en\');">批量打开B_C_O_+_KLSearch(en)</span>',    
     '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'oxford_klsearch_en\');">批量打开O_KLSearch(en)</span>',
     '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'cambridge\');">批量打开+(en)</span>',    
     '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'collins\');">批量打开C(en)</span>',

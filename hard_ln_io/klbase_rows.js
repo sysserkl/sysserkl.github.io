@@ -705,7 +705,7 @@ function strquick_klr_b(cstype='',csid='textarea_rows_content',status_id='textar
         case 'batchwww':
         case 'klwikititle':
         case 'collins':
-        case 'bing_collins_oxford_klsearch_en':                
+        case 'bing_collins_oxford_+_klsearch_en':                
         case 'bing_oxford_klsearch_en':        
         case 'oxford_klsearch_en':
         case 'cambridge':
@@ -802,7 +802,7 @@ function batch_open_www_klr_b(csid,ostatus,cstype=''){
                 list_t[blno]=klwiki_link_b(atitle,false);
             }
             break;
-        case 'bing_collins_oxford_klsearch_en':
+        case 'bing_collins_oxford_+_klsearch_en':
         case 'bing_oxford_klsearch_en':
         case 'oxford_klsearch_en':
             var bing_links=[];
@@ -821,11 +821,11 @@ function batch_open_www_klr_b(csid,ostatus,cstype=''){
             
             list_t=list_t.concat(klsearch_links);
             
-            if (cstype=='bing_oxford_klsearch_en' || cstype=='bing_collins_oxford_klsearch_en'){
+            if (cstype=='bing_oxford_klsearch_en' || cstype=='bing_collins_oxford_+_klsearch_en'){
                 list_t=list_t.concat(bing_links);
             }
             
-            if (cstype=='bing_collins_oxford_klsearch_en'){
+            if (cstype=='bing_collins_oxford_+_klsearch_en'){
                 list_t=list_t.concat(collins_links);
                 list_t=list_t.concat(cambridge_links);
             }
