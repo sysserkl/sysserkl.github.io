@@ -2541,18 +2541,34 @@ function recent_words_list_enwords_b(cspageno=0,words_count_per_page=100,isrando
     //以下2行保留 - 保留注释
     //var blweek=date_2_ymd_b(false,'w');    
     //blweek=(blweek==0?7:blweek);
+    var cached_no=local_storage_get_b('enwords_recent_no');
+    var rand_page_no_list=[day_no_enwords_b()[0]];
+    if (cached_no!==''){
+        rand_page_no_list.push(parseInt(cached_no));
+    }
     
-    var page_html=page_combination_b(bllen,words_count_per_page,cspageno,'recent_words_list_enwords_b','page_location_enwords_b','',1,50,'','aclick',1,true,[day_no_enwords_b()[0]]);
+    var page_html='<p style="'+page_p_style_b()+'">'+page_combination_b(bllen,words_count_per_page,cspageno,'recent_words_list_enwords_b','page_location_enwords_b','WITHOUT P',1,50,'','aclick',1,true,rand_page_no_list);
 
+    cspageno=Math.ceil((cspageno+1)/words_count_per_page);  //记录号更改为页号 - 保留注释
+
+    page_html=page_html+'<span class="aclick" onclick="enwords_recent_no_set_b('+cspageno+',this);">Cache('+cached_no+')</span>';
+    page_html=page_html+'</p>';
+    
 	document.getElementById('divhtml').innerHTML=bljg+page_html;
     
-    cspageno=Math.ceil((cspageno+1)/words_count_per_page);  //记录号更改为页号 - 保留注释
 
     title_change_enwords_b('最近记忆的单词'+(cspageno==-1?'(全部)':'_第'+cspageno+'页'));
     document.location.href='#top';
     document.location.href='#a_recent_bookmark';
     words_count_enwords_b();
     en_sentence_show_check_b();    
+}
+
+function enwords_recent_no_set_b(cspageno,ospan){
+    if (cspageno=='' || isNaN(cspageno)){return;}
+    
+    localStorage.setItem('enwords_recent_no',cspageno);
+    ospan.innerText='Cache('+cspageno+')';
 }
 
 function page_location_enwords_b(cspages,words_count_per_page){

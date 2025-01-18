@@ -327,7 +327,7 @@ function init_diff_b(){
 
 function menu_diff_b(){
     var str_t=klmenu_hide_b('');
-    var paste_list=['{{\\/?quote}}','^[\\*#] '];
+    var paste_list=['{{\\/?quote}}','^[\\*#] ','^====|====$'];
     var klmenu1=[];
     for (let item of paste_list){
         klmenu1.push('<span class="span_menu" onclick="'+str_t+'common_replace_diff_b(this.innerText);">'+item+'</span>');

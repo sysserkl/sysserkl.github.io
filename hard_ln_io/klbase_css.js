@@ -1678,6 +1678,10 @@ function page_remove_dot_b(page_html){
     return [page_html,blfound];
 }
 
+function page_p_style_b(){
+    return 'margin-top:0.5rem;margin-bottom:0.5rem;line-height:2rem;font-size:1rem;';
+}
+
 function page_combination_b(cslen,rows_per_page,csno,page_fn,locate_fn,p_style=false,show_number=4,interval_number=10,p_class='',button_class='oblong_box',first_page_no=1,has_right_part=true,rand_page_no_list=[]){
     if (cslen<=rows_per_page){return '';}
     var pages=Math.ceil(cslen/rows_per_page);
@@ -1713,7 +1717,7 @@ function page_combination_b(cslen,rows_per_page,csno,page_fn,locate_fn,p_style=f
     }
     
     if (p_style==false){
-        p_style='margin-top:0.5rem;margin-bottom:0.5rem;line-height:2rem;font-size:1rem;';
+        p_style=page_p_style_b();
     }
     bljg='<p '+(p_class==''?'':'class="'+p_class+'" ')+'style="'+p_style+'">'+bljg+'</p>';
     

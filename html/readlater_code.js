@@ -1296,6 +1296,6 @@ function idb_rlater(cstype=''){
         }            
     }
     //-----------------------
-    return idb_main_b(cstype, 'rlater', 'rlater_dbf', sub_idb_rlater_switch);
+    return idb_main_b(cstype, 'rlater_dbc', 'rlater_dbf', sub_idb_rlater_switch);
     //idb_rlater('count').then(value => {console.log('行数：',value);}); //此行保留 - 保留注释
 }

@@ -1872,7 +1872,7 @@ function idb_bible(cstype='',is_old=false){
     //-----------------------
     
     //return new Promise((resolve, reject) => {
-    return idb_main_b(cstype,'bible','bible_dbf',sub_idb_bible_switch,is_old);
+    return idb_main_b(cstype,'bible_dbc','bible_dbf',sub_idb_bible_switch,is_old);
     //.then((result) => { /* 不需要在这里 resolve(result)，因为在 sub_idb_bible_switch 中已经处理了 */ })
     //.catch(reject); // 直接传递错误给外部 promise。.catch((error) => {reject(error);});
     //});

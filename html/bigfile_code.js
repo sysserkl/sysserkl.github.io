@@ -612,6 +612,9 @@ function html_form_bigfile(ospan,do_render=false){
                 if (!bname.includes('.')){
                     bname='klbase_'+bname+'.js';
                 }
+                if (bname.match(/,\s*defer$/)){
+                    bname=bname.replace(/,\s*defer$/,'');
+                }
                 prerequisite_set.add(bname);
             }
         }
