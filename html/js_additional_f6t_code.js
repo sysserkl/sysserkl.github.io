@@ -33,6 +33,7 @@ function menu_more_f6t(){
     var group_list=[
     ['⚪ 过滤地名','klmenu_check_b(this.id,true);',false,'span_filter_district_f6t'],
     ['⚪ 气泡检索仅限有图记录','klmenu_check_b(this.id,true);',false,'span_only_img_f6t'],
+    ['⚪ 显示id','klmenu_check_b(this.id,true);',false,'span_show_id_f6t'],
     ];
     klmenu1.push(menu_container_b(str_t,group_list,'统计显示：'));
 
@@ -82,10 +83,11 @@ function upload_data_files_f6t(csarr,from_big_file=false){
 }
 
 function col_rearrange_f6t(){
+    var show_id=klmenu_check_b('span_show_id_f6t',false);
     var result_t=[];
     for (let item of js_data_current_common_search_global){
         var list_t=[].concat(item[0]);
-        list_t[1]='<a class="a_link_f6t" href="'+list_t[0]+'" target=_blank>'+list_t[1]+'</a>';
+        list_t[1]='<a class="a_link_f6t" href="'+list_t[0]+'" target=_blank>'+list_t[1]+'</a>'+id_get_f6t(list_t[0],show_id);
         result_t.push([list_t.slice(1,),item[1]]);
     }
     return result_t;
@@ -187,13 +189,22 @@ function hot_word_popup_event_f6t(event,oword,table_no,row_no,cstype){
     hot_word_html_f6t(event,distrct_name,cstype,blkey,col_no,cstype=='u',only_img);
 }
 
+function id_get_f6t(csstr,show_id){
+    if (show_id){
+        var id_value='('+(csstr.match(/\/trip\/(\d+)/) || ['',''])[1]+')';
+    } else {
+        var id_value='';
+    }
+    return id_value;
+}
+
 function hot_word_html_f6t(event,distrct_name,cstype,cskey,col_no,show_user=false,only_img=false,csmax=false){
     var result_t=[];
     var blno=0;
     if (csmax===false){
         csmax=parseInt(document.getElementById('input_popup_max_rows_f6t').value.trim()) || 10;
     }
-    
+
     for (let item of js_data_current_common_search_global){
         if (!item[0][8].startsWith(distrct_name) && !item[0][9].startsWith(distrct_name)){continue;}
         if (only_img && item[0][10]=='no img'){continue;}
@@ -482,7 +493,7 @@ function rank_f6t(){
             
             var th_str='<tr><th style="cursor:pointer;" ondblclick="no_refresh_f6t(this);">No.</th><th>地区</th><th nowrap>'+one_h3.slice(2,)+'</th>'+th_month+th_difficult+th_year+th_user+hot_th;
             
-            var buttons_str='<input style="width:10rem;" placeholder=\'filter\' onkeyup="if (event.key==\'Enter\'){filter_table_f6t(this);}" /> <span class="aclick" onclick="flot_f6t('+table_no+');" style="font-weight:normal;">flot</span> <select class="select_rank_f6t_html_type"><option>h</option><option>u</option></select> <span class="aclick" onclick="batch_links_generate_f6t(this,'+table_no+');" style="font-weight:normal;">html</span>';
+            var buttons_str='<input style="width:10rem;" placeholder=\'filter\' onkeyup="if (event.key==\'Enter\'){filter_table_f6t(this);}" /> <span class="aclick" onclick="flot_f6t('+table_no+');" style="font-weight:normal;">flot</span> html: <select class="select_rank_f6t_html_type"><option>h</option><option>u</option></select> <span class="aclick" onclick="batch_links_generate_f6t(this,'+table_no+');" style="font-weight:normal;">show</span> <span class="aclick" onclick="batch_links_generate_f6t(this,'+table_no+',true);" style="font-weight:normal;">save</span>';
             
             var flot_str='<div id="div_rank_f6t_flot_m_'+table_no+'" style="width:90%;"></div><div id="div_rank_f6t_flot_y_'+table_no+'" style="width:90%;"></div><div id="div_rank_f6t_html_'+table_no+'" style="width:90%;column-count:'+div_column_count+';"></div>';
             
@@ -671,12 +682,21 @@ function no_refresh_f6t(oth){
     }
 }
 
-function batch_links_generate_f6t(obutton,table_no){
+function batch_links_generate_f6t(obutton,table_no,is_save=false){
     function sub_batch_links_generate_f6t_one(){
         if (blxl>=bllen){
-            var osub=document.getElementById('div_rank_f6t_html_'+table_no);
-            osub.innerHTML=result_t.join('\n')+'<p><b>Total:</b> '+new Set(unique_links).size+'</p>';
-            osub.scrollIntoView();
+            var blstr=result_t.join('\n')+'<p><b>Total:</b> '+new Set(unique_links).size+'</p>';
+            if (is_save){
+                if (confirm('是否保存为html文件？')){
+                    blstr=html_head_generate_b('f6t',[],true,true)+'<body style="margin:0.5rem;">'+blstr+'</body></html>';
+                    string_2_txt_file_b(blstr,'f6t.htm','txt');
+                }
+            } else {
+                var osub=document.getElementById('div_rank_f6t_html_'+table_no);
+                osub.innerHTML=blstr;
+                osub.scrollIntoView();
+            }
+            
             document.title=old_title;
             console.log('batch_links_generate_f6t() 费时：'+(performance.now() - t0) + ' milliseconds');
             return;
