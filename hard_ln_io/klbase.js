@@ -1731,7 +1731,7 @@ function remote_ip_detector_b(host_left_part,csmin,csmax,do_alert=false){
         //eval('typeof you_found_me_global') == 'undefined' - 肯定成立 - 保留注释
         blxl=blxl+1;
         file_dom_create_b([host_left_part+(csmin+blxl)+'/klwebphp/klbase_you_found_me.js']);
-        load_var_b('you_found_me_global',sub_remote_ip_detector_b_one_step,(is_local_b()?10:50));
+        load_var_b('you_found_me_global',sub_remote_ip_detector_b_one_step,false,(is_local_b()?10:50));
     }
     //-----------------------
     var t0 = performance.now();    
@@ -3327,7 +3327,7 @@ function load_fn_b(fn_name,run_fn_onsuccess=false,csmax=-1,cswait=100){
     }
     //-----------------------
     if (csmax==-1){
-        csmax=(is_local_b()?20:50);    
+        csmax=(is_local_b()?50:100);
     }
     var blxl=0;
     setTimeout(sub_load_fn_b_wait,cswait);
@@ -3359,7 +3359,7 @@ function load_var_b(var_name,run_fn,fail_fn=false,csmax=-1,cswait=100){
     }
     //-----------------------
     if (csmax==-1){
-        csmax=(is_local_b()?20:50);    
+        csmax=(is_local_b()?50:100);
     }
     var blxl=0;
     setTimeout(sub_load_var_b_wait,cswait);
@@ -4073,7 +4073,7 @@ function load_js_var_file_b(varname,file_list,filename='',csfn=false,do_echo=tru
         if (cslist.length>0){
             if (filename!==''){
                 idb_bigfile_b('read','eval',filename);
-                load_var_b(varname,csfn,csmax,cswait);
+                load_var_b(varname,csfn,false,csmax,cswait);
             } else {
                 console.log('filename 为空');
             }

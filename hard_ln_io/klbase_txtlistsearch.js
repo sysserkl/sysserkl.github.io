@@ -2793,9 +2793,9 @@ function img_load_check_kltxt_b(){
 
         if (eval('typeof mini_img_list'+group_t[blxl]+'_global') == 'undefined'){    
             file_dom_create_b([imgpath+'mini_img_list'+group_t[blxl]+'_data.js']);
-            load_var_b('mini_img_list'+group_t[blxl]+'_global',sub_img_load_check_kltxt_b_import_js,csmax);
+            load_var_b('mini_img_list'+group_t[blxl]+'_global',sub_img_load_check_kltxt_b_import_js,false,csmax);
         } else {
-            load_var_b('mini_img_list'+group_t[blxl]+'_global',sub_img_load_check_kltxt_b_import_js,1,1);        
+            load_var_b('mini_img_list'+group_t[blxl]+'_global',sub_img_load_check_kltxt_b_import_js,false,1,1);        
         }
         
         blxl=blxl+1;
@@ -2826,7 +2826,7 @@ function img_load_check_kltxt_b(){
 
     if (typeof mini_img_index_global == 'undefined'){
         file_dom_create_b([imgpath+'mini_img_index_data.js']);
-        load_var_b('mini_img_index_global',sub_img_load_check_kltxt_b_start,csmax);            
+        load_var_b('mini_img_index_global',sub_img_load_check_kltxt_b_start,false,csmax);            
     } else {
         sub_img_load_check_kltxt_b_start();
     }
