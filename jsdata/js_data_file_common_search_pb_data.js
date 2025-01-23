@@ -24,6 +24,8 @@ var js_file_list_common_pb_global=[
 ['../jsdata/population_cn_data.js','👫','population cn','population_cn_global','popcn','','1'],
 ['../jsdata/corruption_ccdi_data.js','🇨🇳','corruption ccdi','corruption_global','corruption','','1'],
 ['../jsdata/wbus1_data.js','📟','wbus','wbus_global','wbus','','0'],
-['../jsdata/us_mass_killings_incidents_data.js','🪦','us mass killings incidents','us_mass_killings_incidents_global','us_mass_killings','','0'],
-['../jsdata/us_mass_killings_offenders_data.js','🪦','us mass killings offenders','us_mass_killings_offenders_global','us_mass_killings','','0'],
+['../jsdata/us_mass_killings_incidents_data.js','🪦','us mass killings incidents','us_mass_killings_incidents_global','us_mass_killings','','1'],
+['../jsdata/us_mass_killings_offenders_data.js','🪦','us mass killings offenders','us_mass_killings_offenders_global','us_mass_killings','','1'],
+['../jsdata/hzbd_data.js','🏞','环浙步道','hzbd_global','hzbd','','1'],
+
 ];

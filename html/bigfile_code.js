@@ -68,6 +68,7 @@ function menu_bigfile(){
     '<span class="span_menu" onclick="'+str_t+'refresh_bigfile();">refresh</span>',
     '<span class="span_menu" onclick="'+str_t+'clear_data_bigfile();">清空数据库</span>',
     '<span class="span_menu" onclick="'+str_t+'merge_files_bigfile();">合并导出当前文件内容</span>',
+    '<span id="span_encode_bigfile" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 导出时加密</span>',    
     ];
 
     var klmenu_config=root_font_size_menu_b(str_t);
@@ -221,12 +222,19 @@ function upload_a_bigfile(do_split=false){
 
         if (file_name_bigfile_global.match(reg_exp2)){
             file_name_bigfile_global=file_name_bigfile_global.replace(reg_exp2,'$1');
-        }    
+        }
+        
+        var finfo=file_path_name_b(file_name_bigfile_global);
+        if (finfo[1].match(/_\$\$encoded$/)){
+            is_encoded=true;
+            file_name_bigfile_global=finfo[1].replace(/_\$\$encoded$/,'')+'.'+finfo[2];
+        }
         return true;
     }
 
     function sub_upload_a_bigfile_one_split(){
         if (!sub_upload_a_bigfile_name_set()){return;}
+        console.log(file_name_bigfile_global,is_encoded);
 
         file_content_bigfile_global = ofiles[file_no].content;
         if (file_no==file_count-1){
@@ -241,15 +249,21 @@ function upload_a_bigfile(do_split=false){
     
     function sub_upload_a_bigfile_one_step(){
         if (!sub_upload_a_bigfile_name_set()){return;}
+        console.log(file_name_bigfile_global,is_encoded);
 
         var textFileReader = new FileReader();
         //textFileReader.readAsDataURL(ofiles[file_no]); //此行保留 - 保留注释
         textFileReader.readAsText(ofiles[file_no]);    //此行保留 , 'UTF-8'); // 使用 readAsText 并指定编码为 UTF-8 - 保留注释
         textFileReader.onload = function (){
+            var blcontent=this.result;
+            if (is_encoded){
+                blcontent=de_confuse_str_b(blcontent);
+            }
+                
             if (do_split){
-                sub_upload_a_bigfile_split_content(this.result);
+                sub_upload_a_bigfile_split_content(blcontent);
             } else {
-                file_content_bigfile_global = this.result;
+                file_content_bigfile_global = blcontent;
                 if (file_no==file_count-1){
                     document.title=old_title;
                     idb_bigfile_b('edit','','',read_fn_bigfile);
@@ -293,7 +307,7 @@ function upload_a_bigfile(do_split=false){
     
     var reg_exp1=/\s*\(\d+\)(\.[^\.]+)$/;   //同名文件(1) - 保留注释
     var reg_exp2=/\s*\(copy \d+\)(\.[^\.]+)$/;   //同名文件(copy 1) - 保留注释
-
+    var is_encoded=false;
     sub_upload_a_bigfile_one_step();
 }
 
@@ -508,10 +522,15 @@ function merge_files_bigfile(){
             blcount=blcount+1;
         }
 
-        var save_name='file_merge_'+today_str_b('dt','','','_',10)+'.txt';
+        var export_data=result_t.join('\n');
+        var save_name='file_merge_'+today_str_b('dt','','','_',10);
+        [export_data,save_name]=encode_content_bigfile(export_data,save_name);
+        
+        save_name=save_name+'.txt';
+        
         if (!confirm('是否合并当前 '+blcount+'/'+current_data_bigfile_global.length+' 个文件的合计长度为 '+bllen+' 的内容导出为 '+save_name+'？')){return;}
 
-        string_2_txt_file_b(result_t.join('\n'),save_name,'txt');
+        string_2_txt_file_b(export_data,save_name,'txt');
     }
     
     var fname_list=[];
@@ -520,7 +539,15 @@ function merge_files_bigfile(){
     }
     
     idb_bigfile_b('read','filedict',fname_list,sub_merge_files_bigfile_done);
+}
 
+function encode_content_bigfile(export_data,save_name){
+    if (klmenu_check_b('span_encode_bigfile',false)){
+        var raw_data=export_data;
+        export_data=en_confuse_str_b(export_data);
+        save_name=save_name+'_$$encoded';
+    }
+    return [export_data,save_name];
 }
 
 function html_reg_exp_bigfile(){
@@ -748,10 +775,14 @@ function export_bigfile(ospan){
         
         var rndstr=randstr_b(4,true,false);
         if ((prompt('输入 '+rndstr+' 确认导出长度为 '+bllen+' 的该记录') || '').trim()!==rndstr){return;}
-        string_2_txt_file_b(csstr,fname,blext);
+        
+        [csstr,fname]=encode_content_bigfile(csstr,fname);
+        string_2_txt_file_b(csstr,fname+'.'+blext,blext);
     }
     
     var fname=ospan.parentNode.querySelector('span.span_name_bigfile').innerText;
-    var blext=file_path_name_b(fname)[2];
-    idb_bigfile_b('read','content',fname,sub_export_bigfile_save);
+    var finfo=file_path_name_b(fname);
+    fname=finfo[1];
+    var blext=finfo[2];
+    idb_bigfile_b('read','content',fname+'.'+blext,sub_export_bigfile_save);
 }

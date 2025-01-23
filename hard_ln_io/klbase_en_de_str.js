@@ -178,21 +178,22 @@ function en_interval_str_b(csstr){
     if (list_t==null){
         return csstr;
     }
-    var bljg='';
+    //将字符串 'abc\nde' ，分解为：[ "ab", "c\n", "de" ] - 保留注释
+    var bljg=[];
     for (let item of list_t){
         if (item.length==2){
             if (Math.random()>0.667){
-                bljg=bljg+item+randwrongstr_b(1);
+                bljg.push(item+randwrongstr_b(1));
             } else if (Math.random()>0.5){
-                bljg=bljg+item+randstr_b(1);
+                bljg.push(item+randstr_b(1));
             } else {
-                bljg=bljg+item+random_chs_b(1);
+                bljg.push(item+random_chs_b(1));
             }
         } else {
-            bljg=bljg+item;
+            bljg.push(item);
         }
     }
-    return bljg;
+    return bljg.join('');
 }
 
 function de_interval_str_b(csstr){
@@ -203,15 +204,15 @@ function de_interval_str_b(csstr){
     if (list_t==null){
         return csstr;
     }
-    var bljg='';
+    var bljg=[];
     for (let item of list_t){
         if (item.length==3){
-            bljg=bljg+item.substring(0,2);
+            bljg.push(item.substring(0,2));
         } else {
-            bljg=bljg+item;
+            bljg.push(item);
         }
     }
-    return bljg;
+    return bljg.join('');
 }
 
 function en_double_str_b(csstr,split_lines=false){

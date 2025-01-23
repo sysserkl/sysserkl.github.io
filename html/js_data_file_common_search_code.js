@@ -213,9 +213,20 @@ function js_file_row_2_arg_common(arow,return_str=false){
     return list_t;
 }
 
+function rows_per_page_set_common(){
+    var new_value=prompt('输入每页记录数',rows_per_page_jscm_global);
+    if (new_value==null){return;}
+    new_value=parseInt(new_value.trim());
+    if (isNaN(new_value)){return;}
+    rows_per_page_jscm_global=Math.max(1,new_value);
+}
+
 function menu_common(){
     var str_t=klmenu_hide_b('');
-    var klmenu1=[];
+    var klmenu1=[
+    '<span class="span_menu" onclick="'+str_t+'th_set_common();">设定表格列名称</span>',
+    '<span class="span_menu" onclick="'+str_t+'rows_per_page_set_common();">修改每页记录数</span>',
+    ];
 
     var group_list=[
     ['⚪ reg','klmenu_check_b(this.id,true);',false,'span_reg_common'],
@@ -239,7 +250,6 @@ function menu_common(){
     
     var klmenu_config=root_font_size_menu_b(str_t);
     klmenu_config=klmenu_config.concat([
-    '<span class="span_menu" onclick="'+str_t+'th_set_common();">设定表格列名称</span>',
     '<span class="span_menu" onclick="'+str_t+'upload_data_files_form_common();">上传数据文件或从bigfile导入</span>',
     '<span class="span_menu" onclick="'+str_t+'split_current_arr_common();">当前结果数组分割</span>',
     '<span class="span_menu" onclick="'+str_t+'sort_by_key_count_common();">当前条件按输入的关键词出现次数排序</span>',    
