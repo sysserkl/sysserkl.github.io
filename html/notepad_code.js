@@ -48,7 +48,7 @@ function menu_notepad(){
     var klmenu_sort=sort_menu_klr_b('textarea_content_notepad',str_t);
     var klmenu_blank=blank_rows_add_remove_klr_b('menu','textarea_content_notepad',str_t);
     
-    var buttons=edit_buttons_b('edit_tools_click_notepad',true,true,'oblong_box').join(' ');
+    var buttons=edit_buttons_b('edit_tools_click_notepad','notepad','oblong_box');
     buttons=buttons+' 替换 <input type="text" id="input_rep1_notepad" /> <span class="span_box" onclick="find_in_textarea_notepad(1);" title="从编辑框指定位置开始查找字符串">📍</span> 为 <input type="text" id="input_rep2_notepad" /> <span class="span_box" onclick="find_in_textarea_notepad(2);" title="从编辑框指定位置开始查找字符串">📍</span> <span class="oblong_box" onclick="replace_str_notepad();">执行</span>';
     var dom_show_hide='<span class="oblong_box" onclick="wiki_style_notepad();">wiki</span> <span class="oblong_box" onclick="diff_notepad();">diff</span> <span class="oblong_box" onclick="popup_show_hide_b(\'span_edit_buttons_notepad\',\'\');">🖊</span> ';
     var op=document.getElementById('p_menu_notepad');

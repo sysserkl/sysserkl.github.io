@@ -363,7 +363,7 @@ function en_word_links_b(csword='',ew=false){
 
 function en_search_sites_b(maxlength=-1,ew=false){
     var list_t=[
-    ['bt','Bing Microsoft Translator'],    
+    ['L','link'],
     ['b','Bing'],
     ['y','youdao'],
     ['d','海词'],
@@ -389,7 +389,7 @@ function en_search_sites_b(maxlength=-1,ew=false){
         ]); //不可排序 - 保留注释    
         
         if (ew){
-            list_t.push(['w👁','WE']);            
+            list_t.push(['w👁','WE']);
         }
     }
     
@@ -465,8 +465,9 @@ function open_link_en_b(cstype,csword,do_open=true){
             blhref=klbase_sele_path_b()[1]+'/html/txtlistsearch.htm';
             blhref=blhref+'?_tagKLWiki0&s='+web_href_key_b(csword,'+',true);
             break;
-        case 'bt':
-            blhref='https://cn.bing.com/translator/';
+        case 'L':
+            websites_in_en_popup_box_b();
+            //blhref='https://cn.bing.com/translator/';
             break;
         case '👁':
             blhref=klwebphp_path_b('book_search.php');
@@ -488,7 +489,7 @@ function open_link_en_b(cstype,csword,do_open=true){
             break;  
         //case 'r':
             //blhref='https://www.wordreference.com/definition/'+encodeURIComponent(csword);
-            //break;                      
+            //break;
         case 's':
             var blhref=klwebphp_path_b('klbase_html_jump.htm');
             blhref=blhref+'?selenium_news_search.php?search='+encodeURIComponent( '\\b'+csword+'\\b(:title)(:r)');
@@ -1155,9 +1156,25 @@ function sentence_format_b(csword){
     copy_2_clipboard_b('<eword w="'+csword+'"></eword>');
 }
 
+function websites_in_en_popup_box_b(){
+    var odiv=document.getElementById('div_enword_search_links');
+    if (!odiv){return;}
+    if (odiv.querySelector('div.div_websites_in_en_popup_box')){return;}
+    
+    var list_t=[
+    ['https://cn.bing.com/translator/','BT'],
+    ['https://qianwen.aliyun.com/','通义'],
+    ];
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
+        list_t[blxl]='<a href="'+list_t[blxl][0]+'" target=_blank>'+list_t[blxl][1]+'</a>';
+    }
+    odiv.insertAdjacentHTML('beforeend','<div class="div_websites_in_en_popup_box">'+list_t.join(' ')+'</div>');
+}
+
 function sentence_popup_b(csword,ospan=false,no_start=0){
     var odiv=document.getElementById('div_enword_search_links');
-    if (!odiv){return;}    
+    //即包含指定单词各个网站链接的气泡框 - 保留注释
+    if (!odiv){return;}
     
     var blmax_rows=5;
     var remote_host, button_str, font_size;
@@ -1184,8 +1201,10 @@ function sentence_popup_b(csword,ospan=false,no_start=0){
     if (no_next>=en_sentence_global.length){
         no_next=0;
     }
+    
     var osentence=odiv.querySelector('div.div_enwords_sentence');
-    if (osentence){        
+    //包含在 odiv 中的 例句框 - 保留注释
+    if (osentence){
         osentence.parentNode.removeChild(osentence);
     }
     

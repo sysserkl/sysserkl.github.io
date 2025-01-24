@@ -2429,18 +2429,76 @@ function doms_rect_b(odoms,return_list=false){
     }
 }
 
-function edit_buttons_b(js_fn='',more_buttons=false,olul=false,dom_type='button'){
+function edit_buttons_b(js_fn='',cstype=[],dom_type='button'){
     var the_year=new Date().getFullYear();
-    var result_t=['{{wikiuploads}}', '{{wikiuploads}}'+the_year+'/', '<photo>{{wikiuploads}}'+the_year+'/+</photo>', '<photo>+</photo>', 'upload/','<br />','<u>+</u>', '<poem>+</poem>', '{{quote}}+{{/quote}}', '{{span}}+{{/span}}', '<ed2k name="ed2k">+</ed2k>', '<magnet>+</magnet>', '<kltab sep=comma>+</kltab>', '<syntaxhighlight lang="">+</syntaxhighlight>', '<div class="div_kl_wrap" style="max-height:;">+</div>', '<code>+</code>', ];
+    var result_t=[
+    '<br />',
+    '<code>+</code>', 
+    '<div class="div_kl_wrap" style="max-height:;">+</div>', 
+    '<ed2k name="ed2k">+</ed2k>', 
+    '<kltab sep=comma>+</kltab>', 
+    '<magnet>+</magnet>', 
+    '<photo>+</photo>', 
+    '<photo>{{wikiuploads}}'+the_year+'/+</photo>', 
+    '<poem>+</poem>', 
+    '{{quote}}+{{/quote}}', 
+    '{{span}}+{{/span}}', 
+    '<syntaxhighlight lang="">+</syntaxhighlight>', 
+    'upload/',
+    '<u>+</u>', 
+    '{{wikiuploads}}', 
+    '{{wikiuploads}}'+the_year+'/', 
+    ];
     
-    if (more_buttons){
-        result_t=['== + ==','=== + ===',"''+''","'''+'''",'<nowiki>+</nowiki>','<big>+</big>','<sup>+</sup>','<sub>+</sub>',
+    if (cstype.includes('notepad')){
+        result_t=[
+        "'''+'''",
+        "''+''",
+        '#',
+        '*',
+        '== + ==',
+        '=== + ===',
+        '<big>+</big>',
+        '<nowiki>+</nowiki>',
+        '<sub>+</sub>',
+        '<sup>+</sup>',
+        '<tag>+</tag>',
         ].concat(result_t);
     }
-    if (olul){
-        result_t=['*','#'
-        ].concat(result_t);
+    
+    if (cstype.includes('mediawiki')){
+        result_t=result_t.concat([
+        '{{c|t=b|n=+}}', 
+        '{{c|t=r|n=+}}', 
+        '<klpc 512>+</klpc>', 
+        [' li="10" name=""','用于 website 的 txt 模式'],
+        '<mrt m>+</mrt>', 
+        '<mrt r>+</mrt>', 
+        '<mrt t>+</mrt>', 
+        '<pre>+</pre>', 
+        '<references>+</references>', 
+        '<references><ref name="">+</ref></references>', 
+        '<ref name="" />', 
+        '<ref name="">+</ref>', 
+        '{{s|k=+}}', 
+        '<span class="klignore">+</span>', 
+        '<span class="span_css_klwiki">+</span>', 
+        '<span class="span_date_klwiki">+</span>',
+        '<span id="span_ico_klwiki">+</span>', 
+        '<strike>+</strike>', 
+        '{{t|n=+}}', 
+        '<todocheck>+</todocheck>', 
+        '<website kf>+</website>', 
+        '<website m>+</website>', 
+        '<website name="" txt>+</website>', 
+        '<website name="">+</website>', 
+        '<website s>+</website>', 
+        '<website w>+</website>', 
+        '{{w|n=+}}',
+        ]);
     }
+
+    result_t.sort();
     
     if (js_fn!==''){
         if (dom_type=='button'){
@@ -2450,11 +2508,16 @@ function edit_buttons_b(js_fn='',more_buttons=false,olul=false,dom_type='button'
             var dom_str_l='<span class="'+dom_type+'"';
             var dom_str_r='</span>';
         }
+        
         for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
-            result_t[blxl]=dom_str_l+' onclick="'+js_fn+'(this);">'+specialstr_lt_gt_j(result_t[blxl])+dom_str_r;
+            if (Array.isArray(result_t[blxl])){
+                result_t[blxl]=dom_str_l+' title="'+specialstr92_b(result_t[blxl][1])+'" onclick="'+js_fn+'(this);">'+specialstr_lt_gt_j(result_t[blxl][0])+dom_str_r;
+            } else {
+                result_t[blxl]=dom_str_l+' onclick="'+js_fn+'(this);">'+specialstr_lt_gt_j(result_t[blxl])+dom_str_r;
+            }
         }
     }
-    return result_t;
+    return result_t.join(' ');
 }
 
 function iframe_show_b(ospan,csno){

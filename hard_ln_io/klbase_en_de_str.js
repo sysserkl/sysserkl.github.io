@@ -820,3 +820,38 @@ function decode_quoted_printable_b(data){
     }
 };
 
+// Base64 编码
+function base64_encode_b(str){
+    return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g,
+        function(match, p1){
+            return String.fromCharCode('0x' + p1);
+    }));
+}
+
+// Base64 解码
+function base64_decode_b(base64Str){
+    return decodeURIComponent(Array.prototype.map.call(atob(base64Str), 
+        function(c){
+            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join(''));
+}
+
+function caesar_encrypt_b(text, shift){
+    //shift 的取值范围可以是任何整数，但在实际应用中通常只考虑 0 到 25 的正整数
+    shift = ((shift % 26) + 26) % 26;
+    
+    return text.split('').map(char => {
+        if (/[a-z]/.test(char)){
+            return String.fromCharCode((char.charCodeAt(0) - 97 + shift) % 26 + 97);
+        } else if (/[A-Z]/.test(char)) {
+            return String.fromCharCode((char.charCodeAt(0) - 65 + shift) % 26 + 65);
+        }
+        return char;
+    }).join('');
+}
+
+function caesar_decrypt_b(encryptedText, shift){
+    // 解密实际上是用负数位移量进行加密
+    shift = ((shift % 26) + 26) % 26;
+    return caesar_encrypt_b(encryptedText, 26 - shift);
+}

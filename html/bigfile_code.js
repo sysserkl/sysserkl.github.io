@@ -86,6 +86,8 @@ function menu_bigfile(){
     klmenu_config.push(menu_container_b(str_t,group_list,''));
 
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'𖧶','15rem','1rem','1rem','30rem')+'<span id="span_menu_htm_bigfile"></span>'+klmenu_b(klmenu_config,'⚙','19rem','1rem','1rem','30rem'),'','0rem')+' ');
+    
+    klmenu_check_b('span_reg_bigfile',true);        
     first_source_set_bigfile(false);
 }
 
@@ -228,13 +230,14 @@ function upload_a_bigfile(do_split=false){
         if (finfo[1].match(/_\$\$encoded$/)){
             is_encoded=true;
             file_name_bigfile_global=finfo[1].replace(/_\$\$encoded$/,'')+'.'+finfo[2];
+        } else {
+            is_encoded=false;
         }
         return true;
     }
 
     function sub_upload_a_bigfile_one_split(){
         if (!sub_upload_a_bigfile_name_set()){return;}
-        console.log(file_name_bigfile_global,is_encoded);
 
         file_content_bigfile_global = ofiles[file_no].content;
         if (file_no==file_count-1){
@@ -249,7 +252,6 @@ function upload_a_bigfile(do_split=false){
     
     function sub_upload_a_bigfile_one_step(){
         if (!sub_upload_a_bigfile_name_set()){return;}
-        console.log(file_name_bigfile_global,is_encoded);
 
         var textFileReader = new FileReader();
         //textFileReader.readAsDataURL(ofiles[file_no]); //此行保留 - 保留注释
@@ -257,7 +259,7 @@ function upload_a_bigfile(do_split=false){
         textFileReader.onload = function (){
             var blcontent=this.result;
             if (is_encoded){
-                blcontent=de_confuse_str_b(blcontent);
+                blcontent=base64_decode_b(caesar_decrypt_b(blcontent, 7));
             }
                 
             if (do_split){
@@ -544,7 +546,7 @@ function merge_files_bigfile(){
 function encode_content_bigfile(export_data,save_name){
     if (klmenu_check_b('span_encode_bigfile',false)){
         var raw_data=export_data;
-        export_data=en_confuse_str_b(export_data);
+        export_data=caesar_encrypt_b(base64_encode_b(export_data), 7)
         save_name=save_name+'_$$encoded';
     }
     return [export_data,save_name];
