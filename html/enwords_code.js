@@ -1011,7 +1011,7 @@ function search_similar_new_sentence_kle(cstype=false,csword=''){
             sentence_search_value_get_b(csword);
             break;
         case '链接':
-            var bljg='<p style="font-size:1.5rem;">'+en_word_links_b(csword)+'</p>';
+            var bljg='<p style="font-size:1.5rem;">'+en_word_links_b(csword,false,false)+'</p>';
             odiv.innerHTML=bljg;
             break;
         default:

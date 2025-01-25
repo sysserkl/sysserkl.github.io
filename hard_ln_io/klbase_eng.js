@@ -350,8 +350,8 @@ function enwords_batch_div_b(wordslist_t,checkboxno='',showno=true,startno=0){
     return bljg;
 }
 
-function en_word_links_b(csword='',ew=false){
-    var list_t=en_search_sites_b(-1,ew);
+function en_word_links_b(csword='',ew=false,www=false){
+    var list_t=en_search_sites_b(-1,ew,www);
     var bljg='';
     
     for (let item of list_t){
@@ -361,9 +361,8 @@ function en_word_links_b(csword='',ew=false){
     return bljg.trim();
 }
 
-function en_search_sites_b(maxlength=-1,ew=false){
+function en_search_sites_b(maxlength=-1,ew=false,www=false){
     var list_t=[
-    ['L','link'],
     ['b','Bing'],
     ['y','youdao'],
     ['d','海词'],
@@ -375,12 +374,17 @@ function en_search_sites_b(maxlength=-1,ew=false){
     ['k','KL Search'],    
     ];
     
+    if (www){
+        list_t=[['L','link']].concat(list_t);
+    }
+    
     if (is_local_b()){
         list_t=list_t.concat([
         ['t','txtlistsearch'],        
         ['e','enwords'],
         ]); //不可排序 - 保留注释
     }
+    
     if (!is_file_type_b()){
         list_t=list_t.concat([
         ['w','KLWiki'],    
@@ -1158,7 +1162,10 @@ function sentence_format_b(csword){
 
 function websites_in_en_popup_box_b(){
     var odiv=document.getElementById('div_enword_search_links');
-    if (!odiv){return;}
+    if (!odiv){
+        console.log('未发现 id: div_enword_search_links');
+        return;
+    }
     if (odiv.querySelector('div.div_websites_in_en_popup_box')){return;}
     
     var list_t=[
@@ -1257,7 +1264,7 @@ function popup_words_links_b(event,csword,ew=false,def_button=false,mobile_font_
     if (def_button){
         bljg=bljg+'<span class="span_link" onclick="popup_def_b(this);">def</span> ';
     }
-    bljg=bljg+'<br />'+en_word_links_b(csword,ew);
+    bljg=bljg+'<br />'+en_word_links_b(csword,ew,true);
     bljg=bljg+' <span class="span_link" onclick="sentence_format_b(\''+specialstr_j(csword)+'\');" title="复制 wiki 格式到剪贴板">f</span>';
     if (typeof en_sentence_global !== 'undefined'){
         bljg=bljg+' <span class="span_link" onclick="sentence_popup_b(\''+specialstr_j(csword)+'\',this);">例句</span>';
@@ -1360,7 +1367,7 @@ function en_words_temp_textarea_b(divname,csrecount=false){
     right_str=right_str+' row: '+en_words_temp_global.length;
     right_str=right_str+'</p>';    
 
-    var blstr=textarea_with_form_generate_b('textarea_word_temp','height:'+(ismobile_b()?'10':'20')+'rem;',left_str,'全选,清空,复制,导入temp_txt_share',right_str,'enwords_temp','form_word_temp');
+    var blstr=textarea_with_form_generate_b('textarea_word_temp','height:'+(ismobile_b()?'10':'20')+'rem;',left_str,'全选,清空,复制,加密,解密,save as txt file,导入temp_txt_share',right_str,'enwords_temp','form_word_temp');
     blstr=blstr+'<div id="div_words_temp_diff"></div>';
     document.getElementById('divhtml').innerHTML=blstr;
     document.getElementById('textarea_word_temp').value=en_word_temp_get_b('raw');

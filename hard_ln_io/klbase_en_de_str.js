@@ -818,40 +818,108 @@ function decode_quoted_printable_b(data){
     } catch (dummy){
         return null;
     }
-};
+}
 
 // Base64 编码
 function base64_encode_b(str){
-    return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g,
-        function(match, p1){
-            return String.fromCharCode('0x' + p1);
-    }));
+    try {
+        var new_str=btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g,
+            function(match, p1){
+                return String.fromCharCode('0x' + p1);
+        }));
+        return [new_str,''];
+    } catch (error){
+        return [str,error.message];
+    }        
 }
 
-// Base64 解码
 function base64_decode_b(base64Str){
-    return decodeURIComponent(Array.prototype.map.call(atob(base64Str), 
-        function(c){
-            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-    }).join(''));
+    try {
+        // 使用 atob 将 Base64 编码的字符串解码为二进制字符串
+        const binaryString = atob(base64Str);
+
+        // 创建 Uint8Array 以存储二进制数据
+        const len = binaryString.length;
+        const bytes = new Uint8Array(len);
+        for (let blxl = 0; blxl < len; blxl++){
+            bytes[blxl] = binaryString.charCodeAt(blxl);
+        }
+
+        // 使用 TextDecoder 将二进制数据转换为 UTF-8 字符串
+        const decoder = new TextDecoder('utf-8');
+        const decodedString = decoder.decode(bytes);
+
+        return [decodedString, ''];
+    } catch (error){
+        console.log(error);
+        // 如果有错误发生，返回原始字符串和错误信息
+        return [base64Str, error.message];
+    }
+    
+    //旧方法：
+    //try {
+        //var new_str=decodeURIComponent(Array.prototype.map.call(atob(base64Str), 
+            //function(c){
+                //return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+        //}).join(''));
+        //return [new_str,''];
+    //} catch (error){
+        ////out of memory - 保留注释
+        //return [base64Str,error.message];
+    //}
+
+    //将每个字符通过 charCodeAt(0) 转换为它的 Unicode 编码，然后将其转换为两位的十六进制字符串，并用 % 开头来形成一个 URI 组件。这种方法对于 ASCII 字符来说是有效的，但是对于非 ASCII 字符（如多字节字符），它可能会生成无效的 URI 序列，因为这些字符需要更复杂的编码规则。
+    //为了修复这个问题，可以直接使用 TextDecoder 来处理二进制数据，而不是手动构造 URI 百分号编码。TextDecoder 是一种可以将二进制数据（例如从 Base64 解码得到的数据）转换为字符串的方式，它能够正确处理各种字符集，包括多字节字符。
 }
 
 function caesar_encrypt_b(text, shift){
     //shift 的取值范围可以是任何整数，但在实际应用中通常只考虑 0 到 25 的正整数
     shift = ((shift % 26) + 26) % 26;
-    
-    return text.split('').map(char => {
-        if (/[a-z]/.test(char)){
-            return String.fromCharCode((char.charCodeAt(0) - 97 + shift) % 26 + 97);
-        } else if (/[A-Z]/.test(char)) {
-            return String.fromCharCode((char.charCodeAt(0) - 65 + shift) % 26 + 65);
-        }
-        return char;
-    }).join('');
+
+    try {
+        var new_str=text.split('').map(char => {
+            if (/[a-z]/.test(char)){
+                return String.fromCharCode((char.charCodeAt(0) - 97 + shift) % 26 + 97);
+            } else if (/[A-Z]/.test(char)) {
+                return String.fromCharCode((char.charCodeAt(0) - 65 + shift) % 26 + 65);
+            }
+            return char;
+        }).join('');
+        return [new_str,''];
+    } catch (error){
+        return [text,error.message];
+    }
 }
 
 function caesar_decrypt_b(encryptedText, shift){
     // 解密实际上是用负数位移量进行加密
     shift = ((shift % 26) + 26) % 26;
     return caesar_encrypt_b(encryptedText, 26 - shift);
+}
+
+function bc_encode_b(csstr,shift=7){
+    var new_str,is_ok;
+    [new_str,is_ok]=base64_encode_b(csstr);
+    if (is_ok!==''){
+        return [csstr,is_ok];
+    }
+    
+    [new_str,is_ok]=caesar_encrypt_b(new_str, shift);
+    if (is_ok!==''){
+        return [csstr,is_ok];
+    }
+    return [new_str,''];
+}
+
+function bc_decode_b(csstr,shift=7){
+    var new_str,is_ok;
+    [new_str,is_ok]=caesar_decrypt_b(csstr, shift);
+    if (is_ok!==''){
+        return [csstr,is_ok];
+    }
+    [new_str,is_ok]=base64_decode_b(new_str);
+    if (is_ok!==''){
+        return [csstr,is_ok];
+    }
+    return [new_str,''];
 }

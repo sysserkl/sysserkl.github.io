@@ -1858,6 +1858,34 @@ function textarea_top_bottom_b(textareaId, csposition=0,csstart=0){
     otextarea.setSelectionRange(pos_start, pos_end);
 }
 
+function textarea_en_de_b(textarea_id1,is_de=false,do_ask=true,textarea_id2=''){
+    var otextarea1=document.getElementById(textarea_id1);
+    if (!otextarea1){return;}
+
+    var otextarea2=false;
+    if (textarea_id2!==''){
+        otextarea2=document.getElementById(textarea_id2);
+        if (!otextarea2){return;}
+    }
+    
+    var old_str=otextarea1.value;
+    if (old_str==''){return;}
+    
+    if (!confirm('是否'+(is_de?'解密':'加密')+'？')){return;}
+
+    if (is_de){
+        var new_str=bc_decode_b(old_str)[0];
+    } else {
+        var new_str=bc_encode_b(old_str)[0];
+    }
+
+    if (otextarea2){
+        otextarea2.value=new_str;
+    } else {
+        otextarea1.value=new_str;
+    }
+}
+
 function textarea_buttons_b(textarea_id,csbuttons,cstype='',csstyle='',span_class='aclick'){
     //csstyle: ' style="font-size:1rem;"' - 保留注释
     var isfile=is_file_type_b();
@@ -1897,6 +1925,14 @@ function textarea_buttons_b(textarea_id,csbuttons,cstype='',csstyle='',span_clas
         bljg=bljg+button_left+' onclick="textarea_top_bottom_b(\''+textarea_id+'\',1);">⤵'+button_right;
     }
     
+    if (csbuttons.includes('加密')){
+        bljg=bljg+button_left+' onclick="textarea_en_de_b(\''+textarea_id+'\');">🔐'+button_right;
+    }
+    
+    if (csbuttons.includes('解密')){
+        bljg=bljg+button_left+' onclick="textarea_en_de_b(\''+textarea_id+'\',true);">🔓'+button_right;
+    }
+        
     var fext=csbuttons.match(/save as (.*?) file/);
     if (Array.isArray(fext) && fext.length==2){
         if (cstype==''){
