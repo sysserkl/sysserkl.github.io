@@ -1,5 +1,6 @@
 var common_apps_pb_global=[
 ["popup:bookshelf","bookshelf","📚","1"],
+["popup:character","character","🔤","0"],
 ["popup:database","database","🛢","1"],
 ["popup:ENG","ENG","𝔼","0"],
 ["popup:game","game","games.png","1"],
@@ -9,7 +10,7 @@ var common_apps_pb_global=[
 ["popup:study","study","study.png","1"],
 ["popup:txtbook","book","🕮","0"],
 ["popup:txteditor","txteditor","🖺","0"],
-["popup:character","character","🔤","0"],
+["{{selenium_news}}/html/2048.htm","2048","🔢","5","game"],
 ["{{selenium_news}}/html/array_analyze.htm","Array Analyze","array_analyze512.png","3"],
 ["{{selenium_news}}/html/benchmark.htm","benchmark","🔩","2"],
 ["{{selenium_news}}/html/bible.htm","Bible","✝️","0_1"],
