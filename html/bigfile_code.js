@@ -143,7 +143,7 @@ function file_date_compare_bigfile(){
 
 function file_date_form_bigfile(){
     var left_strings='<p><span class="aclick" onclick="file_date_compare_bigfile();">文件日期对比</span>';
-    var blstr=textarea_with_form_generate_b('textarea_file_date_compare_bigfile','height:25rem;',left_strings,'清空,复制,加密,解密,发送到临时记事本,发送地址','</p>');
+    var blstr=textarea_with_form_generate_b('textarea_file_date_compare_bigfile','height:25rem;',left_strings,'清空,复制,加密,解密,导入 txt 文件,发送到临时记事本,发送地址','</p>');
     document.getElementById('divhtml').innerHTML=blstr+'<div id="div_file_date_compare_bigfile"></div>';
 }
 
@@ -157,7 +157,7 @@ function local_storage_form_bigfile(){
     var left_strings='<p><span class="aclick" onclick="local_storage_import_b(\'textarea_temp_bigfile\',true);">import data to localStorage</span>';
     left_strings=left_strings+'<span class="aclick" onclick="update_temp_txt_share_b(\'enwords_temp\',\'textarea_temp_bigfile\');">更新最近记忆单词</span>';
 
-    var blstr=textarea_with_form_generate_b('textarea_temp_bigfile','height:25rem;',left_strings,'清空,复制,加密,解密,save as txt file,导入temp_txt_share,发送到临时记事本,发送地址,➕','</p>');
+    var blstr=textarea_with_form_generate_b('textarea_temp_bigfile','height:25rem;',left_strings,'清空,复制,加密,解密,save as txt file,导入 txt 文件,导入temp_txt_share,发送到临时记事本,发送地址,➕','</p>');
 
     document.getElementById('divhtml').innerHTML=blstr;
 }

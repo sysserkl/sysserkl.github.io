@@ -1367,7 +1367,7 @@ function en_words_temp_textarea_b(divname,csrecount=false){
     right_str=right_str+' row: '+en_words_temp_global.length;
     right_str=right_str+'</p>';    
 
-    var blstr=textarea_with_form_generate_b('textarea_word_temp','height:'+(ismobile_b()?'10':'20')+'rem;',left_str,'全选,清空,复制,加密,解密,save as txt file,导入temp_txt_share',right_str,'enwords_temp','form_word_temp');
+    var blstr=textarea_with_form_generate_b('textarea_word_temp','height:'+(ismobile_b()?'10':'20')+'rem;',left_str,'全选,清空,复制,加密,解密,save as txt file,导入temp_txt_share,导入 txt 文件',right_str,'enwords_temp','form_word_temp');
     blstr=blstr+'<div id="div_words_temp_diff"></div>';
     document.getElementById('divhtml').innerHTML=blstr;
     document.getElementById('textarea_word_temp').value=en_word_temp_get_b('raw');
