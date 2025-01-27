@@ -441,7 +441,7 @@ function new_lt_f2f(){
         if (range_t[0]===false){
             alert('日期格式错误');
             return;
-        }                
+        }
         if (range_t.length==2){
             range_t[1]=validdate_b(range_t[1]);
             if (range_t[1]===false){
@@ -457,7 +457,7 @@ function new_lt_f2f(){
             date_list.push(date2str_b('-',range_t[0]));
         }
     }
-
+    
     for (let anew_encounter of encounter_list){
         for (let adate of date_list){
             if (nameset.has(anew_encounter+' '+adate)){
@@ -472,14 +472,15 @@ function new_lt_f2f(){
     } else {
         var date_range=date_list[0]+' '+day_2_week_b(date_list[0],'cnbrief');
     }
+    
     if (confirm('是否添加'+encounter_list.size+'人（'+Array.from(encounter_list)+'）、'+date_list.length+'天（'+date_range+'）记录?')==false){return;}
 
     for (let anew_encounter of encounter_list){
         for (let adate of date_list){
-            var list_t=[anew_encounter,adate];    
-            content_all_f2f_global.push(list_t);
+            content_all_f2f_global.push([anew_encounter,adate,'l']);
         }
     }
+    
     array_2_local_storage_lt_f2f();
     document.getElementById('span_count').innerHTML='('+content_all_f2f_global.length+')';
     search_f2f('');
