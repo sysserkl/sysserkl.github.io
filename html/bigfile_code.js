@@ -175,7 +175,7 @@ function first_source_set_bigfile(do_change=true){
     }
 }
 
-function upload_a_bigfile(do_split=false){
+function upload_a_bigfile(){
     function sub_upload_a_bigfile_split_content(csstr){
         var list_t,error_info;
         [list_t,error_info]=delimiter_find_b(csstr);
@@ -184,6 +184,7 @@ function upload_a_bigfile(do_split=false){
             return;
         }
         ofiles=[];
+        var name_list=[];
         for (let item of list_t){
             item=item.trimLeft().split('\n');
             if (item.length<2){continue;}
@@ -191,12 +192,26 @@ function upload_a_bigfile(do_split=false){
             var fcontent=item.slice(1,).join('\n');
             var one_file={'name':fname,'size':fcontent.length,'content':fcontent};
             ofiles.push(one_file);
+            name_list.push(fname);
         }
         
         file_no=0;
         file_count=ofiles.length;
-        if (!confirm('是否将上传的文件分割为'+file_count+'部分？')){return;}
-        sub_upload_a_bigfile_one_split();
+        if (do_type=='仅分割'){
+            alert('可分割保存的文件名：\n'+name_list.join('\n'));
+            var save_name=prompt('输入文件名保存为单独的文件：');
+            if (save_name==null){return;}
+            save_name=save_name.trim();
+            for (let item of ofiles){
+                if (item['name']==save_name){
+                    export_bigfile(save_name,item['content']);
+                    break;
+                }
+            }
+        } else {
+            if (!confirm('是否将上传的文件分割为'+file_count+'部分？')){return;}
+            sub_upload_a_bigfile_one_split();
+        }
     }
     
     function sub_upload_a_bigfile_check(one_file){
@@ -282,7 +297,9 @@ function upload_a_bigfile(do_split=false){
             alert('读取文件时发生错误: '+[file_no,file_count,file_name_bigfile_global, event.target.error]); //不支持文件名中含有.号 - 保留注释
         };
     }
-    
+
+    var do_type=document.getElementById('select_upload_bigfile').value;
+    var do_split=(do_type.includes('分割'));
     var ofiles=document.getElementById('input_upload_bigfile').files;
     var file_count=ofiles.length;
     if (file_count>50){
@@ -767,7 +784,7 @@ function delete_bigfile(ospan){
     idb_bigfile_b('edit','delete','',read_fn_bigfile);
 }
 
-function export_bigfile(ospan){
+function export_bigfile(ospan,cscontent=false){
     function sub_export_bigfile_save(csstr){
         var bllen=csstr.length;
         if (bllen==0){
@@ -782,9 +799,18 @@ function export_bigfile(ospan){
         string_2_txt_file_b(csstr,fname+'.'+blext,blext);
     }
     
-    var fname=ospan.parentNode.querySelector('span.span_name_bigfile').innerText;
+    if (typeof ospan=='string'){
+        var fname=ospan;
+    } else {
+        var fname=ospan.parentNode.querySelector('span.span_name_bigfile').innerText;
+    }
+    
     var finfo=file_path_name_b(fname);
     fname=finfo[1];
     var blext=finfo[2];
-    idb_bigfile_b('read','content',fname+'.'+blext,sub_export_bigfile_save);
+    if (cscontent===false){
+        idb_bigfile_b('read','content',fname+'.'+blext,sub_export_bigfile_save);
+    } else {
+        sub_export_bigfile_save(cscontent);
+    }
 }

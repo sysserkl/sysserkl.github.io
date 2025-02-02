@@ -26,7 +26,7 @@ css_root_style_b('18','13',['base','menu'],[],1);
 <div style="margin:0.5rem;">
 <p>
  <input type="text" id="input_search" placeholder="search" onkeyup="if (event.key=='Enter'){search_bigfile();}" />
-<input type="file" id="input_upload_bigfile" multiple /> <span class="aclick" onclick="upload_a_bigfile();">上传文件</span> <span class="aclick" onclick="upload_a_bigfile(true);">分割上传</span></p>
+<input type="file" id="input_upload_bigfile" multiple /> <select id="select_upload_bigfile"><option>上传文件</option><option>分割上传</option><option>仅分割</option></select> <span class="aclick" onclick="upload_a_bigfile();">执行</span>
 <div id="div_recent_search" style="font-size:0.85rem;margin:0.5rem 0rem;line-height:1.8rem;"></div>
 <div id="divhtml" style="margin:1rem;"></div>
 </div>
