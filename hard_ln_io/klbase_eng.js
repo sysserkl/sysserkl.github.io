@@ -857,7 +857,8 @@ function en_sentence_menu_generate_b(){
     var group_list=[
     ['⚪ 显示例句','klmenu_check_b(this.id,true);',true,'span_show_en_sentence_b'],
     ['⚪ 显示例句详细出处','klmenu_check_b(this.id,true);',true,'span_source_en_b'],
-    ];    
+    ['⚪ 释义分段','local_storage_span_set_b(\'en_words\',\'b\',\'split_en_definitions\');',true,'span_split_en_definitions_b'],
+    ];
     return group_list;
 }
 
@@ -2587,7 +2588,7 @@ function recent_words_list_enwords_b(cspageno=0,words_count_per_page=100,isrando
     document.location.href='#top';
     document.location.href='#a_recent_bookmark';
     words_count_enwords_b();
-    en_sentence_show_check_b();    
+    en_words_show_check_b();
 }
 
 function enwords_recent_no_set_b(cspageno,ospan){
@@ -2699,7 +2700,7 @@ function similar_enwords_b(csword,cshideno,cshidelineno,cshidesimilarno,csshow){
 	
 	if (csshow){
         document.getElementById('divhtml').innerHTML=bljg+enwords_batch_div_b(words_searched_arr_global,'')+enwords_js_wiki_textarea_b(words_searched_arr_global);
-        en_sentence_show_check_b();
+        en_words_show_check_b();
     }
 	return bljg;
 }
@@ -2747,7 +2748,7 @@ function wordsearch_enwords_b(csword='',csreg=-1,cs_w_p_d=[],csnew_words=false,s
     if (showhtml){
         var blhtml = document.getElementById('divhtml');
         enwords_search_show_html_b(blhtml,'','',csword,words_temp_arr,blequal);
-        en_sentence_show_check_b();
+        en_words_show_check_b();
     }
     
     words_searched_arr_global=[].concat(words_temp_arr);
@@ -2767,12 +2768,19 @@ function enword_filter_reg_b(csword=false){
     }
 }
 
-function en_sentence_show_check_b(){
+function en_words_show_check_b(){
     if (klmenu_check_b('span_show_en_sentence_b',false)){
         console.log('显示例句');
         show_sentence_enwc_b(0,true,true);
     } else {
-        console.log('不显示例句');            
+        console.log('不显示例句');
+    }
+
+    if (klmenu_check_b('span_split_en_definitions_b',false)){
+        console.log('拆分释义');
+        enwords_definition_2_multilines_b();
+    } else {
+        console.log('不拆分释义');
     }
 }
 
@@ -2797,16 +2805,44 @@ function input_date_set_enwords_b(){
     }
 }
 
+function enwords_definition_sort_b(ospan){
+    var oparent=ospan.parentNode;
+    var olis=oparent.parentNode.querySelectorAll('li');
+    var blstart=0;
+    var blend=olis.length-1;
+    var result_t=[];
+    for (let blxl=0,lent=olis.length;blxl<lent;blxl++){
+        if (olis[blxl]==oparent){
+            blstart=blxl+1;
+            continue;
+        }
+        if (olis[blxl].querySelector('span.span_enword_type')){
+            blend=blxl-1;
+            break;
+        }
+        result_t.push(olis[blxl].innerHTML);
+    }
+    
+    if (result_t.length<2 || blend-blstart+1!==result_t.length){return;}
+    
+    result_t.sort(zh_sort_b);
+    for (let blxl=blstart;blxl<=blend;blxl++){
+        olis[blxl].innerHTML=result_t[blxl-blstart];
+    }
+}
+
 function enwords_definition_2_multilines_b(){
+    var type_str=enword_type_b(true);
+    
     var ospans=document.querySelectorAll('span.span_explanation');
     for (let one_span of ospans){
         var blstr=one_span.innerHTML;
         if (blstr.substring(0,4)=='<ul>'){continue;}
-        one_span.innerHTML='<ul><li>'+enwords_definition_split_b(blstr,true,false).join('</li><li>')+'</li></ul>';
+        one_span.innerHTML='<ul><li>'+enwords_definition_split_b(blstr,type_str,true,false).join('</li><li>')+'</li></ul>';
     }
 }
 
-function enwords_definition_split_b(csdefinition,include_cn=false,remove_type=true){
+function enwords_definition_split_b(csdefinition,type_str,include_cn=false,remove_type=true){
     function sub_enwords_definition_split_b_push(csstr){
         if (csstr.includes('；') && ! item.includes('〘')){
             if (include_cn){
@@ -2820,11 +2856,15 @@ function enwords_definition_split_b(csdefinition,include_cn=false,remove_type=tr
         //无法处理〘 cross my heart (and hope to die): 我发誓所说属实（否则不得好死）；said to show that what you have just said or promised is completely true or sincere 〙 - 保留注释
     }
     //-----------------------
+    var reg_exp=new RegExp('<b>'+type_str+'\\. <\/b>','g');    //不能加\\b - 保留注释
+
     if (remove_type){
-        csdefinition=csdefinition.replace(new RegExp('<b>'+enword_type_b(true)+'\\. <\/b>','g'),'');    //不能加\\b - 保留注释
+        var replace_to='';
     } else {
-        csdefinition=csdefinition.replace(new RegExp('<b>'+enword_type_b(true)+'\\. <\/b>','g'),'<b>$1\. </b>; 📋 ');    //不能加\\b - 保留注释    
+        var replace_to='<span class="span_enword_type span_box" style="font-weight:bold;" ondblclick="enwords_definition_sort_b(this);" title="释义排序">$1\. </span>; 📋 ';
     }
+    
+    csdefinition=csdefinition.replace(reg_exp,replace_to);
     
     var def_list=csdefinition.split('; 📋 ');
     var result_t=[];
@@ -2863,6 +2903,15 @@ function enwords_definition_split_b(csdefinition,include_cn=false,remove_type=tr
         }
     }
 
+    //result_t 形如：
+    //[
+    //"<span class="span_enword_type span_box" style="font-weight:bold;" ondblclick="enwords_definition_sort_b(this);">adj. </span>",
+    //"多波段的",
+    //"(radio) involving or receiving more than one waveband",
+    //"having or employing multiple bands, especially frequency bands",
+    //"<span class="span_enword_type span_box" style="font-weight:bold;" ondblclick="enwords_definition_sort_b(this);">adj. </span>",
+    //"having or involving numerous bands"
+    //];
     return result_t;
 }
 

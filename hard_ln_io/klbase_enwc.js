@@ -34,7 +34,7 @@ function get_day_words_enwc_b(csday='',csmonth='',cstype='new',cs_write_html=tru
     	bljg=bljg+enwords_batch_div_b(words_searched_arr_global,'');
         bljg=bljg+enwords_js_wiki_textarea_b(words_searched_arr_global);
         document.getElementById('divhtml').innerHTML=bljg;
-        en_sentence_show_check_b();
+        en_words_show_check_b();
     }
     return words_searched_arr_global;
 }
@@ -225,7 +225,7 @@ function getlines_enwc_b(csno,cslines){
     title_change_enwords_b('');
 	document.location.href = '#content';
     
-    en_sentence_show_check_b();
+    en_words_show_check_b();
 }
 
 function show_sentence_enwc_b(maxlines=0,showcount=true,is_random=false,show_button=true,load_js=true){
@@ -675,7 +675,7 @@ function getlines_rnd_enwc_b(cslines='',showhtml=true,without_textarea=true){
 
 	    blhtml.innerHTML=bljg+'<p><span class="aclick" onclick="sls_search_link_generate_enwc_b(word_doms_txt_get_enwc_b());">link</span> <span class="aclick" onclick="en_word_temp_batch_add_b();">批量添加当前条件下的单词为最近记忆单词</span></p>'+enwords_batch_div_b(words_searched_arr_global,'')+bltextarea;
         title_change_enwords_b('随机单词');
-        en_sentence_show_check_b();
+        en_words_show_check_b();
     }
     enwords_sort_b();
 }

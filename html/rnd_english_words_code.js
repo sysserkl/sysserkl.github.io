@@ -114,13 +114,14 @@ function menu_rndwords(){
     ];
     klmenu3=root_font_size_menu_b(str_t,true,true,true).concat(klmenu3);
     
-    document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🇬🇧','17rem','1.1rem','1rem','60rem')+klmenu_b(klmenu2,'💡','12rem','1.1rem','1rem','60rem')+klmenu_b(klmenu_search,'🎯','10rem','1.1rem','1rem','60rem')+klmenu_b(en_font_menu_b(str_t),'🅰','10rem','1rem','1rem','30rem')+klmenu_b(klmenu3,'⚙','16rem','1.1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🇬🇧','24rem','1.1rem','1rem','60rem')+klmenu_b(klmenu2,'💡','12rem','1.1rem','1rem','60rem')+klmenu_b(klmenu_search,'🎯','10rem','1.1rem','1rem','60rem')+klmenu_b(en_font_menu_b(str_t),'🅰','10rem','1rem','1rem','30rem')+klmenu_b(klmenu3,'⚙','16rem','1.1rem','1rem','60rem'),'','0rem')+' ');
     
     klmenu_check_b('span_reg_rndwords',true);
     klmenu_check_b('span_show_en_sentence_b',true);
     if (!ismobile_b()){
         klmenu_check_b('span_source_en_b',true);
     }
+    local_storage_span_get_b('en_words','b','split_en_definitions');
 }
 
 function pronunciation_show_hide_rndwords(){
@@ -179,6 +180,11 @@ function show_sentence_rndwords(){
     function sub_show_sentence_rndwords_one_word(){
         if (blxl>=bllen){
             en_sentence_mobile_b();
+            
+            if (klmenu_check_b('span_split_en_definitions_b',false)===true){    //不能省略 === true，否则页面载入会变慢 - 保留注释
+                enwords_definition_2_multilines_b();
+            }
+            
             console.log('show_sentence_rndwords 费时：'+(performance.now() - t0) + ' milliseconds');
             return;
         }
@@ -192,7 +198,7 @@ function show_sentence_rndwords(){
         setTimeout(sub_show_sentence_rndwords_one_word,5);
     }
     //-----------------------
-    if (klmenu_check_b('span_show_en_sentence_b',false)==false){return;}
+    //if (klmenu_check_b('span_show_en_sentence_b',false)==false){return;}
 
     var t0=performance.now();       
     var font_size=(ismobile_b()?'0.95':'0.9');

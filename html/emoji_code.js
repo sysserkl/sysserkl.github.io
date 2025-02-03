@@ -95,16 +95,34 @@ function one_chapter_emoji(sub_category=''){
 }
 
 function img_name_generate_emoji(csno,item){
-    return '<span class="span_no">'+csno+'. </span><span class="span_emoji_img">'+item[0]+'</span><span class="span_no"> => </span><span class="span_emoji_name">'+item[1]+'</span>';
+    return '<span class="span_no">'+csno+'. </span><span class="span_emoji_img" onclick="copy_or_not_symbols(this);">'+item[0]+'</span><span class="span_no"> => </span><span class="span_emoji_name">'+item[1]+'</span>';
+}
+
+function cursor_change_emoji(do_change=false,odoms=false){
+    klmenu_check_b('span_enable_copy',do_change);
+    var cursor_str=(klmenu_check_b('span_enable_copy',false)===true?'pointer':'');
+    if (odoms===false){
+        odoms=document.querySelectorAll('div.div_unicode,span.span_emoji_img');
+    }
+    for (let one_dom of odoms){
+        one_dom.style.cursor=cursor_str;
+    }
+    console.log('操作了',odoms.length,'个对象');
 }
 
 function menu_emoji(){
     var str_t=klmenu_hide_b('');
     var klmenu1=[
-    '<span id="span_reg_emoji" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 正则</span>',         
+    //'<span id="span_reg_emoji" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 正则</span>',
     '<span class="span_menu" onclick="'+str_t+'unicode_overlape_search_emoji();">重叠码</span>',             
     '<span class="span_menu" onclick="'+str_t+'js_arr_generate_emoji();">获取当前emoji为js数组</span>',             
     ];
+    
+    var group_list=[
+    ['⚪ 正则','klmenu_check_b(this.id,true);',true,'span_reg_emoji'],
+    ['⚪ 点击即复制','cursor_change_emoji(true);',true,'span_enable_copy'],
+    ];    
+    klmenu1.push(menu_container_b(str_t,group_list,''));
     
     var klmenu_link=[
     '<a href="https://www.unicode.org/emoji/charts/full-emoji-list.html" onclick="'+str_t+'" target=_blank>Full Emoji List</a>',    
@@ -255,6 +273,8 @@ function show_emoji(cstype){
     if (cstype=='range'){
         unicode_list_emoji();
     }
+    
+    //cursor_change_emoji(false);
 }
 
 function unicode_page_emoji(cscategory,cspages){
@@ -375,6 +395,7 @@ function unicode_list_emoji(cscategory=false,csstart=1){
     var odiv=document.getElementById('divhtml_range');
     var result_t=one_type_emoji(blstart,blend,odiv);
     odiv.innerHTML='<p style="word-break:break-all;word-wrap:break-word;">'+pages+'</p>'+result_t.join(' ');
+    cursor_change_emoji(false);
 }
 
 function one_type_emoji(csstart,csend,odiv,csmax=-1,tagname='div'){
@@ -386,18 +407,20 @@ function one_type_emoji(csstart,csend,odiv,csmax=-1,tagname='div'){
         var blstr='&#'+blxl+';' //也可以用：blstr=String.fromCodePoint(blxl); - 保留注释
         odiv.innerHTML=blstr;
         if (odiv.innerText.slice(-1)==';'){continue;}
-        result_t.push('<'+tagname+' class="'+tagname+'_unicode" style="'+blstyle+'" onclick="unicode_info_emoji('+blxl+');">'+blstr+'</'+tagname+'>');
+        result_t.push('<'+tagname+' class="'+tagname+'_unicode" style="'+blstyle+'" onclick="unicode_info_emoji('+blxl+',this);">'+blstr+'</'+tagname+'>');
         blcount=blcount+1;
         if (csmax>0 && blcount>=csmax){break;}
     }
     return result_t;
 }
 
-function unicode_info_emoji(csxl){
+function unicode_info_emoji(csxl,odom){
     var val16=csxl.toString(16);
     var blstr='<b>HTML Entity (decimal):</b> &amp;#'+csxl+'; <b>HTML Entity (hex):</b> &amp;#x'+val16+' ';
     blstr=blstr+'<b>Javascript:</b> \\u{'+val16+'} <b>Javascript (ASCII):</b> \\x'+val16;
     document.getElementById('span_unicode_info').innerHTML=blstr+'<span class="span_no"> => </span>'+'&#'+csxl;
+    
+    copy_or_not_symbols(odom);
 }
 
 function select_pre_next_emoji(cstype){
@@ -407,3 +430,8 @@ function select_pre_next_emoji(cstype){
     }
 }
 
+function copy_or_not_symbols(odiv){
+    if (klmenu_check_b('span_enable_copy',false)){
+        copy_2_clipboard_b(odiv.innerText,true);
+    }
+}

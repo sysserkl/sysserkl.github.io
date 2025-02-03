@@ -607,7 +607,6 @@ function menu_kle(){
     klmenu1.push(menu_container_b(str_t,group_list,'例句：'));
     
     klmenu1=klmenu1.concat([
-    '<span class="span_menu" onclick="'+str_t+'enwords_definition_2_multilines_b();">释义分段</span>',    
     '<span class="span_menu" onclick="'+str_t+'duplicate_words_kle();">重复单词和格式检查</span>',
     '<span class="span_menu" onclick="'+str_t+'enwords_search_result_load_b(false,\'input\',\'input_search\',\'^$\');">暂存搜索单词查询</span>',
     '<a href="ensentence.htm" onclick="'+str_t+'" target=_blank>ensentence</a>',  
@@ -678,7 +677,7 @@ function menu_kle(){
     klmenu_old.push('<span class="span_menu" onclick="'+str_t+'old_words_without_phrase_kle();">无词组的旧单词</span>');
     klmenu_old.push('<span class="span_menu" onclick="'+str_t+'old_words_and_phrase_with_space_kle();">空格词组和对应单词</span>');
     
-    var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu1,'','22rem','1rem','1rem','60rem')+klmenu_b(klmenu_old,'旧','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_brain,'🧠','17rem','1rem','1rem')+klmenu_b(klmenu_new,'🆕','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_statistics,'🧮','14rem','1rem','1rem')+klmenu_b(klmenu_search,'🔽','18rem','1rem','1rem','30rem'),'','0rem')+' ';
+    var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu1,'','24rem','1rem','1rem','60rem')+klmenu_b(klmenu_old,'旧','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_brain,'🧠','17rem','1rem','1rem')+klmenu_b(klmenu_new,'🆕','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_statistics,'🧮','14rem','1rem','1rem')+klmenu_b(klmenu_search,'🔽','18rem','1rem','1rem','30rem'),'','0rem')+' ';
     
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',bljg);
     
@@ -687,6 +686,7 @@ function menu_kle(){
     if (!ismobile_b()){
         klmenu_check_b('span_source_en_b',true);
     }
+    local_storage_span_get_b('en_words','b','split_en_definitions');
 }
 
 function old_words_name_list_form_kle(){
@@ -844,14 +844,15 @@ function duplicate_words_kle(){
     };
     var end_list=[];
     var semicolon_without_space_list=[];
-
+    
+    var type_str=enword_type_b(true);
 	for (let blxl=1,lent=enwords.length;blxl<lent;blxl++){
         var item=enwords[blxl];
         if (enwords[blxl][0]==enwords[blxl-1][0]){
             duplication.add(enwords[blxl][0]);
         }
         
-        var tmp_list=enwords_definition_split_b(item[2]);
+        var tmp_list=enwords_definition_split_b(item[2],type_str);
         if (tmp_list.length!==new Set(tmp_list).size){
             definition_redundant.add(item[0]);
         }
