@@ -9,4 +9,5 @@ var not_words_global=[
 "jalape",
 "foxnewsautos",
 "ostechnix",
+"eword",
 ];

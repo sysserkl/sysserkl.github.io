@@ -2,9 +2,11 @@ function menu_more_cnbond(){
     var str_t=klmenu_hide_b('');
     table_th_jscm_global={'日期':'','3月':'right','6月':'right','1年':'right','2年':'right','3年':'right','5年':'right','7年':'right','10年':'right','30年':'right'};
     
+    cnbond_col_names_global='';
+    
     var klmenu1=[
     '<a href="https://yield.chinabond.com.cn/cbweb-czb-web/czb/showHistory?locale=cn_ZH&nameType=1" target=_blank>财政部中国国债收益率曲线</a>',
-    '<span class="span_menu" onclick="'+str_t+'cols_select_cnbond();">当前结果指定列数据提取</span>',   
+    '<span class="span_menu" onclick="'+str_t+'cols_select_cnbond();">当前结果指定列数据图表显示</span>',   
     '<span class="span_menu" onclick="'+str_t+'multi_year_compare_cnbond();">当前结果多年同日比较</span>',       
     '<span class="span_menu">legend: <input type="text" id="input_legend_jsad_cnbond" value="nw" size="3" /> ymd: <input type="text" id="input_ymd_jsad_cnbond" value="m" size="2" /></span>',
     '<span class="span_menu" onclick="'+str_t+'date_check_cnbond();">缺失日期检查</span>',       
@@ -42,9 +44,10 @@ function file_load_cnbond(){
 }
 
 function cols_select_cnbond(){
-    var col_name=prompt('输入要提取的列名，（如日期 10年）：');
+    var col_name=prompt('输入要提取的列名，（可选，如：日期 5年 10年 或：-月）：',cnbond_col_names_global);
     if (col_name==null){return;}
-
+    cnbond_col_names_global=col_name;
+    
     var isreg=klmenu_check_b('span_reg_common',false);
     [col_name,isreg]=str_reg_check_b(col_name,isreg,true);    
     
