@@ -371,7 +371,8 @@ function en_search_sites_b(maxlength=-1,ew=false,www=false){
     ['o','Oxford'],
     ['+','Cambridge'],
     //['r','wordReference'],
-    ['k','KL Search'],    
+    ['k','KL Search'],
+    ['kai','kaikki'],
     ];
     
     if (www){
@@ -471,7 +472,9 @@ function open_link_en_b(cstype,csword,do_open=true){
             break;
         case 'L':
             websites_in_en_popup_box_b();
-            //blhref='https://cn.bing.com/translator/';
+            break;
+        case 'kai':
+            blhref='https://kaikki.org/dictionary/English/words/index.html?s='+csword;
             break;
         case '👁':
             blhref=klwebphp_path_b('book_search.php');
@@ -2808,7 +2811,7 @@ function input_date_set_enwords_b(){
 function enwords_definition_sort_b(ospan){
     var oparent=ospan.parentNode;
     var olis=oparent.parentNode.querySelectorAll('li');
-    var blstart=0;
+    var blstart=-1;
     var blend=olis.length-1;
     var result_t=[];
     for (let blxl=0,lent=olis.length;blxl<lent;blxl++){
@@ -2816,6 +2819,9 @@ function enwords_definition_sort_b(ospan){
             blstart=blxl+1;
             continue;
         }
+        
+        if (blstart===-1){continue;}
+        
         if (olis[blxl].querySelector('span.span_enword_type')){
             blend=blxl-1;
             break;
@@ -2823,7 +2829,7 @@ function enwords_definition_sort_b(ospan){
         result_t.push(olis[blxl].innerHTML);
     }
     
-    if (result_t.length<2 || blend-blstart+1!==result_t.length){return;}
+    if (blstart===-1 || result_t.length<2 || blend-blstart+1!==result_t.length){return;}
     
     result_t.sort(zh_sort_b);
     for (let blxl=blstart;blxl<=blend;blxl++){

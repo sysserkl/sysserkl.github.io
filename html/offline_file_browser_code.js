@@ -1284,6 +1284,13 @@ function disks_size_date_offline_file_browser(cscol=0,csdesc=false,cstable_no=0)
     disk_list=object2array_b(disk_list);
     merge_list=object2array_b(merge_list,true,2);
     path_list=object2array_b(path_list,true,2);
+
+    var ssd_size_list=[];
+    if (typeof ssd_tf_size_global !== 'undefined'){
+        for (let key in ssd_tf_size_global){
+            ssd_size_list.push([key,ssd_tf_size_global[key]]);
+        }
+    }
     
     var merge_col_no=(cscol>1?1:cscol);
     var path_col_no=(cscol>2?2:cscol);
@@ -1301,6 +1308,16 @@ function disks_size_date_offline_file_browser(cscol=0,csdesc=false,cstable_no=0)
         
         var is_desc='true';
     }
+    
+    if (merge_col_no==0){
+        ssd_size_list.sort(function (a,b){return character_num_sort_b(a[0],b[0],csdesc);});
+    } else {
+        if (csdesc){
+            ssd_size_list.sort(function (a,b){return a[merge_col_no]<b[merge_col_no] ? 1 : -1;});
+        } else {
+            ssd_size_list.sort(function (a,b){return a[merge_col_no]>b[merge_col_no] ? 1 : -1;});
+        }
+    }
 
     var tr_list=[];
     var is_kmg=klmenu_check_b('span_kmg_ofb',false);            
@@ -1317,8 +1334,9 @@ function disks_size_date_offline_file_browser(cscol=0,csdesc=false,cstable_no=0)
     
     var merge_table=sub_disks_size_date_offline_file_browser_simple(merge_list,'合并统计',['Disk','Size'],1);
     var path_table=sub_disks_size_date_offline_file_browser_simple(path_list,'目录统计',['Path','Disk','Size'],2);
+    var ssd_table=sub_disks_size_date_offline_file_browser_simple(ssd_size_list,'SSD_TF统计',['Disk','Size'],3);
 
-    var bljg='<h3 class="h3_disk_size_ofb">磁盘大小</h3><table class="table_common"><tr>'+th_list0.join('')+'</tr>'+tr_list.join('\n')+'</table>'+merge_table+path_table+'<p>'+close_button_b('div_statistics','none')+'</p>\n';
+    var bljg='<h3 class="h3_disk_size_ofb">磁盘大小</h3><table class="table_common"><tr>'+th_list0.join('')+'</tr>'+tr_list.join('\n')+'</table>'+merge_table+path_table+ssd_table+'<p>'+close_button_b('div_statistics','none')+'</p>\n';
     
     var odiv=document.getElementById('div_statistics');
     odiv.innerHTML=bljg;
@@ -1382,14 +1400,20 @@ function important_movies_offline_file_browser(do_ssd_tf=false){
         }
     }
     //ssd_tf_set 每个元素为 set，形如：FA0: [ "2009 43rd Annual CMA Awards.第43届年度乡村音乐颁奖礼.cbr", "2009年第51届格莱美奖颁奖礼.cbr", ] - 保留注释 
+    ssd_tf_size_global={};
+    for (let key in ssd_tf_set){
+        ssd_tf_size_global[key]={};
+    }
+    
     for (let blxl=0,lent=offline_file_data_raw_global.length;blxl<lent;blxl++){
         var item=offline_file_data_raw_global[blxl];
         //-----------------------
         if (do_ssd_tf){
             var blfound=false;
             for (let key in ssd_tf_set){
-                if (ssd_tf_set[key].has(item[2])){
+                if (ssd_tf_set[key].has(item[2])){  //文件名 - 保留注释
                     offline_file_data_raw_global[blxl][7]=key;
+                    ssd_tf_size_global[key]['f_'+item[2]]=item[3];
                     blfound=true;
                     break;
                 }
@@ -1407,6 +1431,11 @@ function important_movies_offline_file_browser(do_ssd_tf=false){
     }
     important_movie_global=[];  //便于统计时统一计算length需要，important_movie_global 不能是 new Set() - 保留注释
     ssd_tf_file_list_merged_global=[];
+    
+    for (let key in ssd_tf_size_global){
+        var value_list=Object.values(ssd_tf_size_global[key]);
+        ssd_tf_size_global[key]=value_list.reduce((blsum, currentValue) => {return blsum + currentValue;}, 0);    // 0 是初始值 - 保留注释
+    }
     console.log('important_movies_offline_file_browser() 费时：'+(performance.now() - t0) + ' milliseconds');
 }
 
