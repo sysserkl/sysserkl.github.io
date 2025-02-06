@@ -524,5 +524,6 @@ function load_current_book_b(load_digest_file=false,do_write=true,add_date=true)
     if (do_write){
         write_js_css_b(file_list);
     }
+    console.log(file_list); //此行保留 - 保留注释
     return [book_list_js+today,(digest_js==''?'':digest_js+today),file_list];
 } 
