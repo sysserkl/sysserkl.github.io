@@ -12,7 +12,7 @@ klbase_addons_import_js_b(['css','date','books','eng','en_de_str','wiki','flot',
 </script>
 <script src="reader_idb_code.js"></script>
 <script>
-load_current_book_b();
+load_current_book_b(false,true,true);
 </script>
 <script>
 //-----------------------
@@ -23,7 +23,6 @@ csbooklist_source_global.sort(function (a,b){return zh_sort_b(a,b,false,1);}); /
 var csbooklist_sub_global=[['','','','1','']];
 var csbookno_global=0;
 var csbookname_global='';
-var digest_scan_hash_global=false;
 var digest_global=[];
 
 var filelist=[];

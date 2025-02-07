@@ -6,7 +6,12 @@ function style_load_catchphrase(){
 function col_rearrange_catchphrase(){
     var list_t=[];
     for (let arow of js_data_current_common_search_global){
-        list_t.push([arow[0].join('<br />'),arow[1]]);
+        if (Array.isArray(arow[0])){
+            list_t.push([arow[0].join('<br />'),arow[1]]);
+        } else {
+            console.log('非数组',arow[0]);
+            list_t.push([arow[0],arow[1]]);
+        }
     }
     return list_t;
 }

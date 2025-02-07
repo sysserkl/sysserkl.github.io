@@ -5,7 +5,7 @@ function book_load_enwords_book(csno){
         csbookno2_global=Math.min(csbooklist_sub_global.length-1,parseInt(list_t[1])-1);
     }
     title_set_enwords_book();
-    import_book_js_b(true);
+    import_book_js_b();
 }
 
 function refresh_book_new_enwords_book(csno=10){
@@ -86,7 +86,7 @@ function args_enwords_book(){
     }
     
     if (en_words_book_newwords_continue_global===false){
-        show_enwords_book();
+        show_enwords_book('global');
     }
 }
 
@@ -322,7 +322,7 @@ function new_words_form_enwords_book(){
     bljg=bljg+'<span class="aclick" onclick="words_check_by_lines_enwords_book();">单词逐行搜索</span> ';    
     bljg=bljg+textarea_buttons_b('textarea_new_words2','清空,复制');
 
-    bljg=bljg+'<span class="aclick" onclick="show_all_books_global=!show_all_books_global;show_enwords_book();">Books</span> ';        
+    bljg=bljg+'<span class="aclick" onclick="show_enwords_book(\'switch\');">Books</span> ';        
     bljg=bljg+'<span><span id=booklinks></span></p>';
 
     bljg=bljg+'<p>digest_global</p>';
@@ -838,8 +838,8 @@ function words_sort_count_enwords_book(){
     document.getElementById('textarea_new_words2').value=bljg2.join(' ')+'\n已截取\n';
 }
 
-function show_enwords_book(){
-    books_generate_b(show_all_books_global,'eng',book_filter_str_enbook_b());
+function show_enwords_book(show_type){
+    books_generate_b(show_type,'eng',book_filter_str_enbook_b());
 }
 
 function space2underline_enwords_book(){

@@ -5,20 +5,16 @@
 <meta charset="UTF-8" />
 <script src="../hard_ln_io/klbase.js"></script>
 <script>
-klbase_addons_import_js_b(['css','date','books','eng','en_de_str','wiki','txtlistsearch','idb'],[],[]);
+klbase_addons_import_js_b(['css','date','books','eng','en_de_str','wiki','txtlistsearch','idb'],[],[],['digest_code.js']);
 </script>
-<script src="digest_code.js"></script>
 <script>
-load_current_book_b(true);
+load_current_book_b(true,true,true,true);
 </script>
 <script>
 //-----------------------
 //history
 //0.0.1-20201007
 //-----------------------
-books_global_value_init_b();
-var show_all_books_global=false;
-var digest_scan_hash_global=false;
 var book_tag_global='all';
 
 css_root_style_b('17.6','14',['base','menu'],[],1);

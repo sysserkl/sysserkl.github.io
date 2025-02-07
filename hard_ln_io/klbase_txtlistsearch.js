@@ -12,7 +12,7 @@ function mobile_style_kltxt_b(line_height=180){
     unity_t,
     ];
 
-	pc_t=[
+    var pc_t=[
     'ul,ol,li{font-size:1.1rem;line-height:'+line_height+'%;padding:0px;}',
     'li{margin-bottom:0.5rem;}',
 	'#divhtml,#div_cn_words {font-family:Noto Sans;margin-left:10%; margin-right:10%;max-width:'+Math.max(700,parseInt(document.body.clientWidth*0.5))+'px;}', //margin-left:'+(parseInt(document.body.clientWidth)*0.5)/2+'px; - 保留注释
@@ -3310,6 +3310,9 @@ function recent_opened_book_get_kltxt_b(){
 }
 
 function import_book_kltxt_b(cskeys,csrandom=false){
+    if (is_render_page_b()){
+        cskeys=[];
+    }
     if (cskeys.length>0){
         var list_t=cskeys[0].split('_tag');
         csbookname_global=list_t[0];
@@ -3336,7 +3339,7 @@ function import_book_kltxt_b(cskeys,csrandom=false){
         recent_opened_book_set_kltxt_b(csbookname_global,cskeys);
     }
 
-    if (csbookno_global<=0){    
+    if (csbookno_global<=0){
         if (csbookname_global==''){
             csbookno_global=0;
         } else {
@@ -3418,6 +3421,10 @@ function rows_max_kltxt_b(){
 }
 
 function digest_number_2_txt_kltxt_b(){
+    if (typeof digest_scan_hash_global == 'undefined'){
+        digest_scan_hash_global=false;
+    }
+    
     if (digest_scan_hash_global){return;}
     
     var t0 = performance.now();
@@ -4001,7 +4008,7 @@ function random_book_current_category_kltxt_b(){
 
 function category_generate_bltxt_b(){
     var op=document.getElementById('p_book_list');
-    var bljg='<span class="span_link" onclick="show_all_books_global=!show_all_books_global;books_generate_b(show_all_books_global,\'txt\',book_tag_global);"><b>Books</b></span> <a href="?&line=0_0">RND</a> ';
+    var bljg='<span class="span_link" onclick="books_generate_b(\'switch\',\'txt\',book_tag_global);"><b>Books</b></span> <a href="?&line=0_0">RND</a> ';
     if (book_tag_global!=='all'){
         bljg=bljg+'<span class="span_link" onclick="random_book_current_category_kltxt_b();">RND(current)</span> ';
     }

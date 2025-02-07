@@ -9,21 +9,18 @@
 //history
 //0.0.1-20210822
 //-----------------------
-klbase_addons_import_js_b(['css','books','eng','enbook','txtlistsearch','ebs','date','idb'],[],['words/enwords_count_sentence_data.js']);
-</script>
-<script src="book_search_js_code.js"></script>
-<script>
-books_global_value_init_b();
-var csbookname_global='';
-var digest_scan_hash_global=false;
-var content_file_found_global=[];
-var digest_file_found_global=[];
-var book_tag_global='all';
-load_current_book_b();
+klbase_addons_import_js_b(['css','books','eng','enbook','txtlistsearch','ebs','date','idb'],[],['words/enwords_count_sentence_data.js'],['book_search_js_code.js']);
 </script>
 <script>
 var en_words_temp_important_global=[];
+var csbookname_global='';
 
+var content_file_found_global=[];
+var digest_file_found_global=[];
+var book_tag_global='all';
+load_current_book_b(false,true,true,true);
+</script>
+<script>
 css_root_style_b('18','13',['base','menu'],[],1);
 </script>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />

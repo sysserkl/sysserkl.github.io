@@ -22,6 +22,7 @@ var search_sites_list_global=[
 
 ['https://learnersdictionary.com/definition/','',0,'','learnersdictionary','','English',''],
 ['https://www.ldoceonline.com/dictionary/','',2,'','Longman','0','English',''],    
+['https://www.oed.com/search/dictionary/?q=','',1,'','oed','','English',''],
 ['https://dictionary.reverso.net/english-definition/','',1,'','reverso','','English',''],
 ['https://www.thefreedictionary.com/','',0,'#0099ff','TFD','0','English',''],
 ['https://en.wiktionary.org/wiki/','',0,'#6666cc','Wiktionary','p0','English',''],

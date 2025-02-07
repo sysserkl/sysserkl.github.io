@@ -52,6 +52,10 @@ function is_old_firefox_b(){
     return navigator.userAgent.match(/Firefox\/[6-8]\d\./)!==null;
 }
 
+function is_render_page_b(){
+    return location.href.endsWith('/?render') || location.href.includes('/?render&');
+}
+
 function blank_page_b(check_firefox=false,check_local=false,redirect=true){
     if (check_firefox && check_local){
         if (is_firefox_b() && is_local_b()){return;}

@@ -121,7 +121,7 @@ function num_type_path_id_get_book_b(book_no){
     return [jsdoc_num,book_type,jsdoc_path,bookid];
 }
 
-function import_book_js_b(import_digest=true){
+function import_book_js_b(){
     var book_no = csbookno_global;
     var today=file_date_parameter_b();
     var jsdoc_num,book_type,jsdoc_path,bookid;
@@ -151,7 +151,7 @@ function import_book_js_b(import_digest=true){
             document.write('var filelist=[].concat(digest_global);\n');
             document.write('</script>\n');        
         } else {
-            menu_digest_file_full_name_b(book_no,jsdoc_num,bookid,jsdoc_path,import_digest,true);
+            menu_digest_file_full_name_b(book_no,jsdoc_num,bookid,jsdoc_path,true);
         }
         if (book_type.includes('J')){
             var list_t=book_type.match(/J([a-z_]+)/) || [];
@@ -181,7 +181,7 @@ function digest_get_enwords_b(is_set=true,is_lower=false){
     return result_t;
 }
 
-function menu_digest_file_full_name_b(book_no=false,jsdoc_num=false,bookid=false,jsdoc_path=false,import_digest=true,do_write=false,add_date=true){
+function menu_digest_file_full_name_b(book_no=false,jsdoc_num=false,bookid=false,jsdoc_path=false,do_write=false,add_date=true){
     if (csbooklist_sub_global.length==0){
         return ['',''];
     }
@@ -215,18 +215,14 @@ function menu_digest_file_full_name_b(book_no=false,jsdoc_num=false,bookid=false
         js_menu_file=jsdoc_path+'menu/'+bookid+'_menu.js';
         result_t.push(['js',js_menu_file,'']);
         
-        if (import_digest){
-            js_digest_file=jsdoc_path+'digest/'+bookid+'_digest.js';
-            result_t.push(['js',js_digest_file,'']);
-        }
+        js_digest_file=jsdoc_path+'digest/'+bookid+'_digest.js';
+        result_t.push(['js',js_digest_file,'']);
     } else {
         js_menu_file=book_path_py_b('menu',jsdoc_num)+bookid+'_menu.js';
         result_t.push(['js',js_menu_file,'']);
 
-        if (import_digest){
-            js_digest_file=book_path_py_b('digest',jsdoc_num)+bookid+'_digest.js';
-            result_t.push(['js',js_digest_file,'']);
-        }
+        js_digest_file=book_path_py_b('digest',jsdoc_num)+bookid+'_digest.js';
+        result_t.push(['js',js_digest_file,'']);
     }
     
     if (do_write){
@@ -234,15 +230,28 @@ function menu_digest_file_full_name_b(book_no=false,jsdoc_num=false,bookid=false
     }
 
     var today=(add_date?file_date_parameter_b():'');
-    if (import_digest){
-        return [js_menu_file+today,js_digest_file+today];
-    } else {
-        return [js_menu_file+today,''];
-    }
+    return [js_menu_file+today,js_digest_file+today];
+    //return [js_menu_file+today,''];   //此行保留 - 保留注释
 }
 
-function books_generate_b(showall=false,cstype='txt',cstag='all',enforce_refresh=false){   //书目生成，category - 保留注释
+function books_generate_b(show_type=false,cstype='txt',cstag='all',enforce_refresh=false){   //书目生成，category - 保留注释
     if (cstag=='NONE'){return '';}
+    
+    if (typeof show_all_books_global == 'undefined'){
+        show_all_books_global=false;
+    }
+    
+    switch (show_type){
+        case 'global':
+            var showall=show_all_books_global;
+            break;
+        case 'switch':
+            show_all_books_global=!show_all_books_global;
+            var showall=show_all_books_global;
+            break;
+        default:
+            var showall=show_type;
+    }
     
     var current_show=document.querySelector('span.span_show_all_kltxt')!==null;
     var ocurrent=document.querySelector('span.span_current_book_item');
@@ -500,7 +509,11 @@ function books_global_value_init_b(){
     digest_global=[];
 }
 
-function load_current_book_b(load_digest_file=false,do_write=true,add_date=true){
+function load_current_book_b(load_digest_file=false,do_write=true,add_date=true,init_var=false){
+    if (init_var){
+        books_global_value_init_b();
+    }
+    
     var blhref=location.href;
     if (blhref.includes('/klwebphp/')){
         blhref=blhref.split('/klwebphp/')[0]+'/klwebphp/data/';
@@ -513,16 +526,24 @@ function load_current_book_b(load_digest_file=false,do_write=true,add_date=true)
     var today=(add_date?file_date_parameter_b():'');
     
     var file_list=[];
-    var book_list_js=blhref+'booklist_current_data.js';
+    var book_list_js=blhref+'booklist_current_data.js'; //csbooklist_source_global - 保留注释
     file_list.push(['js',book_list_js,'']);
     
     var digest_js='';
     if (load_digest_file){
-        digest_js=blhref+'digest_list_data.js';
+        digest_js=blhref+'digest_list_data.js'; //digest_list_source_global - 保留注释
         file_list.push(['js',digest_js,'']);
     }
+    
     if (do_write){
-        write_js_css_b(file_list);
+        if (is_render_page_b()){
+            csbooklist_source_global=[];    //由于异步操作麻烦，不从 bigfile 载入 - 保留注释
+            if (load_digest_file){
+                digest_list_source_global=[];
+            }
+        } else {
+            write_js_css_b(file_list);
+        }
     }
     console.log(file_list); //此行保留 - 保留注释
     return [book_list_js+today,(digest_js==''?'':digest_js+today),file_list];

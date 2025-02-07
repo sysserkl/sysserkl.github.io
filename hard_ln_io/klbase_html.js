@@ -135,6 +135,7 @@ function html_head_body_render_b(html_source){
 
     if (!document.body){
         document.write('<body></body>');    //head 更新后，似乎 body 被自动删除了 - 保留注释
+        console.log('添加 body');
     } else {
         document.body.innerHTML='';
     }

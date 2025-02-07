@@ -219,7 +219,7 @@ function upload_a_bigfile(){
         if (!one_file){
             error='未发现文件';
         }
-        if (one_file.size>blmultiple*20*1024*1024){
+        if (one_file.size>blmultiple*60*1024*1024){
             error='文件太大：'+one_file.name+' '+one_file.size;  
         }
         if (error!==''){
@@ -397,7 +397,7 @@ function html_get_bigfile(is_render=false,is_two_files=true){
             return;
         }
 
-        console.log('等待 '+fn_name+' 次数',cstimes);
+        console.log('sub_html_get_bigfile_wait() 等待 '+fn_name+' 次数',cstimes);
         html_head_body_render_b(blsource);
     }
 
