@@ -3522,7 +3522,8 @@ function digest_lines_kltxt_b(recent_lines=-1,do_jump=false){
     lines_2_html_kltxt_b(list_t);
     old_words_kltxt_b(true);
     digest_show_kltxt_b(false,recent_lines,false,do_jump);
-
+    
+    img_load_check_kltxt_b();
     console.log('digest_lines_kltxt_b() 费时：'+(performance.now() - t0) + ' milliseconds');
 }
 
