@@ -175,3 +175,15 @@ function document_title_ebs_b(){
     var blstr=document.getElementById('input_search').value;
     document_title_key_word_b(blstr,'Book Search');
 }
+
+function menu_ebs_b(){
+    var str_t=klmenu_hide_b('');
+    var klmenu1=[
+    '<span class="span_menu" onclick="'+str_t+'new_words_ebs_b();">显示生词</span>',
+    '<span class="span_menu" onclick="'+str_t+'new_words_ebs_b(true);">显示稀有旧单词</span>',    
+    '<span class="span_menu" onclick="'+str_t+'document.getElementById(\'div_batch_search_ebs\').style.display=\'\';">批量搜索</span>',   
+    load_sentence_menu_b(str_t),
+    ];
+
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'👁','11rem','1rem','1rem','60rem'),'','0rem')+' ');
+}

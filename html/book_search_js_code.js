@@ -15,18 +15,6 @@ function init_ebsjs(){
     args_ebsjs();
 }
 
-function menu_ebsjs(){
-    var str_t=klmenu_hide_b('');
-    var klmenu1=[
-    '<span class="span_menu" onclick="'+str_t+'new_words_ebs_b();">显示生词</span>',
-    '<span class="span_menu" onclick="'+str_t+'new_words_ebs_b(true);">显示稀有旧单词</span>',    
-    '<span class="span_menu" onclick="'+str_t+'document.getElementById(\'div_batch_search_ebs\').style.display=\'\';">批量搜索</span>',   
-    
-    ];
-
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','11rem','1rem','1rem','60rem'),'','0rem')+' ');
-}
-
 function args_ebsjs(){
     var is_eng=true;
     var blkey=false;
