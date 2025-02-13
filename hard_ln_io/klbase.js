@@ -2487,14 +2487,35 @@ function array_2_li_b(csarray,row_type='li',container_type='ol',container_id='',
 }
 
 function string_2_txt_file_b(csstr,savename,cstype='csv'){
-    var odom = document.createElement('a');
     var blob = new Blob([csstr],{type: 'text/'+cstype+';charset=utf-8;'});
+    blob_2_download_link_b(blob,savename);
+}
+
+function blob_2_download_link_b(blob,savename){
+    var odom = document.createElement('a');
     odom.href = URL.createObjectURL(blob);
     odom.setAttribute('download', savename);
     document.body.appendChild(odom); 
     odom.click();
     document.body.removeChild(odom);
-    blob='';
+    //blob='';
+}
+
+function string_base64_2_file_b(base64Data, cstype,savename){
+    // 提取Base64编码的数据（去除data URL前缀）
+    const base64String = base64Data.split(';base64,').pop();
+    
+    // 解码Base64数据为二进制
+    const byteCharacters = atob(base64String);
+    const byteNumbers = new Array(byteCharacters.length);
+    for (let blxl = 0,lent= byteCharacters.length; blxl<lent; blxl++) {
+        byteNumbers[blxl] = byteCharacters.charCodeAt(blxl);
+    }
+    const byteArray = new Uint8Array(byteNumbers);
+
+    // 创建Blob对象
+    const blob = new Blob([byteArray], { type: cstype });   //cstype 形如：audio/wav - 保留注释
+    blob_2_download_link_b(blob,savename);
 }
 
 function dom_value_2_txt_file_b(csid,savename='',csext='txt'){
@@ -4653,4 +4674,13 @@ function array_split_by_range_b(arr_name,run_fn=false){
 
 function file_date_paramter_refresh_b(){
     localStorage.setItem('file_date_paramter','_'+randstr_b());
+}
+
+function code_file_ext_b(){
+    return ['.cpp','.css','.htm','.html','.js','.php','.py','.sh']; //和 KLfuns.py 中的函数对应 - 保留注释
+}
+
+function text_file_ext_b(){
+    return ['.asp','.ass','.conf','.csv','.gpx','.ini','.json','.log',
+            '.m3u','.pac','.prg','.srt','.ssa','.txt','.xml','.yaml',]; //和 KLfuns.py 中的函数对应 - 保留注释
 }

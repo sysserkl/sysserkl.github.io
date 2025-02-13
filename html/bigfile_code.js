@@ -229,8 +229,8 @@ function upload_a_bigfile(){
     }
 
     function sub_upload_a_bigfile_name_set(){
-        if (file_no>=file_count){return false;}
-        if (sub_upload_a_bigfile_check(ofiles[file_no])!==''){return false;}
+        if (file_no>=file_count){return [false,[]];}
+        if (sub_upload_a_bigfile_check(ofiles[file_no])!==''){return [false,[]];}
         file_name_bigfile_global=ofiles[file_no].name;
 
         if (file_name_bigfile_global.match(reg_exp1)){
@@ -248,11 +248,13 @@ function upload_a_bigfile(){
         } else {
             is_encoded=false;
         }
-        return true;
+        return [true,finfo];
     }
 
     function sub_upload_a_bigfile_one_split(){
-        if (!sub_upload_a_bigfile_name_set()){return;}
+        var is_ok,finfo;
+        [is_ok,finfo]=sub_upload_a_bigfile_name_set();
+        if (!is_ok){return;}
 
         file_content_bigfile_global = ofiles[file_no].content;
         if (file_no==file_count-1){
@@ -266,11 +268,17 @@ function upload_a_bigfile(){
     }
     
     function sub_upload_a_bigfile_one_step(){
-        if (!sub_upload_a_bigfile_name_set()){return;}
-
+        var is_ok,finfo;
+        [is_ok,finfo]=sub_upload_a_bigfile_name_set();
+        if (!is_ok){return;}        
+                
         var textFileReader = new FileReader();
-        //textFileReader.readAsDataURL(ofiles[file_no]); //此行保留 - 保留注释
-        textFileReader.readAsText(ofiles[file_no]);    //此行保留 , 'UTF-8'); // 使用 readAsText 并指定编码为 UTF-8 - 保留注释
+        if (text_file_ext_set.has('.'+finfo[2].toLowerCase())){
+            textFileReader.readAsText(ofiles[file_no]);    //, 'UTF-8'); // 使用 readAsText 并指定编码为 UTF-8 - 保留注释
+        } else {
+            textFileReader.readAsDataURL(ofiles[file_no]);
+        }
+        
         textFileReader.onload = function (){
             var blcontent=this.result;
             if (is_encoded){
@@ -327,6 +335,7 @@ function upload_a_bigfile(){
     var reg_exp1=/\s*\(\d+\)(\.[^\.]+)$/;   //同名文件(1) - 保留注释
     var reg_exp2=/\s*\(copy \d+\)(\.[^\.]+)$/;   //同名文件(copy 1) - 保留注释
     var is_encoded=false;
+    var text_file_ext_set=new Set(code_file_ext_b().concat(text_file_ext_b()));
     sub_upload_a_bigfile_one_step();
 }
 
@@ -614,7 +623,7 @@ function html_form_bigfile(ospan,do_render=false){
     }
     
     function sub_html_form_bigfile_textarea(){
-        var left_strings0='<p><span class="aclick" onclick="html_get_bigfile(false,true);">.htm+.js</span><span class="aclick" onclick="html_get_bigfile(false,false);">one file</span><span class="aclick" onclick="html_get_bigfile(true);">render</span>';
+        var left_strings0='<p><span class="aclick" onclick="html_get_bigfile(false,true);">.htm+.js</span><span class="aclick" onclick="html_get_bigfile(false,false);">one file</span><span class="aclick" onclick="html_get_bigfile(true);">render</span><a class="aclick" href="?render&idb&htm='+fname+'" target=_blank>link</a>';
         var blstr0=textarea_with_form_generate_b('textarea_html_file_content_bigfile','width:90%;height:10rem;',left_strings0,'清空,复制,↑,↓,发送到临时记事本,发送地址','</p>');
         
         var left_strings1='<p>';
@@ -796,7 +805,13 @@ function export_bigfile(ospan,cscontent=false){
         if ((prompt('输入 '+rndstr+' 确认导出长度为 '+bllen+' 的该记录') || '').trim()!==rndstr){return;}
         
         [csstr,fname]=encode_content_bigfile(csstr,fname);
-        string_2_txt_file_b(csstr,fname+'.'+blext,blext);
+        
+        var base64_list=csstr.match(/^data:(.*?\/.*?);base64,/);    //形如：[ "data:audio/x-wav;base64,", "audio/x-wav" ] - 保留注释
+        if (base64_list!==null){
+            string_base64_2_file_b(csstr, base64_list[1], fname+'.'+blext);
+        } else {
+            string_2_txt_file_b(csstr,fname+'.'+blext,blext);
+        }
     }
     
     if (typeof ospan=='string'){
