@@ -199,7 +199,8 @@ function menu_klr2(){
     var klmenu_batch=[
     '<span class="span_menu" onclick="'+str_t+'enwords_get_klr2();">提取英文单词</span>',        
     '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'batchwww\');">批量打开网址</span>',
-    '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'bing_oxford_klsearch_en\');">批量打开B_O_KLSearch(en)</span>',    
+    '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'bing_oxford_klsearch_en\');">批量打开B_O_KLSearch(en)</span>',  
+    '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'bing_oxford_+_klsearch_en\');">批量打开B_O_+_KLSearch(en)</span>',    
     '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'bing_collins_oxford_+_klsearch_en\');">批量打开B_C_O_+_KLSearch(en)</span>',    
     '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'oxford_klsearch_en\');">批量打开O_KLSearch(en)</span>',
     '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'cambridge\');">批量打开+(en)</span>',    
@@ -339,9 +340,19 @@ function option_generate_klr2(){
     ['number_sub','数字替换为下标'],
     ];    
     for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
-        list_t[blxl]='<OPTION value="'+list_t[blxl][0]+'">'+list_t[blxl][1]+'</OPTION>';
+        list_t[blxl]='<option value="'+list_t[blxl][0]+'">'+list_t[blxl][1]+'</option>';
     }
     document.getElementById('oquick').innerHTML=list_t.join('\n');
+    
+    var list_t=[
+    '["+——《》"],',
+    '"+",',
+
+    ];
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
+        list_t[blxl]='<option>'+list_t[blxl]+'</option>';
+    }
+    document.getElementById('select_leaflet_insert_common').innerHTML=list_t.join('\n');
 }
 
 function init_klr2(){
@@ -376,6 +387,15 @@ function init_klr2(){
     
     leaflet_en_buttons_klr2();
     temp_save_klr2('read');
+}
+
+function insert_common_klr2(){
+    var blstr=document.getElementById('select_leaflet_insert_common').value;
+    if (blstr==''){return;}
+    var list_t=blstr.split('+');
+    list_t.push('');
+    document.getElementById('taddstr1').value=list_t[0];
+    document.getElementById('taddstr2').value=list_t[1];
 }
 
 function leaflet_en_buttons_klr2(){

@@ -8,340 +8,50 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Fri, 14 Feb 2025 08:56:16 +0800</lastBuildDate>
-<item><title>IT professionals are losing sleep over data backups – here&amp;#39;s how to make sure you&amp;#39;re prepared - ITPro</title><link>https://www.itpro.com/infrastructure/backup/it-professionals-are-losing-sleep-over-data-backups-heres-how-to-make-sure-youre-prepared</link></item>
-<item><title>Threat actors are leaning on trusted services more than ever - ITPro</title><link>https://www.itpro.com/security/cyber-crime/threat-actors-are-leaning-on-trusted-services-more-than-ever</link></item>
-<item><title>Westcon-Comstor bolsters leadership with double appointment - ITPro</title><link>https://www.itpro.com/business/westcon-comstor-leadership-appointments</link></item>
-<item><title>Seashell Blizzard hacker group escalating attacks on critical infrastructure, Microsoft warns - ITPro</title><link>https://www.itpro.com/security/cyber-crime/seashell-blizzard-badpilot-hacking-campaign</link></item>
-<item><title>Why edge AI has significant business potential - ITPro</title><link>https://www.itpro.com/technology/artificial-intelligence/why-edge-ai-has-significant-business-potential</link></item>
-<item><title>Cisco is jailbreaking AI models so you don’t have to worry about it - ITPro</title><link>https://www.itpro.com/security/cisco-is-jailbreaking-ai-models-so-you-dont-have-to-worry-about-it</link></item>
-<item><title>Thales and Imperva unveil aligned global partner programs for 2025 - ITPro</title><link>https://www.itpro.com/business/thales-imperva-partner-program</link></item>
-<item><title>‘Europe could do it, but it&amp;#39;s chosen not to do it’: Eric Schmidt thinks EU regulation will stifle AI innovation – but Britain has a huge opportunity - ITPro</title><link>https://www.itpro.com/business/policy-and-legislation/eric-schmidt-eu-ai-regulation-uk</link></item>
-<item><title>Panasonic Toughbook names new European channel chief - ITPro</title><link>https://www.itpro.com/hardware/laptops/panasonic-toughbook-names-new-european-channel-chief</link></item>
-<item><title>8Base ransomware members snared in global police crackdown - ITPro</title><link>https://www.itpro.com/security/ransomware/8base-ransomware-gang-arrests</link></item>
-<item><title>The EU just shelved its AI liability directive - ITPro</title><link>https://www.itpro.com/business/policy-and-legislation/the-eu-just-shelved-its-ai-liability-directive</link></item>
-<item><title>UK and US reject Paris AI summit agreement as “Atlantic rift” on regulation grows - ITPro</title><link>https://www.itpro.com/technology/artificial-intelligence/uk-and-us-reject-paris-ai-summit-agreement-as-atlantic-rift-on-regulation-grows</link></item>
-<item><title>The AI challenge for the channel - ITPro</title><link>https://www.itpro.com/security/the-ai-challenge-for-the-channel</link></item>
-<item><title>Cisco wants to capitalize on the ‘DeepSeek effect’ - ITPro</title><link>https://www.itpro.com/infrastructure/networking/cisco-deepseek-networking</link></item>
-<item><title>QuEra Computing just raised $230 million to pioneer “fault-tolerant” quantum computing – and it even got Google’s seal of approval - ITPro</title><link>https://www.itpro.com/technology/quera-computing-investment</link></item>
-<item><title>Digital immaturity is holding back growth in the UK - ITPro</title><link>https://www.itpro.com/business/digital-transformation/digital-immaturity-is-holding-back-growth-in-the-uk</link></item>
-<item><title>Turns out AI isn&amp;#39;t that popular at work – just 4% of workers use the technology in the majority of daily tasks, but developers are among the top early adopters - ITPro</title><link>https://www.itpro.com/software/development/ai-tools-software-development-popularity</link></item>
-<item><title>Nuclear data centers are a waste of time – even as AI power demand skyrockets - ITPro</title><link>https://www.itpro.com/infrastructure/data-centres/nuclear-data-centers-are-a-waste-of-time</link></item>
-<item><title>The UK’s AI ambitions face one major hurdle – finding enough home-grown talent - ITPro</title><link>https://www.itpro.com/business/careers-and-training/uk-ai-action-plan-skills-shortages</link></item>
-<item><title>Sam Altman says ‘no thank you’ to Musk&amp;#39;s $97bn bid for OpenAI - ITPro</title><link>https://www.itpro.com/technology/artificial-intelligence/openai-rejects-musk-bid</link></item>
-<item><title>London council claims it faces 20,000 cyber attacks per day - ITPro</title><link>https://www.itpro.com/security/cyber-attacks/hammersmith-and-fulham-council-cyber-attacks</link></item>
-<item><title>Cisco dispels Kraken data breach claims, insists stolen data came from old attack - ITPro</title><link>https://www.itpro.com/security/ransomware/cisco-kraken-breach-claims</link></item>
-<item><title>Cisco Live EMEA 2025: All the news and updates as they happen - ITPro</title><link>https://www.itpro.com/news/live/cisco-live-emea-2025-all-the-news-and-updates-as-they-happen</link></item>
-<item><title>How IT decision makers can prepare for the AI Age - ITPro</title><link>https://www.itpro.com/hardware/how-it-decision-makers-can-prepare-for-the-ai-age</link></item>
-<item><title>&amp;quot;We are really moving into a world now of managing humans and agents together&amp;quot;: Marc Benioff thinks today’s CEOs will be the last to have a fully human workforce – and he&amp;#39;s not the only big tech exec predicting the rise of an AI workforce - ITPro</title><link>https://www.itpro.com/technology/artificial-intelligence/marc-benioff-salesforce-ai-agent-workforce</link></item>
-<item><title>Windows 10 end of life: How to prepare for the October deadline - ITPro</title><link>https://www.itpro.com/software/windows/windows-10-end-of-life-how-to-prepare-for-the-deadline</link></item>
-<item><title>&amp;#39;They’re unhappy with the core elements of their career&amp;#39;: UK workers are fed up with their current roles, so they&amp;#39;re moving to greener pastures for bigger salaries and better job security - ITPro</title><link>https://www.itpro.com/business/careers-and-training/uk-workers-switching-jobs-over-pay</link></item>
-<item><title>A quarter of firms still don’t have a formal data strategy – and it’s hampering AI adoption - ITPro</title><link>https://www.itpro.com/technology/artificial-intelligence/data-strategy-ai-adoption-failures</link></item>
-<item><title>HPE alerts affected staff after Midnight Blizzard breach - ITPro</title><link>https://www.itpro.com/security/data-breaches/hpe-midnight-blizzard-data-breach-notification</link></item>
-<item><title>UK regions invited to apply for ‘AI Growth Zone’ status - ITPro</title><link>https://www.itpro.com/business/ai-growth-zone-uk-</link></item>
-<item><title>Progress ShareFile Industry Advantage review: Smart cloud collaboration for accountants - ITPro</title><link>https://www.itpro.com/progress-sharefile-industry-advantage-review-smart-cloud-collaboration-for-accountants</link></item>
-<item><title>Pure Storage targets partner growth with revamped reseller program - ITPro</title><link>https://www.itpro.com/cloud/cloud-storage/pure-storage-reseller-program-refresh</link></item>
-<item><title>Who wins out from DeepSeek&amp;#39;s success? - ITPro</title><link>https://www.itpro.com/technology/artificial-intelligence/who-wins-out-from-deepseeks-success</link></item>
-<item><title>The fractured regulatory landscape tech companies face in 2025 - ITPro</title><link>https://www.itpro.com/business/policy-and-legislation/the-fractured-regulatory-landscape-tech-companies-face-in-2025</link></item>
-<item><title>GitHub&amp;#39;s new &amp;#39;Agent Mode&amp;#39; feature lets AI take the reins for developers - ITPro</title><link>https://www.itpro.com/software/development/githubs-new-agent-mode-feature-lets-ai-take-the-reins-for-developers</link></item>
-<item><title>UK’s new Cyber Monitoring Centre wants to create a digital Richter scale for cyber attacks - ITPro</title><link>https://www.itpro.com/security/uks-new-cyber-monitoring-centre-wants-to-create-a-digital-richter-scale-for-cyber-attacks</link></item>
-<item><title>Dell Technologies just revamped its Partner Program for 2025 – here&amp;#39;s what to expect - ITPro</title><link>https://www.itpro.com/business/dell-technologies-partner-program-2025</link></item>
-<item><title>We spoke to over 700 IT leaders to hear their tech strategy plans for 2025 – here&amp;#39;s what we learned - ITPro</title><link>https://www.itpro.com/business/business-strategy/future-focus-2025-it-leader-report</link></item>
-<item><title>Synology ActiveProtect DP7400 review: An affordable one-stop backup shop for enterprise data protection - ITPro</title><link>https://www.itpro.com/infrastructure/backup/synology-activeprotect-dp7400-review-an-affordable-one-stop-backup-shop-for-enterprise-data-protection</link></item>
-<item><title>Engineering firm IMI hit with cyber attack just days after Smiths Group incident - ITPro</title><link>https://www.itpro.com/business/engineering-firm-imi-hit-with-cyber-attack-just-days-after-smiths-group-incident</link></item>
-<item><title>Salesforce planning more job cuts amid AI hiring push - ITPro</title><link>https://www.itpro.com/business/business-strategy/salesforce-layoffs-february-2025</link></item>
-<item><title>Insurance sector urged to sharpen up third-party risk management as attacks surge - ITPro</title><link>https://www.itpro.com/security/insurance-sector-urged-to-sharpen-up-third-party-risk-management-as-attacks-surge</link></item>
-<item><title>Abandoned S3 buckets could have caused a catastrophic supply chain attack – and all at a cost of just $400 - ITPro</title><link>https://www.itpro.com/security/cyber-attacks/s3-bucket-supply-chain-attack-solarwinds</link></item>
-<item><title>Workday slashes nearly 10% of staff amid AI focus - ITPro</title><link>https://www.itpro.com/technology/artificial-intelligence/workday-slashes-nearly-10-percent-of-staff-amid-ai-focus</link></item>
-<item><title>Cyber attack delayed cancer treatment at NHS hospital - ITPro</title><link>https://www.itpro.com/security/cyber-attacks/cyber-attack-delayed-cancer-treatment-at-nhs-hospital</link></item>
-<item><title>Cisco patches critical flaws in Identity Services Engine - ITPro</title><link>https://www.itpro.com/security/cisco-patches-critical-flaws-in-identity-services-engine</link></item>
-<item><title>Rapid7 shakes up its channel ecosystem with new PACT Partner Program - ITPro</title><link>https://www.itpro.com/security/rapid7-shakes-up-its-channel-ecosystem-with-new-pact-partner-program</link></item>
-<item><title>LinkedIn has become a prime hunting ground for cyber criminals – here’s what you need to know - ITPro</title><link>https://www.itpro.com/security/cyber-attacks/linkedin-social-engineering-attacks</link></item>
-<item><title>Five Eyes cyber agencies issue guidance on edge device vulnerabilities - ITPro</title><link>https://www.itpro.com/security/five-eyes-cyber-agencies-issue-guidance-on-edge-device-vulnerabilities</link></item>
-<item><title>Seven pitfalls MSPs should avoid when building a resilient IT organization - ITPro</title><link>https://www.itpro.com/business/seven-pitfalls-msps-should-avoid-when-building-a-resilient-it-organisation</link></item>
-<item><title>The best Galaxy S25 Ultra features you don’t get on the S25 and S25+ - SamMobile</title><link>https://www.sammobile.com/news/best-galaxy-s25-ultra-features-vs-s25-plus/</link></item>
-<item><title>Fresh Galaxy A36 renders show it in all four colors - SamMobile</title><link>https://www.sammobile.com/news/galaxy-a36-renders-all-four-colors/</link></item>
-<item><title>Why the Galaxy S25 Edge will make me betray my loyalty to foldables - SamMobile</title><link>https://www.sammobile.com/opinion/why-the-galaxy-s25-edge-will-make-me-betray-my-loyalty-to-foldables/</link></item>
-<item><title>Samsung confirms software fix for Galaxy S25 Ultra camera issue - SamMobile</title><link>https://www.sammobile.com/news/samsung-confirms-software-fix-for-galaxy-s25-ultra-camera-issue/</link></item>
-<item><title>Samsung XR headset handles camera permissions similar to Android - SamMobile</title><link>https://www.sammobile.com/news/samsung-xr-headset-handles-camera-permissions-similar-android/</link></item>
-<item><title>$110 Samsung phone runs One UI 7 as Galaxy S24 users wait - SamMobile</title><link>https://www.sammobile.com/news/usd-110-galaxy-f06-5g-runs-one-ui-7-galaxy-s24-users-wait/</link></item>
-<item><title>Google rolling out new welcome animation for Circle to Search - SamMobile</title><link>https://www.sammobile.com/news/google-rolling-out-new-welcome-animation-circle-to-search/</link></item>
-<item><title>Here’s when Google will officially announce Android 16 - SamMobile</title><link>https://www.sammobile.com/news/heres-when-google-officially-announce-android-16/</link></item>
-<item><title>First software update arrives for Galaxy S25! - SamMobile</title><link>https://www.sammobile.com/news/first-galaxy-s25-software-update-released/</link></item>
-<item><title>You can finally stream Apple TV+ videos on your Galaxy phone, tablet - SamMobile</title><link>https://www.sammobile.com/news/you-can-finally-watch-apple-tv-on-your-galaxy-phone-tablet/</link></item>
-<item><title>聚焦“广东省事业单位2025年集中公开招聘（图情档类）” - 图谋博客 - 王启云</title><link>https://blog.sciencenet.cn/home.php?mod=space&amp;uid=213646&amp;do=blog&amp;id=1472863</link></item>
-<item><title>图书馆事业的未来发展——基于“小数据”的思考 - 图谋博客 - 王启云</title><link>https://blog.sciencenet.cn/home.php?mod=space&amp;uid=213646&amp;do=blog&amp;id=1472635</link></item>
-<item><title>数智时代图书馆：用户需求变化的深度解读与未来展望 - 图谋博客 - 王启云</title><link>https://blog.sciencenet.cn/home.php?mod=space&amp;uid=213646&amp;do=blog&amp;id=1472467</link></item>
-<item><title>deepseek：图书馆用户需求分析 - 图谋博客 - 王启云</title><link>https://blog.sciencenet.cn/home.php?mod=space&amp;uid=213646&amp;do=blog&amp;id=1472422</link></item>
-<item><title>科学网图谋博客16周年：岁月悠悠，笔墨传情 - 图谋博客 - 王启云</title><link>https://blog.sciencenet.cn/home.php?mod=space&amp;uid=213646&amp;do=blog&amp;id=1472238</link></item>
-<item><title>关于图书馆学术能力与服务能力的思考 - 图谋博客 - 王启云</title><link>https://blog.sciencenet.cn/home.php?mod=space&amp;uid=213646&amp;do=blog&amp;id=1472174</link></item>
-<item><title>News Orgs Say AI Firm Stole Articles, Spit Out &amp;#39;Hallucinations&amp;#39; - Slashdot</title><link>https://yro.slashdot.org/story/25/02/13/2227239/news-orgs-say-ai-firm-stole-articles-spit-out-hallucinations?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>US Releases Russian Cybercriminal As Part of Prisoner Swap - Slashdot</title><link>https://yro.slashdot.org/story/25/02/13/2220251/us-releases-russian-cybercriminal-as-part-of-prisoner-swap?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Apple Teases Special Product Launch Coming Next Week - Slashdot</title><link>https://apple.slashdot.org/story/25/02/13/2214200/apple-teases-special-product-launch-coming-next-week?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Nearly a Year Later, Mozilla Is Still Promoting OneRep - Slashdot</title><link>https://tech.slashdot.org/story/25/02/13/227253/nearly-a-year-later-mozilla-is-still-promoting-onerep?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Trust in AI is Much Higher in China Than in the US - Slashdot</title><link>https://slashdot.org/story/25/02/13/2118210/trust-in-ai-is-much-higher-in-china-than-in-the-us?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Nintendo Patent Push Against Hit Game Palworld Hits Roadblock in US - Slashdot</title><link>https://games.slashdot.org/story/25/02/13/2023245/nintendo-patent-push-against-hit-game-palworld-hits-roadblock-in-us?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Bezos-Backed Blue Origin To Cut 10% of Its Workforce - Slashdot</title><link>https://science.slashdot.org/story/25/02/13/203243/bezos-backed-blue-origin-to-cut-10-of-its-workforce?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>JPMorgan CEO Dimon Slams Return-To-Office Pushback - Slashdot</title><link>https://slashdot.org/story/25/02/13/197228/jpmorgan-ceo-dimon-slams-return-to-office-pushback?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>LibreOffice Marks 40th Year With Browser-Based Overhaul - Slashdot</title><link>https://news.slashdot.org/story/25/02/13/1813228/libreoffice-marks-40th-year-with-browser-based-overhaul?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Baidu Scraps Fees For AI Chatbot in Battle for China Tech Supremacy - Slashdot</title><link>https://slashdot.org/story/25/02/13/1147245/baidu-scraps-fees-for-ai-chatbot-in-battle-for-china-tech-supremacy?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>World&amp;#39;s Largely Unprotected Peatlands Are Ticking &amp;#39;Carbon Bomb,&amp;#39; Warns Study - Slashdot</title><link>https://news.slashdot.org/story/25/02/13/141239/worlds-largely-unprotected-peatlands-are-ticking-carbon-bomb-warns-study?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Data Center Power Demand Almost Doubled in Virginia, Utility Says - Slashdot</title><link>https://hardware.slashdot.org/story/25/02/13/1356235/data-center-power-demand-almost-doubled-in-virginia-utility-says?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>German Regulator Charges Apple With Abuse of Power Over App Tracking Tool - Slashdot</title><link>https://apple.slashdot.org/story/25/02/13/1352250/german-regulator-charges-apple-with-abuse-of-power-over-app-tracking-tool?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Are PhDs Losing Their Lustre? Why Fewer Students Are Enrolling in Doctoral Degrees - Slashdot</title><link>https://news.slashdot.org/story/25/02/13/1415255/are-phds-losing-their-lustre-why-fewer-students-are-enrolling-in-doctoral-degrees?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Musk Says New AI Chatbot Outperforms Rivals, Nears Launch - Slashdot</title><link>https://slashdot.org/story/25/02/13/1154209/musk-says-new-ai-chatbot-outperforms-rivals-nears-launch?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>丰田等多家日企内部禁用 DeepSeek - Solidot</title><link>https://www.solidot.org/story?sid=80549</link></item>
-<item><title>科学家探测到迄今最高能的中微子 - Solidot</title><link>https://www.solidot.org/story?sid=80548</link></item>
-<item><title>大脑中的微塑料是否会伤害你？ - Solidot</title><link>https://www.solidot.org/story?sid=80547</link></item>
-<item><title>NOAA 公开泰坦号内爆音频 - Solidot</title><link>https://www.solidot.org/story?sid=80546</link></item>
-<item><title>SM Lee Hsien Loong at the Teck Ghee Chinese New Year Dinner 2025 - PMO</title><link>https://www.pmo.gov.sg/Newsroom/SM-Lee-Hsien-Loong-at-the-Teck-Ghee-CNY-Dinner-2025</link></item>
-<item><title>DPM Heng Swee Keat at the Teochew Federation Chinese New Year Celebrations 2025 - PMO</title><link>https://www.pmo.gov.sg/Newsroom/DPM-Heng-Swee-Keat-at-the-Teochew-Federation-Chinese-New-Year-Celebrations-2025</link></item>
-<item><title>SM Lee Hsien Loong at the SCCC-SFCCA Spring Reception 2025 - PMO</title><link>https://www.pmo.gov.sg/Newsroom/SM-Lee-at-the-SCCC-SFCCA-Spring-Reception-2025</link></item>
-<item><title>DPM Gan Kim Yong at the SCCCI Spring Reception 2025 - PMO</title><link>https://www.pmo.gov.sg/Newsroom/DPM-Gan-at-the-SCCCI-Spring-Reception-2025</link></item>
-<item><title>2025 Chinese New Year Message by PM Lawrence Wong - PMO</title><link>https://www.pmo.gov.sg/Newsroom/2025-Chinese-New-Year-Message-by-PM-Lawrence-Wong</link></item>
-<item><title>DPM Heng Swee Keat at the 16th WELT Economic Summit - PMO</title><link>https://www.pmo.gov.sg/Newsroom/DPM-Heng-Swee-Keat-at-the-16th-WELT-Economic-Summit</link></item>
-<item><title>DPM Heng Swee Keat to Visit the Federal Republic of Germany (Jan 2025) - PMO</title><link>https://www.pmo.gov.sg/Newsroom/DPM-Heng-Swee-Keat-to-visit-the-Federal-Republic-of-Germany</link></item>
-<item><title>PM Lawrence Wong at the 60th Anniversary of Prophet Muhammad’s Birthday Memorial Scholarship Fund Board (LBKM) - PMO</title><link>https://www.pmo.gov.sg/Newsroom/PM-Lawrence-Wong-at-the-60th-Anniversary-of-LBKM</link></item>
-<item><title>Python Keywords: An Introduction -  Real Python</title><link>https://realpython.com/python-keywords/</link></item>
-<item><title>Quiz: Python Keywords: An Introduction -  Real Python</title><link>https://realpython.com/quizzes/python-keywords/</link></item>
-<item><title>Building a Python Command-Line To-Do App With Typer -  Real Python</title><link>https://realpython.com/courses/build-command-line-todo-app-typer/</link></item>
-<item><title>How to Join Strings in Python -  Real Python</title><link>https://realpython.com/python-join-string/</link></item>
-<item><title>The Real Python Podcast – Episode #238: Charlie Marsh: Accelerating Python Tooling With Ruff and uv -  Real Python</title><link>https://realpython.com/podcasts/rpp/238/</link></item>
-<item><title>Quiz: Python &amp;quot;for&amp;quot; Loops: The Pythonic Way -  Real Python</title><link>https://realpython.com/quizzes/python-for-loop/</link></item>
-<item><title>Quiz: How to Join Strings in Python -  Real Python</title><link>https://realpython.com/quizzes/python-join-string/</link></item>
-<item><title>How to Split a String in Python -  Real Python</title><link>https://realpython.com/python-split-string/</link></item>
-<item><title>NumPy Techniques and Practical Examples -  Real Python</title><link>https://realpython.com/courses/numpy-techniques-practical-examples/</link></item>
-<item><title>Quiz: How to Split a String in Python -  Real Python</title><link>https://realpython.com/quizzes/python-split-string/</link></item>
-<item><title>Python for Loops: The Pythonic Way -  Real Python</title><link>https://realpython.com/python-for-loop/</link></item>
-<item><title>Build a Dice-Rolling Application With Python -  Real Python</title><link>https://realpython.com/python-dice-roll/</link></item>
-<item><title>Develop Data Visualization Interfaces in Python With Dash -  Real Python</title><link>https://realpython.com/python-dash/</link></item>
-<item><title>Providing Multiple Constructors in Your Python Classes -  Real Python</title><link>https://realpython.com/python-multiple-constructors/</link></item>
-<item><title>The Real Python Podcast – Episode #237: Testing Your Python Code Base: Unit vs. Integration -  Real Python</title><link>https://realpython.com/podcasts/rpp/237/</link></item>
-<item><title>Creating a Scalable Flask Web Application From Scratch -  Real Python</title><link>https://realpython.com/courses/create-scalable-flask-web-app/</link></item>
-<item><title>The Real Python Podcast – Episode #236: Simon Willison: Using LLMs for Python Development -  Real Python</title><link>https://realpython.com/podcasts/rpp/236/</link></item>
-<item><title>Exploring Python&amp;#39;s tuple Data Type With Examples -  Real Python</title><link>https://realpython.com/courses/exploring-tuple-data-type-examples/</link></item>
-<item><title>Quiz: How to Deal With Missing Data in Polars -  Real Python</title><link>https://realpython.com/quizzes/how-to-deal-with-missing-data-in-polars/</link></item>
-<item><title>The Real Python Podcast – Episode #235: Principles for Considering Your Python Tooling -  Real Python</title><link>https://realpython.com/podcasts/rpp/235/</link></item>
-<item><title>Building Dictionary Comprehensions in Python -  Real Python</title><link>https://realpython.com/courses/building-dictionary-comprehensions/</link></item>
-<item><title>The Real Python Podcast – Episode #234: Building New Structures for Learning Python -  Real Python</title><link>https://realpython.com/podcasts/rpp/234/</link></item>
-<item><title>Ways to Start Interacting With Python -  Real Python</title><link>https://realpython.com/courses/interactive-python/</link></item>
-<item><title>The Real Python Podcast – Episode #233: PyCoder&amp;#39;s Weekly 2024 Top Articles &amp; Missing Gems -  Real Python</title><link>https://realpython.com/podcasts/rpp/233/</link></item>
-<item><title>Building HTTP APIs With Django REST Framework -  Real Python</title><link>https://realpython.com/courses/django-rest-framework/</link></item>
-<item><title>Launching Interop 2025 → - Mozilla Hacks</title><link>https://hacks.mozilla.org/2025/02/interop-2025/</link></item>
-<item><title>Debating Birthright Citizenship - Law &amp; Liberty</title><link>https://lawliberty.org/debating-birthright-citizenship/</link></item>
-<item><title>The Forgotten Meaning of the Citizenship Clause - Law &amp; Liberty</title><link>https://lawliberty.org/the-forgotten-meaning-of-the-citizenship-clause/</link></item>
-<item><title>Preventing Regulation by Enforcement - Law &amp; Liberty</title><link>https://lawliberty.org/preventing-regulation-by-enforcement/</link></item>
-<item><title>The Originalist Basis of Birthright Citizenship - Law &amp; Liberty</title><link>https://lawliberty.org/the-originalist-basis-of-birthright-citizenship/</link></item>
-<item><title>Unbecoming Europe - Law &amp; Liberty</title><link>https://lawliberty.org/forum/unbecoming-europe/</link></item>
-<item><title>Performative Constitutionalism - Law &amp; Liberty</title><link>https://lawliberty.org/performative-constitutionalism/</link></item>
-<item><title>The Prudence and Principles of Martin Van Buren - Law &amp; Liberty</title><link>https://lawliberty.org/book-review/the-prudence-and-principles-of-martin-van-buren/</link></item>
-<item><title>Trump wants nuclear arms talks with Russia and China - Defense News</title><link>https://www.defensenews.com/pentagon/2025/02/13/trump-wants-nuclear-arms-talks-with-russia-and-china/</link></item>
-<item><title>Japan becomes Boeing’s newest customer of latest Chinook helo variant - Defense News</title><link>https://www.defensenews.com/land/2025/02/13/japan-becomes-boeings-newest-customer-of-latest-chinook-helo-variant/</link></item>
-<item><title>DOD wants to cut red tape on foreign arms deals, Hegseth says - Defense News</title><link>https://www.defensenews.com/pentagon/2025/02/13/dod-wants-to-cut-red-tape-on-foreign-arms-deals-hegseth-says/</link></item>
-<item><title>Former Pentagon leader Chris Miller joins defense investment firm - Defense News</title><link>https://www.defensenews.com/pentagon/2025/02/13/former-pentagon-leader-chris-miller-joins-defense-investment-firm/</link></item>
-<item><title>Survival of the quickest: Military leaders aim to unleash, control AI - Defense News</title><link>https://www.defensenews.com/global/europe/2025/02/13/survival-of-the-quickest-military-leaders-aim-to-unleash-control-ai/</link></item>
-<item><title>NATO allies insist Ukraine and Europe must be part of peace talks - Defense News</title><link>https://www.defensenews.com/global/europe/2025/02/13/nato-allies-insist-ukraine-and-europe-must-be-part-of-peace-talks/</link></item>
-<item><title>Leonardo exec floats Eurofighter as stepstone for Saudi GCAP entrance - Defense News</title><link>https://www.defensenews.com/global/europe/2025/02/13/leonardo-exec-floats-eurofighter-as-stepstone-for-saudi-gcap-entrance/</link></item>
-<item><title>Trump says he and Putin agreed to begin talks on ending war in Ukraine - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2025/02/12/trump-says-he-and-putin-agreed-to-begin-talks-on-ending-war-in-ukraine/</link></item>
-<item><title>Space Development Agency launches study on Trump’s Iron Dome order - Defense News</title><link>https://www.defensenews.com/space/2025/02/12/space-development-agency-launches-study-on-trumps-iron-dome-order/</link></item>
-<item><title>Hegseth calls NATO membership for Ukraine unrealistic - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2025/02/12/hegseth-calls-nato-membership-for-ukraine-unrealistic/</link></item>
-<item><title>Space Force acquisition office ‘aggressively’ pushing reform efforts - Defense News</title><link>https://www.defensenews.com/space/2025/02/12/space-force-acquisition-office-aggressively-pushing-reform-efforts/</link></item>
-<item><title>Hegseth makes first visit to NATO as allies await US plans for Ukraine - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2025/02/12/hegseth-makes-first-visit-to-nato-as-allies-await-us-plans-for-ukraine/</link></item>
-<item><title>Immer wieder dieselben Fehler: Warum unser Geist am Leiden festhält - MC Winkels weBlog</title><link>https://www.whudat.de/immer-wieder-dieselben-fehler-warum-unser-geist-am-leiden-festhaelt/</link></item>
-<item><title>Kendrick Lamar beim Super-Bowl: Alle Details und versteckten Botschaften erklärt - MC Winkels weBlog</title><link>https://www.whudat.de/kendrick-lamar-beim-super-bowl-alle-details-und-versteckten-botschaften-erklaert/</link></item>
-<item><title>7 Tage ohne Zucker – Das passiert mit Ihrem Körper - MC Winkels weBlog</title><link>https://www.whudat.de/7-tage-ohne-zucker-das-passiert-mit-ihrem-koerper/</link></item>
-<item><title>Wun Two dropt „Snow Vol. 9“ – Ein Winterklassiker kehrt zurück - MC Winkels weBlog</title><link>https://www.whudat.de/wun-two-dropt-snow-vol-9-ein-winterklassiker-kehrt-zurueck/</link></item>
-<item><title>Kanada plant Beitritt zur EU: Eine neue geopolitische Allianz? - MC Winkels weBlog</title><link>https://www.whudat.de/kanada-plant-beitritt-zur-eu-eine-neue-geopolitische-allianz/</link></item>
-<item><title>Children Of Zeus NTS Radio Show // January + February 2025 Issues - MC Winkels weBlog</title><link>https://www.whudat.de/children-of-zeus-nts-radio-show-january-february-2025-issues/</link></item>
-<item><title>Jean-Jacques Rousseau und die Frage nach dem Bösen – Die verborgene Dunkelheit in uns - MC Winkels weBlog</title><link>https://www.whudat.de/jean-jacques-rousseau-und-die-frage-nach-dem-boesen-die-verborgene-dunkelheit-in-uns/</link></item>
-<item><title>Brenk Sinatra – „Inside the Midnite Ride“ // Music Documentary - MC Winkels weBlog</title><link>https://www.whudat.de/brenk-sinatra-inside-the-midnite-ride-music-documentary/</link></item>
-<item><title>Existentialismus nach Sartre: Lass Dich nicht von anderen definieren - MC Winkels weBlog</title><link>https://www.whudat.de/existentialismus-nach-sartre-lass-dich-nicht-von-anderen-definieren/</link></item>
-<item><title>Larry June, 2 Chainz und The Alchemist droppen „Life Is Beautiful“ Album - MC Winkels weBlog</title><link>https://www.whudat.de/larry-june-2-chainz-und-the-alchemist-droppen-life-is-beautiful-album/</link></item>
-<item><title>树莓派官方触摸屏 2 代使用教程 - 树莓派实验室</title><link>https://shumeipai.nxez.com/2025/01/31/getting-started-with-raspberry-pi-touch-display-2.html</link></item>
-<item><title>适用于 Raspberry Pi 的 Digilent Pmod HAT Adapter - 树莓派实验室</title><link>https://shumeipai.nxez.com/2025/01/17/pmod-hat-adapter-for-raspberry-pi.html</link></item>
-<item><title>Kingdom&amp;#39;s IPI grows by 1.10% in 2024; manufacturing, mining drive growth - Jordan Times</title><link>https://jordantimes.com/news/business/kingdoms-ipi-grows-110-2024-manufacturing-mining-drive-growth</link></item>
-<item><title>ASEZA approves land use amendments for green hydrogen projects - Jordan Times</title><link>https://jordantimes.com/news/business/aseza-approves-land-use-amendments-green-hydrogen-projects</link></item>
-<item><title>Jordan-Qatar ties set benchmark for pan-Arab cooperation — minister - Jordan Times</title><link>https://jordantimes.com/news/business/jordan-qatar-ties-set-benchmark-pan-arab-cooperation-%E2%80%94-minister</link></item>
-<item><title>Industry minister attends Arab Economic, Social Council meetings - Jordan Times</title><link>https://jordantimes.com/news/business/industry-minister-attends-arab-economic-social-council-meetings</link></item>
-<item><title>&amp;#39;Jordan’s unwavering stance on Gaza gains int&amp;#39;l attention following King&amp;#39;s talks with Trump&amp;#39; - Jordan Times</title><link>https://jordantimes.com/news/local/jordans-unwavering-stance-gaza-gains-intl-attention-following-kings-talks-trump</link></item>
-<item><title>Water carrier project &amp;#39;national security&amp;#39; priority for Jordan — minister - Jordan Times</title><link>https://jordantimes.com/news/local/water-carrier-project-national-security-priority-jordan-%E2%80%94-minister</link></item>
-<item><title>Forced displacement of Palestinians war crime, violates international law - EU ambassador - Jordan Times</title><link>https://jordantimes.com/news/local/forced-displacement-palestinians-war-crime-violates-international-law-eu-ambassador</link></item>
-<item><title>Kremlin says Ukraine will be in peace talks &amp;#39;one way or another&amp;#39; - Jordan Times</title><link>https://jordantimes.com/news/world/kremlin-says-ukraine-will-be-peace-talks-one-way-or-another</link></item>
-<item><title>Yemen&amp;#39;s Huthis threaten new attacks if Gazans displaced - Jordan Times</title><link>https://jordantimes.com/news/region/yemens-huthis-threaten-new-attacks-if-gazans-displaced</link></item>
-<item><title>Hamas says committed to truce as mediators push for Israeli hostage release - Jordan Times</title><link>https://jordantimes.com/news/region/hamas-says-committed-truce-mediators-push-israeli-hostage-release</link></item>
-<item><title>Chatbot Software Begins to Face Fundamental Limitations - Quanta Magazine</title><link>https://www.quantamagazine.org/chatbot-software-begins-to-face-fundamental-limitations-20250131/</link></item>
-<item><title>Tesla projected to win $400M Dept. of State contract for armored EVs - TESLARATI</title><link>https://www.teslarati.com/tesla-projected-win-400m-dept-of-state-contract-for-armored-evs/</link></item>
-<item><title>Tesla is using a new strategy to combat Supercharger vandalism - TESLARATI</title><link>https://www.teslarati.com/tesla-using-new-strategy-combat-supercharger-vandalism/</link></item>
-<item><title>Tesla implemented this little-known feature to make its cars even safer - TESLARATI</title><link>https://www.teslarati.com/tesla-implemented-this-little-known-feature-to-make-its-cars-even-safer/</link></item>
-<item><title>Tesla seems intent to underpromise and overdeliver on new Model Y deliveries - TESLARATI</title><link>https://www.teslarati.com/tesla-underpromise-overdeliver-new-model-y-deliveries/</link></item>
-<item><title>Tesla owners receive threatening messages from “anti-Nazi” group - TESLARATI</title><link>https://www.teslarati.com/tesla-owners-threatening-messages-anti-nazi-group/</link></item>
-<item><title>Tesla (TSLA) gets $475 price target and “Buy” rating from Benchmark - TESLARATI</title><link>https://www.teslarati.com/tesla-tsla-475-price-target-buy-rating-benchmark/</link></item>
-<item><title>Tesla FSD’s rollout in Mexico is a bigger deal than it seems - TESLARATI</title><link>https://www.teslarati.com/tesla-fsd-supervised-rollout-mexico/</link></item>
-<item><title>Ford CEO sees ‘cost and chaos’ in Trump tariffs, GM aims to ease impact - TESLARATI</title><link>https://www.teslarati.com/ford-trump-tariffs-gm-ease-impact/</link></item>
-<item><title>Tesla redesigned this crucial piece of hardware on the new Model Y - TESLARATI</title><link>https://www.teslarati.com/tesla-redesigned-hardware-model-y/</link></item>
-<item><title>Tesla’s revolutionary Matrix headlights are coming to the U.S. - TESLARATI</title><link>https://www.teslarati.com/tesla-matrix-headlights-coming-us/</link></item>
-<item><title>如何压低酷睿Ultra 9 285K的内存延迟 - 超能网</title><link>https://www.expreview.com/97099.html</link></item>
-<item><title>Epic平台免费领取《F1 车队经理 2024》等， 至2月21日0点截止 - 超能网</title><link>https://www.expreview.com/98262.html</link></item>
-<item><title>《合金装备 Δ : 食蛇者》开启预购：Steam国区409元起，8月28日解锁 - 超能网</title><link>https://www.expreview.com/98261.html</link></item>
-<item><title>英伟达确认RTX 5070 Ti会在2月20日上市，并宣布RTX 5070将于3月5日发售 - 超能网</title><link>https://www.expreview.com/98260.html</link></item>
-<item><title>英伟达GeForce Game Ready 572.42 WHQL驱动：为《鸣潮》等游戏带来支持 - 超能网</title><link>https://www.expreview.com/98259.html</link></item>
-<item><title>酷睿Ultra 5 230F天梯榜评测：酷睿i5-14490F的继任者，但时代变了 - 超能网</title><link>https://www.expreview.com/98175.html</link></item>
-<item><title>传英特尔正在探讨拆分半导体制造部门，与台积电成立合资企业 - 超能网</title><link>https://www.expreview.com/98255.html</link></item>
-<item><title>德商德静界推出Silent Loop 3系列AIO：三腔体水泵，配Silent Wings 4风扇 - 超能网</title><link>https://www.expreview.com/98238.html</link></item>
-<item><title>希捷带来Ultra-Compact SSD：USB-C移动固态硬盘，10Gbps，支持IP54 - 超能网</title><link>https://www.expreview.com/98254.html</link></item>
-<item><title>英特尔Granite Rapids-W曝光：新一代工作站平台，最多128条PCIe 5.0通道 - 超能网</title><link>https://www.expreview.com/98253.html</link></item>
-<item><title>美商海盗船宣布创始人Andy Paul计划退休，Thi La将接任首席执行官 - 超能网</title><link>https://www.expreview.com/98252.html</link></item>
-<item><title>西部数据预计NAND闪存业务剥离计划2月21日完成，2026年将带来首批HAMR产品 - 超能网</title><link>https://www.expreview.com/98250.html</link></item>
-<item><title>台积电批准约171亿美元资本拨款：用于升级先进制程及封装产能 - 超能网</title><link>https://www.expreview.com/98249.html</link></item>
-<item><title>AMD或带来32GB显存的Radeon RX 9070 XT：属于游戏显卡，计划2025Q2末推出 - 超能网</title><link>https://www.expreview.com/98248.html</link></item>
-<item><title>《艾尔登法环 : 黑夜君临》5月30日同步登陆PC和主机，Steam国区198元起 - 超能网</title><link>https://www.expreview.com/98247.html</link></item>
-<item><title>索尼State of Play发布会：全新国产大作公布，《失落之魂》5月30日发售 - 超能网</title><link>https://www.expreview.com/98242.html</link></item>
-<item><title>高通发布第四代骁龙6移动平台：CPU升级至Armv9架构，采用台积电4nm工艺 - 超能网</title><link>https://www.expreview.com/98245.html</link></item>
-<item><title>加拿大零售商列出RX 9070系列显卡售价，RX 9070 XT起步价699美元 - 超能网</title><link>https://www.expreview.com/98244.html</link></item>
-<item><title>宏碁推出GM9000系列PCIe 5.0 SSD：14000MB/s读取速度，6nm主控，899元起 - 超能网</title><link>https://www.expreview.com/98240.html</link></item>
-<item><title>《无主之地4》将于9月23日发售：登陆PC和主机，带来新预告片 - 超能网</title><link>https://www.expreview.com/98243.html</link></item>
-<item><title>英伟达推迟RTX 5070上市时间：或延期至3月初 - 超能网</title><link>https://www.expreview.com/98241.html</link></item>
-<item><title>海韵PRIME TX-1600 Noctua Edition电源评测：强强联手的真·旗舰 - 超能网</title><link>https://www.expreview.com/97140.html</link></item>
-<item><title>AMD正式发布Radeon RX 7650 GRE：提升最新游戏体验标准 - 超能网</title><link>https://www.expreview.com/98237.html</link></item>
-<item><title>索尼新一期State of Play于2月13日举行，时长将超过40分钟 - 超能网</title><link>https://www.expreview.com/98236.html</link></item>
-<item><title>《如龙8外传 : 夏威夷海盗》公布PC配置要求：推荐RTX 2060或RX 5700 - 超能网</title><link>https://www.expreview.com/98235.html</link></item>
-<item><title>三星和SK海力士选择在2025Q1减产：将NAND闪存产量削减10%以上 - 超能网</title><link>https://www.expreview.com/98234.html</link></item>
-<item><title>After clash over Rust in Linux, now Asahi lead quits distro, slams Torvalds&amp;#39; leadership - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/13/ashai_linux_head_quits/</link></item>
-<item><title>Reddit’s first public year shows growth, but Wall Street’s still not happy - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/13/reddit_posts_earnings/</link></item>
-<item><title>More victims of China&amp;#39;s Salt Typhoon crew emerge: Telcos just now hit via Cisco bugs - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/13/salt_typhoon_pwned_7_more/</link></item>
-<item><title>Analysts welcome ACID transactions on real-time distributed Aerospike - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/13/aerospike_acid_transactions/</link></item>
-<item><title>US lawmakers press Trump admin to oppose UK&amp;#39;s order for Apple iCloud backdoor - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/13/us_demand_uk_apple_backdoor_close/</link></item>
-<item><title>WD told to pay half a billion in patent damages before biz splits - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/13/western_digital_told_to_cough/</link></item>
-<item><title>SAP snared in revenue trap unless it extends legacy ERP support - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/13/sap_erp_revenue_trap/</link></item>
-<item><title>Diversity, equity, and inclusion is not an illusion, but it soon might be - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/13/diversity_equity_inclusion_tech/</link></item>
-<item><title>North Korea targets crypto developers via NPM supply chain attack - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/13/north_korea_npm_crypto/</link></item>
-<item><title>Undergrad and colleagues accidentally shred 40-year hash table gospel - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/13/hash_table_breakthrough/</link></item>
-<item><title>LibreOffice still kicking at 40, now with browser tricks and real-time collab - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/13/libreoffice_wasm_zetaoffice/</link></item>
-<item><title>Insurance giant finds claims rep that gives a damn (it&amp;#39;s AI) - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/13/allstate_insurance_ai_rep/</link></item>
-<item><title>WordPress war latest: Ploy to trademark Hosted WordPress, Managed WordPress derailed - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/13/wordpress_foundation_trademark_registrations_nixed/</link></item>
-<item><title>Mysterious Palo Alto firewall reboots? You&amp;#39;re not alone - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/13/palo_alto_firewall/</link></item>
-<item><title>Cisco says it’s already dug in to protect itself – and customers – if trade war breaks out - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/13/cisco_q2_fy25/</link></item>
-<item><title>Have I Been Pwned likely to ban resellers from buying subs, citing ‘sh*tty behavior’ and onerous support requests - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/13/hibp_reseller_ban/</link></item>
-<item><title>Feds want devs to stop coding &amp;#39;unforgivable&amp;#39; buffer overflow vulnerabilities - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/13/fbi_cisa_unforgivable_buffer_overflow/</link></item>
-<item><title>Sophos sheds 6% of staff after swallowing Secureworks - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/13/sophos_secureworks_layoff/</link></item>
-<item><title>Larry Ellison wants to put all America&amp;#39;s data, including DNA, in one big Oracle system for AI to study - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/12/larry_ellison_wants_all_data/</link></item>
-<item><title>IBM return-to-office order hits finance, ops teams amid push to dump staff for AI - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/12/ibm_return_to_office_mandate/</link></item>
-<item><title>Trump’s cyber chief pick has little experience in The Cyber - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/12/trump_cybersecurity_chief/</link></item>
-<item><title>Arizona laptop farmer pleads guilty for funneling $17M to Kim Jong Un - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/12/arizona_woman_laptop_farm_guilty/</link></item>
-<item><title>Ransomware isn&amp;#39;t always about the money: Government spies have objectives, too - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/12/ransomware_nation_state_groups/</link></item>
-<item><title>DARPA skips the lab, will head to orbit to test space manufacturing tech - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/12/darpa_decides_to_skip_the/</link></item>
-<item><title>Russia&amp;#39;s Sandworm caught snarfing credentials, data from American and Brit orgs - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/12/russias_sandworm_caught_stealing_credentials/</link></item>
-<item><title>James Webb Space Telescope to size up asteroid 2024 YR4 before it rocks our world - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/12/james_webb_asteroid_measuring/</link></item>
-<item><title>Running hot? Server shipments forecast to cool in 2025 - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/12/trendforce_ai_servers/</link></item>
-<item><title>SpaceX Crew Dragons swapped so ISS crew can go home early - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/12/spacex_crew_dragons_swapped_for/</link></item>
-<item><title>Crimelords and spies for rogue states are working together, says Google - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/12/google_state_cybercrime_report/</link></item>
-<item><title>EU plans to &amp;#39;mobilize&amp;#39; €200B to invest in AI to catch up with US and China - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/12/eu_plans_to_mobilize_200b/</link></item>
-<item><title>Why SAP may be mulling 2030 end of maintenance for legacy ERP - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/12/gartner_sap_maintenance_2030/</link></item>
-<item><title>UK government insiders say AI datacenters may be a pricey white elephant - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/12/uk_gov_ai_datacenters/</link></item>
-<item><title>AI summaries turn real news into nonsense, BBC finds - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/12/bbc_ai_news_accuracy/</link></item>
-<item><title>Murena boss says customers about to wake up from its cloud storage nightmare - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/12/murena_ceo_de_googling_android/</link></item>
-<item><title>Oxford researchers pull off quantum first with distributed gate teleportation - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/12/oxford_quantum_gate_teleportation/</link></item>
-<item><title>Ignorance really is bliss when you’re drowning in information - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/12/ignorance_really_is_bliss/</link></item>
-<item><title>After Copilot trial, government staff rated Microsoft&amp;#39;s AI less useful than expected - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/12/australian_treasury_copilot_pilot_assessment/</link></item>
-<item><title>February&amp;#39;s Patch Tuesday sees Microsoft offer just 63 fixes - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/12/patch_tuesday_february_2025/</link></item>
-<item><title>A win at last: Big blow to AI world in training data copyright scrap - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/12/thomson_reuters_wins_ai_copyright/</link></item>
-<item><title>Microsoft wants to quit building Army VR goggles, hand contract to Anduril - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/12/microsoft_gives_up_army_ivas/</link></item>
-<item><title>UK Chinese oppose mega-embassy, London - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#13_February_2025_(UK_Chinese_oppose_mega-embassy,_London)</link></item>
-<item><title>Art by generative systems contentious - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#13_February_2025_(Art_by_generative_systems_contentious)</link></item>
-<item><title>Hints on fate of US payments systems - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#12_February_2025_(Hints_on_fate_of_US_payments_systems)</link></item>
-<item><title>Rulings on Treasury and on USAID - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#12_February_2025_(Rulings_for_Treasury,_USAID)</link></item>
-<item><title>R/W access to Treasury payments system - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#12_February_2025_(Elez&amp;#39;_access_to_Treasury_payments_system)</link></item>
-<item><title>A domestic terror trial, US - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#12_February_2025_(A_domestic_terror_trial,_US)</link></item>
-<item><title>Hostage releases postponed, ISR - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#12_February_2025_(Hostage_releases_postponed,_ISR)</link></item>
-<item><title>Specter of national censorship, ISR - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#12_February_2025_(Specter_of_censorship,_ISR)</link></item>
-<item><title>&amp;quot;Efficient&amp;quot; government research, US - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#12_February_2025_(Research_outlook_grim,_US)</link></item>
-<item><title>Urgent: Increase climate-emergency funding - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#12_February_2025_(Urgent:_Protect_climate-emergency_management)</link></item>
-<item><title>Spike in phone calls to Congress - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#12_February_2025_(Spike_in_phone_calls_to_Congress)</link></item>
-<item><title>Urgent: Wrecker&amp;#39;s inauguration fund - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#12_February_2025_(Urgent:_Wrecker&amp;#39;s_inauguration_fund)</link></item>
-<item><title>Plastic waste executive order - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#12_February_2025_(Plastic_waste_order)</link></item>
-<item><title>Kyrsten Sinema dooH niboR, AZ - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#12_February_2025_(Republican_Senator_dooH_niboR,_AZ)</link></item>
-<item><title>Flag &amp;quot;security&amp;quot; at Super Bowl - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#12_February_2025_(Flag_security_at_Super_Bowl)</link></item>
-<item><title>Google AI in surveillance, weapons - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#11_February_2025_(Weaponizing_their_AI_efforts,_Google)</link></item>
-<item><title>Wealthy interests VS Government, AZ - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#11_February_2025_(Wealthy_interests_VS_Government)</link></item>
-<item><title>About midair collisions in DC airspace - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#11_February_2025_(About_midair_collisions_in_DC_airspace)</link></item>
-<item><title>DEI history, air-traffic controllers - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#11_February_2025_(DEI_in_air-trafic_controller_hiring)</link></item>
-<item><title>Wrecker prefers law of the jungle - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#11_February_2025_(Wrecker_prefers_law_of_the_jungle)</link></item>
-<item><title>Insects and AMR in hospitals, NGA - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#11_February_2025_(Drug-resistant_bacteria)</link></item>
-<item><title>US int&amp;#39;l aid VS China aid - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#11_February_2025_(US_int&amp;#39;l_aid_cuts_replaced_by_China_)</link></item>
-<item><title>US aid-cuts invoke PISSI - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#11_February_2025_(USAID_cuts_revive_fears_of_PISSI)</link></item>
-<item><title>Dem. reps at Treasury-raid protests - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#11_February_2025_(Dem._reps_at_Treasury-raid_protests)</link></item>
-<item><title>Scorn for protesters of Gaza massacres - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#11_February_2025_(Scorn_for_protestors_of_Gaza_massacres)</link></item>
-<item><title>Bill against sanctuary cities - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#11_February_2025_(Bill_against_sanctuary_cities)</link></item>
-<item><title>US covets CAN resources - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#11_February_2025_(US_acquisition_of_others&amp;#39;_countries,_CAN)</link></item>
-<item><title>New, James Hansen, climate study is out - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#10_February_2025_(New,_James_Hansen,_climate_study)</link></item>
-<item><title>Government web sites losing climate data - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#10_February_2025_(Underway:_.gov_purge;_climate_data,_etc)</link></item>
-<item><title>Inspectors general and Musk&amp;#39;s companies - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#10_February_2025_(Inspectors_general_and_Musk&amp;#39;s_companies)</link></item>
-<item><title>Urgent: Stop the coup - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#10_February_2025_(Urgent:_Stop_the_coup)</link></item>
-<item><title>US Treasury and USAID payments - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#10_February_2025_(US_Treasury_and_USAID_payments)</link></item>
-<item><title>Wrecking crews making monkeys - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#10_February_2025_(Wrecking_crews_monkeyed)</link></item>
-<item><title>USAid workings saved by judge - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#10_February_2025_(USAid_workings_saved_by_judge)</link></item>
-<item><title>Stalinesque ICE fear mongering - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#10_February_2025_(Stalinesque,_ICE_fear_mongering)</link></item>
-<item><title>Malice against Coast Guard commander - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#10_February_2025_(Coast_Guard_commander-eviction_malice)</link></item>
-<item><title>US shakedown diplomacy - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#10_February_2025_(US_shakedown_diplomacy)</link></item>
-<item><title>US takeover of Gaza as war crime - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#8_February_2025_(US_takeover_of_Gaza_as_war_crime)</link></item>
-<item><title>Urgent: Social Security, Medicare payments - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#8_February_2025_(Urgent:_Social_Security,_Medicare_payments)</link></item>
-<item><title>Mass deportation is a mirage - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#8_February_2025_(Mass_deporation_is_a_mirage)</link></item>
-<item><title>Large TB outbreak hamstrung, KS - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#8_February_2025_(Large_TB_outbreak_hamstrung,_KS)</link></item>
-<item><title>Language and executive function - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#8_February_2025_(Language_and_executive_function)</link></item>
-<item><title>Australia rain - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#8_February_2025_(Australia_rain)</link></item>
-<item><title>Ukraine robotic military vehicles - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#8_February_2025_(Ukraine_robotic_military_vehicles)</link></item>
-<item><title>Air pollution - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#8_February_2025_(Air_pollution)</link></item>
-<item><title>Iran non-nuclear agreement restarting? - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#8_February_2025_(Iran_non-nuclear_agreement_restarting)</link></item>
-<item><title>Wrecker and Netanyahu not above the law - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#7_February_2025_(Wrecker_and_Netanyahu_not_above_the_law)</link></item>
-<item><title>Fossil fuel extraction in national monuments - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#7_February_2025_(Fossil_fuel_extraction_in_national_monuments)</link></item>
-<item><title>Corrupter tried to fire US election commission chair - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#7_February_2025_(Corrupter_tried_to_fire_US_election_commission_chair)</link></item>
-<item><title>Calls for Syria&amp;#39;s sanctions to be lifted - Richard Stallman</title><link>https://stallman.org/archives/2024-nov-feb.html#7_February_2025_(Calls_for_Syria&amp;#39;s_sanctions_to_be_lifted)</link></item>
-<item><title>Hegseth says Ukraine can’t return to old borders - Defense News</title><link>https://www.defensenews.com/video/2025/02/12/hegseth-says-ukraine-cant-return-to-old-borders/</link></item>
-<item><title>Army seeks mid-range missile to cover operational gaps - Defense News</title><link>https://www.defensenews.com/news/your-army/2022/12/30/army-seeks-mid-range-missile-to-cover-operational-gaps/</link></item>
-<item><title>Zamone Perez - Defense News</title><link>https://www.defensenews.com/author/zamone-perez</link></item>
-<item><title>New in 2023: US troops in Europe to continue deployments, training - Defense News</title><link>https://www.defensenews.com/news/your-military/2022/12/30/new-in-2023-us-troops-in-europe-to-continue-deployments-training/</link></item>
-<item><title>A high ambition: Italian Army aims for self-sufficient cannabis market - Defense News</title><link>https://www.defensenews.com/global/europe/2022/12/30/a-high-ambition-italian-army-aims-for-self-sufficient-cannabis-market/</link></item>
-<item><title>Turkish defense exports pass $4 billion in 2022, says procurement boss - Defense News</title><link>https://www.defensenews.com/industry/2022/12/30/turkish-defense-exports-pass-4-billion-in-2022-says-procurement-boss/</link></item>
-<item><title>New in 2023: Welcoming new airframes to the fleet - Defense News</title><link>https://www.defensenews.com/news/your-air-force/2022/12/29/new-in-2023-welcoming-new-airframes-to-the-fleet/</link></item>
-<item><title>New Army light tank under construction - Defense News</title><link>https://www.defensenews.com/news/your-army/2022/12/29/new-army-light-tank-under-construction/</link></item>
-<item><title>‘Dangerously’ close: Video shows Chinese jet buzzing US spy plane - Defense News</title><link>https://www.defensenews.com/air/2022/12/29/dangerously-close-video-shows-chinese-jet-buzzing-us-spy-plane/</link></item>
-<item><title>South Korea stages drills simulating downing of North drones - Defense News</title><link>https://www.defensenews.com/unmanned/2022/12/29/south-korea-stages-drills-simulating-downing-of-north-drones/</link></item>
-<item><title>US to sell Taiwan anti-tank mine-laying Volcano system - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2022/12/29/us-to-sell-taiwan-anti-tank-mine-laying-volcano-system/</link></item>
-<item><title>Sweden, Finland try ‘future ally’ path with Turkey in bid to join NATO - Defense News</title><link>https://www.defensenews.com/global/europe/2022/12/29/sweden-finland-try-future-ally-path-with-turkey-in-bid-to-join-nato/</link></item>
-<item><title>Apple To Restore TikTok To US App Store Following Justice Department Letter - Slashdot</title><link>https://apple.slashdot.org/story/25/02/14/0037255/apple-to-restore-tiktok-to-us-app-store-following-justice-department-letter</link></item>
-<item><title>AI Licensing Deals With Google and OpenAI Make Up 10% of Reddit&amp;#39;s Revenue - Slashdot</title><link>https://tech.slashdot.org/story/25/02/14/0019213/ai-licensing-deals-with-google-and-openai-make-up-10-of-reddits-revenue</link></item>
-<item><title>paying $60 million - Slashdot</title><link>https://tech.slashdot.org/story/24/02/22/1757233/reddit-in-ai-content-licensing-deal-with-google</link></item>
-<item><title>five-year prison sentence - Slashdot</title><link>https://yro.slashdot.org/story/20/12/08/1659252/btc-e-founder-sentenced-to-five-years-in-prison-for-laundering-ransomware-funds</link></item>
-<item><title>stop bundling Onerep - Slashdot</title><link>https://tech.slashdot.org/story/24/03/22/1937234/mozilla-drops-onerep-after-ceo-admits-to-running-people-search-networks</link></item>
-<item><title>Woeful Security On Financial Phone Apps Is Getting People Murdered - Slashdot</title><link>https://news.slashdot.org/story/25/02/12/2339225/woeful-security-on-financial-phone-apps-is-getting-people-murdered?sbsrc=md</link></item>
-<item><title>Elizabeth Holmes Breaks Her Silence In First Interview From Prison - Slashdot</title><link>https://yro.slashdot.org/story/25/02/13/022230/elizabeth-holmes-breaks-her-silence-in-first-interview-from-prison?sbsrc=md</link></item>
-<item><title>Oracle&amp;#39;s Ellison Calls for Governments To Unify Data To Feed AI - Slashdot</title><link>https://developers.slashdot.org/story/25/02/12/1857208/oracles-ellison-calls-for-governments-to-unify-data-to-feed-ai?sbsrc=md</link></item>
-<item><title>The Mystery Behind the Best UFO Picture Ever Seen - Slashdot</title><link>https://entertainment.slashdot.org/story/25/02/12/0040242/the-mystery-behind-the-best-ufo-picture-ever-seen?sbsrc=md</link></item>
-<item><title>Do you still use cash? - Slashdot</title><link>https://slashdot.org/poll/3277?utm_source=rss1.0&amp;utm_medium=feed&amp;sbsrc=firehose</link></item>
-<item><title>Trump Admin to Purchase $400m in Armored EVs - Slashdot</title><link>https://slashdot.org/submission/17333221/trump-admin-to-purchase-400m-in-armored-evs?utm_source=rss1.0&amp;utm_medium=feed&amp;sbsrc=firehose</link></item>
-<item><title>&amp;quot;Largest data breach in US history&amp;quot;: Three more lawsuits try to stop DOGE - Slashdot</title><link>https://slashdot.org/submission/17333215/largest-data-breach-in-us-history-three-more-lawsuits-try-to-stop-doge?utm_source=rss1.0&amp;utm_medium=feed&amp;sbsrc=firehose</link></item>
-<item><title>Titan Sub Implosion Audio Released For the First Time - Slashdot</title><link>https://slashdot.org/submission/17333199/titan-sub-implosion-audio-released-for-the-first-time?utm_source=rss1.0&amp;utm_medium=feed&amp;sbsrc=firehose</link></item>
-<item><title>The Future of GPLv3 Hangs in the Balance - Slashdot</title><link>https://slashdot.org/submission/17333197/the-future-of-gplv3-hangs-in-the-balance?utm_source=rss1.0&amp;utm_medium=feed&amp;sbsrc=firehose</link></item>
-<item><title>&amp;quot;Very Severe Hole&amp;quot; In Vista UAC Design - Slashdot</title><link>https://tech.slashdot.org/story/07/02/13/1922237/very-severe-hole-in-vista-uac-design?sbsrc=thisday</link></item>
-<item><title>What Was Your First Computer? - Slashdot</title><link>https://news.slashdot.org/story/06/02/13/1439232/what-was-your-first-computer?sbsrc=thisday</link></item>
-<item><title>Random Number Generator That Sees Into the Future - Slashdot</title><link>https://science.slashdot.org/story/05/02/12/2344224/random-number-generator-that-sees-into-the-future?sbsrc=thisday</link></item>
-<item><title>Microsoft Source Follow-Up - Slashdot</title><link>https://tech.slashdot.org/story/04/02/13/165231/microsoft-source-follow-up?sbsrc=thisday</link></item>
-<item><title>FTP: Better Than HTTP, Or Obsolete? - Slashdot</title><link>https://ask.slashdot.org/story/03/02/13/2132221/ftp-better-than-http-or-obsolete?sbsrc=thisday</link></item>
-<item><title>This Beautiful Home Showcases BIPOC Art and the Power of Buy Nothing Groups - Apartment Therapy</title><link>https://www.apartmenttherapy.com/renovated-boston-apartment-photos-37456084</link></item>
-<item><title>This Red Kitchen Felt “Never Clean” Until Its Gorgeous, Glossy Makeover - Apartment Therapy</title><link>https://www.apartmenttherapy.com/white-scandi-kitchen-makeover-ba-37457785</link></item>
-<item><title>12 Editor-Tested Sofas to Snag on Sale This Presidents’ Day (We Swear by Them!) - Apartment Therapy</title><link>https://www.apartmenttherapy.com/editor-favorite-sofas-presidents-day-deals-2025-37457961</link></item>
-<item><title>I Switched to a Side Sleeper Pillow, and It Completely Relieved My Neck Pain - Apartment Therapy</title><link>https://www.apartmenttherapy.com/naturepedic-organic-side-sleeper-pillow-review-ll-37416268</link></item>
-<item><title>This Customizable Bed Gives Me and My Wife a Perfect Night&amp;#39;s Sleep - Apartment Therapy</title><link>https://www.apartmenttherapy.com/sleep-number-360-c2-smart-bed-review-37432734</link></item>
-<item><title>The Comfy Sofa I Recommend to Everyone Got an Upgrade That Makes It 10x Better - Apartment Therapy</title><link>https://www.apartmenttherapy.com/albany-park-kova-box-cushion-sofa-review-ll-37457941</link></item>
-<item><title>The Clever Grocery Trick I Wish I’d Heard About Sooner (I’m Saving $75 Every Single Month) - Apartment Therapy</title><link>https://www.apartmenttherapy.com/loss-leaders-grocery-tip-37457683</link></item>
-<item><title>6 Kitchen “Icks” That Instantly Turn Off Homebuyers, According to Real Estate Pros - Apartment Therapy</title><link>https://www.apartmenttherapy.com/homebuyer-kitchen-icks-37457677</link></item>
-<item><title>West Elm&amp;#39;s Space-Saving Furniture and Decor Is Up to 60% Off - Apartment Therapy</title><link>https://www.apartmenttherapy.com/west-elm-presidents-day-sale-2025-37457901</link></item>
-<item><title>I Spotted These 5 Trends in Paris — They’re Coming for Your Home - Apartment Therapy</title><link>https://www.apartmenttherapy.com/maison-objet-trends-2025-37457424</link></item>
-<item><title>All the Best Presidents&amp;#39; Day Rug Deals to Shop Right Now - Apartment Therapy</title><link>https://www.apartmenttherapy.com/best-presidents-day-rug-deals-2025-37457787</link></item>
-<item><title>IKEA Quietly Changed the PAX Wardrobe (It’s So Much Easier to Use in Tight Spaces!) - Apartment Therapy</title><link>https://www.apartmenttherapy.com/ikea-pax-changes-2024-37457588</link></item>
-<item><title>I Asked a Budgeting Pro to Audit My Subscriptions — Here’s What They Said to Cancel - Apartment Therapy</title><link>https://www.apartmenttherapy.com/canceling-subscriptions-budgeting-expert-37456104</link></item>
-<item><title>Bathtubs Are Being Replaced with Something Far More Practical - Apartment Therapy</title><link>https://www.apartmenttherapy.com/angi-report-bathtub-replacement-luxury-37456922</link></item>
-<item><title>My Sister Taught Me Her &amp;quot;15-Day Rule,&amp;quot; and It&amp;#39;s Life-Changing - Apartment Therapy</title><link>https://www.apartmenttherapy.com/15-day-rule-37456239</link></item>
-<item><title>Mel Robbins’ Six-Step Morning Routine Is A Game-Changer - Apartment Therapy</title><link>https://www.apartmenttherapy.com/mel-robbins-morning-routine-37456859</link></item>
-<item><title>Demi Moore Is Using This 100-Year-Old Antique as Kitchen Decor (It’s So Cute!) - Apartment Therapy</title><link>https://www.apartmenttherapy.com/demi-moore-tiny-chairs-37457015</link></item>
+<lastBuildDate>Sat, 15 Feb 2025 19:22:16 +0800</lastBuildDate>
+<item><title>亚马逊将关闭 Kindle 的 Download &amp; Transfer via USB 功能 - Solidot</title><link>https://www.solidot.org/story?sid=80564</link></item>
+<item><title>摩根大通 CEO 对反对重返办公室的意见不屑一顾 - Solidot</title><link>https://www.solidot.org/story?sid=80563</link></item>
+<item><title>20 光年外的一颗恒星宜居带有行星 - Solidot</title><link>https://www.solidot.org/story?sid=80562</link></item>
+<item><title>美摄起诉字节跳动抄袭代码获赔 8266.8 万元 - Solidot</title><link>https://www.solidot.org/story?sid=80561</link></item>
+<item><title>俄罗斯无人机攻击切尔诺贝利核电站 - Solidot</title><link>https://www.solidot.org/story?sid=80560</link></item>
+<item><title>Zed 使用开源模型 Zeta 预测用户的编辑 - Solidot</title><link>https://www.solidot.org/story?sid=80559</link></item>
+<item><title>作为换囚交易的一部分美国释放了 BTC-e 联合创始人 - Solidot</title><link>https://www.solidot.org/story?sid=80557</link></item>
+<item><title>攻读博士学位的人数在减少 - Solidot</title><link>https://www.solidot.org/story?sid=80556</link></item>
+<item><title>中国居民对 AI 的信任高于美国 - Solidot</title><link>https://www.solidot.org/story?sid=80555</link></item>
+<item><title>研究发现 AI 的新闻摘要会经常性的扭曲事实 - Solidot</title><link>https://www.solidot.org/story?sid=80554</link></item>
+<item><title>Google 和苹果恢复上架 TikTok - Solidot</title><link>https://www.solidot.org/story?sid=80553</link></item>
+<item><title>Google 计划用机器学习估计用户的年龄 - Solidot</title><link>https://www.solidot.org/story?sid=80552</link></item>
+<item><title>印度儿童的心算能力不能转变学校里的数学分数 - Solidot</title><link>https://www.solidot.org/story?sid=80551</link></item>
+<item><title>百度宣布文心一言 4 月 1 日起免费 - Solidot</title><link>https://www.solidot.org/story?sid=80550</link></item>
+<item><title>States with abortion bans see more infant deaths - Medical Xpress</title><link>https://medicalxpress.com/news/2025-02-states-abortion-infant-deaths.html</link></item>
+<item><title>Study reveals opsin 3&amp;#39;s role in mouse appetite control - Medical Xpress</title><link>https://medicalxpress.com/news/2025-02-reveals-opsin-role-mouse-appetite.html</link></item>
+<item><title>Research shows sotagliflozin is the first medication of its kind to significantly reduce both heart attacks and strokes - Medical Xpress</title><link>https://medicalxpress.com/news/2025-02-sotagliflozin-medication-kind-significantly-heart.html</link></item>
+<item><title>New blood test could improve Alzheimer&amp;#39;s disease diagnosis, research finds - Medical Xpress</title><link>https://medicalxpress.com/news/2025-02-blood-alzheimer-disease-diagnosis.html</link></item>
+<item><title>Brain bleeds double later-life dementia risk, study finds - Medical Xpress</title><link>https://medicalxpress.com/news/2025-02-brain-life-dementia.html</link></item>
+<item><title>Study explains how antidepressants can protect against infections and sepsis - Medical Xpress</title><link>https://medicalxpress.com/news/2025-02-antidepressants-infections-sepsis.html</link></item>
+<item><title>A mitochondrial protein&amp;#39;s protective role offers new hope for Charcot-Marie-Tooth disease - Medical Xpress</title><link>https://medicalxpress.com/news/2025-02-mitochondrial-protein-role-charcot-marie.html</link></item>
+<item><title>Comprehensive CT scans may help identify atherosclerosis among lung cancer patients - Medical Xpress</title><link>https://medicalxpress.com/news/2025-02-comprehensive-ct-scans-atherosclerosis-lung.html</link></item>
+<item><title>Gene therapy for rare epilepsy shows promise in mice - Medical Xpress</title><link>https://medicalxpress.com/news/2025-02-gene-therapy-rare-epilepsy-mice.html</link></item>
+<item><title>Higher amounts of dietary fiber before the age of 2 may reduce later risk of celiac disease - Medical Xpress</title><link>https://medicalxpress.com/news/2025-02-higher-amounts-dietary-fiber-age.html</link></item>
+<item><title>Survey shows patients with diabetes who follow doctor&amp;#39;s advice more likely to undergo diabetic retinopathy examinations - Medical Xpress</title><link>https://medicalxpress.com/news/2025-02-survey-patients-diabetes-doctor-advice.html</link></item>
+<item><title>Leg muscle may serve as an early warning system for heart failure, study finds - Medical Xpress</title><link>https://medicalxpress.com/news/2025-02-leg-muscle-early-heart-failure.html</link></item>
+<item><title>Stressful childhood experiences can accelerate brain aging - Medical Xpress</title><link>https://medicalxpress.com/news/2025-02-stressful-childhood-brain-aging.html</link></item>
+<item><title>Analyzing new OSHA data sets would help prevent injuries - Medical Xpress</title><link>https://medicalxpress.com/news/2025-02-osha-injuries.html</link></item>
+<item><title>Analysis system enhances rapid pathogen detection with CRISPR technology - Medical Xpress</title><link>https://medicalxpress.com/news/2025-02-analysis-rapid-pathogen-crispr-technology.html</link></item>
+<item><title>Study identifies potential role of interferon signaling in progressive spinal disease - Medical Xpress</title><link>https://medicalxpress.com/news/2025-02-potential-role-interferon-spinal-disease.html</link></item>
+<item><title>Eye told you so: Why illusions are all in the eye of the beholder - Medical Xpress</title><link>https://medicalxpress.com/news/2025-02-eye-told-illusions.html</link></item>
+<item><title>Blood thinner side effects diminish over time, research suggests - Medical Xpress</title><link>https://medicalxpress.com/news/2025-02-blood-thinner-side-effects-diminish.html</link></item>
+<item><title>Scientists propose CDK2 enzyme as new target for cancer therapy - Medical Xpress</title><link>https://medicalxpress.com/news/2025-02-scientists-cdk2-enzyme-cancer-therapy.html</link></item>
+<item><title>Offspring of women with epilepsy may experience decreased bone metabolism - Medical Xpress</title><link>https://medicalxpress.com/news/2025-02-offspring-women-epilepsy-decreased-bone.html</link></item>
+<item><title>ADHD symptoms linked to onset of nicotine, tobacco use in youth - Medical Xpress</title><link>https://medicalxpress.com/news/2025-02-adhd-symptoms-linked-onset-nicotine.html</link></item>
+<item><title>Most adults don&amp;#39;t trust health care to use AI responsibly and without harm, survey finds - Medical Xpress</title><link>https://medicalxpress.com/news/2025-02-adults-dont-health-ai-responsibly.html</link></item>
+<item><title>&amp;#39;Gut-on-chip&amp;#39; can predict immunotherapy outcomes for melanoma patients - Medical Xpress</title><link>https://medicalxpress.com/news/2025-02-gut-chip-immunotherapy-outcomes-melanoma.html</link></item>
+<item><title>New gene switch activates with simple skin patch and could help treat diabetes - Medical Xpress</title><link>https://medicalxpress.com/news/2025-02-gene-simple-skin-patch-diabetes.html</link></item>
+<item><title>Too few women who pause breast cancer treatment during pregnancy resume therapy after delivery - Medical Xpress</title><link>https://medicalxpress.com/news/2025-02-women-breast-cancer-treatment-pregnancy.html</link></item>
+<item><title>New drug delivery method promises long-lasting glaucoma relief - Medical Xpress</title><link>https://medicalxpress.com/news/2025-02-drug-delivery-method-glaucoma-relief.html</link></item>
+<item><title>Is this the new 5:2 diet? Eating more plant-based meals could boost longevity - Medical Xpress</title><link>https://medicalxpress.com/news/2025-02-diet-based-meals-boost-longevity.html</link></item>
+<item><title>Study sets benchmark for treatment of advanced cervical cancer - Medical Xpress</title><link>https://medicalxpress.com/news/2025-02-benchmark-treatment-advanced-cervical-cancer.html</link></item>
+<item><title>Program designed by and for Aboriginal women sees 30% diabetes remission in participants - Medical Xpress</title><link>https://medicalxpress.com/news/2025-02-aboriginal-women-diabetes-remission.html</link></item>
+<item><title>Ultrasound imaging of breast cancer tumors offers noninvasive monitoring of treatment effectiveness - Medical Xpress</title><link>https://medicalxpress.com/news/2025-02-ultrasound-imaging-breast-cancer-tumors.html</link></item>
+<item><title>cloudflare.com - Fun Facts</title><link>https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_502&amp;utm_campaign=funfactz.com</link></item>
 </channel></rss>

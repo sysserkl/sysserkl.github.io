@@ -646,7 +646,9 @@ function search_klwebsites(keyword='',csnumber=999){
     var lineheight=(ismobile_b()?'1.3':'1.8');
 
     var result_t=array_klwebsites(keyword,csnumber);
-
+    //result_t 的 元素形如：[ "https://www.chatpdf.com/", 5, "AI" ] - 保留注释
+    return;
+    
     var ico_type=(is_old_firefox_b()?'old':(is_local_b()?'local':''));
     var count1=0;
     var count2=0;
@@ -1029,6 +1031,9 @@ function args_klwebsites(){
             } else if (item=='waterfall'){
                 waterfall_klwebsites();
                 break;
+            } else if (item=='oldnews'){
+                oldnews_klwebsites();
+                break;
             }
         }
     } else {
@@ -1038,4 +1043,19 @@ function args_klwebsites(){
 
 function refresh_page_klwebsites(cskey=''){
     search_klwebsites(cskey,(ismobile_b()?1:7));
+}
+
+function oldnews_klwebsites(){
+    var result_t=[];
+    var blstr=date2str_b();
+    while (true){
+        var blprev=previous_year_b(blstr,10);
+        if (blprev>='2000'){
+            result_t.push(blprev);
+            blstr=blprev;
+        } else { break; }
+    }
+    //    'https://news.sina.com.cn/head/news'+year20.strftime('%Y%m%d')+'pm.shtml',
+
+    console.log(result_t);
 }

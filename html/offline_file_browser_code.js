@@ -782,11 +782,26 @@ function diff_all_offline_file_browser(){
         disk_category_list_global.push([diskname1,list_t[blxl],diskname2,list_t[blxl+1]]);
         if (list_diff1.length==0 && list_diff2.length==0){continue;}
         
-        var str_t='<h2>'+diskname1+' '+list_t[blxl]+' 拥有但 '+diskname2+' '+list_t[blxl+1]+' 不存在</h2>\n<ol>\n<li>'+list_diff1.join('</li>\n<li>')+'</li>\n</ol>\n';
-        str_t=str_t+'<h2>'+diskname2+' '+list_t[blxl+1]+' 拥有但 '+diskname1+' '+list_t[blxl]+' 不存在</h2>\n<ol>\n<li>'+list_diff2.join('</li>\n<li>')+'</li>\n</ol>\n';    
-
-        bljg.push(str_t);
+        var str_t='';
+        if (list_diff1.length>0){
+            str_t=str_t+'<h2>'+diskname1+' '+list_t[blxl]+' 拥有但 '+diskname2+' '+list_t[blxl+1]+' 不存在</h2>'+array_2_li_b(list_diff1);
+        }
+        if (list_diff2.length>0){
+            str_t=str_t+'<h2>'+diskname2+' '+list_t[blxl+1]+' 拥有但 '+diskname1+' '+list_t[blxl]+' 不存在</h2>'+array_2_li_b(list_diff2);    
+        }
+        if (str_t!==''){
+            bljg.push(str_t);
+        }
     }
+    
+    if (typeof ssd_tf_difference_disk_global !== 'undefined'){
+        for (let key in ssd_tf_difference_disk_global){
+            if (ssd_tf_difference_disk_global[key].size==0){continue;}
+            var str_t='<h2>'+key+' 拥有但 硬盘 不存在</h2>'+array_2_li_b(Array.from(ssd_tf_difference_disk_global[key]));
+            bljg.push(str_t);
+        }
+    }
+    
     var odiv=document.getElementById('div_statistics');
     odiv.innerHTML='<p>过滤：<input type="text" id="input_disk_category" onkeyup="if (event.key==\'Enter\'){disk_category_offline_file_browser();}" /></p><table id="table_disk_category" border=1></table>'+bljg.join('\n')+'<p>'+close_button_b('div_statistics','none')+'</p>\n';
     odiv.style.display='block';
@@ -1405,6 +1420,7 @@ function important_movies_offline_file_browser(do_ssd_tf=false){
         ssd_tf_size_global[key]={};
     }
     
+    var both_exist_set=new Set();
     for (let blxl=0,lent=offline_file_data_raw_global.length;blxl<lent;blxl++){
         var item=offline_file_data_raw_global[blxl];
         //-----------------------
@@ -1414,6 +1430,7 @@ function important_movies_offline_file_browser(do_ssd_tf=false){
                 if (ssd_tf_set[key].has(item[2])){  //文件名 - 保留注释
                     offline_file_data_raw_global[blxl][7]=key;
                     ssd_tf_size_global[key]['f_'+item[2]]=item[3];
+                    both_exist_set.add(item[2]);
                     blfound=true;
                     break;
                 }
@@ -1431,6 +1448,11 @@ function important_movies_offline_file_browser(do_ssd_tf=false){
     }
     important_movie_global=[];  //便于统计时统一计算length需要，important_movie_global 不能是 new Set() - 保留注释
     ssd_tf_file_list_merged_global=[];
+    
+    for (let key in ssd_tf_set){
+        ssd_tf_set[key]=array_difference_b(ssd_tf_set[key],both_exist_set,true);
+    }
+    ssd_tf_difference_disk_global=ssd_tf_set;
     
     for (let key in ssd_tf_size_global){
         var value_list=Object.values(ssd_tf_size_global[key]);

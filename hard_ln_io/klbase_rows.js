@@ -705,8 +705,9 @@ function strquick_klr_b(cstype='',csid='textarea_rows_content',status_id='textar
         case 'batchwww':
         case 'klwikititle':
         case 'collins':
-        case 'bing_collins_oxford_+_klsearch_en':                
-        case 'bing_oxford_klsearch_en':        
+        case 'bing_collins_oxford_+_klsearch_en':
+        case 'bing_oxford_+_klsearch_en':
+        case 'bing_oxford_klsearch_en':
         case 'oxford_klsearch_en':
         case 'cambridge':
             batch_open_www_klr_b(csid,ostatus,cstype);
@@ -803,15 +804,17 @@ function batch_open_www_klr_b(csid,ostatus,cstype=''){
             }
             break;
         case 'bing_collins_oxford_+_klsearch_en':
+        case 'bing_oxford_+_klsearch_en':
         case 'bing_oxford_klsearch_en':
         case 'oxford_klsearch_en':
             var bing_links=[];
             var collins_links=[];
             var klsearch_links=[];
             var cambridge_links=[];
+            
             for (let blno=0;blno<bllen;blno++){
                 var aword=list_t[blno];
-                list_t[blno]=[aword,open_link_en_b('o',aword,false)];   //klbase_eng.js - 保留注释
+                list_t[blno]=[aword,open_link_en_b('o',aword,false)];   //oxford, klbase_eng.js - 保留注释
                 
                 klsearch_links.push([aword,open_link_en_b('k',aword,false)]);
                 bing_links.push([aword,open_link_en_b('b',aword,false)]);
@@ -821,13 +824,17 @@ function batch_open_www_klr_b(csid,ostatus,cstype=''){
             
             list_t=list_t.concat(klsearch_links);
             
-            if (cstype=='bing_oxford_klsearch_en' || cstype=='bing_collins_oxford_+_klsearch_en'){
+            if (['bing_oxford_klsearch_en','bing_collins_oxford_+_klsearch_en','bing_oxford_+_klsearch_en'].includes(cstype)){
                 list_t=list_t.concat(bing_links);
             }
             
             if (cstype=='bing_collins_oxford_+_klsearch_en'){
                 list_t=list_t.concat(collins_links);
                 list_t=list_t.concat(cambridge_links);
+            }
+            
+            if (cstype=='bing_oxford_+_klsearch_en'){
+                list_t=list_t.concat(cambridge_links);            
             }
             
             list_t.sort();
