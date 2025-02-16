@@ -647,7 +647,7 @@ function search_klwebsites(keyword='',csnumber=999){
 
     var result_t=array_klwebsites(keyword,csnumber);
     //result_t 的 元素形如：[ "https://www.chatpdf.com/", 5, "AI" ] - 保留注释
-    return;
+    //return;
     
     var ico_type=(is_old_firefox_b()?'old':(is_local_b()?'local':''));
     var count1=0;
