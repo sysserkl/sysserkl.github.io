@@ -69,6 +69,7 @@ function menu_bigfile(){
     '<span class="span_menu" onclick="'+str_t+'clear_data_bigfile();">清空数据库</span>',
     '<span class="span_menu" onclick="'+str_t+'merge_files_bigfile();">合并导出当前文件内容</span>',
     '<span id="span_encode_bigfile" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 导出时加密</span>',    
+    '<span class="span_menu" onclick="'+str_t+'statistics_ext_bigfile();">当前条件文件扩展名统计</span>',
     ];
 
     var klmenu_config=root_font_size_menu_b(str_t);
@@ -372,6 +373,21 @@ function sort_bigfile(is_desc=false){
     }
     
     search_bigfile();
+}
+
+function statistics_ext_bigfile(){
+    var ext_dict={};
+    for (let item of current_data_bigfile_global){
+        var blext=file_path_name_b(item[0][1])[2];
+        if (ext_dict['f_'+blext]==undefined){
+            ext_dict['f_'+blext]=0;
+        }
+        ext_dict['f_'+blext]=ext_dict['f_'+blext]+1;
+    }
+    ext_dict=object2array_b(ext_dict,true,2);
+    ext_dict.sort();
+    ext_dict.sort(function (a,b){return a[1]>b[1]?-1:1;});
+    document.getElementById('divhtml').innerHTML=array_2_li_b(ext_dict);
 }
 
 function search_bigfile(cskey=false){

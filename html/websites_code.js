@@ -62,6 +62,7 @@ function menu_klwebsites(change_no=false){
     '<span class="span_menu" onclick="'+str_t+'search_klwebsites(\'^1,0,0$\');">Selenium EN</span>',
     '<span class="span_menu" onclick="'+str_t+'search_klwebsites(\'^0,0,1$\');">non Selenium</span>',
     '<span class="span_menu" onclick="'+str_t+'waterfall_klwebsites();">waterfall</span>',
+    '<span class="span_menu" onclick="'+str_t+'oldnews_klwebsites();">oldnews</span>',
     ];
     
     var tag_list=fav_and_tag_klwebsites(change_no);
@@ -454,6 +455,7 @@ function one_link_klwebsites(cshref,csxl,csnumber,is_selenium_site,ico_type){
         bljg=bljg+' style="background-color: '+scheme_global['button']+';"';
     }
     bljg=bljg+' onclick="recent_websites_b(this);">';
+    
     var sitename_t=sites_all_global[csxl][1];
 
     if (sites_all_global[csxl][3]<=1 && csnumber>1){
@@ -463,6 +465,7 @@ function one_link_klwebsites(cshref,csxl,csnumber,is_selenium_site,ico_type){
     } else {
         bljg=bljg+sitename_t;
     }
+    
     bljg=bljg+icon_websites_b(cshref,ico_type)+'</a>';
     if (sites_all_global[csxl][2].includes('登陆')){
         bljg=bljg+'🚪';
@@ -616,18 +619,46 @@ function demo_content_klwebsites(cskey=false,only_http=false){
     return demo_list;
 }
 
-function category_klwebsites(ospan){
+function category_select_klwebsites(ospan){
     var ocategory=ospan.parentNode.querySelector('span.span_category_websites');
     if (!ocategory){return;}
     search_klwebsites(ocategory.innerText);
 }
 
 function search_klwebsites(keyword='',csnumber=999){
-    function sub_search_klwebsites_count(cscount){
-        return ' <span class="span_box" style="color:'+scheme_global['memo']+';font-size:0.6rem;" onclick="category_klwebsites(this);"><i>('+cscount+')</i></span>';
+    var csresult=array_klwebsites(keyword,csnumber);
+    //csresult 的 元素形如：[ "https://www.chatpdf.com/", 5, "AI" ] - 保留注释
+    
+    var ico_type=(is_old_firefox_b()?'old':(is_local_b()?'local':''));
+    var count1=0;
+    var count2=0;
+    var count3=0;
+    var category_dict={};
+    
+    for (let href_list of csresult){
+        var item=sites_all_global[href_list[1]];
+        //sites_all_global 的元素为数组，形如：[["https://www.hanselman.com/blog/", "Scott Hanselman<small>(hanselman)</small>", ​"IT", ​20, ​"", ​[ 1, 0, 0 ] ] - 保留注释
+        
+        count1=count1+item[5][0];
+        count2=count2+item[5][1];
+        count3=count3+item[5][2];    
+        
+        var blkey='c_'+href_list[2];
+        if (category_dict[blkey]==undefined){
+            category_dict[blkey]=[[]];  //网址列表在一个 list 中 - 保留注释
+        }
+        var item=sites_all_global[href_list[1]];
+        category_dict[blkey][0].push(one_link_klwebsites(href_list[0],href_list[1],csnumber,(item[5][0]>0),ico_type));
+    }
+    result_2_html_klwebsites(category_dict,keyword,csnumber,count1,count2,count3);
+}
+
+function result_2_html_klwebsites(category_dict,keyword='',csnumber=999,count1=0,count2=0,count3=0){
+    function sub_result_2_html_klwebsites_count(cscount){
+        return ' <span class="span_box" style="color:'+scheme_global['memo']+';font-size:0.6rem;" onclick="category_select_klwebsites(this);"><i>('+cscount+')</i></span>';
     }
     
-    function sub_search_klwebsites_input_range(csnumber=1,keyword=''){
+    function sub_result_2_html_klwebsites_input_range(csnumber=1,keyword=''){
         var bljg = '';
         var list_t=[['',1,'M'],['',7,'S'],['',999,'A'],['FAV',999,'F']];
         for (let item of list_t){
@@ -643,45 +674,22 @@ function search_klwebsites(keyword='',csnumber=999){
         return bljg;
     }
     //-----------------------
-    var lineheight=(ismobile_b()?'1.3':'1.8');
-
-    var result_t=array_klwebsites(keyword,csnumber);
-    //result_t 的 元素形如：[ "https://www.chatpdf.com/", 5, "AI" ] - 保留注释
-    //return;
     
-    var ico_type=(is_old_firefox_b()?'old':(is_local_b()?'local':''));
-    var count1=0;
-    var count2=0;
-    var count3=0;
-    var select_str=[];
-    var category_dict={};
-    
-    for (let href_list of result_t){
-        var item=sites_all_global[href_list[1]];    
-        count1=count1+item[5][0];
-        count2=count2+item[5][1];
-        count3=count3+item[5][2];    
-        
-        var blkey='c_'+href_list[2];
-        if (category_dict[blkey]==undefined){
-            category_dict[blkey]=[[]];  //网址列表在一个 list 中 - 保留注释
-        }
-        var item=sites_all_global[href_list[1]];
-        category_dict[blkey][0].push(one_link_klwebsites(href_list[0],href_list[1],csnumber,(item[5][0]>0),ico_type));
-    }
-        
     category_dict=object2array_b(category_dict,true,2);
-    
+    //category_dict 的元素形如：[ "英语", [ "<a href=\"https://dictionaryblog.cambridge.org/\" target=_blank class=\"a_oblong_box\" style=\"background-color: #EBEBEB;\" onclick=\"recent_websites_b(this);\">Cambridge Dictionaries Online blog<img alt=\"\" src=\"../../../../data/website_ico/dictionaryblog.cambridge.org.ico\" style=\"max-width:1rem;max-height:1rem;border-radius:1rem;\" /></a> ", "<a href=\"https://www.merriam-webster.com/words-at-play\" target=_blank class=\"a_oblong_box\" style=\"background-color: #EBEBEB;\" onclick=\"recent_websites_b(this);\">Merriam-Webster<img alt=\"\" src=\"../../../../data/website_ico/www.merriam-webster.com.ico\" style=\"max-width:1rem;max-height:1rem;border-radius:1rem;\" /></a> " ] ] - 保留注释
+
+    var lineheight=(ismobile_b()?'1.3':'1.8');
+    var select_str=[];
     var tagname=(klmenu_check_b('span_category_with_p_web',false)?'p':'span');
     for (let blxl=0,lent=category_dict.length;blxl<lent;blxl++){
         select_str.push('<option value="sites_category_'+blxl+'">'+category_dict[blxl][0]+'</option>');        
-        category_dict[blxl]='<a name="sites_category_'+blxl+'"></a><'+tagname+' class="p_sites" style="font-size:0.88rem;line-height:'+lineheight+'rem;"><span class="span_category_websites" style="font-weight:bold;cursor:pointer;" title="批量打开" onclick="batch_open_klwebsites(this.parentNode);">'+category_dict[blxl][0]+'</span> '+category_dict[blxl][1].join('')+sub_search_klwebsites_count(category_dict[blxl][1].length)+'</'+tagname+'>';
+        category_dict[blxl]='<a name="sites_category_'+blxl+'"></a><'+tagname+' class="p_sites" style="font-size:0.88rem;line-height:'+lineheight+'rem;"><span class="span_category_websites" style="font-weight:bold;cursor:pointer;" title="批量打开" onclick="batch_open_klwebsites(this.parentNode);">'+category_dict[blxl][0]+'</span> '+category_dict[blxl][1].join('')+sub_result_2_html_klwebsites_count(category_dict[blxl][1].length)+'</'+tagname+'>';
     }
     
     //-----------------------
     select_str='<select style="width:5rem;height:2rem;margin-bottom:0.5rem;" onchange=\'document.location="#"+this.value;\'>'+select_str.join('\n')+'</select>';
     
-    var bljg='<hr /><p style="line-height:1.45rem;">'+select_str+' '+sub_search_klwebsites_input_range(csnumber,keyword)+'</p><div id="div_sub_content">'+recent_refresh_klwebsites(lineheight)+category_dict.join('\n')+random_klwebsites(lineheight)+day_klwebsites(lineheight)+'<p>&nbsp;</p></div>';
+    var bljg='<hr /><p style="line-height:1.45rem;">'+select_str+' '+sub_result_2_html_klwebsites_input_range(csnumber,keyword)+'</p><div id="div_sub_content">'+recent_refresh_klwebsites(lineheight)+category_dict.join('\n')+random_klwebsites(lineheight)+day_klwebsites(lineheight)+'<p>&nbsp;</p></div>';
 
     if (keyword=='http://'){
         bljg=bljg+http_klwebsites();
@@ -1046,16 +1054,22 @@ function refresh_page_klwebsites(cskey=''){
 }
 
 function oldnews_klwebsites(){
-    var result_t=[];
+    var result_t={'c_oldnews':[[]]};
     var blstr=date2str_b();
+    var ico_type=(is_old_firefox_b()?'old':(is_local_b()?'local':''));
+    
     while (true){
         var blprev=previous_year_b(blstr,10);
         if (blprev>='2000'){
-            result_t.push(blprev);
+            var blold=blprev.replace(/\-/g,'');
+            for (let item of ['am','pm']){
+                var blhref='https://news.sina.com.cn/head/news'+blold+item+'.shtml';
+                blhref='<a href="'+blhref+'" target=_blank class="a_oblong_box">'+blold+item+'</a> ';
+
+                result_t['c_oldnews'][0].push(blhref);
+            }
             blstr=blprev;
         } else { break; }
     }
-    //    'https://news.sina.com.cn/head/news'+year20.strftime('%Y%m%d')+'pm.shtml',
-
-    console.log(result_t);
+    result_2_html_klwebsites(result_t);
 }
