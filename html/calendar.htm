@@ -5,10 +5,11 @@
 <meta charset="UTF-8" />
 <script src="../hard_ln_io/klbase.js"></script>
 <script>
-klbase_addons_import_js_b(['css','date','history'],[],['history_pb_data.js'],['calendar_ico/calendar256.png']);
+klbase_addons_import_js_b(['css','date','history','flot'],[],['history_pb_data.js'],['calendar_ico/calendar256.png','calendar_code.js','../../../../data/history_kl_data.js'],true);
 </script>
-<script src="calendar_code.js"></script>
-<script src="../../../../data/history_kl_data.js"></script>
+<script>
+flot_import_js_b(['time','symbol']);
+</script>
 <script>
 //-----------------------
 //history

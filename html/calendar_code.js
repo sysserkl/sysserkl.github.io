@@ -221,31 +221,50 @@ function ldate_2_sdate_one_year_klcalendar(lunar_m,lunar_d,csisLeap,csyear){
 }
 
 function ldate_2_sdate_batch_klcalendar(){
+    function sub_ldate_2_sdate_batch_klcalendar_done(){
+        var flot_md_list=[];
+        var flot_week_list=[];
+        var week_cn_no={'一':1,'二':2,'三':3,'四':4,'五':5,'六':6,'日':7};
+
+        for (let blno=0,lent=result_t.length;blno<lent;blno++){
+            var blm=('00'+result_t[blno].sMonth).slice(-2,);
+            var bld=('00'+result_t[blno].sDay).slice(-2,);
+            var blw=result_t[blno].week;
+            
+            flot_md_list.push([result_t[blno].sYear,parseInt(blm+bld)]);   //flot_md_list 在 result_t 前，blm + bld 是字符串合并 - 保留注释
+            flot_week_list.push([result_t[blno].sYear,week_cn_no[blw]+90]);
+
+            result_t[blno]=result_t[blno].sYear+'-'+blm+'-'+bld+' '+blw;
+            
+            for (let akey of [blm,blm+bld,blw]){
+                if (dict_t[akey]==undefined){
+                    dict_t[akey]=0;
+                }
+                dict_t[akey]=dict_t[akey]+1;
+            }
+            md_set.add(blm+bld);
+            //+' '+result_t[blno].lYear+'-'+(result_t[blno].isLeap?'闰':'')+('00'+result_t[blno].lMonth).slice(-2)+'-'+('00'+result_t[blno].lDay).slice(-2,); //此行保留 - 保留注释
+        }
+        //result_t 元素为字符串，形如："2015-02-19 四" - 保留注释
+        
+        dict_t=object2array_b(dict_t,true);
+        dict_t.sort(function(a,b){return a[1]>b[1]?-1:1;});
+        md_set=Array.from(md_set);
+        md_set.sort();
+        if (md_set.length>0){
+            md_set=[md_set[0]].concat(md_set.slice(-1));
+        }
+        document.getElementById('div_memo').innerHTML='<div style="column-count:'+(ismobile_b()?3:6)+';"><h2>公历日期</h2>'+array_2_li_b(result_t)+'<h2>统计</h2>'+array_2_li_b(dict_t)+'<h2>日期范围</h2>'+md_set+'</div><div id="div_flot_calendar" style="width:100%; height:800px;"></div>';
+        
+        flot_md_list=['月日分布#points:true##show:false#'].concat(flot_md_list);
+        flot_week_list=['星期分布#points:true##show:false#'].concat(flot_week_list);
+
+        flot_lines_b([flot_md_list,flot_week_list],'div_flot_calendar','nw',false,'','m','',0);
+    }
+    
     function sub_ldate_2_sdate_batch_klcalendar_one(){
         if (blxl>=bllen){
-            for (let blno=0,lent=result_t.length;blno<lent;blno++){
-                var blm=('00'+result_t[blno].sMonth).slice(-2,);
-                var bld=('00'+result_t[blno].sDay).slice(-2,);
-                var blw=result_t[blno].week;
-                result_t[blno]=result_t[blno].sYear+'-'+blm+'-'+bld+' '+blw;
-                for (let akey of [blm,blm+bld,blw]){
-                    if (dict_t[akey]==undefined){
-                        dict_t[akey]=0;
-                    }
-                    dict_t[akey]=dict_t[akey]+1;
-                }
-                md_set.add(blm+bld);
-                //+' '+result_t[blno].lYear+'-'+(result_t[blno].isLeap?'闰':'')+('00'+result_t[blno].lMonth).slice(-2)+'-'+('00'+result_t[blno].lDay).slice(-2,); //此行保留 - 保留注释
-            }
-            
-            dict_t=object2array_b(dict_t,true);
-            dict_t.sort(function(a,b){return a[1]>b[1]?-1:1;});
-            md_set=Array.from(md_set);
-            md_set.sort();
-            if (md_set.length>0){
-                md_set=[md_set[0]].concat(md_set.slice(-1));
-            }
-            document.getElementById('div_memo').innerHTML='<div style="column-count:'+(ismobile_b()?3:6)+';"><h2>公历日期</h2>'+array_2_li_b(result_t)+'<h2>统计</h2>'+array_2_li_b(dict_t)+'<h2>日期范围</h2>'+md_set+'</div>';
+            sub_ldate_2_sdate_batch_klcalendar_done();
             return;
         }
         

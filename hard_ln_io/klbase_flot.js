@@ -184,16 +184,36 @@ function flot_lines_b(cslist,csid,label_position='nw',cstime=false,cstimeformat=
    //]; - 保留注释
    //其中的 元素 不是 [ "成都", [ [2012,300], [2014,400] ] ], 
    //cstype y:getFullYear m: getMonth; d: getDate; - 保留注释
-   
-   //以下5行保留注释
-    //for (let item of cslist){
-        //for (let acol of item){
-            //console.log(Array.isArray(acol),acol);
-        //}
-    //}
     
     if (cslist.length==0){return;}
-    if (cslist[0].length<2){return;}    //内容为空，或者只有名称 - 保留注释
+
+    var is_ok=true;
+    for (let arow of cslist){
+        if (typeof arow[0]!=='string'){
+            console.log('error','第一个元素不是字符串',arow);
+            is_ok=false;
+        }
+        
+        if (arow.length<2){ //内容为空，或者只有名称 - 保留注释
+            console.log('error','元素至少要2个',arow);
+            is_ok=false;
+        }
+        for (let blxl=1,lent=arow.length;blxl<lent;blxl++){
+            if (Array.isArray(arow[blxl])){
+                if (arow[blxl].length!==2){
+                    console.log('error','要求2个元素',arow,arow[blxl]);
+                    is_ok=false;
+                }
+            } else {
+                console.log('error','含有非数组元素',arow,arow[blxl]);
+                is_ok=false;
+            }
+        }
+    }
+    
+    if (is_ok){
+        console.log('检验无误');
+    }
 
     if (label_position==''){
         label_position='nw';
