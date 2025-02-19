@@ -8,168 +8,263 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Tue, 18 Feb 2025 09:51:02 +0800</lastBuildDate>
-<item><title>Willie Hobbs Moore: STEM Trailblazer - IEEE Spectrum</title><link>https://spectrum.ieee.org/willie-hobbs-moore-profile</link></item>
-<item><title>Video Friday: PARTNR - IEEE Spectrum</title><link>https://spectrum.ieee.org/video-friday-partnr</link></item>
-<item><title>Are You Ready to Let an AI Agent Use Your Computer? - IEEE Spectrum</title><link>https://spectrum.ieee.org/ai-agents-computer-use</link></item>
-<item><title>IEEE Unveils the 2025–2030 Strategic Plan - IEEE Spectrum</title><link>https://spectrum.ieee.org/ieee-2025-2030-strategic-plan</link></item>
-<item><title>Dual-Arm HyQReal Puts Powerful Telepresence Anywhere - IEEE Spectrum</title><link>https://spectrum.ieee.org/telepresence-robot</link></item>
-<item><title>Celebrating Steve Jobs’s Impact on Consumer Tech and Design - IEEE Spectrum</title><link>https://spectrum.ieee.org/steve-jobs</link></item>
-<item><title>Gyroscope-on-a-Chip Targets GPS’s Dominance - IEEE Spectrum</title><link>https://spectrum.ieee.org/optical-gyroscopes-on-chip</link></item>
-<item><title>It’s Time To Rethink 6G - IEEE Spectrum</title><link>https://spectrum.ieee.org/5g-bandwidth</link></item>
-<item><title>The Starting Line for Self-Driving Cars - IEEE Spectrum</title><link>https://spectrum.ieee.org/darpa-grand-challenge</link></item>
-<item><title>William Ratcliff, Former IEEE Region 3 Director, Dies at 80 - IEEE Spectrum</title><link>https://spectrum.ieee.org/in-memoriam-january-2025</link></item>
-<item><title>Video Friday: Aibo Foster Parents - IEEE Spectrum</title><link>https://spectrum.ieee.org/video-friday-aibo-foster-parents</link></item>
-<item><title>AIs and Robots Should Sound Robotic - IEEE Spectrum</title><link>https://spectrum.ieee.org/audio-deepfake-fix</link></item>
-<item><title>Sony Kills Recordable Blu-Ray And Other Vintage Media - IEEE Spectrum</title><link>https://spectrum.ieee.org/recordable-physical-media</link></item>
-<item><title>RF Safety Lab Ensures Wireless Gadgets Meet Safety Standards - IEEE Spectrum</title><link>https://spectrum.ieee.org/wireless-gadgets-safety-standards</link></item>
-<item><title>Build a Perfect Cryptographic Machine - IEEE Spectrum</title><link>https://spectrum.ieee.org/diy-one-time-pad-machine</link></item>
-<item><title>“Mr. Transistor’s” Most Challenging Moment - IEEE Spectrum</title><link>https://spectrum.ieee.org/transistor-history-2670915657</link></item>
-<item><title>Filter Technologies for Advanced Communication Systems - IEEE Spectrum</title><link>https://content.knowledgehub.wiley.com/filter-technologies-for-advanced-communication-systems</link></item>
-<item><title>The Transformer Transformer - IEEE Spectrum</title><link>https://spectrum.ieee.org/transformer-crisis</link></item>
-<item><title>Fincantieri, Edge nab $500M-plus maintenance deal for UAE Navy fleet - Defense News</title><link>https://www.defensenews.com/industry/2025/02/17/fincantieri-edge-nab-500m-plus-maintenance-deal-for-uae-navy-fleet/</link></item>
-<item><title>European leaders gather for an emergency meeting after Trump snub - Defense News</title><link>https://www.defensenews.com/global/europe/2025/02/17/european-leaders-gather-for-an-emergency-meeting-after-trump-snub/</link></item>
-<item><title>Estonia’s Milrem reveals first look at new war robot - Defense News</title><link>https://www.defensenews.com/industry/2025/02/17/estonias-milrem-reveals-first-look-at-new-war-robot/</link></item>
-<item><title>Russian arms makers make big showing at Arab defense fair - Defense News</title><link>https://www.defensenews.com/global/mideast-africa/2025/02/17/russian-arms-makers-make-big-showing-at-arab-defense-fair/</link></item>
-<item><title>AI Alone Won’t Drive Revenue – What Are You Missing? - IDC</title><link>https://blogs.idc.com/2025/02/14/ai-alone-wont-drive-revenue-what-are-you-missing/</link></item>
-<item><title>The EU Ecodesign Legislation: A Strategic Shift for Smartphone Manufacturers - IDC</title><link>https://blogs.idc.com/2025/02/12/the-eu-ecodesign-legislation-a-strategic-shift-for-smartphone-manufacturers/</link></item>
-<item><title>Empowering Future Manufacturing: AI and Operational Technologies for 2025 and Beyond - IDC</title><link>https://blogs.idc.com/2025/02/10/empowering-future-manufacturing-ai-and-operational-technologies-for-2025-and-beyond/</link></item>
-<item><title>Ten Trends That Shaped the Cloud Market in 2024 - IDC</title><link>https://blogs.idc.com/2025/02/05/ten-trends-that-shaped-the-cloud-market-in-2024/</link></item>
-<item><title>Rethinking RFPs: Transforming Procurement’s Greatest Pain Points with AI - IDC</title><link>https://blogs.idc.com/2025/02/03/rethinking-rfps-transforming-procurements-greatest-pain-points-with-ai/</link></item>
-<item><title>DeepSeek’s AI Innovation: A Shift in AI Model Efficiency and Cost Structure - IDC</title><link>https://blogs.idc.com/2025/01/31/deepseeks-ai-innovation-a-shift-in-ai-model-efficiency-and-cost-structure/</link></item>
-<item><title>Strategic Considerations for Japan Semiconductor Players - IDC</title><link>https://blogs.idc.com/2025/01/27/strategic-considerations-for-japan-semiconductor-players/</link></item>
-<item><title>The chatbots are getting more adult - Platformer</title><link>https://www.platformer.news/openai-model-spec-refusals-adult-content/</link></item>
-<item><title>America&amp;#39;s new AI safety plan is “let’s see what happens” - Platformer</title><link>https://www.platformer.news/paris-ai-action-summit-vance-safety/</link></item>
-<item><title>An overdue idea for making the internet safer just got the funding it needs - Platformer</title><link>https://www.platformer.news/roost-open-source-trust-safety/</link></item>
-<item><title>Google slings more AI at the web - Platformer</title><link>https://www.platformer.news/google-ai-mode-web-decline-design/</link></item>
-<item><title>Google is ready to work on AI weapons now - Platformer</title><link>https://www.platformer.news/google-ai-principles-military-safety/</link></item>
-<item><title>ChatGPT&amp;#39;s deep research might be the first good agent - Platformer</title><link>https://www.platformer.news/chatgpt-deep-research-hands-on/</link></item>
-<item><title>DeepSeek is also a design story - Platformer</title><link>https://www.platformer.news/deepseek-design-user-interface-chain-of-thought-ai/</link></item>
-<item><title>Four big reasons to worry about DeepSeek (and four reasons to calm down) - Platformer</title><link>https://www.platformer.news/deepseek-ai-explainer-china-worries/</link></item>
-<item><title>OpenAI launches its agent - Platformer</title><link>https://www.platformer.news/openai-operator-ai-agent-hands-on/</link></item>
-<item><title>TikTok comes back from the dead - Platformer</title><link>https://www.platformer.news/tiktok-restored-immortal-app/</link></item>
-<item><title>Mark blames Sheryl - Platformer</title><link>https://www.platformer.news/zuckerberg-blames-sheryl-sandberg-dei/</link></item>
-<item><title>Meta just flipped the switch that prevents misinformation from spreading in the United States - Platformer</title><link>https://www.platformer.news/meta-ends-misinformation-enforcement-zuckerberg/</link></item>
-<item><title>Meta goes mask-off - Platformer</title><link>https://www.platformer.news/meta-trump-pivot-messenger-themes-labor-zuckerberg-wishlist/</link></item>
-<item><title>Meta just killed its diversity, equity and inclusion program - Platformer</title><link>https://www.platformer.news/meta-kills-dei-program-diversity-inclusion/</link></item>
-<item><title>Inside Meta’s dehumanizing new speech policies for trans people - Platformer</title><link>https://www.platformer.news/meta-new-trans-guidelines-hate-speech/</link></item>
-<item><title>Victoria’s Secret &amp; Altuzarra Take On Ready-to-Wear - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/victorias-secret-altuzarra-collaboration/</link></item>
-<item><title>H&amp;M’s Limited Edition Spring Collection Oozes Elegance - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/hm-limited-edition-spring-2025-collection/</link></item>
-<item><title>Tory Brings Luxe Power Dressing to Hunger Magazine - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/editorial/tory-hunger-andrew-yee/</link></item>
-<item><title>Jade Thirlwall Wows in Fendi’s Mamma Baguette Revival - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/fendi-mamma-baguette-jade-thirlwell-ad/</link></item>
-<item><title>COS x Linda Farrow’s Sunglasses Are Retro Glam - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/cos-linda-farrow-sunglasses/</link></item>
-<item><title>Behati Prinsloo is Minimal Chic in Coccinelle Spring 2025 Ad - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/coccinelle-spring-2025-ad-behati-prinsloo/</link></item>
-<item><title>Issa Rae Luxuriates in Stuart Weitzman Spring 2025 Ad - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/stuart-weitzman-spring-2025-ad-issa-rae/</link></item>
-<item><title>Lila Moss Gets Cinematic in DKNY’s Spring 2025 Ad - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/dkny-spring-2025-ad-lila-moss/</link></item>
-<item><title>Tod’s Spring 2025 Campaign is a Mediterranean Escape - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/tods-spring-2025-campaign/</link></item>
-<item><title>Emily Ratajkowski Takes On Marc Jacobs’ Dual Bag - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/marc-jacobs-dual-bag-emily-ratajkowski-ad/</link></item>
-<item><title>Kate Winslet, Jodie Turner-Smith Lead Burberry’s Summer Ad - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/burberry-summer-2025-campaign/</link></item>
-<item><title>What to Wear Under a Graduation Gown: A Guide for Women - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/what-to-wear-under-a-graduation-gown/</link></item>
-<item><title>Top 12 Pretty Spring Nail Designs You’ll Love - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/spring-nail-designs/</link></item>
-<item><title>What to Wear to a Graduation: Outfits for Grads &amp; Guests - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/what-to-wear-to-a-graduation/</link></item>
-<item><title>Dior’s Spring 2025 Campaign is Enchanting - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/dior-spring-2025-campaign/</link></item>
-<item><title>Lauren Ralph Lauren Resort 2025 Has Pure Nautical Vibes - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/lauren-ralph-lauren-resort-2025-campaign/</link></item>
-<item><title>H&amp;M’s The White Lotus Collab is All About Vacation Style - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/hm-white-lotus-collaboration/</link></item>
-<item><title>Chase Will Soon Block Zelle Payments To Sellers on Social Media - Slashdot</title><link>https://tech.slashdot.org/story/25/02/17/2133224/chase-will-soon-block-zelle-payments-to-sellers-on-social-media?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>The &amp;#39;White Collar&amp;#39; Recession is Pummeling Office Workers - Slashdot</title><link>https://slashdot.org/story/25/02/17/1916201/the-white-collar-recession-is-pummeling-office-workers?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Reddit Mods Are Fighting To Keep AI Slop Off Subreddits - Slashdot</title><link>https://tech.slashdot.org/story/25/02/17/1733222/reddit-mods-are-fighting-to-keep-ai-slop-off-subreddits?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Hardware Mod Showcases an iPhone SE 3 in the Body of a Windows Phone - Slashdot</title><link>https://apple.slashdot.org/story/25/02/17/1720232/hardware-mod-showcases-an-iphone-se-3-in-the-body-of-a-windows-phone?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Nearly 10 Years After Data and Goliath, Bruce Schneier Says: Privacy&amp;#39;s Still Screwed - Slashdot</title><link>https://yro.slashdot.org/story/25/02/17/1557220/nearly-10-years-after-data-and-goliath-bruce-schneier-says-privacys-still-screwed?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Apple Weighs Adding Paid Business Listings To Maps App - Slashdot</title><link>https://apple.slashdot.org/story/25/02/17/1520242/apple-weighs-adding-paid-business-listings-to-maps-app?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>&amp;#39;New Junior Developers Can&amp;#39;t Actually Code&amp;#39; - Slashdot</title><link>https://developers.slashdot.org/story/25/02/17/1317210/new-junior-developers-cant-actually-code?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Will Amazon&amp;#39;s Return-to-Office Mandate Revitalize Downtown Seattle? - Slashdot</title><link>https://it.slashdot.org/story/25/02/17/0713230/will-amazons-return-to-office-mandate-revitalize-downtown-seattle?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>DeepSeek Removed from South Korea App Stores Pending Privacy Review - Slashdot</title><link>https://yro.slashdot.org/story/25/02/17/064219/deepseek-removed-from-south-korea-app-stores-pending-privacy-review?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>California Considers Taking Over Some Oil Refineries - Slashdot</title><link>https://tech.slashdot.org/story/25/02/17/0511251/california-considers-taking-over-some-oil-refineries?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Why A Maintainer of the Linux Graphics Driver Nouveau Stepped Down - Slashdot</title><link>https://tech.slashdot.org/story/25/02/17/0318229/why-a-maintainer-of-the-linux-graphics-driver-nouveau-stepped-down?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>697-Page Book Publishes a Poet&amp;#39;s 2,000 Amazon Reviews Posthumously - Slashdot</title><link>https://news.slashdot.org/story/25/02/17/016217/697-page-book-publishes-a-poets-2000-amazon-reviews-posthumously?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Are Technologies of Connection Tearing Us Apart? - Slashdot</title><link>https://tech.slashdot.org/story/25/02/16/2311215/are-technologies-of-connection-tearing-us-apart?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>After Launch by SpaceX in January, Firefly Aerospace&amp;#39;s Lunar Lander Reaches Moon Orbit - Slashdot</title><link>https://science.slashdot.org/story/25/02/16/2138259/after-launch-by-spacex-in-january-firefly-aerospaces-lunar-lander-reaches-moon-orbit?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Argentinian President Promotes Memecoin. It Then Crashed 95% as Insiders Cashed Out - Slashdot</title><link>https://news.slashdot.org/story/25/02/16/1921209/argentinian-president-promotes-memecoin-it-then-crashed-95-as-insiders-cashed-out?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>ChatGPT 允许生成成人级内容 - Solidot</title><link>https://www.solidot.org/story?sid=80570</link></item>
-<item><title>Google 允许广告商收集指纹识别数据 - Solidot</title><link>https://www.solidot.org/story?sid=80571</link></item>
-<item><title>百度宣布将开源其文心大模型4.5 - Solidot</title><link>https://www.solidot.org/story?sid=80572</link></item>
-<item><title>科学家首次观察到水的第四形态 - Solidot</title><link>https://www.solidot.org/story?sid=80573</link></item>
-<item><title>Jimmy Carter and Progressive Evangelicals - Law &amp; Liberty</title><link>https://lawliberty.org/jimmy-carter-and-progressive-evangelicals/</link></item>
-<item><title>Resolving the Antitrust Paradox - Law &amp; Liberty</title><link>https://lawliberty.org/resolving-the-antitrust-paradox/</link></item>
-<item><title>Even Linus Torvalds can have trouble with autocycle … autocracy… AUTOCOMPLETE! - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/18/linus_torvalds_autocomplete_mistake/</link></item>
-<item><title>The future of AI is ... analog? Upstart bags $100M to push GPU-like brains on less juice - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/17/encharge_ai_compute/</link></item>
-<item><title>Why did the Windows 95 setup use Windows 3.1? - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/17/windows_95_windows_three_point_one/</link></item>
-<item><title>NAND flash prices plunge amid supply glut, factory output cut - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/17/nand_flash_prices/</link></item>
-<item><title>There&amp;#39;s a slight chance Asteroid 2024 YR4 could hit Moon in 2032 - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/17/asteroid_2024_yr4_might_hit/</link></item>
-<item><title>XCSSET macOS malware returns with first new version since 2022 - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/17/macos_xcsset_malware_returns/</link></item>
-<item><title>UK court says Chinese operation must sell Scottish chip biz stake without delay - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/17/ftdi_stake_high_court/</link></item>
-<item><title>Loken: An easy interactive way to better looking websites - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/17/loken_css_synthesizer/</link></item>
-<item><title>Bank of England Oracle Cloud bill balloons – but when you print money, who&amp;#39;s counting? - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/17/bank_of_england_oracle/</link></item>
-<item><title>TechUK demands that Britain&amp;#39;s chip strategy is crisped up - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/17/techuk_semiconductor_strategy/</link></item>
-<item><title>Techie pointed out meetings are pointless, and was punished for it - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/17/who_me/</link></item>
-<item><title>Broadcom reportedly investigates acquiring Intel’s chip design biz - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/17/intel_acquisition_speculation/</link></item>
-<item><title>Backup software vendor Veeam deleted forum data after restoration SNAFU - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/17/veeam_forums_data_loss/</link></item>
-<item><title>Twin Google flaws allowed researcher to get from YouTube ID to Gmail address in a few easy steps - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/17/infosec_news_in_brief/</link></item>
-<item><title>Fujitsu worries US tariffs will see its clients slow digital spend - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/16/asia_tech_news_in_brief/</link></item>
-<item><title>This open text-to-speech model needs just seconds of audio to clone your voice - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/16/ai_voice_clone/</link></item>
-<item><title>The Doom-in-a-PDF dev is back – this time with Linux - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/16/dev_linux_pdf/</link></item>
-<item><title>Open source maintainers are really feeling the squeeze - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/16/open_source_maintainers_state_of_open/</link></item>
-<item><title>Trump Effect Shows No Slowdown - The White House</title><link>https://www.whitehouse.gov/articles/2025/02/trump-effect-shows-no-slowdown/</link></item>
-<item><title>President Donald J. Trump Approves Kentucky Emergency Declaration - The White House</title><link>https://www.whitehouse.gov/presidential-actions/2025/02/president-donald-j-trump-approves-kentucky-emergency-declaration/</link></item>
-<item><title>Presidential Message on the 2025 Daytona 500 - The White House</title><link>https://www.whitehouse.gov/briefings-statements/2025/02/presidential-message-on-the-2025-daytona-500/</link></item>
-<item><title>Interview of President Trump by Jamie Little, “Fox Sports” - The White House</title><link>https://www.whitehouse.gov/remarks/2025/02/interview-of-president-trump-by-jamie-little-fox-sports/</link></item>
-<item><title>Remarks by President Trump After Air Force One Arrival - The White House</title><link>https://www.whitehouse.gov/remarks/2025/02/remarks-by-president-trump-after-air-force-one-arrival/</link></item>
-<item><title>President Trump Announces Appointments to the White House Office of Legislative Affairs - The White House</title><link>https://www.whitehouse.gov/briefings-statements/2025/02/president-trump-announces-appointments-to-the-white-house-office-of-legislative-affairs/</link></item>
-<item><title>Presidential Message on Susan B. Anthony Day, 2025 - The White House</title><link>https://www.whitehouse.gov/briefings-statements/2025/02/presidential-message-on-susan-b-anthony-day-2025/</link></item>
-<item><title>Keeping Education Accessible and Ending Covid-19 Vaccine Mandates in Schools - The White House</title><link>https://www.whitehouse.gov/presidential-actions/2025/02/keeping-education-accessible-and-ending-covid-19-vaccine-mandates-in-schools/</link></item>
-<item><title>Fact Sheet: President Donald J. Trump Establishes the National Energy Dominance Council - The White House</title><link>https://www.whitehouse.gov/fact-sheets/2025/02/fact-sheet-president-donald-j-trump-establishes-the-national-energy-dominance-council/</link></item>
-<item><title>Fact Sheet: President Donald J. Trump Prohibits Federal Funding for COVID-19 Vaccine Mandates in Schools - The White House</title><link>https://www.whitehouse.gov/fact-sheets/2025/02/fact-sheet-president-donald-j-trump-prohibits-federal-funding-for-covid-19-vaccine-mandates-in-schools/</link></item>
-<item><title>Alleged &amp;#39;CEO Shooter&amp;#39; Luigi Mangione Raises $297K Online - Slashdot</title><link>https://yro.slashdot.org/story/25/02/16/0040252/alleged-ceo-shooter-luigi-mangione-raises-297k-online?sbsrc=md</link></item>
-<item><title>Ask Slashdot: What Would It Take For You to Trust an AI? - Slashdot</title><link>https://ask.slashdot.org/story/25/02/15/2047258/ask-slashdot-what-would-it-take-for-you-to-trust-an-ai?sbsrc=md</link></item>
-<item><title>Are Fast Programming Languages Gaining in Popularity? - Slashdot</title><link>https://developers.slashdot.org/story/25/02/16/0332258/are-fast-programming-languages-gaining-in-popularity?sbsrc=md</link></item>
-<item><title>Lawsuit Accuses Meta Of Training AI On Torrented 82TB Dataset Of Pirated Books - Slashdot</title><link>https://yro.slashdot.org/story/25/02/16/0346210/lawsuit-accuses-meta-of-training-ai-on-torrented-82tb-dataset-of-pirated-books?utm_source=rss0.9mainlinkanon&amp;utm_medium=feed&amp;sbsrc=yro</link></item>
-<item><title>PewDiePie Calls Out the &amp;#39;Old-School Media&amp;#39; For Spiteful Dishonesty - Slashdot</title><link>https://news.slashdot.org/story/17/02/17/0034219/pewdiepie-calls-out-the-old-school-media-for-spiteful-dishonesty?sbsrc=thisday</link></item>
-<item><title>A Warming Planet Can Mean More Snow - Slashdot</title><link>https://science.slashdot.org/story/10/02/16/2146227/a-warming-planet-can-mean-more-snow?sbsrc=thisday</link></item>
-<item><title>Draconian DRM Revealed In Windows 7 - Slashdot</title><link>https://tech.slashdot.org/story/09/02/16/2259257/draconian-drm-revealed-in-windows-7?sbsrc=thisday</link></item>
-<item><title>Grand Theft Auto Led Teen to Kill - Slashdot</title><link>https://yro.slashdot.org/story/05/02/17/1340222/grand-theft-auto-led-teen-to-kill?sbsrc=thisday</link></item>
-<item><title>Buying a Small, Light Linux Notebook Computer? - Slashdot</title><link>https://hardware.slashdot.org/story/03/02/17/0213201/buying-a-small-light-linux-notebook-computer?sbsrc=thisday</link></item>
-<item><title>STARTING LINEMy first memoir is now availableSource Code runs from my childhood through the early days of Microsoft. - Bill Gates</title><link>https://www.gatesnotes.com/home/home-page-topic/reader/my-first-memoir-source-code</link></item>
-<item><title>TERMINAL VELOCITYHow I wrote my first code using a TeletypeIt was ancient by today&amp;#39;s standards, but cool at the time. - Bill Gates</title><link>https://www.gatesnotes.com/home/home-page-topic/reader/teletype-model-33</link></item>
-<item><title>PROVING GROUNDThe space race inspired my first video game_I decided to try making my own version of Lunar Lander. - Bill Gates</title><link>https://www.gatesnotes.com/home/home-page-topic/reader/lunar-lander</link></item>
-<item><title>reading books - Bill Gates</title><link>https://www.gatesnotes.com/books</link></item>
-<item><title>All book reviews223 Articles - Bill Gates</title><link>https://www.gatesnotes.com/books/all-book%20reviews</link></item>
-<item><title>Education13 Articles - Bill Gates</title><link>https://www.gatesnotes.com/books/education</link></item>
-<item><title>History18 Articles - Bill Gates</title><link>https://www.gatesnotes.com/books/history</link></item>
-<item><title>Science54 Articles - Bill Gates</title><link>https://www.gatesnotes.com/books/science</link></item>
-<item><title>Society54 Articles - Bill Gates</title><link>https://www.gatesnotes.com/books/society</link></item>
-<item><title>Reading lists28 Articles - Bill Gates</title><link>https://www.gatesnotes.com/books/reading-lists</link></item>
-<item><title>Economics14 Articles - Bill Gates</title><link>https://www.gatesnotes.com/books/economics</link></item>
-<item><title>Fiction13 Articles - Bill Gates</title><link>https://www.gatesnotes.com/books/fiction</link></item>
-<item><title>People18 Articles - Bill Gates</title><link>https://www.gatesnotes.com/books/people</link></item>
-<item><title>Science fiction6 Articles - Bill Gates</title><link>https://www.gatesnotes.com/books/science-fiction</link></item>
-<item><title>Movies and TV12 Articles - Bill Gates</title><link>https://www.gatesnotes.com/books/movies-and%20tv</link></item>
-<item><title>Books I wrote6 Articles - Bill Gates</title><link>https://www.gatesnotes.com/books/books-i%20wrote</link></item>
-<item><title>Privacy policy - Bill Gates</title><link>https://www.gatesnotes.com/privacy-policy</link></item>
-<item><title>How AI Is Narrowing Our View of the World - HackerNoon</title><link>https://hackernoon.com/how-ai-is-narrowing-our-view-of-the-world?source=rss</link></item>
-<item><title>The Danger of AI-Generated Information - HackerNoon</title><link>https://hackernoon.com/the-danger-of-ai-generated-information?source=rss</link></item>
-<item><title>How AI Might Be Recycling—and Shrinking—Knowledge - HackerNoon</title><link>https://hackernoon.com/how-ai-might-be-recyclingand-shrinkingknowledge?source=rss</link></item>
-<item><title>Your AI Has a Favorite Opinion—And It’s Not Yours - HackerNoon</title><link>https://hackernoon.com/your-ai-has-a-favorite-opinionand-its-not-yours?source=rss</link></item>
-<item><title>When AI Rewrites the Internet, What Do We Lose? - HackerNoon</title><link>https://hackernoon.com/when-ai-rewrites-the-internet-what-do-we-lose?source=rss</link></item>
-<item><title>How AI and Social Media Shape Knowledge Through Echo Chambers and Filter Bubbles - HackerNoon</title><link>https://hackernoon.com/how-ai-and-social-media-shape-knowledge-through-echo-chambers-and-filter-bubbles?source=rss</link></item>
-<item><title>AI Knows Best—But Only If You Agree With It - HackerNoon</title><link>https://hackernoon.com/ai-knows-bestbut-only-if-you-agree-with-it?source=rss</link></item>
-<item><title>Avarik Labs Launches Red Covenant, a Strategic Mobile RPG With Blockchain Integration - HackerNoon</title><link>https://hackernoon.com/avarik-labs-launches-red-covenant-a-strategic-mobile-rpg-with-blockchain-integration?source=rss</link></item>
-<item><title>Colend Roadmap For 2025: New Features, Subscription Model And The First Crypto Credit Card - HackerNoon</title><link>https://hackernoon.com/colend-roadmap-for-2025-new-features-subscription-model-and-the-first-crypto-credit-card?source=rss</link></item>
-<item><title>From Axie Infinity To Taitiko: The Blockchain Game Poised To Lead The Next Bull Run - HackerNoon</title><link>https://hackernoon.com/from-axie-infinity-to-taitiko-the-blockchain-game-poised-to-lead-the-next-bull-run?source=rss</link></item>
-<item><title>The HackerNoon Newsletter: Heres How to Spot a Fake Crypto Trading Platform (2/17/2025) - HackerNoon</title><link>https://hackernoon.com/2-17-2025-newsletter?source=rss</link></item>
-<item><title>How to Build a Scalable Data Mesh in AWS with Lake Formation - HackerNoon</title><link>https://hackernoon.com/how-to-build-a-scalable-data-mesh-in-aws-with-lake-formation?source=rss</link></item>
-<item><title>SoluAI: Decentralized AI Computing On Blockchain Powered By GPU Networks - HackerNoon</title><link>https://hackernoon.com/soluai-decentralized-ai-computing-on-blockchain-powered-by-gpu-networks?source=rss</link></item>
-<item><title>MemeCore Announces “MemeX Festival: Be Yourself, Be Memorable” To Bridge Web2 And Web3 Communities - HackerNoon</title><link>https://hackernoon.com/memecore-announces-memex-festival-be-yourself-be-memorable-to-bridge-web2-and-web3-communities?source=rss</link></item>
-<item><title>The Greatest Cult In History Is Your Money (And Bitcoin Knows It) - HackerNoon</title><link>https://hackernoon.com/the-greatest-cult-in-history-is-your-money-and-bitcoin-knows-it?source=rss</link></item>
-<item><title>Build (And Then Crack) Your First Message Encryption Protocol With This Guide - HackerNoon</title><link>https://hackernoon.com/build-and-then-crack-your-first-message-encryption-protocol-with-this-guide?source=rss</link></item>
-<item><title>This New Protocol Promises to Give Back Control Over Your Data, But Is It Up To The Challenge? - HackerNoon</title><link>https://hackernoon.com/this-new-protocol-promises-to-give-back-control-over-your-data-but-is-it-up-to-the-challenge?source=rss</link></item>
-<item><title>I Asked ChatGPT What The Future of Labor Market Holds—Here&amp;#39;s What It Said - HackerNoon</title><link>https://hackernoon.com/i-asked-chatgpt-what-the-future-of-labor-market-holdsheres-what-it-said?source=rss</link></item>
-<item><title>Mistral’s New AI Assistant Sends Shockwaves With 10x the Speed of Chatgpt - HackerNoon</title><link>https://hackernoon.com/mistrals-new-ai-assistant-sends-shockwaves-with-10x-the-speed-of-chatgpt?source=rss</link></item>
-<item><title>Here&amp;#39;s Everything We Learned From the React Native Summit - HackerNoon</title><link>https://hackernoon.com/heres-everything-we-learned-from-the-react-native-summit?source=rss</link></item>
-<item><title>图书馆藏书印尺寸测量举例 - 书格</title><link>https://www.shuge.org/meet/topic/165334/#post-167375</link></item>
-<item><title>求《神峰张先生通考命理正宗辟谬大全》古籍版本 - 书格</title><link>https://www.shuge.org/meet/topic/92982/page/2/#post-167373</link></item>
-<item><title>清嘉庆张敦仁刻本《盐铁论》 - 书格</title><link>https://www.shuge.org/meet/topic/163890/#post-167358</link></item>
-<item><title>医书分享《东垣十书》24小时 - 书格</title><link>https://www.shuge.org/meet/topic/167322/#post-167356</link></item>
-<item><title>求《千金翼方》明朝刻版 - 书格</title><link>https://www.shuge.org/meet/topic/167331/</link></item>
-<item><title>请问，日本国会图书馆的OCR文本，能否抓取？ - 书格</title><link>https://www.shuge.org/meet/topic/167328/</link></item>
-<item><title>求《中国木刻艺术与绘画艺术》，法国传教士方殿华（Louis Gaillard），1889年所著，出版于南京。 - 书格</title><link>https://www.shuge.org/meet/topic/167321/</link></item>
+<lastBuildDate>Wed, 19 Feb 2025 11:55:30 +0800</lastBuildDate>
+<item><title>DDR4 And DDR4 Memories Are About To Get Discontinued As Major Players Likely To Stop Their Production This Year - Wccftech</title><link>https://wccftech.com/ddr4-and-ddr4-memories-are-about-to-get-discontinued-due-to-lower-demand/</link></item>
+<item><title>Relic Announces Turn-Based Strategy Game ‘Earth vs Mars’ - Wccftech</title><link>https://wccftech.com/relic-announces-turn-based-strategy-game-earth-vs-mars/</link></item>
+<item><title>AMD’s “X3D” Mobile Chips Are Very Much A Possibility, As Strix Halo APUs Now Come Equipped With Dedicated 3D V-Cache TSVs - Wccftech</title><link>https://wccftech.com/amd-x3d-mobile-chips-are-very-much-a-possibility/</link></item>
+<item><title>Helsing Claims Its HX-2 AI Drones “Would Deter A Land Invasion Of Europe Once And For All” - Wccftech</title><link>https://wccftech.com/helsing-claims-its-hx-2-ai-drones-would-deter-a-land-invasion-of-europe-once-and-for-all/</link></item>
+<item><title>The LG C3 65-Inch 4K OLED Smart TV Once Again Goes Down To Its ‘Holiday Sale’ Price With A Crazy $303 Off On Amazon, Experience An Immersion Like No Other At A 20 Percent Discount - Wccftech</title><link>https://wccftech.com/lg-c3-65-inch-4k-oled-smart-tv-returns-to-its-attractive-303-off-on-amazon/</link></item>
+<item><title>Fellowship Hands-on and Q&amp;A – A Game All About MMO-like Dungeons - Wccftech</title><link>https://wccftech.com/fellowship-hands-on-and-qa-a-game-all-about-mmo-like-dungeons/</link></item>
+<item><title>xAI Claims Grok 3 Is The “World’s Smartest AI,” Betting Markets Agree, But Experts Remain Split - Wccftech</title><link>https://wccftech.com/xai-claims-grok-3-is-the-worlds-smartest-ai-betting-markets-agree-but-experts-remain-split/</link></item>
+<item><title>Nintendo Switch 2 Likely to Be Priced at $399 to Reflect Hardware Advancements Without Alienating Core Audience, Analyst Suggests - Wccftech</title><link>https://wccftech.com/nintendo-switch-2-price-399/</link></item>
+<item><title>Acer Becomes The First Manufacturer To Announce 10% Price Increase On Consumer Products Amid Trump Tariffs; ASUS, HP &amp; Dell To Likely Follow - Wccftech</title><link>https://wccftech.com/acer-becomes-the-first-manufacturer-to-announce-10-price-increase-amid-trump-tariffs/</link></item>
+<item><title>Like a Dragon: Pirate Yakuza in Hawaii Review – Did SEGA Already Drop the Gaiden Series? - Wccftech</title><link>https://wccftech.com/review/like-a-dragon-pirate-yakuza-in-hawaii-did-sega-already-drop-the-gaiden-series/</link></item>
+<item><title>Samsung’s 49-Inch Odyssey G95C Curved Gaming Monitor Offers Massive Screen Real Estate, With A 240Hz Refresh Rate And A 1ms Response Time, All At $230 Off On Amazon - Wccftech</title><link>https://wccftech.com/samsung-odyssey-g95c-49-inch-curved-gaming-monitor-is-230-off-on-amazon/</link></item>
+<item><title>Geekom A6 “AMD Ryzen 7 6800H” Mini PC Review – Fast &amp; Compact For Under $500 - Wccftech</title><link>https://wccftech.com/review/geekom-a6-amd-ryzen-7-6800h-mini-pc-review-fast-compact-for-under-500/</link></item>
+<item><title>KARMA: The Dark World to Launch Next Month on PS5 and PC, Will Support PS5 Pro - Wccftech</title><link>https://wccftech.com/karma-the-dark-world-to-launch-next-month-on-ps5-and-pc-will-support-ps5-pro/</link></item>
+<item><title>NVIDIA GeForce RTX 5080 Vs RTX 4080 Super: Newer But Is It Better? - Wccftech</title><link>https://wccftech.com/geforce-rtx-5080-vs-rtx-4080-super/</link></item>
+<item><title>Unreal Engine 5 Shader Compilation Systems Designed to Prevent Stuttering Reportedly Don’t Function Properly Without Additional Work - Wccftech</title><link>https://wccftech.com/unreal-engine-5-shader-compilation-systems-prevent-stuttering-not-work-properly/</link></item>
+<item><title>Bernstein Wants Broadcom To “Stay Away” From Intel’s Fabs, While Cantor Fitzgerald Thinks That A Split Of DesignCo/IFS Is A “Done Deal” - Wccftech</title><link>https://wccftech.com/bernstein-wants-broadcom-to-stay-away-from-intels-fabs-while-cantor-fitzgerald-thinks-that-a-split-of-designco-ifs-is-a-done-deal/</link></item>
+<item><title>Elden Ring Nightreign Hands-On Preview – Looking Forward to the Night - Wccftech</title><link>https://wccftech.com/elden-ring-nightreign-hands-on-preview-looking-forward-to-the-night/</link></item>
+<item><title>Huawei’s Tri-Fold Smartphone, The Mate XT, Breaks Ground Outside Of China For The First Time; Jaw-Dropping Price Tag Is Only Targeted To The Most Affluent - Wccftech</title><link>https://wccftech.com/huawei-mate-xt-first-tri-fold-smartphone-launches-internationally/</link></item>
+<item><title>Galaxy S25 Users Face Another Technical Issue, Now Reporting Slow and Inconsistent Charging - Wccftech</title><link>https://wccftech.com/galaxy-s25-users-face-another-technical-issue-now-reporting-slow-and-inconsistent-charging/</link></item>
+<item><title>Apple Rumored To Treat The iPhone 17 And iPhone 17 Air To The Higher-End M14 OLED Panel, The Same One Used In The Current-Generation ‘Pro’ Models - Wccftech</title><link>https://wccftech.com/apple-to-use-high-end-m14-oled-in-the-iphone-17-and-iphone-17-air/</link></item>
+<item><title>How to Schedule a Recurring Zoom Meeting for Effortless Management - Make Tech Easier</title><link>https://www.maketecheasier.com/schedule-recurring-zoom-meetings/</link></item>
+<item><title>How to Set Up Your Own Offline AI Chatbot - Make Tech Easier</title><link>https://www.maketecheasier.com/set-up-offline-ai-chatbot/</link></item>
+<item><title>Is Network-wide Ad-blocking Better Than Browser Adblock Extensions? - Make Tech Easier</title><link>https://www.maketecheasier.com/network-wide-adblocking-vs-browser-adblock-extensions/</link></item>
+<item><title>What Is a Homograph Attack And How To Protect Yourself - Make Tech Easier</title><link>https://www.maketecheasier.com/what-is-homograph-attack/</link></item>
+<item><title>Benefits of Switching From a Physical SIM to an eSIM - Make Tech Easier</title><link>https://www.maketecheasier.com/benefits-of-switching-to-esim/</link></item>
+<item><title>7 Ways to Ensure PC Webcam Privacy and No Spying - Make Tech Easier</title><link>https://www.maketecheasier.com/webcam-spying-privacy/</link></item>
+<item><title>This Is Where WhatsApp Files Are Saved on Your Desktop - Make Tech Easier</title><link>https://www.maketecheasier.com/whatsapp-desktop-files-location/</link></item>
+<item><title>5 Ways to Get Speech Output From Your Linux Terminal - Make Tech Easier</title><link>https://www.maketecheasier.com/get-speech-output-from-linux-terminal/</link></item>
+<item><title>Paid Subreddits Coming Soon. Will You Pay? - Make Tech Easier</title><link>https://www.maketecheasier.com/paid-subreddits-coming-soon/</link></item>
+<item><title>Relive Your Best Memories with an Arzopa D10 Digital Photo Frame - Make Tech Easier</title><link>https://www.maketecheasier.com/review/arzopa-d10-digital-photo-frame/</link></item>
+<item><title>Is the CZUR StarryHub the Ultimate All-in-One Business Projector? - Make Tech Easier</title><link>https://www.maketecheasier.com/review/czur-starryhub-projector/</link></item>
+<item><title>Cevaton Screen Extender Makes Adding a Second Laptop Screen Easier Than Ever - Make Tech Easier</title><link>https://www.maketecheasier.com/review/cevaton-laptop-screen-extender-p5/</link></item>
+<item><title>Organize Your Desktop with a VOLTME Revo 240W Charging Station - Make Tech Easier</title><link>https://www.maketecheasier.com/review/voltme-revo-240w-charging-station/</link></item>
+<item><title>Get Quality and Mobility with an Obsbot Meet 2 4K AI Webcam - Make Tech Easier</title><link>https://www.maketecheasier.com/review/osbot-meet-2-webcam/</link></item>
+<item><title>The Duex Float Monitor Extender Is Perfect For Stacked Monitor Setup - Make Tech Easier</title><link>https://www.maketecheasier.com/review/duex-float-portable-stacked-monitor-extender/</link></item>
+<item><title>What Is a Hall Effect Joystick and How Does  It Eliminate Stick Drift? - Make Tech Easier</title><link>https://www.maketecheasier.com/what-is-hall-effect-joystick/</link></item>
+<item><title>Why I Left OneDrive for Google Drive (and You Should Too) - Make Tech Easier</title><link>https://www.maketecheasier.com/onedrive-vs-google-drive/</link></item>
+<item><title>Top Linux Networking Commands and Troubleshooting Tips - Make Tech Easier</title><link>https://www.maketecheasier.com/top-linux-networking-commands-and-troubleshooting-tips/</link></item>
+<item><title>Anees Asghar - Make Tech Easier</title><link>https://www.maketecheasier.com/author/aneesasghar/</link></item>
+<item><title>Project Waterworth Aims to Boost Global Connectivity - Make Tech Easier</title><link>https://www.maketecheasier.com/project-waterworth-aims-better-connect-world/</link></item>
+<item><title>Henderson Jayden Harper - Make Tech Easier</title><link>https://www.maketecheasier.com/author/hendersonharper/</link></item>
+<item><title>Android 16 Brings a Better Camera and Photos - Make Tech Easier</title><link>https://www.maketecheasier.com/android-16-brings-better-camera-photos/</link></item>
+<item><title>8 of the Best Invitation Apps for Stylish Invites to Any Event - Make Tech Easier</title><link>https://www.maketecheasier.com/best-invitation-apps/</link></item>
+<item><title>Quick and Easy Ways to Add the Motion Blur Effect to Photos - Make Tech Easier</title><link>https://www.maketecheasier.com/add-motion-blur-effect-to-photos/</link></item>
+<item><title>Android Phones Finally Get Apple TV Plus - Make Tech Easier</title><link>https://www.maketecheasier.com/android-phones-finally-get-apple-tv-plus/</link></item>
+<item><title>Use Quick Assist for Remote Troubleshooting on Your Windows PC - Make Tech Easier</title><link>https://www.maketecheasier.com/remotely-troubleshoot-windows10/</link></item>
+<item><title>YouTube’s Made for the Big Screen - Make Tech Easier</title><link>https://www.maketecheasier.com/youtubes-made-big-screen/</link></item>
+<item><title>Knock 41% Off a Fast Samsung 870 EVO 2TB SSD - Make Tech Easier</title><link>https://www.maketecheasier.com/deal/samsung-870-evo-2tb-ssd/</link></item>
+<item><title>Save $645 on the Samsung Galaxy Book4 Pro Laptop - Make Tech Easier</title><link>https://www.maketecheasier.com/deal/samsung-galaxy-book4-pro-laptop/</link></item>
+<item><title>Grab the ASUS ROG Swift Gaming Monitor for Under $1,000 - Make Tech Easier</title><link>https://www.maketecheasier.com/deal/asus-rog-swift-gaming-monitor/</link></item>
+<item><title>Slash $250 Off a Dell Inspiron 16 Plus and Be Rewarded with Strong Performance - Make Tech Easier</title><link>https://www.maketecheasier.com/deal/dell-inspiron-16-plus/</link></item>
+<item><title>Stay Fit With the Samsung Galaxy Watch FE and Save 20% - Make Tech Easier</title><link>https://www.maketecheasier.com/deal/samsung-galaxy-watch-fe/</link></item>
+<item><title>Act Now to Get the Soundcore Boom 2 Outdoor Speaker for Under $100 - Make Tech Easier</title><link>https://www.maketecheasier.com/deal/soundcore-boom-2-outdoor-speaker-for-under-100/</link></item>
+<item><title>11 Best OTC Cold Medicines: Liquids, Tablets, Sprays, and More - Everyday Health</title><link>https://www.everydayhealth.com/lung-respiratory/best-otc-cold-medicine/</link></item>
+<item><title>13 Natural Dry-Skin Remedies You Can DIY at Home - Everyday Health</title><link>https://www.everydayhealth.com/skin-and-beauty/natural-skin-remedies.aspx</link></item>
+<item><title>The 8 Best Winter Fruits to Help Keep You Healthy - Everyday Health</title><link>https://www.everydayhealth.com/diet-nutrition/best-winter-fruits-to-help-keep-you-healthy/</link></item>
+<item><title>5 Reasons Taking a Bath Is Good for You - Everyday Health</title><link>https://www.everydayhealth.com/healthy-living/health-benefits-of-taking-a-bath/</link></item>
+<item><title>What Is Fried Rice Syndrome? - Everyday Health</title><link>https://www.everydayhealth.com/diet-nutrition/fried-rice-syndrome/</link></item>
+<item><title>Does Diabetes Make You Sweat? - Everyday Health</title><link>https://www.everydayhealth.com/diabetes/does-diabetes-make-you-sweat/</link></item>
+<item><title>7 Common Types of Sleep Disorders - Everyday Health</title><link>https://www.everydayhealth.com/sleep/scary-sleep-disorders.aspx</link></item>
+<item><title>Tudor Black Bay Chrono ‘Flamingo Blue - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/fashion-design/tudor-black-bay-chrono-flamingo-blue/</link></item>
+<item><title>All-in-One Flashlight and Power Solution Loop Gear SK05 Pro - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/industrial-design/all-in-one-flashlight-and-power-solution-loop-gear-sk05-pro/</link></item>
+<item><title>Lamborghini Revuelto Transformed by Mansory - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/automotive-design/lamborghini-revuelto-transformed-by-mansory/</link></item>
+<item><title>Poltrona Frau Unveils Limited Edition Dezza Armchair by Gio Ponti - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/interior-design/poltrona-frau-unveils-limited-edition-dezza-armchair-by-gio-ponti/</link></item>
+<item><title>Jessica Karter - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/author/jessica-karter/</link></item>
+<item><title>2025 Ducati XDiavel V4 Motorcycle - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/automotive-design/2025-ducati-xdiavel-v4-motorcycle/</link></item>
+<item><title>2025 Mercedes-AMG SL 63 MANUFAKTUR Golden Coast Convertible - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/automotive-design/2025-mercedes-amg-sl-63-manufaktur-golden-coast-convertible/</link></item>
+<item><title>Yalda Night House by Sara Pourasadian - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/urban-design/yalda-night-house-by-sara-pourasadian/</link></item>
+<item><title>Reinvention of an Icon with Bulgari and MB&amp;F - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/fashion-design/reinvention-of-an-icon-with-bulgari-and-mbf/</link></item>
+<item><title>Ichiban Godzilla Electric Motorcycle - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/automotive-design/ichiban-godzilla-electric-motorcycle/</link></item>
+<item><title>Novitec Ferrari 296 GTS N-Largo - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/automotive-design/novitec-ferrari-296-gts-n-largo/</link></item>
+<item><title>CW Zon’s BMW K1600 GTL Café Racer - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/automotive-design/cw-zons-bmw-k1600-gtl-cafe-racer/</link></item>
+<item><title>Porsche Design Chronograph 1 F.A.T. 2025 Watch - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/fashion-design/porsche-design-chronograph-1-f-a-t-2025-watch/</link></item>
+<item><title>Porsche 911 Carrera Inspired Electric Café Racer Concept - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/automotive-design/porsche-911-carrera-inspired-electric-cafe-racer-concept/</link></item>
+<item><title>Art of Turning Simple Sketches Into Functional Furniture - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/interior-design/art-of-turning-simple-sketches-into-functional-furniture/</link></item>
+<item><title>User:Claytonkshum5 - wikiHow</title><link>https://www.wikihow.com/index.php?title=User:Claytonkshum5&amp;diff=33160829&amp;oldid=0</link></item>
+<item><title>User:Claytonkshum5/profilebox aboutme - wikiHow</title><link>https://www.wikihow.com/index.php?title=User:Claytonkshum5/profilebox-aboutme&amp;diff=33160828&amp;oldid=0</link></item>
+<item><title>User:Claytonkshum5/profilebox occupation - wikiHow</title><link>https://www.wikihow.com/index.php?title=User:Claytonkshum5/profilebox-occupation&amp;diff=33160827&amp;oldid=0</link></item>
+<item><title>User:Claytonkshum5/profilebox live - wikiHow</title><link>https://www.wikihow.com/index.php?title=User:Claytonkshum5/profilebox-live&amp;diff=33160826&amp;oldid=0</link></item>
+<item><title>Identify Different Types of Quadrilaterals - wikiHow</title><link>https://www.wikihow.com/index.php?title=Identify-Different-Types-of-Quadrilaterals&amp;diff=33160825&amp;oldid=33129529</link></item>
+<item><title>User_talk:Mymy13 - wikiHow</title><link>https://www.wikihow.com/index.php?title=User_talk:Mymy13&amp;diff=33160824&amp;oldid=33160803</link></item>
+<item><title>User_talk:Xeverything11 - wikiHow</title><link>https://www.wikihow.com/index.php?title=User_talk:Xeverything11&amp;diff=33160822&amp;oldid=33160815</link></item>
+<item><title>Install Homebrew on Old Nintendo 3DS (11.17.0 50) - wikiHow</title><link>https://www.wikihow.com/index.php?title=Install-Homebrew-on-Old-Nintendo-3DS-(11.17.0-50)&amp;diff=33160821&amp;oldid=33092707</link></item>
+<item><title>Disable Group Messages from Randoms on WhatsApp - wikiHow</title><link>https://www.wikihow.com/index.php?title=Disable-Group-Messages-from-Randoms-on-WhatsApp&amp;diff=33160819&amp;oldid=33160809</link></item>
+<item><title>User:Felix James Silva - wikiHow</title><link>https://www.wikihow.com/User:Felix-James-Silva</link></item>
+<item><title>User:WikiLynxWhisperer326 - wikiHow</title><link>https://www.wikihow.com/User:WikiLynxWhisperer326</link></item>
+<item><title>Buy a Diary for Travelling - wikiHow</title><link>https://www.wikihow.com/index.php?title=Buy-a-Diary-for-Travelling&amp;diff=33160816&amp;oldid=33160813</link></item>
+<item><title>Install Homebrew on New Nintendo 3DS (11.17.0 50) - wikiHow</title><link>https://www.wikihow.com/index.php?title=Install-Homebrew-on-New-Nintendo-3DS-(11.17.0-50)&amp;diff=33160812&amp;oldid=33146989</link></item>
+<item><title>Hide a Tattoo - wikiHow</title><link>https://www.wikihow.com/index.php?title=Hide-a-Tattoo&amp;diff=33160811&amp;oldid=33128553</link></item>
+<item><title>User:Adelaideslement3432 - wikiHow</title><link>https://www.wikihow.com/index.php?title=User:Adelaideslement3432&amp;diff=33160807&amp;oldid=33160796</link></item>
+<item><title>User:Adelaideslement3432/profilebox aboutme - wikiHow</title><link>https://www.wikihow.com/index.php?title=User:Adelaideslement3432/profilebox-aboutme&amp;diff=33160806&amp;oldid=33152158</link></item>
+<item><title>Add a Consecutive Series of Numbers in Your Head - wikiHow</title><link>https://www.wikihow.com/index.php?title=Add-a-Consecutive-Series-of-Numbers-in-Your-Head&amp;diff=33160805&amp;oldid=33061427</link></item>
+<item><title>User_talk:Freyrr - wikiHow</title><link>https://www.wikihow.com/index.php?title=User_talk:Freyrr&amp;diff=33160801&amp;oldid=33160795</link></item>
+<item><title>Distinguish Between OCD and OCPD - wikiHow</title><link>https://www.wikihow.com/index.php?title=Distinguish-Between-OCD-and-OCPD&amp;diff=33160800&amp;oldid=33083192</link></item>
+<item><title>Take Care of Ducklings - wikiHow</title><link>https://www.wikihow.com/index.php?title=Take-Care-of-Ducklings&amp;diff=33160799&amp;oldid=32678028</link></item>
+<item><title>Calm Yourself Down in the Moment - wikiHow</title><link>https://www.wikihow.com/index.php?title=Calm-Yourself-Down-in-the-Moment&amp;diff=33160797&amp;oldid=28033071</link></item>
+<item><title>Get a Badonkadonk - wikiHow</title><link>https://www.wikihow.com/index.php?title=Get-a-Badonkadonk&amp;diff=33160793&amp;oldid=33160790</link></item>
+<item><title>Identify Traits of Avoidant Personality Disorder - wikiHow</title><link>https://www.wikihow.com/index.php?title=Identify-Traits-of-Avoidant-Personality-Disorder&amp;diff=33160791&amp;oldid=33114388</link></item>
+<item><title>Avoid the Urge of Hurting Someone That You Are Mad At - wikiHow</title><link>https://www.wikihow.com/index.php?title=Avoid-the-Urge-of-Hurting-Someone-That-You-Are-Mad-At&amp;diff=33160789&amp;oldid=19989696</link></item>
+<item><title>Does Facebook Notify Screenshots - wikiHow</title><link>https://www.wikihow.com/index.php?title=Does-Facebook-Notify-Screenshots&amp;diff=33160787&amp;oldid=32869259</link></item>
+<item><title>Keep Tobacco Moist in a Pouch - wikiHow</title><link>https://www.wikihow.com/index.php?title=Keep-Tobacco-Moist-in-a-Pouch&amp;diff=33160784&amp;oldid=32859368</link></item>
+<item><title>User:Mc_9956dacb3337 - wikiHow</title><link>https://www.wikihow.com/User:Mc_9956dacb3337</link></item>
+<item><title>Soft Autumn Color Palette - wikiHow</title><link>https://www.wikihow.com/index.php?title=Soft-Autumn-Color-Palette&amp;diff=33160782&amp;oldid=33160778</link></item>
+<item><title>User:Getassignment - wikiHow</title><link>https://www.wikihow.com/User:Getassignment</link></item>
+<item><title>Blessings for Newborns - wikiHow</title><link>https://www.wikihow.com/index.php?title=Blessings-for-Newborns&amp;diff=33160780&amp;oldid=33160761</link></item>
+<item><title>Video:Blessings for Newborns - wikiHow</title><link>https://www.wikihow.com/index.php?title=Video:Blessings-for-Newborns&amp;diff=33160779&amp;oldid=0</link></item>
+<item><title>Avoid Overreacting in Public - wikiHow</title><link>https://www.wikihow.com/index.php?title=Avoid-Overreacting-in-Public&amp;diff=33160777&amp;oldid=23746801</link></item>
+<item><title>User:DominiqueBilling - wikiHow</title><link>https://www.wikihow.com/User:DominiqueBilling</link></item>
+<item><title>Signs of Affection - wikiHow</title><link>https://www.wikihow.com/index.php?title=Signs-of-Affection&amp;diff=33160775&amp;oldid=33160772</link></item>
+<item><title>Accommodate a Muslim in a Non‐Muslim Household - wikiHow</title><link>https://www.wikihow.com/index.php?title=Accommodate-a-Muslim-in-a-Non%E2%80%90Muslim-Household&amp;diff=33160773&amp;oldid=25449414</link></item>
+<item><title>Hundreds of Artists Ask NEA to Stop Enforcing Trump’s Anti-DEI Mandates - Hyperallergic</title><link>https://hyperallergic.com/990677/hundreds-of-artists-ask-nea-to-stop-enforcing-trump-anti-dei-mandates/</link></item>
+<item><title>Donna Ann McAdams’s Repository of Memory - Hyperallergic</title><link>https://hyperallergic.com/989868/black-box-donna-ann-mcadams-repository-of-memory/</link></item>
+<item><title>Pioneering Conceptual Artist Mel Bochner Dies at 84 - Hyperallergic</title><link>https://hyperallergic.com/990524/pioneering-conceptual-artist-mel-bochner-dies-at-84/</link></item>
+<item><title>Dawoud Bey Asks, Can Landscapes Hold Traumas? - Hyperallergic</title><link>https://hyperallergic.com/990588/dawoud-bey-asks-can-landscapes-hold-traumas/</link></item>
+<item><title>The Analog Charm of Pre-Internet Technological Art - Hyperallergic</title><link>https://hyperallergic.com/973334/the-analog-charm-of-pre-internet-technological-art-tate-modern/</link></item>
+<item><title>Tabitha Arnold’s Tapestries Eulogize the Working Class - Hyperallergic</title><link>https://hyperallergic.com/989739/tabitha-arnold-tapestries-eulogize-the-working-class/</link></item>
+<item><title>Trans Rights Groups Protest Scrubbed Stonewall Monument Website - Hyperallergic</title><link>https://hyperallergic.com/990547/trans-rights-groups-protest-scrubbed-stonewall-monument-website/</link></item>
+<item><title>Conru Art Foundation Launches $100,000 Seattle Prize Masters Fellowship - Hyperallergic</title><link>https://hyperallergic.com/989936/conru-art-foundation-launches-seattle-prize-masters-fellowship/</link></item>
+<item><title>Hyperallergic Mini Art Crossword: February 2025 - Hyperallergic</title><link>https://hyperallergic.com/990079/hyperallergic-mini-art-crossword-february-2025/</link></item>
+<item><title>Five NYC Art Shows to See This Week - Hyperallergic</title><link>https://hyperallergic.com/990133/five-nyc-art-shows-to-see-this-week-february-17-2025/</link></item>
+<item><title>A Garden of Ideas in John Berger’s Letters to His Son - Hyperallergic</title><link>https://hyperallergic.com/988748/a-garden-of-ideas-in-john-berger-letters-to-his-son/</link></item>
+<item><title>Finding Flaco Lovingly Details Owl’s Year of Freedom - Hyperallergic</title><link>https://hyperallergic.com/985968/finding-flaco-lovingly-details-new-york-owl-year-of-freedom/</link></item>
+<item><title>Luis Barragán’s Pink Equestrian Estate to Become a Public Arts Hub - Hyperallergic</title><link>https://hyperallergic.com/987258/luis-barragan-pink-equestrian-estate-to-become-a-public-arts-hub/</link></item>
+<item><title>Qatar to Build National Pavilion in the Venice Biennale’s Giardini - Hyperallergic</title><link>https://hyperallergic.com/989890/qatar-to-build-national-pavilion-in-the-venice-biennale-giardini/</link></item>
+<item><title>Immigrant Artists Receive $250,000 From the Vilcek Foundation - Hyperallergic</title><link>https://hyperallergic.com/989645/immigrant-artists-receive-250000-from-the-vilcek-foundation/</link></item>
+<item><title>Raoul De Keyser’s Dramas of Looking - Hyperallergic</title><link>https://hyperallergic.com/990178/raoul-de-keyser-dramas-of-looking-david-zwirner/</link></item>
+<item><title>The Artist Bending Modernism Toward Mysticism - Hyperallergic</title><link>https://hyperallergic.com/989711/marina-perez-simao-the-artist-bending-modernism-toward-mysticism/</link></item>
+<item><title>Roxanne Jackson’s Fantasia Under the Sea - Hyperallergic</title><link>https://hyperallergic.com/989709/roxanne-jackson-fantasia-under-the-sea/</link></item>
+<item><title>Philip Guston Mural Warning Against Fascism Restored in Mexico - Hyperallergic</title><link>https://hyperallergic.com/989583/philip-guston-mural-warning-against-fascism-restored-in-mexico/</link></item>
+<item><title>Australia’s Decision to Drop Its Venice Biennale Artist Ignites Uproar - Hyperallergic</title><link>https://hyperallergic.com/990056/australia-decision-to-drop-its-venice-biennale-artist-ignites-uproar/</link></item>
+<item><title>8 Art Books on Love to Read This Valentine’s Day - Hyperallergic</title><link>https://hyperallergic.com/989808/8-art-books-on-love-to-read-this-valentines-day/</link></item>
+<item><title>Why Do All My Hinge Options Look Like Guys From Old Paintings? - Hyperallergic</title><link>https://hyperallergic.com/989697/why-do-all-my-hinge-options-look-like-guys-from-old-paintings/</link></item>
+<item><title>Historical Maps to the Heart Help Chart Your Way to Love - Hyperallergic</title><link>https://hyperallergic.com/988763/historical-maps-to-the-heart-help-you-chart-your-way-to-love/</link></item>
+<item><title>Alexis Rockman Paints Humanity’s Final Season - Hyperallergic</title><link>https://hyperallergic.com/989895/alexis-rockman-paints-humanity-final-season-magenta-plains/</link></item>
+<item><title>Why Did Australia Abruptly Ditch Its Venice Biennale Artist and Curator? - Hyperallergic</title><link>https://hyperallergic.com/989811/why-did-australia-abruptly-ditch-its-venice-biennale-artist-and-curator/</link></item>
+<item><title>The Drag Queen Artist Who Helped Make the East Village Interesting - Hyperallergic</title><link>https://hyperallergic.com/989829/tabboo-the-drag-queen-artist-who-helped-make-the-east-village-interesting/</link></item>
+<item><title>Apply Now for IDSVA’s Non-Studio PhD in Visual Arts: Philosophy, Aesthetics, and Art Theory - Hyperallergic</title><link>https://hyperallergic.com/989334/apply-now-for-idsva-non-studio-phd-in-visual-arts/</link></item>
+<item><title>Jeffrey Gibson’s Venice Biennale Show Is Heading to LA - Hyperallergic</title><link>https://hyperallergic.com/989537/jeffrey-gibson-venice-biennale-show-is-heading-to-broad-los-angeles/</link></item>
+<item><title>Master Printmaker Krishna Reddy Never Stopped Learning - Hyperallergic</title><link>https://hyperallergic.com/989269/master-printmaker-krishna-reddy-never-stopped-learning/</link></item>
+<item><title>Stephanie H. Shih’s Time Capsules of the Heart - Hyperallergic</title><link>https://hyperallergic.com/989584/stephanie-h-shih-time-capsules-of-the-heart/</link></item>
+<item><title>The Opulent Beadwork of Black Masker Demond Melancon - Hyperallergic</title><link>https://hyperallergic.com/988445/the-opulent-beadwork-of-black-masker-demond-melancon/</link></item>
+<item><title>The Tumultuous Journey of Faith Ringgold’s Rikers Mural - Hyperallergic</title><link>https://hyperallergic.com/989495/the-tumultuous-journey-of-faith-ringgold-rikers-mural-catherine-gund-documentary/</link></item>
+<item><title>The Singular Wit of One of the New Yorker’s First Women Cartoonists - Hyperallergic</title><link>https://hyperallergic.com/988453/the-singular-wit-of-barbara-shermund-one-of-new-yorker-first-women-cartoonists/</link></item>
+<item><title>Brent Sikkema’s Husband Charged With Hiring His Killer - Hyperallergic</title><link>https://hyperallergic.com/989426/brent-sikkema-husband-charged-with-hiring-his-killer/</link></item>
+<item><title>The Nefarious Power of the Unseen - Hyperallergic</title><link>https://hyperallergic.com/989383/the-nefarious-power-of-the-unseen-oxy-arts/</link></item>
+<item><title>Thousands Call on Christie’s to Nix AI Art Auction - Hyperallergic</title><link>https://hyperallergic.com/989344/thousands-call-on-christies-to-nix-ai-art-auction/</link></item>
+<item><title>Is Female Anatomy Too “Controversial” for the American Quilter’s Society? - Hyperallergic</title><link>https://hyperallergic.com/988785/is-female-anatomy-too-controversial-for-the-american-quilters-society/</link></item>
+<item><title>Appalled by X and Meta? Try These Social Media Alternatives - Hyperallergic</title><link>https://hyperallergic.com/983623/social-media-alternatives-x-meta/</link></item>
+<item><title>Cosmo Whyte’s Whispering Portals - Hyperallergic</title><link>https://hyperallergic.com/988033/cosmo-whyte-whispering-portals-arts-club-chicago/</link></item>
+<item><title>The Iconoclastic Vision of Barkley L. Hendricks - Hyperallergic</title><link>https://hyperallergic.com/989207/the-iconoclastic-vision-of-barkley-l-hendricks/</link></item>
+<item><title>Chinese Dissident Artist Ai Weiwei Denied Entry to Switzerland - Hyperallergic</title><link>https://hyperallergic.com/989353/chinese-dissident-artist-ai-weiwei-denied-entry-to-switzerland/</link></item>
+<item><title>Stitched: Contemporary Embroidery Explores Artists Redefining the Medium - Hyperallergic</title><link>https://hyperallergic.com/989166/stitched-contemporary-embroidery-explores-artists-redefining-the-medium/</link></item>
+<item><title>How Craft Helps Chamorros Reconnect to the Ocean - Hyperallergic</title><link>https://hyperallergic.com/988651/how-craft-helps-chamorros-reconnect-to-the-ocean/</link></item>
+<item><title>Nathalie Djurberg and Hans Berg’s Fairytales With No Heroes - Hyperallergic</title><link>https://hyperallergic.com/989204/nathalie-djurberg-and-hans-berg-fairytales-with-no-heroes/</link></item>
+<item><title>Allan Wexler Magnifies the Absurdity of the Everyday - Hyperallergic</title><link>https://hyperallergic.com/988319/allan-wexler-magnifies-the-absurdity-of-the-everyday/</link></item>
+<item><title>The Other Almanac Is Your Artsy Field Guide for 2025 - Hyperallergic</title><link>https://hyperallergic.com/986169/or-books-the-other-almanac-is-your-artsy-field-guide-for-2025/</link></item>
+<item><title>The Bunny Museum in LA Looks to Rebuild After Fires - Hyperallergic</title><link>https://hyperallergic.com/988353/the-bunny-museum-in-la-looks-to-rebuild-after-fires/</link></item>
+<item><title>A LEGO encampment where legends train for battle - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/02/18/a-lego-encampment-where-legends-train-for-battle/</link></item>
+<item><title>see our thoughts on the latest Bricklink Designer Program Siege Encampment - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/01/25/lego-bricklink-designer-program-series-4-siege-encampment-the-biggest-battle-pack-review/</link></item>
+<item><title>Click for a video tour of this model! - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/02/18/a-lego-encampment-where-legends-train-for-battle/#more-420073</link></item>
+<item><title>Encampments - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/encampments/</link></item>
+<item><title>How to clean a fish in LEGO - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/02/18/how-to-clean-a-fish-in-lego/</link></item>
+<item><title>Harry Duncan - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/harry-duncan/</link></item>
+<item><title>Something wicked stirs beneath the spires - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/02/18/something-wicked-stirs-beneath-the-spires/</link></item>
+<item><title>our favorite builders of 2024 - The Brothers Brick</title><link>https://www.brothers-brick.com/2024/12/26/shortlist-announced-for-tbb-builder-of-the-year-2024-news/</link></item>
+<item><title>Care Creations - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/care-creations/</link></item>
+<item><title>Mattia Careddu - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/mattia-careddu/</link></item>
+<item><title>Two alternate takes on 10350 Tudor Corner - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/02/17/two-alternate-takes-on-10350-tudor-corner/</link></item>
+<item><title>one of the best sets in the line - The Brothers Brick</title><link>https://www.brothers-brick.com/2024/12/04/lego-icons-10350-tudor-corner-modular-building-a-return-to-the-classic-castle-guarded-inn-review-exclusive-designer-insights/</link></item>
+<item><title>Alternate Builds - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/alternate-build/</link></item>
+<item><title>Tudor Corner - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/tudor-corner/</link></item>
+<item><title>Reminder: The Brothers Brick is looking for new Contributors to join our team [News] - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/02/17/reminder-the-brothers-brick-is-looking-for-new-contributors-to-join-our-team-news/</link></item>
+<item><title>Click to read more about the open roles - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/02/17/reminder-the-brothers-brick-is-looking-for-new-contributors-to-join-our-team-news/#more-420050</link></item>
+<item><title>A Batmobile beyond the need for roads - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/02/17/a-batmobile-beyond-the-need-for-roads/</link></item>
+<item><title>Batman Beyond - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/batman-beyond/</link></item>
+<item><title>F1elevenbricks - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/f1elevenbricks/</link></item>
+<item><title>Sand-red is dead! Long live sand-red! - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/02/16/sand-red-is-dead-long-live-sand-red/</link></item>
+<item><title>Carter Baldwin - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/carter-baldwin/</link></item>
+<item><title>With great trucks come little vans - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/02/16/with-great-trucks-come-little-vans/</link></item>
+<item><title>Great Britain - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/great-britain/</link></item>
+<item><title>Mercedes-Benz - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/mercedes-benz/</link></item>
+<item><title>This living LEGO airship sports the latest in alternative fuel: the blue blossom - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/02/16/this-living-lego-airship-sports-the-latest-in-alternative-fuel-the-blue-blossom/</link></item>
+<item><title>There are LEGO space rovers aplenty in our Febrovery 2025 mid-month roundup [Feature] - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/02/15/there-are-lego-space-rovers-aplenty-in-our-febrovery-2025-mid-month-roundup-feature/</link></item>
+<item><title>Grab an air tank and helmet and ride along with us to see more amazing rovers! - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/02/15/there-are-lego-space-rovers-aplenty-in-our-febrovery-2025-mid-month-roundup-feature/#more-419879</link></item>
+<item><title>Jonah-Smallfrost - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/jonah-smallfrost/</link></item>
+<item><title>Richard Young - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/richard-young/</link></item>
+<item><title>Walter Whiteside - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/walter-whiteside/</link></item>
+<item><title>TBB Weekly Brick Report: LEGO news roundup for February 15 [News] - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/02/15/tbb-weekly-brick-report-lego-news-roundup-for-february-15-news/</link></item>
+<item><title>last week’s Brick Report - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/02/08/tbb-weekly-brick-report-lego-news-roundup-for-february-8-2025-news/</link></item>
+<item><title>[REVIEW] LEGO Botanicals 10345 Flower Arrangement - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/02/10/lego-botanicals-10345-flower-arrangement-review/</link></item>
+<item><title>[FEATURE] The living history of a fictional LEGO city: building Medinat al Musawrah - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/02/14/the-living-history-of-a-fictional-lego-city-building-medinat-al-musawrah-interview/</link></item>
+<item><title>[FEATURE] This Week in LEGO Bricks: - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/02/14/this-week-in-lego-bricks-new-hashima-goes-global-bricklink-voting-and-and-a-new-iron-builder-is-forged-video/</link></item>
+<item><title>“You can draw a horse from the front, right?” - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/02/15/you-can-draw-a-horse-from-the-front-right/</link></item>
+<item><title>Illuminated Manuscripts - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/illuminated-manuscripts/</link></item>
+<item><title>Conventions - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/convention/</link></item>
+<item><title>Sign up for the LarrySanger.org mailing list! - Larry Sanger Blog</title><link>http://larrysanger.org/subscribe</link></item>
+<item><title>The questions that distinguish the denominations - Larry Sanger Blog</title><link>https://larrysanger.org/2025/02/the-questions-that-distinguish-the-denominations/</link></item>
+<item><title>Bruce Schneier 认为我们的隐私仍然被大规模收集 - Solidot</title><link>https://www.solidot.org/story?sid=80586</link></item>
+<item><title>飞蛾利用光学幻象伪装成树叶 - Solidot</title><link>https://www.solidot.org/story?sid=80585</link></item>
+<item><title>深圳福田推出基于 DeepSeek 的公文 AI 助手 - Solidot</title><link>https://www.solidot.org/story?sid=80584</link></item>
+<item><title>美国白领工人的工作面临风险 - Solidot</title><link>https://www.solidot.org/story?sid=80583</link></item>
+<item><title>为什么吃饱之后仍然想吃甜食 - Solidot</title><link>https://www.solidot.org/story?sid=80582</link></item>
+<item><title>OpenSUSE Tumbleweed 使用的 MAC 切换到 SELinux - Solidot</title><link>https://www.solidot.org/story?sid=80581</link></item>
+<item><title>日本政府将重新发展核电 - Solidot</title><link>https://www.solidot.org/story?sid=80579</link></item>
+<item><title>特朗普政府封禁了 Julianne Moore 的儿童书《Freckleface Strawberry》 - Solidot</title><link>https://www.solidot.org/story?sid=80578</link></item>
+<item><title>X 屏蔽 Signal.me 链接 - Solidot</title><link>https://www.solidot.org/story?sid=80577</link></item>
+<item><title>研究认为人类可能并不孤单 - Solidot</title><link>https://www.solidot.org/story?sid=80576</link></item>
+<item><title>韩国应用商店暂停 DeepSeek 下载 - Solidot</title><link>https://www.solidot.org/story?sid=80574</link></item>
+<item><title>Brooklyn Riley’s Rachel Allan Photoshoot February 2025 - CelebMafia</title><link>https://celebmafia.com/brooklyn-rileys-rachel-allan-photoshoot-february-2025-4426532/</link></item>
+<item><title>Suki Waterhouse in Michael Kors Spring Campaign – 2025 - CelebMafia</title><link>https://celebmafia.com/suki-waterhouse-in-michael-kors-spring-campaign-2025-4426513/</link></item>
+<item><title>Dove Cameron Releases New Single “Too Much” – 2025 - CelebMafia</title><link>https://celebmafia.com/dove-cameron-releases-new-single-too-much-2025-4426508/</link></item>
+<item><title>Suki Waterhouse Releases New Single “Dream Woman” 2025 - CelebMafia</title><link>https://celebmafia.com/suki-waterhouse-releases-new-single-dream-woman-2025-4426503/</link></item>
+<item><title>Kylie Jenner’s Cosmic 2.0 Fragrance Photoshoot February 2025 - CelebMafia</title><link>https://celebmafia.com/kylie-jenners-cosmic-2-0-fragrance-photoshoot-february-2025-4426496/</link></item>
+<item><title>Selena Gomez Leaves Listening Party in London – 02.18.2025 - CelebMafia</title><link>https://celebmafia.com/selena-gomez-leaves-listening-party-in-london-02-18-2025-4426481/</link></item>
+<item><title>Cynthia Erivo on Essence Magazine Cover February 2025 - CelebMafia</title><link>https://celebmafia.com/cynthia-erivo-on-essence-magazine-cover-february-2025-4426472/</link></item>
+<item><title>Taylor Russell Wraps Up Warm in North London – 02.17.2025 - CelebMafia</title><link>https://celebmafia.com/taylor-russell-wraps-up-warm-in-north-london-02-17-2025-4426455/</link></item>
+<item><title>Lola Tung’s Style in Polyester February 2025 - CelebMafia</title><link>https://celebmafia.com/lola-tungs-style-in-polyester-february-2025-4426440/</link></item>
+<item><title>Emilia Schüle’s Bold Vogue Moment – 03.01.2025 - CelebMafia</title><link>https://celebmafia.com/emilia-schules-bold-vogue-moment-03-01-2025-4426429/</link></item>
+<item><title>Delta plane crash pilot is not *checks notes* adult film star Johnny Sins - theCHIVE</title><link>https://thechive.com/humanity/travel/delta-plane-crash-pilot-is-not-checks-notes-adult-film-star-johnny-sins/?utm_postid=4911335&amp;utm_editor=4911335_zach</link></item>
+<item><title>10 queef facts to put your querying mind at ease - theCHIVE</title><link>https://thechive.com/humanity/science-tech/10-queef-facts-to-put-your-querying-mind-at-ease/?utm_postid=4911590&amp;utm_editor=4911590_zach</link></item>
+<item><title>Sometimes life can be a drag and all you can do is laugh at yourself (40 Photos) - theCHIVE</title><link>https://thechive.com/humor/sometimes-life-can-be-a-drag-and-all-you-can-do-is-laugh-at-yourself-40-photos/?utm_postid=4910210&amp;utm_editor=4910210_bob</link></item>
+<item><title>SNL 50th celebrates half-century with oldies, newbies, and everything in between - theCHIVE</title><link>https://thechive.com/entertainment/tv/snl-50th-celebrates-half-century-with-oldies-newbies-and-everything-in-between/?utm_postid=4910924&amp;utm_editor=4910924_zach</link></item>
+<item><title>Death, taxes, and Chivette Bre making my heart skip a beat (40 Photos) - theCHIVE</title><link>https://thechive.com/sexy-girls/death-taxes-and-chivette-bre-making-my-heart-skip-a-beat-40-photos/?utm_postid=4911659&amp;utm_editor=4911659_zach</link></item>
+<item><title>These celebrities are wayyyy smarter than we expected (20 Photos) - theCHIVE</title><link>https://thechive.com/entertainment/celebrity/these-celebrities-are-wayyyy-smarter-than-we-expected-20-photos/?utm_postid=4911625&amp;utm_editor=4911625_camry</link></item>
+<item><title>Old School Cool: Celebrity Rizz Edition (31 Photos) - theCHIVE</title><link>https://thechive.com/humanity/nostalgia/old-school-cool-celebrity-rizz-edition-30-photos/?utm_postid=4911476&amp;utm_editor=4911476_laura_lee</link></item>
+<item><title>NSFW Memes will satiate that inner-sinner of yours… (28 Photos) - theCHIVE</title><link>https://thechive.com/humor/nsfw-memes-will-satiate-that-inner-sinner-of-yours-28-photos/?utm_postid=4911475&amp;utm_editor=4911475_ben</link></item>
+<item><title>Somone needs to do Time for these Food Crimes (28 Photos) - theCHIVE</title><link>https://thechive.com/humor/somone-needs-to-do-time-for-these-food-crimes-28-photos/?utm_postid=4911149&amp;utm_editor=4911149_jacob</link></item>
+<item><title>Hip Hip… Bootaaaaaay (17 GIFs) - theCHIVE</title><link>https://thechive.com/sexy-girls/hip-hip-bootaaaaaay-17-gifs/?utm_postid=4911086&amp;utm_editor=4911086_ben</link></item>
+<item><title>20 Tossed Treasures Give Garbage Glory to Dumpster Divers - theCHIVE</title><link>https://thechive.com/humor/wtf/20-tossed-treasures-give-garbage-glory-to-dumpster-divers/?utm_postid=4910928&amp;utm_editor=4910928_laura_lee</link></item>
+<item><title>Sadness from Inside Out would crack a smile at these memes (33 Photos) - theCHIVE</title><link>https://thechive.com/humor/sadness-from-inside-out-would-crack-a-smile-at-these-memes-33-photos/?utm_postid=4910891&amp;utm_editor=4910891_camry</link></item>
+<item><title>Tuesdays are for tugging (36 Photos) - theCHIVE</title><link>https://thechive.com/sexy-girls/tuesdays-are-for-tugging-36-photos-5/?utm_postid=4910939&amp;utm_editor=4910939_jacob</link></item>
+<item><title>Life escalates quickly sometimes, does it ever (40 Photos) - theCHIVE</title><link>https://thechive.com/humor/life-escalates-quickly-sometimes-does-it-ever-40-photos/?utm_postid=4910166&amp;utm_editor=4910166_bob</link></item>
+<item><title>Golden Retrievers take over Golden, CO and our hearts can’t handle it - theCHIVE</title><link>https://thechive.com/humanity/travel/golden-retrievers-take-over-golden-co-and-our-hearts-cant-take-it/?utm_postid=4910801&amp;utm_editor=4910801_zach</link></item>
+<item><title>Under Boobs Are a Gift From the Gods (35 Photos) - theCHIVE</title><link>https://thechive.com/sexy-girls/under-boobs-are-a-gift-from-the-gods-35-photos/?utm_postid=4910453&amp;utm_editor=4910453_hendy</link></item>
+<item><title>Florida Doesn’t Abide by the Laws of Nature (35 Photos) - theCHIVE</title><link>https://thechive.com/humor/florida-doesnt-abide-by-the-laws-of-nature-35-photos/?utm_postid=4910713&amp;utm_editor=4910713_hendy</link></item>
+<item><title>Clean pics for dirty minds, it’s shower time! (30 Photos) - theCHIVE</title><link>https://thechive.com/sexy-girls/clean-pics-for-dirty-minds-its-shower-time-30-photos/?utm_postid=4910842&amp;utm_editor=4910842_zach</link></item>
+<item><title>GIFs warn: Expect…the UN-Expected (30 GIFs) - theCHIVE</title><link>https://thechive.com/humor/gifs-warn-expectthe-un-expected-30-gifs-2/?utm_postid=4910803&amp;utm_editor=4910803_rick</link></item>
+<item><title>A Dirty Dump will help kickstart your day off just how you like (42 Photos) - theCHIVE</title><link>https://thechive.com/humor/a-dirty-dump-will-help-kickstart-your-day-off-just-how-you-like-42-photos/?utm_postid=4910047&amp;utm_editor=4910047_bob</link></item>
+<item><title>Even Presidents Would Approve of These Deals (13 Photos) - theCHIVE</title><link>https://thechive.com/treasure-trove/next-level-shit-tech/even-presidents-would-approve-of-these-deals-13-photos/?utm_postid=4907770&amp;utm_editor=4907770_jason</link></item>
+<item><title>One Pieces… to rule them all (33 Photos) - theCHIVE</title><link>https://thechive.com/sexy-girls/one-pieces-to-rule-them-all-33-photos/?utm_postid=4910757&amp;utm_editor=4910757_ben</link></item>
+<item><title>Time flies when you’re living your best life (30 Photos) - theCHIVE</title><link>https://thechive.com/humanity/nostalgia/time-flies-when-youre-living-your-best-life-30-photos/?utm_postid=4910545&amp;utm_editor=4910545_camry</link></item>
+<item><title>‘Ginny Weasley Onto Year 34’: Happy Birthday to Bonnie Wright - theCHIVE</title><link>https://thechive.com/entertainment/movies/ginny-weasley-onto-year-34-happy-birthday-to-bonnie-wright/?utm_postid=4910420&amp;utm_editor=4910420_zach</link></item>
+<item><title>Girls in PJs we’d *probably* share our blanket forts with (36 Photos) - theCHIVE</title><link>https://thechive.com/sexy-girls/girls-in-pjs-wed-probably-share-our-blanket-forts-with-36-photos/?utm_postid=4910320&amp;utm_editor=4910320_ben</link></item>
+<item><title>Fresh Chivette Pics Hot Off the Press (30 Photos) - theCHIVE</title><link>https://thechive.com/sexy-girls/fresh-chivette-pics-hot-off-the-press-30-photos-2/?utm_postid=4909930&amp;utm_editor=4909930_laura_lee</link></item>
+<item><title>These memes are art, literally (25 Photos) - theCHIVE</title><link>https://thechive.com/humanity/art/these-memes-are-art-literally-25-photos/?utm_postid=4909963&amp;utm_editor=4909963_jacob</link></item>
+<item><title>HIGH-RES salute to…Mount “HOOTERs-MORE” (69 HQ) - theCHIVE</title><link>https://thechive.com/sexy-girls/69-high-res-salutes-tomassive-mound-rush-more/?utm_postid=4910052&amp;utm_editor=4910052_rick</link></item>
+<item><title>The I Am Canadian guy tells all 25 years later (20 Photos) - theCHIVE</title><link>https://thechive.com/humor/the-i-am-canadian-guy-tells-all-25-years-later-20-photos/?utm_postid=4909764&amp;utm_editor=4909764_jon</link></item>
+<item><title>Stupid Memes 4 Dummies (30 Photos) - theCHIVE</title><link>https://thechive.com/humor/stupid-memes-4-dummies-30-photos/?utm_postid=4909854&amp;utm_editor=4909854_laura_lee</link></item>
+<item><title>Even on President’s Day…Work Happens (42 Photos) - theCHIVE</title><link>https://thechive.com/humor/even-on-presidents-day-work-happens-42-photos/?utm_postid=4909276&amp;utm_editor=4909276_bob</link></item>
+<item><title>Arch Linux Developers To Remove Old Repositories To Simplify Repository Structure - OSTechNix</title><link>https://ostechnix.com/remove-old-repositories-in-arch-linux/</link></item>
+<item><title>Linux Kernel 6.14 RC3 Released: KVM, Networking, and Driver Improvements - OSTechNix</title><link>https://ostechnix.com/linux-kernel-6-14-rc3-released/</link></item>
+<item><title>ONLYOFFICE Docs 8.3 is Released With About 30 New Features - OSTechNix</title><link>https://ostechnix.com/onlyoffice-docs-8-3-is-released/</link></item>
+<item><title>Install Wiki.js Using Podman And Docker Compose In Debian 12 - OSTechNix</title><link>https://ostechnix.com/install-wiki-js-using-podman-and-docker-compose/</link></item>
+<item><title>Asahi Linux Founder Hector Martin Resigns Over Kernel Conflicts - OSTechNix</title><link>https://ostechnix.com/asahi-linux-founder-hector-martin-resigns-over-kernel-conflicts/</link></item>
+<item><title>FastFetch: A Feature-Rich Tool To Display System Information - OSTechNix</title><link>https://ostechnix.com/display-system-information-with-fastfetch/</link></item>
+<item><title>KDE Plasma 6.3 Released with Improved Fractional Scaling, Enhanced Flatpak Support and More! - OSTechNix</title><link>https://ostechnix.com/kde-plasma-6-3-released/</link></item>
+<item><title>Introducing TrueNAS Fangtooth 25.04: The Unified Next-Gen Storage Solution - OSTechNix</title><link>https://ostechnix.com/introducing-truenas-fangtooth-25-04/</link></item>
+<item><title>Linux Kernel 6.14 RC2 Released with a Change in Apple Silicon Leadership - OSTechNix</title><link>https://ostechnix.com/linux-kernel-6-14-rc2-released/</link></item>
 </channel></rss>
