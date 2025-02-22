@@ -8,121 +8,393 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Fri, 21 Feb 2025 11:50:05 +0800</lastBuildDate>
-<item><title>Submissions are open for the 2025 Honey &amp; Wax Book Collecting Prize. - Literary  Hub</title><link>https://lithub.com/submissions-are-open-for-the-2025-honey-wax-book-collecting-prize/</link></item>
-<item><title>Judith Butler: To Imagine a World After This, Democracy Needs the Humanities - Literary  Hub</title><link>https://lithub.com/judith-butler-to-imagine-a-world-after-this-democracy-needs-the-humanities/</link></item>
-<item><title>WG Sebald’s Rings of Saturn Might Be the Perfect Climate Change Novel - Literary  Hub</title><link>https://lithub.com/wg-sebalds-rings-of-saturn-might-be-the-perfect-climate-change-novel/</link></item>
-<item><title>Am I the Literary Asshole for Thinking All Book Covers Look the Same? - Literary  Hub</title><link>https://lithub.com/am-i-the-literary-asshole-for-thinking-all-book-covers-look-the-same/</link></item>
-<item><title>What to Read Before and After Seeing Art Spiegelman: Disaster is my Muse - Literary  Hub</title><link>https://lithub.com/what-to-read-before-and-after-seeing-art-spiegelman-disaster-is-my-muse/</link></item>
-<item><title>Lit Hub Daily: February 20, 2025 - Literary  Hub</title><link>https://lithub.com/lit-hub-daily-february-20-2025/</link></item>
-<item><title>How Democracy Supporters Can Still Beat Back the Rising Tide of Fascism - Literary  Hub</title><link>https://lithub.com/how-democracy-supporters-can-still-beat-back-the-rising-tide-of-fascism/</link></item>
-<item><title>Inky and Determined: In Praise of Writers Who Self-Publish - Literary  Hub</title><link>https://lithub.com/inky-and-determined-in-praise-of-writers-who-self-publish/</link></item>
-<item><title>How the Twin Desires of Connection and Autonomy Motivate Us to Success - Literary  Hub</title><link>https://lithub.com/how-the-twin-desires-of-connection-and-autonomy-motivate-us-to-success/</link></item>
-<item><title>Greg Kroah-Hartman Supports Rust Integration Into Linux Kernel - OSTechNix</title><link>https://ostechnix.com/greg-kroah-hartman-supports-rust-integration-into-linux-kernel/</link></item>
-<item><title>Linus Torvalds Reportedly Plans To Merge Rust Code Into Linux Kernel - OSTechNix</title><link>https://ostechnix.com/linus-torvalds-reportedly-plans-to-merge-rust-code-into-linux-kernel/</link></item>
-<item><title>Office Suite - OSTechNix</title><link>https://ostechnix.com/category/office-suite/</link></item>
-<item><title>“奶奶去世后，我把思念封存进Game Boy” - 游研社</title><link>https://www.yystv.cn/p/12572</link></item>
-<item><title>《守望先锋》国服时隔757天回归，OW全球总经理想对玩家说…… - 游研社</title><link>https://www.yystv.cn/p/12574</link></item>
-<item><title>任天堂宣布成立台湾子公司，同时取消了黄金点数政策 - 游研社</title><link>https://www.yystv.cn/p/12571</link></item>
-<item><title>孔子学院没能做到的事，《文明7》做到了 - 游研社</title><link>https://www.yystv.cn/p/12564</link></item>
-<item><title>Steam不让游戏带广告，有的游戏改放病毒了 - 游研社</title><link>https://www.yystv.cn/p/12569</link></item>
-<item><title>专访《驯龙高手》导演：一比一真人化的电影，如何给观众带来新鲜感？ - 游研社</title><link>https://www.yystv.cn/p/12568</link></item>
-<item><title>NBA2K手游定档3月25日，2月先遣测试即将开启 - 游研社</title><link>https://www.yystv.cn/p/12560</link></item>
-<item><title>独立开发者们，挑战只用15秒兜售自己的游戏 - 游研社</title><link>https://www.yystv.cn/p/12559</link></item>
-<item><title>美国人终于想起来自己会做RPG了 - 游研社</title><link>https://www.yystv.cn/p/12557</link></item>
-<item><title>独家专访：《双人成行》新作，变得更难也更刺激了 - 游研社</title><link>https://www.yystv.cn/p/12554</link></item>
-<item><title>发售14个月后，《心灵杀手2》终于回本了 - 游研社</title><link>https://www.yystv.cn/p/12556</link></item>
-<item><title>惠普收购 Humane 资产，其 AI 产品 AI Pins 将在 10 天内停止工作 - Solidot</title><link>https://www.solidot.org/story?sid=80599</link></item>
-<item><title>微软将记事本的 AI 重写功能藏于付费墙内 - Solidot</title><link>https://www.solidot.org/story?sid=80600</link></item>
-<item><title>微软宣布其首款量子芯片 Majorana 1 - Solidot</title><link>https://www.solidot.org/story?sid=80601</link></item>
-<item><title>从 2000-2023 年全球冰川缩小 了5% 以上 - Solidot</title><link>https://www.solidot.org/story?sid=80602</link></item>
-<item><title>小行星 2024 YR4 撞击地球概率下调 - Solidot</title><link>https://www.solidot.org/story?sid=80603</link></item>
-<item><title>法国 WEST 托卡马克核聚装置维持等离子体运行 22 分钟 - Solidot</title><link>https://www.solidot.org/story?sid=80604</link></item>
-<item><title>因关税宏碁将对美国销售的笔记本电脑产品提价 10% - Solidot</title><link>https://www.solidot.org/story?sid=80606</link></item>
-<item><title>亚马逊将于 8 月 20 日关闭 Android Appstore - Solidot</title><link>https://www.solidot.org/story?sid=80607</link></item>
-<item><title>研究发现手机断网有助于改进心理健康 - Solidot</title><link>https://www.solidot.org/story?sid=80608</link></item>
-<item><title>为遵守欧洲隐私法规微软将为欧洲用户移除多项 Windows 文件管理器功能 - Solidot</title><link>https://www.solidot.org/story?sid=80598</link></item>
-<item><title>中国科学家的锂离子修复技术能延寿六倍 - Solidot</title><link>https://www.solidot.org/story?sid=80597</link></item>
-<item><title>27% 的 CFO 职位招聘描述提及 AI - Solidot</title><link>https://www.solidot.org/story?sid=80596</link></item>
-<item><title>Ozempic Literally Came From a Monster – And It&amp;#39;s Not Alone - ScienceAlert</title><link>https://www.sciencealert.com/ozempic-literally-came-from-a-monster-and-its-not-alone</link></item>
-<item><title>Misophonia Has Genetic Links to Anxiety And Depression, Study Finds - ScienceAlert</title><link>https://www.sciencealert.com/misophonia-has-genetic-links-to-anxiety-and-depression-study-finds</link></item>
-<item><title>Meditation And Mindfulness Can Have a Dark Side That We Don&amp;#39;t Talk About - ScienceAlert</title><link>https://www.sciencealert.com/meditation-and-mindfulness-can-have-a-dark-side-that-we-dont-talk-about</link></item>
-<item><title>We&amp;#39;ve Been Misreading a Major Law of Physics For Almost 300 Years - ScienceAlert</title><link>https://www.sciencealert.com/weve-been-misreading-a-major-law-of-physics-for-almost-300-years</link></item>
-<item><title>Places on Earth Too Hot For Humans Will Triple This Century, Scientists Warn - ScienceAlert</title><link>https://www.sciencealert.com/places-on-earth-too-hot-for-humans-will-triple-this-century-scientists-warn</link></item>
-<item><title>Ancient Fossils Reveal A Surprising Truth About Australian Dinosaurs - ScienceAlert</title><link>https://www.sciencealert.com/ancient-fossils-reveal-a-surprising-truth-about-australian-dinosaurs</link></item>
-<item><title>Ghostly Glow of Nuclear Power Station Detected in Water 150 Miles Away - ScienceAlert</title><link>https://www.sciencealert.com/ghostly-glow-of-nuclear-power-station-detected-in-water-150-miles-away</link></item>
-<item><title>Sexual Competition May Actually Boost Men&amp;#39;s Semen Quality - ScienceAlert</title><link>https://www.sciencealert.com/sexual-competition-may-actually-boost-mens-semen-quality</link></item>
-<item><title>The Cause of Alzheimer&amp;#39;s Might Be Coming From Inside Your Mouth - ScienceAlert</title><link>https://www.sciencealert.com/the-cause-of-alzheimers-might-be-coming-from-inside-your-mouth</link></item>
-<item><title>Your Scented Wax Melts Can Pollute Indoor Air as Much as a Diesel Engine - ScienceAlert</title><link>https://www.sciencealert.com/your-scented-wax-melts-can-pollute-indoor-air-as-much-as-a-diesel-engine</link></item>
-<item><title>Your Takeaway Food Packaging Could Increase Your Risk of Heart Failure - ScienceAlert</title><link>https://www.sciencealert.com/your-takeaway-food-packaging-could-increase-your-risk-of-heart-failure</link></item>
-<item><title>Study Reveals How This Artificial Sweetener May Cause Heart Damage - ScienceAlert</title><link>https://www.sciencealert.com/study-reveals-how-this-artificial-sweetener-may-cause-heart-damage</link></item>
-<item><title>&amp;#39;Shocking&amp;#39;: Global Glacier Ice Loss Accelerates by 36% in Last Decade - ScienceAlert</title><link>https://www.sciencealert.com/shocking-global-glacier-ice-loss-accelerates-by-36-in-last-decade</link></item>
-<item><title>90 Dolphins Stranded in Australia Are Being Euthanised. Here&amp;#39;s Why They Can&amp;#39;t Be Saved. - ScienceAlert</title><link>https://www.sciencealert.com/90-dolphins-stranded-in-australia-to-be-euthanised-heres-why-they-cant-be-saved</link></item>
-<item><title>Here Are Our Defense Options Against Potential &amp;#39;City Killer&amp;#39; Asteroid Impact - ScienceAlert</title><link>https://www.sciencealert.com/here-are-our-defense-options-against-potential-city-killer-asteroid-impact</link></item>
-<item><title>3,500-Year-Old Pharaoh&amp;#39;s Tomb Found in Egypt Is First Since Tutankhamun&amp;#39;s - ScienceAlert</title><link>https://www.sciencealert.com/3500-year-old-pharaohs-tomb-found-in-egypt-is-first-since-tutankhamuns</link></item>
-<item><title>Common Mushroom Fiber May Protect Against Flu, Study Finds - ScienceAlert</title><link>https://www.sciencealert.com/common-mushroom-fiber-may-protect-against-flu-study-finds</link></item>
-<item><title>Hundreds of Black Hole &amp;#39;Missing Links&amp;#39; May Have Been Discovered in New Survey - ScienceAlert</title><link>https://www.sciencealert.com/hundreds-of-black-hole-missing-links-may-have-been-discovered-in-new-survey</link></item>
-<item><title>Ozempic Reduces Desire to Binge Alcohol, Suggests Amazing New Study - ScienceAlert</title><link>https://www.sciencealert.com/ozempic-reduces-desire-to-binge-alcohol-suggests-amazing-new-study</link></item>
-<item><title>#LogManagement - Linux Journal</title><link>https://www.linuxjournal.com/tag/logmanagement</link></item>
-<item><title>Streamline Your Logs: Exploring Rsyslog for Effective System Log Management on Ubuntu - Linux Journal</title><link>https://www.linuxjournal.com/content/streamline-your-logs-exploring-rsyslog-effective-system-log-management-ubuntu</link></item>
-<item><title>Linux Networking Protocols: Understanding TCP/IP, UDP, and ICMP - Linux Journal</title><link>https://www.linuxjournal.com/content/linux-networking-protocols-understanding-tcpip-udp-and-icmp</link></item>
-<item><title>Leveraging Tmux and Screen for Advanced Session Management - Linux Journal</title><link>https://www.linuxjournal.com/content/leveraging-tmux-and-screen-advanced-session-management</link></item>
-<item><title>Enhancing System Security and Efficiency through User and Group Management - Linux Journal</title><link>https://www.linuxjournal.com/content/enhancing-system-security-and-efficiency-through-user-and-group-management</link></item>
-<item><title>5 Ways to Integrate a Sporty Anorak Into Your Spring Closet - WMagazine</title><link>https://www.wmagazine.com/fashion/anorak-sports-jacket-outfit-ideas</link></item>
-<item><title>The 45 Best SAG Awards Dresses of All Time - WMagazine</title><link>https://www.wmagazine.com/fashion/best-sag-awards-red-carpet-dresses-fashion-photos</link></item>
-<item><title>Margiela and &amp;#39;Yellowstone?&amp;#39; Michelle Randolph&amp;#39;s Archival Horse Dress Makes It Work - WMagazine</title><link>https://www.wmagazine.com/fashion/michelle-randolph-archival-horse-dress-1923-premiere</link></item>
-<item><title>The 17 Best Face, Body &amp; Hair Oils for Every Step of Your Skincare Routine - WMagazine</title><link>https://www.wmagazine.com/beauty/best-oils-face-body-hair-for-winter</link></item>
-<item><title>Beyoncé Wears a Curve-Hugging Wedding Dress Slit Up to Her Waist - WMagazine</title><link>https://www.wmagazine.com/fashion/beyonce-corset-wedding-dress-leg-slit-cecred-announcement</link></item>
-<item><title>Ayo Edebiri&amp;#39;s Bright Red Dress Drapes In All the Right Ways - WMagazine</title><link>https://www.wmagazine.com/fashion/ayo-edebiri-red-dress-black-heels-opus-premiere-los-angeles</link></item>
-<item><title>At Frieze Los Angeles, Painter Alec Egan Responds to the L.A. Fires - WMagazine</title><link>https://www.wmagazine.com/culture/alec-egan-talks-los-angeles-fires-and-frieze</link></item>
-<item><title>Rihanna&amp;#39;s Best Red Carpet Fashion Moments Shine Bright Like a Diamond - WMagazine</title><link>https://www.wmagazine.com/fashion/rihanna-best-red-carpet-moments</link></item>
-<item><title>Kylie Jenner and Kim Kardashian’s Vintage Alaïa Collection Is Museum-worthy - WMagazine</title><link>https://www.wmagazine.com/fashion/kylie-jenner-kim-kardashian-vintage-90s-alaia</link></item>
-<item><title>Hailey Bieber Pairs a Sculpted Mini Dress With Party Heels and Sheer Tights - WMagazine</title><link>https://www.wmagazine.com/fashion/hailey-bieber-brown-mini-dress-black-tights-heels-rhode-event</link></item>
-<item><title>The 15 Best Multiuse Blush Sticks for a Pop of Color on Eyes, Lips &amp; Cheeks - WMagazine</title><link>https://www.wmagazine.com/beauty/best-blush-sticks-multiuse-makeup</link></item>
-<item><title>Jennifer Lopez Sexes Up the Baggy Suit Trend - WMagazine</title><link>https://www.wmagazine.com/fashion/jennifer-lopez-brown-suit-gold-heels-glasses-clutch-dubai</link></item>
-<item><title>The Museum at FIT’s ‘Fashioning Wonder’ Is a Trove of Fashion Treasures - WMagazine</title><link>https://www.wmagazine.com/fashion/museum-at-fit-fashioning-wonder-cabinet-of-curiosities-show-photos</link></item>
-<item><title>Celebrity Weddings 2025: All the Stars Who Tied the Knot This Year - WMagazine</title><link>https://www.wmagazine.com/culture/celebrity-weddings-2025</link></item>
-<item><title>Paris Hilton&amp;#39;s Vintage Juicy Couture Tracksuits From the 2000s Are for Sale - WMagazine</title><link>https://www.wmagazine.com/fashion/paris-hilton-vestiaire-collective-closet-sale-la-wildfires</link></item>
-<item><title>Cartier Explores The Idea of More Is More - WMagazine</title><link>https://www.wmagazine.com/fashion/cartier-explores-the-idea-of-more-is-more</link></item>
-<item><title>Selena Gomez&amp;#39;s Valentine&amp;#39;s Day Red Dress and Coat Are Benny Blanco-Approved - WMagazine</title><link>https://www.wmagazine.com/fashion/selena-gomez-red-mini-dress-fur-coat-heels-london</link></item>
-<item><title>Fashion Is Tied Up in Knots: 12 Ways to Wear the Twisty Trend - WMagazine</title><link>https://www.wmagazine.com/fashion/knot-trend-shopping</link></item>
-<item><title>Introducing ‘Skin Talk With Laura Love’ a New Beauty Series For (&amp; By) Beauty Lovers - WMagazine</title><link>https://www.wmagazine.com/video/skin-talk-with-laura-love-trailer</link></item>
-<item><title>The 17 Best New Fragrances of 2025 (So Far) - WMagazine</title><link>https://www.wmagazine.com/beauty/best-new-fragrances-perfumes-2025</link></item>
-<item><title>Kendall Jenner &amp; Hailey Bieber’s Favorite Strip Mall Sushi Is Getting a Saint Laurent Makeover - WMagazine</title><link>https://www.wmagazine.com/culture/sushi-park-paris-saint-laurent-celebrity-hotspot</link></item>
-<item><title>Lady Gaga&amp;#39;s &amp;#39;Mayhem&amp;#39; Album Explained: Track List, Lyrics, Release Date - WMagazine</title><link>https://www.wmagazine.com/culture/lady-gaga-mayhem-album-lyrics-release-date-track-list</link></item>
-<item><title>Anya Taylor-Joy Wears Kate Moss&amp;#39;s Vintage Mugler Look From the ’90s - WMagazine</title><link>https://www.wmagazine.com/fashion/anya-taylor-joy-vintage-orange-jacket-black-skirt-snl50-new-york</link></item>
-<item><title>Kim Kardashian Rehearsed For &amp;#39;SNL&amp;#39; In a Nude Body Stocking and a Fur - WMagazine</title><link>https://www.wmagazine.com/fashion/kim-kardashian-nude-bodysuit-fur-coat-snl50-new-york</link></item>
-<item><title>Miley Cyrus and Boyfriend Maxx Morando Make Rare Red Carpet Appearance - WMagazine</title><link>https://www.wmagazine.com/fashion/miley-cyrus-boyfriend-maxx-morando-snl50-red-carpet-new-york</link></item>
-<item><title>Kylie Jenner Supports Boyfriend Timothée Chalamet In a Sheer LBD from 1995 - WMagazine</title><link>https://www.wmagazine.com/fashion/kylie-jenner-vintage-sheer-black-dress-baftas-2025</link></item>
-<item><title>Stefano Pilati on Fashion, Freedom, &amp; the Power of Reinvention - WMagazine</title><link>https://www.wmagazine.com/fashion/stefano-pilati-designer-interview-2025</link></item>
-<item><title>14 Spring Dresses &amp; Skirts For Every Occasion - WMagazine</title><link>https://www.wmagazine.com/fashion/spring-dresses-rianne-van-rompaey-colin-dodgson-max-pearmain</link></item>
-<item><title>George Rouy Paints the Body Electric: Meet the Artist Reimagining Flesh &amp; Form - WMagazine</title><link>https://www.wmagazine.com/culture/george-rouy-artist-interview</link></item>
-<item><title>The ‘Saturday Night Live’ Costumes That Keep Tom Broecker Up at Night - WMagazine</title><link>https://www.wmagazine.com/culture/saturday-night-live-50th-anniversary-costumes-interview</link></item>
-<item><title>‘The White Lotus’ Season 3, Episode 1 Recap: Welcome to Thailand - WMagazine</title><link>https://www.wmagazine.com/culture/white-lotus-season-3-episode-one-recap</link></item>
-<item><title>BAFTA Awards 2025 Red Carpet: See All the Celebrity Fashion - WMagazine</title><link>https://www.wmagazine.com/fashion/bafta-awards-2025-red-carpet-fashion-dresses-photos</link></item>
-<item><title>The &amp;#39;Bridgerton’ Season 4 First Look Is Here: Everything to Know - WMagazine</title><link>https://www.wmagazine.com/culture/bridgerton-season-four-cast-plot-release-date</link></item>
-<item><title>&amp;#39;Bridgerton&amp;#39; Stars Yerin Ha and Luke Thompson Make Red Carpet Debut - WMagazine</title><link>https://www.wmagazine.com/fashion/yerin-ha-black-sequin-dress-bridgerton-fan-event-london</link></item>
-<item><title>Fernanda Torres’s &amp;#39;I’m Still Here&amp;#39; Awards Fashion Is the Picture of Elegance - WMagazine</title><link>https://www.wmagazine.com/fashion/fernanda-torres-im-still-here-press-fashion-red-carpet</link></item>
-<item><title>The Best Looks of New York Fashion Week Fall 2025 - WMagazine</title><link>https://www.wmagazine.com/fashion/new-york-fashion-week-fall-2025-best-runway-looks</link></item>
-<item><title>Timothée Chalamet Wears Valentine&amp;#39;s Day Pink For Berlin Date With Kylie Jenner - WMagazine</title><link>https://www.wmagazine.com/fashion/timothee-chalamet-pink-tank-top-pants-boots-berlin-film-festival</link></item>
-<item><title>Alexa Chung&amp;#39;s Makes A Daring Cutout Top Cocktail Party Appropriate - WMagazine</title><link>https://www.wmagazine.com/fashion/alexa-chung-white-top-blue-skirt-leg-warmers-miu-miu-london</link></item>
-<item><title>New York Fashion Week Fall 2025: 15 Things We Saw and Loved - WMagazine</title><link>https://www.wmagazine.com/fashion/new-york-fashion-week-fall-2025-roundup-best-clothes-accessories</link></item>
-<item><title>Lady Gaga Wears a Beloved New York Brand For &amp;#39;SNL&amp;#39; Anniversary Rehearsals - WMagazine</title><link>https://www.wmagazine.com/fashion/lady-gaga-black-coat-dress-boots-snl-rehearsals-new-york</link></item>
-<item><title>Is Collagen Banking the Secret to Forever-Young Skin? - WMagazine</title><link>https://www.wmagazine.com/beauty/collagen-banking-meaning-trend-explained</link></item>
-<item><title>Kate Hudson&amp;#39;s Plunging Premiere Dress Is Slit All the Way Up Her Legs - WMagazine</title><link>https://www.wmagazine.com/fashion/kate-hudson-gold-dress-leg-slit-running-point-premiere</link></item>
-<item><title>Mikey Madison Talks ‘Anora,’ Being a &amp;quot;Weird Horse Girl,&amp;quot; &amp; Awkward First Kiss - WMagazine</title><link>https://www.wmagazine.com/video/mikey-madison-anora-screen-test-interview</link></item>
-<item><title>Hoyeon on &amp;#39;Squid Game,&amp;#39; Modeling, &amp; Falling for Brad Pitt in &amp;#39;Fight Club&amp;#39; - WMagazine</title><link>https://www.wmagazine.com/video/hoyeon-screen-test-interview-2025</link></item>
-<item><title>Mikey Madison &amp; Hoyeon Play Doughnut Bandits in ‘Anora’ Director Sean Baker’s Twisted Tale - WMagazine</title><link>https://www.wmagazine.com/culture/mikey-madison-sean-baker-hoyeon-cover-interview</link></item>
-<item><title>Laverne Cox on Bringing Trans Joy to Television - WMagazine</title><link>https://www.wmagazine.com/culture/laverne-cox-clean-slate-series-mugler-archive-interview</link></item>
-<item><title>An Ode To Parker Posey’s Singular Red Carpet Style - WMagazine</title><link>https://www.wmagazine.com/fashion/parker-posey-best-looks-ever</link></item>
-<item><title>Trump’s Executive Orders Seek to Erase Scientific Truth - Undark</title><link>https://undark.org/2025/02/20/opinion-trump-erase-scientific-truth/</link></item>
-<item><title>Grave Mistakes: The History and Future of Chile’s ‘Disappeared’ - Undark</title><link>https://undark.org/2025/02/19/history-future-chile-disappeared/</link></item>
-<item><title>Some States Claim Zero Abortions. Is That Possible? - Undark</title><link>https://undark.org/2025/02/18/some-states-claim-zero-abortions-is-that-possible/</link></item>
-<item><title>The Uncertain Resiliency of Public Trust in Science - Undark</title><link>https://undark.org/2025/02/17/resiliency-public-trust-science/</link></item>
-<item><title>Interview: How Elon Musk Blurs the Lines of Free Speech - Undark</title><link>https://undark.org/2025/02/14/interview-elon-musk-free-speech/</link></item>
-<item><title>‘Make America Healthy Again’ by Transforming Animal Agriculture - Undark</title><link>https://undark.org/2025/02/13/maha-transform-animal-agriculture/</link></item>
-<item><title>For Many, Weight-Loss Drugs Are Pricey. Expanding Access Is Hard. - Undark</title><link>https://undark.org/2025/02/12/expanding-access-glp1/</link></item>
-<item><title>Startups Gamble on Fusion Energy - Undark</title><link>https://undark.org/2025/02/11/startups-fusion-energy/</link></item>
-<item><title>To Alarm of Scientists, Federal Health Data Is Disappearing - Undark</title><link>https://undark.org/2025/02/10/to-alarm-of-scientists-federal-health-data-is-disappearing/</link></item>
-<item><title>Book Review: The Neurological Roots of  ‘Sinful’ Behavior - Undark</title><link>https://undark.org/2025/02/07/book-review-seven-deadly-sins/</link></item>
+<lastBuildDate>Sat, 22 Feb 2025 17:15:48 +0800</lastBuildDate>
+<item><title>Trump fires Joint Chiefs chairman, Navy head in DOD leadership purge - Defense News</title><link>https://www.defensenews.com/pentagon/2025/02/22/trump-fires-joint-chiefs-chairman-navy-head-in-dod-leadership-purge/</link></item>
+<item><title>Space Force bumps Astrion from Resilient GPS program - Defense News</title><link>https://www.defensenews.com/space/2025/02/21/space-force-bumps-astrion-from-resilient-gps-program/</link></item>
+<item><title>DARPA touts ‘formal methods’ for nipping cyber disasters in the bud - Defense News</title><link>https://www.defensenews.com/pentagon/2025/02/21/darpa-touts-formal-methods-for-nipping-cyber-disasters-in-the-bud/</link></item>
+<item><title>South Korea, US conduct exercise with B-1B bomber, fighter jets - Defense News</title><link>https://www.defensenews.com/news/your-military/2025/02/20/south-korea-us-conduct-exercise-with-b-1b-bomber-fighter-jets/</link></item>
+<item><title>NGAD engines pass key design reviews, prototype work underway - Defense News</title><link>https://www.defensenews.com/air/2025/02/20/ngad-engines-pass-key-design-reviews-prototype-work-underway/</link></item>
+<item><title>Iron Dome unsuitable as missile shield for US or Europe, officials say - Defense News</title><link>https://www.defensenews.com/global/mideast-africa/2025/02/20/iron-dome-unsuitable-as-missile-shield-for-us-or-europe-officials-say/</link></item>
+<item><title>Naval Group charges rival ThyssenKrupp with selling out submarine tech - Defense News</title><link>https://www.defensenews.com/global/europe/2025/02/20/naval-group-charges-rival-thyssenkrupp-with-selling-out-submarine-tech/</link></item>
+<item><title>Australia, New Zealand monitoring 3 Chinese warships off Australia - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2025/02/20/australia-new-zealand-monitoring-3-chinese-warships-off-australia/</link></item>
+<item><title>L3Harris breaks ground on solid rocket motor production expansion - Defense News</title><link>https://www.defensenews.com/industry/2025/02/20/l3harris-breaks-ground-on-solid-rocket-motor-production-expansion/</link></item>
+<item><title>DOD advisory committees must prove ‘warrior ethos’ in new directive - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2025/02/21/dod-advisory-committees-must-prove-warrior-ethos-in-new-directive/</link></item>
+<item><title>White House eyes 8% cut to defense budget to boost Trump priorities - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2025/02/19/white-house-eyes-8-cut-to-defense-budget-to-boost-trump-priorities/</link></item>
+<item><title>Space Development Agency to re-bid contentious prototype contract - Defense News</title><link>https://www.defensenews.com/space/2025/02/20/space-development-agency-to-re-bid-contentious-prototype-contract/</link></item>
+<item><title>Not even a bullet through the mouth could stop this soldier in Vietnam - Defense News</title><link>https://www.defensenews.com/video/2024/04/23/not-even-a-bullet-through-the-mouth-could-stop-this-soldier-in-vietnam/</link></item>
+<item><title>Germany taps Rheinmetall to handle some wartime logistics - Defense News</title><link>https://www.defensenews.com/global/europe/2025/02/20/germany-taps-rheinmetall-to-handle-some-wartime-logistics/</link></item>
+<item><title>UAE’s island-based weapons range gets an upgrade for drone practice - Defense News</title><link>https://www.defensenews.com/global/mideast-africa/2025/02/20/uaes-island-based-weapons-range-gets-an-upgrade-for-drone-practice/</link></item>
+<item><title>Firefox 115 ESR 将支持 Windows 7/8/8.1 到 2025 年 9 月 - Solidot</title><link>https://www.solidot.org/story?sid=80609</link></item>
+<item><title>研究发现山东济宁第一人民医院撤稿率全球最高 - Solidot</title><link>https://www.solidot.org/story?sid=80610</link></item>
+<item><title>英国研究发现热饮与食管癌相关 - Solidot</title><link>https://www.solidot.org/story?sid=80612</link></item>
+<item><title>ChatGPT 周活跃用户突破 4 亿 - Solidot</title><link>https://www.solidot.org/story?sid=80613</link></item>
+<item><title>惠普有意为电话支持加入 15 分钟的等待时间 - Solidot</title><link>https://www.solidot.org/story?sid=80614</link></item>
+<item><title>Meta 称它下载了盗版电子书库但没有做种不违法 - Solidot</title><link>https://www.solidot.org/story?sid=80615</link></item>
+<item><title>250 万年前的超新星爆发可能影响了地球病毒的演化 - Solidot</title><link>https://www.solidot.org/story?sid=80616</link></item>
+<item><title>Linus Torvalds 回应内核合并 Rust 代码争议 - Solidot</title><link>https://www.solidot.org/story?sid=80618</link></item>
+<item><title>David Klass (1968-2025), Longtime Laughing Squid Partner, Relentless Entrepreneur and Beloved Friend - Laughing Squid</title><link>https://laughingsquid.com/david-klass-1968-2025/</link></item>
+<item><title>‘Saturday Night Live’ Uploads Their Entire First Episode From October 11, 1975 to YouTube - Laughing Squid</title><link>https://laughingsquid.com/saturday-night-live-uploads-entire-first-episode/</link></item>
+<item><title>‘Cheech &amp; Chong’s Last Movie’, A Documentary About the Legendary Pot Smoking Comedians on a Roadtrip - Laughing Squid</title><link>https://laughingsquid.com/cheech-and-chongs-last-movie/</link></item>
+<item><title>The Worlds Smallest Metal Rubik’s Cube Created in Honor of the Toy’s 50th Anniversary - Laughing Squid</title><link>https://laughingsquid.com/worlds-smallest-metal-rubiks-cube/</link></item>
+<item><title>The Unique Benefits of New York City Stoops - Laughing Squid</title><link>https://laughingsquid.com/new-york-city-stoops/</link></item>
+<item><title>Baby Loggerhead Sea Turtles Perform a Cute Little Dance When They Know Food is Near - Laughing Squid</title><link>https://laughingsquid.com/baby-turtles-dance-for-food/</link></item>
+<item><title>A Moving Low Bass Cover of the Classic Johnny Cash Song ‘I Walk the Line’ - Laughing Squid</title><link>https://laughingsquid.com/low-bass-cover-johnny-cash-i-walk-the-line/</link></item>
+<item><title>A Clever 3D Printed Chopsticks Adapter - Laughing Squid</title><link>https://laughingsquid.com/chopsticks-adapter/</link></item>
+<item><title>David Attenborough Takes a Look at What the Dodo Bird Might Have Actually Looked Like - Laughing Squid</title><link>https://laughingsquid.com/david-attenborough-dodo-bird/</link></item>
+<item><title>Musician Uses a Typewriter to Remotely Play the ‘Ievan Polka’ on Piano Using Strings Attached to the Keys - Laughing Squid</title><link>https://laughingsquid.com/using-typewriter-to-play-piano/</link></item>
+<item><title>Incredibly Rare Footage of a Deep Sea Black Seadevil Anglerfish Rising to the Water’s Surface - Laughing Squid</title><link>https://laughingsquid.com/black-seadevil-angler-swimming-to-surface/</link></item>
+<item><title>A Kilt-Clad David Tennant Performs ‘I’m Gonna Be (500 Miles)’ by The Proclaimers to Open BAFTA 2025 - Laughing Squid</title><link>https://laughingsquid.com/david-tennant-500-miles-bafta/</link></item>
+<item><title>A Funny Parody About the Architects Who Designed the Parking Lots at Trader Joe&amp;#39;s Stores - Laughing Squid</title><link>https://laughingsquid.com/architects-who-designed-trader-joes-parking-lots/</link></item>
+<item><title>Why Can&amp;rsquo;t I Find Anything on Google Anymore? - Ibrahim Diallo</title><link>https://idiallo.com/blog/can-t-google-anything-anymore?src=feed</link></item>
+<item><title>Maybe AI Will Take Your Job  After All - Ibrahim Diallo</title><link>https://idiallo.com/blog/ai-will-take-your-job?src=feed</link></item>
+<item><title>AGI is an Interface Problem - Ibrahim Diallo</title><link>https://idiallo.com/blog/agi-as-an-interface-problem?src=feed</link></item>
+<item><title>Why Enterprise Software Sucks - Ibrahim Diallo</title><link>https://idiallo.com/blog/enterprise-software-sucks-extra?src=feed</link></item>
+<item><title>Step aside: Let AI do the talking - Ibrahim Diallo</title><link>https://idiallo.com/blog/let-ai-do-the-talking?src=feed</link></item>
+<item><title>Freedom after 25 years of hard work - Ibrahim Diallo</title><link>https://idiallo.com/blog/25-years-of-hard-work?src=feed</link></item>
+<item><title>I downloaded 23MB on dial-up - Ibrahim Diallo</title><link>https://idiallo.com/blog/downloading-on-dial-up?src=feed</link></item>
+<item><title>The book that didn&amp;rsquo;t change my life - Ibrahim Diallo</title><link>https://idiallo.com/blog/a-tony-robbins-story?src=feed</link></item>
+<item><title>Tell Me Why Your Method Is Better - Ibrahim Diallo</title><link>https://idiallo.com/blog/why-is-your-method-better?src=feed</link></item>
+<item><title>What&amp;#39;s the Point of Playing? - Ibrahim Diallo</title><link>https://idiallo.com/blog/the-point-of-playing?src=feed</link></item>
+<item><title>AI一键生成万字论文初稿，免费摘要、大纲，降AI痕迹，速过知网检测！ - 小众软件</title><link>https://www.appinn.com/scholingo/</link></item>
+<item><title>DeepSeek R1满血专线版已上线！终身不限量使用，最后一批！！！ - 小众软件</title><link>https://www.appinn.com/bianjie-ai-deepseek-r1/</link></item>
+<item><title>你知道吗？VxKex 让 Windows 7 也能跑 Win10/11 独占软件 - 小众软件</title><link>https://www.appinn.com/vxkex-for-windows7/</link></item>
+<item><title>Obsidian 宣布永久免费商用，依旧：你的笔记永远是你的 - 小众软件</title><link>https://www.appinn.com/obsidian-free-for-work/</link></item>
+<item><title>OOMOL Studio：一款全新的工作流 IDE，免费、底层开源 - 小众软件</title><link>https://www.appinn.com/oomol-studio/</link></item>
+<item><title>国货正当红，国货之光 Eagle 年度 7 折限时优惠开启 - 小众软件</title><link>https://www.appinn.com/eagle-257/</link></item>
+<item><title>群晖发布 Office Suite API，打通办公套件与第三方系统的连接通道 - 小众软件</title><link>https://www.appinn.com/synology-office-suite-api/</link></item>
+<item><title>Make It Big – 在屏幕上显示很大的字[iOS] - 小众软件</title><link>https://www.appinn.com/make-it-big-for-ios/</link></item>
+<item><title>DeepSeek 官方推荐的部署 DeepSeek-R1 最佳设置参数，和官网一样。 - 小众软件</title><link>https://www.appinn.com/deepseek-r1-deploying-recommended-settings/</link></item>
+<item><title>Mac mini M4 专用防尘底座 3D 模型，可换滤纸，带硬盘仓 - 小众软件</title><link>https://www.appinn.com/mac-mini-m4-filter-base/</link></item>
+<item><title>Parallels Desktop 20 优惠码 – 带 AI 开发环境的 Mac 虚拟机【最新官网7折优惠，截止2025年3月20日】 - 小众软件</title><link>https://www.appinn.com/parallels-desktop-20-for-mac/</link></item>
+<item><title>有没有很消磨时间，又上头的单机手游？ - 小众软件</title><link>https://www.appinn.com/mini-games-mobile/</link></item>
+<item><title>给老妈写的安卓自动划屏应用，可以…刷短视频赚钱吗？ - 小众软件</title><link>https://www.appinn.com/auto-swipe-up/</link></item>
+<item><title>字节跳动 AI 自动编程工具 Trae 发布 Windows 版本 - 小众软件</title><link>https://www.appinn.com/trae-for-windows/</link></item>
+<item><title>赛博考古：14年后，微软《对 IE6 说再见》中文网站仍可访问 - 小众软件</title><link>https://www.appinn.com/theie6countdown/</link></item>
+<item><title>Opera 推出新浏览器 Opera Air，主打一个心静自然凉 - 小众软件</title><link>https://www.appinn.com/opera-air/</link></item>
+<item><title>内网穿透的 10 大应用场景，你都了解吗？ - 小众软件</title><link>https://www.appinn.com/neiwangchuantou-25/</link></item>
+<item><title>目前可用的 DeepSeek R1 模型 API 服务商(2025年2月) - 小众软件</title><link>https://www.appinn.com/deepseek-api-service/</link></item>
+<item><title>腾讯元宝已接入 DeepSeek-R1，强调可联网、满血版｜附三家对比测试结果 - 小众软件</title><link>https://www.appinn.com/yuanbao-deepseek-r1/</link></item>
+<item><title>苹果推出账户间购买项目迁移功能，可转移已购 App - 小众软件</title><link>https://www.appinn.com/apple-transfer-purchased-apps/</link></item>
+<item><title>苹果选择阿里巴巴作为 AI 合作伙伴，百度出局，DeepSeek 未入选 - 小众软件</title><link>https://www.appinn.com/apple-alibaba-ai-to/</link></item>
+<item><title>MCU Spider-Man 4 - Screen Rant</title><link>https://screenrant.com/db/movie/spider-man-homecoming-4/</link></item>
+<item><title>MCU Spider-Man 4 Changes Release Date, Eliminating Tom Holland&amp;#39;s Very Own Barbenheimer - Screen Rant</title><link>https://screenrant.com/spider-man-4-mcu-release-date-change-july-2026/</link></item>
+<item><title>Sydney Sweeney&amp;#39;s Remake Of Sci-Fi Cult Classic Gets More Optimistic Comments From Original Star After Original Concerns - Screen Rant</title><link>https://screenrant.com/barbarella-remake-sydney-sweeney-jane-fonda-response-optimism/</link></item>
+<item><title>Cobra Kai Series Finale Nearly Confirmed 1 Character Had A Very Different Fate With A Unique Prop, Reveals Co-Creator - Screen Rant</title><link>https://screenrant.com/cobra-kai-series-finale-kreese-fate-almost-different-corcreator-explained/</link></item>
+<item><title>Rambo: Last Blood - Screen Rant</title><link>https://screenrant.com/db/movie/rambo-last-blood/</link></item>
+<item><title>Sylvester Stallone’s Divisive $91.5M Rambo Sequel Enjoying Streaming Resurgence As Wait For Tulsa King Season 3 Continues - Screen Rant</title><link>https://screenrant.com/rambo-last-blood-netflix-success-streaming-charts/</link></item>
+<item><title>Harvey Specter&amp;#39;s Suits LA Return Gets Surprising Filming Update From Star As She Praises His Support: &amp;quot;He Walked So We Could Run&amp;quot; - Screen Rant</title><link>https://screenrant.com/suits-la-harvey-specter-role-filming-still-support-lex-scott-davis/</link></item>
+<item><title>WWE SmackDown! - Screen Rant</title><link>https://screenrant.com/db/tv-show/wwe-smackdown/</link></item>
+<item><title>This Week&amp;#39;s WWE SmackDown Ending Explained (Feb 21, 2025): Results &amp; What It Means [SPOILERS] - Screen Rant</title><link>https://screenrant.com/this-weeks-wwe-smackdown-ending-explained-feb-21-2025-results-what-it-means-spoilers/</link></item>
+<item><title>Fire Country - Screen Rant</title><link>https://screenrant.com/db/tv-show/fire-country/</link></item>
+<item><title>Fire Country Finally Starts To Unpack The Forgotten Tragedy That Derailed Bode&amp;#39;s Life - Screen Rant</title><link>https://screenrant.com/fire-country-season-3-rileys-death-tragedy-fallout-tackling-explainer/</link></item>
+<item><title>Ghosts Season 4 Tease Hints At Potential Challenges For Sam &amp; Jay&amp;#39;s Marriage - Screen Rant</title><link>https://screenrant.com/ghosts-season-4-sam-jay-marriage-challenge-rose-mciver-tease/</link></item>
+<item><title>Alfaro Fights For A Dangerous Undercover Mission In New S.W.A.T. Clip - Screen Rant</title><link>https://screenrant.com/s-w-a-t-season-8-episode-12-alfaro-clip/</link></item>
+<item><title>After 40 Years, Vampire Hunter D Is Heading to U.S. Theaters and Streaming (Exclusive) - Screen Rant</title><link>https://screenrant.com/vampire-hunter-d-anime-movie-theatrical-release-streaming/</link></item>
+<item><title>Patrick Macias - Screen Rant</title><link>https://screenrant.com/author/patrick-macias/</link></item>
+<item><title>How Harrison Ford Helped His 1923 Costar Through A Difficult Season 2 Scene: &amp;quot;He Kissed Me On The Cheek&amp;quot; - Screen Rant</title><link>https://screenrant.com/1923-season-2-harrison-ford-brian-geraghty-support-response/</link></item>
+<item><title>Christoph Waltz Compares His Character In New Action-Comedy To Quentin Tarantino Role In Django Unchained - Screen Rant</title><link>https://screenrant.com/old-guy-movie-character-django-unchained-dr-schultz-comparison-christoph-waltz/</link></item>
+<item><title>Missing Now You See Me 3 Star Finally Comments On Potential Franchise Return - Screen Rant</title><link>https://screenrant.com/now-you-see-me-3-lizzy-caplan-lula-appearance-response/</link></item>
+<item><title>Dragon Ball Super Addresses Return Rumors With Disappointing Update - Screen Rant</title><link>https://screenrant.com/dragon-ball-super-manga-return-rumors-debunk-2025/</link></item>
+<item><title>Dragon Ball Super - Screen Rant</title><link>https://screenrant.com/db/tv-show/dragon-ball-super/</link></item>
+<item><title>Heart Eyes&amp;#39; 6 Homages To Iconic Slasher Movie Villain Weapons Explained - Screen Rant</title><link>https://screenrant.com/heart-eyes-slasher-villain-weapons-homages/</link></item>
+<item><title>Dani Kessel Odom - Screen Rant</title><link>https://screenrant.com/author/dani-odom/</link></item>
+<item><title>Why Reacher Refuses To Let Neagley Help In Season 3 - Screen Rant</title><link>https://screenrant.com/reacher-neagley-no-help-season-3-explainer/</link></item>
+<item><title>&amp;quot;It Blows Up The World Too Much: Why Meghan Markle&amp;#39;s Potential Suits Return Is A Challenge Explained By Creator - Screen Rant</title><link>https://screenrant.com/suits-la-meghan-markle-rachel-reprisal-invite-aaron-korsh-response/</link></item>
+<item><title>Sarah Hurtado Rodriguez - Screen Rant</title><link>https://screenrant.com/author/sarah-hurtado/</link></item>
+<item><title>10 Bands That Completely Abandoned Their Original Sound (And Got Better) - Screen Rant</title><link>https://screenrant.com/10-bands-that-completely-abandoned-their-original-sound-and-got-better/</link></item>
+<item><title>It&amp;#39;s Official: Solo Leveling Is the Top New Anime of 2024 at Crunchyroll and Beyond - Screen Rant</title><link>https://screenrant.com/solo-leveling-season-2-top-anime-2024-crunchyroll-data/</link></item>
+<item><title>Solo Leveling - Screen Rant</title><link>https://screenrant.com/db/tv-show/solo-leveling/</link></item>
+<item><title>10 Best Marvel Characters Introduced In Your Friendly Neighborhood Spider-Man - Screen Rant</title><link>https://screenrant.com/your-friendly-neighborhood-spider-man-best-marvel-characters-list/</link></item>
+<item><title>Your Friendly Neighborhood Spider-Man - Screen Rant</title><link>https://screenrant.com/db/tv-show/your-friendly-neighborhood-spider-man/</link></item>
+<item><title>You Might Not Like Korra, But Her Show Just Became An Obligatory Watch For Avatar: The Last Airbender Fans - Screen Rant</title><link>https://screenrant.com/avatar-seven-havens-makes-korra-important-op-ed/</link></item>
+<item><title>Avatar: Seven Havens - Screen Rant</title><link>https://screenrant.com/avatar-seven-havens/</link></item>
+<item><title>NCIS Season 22, Episode 14 Image Teases Jimmy Getting Close With New Neighbor - Screen Rant</title><link>https://screenrant.com/ncis-season-22-episode-14-image-jimmy-wendy-drinks/</link></item>
+<item><title>Every Singer Who Has Performed With Nirvana Since Kurt Cobain&amp;#39;s Death - Screen Rant</title><link>https://screenrant.com/nirvana-singers-since-kurt-cobain-list/</link></item>
+<item><title>Matthew Thomas - Screen Rant</title><link>https://screenrant.com/author/matthew-thomas/</link></item>
+<item><title>Shrinking Is Harrison Ford&amp;#39;s Defining Work (&amp; I Grew Up With Star Wars &amp; Indiana Jones) - Screen Rant</title><link>https://screenrant.com/harrison-ford-shrinking-best-role-indiana-jones-han-solo/</link></item>
+<item><title>Dragon Ball Never Meant to Give Gohan a Signature Move, and I Think I Finally Know Why - Screen Rant</title><link>https://screenrant.com/dragon-ball-gohan-no-signature-move-why-op-ed/</link></item>
+<item><title>Brandon Sklenar&amp;#39;s Batman Fan-Casting Comes To Life To Adapt One Of DC&amp;#39;s Most Famous Comic Stories Alongside Jason Todd In New DCU Art - Screen Rant</title><link>https://screenrant.com/dc-universe-batman-brandon-sklenar-fan-casting-death-in-the-family-art/</link></item>
+<item><title>Batman: The Brave and the Bold - Screen Rant</title><link>https://screenrant.com/tag/batman-the-brave-and-the-bold-movie/</link></item>
+<item><title>WWE Almost Missed Out on KofiMania And You&amp;#39;ll Never Guess Who Almost Replaced Him - Screen Rant</title><link>https://screenrant.com/wwe-kofimania-canceled-plans-factoid/</link></item>
+<item><title>Divisive Remake Of Iconic Horror Franchise Getting New Streaming Home On The Heels Of Disappointing TV Cancellation - Screen Rant</title><link>https://screenrant.com/childs-play-remake-streaming-release-date-max/</link></item>
+<item><title>Captain America: Brave New World&amp;#39;s Ending Fight Spells Doom For 1 Key MCU Hero According To Marvel Movie Theory - Screen Rant</title><link>https://screenrant.com/captain-america-brave-new-world-ending-fight-she-hulk-red-theory-mcu/</link></item>
+<item><title>The Hunting Party Showrunner Reveals Which Main Character Wasn&amp;#39;t Initially Part Of The NBC Crime Procedural - Screen Rant</title><link>https://screenrant.com/the-hunting-party-season-1-episode-3-showrunner-jj-bailey-interview/</link></item>
+<item><title>The Hunting Party - Screen Rant</title><link>https://screenrant.com/db/tv-show/the-hunting-party/</link></item>
+<item><title>One Piece Shows No Signs of Stopping, and I Know Who Should Fill Out the Rest of Luffy&amp;#39;s Live-Action Crew - Screen Rant</title><link>https://screenrant.com/one-piece-netflix-who-should-play-cast-list/</link></item>
+<item><title>One Piece (Live-Action) - Screen Rant</title><link>https://screenrant.com/db/tv-show/one-piece-live-action/</link></item>
+<item><title>Hannah Diffey - Screen Rant</title><link>https://screenrant.com/author/hannah-diffey/</link></item>
+<item><title>Outlander Season 8 Can Use The Oldest Trick In The Book To Explain Its Big Season 7 Twist - Screen Rant</title><link>https://screenrant.com/outlander-faith-fraser-twin-twist-oldest-trick-cliche-op-ed/</link></item>
+<item><title>Why Harry Potter &amp; The Deathly Hallows&amp;#39; Epilogue Is So Controversial - Screen Rant</title><link>https://screenrant.com/harry-potter-series-deathly-hallows-epilogue-controversial-explainer/</link></item>
+<item><title>The Vampire Diaries Star Joins Russell Crowe&amp;#39;s New Action Thriller Bear Country - Screen Rant</title><link>https://screenrant.com/bear-country-movie-cast-nina-dobrev/</link></item>
+<item><title>I&amp;#39;m Convinced Marvel Just Hinted At The Best Solution To Spider-Man&amp;#39;s MCU Problems, But It Would Require Another Marvel Breakthrough - Screen Rant</title><link>https://screenrant.com/spider-man-mcu-show-live-action-problem-fix-breakthrough-need-op-ed/</link></item>
+<item><title>Somehow, Benson Ruined Law &amp; Order: SVU Season 26, Episode 13&amp;#39;s Intense Story - Screen Rant</title><link>https://screenrant.com/law-and-order-svu-season-26-episode-13-benson-ruined-velascos-case-op-ed/</link></item>
+<item><title>How to Train Your Dragon - Screen Rant</title><link>https://screenrant.com/db/movie/how-to-train-your-dragon-2025/</link></item>
+<item><title>Snow White (Live Action) - Screen Rant</title><link>https://screenrant.com/db/movie/disneys-snow-white/</link></item>
+<item><title>Thunderbolts - Screen Rant</title><link>https://screenrant.com/db/movie/thunderbolts-2025/</link></item>
+<item><title>Mission: Impossible - The Final Reckoning - Screen Rant</title><link>https://screenrant.com/db/movie/mission-impossible-8/</link></item>
+<item><title>Jurassic World Rebirth - Screen Rant</title><link>https://screenrant.com/db/movie/jurassic-world-rebirth/</link></item>
+<item><title>The Fantastic Four: First Steps - Screen Rant</title><link>https://screenrant.com/db/movie/the-fantastic-four-2025/</link></item>
+<item><title>How Sauron Made The One Ring In The Lord Of The Rings &amp; What It&amp;#39;s Made Of - Screen Rant</title><link>https://screenrant.com/lotr-how-sauron-made-one-ring-what-its-made-of-explainer/</link></item>
+<item><title>Brace Yourselves, Marvel and DC Just Announced Its Next Big Crossover Event - Screen Rant</title><link>https://screenrant.com/marvel-dc-comics-crossover-event-2025-announcement/</link></item>
+<item><title>10 Reasons Captain America: Brave New World Critics And Audience Reviews Are So Split - Screen Rant</title><link>https://screenrant.com/captain-america-brave-new-world-critics-audiences-reviews-different-explainer/</link></item>
+<item><title>First Look At Secretive X-37B Space Plane In Orbit - Slashdot</title><link>https://science.slashdot.org/story/25/02/22/0056236/first-look-at-secretive-x-37b-space-plane-in-orbit</link></item>
+<item><title>Mark Zuckerberg&amp;#39;s Makeover Didn&amp;#39;t Make People Like Him, Study Shows - Slashdot</title><link>https://tech.slashdot.org/story/25/02/22/0048209/mark-zuckerbergs-makeover-didnt-make-people-like-him-study-shows</link></item>
+<item><title>Scientists Question Microsoft&amp;#39;s Quantum Computing Claims - Slashdot</title><link>https://science.slashdot.org/story/25/02/22/0232239/scientists-question-microsofts-quantum-computing-claims</link></item>
+<item><title>reported creating Majorana particles - Slashdot</title><link>https://tech.slashdot.org/story/25/02/19/1651235/microsoft-reveals-its-first-quantum-computing-chip-the-majorana-1</link></item>
+<item><title>Data Is Very Valuable, Just Don&amp;#39;t Ask Us To Measure It, Leaders Say - Slashdot</title><link>https://slashdot.org/story/25/02/22/006233/data-is-very-valuable-just-dont-ask-us-to-measure-it-leaders-say</link></item>
+<item><title>Asus Continues Fragrant Device Trend With an Aromatic Mouse - Slashdot</title><link>https://hardware.slashdot.org/story/25/02/22/002225/asus-continues-fragrant-device-trend-with-an-aromatic-mouse</link></item>
+<item><title>OpenAI Bans Chinese Accounts Using ChatGPT To Edit Code For Social Media Surveillance - Slashdot</title><link>https://tech.slashdot.org/story/25/02/21/2356205/openai-bans-chinese-accounts-using-chatgpt-to-edit-code-for-social-media-surveillance</link></item>
+<item><title>The Protesters Who Want To Ban AGI Before It Even Exists - Slashdot</title><link>https://slashdot.org/story/25/02/21/2157258/the-protesters-who-want-to-ban-agi-before-it-even-exists</link></item>
+<item><title>The GSA Is Shutting Down Its EV Chargers - Slashdot</title><link>https://hardware.slashdot.org/story/25/02/21/2143227/the-gsa-is-shutting-down-its-ev-chargers</link></item>
+<item><title>OpenAI Plans To Shift Compute Needs From Microsoft To SoftBank - Slashdot</title><link>https://slashdot.org/story/25/02/21/2131244/openai-plans-to-shift-compute-needs-from-microsoft-to-softbank</link></item>
+<item><title>India&amp;#39;s &amp;#39;Human Calculator Kid&amp;#39; Shatters 6 World Records In a Single Day - Slashdot</title><link>https://science.slashdot.org/story/25/02/21/2125209/indias-human-calculator-kid-shatters-6-world-records-in-a-single-day</link></item>
+<item><title>DeepSeek To Share Some AI Model Code - Slashdot</title><link>https://news.slashdot.org/story/25/02/21/1842227/deepseek-to-share-some-ai-model-code</link></item>
+<item><title>HP Ends Forced 15-Minute Wait Times for Customer Support - Slashdot</title><link>https://it.slashdot.org/story/25/02/21/1740213/hp-ends-forced-15-minute-wait-times-for-customer-support</link></item>
+<item><title>imposing mandatory 15-minute wait times - Slashdot</title><link>https://it.slashdot.org/story/25/02/20/1827203/hp-deliberately-adds-15-minutes-waiting-time-for-telephone-support-calls</link></item>
+<item><title>Bybit CEO Confirms Exchange Was Hacked for $1.46B, Says His Firm Can Cover The Loss - Slashdot</title><link>https://it.slashdot.org/story/25/02/21/1630207/bybit-ceo-confirms-exchange-was-hacked-for-146b-says-his-firm-can-cover-the-loss</link></item>
+<item><title>New WinRAR Version Strips Windows Metadata In Privacy Push - Slashdot</title><link>https://yro.slashdot.org/story/25/02/21/1616245/new-winrar-version-strips-windows-metadata-in-privacy-push</link></item>
+<item><title>Apple Removes Cloud Encryption Feature From UK After Backdoor Order - Slashdot</title><link>https://apple.slashdot.org/story/25/02/21/1529255/apple-removes-cloud-encryption-feature-from-uk-after-backdoor-order</link></item>
+<item><title>Canada Announces First High-Speed Rail Between Toronto and Quebec City - Slashdot</title><link>https://tech.slashdot.org/story/25/02/20/0540215/canada-announces-first-high-speed-rail-between-toronto-and-quebec-city?sbsrc=md</link></item>
+<item><title>Meta Claims Torrenting Pirated Books Isn&amp;#39;t Illegal Without Proof of Seeding - Slashdot</title><link>https://yro.slashdot.org/story/25/02/21/0051232/meta-claims-torrenting-pirated-books-isnt-illegal-without-proof-of-seeding?sbsrc=md</link></item>
+<item><title>HP Deliberately Adds 15 Minutes Waiting Time For Telephone Support Calls - Slashdot</title><link>https://it.slashdot.org/story/25/02/20/1827203/hp-deliberately-adds-15-minutes-waiting-time-for-telephone-support-calls?sbsrc=md</link></item>
+<item><title>When AI Thinks It Will Lose, It Sometimes Cheats, Study Finds - Slashdot</title><link>https://slashdot.org/story/25/02/20/1117213/when-ai-thinks-it-will-lose-it-sometimes-cheats-study-finds?sbsrc=md</link></item>
+<item><title>FTC Launches Broad Tech &amp;#39;Censorship&amp;#39; Probe Targeting Meta, Uber - Slashdot</title><link>https://yro.slashdot.org/story/25/02/20/1953229/ftc-launches-broad-tech-censorship-probe-targeting-meta-uber?sbsrc=md</link></item>
+<item><title>AI Cracks Superbug Problem In Two Days That Took Scientists Years - Slashdot</title><link>https://science.slashdot.org/story/25/02/21/0244216/ai-cracks-superbug-problem-in-two-days-that-took-scientists-years?utm_source=rss0.9mainlinkanon&amp;utm_medium=feed&amp;sbsrc=science</link></item>
+<item><title>Rare Genetic Disorder Treated in Womb For the First Time - Slashdot</title><link>https://science.slashdot.org/story/25/02/20/133212/rare-genetic-disorder-treated-in-womb-for-the-first-time?utm_source=rss0.9mainlinkanon&amp;utm_medium=feed&amp;sbsrc=science</link></item>
+<item><title>German Foreign Office Going Back To Windows - Slashdot</title><link>https://linux.slashdot.org/story/11/02/22/0244242/german-foreign-office-going-back-to-windows?sbsrc=thisday</link></item>
+<item><title>Health Insurance When Leaving the Corporate World? - Slashdot</title><link>https://ask.slashdot.org/story/10/02/22/1516242/health-insurance-when-leaving-the-corporate-world?sbsrc=thisday</link></item>
+<item><title>Child-Suitable Alternatives To Passwords? - Slashdot</title><link>https://it.slashdot.org/story/08/02/22/1615212/child-suitable-alternatives-to-passwords?sbsrc=thisday</link></item>
+<item><title>France National Library Attacks Google Book Effort - Slashdot</title><link>https://politics.slashdot.org/story/05/02/22/1918207/france-national-library-attacks-google-book-effort?sbsrc=thisday</link></item>
+<item><title>Human Genome Confirms Evolution - Slashdot</title><link>https://science.slashdot.org/story/01/02/22/1413218/human-genome-confirms-evolution?sbsrc=thisday</link></item>
+<item><title>Color-Blind Principles for Higher Education - Law &amp; Liberty</title><link>https://lawliberty.org/color-blind-principles-for-higher-education/</link></item>
+<item><title>Sparta’s Splendid Isolationism - Law &amp; Liberty</title><link>https://lawliberty.org/book-review/spartas-splendid-isolationism/</link></item>
+<item><title>What Makes American Education Exceptional - Law &amp; Liberty</title><link>https://lawliberty.org/what-makes-education-in-america-exceptional/</link></item>
+<item><title>The Court and the Separation of Powers - Law &amp; Liberty</title><link>https://lawliberty.org/the-court-and-the-separation-of-power/</link></item>
+<item><title>A Constitutional Rule on Federal Spending - Law &amp; Liberty</title><link>https://lawliberty.org/a-constitutional-rule-on-federal-spending/</link></item>
+<item><title>A Wedge-Shaped House - CONTEMPORIST</title><link>https://www.contemporist.com/a-wedge-shaped-house/</link></item>
+<item><title>A New Home That Includes A ‘Dutch Barn’ In Partial Shell Form - CONTEMPORIST</title><link>https://www.contemporist.com/a-new-home-that-includes-a-dutch-barn-in-partial-shell-form/</link></item>
+<item><title>From Render To Reality – A New Home Office And Laundry Room - CONTEMPORIST</title><link>https://www.contemporist.com/from-render-to-reality-a-new-home-office-and-laundry-room/</link></item>
+<item><title>Before + After – An Extensive Remodel &amp; Addition For This Mid-Century Modern Home - CONTEMPORIST</title><link>https://www.contemporist.com/before-after-an-extensive-remodel-addition-for-this-mid-century-modern-home/</link></item>
+<item><title>Custom-Made Terrazzo Tiles Fill The Interior Of This New Coffee Bar &amp; Cafe - CONTEMPORIST</title><link>https://www.contemporist.com/custom-made-terrazzo-tiles-fill-the-interior-of-this-new-coffee-bar-amp-cafe/</link></item>
+<item><title>7 considerations when building your ML architecture - Ubuntu blog</title><link>https://ubuntu.com/blog/7-considerations-ml-architecture</link></item>
+<item><title>Canonical announces 12 year Kubernetes LTS - Ubuntu blog</title><link>https://ubuntu.com/blog/12-year-lts-for-kubernetes</link></item>
+<item><title>Security in depth with Ubuntu: Mapping security primitives to attacker capabilities - Ubuntu blog</title><link>https://ubuntu.com/blog/ubuntu-security-defense-in-depth</link></item>
+<item><title>A deep dive into our grid system and typography for the A4 format - Ubuntu blog</title><link>https://ubuntu.com/blog/a-look-under-the-hood-of-our-grid-system-and-typography-for-the-a4-format</link></item>
+<item><title>How Ubuntu Pro + Support keeps your Ubuntu 20.04 LTS secure and stable - Ubuntu blog</title><link>https://ubuntu.com/blog/20-04-support-how-ubuntu-pro-support-keeps-your-ubuntu-20-04-lts-secure-and-stable</link></item>
+<item><title>Lidia Luna Puerta - Ubuntu blog</title><link>https://ubuntu.com/blog/author/lidia-luna</link></item>
+<item><title>How can you personalize your Ubuntu Pro subscription? - Ubuntu blog</title><link>https://ubuntu.com/blog/how-can-you-personalize-your-ubuntu-pro-subscription</link></item>
+<item><title>Ishani Ghoshal - Ubuntu blog</title><link>https://ubuntu.com/blog/author/ishanighoshal</link></item>
+<item><title>AI in 2025: is it an agentic year? - Ubuntu blog</title><link>https://ubuntu.com/blog/ai-in-2025-is-it-an-agentic-year</link></item>
+<item><title>How your feedback shapes the way we support open source software - Ubuntu blog</title><link>https://ubuntu.com/blog/how-your-feedback-shapes-our-open-source-support</link></item>
+<item><title>Ubuntu 20.04 LTS standard support is coming to an end – options for AWS Users - Ubuntu blog</title><link>https://ubuntu.com/blog/ubuntu-20-04-lts-end-of-standard-support-options-for-aws</link></item>
+<item><title>Canonical achieves ISO/SAE 21434 certification, strengthening automotive cybersecurity standards - Ubuntu blog</title><link>https://ubuntu.com/blog/canonical-achieves-iso-21434-certification</link></item>
+<item><title>EU Cyber Resilience Act compliance: best practices for IoT manufacturers - Ubuntu blog</title><link>https://ubuntu.com/blog/what-the-cyber-resilience-act-cra-means-for-iot-manufacturers</link></item>
+<item><title>FIPS 140-3 certified modules now available for Ubuntu 22.04 LTS - Ubuntu blog</title><link>https://ubuntu.com/blog/fips-140-3-for-ubuntu-22-04lts</link></item>
+<item><title>Ubuntu available in Microsoft’s new WSL distribution format - Ubuntu blog</title><link>https://ubuntu.com/blog/ubuntu-wsl-new-format-available</link></item>
+<item><title>Jean-Baptiste Lallement - Ubuntu blog</title><link>https://ubuntu.com/blog/author/jibel</link></item>
+<item><title>AI 正在推动程序员的进化，而不是灭亡 - 宝玉的分享</title><link>https://baoyu.io/blog/ai-is-evolving-programmers</link></item>
+<item><title>Coinbase 使用 AI 编程工具提升开发效率，同时正在欺诈预防、客户支持、风险评分、设计等多个业务领域积极应用 AI 技术 - 宝玉的分享</title><link>https://baoyu.io/blog/coinbase-ai-improves-development-efficiency</link></item>
+<item><title>你无法用 AI 建立护城河 [译] - 宝玉的分享</title><link>https://baoyu.io/translations/you-cant-build-a-moat-with-ai-redux</link></item>
+<item><title>软件工程职位数量真的跌到了五年来的最低点吗？[译] - 宝玉的分享</title><link>https://baoyu.io/translations/software-engineer-jobs-five-year-low</link></item>
+<item><title>马斯克号称 Grok 3 的知识库是实时更新的，别被他忽悠了！ - 宝玉的分享</title><link>https://baoyu.io/blog/grok-3-knowledge-base-update-myth</link></item>
+<item><title>Grok 3 Jailbreak Prompt - 宝玉的分享</title><link>https://baoyu.io/blog/grok-3-jailbreak-prompt</link></item>
+<item><title>LangChain 团队发布 LangMem SDK - 宝玉的分享</title><link>https://baoyu.io/translations/langchain-langmem-sdk</link></item>
+<item><title>刚入门的初级开发者其实并不真的会写代码 [译] - 宝玉的分享</title><link>https://baoyu.io/translations/junior-developers-cant-code</link></item>
+<item><title>找到心流：通过深度工作和慢生活逃离数字干扰 [译] - 宝玉的分享</title><link>https://baoyu.io/translations/flow-deep-work-slow-living</link></item>
+<item><title>OpenAI 的 Deep Research 会让我失业吗？ - 宝玉的分享</title><link>https://baoyu.io/translations/does-openai-s-deep-research-put-me-out-of-a-job</link></item>
+<item><title>我们对于 GPU 的看法错了 [译] - 宝玉的分享</title><link>https://baoyu.io/translations/wrong-about-gpu</link></item>
+<item><title>Cursor: 以每秒 1000 个 Token 的速度编辑文件 - 宝玉的分享</title><link>https://baoyu.io/translations/cursor-editing-1000-tokens-per-second</link></item>
+<item><title>NASA 的软件开发十条规则 - 宝玉的分享</title><link>https://baoyu.io/translations/nasa-software-development-rules</link></item>
+<item><title>什么是 AI 架构师？ — Bret Taylor - 宝玉的分享</title><link>https://baoyu.io/translations/bret</link></item>
+<item><title>Cursor Chat System Prompt - 宝玉的分享</title><link>https://baoyu.io/blog/cursor-chat-system-prompt</link></item>
+<item><title>Cursor Composer System Prompt - 宝玉的分享</title><link>https://baoyu.io/blog/cursor-composer-system-prompt</link></item>
+<item><title>Cursor Agent mode System Prompt - 宝玉的分享</title><link>https://baoyu.io/blog/cursor-agent-system-prompt</link></item>
+<item><title>Windsurf Chat Mode System Prompt - 宝玉的分享</title><link>https://baoyu.io/blog/windsurf-chat-system-prompt</link></item>
+<item><title>人工智能如何区分“头部人才”和“普通员工” [译] - 宝玉的分享</title><link>https://baoyu.io/translations/how-ai-will-divide-the-best-from-the-rest</link></item>
+<item><title>Deep Research 与知识价值：从信息搜索到价值重新定义 - 宝玉的分享</title><link>https://baoyu.io/translations/deep-research-and-knowledge-value</link></item>
+<item><title>OpenAI 论文：使用大型推理模型进行竞技编程 - 宝玉的分享</title><link>https://baoyu.io/translations/openai-large-language-model-coding</link></item>
+<item><title>在 AI 时代，新手算法工程师如何既依赖 AI，又能真正掌控代码？ - 宝玉的分享</title><link>https://baoyu.io/blog/ai-era-newbie-algorithm-engineer-code-mastery</link></item>
+<item><title>Anthropic 经济指数 - 宝玉的分享</title><link>https://baoyu.io/translations/the-anthropic-economic-index</link></item>
+<item><title>都没人看我为什么还要写博客？ - 宝玉的分享</title><link>https://baoyu.io/translations/why-blog-if-nobody-reads-it</link></item>
+<item><title>什么是多模态大语言模型（MLLM）？[译] - 宝玉的分享</title><link>https://baoyu.io/translations/multimodal-large-language-models-mllms-transforming-computer-vision</link></item>
+<item><title>人工智能普及后哪些职业的边际价值反而会上升？ - 宝玉的分享</title><link>https://baoyu.io/blog/jobs-rising-value-post-ai</link></item>
+<item><title>那些 DeepSeek 的聊天截图是真的还是假的？怎么鉴别？ - 宝玉的分享</title><link>https://baoyu.io/blog/deepseek-chat-screenshots-real-fake</link></item>
+<item><title>处理数百万份 PDF，以及为何 Gemini 2.0 能改变一切 [译] - 宝玉的分享</title><link>https://baoyu.io/translations/gemini-flash-2</link></item>
+<item><title>为什么 LLM 在 OCR 任务上表现糟糕 - 宝玉的分享</title><link>https://baoyu.io/translations/why-llms-suck-at-ocr</link></item>
+<item><title>Anti-Science Epidemiologists Have A New Friend In Government - Science 2.0</title><link>https://www.science20.com/hank_campbell/antiscience_epidemiologists_have_a_new_friend_in_government-257330</link></item>
+<item><title>Prop 65 Is A California Gimmick That Raises Prices For The Poor - Science 2.0</title><link>https://www.science20.com/hank_campbell/prop_65_is_a_california_gimmick_that_raises_prices_for_the_poor-257329</link></item>
+<item><title>KM3NeT: Most Energetic Neutrino In The Universe Detected - Science 2.0</title><link>https://www.science20.com/news_staff/km3net_most_energetic_neutrino_in_the_universe_detected-257322</link></item>
+<item><title>My Most Important Column Ever - Science 2.0</title><link>https://www.science20.com/fred_phillips/my_most_important_column_ever-257328</link></item>
+<item><title>Chocolate Is A Treat - It&amp;#39;s Not An &amp;#39;Antioxidant&amp;#39; Or Anything Except Valentine&amp;#39;s Day Candy - Science 2.0</title><link>https://www.science20.com/hank_campbell/chocolate_is_a_treat_its_not_an_antioxidant_or_anything_except_valentines_day_candy-257327</link></item>
+<item><title>Unsupervised Tracking - Science 2.0</title><link>https://www.science20.com/tommaso_dorigo/unsupervised_tracking-257326</link></item>
+<item><title>The Paris Agreement Is Only Symbolic - And Helping Nothing - Science 2.0</title><link>https://www.science20.com/content/the_paris_agreement_is_only_symbolic_and_helping_nothing</link></item>
+<item><title>When Told Lower Incomes Mean Less School Funding, College Students Become More Liberal - Science 2.0</title><link>https://www.science20.com/hank_campbell/when_told_lower_incomes_mean_less_school_funding_college_students_become_more_liberal-257323</link></item>
+<item><title>The Earth Beneath Our Feet: How The Zagros Mountains Are Shaping The Middle East - Science 2.0</title><link>https://www.science20.com/mark_pierce/the_earth_beneath_our_feet_how_the_zagros_mountains_are_shaping_the_middle_east-257321</link></item>
+<item><title>Yellowstone Wolves: Good For Urban Environmentalists, Bad For Everyone Else - Science 2.0</title><link>https://www.science20.com/hank_campbell/yellowstone_wolves_good_for_urban_environmentalists_bad_for_everyone_else-257320</link></item>
+<item><title>Hims Telehealth Company Under Fire For Super Bowl Ad - Science 2.0</title><link>https://www.science20.com/hank_campbell/hims_telehealth_company_under_fire_for_super_bowl_ad-257319</link></item>
+<item><title>Bad News For Big Alcohol: Half Of Valentine&amp;#39;s Day Celebrants Will Abstain - Science 2.0</title><link>https://www.science20.com/content/bad_news_for_big_alcohol_half_of_valentines_day_celebrants_will_abstain</link></item>
+<item><title>Hey AI, Design A Calorimeter For Me - Science 2.0</title><link>https://www.science20.com/tommaso_dorigo/hey_ai_design_a_calorimeter_for_me-257317</link></item>
+<item><title>Lessons, Advice, And Reflections On Editing A Scholarly Book - Science 2.0</title><link>https://www.science20.com/payal_joshi/lessons_advice_and_reflections_on_editing_a_scholarly_book-257316</link></item>
+<item><title>Birth Control Pill: Less Ovulation Linked To Less Ovarian Cancer - Science 2.0</title><link>https://www.science20.com/news_staff/birth_control_pill_less_ovulation_linked_to_less_ovarian_cancer-257315</link></item>
+<item><title>Texas Shows Leadership In Viable Clean Energy - Science 2.0</title><link>https://www.science20.com/content/texas_shows_leadership_in_viable_clean_energy</link></item>
+<item><title>Kennedy Insistence On Late Term Abortion and Gun Bans Should Be A Republican Turn-Off - Science 2.0</title><link>https://www.science20.com/content/kennedy_insistence_on_late_term_abortion_and_gun_bans_should_be_a_republican_turnoff</link></item>
+<item><title>EDITH: Lower Health Care Costs Using AI For Breast Cancer Screenings - Science 2.0</title><link>https://www.science20.com/content/edith_lower_health_care_costs_using_ai_for_breast_cancer_screenings</link></item>
+<item><title>In Finland, Farmers Are Now Forced To Yell At Geese To Try And Keep Crops From Being Ruined - Science 2.0</title><link>https://www.science20.com/hank_campbell/in_finland_farmers_are_now_forced_to_yell_at_geese_to_try_and_keep_crops_from_being_ruined-257311</link></item>
+<item><title>Overcoming Misinformation And Reconnecting With Science Deniers - Science 2.0</title><link>https://www.science20.com/payal_joshi/overcoming_misinformation_and_reconnecting_with_science_deniers-257310</link></item>
+<item><title>Corporate Media - &amp;#39;Young People Are Dying&amp;#39; But People Are Actually Healthier Than Ever - Science 2.0</title><link>https://www.science20.com/hank_campbell/corporate_media_young_people_are_dying_but_people_are_actually_healthier_than_ever-257309</link></item>
+<item><title>Are Infectious Diseases A Social Justice Issue? A History Of The World In Six Plagues Has Answers - Science 2.0</title><link>https://www.science20.com/hank_campbell/are_infectious_diseases_a_social_justice_issue_a_history_of_the_world_in_six_plagues_has_answers-257308</link></item>
+<item><title>Chemical Looping Plastic And CO2: Science Even Environmental Groups Can&amp;#39;t Hate - Science 2.0</title><link>https://www.science20.com/hank_campbell/chemical_looping_plastic_and_co2_science_even_environmental_groups_cant_hate-257307</link></item>
+<item><title>The Multi-Muon Analysis - A Recollection - Science 2.0</title><link>https://www.science20.com/tommaso_dorigo/the_multimuon_analysis_a_recollection-257306</link></item>
+<item><title>3 Pro-Science Action Items For EPA Administrator Lee Zeldin - Science 2.0</title><link>https://www.science20.com/hank_campbell/3_proscience_action_items_for_epa_administrator_lee_zeldin-257305</link></item>
+<item><title>Gym Paradox: People Want To Get Healthier But Until They&amp;#39;re Healthier Don&amp;#39;t Feel Comfortable - Science 2.0</title><link>https://www.science20.com/hank_campbell/gym_paradox_people_want_to_get_healthier_but_until_theyre_healthier_dont_feel_comfortable-257304</link></item>
+<item><title>Warming Up Cars Before Driving In The Winter: Combustion No, Electric Yes - Science 2.0</title><link>https://www.science20.com/content/warming_up_cars_before_driving_in_the_winter_combustion_no_electric_yes</link></item>
+<item><title>Marijuana&amp;#39;s Impact On Working Memory Revealed In Brain Scans - Science 2.0</title><link>https://www.science20.com/news_staff/marijuanas_impact_on_working_memory_revealed_in_brain_scans-257302</link></item>
+<item><title>Cardiac Medication Digoxin Off Label Reduces Risk Of Breast Cancer Metastases - Science 2.0</title><link>https://www.science20.com/news_staff/cardiac_medication_digoxin_off_label_reduces_risk_of_breast_cancer_metastases-257300</link></item>
+<item><title>Electric Cars Match Gas And Diesel For Longevity - Science 2.0</title><link>https://www.science20.com/news_staff/electric_cars_match_gas_and_diesel_for_longevity-257301</link></item>
+<item><title>USTR Seeks Public Comment on Proposed Actions in Section 301 Investigation of China’s Targeting of the Maritime, Logistics, and Shipbuilding Sectors for Dominance - United States Trade Representative</title><link>https://ustr.gov/about-us/policy-offices/press-office/press-releases/2025/february/ustr-seeks-public-comment-proposed-actions-section-301-investigation-chinas-targeting-maritime</link></item>
+<item><title>USTR Seeks Comment from the Public on Unfair and Non-Reciprocal Foreign Trade Practices - United States Trade Representative</title><link>https://ustr.gov/about-us/policy-offices/press-office/press-releases/2025/february/ustr-seeks-comment-public-unfair-and-non-reciprocal-foreign-trade-practices-0</link></item>
+<item><title>Public Hearing Regarding the 2025 Special 301 Review - United States Trade Representative</title><link>https://ustr.gov/about-us/policy-offices/press-office/press-releases/2025/february/public-hearing-regarding-2025-special-301-review</link></item>
+<item><title>United States Welcomes Mexico’s Actions Towards Resolving USMCA Biotech Corn Dispute - United States Trade Representative</title><link>https://ustr.gov/about-us/policy-offices/press-office/press-releases/2025/february/united-states-welcomes-mexicos-actions-towards-resolving-usmca-biotech-corn-dispute</link></item>
+<item><title>能装香水：华硕发布 Fragrance 办公鼠标，三模无线，带香氛系统 - 什么值得买</title><link>https://post.smzdm.com/p/an9olx73/</link></item>
+<item><title>网传丨AMD RX 9070 系列核心配置、及功耗曝光 - 什么值得买</title><link>https://post.smzdm.com/p/a7po3epd/</link></item>
+<item><title>芝奇发布增强版 DDR5 R-DIMM 内存解决方案，加厚PCB、供电更安全 - 什么值得买</title><link>https://post.smzdm.com/p/aqqplnqk/</link></item>
+<item><title>风险提示丨部分 RTX 5090 存在缺 ROP 单元问题，重负载游戏稍有影响 - 什么值得买</title><link>https://post.smzdm.com/p/a96d737e/</link></item>
+<item><title>Satechi 发布 USB-C 高端扩展坞，1托13、支持苹果 MacOS - 什么值得买</title><link>https://post.smzdm.com/p/am360lwz/</link></item>
+<item><title>太像了！华擎发布 B650M Pro X3D/WiFi 主板，和某 B850M 几乎一模一样 - 什么值得买</title><link>https://post.smzdm.com/p/ag5r9gvm/</link></item>
+<item><title>大的来了！乐高侏罗纪系列新品76968曝光，1米长霸王龙化石骨架震撼亮相 - 什么值得买</title><link>https://post.smzdm.com/p/a5p564d3/</link></item>
+<item><title>七年跟上华为，iPhone 17 Pro 将支持反向无线充 - 什么值得买</title><link>https://post.smzdm.com/p/aprpez0w/</link></item>
+<item><title>比亚迪华为联合发布豹5智驾版上市，方程豹开启全民智能硬派新时代 - 什么值得买</title><link>https://post.smzdm.com/p/avde0z2m/</link></item>
+<item><title>爆款游戏《漫威争锋》玩家数突破4000万 - 什么值得买</title><link>https://post.smzdm.com/p/a343zlld/</link></item>
+<item><title>中国特供：AMD 发布 Ryzen AI 9 H 365 等三款新处理器 - 什么值得买</title><link>https://post.smzdm.com/p/a8prqpo0/</link></item>
+<item><title>市场丨NVIDIA RTX 5070 Ti 依旧缺货，售价6299元——9000元+ - 什么值得买</title><link>https://post.smzdm.com/p/azo4rxzo/</link></item>
+<item><title>我是刚大木：PG UNLEASHED 1/60 牛高达 商品化决定 - 什么值得买</title><link>https://post.smzdm.com/p/agw09eem/</link></item>
+<item><title>继续缺货！NVIDIA RTX 50 全系供货维持紧张，RTX 5090 最长要等100天 - 什么值得买</title><link>https://post.smzdm.com/p/azo4985n/</link></item>
+<item><title>网传丨AMD Ryzen 9 9950X3D/9900X3D 将于3月11日解禁；英特尔酷睿 Ultra 200HX 紧随其后 - 什么值得买</title><link>https://post.smzdm.com/p/a7pol35l/</link></item>
+<item><title>网传丨NVIDIA RTX 5070 Ti 产能爬坡中......RTX 5060 系列大概率推迟上市 - 什么值得买</title><link>https://post.smzdm.com/p/aqqpv78p/</link></item>
+<item><title>腾讯《洛克王国：世界》开启第二轮“等等鸭”测试，跨平台数据互通新体验 - 什么值得买</title><link>https://post.smzdm.com/p/a74we0rg/</link></item>
+<item><title>《GTA5》PC版3月4日将免费升级，引入光追、杜比全景声 - 什么值得买</title><link>https://post.smzdm.com/p/az7q9n9n/</link></item>
+<item><title>科技东风｜三大厂将停产 DDR4 内存；京东为骑手缴纳五险一金，美团跟进；倩女幽魂4K修复版定档3月21日 - 什么值得买</title><link>https://news.smzdm.com/p/104688589/</link></item>
+<item><title>苹果发布 iPhone 16e，全面蜕变、“刘海儿”屏、A18、苹果自研C1 5G基带、长续航、无线充电 - 什么值得买</title><link>https://news.smzdm.com/p/97627150/</link></item>
+<item><title>新品资讯：DeepSeek深度赋能的全场景学习革命！有道SpaceOne全面屏答疑笔火爆上市 - 什么值得买</title><link>https://news.smzdm.com/p/104669387/</link></item>
+<item><title>零跑新T03正式上市，售价5.99万元起 - 什么值得买</title><link>https://news.smzdm.com/p/104741858/</link></item>
+<item><title>OPPO 发布 Find N5 新旗舰，厚度对标直板机、骁龙 8至尊、接入 DeepSeek - 什么值得买</title><link>https://news.smzdm.com/p/97705326/</link></item>
+<item><title>14.33万真香价！凯迪拉克2.0T后驱神车，买这台车99%都是懂车的， - 什么值得买</title><link>https://news.smzdm.com/p/104758340/p2/#li_comment_340377651</link></item>
+<item><title>听泉鉴宝一眼鉴定真假是怎么做到的？ - 什么值得买</title><link>https://news.smzdm.com/p/104799012/p2/#li_comment_340383725</link></item>
+<item><title>京东外卖骑手端上铁饭碗引热议：吃外卖会涨价吗？网友神评炸锅 - 什么值得买</title><link>https://news.smzdm.com/p/104689721/p5/#li_comment_340372695</link></item>
+<item><title>你会买吗？宇树负责人称机器人有望降至三四千元 - 什么值得买</title><link>https://news.smzdm.com/p/104671697/p4/#li_comment_340385965</link></item>
+<item><title>小米“血洗”空调行业！新品23999元起售：无视董明珠、对标大金 - 什么值得买</title><link>https://news.smzdm.com/p/104777422/p3/#li_comment_340382029</link></item>
+<item><title>上汽、华为宣布合作！“尚界”基本确定，15万元的华为智驾车型？ - 什么值得买</title><link>https://news.smzdm.com/p/104798318/p3/#li_comment_340378930</link></item>
+<item><title>清洁｜石头A30 Pure：千元洗地机，却给满旗舰的平躺高温零卷毛！ - 什么值得买</title><link>https://post.smzdm.com/p/al92g0l8/</link></item>
+<item><title>性价比机皇能否扛起家庭清洁大旗？石头大白洗地机A30 Pure告诉你 - 什么值得买</title><link>https://post.smzdm.com/p/aqz7xwpv/</link></item>
+<item><title>6合1新机皇，多维百变搞定全屋清洁—追觅H30 Combo洗地机 - 什么值得买</title><link>https://post.smzdm.com/p/a0z5ore8/</link></item>
+<item><title>SAMYANG 三养 火鸡面 原味 140g - 什么值得买</title><link>https://www.smzdm.com/p/141636134/</link></item>
+<item><title>喜马拉雅vip会员半年卡+肯德基大神卡年卡 - 什么值得买</title><link>https://www.smzdm.com/p/141611167/</link></item>
+<item><title>TOMMY HILFIGER 男士衬衫 - 什么值得买</title><link>https://www.smzdm.com/p/141689765/</link></item>
+<item><title>Epic Games Epic游戏 《荒野大镖客2》标准版 PC数字版游戏 - 什么值得买</title><link>https://www.smzdm.com/p/141617726/</link></item>
+<item><title>Epic Games Epic游戏 《秘奥法师》PC数字版游戏 - 什么值得买</title><link>https://www.smzdm.com/p/141628347/</link></item>
+<item><title>Tory Burch美国开启 低至5折私人大促 - 什么值得买</title><link>https://www.smzdm.com/p/141680725/</link></item>
+<item><title>COSMIC Desktop Alpha 6 Released with Many Changes - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/02/cosmic-desktop-alpha-6-released</link></item>
+<item><title>Ubuntu 24.04.2 LTS is Available to Download - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/02/ubuntu-24-04-2-lts-is-now-available-to-download</link></item>
+<item><title>Mozilla Announce Leadership Changes, Plans to ‘Diversify’ - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/02/mozilla-announces-leadership-changes-in-an-effort-to-diversify</link></item>
+<item><title>Mesa 25.0 Released with Support for Vulkan 1.4 &amp; OpenGL 4.6 - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/02/mesa-25-0-vulkan-1-4-amd-rdna4</link></item>
+<item><title>Power Profiles Daemon 0.30 Preps Support for Linux 6.14 - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/02/power-profiles-daemon-0-30-preps-support-for-linux-6-14</link></item>
+<item><title>Ubuntu LTS Users Might Soon Get Frequent Intel GPU Updates - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/02/ubuntu-lts-users-could-get-intel-graphics-driver-updates-more-frequently</link></item>
+<item><title>How to Disable (or Change) Login Sound in Ubuntu 24.10 - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/02/disable-or-change-ubuntu-login-sound</link></item>
+<item><title>Tiling Shell GNOME Extension Expands Window Suggestions - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/02/tiling-shell-update-adds-window-suggestions-for-screen-edge-snapping</link></item>
+<item><title>Ubuntu to Fix a Not-So-Obvious ‘Bug’ in its Icon Theme - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/02/ubuntus-icon-theme-resized</link></item>
+<item><title>Ubuntu 24.04.2 Delayed, Won’t Be Released This Week - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/02/ubuntu-24-04-second-point-release-delay</link></item>
+<item><title>GNOME’s Website Just Got a Major Redesign - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/02/gnome-website-revamp-goes-live</link></item>
+<item><title>Clapper Media Player Adds New Features, Official Windows Build - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/02/clapper-update-adds-official-windows-builds</link></item>
+<item><title>KDE Plasma 6.3 Released, This is What’s New - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/02/kde-plasma-6-3-released-this-is-whats-new</link></item>
+<item><title>ONLYOFFICE 8.3 Released, Now Supports Apple iWork Files - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/02/onlyoffice-8-3-released-new-features</link></item>
+<item><title>How to Disable ‘App is Ready’ Notifications in Ubuntu - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/02/disable-window-is-ready-notifications-gnome-shell</link></item>
+<item><title>Big Security Flaw in Rsync Patched in Ubuntu - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/01/rsync-secuity-bugs-ubuntu-updates</link></item>
+<item><title>吾爱大佬两年磨一剑！我愿称为「装机必备」 - 什么值得买</title><link>https://post.smzdm.com/p/axdvr282/</link></item>
+<item><title>AirPods 超强伴侣？Windows 端终于来了！ - 什么值得买</title><link>https://post.smzdm.com/p/a44nkmol/</link></item>
+<item><title>一个严重被低估的NAS机箱，设计独特联想ideacentre D400魔改装机 - 什么值得买</title><link>https://post.smzdm.com/p/aqz5do2x/</link></item>
+<item><title>碚Zheteng-程亮 - 什么值得买</title><link>https://zhiyou.smzdm.com/member/8284414411/</link></item>
+<item><title>旧电脑重生秘籍：Windows 11 X Lite轻量级系统安装全攻略 - 什么值得买</title><link>https://post.smzdm.com/p/aoqrwp2m/</link></item>
+<item><title>小米YU7内饰曝光，据传搭载环视投影屏，采用SU7 Ultra同款方向盘 - 什么值得买</title><link>https://post.smzdm.com/p/al92zwwp/</link></item>
+<item><title>清华大学第四弹：普通人如何抓住DeepSeek红利（附免费下载） - 什么值得买</title><link>https://post.smzdm.com/p/a44nk05x/</link></item>
+<item><title>斐讯智能插排“起死回生”，接入米家APP，改造成本40元 - 什么值得买</title><link>https://post.smzdm.com/p/adz3r28x/</link></item>
+<item><title>清华DeepSeek教程又双叒叕更新了！（共5份PDF下载） - 什么值得买</title><link>https://post.smzdm.com/p/amvn5rgz/</link></item>
+<item><title>免签国+1！东南亚最壕国，面积比上海小，拿黄金做屋顶！这条CP路线这么玩才够味！ - 什么值得买</title><link>https://post.smzdm.com/p/aoqr6ogr/</link></item>
+<item><title>京东以旧换新，爱回收有没有套路？史低iphone16promax - 什么值得买</title><link>https://post.smzdm.com/talk/p/a243go9n/</link></item>
+<item><title>铭瑄“瑷珈”主板装机记：性能与个性双赢 - 什么值得买</title><link>https://post.smzdm.com/p/a3438ord/</link></item>
+<item><title>华为余承东、蔚来李斌互相隔空喊话：这种事最好CEO亲自上 - 什么值得买</title><link>https://post.smzdm.com/p/a44n0pkw/</link></item>
+<item><title>【有奖征稿】民俗故事征集，赢海量金币及百元京东E卡好礼！ - 什么值得买</title><link>https://post.m.smzdm.com/ajax_m/activity/100406</link></item>
+<item><title>【有奖征稿】寻找世界隐秘角落，晒出你的宝藏小众旅行地，100元京东E卡等你来拿！ - 什么值得买</title><link>https://post.m.smzdm.com/ajax_m/activity/100410</link></item>
+<item><title>有奖征稿 | AI搭子已就位，开工卷出新高度！分享你的开工搭子，赢大额E卡与金币~ - 什么值得买</title><link>https://post.m.smzdm.com/ajax_m/activity/100414</link></item>
+<item><title>【有奖征稿】开年就要开燥，聊聊你的运动健身历程和装备吧！活动最高有机会得500元E卡，拒绝套路，真金白银等你来拿！ - 什么值得买</title><link>https://post.m.smzdm.com/ajax_m/activity/100413</link></item>
+<item><title>在高砖商城复刻一台42111 唐老大的道奇战马是一种怎么样的体验？ - 什么值得买</title><link>https://post.smzdm.com/p/admev22z/</link></item>
+<item><title>30MB/s极速下载，我又找到了开源神器！ - 什么值得买</title><link>https://post.smzdm.com/p/a74wz5z5/</link></item>
+<item><title>OPPO手机质量好，一用就是五年多，不过分吧？ - 什么值得买</title><link>https://post.smzdm.com/p/adz3n9pk/</link></item>
+<item><title>25.7k Star！一键部署个人云电脑，百万用户产品开源了！ - 什么值得买</title><link>https://post.smzdm.com/p/axdv2q63/</link></item>
+<item><title>240Hz高刷0.03ms疾速响应，ROG超神27 如何实现大师级显示体验？ - 什么值得买</title><link>https://post.smzdm.com/p/adz3v29d/</link></item>
+<item><title>被网友的收纳智慧惊呆了，只是换个思路，鸡肋空间就被巧妙利用了 - 什么值得买</title><link>https://post.smzdm.com/p/ak3egr58/</link></item>
+<item><title>沃尔沃XC60购车体验：期望与现实的落差 - 什么值得买</title><link>https://post.smzdm.com/p/a24396m7/</link></item>
+<item><title>信用卡小白攻略：从入门到高手，一路避坑指南 - 什么值得买</title><link>https://post.smzdm.com/p/al92wxve/</link></item>
+<item><title>让AI来陪你学外语，使用NAS部署一个口语对话练习应用BabelDuck - 什么值得买</title><link>https://post.smzdm.com/p/ak3erpdk/</link></item>
+<item><title>阿里云百炼DeepSeek免费部署，671B满血版分分钟搞定！ - 什么值得买</title><link>https://post.smzdm.com/p/az7qmw35/</link></item>
+<item><title>79元刷不死的老机皇，啥系统都能刷，关键还能刷IOS系统？ - 什么值得买</title><link>https://post.smzdm.com/p/ak3eg0kk/</link></item>
+<item><title>22.1k Star！超越 Notion 的个人知识笔记神器！ - 什么值得买</title><link>https://post.smzdm.com/p/a64grwxz/</link></item>
+<item><title>再见 TeamViewer、向日葵！开源远程神器，一键连接，开箱即用！ - 什么值得买</title><link>https://post.smzdm.com/p/ardgvp3w/</link></item>
+<item><title>信用卡按时还款全攻略：守护信用资产，避开债务陷阱的三大法则 - 什么值得买</title><link>https://post.smzdm.com/p/a94orw3o/</link></item>
+<item><title>讲个笑话，本田飞度月销只有300多了！降价了你还会买吗？ - 什么值得买</title><link>https://post.smzdm.com/p/ak3egnge/</link></item>
+<item><title>玩了半小时，我退订了！ - 什么值得买</title><link>http://post.smzdm.com/talk/p/ae50z99z/</link></item>
+<item><title>玩乐高的尽头是买房子？这款长度超过一米的套装下个月就要来了！ - 什么值得买</title><link>https://post.smzdm.com/p/a343v347/</link></item>
+<item><title>有些酒喝过就不想再买了-蒙大菲七月夜混酿干红 - 什么值得买</title><link>https://post.smzdm.com/p/aoqr2356/</link></item>
+<item><title>从静态摆件升级为“车水马龙”！让乐高街景“动”起来！ - 什么值得买</title><link>https://post.smzdm.com/p/axdv25r3/</link></item>
+<item><title>装修降级：600多元的最便宜恒洁马桶，给了我最顺畅的便便体验。 - 什么值得买</title><link>https://post.smzdm.com/p/aprp3p47/</link></item>
+<item><title>40多万买车，价格差不多的它们你会怎么选❓ - 什么值得买</title><link>http://post.smzdm.com/talk/p/a0z4o2z8/</link></item>
+<item><title>这手机居然集轻薄与性能于一体！一加Ace5 Pro分享体验 - 什么值得买</title><link>https://test.smzdm.com/pingce/p/104031531/</link></item>
+<item><title>Docker delays Hub pull limits by a month, tweaks maximums, stalls storage billing indefinitely - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/22/docker_hub_pull_limits/</link></item>
+<item><title>Data is very valuable, just don&amp;#39;t ask us to measure it, leaders say - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/21/data_survey_analyst/</link></item>
+<item><title>Los Alamos boffins slap blinkers on satellites so we know who to blame in a crash - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/21/lanl_elroi/</link></item>
+<item><title>T-Mobile US puts NYC emergency services in the 5G fast lane with network slicing - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/21/tmobile_5g_network_slicing/</link></item>
+<item><title>Elon Musk calls for International Space Station to be deorbited by 2027 - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/21/elon_musk_iss_mogensen_insult/</link></item>
+<item><title>ST Micro skips in, arm in arm with AWS, bearing a chip for 1.6 Tbps pluggable optics - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/21/st_micro_pluggables/</link></item>
+<item><title>Experts race to extract intel from Black Basta internal chat leaks - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/21/experts_race_to_extract_intel/</link></item>
+<item><title>HP ditches 15-minute wait time policy due to &amp;#39;feedback&amp;#39; - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/21/hp_ditches_15_minute_wait_time_call_centers/</link></item>
+<item><title>Hey programmers – is AI making us dumber? - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/21/opinion_ai_dumber/</link></item>
+<item><title>DIMM techies weren’t allowed to leave the building until proven to not be pilferers - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/21/on_call/</link></item>
+<item><title>As Amazon takes over the Bond franchise, we submit our scripts for the next flick - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/21/amazon_bond_franchise_sold/</link></item>
+<item><title>Ivanti endpoint manager can become endpoint ravager, thanks to quartet of critical flaws - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/21/ivanti_traversal_flaw_poc_exploit/</link></item>
+<item><title>Lenovo isn&amp;#39;t fussed by Trumpian tariffs or finding enough energy to run AI - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/21/lenovo_q3_2024/</link></item>
+<item><title>Thailand ready to welcome 7,000 trafficked scam call center victims back from Myanmar - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/21/thailand_ready_to_welcome_7000/</link></item>
+<item><title>National Science Foundation staff axed by Trump fear for US scientific future - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/21/nsf_staff_cut/</link></item>
+<item><title>Linux royalty backs adoption of Rust for kernel code, says its rise is inevitable - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/21/linux_c_rust_debate_continues/</link></item>
+<item><title>Microsoft expands Copilot bug bounty targets, adds payouts for even moderate messes - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/20/microsoft_copilot_bug_bounty_updated/</link></item>
+<item><title>Oops, some of our customers&amp;#39; Power Pages-hosted sites were exploited, says Microsoft - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/20/microsoft_patch_power_pages/</link></item>
+<item><title>GitLab and its execs sued again and again over &amp;#39;misleading&amp;#39; AI hype, price hikes - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/20/gitlab_thrice_sued/</link></item>
+<item><title>Laptop makers stalled on repairability improvements - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/20/laptop_manufacturers_repairability/</link></item>
+<item><title>Euro cloud biz trials &amp;#39;server blades in a cold box&amp;#39; system - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/20/diggers_exoscale_liquid_cooling/</link></item>
+<item><title>US minerals company says crooks broke into email and helped themselves to $500K - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/20/niocorp_bec_scam/</link></item>
+<item><title>Microsoft Azure faceplants in Norway, taking government services with it - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/20/microsoft_azure_outage_norway/</link></item>
+<item><title>NASA&amp;#39;s on-again, off-again job cuts – what&amp;#39;s the plan? - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/20/nasa_comment_piece/</link></item>
+<item><title>Critical flaws in Mongoose library expose MongoDB to data thieves, code execution - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/20/mongoose_flaws_mongodb/</link></item>
+<item><title>Talk of Broadcom and TSMC grabbing pieces of Intel lights fire under investors - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/20/intel_carveup/</link></item>
+<item><title>Insiders say IBM&amp;#39;s broader return-to-office plan hits older, more expensive staff hard - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/20/ibm_colocation_program_described_as/</link></item>
+<item><title>HP deliberately adds 15 minutes waiting time for telephone support calls - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/20/hp_deliberately_adds_15_minutes/</link></item>
+<item><title>UK tax authority eyes £880M overhaul for Northern Ireland trade services - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/20/hmrc_ni_trade_services/</link></item>
+<item><title>Two arrested after pensioner scammed out of six-figure crypto nest egg - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/20/aberdeen_crypto_scam_arrests/</link></item>
+<item><title>Dark mode might be burning more juice than you think - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/20/dark_mode_energy_saving/</link></item>
+<item><title>DXC paid 50% more than original contract value for disastrous public sector Oracle project - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/20/dxc_oracle_uk_contract/</link></item>
+<item><title>Ghost ransomware crew continues to haunt IT depts with scarily bad infosec - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/20/fbi_beware_of_ghost_ransomware/</link></item>
+<item><title>Medusa ransomware gang demands $2M from UK private health services provider - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/20/medusa_hcrg_ransomware/</link></item>
+<item><title>A big AI build has ‘stalled’ and won’t happen this year as funds and GPUs prove elusive - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/20/a_big_ai_build_has/</link></item>
+<item><title>France tops China’s tokamak record with 22-minute plasma containment run - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/20/france_tops_chinas_tokamak_record/</link></item>
+<item><title>US Army soldier linked to Snowflake extortion rampage admits breaking the law - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/02/20/us_army_snowflake_theft/</link></item>
+<item><title>Skinnytaste Community - Skinnytaste</title><link>https://skinnytaste.raptive.com/?utm_campaign=skinnytaste-community-signup&amp;utm_source=skinnytaste.com&amp;utm_medium=r%20eferral&amp;utm_content=skinnytaste_navigation</link></item>
+<item><title>Chicken Tenders - Skinnytaste</title><link>https://www.skinnytaste.com/chicken-tenders/</link></item>
+<item><title>Skillet Lasagna - Skinnytaste</title><link>https://www.skinnytaste.com/skillet-lasagna/</link></item>
+<item><title>Chocolate Covered Stuffed Dates - Skinnytaste</title><link>https://www.skinnytaste.com/chocolate-covered-stuffed-dates/</link></item>
+<item><title>Lobster Risotto - Skinnytaste</title><link>https://www.skinnytaste.com/lobster-risotto/</link></item>
+<item><title>Stuffed Peppers - Skinnytaste</title><link>https://www.skinnytaste.com/stuffed-peppers/</link></item>
+<item><title>Moist Chocolate Cake Recipe - Skinnytaste</title><link>https://www.skinnytaste.com/homemade-skinny-chocolate-cake/</link></item>
+<item><title>Chocolate-Covered Strawberry Chia Pudding - Skinnytaste</title><link>https://www.skinnytaste.com/strawberry-chia-pudding/</link></item>
+<item><title>Slow Cooker Ground Beef Ragu - Skinnytaste</title><link>https://www.skinnytaste.com/slow-cooker-beef-ragu/</link></item>
+<item><title>Air Fryer Chicken Bites - Skinnytaste</title><link>https://www.skinnytaste.com/air-fryer-chicken-bites/</link></item>
+<item><title>Slow Cooker Hungarian Goulash - Skinnytaste</title><link>https://www.skinnytaste.com/slow-cooker-hungarian-goulash/</link></item>
+<item><title>Free 7 Day Healthy Meal Plan (Feb 17-23) - Skinnytaste</title><link>https://www.skinnytaste.com/free-7-day-healthy-meal-plan-feb-17-23/</link></item>
 </channel></rss>
