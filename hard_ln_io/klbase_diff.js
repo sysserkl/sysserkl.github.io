@@ -99,14 +99,14 @@ function remove_empty_lines_diff_b(){
     }
 }
 
-function compare_diff_b(do_submit=false){
+function compare_lines_diff_b(do_submit=false,other_string=''){
     var odiv=div_get_diff_b();
     if (!odiv){return;}
 
     var blstr1=document.querySelector('textarea[name="textarea_diff_1"]').value;
     var blstr2=document.querySelector('textarea[name="textarea_diff_2"]').value;
     if (blstr1==blstr2){
-        odiv.innerHTML='完全一致';   
+        odiv.innerHTML=other_string+'<h3>行差集</h3><p>完全一致</p>';   
         return;
     }
     
@@ -121,7 +121,7 @@ function compare_diff_b(do_submit=false){
     var diff2=array_difference_b(list_t2,list_t1);
     
     var result_t=[];
-    result_t.push('<h3>行数</h3>');
+    result_t.push('<h4>行数</h4>');
     result_t.push('<p>'+list_t1.length+' - '+list_t2.length+'</p>');
 
     if (list_t1.length>=list_t2.length){
@@ -145,14 +145,14 @@ function compare_diff_b(do_submit=false){
     }
 
     if (diff1.length>0){
-        result_t.push('<h2 style="background-color:'+scheme_global['skyblue']+';">-</h3>');
+        result_t.push('<p style="background-color:'+scheme_global['skyblue']+';">-</p>');
         result_t.push('<div class="div_two_list_diff_1">'+array_2_li_b(diff1)+'</div>');
     }
     if (diff2.length>0){
-        result_t.push('<h2 style="background-color:'+scheme_global['pink']+';">+</h3>');
+        result_t.push('<p style="background-color:'+scheme_global['pink']+';">+</p>');
         result_t.push('<div class="div_two_list_diff_2">'+array_2_li_b(diff2)+'</div>');
     }
-    odiv.innerHTML=result_t.join('\n');
+    odiv.innerHTML=other_string+'<h3>行差集</h3>'+result_t.join('\n');
     key_location_diff_b([[1,'textarea_diff_1'],[2,'textarea_diff_2']]);
 }
 
@@ -179,23 +179,28 @@ function do_type_diff_b(){
             blank_rows_remove_klr_b('textarea_diff_1');
             blank_rows_remove_klr_b('textarea_diff_2');
             break;
+        case '隐藏/显示相同行':
+            hide_show_diff_b();
+            break;
     }
 }
 
 function buttons_diff_b(){
     var bljg='';
     bljg=bljg+'<select id="select_do_type_diff" style="height:2rem;">';
-    for (let item of ['add blank rows','remove blank rows','替换连续空格为一个空格，替换\\t为空格','转换为英文标点','移除所有空格','移除汉字间的空格']){
+    for (let item of ['add blank rows','remove blank rows','替换连续空格为一个空格，替换\\t为空格','转换为英文标点','移除所有空格','移除汉字间的空格','隐藏/显示相同行']){
         bljg=bljg+'<option>'+item+'</option>';
     }
     bljg=bljg+'</select> ';
     bljg=bljg+'<span class="aclick" onclick="do_type_diff_b();">执行</span> ';    
-    bljg=bljg+'<span class="aclick" onclick="remove_space_diff_b();">去除段落前后空格</span> ';
-    bljg=bljg+'<span class="aclick" onclick="remove_empty_lines_diff_b();">去除空行</span> ';
-    bljg=bljg+'<span class="aclick" onclick="hide_show_diff_b();">隐藏/显示相同行</span> ';
+    bljg=bljg+'<span class="aclick" onclick="remove_space_diff_b();">① 去除段落前后空格</span> ';
+    bljg=bljg+'<span class="aclick" onclick="remove_empty_lines_diff_b();">② 去除空行</span> ';
+    bljg=bljg+'<span class="aclick" onclick="remove_space_diff_b(); remove_empty_lines_diff_b();">① + ②</span> ';
+
     bljg=bljg+'<span class="aclick" onclick="clear_textarea_diff_b(\'12\',\'diff\');">清空两个编辑框</span> ';
-    bljg=bljg+'<span class="aclick" onclick="textarea_diff_b();">编辑框对比</span> ';    
-    bljg=bljg+'<span class="aclick" onclick="compare_diff_b();">行差集</span> ';    
+    bljg=bljg+'<span class="aclick" onclick="compare_textarea_diff_b();">❸ 编辑框对比</span> ';    
+    bljg=bljg+'<span class="aclick" onclick="compare_lines_diff_b();">❹ 行差集</span> ';    
+    bljg=bljg+'<span class="aclick" onclick="compare_textarea_diff_b(true);">❸ + ❹</span> ';    
     
     document.getElementById('span_diff_buttons').innerHTML=bljg;
     
@@ -206,7 +211,7 @@ function buttons_diff_b(){
     if (odiv){
         var blbuttons='<p><input type="text" id="input_line1_compare" style="width:90%;" /><span class="span_box" onclick="find_in_textarea_diff_b(1);" title="从编辑框指定位置开始查找字符串">📍</span></p>\n';
         blbuttons=blbuttons+'<p><input type="text" id="input_line2_compare" style="width:90%;" /><span class="span_box" onclick="find_in_textarea_diff_b(2);" title="从编辑框指定位置开始查找字符串">📍</span></p>\n';
-        blbuttons=blbuttons+'<p><span class="aclick" onclick="line_compare_diff_b();">行对比</span>';
+        blbuttons=blbuttons+'<p><span class="aclick" onclick="compare_one_line_diff_b();">行对比</span>';
         blbuttons=blbuttons+'<span class="aclick" onclick="replace_textarea_diff_b(1);">左侧替换</span>';
         blbuttons=blbuttons+'<span class="aclick" onclick="replace_textarea_diff_b(2);">右侧替换</span>';
         blbuttons=blbuttons+'<label><input type="checkbox" id="checkbox_reg_diff_b" />正则</label> ';
@@ -243,10 +248,16 @@ function find_in_textarea_diff_b(csno){
     textarea_top_bottom_b('textarea_diff_'+csno,blstr,-1);
 }
 
-function textarea_diff_b(){
-    var diff_str=two_list_diff_b(false,false,'textarea_diff_1','textarea_diff_2')[1];
+function compare_textarea_diff_b(compare_lines=false){
+    var diff_str,is_ok;
+    [diff_str,is_ok]=two_list_diff_b(false,false,'textarea_diff_1','textarea_diff_2').slice(1,3);
+    diff_str='<h3>编辑框对比</h3>'+diff_str;
     document.getElementById('div_diff').innerHTML=diff_str;
     key_location_diff_b([[1,'textarea_diff_1'],[2,'textarea_diff_2']]);
+    
+    if (is_ok && compare_lines){
+        compare_lines_diff_b(false,diff_str);
+    }
 }
 
 function upload_txt_diff_b(csno){
@@ -271,7 +282,7 @@ function upload_txt_diff_b(csno){
     }
 }
 
-function line_compare_diff_b(){
+function compare_one_line_diff_b(){
     var oinput1=document.getElementById('input_line1_compare');
     var oinput2=document.getElementById('input_line2_compare');
     var odiv=document.getElementById('div_line_compare_result');
@@ -323,6 +334,7 @@ function init_diff_b(){
     buttons_diff_b();
     count_diff_b();
     menu_diff_b();
+    character_2_icon_b('⚖');
 }
 
 function menu_diff_b(){

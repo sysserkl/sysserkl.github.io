@@ -138,7 +138,7 @@ function menu_today_words(){
     '<span class="span_menu" onclick="'+str_t+'show_new_words_enwc_b(\'span.span_explanation\');">显示释义中的生词</span>',
     ];
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','12rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🗓','12rem','1rem','1rem','60rem'),'','0rem')+' ');
     if (!ismobile_b()){
         klmenu_check_b('span_source_en_b',true);
     }    
@@ -146,6 +146,7 @@ function menu_today_words(){
 
 function init_today_words(){
     function sub_init_today_words_fn(){
+        character_2_icon_b('🗓️');
         local_storage_today_b('enwords_statistics',40,enwords.length,'/');
         words_count_enwords_b();
         menu_today_words();

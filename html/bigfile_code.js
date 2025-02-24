@@ -72,6 +72,10 @@ function menu_bigfile(){
     '<span class="span_menu" onclick="'+str_t+'statistics_ext_bigfile();">当前条件文件扩展名统计</span>',
     ];
 
+    var klmenu_batch=[
+    '<span class="span_menu" onclick="'+str_t+'batch_open_bigfile(\'dnsrb\');">diff+notepad+selenium_enwords+readlater+BT</span>',
+    ];
+
     var klmenu_config=root_font_size_menu_b(str_t);
     klmenu_config=klmenu_config.concat([
     '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'bigfile\');">更新版本</span>',
@@ -86,10 +90,58 @@ function menu_bigfile(){
     ];    
     klmenu_config.push(menu_container_b(str_t,group_list,''));
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'𖧶','15rem','1rem','1rem','30rem')+'<span id="span_menu_htm_bigfile"></span>'+klmenu_b(klmenu_config,'⚙','19rem','1rem','1rem','30rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'𖧶','15rem','1rem','1rem','30rem')+'<span id="span_menu_htm_bigfile"></span>'+klmenu_b(klmenu_batch,'📦','19rem','1rem','1rem','30rem')+klmenu_b(klmenu_config,'⚙','19rem','1rem','1rem','30rem'),'','0rem')+' ');
     
     klmenu_check_b('span_reg_bigfile',true);        
     first_source_set_bigfile(false);
+}
+
+function batch_open_bigfile(cstype){
+    function sub_batch_open_bigfile_open(){
+        if (blxl>=bllen){
+            document.title=old_title;
+            return;
+        }
+        
+        window.open(name_list[blxl]);
+        blxl=blxl+1;
+        document.title=blxl+'/'+bllen+' - '+old_title;
+        setTimeout(sub_batch_open_bigfile_open,2000);
+    }
+    
+    function sub_batch_open_bigfile_links(){
+        for (let blno=0,lent=name_list.length;blno<lent;blno++){
+            name_list[blno]=blhref+name_list[blno];
+        }
+        name_list=array_union_b(name_list,other_list);
+    }
+    
+    if (location.href.includes('?render&idb')){
+        var blhref=location.origin+'?render&idb&htm=';
+    } else if (location.href.match(/\/html\/[^\/]+$/)){
+        var blhref=location.href.split(/\/html\/[^\/]+$/)[0]+'/html/';
+    } else {
+        alert('未知网址路径');
+        return;
+    }
+    
+    var name_list=[];
+    var other_list=[];
+    switch (cstype){
+        case 'dnsrb':
+            name_list=['diff_js','notepad','selenium_enwords','readlater'];
+            other_list=['https://cn.bing.com/translator/'];
+            break;
+    }
+    
+    sub_batch_open_bigfile_links();
+
+    var blxl=0;
+    var bllen=name_list.length;
+    if (!confirm('是否批量打开 '+bllen+' 个链接？')){return;}
+
+    var old_title=document.title;
+    sub_batch_open_bigfile_open();
 }
 
 function file_date_compare_bigfile(){

@@ -4354,14 +4354,15 @@ function two_list_diff_b(list1=false,list2=false,textarea_id1='textarea_old_diff
         [diff_word_str,is_ok]=sub_two_list_diff_b_compare(words1,words2,'单词');
         diff_word_str='<h4>单词比较</h4>'+diff_word_str;
     }
-    
-    return [bljg,'<h4>行比较</h4>'+diff_row_str+diff_word_str];
+
+    return [bljg,'<h4>行比较</h4>'+diff_row_str+diff_word_str,is_ok];
 }
 
 function key_location_diff_b(csarr){
     //csarr 形如 [[1,'textarea_diff_1'],[2,'textarea_diff_2']]; - 保留注释
     for (let item of csarr){
         var olis=document.querySelectorAll('.div_two_list_diff_'+item[0]+' li');
+        console.log('发现', '.div_two_list_diff_'+item[0]+' li', olis.length, '个');
         for (let one_li of olis){
             one_li.style.cursor='pointer';
             one_li.addEventListener('click',
