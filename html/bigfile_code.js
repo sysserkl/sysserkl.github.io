@@ -72,9 +72,12 @@ function menu_bigfile(){
     '<span class="span_menu" onclick="'+str_t+'statistics_ext_bigfile();">当前条件文件扩展名统计</span>',
     ];
 
-    var klmenu_batch=[
-    '<span class="span_menu" onclick="'+str_t+'batch_open_bigfile(\'dnsrb\');">diff+notepad+selenium_enwords+readlater+BT</span>',
-    ];
+    var klmenu_batch=[];
+    if (is_local_b()){
+        klmenu_batch.push('<span class="span_menu" onclick="'+str_t+'batch_open_bigfile(\'dsrb\');">diff+selenium_enwords+readlater+BT</span>');
+    } else {
+        klmenu_batch.push('<span class="span_menu" onclick="'+str_t+'batch_open_bigfile(\'dnsrb\');">diff+notepad+selenium_enwords+readlater+BT</span>');
+    }
 
     var klmenu_config=root_font_size_menu_b(str_t);
     klmenu_config=klmenu_config.concat([
@@ -111,15 +114,17 @@ function batch_open_bigfile(cstype){
     
     function sub_batch_open_bigfile_links(){
         for (let blno=0,lent=name_list.length;blno<lent;blno++){
-            name_list[blno]=blhref+name_list[blno];
+            name_list[blno]=blhref+name_list[blno]+suffix;
         }
         name_list=array_union_b(name_list,other_list);
     }
     
     if (location.href.includes('?render&idb')){
         var blhref=location.origin+'?render&idb&htm=';
+        var suffix='';
     } else if (location.href.match(/\/html\/[^\/]+$/)){
         var blhref=location.href.split(/\/html\/[^\/]+$/)[0]+'/html/';
+        var suffix='.htm';
     } else {
         alert('未知网址路径');
         return;
@@ -131,6 +136,10 @@ function batch_open_bigfile(cstype){
         case 'dnsrb':
             name_list=['diff_js','notepad','selenium_enwords','readlater'];
             other_list=['https://cn.bing.com/translator/'];
+            break;
+        case 'dsrb':
+            name_list=['diff_js','selenium_enwords','readlater'];
+            other_list=['https://cn.bing.com/translator/'];        
             break;
     }
     
