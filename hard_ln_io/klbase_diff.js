@@ -106,7 +106,7 @@ function compare_lines_diff_b(do_submit=false,other_string=''){
     var blstr1=document.querySelector('textarea[name="textarea_diff_1"]').value;
     var blstr2=document.querySelector('textarea[name="textarea_diff_2"]').value;
     if (blstr1==blstr2){
-        odiv.innerHTML=other_string+'<h3>行差集</h3><p>完全一致</p>';   
+        odiv.innerHTML=other_string+'<h3>行差集 '+time_get_diff_b()+'</h3><p>完全一致</p>';   
         return;
     }
     
@@ -152,7 +152,7 @@ function compare_lines_diff_b(do_submit=false,other_string=''){
         result_t.push('<p style="background-color:'+scheme_global['pink']+';">+</p>');
         result_t.push('<div class="div_two_list_diff_2">'+array_2_li_b(diff2)+'</div>');
     }
-    odiv.innerHTML=other_string+'<h3>行差集</h3>'+result_t.join('\n');
+    odiv.innerHTML=other_string+'<h3>行差集 '+time_get_diff_b()+'</h3>'+result_t.join('\n');
     key_location_diff_b([[1,'textarea_diff_1'],[2,'textarea_diff_2']]);
 }
 
@@ -248,11 +248,18 @@ function find_in_textarea_diff_b(csno){
     textarea_top_bottom_b('textarea_diff_'+csno,blstr,-1);
 }
 
+function time_get_diff_b(){
+     return '<span style="font-weight:normal; font-size:small;">'+now_time_str_b()+'</span>';
+}
+
 function compare_textarea_diff_b(compare_lines=false){
     var diff_str,is_ok;
     [diff_str,is_ok]=two_list_diff_b(false,false,'textarea_diff_1','textarea_diff_2').slice(1,3);
-    diff_str='<h3>编辑框对比</h3>'+diff_str;
-    document.getElementById('div_diff').innerHTML=diff_str;
+    diff_str='<h3>编辑框对比 '+time_get_diff_b()+'</h3>'+diff_str;
+    var odiv=document.getElementById('div_diff');
+    if (odiv){
+        odiv.innerHTML=diff_str;
+    }
     key_location_diff_b([[1,'textarea_diff_1'],[2,'textarea_diff_2']]);
     
     if (is_ok && compare_lines){

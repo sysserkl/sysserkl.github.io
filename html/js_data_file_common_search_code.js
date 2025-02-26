@@ -99,6 +99,19 @@ function web_page_count_set_common(cslen){
     document.getElementById('span_count').innerText='('+raw_data_len_jscm_global+')';
 }
 
+function args_common(){
+    var cskeys=href_split_b(location.href);
+    if (cskeys.length>0 && cskeys[0]!==''){
+        for (let one_key of cskeys){
+            one_key=one_key.trim();
+            if (one_key.substring(0,2)=='k='){
+                search_common(one_key.substring(2,));
+                break;
+            }
+        }
+    }
+}
+
 function wait_array_common(){
     function sub_wait_array_common_fn(){
         for (let afn of ['style_load_','file_load_']){
@@ -144,6 +157,7 @@ function wait_array_common(){
                 console.log(error);
             }
         }
+        args_common();
     }
     
     function sub_wait_array_common_check(){

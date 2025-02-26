@@ -2073,7 +2073,7 @@ function colors_get_gps_points(one_color=true){
 }
 
 function colors_default_value_gps_points(){
-    return 'blue:red:green:brown:cyan:black:purple,cyan,red';
+    return 'blue:red:green:brown:greenyellow:cyan:black:tomato:dodgerblue:hotpink:indianred:purple,cyan,red';
 }
 
 function colors_settings_gps_points(){
