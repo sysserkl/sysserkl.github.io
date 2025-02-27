@@ -328,23 +328,23 @@ function write_js_css_b(cslist,do_write=true){
         }
         links_t.push(item[1]);
         if (!do_write){continue;}
-                
+
         switch (item[0]){
             case 'js':
-                document.write('\n<script src="'+item[1]+'"'+item[2]+'><\/script>\n');
+                document.write('\n<script src="'+item[1]+'"'+item[2]+' onload="console.log(\'loaded:\', this.src);" onerror="console.log(\'failed:\', this.src);"><\/script>\n');
                 break;
             case 'css':
-                document.write('<link href="'+item[1]+'" type="text/css" rel="stylesheet" />\n');
+                document.write('<link href="'+item[1]+'" type="text/css" rel="stylesheet" onload="console.log(\'loaded:\', this.src);" onerror="console.log(\'failed:\', this.src);" />\n');
                 break;
             case 'png':
-                document.write('<link rel="shortcut icon" href="'+item[1]+'" />\n');
+                document.write('<link rel="shortcut icon" href="'+item[1]+'" onload="console.log(\'loaded:\', this.src);" onerror="console.log(\'failed:\', this.src);" />\n');
                 break;
         }
     }
-    
+
     if (do_write){
         imported_files_add_b(links_t);
-        console.log(links_t.join('\n')); //此行保留 - 保留注释
+        //console.log(links_t.join('\n')); //此行保留 - 保留注释
     }
     return links_t;
 }
@@ -390,29 +390,42 @@ function file_dom_create_b(file_list,in_head=true,cstype='js'){
                 continue;
             }
         }
+        
         if (afile==''){continue;}
+        
+        var odom=false;
         switch (cstype){
             case 'js':
-                var odom = document.createElement('script');
+                odom = document.createElement('script');
                 odom.setAttribute('src',afile+today);
                 break;
             case 'css':
-                var odom = document.createElement('link');
+                odom = document.createElement('link');
                 odom.setAttribute('type','text/css');
                 odom.setAttribute('rel','stylesheet');
                 odom.setAttribute('href',afile+today);
                 break;
             case 'png':
-                var odom = document.createElement('link');
+                odom = document.createElement('link');
                 odom.setAttribute('rel','shortcut icon');
                 odom.setAttribute('href',afile);
                 break;
         }
+        
+        if (odom){
+            odom.addEventListener('load', function(){
+                console.log('loaded:', this.src);
+            });
+            odom.addEventListener('error', function(){
+                console.log('failed:', this.src);
+            });
+        }
+        
         if (afile.substring(0,4).toLowerCase()!=='http'){
             afile=blurl+afile;
         }
         imported_files_add_b([afile]);
-        console.log(afile+today);
+        //console.log(afile+today); //此行保留 - 保留注释
         if (in_head){
             document.head.appendChild(odom);    
         } else {

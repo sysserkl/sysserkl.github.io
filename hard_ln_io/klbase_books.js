@@ -143,8 +143,8 @@ function import_book_js_b(){
     [jsdoc_num,book_type,jsdoc_path,bookid]=num_type_path_id_get_book_b(book_no);
 
     if (csbooklist_sub_global.length>0){
-        document.write('\n<script src="'+jsdoc_path+bookid+'.js'+today+'"><\/script>\n');
-        console.log(jsdoc_path+bookid+'.js'+today);
+        document.write('\n<script src="'+jsdoc_path+bookid+'.js'+today+'" onload="console.log(\'loaded:\', this.src);" onerror="console.log(\'failed:\', this.src);"><\/script>\n');
+        //console.log(jsdoc_path+bookid+'.js'+today);   //此行保留 - 保留注释
         
         if (jsdoc_num.includes('digest')){
             document.write('\n<script>\n');

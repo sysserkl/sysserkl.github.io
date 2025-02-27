@@ -197,7 +197,7 @@ function buttons_diff_b(){
     bljg=bljg+'<span class="aclick" onclick="remove_empty_lines_diff_b();">② 去除空行</span> ';
     bljg=bljg+'<span class="aclick" onclick="remove_space_diff_b(); remove_empty_lines_diff_b();">① + ②</span> ';
 
-    bljg=bljg+'<span class="aclick" onclick="clear_textarea_diff_b(\'12\',\'diff\');">清空两个编辑框</span> ';
+    bljg=bljg+'<span class="aclick" onclick="clear_textarea_diff_b(\'12\',\'diff\');">♻ 清空两个编辑框</span> ';
     bljg=bljg+'<span class="aclick" onclick="compare_textarea_diff_b();">❸ 编辑框对比</span> ';    
     bljg=bljg+'<span class="aclick" onclick="compare_lines_diff_b();">❹ 行差集</span> ';    
     bljg=bljg+'<span class="aclick" onclick="compare_textarea_diff_b(true);">❸ + ❹</span> ';    

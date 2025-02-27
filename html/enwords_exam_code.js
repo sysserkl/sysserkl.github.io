@@ -196,12 +196,13 @@ function menu_klexam(){
     '<span id="span_confuse_klexam" class="span_menu" onclick="'+str_t+'confuse_klexam();">⚪ 混淆显示</span>',    
     ];
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','18rem','1rem','1rem','30rem'),'','0rem')+' ');
-    klmenu_check_b('span_show_en_sentence_b',true);        
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'✒️','12rem','1rem','1rem','30rem'),'','0rem')+' ');
+    klmenu_check_b('span_show_en_sentence_b',true);
 }
 
 function init_klexam(){
     function sub_init_klexam_fn(){
+        character_2_icon_b('✒️️');
         enwords_mini_search_frame_form_b();
         keys_klexam();
         words_count_enwords_b();    
