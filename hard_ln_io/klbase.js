@@ -334,10 +334,10 @@ function write_js_css_b(cslist,do_write=true){
                 document.write('\n<script src="'+item[1]+'"'+item[2]+' onload="console.log(\'loaded:\', this.src);" onerror="console.log(\'failed:\', this.src);"><\/script>\n');
                 break;
             case 'css':
-                document.write('<link href="'+item[1]+'" type="text/css" rel="stylesheet" onload="console.log(\'loaded:\', this.src);" onerror="console.log(\'failed:\', this.src);" />\n');
+                document.write('<link href="'+item[1]+'" type="text/css" rel="stylesheet" onload="console.log(\'loaded:\', this.href);" onerror="console.log(\'failed:\', this.href);" />\n');
                 break;
             case 'png':
-                document.write('<link rel="shortcut icon" href="'+item[1]+'" onload="console.log(\'loaded:\', this.src);" onerror="console.log(\'failed:\', this.src);" />\n');
+                document.write('<link rel="shortcut icon" href="'+item[1]+'" onload="console.log(\'loaded:\', this.href);" onerror="console.log(\'failed:\', this.href);" />\n');
                 break;
         }
     }
@@ -370,7 +370,7 @@ function quote_attribute_b(csid){
     return [do_confuse,quote_len];
 }
 
-function file_dom_create_b(file_list,in_head=true,cstype='js'){
+function file_dom_create_b(file_list,in_head=true,cstype='js',run_fn=false){
     var today=file_date_parameter_b();
 
     var blurl=location.pathname;
@@ -379,7 +379,9 @@ function file_dom_create_b(file_list,in_head=true,cstype='js'){
         blurl=blurl.substring(0,blat+1);
     }
     blurl=location.origin+blurl;
-                
+    
+    var is_fn=(typeof run_fn == 'function');
+    
     for (let afile of file_list){
         if (Array.isArray(afile)){
             if (afile.length==3){   //[ "js", "http://xxx/module/jquery.js", "" ] - 保留注释
@@ -414,10 +416,16 @@ function file_dom_create_b(file_list,in_head=true,cstype='js'){
         
         if (odom){
             odom.addEventListener('load', function(){
-                console.log('loaded:', this.src);
+                console.log('loaded:', this.src || this.href);
+                if (is_fn){
+                    run_fn(true, this.src || this.href);
+                }
             });
             odom.addEventListener('error', function(){
-                console.log('failed:', this.src);
+                console.log('failed:', this.src || this.href);
+                if (is_fn){
+                    run_fn(false, this.src || this.href);
+                }
             });
         }
         
@@ -3413,7 +3421,7 @@ function load_var_b(var_name,run_fn,fail_fn=false,csmax=-1,cswait=100){
         
         if (eval('typeof '+var_name) !== 'undefined'){
             console.log('发现 '+var_name+' ，扫描次数：'+blxl);       
-            if (typeof run_fn == 'function'){            
+            if (typeof run_fn == 'function'){
                 run_fn(true);
             }
         } else {

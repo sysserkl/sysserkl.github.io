@@ -174,6 +174,7 @@ function iframe_generate_klsearch(cstype='',cskey=false){
             is_proxy=true;
             one_type=one_type.slice(0,-3);
         }
+        
         for (let blxl=0,lent=search_sites_list_global.length;blxl<lent;blxl++){
             var item=search_sites_list_global[blxl];
             if (one_type==item[4].toLowerCase()){

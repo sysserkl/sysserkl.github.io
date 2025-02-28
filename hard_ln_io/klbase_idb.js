@@ -267,7 +267,7 @@ function idb_read_bigfile_b(db,do_type='',cskey='',run_fn=false){
     function sub_idb_read_bigfile_b_onsuccess(resolve, reject, event, other_var1,other_var2){
         var cursor = event.target.result;
         if (cursor){
-            if (do_type=='filedict'){
+            if (do_type=='filedict'){   //根据文件名称，获取文件内容，返回字典 - 保留注释
                 if (cskey.includes(cursor.value.name)){
                     raw_data_bigfile['f_'+cursor.value.name]=cursor.value.content;
                 }
