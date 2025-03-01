@@ -537,23 +537,27 @@ function args_rlater(load_data=false){
     search_websites_rlater(blkey);
 }
 
+function host_get_rlater(item){
+    if (item[0].substring(0,4)=='http'){
+        var site_t=item[0];
+    } else {
+        var site_t=item[1];
+    }
+    return site_t.replace(/https?:\/\/(.*?)\/.*/g,'$1');
+}
+
 function host_data_rlater(is_count=true){
     var t0 = performance.now();
 
     var list_t={};
     for (let item of readlater_data_global){
-        if (item[0].substring(0,4)=='http'){
-            var site_t=item[0];
-        } else {
-            var site_t=item[1];
-        }
-        site_t=site_t.replace(new RegExp('https?:\/\/(.*?)\/.*','g'),'$1');
+        var site_t=host_get_rlater(item);
         
         if (list_t['s_'+site_t]==undefined){
             if (is_count){
                 list_t['s_'+site_t]=[site_t,0];
             } else {
-                list_t['s_'+site_t]=[];            
+                list_t['s_'+site_t]=[];
             }
         }
         if (is_count){
@@ -813,7 +817,7 @@ function tags_websites_rlater(taglist=[],showrecent=true,csmax=10,showhtml=true,
         taglist.sort(randomsort_b);
         taglist=taglist.slice(0,50);   //防止 keywords_selenium 过多 - 保留注释        
         
-        taglist=taglist.concat(title_words_rlater(20));
+        taglist=taglist.concat(title_words_rlater(5));
         //taglist=taglist.concat(title_words_rlater('cn',10),title_words_rlater('en',10)); - 保留注释
 
         var myDate = new Date(); 
@@ -822,9 +826,17 @@ function tags_websites_rlater(taglist=[],showrecent=true,csmax=10,showhtml=true,
         for (let blxl=theyear-2;blxl<=theyear;blxl++){
             taglist.push(blxl.toString());
         }
-        taglist.push(randstr_b(1));
+        //以下2行保留 - 保留注释
+        //taglist.push(randstr_b(1));
+        //taglist.sort(randomsort_b);
         
-        taglist.sort(randomsort_b);
+        var list_t=readlater_data_global.slice(-300,);
+        var host_set=new Set();
+        for (let item of list_t){
+            host_set.add(host_get_rlater(item));
+        }
+        taglist=taglist.concat(Array.from(host_set));
+        
         taglist.push('TOP');        
     }
     
