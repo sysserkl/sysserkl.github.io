@@ -63,9 +63,10 @@ function get_new_old_rare_words_set_enbook_b(csstr,is_remove_square=-1,words_typ
     if (is_remove_square===-1){
         is_remove_square=checkbox_kl_value_b('remove_square');
     }
+    
 	if (is_remove_square==false){
-		csstr=csstr.replace(new RegExp("(\\[[^\\[\\]]+\\])","g"),' ');
-	}
+        csstr=csstr.replace(/\[[^\[\]]+\]/g,' ');
+    }
     
     var bljgarr2=str_2_array_enbook_b(csstr);
     
@@ -542,8 +543,7 @@ function all_new_words_count_set_enbook_b(iscurrent=true,csvalue=''){
     }
 }
 
-function new_old_words_html_enbook_b(csarray,csname='',csaname='',onlytitle=false,oldset=new Set(),show_len=true){    
-
+function new_old_words_html_enbook_b(csarray,csname='',csaname='',onlytitle=false,oldset=new Set(),show_len=true,show_words_type=false){
     var bltitle=csname;
     if (show_len){
         bltitle=bltitle+'<span style="font-size:0.8rem;">('+csarray.size+')</span>';
@@ -570,7 +570,8 @@ function new_old_words_html_enbook_b(csarray,csname='',csaname='',onlytitle=fals
     blsort=blsort+'<span class="aclick" onclick="document.getElementById(\'textarea_enwords_book_'+csaname+'\').select();document.execCommand(\'copy\');">Copy</span>';
     blsort=blsort+'<span class="aclick" onclick="show_hide_words_enbook_b(this);">Show/Hide</span>';
 
-    return bltitle+'<div class="div_enwords_container"><textarea id="textarea_enwords_book_'+csaname+'" style="height:200px;">'+Array.from(csarray).join(' ')+'</textarea><p>'+blsort+'</p><div class="div_enwords_links">'+bljg.join(' ')+enwords_batch_div_b(Array.from(csarray),parseInt(Math.random()*99999))+'</div></div>';
+    var arr_temp=Array.from(csarray);
+    return bltitle+'<div class="div_enwords_container"><textarea id="textarea_enwords_book_'+csaname+'" style="height:200px;">'+arr_temp.join(' ')+'</textarea><p>'+blsort+'</p><div class="div_enwords_links">'+bljg.join(' ')+enwords_batch_div_b(arr_temp,parseInt(Math.random()*99999))+(show_words_type?enwords_different_types_div_b(arr_temp):'')+'</div></div>';
 }
 
 function show_hide_words_enbook_b(ospan){

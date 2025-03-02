@@ -4612,6 +4612,13 @@ function arr_key_includes_sort_b(csarr,key_list,colno=-1){
     return result_t;
 }
 
+function performance_b(cscaption,start_time,csmin=100){
+    var bldelta=performance.now() - start_time;
+    if (bldelta>csmin){
+        console.log(cscaption,'费时：'+bldelta + ' milliseconds');
+    }
+}
+
 function urllib_parse_quote_b(csstr){
     csstr=encodeURIComponent(csstr);
     csstr = csstr.replace(/%2F/g, '/');

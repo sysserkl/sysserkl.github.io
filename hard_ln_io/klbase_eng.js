@@ -259,7 +259,7 @@ function enwords_init_b(simple=false,load_enwords=true,run_fn=false){
     if (typeof run_fn == 'function'){
         run_fn();
     }
-    console.log('enwords_init_b() 费时：'+(performance.now() - t0) + ' milliseconds');
+    performance_b('enwords_init_b()',t0);
 }
 
 function enwords_asc_value_b(csitem){
@@ -1229,7 +1229,8 @@ function sentence_popup_b(csword,ospan=false,no_start=0){
 
 function popup_def_b(ospan){
     if (typeof enwords == 'undefined'){return;}
-
+    en_word_temp_get_b();
+    
     var oparent=ospan.parentNode;
     if (!oparent){return;}
     var oword=oparent.querySelector('span.span_popup_word');
@@ -1281,6 +1282,7 @@ function popup_words_links_b(event,csword,ew=false,def_button=false,mobile_font_
 
 function en_one_word_b(csword,csno=[-1,0],csrecent_word='',change_color=true,ew=false,def_button=false){
     if (csword==null){return '';}
+    
 	if (csword.length==1){
         csword.push('');
     }
@@ -1325,7 +1327,7 @@ function en_one_word_b(csword,csno=[-1,0],csrecent_word='',change_color=true,ew=
 
 function en_word_pronunciation_b(cswname=false,csword){
 	if (csword[1]==''){return '';}
-
+    
     if (cswname==false){
         cswname=csword[0].replace(new RegExp("'",'g'),"\\'");
     }
@@ -1434,6 +1436,7 @@ function en_words_temp_update_b(divname,recount=false){
 }
 
 function en_word_temp_get_b(cstype=''){
+    var t0 = performance.now();    
     switch (cstype){
         case 'raw':
             return local_storage_get_b('enwords_temp');
@@ -1447,6 +1450,7 @@ function en_word_temp_get_b(cstype=''){
                     result_t.push(item.substring(1,));
                 }
             }
+            performance_b('en_word_temp_get_b()',t0);
             return result_t;
             break;
     }
@@ -1459,6 +1463,7 @@ function en_word_temp_get_b(cstype=''){
             en_words_temp_important_global.push(en_words_temp_global[blxl]);
         }
     }
+    performance_b('en_word_temp_get_b()',t0);
 }
 
 function enwords_temp_2_local_storage_b(csarray){

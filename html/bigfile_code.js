@@ -437,9 +437,9 @@ function sort_bigfile(is_desc=false){
 }
 
 function statistics_ext_bigfile(){
-    var ext_dict={};
+    let ext_dict={};
     for (let item of current_data_bigfile_global){
-        var blext=file_path_name_b(item[0][1])[2];
+        let blext=file_path_name_b(item[0][1])[2];
         if (ext_dict['f_'+blext]==undefined){
             ext_dict['f_'+blext]=0;
         }
@@ -648,7 +648,7 @@ function merge_files_bigfile(){
 
 function encode_content_bigfile(export_data,save_name){
     if (klmenu_check_b('span_encode_bigfile',false)){
-        var raw_data=export_data;
+        let raw_data=export_data;
         export_data=bc_encode_b(export_data)[0];
         save_name=save_name+'_$$encoded';
     }
@@ -849,12 +849,15 @@ function html_form_bigfile(ospan,do_render=false){
 
 function page_bigfile(csno){
     function sub_page_bigfile_one(csxl){
-        var item=current_data_bigfile_global[csxl][0];
-        var htm_icon='';
-        if (item[1].endsWith('.htm') || item[1].endsWith('.html')){
-            htm_icon='<span class="oblong_box" onclick="html_form_bigfile(this);" title="转换htm文件并载入或下载">🌐</span> ';
-        } else {
-            htm_icon='<span class="oblong_box" onclick="html_form_bigfile(this);" title="查看内容">{}</span> ';
+        let item=current_data_bigfile_global[csxl][0];
+        let htm_icon='';
+        
+        if (parseFloat(current_data_bigfile_global[csxl][0][3])<=1){   //1MB大小以内 - 保留注释
+            if (item[1].endsWith('.htm') || item[1].endsWith('.html')){
+                htm_icon='<span class="oblong_box" onclick="html_form_bigfile(this);" title="转换htm文件并载入或下载">🌐</span> ';
+            } else {
+                htm_icon='<span class="oblong_box" onclick="html_form_bigfile(this);" title="查看内容">{}</span> ';
+            }
         }
         
         return '<li><span class="span_name_bigfile" style="font-weight:bold;">'+specialstr92_b(item[1])+'</span>: '+specialstr92_b(item[2])+' <span style="font-size:0.8rem;color:'+scheme_global['memo']+';">('+item[3]+' '+(item[4].startsWith(today)?'<span style="color:'+scheme_global['a-hover']+';">'+item[4]+'</span>':item[4])+')</span><span class="oblong_box" onclick="delete_bigfile(this);" title="删除记录">🗑</span> <span class="oblong_box" onclick="copy_bigfile(this);" title="复制文件名">📎</span>  <span class="oblong_box" onclick="export_bigfile(this);" title="另存为文件">📤</span> '+htm_icon+'<span style="font-size:0.8rem;color:'+scheme_global['memo']+';">('+current_data_bigfile_global[csxl][1]+')</span></li>';

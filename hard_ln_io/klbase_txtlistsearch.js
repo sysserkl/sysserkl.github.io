@@ -336,10 +336,11 @@ function txtmenus_kltxt_b(cstype=''){
     ]);    
 
     var group_list=[
-    ['稀有旧单词搜索','rare_enwords_search_kltxt_b();',true],
-    ['稀有旧单词+例句+生词','rare_enwords_search_kltxt_b(true,true,true);',true],
+    ['枚举','rare_enwords_enumerate_kltxt_b();',true],
+    ['搜索','rare_enwords_search_kltxt_b();',true],
+    ['+例句+生词','rare_enwords_search_kltxt_b(true,true,true);',true],
     ];    
-    menu_general.push(menu_container_b(str_t,group_list,''));
+    menu_general.push(menu_container_b(str_t,group_list,'稀有旧单词：'));
     
     var group_list=[
     ['全部','frequent_new_enwords_kltxt_b();',true],
@@ -525,6 +526,11 @@ function line_no_show_hide_kltxt_b(is_dry=false,ocontainer=false){
     for (let one_span of ospans){
         one_span.style.display=bldisplay;
     }
+}
+
+function rare_enwords_enumerate_kltxt_b(){
+    var result_t=get_new_old_rare_words_set_enbook_b(filelist.join('\n'),false,true)[2];
+    document.getElementById('divhtml').innerHTML=new_old_words_html_enbook_b(result_t,'稀有旧单词','',false,new Set(),true,true);
 }
 
 function img2base64_kltxt_b(){
@@ -896,12 +902,12 @@ function books_current_table_kltxt_b(){
     }
 }
 
-function fullmenu_kltxt_b(is_simple=true,cstype='all'){
+function fullmenu_kltxt_b(is_simple=true,cstype='all',sort_by_rows=false){
     function sub_fullmenu_kltxt_one_title(cstitle,csxl,is_simple,cstype){
-        var blstyle='';
-        var href='';
+        let blstyle='';
+        let href='';
         if (is_simple){
-            var blcount=(cstitle.match(/^=+\s/) || [' '])[0].length-1;
+            let blcount=(cstitle.match(/^=+\s/) || [' '])[0].length-1;
             if (blcount>0 && (cstitle.match(/\s=+$/) || [' '])[0].length-1==blcount){
                 blstyle=' style="font-size:'+Math.max(0.7,(1.7-blcount/5))+'rem;"';
                 cstitle=cstitle.slice(blcount+1,-1*blcount-1);
@@ -912,46 +918,52 @@ function fullmenu_kltxt_b(is_simple=true,cstype='all'){
                 }
             }
         }
-        var line_number=sub_fullmenu_kltxt_b_id_2_line_number(cstitle,csxl);
-        var bljg='<span class="span_link"'+blstyle+' onclick="findmenu_kltxt_b('+csxl+');" style="text-decoration:none;">'+cstitle+'</span> '+href+line_number;
+        let line_number,interval;
+        [line_number,interval]=sub_fullmenu_kltxt_b_id_2_line_number(cstitle,csxl);
+        let bljg='<span class="span_link"'+blstyle+' onclick="findmenu_kltxt_b('+csxl+');" style="text-decoration:none;">'+cstitle+'</span> '+href+line_number;
         if (cstype=='' || cstype=='all'){
-            return bljg;
+            return [bljg,interval];
         } else if (cstype=='without_number' && line_number=='' || cstype=='with_number' && line_number!==''){
-            return bljg;                
+            return [bljg,interval];
         } else {
-            return '';
+            return ['',interval];
         }
     }
     
     function sub_fullmenu_kltxt_b_id_2_line_number(cstitle,csxl){
-        for (let blno=0,lent=kltxt_menulist_index_global.length;blno<lent;blno++){
-            var item=kltxt_menulist_index_global[blno];
+        let interval=0;
+        
+        for (let blno=0;blno<menulist_len;blno++){
+            let item=kltxt_menulist_index_global[blno];
             if (item[1]==csxl){
-                var interval=0;
-                if (blno<kltxt_menulist_index_global.length-1){
-                    interval=kltxt_menulist_index_global[blno+1][0]-item[0];
+                if (blno<menulist_len-1){
+                    interval=kltxt_menulist_index_global[blno+1][0]-item[0];    //相邻目录所在行的行号相减 - 保留注释
+                } else if (blno==menulist_len-1){
+                    interval=filelist.length-kltxt_menulist_index_global[blno][0]+1;
                 }
                 
-                var blhref=array_unique_b(cstitle.match(/([^\x00-\xff]{2,}|[a-z0-9]{2,})/ig) || []);
+                let blhref=array_unique_b(cstitle.match(/([^\x00-\xff]{2,}|[a-z0-9]{2,})/ig) || []);
                 blhref='+'+encodeURIComponent(blhref.join(' +'));
                 
-                return '<span style="color:'+scheme_global['memo']+';font-size:0.9rem;">(<span onclick="getlines_kltxt_b('+item[0]+');" style="cursor:pointer;" title="跳转到第'+(item[0]+1)+'行">'+(item[0]+1)+'</span>, <a href="?_tag'+csbookname_global+'&s1='+blhref+'" style="color:'+scheme_global['memo']+';text-decoration:none;" target=_blank title="搜索链接">'+interval+'rows</a>)</span>';
+                return ['<span style="color:'+scheme_global['memo']+';font-size:0.9rem;">(<span onclick="getlines_kltxt_b('+item[0]+');" style="cursor:pointer;" title="跳转到第'+(item[0]+1)+'行">'+(item[0]+1)+'</span>, <a href="?_tag'+csbookname_global+'&s1='+blhref+'" style="color:'+scheme_global['memo']+';text-decoration:none;" target=_blank title="搜索链接">'+interval+'rows</a>)</span>',interval];
             }
         }
-        return '';
+        return ['',interval];
     }
     //-----------------------
 	var bljg=[];
+    var menulist_len=kltxt_menulist_index_global.length;
+    
     if (csbookname_global.substring(0,6)=='klwiki'){
         for (let blxl=0,lent=menulist.length;blxl<lent;blxl++){
             if (menulist[blxl].substring(0,7)=='<title>' && menulist[blxl].slice(-8)=='</title>'){
                 var one_menu=sub_fullmenu_kltxt_one_title(menulist[blxl].substring(7,menulist[blxl].length-8),blxl,is_simple,cstype);
-                if (one_menu!==''){
+                if (one_menu[0]!==''){
                     bljg.push(one_menu);
                 }
             } else {
                 var one_menu=sub_fullmenu_kltxt_one_title(menulist[blxl],blxl,is_simple,cstype);
-                if (one_menu!==''){
+                if (one_menu[0]!==''){
                     bljg.push(one_menu);
                 }
             }
@@ -959,16 +971,27 @@ function fullmenu_kltxt_b(is_simple=true,cstype='all'){
     } else {
         for (let blxl=0,lent=menulist.length;blxl<lent;blxl++){
             var one_menu=sub_fullmenu_kltxt_one_title(menulist[blxl],blxl,is_simple,cstype);
-            if (one_menu!==''){
+            if (one_menu[0]!==''){
                 bljg.push(one_menu);
             }
         }
     }
+    
     var input_str='<p>';
     input_str=input_str+'<input type="text" id="input_fullmenu_filter_kltxt" onkeyup="if (event.key==\'Enter\'){fullmenu_filter_kltxt_b(this.value);}">\n';
-    input_str=input_str+'<span class="aclick" onclick="fullmenu_kltxt_b('+!is_simple+');">'+(is_simple?'RAW':'Simple')+'</span>';
+    input_str=input_str+'<span class="aclick" onclick="fullmenu_kltxt_b('+!is_simple+',\''+cstype+'\');">swith to: '+(is_simple?'RAW':'Simple')+'</span>';
+    if (!sort_by_rows){
+        input_str=input_str+'<span class="aclick" onclick="fullmenu_kltxt_b('+is_simple+',\''+cstype+'\',true);">current: sort by rows</span>';
+    } else {
+        input_str=input_str+'<span class="aclick" onclick="fullmenu_kltxt_b('+is_simple+',\''+cstype+'\',false);">current</span>';    
+    }
     
     input_str=input_str+'</p>';
+    
+    if (sort_by_rows){
+        bljg.sort(function (a,b){return a[1]>b[1]?-1:1;});
+    }
+    bljg=array_split_by_col_b(bljg,[0]);
     
 	document.getElementById('divhtml').innerHTML=input_str+array_2_li_b(bljg,'li','ol','ol_fullmenu_filter_kltxt');
     input_with_x_b('input_fullmenu_filter_kltxt',15);

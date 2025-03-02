@@ -306,7 +306,7 @@ function idb_read_bigfile_b(db,do_type='',cskey='',run_fn=false){
                         }
                         break;
                     default:
-                        //返回文件序号、名称、起始部分、大小、日期等 - 保留注释
+                        //返回文件序号、名称、起始部分、大小(M)、日期等 - 保留注释
                         var bllen=cursor.value.content.length;
                         raw_data_bigfile.push([cursor.value.id,cursor.value.name,cursor.value.content.slice(0,100)+(bllen>200?'……'+cursor.value.content.slice(-100,):''),(cursor.value.content.length/1024/1024).toFixed(3)+'M',cursor.value.date]);
                         break;
