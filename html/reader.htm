@@ -45,19 +45,15 @@ booklist_source_config_b();
 import_book_kltxt_b(cskeys);
 </script>
 <p id="p_book_list" style="line-height:150%;"></p>
-
-<p><input type="text" id="input_search" onkeyup="if (event.key=='Enter'){search_klreader();}">
+<p>
+<input type="text" id="input_search" onkeyup="if (event.key=='Enter'){search_klreader();}">
 <label><input type="checkbox" id="input_reg">正则</label>
 <span class="aclick" onclick="search_klreader();">Search</span>
 <span class="aclick" onclick="booksearch_kltxt_b();">书目</span>
 <span class="aclick" onclick="popup_show_hide_b('span_checkboxes_txtbook','');">⚙</span>
-<span id="span_checkboxes_txtbook" style="display:none;">
-<label><input type="checkbox" id="input_highlight" checked>Highlight</label>
-<label><input type="checkbox" id="input_digest" checked>Digest</label>
-<label><input type="checkbox" id="input_menu_bold" checked>目录加粗</label>
-</span>
-<SELECT id="select_menu" style="max-width:15rem;" onchange="findmenu_kltxt_b(this.value);"> 
-</SELECT>
+<span id="span_checkboxes_txtbook" style="display:none;"></span>
+<span id="span_lines_config_txtbook"></span>
+<select id="select_menu" style="max-width:15rem;" onchange="findmenu_kltxt_b(this.value);"></select>
 </p>
 <div id="div_recent_search" style="line-height:1.8rem;"></div>
 </div>
@@ -65,9 +61,6 @@ import_book_kltxt_b(cskeys);
 <a name=content></a>
 <input type="number" id="input_lineno" style="display:none;" value=1>
 <input type="number" id="input_lines" style="display:none;" value=20>
-<input type="checkbox" id="check_hide_no" checked style="display:none;"><!--隐藏序号-->
-<input type="checkbox" id="check_hide_lineno" checked style="display:none;"><!--隐藏行号-->
-<input type="checkbox" id="check_klwiki_format" checked style="display:none;"><!--KLWiki format-->
 </p>
 
 <div id="divhtml"></div>

@@ -49,26 +49,19 @@ import_book_kltxt_b(cskeys);    //在 args_kltxt_b() 前运行，以获得 book_
 </script>
 <p id="p_book_list" style="line-height:150%;"></p>
 
-<p><input type="text" id="input_search" onkeyup="if (event.key=='Enter'){txtsearch_kltxt_b();}">
-<label><input type="checkbox" id="input_reg">正则</label>
+<p>
+<input type="text" id="input_search" onkeyup="if (event.key=='Enter'){txtsearch_kltxt_b();}">
+<label><input type="checkbox" id="input_reg" />正则</label>
 <span class="aclick" onclick="txtsearch_kltxt_b();">Search</span>
 <span class="aclick" onclick="booksearch_kltxt_b();">书目</span>
-<label><input type="checkbox" id="input_continue">连续搜索</label>
+<label><input type="checkbox" id="input_continue" />连续搜索</label>
 <span class="aclick" onclick="popup_show_hide_b('span_checkboxes_txtbook','');">⚙</span>
-<span id="span_checkboxes_txtbook" style="display:none;">
-<label><input type="checkbox" id="input_highlight" checked>Highlight</label>
-<label><input type="checkbox" id="input_digest" checked>Digest</label>
-<label><input type="checkbox" id="input_menu_bold" checked>目录加粗</label>
-<label><input type="checkbox" id="check_hide_no">隐藏序号</label>
-<label><input type="checkbox" id="check_hide_lineno">隐藏行号</label>
-<label><input type="checkbox" id="check_klwiki_format" checked>KLWiki format</label>
-</span>
-&nbsp;搜索结果最大行数：<input type="number" id="input_max_lines" style="width:5rem;" value="500">
+<span id="span_checkboxes_txtbook" style="display:none;"></span>
+<span id="span_lines_config_txtbook"></span>
 </p>
 <div id="div_recent_search"></div>
-<p>搜索范围：从第 <input type="number" id="input_start_lineno" style="width:6rem;" ondblclick='this.value="";'> 行开始，到第  <input type="number" id="input_end_lineno" style="width:6rem;" ondblclick='this.value="";'> 行为止
-<SELECT id="select_menu" style="max-width:10rem;" onchange="findmenu_kltxt_b(this.value);"> 
-</SELECT>
+<p id="p_search_menu_kltxt">
+<select id="select_menu" style="max-width:10rem;" onchange="findmenu_kltxt_b(this.value);"></select>
 </p>
 </div>
 <div id="div_cn_words"></div>

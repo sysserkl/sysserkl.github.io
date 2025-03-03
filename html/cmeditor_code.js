@@ -50,23 +50,29 @@ function args_codemirror(){
 }
 
 function load_codemirror(){
+    function sub_load_codemirror_theme(){
+        if (theme_selected_cm_global==''){
+            theme_selected_cm_global=theme_random_codemorror();
+        }
+        
+        if (theme_selected_cm_global+'.min.css' in codemirror_themes_global){
+            style_generate_b(codemirror_themes_global[theme_selected_cm_global+'.min.css'],true,'style');
+        } else {
+            console.log('未发现 theme: ',theme_selected_cm_global);
+        }
+
+        console.log('theme_selected_cm_global:',theme_selected_cm_global,'mode_cm_global:',mode_cm_global);
+
+        style_generate_b('file_loaded_cm_global=true;',true,'script');
+    }
+    
     function sub_load_codemirror_one(is_ok,fname){
         blxl=blxl+1;
         console.log('step',step_no+1,'/',blxl,'/',bllen[step_no],is_ok,fname);
         if (blxl>=bllen[step_no]){
             if (step_no==1){
-                if (theme_selected_cm_global==''){
-                    theme_selected_cm_global=theme_random_codemorror();
-                }
-                if (theme_selected_cm_global+'.min.css' in codemirror_themes_global){
-                    style_generate_b(codemirror_themes_global[theme_selected_cm_global+'.min.css'],true,'style');
-                } else {
-                    console.log('未发现 theme: ',theme_selected_cm_global);
-                }
-            
-                console.log('theme_selected_cm_global:',theme_selected_cm_global,'mode_cm_global:',mode_cm_global);
-
-                file_loaded_cm_global=true;
+                sub_load_codemirror_theme();
+                //file_loaded_cm_global=true;
             } else {
                 //console.log(typeof file_loaded_cm_global);    //此行保留 - 保留注释
                 step_no=1;
@@ -103,10 +109,13 @@ function load_codemirror(){
             } else if (afile.endsWith('.css')){
                 css_content.push(csdict['f_'+afile]);
             }
-            js_content.push('file_loaded_cm_global=true;');
-            style_generate_b(js_content,true,'script');
-            style_generate_b(css_content,true,'style');
         }
+        
+        //js_content.push('file_loaded_cm_global=true;');
+        style_generate_b(js_content,true,'script');
+        style_generate_b(css_content,true,'style');
+        
+        load_var_b('codemirror_themes_global',sub_load_codemirror_theme,false,-1,200); 
     }
     
     args_codemirror();

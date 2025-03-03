@@ -4057,6 +4057,9 @@ function init_kltxt_b(cstype,cskeys){
     if (book_tag_global=='🔖' && csbooklist_sub_global.length==0){
         location.href='?&line=0_0';
     }
+    
+    buttons_generate_kltxt_b(cstype);
+    
     html_name_kltxt_global=cstype;  //全局变量
     layout_done_kltxt_global=false; //全局变量
     decode_and_create_menu_kltxt_b();
@@ -4067,6 +4070,56 @@ function init_kltxt_b(cstype,cskeys){
     args_kltxt_b(cskeys);
     if (csbookname_global=='klwiki_en2'){
         local_storage_today_b('klwiki_en2_rows',40,filelist.length,'/');
+    }
+}
+
+function buttons_generate_kltxt_b(cstype){
+    if (['txtlistsearch','digest'].includes(cstype)){
+        var op=document.getElementById('p_search_menu_kltxt');
+        if (op){
+            op.insertAdjacentHTML('afterbegin',`搜索范围：从第 <input type="number" id="input_start_lineno" style="width:6rem;" ondblclick='this.value="";'> 行开始，到第  <input type="number" id="input_end_lineno" style="width:6rem;" ondblclick='this.value="";'> 行为止`);
+        }
+    }
+
+    if (['txtlistsearch','digest','reader'].includes(cstype)){
+        var list_t={
+        'Highlight':['input_highlight','checked'],
+        'Digest':['input_digest','checked'],
+        '目录加粗':['input_menu_bold','checked'],
+        '隐藏序号':['check_hide_no','checked'],
+        '隐藏行号':['check_hide_lineno','checked'],
+        'KLWiki format':['check_klwiki_format','checked'],
+        };
+        if (cstype=='txtlistsearch'){
+            list_t['隐藏序号'][1]='';
+            list_t['隐藏行号'][1]='';
+        } else if (cstype=='digest'){
+            delete list_t['Digest']; 
+            delete list_t['目录加粗']; 
+        }
+        var result_t=[];
+        for (let key in list_t){
+            result_t.push('<label><input type="checkbox" id="'+list_t[key][0]+'"'+(list_t[key][1]==''?'':' '+list_t[key][1])+' />'+key+'</label>');
+        }
+        var ospan=document.getElementById('span_checkboxes_txtbook');
+        ospan.innerHTML=result_t.join('\n');
+        
+        var ospan=document.getElementById('span_lines_config_txtbook');
+        ospan.innerHTML='&nbsp;搜索结果最大行数：<input type="number" id="input_max_lines" style="width:5rem;" value="500" />&nbsp;行号：<input type="number" style="width:5rem;" min=1 step=1 onkeyup="if (event.key==\'Enter\'){jump_2_line_no_kltxt_b(this.value);}" placeholder="跳转到指定行" />';
+        if (cstype=='reader'){
+            ospan.style.display='none';
+        }
+    }
+}
+
+function jump_2_line_no_kltxt_b(csno){
+    var csno=parseInt(csno);
+    if (isNaN(blno)){return;}
+    if (blno<1){return;}
+    
+    var ospans=document.querySelectorAll('#divhtml span.txt_content');
+    if (ospans.length>=blno){
+        ospans[blno-1].scrollIntoView();
     }
 }
 
