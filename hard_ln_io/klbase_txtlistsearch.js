@@ -338,7 +338,7 @@ function txtmenus_kltxt_b(cstype=''){
     var group_list=[
     ['枚举','rare_enwords_enumerate_kltxt_b();',true],
     ['搜索','rare_enwords_search_kltxt_b();',true],
-    ['+例句+生词','rare_enwords_search_kltxt_b(true,true,true);',true],
+    ['例句+生词+','rare_enwords_search_kltxt_b(true,true,true);',true],
     ];    
     menu_general.push(menu_container_b(str_t,group_list,'稀有旧单词：'));
     
@@ -4114,12 +4114,12 @@ function buttons_generate_kltxt_b(cstype){
 
 function jump_2_line_no_kltxt_b(csno){
     var csno=parseInt(csno);
-    if (isNaN(blno)){return;}
-    if (blno<1){return;}
+    if (isNaN(csno)){return;}
+    if (csno<1){return;}
     
     var ospans=document.querySelectorAll('#divhtml span.txt_content');
-    if (ospans.length>=blno){
-        ospans[blno-1].scrollIntoView();
+    if (ospans.length>=csno){
+        ospans[csno-1].scrollIntoView();
     }
 }
 
