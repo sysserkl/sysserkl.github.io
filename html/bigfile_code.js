@@ -6,13 +6,19 @@ function init_bigfile(){
     is_all_result_bigfile_global=true;
     rows_per_page_bigfile_global=10;
     
+    today_clicked_websites_global=new Set();
+    
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.6rem'),true,false,2);
     input_with_x_b('input_search',11);
     character_2_icon_b('B');
-    var_generate_temp_txt_share_b();    //用于 导入 临时单词 - 保留注释
+
     menu_bigfile();
     refresh_bigfile();
     is_args_checked_bigfile=false;
+    
+    var buttons_more='<span class="aclick" onclick="local_storage_import_b(\'textarea_temp_txt_share\',true);">import data to localStorage</span>';
+    buttons_more=buttons_more+'<span class="aclick" onclick="update_temp_txt_share_b(\'enwords_temp\',\'textarea_temp_txt_share\');">更新最近记忆单词</span>';
+    init_temp_txt_share_b(false,'',false,true,buttons_more);
 }
 
 function args_bigfile(){
@@ -82,7 +88,8 @@ function menu_bigfile(){
     var klmenu_config=root_font_size_menu_b(str_t);
     klmenu_config=klmenu_config.concat([
     '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'bigfile\');">更新版本</span>',
-    '<span class="span_menu" onclick="'+str_t+'local_storage_form_bigfile();">缓存导入</span>',    
+    '<span class="span_menu" onclick="'+str_t+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>',        
+    '<span class="span_menu" onclick="'+str_t+'show_hide_storage_bigfile();">暂存</span>',    
     '<span class="span_menu" onclick="'+str_t+'file_date_form_bigfile();">文件日期对比</span>',    
     '<span class="span_menu">删除方式：'+list_2_option_b(['数字确认','简单确认','直接删除'],'select_delete_option_bigfile')+'</span>',    
     ]);
@@ -207,21 +214,6 @@ function file_date_form_bigfile(){
     var left_strings='<p><span class="aclick" onclick="file_date_compare_bigfile();">文件日期对比</span>';
     var blstr=textarea_with_form_generate_b('textarea_file_date_compare_bigfile','height:25rem;',left_strings,'清空,复制,加密,解密,导入 txt 文件,发送到临时记事本,发送地址','</p>');
     document.getElementById('divhtml').innerHTML=blstr+'<div id="div_file_date_compare_bigfile"></div>';
-}
-
-function local_storage_form_bigfile(){
-    var otextarea=document.getElementById('textarea_temp_bigfile');
-    if (otextarea){
-        idb_bigfile_b('read','','',read_fn_bigfile);
-        return;
-    }
-
-    var left_strings='<p><span class="aclick" onclick="local_storage_import_b(\'textarea_temp_bigfile\',true);">import data to localStorage</span>';
-    left_strings=left_strings+'<span class="aclick" onclick="update_temp_txt_share_b(\'enwords_temp\',\'textarea_temp_bigfile\');">更新最近记忆单词</span>';
-
-    var blstr=textarea_with_form_generate_b('textarea_temp_bigfile','height:25rem;',left_strings,'清空,复制,加密,解密,save as txt file,导入 txt 文件,导入temp_txt_share,发送到临时记事本,发送地址,➕','</p>');
-
-    document.getElementById('divhtml').innerHTML=blstr;
 }
 
 function first_source_set_bigfile(do_change=true){
@@ -451,7 +443,7 @@ function statistics_ext_bigfile(){
     document.getElementById('divhtml').innerHTML=array_2_li_b(ext_dict);
 }
 
-function search_bigfile(cskey=false){
+function key_get_bigfile(cskey=false){
     var oinput=document.getElementById('input_search');
     if (cskey===false){
         cskey=oinput.value.trim();
@@ -459,8 +451,16 @@ function search_bigfile(cskey=false){
     oinput.value=cskey;
 
     recent_bigfile(cskey);
+
     var isreg=klmenu_check_b('span_reg_bigfile',false);
     [cskey,isreg]=str_reg_check_b(cskey,isreg,true);
+    
+    return [cskey,isreg];
+}
+
+function search_bigfile(cskey=false){
+    var isreg;
+    [cskey,isreg]=key_get_bigfile(cskey);
 
     current_data_bigfile_global=[];
     is_all_result_bigfile_global=true;
@@ -948,5 +948,24 @@ function export_bigfile(ospan,cscontent=false){
         idb_bigfile_b('read','content',fname+'.'+blext,sub_export_bigfile_save);
     } else {
         sub_export_bigfile_save(cscontent);
+    }
+}
+
+function websites_bigfile(return_max=-1){
+    var cskey,is_reg;
+    [cskey,is_reg]=key_get_bigfile();
+    
+    var result_t=search_arr_websites_b(cskey,is_reg,false,return_max,false)[0];
+    result_t=search_links_websites_b(cskey,result_t,true)[0];
+
+    var bljg=search_html_websites_b(result_t,'none',false);
+    document.getElementById('divhtml').innerHTML='<p style="line-height:'+(ismobile_b()?'1.8':'2.2')+'rem;">'+bljg.join(' ')+'</p>';
+}
+
+function show_hide_storage_bigfile(){
+    var odiv=document.getElementById('div_temp_txt_share');
+    var bltype=popup_show_hide_b(odiv);
+    if (bltype!=='none'){
+        odiv.scrollIntoView();
     }
 }

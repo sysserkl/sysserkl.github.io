@@ -81,10 +81,30 @@ function var_generate_temp_txt_share_b(){
     };
 }
 
-function init_temp_txt_share_b(is_php=true,menu_more=''){
+function form_generate_temp_txt_share_js_b(){
+    var left_str='<p>';
+    left_str=left_str+'<span id="span_update"></span><span style="color:#b0b0b0;font-size:0.8rem;"><i id="i_client_info"></i></span>';
+    var right_str='</p>';
+
+    var blstr=textarea_with_form_generate_b('textarea_temp_txt_share','height:'+(ismobile_b()?'10':'20')+'rem;',left_str,'',right_str);
+    document.getElementById('div_temp_txt_share').insertAdjacentHTML('afterbegin',blstr);
+}
+
+function init_temp_txt_share_b(is_php=true,menu_more='',do_add=true,is_simple=false,buttons_more=''){
+    if (!is_php){
+        form_generate_temp_txt_share_js_b();
+    }
+    
     var_generate_temp_txt_share_b();
     
-    add_button_temp_txt_share_b();
+    if (do_add){
+        add_button_temp_txt_share_b();
+    }
+    
+    if (buttons_more!==''){
+        document.getElementById('span_update').insertAdjacentHTML('afterend',buttons_more);
+    }
+    
     var ospan=document.getElementById('span_character_count');
     if (ospan){
         ospan.innerHTML=document.getElementById('textarea_temp_txt_share').value.length;
@@ -102,11 +122,13 @@ function init_temp_txt_share_b(is_php=true,menu_more=''){
     
     document.getElementById('span_update').insertAdjacentHTML('beforebegin',buttons+textarea_buttons_b('textarea_temp_txt_share','清空,复制,↑,↓,加密,解密,save as txt file,导入 txt 文件'+(is_php?'':',发送到临时记事本,发送地址,➕')));
     
-    top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.4rem'));
-    menu_temp_txt_share_b(is_php,menu_more);
+    if (!is_simple){
+        top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.4rem'));
+        menu_temp_txt_share_b(is_php,menu_more);
+        character_2_icon_b(is_php?'📗':'📙');
+    }
     document.getElementById('i_client_info').insertAdjacentHTML('beforeend',' userAgent: '+navigator.userAgent);
     temp_save_temp_txt_share_b('read');
-    character_2_icon_b(is_php?'📗':'📙');
 }
 
 function spilt_rows_temp_txt_share_b(separation='\n'){

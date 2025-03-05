@@ -11,12 +11,19 @@ function menu_websites_pwa(){
     ];
 
     var klmenu2=[
-    '<span id="span_reg_web" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ reg</span>',
-    '<span id="span_veil_web" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ QR遮罩</span>',    
-    '<span id="span_jieba_web" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ jieba分词</span>',    
     '<span class="span_menu" onclick="'+str_t+'clear_cache_websites_pwa();">update</span>',
-    '<span class="span_menu" onclick="'+str_t+'demo_websites_pwa();">import demo sites</span>',    
+    '<span class="span_menu" onclick="'+str_t+'demo_websites_pwa();">import demo sites</span>',
     ];
+    
+    var group_list=[
+    ['⚪ reg','klmenu_check_b(this.id,true);',true,'span_reg_web'],
+    ['⚪ QR遮罩','klmenu_check_b(this.id,true);',true,'span_veil_web'],
+    ['⚪ jieba分词','klmenu_check_b(this.id,true);',true,'span_jieba_web'],
+    ['⚪ 缩略显示','klmenu_check_b(this.id,true);',true,'span_brief_show_web'],
+    ];    
+
+    klmenu2.push(menu_container_b(str_t,group_list,''));
+    
     klmenu2=root_font_size_menu_b(str_t).concat(klmenu2);
     
     //---
@@ -48,9 +55,12 @@ function menu_websites_pwa(){
     //---
     var klmenu_recent=[];
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_tag,'#','10rem','1rem','1rem','30rem')+klmenu_b(klmenu_recent,'🌐','16rem','1rem','1rem','30rem','','div_menu_recent_sites_pwa')+fav_www_menu_websites_b('#top',true)+klmenu_b(klmenu2,'⚙','16rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_tag,'#','10rem','1rem','1rem','30rem')+klmenu_b(klmenu_recent,'🌐','16rem','1rem','1rem','30rem','','div_menu_recent_sites_pwa')+fav_www_menu_websites_b('#top',true)+klmenu_b(klmenu2,'⚙','22rem','1rem','1rem','60rem'),'','0rem')+' ');
+    
     klmenu_check_b('span_reg_web',true);
     klmenu_check_b('span_veil_web',true);    
+    klmenu_check_b('span_brief_show_web',true);    
+    
     recent_websites_b(false,'menu','div_menu_recent_sites_pwa');
     menu_refresh_recent_sites_websites_pwa();
 }
@@ -298,121 +308,34 @@ function alert_websites_pwa(cslist,cscaption){
 }
 
 function search_websites_pwa(cskey='',is_random=false,return_max=-1){
-    var websites_list=localstorage_get_websites_pwa(true);
-    if (websites_list.length==1 && websites_list[0]==''){return;}
-    
-    cskey=cskey.trim();
-    
-    var fav_set=new Set();
-    if (cskey=='FAV'){
-        fav_set=fav_www_get_websites_b();
-    }
-        
-    var list_t=[];
-    if (cskey=='FAV'){
-        for (let item of websites_list){
-            for (let ahref of fav_set){
-                if (item.includes(' '+ahref+' ')){
-                    list_t.push(item);
-                    break;
-                }
-            }
-        } 
-    } else if (cskey!==''){
-        if (cskey.match(/^\d{4}\-\d{2}\-\d{2}$/)!==null){
-            var theday=validdate_b(cskey);
-            if (theday!==false){
-                var bldays_count=day_of_year_b(theday) % 20;
-                for (let item of websites_list){
-                    var blasc_sum=asc_sum_b(item);
-                    if (blasc_sum % 20 == bldays_count){
-                        list_t.push(item);
-                    }
-                }
-            }
-        }
-        
-        if (list_t.length==0){
-            var is_reg=klmenu_check_b('span_reg_web',false);
-            for (let item of websites_list){
-                var blfound=str_reg_search_b(item,cskey,is_reg);
-                if (blfound==-1){break;}
-                if (blfound){
-                    list_t.push(item);
-                }
-            }
-        }
-    }
-    if (cskey!==''){
-        websites_list=[].concat(list_t);
-    }
-    
-    list_t=[];
-    var blcategory='';
-    var blstr='';
-    var blname='';
-    var bltag='';
-    var new_list=[];
-    var ignored_list=[];
-    for (let item of websites_list){
-        [blcategory,blstr,blname,bltag]=split_pwa_websites_b(item);
-        if (blcategory=='' || blstr=='' || blname==''){
-            ignored_list.push(item);
-            continue;
-        }
-        list_t.push([blcategory,blstr,blname]);
-        new_list.push(blcategory+(bltag==''?'':','+bltag)+' '+blstr+' '+blname);
-    }
+    var is_reg=klmenu_check_b('span_reg_web',false);
+    var enable_jieba=klmenu_check_b('span_jieba_web',false);
+    var list_t,new_list,ignored_list;
+    [list_t,new_list,ignored_list]=search_arr_websites_b(cskey,is_reg,is_random,return_max,enable_jieba);
+
     alert_websites_pwa(ignored_list,'网址');
-    
-    if (is_random){
-        list_t.sort(randomsort_b);
-    } else {
-        list_t.sort(function (a,b){return zh_sort_b(a,b,false,2);});
-        list_t.sort(function (a,b){return zh_sort_b(a,b,false,0);});
-    }
-    
-    if (return_max>0){
-        list_t=list_t.slice(0,return_max);
-    }
+
     var new_list_len=array_2_local_storage_websites_pwa(new_list,cskey,return_max);
 
-    var enable_jieba=klmenu_check_b('span_jieba_web',false);
-    if (enable_jieba){
-        jieba_websites_b(list_t,2);
-    }
-    var result_t={};
-    var blxl=0;
-    for (let item of list_t){        
-        //item 形如 [ "资讯", "https://news.sina.com.cn", "新浪新闻" ] - 保留注释
-        var blkey='w_'+category_websites_b(enable_jieba,item[2],item[0],cskey);
-        if (result_t[blkey]==undefined){
-            result_t[blkey]=[];
-        }
-        var blhref=item[1].replace(new RegExp('"','g'),'&quot;');
-        var blstyle=(today_clicked_websites_global.has(blhref)?' style="background-color:'+scheme_global['pink']+';"':'');
-        result_t[blkey].push('<span class="span_websites_link_container"><a class="a_oblong_box" href="'+blhref+'" onclick="recent_websites_b(this); menu_refresh_recent_sites_websites_pwa();"'+blstyle+' target=_blank>'+specialstr92_b(item[2])+'</a></span>');
-        blxl=blxl+1;
-    }
+    var result_t,blcount;
+    [result_t,blcount]=search_links_websites_b(cskey,list_t,true,enable_jieba,'menu_refresh_recent_sites_websites_pwa();');
     
-    var bljg=[];
-    for (let key in result_t){
-        bljg.push('<span style="font-weight:bold;font-size:1.2rem;">'+key.substring(2,)+'</span> '+result_t[key].join(' '));
-    }
-    if (enable_jieba){
-        bljg.sort(function (a,b){return zh_sort_b(a,b);});
-    }
+    var bldisplay=(klmenu_check_b('span_brief_show_web',false) && blcount>100?'none':'');
+
+    var bljg=search_html_websites_b(result_t,bldisplay,enable_jieba);
+
     document.getElementById('divhtml').innerHTML='<p style="line-height:'+(ismobile_b()?'1.8':'2.2')+'rem;">'+buttons_klwebsite_pwa(cskey)+bljg.join(' ')+'</p>';
     
     recent_search_websites_pwa(cskey);  //放在 <span id="span_recent_search"></span> 形成之后 - 保留注释
 
     input_with_x_b('input_search',(ismobile_b()?8:20));
     document.getElementById('span_count').innerText='('+new_list_len+')';
-    top_bottom_arrow_b('div_top_bottom',blxl+' ');
+    top_bottom_arrow_b('div_top_bottom',blcount+' ');
 }
 
 function recent_search_websites_pwa(cskey){
-    recent_search_b('recent_search_websites_pwa',[cskey,date2str_b(),previous_day_b(),next_day_b()],'search_websites_pwa','span_recent_search',[],15,false,-1,'^[0-9]{4}\-[0-9]{2}\-[0-9]{2}$');
+    //date2str_b(),previous_day_b(),next_day_b() - 保留注释
+    recent_search_b('recent_search_websites_pwa',[cskey],'search_websites_pwa','span_recent_search',[],15,false,-1);    //^[0-9]{4}\-[0-9]{2}\-[0-9]{2}$ - 保留注释
 }
 
 function organize_websites_pwa(){

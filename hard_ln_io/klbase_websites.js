@@ -174,7 +174,7 @@ function icon_websites_b(cshref,ico_type){
     return '<img alt="" src="'+blsrc+'" style="max-width:1rem;max-height:1rem;border-radius:1rem;" />';   //alt可以隐藏无图片的网站，title不行 - 保留注释
 }
 
-function recent_websites_b(obj_a=false,return_type='none',user_js=''){    
+function recent_websites_b(obj_a=false,return_type='none',user_js=''){
     var bltoday=today_str_b();
 
     if (obj_a){
@@ -199,7 +199,7 @@ function recent_websites_b(obj_a=false,return_type='none',user_js=''){
         }
     } else if (obj_a){
         today_clicked_websites_global.add(obj_a.href);  //当同时使用 网址库 和 pwa 时，相互之间 localStorage 可以同步，但 全局变量 today_clicked_websites_global 不同步 - 保留注释
-    }      
+    }
 
     recent_websites_list=recent_websites_list.slice(0,30);
     
@@ -227,7 +227,14 @@ function recent_websites_b(obj_a=false,return_type='none',user_js=''){
                     result_t.push(item);
                 }
             }    
-            break;    
+            break;
+        case 'recent_array':
+            for (let item of recent_websites_list){
+                if (item.includes(' ')){
+                    result_t.push(split_pwa_websites_b('RECENT '+item).slice(0,3));
+                }
+            }
+            break;
     }
     return result_t;
 }
@@ -371,4 +378,111 @@ function split_pwa_websites_b(csstr){
     csstr=csstr.substring(0,blat).trim();
     return [blcategory,csstr,blname,bltag];
     //形如：[ "资讯", "https://weibo.com/u/2938715943", "人民网舆情数据中心 - 微博", "CN" ] - 保留注释
+}
+
+function search_arr_websites_b(cskey='',is_reg=false,is_random=false,return_max=-1,enable_jieba=false){
+    function sub_search_websites_b_one(item){
+        [blcategory,blstr,blname,bltag]=split_pwa_websites_b(item);
+        if (blcategory=='' || blstr=='' || blname==''){
+            ignored_list.push(item);
+            return;
+        }
+        result_t.push([blcategory,blstr,blname]);
+        new_list.push(blcategory+(bltag==''?'':','+bltag)+' '+blstr+' '+blname);
+    }
+    
+    var websites_list=local_storage_get_b('websites_list_pwa',-1,true);
+    //websites_list 的元素形如："微信公众号 http://weixin.qq.com/r/ukwYHNLEQho_KZZ-bxk_ 数据宝" - 保留注释
+    
+    var result_t=[];
+    var blcategory, blstr, blname, bltag;
+    var new_list=[];
+    var ignored_list=[];
+
+    cskey=cskey.trim();
+
+    if (cskey==''){
+        for (let item of websites_list){
+            sub_search_websites_b_one(item);
+        }
+    } else {
+        for (let item of websites_list){
+            var blfound=str_reg_search_b(item,cskey,is_reg);
+            if (blfound==-1){break;}
+            if (blfound){
+                sub_search_websites_b_one(item);
+            }
+        }
+    }
+
+    if (is_random){
+        result_t.sort(randomsort_b);
+    } else {
+        result_t.sort(function (a,b){return zh_sort_b(a,b,false,2);});
+        result_t.sort(function (a,b){return zh_sort_b(a,b,false,0);});
+    }
+
+    if (return_max>0){
+        result_t=result_t.slice(0,return_max);
+    }
+
+    if (enable_jieba){
+        jieba_websites_b(result_t,2);
+    }
+    
+    return [result_t,new_list,ignored_list];
+}
+
+function search_links_websites_b(cskey,cslist,concat_recent=false,enable_jieba=false,userjs=''){
+    var result_t={};
+    var blcount=0;
+    
+    if (concat_recent){
+        cslist=recent_websites_b(false,'recent_array').concat(cslist);  //recent 不进入localStorage - 保留注释
+    }
+    
+    for (let item of cslist){
+        //item 形如 [ "资讯", "https://news.sina.com.cn", "新浪新闻" ] - 保留注释
+        var blkey='w_'+category_websites_b(enable_jieba,item[2],item[0],cskey);
+        if (result_t[blkey]==undefined){
+            result_t[blkey]=[];
+        }
+        var blhref=item[1].replace(new RegExp('"','g'),'&quot;');
+        var blstyle=(today_clicked_websites_global.has(blhref)?' style="background-color:'+scheme_global['pink']+';"':'');
+        result_t[blkey].push('<a class="a_oblong_box" href="'+blhref+'" onclick="recent_websites_b(this);'+userjs+'"'+blstyle+' target=_blank>'+specialstr92_b(item[2])+'</a>');
+        blcount=blcount+1;
+    }
+    return [result_t,blcount];
+}
+
+function search_html_websites_b(cslist,csdisplay,enable_jieba){
+    function sub_search_html_websites_b_join(csarr,display_str=''){
+        return '<span class="span_websites_link_container" style="display:'+display_str+';">'+csarr.join('</span> <span class="span_websites_link_container" style="display:'+display_str+';">')+'</span>';
+    }
+    
+    var bljg=[];
+    for (let key in cslist){
+        let bllen=cslist[key].length;
+        let len_str='<span style="font-size:0.9rem; font-weight:normal;">('+bllen+')</span>';
+        if (bllen>5){
+            bljg.push('<span><span style="font-weight:bold;font-size:1.2rem;cursor:pointer;" onclick="show_all_or_part_websites_b(this);">'+key.substring(2,)+len_str+'</span> '+sub_search_html_websites_b_join(cslist[key].slice(0,5))+' '+sub_search_html_websites_b_join(cslist[key].slice(5,),csdisplay)+'</span>');
+        } else {
+            bljg.push('<span><span style="font-weight:bold;font-size:1.2rem;">'+key.substring(2,)+len_str+'</span> '+sub_search_html_websites_b_join(cslist[key])+'</span>');
+        }
+    }
+    
+    if (enable_jieba){
+        bljg.sort(function (a,b){return zh_sort_b(a,b);});
+    }
+    return bljg;
+}
+
+function show_all_or_part_websites_b(ospan){
+    var odoms=ospan.parentNode.querySelectorAll('span.span_websites_link_container');
+    var lent=odoms.length;
+    if (lent<=5){return;}
+    var bldisplay=(odoms[5].style.display=='none'?'':'none');
+    for (let blxl=5;blxl<lent;blxl++){
+        odoms[blxl].style.display=bldisplay;
+    }
 }

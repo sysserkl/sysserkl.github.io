@@ -153,13 +153,38 @@ function import_pwa_data_klwebsites(){
     sites_reload_klwebsites(true);
 }
 
-//function import_bigfile_klwebsites(){
-    //sites_all_global=undefined;
-    //load_js_var_file_b('sites_all_global',[],'sites_all_data.js',sites_reload_klwebsites,true,true);
-//}
-
 function sites_reload_klwebsites(is_pwa=false,do_search=true){
-    sites_type_klwebsites();
+    function sub_sites_reload_klwebsites_type(){
+        var klwebphp_path=klwebphp_path_b();
+
+        for (let blxl=0,lent=sites_all_global.length;blxl<lent;blxl++){
+            var href_str=sites_all_global[blxl][0];
+            var count1=0;
+            var count2=0;
+            var count3=0;
+            if (href_str.includes('{{klwebphp}}')){
+                href_str=href_str.replace('{{klwebphp}}',klwebphp_path);
+                count3=1;
+            }
+            if (href_str.substring(0,4)!=='http'){
+                href_str=href_str.substring(href_str.indexOf('http'),); //截取http开始的字符串 - 保留注释
+                count3=1;
+            } else {
+                count1=1;
+            }
+            if (count3>0){
+                sites_all_global[blxl][0]=href_str;
+            }
+            if (count1==1){
+                if (sites_all_global[blxl][2]=='CN' || sites_all_global[blxl][2].slice(-3,)==',CN' || sites_all_global[blxl][2].substring(0,3)=='CN,' || sites_all_global[blxl][2].includes(',CN,')){
+                    count2=1;
+                }
+            }
+            sites_all_global[blxl].push([count1,count2,count3]);   //selenium类型网址，其中CN网址，非selenium类型网址 - 保留注释
+        }
+    }
+    
+    sub_sites_reload_klwebsites_type();
     var omenu=document.getElementById('div_websites_menu');
     if (omenu){
         omenu.outerHTML='';
@@ -427,7 +452,7 @@ function demo_style_klwebsites(only_http=false){
     var left_str='<p>';
     var right_str=' rows：'+list_t.length+'</p>';
     
-    var blstr=textarea_with_form_generate_b('textarea_demo_style_sites','width:90%;height:24rem;',left_str,'全选,清空,复制,发送到临时记事本,发送地址',right_str,'','form_demo_style_sites');
+    var blstr=textarea_with_form_generate_b('textarea_demo_style_sites','width:90%;height:24rem;',left_str,'全选,清空,复制,↑,↓,导入 txt 文件,加密,解密,save as txt file,发送到临时记事本,发送地址',right_str,'','form_demo_style_sites');
     document.getElementById('div_sub_content').innerHTML=blstr;
     document.getElementById('textarea_demo_style_sites').value=list_t.join('\n');    
 }
@@ -491,12 +516,8 @@ function href_klwebsites(csarray,csnumber=-1,keyword=''){
     
     if (keyword!==''){
         var blfound=str_reg_search_b(csarray,keyword,true);
-        if (blfound==-1){
-            return false;
-        }
-        if (!blfound){
-            return ''
-        }
+        if (blfound==-1){return false;}
+        if (!blfound){return '';}
     }
 
     return href_str;
@@ -942,36 +963,6 @@ function search_in_site_new_window_klwebsites(cstype,cskey=false,site_name=false
         window.open(blstr);    
     }
     return blstr;
-}
-
-function sites_type_klwebsites(){
-    var klwebphp_path=klwebphp_path_b();
-
-    for (let blxl=0,lent=sites_all_global.length;blxl<lent;blxl++){
-        var href_str=sites_all_global[blxl][0];
-        var count1=0;
-        var count2=0;
-        var count3=0;
-        if (href_str.includes('{{klwebphp}}')){
-            href_str=href_str.replace('{{klwebphp}}',klwebphp_path);
-            count3=1;
-        }
-        if (href_str.substring(0,4)!=='http'){
-            href_str=href_str.substring(href_str.indexOf('http'),); //截取http开始的字符串 - 保留注释
-            count3=1;
-        } else {
-            count1=1;
-        }
-        if (count3>0){
-            sites_all_global[blxl][0]=href_str;
-        }
-        if (count1==1){
-            if (sites_all_global[blxl][2]=='CN' || sites_all_global[blxl][2].slice(-3,)==',CN' || sites_all_global[blxl][2].substring(0,3)=='CN,' || sites_all_global[blxl][2].includes(',CN,')){
-                count2=1;
-            }
-        }
-        sites_all_global[blxl].push([count1,count2,count3]);   //selenium类型网址，其中CN网址，非selenium类型网址 - 保留注释
-    }
 }
 
 function sites_tail_klwebsites(){

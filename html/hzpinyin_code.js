@@ -86,7 +86,7 @@ function pronunciation_single_3500_hzpy(show_html=true){
     var list_t=(hz_3500_global+hz_easy_global).split('');
     for (let item of list_t){
         if (item in hz2py_global){
-            if (hz2py_global[item].length!=1){continue;}
+            if (hz2py_global[item].length!==1){continue;}
             var key=hz2py_global[item][0];
             if (result_t[key]==undefined){
                 result_t[key]=[];
@@ -94,6 +94,7 @@ function pronunciation_single_3500_hzpy(show_html=true){
             result_t[key].push(item);
         }
     }
+    
     var bljg={};
     for (let key in result_t){
         if (result_t[key].length<2){continue;}  //忽略只有一个汉字 - 保留注释
@@ -101,62 +102,82 @@ function pronunciation_single_3500_hzpy(show_html=true){
     }
     
     if (show_html==false){
+        //bljg 的元素形如：{ "pí": [ "皮", "疲", "啤" ] } - 保留注释
         return bljg;
     }
     
     bljg=object2array_b(bljg,true);
+
     for (let blxl=0,lent=bljg.length;blxl<lent;blxl++){
-        bljg[blxl]='"'+bljg[blxl][0]+'":["'+bljg[blxl].slice(1,).join('","')+'"],\n';
+        bljg[blxl]=[bljg[blxl][0],bljg[blxl].length-1,'"'+bljg[blxl][0]+'":["'+bljg[blxl].slice(1,).join('","')+'"],\n'];
     }
+    
+    bljg=sort_hzpy(bljg);
+    bljg=array_split_by_col_b(bljg,[2]);
     document.getElementById('divhtml').innerHTML=array_2_li_b(bljg.join('').trim().split('\n'));
 }
 
+function sort_hzpy(csarr){
+    var sort_type=document.getElementById('select_sort_type_hzpy').value;
+    csarr.sort(function (a,b){return zh_sort_b(a,b,false,0);});
+    switch (sort_type){
+        case '拼音降序':
+            csarr.reverse();
+            break;
+        case '数量升序':
+            csarr.sort(function(a,b){return a[1]>b[1] ? 1 : -1;});
+            break;
+        case '数量降序':
+            csarr.sort(function(a,b){return a[1]<b[1] ? 1 : -1;});
+            break;
+    }
+    
+    return csarr;
+}
+    
 function pronunciation_hzpy(cstype){
     switch (cstype){
         case 'single':
-            var result_t=new Set();
+            var result_t=[];
             for (let key in hz2py_global){
                 if (hz2py_global[key].length==1){
-                    result_t.add(one_word_hzpy(key));
+                    result_t.push([hz2py_global[key][0],1,one_word_hzpy(key)]);
                 }
             }
-            result_t=Array.from(result_t);
-            result_t.sort();            
+            
+            result_t=sort_hzpy(result_t);
+            result_t=array_split_by_col_b(result_t,[2]);
             break;
         case 'multiple':
             var result_t=[];
             for (let key in hz2py_global){
                 if (hz2py_global[key].length>1){
-                    result_t.push([one_word_hzpy(key),hz2py_global[key].length]);
+                    result_t.push([hz2py_global[key][0],hz2py_global[key].length,one_word_hzpy(key)]);
                 }
-            }    
-            result_t.sort();
-            result_t.sort(function (a,b){return a[1]>b[1] ? 1 : -1;});   
-            for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
-                result_t[blxl]=result_t[blxl][0];
             }
+            result_t=sort_hzpy(result_t);
+            result_t=array_split_by_col_b(result_t,[2]);
             break;
         case 'list':
             var result_t=[];
             for (let key in py2hz_global){
                 result_t.push([key,py2hz_global[key].length]);
             }
-            result_t.sort(function (a,b){return a[1]>b[1] ? 1 : -1;});
+            
+            result_t=sort_hzpy(result_t);
+            
             for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
-                var words='';
-                if (result_t[blxl][1]<=10){
-                    words='<span class="oblong_box">'+py2hz_global[result_t[blxl][0]].join(' ')+'</span>';
-                }
-                
-                result_t[blxl]=result_t[blxl][0]+'<small>('+result_t[blxl][1]+')'+words+'</small>';
+                result_t[blxl]=result_t[blxl][0]+'<small>('+result_t[blxl][1]+')</small>';
             }
             break;
         case 'length':
             var result_t=Object.keys(py2hz_global);
-            result_t.sort(function(a,b){return a.length<b.length ? 1 : -1;});
             for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
-                result_t[blxl]=result_t[blxl]+': '+py2hz_global[result_t[blxl]];
+                result_t[blxl]=[result_t[blxl]+'('+py2hz_global[result_t[blxl]].length+'): '+py2hz_global[result_t[blxl]],py2hz_global[result_t[blxl]].length];
             }
+
+            result_t=sort_hzpy(result_t);
+            result_t=array_split_by_col_b(result_t,[0]);
             result_t=array_2_li_b(result_t);
             break;
     }
@@ -433,12 +454,13 @@ function menu_hzpy(){
     klmenu1.push(menu_container_b(str_t,group_list,'繁简: '));
 
     var klmenu2=[
-    '<span class="span_menu" onclick="'+str_t+'pronunciation_hzpy(\'multiple\');">所有多音字</span>',
-    '<span class="span_menu" onclick="'+str_t+'pronunciation_hzpy(\'single\');">所有单音字</span>',
-    '<span class="span_menu" onclick="'+str_t+'pronunciation_single_3500_hzpy();">常见单音字</span>',                
+    '<span class="span_menu" onclick="'+str_t+'pronunciation_hzpy(\'multiple\');">字：多音</span>',
+    '<span class="span_menu" onclick="'+str_t+'pronunciation_hzpy(\'single\');">字：单音</span>',
+    '<span class="span_menu" onclick="'+str_t+'pronunciation_single_3500_hzpy();">常见单音字</span>',
     '<span class="span_menu" onclick="'+str_t+'pronunciation_hzpy(\'list\');">读音列表</span>',    
-    '<span class="span_menu" onclick="'+str_t+'pronunciation_hzpy(\'length\');">读音长度排序</span>',    
+    '<span class="span_menu" onclick="'+str_t+'pronunciation_hzpy(\'length\');">读音：字</span>',    
     '<span class="span_menu" onclick="'+str_t+'homophonic_words_hzpy();">谐音字</span>',    
+    '<span class="span_menu"><select id="select_sort_type_hzpy"><option>拼音升序</option><option>拼音降序</option><option>数量升序</option><option>数量降序</option></select></span>',    
     ];
     
     var klmenu_link=[];
