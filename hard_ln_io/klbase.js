@@ -787,7 +787,7 @@ function location_href_b(){
     return same_path;
 }
 
-function href_split_b(cshref){
+function href_split_b(cshref,remove_bigfile=true){
     if (cshref.includes('#')){
         var cshref=cshref.substring(0,cshref.indexOf('#'));
     }
@@ -797,7 +797,17 @@ function href_split_b(cshref){
         cshref='';
     }
     var cskeys=decodeURIComponent(cshref).split('&');
-    return cskeys;
+    if (remove_bigfile){
+        var result_t=[];
+        for (let item of cskeys){
+            if (['idb','render'].includes(item)){continue;}
+            if (item.startsWith('htm=')){continue;}
+            result_t.push(item);
+        }
+        return result_t;
+    } else {
+        return cskeys;
+    }
 }
 
 function restore_str_b(csstr){

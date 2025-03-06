@@ -8,7 +8,8 @@ function init_bigfile(){
     
     today_clicked_websites_global=new Set();
     
-    top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.6rem'),true,false,2);
+    let ismobile=ismobile_b();
+    top_bottom_arrow_b('div_top_bottom','',false,(ismobile?'1.8rem':'1.6rem'),true,false,2);
     input_with_x_b('input_search',11);
     character_2_icon_b('B');
 
@@ -22,7 +23,7 @@ function init_bigfile(){
 }
 
 function args_bigfile(){
-    var cskeys=href_split_b(location.href);
+    var cskeys=href_split_b(location.href,false);
     if (cskeys.length>0 && cskeys[0]!==''){
         for (let one_key of cskeys){
             one_key=one_key.trim();
@@ -952,14 +953,38 @@ function export_bigfile(ospan,cscontent=false){
 }
 
 function websites_bigfile(return_max=-1){
+    function sub_websites_bigfile_load(){
+        if (typeof sites_all_global == 'undefined'){
+            sites_all_global=[];
+        } else {
+            sites_all_global=js_arr_type_websites_b(sites_all_global);
+            sites_all_global=js_2_demo_style_websites_b(sites_all_global);
+            sites_all_global=demo_2_cache_style_websites_b(sites_all_global)[0];
+        }
+        sub_websites_bigfile_search();
+    }
+    
+    function sub_websites_bigfile_search(){
+        var result_t=search_cache_websites_b(cskey,is_reg,false,return_max,false,sites_all_global)[0];
+        result_t=search_links_websites_b(cskey,result_t,true)[0];
+        
+        var bljg=search_html_websites_b(result_t,'none',false);
+        document.getElementById('divhtml').innerHTML='<p style="line-height:'+(ismobile_b()?'1.8':'2.2')+'rem;">'+bljg.join(' ')+'</p>';
+        
+        console.log('websites_bigfile() 费时：'+(performance.now() - t0) + ' milliseconds');
+    }
+    
+    var t0 = performance.now();
+
     var cskey,is_reg;
     [cskey,is_reg]=key_get_bigfile();
-    
-    var result_t=search_arr_websites_b(cskey,is_reg,false,return_max,false)[0];
-    result_t=search_links_websites_b(cskey,result_t,true)[0];
 
-    var bljg=search_html_websites_b(result_t,'none',false);
-    document.getElementById('divhtml').innerHTML='<p style="line-height:'+(ismobile_b()?'1.8':'2.2')+'rem;">'+bljg.join(' ')+'</p>';
+    if (typeof sites_all_global == 'undefined'){
+        var file_list=klbase_addons_import_js_b([],[],['sites_all_data.js'],[],false,false);
+        load_js_var_file_b('sites_all_global',file_list,'sites_all_data.js',sub_websites_bigfile_load);
+    } else {
+        sub_websites_bigfile_search();
+    }
 }
 
 function show_hide_storage_bigfile(){

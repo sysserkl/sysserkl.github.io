@@ -1,12 +1,14 @@
 function init_wp_pwa(){
     top_bottom_arrow_b('div_top_bottom','',false,'2rem');
+    //character_2_icon_b('💰');
+
     menu_wp_pwa();
     luru_input_format_money_b('id');
     editor_money_b();
     popup_selection_money_b();
     calculator_generate_money_b();
     read_wp_pwa();
-    
+
     var list_t=[
     'input_class',
     'input_name',

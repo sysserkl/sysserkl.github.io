@@ -35,7 +35,6 @@ function args_kle(){
     var cskeys=href_split_b(location.href);
     if (cskeys.length>0 && cskeys[0]!==''){
         //形如：enwords.htm?s=english& - 保留注释
-        
         //是否显示例句 - 保留注释
         var show_sentence=false;
         for (let item of cskeys){
@@ -48,7 +47,7 @@ function args_kle(){
                 break;
             }
         }
-                
+
         for (let bltmpstr of cskeys){
             bltmpstr=bltmpstr.trim();
             if (bltmpstr.substring(0,2)=='s='){

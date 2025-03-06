@@ -66,6 +66,21 @@ function html_str_group_b(cslist,csparent=''){
 }
 
 function html_head_body_render_b(html_source){
+    function sub_html_head_body_render_b_wait(){
+        wait_times=wait_times+1;
+        if (wait_times>50){
+            console.log('未发现 body','等候 body 次数：',wait_times);
+            return;
+        }
+        
+        if (document.querySelector('body')){
+            console.log('等候 body 次数：',wait_times);
+            html_str_group_b(blright,'body');
+        } else {
+            setTimeout(sub_html_head_body_render_b_wait,100);
+        }
+    }
+    
     var blat=html_source.indexOf('</head>');
     if (blat==-1){
         var blfoud=false;
@@ -139,7 +154,9 @@ function html_head_body_render_b(html_source){
     } else {
         document.body.innerHTML='';
     }
-    html_str_group_b(blright,'body');
+    
+    var wait_times=0;
+    sub_html_head_body_render_b_wait();
 }
 
 function html_render_js_b(js_list,run_fn=false){

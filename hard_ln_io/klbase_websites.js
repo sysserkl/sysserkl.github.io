@@ -380,8 +380,10 @@ function split_pwa_websites_b(csstr){
     //形如：[ "资讯", "https://weibo.com/u/2938715943", "人民网舆情数据中心 - 微博", "CN" ] - 保留注释
 }
 
-function search_arr_websites_b(cskey='',is_reg=false,is_random=false,return_max=-1,enable_jieba=false){
+function search_cache_websites_b(cskey='',is_reg=false,is_random=false,return_max=-1,enable_jieba=false,cslist=[]){
     function sub_search_websites_b_one(item){
+        if (item==''){return;}
+        
         [blcategory,blstr,blname,bltag]=split_pwa_websites_b(item);
         if (blcategory=='' || blstr=='' || blname==''){
             ignored_list.push(item);
@@ -391,7 +393,11 @@ function search_arr_websites_b(cskey='',is_reg=false,is_random=false,return_max=
         new_list.push(blcategory+(bltag==''?'':','+bltag)+' '+blstr+' '+blname);
     }
     
-    var websites_list=local_storage_get_b('websites_list_pwa',-1,true);
+    if (cslist.length==0){
+        websites_list=local_storage_get_b('websites_list_pwa',-1,true);
+    } else {
+        websites_list=[].concat(cslist);
+    }
     //websites_list 的元素形如："微信公众号 http://weixin.qq.com/r/ukwYHNLEQho_KZZ-bxk_ 数据宝" - 保留注释
     
     var result_t=[];
@@ -485,4 +491,183 @@ function show_all_or_part_websites_b(ospan){
     for (let blxl=5;blxl<lent;blxl++){
         odoms[blxl].style.display=bldisplay;
     }
+}
+
+function sort_js_websites_b(){
+    sites_all_global.sort();
+    sites_all_global.sort(function (a,b){return zh_sort_b(a,b,false,1);});
+    sites_all_global.sort(function (a,b){return zh_sort_b(a,b,false,2);});
+}
+
+function js_arr_type_websites_b(csarr){
+    var klwebphp_path=klwebphp_path_b();
+
+    for (let blxl=0,lent=csarr.length;blxl<lent;blxl++){
+        var href_str=csarr[blxl][0];
+        var count1=0;
+        var count2=0;
+        var count3=0;
+        if (href_str.includes('{{klwebphp}}')){
+            href_str=href_str.replace('{{klwebphp}}',klwebphp_path);
+            count3=1;
+        }
+        if (href_str.substring(0,4)!=='http'){
+            href_str=href_str.substring(href_str.indexOf('http'),); //截取http开始的字符串 - 保留注释
+            count3=1;
+        } else {
+            count1=1;
+        }
+        if (count3>0){
+            csarr[blxl][0]=href_str;
+        }
+        if (count1==1){
+            if (csarr[blxl][2]=='CN' || csarr[blxl][2].slice(-3,)==',CN' || csarr[blxl][2].substring(0,3)=='CN,' || csarr[blxl][2].includes(',CN,')){
+                count2=1;
+            }
+        }
+        csarr[blxl].push([count1,count2,count3]);   //selenium类型网址，其中CN网址，非selenium类型网址 - 保留注释
+    }
+    return csarr;
+}
+    
+function search_js_websites_b(keyword='',csnumber=999,enable_rnd=false,enable_jieba=false){
+    function sub_search_js_websites_b_href(csarray){
+        var href_str=csarray[0];    //href_str 可以不含有 http，如本地网站 - 保留注释
+        if (csarray[3]>csnumber && csnumber>-1){return '';}
+        
+        if (keyword!==''){
+            var blfound=str_reg_search_b(csarray,keyword,true);
+            if (blfound==-1){return false;}
+            if (!blfound){return '';}
+        }
+
+        return href_str;
+    }
+    
+    function sub_search_js_websites_b_add(item,cshref,csxl){
+        if (enable_rnd){
+            var r_list=item[2].match(/\bR(0\.\d+)\b/) || [];
+            if (r_list.length==2){
+                if (Math.random()<parseFloat(r_list[1])){
+                    console.log('忽略',item);
+                    return;
+                }
+            }
+        }
+        var blcategory=category_websites_b(enable_jieba,item[1],item[2],keyword);
+        if (category_list['w_'+blcategory]==undefined){
+            category_list['w_'+blcategory]=[];
+        }
+        category_list['w_'+blcategory].push([cshref,csxl,blcategory]);   //网址 序号 分类 - 保留注释    
+    }
+    //-----------------------
+    sort_js_websites_b();
+    
+    var fav_set=new Set();
+    if (keyword=='FAV'){
+        fav_set=fav_www_get_websites_b();
+    }
+    var category_list={};
+    
+    if (enable_jieba){
+        jieba_websites_b(sites_all_global,1);
+    }
+
+    var href_str='';
+    if (fav_set.size==0){
+        for (let blxl=0,lent=sites_all_global.length;blxl<lent;blxl++){
+            var item=sites_all_global[blxl];
+            href_str=sub_search_js_websites_b_href(item);
+            
+            if (href_str===false){break;}
+            else if (href_str===''){continue;}
+            
+            sub_search_js_websites_b_add(item,href_str,blxl);
+        }
+    } else {
+        for (let blxl=0,lent=sites_all_global.length;blxl<lent;blxl++){
+            var item=sites_all_global[blxl];
+            if (fav_set.has(item[0])){
+                sub_search_js_websites_b_add(item,item[0],blxl);
+            }
+        }
+    }
+    
+    var result_t=[];
+    for (let key in category_list){
+        result_t=result_t.concat(category_list[key]);
+    }
+    if (enable_jieba){
+        result_t.sort(function (a,b){return zh_sort_b(a,b,false,2);});
+    }
+    return result_t;
+}
+
+function js_2_demo_style_websites_b(csarr,cskey='',only_http=false,enable_jieba=false){
+    var result_t=search_js_websites_b(cskey,999,false,enable_jieba);
+
+    var demo_list=[];
+    if (only_http){
+        for (let href_list of result_t){
+            demo_list.push(href_list[0]);
+        }
+    } else {
+        for (let href_list of result_t){
+            var href_str=href_list[0];
+            var category=csarr[href_list[1]][2];
+            if (category==''){
+                category='未分类';
+            }
+            demo_list.push(category+' '+href_str+' '+csarr[href_list[1]][1].replace(/<\/?small>/g,''));
+        }
+    }
+    return demo_list;
+}
+
+function demo_2_cache_style_websites_b(cslist){
+    var result_t=[];
+    var repeated=[];
+    var site_list=[];
+    for (let item of cslist){
+        item=item.trim();
+        if (item==''){continue;}
+        if (result_t.includes(item)){
+            repeated.push(item);
+            continue;
+        }
+        
+        var site_tmp=split_pwa_websites_b(item);
+        if (site_tmp[0]==''){continue;}
+        site_list.push(site_tmp);
+        
+        result_t.push(item);
+    }
+
+    site_list.sort(function (a,b){return a[1].length>b[1].length ? 1 : -1});  //网址长度 - 保留注释
+
+    var hostname,bltail;
+    var name_set=new Set();
+    for (let blxl=0,lent=site_list.length;blxl<lent;blxl++){
+        var blname=name_remove_quote_websites_b(site_list[blxl][1],site_list[blxl][2]);
+        if (blname!==site_list[blxl][2] && !name_set.has(blname)){
+            site_list[blxl][2]=blname;
+        }
+
+        if (name_set.has(site_list[blxl][2])){
+            [hostname,bltail]=same_name_websites_b(site_list[blxl][1],site_list[blxl][2],false);
+            console.log(hostname,bltail);
+            if (hostname!=='' && !name_set.has(hostname)){
+                site_list[blxl][2]=hostname;
+            } else {
+                site_list[blxl][2]=bltail;
+            }
+        }
+        name_set.add(site_list[blxl][2]);    
+    
+        site_list[blxl]=site_list[blxl][0]+(site_list[blxl][3]==''?'':','+site_list[blxl][3])+ ' '+site_list[blxl][1]+' '+site_list[blxl][2];
+    }
+
+    site_list.sort(function (a,b){return zh_sort_b(a,b,false);});
+    repeated.sort(function (a,b){return zh_sort_b(a,b,false);});
+    return [site_list,repeated];
 }

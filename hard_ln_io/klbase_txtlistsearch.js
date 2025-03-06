@@ -262,7 +262,26 @@ function import_bigfile_kltxt_b(){
     load_js_var_file_b('filelist',[],fname,sub_import_bigfile_kltxt_b_load_content,true,true);
 }
 
-function new_words_lines_kltxt_b(csmin=1,csmax=1){
+function new_words_lines_kltxt_b(new_min=-1,new_max=-1,rare_min=-1,rare_max=-1){
+    function sub_new_words_lines_kltxt_b_check(cslen,csmin,csmax){
+        if (csmin>=0 && csmax>=0){
+            if (cslen>=csmin && cslen<=csmax){
+                return true;
+            }
+        } else if (csmin>=0){
+            if (cslen>=csmin){
+                return true;
+            }
+        } else if (rare_max>=0){
+            if (cslen<=csmax){
+                return true;
+            }
+        } else if (csmin<0 && csmax<0){
+            return true;
+        }
+        return false;
+    }
+    
     function sub_new_words_lines_kltxt_b_arow(){
         if (blxl>=bllen || result_t.length>=blmax){
             document.title=old_title;
@@ -273,10 +292,26 @@ function new_words_lines_kltxt_b(csmin=1,csmax=1){
         }
         
         if (!menu_no.has(blxl)){
-            var new_old_list=get_new_old_rare_words_set_enbook_b(filelist[blxl],is_remove_square,words_type,csendata_set);
-            var new_words_length=new_old_list[0].size;
-            if (new_words_length>=csmin && new_words_length<=csmax){
+            let do_push_new=true;
+            let do_push_rare=true;
+            let new_old_list=get_new_old_rare_words_set_enbook_b(filelist[blxl],is_remove_square,words_type,csendata_set);
+            let new_words_length=new_old_list[0].size;
+            let rare_words_length=new_old_list[2].size;
+
+            if (!sub_new_words_lines_kltxt_b_check(new_words_length,new_min,new_max)){
+                do_push_new=false;
+            }
+            
+            if (do_push_new){
+                if (!sub_new_words_lines_kltxt_b_check(rare_words_length,rare_min,rare_max)){
+                    do_push_rare=false;
+                }
+            }
+            
+            if (do_push_new && do_push_rare){
                 result_t.push([filelist[blxl],blxl]);
+            //} else {
+                //console.log(new_words_length,rare_words_length);  //测试用 - 保留注释
             }
         }
         blxl=blxl+1;
@@ -331,10 +366,17 @@ function txtmenus_kltxt_b(cstype=''){
     '<span id="span_add_zero_reading_lines_txtlistsearch" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 阅读行数补零</span>',
     '<span class="span_menu" onclick="'+str_t+'getlines_kltxt_b();">返回阅读页面</span>',
     '<span class="span_menu" onclick="'+str_t+'new_words_kltxt_b([2],\'exclude\',true);">当前页面不在例句中的生词</span>',
-    '<span class="span_menu" onclick="'+str_t+'new_words_lines_kltxt_b(1,1);">仅有1个新单词的行</span>',
-    '<span class="span_menu" onclick="'+str_t+'new_words_lines_kltxt_b(0,0);">无新单词的行</span>',
+    //'<span class="span_menu" onclick="'+str_t+'new_words_lines_kltxt_b(1,1);">仅有1个新单词的行</span>',
+    //'<span class="span_menu" onclick="'+str_t+'new_words_lines_kltxt_b(0,0);">无新单词的行</span>',
     ]);    
 
+    var group_list=[
+    ['仅有1个新单词','new_words_lines_kltxt_b(1,1);',true],
+    ['无新单词','new_words_lines_kltxt_b(0,0);',true],
+    ['无新单词且无稀有单词','new_words_lines_kltxt_b(0,0,0,0);',true],
+    ];    
+    menu_general.push(menu_container_b(str_t,group_list,'行：'));
+    
     var group_list=[
     ['枚举','rare_enwords_enumerate_kltxt_b();',true],
     ['搜索','rare_enwords_search_kltxt_b();',true],
@@ -492,7 +534,7 @@ function txtmenus_kltxt_b(cstype=''){
     var bljg='';
     var colors=klmenu_b(color_menu,'🎨',(ismobile_b()?'16rem':'20rem'),'',fontsize,'20rem');
     if (cstype!=='digest'){
-        bljg=bljg+klmenu_b(menu_general,'','25rem','',fontsize);
+        bljg=bljg+klmenu_b(menu_general,'','27rem','',fontsize);
         bljg=bljg+klmenu_b(menu_dir,'🔍',menu_dir_width,'',fontsize);
         bljg=bljg+klmenu_b(menu_digest,'🖊','28rem','',fontsize);       
         bljg=bljg+colors;
