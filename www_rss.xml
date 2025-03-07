@@ -8,458 +8,127 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Thu, 06 Mar 2025 10:10:35 +0800</lastBuildDate>
-<item><title>Feds name and charge alleged Silk Typhoon spies behind years of China-on-US attacks - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/06/fbi_china_pays_75k_per/</link></item>
-<item><title>Intel wins something: Judge tosses out shareholder lawsuit over foundry losses - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/06/intel_lawsuit_foundry/</link></item>
-<item><title>Ex-NSA grandee says Trump&amp;#39;s staff cuts will &amp;#39;devastate&amp;#39; America&amp;#39;s national security - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/05/us_government_job_cuts_nsa/</link></item>
-<item><title>It begins: Pentagon to give AI agents a role in decision making, ops planning - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/05/dod_taps_scale_to_bring/</link></item>
-<item><title>Run DeepSeek R1 on an Apple M3 Ultra Mac Studio? Sure, it&amp;#39;ll just cost you $9,499-plus - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/05/apple_m3_ultra_mac_studio/</link></item>
-<item><title>China&amp;#39;s Silk Typhoon, tied to US Treasury break-in, now hammers IT and govt targets - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/05/china_silk_typhoon_update/</link></item>
-<item><title>Brits end probe into Microsoft&amp;#39;s $13B bankrolling of OpenAI - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/05/cma_microsoft_openai/</link></item>
-<item><title>Trump says US should kill CHIPS Act, use the cash to cut debt - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/05/trump_speech_scrap_chips_act/</link></item>
-<item><title>iOS users left refreshing in vain as Microsoft Outlook woes drag on - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/05/outlookcom_ios/</link></item>
-<item><title>Apple drags UK government to court over &amp;#39;backdoor&amp;#39; order - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/05/apple_reportedly_ipt_complaint/</link></item>
-<item><title>&amp;#39;Cybertruck ownership comes with ... interesting fan mail&amp;#39; - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/05/cybertruck_hate/</link></item>
-<item><title>Microsoft teases sales agent automation for M365 and Dynamics 365 - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/05/microsoft_teases_sales_agent_automation/</link></item>
-<item><title>Controllers getting no response from Lunar Trailblazer orbiter or Odin asteroid mining probe - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/05/nasa_and_astroforge_missions_prove/</link></item>
-<item><title>Leeds United kick card swipers into Row Z after 5-day cyberattack - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/05/leeds_united_card_swipers/</link></item>
-<item><title>Worry not. China&amp;#39;s on the line saying AGI still a long way off - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/05/boffins_from_china_calculate_agi/</link></item>
-<item><title>Qilin ransomware gang claims attacks on cancer clinic, OB-GYN facility - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/05/qilin_ransomware_credit/</link></item>
-<item><title>Raspberry Pi launches CM4 variant that laughs in the face of frostbite - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/05/raspberry_pi_extended_temperatures/</link></item>
-<item><title>Maybe cancel that ChatGPT therapy session – doesn&amp;#39;t respond well to tales of trauma - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/05/traumatic_content_chatgpt_anxious/</link></item>
-<item><title>Scotland now home to Europe&amp;#39;s biggest battery as windy storage site fires up - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/05/blackhillock_europes_largest_battery_scotland/</link></item>
-<item><title>Cybercrims now licking stamps and sending extortion demands in snail mail - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/05/snail_mail_data_release_extortion/</link></item>
-<item><title>As Alibaba launches server-grade RISC-V CPU, Beijing throws its weight behind ISA - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/05/china_alibaba_risc_v_c930/</link></item>
-<item><title>Ransomware thugs threaten Tata Technologies with leak if demands not met - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/05/tata_technologies_hiunters_international/</link></item>
-<item><title>Please fasten your seatbelts. A third of US air traffic control systems are &amp;#39;unsustainable&amp;#39; - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/05/faa_air_traffic_control/</link></item>
-<item><title>Hey, remember iPads? Those fondleslabs? Apple still does - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/04/apple_ipad_upgrade/</link></item>
-<item><title>Free Software Foundation rides to defend AGPLv3 against Neo4j license add-ons - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/04/free_software_foundation_agplv3/</link></item>
-<item><title>VMware splats guest-to-hypervisor escape bugs already exploited in wild - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/04/vmware_plugs_three_hypervisorhijack_holes/</link></item>
-<item><title>Apple dares users to fix &amp;#39;budget&amp;#39; iPhone 16e themselves - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/04/apple_iphone_16e_ifixit/</link></item>
-<item><title>Firefox 136 finally brings the features that fans wanted - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/04/firefox_136/</link></item>
-<item><title>Scientists create woolly ma-mouse by looking at mean genes from the Pleistocene - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/04/us_scientists_woolly_mouse_genes/</link></item>
-<item><title>SpaceX loses a Falcon 9 booster and scrubs a Starship - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/04/spacex_loses_falcon_9/</link></item>
-<item><title>CoreWeave rides AI wave with IPO filing – but its fate hinges on Microsoft - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/04/coreweave_ipo/</link></item>
-<item><title>Microsoft Exchange Admin Center takes extended siesta in the EU - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/04/microsoft_exchange_admin_center/</link></item>
-<item><title>Windows 365 Disaster Recovery Plus promises Cloud PC comebacks in 30 minutes - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/04/windows_365_disaster_recovery_plus/</link></item>
-<item><title>The ups and down of a virtual trip to the Moon in Zero G&amp;#39;s 727 - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/04/a_virtual_trip_to_the/</link></item>
-<item><title>Microsoft SQL Server 2019 shuffles out of mainstream support - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/04/microsoft_sql_server_2019_shuffles/</link></item>
-<item><title>Cloudflare&amp;#39;s bot bouncer blocks weirdo browsers - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/04/cloudflare_blocking_niche_browsers/</link></item>
-<item><title>How Google tracks Android device users before they&amp;#39;ve even opened an app - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/04/google_android/</link></item>
-<item><title>Microsoft: So what if it costs 4X as much to run Windows Server in AWS, Alibaba, and Google? - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/04/microsoft_blasts_uk_market_regulator/</link></item>
-<item><title>It&amp;#39;s bad enough we have to turn on cams for meetings, now the person staring at you may be an AI deepfake - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/04/faceswapping_scams_2024/</link></item>
-<item><title>Microsoft signed a dodgy driver and now ransomware scum are exploiting it - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/04/paragon_partition_manager_ransomware_driver/</link></item>
-<item><title>Broadcom starts beta for VMware Cloud Foundation 9, the release it reckons will douse user anger - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/04/vmware_vcf_9_beta_starts/</link></item>
-<item><title>TSMC promises $100B US expansion that Trump hails without clarifying chip tariff threat - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/04/tsmc_trump_arizona_investment/</link></item>
-<item><title>So … Russia no longer a cyber threat to America? - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/04/russia_cyber_threat/</link></item>
-<item><title>Windhawk vs ExplorerPatcher: Choosing the best way to customize Windows - xda-developers</title><link>https://www.xda-developers.com/windhawk-vs-explorerpatcher/</link></item>
-<item><title>You’ve got to try these 7 3D printing projects to improve your skills - xda-developers</title><link>https://www.xda-developers.com/try-3d-printing-projects-improve-skills/</link></item>
-<item><title>Anker&amp;#39;s 9-in-1 docking station is loaded with features and down to an all-time low - xda-developers</title><link>https://www.xda-developers.com/anker-powerexpand-9-in-1-usb-c-pd-dock-80-deal/</link></item>
-<item><title>5 reasons you should use ShareX instead of Snipping Tool - xda-developers</title><link>https://www.xda-developers.com/reasons-use-sharex-instead-snipping-tool/</link></item>
-<item><title>3 wildest GTA VI trailer release date theories - xda-developers</title><link>https://www.xda-developers.com/wildest-gta-vi-trailer-release-date-theories/</link></item>
-<item><title>3 reasons to pick a non-Raspberry Pi SBC for your next project - xda-developers</title><link>https://www.xda-developers.com/reasons-to-pick-a-non-raspberry-pi-sbc-for-your-next-project/</link></item>
-<item><title>6 great Raspberry Pi projects that don’t require soldering - xda-developers</title><link>https://www.xda-developers.com/raspberry-pi-projects-dont-require-soldering/</link></item>
-<item><title>6 PC components that were worth camping overnight for - xda-developers</title><link>https://www.xda-developers.com/6-pc-components-that-were-worth-camping-overnight-for/</link></item>
-<item><title>6 reasons a super ultrawide monitor is the best for gaming - xda-developers</title><link>https://www.xda-developers.com/super-ultrawide-monitor-best-gaming/</link></item>
-<item><title>5 reasons you should swap from Windows to Linux - xda-developers</title><link>https://www.xda-developers.com/reasons-swap-from-windows-linux/</link></item>
-<item><title>2024 年图灵奖授予了奠定强化学习的计算机科学家 Andrew Barto 和 Richard Sutton - Solidot</title><link>https://www.solidot.org/story?sid=80720</link></item>
-<item><title>苹果对英国的后门命令提起上诉 - Solidot</title><link>https://www.solidot.org/story?sid=80719</link></item>
-<item><title>TCL 在高端电视机出货量上超过 LG 仅次于三星 - Solidot</title><link>https://www.solidot.org/story?sid=80717</link></item>
-<item><title>宇宙最早的水可能形成于大爆炸后的 1-2 亿年 - Solidot</title><link>https://www.solidot.org/story?sid=80716</link></item>
-<item><title>韦伯望远镜发现有复杂大气层的流浪行星 - Solidot</title><link>https://www.solidot.org/story?sid=80715</link></item>
-<item><title>兄弟打印机通过强制性更新固件禁用第三方墨盒 - Solidot</title><link>https://www.solidot.org/story?sid=80714</link></item>
-<item><title>Homebrew Computer Club 成立 50 周年 - Solidot</title><link>https://www.solidot.org/story?sid=80713</link></item>
-<item><title>Firefox 136 释出，支持垂直标签 - Solidot</title><link>https://www.solidot.org/story?sid=80712</link></item>
-<item><title>Rescuers find Philippine fighter jet’s wreckage, bodies of 2 pilots - Defense News</title><link>https://www.defensenews.com/air-warfare/2025/03/05/rescuers-find-philippine-fighter-jets-wreckage-bodies-of-2-pilots/</link></item>
-<item><title>US Army approves production of vehicle-mounted GPS alternative - Defense News</title><link>https://www.defensenews.com/land/2025/03/05/us-army-approves-production-of-vehicle-mounted-gps-alternative/</link></item>
-<item><title>Trump administration pauses flow of intelligence to Ukraine - Defense News</title><link>https://www.defensenews.com/global/europe/2025/03/05/trump-administration-pauses-flow-of-intelligence-to-ukraine/</link></item>
-<item><title>‘F’ for fighter: Air Force combat drones get novel mission designation - Defense News</title><link>https://www.defensenews.com/air/2025/03/05/f-for-fighter-air-force-combat-drones-get-novel-mission-designation/</link></item>
-<item><title>European defense stocks soar amid re-armament talk - Defense News</title><link>https://www.defensenews.com/global/europe/2025/03/05/european-defense-stocks-soar-amid-re-armament-talk/</link></item>
-<item><title>Museum exhibit controversy reignites airman’s Medal of Honor dispute - Defense News</title><link>https://www.defensenews.com/news/your-military/2025/03/04/museum-exhibit-controversy-reignites-airmans-medal-of-honor-dispute/</link></item>
-<item><title>F-35s to get new capabilities with summer software update - Defense News</title><link>https://www.defensenews.com/air/2025/03/04/f-35s-to-get-new-capabilities-with-summer-software-update/</link></item>
-<item><title>Voice-controlled drones a military game-changer, Primordial Labs says - Defense News</title><link>https://www.defensenews.com/industry/techwatch/2025/03/04/voice-controlled-drones-a-military-game-changer-primordial-labs-says/</link></item>
-<item><title>Trump to launch new White House office focused on shipbuilding - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2025/03/05/trump-to-launch-new-white-house-office-focused-on-shipbuilding/</link></item>
-<item><title>Pentagon touts $80M in DOGE cuts, but public receipts don’t add up - Defense News</title><link>https://www.defensenews.com/pentagon/2025/03/05/pentagon-touts-80m-in-doge-cuts-but-public-receipts-dont-add-up/</link></item>
-<item><title>Boeing grows Alaska-based homeland missile defense silo count by 20 - Defense News</title><link>https://www.defensenews.com/air-warfare/2025/03/04/boeing-grows-alaska-based-homeland-missile-defense-silo-count-by-20/</link></item>
-<item><title>Pentagon nominee deflects on Russia’s invasion of Ukraine in hearing - Defense News</title><link>https://www.defensenews.com/pentagon/2025/03/04/pentagon-nominee-deflects-on-russias-invasion-of-ukraine-in-hearing/</link></item>
-<item><title>Hegseth halts US offensive cyberoperations against Russia - Defense News</title><link>https://www.defensenews.com/pentagon/2025/03/04/hegseth-halts-us-offensive-cyberoperations-against-russia/</link></item>
-<item><title>Trump pauses military aid to Ukraine after Oval Office blowup - Defense News</title><link>https://www.defensenews.com/pentagon/2025/03/04/trump-pauses-military-aid-to-ukraine-after-oval-office-blowup/</link></item>
-<item><title>Space acquisition hub preparing for impact of Trump’s workforce cuts - Defense News</title><link>https://www.defensenews.com/space/2025/03/04/space-acquisition-hub-preparing-for-impact-of-trumps-workforce-cuts/</link></item>
-<item><title>Germany&amp;#39;s likely next government seeks higher defense spending - Defense News</title><link>https://www.defensenews.com/global/europe/2025/03/05/germanys-likely-next-government-seeks-higher-defense-spending/</link></item>
-<item><title>America needs military lawyers willing to uphold its principles - Defense News</title><link>https://www.defensenews.com/opinion/2025/03/04/america-needs-military-lawyers-willing-to-uphold-its-principles/</link></item>
-<item><title>Air Force revives Skyraider name for new light attack aircraft - Defense News</title><link>https://www.defensenews.com/air-warfare/2025/03/04/air-force-revives-skyraider-name-for-new-light-attack-aircraft/</link></item>
-<item><title>A Reckoning for Teachers Unions - Law &amp; Liberty</title><link>https://lawliberty.org/forum/a-reckoning-for-teachers-unions/</link></item>
-<item><title>The Rise and Fall of Woke? - Law &amp; Liberty</title><link>https://lawliberty.org/the-rise-and-fall-of-woke-ideology/</link></item>
-<item><title>Colliding with Wokeism - Law &amp; Liberty</title><link>https://lawliberty.org/colliding-with-wokeism/</link></item>
-<item><title>Breaking the DEI Trance - Law &amp; Liberty</title><link>https://lawliberty.org/breaking-the-dei-trance/</link></item>
-<item><title>Scrutinizing Christian Nationalism - Law &amp; Liberty</title><link>https://lawliberty.org/podcast/scrutinizing-christian-nationalism/</link></item>
-<item><title>James Madison and the Crisis of the New Order - Law &amp; Liberty</title><link>https://lawliberty.org/james-madison-and-the-crisis-of-the-new-order/</link></item>
-<item><title>Texas measles outbreak - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#4_March_2025_(Texas_measles_outbreak)</link></item>
-<item><title>Reducing countering of Putin&amp;#39;s cracking army - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#4_March_2025_(Reducing_countering_of_Putin&amp;#39;s_cracking_army)</link></item>
-<item><title>Scapegoating and persecuting workers - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#4_March_2025_(Scapegoating_and_persecuting_workers)</link></item>
-<item><title>(satire) Zoo hiding animals ahead of Landlord visit - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#4_March_2025_((satire)_Zoo_hiding_animals_ahead_of_Landlord_visit)</link></item>
-<item><title>China can capitalise on damage caused by Trump - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#4_March_2025_(China_can_capitalise_on_damage_caused_by_Trump)</link></item>
-<item><title>Tesla, SpaceX vulnerable to Democrats - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#4_March_2025_(Tesla,_SpaceX_vulnerable_to_Democrats)</link></item>
-<item><title>CO2 pipeline safety regulations - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#4_March_2025_(CO2_pipeline_safety_regulations)</link></item>
-<item><title>City LNG restrictions sabotaged - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#4_March_2025_(City_LNG_restrictions_sabotaged)</link></item>
-<item><title>Depending on US LNG as risky - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#4_March_2025_(Depending_on_US_LNG_as_risky)</link></item>
-<item><title>Plant CO2 absorption slowing - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#4_March_2025_(Plant_CO2_absorption_slowing)</link></item>
-<item><title>No US Net-Zero Banking Alliance, COP26 - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#4_March_2025_(No_US_Net-Zero_Banking_Alliance,_COP26)</link></item>
-<item><title>Continue world aid, AND rearm, UK - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#3_March_2025_(Continue_world_aid,_AND_rearm,_UK)</link></item>
-<item><title>Pro-Ukranian backlash, protests - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#3_March_2025_(Pro-Ukranian_protestor_backlash_)</link></item>
-<item><title>ACLU stands up for deportees - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#3_March_2025_(ACLU_stands_up_for_immigrants)</link></item>
-<item><title>Ruling against the executive rulers - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#3_March_2025_(Ruling_against_the_executive_rulers)</link></item>
-<item><title>Urgent: Investigate Musk - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#3_March_2025_(Urgent:_Investigate_Musk)</link></item>
-<item><title>First official language, US - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#3_March_2025_(First_official_language,_US)</link></item>
-<item><title>Gazan medics&amp;#39; prison torture - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#3_March_2025_(Gazan_medics&amp;#39;_prison_torture)</link></item>
-<item><title>Zelenskyy acrimony, ambush, US/UKR - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#3_March_2025_(Zelenskyy_acrimony,_ambush,_US%2FUKR)</link></item>
-<item><title>Urgent: Prevent US plans for war, MEX - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#3_March_2025_(Urgent:_Prevent_US_plans_to_bomb_Mexico)</link></item>
-<item><title>Urgent: Sustain Medicaid - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#2_March_2025_(Urgent:_Sustaine_Medicaid)</link></item>
-<item><title>Zelenskyy ambushed by Tr-ance on TV - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#2_March_2025_(Zelenskyy_ambushed_by_Tr-ance_on_TV)</link></item>
-<item><title>3M chemicals disinformation early on - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#2_March_2025_(3M_chemicals_disinformation_early_on)</link></item>
-<item><title>(Satire) Criticism Of Grapes - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#2_March_2025_((Satire)_jeff_bezos_whole_foods)</link></item>
-<item><title>DoorDash tips - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#2_March_2025_(door_dash_tips_delivery_workers)</link></item>
-<item><title>Dealership vandalism - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#2_March_2025_(colorado_tesla_dealership_vandalism)</link></item>
-<item><title>Deporting Uyghurs, THA - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#2_March_2025_(Deporting_Uyghurs,_THA)</link></item>
-<item><title>US power in EU - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#2_March_2025_(US_power_in_EU)</link></item>
-<item><title>When Clinton cut gov&amp;#39;t jobs - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#2_March_2025_(When_Clinton_cut_gov&amp;#39;t_jobs)</link></item>
-<item><title>US military gender ideation - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#2_March_2025_(Gender_as_contamination,_US_military)</link></item>
-<item><title>State pensions in cryptocurrency - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#2_March_2025_(Corrupt_state_pensions_in_cryptocurrency)</link></item>
-<item><title>Judge blocks mass gov&amp;#39;t-firings - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#2_March_2025_(Judge_blocks_mass_firings,_US_govt)</link></item>
-<item><title>Israeli prisons, Gaza doctors - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#1_March_2025_(Gaza_doctors_prison_ordeal)</link></item>
-<item><title>Chief of decision control - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#1_March_2025_(Chief_of_decision_control)</link></item>
-<item><title>Undersea cable damage suspect, Taiwan - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#1_March_2025_(Undersea_cable_damage_suspect,_Taiwan)</link></item>
-<item><title>Neo-Nazi party deception, DEU - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#1_March_2025_(Neo-Nazi_party_deception,_DEU)</link></item>
-<item><title>On-hold-time algorithm - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#1_March_2025_(Hold-time_algorithm)</link></item>
-<item><title>US-RUS at UN, G7, NATO - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#1_March_2025_(US-RUS_at_UN,_G7,_NATO)</link></item>
-<item><title>Judge blocks Musk agency - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#1_March_2025_(Judge_blocks_Musk_agency)</link></item>
-<item><title>West Bank militarization - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#1_March_2025_(West_Bank_militarization)</link></item>
-<item><title>RSF: War journalist repression, RUS - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#1_March_2025_(RSF:_War_journalist_repression,_RUS)</link></item>
-<item><title>Google Maps blocking reviews about Gulf of Mexico - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#28_February_2025_(Google_Maps_blocking_reviews_about_Gulf_of_Mexico)</link></item>
-<item><title>Washington post newspaper ad - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#28_February_2025_(Washington_post_newspaper_ad)</link></item>
-<item><title>Palestinian flags covered in art display - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#28_February_2025_(Palestinian_flags_covered_in_art_display)</link></item>
-<item><title>Corrupter to punish EU for fines on Facebook - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#28_February_2025_(Corrupter_to_punish_EU_for_fines_on_Facebook)</link></item>
-<item><title>Conquest of Australia by British colonists - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#28_February_2025_(Conquest_of_Australia_by_British_colonists)</link></item>
-<item><title>Ways UK could fund military buildup - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#28_February_2025_(Ways_UK_could_fund_military_buildup)</link></item>
-<item><title>Long-term effects of Gaza war - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#28_February_2025_(Long-term_effects_of_Gaza_war)</link></item>
-<item><title>Mass firings effects on federal land agencies - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#28_February_2025_(Mass_firings_effects_on_federal_land_agencies)</link></item>
-<item><title>Subservience-signaling - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#28_February_2025_(Subservience-signaling)</link></item>
-<item><title>Julez Smith Doesn’t Care About Nepotism—He Wants to Put in the Work - Teen Vogue</title><link>https://www.teenvogue.com/story/julez-smith-moment-cover-february-2025</link></item>
-<item><title>ATEEZ Member Wooyoung Went Shirtless for His All-Leather PFW &amp;#39;Fit - Teen Vogue</title><link>https://www.teenvogue.com/story/ateez-member-wooyoung-courreges-pfw-fw-2025-outfit-see-photos</link></item>
-<item><title>How to Make Perfume Last Longer, According to Experts - Teen Vogue</title><link>https://www.teenvogue.com/story/how-to-make-perfume-last-longer-according-to-experts</link></item>
-<item><title>What Women Think About Birth Control - Teen Vogue</title><link>https://www.teenvogue.com/video/watch/what-women-think-about-birth-control</link></item>
-<item><title>ICYMI: Capitol Hill Highlights Key Pillars of President Trump’s Joint Address to Congress in Op-Ed Blitz - The White House</title><link>https://www.whitehouse.gov/articles/2025/03/icymi-capitol-hill-highlights-key-pillars-of-president-trumps-joint-address-to-congress-in-op-ed-blitz/</link></item>
-<item><title>Yes, Biden Spent Millions on Transgender Animal Experiments - The White House</title><link>https://www.whitehouse.gov/articles/2025/03/yes-biden-spent-millions-on-transgender-animal-experiments/</link></item>
-<item><title>The President and First Lady’s Message on Ash Wednesday, 2025 - The White House</title><link>https://www.whitehouse.gov/briefings-statements/2025/03/the-president-and-first-ladys-message-on-ash-wednesday-2025/</link></item>
-<item><title>President Trump’s Historic Address Captivates America - The White House</title><link>https://www.whitehouse.gov/articles/2025/03/president-trumps-historic-address-captivates-america/</link></item>
-<item><title>What They Are Saying: President Trump’s Masterclass Before Congress - The White House</title><link>https://www.whitehouse.gov/articles/2025/03/what-they-are-saying-president-trumps-masterclass-before-congress/</link></item>
-<item><title>Honoring Jocelyn Nungaray - The White House</title><link>https://www.whitehouse.gov/presidential-actions/2025/03/honoring-jocelyn-nungaray/</link></item>
-<item><title>Democrats Showed Whose Side They’re On — And it’s Not the American People - The White House</title><link>https://www.whitehouse.gov/briefings-statements/2025/03/democrats-showed-whose-side-theyre-on-and-its-not-the-american-people/</link></item>
-<item><title>Fact Sheet: President Donald J. Trump Honors Jocelyn Nungaray - The White House</title><link>https://www.whitehouse.gov/fact-sheets/2025/03/fact-sheet-president-donald-j-trump-honors-jocelyn-nungaray/</link></item>
-<item><title>President Trump is Leading with Peace Through Strength - The White House</title><link>https://www.whitehouse.gov/articles/2025/03/president-trump-is-leading-with-peace-through-strength/</link></item>
-<item><title>Royal launch for Ibn al-Haytham in Sharjah UAE - 1001 Inventions</title><link>https://www.1001inventions.com/xposure-2025/</link></item>
-<item><title>注重隐私和安全云服务的手机操作系统：Murena 宣布推出 /e/OS 2.8 - 开源工场</title><link>https://openingsource.org/11774/</link></item>
-<item><title>Qubes OS 4.2.4 更新发布 - 开源工场</title><link>https://openingsource.org/11769/</link></item>
-<item><title>SHOW and TELL 3/5/2025 with @johnedgarpark… - Adafruit Industries</title><link>https://blog.adafruit.com/2025/03/05/show-and-tell-3-5-2025-with-johnedgarpark-showandtell-adafruit/</link></item>
-<item><title>Vibe Coding and the Future of Software… - Adafruit Industries</title><link>https://blog.adafruit.com/2025/03/05/vibe-coding-and-the-future-of-software-engineering/</link></item>
-<item><title>Jellyfish Umbrella with easy WLED WiFi Control - Adafruit Industries</title><link>https://blog.adafruit.com/2025/03/05/jellyfish-umbrella-with-easy-wled-wifi-control/</link></item>
-<item><title>The Python on Microcontrollers Newsletter hits… - Adafruit Industries</title><link>https://blog.adafruit.com/2025/03/03/the-python-on-microcontrollers-newsletter-hits-12000-subscribers-python-circuitpython-micropython-adafruit/</link></item>
-<item><title>Adafruit’s Top 10 Blog Posts of February 2025… - Adafruit Industries</title><link>https://blog.adafruit.com/2025/03/03/adafruits-top-10-blog-posts-of-february-2025-stateofthefruit-adafruittopten/</link></item>
-<item><title>New Products 2/26/25 Feat Adafruit PCM5100 /… - Adafruit Industries</title><link>https://blog.adafruit.com/2025/03/01/new-products-2-26-25-feat-adafruit-pcm5100-pcm5102-i2s-dac-w-line-level-output-100db-112db-snr/</link></item>
-<item><title>Women’s History Month 2025 #WHM25 #WomensHistoryMonth #WomenInSTEM - Adafruit Industries</title><link>https://blog.adafruit.com/2025/03/01/womens-history-month-2025-whm25-womenshistorymonth-womeninstem/</link></item>
-<item><title>codingvibes - Adafruit Industries</title><link>https://blog.adafruit.com/tag/codingvibes/</link></item>
-<item><title>NEW PRODUCTS – RGB Backlight Displays - Adafruit Industries</title><link>https://blog.adafruit.com/2025/03/05/new-products-rgb-full-color-backlight-displays/</link></item>
-<item><title>LCD Backlight - Adafruit Industries</title><link>https://blog.adafruit.com/tag/lcd-backlight/</link></item>
-<item><title>LCD Displays - Adafruit Industries</title><link>https://blog.adafruit.com/tag/lcd-displays/</link></item>
-<item><title>JP’s Product Pick of the Week 3/4/25 @adafruit @johnedgarpark #adafruit #newproductpick - Adafruit Industries</title><link>https://blog.adafruit.com/2025/03/05/jps-product-pick-of-the-week-3-4-25-adafruit-johnedgarpark-adafruit-newproductpick/</link></item>
-<item><title>NASA uses GPS on the moon for the first time - Adafruit Industries</title><link>https://blog.adafruit.com/2025/03/05/nasa-uses-gps-on-the-moon-for-the-first-time/</link></item>
-<item><title>NEW PRODUCT – Adafruit SHT45 Trinkey – USB Temp and Humidity Sensor with PTFE - Adafruit Industries</title><link>https://blog.adafruit.com/2025/03/05/new-product-adafruit-sht45-trinkey-usb-temp-and-humidity-sensor-with-ptfe/</link></item>
-<item><title>sht4x trinkey - Adafruit Industries</title><link>https://blog.adafruit.com/tag/sht4x-trinkey/</link></item>
-<item><title>NEW PRODUCT – Adafruit RS232 Full Breakout with DE9-M - Adafruit Industries</title><link>https://blog.adafruit.com/2025/03/05/new-product-adafruit-rs232-full-breakout-with-de9-m/</link></item>
-<item><title>Adafruit RS232 Full-Pinout Breakout - Adafruit Industries</title><link>https://blog.adafruit.com/tag/adafruit-rs232-full-pinout-breakout/</link></item>
-<item><title>level shifter - Adafruit Industries</title><link>https://blog.adafruit.com/tag/level-shifter/</link></item>
-<item><title>level shifters - Adafruit Industries</title><link>https://blog.adafruit.com/tag/level-shifters/</link></item>
-<item><title>NEW PRODUCT – Adafruit Metro RP2350 with PSRAM - Adafruit Industries</title><link>https://blog.adafruit.com/2025/03/05/new-product-adafruit-metro-rp2350-with-psram/</link></item>
-<item><title>The Power of Walking: A Triboelectric Generator In Your Shoe #WearableWednesday - Adafruit Industries</title><link>https://blog.adafruit.com/2025/03/05/the-power-of-walking-a-triboelectric-generator-in-your-shoe-wearablewednesday/</link></item>
-<item><title>NEW GUIDE: Portable Macrodata Refinement Terminal #Severance #AdafruitLearningSystem @Adafruit - Adafruit Industries</title><link>https://blog.adafruit.com/2025/03/05/new-guide-portable-macrodata-refinement-terminal-severance-adafruitlearningsystem-adafruit/</link></item>
-<item><title>Motor Controllers - Adafruit Industries</title><link>https://blog.adafruit.com/category/breakoutboards/motor-controllers/</link></item>
-<item><title>data general 6053 - Adafruit Industries</title><link>https://blog.adafruit.com/tag/data-general-6053/</link></item>
-<item><title>haptic motor - Adafruit Industries</title><link>https://blog.adafruit.com/tag/haptic-motor/</link></item>
-<item><title>lumon industries - Adafruit Industries</title><link>https://blog.adafruit.com/tag/lumon-industries/</link></item>
-<item><title>macrodata-refinement - Adafruit Industries</title><link>https://blog.adafruit.com/tag/macrodata-refinement/</link></item>
-<item><title>Raspberry Pi Touch Display 2 - Adafruit Industries</title><link>https://blog.adafruit.com/tag/raspberry-pi-touch-display-2/</link></item>
-<item><title>NEW GUIDE: QT Py S2 Round Display Compass #LCDs &amp; Displays #AdafruitLearningSystem @Adafruit - Adafruit Industries</title><link>https://blog.adafruit.com/2025/03/05/new-guide-qt-py-s2-round-display-compass-lcds-displays-adafruitlearningsystem-adafruit/</link></item>
-<item><title>REMINDER: SHOW and TELL 3/5/2025 with @johnedgarpark #ShowandTell @adafruit - Adafruit Industries</title><link>https://blog.adafruit.com/2025/03/05/reminder-show-and-tell-3-5-2025-with-johnedgarpark-showandtell-adafruit/</link></item>
-<item><title>AMD Radeon RX 9070 and 9070 XT review: RDNA 4 fixes a lot of AMD’s problems - Ars Technica</title><link>https://arstechnica.com/gadgets/2025/03/amd-radeon-rx-9070-and-9070-xt-review-rdna-4-fixes-a-lot-of-amds-problems/</link></item>
-<item><title>Will the future of software development run on vibes? - Ars Technica</title><link>https://arstechnica.com/ai/2025/03/is-vibe-coding-with-ai-gnarly-or-reckless-maybe-some-of-both/</link></item>
-<item><title>You knew it was coming: Google begins testing AI-only search results - Ars Technica</title><link>https://arstechnica.com/google/2025/03/google-is-expanding-ai-overviews-and-testing-ai-only-search-results/</link></item>
-<item><title>Yes, we are about to be treated to a second lunar landing in a week - Ars Technica</title><link>https://arstechnica.com/space/2025/03/after-skidding-into-the-moon-intuitive-machines-hopes-to-stick-second-landing/</link></item>
-<item><title>Brother denies using firmware updates to brick printers with third-party ink - Ars Technica</title><link>https://arstechnica.com/gadgets/2025/03/brother-denies-using-firmware-updates-to-brick-printers-with-third-party-ink/</link></item>
-<item><title>Google tells Trump’s DOJ that forcing a Chrome sale would harm national security - Ars Technica</title><link>https://arstechnica.com/google/2025/03/google-cites-national-security-as-it-urges-doj-to-drop-demand-for-breakup/</link></item>
-<item><title>China aims to recruit top US scientists as Trump tries to kill the CHIPS Act - Ars Technica</title><link>https://arstechnica.com/tech-policy/2025/03/china-aims-to-recruit-top-us-scientists-as-trump-tries-to-kill-the-chips-act/</link></item>
-<item><title>Elon Musk loses initial attempt to block OpenAI’s for-profit conversion - Ars Technica</title><link>https://arstechnica.com/tech-policy/2025/03/musk-loses-bid-to-stop-openais-for-profit-shift-but-can-make-his-case-in-trial/</link></item>
-<item><title>Volkswagen gets the message: Cheap, stylish EVs coming from 2026 - Ars Technica</title><link>https://arstechnica.com/cars/2025/03/volkswagen-gets-the-message-cheap-stylish-evs-coming-from-2026/</link></item>
-<item><title>Due to new tariffs, many more physical game discs may “simply not get made” - Ars Technica</title><link>https://arstechnica.com/gaming/2025/03/thanks-to-new-tariffs-many-more-physical-game-discs-may-simply-not-get-made/</link></item>
-<item><title>Nvidia GeForce RTX 5070 review: No, it’s not “4090 performance at $549” - Ars Technica</title><link>https://arstechnica.com/gadgets/2025/03/nvidia-geforce-rtx-5070-review-no-its-not-4090-performance-at-549/</link></item>
-<item><title>NASA just lost yet another one of its low-cost planetary missions - Ars Technica</title><link>https://arstechnica.com/space/2025/03/nasa-just-lost-yet-another-one-of-its-low-cost-planetary-missions/</link></item>
-<item><title>Butch Wilmore says Elon Musk is “absolutely factual” on Dragon’s delayed return - Ars Technica</title><link>https://arstechnica.com/space/2025/03/butch-and-suni-send-mixed-messages-on-whether-politics-delayed-their-return/</link></item>
-<item><title>Eerily realistic AI voice demo sparks amazement and discomfort online - Ars Technica</title><link>https://arstechnica.com/ai/2025/03/users-report-emotional-bonds-with-startlingly-realistic-ai-voice-demo/</link></item>
-<item><title>Protests, broken windows, even arson: Tesla’s massive Elon problem - Ars Technica</title><link>https://arstechnica.com/cars/2025/03/protests-broken-windows-even-arson-teslas-massive-elon-problem/</link></item>
-<item><title>Cod liver oil embraced amid Texas measles outbreak; doctors fight misinfo - Ars Technica</title><link>https://arstechnica.com/health/2025/03/cod-liver-oil-embraced-amid-texas-measles-outbreak-doctors-fight-misinfo/</link></item>
-<item><title>Jeff Bezos brings Amazon work culture to Blue Origin - Ars Technica</title><link>https://arstechnica.com/space/2025/03/jeff-bezos-brings-amazon-work-culture-to-blue-origin/</link></item>
-<item><title>Apple announces M3 Ultra—and says not every generation will see an “Ultra” chip - Ars Technica</title><link>https://arstechnica.com/apple/2025/03/apple-announces-m3-ultra-and-says-not-every-generation-will-see-an-ultra-chip/</link></item>
-<item><title>Apple intros new Mac Studio models with M4 Max and… M3 Ultra? - Ars Technica</title><link>https://arstechnica.com/apple/2025/03/apple-intros-new-mac-studio-models-with-m4-max-and-m3-ultra/</link></item>
-<item><title>MacBook Air gets the M4, a new blue color, up to 32GB of RAM, and a $100 price cut - Ars Technica</title><link>https://arstechnica.com/apple/2025/03/macbook-air-gets-the-m4-a-new-blue-color-up-to-32gb-of-ram-and-a-100-price-cut/</link></item>
-<item><title>“Wooly mice” a test run for mammoth gene editing - Ars Technica</title><link>https://arstechnica.com/science/2025/03/wooly-mice-a-test-run-for-mammoth-gene-editing/</link></item>
-<item><title>Threat posed by new VMware hyperjacking vulnerabilities is hard to overstate - Ars Technica</title><link>https://arstechnica.com/security/2025/03/vmware-patches-3-critical-vulnerabilities-in-multiple-product-lines/</link></item>
-<item><title>Do these dual images say anything about your personality? - Ars Technica</title><link>https://arstechnica.com/science/2025/03/do-these-dual-images-say-anything-about-your-personality/</link></item>
-<item><title>Apple refuses to break encryption, seeks reversal of UK demand for backdoor - Ars Technica</title><link>https://arstechnica.com/tech-policy/2025/03/apple-appeals-uks-secret-demand-for-backdoor-access-to-encrypted-user-data/</link></item>
-<item><title>Google’s AI-powered Pixel Sense app could gobble up all your Pixel 10 data - Ars Technica</title><link>https://arstechnica.com/google/2025/03/googles-ai-powered-pixel-sense-app-could-gobble-up-all-your-pixel-10-data/</link></item>
-<item><title>Trump’s 25% tariffs take effect; Canadian PM calls it “a very dumb thing” - Ars Technica</title><link>https://arstechnica.com/tech-policy/2025/03/trumps-25-tariffs-take-effect-canadian-pm-calls-it-a-very-dumb-thing/</link></item>
-<item><title>Google’s March Pixel Drop is here with a ton of Android upgrades - Ars Technica</title><link>https://arstechnica.com/google/2025/03/googles-march-pixel-drop-is-here-with-a-ton-of-android-upgrades/</link></item>
-<item><title>Apple announces M3-powered iPad Air with improved Magic Keyboard layout - Ars Technica</title><link>https://arstechnica.com/gadgets/2025/03/apple-announces-m3-powered-ipad-air-with-improved-magic-keyboard-layout/</link></item>
-<item><title>RFK Jr. ends transparency policy, cancels public meeting after openness vow - Ars Technica</title><link>https://arstechnica.com/health/2025/03/rfk-jr-shuts-americans-out-of-health-decisions-despite-vow-for-transparency/</link></item>
-<item><title>Climate change is harming the health of Americans, and they know it - Ars Technica</title><link>https://arstechnica.com/science/2025/03/climate-change-is-harming-the-health-of-americans-and-they-know-it/</link></item>
-<item><title>Researchers surprised to find less-educated areas adopting AI writing tools faster - Ars Technica</title><link>https://arstechnica.com/ai/2025/03/researchers-surprised-to-find-less-educated-areas-adopting-ai-writing-tools-faster/</link></item>
-<item><title>TSMC to invest $100B as Trump demands more US-made chips, report says - Ars Technica</title><link>https://arstechnica.com/tech-policy/2025/03/tsmc-will-reportedly-invest-100b-to-expand-us-chip-fab-buildouts/</link></item>
-<item><title>微星MPG X870E CARBON WIFI 暗黑主板 - 超能网</title><link>https://www.expreview.com/95836.html</link></item>
-<item><title>新BIOS锐龙9 9950X再战酷睿9两代旗舰 - 超能网</title><link>https://www.expreview.com/97446.html</link></item>
-<item><title>讯景RX 9070/9070 XT 凤凰涅槃显卡评测：RDNA 4加持，如凤凰般涅槃重生 - 超能网</title><link>https://www.expreview.com/98559.html</link></item>
-<item><title>技嘉GeForce RTX 5070 GAMING OC 12G显卡评测：机甲战士抵达主流战场 - 超能网</title><link>https://www.expreview.com/98441.html</link></item>
-<item><title>AMD RX 9070系列显卡天梯榜首发评测：RDNA 4光追性能暴增，5070系面临大敌 - 超能网</title><link>https://www.expreview.com/98599.html</link></item>
-<item><title>英伟达GeForce Game Ready 572.70 WHQL驱动：支持RTX 5070显卡 - 超能网</title><link>https://www.expreview.com/98609.html</link></item>
-<item><title>《托尼·霍克职业滑板3+4》强势回归：重制版7月11日发售，Steam国区348元起 - 超能网</title><link>https://www.expreview.com/98607.html</link></item>
-<item><title>《GTA5 增强版》发售：Steam国区首发71.25元，PC原版改名为“传承版” - 超能网</title><link>https://www.expreview.com/98606.html</link></item>
-<item><title>英特尔或推迟发布Panther Lake：延后至2025Q4中旬，或与Intel 18A有关 - 超能网</title><link>https://www.expreview.com/98605.html</link></item>
-<item><title>影驰RTX 5080/5070 Ti显卡开展营销活动：新品上市，三期免息，预约/秒杀抢购 - 超能网</title><link>https://www.expreview.com/98604.html</link></item>
-<item><title>EKWB宣布品牌转型：已转移到LM TEK负责管理 - 超能网</title><link>https://www.expreview.com/98602.html</link></item>
-<item><title>Minisforum发布BD790i X3D：搭载Ryzen 9 7945HX3D的ITX主板 - 超能网</title><link>https://www.expreview.com/98601.html</link></item>
-<item><title>优派推出多彩VX24G10系列显示器：简约又百搭，FHD@240Hz，649元起 - 超能网</title><link>https://www.expreview.com/98598.html</link></item>
-<item><title>雷克沙NM1090 PRO PCIe 5.0 SSD上市：搭载慧荣SM2508主控，起售价899元 - 超能网</title><link>https://www.expreview.com/98596.html</link></item>
-<item><title>Acer注册多款Radeon RX 9060 XT显卡：提供8/16GB显存，或类似RTX 5060 Ti - 超能网</title><link>https://www.expreview.com/98595.html</link></item>
-<item><title>CounterPoint：中国高端智能手机的市场份额呈上升趋势 - 超能网</title><link>https://www.expreview.com/98593.html</link></item>
-<item><title>Dell带来两款新的QD-OLED游戏显示器：Alienware AW2725D/AW3425DW - 超能网</title><link>https://www.expreview.com/98594.html</link></item>
-<item><title>《幻兽帕鲁》已登陆苹果Mac平台：售价29.99美元，需要M系列芯片支持 - 超能网</title><link>https://www.expreview.com/98592.html</link></item>
-<item><title>苹果确认《刺客信条 : 影》将于3月20日登陆Mac，与PC及主机平台同步 - 超能网</title><link>https://www.expreview.com/98591.html</link></item>
-<item><title>七彩虹为旗下AM5主板发布X3D GAMING MODE功能，开启后可提升游戏帧数表现 - 超能网</title><link>https://www.expreview.com/98589.html</link></item>
-<item><title>GeForce RTX 5070 Founders Edition暂未上市，英伟达要到3月底才会提供 - 超能网</title><link>https://www.expreview.com/98590.html</link></item>
-<item><title>苹果发布M3版iPad Air，还有搭载A16的iPad 11 - 超能网</title><link>https://www.expreview.com/98587.html</link></item>
-<item><title>GeForce RTX 5070显卡天梯榜首发评测：起售价下探，胜在更全能 - 超能网</title><link>https://www.expreview.com/98533.html</link></item>
-<item><title>专访AMD王启尚：从RDNA 4到FSR 4，AMD GPU技术创新引领行业新发展 - 超能网</title><link>https://www.expreview.com/98554.html</link></item>
-<item><title>《怪物猎人 : 荒野》销量超800万份：仅用三天，最快达到该成绩的CAPCOM游戏 - 超能网</title><link>https://www.expreview.com/98585.html</link></item>
-<item><title>Steam 2025 视觉小说游戏节开启：在故事中徜徉，至北京时间3月11日凌晨2点 - 超能网</title><link>https://www.expreview.com/98584.html</link></item>
-<item><title>华硕正式发布ExpertCenter PN54：搭载Ryzen AI 300系列的Copilot+迷你PC - 超能网</title><link>https://www.expreview.com/98583.html</link></item>
-<item><title>钱颖一：新常态引发新问题，经济学 - 爱思想</title><link>https://www.aisixiang.com/data/160002.html</link></item>
-<item><title>王一鸣：统筹好有效市场和有为政府 - 爱思想</title><link>https://www.aisixiang.com/data/160035.html</link></item>
-<item><title>R C Dieter：为了选票的 - 爱思想</title><link>https://www.aisixiang.com/data/160012.html</link></item>
-<item><title>徐玲：从“亲亲相隐”到“窃负而逃 - 爱思想</title><link>https://www.aisixiang.com/data/160015.html</link></item>
-<item><title>郑永年：特朗普与“自由国际秩序” - 爱思想</title><link>https://www.aisixiang.com/data/160104.html</link></item>
-<item><title>张文龙：数字权力的社会宪治 - 爱思想</title><link>https://www.aisixiang.com/data/160013.html</link></item>
-<item><title>杨光斌：历史本体论与政治的弹性： - 爱思想</title><link>https://www.aisixiang.com/data/160028.html</link></item>
-<item><title>黄惠康：乌克兰危机所涉国际法问题 - 爱思想</title><link>https://www.aisixiang.com/data/160009.html</link></item>
-<item><title>王伟光：唯物史观与马克思主义文明 - 爱思想</title><link>https://www.aisixiang.com/data/160030.html</link></item>
-<item><title>汪新建：“社会心态”：源自当代中 - 爱思想</title><link>https://www.aisixiang.com/data/160040.html</link></item>
-<item><title>林辉煌：贫困的能力结构——一个解 - 爱思想</title><link>https://www.aisixiang.com/data/160056.html</link></item>
-<item><title>王小鲁：要通过制度改革把社会收入 - 爱思想</title><link>https://www.aisixiang.com/data/160126.html</link></item>
-<item><title>创新社会治理夯实平安之基 - 爱思想</title><link>https://www.aisixiang.com/data/160038.html</link></item>
-<item><title>江时学：论构建一个清洁美丽的世界 - 爱思想</title><link>https://www.aisixiang.com/data/160010.html</link></item>
-<item><title>刘广超：保持加强生态文明建设的战 - 爱思想</title><link>https://www.aisixiang.com/data/160172.html</link></item>
-<item><title>韩庆祥：激活中华优秀传统文化中的 - 爱思想</title><link>https://www.aisixiang.com/data/160114.html</link></item>
-<item><title>徐仕佳：元日节俗传入琉球考 - 爱思想</title><link>https://www.aisixiang.com/data/160106.html</link></item>
-<item><title>欧阳军喜：从历史维度看“第二个结 - 爱思想</title><link>https://www.aisixiang.com/data/160086.html</link></item>
-<item><title>孙立军 李丹：习近平文化思想的价 - 爱思想</title><link>https://www.aisixiang.com/data/160074.html</link></item>
-<item><title>邓声国：传统“家礼”之内涵、要素 - 爱思想</title><link>https://www.aisixiang.com/data/160045.html</link></item>
-<item><title>徐斌：习近平文化思想的哲学意蕴 - 爱思想</title><link>https://www.aisixiang.com/data/159982.html</link></item>
-<item><title>徐晓宇：实现新时代文化使命的现实 - 爱思想</title><link>https://www.aisixiang.com/data/159977.html</link></item>
-<item><title>赵剑英：论中华文化主体性的历史发 - 爱思想</title><link>https://www.aisixiang.com/data/159930.html</link></item>
-<item><title>刘同舫：习近平文化思想的原理性贡 - 爱思想</title><link>https://www.aisixiang.com/data/159926.html</link></item>
-<item><title>罗嗣海：文化繁荣是中国式现代化的 - 爱思想</title><link>https://www.aisixiang.com/data/159898.html</link></item>
-<item><title>钟定胜：人工智能的未来：理性与道 - 爱思想</title><link>https://www.aisixiang.com/data/160195.html</link></item>
-<item><title>王彧：科技创新驱动生物经济新质生 - 爱思想</title><link>https://www.aisixiang.com/data/160193.html</link></item>
-<item><title>蔡翠红：加强人工智能国际治理和合 - 爱思想</title><link>https://www.aisixiang.com/data/160110.html</link></item>
-<item><title>王贻芳：发展大科学设施，建设科技 - 爱思想</title><link>https://www.aisixiang.com/data/160088.html</link></item>
-<item><title>万劲波：夯实科技强国建设的科学根 - 爱思想</title><link>https://www.aisixiang.com/data/160071.html</link></item>
-<item><title>陶宏展：以现代管理体制变革实现高 - 爱思想</title><link>https://www.aisixiang.com/data/159965.html</link></item>
-<item><title>李国杰：人工智能将走向何方？ - 爱思想</title><link>https://www.aisixiang.com/data/159958.html</link></item>
-<item><title>陈龙：全球卫生领域被“殖民化”了 - 爱思想</title><link>https://www.aisixiang.com/data/159939.html</link></item>
-<item><title>吴国盛：唯名论革命为近代科学开辟 - 爱思想</title><link>https://www.aisixiang.com/data/159923.html</link></item>
-<item><title>韩文秀：实施更加积极有为的宏观政策 努力把各方面积极因素转化为发展实绩 - 爱思想</title><link>https://www.aisixiang.com/data/160196.html</link></item>
-<item><title>张文显：论法学教育同人工智能的深度融合 - 爱思想</title><link>https://www.aisixiang.com/data/160182.html</link></item>
-<item><title>迟福林：以结构性改革突破促消费扩内需 - 爱思想</title><link>https://www.aisixiang.com/data/160180.html</link></item>
-<item><title>隆国强：天高海阔：开放合作的中国携手世界共发展 - 爱思想</title><link>https://www.aisixiang.com/data/160166.html</link></item>
-<item><title>中国的芬太尼类物质管控 - 爱思想</title><link>https://www.aisixiang.com/data/160136.html</link></item>
-<item><title>熊文钊：加强涉民营企业执法监督 - 爱思想</title><link>https://www.aisixiang.com/data/160194.html</link></item>
-<item><title>刘晓林：律令典籍中的人权理念及其制度表达——以唐代狱囚的权益与保障为中心 - 爱思想</title><link>https://www.aisixiang.com/data/160188.html</link></item>
-<item><title>付立庆：受贿罪中“为他人谋取利益”的体系地位：混合违法要素说的提倡 - 爱思想</title><link>https://www.aisixiang.com/data/160186.html</link></item>
-<item><title>钱叶六：竞技体育伤害行为的正当化根据及边界 - 爱思想</title><link>https://www.aisixiang.com/data/160185.html</link></item>
-<item><title>夏沁：民法典登记离婚冷静期条款的解释论 - 爱思想</title><link>https://www.aisixiang.com/data/160184.html</link></item>
-<item><title>李义平：新质生产力的理论价值与实践意义 - 爱思想</title><link>https://www.aisixiang.com/data/160190.html</link></item>
-<item><title>林毅夫：以高质量共建“一带一路”推动高水平对外开放 - 爱思想</title><link>https://www.aisixiang.com/data/160181.html</link></item>
-<item><title>李世杰 刘倩：如何推动现代农业生产关系变革 - 爱思想</title><link>https://www.aisixiang.com/data/160178.html</link></item>
-<item><title>吴兴德：以“查”“治”贯通阻断风腐演变 - 爱思想</title><link>https://www.aisixiang.com/data/160192.html</link></item>
-<item><title>邵芳强：增强推进改革开放工作本领 - 爱思想</title><link>https://www.aisixiang.com/data/160191.html</link></item>
-<item><title>耿洪彬：把政治修养摆在党性修养的首位 - 爱思想</title><link>https://www.aisixiang.com/data/160177.html</link></item>
-<item><title>商爽 吴兴智：从“六个意识”看民主集中制 - 爱思想</title><link>https://www.aisixiang.com/data/160168.html</link></item>
-<item><title>王子潇：反腐败一步不停歇、半步不退让 - 爱思想</title><link>https://www.aisixiang.com/data/160167.html</link></item>
-<item><title>黄境：特朗普2.0下的中美欧三角关系 - 爱思想</title><link>https://www.aisixiang.com/data/160160.html</link></item>
-<item><title>张云：美俄“越顶外交”与欧洲战略焦虑 - 爱思想</title><link>https://www.aisixiang.com/data/160159.html</link></item>
-<item><title>张艳璐：细说乌克兰的矿产资源 - 爱思想</title><link>https://www.aisixiang.com/data/160158.html</link></item>
-<item><title>刘强：挑战与重塑：欧洲安全格局的未来 - 爱思想</title><link>https://www.aisixiang.com/data/160157.html</link></item>
-<item><title>叶天乐：泽连斯基的愤怒难改乌克兰“双输”命运 - 爱思想</title><link>https://www.aisixiang.com/data/160156.html</link></item>
-<item><title>潘璐：以作物打开农政研究：兼及新作物史的拓展 - 爱思想</title><link>https://www.aisixiang.com/data/160189.html</link></item>
-<item><title>陈涛：人造社会还是自然社会：涂尔干对社会契约论的批判 - 爱思想</title><link>https://www.aisixiang.com/data/160187.html</link></item>
-<item><title>王宏晓：坚持把推进中华民族共同体建设作为边疆民族地区工作的主线 - 爱思想</title><link>https://www.aisixiang.com/data/160171.html</link></item>
-<item><title>陈文胜：乡村振兴“明星村”遭遇的困境——关于长沙县浔龙河村的调研报告 - 爱思想</title><link>https://www.aisixiang.com/data/160163.html</link></item>
-<item><title>李代：在“预言—复现”范式下重估计算社会科学 - 爱思想</title><link>https://www.aisixiang.com/data/160145.html</link></item>
-<item><title>邓绍根：新时代新闻界的“短、实、新”文风建设 - 爱思想</title><link>https://www.aisixiang.com/data/160075.html</link></item>
-<item><title>朱清河：新闻研究的转向：从理论理性到实践理性 - 爱思想</title><link>https://www.aisixiang.com/data/159931.html</link></item>
-<item><title>张军：以全面从严管党治校引领保障中国特色世界一流大学建设 - 爱思想</title><link>https://www.aisixiang.com/data/160170.html</link></item>
-<item><title>李立国：统筹资源配置 优化高等教育布局 - 爱思想</title><link>https://www.aisixiang.com/data/160151.html</link></item>
-<item><title>宗爱东：善用“大思政课”提高思政引领力 - 爱思想</title><link>https://www.aisixiang.com/data/160149.html</link></item>
-<item><title>杨玉珍：统筹推进教育科技人才体制机制一体改革 - 爱思想</title><link>https://www.aisixiang.com/data/160121.html</link></item>
-<item><title>程斯辉：以积极人生观滋养教育家精神 - 爱思想</title><link>https://www.aisixiang.com/data/160070.html</link></item>
-<item><title>张辉：探索古代汉语的当代价值 - 爱思想</title><link>https://www.aisixiang.com/data/160169.html</link></item>
-<item><title>陈晓明：南北分野的文学地理学与审美的文化记忆 - 爱思想</title><link>https://www.aisixiang.com/data/160138.html</link></item>
-<item><title>刘海燕：从“土腔”里做出大学问——记语言学家李如龙 - 爱思想</title><link>https://www.aisixiang.com/data/160134.html</link></item>
-<item><title>杨庆存：文章学研究与新文科建设 - 爱思想</title><link>https://www.aisixiang.com/data/160133.html</link></item>
-<item><title>郑倩茹：文章学视野下的宋代书序 - 爱思想</title><link>https://www.aisixiang.com/data/160132.html</link></item>
-<item><title>卜宪群：秦汉的乡里社会与国家治理 - 爱思想</title><link>https://www.aisixiang.com/data/160162.html</link></item>
-<item><title>高江涛：都邑遗址考古与中华文明探源——陶寺考古的历程与成就 - 爱思想</title><link>https://www.aisixiang.com/data/160130.html</link></item>
-<item><title>余西云：从不同视角探讨文明概念变迁 - 爱思想</title><link>https://www.aisixiang.com/data/160120.html</link></item>
-<item><title>余斌：“卡夫丁峡谷”的第二重跨越 - 爱思想</title><link>https://www.aisixiang.com/data/160117.html</link></item>
-<item><title>周杨：汉唐音乐文物与中华礼乐文化的传承发展 - 爱思想</title><link>https://www.aisixiang.com/data/160115.html</link></item>
-<item><title>彭海红 甘婷婷：邓小平理论是马克思主义中国化时代化的重要里程碑 - 爱思想</title><link>https://www.aisixiang.com/data/160164.html</link></item>
-<item><title>汤勤福：疑非圣人之言：朱熹论《孝经》 - 爱思想</title><link>https://www.aisixiang.com/data/160161.html</link></item>
-<item><title>李俊文 张乙：对马尔库塞“单向度”批判的批判 - 爱思想</title><link>https://www.aisixiang.com/data/160154.html</link></item>
-<item><title>陈开华：儒家士人精神与古琴乐教 - 爱思想</title><link>https://www.aisixiang.com/data/160141.html</link></item>
-<item><title>朱汉民：从“天帝”到“天理” ——“天”的理性化之路 - 爱思想</title><link>https://www.aisixiang.com/data/160135.html</link></item>
-<item><title>张耀铭：数智时代学术期刊的平台化生存 - 爱思想</title><link>https://www.aisixiang.com/data/160057.html</link></item>
-<item><title>杜飞进：把握必须坚持问题导向的内涵、实质和方法 - 爱思想</title><link>https://www.aisixiang.com/data/160005.html</link></item>
-<item><title>段德智：中国知名哲学家——陈修斋先生 - 爱思想</title><link>https://www.aisixiang.com/data/159933.html</link></item>
-<item><title>仲伟民：目前人文社科期刊面临的困境 - 爱思想</title><link>https://www.aisixiang.com/data/159928.html</link></item>
-<item><title>刘奇：六尺巷文化的历史启迪和时代价值 - 爱思想</title><link>https://www.aisixiang.com/data/159913.html</link></item>
-<item><title>王贵松，1977年生，安徽无为人，北京大学法学博士（2007）。现任中国人民大学法学院教授。兼..... - 爱思想</title><link>https://www.aisixiang.com/thinktank/WangGuisong.html</link></item>
-<item><title>Philippine fighter jet, 2 pilots missing on mission against insurgents - Defense News</title><link>https://www.defensenews.com/air-warfare/2025/03/04/philippine-fighter-jet-2-pilots-missing-on-mission-against-insurgents/</link></item>
-<item><title>Israeli firms want a piece of the US cruise missile market - Defense News</title><link>https://www.defensenews.com/global/mideast-africa/2025/03/04/israeli-firms-want-a-piece-of-the-us-cruise-missile-market/</link></item>
-<item><title>DOGE shouldn’t have unfettered Pentagon access - Defense News</title><link>https://www.defensenews.com/opinion/2025/03/04/doge-shouldnt-have-unfettered-pentagon-access/</link></item>
-<item><title>Airbus, Boeing angle for Polish tanker aircraft deal - Defense News</title><link>https://www.defensenews.com/global/europe/2025/03/04/airbus-boeing-angle-for-polish-tanker-aircraft-deal/</link></item>
-<item><title>EU pitches plan to free up €800 billion for defense spending - Defense News</title><link>https://www.defensenews.com/global/europe/2025/03/04/eu-pitches-plan-to-free-up-800-billion-for-defense-spending/</link></item>
-<item><title>Amazon Tests AI Dubbing on Prime Video Movies, Series - Slashdot</title><link>https://slashdot.org/story/25/03/05/1954215/amazon-tests-ai-dubbing-on-prime-video-movies-series</link></item>
-<item><title>Google is Adding More AI Overviews and a New &amp;#39;AI Mode&amp;#39; To Search - Slashdot</title><link>https://tech.slashdot.org/story/25/03/05/1944216/google-is-adding-more-ai-overviews-and-a-new-ai-mode-to-search</link></item>
-<item><title>Europe on Alert Over Suspected Sabotage of Undersea Cables - Slashdot</title><link>https://tech.slashdot.org/story/25/03/05/1928223/europe-on-alert-over-suspected-sabotage-of-undersea-cables</link></item>
-<item><title>Nintendo Says Latest Legal Win Against Piracy &amp;#39;Significant&amp;#39; For &amp;#39;Entire Games Industry&amp;#39; - Slashdot</title><link>https://games.slashdot.org/story/25/03/05/1842243/nintendo-says-latest-legal-win-against-piracy-significant-for-entire-games-industry</link></item>
-<item><title>Could New Clocks Keep Airplanes Safe From GPS Jamming? - Slashdot</title><link>https://science.slashdot.org/story/25/03/05/1822239/could-new-clocks-keep-airplanes-safe-from-gps-jamming</link></item>
-<item><title>Geoffrey.landis - Slashdot</title><link>https://slashdot.org/~Geoffrey.landis</link></item>
-<item><title>Half of World&amp;#39;s CO2 Emissions Come From 36 Fossil Fuel Firms, Study Shows - Slashdot</title><link>https://news.slashdot.org/story/25/03/05/181204/half-of-worlds-co2-emissions-come-from-36-fossil-fuel-firms-study-shows</link></item>
-<item><title>Microsoft Warns of Chinese Hackers Spying on Cloud Technology - Slashdot</title><link>https://slashdot.org/story/25/03/05/1743246/microsoft-warns-of-chinese-hackers-spying-on-cloud-technology</link></item>
-<item><title>OpenAI Plots Charging $20,000 a Month For PhD-Level Agents - Slashdot</title><link>https://slashdot.org/story/25/03/05/1559207/openai-plots-charging-20000-a-month-for-phd-level-agents</link></item>
-<item><title>Apple Refreshes MacBook Air With M4 Chip, Lower Pricing - Slashdot</title><link>https://apple.slashdot.org/story/25/03/05/1522201/apple-refreshes-macbook-air-with-m4-chip-lower-pricing</link></item>
-<item><title>Google Urges DOJ To Reverse Course on Breaking Up Company - Slashdot</title><link>https://tech.slashdot.org/story/25/03/05/1355244/google-urges-doj-to-reverse-course-on-breaking-up-company</link></item>
-<item><title>Turing Award Winners Sound Alarm on Hasty AI Deployment - Slashdot</title><link>https://slashdot.org/story/25/03/05/1330242/turing-award-winners-sound-alarm-on-hasty-ai-deployment</link></item>
-<item><title>NASA Uses GPS On the Moon For the First Time - Slashdot</title><link>https://science.slashdot.org/story/25/03/05/0155218/nasa-uses-gps-on-the-moon-for-the-first-time</link></item>
-<item><title>World&amp;#39;s First &amp;#39;Synthetic Biological Intelligence&amp;#39; Runs On Living Human Cells - Slashdot</title><link>https://science.slashdot.org/story/25/03/05/016258/worlds-first-synthetic-biological-intelligence-runs-on-living-human-cells</link></item>
-<item><title>China May Be Ready to Use Nuclear Fusion for Power by 2050 - Slashdot</title><link>https://hardware.slashdot.org/story/25/03/05/011226/china-may-be-ready-to-use-nuclear-fusion-for-power-by-2050</link></item>
-<item><title>Users Report Emotional Bonds With Startlingly Realistic AI Voice Demo - Slashdot</title><link>https://slashdot.org/story/25/03/05/0057216/users-report-emotional-bonds-with-startlingly-realistic-ai-voice-demo</link></item>
-<item><title>Australia, With No Auto Industry To Protect, is Awash With Chinese EVs - Slashdot</title><link>https://tech.slashdot.org/story/25/03/04/1842209/australia-with-no-auto-industry-to-protect-is-awash-with-chinese-evs?sbsrc=md</link></item>
-<item><title>Brother Accused of Locking Down Third-Party Printer Ink Cartridges Via Forced Firmware Updates - Slashdot</title><link>https://hardware.slashdot.org/story/25/03/04/2151220/brother-accused-of-locking-down-third-party-printer-ink-cartridges-via-forced-firmware-updates?sbsrc=md</link></item>
-<item><title>Researchers Find Less-Educated Areas Adopting AI Writing Tools Faster - Slashdot</title><link>https://news.slashdot.org/story/25/03/03/2327219/researchers-find-less-educated-areas-adopting-ai-writing-tools-faster?sbsrc=md</link></item>
-<item><title>Judges Are Fed Up With Lawyers Using AI That Hallucinate Court Cases - Slashdot</title><link>https://yro.slashdot.org/story/25/03/04/2139203/judges-are-fed-up-with-lawyers-using-ai-that-hallucinate-court-cases?utm_source=rss0.9mainlinkanon&amp;utm_medium=feed&amp;sbsrc=yro</link></item>
-<item><title>CISA Tags Windows, Cisco Vulnerabilities As Actively Exploited - Slashdot</title><link>https://it.slashdot.org/story/25/03/04/0315205/cisa-tags-windows-cisco-vulnerabilities-as-actively-exploited?utm_source=rss0.9mainlinkanon&amp;utm_medium=feed&amp;sbsrc=yro</link></item>
-<item><title>Orson Scott Card&amp;#39;s Superman Story Shelved After Homophobia Controversy - Slashdot</title><link>https://entertainment.slashdot.org/story/13/03/05/2246226/orson-scott-cards-superman-story-shelved-after-homophobia-controversy?sbsrc=thisday</link></item>
-<item><title>Scientists Say People Aren&amp;#39;t Smart Enough For Democracy To Flourish - Slashdot</title><link>https://politics.slashdot.org/story/12/03/05/1348203/scientists-say-people-arent-smart-enough-for-democracy-to-flourish?sbsrc=thisday</link></item>
-<item><title>Clinton Takes Ohio, Texas; McCain Seals The Deal - Slashdot</title><link>https://politics.slashdot.org/story/08/03/05/135223/clinton-takes-ohio-texas-mccain-seals-the-deal?sbsrc=thisday</link></item>
-<item><title>Is Apple The New Microsoft? - Slashdot</title><link>https://apple.slashdot.org/story/05/03/05/1331242/is-apple-the-new-microsoft?sbsrc=thisday</link></item>
-<item><title>Do You Write Backdoors? - Slashdot</title><link>https://ask.slashdot.org/story/03/03/05/0737218/do-you-write-backdoors?sbsrc=thisday</link></item>
-<item><title>do ho suh brings his fabric architectures to tate modern with &amp;#39;walk the house&amp;#39; solo exhibition - designboom</title><link>https://www.designboom.com/art/do-ho-suh-fabric-architectures-tate-modern-walk-the-house-solo-exhibition-genesis-02-25-2025/</link></item>
-<item><title>yacht lily by vripack and oceanco mimics shape of the flower’s petal with its curving exterior - designboom</title><link>https://www.designboom.com/technology/yacht-lily-vripack-oceanco-mimics-shape-flowers-petal-curving-exterior-02-22-2025/</link></item>
-<item><title>BIG unveils jinji lake pavilion with pixelated glass roof on suzhou&amp;#39;s waterfront - designboom</title><link>https://www.designboom.com/architecture/big-bjarke-ingels-group-jinji-lake-pavilion-pixelated-glass-roof-suzhou-china-02-20-2025/</link></item>
-<item><title>alef aeronautics’ drivable flying car takes flight for the first time - designboom</title><link>https://www.designboom.com/technology/alef-aeronautics-drivable-flying-car-takes-flight-first-time-02-20-2025/</link></item>
-<item><title>MVRDV turns plastic waste into public space with woven &amp;#39;mega mat&amp;#39; in bangkok - designboom</title><link>https://www.designboom.com/architecture/mvrdv-plastic-waste-public-space-woven-mega-mat-bangkok-02-17-2025/</link></item>
-<item><title>ZZZN puffer jacket integrates data monitoring, audio &amp; lighting effects for sleep on the move - designboom</title><link>https://www.designboom.com/technology/zzzn-coat-sleeping-bag-headpiece-red-light-doze-off-anywhere-apparel-system-02-10-2025/</link></item>
-<item><title>liu jiakun honored with 2025 pritzker architecture prize - designboom</title><link>https://www.designboom.com/architecture/liu-jiakun-2025-pritzker-architecture-prize-03-04-2025/</link></item>
-<item><title>designboom announces winning adaptive reuse designs from Revive on Fiverr competition - designboom</title><link>https://www.designboom.com/architecture/revive-on-fiverr-2024-competition-adaptive-reuse-winner-announcement-03-03-2025/</link></item>
-<item><title>aluminum PP-1 turntable by waiting for ideas plays vinyl records without tonearm or settings - designboom</title><link>https://www.designboom.com/technology/aluminum-pp-1-turntable-waiting-for-ideas-plays-vinyl-records-without-tonearm-settings-02-26-2025/</link></item>
-<item><title>aluminum architecture and design (95) - designboom</title><link>https://www.designboom.com/tag/aluminum/</link></item>
-<item><title>turntable design (29) - designboom</title><link>https://www.designboom.com/tag/turntable-design/</link></item>
-<item><title>new smartphone designs to check out ahead of the mobile world congress 2025 in barcelona - designboom</title><link>https://www.designboom.com/technology/new-smartphone-designs-check-out-mobile-world-congress-2025-barcelona-02-25-2025/</link></item>
-<item><title>honda to unveil pokémon koraidon motorcycle with moving hands, face, eyes and feet - designboom</title><link>https://www.designboom.com/technology/honda-unveil-pokemon-koraidon-motorcycle-moving-hands-face-eyes-feet-02-28-2025/</link></item>
-<item><title>northern indian vernacular guides field architects&amp;#39; earth-clad gulzar&amp;#39;s residence - designboom</title><link>https://www.designboom.com/architecture/northern-india-vernacular-field-architects-earth-gulzars-residence-ladakh-03-04-2025/</link></item>
-<item><title>infinix mini zero smartphone folds into a portable, card-sized device that clips on backpacks - designboom</title><link>https://www.designboom.com/technology/infinix-mini-zero-smartphone-foldable-portable-card-sized-device-clips-on-backpacks-03-01-2025/</link></item>
-<item><title>yamaha recycles unused rare wood into all-black keyboard for the digital piano ‘torch T01’ - designboom</title><link>https://www.designboom.com/technology/yamaha-recycles-unused-rare-wood-all-black-keyboard-digital-piano-torch-t01-02-27-2025/</link></item>
-<item><title>bertone runabout car revives pop-up headlights from the concept design of the 1969 model - designboom</title><link>https://www.designboom.com/technology/bertone-runabout-pop-up-headlights-concept-design-1969-car-model-03-06-2025/</link></item>
-<item><title>art paris 2025 returns to grand palais with 170 galleries, awards, and thematic exhibitions - designboom</title><link>https://www.designboom.com/art/art-paris-2025-returns-grand-palais-170-galleries-awards-thematic-exhibitions-03-05-2025/</link></item>
-<item><title>bjarke ingels group plans ornamental airport in bhutan with intricate woodcarvings - designboom</title><link>https://www.designboom.com/architecture/bjarke-ingels-group-bhutan-airport-woodcarvings-international-big-03-05-2025/</link></item>
-<item><title>tyyni sauna&amp;#39;s mirrored glazing reflects the snowy finnish landscape - designboom</title><link>https://www.designboom.com/architecture/tyyni-sauna-mirrored-glazing-snowy-finnish-landscape-tyyni-studio-piotr-gniewek-03-05-2025/</link></item>
-<item><title>wavy brick roof spreads over open crafts market by aidia studio in mexico - designboom</title><link>https://www.designboom.com/architecture/wavy-brick-roof-open-crafts-market-aidia-studio-mexico-mercado-nicolas-bravo-03-05-2025/</link></item>
-<item><title>samsung reveals flexible screens that stretch, fold into briefcase and become gaming devices - designboom</title><link>https://www.designboom.com/technology/samsung-flexible-screens-stretch-foldable-briefcase-gaming-devices-mwc-2025-03-05-2025/</link></item>
-<item><title>2m26 revives century-old kyoto annex with cypress structure and rammed earth flooring - designboom</title><link>https://www.designboom.com/architecture/2m26-century-kyoto-annex-cypress-structure-rammed-earth-flooring-03-05-2025/</link></item>
-<item><title>sasaki plans walkable waterfront development &amp;#39;new city salalah&amp;#39; in oman - designboom</title><link>https://www.designboom.com/architecture/sasaki-walkable-waterfront-development-new-city-salalah-oman-masterplan-03-05-2025/</link></item>
-<item><title>aptera completes real-world test of its solar electric vehicle in the mojave desert - designboom</title><link>https://www.designboom.com/technology/aptera-completes-real-world-test-solar-electric-vehicle-mojave-desert-03-04-2025/</link></item>
-<item><title>wittman estes brings net zero living to pacific northwest with &amp;#39;whidbey puzzle prefab&amp;#39; - designboom</title><link>https://www.designboom.com/architecture/wittman-estes-net-zero-pacific-northwest-whidbey-puzzle-prefab-03-04-2025/</link></item>
-<item><title>studio MK27&amp;#39;s monolithic concrete house unfolds onto tropical garden in são paulo - designboom</title><link>https://www.designboom.com/architecture/studio-mk27-monolithic-concrete-house-tropical-garden-sao-paulo-03-04-2025/</link></item>
-<item><title>salù iwadi studio layers spiraling wooden fins to form zangbeto side table - designboom</title><link>https://www.designboom.com/design/salu-iwadi-studio-spiraling-wooden-fins-zangbeto-side-table-03-04-2025/</link></item>
-<item><title>airstream’s first fully electric travel trailer ‘basecamp Xe’ runs on solar power and batteries - designboom</title><link>https://www.designboom.com/technology/airstream-first-fully-electric-travel-trailer-basecamp-xe-solar-power-batteries-03-04-2025/</link></item>
-<item><title>tilted roof sculpts geometric skylight atop UZV family residence by open AD in latvia - designboom</title><link>https://www.designboom.com/architecture/tilted-roof-geometric-skylight-uzv-family-residence-open-ad-latvia-03-04-2025/</link></item>
-<item><title>the trio of time and hey studio create watch with floating numbers inside its oil-filled display - designboom</title><link>https://www.designboom.com/design/the-trio-of-time-hey-studio-create-watch-floating-numbers-inside-oil-filled-display-02-28-2025/</link></item>
-<item><title>curved green roof shields wiki world&amp;#39;s wooden cabin of palette in wuhan - designboom</title><link>https://www.designboom.com/architecture/curved-green-roof-wiki-world-wooden-cabin-palette-wuhan-china-03-05-2025/</link></item>
-<item><title>interview: nicolas fayad on weaving palm waste into a prayer space at islamic arts biennale - designboom</title><link>https://www.designboom.com/architecture/interview-nicolas-fayad-weaving-palm-waste-prayer-space-islamic-arts-biennale-al-musalla-east-architecture-studio-02-27-2025/</link></item>
-<item><title>architecture as a catalyst for change: designboom LIVE talk with assemble at tAS - designboom</title><link>https://www.designboom.com/architecture/architecture-catalyst-change-designboom-live-talk-assemble-tas-the-architect-show-interview-02-15-2025/</link></item>
-<item><title>kengo kuma discusses translating sound into space as &amp;#39;onomatopoeia&amp;#39; show lands in athens - designboom</title><link>https://www.designboom.com/architecture/kengo-kuma-sound-space-onomatopoeia-architecture-exhibition-athens-interview-02-11-2025/</link></item>
-<item><title>xiaomi unveils modular magnetic lens that turns smartphones into digital cameras at MWC - designboom</title><link>https://www.designboom.com/technology/xiaomi-modular-magnetic-lens-turns-smartphones-digital-cameras-mwc-2025-03-03-2025/</link></item>
-<item><title>lucas museum shifts opening to 2026 with george lucas leading curatorial vision - designboom</title><link>https://www.designboom.com/architecture/lucas-museum-shifts-opening-2026-george-narrative-art-los-angeles-03-03-2025/</link></item>
-<item><title>studio 2m26 shapes wooden sheep house in kyoto with rice straws and sewn bamboo nets - designboom</title><link>https://www.designboom.com/architecture/studio-2m26-shapes-wooden-sheep-house-kyoto-rice-straws-bamboo-nets-hitsujigoya-03-03-2025/</link></item>
-<item><title>vintage terrazzo and textured travertine shape saint of athens&amp;#39; bespoke archive space - designboom</title><link>https://www.designboom.com/design/vintage-terrazzo-textured-travertine-saint-of-athens-archive-03-03-2025/</link></item>
-<item><title>lenovo’s solar-powered yoga PC charges itself by generating energy directly from the sun - designboom</title><link>https://www.designboom.com/technology/lenovo-solar-powered-yoga-pc-charges-itself-mwc-2025-03-03-2025/</link></item>
-<item><title>shell+core’s OTAKU café in abu dhabi bridges japanese wabi-sabi and brutalist sensibilities - designboom</title><link>https://www.designboom.com/architecture/shell-plus-core-otaku-cafe-abu-dhabi-japanese-wabi-sabi-brutalist-03-01-2025/</link></item>
-<item><title>punch-needle embroidery by adrienna matzeg conjures memories of summer road trips - designboom</title><link>https://www.designboom.com/art/punch-needle-embroidery-adrienna-matzeg-memories-summer-road-trips-scenic-route-03-02-2025/</link></item>
-<item><title>11 of the Most Expensive Typos in History - Mental Floss</title><link>https://www.mentalfloss.com/article/49935/10-very-costly-typos</link></item>
-<item><title>Where Did the Expression ‘Gung Ho’ Come From? - Mental Floss</title><link>https://www.mentalfloss.com/gung-ho-phrase-origins</link></item>
-<item><title>Why Is Coffee Called a “Cup of Joe”? - Mental Floss</title><link>https://www.mentalfloss.com/cup-of-joe-coffee-meaning</link></item>
-<item><title>Why Do We Call Someone a “One-Trick Pony”? - Mental Floss</title><link>https://www.mentalfloss.com/one-trick-pony-meaning</link></item>
-<item><title>Why Do We Say March ‘Comes In Like a Lion, Goes Out Like a Lamb’? - Mental Floss</title><link>https://www.mentalfloss.com/march-in-like-a-lion-out-like-a-lamb</link></item>
-<item><title>Clean Water and Rivers - American Rivers</title><link>https://www.americanrivers.org/cleanwater/</link></item>
-<item><title>Renew Membership - American Rivers</title><link>https://act.americanrivers.org/page/77858/donate/1?ea.tracking.id=siteCTA</link></item>
-<item><title>你称之为文艺，我称之为人类的自我欺骗 - 平凡的大蓝 - 何青</title><link>https://blog.sciencenet.cn/home.php?mod=space&amp;uid=261002&amp;do=blog&amp;id=1475034</link></item>
-<item><title>luoyunqiang - 平凡的大蓝 - 何青</title><link>https://blog.sciencenet.cn/home.php?mod=space&amp;uid=3438005</link></item>
-<item><title>问deepseek:老子的道德经说明了什么？ - 平凡的大蓝 - 何青</title><link>https://blog.sciencenet.cn/blog-3438005-1474924.html</link></item>
-<item><title>Monster Hunter Wilds review - VGC</title><link>https://www.videogameschronicle.com/review/monster-hunter-wilds-review/</link></item>
-<item><title>Analyst thinks Take-Two will sell Grand Theft Auto 6 at an unprecedented $100 price point - VGC</title><link>https://www.videogameschronicle.com/news/analyst-thinks-take-two-will-sell-grand-theft-auto-6-at-an-unprecedented-100-price-point/</link></item>
-<item><title>The Last of Us creator casts doubt on a third game in the series - VGC</title><link>https://www.videogameschronicle.com/news/the-last-of-us-creator-casts-doubt-on-a-third-game-in-the-series/</link></item>
-<item><title>Sega takes Capcom’s crown as Metacritic’s highest-rated publisher of 2024 - VGC</title><link>https://www.videogameschronicle.com/news/sega-takes-capcoms-crown-as-metacritics-highest-rated-publisher-of-2024/</link></item>
-<item><title>Iconic TNA wrestlers debut in WWE 2K25 DLC alongside NBA stars - VGC</title><link>https://www.videogameschronicle.com/news/iconic-tna-wrestlers-debut-in-wwe-2k25-dlc-alongside-nba-stars/</link></item>
-<item><title>Bam Margera is seemingly not returning for Tony Hawk’s Pro Skater 3 + 4 - VGC</title><link>https://www.videogameschronicle.com/news/bam-margera-is-seemingly-not-returning-for-tony-hawks-pro-skater-3-4/</link></item>
-<item><title>Thank Goodness You’re Here wins UKIE’s Game of the Year award - VGC</title><link>https://www.videogameschronicle.com/news/thank-goodness-youre-here-wins-ukies-uk-game-of-the-year/</link></item>
-<item><title>Russo brothers ‘definitely open’ to developing games tied to upcoming Avengers movies - VGC</title><link>https://www.videogameschronicle.com/news/russo-brothers-definitely-open-to-developing-games-tied-to-upcoming-avengers-movies/</link></item>
-<item><title>NetEase offers compensation after last-minute console delay for hero shooter FragPunk - VGC</title><link>https://www.videogameschronicle.com/news/netease-offers-compensation-after-last-minute-console-delay-for-hero-shooter-fragpunk/</link></item>
-<item><title>Sega promises fewer new games but deeper investments in Sonic, Atlus, and Like a Dragon - VGC</title><link>https://www.videogameschronicle.com/news/sega-promises-fewer-new-games-but-deeper-investments-in-sonic-atlus-and-like-a-dragon/</link></item>
-<item><title>Nintendo has successfully blocked a French file storage site from hosting pirated games - VGC</title><link>https://www.videogameschronicle.com/news/nintendo-has-successfully-blocked-a-french-file-storage-site-from-hosting-pirated-games/</link></item>
-<item><title>Just 4 months after its release, BioWare’s Dragon Age: The Veilguard has joined PlayStation Plus - VGC</title><link>https://www.videogameschronicle.com/news/just-4-months-after-its-release-biowares-dragon-age-the-veilguard-has-joined-playstation-plus/</link></item>
-<item><title>Nintendo confirms Switch Online retro game removal in US and Europe - VGC</title><link>https://www.videogameschronicle.com/news/nintendo-confirms-switch-online-retro-game-removal-in-us-and-europe/</link></item>
-<item><title>Iconic game publisher Acclaim has been resurrected, with wrestler Jeff Jarrett as advisor - VGC</title><link>https://www.videogameschronicle.com/news/iconic-game-publisher-acclaim-has-been-resurrected-with-wrestler-jeff-jarrett-as-advisor/</link></item>
-<item><title>Monster Hunter’s series producer is being put in charge of all Capcom’s development divisions - VGC</title><link>https://www.videogameschronicle.com/news/monster-hunters-series-producer-is-being-put-in-charge-of-all-capcoms-development-divisions/</link></item>
-<item><title>Trump tariffs threaten the future of physical video games, analyst warns - VGC</title><link>https://www.videogameschronicle.com/news/trump-tariffs-threaten-the-future-of-physical-video-games-analyst-warns/</link></item>
-<item><title>‘If Nintendo call, we’ll answer’: Mario Rabbids’ creator talks life after Ubisoft at his new studio - VGC</title><link>https://www.videogameschronicle.com/features/davide-soliani-interview/</link></item>
-<item><title>VGC is available ad-free from today for supporters - VGC</title><link>https://www.videogameschronicle.com/news/vgc-is-available-ad-free-from-today-for-supporters/</link></item>
-<item><title>PlayStation’s Visual Arts and Malaysia studios have reportedly suffered ‘many’ layoffs - VGC</title><link>https://www.videogameschronicle.com/news/playstations-visual-arts-and-malaysia-studios-have-reportedly-suffered-many-layoffs/</link></item>
-<item><title>Assassin’s Creed Shadows boasts a 30-40 hour main campaign - VGC</title><link>https://www.videogameschronicle.com/news/assassins-creed-shadows-boasts-a-30-40-hour-main-campaign/</link></item>
-<item><title>Grand Theft Auto 5’s Enhanced edition is now available for PC - VGC</title><link>https://www.videogameschronicle.com/news/grand-theft-auto-5s-enhanced-edition-is-now-available-for-pc/</link></item>
-<item><title>Activision unveils Tony Hawk’s Pro Skater 3 + 4 remaster for consoles and PC - VGC</title><link>https://www.videogameschronicle.com/news/activision-unveils-tony-hawks-pro-skater-34-remakes-for-consoles-and-pc/</link></item>
-<item><title>Sony announces centralized PlayStation Beta Program for PS5 and PC - VGC</title><link>https://www.videogameschronicle.com/news/sony-announces-centralized-playstation-beta-program-for-ps5-and-pc/</link></item>
-<item><title>Split Fiction review: Hazelight’s latest is a worthy companion to It Takes Two - VGC</title><link>https://www.videogameschronicle.com/review/split-fiction-review/</link></item>
-<item><title>Surprising snubs &amp; rising indie stars: BAFTA chair unpacks the 2025 Games Awards shortlist - VGC</title><link>https://www.videogameschronicle.com/news/surprising-snubs-rising-indie-stars-bafta-chair-unpacks-the-2025-games-awards-shortlist/</link></item>
-<item><title>Xbox Game Pass reveals March lineup with 33 Immortals launching on day one - VGC</title><link>https://www.videogameschronicle.com/news/game-pass-reveals-march-lineup-with-33-immortals-launching-on-day-one/</link></item>
-<item><title>Senua’s Saga: Hellblade 2 dominates 2025 BAFTA Games Awards nominations - VGC</title><link>https://www.videogameschronicle.com/news/2025-bafta-games-awards-nominations/</link></item>
-<item><title>Monster Hunter Wilds - VGC</title><link>https://www.videogameschronicle.com/games/monster-hunter-wilds/</link></item>
-<item><title>Street Fighter V - VGC</title><link>https://www.videogameschronicle.com/games/street-fighter-v/</link></item>
-<item><title>Tony Hawk’s Pro Skater 1 &amp; 2 - VGC</title><link>https://www.videogameschronicle.com/games/tony-hawks-pro-skater-1-2/</link></item>
-<item><title>Ryozo Tsujimoto - VGC</title><link>https://www.videogameschronicle.com/people/ryozo-tsujimoto/</link></item>
-<item><title>Fujioka Kaname - VGC</title><link>https://www.videogameschronicle.com/people/fujioka-kaname/</link></item>
-<item><title>PlatinumGames - VGC</title><link>https://www.videogameschronicle.com/companies/platinumgames/</link></item>
-<item><title>Omega 6 review: Nintendo artist’s creativity shines where game mechanics stumble - VGC</title><link>https://www.videogameschronicle.com/review/omega-6-the-triangle-stars-review/</link></item>
-<item><title>Two Point Museum review: Sega’s comedy curate ’em up is surprisingly deep - VGC</title><link>https://www.videogameschronicle.com/review/two-point-museum-review/</link></item>
-<item><title>Behind the scenes at Pokémon EUIC, one of Pokémon’s biggest events ever - VGC</title><link>https://www.videogameschronicle.com/features/behind-the-scenes-at-pokemon-euic-one-of-pokemons-biggest-events-ever/</link></item>
-<item><title>Josef Fares’ last game sold 23 million, but he insists success hasn’t changed Split Fiction - VGC</title><link>https://www.videogameschronicle.com/features/interviews/split-fiction-game-interview/</link></item>
-<item><title>Anime Royale codes for the UPD 5.5 (March 2025) - VGC</title><link>https://www.videogameschronicle.com/guide/anime-royale-codes/</link></item>
-<item><title>Pokémon Prismatic Evolutions Booster Bundle: Where to buy the Prismatic Evolutions Booster Bundle - VGC</title><link>https://www.videogameschronicle.com/guide/pokemon-prismatic-evolutions-booster-bundle-where-to-buy-the-prismatic-evolutions-booster-bundle/</link></item>
-<item><title>Pokémon Journey Together Trading Cards: Release date, Elite Trainer Box, Enhanced Booster Box - VGC</title><link>https://www.videogameschronicle.com/guide/pokemon-journey-together-trading-cards-release-date/</link></item>
+<lastBuildDate>Fri, 07 Mar 2025 12:04:32 +0800</lastBuildDate>
+<item><title>Jesus: Trustworthy Leader for a Gen Z Skeptic - TGC</title><link>https://www.thegospelcoalition.org/article/jesus-trustworthy-leader-gen-z/</link></item>
+<item><title>When God Goes Silent - TGC</title><link>https://www.thegospelcoalition.org/article/when-god-goes-silent/</link></item>
+<item><title>What Does God Think About Cities? - TGC</title><link>https://in.thegospelcoalition.org/article/what-does-god-think-about-cities/</link></item>
+<item><title>Before You Cut Off Your Parents: 3 Principles to Consider - TGC</title><link>https://www.thegospelcoalition.org/article/before-cut-off-parents/</link></item>
+<item><title>The Cross’s Vulgarity and the Resurrection’s Victory - TGC</title><link>https://www.thegospelcoalition.org/article/vulgarity-cross-victory-resurrection/</link></item>
+<item><title>What to Do After You Swipe Right: Wisdom for Online Dating - TGC</title><link>https://www.thegospelcoalition.org/article/swipe-right-wisdom-dating/</link></item>
+<item><title>Were the Puritans Hypocrites? Christianity and the Atrocities of Early America - TGC</title><link>https://www.thegospelcoalition.org/article/american-puritan-atrocities/</link></item>
+<item><title>Should Pastors Write Books? 4 Questions to Consider - TGC</title><link>https://www.thegospelcoalition.org/article/should-pastors-write-books/</link></item>
+<item><title>‘Severance’ and Pop Culture Visions of Hell - TGC</title><link>https://www.thegospelcoalition.org/article/severance/</link></item>
+<item><title>Dopamine Media Is a Digital Las Vegas - TGC</title><link>https://www.thegospelcoalition.org/article/dopamine-media-digital-las-vegas/</link></item>
+<item><title>‘House of David’ and the Rise of Quality Bible TV - TGC</title><link>https://www.thegospelcoalition.org/article/house-david-tv-review/</link></item>
+<item><title>Relying on God, Not America: A Report from the Church in Ukraine - TGC</title><link>https://www.thegospelcoalition.org/article/rely-god-church-ukraine/</link></item>
+<item><title>Roman Catholic Apologetics Is Surging Online. Intended Audience? Protestants. - TGC</title><link>https://www.thegospelcoalition.org/article/roman-catholic-apologetics-protestants/</link></item>
+<item><title>Here Be Dragons: What Christians Need to Know About Romantasy - TGC</title><link>https://www.thegospelcoalition.org/article/christians-need-know-romantasy/</link></item>
+<item><title>9 Things You Should Know About Prosperity Gospel Preacher Paula White - TGC</title><link>https://www.thegospelcoalition.org/article/9-things-know-prosperity-gospel-preacher-paula-white/</link></item>
+<item><title>New method significantly reduces AI energy consumption - Tech Xplore</title><link>https://techxplore.com/news/2025-03-method-significantly-ai-energy-consumption.html</link></item>
+<item><title>Perovskite solar cells reach new efficiency heights with novel additive - Tech Xplore</title><link>https://techxplore.com/news/2025-03-perovskite-solar-cells-efficiency-heights.html</link></item>
+<item><title>When outplayed, AI models resort to cheating to win chess matches - Tech Xplore</title><link>https://techxplore.com/news/2025-03-outplayed-ai-resort-chess.html</link></item>
+<item><title>Turning liquor waste into power: Baijiu sediment transformed into anode for sodium-ion batteries - Tech Xplore</title><link>https://techxplore.com/news/2025-03-liquor-power-baijiu-sediment-anode.html</link></item>
+<item><title>New highly performing Ni-rich cathode active materials for all-solid-state batteries - Tech Xplore</title><link>https://techxplore.com/news/2025-03-highly-ni-rich-cathode-materials.html</link></item>
+<item><title>Chain of Draft approach allows AI models to carry out tasks using far fewer resources - Tech Xplore</title><link>https://techxplore.com/news/2025-03-chain-approach-ai-tasks-resources.html</link></item>
+<item><title>The future of batteries is in your closet: Scientists show nylon can improve lithium battery performance - Tech Xplore</title><link>https://techxplore.com/news/2025-03-future-batteries-closet-scientists-nylon.html</link></item>
+<item><title>Hydrogen sensor that could pave the way for safer, cleaner energy - Tech Xplore</title><link>https://techxplore.com/news/2025-03-hydrogen-sensor-pave-safer-cleaner.html</link></item>
+<item><title>New AI defense method shields models from adversarial attacks - Tech Xplore</title><link>https://techxplore.com/news/2025-03-ai-defense-method-shields-adversarial.html</link></item>
+<item><title>A 30-foot-long glass bridge blends ancient wisdom with cutting-edge design - Tech Xplore</title><link>https://techxplore.com/news/2025-03-foot-glass-bridge-blends-ancient.html</link></item>
+<item><title>Lightening the load of augmented reality glasses - Tech Xplore</title><link>https://techxplore.com/news/2025-03-augmented-reality-glasses.html</link></item>
+<item><title>Feeling is believing: Bionic hand &amp;#39;knows&amp;#39; what it&amp;#39;s touching, grasps like a human - Tech Xplore</title><link>https://techxplore.com/news/2025-03-believing-bionic-grasps-human.html</link></item>
+<item><title>Why more water is not always better in ion-conducting membranes: New insights for clean energy technology - Tech Xplore</title><link>https://techxplore.com/news/2025-03-ion-membranes-insights-energy-technology.html</link></item>
+<item><title>Combating deepfakes with CAPTCHA-like verification that uses real-time physical interactions - Tech Xplore</title><link>https://techxplore.com/news/2025-03-combating-deepfakes-captcha-verification-real.html</link></item>
+<item><title>Nanoscale tweaks help alloy withstand high-speed impacts - Tech Xplore</title><link>https://techxplore.com/news/2025-03-nanoscale-tweaks-alloy-high-impacts.html</link></item>
+<item><title>Google 以国家安全理由希望不被肢解 - Solidot</title><link>https://www.solidot.org/story?sid=80730</link></item>
+<item><title>NASA 关闭航海家的科学设备以节省电力 - Solidot</title><link>https://www.solidot.org/story?sid=80728</link></item>
+<item><title>研究发现精液质量与男性寿命相关 - Solidot</title><link>https://www.solidot.org/story?sid=80727</link></item>
+<item><title>NASA 首次在月球上使用 GPS - Solidot</title><link>https://www.solidot.org/story?sid=80726</link></item>
+<item><title>OpenAI 计划对博士水平的 AI 智能体收取 2 万美元月费 - Solidot</title><link>https://www.solidot.org/story?sid=80725</link></item>
+<item><title>36 家石化巨头产生的碳排放占到了全球的一半 - Solidot</title><link>https://www.solidot.org/story?sid=80724</link></item>
+<item><title>美国停止分享大使馆领事馆收集的空气质量数据 - Solidot</title><link>https://www.solidot.org/story?sid=80723</link></item>
+<item><title>全球暖化威胁低纬度地区到粮食产量 - Solidot</title><link>https://www.solidot.org/story?sid=80722</link></item>
+<item><title>犹他州要求美国应用商店验证用户年龄 - Solidot</title><link>https://www.solidot.org/story?sid=80721</link></item>
+<item><title>24 Outdoor Tables We Love, From a $20 IKEA Find to a Hay Staple - domino</title><link>https://www.domino.com/style-shopping/best-outdoor-tables/</link></item>
+<item><title>Closet Organization - domino</title><link>https://www.domino.com/category/renovation/</link></item>
+<item><title>Michael P. H. Clifford - domino</title><link>https://www.domino.com/authors/michael-p-h-clifford/</link></item>
+<item><title>Michael Clifford - domino</title><link>https://www.domino.com/authors/michael-clifford/</link></item>
+<item><title>印尼能源转型机遇与挑战并存 研究表明：中企早参与早获益 - 绿色和平</title><link>https://www.greenpeace.org.cn/2025/02/28/%e5%8d%b0%e5%b0%bc%e8%83%bd%e6%ba%90%e8%bd%ac%e5%9e%8b%e6%9c%ba%e9%81%87%e4%b8%8e%e6%8c%91%e6%88%98%e5%b9%b6%e5%ad%98-%e7%a0%94%e7%a9%b6%e8%a1%a8%e6%98%8e%ef%bc%9a%e4%b8%ad%e4%bc%81%e6%97%a9%e5%8f%82/</link></item>
+<item><title>绿色和平美国办公室：特朗普政府退出《巴黎协定》，不仅背弃了未来，也背弃了作为领导者的道德责任 - 绿色和平</title><link>https://www.greenpeace.org.cn/2025/02/27/sina-interview-john-noel/</link></item>
+<item><title>绿色和平中国总负责人：中国低碳转型源于内生动力，不会被外部因素所左右 - 绿色和平</title><link>https://www.greenpeace.org.cn/2025/02/19/sina-interview-yuan-ying/</link></item>
+<item><title>新能源全面入市：136号文将如何影响中国绿电市场？ - 绿色和平</title><link>https://www.greenpeace.org.cn/2025/02/18/%e6%96%b0%e8%83%bd%e6%ba%90%e5%85%a8%e9%9d%a2%e5%85%a5%e5%b8%82%ef%bc%9a136%e5%8f%b7%e6%96%87%e5%b0%86%e5%a6%82%e4%bd%95%e5%bd%b1%e5%93%8d%e4%b8%ad%e5%9b%bd%e7%bb%bf%e7%94%b5%e5%b8%82%e5%9c%ba/</link></item>
+<item><title>极端天气威胁主要物流业务区，快递企业气候韧性待提升 - 绿色和平</title><link>https://www.greenpeace.org.cn/2025/02/18/express-delivery-climate-risks/</link></item>
+<item><title>破与立：中国省级绿色电力市场建设全面解析 - 绿色和平</title><link>https://www.greenpeace.org.cn/2025/02/14/%e7%a0%b4%e4%b8%8e%e7%ab%8b%ef%bc%9a%e4%b8%ad%e5%9b%bd%e7%9c%81%e7%ba%a7%e7%bb%bf%e8%89%b2%e7%94%b5%e5%8a%9b%e5%b8%82%e5%9c%ba%e5%bb%ba%e8%ae%be%e5%85%a8%e9%9d%a2%e8%a7%a3%e6%9e%90/</link></item>
+<item><title>COP16续会在即，碳交易能弥补自然保护的资金缺口吗？ - 绿色和平</title><link>https://www.greenpeace.org.cn/2025/02/13/cop16%e7%bb%ad%e4%bc%9a%e5%9c%a8%e5%8d%b3%ef%bc%8c%e7%a2%b3%e4%ba%a4%e6%98%93%e8%83%bd%e5%bc%a5%e8%a1%a5%e8%87%aa%e7%84%b6%e4%bf%9d%e6%8a%a4%e7%9a%84%e8%b5%84%e9%87%91%e7%bc%ba%e5%8f%a3%e5%90%97/</link></item>
+<item><title>Bill Murray Talks About ‘Saturday Night Live’ While Eating Progressively Spicy Hot Wings Without Flinching - Laughing Squid</title><link>https://laughingsquid.com/bill-murray-hot-ones/</link></item>
+<item><title>Teenager From India Sets Guinness World Record for the World’s Hairiest Face - Laughing Squid</title><link>https://laughingsquid.com/worlds-hairiest-face/</link></item>
+<item><title>How the British Accent Was Developed by Aristocrats in the 1700s to Distinguish Themselves From Commoners - Laughing Squid</title><link>https://laughingsquid.com/british-accent-developed-by-aristocrats-1700s/</link></item>
+<item><title>The Amazing Tree-Climbing Goats Who Dwell in Moroccan Argan Groves - Laughing Squid</title><link>https://laughingsquid.com/tree-climbing-goats-morocco/</link></item>
+<item><title>Actor Himesh Patel Reads an Amusing Letter by Ford Madox Ford About the Many Uses for Books - Laughing Squid</title><link>https://laughingsquid.com/himesh-patel-reads-ford-madox-ford-letter/</link></item>
+<item><title>Adam Scott as Ben Wyatt Predicts the ‘Severance’ Plot Line in a 2014 Episode of ‘Parks and Recreation’ - Laughing Squid</title><link>https://laughingsquid.com/parks-and-recreation-predicts-severance/</link></item>
+<item><title>A Mellow Mashup Combining Queensrÿche’s ‘Jet City Woman’ With ‘I’ll Be Around’ by The Spinners - Laughing Squid</title><link>https://laughingsquid.com/bill-mcclintock-queensryche-spinners-mashup/</link></item>
+<item><title>A Documentary About the Artists Who Built a Secret Apartment Inside of a Rhode Island Mall - Laughing Squid</title><link>https://laughingsquid.com/secret-mall-apartment-documentary/</link></item>
+<item><title>A Fascinating Look at the Composition of Saturn’s Rings - Laughing Squid</title><link>https://laughingsquid.com/composition-of-saturn-rings/</link></item>
+<item><title>Mom Sneaks an Adorably Fuzzy Mini-Cow Into the House For ‘Moo-Cow Hugs’ - Laughing Squid</title><link>https://laughingsquid.com/mom-sneaks-mini-cow-into-house/</link></item>
+<item><title>Thoughtful Pregnant Stray Cat Brought Pink Flowers to a Woman&amp;#39;s Door Who Then Let Her Inside to Give Birth - Laughing Squid</title><link>https://laughingsquid.com/pregnant-stray-cat-brings-flowers/</link></item>
+<item><title>Humanoid Robot Performs Near Perfect Kung Fu Moves - Laughing Squid</title><link>https://laughingsquid.com/humanoid-robot-performs-kung-fu-moves/</link></item>
+<item><title>NYT Connections today hints and answers — Friday, March 7 (#635) - Tomsguide</title><link>https://www.tomsguide.com/gaming/nyt-connections-today-hints-and-answers-friday-march-7-635</link></item>
+<item><title>NYT Strands today — hints, spangram and answers for game #369 (Friday, March 7 2025) - Tomsguide</title><link>https://www.tomsguide.com/gaming/nyt-strands-today-hints-spangram-and-answers-for-game-369-friday-march-7-2025</link></item>
+<item><title>Google Gboard redesign has already angered users — and I can see why - Tomsguide</title><link>https://www.tomsguide.com/computing/mobile-apps/google-gboard-redesign-has-already-angered-users-and-i-can-see-why</link></item>
+<item><title>My favorite power bank doubles as a tire inflator — and it&amp;#39;s 70% off right now - Tomsguide</title><link>https://www.tomsguide.com/sales-events/my-favorite-power-bank-doubles-as-a-tire-inflator-and-its-70-percent-off-right-now</link></item>
+<item><title>Prime Video top 10 has 3 must-watch movies — including a classic Reese Witherspoon comedy - Tomsguide</title><link>https://www.tomsguide.com/entertainment/prime-video/check-out-the-top-10-prime-video-movies-and-get-started-with-the-3-worth-streaming-right-now</link></item>
+<item><title>Act fast! Get your first three months of Peacock Premium for free - Tomsguide</title><link>https://www.tomsguide.com/sales-events/act-fast-get-your-first-three-months-of-peacock-premium-for-free</link></item>
+<item><title>Massive Best Buy sale just went live — 39 deals I&amp;#39;d shop now on MacBook Air M4, March Madness TVs and more - Tomsguide</title><link>https://www.tomsguide.com/sales-events/massive-best-buy-sale-just-went-live-39-deals-id-shop-now-on-macbook-air-m4-march-madness-tvs-and-more</link></item>
+<item><title>Sling just added 11 free streaming channels — here&amp;#39;s what&amp;#39;s you can watch - Tomsguide</title><link>https://www.tomsguide.com/entertainment/sling-tv/sling-just-added-11-free-streaming-channels-heres-whats-you-can-watch</link></item>
+<item><title>Epic Carhartt apparel sale live from $7 — 13 deals I&amp;#39;d shop right now - Tomsguide</title><link>https://www.tomsguide.com/sales-events/epic-carhartt-apparel-sale-live-from-usd7-13-deals-id-shop-right-now</link></item>
+<item><title>Google Chrome at risk from shape-shifting browser extensions — how to stay safe - Tomsguide</title><link>https://www.tomsguide.com/computing/online-security/google-chrome-at-risk-from-shape-shifting-browser-extensions-how-to-stay-safe</link></item>
+<item><title>YouTube Premium Lite vs YouTube Premium: What&amp;#39;s the difference? - Tomsguide</title><link>https://www.tomsguide.com/entertainment/streaming/youtube-premium-lite-vs-youtube-premium-whats-the-difference</link></item>
+<item><title>Avocado vs WinkBed: Which luxury hybrid mattress should you buy? - Tomsguide</title><link>https://www.tomsguide.com/mattresses/avocado-vs-winkbed-which-luxury-hybrid-mattress-should-you-buy</link></item>
+<item><title>iOS 18.4 public beta 2 is here — all the new features to try on your iPhone - Tomsguide</title><link>https://www.tomsguide.com/phones/iphones/ios-18-4-public-beta-2-is-here-new-emoji-and-everything-else-to-try-on-your-iphone</link></item>
+<item><title>&amp;#39;Shogun&amp;#39; season 2 just got an ominous update from a prominent Disney executive - Tomsguide</title><link>https://www.tomsguide.com/entertainment/hulu/shogun-season-2-just-got-an-ominous-update-from-a-prominent-disney-executive</link></item>
+<item><title>Hurry! Amazon&amp;#39;s knocking $250 off this Samsung OLED gaming monitor - Tomsguide</title><link>https://www.tomsguide.com/sales-events/hurry-amazons-knocking-usd250-off-this-samsung-oled-gaming-monitor</link></item>
+<item><title>This workout could reduce insomnia among over 60s, says new study - Tomsguide</title><link>https://www.tomsguide.com/wellness/sleep/this-workout-could-reduce-insomnia-among-over-60s-says-new-study</link></item>
+<item><title>Huge Amazon sale live from $6 — 31 spring deals I&amp;#39;d shop on apparel, TVs, cleaning supplies and more - Tomsguide</title><link>https://www.tomsguide.com/sales-events/huge-amazon-sale-live-from-usd6-31-spring-deals-id-shop-on-apparel-tvs-cleaning-supplies-and-more</link></item>
+<item><title>Where to buy AMD Radeon RX 9070 and RX 9070 XT — I recommend these retailers in US and UK - Tomsguide</title><link>https://www.tomsguide.com/gaming/pc-gaming/where-to-buy-amd-radeon-rx-9070-rx-9070-xt</link></item>
+<item><title>Netflix top 10 shows — here&amp;#39;s the 3 worth watching right now - Tomsguide</title><link>https://www.tomsguide.com/entertainment/streaming/netflix-top-10-shows-heres-the-3-worth-watching-march-6-2025</link></item>
+<item><title>The Saatva Classic drops to its cheapest price of the year in a mattress deal that beats Black Friday - Tomsguide</title><link>https://www.tomsguide.com/mattresses/the-saatva-classic-drops-to-its-cheapest-price-of-the-year-in-a-mattress-deal-that-beats-black-friday</link></item>
+<item><title>Reolink Altas PT Ultra review: Long battery life and crisp 360-degree footage - Tomsguide</title><link>https://www.tomsguide.com/home/smart-home/reolink-altas-pt-ultra-review</link></item>
+<item><title>Netflix just canceled &amp;#39;The Recruit&amp;#39; after 2 seasons and I&amp;#39;m stunned - Tomsguide</title><link>https://www.tomsguide.com/entertainment/netflix/netflix-just-canceled-the-recruit-after-2-seasons-and-im-stunned</link></item>
+<item><title>Eero Pro 7 review: Fast Wi-Fi 7 mesh speeds simplified - Tomsguide</title><link>https://www.tomsguide.com/computing/routers/eero-pro-7-review</link></item>
+<item><title>Abode now lets you check in on your smart home security system right from your Apple TV - Tomsguide</title><link>https://www.tomsguide.com/home/smart-home/abode-now-lets-you-check-in-on-your-smart-home-security-system-right-from-your-apple-tv</link></item>
+<item><title>The Momcozy Sunrise Sound Machine can make your night feeds and early mornings calmer — and it&amp;#39;s just $40 - Tomsguide</title><link>https://www.tomsguide.com/wellness/sleep-tech/the-momcozy-sunrise-sound-machine-can-make-your-night-feeds-and-early-mornings-calmer-and-its-just-usd40</link></item>
+<item><title>RTX 5070 can&amp;#39;t match RTX 4090 performance in new benchmark — despite Nvidia&amp;#39;s claims - Tomsguide</title><link>https://www.tomsguide.com/computing/gpus/rtx-5070-cant-match-rtx-4090-performance-in-new-benchmark-despite-nvidias-claims</link></item>
+<item><title>Adidas spring sale is live — 11 deals on shoes and apparel I’d shop now - Tomsguide</title><link>https://www.tomsguide.com/sales-events/adidas-spring-sale-is-live-11-deals-on-shoes-and-apparel-id-shop-now</link></item>
+<item><title>Casper One Mattress review 2025 - Tomsguide</title><link>https://www.tomsguide.com/wellness/mattresses/casper-one-review</link></item>
+<item><title>GTA 6 may sell for an unprecedented price — here&amp;#39;s how much it could cost - Tomsguide</title><link>https://www.tomsguide.com/gaming/gta-6-may-sell-for-an-unprecedented-price-heres-how-much-it-could-cost</link></item>
+<item><title>Recover from the gym faster with these post-workout essentials — 9 deals I&amp;#39;d shop from $14 - Tomsguide</title><link>https://www.tomsguide.com/sales-events/recover-from-the-gym-faster-with-these-post-workout-essentials-9-deals-id-shop-from-usd14</link></item>
+<item><title>Love bass? You&amp;#39;ll want one of these new room shaking subwoofers from Q Acoustics - Tomsguide</title><link>https://www.tomsguide.com/audio/love-bass-youll-want-one-of-these-new-room-shaking-subwoofers-from-qacoustics</link></item>
+<item><title>Wacaco Pipamoka review: Coffee on the side of a mountain? No problem - Tomsguide</title><link>https://www.tomsguide.com/home/coffee-makers/wacaco-pipamoka-review-coffee</link></item>
+<item><title>iPad Air M3 and iPad 11 surprisingly miss out on Apple&amp;#39;s C1 modem - Tomsguide</title><link>https://www.tomsguide.com/tablets/ipads/ipad-air-m3-and-ipad-11-surprisingly-miss-out-on-apples-c1-modem</link></item>
+<item><title>Lomography Diana Instant Square review - Tomsguide</title><link>https://www.tomsguide.com/cameras-photography/lomography-diana-instant-square-review</link></item>
+<item><title>I just tested a keyboard that&amp;#39;s so bright it could help land planes — but its performance is killer - Tomsguide</title><link>https://www.tomsguide.com/computing/peripherals/gravastar-mercury-k1-lite-review</link></item>
+<item><title>Everybody&amp;#39;s noticing this one kitchen item in Meghan Markle&amp;#39;s new Netflix show — and it&amp;#39;s on sale at Amazon right now - Tomsguide</title><link>https://www.tomsguide.com/home/everybodys-noticing-this-one-kitchen-item-in-meghan-markles-new-netflix-show-and-its-on-sale-at-amazon-right-now</link></item>
+<item><title>I tested this 8K drone for a month — and it might be the ultimate DJI alternative - Tomsguide</title><link>https://www.tomsguide.com/cameras-photography/drones/hoverair-x1-pro-promax-review</link></item>
+<item><title>Netflix just got a crime thriller movie that’s already crashed the top 10 — but there’s a problem - Tomsguide</title><link>https://www.tomsguide.com/entertainment/netflix/netflix-just-got-a-crime-thriller-movie-thats-already-crashed-the-top-10-but-theres-a-problem</link></item>
+<item><title>&amp;#39;When Nobody Sees Us&amp;#39;: how to watch the Spanish crime thriller series online from anywhere in the world - Tomsguide</title><link>https://www.tomsguide.com/entertainment/hbo-max/watch-when-nobody-sees-us</link></item>
+<item><title>MacBook Air M4 just got its first discount — get $50 off right now - Tomsguide</title><link>https://www.tomsguide.com/computing/macbooks/macbook-air-m4-just-got-its-first-discount-get-usd50-off-right-now</link></item>
+<item><title>Triple foldables at MWC — a growing trend, but not quite ready - Tomsguide</title><link>https://www.tomsguide.com/phones/triple-foldables-at-mwc-a-growing-trend-but-not-quite-ready</link></item>
+<item><title>Forget sit-ups — build core strength and boost your mobility in just 15 minutes with this Pilates routine - Tomsguide</title><link>https://www.tomsguide.com/wellness/fitness/forget-the-gym-this-15-minute-pilates-routine-builds-core-strength-and-boosts-your-mobility</link></item>
+<item><title>I just saw the sky blue MacBook Air M4, and I’m obsessed — it&amp;#39;s the best color Apple has ever done - Tomsguide</title><link>https://www.tomsguide.com/computing/macbooks/macbook-air-m4-sky-blue-first-look-hands-on</link></item>
+<item><title>AeroPress just upped the stakes in portable coffee — meet the AeroPress Go Plus - Tomsguide</title><link>https://www.tomsguide.com/home/coffee-makers/aeropress-just-upped-the-stakes-in-portable-coffee-meet-the-aeropress-go-plus</link></item>
+<item><title>Netflix just added an overlooked spy thriller movie — here&amp;#39;s why you should stream it right now - Tomsguide</title><link>https://www.tomsguide.com/entertainment/netflix/netflix-just-got-a-gripping-spy-thriller-you-probably-havent-seen-and-its-based-on-a-true-story</link></item>
+<item><title>Samsung Galaxy Z Flip 7 tipped for a huge outer screen upgrade — here’s what we know - Tomsguide</title><link>https://www.tomsguide.com/phones/samsung-phones/samsung-galaxy-z-flip-7-tipped-for-a-huge-outer-screen-upgrade-heres-what-we-know</link></item>
+<item><title>Real Sociedad vs Man Utd: How to watch live streams of this exciting Europa League match online - Tomsguide</title><link>https://www.tomsguide.com/entertainment/sports/watch-the-real-sociedad-vs-manchester-united-europa-league-match-online</link></item>
+<item><title>Prime Video’s new romantic comedy is now streaming — and it’s the ultimate mood-booster - Tomsguide</title><link>https://www.tomsguide.com/entertainment/prime-video/prime-videos-new-romantic-comedy-is-now-streaming-and-its-the-ultimate-mood-booster</link></item>
+<item><title>Samsung’s new XR headset just tipped for a big advantage over the Apple Vision Pro - Tomsguide</title><link>https://www.tomsguide.com/computing/vr-ar/samsungs-project-moohan-could-have-better-displays-than-apple-vision-pro-heres-how</link></item>
+<item><title>5 best shows like &amp;#39;Paradise&amp;#39; to watch now - Tomsguide</title><link>https://www.tomsguide.com/entertainment/streaming/5-best-shows-like-paradise-to-watch-after-the-thrillers-season-1-finale</link></item>
+<item><title>How Blake Lively might have just potentially ended her own career - The Eastern Herald</title><link>https://easternherald.com/2025/03/06/how-blake-lively-might-have-just-potentially-ended-her-own-career/</link></item>
+<item><title>Gusto Pricing: Compare Plans and Features for Payroll and HR Management - The Eastern Herald</title><link>https://easternherald.com/2025/03/06/gusto-pricing-plans-features-payroll-hr-management/</link></item>
+<item><title>Today’s NYT Mini Crossword Clues &amp; Answers for Thursday, March 6, 2025 - The Eastern Herald</title><link>https://easternherald.com/2025/03/06/nyt-mini-crossword-clues-answers-march-6-2025/</link></item>
+<item><title>NYT Connections Hints and Answers for March 6, 2025 – Puzzle #634 - The Eastern Herald</title><link>https://easternherald.com/2025/03/06/nyt-connections-hints-answers-march-6-2025/</link></item>
+<item><title>NYT Wordle Hints and Answers for March 6, 2025 – Puzzle #1356 - The Eastern Herald</title><link>https://easternherald.com/2025/03/06/nyt-wordle-hints-answers-03-06-2025/</link></item>
+<item><title>Zelenskyy’s theatrical politics from war hysteria to hollow peace talks - The Eastern Herald</title><link>https://easternherald.com/2025/03/05/zelenskyy-war-propaganda/</link></item>
+<item><title>Trump reveals Zelenskyy’s humiliating surrender as Ukraine begs for negotiations after US betrayal - The Eastern Herald</title><link>https://easternherald.com/2025/03/05/trump-exposes-zelenskyy-surrender/</link></item>
+<item><title>US deception exposed, punishing China instead of fixing its own drug problem - The Eastern Herald</title><link>https://easternherald.com/2025/03/05/us-deception-punishing-china/</link></item>
+<item><title>US exposes Its hypocrisy by abandoning Ukraine for political gain - The Eastern Herald</title><link>https://easternherald.com/2025/03/05/us-betrays-ukraine/</link></item>
+<item><title>Zoom faces heavy fine in Russia for violating data laws amid western defiance - The Eastern Herald</title><link>https://easternherald.com/2025/03/05/zoom-russia-fine/</link></item>
 </channel></rss>
