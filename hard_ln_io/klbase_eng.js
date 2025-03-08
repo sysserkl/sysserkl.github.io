@@ -2067,9 +2067,14 @@ function enwords_mini_search_b(csword=''){
     
     if (search_type!==''){
         switch (search_type){
-            case 'filelist 检索':
+            case 'filelist 检索': //txtlistsearch - 保留注释
                 if (typeof txtsearch_kltxt_b == 'function'){
                     txtsearch_kltxt_b(csword,csreg,false,false,false,osession);
+                }
+                break;
+            case '网址库':
+                if (typeof search_load_websites_b == 'function'){
+                    search_load_websites_b(csword,csreg,-1,function(cslist){osession.innerHTML=cslist.join('\n');});
                 }
                 break;
         }
@@ -2149,8 +2154,12 @@ function enwords_mini_search_frame_form_b(cstype='s'){
     } else {
         var bljg='';
         bljg=bljg+'<input id="input_enwords_mini_search" type="text" onkeyup="if (event.key==\'Enter\'){enwords_mini_search_b();}"> ';
-        if (typeof filelist !== 'undefined'){
+        if (typeof txtsearch_kltxt_b == 'function' && typeof filelist !== 'undefined'){
             bljg=bljg+'<label><input type="checkbox" id="checkbox_mini_search_type">filelist 检索</label> ';    
+        }
+
+        if (typeof search_load_websites_b == 'function'){
+            bljg=bljg+'<label><input type="checkbox" id="checkbox_mini_search_type">网址库</label> ';    
         }
         
         bljg=bljg+'<span class="aclick" onclick="enwords_mini_search_frame_form_b();">Close</span>';

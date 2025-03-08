@@ -715,8 +715,11 @@ function html_form_bigfile(ospan,do_render=false){
     function sub_html_form_bigfile_textarea(only_source=false){
         var left_strings0='<p>';
         if (!only_source){
-            left_strings0=left_strings0+'<span class="aclick" onclick="html_get_bigfile(false,true);">.htm+.js</span><span class="aclick" onclick="html_get_bigfile(false,false);">one file</span><span class="aclick" onclick="html_get_bigfile(true);">render</span><a class="aclick" href="?render&idb&htm='+file_name+'" target=_blank>link</a>';
+            left_strings0=left_strings0+'<span class="aclick" onclick="html_get_bigfile(false,true);">.htm+.js</span><span class="aclick" onclick="html_get_bigfile(false,false);">one file</span><span class="aclick" onclick="html_get_bigfile(true);">render</span><a class="aclick" href="?render&idb&htm='+file_name+'" target=_blank>link</a><a class="aclick" href="?render&idb&htm=cmeditor.htm&bigfile='+file_name+'" target=_blank>{}</a>';
+        } else {
+            left_strings0=left_strings0+'<a class="aclick" href="?render&idb&htm=cmeditor.htm&bigfile='+file_name+'" target=_blank>{}</a>';
         }
+        
         var blstr0=textarea_with_form_generate_b('textarea_html_file_content_bigfile','width:90%;height:'+(only_source?25:10)+'rem;',left_strings0,'清空,复制,↑,↓,发送到临时记事本,发送地址','</p>');
         
         if (!only_source){
@@ -953,38 +956,13 @@ function export_bigfile(ospan,cscontent=false){
 }
 
 function websites_bigfile(return_max=-1){
-    function sub_websites_bigfile_load(){
-        if (typeof sites_all_global == 'undefined'){
-            sites_all_global=[];
-        } else {
-            sites_all_global=js_arr_type_websites_b(sites_all_global);
-            sites_all_global=js_2_demo_style_websites_b(sites_all_global);
-            sites_all_global=demo_2_cache_style_websites_b(sites_all_global)[0];
-        }
-        sub_websites_bigfile_search();
+    function sub_websites_bigfile_done(cslist){
+        document.getElementById('divhtml').innerHTML='<p style="line-height:'+(ismobile_b()?'1.8':'2.2')+'rem;">'+cslist.join(' ')+'</p>';
     }
-    
-    function sub_websites_bigfile_search(){
-        var result_t=search_cache_websites_b(cskey,is_reg,false,return_max,false,sites_all_global)[0];
-        result_t=search_links_websites_b(cskey,result_t,true)[0];
-        
-        var bljg=search_html_websites_b(result_t,'none',false);
-        document.getElementById('divhtml').innerHTML='<p style="line-height:'+(ismobile_b()?'1.8':'2.2')+'rem;">'+bljg.join(' ')+'</p>';
-        
-        console.log('websites_bigfile() 费时：'+(performance.now() - t0) + ' milliseconds');
-    }
-    
-    var t0 = performance.now();
 
     var cskey,is_reg;
     [cskey,is_reg]=key_get_bigfile();
-
-    if (typeof sites_all_global == 'undefined'){
-        var file_list=klbase_addons_import_js_b([],[],['sites_all_data.js'],[],false,false);
-        load_js_var_file_b('sites_all_global',file_list,'sites_all_data.js',sub_websites_bigfile_load);
-    } else {
-        sub_websites_bigfile_search();
-    }
+    search_load_websites_b(cskey,is_reg,-1,sub_websites_bigfile_done);
 }
 
 function show_hide_storage_bigfile(){

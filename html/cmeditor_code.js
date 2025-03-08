@@ -8,7 +8,7 @@ function args_codemirror(){
         for (let one_key of cskeys){
             one_key=one_key.trim();
             if (one_key.substring(0,5)=='mode='){
-                mode_cm_global=one_key.substring(5,);
+                mode_cm_global=one_key.substring(5,);   //可以指定 mode_cm_global 适用于 扩展名 另类的文件 - 保留注释
             } else if (one_key.substring(0,6)=='theme='){
                 theme_selected_cm_global=one_key.substring(6,);
             } else if (one_key.substring(0,8)=='bigfile='){

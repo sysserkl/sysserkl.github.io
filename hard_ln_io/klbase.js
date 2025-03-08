@@ -3246,7 +3246,7 @@ function html_head_generate_b(cstitle=false,style_list=[],add_view=false,close_h
         list_t.push('</style>');
     }
     if (add_view){
-        list_t.push("<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />");
+        list_t.push('<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />');
     }
     if (close_head){
         list_t.push('</head>');

@@ -37,6 +37,7 @@ function menu_notepad(){
     var klmenu_config=root_font_size_menu_b(str_t);
     klmenu_config=klmenu_config.concat([
     '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'notepad\');">更新版本</span>',
+    '<span class="span_menu" onclick="'+str_t+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>',    
     ]);
 
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🗐','19rem','1rem','1rem','30rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','30rem'),'','0rem')+' ');
@@ -94,8 +95,18 @@ function wiki_style_notepad(){
     var odiv=document.getElementById('div_status');
     var blstr=document.getElementById('textarea_content_notepad').value.replace(/\n/g,'\n<p>'); //不能使用<br /> - 保留注释
     var buttons=close_button_b('div_status','');
-    odiv.innerHTML=wiki_all_format_b(blstr)+'<p>'+buttons+'</p>';
+    buttons=buttons+'<span class="aclick" onclick="wiki_copy_text_notepad();">copy text</span>';
+    odiv.innerHTML='<div id="div_sub_wiki_text_notepad">'+wiki_all_format_b(blstr)+'</div><p>'+buttons+'</p>';
     odiv.scrollIntoView();
+}
+
+function wiki_copy_text_notepad(){
+    var odiv=document.getElementById('div_sub_wiki_text_notepad');
+    if (odiv){
+        copy_2_clipboard_b(odiv.innerText);
+    } else {
+        alert('未发现 id: div_sub_wiki_text_notepad');
+    }
 }
 
 function edit_tools_click_notepad(obutton){
@@ -172,7 +183,18 @@ function wikiuploads_count_notepad(){
     var blstr=otextarea.value;
     var list_t=blstr.match(/^.*{{wikiuploads}}.*$/mg) || [];
     list_t.sort();
-    return '<h4>附件列表('+list_t.length+')</h4>'+array_2_li_b(list_t);
+    var ext_dict={};
+    for (let item of list_t){
+        let blext=file_path_name_b(item)[2];
+        if (ext_dict['e_'+blext]==undefined){
+            ext_dict['e_'+blext]=0;
+        }
+        ext_dict['e_'+blext]=ext_dict['e_'+blext]+1;
+    }
+    
+    ext_dict=object2array_b(ext_dict,true,2);
+    ext_dict.sort();
+    return '<h4>附件列表('+list_t.length+')</h4>'+array_2_li_b(list_t)+'<h4>扩展名统计('+ext_dict.length+')</h4>'+array_2_li_b(ext_dict);
 }
 
 function textarea_info_count_notepad(ospan=false,otextarea=false){

@@ -481,7 +481,7 @@ function buttons_klwebsites(keyword=''){
 
 function array_klwebsites(keyword='',csnumber=999,enable_rnd=false){
     var enable_jieba=klmenu_check_b('span_jieba_web',false);
-    return search_js_websites_b(keyword,csnumber,enable_rnd,enable_jieba);
+    return search_js_websites_b(sites_all_global,keyword,csnumber,enable_rnd,enable_jieba);
 }
 
 function waterfall_klwebsites(csnum=5){
@@ -695,7 +695,7 @@ function refresh_random_line_klwebsites(lineheight){
 }
 
 function day_klwebsites(lineheight,csday='',odom=false){
-    sort_js_websites_b();
+    sites_all_global=sort_js_websites_b(sites_all_global);
     
     var bljg='';
     if (csday===''){
