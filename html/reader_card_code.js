@@ -108,6 +108,7 @@ function init_txtcard(){
 
     top_bottom_arrow_b('div_top_bottom','',true,(ismobile_b()?'1.7rem':'1.4rem'),true,false,2);
 
+    character_2_icon_b('🗂️️');
     input_with_x_b('input_search',11);
     recent_search_b('recent_search_reader_card','','search_str_txtcard','div_recent_search',[],20);
     split_all_txtcard();

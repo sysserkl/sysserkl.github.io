@@ -22,6 +22,7 @@ function args_reader_idb(){
 }
 
 function init_reader_idb(){
+    character_2_icon_b('📗️️');
     mobile_style_kltxt_b();
     menu_reader_idb();
     top_bottom_arrow_b('div_top_bottom','',true,(ismobile_b()?'1.7rem':'1.4rem'));

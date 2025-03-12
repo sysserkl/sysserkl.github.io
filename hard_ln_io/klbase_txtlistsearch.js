@@ -4100,6 +4100,14 @@ function init_kltxt_b(cstype,cskeys){
         location.href='?&line=0_0';
     }
     
+    switch (cstype){
+        case 'reader':
+            character_2_icon_b('📕️️');
+            break;
+        case 'txtlistsearch':
+            character_2_icon_b('📚️️');
+            break;
+    }
     buttons_generate_kltxt_b(cstype);
     
     html_name_kltxt_global=cstype;  //全局变量
