@@ -8,297 +8,249 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Wed, 12 Mar 2025 10:49:32 +0800</lastBuildDate>
-<item><title>UK Greenlights Amazon Kuiper, Starlink Faces New Rival - IEEE Spectrum</title><link>https://spectrum.ieee.org/starlink-internet-kuiper-competition</link></item>
-<item><title>Difference Makers Wanted - IEEE Spectrum</title><link>https://spectrum.ieee.org/ieee-call-for-nominations-2025</link></item>
-<item><title>World&amp;#39;s First Ammonia-Fueled Ship Hits a Snag - IEEE Spectrum</title><link>https://spectrum.ieee.org/ammonia-fuel-2671266100</link></item>
-<item><title>Private 5G Network to Boost Hyundai’s EV Production - IEEE Spectrum</title><link>https://spectrum.ieee.org/private-5g-redcap-samsung-hyundai</link></item>
-<item><title>Getting a Signal on the Moon - IEEE Spectrum</title><link>https://spectrum.ieee.org/nokia-4g-cellular-network-moon</link></item>
-<item><title>Countdown to the Annual IEEE Election - IEEE Spectrum</title><link>https://spectrum.ieee.org/countdown-to-2025-ieee-election</link></item>
-<item><title>Video Friday: Atlas in the Lab - IEEE Spectrum</title><link>https://spectrum.ieee.org/video-friday-atlas-in-the-lab</link></item>
-<item><title>Rare Earths Reality Check: Ukraine Doesn&amp;#39;t Have Minable Deposits - IEEE Spectrum</title><link>https://spectrum.ieee.org/ukraine-rare-earth-minerals</link></item>
-<item><title>2025 IEEE Medal of Honor Awarded to Broadcom’s Henry Samueli - IEEE Spectrum</title><link>https://spectrum.ieee.org/ieee-medal-of-honor-2025</link></item>
-<item><title>“Flying Batteries” Could Help Microdrones Take Off - IEEE Spectrum</title><link>https://spectrum.ieee.org/microbots</link></item>
-<item><title>The Tiny Star Explosions Powering Moore’s Law - IEEE Spectrum</title><link>https://spectrum.ieee.org/euv-light-source</link></item>
-<item><title>World Engineering Day Focuses on Shaping a Sustainable Future - IEEE Spectrum</title><link>https://spectrum.ieee.org/world-engineering-day-sustainable-future</link></item>
-<item><title>We’re Charging Our Cars Wrong - IEEE Spectrum</title><link>https://spectrum.ieee.org/ev-charging-2671242103</link></item>
-<item><title>IEEE Manga Contest Winners Create EE-Inspired Storylines - IEEE Spectrum</title><link>https://spectrum.ieee.org/ieee-wie-manga-contest-2024</link></item>
-<item><title>Is it Lunacy to Put a Data Center on the Moon? - IEEE Spectrum</title><link>https://spectrum.ieee.org/data-center-on-the-moon</link></item>
-<item><title>It was so high… Remembering the 2011 Tōhoku Earthquake and Tsunami - Strange Sounds</title><link>https://strangesounds.substack.com/p/it-was-so-high</link></item>
-<item><title>We know, you are scared, but this is kind of anti-democratic guys… - Strange Sounds</title><link>https://strangesounds.substack.com/p/well-this-is-kind-of-anti-democratic</link></item>
-<item><title>What happened to those gene edited babies from China ? - Strange Sounds</title><link>https://strangesounds.substack.com/p/what-happened-to-those-gene-edited</link></item>
-<item><title>Btw, today is International Woman’s Day… Hug and show respect and love… - Strange Sounds</title><link>https://strangesounds.substack.com/p/btw-today-is-international-womans</link></item>
-<item><title>What is the end goal of this instability and gaslighting? Insider trading? - Strange Sounds</title><link>https://strangesounds.substack.com/p/what-is-the-end-goal-of-this-instability</link></item>
-<item><title>What if that ‘Hawk Tuah’ girl was a code name for that secret government technology called ‘Hawk-2A’? - Strange Sounds</title><link>https://strangesounds.substack.com/p/what-if-that-hawk-tuah-girl-was-a</link></item>
-<item><title>I am Canadian and I really start believing Trump is acting crazy insane… - Strange Sounds</title><link>https://strangesounds.substack.com/p/i-am-canadian-and-i-really-start</link></item>
-<item><title>Pepperidge Farm remembers… - Strange Sounds</title><link>https://strangesounds.substack.com/p/pepperidge-farm-remembers</link></item>
-<item><title>Make AI Great Again… Grok says Elon and Trump deserve the death penalty… - Strange Sounds</title><link>https://strangesounds.substack.com/p/grok-says-elon-and-trump-deserve</link></item>
-<item><title>Don’t buy a Swasticar… Goes from 0 to 1939 in 3 seconds… - Strange Sounds</title><link>https://strangesounds.substack.com/p/dont-buy-a-swasticar</link></item>
-<item><title>Utah to Advance AI Education, Training - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/utah-ai-education/</link></item>
-<item><title>Oscars Gold: NVIDIA Researchers Honored for Advancing the Art and Science of Filmmaking - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/academy-award-scientific-technical-film-2025/</link></item>
-<item><title>‘Monster Hunter Wilds’ Charges Onto GeForce NOW - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/geforce-now-thursday-monster-hunter-wilds/</link></item>
-<item><title>Survey Shows How AI Is Reshaping Healthcare and Life Sciences, From Lab to Bedside - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/ai-healthcare-life-sciences-survey-2025/</link></item>
-<item><title>Roboflow Helps Unlock Computer Vision for Every Kind of AI Builder - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/roboflow-computer-vision/</link></item>
-<item><title>Animals Crossing: AI Helps Protect Wildlife Across the Globe - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/ai-protects-wildlife/</link></item>
-<item><title>CUDA Accelerated: How CUDA Libraries Bolster Cybersecurity With AI - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/cuda-accelerated-ai-cybersecurity/</link></item>
-<item><title>Agentic AI Leaders to Showcase Latest Advancements at NVIDIA GTC - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/agentic-ai-gtc-2025/</link></item>
-<item><title>Telenor Builds Norway’s First AI Factory, Offering Sustainable and Sovereign Data Processing - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/telenor-ai-factory/</link></item>
-<item><title>March Into Gaming With GeForce NOW’s 14 Must-Play Titles for Spring - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/geforce-now-thursday-march-2025/</link></item>
-<item><title>Explore How RTX AI PCs and Workstations Supercharge AI Development at NVIDIA GTC 2025 - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/rtx-ai-garage-gtc-2025-sessions/</link></item>
-<item><title>NVIDIA Earth-2 Features First Gen AI to Power Weather Super-Resolution for Continental US - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/earth-2-ai-high-resolution-forecasts/</link></item>
-<item><title>It’s a Sign: AI Platform for Teaching American Sign Language Aims to Bridge Communication Gaps - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/ai-sign-language/</link></item>
-<item><title>Step Into the World of ‘Avowed’ on GeForce NOW - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/geforce-now-thursday-avowed/</link></item>
-<item><title>Into the Omniverse: How OpenUSD and Synthetic Data Are Shaping the Future for Humanoid Robots - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/openusd-synthetic-data-for-humanoid-robots/</link></item>
-<item><title>Calling All Creators: GeForce RTX 5070 Ti GPU Accelerates Generative AI and Content Creation Workflows in Video Editing, 3D and More - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/studio-ai-geforce-rtx-5070-ti-gpu-dlss/</link></item>
-<item><title>Temenos’ Barb Morgan Shares How Chatbots and AI Agents Are Reshaping Customer Service in Banking - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/temenos-ai-customer-service-banking/</link></item>
-<item><title>Massive Foundation Model for Biomolecular Sciences Now Available via NVIDIA BioNeMo - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/evo-2-biomolecular-ai/</link></item>
-<item><title>多家公司开始限制员工加班 - Solidot</title><link>https://www.solidot.org/story?sid=80749</link></item>
-<item><title>瘫痪男子用意念操作机械臂 - Solidot</title><link>https://www.solidot.org/story?sid=80750</link></item>
-<item><title>Hugging Face 联合创始人称 AI 没有创造新知识 - Solidot</title><link>https://www.solidot.org/story?sid=80751</link></item>
-<item><title>Chrome Store 不再提供 uBlock Origin - Solidot</title><link>https://www.solidot.org/story?sid=80753</link></item>
-<item><title>Google Pixel 4a 存在电池过热风险 - Solidot</title><link>https://www.solidot.org/story?sid=80754</link></item>
-<item><title>微软计划今年发布 Xbox 掌机，2027 年推出下一代 Xbox 主机 - Solidot</title><link>https://www.solidot.org/story?sid=80755</link></item>
-<item><title>Eric Sc​​hmidt 成为火箭公司 Relativity Space 的 CEO - Solidot</title><link>https://www.solidot.org/story?sid=80756</link></item>
-<item><title>Whereis Command Examples - Linux Handbook</title><link>https://linuxhandbook.com/whereis-command/</link></item>
-<item><title>The Ultimate Kubectl Command Cheat Sheet - Linux Handbook</title><link>https://linuxhandbook.com/cheatsheets/kubectl/</link></item>
-<item><title>LHB Linux Digest #25.04: Self-host VPN, Swap Size Change, Crontab Logs and More - Linux Handbook</title><link>https://linuxhandbook.com/newsletter/25-04/</link></item>
-<item><title>What Kind of Job Can You Get if You Learn Linux? - Linux Handbook</title><link>https://linuxhandbook.com/linux-careers-beginners/</link></item>
-<item><title>Self-host Your Own VPN Using PiVPN - Linux Handbook</title><link>https://linuxhandbook.com/self-host-pivpn/</link></item>
-<item><title>LHB Linux Digest #25.03: BusyBox, solidtime, command history tips, reverse proxy and More - Linux Handbook</title><link>https://linuxhandbook.com/newsletter/25-03/</link></item>
-<item><title>Vi vs Vim: What&amp;#x27;s the Difference? - Linux Handbook</title><link>https://linuxhandbook.com/vi-vs-vim/</link></item>
-<item><title>Httptap - Monitor All HTTP and HTTPS Connections of Any Linux Application - Linux Handbook</title><link>https://linuxhandbook.com/httptap/</link></item>
-<item><title>9 Cloudflare Tunnels Alternatives for Self-Hosters - Linux Handbook</title><link>https://linuxhandbook.com/cloudflare-tunnels-alternative/</link></item>
-<item><title>LHB Linux Digest #25.02: Linux Books, Watchtower, ReplicaSets and More - Linux Handbook</title><link>https://linuxhandbook.com/newsletter/25-02/</link></item>
-<item><title>Understanding ReplicaSet in Kubernetes With Hands-on Example - Linux Handbook</title><link>https://linuxhandbook.com/replicaset-kubernetes/</link></item>
-<item><title>Top Container Monitoring Solutions: Tools to Keep Your Deployments Running Smoothly - Linux Handbook</title><link>https://linuxhandbook.com/container-monitoring-tools/</link></item>
-<item><title>Automatically Update Your Docker Containers with Watchtower - Linux Handbook</title><link>https://linuxhandbook.com/watchtower/</link></item>
-<item><title>Netflix&amp;#39;s Newest &amp;#39;American Manhunt&amp;#39; Chronicles the Search to Bring Osama bin Laden to Justice - Military.com</title><link>https://www.military.com/daily-news/2025/03/11/netflixs-newest-american-manhunt-chronicles-search-bring-osama-bin-laden-justice.html</link></item>
-<item><title>CISA worker says 100-strong Red Team fired after DOGE cancelled contract - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/12/cisa_staff_layoffs/</link></item>
-<item><title>Choose your own Patch Tuesday adventure: Start with six zero day fixes, or six critical flaws - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/12/patch_tuesday/</link></item>
-<item><title>Microsoft adds another Copilot hotkey – this time for AI voice chat - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/11/microsoft_voice_chat_copilot/</link></item>
-<item><title>Energy trio wants to pipe gas from coal mines to keep datacenter lights on - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/11/datacenter_coal_mine_methane/</link></item>
-<item><title>Microsoft will kill Remote Desktop soon, insists you&amp;#39;ll love replacement - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/11/microsoft_remote_desktop_support/</link></item>
-<item><title>&amp;#39;Uber for nurses&amp;#39; exposes 86K+ medical records, PII in open S3 bucket for months - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/11/uber_for_nurses_exposes_86k/</link></item>
-<item><title>FTC’s $25.5M scam refund treats victims to $34 each - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/11/ftcs_255m_scam_refund/</link></item>
-<item><title>From pantyhose to power cells, nylon gives lithium batteries a leg up - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/11/nylon_additive_lithium_battery/</link></item>
-<item><title>Official HP toner not official enough after dodgy update, say users - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/11/hp_firmware_printer_toner/</link></item>
-<item><title>Is NASA&amp;#39;s science budget heading for a black hole? - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/11/nasa_science_budget_comment/</link></item>
-<item><title>Cerebras to light up datacenters in North America and France packed with AI accelerators - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/11/cerebras_dc_buildout/</link></item>
-<item><title>Fresh Wine-flavored version of Mono released - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/11/new_wineflavored_version_of_mono/</link></item>
-<item><title>Eight days later, Microsoft&amp;#39;s Outlook users on iOS devices still struggling - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/11/outlook_ios_problems/</link></item>
-<item><title>Europe&amp;#39;s largest council kept auditors in the dark on Oracle rollout fiasco for 10 months - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/11/birmingham_oracle_auditors/</link></item>
-<item><title>Britain dusts off idle spectrum for rail and emergency comms - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/11/unused_spectrum_rail_esn/</link></item>
-<item><title>MINJA sneak attack poisons AI models for other chatbot users - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/11/minja_attack_poisons_ai_model_memory/</link></item>
-<item><title>IBM dodges BMC&amp;#39;s $1.6B bullet in US as London court slaps down LzLabs - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/11/ibm_legal_victory/</link></item>
-<item><title>Earth&amp;#39;s atmosphere is shrinking and thinning, which is bad news for Starlink and other LEO Sats - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/11/greenhouse_gases_reduce_satellite_capacity_paper/</link></item>
-<item><title>Oracle yet to sign a Stargate contract or predict revenue from AI mega-build - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/11/oracle_q3_2025/</link></item>
-<item><title>Judge says Meta must defend claim it stripped copyright info from Llama&amp;#39;s training fodder - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/11/meta_dmca_copyright_removal_case/</link></item>
-<item><title>No peace for Gandi this past weekend, after storage SNAFU breaks email and more - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/11/gandi_domain_registrar_outage/</link></item>
-<item><title>Allstate Insurance sued for delivering personal info on a platter, in plaintext, to anyone who went looking for it - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/10/allstate_sued_pii_exposure/</link></item>
-<item><title>Google begs owners of crippled Chromecasts not to hit factory reset - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/10/google_chromecast_outage/</link></item>
-<item><title>Google&amp;#39;s Chrome divorce still on the cards as Trump&amp;#39;s DoJ plays hardball - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/10/trump_doj_google_chrome/</link></item>
-<item><title>Sidewinder goes nuclear, charts course for maritime mayhem in tactics shift - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/10/sidewinder_tactics_shift/</link></item>
-<item><title>ASML will open Beijing facility despite US sanctions on China - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/10/asml_to_open_beijing_facility/</link></item>
-<item><title>Rhysida pwns two US healthcare orgs, extracts over 300K patients&amp;#39; data - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/10/rhysida_healthcare/</link></item>
-<item><title>Consumer Reports calls out slapdash AI voice-cloning safeguards - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/10/ai_voice_cloning_safeguards/</link></item>
-<item><title>How NOT to f-up your security incident response - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/10/incident_response_advice/</link></item>
-<item><title>Vodafone: Be in the office 8 days a month or lose bonuses - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/10/vodafone_be_in_the_office_memo/</link></item>
-<item><title>The NHS security culture problem is a crisis years in the making - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/10/nhs_security_culture/</link></item>
-<item><title>The IT world moves fast, so why are admins slow to upgrade? - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/10/database_upgrades_comment/</link></item>
-<item><title>Things are looking down for cutting-edge cosmic observatories - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/10/neutrino_opinion/</link></item>
-<item><title>Junior techie rushed off for fun weekend after making a terminal mistake that crashed a client - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/10/who_me/</link></item>
-<item><title>Strap in, get ready for more Rust drivers in Linux kernel - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/10/rust_drivers_expected_to_become/</link></item>
-<item><title>Manus mania is here: Chinese ‘general agent’ is this week’s ‘future of AI&amp;#39; and OpenAI-killer - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/10/manus_chinese_general_ai_agent/</link></item>
-<item><title>$16B health dept managed finances with single Excel spreadsheet. It hasn’t gone well - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/10/nz_health_excel_spreadsheet/</link></item>
-<item><title>Microsoft admits GitHub hosted malware that infected almost a million devices - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/10/infosec_in_brief/</link></item>
-<item><title>Geothermal Could Power Nearly All New Data Centers Through 2030 - Slashdot</title><link>https://news.slashdot.org/story/25/03/11/2149222/geothermal-could-power-nearly-all-new-data-centers-through-2030</link></item>
-<item><title>Team Behind Las Vegas Sphere Plans 5,000-Capacity &amp;#39;Mini-Spheres&amp;#39; - Slashdot</title><link>https://entertainment.slashdot.org/story/25/03/11/2143232/team-behind-las-vegas-sphere-plans-5000-capacity-mini-spheres</link></item>
-<item><title>Las Vegas Sphere - Slashdot</title><link>https://entertainment.slashdot.org/story/23/07/09/0038244/the-technology-behind-the-new-las-vegas-sphere</link></item>
-<item><title>AMD Ryzen 9 9950X3D With 3D V-Cache Impresses In Launch Day Testing - Slashdot</title><link>https://hardware.slashdot.org/story/25/03/11/2126204/amd-ryzen-9-9950x3d-with-3d-v-cache-impresses-in-launch-day-testing</link></item>
-<item><title>Microsoft is Replacing Remote Desktop With Its New Windows App - Slashdot</title><link>https://it.slashdot.org/story/25/03/11/2037221/microsoft-is-replacing-remote-desktop-with-its-new-windows-app</link></item>
-<item><title>Preprint Sites bioRxiv and medRxiv Launch New Era of Independence - Slashdot</title><link>https://science.slashdot.org/story/25/03/11/2031217/preprint-sites-biorxiv-and-medrxiv-launch-new-era-of-independence</link></item>
-<item><title>Zoox Robotaxis Do Not Meet Federal Safety Standards, Agency Says - Slashdot</title><link>https://tech.slashdot.org/story/25/03/11/2015220/zoox-robotaxis-do-not-meet-federal-safety-standards-agency-says</link></item>
-<item><title>Thousands of TP-Link Routers Have Been Infected By a Botnet To Spread Malware - Slashdot</title><link>https://it.slashdot.org/story/25/03/11/207242/thousands-of-tp-link-routers-have-been-infected-by-a-botnet-to-spread-malware</link></item>
-<item><title>Spain To Impose Massive Fines For Not Labeling AI-Generated Content - Slashdot</title><link>https://news.slashdot.org/story/25/03/11/200242/spain-to-impose-massive-fines-for-not-labeling-ai-generated-content</link></item>
-<item><title>Vodafone Tells Employees To Follow RTO Policy Or Lose Bonuses - Slashdot</title><link>https://slashdot.org/story/25/03/11/1953254/vodafone-tells-employees-to-follow-rto-policy-or-lose-bonuses</link></item>
-<item><title>Southwest Airlines To End Free Checked Bags Policy For First Time in Its 54-Year History - Slashdot</title><link>https://news.slashdot.org/story/25/03/11/1859238/southwest-airlines-to-end-free-checked-bags-policy-for-first-time-in-its-54-year-history</link></item>
-<item><title>The Surprising Impact of QR Code Menus on Diminishing Customer Loyalty - Slashdot</title><link>https://science.slashdot.org/story/25/03/11/1755217/the-surprising-impact-of-qr-code-menus-on-diminishing-customer-loyalty</link></item>
-<item><title>Why Extracting Data from PDFs Remains a Nightmare for Data Experts - Slashdot</title><link>https://it.slashdot.org/story/25/03/11/1726218/why-extracting-data-from-pdfs-remains-a-nightmare-for-data-experts</link></item>
-<item><title>Only Seven Countries Worldwide Meet WHO Dirty Air Guidelines, Study Shows - Slashdot</title><link>https://news.slashdot.org/story/25/03/11/1648211/only-seven-countries-worldwide-meet-who-dirty-air-guidelines-study-shows</link></item>
-<item><title>Half-Past Four Is the New Five O&amp;#39;Clock in More Efficient Workday - Slashdot</title><link>https://slashdot.org/story/25/03/11/166203/half-past-four-is-the-new-five-oclock-in-more-efficient-workday</link></item>
-<item><title>Firefox Certificate Expiration Threatens Add-ons, Streaming on March 14 - Slashdot</title><link>https://news.slashdot.org/story/25/03/11/1446251/firefox-certificate-expiration-threatens-add-ons-streaming-on-march-14</link></item>
-<item><title>NASA Eliminates Chief Scientist and Other Jobs At Its Headquarters - Slashdot</title><link>https://science.slashdot.org/story/25/03/11/004258/nasa-eliminates-chief-scientist-and-other-jobs-at-its-headquarters?sbsrc=md</link></item>
-<item><title>Volkswagen Bringing Back Physical Buttons, Says Removing Them Was a Mistake - Slashdot</title><link>https://tech.slashdot.org/story/25/03/10/1520223/volkswagen-bringing-back-physical-buttons-says-removing-them-was-a-mistake?sbsrc=md</link></item>
-<item><title>New Open Source Windows-Compatible Operating System Released - Slashdot</title><link>https://tech.slashdot.org/story/25/03/10/0142235/new-open-source-windows-compatible-operating-system-released?sbsrc=md</link></item>
-<item><title>New Zealand&amp;#39;s $16 Billion Public Health System Runs on a Single Excel Sheet - Slashdot</title><link>https://tech.slashdot.org/story/25/03/10/2341223/new-zealands-16-billion-public-health-system-runs-on-a-single-excel-sheet?sbsrc=md</link></item>
-<item><title>Former Google CEO Eric Schmidt Is the New Leader of Relativity Space - Slashdot</title><link>https://science.slashdot.org/story/25/03/11/0032245/former-google-ceo-eric-schmidt-is-the-new-leader-of-relativity-space?utm_source=rss0.9mainlinkanon&amp;utm_medium=feed&amp;sbsrc=science</link></item>
-<item><title>Are Microplastics Bad For Your Health? More Rigorous Science is Needed - Slashdot</title><link>https://science.slashdot.org/story/25/03/10/1851249/are-microplastics-bad-for-your-health-more-rigorous-science-is-needed?utm_source=rss0.9mainlinkanon&amp;utm_medium=feed&amp;sbsrc=science</link></item>
-<item><title>Ask Slashdot: Worst Computer Scene In TV or Movies? - Slashdot</title><link>https://ask.slashdot.org/story/11/03/11/2227243/ask-slashdot-worst-computer-scene-in-tv-or-movies?sbsrc=thisday</link></item>
-<item><title>Accidental Wii Suicide - Slashdot</title><link>https://games.slashdot.org/story/10/03/11/142257/accidental-wii-suicide?sbsrc=thisday</link></item>
-<item><title>Women Leaving I.T. - Slashdot</title><link>https://it.slashdot.org/story/05/03/11/027250/women-leaving-it?sbsrc=thisday</link></item>
-<item><title>What Differentiates Linux from Windows? - Slashdot</title><link>https://slashdot.org/story/04/03/11/1845253/what-differentiates-linux-from-windows?sbsrc=thisday</link></item>
-<item><title>Peer Pressure Porn Filter - Slashdot</title><link>https://slashdot.org/story/03/03/11/195258/peer-pressure-porn-filter?sbsrc=thisday</link></item>
-<item><title>Expanding AI Overviews and introducing AI Mode - Google Blog</title><link>https://blog.google/products/search/ai-mode-search/</link></item>
-<item><title>March Pixel Drop: Updates for Gemini Live, Scam Detection and more - Google Blog</title><link>https://blog.google/products/pixel/pixel-drop-march-2025/</link></item>
-<item><title>Advancing healthcare and scientific discovery with AI - Google Blog</title><link>https://blog.google/technology/health/google-research-healthcare-ai/</link></item>
-<item><title>New Android features to help you stay connected and safe - Google Blog</title><link>https://blog.google/products/android/new-android-features-march-2025/</link></item>
-<item><title>Leonardo predicts massive revenue leap to $32.5 billion by 2029 - Defense News</title><link>https://www.defensenews.com/industry/2025/03/11/leonardo-predicts-massive-revenue-leap-to-325-billion-by-2029/</link></item>
-<item><title>F-35 partners fully committed to program, Dutch defense minister says - Defense News</title><link>https://www.defensenews.com/global/europe/2025/03/11/f-35-partners-fully-committed-to-program-dutch-defense-minister-says/</link></item>
-<item><title>Safety board calls to end helo flights on route of fatal DC crash - Defense News</title><link>https://www.defensenews.com/air/2025/03/11/safety-board-calls-to-end-helo-flights-on-route-of-fatal-dc-crash/</link></item>
-<item><title>US agrees to resume military aid, intel sharing with Ukraine - Defense News</title><link>https://www.defensenews.com/global/europe/2025/03/11/us-agrees-to-resume-military-aid-intel-sharing-with-ukraine/</link></item>
-<item><title>China, Iran and Russia hold joint naval drills in Mideast - Defense News</title><link>https://www.defensenews.com/global/mideast-africa/2025/03/11/china-iran-and-russia-hold-joint-naval-drills-in-mideast/</link></item>
-<item><title>There is free-riding among the US military services, too - Defense News</title><link>https://www.defensenews.com/opinion/2025/03/10/there-is-free-riding-among-the-us-military-services-too/</link></item>
-<item><title>Cargo ship hits tanker carrying jet fuel for the US military - Defense News</title><link>https://www.defensenews.com/news/your-military/2025/03/10/cargo-ship-hits-tanker-carrying-jet-fuel-for-the-us-military/</link></item>
-<item><title>Defense companies jack up Germany’s auto industry to make weapons fast - Defense News</title><link>https://www.defensenews.com/global/europe/2025/03/10/defense-companies-jack-up-germanys-auto-industry-to-make-weapons-fast/</link></item>
-<item><title>Canada awards multibillion-dollar deals for new icebreakers, warships - Defense News</title><link>https://www.defensenews.com/global/the-americas/2025/03/10/canada-awards-multibillion-dollar-deals-for-new-icebreakers-warships/</link></item>
-<item><title>Becoming Financially Secure for Your Future Self — Money Minute - Defense News</title><link>https://www.defensenews.com/video/2025/03/10/becoming-financially-secure-for-your-future-self-money-minute/</link></item>
-<item><title>Germany’s military build up continues, but personnel shortages remain - Defense News</title><link>https://www.defensenews.com/global/europe/2025/03/11/germanys-military-build-up-continues-but-personnel-shortages-remain/</link></item>
-<item><title>Sikorsky proves out ‘rotor blown wing’ drone - Defense News</title><link>https://www.defensenews.com/land/2025/03/10/sikorsky-proves-out-rotor-blown-wing-drone/</link></item>
-<item><title>China’s shipbuilding dominance a national security risk for US: Report - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2025/03/11/chinas-shipbuilding-dominance-a-national-security-risk-for-us-report/</link></item>
-<item><title>Geospatial-intelligence agency aims for more AI resources in 2025 - Defense News</title><link>https://www.defensenews.com/space/2025/03/10/geospatial-intelligence-agency-aims-for-more-ai-resources-in-2025/</link></item>
-<item><title>Man arrested in cargo ship crash with tanker carrying US military fuel - Defense News</title><link>https://www.defensenews.com/global/europe/2025/03/11/man-arrested-in-cargo-ship-crash-with-tanker-carrying-us-military-fuel/</link></item>
-<item><title>Ukraine-US talks on ending war with Russia start in Saudi Arabia - Defense News</title><link>https://www.defensenews.com/global/europe/2025/03/11/ukraine-us-talks-on-ending-war-with-russia-start-in-saudi-arabia/</link></item>
-<item><title>North Korea fires missiles after US, South Korea military drills - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2025/03/10/north-korea-fires-missiles-after-us-south-korea-military-drills/</link></item>
-<item><title>Russian forces walked inside a gas pipeline to strike Ukrainian troops - Defense News</title><link>https://www.defensenews.com/global/europe/2025/03/10/russian-forces-walked-inside-a-gas-pipeline-to-strike-ukrainian-troops/</link></item>
-<item><title>Private, Useful, and Optional AI: DuckDuckGo offers free access to popular AI chatbots at Duck.ai and expands AI-assisted answers on its search engine - DuckDuckGo Blog</title><link>https://spreadprivacy.com/ai-feature-upgrade/</link></item>
-<item><title>Gussied Up in Green - Country Living Magazine</title><link>https://www.countryliving.com/remodeling-renovation/home-makeovers/</link></item>
-<item><title>What caused the X outage that Musk is blaming on Ukraine? - TNW</title><link>https://thenextweb.com/news/what-caused-x-outage-musk-blames-ukraine</link></item>
-<item><title>4 European satellite firms are vying to replace Starlink in Ukraine - TNW</title><link>https://thenextweb.com/news/4-european-satellite-firms-are-vying-to-replace-starlink-in-ukraine</link></item>
-<item><title>Exclusive: Startup combines physics with AI to discover new green materials ’10x faster’ - TNW</title><link>https://thenextweb.com/news/phastree-combines-physics-ai-to-discover-green-materials</link></item>
-<item><title>This fusion-powered rocket could halve the time it takes to get to Mars - TNW</title><link>https://thenextweb.com/news/pulsar-fusion-powered-rocket-to-half-time-to-mars</link></item>
-<item><title>Qualcomm acquires AI platform Edge Impulse to boost Dragonwing chips - TNW</title><link>https://thenextweb.com/news/qualcomm-acquires-ai-developers-platform-edge-impulse</link></item>
-<item><title>Europe moves to cut SpaceX reliance with Ariane 6 launch - TNW</title><link>https://thenextweb.com/news/europe-to-cut-spacex-reliance-with-ariane-6-launch</link></item>
-<item><title>Dutch hospitality scaleup Mews doubles down on growth with $75M raise - TNW</title><link>https://thenextweb.com/news/dutch-hospitality-scaleup-mews-doubles-down-on-growth-with-75m-raise</link></item>
-<item><title>Dutch women tech leaders call for stronger support for female founders - TNW</title><link>https://thenextweb.com/news/why-we-need-to-support-female-founders</link></item>
-<item><title>Cino bags seed funding for virtual card that makes bill-splitting less awkward - TNW</title><link>https://thenextweb.com/news/cino-app-splits-bills-at-payment-raises-funding</link></item>
-<item><title>€199B: The cost of overlooking European deep tech firms led by women - TNW</title><link>https://thenextweb.com/news/europe-missed-199-billion-overlooking-deep-tech-women-leders</link></item>
-<item><title>What is Eutelsat, Europe’s rising rival to Starlink? - TNW</title><link>https://thenextweb.com/news/what-is-eutelsat-european-starlink-alternative-ukraine</link></item>
-<item><title>Italy’s Starlink debate is heating up — with Elon Musk at its centre - TNW</title><link>https://thenextweb.com/news/elon-musk-heats-up-italy-starlink-debate</link></item>
-<item><title>Acid GIFs, March 12 (25 gifs) - AcidCow.com</title><link>https://acidcow.com/gif/166717-acid-gifs-march-12-25-gifs.html</link></item>
-<item><title>Interesting Historical Finds (22 pics) - AcidCow.com</title><link>https://acidcow.com/pics/166699-interesting-historical-finds-22-pics.html</link></item>
-<item><title>Girls With Freckles (31 pics) - AcidCow.com</title><link>https://acidcow.com/girls/166713-girls-with-freckles-31-pics.html</link></item>
-<item><title>Easter Eggs In Real Life (23 pics) - AcidCow.com</title><link>https://acidcow.com/pics/166707-easter-eggs-in-real-life-23-pics.html</link></item>
-<item><title>Slim Girls (27 pics) - AcidCow.com</title><link>https://acidcow.com/girls/166712-slim-girls-27-pics.html</link></item>
-<item><title>Memes About Anxiety (23 pics) - AcidCow.com</title><link>https://acidcow.com/pics/166703-memes-about-anxiety-23-pics.html</link></item>
-<item><title>Interesting Facts About Popular Movies (18 gifs) - AcidCow.com</title><link>https://acidcow.com/gif/166705-interesting-facts-about-popular-movies-18-gifs.html</link></item>
-<item><title>Memes About Food (25 pics) - AcidCow.com</title><link>https://acidcow.com/pics/166702-memes-about-food-25-pics.html</link></item>
-<item><title>Bad Days Happen (18 pics) - AcidCow.com</title><link>https://acidcow.com/pics/166700-bad-days-happen-18-pics.html</link></item>
-<item><title>Funny Fails (33 pics) - AcidCow.com</title><link>https://acidcow.com/pics/166708-funny-fails-33-pics.html</link></item>
-<item><title>Cute Girls (30 pics) - AcidCow.com</title><link>https://acidcow.com/girls/166711-cute-girls-30-pics.html</link></item>
-<item><title>Jokes For Cat Lovers (25 pics) - AcidCow.com</title><link>https://acidcow.com/pics/166704-jokes-for-cat-lovers-25-pics.html</link></item>
-<item><title>Random Knowledges (15 gifs) - AcidCow.com</title><link>https://acidcow.com/gif/166706-random-knowledges-15-gifs.html</link></item>
-<item><title>Hot Girls (20 pics) - AcidCow.com</title><link>https://acidcow.com/girls/166714-hot-girls-20-pics.html</link></item>
-<item><title>Fascinating Photos From Canada (21 pics) - AcidCow.com</title><link>https://acidcow.com/pics/166698-fascinating-photos-from-canada-21-pics.html</link></item>
-<item><title>Weird Designs And Constructions (25 pics) - AcidCow.com</title><link>https://acidcow.com/pics/166710-weird-designs-and-constructions-25-pics.html</link></item>
-<item><title>What Is Going On Here? (21 pics) - AcidCow.com</title><link>https://acidcow.com/pics/166701-what-is-going-on-here-21-pics.html</link></item>
-<item><title>Crazy Cars (26 pics) - AcidCow.com</title><link>https://acidcow.com/pics/166709-crazy-cars-26-pics.html</link></item>
-<item><title>Acid GIFs, March 11 (25 gifs) - AcidCow.com</title><link>https://acidcow.com/gif/166697-acid-gifs-march-11-25-gifs.html</link></item>
-<item><title>NYC&amp;#39;s revolving restaurant reopens - Wallpaper*</title><link>https://www.wallpaper.com/travel/restaurants/the-view-restaurant-lounge-new-york-reopening</link></item>
-<item><title>Museums of the future - Wallpaper*</title><link>https://www.wallpaper.com/architecture/what-is-the-museum-of-the-future</link></item>
-<item><title>Paris Fashion Week - Wallpaper*</title><link>https://www.wallpaper.com/fashion-beauty/paris-fashion-week-aw-2025-highlights-review</link></item>
-<item><title>Python: Why It’s Such a Beloved Development Tool &amp; How To Use It For Random Number Generation - AskPython</title><link>https://www.askpython.com/resources/python-development-tool-random-number-generation</link></item>
-<item><title>How to Create a 10-Line Python Keylogger - AskPython</title><link>https://www.askpython.com/python/examples/python-keylogger</link></item>
-<item><title>How an Online Programming Tutor Can Transform Your Python Skills - AskPython</title><link>https://www.askpython.com/resources/online-programming-tutor-python-skills</link></item>
-<item><title>Voice to Code: How Python Powers the AI Speech Recognition - AskPython</title><link>https://www.askpython.com/resources/voice-to-code-python-ai-speech-recognition</link></item>
-<item><title>Differences Between Python Gaming Libraries - AskPython</title><link>https://www.askpython.com/resources/python-gaming-libraries-differences</link></item>
-<item><title>How to Create a Card Game in Python - AskPython</title><link>https://www.askpython.com/resources/create-a-card-game-in-python</link></item>
-<item><title>Everyday life changes after Covid - FlowingData</title><link>https://flowingdata.com/2025/03/11/everyday-life-changes-after-covid/</link></item>
-<item><title>Political typology quiz - FlowingData</title><link>https://flowingdata.com/2025/03/11/political-typology-quiz/</link></item>
-<item><title>Less sense of belonging, in middle school - FlowingData</title><link>https://flowingdata.com/2025/03/10/belonging-in-middle-school/</link></item>
-<item><title>Access FiveThirtyEight resources while they’re still around - FlowingData</title><link>https://flowingdata.com/2025/03/09/access-fivethirtyeight-resources-while-theyre-still-around/</link></item>
-<item><title>Charted history of the baby boom - FlowingData</title><link>https://flowingdata.com/2025/03/07/charted-history-of-the-baby-boom/</link></item>
-<item><title>Smell Test for Data - FlowingData</title><link>https://flowingdata.com/2025/03/06/smell-test-for-data/</link></item>
-<item><title>$38b of government money that funded Musk companies - FlowingData</title><link>https://flowingdata.com/2025/03/06/38b-of-government-money-that-funded-musk-companies/</link></item>
-<item><title>Frozen government money pipe - FlowingData</title><link>https://flowingdata.com/2025/03/06/frozen-government-money-pipe/</link></item>
-<item><title>Planet Money - FlowingData</title><link>https://flowingdata.com/tag/planet-money/</link></item>
-<item><title>transparency - FlowingData</title><link>https://flowingdata.com/tag/transparency/</link></item>
-<item><title>Nate Silver on Disney’s 538 - FlowingData</title><link>https://flowingdata.com/2025/03/05/nate-silver-on-disneys-538/</link></item>
-<item><title>FiveThirtyEight is shutting down completely - FlowingData</title><link>https://flowingdata.com/2025/03/05/fivethirtyeight-is-shutting-down-completely/</link></item>
-<item><title>couple years ago - FlowingData</title><link>https://flowingdata.com/2023/04/26/fivethirtyeight-layoffs/</link></item>
-<item><title>Creativity and optimization - FlowingData</title><link>https://flowingdata.com/2025/03/05/mathematician-on-creativity-and-optimization/</link></item>
-<item><title>Alessio Figalli - FlowingData</title><link>https://flowingdata.com/tag/alessio-figalli/</link></item>
-<item><title>Optimizing basketball, too much - FlowingData</title><link>https://flowingdata.com/2025/03/05/optimizing-basketball-too-much/</link></item>
-<item><title>Ambiguity in what counts as American-made vehicles - FlowingData</title><link>https://flowingdata.com/2025/03/04/ambiguity-in-what-counts-as-american-made-vehicles/</link></item>
-<item><title>Imported parts on a Chevrolet Silverado - FlowingData</title><link>https://flowingdata.com/2025/03/04/imported-parts-on-a-chevrolet-silverado/</link></item>
-<item><title>manufacturing - FlowingData</title><link>https://flowingdata.com/tag/manufacturing/</link></item>
-<item><title>Survey answers and framing the question - FlowingData</title><link>https://flowingdata.com/2025/03/04/survey-answers-and-framing-the-question/</link></item>
-<item><title>Products affected by tariffs in the U.S. - FlowingData</title><link>https://flowingdata.com/2025/03/04/products-affected-by-tariffs-in-the-u-s/</link></item>
-<item><title>Imports that could be taxed - FlowingData</title><link>https://flowingdata.com/2025/03/04/imports-that-could-be-taxed/</link></item>
-<item><title>Guns N’ Roses Are Returning to India After 12 Years - Billboard</title><link>https://www.billboard.com/music/music-news/guns-n-roses-return-to-india-1235920144/</link></item>
-<item><title>Chicago’s ARC Music Festival Announces Sprawling 2025 Lineup: See Who’s Playing - Billboard</title><link>https://www.billboard.com/music/music-news/arc-music-festival-2025-lineup-chicago-john-summit-prydz-1235920124/</link></item>
-<item><title>Justice Reflect on ‘Hyperdrama’ Success: “It’s Going Much Better Than We Thought It Would’ - Billboard</title><link>https://www.billboard.com/music/music-news/justice-hyperdrama-tour-album-the-weeknd-1235919367/</link></item>
-<item><title>Sam Asghari Admits Britney Spears Relationship Gave His Career ‘A Kick Start’ - Billboard</title><link>https://www.billboard.com/music/music-news/sam-asghari-britney-spears-career-kick-start-1235920054/</link></item>
-<item><title>Gigi Hadid Says She &amp; Zayn Malik ‘Have Each Other’s Backs’ While Co-Parenting Daughter Khai - Billboard</title><link>https://www.billboard.com/music/music-news/gigi-hadid-zayn-malik-co-parenting-relationship-1235920002/</link></item>
-<item><title>Benson Boone Opens Up About Body Image Struggles, Says He Can’t Be the ‘Sex Icon of the Century’ - Billboard</title><link>https://www.billboard.com/music/music-news/benson-boone-opens-up-body-image-issues-1235920003/</link></item>
-<item><title>Watch Lady Gaga Get Emotional While Surprising a Group of Little Monsters at a Dance Class - Billboard</title><link>https://www.billboard.com/music/music-news/lady-gaga-surprises-little-monsters-dance-class-1235919967/</link></item>
-<item><title>Stray Kids Has the Most RIAA Gold Albums of Any K-Pop Act - Billboard</title><link>https://www.billboard.com/music/music-news/stray-kids-most-riaa-gold-albums-k-pop-act-1235919965/</link></item>
-<item><title>Andrew Schulz Says Kendrick Lamar Jokes Are Fair Game After Apparent ‘Wacced Out Murals’ Diss - Billboard</title><link>https://www.billboard.com/music/music-news/andrew-schulz-kendrick-lamar-jokes-wacced-out-murals-diss-1235919640/</link></item>
-<item><title>Selena Gomez &amp; Benny Blanco Announce New Single, ‘Sunset Blvd,’ Inspired by Their First Date - Billboard</title><link>https://www.billboard.com/music/music-news/selena-gomez-benny-blanco-new-single-sunset-blvd-1235919808/</link></item>
-<item><title>Stopgap budget bill includes extra funds for military, VA programs - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2025/03/10/stopgap-budget-bill-includes-extra-funds-for-military-va-programs/</link></item>
-<item><title>US arms exports to Europe triple, boosted by Ukraine aid: SIPRI - Defense News</title><link>https://www.defensenews.com/global/europe/2025/03/10/us-arms-exports-to-europe-triple-boosted-by-ukraine-aid-sipri/</link></item>
-<item><title>Fast-snapping hardshell rooftop tent doubles up on panoramic terraces - New Atlas</title><link>https://newatlas.com/outdoors/roofspace-4-tent-double-terrace/</link></item>
-<item><title>Decade-old Guinness World Record for strongest robotic arm in peril - New Atlas</title><link>https://newatlas.com/robotics/rise-robotics-superjammer-robitic-arm/</link></item>
-<item><title>New study suggests megalodon was a sleek and streamlined 80 feet long - New Atlas</title><link>https://newatlas.com/biology/megalodon-shark-sleek-body-80-feet-long/</link></item>
-<item><title>Manchester United&amp;#39;s new stadium topped by energy efficient &amp;quot;umbrella&amp;quot; - New Atlas</title><link>https://newatlas.com/architecture/foster-partners-manchester-united-stadium/</link></item>
-<item><title>WMC and Pininfarina partner up on new &amp;#39;big hole&amp;#39; motorcycle concepts - New Atlas</title><link>https://newatlas.com/motorcycles/wmc-pininfarina-big-hole-motorcycle-concepts/</link></item>
-<item><title>Eye surgeons turn to teeth in astonishing vision treatments - New Atlas</title><link>https://newatlas.com/medical-tech/tooth-eye-surgery-ookp/</link></item>
-<item><title>Transitioning military drone uses rotor backwash for better flight - New Atlas</title><link>https://newatlas.com/military/sikorsky-military-drone-uses-rotor-backwash-better-flight/</link></item>
-<item><title>Westfalia&amp;#39;s newest US camper van inches closer to past Westy greatness - New Atlas</title><link>https://newatlas.com/automotive/westfalias-wave-srt-camper-van/</link></item>
-<item><title>US Air Force first to accept official combat drones - New Atlas</title><link>https://newatlas.com/military/us-air-force-first-official-combat-drones/</link></item>
-<item><title>Humans and Labradors share genes that predisposes them to obesity - New Atlas</title><link>https://newatlas.com/pets/humans-labradors-share-genes-obesity/</link></item>
-<item><title>Smart AR glasses put a 50-megapixel camera on your face - New Atlas</title><link>https://newatlas.com/wearables/tecno-ai-glasses-smart-camera/</link></item>
-<item><title>Apartment-sized tiny house embraces classic American styling - New Atlas</title><link>https://newatlas.com/tiny-houses/tulameen-rover-tiny-homes/</link></item>
-<item><title>Ultraviolette’s $1,400 e-scooter surprises with first-in-class radar tech - New Atlas</title><link>https://newatlas.com/motorcycles/ultraviolette-tesseract/</link></item>
-<item><title>Revolutionary ground-effect electric seaglider gets passengers flying - New Atlas</title><link>https://newatlas.com/aircraft/regent-viceroy-electric-seaglider-passengers-test/</link></item>
-<item><title>Chevrolet whips up a 1,110 horsepower off-road electric truck - New Atlas</title><link>https://newatlas.com/automotive/chevrolet-silverado-ev-zr2/</link></item>
-<item><title>Common medicines linked to 12% drop in dementia risk - New Atlas</title><link>https://newatlas.com/brain/alzheimers-dementia/nsaids-dementia-risk/</link></item>
-<item><title>Lego turns old rope and engine oil into millions of toy tires - New Atlas</title><link>https://newatlas.com/children/lego-recycle-rope-nets-engine-oil-toy-tires/</link></item>
-<item><title>Smart clothing controls devices via finger movements – no touching required - New Atlas</title><link>https://newatlas.com/wearables/smart-textile-finger-movements/</link></item>
-<item><title>Cancer drug realized after researcher&amp;#39;s chance exposure to malaria drug - New Atlas</title><link>https://newatlas.com/cancer/pyronaridine-cancer-treatment/</link></item>
-<item><title>Strange X-ray signal could be coming from a doomed planet - New Atlas</title><link>https://newatlas.com/space/strange-x-ray-signal-doomed-planet-white-dwarf/</link></item>
-<item><title>Second-hand smoke doubles deadly pregnancy complication risk - New Atlas</title><link>https://newatlas.com/health-wellbeing/smoking-pregnancy-placental-abruption/</link></item>
-<item><title>Bluetooth put on notice as first Wi-Fi earphones break cover - New Atlas</title><link>https://newatlas.com/wearables/xiaomi-buds-5-pro-wifi-earphones/</link></item>
-<item><title>Old wind turbine blades repurposed as sustainable surfboards - New Atlas</title><link>https://newatlas.com/environment/wind-turbine-blades-repurposed-sustainable-surfboards/</link></item>
-<item><title>Volkswagen&amp;#39;s €20K electric car wins on more than just price - New Atlas</title><link>https://newatlas.com/automotive/volkswagen-20k-id-every1-concept/</link></item>
-<item><title>X1 Pro laser welder as easy to use as a hot glue gun - New Atlas</title><link>https://newatlas.com/around-the-home/x1-pro-laser-welder-xlaserlab-xphotonics/</link></item>
-<item><title>USA&amp;#39;s timber takeover continues with wooden college tower - New Atlas</title><link>https://newatlas.com/architecture/pardee-school-global-studies/</link></item>
-<item><title>Stunt rider smashes Guinness World Record for fastest handlebar wheelie - New Atlas</title><link>https://newatlas.com/motorcycles/handlebar-wheelie-seated-backwards-distance-records/</link></item>
-<item><title>Stem cell therapy trial reverses &amp;quot;irreversible&amp;quot; damage to cornea - New Atlas</title><link>https://newatlas.com/biology/stem-cell-therapy-reverses-irreversible-damage-cornea/</link></item>
-<item><title>Ultra-fast thermal mats could power homes, or radically reduce energy - New Atlas</title><link>https://newatlas.com/energy/isomat-thermal-energy-transfer/</link></item>
-<item><title>#CycleSyncing debunked: Popular TikTok trend not backed by science - New Atlas</title><link>https://newatlas.com/fitness/cyclesyncing-menstrual-cycle-exercise-debunked/</link></item>
-<item><title>Sea sponges inspire super strong material for more durable buildings - New Atlas</title><link>https://newatlas.com/materials/sea-sponges-inspire-strong-material-rmit/</link></item>
-<item><title>Waterless camping toilet electrically seals waste out of sight - New Atlas</title><link>https://newatlas.com/outdoors/waterless-electric-toilet-auto-bags-it-up-so-you-never-see-it-again/</link></item>
-<item><title>Easy-on/easy-off bike pump uses retractable seals for a gentle touch - New Atlas</title><link>https://newatlas.com/bicycles/zilch-bike-tire-pump/</link></item>
-<item><title>QJMotor&amp;#39;s upcoming triple could mean trouble for Triumph and Yamaha - New Atlas</title><link>https://newatlas.com/motorcycles/qjmotor-triple-cylinder/</link></item>
-<item><title>Old wind turbine blades find new use in funky floating docks - New Atlas</title><link>https://newatlas.com/environment/reverlast-recycled-wind-turbine-blades-floating-docks/</link></item>
-<item><title>Unique Vapor Propulsion mid-motor ebike setup folds to suitcase size - New Atlas</title><link>https://newatlas.com/bicycles/bike-friday-all-day-lightest-bosch-ebike/</link></item>
-<item><title>Prosthetic hand knows exactly how hard it can safely squeeze stuff - New Atlas</title><link>https://newatlas.com/robotics/prosthetic-hand-hard-squeeze-johns-hopkins/</link></item>
-<item><title>This simple dietary swap could help you live longer - New Atlas</title><link>https://newatlas.com/diet-nutrition/dietary-swap-longevity/</link></item>
-<item><title>Futuristic swooping towers rise in the shadow of a volcano - New Atlas</title><link>https://newatlas.com/architecture/napoli-porta-est-masterplan-zaha-hadid/</link></item>
-<item><title>Telo&amp;#39;s tiny electric truck rolls closer to production with new prototype - New Atlas</title><link>https://newatlas.com/automotive/telo-mt1-electric-mini-truck-preproduction-prototype/</link></item>
-<item><title>&amp;quot;Tricking&amp;quot; the liver into burning carbs unlocks easier long-term weight loss - New Atlas</title><link>https://newatlas.com/diet-nutrition/tricking-metabolism-weight-loss/</link></item>
-<item><title>USX-1 Defiant: The warship without a crew or a place to put one - New Atlas</title><link>https://newatlas.com/military/usx-1-defiant-the-warship-without-crew-any-place-one/</link></item>
-<item><title>Ranking the best Apple TV+ sci-fi: From &amp;#39;Severance&amp;#39; to &amp;#39;Dark Matter&amp;#39; - New Atlas</title><link>https://newatlas.com/home-entertainment/ranking-apple-tv-sci-fi-best-worst-severance/</link></item>
-<item><title>Harley launches its most powerful bike to date – with a $110,000 price tag - New Atlas</title><link>https://newatlas.com/motorcycles/harley-cvo-road-glide-rr/</link></item>
-<item><title>Natural alternative to Ozempic brings results without side effects - New Atlas</title><link>https://newatlas.com/disease/obesity/brp-natural-alternative-ozempic/</link></item>
-<item><title>Alloy-framed supercommuter is the lightest ebike in its class - New Atlas</title><link>https://newatlas.com/bicycles/specialized-vado-sl2-alloy/</link></item>
-<item><title>World&amp;#39;s oldest impact crater discovered in Australia - New Atlas</title><link>https://newatlas.com/science/worlds-oldest-impact-crater-australia/</link></item>
-<item><title>Alzheimer&amp;#39;s could be treated by enhancing the brain&amp;#39;s own immune cells - New Atlas</title><link>https://newatlas.com/brain/alzheimers-dementia/alzheimers-treated-enhancing-brain-immune-cells/</link></item>
-<item><title>Last chance to see? World&amp;#39;s first typewriter heads to auction - New Atlas</title><link>https://newatlas.com/collectibles/first-typewriter-auction/</link></item>
-<item><title>NASA tweaks Voyager probes to help them hit a half century of service - New Atlas</title><link>https://newatlas.com/space/nasa-tweaks-voyager-probes-half-century-of-service/</link></item>
-<item><title>Canoo CEO to buy assets post-bankruptcy, but don&amp;#39;t expect a comeback - New Atlas</title><link>https://newatlas.com/automotive/canoo-ceo-buy-assets-bankruptcy/</link></item>
-<item><title>Simple gene change grows much bigger tomatoes and eggplants - New Atlas</title><link>https://newatlas.com/biology/gene-edit-bigger-tomatoes-eggplants/</link></item>
-<item><title>All exercise improves insomnia, but some types are better than others - New Atlas</title><link>https://newatlas.com/sleep/exercise-insomnia-age-related/</link></item>
-<item><title>See-through teardrop camper delivers big views like no other micro-RV - New Atlas</title><link>https://newatlas.com/outdoors/naledi-see-through-teardrop-camper/</link></item>
-<item><title>A timely reminder that the world can (still) come together as one - New Atlas</title><link>https://newatlas.com/collectibles/we-are-the-world-score-usa-for-africa-auction/</link></item>
-<item><title>Tiny titanium tool packs screwdrivers, wrenches, and a Damascus steel blade - New Atlas</title><link>https://newatlas.com/outdoors/orioners-t6-keyring-multitool/</link></item>
-<item><title>Torquetastic electric enduro promises high-tech off-roading at $2,000 - New Atlas</title><link>https://newatlas.com/motorcycles/ultraviolette-shockwave-electric-enduro-motorcycle-india/</link></item>
-<item><title>25-ft tiny house is designed for vacations or full-time living - New Atlas</title><link>https://newatlas.com/tiny-houses/25-ft-gooseneck-unnamed/</link></item>
-<item><title>Your brain might have a spoon-sized amount of plastic in it - New Atlas</title><link>https://newatlas.com/brain/brain-microplastics-spoon/</link></item>
-<item><title>Solar film you can stick anywhere to generate energy is nearly here - New Atlas</title><link>https://newatlas.com/energy/power-roll-solar-film-anywhere-update/</link></item>
-<item><title>Gorsuch’s Broadside Against Overregulation - Law &amp; Liberty</title><link>https://lawliberty.org/overregulation-and-the-rule-of-law/</link></item>
-<item><title>Make Republicanism Possible Again - Law &amp; Liberty</title><link>https://lawliberty.org/book-review/make-republicanism-possible-again/</link></item>
-<item><title>Legalism Threatens Our Rule of Law - Law &amp; Liberty</title><link>https://lawliberty.org/book-review/legalism-threatens-our-rule-of-law/</link></item>
-<item><title>A Puritanical Constitutionalism - Law &amp; Liberty</title><link>https://lawliberty.org/book-review/a-puritanical-constitutionalism/</link></item>
-<item><title>Something Wicked This Way Comes - Law &amp; Liberty</title><link>https://lawliberty.org/something-wicked-this-way-comes/</link></item>
+<lastBuildDate>Thu, 13 Mar 2025 09:11:45 +0800</lastBuildDate>
+<item><title>F1 Las Vegas Grand Prix Tickets Technically Start at Just $50 This Year - The Drive</title><link>https://www.thedrive.com/news/f1-las-vegas-grand-prix-tickets-technically-start-at-just-50-this-year</link></item>
+<item><title>Review: Tifosi Sunglasses Proven to Be Best Driving Glasses Under $100 - The Drive</title><link>https://www.thedrive.com/guides-and-gear/tifosi-sunglasses-hands-on-review-and-testing</link></item>
+<item><title>This Giant Six-Wheeled Ford RV Has Lived in Tokyo for Years and Still Gets Driven - The Drive</title><link>https://www.thedrive.com/news/this-giant-six-wheeled-ford-rv-has-lived-in-tokyo-for-years-and-still-gets-driven</link></item>
+<item><title>Canadian Taxi Drivers Are Using Tariffs as Ammo Against Uber - The Drive</title><link>https://www.thedrive.com/news/canadian-taxi-drivers-are-using-tariffs-as-ammo-against-uber</link></item>
+<item><title>Former Tesla Exec Assembles EV Super Team to Create 2,000-Pound Sports Car - The Drive</title><link>https://www.thedrive.com/news/former-tesla-exec-assembles-ev-super-team-to-create-2000-pound-sports-car</link></item>
+<item><title>Europe’s Big Bet to Lessen Reliance on Chinese Batteries Has Gone Bankrupt - The Drive</title><link>https://www.thedrive.com/news/europes-big-bet-to-lessen-reliance-on-chinese-batteries-has-gone-bankrupt</link></item>
+<item><title>This Dog Enjoyed Lapping the Top Gear Test Track in an EV Over a Gas Car - The Drive</title><link>https://www.thedrive.com/news/this-dog-enjoyed-lapping-the-top-gear-test-track-in-an-ev-over-a-gas-car</link></item>
+<item><title>This 25-Year-Old Honda S2000 Has Never Been Registered. It Just Sold for $95,000 - The Drive</title><link>https://www.thedrive.com/news/this-25-year-old-honda-s2000-has-never-been-registered-it-just-sold-for-95000</link></item>
+<item><title>NHRA Driver ‘Insulted’ by IndyCar’s ‘Fastest Racing on Earth’ Ads - The Drive</title><link>https://www.thedrive.com/news/nhra-driver-insulted-by-indycars-fastest-racing-on-earth-ads</link></item>
+<item><title>You Can Run Over Ford’s New NACS EV Adapter With an F-150 Lightning Because It’s Built Ford Tough - The Drive</title><link>https://www.thedrive.com/news/you-can-run-over-fords-new-nacs-ev-adapter-with-an-f-150-lightning-because-its-built-ford-tough</link></item>
+<item><title>Spring Into Amazing Ryobi BOGO Deals and Discounts at Home Depot - The Drive</title><link>https://www.thedrive.com/guides-and-gear/spring-bogos-saving-ryobi-power-tools-batteries-at-home-depot</link></item>
+<item><title>Watch a Tesla Cybertruck Get Ripped Apart in Tow Hitch Stress Test - The Drive</title><link>https://www.thedrive.com/news/watch-a-tesla-cybertruck-rip-apart-during-tow-hitch-stress-test</link></item>
+<item><title>New Morgan Supersport Ditches Manual for Modern Performance and Luxury - The Drive</title><link>https://www.thedrive.com/news/new-morgan-supersport-ditches-manual-for-modern-performance-and-luxury</link></item>
+<item><title>For Sale: Dodge Ram Van Converted to a Pickup Looks Like a Fridge Drawing - The Drive</title><link>https://www.thedrive.com/news/for-sale-dodge-ram-van-converted-to-a-pickup-looks-like-a-fridge-drawing</link></item>
+<item><title>Hot Wheels Is Making the V10-Powered Renault Espace F1 Minivan - The Drive</title><link>https://www.thedrive.com/news/hot-wheels-is-making-the-v10-powered-renault-espace-f1-minivan</link></item>
+<item><title>Nissan CEO Uchida Steps Down, Giving Honda Merger Another Chance - The Drive</title><link>https://www.thedrive.com/news/nissan-ceo-uchida-steps-down-giving-honda-merger-another-chance</link></item>
+<item><title>Keter Cortina Mega Storage Shed Review: A Quick, Attractive Solution for Outdoor Storage - The Drive</title><link>https://www.thedrive.com/guides-and-gear/review-keter-cortina-mega-storage-shed</link></item>
+<item><title>Cadillac F1 Boss: ‘No Reason Why’ Team Can’t Hire an American Driver - The Drive</title><link>https://www.thedrive.com/news/cadillac-f1-boss-no-reason-why-team-cant-hire-an-american-driver</link></item>
+<item><title>Nissan Spent Over 2 Years Developing a New Paint Color, of All Things - The Drive</title><link>https://www.thedrive.com/news/nissan-spent-over-2-years-developing-a-new-paint-color-of-all-things</link></item>
+<item><title>Dealer Leak Claims Hemi V8 Ram 1500 and More Powerful TRX Coming Next Year - The Drive</title><link>https://www.thedrive.com/news/dealer-leak-claims-hemi-v8-ram-1500-and-more-powerful-trx-coming-next-year</link></item>
+<item><title>The IMS Solution and IMS Retrofit: A Complete History - The Drive</title><link>https://www.thedrive.com/sponsored/the-ims-solution-and-ims-retrofit-a-complete-history</link></item>
+<item><title>F1 Champ Jacques Villeneuve Got Trapped in an Airport Toilet Last Weekend - The Drive</title><link>https://www.thedrive.com/news/f1-champ-jacques-villeneuve-got-trapped-in-an-airport-toilet-last-weekend</link></item>
+<item><title>Charred Husk of a Concours 1934 Hispano Suiza Still Sold for $224,000 - The Drive</title><link>https://www.thedrive.com/news/charred-husk-of-a-concours-1934-hispano-suiza-still-sold-for-224000</link></item>
+<item><title>Pedestrian Miraculously Saved by a Parked Honda and Loads of Good Luck - The Drive</title><link>https://www.thedrive.com/news/pedestrian-miraculously-saved-by-a-parked-honda-and-loads-of-good-luck</link></item>
+<item><title>There’s a Viper V10 Hiding in This Honda S2000 - The Drive</title><link>https://www.thedrive.com/news/theres-a-viper-v10-hiding-in-this-honda-s2000</link></item>
+<item><title>2025 Audi S3 First Drive Review: Restrained and Rapid - The Drive</title><link>https://www.thedrive.com/car-reviews/2025-audi-s3-first-drive-review</link></item>
+<item><title>Audi RS6 Riding on F1-Style Wheels Looks Absolutely Menacing - The Drive</title><link>https://www.thedrive.com/news/audi-rs6-riding-on-f1-style-wheels-looks-absolutely-menacing</link></item>
+<item><title>CarMax Customer Crashes Subaru Into Showroom After (Apparently Bad) Appraisal Offer - The Drive</title><link>https://www.thedrive.com/news/carmax-customer-crashes-subaru-into-showroom-after-apparently-bad-appraisal-offer</link></item>
+<item><title>Suit Up for Spring Rips with RevZilla’s Riding Gear Deals - The Drive</title><link>https://www.thedrive.com/guides-and-gear/deals-riding-gear-revzilla-spring-sale</link></item>
+<item><title>Excavator on Trailer Decimates Highway Overpass at Interstate Speeds - The Drive</title><link>https://www.thedrive.com/news/excavator-on-trailer-decimates-highway-overpass-at-interstate-speeds</link></item>
+<item><title>Ram Return to NASCAR Truck Series in 2026 Is Looking Very Likely - The Drive</title><link>https://www.thedrive.com/news/ram-return-to-nascar-truck-series-in-2026-is-looking-very-likely</link></item>
+<item><title>Volvo Is Probably Done Making Wagons - The Drive</title><link>https://www.thedrive.com/news/volvo-is-probably-done-making-wagons</link></item>
+<item><title>Ignite a New Passion With Big Spring Break Deals on RC Cars at AMain Hobbies - The Drive</title><link>https://www.thedrive.com/guides-and-gear/deals-rc-cars-trucks-drifting-amain-hobbies-spring-sale</link></item>
+<item><title>This Porsche 911 Smokes Purists With a 500-HP Honda K24 Engine - The Drive</title><link>https://www.thedrive.com/news/this-porsche-911-smokes-purists-with-a-500-hp-honda-k24-engine</link></item>
+<item><title>Yes, We Really Tried Piping AC, DirecTV, and Internet Into Semi Trucks Through Giant Tubes - The Drive</title><link>https://www.thedrive.com/news/this-failed-company-tried-piping-hvac-satellite-tv-and-internet-into-semi-trucks</link></item>
+<item><title>Make the Most of Your Refund With RealTruck’s Stupid-Good Deals - The Drive</title><link>https://www.thedrive.com/guides-and-gear/deals-realtruck-tax-refund-truck-accessories-sale</link></item>
+<item><title>Lewis Hamilton Could’ve Just Ruined His First Ferrari Season Before It Even Began - The Drive</title><link>https://www.thedrive.com/news/lewis-hamilton-couldve-just-ruined-his-first-ferrari-season-before-it-even-began</link></item>
+<item><title>After Years of Drama, Cadillac Will Definitely Race in F1 in 2026 - The Drive</title><link>https://www.thedrive.com/news/after-years-of-drama-cadillac-will-definitely-race-in-f1-in-2026</link></item>
+<item><title>Explosion at Toyota Supplier Halts RAV4 Production for Second Time in Two Years - The Drive</title><link>https://www.thedrive.com/news/explosion-at-toyota-supplier-halts-rav4-production-for-second-time-in-two-years</link></item>
+<item><title>Fashion Mogul Says He Was Conned Out of $5M for Fake AMG One Reservation - The Drive</title><link>https://www.thedrive.com/news/fashion-mogul-says-he-was-conned-out-of-5m-for-fake-amg-one-reservation</link></item>
+<item><title>32-Year-Old Red Bull Heir Buys Bernie Ecclestone’s Unreal F1 Car Collection - The Drive</title><link>https://www.thedrive.com/news/32-year-old-red-bull-heir-buys-bernie-ecclestones-unreal-f1-car-collection</link></item>
+<item><title>We Got Our Hands on Minottek’s Miata Gated Shifter Kit - The Drive</title><link>https://www.thedrive.com/guides-and-gear/we-got-our-hands-on-minotteks-miata-gated-shifter-kit</link></item>
+<item><title>McLaren Invented New Carbon Fiber Tape to Build Even More Complex Parts - The Drive</title><link>https://www.thedrive.com/news/mclaren-invented-new-carbon-fiber-tape-to-build-even-more-complex-parts</link></item>
+<item><title>Acme Tool’s March Mania DeWalt Deals Offer Everything to Deep Discounts and Free Batteries - The Drive</title><link>https://www.thedrive.com/guides-and-gear/deals-dewalt-march-mania-acme-tools-sale</link></item>
+<item><title>Why Mark in ‘Severance’ Drives a 1997 Volvo, and More Answers from the Show’s Car Coordinators - The Drive</title><link>https://www.thedrive.com/news/why-mark-in-severance-drives-a-1997-volvo-and-more-answers-from-the-shows-car-coordinators</link></item>
+<item><title>‘It’s Not a Phone, It’s a Car’: VW Boss Promises Buttons Are Back for Good - The Drive</title><link>https://www.thedrive.com/news/its-not-a-phone-its-a-car-vw-boss-promises-buttons-are-back-for-good</link></item>
+<item><title>Maserati Just Killed Its Electric Supercar Because It Doesn’t Think Anyone Would Buy It - The Drive</title><link>https://www.thedrive.com/news/maserati-just-killed-its-electric-supercar-because-it-doesnt-think-anyone-would-buy-it</link></item>
+<item><title>2025 Chevrolet Equinox EV Review: The V Stands for Value - The Drive</title><link>https://www.thedrive.com/news/2025-chevrolet-equinox-ev-review</link></item>
+<item><title>Guy Avoids Hilariously Pathetic Insurance Fraud Attempt by Hummer Driver - The Drive</title><link>https://www.thedrive.com/news/guy-avoids-hilariously-pathetic-insurance-fraud-attempt-by-hummer-driver</link></item>
+<item><title>Huh: Turns Out the Founder of Yankee Candle Had a Jaw-Dropping Car Collection - The Drive</title><link>https://www.thedrive.com/news/all-the-money-your-mom-spent-in-yankee-candle-funded-this-stunning-car-collection</link></item>
+<item><title>This 1968 Chevy C50 Ramp Hauler Has the Greatest Side Profile of Any Truck Ever - The Drive</title><link>https://www.thedrive.com/news/this-1968-chevy-c50-ramp-hauler-has-the-greatest-side-profile-of-any-truck-ever</link></item>
+<item><title>DJI Power Expansion Battery Review: The Missing Link to a Viable Backup Home Power Source - The Drive</title><link>https://www.thedrive.com/guides-and-gear/dji-power-1000-expansion-battery-2000-honds-on-review-test</link></item>
+<item><title>Jaguar Promises an ‘Elegant Sunset’ for Last Surviving Models - The Drive</title><link>https://www.thedrive.com/news/jaguar-promises-an-elegant-sunset-for-last-surviving-models</link></item>
+<item><title>The Volvo ES90 ‘Sedan’ Shows Volvo Is Entering Its SUV Design Era - The Drive</title><link>https://www.thedrive.com/news/volvo-es90-is-proof-suvs-rule-volvo-now-not-sedans</link></item>
+<item><title>North Carolina Speeders Beware: Ford Mustang V8 Interceptors Are Lurking - The Drive</title><link>https://www.thedrive.com/news/north-carolina-speeders-beware-ford-mustang-v8-interceptors-are-lurking</link></item>
+<item><title>Honda’s Delaying F1 Engine as Long as Possible to Give Aston Winning Chance - The Drive</title><link>https://www.thedrive.com/news/hondas-delaying-f1-engine-as-long-as-possible-to-give-aston-winning-chance</link></item>
+<item><title>Cadillac Escalade IQL Costs $40K More Than V8 Escalade ESV. Is It $40K Better? - The Drive</title><link>https://www.thedrive.com/news/cadillac-escalade-iql-costs-40k-more-than-v8-escalade-esv-is-it-40k-better</link></item>
+<item><title>Gene Winfield, One of History’s Greatest Hot-Rodders, Dies at 97 - The Drive</title><link>https://www.thedrive.com/news/gene-winfield-one-of-historys-greatest-hot-rodders-dies-at-97</link></item>
+<item><title>NFL Star Is Still Driving His Used Subaru After Signing $60M Contract - The Drive</title><link>https://www.thedrive.com/news/nfl-star-wr-says-hes-keeping-his-subaru-after-signing-60m-contract</link></item>
+<item><title>The 2026 Volvo ES90 Is Not the Electric Sedan We Were Expecting - The Drive</title><link>https://www.thedrive.com/news/the-2026-volvo-es90-is-not-the-electric-sedan-we-were-expecting</link></item>
+<item><title>2026 Cadillac Escalade IQL Revealed: The Big Caddy Is Back in Town - The Drive</title><link>https://www.thedrive.com/news/2026-cadillac-escalade-iql-keeps-third-row-passengers-happy-for-135000</link></item>
+<item><title>This Incognito Dump Truck Might Be the Ultimate GMT800 Pickup - The Drive</title><link>https://www.thedrive.com/news/seemingly-normal-chevy-silverado-for-sale-is-actually-an-incognito-dump-truck</link></item>
+<item><title>Awesome Worklight and EDC Flashlight Deals From the Best in the Business - The Drive</title><link>https://www.thedrive.com/guides-and-gear/awesome-worklight-and-edc-flashlight-deals-from-the-best-in-the-business</link></item>
+<item><title>Interstate Closure Will Force Detroit Commuters Onto City Streets for Two Years - The Drive</title><link>https://www.thedrive.com/news/interstate-closure-will-force-detroit-commuters-onto-city-streets-for-two-years</link></item>
+<item><title>GM Fixes Chevy Colorado Roof Problem So Car Washes Don’t Dent It - The Drive</title><link>https://www.thedrive.com/news/gm-fixes-chevy-colorado-roof-problem-so-car-washes-dont-dent-it</link></item>
+<item><title>This Ford Super Duty Pickup Has a Secret: A Big-Block 8.1L Chevy V8 - The Drive</title><link>https://www.thedrive.com/news/swapping-a-turbo-8-1l-big-block-chevy-into-this-ford-super-duty-was-bold</link></item>
+<item><title>FedEx Van Gets Caught in Rising Tide During Island Delivery Gone Wrong - The Drive</title><link>https://www.thedrive.com/news/fedex-van-gets-caught-in-rising-tide-during-island-delivery-gone-wrong</link></item>
+<item><title>Adding a White Interior to a Tesla Cybertruck Is an $11,000 Mistake - The Drive</title><link>https://www.thedrive.com/news/adding-a-white-interior-to-a-tesla-cybertruck-is-an-11000-mistake</link></item>
+<item><title>The Ford Mustang Mach-E Is Still Outselling the Regular Mustang in 2025 - The Drive</title><link>https://www.thedrive.com/news/ford-mustang-sales-fall-34-while-mach-e-extends-lead-to-start-2025</link></item>
+<item><title>Katherine Legge Will Race in NASCAR Cup Series, First Woman Since Danica - The Drive</title><link>https://www.thedrive.com/news/katherine-legge-will-race-in-nascar-cup-series-first-woman-since-danica</link></item>
+<item><title>How Those Insane Dealer Markups From 2021 Wrecked the New Car Market Today - The Drive</title><link>https://www.thedrive.com/news/how-those-insane-dealer-markups-from-2021-wrecked-the-new-car-market-today</link></item>
+<item><title>Review: Does This Cheap Borescope Deserve Its Top-Selling Status on Amazon? - The Drive</title><link>https://www.thedrive.com/guides-and-gear/review-depstech-wireless-borescope-tested-and-reviewed</link></item>
+<item><title>Rivian R1S Leases Are Getting Dangerously Cheap - The Drive</title><link>https://www.thedrive.com/news/surprise-rivian-r1s-lease-deal-drops-monthly-payment-to-near-historic-low</link></item>
+<item><title>Dealers Screwed Up EV Tax Credit Paperwork. Now the IRS Is Rejecting Buyers’ Tax Returns - The Drive</title><link>https://www.thedrive.com/news/ev-buyers-are-getting-tax-returns-rejected-after-dealers-screwed-up-credit-paperwork</link></item>
+<item><title>Hyundai N Sport Is Coming for BMW M Sport - The Drive</title><link>https://www.thedrive.com/news/hyundai-n-sport-is-coming-for-bmw-m-sport</link></item>
+<item><title>Mysterious Apple CarPlay Outage Hits the GM Models That Still Have It - The Drive</title><link>https://www.thedrive.com/news/mysterious-carplay-outage-plagues-the-gm-models-that-still-have-it</link></item>
+<item><title>2025 Hyundai Elantra Hybrid Review: Affordable Gas Whisperer - The Drive</title><link>https://www.thedrive.com/car-reviews/2025-hyundai-elantra-hybrid-review</link></item>
+<item><title>Turns Out Posting Your Car on Fire on Marketplace Is a Great Way To Sell It - The Drive</title><link>https://www.thedrive.com/news/posting-your-car-on-fire-on-marketplace-is-a-surprisingly-great-way-to-sell-it</link></item>
+<item><title>Pickup Truck Skids Straight Off Dock, Driver Gets Away With a Cut - The Drive</title><link>https://www.thedrive.com/news/pickup-truck-driver-skids-straight-off-dock-gets-away-with-a-cut</link></item>
+<item><title>One Weird Trick To Put a Bricked Ferrari SF90 Into Neutral - The Drive</title><link>https://www.thedrive.com/news/shifting-a-ferrari-sf90-with-a-dead-battery-into-neutral-requires-a-tool</link></item>
+<item><title>Chevy Is Launching a Vintage Car Restoration Program—in Brazil - The Drive</title><link>https://www.thedrive.com/news/chevy-is-launching-a-vintage-car-restoration-program-in-brazil</link></item>
+<item><title>Brit Hume Predicts Tariffs May Boost US Manufacturing Long-Term But Warns Of Immediate Consumer Consequences - The Daily Caller</title><link>https://dailycaller.com/2025/03/12/brit-hume-tariff-boost-manufacturing/</link></item>
+<item><title>Here’s Where Dozens Of Legal Challenges Against Trump Administration Stand - The Daily Caller</title><link>https://dailycaller.com/2025/03/12/heres-where-dozens-of-legal-challenges-against-trump-administration-stand/</link></item>
+<item><title>‘Like Crickets’: Sen. Blackburn Slams Complete Democratic Silence On Violence Against Businesses - The Daily Caller</title><link>https://dailycaller.com/2025/03/12/marsha-blackburn-democrats-violence-domestic-terrorism/</link></item>
+<item><title>Vulgar MLB Hats Are Going For Pretty Penny After Being Taken Out Of Online Shop - The Daily Caller</title><link>https://dailycaller.com/2025/03/12/vulgar-mlb-hats-texas-rangers-new-era-store-ebay/</link></item>
+<item><title>‘F*ck Me’: Mehdi Hasan Melts Down After Piers Morgan Questions Keeping Pro-Hamas Visa Holders In US - The Daily Caller</title><link>https://dailycaller.com/2025/03/12/mehdi-hasan-piers-morgan-hamas-visas-deportation/</link></item>
+<item><title>Scarlett Johansson Slams Fans In Outwardly Arrogant Statement - The Daily Caller</title><link>https://dailycaller.com/2025/03/12/scarlett-johansson-slams-fans-photos-fame-arrogant-unhinged-captain-america-avengers/</link></item>
+<item><title>En Vogue Star Dawn Robinson Says She’s Homeless - The Daily Caller</title><link>https://dailycaller.com/2025/03/12/dawn-robinson-en-vogue-singer-homeless-sleeping-car-marvin-gaye/</link></item>
+<item><title>Scott Jennings Turns Tables On CNN Commentator Trying To Box Him Into Corner Over Trump’s Tesla Event - The Daily Caller</title><link>https://dailycaller.com/2025/03/12/scott-jennings-turns-tables-on-cnn-commentator-trying-to-box-him-into-corner-over-trumps-tesla-event/</link></item>
+<item><title>Pennsylvania Department Of Education, Democrat Lawmaker Oppose Christian School Group Upholding Biological Sex - The Daily Caller</title><link>https://dailycaller.com/2025/03/12/pennsylvania-department-education-democrat-lawmaker-oppose-christian-group-upholding-biological-sex/</link></item>
+<item><title>‘Can I Answer?’: Carville Visibly Peeved When Martha MacCallum Asks Him Why Dems Aren’t Connecting With Americans - The Daily Caller</title><link>https://dailycaller.com/2025/03/12/james-carville-martha-maccallum-democrats/</link></item>
+<item><title>Senate Democrats Threaten To Plunge Country Into Partial Government Shutdown - The Daily Caller</title><link>https://dailycaller.com/2025/03/12/senate-democrats-threaten-to-plunge-country-into-partial-government-shutdown/</link></item>
+<item><title>Climate Scientist Who Sued Critics For Defamation Misled Jury, Judge Says - The Daily Caller</title><link>https://dailycaller.com/2025/03/12/climate-scientist-critics-defamation-misled-jury-judge-says/</link></item>
+<item><title>Tom Homan Munches On Apple, Smirks As He Faces Protesters At State Capitol - The Daily Caller</title><link>https://dailycaller.com/2025/03/12/tom-homan-protesters-new-york-state-capitol/</link></item>
+<item><title>Fans Boo Rock Band Tool At Their Own Music Festival, One Considers Suing Over Show - The Daily Caller</title><link>https://dailycaller.com/2025/03/12/tool-rock-festival-booing-repeat-set-false-advertising-lawsuit-sand-festival-dominican-republic/</link></item>
+<item><title>‘Crushed The Hopes’: Chris Cillizza Says There’s ‘Major Problem For Democrats’ In Regaining Senate Control - The Daily Caller</title><link>https://dailycaller.com/2025/03/12/chris-cillizza-problem-democrats-regaining-senate-control/</link></item>
+<item><title>EXCLUSIVE: Legal Group Pushes For Transparency On USAID Involvement In Censorship During Biden Admin - The Daily Caller</title><link>https://dailycaller.com/2025/03/12/alliance-defending-freedom-usaid-transparency-censorship-biden-admin/</link></item>
+<item><title>‘Don’t Know Where I’m Going’: LIV’s Brooks Koepka Could Potentially Be Headed Back To PGA - The Daily Caller</title><link>https://dailycaller.com/2025/03/12/liv-golf-brooks-koepka-pga-tour/</link></item>
+<item><title>Big Soda Floods State Capitol In Unprecedented Fashion To Lobby Against MAHA - The Daily Caller</title><link>https://dailycaller.com/2025/03/12/big-soda-lobby-west-virginia-protest-maha-robert-kennedy-food-dye-ban-fda-patrick-morrissey/</link></item>
+<item><title>Amazon Rainforest Razed To Build Highway For UN Climate Summit - The Daily Caller</title><link>https://dailycaller.com/2025/03/12/brazil-amazon-rainforest-cop30-united-nations-climate-summit/</link></item>
+<item><title>Trump’s EPA Announces 31 ‘Historic’ Actions To Overturn Biden, Obama-Era Regulations - The Daily Caller</title><link>https://dailycaller.com/2025/03/12/greatest-day-of-deregulation-trumps-epa-touts-major-regulation-cutting-moves/</link></item>
+<item><title>Python Multiprocessing for Faster Execution - Python Central</title><link>https://www.pythoncentral.io/python-multiprocessing-for-faster-execution/</link></item>
+<item><title>Python pipx: Managing Application Installation - Python Central</title><link>https://www.pythoncentral.io/python-pipx-managing-application-installation/</link></item>
+<item><title>Optimizing Offshore Development Centers with Python: From Automation to AI - Python Central</title><link>https://www.pythoncentral.io/optimizing-offshore-development-centers-with-python-from-automation-to-ai/</link></item>
+<item><title>Create an App with Python: What to Look For - Python Central</title><link>https://www.pythoncentral.io/create-an-app-with-python-what-to-look-for/</link></item>
+<item><title>Python Pathlib: File System Operations in Python - Python Central</title><link>https://www.pythoncentral.io/python-pathlib-file-system-operations-in-python/</link></item>
+<item><title>Understanding Python Import - Python Central</title><link>https://www.pythoncentral.io/understanding-python-import/</link></item>
+<item><title>python reduce - Python Central</title><link>https://www.pythoncentral.io/tag/python-reduce/</link></item>
+<item><title>reduce function - Python Central</title><link>https://www.pythoncentral.io/tag/reduce-function/</link></item>
+<item><title>file conversion - Python Central</title><link>https://www.pythoncentral.io/tag/file-conversion/</link></item>
+<item><title>convert file - Python Central</title><link>https://www.pythoncentral.io/tag/convert-file/</link></item>
+<item><title>semantic kernel - Python Central</title><link>https://www.pythoncentral.io/tag/semantic-kernel/</link></item>
+<item><title>deeplearning - Python Central</title><link>https://www.pythoncentral.io/tag/deeplearning/</link></item>
+<item><title>file management - Python Central</title><link>https://www.pythoncentral.io/tag/file-management/</link></item>
+<item><title>web scraping - Python Central</title><link>https://www.pythoncentral.io/tag/web-scraping/</link></item>
+<item><title>website data - Python Central</title><link>https://www.pythoncentral.io/tag/website-data/</link></item>
+<item><title>dependencies - Python Central</title><link>https://www.pythoncentral.io/tag/dependencies/</link></item>
+<item><title>game analysis - Python Central</title><link>https://www.pythoncentral.io/tag/game-analysis/</link></item>
+<item><title>website extract python - Python Central</title><link>https://www.pythoncentral.io/tag/website-extract-python/</link></item>
+<item><title>multiprocessing - Python Central</title><link>https://www.pythoncentral.io/tag/multiprocessing/</link></item>
+<item><title>Lessons Indian fashion weeks can take from global runways, according to experts - Harpers Bazaar</title><link>https://www.harpersbazaar.in/fashion/story/what-lessons-can-indian-fashion-weeks-learn-from-international-experts-weigh-in-1171488-2025-03-07</link></item>
+<item><title>研究发现霸凌者有更多孩子 - Solidot</title><link>https://www.solidot.org/story?sid=80762</link></item>
+<item><title>科学家发现已知最古老的陨石坑 - Solidot</title><link>https://www.solidot.org/story?sid=80763</link></item>
+<item><title>新西兰卫生部的财务管理系统是单张 Excel 表格 - Solidot</title><link>https://www.solidot.org/story?sid=80764</link></item>
+<item><title>Firefox 一根证书将于 2025 年 3 月 14 日过期 - Solidot</title><link>https://www.solidot.org/story?sid=80765</link></item>
+<item><title>西班牙将对不标记 AI 生成内容的公司处以巨额罚款 - Solidot</title><link>https://www.solidot.org/story?sid=80766</link></item>
+<item><title>TP-Link 高危漏洞被僵尸网络感染传播恶意程序 - Solidot</title><link>https://www.solidot.org/story?sid=80767</link></item>
+<item><title>全球只有 7 个国家的 PM2.5 水平达到 WHO 的标准 - Solidot</title><link>https://www.solidot.org/story?sid=80768</link></item>
+<item><title>台积电提议与 AMD 等接管英特尔芯片制造业务 - Solidot</title><link>https://www.solidot.org/story?sid=80769</link></item>
+<item><title>Meta 开始测试其自研 AI 训练芯片 - Solidot</title><link>https://www.solidot.org/story?sid=80771</link></item>
+<item><title>Spotify 在 2024 年支付了 100 亿美元版税 - Solidot</title><link>https://www.solidot.org/story?sid=80772</link></item>
+<item><title>空气污染与生物衰老正相关，而绿地负相关 - Solidot</title><link>https://www.solidot.org/story?sid=80770</link></item>
+<item><title>研究发现微塑料会影响植物的光合作用 - Solidot</title><link>https://www.solidot.org/story?sid=80761</link></item>
+<item><title>GCC 15 合并了 COBOL 前端 - Solidot</title><link>https://www.solidot.org/story?sid=80760</link></item>
+<item><title>独生子女政策意外提高了女性的创业率 - Solidot</title><link>https://www.solidot.org/story?sid=80759</link></item>
+<item><title>温室气体排放或影响人造卫星 - Solidot</title><link>https://www.solidot.org/story?sid=80758</link></item>
+<item><title>惠普更新打印机固件导致惠普墨盒无法使用 - Solidot</title><link>https://www.solidot.org/story?sid=80757</link></item>
+<item><title>Pakistan train siege: All hostages freed after 30 hours - The Daily Star</title><link>https://www.thedailystar.net/news/world/news/pakistan-train-siege-all-hostages-freed-after-30-hours-3846666</link></item>
+<item><title>Basic salary of a journo should be at least Tk 30,000-40,000: Shafiqul Alam - The Daily Star</title><link>https://www.thedailystar.net/news/bangladesh/news/basic-salary-journo-should-be-least-tk-30000-40000-shafiqul-alam-3846671</link></item>
+<item><title>Unite to build strong JS for carrying out reforms - The Daily Star</title><link>https://www.thedailystar.net/news/bangladesh/politics/news/unite-build-strong-js-carrying-out-reforms-3846206</link></item>
+<item><title>CoU exam postponed over ‘question leak’ - The Daily Star</title><link>https://www.thedailystar.net/campus/news/cou-exam-postponed-over-question-leak-3846711</link></item>
+<item><title>Diners harassed during Ramadan in Lakshmipur - The Daily Star</title><link>https://www.thedailystar.net/star-multimedia/news-multimedia/news/diners-harassed-during-ramadan-lakshmipur-3846701</link></item>
+<item><title>Real Madrid beat Atletico on penalties to reach Champions League quarters - The Daily Star</title><link>https://www.thedailystar.net/sports/football/news/real-madrid-beat-atletico-penalties-reach-champions-league-quarters-3846761</link></item>
+<item><title>&amp;#39;Thank God Real Madrid won&amp;#39; - The Daily Star</title><link>https://www.thedailystar.net/sports/football/news/thank-god-real-madrid-won-3846786</link></item>
+<item><title>Case filed over attempted rape of seven-year-old in Faridpur - The Daily Star</title><link>https://www.thedailystar.net/news/bangladesh/crime-justice/news/case-filed-over-attempted-rape-seven-year-old-faridpur-3846721</link></item>
+<item><title>Asensio stars as Villa beat Brugge to book PSG showdown - The Daily Star</title><link>https://www.thedailystar.net/sports/football/news/asensio-stars-villa-beat-brugge-book-psg-showdown-3846771</link></item>
+<item><title>Mahmudullah announces retirement from international cricket - The Daily Star</title><link>https://www.thedailystar.net/sports/cricket/news/mahmudullah-announces-retirement-international-cricket-3846181</link></item>
+<item><title>Ronaldo pulls out of race for Brazilian football presidency - The Daily Star</title><link>https://www.thedailystar.net/sports/football/news/ronaldo-pulls-out-race-brazilian-football-presidency-3846781</link></item>
+<item><title>Dortmund fight back to beat Lille and reach Champions League quarters - The Daily Star</title><link>https://www.thedailystar.net/sports/football/news/dortmund-fight-back-beat-lille-and-reach-champions-league-quarters-3846776</link></item>
+<item><title>Two crew missing as bulkhead sinks in Padma - The Daily Star</title><link>https://www.thedailystar.net/news/bangladesh/accidents-fires/news/two-crew-missing-bulkhead-sinks-padma-3846741</link></item>
+<item><title>Man sued over sodomising youth in Narayanganj - The Daily Star</title><link>https://www.thedailystar.net/news/bangladesh/crime-justice/news/man-sued-over-sodomising-youth-narayanganj-3846731</link></item>
+<item><title>Why are so many girls still married early? - The Daily Star</title><link>https://www.thedailystar.net/opinion/editorial/news/why-are-so-many-girls-still-married-early-3846746</link></item>
+<item><title>Sink-based solutions can ease Chattogram&amp;#39;s waterlogging - The Daily Star</title><link>https://www.thedailystar.net/opinion/views/news/sink-based-solutions-can-ease-chattograms-waterlogging-3846021</link></item>
+<item><title>The rise and fall of Dhaka muslin - The Daily Star</title><link>https://www.thedailystar.net/opinion/views/news/the-rise-and-fall-dhaka-muslin-3846006</link></item>
+<item><title>How Mahmoud Khalil’s arrest threatens free speech on US campuses - The Daily Star</title><link>https://www.thedailystar.net/opinion/views/news/how-mahmoud-khalils-arrest-threatens-free-speech-us-campuses-3845886</link></item>
+<item><title>Remove obstacles to rape investigation and trial - The Daily Star</title><link>https://www.thedailystar.net/opinion/editorial/news/remove-obstacles-rape-investigation-and-trial-3845756</link></item>
+<item><title>Choking on apathy and neglect - The Daily Star</title><link>https://www.thedailystar.net/opinion/editorial/news/choking-apathy-and-neglect-3845606</link></item>
+<item><title>A lighthouse to businesses - The Daily Star</title><link>https://www.thedailystar.net/business/news/lighthouse-businesses-3846651</link></item>
+<item><title>Political will key to unlocking Bimstec’s potential - The Daily Star</title><link>https://www.thedailystar.net/business/news/political-will-key-unlocking-bimstecs-potential-3846646</link></item>
+<item><title>New committee formed to review reserve heist - The Daily Star</title><link>https://www.thedailystar.net/business/news/new-committee-formed-review-reserve-heist-3846636</link></item>
+<item><title>Bangladesh imports over five times its exports to Saarc nations - The Daily Star</title><link>https://www.thedailystar.net/business/news/bangladesh-imports-over-five-times-its-exports-saarc-nations-3846631</link></item>
+<item><title>Trump metal tariffs kick in as global trade war looms - The Daily Star</title><link>https://www.thedailystar.net/business/news/trump-metal-tariffs-kick-global-trade-war-looms-3846611</link></item>
+<item><title>CPA step yields results as yards clear up - The Daily Star</title><link>https://www.thedailystar.net/business/news/cpa-step-yields-results-yards-clear-3846586</link></item>
+<item><title>Gold price steady - The Daily Star</title><link>https://www.thedailystar.net/business/news/gold-price-steady-3846581</link></item>
+<item><title>ধর্ষণের মামলার বিচার দ্রুত-যথাযথ হবে, কঠোর হচ্ছে আইন - The Daily Star</title><link>https://bangla.thedailystar.net/news/bangladesh/news-658146</link></item>
+<item><title>টাইব্রেকারের নাটকীয়তায় শেষ আটে রিয়াল মাদ্রিদ - The Daily Star</title><link>https://bangla.thedailystar.net/sports/football/news-658156</link></item>
+<item><title>বিএসএফের হাতে ১ বছরে ২৬০১ বাংলাদেশি গ্রেপ্তার: ভারতের স্বরাষ্ট্র প্রতিমন্ত্রী - The Daily Star</title><link>https://bangla.thedailystar.net/news/asia/india/news-658151</link></item>
+<item><title>ধর্ষণবিরোধী বিক্ষোভ: হামলার অভিযোগে ১২ জনের নামে পুলিশের মামলা - The Daily Star</title><link>https://bangla.thedailystar.net/news/bangladesh/news-658116</link></item>
+<item><title>বগুড়ায় ট্রাকচাপায় মোটরসাইকেল আরোহী ৩ বন্ধু নিহত - The Daily Star</title><link>https://bangla.thedailystar.net/news/bangladesh/accident-fire/news-658141</link></item>
+<item><title>বান্দরবানে কিশোরী ধর্ষণ: ৪০ হাজার টাকায় মীমাংসার চেষ্টা, শাস্তির দাবি - The Daily Star</title><link>https://bangla.thedailystar.net/news/bangladesh/crime-justice/news-658126</link></item>
+<item><title>শ্রমিক ইউনিয়নের ইফতারে খাবার সংকট নিয়ে সংঘর্ষ, ভিডিও করায় সাংবাদিকের ওপর হামলা - The Daily Star</title><link>https://bangla.thedailystar.net/news/bangladesh/news-658131</link></item>
+<item><title>আন্তর্জাতিক ক্রিকেট থেকে অবসর নিলেন মাহমুদউল্লাহ - The Daily Star</title><link>https://bangla.thedailystar.net/sports/cricket/news-658081</link></item>
+<item><title>Mahmudullah retires from int’l cricket - The Daily Star</title><link>https://www.thedailystar.net/sports/cricket/news/mahmudullah-retires-intl-cricket-3846396</link></item>
+<item><title>Mahmudullah’s career at a glance - The Daily Star</title><link>https://www.thedailystar.net/sports/cricket/news/mahmudullahs-career-glance-3846381</link></item>
+<item><title>Egypt asks to host some 2034 World Cup matches - The Daily Star</title><link>https://www.thedailystar.net/sports/football/news/egypt-asks-host-some-2034-world-cup-matches-3846391</link></item>
+<item><title>BCB announces squad for ICC Women’s ODI WC Qualifier - The Daily Star</title><link>https://www.thedailystar.net/sports/cricket/news/bcb-announces-squad-icc-womens-odi-wc-qualifier-3846366</link></item>
+<item><title>Fizz awaits signal to play DPL - The Daily Star</title><link>https://www.thedailystar.net/sports/cricket/news/fizz-awaits-signal-play-dpl-3846341</link></item>
+<item><title>&amp;#39;Not done yet&amp;#39;: Pandya hungry for more ICC titles - The Daily Star</title><link>https://www.thedailystar.net/sports/cricket/news/not-done-yet-pandya-hungry-more-icc-titles-3846236</link></item>
+<item><title>BFF wants Hamza to play first home match at National Stadium - The Daily Star</title><link>https://www.thedailystar.net/sports/football/news/bff-wants-hamza-play-first-home-match-national-stadium-3846216</link></item>
+<item><title>Will a 1-goal lead be enough against Atletico for Real Madrid? - The Daily Star</title><link>https://www.thedailystar.net/star-multimedia/sports-multimedia/news/will-1-goal-lead-be-enough-against-atletico-real-madrid-3841821</link></item>
+<item><title>New chapter opens in Sino-Bangla ties - The Daily Star</title><link>https://www.thedailystar.net/news/bangladesh/diplomacy/news/new-chapter-opens-sino-bangla-ties-3846686</link></item>
+<item><title>Shawkat Jamil Khan’s death anniv today - The Daily Star</title><link>https://www.thedailystar.net/news/bangladesh/obituary/news/shawkat-jamil-khans-death-anniv-today-3846641</link></item>
+<item><title>Protests erupt as ‘JaiJai Din’ declaration revoked - The Daily Star</title><link>https://www.thedailystar.net/news/bangladesh/rights/news/protests-erupt-jaijai-din-declaration-revoked-3846601</link></item>
+<item><title>Palak, ex-Dhaka-7 MP Solaiman placed on three-day demand - The Daily Star</title><link>https://www.thedailystar.net/news/bangladesh/crime-justice/news/palak-ex-dhaka-7-mp-solaiman-placed-three-day-demand-3846596</link></item>
+<item><title>Eminent entrepreneur Manzur Elahi no more - The Daily Star</title><link>https://www.thedailystar.net/news/bangladesh/news/prominent-entrepreneur-manzur-elahi-no-more-3845691</link></item>
+<item><title>Road from Uttara South Metro Station to Mirpur DOHS closed until March 13 - The Daily Star</title><link>https://www.thedailystar.net/news/bangladesh/transport/news/road-uttara-south-metro-station-mirpur-dohs-closed-until-march-13-3845261</link></item>
+<item><title>Bangladesh eyes Pakistan as emerging sourcing destination - The Daily Star</title><link>https://www.thedailystar.net/business/news/bangladesh-eyes-pakistan-emerging-sourcing-destination-3845536</link></item>
+<item><title>This is a highly politically motivated govt: Mahfuj Alam - The Daily Star</title><link>https://www.thedailystar.net/news/bangladesh/politics/news/highly-politically-motivated-govt-mahfuj-alam-3845311</link></item>
+<item><title>There’s no need for  constituent assembly - The Daily Star</title><link>https://www.thedailystar.net/news/bangladesh/news/theres-no-need-constituent-assembly-3845551</link></item>
+<item><title>‘Dr’ title only for MBBS, BDS degree holders: HC - The Daily Star</title><link>https://www.thedailystar.net/news/bangladesh/news/dr-title-only-mbbs-bds-degree-holders-hc-3845861</link></item>
+<item><title>Arsenal ease through as PSV restore some pride - The Daily Star</title><link>https://www.thedailystar.net/sports/football/news/arsenal-ease-through-psv-restore-some-pride-3846766</link></item>
+<item><title>Exploring the richness of Dhakaiya Subbasi dialect - The Daily Star</title><link>https://www.thedailystar.net/my-dhaka/news/exploring-the-richness-dhakaiya-subbasi-dialect-3841471</link></item>
+<item><title>A different Dhaka in Ramadan - The Daily Star</title><link>https://www.thedailystar.net/my-dhaka/news/different-dhaka-ramadan-3838151</link></item>
+<item><title>Chattogram’s Arka Das making a mark in Australia - The Daily Star</title><link>https://www.thedailystar.net/entertainment/tv-film/news/chattograms-arka-das-making-mark-australia-3846041</link></item>
+<item><title>Musicians set to enhance Eid festivities with fresh releases - The Daily Star</title><link>https://www.thedailystar.net/entertainment/music/news/musicians-set-enhance-eid-festivities-fresh-releases-3845121</link></item>
+<item><title>Habib, Pritom unite for Eid special ‘Ityadi’ - The Daily Star</title><link>https://www.thedailystar.net/entertainment/tv-film/news/habib-pritom-unite-eid-special-ityadi-3845741</link></item>
+<item><title>Alia Bhatt teases collaboration between Ranbir Kapoor and Aamir Khan - The Daily Star</title><link>https://www.thedailystar.net/entertainment/tv-film/news/alia-bhatt-teases-collaboration-between-ranbir-kapoor-and-aamir-khan-3845921</link></item>
+<item><title>‘Modern Family’ alum Eric Stonestreet joins ‘Dexter: Resurrection’ - The Daily Star</title><link>https://www.thedailystar.net/entertainment/tv-film/news/modern-family-alum-eric-stonestreet-joins-dexter-resurrection-3846056</link></item>
+<item><title>Prague Film Festival 2025 to screen Bangladeshi film ‘Not a Fiction’ - The Daily Star</title><link>https://www.thedailystar.net/entertainment/tv-film/news/prague-film-festival-2025-screen-bangladeshi-film-not-fiction-3845856</link></item>
+<item><title>‘Makorsha’ brings Shamol Mawla and Sabila Nur together for the first time - The Daily Star</title><link>https://www.thedailystar.net/entertainment/tv-film/news/makorsha-brings-shamol-mawla-and-sabila-nur-together-the-first-time-3845841</link></item>
+<item><title>Billboard names Doechii 2025 Woman of the Year - The Daily Star</title><link>https://www.thedailystar.net/entertainment/music/news/billboard-names-doechii-2025-woman-the-year-3845916</link></item>
+<item><title>Minimum age for performing hajj set at 15 - The Daily Star</title><link>https://www.thedailystar.net/news/bangladesh/news/minimum-age-performing-hajj-set-15-3846126</link></item>
+<item><title>Refreshing juices to power through Ramadan - The Daily Star</title><link>https://www.thedailystar.net/life-living/food-recipes/news/refreshing-juices-power-through-ramadan-3844151</link></item>
+<item><title>Last-minute iftar? Try these 3 quick and tasty recipes - The Daily Star</title><link>https://www.thedailystar.net/life-living/food-recipes/news/last-minute-iftar-try-these-3-quick-and-tasty-recipes-3844131</link></item>
+<item><title>Rajshahi in a day: Top spots you can&amp;#39;t miss - The Daily Star</title><link>https://www.thedailystar.net/life-living/travel/news/rajshahi-day-top-spots-you-cant-miss-3844106</link></item>
+<item><title>Managing gout and uric acid levels during Ramadan - The Daily Star</title><link>https://www.thedailystar.net/life-living/health-fitness/news/managing-gout-and-uric-acid-levels-during-ramadan-3843161</link></item>
+<item><title>Where do medical assistants fit into our health system? - The Daily Star</title><link>https://www.thedailystar.net/campus/news/where-do-medical-assistants-fit-our-health-system-3846141</link></item>
+<item><title>In photos: We’ve had enough – The youth erupts in protest over rape, gender-based violence - The Daily Star</title><link>https://www.thedailystar.net/campus/campus/news/photos-weve-had-enough-the-youth-erupts-protest-over-rape-gender-based-violence-3844331</link></item>
+<item><title>SUST students hold torch procession demanding justice for rape victims - The Daily Star</title><link>https://www.thedailystar.net/campus/campus/news/sust-students-hold-torch-procession-demanding-justice-rape-victims-3844226</link></item>
+<item><title>NSU and IUB rally for women&amp;#39;s safety and accountability from authorities - The Daily Star</title><link>https://www.thedailystar.net/campus/news/nsu-and-iub-rally-womens-safety-and-accountability-authorities-3843811</link></item>
+<item><title>Keeping up with your vaccines - The Daily Star</title><link>https://www.thedailystar.net/star-youth/news/keeping-your-vaccines-3842406</link></item>
+<item><title>Life after cadet college: Adjusting aspirations and adapting to changes - The Daily Star</title><link>https://www.thedailystar.net/campus/news/life-after-cadet-college-adjusting-aspirations-and-adapting-changes-3840391</link></item>
+<item><title>The necessity of having mindful conversations with parents - The Daily Star</title><link>https://www.thedailystar.net/star-youth/news/the-necessity-having-mindful-conversations-parents-3842416</link></item>
+<item><title>In photos: Ramadan at Hall Para, Dhaka University - The Daily Star</title><link>https://www.thedailystar.net/campus/campus-life/news/photos-ramadan-hall-para-dhaka-university-3840336</link></item>
+<item><title>OpenAI launches new tools to boost AI agent development - The Daily Star</title><link>https://www.thedailystar.net/tech-startup/news/openai-launches-new-tools-boost-ai-agent-development-3846071</link></item>
+<item><title>Hackers leak stolen Tata Technologies data following ransomware attack - The Daily Star</title><link>https://www.thedailystar.net/tech-startup/news/hackers-leak-stolen-tata-technologies-data-following-ransomware-attack-3845951</link></item>
+<item><title>OpenAI launches new developer tool, Responses API - The Daily Star</title><link>https://www.thedailystar.net/tech-startup/news/openai-launches-new-developer-tool-responses-api-3845901</link></item>
+<item><title>Meta is testing its first in-house AI chips: report - The Daily Star</title><link>https://www.thedailystar.net/tech-startup/news/meta-testing-its-first-house-ai-chips-report-3845846</link></item>
+<item><title>India&amp;#39;s Ambani strikes SpaceX deal for Starlink - The Daily Star</title><link>https://www.thedailystar.net/news/world/news/indias-ambani-strikes-spacex-deal-starlink-3845781</link></item>
+<item><title>Chip startup Celestial AI raises $250 million - The Daily Star</title><link>https://www.thedailystar.net/tech-startup/news/chip-startup-celestial-ai-raises-250-million-3845766</link></item>
+<item><title>OpenAI signs nearly $12 bln deal with a company backed by Nvidia - The Daily Star</title><link>https://www.thedailystar.net/tech-startup/news/openai-signs-nearly-12-bln-deal-company-backed-nvidia-3845011</link></item>
+<item><title>Trump administration launches &amp;quot;self deport&amp;quot; app for immigrants: report - The Daily Star</title><link>https://www.thedailystar.net/tech-startup/news/trump-administration-launches-self-deport-app-immigrants-report-3844926</link></item>
+<item><title>&amp;#39;What changed in 100 years?&amp;#39; - The Daily Star</title><link>https://www.thedailystar.net/star-multimedia/news-multimedia/news/what-changed-100-years-3842796</link></item>
+<item><title>Elephant trapped in mud rescued after 22 hours - The Daily Star</title><link>https://www.thedailystar.net/environment/natural-resources/wildlife/news/elephant-trapped-mud-rescued-after-22-hours-3841601</link></item>
+<item><title>Security guards can now arrest people - The Daily Star</title><link>https://www.thedailystar.net/news/bangladesh/news/security-guards-can-now-arrest-people-3842361</link></item>
+<item><title>How accurate is Trump&amp;#39;s claim about $29 million? - The Daily Star</title><link>https://www.thedailystar.net/star-multimedia/views-multimedia/news/how-accurate-trumps-claim-about-29-million-3833676</link></item>
+<item><title>Mobille court demolishes five illegal brick kilns in Lalmonirhat - The Daily Star</title><link>https://www.thedailystar.net/environment/news/mobille-court-demolishes-five-illegal-brick-kilns-lalmonirhat-3846221</link></item>
+<item><title>Bangladesh air second worst in the world - The Daily Star</title><link>https://www.thedailystar.net/news/bangladesh/news/bangladesh-air-second-worst-the-world-3845136</link></item>
+<item><title>Elephant, calf die during labour in Rangamati - The Daily Star</title><link>https://www.thedailystar.net/environment/natural-resources/wildlife/news/elephant-calf-die-during-labour-rangamati-3845301</link></item>
+<item><title>Russia seeks continuity of Gazprom’s work in Bangladesh - The Daily Star</title><link>https://www.thedailystar.net/business/news/russia-seeks-continuity-gazproms-work-bangladesh-3845266</link></item>
+<item><title>Russia seeks CA’s support to continue Gazprom’s work - The Daily Star</title><link>https://www.thedailystar.net/news/bangladesh/diplomacy/news/russia-seeks-cas-support-continue-gazproms-work-3845161</link></item>
+<item><title>Bangladesh, Chad were world&amp;#39;s most polluted countries in 2024: WHO - The Daily Star</title><link>https://www.thedailystar.net/environment/news/bangladesh-chad-were-worlds-most-polluted-countries-2024-who-3844756</link></item>
+<item><title>IAEA conducts pre-operational review of Rooppur power plant - The Daily Star</title><link>https://www.thedailystar.net/environment/natural-resources/energy/news/iaea-conducts-pre-operational-review-rooppur-power-plant-3844026</link></item>
+<item><title>5 illegal brick kilns demolished in Kurigram - The Daily Star</title><link>https://www.thedailystar.net/environment/news/5-illegal-brick-kilns-demolished-kurigram-3841911</link></item>
+<item><title>Today&amp;#39;s Gallery (2025.03.13) - The Daily Star</title><link>https://www.thedailystar.net/multimedia/homepage/todays-gallery-20250313-3846676</link></item>
+<item><title>Today&amp;#39;s Gallery (2025.03.12) - The Daily Star</title><link>https://www.thedailystar.net/multimedia/homepage/todays-gallery-20250312-3845611</link></item>
+<item><title>Today&amp;#39;s Gallery (2025.03.11) - The Daily Star</title><link>https://www.thedailystar.net/multimedia/homepage/todays-gallery-20250311-3844641</link></item>
+<item><title>Today&amp;#39;s Gallery (2025.03.10) - The Daily Star</title><link>https://www.thedailystar.net/multimedia/homepage/todays-gallery-20250310-3843776</link></item>
+<item><title>Today&amp;#39;s Gallery (2025.03.09) - The Daily Star</title><link>https://www.thedailystar.net/multimedia/homepage/todays-gallery-20250309-3842926</link></item>
+<item><title>Today&amp;#39;s Gallery (2025.03.08) - The Daily Star</title><link>https://www.thedailystar.net/multimedia/homepage/todays-gallery-20250308-3842146</link></item>
+<item><title>Today&amp;#39;&amp;#39;s Gallery (2025.03.07) - The Daily Star</title><link>https://www.thedailystar.net/multimedia/homepage/todays-gallery-20250307-3841581</link></item>
+<item><title>Today&amp;#39;s Gallery (2025.03.06) - The Daily Star</title><link>https://www.thedailystar.net/multimedia/homepage/todays-gallery-20250306-3840741</link></item>
+<item><title>Today&amp;#39;s Gallery (2025.03.05) - The Daily Star</title><link>https://www.thedailystar.net/multimedia/homepage/todays-gallery-20250305-3839971</link></item>
+<item><title>Today&amp;#39;s Gallery (2025.03.04) - The Daily Star</title><link>https://www.thedailystar.net/multimedia/homepage/todays-gallery-20250304-3839196</link></item>
 </channel></rss>

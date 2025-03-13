@@ -248,8 +248,8 @@ function find_in_textarea_diff_b(csno){
     textarea_top_bottom_b('textarea_diff_'+csno,blstr,-1);
 }
 
-function time_get_diff_b(){
-     return '<span style="font-weight:normal; font-size:small;">'+now_time_str_b()+'</span>';
+function time_get_diff_b(rnd_emoji=true){
+     return '<span style="font-weight:normal; font-size:small;">'+now_time_str_b()+(rnd_emoji?emoji_category_b('human',-1):'')+'</span>';
 }
 
 function compare_textarea_diff_b(compare_lines=false){
