@@ -522,11 +522,13 @@ function rare_old_words_ensentence(cscaption='',show_sentence=false,generate_js=
             var nextyear_days=isLeapYear_b(theyear,1,true);
             var max_in_current_year=(words_searched_arr_global.length+4*remained_days);
             
+            var blpercent=(words_searched_arr_global.length*100/enwords.length).toFixed(2);
             if (cscaption=='例句最少的单词'){
                 local_storage_today_b('estimated_rare_words_count',40,max_in_current_year,'/');
+                local_storage_today_b('rare_words_in_old_words_percent',40,blpercent,'/');
             }
             
-            var remain_str='当前'+cscaption+'占全部旧单词比为 '+(words_searched_arr_global.length*100/enwords.length).toFixed(2)+'%，今年剩余天数 '+remained_days+' 天，按 4个单词/日 计算， '+theyear+' 年内最多产生 '+max_in_current_year+' 个'+cscaption+'，至 '+(theyear+1)+' 年底，最多产生 '+(words_searched_arr_global.length+4*(remained_days+nextyear_days))+' 个';
+            var remain_str='当前'+cscaption+'占全部旧单词比为 '+blpercent+'%，今年剩余天数 '+remained_days+' 天，按 4个单词/日 计算， '+theyear+' 年内最多产生 '+max_in_current_year+' 个'+cscaption+'，至 '+(theyear+1)+' 年底，最多产生 '+(words_searched_arr_global.length+4*(remained_days+nextyear_days))+' 个';
             
             document.getElementById('divhtml').innerHTML='<p>'+progress_list.join(' ')+'</p><p>'+remain_str+'</p>'+enwords_array_to_html_b(words_searched_arr_global,false)+bltextarea;
             

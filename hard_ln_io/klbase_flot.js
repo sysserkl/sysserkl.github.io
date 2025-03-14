@@ -462,6 +462,7 @@ function statistics_data_type_b(data_type,selected_items_filter=''){
             ['enwords_non_ensentence','无例句单词',0,'/'],
             ['enwords_rare_ensentence','当前例句最少单词',0,'/'],
             ['estimated_rare_words_count','例句最少单词年内预估',0,'/'],
+            ['rare_words_in_old_words_percent','例句最少单词占旧单词百分比',0,'/'],
             ['enwords_one_source_ensentence','例句出处唯一的单词',0,'/'],
             ['selenium_enwords_articles','selenium英语单词文章链接数',0,'/'],
             ['enwords_selenium_new_words','selenium 新单词数',0,'/'],
