@@ -203,7 +203,9 @@ function menu_rlater(){
     ];    
     klmenu_statistics.push(menu_container_b(str_t,group_list,'分词：'));        
     
-    var klmenu_link=[];
+    var klmenu_link=[
+    '<a href="https://www.bing.com/translator/" onclick="'+str_t+'" target=_blank>Bing Translator</a>',
+    ];
     if (is_local_b()){
         klmenu_link.push('<a href="'+klwiki_link_b('百度热榜')+'" onclick="'+str_t+'" target=_blank>百度热榜 - WIKI</a>');    
         
