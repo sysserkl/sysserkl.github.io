@@ -190,6 +190,7 @@ function menu_rlater(){
     var klmenu_statistics=[
     '<span class="span_menu" onclick="'+str_t+'tags_editor_rlater();">Tags</span>',   
     '<span class="span_menu" onclick="'+str_t+'efull_get_rlater();">EFULL</span>',
+    '<span class="span_menu" onclick="'+str_t+'rare_enwords_get_rlater();">稀有旧单词</span>',
     '<span class="span_menu" onclick="'+str_t+'statistics_show_rlater();">Statistics</span>',
     '<span class="span_menu" onclick="'+str_t+'split_rlater();">截取最新记录</span>',
     '<span class="span_menu" onclick="'+str_t+'duplication_rlater();">duplication</span>',        
@@ -284,6 +285,10 @@ function jieba_sites_rlater(){
         if (blxl>300){break;}
     }
     tags_websites_rlater(list_t,false,20);
+}
+
+function rare_enwords_get_rlater(){
+    search_websites_rlater('-[^\\x00-\\xff]{3,} +\\b('+en_sentence_count_global.join('|').replace(/\./g,'\\.')+')\\b');
 }
 
 function efull_get_rlater(){

@@ -138,12 +138,12 @@ function import_data_rlater_b(csarray,load_fn_name,cshref=false){
     }
     
     for (let item of csarray){
-        document.write('\n<script src="'+cshref+item+'.js'+today+'"><\/script>\n');
+        document.write('\n<script src="'+cshref+item+'.js'+today+'" onload="console.log(\'loaded:\', this.src);" onerror="console.log(\'failed:\', this.src);"><\/script>\n');
         document.write('<script>\n');
         document.write(load_fn_name+'("'+item+'");\n');
         document.write('<\/SCRIPT>\n');
         imported_files_add_b([cshref+item+'.js']);
-        console.log(cshref+item+'.js'+today);
+        //console.log(cshref+item+'.js'+today);
     }
 }
 
