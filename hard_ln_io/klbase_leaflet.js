@@ -95,7 +95,7 @@ function line_leaflet_b(csomap,islayer=false,cslist=[],cscolor='red',cscaption='
     }
     
     var restore_type='';
-    var oselect=document.getElementById('select_transform');    //line_leaflet_b
+    var oselect=document.getElementById('select_transform');
     if (oselect){
         restore_type=oselect.value;
     } else if (typeof gps_tranform_type_global !== 'undefined'){

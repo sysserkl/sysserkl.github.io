@@ -545,7 +545,6 @@ function rectangle_gps_points(csstr,dotransform=true,layertype='navigation',dopa
                 [lon,lat]=transform_lon_lat_one_dot_b(bltype,lon,lat);            
             }
             
-            //console.log(lon,lat,longline,shortline);
             var orectangle=rectangle_leaflet_b(omap_gps_points_global,true,lon,lat,longline,shortline,blcolor);
             if (layertype=='navigation'){
                 navigation_layer_gps_global.addLayer(orectangle);
