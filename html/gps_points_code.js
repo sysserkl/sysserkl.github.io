@@ -95,6 +95,8 @@ GPS_GPSLongitude:120.45
 function upload_gpx_gps_points(){
     var otextarea=document.getElementById('textarea_gps_points');
     var ogpxfiles=document.getElementById('input_upload_gpx').files;
+    var part_len=parseInt(document.getElementById('input_sub_line_length_gps_points').value.trim()) || -1;
+
     for (let blxl=0,lent=ogpxfiles.length;blxl<lent;blxl++){
         var ofile=ogpxfiles[blxl];
         if (ofile.type!=='application/gpx+xml' && ofile.name.substring(ofile.name.toLowerCase().lastIndexOf('.gpx'),).toLowerCase()!=='.gpx'){
@@ -111,7 +113,7 @@ function upload_gpx_gps_points(){
         gpxFile.readAsText(ofile);
         gpxFile.onload = function (){
             otextarea.value = this.result;
-            read_gpx_gps_points(this.result,this.fileName.substring(0,this.fileName.lastIndexOf('.')));
+            read_gpx_gps_points(this.result,this.fileName.substring(0,this.fileName.lastIndexOf('.')),false,part_len);
         }
     }
 }
@@ -242,15 +244,18 @@ function trk_filter_gps_points(cskey=''){
     }
 }
 
-function read_gpx_gps_points(csstr,csname='',cscolors=false){
+function read_gpx_gps_points(csstr,csname='',cscolors=false,part_len=false){
     var bltype=document.getElementById('select_transform').value;   
+    if (part_len===false){
+        part_len=parseInt(document.getElementById('input_sub_line_length_gps_points').value.trim()) || -1;
+    }
     
     if (cscolors===false){
         cscolors=colors_get_gps_points(false);
         //cscolors 形似 [ "blue:red:green:brown:cyan:black:purple", "cyan", "red" ] - 保留注释
     }
     
-    var all_points=gpx_file_draw_leaflet_b(navigation_layer_gps_global,omap_gps_points_global,csstr,bltype,csname,cscolors);
+    var all_points=gpx_file_draw_leaflet_b(navigation_layer_gps_global,omap_gps_points_global,csstr,bltype,csname,cscolors,part_len);
 
     if (klmenu_check_b('span_gpx_2_latlon',false)){
         document.getElementById('textarea_gps_points').value = all_points.join('\n');
@@ -490,7 +495,6 @@ function circle_gps_points(csstr,dotransform=true,layertype='navigation',dopanto
     if (old_title===false){
         old_title=document.title;
     }
-    //var is_fill=klmenu_check_b('span_circle_fill_gps_points',false);
     var fill_opacity=parseFloat(document.getElementById('input_fill_opacity_gps_points').value.trim());
     sub_circle_gps_points_one_row();
 }
@@ -1649,11 +1653,10 @@ function menu_gps_points(){
     var klmenu_config=[
     '<span id="span_colors_gps_points" class="span_menu" style="font-size:small;word-break:break-all;" onclick="'+str_t+'colors_settings_gps_points();">line color: '+colors_default_value_gps_points()+'</span>',
     '<span class="span_menu"><select onchange="quick_buttons_select_gps_points(this.value);"><option></option><option>lat,lon处理</option></select></span>',
-    '<span class="span_menu">fill opacity: <input type="number" id="input_fill_opacity_gps_points" value="0" min="0" max="1" step="0.1" /></span>',
-
-    //'<span id="span_circle_fill_gps_points" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ circle 填充</span>',        
+    '<span class="span_menu">fill opacity: <input type="number" id="input_fill_opacity_gps_points" value="0" min="0" max="1" step="0.1" /> 线路分段(m): <input type="number" id="input_sub_line_length_gps_points" value="0" min="100" step="100" style="width:5rem;" /></span>',
     ];
-    
+
+
     group_list=[
     ['距离圈设置','circle_distance_settings_gps_points();',true],
     ['缩放设置','zoom_gps_points();',true],
