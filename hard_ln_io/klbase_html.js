@@ -173,3 +173,42 @@ function html_render_js_b(js_list,run_fn=false){
         }
     }
 }
+
+function js_and_htm_file_render_b(cslist){
+    function sub_js_and_htm_file_render_b_html(){
+        var blsource='';
+        for (let afile of cslist){
+            if (afile[0].endsWith('.htm') || afile[0].endsWith('.html')){
+                blsource=afile[1].split('\n');
+                break;
+            }
+        }
+        html_head_body_render_b(blsource);    
+    }
+    
+    function sub_js_and_htm_file_render_b_wait(cstimes,fn_name){
+        if (cstimes>5){return;}
+        
+        if (eval('typeof '+fn_name) == 'undefined'){
+            setTimeout(function (){sub_js_and_htm_file_render_b_wait(cstimes+1,fn_name);},1000);
+            return;
+        }
+
+        console.log('等待 '+fn_name+' 次数',cstimes);      
+        
+        sub_js_and_htm_file_render_b_html();
+    }
+    
+    var blfound=false;
+    for (let afile of cslist){
+        if (afile[0].endsWith('.js')){
+            html_render_js_b(afile[1].split('\n'),sub_js_and_htm_file_render_b_wait);
+            blfound=true;
+            break;
+        }
+    }
+    
+    if (!blfound){
+        sub_js_and_htm_file_render_b_html();
+    }
+}

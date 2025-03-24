@@ -487,3 +487,29 @@ function idb_clear_bigfile_b(db,do_type='',cskey='',run_fn=false){
         return new Promise((resolve, reject) => {reject(new Error('User did not confirm data clearing.'));});    
     } 
 }
+
+function read_bigfile_standalone_from_idb_b(run_fn=false){
+    function read_bigfile_standalone_from_idb_b_htm(csstr){
+        if (csstr==''){
+            alert('未获得 '+fname+' .htm');
+        } else {
+            cslist.push(['.htm',csstr]);
+            if (typeof run_fn == 'function'){
+                run_fn(cslist);
+            }
+        }
+    }
+    
+    function read_bigfile_standalone_from_idb_b_js(csstr){
+        if (csstr==''){
+            alert('未获得 '+fname+' .js');
+        } else {
+            cslist.push(['.js',csstr]);
+            idb_bigfile_b('read','content',fname+'.htm',read_bigfile_standalone_from_idb_b_htm);
+        }
+    }
+    
+    var fname='bigfile_standalone';
+    var cslist=[];
+    idb_bigfile_b('read','content',fname+'.js',read_bigfile_standalone_from_idb_b_js);
+}
