@@ -1158,16 +1158,18 @@ function group_count_offline_file_browser(){
         }
         result_t[blkey].push(arow);
     }    
-    
     var blmin=parseInt(document.getElementById('input_group_count_min_ofb').value) || 1;
     var blmax=parseInt(document.getElementById('input_group_count_max_ofb').value) || blmin;
     
+    var blcount1=offline_file_data_current_global.length;
     offline_file_data_current_global=[];
     for (let key in result_t){
         if (result_t[key].length<blmin){continue;}
         if (!isNaN(blmax) && result_t[key].length>blmax){continue;}
         offline_file_data_current_global=offline_file_data_current_global.concat(result_t[key]);
     }
+    alert('分组前：'+blcount1+'；分组后：'+offline_file_data_current_global.length);
+    
     current_2_html_offline_file_browser();
 }
 
