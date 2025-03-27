@@ -8,316 +8,249 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Wed, 26 Mar 2025 12:55:27 +0800</lastBuildDate>
-<item><title>Feel Like Something’s Missing? Try to Live an Interesting Life - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/feel_like_somethings_missing_try_to_live_an_interesting_life</link></item>
-<item><title>Can We Reduce Political Antagonism by Promoting Trust? - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/can_we_reduce_political_antagonism_by_promoting_trust</link></item>
-<item><title>Why Gender Diversity at Work is Good for Everyone - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/why_gender_diversity_at_work_is_good_for_everyone</link></item>
-<item><title>World Happiness Report Highlights the Importance of Everyday Kindness - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/world_happiness_report_highlights_everyday_kindness</link></item>
-<item><title>Happiness Break: Find Calm When You Can’t Clear Your Mind, With Lama Rod Owens - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/podcasts/item/happiness_break_find_calm_when_you_cant_clear_your_mind_with_lama_rod_owens</link></item>
-<item><title>How to Stop Dehumanization Before It Goes Too Far - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/how_to_stop_dehumanization_before_it_goes_too_far</link></item>
-<item><title>Who Are the Most Lonely Americans? - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/who_are_the_most_lonely_americans</link></item>
-<item><title>How to Teach Mindfulness in a More Social Way - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/how_to_teach_mindfulness_in_a_more_social_way</link></item>
-<item><title>Why Is Loneliness So Bad for Your Health? - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/why_is_loneliness_so_bad_for_your_health</link></item>
-<item><title>How Music Can Hold and Heal Us - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/podcasts/item/how_music_can_hold_and_heal_us</link></item>
-<item><title>How to Get Good at Conflict - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/how_to_get_good_at_conflict</link></item>
-<item><title>The Scientific Case for Diversity, Equity, and Inclusion - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/the_scientific_case_for_diversity_equity_and_inclusion</link></item>
-<item><title>After a Racist Comment, I Chose to Start a Conversation - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/after_a_racist_comment_i_chose_to_start_a_conversation</link></item>
-<item><title>Can Empathy Help You Be More Creative? - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/can_empathy_help_you_be_more_creative</link></item>
-<item><title>Does Ambition Breed Dishonesty? - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/does_ambition_breed_dishonesty</link></item>
-<item><title>Greater Good Resources for Women’s Well-Being - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/greater_good_resources_for_womens_well_being</link></item>
-<item><title>Making Music With Your Body, With Keith Terry | Happiness Break - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/podcasts/item/happiness_break_making_music_with_your_body_with_keith_terry</link></item>
-<item><title>Is Climate Change Hurting Our Relationships? - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/is_climate_change_hurting_our_relationships</link></item>
-<item><title>How Brain Activity Can Reveal What Makes You Thrive - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/how_brain_activity_can_reveal_what_makes_you_thrive</link></item>
-<item><title>How to Move Beyond Outrage Toward Understanding - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/how_to_move_beyond_outrage_toward_understanding</link></item>
-<item><title>PopTranslate - I'm TualatriX</title><link>https://imtx.me/poptranslate/</link></item>
-<item><title>开发 PopTranslate 背后的故事 - I'm TualatriX</title><link>https://imtx.me/blog/the-story-behind-the-development-of-poptranslate/</link></item>
-<item><title>India ditches its &amp;#39;Google Tax&amp;#39;, perhaps to tickle Trump and dodge tariffs - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/26/india_drops_digital_ads_tax/</link></item>
-<item><title>Revenge of the nerds: Boffins sue to undo Trump science funding cuts - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/25/us_funding_science_cuts/</link></item>
-<item><title>God didn&amp;#39;t have a plan for Gelsinger at Intel. Maybe there is one for his new gig, Gloo - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/25/pat_gelsinger_gloo/</link></item>
-<item><title>Judge halts DOGE&amp;#39;s union personal data grab at OPM, Treasury, Education - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/25/doge_cannot_access_pii/</link></item>
-<item><title>Samsung co-CEO Han Jong-hee dies of heart attack at 63 - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/25/samsung_co_ceo_dies/</link></item>
-<item><title>ReactOS emits release 0.4.15 – its first since 2021 - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/25/reactos_drops_release_0415/</link></item>
-<item><title>There are perhaps 10,000 reasons to doubt Oracle Cloud&amp;#39;s security breach denial - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/25/oracle_breach_update/</link></item>
-<item><title>US Army’s laser obsession continues with yet another drone-zapper deal - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/25/us_army_laser_weapon/</link></item>
-<item><title>Interest in SAP cloud migration triples in its biz heartland - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/25/rise_with_sap_dsag/</link></item>
-<item><title>Alibaba exec warns of overheating AI infrastructure market - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/25/alibaba_ai_infrastructure/</link></item>
-<item><title>Microsoft&amp;#39;s many Outlooks are confusing users – including its own employees - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/25/too_many_outlooks/</link></item>
-<item><title>Infosec pro Troy Hunt HasBeenPwned in Mailchimp phish - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/25/troy_hunt_mailchimp_phish/</link></item>
-<item><title>EU OS drafts a locked-down Linux blueprint for Eurocrats - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/25/eu_os_free_govt_desktop/</link></item>
-<item><title>Palantir suggests &amp;#39;common operating system&amp;#39; for UK govt data - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/25/palantir_covid_inquiry_comments/</link></item>
-<item><title>4-day work-week pilot due in tech land by early summer - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/25/fourdayworkweek_pilot_due_in_tech/</link></item>
-<item><title>London&amp;#39;s poor 5G blamed on spectrum, investment, and timing of Huawei ban - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/25/london_poor_5g_research/</link></item>
-<item><title>You know that generative AI browser assistant extension is probably beaming everything to the cloud, right? - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/25/generative_ai_browser_extensions_privacy/</link></item>
-<item><title>VanHelsing ransomware emerges to put a stake through your Windows heart - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/25/vanhelsing_ransomware_russia/</link></item>
-<item><title>Hm, why are so many DrayTek routers stuck in a bootloop? - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/25/draytek_routers_bootloop/</link></item>
-<item><title>Linus Torvalds forgot to release Linux 6.14 for a whole day - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/25/linux_6_14_day_late/</link></item>
-<item><title>Public-facing Kubernetes clusters at risk of takeover thanks to Ingress-Nginx flaw - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/25/kubernetes_flaw_rce_risk/</link></item>
-<item><title>Top Trump officials text secret Yemen airstrike plans to journo in Signal SNAFU - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/24/signal_atlantic_security_disaster/</link></item>
-<item><title>A Wake-Up Call for State Governments - Law &amp; Liberty</title><link>https://lawliberty.org/a-wake-up-call-for-state-governments/</link></item>
-<item><title>Social Science and Big Government - Law &amp; Liberty</title><link>https://lawliberty.org/social-science-and-big-government/</link></item>
-<item><title>Smashing the Terahertz Limit - IEEE Spectrum</title><link>https://spectrum.ieee.org/terahertz-waves-2671362433</link></item>
-<item><title>Nvidia Backs Key Optical Tech - IEEE Spectrum</title><link>https://spectrum.ieee.org/co-packaged-optics</link></item>
-<item><title>AlphaXiv: Science&amp;#39;s Public Square - IEEE Spectrum</title><link>https://spectrum.ieee.org/alphaxiv</link></item>
-<item><title>Meta&amp;#39;s Cable Aims to Avoid Perils - IEEE Spectrum</title><link>https://spectrum.ieee.org/undersea-internet-cables-meta-waterworth</link></item>
-<item><title>105 Days With an Electromagnetic Heart - IEEE Spectrum</title><link>https://spectrum.ieee.org/artificial-heart</link></item>
-<item><title>EPICS in IEEE Marked 15th Anniversary with Record Achievements - IEEE Spectrum</title><link>https://spectrum.ieee.org/epics-in-ieee-15th-anniversary</link></item>
-<item><title>Scaling Agile for Hardware: The Right Framework for Your Organization - IEEE Spectrum</title><link>https://engineeringresources.spectrum.ieee.org/free/w_mahd01/prgm.cgi</link></item>
-<item><title>IEEE History - IEEE Spectrum</title><link>https://spectrum.ieee.org/the-institute/collections/ieee-history/</link></item>
-<item><title>How Google and Intel use Calibre DesignEnhancer to reduce IR drop and improve reliability - IEEE Spectrum</title><link>https://engineeringresources.spectrum.ieee.org/free/w_engx315/prgm.cgi</link></item>
-<item><title>Develop Vehicle-to-Grid (V2G) Systems with Modeling and Simulation - IEEE Spectrum</title><link>https://engineeringresources.spectrum.ieee.org/free/w_math30/prgm.cgi</link></item>
-<item><title>Tips on How to Elevate Your Career - IEEE Spectrum</title><link>https://spectrum.ieee.org/collections/tips-on-how-to-elevate-your-career/</link></item>
-<item><title>Judgments unwanted in ongoing coup - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#24_March_2025_(Judgements_unwanted_in_ongoing_coup)</link></item>
-<item><title>Urgent: Protect SNAP - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#22_March_2025_(Urgent:_Protect_SNAP)</link></item>
-<item><title>Convicting UK thug of manslaughter - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#22_March_2025_(Convicting_UK_thug_of_manslaughter)</link></item>
-<item><title>US Institute of Peace - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#22_March_2025_(US_Institute_of_Peace)</link></item>
-<item><title>Return of trans-women prisoners to women&amp;#39;s facilities - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#22_March_2025_(Return_of_trans-women_prisoners_to_women&amp;#39;s_facilities)</link></item>
-<item><title>Temporary cease-fire in Gaza - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#22_March_2025_(Temporary_cease-fire_in_Gaza)</link></item>
-<item><title>Former Conservative judge on Trump - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#22_March_2025_(Former_Conservative_judge_on_Trump)</link></item>
-<item><title>(satire) Law that woman talk with baby voice - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#22_March_2025_((satire)_Law_that_woman_talk_with_baby_voice)</link></item>
-<item><title>Unilever&amp;#39;s ousted CEO - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#22_March_2025_(Unilever&amp;#39;s_ousted_CEO)</link></item>
-<item><title>Illegal firing of FTC commissioners - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#22_March_2025_(Illegal_firing_of_FTC_commissioners)</link></item>
-<item><title>Judge ordered government to reinstate USaid workers - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#22_March_2025_(Judge_ordered_government_to_reinstate_USaid_workers)</link></item>
-<item><title>Democratic party supporters condemned Senator Schumer - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#22_March_2025_(Democratic_party_supporters_condemned_Senator_Schumer)</link></item>
-<item><title>US cruelty toward Europeans entering US - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#22_March_2025_(US_cruelty_toward_Europeans_entering_US)</link></item>
-<item><title>Musk firing workers preventing bloated tech contracts - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#22_March_2025_(Musk_firing_workers_preventing_bloated_tech_contracts)</link></item>
-<item><title>Glacier meltdown risks food and water supply - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#22_March_2025_(Glacier_meltdown_risks_food_and_water_supply)</link></item>
-<item><title>Legality of phone tracking program - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#22_March_2025_(Legality_of_phone_tracking_program)</link></item>
-<item><title>Judge blocks musk from social security records - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#22_March_2025_(Judge_blocks_musk_from_social_security_records)</link></item>
-<item><title>Urgent: FCC firings - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#22_March_2025_(Urgent:_FCC_firings)</link></item>
-<item><title>Ransom note from US government to Columbia University - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#21_March_2025_(Ransom_note_from_US_government_to_Columbia_University)</link></item>
-<item><title>Erdoğan blocked main rival from running - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#21_March_2025_(Erdoğan_blocked_main_rival_from_running)</link></item>
-<item><title>Nearly 25,000 federal workers rehired - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#21_March_2025_(Nearly_25,000_federal_workers_rehired)</link></item>
-<item><title>Ruling on dismissing trans people from military - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#21_March_2025_(Ruling_on_dismissing_trans_people_from_military)</link></item>
-<item><title>&amp;quot;Unprecedented&amp;quot; climate disasters in 2024 - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#21_March_2025_(Unprecedented_climate_disasters_in_2024)</link></item>
-<item><title>Film &amp;quot;No Other Land&amp;quot; - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#20_March_2025_(Film_No_Other_Land)</link></item>
-<item><title>Callousness and cruelty of Zuckerberg - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#20_March_2025_(Callousness_and_cruelty_of_Zuckerberg)</link></item>
-<item><title>Tariffs paid by the poor - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#20_March_2025_(Tariffs_paid_by_the_poor)</link></item>
-<item><title>Labor redefined as &amp;quot;party of work&amp;quot; - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#20_March_2025_(Labor_redefined_as_party_of_work)</link></item>
-<item><title>Britain could unlock house construction - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#20_March_2025_(Britain_could_unlock_house_construction)</link></item>
-<item><title>(satire) Quarantine for having watched &amp;quot;Will and Grace&amp;quot; - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#20_March_2025_((satire)_Quarantine_for_having_watched_Will_and_Grace)</link></item>
-<item><title>Joke that US should return Statue of Liberty - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#20_March_2025_(Joke_that_US_should_return_Statue_of_Liberty)</link></item>
-<item><title>Asylum seekers from Russia jailed by US - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#20_March_2025_(Asylum_seekers_from_Russia_jailed_by_US)</link></item>
-<item><title>How Switzerland transformed its rivers - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#20_March_2025_(How_Switzerland_transformed_its_rivers)</link></item>
-<item><title>Parasite companies - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#20_March_2025_(Parasite_companies)</link></item>
-<item><title>Governor Newsom hosts a video show - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#20_March_2025_(Governor_Newsom_hosts_a_video_show)</link></item>
-<item><title>National Cancer Institute cannot publish without approval - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#20_March_2025_(National_Cancer_Institute_cannot_publish_without_approval)</link></item>
-<item><title>False fears about measles vaccine - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#20_March_2025_(False_fears_about_measles_vaccine)</link></item>
-<item><title>Immigrants deported to Panama prison - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#20_March_2025_(Immigrants_deported_to_Panama_prison)</link></item>
-<item><title>An activist&amp;#39;s phone under surveillance - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#20_March_2025_(An_activist&amp;#39;s_phone_under_surveillance)</link></item>
-<item><title>Hotel developer who could testify against NYC mayor Adams - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#20_March_2025_(Hotel_developer_who_could_testify_against_NYC_mayor_Adams)</link></item>
-<item><title>Saboteur-in-chief wants to cancel EPA rules - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#20_March_2025_(Saboteur-in-chief_wants_to_cancel_EPA_rules)</link></item>
-<item><title>Dissent repressed and labeled &amp;quot;antisemitism&amp;quot; - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#20_March_2025_(Dissent_repressed_and_labeled_antisemitism)</link></item>
-<item><title>Canadian woman jailed in deportation prison - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#20_March_2025_(Canadian_woman_jailed_in_deportation_prison)</link></item>
-<item><title>Climate protesters should not have to express remorse - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#20_March_2025_(Climate_protesters_should_not_have_to_express_remorse)</link></item>
-<item><title>Deporting without due process - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#20_March_2025_(Deporting_without_due_process)</link></item>
-<item><title>Authoritarian checklist - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#20_March_2025_(Authoritarian_checklist)</link></item>
-<item><title>Rushing to deport Venezuelans - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#20_March_2025_(Rushing_to_deport_Venezuelans)</link></item>
-<item><title>Air-traffic control contract for Musk - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#20_March_2025_(Air-traffic_control_contract_for_Musk)</link></item>
-<item><title>Rural America broadband for Musk - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#20_March_2025_(Rural_America_broadband_for_Musk)</link></item>
-<item><title>Israel population ebbs and flows - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#20_March_2025_(Israel_population_ebbs_and_flows)</link></item>
-<item><title>Russian sabotage in LTU and POL - Richard Stallman</title><link>https://stallman.org/archives/2025-jan-apr.html#20_March_2025_(Russian_sabotage_in_LTU_and_POL)</link></item>
-<item><title>Linux Kernel 6.14 Released: Key Updates, Fixes and Improvements - OSTechNix</title><link>https://ostechnix.com/linux-kernel-6-14-released/</link></item>
-<item><title>Control Panels - OSTechNix</title><link>https://ostechnix.com/category/control-panels/</link></item>
-<item><title>Virtual Private Servers - OSTechNix</title><link>https://ostechnix.com/category/virtual-private-servers/</link></item>
-<item><title>CloudPanel: The Best Free Hosting Control Panel to Easily Manage Your Server - OSTechNix</title><link>https://ostechnix.com/cloudpanel-the-best-free-hosting-control-panel-to-easily-manage-your-server/</link></item>
-<item><title>Fedora Asahi Remix 42 Beta Released: Run Linux on Apple Silicon Macs - OSTechNix</title><link>https://ostechnix.com/fedora-asahi-remix-42-beta-released/</link></item>
-<item><title>GNOME 48 “Bengaluru” Released with Battery Saver, Digital Wellbeing Tools, HDR Support And More! - OSTechNix</title><link>https://ostechnix.com/gnome-48-bengaluru-released/</link></item>
-<item><title>Fedora Linux 42 Beta is Officially Released - OSTechNix</title><link>https://ostechnix.com/fedora-linux-42-beta-is-officially-released/</link></item>
-<item><title>How To Replace Text In Multiple Files Using A Bash Script In Linux - OSTechNix</title><link>https://ostechnix.com/replace-text-in-multiple-files-using-bash-script/</link></item>
-<item><title>XPipe: Access and Manage Your Entire Server Infrastructure Locally - OSTechNix</title><link>https://ostechnix.com/manage-server-infrastructure-with-xpipe/</link></item>
-<item><title>Improving Firefox Stability in the Enterprise by Reducing DLL Injection - Mozilla Hacks</title><link>https://hacks.mozilla.org/2025/03/improving-firefox-stability-in-the-enterprise-by-reducing-dll-injection/</link></item>
-<item><title>Aggregating Time Use Microdata - FlowingData</title><link>https://flowingdata.com/2025/03/25/aggregating-time-use-microdata/</link></item>
-<item><title>Improved Relative Time, a comparison to many more things in the timeline - FlowingData</title><link>https://flowingdata.com/2025/03/25/improved-relative-time-a-comparison-to-many-more-things-in-the-timeline/</link></item>
-<item><title>皮娜/Pina.2011.IFC.Films.chs.srt - 射手网(伪)</title><link>http://assrt.net/xml/sub/666/666841.xml</link></item>
-<item><title>Colossus/Kolos - 射手网(伪)</title><link>http://assrt.net/xml/sub/666/666840.xml</link></item>
-<item><title>転生したらスライムだった件/關於我轉生變成史萊姆這檔事S1-S3/[Moozzi2] - 關於我轉生變成史萊姆這檔事 S1+S2+劇場 - 射手网(伪)</title><link>http://assrt.net/xml/sub/666/666839.xml</link></item>
-<item><title>夏威夷神探第五季第十四集/Magnum, P.I. - S05E14 - 射手网(伪)</title><link>http://assrt.net/xml/sub/666/666838.xml</link></item>
-<item><title>夏威夷神探第二季第九集/Magnum, P.I. - S02E09 - 射手网(伪)</title><link>http://assrt.net/xml/sub/666/666836.xml</link></item>
-<item><title>夏威夷神探第一季第十五集/Magnum, P.I. - S01E15 - 射手网(伪)</title><link>http://assrt.net/xml/sub/666/666837.xml</link></item>
-<item><title>[OVA 2012.12][Holy Knight OVA][神聖騎士][ホーリーナイト][01.02][250325] - 射手网(伪)</title><link>http://assrt.net/xml/sub/666/666835.xml</link></item>
-<item><title>[完][2019.07][Senki Zesshou Symphogear XV][戰姬絕唱 Symphogear XV(S5)][戦姫絶唱シンフォギア][01_13][250325]/[完][2019.07][Senki Zesshou Symphogear XV][戰姬絕唱 Symphogear XV(S5)][01.13][250325] - 射手网(伪)</title><link>http://assrt.net/xml/sub/666/666833.xml</link></item>
-<item><title>[完][2017.07][Senki Zesshou Symphogear AXZ][戰姬絕唱 Symphogear AXZ(S4)][戦姫絶唱シンフォギア][01_13][250325]/[完][2017.07][Senki Zesshou Symphogear AXZ][戰姬絕唱 Symphogear AXZ(S4)][01.13][250325] - 射手网(伪)</title><link>http://assrt.net/xml/sub/666/666834.xml</link></item>
-<item><title>スクールランブル一学期补习/校园迷糊大王 一学期补习 - 射手网(伪)</title><link>http://assrt.net/xml/sub/666/666832.xml</link></item>
-<item><title>白莲花度假村.The.White.Lotus.S03E06.Denials.1080p.AMZN.WEB-DL.DDP5.1.H.264-NTb/白莲花度假村.The.White.Lotus.S03E06.Denials.1080p.AMZN.WEB-DL.DDP5.1.H.264-NTb - 射手网(伪)</title><link>http://assrt.net/xml/sub/699/699513.xml</link></item>
-<item><title>Megamind/Megamind/麦克迈：超能坏蛋/毛百万/超级大坏蛋.2010.台配完美特效 - 射手网(伪)</title><link>http://assrt.net/xml/sub/666/666831.xml</link></item>
-<item><title>[完][2020.01][2021.08][Magia Record][魔法紀錄 魔法少女小圓外傳][S1 01.13][S2 01.08][250323] - 射手网(伪)</title><link>http://assrt.net/xml/sub/666/666829.xml</link></item>
-<item><title>Prima.Facie.2022.WEB-DL.1080p.x264.AAC/Prima.Facie.2022.WEB-DL.1080p.x264.AAC - 射手网(伪)</title><link>http://assrt.net/xml/sub/699/699512.xml</link></item>
-<item><title>/Choose.Me.1984.1080p.BluRay.x264.AAC-[YTS - 射手网(伪)</title><link>http://assrt.net/xml/sub/666/666830.xml</link></item>
-<item><title>[完][2018.10][Golden Kamuy][黄金神威][ゴールデンカムイ][S1 01.12][S2 01.12][250323] - 射手网(伪)</title><link>http://assrt.net/xml/sub/666/666828.xml</link></item>
-<item><title>[完][2020.01][Toaru Kagaku no Railgun T][科學超電磁炮T S3][とある科学の超電磁砲][01_25][250323]/[完][2020.01][Toaru Kagaku no Railgun T][科學超電磁炮T S3][01.25][250323] - 射手网(伪)</title><link>http://assrt.net/xml/sub/666/666827.xml</link></item>
-<item><title>Harley.Quinn.S05E10.1080p.WEB.h264-EDITH【本季终】/Harley.Quinn.S05E10.1080p.WEB.h264-EDITH【本季终】 - 射手网(伪)</title><link>http://assrt.net/xml/sub/699/699511.xml</link></item>
-<item><title>匹兹堡医护前线.The.Pitt.S01E12.6.00.P.M.1080p.AMZN.WEB-DL.DDP5.1.H.264-FLUX/匹兹堡医护前线.The.Pitt.S01E12.6.00.P.M.1080p.AMZN.WEB-DL.DDP5.1.H.264-FLUX - 射手网(伪)</title><link>http://assrt.net/xml/sub/699/699510.xml</link></item>
-<item><title>金装律师：洛杉矶.Suits.LA.S01E04.Batman.Returns.1080p.Max.WEB-DL.DDP.5.1.H.264/金装律师：洛杉矶.Suits.LA.S01E04.Batman.Returns.1080p.Max.WEB-DL.DDP.5.1.H.264 - 射手网(伪)</title><link>http://assrt.net/xml/sub/699/699507.xml</link></item>
-<item><title>人生切割术.Severance.S02E10.Cold.Harbor.1080p.ATVP.WEB-DL.DDP5.1.Atmos.H.264-Kitsune/人生切割术.Severance.S02E10.Cold.Harbor.1080p.ATVP.WEB-DL.DDP5.1.Atmos.H.264-Kitsune - 射手网(伪)</title><link>http://assrt.net/xml/sub/699/699506.xml</link></item>
-<item><title>Donersen.Islik.Cal.1992.RESTORED.1080p.BEIN.WEB-DL.AAC2.0.H2/Donersen.Islik.Cal.1992.RESTORED.1080p.BEIN.WEB-DL.AAC2.0.H2 - 射手网(伪)</title><link>http://assrt.net/xml/sub/699/699505.xml</link></item>
-<item><title>时光之轮.The.Wheel.of.Time.S03E04.The.Road.to.the.Spear.1080p.AMZN.WEB-DL.DDP5.1.Atmos.H.264-FLUX/时光之轮.The.Wheel.of.Time.S03E04.The.Road.to.the.Spear.1080p.AMZN.WEB-DL.DDP5.1.Atmos.H.264-FLUX - 射手网(伪)</title><link>http://assrt.net/xml/sub/699/699504.xml</link></item>
-<item><title>侠探杰克.Reacher.S03E07.L.A.Story.1080p.AMZN.WEB-DL.DDP5.1.H.264-NTb/侠探杰克.Reacher.S03E07.L.A.Story.1080p.AMZN.WEB-DL.DDP5.1.H.264-NTb - 射手网(伪)</title><link>http://assrt.net/xml/sub/699/699503.xml</link></item>
-<item><title>Layer.Cake.2004.1080p.BluRay.x264.YIFY/Layer.Cake.2004.1080p.BluRay.x264.YIFY - 射手网(伪)</title><link>http://assrt.net/xml/sub/699/699502.xml</link></item>
-<item><title>白宫杀人事件.The Residence S01 1080p WEB H264-SuccessfulCrab/白宫杀人事件.The Residence S01 1080p WEB H264-SuccessfulCrab - 射手网(伪)</title><link>http://assrt.net/xml/sub/699/699501.xml</link></item>
-<item><title>毒窃之徒.Dope.Thief.S01E03.Run.Die.or.Relapse.1080p.ATVP.WEB-DL.DDP5.1.H.264-NTb/毒窃之徒.Dope.Thief.S01E03.Run.Die.or.Relapse.1080p.ATVP.WEB-DL.DDP5.1.H.264-NTb - 射手网(伪)</title><link>http://assrt.net/xml/sub/699/699500.xml</link></item>
-<item><title>暴力街区.Brick.Mansions.2014.1080p.BluRay.REMUX.AVC.DTS-HD.MA.5.1-RARBG/暴力街区.Brick.Mansions.2014.1080p.BluRay.REMUX.AVC.DTS-HD.MA.5.1-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/699/699499.xml</link></item>
-<item><title>夜魔侠：重生.Daredevil.Born.Again.S01E04.1080p.DSNP.WEB-DL.DDP5.1.Atmos.H.264-FLUX/夜魔侠：重生.Daredevil.Born.Again.S01E04.1080p.DSNP.WEB-DL.DDP5.1.Atmos.H.264-FLUX - 射手网(伪)</title><link>http://assrt.net/xml/sub/699/699498.xml</link></item>
-<item><title>反恐特警组.S.W.A.T.2017.S08E13.1080p.x265-ELiTE【人人原创字幕】/反恐特警组.S.W.A.T.2017.S08E13.1080p.x265-ELiTE【人人原创字幕】 - 射手网(伪)</title><link>http://assrt.net/xml/sub/699/699497.xml</link></item>
-<item><title>人生切割术 第二季/人生切割术/生活割离术/Severance S02 2160p ATVP WEB-DL DDP5 1 Atmos H 265-FLUX - 射手网(伪)</title><link>http://assrt.net/xml/sub/666/666826.xml</link></item>
-<item><title>Forbidden Empire/魔鬼的精神/viy/Forbidden.Empire.2014.DUBBED.1080p.WEBRip.x265-RARBG.chs - 射手网(伪)</title><link>http://assrt.net/xml/sub/666/666825.xml</link></item>
-<item><title>おにいちゃんのハナビ/Fireworks from the Heart/烟花·语/[哥哥的烟火].Fireworks.From.The.Heart.2010.DVDRip.x264.AC3-LP[bushjrusa] - 射手网(伪)</title><link>http://assrt.net/xml/sub/666/666823.xml</link></item>
-<item><title>挑战/Challenge/Vyzov/Вызов.2023.WEB-DL.OKKO.SDR.2160p-SOFCJ.ass - 射手网(伪)</title><link>http://assrt.net/xml/sub/666/666824.xml</link></item>
-<item><title>狼人/Wolf.Man.2025.1080p.BluRay - 射手网(伪)</title><link>http://assrt.net/xml/sub/666/666822.xml</link></item>
-<item><title>OVA SK∞ エスケーエイト EXTRA PART/SK8 the Infinity Extra Part/OVA 无限滑板 EXTRA PART - 射手网(伪)</title><link>http://assrt.net/xml/sub/666/666821.xml</link></item>
-<item><title>法式火锅/The.Taste.of.Things.2023.FRA.BluRay - 射手网(伪)</title><link>http://assrt.net/xml/sub/666/666820.xml</link></item>
-<item><title>[完][2018.04][Wotaku ni Koi wa Muzukashii (ヲタクに恋は難し)][宅男腐女戀愛真難.阿宅的戀愛太難][01.11+OVA01.03][250319] - 射手网(伪)</title><link>http://assrt.net/xml/sub/666/666819.xml</link></item>
-<item><title>水星领航员第三季/ARIA The Origination - 射手网(伪)</title><link>http://assrt.net/xml/sub/666/666818.xml</link></item>
-<item><title>[完][2019.01][Boogiepop wa Warawanai][ブギーポップは笑わない][不吉波普不笑_幻影死神][01_18][250319]/[完][2019.01][Boogiepop wa Warawanai][不吉波普不笑.幻影死神][01.18][250319] - 射手网(伪)</title><link>http://assrt.net/xml/sub/666/666816.xml</link></item>
-<item><title>/My.Friend.Irma.Goes.West.1950.1080p.BluRay.x264.AAC-[YTS - 射手网(伪)</title><link>http://assrt.net/xml/sub/666/666817.xml</link></item>
-<item><title>《美国偶像》(American Idol)/American.Idol.S23E03.1080p.HULU.WEB-DL.DDP5.1.H.264-deadorbit - 射手网(伪)</title><link>http://assrt.net/xml/sub/666/666815.xml</link></item>
-<item><title>【影世绘字幕组第006号作品】阿尔泽.Arzé.2024/【影世绘字幕组第006号作品】阿尔泽.Arzé.2024 - 射手网(伪)</title><link>http://assrt.net/xml/sub/699/699495.xml</link></item>
-<item><title>金装律师：洛杉矶.Suits.L.A.S01E04.Batman.Returns.1080p.AMZN.WEB-DL.DDP5.1.H.264-FLUX/金装律师：洛杉矶.Suits.L.A.S01E04.Batman.Returns.1080p.AMZN.WEB-DL.DDP5.1.H.264-FLUX - 射手网(伪)</title><link>http://assrt.net/xml/sub/699/699494.xml</link></item>
-<item><title>时光之轮302“猩红之谜”/时光之轮302“猩红之谜” - 射手网(伪)</title><link>http://assrt.net/xml/sub/699/699493.xml</link></item>
-<item><title>白莲花度假村.The.White.Lotus.S03E05.Full-Moon.Party.1080p.AMZN.WEB-DL.DDP5.1.H.264-NTb/白莲花度假村.The.White.Lotus.S03E05.Full-Moon.Party.1080p.AMZN.WEB-DL.DDP5.1.H.264-NTb - 射手网(伪)</title><link>http://assrt.net/xml/sub/699/699492.xml</link></item>
-<item><title>Code.of.a.Killer.S01.1080p.AMZN.WEBRip.DDP2.0.x264-NTb[rartv]/Code.of.a.Killer.S01.1080p.AMZN.WEBRip.DDP2.0.x264-NTb[rartv] - 射手网(伪)</title><link>http://assrt.net/xml/sub/699/699491.xml</link></item>
-<item><title>SkyMed.S03E01.1080p.WEBRip.x264-BAE/SkyMed.S03E01.1080p.WEBRip.x264-BAE - 射手网(伪)</title><link>http://assrt.net/xml/sub/699/699490.xml</link></item>
-<item><title>US Army plans to better integrate warfighting experimentation in FY26 - Defense News</title><link>https://www.defensenews.com/land/2025/03/25/us-army-plans-to-better-integrate-warfighting-experimentation-in-fy26/</link></item>
-<item><title>US allies alarmed by leaked group chat about Houthi attack plans - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2025/03/25/us-allies-alarmed-by-leaked-group-chat-about-houthi-attack-plans/</link></item>
-<item><title>Saildrone launches Red Sea naval drone hardened against GPS jamming - Defense News</title><link>https://www.defensenews.com/global/mideast-africa/2025/03/25/saildrone-launches-red-sea-naval-drone-hardened-against-gps-jamming/</link></item>
-<item><title>White House, DOD deny that Hegseth leaked military secrets in chat app - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2025/03/25/white-house-dod-deny-that-hegseth-leaked-military-secrets-in-chat-app/</link></item>
-<item><title>GDLS debuts short-range air defense option for light units - Defense News</title><link>https://www.defensenews.com/land/2025/03/25/gdls-debuts-short-range-air-defense-option-for-light-units/</link></item>
-<item><title>Interview: Norwegian Army chief wants to generate ‘more firepower’ - Defense News</title><link>https://www.defensenews.com/global/europe/2025/03/25/interview-norwegian-army-chief-wants-to-generate-more-firepower/</link></item>
-<item><title>Coverage: Global Force Symposium - Defense News</title><link>https://www.defensenews.com/coverage-global-force-symposium/</link></item>
-<item><title>Industry devises plans to keep helicopter fleet capable for decades - Defense News</title><link>https://www.defensenews.com/air/2023/05/03/industry-devises-plans-to-keep-helicopter-fleet-capable-for-decades/</link></item>
-<item><title>Senate advances bill to enhance Latin America security cooperation - Defense News</title><link>https://www.defensenews.com/congress/2023/05/03/senate-advances-bill-to-enhance-latin-america-security-cooperation/</link></item>
-<item><title>Senate’s China bill to restrict advanced tech exports, bolster allies - Defense News</title><link>https://www.defensenews.com/congress/2023/05/03/senates-china-bill-to-restrict-advanced-tech-exports-bolster-allies/</link></item>
-<item><title>EU pledges over $1 billion to refresh its arms factories for Ukraine - Defense News</title><link>https://www.defensenews.com/global/2023/05/03/eu-pledges-over-1-billion-to-refresh-its-arms-factories-for-ukraine/</link></item>
-<item><title>US cyber leaders look to AI to augment network activities - Defense News</title><link>https://www.defensenews.com/cyber/2023/05/03/us-cyber-leaders-look-to-ai-to-augment-network-activities/</link></item>
-<item><title>Evacuating Sudan: An amphibious gap and missed opportunity - Defense News</title><link>https://www.defensenews.com/opinion/commentary/2023/05/03/evacuating-sudan-an-amphibious-gap-and-missed-opportunity/</link></item>
-<item><title>Raytheon, Lockheed to compete for Space Force satellite ground system - Defense News</title><link>https://www.defensenews.com/battlefield-tech/space/2023/05/03/raytheon-lockheed-to-compete-for-space-force-satellite-ground-system/</link></item>
-<item><title>Zero trust would have helped prevent Pentagon leak, CIO Sherman says - Defense News</title><link>https://www.defensenews.com/cyber/2023/05/03/zero-trust-would-have-helped-prevent-pentagon-leak-cio-sherman-says/</link></item>
-<item><title>US defense contractors want deeper cooperation with Taiwan - Defense News</title><link>https://www.defensenews.com/industry/2023/05/03/us-defense-contractors-want-deeper-cooperation-with-taiwan/</link></item>
-<item><title>Russian defense chief wants to double wartime missile output - Defense News</title><link>https://www.defensenews.com/industry/2023/05/03/russian-defense-chief-wants-to-double-wartime-missile-output/</link></item>
-<item><title>李开复称中美 AI 差距仅为三个月 - Solidot</title><link>https://www.solidot.org/story?sid=80881</link></item>
-<item><title>科学家寻求更精确的测量疼痛 - Solidot</title><link>https://www.solidot.org/story?sid=80880</link></item>
-<item><title>如何减少 AI 大模型的功耗 - Solidot</title><link>https://www.solidot.org/story?sid=80878</link></item>
-<item><title>2024 年全球气候多项指标创下记录 - Solidot</title><link>https://www.solidot.org/story?sid=80877</link></item>
-<item><title>家族企业表现出更多环境责任行为 - Solidot</title><link>https://www.solidot.org/story?sid=80876</link></item>
-<item><title>最新观测挑战宇宙标准模型 - Solidot</title><link>https://www.solidot.org/story?sid=80875</link></item>
-<item><title>Google 和计算机历史博物馆发布 AlexNet 源代码 - Solidot</title><link>https://www.solidot.org/story?sid=80874</link></item>
-<item><title>中国依靠工程师红利挑战美国的科技主导地位 - Solidot</title><link>https://www.solidot.org/story?sid=80873</link></item>
-<item><title>FaunaDB 倒闭，计划开源 - Solidot</title><link>https://www.solidot.org/story?sid=80872</link></item>
-<item><title>大西洋月刊主编被拉入一个讨论轰炸也门计划的 Signal 群聊中 - Solidot</title><link>https://www.solidot.org/story?sid=80871</link></item>
-<item><title>Open Source Devs Say AI Crawlers Dominate Traffic, Forcing Blocks On Entire Countries - Slashdot</title><link>https://tech.slashdot.org/story/25/03/26/016244/open-source-devs-say-ai-crawlers-dominate-traffic-forcing-blocks-on-entire-countries?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>GameStop To Invest Corporate Cash In Bitcoin, Following In Footsteps of MicroStrategy - Slashdot</title><link>https://slashdot.org/story/25/03/26/0059223/gamestop-to-invest-corporate-cash-in-bitcoin-following-in-footsteps-of-microstrategy?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Microsoft&amp;#39;s Many Outlooks Are Confusing Users - Slashdot</title><link>https://tech.slashdot.org/story/25/03/25/215234/microsofts-many-outlooks-are-confusing-users?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>DeepSeek-V3 Now Runs At 20 Tokens Per Second On Mac Studio - Slashdot</title><link>https://apple.slashdot.org/story/25/03/25/2054214/deepseek-v3-now-runs-at-20-tokens-per-second-on-mac-studio?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Lisa Su Says Radeon RX 9000 Series Is AMD&amp;#39;s Most Successful GPU Launch Ever - Slashdot</title><link>https://hardware.slashdot.org/story/25/03/25/2037251/lisa-su-says-radeon-rx-9000-series-is-amds-most-successful-gpu-launch-ever?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Trump&amp;#39;s Crypto Venture Introduces a Stabelcoin - Slashdot</title><link>https://slashdot.org/story/25/03/25/2045243/trumps-crypto-venture-introduces-a-stabelcoin?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Nearly Half of Canadians Have Cut Cable Entirely - Slashdot</title><link>https://entertainment.slashdot.org/story/25/03/25/2029255/nearly-half-of-canadians-have-cut-cable-entirely?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>After DDOS Attacks, Blizzard Rolls Back Hardcore WoW Deaths For the First Time - Slashdot</title><link>https://games.slashdot.org/story/25/03/25/2019209/after-ddos-attacks-blizzard-rolls-back-hardcore-wow-deaths-for-the-first-time?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Google Unveils Gemini 2.5 Pro, Its Latest AI Reasoning Model With Significant Benchmark Gains - Slashdot</title><link>https://tech.slashdot.org/story/25/03/25/195227/google-unveils-gemini-25-pro-its-latest-ai-reasoning-model-with-significant-benchmark-gains?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>&amp;#39;I Won&amp;#39;t Connect My Dishwasher To Your Stupid Cloud&amp;#39; - Slashdot</title><link>https://it.slashdot.org/story/25/03/25/1849231/i-wont-connect-my-dishwasher-to-your-stupid-cloud?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Boeing Is Pushing To Withdraw Guilty Plea Agreement - Slashdot</title><link>https://news.slashdot.org/story/25/03/25/189245/boeing-is-pushing-to-withdraw-guilty-plea-agreement?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Signal Head Defends Messaging App&amp;#39;s Security After US War Plan Leak - Slashdot</title><link>https://yro.slashdot.org/story/25/03/25/1728243/signal-head-defends-messaging-apps-security-after-us-war-plan-leak?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Apple Says It&amp;#39;ll Use Apple Maps Look Around Photos To Train AI - Slashdot</title><link>https://apple.slashdot.org/story/25/03/25/1655211/apple-says-itll-use-apple-maps-look-around-photos-to-train-ai?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Ticketmaster May Have Violated Consumer Protection Laws - Slashdot</title><link>https://slashdot.org/story/25/03/25/1556254/ticketmaster-may-have-violated-consumer-protection-laws?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Alibaba&amp;#39;s Tsai Warns of &amp;#39;Bubble&amp;#39; in AI Data Center Buildout - Slashdot</title><link>https://slashdot.org/story/25/03/25/1456241/alibabas-tsai-warns-of-bubble-in-ai-data-center-buildout?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>La Frijolería  in Oaxaca, Mexico - Atlas Obscura</title><link>https://www.atlasobscura.com/places/la-frijoleria</link></item>
-<item><title>Blanco Family Museum in Angono, Philippines - Atlas Obscura</title><link>https://www.atlasobscura.com/places/blanco-family-museum</link></item>
-<item><title>Flora Fountain in Mumbai, India - Atlas Obscura</title><link>https://www.atlasobscura.com/places/flora-fountain</link></item>
-<item><title>Demand for Tiny Plants Is Driving a Poaching Crisis in South Africa - Atlas Obscura</title><link>https://www.atlasobscura.com/articles/south-africa-plant-poaching</link></item>
-<item><title>Ikebukuro Shimento Pagoda in Tokyo, Japan - Atlas Obscura</title><link>https://www.atlasobscura.com/places/ikebukuro-shimento-pagoda</link></item>
-<item><title>Heritage Farm Museum &amp; Village in Huntington, West Virginia - Atlas Obscura</title><link>https://www.atlasobscura.com/places/heritage-farm-museum-and-village</link></item>
-<item><title>The House of Stone Creations in Kefalas, Greece - Atlas Obscura</title><link>https://www.atlasobscura.com/places/the-house-of-stone-creations</link></item>
-<item><title>Galteshwar Mahadev Temple in Sarnal, India - Atlas Obscura</title><link>https://www.atlasobscura.com/places/galteshwar-mahadev-temple</link></item>
-<item><title>Dear Atlas: How Do I Safely Explore Abandoned Places? - Atlas Obscura</title><link>https://www.atlasobscura.com/articles/explore-abandoned-places</link></item>
-<item><title>Slade Camp in Oxford, England - Atlas Obscura</title><link>https://www.atlasobscura.com/places/slade-camp</link></item>
-<item><title>Bodaega in Oaxaca, Mexico - Atlas Obscura</title><link>https://www.atlasobscura.com/places/bodaega</link></item>
-<item><title>What Does a Galaxy Taste Like? - Atlas Obscura</title><link>https://www.atlasobscura.com/articles/fantasy-flavors</link></item>
-<item><title>Alfonsina in San Juan Bautista la Raya, Mexico - Atlas Obscura</title><link>https://www.atlasobscura.com/places/alfonsina</link></item>
-<item><title>Kirmse’s Billboard in Skagway, Alaska - Atlas Obscura</title><link>https://www.atlasobscura.com/places/alaska-style-billboard</link></item>
-<item><title>Church of Our Lady Queen of Poland  in Elblag, Poland - Atlas Obscura</title><link>https://www.atlasobscura.com/places/church-of-our-lady-queen-of-poland</link></item>
-<item><title>The Heyday of Horror Hotlines and Why We Still Love to Fear the Phone - Atlas Obscura</title><link>https://www.atlasobscura.com/articles/horror-hotlines-900-numbers</link></item>
-<item><title>How Can Myths Help Us Understand the Stars? AO Wants to Know. - Atlas Obscura</title><link>https://www.atlasobscura.com/articles/myths-about-the-milky-way</link></item>
-<item><title>These Fantastic Spanish Sculptures Were Built to Burn - Atlas Obscura</title><link>https://www.atlasobscura.com/articles/valencia-las-fallas-festival</link></item>
-<item><title>Inside the World’s Largest Two-Headed Calf Collection - Atlas Obscura</title><link>https://www.atlasobscura.com/articles/two-headed-calf-museum-san-francisco</link></item>
-<item><title>How Many Other Oceans Exist in Our Solar System? - Atlas Obscura</title><link>https://www.atlasobscura.com/articles/space-oceans-outer-planets-moon</link></item>
-<item><title>Dear Atlas: What Parts of Route 66 Are Worth the Drive? - Atlas Obscura</title><link>https://www.atlasobscura.com/articles/route-66-highlights</link></item>
-<item><title>Make Nowruz Magic With Samanu - Atlas Obscura</title><link>https://www.atlasobscura.com/articles/samanu-recipe</link></item>
-<item><title>The Color of St. Patrick&amp;#39;s Day Wasn&amp;#39;t Always Green - Atlas Obscura</title><link>https://www.atlasobscura.com/articles/st-patricks-day-color-green-blue</link></item>
-<item><title>The Undercover Woman Who Changed Asylum Tourism Forever - Atlas Obscura</title><link>https://www.atlasobscura.com/articles/asylum-tourism-nellie-bly</link></item>
-<item><title>MicroStrategy&amp;#39;s lead - Slashdot</title><link>https://slashdot.org/story/24/12/31/204219/microstrategys-big-bet-on-bitcoin-went-stratospheric</link></item>
-<item><title>killed in the two 737 MAX crashes - Slashdot</title><link>https://tech.slashdot.org/story/20/09/12/1923211/is-boeings-737-max-safe-now</link></item>
-<item><title>OpenAI CEO Altman Says AI Will Lead To Fewer Software Engineers - Slashdot</title><link>https://developers.slashdot.org/story/25/03/25/1428259/openai-ceo-altman-says-ai-will-lead-to-fewer-software-engineers?sbsrc=md</link></item>
-<item><title>Google Patches Chrome Sandbox Escape Zero-Day Caught by Kaspersky - Slashdot</title><link>https://slashdot.org/submission/17334555/google-patches-chrome-sandbox-escape-zero-day-caught-by-kaspersky?utm_source=rss1.0&amp;utm_medium=feed&amp;sbsrc=firehose</link></item>
-<item><title>Scientists may have discovered how to extract power from the Earth&amp;#39;s rotation - Slashdot</title><link>https://slashdot.org/submission/17334535/scientists-may-have-discovered-how-to-extract-power-from-the-earths-rotation?utm_source=rss1.0&amp;utm_medium=feed&amp;sbsrc=firehose</link></item>
-<item><title>Why Did the Government Declare War on My Adorable Tiny Truck? - Slashdot</title><link>https://slashdot.org/submission/17334533/why-did-the-government-declare-war-on-my-adorable-tiny-truck?utm_source=rss1.0&amp;utm_medium=feed&amp;sbsrc=firehose</link></item>
-<item><title>AlexNet, the AI Model That Started It All, Released In Source Code Form - Slashdot</title><link>https://slashdot.org/submission/17334509/alexnet-the-ai-model-that-started-it-all-released-in-source-code-form?utm_source=rss1.0&amp;utm_medium=feed&amp;sbsrc=firehose</link></item>
-<item><title>Video Game Industry Starting To Feel Heat On Gun Massacres - Slashdot</title><link>https://games.slashdot.org/story/13/03/25/140255/video-game-industry-starting-to-feel-heat-on-gun-massacres?sbsrc=thisday</link></item>
-<item><title>US Contemplating &amp;#39;Vehicle Miles Traveled&amp;#39; Tax - Slashdot</title><link>https://tech.slashdot.org/story/11/03/25/1614241/us-contemplating-vehicle-miles-traveled-tax?sbsrc=thisday</link></item>
-<item><title>Will Your Answers To the Census Stay Private? - Slashdot</title><link>https://yro.slashdot.org/story/10/03/25/1326257/will-your-answers-to-the-census-stay-private?sbsrc=thisday</link></item>
-<item><title>Why You Should Choose MS Office Over OO.org - Slashdot</title><link>https://slashdot.org/story/04/03/25/1950234/why-you-should-choose-ms-office-over-ooorg?sbsrc=thisday</link></item>
-<item><title>Apple Wants Your Input - Slashdot</title><link>https://slashdot.org/story/02/03/25/0233257/apple-wants-your-input?sbsrc=thisday</link></item>
-<item><title>A Personality-Packed IKEA Kitchen Beautifully Transforms This “Standard Flip” House - Apartment Therapy</title><link>https://www.apartmenttherapy.com/ikea-kitchen-makeover-green-wallpaper-ba-37473041?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>You’d Never Guess These Cute Anthropologie Glasses Cost Just $10 Each - Apartment Therapy</title><link>https://www.apartmenttherapy.com/anthropologie-acrylic-raquel-cocktail-glasses-37472839?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>Drew Barrymore Styled This Unexpected Living Room Staple in Her Kitchen - Apartment Therapy</title><link>https://www.apartmenttherapy.com/drew-barrymore-kitchen-picture-light-37472867?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>This Under-the-Radar Section Is My Secret to Finding the Best Deals at Wayfair - Apartment Therapy</title><link>https://www.apartmenttherapy.com/wayfair-verified-section-37473044?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>The Nostalgic Twist on Wallpaper That DIYers Are Loving Right Now (and How to Get It Right!) - Apartment Therapy</title><link>https://www.apartmenttherapy.com/wallpaper-border-diy-37472959?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>12 Designer-Approved Deals You Can’t Miss in Amazon’s Big Spring Sale (Hurry!) - Apartment Therapy</title><link>https://www.apartmenttherapy.com/amazon-big-spring-sale-designer-home-deals-2025-37472977?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>The Kitchen Accessory That Belongs on Your Walls (It&amp;#39;s a Storage Hack!) - Apartment Therapy</title><link>https://www.apartmenttherapy.com/crochet-doily-accessory-storage-hack-review-37472987?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>I Tried the New Mini Version of the Bissell “Little Green Machine” - Apartment Therapy</title><link>https://www.apartmenttherapy.com/bissell-little-green-mini-review-37472890?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>This 513-Square-Foot Apartment’s “Curated Style” Feels So Effortlessly Chic - Apartment Therapy</title><link>https://www.apartmenttherapy.com/mississippi-513-square-foot-apartment-tour-37459772?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>These Are the 22 Best Blue Paint Colors, According to Designers - Apartment Therapy</title><link>https://www.apartmenttherapy.com/color-cheat-sheet-the-best-blue-paint-colors-249025?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>I Just Found the Most Brilliantly Designed Patio Set for Under $200 (So Compact!) - Apartment Therapy</title><link>https://www.apartmenttherapy.com/vingli-wicker-outdoor-bistro-set-home-depot-reviews-37472882?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>This &amp;#39;90s Kitchen Staple Is Being Replaced with Something Far More Practical - Apartment Therapy</title><link>https://www.apartmenttherapy.com/kitchen-trend-desk-2000s-kitchen-37472845?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>We Tested (and Rated!) All the Sofas at Interior Define - Apartment Therapy</title><link>https://www.apartmenttherapy.com/best-interior-define-sofas-37472657?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>I Tried the “Out-in-the-Open” Rule and Decluttered My Kitchen Drawer - Apartment Therapy</title><link>https://www.apartmenttherapy.com/out-in-the-open-rule-decluttering-kitchen-drawer-37472783?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>This Is the Cabinet Change You’ll Regret Most in Your Kitchen, According to Pros - Apartment Therapy</title><link>https://www.apartmenttherapy.com/kitchen-cabinet-regrets-37472879?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>I Can&amp;#39;t Get Over the Cuteness of This “Tiny Chair” Trinket Dish - Apartment Therapy</title><link>https://www.apartmenttherapy.com/urban-outfitters-tiny-chair-trinket-dish-37472861?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>A Dated Brown 1990s Kitchen Gets a Calming Japandi-Inspired Makeover - Apartment Therapy</title><link>https://www.apartmenttherapy.com/japandi-kitchen-makeover-fluted-cabinets-ba-37472907?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>These $6 &amp;quot;Stunning&amp;quot; Floral Plates Are Flying Off Shelves at T.J. Maxx - Apartment Therapy</title><link>https://www.apartmenttherapy.com/tjmaxx-floral-plates-bowls-37472529?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>This “Delicious” New Pasta Will Transport You Straight to Italy (I’ve Been Eating It Nonstop with Just Butter) - Apartment Therapy</title><link>https://www.apartmenttherapy.com/sfoglini-calabrian-chili-lumache-review-37472523?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>Urban Outfitters’ New Spring Collection Has the Prettiest Storage Piece - Apartment Therapy</title><link>https://www.apartmenttherapy.com/urban-outfitters-everly-storage-cabinet-37472806?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>Balancing Act: Can ‘Mom Jobs’ Help China’s Women Have It All? - Sixth Tone</title><link>https://www.sixthtone.com/news/1016864/balancing-act%3A-can-%E2%80%98mom-jobs%E2%80%99-help-china%E2%80%99s-women-have-it-all%3F?source=channel_home</link></item>
-<item><title>She Posted Her Father’s Death. Now China Probes a Murder at Sea. - Sixth Tone</title><link>https://www.sixthtone.com/news/1016872/she-posted-her-father%E2%80%99s-death.-now-china-probes-a-murder-at-sea.?source=channel_home</link></item>
-<item><title>From Lane to Block: The Evolution of Shanghai’s Modern Apartments - Sixth Tone</title><link>https://www.sixthtone.com/news/1016850/from-lane-to-block%3A-the-evolution-of-shanghai%E2%80%99s-modern-apartments?source=channel_home</link></item>
-<item><title>China’s Virtual Streamers Get a Reality Check - Sixth Tone</title><link>https://www.sixthtone.com/news/1016849/china%E2%80%99s-virtual-streamers-get-a-reality-check?source=channel_home</link></item>
-<item><title>Consumption Coupons Fuel a Rise in Consumer Spending - Sixth Tone</title><link>https://www.sixthtone.com/news/1016866/consumption-coupons-fuel-a-rise-in-consumer-spending-</link></item>
-<item><title>Chinese Tech Firms Want LLM Experts. AI Majors Need Not Apply. - Sixth Tone</title><link>https://www.sixthtone.com/news/1016856/chinese-tech-firms-want-llm-experts.-ai-majors-need-not-apply.</link></item>
-<item><title>China’s Latest Marketing Craze? Rent-a-Robot - Sixth Tone</title><link>https://www.sixthtone.com/news/1016848/china%E2%80%99s-latest-marketing-craze%3F-rent-a-robot</link></item>
-<item><title>Fade to Black: What Lies Beneath China’s Lake of Legends - Sixth Tone</title><link>https://www.sixthtone.com/news/1016779/fade-to-black%3A-what-lies-beneath-china%E2%80%99s-lake-of-legends</link></item>
-<item><title>Golden Oldies: Aging Fans Fuel Pop Singer’s Comeback - Sixth Tone</title><link>https://www.sixthtone.com/news/1016811/golden-oldies%3A-aging-fans-fuel-pop-singer%E2%80%99s-comeback</link></item>
-<item><title>Body as Theater: A Living Art Experiment Comes to Shanghai - Sixth Tone</title><link>https://www.sixthtone.com/news/1016791/body-as-theater%3A-a-living-art-experiment-comes-to-shanghai</link></item>
-<item><title>Meal for a Steal: The Restaurant Helping Workers Stay on Their Feet - Sixth Tone</title><link>https://www.sixthtone.com/news/1016745/meal-for-a-steal%3A-the-restaurant-helping-workers-stay-on-their-feet</link></item>
-<item><title>Backstage With a Cantonese Opera Troupe - Sixth Tone</title><link>https://www.sixthtone.com/news/1016667/backstage-with-a-cantonese-opera-troupe</link></item>
-<item><title>How Liu Jiakun Became the Envy of Chinese Architects - Sixth Tone</title><link>https://www.sixthtone.com/news/1016851/how-liu-jiakun-became-the-envy-of-chinese-architects?source=channel_home</link></item>
-<item><title>Married Chinese Women Are Buying Their Own Homes. Why? - Sixth Tone</title><link>https://www.sixthtone.com/news/1016790/married-chinese-women-are-buying-their-own-homes.-why%3F?source=channel_home</link></item>
-<item><title>Taste Test: China’s Herders Chew on ‘Fake’ Meat Dilemma - Sixth Tone</title><link>https://www.sixthtone.com/news/1016833/taste-test%3A-china%E2%80%99s-herders-chew-on-%E2%80%98fake%E2%80%99-meat-dilemma</link></item>
-<item><title>Breaking Waves: A Female Engineer’s Journey Through Maritime Prejudice - Sixth Tone</title><link>https://www.sixthtone.com/news/1016783/breaking-waves%3A-a-female-engineer%E2%80%99s-journey-through-maritime-prejudice</link></item>
-<item><title>‘A Needle in a Haystack’: How a New Study Could Revolutionize Parkinson’s Treatment - Sixth Tone</title><link>https://www.sixthtone.com/news/1016861/%E2%80%98a-needle-in-a-haystack%E2%80%99%3A-how-a-new-study-could-revolutionize-parkinson%E2%80%99s-treatment</link></item>
-<item><title>China’s Top Court Targets Telecom Fraud, Backs Harsher Sentences - Sixth Tone</title><link>https://www.sixthtone.com/news/1016738/china%E2%80%99s-top-court-targets-telecom-fraud%2C-backs-harsher-sentences</link></item>
-<item><title>Meet China’s ‘Six Little Dragons’ - Sixth Tone</title><link>https://www.sixthtone.com/news/1016770/meet-china%E2%80%99s-%E2%80%98six-little-dragons%E2%80%99</link></item>
-<item><title>China’s ‘OK Boomer’ Makes No Sense — And That’s the Point - Sixth Tone</title><link>https://www.sixthtone.com/news/1016705/china%E2%80%99s-%E2%80%98ok-boomer%E2%80%99-makes-no-sense-%E2%80%94-and-that%E2%80%99s-the-point</link></item>
-<item><title>PPLP电脑功率计算器v1.01版上线 - 超能网</title><link>https://www.expreview.com/98025.html</link></item>
-<item><title>下游客户去库存顺利，预计2025Q2 DRAM价格跌幅收窄 - 超能网</title><link>https://www.expreview.com/98960.html</link></item>
-<item><title>LG宣布：全系OLED电视和显示器面板获得UL Solutions Eyesafe认证 - 超能网</title><link>https://www.expreview.com/98958.html</link></item>
-<item><title>海信推出E8Q Pro系列电视：4K@330Hz，U+MiniLED背光技术，11599元起售 - 超能网</title><link>https://www.expreview.com/98956.html</link></item>
-<item><title>G-Assist现已在NVIDIA App中提供：支持RTX 30/40/50系列，显存至少12GB - 超能网</title><link>https://www.expreview.com/98957.html</link></item>
-<item><title>《怪物猎人：荒野》正式公布第一弹免费更新内容，追加新怪物和限时活动 - 超能网</title><link>https://www.expreview.com/98950.html</link></item>
-<item><title>微软Xbox宣布加入“无障碍游戏计划”：让更多人感受游戏的力量 - 超能网</title><link>https://www.expreview.com/98955.html</link></item>
-<item><title>Steam 2025 城市营造及殖民模拟游戏节开启：至北京时间4月1日凌晨1点 - 超能网</title><link>https://www.expreview.com/98954.html</link></item>
-<item><title>全汉推出CANNON PRO (ATX3.1) 2500W电源：80PLUS铂金，4×12V-2×6接口 - 超能网</title><link>https://www.expreview.com/98953.html</link></item>
-<item><title>浩鑫发布新款DN11系列高性能AI PC：搭载酷睿Ultra，配4个2.5G网口 - 超能网</title><link>https://www.expreview.com/98952.html</link></item>
-<item><title>德商德静界扩展Light Wings系列，带来新款120/140mm反叶型号 - 超能网</title><link>https://www.expreview.com/98951.html</link></item>
-<item><title>AMD明年将带来Gorgon Point：Zen 5+RDNA 3.5，用于移动平台的APU - 超能网</title><link>https://www.expreview.com/98949.html</link></item>
-<item><title>AMD CEO表示RX 9070 XT取得巨大成功：首周销量是前几代产品同期的10倍 - 超能网</title><link>https://www.expreview.com/98948.html</link></item>
-<item><title>锐龙7 9700X越级对战酷睿Ultra 9 285K：谁才是RX 9070 XT的最佳搭配 - 超能网</title><link>https://www.expreview.com/98870.html</link></item>
-<item><title>九州风神CH260机箱评测：“大”有改进的好用与实用 - 超能网</title><link>https://www.expreview.com/98448.html</link></item>
-<item><title>Minisforum推出UM880 Plus迷你PC：搭载R7 8845HS，国补到手价2847元 - 超能网</title><link>https://www.expreview.com/98946.html</link></item>
-<item><title>Alienware AW3425DW QD-OLED显示器上架：WQHD@240Hz，售价6499元 - 超能网</title><link>https://www.expreview.com/98945.html</link></item>
-<item><title>威刚推出LEGEND 900 PRO：面向创作者的PCIe 4.0 SSD，可适配PC和PS5 - 超能网</title><link>https://www.expreview.com/98943.html</link></item>
-<item><title>科赋旗下DDR5电竞/超频内存升级：新配色、低时序，并有AMD优化版本 - 超能网</title><link>https://www.expreview.com/98942.html</link></item>
-<item><title>台积电加紧SoIC封装技术开发，英伟达已决定在Rubin架构GPU上引入 - 超能网</title><link>https://www.expreview.com/98941.html</link></item>
-<item><title>华星光电已完成对LG广州LCD工厂的收购，进一步提升市场影响力和占有率 - 超能网</title><link>https://www.expreview.com/98940.html</link></item>
-<item><title>AMD准备FP10封装，将用于Zen 6架构的Medusa Point芯片 - 超能网</title><link>https://www.expreview.com/98939.html</link></item>
-<item><title>小米REDMI显示器G27Q 240Hz款发布：2K@240Hz，首发价1199元 - 超能网</title><link>https://www.expreview.com/98937.html</link></item>
-<item><title>惠普暗影精灵11竞技版添新配置：i7-14700F+RTX 5070 Ti，国补到手价13499元 - 超能网</title><link>https://www.expreview.com/98935.html</link></item>
-<item><title>戴尔推出S2725QC显示器：4K@120Hz，配备弹出式USB HUB，售价2499元 - 超能网</title><link>https://www.expreview.com/98933.html</link></item>
-<item><title>微软继续贯彻跨平台战略，今年将有更多Xbox游戏登陆索尼和任天堂平台 - 超能网</title><link>https://www.expreview.com/98934.html</link></item>
+<lastBuildDate>Thu, 27 Mar 2025 09:12:51 +0800</lastBuildDate>
+<item><title>Fidelity Prepares To Unveil Its Own Stablecoin - Slashdot</title><link>https://news.slashdot.org/story/25/03/26/2321223/fidelity-prepares-to-unveil-its-own-stablecoin</link></item>
+<item><title>launched a U.S. dollar-pegged stablecoin called USD1 - Slashdot</title><link>https://slashdot.org/story/25/03/25/2045243/trumps-crypto-venture-introduces-a-stabelcoin</link></item>
+<item><title>Linux Kernel 6.14 Is a Big Leap Forward In Performance, Windows Compatibility - Slashdot</title><link>https://linux.slashdot.org/story/25/03/26/2110211/linux-kernel-614-is-a-big-leap-forward-in-performance-windows-compatibility</link></item>
+<item><title>Over 4 Million Gen Zers Are Jobless - Slashdot</title><link>https://news.slashdot.org/story/25/03/26/211250/over-4-million-gen-zers-are-jobless</link></item>
+<item><title>US Expands Export Blacklist To Keep Computing Tech Out of China - Slashdot</title><link>https://hardware.slashdot.org/story/25/03/26/2053233/us-expands-export-blacklist-to-keep-computing-tech-out-of-china</link></item>
+<item><title>Business Schools Are Back - Slashdot</title><link>https://news.slashdot.org/story/25/03/26/2035210/business-schools-are-back</link></item>
+<item><title>VMware Sues Siemens For Allegedly Using Unlicensed Software - Slashdot</title><link>https://slashdot.org/story/25/03/26/2030219/vmware-sues-siemens-for-allegedly-using-unlicensed-software</link></item>
+<item><title>Google Will Develop the Android OS Fully In Private - Slashdot</title><link>https://news.slashdot.org/story/25/03/26/2017227/google-will-develop-the-android-os-fully-in-private</link></item>
+<item><title>Dell&amp;#39;s Staff Numbers Have Dropped By 25,000 in Just 2 Years - Slashdot</title><link>https://slashdot.org/story/25/03/26/2014204/dells-staff-numbers-have-dropped-by-25000-in-just-2-years</link></item>
+<item><title>Microsoft Abandons Data Center Projects, TD Cowen Says - Slashdot</title><link>https://slashdot.org/story/25/03/26/1832216/microsoft-abandons-data-center-projects-td-cowen-says</link></item>
+<item><title>Who Wins Nobel Prizes? - Slashdot</title><link>https://news.slashdot.org/story/25/03/26/172241/who-wins-nobel-prizes</link></item>
+<item><title>Quitting Your Job Won&amp;#39;t Help You Get Paid More Money Right Now - Slashdot</title><link>https://slashdot.org/story/25/03/26/1641211/quitting-your-job-wont-help-you-get-paid-more-money-right-now</link></item>
+<item><title>Signal President Blasts WhatsApp&amp;#39;s Privacy Claims - Slashdot</title><link>https://it.slashdot.org/story/25/03/26/1536221/signal-president-blasts-whatsapps-privacy-claims</link></item>
+<item><title>Streaming Services Are Facing Identity Crisis, Research Shows - Slashdot</title><link>https://entertainment.slashdot.org/story/25/03/26/1518225/streaming-services-are-facing-identity-crisis-research-shows</link></item>
+<item><title>London Bans Most E-Bikes on Public Transport Over Fire Risk - Slashdot</title><link>https://news.slashdot.org/story/25/03/26/1443258/london-bans-most-e-bikes-on-public-transport-over-fire-risk</link></item>
+<item><title>Apple Barred From Google Antitrust Trial, $20 Billion Search Deal at Risk - Slashdot</title><link>https://apple.slashdot.org/story/25/03/26/1411217/apple-barred-from-google-antitrust-trial-20-billion-search-deal-at-risk</link></item>
+<item><title>Ethically Sourced &amp;#39;Spare&amp;#39; Human Bodies Could Revolutionize Medicine - Slashdot</title><link>https://science.slashdot.org/story/25/03/26/0112257/ethically-sourced-spare-human-bodies-could-revolutionize-medicine?sbsrc=md</link></item>
+<item><title>Game Informer 杂志复活 - Solidot</title><link>https://www.solidot.org/story?sid=80882</link></item>
+<item><title>东京法庭下令解散统一教会 - Solidot</title><link>https://www.solidot.org/story?sid=80883</link></item>
+<item><title>交通噪音会触发鸟类的路怒症 - Solidot</title><link>https://www.solidot.org/story?sid=80884</link></item>
+<item><title>火星东半球被认为蕴含丰富的冰 - Solidot</title><link>https://www.solidot.org/story?sid=80885</link></item>
+<item><title>H5N1 禽流感在英国传播到绵羊 - Solidot</title><link>https://www.solidot.org/story?sid=80886</link></item>
+<item><title>Infinite Reality 以 2.07 亿美元收购 Napster - Solidot</title><link>https://www.solidot.org/story?sid=80887</link></item>
+<item><title>近半加拿大家庭完全停止消费有线电视 - Solidot</title><link>https://www.solidot.org/story?sid=80888</link></item>
+<item><title>年轻一代的消费者更爱内容创作者而非传统电视电影 - Solidot</title><link>https://www.solidot.org/story?sid=80889</link></item>
+<item><title>比亚迪 2024 年销售收入超过特斯拉 - Solidot</title><link>https://www.solidot.org/story?sid=80892</link></item>
+<item><title>A Teaching Moment - Law &amp; Liberty</title><link>https://lawliberty.org/forum/a-teaching-moment/</link></item>
+<item><title>Hayek, Polanyi, and the Liberal Consensus - Law &amp; Liberty</title><link>https://lawliberty.org/book-review/hayek-polanyi-and-the-liberal-consensus/</link></item>
+<item><title>Transportation - The Verge</title><link>https://www.theverge.com/transportation</link></item>
+<item><title>Electric Cars - The Verge</title><link>https://www.theverge.com/electric-cars</link></item>
+<item><title>Autonomous Cars - The Verge</title><link>https://www.theverge.com/autonomous-cars</link></item>
+<item><title>Ride-Sharing - The Verge</title><link>https://www.theverge.com/ride-sharing</link></item>
+<item><title>The Vergecast - The Verge</title><link>https://www.theverge.com/the-vergecast</link></item>
+<item><title>The base iPad is finally being left behind - The Verge</title><link>https://www.theverge.com/apple/636335/ipad-2025-11th-generation-review</link></item>
+<item><title>Marvel unveils the gigantic cast for Avengers: Doomsday - The Verge</title><link>https://www.theverge.com/news/636463/avengers-doomsday-cast-xmen-mcu</link></item>
+<item><title>The Atlantic releases strike group chat messages - The Verge</title><link>https://www.theverge.com/tech/636270/war-signal-group-chat</link></item>
+<item><title>The Nissan Leaf lives on as a compact SUV with a Tesla charge port - The Verge</title><link>https://www.theverge.com/news/636386/nissan-leaf-third-generation-ev-suv-nacs</link></item>
+<item><title>Atomfall makes the postapocalypse quintessentially British - The Verge</title><link>https://www.theverge.com/games-review/635297/atomfall-review-xbox-ps5-steam</link></item>
+<item><title>Amazon’s big spring sale continues, and we found the 75 best deals - The Verge</title><link>https://www.theverge.com/tech/634880/amazon-big-spring-sale-march-2025-prime-day-deals-shop</link></item>
+<item><title>Spell Corruption - The Verge</title><link>https://www.theverge.com/news/635710/doge-musk-trump-environmental-protection-agency-epa</link></item>
+<item><title>Republicans are still pushing for child safety laws, while Democrats wonder if a weakened FTC can enforce them - The Verge</title><link>https://www.theverge.com/news/637032/kids-online-safety-ftc-firings-trump-house-energy-commerce</link></item>
+<item><title>Nothing’s colorful, entry-level earbuds have fallen to their best price to date - The Verge</title><link>https://www.theverge.com/tech/636935/nothing-ear-a-wireless-earbuds-amazon-big-spring-sale-2025-deal-sale</link></item>
+<item><title>Trump’s first 100 days: all the news affecting the tech industry - The Verge</title><link>https://www.theverge.com/24348851/donald-trump-presidency-tech-science-news</link></item>
+<item><title>Trump says he will impose a 25 percent tariff on imported vehicles - The Verge</title><link>https://www.theverge.com/news/637004/trump-auto-tariffs-25-percent</link></item>
+<item><title>Microsoft revamps its Windows Game Bar - The Verge</title><link>https://www.theverge.com/news/636985/microsoft-xbox-march-2025-update-game-bar-look-pass-switching</link></item>
+<item><title>The Bambu H2D isn’t just a bigger 3D printer — it’s a laser cutter, pen plotter, and Cricut competitor too - The Verge</title><link>https://www.theverge.com/news/634294/bambu-lab-h2d-3d-printer-laser-pen-blade-price-release-date</link></item>
+<item><title>OpenAI rolls out image generation powered by GPT-4o to ChatGPT - The Verge</title><link>https://www.theverge.com/openai/635118/chatgpt-sora-ai-image-generation-chatgpt</link></item>
+<item><title>Is it safe to travel with your phone right now? - The Verge</title><link>https://www.theverge.com/policy/634264/customs-border-protection-search-phone-airport-rights</link></item>
+<item><title>launched a $200 a month tier - The Verge</title><link>https://www.theverge.com/2024/12/5/24314147/openai-reasoning-model-o1-strawberry-chatgpt-pro-new-tier</link></item>
+<item><title>ChatGPT’s new image generator is delayed for free users - The Verge</title><link>https://www.theverge.com/news/636948/openai-chatgpt-image-generation-gpt-4o</link></item>
+<item><title>device helps you access - The Verge</title><link>https://www.theverge.com/2023/11/15/23962443/google-titan-security-key-passwordless-login</link></item>
+<item><title>Some Kindles now let you double-tap anywhere to turn the page - The Verge</title><link>https://www.theverge.com/news/636726/amazon-kindle-paperwhite-colorsoft-update-double-tap-turn-pages</link></item>
+<item><title>YouTube Shorts will count views even if you scroll past - The Verge</title><link>https://www.theverge.com/news/636876/youtube-shorts-views-counting-update</link></item>
+<item><title>Thread protocol - The Verge</title><link>https://www.theverge.com/23165855/thread-smart-home-protocol-matter-apple-google-interview</link></item>
+<item><title>Matter-over-Thread temperature sensor - The Verge</title><link>https://www.theverge.com/news/622308/ikea-matter-thread-temperature-humidity-sensor-timmerflotte</link></item>
+<item><title>Amazon Spring Sale deals on Verge staff home favorites - The Verge</title><link>https://www.theverge.com/tech/635736/amazon-big-spring-sale-best-deals-tech-staff-picks-march-prime-day-2025</link></item>
+<item><title>The Shokz OpenRun Pro 2 are worth their full price, but are more tempting at $30 off - The Verge</title><link>https://www.theverge.com/tech/636668/shokz-bone-conduction-headphones-openrun-pro-2-sale-amazon-spring</link></item>
+<item><title>The best foldable phone you can buy - The Verge</title><link>https://www.theverge.com/tech/635839/best-foldable-phone</link></item>
+<item><title>Apple blocked from presenting at Google antitrust hearing where $20 billion search deal is at stake - The Verge</title><link>https://www.theverge.com/news/636743/apple-google-antitrust-intervene-appeal-denied</link></item>
+<item><title>it introduced less than a year ago - The Verge</title><link>https://www.theverge.com/2024/7/18/24201105/instagram-notes-status-expansion-reels-grid-posts</link></item>
+<item><title>Canon redesigned its entry-level EOS R50 with improved video capabilities - The Verge</title><link>https://www.theverge.com/news/636493/canon-eos-r50-v-camera-aps-c-4k-livestreaming</link></item>
+<item><title>Wyze’s new camera filter claims to cut down on nuisance alerts - The Verge</title><link>https://www.theverge.com/news/636353/wyze-no-big-deal-filter-security-camera-notifications</link></item>
+<item><title>The 20 best Amazon Big Spring Sale deals under $30 - The Verge</title><link>https://www.theverge.com/tech/636342/amazon-big-spring-sale-2025-best-deals-under-30-tech-gift-ideas</link></item>
+<item><title>Microsoft’s account sign-in UI gets a new design and dark mode - The Verge</title><link>https://www.theverge.com/news/636622/microsoft-account-sign-in-new-design-dark-mode</link></item>
+<item><title>How Roomba got stuck - The Verge</title><link>https://www.theverge.com/the-vergecast/635241/roomba-irobot-trouble-kobo-kindle-vergecast</link></item>
+<item><title>Splice CEO Kakul Srivastava on where to draw hard lines around AI in music - The Verge</title><link>https://www.theverge.com/decoder-podcast-with-nilay-patel/632036/splice-ceo-kakul-srivastava-on-why-ai-will-never-replace-human-creativity</link></item>
+<item><title>Trump’s confusing crusade against Big Tech - The Verge</title><link>https://www.theverge.com/the-vergecast/633757/trump-big-tech-tiktok-ftc-siri-vergecast</link></item>
+<item><title>How the Tesla brand turned so toxic - The Verge</title><link>https://www.theverge.com/decoder-podcast-with-nilay-patel/633200/tesla-takedown-protest-elon-musk-toxic</link></item>
+<item><title>Switch 2, Steam Deck, and the next-gen console wars - The Verge</title><link>https://www.theverge.com/the-vergecast/631619/switch-2-steam-deck-handheld-consoles-vergecast</link></item>
+<item><title>Roborock’s S8 MaxV Ultra, our favorite robovac, is cheaper than ever - The Verge</title><link>https://www.theverge.com/good-deals/636455/roborock-s8-maxv-ultra-robot-vacuum-dreame-x40-ultra-spring-cleaning-deal-sale</link></item>
+<item><title>Rivian spins out secret e-bike lab into a new company called Also - The Verge</title><link>https://www.theverge.com/news/636520/rivian-ebike-scooter-also-spin-out-micormobility</link></item>
+<item><title>Avengers: Doomsday - The Verge</title><link>https://www.theverge.com/2024/7/27/24206259/marvel-russo-brothers-avengers-doomsday-secret-wars-sdcc</link></item>
+<item><title>making his return / debut - The Verge</title><link>https://www.theverge.com/2024/7/27/24207903/he-just-cant-stay-away</link></item>
+<item><title>This company is using AI to give people American-sounding accents - The Verge</title><link>https://www.theverge.com/news/636414/krisp-ai-accent-converter</link></item>
+<item><title>23andMe files for bankruptcy as CEO steps down - The Verge</title><link>https://www.theverge.com/news/634497/23andme-chapter-11-bankruptcy-gene-testing</link></item>
+<item><title>The Trump administration axes funding for climate impacts on health research - The Verge</title><link>https://www.theverge.com/news/635322/health-climate-change-funding-trump-nih-hhs</link></item>
+<item><title>World of Warcraft will rollback some Hardcore mode permadeaths - The Verge</title><link>https://www.theverge.com/news/636320/world-of-warcraft-hardcore-permadeath-rollback-onlyfangs</link></item>
+<item><title>Metaphor: ReFantazio’s elaborate menus are designed to heighten your emotions - The Verge</title><link>https://www.theverge.com/games/636243/metaphor-refantazio-ui-menu-interview-koji-ise</link></item>
+<item><title>Waze is dropping Google Assistant on iPhone after leaving it broken for ‘over a year’ - The Verge</title><link>https://www.theverge.com/news/636286/waze-google-assistant-iphone-gemini</link></item>
+<item><title>GoPro’s anamorphic lens is fun, fuss-free, and now available to buy - The Verge</title><link>https://www.theverge.com/news/634504/gopro-hero-13-black-anamorphic-lens-availability</link></item>
+<item><title>The beautiful, retro tech of two theatrical sound designers - The Verge</title><link>https://www.theverge.com/tech/631922/sound-design-interview-hardware-music-home</link></item>
+<item><title>Nintendo’s next Direct is about Switch 1 games - The Verge</title><link>https://www.theverge.com/news/636324/nintendo-switch-direct-march-2025</link></item>
+<item><title>No Man’s Sky gets prehistoric with Relics expansion - The Verge</title><link>https://www.theverge.com/news/635890/no-mans-sky-relics-update-archaeology</link></item>
+<item><title>What’s on your desk, Jennifer Pattison Tuohy? - The Verge</title><link>https://www.theverge.com/tech/634084/desk-home-office-jennifer-pattison-tuohy</link></item>
+<item><title>Studio Ghibli’s archive is the key to its 4K restoration process - The Verge</title><link>https://www.theverge.com/entertainment/634951/studio-ghibli-mononoke-4k-restoration-atsushi-okui</link></item>
+<item><title>Amazon Has a Rare Skytech Prebuilt Gaming PC with Nvidia GeForce RTX 5090 GPU for $4,800 - IGN</title><link>https://www.ign.com/articles/amazon-has-a-rare-skytech-prebuilt-gaming-pc-with-nvidia-geforce-rtx-5090-gpu-for-4800</link></item>
+<item><title>Deals For Today: Pokémon TCG - Surging Sparks Still In Stock and Cheap Power Banks - IGN</title><link>https://www.ign.com/articles/best-deals-for-march-26-2025</link></item>
+<item><title>The Most Surprising Avengers and Marvel Characters Not Announced for Doomsday - IGN</title><link>https://www.ign.com/articles/the-most-surprising-avengers-and-marvel-characters-not-announced-for-doomsday</link></item>
+<item><title>Rust Trailer Reveals First Footage of the Western Film Starring Alec Baldwin That Had a Fatal On-Set Shooting - IGN</title><link>https://www.ign.com/articles/rust-trailer-reveals-first-footage-of-the-western-film-starring-alec-baldwin-that-had-a-fatal-on-set-shooting</link></item>
+<item><title>The Nvidia GeForce RTX 5070 Ti Graphics Card Is in Stock on Amazon (for Prime Members) - IGN</title><link>https://www.ign.com/articles/the-nvidia-geforce-rtx-5070-ti-graphics-card-is-in-stock-on-amazon-for-prime-members</link></item>
+<item><title>The Avengers Connections Hidden in Marvel&amp;#39;s Doomsday Cast Tease - IGN</title><link>https://www.ign.com/articles/marvel-mcu-new-avengers-doomsday-secret-wars</link></item>
+<item><title>There&amp;#39;s a Star Wars BB-8 Version of Bop it! That Is Both Adorable and Really Cheap Today - IGN</title><link>https://www.ign.com/articles/star-wars-bb-8-version-of-bop-it-amazon-spring-sale-2025</link></item>
+<item><title>It&amp;#39;s Never Too Late to Protect Your Nintendo Switch – These Are the Best Switch Cases - IGN</title><link>https://www.ign.com/articles/best-nintendo-switch-case</link></item>
+<item><title>The Compact Iniu 10,000mAh USB Power Bank Just Dropped to $9.99 on Amazon - IGN</title><link>https://www.ign.com/articles/iniu-power-bank-deal-for-nintendo-switch-and-iphone-16-1</link></item>
+<item><title>New Attack on Titan Steelbooks With Tons of Special Features Hit All-Time Low Prices at Amazon - IGN</title><link>https://www.ign.com/articles/attack-on-titan-anime-steelbooks-manga-deals-amazon-spring-sale-2025</link></item>
+<item><title>Alienware and Dell Have the Best Price on a GeForce RTX 4090 Prebuilt Gaming PC - IGN</title><link>https://www.ign.com/articles/dell-alienware-geforce-rtx-4090-gaming-pc-deal</link></item>
+<item><title>Scooby-Doo: Netflix Officially Announces Live-Action Origin Series - IGN</title><link>https://www.ign.com/articles/scooby-doo-netflix-officially-announces-live-action-origin-series-greg-berlanti</link></item>
+<item><title>Who Is Lewis Pullman&amp;#39;s &amp;quot;Bob&amp;quot; in Avengers: Doomsday and Thunderbolts? Marvel&amp;#39;s The Sentry Explained - IGN</title><link>https://www.ign.com/articles/marvel-the-sentry-explained-lewis-pullman-thunderbolts-void</link></item>
+<item><title>Street Fighter Alpha: Warriors&amp;#39; Dreams Collectible Cards Now Up for Pre-Order at IGN Store - IGN</title><link>https://www.ign.com/articles/street-fighter-alpha-warriors-dreams-collectible-cards-now-up-for-pre-order-at-ign-store</link></item>
+<item><title>Killzone Composer Wonders if People Have Moved on From the Series: &amp;#39;I Get the Sense That People Want Something a Bit More Casual, a Bit More Quick&amp;#39; - IGN</title><link>https://www.ign.com/articles/killzone-composer-wonders-if-people-have-moved-on-from-the-series-i-get-the-sense-that-people-want-something-a-bit-more-casual-a-bit-more-quick</link></item>
+<item><title>PlayStation Plus Games for April 2025 Revealed - IGN</title><link>https://www.ign.com/articles/playstation-plus-games-for-april-2025-revealed</link></item>
+<item><title>The Studio Review - IGN</title><link>https://www.ign.com/articles/the-studio-review-seth-rogen-apple-tv</link></item>
+<item><title>Soccer Star Cristiano Ronaldo Is an Actual Fatal Fury: City of the Wolves Playable Character - IGN</title><link>https://www.ign.com/articles/soccer-star-cristiano-ronaldo-is-an-actual-fatal-fury-city-of-the-wolves-playable-character</link></item>
+<item><title>Metal Gear Solid: Master Collection Vol.1 Drops to $20 in Amazon’s Big Spring Sale - IGN</title><link>https://www.ign.com/articles/metal-gear-solid-master-collection-vol1-amazon-big-spring-sale</link></item>
+<item><title>Verdansk Returns to Call of Duty Warzone — Here Are All the Biggest Changes - IGN</title><link>https://www.ign.com/articles/verdansk-returns-to-call-of-duty-warzone-here-are-all-the-biggest-changes</link></item>
+<item><title>Four stages of tariff progressions - FlowingData</title><link>https://flowingdata.com/2025/03/26/four-stages-of-tariff-progressions/</link></item>
+<item><title>Turn map locations to slide puzzles - FlowingData</title><link>https://flowingdata.com/2025/03/26/turn-map-locations-to-slide-puzzles/</link></item>
+<item><title>Ahmad Barclay - FlowingData</title><link>https://flowingdata.com/tag/ahmad-barclay/</link></item>
+<item><title>13 PS5 Games That Are All A Steal At $10 Or Less During Sony&amp;#39;s Spring Sale - Kotaku</title><link>https://kotaku.com/ps5-spring-sale-kingdom-come-resident-evil-cheap-1851772499</link></item>
+<item><title>Ex-PlayStation Boss Shawn Layden Says He Left Sony In Part Because Of Pivot To Live Service - Kotaku</title><link>https://kotaku.com/ps5-shawn-layden-live-service-sony-last-us-online-1851772581</link></item>
+<item><title>New Netflix Series Is About Scooby-Doo Being A Witness To Murder - Kotaku</title><link>https://kotaku.com/netflix-scooby-doo-live-action-origin-series-murder-wb-1851772552</link></item>
+<item><title>Every Marvel TV Show, Ranked From Awful To Sublime - Kotaku</title><link>https://kotaku.com/best-marvel-tv-shows-disney-netflix-mcu-1851173236</link></item>
+<item><title>One Of 2023&amp;#39;s Best Shooters Will Be Free On PS Plus - Kotaku</title><link>https://kotaku.com/robocop-rogue-city-fps-rpg-2023-ps-plus-march-2025-free-1851772522</link></item>
+<item><title>Tomorrow&amp;#39;s Nintendo Direct Sounds Like The Switch&amp;#39;s Last Hurrah - Kotaku</title><link>https://kotaku.com/nintendo-direct-march-where-when-to-watch-switch-2-1851772454</link></item>
+<item><title>Nintendo Switch 2 Will Reportedly Launch In June With An Emphasis On First-Party Games - Kotaku</title><link>https://kotaku.com/switch-2-release-date-nintendo-direct-mario-kart-9-1851772264</link></item>
+<item><title>The World Is A Mess, But This New Tiny Boat Game Lets You Clean It Up - Kotaku</title><link>https://kotaku.com/spilled-cozy-boat-clean-up-game-indie-pc-steam-review-1851772382</link></item>
+<item><title>It&amp;#39;s 2025 And There&amp;#39;s A Fight Over The Future Of The Nintendo 64 Brewing - Kotaku</title><link>https://kotaku.com/m64-modretro-palmer-luckey-nintendo-64-analogue-1851771242</link></item>
+<item><title>The Super Nintendo Now Runs Infinitesimally Faster Than It Did 35 Years Ago And Players Are Trying To Find Out Why - Kotaku</title><link>https://kotaku.com/super-nintendo-snes-speedrun-audio-processor-tas-1851770029</link></item>
+<item><title>Xbox Is Experimenting With An Extra Button Press To Open Games - Kotaku</title><link>https://kotaku.com/xbox-series-x-s-insider-dashboard-home-screen-1851772178</link></item>
+<item><title>Gaming Hardware Sales Hit A 5-Year Low Last Month - Kotaku</title><link>https://kotaku.com/february-2025-best-selling-games-ps5-switch-2-1851770939</link></item>
+<item><title>12 Of The Biggest Choices We&amp;#39;ve Agonized Over In Games - Kotaku</title><link>https://kotaku.com/video-game-best-choices-decisions-mass-effect-witcher-3-1851772314</link></item>
+<item><title>Acid GIFs, March 27 (25 gifs) - AcidCow.com</title><link>https://acidcow.com/gif/166979-acid-gifs-march-27-25-gifs.html</link></item>
+<item><title>Cool Things From The 1900&amp;#39;s (23 pics) - AcidCow.com</title><link>https://acidcow.com/pics/166958-cool-things-from-the-1900s-23-pics.html</link></item>
+<item><title>Busty Girls (47 pics) - AcidCow.com</title><link>https://acidcow.com/girls/166973-busty-girls-47-pics.html</link></item>
+<item><title>Annoying Coworkers (18 pics) - AcidCow.com</title><link>https://acidcow.com/pics/166959-annoying-coworkers-18-pics.html</link></item>
+<item><title>Nostalgic Memes (28 pics) - AcidCow.com</title><link>https://acidcow.com/pics/166962-nostalgic-memes-28-pics.html</link></item>
+<item><title>Memes For &amp;#39;&amp;#39;The Lord Of The Rings&amp;#39;&amp;#39; Fans (41 pics) - AcidCow.com</title><link>https://acidcow.com/pics/166965-memes-for-the-lord-of-the-rings-fans-41-pics.html</link></item>
+<item><title>Truthful Memes (17 pics) - AcidCow.com</title><link>https://acidcow.com/pics/166961-truthful-memes-17-pics.html</link></item>
+<item><title>Failed Designs And Constructions (15 pics) - AcidCow.com</title><link>https://acidcow.com/pics/166969-failed-designs-and-constructions-15-pics.html</link></item>
+<item><title>Beauty Girls (23 pics) - AcidCow.com</title><link>https://acidcow.com/girls/166976-beauty-girls-23-pics.html</link></item>
+<item><title>Expectations Against Reality (18 pics) - AcidCow.com</title><link>https://acidcow.com/pics/166960-expectations-against-reality-18-pics.html</link></item>
+<item><title>Hot Girls (26 pics) - AcidCow.com</title><link>https://acidcow.com/girls/166975-hot-girls-26-pics.html</link></item>
+<item><title>Cool LEGO Constructions (23 pics) - AcidCow.com</title><link>https://acidcow.com/pics/166964-cool-lego-constructions-23-pics.html</link></item>
+<item><title>Awful Haircuts (30 pics) - AcidCow.com</title><link>https://acidcow.com/pics/166968-awful-haircuts-30-pics.html</link></item>
+<item><title>Daily Pictures. Part 1 (65 pics) - AcidCow.com</title><link>https://acidcow.com/picdump/166954-daily-pictures-part-1-65-pics.html</link></item>
+<item><title>Space Force OKs Vulcan rocket as SpaceX competitor for military launch - Defense News</title><link>https://www.defensenews.com/space/2025/03/26/space-force-oks-vulcan-rocket-as-spacex-competitor-for-military-launch/</link></item>
+<item><title>‘Obviously classified’: Experts say Hegseth chat leaks invited danger - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2025/03/26/obviously-classified-experts-say-hegseth-chat-leaks-invited-danger/</link></item>
+<item><title>In the wake of Hegseth’s software memo, experts eye further change - Defense News</title><link>https://www.defensenews.com/pentagon/2025/03/26/in-the-wake-of-hegseths-software-memo-experts-eye-further-change/</link></item>
+<item><title>Oshkosh Defense unveils new variant of Marine remote fires vehicle - Defense News</title><link>https://www.defensenews.com/land/2025/03/26/oshkosh-defense-unveils-new-variant-of-marine-remote-fires-vehicle/</link></item>
+<item><title>US Army wants AI solutions to protect homeland munitions sites - Defense News</title><link>https://www.defensenews.com/land/2025/03/26/us-army-wants-ai-solutions-to-protect-homeland-munitions-sites/</link></item>
+<item><title>Denmark signals plan to join European air refueling pool, buy tankers - Defense News</title><link>https://www.defensenews.com/global/europe/2025/03/26/denmark-signals-plan-to-join-european-air-refueling-pool-buy-tankers/</link></item>
+<item><title>Vehicle of missing US soldiers in Lithuania found submerged in water - Defense News</title><link>https://www.defensenews.com/news/your-military/2025/03/26/4-us-soldiers-missing-from-training-area-in-lithuania/</link></item>
+<item><title>US Army wants to aggressively amass cheap rockets - Defense News</title><link>https://www.defensenews.com/land/2025/03/26/us-army-wants-to-aggressively-amass-cheap-rockets/</link></item>
+<item><title>Marines’ barracks-fixing ‘Operation Clean Sweep’ returns to California - Defense News</title><link>https://www.defensenews.com/news/your-marine-corps/2025/03/26/marines-barracks-fixing-operation-clean-sweep-returns-to-california/</link></item>
+<item><title>Airbus announces missile-slinging drone for air defense - Defense News</title><link>https://www.defensenews.com/global/europe/2025/03/26/airbus-announces-missile-slinging-drone-for-air-defense/</link></item>
+<item><title>Smartwatches may help control diabetes through exercise tracking - Medical Xpress</title><link>https://medicalxpress.com/news/2025-03-smartwatches-diabetes-tracking.html</link></item>
+<item><title>Cuts to foreign aid could result in millions of HIV deaths and soaring rates of global infections, modeling study finds - Medical Xpress</title><link>https://medicalxpress.com/news/2025-03-foreign-aid-result-millions-hiv.html</link></item>
+<item><title>AI&amp;#39;s perceived burden hinders health care adoption, study finds - Medical Xpress</title><link>https://medicalxpress.com/news/2025-03-ai-burden-hinders-health.html</link></item>
+<item><title>Coverage for routine childhood vaccines remains below prepandemic levels - Medical Xpress</title><link>https://medicalxpress.com/news/2025-03-coverage-routine-childhood-vaccines-prepandemic.html</link></item>
+<item><title>Adding 3D total body photography to usual care increases rate of skin excisions, study finds - Medical Xpress</title><link>https://medicalxpress.com/news/2025-03-adding-3d-total-body-photography.html</link></item>
+<item><title>Air pollution may contribute to skin health issues - Medical Xpress</title><link>https://medicalxpress.com/news/2025-03-air-pollution-contribute-skin-health.html</link></item>
+<item><title>Targeting hormones could reduce risk of fatty liver disease - Medical Xpress</title><link>https://medicalxpress.com/news/2025-03-hormones-fatty-liver-disease.html</link></item>
+<item><title>Early signs of heart problems linked to smaller brain volumes - Medical Xpress</title><link>https://medicalxpress.com/news/2025-03-early-heart-problems-linked-smaller.html</link></item>
+<item><title>Neighborhood status may affect risk of dementia, study suggests - Medical Xpress</title><link>https://medicalxpress.com/news/2025-03-neighborhood-status-affect-dementia.html</link></item>
+<item><title>Study confirms link between maternal diet and risk to infant behavioral health - Medical Xpress</title><link>https://medicalxpress.com/news/2025-03-link-maternal-diet-infant-behavioral.html</link></item>
+<item><title>Five minutes a day of eccentric exercise can improve your life, study finds - Medical Xpress</title><link>https://medicalxpress.com/news/2025-03-minutes-day-eccentric-life.html</link></item>
+<item><title>Study finds long COVID patients feel pressure to prove their illness is real - Medical Xpress</title><link>https://medicalxpress.com/news/2025-03-covid-patients-pressure-illness-real.html</link></item>
+<item><title>How inherited cancer risks can be used for effective personalized therapy - Medical Xpress</title><link>https://medicalxpress.com/news/2025-03-inherited-cancer-effective-personalized-therapy.html</link></item>
+<item><title>Tumor formation&amp;#39;s two-step process: Mutated cells can persist for long periods without turning cancerous - Medical Xpress</title><link>https://medicalxpress.com/news/2025-03-tumor-formation-mutated-cells-persist.html</link></item>
+<item><title>Researchers identify neurons in brain that regulate energy levels and body temperature - Medical Xpress</title><link>https://medicalxpress.com/news/2025-03-neurons-brain-energy-body-temperature.html</link></item>
+<item><title>More than just an animal: Losing a pet deserves more attention and compassion - Medical Xpress</title><link>https://medicalxpress.com/news/2025-03-animal-pet-attention-compassion.html</link></item>
+<item><title>Potential &amp;#39;molecular mimics&amp;#39; may be behind COVID-induced autoimmune disease - Medical Xpress</title><link>https://medicalxpress.com/news/2025-03-potential-molecular-mimics-covid-autoimmune.html</link></item>
+<item><title>Daily physical activity, even at light intensities, linked to lower cancer risk - Medical Xpress</title><link>https://medicalxpress.com/news/2025-03-daily-physical-intensities-linked-cancer.html</link></item>
+<item><title>Debate over the abortion pill mifepristone resurfaces after Makary is confirmed to head the FDA - Medical Xpress</title><link>https://medicalxpress.com/news/2025-03-debate-abortion-pill-mifepristone-resurfaces.html</link></item>
+<item><title>Chinese doctors implant pig liver in human for first time - Medical Xpress</title><link>https://medicalxpress.com/news/2025-03-chinese-doctors-implant-pig-liver.html</link></item>
+<item><title>Going to the dentist is expensive. Here are 3 things you can do to protect your oral health—and 3 things to avoid - Medical Xpress</title><link>https://medicalxpress.com/news/2025-03-dentist-expensive-oral-health.html</link></item>
+<item><title>Atlas of brain&amp;#39;s mitochondria reveals high cognition areas supplied with more energy - Medical Xpress</title><link>https://medicalxpress.com/news/2025-03-atlas-brain-mitochondria-reveals-high.html</link></item>
+<item><title>First hormone-free male birth control pill clears another milestone - Medical Xpress</title><link>https://medicalxpress.com/news/2025-03-hormone-free-male-birth-pill.html</link></item>
+<item><title>Mini rolling robot takes virtual biopsies - Medical Xpress</title><link>https://medicalxpress.com/news/2025-03-mini-robot-virtual-biopsies.html</link></item>
+<item><title>Children of moms who smoked or were obese are more likely to become obese adults, study finds - Medical Xpress</title><link>https://medicalxpress.com/news/2025-03-children-moms-obese-adults.html</link></item>
+<item><title>Nitisinone makes human blood lethal to mosquitoes and outlasts ivermectin, study shows - Medical Xpress</title><link>https://medicalxpress.com/news/2025-03-nitisinone-human-blood-lethal-mosquitoes.html</link></item>
+<item><title>Study identifies Shisa7 gene as key driver in heroin addiction - Medical Xpress</title><link>https://medicalxpress.com/news/2025-03-shisa7-gene-key-driver-heroin.html</link></item>
+<item><title>Exosomes linked to blood-brain barrier dysfunction in pediatric obstructive sleep apnea - Medical Xpress</title><link>https://medicalxpress.com/news/2025-03-exosomes-linked-blood-brain-barrier.html</link></item>
+<item><title>How cholesterol regulation may affect Alzheimer&amp;#39;s development - Medical Xpress</title><link>https://medicalxpress.com/news/2025-03-cholesterol-affect-alzheimer.html</link></item>
+<item><title>Scientists discover way to slow or block recurrence of glioblastoma - Medical Xpress</title><link>https://medicalxpress.com/news/2025-03-scientists-block-recurrence-glioblastoma.html</link></item>
+<item><title>Microsoft walking away from datacenter leases (probably) isn&amp;#39;t a sign the AI bubble is bursting - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/26/microsoft_ai_apocalypse/</link></item>
+<item><title>Signalgate storm intensifies as journalist releases full secret Houthi airstrike chat - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/26/signal_calls_congress/</link></item>
+<item><title>US defense contractor cops to sloppy security, settles after infosec lead blows whistle - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/26/us_defense_contractor/</link></item>
+<item><title>Files stolen from NSW court system, including restraining orders for violence - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/26/nsw_police_investigating_court_system/</link></item>
+<item><title>It&amp;#39;s International Datacenter Day for those who colocate, er, celebrate - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/26/international_datacenter_day/</link></item>
+<item><title>Credible nerd says stop using atop, doesn&amp;#39;t say why, everyone panics - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/26/uninstall_atop_for_now/</link></item>
+<item><title>Microsoft patches patch that broke USB printing in Windows 11 - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/26/microsoft_deborks_usb_printers/</link></item>
+<item><title>US closes subsidiary loophole on dozens of Chinese entity list members - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/26/us_entity_list_subsidiaries/</link></item>
+<item><title>50 years ago the last Saturn rocket rolled out of NASA&amp;#39;s Vehicle Assembly Building - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/26/50_years_since_last_saturn/</link></item>
+<item><title>Schneider Electric pumps $700M into US ops as AI datacenter demand surges - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/26/schneider_electric_ai_investment/</link></item>
+<item><title>NCSC taps influencers to make 2FA go viral - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/26/ncsc_influencers_2fa/</link></item>
+<item><title>UK satellite smartphone services could get green light this year - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/26/ofcom_could_authorize_uk_satellite/</link></item>
+<item><title>British govt wants to mainline AI, but its arteries are clogged with legacy tech - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/26/legacy_systems_uk_ai/</link></item>
+<item><title>Aardvark beats groundhogs and supercomputers in weather forecasting - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/26/aardvark_weather_forecast/</link></item>
+<item><title>Jeff Bezos can now taunt Elon Musk: I&amp;#39;m building a moon rover for NASA, when can Tesla do that? - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/26/firefly_aerospac_honeybee_rover/</link></item>
+<item><title>VMware sues Siemens for allegedly using unlicensed software - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/26/vmware_sues_siemens_for_using/</link></item>
+<item><title>Revenge of the nerds: Teachers, professors sue to undo Trump science funding cuts - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/03/25/us_funding_science_cuts_lawsuit/</link></item>
+<item><title>Taylor Russell Wows at Vogue World Hollywood 2025 - CelebMafia</title><link>https://celebmafia.com/taylor-russell-wows-at-vogue-world-hollywood-2025-4457376/</link></item>
+<item><title>Amanda Bynes Wows in Heart Truth Red Dress 2009 - CelebMafia</title><link>https://celebmafia.com/amanda-bynes-wows-in-heart-truth-red-dress-2009-4457351/</link></item>
+<item><title>Olga Obumova Rocks Réalisation Par Spring Summer 2025 - CelebMafia</title><link>https://celebmafia.com/olga-obumova-rocks-realisation-par-spring-summer-2025-4457340/</link></item>
+<item><title>Pilot Paisley-Rose Slays in March 2025 Photoshoot - CelebMafia</title><link>https://celebmafia.com/pilot-paisley-rose-slays-in-march-2025-photoshoot-4457319/</link></item>
+<item><title>Elizabeth Olsen Wows in Chanel Pre-Fall 2025 NYC - CelebMafia</title><link>https://celebmafia.com/elizabeth-olsen-wows-in-chanel-pre-fall-2025-nyc-4457300/</link></item>
+<item><title>Elizabeth Olsen Channels Vintage Glam at Today Show - CelebMafia</title><link>https://celebmafia.com/elizabeth-olsen-channels-vintage-glam-at-today-show-4457275/</link></item>
+<item><title>Julia Garcia at Day Of Reckoning Premiere in Burbank - CelebMafia</title><link>https://celebmafia.com/julia-garcia-at-day-of-reckoning-premiere-in-burbank-4457256/</link></item>
+<item><title>Lily Brooks O’Briant at Day Of Reckoning Premiere 2025 - CelebMafia</title><link>https://celebmafia.com/lily-brooks-obriant-at-day-of-reckoning-premiere-2025-4457237/</link></item>
+<item><title>Jenna Ortega Wears Oscar de la Renta on Colbert - CelebMafia</title><link>https://celebmafia.com/jenna-ortega-wears-oscar-de-la-renta-on-colbert-4457226/</link></item>
+<item><title>Alyssa Milano Maxim Photoshoot 1998 - CelebMafia</title><link>https://celebmafia.com/alyssa-milano-maxim-photoshoot-1998-4457193/</link></item>
+<item><title>【兔摆子若埃汉化】380话 「再逝之影」 - 百度贴吧 - 剑风传奇</title><link>https://tieba.baidu.com/p/9539059183</link></item>
+<item><title>【兔摆子若埃汉化】379话 「舞于无间地狱之人」 - 百度贴吧 - 剑风传奇</title><link>https://tieba.baidu.com/p/9514409484</link></item>
+<item><title>感觉格里菲斯的负面评价有点过了… - 百度贴吧 - 剑风传奇</title><link>https://tieba.baidu.com/p/9602662486</link></item>
+<item><title>看完了动漫，有几点疑问 - 百度贴吧 - 剑风传奇</title><link>https://tieba.baidu.com/p/9602477189</link></item>
+<item><title>我发剑风萝莉，你们来打分(对人物的感受) - 百度贴吧 - 剑风传奇</title><link>https://tieba.baidu.com/p/9441527649</link></item>
+<item><title>刷评论突然想到问题渴望的福王到底只有格里菲斯还是五个都是来着？ - 百度贴吧 - 剑风传奇</title><link>https://tieba.baidu.com/p/9603874870</link></item>
+<item><title>有没有跟我一样看到这里感觉有点热血的 - 百度贴吧 - 剑风传奇</title><link>https://tieba.baidu.com/p/9545246322</link></item>
+<item><title>看到第六卷总感觉有点gaygay的感觉 - 百度贴吧 - 剑风传奇</title><link>https://tieba.baidu.com/p/9586267110</link></item>
+<item><title>剑风传奇/烙印战士漫画/动漫/公式书/画集/全集 - 百度贴吧 - 剑风传奇</title><link>https://tieba.baidu.com/p/9591152988</link></item>
+<item><title>淘到一套剑风传奇，请大家看一下是否是真的? - 百度贴吧 - 剑风传奇</title><link>https://tieba.baidu.com/p/9601336567</link></item>
+<item><title>剑风传奇漫画全彩版 公式书+设定集+炎龙小说+周年画集 - 百度贴吧 - 剑风传奇</title><link>https://tieba.baidu.com/p/9565568452</link></item>
+<item><title>好像只有里基特伤害过格里菲斯 - 百度贴吧 - 剑风传奇</title><link>https://tieba.baidu.com/p/9604028765</link></item>
+<item><title>#剑风传奇# by 24kenva - 百度贴吧 - 剑风传奇</title><link>https://tieba.baidu.com/p/9604057319</link></item>
+<item><title>剑风传奇/烙印战士 1-42话收藏级 - 百度贴吧 - 剑风传奇</title><link>https://tieba.baidu.com/p/9571611141</link></item>
+<item><title>现代战场上出现使徒人类的胜算有几层 - 百度贴吧 - 剑风传奇</title><link>https://tieba.baidu.com/p/8974276745</link></item>
+<item><title>问问吧友，项羽要是取代嘎子的位置会不会做的更好 - 百度贴吧 - 剑风传奇</title><link>https://tieba.baidu.com/p/9603982910</link></item>
+<item><title>哪里可以看剑风漫画啊？ - 百度贴吧 - 剑风传奇</title><link>https://tieba.baidu.com/p/9591615748</link></item>
+<item><title>骷髅骑士到底是什么实力？ - 百度贴吧 - 剑风传奇</title><link>https://tieba.baidu.com/p/9086698692</link></item>
+<item><title>【活动】分享你保存的剑风传奇图片 - 百度贴吧 - 剑风传奇</title><link>https://tieba.baidu.com/p/8697926990</link></item>
+<item><title>一个正在看剑风的人的疑问？？？ - 百度贴吧 - 剑风传奇</title><link>https://tieba.baidu.com/p/9460138146</link></item>
+<item><title>神之手的衣品以及生前所受酷刑的暗示。 - 百度贴吧 - 剑风传奇</title><link>https://tieba.baidu.com/p/9284593097</link></item>
+<item><title>我发剑风最坏的结局，你们打分 - 百度贴吧 - 剑风传奇</title><link>https://tieba.baidu.com/p/9411503585</link></item>
+<item><title>这个吧里为什么永远都有指责卡思嘉不是“完美受害者”的人 - 百度贴吧 - 剑风传奇</title><link>https://tieba.baidu.com/p/9594224143</link></item>
+<item><title>更直观地感受到格斯非人类的力量水平 - 百度贴吧 - 剑风传奇</title><link>https://tieba.baidu.com/p/9597918363</link></item>
+<item><title>抛开出生事迹不谈，大伙会觉得蛤蜊算“美男子”吗？ - 百度贴吧 - 剑风传奇</title><link>https://tieba.baidu.com/p/9542632313</link></item>
+<item><title>粉丝制作《剑风传奇》黑色剑士篇将于三月29号播出 - 百度贴吧 - 剑风传奇</title><link>https://tieba.baidu.com/p/9593447235</link></item>
+<item><title>嘎子到底咋才能弄死格里菲斯啊 - 百度贴吧 - 剑风传奇</title><link>https://tieba.baidu.com/p/9599569798</link></item>
+<item><title>漫谈剑风传奇中的终极侮辱 - 百度贴吧 - 剑风传奇</title><link>https://tieba.baidu.com/p/8940063769</link></item>
+<item><title>摩兹古斯信仰的到底是什么神？ - 百度贴吧 - 剑风传奇</title><link>https://tieba.baidu.com/p/9597899397</link></item>
+<item><title>蛤蜊受刑有没有受宫刑啊 - 百度贴吧 - 剑风传奇</title><link>https://tieba.baidu.com/p/9601672611</link></item>
+<item><title>Memoirs of a Foxhunting Man - Standard Ebooks</title><link>https://standardebooks.org/ebooks/siegfried-sassoon/memoirs-of-a-foxhunting-man</link></item>
+<item><title>The Giant Raft - Standard Ebooks</title><link>https://standardebooks.org/ebooks/jules-verne/the-giant-raft/w-j-gordon</link></item>
+<item><title>Allan Quatermain Stories - Standard Ebooks</title><link>https://standardebooks.org/ebooks/h-rider-haggard/allan-quatermain-stories</link></item>
+<item><title>A Woman of No Importance - Standard Ebooks</title><link>https://standardebooks.org/ebooks/oscar-wilde/a-woman-of-no-importance</link></item>
+<item><title>Understood Betsy - Standard Ebooks</title><link>https://standardebooks.org/ebooks/dorothy-canfield-fisher/understood-betsy</link></item>
+<item><title>The Footsteps at the Lock - Standard Ebooks</title><link>https://standardebooks.org/ebooks/ronald-a-knox/the-footsteps-at-the-lock</link></item>
+<item><title>How to Tell the Birds from the Flowers and Other Woodcuts - Standard Ebooks</title><link>https://standardebooks.org/ebooks/robert-williams-wood/how-to-tell-the-birds-from-the-flowers-and-other-woodcuts</link></item>
+<item><title>The Homemaker - Standard Ebooks</title><link>https://standardebooks.org/ebooks/dorothy-canfield-fisher/the-homemaker</link></item>
+<item><title>The Secret of the Caves - Standard Ebooks</title><link>https://standardebooks.org/ebooks/franklin-w-dixon/the-secret-of-the-caves</link></item>
+<item><title>Representative Men - Standard Ebooks</title><link>https://standardebooks.org/ebooks/ralph-waldo-emerson/representative-men</link></item>
+<item><title>The Purple Land - Standard Ebooks</title><link>https://standardebooks.org/ebooks/w-h-hudson/the-purple-land</link></item>
+<item><title>Dorothy and the Wizard in Oz - Standard Ebooks</title><link>https://standardebooks.org/ebooks/l-frank-baum/dorothy-and-the-wizard-in-oz</link></item>
 </channel></rss>
