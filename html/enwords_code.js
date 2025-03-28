@@ -1067,20 +1067,13 @@ function old_words_and_phrase_with_space_kle(){
 }
 
 function old_words_without_phrase_kle(){
-    var words_set=new Set();
-    var phrase_list=[];
-    for (let item of enwords){
-        if (item[0].includes(' ') || item[0].includes('-')){
-            phrase_list.push(item[0]);
-        } else {
-            words_set.add(item[0]);
-        }
-    }
+    var phrase_set,words_set;
+    [phrase_set,words_set]=phrase_in_old_words_b(true);
     
-    phrase_list=new Set(phrase_list.join(' ').split(/[\s\-]+/));
+    phrase_set=new Set(Array.from(phrase_set).join(' ').split(/[\s\-]+/));
     
-    var without_phrase=Array.from(array_difference_b(words_set,phrase_list,true));
-    var with_phrase=Array.from(array_intersection_b(words_set,phrase_list,true));
+    var without_phrase=Array.from(array_difference_b(words_set,phrase_set,true));
+    var with_phrase=Array.from(array_intersection_b(words_set,phrase_set,true));
 
     var bljg='<h4>无词组的单词 <small>('+without_phrase.length+')</small></h4>';
     without_phrase.sort(randomsort_b);

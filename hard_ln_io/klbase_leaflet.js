@@ -76,6 +76,10 @@ function circle_leaflet_b(csomap,islayer=false,cslon=121.5,cslat=31.2,csradius=1
     }
 }
 
+function line_default_weight_b(){
+    return ismobile_b()?5:3;
+}
+
 function line_leaflet_b(csomap,islayer=false,cslist=[],cscolor='red',cscaption='',textarea_id_for_remove='',time_list=[],part_len=-1){
     function sub_line_leaflet_b_one(sub_list){
         let [dots_list,cslen,start_no,end_no]=sub_list;
@@ -100,11 +104,7 @@ function line_leaflet_b(csomap,islayer=false,cslist=[],cscolor='red',cscaption='
             blstr=blstr+' <span style="cursor:pointer;" onclick="remove_data_in_textarea_leaflet_b(\''+restore_type+'\',this,\''+textarea_id_for_remove+'\');">⛔</span>';
         }
 
-        if (line_no % 2 ==1){
-            var polyline = L.polyline(dots_list, {color: cscolor});
-        } else {
-            var polyline = L.polyline(dots_list, {color: cscolor, dashArray: '5, 5', dashOffset: '5'}); //设置虚线样式和偏移量
-        }
+        var polyline = L.polyline(dots_list, line_style[line_no % 2]);
 
         polyline.bindPopup('<span style="word-break:break-all;">'+blstr+'</span>');
         polyline.on('click', (e) => {gpx_current_geometry_data_global=e.target.getLatLngs();}); //全局变量 - 保留注释   
@@ -121,6 +121,29 @@ function line_leaflet_b(csomap,islayer=false,cslist=[],cscolor='red',cscaption='
     var list_len=cslist.length;
     var time_len=time_list.length;
     
+    if (typeof gpx_line_weight_global=='undefined'){
+        gpx_line_weight_global=line_default_weight_b();
+    }
+    
+    var line_style=[{},{}];   //设置虚线样式和偏移量
+    if (typeof cscolor == 'object'){
+        line_style[1]=cscolor;
+    } else {
+        line_style[1]={color:cscolor};
+    }
+    line_style[1]['weight']=gpx_line_weight_global;
+    
+    for (let key in line_style[1]){
+        line_style[0][key]=line_style[1][key];
+    }
+
+    if (line_style[0]['dashArray']==undefined){
+        line_style[0]['dashArray']=(gpx_line_weight_global * 3) + ',' + (gpx_line_weight_global * 2);
+    }
+    if (line_style[0]['dashOffset']==undefined){
+        line_style[0]['dashOffset']=(gpx_line_weight_global * 3).toString();
+    }
+
     for (let blno=1;blno<list_len;blno++){
         var latlng1 = L.latLng(cslist[blno-1][0], cslist[blno-1][1]);
         var latlng2 = L.latLng(cslist[blno][0], cslist[blno][1]);

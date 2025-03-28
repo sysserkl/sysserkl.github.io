@@ -2423,7 +2423,12 @@ function klsofts_div_b(divid,font_size,padding=0,filter_str='0',diy_list=[],auto
     }
     
     var soft_str='<div id="'+divid+'" class="div_top_bottom_menu" style="display:none;font-weight:normal;padding:'+padding+'rem;">';
-    var head_part=(add_head?['{{selenium_news}}/html/klapps.htm,KL Apps,klapps512.png,0']:[]);
+    if (typeof js_and_htm_file_render_b == 'function' && is_render_page_b()){
+        var head_part=(add_head?['javascript:read_bigfile_standalone_from_idb_b(js_and_htm_file_render_b);,Bigfile,B,0']:[]);    
+    } else {
+        var head_part=(add_head?['{{selenium_news}}/html/klapps.htm,KL Apps,🌀,0']:[]);
+    }
+    
     head_part=head_part.concat(diy_list);
     var soft_list=klsofts_list_b(filter_str,head_part);
     

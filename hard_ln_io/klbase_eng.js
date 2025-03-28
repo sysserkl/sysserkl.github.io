@@ -2945,3 +2945,24 @@ function sentence_wt_b(){
     }
     return list_t;
 }
+
+function phrase_in_old_words_b(merge_phrase=false){
+    var words_set=new Set();
+    var phrase1_set=new Set();
+    var phrase2_set=new Set();
+
+    for (let item of enwords){
+        if (item[0].includes(' ')){
+            phrase1_set.add(item[0]);
+        } else if (item[0].includes('-')){
+            phrase2_set.add(item[0]);
+        } else {
+            words_set.add(item[0]);
+        }
+    }
+    if (merge_phrase){
+        return [array_union_b(phrase1_set,phrase2_set,true),words_set];
+    } else {
+        return [phrase1_set,phrase2_set,words_set];
+    }
+}
