@@ -11,7 +11,7 @@ function init_bigfile(){
     let ismobile=ismobile_b();
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile?'1.8rem':'1.6rem'),true,false,2);
     input_with_x_b('input_search',11);
-    character_2_icon_b('B');
+    character_2_icon_b('🍥');
 
     menu_bigfile();
     refresh_bigfile();

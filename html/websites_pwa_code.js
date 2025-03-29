@@ -55,7 +55,7 @@ function menu_websites_pwa(){
     //---
     var klmenu_recent=[];
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_tag,'#','10rem','1rem','1rem','30rem')+klmenu_b(klmenu_recent,'🌐','16rem','1rem','1rem','30rem','','div_menu_recent_sites_pwa')+fav_www_menu_websites_b('#top',true)+klmenu_b(klmenu2,'⚙','22rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🕷','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_tag,'#','10rem','1rem','1rem','30rem')+klmenu_b(klmenu_recent,'🌐','16rem','1rem','1rem','30rem','','div_menu_recent_sites_pwa')+fav_www_menu_websites_b('#top',true)+klmenu_b(klmenu2,'⚙','22rem','1rem','1rem','60rem'),'','0rem')+' ');
     
     klmenu_check_b('span_reg_web',true);
     klmenu_check_b('span_veil_web',true);    

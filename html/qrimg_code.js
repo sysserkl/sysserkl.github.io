@@ -255,6 +255,8 @@ function style_qrimg(cssrc,fname='',csborder=true){
 }
 
 function init_qrimg(){
+    character_2_icon_b('𖡗');
+    
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.6rem'));
     var input_list=[
     ['input_qr_rows',5,0.5],
@@ -276,7 +278,7 @@ function menu_qrimg(){
     '<span id="span_img_border" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ img border</span>',    
     ];
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_config,'𖣯','12rem','1rem','1rem','30rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_config,'𖡗','12rem','1rem','1rem','30rem'),'','0rem')+' ');
     klmenu_check_b('span_img_border',true);        
 }
 

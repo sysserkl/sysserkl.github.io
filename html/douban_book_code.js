@@ -10,6 +10,7 @@ function data_load_dbb(){
 }
 
 function init_dbb(){    
+    character_2_icon_b('𖠗');
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.6rem'),true,false,2);
     menu_dbb();
 

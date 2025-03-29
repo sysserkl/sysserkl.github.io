@@ -1,4 +1,6 @@
 function init_klqr(){
+    character_2_icon_b('𖣯');
+        
     args_klqr();
     if (parameter_klqr_global.has('iframe')){return;}
 
@@ -591,7 +593,7 @@ function menu_klqr(){
     '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'qrcode\');">更新版本</span>',    
     ];
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','11rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'⚙','19rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'𖣯','11rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'⚙','19rem','1rem','1rem','60rem'),'','0rem')+' ');
     //klmenu_check_b('span_table_klqr'); //此行保留 - 保留注释
     
     var input_list=[['input_batch_split_max_len_klqr',4,0.5],];

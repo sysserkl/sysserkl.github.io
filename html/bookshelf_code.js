@@ -1,4 +1,5 @@
 function init_bookshelf(){
+    character_2_icon_b('𝍂');
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.6rem'));
     input_with_x_b('input_search',11);
     menu_bookshelf();
@@ -26,7 +27,7 @@ function menu_bookshelf(){
     '<a href="https://www.ituring.com.cn/" onclick="'+str_t+'" target=_blank>图灵社区</a>',    
     ];
     
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'📚','12rem','1rem','1rem','30rem')+klmenu_b(klmenu_link,'L','10rem','1rem','1rem','30rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'𝍂','12rem','1rem','1rem','30rem')+klmenu_b(klmenu_link,'L','10rem','1rem','1rem','30rem'),'','0rem')+' ');
 }
 
 function recent_search_bookshelf(csstr=''){

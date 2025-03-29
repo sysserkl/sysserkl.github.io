@@ -121,6 +121,7 @@ function init_enwords_book(){
         }
     }
     //-----------------------
+    character_2_icon_b('🝛');
     words_searched_arr_global=[];
     new_words_form_enwords_book();
     enwords_init_b(true,true,sub_init_enwords_book_fn);
@@ -226,7 +227,7 @@ function menu_enwords_book(){
     ];    
     klmenu_config.push(menu_container_b(str_t,format_list,'文件载入：'));    
     
-    var menus=klmenu_b(klmenu1,'','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_new,'🔤','32rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'🧮','23rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','27rem','1rem','1rem','60rem');
+    var menus=klmenu_b(klmenu1,'🝛','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_new,'🔤','32rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'🧮','23rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','27rem','1rem','1rem','60rem');
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(menus,'','0rem')+' ');
     
     var input_list=[['input_frequency_count_enwords',5,0.5],];

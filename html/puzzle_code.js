@@ -133,6 +133,8 @@ function check_puzzle(){
 }
 
 function init_puzzle(){
+    character_2_icon_b('𓉔');
+        
     var imgfile=path_convert_b('{{jsdoc_attachment}}images1/yu_wang_wei_ke_tuo_astfyf_69639/000001.jpg');
     rows_puzzle_global=randint_b(5,10);
     cols_puzzle_global=-1;

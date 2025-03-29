@@ -170,7 +170,7 @@ function menu_klphotos(){
     '<span id="span_img_border" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ img border</span>',        
     ]);   
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(menu_gallery,'🖼','17rem',button_size,button_size)+klmenu_b(menu_tools,'🔧','17rem',button_size,button_size)+klmenu_b(menu_month,'🈷️','5rem',button_size,button_size)+klmenu_b(menu_config,'⚙️','15rem',button_size,button_size),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(menu_gallery,'📸','17rem',button_size,button_size)+klmenu_b(menu_tools,'🔧','17rem',button_size,button_size)+klmenu_b(menu_month,'🈷️','5rem',button_size,button_size)+klmenu_b(menu_config,'⚙️','15rem',button_size,button_size),'','0rem')+' ');
     
     //-----------------------
     var button_more='<div class=klmenu><button style=font-size:'+button_size+';" onclick="popup_show_hide_b(\'div_css\');">Text Style</button></div>';
@@ -526,6 +526,8 @@ function init_klphotos(){
     img_sec_global=Math.max(50, parseInt(document.getElementById('input_slide_interval').value)*1000);
     
     //---
+    character_2_icon_b('📸');
+        
     document.getElementById('p_filter').innerHTML=filter_form_img_b();
     var input_list=[
     ['input_img_filter_dom_b',12,0.5],
