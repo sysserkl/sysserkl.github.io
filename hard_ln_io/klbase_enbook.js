@@ -718,7 +718,7 @@ function frequency_enwords_book_b(cstype='',simple_split=false,common_max=4000,c
                         is_new=false; 
                         old_variety.add(one_type);
                         break;
-                    }                    
+                    }
                 }
             }
             
@@ -765,9 +765,7 @@ function frequency_enwords_book_b(cstype='',simple_split=false,common_max=4000,c
         case 'sentence_rare':
         case 'sentence_common':
             if (typeof en_sentence_global !== 'undefined'){
-                for (let item of en_sentence_global){
-                    article_arr.push(item[0]);
-                }
+                article_arr=array_split_by_col_b(en_sentence_global,[0]);
             }
             break;
         case 'dict_plus_wt':
@@ -831,6 +829,21 @@ function new_and_common_enwords_book_b(csresult,cslength,common_max){
         common_list=common_list.slice(0,common_max);
     }
     return [new_t,common_list,common_set];
+}
+
+function sentences_2_words_set_enbook_b(){
+    var t0 = performance.now();
+    var words_in_sentence_set=new Set();
+    var list_t=[];
+    for (let item of en_sentence_global){
+        var blstr=item[0].toString().replace(/&lt;eword w=['"]?.*?['"]?&gt;&lt;\/eword&gt;/g,'');
+        var set_t=str_2_array_enbook_b(blstr,'set');
+        for (let aword of set_t){
+            words_in_sentence_set.add(aword);
+        }
+    }
+    console.log('sentences_2_words_set_enbook_b() 费时：'+(performance.now() - t0) + ' milliseconds');
+    return words_in_sentence_set;
 }
 
 function common_word_sign_set_enwords_book_b(csset){

@@ -152,17 +152,24 @@ function menu_enwords_book(){
     
     klmenu_new=klmenu_new.concat([
     '<span class="span_menu" onclick="'+str_t+'import_enwords_book(\'new\');">导入KLWiki和txtbook全部新单词</span>',   
-    '<span class="span_menu" onclick="'+str_t+'import_enwords_book(\'new_hot\');">导入常见新单词</span>',   
+    //'<span class="span_menu" onclick="'+str_t+'import_enwords_book(\'new_hot\');">导入常见新单词</span>',   
     '<span class="span_menu" onclick="'+str_t+'max_length_new_enwords_book();">全部新单词中最长的单词</span>',     
     '<span class="span_menu" onclick="'+str_t+'phrase_in_current_enwords_book();">由当前单词组成的词组</span>',     
     ]);
 
     var format_list=[
+    ['导入','import_enwords_book(\'new_hot\');',true],
+    ['例句中','import_enwords_book(\'new_hot_in_sentence\');',true],
+    ['不在例句中','import_enwords_book(\'new_hot_not_in_sentence\');',true],
+    ];
+    klmenu_new.push(menu_container_b(str_t,format_list,'常见新单词：'));
+    
+    var format_list=[
     ['例句中','frequency_count_get_enwords(\'sentence_common\');',true],
     ['当前内容','frequency_count_get_enwords(\'textarea\');',true],
     ['返回结果数：<input type="number" id="input_frequency_count_enwords" min=-1 step=1 value=4000 />','',false],
     ];
-    klmenu_new.push(menu_container_b(str_t,format_list,'常见单词：'));    
+    klmenu_new.push(menu_container_b(str_t,format_list,'常见单词：'));
     
     var format_list=[
     ['新单词','import_enwords_book(\'new\',2500);',true],
@@ -256,16 +263,12 @@ function load_all_new_enwords_book(){
 }
 
 function check_all_new_enwords_book(){
-    if (typeof all_new_words_global == 'undefined'){
-        return false;
-    }
+    if (typeof all_new_words_global == 'undefined'){return false;}
     return true;
 }
 
 function check_kaikki_enwords_book(){
-    if (typeof kaikki_phrase_global == 'undefined'){
-        return false;
-    }
+    if (typeof kaikki_phrase_global == 'undefined'){return false;}
     return true;
 }
 
@@ -543,8 +546,27 @@ function import_enwords_book(cstype,csmax=-1){
             }
             break;
         case 'new_hot':
+        case 'new_hot_in_sentence':
+        case 'new_hot_not_in_sentence':
             if (typeof new_words_count_global !== 'undefined'){
                 var result_t=object2array_b(new_words_count_global,true,2);
+                
+                if (cstype.endsWith('_sentence')){
+                    var words_in_sentence_set=sentences_2_words_set_enbook_b();
+                    var new_host_in_list=[[],[]];
+                    for (let item of result_t){
+                        if (words_in_sentence_set.has(item[0])){
+                            new_host_in_list[0].push(item);
+                        } else {
+                            new_host_in_list[1].push(item);                        
+                        }
+                    }
+                    if (cstype=='new_hot_in_sentence'){
+                        result_t=new_host_in_list[0];
+                    } else {
+                        result_t=new_host_in_list[1];
+                    }
+                }
                 result_t.sort(function(a,b){return a[1]<b[1]?1:-1;});
                 otextarea.value=result_t.join('\n');
             }
