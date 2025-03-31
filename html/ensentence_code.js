@@ -285,7 +285,7 @@ function host_count_ensentence(sort_no=-1){
         var host_t={};
         var article_from_t=new Set();
         
-        for (let item of csarr){        
+        for (let item of csarr){
             //item[1]形如：/[https://www.mnn.com/lifestyle/arts-culture/blogs/books-independent-bookstore-arent-dead 20190531 | Starre Vartan: Why paper books and the independent bookstore aren't dead | MNN]/ - 保留注释
         
             var list_t=item[1].match(/^\/\[https?:\/\/([^\/]+)/) || [];  
@@ -305,10 +305,10 @@ function host_count_ensentence(sort_no=-1){
             var blhref=item[1].match(/^\/\[(https?:\/\/[^\s]+)/) || [];
             if (blhref.length==2){
                 var blstr=blhref[1];
-            } else {                
+            } else {
                 var blstr=item[2];   //TLS - 保留注释
             }
-            article_from_t.add(blstr);  
+            article_from_t.add(blstr);
         }    
         return [host_t,article_from_t];
     }

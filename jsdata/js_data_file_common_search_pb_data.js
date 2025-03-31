@@ -26,6 +26,16 @@ var js_file_list_common_pb_global=[
 ['../jsdata/wbus1_data.js','📟','wbus','wbus_global','wbus','','0'],
 ['../jsdata/us_mass_killings_incidents_data.js','🪦','us mass killings incidents','us_mass_killings_incidents_global','us_mass_killings','','1'],
 ['../jsdata/us_mass_killings_offenders_data.js','🪦','us mass killings offenders','us_mass_killings_offenders_global','us_mass_killings','','1'],
-['../jsdata/hzbd_data.js','🏞','环浙步道','hzbd_global','hzbd','','1'],
-
+['../jsdata/hzbd_data.js','🏞','环浙步道','hzbd_global','hzbd','🧭','1'],
+['../jsdata/zj_gps_points/杭州_gps_data.js','🌐','浙江坐标_杭州','zj_gps_points_global','zj_gpsp','🧭','0'],
+['../jsdata/zj_gps_points/宁波_gps_data.js','🌐','浙江坐标_宁波','zj_gps_points_global','zj_gpsp','🧭','0'],
+['../jsdata/zj_gps_points/温州_gps_data.js','🌐','浙江坐标_温州','zj_gps_points_global','zj_gpsp','🧭','0'],
+['../jsdata/zj_gps_points/金华_gps_data.js','🌐','浙江坐标_金华','zj_gps_points_global','zj_gpsp','🧭','0'],
+['../jsdata/zj_gps_points/嘉兴_gps_data.js','🌐','浙江坐标_嘉兴','zj_gps_points_global','zj_gpsp','🧭','0'],
+['../jsdata/zj_gps_points/台州_gps_data.js','🌐','浙江坐标_台州','zj_gps_points_global','zj_gpsp','🧭','0'],
+['../jsdata/zj_gps_points/绍兴_gps_data.js','🌐','浙江坐标_绍兴','zj_gps_points_global','zj_gpsp','🧭','0'],
+['../jsdata/zj_gps_points/湖州_gps_data.js','🌐','浙江坐标_湖州','zj_gps_points_global','zj_gpsp','🧭','0'],
+['../jsdata/zj_gps_points/衢州_gps_data.js','🌐','浙江坐标_衢州','zj_gps_points_global','zj_gpsp','🧭','0'],
+['../jsdata/zj_gps_points/丽水_gps_data.js','🌐','浙江坐标_丽水','zj_gps_points_global','zj_gpsp','🧭','0'],
+['../jsdata/zj_gps_points/舟山_gps_data.js','🌐','浙江坐标_舟山','zj_gps_points_global','zj_gpsp','🧭','0'],
 ];

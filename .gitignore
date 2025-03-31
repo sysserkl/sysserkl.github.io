@@ -15,6 +15,7 @@ jsdoc_attachment/*
 jsdata/rmrb_online/*
 jsdata/douban_book[0-9]_data.js
 jsdata/gpx_pb/*
+jsdata/zj_gps_points/*
 jsdata/words/lexico_data.zip
 jsdata/map/district_cn_geo_polygon_data.zip
 jsdata/words/xinhua_data.zip
