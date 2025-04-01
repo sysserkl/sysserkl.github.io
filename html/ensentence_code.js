@@ -286,9 +286,10 @@ function host_count_ensentence(sort_no=-1){
         var article_from_t=new Set();
         
         for (let item of csarr){
+            //item[0] 是例句 - 保留注释
             //item[1]形如：/[https://www.mnn.com/lifestyle/arts-culture/blogs/books-independent-bookstore-arent-dead 20190531 | Starre Vartan: Why paper books and the independent bookstore aren't dead | MNN]/ - 保留注释
         
-            var list_t=item[1].match(/^\/\[https?:\/\/([^\/]+)/) || [];  
+            var list_t=item[1].match(/^\/\[https?:\/\/([^\/]+)/) || []; //获取 host - 保留注释
             if (list_t.length==2){
                 var blstr=list_t[1];
             } else if (item[2].slice(-4,)=='_TLS'){
@@ -311,6 +312,8 @@ function host_count_ensentence(sort_no=-1){
             article_from_t.add(blstr);
         }    
         return [host_t,article_from_t];
+        //host_t 形如：{ "h_www.rogerebert.com": 562, "h_www.vulture.com": 585, "h_www.theregister.com": 291, ... } - 保留注释
+        //article_from_t 是 set，形如："https://www.rogerebert.com/reviews/a-single-man-2009", "http://www.vulture.com/2010/05/lost_recap_the_candidate.html", "https://www.theregister.com/2025/01/14/doom_delivered_in_a_pdf/", "http://www.boston.com/bigpicture/2012/03/japan_tsunami_pictures_before.html", - 保留注释
     }
     //-----------------------
     var sentence_host_t={};
@@ -352,6 +355,7 @@ function host_count_ensentence(sort_no=-1){
         } else {
             one_tr.push(article_host);
             one_tr.push(article_host*100/article_count);        
+            one_tr.push(sentence_host_t[blxl][1]/article_host); //句数/文章数 - 保留注释
         }
         result_t.push(one_tr);
     }
@@ -363,10 +367,10 @@ function host_count_ensentence(sort_no=-1){
     
     for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
         var item=result_t[blxl];
-        result_t[blxl]='<tr><td align=right>'+(blxl+1)+'</td><td>'+item[0]+'</td><td align=right>'+item[1]+'</td><td align=right>'+item[2].toFixed(2)+'%</td><td align=right>'+item[3]+'</td><td align=right>'+item[4].toFixed(2)+'%</td></tr>';
+        result_t[blxl]='<tr><td align=right>'+(blxl+1)+'</td><td>'+item[0]+'</td><td align=right>'+item[1]+'</td><td align=right>'+item[2].toFixed(2)+'%</td><td align=right>'+item[3]+'</td><td align=right>'+item[4].toFixed(2)+'%</td><td align=right>'+item[5].toFixed(2)+'</td></tr>';
     }
     
-    var th='<tr><th nowrap>No.</th><th nowrap>出处</th><th nowrap style="cursor:pointer;" onclick="host_count_ensentence(1);">句数</th><th nowrap>占比</th><th nowrap style="cursor:pointer;" onclick="host_count_ensentence(3);">文章数</th><th nowrap>占比</th></tr>';
+    var th='<tr><th nowrap>No.</th><th nowrap>出处</th><th nowrap style="cursor:pointer;" onclick="host_count_ensentence(1);">句数</th><th nowrap>占比</th><th nowrap style="cursor:pointer;" onclick="host_count_ensentence(3);">文章数</th><th nowrap>占比</th><th nowrap style="cursor:pointer;" onclick="host_count_ensentence(5);">句数/文章数</th></tr>';
     document.getElementById('divhtml').innerHTML='<p>Total: '+sentence_len+'</p><table class="table_common">'+th+result_t.join('\n')+'</table>';
 }
 

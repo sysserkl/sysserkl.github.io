@@ -2,7 +2,7 @@ var js_file_list_common_pb_global=[
 //data.js,icon,title name,var name,function suffix,category,load_remote_data
 ['../jsdata/bible_quote/catchphrase_data.js','💬','Catchphrase','catchphrase_global','catchphrase','','1'],
 ['../jsdata/history_pb_data.js',' 𓀀','历史 pb','bigday_history_pb_global','bigday_history','','1'],
-['../jsdata/klwiki_h3_pb_data.js','🖇','KL Wiki h3 pb','klwiki_h3_pb_global','klwiki_h3','','1'],
+['../jsdata/klwiki_h3_pb_data.js','🖇','KL Wiki h3 pb','klwiki_h3_pb_global','klwiki_h3','🔗','1'],
 ['../jsdata/learning_links/learning_links_1_data.js','🖫','learning links','learning_list_global','learning_list','','1'],
 ['../jsdata/meishichina_recipe_data.js','🍳','meishichina recipe','meishichina_recipe_global','meishichina_recipe','','1'],
 ['../jsdata/words/all_new_words_data.js','🇬🇧','All New Words','all_new_words_global','','言','1'],
