@@ -712,3 +712,23 @@ function search_load_websites_b(cskey,is_reg,return_max=-1,run_fn=false){
         sub_search_load_websites_b_load();
     }
 }
+
+function efull_get_websites_b(run_fn=false){
+    function sub_efull_get_websites_b_done(is_ok){
+        if (!is_ok){return;}
+        var efull_set=new Set();
+        for (let item of sites_all_global){
+            if ((','+item[2]+',').includes(',EFULL,')){
+                efull_set.add((item[0].match(/\/\/(www\.)?(.*?)\/?$/) || ['','',''])[2]);
+            }
+        }
+        console.log(efull_set); //此行保留 - 保留注释
+        efull_set=Array.from(efull_set);
+        if (typeof run_fn == 'function'){
+            run_fn(efull_set);
+        }
+    }
+
+    var flist=klbase_addons_import_js_b([],[],['sites_all_data.js'],[],false,false);
+    load_js_var_file_b('sites_all_global',flist,'sites_all_data.js',sub_efull_get_websites_b_done,true,false,-1,100,true);
+}

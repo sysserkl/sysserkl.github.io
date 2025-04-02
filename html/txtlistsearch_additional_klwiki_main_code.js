@@ -6,7 +6,9 @@ function menu_more_kltxt_klwiki_main(){
     var klmenu1=[
     '<span class="span_menu" onclick="'+str_t+'yymmdd_kltxt_klwiki_main();">联合早报yymmdd不一致检索</span>',    
     '<span class="span_menu" onclick="'+str_t+'weixin_kltxt_klwiki_main();">微信sharer_shareid</span>',    
-    '<span class="span_menu" onclick="'+str_t+'theregister_without_r_kltxt_klwiki_main();">当前范围 theregister without ® and Sponsor</span>',        
+    '<span class="span_menu" onclick="'+str_t+'theregister_without_r_kltxt_klwiki_main();">当前范围 theregister without ® and Sponsor</span>',
+    '<span class="span_menu" onclick="'+str_t+'eword_duplicate_kltxt_klwiki_main();">行内重复 eword 检索</span>',
+    
     ];
 
     var blstr=klmenu_b(klmenu1,'W','25rem','1rem','1rem','30rem');
@@ -19,6 +21,10 @@ function yymmdd_kltxt_klwiki_main(){
 
 function weixin_kltxt_klwiki_main(){
     txtsearch_kltxt_b('sharer_shareid',false,false,false);
+}
+
+function eword_duplicate_kltxt_klwiki_main(){
+    txtsearch_kltxt_b('&lt;eword.*&lt;eword',true,false,false,function (){menu_insert_kltxt_b(1);});
 }
 
 function theregister_without_r_kltxt_klwiki_main(){

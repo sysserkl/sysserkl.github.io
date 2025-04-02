@@ -87,6 +87,7 @@ function menu_ensentence(){
     '<span class="span_menu" onclick="'+str_t+'sentence_source_list_ensentence();">例句出处文章列表</span>',    
     '<span class="span_menu" onclick="'+str_t+'host_count_ensentence();">例句出处统计</span>',
     '<span class="span_menu" onclick="'+str_t+'sentence_flag_get_ensentence(-1);">例句🚩统计</span>',
+    '<span class="span_menu" onclick="'+str_t+'eword_duplicate_ensentence();">行内重复 eword 检索</span>',
     ];  
 
     var group_list=[
@@ -799,10 +800,19 @@ function style_generate_ensentence(){
     mobile_style_enwc_b(blmobile,blmobile);
 }
 
-function search_sentences(){
-    var blstr=document.getElementById('input_search').value.trim();
+function search_sentences(csstr=false){
+    var oinput=document.getElementById('input_search');
+    if (csstr===false){
+        csstr=oinput.value.trim();
+    }
+    oinput.value=csstr;
+    
     var show_button=klmenu_check_b('span_button_show_ensentence',false);
-    sentence_search_value_get_b(blstr,false,show_button);
+    sentence_search_value_get_b(csstr,false,show_button);
+}
+
+function eword_duplicate_ensentence(){
+    search_sentences('&lt;eword.*&lt;eword');
 }
 
 function random_get_ensentence(input_mode=false){

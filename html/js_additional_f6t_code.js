@@ -236,6 +236,7 @@ function flot_f6t(csno){
     var otrs=otable.querySelectorAll('tr');
     var result_m=[];
     var result_y=[];
+    var found_month_or_year=false;
     for (let one_tr of otrs){
         if (one_tr.classList.contains('tr_rank_hot_words_f6t')){continue;}
         if (one_tr.style.display=='none'){continue;}
@@ -244,6 +245,7 @@ function flot_f6t(csno){
 
         var otds_m=one_tr.querySelectorAll('td.td_rank_month_f6t');
         if (otds_m.length==12){
+            found_month_or_year=true;
             var month_t=[oname.innerText];
             for (let blxl=0;blxl<12;blxl++){
                 month_t.push([blxl+1,parseFloat(otds_m[blxl].innerText) ||0]);
@@ -266,8 +268,13 @@ function flot_f6t(csno){
                 tr_year_list.sort(function (a,b){return a[0]<b[0]?-1:1;});
                 tr_year_list=[oname.innerText].concat(tr_year_list);
                 result_y.push(tr_year_list);
+                found_month_or_year=true;
             }
         }
+    }
+    
+    if (!found_month_or_year){
+        alert('未发现月份或年份');
     }
 
     var omain=document.getElementById('div_rank_f6t_'+csno);

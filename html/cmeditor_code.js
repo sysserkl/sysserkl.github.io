@@ -72,7 +72,6 @@ function load_codemirror(){
         if (blxl>=bllen[step_no]){
             if (step_no==1){
                 sub_load_codemirror_theme();
-                //file_loaded_cm_global=true;
             } else {
                 //console.log(typeof file_loaded_cm_global);    //此行保留 - 保留注释
                 step_no=1;

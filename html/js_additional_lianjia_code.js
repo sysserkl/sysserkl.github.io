@@ -122,7 +122,7 @@ function price_amount_change_lianjia(cstype='compare',sort_no=0,is_desc=false){
 }
 
 function file_load_lianjia(){
-    flot_load_common(['leaflet']);
+    flot_load_common(['leaflet'],[],[],[],[],false);
 }
 
 function sort_lianjia(is_desc=false){

@@ -292,23 +292,10 @@ function rare_enwords_get_rlater(){
 }
 
 function efull_get_rlater(){
-    function sub_efull_get_rlater_done(is_ok){
-        console.log(is_ok);
-        if (is_ok){
-            var efull_set=new Set();
-            for (let item of sites_all_global){
-                if ((','+item[2]+',').includes(',EFULL,')){
-                    efull_set.add((item[0].match(/\/\/(www\.)?(.*?)\/?$/) || ['','',''])[2]);
-                }
-            }
-            console.log(efull_set); //此行保留 - 保留注释
-            efull_set=Array.from(efull_set);
-            search_websites_rlater('\\b('+efull_set.join('|').replace(/\./g,'\\.')+')\\b');
-        }
+    function sub_efull_get_rlater_done(efull_set){
+        search_websites_rlater('\\b('+efull_set.join('|').replace(/\./g,'\\.')+')\\b');
     }
-
-    var flist=klbase_addons_import_js_b([],[],['sites_all_data.js'],[],false,false);
-    load_js_var_file_b('sites_all_global',flist,'sites_all_data.js',sub_efull_get_rlater_done,true,false,-1,100,true);
+    efull_get_websites_b(sub_efull_get_rlater_done);
 }
 
 function array_sites_rlater(csarray){
