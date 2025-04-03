@@ -5,6 +5,9 @@ function menu_more_klwiki_host_eword(){
     var klmenu1=[
     klmenu_select_sort_b('select_sort_type_jsad_klwiki_host_eword',col_name_list,str_t,'sort_klwiki_host_eword',true,true),
     '<span class="span_menu" onclick="'+str_t+'efull_search_klwiki_host_eword();">EFULL 网址搜索</span>',        
+    '<span class="span_menu" onclick="'+str_t+'group_klwiki_host_eword();">当前结果关键词分组</span>',
+    '<span class="span_menu" onclick="'+str_t+'has_eword_klwiki_host_eword();">含有eword的host</span>',
+
     ];
     return klmenu_b(klmenu1,'🌎','12rem','1rem','1rem','30rem');
 }
@@ -48,4 +51,57 @@ function col_rearrange_klwiki_host_eword(){
         list_t.push([row_tmp,arow[1]]);
     }
     return list_t;
+}
+
+function group_klwiki_host_eword(){
+    var keys=document.getElementById('input_search').value.trim().split(/\s+/);
+    keys.sort();
+    recent_common(keys.join(' '));
+    
+    var result_t={};
+    for (let akey of keys){
+        if (akey==''){continue;}
+        result_t['k_'+akey]=[];
+    }
+    result_t['k_others']=[];
+    
+    for (let arow of js_data_current_common_search_global){
+        var item=arow[0][0];
+        var blfound=false;
+        for (let akey of keys){
+            if (akey==''){continue;}
+            if (item.includes(akey)){
+                result_t['k_'+akey].push(arow);
+                blfound=true;
+                break;
+            }
+        }
+        if (!blfound){
+            result_t['k_others'].push(arow);
+        }
+    }
+    
+    is_all_result_jscm_global=false;
+    var csoption=table_option_get_common(true);
+    
+    for (let key in result_t){
+        if (result_t[key].length==0){continue;}
+        
+        var sum_list=[['<b>'+key.slice(2,)+' 合计</b>',0,0,0],-1];
+        for (let arow of result_t[key]){
+            sum_list[0][1]=sum_list[0][1]+arow[0][1];
+            sum_list[0][2]=sum_list[0][2]+arow[0][2];
+        }
+        sum_list[0][3]=(sum_list[0][2]*100/sum_list[0][1]).toFixed(2);
+        result_t[key].push(sum_list);
+        var one_group=group_content_common(result_t[key],csoption);
+        result_t[key]=table_or_ol_common(csoption[0],csoption[1],csoption[2],csoption[3],one_group);
+    }
+    
+    var odiv=document.getElementById('divhtml');
+    odiv.innerHTML=object2array_b(result_t).join('\n');
+}
+
+function has_eword_klwiki_host_eword(){
+    search_common('-^0$');
 }

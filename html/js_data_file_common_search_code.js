@@ -511,26 +511,54 @@ function http_link_common(csstr,enable_http){
     return csstr;
 }
 
-function page_common(csno=1,show_html=true){
-    function sub_page_common_td_generate(csxl,item){
-        var bltds=[];
-        if (show_table_row_no){
-            bltds.push('<td nowrap>'+(csxl+1)+'</td>');
-        }
-        
-        if (td_align==false){
-            for (let one_col of item[0]){
-                bltds.push('<td>'+http_link_common(one_col,http_links)+'</td>');
-            }
-        } else {
-            for (let blxl=0,lent=item[0].length;blxl<lent;blxl++){
-                one_col=item[0][blxl];
-                bltds.push('<td align="'+td_align[blxl]+'">'+http_link_common(one_col,http_links)+'</td>');
-            }
-        }
-        return bltds;
+function group_content_common(csarr,csoption=false){
+    if (csoption===false){
+        csoption=table_option_get_common(true);
     }
-    //-----------------------
+    var id_no,is_table,table_columns,show_table_row_no,http_links,td_align;
+    [id_no,is_table,table_columns,show_table_row_no,http_links,td_align]=csoption;
+
+    var result_t=[];
+    if (is_table){
+        for (let blxl=0,lent=csarr.length;blxl<lent;blxl++){
+            var item=csarr[blxl];
+            if (table_columns && Array.isArray(item[0])){
+                var bltds=page_td_generate_common(blxl,item,show_table_row_no,td_align,http_links);
+                bltds.push(no_jump_common(item[1],'td'));
+                result_t.push('<tr>'+bltds.join('')+'</tr>');
+            } else {
+                result_t.push('<tr>'+(show_table_row_no?'<td nowrap>'+(blxl+1)+'</td>':'')+'<td>'+http_link_common(item[0],http_links)+no_jump_common(item[1])+'</td></tr>');
+            }
+        }
+    } else {
+        for (let blxl=0,lent=csarr.length;blxl<lent;blxl++){
+            var item=csarr[blxl];
+            result_t.push('<li>'+http_link_common(item[0],http_links)+no_jump_common(item[1])+'</li>');
+        }
+    }
+    return result_t;
+}
+
+function page_td_generate_common(csxl,item,show_table_row_no,td_align,http_links){
+    var bltds=[];
+    if (show_table_row_no){
+        bltds.push('<td nowrap>'+(csxl+1)+'</td>');
+    }
+    
+    if (td_align==false){
+        for (let one_col of item[0]){
+            bltds.push('<td>'+http_link_common(one_col,http_links)+'</td>');
+        }
+    } else {
+        for (let blxl=0,lent=item[0].length;blxl<lent;blxl++){
+            one_col=item[0][blxl];
+            bltds.push('<td align="'+td_align[blxl]+'">'+http_link_common(one_col,http_links)+'</td>');
+        }
+    }
+    return bltds;
+}
+    
+function page_common(csno=1,show_html=true){
     var cslen=js_data_current_common_search_global.length;
     var bljg=page_combination_b(cslen,rows_per_page_jscm_global,csno,'page_common','locate_common',false,2,Math.round(raw_data_len_jscm_global/rows_per_page_jscm_global/10));  
     //-----------------------
@@ -538,20 +566,15 @@ function page_common(csno=1,show_html=true){
     var blend=Math.min(csno-1+rows_per_page_jscm_global,cslen);
     var blno=0;
     
-    var http_links=klmenu_check_b('span_http_links_common',false);
-    var td_align=false;
-    if (typeof table_th_jscm_global !== 'undefined'){
-        td_align=Object.values(table_th_jscm_global);
-    }
-    var id_no,is_table,table_columns,show_table_row_no;
-    [id_no,is_table,table_columns,show_table_row_no]=table_option_get_common();;
+    var id_no,is_table,table_columns,show_table_row_no,http_links,td_align;
+    [id_no,is_table,table_columns,show_table_row_no,http_links,td_align]=table_option_get_common(true);
 
     if (is_all_result_jscm_global || id_no==false){
         if (is_table){
             for (let blxl=csno-1;blxl<blend;blxl++){
                 var item=js_data_current_common_search_global[blxl];
                 if (table_columns && Array.isArray(item[0])){
-                    var bltds=sub_page_common_td_generate(blxl,item);
+                    var bltds=page_td_generate_common(blxl,item,show_table_row_no,td_align,http_links);
                     result_t.push('<tr id="tr_common_'+item[1]+'">'+bltds.join('')+'</tr>');
                 } else {
                     result_t.push('<tr id="tr_common_'+item[1]+'">'+(show_table_row_no?'<td nowrap>'+(blxl+1)+'</td>':'')+'<td>'+http_link_common(item[0],http_links)+'</td></tr>');
@@ -568,13 +591,13 @@ function page_common(csno=1,show_html=true){
             for (let blxl=csno-1;blxl<blend;blxl++){
                 var item=js_data_current_common_search_global[blxl];
                 if (table_columns && Array.isArray(item[0])){
-                    var bltds=sub_page_common_td_generate(blxl,item);
+                    var bltds=page_td_generate_common(blxl,item,show_table_row_no,td_align,http_links);
                     bltds.push(no_jump_common(item[1],'td'));
                     result_t.push('<tr>'+bltds.join('')+'</tr>');
                 } else {                
                     result_t.push('<tr>'+(show_table_row_no?'<td nowrap>'+(blxl+1)+'</td>':'')+'<td>'+http_link_common(item[0],http_links)+no_jump_common(item[1])+'</td></tr>');
                 }
-            }        
+            }
         } else {
             for (let blxl=csno-1;blxl<blend;blxl++){
                 var item=js_data_current_common_search_global[blxl];
@@ -609,12 +632,22 @@ function page_common(csno=1,show_html=true){
     return result_t;
 }
 
-function table_option_get_common(){
+function table_option_get_common(return_http_align=false){
     var id_no=klmenu_check_b('span_line_no_common',false);
     var is_table=klmenu_check_b('span_table_style_common',false);
     var table_columns=klmenu_check_b('span_table_columns_common',false);
     var show_table_row_no=klmenu_check_b('span_table_row_no_common',false);
-    return [id_no,is_table,table_columns,show_table_row_no];
+    
+    if (return_http_align){
+        var http_links=klmenu_check_b('span_http_links_common',false);
+        var td_align=false;
+        if (typeof table_th_jscm_global !== 'undefined'){
+            td_align=Object.values(table_th_jscm_global);
+        }
+        return [id_no,is_table,table_columns,show_table_row_no,http_links,td_align];
+    } else {
+        return [id_no,is_table,table_columns,show_table_row_no];
+    }
 }
 
 function th_generate_common(table_option=false){
@@ -633,9 +666,8 @@ function th_generate_common(table_option=false){
             }
             
             if (id_no && !is_all_result_jscm_global){
-                th_str=th_str+'<th>row no</th>';                
+                th_str=th_str+'<th>row no</th>';
             }
-                        
             th_str='<tr>'+th_str+'</tr>';
         }
     }
