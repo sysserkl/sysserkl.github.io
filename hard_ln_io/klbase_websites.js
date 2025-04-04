@@ -716,10 +716,25 @@ function search_load_websites_b(cskey,is_reg,return_max=-1,run_fn=false){
 function efull_get_websites_b(run_fn=false){
     function sub_efull_get_websites_b_done(is_ok){
         if (!is_ok){return;}
-        var efull_set=new Set();
+        var result_t=new Set();
         for (let item of sites_all_global){
             if ((','+item[2]+',').includes(',EFULL,')){
-                efull_set.add((item[0].match(/\/\/(www\.)?(.*?)\/?$/) || ['','',''])[2]);
+                var host_name=(item[0].match(/\/\/(www\.)?(.*?)\/?$/) || ['','',''])[2];
+                result_t.add(host_name);
+            }
+        }
+        
+        var efull_set=new Set();
+        for (let item of result_t){
+            var blfound=false;
+            for (let one_host of result_t){
+                if (item!==one_host && item.includes(one_host)){
+                    blfound=true;
+                    break;
+                }
+            }
+            if (!blfound){
+                efull_set.add(item);
             }
         }
         console.log(efull_set); //此行保留 - 保留注释

@@ -1,5 +1,5 @@
 function menu_more_klwiki_host_eword(){
-    table_th_jscm_global={'host':'','文章数':'right','eword数':'right','eword数/文章数(%)':'right'};
+    table_th_jscm_global={'host':'','文章数':'right','eword数':'right','eword数/文章数(%)':'right','文章长度':'right','eword数/文章长度(‱)':'right'};
     var col_name_list=Object.keys(table_th_jscm_global);
     var str_t=klmenu_hide_b('');
     var klmenu1=[
@@ -47,7 +47,7 @@ function col_rearrange_klwiki_host_eword(){
     var list_t=[];
     for (let arow of js_data_current_common_search_global){
         var row_tmp=arow[0].slice(0,3);
-        row_tmp.push(arow[0][3].toFixed(2));
+        row_tmp=row_tmp.concat([arow[0][3].toFixed(2),arow[0][4],arow[0][5].toFixed(2)]);
         list_t.push([row_tmp,arow[1]]);
     }
     return list_t;
@@ -87,12 +87,14 @@ function group_klwiki_host_eword(){
     for (let key in result_t){
         if (result_t[key].length==0){continue;}
         
-        var sum_list=[['<b>'+key.slice(2,)+' 合计</b>',0,0,0],-1];
+        var sum_list=[['<b>'+key.slice(2,)+' 合计</b>',0,0,0,0,0],-1];
         for (let arow of result_t[key]){
             sum_list[0][1]=sum_list[0][1]+arow[0][1];
             sum_list[0][2]=sum_list[0][2]+arow[0][2];
+            sum_list[0][4]=sum_list[0][4]+arow[0][4];
         }
         sum_list[0][3]=(sum_list[0][2]*100/sum_list[0][1]).toFixed(2);
+        sum_list[0][5]=(sum_list[0][2]*10000/sum_list[0][4]).toFixed(2);
         result_t[key].push(sum_list);
         var one_group=group_content_common(result_t[key],csoption);
         result_t[key]=table_or_ol_common(csoption[0],csoption[1],csoption[2],csoption[3],one_group);
