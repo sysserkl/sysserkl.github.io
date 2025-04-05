@@ -854,14 +854,83 @@ function th_menu_arr_analyze(csno,thname=false){
     var sort_list=[
     ['⬆','sort_arr_analyze(0,'+csno+');table_refresh_arr_analyze(\'\');',true],
     ['⬇','sort_arr_analyze(1,'+csno+');table_refresh_arr_analyze(\'\');',true],
-    ['rename','rename_col_analyze('+csno+');table_refresh_arr_analyze(\'\');',true],
-    ];    
+    ['ℹ','line_chart_show_analyze(event,'+csno+');',true],
+    ['select','line_chart_select_analyze(this,'+csno+');',true],
+    ];
     klmenu1.push(menu_container_b(str_t,sort_list,'sort: '));    
     
     if (thname==false){
         thname=num_2_xls_colnum_letter_arr_analyze(csno+1);
     }
     return klmenu_b(klmenu1,thname,'8rem','1rem','1rem','60rem');
+}
+
+function line_chart_select_analyze(odom,csno){
+    if (typeof selected_col_no_analyze_global=='undefined'){
+        selected_col_no_analyze_global=new Set();
+    }
+    var blstr=odom.innerText;
+    if (blstr=='select'){
+        selected_col_no_analyze_global.add(csno);
+        odom.innerText='selected';
+    } else {
+        selected_col_no_analyze_global.delete(csno);
+        odom.innerText='select';
+    }
+}
+
+function line_chart_show_analyze(event,csno){
+    function sub_line_chart_show_analyze_format(line_no){
+        let cslist=array_split_by_col_b(table_array_global,[line_no]);
+        let lent=cslist.length;
+        if (lent>date_len){
+            alert('数据行数比日期行数长');
+            return false;
+        }
+        
+        let new_list=[];
+        for (let blxl=0;blxl<lent;blxl++){
+            new_list.push([date_list[blxl],parseFloat(cslist[blxl])]);
+        }
+        return new_list;
+    }
+    
+    var date_list=[];
+    for (let arow of table_array_global){
+        var bldate=validdate_b(arow[0]);
+        if (bldate===false){
+            alert('发现非日期项：'+arow[0]);
+            return;
+        }
+        date_list.push(date2str_b('-',bldate));
+    }
+    var date_len=date_list.length;
+    
+    var color_list=canvas_lines_color_get_b();
+    var color_len=color_list.length;
+
+    if (typeof selected_col_no_analyze_global=='undefined'){
+        selected_col_no_analyze_global=new Set();
+    }
+    
+    var current_is_selected=selected_col_no_analyze_global.has(csno);
+    selected_col_no_analyze_global.add(csno);
+    
+    var result_t=[];
+    var color_no=0;
+    for (let one_no of selected_col_no_analyze_global){
+        var list_t=sub_line_chart_show_analyze_format(one_no);
+        if (list_t===false){return;}
+        var color_name=color_list[color_no%color_len];
+        result_t.push([list_t,color_name]);
+        color_no=color_no+1;
+    }
+    
+    canvas_lines_chart_b(result_t,'div_line_chart_analyze');
+    
+    if (!current_is_selected){
+        selected_col_no_analyze_global.delete(csno);
+    }
 }
 
 function remove_arr_analyze(cstype){

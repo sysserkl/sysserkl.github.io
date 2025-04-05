@@ -662,6 +662,35 @@ function flot_legend_select_b(id_name){
     return '<select id="'+id_name+'"><option>nw</option><option>ne</option><option>sw</option><option>se</option></select> '        
 }
 
+function canvas_lines_color_get_b(){
+    return ['dodgerblue','pink','green','purple','tomato','red'];
+}
+
+function canvas_lines_chart_b(cslines,popup_id){
+    var min_data,max_data;
+    [min_data,max_data]=arr_max_min_get_b(cslines,0,0,false,true);
+    console.log('min_data',min_data,'max_data',max_data);
+    var minValue,maxValue;
+    [minValue,maxValue]=arr_max_min_get_b(cslines,0,1);
+    console.log('minValue',minValue,'maxValue',maxValue);
+    
+    var bljg='<canvas width=200 height=100></canvas>';
+    popup_event_div_b(event,popup_id,bljg);
+    
+    var ocanvas = document.querySelector('#'+popup_id+' canvas');
+    var ctx = ocanvas.getContext('2d');
+    
+    for (let one_line of cslines){
+        if (one_line[0][0][0]>min_data){
+            one_line[0]=[[min_data,null]].concat(one_line[0]);
+        }
+        if (one_line[0][one_line[0].length-1][0]<max_data){
+            one_line[0].push([max_data,null]);
+        }
+        canvas_one_line_chart_b(ocanvas,ctx,one_line[0],true,minValue,maxValue,2,one_line[1],1.5);
+    }
+}
+
 function canvas_one_line_chart_b(ocanvas,ctx=false,csdata=[],str2date=true,minValue=false,maxValue=false,csmargin=2,csline_color='blue',csline_width=1.5){
     function sub_canvas_one_line_chart_b_point(csxl){
         var blvalue=result_t[csxl][1];
