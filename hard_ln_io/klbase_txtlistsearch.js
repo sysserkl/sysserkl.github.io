@@ -158,41 +158,27 @@ function tw_kltxt_b(){
 function digest_statistics_kltxt_b(){
     var t0 = performance.now();
 	var start_lineno, end_lineno;
-    [start_lineno,end_lineno]=start_end_lineno_kltxt_b().slice(0,2);
-    var all_empty=false;
-    var result_t=[];
-    var digest_t=[].concat(digest_global);
+    [start_lineno,end_lineno]=start_end_lineno_kltxt_b().slice(0,2);    //如 0, 32358 - 保留注释
     
+    var digest_nos=new Set(array_split_by_col_b(digest_sort_kltxt_b(false),[0]));
+    
+    var result_t=[];
+
     var flot_list=['含摘要的行占比#points:false#'];
     var digest_lines=0;
     var total_lines=end_lineno-start_lineno;
+    
     for (let blxl=start_lineno;blxl<end_lineno;blxl++){
-        if (filelist[blxl]==''){continue;}
-        if (all_empty){
-            result_t.push('<span style="color:grey;margin-left:0.1rem;" title="'+(blxl+1)+'">○</span>');
-            continue;
-        }
-        
-        var blfound='<span style="color:grey;margin-left:0.1rem;" title="'+(blxl+1)+'">○</span>';
-        all_empty=true;
-        for (let blno=0,lenb=digest_t.length;blno<lenb;blno++){
-            var one_digest=digest_t[blno];
-            if (one_digest==''){continue;}
-            if (one_digest.substring(0,1)=='#'){
-                digest_t[blno]='';
-                continue;
-            }
-            all_empty=false;
-            if (filelist[blxl].includes(one_digest)){
-                digest_t[blno]='';  //避免重复计算，因此局部计算时，可能和全局计算（摘要优先放在前部的行）图形不一致 - 保留注释
-                blfound='<span style="color:green;margin-left:0.1rem;" title="'+(blxl+1)+'">●</span>';
-                digest_lines=digest_lines+1;
-                break;  
-            }
+        if (digest_nos.has(blxl)){
+            blfound='<span style="color:green;margin-left:0.1rem;" title="'+(blxl+1)+'">●</span>';
+            digest_lines=digest_lines+1;        
+        } else {
+            var blfound='<span style="color:grey;margin-left:0.1rem;" title="'+(blxl+1)+'">○</span>';
         }
         result_t.push(blfound);
-        flot_list.push([blxl+1,digest_lines*100/total_lines]);
+        flot_list.push([blxl+1,digest_lines*100/total_lines]);    
     }
+
     var bljg='<p style="line-height:120%;font-size:0.8rem;word-break:break-all;word-wrap:break-word;">('+(start_lineno+1)+'-'+end_lineno+': '+digest_lines+'/'+total_lines+' '+(digest_lines*100/total_lines).toFixed(2)+'%) '+result_t.join('\n')+'</p>';
     bljg=bljg+'<div id="div_digest_flot_kltxt" style="width:100%;height:500px;"></div>';
     document.getElementById('divhtml').innerHTML=bljg;
@@ -3485,18 +3471,27 @@ function rows_max_kltxt_b(){
     return blmax;
 }
 
+function digest_special_raw_set_kltxt_b(){
+    if (typeof digest_special_raw_global=='undefined'){
+        digest_special_raw_global={'#':new Set(),'*':new Set()};
+    }
+}
+
 function digest_number_2_txt_kltxt_b(){
     if (typeof digest_scan_hash_global == 'undefined'){
         digest_scan_hash_global=false;
     }
     
     if (digest_scan_hash_global){return;}
+
+    digest_special_raw_set_kltxt_b();
     
     var t0 = performance.now();
     var bllen=filelist.length;
     for (let blxl=0,lent=digest_global.length;blxl<lent;blxl++){
         var item=digest_global[blxl];
         if (item.length>=2 && item.substring(0,1)=='#' && item.slice(-1)=='#'){
+            digest_special_raw_global['#'].add(item);   //第一行为0 - 保留注释
             item=parseInt(item.slice(1,-1));
             if (!isNaN(item) && item>=0 && item<bllen){
                 digest_global[blxl]=filelist[item];
@@ -3507,36 +3502,69 @@ function digest_number_2_txt_kltxt_b(){
     console.log('digest_number_2_txt_kltxt_b() 费时：'+(performance.now() - t0) + ' milliseconds');
 }
 
-function digest_sort_kltxt_b(){
+function digest_sort_kltxt_b(show_html=true){
     var t0 = performance.now();
+    digest_special_raw_set_kltxt_b();
+    
+    var hash_len=digest_special_raw_global['#'].size;
+    var asterisk_len=digest_special_raw_global['*'].size;
+    var result_t=[];
+
+    for (let one_digest of digest_special_raw_global['*']){
+        var blword=one_digest.slice(1,);
+        for (let blxl=0,lent=filelist.length;blxl<lent;blxl++){
+            if (filelist[blxl]==''){continue;}
+            try {
+                if (filelist[blxl].match('\\b'+blword+'\\b')){
+                    result_t.push([blxl,one_digest]);
+                    break;
+                }
+            } catch (error){
+                //do nothing
+            }
+        }
+    }    
 
     var digest_t=[].concat(digest_global);
-    var result_t=new Set();
     var hash_count=0;
+    
     for (let blxl=0,lent=filelist.length;blxl<lent;blxl++){
         if (filelist[blxl]==''){continue;}
-
+        
         for (let blno=0,lenb=digest_t.length;blno<lenb;blno++){
             var one_digest=digest_t[blno];
             if (one_digest==''){continue;}
             if (one_digest.substring(0,1)=='#'){
-                result_t.add(one_digest);
+                result_t.push([-1,one_digest]);
                 digest_t[blno]='';
                 hash_count=hash_count+1;
                 continue;
             }
-            if (filelist[blxl].includes(one_digest)){
+            
+            if (hash_len>0 && one_digest==filelist[blxl]){
+                if (digest_special_raw_global['#'].has('#'+blxl.toString()+'#')){
+                    result_t.push([blxl,'#'+blxl+'#']);
+                    digest_t[blno]='';  
+                }
+            } else if (filelist[blxl].includes(one_digest)){ //一行中可能有多个摘要，行内的多个摘要未排序 - 保留注释
+                result_t.push([blxl,one_digest]);  
                 digest_t[blno]='';  
-                result_t.add(one_digest);  
             }
         }
     }
-    var bljg='<p><textarea style="height:30rem;">'+Array.from(result_t).join('\n')+'</textarea></p>';
-    bljg=bljg+'<p style="font-size:0.9rem;line-height:100%;">原摘要数：'+digest_global.length+'，其中<b>#</b>开头的摘要有：'+hash_count+'；原摘要无重复数：'+new Set(digest_global).size+'；整理后：'+result_t.size+'</p>';
-    bljg=bljg+'<p  style="font-size:0.9rem;line-height:100%;">注：原摘要的数字形式会转化为文字形式。原摘要中的<b>#</b>会排在最前面。</p>';
-    document.getElementById('divhtml').innerHTML=bljg;
-
+    
+    result_t.sort(function (a,b){return a[0]<b[0]?-1:1;});
+    
+    if (show_html){
+        result_t=array_split_by_col_b(result_t,[1]);
+        
+        var bljg='<p><textarea style="height:30rem;">'+result_t.join('\n')+'</textarea></p>';
+        bljg=bljg+'<p style="font-size:0.9rem;">原摘要数：'+digest_global.length+'，其中<b>#</b>开头的摘要有：'+hash_count+'；原摘要无重复数：'+new Set(digest_global).size+'；#NO# hash摘要数：'+hash_len+'；*摘要数：'+asterisk_len+'；整理后：'+result_t.length+'</p>';
+        bljg=bljg+'<p  style="font-size:0.9rem;">注：原摘要的数字形式会转化为文字形式。原摘要中的<b>#</b>会排在最前面。</p>';
+        document.getElementById('divhtml').innerHTML=bljg;
+    }
     console.log('digest_sort_kltxt_b() 费时：'+(performance.now() - t0) + ' milliseconds');
+    return result_t;
 }
 
 function digest_lines_kltxt_b(recent_lines=-1,do_jump=false){
@@ -4205,13 +4233,16 @@ function layout_kltxt_b(cstype=''){
     enwords_init_b(true,true,sub_layout_kltxt_b_fn);
 }
 
-function digest_enwords_remove_kltxt_b(cstype=''){   
+function digest_enwords_remove_kltxt_b(cstype=''){
     if (cstype=='digest'){return;}
     //摘要转为例句，digest_import_enwords，与KLfuns_txtbook_enwords.py 及 enwords_klwiki_from_books_terminal.py 对应 - 保留注释
     var t0 = performance.now();
     var csstr=local_storage_get_b('txt_englishwords_excluded');
     var excluded_words=csstr.split('\n');
     var enwords_changed=false;
+    
+    digest_special_raw_set_kltxt_b();
+    
     if (csstr.includes(csbookname_global+' /// ')){
         var result_t=[];
         for (let item of excluded_words){
@@ -4238,7 +4269,10 @@ function digest_enwords_remove_kltxt_b(cstype=''){
         if (item.substring(0,1)!=='*'){
             new_list.push(item);
             continue;
-        }  //摘要中*号开头的作为英语单词 - 保留注释
+        } else {  //摘要中*号开头的作为英语单词 - 保留注释
+            digest_special_raw_global['*'].add(item);
+        }
+        
         var blword=item.substring(1,).trim();
         try {
             ''.match(new RegExp('\\b'+blword+'\\b','i')); //测试正则表达式 - 保留注释
