@@ -828,10 +828,10 @@ function duplicate_words_kle(){
     var duplication=new Set();
     var definition_redundant=new Set();
     var simple_words=new Set();
-    var format_list1={
+    var format_list1={  //音标
     ' ]':[],    //空格+] - 保留注释    
     };    
-    var format_list2={
+    var format_list2={  //释义
     ';;':[],
     ' ;':[],    //空格+英文分号 - 保留注释
     '  ':[],    //两个空格 - 保留注释
@@ -843,6 +843,7 @@ function duplicate_words_kle(){
     };
     var end_list=[];
     var semicolon_without_space_list=[];
+    var quote_character_list=[];
     
     var type_str=enword_type_b(true);
 	for (let blxl=1,lent=enwords.length;blxl<lent;blxl++){
@@ -875,6 +876,9 @@ function duplicate_words_kle(){
         if (item[2].match(/;[^\s]/)!==null){
             semicolon_without_space_list.push(item[0]);
         }    
+        if (item[2].match(/\)[a-z]/i)!==null){
+            quote_character_list.push(item[0]);
+        }
     }
     
     duplication=Array.from(duplication);
@@ -896,6 +900,9 @@ function duplicate_words_kle(){
     }
     if (semicolon_without_space_list.length>0){
         bljg=bljg+'<p><b>【;[^\\s]】('+semicolon_without_space_list.length+')：</b> "'+list_join_2_reg_style_b(semicolon_without_space_list)+'"</p>\n';        
+    }
+    if (quote_character_list.length>0){
+        bljg=bljg+'<p><b>【\\)[a-z]】('+quote_character_list.length+')：</b> "'+list_join_2_reg_style_b(quote_character_list)+'"</p>\n';        
     }
     
     bljg=bljg+'<p><b>重复释义单词('+definition_redundant.size+')：</b>"'+list_join_2_reg_style_b(Array.from(definition_redundant))+'"</p>\n';  

@@ -627,7 +627,9 @@ function host_sites_rlater(){
     tags_websites_rlater(list_t,false,20);
 }
 
-function sites_type_rlater(cslist,cstype,csstrong=false){
+function red_one_rlater(cslist,cstype,csday,is_simple=false){
+    var csstrong=((asc_sum_b(cslist[1])+csday) % 7 == 0);
+
     if (cslist.length!==6){return '';} //readlater_data_global 每行元素个数 - 保留注释
     
     var cslink=cslist[0];
@@ -641,7 +643,7 @@ function sites_type_rlater(cslist,cstype,csstrong=false){
             bljg=bljg+'["'+specialstr_j(cslink)+'", "'+specialstr_j(cstitle)+'"],\n';
             break;
         case '2':
-            bljg=bljg+one_link_gerenrate_rlater_b(idno,cslink,cstitle,csstrong,prgname);
+            bljg=bljg+one_link_gerenrate_rlater_b(idno,cslink,cstitle,csstrong,prgname,'',true,is_simple);
             break;
         case '3':
             bljg=bljg+'# ['+specialstr_html_b(cslink)+'&nbsp;';
@@ -740,10 +742,6 @@ function sort_rlater(cstype,dosearch=true){
     }
 }
 
-function red_one_rlater(csitem,cstype,csday){
-    return sites_type_rlater(csitem,cstype,((asc_sum_b(csitem[1])+csday) % 7 == 0));
-}
-
 function top_pages_rlater(cspageno=1){
     var cstype=radio_value_get_b('radio_search_type');
     var myDate = new Date(); 
@@ -754,6 +752,7 @@ function top_pages_rlater(cspageno=1){
     var result_t=[];
     for (let blxl=len_t-1-(cspageno-1);blxl>len_t-1-(cspageno-1)-recentlength_global;blxl--){
         if (blxl<0){break;}
+        if (repeated_id_check_rlater(readlater_data_global[blxl])){continue;}
         result_t.push(red_one_rlater(readlater_data_global[blxl],cstype,today_t));
     }
 
@@ -792,7 +791,8 @@ function tag_refresh_rlater(ospan){
     var ool=odiv.querySelector('ol');
     var olis=ool.querySelectorAll('li');
     var bllen=olis.length;
-    var result_t=tags_websites_rlater([blkey],false,bllen*10,false,true);
+    var result_t=tags_websites_rlater([blkey],false,bllen*10,false,true,true);
+
     if (result_t.length==1){
         var bljg=result_t[0].trim().split('\n');
         bljg.sort(randomsort_b);
@@ -802,36 +802,51 @@ function tag_refresh_rlater(ospan){
     }
 }
 
-function tags_websites_rlater(taglist=[],showrecent=true,csmax=10,showhtml=true,only_li=false){
+function tags_generate_rlater(){
+    var taglist=local_storage_get_b('keywords_selenium').trim().split(',');
+    taglist.sort(randomsort_b);
+    taglist=taglist.slice(0,50);   //防止 keywords_selenium 过多 - 保留注释        
+    
+    taglist=taglist.concat(title_words_rlater(5));
+    //taglist=taglist.concat(title_words_rlater('cn',10),title_words_rlater('en',10)); - 保留注释
+
+    var myDate = new Date(); 
+    var theyear=myDate.getFullYear();
+    var today_t=myDate.getDate();
+    for (let blxl=theyear-2;blxl<=theyear;blxl++){
+        taglist.push(blxl.toString());
+    }
+    //以下2行保留 - 保留注释
+    //taglist.push(randstr_b(1));
+    //taglist.sort(randomsort_b);
+    
+    var list_t=readlater_data_global.slice(-300,);
+    var host_set=new Set();
+    for (let item of list_t){
+        host_set.add(host_get_rlater(item));
+    }
+    taglist=taglist.concat(Array.from(host_set));
+    
+    taglist.push('TOP');   
+    
+    return [taglist,today_t]; 
+}
+
+function repeated_id_check_rlater(item){
+    var blfound=false;
+    if (document.getElementById('a_rlater_link_'+item[3])){
+        console.log('已存在记录',item);
+        blfound=true;
+    }
+    return blfound;
+}
+function tags_websites_rlater(taglist=[],showrecent=true,csmax=10,showhtml=true,only_li=false,check_id=false){
     var t0 = performance.now();
     var cstype=radio_value_get_b('radio_search_type');
 
     if (taglist.length==0){
-        taglist=local_storage_get_b('keywords_selenium').trim().split(',');
-        taglist.sort(randomsort_b);
-        taglist=taglist.slice(0,50);   //防止 keywords_selenium 过多 - 保留注释        
-        
-        taglist=taglist.concat(title_words_rlater(5));
-        //taglist=taglist.concat(title_words_rlater('cn',10),title_words_rlater('en',10)); - 保留注释
-
-        var myDate = new Date(); 
-        var theyear=myDate.getFullYear();
-        var today_t=myDate.getDate();
-        for (let blxl=theyear-2;blxl<=theyear;blxl++){
-            taglist.push(blxl.toString());
-        }
-        //以下2行保留 - 保留注释
-        //taglist.push(randstr_b(1));
-        //taglist.sort(randomsort_b);
-        
-        var list_t=readlater_data_global.slice(-300,);
-        var host_set=new Set();
-        for (let item of list_t){
-            host_set.add(host_get_rlater(item));
-        }
-        taglist=taglist.concat(Array.from(host_set));
-        
-        taglist.push('TOP');        
+        var today_t;
+        [taglist,today_t]=tags_generate_rlater();
     }
     
     var list_t=[];
@@ -861,13 +876,14 @@ function tags_websites_rlater(taglist=[],showrecent=true,csmax=10,showhtml=true,
 
     if (showrecent){
         var len_t=readlater_data_global.length;
-        for (let blxl=len_t-1;blxl>=Math.max(0,len_t-recentlength);blxl--){
+        for (let blxl=len_t-1;blxl>=Math.max(0,len_t-recentlength);blxl--){ //避免重复 - 保留注释
             list_t['t_TOP'].push(readlater_data_global[blxl]);
         }
         taglist.reverse();
     }
 
     //taglist 类似于：[​​"TOP","静","林","舟","粉","肢","房","歐","步","设"] - 保留注释
+    var line_count=0;
     var result_t=[];
     var is_mobile=ismobile_b();
     for (let tagname of taglist){
@@ -876,10 +892,16 @@ function tags_websites_rlater(taglist=[],showrecent=true,csmax=10,showhtml=true,
         var blno=0;
         var blstr='';
         for (let item of list_t['t_'+tagname]){
+            if (check_id){
+                if (repeated_id_check_rlater(item)){continue;}
+            }
+            
             blstr=blstr+red_one_rlater(item,cstype,today_t);
             blno=blno+1;
             if (blno>=csmax && tagname!=='TOP'){break;}
         }
+        line_count=line_count+blno;
+        
         if (only_li){
             result_t.push(blstr);        
         } else {
@@ -893,7 +915,7 @@ function tags_websites_rlater(taglist=[],showrecent=true,csmax=10,showhtml=true,
         if (cstype!=='2'){
             bljg='\n<textarea style="height:38rem;">\n'+bljg+'</textarea>\n';
         }
-        bljg=years_rlater_b(readlater_data_global.length)+'<div id="div_links">'+bljg+'</div>';    
+        bljg=years_rlater_b(readlater_data_global.length,line_count)+'<div id="div_links">'+bljg+'</div>';    
         div_column_count_rlater(bljg);
     }
     console.log('tags_websites_rlater() 费时：'+(performance.now() - t0) + ' milliseconds');
@@ -955,7 +977,7 @@ function recent_search_key_rlater(csstr=''){
     recent_search_b('recent_search_readlater',csstr,'sort_rlater','div_recent_search',["-[^\\x00-\\xff]{2,}(:r)", ".*", "https?:\/\/[^\/]+\/?$(:r)", "javascript|python|linux|bash(:r)","javascript(:r)", "python(:r)", "linux(:r)","bash(:r)","^[美国万岁](:r)",],20);
 }
 
-function search_websites_rlater(cskeys='',israndom=-1,rnd_number=20,showhtml=true,add_recent_search=true){ //rnd_number 只在 random 时有效 - 保留注释
+function search_websites_rlater(cskeys='',israndom=-1,rnd_number=20,showhtml=true,add_recent_search=true,update_input=true,rows_max=false,csreg=-1,is_simple=false){ //rnd_number 只在 random 时有效 - 保留注释
     if (israndom===-1){
         if (document.getElementById('select_sort').value=='random'){
             sort_rlater('random',false);
@@ -963,14 +985,19 @@ function search_websites_rlater(cskeys='',israndom=-1,rnd_number=20,showhtml=tru
         israndom=false;
     }
     if (israndom===false){
+        var oinput=document.getElementById('input_search');
         if (cskeys===''){
-            cskeys=document.getElementById('input_search').value;
+            cskeys=oinput.value;
         }
-
-        var csreg=klmenu_check_b('span_reg_rlater',false);
+        
+        if (csreg===-1){
+            csreg=klmenu_check_b('span_reg_rlater',false);
+        }
         [cskeys,csreg]=str_reg_check_b(cskeys,csreg);
         
-        document.getElementById('input_search').value=cskeys;
+        if (update_input){
+            oinput.value=cskeys;
+        }
         
         if (add_recent_search){
             recent_search_key_rlater(cskeys+(csreg?'(:r)':''));
@@ -985,12 +1012,14 @@ function search_websites_rlater(cskeys='',israndom=-1,rnd_number=20,showhtml=tru
     var cstype=radio_value_get_b('radio_search_type');
     var bljg=[];
     var blxl=0;
-    var rows_max=document.getElementById('input_max_rows').value;
+    if (rows_max===false){
+        rows_max=parseInt(document.getElementById('input_max_rows').value);
+    }
     var today_t=date_2_ymd_b(false,'d');    
     
     if (israndom){
         for (let item of readlater_data_global){
-            bljg.push(red_one_rlater(item,cstype,today_t));
+            bljg.push(red_one_rlater(item,cstype,today_t,is_simple));
             blxl=blxl+1;
             if (blxl>=rnd_number){break;}
         }
@@ -1001,11 +1030,12 @@ function search_websites_rlater(cskeys='',israndom=-1,rnd_number=20,showhtml=tru
                 return [];
             }
             if (blfound==false){continue;}
-            bljg.push(red_one_rlater(item,cstype,today_t));
+            bljg.push(red_one_rlater(item,cstype,today_t,is_simple));
             blxl=blxl+1;
             if (rows_max>=0 && blxl>=rows_max){break;}
         }
     }
+    
     if (showhtml){
         search_array_2_html_rlater(bljg,cstype);
     }
@@ -1023,8 +1053,10 @@ function search_array_2_html_rlater(csarr,cstype){
         bljg='\n<textarea style="height:38rem;">\n'+bljg+'</textarea>\n<p class=mini>('+csarr.length+')</p>\n';
     }
     
-    bljg=years_rlater_b(readlater_data_global.length,csarr.length)+bljg+'<p><span class="aclick" onclick="delete_batch_rlater_b();">批量删除</span> <span id="span_batch_delete_process"></span></p>';
-    bljg='<div id="div_links">'+bljg+'</div>';    
+    bljg=years_rlater_b(readlater_data_global.length,csarr.length)+bljg;
+    bljg=bljg+'<p><span class="aclick" onclick="delete_batch_rlater_b();">批量删除</span> <span id="span_batch_delete_process"></span></p>';
+    
+    bljg='<div id="div_links">'+bljg+'</div>';
     
     div_column_count_rlater(bljg,cstype!=='2');
 }

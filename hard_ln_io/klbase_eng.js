@@ -2058,13 +2058,18 @@ function enwords_mini_search_b(csword=''){
     var csreg=checkbox_kl_value_b('input_enwords_mini_search_reg');
 
     var search_type='';
-    var otype=document.getElementById('checkbox_mini_search_type');
-    if (otype){
-        if (otype.checked){
-            search_type=otype.parentNode.innerText;
+    var otypes=document.getElementsByName('checkbox_mini_search_type');
+    for (let one_type of otypes){
+        if (one_type.checked){
+            search_type=one_type.parentNode.innerText;
+            break;
         }
     }
     
+    if (search_type=='单词'){
+        search_type='';
+    }
+
     if (search_type!==''){
         switch (search_type){
             case 'filelist 检索': //txtlistsearch - 保留注释
@@ -2075,6 +2080,11 @@ function enwords_mini_search_b(csword=''){
             case '网址库':
                 if (typeof search_load_websites_b == 'function'){
                     search_load_websites_b(csword,csreg,-1,function(cslist){osession.innerHTML=cslist.join('\n');});
+                }
+                break;
+            case 'readlater':
+                if (typeof search_websites_rlater == 'function' && csword!=='' && csword!=='.*'){
+                    osession.innerHTML='<ol>'+search_websites_rlater(csword,false,20,false,true,false,25,csreg,true).join('\n')+'</ol>';
                 }
                 break;
         }
@@ -2152,15 +2162,32 @@ function enwords_mini_search_frame_form_b(cstype='s'){
         odiv.innerHTML='<span onclick="enwords_mini_search_frame_form_b(\'\');" style="padding:1rem 0.5rem;cursor:pointer;color:tomato;"><b>S</b></span>';
         odiv.style.opacity='0.5';
     } else {
-        var bljg='';
-        bljg=bljg+'<input id="input_enwords_mini_search" type="text" onkeyup="if (event.key==\'Enter\'){enwords_mini_search_b();}"> ';
+        var bljg='<input id="input_enwords_mini_search" type="text" onkeyup="if (event.key==\'Enter\'){enwords_mini_search_b();}"> ';
+
+        var radios='';
+        var radio_count=0;
         if (typeof txtsearch_kltxt_b == 'function' && typeof filelist !== 'undefined'){
-            bljg=bljg+'<label><input type="checkbox" id="checkbox_mini_search_type">filelist 检索</label> ';    
+            radios=radios+'<label><input type="radio" name="checkbox_mini_search_type">filelist 检索</label> ';    
+            radio_count=radio_count+1;
         }
 
         if (typeof search_load_websites_b == 'function'){
-            bljg=bljg+'<label><input type="checkbox" id="checkbox_mini_search_type">网址库</label> ';    
+            radios=radios+'<label><input type="radio" name="checkbox_mini_search_type">网址库</label> ';    
+            radio_count=radio_count+1;
         }
+        
+        if (typeof search_websites_rlater == 'function' && typeof readlater_data_global !== 'undefined'){
+            radios=radios+'<label><input type="radio" name="checkbox_mini_search_type">readlater</label> ';
+            radio_count=radio_count+1;
+        }
+        
+        if (radio_count>1){
+            radios='<label><input type="radio" name="checkbox_mini_search_type" checked>单词</label> '+radios;
+        } else if (radio_count==1){
+            radios=radios.replace('type="radio"','type="checkbox"');
+        }
+        
+        bljg=bljg+radios;
         
         bljg=bljg+'<span class="aclick" onclick="enwords_mini_search_frame_form_b();">Close</span>';
         bljg=bljg+'<section style="overflow:auto;padding-top:0.1rem;max-height:'+parseInt(window.innerHeight*2/3)+'px;font-size:1rem;" id="session_mini_search">'+enwords_recent_search_b('','mini');+'</section>';
