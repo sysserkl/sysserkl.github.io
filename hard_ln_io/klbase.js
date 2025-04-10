@@ -1860,7 +1860,12 @@ function postpath_b(){
 }
 
 function textarea_top_bottom_b(textareaId, csposition=0,csstart=0){
-    var otextarea = document.getElementById(textareaId);
+    if (typeof textareaId == 'string'){
+        var otextarea = document.getElementById(textareaId);
+    } else {
+        var otextarea=textareaId;
+    }
+    
     var pos_start=0;
     var pos_end=-1;
     
