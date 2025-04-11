@@ -8,529 +8,85 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Thu, 10 Apr 2025 09:06:28 +0800</lastBuildDate>
-<item><title>AI and Our Aging Population - Law &amp; Liberty</title><link>https://lawliberty.org/ai-and-our-aging-population/</link></item>
-<item><title>That “Ancient Republican Spirit” - Law &amp; Liberty</title><link>https://lawliberty.org/forum/that-ancient-republican-spirit/</link></item>
-<item><title>In the Rubble of Totalitarianism - Law &amp; Liberty</title><link>https://lawliberty.org/podcast/in-the-rubble-of-totalitarianism/</link></item>
-<item><title>Unveiling the Buried Stories - Law &amp; Liberty</title><link>https://lawliberty.org/unveiling-the-buried-stories/</link></item>
-<item><title>Microsoft Windows 95 Reboot Chime and Minecraft Soundtrack Inducted Into National Recording Registry - Slashdot</title><link>https://entertainment.slashdot.org/story/25/04/10/0011250/microsoft-windows-95-reboot-chime-and-minecraft-soundtrack-inducted-into-national-recording-registry?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>US Army Says It Could Acquire Targets Faster With &amp;#39;Advanced AI&amp;#39; - Slashdot</title><link>https://tech.slashdot.org/story/25/04/09/2034234/us-army-says-it-could-acquire-targets-faster-with-advanced-ai?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Anthropic Launches Its Own $200 Monthly Plan - Slashdot</title><link>https://slashdot.org/story/25/04/09/203231/anthropic-launches-its-own-200-monthly-plan?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>WordPress Launches AI Site Builder Amid Company Restructuring - Slashdot</title><link>https://it.slashdot.org/story/25/04/09/1834225/wordpress-launches-ai-site-builder-amid-company-restructuring?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Google DeepMind Has a Weapon in the AI Talent Wars: Aggressive Noncompete Rules - Slashdot</title><link>https://tech.slashdot.org/story/25/04/09/1717210/google-deepmind-has-a-weapon-in-the-ai-talent-wars-aggressive-noncompete-rules?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Google Maps is Launching Tools To Help Cities Analyze Infrastructure and Traffic - Slashdot</title><link>https://tech.slashdot.org/story/25/04/09/1512236/google-maps-is-launching-tools-to-help-cities-analyze-infrastructure-and-traffic?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Scientists Recreate Brain Circuit in Lab For First Time - Slashdot</title><link>https://science.slashdot.org/story/25/04/09/1521244/scientists-recreate-brain-circuit-in-lab-for-first-time?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>The AI Therapist Can See You Now - Slashdot</title><link>https://science.slashdot.org/story/25/04/09/155247/the-ai-therapist-can-see-you-now?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Samsung and Google Partner To Launch Ballie Home Robot with Built-in Projector - Slashdot</title><link>https://hardware.slashdot.org/story/25/04/09/146254/samsung-and-google-partner-to-launch-ballie-home-robot-with-built-in-projector?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>China Raises Tariffs on US Goods To 84% as Rift Escalates - Slashdot</title><link>https://slashdot.org/story/25/04/09/1131225/china-raises-tariffs-on-us-goods-to-84-as-rift-escalates?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Enterprises Are Shunning Vendors in Favor of DIY Approach To AI, UBS Says - Slashdot</title><link>https://slashdot.org/story/25/04/09/0912235/enterprises-are-shunning-vendors-in-favor-of-diy-approach-to-ai-ubs-says?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Clean Energy Powered 40% of Global Electricity in 2024, Report Finds - Slashdot</title><link>https://news.slashdot.org/story/25/04/09/0451237/clean-energy-powered-40-of-global-electricity-in-2024-report-finds?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Fake Job Seekers Are Flooding US Companies - Slashdot</title><link>https://slashdot.org/story/25/04/09/0134223/fake-job-seekers-are-flooding-us-companies?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Hackers Spied on 100 US Bank Regulators&amp;#39; Emails for Over a Year - Slashdot</title><link>https://news.slashdot.org/story/25/04/09/0034251/hackers-spied-on-100-us-bank-regulators-emails-for-over-a-year?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>UK Creating &amp;#39;Murder Prediction&amp;#39; Tool To Identify People Most Likely To Kill - Slashdot</title><link>https://news.slashdot.org/story/25/04/09/0028213/uk-creating-murder-prediction-tool-to-identify-people-most-likely-to-kill?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>I Played the Nintendo Switch 2: Is It Worth It? My Hands-on Thoughts - CNET</title><link>https://www.cnet.com/tech/gaming/i-played-the-nintendo-switch-2-is-it-worth-it-hands-on/</link></item>
-<item><title>Should You Buy a New iPhone Before Tariffs Spike Prices? - CNET</title><link>https://www.cnet.com/personal-finance/banking/how-much-will-iphone-and-other-apple-prices-increase-with-liberation-day-tariffs/</link></item>
-<item><title>How Good Are EVs in the Cold? I Drove in the Arctic to Find Out - CNET</title><link>https://www.cnet.com/home/electric-vehicles/features/how-good-are-evs-in-the-cold-i-drove-in-the-arctic-to-find-out/</link></item>
-<item><title>Does Walking Count as Exercise? What to Know for National Walking Day - CNET</title><link>https://www.cnet.com/health/fitness/does-walking-count-as-exercise-what-to-know-for-national-walking-day/</link></item>
-<item><title>Americans See Lots of Reasons to Worry About AI, Pew Survey Finds - CNET</title><link>https://www.cnet.com/tech/services-and-software/americans-see-lots-of-reasons-to-worry-about-ai-pew-survey-finds/</link></item>
-<item><title>Nintendo Switch 2 Is Coming June 5: Games and More Announced - CNET</title><link>https://www.cnet.com/tech/gaming/nintendo-switch-2-is-coming-june-5-games-and-more-announced/</link></item>
-<item><title>Chase Sapphire Preferred&amp;#39;s New 100K Welcome Bonus Is Too Good to Miss - CNET</title><link>https://www.cnet.com/personal-finance/credit-cards/the-chase-sapphire-preferreds-new-100k-welcome-bonus-is-too-good-to-miss-heres-how-id-spend-it/</link></item>
-<item><title>Switch 2 Nintendo Direct Live Updates: Latest News and Reveals - CNET</title><link>https://www.cnet.com/news-live/switch-2-nintendo-direct-live-updates/</link></item>
-<item><title>How to Preorder the Nintendo Switch 2: All the Store Links We&amp;#39;ve Found - CNET</title><link>https://www.cnet.com/tech/gaming/how-to-preorder-nintendo-switch-2-all-retailer-links/</link></item>
-<item><title>ChatGPT 3.5 Review: First Doesn&amp;#39;t Mean Best - CNET</title><link>https://www.cnet.com/tech/services-and-software/chatgpt-3-5-review-first-doesnt-mean-best/</link></item>
-<item><title>OpenAI Dall-E 3 Review: Generative AI for Fanciful, Fun Illustrations - CNET</title><link>https://www.cnet.com/tech/services-and-software/openai-dall-e-3-review-generative-ai-for-fanciful-fun-illustrations/</link></item>
-<item><title>Microsoft Copilot Chatbot Review: Bing Is My Default Search Engine Now - CNET</title><link>https://www.cnet.com/tech/services-and-software/microsoft-copilot-chatbot-review-bing-is-my-default-search-engine-now/</link></item>
-<item><title>Hidden AI Features Available on Your Apple Watch Right Now - CNET</title><link>https://www.cnet.com/tech/mobile/hidden-ai-features-available-on-your-apple-watch-right-now/</link></item>
-<item><title>9 Best Yoga Poses for Your Ultimate Night&amp;#39;s Sleep - CNET</title><link>https://www.cnet.com/health/sleep/hack-your-sleep-routine-with-these-9-simple-yoga-poses/</link></item>
-<item><title>10 Simple Ways to Protect Your Eye Health Each Day - CNET</title><link>https://www.cnet.com/health/personal-care/10-simple-ways-to-protect-your-eye-health-each-day/</link></item>
-<item><title>Apple Cider Vinegar: Here&amp;#39;s What to Know About Health Benefits, Proper Dosage and More - CNET</title><link>https://www.cnet.com/health/nutrition/the-abcs-of-apple-cider-vinegar-benefits-precautions-and-proper-dosage/</link></item>
-<item><title>7 Simple Happiness Hacks to Help You Control Your Mood - CNET</title><link>https://www.cnet.com/health/mental/7-simple-happiness-hacks-to-help-you-control-your-mood/</link></item>
-<item><title>Nintendo Switch - CNET</title><link>https://www.cnet.com/deals/best-nintendo-switch-deals/</link></item>
-<item><title>Robot Vacuum - CNET</title><link>https://www.cnet.com/deals/best-vacuum-deals-right-now-dyson-bissell-roomba-and-more/</link></item>
-<item><title>Portable ACs - CNET</title><link>https://www.cnet.com/deals/best-portable-air-conditioner-deals/</link></item>
-<item><title>Electric Lawnmowers - CNET</title><link>https://www.cnet.com/deals/best-electric-lawnmower-deals/</link></item>
-<item><title>Air Purifiers - CNET</title><link>https://www.cnet.com/deals/best-air-purifier-deals/</link></item>
-<item><title>Coffee Makers - CNET</title><link>https://www.cnet.com/deals/best-coffee-maker-deals/</link></item>
-<item><title>Fitness Deals &amp; Gifts - CNET</title><link>https://www.cnet.com/deals/best-fitness-deals/</link></item>
-<item><title>Meal Delivery Kit - CNET</title><link>https://www.cnet.com/deals/best-meal-delivery-deals/</link></item>
-<item><title>Glasses and Contacts - CNET</title><link>https://www.cnet.com/deals/best-online-glasses-and-contacts-deals/</link></item>
-<item><title>Hottest Toys - CNET</title><link>https://www.cnet.com/culture/entertainment/hottest-toys/</link></item>
-<item><title>Available on Amazon - CNET</title><link>https://www.cnet.com/tech/best-gifts-available-from-amazon/</link></item>
-<item><title>People Who Already Have It All - CNET</title><link>https://www.cnet.com/home/gifts-for-people-who-have-everything/</link></item>
-<item><title>Gift Baskets - CNET</title><link>https://www.cnet.com/home/kitchen-and-household/best-gift-baskets/</link></item>
-<item><title>Samsung&amp;#39;s Galaxy AI Update - CNET</title><link>https://www.cnet.com/tech/mobile/samsungs-galaxy-ai-update-for-the-galaxy-s23-z-flip-5-and-z-fold-5-arrives-this-week/</link></item>
-<item><title>Google Gemini on the iPhone - CNET</title><link>https://www.cnet.com/tech/mobile/google-gemini-on-the-iphone-would-be-ais-mainstream-moment/</link></item>
-<item><title>Hidden AI Features Available on Your iPhone Right Now - CNET</title><link>https://www.cnet.com/tech/mobile/hidden-ai-features-available-on-your-iphone-right-now/</link></item>
-<item><title>Microsoft Is Testing an AI Chatbot for Xbox - CNET</title><link>https://www.cnet.com/tech/computing/microsoft-is-testing-an-ai-chatbot-for-xbox-heres-what-it-could-do/</link></item>
-<item><title>Google Gemini - CNET</title><link>https://www.cnet.com/tech/google-teases-an-even-better-version-of-gemini-but-youll-have-to-wait-for-it/</link></item>
-<item><title>Microsoft Copilot - CNET</title><link>https://www.cnet.com/tech/services-and-software/copilot-takes-center-stage-in-windows-11-and-windows-365/</link></item>
-<item><title>Prompt Engineering - CNET</title><link>https://www.cnet.com/tech/services-and-software/heres-everything-to-know-about-prompt-engineering/</link></item>
-<item><title>What is an LLM? - CNET</title><link>https://www.cnet.com/tech/you-cant-have-an-ai-chatbot-without-an-llm-heres-how-that-all-works/</link></item>
-<item><title>AI vs. AGI: What You Need to Know - CNET</title><link>https://www.cnet.com/tech/theres-ai-and-then-theres-agi-what-you-need-to-know-to-tell-the-difference/</link></item>
-<item><title>How to Get Started with ChatGPT - CNET</title><link>https://www.cnet.com/tech/services-and-software/heres-how-to-get-started-with-chatgpt/</link></item>
-<item><title>30 of the Best Tech Gifts Under $100 for 2025 - CNET</title><link>https://www.cnet.com/gifts/best-tech-gifts-under-100-or-less/</link></item>
-<item><title>Best Gifts for Gamers in 2025 - CNET</title><link>https://www.cnet.com/gifts/best-gifts-for-gamers/</link></item>
-<item><title>Best Travel Tech Gifts: Must-Haves for the Journey and the Destination - CNET</title><link>https://www.cnet.com/gifts/best-travel-tech-gifts/</link></item>
-<item><title>Best Toys for Kids in 2025 - CNET</title><link>https://www.cnet.com/gifts/best-toys-for-kids/</link></item>
-<item><title>34 Best Gifts for Teens in 2025 - CNET</title><link>https://www.cnet.com/gifts/best-gifts-for-teens/</link></item>
-<item><title>60+ Best Star Wars Gifts for 2025 - CNET</title><link>https://www.cnet.com/gifts/best-star-wars-gifts/</link></item>
-<item><title>The 20 Best Gift Baskets of 2025: Find the Perfect Edible Gift - CNET</title><link>https://www.cnet.com/gifts/best-gift-baskets/</link></item>
-<item><title>Best Gifts Available on Amazon: From $10 to $250 - CNET</title><link>https://www.cnet.com/gifts/best-gifts-available-on-amazon/</link></item>
-<item><title>32 Unique Gifts for People Who Have Everything - CNET</title><link>https://www.cnet.com/gifts/gifts-for-people-who-have-everything/</link></item>
-<item><title>NordVPN vs. ExpressVPN - CNET</title><link>https://www.cnet.com/tech/services-and-software/nordvpn-vs-expressvpn/</link></item>
-<item><title>Youtube TV vs. Hulu Live - CNET</title><link>https://www.cnet.com/tech/services-and-software/youtube-tv-vs-hulu-plus-live-tv-rated-the-pros-and-cons-of-each-streaming-service/</link></item>
-<item><title>Netflix Alternatives - CNET</title><link>https://www.cnet.com/tech/streaming-services/free-movies-best-netflix-alternatives/</link></item>
-<item><title>Streaming Services for Kids - CNET</title><link>https://www.cnet.com/tech/streaming-services/best-streaming-services-for-kids/</link></item>
-<item><title>Hulu Plus Live TV - CNET</title><link>https://www.cnet.com/tech/streaming-services/hulu-plus-live-tv-review-big-bundle-for-cord-cutters-at-a-premium-price/</link></item>
-<item><title>Noise Cancelling Headphones - CNET</title><link>https://www.cnet.com/tech/mobile/best-noise-canceling-headphones/</link></item>
-<item><title>Budget Earbuds - CNET</title><link>https://www.cnet.com/tech/mobile/best-cheap-wireless-earbuds/</link></item>
-<item><title>Unlimited Data - CNET</title><link>https://www.cnet.com/tech/mobile/best-unlimited-data-plan/</link></item>
-<item><title>Home Theater Systems - CNET</title><link>https://www.cnet.com/tech/home-entertainment/best-home-theater-systems/</link></item>
-<item><title>4K Projectors - CNET</title><link>https://www.cnet.com/tech/home-entertainment/best-4k-projector/</link></item>
-<item><title>Streaming Device - CNET</title><link>https://www.cnet.com/tech/home-entertainment/best-streaming-device/</link></item>
-<item><title>Fire TV Stick - CNET</title><link>https://www.cnet.com/tech/home-entertainment/best-fire-tv-stick/</link></item>
-<item><title>Best Overall - CNET</title><link>https://www.cnet.com/tech/computing/best-tablet/</link></item>
-<item><title>E-ink Tablet - CNET</title><link>https://www.cnet.com/tech/computing/best-e-ink-tablets/</link></item>
-<item><title>Apple iPad 9th Gen Review - CNET</title><link>https://www.cnet.com/tech/computing/apple-ipad-9th-gen-review-the-safest-ipad-bet-makes-more-sense-than-ever/</link></item>
-<item><title>Language Learning - CNET</title><link>https://www.cnet.com/tech/services-and-software/best-language-learning-apps/</link></item>
-<item><title>iPad Drawing - CNET</title><link>https://www.cnet.com/tech/services-and-software/best-ipad-drawing-apps/</link></item>
-<item><title>Food Delivery - CNET</title><link>https://www.cnet.com/tech/services-and-software/best-food-delivery-service/</link></item>
-<item><title>Minecraft Server - CNET</title><link>https://www.cnet.com/tech/services-and-software/best-minecraft-server-hosting/</link></item>
-<item><title>Best Meta Quest 2 Accessories - CNET</title><link>https://www.cnet.com/tech/gaming/best-oculus-quest-2-accessories/</link></item>
-<item><title>Best Quest 2 Head Strap - CNET</title><link>https://www.cnet.com/tech/gaming/best-oculus-quest-2-head-strap/</link></item>
-<item><title>Meta Quest 2 Review - CNET</title><link>https://www.cnet.com/tech/gaming/facebook-oculus-quest-2-vr-review-one-of-my-favorite-game-consoles/</link></item>
-<item><title>The Best PSVR Games - CNET</title><link>https://www.cnet.com/tech/gaming/best-psvr-games-to-try-on-a-ps5/</link></item>
-<item><title>Best Nintendo Switch Multiplayer Games - CNET</title><link>https://www.cnet.com/tech/gaming/best-nintendo-switch-multiplayer-games-for-families/</link></item>
-<item><title>Best M2 SSD for PS5 - CNET</title><link>https://www.cnet.com/tech/gaming/best-m2-ssd/</link></item>
-<item><title>Best PSVR 2 Games - CNET</title><link>https://www.cnet.com/tech/gaming/the-best-games-for-psvr-2/</link></item>
-<item><title>Steam Deck OLED Review - CNET</title><link>https://www.cnet.com/tech/gaming/oled-steam-deck-hands-on-a-complete-handheld-gaming-upgrade/</link></item>
-<item><title>Best Nintendo Switch Controller - CNET</title><link>https://www.cnet.com/tech/gaming/best-nintendo-switch-controller/</link></item>
-<item><title>Best Gaming Chair - CNET</title><link>https://www.cnet.com/tech/gaming/best-gaming-chair/</link></item>
-<item><title>Saving Accounts - CNET</title><link>https://www.cnet.com/personal-finance/banking/savings/best-savings-account/</link></item>
-<item><title>5% Savings Accounts - CNET</title><link>https://www.cnet.com/personal-finance/banking/savings/these-savings-accounts-pay-5-percent-apy-or-higher-right-now/</link></item>
-<item><title>High-Yield Savings Accounts - CNET</title><link>https://www.cnet.com/personal-finance/banking/savings/best-high-yield-savings-accounts/</link></item>
-<item><title>Budgeting Apps - CNET</title><link>https://www.cnet.com/personal-finance/banking/advice/best-budgeting-apps/</link></item>
-<item><title>Rocket Money - CNET</title><link>https://www.cnet.com/personal-finance/banking/rocket-money/</link></item>
-<item><title>Pocketsmith - CNET</title><link>https://www.cnet.com/personal-finance/banking/pocketsmith/</link></item>
-<item><title>Chase Sapphire Preferred - CNET</title><link>https://www.cnet.com/personal-finance/credit-cards/reviews/chase-sapphire-preferred/</link></item>
-<item><title>Chase Sapphire Reserve - CNET</title><link>https://www.cnet.com/personal-finance/credit-cards/reviews/chase-sapphire-reserve/</link></item>
-<item><title>Chase Freedom Unlimited - CNET</title><link>https://www.cnet.com/personal-finance/credit-cards/the-chase-freedom-unlimited-should-be-your-next-card/</link></item>
-<item><title>American Express Gold - CNET</title><link>https://www.cnet.com/personal-finance/credit-cards/reviews/american-express-gold-card/</link></item>
-<item><title>Blue Cash Everyday from Amex - CNET</title><link>https://www.cnet.com/personal-finance/credit-cards/reviews/blue-cash-everyday-card-from-american-express/</link></item>
-<item><title>Chase Ultimate Rewards Guide - CNET</title><link>https://www.cnet.com/personal-finance/credit-cards/advice/chase-ultimate-rewards-guide/</link></item>
-<item><title>Amex Points Guide - CNET</title><link>https://www.cnet.com/personal-finance/credit-cards/best/how-much-are-american-express-membership-rewards-points-worth/</link></item>
-<item><title>How to Maximize Cash Back - CNET</title><link>https://www.cnet.com/personal-finance/credit-cards/the-best-cash-back-cards-are-simple-to-use-but-far-from-basic-how-to-maximize-your-rewards/</link></item>
-<item><title>Compare Mortgage Rates - CNET</title><link>https://www.cnet.com/personal-finance/mortgages/mortgage-interest-rates-today/</link></item>
-<item><title>Mortgage Lenders - CNET</title><link>https://www.cnet.com/personal-finance/mortgages/advice/best-mortgage-lenders/</link></item>
-<item><title>Mortgage Rate Predictions - CNET</title><link>https://www.cnet.com/personal-finance/mortgage-predictions-whats-next-for-rates-after-trumps-inauguration/</link></item>
-<item><title>Compare Refinance Rates - CNET</title><link>https://www.cnet.com/personal-finance/mortgages/refinance-interest-rates-today/</link></item>
-<item><title>Refinancing Guide - CNET</title><link>https://www.cnet.com/personal-finance/mortgages/advice/refinancing-a-mortgage-how-it-works/</link></item>
-<item><title>Best Home Equity Loan Lenders - CNET</title><link>https://www.cnet.com/personal-finance/home-equity/advice/best-home-equity-loan-lenders/</link></item>
-<item><title>Rocket Mortgage - CNET</title><link>https://www.cnet.com/personal-finance/home-equity/reviews/rocket-mortgage/</link></item>
-<item><title>Bank of America - CNET</title><link>https://www.cnet.com/personal-finance/home-equity/reviews/bank-of-america/</link></item>
-<item><title>Golden 1 Credit Union - CNET</title><link>https://www.cnet.com/personal-finance/home-equity/reviews/golden-1-credit-union/</link></item>
-<item><title>Bethpage Federal Credit Union - CNET</title><link>https://www.cnet.com/personal-finance/home-equity/reviews/bethpage-federal-credit-union/</link></item>
-<item><title>Credit Union of Texas - CNET</title><link>https://www.cnet.com/personal-finance/home-equity/reviews/credit-union-of-texas/</link></item>
-<item><title>Alliant Credit Union - CNET</title><link>https://www.cnet.com/personal-finance/home-equity/reviews/alliant-credit-union/</link></item>
-<item><title>Home Equity Loan Rates - CNET</title><link>https://www.cnet.com/personal-finance/home-equity/home-equity-loan-rates/</link></item>
-<item><title>HELOC Lenders - CNET</title><link>https://www.cnet.com/personal-finance/home-equity/advice/best-home-equity-line-of-credit-heloc-lenders/</link></item>
-<item><title>Online Tax Software - CNET</title><link>https://www.cnet.com/personal-finance/taxes/best-tax-software/</link></item>
-<item><title>Free Tax Filing - CNET</title><link>https://www.cnet.com/personal-finance/taxes/best-free-tax-filing-options/</link></item>
-<item><title>Self-Employed Taxes - CNET</title><link>https://www.cnet.com/personal-finance/taxes/best-tax-software-for-self-employed/</link></item>
-<item><title>Cash App Taxes - CNET</title><link>https://www.cnet.com/personal-finance/taxes/cash-app-taxes-review/</link></item>
-<item><title>Jackson Hewitt - CNET</title><link>https://www.cnet.com/personal-finance/taxes/jackson-hewitt-review/</link></item>
-<item><title>IRA Direct File - CNET</title><link>https://www.cnet.com/personal-finance/taxes/irs-direct-file-is-a-good-start-for-free-federal-tax-filing-but-it-needs-to-expand-quickly/</link></item>
-<item><title>ID Theft Protection - CNET</title><link>https://www.cnet.com/personal-finance/identity-theft/best-identity-theft-protection/</link></item>
-<item><title>IdentityForce - CNET</title><link>https://www.cnet.com/personal-finance/identity-theft/identityforce-review/</link></item>
-<item><title>Identity Guard - CNET</title><link>https://www.cnet.com/personal-finance/identity-theft/identity-guard-review/</link></item>
-<item><title>Experian Identity - CNET</title><link>https://www.cnet.com/personal-finance/identity-theft/experian-review/</link></item>
-<item><title>Internet Deals Overall - CNET</title><link>https://www.cnet.com/home/internet/best-internet-deals/</link></item>
-<item><title>Cheap Internet Providers - CNET</title><link>https://www.cnet.com/home/internet/best-cheap-internet/</link></item>
-<item><title>Internet and TV Bundles - CNET</title><link>https://www.cnet.com/home/internet/best-internet-and-tv-bundles/</link></item>
-<item><title>New York City, NY - CNET</title><link>https://www.cnet.com/home/internet/best-internet-providers-in-new-york-ny/</link></item>
-<item><title>Charlotte, NC - CNET</title><link>https://www.cnet.com/home/internet/best-internet-providers-in-charlotte-nc/</link></item>
-<item><title>Los Angeles, CA - CNET</title><link>https://www.cnet.com/home/internet/best-internet-providers-in-los-angeles-ca/</link></item>
-<item><title>San Francisco, CA - CNET</title><link>https://www.cnet.com/home/internet/best-internet-providers-in-san-francisco-ca/</link></item>
-<item><title>Gaming Routers - CNET</title><link>https://www.cnet.com/home/internet/best-gaming-routers/</link></item>
-<item><title>Wi-Fi Extenders - CNET</title><link>https://www.cnet.com/home/internet/best-wifi-extender/</link></item>
-<item><title>Nest Wifi Pro - CNET</title><link>https://www.cnet.com/home/internet/nest-wifi-pro-review/</link></item>
-<item><title>TP-Link Deco XE75 - CNET</title><link>https://www.cnet.com/home/internet/tp-link-deco-xe75-wi-fi-6e-mesh-router-review/</link></item>
-<item><title>Netgear Orbi AX6000 - CNET</title><link>https://www.cnet.com/home/internet/netgear-orbi-ax6000-wi-fi-6-mesh-router-review/</link></item>
-<item><title>Nest Wifi vs Google Wifi - CNET</title><link>https://www.cnet.com/home/internet/nest-wifi-vs-google-wifi-how-the-two-mesh-routers-are-different/</link></item>
-<item><title>Eero 6 Plus vs Eero Pro 6E - CNET</title><link>https://www.cnet.com/home/internet/eero-6-plus-vs-eero-pro-6e-wi-fi-mesh-routers/</link></item>
-<item><title>Nest Wifi Pro vs Eero Pro 6E - CNET</title><link>https://www.cnet.com/home/internet/nest-wifi-pro-vs-eero-pro-6e-which-wi-fi-6e-mesh-router-is-best/</link></item>
-<item><title>Nest Wifi vs Nest Wifi Pro - CNET</title><link>https://www.cnet.com/home/internet/nest-wifi-vs-nest-wifi-pro-wi-fi-6e-mesh-routers/</link></item>
-<item><title>Portable Solar Panels - CNET</title><link>https://www.cnet.com/home/energy-and-utilities/best-portable-solar-panels/</link></item>
-<item><title>SolarEdge Battery - CNET</title><link>https://www.cnet.com/home/energy-and-utilities/solaredge-home-battery-review-a-good-battery-from-a-big-solar-industry-name/</link></item>
-<item><title>Tesla Powerwall 3 - CNET</title><link>https://www.cnet.com/home/energy-and-utilities/tesla-powerwall-review/</link></item>
-<item><title>Tesla Solar Panels - CNET</title><link>https://www.cnet.com/home/energy-and-utilities/tesla-solar-panels-review-cheaper-than-other-national-players/</link></item>
-<item><title>Tank Water Heaters vs. Tankless Water Heaters - CNET</title><link>https://www.cnet.com/home/energy-and-utilities/storage-tank-water-heaters-vs-tankless-water-heaters/</link></item>
-<item><title>Heat Pump vs. Furnace - CNET</title><link>https://www.cnet.com/home/energy-and-utilities/heat-pump-vs-furnace-which-heat-source-is-right-for-your-home/</link></item>
-<item><title>Heat Pump vs. Air Conditioner - CNET</title><link>https://www.cnet.com/home/energy-and-utilities/year-round-comfort-why-heat-pumps-outperform-traditional-air-conditioners/</link></item>
-<item><title>Battery vs. Generator - CNET</title><link>https://www.cnet.com/home/energy-and-utilities/backup-power-solutions-how-to-choose-between-home-batteries-and-generators/</link></item>
-<item><title>Most Affordable - CNET</title><link>https://www.cnet.com/home/electric-vehicles/the-most-affordable-electric-cars/</link></item>
-<item><title>Electric SUVs - CNET</title><link>https://www.cnet.com/home/electric-vehicles/best-electric-suv/</link></item>
-<item><title>Plug-In Hybrids - CNET</title><link>https://www.cnet.com/home/electric-vehicles/best-plug-in-hybrid-evs/</link></item>
-<item><title>Best EV Charger - CNET</title><link>https://www.cnet.com/home/electric-vehicles/best-ev-charger/</link></item>
-<item><title>Home EV Charging Explained - CNET</title><link>https://www.cnet.com/home/electric-vehicles/home-ev-charging-101-levels-of-charging-explained/</link></item>
-<item><title>Free and Easy EV Charging Options - CNET</title><link>https://www.cnet.com/home/electric-vehicles/7-free-and-easy-ways-you-can-charge-your-ev/</link></item>
-<item><title>The 2024 EV Tax Credit Guide - CNET</title><link>https://www.cnet.com/home/electric-vehicles/the-2024-ev-tax-credit-big-rebate-small-list/</link></item>
-<item><title>The Nicest Charging Station I&amp;#39;ve Visited - CNET</title><link>https://www.cnet.com/home/electric-vehicles/this-massive-indoor-ev-hub-is-the-nicest-charging-station-ive-visited/</link></item>
-<item><title>States Banning Gas Powered Cars - CNET</title><link>https://www.cnet.com/home/electric-vehicles/states-banning-new-gas-powered-cars/</link></item>
-<item><title>Are Electric Vehicles Good for Our Planet? - CNET</title><link>https://www.cnet.com/home/electric-vehicles/are-electric-vehicles-actually-good-for-the-climate/</link></item>
-<item><title>Without a Subscription - CNET</title><link>https://www.cnet.com/home/security/best-home-security-cameras-without-a-subscription/</link></item>
-<item><title>Indoor Security Cameras - CNET</title><link>https://www.cnet.com/home/security/best-indoor-home-security-cameras/</link></item>
-<item><title>Solar-Powered - CNET</title><link>https://www.cnet.com/home/security/best-solar-powered-home-security-camera/</link></item>
-<item><title>Ring Video Doorbells - CNET</title><link>https://www.cnet.com/home/security/best-ring-video-doorbells/</link></item>
-<item><title>Smoke Detector - CNET</title><link>https://www.cnet.com/home/security/best-smoke-detector/</link></item>
-<item><title>Outdoor Smart Plugs - CNET</title><link>https://www.cnet.com/home/smart-home/best-outdoor-smart-plugs/</link></item>
-<item><title>Smart Hubs &amp; Displays - CNET</title><link>https://www.cnet.com/home/smart-home/best-smart-displays/</link></item>
-<item><title>Smart Devices - CNET</title><link>https://www.cnet.com/home/smart-home/best-smart-home-devices/</link></item>
-<item><title>Smart Lights - CNET</title><link>https://www.cnet.com/home/smart-home/best-smart-lights/</link></item>
-<item><title>Smart Speakers - CNET</title><link>https://www.cnet.com/home/smart-home/best-smart-speaker/</link></item>
-<item><title>Vacuum Cleaners - CNET</title><link>https://www.cnet.com/home/kitchen-and-household/best-vacuum-cleaner/</link></item>
-<item><title>Dehumidifiers - CNET</title><link>https://www.cnet.com/home/kitchen-and-household/best-dehumidifier/</link></item>
-<item><title>Refrigerators - CNET</title><link>https://www.cnet.com/home/kitchen-and-household/best-refrigerator/</link></item>
-<item><title>Office Chairs - CNET</title><link>https://www.cnet.com/home/kitchen-and-household/best-office-chairs/</link></item>
-<item><title>Surge Protectors - CNET</title><link>https://www.cnet.com/home/kitchen-and-household/best-surge-protector/</link></item>
-<item><title>Toaster Ovens - CNET</title><link>https://www.cnet.com/home/kitchen-and-household/best-toaster-oven/</link></item>
-<item><title>Bread Machines - CNET</title><link>https://www.cnet.com/home/kitchen-and-household/best-bread-machines/</link></item>
-<item><title>Portable Grills - CNET</title><link>https://www.cnet.com/home/yard-and-outdoors/best-portable-grill/</link></item>
-<item><title>Pellet Grills - CNET</title><link>https://www.cnet.com/home/yard-and-outdoors/best-pellet-grill/</link></item>
-<item><title>Charcoal Grills - CNET</title><link>https://www.cnet.com/home/yard-and-outdoors/best-charcoal-grill/</link></item>
-<item><title>Kamado Grills - CNET</title><link>https://www.cnet.com/home/yard-and-outdoors/best-kamado-grill/</link></item>
-<item><title>Grilling Tools &amp; Accessories - CNET</title><link>https://www.cnet.com/home/yard-and-outdoors/best-grill-tools-to-buy-for-summer/</link></item>
-<item><title>Leaf Blowers - CNET</title><link>https://www.cnet.com/home/yard-and-outdoors/best-leaf-blowers/</link></item>
-<item><title>Pressure Washers - CNET</title><link>https://www.cnet.com/home/yard-and-outdoors/best-pressure-washer/</link></item>
-<item><title>Cordless Drill - CNET</title><link>https://www.cnet.com/home/kitchen-and-household/best-cordless-drill/</link></item>
-<item><title>Side Sleepers - CNET</title><link>https://www.cnet.com/health/sleep/best-mattress-for-side-sleepers/</link></item>
-<item><title>Earplugs for Sleeping - CNET</title><link>https://www.cnet.com/health/sleep/best-earplugs-for-sleeping/</link></item>
-<item><title>Cooling Comforters - CNET</title><link>https://www.cnet.com/health/sleep/8-best-cooling-comforters/</link></item>
-<item><title>Sleep Headphones - CNET</title><link>https://www.cnet.com/health/sleep/headphones-for-sleeping/</link></item>
-<item><title>Heated Blankets - CNET</title><link>https://www.cnet.com/health/sleep/best-heated-blankets/</link></item>
-<item><title>Multivitamins - CNET</title><link>https://www.cnet.com/health/nutrition/best-multivitamins/</link></item>
-<item><title>Vitamins for Healthy Hair, Skin and Nails - CNET</title><link>https://www.cnet.com/health/nutrition/best-vitamins-for-hair-skin-and-nails/</link></item>
-<item><title>Vitamins for Energy - CNET</title><link>https://www.cnet.com/health/nutrition/best-vitamins-for-energy/</link></item>
-<item><title>Creatine Supplements - CNET</title><link>https://www.cnet.com/health/nutrition/best-creatine-supplements/</link></item>
-<item><title>Hungryroot Grocery - CNET</title><link>https://www.cnet.com/health/nutrition/hungryroot-review/</link></item>
-<item><title>Home Exercise Equipment - CNET</title><link>https://www.cnet.com/health/fitness/best-home-exercise-equipment/</link></item>
-<item><title>Smart Home Gyms - CNET</title><link>https://www.cnet.com/health/fitness/best-smart-home-gym/</link></item>
-<item><title>Chest Strap Heart-Rate Monitors - CNET</title><link>https://www.cnet.com/health/fitness/best-chest-strap-heart-rate-monitors/</link></item>
-<item><title>Compression Socks - CNET</title><link>https://www.cnet.com/health/fitness/best-compression-socks/</link></item>
-<item><title>YouTube Channels for Free Workouts - CNET</title><link>https://www.cnet.com/health/fitness/best-youtube-channels-for-free-workouts/</link></item>
-<item><title>Workout Apps for Women - CNET</title><link>https://www.cnet.com/health/fitness/best-workout-apps-for-women/</link></item>
-<item><title>Tonal Smart Home Gym Review - CNET</title><link>https://www.cnet.com/health/fitness/tonal-review/</link></item>
-<item><title>Places to Buy Replacement Prescription Lenses Online - CNET</title><link>https://www.cnet.com/health/personal-care/best-places-to-buy-replacement-prescription-lenses/</link></item>
-<item><title>Reading Glasses - CNET</title><link>https://www.cnet.com/health/personal-care/best-reading-glasses/</link></item>
-<item><title>Prescription Sunglasses - CNET</title><link>https://www.cnet.com/health/personal-care/best-prescription-sunglasses/</link></item>
-<item><title>Invisible Braces Options - CNET</title><link>https://www.cnet.com/health/personal-care/invisible-braces/</link></item>
-<item><title>Teeth-Whitening Strips - CNET</title><link>https://www.cnet.com/health/personal-care/best-teeth-whitening-strips/</link></item>
-<item><title>Teeth Whitening Kits - CNET</title><link>https://www.cnet.com/health/personal-care/best-teeth-whitening-kits/</link></item>
-<item><title>Facial Sunscreens - CNET</title><link>https://www.cnet.com/health/personal-care/best-sunscreen-for-face/</link></item>
-<item><title>Vitamin C Serums - CNET</title><link>https://www.cnet.com/health/personal-care/best-vitamin-c-serums/</link></item>
-<item><title>Mineral Sunscreens - CNET</title><link>https://www.cnet.com/health/personal-care/best-mineral-sunscreens/</link></item>
-<item><title>Reef-Safe Sunscreens - CNET</title><link>https://www.cnet.com/health/personal-care/best-reef-safe-sunscreens/</link></item>
-<item><title>Brands You Should Try - CNET</title><link>https://www.cnet.com/health/personal-care/best-beauty-brands/</link></item>
-<item><title>Subscription Services - CNET</title><link>https://www.cnet.com/editors-choice/cnet-editors-choice-our-top-picks-in-subscription-services/</link></item>
-<item><title>EVs, Energy Tech &amp; Solar Services - CNET</title><link>https://www.cnet.com/editors-choice/cnet-editors-choice-our-top-picks-in-energy-services/</link></item>
-<item><title>Phones, Earbuds, Laptops, TVs &amp; More - CNET</title><link>https://www.cnet.com/editors-choice/cnet-editors-choice-our-top-picks-in-giftable-tech/</link></item>
-<item><title>CNET Archives - CNET</title><link>https://www.cnet.com/sitemaps/articles/</link></item>
-<item><title>Video: Document Freedom Day with the Nepalese LibreOffice community - LibreOffice</title><link>https://blog.documentfoundation.org/blog/2025/04/02/video-document-freedom-day-with-the-nepalese-libreoffice-community/</link></item>
-<item><title>LibreOffice project and community recap: March 2025 - LibreOffice</title><link>https://blog.documentfoundation.org/blog/2025/04/01/libreoffice-project-and-community-recap-march-2025/</link></item>
-<item><title>LibreOffice Conference 2025: Location proposals - LibreOffice</title><link>https://blog.documentfoundation.org/blog/2025/03/31/libreoffice-conference-2025-location-proposals/</link></item>
-<item><title>LibreOffice Base and Firebird – a special relationship - LibreOffice</title><link>https://blog.documentfoundation.org/blog/2025/03/28/libreoffice-base-and-firebird-a-special-relationship/</link></item>
-<item><title>Announcement of LibreOffice 25.2.2 and LibreOffice 24.8.6 - LibreOffice</title><link>https://blog.documentfoundation.org/blog/2025/03/27/libreoffice-25-2-2-and-24-8-6/</link></item>
-<item><title>Celebrating Document Freedom Day - LibreOffice</title><link>https://blog.documentfoundation.org/blog/2025/03/26/celebrating-document-freedom-day/</link></item>
-<item><title>REMINDER: Document Freedom Day @ LibreOffice - LibreOffice</title><link>https://blog.documentfoundation.org/blog/2025/03/21/reminder-dfd-libreoffice/</link></item>
-<item><title>LibreOffice Podcast, Episode #2 – Design and UX in Free and Open Source Software - LibreOffice</title><link>https://blog.documentfoundation.org/blog/2025/03/20/libreoffice-podcast-episode-2-design-and-ux-in-free-and-open-source-software/</link></item>
-<item><title>Updates on Schleswig-Holstein moving to LibreOffice - LibreOffice</title><link>https://blog.documentfoundation.org/blog/2025/03/13/updates-on-schleswig-holstein-moving-to-libreoffice/</link></item>
-<item><title>LibreOffice 25.2 video – in 18 languages! 🌎 - LibreOffice</title><link>https://blog.documentfoundation.org/blog/2025/03/12/libreoffice-25-2-video-in-18-languages-%f0%9f%8c%8e/</link></item>
-<item><title>科学家分离出候选最苦物质 - Solidot</title><link>https://www.solidot.org/story?sid=81005</link></item>
-<item><title>美国撤销了 500 多个外国学生签证 - Solidot</title><link>https://www.solidot.org/story?sid=81003</link></item>
-<item><title>在泰美国学者因大不敬罪被捕 - Solidot</title><link>https://www.solidot.org/story?sid=81002</link></item>
-<item><title>美国对中国商品征收 104% 关税 - Solidot</title><link>https://www.solidot.org/story?sid=81001</link></item>
-<item><title>new tariffs imposed by President Donald Trump - Slashdot</title><link>https://news.slashdot.org/story/25/04/07/1558211/trump-opens-trade-talks-window-while-threatening-china-with-steeper-tariffs</link></item>
-<item><title>Bluesky Can&amp;#39;t Take a Joke - Slashdot</title><link>https://tech.slashdot.org/story/25/04/08/0524221/bluesky-cant-take-a-joke?sbsrc=md</link></item>
-<item><title>Micron To Impose Tariff-Related Surcharge on SSDs, Other Products - Slashdot</title><link>https://hardware.slashdot.org/story/25/04/08/154257/micron-to-impose-tariff-related-surcharge-on-ssds-other-products?sbsrc=md</link></item>
-<item><title>Stock Market Recovery Time, a Long-Term Perspective - FlowingData</title><link>https://flowingdata.com/2025/04/08/sp-500-long-term/</link></item>
-<item><title>Inflation tracker for your backyard barbecue - FlowingData</title><link>https://flowingdata.com/2025/04/08/inflation-tracker-for-your-backyard-barbecue/</link></item>
-<item><title>InflataCart - FlowingData</title><link>https://flowingdata.com/2025/01/23/with-inflatacart-your-grocery-list-plus-inflation-data/</link></item>
-<item><title>中国最美徒步线路 珠峰东坡嘎玛沟 - 户外资料网</title><link>https://hd.8264.com/xianlu-233</link></item>
-<item><title>国庆南天山北线六日：从金秋牧场穿越到亘古冰川 - 户外资料网</title><link>https://www.8264.com/viewnews-154564-page-1.html</link></item>
-<item><title>穿越格鲁吉亚1000公里，却迷失在上帝后花园的酒香醉梦 - 户外资料网</title><link>https://www.8264.com/viewnews-154569-page-1.html</link></item>
-<item><title>天目七尖两日重装徒步，这雾凇真是美翻了 - 户外资料网</title><link>https://www.8264.com/viewnews-154572-page-1.html</link></item>
-<item><title>崤函骑友2025年春游浙赣皖之千岛湖篇 - 户外资料网</title><link>https://www.8264.com/viewnews-154570-page-1.html</link></item>
-<item><title>天柱山东关秘境为何尘封20年 - 户外资料网</title><link>https://www.8264.com/viewnews-154567-page-1.html</link></item>
-<item><title>徒步麦理浩径，是不是逛公园？ - 户外资料网</title><link>https://www.8264.com/viewnews-154556-page-1.html</link></item>
-<item><title>五一徒步 梅里北坡开山节特辑 优惠活动（7日行程） - 户外资料网</title><link>http://hd.8264.com/xianlu-189491</link></item>
-<item><title>喀拉峻小环线 新疆喀拉峻环线 徒步世界自然遗产（4日行程） - 户外资料网</title><link>http://hd.8264.com/xianlu-189486</link></item>
-<item><title>全景伊犁 豪华商务游（9日行程） - 户外资料网</title><link>http://hd.8264.com/xianlu-189737</link></item>
-<item><title>7月20号 西北大环线 新疆 甘肃 青海（28日行程） - 户外资料网</title><link>http://hd.8264.com/xianlu-189720</link></item>
-<item><title>莲花湖穿伍须海 月亮湖 天池 大海子 四莲湖9湖连穿（6日行程） - 户外资料网</title><link>http://hd.8264.com/xianlu-188783</link></item>
-<item><title>解锁第一座5KM雪山之萨武神山 入门级雪山适合新手冲（2日行程） - 户外资料网</title><link>http://hd.8264.com/xianlu-186549</link></item>
-<item><title>最近想入一件鸟牌冲锋衣，准备去雪山alpha sv, theta svx和haglofs软壳,请老鸟们指 - 户外资料网</title><link>http://www.8264.com/wenda/74205.html</link></item>
-<item><title>求教各位前辈新款 Patagonia  R2 Jacket 尺寸问题，万分感谢！ - 户外资料网</title><link>http://www.8264.com/wenda/74201.html</link></item>
-<item><title>求推荐国内品牌户外装备 - 户外资料网</title><link>http://www.8264.com/wenda/74193.html</link></item>
-<item><title>请教关于la sportiva batura 2.0 GTX尺码的问题 - 户外资料网</title><link>http://www.8264.com/wenda/74211.html</link></item>
-<item><title>求La sportiva Sandstone正品44码 - 户外资料网</title><link>http://www.8264.com/wenda/74190.html</link></item>
-<item><title>OpenSSH 10 Released, Makes Bold Cryptographic Changes - Linuxiac</title><link>https://linuxiac.com/openssh-10-released-makes-bold-cryptographic-changes/</link></item>
-<item><title>openSUSE’s Agama Installer Lands with Enhanced Web UI - Linuxiac</title><link>https://linuxiac.com/opensuse-agama-installer-lands-with-enhanced-web-ui/</link></item>
-<item><title>Proxmox Virtual Environment 8.4 Released - Linuxiac</title><link>https://linuxiac.com/proxmox-virtual-environment-8-4-released/</link></item>
-<item><title>Fwupd 2.0.8 Released with Enhanced UEFI Support - Linuxiac</title><link>https://linuxiac.com/fwupd-2-0-8-released-with-enhanced-uefi-support/</link></item>
-<item><title>Mint’s LMDE 7 to Feature Full OEM Install Support - Linuxiac</title><link>https://linuxiac.com/mints-lmde-7-to-feature-full-oem-install-support/</link></item>
-<item><title>FreeDOS 1.4 Now Available — A Major Update for the Beloved DOS Revival - Linuxiac</title><link>https://linuxiac.com/freedos-1-4-now-available/</link></item>
-<item><title>Linkwarden 2.10 Brings AI Tagging, Advanced Search, and More - Linuxiac</title><link>https://linuxiac.com/linkwarden-2-10-bookmark-manager-released/</link></item>
-<item><title>Git Distributed Version Control System Turned 20 - Linuxiac</title><link>https://linuxiac.com/git-distributed-version-control-system-turned-20/</link></item>
-<item><title>OpenSSL 3.5 Brings Major Cryptographic Shifts - Linuxiac</title><link>https://linuxiac.com/openssl-3-5-brings-major-cryptographic-shifts/</link></item>
-<item><title>How to Install Docker on Void Linux: A Step-by-Step Guide - Linuxiac</title><link>https://linuxiac.com/how-to-install-docker-on-void-linux/</link></item>
-<item><title>Space Force says its relationship with Europe is ‘business as usual’ - Defense News</title><link>https://www.defensenews.com/space/2025/04/09/space-force-says-its-relationship-with-europe-is-business-as-usual/</link></item>
-<item><title>Army Secretary Daniel Driscoll tapped as acting head of ATF operations - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2025/04/09/army-secretary-daniel-driscoll-tapped-as-acting-head-of-atf-operations/</link></item>
-<item><title>Did the Trump administration move too quickly to commit to the F-47? - Defense News</title><link>https://www.defensenews.com/opinion/2025/04/09/did-the-trump-administration-move-too-quickly-to-commit-to-the-f-47/</link></item>
-<item><title>What Marine Corps aviation has in store over the next five years - Defense News</title><link>https://www.defensenews.com/news/your-marine-corps/2025/04/09/what-marine-corps-aviation-has-in-store-over-the-next-five-years/</link></item>
-<item><title>US-Israeli industry team pitches ‘Bullseye’ long-range missile - Defense News</title><link>https://www.defensenews.com/naval/2025/04/09/us-israeli-industry-team-pitches-bullseye-long-range-missile/</link></item>
-<item><title>F/A-XX could be the Navy’s last piloted fighter, bring greater range - Defense News</title><link>https://www.defensenews.com/air/2025/04/08/fa-xx-could-be-navys-last-piloted-fighter-bring-greater-range/</link></item>
-<item><title>New Zealand vows to play catch-up on defense investments - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2025/04/08/new-zealand-vows-to-play-catch-up-on-defense-investments/</link></item>
-<item><title>Special Coverage: Space Acquisition - Defense News</title><link>https://www.defensenews.com/special-coverage-space-acquisition/</link></item>
-<item><title>Leonardo refutes Russian bones in M-346 trainer aircraft design - Defense News</title><link>https://www.defensenews.com/global/europe/2025/04/09/leonardo-refutes-russian-bones-in-m-346-trainer-aircraft-design/</link></item>
-<item><title>Compass Call electronic-attack plane makers eye overseas market - Defense News</title><link>https://www.defensenews.com/air/2025/04/08/compass-call-electronic-attack-plane-makers-eye-overseas-market/</link></item>
-<item><title>Hegseth vows US will ‘take back’ Panama canal from Chinese influence - Defense News</title><link>https://www.defensenews.com/pentagon/2025/04/09/hegseth-vows-us-will-take-back-panama-canal-from-chinese-influence/</link></item>
-<item><title>Senate confirms Trump’s nominee for top Pentagon policy job - Defense News</title><link>https://www.defensenews.com/pentagon/2025/04/08/senate-confirms-trumps-nominee-for-top-pentagon-policy-job/</link></item>
-<item><title>Top general recommends US maintain current troop levels in Europe - Defense News</title><link>https://www.defensenews.com/news/your-military/2025/04/08/top-general-recommends-us-maintain-current-troop-levels-in-europe/</link></item>
-<item><title>Hegseth opts for virtual attendance at Ukraine defense group meeting - Defense News</title><link>https://www.defensenews.com/pentagon/2025/04/08/hegseth-opts-for-virtual-attendance-at-ukraine-defense-group-meeting/</link></item>
-<item><title>Trump promises $1 trillion in defense spending for next year - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2025/04/08/trump-promises-1-trillion-in-defense-spending-for-next-year/</link></item>
-<item><title>US Navy unveils newest Virginia-class fast attack submarine USS Iowa - Defense News</title><link>https://www.defensenews.com/naval/2025/04/08/us-navy-unveils-newest-virginia-class-fast-attack-submarine-uss-iowa/</link></item>
-<item><title>Epirus debuts high-power microwave weapon to knock out boat motors - Defense News</title><link>https://www.defensenews.com/industry/2025/04/08/epirus-debuts-high-power-microwave-weapon-to-knock-out-boat-motors/</link></item>
-<item><title>Top Marine’s deployment plans face familiar wrinkle: Inert Navy ships - Defense News</title><link>https://www.defensenews.com/news/your-marine-corps/2025/04/08/top-marines-deployment-plans-face-familiar-wrinkle-inert-navy-ships/</link></item>
-<item><title>Space Command using experimentation to field high-need capabilities - Defense News</title><link>https://www.defensenews.com/space/2025/04/08/space-command-using-experimentation-to-field-high-need-capabilities/</link></item>
-<item><title>Intel agency expanding proliferated constellation with April launches - Defense News</title><link>https://www.defensenews.com/space/2025/04/08/intel-agency-expanding-proliferated-constellation-with-april-launches/</link></item>
-<item><title>US Navy making Aegis updates, training changes based on Houthi attacks - Defense News</title><link>https://www.defensenews.com/naval/2024/03/21/us-navy-making-aegis-updates-training-changes-based-on-houthi-attacks/</link></item>
-<item><title>AUKUS nations name British-Australian vendor team to build submarines - Defense News</title><link>https://www.defensenews.com/global/2024/03/21/aukus-nations-name-british-australian-vendor-team-to-build-submarines/</link></item>
-<item><title>Congress wants US Air Force to better explain reorganization plans - Defense News</title><link>https://www.defensenews.com/air/2024/03/21/congress-wants-us-air-force-to-better-explain-reorganization-plans/</link></item>
-<item><title>Maldives starts flying Turkish drones for maritime surveillance - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2024/03/21/maldives-starts-flying-turkish-drones-for-maritime-surveillance/</link></item>
-<item><title>Outsourcing Navy shipbuilding weakens the United States - Defense News</title><link>https://www.defensenews.com/opinion/2024/03/21/outsourcing-navy-shipbuilding-weakens-the-united-states/</link></item>
-<item><title>Replicator gets $200 million in newly released defense spending bill - Defense News</title><link>https://www.defensenews.com/pentagon/2024/03/21/replicator-gets-200-million-in-newly-released-defense-spending-bill/</link></item>
-<item><title>Defense Innovation Unit would get major funding boost in spending bill - Defense News</title><link>https://www.defensenews.com/battlefield-tech/2024/03/21/defense-innovation-unit-would-get-major-funding-boost-in-spending-bill/</link></item>
-<item><title>Marine wargames offer a look at  the future — and fuel dissent - Defense News</title><link>https://www.defensenews.com/news/your-marine-corps/2024/03/21/marine-wargames-offer-a-look-at-the-future-and-fuel-dissent/</link></item>
-<item><title>F-35 delivery delays frustrate European air force upgrade plans - Defense News</title><link>https://www.defensenews.com/global/europe/2024/03/21/f-35-delivery-delays-frustrate-european-air-force-upgrade-plans/</link></item>
-<item><title>Fixing subpar barracks at top of the Marine Corps’ budget wish list - Defense News</title><link>https://www.defensenews.com/news/your-marine-corps/2024/03/21/fixing-subpar-barracks-at-top-of-the-marine-corps-budget-wish-list/</link></item>
-<item><title>AOC Launches 240Hz And 310Hz ESports Gaming Monitors, Featuring Regular And Widescreen Displays - Wccftech</title><link>https://wccftech.com/aoc-launches-cu34g4z-and-25g4sxu-gaming-monitors/</link></item>
-<item><title>Lexar’s PLAY PRO microSD Cards For The Switch 2 Boasting Speeds Of 900MB/s Are Restocked On Amazon; Now Available With Up To 512GB Of Storage, At 10 Percent Off - Wccftech</title><link>https://wccftech.com/lexar-play-pro-microsd-card-with-900mb-s-speeds-512gb-storage-is-10-percent-off-on-amazon/</link></item>
-<item><title>President Trump Breaks Silence After Tariff Pause – Says Chinese Are “Proud People” &amp; Xi Is “A Proud Man” - Wccftech</title><link>https://wccftech.com/president-trump-breaks-silence-after-tariff-pause-says-chinese-are-proud-people-xi-is-a-proud-man/</link></item>
-<item><title>EU Rulings On Apple And Meta’s Potential Violations Of The Digital Markets Act Expected In The Coming Weeks - Wccftech</title><link>https://wccftech.com/eu-rulings-on-apple-and-metas-potential-violations-of-the-digital-markets-act-expected-in-the-coming-weeks/</link></item>
-<item><title>AMD Ryzen 8000HX “Dragon Range Refresh” CPUs Launched: Up To 16 “Zen 4” Cores, 5.4 GHz Clocks, 75W TDP For Enthusiast Gaming Laptops - Wccftech</title><link>https://wccftech.com/amd-ryzen-8000hx-dragon-range-refresh-cpus-launch-16-zen-4-cores-gaming-laptops/</link></item>
-<item><title>Teens Want Their Next Phone To Be An iPhone, As Apple Continues To Dominate The Smartphone Space - Wccftech</title><link>https://wccftech.com/teens-want-their-next-phone-to-be-an-iphone-as-apple-continues-to-dominate-the-smartphone-space/</link></item>
-<item><title>PlayStation Plus Extra &amp; Premium April 2025 Lineup Includes Hogwarts Legacy, Blue Prince, Battlefield 1, And More - Wccftech</title><link>https://wccftech.com/playstation-plus-extra-premium-april-2025-lineup-includes-hogwarts-legacy-blue-prince-battlefield-1-and-more/</link></item>
-<item><title>Gigabyte Registers Radeon RX 9060 XT And GeForce RTX 5060 Ti Cards On RRA; MSI Also Prepares Several RTX 5060 Ti Models - Wccftech</title><link>https://wccftech.com/gigabyte-registers-radeon-rx-9060-xt-and-geforce-rtx-5060-ti-cards-on-rra-msi-also-prepares-several-rtx-5060-ti-models/</link></item>
-<item><title>AMD’s Advancing AI Event Announced For June 12; Featuring Next-Gen Instinct GPUs &amp; Major AI Announcements - Wccftech</title><link>https://wccftech.com/amd-advancing-ai-event-announced-for-june-12/</link></item>
-<item><title>Project Sirius Will Be an Amazing The Witcher Multiplayer Game, Says Departing Design Director - Wccftech</title><link>https://wccftech.com/project-sirius-will-be-an-amazing-the-witcher-multiplayer-game-says-departing-design-director/</link></item>
-<item><title>One of the US’s Largest Custom PC Builders Expects Up to a 50% Increase in Component Prices; Says They Won’t Stay in Business If They Absorb the New Tariffs - Wccftech</title><link>https://wccftech.com/one-of-the-us-largest-pre-built-custom-pc-builders-expects-up-to-a-50-increase-in-component-prices/</link></item>
-<item><title>NVIDIA’s China H20 AI GPUs Spared By Trump Admin In Return For US AI Data Center Investments – Report - Wccftech</title><link>https://wccftech.com/nvidias-china-h20-ai-gpus-spared-by-trump-admin-in-return-for-us-ai-data-center-investments-report/</link></item>
-<item><title>Apple’s 14-Inch And 16-Inch M4, M4 Pro And M4 Max MacBook Pro Models Are Slowly Creeping Up In Price, But You Can Still Get Them For Up To $400 Off On Amazon - Wccftech</title><link>https://wccftech.com/current-14-inch-and-16-inch-m4-macbook-pro-models-can-still-be-had-for-up-to-400-off/</link></item>
-<item><title>HBO’s The Last Of Us Renewed For Season 3, Days Before Season 2 Premieres - Wccftech</title><link>https://wccftech.com/hbos-the-last-of-us-renewed-for-season-3-days-before-season-2-premieres/</link></item>
-<item><title>NVIDIA, AMD Price Targets Slashed On Back Of Tariff, Blackwell Concerns - Wccftech</title><link>https://wccftech.com/nvidia-amd-price-targets-slashed-on-back-of-tariff-blackwell-concerns/</link></item>
-<item><title>The Outer Worlds 2 Gets First Gameplay Video and Info - Wccftech</title><link>https://wccftech.com/the-outer-worlds-2-gets-first-gameplay-video-and-info/</link></item>
-<item><title>Nintendo Has Indefinitely Delayed The Launch Of The Nintendo Switch 2 In China - Wccftech</title><link>https://wccftech.com/nintendo-has-indefinitely-delayed-the-launch-of-the-nintendo-switch-2-in-china/</link></item>
-<item><title>A Key Apple Supplier Is Eyeing Moving Production Of iPhones And Other Products To The U.S. To Avoid Tariff-Driven Trade Disruptions - Wccftech</title><link>https://wccftech.com/a-key-apple-supplier-is-eyeing-moving-production-of-iphones-and-other-products-to-the-u-s-to-avoid-tariff-driven-trade-disruptions/</link></item>
-<item><title>Oblivion Unreal Engine 5 Fan Remaster New Version Featuring Over 3000 Enhanced Textures Looks Glorious in New 4K Video - Wccftech</title><link>https://wccftech.com/oblivion-unreal-engine-5-4k-video/</link></item>
-<item><title>PlayStation Portal System Update Adds Support For Basic Features Like Game Captures To Cloud Streaming - Wccftech</title><link>https://wccftech.com/playstation-portal-system-update-adds-support-for-basic-features-like-game-captures-to-cloud-streaming/</link></item>
-<item><title>Microsoft listens to users and revises its WSUS driver synchronization deprecation plans - BetaNews</title><link>https://betanews.com/2025/04/08/microsoft-listens-to-users-and-revises-its-wsus-driver-synchronization-deprecation-plans/</link></item>
-<item><title>IBM brings new AI capabilities to the mainframe - BetaNews</title><link>https://betanews.com/2025/04/08/ibm-brings-new-ai-capabilities-to-the-mainframe/</link></item>
-<item><title>Trump’s tariffs just broke the US laptop market -- Framework is the first casualty - BetaNews</title><link>https://betanews.com/2025/04/07/trump-tariffs-crush-framework-laptop-13-sales-in-us/</link></item>
-<item><title>Microsoft Windows 95 reboot chime and Minecraft soundtrack inducted into National Recording Registry - BetaNews</title><link>https://betanews.com/2025/04/09/microsoft-windows-95-reboot-chime-and-minecraft-soundtrack-inducted-into-national-recording-registry/</link></item>
-<item><title>Linux Mint Debian Edition 7 gets OEM support -- does that signal the impending death of Ubuntu-based Mint? - BetaNews</title><link>https://betanews.com/2025/04/09/linux-mint-debian-edition-7-oem-support-ubuntu-replacement/</link></item>
-<item><title>First quarter of 2025 sees record numbers of ransomware attacks - BetaNews</title><link>https://betanews.com/2025/04/09/first-quarter-of-2025-sees-record-numbers-of-ransomware-attacks/</link></item>
-<item><title>Immutable backup storage is the best defense against ransomware - BetaNews</title><link>https://betanews.com/2025/04/09/immutable-backup-storage-is-the-best-defense-against-ransomware/</link></item>
-<item><title>The devices that are exposing enterprises to risk - BetaNews</title><link>https://betanews.com/2025/04/09/the-devices-that-are-exposing-enterprises-to-risk/</link></item>
-<item><title>Is AI adoption the next great risk to data resilience? - BetaNews</title><link>https://betanews.com/2025/04/09/is-ai-adoption-the-next-great-risk-to-data-resilience/</link></item>
-<item><title>Could cyberattacks leave Europe in the dark? - BetaNews</title><link>https://betanews.com/2025/04/09/could-cyberattacks-leave-europe-in-the-dark/</link></item>
-<item><title>How AI-enhanced cyberattacks are redefining the modern threat landscape [Q&amp;A] - BetaNews</title><link>https://betanews.com/2025/04/09/how-ai-enhanced-cyberattacks-are-redefining-the-modern-threat-landscape-qa/</link></item>
-<item><title>Microsoft releases KB5055523 update to fix a glut of Windows 11 problems - BetaNews</title><link>https://betanews.com/2025/04/09/microsoft-releases-kb5055523-update-to-fix-a-glut-of-windows-11-problems/</link></item>
-<item><title>Meta brings teen accounts to Facebook and Messenger, and bolsters Instagram restrictions - BetaNews</title><link>https://betanews.com/2025/04/09/meta-brings-teen-accounts-to-facebook-and-messenger-and-bolsters-instagram-restrictions/</link></item>
-<item><title>HPE launches new virtual private cloud solution - BetaNews</title><link>https://betanews.com/2025/04/08/hpe-launches-new-virtual-private-cloud-solution/</link></item>
-<item><title>AI boosts cyberwarfare threat amid geopolitical tensions - BetaNews</title><link>https://betanews.com/2025/04/08/ai-boosts-cyberwarfare-threat-amid-geopolitical-tensions/</link></item>
-<item><title>Why 2025 is the year AI will revolutionize construction - BetaNews</title><link>https://betanews.com/2025/04/08/why-2025-is-the-year-ai-will-revolutionize-construction/</link></item>
-<item><title>Traditional vulnerability assessment falls short on third-party risks - BetaNews</title><link>https://betanews.com/2025/04/08/traditional-vulnerability-assessment-falls-short-on-third-party-risks/</link></item>
-<item><title>Windows 25 solves Windows 11&amp;#39;s biggest problem -- download it now - BetaNews</title><link>https://betanews.com/2025/03/21/windows-25-solves-windows-11s-biggest-problem-download-it-now/</link></item>
-<item><title>&amp;#39;It just works&amp;#39;: AcreetionOS is the easy-to-use alternative to Windows 10/11 -- switch to it now - BetaNews</title><link>https://betanews.com/2025/03/12/it-just-works-acreetionos-is-the-easy-to-use-alternative-to-windows-10-11-switch-to-it-now/</link></item>
-<item><title>Forget Windows 11 -- ReactOS, the Microsoft-free Windows operating system, just got a massive update! Download it now - BetaNews</title><link>https://betanews.com/2025/03/24/forget-windows-11-reactos-the-microsoft-free-windows-operating-system-just-got-a-massive-update-download-it-now/</link></item>
-<item><title>Windows 11 finally gets a proper Start menu with this Quantum upgrade -- install it now - BetaNews</title><link>https://betanews.com/2025/04/02/windows-11-finally-gets-a-proper-start-menu-with-this-quantum-upgrade-install-it-now/</link></item>
-<item><title>Forget Windows 11 and try AerynOS instead -- this new Linux distro just got a fresh ISO and powerful updates - BetaNews</title><link>https://betanews.com/2025/03/25/aerynos-linux-distro-replaces-windows-11/</link></item>
-<item><title>Elon Musk merges xAI with X to distract from Twitter debt disaster and Donald Trump backlash - BetaNews</title><link>https://betanews.com/2025/03/28/elon-musk-xai-x-merger-twitter-trump-backlash-debt/</link></item>
-<item><title>Microsoft admits that a recent Windows update may have made your printer act erratically - BetaNews</title><link>https://betanews.com/2025/03/13/microsoft-admits-that-a-recent-windows-update-may-have-made-your-printer-act-erratically/</link></item>
-<item><title>Say goodbye to Microsoft Windows 11 and hello to Nitrux Linux 3.9.1 - BetaNews</title><link>https://betanews.com/2025/03/31/say-goodbye-to-microsoft-windows-11-and-hello-to-nitrux-linux-3-9-1/</link></item>
-<item><title>Apple settles unfair labor charges brought by fired engineering manager - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/10/apple_agrees_to_settle_unfair/</link></item>
-<item><title>Nvidia paid $1M for Mar-a-Lago meal, US later scrapped AI chip export crackdown - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/09/nvidia_us_export_ban_change/</link></item>
-<item><title>Founder of facial-rec controversy biz Clearview AI booted from board - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/09/clearview_founder_exceo_ousted/</link></item>
-<item><title>April&amp;#39;s Patch Tuesday leaves unlucky Windows Hello users unable to login - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/09/microsoft_hello_patch/</link></item>
-<item><title>Wyden blocks Trump&amp;#39;s CISA boss nominee, blames cyber agency for &amp;#39;actively hiding info&amp;#39; about telecom insecurity - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/09/wyden_blocks_trumps_cisa_boss/</link></item>
-<item><title>Sensitive financial files feared stolen from US bank watchdog - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/09/occ_bank_email_hack/</link></item>
-<item><title>Trump thinks we can make iPhones in the US just like China. Yeah, right - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/09/iphones_manufacture_unlikely_in_us/</link></item>
-<item><title>EU lands 25% counter tariff punch on US, Trump pauses broad import levy hike – China excepted - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/09/eu_tariffs/</link></item>
-<item><title>Commercial space station outfit plans two Orbital Data Center nodes by the end of 2025 - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/09/data_centers_leo_axiom_space/</link></item>
-<item><title>Microsoft puts $1B US datacenter builds on hold amid AI, tariff uncertainty - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/09/microsoft_puts_more_datacenter_builds/</link></item>
-<item><title>Tech hiring stalls as AI hype, layoffs, tariffs, economic uncertainty, more collide - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/09/it_hiring_slows/</link></item>
-<item><title>UK officials insist &amp;#39;murder prediction tool&amp;#39; algorithms purely abstract - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/09/uks_ministry_of_justice_algorithm_murders/</link></item>
-<item><title>Google&amp;#39;s got a hot cloud infosec startup, a new unified platform — and its eye on Microsoft&amp;#39;s $20B+ security biz - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/09/google_enterprise_security_ambitions/</link></item>
-<item><title>FreeDOS 1.4: Still DOS, still FOSS, more modern than ever - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/09/freedos_14/</link></item>
-<item><title>Microsoft resets &amp;#39;days since last Windows 11 problem&amp;#39; counter to 0 - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/09/microsoft_resets_the_days_since/</link></item>
-<item><title>UK&amp;#39;s answer to DARPA sprouts new ideas, like programmable plants - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/09/aria_new_programs/</link></item>
-<item><title>Microsoft lists seven habits of highly effective Windows 11 users - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/09/microsoft_windows_11_tips/</link></item>
-<item><title>Laser-cooled chips: Maybe coming soon-ish to a datacenter near you - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/09/lasercooled_chips_datacenter/</link></item>
-<item><title>Copyright-ignoring AI scraper bots laugh at robots.txt so the IETF is trying to improve it - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/09/ietf_ai_preferences_working_group/</link></item>
-<item><title>DOGE dilettantes &amp;#39;didn&amp;#39;t test&amp;#39; Social Security fraud detection tool at appropriate scale - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/09/social_security_website/</link></item>
-<item><title>Pharmacist accused of using webcams to spy on women in intimate moments at work, home - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/09/pharmacist_accused_of_cyber_voyeurism/</link></item>
-<item><title>AI entrepreneur sent avatar to argue in court – and the judge shut it down fast - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/09/court_scolds_ai_entrepreneur_avatar_testify/</link></item>
-<item><title>Bad luck, Windows 10 users. No fix yet for ransomware-exploited bug - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/08/patch_tuesday_microsoft/</link></item>
-<item><title>TSMC blew whistle on suspected verboten exports to Huawei – that may cost it $1B+ - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/08/tsmc_blew_whistle_on_chinese/</link></item>
-<item><title>Canada OKs construction of first licensed teeny atomic reactor - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/08/canada_smr_construction_approved/</link></item>
-<item><title>Meta accused of Llama 4 bait-and-switch to juice AI benchmark rank - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/08/meta_llama4_cheating/</link></item>
-<item><title>Boeing 787 radio software safety fix didn&amp;#39;t work, says Qatar - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/08/boeing_787_radio_software_patch/</link></item>
-<item><title>Don&amp;#39;t open that JPEG in WhatsApp for Windows. It might be an .EXE - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/08/whatsapp_windows_bug/</link></item>
-<item><title>Musk&amp;#39;s DOGE muzzled on X over tape storage baloney - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/08/doge_tape_storage_diss/</link></item>
-<item><title>Windows Server Update Services live to patch another day - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/08/microsoft_wsus_extended_support/</link></item>
-<item><title>Tariff-ied Framework pulls laptops, Keyboardio warns of keystroke sticker shock - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/08/small_hardware_firms_tariffs/</link></item>
-<item><title>&amp;#39;Copilot will remember key details about you&amp;#39; for a &amp;#39;catered to you&amp;#39; experience - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/08/microsoft_new_copilot_features/</link></item>
-<item><title>Scattered Spider stops the Rickrolls, starts the RAT race - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/08/scattered_spider_updates/</link></item>
-<item><title>UALink debuts its first AI interconnect spec – usable in just 18 short months - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/08/ualink_200g_version_1/</link></item>
-<item><title>Procter &amp;amp; Gamble study finds AI could help make Pringles tastier, spice up Old Spice, sharpen Gillette - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/08/procter_gamble_finds_ai_improves_teamwork/</link></item>
-<item><title>Boffins turn Moon dirt into glass for solar panels, eye future lunar base power - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/08/melted_moon_dust/</link></item>
-<item><title>IBM&amp;#39;s z17 mainframe – now with 7.5x more AI performance - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/08/ibm_z17_update/</link></item>
-<item><title>Brit universities told to keep up the world-class research with less cash - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/08/ukri_funding_cuts/</link></item>
-<item><title>UK data watchdog seeks fresh blood as more complaints lie unanswered for up to a year - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/08/ico_recruitment_drive/</link></item>
-<item><title>Eight charged with corruption, money laundering, in case linked to Huawei lobbying - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/08/belgium_arrests_huawei_raid_links/</link></item>
-<item><title>Samsung trumps USA&amp;#39;s tariffs by making displays in Mexico, and elsewhere if needed - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/08/samsung_q1_2025_tariff_response/</link></item>
-<item><title>As CISA braces for more cuts, threat intel sharing takes a hit - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/08/cisa_cuts_threat_intel/</link></item>
-<item><title>Advertise With Us - Futurism</title><link>https://futurism.com/advertise-with-us</link></item>
-<item><title>House Oversight Republicans block Democrats’ inquiry into Musk’s conflicts of interest - FedScoop</title><link>https://fedscoop.com/republicans-block-democrats-inquiry-elon-musk-conflicts-of-interest/</link></item>
-<item><title>Acting IRS chief set to leave following Treasury deal to share taxpayer data with ICE - FedScoop</title><link>https://fedscoop.com/irs-commissioner-resigns-immigrants-tax-information/</link></item>
-<item><title>Political vs. career CIOs: Former IT chiefs weigh merits of both following OPM guidance - FedScoop</title><link>https://fedscoop.com/political-vs-career-cios-former-it-chiefs-opm-guidance/</link></item>
-<item><title>Commerce blockchain bill sails through House committee - FedScoop</title><link>https://fedscoop.com/commerce-blockchain-bill-house-committee/</link></item>
-<item><title>Supreme Court halts district court order that reinstated federal workers at six agencies - FedScoop</title><link>https://fedscoop.com/supreme-court-halts-order-reinstated-federal-workers-six-agencies/</link></item>
-<item><title>DOGE reduction-in-force efforts reach Homeland Security - FedScoop</title><link>https://fedscoop.com/doge-cuts-homeland-security/</link></item>
-<item><title>For US government, use of unapproved communications tools during foreign travel isn’t a new issue - FedScoop</title><link>https://fedscoop.com/government-use-unapproved-communications-foreign-travel-signal/</link></item>
-<item><title>USAID edges closer to shutdown, allows remote work for those still overseas - FedScoop</title><link>https://fedscoop.com/usaid-shutdown-remote-work-overseas/</link></item>
-<item><title>Stilted innovation, less efficiency: Former IRS executives explain the impact of DOGE cuts - FedScoop</title><link>https://fedscoop.com/irs-modernization-workforce-firings-doge-it-systems/</link></item>
-<item><title>House Oversight Democrats demand details on White House Starlink installation - FedScoop</title><link>https://fedscoop.com/house-oversight-democrats-white-house-starlink-installation/</link></item>
-<item><title>&amp;#39;The White Lotus&amp;#39; Season 3&amp;#39;s Sam Nivola explains why Lochlan didn&amp;#39;t clean out the blender - Mashable</title><link>https://mashable.com/video/white-lotus-sam-nivola-lochlan-blender</link></item>
-<item><title>How &amp;#39;fake news&amp;#39; about tariffs posted on Elon Musk&amp;#39;s X shifted trillions in the markets - Mashable</title><link>https://mashable.com/article/fake-news-trump-tariffs-social-media-stock-market</link></item>
-<item><title>&amp;#39;The White Lotus&amp;#39; Season 3 gave us a huge clue to the Ratliff&amp;#39;s fate back in episode 1 - Mashable</title><link>https://mashable.com/article/the-white-lotus-season-3-finale-suicide-tree-fruit-clue</link></item>
-<item><title>TCL&amp;#39;s Mini LED TV from CES came out less than a month ago, and is already on sale - Mashable</title><link>https://mashable.com/article/april-8-tcl-qm6k-tv-deal</link></item>
-<item><title>Tesla, Nvidia lead rebound for tech stocks and crypto as Trump pauses tariffs - Mashable</title><link>https://mashable.com/article/trump-tariff-pause-tech-stocks-crypto-spike-tesla-nvidia</link></item>
-<item><title>Apple Watch ad uses real SOS call from man swept out to sea - Mashable</title><link>https://mashable.com/video/apple-watch-emergency-ad-australia</link></item>
-<item><title>Google reveals Reddit Answers is powered by Gemini AI - Mashable</title><link>https://mashable.com/article/reddit-answers-google-gemini</link></item>
-<item><title>Immigrants&amp;#39; social media accounts will be monitored for &amp;#39;antisemitic activity,&amp;#39; DHS says - Mashable</title><link>https://mashable.com/article/homeland-security-monitoring-social-media-antisemitism</link></item>
-<item><title>Ed Sheeran and Jimmy Fallon go in disguise to surprise people on NYC subway - Mashable</title><link>https://mashable.com/video/ed-sheeran-jimmy-fallon-surprise-subway</link></item>
-<item><title>NYT Connections Sports Edition today: Hints and answers for April 9 - Mashable</title><link>https://mashable.com/article/nyt-connections-sports-edition-hint-answer-today-april-9</link></item>
-<item><title>&amp;#39;The White Lotus&amp;#39; creator Mike White drops a hint about the Season 4 location - Mashable</title><link>https://mashable.com/video/the-white-lotus-season-4-location-mike-white</link></item>
-<item><title>Hurdle hints and answers for April 9, 2025 - Mashable</title><link>https://mashable.com/article/hurdle-hints-answers-april-9-2025</link></item>
-<item><title>NYT Connections hints today: Clues, answers for April 9, 2025 - Mashable</title><link>https://mashable.com/article/nyt-connections-hint-answer-today-april-9-2025</link></item>
-<item><title>Wordle today: Answer, hints for April 9, 2025 - Mashable</title><link>https://mashable.com/article/wordle-today-answer-april-9-2025</link></item>
-<item><title>NYT Mini crossword answers, hints for April 9, 2025 - Mashable</title><link>https://mashable.com/article/nyt-mini-crossword-answers-hints-april-9-2025</link></item>
-<item><title>NYT Strands hints, answers for April 9 - Mashable</title><link>https://mashable.com/article/strands-nyt-hint-april-9-2025</link></item>
-<item><title>Bad Bunny&amp;#39;s &amp;#39;Tiny Desk Concert&amp;#39; is finally here and it doesn&amp;#39;t disappoint - Mashable</title><link>https://mashable.com/video/bad-bunny-tiny-desk-concert-npr</link></item>
-<item><title>Exclusive ‘Dark Side of the Ring’ clip: Watch Big Van Vader’s wild start in pro wrestling - Mashable</title><link>https://mashable.com/video/big-van-vader-exclusive-dark-side-of-the-ring-clip</link></item>
-<item><title>Jon Stewart roasts Trump over the stock market crash - Mashable</title><link>https://mashable.com/video/jon-stewart-trump-stock-market</link></item>
-<item><title>&amp;#39;The Last of Us&amp;#39; star Bella Ramsey raps a glorious recap of Season 1 - Mashable</title><link>https://mashable.com/video/bella-ramsey-last-of-us-rap-recap-season-1</link></item>
-<item><title>The Sabrina Carpenter &amp;#39;Fortnite&amp;#39; skin is everywhere, and it&amp;#39;s pretty funny - Mashable</title><link>https://mashable.com/article/sabrina-carptenter-fortnite-skin-everywhere</link></item>
-<item><title>Why is this French fish taking over your FYP? - Mashable</title><link>https://mashable.com/article/le-poisson-steve-fish-tiktok-for-you-page</link></item>
-<item><title>Why are read receipts so triggering? - Mashable</title><link>https://mashable.com/article/read-receipts-triggering-anxiety</link></item>
-<item><title>Yankees catcher Austin Wells goes viral with hilarious breakfast burrito reviews - Mashable</title><link>https://mashable.com/article/yankees-catcher-austin-wells-burrito-reviews</link></item>
-<item><title>Sony ULT Field 3 hands-on review: Testing the new addition to Sony&amp;#39;s bass line - Mashable</title><link>https://mashable.com/review/sony-ult-field-3-bluetooth-speaker</link></item>
-<item><title>Amazon&amp;#39;s Kindle Scribe makes minor improvements but it&amp;#39;s not enough - Mashable</title><link>https://mashable.com/review/amazon-kindle-scribe-2024</link></item>
-<item><title>The best antivirus software for keeping your Mac or PC protected - Mashable</title><link>https://mashable.com/roundup/best-antivirus-software</link></item>
-<item><title>Uneasy about your kid&amp;#39;s iPhone obsession? These 3 parental control apps can help. - Mashable</title><link>https://mashable.com/roundup/best-parental-control-apps-for-iphone</link></item>
-<item><title>The very best password managers, as recommended by our experts - Mashable</title><link>https://mashable.com/roundup/best-password-managers</link></item>
-<item><title>4 of the best robocall-blocking apps and tools for avoiding phone spam - Mashable</title><link>https://mashable.com/roundup/best-robocall-blocking-apps</link></item>
-<item><title>&amp;#39;White Lotus&amp;#39; Season 3 was a disaster. Here&amp;#39;s why. - Mashable</title><link>https://mashable.com/article/white-lotus-season-3-suicide-incest-sexual-abuse</link></item>
-<item><title>Instagram will restrict teens from going Live, as Teen Accounts expand to Facebook and Messenger - Mashable</title><link>https://mashable.com/article/instagram-live-nudity-protection-teen-accounts</link></item>
-<item><title>Your old phones can help plant new trees with new AT&amp;T trade-in program - Mashable</title><link>https://mashable.com/article/att-phone-trade-in-tree-planting</link></item>
-<item><title>Five years of remote work changed workplace accessibility. Employees with disabilities will feel its loss. - Mashable</title><link>https://mashable.com/article/remote-work-disabilities-trump</link></item>
-<item><title>On Saturn’s moon Titan, life might be tiny, reclusive, and hard to find - Mashable</title><link>https://mashable.com/article/saturn-moon-titan-life-probability-study</link></item>
-<item><title>Hubble captures a stunning cradle of stars in neighboring galaxy - Mashable</title><link>https://mashable.com/article/nasa-hubble-small-magellanic-cloud-star-cluster</link></item>
-<item><title>A star factory at the heart of our galaxy is mysterious and important - Mashable</title><link>https://mashable.com/article/james-webb-space-telescope-milky-way-star-formation</link></item>
-<item><title>A great and powerful Martian dust devil swallows another in new video - Mashable</title><link>https://mashable.com/article/nasa-mars-perseverance-dust-devils-collide-video</link></item>
-<item><title>Snag 50% off select Yankee Candle scents at Amazon and indulge in some aromatherapy - Mashable</title><link>https://mashable.com/article/april-9-yankee-candle-deal</link></item>
-<item><title>It&amp;#39;s crunch time: These are the best tax software deals to get your taxes done before the April 15 deadline - Mashable</title><link>https://mashable.com/article/april-9-best-tax-software-deals-2025</link></item>
-<item><title>This Vizio 40-inch TV is on sale for $138 — just as prices are going up from tariffs - Mashable</title><link>https://mashable.com/article/april-9-vizio-40-inch-hd-smart-tv-deal</link></item>
-<item><title>What&amp;#39;s new to streaming this week? (April 3, 2025) - Mashable</title><link>https://mashable.com/article/new-to-streaming-april-3-2025</link></item>
-<item><title>The best comedies on Max right now - Mashable</title><link>https://mashable.com/article/best-comedies-hbo-max</link></item>
-<item><title>Meet Nova Sonic, Amazon&amp;#39;s new AI voice model - Mashable</title><link>https://mashable.com/article/nova-sonic-amazon-ai-voice-model</link></item>
-<item><title>Google releases Pixel Watch 3 Loss of Pulse Detection - Mashable</title><link>https://mashable.com/article/google-pixel-watch-3-loss-of-pulse-detection</link></item>
-<item><title>Snap, Roblox break silence on anti-deepfake Take It Down Act - Mashable</title><link>https://mashable.com/article/snapchat-take-it-down-act-trump</link></item>
-<item><title>TCL’s Dolby Atmos soundbar is just $99 right now, and it might sound better than your TV deserves - Mashable</title><link>https://mashable.com/article/tcl-alto-8-plus-soundbar-deal-april-9</link></item>
-<item><title>Christian Wait - Mashable</title><link>https://mashable.com/author/christian-wait</link></item>
-<item><title>Amazon’s 43-inch Fire TV is 43 percent off right now - Mashable</title><link>https://mashable.com/article/amazon-fire-tv-deal-april-9</link></item>
-<item><title>Nintendo Switch 2 game-key cards won’t be account-locked - Mashable</title><link>https://mashable.com/article/nintendo-game-cards-not-account-locked-says-nintendo-exec</link></item>
-<item><title>Tesla reportedly stops accepting Cybertrucks trade-ins as unsold trucks pile up - Mashable</title><link>https://mashable.com/article/tesla-stops-accepting-cybertruck-trade-ins-unsold-inventory</link></item>
-<item><title>Trump tariff news: iPhones getting snapped up, laptop sales disrupted – what we know - Mashable</title><link>https://mashable.com/article/trump-tariffs-news-latest-updates-iphone-switch-2-framework</link></item>
-<item><title>&amp;#39;The Amateur&amp;#39; review: Rami Malek, Laurence Fishburne…but why though? - Mashable</title><link>https://mashable.com/article/the-amateur-review-2025</link></item>
-<item><title>Store more, spend less: Grab a 1TB portable SSD for just $90 - Mashable</title><link>https://mashable.com/article/april-8-western-digital-1tb-ssd-deal</link></item>
-<item><title>Does testosterone make men? - Aeon</title><link>https://aeon.co/essays/a-psychologist-and-biologist-debate-the-significance-of-testosterone?utm_source=rss-feed</link></item>
-<item><title>Saved From Desk Death By Mid-Week Memes (34 Photos) - theCHIVE</title><link>https://thechive.com/humor/saved-from-desk-death-by-mid-week-memes-34-photos-5/?utm_postid=4952556&amp;utm_editor=4952556_laura_lee</link></item>
-<item><title>Let these golf memes be your range session before The Masters (30 Photos) - theCHIVE</title><link>https://thechive.com/humor/meme/let-these-golf-memes-be-your-range-session-before-the-masters-30-photos/?utm_postid=4952483&amp;utm_editor=4952483_stephen</link></item>
-<item><title>GRUMPY memes are sadly…Too TRUE (36 Photos) - theCHIVE</title><link>https://thechive.com/humor/grumpy-memes-are-sadlytoo-true/?utm_postid=4951176&amp;utm_editor=4951176_rick</link></item>
-<item><title>Jessica Simpson Says She Drinks Snake Sperm To Sing Better - theCHIVE</title><link>https://thechive.com/humor/wtf/jessica-simpson-drinks-snake-sperm-to-sing-better/?utm_postid=4951542&amp;utm_editor=4951542_laura_lee</link></item>
-<item><title>Tops that’d likely not survive a *single* jumping jack… (41 Photos) - theCHIVE</title><link>https://thechive.com/sexy-girls/tops-thatd-likely-not-survive-a-single-jumping-jack-41-photos/?utm_postid=4952275&amp;utm_editor=4952275_ben</link></item>
-<item><title>Take these memes literally, that’s what they’re meant for (27 Photos) - theCHIVE</title><link>https://thechive.com/humor/take-these-memes-literally-thats-what-their-meant-for-27-photos/?utm_postid=4952709&amp;utm_editor=4952709_jacob</link></item>
-<item><title>NASA Offers $3M To Recycle Poop on the Moon - theCHIVE</title><link>https://thechive.com/humanity/travel/nasa-offers-3m-to-recycle-poop-on-the-moon/?utm_postid=4952864&amp;utm_editor=4952864_laura_lee</link></item>
-<item><title>Hump Day will always be a day to get… behind (41 Photos) - theCHIVE</title><link>https://thechive.com/sexy-girls/hump-day-will-always-be-a-day-to-get-behind-41-photos/?utm_postid=4952211&amp;utm_editor=4952211_ben</link></item>
-<item><title>Comedian Maddy Smith talks bodega cats, Buffalo Bills, and bad b*tch persona - theCHIVE</title><link>https://thechive.com/entertainment/tv/comedian-maddy-smith-talks-bodega-cats-buffalo-bills-and-bad-btch-persona/?utm_postid=4952543&amp;utm_editor=4952543_zach</link></item>
-<item><title>“It Can’t Be That Bad” Reviews: Gods of Egypt (12 GIFs) - theCHIVE</title><link>https://thechive.com/entertainment/movies/it-cant-be-that-bad-reviews-gods-of-egypt-12-gifs/?utm_postid=4952526&amp;utm_editor=4952526_jacob</link></item>
-<item><title>Elizabeth Monarch can be our Queen for a Day (40 Photos) - theCHIVE</title><link>https://thechive.com/sexy-girls/elizabeth-monarch-can-be-our-queen-for-a-day-40-photos/?utm_postid=4952280&amp;utm_editor=4952280_zach</link></item>
-<item><title>Men reveal what they never knew about women… until dating (20 Photos) - theCHIVE</title><link>https://thechive.com/humor/men-reveal-what-they-never-knew-about-women-until-dating-20-photos/?utm_postid=4952276&amp;utm_editor=4952276_dougy</link></item>
-<item><title>Hairdos that got our attention for every wrong reason imaginable (49 Photos) - theCHIVE</title><link>https://thechive.com/humor/hairdos-that-got-our-attention-for-every-wrong-reason-imaginable-49-photos/?utm_postid=4951784&amp;utm_editor=4951784_bob</link></item>
-<item><title>Embrace the Power of the Blondes (35 Photos) - theCHIVE</title><link>https://thechive.com/sexy-girls/embrace-the-power-of-the-blondes-35-photos/?utm_postid=4950496&amp;utm_editor=4950496_hendy</link></item>
-<item><title>Stretch-ing our way through the midweek hump! (38 Photos) - theCHIVE</title><link>https://thechive.com/sexy-girls/stretch-ing-our-way-through-the-midweek-hump/?utm_postid=4951740&amp;utm_editor=4951740_bob</link></item>
-<item><title>Shower Thoughts Are a Real Mindf**k! (15 GIFs) - theCHIVE</title><link>https://thechive.com/humor/shower-thoughts-are-a-real-mindfk-15-gifs-18/?utm_postid=4950598&amp;utm_editor=4950598_hendy</link></item>
-<item><title>Those are some top ‘shelfie’ babes right there! (36 Photos) - theCHIVE</title><link>https://thechive.com/sexy-girls/those-are-some-top-shelfie-babes-right-there-36-photos/?utm_postid=4950349&amp;utm_editor=4950349_stephen</link></item>
-<item><title>GIFs warning: Expect the…Un-EXPECTED (33 GIFs) - theCHIVE</title><link>https://thechive.com/humor/gifs-warning-expect-theun-expected-33-gifs/?utm_postid=4952158&amp;utm_editor=4952158_rick</link></item>
-<item><title>If reincarnation existed, but being human was not an option, people share what they would come back as…(20 GIFs) - theCHIVE</title><link>https://thechive.com/humanity/interesting-random/if-reincarnation-existed-but-being-human-was-not-an-option-people-share-what-they-would-come-back-as-20-gifs/?utm_postid=4951594&amp;utm_editor=4951594_bob</link></item>
-<item><title>The Internet Reacts to the ‘White Lotus’ Season 3 Finale - theCHIVE</title><link>https://thechive.com/entertainment/tv/the-internet-reacts-to-the-white-lotus-season-3-finale/?utm_postid=4951913&amp;utm_editor=4951913_laura_lee</link></item>
-<item><title>We can solve meme star, Silvia Bottini’s ‘First World Problems’ - theCHIVE</title><link>https://thechive.com/humor/we-can-solve-meme-star-silvia-bottinis-first-world-problems/?utm_postid=4951929&amp;utm_editor=4951929_zach</link></item>
-<item><title>Daisy Dukes are a delightful dose of dungarees (35 Photos) - theCHIVE</title><link>https://thechive.com/sexy-girls/daisy-dukes-are-a-delightful-dose-of-dungarees-35-photos/?utm_postid=4951397&amp;utm_editor=4951397_ben</link></item>
-<item><title>A Dirty Dump is a lovely way to end the workday, right? (42 Photos) - theCHIVE</title><link>https://thechive.com/humor/a-dirty-dump-is-lovely-way-to-end-the-work-day-right-42-photos/?utm_postid=4950761&amp;utm_editor=4950761_bob</link></item>
-<item><title>Orca Facts So Wild, Even Great Whites Swim Away (17 GIFS) - theCHIVE</title><link>https://thechive.com/humanity/animals/orca-facts-so-wild-even-great-whites-swim-away-17-gifs/?utm_postid=4949940&amp;utm_editor=4949940_ryder</link></item>
-<item><title>Weekend Afternoon Randomness (59 Photos) - theCHIVE</title><link>https://thechive.com/humor/weekend-afternoon-randomness-59-photos-7/?utm_postid=4950070&amp;utm_editor=4950070_john</link></item>
-<item><title>Graphic artist reimagines and redesigns iconic logos (30 Photos) - theCHIVE</title><link>https://thechive.com/humanity/design/graphic-artist-reimagines-and-redesigns-iconic-logos-30-photos/?utm_postid=4951641&amp;utm_editor=4951641_zach</link></item>
-<item><title>Keep calm and tug on (35 Photos) - theCHIVE</title><link>https://thechive.com/sexy-girls/keep-calm-and-tug-on-35-photos/?utm_postid=4951504&amp;utm_editor=4951504_jacob</link></item>
-<item><title>‘Pencils Down!’: 25 ridiculous police sketches drawn by ‘professionals’ - theCHIVE</title><link>https://thechive.com/humanity/art/pencils-down-25-ridiculous-police-sketches-drawn-by-professionals/?utm_postid=4951364&amp;utm_editor=4951364_zach</link></item>
-<item><title>Weekend Morning Awesomeness (53 Photos) - theCHIVE</title><link>https://thechive.com/humor/weekend-morning-awesomeness-53-photos-10/?utm_postid=4950009&amp;utm_editor=4950009_rick</link></item>
-<item><title>100-Year-Old Endangered Turtles Become First-Time Parents! - theCHIVE</title><link>https://thechive.com/humanity/animals/100-year-old-endangered-turtles-become-first-time-parents/?utm_postid=4951021&amp;utm_editor=4951021_laura_lee</link></item>
-<item><title>Kanra is the Multi-Class Cosplayer We Need In Our Party (33 Photos) - theCHIVE</title><link>https://thechive.com/sexy-girls/kanra-is-the-multi-class-cosplayer-we-need-in-our-party-33-photos/?utm_postid=4951217&amp;utm_editor=4951217_ben</link></item>
-<item><title>These shorts are living up beautifully to their name…(50 Photos) - theCHIVE</title><link>https://thechive.com/sexy-girls/these-shorts-are-living-up-beautifully-to-their-name-50-photos/?utm_postid=4950616&amp;utm_editor=4950616_bob</link></item>
-<item><title>‘Dark Hair and Light Eyes’: Name a more iconic duo, we’ll wait (30 Photos) - theCHIVE</title><link>https://thechive.com/sexy-girls/dark-hair-and-light-eyes-name-a-more-iconic-duo-well-wait-30-photos/?utm_postid=4951252&amp;utm_editor=4951252_zach</link></item>
-<item><title>European Defence Agency portfolio swells under bloc’s defense ambition - Defense News</title><link>https://www.defensenews.com/global/europe/2025/04/09/european-defence-agency-portfolio-swells-under-blocs-defense-ambition/</link></item>
-<item><title>Pentagon begins outreach to reenlist troops booted for COVID vaccine - Defense News</title><link>https://www.defensenews.com/news/your-military/2025/04/08/pentagon-begins-outreach-to-reenlist-troops-booted-for-covid-vaccine/</link></item>
-<item><title>Back to 13-Marine squads and a new company for infantry battalions - Defense News</title><link>https://www.defensenews.com/news/your-marine-corps/2025/04/08/back-to-13-marine-squads-and-a-new-company-for-infantry-battalions/</link></item>
-<item><title>Stop whining! (Words for ‘complain’ and ‘complaint’) - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2025/04/09/stop-whining-complain-complaint/</link></item>
-<item><title>New words – 7 April 2025 - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2025/04/07/new-words-7-april-2025/</link></item>
-<item><title>10 Worst Recessions in U.S. History, Listed Chronologically - HowStuffWorks</title><link>https://money.howstuffworks.com/worst-recessions-in-us-history.htm</link></item>
-<item><title>How to Become an Airline Pilot: Licensing and Certifications - HowStuffWorks</title><link>https://money.howstuffworks.com/how-to-become-an-airline-pilot.htm</link></item>
-<item><title>What Do Squirrels Eat (Aside From Nuts)? - HowStuffWorks</title><link>https://animals.howstuffworks.com/mammals/what-do-squirrels-eat.htm</link></item>
-<item><title>Japanese Spider Crab: Enormous and Harmless to Humans - HowStuffWorks</title><link>https://animals.howstuffworks.com/marine-life/japanese-spider-crab.htm</link></item>
-<item><title>10 Animals That Start With &amp;#39;T&amp;#39;: From Terror Birds to Texas Rat Snakes - HowStuffWorks</title><link>https://animals.howstuffworks.com/animal-facts/animals-that-start-with-t.htm</link></item>
-<item><title>Drop Bears, Australia and an Enduring Prank on Non-Aussies - HowStuffWorks</title><link>https://science.howstuffworks.com/science-vs-myth/strange-creatures/drop-bears-australia.htm</link></item>
-<item><title>Retaliatory Tariffs, Trade Wars, Crashing Economies, Oh My! - HowStuffWorks</title><link>https://money.howstuffworks.com/retaliatory-tariffs.htm</link></item>
-<item><title>What Do Pandas Eat (Other Than Bamboo)? - HowStuffWorks</title><link>https://animals.howstuffworks.com/mammals/what-do-pandas-eat.htm</link></item>
-<item><title>Is Greenland Part of North America? Geologically, Yes - HowStuffWorks</title><link>https://people.howstuffworks.com/is-greenland-part-of-north-america.htm</link></item>
-<item><title>Brontosaurus vs. Brachiosaurus: Comparing Long Necks - HowStuffWorks</title><link>https://animals.howstuffworks.com/dinosaurs/brontosaurus-vs-brachiosaurus.htm</link></item>
-<item><title>The &amp;#39;Not Deer&amp;#39; Cryptid Is Exactly What It Sounds Like - HowStuffWorks</title><link>https://science.howstuffworks.com/science-vs-myth/strange-creatures/not-deer.htm</link></item>
-<item><title>17 Animals That Start With &amp;#39;Q&amp;#39;: From Quetzals to Quokkas - HowStuffWorks</title><link>https://animals.howstuffworks.com/animal-facts/animals-that-start-with-q.htm</link></item>
-<item><title>Hypnose-Experte Jim Curtis bei Lewis Howes: So befreist du dich aus mentalen Fallen - MC Winkels weBlog</title><link>https://www.whudat.de/hypnose-experte-jim-curtis-bei-lewis-howes-so-befreist-du-dich-aus-mentalen-fallen/</link></item>
-<item><title>Myke Forte dropt „Love Triangle“ EP - MC Winkels weBlog</title><link>https://www.whudat.de/myke-forte-dropt-love-triangle-ep/</link></item>
-<item><title>Mexiko will jetzt ebenfalls in die EU: Zwischen Vision und Realität - MC Winkels weBlog</title><link>https://www.whudat.de/mexiko-will-jetzt-ebenfalls-in-die-eu-zwischen-vision-und-realitaet/</link></item>
-<item><title>Flatpocket (Twit One &amp; Lazy Jones) droppen neues Album „III“ – Sparflamme, Soul &amp; Substanz - MC Winkels weBlog</title><link>https://www.whudat.de/flatpocket-twit-one-lazy-jones-droppen-neues-album-iii-sparflamme-soul-substanz/</link></item>
-<item><title>FKJ &amp; Yussef Dayes – „Live From The Greenhouse“ - MC Winkels weBlog</title><link>https://www.whudat.de/fkj-yussef-dayes-live-from-the-greenhouse/</link></item>
-<item><title>SmooVth und Wun Two veröffentlichen „Prussian Blue“ - MC Winkels weBlog</title><link>https://www.whudat.de/smoovth-und-wun-two-veroeffentlichen-prussian-blue/</link></item>
-<item><title>Nichts und Niemand wird dich je wieder kontrollieren – Carl Jungs Weg zur inneren Unerschütterlichkeit - MC Winkels weBlog</title><link>https://www.whudat.de/nichts-und-niemand-wird-dich-je-wieder-kontrollieren-carl-jungs-weg-zur-inneren-unerschuetterlichkeit/</link></item>
-<item><title>FloFilz veröffentlicht neue EP „Dim Down“ - MC Winkels weBlog</title><link>https://www.whudat.de/flofilz-veroeffentlicht-neue-ep-dim-down/</link></item>
-<item><title>Die Revolution der Hyperrealität: Warum reale Erlebnisse obsolet werden - MC Winkels weBlog</title><link>https://www.whudat.de/die-revolution-der-hyperrealitaet-warum-reale-erlebnisse-obsolet-werden/</link></item>
-<item><title>300 Songs mit denen Teenager der 1980er in Europa aufwuchsen - MC Winkels weBlog</title><link>https://www.whudat.de/300-songs-mit-denen-teenager-der-1980er-in-europa-aufwuchsen/</link></item>
-<item><title>Pork and White Bean Soup - Bev Cooks</title><link>https://bevcooks.com/2025/04/pork-and-white-bean-soup/</link></item>
-<item><title>Bev’s Imaginary Book Club: West With Giraffes, The Wedding People, and Valley of the Dolls - Bev Cooks</title><link>https://bevcooks.com/2025/04/bevs-imaginary-book-club-west-with-giraffes-the-wedding-people-and-valley-of-the-dolls/</link></item>
-<item><title>Monthly Mixtape: Budding Limbs and Sunny Grins - Bev Cooks</title><link>https://bevcooks.com/2025/04/monthly-mixtape-budding-limbs-and-sunny-grins/</link></item>
-<item><title>Greek Chicken Tacos - Bev Cooks</title><link>https://bevcooks.com/2025/03/greek-chicken-tacos-2/</link></item>
-<item><title>Coconut Cake - Bev Cooks</title><link>https://bevcooks.com/2025/03/coconut-cake/</link></item>
-<item><title>Philly Cheesesteak Sub Sandwiches - Bev Cooks</title><link>https://bevcooks.com/2025/03/philly-cheesesteak-sub-sandwiches/</link></item>
-<item><title>Thai Noodle Soup with Chicken Meatballs - Bev Cooks</title><link>https://bevcooks.com/2025/02/thai-noodle-soup-with-chicken-meatballs/</link></item>
+<lastBuildDate>Fri, 11 Apr 2025 11:43:36 +0800</lastBuildDate>
+<item><title>美国政治措辞日益倾向于个人信念而不是事实 - Solidot</title><link>https://www.solidot.org/story?sid=81019</link></item>
+<item><title>小鼠研究发现淀粉基微塑料可能存在健康风险 - Solidot</title><link>https://www.solidot.org/story?sid=81018</link></item>
+<item><title>美国不想要孩子的人数在增长 - Solidot</title><link>https://www.solidot.org/story?sid=81017</link></item>
+<item><title>Switch 2 推迟在华发售 - Solidot</title><link>https://www.solidot.org/story?sid=81016</link></item>
+<item><title>美国暂停对等关税 90 天，对华关税提高到 125% - Solidot</title><link>https://www.solidot.org/story?sid=81015</link></item>
+<item><title>科学家公布迄今最详尽的哺乳动物大脑连接图谱 - Solidot</title><link>https://www.solidot.org/story?sid=81014</link></item>
+<item><title>Google 宣布了第七代 TPU 处理器 Ironwood - Solidot</title><link>https://www.solidot.org/story?sid=81013</link></item>
+<item><title>加固 Firefox 前端 - Solidot</title><link>https://www.solidot.org/story?sid=81012</link></item>
+<item><title>中国将美国商品关税提高到 84% - Solidot</title><link>https://www.solidot.org/story?sid=81010</link></item>
+<item><title>无权者不喜欢看公正中立的新闻 - Solidot</title><link>https://www.solidot.org/story?sid=81009</link></item>
+<item><title>日本小镇流行大叔集卡游戏 - Solidot</title><link>https://www.solidot.org/story?sid=81008</link></item>
+<item><title>黑客利用 Windows 0day 攻击美国 IT 和房地产公司 - Solidot</title><link>https://www.solidot.org/story?sid=81004</link></item>
+<item><title>Imagined Faces, Real Emotions: A Look at Reyhan Gulses Demircioglu’s Art - FREEYORK</title><link>https://freeyork.org/art/imagined-faces-real-emotions-a-look-at-reyhan-gulses-demircioglus-art/</link></item>
+<item><title>Mirrors in the Desert: Dualities and Dreams in Ortiz’s Paintings - FREEYORK</title><link>https://freeyork.org/art/mirrors-in-the-desert-dualities-and-dreams-in-ortizs-paintings/</link></item>
+<item><title>Laura Ellen Bacon Weaves Life Into Willow at Yorkshire Sculpture Park - FREEYORK</title><link>https://freeyork.org/art/laura-ellen-bacon-weaves-life-into-willow-at-yorkshire-sculpture-park/</link></item>
+<item><title>164 – Milana Cap on the Interactivity and HTML APIs, and Their Enormous Potential - WP Tavern</title><link>https://wptavern.com/podcast/164-milana-cap-on-the-interactivity-and-html-apis-and-their-enormous-potential</link></item>
+<item><title>#163 – Birgit Pauli-Haack on the Magic of the WordPress Playground - WP Tavern</title><link>https://wptavern.com/podcast/163-birgit-pauli-haack-on-the-magic-of-the-wordpress-playground</link></item>
+<item><title>#162 – Jo Minney on Website Usability Testing for WordPress Projects - WP Tavern</title><link>https://wptavern.com/podcast/162-jo-minney-on-website-usability-testing-for-wordpress-projects</link></item>
+<item><title>#161 – Robert Jacobi on WordPress, Security, and the OSI Model - WP Tavern</title><link>https://wptavern.com/podcast/161-robert-jacobi-on-wordpress-security-and-the-osi-model</link></item>
+<item><title>NFC Music Player #3DThursday #3DPrinting - Adafruit Industries</title><link>https://blog.adafruit.com/2025/04/10/nfc-music-player-3dthursday-3dprinting/</link></item>
+<item><title>Articulated Crocodile #3DThursday #3DPrinting - Adafruit Industries</title><link>https://blog.adafruit.com/2025/04/10/articulated-crocodile-3dthursday-3dprinting/</link></item>
+<item><title>Bambu P1S Ceiling Loft w/ Mounts for ELP Camera… - Adafruit Industries</title><link>https://blog.adafruit.com/2025/04/10/bambu-p1s-ceiling-loft-w-mounts-for-elp-camera-120mm-ring-lights-3dthursday-3dprinting/</link></item>
+<item><title>TARIFF TALK! WITH LADYADA – April 10, 2025… - Adafruit Industries</title><link>https://blog.adafruit.com/2025/04/10/tariff-talk-with-ladyada-april-10-2025-edition/</link></item>
+<item><title>National Robotics Week 2025 #Roboweek @roboweek… - Adafruit Industries</title><link>https://blog.adafruit.com/2025/04/07/national-robotics-week-2025-roboweek-roboweek-nationalroboticsweek/</link></item>
+<item><title>New nEw NEWS From Adafruit Round-Up: January, February &amp; March, 2025 - Adafruit Industries</title><link>https://blog.adafruit.com/2025/04/09/new-new-news-from-adafruit-round-up-january-february-march-2025/</link></item>
+<item><title>NEW PRODUCTS – Number LED Filaments in Warm White - Adafruit Industries</title><link>https://blog.adafruit.com/2025/04/10/new-products-number-led-filaments-in-warm-white/</link></item>
+<item><title>Countersink cover #3DThursday #3DPrinting - Adafruit Industries</title><link>https://blog.adafruit.com/2025/04/10/countersink-cover-3dthursday-3dprinting/</link></item>
+<item><title>LEGO Minifigure Display Plate #3DThursday #3DPrinting - Adafruit Industries</title><link>https://blog.adafruit.com/2025/04/10/lego-minifigure-display-plate-3dthursday-3dprinting/</link></item>
+<item><title>Omnifixo toolbox #3DPrinting #3DThursday - Adafruit Industries</title><link>https://blog.adafruit.com/2025/04/10/omnifixo-toolbox-3dprinting-3dthursday/</link></item>
+<item><title>affordablebuilds - Adafruit Industries</title><link>https://blog.adafruit.com/tag/affordablebuilds/</link></item>
+<item><title>componentprices - Adafruit Industries</title><link>https://blog.adafruit.com/tag/componentprices/</link></item>
+<item><title>electronicsupply - Adafruit Industries</title><link>https://blog.adafruit.com/tag/electronicsupply/</link></item>
+<item><title>engineeringtalk - Adafruit Industries</title><link>https://blog.adafruit.com/tag/engineeringtalk/</link></item>
+<item><title>supplychain - Adafruit Industries</title><link>https://blog.adafruit.com/tag/supplychain/</link></item>
+<item><title>supplychaintips - Adafruit Industries</title><link>https://blog.adafruit.com/tag/supplychaintips/</link></item>
+<item><title>tariffimpact - Adafruit Industries</title><link>https://blog.adafruit.com/tag/tariffimpact/</link></item>
+<item><title>Clamps for corrugated pipes, Pipe-in-Pipe #3DThursday #3DPrinting - Adafruit Industries</title><link>https://blog.adafruit.com/2025/04/10/clamps-for-corrugated-pipes-pipe-in-pipe-3dthursday-3dprinting/</link></item>
+<item><title>Adafruit Top Secret for April 9, 2025 #adafruit @adafruit - Adafruit Industries</title><link>https://blog.adafruit.com/2025/04/10/adafruit-top-secret-for-april-9-2025-adafruit-adafruit/</link></item>
+<item><title>RaspberryPi/RetroConsole case #3Dprinting #3DThursday - Adafruit Industries</title><link>https://blog.adafruit.com/2025/04/10/raspberrypi-retroconsole-case-3dprinting-3dthursday/</link></item>
+<item><title>Spiked Orb by 3Dnetic #3DThursday #3DPrinting - Adafruit Industries</title><link>https://blog.adafruit.com/2025/04/10/spiked-orb-by-3dnetic-3dthursday-3dprinting/</link></item>
+<item><title>Asteroid Tracker #3DThursday #3DPrinting - Adafruit Industries</title><link>https://blog.adafruit.com/2025/04/10/asteroid-tracker-3dthursday-3dprinting/</link></item>
+<item><title>FOSS Weekly #25.15: Clapgrep, APT 3.0, Vibe Coding, AI in Firefox and More - It's FOSS</title><link>https://itsfoss.com/newsletter/foss-weekly-25-15/</link></item>
+<item><title>Test Your git Command Knowledge: Crossword - It's FOSS</title><link>https://itsfoss.com/quiz/git-crossword/</link></item>
+<item><title>Installing Logseq Knowledge Management Tool on Linux - It's FOSS</title><link>https://itsfoss.com/install-logseq-linux/</link></item>
+<item><title>7 Code Editors You Can Use for Vibe Coding on Linux - It's FOSS</title><link>https://itsfoss.com/vibe-coding-editors/</link></item>
+<item><title>FOSS Weekly #25.14: Fedora 42 COSMIC, OnePackage, AppImage Tools and More Linux Stuff - It's FOSS</title><link>https://itsfoss.com/newsletter/foss-weekly-25-14/</link></item>
+<item><title>5 Tools to Enhance Your AppImage Experience on Linux - It's FOSS</title><link>https://itsfoss.com/appimage-tools/</link></item>
+<item><title>Acid GIFs, April 11 (25 gifs) - AcidCow.com</title><link>https://acidcow.com/gif/167244-acid-gifs-april-11-25-gifs.html</link></item>
+<item><title>Failed Property Rental (15 pics) - AcidCow.com</title><link>https://acidcow.com/pics/167224-failed-property-rental-15-pics.html</link></item>
+<item><title>Girls In Shorts (40 pics) - AcidCow.com</title><link>https://acidcow.com/girls/167237-girls-in-shorts-40-pics.html</link></item>
+<item><title>Truthful Memes (26 pics) - AcidCow.com</title><link>https://acidcow.com/pics/167227-truthful-memes-26-pics.html</link></item>
+<item><title>Jokes And Photos For BBQ Fans (27 pics) - AcidCow.com</title><link>https://acidcow.com/pics/167230-jokes-and-photos-for-bbq-fans-27-pics.html</link></item>
+<item><title>Positive News For Good Mood (22 pics) - AcidCow.com</title><link>https://acidcow.com/pics/167223-positive-news-for-good-mood-22-pics.html</link></item>
+<item><title>Memes For Millennials (23 pics) - AcidCow.com</title><link>https://acidcow.com/pics/167228-memes-for-millennials-23-pics.html</link></item>
+<item><title>What Is Going On Here? (14 pics) - AcidCow.com</title><link>https://acidcow.com/pics/167226-what-is-going-on-here-14-pics.html</link></item>
+<item><title>Optical Illusions (25 pics) - AcidCow.com</title><link>https://acidcow.com/pics/167231-optical-illusions-25-pics.html</link></item>
+<item><title>Asian Girls (21 pics) - AcidCow.com</title><link>https://acidcow.com/girls/167241-asian-girls-21-pics.html</link></item>
+<item><title>Jokes About Parenting (24 pics) - AcidCow.com</title><link>https://acidcow.com/pics/167225-jokes-about-parenting-24-pics.html</link></item>
+<item><title>Perfect Camouflage (15 pics) - AcidCow.com</title><link>https://acidcow.com/pics/167236-perfect-camouflage-15-pics.html</link></item>
+<item><title>Awful Haircuts (45 pics) - AcidCow.com</title><link>https://acidcow.com/pics/167232-awful-haircuts-45-pics.html</link></item>
+<item><title>Acid GIFs, April 10 (25 gifs) - AcidCow.com</title><link>https://acidcow.com/gif/167218-acid-gifs-april-10-25-gifs.html</link></item>
+<item><title>Gild Just One Lily - Smashing Magazine</title><link>https://smashingmagazine.com/2025/04/gild-just-one-lily/</link></item>
+<item><title>Using Manim For Making UI Animations - Smashing Magazine</title><link>https://smashingmagazine.com/2025/04/using-manim-making-ui-animations/</link></item>
+<item><title>How To Build A Business Case To Promote Accessibility In Your B2B Products - Smashing Magazine</title><link>https://smashingmagazine.com/2025/04/how-build-business-case-promote-accessibility-b2b-products/</link></item>
+<item><title>Building A Drupal To Storyblok Migration Tool: An Engineering Perspective - Smashing Magazine</title><link>https://smashingmagazine.com/2025/04/building-drupal-storyblok-migration-tool-engineering-perspective/</link></item>
+<item><title>Blossoms, Flowers, And The Magic Of Spring (April 2025 Wallpapers Edition) - Smashing Magazine</title><link>https://smashingmagazine.com/2025/03/desktop-wallpaper-calendars-april-2025/</link></item>
+<item><title>How To Argue Against AI-First Research - Smashing Magazine</title><link>https://smashingmagazine.com/2025/03/how-to-argue-against-ai-first-research/</link></item>
+<item><title>Adaptive Video Streaming With Dash.js In React - Smashing Magazine</title><link>https://smashingmagazine.com/2025/03/adaptive-video-streaming-dashjs-react/</link></item>
+<item><title>Previewing Content Changes In Your Work With document.designMode - Smashing Magazine</title><link>https://smashingmagazine.com/2025/03/previewing-content-changes-work-documentdesignmode/</link></item>
+<item><title>Web Components Vs. Framework Components: What’s The Difference? - Smashing Magazine</title><link>https://smashingmagazine.com/2025/03/web-components-vs-framework-components/</link></item>
+<item><title>How To Prevent WordPress SQL Injection Attacks - Smashing Magazine</title><link>https://smashingmagazine.com/2025/03/how-prevent-wordpress-sql-injection-attacks/</link></item>
+<item><title>How To Build Confidence In Your UX Work - Smashing Magazine</title><link>https://smashingmagazine.com/2025/03/how-to-build-confidence-in-your-ux-work/</link></item>
+<item><title>How To Fix Largest Contentful Paint Issues With Subpart Analysis - Smashing Magazine</title><link>https://smashingmagazine.com/2025/03/how-to-fix-largest-contentful-issues-with-subpart-analysis/</link></item>
+<item><title>The Case For Minimal WordPress Setups: A Contrarian View On Theme Frameworks - Smashing Magazine</title><link>https://smashingmagazine.com/2025/03/case-minimal-wordpress-setups-contrarian-view-theme-frameworks/</link></item>
+<item><title>Sunshine And March Vibes (2025 Wallpapers Edition) - Smashing Magazine</title><link>https://smashingmagazine.com/2025/02/desktop-wallpaper-calendars-march-2025/</link></item>
+<item><title>The Human Element: Using Research And Psychology To Elevate Data Storytelling - Smashing Magazine</title><link>https://smashingmagazine.com/2025/02/human-element-using-research-psychology-elevate-data-storytelling/</link></item>
+<item><title>D-Day Comes Early - George R.R. Martin</title><link>https://georgerrmartin.com/notablog/2025/04/08/d-day-comes-early/</link></item>
+<item><title>Rolling Rolling Rolling - George R.R. Martin</title><link>https://georgerrmartin.com/notablog/2025/04/07/rolling-rolling-rolling/</link></item>
+<item><title>A Scottish Worldcon - George R.R. Martin</title><link>https://georgerrmartin.com/notablog/2025/04/02/a-scottish-worldcon/</link></item>
+<item><title>Lord Jago Wants You - George R.R. Martin</title><link>https://georgerrmartin.com/notablog/2025/03/29/lord-jago-wants-you/</link></item>
 </channel></rss>

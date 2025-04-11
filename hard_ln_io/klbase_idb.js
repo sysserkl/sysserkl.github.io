@@ -344,6 +344,7 @@ function idb_menu_generate_bigfile_b(cstype,select_id_name,csparent,import_fn_na
 
 function idb_option_generate_bigfile_b(cstype,select_id_name){
     function sub_idb_option_generate_bigfile_b_html(csarr){
+        csarr.sort(zh_sort_b);
         if (cstype=='book'){
             for (let blxl=0,lent=csarr.length;blxl<lent;blxl++){
                 csarr[blxl]='<option value="'+csarr[blxl][0]+'">'+csarr[blxl][1]+'</option>';
@@ -353,6 +354,7 @@ function idb_option_generate_bigfile_b(cstype,select_id_name){
                 csarr[blxl]='<option>'+csarr[blxl]+'</option>';
             }
         }
+        
         csarr.push('<option>手动输入 bigfile '+cstype+' 文件名</option>');
         var oselect=document.getElementById(select_id_name);
         oselect.innerHTML=csarr.join('\n');
