@@ -8,7 +8,8 @@ function wordtypes_enbook_b(blitem){
     
 	var bltmparr=new Set();
     bltmparr.add(blitem);
-    bltmparr.add(blitem.toLowerCase(),blitem.toUpperCase());
+    bltmparr.add(blitem.toLowerCase());
+    bltmparr.add(blitem.toUpperCase());
     bltmparr.add(blitem.substring(0,1).toUpperCase()+blitem.substring(1,).toLowerCase());
     
     if ('pped,gged,nned,lled,dded,ssed'.includes(blitem.slice(-4))){
@@ -407,17 +408,23 @@ function new_old_word_list_enbook_b(bljgarr2,check_types=true,csendata_set=false
             var list_t=new Set();
             list_t.add(item);
         }
+        
         var blfound=false;
         for (let one_word of list_t){
             if (csendata_set.has(one_word)){
                 old_words_set.add(one_word);
-                if (en_sentence_count_global.includes(one_word)){
-                    rare_words_set.add(one_word);
-                }
                 blfound=true;
                 break;
             }
         }
+
+        for (let one_word of list_t){
+            if (en_sentence_count_global.includes(one_word)){
+                rare_words_set.add(one_word);
+                break;
+            }
+        }
+        
         if (blfound==false){
             new_words_set.add(item);
             for (let one_type of list_t){

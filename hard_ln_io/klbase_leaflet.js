@@ -57,25 +57,6 @@ function init_maps_leaflet_b(csmax=18,csmin=5){
     klmaps_global['geoq_Hydro'] = L.tileLayer.chinaProvider('Geoq.Theme.Hydro', {maxZoom: 18,minZoom: 5});
 }
 
-function rectangle_leaflet_b(csomap,islayer=false,cslon=121.5,cslat=31.2,longline=1000,shortline=500,cscolor='red'){
-    var list_t=rectangle_xy_leaflet_b(cslat,cslon,longline/2,shortline/2);
-    return line_leaflet_b(csomap,islayer,list_t,cscolor,'');
-}
-
-function circle_leaflet_b(csomap,islayer=false,cslon=121.5,cslat=31.2,csradius=10,cscolor='red',csfillcolor='#f03',csfillopacity=0.5){
-    var circle = L.circle([cslat,cslon], {
-        color: cscolor,
-        fillColor: csfillcolor,
-        fillOpacity: csfillopacity,
-        radius: csradius
-    });
-    if (islayer){
-        return circle;
-    } else {
-        circle.addTo(csomap);
-    }
-}
-
 function line_default_weight_b(){
     return ismobile_b()?5:3;
 }
@@ -112,7 +93,10 @@ function line_leaflet_b(csomap,islayer=false,cslist=[],cscolor='red',cscaption='
     }
     
     //[[lat,lon],[lat,lon]] - 保留注释
-    if (cslist.length==0){return;}
+    if (cslist.length==0){
+        console.log('cslist 长度为0');
+        return;
+    }
     
     var line_list=[];
     
@@ -283,7 +267,7 @@ function get_x_leaflet_b(lat1, radius){
     return lat2;
 }
 
-function rectangle_xy_leaflet_b(lat1,lng1,longline_half,shortline_half){    
+function rectangle_xy_leaflet_b(lat1,lng1,longline_half,shortline_half,add_first_point=true){    
     //lat1,lng1 是中心点 - 保留注释
     var x2=get_x_leaflet_b(lat1,shortline_half);
     var y2=get_y_leaflet_b(lat1,lng1,longline_half,lat1);
@@ -294,7 +278,9 @@ function rectangle_xy_leaflet_b(lat1,lng1,longline_half,shortline_half){
     bllist.push([2*lat1-x2,2*lng1-y2]);
     bllist.push([2*lat1-x2,y2]);
     
-    bllist.push([x2,y2]);
+    if (add_first_point){
+        bllist.push([x2,y2]);
+    }
     return bllist;
 }
 
@@ -629,22 +615,116 @@ function draw_gpx_lines_simple_leaflet_b(onavigation,omap,cslist,csname,cscolors
     cscolors[0]=list_t[gpx_line_color_no_global % list_t.length];
     gpx_line_color_no_global=gpx_line_color_no_global+1;
     //---
+
+    if (typeof gpx_line_weight_global=='undefined'){
+        gpx_line_weight_global=line_default_weight_b();
+    }
     
     onavigation.addLayer(line_leaflet_b(omap,true,cslist,cscolors[0],csname,textarea_id_for_remove,time_list,part_len));
+    
+    var point_type=['','triangle','rectangle'];
+    point_type.sort(randomsort_b);
+    var point_size=gpx_line_weight_global;
+    if (point_type[0]!==''){
+        point_size=point_size*2;
+    }
+    
     if (cscolors[1]!==''){
         //lon,lat,radius,color - 保留注释
-        one_point_leaflet_b(onavigation,omap,cslist[0][1],cslist[0][0],2,cscolors[1],dopanto);
+        one_point_leaflet_b(onavigation,omap,cslist[0][1],cslist[0][0],point_size,cscolors[1],dopanto,point_type[0]);
     }
     if (cscolors[2]!==''){
-        one_point_leaflet_b(onavigation,omap,cslist[cslist.length-1][1],cslist[cslist.length-1][0],2,cscolors[2],dopanto);
+        one_point_leaflet_b(onavigation,omap,cslist[cslist.length-1][1],cslist[cslist.length-1][0],point_size,cscolors[2],dopanto,point_type[0]);
     }
 }
 
-function one_point_leaflet_b(onavigation,omap,lon,lat,csradius,cscolor,dopanto=true){    
-    var ocircle=circle_leaflet_b(omap,true,lon,lat,csradius,cscolor,'',0);
-    onavigation.addLayer(ocircle);
+function one_point_leaflet_b(onavigation,omap,lon,lat,csradius,cscolor,dopanto=true,cstype=''){ 
+    switch (cstype){
+        case 'triangle':
+            var odom=triangle_leaflet_b(omap,true,lon,lat,csradius,cscolor,'',0);
+            break;
+        case 'rectangle':
+            var odom=rectangle_by_polygon_leaflet_b(omap,true,lon,lat,csradius,cscolor,'',0);
+            break;
+        default:
+            var odom=circle_leaflet_b(omap,true,lon,lat,csradius,cscolor,'',0);
+            break;
+    }
+    
+    onavigation.addLayer(odom);
     if (dopanto){
         omap.panTo(new L.LatLng(lat,lon));
+    }
+}
+
+function rectangle_by_lines_leaflet_b(csomap,islayer=false,cslon=121.5,cslat=31.2,longline=1000,shortline=500,cscolor='red'){
+    //正方形或长方形 - 保留注释
+    var list_t=rectangle_xy_leaflet_b(cslat,cslon,longline/2,shortline/2);
+    //list_t 为 5 个元素的数组，每个元素是坐标 - 保留注释
+    return line_leaflet_b(csomap,islayer,list_t,cscolor,'');
+}
+
+function circle_leaflet_b(csomap,islayer=false,cslon=121.5,cslat=31.2,csradius=10,cscolor='red',csfillcolor='#f03',csfillopacity=0.5){
+    var circle = L.circle([cslat,cslon], {
+        color: cscolor,
+        fillColor: csfillcolor,
+        fillOpacity: csfillopacity,
+        radius: csradius
+    });
+    
+    if (islayer){
+        return circle;
+    } else {
+        circle.addTo(csomap);
+    }
+}
+
+function rectangle_by_polygon_leaflet_b(omap,islayer, cslng, cslat, sideLength,cscolor,csfillcolor='#f03',csfillopacity=0.5){
+    //正方形 - 保留注释
+    var list_t=rectangle_xy_leaflet_b(cslat,cslng,sideLength/2,sideLength/2,false);
+    //list_t 为 4 个元素的数组，每个元素是坐标 - 保留注释
+
+    var rectangle_style={
+        color: cscolor,
+        fillColor: csfillcolor,
+        fillOpacity: csfillopacity,    
+    };
+    
+    const otriangle = L.polygon(list_t, rectangle_style);
+
+    if (islayer){
+        return otriangle;
+    } else {
+        otriangle.addTo(omap);
+    }
+}
+
+function triangle_leaflet_b(omap,islayer, cslng, cslat, sideLength,cscolor,csfillcolor='#f03',csfillopacity=0.5){
+    const earthRadius = earth_radius_leaflet_b()*1000;  //米 - 保留注释
+
+    // 将边长转换为经纬度的近似值
+    const deltaLat = (sideLength / earthRadius) * (180 / Math.PI);
+    const deltaLng = deltaLat / Math.cos((cslat * Math.PI) / 180);
+
+    // 计算正三角形的三个顶点坐标
+    const height = (Math.sqrt(3) / 2) * sideLength; // 正三角形的高
+
+    const point1 = [cslat + deltaLat / 2, cslng]; // 顶点
+    const point2 = [cslat - deltaLat / 2, cslng - deltaLng / 2]; // 左下角
+    const point3 = [cslat - deltaLat / 2, cslng + deltaLng / 2]; // 右下角
+
+    var triangle_style={
+        color: cscolor,
+        fillColor: csfillcolor,
+        fillOpacity: csfillopacity,    
+    };
+        
+    const otriangle = L.polygon([point1, point2, point3], triangle_style);
+
+    if (islayer){
+        return otriangle;
+    } else {
+        otriangle.addTo(omap);
     }
 }
 
