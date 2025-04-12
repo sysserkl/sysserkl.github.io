@@ -7,6 +7,7 @@ function menu_more_kltxt_klwiki_en2(){
     '<span class="span_menu" onclick="'+str_t+'days_kltxt_klwiki_en2();">今日段落阅读</span>',
     '<span class="span_menu" onclick="'+str_t+'batch_search_form_kltxt_klwiki_en2();">单词批量查找</span>',
     '<span class="span_menu" onclick="'+str_t+'common_rare_old_words_kltxt_klwiki_en2();">当前范围常见稀有旧单词</span>',
+    '<span class="span_menu" onclick="'+str_t+'first_rare_old_words_kltxt_klwiki_en2();">page页面第一个出现的稀有旧单词</span>',
     '<a href="../jsdata/words/enwords_sentence_data.js'+file_date_parameter_b()+'" onclick="'+str_t+'" target=_blank>enwords_sentence_data.js</a>',    
     
     ];
@@ -119,8 +120,30 @@ function new_words_kltxt_klwiki_en2(cscount){
     }
 }
 
-function rare_words_kltxt_klwiki_en2(){
-    txtsearch_kltxt_b('\\(-[^\\(\\)]+\\)$ \\s-[^\\(\\)]+\\)$(:r)'); //-可能出现在(后或空格后 - 保留注释
+function rare_words_kltxt_klwiki_en2(run_fn=false){
+    txtsearch_kltxt_b('\\(-[^\\(\\)]+\\)$ \\s-[^\\(\\)]+\\)$(:r)',-1,-1,true,run_fn); //-可能出现在(后或空格后 - 保留注释
+}
+
+function first_rare_old_words_kltxt_klwiki_en2(){
+    function sub_first_rare_old_words_kltxt_klwiki_en2_gather(){
+        menu_insert_kltxt_b(1);
+        var ops=document.querySelectorAll('p.p_inserted_menu');
+        for (let one_p of ops){
+            var onext=one_p.nextElementSibling;
+            if (!onext){continue;}
+            var ospan=onext.querySelector('span.txt_content');
+            if (!ospan){continue;}
+            var blstr=(ospan.innerText.match(/\((.*?)\)$/) || ['',''])[1];  //数组形如 [ "(+elder -preschool)", "+elder -preschool" ] - 保留注释
+            blstr=(blstr.match(/[\s|\(]-([^\s]+)\b/) || ['',''])[1];  //数组形如 [ "-wetland", "wetland" ] - 保留注释
+            if (blstr==''){continue;}
+            result_t.add(blstr);
+            //console.log(one_p.innerText,blstr);   //此行用于检验 - 保留注释
+        }
+        en_word_temp_get_b();
+        document.getElementById('divhtml').innerHTML=enwords_js_wiki_textarea_b(result_t,'str');
+    }
+    var result_t=new Set();
+    rare_words_kltxt_klwiki_en2(sub_first_rare_old_words_kltxt_klwiki_en2_gather);
 }
 
 function new_words_count_kltxt_klwiki_en2(cstype='all'){

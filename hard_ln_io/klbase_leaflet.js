@@ -749,6 +749,8 @@ function gpx_name_get_leaftlet_b(csstr,csname=''){
     var bltime=csstr.match(/<time>.*?<\/time>/mg);    //multiline - 保留注释
     if (bltime!==null){
         blname=blname+gpx_time_get_leaftlet_b(bltime);
+    } else {
+        bltime=[];
     }
     return [blname,bltime];
 }

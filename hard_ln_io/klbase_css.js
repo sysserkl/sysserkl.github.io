@@ -2498,7 +2498,7 @@ function edit_buttons_b(js_fn='',cstype=[],dom_type='button'){
         ]);
     }
 
-    result_t.sort();
+    result_t.sort(sort_by_a_z_b);
     
     if (js_fn!==''){
         if (dom_type=='button'){

@@ -653,6 +653,30 @@ function randomsort_b(a, b,value=0.5){
    return Math.random()>value ? -1 : 1;
 }
 
+function sort_by_a_z_b(a,b,csdesc=false,ignore_upper_lower=true){
+    //从第一个是字母的地方开始排序，忽略第一个字母左侧的字符串 - 保留注释
+    function sub_sort_by_a_z_b_first(csstr){
+        csstr=csstr.toString();
+        csstr=csstr.replace(/^.*?([a-z].*$)/i,'$1');
+        return csstr;
+    }
+    
+    var strA=sub_sort_by_a_z_b_first(a);
+    var strB=sub_sort_by_a_z_b_first(b);
+    
+    if (ignore_upper_lower){
+        strA=strA.toLowerCase();
+        strB=strB.toLowerCase();
+    }
+
+    if (csdesc){
+        return strA>strB?-1:1;
+    } else {    
+        return strA<strB?-1:1;
+    }
+    
+}
+
 function sort_by_date_b(a,b,csdesc=false,arrayno=-1,arrayno2=-1,array2desc=false,cszh=false){
     function sub_sort_by_date_b_sort_string(a,b,arrayno2,array2desc,cszh){
         if (cszh){
