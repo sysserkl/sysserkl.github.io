@@ -622,11 +622,14 @@ function draw_gpx_lines_simple_leaflet_b(onavigation,omap,cslist,csname,cscolors
     
     onavigation.addLayer(line_leaflet_b(omap,true,cslist,cscolors[0],csname,textarea_id_for_remove,time_list,part_len));
     
-    var point_type=['','triangle','rectangle'];
+    var point_type=['','triangle','rectangle','0','1','2','3'];
     point_type.sort(randomsort_b);
     var point_size=gpx_line_weight_global;
-    if (point_type[0]!==''){
+    
+    if (['triangle','rectangle'].includes(point_type[0])){
         point_size=point_size*2;
+    } else if (point_type[0]!==''){
+        point_size=point_size*6;
     }
     
     if (cscolors[1]!==''){
@@ -646,8 +649,11 @@ function one_point_leaflet_b(onavigation,omap,lon,lat,csradius,cscolor,dopanto=t
         case 'rectangle':
             var odom=rectangle_by_polygon_leaflet_b(omap,true,lon,lat,csradius,cscolor,'',0);
             break;
-        default:
+        case '':
             var odom=circle_leaflet_b(omap,true,lon,lat,csradius,cscolor,'',0);
+            break;
+        default:
+            var odom=character_leaflet_b(cstype,omap,true, lon, lat, csradius,cscolor)
             break;
     }
     
@@ -697,6 +703,26 @@ function rectangle_by_polygon_leaflet_b(omap,islayer, cslng, cslat, sideLength,c
     } else {
         otriangle.addTo(omap);
     }
+}
+
+function character_leaflet_b(character,omap,islayer, cslng, cslat, sideLength,cscolor){
+    const font_size=Math.floor(sideLength * 0.8);
+        console.log(character,font_size);
+
+    const customIcon = L.divIcon({
+        className: 'custom-character-icon',
+        html: `<span style="font-size: ${font_size}px; font-weight:bold; color:${cscolor};">${character}</span>`,
+        iconSize: [sideLength, sideLength], // 图标大小
+    });
+
+    // 在指定坐标添加标记
+    var omarker=L.marker([cslat, cslng], { icon: customIcon});
+    
+    if (islayer){
+        return omarker;
+    } else {
+        omarker.addTo(omap);
+    }    
 }
 
 function triangle_leaflet_b(omap,islayer, cslng, cslat, sideLength,cscolor,csfillcolor='#f03',csfillopacity=0.5){
