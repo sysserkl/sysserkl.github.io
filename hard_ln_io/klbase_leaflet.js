@@ -603,7 +603,7 @@ function lines_gpsinfo_2_dots_leaflet_b(cslist){
     return result_t;
 }
 
-function draw_gpx_lines_simple_leaflet_b(onavigation,omap,cslist,csname,cscolors,textarea_id_for_remove='',dopanto=true,time_list=[],part_len=-1){
+function draw_gpx_lines_simple_leaflet_b(onavigation,omap,cslist,csname,cscolors,textarea_id_for_remove='',dopanto=true,time_list=[],part_len=-1,point_type=''){
     //cslist 须是 lat,lon 格式，形如 [ [ 30.221588, 120.024205 ], [ 30.221542, 120.024116 ] ] - 保留注释
     //---
     if (cslist.length==0){return;}
@@ -622,22 +622,25 @@ function draw_gpx_lines_simple_leaflet_b(onavigation,omap,cslist,csname,cscolors
     
     onavigation.addLayer(line_leaflet_b(omap,true,cslist,cscolors[0],csname,textarea_id_for_remove,time_list,part_len));
     
-    var point_type=['','triangle','rectangle','0','1','2','3'];
-    point_type.sort(randomsort_b);
-    var point_size=gpx_line_weight_global;
+    if (point_type===''){
+        var type_list=['','triangle','rectangle'];
+        type_list.sort(randomsort_b);
+        point_type=type_list[0];
+    }
     
-    if (['triangle','rectangle'].includes(point_type[0])){
+    var point_size=gpx_line_weight_global;
+    if (['triangle','rectangle'].includes(point_type)){
         point_size=point_size*2;
-    } else if (point_type[0]!==''){
+    } else if (point_type!==''){
         point_size=point_size*6;
     }
     
     if (cscolors[1]!==''){
         //lon,lat,radius,color - 保留注释
-        one_point_leaflet_b(onavigation,omap,cslist[0][1],cslist[0][0],point_size,cscolors[1],dopanto,point_type[0]);
+        one_point_leaflet_b(onavigation,omap,cslist[0][1],cslist[0][0],point_size,cscolors[1],dopanto,point_type);
     }
     if (cscolors[2]!==''){
-        one_point_leaflet_b(onavigation,omap,cslist[cslist.length-1][1],cslist[cslist.length-1][0],point_size,cscolors[2],dopanto,point_type[0]);
+        one_point_leaflet_b(onavigation,omap,cslist[cslist.length-1][1],cslist[cslist.length-1][0],point_size,cscolors[2],dopanto,point_type);
     }
 }
 
@@ -861,7 +864,7 @@ function gpx_name_get_leaftlet_b(csstr,csname=''){
     return [blname,bltime];
 }
 
-function gpx_file_draw_leaflet_b(onavigation,omap,csstr,cstype,csname='',cscolors=[],part_len=-1){
+function gpx_file_draw_leaflet_b(onavigation,omap,csstr,cstype,csname='',cscolors=[],part_len=-1,is_line_no_style=true){
     var all_points=[];
     var list_t=csstr.split('<trk>');    //有几条线路就有几个 trk - 保留注释
 
@@ -893,7 +896,7 @@ function gpx_file_draw_leaflet_b(onavigation,omap,csstr,cstype,csname='',cscolor
         cscolors[0]=line_color_list[gpx_line_color_no_global % line_color_list.length];
         gpx_line_color_no_global=gpx_line_color_no_global+1;
         
-        draw_gpx_lines_simple_leaflet_b(onavigation,omap,result_list,blname,cscolors,'',true,bltime,part_len);  
+        draw_gpx_lines_simple_leaflet_b(onavigation,omap,result_list,blname,cscolors,'',true,bltime,part_len,(is_line_no_style?blxl.toString():''));  
     }
 
     return all_points;
