@@ -1686,7 +1686,7 @@ function menu_gps_points(){
     
     klmenu_check_b('span_line_no_gps',true);        
 
-    gpx_line_weight_global=line_default_weight_b();
+    line_default_weight_b();
     document.getElementById('input_line_weight_gps_points').value=gpx_line_weight_global;
 }
 
