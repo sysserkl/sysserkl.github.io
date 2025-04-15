@@ -673,7 +673,6 @@ var en_sentence_count_global=[
 "biocide",
 "biocompatibility",
 "biodegrade",
-"biodiesel",
 "biofuel",
 "biogas",
 "biogeochemical",

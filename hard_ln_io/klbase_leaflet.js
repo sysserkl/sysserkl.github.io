@@ -608,7 +608,7 @@ function point_size_get_leaflet_b(point_type){
     if (['triangle','rectangle'].includes(point_type)){
         point_size=point_size*2;
     } else if (point_type!==''){
-        point_size=point_size*(ismobile_b()?4:6);
+        point_size=point_size*4;
     }
     return point_size;
 }
