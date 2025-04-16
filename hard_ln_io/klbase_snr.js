@@ -268,7 +268,7 @@ function longtxts_klsnews_b(cslist,addsitename=false){
     return str_t+'</span> <span class="span_fav" style="cursor:pointer;font-size:0.9rem;" onclick="fav_add_klsnews_b(this);">⚪</span>';
 }
 
-function fav_all_klsnews_b(ositename){
+function fav_all_klsnews_b(ositename,do_confirm=true){
     var odiv=ositename.parentNode.parentNode;
     if (odiv){
         if (odiv.getAttribute('class')=='div_masonry'){
@@ -276,7 +276,7 @@ function fav_all_klsnews_b(ositename){
             if (ospan){
                 var is_add=(ospan.innerText=='⚪');
                 var ospans=odiv.querySelectorAll('span.span_fav');
-                if (confirm("是否"+(is_add?"添加":"清除")+ositename.innerText+"下的 "+ospans.length+" 条记录？")==false){
+                if (do_confirm && confirm('是否'+(is_add?'添加':'清除')+ositename.innerText+'下的 '+ospans.length+' 条记录？')==false){
                     return;
                 }
                 for (let item of ospans){
@@ -307,7 +307,7 @@ function fav_link_title_klsnews_b(ospan){
             var sitename_t='';
             var odiv=ospan.parentNode.parentNode;
             if (odiv){
-                if (odiv.getAttribute('class')=='div_masonry'){
+                if (odiv.classList.contains('div_masonry')){
                     var ospan_site=odiv.querySelector('span.span_site_name');
                     if (ospan_site){
                         sitename_t=ospan_site.innerText;
@@ -434,7 +434,11 @@ function classify_sites_klsnews_b(bottom_eng=true,sort_by_day=false,show_cn_en='
         var bljg='<div class="div_masonry" style="'+divstyle+'">';
         bljg=bljg+'<a name="a_site_num_'+blno+'"></a>';
         bljg=bljg+'<p style="padding:0.5rem;font-weight:bold;font-size:1rem;">'+blno+'/'+cstotal+'. ';
-        bljg=bljg+'<span class="span_site_name" style="cursor:pointer;" onclick="fav_all_klsnews_b(this);">'+thetag+'</span>';
+        
+        var class_name=(sites_en_cn_global['efull'].includes(thetag)?' span_site_name_efull':'');
+        class_name=class_name+(sites_en_cn_global['cn'].includes(thetag)?' span_site_name_cn':'');
+        
+        bljg=bljg+'<span class="span_site_name'+class_name+'" style="cursor:pointer;" onclick="fav_all_klsnews_b(this);">'+thetag+'</span>';
         if (isfinished){
             bljg=bljg+' <span style="cursor:pointer;" onclick="finish_site_klsnews_b(\''+thetag+'\',this);">('+(bly-1)+') <span class="span_isfinished" style="color:'+scheme_global['a-hover']+';">已阅</span></span>';
         } else {
@@ -1090,6 +1094,12 @@ function menu_klsnews_b(cskeys,js_or_php=''){
     '<span class="span_menu" onclick="'+str_t+'span_fav_show_hide_klsnews_b();">fav button show/hide</span>',    
     '<span class="span_menu" onclick="'+str_t+'stanalone_search_klsnews_b();">导出链接为standalone search</span>',        
     ];
+
+    var group_list=[
+    ['cn','fav_trigger_klsnews_b(\'cn\');',true],
+    ['efull','fav_trigger_klsnews_b(\'efull\');',true],
+    ];    
+    menu_list3.push(menu_container_b(str_t,group_list,'fav trigger: '));
     
     var group_list=[
     ['访问','rnd_open_or_search_klsnews_b(false);',true],
@@ -1124,6 +1134,13 @@ function rnd_open_or_search_klsnews_b(is_search=false){
     } else {
         rnd_window_klsnews_b();
         rnd_open_window_klsnews_global=setInterval(rnd_window_klsnews_b,60000);
+    }
+}
+
+function fav_trigger_klsnews_b(cstype){
+    var ospans=document.querySelectorAll('span.span_site_name_'+cstype);
+    for (let one_span of ospans){
+        fav_all_klsnews_b(one_span,false);
     }
 }
 

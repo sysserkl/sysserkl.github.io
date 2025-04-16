@@ -20,8 +20,10 @@ var common_apps_pb_global=[
 ["{{selenium_news}}/html/calculator.htm","Calculator","➗","1"],
 ["{{selenium_news}}/html/calendar.htm","Calendar","calendar256.png","5","PIM"],
 ["{{selenium_news}}/html/canvas_draw.htm","canvas draw","🖍","3",""],
+["{{selenium_news}}/html/cmeditor.htm","cmeditor","{}","5","txteditor"],
 ["{{selenium_news}}/html/cn_idiom.htm","cn idiom","😵","2",""],
 ["{{selenium_news}}/html/cnki_search.htm","cnki search","🛢️","5","database"],
+["{{selenium_news}}/html/container.htm","container","📦️","2",""],
 ["{{selenium_news}}/html/diff_js.htm","diff js","⚖","0"],
 ["{{selenium_news}}/html/digest.htm","Digest","🗃️","5","txtbook"],
 ["{{selenium_news}}/html/douban_book.htm","douban book","𖠗","5","bookshelf"],
@@ -41,6 +43,7 @@ var common_apps_pb_global=[
 ["{{selenium_news}}/html/image2base64.htm","image2base64","image2base64_512.png","5","image"],
 ["{{selenium_news}}/html/image_merge.htm","image merge","image_merge512.png","5","image"],
 ["{{selenium_news}}/html/imdb.htm","Movie Analyze","🎬","5","database"],
+["{{selenium_news}}/html/imgviewer.htm","imgviewer","🖽️","5","image"],
 ["{{selenium_news}}/html/js_data_file_common_search.htm?d=../jsdata/words/cn_bullshit_data.js&i=💩&t=CN BS Search&v=cn_bullshit_global","CN BS Search","💩","5","database"],
 ["{{selenium_news}}/html/kleditor.htm","KLEditor","📝","5","txteditor"],
 ["{{selenium_news}}/html/klsearch.htm","KL Search","klsearch512.png","1"],
@@ -96,7 +99,5 @@ var common_apps_pb_global=[
 ["{{selenium_news}}/html/zj_college_search.htm","ZJ College","💯","5","database|education"],
 ["{{selenium_news}}/html/zj_company.htm","ZJ Company","🏭","5","database"],
 ["{{selenium_news}}/module/pdfjs/web/viewer.html","PDF.js","🔖","5","txtbook"],
-["{{selenium_news}}/html/cmeditor.htm","cmeditor","{}","5","txteditor"],
-["{{selenium_news}}/html/imgviewer.htm","imgviewer","🖽️","5","image"],
 
 ];

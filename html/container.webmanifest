@@ -1,0 +1,30 @@
+{
+  "background_color": "transparent",
+  "description": "KL container",
+  "display": "standalone",
+  "icons": [
+    {
+    "src": "container_ico/container512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+    },
+    {
+    "src": "container_ico/container256.png",
+    "sizes": "256x256",
+    "type": "image/png"
+    },
+    {
+    "src": "container_ico/container128.png",
+    "sizes": "128x128",
+    "type": "image/png"
+    },
+    {
+    "src": "container_ico/container64.png",
+    "sizes": "64x64",
+    "type": "image/png"
+    }
+  ],
+  "name": "KL container",
+  "short_name": "container",
+  "start_url": "container.htm"
+}
