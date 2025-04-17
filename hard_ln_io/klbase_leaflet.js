@@ -59,7 +59,7 @@ function init_maps_leaflet_b(csmax=18,csmin=5){
 
 function line_default_weight_b(){
     if (typeof gpx_line_weight_global=='undefined'){
-        gpx_line_weight_global=(ismobile_b()?5:3);
+        gpx_line_weight_global=(ismobile_b()?4:3);
     }
 }
 
