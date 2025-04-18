@@ -2209,15 +2209,20 @@ function character_2_icon_b(csstr,cssize=24,line_width=5,mobile_style=true,chang
     var imgsrc=ocanvas.toDataURL('image/png');
     //-----------------------
     if (change_ico){
-        var olink=document.querySelector('link[rel="icon"], link[rel="shortcut icon"]');
-        if (!olink){
-            var olink = document.createElement('link');
-            olink.setAttribute('rel','shortcut icon');
-            document.head.appendChild(olink);
-        }
+        var olink=link_ico_create_b();
         olink.href=imgsrc;
     }
     return imgsrc;
+}
+
+function link_ico_create_b(){
+    var olink=document.querySelector('link[rel="icon"], link[rel="shortcut icon"]');
+    if (!olink){
+        var olink = document.createElement('link');
+        olink.setAttribute('rel','shortcut icon');
+        document.head.appendChild(olink);
+    }
+    return olink;
 }
 
 function canvas_box_with_4_lines_b(ocanvas,ctx,color_list,dash_list){

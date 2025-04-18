@@ -99,9 +99,14 @@ function menu_ensentence(){
     if (is_local_b()){
         klmenu_config=klmenu_config.concat([
         '<span id="span_sort_by_selenium_ensentence" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 按selenium单词数排序</span>',
-        '<span class="span_menu" onclick="'+str_t+'length_sort_ensentence();">最短例句</span>',
-        '<span class="span_menu" onclick="'+str_t+'length_sort_ensentence(false);">最长例句</span>',
         ]);
+        
+        var group_list=[
+        ['最短例句','length_sort_ensentence();',true],
+        ['最长例句','length_sort_ensentence(false);',true],
+
+        ];    
+        klmenu_config.push(menu_container_b(str_t,group_list,''));        
     }
     
     var klmenu_link=[
