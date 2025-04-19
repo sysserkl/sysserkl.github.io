@@ -8,249 +8,123 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Fri, 18 Apr 2025 12:03:31 +0800</lastBuildDate>
-<item><title>Firefox Features - The Mozilla Blog</title><link>https://blog.mozilla.org/en/category/firefox/firefox-features/</link></item>
-<item><title>Tips and Tricks - The Mozilla Blog</title><link>https://blog.mozilla.org/en/category/firefox/firefox-tips/</link></item>
-<item><title>Mozilla New Products - The Mozilla Blog</title><link>https://blog.mozilla.org/en/category/mozilla-new-products/</link></item>
-<item><title>Mozilla Advertising - The Mozilla Blog</title><link>https://blog.mozilla.org/en/category/advertising/</link></item>
-<item><title>From the Team - The Mozilla Blog</title><link>https://blog.mozilla.org/en/category/mozilla/leadership/</link></item>
-<item><title>Mozilla’s CEO weighs in on U.S. v. Google Read More - The Mozilla Blog</title><link>https://blog.mozilla.org/en/mozilla/internet-policy/mozilla-ceo-on-google-antitrust/</link></item>
-<item><title>Built together: How Firefox fans help shape the browser Read More - The Mozilla Blog</title><link>https://blog.mozilla.org/en/firefox/about-mozilla-connect/</link></item>
-<item><title>Inside the newsletter making layoffs feel less bleak and more like a group chat Read More - The Mozilla Blog</title><link>https://blog.mozilla.org/en/internet-culture/laid-off-newsletter/</link></item>
-<item><title>Open-source AI is hard. Blueprints can help! Read More - The Mozilla Blog</title><link>https://blog.mozilla.org/en/mozilla/ai/mozilla-ai-blueprints/</link></item>
-<item><title>Misinformation in the age of AI: It’s in the details (like extra fingers) Read More - The Mozilla Blog</title><link>https://blog.mozilla.org/en/internet-culture/deep-dives/ai-misinformation/</link></item>
-<item><title>Mozilla’s response to proposed remedies in U.S. v. Google Read More - The Mozilla Blog</title><link>https://blog.mozilla.org/en/mozilla/internet-policy/proposed-remedies-browsers/</link></item>
-<item><title>Browser choice? Here’s how EU’s DMA is helping make it real Read More - The Mozilla Blog</title><link>https://blog.mozilla.org/en/firefox/eu-digital-markets-act/</link></item>
-<item><title>An update on our Terms of Use Read More - The Mozilla Blog</title><link>https://blog.mozilla.org/en/firefox/update-on-terms-of-use/</link></item>
-<item><title>Growing Mozilla — and evolving our leadership Read More - The Mozilla Blog</title><link>https://blog.mozilla.org/en/mozilla/mozilla-leadership-growth-planning-updates/</link></item>
-<item><title>Firefox 4 accessibility tools to try in Firefox Read More - The Mozilla Blog</title><link>https://blog.mozilla.org/en/firefox/accessibility-extensions/</link></item>
-<item><title>Mozilla VPN A smarter VPN experience: Introducing the Mozilla VPN extension for Windows Read More - The Mozilla Blog</title><link>https://blog.mozilla.org/en/firefox/mozilla-vpn/mozilla-vpn-for-firefox/</link></item>
-<item><title>Firefox Introducing a terms of use and updated privacy notice for Firefox Read More - The Mozilla Blog</title><link>https://blog.mozilla.org/en/firefox/firefox-terms-of-use/</link></item>
-<item><title>Firefox Mozilla’s approach to Manifest V3: What’s different and why it matters for extension users Read More - The Mozilla Blog</title><link>https://blog.mozilla.org/en/firefox/firefox-manifest-v3-adblockers/</link></item>
-<item><title>Mozilla New Products Spring cleaning? Watch out for these product categories while online shopping Read More - The Mozilla Blog</title><link>https://blog.mozilla.org/en/mozilla-new-products/fakespot-spring-cleaning-shopping/</link></item>
-<item><title>Internet Culture Nolen Royalty, known as eieio, keeps the internet fun with experimental multiplayer games Read More - The Mozilla Blog</title><link>https://blog.mozilla.org/en/internet-culture/eieio-games-nolen-royalty/</link></item>
-<item><title>Life Online Reaching readers, one TikTok at a time Read More - The Mozilla Blog</title><link>https://blog.mozilla.org/en/internet-culture/life-online/reaching-readers-one-tiktok-at-a-time/</link></item>
-<item><title>Bluesky Bluesky - Slashdot</title><link>https://bsky.app/profile/slashdot.org</link></item>
-<item><title>Amazon To Launch First Vega OS-powered TV Streaming Device This Year - Slashdot</title><link>https://entertainment.slashdot.org/story/25/04/18/0012231/amazon-to-launch-first-vega-os-powered-tv-streaming-device-this-year</link></item>
-<item><title>Liz Truss Announces &amp;#39;Uncensorable&amp;#39; Social Media Venture - Slashdot</title><link>https://news.slashdot.org/story/25/04/17/2250222/liz-truss-announces-uncensorable-social-media-venture</link></item>
-<item><title>HP Agrees To $4 Million Settlement Over Claims of &amp;#39;Falsely Advertising&amp;#39; PCs, Keyboards - Slashdot</title><link>https://yro.slashdot.org/story/25/04/17/2229247/hp-agrees-to-4-million-settlement-over-claims-of-falsely-advertising-pcs-keyboards</link></item>
-<item><title>Microsoft Researchers Develop Hyper-Efficient AI Model That Can Run On CPUs - Slashdot</title><link>https://slashdot.org/story/25/04/17/2224205/microsoft-researchers-develop-hyper-efficient-ai-model-that-can-run-on-cpus</link></item>
-<item><title>US Halts $5 Billion New York Offshore Wind Project Mid-Build - Slashdot</title><link>https://news.slashdot.org/story/25/04/17/2217200/us-halts-5-billion-new-york-offshore-wind-project-mid-build</link></item>
-<item><title>Google Is Gifting Gemini Advanced To US College Students - Slashdot</title><link>https://news.slashdot.org/story/25/04/17/1959204/google-is-gifting-gemini-advanced-to-us-college-students</link></item>
-<item><title>Federal Judge Declares Google&amp;#39;s Digital Ad Network Is an Illegal Monopoly - Slashdot</title><link>https://yro.slashdot.org/story/25/04/17/1950221/federal-judge-declares-googles-digital-ad-network-is-an-illegal-monopoly</link></item>
-<item><title>a separate decision in August - Slashdot</title><link>https://tech.slashdot.org/story/24/08/05/1859251/google-loses-doj-antitrust-suit-over-search</link></item>
-<item><title>Google&amp;#39;s $3.2 billion purchase - Slashdot</title><link>https://tech.slashdot.org/story/07/04/13/2244251/google-buys-doubleclick-for-31-billion</link></item>
-<item><title>concluded just before Thanksgiving last year - Slashdot</title><link>https://news.slashdot.org/story/24/11/25/200221/us-says-google-is-an-ad-tech-monopolist-in-closing-arguments</link></item>
-<item><title>ChatGPT Models Are Surprisingly Good At Geoguessing - Slashdot</title><link>https://yro.slashdot.org/story/25/04/17/1941258/chatgpt-models-are-surprisingly-good-at-geoguessing</link></item>
-<item><title>Synology Locks Key NAS Features Behind Proprietary Drive Requirement - Slashdot</title><link>https://it.slashdot.org/story/25/04/17/197239/synology-locks-key-nas-features-behind-proprietary-drive-requirement</link></item>
-<item><title>Google, Apple, and Snap Aren&amp;#39;t Happy About Meta&amp;#39;s Poorly-redacted Slides - Slashdot</title><link>https://tech.slashdot.org/story/25/04/17/1839249/google-apple-and-snap-arent-happy-about-metas-poorly-redacted-slides</link></item>
-<item><title>Ubuntu 25.04 &amp;#39;Plucky Puffin&amp;#39; Arrives With Linux 6.14, GNOME 48, and ARM64 Desktop ISO - Slashdot</title><link>https://news.slashdot.org/story/25/04/17/1631222/ubuntu-2504-plucky-puffin-arrives-with-linux-614-gnome-48-and-arm64-desktop-iso</link></item>
-<item><title>Bot Students Siphon Millions in Financial Aid from US Community Colleges - Slashdot</title><link>https://news.slashdot.org/story/25/04/17/1611216/bot-students-siphon-millions-in-financial-aid-from-us-community-colleges</link></item>
-<item><title>Meta Blocks Apple Intelligence in iOS Apps - Slashdot</title><link>https://tech.slashdot.org/story/25/04/17/1539231/meta-blocks-apple-intelligence-in-ios-apps</link></item>
-<item><title>How a Secretive Gambler Called &amp;#39;The Joker&amp;#39; Took Down the Texas Lottery - Slashdot</title><link>https://news.slashdot.org/story/25/04/17/1440236/how-a-secretive-gambler-called-the-joker-took-down-the-texas-lottery</link></item>
-<item><title>India&amp;#39;s IT Services Giants Hit With Steepest Growth Slowdown in Years - Slashdot</title><link>https://tech.slashdot.org/story/25/04/17/1339247/indias-it-services-giants-hit-with-steepest-growth-slowdown-in-years</link></item>
-<item><title>struggling with cautious client spending - Slashdot</title><link>https://it.slashdot.org/story/25/04/15/0259250/indian-it-faces-its-kodak-moment</link></item>
-<item><title>Read the 78 comments - Slashdot</title><link>https://slashdot.org/poll/3279/what-ai-models-do-you-usually-use-most</link></item>
-<item><title>Trump Administration Plans To End the IRS Direct File Program for Free Tax Filing - Slashdot</title><link>https://news.slashdot.org/story/25/04/16/1917209/trump-administration-plans-to-end-the-irs-direct-file-program-for-free-tax-filing?sbsrc=md</link></item>
-<item><title>Cybersecurity World On Edge As CVE Program Prepares To Go Dark - Slashdot</title><link>https://it.slashdot.org/story/25/04/16/0050230/cybersecurity-world-on-edge-as-cve-program-prepares-to-go-dark?sbsrc=md</link></item>
-<item><title>First Global Pandemic Treaty Agreed - Without the US - Slashdot</title><link>https://science.slashdot.org/story/25/04/16/1957254/first-global-pandemic-treaty-agreed---without-the-us?sbsrc=md</link></item>
-<item><title>Immigrant Founders Are the Norm in Key US AI Firms: Study - Slashdot</title><link>https://news.slashdot.org/story/25/04/16/143216/immigrant-founders-are-the-norm-in-key-us-ai-firms-study?sbsrc=md</link></item>
-<item><title>LG TVs&amp;#39; Integrated Ads Get More Personal With Tech That Analyzes Viewer Emotions - Slashdot</title><link>https://entertainment.slashdot.org/story/25/04/16/2240228/lg-tvs-integrated-ads-get-more-personal-with-tech-that-analyzes-viewer-emotions?sbsrc=md</link></item>
-<item><title>When I was little - Slashdot</title><link>https://slashdot.org/comments.pl?sid=25/04/17/2217200&amp;cid=65313603&amp;sbsrc=topcom</link></item>
-<item><title>Re:We were almost freed at one point - Slashdot</title><link>https://slashdot.org/comments.pl?sid=25/04/17/1950221&amp;cid=65313543&amp;sbsrc=topcom</link></item>
-<item><title>Bridging the Gap Between Legacy Infrastructure and AI-Optimized Data Centers - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/next-gen-data-centers/bridging-the-gap-between-legacy-infrastructure-and-ai-optimized-data-centers</link></item>
-<item><title>Nvidia Sees $5.5B Hit From New Trump China Curbs on Chips - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-chips/nvidia-sees-5-5b-hit-from-new-trump-china-curbs-on-chips</link></item>
-<item><title>5 Reasons Why Data Centers May Not Be a Great Investment in 2025 - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/investing/5-reasons-why-data-centers-may-not-be-a-great-investment-in-2025</link></item>
-<item><title>Data Center World 2025: Industry Gathers to Tackle Power, AI Scaling Challenges - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/data-center-world-2025-industry-gathers-to-tackle-power-ai-scaling-challenges</link></item>
-<item><title>Subsea Cable Market Expands as AI, Geopolitics Reshape Global Networks - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cables/subsea-cable-market-expands-as-ai-cloud-geopolitics-reshape-global-networks</link></item>
-<item><title>Cracking the Code on Cybersecurity ROI - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cybersecurity/cracking-the-code-on-cybersecurity-roi</link></item>
-<item><title>Soluna Expands Wind-Powered Data Center Portfolio with Project Hedy - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/sustainability/soluna-expands-wind-powered-data-center-portfolio-with-project-hedy</link></item>
-<item><title>Watt’s Ahead: Data Center Power Management Trends to Watch - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/data-center-power-management-trends-to-watch</link></item>
-<item><title>What Are the Biggest Blind Spots for CIOs in AI Security? - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cybersecurity/what-are-the-biggest-blind-spots-for-cios-in-ai-security</link></item>
-<item><title>Trump Tariff Turmoil Seeds Uncertainty in Global Data Center Market - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/supply-chain/trump-tariff-turmoil-seeds-uncertainty-in-global-data-center-market</link></item>
-<item><title>AI Data Center Growth Means More Coal and Gas Plants, IEA Says - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/sustainability/ai-data-center-growth-means-more-coal-and-gas-plants-iea-says</link></item>
-<item><title>Google Launches Ironwood TPU For Next-Gen AI Inference - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-chips/google-launches-ironwood-tpu-for-next-gen-ai-inference</link></item>
-<item><title>Three Keys to Mastering High Availability in Your On-Prem Data Center - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/uptime/three-keys-to-mastering-high-availability-in-your-on-prem-data-center</link></item>
-<item><title>Trump Signs Orders to Expand Coal Power, Invoking AI Boom - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/trump-signs-orders-to-expand-coal-power-invoking-ai-boom</link></item>
-<item><title>A Guide to Open Source Data Center Asset Management Software - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/open-source-software/a-guide-to-open-source-data-center-asset-management-software</link></item>
-<item><title>Nvidia, Cassava’s AI Factory in Africa Tie-Up to Cost $720M - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-chips/nvidia-cassavas-ai-factory-in-africa-tie-up</link></item>
-<item><title>Eastern European Data Center Uses Gorge for Natural Cooling - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-construction/eastern-european-data-center-uses-gorge-for-natural-cooling</link></item>
-<item><title>High-Severity Cloud Security Alerts Tripled in 2024 - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cybersecurity/high-severity-cloud-security-alerts-tripled-in-2024</link></item>
-<item><title>Meta Plans Nearly $1B Data Center Project in Wisconsin – Report - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-construction/meta-plans-nearly-1b-data-center-project-in-wisconsin-report</link></item>
-<item><title>UK Plots 500 MW AI Cluster – But Can the Grid Keep Up? - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/ai-data-centers/uk-plots-500-mw-ai-cluster-but-can-the-grid-keep-up</link></item>
-<item><title>Blackstone Is Said to Mull Sale of Two AirTrunk Data Centers - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/investing/blackstone-is-said-to-mull-sale-of-two-airtrunk-data-centers</link></item>
-<item><title>Data Center World 2025: Powering Sustainable Data Centers of Tomorrow - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/ai-data-centers/data-center-world-2025-powering-sustainable-data-centers-of-tomorrow</link></item>
-<item><title>Customers Frustrated with VMware after Broadcom Acquisition - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/networking/customers-frustrated-with-vmware-after-broadcom-acquisition</link></item>
-<item><title>U.S. Energy Chief Plans to Use Federal Land to Build Data Centers - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-site-selection/us-energy-chief-plans-to-use-federal-land-to-build-data-centers</link></item>
-<item><title>New Data Center Developments: April 2025 - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-construction/new-data-center-developments-april-2025</link></item>
-<item><title>Major AI Data Center Planned for Former Pennsylvania Coal Power Plant - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-construction/major-ai-data-center-planned-for-former-pennsylvania-coal-power-plant</link></item>
-<item><title>Colocation Providers Shift to Emerging Markets Amid AI Boom - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/colocation/colocation-providers-shift-to-emerging-markets-amid-ai-boom</link></item>
-<item><title>Tumbling Prices End China’s AI Data Center Binge - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/ai-data-centers/tumbling-prices-end-china-s-ai-data-center-binge</link></item>
-<item><title>Swiss Data Center Operator Green Draws Swiss Life, KKR Interest - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/investing/swiss-data-center-operator-green-draws-swiss-life-kkr-interest</link></item>
-<item><title>EU Data Centers: Balancing Sustainability, Sovereignty, and Growing Pains - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/regulations/eu-data-centers-balancing-sustainability-sovereignty-and-growing-pains</link></item>
-<item><title>The Data Center Sustainability Shift: From White Space to Green Buildings - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/green-materials/the-data-center-sustainability-shift-from-white-space-to-green-buildings</link></item>
-<item><title>Oracle Reportedly Warns of Healthcare Data Breach - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cybersecurity/oracle-reportedly-warns-of-healthcare-data-breach</link></item>
-<item><title>World Backup Day 2025: A Call to Protect Your Most Valuable Asset — Data - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-storage/world-backup-day-2025-a-call-to-protect-your-most-valuable-asset-data</link></item>
-<item><title>Chicago’s Data Center Market Heats Up with T5’s Latest Acquisition - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-site-selection/chicago-s-data-center-market-heats-up-with-t5-s-latest-acquisition</link></item>
-<item><title>CoreWeave Raises $1.5B in Downsized IPO Below Price Target - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/investing/coreweave-raises-1-5b-in-downsized-ipo-below-price-target</link></item>
-<item><title>Submarine Cable Tips and Advice for Enterprise IT - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cables/submarine-cable-tips-and-advice-for-enterprise-it</link></item>
-<item><title>Related Aims to Raise Up to $8B for AI Data Center Bet - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-construction/related-aims-to-raise-up-to-8b-for-ai-data-center-bet</link></item>
-<item><title>AI Needs a Cooling Revolution to Achieve Its Potential. How Close Are We? - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cooling/ai-needs-a-cooling-revolution-to-achieve-its-potential-how-close-are-we-</link></item>
-<item><title>Beyond the Black Box: Rethinking Data Centers for Sustainable Growth - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/sustainability/beyond-the-black-box-rethinking-data-centers-for-sustainable-growth</link></item>
-<item><title>Microsoft Abandons More Data Center Projects, TD Cowen Says - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/investing/microsoft-abandons-more-data-center-projects-td-cowen-says</link></item>
-<item><title>International Data Center Day Quiz: How Much Do You Really Know? - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-hardware/international-data-center-day-quiz-how-much-do-you-really-know-</link></item>
-<item><title>Planning for the Future: Navigating the UK’s Data Center Development Maze - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/regulations/planning-for-the-future-navigating-the-uk-rsquo-s-data-center-development-maze</link></item>
-<item><title>Liquid-Cooled SSD Eases AI Data Center Heat Challenges - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-storage/liquid-cooled-ssd-eases-ai-data-center-heat-challenges</link></item>
-<item><title>AI Boom Turns Asian Data Centers Into Magnets for Loan Deals - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/investing/ai-boom-turns-asian-data-centers-into-magnets-for-loan-deals</link></item>
-<item><title>IBM orders US sales to locate near customers or offices - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/18/ibm_orders_us_sales_staff/</link></item>
-<item><title>Google wins 1-1: Judge rules ad giant broke some antitrust law - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/17/judge_rules_google_publisher_ad/</link></item>
-<item><title>Krebs throws himself on the grenade, resigns from SentinelOne after Trump revokes clearances - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/17/krebs_quits_sentinelone/</link></item>
-<item><title>Congress wants to know if Nvidia superchips slipped through Singapore to DeepSeek - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/17/congress_demands_nvidia_explain_deepseek/</link></item>
-<item><title>No rest for the rocketry as NASA&amp;#39;s Easter weekend heats up - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/17/nasa_easter_weekend/</link></item>
-<item><title>Small ocean swirls may have an outsized affect on climate, NASA satellite shows - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/17/small_ocean_currents_climate_impact/</link></item>
-<item><title>Google, AWS say it&amp;#39;s too hard for customers to use Linux to swerve Azure - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/17/swapping_linux_for_microsoft_is_hard/</link></item>
-<item><title>MX Linux 23.6 brings Debian freshness, without the systemd funk - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/17/mx_linux_236/</link></item>
-<item><title>Europe&amp;#39;s cloud customers eyeing exit from US hyperscalers - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/17/us_hyperscaler_alternatives/</link></item>
-<item><title>TSMC prepping for tariff turmoil, denies joint venture talks with Intel - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/17/tsmc_tariffs_intel/</link></item>
-<item><title>Datacenters selling power back to the grid? Don’t bet on it, say operators - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/17/datacenters_feed_energy_back_unrealistic/</link></item>
-<item><title>Brit soldiers tune radio waves to fry drone swarms for pennies - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/17/british_army_drone_weapon/</link></item>
-<item><title>Bank of England flirts with offline digital dosh - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/17/boe_cbdc_offline_payments/</link></item>
-<item><title>Competition boffin launches class action against Google UK over search dominance - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/17/google_faces_uk_class_action/</link></item>
-<item><title>Daddy of a mistake by GoDaddy took Zoom offline for about 90 minutes - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/17/zoom_outage_godaddy_blamed/</link></item>
-<item><title>Heat can make Li-Ion batteries explode. Or restore their capacity, say Chinese boffins - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/17/heat_repairs_li_ion_batteries/</link></item>
-<item><title>Whistleblower describes DOGE IT dept rampage at America&amp;#39;s labor watchdog - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/17/whistleblower_nlrb_doge/</link></item>
-<item><title>Tesla fudged odometer to screw me out of warranty, Model Y owner claims - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/17/tesla_faked_odometer_data/</link></item>
-<item><title>California sues President Tariff - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/16/california_trump_tariffs/</link></item>
-<item><title>Microsoft: Why not let our Copilot fly your computer? - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/16/microsoft_copilot_computer_use/</link></item>
-<item><title>White House confirms 245% tariff on some Chinese imports not a typo - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/16/white_house_china_tariff/</link></item>
-<item><title>Free Blue Screens of Death for Windows 11 24H2 users - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/16/microsofts_latest_windows_updates/</link></item>
-<item><title>Signalgate chats vanish from CIA chief phone - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/16/cia_signalgate_chat/</link></item>
-<item><title>Microsoft admits it&amp;#39;s not you, Classic Outlook can be a real CPU, power hog sometimes - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/16/classic_outlook_cpu_spike/</link></item>
-<item><title>First Nvidia, now AMD: Trump trade turmoil threatens $800M in China chip sales - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/16/amd_instinct_mi308_china/</link></item>
-<item><title>Microsoft blames &amp;#39;latent code issue&amp;#39; after Windows 11 upgrades sneak past admin blockades - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/16/windows_11_bypasses_admin_polices/</link></item>
-<item><title>Figma bucks market trends, plunges into IPO waters after Adobe&amp;#39;s failed buyout - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/16/adobe_figma_ipo/</link></item>
-<item><title>CVE program gets last-minute funding from CISA – and maybe a new home - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/16/cve_program_funding_save/</link></item>
-<item><title>20 years on, DART still a masterclass in how not to rendezvous in orbit - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/16/nasa_dart_29_years/</link></item>
-<item><title>Law firm &amp;#39;didn&amp;#39;t think&amp;#39; data theft was a breach, says ICO. Now it&amp;#39;s nursing a £60K fine - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/16/law_firm_ico_fine/</link></item>
-<item><title>AWS claims 50% of Azure workloads would jump ship if licensing costs allowed - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/16/aws_microsoft_license_harms/</link></item>
-<item><title>ASML hits targets but orders sag as Trump trolls markets - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/16/asml_q1_25/</link></item>
-<item><title>Russians lure European diplomats into malware trap with wine-tasting invite - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/16/cozy_bear_grapeloader/</link></item>
-<item><title>In wake of Horizon scandal, forensics prof says digital evidence is a minefield - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/16/uk_digital_evidence_inquiry/</link></item>
-<item><title>Microsoft hits Ctrl-Z after Teams trips over file sharing - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/16/microsoft_teams_file_sharing/</link></item>
-<item><title>Legacy tech is the gift that keeps billing for UK&amp;#39;s tax collector - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/16/hmrc_dalas_2/</link></item>
-<item><title>TalkTalk Business pulls disappearing act on customer emails - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/16/talktalk_business_outage/</link></item>
-<item><title>Apple: Since you care about yOuR pRiVaCy, we&amp;#39;ll train our AI on made-up emails - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/16/apple_ai_training_privacy/</link></item>
-<item><title>Guess what happens when ransomware fiends find &amp;#39;insurance&amp;#39; &amp;#39;policy&amp;#39; in your files - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/16/dutch_ransomware_study/</link></item>
-<item><title>South Korea to build mini-fabs as part of $25B plan to prop up tariff-targeted industries - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/04/16/south_korea_tariff_support/</link></item>
-<item><title>PopMech Pro Membership Perks - Popular Mechanics</title><link>https://www.popularmechanics.com/about/a46147319/pop-mech-pro-membership/</link></item>
-<item><title>Definition Detective Quiz #34 - Mental Floss</title><link>https://www.mentalfloss.com/quizzes/definition-detective-quiz-34</link></item>
-<item><title>If You’ve Been to JG Melon, You Knew Bobby Torre - Grub Street</title><link>https://www.grubstreet.com/article/bobby-torre-longtime-jg-melon-host-rip.html</link></item>
-<item><title>‘I Was 24 and Working Illegally’ - Grub Street</title><link>https://www.grubstreet.com/article/keith-mcnally-memoir-one-fifth-excerpt.html</link></item>
-<item><title>Wegmans Is Opening a Restaurant, and It’s Not What You’d Expect - Grub Street</title><link>https://www.grubstreet.com/article/wegmans-next-door-restaurant-nyc.html</link></item>
-<item><title>One Hype Bakery, Hold the Lines - Grub Street</title><link>https://www.grubstreet.com/article/birdee-bakery-renata-ameni-first-taste.html</link></item>
-<item><title>Jeffery Self Fills the Void With Coffee Runs - Grub Street</title><link>https://www.grubstreet.com/article/jeffery-self-grub-street-diet.html</link></item>
-<item><title>The Secret Chains of New York - Grub Street</title><link>https://www.grubstreet.com/article/secret-restaurant-chains-in-nyc.html</link></item>
-<item><title>JaBä Will Be an Upscale Stage for Taiwanese Street Food - Grub Street</title><link>https://www.grubstreet.com/article/jaba-taiwanese-fine-dining-nyc.html</link></item>
-<item><title>When Good Chefs Hide in Bad Rooms - Grub Street</title><link>https://www.grubstreet.com/article/restaurant-review-the-otter-and-brass-nyc.html</link></item>
-<item><title>William Tyler Pours Himself Cereal Mullets - Grub Street</title><link>https://www.grubstreet.com/article/musician-william-tyler-grub-street-diet.html</link></item>
-<item><title>The Dog Days Are Over for Marlow &amp; Sons - Grub Street</title><link>https://www.grubstreet.com/article/marlow-and-sons-in-williamsburg-closes.html</link></item>
-<item><title>The Most Surprising Pastrami in New York - Grub Street</title><link>https://www.grubstreet.com/article/san-wei-pastrami-bao-elmhurst.html</link></item>
-<item><title>Fedora Is Reborn - Grub Street</title><link>https://www.grubstreet.com/article/fedora-reopens-in-nyc.html</link></item>
-<item><title>Where to Eat in April - Grub Street</title><link>https://www.grubstreet.com/article/best-new-restaurants-april-2025.html</link></item>
-<item><title>Bryant Park Grill’s Operators Are Suing to Prevent a Jean-Georges Takeover - Grub Street</title><link>https://www.grubstreet.com/article/bryant-park-grill-sues-over-jean-georges-takeover.html</link></item>
-<item><title>The $15 Cocktail Is Back, Thank God - Grub Street</title><link>https://www.grubstreet.com/article/new-cocktail-bars-with-cheap-normal-drinks.html</link></item>
-<item><title>Police Using AI Personas to Infiltrate Online Activist Spaces, Records Reveal - Slashdot</title><link>https://slashdot.org/story/25/04/17/2259259/police-using-ai-personas-to-infiltrate-online-activist-spaces-records-reveal?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>How to Add the Moesif API Observability Add-On to Your Heroku Applications - Heroku Blog</title><link>https://blog.heroku.com/add-moesif-api-observability-to-your-heroku-applications</link></item>
-<item><title>Introducing the Official Heroku MCP Server - Heroku Blog</title><link>https://blog.heroku.com/introducing-official-heroku-mcp-server</link></item>
-<item><title>Migrating Your Ruby Apps to the Latest Stack - Heroku Blog</title><link>https://blog.heroku.com/migrating-ruby-apps-latest-stack</link></item>
-<item><title>Heroku: Powering the Next Wave of Apps with AI - Heroku Blog</title><link>https://blog.heroku.com/delivering-platform-for-next-wave-of-apps</link></item>
-<item><title>Heroku Fir: Dive into the New Platform Capabilities - Heroku Blog</title><link>https://blog.heroku.com/heroku-fir-generally-available-new-platform-capabilities</link></item>
-<item><title>.NET on Heroku: Now Generally Available - Heroku Blog</title><link>https://blog.heroku.com/dotnet-now-generally-available</link></item>
-<item><title>Jupyter Notebooks on Heroku with Persistent Storage - Heroku Blog</title><link>https://blog.heroku.com/jupyter-notebooks-heroku-persistent-storage</link></item>
-<item><title>Using GitHub Actions with Heroku Flow for additional Security Control - Heroku Blog</title><link>https://blog.heroku.com/using-github-actions-heroku-flow-additional-security-control</link></item>
-<item><title>Simplifying JVM App Development with Heroku&amp;#39;s Buildpack Magic - Heroku Blog</title><link>https://blog.heroku.com/simplifying-jvm-app-development-herokus-buildpack-magic</link></item>
-<item><title>234 Angel Number Meaning: Unlocking Spiritual Guidance, Harmony, and Divine Messages - HowStuffWorks</title><link>https://science.howstuffworks.com/science-vs-myth/extrasensory-perceptions/234-angel-number.htm</link></item>
-<item><title>Pacific Northwest Tree Octopus: The Internet&amp;#39;s Favorite Fake - HowStuffWorks</title><link>https://science.howstuffworks.com/science-vs-myth/strange-creatures/pacific-northwest-tree-octopus.htm</link></item>
-<item><title>Lilac vs. Lavender Color Palettes and Plant Properties - HowStuffWorks</title><link>https://home.howstuffworks.com/lilac-vs-lavender.htm</link></item>
-<item><title>What Do Moths Eat? Nectar, Dung and Your Favorite Sweater - HowStuffWorks</title><link>https://animals.howstuffworks.com/insects/what-do-moths-eat.htm</link></item>
-<item><title>15 Brown Birds You&amp;#39;ll Spot in the Northern Hemisphere - HowStuffWorks</title><link>https://animals.howstuffworks.com/birds/brown-birds.htm</link></item>
-<item><title>10 Netflix Anime Series You&amp;#39;ll Only Find in One Place - HowStuffWorks</title><link>https://entertainment.howstuffworks.com/netflix-anime.htm</link></item>
-<item><title>Black-footed Cat: A Tiny and Ferocious Predator - HowStuffWorks</title><link>https://animals.howstuffworks.com/mammals/black-footed-cat.htm</link></item>
-<item><title>Red Heeler vs. Blue Heeler: Distinguishing Between Cattle Dogs - HowStuffWorks</title><link>https://animals.howstuffworks.com/pets/red-heeler-vs-blue-heeler.htm</link></item>
-<item><title>3 Major Types of Mushrooms: Edible, Wild and Poisonous - HowStuffWorks</title><link>https://science.howstuffworks.com/life/biology-fields/types-of-mushrooms.htm</link></item>
-<item><title>What Do Deer Eat During Different Seasons? - HowStuffWorks</title><link>https://animals.howstuffworks.com/mammals/what-do-deer-eat.htm</link></item>
-<item><title>Black Demon Shark: Baja California&amp;#39;s Aquatic Cryptic - HowStuffWorks</title><link>https://science.howstuffworks.com/science-vs-myth/strange-creatures/black-demon-shark.htm</link></item>
-<item><title>Religious Charter Schools: Freedom or Hemlock? - Law &amp; Liberty</title><link>https://lawliberty.org/religious-charter-schools-freedom-or-hemlock/</link></item>
-<item><title>A Defense of Constitutional Traditions - Law &amp; Liberty</title><link>https://lawliberty.org/forum/a-defense-of-constitutional-traditions/</link></item>
-<item><title>Alternatives to Tariffs - Law &amp; Liberty</title><link>https://lawliberty.org/alternatives-to-tariffs/</link></item>
-<item><title>Squirrel on my shoulder - Aeon</title><link>https://aeon.co/videos/one-mans-quest-to-save-an-orphaned-squirrel-as-narrated-by-david-attenborough?utm_source=rss-feed</link></item>
-<item><title>Welcome to the Chaoscene - Aeon</title><link>https://aeon.co/essays/to-survive-the-chaoscene-we-will-need-resilient-communities?utm_source=rss-feed</link></item>
-<item><title>Building an artificial scientist - Aeon</title><link>https://aeon.co/videos/a-future-in-which-artificial-scientists-make-discoveries-may-not-be-far-away?utm_source=rss-feed</link></item>
-<item><title>Space Force gets head start on Trump’s commercial buying push - Defense News</title><link>https://www.defensenews.com/space/2025/04/17/space-force-gets-head-start-on-trumps-commercial-buying-push/</link></item>
-<item><title>Former Pentagon spokesman tied to DEI purge asked to resign: Official - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2025/04/17/former-pentagon-spokesman-tied-to-dei-purge-asked-to-resign-official/</link></item>
-<item><title>AFSOC command chief relieved amid investigation - Defense News</title><link>https://www.defensenews.com/news/your-air-force/2025/04/17/afsoc-command-chief-relieved-amid-investigation/</link></item>
-<item><title>New Space Force ‘warfighting framework’ sharpens weaponization plans - Defense News</title><link>https://www.defensenews.com/space/2025/04/17/new-space-force-warfighting-framework-sharpens-weaponization-plans/</link></item>
-<item><title>‘Eurotank’ firms form joint venture before talks with Germany, France - Defense News</title><link>https://www.defensenews.com/global/europe/2025/04/17/eurotank-firms-form-joint-venture-before-talks-with-germany-france/</link></item>
-<item><title>In first, British Army uses radio-wave weapon to knock out drone swarm - Defense News</title><link>https://www.defensenews.com/global/europe/2025/04/17/in-first-british-army-uses-radio-wave-weapon-to-knock-out-drone-swarm/</link></item>
-<item><title>Aerojet’s president talks new approach to making rocket motors - Defense News</title><link>https://www.defensenews.com/industry/2025/04/16/aerojets-president-talks-new-approach-to-making-rocket-motors/</link></item>
-<item><title>VA&amp;#39;s plans for staffing cuts won&amp;#39;t endanger veterans&amp;#39; services, House Veterans&amp;#39; Chairman says - Defense News</title><link>https://www.defensenews.com/video/2025/04/16/vas-plans-for-staffing-cuts-wont-endanger-veterans-services-house-veterans-chairman-says/</link></item>
-<item><title>Questions Congress should ask about DOD ‘peace through strength’ plan - Defense News</title><link>https://www.defensenews.com/opinion/2025/04/16/questions-congress-should-ask-about-dod-peace-through-strength-plan/</link></item>
-<item><title>Turkey hosts Black Sea security talks with Ukraine, France, UK - Defense News</title><link>https://www.defensenews.com/global/europe/2025/04/16/turkey-hosts-black-sea-security-talks-with-ukraine-france-uk/</link></item>
-<item><title>Laying it on thick: talking about exaggeration - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2025/04/16/laying-it-on-thick-talking-about-exaggeration/</link></item>
-<item><title>New words – 14 April 2025 - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2025/04/14/new-words-14-april-2025/</link></item>
-<item><title>The Star Wars that George Lucas didn&amp;#39;t want you to see is coming to the big screen - Boing Boing</title><link>https://boingboing.net/2025/04/16/the-star-wars-that-george-lucas-didnt-want-you-to-see-is-coming-to-the-big-screen.html</link></item>
-<item><title>Archaeologists claim IP rights to ancient Roman dodecahedron - Boing Boing</title><link>https://boingboing.net/2025/04/16/archaeologists-claim-ip-rights-to-ancient-roman-dodecahedron.html</link></item>
-<item><title>California candidate threatens immigrants with deportation if they don&amp;#39;t marry incels - Boing Boing</title><link>https://boingboing.net/2025/04/16/california-candidate-threatens-immigrants-with-deportation-if-they-dont-marry-incels.html</link></item>
-<item><title>Man with U.S. birth certificate jailed for illegally entering Florida as an &amp;quot;unauthorized alien&amp;quot; - Boing Boing</title><link>https://boingboing.net/2025/04/17/man-with-u-s-birth-certificate-jailed-for-illegally-entering-florida-as-an-unauthorized-alien.html</link></item>
-<item><title>Cyberculture pioneer RU Sirius&amp;#39;s new album of &amp;quot;rhymes against reality&amp;quot; - Boing Boing</title><link>https://boingboing.net/2025/04/17/cyberculture-pioneer-ru-siriuss-new-album-of-rhymes-against-reality.html</link></item>
-<item><title>Get outside with this bundle of two 4K drones for just $140 - Boing Boing</title><link>https://boingboing.net/2025/04/17/get-outside-with-this-bundle-of-two-4k-drones-for-just-140.html</link></item>
-<item><title>Boing Boing&amp;#39;s Shop - Boing Boing</title><link>https://boingboing.net/author/treymartin</link></item>
-<item><title>Obviously non-existent Fyre Festival 2 &amp;quot;postponed&amp;quot; - Boing Boing</title><link>https://boingboing.net/2025/04/17/obviously-non-existent-fyre-festival-2-postponed.html</link></item>
-<item><title>Two teens busted for smuggling 5,000 ants - Boing Boing</title><link>https://boingboing.net/2025/04/17/two-teens-busted-for-smuggling-5000-ants.html</link></item>
-<item><title>Strongest sign detected of life on another planet - Boing Boing</title><link>https://boingboing.net/2025/04/17/strongest-sign-detected-of-life-on-another-planet.html</link></item>
-<item><title>At least 6 people shot at Florida State University today — and Gov. DeSantis fights back with &amp;quot;prayers&amp;quot; - Boing Boing</title><link>https://boingboing.net/2025/04/17/at-least-6-people-shot-at-florida-state-university-today-and-gov-desantis-fights-back-with-prayers.html</link></item>
-<item><title>How Trump&amp;#39;s tariff plan is lining his and Musk&amp;#39;s pockets - Boing Boing</title><link>https://boingboing.net/2025/04/17/how-trumps-tarrif-plan-is-lining-his-and-musks-pockets.html</link></item>
-<item><title>immigration - Boing Boing</title><link>https://boingboing.net/tag/immigration</link></item>
-<item><title>Homeland Security tells America-born doctor to get out of her own country - Boing Boing</title><link>https://boingboing.net/2025/04/17/homeland-security-tells-america-born-doctor-to-get-out-of-her-own-country.html</link></item>
-<item><title>Japanese PhD student forced to leave U.S. because another person caught too many fish at a church outing - Boing Boing</title><link>https://boingboing.net/2025/04/17/japanese-phd-student-forced-to-leave-u-s-because-another-person-caught-too-many-fish-at-a-church-outing.html</link></item>
-<item><title>risky locations - Boing Boing</title><link>https://boingboing.net/2025/04/17/social-media-and-map-apps-lead-to-most-mountain-rescues-ever-in-uk-says-official.html</link></item>
-<item><title>AI company logos look like buttholes - Boing Boing</title><link>https://boingboing.net/2025/04/17/ai-company-logos-look-like-buttholes.html</link></item>
-<item><title>Mortgage rates up, making housing more expensive - Boing Boing</title><link>https://boingboing.net/2025/04/17/mortgage-rates-up-making-housing-more-expensive.html</link></item>
-<item><title>Historic oak that survived Spanish Armada felled by restaurant chain - Boing Boing</title><link>https://boingboing.net/2025/04/17/historic-oak-that-survived-spanish-armada-felled-by-restaurant-chain.html</link></item>
-<item><title>DOGE: all bark and no bite - Boing Boing</title><link>https://boingboing.net/2025/04/17/doge-all-bark-and-no-bite.html</link></item>
-<item><title>1983&amp;#39;s Atari 1200XL: a super system doomed by a super price - Boing Boing</title><link>https://boingboing.net/2025/04/17/1983s-atari-1200xl-a-super-system-doomed-by-a-super-price.html</link></item>
-<item><title>Idaho Republicans are losing their war with Boise City Hall&amp;#39;s Pride flag (video) - Boing Boing</title><link>https://boingboing.net/2025/04/17/idaho-republicans-are-losing-their-war-with-boise-city-halls-pride-flag-video.html</link></item>
-<item><title>GOP Senator admits fear of Trump 2.0: &amp;quot;We are all afraid&amp;quot; (video) - Boing Boing</title><link>https://boingboing.net/2025/04/17/gop-senator-admits-fear-of-trump-2-0-we-are-all-afraid-video.html</link></item>
-<item><title>Your diets keep failing because your cells remember being fat, according to new study - Boing Boing</title><link>https://boingboing.net/2025/04/17/your-diets-keep-failing-because-your-cells-remember-being-fat-according-to-new-study.html</link></item>
-<item><title>Pastor prefers to be frisked by men than risk being turned gay by scanners - Boing Boing</title><link>https://boingboing.net/2025/04/17/pastor-prefers-to-be-frisked-by-men-than-risk-being-turned-gay-by-scanners.html</link></item>
-<item><title>YouTuber who left Diet Coke for Sentinelese is in deep trouble - Boing Boing</title><link>https://boingboing.net/2025/04/17/youtuber-who-left-diet-coke-for-sentinelese-is-in-deep-trouble.html</link></item>
-<item><title>passenger footage - Boing Boing</title><link>https://boingboing.net/2025/04/17/united-airlines-flight-catches-fire-midair-thanks-to-a-rabbit-video.html</link></item>
-<item><title>Be wary of the &amp;quot;real&amp;quot; Severance keyboard: there&amp;#39;s no escape - Boing Boing</title><link>https://boingboing.net/2025/04/17/you-can-pre-order-a-real-severance-keyboard-but-there-is-no-escape.html</link></item>
-<item><title>Corvid intelligence: study shows crows understanding geometry - Boing Boing</title><link>https://boingboing.net/2025/04/17/corvid-intelligence-study-shows-crows-understanding-geometry.html</link></item>
-<item><title>Now&amp;#39;s your chance to be part of a tattoo animation &amp;quot;flipbook&amp;quot; - Boing Boing</title><link>https://boingboing.net/2025/04/17/nows-your-chance-to-be-part-of-a-tattoo-animation-flipbook.html</link></item>
-<item><title>Expert archer takes on Hawkeye&amp;#39;s greatest shots - Boing Boing</title><link>https://boingboing.net/2025/04/17/expert-archer-takes-on-hawkeyes-greatest-shots.html</link></item>
-<item><title>Your body is just a giant sack of sidewalk chalk, says creepy video - Boing Boing</title><link>https://boingboing.net/2025/04/17/your-body-is-just-a-giant-sack-of-sidewalk-chalk-says-creepy-video.html</link></item>
-<item><title>Chaotic Rube Goldberg machine washes your hands - Boing Boing</title><link>https://boingboing.net/2025/04/17/chaotic-rube-goldberg-machine-washes-your-hands.html</link></item>
-<item><title>Stranded hiker clings to cliff in terrifying video - Boing Boing</title><link>https://boingboing.net/2025/04/17/stranded-hiker-clings-to-cliff-in-terrifying-video.html</link></item>
-<item><title>American Crying - FlowingData</title><link>https://flowingdata.com/2025/04/17/american-crying/</link></item>
-<item><title>✚ Breaking Out of Chart Software Defaults - FlowingData</title><link>https://flowingdata.com/2025/04/17/process-333-anti-defaults/</link></item>
-<item><title>Asymmetric Monstrosity map projection - FlowingData</title><link>https://flowingdata.com/2025/04/17/asymmetric-monstrosity-map-projection/</link></item>
-<item><title>Sharp flip in probabilities of parties winning Canada election - FlowingData</title><link>https://flowingdata.com/2025/04/16/sharp-flip-in-probabilities-of-parties-winning-canada-election/</link></item>
-<item><title>Reach of a deadly wildfire in South Korea - FlowingData</title><link>https://flowingdata.com/2025/04/16/reach-of-a-deadly-wildfire-in-south-korea/</link></item>
-<item><title>Google 宣布将逐步淘汰它使用的国家顶级域名 - Solidot</title><link>https://www.solidot.org/story?sid=81073</link></item>
-<item><title>天文学家发现了一颗可能有生命的行星 - Solidot</title><link>https://www.solidot.org/story?sid=81074</link></item>
-<item><title>《矮人要塞》售出了逾 100 万份拷贝 - Solidot</title><link>https://www.solidot.org/story?sid=81076</link></item>
-<item><title>微软开发出超高效的能运行在 CPU 上的 AI 模型 - Solidot</title><link>https://www.solidot.org/story?sid=81077</link></item>
-<item><title>天文学家发现一颗绕双星运行的行星 - Solidot</title><link>https://www.solidot.org/story?sid=81078</link></item>
-<item><title>日本科学家发现可预防晕车的声音 - Solidot</title><link>https://www.solidot.org/story?sid=81079</link></item>
-<item><title>海豚因 PCB 污染而死亡风险上升 - Solidot</title><link>https://www.solidot.org/story?sid=81080</link></item>
-<item><title>数万年前人类或通过特制衣物和赭石防晒霜抵御强辐射 - Solidot</title><link>https://www.solidot.org/story?sid=81081</link></item>
-<item><title>GoDaddy 错误关闭域名导致 Zoom 宕机 - Solidot</title><link>https://www.solidot.org/story?sid=81072</link></item>
-<item><title>美国主要 AI 公司六成其创始人有移民背景 - Solidot</title><link>https://www.solidot.org/story?sid=81070</link></item>
-<item><title>苹果将使用英特尔处理器的 Mac mini 归类为过时产品 - Solidot</title><link>https://www.solidot.org/story?sid=81067</link></item>
-<item><title>使用智能手机的老年人有较低的认知衰退率 - Solidot</title><link>https://www.solidot.org/story?sid=81066</link></item>
-<item><title>Android 手机将设置三天不使用会自动重启 - Solidot</title><link>https://www.solidot.org/story?sid=81065</link></item>
-<item><title>美国限制英伟达对华出口 H20 芯片 - Solidot</title><link>https://www.solidot.org/story?sid=81064</link></item>
-<item><title>特斯拉被指远程修改里程表以躲避保修 - Solidot</title><link>https://www.solidot.org/story?sid=81063</link></item>
-<item><title>4chan 被入侵，黑客泄漏管理员邮箱 - Solidot</title><link>https://www.solidot.org/story?sid=81062</link></item>
+<lastBuildDate>Sat, 19 Apr 2025 09:28:53 +0800</lastBuildDate>
+<item><title>Authoritarianism and antisemitism - New York Magazine</title><link>https://nymag.com/intelligencer/article/liberal-jewish-antisemitism-trump-protection.html</link></item>
+<item><title>Andrew Cuomo - New York Magazine</title><link>https://nymag.com/intelligencer/article/why-does-andrew-cuomo-want-to-be-mayor-of-new-york-city.html</link></item>
+<item><title>Tor Browser 14.5 释出 - Solidot</title><link>https://www.solidot.org/story?sid=81083</link></item>
+<item><title>美国法官裁决 Google 非法垄断在线广告技术 - Solidot</title><link>https://www.solidot.org/story?sid=81084</link></item>
+<item><title>今日好券|4.19上新：周六好券速领！京东PLUS领满8-7元外卖券，京东领12期白条免息券！ - 什么值得买</title><link>https://www.smzdm.com/p/146004095/</link></item>
+<item><title>京东 PLUS会员中心 天天开盲盒抽随机红包 - 什么值得买</title><link>https://www.smzdm.com/p/146009900/</link></item>
+<item><title>京东 超级18x疯狂星期六 领满200-100元优惠券 - 什么值得买</title><link>https://www.smzdm.com/p/145999053/</link></item>
+<item><title>京东 社群领奖活动 领0.1-188元随机红包 - 什么值得买</title><link>https://www.smzdm.com/p/145997696/</link></item>
+<item><title>支付宝 搜索“支付有礼”进入页面 摸貔貅领随机支付红包 - 什么值得买</title><link>https://www.smzdm.com/p/145996813/</link></item>
+<item><title>天猫 88VIP新风潮消费券 领券满200-20/500-40元 - 什么值得买</title><link>https://www.smzdm.com/p/145581289/</link></item>
+<item><title>天猫国际 妙颜社会员 抢5元购物金等 - 什么值得买</title><link>https://www.smzdm.com/p/145984445/</link></item>
+<item><title>京东PLUS×白条专享免息 领6期白条免息券 - 什么值得买</title><link>https://www.smzdm.com/p/145983947/</link></item>
+<item><title>京东购物小程序 超级会场 可领满50-5/100-10/300-30元优惠券 - 什么值得买</title><link>https://www.smzdm.com/p/145983273/</link></item>
+<item><title>京东PLUS×外卖特权 每日领满8-7/15-10元餐补优惠券 - 什么值得买</title><link>https://www.smzdm.com/p/145983039/</link></item>
+<item><title>京东 转赚红包 每日抽奖领随机红包等 - 什么值得买</title><link>https://www.smzdm.com/p/145982201/</link></item>
+<item><title>京东金融 消费日历 领2元白条优惠券 - 什么值得买</title><link>https://www.smzdm.com/p/145981521/</link></item>
+<item><title>国家补贴、今日必买：京东冰洗、生活电器、个护小电9折神券可叠，各大平台国补政策超全攻略18日新增婴儿推车国补促销 - 什么值得买</title><link>https://www.smzdm.com/p/137937072/</link></item>
+<item><title>概率券：多功能鞋刷 1个装0元 - 什么值得买</title><link>https://www.smzdm.com/p/146020511/</link></item>
+<item><title>夹子6寸超大风扇（充电款）4.99元（需用券） - 什么值得买</title><link>https://www.smzdm.com/p/146023641/</link></item>
+<item><title>薇姿 去屑清爽洗发水 50ml4.9元（需用券） - 什么值得买</title><link>https://www.smzdm.com/p/146023569/</link></item>
+<item><title>20点开始、国家补贴：舒达 Serta 森次方S 儿童床垫 1.2*2m - 什么值得买</title><link>https://www.smzdm.com/p/145942156/#hfeeds</link></item>
+<item><title>飞利浦 电动剃须刀 亲肤经典蜂巢5系 荷兰整机进口 SkinIQS5887/10 - 什么值得买</title><link>https://www.smzdm.com/p/146024707/#hfeeds</link></item>
+<item><title>23日10点：技嘉 AMD Radeon RX 9070 XT GAMING OC 16G 独立显卡 - 什么值得买</title><link>https://www.smzdm.com/p/145901670/#hfeeds</link></item>
+<item><title>20点开始、国家补贴：舒达 Serta 童话家 儿童床垫 1.35*2m - 什么值得买</title><link>https://www.smzdm.com/p/145941893/#hfeeds</link></item>
+<item><title>中国电商App敦煌网在美爆火：CEO曾是微软中国最年轻高管、与雷军共同创业 - 什么值得买</title><link>https://post.smzdm.com/p/a86xv3ll/#hfeeds</link></item>
+<item><title>国补7折：中兴 小兴看看 SC50 云台版 橙色 - 什么值得买</title><link>https://www.smzdm.com/p/145988992/#hfeeds</link></item>
+<item><title>京东中兴京东自营旗舰店 - 什么值得买</title><link>https://go.smzdm.com/f7188549012e2604/ca_aa_yh_163_145988992_16128_1837_4939_0</link></item>
+<item><title>海信 Hisense 小墨 85E5Q Pro ULED超画质 U+Mini LED AI电视机 85英寸 - 什么值得买</title><link>https://www.smzdm.com/p/145803004/#hfeeds</link></item>
+<item><title>玩家国度 ROG STRIX B850-G GAMING WIFI S 小吹雪主板 CPU 9700X/9800X3D/9600X(AMD B850/socket AM5) - 什么值得买</title><link>https://www.smzdm.com/p/145595852/#hfeeds</link></item>
+<item><title>23日0点、百亿补贴：羽博 移动电源 10000mAh 22.5W - 什么值得买</title><link>https://www.smzdm.com/p/145835325/#hfeeds</link></item>
+<item><title>爱奇艺 黄金VIP会员月卡 - 什么值得买</title><link>https://www.smzdm.com/p/145961981/#hfeeds</link></item>
+<item><title>百亿补贴：盖世小鸡 启明星 游戏手柄 多彩版 - 什么值得买</title><link>https://www.smzdm.com/p/145890020/#hfeeds</link></item>
+<item><title>iOS微信 8.0.58 发布：视频通话排版按钮优化等多项更新！ - 什么值得买</title><link>https://post.smzdm.com/p/a74nxd09/#hfeeds</link></item>
+<item><title>金典 yili 伊利 金典纯牛奶 250ml*12盒 礼盒装 - 什么值得买</title><link>https://www.smzdm.com/p/145889895/#hfeeds</link></item>
+<item><title>七彩虹 COLORFUL 战斧 GeForce RTX 5060 Ti DUO 8GB GDDR7 DLSS 4 电竞光追游戏设计电脑显卡 - 什么值得买</title><link>https://www.smzdm.com/p/145886219/#hfeeds</link></item>
+<item><title>10点开始：奥妙 快洗洗衣液800g（400袋装X2） 15分钟速净 8倍洁净力 - 什么值得买</title><link>https://www.smzdm.com/p/146015003/#hfeeds</link></item>
+<item><title>大疆 DJI Osmo Pocket 3 单人 Vlog 套装（ Mic Mini 发射器 碳素黑 ）一英寸相机+随心换1年版 - 什么值得买</title><link>https://www.smzdm.com/p/146011210/#hfeeds</link></item>
+<item><title>金龙鱼 精选珍珠米 粳米 5kg - 什么值得买</title><link>https://www.smzdm.com/p/145926295/#hfeeds</link></item>
+<item><title>23日10点：奇妙积木 keeppley 大型战斗机模型歼 歼-16d攻击机 仿真金属质感 - 什么值得买</title><link>https://www.smzdm.com/p/145997744/#hfeeds</link></item>
+<item><title>22日10点：云米 众筹 AI小噪音油烟机 - 什么值得买</title><link>https://www.smzdm.com/p/146008374/#hfeeds</link></item>
+<item><title>20点开始、国家补贴：舒达 Serta 皮卡德 护脊左右旋弹簧床垫 1.2*2米 - 什么值得买</title><link>https://www.smzdm.com/p/145937270/#hfeeds</link></item>
+<item><title>引领新一轮健康饮水革命？卡萨帝黄金矿泉净热一体机拆机测评 - 什么值得买</title><link>https://post.smzdm.com/p/aprvl9vw/</link></item>
+<item><title>我把“洗衣凝珠”，换回洗衣粉后，发现两者区别太大了 - 什么值得买</title><link>https://post.smzdm.com/p/a34dzw05/</link></item>
+<item><title>苏泊尔超猛火电磁炉开箱测评：厨房新宠，火力全开！立即申请 - 什么值得买</title><link>https://post.smzdm.com/p/a24ngqz7</link></item>
+<item><title>咸鱼捡来瀚彩Note2，不是墨水屏，胜似墨水屏，阳光下胜Kindle？ - 什么值得买</title><link>https://post.smzdm.com/p/avdx2g3m/</link></item>
+<item><title>小体积大智慧，7.98cm机身+22000Pa吸力，石头P20 Ultra全面体验 - 什么值得买</title><link>https://post.smzdm.com/p/anmqpl93/</link></item>
+<item><title>京东眼镜节2025：百亿补贴加持，品牌折扣盛宴！ - 什么值得买</title><link>https://post.smzdm.com/p/ard694xq/</link></item>
+<item><title>移动端、京东百亿补贴：Driscoll&amp;#39;s 怡颗莓 当季云南蓝莓（14mm+）125g*12盒原箱装 - 什么值得买</title><link>https://www.smzdm.com/p/146008839/</link></item>
+<item><title>88VIP：那街那巷 统一 那街那巷兰州牛肉面206g*3份/盒 - 什么值得买</title><link>https://www.smzdm.com/p/146032663/</link></item>
+<item><title>88VIP：JOY 洗碗凝珠 24颗*6袋 - 什么值得买</title><link>https://www.smzdm.com/p/145722202/</link></item>
+<item><title>依视路 爱赞全晰钻晶膜致1.67折射率定制片*2 +赠钛金属镜框（定制片来袭） - 什么值得买</title><link>https://www.smzdm.com/p/146032754/</link></item>
+<item><title>喜临门 Sleemon 新款真皮床+床垫套餐 尼亚pro+光年plus3.0 1.8m*2m - 什么值得买</title><link>https://www.smzdm.com/p/146031264/</link></item>
+<item><title>华为 HUAWEI Pura 70 Ultra 手机 12GB+512GB 星芒白 - 什么值得买</title><link>https://www.smzdm.com/p/146032825/</link></item>
+<item><title>依视路 钻晶系列膜岩1.60折射率非球面现片*2+赠钛框（0-600度原厂加工） - 什么值得买</title><link>https://www.smzdm.com/p/146032847/</link></item>
+<item><title>ANESSA 安耐晒小金瓶防晒霜防水防汗隔离 90ml - 什么值得买</title><link>https://www.smzdm.com/p/146025758/</link></item>
+<item><title>迪卡侬 DECATHLON 双肩背包MH500户外旅行徒步登山背负系统大容量38L-5419848 - 什么值得买</title><link>https://www.smzdm.com/p/146034086/</link></item>
+<item><title>Yara Shahidi Leads Gucci’s Mother’s Day Campaign - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/gucci-mothers-day-2025-campaign/</link></item>
+<item><title>For Love &amp; Lemons Makes Summer 2025 Feel Like a Movie - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/for-love-lemons-summer-2025-collection/</link></item>
+<item><title>Angèle Is the Perfect Muse for Chanel’s Chance Eau Splendide - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/chanel-chance-eau-splendide-ad-angele/</link></item>
+<item><title>Estel Gregorova Shows Off Bold Beauty in ELLE Croatia - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/editorial/estel-gregorova-elle-croatia-beauty/</link></item>
+<item><title>Deva Cassel Turns Up the Volume with Diorshow by Dior - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/dior-diorshow-2025-ad-deva-cassel/</link></item>
+<item><title>Jacquemus’ La Croisière Collection Serves Vacation Glam - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/jacquemus-la-croisiere-2025-campaign/</link></item>
+<item><title>Tom Ford’s Soleil Lip Balm is Summer in a Tube - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/tom-ford-soleil-lip-balm-campaign/</link></item>
+<item><title>Bershka Series is Bringing 2004 Energy to Spring - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/bershka-series-spring-2025-campaign/</link></item>
+<item><title>Valentino’s Pre-Fall 2025 Campaign Celebrates the Everyday - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/valentino-pre-fall-2025-campaign/</link></item>
+<item><title>Claire De Lozier Takes Over Vegas in Hunger Magazine - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/editorial/claire-de-lozier-hunger-2025/</link></item>
+<item><title>Kendall Jenner Leads Prada’s Days of Summer Campaign - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/prada-days-summer-2025-campaign/</link></item>
+<item><title>Zara’s Bubblegum Pink Drop is Style Goals - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/zara-bubblegum-pink-spring-2025/</link></item>
+<item><title>Charlotte McKinney Wows in Diamonds for Shay Jewelry - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/shay-jewelry-2025-charlotte-mckinney/</link></item>
+<item><title>Zendaya Brings Sci-Fi Glam to On Spring 2025 Ad - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/on-spring-2025-campaign-zendaya/</link></item>
+<item><title>7 Big Spring Dress Trends Taking Over This Year - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/spring-dress-trends/</link></item>
+<item><title>See the Most Popular 2025 Beauty Trends - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/beauty-trends/</link></item>
+<item><title>Week in Review | Dua Lipa, Burberry, Toni Garrn + More - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/week-review-dua-lipa-burberry-toni/</link></item>
+<item><title>Week in Review | Irina Shayk, Elsa Hosk, Gigi Hadid + More - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/week-review-gigi-hadid-elsa-hosk-irina/</link></item>
+<item><title>Maxim Cover Girl Competition Spotlight: Eileen Hayman, Alkina Morana, Sasha Liu &amp; Savannah Richana - Maxim</title><link>https://www.maxim.com/news/maxim-cover-girl-competition-spotlight-eileen-hayman-alkina-morana-sasha-liu-savannah-richana/</link></item>
+<item><title>Addison Rae Is Promoting Her New Album In The Cheekiest Way Possible - Maxim</title><link>https://www.maxim.com/entertainment/addison-rae-is-promoting-her-new-album-in-the-cheekiest-way-possible/</link></item>
+<item><title>This Rolls-Royce Chess Set Is Fit For A King - Maxim</title><link>https://www.maxim.com/entertainment/this-rolls-royce-chess-set-is-fit-for-a-king/</link></item>
+<item><title>Jeep Unveils Wild Off-Road Concepts For Annual Easter Safari - Maxim</title><link>https://www.maxim.com/rides/jeep-unveils-wild-off-road-concepts-for-annual-easter-safari/</link></item>
+<item><title>How To Get Pedro Pascal’s ‘The Last Of Us’ Waxed Trucker Jacket - Maxim</title><link>https://www.maxim.com/style/how-to-get-pedro-pascals-the-last-of-us-waxed-trucker-jacket/</link></item>
+<item><title>Why Gold Rolexes Are Rising In Value, According To A Watch Expert - Maxim</title><link>https://www.maxim.com/style/why-gold-rolex-watches-are-rising-in-value-according-to-an-expert/</link></item>
+<item><title>The Best Colognes For Spring &amp; Summer 2025 - Maxim</title><link>https://www.maxim.com/style/the-best-colognes-for-spring-summer-2025/</link></item>
+<item><title>Beyoncé Is A Denim-Clad Cowgirl In Levi’s Latest Video Campaign - Maxim</title><link>https://www.maxim.com/style/beyonce-is-a-denim-cowgirl-in-levis-new-refrigerator-video/</link></item>
+<item><title>Cabo’s Coolest Hotel Bar Is Now Run By A Famed Michelin-Starred Chef - Maxim</title><link>https://www.maxim.com/food-drink/cabos-coolest-hotel-bar-is-now-run-by-a-famed-michelin-starred-chef/</link></item>
+<item><title>These Cannabis Accessories Take 4/20 To New Highs - Maxim</title><link>https://www.maxim.com/gear/these-cannabis-accessories-take-4-20-to-new-highs/</link></item>
+<item><title>Jefferson’s New Reserve Cask Strength Bourbon Is An Outrageously Smooth Sipper - Maxim</title><link>https://www.maxim.com/food-drink/jeffersons-new-reserve-cask-strength-bourbon-is-an-outrageously-smooth-sipper/</link></item>
+<item><title>Why The Woman In Your Life Should Consider Underoutfit - Maxim</title><link>https://www.maxim.com/partner/why-the-woman-in-your-life-should-consider-underoutfit/</link></item>
+<item><title>A$AP Rocky Unveils ‘Blacked-Out’ Ray-Ban Sunglasses Collection - Maxim</title><link>https://www.maxim.com/style/aap-rocky-unveils-blacked-out-ray-ban-sunglasses-collection/</link></item>
+<item><title>Wine Of The Week: Vina Eden Marselan - Maxim</title><link>https://www.maxim.com/food-drink/wine-of-the-week-vina-eden-marselan/</link></item>
+<item><title>Chris Applebaum On Directing Viral Music Videos For Rihanna, Miley Cyrus, Demi Lovato &amp; More - Maxim</title><link>https://www.maxim.com/entertainment/chris-applebaum-on-directing-viral-videos-for-rihanna-miley-cyrus-demi-lovato-more/</link></item>
+<item><title>‘Super Troopers’ Stars &amp; WhistlePig Whiskey Are Making Cannabis-Infused Maple Syrup For 4/20 - Maxim</title><link>https://www.maxim.com/food-drink/super-troopers-stars-whistlepig-whiskey-are-making-cannabis-infused-maple-syrup-for-4-20/</link></item>
+<item><title>H. Moser Cracks A Smile With Egg-Inspired Pioneer Centre Seconds Sunny-Side Up Watch - Maxim</title><link>https://www.maxim.com/style/h-moser-cracks-a-smile-with-egg-inspired-pioneer-centre-seconds-sunny-side-up-watch/</link></item>
+<item><title>Ice Cube Announces ‘Truth To Power: 4 Decades of Attitude’ North American 2025 Tour - Maxim</title><link>https://www.maxim.com/entertainment/ice-cube-announces-truth-to-power-4-decades-of-attitude-north-american-2025-tour/</link></item>
+<item><title>Spirit of the Week: 15 Stars Three Ports Fine-Aged Bourbon - Maxim</title><link>https://www.maxim.com/food-drink/spirit-of-the-week-15-stars-three-ports-fine-aged-bourbon/</link></item>
+<item><title>Rihanna Spices Up Savage X Fenty Bridal Collection - Maxim</title><link>https://www.maxim.com/entertainment/rihanna-spices-up-savage-x-fenty-bridal-collection/</link></item>
+<item><title>Mission Accomplished: Katy Perry &amp; All-Female Crew Complete Historic Blue Origin Spaceflight - Maxim</title><link>https://www.maxim.com/news/mission-accomplished-katy-perry-all-female-crew-complete-historic-blue-origin-spaceflight/</link></item>
+<item><title>Blancpain Returns To Its Roots With Steel Version Of Classic Fifty Fathoms Dive Watch - Maxim</title><link>https://www.maxim.com/style/blancpain-returns-to-its-roots-with-steel-version-of-classic-fifty-fathoms-dive-watch/</link></item>
+<item><title>‘Murderbot’ Trailer: Alexander Skarsgard Is A Rogue Security Robot In New Apple TV+ Sci-Fi Comedy Series - Maxim</title><link>https://www.maxim.com/entertainment/murderbot-trailer-alexander-skarsgard-is-a-rogue-security-robot-in-new-apple-tv-sci-fi-comedy-series/</link></item>
+<item><title>These 2025 Masters Tournament WAGs Are All Winners - Maxim</title><link>https://www.maxim.com/sports/these-2025-masters-tournament-wags-are-all-winners/</link></item>
+<item><title>This Porsche x Almond Surfboards Collab Channels Retro SoCal Style - Maxim</title><link>https://www.maxim.com/style/this-porsche-x-almond-surfboards-collab-channels-retro-socal-style/</link></item>
+<item><title>Elizabeth Hurley Turns Heads In Chain-Link Swimwear During Maldives Getaway - Maxim</title><link>https://www.maxim.com/news/elizabeth-hurley-turns-heads-while-wearing-chain-link-swimwear-during-maldives-getaway/</link></item>
+<item><title>The Grand Hyatt Deer Valley Is A Perfect Basecamp For A Luxe Utah Vacation - Maxim</title><link>https://www.maxim.com/travel/the-new-grand-hyatt-deer-valley-is-a-perfect-basecamp-for-a-luxe-park-city-vacation/</link></item>
+<item><title>Apple Vision Pro: The Best Immersive Headset Videos To Watch Right Now - Maxim</title><link>https://www.maxim.com/entertainment/apple-vision-pro-the-best-immersive-headset-videos-to-watch-right-now/</link></item>
+<item><title>Tom Hardy Wreaks ‘Havoc’ With Forest Whitaker &amp; Timothy Olyphant In Netflix Action Movie Trailer - Maxim</title><link>https://www.maxim.com/entertainment/tom-hardy-wreaks-havoc-with-forest-whitaker-timothy-olyphant-in-netflix-action-movie-trailer/</link></item>
+<item><title>‘The Phoenician Scheme’ Trailer: Benicio Del Toro Plays A Death-Defying Arms Dealer In Wes Anderson’s Latest Feature - Maxim</title><link>https://www.maxim.com/entertainment/the-phoenician-scheme-trailer-benicio-del-toro-plays-a-death-defying-arms-dealer-in-wes-andersons-latest-feature/</link></item>
+<item><title>‘Tron: Ares’ Trailer: Jared Leto’s Lightcycle and Nine Inch Nails Soundtrack Power Sci-Fi Sequel’s Teaser - Maxim</title><link>https://www.maxim.com/entertainment/tron-ares-trailer-jared-letos-lightcycle-and-nine-inch-nails-soundtrack-power-sci-fi-sequels-teaser/</link></item>
+<item><title>Lana Del Rey Shares Country Single, ‘Henry, Come On’ - Maxim</title><link>https://www.maxim.com/entertainment/lana-del-rey-shares-country-single-henry-come-on/</link></item>
+<item><title>Luminox Doubles Down On Toughness With Navy SEAL 4230 Series Watch - Maxim</title><link>https://www.maxim.com/gear/luminox-doubles-down-on-toughness-with-rugged-navy-seal-4230-series-watch/</link></item>
+<item><title>This Exclusive Enclave Boasts The Largest Luxury Suites In Puerto Vallarta - Maxim</title><link>https://www.maxim.com/travel/this-exclusive-enclave-boasts-the-largest-luxury-suites-in-puerto-vallarta/</link></item>
+<item><title>Maxim Cover Girl Competition Spotlight: Tori Rieger, Oneka, Sara Rybacki, Jacqueline &amp; Aiyana Churcher - Maxim</title><link>https://www.maxim.com/news/maxim-cover-girl-competition-spotlight-tori-rieger-oneka-sara-rybacki-jacqueline-aiyana-churcher/</link></item>
+<item><title>Maserati &amp; Giorgetti Join Forces For Italian Furniture Collection &amp; Customized SUV - Maxim</title><link>https://www.maxim.com/style/this-maserati-design-collab-fuses-luxury-furniture-with-automotive-excellence/</link></item>
+<item><title>Meta can&amp;#39;t figure out what to do about Facebook - Platformer</title><link>https://www.platformer.news/meta-ftc-trial-antitrust-facebook-instagram/</link></item>
+<item><title>Meta’s antitrust trial begins - Platformer</title><link>https://www.platformer.news/meta-antitrust-trial-zuckerberg-testimony/</link></item>
+<item><title>The platforms cash in their chips with Trump - Platformer</title><link>https://www.platformer.news/meta-antitrust-trump-nvidia-h20/</link></item>
+<item><title>Meta gets rebuked over benchmark gaming - Platformer</title><link>https://www.platformer.news/meta-lmarena-benchmark-gaming-rebuke/</link></item>
+<item><title>Meta&amp;#39;s Llama drama - Platformer</title><link>https://www.platformer.news/meta-llama-4-benchmark-gaming-evaluations/</link></item>
+<item><title>TikTok’s fate could be decided by tariffs - Platformer</title><link>https://www.platformer.news/trump-tariffs-tiktok/</link></item>
+<item><title>How AI bots are suffocating Wikipedia - Platformer</title><link>https://www.platformer.news/wikipedia-ai-bot-traffic-costs-plan/</link></item>
+<item><title>We finally know why Sam Altman was fired from OpenAI - Platformer</title><link>https://www.platformer.news/we-finally-know-why-sam-altman-was-fired-from-openai/</link></item>
 </channel></rss>
