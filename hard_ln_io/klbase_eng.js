@@ -2314,9 +2314,25 @@ function sentence_list_2_html_b(cslist,csword_list=[''],csmax=500,show_button=tr
     return bljg;
 }
 
+function sentence_horizontal_overflow_check_b(){
+    var ocontainer=document.querySelector('div.div_sentence');
+    var ospans=ocontainer.querySelectorAll('span.span_enwords_sentence');
+    doms_horizontal_overflow_check_b(ocontainer,ospans);
+}
+
 function sentence_split_b(csstr,csno=-1){   //sentence split - 保留注释
-    function sub_sentence_split_b_check(csstr1,csstr2){
-        return csstr1.length<10 || (csstr1.match(/\s/g) || []).length<5 || csstr2.length<10 || (csstr2.match(/\s/g) || []).length<5 || csstr2.trim().match(/^[a-z]/);   //如果csstr2 以小写字母开头 - 保留注释
+    function sub_sentence_split_b_check_str(csstr1,csstr2){
+        let blcheck=csstr1.length<10 || (csstr1.match(/\s/g) || []).length<5 || csstr2.length<10 || (csstr2.match(/\s/g) || []).length<5 || csstr2.trim().match(/^[a-z]/);   //如果csstr2 以小写字母开头 - 保留注释
+        if (blcheck){return true;}
+        if (csstr1.match(/\[https?:\/\/[^\]]+$/)){
+            console.log('例句再合并',csstr1,csstr2);
+            return true;
+        }
+        return false;
+    }
+    
+    function sub_sentence_split_b_check_etc(col_no){
+        return sub_sentence_split_b_check_str(list_t[col_no-1],list_t[col_no]) || list_t[col_no-1].trim().slice(-5,)==' etc.'; 
     }
     //-----------------------
     if (Array.isArray(csstr)){
@@ -2336,11 +2352,11 @@ function sentence_split_b(csstr,csno=-1){   //sentence split - 保留注释
 
     if (has_mr){
         for (let blxl=list_t.length-1;blxl>0;blxl--){
-            if (sub_sentence_split_b_check(list_t[blxl-1],list_t[blxl]) || list_t[blxl-1].trim().slice(-5,)==' etc.' || [' Dr.',' Mr.',' St.'].includes(list_t[blxl-1].trim().slice(-4,)) && list_t[blxl-1].slice(-1)!=='.'){
+            if (sub_sentence_split_b_check_etc(blxl) || [' Dr.',' Mr.',' St.'].includes(list_t[blxl-1].trim().slice(-4,)) && list_t[blxl-1].slice(-1)!=='.'){
                 list_t[blxl-1]=list_t[blxl-1]+list_t[blxl];
-                list_t[blxl]='';    
+                list_t[blxl]='';
             }
-        }    
+        }
         //-----------------------
         for (let item of list_t){
             if (item==''){continue;}
@@ -2351,15 +2367,15 @@ function sentence_split_b(csstr,csno=-1){   //sentence split - 保留注释
         for (let blxl=0,lent=list_t.length-1;blxl<lent;blxl++){
             if (['Mr.','Dr.','St.'].includes(list_t[blxl].trim().slice(-3,))){
                 list_t[blxl+1]=list_t[blxl]+list_t[blxl+1];
-                list_t[blxl]='';    
+                list_t[blxl]='';
             }
         }
         result_t=[];
     } else {
-        for (let blxl=list_t.length-1;blxl>0;blxl--){
-            if (sub_sentence_split_b_check(list_t[blxl-1],list_t[blxl]) || list_t[blxl-1].trim().slice(-5,)==' etc.'){
+        for (let blxl=list_t.length-1;blxl>0;blxl--){   //blxl 最小值取到 1 - 保留注释
+            if (sub_sentence_split_b_check_etc(blxl)){
                 list_t[blxl-1]=list_t[blxl-1]+list_t[blxl];
-                list_t[blxl]='';    
+                list_t[blxl]='';
             }
         }
     }
@@ -2369,7 +2385,7 @@ function sentence_split_b(csstr,csno=-1){   //sentence split - 保留注释
         if (item.includes('; ') && item.length>300){
             var semicolon_list=item.replace(/( [a-zA-Z0-9_\-']+; )([a-zA-Z0-9_\-']+ )/g,'$1\n$2').split('\n');
             for (let blxl=semicolon_list.length-1;blxl>0;blxl--){
-                if (sub_sentence_split_b_check(semicolon_list[blxl-1],semicolon_list[blxl])){
+                if (sub_sentence_split_b_check_str(semicolon_list[blxl-1],semicolon_list[blxl])){
                     semicolon_list[blxl-1]=semicolon_list[blxl-1]+semicolon_list[blxl];
                     semicolon_list[blxl]='';    
                 }

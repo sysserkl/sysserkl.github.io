@@ -2681,3 +2681,24 @@ function dom_center_xy_get_b(odom){
     var rect = odom.getBoundingClientRect();
     return [rect.left + rect.width / 2, rect.top + rect.height / 2];
 }
+
+function doms_horizontal_overflow_check_b(ocontainer,osubs,check_scroll=true){
+    if (check_scroll){
+        const hasScroll = document.documentElement.scrollWidth > document.documentElement.clientWidth;
+        if (!hasScroll){
+            console.log('未发现横向滚动条');
+            return;
+        }
+        console.log('发现横向滚动条');
+    }
+
+    var blxl=0;
+    var container_right=ocontainer.getBoundingClientRect().right;
+    for (let one_sub of osubs){
+        if (one_sub.getBoundingClientRect().right>container_right){
+            one_sub.style.wordBreak='break-all';
+            blxl=blxl+1;
+            console.log('调整',blxl,one_sub.innerText);
+        }
+    }
+}

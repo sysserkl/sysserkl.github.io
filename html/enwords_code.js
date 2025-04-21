@@ -602,7 +602,8 @@ function menu_kle(){
     ['随机排序','show_sentence_enwc_b(0,true,true);',true],
     ['最多3条','show_sentence_enwc_b(3,true,true);',true],
     ['恢复原始排序','en_sentence_to_default_order_b();alert(\'done\');',true],
-    ];    
+    ['溢出调整','sentence_horizontal_overflow_check_b();',true],
+    ];
     klmenu1.push(menu_container_b(str_t,group_list,'例句：'));
     
     klmenu1=klmenu1.concat([
