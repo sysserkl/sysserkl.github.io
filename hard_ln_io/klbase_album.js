@@ -3,7 +3,7 @@ function showbigphoto_klphotos_b(csxl=0){
         var bljg='';
         var monthdays_t=month_day_b(str_t.substring(4,6),str_t.substring(0,4));
         var theday_t=parseInt(str_t.substring(6,8));
-        for (var blxl=1;blxl<=monthdays_t;blxl++){
+        for (let blxl=1;blxl<=monthdays_t;blxl++){
             if (blxl==theday_t){
                 bljg=bljg+'<font color=red>'+blxl+'</font> ';
             } else {
@@ -33,7 +33,6 @@ function showbigphoto_klphotos_b(csxl=0){
     bljg=bljg+list_t[1];
     
 	bljg=bljg+' />';
-	var blo_tmp=document.getElementById('div_big_photo');
 	
 	big_photo_id_t='div_big_photo_info_'+csxl+'_'+Math.round(Math.random()*100000);
 
@@ -78,20 +77,22 @@ function showbigphoto_klphotos_b(csxl=0){
         bljg=bljg+'<div id="div_bigphoto_caption" style="'+document.getElementById('textarea_calendar_css').value+'margin-left:'+border_size_t+'px;margin-right:'+border_size_t+'px;">';
         bljg=bljg+'<br />'+list_t.join('<br />')+'</div>';
     }
-        
+
+	var blo_tmp=document.getElementById('div_big_photo');
 	blo_tmp.innerHTML=bljg;
+	blo_tmp.style.display='block';
+    
     getExif_klphotos_b();
 
 	remove_info_klphotos_b(big_photo_id_t);
 	
-	blo_tmp.style.display='block';
     //---
     var oimg=document.getElementById('img_big');
-    if (oimg){
-        var rect=oimg.getBoundingClientRect();
+    oimg.onload = function(){
+        let rect=oimg.getBoundingClientRect();
         blo_tmp.style.width=rect.width+'px';
         blo_tmp.style.height=rect.height+'px';  //否则div的大小和img的大小不完全匹配 - 保留注释
-    }
+    };
     //---
     slide_hide_show_objects_b(['div_top_bottom','div_klphotos_info','span_page_no1','span_page_no2','div_show_hide','h2_photo'],['div_grey_album','div_transparent']);
     
@@ -516,4 +517,21 @@ function thumbnail_klphotos_b(csno=0){
 	//var images = document.querySelectorAll(".img_thumb");
 	//lazyload(images); - 保留注释
 	document.location.href='#top';
+}
+
+// GPS坐标转换函数
+function parse_GPS_Coordinates_b(gps){
+    function sub_parse_GPS_Coordinates_b_convert(degrees, ref){
+        let decimal = degrees[0] + degrees[1]/60 + degrees[2]/3600;
+        return (ref === 'S' || ref === 'W') ? -decimal : decimal;
+    };
+
+    if (!gps.latitude || !gps.longitude){
+        return [false,false]
+    };
+
+    let lat=sub_parse_GPS_Coordinates_b_convert(gps.latitude, gps.latRef);
+    let lng=sub_parse_GPS_Coordinates_b_convert(gps.longitude, gps.lonRef);
+    
+    return [lat,lng];
 }

@@ -203,11 +203,16 @@ function file_date_compare_bigfile(){
     not_found.sort();
     full_found.sort();
     name_found.sort();
+
+    var left_strings1='<p>';
+    var textarea_str1=textarea_with_form_generate_b('textarea_not_found_file_list_bigfile','width:90%;height:10rem;',left_strings1,'清空,复制,加密,解密,发送到临时记事本,save as txt file,','</p>');
     
-    var left_strings='<p>';
-    var textarea_str=textarea_with_form_generate_b('textarea_found_file_list_bigfile','width:100%;height:10rem;',left_strings,'清空,复制,加密,解密,发送到临时记事本,发送地址,save as txt file,','</p>');
+    var left_strings2='<p>';
+    var textarea_str2=textarea_with_form_generate_b('textarea_found_file_list_bigfile','width:90%;height:10rem;',left_strings2,'清空,复制,加密,解密,发送到临时记事本,发送地址,save as txt file,','</p>');
         
-    document.getElementById('div_file_date_compare_bigfile').innerHTML='<h4>未发现的文件</h4>'+array_2_li_b(not_found)+'<h4>需要更新的文件</h4>'+array_2_li_b(name_found)+left_strings+textarea_str;
+    document.getElementById('div_file_date_compare_bigfile').innerHTML='<h4>未发现的文件('+not_found.length+')</h4>'+textarea_str1+'<h4>需要更新的文件</h4>'+array_2_li_b(name_found)+textarea_str2;
+    
+    document.getElementById('textarea_not_found_file_list_bigfile').value=not_found.join('\n');
     document.getElementById('textarea_found_file_list_bigfile').value=full_found.join('\n');
 }
 

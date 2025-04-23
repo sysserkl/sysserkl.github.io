@@ -130,6 +130,7 @@ function slice_klphotos(){
 function export_form_klphotos(){
     var bljg='<span class="aclick" onclick="export_array_klphotos();">导出全部数组</span>';
     bljg=bljg+'<span class="aclick" onclick="export_current_klphotos();">导出当前图片文件名</span>';
+    bljg=bljg+'<span class="aclick" onclick="extract_exif_from_urls();">导出当前图片坐标和日期</span>';
     return export_form_klphotos_b(bljg);
 }
 
@@ -617,4 +618,77 @@ function timeline_category_klphotos(){
     mouseover_mouseout_oblong_span_b(otd_l.querySelectorAll('span.oblong_box'));
     input_with_x_b('input_timeline_search',10);
     timeline_oneyear_klphotos(max_year);
+}
+
+async function extract_exif_from_urls(){
+    let result_t = [];
+    let error_list=[];
+    let imageUrls=array_split_by_col_b(photodata_global,[0]);
+
+    var blpath=album_current_global[2];
+    var old_title=document.title;
+    var bllen=imageUrls.length;
+    var blxl=0;
+    for (let url of imageUrls){
+        let bllink=(url.substring(0,4)=='http'?'':blpath)+url;
+        blxl=blxl+1;
+        document.title=blxl+'/'+bllen+' - '+old_title;
+        try {
+            let data = await load_image_and_get_exif(bllink);
+            result_t.push([url].concat(data).join(' /// '));
+        } catch (error){
+            console.error(`处理图片失败 [${url}]:`, error.message);
+            error_list.push([url,error.message]);
+        }
+    }
+    
+    document.title=old_title;
+    document.getElementById('textarea_export_klphotos').value=result_t.join('\n')+'\n\nerror:\n\n'+error_list.join('\n');
+}
+
+function load_image_and_get_exif(url){
+    function load_image_and_get_exif_date(exifDateString){
+        // EXIF日期格式通常为：YYYY:MM:DD HH:mm:ss
+        let parts = exifDateString.split(' ');
+        return parts[0].replace(/:/g, '-');
+    }
+    
+    return new Promise((resolve, reject) => {
+        let oimg = new Image();
+
+        oimg.onload = function(){
+            EXIF.getData(oimg, function(){
+                try {
+                    // 获取GPS信息
+                    let gps = {
+                        latitude: EXIF.getTag(this, 'GPSLatitude'),
+                        latRef: EXIF.getTag(this, 'GPSLatitudeRef'),
+                        longitude: EXIF.getTag(this, 'GPSLongitude'),
+                        lonRef: EXIF.getTag(this, 'GPSLongitudeRef'),
+                    };
+                    
+                    //gps 形如：Object { latitude: (3) […], latRef: "N", longitude: (3) […], lonRef: "E" } - 保留注释
+                    //latitude: Array(3) [ Number, Number, Number ]
+                    //0: Number { 28 }, 1: Number { 6 }, 2: Number { 41.778 }
+                    
+                    // 转换坐标格式
+                    let coordinates = parse_GPS_Coordinates_b(gps);
+
+                    // 获取日期信息
+                    let dateTimeOriginal = EXIF.getTag(this, 'DateTimeOriginal') || EXIF.getTag(this, 'CreateDate') || EXIF.getTag(this, 'ModifyDate');
+                    if (dateTimeOriginal){
+                        dateTimeOriginal=load_image_and_get_exif_date(dateTimeOriginal)
+                    }
+                    coordinates.push(dateTimeOriginal);
+                    
+                    resolve(coordinates);
+                } catch (e){
+                    reject(new Error('读取EXIF数据失败'));
+                }
+            });
+        };
+
+        oimg.onerror = () => reject(new Error('图片加载失败'));
+        oimg.src = url;
+    });
 }
