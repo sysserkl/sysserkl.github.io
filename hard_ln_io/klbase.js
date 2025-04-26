@@ -4194,6 +4194,19 @@ function load_js_var_one_by_one_b(data_files,csxl,run_fn=false,is_ok=true){
     }
 }
 
+function load_js_from_bigfile_b(varname,filename,run_fn=false,csmax=-1,cswait=100){
+    function sub_load_encoded_js_bigfile_b_test(csstr){
+        if (is_encoded){
+            csstr=bc_decode_b(csstr)[0];
+        }
+        style_generate_b(csstr,true,'script');
+        load_var_b(varname,run_fn,false,csmax,cswait);
+    }
+    
+    let is_encoded=file_is_encoded_b(filename)[2];
+    idb_bigfile_b('read','content',filename,sub_load_encoded_js_bigfile_b_test);
+}
+
 function load_js_var_file_b(varname,file_list,filename='',csfn=false,do_echo=true,direct_from_bigfile=false,csmax=-1,cswait=100,if_exist_then_run_fn=false){
     function sub_load_js_var_file_b_bigfile_test(cslist){
         if (cslist.length>0){
@@ -4756,4 +4769,17 @@ function code_file_ext_b(){
 function text_file_ext_b(){
     return ['.asp','.ass','.conf','.csv','.gpx','.ini','.json','.log',
             '.m3u','.pac','.prg','.srt','.ssa','.txt','.xml','.yaml',]; //和 KLfuns.py 中的函数对应 - 保留注释
+}
+
+function file_is_encoded_b(fname,is_do_decode=true){
+    let finfo=file_path_name_b(fname);
+    if (finfo[1].match(/_\$\$encoded$/)){
+        var is_encoded=true;
+        if (is_do_decode){
+            fname=finfo[1].replace(/_\$\$encoded$/,'')+'.'+finfo[2];
+        }
+    } else {
+        var is_encoded=false;
+    }
+    return [finfo,fname,is_encoded];
 }

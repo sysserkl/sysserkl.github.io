@@ -274,7 +274,7 @@ function idb_read_bigfile_b(db,do_type='',cskey='',run_fn=false){
             } else if (cskey=='' || cursor.value.name==cskey){
                 switch (do_type){
                     case 'eval':
-                        style_generate_b(cursor.value.content,true,dom_name='script');
+                        style_generate_b(cursor.value.content,true,'script');
                         //var odom = document.createElement('script');
                         //document.head.appendChild(odom);    
                         //odom.src=cursor.value.content; //此行保留 - 保留注释

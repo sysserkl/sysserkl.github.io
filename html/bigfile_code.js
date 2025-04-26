@@ -75,7 +75,9 @@ function menu_bigfile(){
     '<span class="span_menu" onclick="'+str_t+'refresh_bigfile();">refresh</span>',
     '<span class="span_menu" onclick="'+str_t+'clear_data_bigfile();">清空数据库</span>',
     '<span class="span_menu" onclick="'+str_t+'merge_files_bigfile();">合并导出当前文件内容</span>',
-    '<span id="span_encode_bigfile" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 导出时加密</span>',    
+    '<span id="span_encode_bigfile" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 导出时加密</span>',
+    '<span id="span_decode_bigfile" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 导入时解密</span>',    
+    
     '<span class="span_menu" onclick="'+str_t+'statistics_ext_bigfile();">当前条件文件扩展名统计</span>',
     ];
 
@@ -103,7 +105,8 @@ function menu_bigfile(){
 
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'𖧶','15rem','1rem','1rem','30rem')+'<span id="span_menu_htm_bigfile"></span>'+klmenu_b(klmenu_batch,'📦','19rem','1rem','1rem','30rem')+klmenu_b(klmenu_config,'⚙','19rem','1rem','1rem','30rem'),'','0rem')+' ');
     
-    klmenu_check_b('span_reg_bigfile',true);        
+    klmenu_check_b('span_reg_bigfile',true);
+    klmenu_check_b('span_decode_bigfile',true);
     first_source_set_bigfile(false);
 }
 
@@ -301,13 +304,8 @@ function upload_a_bigfile(){
             file_name_bigfile_global=file_name_bigfile_global.replace(reg_exp2,'$1');
         }
         
-        var finfo=file_path_name_b(file_name_bigfile_global);
-        if (finfo[1].match(/_\$\$encoded$/)){
-            is_encoded=true;
-            file_name_bigfile_global=finfo[1].replace(/_\$\$encoded$/,'')+'.'+finfo[2];
-        } else {
-            is_encoded=false;
-        }
+        var finfo;
+        [finfo,file_name_bigfile_global,is_encoded]=file_is_encoded_b(file_name_bigfile_global,is_do_decode);
         return [true,finfo];
     }
 
@@ -330,7 +328,7 @@ function upload_a_bigfile(){
     function sub_upload_a_bigfile_one_step(){
         var is_ok,finfo;
         [is_ok,finfo]=sub_upload_a_bigfile_name_set();
-        if (!is_ok){return;}        
+        if (!is_ok){return;}
                 
         var textFileReader = new FileReader();
         if (text_file_ext_set.has('.'+finfo[2].toLowerCase())){
@@ -341,10 +339,10 @@ function upload_a_bigfile(){
         
         textFileReader.onload = function (){
             var blcontent=this.result;
-            if (is_encoded){
+            if (is_do_decode && is_encoded){
                 blcontent=bc_decode_b(blcontent)[0];
             }
-                
+            
             if (do_split){
                 sub_upload_a_bigfile_split_content(blcontent);
             } else {
@@ -395,6 +393,7 @@ function upload_a_bigfile(){
     var reg_exp1=/\s*\(\d+\)(\.[^\.]+)$/;   //同名文件(1) - 保留注释
     var reg_exp2=/\s*\(copy \d+\)(\.[^\.]+)$/;   //同名文件(copy 1) - 保留注释
     var is_encoded=false;
+    var is_do_decode=klmenu_check_b('span_decode_bigfile',false);
     var text_file_ext_set=new Set(code_file_ext_b().concat(text_file_ext_b()));
     sub_upload_a_bigfile_one_step();
 }

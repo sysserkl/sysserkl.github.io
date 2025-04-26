@@ -18,6 +18,7 @@ function menu_lt_f2f(){
     klmenu_config=klmenu_config.concat([
     '<span class="span_menu" onclick="'+str_t+'backup_lt_f2f();">edit/import/export</span>',
     '<span class="span_menu" onclick="'+str_t+'export_local_2_js_f2f();">导出缓存为js data文件</span>',
+    '<span id="span_encode_f2f" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 导出时加密</span>',
     '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'f2f\');">更新版本</span>',
     ]);
 
@@ -27,16 +28,31 @@ function menu_lt_f2f(){
     klmenu_check_b('span_reg_f2f',true);
 }
 
-function export_local_2_js_f2f(){
+function export_local_2_js_f2f(is_full=true){
     var result_t=[];
     for (let item of content_all_f2f_global){
-        if (item[2]!=='l'){continue;}
+        if (!is_full && item[2]!=='l'){continue;}
         result_t.push('["'+specialstr_j(item[0])+'","'+specialstr_j(item[1])+'","j"],');
     }
     if (result_t.length==0){return;}
     
-    if (!confirm('是否保存 '+result_t.length+' 条缓存记录为 f2f_data.js？')){return;}
-    string_2_txt_file_b('var content_raw_f2f_global=[\n'+result_t.join('\n')+'\n];\n','f2f_data.js','txt');
+    if (is_full){
+        var fname='';
+        if (!confirm('是否完整保存 '+result_t.length+' 条记录为 f2f_data.js？')){return;}
+    } else {
+        var fname='_update';
+        if (!confirm('是否增量保存 '+result_t.length+' 条缓存记录为 f2f'+fname+'_data.js？')){return;}
+    }
+    
+    let blcontent='var content_raw_f2f_global=[\n'+result_t.join('\n')+'\n];\n';
+    if (klmenu_check_b('span_encode_f2f',false)){
+        blcontent=bc_encode_b(blcontent)[0];
+        var save_name='f2f'+fname+'_data_$$encoded.js';
+    } else {
+        var save_name='f2f'+fname+'_data.js';
+    }
+    
+    string_2_txt_file_b(blcontent,save_name,'txt');
 }
 
 function backup_lt_f2f(){
@@ -301,7 +317,8 @@ function init_f2f(){
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.4rem'));
     recent_f2f();
 
-    load_js_var_file_b('content_raw_f2f_global',[],'f2f_data.js',sub_init_f2f_done,true,true);  //只支持 js 文件从 bigfile 直接导入 - 保留注释
+    load_js_from_bigfile_b('content_raw_f2f_global','f2f_data_$$encoded.js',sub_init_f2f_done);
+    //load_js_var_file_b('content_raw_f2f_global',[],'f2f_data_$$encoded.js',sub_init_f2f_done,true,true);  //只支持 js 文件从 bigfile 直接导入，此行保留 - 保留注释
 }
 
 function search_f2f(cskey=false){
