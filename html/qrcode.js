@@ -111,27 +111,9 @@ function background_img_merge_klqr(ocanvas,oimg){
     var idata = iimageData.data;
     
     var blleft=parseFloat(document.getElementById('bg_left_klqr').value.trim());
-    if (isNaN(blleft) || blleft==-1){
-        blleft=Math.max(0,(icanvas.width-ocanvas.width)/2);
-    } else if (blleft>0 && blleft<1){
-        blleft=icanvas.width*blleft;
-    } else if (blleft<0 && blleft>-1){
-        blleft=Math.max(0,icanvas.width*(1+blleft)-ocanvas.width);
-    } else if (blleft<-1){
-        blleft=Math.max(0,icanvas.width+blleft-ocanvas.width);
-    }
-    
     var bltop=parseFloat(document.getElementById('bg_top_klqr').value.trim());
-    if (isNaN(bltop) || bltop==-1){        
-        var bltop=Math.floor(Math.max(0,(icanvas.height-ocanvas.height)/2));
-    } else if (bltop>0 && bltop<1){
-        bltop=icanvas.height*bltop;
-    } else if (bltop<0 && bltop>-1){
-        bltop=Math.max(0,icanvas.height*(1+bltop)-ocanvas.height);
-    } else if (bltop<-1){
-        bltop=Math.max(0,icanvas.height+bltop-ocanvas.height);        
-    }     
-            
+    [blleft,bltop]=container_subdom_left_top_b(icanvas,ocanvas,blleft,bltop);
+    
     var col_end=blleft+ocanvas.width;
     var row_end=bltop+ocanvas.height;
     
@@ -155,7 +137,7 @@ function background_img_merge_klqr(ocanvas,oimg){
                 idata[blxl+1]=nrgb['g'];
                 idata[blxl+2]=nrgb['b'];
             }
-            odata_no=odata_no+4;                
+            odata_no=odata_no+4;
         }
         col_no=col_no+1;
     }

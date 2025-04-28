@@ -347,12 +347,14 @@ function option_generate_klr2(){
     var list_t=[
     '["+——《》"],',
     '"+",',
-
     ];
-    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
-        list_t[blxl]='<option>'+list_t[blxl]+'</option>';
-    }
-    document.getElementById('select_leaflet_insert_common').innerHTML=list_t.join('\n');
+    document.getElementById('select_leaflet_insert_common').innerHTML=list_2_option_b(list_t);
+    
+    var list_t=[
+    '^.*?(/.*/)((save|待整理)-\\d*-[ab]|待看\\d*(副本)?)/.*$+$1$2',
+    '^===\\d*===$',
+    ];
+    document.getElementById('select_leaflet_replace_common').innerHTML=list_2_option_b(list_t);
 }
 
 function init_klr2(){
@@ -389,13 +391,16 @@ function init_klr2(){
     temp_save_klr2('read');
 }
 
+function replace_common_klr2(){
+    var blstr=document.getElementById('select_leaflet_replace_common').value;
+    if (blstr==''){return;}
+    inputs_insert_value_from_str_b('rep1','rep2',blstr);
+}
+
 function insert_common_klr2(){
     var blstr=document.getElementById('select_leaflet_insert_common').value;
     if (blstr==''){return;}
-    var list_t=blstr.split('+');
-    list_t.push('');
-    document.getElementById('taddstr1').value=list_t[0];
-    document.getElementById('taddstr2').value=list_t[1];
+    inputs_insert_value_from_str_b('taddstr1','taddstr2',blstr);
 }
 
 function leaflet_en_buttons_klr2(){
