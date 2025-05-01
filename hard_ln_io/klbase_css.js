@@ -2140,6 +2140,18 @@ function select_prev_or_next_b(oselect,cstype,filter_visible=false){
     return bldone;
 }
 
+function select_first_visible_option_b(oselect,ooptions=false){
+    if (ooptions===false){
+        ooptions=oselect.querySelectorAll('option');
+    }
+    
+    for (let blxl = 0,lent= ooptions.length; blxl<lent; blxl++){
+        if (ooptions[blxl].style.display == 'none'){continue;}
+        oselect.selectedIndex = blxl;
+        break;
+    }
+}
+
 function character_2_icon_b(csstr,cssize=24,line_width=5,mobile_style=true,change_ico=true,csfill='#cecece'){
     function sub_character_2_icon_b_num_get(csstr){
         if (isNaN(csstr)){

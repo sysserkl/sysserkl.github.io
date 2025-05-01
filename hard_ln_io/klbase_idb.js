@@ -339,28 +339,75 @@ function idb_count_bigfile_b(db){
 }
 
 function idb_menu_generate_bigfile_b(cstype,select_id_name,csparent,import_fn_name){
-    return '<span class="span_menu"><span class="span_link" onclick="window.open(\'bigfile.htm\');">bigfile</span>: <select id="'+select_id_name+'" style="max-width:12rem;height:2rem;" onclick="idb_option_generate_bigfile_b(\''+cstype+'\',\''+select_id_name+'\');"></select> <span class="aclick" onclick="'+csparent+import_fn_name+'();">导入</span></span>';
+    return '<span class="span_menu"><span class="span_link" onclick="window.open(\'bigfile.htm\');">bigfile</span>: <select id="'+select_id_name+'" style="width:12rem;height:2rem;" onclick="idb_option_generate_bigfile_b(\''+cstype+'\',this);" onchange="idb_option_clear_bigfile_b(\''+cstype+'\',this);"></select><br /><input type="text" class="input_filter_idb_menu_bigfile" title="筛选" placeholder="筛选" style="width:11rem;" value="" onkeyup="if (event.key==\'Enter\'){idb_option_clear_bigfile_b(\''+cstype+'\',\''+select_id_name+'\',true);}" /> <span class="aclick" onclick="'+csparent+import_fn_name+'();">导入</span></span>';
 }
 
-function idb_option_generate_bigfile_b(cstype,select_id_name){
+function idb_option_clear_bigfile_b(cstype,oselect,do_refresh=false){
+    if (typeof oselect=='string'){
+        oselect=document.getElementById(oselect);
+    }
+
+    if (oselect.value=='重新载入'){
+        oselect.innerHTML='';
+        idb_option_generate_bigfile_b(cstype,oselect);
+    } else if (do_refresh){
+        idb_option_generate_bigfile_b(cstype,oselect);
+    }
+}
+
+function idb_option_generate_bigfile_b(cstype,oselect){
+    function sub_idb_option_generate_bigfile_b_style(arow){
+        let blfound=str_reg_search_b(arow,filter_str,is_reg);
+        if (filter_str=='' || blfound){
+            return '';
+        } else {
+            return 'none';
+        }
+    }
+    
+    function sub_idb_option_generate_bigfile_b_filter(){
+        for (let blxl=0,lent=ooptions.length;blxl<lent-2;blxl++){
+            let one_option=ooptions[blxl];
+            let blstr=one_option.innerText;
+            let blstyle=sub_idb_option_generate_bigfile_b_style(blstr);
+            one_option.style.display=blstyle;
+        }
+        select_first_visible_option_b(oselect,ooptions);
+    }
+    
     function sub_idb_option_generate_bigfile_b_html(csarr){
         csarr.sort(zh_sort_b);
         if (cstype=='book'){
             for (let blxl=0,lent=csarr.length;blxl<lent;blxl++){
-                csarr[blxl]='<option value="'+csarr[blxl][0]+'">'+csarr[blxl][1]+'</option>';
-            }        
+                let blstyle=sub_idb_option_generate_bigfile_b_style(csarr[blxl]);
+                csarr[blxl]='<option value="'+csarr[blxl][0]+'" style="display:'+blstyle+'">'+csarr[blxl][1]+'</option>';
+            }
         } else {
             for (let blxl=0,lent=csarr.length;blxl<lent;blxl++){
-                csarr[blxl]='<option>'+csarr[blxl]+'</option>';
+                let blstyle=sub_idb_option_generate_bigfile_b_style(csarr[blxl]);
+                csarr[blxl]='<option style="display:'+blstyle+'">'+csarr[blxl]+'</option>';
             }
         }
         
         csarr.push('<option>手动输入 bigfile '+cstype+' 文件名</option>');
-        var oselect=document.getElementById(select_id_name);
+        csarr.push('<option>重新载入</option>');
+
         oselect.innerHTML=csarr.join('\n');
+        ooptions=oselect.querySelectorAll('option');    //刷新option数组 - 保留注释
         oselect.removeAttribute('onclick');
+        select_first_visible_option_b(oselect,ooptions);
     }
-    idb_bigfile_b('read',cstype+'list','',sub_idb_option_generate_bigfile_b_html);  //此处自动在类型后添加 list - 保留注释
+    
+    var filter_str=oselect.parentNode.querySelector('input.input_filter_idb_menu_bigfile').value.trim();
+    var is_reg=false;
+    [filter_str,is_reg]=str_reg_check_b(filter_str,is_reg);
+    
+    var ooptions=oselect.querySelectorAll('option');
+    if (ooptions.length==0){
+        idb_bigfile_b('read',cstype+'list','',sub_idb_option_generate_bigfile_b_html);  //此处自动在类型后添加 list - 保留注释
+    } else {
+        sub_idb_option_generate_bigfile_b_filter();
+    }
 }
 
 function idb_edit_bigfile_b(db,do_type='',cskey='',run_fn=false){
