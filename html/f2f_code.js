@@ -346,6 +346,8 @@ function search_f2f(cskey=false){
             }
         }
     }
+    
+    result_percent_b('span_count',content_current_f2f_global.length,content_all_f2f_global.length,1);
     page_f2f(1);
 }
 

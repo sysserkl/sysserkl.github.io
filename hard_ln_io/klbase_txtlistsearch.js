@@ -350,12 +350,15 @@ function txtmenus_kltxt_b(cstype=''){
         
     menu_general=menu_general.concat([
     '<span id="span_add_zero_reading_lines_txtlistsearch" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 阅读行数补零</span>',
-    '<span class="span_menu" onclick="'+str_t+'getlines_kltxt_b();">返回阅读页面</span>',
     '<span class="span_menu" onclick="'+str_t+'new_words_kltxt_b([2],\'exclude\',true);">当前页面不在例句中的生词</span>',
-    //'<span class="span_menu" onclick="'+str_t+'new_words_lines_kltxt_b(1,1);">仅有1个新单词的行</span>',
-    //'<span class="span_menu" onclick="'+str_t+'new_words_lines_kltxt_b(0,0);">无新单词的行</span>',
     ]);    
 
+    var group_list=[
+    ['返回阅读页面','getlines_kltxt_b();',true],
+    ['溢出调整','content_horizontal_overflow_check_kltxt_b();',true],
+    ];    
+    menu_general.push(menu_container_b(str_t,group_list,''));
+    
     var group_list=[
     ['仅有1个新单词','new_words_lines_kltxt_b(1,1);',true],
     ['无新单词','new_words_lines_kltxt_b(0,0);',true],
@@ -540,6 +543,12 @@ function txtmenus_kltxt_b(cstype=''){
     }
     bljg=bljg+'<span id="span_for_more_menu_kltxt"></span>';
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(bljg,'','0rem')+' ');
+}
+
+function content_horizontal_overflow_check_kltxt_b(){
+    var ocontainer=document.getElementById('divhtml');
+    var ospans=ocontainer.querySelectorAll('span.txt_content');
+    doms_horizontal_overflow_check_b(ocontainer,ospans);
 }
 
 function line_no_show_hide_kltxt_b(is_dry=false,ocontainer=false){
