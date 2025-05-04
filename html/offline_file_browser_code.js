@@ -784,9 +784,11 @@ function diff_all_offline_file_browser(){
         
         var str_t='';
         if (list_diff1.length>0){
+            list_diff1.sort();
             str_t=str_t+'<h2>'+diskname1+' '+list_t[blxl]+' 拥有但 '+diskname2+' '+list_t[blxl+1]+' 不存在</h2>'+array_2_li_b(list_diff1);
         }
         if (list_diff2.length>0){
+            list_diff2.sort();
             str_t=str_t+'<h2>'+diskname2+' '+list_t[blxl+1]+' 拥有但 '+diskname1+' '+list_t[blxl]+' 不存在</h2>'+array_2_li_b(list_diff2);    
         }
         if (str_t!==''){

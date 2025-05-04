@@ -64,7 +64,7 @@ function en_font_set_b(csno=''){
 }
 
 function enword_type_b(return_reg=false){
-    var list_t=['adj', 'adv', 'art', 'vt', 'vi', 'phrase', 'pron', 'prep', 'pref', 'suf', 'conj', 'noun', 'idiom','num', 'abbr', 'int', 'contr', 'v', 'n'];
+    var list_t=['adj', 'adv', 'art', 'det','vt', 'vi', 'phrase', 'pron', 'prep', 'pref', 'suf', 'conj', 'noun', 'idiom','num', 'abbr', 'int', 'contr', 'v', 'n'];
     if (return_reg){
         return list_join_2_reg_style_b(list_t);
     }
