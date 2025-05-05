@@ -2581,17 +2581,28 @@ function txtsearch_list_kltxt_b(csword,csreg,csmaxlines,start_lineno=0,end_linen
     return result_t;
 }
 
-function rare_enwords_search_kltxt_b(show_rare_word=false,import_sentence=false,show_new_word=false){
+function rare_enwords_search_kltxt_b(show_rare_word=false,import_sentence=false,show_new_word=false,do_search=true,scan_rare=false){
     function sub_rare_enwords_search_kltxt_b_new(){
+        var type_list=[];
         if (show_new_word){
-            new_words_kltxt_b([2],'exclude',true);
-        }    
+            type_list.push(2);
+        }
+        if (scan_rare){
+            type_list.push(5);
+        }
+        if (type_list.length>0){
+            new_words_kltxt_b(type_list,'exclude',true);
+        }
     }
     
     function sub_rare_enwords_search_kltxt_b_done(is_ok=true){
         if (is_ok){
-            var blstr='-class="kleng" -eword +\\b('+en_sentence_count_global.join('|')+')\\b';
-            txtsearch_kltxt_b(blstr,true,-1,false,sub_rare_enwords_search_kltxt_b_new);
+            if (do_search){
+                var blstr='-class="kleng" -eword +\\b('+en_sentence_count_global.join('|')+')\\b';
+                txtsearch_kltxt_b(blstr,true,-1,false,sub_rare_enwords_search_kltxt_b_new);
+            } else {
+                sub_rare_enwords_search_kltxt_b_new();
+            }
         }
     }
     

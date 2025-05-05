@@ -1246,6 +1246,7 @@ function local_storage_get_b(csid,csmax=-1,return_list=false,remove_item='',isre
     if (csmax<=0 && return_list===false && remove_item.length==0){
         return bljg;
     }
+    
     var list_t=bljg.split('\n');
     if (csmax>0){
         list_t=list_t.slice(0,csmax);

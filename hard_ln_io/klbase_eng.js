@@ -2082,6 +2082,11 @@ function enwords_mini_search_b(csword=''){
                     search_load_websites_b(csword,csreg,-1,function(cslist){osession.innerHTML=cslist.join('\n');});
                 }
                 break;
+            case 'statistics':
+                if (typeof statistics_mini_b == 'function'){
+                    osession.innerHTML=statistics_mini_b(csword,csreg,2);
+                }
+                break;
             case 'readlater':
                 if (typeof search_websites_rlater == 'function' && csword!=='' && csword!=='.*'){
                     osession.innerHTML='<ol>'+search_websites_rlater(csword,false,20,false,true,false,25,csreg,true).join('\n')+'</ol>';
@@ -2173,6 +2178,11 @@ function enwords_mini_search_frame_form_b(cstype='s'){
 
         if (typeof search_load_websites_b == 'function'){
             radios=radios+'<label><input type="radio" name="checkbox_mini_search_type">网址库</label> ';    
+            radio_count=radio_count+1;
+        }
+
+        if (typeof statistics_mini_b == 'function'){
+            radios=radios+'<label><input type="radio" name="checkbox_mini_search_type">statistics</label> ';
             radio_count=radio_count+1;
         }
         

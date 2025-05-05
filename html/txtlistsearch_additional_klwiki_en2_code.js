@@ -7,11 +7,16 @@ function menu_more_kltxt_klwiki_en2(){
     '<span class="span_menu" onclick="'+str_t+'days_kltxt_klwiki_en2();">今日段落阅读</span>',
     '<span class="span_menu" onclick="'+str_t+'batch_search_form_kltxt_klwiki_en2();">单词批量查找</span>',
     '<span class="span_menu" onclick="'+str_t+'common_rare_old_words_kltxt_klwiki_en2();">当前范围常见稀有旧单词</span>',
-    '<span class="span_menu" onclick="'+str_t+'first_rare_old_words_kltxt_klwiki_en2();">page页面第一个出现的稀有旧单词</span>',
     '<a href="../jsdata/words/enwords_sentence_data.js'+file_date_parameter_b()+'" onclick="'+str_t+'" target=_blank>enwords_sentence_data.js</a>',    
     
     ];
 
+    var group_list=[
+    ['page页面第一个出现的稀有旧单词','first_rare_old_words_kltxt_klwiki_en2();',true],
+    ['&批量查找','first_rare_old_words_kltxt_klwiki_en2(true);',true],    
+    ];    
+    klmenu1.push(menu_container_b(str_t,group_list,''));
+    
     var group_list=[
     ['最长','rows_len_rank_kltxt_klwiki_en2(\'最长\');',true],
     ['最短','rows_len_rank_kltxt_klwiki_en2(\'最短\');',true],    
@@ -130,7 +135,7 @@ function rare_words_kltxt_klwiki_en2(run_fn=false){
     txtsearch_kltxt_b('\\(-[^\\(\\)]+\\)$ \\s-[^\\(\\)]+\\)$(:r)',-1,-1,true,run_fn); //-可能出现在(后或空格后 - 保留注释
 }
 
-function first_rare_old_words_kltxt_klwiki_en2(){
+function first_rare_old_words_kltxt_klwiki_en2(batch_search=false){
     var t0 = performance.now();
     var result_t=new Set();
     var selected_rows=[];
@@ -138,13 +143,11 @@ function first_rare_old_words_kltxt_klwiki_en2(){
     [start_lineno,end_lineno,blmax]=start_end_lineno_kltxt_b();
 
     var page_name='';
-    //var page_no=-1;
     for (let blxl=start_lineno;blxl<end_lineno;blxl++){
         var arow=filelist[blxl];
         var page_check=(arow.match(/^=== (.*) ===$/) || ['',''])[1];
         if (page_check!==''){
             page_name=page_check;
-            //page_no=blxl;
             continue;
         }
         
@@ -164,19 +167,25 @@ function first_rare_old_words_kltxt_klwiki_en2(){
         if (result_t.size>blmax){break;}
         page_name='';
 
-        //selected_rows.push([filelist[page_no],page_no]);
         selected_rows.push([filelist[blxl],blxl]);
     }
     
-    lines_2_html_kltxt_b(selected_rows);
-    render_html_kltxt_b(result_t);
-    menu_insert_kltxt_b(1);
-    
     en_word_temp_get_b();
 
-    var button='<p>'+close_button_b('divhtml2','')+'</p>';
-    document.getElementById('divhtml2').innerHTML='<div style="margin:2rem;"><h4>'+result_t.size+'</h4>'+enwords_js_wiki_textarea_b(result_t,'str')+button+'</div>';
-    
+    if (batch_search){
+        var run_fn=function (){
+            rare_enwords_search_kltxt_b(true,true,false,false,true);
+        };
+        batch_search_result_kltxt_klwiki_en2(Array.from(result_t).join('\n'),[],false,run_fn);
+    } else {
+        lines_2_html_kltxt_b(selected_rows);
+        render_html_kltxt_b(result_t);    
+        menu_insert_kltxt_b(1);
+        
+        var button='<p>'+close_button_b('divhtml2','')+'</p>';
+        document.getElementById('divhtml2').innerHTML='<div style="margin:2rem;"><h4>'+result_t.size+'</h4>'+enwords_js_wiki_textarea_b(result_t,'str')+button+'</div>';
+    }
+
     console.log('first_rare_old_words_kltxt_klwiki_en2() 费时：'+(performance.now() - t0) + ' milliseconds');
 }
 
@@ -321,11 +330,16 @@ function selective_default_value_kltxt_klwiki_en2(){
     document.getElementById('input_selective_words_kltxt_klen2').value=['-^(\\d|\\*|\\[)','-[“”（）">]', '-https?:','-&gt;','-:$'].join(' '); //忽略数字或星号或方括号开头，忽略引号、括号和>，忽略链接，忽略:结尾 - 保留注释
 }
 
-function batch_search_result_kltxt_klwiki_en2(){
-    var list_t=array_unique_b(document.getElementById('textarea_batch_search_words_kltxt_klen2').value.trim().replace(/ /g,'\\s').split('\n')); 
-
-    var more_filter=document.getElementById('input_selective_words_kltxt_klen2').value.trim().split(' ');
-
+function batch_search_result_kltxt_klwiki_en2(csstr=false,more_filter=false,cshighlight=true,run_fn=false){
+    if (csstr===false){
+        cssstr=document.getElementById('textarea_batch_search_words_kltxt_klen2').value;
+    }
+    var list_t=array_unique_b(csstr.trim().replace(/ /g,'\\s').split('\n')); 
+    
+    if (more_filter===false){
+        more_filter=document.getElementById('input_selective_words_kltxt_klen2').value.trim().split(' ');
+    }
+    
     var blwordlist=[];
     for (let item of list_t){
         item=item.trim();
@@ -345,7 +359,7 @@ function batch_search_result_kltxt_klwiki_en2(){
     var result_t=txtsearch_list_kltxt_b(csword,true,blmax,start_lineno,end_lineno,false);
     lines_2_html_kltxt_b(result_t);
 
-    render_html_kltxt_b(blwordlist);
+    render_html_kltxt_b(blwordlist,true,cshighlight,false,false,run_fn,false);
     menu_insert_kltxt_b(1);
 }
 

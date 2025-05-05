@@ -561,6 +561,58 @@ function statistics_div_idname_b(item,csxl){
     return 'div_progress_'+item[5]+'_'+csxl;
 }
 
+function statistics_mini_b(cskey='',csreg=false,csmax=-1){
+    [cskey,csreg]=str_reg_check_b(cskey,csreg);
+
+    var data_type=['enwords','miscellaneous'];
+    
+    var idlist=[];
+    for (let one_type of data_type){
+        idlist=idlist.concat(statistics_data_type_b(one_type));
+    }
+    
+    idlist=statistics_idlist_format_b(idlist);
+    idlist.sort(function (a,b){return zh_sort_b(a,b,false,1);});
+    
+    var result_t=[];
+    for (let blxl=0,lent=idlist.length;blxl<lent;blxl++){
+        var item=idlist[blxl];
+        var blfound=str_reg_search_b(item,cskey,csreg);
+        if (blfound==-1){break;}
+        if (blfound==false){continue;}
+
+        if (Array.isArray(item[0])){
+            var list_t=item[0];
+            if (csmax>0){
+                list_t=list_t.slice(0,csmax);
+            }
+        } else {
+            var list_t=local_storage_get_b(item[0],csmax,true);
+        }
+        
+        var value_col=(item.length>=5?item[4]:1);
+
+        var date_value_list=[];
+        for (let arow of list_t){
+            arow=arow.split(item[3]);
+            if (arow.length<value_col+1){continue;}
+            arow[value_col]=parseFloat(arow[value_col]);
+            date_value_list.push([arow[0],arow[value_col],'']);
+        }
+        
+        for (let blno=0,lenb=date_value_list.length;blno<lenb-1;blno++){
+            date_value_list[blno][2]=(date_value_list[blno][1]-date_value_list[blno+1][1]).toFixed(item[2]);
+        }
+        
+        for (let blno=0,lenb=date_value_list.length;blno<lenb;blno++){        
+            date_value_list[blno]='<tr><td>'+date_value_list[blno][0]+'</td><td align=right>'+date_value_list[blno][1]+'</td><td align=right>'+date_value_list[blno][2]+'</td></tr>';
+        }
+        
+        result_t.push('<tr><td colspan=3><b>'+item[1]+'</b></td></tr>\n'+date_value_list.join('\n'));
+    }
+    return '<table class="table_common">'+result_t.join('')+'</table>';
+}
+
 function statistics_draw_b(data_type,idname='divhtml',show_table=false,date_min=false,date_max=false,max_lines=false,cols=2,section_w='810px',table_w='125%',div_h='500px',add_today=false,selected_items_filter='',flot_type=''){
     function sub_statistics_draw_b_oneline(arow){
         var csname=arow[0];
@@ -600,6 +652,7 @@ function statistics_draw_b(data_type,idname='divhtml',show_table=false,date_min=
     } else {
         var idlist=statistics_data_type_b(data_type,selected_items_filter);
     }
+    
     idlist=statistics_idlist_format_b(idlist);
     //idlist 元素形如：[ [ "2021-07-04/543/100640", "2021-07-11/555/100954", … ], "全部代码文件个数", 0, "/", 1, "old_code_count" ] - 保留注释
     //或形如：[ "local_storage_used_length", "local storage 使用量(KiB)", 2, ":", 1, "local_storage_used_length" ] - 保留注释
@@ -613,7 +666,6 @@ function statistics_draw_b(data_type,idname='divhtml',show_table=false,date_min=
                 bljg=bljg+'<section style="width:'+section_w+';overflow:auto;">';
             }
             bljg=bljg+'<table width='+table_w+'><tr><td valign=top width=1 height=50%>'+str_t+'</td><td valign=top width=99%>'+sub_statistics_draw_b_flot_div(item,blxl,'100%',div_h,false)+'</td></tr></table>';//table 的 width 可以大于 100% - 保留注释
-            //+'<div style="width:100%;height:'+div_h+';" id="'+statistics_div_idname_b(item,blxl)+'" class="div_statistics_plot_b"></div>';
             if (ismobile){
                 bljg=bljg+'</section>';
             }
@@ -624,7 +676,6 @@ function statistics_draw_b(data_type,idname='divhtml',show_table=false,date_min=
             var item=idlist[blxl];
             [str_t,oneline_list]=sub_statistics_draw_b_oneline(item);
             bljg=bljg+sub_statistics_draw_b_flot_div(item,blxl,blwidth+'px',blheight+'px',true);
-            //+'<div style="position:relative;float:left; width:'+blwidth+'px;height:'+blheight+'px;" id="'+statistics_div_idname_b(item,blxl)+'" class="div_statistics_plot_b"></div>';
             lines_list.push(oneline_list);
         }
     }
