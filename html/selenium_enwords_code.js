@@ -299,6 +299,7 @@ function title_words_seen(){
 
 function rare_words_seen(){
     var word_dict=selenium_enwords_count_enbook_b();
+    //word_dict 形如：Object { w_remediated: 6, w_revalidate: 1, w_unintuitive: 15, w_changelogs: 3, w_scalability: 47, w_unmoderated: 8, w_datatypes: 1, w_exmples: 1, w_observability: 28, w_parsers: 8, … } - 保留注释
     rare_score_seen(word_dict,3);
 }
 

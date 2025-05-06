@@ -332,7 +332,7 @@ function selective_default_value_kltxt_klwiki_en2(){
 
 function batch_search_result_kltxt_klwiki_en2(csstr=false,more_filter=false,cshighlight=true,run_fn=false){
     if (csstr===false){
-        cssstr=document.getElementById('textarea_batch_search_words_kltxt_klen2').value;
+        csstr=document.getElementById('textarea_batch_search_words_kltxt_klen2').value;
     }
     var list_t=array_unique_b(csstr.trim().replace(/ /g,'\\s').split('\n')); 
     
