@@ -2749,3 +2749,25 @@ function inputs_insert_value_from_str_b(id1,id2,csstr,delimiter='+'){
     document.getElementById(id1).value=list_t[0];
     document.getElementById(id2).value=list_t[1];
 }
+
+function remove_img_alt_b(){
+    var oimgs=document.querySelectorAll('img');
+    var blcount_alt=0;
+    var blcount_title=0;
+    for (let one_img of oimgs){
+        var blalt=one_img.getAttribute('alt');
+        if (blalt){
+            console.log('remove alt:',blalt);
+            one_img.removeAttribute('alt');
+            blcount_alt=blcount_alt+1;
+        }
+
+        var bltitle=one_img.getAttribute('title');
+        if (bltitle){
+            console.log('remove title:',bltitle);        
+            one_img.removeAttribute('title');
+            blcount_title=blcount_title+1;
+        }
+    }
+    console.log('获取图片对象',oimgs.length,'个，移除 alt',blcount_alt,'个，移除 title',blcount_title,'个');
+}

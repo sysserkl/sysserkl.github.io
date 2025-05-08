@@ -512,8 +512,6 @@ function rectangle_gps_points(csstr,dotransform=true,layertype='navigation',dopa
         }
         
         var item=list_t[blxl];
-        var onerect=item.split(',');
-
         if (typeof item =='string'){
             var onerect=item.split(',');
             if (onerect.length<3){
@@ -1712,12 +1710,15 @@ function arg_from_textarea_gps_points(){
     var list_t=document.getElementById('textarea_gps_points').value.trim().split('\n');
     var circle_list=[];
     var rect_list=[];
-        
+    var character_list=[];
+    
     for (let arow of list_t){
         if (arow.substring(0,7)=='circle='){
             circle_list=circle_list.concat(arow.substring(7,).split(';'));
         } else if (arow.substring(0,10)=='rectangle='){
             rect_list=rect_list.concat(arow.substring(10,).split(';'));
+        } else if (arow.substring(0,10)=='character='){
+            character_list=character_list.concat(arow.substring(10,).split(';'));
         }
     }
     
@@ -1729,6 +1730,11 @@ function arg_from_textarea_gps_points(){
     if (rect_list.length>0){
         rectangle_gps_points(rect_list,true,'navigation',true,old_title);
     }
+    
+    if (character_list.length>0){
+        rectangle_gps_points(character_list,true,'navigation',true,old_title);
+    }
+    
 }
 
 function map_resize_gps_points(window_h=false,is_simple=false,map_resize=false,set_selection=false){

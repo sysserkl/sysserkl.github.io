@@ -722,7 +722,7 @@ function character_leaflet_b(character,omap,islayer, cslng, cslat, sideLength,cs
         iconSize: [sideLength, sideLength], // 图标大小
     });
 
-    // 在指定坐标添加标记
+    // 在指定坐标添加文字标记 - 保留注释
     var omarker=L.marker([cslat, cslng], { icon: customIcon});
     
     if (islayer){

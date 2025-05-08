@@ -1,4 +1,11 @@
 var csbooklist_source_global=[
+["the_strange_case_of_dr_jamh_3647", "The Strange Case of Dr. Jekyll and Mr. Hyde(Robert Louis Stevenson)","已整理,englishwords","3",""],
+["simple_sabotage_field_manual_2610", "Simple Sabotage Field Manual(United States. Office of Strategic Services)","已整理,englishwords","3",""],
+["memoirs_of_fanny_hill_a_nageftotl1_7382", "Memoirs of Fanny Hill  A New and Genuine Edition from the Original Text (London, 1749)(John Cleland)","已整理,englishwords","3",""],
+["emmajane_austen_384", "Emma(Jane Austen)","已整理,englishwords","3",""],
+["venus_in_furs_1224", "Venus in Furs(Ritter von Leopold Sacher-Masoch)","已整理,englishwords","3",""],
+["the_satyricon_complete_10378", "The Satyricon — Complete(Petronius Arbiter)","已整理,englishwords","3",""],
+["oliver_twist_1196", "Oliver Twist(Charles Dickens)","已整理,englishwords","3",""],
 ["lady_chatterley_s_lover_2209", "Lady Chatterley's lover(D. H. Lawrence)","已整理,englishwords","3",""],
 ["guang_zhi_yi_wang_shi_xm_81188", "广志绎(王士性(明))","已整理","3",""],
 ["politics_a_treatise_on_government_3192", "Politics- A Treatise on Government(Aristotle)","已整理,englishwords","3",""],
