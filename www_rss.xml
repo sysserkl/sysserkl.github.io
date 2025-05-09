@@ -8,435 +8,62 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Thu, 08 May 2025 10:06:06 +0800</lastBuildDate>
-<item><title>The pecking order: talking about how important people are (1) - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2025/05/07/the-pecking-order-talking-about-how-important-people-are-1/</link></item>
-<item><title>New words – 5 May 2025 - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2025/05/05/new-words-5-may-2025/</link></item>
-<item><title>PowerSchool paid thieves to delete stolen student, teacher data. Crooks may have lied - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/08/powerschool_data_extortionist/</link></item>
-<item><title>After that 2024 Windows fiasco, CrowdStrike has a plan – jobs cuts, leaning on AI - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/07/crowdstrike_trims_workforce_ai/</link></item>
-<item><title>India ready to greenlight Starlink – as long as it lets New Delhi censor, snoop - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/07/india_satellite_internet_regs_starlink/</link></item>
-<item><title>Apple exec sends Google shares plunging as he calls AI the new search - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/07/google_apple_cue/</link></item>
-<item><title>Google tries to greenwash massive AI energy consumption with another vague nuclear deal - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/07/google_signs_another_nuclear_deal/</link></item>
-<item><title>Delta Air Lines class action cleared for takeoff over CrowdStrike chaos - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/07/delta_crowdstrike_class_action/</link></item>
-<item><title>You&amp;#39;ll never guess which mobile browser is the worst for data collection - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/07/mobile_browser_data_collection/</link></item>
-<item><title>Fedora 42 now an official Windows Subsystem for Linux 2 distro - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/07/fedora_42_wsl2_official/</link></item>
-<item><title>90-second Newark blackout exposes parlous state of US air traffic control - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/07/newark_airport_outage/</link></item>
-<item><title>Nutanix stops being so opinionated about where data must dwell - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/07/nutanix_next_cloud_native_shift/</link></item>
-<item><title>Human error and power glitches to blame for most outages - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/07/human_error_a_factor_in/</link></item>
-<item><title>Microsoft updates the Windows 11 Start Menu - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/07/microsoft_updates_the_windows_11/</link></item>
-<item><title>NASA jettisons Neo4j database for Memgraph citing costs - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/07/nasa_people_memgraph/</link></item>
-<item><title>Curl project founder snaps over deluge of time-sucking AI slop bug reports - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/07/curl_ai_bug_reports/</link></item>
-<item><title>Microsoft moved the goalposts once. Will Windows 12 bring another shift? - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/07/microsoft_hardware_gates/</link></item>
-<item><title>Linux kernel to drop 486 and early 586 support - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/07/linux_kernel_drops_486/</link></item>
-<item><title>Top sci-fi convention gets an earful from authors after using AI to screen panelists - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/07/worldcon_uses_ai/</link></item>
-<item><title>Citrix finds new use for virtualization: Avoiding PC price hikes caused by tariffs - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/07/citrix_virtualisation_avoids_tariffs/</link></item>
-<item><title>New Zealand kind-of moves to ban social media for under-16s, require age checks for new accounts - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/07/new_zealand_kids_social_ban/</link></item>
-<item><title>Trump&amp;#39;s trade war with China to cost AMD $1.5B in lost rev - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/07/us_export_controls_on_instinct/</link></item>
-<item><title>Trump&amp;#39;s wind farm funding freeze is so much hot air, say states as they blow sueball to Washington - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/07/ags_sue_trump_wind_energy_freeze/</link></item>
-<item><title>Super spyware maker NSO must pay Meta $168M in WhatsApp court battle - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/06/nso_group_meta_verdict/</link></item>
-<item><title>Developer sues Apple to claw back commission payments - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/06/developer_sues_apple_commission_payment/</link></item>
-<item><title>Feeling dumb? Let Google&amp;#39;s latest AI invention simplify that wordy writing for you - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/06/google_releases_simplify/</link></item>
-<item><title>Computacenter IT guy let girlfriend into Deutsche Bank server rooms, says fired whistleblower - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/06/computacenter_deutsche_bank_whistleblower/</link></item>
-<item><title>FYI: Most AI spending driven by FOMO, not ROI, CEOs tell IBM, LOL - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/06/ibm_ai_investments/</link></item>
-<item><title>Microsoft burnishes green cred by paying Swedes to burn biomass and bury CO&amp;lt;sub&amp;gt;2&amp;lt;/sub&amp;gt; - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/06/microsoft_extends_carbon_removal_agreement/</link></item>
-<item><title>Pentagon declares war on &amp;#39;outdated&amp;#39; software buying, opens fire on open source - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/06/us_dod_software_procurement/</link></item>
-<item><title>From Russia with doubt: Go library&amp;#39;s Kremlin ties stoke fear - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/06/from_russia_with_doubt_go/</link></item>
-<item><title>EU tells US scientists to dump Trump for a lab in Europe - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/06/eu_us_science_scheme/</link></item>
-<item><title>Palantir loves the smell of DOGE budget cuts in the morning - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/06/palantir_loves_doge/</link></item>
-<item><title>Cerebras CEO actually finds common ground with Nvidia as startup notches IBM win - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/06/cerebras_ceo_blasts_us_trade/</link></item>
-<item><title>Windows 11 24H2 now &amp;#39;broadly available&amp;#39; ... complete with yet another &amp;#39;known issue&amp;#39; - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/06/windows_11_24h2_is_now/</link></item>
-<item><title>30 years of MySQL, the database that changed the world - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/06/30_years_mysql/</link></item>
-<item><title>Brain-inspired neuromorphic computer SpiNNaker overheated when coolers lost their chill - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/06/spinnaker_overheat/</link></item>
-<item><title>Culture comes first in cybersecurity. That puts cybersecurity on the front line in the culture wars - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/06/opinion_column/</link></item>
-<item><title>Commodore OS 3 is the loudest Linux yet - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/06/commodore_os_3/</link></item>
-<item><title>Infosec guru Schneier worries corp AI will manipulate us - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/06/schneier_ai_models/</link></item>
-<item><title>Microsoft will let partners get creative with pay-when-you-want SaaS plans - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/06/microsoft_private_offers_saas_licenses/</link></item>
-<item><title>Omnissa, VMware’s old end-user outfit, moves to manage servers and … Apple Watches? - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/06/omnissa_server_management_hypervisor_independence/</link></item>
-<item><title>毕业宝：一键降AI率85%，专业改写降重95% - 小众软件</title><link>https://www.appinn.com/biye000/</link></item>
-<item><title>AI智能选品，淘宝天猫限时捡漏微信群，速进！ - 小众软件</title><link>https://www.appinn.com/ai-taobao-limited-time-deal/</link></item>
-<item><title>极客侧边栏 – 不限次数，超方便的浏览器侧边栏 DeepSeek R1 671B 满血版 - 小众软件</title><link>https://www.appinn.com/geek-sidebar-for-browser/</link></item>
-<item><title>仅限学生，Cursor 免费赠送 1 年 Pro 账号 - 小众软件</title><link>https://www.appinn.com/cursor-for-students-1-year-free/</link></item>
-<item><title>Syntax Highlight – 为 macOS 经典功能快速查看添加代码高亮，超过 150 种新文件类型 - 小众软件</title><link>https://www.appinn.com/syntax-highlight-for-macos/</link></item>
-<item><title>阿里云国际：轻量应用服务器 2vCPUs 1GB 内存200M带宽，9.9美元/年 - 小众软件</title><link>https://www.appinn.com/aliyun-light-server-2c1g-10usd/</link></item>
-<item><title>2 个方法永久关闭 Windows 11 升级：老电脑不支持 Win11，微软还偷偷推送、下载升级？ - 小众软件</title><link>https://www.appinn.com/old-pc-win11-upgrade-disable/</link></item>
-<item><title>疑似 BUG，免费，一键获得 1 年的 Gemini Advanced 学生套餐 - 小众软件</title><link>https://www.appinn.com/1-years-free-gemini-advanced-student/</link></item>
-<item><title>enableAppleAI – 为国行 Mac 开启 Apple 智能，M1 芯片以上设备即可 - 小众软件</title><link>https://www.appinn.com/enableappleai/</link></item>
-<item><title>YumCheck – 手机拍照食品配料表，立即获得健康分析 - 小众软件</title><link>https://www.appinn.com/yumcheck/</link></item>
-<item><title>Bilibili 无限历史记录 – 每1分钟自动同步一次，手机观看也能记录[Edge/Chrome] - 小众软件</title><link>https://www.appinn.com/bilibili-unlimited-history/</link></item>
-<item><title>dupeGuru – 推荐一个查找电脑重复文件的软件，跨平台 - 小众软件</title><link>https://www.appinn.com/dupeguru/</link></item>
-<item><title>GitHub 被访问限制，Access has been restricted 错误临时解决方案[Chrome/Edge/Firefox] - 小众软件</title><link>https://www.appinn.com/github-access-has-been-restricted-429/</link></item>
-<item><title>微软 Authenticator 变更：将在25年7月停用自动填充功能，8月「已保存的密码」不能再访问 - 小众软件</title><link>https://www.appinn.com/microsoft-authenticator-autofill-passwords-end-2025/</link></item>
-<item><title>如何查询：五一期间，成都周边200公里，哪有晴天，方便安排行程 - 小众软件</title><link>https://www.appinn.com/gaode-mcp-51/</link></item>
-<item><title>群晖 DS925+，干的漂亮！ - 小众软件</title><link>https://www.appinn.com/synology-ds925-plus-good-job/</link></item>
-<item><title>Qwen3 正式发布：大模型的聪明，小模型的速度｜30B 模型能跑出 3B 速度，私有部署有戏了 - 小众软件</title><link>https://www.appinn.com/qwen3/</link></item>
-<item><title>NoteGen – 轻巧的开源、跨平台笔记应用，就是有太点费 AI：将碎片信息自动整理为笔记 - 小众软件</title><link>https://www.appinn.com/notegen/</link></item>
-<item><title>Catime v1.0.6 更新：尺寸减小 83%！从1.3MB降至228KB，开源免费，能在游戏中置顶的倒计时工具[Windows] - 小众软件</title><link>https://www.appinn.com/catime-for-windows/</link></item>
-<item><title>Caesium – 开源，批量图片压缩工具[Win/macOS/Linux/网页版] - 小众软件</title><link>https://www.appinn.com/caesium-image-compressor/</link></item>
-<item><title>历时 4 年，一名地理信息系统博士生，完成中国五级行政区划查询工具 - 小众软件</title><link>https://www.appinn.com/ruiduobao-map/</link></item>
-<item><title>JandanX – 一个仿 X 布局、夜间模式的煎蛋网油猴脚本 - 小众软件</title><link>https://www.appinn.com/jandanx/</link></item>
-<item><title>JPGFileBinder – 将文件隐藏到图片中 - 小众软件</title><link>https://www.appinn.com/jpgfilebinder/</link></item>
-<item><title>开源文件预览工具 QuickLook 4.0 正式发布 - 小众软件</title><link>https://www.appinn.com/quicklook-for-windows/</link></item>
-<item><title>Auto Mouse Clicker – 简单易用的鼠标自动点击器[Windows] - 小众软件</title><link>https://www.appinn.com/auto-mouse-clicker/</link></item>
-<item><title>The Odd Grammar Rule Most English Speakers Know But Are Rarely Taught - Mental Floss</title><link>https://www.mentalfloss.com/article/85863/odd-grammar-rule-most-english-speakers-know-are-rarely-taught</link></item>
-<item><title>Yendor Flex Glove #WearableWednesday - Adafruit Industries</title><link>https://blog.adafruit.com/2025/05/07/yendor-flex-glove-wearablewednesday/</link></item>
-<item><title>LIVE NOW! SHOW and TELL 5/7/2025 with… - Adafruit Industries</title><link>https://blog.adafruit.com/2025/05/07/live-now-show-and-tell-5-7-2025-with-blitzcitydiy-showandtell-adafruit/</link></item>
-<item><title>Self-Warming Earmuffs #WearableWednesday - Adafruit Industries</title><link>https://blog.adafruit.com/2025/05/07/self-warming-earmuffs-wearablewednesday/</link></item>
-<item><title>NewProducts 4/30/25 @adafruit Feat. Mini OLED USB… - Adafruit Industries</title><link>https://blog.adafruit.com/2025/05/03/newproducts-4-30-25-adafruit-feat-mini-oled-usb-c-power-analyzer/</link></item>
-<item><title>Star Wars Day Approaches, May the 4th Always Be… - Adafruit Industries</title><link>https://blog.adafruit.com/2025/05/02/star-wars-day-approaches-may-the-4th-always-be-with-you/</link></item>
-<item><title>Asian American, Native Hawaiian and Pacific… - Adafruit Industries</title><link>https://blog.adafruit.com/2025/05/01/asian-american-native-hawaiian-and-pacific-islander-heritage-month-2025-apahm-aanhpi/</link></item>
-<item><title>TARIFF TALK - Adafruit Industries</title><link>https://blog.adafruit.com/?s=tariff</link></item>
-<item><title>Expedition AI: Demystify Artificial Intelligence - Adafruit Industries</title><link>https://blog.adafruit.com/2025/05/07/expedition-ai-demystify-artificial-intelligence/</link></item>
-<item><title>american museum of natural history - Adafruit Industries</title><link>https://blog.adafruit.com/tag/american-museum-of-natural-history/</link></item>
-<item><title>New Learn Guide: Computer Space Mini Arcade - Adafruit Industries</title><link>https://blog.adafruit.com/2025/05/07/new-learn-guide-computer-space-mini-arcade/</link></item>
-<item><title>An improved open source ultrastable precision voltage reference - Adafruit Industries</title><link>https://blog.adafruit.com/2025/05/07/an-improved-open-source-ultrastable-precision-voltage-reference/</link></item>
-<item><title>A fluid simulation pendant - Adafruit Industries</title><link>https://blog.adafruit.com/2025/05/07/a-fluid-simulation-pendant/</link></item>
-<item><title>The Omni Controller, an ESP32-S3-based motor controller - Adafruit Industries</title><link>https://blog.adafruit.com/2025/05/07/the-omni-controller-an-esp32-s3-based-motor-controller/</link></item>
-<item><title>Omni Controller - Adafruit Industries</title><link>https://blog.adafruit.com/tag/omni-controller/</link></item>
-<item><title>Unexpected Maker - Adafruit Industries</title><link>https://blog.adafruit.com/tag/unexpected-maker/</link></item>
-<item><title>Math Teacher and Navajo Weaver Marilou Schultz Weaves Computer Processor Patterns into Traditionally Made Tapestries #ArtTuesday - Adafruit Industries</title><link>https://blog.adafruit.com/2025/05/07/math-teacher-and-navajo-weaver-marilou-schultz-weaves-computer-processor-patterns-into-traditionally-made-tapestries-arttuesday/</link></item>
-<item><title>The bucket brigade device: an analog shift register - Adafruit Industries</title><link>https://blog.adafruit.com/2025/05/07/the-bucket-brigade-device-an-analog-shift-register/</link></item>
-<item><title>A beautiful sound-reactive LED pillow - Adafruit Industries</title><link>https://blog.adafruit.com/2025/05/07/a-beautiful-sound-reactive-led-pillow/</link></item>
-<item><title>REMINDER: SHOW and TELL 5/7/2025 with @blitzcitydiy #ShowandTell @adafruit - Adafruit Industries</title><link>https://blog.adafruit.com/2025/05/07/reminder-show-and-tell-5-7-2025-with-blitzcitydiy-showandtell-adafruit/</link></item>
-<item><title>Make a NeoPixel Aquarium with Submersible Lights - Adafruit Industries</title><link>https://blog.adafruit.com/2025/05/07/make-a-neopixel-aquarium-with-submersible-lights/</link></item>
-<item><title>JP’s Product Pick of the Week 5/6/25 - Adafruit Industries</title><link>https://blog.adafruit.com/2025/05/07/jps-product-pick-of-the-week-5-6-25/</link></item>
-<item><title>Meshtastic: sending Neighbor Info via LoRa - Adafruit Industries</title><link>https://blog.adafruit.com/2025/05/07/meshtastic-sending-neighbor-info-via-lora/</link></item>
-<item><title>neighbor info - Adafruit Industries</title><link>https://blog.adafruit.com/tag/neighbor-info/</link></item>
-<item><title>微软对因绩效不佳而解雇的员工实施两年禁聘令 - Solidot</title><link>https://www.solidot.org/story?sid=81223</link></item>
-<item><title>Becoming The Music: How Our Brains Sync With Sound To Create Emotion - Science 2.0</title><link>https://www.science20.com/news_staff/becoming_the_music_how_our_brains_sync_with_sound_to_create_emotion-257423</link></item>
-<item><title>You Can&amp;#39;t Spell Replanted Rainforest Without T-E-R-M-I-T-E - Science 2.0</title><link>https://www.science20.com/news_staff/you_cant_spell_replanted_rainforest_without_termite-257422</link></item>
-<item><title>PM2.5 Is Killing You, Claim Ecologists, Except There Are No Deaths - Science 2.0</title><link>https://www.science20.com/hank_campbell/pm25_is_killing_you_claim_ecologists_except_there_are_no_deaths-257417</link></item>
-<item><title>COVID-19 Border Closures Increased German Dislike Of Immigrants - Science 2.0</title><link>https://www.science20.com/hank_campbell/covid19_border_closures_increased_german_dislike_of_immigrants-257418</link></item>
-<item><title>Fisetin To Prevent Artery Hardening - Science 2.0</title><link>https://www.science20.com/news_staff/fisetin_to_prevent_artery_hardening-257420</link></item>
-<item><title>FDA Begins Inspecting Foreign Medical Manufacturing Imports - Science 2.0</title><link>https://www.science20.com/content/fda_begins_inspecting_foreign_medical_manufacturing_imports</link></item>
-<item><title>Social Drinking Is A Bigger Problem Than Drinking Alcohol Alone - Science 2.0</title><link>https://www.science20.com/news_staff/social_drinking_is_a_bigger_problem_than_drinking_alcohol_alone-257416</link></item>
-<item><title>Black Holes: Now With No Singularity - Science 2.0</title><link>https://www.science20.com/news_staff/black_holes_now_with_no_singularity-257415</link></item>
-<item><title>Character In The Dark: How People Face Moral Dilemmas - Science 2.0</title><link>https://www.science20.com/news_staff/character_in_the_dark_how_people_face_moral_dilemmas-257414</link></item>
-<item><title>Being Friends With A Gorilla Isn&amp;#39;t Easy - Science 2.0</title><link>https://www.science20.com/news_staff/being_friends_with_a_gorilla_isnt_easy-257413</link></item>
-<item><title>Opiate Of The Masses: Ancient Andes Used Hallucinogens To Keep People Positive - Science 2.0</title><link>https://www.science20.com/hank_campbell/opiate_of_the_masses_ancient_andes_used_hallucinogens_to_keep_people_positive-257412</link></item>
-<item><title>The Night Sky From Atacama - Science 2.0</title><link>https://www.science20.com/tommaso_dorigo/the_night_sky_from_atacama-257411</link></item>
-<item><title>&amp;#39;Public Trust Doctrine&amp;#39; - How Lawyers Use Children To File Climate Change Lawsuits - Science 2.0</title><link>https://www.science20.com/the_conversation/public_trust_doctrine_how_lawyers_use_children_to_file_climate_change_lawsuits-257409</link></item>
-<item><title>How Does Streaming Technology Work? - Science 2.0</title><link>https://www.science20.com/the_conversation/how_does_streaming_technology_work-257407</link></item>
-<item><title>How Things Are Made - Science 2.0</title><link>https://www.science20.com/hank_campbell/how_things_are_made-257410</link></item>
-<item><title>US Government Wants To End 54 Years Of Subsidized Media - Science 2.0</title><link>https://www.science20.com/the_conversation/us_government_wants_to_end_54_years_of_subsidized_media-257408</link></item>
-<item><title>Cigarette Smoking Is A Pediatric Disease, And Kids Today Want No Part Of It - Science 2.0</title><link>https://www.science20.com/hank_campbell/cigarette_smoking_is_a_pediatric_disease_and_kids_today_want_no_part_of_it-257406</link></item>
-<item><title>Mississippi and Louisiana Clobber California When It Comes To Educating Poor Kids - Science 2.0</title><link>https://www.science20.com/content/mississippi_and_louisiana_clobber_california_when_it_comes_to_educating_poor_kids</link></item>
-<item><title>AI Simulation Says Neonics May Make Bees Stressed Out - Science 2.0</title><link>https://www.science20.com/news_staff/ai_simulation_says_neonics_may_make_bees_stressed_out-257403</link></item>
-<item><title>Runaway Technology: What To Do? - Science 2.0</title><link>https://www.science20.com/fred_phillips/runaway_technology_what_to_do-257404</link></item>
-<item><title>Cover Plants Can Remove Toxic Pesticides Like Copper Sulfate From Soil - Science 2.0</title><link>https://www.science20.com/news_staff/cover_plants_can_remove_toxic_pesticides_like_copper_sulfate_from_soil-257402</link></item>
-<item><title>Fortified By Silk: Nutrients And Pesticides Get A New Targeted Approach - Science 2.0</title><link>https://www.science20.com/hank_campbell/fortified_by_silk_nutrients_and_pesticides_get_a_new_targeted_approach-257401</link></item>
-<item><title>University of Zurich Manipulates Reddit Users With AI Bots, But Say They Did It To Save The World - Science 2.0</title><link>https://www.science20.com/content/university_of_zurich_manipulates_reddit_users_with_ai_bots_but_say_they_did_it_to_save_the_world</link></item>
-<item><title>Safe Water May Be Killing You - Science 2.0</title><link>https://www.science20.com/hank_campbell/safe_water_may_be_killing_you-257399</link></item>
-<item><title>Earth-Like Exoplanets Are Common - Science 2.0</title><link>https://www.science20.com/news_staff/earthlike_exoplanets_are_common-257397</link></item>
-<item><title>Bioprinting Pancreatic Tissues - Science 2.0</title><link>https://www.science20.com/news_staff/bioprinting_pancreatic_tissues-257396</link></item>
-<item><title>America Has The Cleanest Mining On The Planet, So Deep Sea Tech Makes Sense - Science 2.0</title><link>https://www.science20.com/content/america_has_the_cleanest_mining_on_the_planet_so_deep_sea_tech_makes_sense</link></item>
-<item><title>Using AI To Find Neural Traits In Social Interaction - Science 2.0</title><link>https://www.science20.com/news_staff/using_ai_to_find_neural_traits_in_social_interaction-257395</link></item>
-<item><title>&amp;#39;Here Is The Letter That Has Destroyed My Universe&amp;#39; And 4 More Astrophysics Revolutions - Science 2.0</title><link>https://www.science20.com/hank_campbell/here_is_the_letter_that_has_destroyed_my_universe_and_4_more_astrophysics_revolutions-257390</link></item>
-<item><title>Happy Children&amp;#39;s Day 2025 From Around the Anime World, Part IV - Anime News Network</title><link>https://www.animenewsnetwork.com/interest/2025-05-05/happy-children-day-2025-from-around-the-anime-world-part-iv/.224193</link></item>
-<item><title>Happy Children&amp;#39;s Day 2025 From Around the Anime World, Part III - Anime News Network</title><link>https://www.animenewsnetwork.com/interest/2025-05-05/happy-children-day-2025-from-around-the-anime-world-part-iii/.224191</link></item>
-<item><title>Shoko Nakagawa Announces Pregnancy on Birthday - Anime News Network</title><link>https://www.animenewsnetwork.com/interest/2025-05-05/shoko-nakagawa-announces-pregnancy-on-birthday/.224197</link></item>
-<item><title>Happy Children&amp;#39;s Day 2025 From Around the Anime World, Part II - Anime News Network</title><link>https://www.animenewsnetwork.com/interest/2025-05-05/happy-children-day-2025-from-around-the-anime-world-part-ii/.224190</link></item>
-<item><title>Happy Children&amp;#39;s Day 2025 From Around the Anime World, Part I - Anime News Network</title><link>https://www.animenewsnetwork.com/interest/2025-05-05/happy-children-day-2025-from-around-the-anime-world-part-i/.224189</link></item>
-<item><title>Hikaru Utada Unveils Music Video for New Single &amp;#39;Mine or Yours&amp;#39; - Anime News Network</title><link>https://www.animenewsnetwork.com/press-release/2025-05-07/hikaru-utada-unveils-music-video-for-new-single-mine-or-yours/.224239</link></item>
-<item><title>LazuLight from Nijisanji EN 4th-Anniversary Merchandise to Launch Worldwide Pre-orders open on May 12, 2025 - Anime News Network</title><link>https://www.animenewsnetwork.com/press-release/2025-05-07/lazulight-from-nijisanji-en-4th-anniversary-merchandise-to-launch-worldwide-pre-orders-open-on-may-/.224238</link></item>
-<item><title>The Spring 2025 K-Comics Guide - Anime News Network</title><link>https://www.animenewsnetwork.com/feature/2025-05-05/the-spring-2025-k-comics-guide/.221002</link></item>
-<item><title>The Spring 2025 Light Novel Guide - Anime News Network</title><link>https://www.animenewsnetwork.com/feature/2025-05-02/the-spring-2025-light-novel-guide/.222484</link></item>
-<item><title>What Osaka World Expo 2025 Has to Offer for Anime Fans - Anime News Network</title><link>https://www.animenewsnetwork.com/feature/2025-04-30/what-osaka-world-expo-2025-has-to-offer-for-anime-fans/.223484</link></item>
-<item><title>Pokémon Horizons: Season 2: The Search For Laqua Part 2 - Anime News Network</title><link>https://www.animenewsnetwork.com/review/pokemon-horizons/season-2/the-search-for-laqua-part-2/anime-series/.224142</link></item>
-<item><title>This Week in Anime - Adorable Young Women Performing Lovable Activities - Anime News Network</title><link>https://www.animenewsnetwork.com/this-week-in-anime/2025-05-06/.224183</link></item>
-<item><title>This Week in Games - Another Turn With The Turn-Based &amp;quot;Debate&amp;quot;? - Anime News Network</title><link>https://www.animenewsnetwork.com/this-week-in-games/2025-05-02/another-turn-with-the-turn-based-debate/.223984</link></item>
-<item><title>The Anime Backlog - Mobile Suit Gundam - The Movie Trilogy - Anime News Network</title><link>https://www.animenewsnetwork.com/anime-backlog/2025-04-18/.223684</link></item>
-<item><title>Spring 2025 Preview Guide - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/.221943</link></item>
-<item><title>#COMPASS2.0 ANIMATION PROJECT - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/compass2.0-animation-project/.222298</link></item>
-<item><title>A Ninja and an Assassin Under One Roof - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/a-ninja-and-an-assassin-under-one-roof/.222311</link></item>
-<item><title>Aharen-san wa Hakarenai Season 2 - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/aharen-san-wa-hakarenai-season-2/.222299</link></item>
-<item><title>Anne Shirley - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/anne-shirley/.221951</link></item>
-<item><title>Apocalypse Hotel - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/apocalypse-hotel/.222306</link></item>
-<item><title>The Beginning After The End - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/the-beginning-after-the-end/.222252</link></item>
-<item><title>Black Butler: Emerald Witch Arc - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/black-butler-emerald-witch-arc/.222279</link></item>
-<item><title>The Brilliant Healer&amp;#39;s New Life in the Shadows - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/the-brilliant-healer-new-life-in-the-shadows/.221950</link></item>
-<item><title>Bye Bye, Earth Season 2 - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/bye-bye-earth-season-2/.222258</link></item>
-<item><title>Can a Boy-Girl Friendship Survive? - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/can-a-boy-girl-friendship-survive/.222256</link></item>
-<item><title>Catch Me at the Ballpark! - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/catch-me-at-the-ballpark/.222250</link></item>
-<item><title>Classic Stars - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/classic-stars/.222278</link></item>
-<item><title>Devil May Cry - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/devil-may-cry/.223054</link></item>
-<item><title>The Dinner Table Detective - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/the-dinner-table-detective/.222255</link></item>
-<item><title>Fire Force Season 3 - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/fire-force-season-3/.222257</link></item>
-<item><title>Food for the Soul - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/food-for-the-soul/.223470</link></item>
-<item><title>From Old Country Bumpkin to Master Swordsman - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/from-old-country-bumpkin-to-master-swordsman/.222284</link></item>
-<item><title>Go! Go! Loser Ranger! Season 2 - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/go-go-loser-ranger-season-2/.222317</link></item>
-<item><title>The Gorilla God&amp;#39;s Go-To Girl - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/the-gorilla-god-go-to-girl/.222288</link></item>
-<item><title>Guilty Gear Strive: Dual Rulers - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/guilty-gear-strive-dual-rulers/.222263</link></item>
-<item><title>I&amp;#39;m the Evil Lord of an Intergalactic Empire! - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/im-the-evil-lord-of-an-intergalactic-empire/.222282</link></item>
-<item><title>I&amp;#39;ve Been Killing Slimes for 300 Years and Maxed Out My Level 2 - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/ive-been-killing-slimes-for-300-years-and-maxed-out-my-level-2/.222259</link></item>
-<item><title>Kowloon Generic Romance - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/kowloon-generic-romance/.222280</link></item>
-<item><title>Maebashi Witches - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/maebashi-witches/.222291</link></item>
-<item><title>Mobile Suit Gundam GQuuuuuuX - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/mobile-suit-gundam-gquuuuuux/.222304</link></item>
-<item><title>My Hero Academia: Vigilantes - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/my-hero-academia-vigilantes/.222302</link></item>
-<item><title>Once Upon a Witch&amp;#39;s Death - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/once-upon-a-witch-death/.221947</link></item>
-<item><title>Please Put Them On, Takamine-san! - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/please-put-them-on-takamine-san/.221948</link></item>
-<item><title>Rock is a Lady&amp;#39;s Modesty - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/rock-is-a-lady-modesty/.222254</link></item>
-<item><title>The Shiunji Family Children - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/the-shiunji-family-children/.222305</link></item>
-<item><title>SHOSHIMIN: How to become Ordinary Season 2 - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/shoshimin-how-to-become-ordinary-season-2/.222283</link></item>
-<item><title>Summer Pockets - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/summer-pockets/.222300</link></item>
-<item><title>Sword of the Demon Hunter - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/sword-of-the-demon-hunter/.221945</link></item>
-<item><title>The Too-Perfect Saint: Tossed Aside by My Fiancé and Sold To Another Kingdom - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/the-too-perfect-saint-tossed-aside-by-my-fiance-and-sold-to-another-kingdom/.222310</link></item>
-<item><title>Uma Musume: Cinderella Gray - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/uma-musume-cinderella-gray/.222289</link></item>
-<item><title>The Unaware Atelier Master - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/the-unaware-atelier-master/.222295</link></item>
-<item><title>Wind Breaker Season 2 - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/wind-breaker-season-2/.222253</link></item>
-<item><title>Yaiba: Samurai Legend - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/yaiba-samurai-legend/.221944</link></item>
-<item><title>Yandere Dark Elf: She Chased Me All the Way From Another World! - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/yandere-dark-elf-she-chased-me-all-the-way-from-another-world/.222293</link></item>
-<item><title>Zatsu Tabi -That&amp;#39;s Journey- - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/spring/zatsu-tabi-that-journey/.222303</link></item>
-<item><title>Gorilla God&amp;#39;s Go-To Girl - Anime News Network</title><link>https://www.animenewsnetwork.com/review/gorilla-god-go-to-girl/.223497</link></item>
-<item><title>Ninja and an Assassin Under One Roof - Anime News Network</title><link>https://www.animenewsnetwork.com/review/ninja-and-an-assassin-under-one-roof/.223493</link></item>
-<item><title>Trump Seeks &amp;#39;100%&amp;#39; Tariffs on All Movies Produced Outside U.S. - Anime News Network</title><link>https://www.animenewsnetwork.com/news/2025-05-05/trump-seeks-100-percent-tariffs-on-all-movies-produced-outside-u.s/.224178</link></item>
-<item><title>MVM Releases Upcoming Steelbook Covers - Anime News Network</title><link>https://www.animenewsnetwork.com/news/2025-05-07/mvm-releases-upcoming-steelbook-covers/.224231</link></item>
-<item><title>Momocon Hosts Suda51, Swery65, Studio Trigger, Orange, Ryō Horikawa - Anime News Network</title><link>https://www.animenewsnetwork.com/news/2025-05-06/momocon-hosts-suda51-swery65-studio-trigger-orange-ryo-horikawa/.224207</link></item>
-<item><title>From Old Country Bumpkin to Master Swordsman ‒ Episode 5 - Anime News Network</title><link>https://www.animenewsnetwork.com/review/from-old-country-bumpkin-to-master-swordsman/episode-5/.224208</link></item>
-<item><title>Gorilla God&amp;#39;s Go-To Girl ‒ Episode 5 - Anime News Network</title><link>https://www.animenewsnetwork.com/review/gorilla-god-go-to-girl/episode-5/.224192</link></item>
-<item><title>One Piece ‒ Episode 1128 - Anime News Network</title><link>https://www.animenewsnetwork.com/review/one-piece/episode-1128/.224204</link></item>
-<item><title>Black Butler: Emerald Witch Arc ‒ Episode 5 - Anime News Network</title><link>https://www.animenewsnetwork.com/review/black-butler-emerald-witch-arc/episode-5/.224188</link></item>
-<item><title>Arashi Idol Group to Hold Concerts Next Spring Before Disbanding in May 2026 - Anime News Network</title><link>https://www.animenewsnetwork.com/news/2025-05-06/arashi-idol-group-to-hold-concerts-next-spring-before-disbanding-in-may-2026/.224214</link></item>
-<item><title>Jessica Poce Leaves Anime Limited - Anime News Network</title><link>https://www.animenewsnetwork.com/news/2025-05-06/jessica-poce-leaves-anime-limited/.224211</link></item>
-<item><title>To Be Hero X ‒ Episode 5 - Anime News Network</title><link>https://www.animenewsnetwork.com/review/to-be-hero-x/episode-5/.224177</link></item>
-<item><title>BL Anime Studio Grizzly Dissolves - Anime News Network</title><link>https://www.animenewsnetwork.com/news/2025-05-05/bl-anime-studio-grizzly-dissolves/.224083</link></item>
-<item><title>Witch Watch ‒ Episode 5 - Anime News Network</title><link>https://www.animenewsnetwork.com/review/witch-watch/episode-5/.224176</link></item>
-<item><title>Go! Go! Loser Ranger! Season 2 ‒ Episode 16 - Anime News Network</title><link>https://www.animenewsnetwork.com/review/go-go-loser-ranger-season-2/episode-16/.224168</link></item>
-<item><title>Kowloon Generic Romance ‒ Episode 5 - Anime News Network</title><link>https://www.animenewsnetwork.com/review/kowloon-generic-romance/episode-5/.224175</link></item>
-<item><title>Lazarus ‒ Episode 5 - Anime News Network</title><link>https://www.animenewsnetwork.com/review/lazarus/episode-5/.224167</link></item>
-<item><title>Anime NYC to Host Yoko Takahashi &amp; hololive Concerts, Tokusatsu Stars - Anime News Network</title><link>https://www.animenewsnetwork.com/news/2025-05-05/anime-nyc-to-host-yoko-takahashi-and-hololive-concerts-tokusatsu-stars/.224166</link></item>
-<item><title>Mayu Sakai Launches Romantic Comedy Manga on June 3 - Anime News Network</title><link>https://www.animenewsnetwork.com/news/2025-05-04/mayu-sakai-launches-romantic-comedy-manga-on-june-3/.224159</link></item>
-<item><title>Tsukasa Saimura Launches New Horror Manga - Anime News Network</title><link>https://www.animenewsnetwork.com/news/2025-05-04/tsukasa-saimura-launches-new-horror-manga/.224155</link></item>
-<item><title>From Ballots to Bots - Law &amp; Liberty</title><link>https://lawliberty.org/forum/from-ballots-to-bots/</link></item>
-<item><title>Consensus of the Conclave - Law &amp; Liberty</title><link>https://lawliberty.org/consensus-of-the-conclave/</link></item>
-<item><title>Border Disorder - Law &amp; Liberty</title><link>https://lawliberty.org/podcast/border-disorder/</link></item>
-<item><title>The Pope of Progress? - Law &amp; Liberty</title><link>https://lawliberty.org/the-pope-of-progress/</link></item>
-<item><title>Liberalism vs. Scientism - Law &amp; Liberty</title><link>https://lawliberty.org/book-review/liberalism-vs-scienctism/</link></item>
-<item><title>Pirate Toy Fund Derby - The Strong</title><link>https://www.museumofplay.org/event/pirate-toy-fund-derby/</link></item>
-<item><title>Play Lab: Boats - The Strong</title><link>https://www.museumofplay.org/event/play-lab-boats/2025-05-05/</link></item>
-<item><title>Carol D. Simmons Storytime Club: Amazing Animals - The Strong</title><link>https://www.museumofplay.org/event/carol-d-simmons-storytime-club-amazing-animals/2025-05-05/</link></item>
-<item><title>Play Lab: Play-Doh Circuits - The Strong</title><link>https://www.museumofplay.org/event/play-lab-play-doh-circuits-2/2025-05-12/</link></item>
-<item><title>National Asian American and Pacific Island Month Celebration - The Strong</title><link>https://www.museumofplay.org/event/national-asian-american-and-pacific-island-month-celebration/</link></item>
-<item><title>Play Lab: Fairy Houses - The Strong</title><link>https://www.museumofplay.org/event/play-lab-parachutes/2025-05-19/</link></item>
-<item><title>Play Lab: Vehicles - The Strong</title><link>https://www.museumofplay.org/event/play-lab-vehicles/2025-05-26/</link></item>
-<item><title>Elaine Wilson Carousel - The Strong</title><link>https://www.museumofplay.org/venue/elaine-wilson-carousel/</link></item>
-<item><title>When AI chatbots affect real relationships - FlowingData</title><link>https://flowingdata.com/2025/05/07/when-ai-chatbots-affect-real-relationships/</link></item>
-<item><title>Value of Chinese goods vs. tariffs - FlowingData</title><link>https://flowingdata.com/2025/05/07/value-of-goods-vs-tariffs/</link></item>
-<item><title>Internet Roadtrip, where the community votes where to go at each step - FlowingData</title><link>https://flowingdata.com/2025/05/06/internet-roadtrip-where-the-community-votes-where-to-go-at-each-step/</link></item>
-<item><title>If computers do everything - FlowingData</title><link>https://flowingdata.com/2025/05/06/if-computers-do-everything/</link></item>
-<item><title>All the lawsuits against Sean Combs - FlowingData</title><link>https://flowingdata.com/2025/05/06/all-the-lawsuits-against-sean-combs/</link></item>
-<item><title>Rolling Stone - FlowingData</title><link>https://flowingdata.com/tag/rolling-stone/</link></item>
-<item><title>汤一介：回忆父亲汤用彤 - 爱思想</title><link>https://www.aisixiang.com/data/162274.html</link></item>
-<item><title>阎学通：道义现实主义与中美关系 - 爱思想</title><link>https://www.aisixiang.com/data/162276.html</link></item>
-<item><title>刘世锦：扩消费稳增长要重视源头治 - 爱思想</title><link>https://www.aisixiang.com/data/162278.html</link></item>
-<item><title>李震：中国文艺批评的人本主义传统 - 爱思想</title><link>https://www.aisixiang.com/data/162277.html</link></item>
-<item><title>陈徒手：汤用彤：五十年代的思想病 - 爱思想</title><link>https://www.aisixiang.com/data/162275.html</link></item>
-<item><title>姚中秋：去工业化、发展型社会主义 - 爱思想</title><link>https://www.aisixiang.com/data/162344.html</link></item>
-<item><title>刘新芳：人工智能重塑语言、认知与 - 爱思想</title><link>https://www.aisixiang.com/data/162312.html</link></item>
-<item><title>杨果：用中国种子保障中国粮食安全 - 爱思想</title><link>https://www.aisixiang.com/data/162272.html</link></item>
-<item><title>杜宇：论中国刑法上的“二阶刑事违 - 爱思想</title><link>https://www.aisixiang.com/data/162273.html</link></item>
-<item><title>邢广程：全球视野下中国融通型周边 - 爱思想</title><link>https://www.aisixiang.com/data/162346.html</link></item>
-<item><title>张国刚：中华文明在兼收并蓄中发展 - 爱思想</title><link>https://www.aisixiang.com/data/162279.html</link></item>
-<item><title>孙晓光 娄婷婷：琉球中山国发展的 - 爱思想</title><link>https://www.aisixiang.com/data/162316.html</link></item>
-<item><title>田飞龙：澳门特色“一国两制”的经 - 爱思想</title><link>https://www.aisixiang.com/data/162340.html</link></item>
-<item><title>孟庆吉：法律如何守护“人格化”的 - 爱思想</title><link>https://www.aisixiang.com/data/162294.html</link></item>
-<item><title>纪明葵：特朗普百日新政评估 - 爱思想</title><link>https://www.aisixiang.com/data/162259.html</link></item>
-<item><title>李文堂：坚持和巩固党的文化领导权 - 爱思想</title><link>https://www.aisixiang.com/data/162392.html</link></item>
-<item><title>辛向阳：“第二个结合”的结合方式 - 爱思想</title><link>https://www.aisixiang.com/data/162314.html</link></item>
-<item><title>杨金融：科学开展大规模国土绿化行 - 爱思想</title><link>https://www.aisixiang.com/data/162311.html</link></item>
-<item><title>赵慧：以文化赋能经济社会发展 - 爱思想</title><link>https://www.aisixiang.com/data/162310.html</link></item>
-<item><title>程利滨：中华优秀传统文化的当代价 - 爱思想</title><link>https://www.aisixiang.com/data/162280.html</link></item>
-<item><title>刘志明 朱思远：邓小平的文化观及 - 爱思想</title><link>https://www.aisixiang.com/data/162187.html</link></item>
-<item><title>胡晶晶：精准把握习近平文化思想的 - 爱思想</title><link>https://www.aisixiang.com/data/162168.html</link></item>
-<item><title>蔡志栋：雷锋精神：马克思主义与中 - 爱思想</title><link>https://www.aisixiang.com/data/162132.html</link></item>
-<item><title>孙来斌：巩固中华民族文化主体性的 - 爱思想</title><link>https://www.aisixiang.com/data/162120.html</link></item>
-<item><title>胡桂芳：“五聚焦”促进中药材产业 - 爱思想</title><link>https://www.aisixiang.com/data/162114.html</link></item>
-<item><title>李健：以中华优秀传统文化推动新时 - 爱思想</title><link>https://www.aisixiang.com/data/162078.html</link></item>
-<item><title>冯霞 余亦茹：从中华优秀传统生态 - 爱思想</title><link>https://www.aisixiang.com/data/162075.html</link></item>
-<item><title>王颖：为完善全球生态治理提供中国 - 爱思想</title><link>https://www.aisixiang.com/data/162073.html</link></item>
-<item><title>刘仓：深刻领会“两个结合”的方法 - 爱思想</title><link>https://www.aisixiang.com/data/162072.html</link></item>
-<item><title>谢锋：从中医药文化汲取破解时代难 - 爱思想</title><link>https://www.aisixiang.com/data/162069.html</link></item>
-<item><title>唐土红 黄楚冰：生态文明教育纳入 - 爱思想</title><link>https://www.aisixiang.com/data/162022.html</link></item>
-<item><title>田鹏颖：“从跟跑到领跑”彰显科技 - 爱思想</title><link>https://www.aisixiang.com/data/162425.html</link></item>
-<item><title>李冬琴：加强生成式AI工具使用规 - 爱思想</title><link>https://www.aisixiang.com/data/162398.html</link></item>
-<item><title>张建云：唯物史观视域下新一轮科技 - 爱思想</title><link>https://www.aisixiang.com/data/162389.html</link></item>
-<item><title>吴忠民：大力打造大型人工智能创新 - 爱思想</title><link>https://www.aisixiang.com/data/162296.html</link></item>
-<item><title>宋洁：人工智能大模型如何实现算力 - 爱思想</title><link>https://www.aisixiang.com/data/162285.html</link></item>
-<item><title>况腊生：运用颠覆性技术推进军事理 - 爱思想</title><link>https://www.aisixiang.com/data/162284.html</link></item>
-<item><title>张峥：AI快速迭代，我们更需学会 - 爱思想</title><link>https://www.aisixiang.com/data/162157.html</link></item>
-<item><title>李长胜：生成式人工智能应用的典型 - 爱思想</title><link>https://www.aisixiang.com/data/162149.html</link></item>
-<item><title>赵艾 南储鑫：如何认识和把握人工 - 爱思想</title><link>https://www.aisixiang.com/data/162076.html</link></item>
-<item><title>李辉 董楠卿：新一代智能终端：人 - 爱思想</title><link>https://www.aisixiang.com/data/162012.html</link></item>
-<item><title>梅亮：科技环境与产业创新 - 爱思想</title><link>https://www.aisixiang.com/data/162006.html</link></item>
-<item><title>庄芹芹：深入推进科技体制改革的四 - 爱思想</title><link>https://www.aisixiang.com/data/161999.html</link></item>
-<item><title>王东：为国创材，赓续“两弹一星” - 爱思想</title><link>https://www.aisixiang.com/data/161983.html</link></item>
-<item><title>甄达洋 刘素娟：加强基础研究要坚 - 爱思想</title><link>https://www.aisixiang.com/data/161926.html</link></item>
-<item><title>朱阳：致盲作战：赢得战争主动权的 - 爱思想</title><link>https://www.aisixiang.com/data/161921.html</link></item>
-<item><title>习近平：以史为鉴 共创未来 - 爱思想</title><link>https://www.aisixiang.com/data/162422.html</link></item>
-<item><title>金民卿：当代形式主义的本质特征与新的演化 - 爱思想</title><link>https://www.aisixiang.com/data/162419.html</link></item>
-<item><title>秦前红 赵溢鑫：行政检察监督范围的历史变迁和未来演进 - 爱思想</title><link>https://www.aisixiang.com/data/162411.html</link></item>
-<item><title>包心鉴：推动国家治理和社会发展更好相适应 - 爱思想</title><link>https://www.aisixiang.com/data/162391.html</link></item>
-<item><title>张译心：构建中国法学自主知识体系 - 爱思想</title><link>https://www.aisixiang.com/data/162410.html</link></item>
-<item><title>陈洁：我国金融法的立法逻辑与体系生成 - 爱思想</title><link>https://www.aisixiang.com/data/162409.html</link></item>
-<item><title>萧鑫：个人信息更正权的双重规则构造与定位 - 爱思想</title><link>https://www.aisixiang.com/data/162408.html</link></item>
-<item><title>董坤：规范化运行检察公益诉讼调查核实权 - 爱思想</title><link>https://www.aisixiang.com/data/162406.html</link></item>
-<item><title>张晓晶：完善金融“五篇大文章”的标准体系与基础制度 - 爱思想</title><link>https://www.aisixiang.com/data/162420.html</link></item>
-<item><title>杨伟民：编制“十五五”规划对实现中国式现代化至关重要 - 爱思想</title><link>https://www.aisixiang.com/data/162416.html</link></item>
-<item><title>黄群慧：发展新质生产力必须做好创新这篇大文章 - 爱思想</title><link>https://www.aisixiang.com/data/162415.html</link></item>
-<item><title>李扬：加强中国特色金融发展之路的文化支撑 - 爱思想</title><link>https://www.aisixiang.com/data/162405.html</link></item>
-<item><title>刘锡良 王之扬：中国特色金融发展之路走得通、行得稳 - 爱思想</title><link>https://www.aisixiang.com/data/162404.html</link></item>
-<item><title>戴激涛：全过程人民民主的人权意涵及其实现机理 - 爱思想</title><link>https://www.aisixiang.com/data/162417.html</link></item>
-<item><title>覃诗雅：通向社会生态转型的道路——国外“去增长社会主义”述评 - 爱思想</title><link>https://www.aisixiang.com/data/162407.html</link></item>
-<item><title>彭姝祎：法国现代化进程的特点及经验教训 - 爱思想</title><link>https://www.aisixiang.com/data/162383.html</link></item>
-<item><title>孙彦红：欧美关税谈判：一场经贸关系重构的深度博弈 - 爱思想</title><link>https://www.aisixiang.com/data/162423.html</link></item>
-<item><title>黄境：特朗普2.0与大国关系 - 爱思想</title><link>https://www.aisixiang.com/data/162421.html</link></item>
-<item><title>丁铎：挑事南海、染指台海，小马科斯为何越来越过火？ - 爱思想</title><link>https://www.aisixiang.com/data/162400.html</link></item>
-<item><title>刘永涛：美国民主党去哪儿了 - 爱思想</title><link>https://www.aisixiang.com/data/162387.html</link></item>
-<item><title>郑丹丹：当代中国家庭观念的延续与变迁 - 爱思想</title><link>https://www.aisixiang.com/data/162426.html</link></item>
-<item><title>赵中源：坚持在发展中保障和改善民生 - 爱思想</title><link>https://www.aisixiang.com/data/162414.html</link></item>
-<item><title>李敦球 崔永馨：后发达国家应对人口危机的政策分析 - 爱思想</title><link>https://www.aisixiang.com/data/162412.html</link></item>
-<item><title>廉思：加强对新时代中国青年的价值引领 - 爱思想</title><link>https://www.aisixiang.com/data/162302.html</link></item>
-<item><title>杨菊华：人口高质量发展中的生育友好型社会建设 - 爱思想</title><link>https://www.aisixiang.com/data/162290.html</link></item>
-<item><title>王秀：数字时代中华优秀传统文化的传播路径 - 爱思想</title><link>https://www.aisixiang.com/data/162004.html</link></item>
-<item><title>杨润聪 祝宗慧：西方政治极化态势下中国话语国际传播面临的问题与应对策略 - 爱思想</title><link>https://www.aisixiang.com/data/161982.html</link></item>
-<item><title>薛澜：人工智能时代内容生成的伦理治理 - 爱思想</title><link>https://www.aisixiang.com/data/161888.html</link></item>
-<item><title>冯颜利：一体推进教育发展科技创新人才培养 - 爱思想</title><link>https://www.aisixiang.com/data/162413.html</link></item>
-<item><title>孙沐芸：积极推进思想政治教育学科新发展 - 爱思想</title><link>https://www.aisixiang.com/data/162394.html</link></item>
-<item><title>崔敏：拓宽大学生职业创新能力培养路径 - 爱思想</title><link>https://www.aisixiang.com/data/162393.html</link></item>
-<item><title>徐飞：通用人工智能对高等教育的影响 - 爱思想</title><link>https://www.aisixiang.com/data/162375.html</link></item>
-<item><title>陈霞：推动美育知识体系的跨学科融合 - 爱思想</title><link>https://www.aisixiang.com/data/162370.html</link></item>
-<item><title>曹胜高：古代文学制度的研究路径 - 爱思想</title><link>https://www.aisixiang.com/data/162374.html</link></item>
-<item><title>蔡丹君：数字时代，让古典文学成为“活的传统” - 爱思想</title><link>https://www.aisixiang.com/data/162372.html</link></item>
-<item><title>曲青山：坚持历史思维——学习习近平总书记关于党的历史的重要论述 - 爱思想</title><link>https://www.aisixiang.com/data/162418.html</link></item>
-<item><title>韩美群：从中华文明的突出特性看农耕文明的发展韧性 - 爱思想</title><link>https://www.aisixiang.com/data/162368.html</link></item>
-<item><title>黄文弼：略述内蒙古、新疆第一次考古之经过及发现 - 爱思想</title><link>https://www.aisixiang.com/data/162257.html</link></item>
-<item><title>吴晗：元帝国之崩溃与明之建国 - 爱思想</title><link>https://www.aisixiang.com/data/162202.html</link></item>
-<item><title>董平：“知行合一”是一种关于存在的学说 - 爱思想</title><link>https://www.aisixiang.com/data/162424.html</link></item>
-<item><title>陈来：在理解礼的意义和变迁中，最重要的是区分“礼”和“仪” - 爱思想</title><link>https://www.aisixiang.com/data/162399.html</link></item>
-<item><title>贾江鸿：萨特对笛卡尔做梦怀疑论的可能克服 - 爱思想</title><link>https://www.aisixiang.com/data/162397.html</link></item>
-<item><title>张倩茹：罗钦顺与明代中期理学学派的交锋 - 爱思想</title><link>https://www.aisixiang.com/data/162396.html</link></item>
-<item><title>程志华：“性体”如何可能——论牟宗三“性体”概念的建构 - 爱思想</title><link>https://www.aisixiang.com/data/162395.html</link></item>
-<item><title>杨典：构建中国哲学社会科学自主知识体系 - 爱思想</title><link>https://www.aisixiang.com/data/162390.html</link></item>
-<item><title>张志强：“两个结合”是建构中国自主知识体系的方法论 - 爱思想</title><link>https://www.aisixiang.com/data/162295.html</link></item>
-<item><title>刘仁文：用风骨和品位撑起殿堂的尊严 - 爱思想</title><link>https://www.aisixiang.com/data/162188.html</link></item>
-<item><title>贺麟：物质建设与培养工商业人才 - 爱思想</title><link>https://www.aisixiang.com/data/162258.html</link></item>
-<item><title>任俊华：“为有源头活水来”——朱熹治家之道 - 爱思想</title><link>https://www.aisixiang.com/data/162186.html</link></item>
-<item><title>黄国辉：周代民本思想的历史内涵和价值 - 爱思想</title><link>https://www.aisixiang.com/data/162171.html</link></item>
-<item><title>马爱菊：“谦”：中国人的大智慧 - 爱思想</title><link>https://www.aisixiang.com/data/162150.html</link></item>
-<item><title>陈理，1961年10月生，中国人民大学文学硕士，编审。曾任中共中央党史和文献研究院学术和编审委..... - 爱思想</title><link>https://www.aisixiang.com/thinktank/ChenLi.html</link></item>
-<item><title>Google To Fund Development of Three Nuclear Power Sites - Slashdot</title><link>https://hardware.slashdot.org/story/25/05/07/1948212/google-to-fund-development-of-three-nuclear-power-sites</link></item>
-<item><title>Netflix Debuts Gen AI-Powered Search Tool, Tests Vertical Videos For Mobile - Slashdot</title><link>https://entertainment.slashdot.org/story/25/05/07/197232/netflix-debuts-gen-ai-powered-search-tool-tests-vertical-videos-for-mobile</link></item>
-<item><title>New GNOME Executive Director Named - Slashdot</title><link>https://tech.slashdot.org/story/25/05/07/200259/new-gnome-executive-director-named</link></item>
-<item><title>Amazon Says New Warehouse Robot Can &amp;#39;Feel&amp;#39; Items, But Won&amp;#39;t Replace Workers - Slashdot</title><link>https://hardware.slashdot.org/story/25/05/07/1930242/amazon-says-new-warehouse-robot-can-feel-items-but-wont-replace-workers</link></item>
-<item><title>Samsung Acquires Masimo&amp;#39;s Audio Business For $350 Million - Slashdot</title><link>https://entertainment.slashdot.org/story/25/05/07/1915252/samsung-acquires-masimos-audio-business-for-350-million</link></item>
-<item><title>for $8 billion - Slashdot</title><link>https://slashdot.org/story/16/11/14/1520234/samsung-to-acquire-connected-car-firm-harman-for-8-billion</link></item>
-<item><title>Trump Will Rescind Biden-Era AI Chip Export Curbs - Slashdot</title><link>https://yro.slashdot.org/story/25/05/07/2018224/trump-will-rescind-biden-era-ai-chip-export-curbs</link></item>
-<item><title>Apple&amp;#39;s Eddy Cue: &amp;#39;You May Not Need an iPhone 10 Years From Now&amp;#39; - Slashdot</title><link>https://apple.slashdot.org/story/25/05/07/1856254/apples-eddy-cue-you-may-not-need-an-iphone-10-years-from-now</link></item>
-<item><title>VMware Perpetual License Holders Receive Cease-And-Desist Letters From Broadcom - Slashdot</title><link>https://yro.slashdot.org/story/25/05/07/1856255/vmware-perpetual-license-holders-receive-cease-and-desist-letters-from-broadcom</link></item>
-<item><title>ended VMware perpetual license sales - Slashdot</title><link>https://tech.slashdot.org/story/23/12/12/1740241/broadcom-is-killing-off-vmware-perpetual-licenses-strong-arming-users-onto-subscriptions</link></item>
-<item><title>Curl Battles Wave of AI-Generated False Vulnerability Reports - Slashdot</title><link>https://it.slashdot.org/story/25/05/07/1750249/curl-battles-wave-of-ai-generated-false-vulnerability-reports</link></item>
-<item><title>Seagate Working To Develop a 100TB Hard Drive By 2030 - Slashdot</title><link>https://hardware.slashdot.org/story/25/05/07/1734205/seagate-working-to-develop-a-100tb-hard-drive-by-2030</link></item>
-<item><title>Apple Working To Move To AI Search in Browser Amid Google Fallout - Slashdot</title><link>https://apple.slashdot.org/story/25/05/07/1645257/apple-working-to-move-to-ai-search-in-browser-amid-google-fallout</link></item>
-<item><title>DEA Ends Body Camera Program - Slashdot</title><link>https://news.slashdot.org/story/25/05/07/1525236/dea-ends-body-camera-program</link></item>
-<item><title>AI Chatbots Are &amp;#39;Juicing Engagement&amp;#39; Instead of Being Useful, Instagram Co-founder Warns - Slashdot</title><link>https://slashdot.org/story/25/05/07/1515211/ai-chatbots-are-juicing-engagement-instead-of-being-useful-instagram-co-founder-warns</link></item>
-<item><title>Uber Says Waymo Autonomous Vehicles Outperforming 99% of Human Drivers in Austin - Slashdot</title><link>https://tech.slashdot.org/story/25/05/07/1445228/uber-says-waymo-autonomous-vehicles-outperforming-99-of-human-drivers-in-austin</link></item>
-<item><title>IBM CEO Says AI Has Replaced Hundreds of Workers But Created New Programming, Sales Jobs - Slashdot</title><link>https://slashdot.org/story/25/05/07/143250/ibm-ceo-says-ai-has-replaced-hundreds-of-workers-but-created-new-programming-sales-jobs</link></item>
-<item><title>Trump Admin Plans To Shut Down the Energy Star Program - Slashdot</title><link>https://hardware.slashdot.org/story/25/05/06/2111247/trump-admin-plans-to-shut-down-the-energy-star-program?sbsrc=md</link></item>
-<item><title>College Graduate Unemployment Hits 5.8%, Highest in Decades - Slashdot</title><link>https://news.slashdot.org/story/25/05/06/1522235/college-graduate-unemployment-hits-58-highest-in-decades?sbsrc=md</link></item>
-<item><title>New Bill Would Force Apple, Google To Open App Store Ecosystems - Slashdot</title><link>https://apple.slashdot.org/story/25/05/06/2252259/new-bill-would-force-apple-google-to-open-app-store-ecosystems?sbsrc=md</link></item>
-<item><title>Most Americans Use Federal Science Information On a Weekly Basis, a New Poll Finds - Slashdot</title><link>https://news.slashdot.org/story/25/05/06/1456252/most-americans-use-federal-science-information-on-a-weekly-basis-a-new-poll-finds?sbsrc=md</link></item>
-<item><title>Best to move on - Slashdot</title><link>https://slashdot.org/comments.pl?sid=25/05/07/1856255&amp;cid=65359631&amp;sbsrc=topcom</link></item>
-<item><title>Re: So cameras no longer have bodies? - Slashdot</title><link>https://slashdot.org/comments.pl?sid=25/05/07/1525236&amp;cid=65359299&amp;sbsrc=topcom</link></item>
-<item><title>Enshitification in Action - Slashdot</title><link>https://slashdot.org/comments.pl?sid=25/05/07/1856255&amp;cid=65359647&amp;sbsrc=topcom</link></item>
-<item><title>Lack of Transparency, literally. - Slashdot</title><link>https://slashdot.org/comments.pl?sid=25/05/07/1525236&amp;cid=65359127&amp;sbsrc=topcom</link></item>
-<item><title>What a great way to alienate your former customers - Slashdot</title><link>https://slashdot.org/comments.pl?sid=25/05/07/1856255&amp;cid=65359649&amp;sbsrc=topcom</link></item>
-<item><title>The vanishing of youth - Aeon</title><link>https://aeon.co/essays/population-decline-will-rob-us-of-vital-social-force-youth?utm_source=rss-feed</link></item>
-<item><title>How to study ‘talking’ dogs - Aeon</title><link>https://aeon.co/videos/do-button-pushing-dogs-have-something-new-to-say-about-language?utm_source=rss-feed</link></item>
-<item><title>Vikings on the Silk Roads - Aeon</title><link>https://aeon.co/essays/the-viking-age-is-undergoing-a-revisionist-transformation?utm_source=rss-feed</link></item>
-<item><title>More data, comms, countermeasures needed for Special Ops aircraft - Defense News</title><link>https://www.defensenews.com/air/2025/05/07/more-data-comms-countermeasures-needed-for-special-ops-aircraft/</link></item>
-<item><title>KC-46 vision system upgrade slips to 2027, 3 years behind schedule - Defense News</title><link>https://www.defensenews.com/air/2025/05/07/kc-46-vision-system-upgrade-slips-to-2027-three-years-behind-schedule/</link></item>
-<item><title>Space Force weighs options for boosting launch resiliency, capacity - Defense News</title><link>https://www.defensenews.com/space/2025/05/07/space-force-weighs-options-for-boosting-launch-resiliency-capacity/</link></item>
-<item><title>How the European Defence Agency can unleash Europe’s startups - Defense News</title><link>https://www.defensenews.com/opinion/2025/05/07/how-the-european-defence-agency-can-unleash-europes-startups/</link></item>
-<item><title>Poland proffers common defense financing as panacea for arming Europe - Defense News</title><link>https://www.defensenews.com/global/europe/2025/05/07/poland-proffers-common-defense-financing-as-panacea-for-arming-europe/</link></item>
-<item><title>Sentinel nuclear missiles will need new silos, Air Force says - Defense News</title><link>https://www.defensenews.com/air/2025/05/06/sentinel-nuclear-missiles-will-need-new-silos-air-force-says/</link></item>
-<item><title>Hegseth champions special operations as the force for today’s threats - Defense News</title><link>https://www.defensenews.com/news/your-military/2025/05/06/hegseth-champions-special-operations-as-the-force-for-todays-threats/</link></item>
-<item><title>Reduced funding slows MDA’s hypersonic interceptor development - Defense News</title><link>https://www.defensenews.com/pentagon/2025/05/06/reduced-funding-slows-mdas-hypersonic-interceptor-development/</link></item>
-<item><title>Special operators want electronic attack and firepower for watercraft - Defense News</title><link>https://www.defensenews.com/naval/2025/05/06/special-operators-want-electronic-attack-and-firepower-for-watercraft/</link></item>
-<item><title>Golden Dome costs driven by interceptors, not launch, analysts say - Defense News</title><link>https://www.defensenews.com/space/2025/05/06/golden-dome-costs-driven-by-interceptors-not-launch-analysts-say/</link></item>
-<item><title>Ill-fated Gaza pier mission lacked sufficient training, equipment: IG - Defense News</title><link>https://www.defensenews.com/news/your-military/2025/05/06/ill-fated-gaza-pier-mission-lacked-sufficient-training-equipment-ig/</link></item>
-<item><title>Lithuania to lay antitank mines along its borders with Belarus, Russia - Defense News</title><link>https://www.defensenews.com/global/europe/2025/05/06/lithuania-to-lay-antitank-mines-along-its-borders-with-belarus-russia/</link></item>
-<item><title>For Advertisers - HowStuffWorks</title><link>https://www.howstuffworks.com/for-advertisers.htm</link></item>
-<item><title>The Ghost Shark Thrives in Oceans More Than 2,000 Feet Deep - HowStuffWorks</title><link>https://animals.howstuffworks.com/fish/ghost-shark.htm</link></item>
-<item><title>7 Types of Art to Find in Museums, on the Street and Beyond - HowStuffWorks</title><link>https://entertainment.howstuffworks.com/arts/artwork/types-of-art.htm</link></item>
-<item><title>Snowshoe Cat: American Shorthair Charm and Siamese Aesthetic - HowStuffWorks</title><link>https://animals.howstuffworks.com/pets/snowshoe-cat.htm</link></item>
-<item><title>Catherine the Great&amp;#39;s Furniture: Erotic Easter Egg or Petty Hoax? - HowStuffWorks</title><link>https://history.howstuffworks.com/historical-figures/catherine-the-greats-furniture.htm</link></item>
-<item><title>5 Chinese Anime to Introduce You to the World of Donghua - HowStuffWorks</title><link>https://entertainment.howstuffworks.com/chinese-anime.htm</link></item>
-<item><title>The Blue Shark Is Built for Long-distance Travel - HowStuffWorks</title><link>https://animals.howstuffworks.com/fish/sharks/blue-shark.htm</link></item>
-<item><title>Balinese Cat: A Chatty, Long-haired Cousin to Siamese Cats - HowStuffWorks</title><link>https://animals.howstuffworks.com/pets/balinese-cat.htm</link></item>
-<item><title>15 Types of Cars for Every Purpose and Personality - HowStuffWorks</title><link>https://auto.howstuffworks.com/types-of-cars.htm</link></item>
-<item><title>Beck Weathers: Left for Dead on Everest, Lived to Tell the Tale - HowStuffWorks</title><link>https://history.howstuffworks.com/historical-figures/beck-weathers.htm</link></item>
-<item><title>What Is Holi? Celebrating Community, Renewal and Forgiveness - HowStuffWorks</title><link>https://people.howstuffworks.com/culture-traditions/holidays-other/what-is-holi.htm</link></item>
-<item><title>Star Wars&amp;#39; New TV Show Has A Secret &amp;quot;Fourth Episode&amp;quot;: How To Watch Mon Mothma&amp;#39;s Missing Andor Season 2 Scenes - Screen Rant</title><link>https://screenrant.com/star-wars-andor-season-2-mon-mothma-missing-scenes-explainer/</link></item>
-<item><title>A Minecraft Movie&amp;#39;s Global Box Office Cracks Studio&amp;#39;s Top 15 Highest-Grossing Charts - Screen Rant</title><link>https://screenrant.com/a-minecraft-movie-top-15-highest-grossing-warner-bros-charts-global-box-office-milestone/</link></item>
-<item><title>I Need These 6 Major Green Lantern Characters To Debut In The DC Universe As Soon As Possible - Screen Rant</title><link>https://screenrant.com/green-lantern-characters-dc-universe-need-debut-list/</link></item>
-<item><title>The Last Of Us Season 2&amp;#39;s Subway Scene Is Exactly What I Wanted To See Since The Jackson Attack - Screen Rant</title><link>https://screenrant.com/the-last-of-us-season-2-subway-scene-infected-attack-op-ed/</link></item>
-<item><title>The Four Seasons - Screen Rant</title><link>https://screenrant.com/db/tv-show/the-four-seasons/</link></item>
-<item><title>Tina Fey&amp;#39;s The Four Seasons Season 2 Update Sounds Even Better After The Show&amp;#39;s Biggest Change From The OG Movie - Screen Rant</title><link>https://screenrant.com/the-four-seasons-season-2-nick-death-change-aftermath-good-explainer/</link></item>
-<item><title>From the World of John Wick: Ballerina - Screen Rant</title><link>https://screenrant.com/db/movie/ballerina/</link></item>
-<item><title>Ballerina BTS Video Reveals First Peek At Ana De Armas&amp;#39; Fight Scene With Keanu Reeves&amp;#39; John Wick - Screen Rant</title><link>https://screenrant.com/ballerina-ana-de-armas-keanu-reeves-fight-bts-video/</link></item>
-<item><title>Nic Cage&amp;#39;s New 86% Thriller On RT Is The Spiritual Successor To One Of His Earliest And Most Underrated Films - Screen Rant</title><link>https://screenrant.com/nicolas-cage-the-surfer-vampires-kiss-similarities/</link></item>
-<item><title>The Naked Gun - Screen Rant</title><link>https://screenrant.com/db/movie/the-naked-gun-reboot/</link></item>
-<item><title>Naked Gun Reboot Image Reveals First Look At Pamela Anderson&amp;#39;s Character - Screen Rant</title><link>https://screenrant.com/naked-gun-2025-reboot-movie-image-pamela-anderson/</link></item>
-<item><title>I hope Sonic the Hedgehog 4 finally explores this side of the franchise better. - Screen Rant</title><link>https://screenrant.com/thread/i-hope-sonic-the-hedgehog-4-finally-explores-this-side-of-the-franchise-better/</link></item>
-<item><title>Is Jon Hamm&amp;#39;s Your Friends and Neighbors worth streaming on Apple TV+? - Screen Rant</title><link>https://screenrant.com/thread/is-jon-hamms-your-friends-and-neighbors-worth-streaming-on-apple-tv/</link></item>
-<item><title>Rick and Morty season 8 will drop on May 25, but has it been too long since season 7&amp;#39;s ending? - Screen Rant</title><link>https://screenrant.com/thread/rick-and-morty-season-8-will-drop-on-may-25-but-has-it-been-too-long-since-season-7s-ending/</link></item>
-<item><title>Should each Beatles biopic have a different writer? - Screen Rant</title><link>https://screenrant.com/thread/should-each-beatles-biopic-have-a-different-writer/</link></item>
-<item><title>Charles_Papadopoulos - Screen Rant</title><link>https://screenrant.com/profile/UL210237/</link></item>
-<item><title>Does the trailer for Foundation season 3 make you excited for the Apple TV+ sci-fi show? - Screen Rant</title><link>https://screenrant.com/thread/does-the-trailer-for-foundation-season-3-make-you-excited-for-the-apple-tv-sci-fi-show/</link></item>
-<item><title>Is Alex Garland right for an Elden Ring movie adaptation? - Screen Rant</title><link>https://screenrant.com/thread/is-alex-garland-right-for-an-elden-ring-movie-adaptation/</link></item>
-<item><title>How The Thunderbolts* Post-Credits Scene Sets Up Avengers: Doomsday Explained By Florence Pugh - Screen Rant</title><link>https://screenrant.com/thunderbolts-credits-scene-avengers-doomsday-florence-pugh/</link></item>
-<item><title>&amp;quot;Really Struck A Chord With A Lot Of People&amp;quot;: Cold Case Revival Return Addressed By OG Star As They Reflect On Show&amp;#39;s Fanbase - Screen Rant</title><link>https://screenrant.com/cold-case-revival-return-josh-hopkins-response/</link></item>
-<item><title>Leverage: Redemption Season 3&amp;#39;s Major Returning Character &amp; Potential Future Explained By Star: &amp;quot;Like A Family Reunion&amp;quot; - Screen Rant</title><link>https://screenrant.com/leverage-redemption-season-3-tara-return-explained-jeri-ryan/</link></item>
-<item><title>Thunderbolts* Writer Reveals John Walker Was Originally The Main Villain And Why It Became Sentry/The Void Instead - Screen Rant</title><link>https://screenrant.com/thunderbolts-villain-john-walker-sentry-void-writer-explained/</link></item>
-<item><title>How MobLand Episode 5&amp;#39;s Big Death Will Impact The Harrigan &amp; Stevenson War Truce Previewed By Star As They Reflect On &amp;quot;Going Out With A Bang&amp;quot; - Screen Rant</title><link>https://screenrant.com/mobland-episode-5-vron-death-explained-annie-cooper/</link></item>
-<item><title>Star Wars Retcons The Origin Of Rogue One&amp;#39;s K-2SO In The Best Possible Way - Screen Rant</title><link>https://screenrant.com/star-wars-rogue-one-k-2so-andor-retcon-explainer/</link></item>
-<item><title>&amp;quot;I Wondered Why This Looks So Familiar&amp;quot;: Clair Obscur Expedition 33 Fan Discovers Hidden Reference To Final Fantasy 7 - Screen Rant</title><link>https://screenrant.com/clair-obscur-expedition-33-final-fantasy-7-logo-easter-egg/</link></item>
-<item><title>Clair Obscur: Expedition 33 - Screen Rant</title><link>https://screenrant.com/tag/video-game/clair-obscur-expedition-33/</link></item>
-<item><title>Yuliya Geikhman - Screen Rant</title><link>https://screenrant.com/author/yuliya-geikhman/</link></item>
-<item><title>Andor&amp;#39;s Ghorman Massacre Fully Explained: Why The Empire Did That &amp; What It Means - Screen Rant</title><link>https://screenrant.com/star-wars-andor-ghorman-massacre-empire-explainer/</link></item>
-<item><title>After 83 Years, DC Is Finally Killing Off a Beloved Justice Society Superhero - Screen Rant</title><link>https://screenrant.com/dc-kill-hero-jsa-wildcat-dead-permanent-factoid/</link></item>
-<item><title>Toy Story 5&amp;#39;s Buzz Lightyear Story Tease Sets Up A Hilarious Way For Chris Evans To Return - Screen Rant</title><link>https://screenrant.com/toy-story-5-buzz-lightyear-villain-chris-evans-return/</link></item>
-<item><title>How Alec Baldwin&amp;#39;s Western Movie Rust Returns To The Genre&amp;#39;s Origins Explained By Star - Screen Rant</title><link>https://screenrant.com/rust-movie-2025-western-genre-origins-return-josh-hopkins-interview/</link></item>
-<item><title>Translating Andor Season 2 Episode 7&amp;#39;s Tragic Ending Song: Tony Gilroy&amp;#39;s Ghorman Lyrics In English &amp; What They Really Mean Explained - Screen Rant</title><link>https://screenrant.com/andor-season-2-episode-7-tony-gilroy-brandon-roberts-composer-end-credit-song-meaning-explained/</link></item>
-<item><title>20 Years Later, Avatar: The Last Airbender Is Still So Revolutionary For 1 Very Important Reason - Screen Rant</title><link>https://screenrant.com/avatar-the-last-airbender-legacy-revolutionary-strong-women-op-ed/</link></item>
-<item><title>Avatar: The Last Airbender - Screen Rant</title><link>https://screenrant.com/tag/avatar-the-last-airbender-franchise/</link></item>
-<item><title>CBS Reveals The Title For Its Kayce Dutton Yellowstone Spinoff - Screen Rant</title><link>https://screenrant.com/yellowstone-cbs-y-marshal-kayce-dutton-spinoff-title/</link></item>
-<item><title>These 10 Stephen King Movie Endings Are Very Different From The Books - Screen Rant</title><link>https://screenrant.com/stephen-king-movie-endings-much-different-from-the-books-list/</link></item>
-<item><title>Silo Season 3 Update Gives Me Hope That The Show Will Avoid A Trend That Commonly Plagues Streaming - Screen Rant</title><link>https://screenrant.com/silo-season-3-filming-update-no-long-delays-explainer/</link></item>
-<item><title>As Revenge Of The Sith Turns 20, The Perfect Sequel Is Releasing New Episodes On Disney+ - Screen Rant</title><link>https://screenrant.com/star-wars-revenge-of-the-sith-andor-sequel-op-ed/</link></item>
-<item><title>Two Ferris Bueller&amp;#39;s Day Off Stars Reuniting After 39 Years In New Comedy Movie - Screen Rant</title><link>https://screenrant.com/the-best-is-yet-to-come-movie-matthew-broderick-alan-ruck-reunion-casting/</link></item>
-<item><title>ferris buellers day off - Screen Rant</title><link>https://screenrant.com/db/movie/ferris-bueller-s-day-off/</link></item>
-<item><title>&amp;quot;Give Me A Call&amp;quot;: Original Blade Trilogy Writer Addresses How Marvel Can Finally Make Mahershala Ali&amp;#39;s MCU Movie Happen - Screen Rant</title><link>https://screenrant.com/blade-trilogy-original-writer-mcu-movie/</link></item>
-<item><title>Towerborne Composer Explains The “Next-Gen Interactive Music Concept” Driving Microsoft’s Co-Op Side-Scrolling Adventure - Screen Rant</title><link>https://screenrant.com/towerborne-microsoft-stoic-composer-austin-wintory-interview/</link></item>
-<item><title>Why Susan Sarandon Deserves All The Credit For One Of Nonnas&amp;#39; Most Memorable Scenes Explained By Director Stephen Chbosky - Screen Rant</title><link>https://screenrant.com/nonnas-netflix-movie-susan-sarandon-scene-explained-stephen-chbosky-liz-maccie-interview/</link></item>
-<item><title>There&amp;#39;s One Thing Fans Can Do To Make Solo Leveling Season 3 a Success - Screen Rant</title><link>https://screenrant.com/solo-leveling-season-3-one-thing-fans-hit/</link></item>
-<item><title>10 Perfect Marvel Characters For Ryan Reynolds’ New Deadpool &amp; X-Men MCU Team-Up Movie - Screen Rant</title><link>https://screenrant.com/ryan-reynolds-deadpool-x-men-mcu-movie-marvel-characters/</link></item>
-<item><title>Move Over, Fourth Wing: Two May 2025 Romantasy Books Are Already Blowing Up On BookTok - Screen Rant</title><link>https://screenrant.com/romantasy-books-may-2025-silver-elite-knight-and-the-moth-recommendation/</link></item>
-<item><title>Nicolas Cage Addresses Marvel And Sony&amp;#39;s Secrecy Around His Spider-Man Spinoff: &amp;quot;I&amp;#39;m Sorry For This Answer&amp;quot; - Screen Rant</title><link>https://screenrant.com/spider-man-noir-nicolas-cage-secrecy-marvel-spinoff/</link></item>
-<item><title>Spider-Noir - Screen Rant</title><link>https://screenrant.com/db/tv-show/spider-noir-2025/</link></item>
-<item><title>Elsbeth Season 2, Episode 20 &amp;quot;Ramen Holiday&amp;quot; Trailer - Screen Rant</title><link>https://screenrant.com/video/elsbeth-season-2-episode-20-ramen-holiday-trailer/</link></item>
-<item><title>Marvel Resurrects One of Its Most Iconic Villains for Fight 100 Years in the Making - Screen Rant</title><link>https://screenrant.com/wolverine-sabretooth-resurrection-family/</link></item>
-<item><title>New Helldivers 2 Trailer Mysteriously Taken Down, With &amp;quot;Tinfoil Hat&amp;quot; Theories Hoping It Means Imminent Xbox Release [Updated] - Screen Rant</title><link>https://screenrant.com/helldivers-2-trailer-taken-down-xbox-release-theory/</link></item>
-<item><title>Which Real-Life Person Sisu&amp;#39;s Main Character, Aatami Korpi, Is Based On - Screen Rant</title><link>https://screenrant.com/is-sisu-aatami-korpi-based-on-real-person/</link></item>
-<item><title>Mr. Monk&amp;#39;s Last Case 2 Can&amp;#39;t Happen Without Bringing Back This Missing Character From The Show - Screen Rant</title><link>https://screenrant.com/monk-last-case-2-needs-sharona-return-op-ed/</link></item>
-<item><title>Tales Of The Shire Announces Physical Edition Complete With Map Of Bywater - Screen Rant</title><link>https://screenrant.com/tales-of-the-shire-lotr-physical-bywater-map/</link></item>
-<item><title>How AI voicebots threaten the psyche of US service members and spies - Defense News</title><link>https://www.defensenews.com/industry/techwatch/2025/05/06/how-ai-voicebots-threaten-the-psyche-of-us-service-members-and-spies/</link></item>
-<item><title>ProjectLibre Major Release: Day One downloads in 150+ countries… replacing Microsoft Project - SourceForge</title><link>https://sourceforge.net/blog/projectlibre-major-release-day-one-downloads-in-150-countries-replacing-microsoft-project/</link></item>
-<item><title>Canonical announces first Ubuntu Desktop image for Qualcomm Dragonwing™ Platform with Ubuntu 24.04 - Ubuntu blog</title><link>https://ubuntu.com/blog/canonical-announces-first-ubuntu-desktop-image-for-qualcomm-dragonwing-platform-with-ubuntu-24-04</link></item>
-<item><title>Canonical and Ampere announce AmpereOne® SoC certification and other partnership milestones - Ubuntu blog</title><link>https://ubuntu.com/blog/canonical-and-ampere-announce-ampereone-soc-certification-and-other-partnership-milestones</link></item>
-<item><title>CRA compliance: Things IoT manufacturers can no longer do under the CRA (and what to do instead) - Ubuntu blog</title><link>https://ubuntu.com/blog/cra-compliance-iot-manufacturer-best-practices</link></item>
-<item><title>IBM LinuxONE 5 and Ubuntu Server, a great combination from day one - Ubuntu blog</title><link>https://ubuntu.com/blog/ibm-linuxone-emperor-5-ubuntu-server-integration</link></item>
-<item><title>Ubuntu IoT Day in Singapore – Unlock compliant and scalable innovation in edge AI - Ubuntu blog</title><link>https://ubuntu.com/blog/ubuntu-iot-day-singapore-2025</link></item>
-<item><title>The long march towards delivering CRA compliance - Ubuntu blog</title><link>https://ubuntu.com/blog/march-events-cyber-resilience-act-compliance</link></item>
-<item><title>Extra Factor Authentication: how to create zero trust IAM with third-party IdPs - Ubuntu blog</title><link>https://ubuntu.com/blog/how-to-implement-zero-trust-into-third-party-idps</link></item>
-<item><title>The hitchhiker’s guide to infrastructure modernization - Ubuntu blog</title><link>https://ubuntu.com/blog/hitchhikers-guide-to-infrastructure-modernization</link></item>
-<item><title>Isobel Kate Maxwell - Ubuntu blog</title><link>https://ubuntu.com/blog/author/iso-maxwell</link></item>
+<lastBuildDate>Fri, 09 May 2025 11:55:39 +0800</lastBuildDate>
+<item><title>独家丨刘家琨获普利兹克奖感言：守护原始的感悟力 - 澎湃</title><link>https://www.thepaper.cn/newsDetail_forward_30786833</link></item>
+<item><title>Ubuntu 25.10 Replaces Sudo with Rust-Based sudo-rs - OSTechNix</title><link>https://ostechnix.com/ubuntu-25-10-sudo-rs/</link></item>
+<item><title>Fedora Linux is Now Officially Available for Windows Subsystem for Linux (WSL) - OSTechNix</title><link>https://ostechnix.com/fedora-linux-is-now-an-official-wsl-distribution/</link></item>
+<item><title>Linux Kernel 6.15 RC5 Released: Stability Improvements and Key Fixes - OSTechNix</title><link>https://ostechnix.com/linux-kernel-6-15-rc5-released/</link></item>
+<item><title>How Tmux Saved My Work and Why You Should Use It for Unstable SSH Connections in Linux - OSTechNix</title><link>https://ostechnix.com/use-tmux-unstable-ssh/</link></item>
+<item><title>How To Remove Unused Flatpak Apps To Free Up Disk Space In Linux - OSTechNix</title><link>https://ostechnix.com/remove-unused-flatpak-apps-to-free-up-disk-space-in-linux/</link></item>
+<item><title>PyXL: Run Python Code Directly In Hardware! - OSTechNix</title><link>https://ostechnix.com/pyxl-run-python-code-directly-in-hardware/</link></item>
+<item><title>特朗普政府计划修改拜登时代的 AI 芯片出口限制 - Solidot</title><link>https://www.solidot.org/story?sid=81236</link></item>
+<item><title>curl 项目遭遇 AI 生成的虚假漏洞报告攻击 - Solidot</title><link>https://www.solidot.org/story?sid=81237</link></item>
+<item><title>今天出生的人更可能遭遇极端气候事件 - Solidot</title><link>https://www.solidot.org/story?sid=81238</link></item>
+<item><title>Gmail 停止支持 3DES 加密的传入 SMTP 连接 - Solidot</title><link>https://www.solidot.org/story?sid=81239</link></item>
+<item><title>三分之二全球暖化是最富有 10% 人口造成的 - Solidot</title><link>https://www.solidot.org/story?sid=81240</link></item>
+<item><title>苹果高管称 Safari 上的搜索量首次下降 - Solidot</title><link>https://www.solidot.org/story?sid=81241</link></item>
+<item><title>食用超加工食品或有害健康 - Solidot</title><link>https://www.solidot.org/story?sid=81242</link></item>
+<item><title>霸王龙的直系祖先从亚洲跨越陆桥来到美洲 - Solidot</title><link>https://www.solidot.org/story?sid=81243</link></item>
+<item><title>盖茨称马斯克需要为杀死最贫困儿童负责 - Solidot</title><link>https://www.solidot.org/story?sid=81244</link></item>
+<item><title>华为透露首款运行 HarmonyOS 5 的笔记本电脑 - Solidot</title><link>https://www.solidot.org/story?sid=81245</link></item>
+<item><title>人才评价机制僵化导致论文工厂屡铲不除 - Solidot</title><link>https://www.solidot.org/story?sid=81235</link></item>
+<item><title>基因突变让部分人每天只需要睡 3 小时 - Solidot</title><link>https://www.solidot.org/story?sid=81234</link></item>
+<item><title>欧盟制定吸引美国科学家的政策 - Solidot</title><link>https://www.solidot.org/story?sid=81233</link></item>
+<item><title>因违反打包政策 openSUSE 移除 Deepin Desktop - Solidot</title><link>https://www.solidot.org/story?sid=81232</link></item>
+<item><title>绿地与新生儿的健康相关 - Solidot</title><link>https://www.solidot.org/story?sid=81231</link></item>
+<item><title>《原神》向美国用户引入年龄验证 - Solidot</title><link>https://www.solidot.org/story?sid=81230</link></item>
+<item><title>科学家研发出可结构重编程的磁性超材料 - Solidot</title><link>https://www.solidot.org/story?sid=81229</link></item>
+<item><title>巴基斯坦恢复对 X 的访问 - Solidot</title><link>https://www.solidot.org/story?sid=81228</link></item>
+<item><title>体罚对儿童具有完全负面影响 - Solidot</title><link>https://www.solidot.org/story?sid=81227</link></item>
+<item><title>Reddit CEO 称员工太理想主义而没有努力工作 - Solidot</title><link>https://www.solidot.org/story?sid=81226</link></item>
+<item><title>Deck of Haunts Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/deck-of-haunts-review-537759.shtml</link></item>
+<item><title>The Horror at Highrook Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/the-horror-at-highrook-review-537758.shtml</link></item>
+<item><title>Best Served Cold Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/best-served-cold-review-537757.shtml</link></item>
+<item><title>Every Day We Fight Preview (PC) - Softpedia</title><link>https://news.softpedia.com/news/every-day-we-fight-preview-pc-537756.shtml</link></item>
+<item><title>Revenge of the Savage Planet Review (PS5) - Softpedia</title><link>https://www.softpedia.com/reviews/games/playstation-5/revenge-of-the-savage-planet-review-537755.shtml</link></item>
+<item><title>Memoriapolis Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/memoriapolis-review-537754.shtml</link></item>
+<item><title>SpellRogue Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/spellrogue-review-537753.shtml</link></item>
+<item><title>StarVaders Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/starvaders-review-537752.shtml</link></item>
+<item><title>Steel Seed Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/steel-seed-review-537751.shtml</link></item>
+<item><title>Crusader Kings III: Khans of the Steppe DLC – Yay or Nay (PC) - Softpedia</title><link>https://news.softpedia.com/news/crusader-kings-iii-khans-of-the-steppe-yay-or-nay-pc-537750.shtml</link></item>
+<item><title>Inhuman Resources: A Literary Machination Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/inhuman-resources-a-literary-machination-review-537749.shtml</link></item>
+<item><title>Imagine Earth - Galaxies DLC – Yay or Nay (PC) - Softpedia</title><link>https://news.softpedia.com/news/imagine-earth-galaxies-dlc-yay-or-nay-pc-537748.shtml</link></item>
+<item><title>Maliki: Poison Of The Past Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/maliki-poison-of-the-past-review-537747.shtml</link></item>
+<item><title>Wartorn Preview (PC) - Softpedia</title><link>https://news.softpedia.com/news/wartorn-preview-pc-537746.shtml</link></item>
+<item><title>Old Skies Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/old-skies-review-537745.shtml</link></item>
+<item><title>FATAL FURY: City of the Wolves Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/fatal-fury-city-of-the-wolves-review-537744.shtml</link></item>
+<item><title>Augmented Empire Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/augmented-empire-review-537743.shtml</link></item>
+<item><title>Amerzone: The Explorer’s Legacy Review (PS5) - Softpedia</title><link>https://www.softpedia.com/reviews/games/playstation-5/amerzone-the-explorer-s-legacy-review-537742.shtml</link></item>
+<item><title>Sacre Bleu Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/sacre-bleu-review-537741.shtml</link></item>
+<item><title>Sultan&amp;#39;s Game Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/sultan-039-s-game-review-537740.shtml</link></item>
+<item><title>Endless Legend 2 Preview (PC) - Softpedia</title><link>https://news.softpedia.com/news/endless-legend-2-preview-pc-537739.shtml</link></item>
+<item><title>Lost Skies Preview (PC) - Softpedia</title><link>https://news.softpedia.com/news/lost-skies-preview-pc-537738.shtml</link></item>
+<item><title>Kaya&amp;#39;s Prophecy Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/kaya-039-s-prophecy-review-537737.shtml</link></item>
+<item><title>Stygian: Outer Gods Preview (PC) - Softpedia</title><link>https://news.softpedia.com/news/stygian-outer-gods-preview-pc-537736.shtml</link></item>
+<item><title>AI LIMIT Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/ai-limit-review-537735.shtml</link></item>
+<item><title>Grit and Valor - 1949 Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/grit-and-valor-1949-review-537734.shtml</link></item>
+<item><title>Leila Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/leila-review-537733.shtml</link></item>
+<item><title>Hyper Empire Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/hyper-empire-review-537732.shtml</link></item>
+<item><title>Atomfall Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/atomfall-review-537731.shtml</link></item>
+<item><title>Sins of a Solar Empire II - Paths to Power DLC – Yay or Nay (PC) - Softpedia</title><link>https://news.softpedia.com/news/sins-of-a-solar-empire-ii-paths-to-power-dlc-yay-or-nay-pc-537730.shtml</link></item>
 </channel></rss>
