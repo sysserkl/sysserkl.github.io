@@ -293,7 +293,7 @@ function rare_enwords_get_rlater(){
 
 function efull_get_rlater(){
     function sub_efull_get_rlater_done(efull_set){
-        search_websites_rlater('\\b('+efull_set.join('|').replace(/\./g,'\\.')+')\\b');
+        search_websites_rlater('+\\b('+efull_set.join('|').replace(/\./g,'\\.')+')\\b');
     }
     efull_get_websites_b(sub_efull_get_rlater_done);
 }

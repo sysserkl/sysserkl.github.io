@@ -1,4 +1,6 @@
 var csbooklist_source_global=[
+["all_about_coffee_1436", "All About Coffee(William H. Ukers)","已整理,englishwords","3",""],
+["encyclopedia_of_needlework_2549", "Encyclopedia of Needlework(Thérèse de Dillmont)","已整理,englishwords","3",""],
 ["the_strange_case_of_dr_jamh_3647", "The Strange Case of Dr. Jekyll and Mr. Hyde(Robert Louis Stevenson)","已整理,englishwords","3",""],
 ["simple_sabotage_field_manual_2610", "Simple Sabotage Field Manual(United States. Office of Strategic Services)","已整理,englishwords","3",""],
 ["memoirs_of_fanny_hill_a_nageftotl1_7382", "Memoirs of Fanny Hill  A New and Genuine Edition from the Original Text (London, 1749)(John Cleland)","已整理,englishwords","3",""],

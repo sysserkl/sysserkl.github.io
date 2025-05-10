@@ -1,5 +1,4 @@
 var common_apps_pb_global=[
-["popup:bookshelf","bookshelf","𝍂","1"],
 ["popup:character","character","🔤","0"],
 ["popup:database","database","🛢","1"],
 ["popup:ENG","ENG","𝔼","0"],
@@ -16,7 +15,7 @@ var common_apps_pb_global=[
 ["{{selenium_news}}/html/bible.htm","Bible","✝️","0_1"],
 ["{{selenium_news}}/html/bigfile.htm","big file","🍥","0"],
 ["{{selenium_news}}/html/book_search_js.htm","EBS_JS","👁","5_5_f","ENG"],
-["{{selenium_news}}/html/bookshelf.htm","bookshelf","𝍂","5","bookshelf"],
+["{{selenium_news}}/html/bookshelf.htm","bookshelf","𝍂","5","txtbook"],
 ["{{selenium_news}}/html/calculator.htm","Calculator","➗","1"],
 ["{{selenium_news}}/html/calendar.htm","Calendar","calendar256.png","5","PIM"],
 ["{{selenium_news}}/html/canvas_draw.htm","canvas draw","🖍","3",""],
@@ -26,7 +25,7 @@ var common_apps_pb_global=[
 ["{{selenium_news}}/html/container.htm","container","📦️","2",""],
 ["{{selenium_news}}/html/diff_js.htm","diff js","⚖","0"],
 ["{{selenium_news}}/html/digest.htm","Digest","🗃️","5","txtbook"],
-["{{selenium_news}}/html/douban_book.htm","douban book","𖠗","5","bookshelf"],
+["{{selenium_news}}/html/douban_book.htm","douban book","𖠗","5","txtbook"],
 ["{{selenium_news}}/html/emoji.htm","emoji","🎁","5","character"],
 ["{{selenium_news}}/html/ensentence.htm","ensentence","🗨","5","ENG"],
 ["{{selenium_news}}/html/enwords_book.htm","生词统计","🝛","5","ENG"],
