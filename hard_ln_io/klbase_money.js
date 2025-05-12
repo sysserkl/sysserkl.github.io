@@ -61,7 +61,7 @@ function search_link_money_b(csstr,cstype,fn_name='search_wp'){
 			break;        
 		case '购置日期':
 			var bltmp=fn_name+'(\"='+csstr+'(:'+cstype+')\");';
-            bljg='<span class="span_underline_box" onclick=\''+bltmp+'\'>'+csstr+'</span>';
+            bljg='<span class="span_underline_box" onclick=\''+bltmp+'\' title="'+Math.floor(days_between_two_dates_b(csstr))+'天以前">'+csstr+'</span>';
 			break;
 		case '子类':
 			var blarr=csstr.split(',');
@@ -209,17 +209,6 @@ function template_get_money_b(){
     localStorage.setItem('wp_template','');    
 }
 
-function date_row_money_b(purchase_date,csnolink){
-    var bljg='<tr><td colspan=3 style="border-top:double 0.5rem #e0e0e0;padding:1rem 0;"><big><strong>';
-    if (csnolink){
-        bljg=bljg+purchase_date;
-    } else {
-        bljg=bljg+search_link_money_b(purchase_date,'购置日期');
-    }
-    bljg=bljg+' <span onclick="from_day_money_b(\''+purchase_date+'\');" style="cursor:pointer;">'+day_2_week_b(purchase_date)+'</span></strong></big>'+popup_b('popup_'+purchase_date,'','','70%')+'</td></tr>';
-    return bljg;
-}
-
 function from_day_money_b(csday){
     var ospan=document.getElementById('popup_'+csday);  //popup需要支持多个popup同时显示，不能使用event弹出唯一的div - 保留注释
     if (!ospan){return;}
@@ -258,10 +247,21 @@ function table_top_money_b(){
 }
 
 function table_detail_money_b(cspage=1,csstatus='',cspagenum=-1,cssimple=false,csluru_php='wpluru.php',csnolink=false,csnew_window=true){
+    function table_detail_money_b_row(){
+        let bljg='<tr><td colspan=3 style="border-top:double 0.5rem #e0e0e0;padding:1rem 0;"><big><strong>';
+        if (csnolink){
+            bljg=bljg+purchase_date;
+        } else {
+            bljg=bljg+search_link_money_b(purchase_date,'购置日期');
+        }
+        bljg=bljg+' <span onclick="from_day_money_b(\''+purchase_date+'\');" style="cursor:pointer;">'+day_2_week_b(purchase_date)+'</span></strong></big>'+popup_b('popup_'+purchase_date,'','','70%')+'</td></tr>';
+        return bljg;
+    }
+
     var bljg='';
     bljg=table_top_money_b()+'<tr><td colspan=3 style="border:0px;" id="td_recent_search"></td></tr><tr><td colspan=3 style="border:0px;" id="td_status_wp">'+csstatus+'</td></tr>';
     
-    var date_t='';
+    var purchase_date='';
     var blamount_total=0;
     var blamount_this_page=0;
     var blsum_this_page=0;
@@ -270,9 +270,9 @@ function table_detail_money_b(cspage=1,csstatus='',cspagenum=-1,cssimple=false,c
         blamount_total=blamount_total+item[11];
 		if (cspage<=0 || blxl>=cspage-1 && blxl<cspage-1+cspagenum){
             //cspage<=0 时则显示全部记录 - 保留注释
-            if (item[6]!==date_t){
-                date_t=item[6];
-                bljg=bljg+date_row_money_b(item[6],csnolink);
+            if (item[6]!==purchase_date){
+                purchase_date=item[6];
+                bljg=bljg+table_detail_money_b_row();
             }
 			bljg=bljg+list_tr_money_b(item,blxl,cssimple,csluru_php,csnolink,csnew_window);
             blamount_this_page=blamount_this_page+item[11];
