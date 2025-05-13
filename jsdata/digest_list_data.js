@@ -41,6 +41,7 @@ var digest_list_source_global=[
 ["simple_sabotage_field_manual_2610_digest",3,"2025-05-07",63],
 ["politics_a_treatise_on_government_3192_digest",3,"2025-01-14",50],
 ["the_pickwick_papers_1793_digest",3,"2024-10-11",136],
+["all_about_coffee_1436_digest",3,"2025-05-09",304],
 ["peter_panj_m_barrie_831_digest",3,"2023-07-17",57],
 ["great_expectations_1802_digest",3,"2025-01-08",170],
 ["liao_zhai_zhi_yi_107694_digest",3,"2020-10-28",1184],
