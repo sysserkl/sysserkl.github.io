@@ -1,6 +1,11 @@
 var csbooklist_source_global=[
-["history_of_egypt_chaldea_syria_baaitlord_8040", "History of Egypt, Chaldea, Syria, Babylonia, and Assyria in the Light of Recent Discovery(L. W. King)","已整理,englishwords","3",""],
+["bell_s_cathedrals_the_cathedral_corashotcaadoif_9886", "Bell's Cathedrals- The Cathedral Church of Ripon  A Short History of the Church and a Description of Its Fabric(Cecil Walter Charles Hallett)","已整理,englishwords","3",""],
+["the_ten_books_on_architecture_2694", "The Ten Books on Architecture(Vitruvius Pollio)","已整理,englishwords","3",""],
+["how_france_built_her_cathedrals_asittatc_7320", "How France Built Her Cathedrals- A Study in the Twelfth and Thirteenth Centuries(Elizabeth Boyle O'Reilly)","已整理,englishwords","3",""],
+["architecture_1251", "Architecture(Henry-Russell Hitchcock)","已整理,englishwords","3",""],
+["the_seven_lamps_of_architecture_2903", "The Seven Lamps of Architecture(John Ruskin)","已整理,englishwords","3",""],
 ["ancient_monuments_of_the_mississippi_vsctkvi_8621", "Ancient Monuments of the Mississippi Valley  Smithsonian Contributions to Knowledge, Vol. I.(E. G. Squier)","已整理,englishwords","3",""],
+["history_of_egypt_chaldea_syria_baaitlord_8040", "History of Egypt, Chaldea, Syria, Babylonia, and Assyria in the Light of Recent Discovery(L. W. King)","已整理,englishwords","3",""],
 ["an_introduction_to_the_study_otmh_4890", "An Introduction to the Study of the Maya Hieroglyphs(Sylvanus Griswold Morley)","已整理,englishwords","3",""],
 ["all_about_coffee_1436", "All About Coffee(William H. Ukers)","已整理,englishwords","3",""],
 ["encyclopedia_of_needlework_2549", "Encyclopedia of Needlework(Thérèse de Dillmont)","已整理,englishwords","3",""],
