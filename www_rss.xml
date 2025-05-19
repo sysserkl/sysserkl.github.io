@@ -8,363 +8,76 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Sun, 18 May 2025 09:33:26 +0800</lastBuildDate>
-<item><title>Breaking Down Trump’s Executive Orders in His First 100 Days - Visual Capitalist</title><link>https://www.visualcapitalist.com/breaking-down-trumps-executive-orders-in-his-first-100-days/</link></item>
-<item><title>Ranked: The Most Popular Web Browsers - Visual Capitalist</title><link>https://www.visualcapitalist.com/ranked-the-most-popular-web-browsers/</link></item>
-<item><title>Breaking Down Global Military Spending by Country in 2024 - Visual Capitalist</title><link>https://www.visualcapitalist.com/breaking-down-global-military-spending-by-country-in-2024/</link></item>
-<item><title>Ranked: The Highest-Paying Industries in the U.S. (2025) - Visual Capitalist</title><link>https://www.visualcapitalist.com/ranked-the-highest-paying-industries-in-the-u-s-2025/</link></item>
-<item><title>The Surging Value of the Magnificent 7 Versus the S&amp;P 500 (2014-2024) - Visual Capitalist</title><link>https://www.visualcapitalist.com/sp/magnificent-7-versus-sp-500-tema01/</link></item>
-<item><title>U.S. vs. China: Mapping Trade Dominance in Africa (2003-2023) - Visual Capitalist</title><link>https://www.visualcapitalist.com/u-s-vs-china-mapping-trade-dominance-in-africa-2003-2023/</link></item>
-<item><title>Mapped: The World’s Largest Economies, Including U.S. States - Visual Capitalist</title><link>https://www.visualcapitalist.com/mapped-the-worlds-largest-economies-including-u-s-states/</link></item>
-<item><title>Get Our Visual Guide to the World’s Military Power (VC+) - Visual Capitalist</title><link>https://www.visualcapitalist.com/get-our-visual-guide-to-the-worlds-military-power-vc/</link></item>
-<item><title>Charted: The Slump in U.S. Shipping Exports (January–April 2025) - Visual Capitalist</title><link>https://www.visualcapitalist.com/charted-the-slump-in-u-s-shipping-exports-january-april-2025/</link></item>
-<item><title>Mapped: The World’s Top Financial Centers in 2025 - Visual Capitalist</title><link>https://www.visualcapitalist.com/mapped-the-worlds-top-financial-centers-in-2025/</link></item>
-<item><title>Newsletters - TechCrunch</title><link>https://techcrunch.com/newsletters/</link></item>
-<item><title>Biotech &amp; Health - TechCrunch</title><link>https://techcrunch.com/category/biotech-health/</link></item>
-<item><title>Cloud Computing - TechCrunch</title><link>https://techcrunch.com/tag/cloud-computing/</link></item>
-<item><title>Fundraising - TechCrunch</title><link>https://techcrunch.com/category/fundraising/</link></item>
-<item><title>Government &amp; Policy - TechCrunch</title><link>https://techcrunch.com/category/government-policy/</link></item>
-<item><title>Media &amp; Entertainment - TechCrunch</title><link>https://techcrunch.com/category/media-entertainment/</link></item>
-<item><title>Transportation - TechCrunch</title><link>https://techcrunch.com/category/transportation/</link></item>
-<item><title>Startup Battlefield - TechCrunch</title><link>https://techcrunch.com/startup-battlefield/</link></item>
-<item><title>Partner Content - TechCrunch</title><link>https://techcrunch.com/sponsored/</link></item>
-<item><title>TechCrunch Brand Studio - TechCrunch</title><link>https://techcrunch.com/brand-studio/</link></item>
-<item><title>Laser-powered fusion experiment more than doubles its power output - TechCrunch</title><link>https://techcrunch.com/2025/05/17/laser-powered-fusion-experiment-more-than-doubles-its-power-output/</link></item>
-<item><title>Y Combinator startup Firecrawl is ready to pay $1M to hire three AI agents as employees - TechCrunch</title><link>https://techcrunch.com/2025/05/17/y-combinator-startup-firecrawl-is-ready-to-pay-1m-to-hire-three-ai-agents-as-employees/</link></item>
-<item><title>MIT disavows doctoral student paper on AI’s productivity benefits - TechCrunch</title><link>https://techcrunch.com/2025/05/17/mit-disavows-doctoral-students-paper-on-ai-productivity-benefits/</link></item>
-<item><title>Epic Games asks judge to force Apple to approve Fortnite - TechCrunch</title><link>https://techcrunch.com/2025/05/17/epic-games-asks-judge-to-force-apple-to-approve-fortnite/</link></item>
-<item><title>Arc’s new 24-foot electric boat is its cheapest yet - TechCrunch</title><link>https://techcrunch.com/2025/05/16/arcs-new-24-foot-electric-boat-is-its-cheapest-yet/</link></item>
-<item><title>Build, don’t bind: Accel’s Sonali De Rycker on Europe’s AI crossroads - TechCrunch</title><link>https://techcrunch.com/2025/05/16/build-dont-bind-accels-sonali-de-rycker-on-europes-ai-crossroads/</link></item>
-<item><title>OpenAI’s planned data center in Abu Dhabi would be bigger than Monaco - TechCrunch</title><link>https://techcrunch.com/2025/05/16/openais-planned-data-center-in-abu-dhabi-would-be-bigger-than-monaco/</link></item>
-<item><title>Thousands of people have embarked on a virtual road trip via Google Street View - TechCrunch</title><link>https://techcrunch.com/2025/05/16/thousands-of-people-have-embarked-on-a-virtual-road-trip-via-google-street-view/</link></item>
-<item><title>Microsoft’s Satya Nadella is choosing chatbots over podcasts - TechCrunch</title><link>https://techcrunch.com/2025/05/17/microsofts-satya-nadella-is-choosing-chatbots-over-podcasts/</link></item>
-<item><title>TechCrunch Week in Review: Coinbase gets hacked - TechCrunch</title><link>https://techcrunch.com/2025/05/17/techcrunch-week-in-review-coinbase-gets-hacked/</link></item>
-<item><title>Google I/O 2025: What to expect, including updates to Gemini and Android 16 - TechCrunch</title><link>https://techcrunch.com/2025/05/16/google-i-o-2025-what-to-expect-including-updates-to-gemini-and-android-16/</link></item>
-<item><title>Kyle Wiggers - TechCrunch</title><link>https://techcrunch.com/author/kyle-wiggers/</link></item>
-<item><title>Tesla earnings wrap up: Elon Musk talks DOGE, Trump and tariffs, robotaxis, AI, and cheap EVs - TechCrunch</title><link>https://techcrunch.com/storyline/tesla-q1-earnings-live-updates/</link></item>
-<item><title>Nvidia GTC 2025 live updates: Blackwell Ultra, GM partnerships, and two ‘personal AI supercomputers’ - TechCrunch</title><link>https://techcrunch.com/storyline/nvidia-gtc-2025-live-updates-blackwell-ultra-gm-partnerships-and-two-personal-ai-supercomputers/</link></item>
-<item><title>SXSW 2025 live coverage: Health tips from Bryan Johnson, concerns about Elon Musk, and what it’s like to actually ride a Waymo Uber on the conference’s final day - TechCrunch</title><link>https://techcrunch.com/storyline/sxsw-2025-live-coverage-health-tips-from-bryan-johnson-concerns-about-elon-musk-and-what-its-like-to-actually-ride-a-waymo-uber-on-the-conferences-final-day/</link></item>
-<item><title>Alphabet earnings live updates: AI, Gemini 2.0, Google Cloud, and more - TechCrunch</title><link>https://techcrunch.com/storyline/alphabet-earnings-live-updates-ai-gemini-2-0-google-cloud-and-more/</link></item>
-<item><title>Tesla earnings live updates: Promising ‘return to growth’ and cheaper cars - TechCrunch</title><link>https://techcrunch.com/storyline/tesla-earnings-live-updates-elon-new-evs-ai-and-more/</link></item>
-<item><title>Samsung Unpacked 2025 live updates: Galaxy S25, new AI features, and more - TechCrunch</title><link>https://techcrunch.com/storyline/samsung-unpacked-2025-live-updates-galaxy-s25-new-ai-features-and-more/</link></item>
-<item><title>Live Updates CES 2025: The final reveals and analysis as the event nears its end - TechCrunch</title><link>https://techcrunch.com/storyline/live-updates-ces-2025-the-final-reveals-and-analysis-as-the-event-nears-its-end/</link></item>
-<item><title>Live Updates: 12 Days of OpenAI ChatGPT announcements and reveals - TechCrunch</title><link>https://techcrunch.com/storyline/live-updates-12-days-of-openai-chatgpt-announcements-and-reveals/</link></item>
-<item><title>TC Sessions: AI - TechCrunch</title><link>https://techcrunch.com/events/tc-sessions-ai/</link></item>
-<item><title>Register Now - TechCrunch</title><link>https://techcrunch.com/events/tc-sessions-ai/tickets/</link></item>
-<item><title>Book Exhibit Table - TechCrunch</title><link>https://techcrunch.com/events/tc-sessions-ai/exhibit/</link></item>
-<item><title>TechCrunch + VivaTech: Innovation of the Year award - TechCrunch</title><link>https://techcrunch.com/events/techcrunch-vivatech-innovation-of-the-year-award/</link></item>
-<item><title>StrictlyVC Menlo Park - TechCrunch</title><link>https://techcrunch.com/events/strictlyvc-menlo-park/</link></item>
-<item><title>TechCrunch All Stage 2025 - TechCrunch</title><link>https://techcrunch.com/events/techcrunch-all-stage-2025/</link></item>
-<item><title>TechCrunch Disrupt 2025 - TechCrunch</title><link>https://techcrunch.com/events/tc-disrupt-2025/</link></item>
-<item><title>AI startup Cohere acquires Ottogrid, a platform for conducting market research - TechCrunch</title><link>https://techcrunch.com/2025/05/16/ai-startup-cohere-acquires-ottogrid-a-platform-for-conducting-market-research/</link></item>
-<item><title>The Nuclear Company raises $51M to develop massive reactor sites - TechCrunch</title><link>https://techcrunch.com/2025/05/16/the-nuclear-company-raises-51m-to-develop-massive-reactor-sites/</link></item>
-<item><title>AI video startup Moonvalley lands $53M, according to filing - TechCrunch</title><link>https://techcrunch.com/2025/05/16/ai-video-startup-moonvalley-lands-53m-according-to-filing/</link></item>
-<item><title>TechCrunch and VivaTech partner for the VivaTech Innovation of the Year - TechCrunch</title><link>https://techcrunch.com/2025/05/16/techcrunch-and-vivatech-partner-for-the-vivatech-innovation-of-the-year/</link></item>
-<item><title>Cindy Zackney - TechCrunch</title><link>https://techcrunch.com/author/cindy-zackney/</link></item>
-<item><title>AI has opened a new era in venture capital, according to Forerunner founder Kirsten Green - TechCrunch</title><link>https://techcrunch.com/video/ai-has-opened-a-new-era-in-venture-capital-according-to-forerunner-founder-kirsten-green/</link></item>
-<item><title>How this VC spots the global game changers - TechCrunch</title><link>https://techcrunch.com/video/how-this-vc-spots-the-global-game-changers/</link></item>
-<item><title>The future of digital finance is customer-centric - TechCrunch</title><link>https://techcrunch.com/video/the-future-of-digital-finance-is-customer-centric/</link></item>
-<item><title>Scaling innovative companies at the intersection of cybersecurity, AI, and resilience - TechCrunch</title><link>https://techcrunch.com/video/scaling-innovative-companies-at-the-intersection-of-cybersecurity-ai-and-resilience/</link></item>
-<item><title>Scaling startups in the European market - TechCrunch</title><link>https://techcrunch.com/video/scaling-startups-in-the-european-market/</link></item>
-<item><title>Investing in overlooked European ecosystems - TechCrunch</title><link>https://techcrunch.com/video/investing-in-overlooked-european-ecosystems/</link></item>
-<item><title>These investors are betting on Greece’s founders - TechCrunch</title><link>https://techcrunch.com/video/these-investors-are-betting-on-greeces-founders/</link></item>
-<item><title>Greece is having a Big Tech moment - TechCrunch</title><link>https://techcrunch.com/video/greece-is-having-a-big-tech-moment/</link></item>
-<item><title>Skype shuts down after 23 years - TechCrunch</title><link>https://techcrunch.com/video/skype-shuts-down-after-23-years/</link></item>
-<item><title>Maggie Stamets - TechCrunch</title><link>https://techcrunch.com/author/maggie-stamets/</link></item>
-<item><title>How do you define cheating in the age of AI? - TechCrunch</title><link>https://techcrunch.com/video/how-do-you-define-cheating-in-the-age-of-ai/</link></item>
-<item><title>OpenAI may be developing its own social platform, but who’s it for? - TechCrunch</title><link>https://techcrunch.com/video/openai-may-be-developing-its-own-social-platform-but-whos-it-for/</link></item>
-<item><title>US man who hacked SEC’s X account to spike Bitcoin price sentenced to prison - TechCrunch</title><link>https://techcrunch.com/2025/05/16/us-man-who-hacked-secs-x-account-to-spike-bitcoin-price-sentenced-to-prison/</link></item>
-<item><title>Lorenzo Franceschi-Bicchierai - TechCrunch</title><link>https://techcrunch.com/author/lorenzo-franceschi-bicchierai/</link></item>
-<item><title>Coinbase says customers’ personal information stolen in data breach - TechCrunch</title><link>https://techcrunch.com/2025/05/15/coinbase-says-customers-personal-information-stolen-in-data-breach/</link></item>
-<item><title>White House scraps plan to block data brokers from selling Americans’ sensitive data - TechCrunch</title><link>https://techcrunch.com/2025/05/14/white-house-scraps-plan-to-block-data-brokers-from-selling-americans-sensitive-data/</link></item>
-<item><title>xAI’s promised safety report is MIA - TechCrunch</title><link>https://techcrunch.com/2025/05/13/xais-promised-safety-report-is-mia/</link></item>
-<item><title>Seven things we learned from WhatsApp vs. NSO Group spyware lawsuit - TechCrunch</title><link>https://techcrunch.com/2025/05/13/seven-things-we-learned-from-whatsapp-vs-nso-group-spyware-lawsuit/</link></item>
-<item><title>How Silicon Valley’s influence in Washington benefits the tech elite - TechCrunch</title><link>https://techcrunch.com/2025/05/16/how-silicon-valleys-influence-in-washington-benefits-the-tech-elite/</link></item>
-<item><title>Rebecca Bellan - TechCrunch</title><link>https://techcrunch.com/author/rebecca-bellan/</link></item>
-<item><title>Redpoint raises $650M 3 years after its last big early-stage fund - TechCrunch</title><link>https://techcrunch.com/2025/05/15/redpoint-raises-650m-3-years-after-its-last-big-early-stage-fund/</link></item>
-<item><title>Marina Temkin - TechCrunch</title><link>https://techcrunch.com/author/marina-temkin/</link></item>
-<item><title>Unpacking Rippling vs Deel: corporate espionage and a $16.8B plot twist - TechCrunch</title><link>https://techcrunch.com/podcast/unpacking-rippling-vs-deel-corporate-espionage-and-a-16-8b-plot-twist/</link></item>
-<item><title>Theresa Loconsolo - TechCrunch</title><link>https://techcrunch.com/author/theresa-loconsolo/</link></item>
-<item><title>Charles Rollet - TechCrunch</title><link>https://techcrunch.com/author/charles-rollet/</link></item>
-<item><title>$25B-valued Chime files for an IPO, reveals $33M deal with Dallas Mavericks - TechCrunch</title><link>https://techcrunch.com/2025/05/13/25b-valued-chime-files-for-an-ipo-reveals-33m-deal-with-dallas-mavericks/</link></item>
-<item><title>After adding its own billing option on iOS, Apple asks Patreon to move it to an external browser - TechCrunch</title><link>https://techcrunch.com/2025/05/16/after-adding-its-own-billing-option-on-ios-apple-asks-patreon-to-move-it-to-an-external-browser/</link></item>
-<item><title>Epic Games says Apple is blocking Fortnite from the US and EU App Stores - TechCrunch</title><link>https://techcrunch.com/2025/05/16/epic-games-says-apple-is-blocking-fortnite-from-the-us-and-eu-app-stores/</link></item>
-<item><title>Viral outrage over Apple’s EU payment warnings misses key fact - TechCrunch</title><link>https://techcrunch.com/2025/05/15/viral-outrage-over-apples-eu-payment-warnings-misses-key-fact/</link></item>
-<item><title>TechCrunch Mobility: Google’s Gemini is coming to your car, chaos comes for Luminar, and the Amazonification of Uber 2.0 - TechCrunch</title><link>https://techcrunch.com/2025/05/16/techcrunch-mobility-googles-gemini-is-coming-to-your-car-chaos-comes-for-luminar-and-the-amazonification-of-uber-2-0/</link></item>
-<item><title>Mystery investor’s attempt to stop Canoo asset sale shot down by judge - TechCrunch</title><link>https://techcrunch.com/2025/05/16/mystery-investors-attempt-to-stop-canoo-asset-sale-shot-down-by-judge/</link></item>
-<item><title>Chipotle president Jack Hartung joins Tesla’s board ahead of Tesla Diner launch - TechCrunch</title><link>https://techcrunch.com/2025/05/16/chipotle-president-jack-hartung-joins-teslas-board-ahead-of-tesla-diner-launch/</link></item>
-<item><title>Lucid’s record quarter got a lift from rental sales and company leases - TechCrunch</title><link>https://techcrunch.com/2025/05/15/lucids-record-quarter-got-a-lift-from-rental-sales-and-company-leases/</link></item>
-<item><title>Programmers bore the brunt of Microsoft’s layoffs in its home state as AI writes up to 30% of its code - TechCrunch</title><link>https://techcrunch.com/2025/05/15/programmers-bore-the-brunt-of-microsofts-layoffs-in-its-home-state-as-ai-writes-up-to-30-of-its-code/</link></item>
-<item><title>Harvey reportedly in discussions to raise $250M at $5B valuation - TechCrunch</title><link>https://techcrunch.com/2025/05/15/harvey-reportedly-in-discussions-to-raise-250m-at-5b-valuation/</link></item>
-<item><title>Radiologists aren’t going anywhere - TechCrunch</title><link>https://techcrunch.com/2025/05/14/radiologists-arent-going-anywhere/</link></item>
-<item><title>SoundCloud backtracks on AI-related terms-of-use updates - TechCrunch</title><link>https://techcrunch.com/2025/05/14/soundcloud-backtracks-on-ai-related-terms-of-use-updates/</link></item>
-<item><title>Terms of Service - TechCrunch</title><link>https://techcrunch.com/terms-of-service/</link></item>
-<item><title>Privacy Policy - TechCrunch</title><link>https://techcrunch.com/privacy-policy/</link></item>
-<item><title>RSS Terms of Use - TechCrunch</title><link>https://techcrunch.com/rss-terms-of-use/</link></item>
-<item><title>Hugging Face - TechCrunch</title><link>https://techcrunch.com/2025/04/28/hugging-face-releases-a-3d-printed-robotic-arm-starting-at-100/</link></item>
-<item><title>Tech Layoffs - TechCrunch</title><link>https://techcrunch.com/2025/02/28/tech-layoffs-2024-list/</link></item>
-<item><title>Gemini app rolling out prompt bar redesign on Android, iOS - 9to5Google</title><link>https://9to5google.com/2025/05/16/gemini-prompt-bar-redesign-android/</link></item>
-<item><title>Google adds AI Mode to the Search bar on Android, iOS - 9to5Google</title><link>https://9to5google.com/2025/05/16/google-ai-mode-search-bar-android-ios/</link></item>
-<item><title>Comment: Samsung’s Now Bar is in desperate need for more - 9to5Google</title><link>https://9to5google.com/2025/05/16/samsungs-now-bar-does-not-live-up-to-the-hype/</link></item>
-<item><title>Nothing Phone (3) surfaces as rumors suggest revamped cameras, larger battery - 9to5Google</title><link>https://9to5google.com/2025/05/16/nothing-phone-3-cameras-battery-rumor/</link></item>
-<item><title>The seventh Google Store opens on May 30 - 9to5Google</title><link>https://9to5google.com/2025/05/17/google-store-domain-northside-austin/</link></item>
-<item><title>Google Nest Audio - 9to5Google</title><link>https://9to5google.com/guides/google-nest-audio/</link></item>
-<item><title>Gemini colors come to Nest Audio testing ‘Google Assistant’ upgrade - 9to5Google</title><link>https://9to5google.com/2025/05/17/nest-audio-gemini-colors/</link></item>
-<item><title>other changes - 9to5Google</title><link>https://9to5google.com/2025/05/13/gemini-model-picker/</link></item>
-<item><title>Material 3 Expressive - 9to5Google</title><link>https://9to5google.com/guides/material-3-expressive/</link></item>
-<item><title>Material 3 Expressive’s new loading indicator is already in Android 16 - 9to5Google</title><link>https://9to5google.com/2025/05/16/material-3-expressive-loading-indicator/</link></item>
-<item><title>new design language - 9to5Google</title><link>https://9to5google.com/2025/05/13/android-16-material-3-expressive-redesign/</link></item>
-<item><title>What’s new in Android’s May 2025 Google System Updates [U: 5/16] - 9to5Google</title><link>https://9to5google.com/2025/05/16/may-2025-google-system-updates/</link></item>
-<item><title>Google AI Mode - 9to5Google</title><link>https://9to5google.com/guides/google-ai-mode/</link></item>
-<item><title>How to skip new Google Photos ‘Quick Edit’ screen before sharing - 9to5Google</title><link>https://9to5google.com/2025/05/16/skip-google-photos-quick-edit-screen/</link></item>
-<item><title>‘Advanced Matter Bridging’ supercharges smart home devices in Google Home, don’t miss - 9to5Google</title><link>https://9to5google.com/2025/05/16/aqara-advanced-matter-bridging/</link></item>
-<item><title>Pixelated 054: The Android 16 Show - 9to5Google</title><link>https://9to5google.com/2025/05/16/pixelated-054/</link></item>
-<item><title>YouTube TV preps test of custom Multiviews outside of sports - 9to5Google</title><link>https://9to5google.com/2025/05/16/youtube-tv-custom-multiviews/</link></item>
-<item><title>previewed last month - 9to5Google</title><link>https://9to5google.com/2025/04/23/youtube-20th-birthday/</link></item>
-<item><title>Google Maps has stopped showing alternate routes on app, Android Auto for some - 9to5Google</title><link>https://9to5google.com/2025/05/16/google-maps-alternate-routes-broken/</link></item>
-<item><title>Circle to Search text search is now ‘using your whole screen’ - 9to5Google</title><link>https://9to5google.com/2025/05/16/circle-to-search-whole-screen/</link></item>
-<item><title>Android Auto 14.3 update widely rolling out - 9to5Google</title><link>https://9to5google.com/2025/05/16/android-auto-14-3-wide-rollout/</link></item>
-<item><title>Google app update brings new ‘G’ icon to Android - 9to5Google</title><link>https://9to5google.com/2025/05/16/google-icon-android-update/</link></item>
-<item><title>earlier this week - 9to5Google</title><link>https://9to5google.com/2025/05/12/google-icon-update/</link></item>
-<item><title>Deals: OnePlus mini pouch chargers from $32 lows, Frame-style Google TV $900 off, Snapdragon X Plus PC, and more - 9to5Google</title><link>https://9to5google.com/2025/05/16/deals-oneplus-mini-pouch-chargers-frame-google-tv/</link></item>
-<item><title>Nothing is making over-ear headphones and I can’t wait [Video] - 9to5Google</title><link>https://9to5google.com/2025/05/16/nothing-is-making-over-ear-headphones-and-i-cant-wait-video/</link></item>
-<item><title>Gmail rolling out docked reply bar on Android - 9to5Google</title><link>https://9to5google.com/2025/05/15/gmail-reply-bar/</link></item>
-<item><title>Google One now has 150 million subscribers, ‘millions’ with AI Premium - 9to5Google</title><link>https://9to5google.com/2025/05/15/google-one-150-million/</link></item>
-<item><title>Gemini app moves Deep Research, adds Copy Canvas, &amp; more - 9to5Google</title><link>https://9to5google.com/2025/05/15/gemini-deep-research-button/</link></item>
-<item><title>Microsoft will pull the plug on Bing Search APIs, to be replaced with AI - 9to5Google</title><link>https://9to5google.com/2025/05/15/microsoft-bing-search-api-ai/</link></item>
-<item><title>YouTube adds Weekly Top Podcast Shows chart, teases ‘more features’ - 9to5Google</title><link>https://9to5google.com/2025/05/15/youtube-weekly-top-podcast-shows/</link></item>
-<item><title>Heroku AI: Managed Inference and Agents is now Generally Available - Heroku Blog</title><link>https://www.heroku.com/blog/managed-inference-and-agents-now-generally-available/</link></item>
-<item><title>Heroku AI: Build and Deploy Enterprise Grade MCP Servers - Heroku Blog</title><link>https://www.heroku.com/blog/building-mcp-servers-on-heroku/</link></item>
-<item><title>Optimizing Enterprise Operations with Heroku’s Advanced Logging Features - Heroku Blog</title><link>https://www.heroku.com/blog/optimizing-enterprise-operations-herokus-advanced-logging-features/</link></item>
-<item><title>How I Improved My Productivity with Cursor and the Heroku MCP Server - Heroku Blog</title><link>https://www.heroku.com/blog/improved-my-productivity-cursor-and-heroku-mcp-server/</link></item>
-<item><title>Introducing Heroku-Streamlit: Seamless Data Visualization - Heroku Blog</title><link>https://www.heroku.com/blog/introducing-heroku-streamlit-seamless-data-visualization/</link></item>
-<item><title>Four yakuza members arrested for having office too close to library - SoraNews24</title><link>https://soranews24.com/2025/05/18/four-yakuza-members-arrested-for-having-office-too-close-to-library/</link></item>
-<item><title>Boryokudan Countermeasures Law - SoraNews24</title><link>https://soranews24.com/tag/boryokudan-countermeasures-law/</link></item>
-<item><title>designated violence groups - SoraNews24</title><link>https://soranews24.com/tag/designated-violence-groups/</link></item>
-<item><title>Organized crime - SoraNews24</title><link>https://soranews24.com/tag/organized-crime/</link></item>
-<item><title>Organized Crime Exclusion Ordinances - SoraNews24</title><link>https://soranews24.com/tag/organized-crime-exclusion-ordinances/</link></item>
-<item><title>shitei boryokudan - SoraNews24</title><link>https://soranews24.com/tag/shitei-boryokudan/</link></item>
-<item><title>New retro museum in Tokyo is like a time portal back to the Showa era【Photos】 - SoraNews24</title><link>https://soranews24.com/2025/05/17/new-retro-museum-in-tokyo-is-like-a-time-portal-back-to-the-showa-era%e3%80%90photos%e3%80%91/</link></item>
-<item><title>Odaiba Retro Museum - SoraNews24</title><link>https://soranews24.com/tag/odaiba-retro-museum/</link></item>
-<item><title>Showa period - SoraNews24</title><link>https://soranews24.com/tag/showa-period/</link></item>
-<item><title>Weaving history, art and innovation together in a new range of Japanese yukata - SoraNews24</title><link>https://soranews24.com/2025/05/17/weaving-history-art-and-innovation-together-in-a-new-range-of-japanese-yukata/</link></item>
-<item><title>Beautiful Studio Ghibli tenugui can add summer anime style to your home and hand-washing【Photos】 - SoraNews24</title><link>https://soranews24.com/2025/05/17/beautiful-studio-ghibli-tenugui-can-add-summer-anime-style-to-your-home-and-hand-washing%e3%80%90photos%e3%80%91/</link></item>
-<item><title>wall scrolls - SoraNews24</title><link>https://soranews24.com/tag/wall-scrolls/</link></item>
-<item><title>Japanese train station noodle restaurant with 122-year history closes - SoraNews24</title><link>https://soranews24.com/2025/05/17/japanese-train-station-noodle-restaurant-with-122-year-history-closes/</link></item>
-<item><title>Nakatsugawa Station - SoraNews24</title><link>https://soranews24.com/tag/nakatsugawa-station/</link></item>
-<item><title>stand-and-eat - SoraNews24</title><link>https://soranews24.com/tag/stand-and-eat/</link></item>
-<item><title>tachigui soba - SoraNews24</title><link>https://soranews24.com/tag/tachigui-soba/</link></item>
-<item><title>Japan government mulling more restrictions on foreign driver’s license conversions - SoraNews24</title><link>https://soranews24.com/2025/05/17/japan-government-mulling-more-restrictions-on-foreign-drivers-license-conversions/</link></item>
-<item><title>driving exam - SoraNews24</title><link>https://soranews24.com/tag/driving-exam/</link></item>
-<item><title>international driver&amp;#39;s license - SoraNews24</title><link>https://soranews24.com/tag/international-drivers-license/</link></item>
-<item><title>National Police Agency - SoraNews24</title><link>https://soranews24.com/tag/national-police-agency/</link></item>
-<item><title>National Public Safety Commission - SoraNews24</title><link>https://soranews24.com/tag/national-public-safety-commission/</link></item>
-<item><title>Randy’s Donuts vs. Krispy Kreme — Who is Japan’s king of glazed donuts? - SoraNews24</title><link>https://soranews24.com/2025/05/16/randys-donuts-vs-krispy-kreme-who-is-japans-king-of-glazed-donuts/</link></item>
-<item><title>Krispy Kreme - SoraNews24</title><link>https://soranews24.com/tag/krispy-kreme/</link></item>
-<item><title>Krispy Kreme Japan - SoraNews24</title><link>https://soranews24.com/tag/krispy-kreme-japan/</link></item>
-<item><title>Randy&amp;#39;s Donuts - SoraNews24</title><link>https://soranews24.com/tag/randys-donuts/</link></item>
-<item><title>Randy’s Donuts Japan - SoraNews24</title><link>https://soranews24.com/tag/randys-donuts-japan/</link></item>
-<item><title>Hello Kitty theme park to be overrun by zombies this summer, young children barred from entering - SoraNews24</title><link>https://soranews24.com/2025/05/16/hello-kitty-theme-park-to-be-overrun-by-zombies-this-summer-young-children-barred-from-entering/</link></item>
-<item><title>Steampunk vending machines appear in Japan, and here’s how to find them - SoraNews24</title><link>https://soranews24.com/2025/05/16/steampunk-vending-machines-appear-in-japan-and-heres-how-to-find-them/</link></item>
-<item><title>coffee beans - SoraNews24</title><link>https://soranews24.com/tag/coffee-beans/</link></item>
-<item><title>Noborito Station - SoraNews24</title><link>https://soranews24.com/tag/noborito-station/</link></item>
-<item><title>vending machine - SoraNews24</title><link>https://soranews24.com/tag/vending-machine/</link></item>
-<item><title>Yomiuriland - SoraNews24</title><link>https://soranews24.com/tag/yomiuriland/</link></item>
-<item><title>More yakuza members caught stealing huge haul of sea cucumbers from the ocean - SoraNews24</title><link>https://soranews24.com/2025/05/16/more-yakuza-members-caught-stealing-huge-haul-of-sea-cucumbers-from-the-ocean/</link></item>
-<item><title>sea cucumbers - SoraNews24</title><link>https://soranews24.com/tag/sea-cucumbers/</link></item>
-<item><title>Utada Hikaru sings incredible new one-take version of “First Love,” 26 years after original release - SoraNews24</title><link>https://soranews24.com/2025/05/16/utada-hikaru-sings-incredible-new-one-take-version-of-first-love-26-years-after-original-release/</link></item>
-<item><title>The First Take - SoraNews24</title><link>https://soranews24.com/tag/the-first-take/</link></item>
-<item><title>British couple in shorts, T-shirt call for rescue from Japanese mountain, say it’s too cold for them to move - SoraNews24</title><link>https://soranews24.com/2025/05/16/british-couple-in-shorts-t-shirt-call-for-rescue-from-japanese-mountain-say-its-too-cold-for-them-to-move/</link></item>
-<item><title>Studio Ghibli anime to stream online in Japan for first time ever, but not from any deal with Ghibli - SoraNews24</title><link>https://soranews24.com/2025/05/15/studio-ghibli-anime-to-stream-online-in-japan-for-first-time-ever-but-not-from-any-deal-with-ghibli/</link></item>
-<item><title>Grave of the Fireflies - SoraNews24</title><link>https://soranews24.com/tag/grave-of-the-fireflies/</link></item>
-<item><title>Netflix Japan - SoraNews24</title><link>https://soranews24.com/tag/netflix-japan/</link></item>
-<item><title>Angry Japanese mayor wants off-season Mt. Fuji hikers to pay costs of their rescue operations - SoraNews24</title><link>https://soranews24.com/2025/05/15/angry-japanese-mayor-wants-off-season-mt-fuji-hikers-to-pay-costs-of-their-rescue-operations/</link></item>
-<item><title>Shizuoka Prefecture - SoraNews24</title><link>https://soranews24.com/tag/shizuoka-prefecture/</link></item>
-<item><title>Studio Ghibli brings anime cake from Kiki’s Delivery Service to life… without the calories - SoraNews24</title><link>https://soranews24.com/2025/05/15/studio-ghibli-brings-anime-cake-from-kikis-delivery-service-to-life-without-the-calories/</link></item>
-<item><title>anime merchandise - SoraNews24</title><link>https://soranews24.com/tag/anime-merchandise/</link></item>
-<item><title>Randy’s Donuts opens first-ever branch in Japan, brings L.A.’s donuts to Tokyo【Photos】 - SoraNews24</title><link>https://soranews24.com/2025/05/15/randys-donuts-opens-first-ever-branch-in-japan-brings-l-a-s-donuts-to-tokyo%e3%80%90photos%e3%80%91/</link></item>
-<item><title>Title of Super Mario movie sequel briefly revealed, sounding very familiar, then gets removed - SoraNews24</title><link>https://soranews24.com/2025/05/15/title-of-super-mario-movie-sequel-briefly-revealed-sounding-very-familiar-then-gets-removed/</link></item>
-<item><title>Super Mario Bros. - SoraNews24</title><link>https://soranews24.com/tag/super-mario-bros/</link></item>
-<item><title>Super Mario Bros. movie - SoraNews24</title><link>https://soranews24.com/tag/super-mario-bros-movie/</link></item>
-<item><title>Super Mario Bros. Movie sequel - SoraNews24</title><link>https://soranews24.com/tag/super-mario-bros-movie-sequel/</link></item>
-<item><title>Did you know? Japan’s Freshness Burger chain sells crepes and gelato at very limited locations - SoraNews24</title><link>https://soranews24.com/2025/05/15/did-you-know-japans-freshness-burger-chain-sells-crepes-and-gelato-at-very-limited-locations/</link></item>
-<item><title>freshness burger - SoraNews24</title><link>https://soranews24.com/tag/freshness-burger/</link></item>
-<item><title>Rice ball melon bread – A treat Japanese bakeries aren’t crazy enough to make, but we are【SoraKitchen】 - SoraNews24</title><link>https://soranews24.com/2025/05/14/rice-ball-melon-bread-a-treat-japanese-bakeries-arent-crazy-enough-to-make-but-we-are%e3%80%90sorakitchen%e3%80%91/</link></item>
-<item><title>warabimochi - SoraNews24</title><link>https://soranews24.com/tag/warabimochi/</link></item>
-<item><title>Life-sized sushi monster figures are coming to get us all hooked on cuteness - SoraNews24</title><link>https://soranews24.com/2025/05/14/life-sized-sushi-monster-figures-are-coming-to-get-us-all-hooked-on-cuteness/</link></item>
-<item><title>11 Nintendo Games Are Getting Free Upgrades To Look And Run Better On Switch 2 - Kotaku</title><link>https://kotaku.com/switch-2-free-upgrade-pokemon-scarlet-violet-mario-1851781005</link></item>
-<item><title>The Best Deals From The Epic Store Mega Sale - Kotaku</title><link>https://kotaku.com/free-games-best-deals-epic-mega-store-sale-last-of-us-1851780839</link></item>
-<item><title>Join Thousands Of Other People Trying To Drive An Imaginary Car To Canada - Kotaku</title><link>https://kotaku.com/internet-roadtrip-road-trip-neal-agarwal-fun-1851780768</link></item>
-<item><title>Get Ready For AI-Generated Slop To Interrupt Ad-Supported Netflix Viewing In 2026 - Kotaku</title><link>https://kotaku.com/netflix-ai-ads-squid-game-stranger-things-prices-1851780822</link></item>
-<item><title>20 Years Ago Today, MTV Revealed The Xbox 360 To The World - Kotaku</title><link>https://kotaku.com/xbox-360-mtv-special-20-years-elijah-wood-future-gaming-1851780248</link></item>
-<item><title>Nintendo Switch 2 Price Is Set at $450 for Now, But Could Go Higher - Kotaku</title><link>https://kotaku.com/nintendo-switch-2-price-450-could-go-higher-1851781062</link></item>
-<item><title>12 Games Are Coming To PS Plus Game Catalog Next Week - Kotaku</title><link>https://kotaku.com/ps-plus-extra-free-games-may-2025-catalog-stalker-ps5-1851780673</link></item>
-<item><title>Sony Says PS5 Price Hikes Are Possible As It Faces $680 Million Hit From Tariffs - Kotaku</title><link>https://kotaku.com/ps5-price-tariff-sony-pro-xbox-unit-sales-earnings-1851780593</link></item>
-<item><title>Center the map on the country you want - FlowingData</title><link>https://flowingdata.com/2025/05/16/center-the-map-on-the-country-you-want/</link></item>
-<item><title>Army targets 2028 to deliver future assault aircraft to soldiers - Defense News</title><link>https://www.defensenews.com/land/2025/05/16/army-targets-2028-to-deliver-future-assault-aircraft-to-soldiers/</link></item>
-<item><title>Pentagon silent, aviation experts baffled by Trump’s fighter comments - Defense News</title><link>https://www.defensenews.com/air/2025/05/16/pentagon-silent-aviation-experts-baffled-by-trumps-fighter-comments/</link></item>
-<item><title>Army halts tactical UAS competition without clear plan forward - Defense News</title><link>https://www.defensenews.com/land/2025/05/16/army-halts-tactical-uas-competition-without-clear-plan-forward/</link></item>
-<item><title>Denmark receives four more F-35s; half of fleet now home after delays - Defense News</title><link>https://www.defensenews.com/global/europe/2025/05/16/denmark-receives-four-more-f-35s-half-of-fleet-now-home-after-delays/</link></item>
-<item><title>Amid demand for satellite support, Space Force leans on commercial - Defense News</title><link>https://www.defensenews.com/space/2025/05/16/amid-demand-for-satellite-support-space-force-leans-on-commercial/</link></item>
-<item><title>What’s wrong with Trump accepting a 747 from Qatar? Everything. - Defense News</title><link>https://www.defensenews.com/opinion/2025/05/16/whats-wrong-with-trump-accepting-a-747-from-qatar-everything/</link></item>
-<item><title>New US Army helo engine lifts off, but may be headed for cancellation - Defense News</title><link>https://www.defensenews.com/land/2025/05/16/new-us-army-helo-engine-lifts-off-but-may-be-headed-for-cancellation/</link></item>
-<item><title>Canada faces dense defense-acquisition docket as F-35 review looms - Defense News</title><link>https://www.defensenews.com/global/the-americas/2025/05/16/canada-faces-dense-defense-acquisition-docket-as-f-35-review-looms/</link></item>
-<item><title>Boffins devise technique that lets users prove location without giving it away - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/17/privacy_preserving_location_sharing/</link></item>
-<item><title>No-boom supersonic flights could slide through US skies soon - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/17/faa_supersonic_law/</link></item>
-<item><title>Google backs down after locking out Nextcloud Files app - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/17/google_nextcloud_android_permission/</link></item>
-<item><title>Fired US govt workers, Uncle Xi wants you! – to apply for this fake consulting gig - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/16/attn_fired_us_govt_workers/</link></item>
-<item><title>America’s consumer watchdog drops leash on proposed data broker crackdown - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/16/cfpb_data_broker/</link></item>
-<item><title>Whodunit? &amp;#39;Unauthorized&amp;#39; change to Grok made it blather on about &amp;#39;White genocide&amp;#39; - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/16/grok_white_genocide_ai/</link></item>
-<item><title>Microsoft winnows: Layoffs hit software engineers hard - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/16/microsofts_axe_software_developers/</link></item>
-<item><title>CoreWeave may have built a house of (graphics) cards - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/16/coreweave_graphics_cards/</link></item>
-<item><title>Dems are upset about DOGE&amp;#39;s IRS hackathon, but the IRS says it never happened - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/16/congress_question_doge_it_overhaul/</link></item>
-<item><title>Apple slams door on Fortnite&amp;#39;s stateside iOS comeback - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/16/apple_block_fortnite_ios/</link></item>
-<item><title>Microsoft pulls MS365 Business Premium from nonprofits - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/16/microsoft_pulls_ms365_business_premium/</link></item>
-<item><title>Defamation case against DEF CON terminated with prejudice - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/16/def_con_defamation_dismissed/</link></item>
-<item><title>Annual electronic waste footprint per person is 11.2 kg - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/16/ted_talk_electronic_waste/</link></item>
-<item><title>Broadcom employee data stolen by ransomware crooks following hit on payroll provider - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/16/broadcom_employee_data_stolen_by/</link></item>
-<item><title>Microsoft proposes sweeping global concessions to Teams for up to a decade - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/16/microsoft_proposes_sweeping_global_concessions/</link></item>
-<item><title>AWS says Britain needs more nuclear power to feed AI datacenter surge - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/16/amazon_nuclear_power_britain/</link></item>
-<item><title>Good luck to Atos&amp;#39; 7th CEO and its latest biz transformation - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/16/atos_transformation_7/</link></item>
-<item><title>How sticky notes saved &amp;#39;the single biggest digital program in the world&amp;#39; - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/16/universal_credit_commons_committee/</link></item>
-<item><title>UK government overrules local council’s datacenter refusal on Green Belt land - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/16/uk_overrules_local_council_approve_datacenter/</link></item>
-<item><title>Some English hospitals doubt Palantir&amp;#39;s utility: We&amp;#39;d &amp;#39;lose functionality rather than gain it&amp;#39; - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/16/nhs_hospitals_palantir/</link></item>
-<item><title>Dilettante dev wrote rubbish, left no logs, and had no idea why his app wasn&amp;#39;t working - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/16/on_call/</link></item>
-<item><title>Jilted AWS reckons VMware is now crusty like a mainframe - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/16/aws_vmware_mainframe_ai_transformation/</link></item>
-<item><title>Sci-fi author Neal Stephenson wants AIs fighting AIs so those most fit to live with us survive - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/16/neal_stephenson_ai_evolution/</link></item>
-<item><title>Microsoft blows deadline for special Azure for EU hosters - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/16/cispe_and_microsoft_abandon_dreams/</link></item>
-<item><title>Trump says he has a problem if Apple builds iThings in India - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/16/trump_apple_india_warning/</link></item>
-<item><title>Scammers are deepfaking voices of senior US government officials, warns FBI - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/16/fbi_deepfake_us_government_warning/</link></item>
-<item><title>DoorDash scam used fake drivers, phantom deliveries to bilk $2.59M - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/15/exdoordash_driver_scam/</link></item>
-<item><title>NASA keeps ancient Voyager 1 spacecraft alive with Hail Mary thruster fix - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/15/voyager_1_survives_with_thruster_fix/</link></item>
-<item><title>Build a Raspberry Pi setup for children aged 3 to 6 - Raspberry P</title><link>https://www.raspberrypi.com/news/build-a-raspberry-pi-setup-for-children-aged-3-to-6/</link></item>
-<item><title>Raspberry Pi and SECO: Clea software for IIoT available natively in Raspberry Pi OS - Raspberry P</title><link>https://www.raspberrypi.com/news/seco-clea-software-for-iiot-available-natively-in-raspberry-pi-os/</link></item>
-<item><title>Raspberry Pi Pico 2 Snake game console - Raspberry P</title><link>https://www.raspberrypi.com/news/raspberry-pi-pico-2-snake-game-console/</link></item>
-<item><title>Raspberry Pi Connect is out of beta: simple remote access, now even better - Raspberry P</title><link>https://www.raspberrypi.com/news/raspberry-pi-connect-is-out-of-beta-simple-remote-access-now-even-better/</link></item>
-<item><title>A new Raspberry Pi OS release - Raspberry P</title><link>https://www.raspberrypi.com/news/a-new-raspberry-pi-os-release/</link></item>
-<item><title>Lower prices for 4GB and 8GB Compute Module 4 - Raspberry P</title><link>https://www.raspberrypi.com/news/lower-prices-for-4gb-and-8gb-compute-module-4/</link></item>
-<item><title>How to build a home recording studio with Raspberry Pi 500: choose and install your software - Raspberry P</title><link>https://www.raspberrypi.com/news/how-to-build-a-home-recording-studio-with-raspberry-pi-500-choose-and-install-your-software/</link></item>
-<item><title>Sustainable solutions with Raspberry Pi: how intrusive reflow soldering boosted our efficiency and cut our carbon footprint - Raspberry P</title><link>https://www.raspberrypi.com/news/sustainable-solutions-with-raspberry-pi-how-intrusive-reflow-soldering-boosted-our-efficiency-and-cut-our-carbon-footprint/</link></item>
-<item><title>Zero-G Laboratory floating platform - Raspberry P</title><link>https://www.raspberrypi.com/news/zero-g-laboratory-floating-platform/</link></item>
-<item><title>Experiment with the Sense HAT, 2nd Edition – out now! - Raspberry P</title><link>https://www.raspberrypi.com/news/experiment-with-the-sense-hat-2nd-edition-out-now/</link></item>
-<item><title>eBook: Cyber Workforce Challenges - Defense News</title><link>https://hub.defensenews.com/pluralsight-cyber-workforce-whitepaper/</link></item>
-<item><title>C4ISRNET Conference 2025 - Defense News</title><link>https://www.defensenews.com/c4isrnet-conference-2025/</link></item>
-<item><title>DOD’s Cyber Workforce Challenges - Defense News</title><link>https://www.defensenews.com/dods-cyber-workforce-challenges/</link></item>
-<item><title>Russia launches live-fire Baltic naval drills on Europe’s doorstep - Defense News</title><link>https://www.defensenews.com/news/your-military/2023/08/02/russia-launches-live-fire-baltic-naval-drills-on-europes-doorstep/</link></item>
-<item><title>US Air Force electronic warfare commander seeks spectrum dominance - Defense News</title><link>https://www.defensenews.com/electronic-warfare/2023/08/02/us-air-force-electronic-warfare-commander-seeks-spectrum-dominance/</link></item>
-<item><title>Iran’s Revolutionary Guard drill on disputed Persian Gulf islands - Defense News</title><link>https://www.defensenews.com/news/your-military/2023/08/02/irans-revolutionary-guard-drill-on-disputed-persian-gulf-islands/</link></item>
-<item><title>Engineer fired from Parsons Corp. sues company, defense secretary - Defense News</title><link>https://www.defensenews.com/industry/2023/08/02/engineer-fired-from-parsons-corp-sues-company-defense-secretary/</link></item>
-<item><title>Navy awards nine Arleigh Burke destroyers in five-year contracts - Defense News</title><link>https://www.defensenews.com/naval/2023/08/01/navy-awards-nine-arleigh-burke-destroyers-in-five-year-contracts/</link></item>
-<item><title>Adaptive engine work feeds sixth-gen fighter design, says US Air Force - Defense News</title><link>https://www.defensenews.com/air/2023/08/01/adaptive-engine-work-feeds-sixth-gen-fighter-design-says-us-air-force/</link></item>
-<item><title>US Army readies new artillery strategy spurred by war in Ukraine - Defense News</title><link>https://www.defensenews.com/land/2023/08/01/us-army-readies-new-artillery-strategy-spurred-by-war-in-ukraine/</link></item>
-<item><title>How Taiwan plans to counter drones by mid-2024 - Defense News</title><link>https://www.defensenews.com/unmanned/2023/08/01/how-taiwan-plans-to-counter-drones-by-mid-2024/</link></item>
-<item><title>Pentagon’s strategy planner wants China crisis channels - Defense News</title><link>https://www.defensenews.com/pentagon/2023/08/01/pentagons-strategy-planner-wants-china-crisis-channels/</link></item>
-<item><title>US military targets deepfakes, misinformation with AI-powered tool - Defense News</title><link>https://www.defensenews.com/information-warfare/2023/08/01/us-military-targets-deepfakes-misinformation-with-ai-powered-tool/</link></item>
-<item><title>Jaime Moore-Carrillo - Defense News</title><link>https://www.defensenews.com/author/jaime moore-carrillo</link></item>
-<item><title>Permission to be ill - Aeon</title><link>https://aeon.co/essays/what-if-your-body-unravels-but-no-doctor-can-name-the-disease?utm_source=rss-feed</link></item>
-<item><title>Stack Overflow Seeks Realignment &amp;#39;To Support the Builders of the Future in an AI World&amp;#39; - Slashdot</title><link>https://developers.slashdot.org/story/25/05/16/2227231/stack-overflow-seeks-realignment-to-support-the-builders-of-the-future-in-an-ai-world?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Intel Struggles To Reverse AMD&amp;#39;s Share Gains In x86 CPU Market - Slashdot</title><link>https://hardware.slashdot.org/story/25/05/17/2032204/intel-struggles-to-reverse-amds-share-gains-in-x86-cpu-market?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Is the Altruistic OpenAI Gone? - Slashdot</title><link>https://slashdot.org/story/25/05/17/1925212/is-the-altruistic-openai-gone?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Researchers Finally Link Long Covid &amp;#39;Brain Fog&amp;#39; to Inflammation - Slashdot</title><link>https://science.slashdot.org/story/25/05/17/1657219/researchers-finally-link-long-covid-brain-fog-to-inflammation?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>The Most Promising Ways to Destroy &amp;#39;Forever Chemicals&amp;#39; - Slashdot</title><link>https://news.slashdot.org/story/25/05/17/0645218/the-most-promising-ways-to-destroy-forever-chemicals?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Curl Warns GitHub About &amp;#39;Malicious Unicode&amp;#39; Security Issue - Slashdot</title><link>https://developers.slashdot.org/story/25/05/17/0420236/curl-warns-github-about-malicious-unicode-security-issue?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Despite Success of New &amp;#39;Assassin&amp;#39;s Creed&amp;#39; Game, Ubisoft Stock Tumbles 18% - Slashdot</title><link>https://games.slashdot.org/story/25/05/17/0741237/despite-success-of-new-assassins-creed-game-ubisoft-stock-tumbles-18?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Paleontologists Identify Tiny Three-Eyed &amp;#39;Sea Moth&amp;#39; Predator in Fossils - Slashdot</title><link>https://science.slashdot.org/story/25/05/17/0520213/paleontologists-identify-tiny-three-eyed-sea-moth-predator-in-fossils?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Rust Creator Graydon Hoare Thanks Its Many Stakeholders - and Mozilla - on Rust&amp;#39;s 10th Anniversary - Slashdot</title><link>https://developers.slashdot.org/story/25/05/16/2119222/rust-creator-graydon-hoare-thanks-its-many-stakeholders---and-mozilla---on-rusts-10th-anniversary?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>The Top Fell Off Australia&amp;#39;s First Orbital-Class Rocket, Delaying Its Launch - Slashdot</title><link>https://science.slashdot.org/story/25/05/17/0114259/the-top-fell-off-australias-first-orbital-class-rocket-delaying-its-launch?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>NASA Resurrects Voyager 1 Interstellar Spacecraft&amp;#39;s Thrusters After 20 Years - Slashdot</title><link>https://science.slashdot.org/story/25/05/17/0111201/nasa-resurrects-voyager-1-interstellar-spacecrafts-thrusters-after-20-years?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>FDA Clears First Blood Test To Help Diagnose Alzheimer&amp;#39;s Disease - Slashdot</title><link>https://science.slashdot.org/story/25/05/16/2143244/fda-clears-first-blood-test-to-help-diagnose-alzheimers-disease?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Microsoft&amp;#39;s Command Palette is a Powerful Launcher For Apps, Search - Slashdot</title><link>https://it.slashdot.org/story/25/05/17/0135210/microsofts-command-palette-is-a-powerful-launcher-for-apps-search?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Walmart Prepares for a Future Where AI Shops for Consumers - Slashdot</title><link>https://slashdot.org/story/25/05/16/2138230/walmart-prepares-for-a-future-where-ai-shops-for-consumers?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>UK Needs More Nuclear To Power AI, Says Amazon Boss - Slashdot</title><link>https://hardware.slashdot.org/story/25/05/16/2133225/uk-needs-more-nuclear-to-power-ai-says-amazon-boss?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link></item>
-<item><title>Kaikado Celebrates 150 Years of Artisanal Legacy with a Beautifully-Crafted Book - Yatzer</title><link>https://www.yatzer.com/kaikado-book</link></item>
-<item><title>Page-turners - Yatzer</title><link>https://www.yatzer.com/category/books</link></item>
-<item><title>Crafting Habitats: Raphaël Emine on Ceramics, Ecology, and Interspecies Collaboration - Yatzer</title><link>https://www.yatzer.com/raphael-emine</link></item>
-<item><title>Wulingshan Eye Stone Spring: A Chinese Bathhouse Elevated Among the Trees - Yatzer</title><link>https://www.yatzer.com/wulingshan-eye-stone-spring</link></item>
-<item><title>Style and Wellness - Yatzer</title><link>https://www.yatzer.com/category/style-and-wellness</link></item>
-<item><title>What Lingered: Milan Design Week 2025 in Review - Yatzer</title><link>https://www.yatzer.com/best-of-milan-design-week-2025</link></item>
-<item><title>Melbourne Place: A Refreshingly Singular Hotel that Reflects Melbourne&amp;#39;s Cultural Vibrancy - Yatzer</title><link>https://www.yatzer.com/melbourne-place-kennedy-nolan</link></item>
-<item><title>An Indoor Golf Club by Ivy Studio Brings Mid-Century Refinement to a Former Factory in Montreal - Yatzer</title><link>https://www.yatzer.com/muni-indoor-golf-club-by-ivy-studio</link></item>
-<item><title>The Art of Retail - Yatzer</title><link>https://www.yatzer.com/category/retail</link></item>
-<item><title>Past Perfect: A 1920s Courtyard House in Kunming Revived as a Café &amp; Wine Bar - Yatzer</title><link>https://www.yatzer.com/daguan-courtuyard-house</link></item>
-<item><title>Coffee or Tea? - Yatzer</title><link>https://www.yatzer.com/category/cafe-interiors</link></item>
-<item><title>Bar Aesthetics - Yatzer</title><link>https://www.yatzer.com/category/bar-design</link></item>
-<item><title>AI 扭轉醫界高負荷的起點！高雄榮總用 AWS 改善護理人員工作流程 - Cool3c</title><link>https://www.cool3c.com/article/240042</link></item>
-<item><title>pCloud 2025 家庭日限時優惠：一次買斷，打造全家安心的雲端硬碟服務 - Cool3c</title><link>https://www.cool3c.com/article/240012</link></item>
-<item><title>台新金控 AI 轉型聚焦降本增效，Amazon Q Developer 大幅加速開發效率 30％ - Cool3c</title><link>https://www.cool3c.com/article/240027</link></item>
-<item><title>生成式 AI 催生智慧產線，製造業搶當「智造業」 - Cool3c</title><link>https://www.cool3c.com/article/240026</link></item>
-<item><title>雲塑產業 AI 新布局  智啟雲世代轉型－年度雲端盛會 Google Cloud Summit Taipei 六月登場 - Cool3c</title><link>https://www.cool3c.com/article/239878</link></item>
-<item><title>Yvonne Gonzalez Rogers - Cool3c</title><link>https://www.cool3c.com/tag/163981</link></item>
-<item><title>Epic Games 指控蘋果阻擋《要塞英雄》回歸 App Store - Cool3c</title><link>https://www.cool3c.com/article/240150</link></item>
-<item><title>小島秀夫表示身後將留存遊戲靈感在 USB 隨身碟 - Cool3c</title><link>https://www.cool3c.com/article/240149</link></item>
-<item><title>FreeSense Ring - Cool3c</title><link>https://www.cool3c.com/tag/163975</link></item>
-<item><title>AI TransBuds - Cool3c</title><link>https://www.cool3c.com/tag/163978</link></item>
-<item><title>宏碁再開技能樹，推出智慧戒指、翻譯耳機、多款電動載具 - Cool3c</title><link>https://www.cool3c.com/article/240148</link></item>
-<item><title>Amazfit Active 2 - Cool3c</title><link>https://www.cool3c.com/tag/163976</link></item>
-<item><title>Amazfit Active 2 更輕巧時尚，續航 10 天 支援更多健康數據 - Cool3c</title><link>https://www.cool3c.com/article/240147</link></item>
-<item><title>COMPUTEX 2025：宏碁倚天酷碁展示FreeSense Ring智慧戒指、宏碁譯秒聽翻譯耳機 - Cool3c</title><link>https://www.cool3c.com/article/240146</link></item>
-<item><title>Core Ultra 200HX - Cool3c</title><link>https://www.cool3c.com/tag/161483</link></item>
-<item><title>COMPUTEX 2025：宏碁公布中價位Copilot+ PC電競筆電Nitro V 16S AI，並展示印第安納瓊斯：古老之圈聯名HELIOS Neo 16S AI - Cool3c</title><link>https://www.cool3c.com/article/240145</link></item>
-<item><title>COMPUTEX 2025：宏碁公布1公斤以下Copilot+ PC Swift Edge AI及多款Intel、AMD、高通輕薄筆電，輕薄獨顯機Swift X 14 AI觸控板可搭觸控筆 - Cool3c</title><link>https://www.cool3c.com/article/240144</link></item>
-<item><title>Guillaume Broche - Cool3c</title><link>https://www.cool3c.com/tag/163888</link></item>
-<item><title>殭屍？外星人？33號遠征隊台裔編劇談遊戲初期世界觀 - Cool3c</title><link>https://www.cool3c.com/article/240060</link></item>
-<item><title>《Pokémon Sleep》遊戲料理真實上桌 營養師幫你設計好睡菜單 - Cool3c</title><link>https://www.cool3c.com/article/240143</link></item>
-<item><title>從圖靈到AI 二戰密碼如今13分鐘內可破解 - Cool3c</title><link>https://www.cool3c.com/article/240142</link></item>
-<item><title>google pixel b... - Cool3c</title><link>https://www.cool3c.com/search/google%20pixel%20buds</link></item>
-<item><title>sony xperia 1 ... - Cool3c</title><link>https://www.cool3c.com/search/sony%20xperia%201%20vii</link></item>
-<item><title>最可靠的散熱合作夥伴！聚焦 AI 基礎設施硬體建設， Johnson Electric 德昌電機「探討 AI 時代的資料中心液冷散熱解決方案」論壇免費報名中 - Cool3c</title><link>https://www.cool3c.com/article/238021</link></item>
-<item><title>居家修繕：簡易DIY 紗網、膠條怎麼買？如何更換紗窗紗網？ - Cool3c</title><link>https://www.cool3c.com/article/239359</link></item>
-<item><title>Sony新生產出貨的Walkman NW-WM1ZM2、NW-1AM2取消高增益模式，官方證實因應世衛組織對聽力保健意識高漲 - Cool3c</title><link>https://www.cool3c.com/article/239962</link></item>
-<item><title>常帶筆電出門工作？不到3000元超輕薄螢幕肯定是最佳選擇 - Cool3c</title><link>https://www.cool3c.com/article/239654</link></item>
-<item><title>想換機別錯過！Google Pixel 9a 新色美翻天，AI 拍照實力＆超值購買資訊全攻略 - Cool3c</title><link>https://www.cool3c.com/article/239789</link></item>
-<item><title>租屋族房屋抵稅新制 5 月上路！ 內政部國土署：租金改列特別扣除額度上限 18 萬元 - Cool3c</title><link>https://www.cool3c.com/article/239746</link></item>
-<item><title>AI風潮狂襲！手機、電腦紛紛換新 舊Wi-Fi路由器跟得上嗎？  MERCUSYS全新Wi-Fi 7路由器 超高CP值 無痛釋放設備極限效能！ - Cool3c</title><link>https://www.cool3c.com/article/239667</link></item>
-<item><title>摺  才叫帥！Motorola razr 60 系列攜 Pantone™潮色登場 時尚摺疊 OG 始祖 Motorola x 嘻哈 OG 男神 瘦子 E.SO 科技與經典時尚盡在 motorola razr 60｜60 ULTRA - Cool3c</title><link>https://www.cool3c.com/article/239611</link></item>
-<item><title>Canvas App Components: A Crash Course for Power Apps Developers - freeCodeCamp</title><link>https://www.freecodecamp.org/news/powerapps-component-crash-course/</link></item>
-<item><title>How to Write Math Equations in Google Docs - freeCodeCamp</title><link>https://www.freecodecamp.org/news/write-math-equations-in-google-docs/</link></item>
-<item><title>How to make Developer Friends When You Don&amp;#39;t Live in Silicon Valley, with Iraqi Engineer Code;Life [Podcast #172] - freeCodeCamp</title><link>https://www.freecodecamp.org/news/how-to-make-developer-friends-when-you-dont-live-in-silicon-valley-with-iraqi-engineer-codelife-podcast-172/</link></item>
-<item><title>Learn A1 Level Spanish - freeCodeCamp</title><link>https://www.freecodecamp.org/news/learn-a1-level-spanish/</link></item>
-<item><title>How DNS Works: A Guide to Understanding the Internet&amp;#39;s Address Book - freeCodeCamp</title><link>https://www.freecodecamp.org/news/how-dns-works-the-internets-address-book/</link></item>
-<item><title>Load Balancing with Azure Application Gateway and Azure Load Balancer – When to Use Each One - freeCodeCamp</title><link>https://www.freecodecamp.org/news/load-balancing-with-azure-application-gateway-and-azure-load-balancer/</link></item>
-<item><title>How to Build Slim and Fast Docker Images with Multi-Stage Builds - freeCodeCamp</title><link>https://www.freecodecamp.org/news/build-slim-fast-docker-images-with-multi-stage-builds/</link></item>
-<item><title>Learn Vite for a Better Web Development Workflow - freeCodeCamp</title><link>https://www.freecodecamp.org/news/learn-vite-for-a-better-web-development-workflow/</link></item>
-<item><title>How Web Services Work – The Unseen Engines of the Connected World - freeCodeCamp</title><link>https://www.freecodecamp.org/news/how-web-services-work-with-examples/</link></item>
-<item><title>Master Kotlin &amp; Android 60-Hour Course - freeCodeCamp</title><link>https://www.freecodecamp.org/news/master-kotlin-and-android-60-hour-course/</link></item>
-<item><title>10 Sahara Desert Animals Thriving in North Africa - HowStuffWorks</title><link>https://animals.howstuffworks.com/animal-facts/sahara-desert-animals.htm</link></item>
-<item><title>A Polydactyl Cat Has 5, 6 or even 7 Toes on Each Paw - HowStuffWorks</title><link>https://animals.howstuffworks.com/pets/polydactyl-cat.htm</link></item>
-<item><title>Newcastle Funnel-web: Just 1 of 3 Deadly Sydney Funnel-web Spiders - HowStuffWorks</title><link>https://animals.howstuffworks.com/arachnids/newcastle-big-boy.htm</link></item>
-<item><title>Are Whales Mammals? Yes, and They&amp;#39;re Related to Hippos - HowStuffWorks</title><link>https://animals.howstuffworks.com/mammals/are-whales-mammals.htm</link></item>
-<item><title>Who&amp;#39;s the Most Famous Person in the World? 11 Contenders - HowStuffWorks</title><link>https://entertainment.howstuffworks.com/most-famous-person-in-the-world.htm</link></item>
-<item><title>Is the Rat King Real or Simply an Urban Legend? - HowStuffWorks</title><link>https://animals.howstuffworks.com/mammals/rat-king.htm</link></item>
-<item><title>The Average Height for Men Varies Widely Around the World - HowStuffWorks</title><link>https://health.howstuffworks.com/human-body/average-height-for-men.htm</link></item>
-<item><title>The Wolf Eel Can Chomp on Sand Dollars and Sea Urchins - HowStuffWorks</title><link>https://animals.howstuffworks.com/fish/wolf-eel.htm</link></item>
-<item><title>10 Most Expensive Zip Codes (No, 90210 Doesn&amp;#39;t Make the Cut) - HowStuffWorks</title><link>https://money.howstuffworks.com/personal-finance/most-expensive-zip-codes.htm</link></item>
-<item><title>7 Black and White Cat Coat Patterns You&amp;#39;ll Spot in Homes - HowStuffWorks</title><link>https://animals.howstuffworks.com/pets/black-and-white-cat.htm</link></item>
-<item><title>Central Heterochromia: When to Worry About Eye Color - HowStuffWorks</title><link>https://science.howstuffworks.com/life/biology-fields/central-heterochromia.htm</link></item>
-<item><title>Deep Blue: Shark of IMAX-worthy Proportions - HowStuffWorks</title><link>https://animals.howstuffworks.com/fish/sharks/deep-blue-shark.htm</link></item>
-<item><title>Is Lavender Safe for Cats? That&amp;#39;s a Hard No - HowStuffWorks</title><link>https://animals.howstuffworks.com/pets/is-lavender-safe-for-cats.htm</link></item>
-<item><title>Jim Cummings: The Voice of Millennial Childhoods - HowStuffWorks</title><link>https://entertainment.howstuffworks.com/jim-cummings.htm</link></item>
-<item><title>Phineas Gage and the Birth of Modern Neuroscience - HowStuffWorks</title><link>https://science.howstuffworks.com/life/inside-the-mind/human-brain/phineas-gage.htm</link></item>
-<item><title>研究发现 AI 无法预测股市 - Solidot</title><link>https://www.solidot.org/story?sid=81312</link></item>
-<item><title>研究发现无论是否运动久坐会损害大脑 - Solidot</title><link>https://www.solidot.org/story?sid=81313</link></item>
-<item><title>太空计算卫星星座发射首批 12 颗卫星 - Solidot</title><link>https://www.solidot.org/story?sid=81314</link></item>
-<item><title>中国二氧化碳排放首次在电力需求增长的情况下下降 - Solidot</title><link>https://www.solidot.org/story?sid=81315</link></item>
-<item><title>特朗普要求苹果停止在印度扩大制造业务 - Solidot</title><link>https://www.solidot.org/story?sid=81316</link></item>
-<item><title>Mothers Are Human - Law &amp; Liberty</title><link>https://lawliberty.org/book-review/mothers-are-human/</link></item>
-<item><title>The Perils of Generational Thinking - Law &amp; Liberty</title><link>https://lawliberty.org/the-perils-of-generational-thinking/</link></item>
-<item><title>The Secret Lives of Mormon Wives - Vulture</title><link>https://www.vulture.com/tv/the-secret-lives-of-mormon-wives/</link></item>
-<item><title>Face the Music - Vulture</title><link>https://www.vulture.com/article/doctor-who-recap-series-15-episode-6-interstellar-song-contest.html</link></item>
-<item><title>Mommy Has to Work - Vulture</title><link>https://www.vulture.com/article/secret-lives-of-mormon-wives-recap-season-2-episode-6-the-book-of-redemption.html</link></item>
-<item><title>That Escalated Quickly - Vulture</title><link>https://www.vulture.com/article/secret-lives-of-mormon-wives-recap-season-2-episode-5-book-of-divisions.html</link></item>
-<item><title>Hard and Rough - Vulture</title><link>https://www.vulture.com/article/secret-lives-of-mormon-wives-recap-season-2-episode-4-the-book-of-taboos.html</link></item>
-<item><title>Free-Throw Shots Fired - Vulture</title><link>https://www.vulture.com/article/rupauls-drag-race-all-stars-recap-season-10-episode-3-hoop-queens.html</link></item>
-<item><title>Explosions in the Sky - Vulture</title><link>https://www.vulture.com/article/greys-anatomy-recap-season-21-finale-episode-18-how-do-i-live.html</link></item>
-<item><title>Ice, Ice Baby - Vulture</title><link>https://www.vulture.com/article/hacks-recap-season-4-episode-8-witch-of-the-week.html</link></item>
-<item><title>Les Quatre Saisons - Vulture</title><link>https://www.vulture.com/article/top-chef-recap-season-22-episode-10-from-dep-till-dawn.html</link></item>
-<item><title>A Religious Experience - Vulture</title><link>https://www.vulture.com/article/hacks-recap-season-4-episode-7-dchristening.html</link></item>
-<item><title>Data Shows Boys and Young Men Are Falling Behind - Slashdot</title><link>https://news.slashdot.org/story/25/05/16/1746241/data-shows-boys-and-young-men-are-falling-behind?sbsrc=md</link></item>
-<item><title>Student Demands Tuition Refund After Catching Professor Using ChatGPT - Slashdot</title><link>https://news.slashdot.org/story/25/05/15/2335227/student-demands-tuition-refund-after-catching-professor-using-chatgpt?sbsrc=md</link></item>
-<item><title>Do You Trust Mark Zuckerberg To Solve Your Loneliness With an &amp;#39;AI Friend&amp;#39;? - Slashdot</title><link>https://tech.slashdot.org/story/25/05/15/2056257/do-you-trust-mark-zuckerberg-to-solve-your-loneliness-with-an-ai-friend?sbsrc=md</link></item>
-<item><title>Clean Energy Just Put China&amp;#39;s CO2 Emissions Into Reverse For First Time - Slashdot</title><link>https://news.slashdot.org/story/25/05/16/052233/clean-energy-just-put-chinas-co2-emissions-into-reverse-for-first-time?sbsrc=md</link></item>
-<item><title>Vision Pro Owners Face Weight of Buyer&amp;#39;s Remorse - Slashdot</title><link>https://apple.slashdot.org/story/25/05/16/1357258/vision-pro-owners-face-weight-of-buyers-remorse?sbsrc=md</link></item>
+<lastBuildDate>Mon, 19 May 2025 11:46:26 +0800</lastBuildDate>
+<item><title>1.4 万年前的超级太阳风暴事件 - Solidot</title><link>https://www.solidot.org/story?sid=81322</link></item>
+<item><title>为什么城市儿童更容易过敏 - Solidot</title><link>https://www.solidot.org/story?sid=81321</link></item>
+<item><title>香港新加坡新冠病例激增 - Solidot</title><link>https://www.solidot.org/story?sid=81319</link></item>
+<item><title>美国年轻男性全面落后于女性 - Solidot</title><link>https://www.solidot.org/story?sid=81318</link></item>
+<item><title>NASA 成功重启逾二十年未使用的旅行者1号备用推进器 - Solidot</title><link>https://www.solidot.org/story?sid=81317</link></item>
+<item><title>Week in review: Microsoft patches 5 actively exploited 0-days, recently fixed Chrome vulnerability exploited - Help Net Security</title><link>https://www.helpnetsecurity.com/2025/05/18/week-in-review-microsoft-patches-5-actively-exploited-0-days-recently-fixed-chrome-vulnerability-exploited/</link></item>
+<item><title>CISA: Recently fixed Chrome vulnerability exploited in the wild (CVE-2025-4664) - Help Net Security</title><link>https://www.helpnetsecurity.com/2025/05/16/cisa-recently-fixed-chrome-vulnerability-exploited-in-the-wild-cve-2025-4664/</link></item>
+<item><title>Cranium introduces AI red teaming platform - Help Net Security</title><link>https://www.helpnetsecurity.com/2025/05/16/cranium-arena/</link></item>
+<item><title>Deepfake attacks could cost you more than money - Help Net Security</title><link>https://www.helpnetsecurity.com/2025/05/16/camellia-chan-x-phy-defending-against-deepfakes/</link></item>
+<item><title>Polymorphic phishing attacks flood inboxes - Help Net Security</title><link>https://www.helpnetsecurity.com/2025/05/16/polymorphic-phishing-attacks-cofense/</link></item>
+<item><title>Cybersecurity Skills Framework connects the dots between IT job roles and the practical skills needed - Help Net Security</title><link>https://www.helpnetsecurity.com/2025/05/16/cybersecurity-skills-framework-linux-foundation/</link></item>
+<item><title>How working in a stressful environment affects cybersecurity - Help Net Security</title><link>https://www.helpnetsecurity.com/2025/05/16/stressful-environment-cybersecurity/</link></item>
+<item><title>New infosec products of the week: May 16, 2025 - Help Net Security</title><link>https://www.helpnetsecurity.com/2025/05/16/new-infosec-products-of-the-week-may-16-2025/</link></item>
+<item><title>Proofpoint to acquire Hornetsecurity - Help Net Security</title><link>https://www.helpnetsecurity.com/2025/05/15/proofpoint-to-acquire-hornetsecurity/</link></item>
+<item><title>Coinbase suffers data breach, gets extorted (but won’t pay) - Help Net Security</title><link>https://www.helpnetsecurity.com/2025/05/15/coinbase-suffers-data-breach-gets-extorted/</link></item>
+<item><title>Haunted Histories in the Garden: A Sonic Journey Through Killruddery - World Sensorium</title><link>https://worldsensorium.com/haunted-histories-in-the-garden-a-sonic-journey-through-killruddery-and-the-irish-landscape/</link></item>
+<item><title>Protecting Ireland’s Blanket Bogs - World Sensorium</title><link>https://worldsensorium.com/protecting-irelands-blanket-bogs/</link></item>
+<item><title>Building with Hemp: A Circular Path to Ireland’s Climate Resilience and Beyond - World Sensorium</title><link>https://worldsensorium.com/building-with-hemp-a-circular-path-to-irelands-climate-resilience-and-beyond/</link></item>
+<item><title>Joseph Beuys and the Bogs of Ireland - World Sensorium</title><link>https://worldsensorium.com/joseph-beuys-and-the-bogs-of-ireland/</link></item>
+<item><title>The Women Who Found Liberation in Seaweed - World Sensorium</title><link>https://worldsensorium.com/the-women-who-found-liberation-in-seaweed/</link></item>
+<item><title>Scent and Synapse: Aromatic Flora and the Mechanisms and Power of Memory Recall - World Sensorium</title><link>https://worldsensorium.com/scent-and-synapse-aromatic-flora-and-the-mechanisms-and-power-of-memory-recall/</link></item>
+<item><title>Savory Spinach Pie - World Sensorium</title><link>https://worldsensorium.com/recipe-savory-spinach-pie/</link></item>
+<item><title>Sponsored News Posts - Real Estate News</title><link>https://www.worldpropertyjournal.com/sponsored-news-service/submit.php</link></item>
+<item><title>U.S. Cities Where Renters Need $100K Salary to Live Doubles Since 2020 - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/los-angeles-real-estate-news/real-estate-news-zillow-2025-rental-data-orphe-divounguy-rental-affordability-data-for-2025-most-expensive-residential-rental-markets-in-the-us-in-202-14447.php</link></item>
+<item><title>Home Seller Concessions Climbing as Market Conditions Shift in U.S. - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/seattle/real-estate-news-redfin-2025-home-seller-report-home-seller-concessions-data-for-2025-home-seller-trends-in-2025-declining-home-sales-data-for-2025-14425.php</link></item>
+<item><title>SENTIENT MORTGAGE Consumer-to-Lender AI Matching Engine Commences Development - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/miami-real-estate-news/real-estate-news-sentient-mortgage-world-property-ventures-world-property-markets-global-listings-ai-mortgage-platforms-new-ai-mortgage-technology-pla-14424.php</link></item>
+<item><title>U.S. Homes Sold at Slowest Pace in 6 Years in March, Demand Sluggish - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/seattle/real-estate-news-march-2025-home-sales-data-slowing-housing-market-trends-in-2025-redfin-march-home-sales-report-elijah-de-la-campa-14423.php</link></item>
+<item><title>U.S. Multifamily Buyer and Seller Sentiment Improves in Early 2025 - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/atlanta-real-estate-news/commercial-real-estate-news-2025-multifamily-data-from-cbre-multifamily-buyer-sentiment-data-apartment-investor-data-for-2025-multifamily-cap-rates-in-14422.php</link></item>
+<item><title>Trump Tariffs Test U.S. Housing Markets Reliance on International Trade - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/los-angeles-real-estate-news/real-estate-news-trump-tariffs-trade-tariffs-impact-on-the-housing-market-in-2025-nar-report-on-tariffs-nadia-evangelou-tariffs-impact-on-us-home-pric-14421.php</link></item>
+<item><title>India Home Prices Nationwide Climbed 9 Percent Annually in 2024 - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/india/delhi/india-real-estate-news-propequity-india-2024-home-price-data-india-2024-home-sales-data-new-delhi-property-sales-report-for-2024-samir-jasuja-14420.php</link></item>
+<item><title>U.S. Home Remodeling Industry Sentiment Declines in Early 2025 - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/denver-real-estate-news/real-estate-news-national-association-of-home-builders-2025-remodeling-market-index-rmi-data-for-2025-robert-dietz-goolsby-morrison-14419.php</link></item>
+<item><title>Canadian Home Sales Slide in February Amid U.S. Trade Tensions - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/canada/vancouver-real-estate-news/canada-real-estate-news-canadian-home-sales-data-march-2025-canadian-mls-data-shaun-cathcart-canadian-real-estate-association-crea-canada-home-price-d-14418.php</link></item>
+<item><title>Americans Spent $603 Billion on Home Remodeling Projects in 2024 - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/denver-real-estate-news/real-estate-new-national-association-of-the-remodeling-industry-2025-remodeling-impact-report-home-remodeling-data-for-2024-jessica-lautz-top-home-imp-14416.php</link></item>
+<item><title>U.S. Mortgage Demand Spikes 20 Percent in Early April as Rates Drop - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/washington-dc-real-estate-news/real-estate-news-mortgage-bankers-association-weekly-mortgage-applications-survey-for-april-2025-mortgage-applications-data-maril-2025-current-mortgag-14414.php</link></item>
+<item><title>Las Vegas Area Home Prices Uptick 4.3 Percent Annually in March - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/las-vegas/real-estate-news-las-vegas-home-sales-data-for-march-2025-george-kypreos-las-vegas-realtors-march-2025-home-sales-report-2025-condo-prices-in-las-vega-14411.php</link></item>
+<item><title>Single-Family Rent Growth in U.S. Trends Upward in 2025 - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/irvine/real-estate-news-corelogic-2025-single-family-rent-index-sfri-us-single-family-rent-data-for-2025-molly-boesel-14410.php</link></item>
+<item><title>U.S. Mortgage Rates Tick Down Post Trump Tariffs Commencement - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/washington-dc-real-estate-news/real-estate-news-freddie-mac-april-2025-primary-mortgage-market-survey-sam-khater-april-2025-mortgage-data-from-freddie-mac-14409.php</link></item>
+<item><title>President Trump&amp;#39;s &amp;#39;Liberation Day&amp;#39; Tariffs Potential Impact on the U.S. Housing and Mortgage Markets - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/washington-dc-real-estate-news/real-estate-news-president-trump-2025-tariffs-data-liberation-day-tariffs-impact-on-housing-trump-tariffs-impact-on-mortgage-rates-in-2025-nahb-reacti-14408.php</link></item>
+<item><title>Baby Boomers Biggest Cohort of U.S. Home Buyers in 2025 as Millennials Decline - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/washington-dc-real-estate-news/real-estate-news-national-association-of-realtors-2025-home-buyers-and-sellers-generational-trends-report-baby-boomer-home-buyer-data-millennial-home--14407.php</link></item>
+<item><title>U.S. Monthly Housing Payments Hit Record High in 2025 - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/seattle/real-estate-news-redfin-2025-housing-market-data-homebuyer-monthly-housing-payment-data-for-2025-housing-affordability-data-for-2025-14406.php</link></item>
+<item><title>The best beaches in China - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-beaches-in-china</link></item>
+<item><title>10 budget tips for visiting Crete - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/crete-on-a-budget</link></item>
+<item><title>The 11 best free things to do in Anchorage - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/top-free-things-to-do-in-anchorage</link></item>
+<item><title>14 of the best things to do in Maui - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/top-things-to-do-in-maui</link></item>
+<item><title>The best neighborhoods to visit in Anchorage - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-neighborhoods-in-anchorage</link></item>
+<item><title>A first-time guide to Bologna - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/guide-to-bologna</link></item>
+<item><title>Trà My Nguyen Hoang photographs Dublin like no one else - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/dublin-ireland-street-photography</link></item>
+<item><title>16 top things to do in Anchorage, Alaska’s biggest city - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/top-things-to-do-in-anchorage</link></item>
+<item><title>How to enjoy Anchorage on a budget - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/anchorage-on-a-budget</link></item>
+<item><title>A first-time guide to Teotihuacán - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/guide-to-teotihuacan</link></item>
+<item><title>Why you need to take your kids on the Alaska Railroad - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/slow-travel-alaska-railroad</link></item>
+<item><title>12 free things to do in Naples - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/top-free-things-to-do-in-naples</link></item>
+<item><title>The 10 best hiking trails in Nepal - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-hikes-in-nepal</link></item>
+<item><title>The 7 best day trips from New York City - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-day-trips-from-new-york-city</link></item>
+<item><title>The 17 best beaches in Italy - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-beaches-italy</link></item>
+<item><title>How to get around in Croatia - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/how-to-get-around-croatia</link></item>
+<item><title>When is the best time to visit Crete? - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-time-to-visit-crete</link></item>
+<item><title>The 19 best things to do in Arles, France - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/top-things-to-do-in-arles</link></item>
+<item><title>A first-time guide to Roatán - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/first-time-guide-to-roatan</link></item>
+<item><title>How to get around Marseille - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/getting-around-marseille</link></item>
+<item><title>9 of the best free things to do in Toulouse - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/top-free-things-to-do-in-toulouse</link></item>
+<item><title>The Lonely Planet guide to Neolithic Orkney, Scotland - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/guide-to-neolithic-orkney-scotland</link></item>
+<item><title>求黄庭坚《赠张大同书》 - 书格</title><link>https://www.shuge.org/meet/topic/178784/#post-178869</link></item>
+<item><title>求宫内厅的《春秋经传集解》-金泽文库卷子本、兴国军学本 - 书格</title><link>https://www.shuge.org/meet/topic/84171/#post-178868</link></item>
+<item><title>天一阁重新开放了部分线上资源 - 书格</title><link>https://www.shuge.org/meet/topic/178855/#post-178865</link></item>
+<item><title>初学奇门 还望各位前辈指点一二 - 书格</title><link>https://www.shuge.org/meet/topic/178577/#post-178864</link></item>
+<item><title>bookget 开源了（更新至：v25.0512） - 书格</title><link>https://www.shuge.org/meet/topic/80138/page/53/#post-178862</link></item>
+<item><title>松窗读易图卷（元.王蒙.绘）台北故宫博物院藏 - 书格</title><link>https://www.shuge.org/meet/topic/178765/</link></item>
+<item><title>咨询：批量裁剪古籍黑边的免费软件（原图清晰度无损、倾斜的边框旋转回正） - 书格</title><link>https://www.shuge.org/meet/topic/178760/</link></item>
+<item><title>科学家发现橘猫的基因突变 - Solidot</title><link>https://www.solidot.org/story?sid=81323</link></item>
+<item><title>Migration Assistance - DigitalOcean</title><link>https://www.digitalocean.com/migrate</link></item>
 </channel></rss>
