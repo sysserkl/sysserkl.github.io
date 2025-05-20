@@ -65,19 +65,24 @@ function add_random_tile_2048(cscount=1){
 
 function update_grid_2048(){
     const ogrid = document.getElementById('div_grid');
-    ogrid.innerHTML = '';
-    var css_str='width: 100%; aspect-ratio: 1 / 1; background-color: #cdc1b4; border-radius: .5vw; display: flex; justify-content: center; align-items: center; font-size: '+(base_size_2048_global+0.5)+'vw; font-weight: bold; color: #776e65;';
+    
+    const ofragment = document.createDocumentFragment(); // 创建 DocumentFragment
+    var css_str = 'width: 100%; aspect-ratio: 1 / 1; background-color: #cdc1b4; border-radius: .5vw; display: flex; justify-content: center; align-items: center; font-size: ' + (base_size_2048_global + 0.5) + 'vw; font-weight: bold; color: #776e65;';
+
     for (let row = 0; row < size_2048_global; row++){
         for (let col = 0; col < size_2048_global; col++){
             const otile = document.createElement('div');
-            otile.style.cssText=css_str;
+            otile.style.cssText = css_str;
             const value = board_2048_global[row][col];
             otile.textContent = (value !== 0 ? value : '');
             otile.style.backgroundColor = colors_2048_global[value] || '#3c3a32';
             otile.style.color = (value > 4 ? '#f9f6f2' : '#776e65');
-            ogrid.appendChild(otile);
+            ofragment.appendChild(otile); // 先插入到 fragment
         }
     }
+
+    ogrid.innerHTML = ''; // 清空旧内容
+    ogrid.appendChild(ofragment); // 一次性将 fragment 插入真实 DOM
     
     var oscore=document.getElementById('span_score');
     if (!oscore){

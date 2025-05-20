@@ -56,7 +56,8 @@ function rare_old_words_get_kltxt_klwiki_en2(arow){
 
 function common_rare_old_words_kltxt_klwiki_en2(){
     var t0 = performance.now();
-
+    var sub_fix=mark_check_b('common_rare_old_words_kltxt_klwiki_en2','start')[0];
+    
     var start_lineno,end_lineno,blmax;
     [start_lineno,end_lineno,blmax]=start_end_lineno_kltxt_b();
 
@@ -88,6 +89,8 @@ function common_rare_old_words_kltxt_klwiki_en2(){
     
     en_word_temp_get_b();
     document.getElementById('divhtml').innerHTML='<h4>'+blrange+'</h4>'+enwords_js_wiki_textarea_b(result_t,'str');
+    
+    mark_check_b('common_rare_old_words_kltxt_klwiki_en2','end',sub_fix,['start','end'],true);
     console.log('common_rare_old_words_kltxt_klwiki_en2() 费时：'+(performance.now() - t0) + ' milliseconds');
 }
 

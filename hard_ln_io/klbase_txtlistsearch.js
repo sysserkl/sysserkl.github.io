@@ -4461,7 +4461,7 @@ function best_sentences_kltxt_b(csid,filter_str='',csreg=false){
                     }
 
                     if (one_sentence.match(blreg)){
-                        var new_str=en_one_word_b([one_word,'',''],[-1,0],'',true,false,true);
+                        var new_str=en_one_word_b([one_word,'',''],[-1,0],'',false,true);
                         new_str=one_sentence.replace(blreg,new_str);
                         if (!result_t.includes(new_str)){
                             if (page_name!==''){

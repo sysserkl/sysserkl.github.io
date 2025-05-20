@@ -30,7 +30,7 @@ function load_data_seen(fname=''){
             item.push(item[3].length); //6 添加 words 个数 - 保留注释    
             item.push(-1); //7 添加 临时统计用数值 - 保留注释    
             item.push(fname); //8 添加 来源文件名 - 保留注释
-            item.push(enwords_array_to_links_b(item[3],oldset,'count_one_seen'));   //9 添加 words html - 保留注释
+            item.push(enwords_array_to_links_b(item[3],oldset,true));   //,'count_one_seen'. 9 添加 words html - 保留注释
             if (item[0].includes('//')){
                 item.push(item[0].split('//')[1].split('/')[0]);    //10 添加 host - 保留注释
             } else {
@@ -604,14 +604,27 @@ function count_one_seen(odom,words_dict=false){
 }
 
 function list_container_generation_seen(words){
-    //words 每个元素形如：<span class="span_word_combination_enword"><small class="small_enword_no_b" style="cursor:pointer;" onclick="count_one_seen(this);">3. </small><span class="a_word" onclick="popup_words_links_b(event,'cerevisiae',true,true); en_word_temp_change_b(this,'cerevisiae');"><b>cerevisiae</b></span> </span> - 保留注释
-    var blstr='<div class="div_word_list_seen" style="border:0.1rem dotted '+scheme_global['shadow']+';border-radius:1rem;padding:0.5rem;">';
+    //words 每个元素形如：<span class="span_word_combination_enword"><small class="small_enword_no_b" style="cursor:pointer;">3. </small><span class="a_word" onclick="popup_words_links_b(event,'cerevisiae',true,true); en_word_temp_change_b(this,'cerevisiae');"><b>cerevisiae</b></span> </span> - 保留注释
+    
+    // onclick="count_one_seen(this);"
+    
+    var blstr='<div class="div_word_list_seen" style="border:0.1rem dotted '+scheme_global['shadow']+';border-radius:1rem;padding:0.5rem;" onclick="div_word_list_click_seen(event);">';
     var blstyle=(words.length<=1?' style="display:none;"':'');
 
     blstr=blstr+'<span class="span_box span_batch_count_enwords_book" onclick="count_batch_seen(this);"'+blstyle+'>👆</span> ';    
     blstr=blstr+words.join(' ');
     blstr=blstr+'</div>';
     return blstr;
+}
+
+function div_word_list_click_seen(event){
+    const target = event.target;
+
+    // 处理 small 元素的点击（计数）
+    const osmallElement = target.closest('.small_enword_no_b');
+    if (osmallElement){
+        count_one_seen(osmallElement);
+    }
 }
 
 function count_batch_seen(ospan){

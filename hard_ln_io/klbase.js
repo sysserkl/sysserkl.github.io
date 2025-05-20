@@ -4784,3 +4784,41 @@ function file_is_encoded_b(fname,is_do_decode=true){
     }
     return [finfo,fname,is_encoded];
 }
+
+function mark_check_b(measure_caption='',mark_name='',sub_fix=false,mark_list=[],do_clear=false){
+    function sub_mark_check_b_current(){
+        // 获取所有标记条目
+        const marks = performance.getEntriesByType('mark');
+        var markNames=marks.map(mark => mark.name);    
+        console.log('现有标记：',markNames); // 输出示例：["search_start", "render_end"] - 保留注释        
+        return markNames;
+    }
+    
+    if (sub_fix===false){
+        sub_fix=today_str_b('dt','_','_','_',5);
+    }
+    
+    var markNames=[];
+    if (mark_name!==''){
+        performance.mark(measure_caption+'_'+mark_name+'_'+sub_fix);
+        markNames=sub_mark_check_b_current();
+    }
+    
+    if (measure_caption!=='' && mark_list.length>=2){
+        console.log(performance.measure(measure_caption, measure_caption+'_'+mark_list[0]+'_'+sub_fix, measure_caption+'_'+mark_list[mark_list.length-1]+'_'+sub_fix));
+        console.log('startTime: 表示该事件在页面加载开始后的 ​​xxxx 毫秒​​时触发。duration:​​ 表示事件的​​持续时间​​，单位为毫秒。');
+        
+        if (do_clear){
+            try {
+                for (let item of mark_list){
+                    performance.clearMarks(measure_caption+'_'+item+'_'+sub_fix);
+                }
+            } catch (e){
+                console.error('清理标记失败: ', e,);
+            }
+            markNames=sub_mark_check_b_current();
+        }
+    }
+
+    return [sub_fix,markNames];
+}
