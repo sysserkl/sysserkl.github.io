@@ -640,6 +640,7 @@ function resolve_linkgame(){
     }
     
     function sub_resolve_linkgame_link(){
+        config_emoji_global['tip']=[];
         for (let blx=0,lent=list_t.length;blx<lent;blx++){
             for (let bly=0,lenb=list_t.length;bly<lenb;bly++){
                 if (blx==bly){continue;}
@@ -678,17 +679,13 @@ function resolve_linkgame(){
 
     var list_t=remain_linkgame();
     if (config_emoji_global['type']=='消块'){
-        if (sub_resolve_linkgame_bejeweled()!==false){
-            return;
-        }
+        if (sub_resolve_linkgame_bejeweled()!==false){return;}
     } else {
         if (list_t.length<=1){
-            return;// [true,true];
+            config_emoji_global['tip']=[];
+            return;
         }
-        
-        if (sub_resolve_linkgame_link()!==false){
-            return;// result_t;
-        }
+        if (sub_resolve_linkgame_link()!==false){return;}
     }
 
     config_emoji_global['recombine_times']=config_emoji_global['recombine_times']+1;
@@ -696,11 +693,10 @@ function resolve_linkgame(){
         recombine_linkgame(list_t);
         return resolve_linkgame();
     } else {
+        config_emoji_global['tip']=[];
         document.getElementById('span_tip_emoji').innerHTML='';
         alert('无解');
     }
-
-    return;// [false,false];
 }
 
 function find_td_emoji(csstr){
@@ -1221,15 +1217,56 @@ function menu_linkgame(){
     ['⚪ 连线','local_storage_set_linkgame(\'show_line\');',true,'span_show_line_lg'],
     ['⚪ 旋转','local_storage_set_linkgame(\'rotate\');',true,'span_rotate_lg'],
     ['⚪ sound','local_storage_set_linkgame(\'sound\');',true,'span_sound_lg'],
+    ['⚪ 自动','auto_run_linkgame();',true,'span_auto_run_lg'],
+
     ];    
     klmenu_config.push(menu_container_b(str_t,group_list,''));
     
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','10rem','1rem','1rem','60rem')+klmenu_b(color_menu,'🎨','20rem','1rem','1rem','20rem')+klmenu_b(remain_menu,'♟','12rem','1rem','1rem','60rem','','menu_remain_linkgame')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','10rem','1rem','1rem','60rem')+klmenu_b(color_menu,'🎨','20rem','1rem','1rem','20rem')+klmenu_b(remain_menu,'♟','12rem','1rem','1rem','60rem','','menu_remain_linkgame')+klmenu_b(klmenu_config,'⚙','18rem','1rem','1rem','60rem'),'','0rem')+' ');
     
     var input_list=[['input_link_percent_linkgame',5,0.5],['input_bejeweled_percent_linkgame',5,0.5],];
     input_size_b(input_list,'id');
     local_storage_get_linkgame(['show_line','rotate','sound']);
     menu_remain_refresh_linkgame();
+}
+
+function auto_run_linkgame(do_change=true){
+    function sub_auto_run_linkgame_second(){
+        sub_auto_run_linkgame_click();
+        
+        if (!is_ok){
+            klmenu_check_b('span_auto_run_lg',true);
+        } else {
+            setTimeout(function (){auto_run_linkgame(false);},2000);
+        }
+    }
+    
+    function sub_auto_run_linkgame_click(){
+        var otd=document.getElementById(td_id);
+        if (otd){
+            otd.click();
+        } else {
+            console.log('未发现 id:',td_id);
+            is_ok=false;
+        }
+    }
+    
+    var is_auto=klmenu_check_b('span_auto_run_lg',do_change);
+    if (is_auto===false){return;}
+    resolve_linkgame();
+    
+    if (config_emoji_global['tip'].length!==2){
+        klmenu_check_b('span_auto_run_lg',true);
+        console.log('error',config_emoji_global['tip']);
+        return;
+    }
+    
+    var is_ok=true;
+    var td_id='td_'+config_emoji_global['tip'][0][0]+'_'+config_emoji_global['tip'][0][1];
+    sub_auto_run_linkgame_click();
+
+    var td_id='td_'+config_emoji_global['tip'][1][0]+'_'+config_emoji_global['tip'][1][1];
+    setTimeout(sub_auto_run_linkgame_second,2000);
 }
 
 function local_storage_get_linkgame(cstype){

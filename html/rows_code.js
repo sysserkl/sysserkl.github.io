@@ -96,7 +96,8 @@ function do_type_klr2(cstype){
         case '替换':
             var csrep1=document.getElementById('rep1').value;
             var csrep2=document.getElementById('rep2').value;        
-            replace_strs_klr_b(csrep1,csrep2);
+            var reg_type=document.getElementById('input_reg_type_klr2').value.trim();
+            replace_strs_klr_b(csrep1,csrep2,'textarea_rows_content','textarea_status',reg_type);
             break;
         case '分组':
 	        var blinterval=Math.max(parseInt(document.getElementById('input_line_interval').value.trim()),1);

@@ -257,7 +257,7 @@ function lines_del_chars_klr_b(cstype,cscount,csid='textarea_rows_content'){
 	otextarea.value = bljg;
 }
 
-function replace_strs_klr_b(csrep1,csrep2,textarea_id='textarea_rows_content',status_id='textarea_status'){
+function replace_strs_klr_b(csrep1,csrep2,textarea_id='textarea_rows_content',status_id='textarea_status',reg_type='gm'){
     //csrep1 被替换
     //csrep2 替换为，当 csrep1 为数组时，csrep2无作用
 	if (csrep1==''){return [false,false];}
@@ -265,17 +265,19 @@ function replace_strs_klr_b(csrep1,csrep2,textarea_id='textarea_rows_content',st
 	var otextarea = document.getElementById(textarea_id);
 	var blstr = otextarea.value;
     var blcount=0;
+    
     if (Array.isArray(csrep1)){
         //形如：[["被替换","替换为"], ["被替换","替换为"]];
         for (let item of csrep1){
             if (item[0]==''){continue;}
-            blcount=blcount+(blstr.match(new RegExp(item[0],'gm')) || []).length;
-            blstr = blstr.replace(new RegExp(item[0],'gm'),item[1]);
+            blcount=blcount+(blstr.match(new RegExp(item[0],reg_type)) || []).length;
+            blstr = blstr.replace(new RegExp(item[0],reg_type),item[1]);
         }
     } else {
-        blcount=blcount+(blstr.match(new RegExp(csrep1,'gm')) || []).length;    
-	    blstr = blstr.replace(new RegExp(csrep1,'gm'),csrep2);
+        blcount=blcount+(blstr.match(new RegExp(csrep1,reg_type)) || []).length;    
+	    blstr = blstr.replace(new RegExp(csrep1,reg_type),csrep2);
     }
+    
 	otextarea.value = blstr;
     
     var ostatus=document.getElementById(status_id);
