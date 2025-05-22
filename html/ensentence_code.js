@@ -20,7 +20,7 @@ function init_ensentence(){
     ];
     input_size_b(input_list,'id');
     input_with_x_b('input_search',11,'',false,'input_reg',true);
-    
+    enwords_recent_search_b('','sentence');
     var data_files=[
     ['en_sentence_global','enwords_sentence'],
     ['en_sentence_count_global','enwords_count_sentence'],
@@ -93,6 +93,7 @@ function menu_ensentence(){
     var group_list=[
     ['⚪ reg','klmenu_check_b(this.id,true);',true,'span_reg_ensentence'],
     ['⚪ show button','klmenu_check_b(this.id,true);',true,'span_button_show_ensentence'],
+    ['⚪ 显示例句详细出处','klmenu_check_b(this.id,true);',true,'span_source_en_b'],
     ];    
     klmenu_config.push(menu_container_b(str_t,group_list,''));
     
@@ -114,7 +115,7 @@ function menu_ensentence(){
     '<a href="'+location.origin+'/wiki/index.php/%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9" onclick="'+str_t+'" target=_blank>KLWiki最近更改</a>',        
     ];
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🗨','24rem','1rem','1rem','60rem')+klmenu_b(klmenu_fill,'✏','29rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','15rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🗨','24rem','1rem','1rem','60rem')+klmenu_b(klmenu_fill,'✏','29rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','23rem','1rem','1rem','60rem'),'','0rem')+' ');
 
     klmenu_check_b('span_reg_ensentence',true);
     klmenu_check_b('span_remove_full_exam_ensentence',true);
@@ -811,7 +812,7 @@ function search_sentences(csstr=false){
         csstr=oinput.value.trim();
     }
     oinput.value=csstr;
-    
+    enwords_recent_search_b(csstr,'sentence');
     var show_button=klmenu_check_b('span_button_show_ensentence',false);
     sentence_search_value_get_b(csstr,false,show_button);
 }

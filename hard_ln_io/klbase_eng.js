@@ -2221,16 +2221,26 @@ function enwords_recent_search_b(csword='',cstype=''){
     }
     //-----------------------
     var logo_list=['🥚','✏','🚧','〘 〙','🚩'];
-    if (cstype=='mini'){
-        var recent_search_str='<p id="p_recent_search" style="line-height:'+(ismobile_b()?'200':'210')+'%;">';
-        return recent_search_str+sub_enwords_recent_search_b_fn('enwords_mini_search_b')+'</p>';
-    } else {
-        var odiv=document.getElementById('div_recent_search');
-        if (odiv){
-            odiv.innerHTML=sub_enwords_recent_search_b_fn('wordsearch_enwords_b');    
-            mouseover_mouseout_oblong_span_b(odiv.querySelectorAll('span.oblong_box'));
-        }
-        return '';
+    switch (cstype){
+        case 'mini':
+            var recent_search_str='<p id="p_recent_search" style="line-height:'+(ismobile_b()?'200':'210')+'%;">';
+            return recent_search_str+sub_enwords_recent_search_b_fn('enwords_mini_search_b')+'</p>';
+            break;
+        case 'sentence':
+            var odiv=document.getElementById('div_recent_search');
+            if (odiv){
+                odiv.innerHTML=sub_enwords_recent_search_b_fn('search_sentences');    
+                mouseover_mouseout_oblong_span_b(odiv.querySelectorAll('span.oblong_box'));
+            }
+            return '';
+            break;
+        default:
+            var odiv=document.getElementById('div_recent_search');
+            if (odiv){
+                odiv.innerHTML=sub_enwords_recent_search_b_fn('wordsearch_enwords_b');    
+                mouseover_mouseout_oblong_span_b(odiv.querySelectorAll('span.oblong_box'));
+            }
+            return '';
     }
 }
 
