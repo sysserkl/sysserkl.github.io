@@ -149,6 +149,7 @@ function menu_klphotos(){
 
     var menu_tools=[
     '<span class="span_menu" onclick="'+str_t+'month_day_line_klphotos();">逐日照片数统计</span>',
+    '<span class="span_menu" onclick="'+str_t+'duplicate_category_check_klphotos();">重复或类似分类名检查</span>',
     '<span class="span_menu" onclick="'+str_t+'timeline_category_klphotos();">Timeline</span>',   
     '<span class="span_menu" onclick="'+str_t+'screen_album_start_klphotos();">屏幕相框</span>',
     '<span class="span_menu" onclick="'+str_t+'export_form_klphotos();">导出数组和标记图片</span>',
@@ -180,6 +181,28 @@ function menu_klphotos(){
     button_more=button_more+'<div class=klmenu><button style=font-size:'+button_size+';" onclick="popup_show_hide_b(\'p_filter\');">Filter</button></div>';
 
     document.getElementById('div_toolbar2').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(button_more,'block','0','0.2rem 0rem 0rem 0rem'));
+}
+
+function duplicate_category_check_klphotos(){
+    var category_set=new Set();
+    var result_t=new Set();
+    for (let item of photo_source_global){
+        if (!Array.isArray(item)){continue;}
+        if (category_set.has(item[0])){
+            result_t.add(item[0]);
+        } else {
+            var name_list=item[0].match(/^(.*)\d+$/) || [];
+            if (name_list.length==2){
+                if (category_set.has(name_list[1])){
+                    result_t.add(item[0]);
+                }
+            }
+        }
+        
+        category_set.add(item[0]);
+    }
+    
+    alert(Array.from(result_t));
 }
 
 function month_album_klphotos(month_t){
