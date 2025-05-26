@@ -1271,14 +1271,43 @@ function check_data_zjedu(){
 }
 
 function export_csv_zjedu(){
+    var col_dict={'学校名称':1,'专业名称':3,'计划数':4,'分数线':5,'位次':6};
+    var blths=Object.keys(col_dict);
+    var blselected_cols=prompt('选择输出的列（默认'+blths+'）：',blths);
+    if (blselected_cols==null){return;}
+    blselected_cols=blselected_cols.trim();
+    if (blselected_cols==''){
+        blselected_cols=blths;
+    } else {
+        blselected_cols=blselected_cols.split(',');
+    }
+    
+    var col_no_list=[];
+    var blhead_list=[];
+    for (let item of blselected_cols){
+        item=item.trim();
+        if (col_dict[item]==undefined){continue;}
+        
+        col_no_list.push(col_dict[item]);
+        blhead_list.push('"'+item+'"');
+    }
+    
     var result_t=[];
     for (let item of jgarray_zjc_global){
-        result_t.push('"'+specialstr_j(item[1])+'","'+specialstr_j(item[3])+'",'+item[4]+','+item[5]+','+item[6]+'');
+        var arow=[];
+        for (let acol of col_no_list){
+            if ([1,3].includes(acol)){
+                arow.push('"'+specialstr_j(item[acol])+'"');
+            } else {
+                arow.push(item[acol]);
+            }
+        }
+        result_t.push(arow.join(','));
     }
 
     if (result_t.length==0){return;}
 
-    var blhead='"学校名称","专业名称","计划数","分数线","位次"\n';        
+    var blhead=blhead_list.join(',')+'\n';
     string_2_txt_file_b(blhead+result_t.join('\n'),'zj_edu_export_'+now_time_str_b('-',true)+'.csv','csv');
 }
 
@@ -1350,6 +1379,21 @@ function menu_zjedu(){
     klmenu_check_b('span_reg_zjedu',true);        
 }
 
+function args_zjedu(){
+    var cskeys=href_split_b(location.href);
+    if (cskeys.length>0 && cskeys[0]!==''){
+        for (let one_key of cskeys){
+            one_key=one_key.trim();
+            if (one_key.substring(0,2)=='s='){
+                run_txtsearch_zjedu(one_key.substring(2,));
+                break;
+            }
+        }
+    } else {
+        run_txtsearch_zjedu();
+    }
+}
+
 function init_zjedu(){
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.4rem'));
     recent_search_zjedu();
@@ -1365,7 +1409,7 @@ function init_zjedu(){
     mark_rank_list_zjedu();
     td_right_html_zjedu();
     document.getElementById('span_array_count').innerHTML='<i>('+zj_university_global.length+'条)</i>';
-    run_txtsearch_zjedu();
+    args_zjedu();
 }
 
 function current_names_zjedu(col_no,simplify=false,show_html=true){
