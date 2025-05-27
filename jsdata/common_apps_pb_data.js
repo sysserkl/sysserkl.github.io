@@ -79,6 +79,7 @@ var common_apps_pb_global=[
 ["{{selenium_news}}/html/screen_test.htm","Screen Test","screen_test512.png","2"],
 ["{{selenium_news}}/html/selenium_enwords.htm","selenium enwords","🐿","5","ENG"],
 ["{{selenium_news}}/html/society_data_analyze.htm","Society Data Analyze","society_data_analyze512.png","5","database"],
+["{{selenium_news}}/html/sort_demo.htm","sort demo","⬆","5","study"],
 ["{{selenium_news}}/html/sticker_mobile.htm","sticker_mobile","sticker_mobile512.png","2"],
 ["{{selenium_news}}/html/study_canvas.htm","study canvas","study_canvas512.png","5"],
 ["{{selenium_news}}/html/study_flot.htm","study flot","📊","5"],
@@ -98,5 +99,4 @@ var common_apps_pb_global=[
 ["{{selenium_news}}/html/zj_college_search.htm","ZJ College","💯","5","database|education"],
 ["{{selenium_news}}/html/zj_company.htm","ZJ Company","🏭","5","database"],
 ["{{selenium_news}}/module/pdfjs/web/viewer.html","PDF.js","🔖","5","txtbook"],
-
 ];

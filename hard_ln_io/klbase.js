@@ -4804,8 +4804,10 @@ function mark_check_b(measure_caption='',mark_name='',sub_fix=false,mark_list=[]
         markNames=sub_mark_check_b_current();
     }
     
+    var result_t=false;
     if (measure_caption!=='' && mark_list.length>=2){
-        console.log(performance.measure(measure_caption, measure_caption+'_'+mark_list[0]+'_'+sub_fix, measure_caption+'_'+mark_list[mark_list.length-1]+'_'+sub_fix));
+        result_t=performance.measure(measure_caption, measure_caption+'_'+mark_list[0]+'_'+sub_fix, measure_caption+'_'+mark_list[mark_list.length-1]+'_'+sub_fix);
+        console.log(console.log);
         console.log('startTime: 表示该事件在页面加载开始后的 ​​xxxx 毫秒​​时触发。duration:​​ 表示事件的​​持续时间​​，单位为毫秒。');
         
         if (do_clear){
@@ -4820,5 +4822,5 @@ function mark_check_b(measure_caption='',mark_name='',sub_fix=false,mark_list=[]
         }
     }
 
-    return [sub_fix,markNames];
+    return [sub_fix,markNames,result_t];
 }
