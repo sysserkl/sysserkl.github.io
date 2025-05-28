@@ -526,7 +526,7 @@ function data_2_flot_arr_analyze(is_demo=false){
                     }
                     if (unit_list.length==2){
                         document.getElementById('div_flot').style.display='';
-                        flot_two_lines_two_yaxis_b(list_t,'div_flot',unit_list[0],unit_list[1],document.getElementById('select_flot_legend_position_aa').value,(bltype=='two lines date'),document.getElementById('select_flot_date_type_aa').value);
+                        flot_two_lines_two_yaxis_b(list_t,'div_flot',unit_list[0],unit_list[1],document.getElementById('select_flot_legend_position_aa').value,(bltype=='two lines date'),document.getElementById('select_flot_date_type_aa').value,parseInt(document.getElementById('input_flot_y1_fraction_length').value),parseInt(document.getElementById('input_flot_y2_fraction_length').value));
                     }
                     break;                
             }
@@ -586,7 +586,7 @@ function code_lines_read_arr_analyze(){
 
 function flot_lines_show_arr_analyze(cslist,istime=false){
     document.getElementById('div_flot').style.display='';
-    flot_lines_b(cslist,'div_flot',document.getElementById('select_flot_legend_position_aa').value,istime,'',document.getElementById('select_flot_date_type_aa').value,document.getElementById('input_flot_y1unit_aa').value);
+    flot_lines_b(cslist,'div_flot',document.getElementById('select_flot_legend_position_aa').value,istime,'',document.getElementById('select_flot_date_type_aa').value,document.getElementById('input_flot_y1unit_aa').value,parseInt(document.getElementById('input_flot_y1_fraction_length').value));
 }
 
 function menu_arr_analyze(){
@@ -766,6 +766,9 @@ function init_arr_analyze(){
     ['input_flot_legend_caption_aa',11,0.95],
     ['input_flot_y1unit_aa',3,0.95],
     ['input_fraction_length',3,0.5],
+    ['input_flot_y1_fraction_length',3,0.5],
+    ['input_flot_y2_fraction_length',3,0.5],
+
     ];
     input_size_b(input_list,'id');
     

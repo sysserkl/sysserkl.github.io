@@ -1172,14 +1172,25 @@ function websites_in_en_popup_box_b(){
     }
     if (odiv.querySelector('div.div_websites_in_en_popup_box')){return;}
     
+    odiv.insertAdjacentHTML('beforeend','<div class="div_websites_in_en_popup_box">'+translator_sites_b().join(' ')+'</div>');
+}
+
+function translator_sites_b(){
     var list_t=[
-    ['https://cn.bing.com/translator/','BT'],
-    ['https://qianwen.aliyun.com/','通义'],
+    ['https://cn.bing.com/translator/','Bing'],
+    ['https://www.deepl.com/en/translator','DeepL'],
+    ['https://www.reverso.net/text-translation','Reverso'],
+    ['https://translate.yandex.com/','yandex'],
+    ['https://fanyi.baidu.com/mtpe-individual/multimodal','百度'],
+    ['https://fanyi.youdao.com/#/TextTranslate','有道'],
+    ['https://qianwen.aliyun.com/','通义'],    
     ];
+    
     for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         list_t[blxl]='<a href="'+list_t[blxl][0]+'" target=_blank>'+list_t[blxl][1]+'</a>';
     }
-    odiv.insertAdjacentHTML('beforeend','<div class="div_websites_in_en_popup_box">'+list_t.join(' ')+'</div>');
+
+    return list_t;
 }
 
 function sentence_popup_b(csword,ospan=false,no_start=0){

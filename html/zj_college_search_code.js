@@ -1308,7 +1308,30 @@ function export_csv_zjedu(){
     if (result_t.length==0){return;}
 
     var blhead=blhead_list.join(',')+'\n';
-    string_2_txt_file_b(blhead+result_t.join('\n'),'zj_edu_export_'+now_time_str_b('-',true)+'.csv','csv');
+    string_2_txt_file_b(blhead+result_t.join('\n'),'zj_edu_export_'+zj_current_year_global+'_'+now_time_str_b('-',true)+'.csv','csv');
+}
+
+function batch_links_zjedu(){
+    function sub_batch_links_zjedu_one(){
+        if (blxl>=bllen){
+            document.title=old_title;
+            return;
+        }
+        
+        window.open('?'+year_list[blxl]+'&s='+blkey);
+        blxl=blxl+1;
+        setTimeout(sub_batch_links_zjedu_one,2500);
+    }
+    
+    var year_list=Array.from(year_selected_zjedu());
+    if (year_list.length==0){return;}
+    
+    var blkey=document.getElementById('input_search').value;
+    if (!confirm('是否批量打开'+year_list+'的搜索链接？')){return;}
+    var blxl=0;
+    var bllen=year_list.length;
+    var old_title=document.title;
+    sub_batch_links_zjedu_one();
 }
 
 function menu_zjedu(){
@@ -1343,7 +1366,9 @@ function menu_zjedu(){
     ];    
     klmenu1.push(menu_container_b(str_t,group_list,''));    
     
-    var klmenu_year=[];
+    var klmenu_year=[
+    '<span class="span_menu" onclick="'+str_t+'batch_links_zjedu();">跨年批量搜索</span>',      
+    ];
     for (let item=zj_year_range_global[0];item<=zj_year_range_global[1];item++){
         klmenu_year.push('<a href="?'+item+'">'+item+'年</a>');
     }
@@ -1375,7 +1400,7 @@ function menu_zjedu(){
     ];    
     klmenu_config.push(menu_container_b(str_t,group_list,'跳转到：'));    
 
-    document.getElementById('span_h2').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_year,'💯','6rem','1rem','1rem','60rem')+klmenu_b(klmenu1,'','24rem','1rem','1rem','60rem')+klmenu_b(klmenu_statistics,'🧮','25rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','15rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_h2').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_year,'💯','9rem','1rem','1rem','60rem')+klmenu_b(klmenu1,'','24rem','1rem','1rem','60rem')+klmenu_b(klmenu_statistics,'🧮','25rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','15rem','1rem','1rem','60rem'),'','0rem')+' ');
     klmenu_check_b('span_reg_zjedu',true);        
 }
 
