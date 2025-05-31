@@ -137,7 +137,7 @@ function batch_open_sites_klsearch(cscategory){
 function batch_type_get_klsearch(cstype){
     switch (cstype){
         case 'batch_en':
-            var cstype='dict.cn,youdao,iciba,merriam-webster,wr_cn,TFD,longman,wordnik,AHD,dictionary.com,learnersdictionary,lexico';
+            var cstype='dict.cn,youdao,iciba,merriam-webster,dictionary.com,wr_cn,TFD,longman,wordnik,AHD,learnersdictionary,lexico';
             //(is_local_b()?'KLWiki,':'') +'collins(p),wiktionary(p),' - 此两项保留 - 保留注释
             break;
         case 'batch_en+':
