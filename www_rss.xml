@@ -8,330 +8,188 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Sat, 31 May 2025 21:43:32 +0800</lastBuildDate>
-<item><title>Behemoth Golden Dome may face lackluster scrutiny in Trump’s Pentagon - Defense News</title><link>https://www.defensenews.com/pentagon/2025/05/30/behemoth-golden-dome-may-face-lackluster-scrutiny-in-trumps-pentagon/</link></item>
-<item><title>‘Imminent’ threat? Hegseth escalates tone on China in key Asia speech - Defense News</title><link>https://www.defensenews.com/pentagon/2025/05/31/imminent-threat-hegseth-escalates-tone-on-china-in-key-asia-speech/</link></item>
-<item><title>Meta and Anduril work on mixed reality devices for the US military - Defense News</title><link>https://www.defensenews.com/pentagon/2025/05/30/meta-and-anduril-work-on-mixed-reality-devices-for-the-us-military/</link></item>
-<item><title>Israel claims drone interceptions with high-power lasers - Defense News</title><link>https://www.defensenews.com/global/mideast-africa/2025/05/30/israel-claims-drone-interceptions-with-high-power-lasers/</link></item>
-<item><title>Julie Bort, TechCrunch.com - Defense News</title><link>https://www.defensenews.com/author/julie-bort</link></item>
-<item><title>Data-driven story on the first vaccine - FlowingData</title><link>https://flowingdata.com/2025/05/30/data-driven-story-on-the-first-vaccine/</link></item>
-<item><title>clear benefits - FlowingData</title><link>https://flowingdata.com/2015/02/19/impact-of-vaccines-throughout-history/</link></item>
-<item><title>U.S. Turns Against Floating Offshore Wind Turbines - IEEE Spectrum</title><link>https://spectrum.ieee.org/volturnus-floating-offshore-wind-turbine</link></item>
-<item><title>Atlas Robot Explores Its World! - IEEE Spectrum</title><link>https://spectrum.ieee.org/video-friday-atlas-robot-sees-world</link></item>
-<item><title>Face E-Tattoo Tracks Mental Stress - IEEE Spectrum</title><link>https://spectrum.ieee.org/electronic-tattoo</link></item>
-<item><title>How a Harvard Engineer Lost Three Grants in One Day - IEEE Spectrum</title><link>https://spectrum.ieee.org/harvard-funding-cuts</link></item>
-<item><title>Hey, Buddy. Wanna Rent a GPU? - IEEE Spectrum</title><link>https://spectrum.ieee.org/gpu-prices</link></item>
-<item><title>Hyundai’s Metaplant Seeks Hard-Working Robots - IEEE Spectrum</title><link>https://spectrum.ieee.org/hyundai-metaplant-georgia</link></item>
-<item><title>IEEE Awardee’s Tech Prevents Chemotherapy-Induced Nerve Damage - IEEE Spectrum</title><link>https://spectrum.ieee.org/cooling-tech-nerve-damage</link></item>
-<item><title>Record Number of Members Visit U.S. Congress to Talk Tech Policy - IEEE Spectrum</title><link>https://spectrum.ieee.org/ieee-congressional-visits-day-2025</link></item>
-<item><title>A Simple Solution to Wind Turbine Bird Deaths? - IEEE Spectrum</title><link>https://spectrum.ieee.org/bird-deaths-from-wind-turbines</link></item>
-<item><title>A Helium Giant Floats Over SF Bay - IEEE Spectrum</title><link>https://spectrum.ieee.org/lta-research-airship-pathfinder-1</link></item>
-<item><title>Hugging Face Introduces Two Open-Source Robot Designs - Slashdot</title><link>https://hardware.slashdot.org/story/25/05/31/015237/hugging-face-introduces-two-open-source-robot-designs</link></item>
-<item><title>Five-Year Study Suggests Chimpanzees Strike Stones Against Trees As Form of Communication - Slashdot</title><link>https://science.slashdot.org/story/25/05/31/010235/five-year-study-suggests-chimpanzees-strike-stones-against-trees-as-form-of-communication</link></item>
-<item><title>AI Could Consume More Power Than Bitcoin By the End of 2025 - Slashdot</title><link>https://hardware.slashdot.org/story/25/05/31/0049238/ai-could-consume-more-power-than-bitcoin-by-the-end-of-2025</link></item>
-<item><title>Football and Other Premium TV Being Pirated At &amp;#39;Industrial Scale&amp;#39; - Slashdot</title><link>https://yro.slashdot.org/story/25/05/31/0029226/football-and-other-premium-tv-being-pirated-at-industrial-scale</link></item>
-<item><title>Billions of Cookies Up For Grabs As Experts Warn Over Session Security - Slashdot</title><link>https://it.slashdot.org/story/25/05/31/0020249/billions-of-cookies-up-for-grabs-as-experts-warn-over-session-security</link></item>
-<item><title>Meta and Anduril Work On Mixed Reality Headsets For the Military - Slashdot</title><link>https://tech.slashdot.org/story/25/05/31/0015201/meta-and-anduril-work-on-mixed-reality-headsets-for-the-military</link></item>
-<item><title>controversial departure - Slashdot</title><link>https://hardware.slashdot.org/story/17/03/31/204229/oculus-co-founder-and-rift-creator-palmer-luckey-leaves-facebook</link></item>
-<item><title>US Sanctions Cloud Provider &amp;#39;Funnull&amp;#39; As Top Source of &amp;#39;Pig Butchering&amp;#39; Scams - Slashdot</title><link>https://yro.slashdot.org/story/25/05/30/2151248/us-sanctions-cloud-provider-funnull-as-top-source-of-pig-butchering-scams</link></item>
-<item><title>Instagram Isn&amp;#39;t Just For Square Photos Anymore - Slashdot</title><link>https://tech.slashdot.org/story/25/05/30/2146239/instagram-isnt-just-for-square-photos-anymore</link></item>
-<item><title>Microsoft Tests Notepad Text Formatting In Windows 11 - Slashdot</title><link>https://tech.slashdot.org/story/25/05/30/2138237/microsoft-tests-notepad-text-formatting-in-windows-11</link></item>
-<item><title>Developer Builds Tool That Scrapes YouTube Comments, Uses AI To Predict Where Users Live - Slashdot</title><link>https://yro.slashdot.org/story/25/05/30/2133227/developer-builds-tool-that-scrapes-youtube-comments-uses-ai-to-predict-where-users-live</link></item>
-<item><title>Amazon Purges Billions of Product Listings in Cost-Cutting Drive - Slashdot</title><link>https://slashdot.org/story/25/05/30/1954240/amazon-purges-billions-of-product-listings-in-cost-cutting-drive</link></item>
-<item><title>United Chief Dismisses Budget Airline Model as &amp;#39;Dead&amp;#39; and &amp;#39;Crappy&amp;#39; - Slashdot</title><link>https://slashdot.org/story/25/05/30/1946239/united-chief-dismisses-budget-airline-model-as-dead-and-crappy</link></item>
-<item><title>Automattic Says It Will Start Contributing To WordPress Again After Pause - Slashdot</title><link>https://it.slashdot.org/story/25/05/30/1918217/automattic-says-it-will-start-contributing-to-wordpress-again-after-pause</link></item>
-<item><title>ISPs Ask Justice Department To Sue States Over Low-Income Broadband Mandates After Court Losses - Slashdot</title><link>https://tech.slashdot.org/story/25/05/30/1854205/isps-ask-justice-department-to-sue-states-over-low-income-broadband-mandates-after-court-losses</link></item>
-<item><title>refused to hear - Slashdot</title><link>https://yro.slashdot.org/story/24/12/17/1918225/big-loss-for-isps-as-supreme-court-wont-hear-challenge-to-15-broadband-law</link></item>
-<item><title>New York&amp;#39;s affordability mandate in December 2024 - Slashdot</title><link>https://tech.slashdot.org/story/24/08/15/1944226/isps-ask-supreme-court-to-kill-new-york-law-that-requires-15-broadband-plans</link></item>
-<item><title>The Hottest New Vibe Coding Startup May Be a Sitting Duck For Hackers - Slashdot</title><link>https://it.slashdot.org/story/25/05/30/1810246/the-hottest-new-vibe-coding-startup-may-be-a-sitting-duck-for-hackers</link></item>
-<item><title>French MPs Vote To Scrap Low-Emission Zones - Slashdot</title><link>https://yro.slashdot.org/story/25/05/30/0410208/french-mps-vote-to-scrap-low-emission-zones?sbsrc=md</link></item>
-<item><title>macOS 26 May Not Support 2018 MacBook Pros, 2019 iMacs, or the iMac Pro - Slashdot</title><link>https://apple.slashdot.org/story/25/05/29/1528238/macos-26-may-not-support-2018-macbook-pros-2019-imacs-or-the-imac-pro?sbsrc=md</link></item>
-<item><title>So much for effective communication, eh? - Slashdot</title><link>https://slashdot.org/comments.pl?sid=25/05/30/1448240&amp;cid=65416613&amp;sbsrc=topcom</link></item>
-<item><title>Gmail&amp;#39;s AI Summaries Now Appear Automatically - Slashdot</title><link>https://slashdot.org/article.pl?sid=25/05/30/1448240&amp;sbsrc=topcom</link></item>
-<item><title>Re:Productive compute - Slashdot</title><link>https://slashdot.org/comments.pl?sid=25/05/31/0049238&amp;cid=65418315&amp;sbsrc=topcom</link></item>
-<item><title>Re:So much for effective communication, eh? - Slashdot</title><link>https://slashdot.org/comments.pl?sid=25/05/30/1448240&amp;cid=65416693&amp;sbsrc=topcom</link></item>
-<item><title>Like the saying goes - Slashdot</title><link>https://slashdot.org/comments.pl?sid=25/05/30/1643248&amp;cid=65416849&amp;sbsrc=topcom</link></item>
-<item><title>MAHA Report Found To Contain Citations To Nonexistent Studies - Slashdot</title><link>https://slashdot.org/article.pl?sid=25/05/30/1643248&amp;sbsrc=topcom</link></item>
-<item><title>Mysterious leaker GangExposed outs Conti kingpins in massive ransomware data dump - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/31/gangexposed_coni_ransomware_leaks/</link></item>
-<item><title>Aussie businesses now have to fess up when they pay off ransomware crims - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/31/australian_ransomware_reporting/</link></item>
-<item><title>American science put on starvation diet - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/30/american_science_put_on_starvation/</link></item>
-<item><title>Tesla FSD ignores school bus lights and hits &amp;#39;child&amp;#39; dummy in staged demo - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/30/selfdriving_tesla_accident/</link></item>
-<item><title>Nvidia scores its first DOE win since 2022 with Doudna supercomputer - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/30/nvidia_doe_supercomputer/</link></item>
-<item><title>Perplexity offers training wheels for building AI agents - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/30/perplexity_labs_ai_agent/</link></item>
-<item><title>ConnectWise customers get mysterious warning about &amp;#39;sophisticated&amp;#39; nation-state hack - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/30/connectwise_compromised_by_sophisticated_government/</link></item>
-<item><title>Feds arrest DoD techie, claim he dumped top secret files in park for foreign spies to find - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/30/feds_nab_dod_techie_dumping/</link></item>
-<item><title>US medical org pays $50M+ to settle case after crims raided data and threatened to swat cancer patients - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/30/fred_hutch_cancer_center_commits/</link></item>
-<item><title>Meta – yep, Facebook Meta – is now a defense contractor - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/30/meta_is_now_a_defense/</link></item>
-<item><title>Tariff woes equal US smartphone price hikes, shrinking sales - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/30/tariff_troubles_to_cause_cut/</link></item>
-<item><title>Barclays Bank signs 100k license Copilot deal with Microsoft - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/30/barclays_bank_sign_100k_license/</link></item>
-<item><title>Dell has $14BN AI server backlog, warns projects are &amp;#39;nonlinear&amp;#39; - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/30/dell_results/</link></item>
-<item><title>UK&amp;#39;s answer to Darpa invests £23.3M in touchy-feely robots - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/30/uks_darpa_invests_233_million/</link></item>
-<item><title>Crims defeat human intelligence with fake AI installers they poison with ransomware - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/30/fake_ai_installers_carry_ransomware/</link></item>
-<item><title>Data watchdog put cops on naughty step for lost CCTV footage - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/30/uk_data_watchdog_found_police/</link></item>
-<item><title>The UK wants you to sign up for £1B cyber defense force - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/30/uk_cyber_defense/</link></item>
-<item><title>Techie fixed a ‘brown monitor’ by closing a door for a doctor - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/30/on_call/</link></item>
-<item><title>The House of Zen joins the co-packaged optics race with Enosemi buy - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/30/amd_enosemi_ai/</link></item>
-<item><title>Astroboffins analyzed old data and found a candidate dwarf planet in the Oort cloud - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/05/30/2017_of201_dwarf_planet_discovery/</link></item>
-<item><title>DeepSeek 创始人梁文锋：颠覆AI世界的技术狂人，正威胁美国在 AI 竞赛中的主导地位 - 宝玉的分享</title><link>https://baoyu.io/translations/deepseek-races-after-chatgpt-as-china-s-ai-industry-soars</link></item>
-<item><title>AI 会加速工程师的无能 - 宝玉的分享</title><link>https://baoyu.io/translations/accelerated-incompetence</link></item>
-<item><title>一次又一次的「开发者要被取代了」的炒作潮 - 宝玉的分享</title><link>https://baoyu.io/translations/the-recurring-cycle-of-developer-replacement-hype</link></item>
-<item><title>AI 不会杀死初级开发者——但你的招聘策略可能会 - 宝玉的分享</title><link>https://baoyu.io/translations/ai-wont-kill-junior-devs-but-your</link></item>
-<item><title>如何构建你的AI智能体：让AI更出色的11种提示技巧 - 宝玉的分享</title><link>https://baoyu.io/translations/how-to-build-your-agent-11-prompting-techniques-for-better-ai-agents</link></item>
-<item><title>使用最新的 Claude 4，我用两天就开发出一个视频编辑器，但却无法维护 - 宝玉的分享</title><link>https://baoyu.io/blog/claude-4-video-editor-development-maintenance</link></item>
-<item><title>MacIntyre the Mentor - Law &amp; Liberty</title><link>https://lawliberty.org/macintyre-the-mentor/</link></item>
-<item><title>The Danger of AI’s Soft Landing - Law &amp; Liberty</title><link>https://lawliberty.org/forum/the-danger-of-ais-soft-landing/</link></item>
-<item><title>#171 – Felix Arntz on How Speculative Loading Is Speeding Up Your WordPress Website - WP Tavern</title><link>https://wptavern.com/podcast/171-felix-arntz-on-how-speculative-loading-is-speeding-up-your-wordpress-website</link></item>
-<item><title>#170 – Chris Reynolds on WordPress and Drupal: Differences and Similarities - WP Tavern</title><link>https://wptavern.com/podcast/170-chris-reynolds-on-wordpress-and-drupal-differences-and-similarities</link></item>
-<item><title>#169 – Wes Tatters on the Evolution of Internet Communities and WordPress Open Source - WP Tavern</title><link>https://wptavern.com/podcast/169-wes-tatters-on-the-evolution-of-internet-communities-and-wordpress-open-source</link></item>
-<item><title>#168 – Hari Shanker on Understanding and Showing WordPress Contributions - WP Tavern</title><link>https://wptavern.com/podcast/168-hari-shanker-on-understanding-and-showing-wordpress-contributions</link></item>
-<item><title>印度严重的空气污染无意中起到了降温作用 - Solidot</title><link>https://www.solidot.org/story?sid=81437</link></item>
-<item><title>白宫的健康报告被发现部分内容是大模型生成的 - Solidot</title><link>https://www.solidot.org/story?sid=81436</link></item>
-<item><title>美国禁止向中国出售半导体设计软件 - Solidot</title><link>https://www.solidot.org/story?sid=81435</link></item>
-<item><title>Stack Overflow 将测试付费给专家回答问题 - Solidot</title><link>https://www.solidot.org/story?sid=81434</link></item>
-<item><title>SEC 撤销对币安的诉讼 - Solidot</title><link>https://www.solidot.org/story?sid=81433</link></item>
-<item><title>全球气温到 2029 年可能首次升温超 2℃ - Solidot</title><link>https://www.solidot.org/story?sid=81432</link></item>
-<item><title>研究人员认为大模型既不会思考也不会推理 - Solidot</title><link>https://www.solidot.org/story?sid=81431</link></item>
-<item><title>4 Android apps (and 1 website) I use to explore urban destinations like a local - Android Police</title><link>https://www.androidpolice.com/android-apps-i-use-to-explore-urban-destinations-like-a-local/</link></item>
-<item><title>Phone by Google - Android Police</title><link>https://www.androidpolice.com/phone-by-google/</link></item>
-<item><title>Google Phone app is getting a visual makeover with Android 16&amp;#39;s Material 3 Expressive - Android Police</title><link>https://www.androidpolice.com/google-phone-app-is-getting-a-visula-makeover/</link></item>
-<item><title>Wear OS 6 is supercharging the always-on display with media controls and more - Android Police</title><link>https://www.androidpolice.com/wear-os-6-is-supercharging-the-always-on-display-with-media-controls-and-more/</link></item>
-<item><title>Offline Maps - Android Police</title><link>https://www.androidpolice.com/tag/offline-maps/</link></item>
-<item><title>7 essential Android apps that help me navigate without data on trips - Android Police</title><link>https://www.androidpolice.com/best-offline-map-apps/</link></item>
-<item><title>Microsoft finally brings easy file sharing to Android - Android Police</title><link>https://www.androidpolice.com/microsoft-anonymous-file-sharing/</link></item>
-<item><title>So long and farewell from the Android Police Podcast [Video] - Android Police</title><link>https://www.androidpolice.com/video/so-long-and-farewell-android-police-podcast/</link></item>
-<item><title>Google&amp;#39;s really going AI Mode now [Video] - Android Police</title><link>https://www.androidpolice.com/video/google-s-really-going-ai-mode-now-android-police-podcast/</link></item>
-<item><title>AI-made movies are yours with Gemini Ultra [Video] - Android Police</title><link>https://www.androidpolice.com/video/ai-made-movies-are-yours-with-gemini-ultra-android-police-podcast/</link></item>
-<item><title>I can&amp;#39;t escape this fake Temu tablet ad on Instagram - Android Police</title><link>https://www.androidpolice.com/thread/i-cant-escape-this-fake-temu-tablet-ad-on-instagram/</link></item>
-<item><title>Have you used AI in Google Maps? - Android Police</title><link>https://www.androidpolice.com/thread/have-you-used-ai-in-google-maps/</link></item>
-<item><title>We want to see your home screen! - Android Police</title><link>https://www.androidpolice.com/thread/we-want-to-see-your-home-screen/</link></item>
-<item><title>You can now see who is using RCS in your Google Messages contact list - Android Police</title><link>https://www.androidpolice.com/thread/you-can-now-see-who-is-using-rcs-in-your-google-messages-contact-list/</link></item>
-<item><title>Can you believe Google Photos is ten years old? - Android Police</title><link>https://www.androidpolice.com/thread/can-you-believe-google-photos-is-ten-years-old/</link></item>
-<item><title>Which is your favorite offline app? - Android Police</title><link>https://www.androidpolice.com/thread/which-is-your-favorite-offline-app/</link></item>
-<item><title>The OnePlus 13 is brilliant phone that&amp;#39;s flying completely under the radar - Android Police</title><link>https://www.androidpolice.com/oneplus-13-best-value/</link></item>
-<item><title>Why the Google Pixel 8 Pro is the smartest Pixel purchase right now - Android Police</title><link>https://www.androidpolice.com/google-pixel-8-pro-in-2025/</link></item>
-<item><title>I don&amp;#39;t recommend the Samsung Galaxy S25 Edge, but it serves a purpose - Android Police</title><link>https://www.androidpolice.com/samsung-galaxy-s25-edge-dont-buy/</link></item>
-<item><title>Why I&amp;#39;m skipping the Galaxy S25 Edge for the more practical S25+ - Android Police</title><link>https://www.androidpolice.com/why-skipping-galaxy-s25-edge-more-practical-s25/</link></item>
-<item><title>6 offline Android apps I use to stay productive when there&amp;#39;s no Wi-Fi - Android Police</title><link>https://www.androidpolice.com/offline-android-productivity-apps-i-use-daily/</link></item>
-<item><title>The Samsung Galaxy S25+ is free with this AT&amp;T trade-in deal - Android Police</title><link>https://www.androidpolice.com/samsung-galaxy-s25-plus-att-deal/</link></item>
-<item><title>Forget Google Keep, OneNote and Evernote, 5 reasons NotebookLM is the future of note-taking - Android Police</title><link>https://www.androidpolice.com/reasons-notebooklm-is-future-of-note-taking/</link></item>
-<item><title>I ranked phone makers by software support and the results were surprising - Android Police</title><link>https://www.androidpolice.com/every-phone-maker-ranked-by-software-support/</link></item>
-<item><title>Samsung’s rumored trifold phone could save big foldables - Android Police</title><link>https://www.androidpolice.com/samsung-trifold-makes-sense/</link></item>
-<item><title>6 smart TV features that can actually improve your sleep - Android Police</title><link>https://www.androidpolice.com/smart-tv-ways-to-improve-sleep-patterns/</link></item>
-<item><title>How to see blocked numbers on Android - Android Police</title><link>https://www.androidpolice.com/android-see-blocked-phone-numbers/</link></item>
-<item><title>The Pixel Weather app&amp;#39;s new floating card fits right in with your screen - Android Police</title><link>https://www.androidpolice.com/the-pixel-weather-apps-new-floating-card-fits-right-in-with-your-screen/</link></item>
-<item><title>9 little-known Android features that can save you in a travel emergency - Android Police</title><link>https://www.androidpolice.com/android-travel-emergency-features/</link></item>
-<item><title>How to back up your old Android text messages - Android Police</title><link>https://www.androidpolice.com/back-up-android-text-sms-messages/</link></item>
-<item><title>I said the Samsung Galaxy S24 FE is best on a deal, and here’s an excellent one - Android Police</title><link>https://www.androidpolice.com/samsung-galaxy-s24-fe-metro-discount/</link></item>
-<item><title>This ultra-compact projector with Google TV just reached its lowest price ever - Android Police</title><link>https://www.androidpolice.com/nebula-capsule-3-380-may-deal/</link></item>
-<item><title>Save big on a Samsung Galaxy S25 Ultra with this Verizon deal - Android Police</title><link>https://www.androidpolice.com/samsung-galaxy-s25-ultra-verizon-deal/</link></item>
-<item><title>Time to grab this top Garmin Forerunner smartwatch for less as it drops to an all-time low - Android Police</title><link>https://www.androidpolice.com/garmin-forerunner-965-500-may-end-deal/</link></item>
-<item><title>Veo 3 drops its hefty $250/month price tag as Google expands access - Android Police</title><link>https://www.androidpolice.com/google-veo-3-rolls-out-to-gemini-pro-users/</link></item>
-<item><title>Samsung&amp;#39;s Galaxy S25 Edge is now officially available - Android Police</title><link>https://www.androidpolice.com/galaxy-s25-now-officially-available/</link></item>
-<item><title>Google&amp;#39;s Pixel 10 could break onto the scene much sooner than anticipated - Android Police</title><link>https://www.androidpolice.com/google-pixel-10-launch-sooner-june-superfans-event/</link></item>
-<item><title>Wear OS users get some relief as Google Wallet&amp;#39;s PIN problem is solved - Android Police</title><link>https://www.androidpolice.com/wear-os-pinpassword-problem-google-wallet/</link></item>
-<item><title>Samsung could kill one Galaxy tablet for 2025 and bring another back from the dead - Android Police</title><link>https://www.androidpolice.com/galaxy-tab-s-2025-lineup-adjustments/</link></item>
-<item><title>Android 16&amp;#39;s big security feature surprises with early arrival on latest beta - Android Police</title><link>https://www.androidpolice.com/android-protection-mode-rolling-out-in-qpr1-beta-1/</link></item>
-<item><title>This deal knocks the Arlo Video Doorbell 2K down to $60, its best price ever - Android Police</title><link>https://www.androidpolice.com/this-deal-knocks-the-arlo-video-doorbell-2k-down-to-60-its-best-price-ever/</link></item>
-<item><title>The Kindle Colorsoft takes too many shortcuts that diminish its quality as an e-reader - Android Police</title><link>https://www.androidpolice.com/kindle-colorsoft-review/</link></item>
-<item><title>Acer’s Chromebook Plus Spin 714 (2024) is a fantastic option for the right buyer - Android Police</title><link>https://www.androidpolice.com/acer-chromebook-spin-714-2024-review/</link></item>
-<item><title>The Redmagic 10 Air proves gaming phones can be smaller - Android Police</title><link>https://www.androidpolice.com/redmagic-10-air-review/</link></item>
-<item><title>I love getting a Google Pixel 9 for under $600 on this deal - Android Police</title><link>https://www.androidpolice.com/google-pixel-9-mint-deal/</link></item>
-<item><title>The Motorola Razr 2025 is a no-brainer for only $150 - Android Police</title><link>https://www.androidpolice.com/motorola-razr-2025-visible-deal/</link></item>
-<item><title>Game like never before with this 8BitDo controller that&amp;#39;s nearly half price - Android Police</title><link>https://www.androidpolice.com/8bitdo-ultimate-controller-27-may-deal/</link></item>
-<item><title>RCS ad spam worsens across all platforms and could be here to stay - Android Police</title><link>https://www.androidpolice.com/rcs-messaging-ad-spam-increase-android-ios/</link></item>
-<item><title>Your phone&amp;#39;s Quick Replies and Smart Actions could get a whole lot more helpful with Android 16 - Android Police</title><link>https://www.androidpolice.com/android-16-magic-actions-with-gemini/</link></item>
-<item><title>Walmart&amp;#39;s high-end Google TV box has started showing up in Canada - Android Police</title><link>https://www.androidpolice.com/walmart-google-tv-box-canada-availability/</link></item>
-<item><title>Nacon enters the direct drive sim racing game - and hands-on impressions are positive - Eurogamer</title><link>https://www.eurogamer.net/digitalfoundry-2025-nacon-enters-the-direct-drive-sim-racing-game-and-hands-on-impressions-are-positive</link></item>
-<item><title>CD Projekt Red tried to redesign Geralt&amp;#39;s face once, and it backfired horribly - Eurogamer</title><link>https://www.eurogamer.net/cd-projekt-red-tried-to-redesign-geralts-face-once-and-it-backfired-horribly</link></item>
-<item><title>What worked in The Witcher 3 and what didn&amp;#39;t: looking back on a landmark RPG with CD Projekt Red - Eurogamer</title><link>https://www.eurogamer.net/what-worked-in-the-witcher-3-and-what-didnt-looking-back-on-a-landmark-rpg-with-cd-projekt-red</link></item>
-<item><title>What we&amp;#39;ve been playing - co-op adventures and unfolding ideas - Eurogamer</title><link>https://www.eurogamer.net/what-weve-been-playing-co-op-adventures-and-unfolding-ideas</link></item>
-<item><title>Hideo Kojima&amp;#39;s upcoming Death Stranding 2 panel and gameplay event will be streamed online - Eurogamer</title><link>https://www.eurogamer.net/hideo-kojimas-upcoming-death-stranding-2-panel-and-gameplay-showcase-will-be-streamed-online</link></item>
-<item><title>Elden Ring Nightreign is getting another patch next week to improve solo play - Eurogamer</title><link>https://www.eurogamer.net/elden-ring-nightreign-is-getting-another-patch-next-week-to-improve-solo-play</link></item>
-<item><title>Atomfall receives first story expansion next week, here&amp;#39;s a look at gameplay - Eurogamer</title><link>https://www.eurogamer.net/atomfall-receives-first-story-expansion-next-week-heres-a-look-at-gameplay</link></item>
-<item><title>Yooka-Laylee studio Playtonic confirms layoffs - Eurogamer</title><link>https://www.eurogamer.net/yooka-laylee-studio-playtonic-confirms-layoffs</link></item>
-<item><title>PSA: You&amp;#39;ve only got a few hours left to log into MultiVersus if you want to play offline once it closes - Eurogamer</title><link>https://www.eurogamer.net/psa-youve-only-got-a-few-hours-to-log-into-multiversus-if-you-want-to-play-offline-once-it-closes</link></item>
-<item><title>The Witcher 3: Wild Hunt nearly had a very different name - Eurogamer</title><link>https://www.eurogamer.net/the-witcher-3-wild-hunt-nearly-had-very-different-name</link></item>
-<item><title>Here&amp;#39;re this week&amp;#39;s free Epic Games Store games - Eurogamer</title><link>https://www.eurogamer.net/herere-this-weeks-free-epic-games-store-games</link></item>
-<item><title>Silent Hill 2 PS5 Pro patch still on the way, says Bloober - Eurogamer</title><link>https://www.eurogamer.net/silent-hill-2-ps5-pro-patch-still-on-the-way-says-bloober</link></item>
-<item><title>Microsoft&amp;#39;s Xbox handheld reportedly &amp;quot;sidelined&amp;quot; as it focuses on third-party portable devices - Eurogamer</title><link>https://www.eurogamer.net/microsofts-xbox-handheld-reportedly-sidelined-as-it-focuses-on-third-party-portable-devices</link></item>
-<item><title>Elden Ring Nightreign gets strong start on Steam, despite Mixed reaction - Eurogamer</title><link>https://www.eurogamer.net/elden-ring-nightreign-gets-strong-start-on-steam-reaching-over-300k-concurrent-peak</link></item>
-<item><title>Should you play Elden Ring Nightreign solo? - Eurogamer</title><link>https://www.eurogamer.net/should-you-play-elden-ring-nightreign-solo</link></item>
-<item><title>Despite Black Panther cancellation, EA confirms it still has &amp;quot;at least three&amp;quot; Marvel games in the works - Eurogamer</title><link>https://www.eurogamer.net/despite-black-panther-cancellation-ea-still-has-at-least-three-marvel-games-in-the-works</link></item>
-<item><title>PowerWash Simulator goes underground, overground in final free content update - Eurogamer</title><link>https://www.eurogamer.net/powerwash-simulator-goes-underground-overground-in-final-free-content-update</link></item>
-<item><title>Nvidia&amp;#39;s RTX 2080 Ti revisited in 2025: seven years old - and it&amp;#39;s still delivering - Eurogamer</title><link>https://www.eurogamer.net/digitalfoundry-2025-nvidias-rtx-2080-ti-revisited-in-2025-seven-years-old-and-it-still-delivers</link></item>
-<item><title>GAME cancels some Switch 2 online pre-orders a week before launch - Eurogamer</title><link>https://www.eurogamer.net/game-cancels-some-switch-2-online-pre-orders-a-week-before-launch</link></item>
-<item><title>Subnautica is bringing its acclaimed underwater survival to mobile soon - Eurogamer</title><link>https://www.eurogamer.net/subnautica-is-bringing-its-acclaimed-underwater-survival-to-mobile-soon</link></item>
-<item><title>Elden Ring Nightreign gets balance adjustments in day one patch - Eurogamer</title><link>https://www.eurogamer.net/elden-ring-nightreign-gets-balance-adjustments-in-day-one-patch</link></item>
-<item><title>&amp;quot;Official&amp;quot; Russian Military game depicting invasion of Ukraine released on Steam as Yunarmy propaganda - Eurogamer</title><link>https://www.eurogamer.net/official-russian-military-game-depicting-invasion-of-ukraine-released-on-steam-as-yunarmy-propaganda</link></item>
-<item><title>My main challenge with To a T was trying to work out what To a T actually is - Eurogamer</title><link>https://www.eurogamer.net/my-main-challenge-with-to-a-t-was-trying-to-work-out-what-to-a-t-actually-is</link></item>
-<item><title>Nintendo updates mobile app ahead of Switch 2 launch, adding GameChat and screenshot upload - Eurogamer</title><link>https://www.eurogamer.net/nintendo-updates-mobile-app-ahead-of-switch-2-launch-adding-gamechat-and-screenshot-upload</link></item>
-<item><title>Movement abilities will always be the best abilities in games - Eurogamer</title><link>https://www.eurogamer.net/movement-abilities-will-always-be-the-best-abilities-in-games</link></item>
-<item><title>There&amp;#39;s a Teenage Mutant Ninja Turtles game coming to Meta Quest 3 and SteamVR - Eurogamer</title><link>https://www.eurogamer.net/theres-a-teenage-mutant-ninja-turtles-game-coming-to-meta-quest-3-and-steamvr</link></item>
-<item><title>Cyberpunk 2077 sequel gets a new name as pre-production phase now officially underway - Eurogamer</title><link>https://www.eurogamer.net/cyberpunk-2077-sequel-gets-a-new-name-as-pre-production-phase-now-officially-underway</link></item>
-<item><title>EA&amp;#39;s Black Panther game reportedly cancelled and studio closed, resulting in more layoffs - Eurogamer</title><link>https://www.eurogamer.net/eas-black-panther-game-reportedly-cancelled-and-studio-closed-resulting-in-more-layoffs</link></item>
-<item><title>Hideo Kojima casually reveals a Death Stranding anime is in the works - Eurogamer</title><link>https://www.eurogamer.net/hideo-kojima-casually-reveals-a-death-stranding-anime-is-in-the-works</link></item>
-<item><title>Persona 4 voice actor confirms a remake is in development, after not being cast - Eurogamer</title><link>https://www.eurogamer.net/persona-4-voice-actor-confirms-a-remake-is-in-development-after-not-being-cast</link></item>
-<item><title>Elden Ring Nightreign review - Eurogamer</title><link>https://www.eurogamer.net/elden-ring-nightreign-review</link></item>
-<item><title>Roll7&amp;#39;s skating games OlliOlli World and Rollerdrome return to Steam - Eurogamer</title><link>https://www.eurogamer.net/roll7s-skating-games-olliolli-world-and-rollerdrome-return-to-steam</link></item>
-<item><title>Pokémon Legends: Z-A release date announced, Switch 2 edition will have &amp;quot;improved graphics and frame rates&amp;quot; - Eurogamer</title><link>https://www.eurogamer.net/pokemon-legends-z-a-release-date-announced</link></item>
-<item><title>MindsEye boss claims game&amp;#39;s negative reaction ahead of release has been paid for in &amp;quot;concerted effort&amp;quot; against studio - Eurogamer</title><link>https://www.eurogamer.net/mindseye-boss-claims-games-negative-reaction-ahead-of-release-has-been-paid-for-in-concerted-effort-against-studio</link></item>
-<item><title>30 and thriving: How Housemarque has kept the spirit of arcade alive, and what it means to be part of PlayStation Studios - Eurogamer</title><link>https://www.eurogamer.net/30-and-thriving-how-housemarque-has-kept-the-spirit-of-arcade-alive-and-what-it-means-to-be-part-of-playstation-studios</link></item>
-<item><title>Clair Obscur: Expedition 33 reaches a fitting sales milestone - Eurogamer</title><link>https://www.eurogamer.net/clair-obscur-expedition-33-reaches-a-fitting-sales-milestone</link></item>
-<item><title>Mario Kart World reverse mode spotted for the first time - Eurogamer</title><link>https://www.eurogamer.net/mario-kart-world-reverse-mode-spotted-for-the-first-time</link></item>
-<item><title>Switch 2 will bring new features to NSO&amp;#39;s Nintendo 64 catalogue, including the ability to rewind gameplay - Eurogamer</title><link>https://www.eurogamer.net/switch-2-will-bring-new-features-to-nsos-nintendo-64-catalogue-including-the-ability-to-rewind-gameplay</link></item>
-<item><title>Switch 2 reportedly already out in the wild, but needs a day one update to function - Eurogamer</title><link>https://www.eurogamer.net/switch-2-reportedly-already-out-in-the-wild-but-needs-a-day-one-update-to-function</link></item>
-<item><title>More claims of Apple dedicated iOS gaming app surface as company acquires first game studio - Eurogamer</title><link>https://www.eurogamer.net/more-claims-of-apple-dedicated-ios-gaming-app-surface-as-company-acquires-first-game-studio</link></item>
-<item><title>After parting ways with EA, WRC gets new home and six-year deal to &amp;quot;reboot&amp;quot; rally series - Eurogamer</title><link>https://www.eurogamer.net/after-parting-ways-with-ea-wrc-gets-new-home-and-six-year-deal-to-reboot-rally-series</link></item>
-<item><title>Cities: Skylines 2&amp;#39;s first big expansion delayed yet again as studio seeks to &amp;quot;add more depth&amp;quot; - Eurogamer</title><link>https://www.eurogamer.net/cities-skylines-2-dlc-delayed-yet-again-as-studio-seeks-to-add-more-depth</link></item>
-<item><title>Here are our PS Plus games for June - Eurogamer</title><link>https://www.eurogamer.net/here-are-your-playstation-plus-monthly-games-for-june</link></item>
-<item><title>When it comes to the Elden Ring movie, I hope Alex Garland writes from memory - Eurogamer</title><link>https://www.eurogamer.net/when-it-comes-to-the-elden-ring-movie-i-hope-alex-garland-writes-from-memory</link></item>
-<item><title>Dragon Quest 1 + 2 HD-2D Remake coming to Switch 2, but physical version is just a download key - Eurogamer</title><link>https://www.eurogamer.net/dragon-quest-1-2-hd-2d-remake-coming-to-switch-2-but-physical-version-is-just-a-download-key</link></item>
-<item><title>The Last of Us season two finale audience significantly lower than first season&amp;#39;s, but HBO insists it will &amp;quot;grow significantly&amp;quot; - Eurogamer</title><link>https://www.eurogamer.net/the-last-of-us-season-two-finale-audience-significantly-lower-than-first-seasons-but-hbo-insists-it-will-grow-significantly</link></item>
-<item><title>Balatro&amp;#39;s PlayStation Platinum trophy has only been obtained by 0.1% of players, and Mark Cerny is one of them - Eurogamer</title><link>https://www.eurogamer.net/balatros-playstation-platinum-trophy-has-only-been-obtained-by-01-of-players-and-mark-cerny-is-one-of-them</link></item>
-<item><title>Hellblade 2 physical edition reportedly coming to PS5, Xbox Series X - Eurogamer</title><link>https://www.eurogamer.net/hellblade-2-physical-edition-reportedly-coming-to-ps5-xbox-series-x</link></item>
-<item><title>This death was &amp;quot;one too many&amp;quot; for The Last of Us season two - Eurogamer</title><link>https://www.eurogamer.net/this-death-was-one-too-many-for-the-last-of-us-season-two</link></item>
-<item><title>CDPR releases 37 minutes of Cyberpunk 2077 Switch 2 video - so what have we learned? - Eurogamer</title><link>https://www.eurogamer.net/digitalfoundry-2025-df-weekly-cd-projekt-red-drops-37-minutes-of-cyberpunk-2077-video-so-what-have-we-learned</link></item>
-<item><title>The Last of Us showrunners discuss where season three will go - Eurogamer</title><link>https://www.eurogamer.net/the-last-of-us-showrunners-discuss-where-season-three-will-go</link></item>
-<item><title>Pokémon Go fans chasing Galar birds will soon get to pay for a guaranteed encounter - Eurogamer</title><link>https://www.eurogamer.net/pokemon-go-fans-chasing-galar-birds-will-soon-get-to-pay-for-a-guaranteed-encounter</link></item>
-<item><title>The Last of Us season two wraps with episode seven, but was it a satisfying finale? - Eurogamer</title><link>https://www.eurogamer.net/the-last-of-us-season-two-wraps-with-episode-seven-but-was-it-a-satisfying-finale</link></item>
-<item><title>Nvidia GeForce RTX 5060 review: better than console performance - but not enough VRAM - Eurogamer</title><link>https://www.eurogamer.net/digitalfoundry-2025-nvidia-geforce-rtx-5060-review</link></item>
-<item><title>Developer reveals Switch 2 will support USB mouse inputs - Eurogamer</title><link>https://www.eurogamer.net/developer-reveals-switch-2-will-support-usb-mouse-inputs</link></item>
-<item><title>Fantasy Life i: The Girl Who Steals Time hits 500,000 sales in three days - Eurogamer</title><link>https://www.eurogamer.net/fantasy-life-i-the-girl-who-steals-time-hits-500000-sales-in-three-days</link></item>
-<item><title>Zenless Zone Zero Season 2, Where Clouds Embrace The Dawn, launches next month - Eurogamer</title><link>https://www.eurogamer.net/zenless-zone-zero-season-2-where-clouds-embrace-the-dawn-launches-next-month</link></item>
-<item><title>NetherRealm ends Mortal Kombat 1 support as focus shifts to &amp;quot;the next project&amp;quot; - Eurogamer</title><link>https://www.eurogamer.net/netherrealm-ends-mortal-kombat-1-support-as-focus-shifts-to-the-next-project</link></item>
-<item><title>What we&amp;#39;ve been playing - New York, Poker, and frustration - Eurogamer</title><link>https://www.eurogamer.net/what-weve-been-playing-new-york-poker-and-frustration</link></item>
-<item><title>Fantasy Life i studio announces free DLC as the &amp;quot;slow-life RPG&amp;quot; sequel gets off to a flying start - Eurogamer</title><link>https://www.eurogamer.net/fantasy-life-i-studio-announces-free-dlc-as-the-slow-life-rpg-sequel-gets-off-to-a-flying-start</link></item>
-<item><title>Here&amp;#39;s what happened to Peter Molyneux&amp;#39;s Kinect game Project Milo - Eurogamer</title><link>https://www.eurogamer.net/heres-what-happened-to-peter-molyneuxs-kinect-game-project-milo</link></item>
-<item><title>Nintendo Switch Online gets four more Game Boy classics - Eurogamer</title><link>https://www.eurogamer.net/nintendo-switch-online-gets-four-more-game-boy-classics</link></item>
-<item><title>Elden Ring Nightreign could receive two player mode post-launch - Eurogamer</title><link>https://www.eurogamer.net/elden-ring-nightreign-could-receive-two-player-mode-post-launch</link></item>
-<item><title>Switch 2&amp;#39;s GameChat feature requires a mobile phone number - Eurogamer</title><link>https://www.eurogamer.net/switch-2s-gamechat-feature-requires-a-mobile-phone-number</link></item>
-<item><title>Metal Gear Solid Delta: Snake Eater has revised iconic Bond-theme opening - Eurogamer</title><link>https://www.eurogamer.net/metal-gear-solid-delta-snake-eater-has-revised-iconic-bond-theme-opening-removing-kojima</link></item>
-<item><title>Elden Ring live-action film officially in development - Eurogamer</title><link>https://www.eurogamer.net/elden-ring-live-action-film-officially-in-development</link></item>
-<item><title>FTC finally drops appeal against Microsoft&amp;#39;s acquisition of Activision Blizzard - Eurogamer</title><link>https://www.eurogamer.net/ftc-finally-drops-appeal-against-microsofts-acquisition-of-activision-blizzard</link></item>
-<item><title>Here&amp;#39;re this week&amp;#39;s free Epic Store games - Eurogamer</title><link>https://www.eurogamer.net/herere-this-weeks-free-epic-store-games</link></item>
-<item><title>Warhammer 40K unveils Boltgun 2, tactical RPG Dark Heresy, and, yes, a free typing game - Eurogamer</title><link>https://www.eurogamer.net/warhammer-40k-unveils-boltgun-sequel-tactical-rpg-dark-heresy-and-a-free-typing-game</link></item>
-<item><title>Warhammer 40K: Dawn of War, Space Marine 1 spruce-ups coming this year - Eurogamer</title><link>https://www.eurogamer.net/warhammer-40k-dawn-of-war-and-space-marine-1-spruce-ups-are-coming-this-year</link></item>
-<item><title>The Witcher 3: Wild Hunt is getting special 10th anniversary Xbox controllers - Eurogamer</title><link>https://www.eurogamer.net/the-witcher-3-wild-hunt-is-getting-special-10th-anniversary-xbox-controllers</link></item>
-<item><title>Monster Hunter Wilds x Street Fighter 6 collaboration announced - Eurogamer</title><link>https://www.eurogamer.net/monster-hunter-wilds-x-street-fighter-6-collaboration-announced</link></item>
-<item><title>Video games&amp;#39; soaring prices have a cost beyond your wallet - the concept of ownership itself - Eurogamer</title><link>https://www.eurogamer.net/video-games-soaring-prices-have-a-cost-beyond-your-wallet-the-concept-of-ownership-itself</link></item>
-<item><title>Minecraft&amp;#39;s Jason Momoa and wrestler Roman Reigns tapped for Street Fighter roles - Eurogamer</title><link>https://www.eurogamer.net/minecrafts-jason-momoa-and-wrestler-roman-reigns-tapped-for-street-fighter-roles</link></item>
-<item><title>Bungie management &amp;quot;vehemently shut down&amp;quot; Destiny 2 subscription idea, as reports of toxicity continue - Eurogamer</title><link>https://www.eurogamer.net/bungie-management-vehemently-shut-down-destiny-2-subscription-idea-as-reports-of-toxicity-continue</link></item>
-<item><title>Embracer plans to release &amp;quot;76 different games&amp;quot; in the next year, despite previous layoffs and studio closures - Eurogamer</title><link>https://www.eurogamer.net/embracer-plans-to-release-76-different-games-in-the-next-year-despite-previous-layoffs-and-studio-closures</link></item>
-<item><title>Borderlands 4&amp;#39;s Randy Pitchford seeks to justify $80 &amp;quot;real fans&amp;quot; comment - Eurogamer</title><link>https://www.eurogamer.net/borderlands-4s-randy-pitchford-seeks-to-justify-80-real-fans-comment</link></item>
-<item><title>Lies of P to receive difficulty options in free update alongside Overture DLC - Eurogamer</title><link>https://www.eurogamer.net/lies-of-p-to-receive-difficulty-options-in-free-update-alongside-overture-dlc</link></item>
-<item><title>Here&amp;#39;re the games leaving PlayStation Plus Extra and Premium in June - Eurogamer</title><link>https://www.eurogamer.net/here-are-the-games-leaving-playstation-plus-extra-and-premium-in-june</link></item>
-<item><title>Looks like Ubisoft is giving Rayman an &amp;quot;AAA&amp;quot; revival after last year&amp;#39;s &amp;quot;exploration phase&amp;quot; - Eurogamer</title><link>https://www.eurogamer.net/looks-like-ubisoft-is-giving-rayman-an-aaa-revival-after-last-years-exploration-phase</link></item>
-<item><title>Sony ending its PlayStation Stars loyalty programme ahead of future evolution - Eurogamer</title><link>https://www.eurogamer.net/sony-ending-its-playstation-stars-loyalty-programme-ahead-of-future-evolution</link></item>
-<item><title>Super Mario creator Shigeru Miyamoto explains Donkey Kong&amp;#39;s recent makeover - Eurogamer</title><link>https://www.eurogamer.net/super-mario-creator-shigeru-miyamoto-explains-donkey-kongs-recent-makeover</link></item>
-<item><title>Mario Kart World was first developed for the original Switch, but 60fps only possible on Switch 2 - Eurogamer</title><link>https://www.eurogamer.net/mario-kart-world-was-first-developed-for-the-original-switch-but-60fps-only-possible-on-switch-2</link></item>
-<item><title>Here&amp;#39;s your second batch of Xbox Game Pass titles for May - Eurogamer</title><link>https://www.eurogamer.net/heres-your-second-batch-of-xbox-game-pass-titles-for-may</link></item>
-<item><title>Senua&amp;#39;s Saga: Hellblade 2 coming to PS5 in Enhanced Edition - Eurogamer</title><link>https://www.eurogamer.net/senuas-saga-hellblade-2-coming-to-ps5-in-enhanced-edition</link></item>
-<item><title>Michael Bay Skibidi Toilet adaptation officially in production - Eurogamer</title><link>https://www.eurogamer.net/michael-bay-skibidi-toilet-adaptation-officially-in-production</link></item>
-<item><title>Xbox mobile game store launch &amp;quot;stymied&amp;quot; by Apple, says Microsoft - Eurogamer</title><link>https://www.eurogamer.net/xbox-mobile-game-store-launch-stymied-by-apple-says-microsoft</link></item>
-<item><title>Creating Doom: The Dark Ages - ray tracing, load times and optimisation in id Tech 8 - Eurogamer</title><link>https://www.eurogamer.net/digitalfoundry-2025-creating-doom-the-dark-ages-how-id-tech-8-took-shape</link></item>
-<item><title>The frightfully British Atomfall was &amp;quot;immediately profitable&amp;quot; and sequel plans are already in discussion - Eurogamer</title><link>https://www.eurogamer.net/the-frightfully-british-atomfall-was-immediately-profitable-and-sequel-plans-are-already-in-discussion</link></item>
-<item><title>Geralt actor celebrates Witcher 4 protagonist Ciri, following &amp;quot;woke&amp;quot; criticism - Eurogamer</title><link>https://www.eurogamer.net/geralt-actor-celebrates-witcher-4-protagonist-ciri-following-woke-criticism</link></item>
-<item><title>Fortnite finally back on Apple devices in US and Europe - Eurogamer</title><link>https://www.eurogamer.net/fortnite-finally-back-on-apple-devices-in-us-and-europe</link></item>
-<item><title>Doom: The Dark Ages &amp;quot;biggest launch&amp;quot; in id Software history - Eurogamer</title><link>https://www.eurogamer.net/doom-the-dark-ages-biggest-launch-in-id-software-history</link></item>
-<item><title>Stellar Blade 2 is official and seemingly not too far away - Eurogamer</title><link>https://www.eurogamer.net/stellar-blade-2-is-official-and-seemingly-not-too-far-away</link></item>
-<item><title>Cyberpunk 2077 sequel features second city that&amp;#39;s like &amp;quot;Chicago gone wrong&amp;quot;, says series creator - Eurogamer</title><link>https://www.eurogamer.net/cyberpunk-2077-sequel-will-feature-second-city-thats-like-chicago-gone-wrong-says-series-creator</link></item>
-<item><title>Avowed game director departs Obsidian, joins Netflix&amp;#39;s gaming team - Eurogamer</title><link>https://www.eurogamer.net/avowed-game-director-carrie-patel-departs-obsidian-joins-netflixs-gaming-team</link></item>
-<item><title>$80 for Borderlands 4 too costly? Randy Pitchford says, &amp;quot;If you&amp;#39;re a real fan, you&amp;#39;ll find a way to make it happen&amp;quot; - Eurogamer</title><link>https://www.eurogamer.net/80-for-borderlands-4-too-costly-randy-pitchford-says-if-youre-a-real-fan-youll-find-a-way-to-make-it-happen</link></item>
-<item><title>Immortality and Thank Goodness You&amp;#39;re Here first releases from Lost in Cult&amp;#39;s new premium physical games label - Eurogamer</title><link>https://www.eurogamer.net/immortality-and-thank-goodness-youre-here-first-releases-from-lost-in-cults-new-premium-physical-games-label</link></item>
-<item><title>Microsoft acknowledges it supplied AI technology to Israel&amp;#39;s Ministry of Defense, but claims &amp;quot;no evidence&amp;quot; it&amp;#39;s been used to &amp;quot;target or harm people in the conflict in Gaza&amp;quot; - Eurogamer</title><link>https://www.eurogamer.net/microsoft-acknowledges-it-supplied-ai-technology-to-israels-ministry-of-defense-but-no-evidence-its-been-used-to-target-or-harm-people-in-the-conflict-in-gaza</link></item>
-<item><title>Blades of Fire review - Eurogamer</title><link>https://www.eurogamer.net/blades-of-fire-review</link></item>
-<item><title>Clash of Clans latest video game to get the Netflix animated treatment - Eurogamer</title><link>https://www.eurogamer.net/clash-of-clans-latest-video-game-to-get-the-netflix-animated-treatment</link></item>
-<item><title>south park S14/南方公园S14/S14.bd.subs (2) - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667178.xml</link></item>
-<item><title>大内密探零零发/Forbidden.City.Cop.1996.1080p.BluRay.DD.5.1.2Audio.x264-HDS - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667177.xml</link></item>
-<item><title>白莲花度假村 第三季/The.White.Lotus.S03.1080p.AMZN.WEB-DL - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667175.xml</link></item>
-<item><title>破·地狱/The.Last.Dance.2024.1080p.BluRay - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667176.xml</link></item>
-<item><title>20 Days in Mariupol/马里乌波尔的20天/20 Days in Mariupol/战场日记/战场日记/马里乌波尔战火二十日/20.Days.In.Mariupol.2023.1080p.WEBRip.x265.10bit.AAC - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667173.xml</link></item>
-<item><title>/The.Boston.Strangler.1968.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667174.xml</link></item>
-<item><title>The Other Side Of Midnight (1977) [1080p] [BluRay] [YTS.MX] - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667172.xml</link></item>
-<item><title>Looking For Mr. Goodbar (1977) [1080p] [BluRay] [YTS.MX] - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667171.xml</link></item>
-<item><title>留級之王 3：新生 Van Wilder 3：Freshman Year 2009-UNRATED.DVDRiP.cht - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667170.xml</link></item>
-<item><title>灰羽联盟/Haibane Renmei - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667169.xml</link></item>
-<item><title>基督山伯爵.2024/基督山伯爵 - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667168.xml</link></item>
-<item><title>全职猎人1999/Hunter x Hunter 1999 - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667167.xml</link></item>
-<item><title>[完][2018.10][Uchi no Maid ga Uzasugiru][うちのメイドがウザすぎる][我家的女僕有夠煩][01_12+13OVA][250529]/[完][2018.10][Uchi no Maid ga Uzasugiru][我家的女僕有夠煩][01.12+13OVA][250529] - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667166.xml</link></item>
-<item><title>[全季度] 刀剑神域 两季字幕/Sword Art Online I+II [含EE+SP]/ [全季度] 刀剑神域 两季字幕/Sword Art Online I+II [含EE+SP]/刀剑神域全部字幕 - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667165.xml</link></item>
-<item><title>/The.Rawhide.Years.1956.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667164.xml</link></item>
-<item><title>The Mississippi Gambler (1953) [1080p] [BluRay] [YTS.MX] - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667163.xml</link></item>
-<item><title>/Take.Me.Out.to.the.Ball.Game.1949.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667162.xml</link></item>
-<item><title>/Show.Boat.1951.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667161.xml</link></item>
-<item><title>/Show.Boat.1936.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667160.xml</link></item>
-<item><title>Pepe (1960) [1080p] [BluRay] [YTS.MX] - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667159.xml</link></item>
-<item><title>/My.Gal.Sal.1942.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667158.xml</link></item>
-<item><title>/Million.Dollar.Mermaid.1952.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667157.xml</link></item>
-<item><title>Gentleman Jim (1942) [1080p] [BluRay] [YTS.MX] - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667156.xml</link></item>
-<item><title>/Annie.Get.Your.Gun.1950.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667155.xml</link></item>
-<item><title>mer? Create account Cast &amp; crew User reviews Trivia FAQ IMDbPro  Il paese del sesso selvaggio/来自深河的男人/The Man from the Deep River/Umberto Lenzi&amp;#39;s Man From The Deep River [1972](x264 SD - AAC Stereo) - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667154.xml</link></item>
-<item><title>美国小子/Lucas.1986.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667153.xml</link></item>
-<item><title>少女离家/方舞归途/Square Dance (1987) (DVD)[TGx] - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667152.xml</link></item>
-<item><title>The Life List/生命清單/The.Life.List.2025.1080p.WEBRip.x265.10bit.AAC5.1-[YTS.MX].cht - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667151.xml</link></item>
-<item><title>入侵蛇头堡 / 寻金风暴/Trespass.1992.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667150.xml</link></item>
-<item><title>/Year.of.the.Comet.1992.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667147.xml</link></item>
-<item><title>/Trespass.1992.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667149.xml</link></item>
-<item><title>/The.Secret.of.the.Sword.1985.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667148.xml</link></item>
-<item><title>/The.Prophecy.1995.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667146.xml</link></item>
-<item><title>/The.Meteor.Man.1993.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667141.xml</link></item>
-<item><title>/The.Favor.1994.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667142.xml</link></item>
-<item><title>/The.Bride.1985.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667145.xml</link></item>
-<item><title>The Razor&amp;#39;s Edge (1984).1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667144.xml</link></item>
-<item><title>/Straight.Talk.1992.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667140.xml</link></item>
-<item><title>/Old.Gringo.1989.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667143.xml</link></item>
-<item><title>/Messenger.Of.Death.1988.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667137.xml</link></item>
-<item><title>/Malone.1987.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667138.xml</link></item>
-<item><title>/Death.Before.Dishonor.1987.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667134.xml</link></item>
-<item><title>Bugsy (1991) [1080p] [BluRay] [5.1] [YTS.MX] - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667139.xml</link></item>
-<item><title>/Best.of.the.Best.2.1993.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667135.xml</link></item>
-<item><title>/Battletruck.1982.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667136.xml</link></item>
-<item><title>最后生还者/最後生還者/[The Last of Us (2025)][S02E04-E07(季終)][CHT][1080p] - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667133.xml</link></item>
-<item><title>华丽一族[MagicStar] Karei Naru Ichizoku 2007 [WEBDL] [1080p] [U-NEXT] [JPN.ENG.CHT.SUB] - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667130.xml</link></item>
-<item><title>図書館戦争 革命のつばさ/图书馆战争-革命之翼 - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667132.xml</link></item>
-<item><title>六神合体特别篇.十七岁的传说.1988.对应国语字幕.R3.VobSub - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667131.xml</link></item>
-<item><title>六神合体特别篇.十七岁的传说.1988.国日俄三语.台三简繁英俄意 - 射手网(伪)</title><link>http://assrt.net/xml/sub/667/667129.xml</link></item>
-<item><title>Understanding the Linux /usr Merge - OSTechNix</title><link>https://ostechnix.com/understanding-linux-usr-merge/</link></item>
-<item><title>CentOS Stream - OSTechNix</title><link>https://ostechnix.com/category/linux_distributions/centos-stream/</link></item>
-<item><title>10 Types of Wasps: Fierce but Not Always Threatening - HowStuffWorks</title><link>https://animals.howstuffworks.com/insects/types-of-wasps.htm</link></item>
-<item><title>Pteranodon vs. Pterodactyl: Comparing Non-dinosaur Species - HowStuffWorks</title><link>https://animals.howstuffworks.com/dinosaurs/pteranodon-vs-pterodactyl.htm</link></item>
-<item><title>The Brown Tabby Cat Is Super Common but Not an Actual Breed - HowStuffWorks</title><link>https://animals.howstuffworks.com/pets/brown-tabby-cat.htm</link></item>
-<item><title>8 Food Festivals Where You Can Fill Up on a Good Time - HowStuffWorks</title><link>https://recipes.howstuffworks.com/food-festivals.htm</link></item>
-<item><title>6 North Carolina Beaches and Beach Towns - HowStuffWorks</title><link>https://lifestyle.howstuffworks.com/family/activities/north-carolina-beaches.htm</link></item>
-<item><title>Our diverse togetherness - Aeon</title><link>https://aeon.co/essays/inclusive-education-is-a-disservice-to-neurodivergent-pupils?utm_source=rss-feed</link></item>
-<item><title>Switch 2 Leaker Explains How He Got The Console Early And Why He&amp;#39;s Not Afraid Of Nintendo - Kotaku</title><link>https://kotaku.com/switch-2-leak-nintendo-ban-russia-ukraine-day-one-patch-1851782934</link></item>
-<item><title>35 Years Ago Today, Garfield&amp;#39;s Owner Didn&amp;#39;t Drink Dog Semen - Kotaku</title><link>https://kotaku.com/garfield-drink-dog-semen-owner-cum-jim-davis-interview-1851783121</link></item>
-<item><title>Kai Cenat&amp;#39;s Streamer University Turned Chaos Into Content: &amp;#39;The Whole Floor Smelled Like Wild Fumes, Mysterious Funk&amp;#39; - Kotaku</title><link>https://kotaku.com/kai-cenat-streamer-university-tylil-james-twitch-1851783206</link></item>
-<item><title>Two Great Games That Couldn&amp;#39;t Be More Different Are Free Right Now - Kotaku</title><link>https://kotaku.com/wonderlands-tiny-tina-limbo-free-games-epic-mega-sale-1851783204</link></item>
-<item><title>GameStop Doubles Down On Crypto With Massive Bitcoin Purchase As Stores Close - Kotaku</title><link>https://kotaku.com/gamestop-500-million-bitcoin-purchase-stores-close-1851782982</link></item>
-<item><title>Kotaku’s Biggest Gaming Culture News For The Week May 31, 2025 - Kotaku</title><link>https://kotaku.com/kotaku-s-biggest-gaming-culture-news-for-the-week-may-3-1851783132</link></item>
-<item><title>Over 200 PS5 Games Are On Sale Right Now On The PlayStation Store - Kotaku</title><link>https://kotaku.com/ps5-psn-large-2025-sale-days-of-play-astro-bot-forza-1851782766</link></item>
-<item><title>The PS5 Pro Is Currently Cheaper Than A 2TB Xbox Series X - Kotaku</title><link>https://kotaku.com/ps5-pro-sale-discount-cheap-xbox-series-x-2tb-1851782516</link></item>
-<item><title>Kotaku’s Best Game Tips For The Week May 31, 2025 - Kotaku</title><link>https://kotaku.com/kotaku-s-best-game-tips-for-the-week-may-31-2025-1851783133</link></item>
-<item><title>The Multi-Faceted Origins of 12 Birthstone Names - Mental Floss</title><link>https://www.mentalfloss.com/article/94208/multi-faceted-origins-12-birthstone-names</link></item>
-<item><title>Install Linux Kernel 6.15 in Debian 12 Bookworm - FOSTips</title><link>https://fostips.com/install-linux-kernel-6-15-in-debian-12-bookworm/</link></item>
-<item><title>“Safer” Vapes Might Be Worse: Ultrasonic Devices Found Full of Toxic Metals - SciTechDaily</title><link>https://scitechdaily.com/safer-vapes-might-be-worse-ultrasonic-devices-found-full-of-toxic-metals/</link></item>
-<item><title>Weed Could Be Wrecking Your Heart – Study Uncovers Dangers of Smoking and Edibles - SciTechDaily</title><link>https://scitechdaily.com/weed-could-be-wrecking-your-heart-study-uncovers-dangers-of-smoking-and-edibles/</link></item>
-<item><title>“Worrying” – New Research Questions Long-Term Safety of ADHD Medications - SciTechDaily</title><link>https://scitechdaily.com/worrying-new-research-questions-long-term-safety-of-adhd-medications/</link></item>
-<item><title>New Non-Opioid Drug Offers Powerful Pain Relief Without the Dangerous Side Effects - SciTechDaily</title><link>https://scitechdaily.com/new-non-opioid-drug-offers-powerful-pain-relief-without-the-dangerous-side-effects/</link></item>
-<item><title>International Research Team Builds World’s Most Efficient Organic Solar Cell - SciTechDaily</title><link>https://scitechdaily.com/international-research-team-builds-worlds-most-efficient-organic-solar-cell/</link></item>
-<item><title>Blink, Predict, Smash: MIT’s 42 MPH Ping Pong Bot Is Freakishly Fast - SciTechDaily</title><link>https://scitechdaily.com/blink-predict-smash-mits-42-mph-ping-pong-bot-is-freakishly-fast/</link></item>
-<item><title>World-Famous Schöningen Spears Are 100,000 Years Younger Than Scientists Thought - SciTechDaily</title><link>https://scitechdaily.com/world-famous-schoningen-spears-are-100000-years-younger-than-scientists-thought/</link></item>
-<item><title>They Walked? 160-Million-Year-Old Footprints Rewrite Pterosaur History - SciTechDaily</title><link>https://scitechdaily.com/they-walked-160-million-year-old-footprints-rewrite-pterosaur-history/</link></item>
-<item><title>This Galaxy Is a Showstopper – But the Real Twist Is Nearby - SciTechDaily</title><link>https://scitechdaily.com/this-galaxy-is-a-showstopper-but-the-real-twist-is-nearby/</link></item>
-<item><title>Hubble Trouble Solved? Webb Telescope Finally Cracks the Universe’s Growth Mystery - SciTechDaily</title><link>https://scitechdaily.com/hubble-trouble-solved-webb-telescope-finally-cracks-the-universes-growth-mystery/</link></item>
-<item><title>New Study Reveals Just a Few Minutes of Exercise Can Reduce Your Risk of Dementia - SciTechDaily</title><link>https://scitechdaily.com/new-study-reveals-just-a-few-minutes-of-exercise-can-reduce-your-risk-of-dementia/</link></item>
-<item><title>Daily Omega-3s Could Shave Months Off Your Biological Age - SciTechDaily</title><link>https://scitechdaily.com/daily-omega-3s-could-shave-months-off-your-biological-age/</link></item>
-<item><title>Scientists Discover Violation of 1931 Thermodynamic Principle - SciTechDaily</title><link>https://scitechdaily.com/scientists-discover-violation-of-1931-thermodynamic-principle/</link></item>
-<item><title>Turning Waste Into Energy: New Enzyme Revolutionizes Biofuel Production - SciTechDaily</title><link>https://scitechdaily.com/turning-waste-into-energy-new-enzyme-revolutionizes-biofuel-production/</link></item>
-<item><title>New Clues to the Origins of Human Medicine: Chimpanzees Caught Healing Each Other’s Wounds in the Wild - SciTechDaily</title><link>https://scitechdaily.com/new-clues-to-the-origins-of-human-medicine-chimpanzees-caught-healing-each-others-wounds-in-the-wild/</link></item>
-<item><title>“It Was So Weird” – These Monkeys Have Started a Bizarre Kidnapping Fad - SciTechDaily</title><link>https://scitechdaily.com/it-was-so-weird-these-monkeys-have-started-a-bizarre-kidnapping-fad/</link></item>
-<item><title>Study Reveals Secret to Aging Well: It’s in the Carbs You Eat - SciTechDaily</title><link>https://scitechdaily.com/study-reveals-secret-to-aging-well-its-in-the-carbs-you-eat/</link></item>
-<item><title>New Treatment for Aggressive Breast Cancer Achieves Astonishing 100% Survival Rate - SciTechDaily</title><link>https://scitechdaily.com/new-treatment-for-aggressive-breast-cancer-achieves-astonishing-100-survival-rate/</link></item>
-<item><title>The Squid Galaxy’s Black Hole Just Unleashed a Neutrino Storm Without the Light - SciTechDaily</title><link>https://scitechdaily.com/the-squid-galaxys-black-hole-just-unleashed-a-neutrino-storm-without-the-light/</link></item>
-<item><title>This Mysterious “Star” Pulses Every 44 Minutes – And No One Knows Why - SciTechDaily</title><link>https://scitechdaily.com/this-mysterious-star-pulses-every-44-minutes-and-no-one-knows-why/</link></item>
-<item><title>This Common Oral Bacterium Can Invade Your Heart - SciTechDaily</title><link>https://scitechdaily.com/this-common-oral-bacterium-can-invade-your-heart/</link></item>
-<item><title>USC Scientists Unveil 5-in-1 Blood Test for Early Alzheimer’s Detection - SciTechDaily</title><link>https://scitechdaily.com/usc-scientists-unveil-5-in-1-blood-test-for-early-alzheimers-detection/</link></item>
-<item><title>Brain Reset: One Molecular Switch Could Silence Alzheimer’s and Parkinson’s - SciTechDaily</title><link>https://scitechdaily.com/brain-reset-one-molecular-switch-could-silence-alzheimers-and-parkinsons/</link></item>
-<item><title>Water Tornadoes? Flamingos Use This Clever Trick To Trap Prey - SciTechDaily</title><link>https://scitechdaily.com/water-tornadoes-flamingos-use-this-clever-trick-to-trap-prey/</link></item>
+<lastBuildDate>Sun, 01 Jun 2025 09:11:12 +0800</lastBuildDate>
+<item><title>#Optimization - Linux Journal</title><link>https://www.linuxjournal.com/tag/optimization</link></item>
+<item><title>Transform Your Workflow With These 10 Essential Yet Overlooked Linux Tools You Need to Try - Linux Journal</title><link>https://www.linuxjournal.com/content/transform-your-workflow-these-10-essential-yet-overlooked-linux-tools-you-need-try</link></item>
+<item><title>Explore Exciting Linux DIY Projects: Automate Your World with Raspberry Pi and Arduino - Linux Journal</title><link>https://www.linuxjournal.com/content/explore-exciting-linux-diy-projects-automate-your-world-raspberry-pi-and-arduino</link></item>
+<item><title>Fortifying Debian With SELinux by Enforcing Mandatory Access Control for Ultimate System Security - Linux Journal</title><link>https://www.linuxjournal.com/content/fortifying-debian-selinux-enforcing-mandatory-access-control-ultimate-system-security</link></item>
+<item><title>Linux Networking: Mastering VLAN Trunking, Bonding, and QoS for High-Performance Systems - Linux Journal</title><link>https://www.linuxjournal.com/content/linux-networking-mastering-vlan-trunking-bonding-and-qos-high-performance-systems</link></item>
+<item><title>Today’s Hot Deals: SAMSUNG B-Series Soundbar, Corsair HS65 Wireless Multiplatform Gaming Headset, Batman Omnibus, Philips 3200 Series Fully Automatic Espresso Machine, and MORE! - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/05/31/todays-hot-deals-samsung-b-series-soundbar-corsair-hs65-wireless-multiplatform-gaming-headset-batman-omnibus-philips-3200-series-fully-automatic-espresso-machine-and-more/</link></item>
+<item><title>Microsoft Visual Studio Professional 2022 for Windows - Geeks are Sexy</title><link>https://store.geeksaresexy.net/sales/microsoft-visual-studio-professional-2022-for-windows-2</link></item>
+<item><title>Qlango Language Learning: Lifetime Subscription (56 Languages) - Geeks are Sexy</title><link>https://store.geeksaresexy.net/sales/qlango-language-learning-lifetime-subscription-all-languages</link></item>
+<item><title>DNA Crossword [Comic] - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/05/31/dna-crossword-comic/</link></item>
+<item><title>Self-Checkout [Comic] - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/05/31/self-checkout-comic/</link></item>
+<item><title>Deal [Comic] - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/05/31/deal-comic/</link></item>
+<item><title>Stone Garden [Comic] - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/05/31/stone-garden-comic/</link></item>
+<item><title>Table Top RP – Meta Gaming [Comic] - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/05/30/table-top-rp-meta-gaming-comic/</link></item>
+<item><title>The Empire Strikes Back, but With Hugs and Health Insurance [Parody] - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/05/30/the-empire-strikes-back-but-with-hugs-and-health-insurance-parody/</link></item>
+<item><title>Today’s Hot Deals: DJI Mini 4K Drone, Atari Pocket Player Pro, The Handmaid’s Tale and The Testaments Box Set, Super Universal Socket Tool, and MORE! - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/05/30/todays-hot-deals-dji-mini-4k-drone-atari-pocket-player-pro-the-handmaids-tale-and-the-testaments-box-set-super-universal-socket-tool-and-more/</link></item>
+<item><title>The Complete History of Beavis and Butt-Head: Dumb, Loud, and Legendary - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/05/30/the-complete-history-of-beavis-and-butt-head-dumb-loud-and-legendary/</link></item>
+<item><title>Assault on Castle Bouncy [Comic] - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/05/30/assault-on-castle-bouncy-comic/</link></item>
+<item><title>Kylie Jenner &amp; Timothée Chalamet&amp;#39;s Match Courtside for the Knicks&amp;#39;s Big Win - WMagazine</title><link>https://www.wmagazine.com/fashion/kylie-jenner-timothee-chalamet-matching-couple-style-knicks-game</link></item>
+<item><title>Takashi Murakami’s Cleveland Art Museum Show Is a Portal Into Past, Present, and Pop Culture - WMagazine</title><link>https://www.wmagazine.com/culture/takashi-murakami-cleveland-museum-exhibit-shogun-temple-interview</link></item>
+<item><title>Angelina Jolie&amp;#39;s Best Red Carpet Fashion, From 1998 Until Now - WMagazine</title><link>https://www.wmagazine.com/fashion/angelina-jolie-best-red-carpet-style-photos</link></item>
+<item><title>Tyla’s Butter Yellow Party Dress Plunges Past Her Navel - WMagazine</title><link>https://www.wmagazine.com/fashion/tyla-yellow-mini-dress-black-heels-london</link></item>
+<item><title>Dakota Johnson Channels Original Rom-Com Queen Audrey Hepburn - WMagazine</title><link>https://www.wmagazine.com/fashion/dakota-johnson-black-strapless-dress-heels-new-york</link></item>
+<item><title>For Daisy Edgar-Jones, Life Is But a Dream - WMagazine</title><link>https://www.wmagazine.com/fashion/daisy-edgar-jones-gucci-lido-2025</link></item>
+<item><title>Why Sunglasses at Night Are Still the Coolest Bad Idea in Fashion - WMagazine</title><link>https://www.wmagazine.com/fashion/sunglasses-at-night-trend-celebrity-photos</link></item>
+<item><title>The Loewe Foundation Craft Prize Returns to Madrid With an Assist from Pedro Almodóvar - WMagazine</title><link>https://www.wmagazine.com/culture/loewe-craft-prize-2025-madrid-thyssen-bornemisza-museum</link></item>
+<item><title>&amp;#39;And Just Like That...&amp;#39; Season 3, Episode 1 Fashion Recap: Justice for Mr. Burton - WMagazine</title><link>https://www.wmagazine.com/fashion/and-just-like-that-fashion-recap-season-three-episode-one</link></item>
+<item><title>Tribeca Film Festival 2025: The 13 Most Anticipated Film Premieres - WMagazine</title><link>https://www.wmagazine.com/culture/tribeca-festival-2025-lineup-most-anticipated-films</link></item>
+<item><title>Julianne Moore Styles the Same Bottega Veneta Bag in Two Different Ways - WMagazine</title><link>https://www.wmagazine.com/fashion/julianne-moore-bottega-veneta-sweater-skirt-woven-bag</link></item>
+<item><title>Scarlett Johansson Leans Into Wes Anderson Color Theory at &amp;#39;The Phoenician Scheme&amp;#39; Premiere - WMagazine</title><link>https://www.wmagazine.com/fashion/scarlett-johansson-orange-dress-the-phoenician-scheme-premiere</link></item>
+<item><title>Hailey Bieber Looks Like a Billion Bucks in Just a Little Black Dress - WMagazine</title><link>https://www.wmagazine.com/fashion/hailey-bieber-black-mini-dress-heels-los-angeles</link></item>
+<item><title>Sarah Jessica Parker’s Best Red Carpet Looks From the ’80s to Today - WMagazine</title><link>https://www.wmagazine.com/fashion/sarah-jessica-parker-best-red-carpet-moments</link></item>
+<item><title>Kristin Davis’s Best Red Carpet Moments Prove She’s the Real Life Charlotte York - WMagazine</title><link>https://www.wmagazine.com/fashion/kristin-davis-best-red-carpet-fashion-dresses-photos</link></item>
+<item><title>Gigi Hadid Dresses Like a Tropical Jewel Box for Her Flip-Flop Launch - WMagazine</title><link>https://www.wmagazine.com/fashion/gigi-hadid-white-dress-yellow-flip-flops-anklet-new-york</link></item>
+<item><title>At the V&amp;A East Storehouse in London, a Chance to Touch Fashion History - WMagazine</title><link>https://www.wmagazine.com/culture/victoria-and-albert-museum-order-an-object-program-guide</link></item>
+<item><title>Maria Grazia Chiuri&amp;#39;s Best Dior Red Carpet Moments From Jennifer Lawrence to Lady Gaga - WMagazine</title><link>https://www.wmagazine.com/fashion/maria-grazia-chiuri-dior-red-carpet-moments</link></item>
+<item><title>Maria Grazia Chiuri Is Leaving Dior After Nine Years as Artistic Director - WMagazine</title><link>https://www.wmagazine.com/fashion/maria-grazia-chiuri-stepping-down-dior-creative-director</link></item>
+<item><title>The 11 Best Beauty Products of May 2025 - WMagazine</title><link>https://www.wmagazine.com/beauty/best-new-beauty-products-may-2025-skincare-makeup</link></item>
+<item><title>Stephanie Suganami aka Steph Shep Talks Her Beauty Journey on ‘Skin Talk With Laura Love’ - WMagazine</title><link>https://www.wmagazine.com/beauty/stephanie-suganami-steph-shep-skincare-interview-skin-talk-with-laura-love</link></item>
+<item><title>In Mallorca, Louis Vuitton Unveils a High Jewelry Collection to Rival the Spanish Sun - WMagazine</title><link>https://www.wmagazine.com/fashion/louis-vuitton-high-jewelry-show-mallorca-spain-2025</link></item>
+<item><title>Hailey Bieber&amp;#39;s Rhode Sold to E.l.f. for $1 Billion - WMagazine</title><link>https://www.wmagazine.com/culture/hailey-bieber-sells-beauty-brand-rhode</link></item>
+<item><title>Sarah Jessica Parker Brings a Piece of Carrie Bradshaw to the &amp;#39;AJLT&amp;#39; Paris Premiere - WMagazine</title><link>https://www.wmagazine.com/fashion/sarah-jessica-parker-white-dress-hair-bow-and-just-like-that-premiere-paris</link></item>
+<item><title>Miley Cyrus Wears Christina Aguilera’s 2004 VMAs Dress for an Intimate Performance - WMagazine</title><link>https://www.wmagazine.com/fashion/miley-cyrus-vintage-fringe-dress-christina-aguilera-cavalli</link></item>
+<item><title>Alexander Skarsgård On His Cannes Kinky Boots, Working With Charli xcx, &amp; His Joyful Approach to Style - WMagazine</title><link>https://www.wmagazine.com/fashion/alexander-skarsgard-cartier-stockholm-cannes-style-interview</link></item>
+<item><title>Anya Taylor-Joy &amp; Husband Malcolm McRae Do Couple Style to Support Miley Cyrus&amp;#39;s New Album - WMagazine</title><link>https://www.wmagazine.com/fashion/anya-taylor-joy-white-coat-black-flats-miley-cyrus-party</link></item>
+<item><title>Hailey Bieber Flys Solo in a Rock ’n’ Roll Grandpa Outfit - WMagazine</title><link>https://www.wmagazine.com/fashion/hailey-bieber-black-leather-jacket-pants-loafers-los-angeles</link></item>
+<item><title>Dior&amp;#39;s Cruise 2026 Show Was Maria Grazia Chiuri&amp;#39;s Love Letter to Rome - WMagazine</title><link>https://www.wmagazine.com/fashion/dior-cruise-2026-rome-photos-maria-grazia-chiuri</link></item>
+<item><title>Lily-Rose Depp’s Best Red Carpet Looks Prove She Was Born for Fashion - WMagazine</title><link>https://www.wmagazine.com/fashion/lily-rose-depp-best-red-carpet-fashion-style-photos</link></item>
+<item><title>Natalie Portman&amp;#39;s Semi-Sheer Dior Dress Could Double as a Wedding Gown - WMagazine</title><link>https://www.wmagazine.com/fashion/natalie-portman-white-dress-coat-dior-cruise-show-rome</link></item>
+<item><title>Kylie Jenner Wears Plunging Bra &amp; Mini Skirt to Party With Kendall &amp; Hailey - WMagazine</title><link>https://www.wmagazine.com/fashion/kylie-jenner-red-bra-nude-mini-skirt-heels-khy-party-los-angeles</link></item>
+<item><title>Tyla’s Flirty Sheer Romper? It’s Actually 23-Year-Old Chanel - WMagazine</title><link>https://www.wmagazine.com/fashion/tyla-vintage-sheer-chanel-bodysuit-white-heels</link></item>
+<item><title>Dua Lipa Drops Labubu For a Mickey Mouse Belt Charm - WMagazine</title><link>https://www.wmagazine.com/fashion/dua-lipa-black-jeans-belt-charm-trend-f1-grand-prix-monaco</link></item>
+<item><title>41 Bag Charms to Clip On Your Purse When You Can&amp;#39;t Get a Labubu - WMagazine</title><link>https://www.wmagazine.com/fashion/bag-charms-shopping</link></item>
+<item><title>W Editors Share Their Forever Favorite White T-Shirts - WMagazine</title><link>https://www.wmagazine.com/fashion/best-white-t-shirts-editor-picks</link></item>
+<item><title>Why Loro Piana&amp;#39;s Scarf Bag Is The Ultimate Two-for-One - WMagazine</title><link>https://www.wmagazine.com/fashion/loro-piana-scarf-bag-library-of-prints-foulard-handle-backstory</link></item>
+<item><title>Cannes Film Festival 2025 Red Carpet: Every Must-See Look and Fashion Moment - WMagazine</title><link>https://www.wmagazine.com/fashion/cannes-film-festival-2025-red-carpet-dresses-photos</link></item>
+<item><title>Inside Holy Spirit: A Trans Fundraiser With Naomi Watts, Chloë Sevigny, and More - WMagazine</title><link>https://www.wmagazine.com/life/holy-spirit-party-photos-naomi-watts-chloe-sevigny</link></item>
+<item><title>Ms. Tina Knowles Talks &amp;#39;Matriarch,&amp;#39; the Cowboy Carter Tour, &amp; Mothering Beyoncé &amp; Solange Differently - WMagazine</title><link>https://www.wmagazine.com/beauty/tina-knowles-matriarch-book-interview</link></item>
+<item><title>May Horoscope 2025: The 6 Zodiac Signs Ending Self-Doubt With the Gemini New Moon - WMagazine</title><link>https://www.wmagazine.com/life/may-horoscope-2025-gemini-new-moon-virgo-gemini-cancer-libra-taurus-pisces</link></item>
+<item><title>This Season, Have a Little High Jewelry—as a Treat - WMagazine</title><link>https://www.wmagazine.com/fashion/high-jewelry-spring-2025-chris-rhodes-photos</link></item>
+<item><title>Cate Blanchett Rewears a Superhero-Worthy Blouse - WMagazine</title><link>https://www.wmagazine.com/fashion/cate-blanchett-leather-pants-red-white-top-belts-louis-vuitton-show</link></item>
+<item><title>At Cannes 2025 the Stars Aligned Onscreen, Offscreen, &amp; Behind the Camera - WMagazine</title><link>https://www.wmagazine.com/culture/cannes-film-festival-2025-review-best-movies</link></item>
+<item><title>Princess Diana&amp;#39;s Tube Socks &amp; Sneakers Look is Back and More Versatile Than Ever - WMagazine</title><link>https://www.wmagazine.com/fashion/white-socks-sneakers-celebrity-trend-bella-hadid-irina-shayk</link></item>
+<item><title>Lit Hub Weekly: May 26 – 30, 2025 - Literary  Hub</title><link>https://lithub.com/lit-hub-weekly-may-26-30-2025/</link></item>
+<item><title>What are the most Lynchian items in the David Lynch auction? - Literary  Hub</title><link>https://lithub.com/what-are-the-most-lynchian-items-in-the-david-lynch-auction/</link></item>
+<item><title>Here’s what’s making us happy this week. - Literary  Hub</title><link>https://lithub.com/254873-may30/</link></item>
+<item><title>One great short story to read today: Kevin Brockmeier’s “The Ceiling” - Literary  Hub</title><link>https://lithub.com/one-great-short-story-to-read-today-the-ceiling/</link></item>
+<item><title>Lit Hub Daily: May 30, 2025 - Literary  Hub</title><link>https://lithub.com/lit-hub-daily-may-30-2025/</link></item>
+<item><title>On the Lit Hub Podcast: Fighting Words and Magical Romance - Literary  Hub</title><link>https://lithub.com/on-the-lit-hub-podcast-fighting-words-and-magical-hearts/</link></item>
+<item><title>Laura Rossi and Jo Reed on Recent Earphones Award Winners - Literary  Hub</title><link>https://lithub.com/laura-rossi-and-jo-reed-on-recent-earphones-award-winners/</link></item>
+<item><title>The Literary Film &amp; TV You Need to Stream in June - Literary  Hub</title><link>https://lithub.com/the-literary-film-tv-you-need-to-stream-in-june-2025/</link></item>
+<item><title>“The Songs Prove That We Were Here”: Ocean Vuong on Sufjan Stevens - Literary  Hub</title><link>https://lithub.com/the-songs-prove-that-we-were-here-ocean-vuong-on-sufjan-stevens/</link></item>
+<item><title>Anna Mitchael on the Lessons of Ghostwriting - Literary  Hub</title><link>https://lithub.com/anna-mitchael-on-the-lessons-of-ghostwriting/</link></item>
+<item><title>《最后生还者》剧集第二季，遭遇滑坡式口碑崩盘？ - 游研社</title><link>https://www.yystv.cn/p/12905</link></item>
+<item><title>游戏博物馆6月预告：老乡们，星露谷展览会来啦！ - 游研社</title><link>https://www.yystv.cn/p/12903</link></item>
+<item><title>全面解析首款“裸眼3D巨屏掌机”：腾讯在尝试一种突破3D内容不足的解法 - 游研社</title><link>https://www.yystv.cn/p/12901</link></item>
+<item><title>中美两国的地狱潜兵联手，打出了最有国际主义精神的一集 - 游研社</title><link>https://www.yystv.cn/p/12902</link></item>
+<item><title>【白夜谈】17年前的《游戏王》动画，正在成为当季霸权 - 游研社</title><link>https://www.yystv.cn/p/12896</link></item>
+<item><title>老乡，《星露谷物语官方食谱》中文版终于来了 - 游研社</title><link>https://www.yystv.cn/p/12895</link></item>
+<item><title>上线不到两个月，“苏丹”正在成为国产游戏IP新贵 - 游研社</title><link>https://www.yystv.cn/p/12894</link></item>
+<item><title>为什么说被强行贴上“轮胎广告”，是福建人逃不开的宿命？ - 游研社</title><link>https://www.yystv.cn/p/12892</link></item>
+<item><title>从“剑侠”到“机甲”，西山居的三十年 - 游研社</title><link>https://www.yystv.cn/p/12885</link></item>
+<item><title>与《少女前线》重逢在九周年 - 游研社</title><link>https://www.yystv.cn/p/12884</link></item>
+<item><title>《艾尔登法环》真人电影官宣，由《机械姬》导演执导 - 游研社</title><link>https://www.yystv.cn/p/12882</link></item>
+<item><title>Registry office and Central archive - University of Oulu</title><link>https://www.oulu.fi/en/university/registry-office-and-central-archive</link></item>
+<item><title>Common generic skills - University of Oulu</title><link>https://www.oulu.fi/en/for-students/completing-studies/common-generic-skills</link></item>
+<item><title>Building Interactive 3D Cards in Webflow with Three.js - Codrops</title><link>https://tympanus.net/codrops/2025/05/31/building-interactive-3d-cards-in-webflow-with-three-js/</link></item>
+<item><title>Franco Beltramella - Codrops</title><link>https://tympanus.net/codrops/author/francobeltramella/</link></item>
+<item><title>Deconstructing the 35mm Website: A Look at the Process and Technical Details - Codrops</title><link>https://tympanus.net/codrops/2025/05/30/deconstructing-the-35mm-website-a-look-at-the-process-and-technical-details/</link></item>
+<item><title>Developer Spotlight: MisterPrada - Codrops</title><link>https://tympanus.net/codrops/2025/05/30/developer-spotlight-misterprada/</link></item>
+<item><title>No Visuals, No Time, No Problem: Launching OXI Instruments / ONE MKII in 2 Weeks - Codrops</title><link>https://tympanus.net/codrops/2025/05/29/no-visuals-no-time-no-problem-launching-oxi-instruments-one-mkii-in-2-weeks/</link></item>
+<item><title>Building a Physics-Based Character Controller with the Help of AI - Codrops</title><link>https://tympanus.net/codrops/2025/05/28/building-a-physics-based-character-controller-with-the-help-of-ai/</link></item>
+<item><title>Animated Product Grid Preview with GSAP &amp; Clip-Path - Codrops</title><link>https://tympanus.net/codrops/2025/05/27/animated-product-grid-preview-with-gsap-clip-path/</link></item>
+<item><title>Gwen Bogaert - Codrops</title><link>https://tympanus.net/codrops/author/gwenbogaert/</link></item>
+<item><title>Motion Highlights #8 - Codrops</title><link>https://tympanus.net/codrops/2025/05/26/motion-highlights-8/</link></item>
+<item><title>Developer Spotlight: Rogier de Boevé - Codrops</title><link>https://tympanus.net/codrops/2025/05/23/developer-spotlight-rogier-de-boeve/</link></item>
+<item><title>Bolt.new: Web Creation at the Speed of Thought - Codrops</title><link>https://tympanus.net/codrops/2025/05/22/bolt-new-web-creation-at-the-speed-of-thought/</link></item>
+<item><title>Shopify Summer ’25 Edition Introduces Horizon, a New Standard for Creative Control - Codrops</title><link>https://tympanus.net/codrops/2025/05/21/shopify-summer-25-edition-introduces-horizon-a-new-standard-for-creative-control/</link></item>
+<item><title>Behind the Curtain: Building Aurel’s Grand Theater from Design to Code - Codrops</title><link>https://tympanus.net/codrops/2025/05/20/behind-the-curtain-building-aurels-grand-theater-from-design-to-code/</link></item>
+<item><title>Aurelien Vigne - Codrops</title><link>https://tympanus.net/codrops/author/yayaurelienvigne-com/</link></item>
+<item><title>Motion Highlights #7 - Codrops</title><link>https://tympanus.net/codrops/2025/05/20/motion-highlights-7/</link></item>
+<item><title>Designer Spotlight: Ning Huang - Codrops</title><link>https://tympanus.net/codrops/2025/05/17/designer-spotlight-ning-huang/</link></item>
+<item><title>Developer Spotlight: Andrew Woan - Codrops</title><link>https://tympanus.net/codrops/2025/05/15/developer-spotlight-andrew-woan/</link></item>
+<item><title>From SplitText to MorphSVG: 5 Creative Demos Using Free GSAP Plugins - Codrops</title><link>https://tympanus.net/codrops/2025/05/14/from-splittext-to-morphsvg-5-creative-demos-using-free-gsap-plugins/</link></item>
+<item><title>Integrating Rive into a React Project: Behind the Scenes of Valley Adventures - Codrops</title><link>https://tympanus.net/codrops/2025/05/12/integrating-rive-into-a-react-project-behind-the-scenes-of-valley-adventures/</link></item>
+<item><title>Motion Highlights #6 - Codrops</title><link>https://tympanus.net/codrops/2025/05/12/motion-highlights-6/</link></item>
+<item><title>On-Scroll 3D Carousel - Codrops</title><link>https://tympanus.net/codrops/2025/05/07/on-scroll-3d-carousel/</link></item>
+<item><title>Book Review: A Single Street as a Parable for Global Warming - Undark</title><link>https://undark.org/2025/05/30/book-review-lost-trees-of-willow-avenue/</link></item>
+<item><title>‘Make America Healthy Again’ Report Cites Nonexistent Studies - Undark</title><link>https://undark.org/2025/05/29/maha-report-studies/</link></item>
+<item><title>How ‘The Dawn of Everything’ Speaks to the Current Moment - Undark</title><link>https://undark.org/2025/05/29/opinion-dawn-of-everything/</link></item>
+<item><title>Amid Turbulence, the NIH’s Jay Bhattacharya Era Begins - Undark</title><link>https://undark.org/2025/05/27/jay-bhattacharyas-nih-reform/</link></item>
+<item><title>When People Hear Voices, But Only When They Want To - Undark</title><link>https://undark.org/2025/05/27/wilo-voices-hallucination-control/</link></item>
+<item><title>FDA Plans to Limit Covid Shots. Patients and Advocates See Risks. - Undark</title><link>https://undark.org/2025/05/26/hhs-limits-covid-shots/</link></item>
+<item><title>Wastewater Plants Could Protect Against PFAS Pollution - Undark</title><link>https://undark.org/2025/05/23/opinion-wastewater-plants-pfas/</link></item>
+<item><title>Decades On, SSRIs Remain Mired in Mystery and Debate - Undark</title><link>https://undark.org/2025/05/22/antidepressants-debate-maha/</link></item>
+<item><title>Facing Cuts, a Grim Future for America’s HIV Response - Undark</title><link>https://undark.org/2025/05/20/facing-cuts-a-grim-future-for-americas-hiv-response/</link></item>
+<item><title>The EPA Plans to Vastly Change How It Studies Chemical Risks - Undark</title><link>https://undark.org/2025/05/19/epa-chemical-risks/</link></item>
+<item><title>This Type of Fiber Could Have Weight Loss Benefits Similar to Ozempic - ScienceAlert</title><link>https://www.sciencealert.com/this-type-of-fiber-could-have-weight-loss-benefits-similar-to-ozempic</link></item>
+<item><title>Sound of Earth&amp;#39;s Flipping Magnetic Field Is an Unforgettable Horror - ScienceAlert</title><link>https://www.sciencealert.com/sound-of-earths-flipping-magnetic-field-is-an-unforgettable-horror</link></item>
+<item><title>&amp;#39;Lost City&amp;#39; Deep Beneath The Ocean Is Unlike Anything We&amp;#39;ve Seen Before on Earth - ScienceAlert</title><link>https://www.sciencealert.com/lost-city-deep-beneath-the-ocean-is-unlike-anything-weve-seen-before-on-earth</link></item>
+<item><title>Surprise Link Between Menthol And Alzheimer&amp;#39;s Found in Mice - ScienceAlert</title><link>https://www.sciencealert.com/surprise-link-between-menthol-and-alzheimers-found-in-mice</link></item>
+<item><title>The Ocean Is Getting Darker, Threatening All That Lives Within - ScienceAlert</title><link>https://www.sciencealert.com/the-ocean-is-getting-darker-threatening-all-that-lives-within</link></item>
+<item><title>Scientists Developed a Kind of &amp;#39;Living Concrete&amp;#39; That Heals Its Own Cracks - ScienceAlert</title><link>https://www.sciencealert.com/scientists-developed-a-kind-of-living-concrete-that-heals-its-own-cracks</link></item>
+<item><title>Stunning Images Reveal The Sun&amp;#39;s Surface in Unprecedented Detail - ScienceAlert</title><link>https://www.sciencealert.com/stunning-images-reveal-the-suns-surface-in-unprecedented-detail</link></item>
+<item><title>The Universe&amp;#39;s Most Powerful Cosmic Rays May Finally Be Explained - ScienceAlert</title><link>https://www.sciencealert.com/the-universes-most-powerful-cosmic-rays-may-finally-be-explained</link></item>
+<item><title>Sloths The Size of Elephants Roamed America, Before Abruptly Vanishing - ScienceAlert</title><link>https://www.sciencealert.com/sloths-the-size-of-elephants-roamed-america-before-abruptly-vanishing</link></item>
+<item><title>What Makes Someone a Narcissist? Scientists Just Found a Big Clue - ScienceAlert</title><link>https://www.sciencealert.com/what-makes-someone-a-narcissist-scientists-just-found-a-big-clue</link></item>
+<item><title>This Giant Snail Lays Eggs Out of Its Neck… Yes, Seriously - ScienceAlert</title><link>https://www.sciencealert.com/this-giant-snail-lays-eggs-out-of-its-neck-yes-seriously</link></item>
+<item><title>Your Salad Could Be Carrying Microplastics From Soil Into Your Body - ScienceAlert</title><link>https://www.sciencealert.com/your-salad-could-be-carrying-microplastics-from-soil-into-your-body</link></item>
+<item><title>Study Reveals Plague&amp;#39;s Evolutionary Hack to Survive 3 Pandemics - ScienceAlert</title><link>https://www.sciencealert.com/study-reveals-plagues-evolutionary-hack-to-survive-3-pandemics</link></item>
+<item><title>Cephalopods Passed a Cognitive Test Designed For Human Children - ScienceAlert</title><link>https://www.sciencealert.com/cephalopods-passed-a-cognitive-test-designed-for-human-children</link></item>
+<item><title>One Key Way of Consuming Sugar Could Spike Your Diabetes Risk - ScienceAlert</title><link>https://www.sciencealert.com/one-key-way-of-consuming-sugar-could-spike-your-diabetes-risk</link></item>
+<item><title>Remains of 3,000-Year-Old Maya City Discovered in Guatemala - ScienceAlert</title><link>https://www.sciencealert.com/remains-of-3000-year-old-maya-city-discovered-in-guatemala</link></item>
+<item><title>Parasite Infecting Up to 50% of People Can Decapitate Human Sperm - ScienceAlert</title><link>https://www.sciencealert.com/parasite-infecting-up-to-50-of-people-can-decapitate-human-sperm</link></item>
+<item><title>This May Be The World&amp;#39;s Oldest Human Fingerprint, And That&amp;#39;s Not All - ScienceAlert</title><link>https://www.sciencealert.com/this-may-be-the-worlds-oldest-human-fingerprint-and-thats-not-all</link></item>
+<item><title>Sexual Activity Before Bed Can Help You Sleep Better - ScienceAlert</title><link>https://www.sciencealert.com/sexual-activity-before-bed-can-help-you-sleep-better</link></item>
+<item><title>Scientists Discover Molecule That Blocks Aging And Dementia in Mice - ScienceAlert</title><link>https://www.sciencealert.com/scientists-discover-molecule-that-blocks-aging-and-dementia-in-mice</link></item>
+<item><title>YOLO-World: Real-Time Open-Vocabulary Object Detection - Hacker News</title><link>https://arxiv.org/abs/2401.17270</link></item>
+<item><title>Precision Clock Mk IV - Hacker News</title><link>https://mitxela.com/projects/precision_clock_mk_iv</link></item>
+<item><title>UK&amp;#39;s Vertical VX4 eVTOL flies outside Kemble circuit for first time - Hacker News</title><link>https://flyer.co.uk/feature/uks-vertical-vx4-evtol-flies-outside-kemble-circuit-for-first-time/</link></item>
+<item><title>flyer.co.uk - Hacker News</title><link>https://news.ycombinator.com/from?site=flyer.co.uk</link></item>
+<item><title>CCD co-inventor George E. Smith dies at 95 - Hacker News</title><link>https://www.nytimes.com/2025/05/30/science/george-e-smith-dead.html</link></item>
+<item><title>Oniux: Kernel-level Tor isolation for any Linux app - Hacker News</title><link>https://blog.torproject.org/introducing-oniux-tor-isolation-using-linux-namespaces/</link></item>
+<item><title>Sguaba: Hard-to-misuse rigid body transforms for engineers - Hacker News</title><link>https://blog.helsing.ai/sguaba-hard-to-misuse-rigid-body-transforms-for-engineers-with-other-things-to-worry-about-than-aeaa45af9e0d</link></item>
+<item><title>New Adaptive Optics Shows Details of Our Star&amp;#39;s Atmosphere - Hacker News</title><link>https://nso.edu/press-release/new-adaptive-optics-shows-stunning-details-of-our-stars-atmosphere/</link></item>
+<item><title>A Lean companion to Analysis I - Hacker News</title><link>https://terrytao.wordpress.com/2025/05/31/a-lean-companion-to-analysis-i/</link></item>
+<item><title>terrytao.wordpress.com - Hacker News</title><link>https://news.ycombinator.com/from?site=terrytao.wordpress.com</link></item>
+<item><title>jeremyscanvic - Hacker News</title><link>https://news.ycombinator.com/user?id=jeremyscanvic</link></item>
+<item><title>The NFS 4 Freezer Spacer In Science Fiction Sets - Hacker News</title><link>https://kolektiva.social/@beka_valentine/114600567753999701</link></item>
+<item><title>kolektiva.social - Hacker News</title><link>https://news.ycombinator.com/from?site=kolektiva.social</link></item>
+<item><title>Plutonium Powered Pacemaker (From 1974) - Hacker News</title><link>https://www.orau.org/health-physics-museum/collection/miscellaneous/pacemaker.html</link></item>
+<item><title>Oxfordshire clock still keeping village on time after 500 years - Hacker News</title><link>https://www.bbc.com/news/articles/cz70p0qevlro</link></item>
+<item><title>Photos taken inside musical instruments - Hacker News</title><link>https://www.dpreview.com/photography/5400934096/probe-lenses-and-focus-stacking-the-secrets-to-incredible-photos-taken-inside-instruments</link></item>
+<item><title>dpreview.com - Hacker News</title><link>https://news.ycombinator.com/from?site=dpreview.com</link></item>
+<item><title>Searching for Autograms - Hacker News</title><link>https://curiosityarb.blog/2024/12/01/searching-for-autograms.html</link></item>
+<item><title>curiosityarb.blog - Hacker News</title><link>https://news.ycombinator.com/from?site=curiosityarb.blog</link></item>
+<item><title>Show HN: AI Peer Reviewer – Multiagent system for scientific manuscript analysis - Hacker News</title><link>https://github.com/robertjakob/rigorous</link></item>
+<item><title>github.com/robertjakob - Hacker News</title><link>https://news.ycombinator.com/from?site=github.com/robertjakob</link></item>
+<item><title>Show HN: PunchCard Key Backup - Hacker News</title><link>https://github.com/volution/punchcard-key-backup</link></item>
+<item><title>github.com/volution - Hacker News</title><link>https://news.ycombinator.com/from?site=github.com/volution</link></item>
+<item><title>ciprian_craciun - Hacker News</title><link>https://news.ycombinator.com/user?id=ciprian_craciun</link></item>
+<item><title>Show HN: Open-source P2P file transfer - Hacker News</title><link>https://github.com/nihaocami/berb</link></item>
+<item><title>github.com/nihaocami - Hacker News</title><link>https://news.ycombinator.com/from?site=github.com/nihaocami</link></item>
+<item><title>My five-year experiment with UTC - Hacker News</title><link>https://timestripe.com/magazine/blog/timezone/</link></item>
+<item><title>timestripe.com - Hacker News</title><link>https://news.ycombinator.com/from?site=timestripe.com</link></item>
+<item><title>Toxic Proteins for Drug Discovery - Hacker News</title><link>https://www.asimov.press/p/toxic-proteins</link></item>
+<item><title>asimov.press - Hacker News</title><link>https://news.ycombinator.com/from?site=asimov.press</link></item>
+<item><title>The Rise of the Japanese Toilet - Hacker News</title><link>https://www.nytimes.com/2025/05/29/business/toto-toilet-japan-bidet.html</link></item>
+<item><title>Using Ed(1) as My Static Site Generator - Hacker News</title><link>https://aartaka.me/this-post-is-ed.html</link></item>
+<item><title>BoingBoomTschak - Hacker News</title><link>https://news.ycombinator.com/user?id=BoingBoomTschak</link></item>
+<item><title>Ask HN: Anyone making a living from a paid API? - Hacker News</title><link>https://news.ycombinator.com/item?id=44144473</link></item>
+<item><title>meander_water - Hacker News</title><link>https://news.ycombinator.com/user?id=meander_water</link></item>
+<item><title>Using lots of little tools to aggressively reject the bots - Hacker News</title><link>https://lambdacreate.com/posts/68</link></item>
+<item><title>lambdacreate.com - Hacker News</title><link>https://news.ycombinator.com/from?site=lambdacreate.com</link></item>
+<item><title>archargelod - Hacker News</title><link>https://news.ycombinator.com/user?id=archargelod</link></item>
+<item><title>From Clocks to Chaos: The Rhythms of Life - Hacker News</title><link>https://press.princeton.edu/books/paperback/9780691084961/from-clocks-to-chaos</link></item>
+<item><title>The Two Ideals of Fields - Hacker News</title><link>https://susam.net/two-ideals-of-fields.html</link></item>
+<item><title>Designing Pareto-optimal RAG workflows with syftr - Hacker News</title><link>https://www.datarobot.com/blog/pareto-optimized-ai-workflows-syftr/</link></item>
+<item><title>datarobot.com - Hacker News</title><link>https://news.ycombinator.com/from?site=datarobot.com</link></item>
+<item><title>roma_glushko - Hacker News</title><link>https://news.ycombinator.com/user?id=roma_glushko</link></item>
+<item><title>Beware of Fast-Math - Hacker News</title><link>https://simonbyrne.github.io/notes/fastmath/</link></item>
+<item><title>simonbyrne.github.io - Hacker News</title><link>https://news.ycombinator.com/from?site=simonbyrne.github.io</link></item>
+<item><title>Surprisingly fast AI-generated kernels we didn&amp;#39;t mean to publish yet - Hacker News</title><link>https://crfm.stanford.edu/2025/05/28/fast-kernels.html</link></item>
+<item><title>The ‘white-collar bloodbath’ is all part of the AI hype machine - Hacker News</title><link>https://www.cnn.com/2025/05/30/business/anthropic-amodei-ai-jobs-nightcap</link></item>
 </channel></rss>
