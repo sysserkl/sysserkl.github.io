@@ -3033,6 +3033,7 @@ var en_sentence_count_global=[
 "uncivil",
 "uncomfy",
 "unconceivable",
+"unconditionally",
 "unconstructive",
 "uncouple",
 "uncuff",
