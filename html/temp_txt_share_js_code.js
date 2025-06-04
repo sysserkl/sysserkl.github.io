@@ -32,19 +32,14 @@ function sync_pages_batch_open_js_tts(is_iframe=false){
     ];
     
     if (is_iframe){
-        var buttons_t=[];
-        var result_t=[];
-        var button_str,iframe_str;
-        for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
-            [button_str,iframe_str]=iframe_generate_b(blxl,list_t[blxl],list_t[blxl]);
-            buttons_t.push(button_str);
-            result_t.push(iframe_str);        
-        }
-        
         var odiv=document.getElementById('div_status');
-        odiv.innerHTML='<p id="p_buttons_kls">'+buttons_t.join(' ')+'</p>'+result_t.join('\n');
-        odiv.scrollIntoView();        
-        iframe_init_b();
+        odiv.scrollIntoView();
+
+        odiv.innerHTML='<p></p><div></div>';
+        var op=odiv.querySelector('p');
+        var ocontent=odiv.querySelector('div');
+        
+        iframe_init_b(list_t,op,ocontent);
         return;
     }
     

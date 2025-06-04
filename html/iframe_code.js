@@ -1,5 +1,5 @@
 function init_kl_iframe(){
-    iframe_global={'www':[],'position':'we','percent':[],'size':false,'button':false,'menu':false};
+    iframe_global={'www':[],'position':'we','percent':[],'size':false,'button':false,'menu':false,'one':false};
 
     args_kl_iframe();
     build_kl_iframe();
@@ -11,10 +11,11 @@ function init_kl_iframe(){
 function menu_kl_iframe(){
 var str_t=klmenu_hide_b('');
     var klmenu1=[
-    '<a href="?menu&button&size=2000px&percent=50,50&www=notepad.htm&www=diff_js.htm&type=ns" onclick="'+str_t+'" target=_blank>notepad_diff_js</a>',
+    '<a href="?menu&one&www=readlater.htm&&www=notepad.htm&www=diff_js.htm" onclick="'+str_t+'" target=_blank>readlater_notepad_diff_js</a>',
+    '<a href="?menu&button&size=2000px&percent=50,50&www=notepad.htm&www=diff_js.htm&type=ns" onclick="'+str_t+'" target=_blank>notepad_diff_js_demo</a>',
     ];
 
-    document.getElementById('p_button_top_iframe').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','14rem','1rem','1rem','30rem'),'','0rem')+' ');
+    document.getElementById('p_button_top_iframe').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'','18rem','1rem','1rem','30rem'),'','0rem')+' ');
 }
 
 function args_kl_iframe(){
@@ -34,19 +35,39 @@ function args_kl_iframe(){
                 iframe_global['button']=true;
             } else if (item=='menu'){
                 iframe_global['menu']=true;
+            } else if (item=='one'){
+                iframe_global['one']=true;                
             }
         }
     }
 }
 
 function build_kl_iframe(){
+    function sub_build_kl_iframe_title(){
+        var name_list=[];
+        for (let blxl=0;blxl<lenwww;blxl++){
+            name_list.push(file_path_name_b(iframe_global['www'][blxl])[1].slice(0,1));
+        }
+        document.title=name_list.join('')+' - iframe';
+    }
+    
     if (iframe_global['www'].length==0){
         iframe_global['www'][0]='klapps.htm';
     }
     if (iframe_global['www'].length<2){
         iframe_global['www'][1]='about:blank';
     }
+
     var lenwww=iframe_global['www'].length;
+    sub_build_kl_iframe_title();
+    
+    if (iframe_global['one']){
+        var op=document.getElementById('p_button_top_iframe');
+        var ocontent=document.getElementById('divhtml');
+        iframe_init_b(iframe_global['www'],op,ocontent);
+        return;
+    }
+        
     var lenpercent=iframe_global['percent'].length;
     
     var left_percent=100;
@@ -93,7 +114,7 @@ function build_kl_iframe(){
     if (iframe_global['button']){
         var button_list=[];
         for (let blxl=0;blxl<lenwww;blxl++){
-            button_list.push('<span class="aclick" onclick="jump_kl_iframe('+blxl+');">'+iframe_global['www'][blxl]+'</span>');
+            button_list.push('<span class="aclick" onclick="jump_kl_iframe('+blxl+');">'+file_path_name_b(iframe_global['www'][blxl])[1]+'</span>');
         }
         document.getElementById('p_button_top_iframe').insertAdjacentHTML('beforeend',button_list.join(''));
         document.getElementById('p_button_bottom_iframe').innerHTML=button_list.join('');

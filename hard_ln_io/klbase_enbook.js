@@ -259,7 +259,7 @@ function get_new_words_arr_obj_enbook_b(cstype,csstr='',csobjects=false,addline=
                     span_text_list.push(one_added.innerText);
                 }
                 [diff1,diff2]=array_difference_b(words_added_in_line,span_text_list,false,true);
-                console.log(diff1,diff2,item.innerText);
+                //console.log(diff1,diff2,item.innerText);  //此行保留 - 保留注释
                 diff1_count=diff1_count+diff1.length;
                 diff2_count=diff2_count+diff2.length;
             }

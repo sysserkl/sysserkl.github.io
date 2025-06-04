@@ -2568,7 +2568,26 @@ function iframe_generate_b(csxl,cstitle,cssrc){
     return [buttons_t,result_t];
 }
 
-function iframe_init_b(){
+function iframe_init_b(cslist=[],obutton=false,ocontent=false){
+    var buttons_t=[];
+    var result_t=[];
+    if (cslist.length>0){
+        var button_str,iframe_str;
+        for (let blxl=0,lent=cslist.length;blxl<lent;blxl++){
+            var bname=file_path_name_b(cslist[blxl])[1];
+            [button_str,iframe_str]=iframe_generate_b(blxl,bname,cslist[blxl]);
+            buttons_t.push(button_str);
+            result_t.push(iframe_str);
+        }
+        
+        if (obutton){
+            obutton.innerHTML=buttons_t.join(' ');
+        }
+        if (ocontent){
+            ocontent.innerHTML=result_t.join('\n');
+        }
+    }
+    
     var ospan=document.querySelector('span.span_one_iframe_kl_b');
     if (ospan){
         ospan.click();

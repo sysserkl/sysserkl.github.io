@@ -110,7 +110,6 @@ function load_codemirror(){
             }
         }
         
-        //js_content.push('file_loaded_cm_global=true;');
         style_generate_b(js_content,true,'script');
         style_generate_b(css_content,true,'style');
         
@@ -298,9 +297,6 @@ function menu_codemirror(){
     '<a href="https://cdnjs.com/libraries/codemirror" onclick="'+str_t+'" target=_blank>cdnjs</a>',    
     '<a href="https://codemirror.net/" onclick="'+str_t+'" target=_blank>CodeMirror</a>',
     ];
-
-
-
 
     var klmenu_config=root_font_size_menu_b(str_t);
     klmenu_config.push('<span class="span_menu" onclick="'+str_t+'themes_export_codemirror();">导出全部主题为文本文件</span>');

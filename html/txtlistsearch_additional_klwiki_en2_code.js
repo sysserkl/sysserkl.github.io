@@ -14,6 +14,8 @@ function menu_more_kltxt_klwiki_en2(){
     var group_list=[
     ['page页面第一个出现的稀有旧单词','first_rare_old_words_kltxt_klwiki_en2();',true],
     ['&批量查找','first_rare_old_words_kltxt_klwiki_en2(true);',true],    
+    ['&random','first_rare_old_words_kltxt_klwiki_en2(true,true);',true],    
+
     ];    
     klmenu1.push(menu_container_b(str_t,group_list,''));
     
@@ -138,7 +140,7 @@ function rare_words_kltxt_klwiki_en2(run_fn=false){
     txtsearch_kltxt_b('\\(-[^\\(\\)]+\\)$ \\s-[^\\(\\)]+\\)$(:r)',-1,-1,true,run_fn); //-可能出现在(后或空格后 - 保留注释
 }
 
-function first_rare_old_words_kltxt_klwiki_en2(batch_search=false){
+function first_rare_old_words_kltxt_klwiki_en2(batch_search=false,israndom=false){
     var t0 = performance.now();
     var result_t=new Set();
     var selected_rows=[];
@@ -166,13 +168,15 @@ function first_rare_old_words_kltxt_klwiki_en2(batch_search=false){
             continue;
         }
         
-        result_t.add(Array.from(rare_check)[0]);
+        if (!israndom || Math.random()>0.5){
+            result_t.add(Array.from(rare_check)[0]);
+            page_name='';   //一个page下只获取1个单词 - 保留注释
+            selected_rows.push([filelist[blxl],blxl]);
+        }
+        //如果遍历每一行，获取 稀有单词 列表，可能很慢 - 保留注释
+        
         if (result_t.size>blmax){break;}
-        page_name='';
-
-        selected_rows.push([filelist[blxl],blxl]);
     }
-    
     en_word_temp_get_b();
 
     if (batch_search){
