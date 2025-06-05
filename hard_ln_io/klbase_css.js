@@ -2791,16 +2791,45 @@ function remove_img_alt_b(){
     console.log('获取图片对象',oimgs.length,'个，移除 alt',blcount_alt,'个，移除 title',blcount_title,'个');
 }
 
-function find_closest_dom_above_by_tagname_b(odom,tagname){
+function find_closest_dom_above_by_tagname_b(odom,tagname,classname=false){
     let currentElement = odom;
     while (currentElement){
         // 检查当前元素的前方兄弟元素
         let sibling = currentElement.previousElementSibling;
         while (sibling){
             if (sibling.tagName === tagname){
-                return sibling;
+                if (classname!==false){
+                    if (sibling.classList.contains(classname)){
+                        return sibling;
+                    }
+                } else {
+                    return sibling;
+                }
             }
             sibling = sibling.previousElementSibling;
+        }
+        // 若无，向父元素层级移动
+        currentElement = currentElement.parentElement;
+    }
+    return null;
+}
+
+function find_closest_dom_next_by_tagname_b(odom,tagname,classname=false){
+    let currentElement = odom;
+    while (currentElement){
+        // 检查当前元素的前方兄弟元素
+        let sibling = currentElement.nextElementSibling;
+        while (sibling){
+            if (sibling.tagName === tagname){
+                if (classname!==false){
+                    if (sibling.classList.contains(classname)){
+                        return sibling;
+                    }
+                } else {
+                    return sibling;
+                }
+            }
+            sibling = sibling.nextElementSibling;
         }
         // 若无，向父元素层级移动
         currentElement = currentElement.parentElement;
