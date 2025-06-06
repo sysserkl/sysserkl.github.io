@@ -1,8 +1,8 @@
 function showbigphoto_klphotos_b(csxl=0){
     function sub_showbigphoto_klphotos_b_month(str_t){
-        var bljg='';
-        var monthdays_t=month_day_b(str_t.substring(4,6),str_t.substring(0,4));
-        var theday_t=parseInt(str_t.substring(6,8));
+        let bljg='';
+        let monthdays_t=month_day_b(str_t.substring(4,6),str_t.substring(0,4));
+        let theday_t=parseInt(str_t.substring(6,8));
         for (let blxl=1;blxl<=monthdays_t;blxl++){
             if (blxl==theday_t){
                 bljg=bljg+'<font color=red>'+blxl+'</font> ';
@@ -13,15 +13,11 @@ function showbigphoto_klphotos_b(csxl=0){
         return bljg;
     }
     //-----------------------
-	var bljg='';
-	
 	black_bg_t=klmenu_check_b('span_black_bg_klphoto',false);
     
     var filter_str=get_filter_style_klphotos_b(true);
     //背景图 - 保留注释
     slide_gery_div_b('div_grey_album',black_bg_t,imgpath_global+photodata_global[csxl][0],filter_str);
-
-	bljg=bljg+'<img src="'+imgpath_global+photodata_global[csxl][0]+'" id="img_big" ';
 
     var border_color=false;
     if (album_marked_rows_global.includes(imgpath_global+photodata_global[csxl][0])){
@@ -30,12 +26,9 @@ function showbigphoto_klphotos_b(csxl=0){
     var list_t=slide_center_img_style_b(black_bg_t,filter_str,border_color);
     //list_t 形如：[ 20, 'style="max-height:743px;max-width:1560px;border:20px #7F7F7F solid;"' ] - 保留注释
     var border_size_t=list_t[0];
-    bljg=bljg+list_t[1];
-    
-	bljg=bljg+' />';
-	
-	big_photo_id_t='div_big_photo_info_'+csxl+'_'+Math.round(Math.random()*100000);
+	var big_photo_id_t='div_big_photo_info_'+csxl+'_'+Math.round(Math.random()*100000);
 
+	var bljg='<img src="'+imgpath_global+photodata_global[csxl][0]+'" id="img_big" '+list_t[1]+' />';
 	bljg=bljg+'<div id="'+big_photo_id_t+'" ';
 	bljg=bljg+'style="position:absolute;background-color:#ffffff;right:'+border_size_t+'px;bottom:'+border_size_t+'px;margin-left:'+border_size_t+';opacity:0.6;';
 	if (black_bg_t==false){
@@ -50,11 +43,11 @@ function showbigphoto_klphotos_b(csxl=0){
         var imgname=photodata_global[csxl][0];
     }
             
-	if (photodata_global[csxl][1]==''){
-		bljg=bljg+imgname;
-	} else {
-        bljg=bljg+photodata_global[csxl][1]+'/'+imgname;
+	if (photodata_global[csxl][1]!==''){
+        bljg=bljg+photodata_global[csxl][1]+'/';
     }
+    bljg=bljg+imgname;
+    
 	bljg=bljg+'</b> <i>(img='+photodata_global[csxl][2]+')</i></td><td align=right style="font-size:0.6rem;"><span id="span_exif"></span></td></tr></table></div>';
     
     if (klmenu_check_b('span_calendar_klphoto',false)){

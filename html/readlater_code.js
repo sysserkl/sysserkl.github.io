@@ -77,8 +77,7 @@ function import_bigfile_rlater(){
 }
 
 function comment_rlater(){
-    var key_list=local_storage_get_b('recent_search_readlater',-1,true)[0];
-    var cskey=prompt('输入网址过滤字符串（可选）',key_list);
+    var cskey=prompt('输入网址过滤字符串（可选）');
     if (cskey==null){return;}
     cskey=cskey.trim();
     recent_search_key_rlater(cskey);
@@ -95,18 +94,34 @@ function comment_rlater(){
     var blno=0;
     for (let blxl=1,lent=readlater_data_global.length;blxl<lent;blxl++){//忽略第1条 - 保留注释
         if (cskey!=='' && !readlater_data_global[blxl][0].includes(cskey)){continue;}
+        
+        var blfound=false;
+
         var current_hash=readlater_data_global[blxl][0].includes('#');
         var prev_hash=readlater_data_global[blxl-1][0].includes('#');        
         
-        if (prev_hash || !current_hash){continue;}        
+        if (!prev_hash && current_hash){        
+            if (readlater_data_global[blxl][0].split('#')[0]==readlater_data_global[blxl-1][0]){    //排序时 无#应该在前，有#在后 - 保留注释
+                blfound=true;
+            } else if (readlater_data_global[blxl][0].split('/comment-page-')[0]+'/'==readlater_data_global[blxl-1][0]){
+                //形如：https://new.shuge.org/ba_sui/comment-page-1/#comment-10079 - 保留注释        
+                blfound=true
+            }
+        }
         
-        var blfound=false;
-        if (readlater_data_global[blxl][0].split('#')[0]==readlater_data_global[blxl-1][0]){    //排序时 无#应该在前，有#在后 - 保留注释
-            blfound=true;
-        } else if (readlater_data_global[blxl][0].split('/comment-page-')[0]+'/'==readlater_data_global[blxl-1][0]){
-            //形如：https://new.shuge.org/ba_sui/comment-page-1/#comment-10079 - 保留注释        
-            blfound=true
-        }        
+        if (!blfound){
+            var current_utm=readlater_data_global[blxl][0].includes('?utm_source=');
+            var prev_utm=readlater_data_global[blxl-1][0].includes('?utm_source=');
+            if (!prev_utm && current_utm){        
+                var list_t=readlater_data_global[blxl][0].split('?');
+                console.log(list_t[0],readlater_data_global[blxl-1][0]);
+                if (list_t.length==2 && list_t[0]==readlater_data_global[blxl-1][0]){
+                    blfound=true;
+                }
+                //形如：https://science.slashdot.org/story/25/05/05/2050232/unitedhealth-now-has-1000-ai-applications-in-production?utm_source=rss1.0mainlinkanon&utm_medium=feed - 保留注释
+            }
+        }
+        
         if (blfound){
             result_t.add(red_one_rlater(readlater_data_global[blxl],cstype,today_t));
             //result_t.add(red_one_rlater(readlater_data_global[blxl-1],cstype,today_t));  // - 此行保留 - 保留注释
