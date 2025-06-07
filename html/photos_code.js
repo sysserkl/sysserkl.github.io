@@ -16,9 +16,17 @@ function export_array_klphotos(){
     otextarea.value='var photo_source_global=[\n'+list_t.join('\n')+'\n];\n';
 }
 
-function export_current_klphotos(){
-    var name_str='';
+function export_current_klphotos(is_http=false){
     var list_t=array_split_by_col_b(photodata_global,[0]);
+    if (is_http){
+        for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
+            list_t[blxl]=album_current_global[2]+list_t[blxl];
+        }
+        document.getElementById('textarea_export_klphotos').value=list_t.join('\n');
+        return;
+    }
+
+    var name_str='';
     if (confirm('是否encodeURIComponent？')){
         for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
             list_t[blxl]=encodeURIComponent(album_current_global[0])+'&s='+encodeURIComponent(list_t[blxl]);
@@ -130,6 +138,7 @@ function slice_klphotos(){
 function export_form_klphotos(){
     var bljg='<span class="aclick" onclick="export_array_klphotos();">导出全部数组</span>';
     bljg=bljg+'<span class="aclick" onclick="export_current_klphotos();">导出当前图片文件名</span>';
+    bljg=bljg+'<span class="aclick" onclick="export_current_klphotos(true);">导出当前图片http链接</span>';
     bljg=bljg+'<span class="aclick" onclick="extract_exif_from_urls();">导出当前图片坐标和日期</span>';
     return export_form_klphotos_b(bljg);
 }
@@ -409,7 +418,7 @@ function args_klphotos(cskeys){
 function screen_album_end_klphotos(){
     document.exitFullscreen();
     document.getElementById('div_album').style.display='none';
-    slide_hide_show_objects_b([],['div_top_bottom','div_klphotos_info','span_page_no1','span_page_no2','div_show_hide','h2_photo']);
+    slide_hide_show_objects_b([],['div_top_bottom','div_album_info_b','span_page_no1','span_page_no2','div_show_hide','h2_photo']);
     document.body.style.overflow='auto';
     clearInterval(show_screen_album_klphotos_global);
 }
@@ -418,7 +427,7 @@ function screen_album_start_klphotos(){
     document.getElementById('div_album').style.display='block';
     document.body.requestFullscreen();
     
-    slide_hide_show_objects_b(['div_top_bottom','div_klphotos_info','span_page_no1','span_page_no2','div_show_hide','h2_photo'],[]);
+    slide_hide_show_objects_b(['div_top_bottom','div_album_info_b','span_page_no1','span_page_no2','div_show_hide','h2_photo'],[]);
     document.body.style.overflow='hidden';
     for (let blxl=0;blxl<5;blxl++){
         screen_album_klphotos();
@@ -551,7 +560,9 @@ function init_klphotos(){
     
     //---
     character_2_icon_b('📸');
-        
+    
+    div_generate_album_b();
+    
     document.getElementById('p_filter').innerHTML=filter_form_img_b();
     var input_list=[
     ['input_img_filter_dom_b',12,0.5],
@@ -576,7 +587,7 @@ function init_klphotos(){
 }
 
 function timeline_oneyear_klphotos(csstr='',isyear=true){
-    var olis=document.querySelectorAll('td#td_treeview_klphotos ol li.li_treeview_klphotos');
+    var olis=document.querySelectorAll('td#td_treeview_album_b ol li.li_treeview_klphotos');
     var blreg=false;
     if (isyear===false && csstr.slice(-4,)=='(:r)'){
         blreg=true;
@@ -598,9 +609,9 @@ function timeline_oneyear_klphotos(csstr='',isyear=true){
 }
 
 function timeline_close_klphotos(){
-    var otd_r=document.getElementById('td_thumb_klphotos');
+    var otd_r=document.getElementById('td_thumb_album_b');
     otd_r.setAttribute('width','');
-    document.getElementById('td_treeview_klphotos').innerHTML='';
+    document.getElementById('td_treeview_album_b').innerHTML='';
 }
 
 function timeline_category_klphotos(){
@@ -632,11 +643,11 @@ function timeline_category_klphotos(){
     
     years_str.push('<span class="oblong_box" onclick="timeline_close_klphotos();" style="color:'+scheme_global['a-hover']+';">✖</span>');
     
-    var otd_r=document.getElementById('td_thumb_klphotos');
+    var otd_r=document.getElementById('td_thumb_album_b');
     otd_r.setAttribute('width','85%');
     var rect=otd_r.getBoundingClientRect();
 
-    var otd_l=document.getElementById('td_treeview_klphotos');
+    var otd_l=document.getElementById('td_treeview_album_b');
     otd_l.innerHTML='<section id="section_timeline_klphotos" style="max-height:'+(window.screen.availHeight-rect.top)+'px;overflow:auto;"><p style="line-height:2rem;">'+years_str.join(' ')+'</p><p><input type="text" id="input_timeline_search" onkeyup="if (event.key==\'Enter\'){timeline_oneyear_klphotos(this.value,false);}"></p>\n<ol>'+list_t.join('\n')+'</ol></section>';
     mouseover_mouseout_oblong_span_b(otd_l.querySelectorAll('span.oblong_box'));
     input_with_x_b('input_timeline_search',10);

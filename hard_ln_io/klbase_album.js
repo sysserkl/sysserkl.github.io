@@ -17,7 +17,7 @@ function showbigphoto_klphotos_b(csxl=0){
     
     var filter_str=get_filter_style_klphotos_b(true);
     //背景图 - 保留注释
-    slide_gery_div_b('div_grey_album',black_bg_t,imgpath_global+photodata_global[csxl][0],filter_str);
+    slide_gery_div_b('div_grey_album_b',black_bg_t,imgpath_global+photodata_global[csxl][0],filter_str);
 
     var border_color=false;
     if (album_marked_rows_global.includes(imgpath_global+photodata_global[csxl][0])){
@@ -71,7 +71,7 @@ function showbigphoto_klphotos_b(csxl=0){
         bljg=bljg+'<br />'+list_t.join('<br />')+'</div>';
     }
 
-	var blo_tmp=document.getElementById('div_big_photo');
+	var blo_tmp=document.getElementById('div_big_album_b');
 	blo_tmp.innerHTML=bljg;
 	blo_tmp.style.display='block';
     
@@ -87,7 +87,7 @@ function showbigphoto_klphotos_b(csxl=0){
         blo_tmp.style.height=rect.height+'px';  //否则div的大小和img的大小不完全匹配 - 保留注释
     };
     //---
-    slide_hide_show_objects_b(['div_top_bottom','div_klphotos_info','span_page_no1','span_page_no2','div_show_hide','h2_photo'],['div_grey_album','div_transparent']);
+    slide_hide_show_objects_b(['div_top_bottom','div_album_info_b','span_page_no1','span_page_no2','div_show_hide','h2_photo'],['div_grey_album_b','div_transparent']);
     
 	imgnum_global=csxl;
 }
@@ -168,7 +168,7 @@ function slide_klphotos_b(is_simple=false,csm1=''){
 }
 
 function export_form_klphotos_b(other_buttons=''){   
-    var left_str='<p>'+close_button_b('div_array','');
+    var left_str='<p>'+close_button_b('div_array_album_b','');
     
     var right_str=other_buttons;
     right_str=right_str+'<span class="aclick" onclick="import_marked_rows_klphotos_b();">导入已标记图片名</span>';
@@ -176,7 +176,7 @@ function export_form_klphotos_b(other_buttons=''){
     right_str=right_str+'</p>';
 
     var blstr=textarea_with_form_generate_b('textarea_export_klphotos','width:90%;height:25rem;',left_str,'清空,复制,发送到临时记事本,发送地址',right_str);
-    document.getElementById('div_array').innerHTML=blstr;
+    document.getElementById('div_array_album_b').innerHTML=blstr;
 }
 
 function delete_marked_rows_klphotos_b(){
@@ -288,7 +288,7 @@ function imgsearch_klphotos_b(csword,csreg){
 }
 
 function hide_div_big_photo_b(){
-    slide_hide_show_objects_b(['div_big_photo','div_grey_album','div_transparent'],['div_top_bottom','div_klphotos_info','span_page_no1','span_page_no2','div_show_hide','h2_photo']);
+    slide_hide_show_objects_b(['div_big_album_b','div_grey_album_b','div_transparent'],['div_top_bottom','div_album_info_b','span_page_no1','span_page_no2','div_show_hide','h2_photo']);
 
     if (typeof imgshow_klphotos_global !== 'undefined'){
 	    clearInterval(imgshow_klphotos_global);
@@ -527,4 +527,28 @@ function parse_GPS_Coordinates_b(gps){
     let lng=sub_parse_GPS_Coordinates_b_convert(gps.longitude, gps.lonRef);
     
     return [lat,lng];
+}
+
+function div_generate_album_b(){
+    var blstr=`<div id="div_big_album_b" style="position: fixed; top: 50%; left: 50%; -webkit-transform: translateX(-50%) translateY(-50%); z-index: 99;background-color:#ffffff;"></div>
+<div id="div_grey_album_b"></div>
+<div id="div_array_album_b" style="margin:0.5rem;"></div>
+<div id="div_album_info_b">
+<p style="margin:0rem 0.5rem;"><span id="span_page_no1"></span></p>
+<table border=0>
+<tr>
+<td id="td_treeview_album_b" style="word-break:break-all;word-wrap:break-word;" valign=top></td>
+<td id="td_thumb_album_b" valign=top><div id="div_klphotos"></div></td>
+</tr>
+</table>
+<p style="margin:0rem 0.5rem;"><span id="span_page_no2"></span></p>
+<div id="div_info" style="margin:0rem 0.5rem;"></div>
+</div>`;
+    document.getElementById('div_show_hide').insertAdjacentHTML('afterend',blstr);
+}
+
+function style_generate_album_b(){
+    return `.img_thumb {max-height:10rem;border:0.1rem dashed #c0c0c0;padding:0.2rem;margin:0.2rem;position:relative;float:left;cursor:pointer;}
+.div_thumb {width:10rem; height:10rem; border:0.1rem dashed #c0c0c0; padding:0.2rem;margin:0.2rem; position:relative; float:left;}
+.td_thumb {font-size:1.3rem; color:707070;word-break:normal; word-wrap:normal;}`;
 }

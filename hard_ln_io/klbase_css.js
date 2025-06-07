@@ -183,7 +183,7 @@ function css_root_style_b(pcsize='16',mobilesize='30',cssname=[''],usercss=[],ch
     if (usercss.length==1){
         usercss.push(usercss[0]);
     }
-    if (usercss.length==2){    
+    if (usercss.length==2){
         if (ismobile_b()){
             list_t.push(usercss[0]);
         } else {

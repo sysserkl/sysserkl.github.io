@@ -17,13 +17,8 @@ var album_marked_rows_global=[];
 //history
 //0.0.1-20240625
 //-----------------------
-css_root_style_b('17','10',['base','menu'],[],1);
+css_root_style_b('17','10',['base','menu'],[style_generate_album_b()],1);
 </script>
-<style>
-.img_thumb {max-height:10rem;border:0.1rem dashed #c0c0c0;padding:0.2rem;margin:0.2rem;position:relative;float:left;cursor:pointer;}
-.div_thumb {width:10rem; height:10rem; border:0.1rem dashed #c0c0c0; padding:0.2rem;margin:0.2rem; position:relative; float:left;}
-.td_thumb {font-size:1.3rem; color:707070;word-break:normal; word-wrap:normal;}
-</style>
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
 </head>
 <body onkeypress="mykeycontrol_klphotos_b();">
@@ -46,21 +41,6 @@ css_root_style_b('17','10',['base','menu'],[],1);
 </div>
 
 </div>
-</div>
-
-<div id="div_big_photo" style="position: fixed; top: 50%; left: 50%; -webkit-transform: translateX(-50%) translateY(-50%); z-index: 99;background-color:#ffffff;"></div>
-<div id="div_grey_album"></div>
-<div id="div_array" style="margin:0.5rem;"></div>
-<div id="div_klphotos_info">
-<p style="margin:0rem 0.5rem;"><span id="span_page_no1"></span></p>
-<table border=0>
-<tr>
-<td id="td_treeview_klphotos" style="word-break:break-all;word-wrap:break-word;" valign=top></td>
-<td id="td_thumb_klphotos" valign=top><div id="div_klphotos"></div></td>
-</tr>
-</table>
-<p style="margin:0rem 0.5rem;"><span id="span_page_no2"></span></p>
-<div id="div_info" style="margin:0rem 0.5rem;"></div>
 </div>
 
 <a name=footer></a>
