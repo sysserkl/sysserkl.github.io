@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>🔢 2048</title>
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b([],[],[],['2048_code.js']);
+</script>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body onkeydown="keys_2048(event.key);" style="background-color: #faf8ef; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
+
+<div style="text-align: center; width: 90vw; max-width: 500px;">
+<h1 style="font-size: 4vw; color: #776e65;">2048</h1>
+<!-- 网格布局，每列占据相等的空间 -->
+<div id="div_grid"></div>
+</div>
+
+<script>
+var_set_2048();
+init_2048();
+</script>
+</body>
+</html>

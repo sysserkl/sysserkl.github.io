@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Sticker Mobile</title>
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','qr'],['jeromeetienne_qrcode.min.js'],['webfont_data.js'],['sticker_mobile_ico/sticker_mobile128.png'],true);
+</script>
+<script src="sticker_mobile_code.js"></script>
+<script src="https://cdn.repository.webfont.com/wwwroot/js/wf/youziku.api.min.js"></script>      
+<script>
+//-----------------------
+//history
+//0.0.2-20200617 支持qr
+//0.0.1-20200603
+//-----------------------
+css_root_style_b('18','13',['base']);
+var webfont_id_global='';
+var p_margin_global=1;
+var show_underline_global=false;
+var current_scheme_sticker_m_global=['','','',-1];
+var underline_padding_global='';
+</script>
+<style>
+#td_content p{font-size:inherit;color:inherit;align:inherit;}
+div.div_color_box{position:relative;float:left;cursor:pointer;margin:0.1rem;text-align:center;line-height:100%;border:0.1rem white solid;}
+img.img_webfont_box{border:0.1rem solid grey;background-color:white;margin:0.1rem;padding:0.2rem;cursor:pointer;}
+</style>
+<link rel="manifest" href="sticker_mobile.webmanifest" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<div id="div_colors" style="display:none;"></div>
+<div id="div_webfonts" style="display:none;"></div>
+
+<div id="td_title_buttons" style="position:absolute;top:0;left:0;margin:0.5rem;text-align:center;display:none;">
+<div class="oblong_box" onclick="save_load_klsticker_m('load');">Load</div>
+<div class="oblong_box" onclick="save_load_klsticker_m('save');">Save</div>
+<div class="oblong_box" onclick="clear_klsticker_m();">Clear</div>
+<div class="oblong_box" onclick="remove_title_klsticker_m();">Remove</div>
+<div class="oblong_box" onclick="font_size_klsticker_m('td_title');">Font Size</div>
+<div class="oblong_box" onclick="font_size_klsticker_m('td_title','+');">+</div>
+<div class="oblong_box" onclick="font_size_klsticker_m('td_title','-');">-</div>
+<div class="oblong_box" onclick="color_font_select_klsticker_m('colors');">Color</div>
+<div class="oblong_box" onclick="color_font_select_klsticker_m('webfonts');">Font</div>
+<div class="oblong_box" onclick="vertical_klsticker_m();">V/H</div>
+<div class="oblong_box" onclick="qr_trigger_klsticker_m(this);">add qr</div>
+</div>
+
+<table id="table_article" style="padding:0.5rem;line-height:200%;" width=100% height=100% cellpadding=0 cellspacing=0>
+<tr><td id="td_title" contenteditable="true" style="font-size:1.5rem; font-weight:bold;text-align:center; border-bottom:0.1rem solid; padding-bottom:1rem; margin-bottom:1rem; border-color:black;">标题</td></tr>
+<tr><td id="td_content" contenteditable="true" class="horizontal" style="font-size:1.2rem;text-align:justify;text-justify:inter-character;" valign=top>正文</td></tr>
+<tr><td><div id="div_qr" contenteditable="true">- END -</div></td></tr>
+</table>
+
+<div id="div_content_buttons" style="position:absolute; bottom:0; right:0; margin:0.5rem; text-align:center; display:none;">
+<div class="oblong_box" onclick="font_size_klsticker_m('td_content');">Font Size</div>
+<div class="oblong_box" onclick="font_size_klsticker_m('td_content','+');">+</div>
+<div class="oblong_box" onclick="font_size_klsticker_m('td_content','-');">-</div>
+<div class="oblong_box" onclick="article_padding_klsticker_m();">Article Padding</div>
+<div class="oblong_box" onclick="p_margin_klsticker_m();">P_margin</div>
+<div class="oblong_box" onclick="line_height_klsticker_m();">P Line Height</div>
+<div class="oblong_box" onclick="plain_text_klsticker_m();">Plain Text</div>
+<div class="oblong_box" onclick="underline_klsticker_m();">Underline</div>
+<div class="oblong_box" onclick="underline_padding_klsticker_m();">Underline Padding</div>
+<div class="oblong_box" onclick="html_source_klsticker_m(this);">View Source</div>
+<div class="oblong_box" onclick="td_center_klsticker_m();">Center</div>
+<div class="oblong_box" onclick="close_klsticker_m();">Close</div>
+</div>
+<div id="div_control_buttons" style="position:absolute;left:0;bottom:0;margin:0.5rem;cursor:pointer;" onclick="buttons_show_klsticker_m();">⚪</div>
+
+<script>
+pwa_register_b('sticker_mobile_service_worker.js','Sticker Mobile','','');
+
+color_box_klsticker_m();
+webfont_box_klsticker_m();
+mouseover_mouseout_oblong_span_b(document.querySelectorAll('div.oblong_box'));
+buttons_style_klsticker_m();
+track_source_b('sticker mobile',false);
+</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>🗃 Digest</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date','books','eng','en_de_str','wiki','txtlistsearch','idb'],[],[],['digest_code.js']);
+</script>
+<script>
+load_current_book_b(true,true,true,true);
+</script>
+<script>
+//-----------------------
+//history
+//0.0.1-20201007
+//-----------------------
+var book_tag_global='all';
+
+css_root_style_b('17.6','14',['base','menu'],[],1);
+</script>
+<style>
+.txtsearch_kltxt_lineno {color:#707070;font-size:0.8rem}
+i {border-bottom:0.15rem dashed tomato;}
+</style>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<a name=top></a>
+<h2 style="margin-top:0px;"><span id="span_title" onclick="popup_show_hide_b('div_show_hide');" style="cursor:pointer;">Digest</span> - <span id=booktitle></span><span id=readingdata></span></h2>
+<div id='div_show_hide' style="display:block;margin:0rem 0.5rem;">
+<script>
+mobile_style_kltxt_b();
+</script>
+<script>
+load_data_digest();
+</script>
+<p id="p_book_list" style="line-height:150%;"></p>
+<p>
+<input type="text" id="input_search" onkeyup="if (event.key=='Enter'){txtsearch_kltxt_b();}">
+<label><input type="checkbox" id="input_reg" />正则</label>
+<span class="aclick" onclick="txtsearch_kltxt_b();">Search</span>
+<span class="aclick" onclick="booksearch_kltxt_b();">书目</span>
+<label><input type="checkbox" id="input_continue" />连续搜索</label>
+<span class="aclick" onclick="popup_show_hide_b('span_checkboxes_txtbook','');">⚙</span>
+<span id="span_checkboxes_txtbook" style="display:none;"></span>
+<span id="span_lines_config_txtbook"></span>
+</p>
+<div id="div_recent_search"></div>
+<p id="p_search_menu_kltxt"></p>
+</div>
+<div id="div_cn_words"></div>
+<a name=content></a>
+<p style="margin:0.5rem;">显示起始行号为 <input type="number" id="input_lineno" style="width:6rem;margin-left:15px; margin-bottom:5px;" value=1 onkeyup="if (event.key=='Enter'){getlines_kltxt_b();}" ondblclick='if (this.value==1){this.value=0;} else {this.value=1;}'> 的 
+<input type="number" id="input_lines" style="width:6rem;margin-left:15px; margin-bottom:5px;" value=20 onkeyup="if (event.key=='Enter'){getlines_kltxt_b();}"> 行记录
+<span class="aclick" onclick="getlines_kltxt_b();">显示</span>
+</p>
+
+<div id="divhtml"></div>
+<div id="divhtml2"></div>
+<script>
+init_kltxt_b('digest',cskeys);
+</script>
+<a name=footer></a>
+<script>
+track_source_b('digest',false);
+if (!is_firefox_b(false)){
+    blank_page_b(false,false,false);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>✅ ToDoList</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date','en_de_str','plan'],[],[]);
+</script>
+<script src="todolist_code.js"></script>
+<script>
+//-----------------------
+//history
+//0.0.2-20200914 事项改为保存到 localStorage 中，添加 PWA
+//0.0.1-20200121
+//-----------------------
+var recent_search_key_klplan_global='';
+
+css_root_style_b('18','17',['base','menu']);
+</script>
+<style>
+h4{margin:0.5rem 0;}
+</style>
+<link rel="manifest" href="todolist.webmanifest" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<a name=top></a>
+<h2 id="h2_title" style="margin:0rem;font-size:1.3rem;"><span style="cursor:pointer;" onclick="hide_klplan_b();">ToDoList</span> <span id="span_total" style="font-size:1rem;font-weight:normal;cursor:pointer;" onclick="clear_todolist();"></span></h2>
+<div style="margin-top:0.4rem;margin-left:0.5rem;margin-right:0.5rem;">
+<div id="div_category_links" style="font-size:0.8rem;"></div>
+<div id="divhtml2"></div>
+<div id="divhtml"></div>
+</div>
+<a name=footer></a>
+<script>
+pwa_register_b('todolist_service_worker.js','ToDoList','','');
+
+var hide_li_golbal=false;
+top_bottom_arrow_b('div_top_bottom','',false,'1.3rem',true,false,2);
+var todolist_data_global=load_lists_klplan_b('list_todolist');
+init_todolist();
+</script>
+<script>
+track_source_b('todolist',false);
+</script>
+</body>
+</html>

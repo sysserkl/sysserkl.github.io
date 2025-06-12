@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>LSM</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','en_de_str','idb']);
+</script>
+<script src="../hard_ln_io/sha.js"></script>
+<script src="lsm_code.js"></script>
+<script>
+css_root_style_b('17','11',['base','menu'],[],1);
+//history
+//0.0.1-20210211
+</script>
+<link rel="manifest" href="lsm.webmanifest" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<h2 style="margin-top:0px;font-size:1.3rem;"><span id="span_title">LSM</span></h2>
+<div style="margin:0 0.5rem;">
+<table width=100% cellpadding=0 cellspacing=0><tr>
+<td id="td_lsm_name" width=20% valign=top style="font-size:1rem;padding-right:0.5rem;word-break:break-all;word-wrap:break-word;">
+<p><input type="text" id="input_search" onkeyup="if (event.key=='Enter'){filter_lsm();}" />
+<label><input type="checkbox" id="checkbox_select_all" onchange="select_all_lsm(this.checked);" />全选</label></p>
+<p style="margin-top:0.5rem;"><span class="oblong_box" onclick="search_value_lsm();">search value</span></p>
+<section id="section_lsm_name" style="height:30rem;overflow:auto;">
+</section>
+</td>
+<td id="td_lsm_value" width=80% valign=top>
+<form method="POST" action="" name="form_lsm" target=_blank>
+<textarea name="textarea_lsm_content" id="textarea_lsm_content" style="height:30rem;"></textarea>
+<p id="p_buttons">
+选中key: <span class="aclick" onclick="selected_keys_lsm('value');">显示值</span>
+<span class="aclick" onclick="selected_keys_lsm('length');">显示长度</span>
+<span class="aclick" onclick="selected_keys_lsm('remove');">移除</span>
+</p>
+</form>
+</td>
+</tr>
+<tr><td colspan=2>
+<textarea id="textarea_lsm_status"></textarea>
+</td></tr>
+</table>
+</div>
+<div id="divhtml" style="margin:0 0.5rem;"></div>
+<script>
+pwa_register_b('lsm_service_worker.js','LSM','textarea_lsm_status','value');
+
+init_lsm();
+</script>
+<script>
+track_source_b('LSM',false);
+</script>
+</div>
+</body>
+</html>

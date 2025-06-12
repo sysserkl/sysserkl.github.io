@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>😵 wordle</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','en_de_str','eng','wiki','idb'],[],['words/senior_high_school_en_data.js','words/cet6_en_data.js']);
+</script>
+<script src="enwords_wordle_code.js"></script>
+<script>
+//-----------------------
+//history
+//0.0.1-20220203
+//-----------------------
+var length_wordle_global=0;
+var times_wordle_global=0;
+var corrected_wordle_global=0;
+var current_id_wordle_global='';
+var current_word_wordle_global=[];
+var current_list_wordle_global=[];
+
+css_root_style_b('18','14',['base','menu'],[],1);
+en_word_temp_get_b();
+</script>
+<script>
+style_generate_b(p_enwords_sentence_style_b(false),true,'style','head');
+</script>
+<style>
+.div_wordle,.div_done {border:0.1rem dotted; border-radius:1rem;}
+.div_wordle {cursor:pointer;}
+.div_wordle,.div_done,.div_space {position:relative;float:left; font-size:1.5rem;padding:0.5rem 1rem; margin:0.2rem; font-weight:bold;}
+.td_button_wordle {font-size:1.4rem;cursor:pointer;font-weight:bold;padding:0.5rem 1rem;border:0.1rem dotted;border-radius:1rem;}
+</style>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<h2 style="margin:0;"><span id="span_title">wordle</span>
+<span style="font-weight:normal;">
+<span class="aclick" onclick="generate_wordle();">generate</span>
+<span class="aclick" onclick="generate_wordle(true);">answer</span>
+</span>
+<span id="span_times_wordle" style="font-size:1.2rem;"></span>
+</h2>
+<p style="margin-bottom:0.5rem;">
+
+</p>
+<div style="margin:0.5rem;">
+
+<table><tr><td id="td_content" align=center>
+</td>
+<tr><td align=center>
+<hr />
+<p><table id="table_buttons" width=1 cellspacing=5 align=center></table></p>
+</td></tr></table>
+
+<div id="div_info_ewordle" style="margin-bottom:3rem;"></div>
+</div>
+<script>
+init_wordle();
+track_source_b('wordle',false);
+</script>
+</body>
+</html>

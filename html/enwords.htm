@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>单词测试</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date','eng','enbook','enwc','wiki','flot','en_de_str','idb'],[],[],['enwords_code.js'],true);
+</script>
+<script>
+import_enwords_data_b();
+</script>
+<script>
+klbase_addons_import_js_b([],[],['bible_quote/bible'+randint_b(1,12)+'_fav_data.js']);
+</script>
+<script>
+flot_import_js_b(['time','symbol'],true);
+</script>
+<script src="../../../../data/klquotes_data.js"></script>
+<script>
+css_root_style_b('17.2','13',['base','menu'],[],1);
+en_style_b(false);
+</script>
+<link rel="manifest" href="enwords.webmanifest" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<script>
+mobile_style_enwc_b();
+</script>
+<a name=top></a>
+<h2 style="margin-top:0px;font-size:1.2rem;">
+<span id="span_title" onclick="showhide_enwc_b();" style="cursor:pointer;">单词测试</span> 
+<span id="countwords" style="font-size:0.7rem;cursor:pointer;" onclick="words_count_enwords_b();" title=''></span> <!--行中 title='' 不可少 - 保留注释-->
+</h2>
+<div id='div_show_hide' style="display:block;margin:0rem 0.5rem;">
+<p class=minisize2><span id=span_days style="cursor:pointer;" onclick="popup_show_hide_b('popup_eng_days');"></span></p>
+<p>起始行号：<input type="number" id="input_lineno" style="width:3.5rem;" value=1 onkeyup="if (event.key=='Enter'){getlines_enwc_b();}" /> 的 
+<input type="number" id="input_lines" style="width:3.5rem;" value=40 onkeyup="if (event.key=='Enter'){getlines_enwc_b();}" /> 行记录
+<span class="aclick" onclick="getlines_enwc_b();">显示</span>
+<span class="aclick" onclick="popup_show_hide_b('span_checkboxes','');">⚙</span>
+<span id="span_checkboxes" style="display:none;">
+<label><input type="checkbox" id="input_s_word" checked />单词</label>
+<label><input type="checkbox" id="input_s_p" />音标</label>
+<label><input type="checkbox" id="input_s_def" checked />释义</label>
+<label><input type="checkbox" id="check_hide_no" />隐藏序号</label>
+<label><input type="checkbox" id="check_hide_lineno" checked />隐藏行号</label>
+<label><input type="checkbox" id="check_hide_similarno" checked />隐藏相似号</label>
+返回结果最大数量：<input type="number" id="input_max_result" style="width:5rem;" min=1 value=500 />
+<label><input type="checkbox" id="check_js_wiki" />js_wiki</label>
+</span>
+<input type="number" id="input_month" style="width:3rem;" onkeyup="if (event.key=='Enter'){get_day_words_enwc_b('','','old');}" max=12 min=1 />月
+<input type="number" id="input_day" style="width:3rem;" onkeyup="if (event.key=='Enter'){get_day_words_enwc_b();}" max=31 min=1 />日
+<span class="aclick" onclick="get_day_words_enwc_b('','','old');">旧单词</span>
+</p>
+<a name=content></a>
+<p>
+<input type="text" id="input_search" autocomplete="off" onkeyup="if (event.key=='Enter'){search_similar_new_sentence_kle();}" />
+<select id="select_search_more_enwords" style="height:2rem;">
+<option></option>
+<option>相似</option>
+<option>例句</option>
+<option>链接</option>
+</select>
+<span class="aclick" onclick="search_similar_new_sentence_kle();">Search</span> 
+</p>
+<div id="div_recent_search" style="font-size:0.85rem;margin:0.5rem 0rem;line-height:1.8rem;"></div>
+</div>
+<div id="divhtml"></div>
+<script>
+pwa_register_b('enwords_service_worker.js','enwords','countwords','html');
+
+//-----------------------
+init_kle();
+</script>
+<a name=footer></a>
+</body>
+</html>

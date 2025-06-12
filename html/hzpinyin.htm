@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>hzpy</title>
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','en_de_str'],[],['jieba_pb_dict_data.js,defer','words/hzpy_data.js','words/zh_tw_data.js','words/cnwords_data.js','words/cn_idoim_data.js','words/cn_ci_data.js','words/cn_s2t_data.js','words/cn_t2s_data.js','words/unicode_overlape_data.js','words/hz3500_data.js','words/cn_chaizi_data.js'],['hzpinyin_ico/hzpy512.png']);
+</script>
+<script src="hzpinyin_code.js"></script>
+<script>
+//-----------------------
+//history
+//0.0.2-20210506 增加简繁对应、注释、半拼音化
+//0.0.1-20200229
+//-----------------------
+unicode_overlape_global=unicode_overlape_global.slice(0,303);
+
+css_root_style_b('18','10',['base','menu'],[],1);
+</script>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<h2 id="h2_title" style="margin:0rem;font-size:1.35rem;">hzpy</h2>
+<div style="margin:0.5rem;">
+<p><span id="span_info"></span></p>
+<form id="form_hzpy" method="POST" target=_blank>
+<textarea id="textarea_search_hzpy" name="textarea_search_hzpy" style="width:90%;height:20rem;"></textarea>
+<p>
+<span class="aclick" onclick="search_hzpy();">Search</span>
+<span class="aclick" onclick="half_py_hzpy();">半拼音化</span>
+<span class="aclick" onclick="half_py_hzpy('s2t');">繁体化</span>
+<span class="aclick" onclick="half_py_hzpy('overlape');">重叠码</span>
+<span class="aclick" onclick="half_py_hzpy('pronunciation');">同音字</span>
+
+<input type="number" id="input_half_py_probability" placeholder="半拼音化几率" min=0 max=1 step=0.1 value=1 />
+每行字数：<input type="number" id="input_amount_per_col" min=1 value=15 />
+delimiter: <input type="text" id="input_delimiter" />
+<select id="select_vertical_str_hzpy">
+<option>top</option>
+<option>bottom</option>
+<option>center</option>
+</select>
+<label><input type="checkbox" id="checkbox_replace_punctuation" checked />替换书名号、破折号等符号</label>
+<label><input type="checkbox" id="checkbox_single_2_double" checked />半角转换为全角</label>
+<label><input type="checkbox" id="checkbox_add_space" checked />末尾破折号自动补全空格</label>
+<span class="aclick" onclick="vertical_str_hzpy();">纵向显示</span>
+<span class="aclick" onclick="temp_save_hzpy('write');">暂存</span>
+</p>
+<p id="p_buttons"></p>
+</form>
+<div id="div_recent_search" style="font-size:0.85rem;margin:0.5rem 0rem;line-height:1.8rem;"></div>
+<div id="divhtml" style="word-break:break-all;word-wrap:break-word;"></div>
+<div id="div_temp_save" style="margin-bottom:3rem;"></div>
+</div>
+<script>
+init_hzpy();
+</script>
+<script>
+track_source_b('pinyin',false,(ismobile_b()?'2rem':'1.3rem'));
+</script>
+</body>
+</html>

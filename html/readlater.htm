@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+<title>Read Later</title>
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date','en_de_str','flot','eng','rlater','image','idb','websites'],[],['jieba_pb_dict_data.js','words/enwords_count_sentence_data.js'],['readlater_code.js'],true);
+</script>
+<script>
+import_files_rlater(); 
+</script>
+<script>
+flot_import_js_b(['time','symbol'],true);
+</script>
+<script>
+var readlater_data_global=[];
+var readlater_host_global=[];
+var is_from_IDB_global=false;
+var delete_type_rlater_global='删除到iframe';
+var is_http_file_global=!is_file_type_b();
+var recentlength_global=50;
+
+css_root_style_b('18','14',['base','menu'],[],1);
+</script>
+<script>
+import_data_rlater();
+</script>
+<link rel="manifest" href="readlater.webmanifest" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<h2  id="h2_title" style="margin:0rem;font-size:1.35rem;">Read Later <span id="span_subtitle" style="font-size:0.8rem;font-weight:normal;"></span></h2>
+<div id="div_panel" style="padding:0.5rem;background-color:#EBEBEB;">
+<p>
+<input type="text" id="input_search" value=".*" onkeyup="if (event.key=='Enter'){search_websites_rlater();}">
+<label><input type="radio" name="radio_search_type" value="1" onclick="search_websites_rlater();">数组</label>
+<label><input type="radio" name="radio_search_type" value="2" checked onclick="search_websites_rlater();">链接</label>
+<label><input type="radio" name="radio_search_type" value="3" onclick="search_websites_rlater();">WIKI</label>
+最大返回结果数：<input type="number" id="input_max_rows" value=-1 min=-1 onkeyup="if (event.key=='Enter'){search_websites_rlater();}">
+<span class="aclick" onclick="host_count_rlater();">信息源</span> 
+<span class="aclick" onclick="random_pages_rlater(10);" title="随机打开10个页面">R10P</span>
+<span class="aclick" onclick="search_websites_rlater('',true,20);" title="随机显示20条记录">R20R</span>
+最大删除条数：<input type="number" id="input_max_delete_rlater" value=50 min=1>
+<select id="select_sort" style="height:1.5rem;" onchange="sort_rlater(this.value);">
+<option></option>
+<option>默认</option>
+<option>host</option>
+<option>href</option>
+<option>title</option>
+<option>length</option>
+<option>host_count</option>
+<option>random</option>
+<option>reverse</option>
+</select> 
+<span style="cursor:pointer;" ondblclick="alert(readlater_data_file_list_global.join('\n'));">数据来源：</span><span id ="span_data_from">JS文件</span> <span id ="span_idb_status" style="font-weight:bold;cursor:pointer;" ondblclick="this.innerHTML='';"></span>
+</p>
+<div id="div_recent_search" style="line-height:1.8rem;"></div>
+<section id="section_jieba" style="max-height:20rem;overflow:auto;line-height:1.8rem;"></section>
+</div>
+<div id="div_search_links" style="margin:0.5rem;"></div>
+<textarea id="textarea_for_copy" style="display:none;"></textarea>
+<script>
+pwa_register_b('readlater_service_worker.js','Readlater','span_subtitle','html');
+//-----------------------
+//history
+//1.6.7-20200512 增加收藏时添加标签功能
+//1.6.6-20200329 增加IDB备份
+//1.6.5-20200302 增加随机打开10个网址
+//1.6.4-20200223 记录最近查询，并去掉常用搜索
+//1.6.3-20190527
+//1.6.2-20181124
+//-----------------------
+init_style_rlater();
+if (!is_firefox_b(true)){
+    blank_page_b();
+}
+</script>
+</body>
+</html>

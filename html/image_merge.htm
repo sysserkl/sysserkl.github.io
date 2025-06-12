@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Image Merge</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','image'],[],[],['image_merge_ico/image_merge512.png']);
+</script>
+<script src="image_merge_code.js"></script>
+<script>
+//-----------------------
+//history
+//0.0.1-20210911
+//-----------------------
+var img_len_global=0;
+var img_file_list_global=[];
+var imagesLoaded_global = 0;
+
+css_root_style_b('18','13',['base','menu'],[],1);
+</script>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<a name=top></a>
+<h2 style="margin-top:0;font-size:1.3rem;"><span id="span_title">Image Merge</span> <span id="span_status" style="font-size:0.85rem;font-weight:normal;"></span> <span id="span_canvas_info" style="font-size:0.85rem;font-weight:normal;"></span></h2>
+<div id="div_form" style="margin:0.5rem;">
+<p>Select Images: 
+<input type="file" id="input_img" multiple>
+<span class="aclick" onclick="upload_merge_img();">Upload Image</span>
+max width: <input type="number" id="input_max_width" value=-1 />
+max height: <input type="number" id="input_max_height" value=-1 />
+span: <input type="number" id="input_span" value=10 />
+margin: <input type="number" id="input_margin" value=10 />
+background color: <input type="text" id="input_bgcolor" value="white" />
+<select id="select_vh">
+<option>vertical</option>
+<option>horizontal</option>
+</select>
+
+<select id="select_align">
+<option value="c">center/middle</option>
+<option value="l">left/top</option>
+<option value="r">right/bottom</option>
+</select>
+
+<span class="aclick" onclick="sort_merge_img('asc');">ASC</span>
+<span class="aclick" onclick="sort_merge_img('desc');">DESC</span>
+
+<span class="aclick" onclick="read_merge_img();">Refresh</span>
+</div>
+<div id="divhtml" style="margin:0.5rem;"></div>
+<canvas id="canvas" style="display:none;"></canvas>
+<script>
+init_merge_img();
+</script>
+<a name=footer></a>
+</body>
+</html>

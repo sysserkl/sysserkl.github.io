@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>👁 Book Search JS</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+//-----------------------
+//history
+//0.0.1-20210822
+//-----------------------
+klbase_addons_import_js_b(['css','books','eng','enbook','txtlistsearch','ebs','date','idb','wiki'],[],['words/enwords_count_sentence_data.js'],['book_search_js_code.js']);
+</script>
+<script>
+var en_words_temp_important_global=[];
+var csbookname_global='';
+
+var content_file_found_global=[];
+var digest_file_found_global=[];
+var book_tag_global='all';
+load_current_book_b(false,true,true,true);
+</script>
+<script>
+css_root_style_b('18','13',['base','menu'],[],1);
+</script>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<a name=top></a>
+<h2 style="margin-top:0px;font-size:1.2rem;"><span id="span_title" style="cursor:pointer;">Book Search JS</span> <span id="readingdata" style="font-size:1rem;font-weight:normal;"></span></h2>
+<div style="margin:0.5rem;">
+<p>
+<input type="text" id="input_search" placeholder="Search" onkeyup="if (event.key=='Enter'){search_ebsjs(this.value);}" />
+<label><input type="checkbox" id="input_only_eng" checked />英语单词</label>
+书名过滤：<input type="text" id="input_book_filter" onclick="if (event.key=='Enter'){search_batch_ebsjs();}" />
+</p>
+<div id="div_batch_search_ebs" style="display:none;">
+<p><textarea id="textarea_batch_search_ebs" style="height:10rem;"></textarea></p>
+<p id="p_buttons_ebs"><span class="aclick" onclick="search_batch_ebsjs();">搜索</span> <span class="aclick" onclick="hide_batch_search_form_ebs_b();">关闭</span></p>
+</div>
+
+<div id="div_recent_search" style="font-size:0.85rem;margin:0.5rem 0rem;line-height:1.8rem;"></div>
+<div id="divhtml"></div>
+</div>
+<script>
+init_ebsjs();
+menu_ebs_b();
+</script>
+<a name=footer></a>
+</body>
+</html>

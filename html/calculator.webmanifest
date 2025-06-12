@@ -1,0 +1,30 @@
+{
+  "background_color": "transparent",
+  "description": "KL Calculator",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "calculator_ico/calculator512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },  
+    {
+      "src": "calculator_ico/calculator256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "calculator_ico/calculator128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "calculator_ico/calculator64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }        
+  ],
+  "name": "KL Calculator",
+  "short_name": "KL Calc",
+  "start_url": "calculator.htm"
+}

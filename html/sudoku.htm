@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+<title>Sudoku</title>
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','en_de_str'],[],['sudoku_data.js'],['sudoku_ico/sudoku512.png']);
+</script>
+<script src="sudoku_code.js"></script>
+<script>
+//-----------------------
+//history
+//0.0.3-20190620
+//0.0.2-20190615
+//0.0.1-20140111
+//-----------------------
+css_root_style_b('15','10',['base'],[],1);
+</script>
+<link href="../recent_info.css" type="text/css" rel="stylesheet" />
+<script>
+var font_size_sd_global=2.5;
+var empty_sd_global="&nbsp;&nbsp;";
+var td_no_sd_global='';
+var state_count_sd_global=0;
+var current_sd_global='';
+
+style_sd();
+</script>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<h2 style="margin:1rem;"><span class="headline_on">Sudoku</span></h2>
+<div id="klsudokuno" style="margin:0.5rem;"></div>
+<div id="klsudoku" style="margin:0.5rem;"></div>
+<p style="margin:1rem;"><span id="span_state" style="font-weight:300;font-size:1rem;"></span></p>
+<script>
+input_range_sd();
+random_sd();
+</script>
+<script>
+track_source_b('sudoku',false);
+</script>
+</body>
+</html>

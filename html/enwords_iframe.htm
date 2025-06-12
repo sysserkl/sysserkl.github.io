@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>单词搜索</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css'],[],['words/enwords_data.js']);
+</script>
+<script>
+css_root_style_b('14','11',[],[],1);
+</script>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body style="margin:0px;">
+<div id="divhtml" style="word-break:normal;word-wrap:normal;"></div>
+<script>
+function search_word_eniframe(csword){
+    for (let item of enwords){
+        if (item[0]==csword){
+            document.getElementById('divhtml').innerHTML='<big><font color=blue><b>'+item[0]+'</b></font></big> <font color=brown>'+item[1]+'</font> '+item[2];
+            break;
+        }
+    }
+}
+//-----------------------
+var cskeys=href_split_b(location.href);
+for (let item of cskeys){
+    if (item.substring(0,2)=='s='){
+        csword=item.substring(2,).trim();
+        search_word_eniframe(csword);
+        break;
+    }
+}
+</script>
+</body>
+</html>

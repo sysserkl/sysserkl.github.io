@@ -1,0 +1,15 @@
+pages:
+  stage: deploy
+  script:
+    - mkdir .public
+    - cp -r ./* .public
+    - rm -rf public
+    - mv .public public
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
+  environment:
+    name: pages
+    url: $CI_PAGES_URL

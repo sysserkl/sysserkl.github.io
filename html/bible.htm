@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>✝ ️Bible (KJV&amp;ChiUns)</title>
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date','eng','enbook','en_de_str','idb'],[],['bible_web_sites_data.js'],['bible_code.js']);
+</script>
+<link rel="manifest" href="bible.webmanifest" />
+<script>
+css_root_style_b('18','9.5',['base','menu'],[],1);
+load_style_bible();
+</script>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<a name="top"></a>
+<h2 id="h2_title" style="margin:0rem;font-size:1.8rem;"><span id="span_title" style="cursor:pointer;" onclick="rand_chapter_list_bible();" title="随机读取">️Bible</span></h2>
+<div id="div_buttons" style="margin:0.5rem;">
+<input type="text" id="input_bible_search" placeholder="圣经搜索" onkeyup="if (event.key=='Enter'){search_bible();}" />
+<div id="div_recent_search" style="margin-top:0.3rem;line-height:180%;"></div>
+<p style="line-height:2.8rem;">
+<select id="select_chapter" style="max-width:15rem;height:2.5rem;" onchange="document.getElementById('select_chapter_cn').value=this.value;minor_options_bible(this.value);"></select>
+<select id="select_chapter_cn" style="max-width:10rem;height:2.5rem;" onchange="document.getElementById('select_chapter').value=this.value; minor_options_bible(this.value);"></select>
+<select id="select_sub" style="max-width:4rem;height:2.5rem;" onchange="sub_start_change_bible(this);"></select>
+<select id="select_end_sub" style="max-width:4rem;height:2.5rem;" onchange="sub_end_change_bible(this);"></select>
+</p>
+</div>
+<div id="divhtml"><h2>Loading...</h2><h3>数据载入中，请稍后...</h3></div>
+<div id="div_status" style="font-size:0.8rem;margin:0.5rem;">
+<span id="span_status" style="cursor:pointer;" ondblclick="this.innerHTML='';"></span>
+<select id="select_outside_links" onchange="web_site_open_bible(this.value);"></select>
+<span id="span_is_readed_bible" class="span_box" onclick="read_set_bible();"></span>
+</div>
+<script>
+pwa_register_b('bible_service_worker.js','Bible','span_status','html');
+//-----------------------
+load_var_bible();
+track_source_b('bible',false);
+</script>
+</body>
+</html>

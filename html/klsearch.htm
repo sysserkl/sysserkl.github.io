@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>KLSearch</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+var search_sites_list_kl_global=[];
+klbase_addons_import_js_b(['css','en_de_str'],['gbk.js'],['search_sites_pb_data.js'],['klsearch_ico/klsearch512.png','klsearch_code.js','../../../../data/search_sites_kl_data.js']);
+</script>
+<script>
+var user_remote_host_klsearch_global=false;
+
+css_root_style_b('18','12',['base','menu'],[],1);
+//history
+//0.0.3-20210605 支持 iframe
+//0.0.2-20201025 增加批量搜索
+//0.0.1-20200916 搜索链接外置
+</script>
+<style>
+div#div_search p{font-size:1.15rem;}
+</style>
+<link rel="manifest" href="klsearch.webmanifest" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<div id="div_title_klsearch">
+<input type="text" id="input_searchtxt" placeholder="输入查询字符串，如%s">
+<label><input type="checkbox" id="checkbox_openwindow" checked />打开</label>
+<span id="span_info"></span>
+</div>
+<div id="div_recent_search" style="margin:0.5rem;line-height:180%;"></div>
+<div id="div_search" style="margin:0.5rem;"></div>
+<div id="div_status" style="margin:0.5rem;font-size:0.8rem;color:grey;"></div>
+<script>
+pwa_register_b('klsearch_service_worker.js','klsearch','span_info','html');
+
+track_source_b('klsearch',false);
+init_klsearch();
+</script>
+</body>
+</html>

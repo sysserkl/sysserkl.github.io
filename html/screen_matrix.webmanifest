@@ -1,0 +1,25 @@
+{
+  "background_color": "transparent",
+  "description": "KL Matrix",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "screen_matrix_ico/screen_matrix256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "screen_matrix_ico/screen_matrix128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "screen_matrix_ico/screen_matrix64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }        
+  ],
+  "name": "KL Matrix",
+  "short_name": "KMatrix",
+  "start_url": "screen_matrix.htm"
+}

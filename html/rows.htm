@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>KL rows</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','en_de_str','date','rows','eng'],['html2canvas.js'],['jieba_pb_dict_data.js'],['rows_ico/rows512.png']);
+</script>
+<script src="rows_code.js"></script>
+<script>
+//-----------------------
+//history
+//0.0.8-20211117 页框化
+//0.0.7-20180301
+//-----------------------
+css_root_style_b('17','11',['base','menu'],[],1);
+</script>
+<link rel="manifest" href="rows.webmanifest" />
+<style>
+#textarea_rows_content{width:100%;height:26rem;font-size:1rem;padding:10px;}
+div.div_leaflet{border:0.1rem dotted grey; border-radius:1rem; padding:0.2rem 0.5rem;}
+</style>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<h2 style="margin-top:0px;font-size:1.3rem;"><span id="span_title">KL Rows</span></h2>
+<div style="margin:0 0.5rem;">
+<form method="POST" action="" name="form_content_klr" target=_blank>
+<textarea name="textarea_rows_content" id="textarea_rows_content" style="width:90%;"></textarea>
+<p>
+<span class="aclick span_leaflet" id="span_leaflet_insert" onclick="leaflet_klr2('insert')">插入</span>
+<span class="aclick span_leaflet" id="span_leaflet_lineno" onclick="leaflet_klr2('lineno')">行号</span>
+<span class="aclick span_leaflet" id="span_leaflet_duplicate" onclick="leaflet_klr2('duplicate')">重复</span>
+<span class="aclick span_leaflet" id="span_leaflet_filter" onclick="leaflet_klr2('filter')">筛选</span>
+<span class="aclick span_leaflet" id="span_leaflet_replace" onclick="leaflet_klr2('replace')">替换</span>
+<span class="aclick span_leaflet" id="span_leaflet_remove" onclick="leaflet_klr2('remove')">移除</span>
+<span class="aclick span_leaflet" id="span_leaflet_random" onclick="leaflet_klr2('random')">随机</span>
+<span class="aclick span_leaflet" id="span_leaflet_group" onclick="leaflet_klr2('group')">分组</span>
+<span class="aclick span_leaflet" id="span_leaflet_group" onclick="leaflet_klr2('en')">EN</span>
+
+<span class="aclick" onclick="add_to_html_klr_b();">显示为 HTML</span>
+<span class="aclick" onclick="add_to_html_klr_b('textarea_rows_content','div#divhtml',true)">执行 JavaScript</span>
+<span class="aclick" onclick="blank_rows_add_klr_b();">add blank rows</span>
+<span class="aclick" onclick="strquick_klr_b('space2underline');">空格转换为下划线</span>
+<span class="aclick" onclick="strquick_klr_b('count');">字数、行数统计</span>
+常用操作：<select id="oquick" style="width:150px;"></select>
+<span class="aclick" onclick="strquick_klr_b(document.getElementById('oquick').value);">执行</span>
+<span class="aclick" onclick="temp_save_klr2('write','textarea_rows_content');">暂存</span>
+</p>
+
+<div id="div_leaflet_insert" class="div_leaflet">
+在每一行的前面插入字符串：<input type="text" id="taddstr1" />
+在每一行的后面插入字符串：<input type="text" id="taddstr2" />
+<span class="aclick" onclick="do_type_klr2('插入');">插入</span>
+常用：<select id="select_leaflet_insert_common"></select>
+<span class="aclick" onclick="insert_common_klr2();">选择</span>
+</div>
+
+<div id="div_leaflet_lineno" class="div_leaflet">
+在每一行的 <select id="fwhere"> 
+<option value=1>前面</option>
+<option value=2>末尾</option>
+</select>
+插入行号：起始数字：<input type="number" id="tno1" value=1 />
+位数：<input type="number" id="tno2" value=1 />
+<span class="aclick" onclick="do_type_klr2('行号');">插入行号</span>
+<span class="aclick" onclick="do_type_klr2('ed2k');">ed2k</span>
+<span class="aclick" onclick="do_type_klr2('magnet');">magnet</span>
+<span class="aclick" onclick="do_type_klr2('ffmpeg_combine');">ffmpeg combine</span>
+起始日期：<input type="text" id="input_date_start_klr2" />
+step：<input type="number" id="input_date_step_klr2" value=1 />
+<select id="select_date_step_ymd_klr2"><option value='d'>日</option><option value='m'>月</option><option value='y'>年</option></select>
+日期格式：<input type="text" id="input_date_format_klr2" value="%y-%2m-%2d" />
+
+<span class="aclick" onclick="do_type_klr2('date');">插入日期</span>
+</div>
+
+<div id="div_leaflet_duplicate" class="div_leaflet" />
+将当前内容重复 <input type="number" id="tcopy" value=1 />&nbsp;次
+<span class="aclick" onclick="do_type_klr2('重复');">执行</span>
+</div>
+
+<div id="div_leaflet_filter" class="div_leaflet">
+<select id="oget1">
+<option value="sel">提取</option>
+<option value="del">删除</option>
+</select>
+<select id="oget2">
+<option value="in">包含</option>
+<option value="out">不含</option>
+</select>
+<input type="text" id="oget3" />
+的行
+<span class="aclick" onclick="do_type_klr2('筛选');">筛选</span>
+</div>
+
+<div id="div_leaflet_replace" class="div_leaflet">
+替换 <input type="text" id="rep1" /> 为 <input type="text" id="rep2" />
+<input type="text" id="input_reg_type_klr2" style="width:4rem;" placeholder="i|m|g" value="img">
+<span class="aclick" onclick="do_type_klr2('替换');">执行</span>
+常用：<select id="select_leaflet_replace_common"></select>
+<span class="aclick" onclick="replace_common_klr2();">选择</span>
+</div>
+
+<div id="div_leaflet_remove" class="div_leaflet">
+移除
+<select id="char_o">
+<option value="begin">行首</option>
+<option value="end">行尾</option>
+</select>
+<input type="number" id="char_t" value=1 />&nbsp;个字符
+<span class="aclick" onclick="do_type_klr2('移除');">执行</span>
+</div>
+
+<div id="div_leaflet_random" class="div_leaflet">
+<input type="number" id="input_rnd_lines" min=1 value=1 />行，
+每行字数：<input type="number" id="input_rnd_count_min" min=1 value=1 /> 
+——<input type="number" id="input_rnd_count_max" min=1 value=1 /> 
+<span class="aclick" onclick="do_type_klr2('随机中文');">随机中文</span> 
+<span class="aclick" onclick="do_type_klr2('随机英文');">随机英文</span> 
+<span class="aclick" onclick="do_type_klr2('随机字符');">随机字符</span> 
+</div>
+
+<div id="div_leaflet_group" class="div_leaflet">
+每 <input type="number" id="input_line_interval" value=100 />&nbsp;行，
+插入一行(序号:NO)：<input type="text" id="input_new_line" /> 
+<span class="aclick" onclick="do_type_klr2('分组');">插入</span> 
+</div>
+
+<div id="div_leaflet_en" class="div_leaflet">
+</div>
+
+<p id="p_buttons_1" align=right></p>
+</form>
+<p id="p_version" align=right></p>
+<form method="POST" action="" name="form_status_klr" target=_blank>
+<textarea name="textarea_status"  id="textarea_status" style="width:90%;height:10rem;"></textarea>
+<p id="p_buttons_2" align=right></p>
+</form>
+</div>
+<div id="divhtml" style="margin:0 0.5rem;"></div>
+<div id="div_temp_save" style="margin:0 0.5rem;"></div>
+<div id="div_status" style="margin:0 0.5rem;"></div>
+<script>
+pwa_register_b('rows_service_worker.js','rows','textarea_status','value');
+init_klr2();
+</script>
+<script>
+track_source_b('rows',false);
+</script>
+</body>
+</html>

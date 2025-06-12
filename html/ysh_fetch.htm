@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>YSH JSON Fetch</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date','en_de_str','idb']);
+</script>
+<script src="ysh_fetch_code.js"></script>
+<script>
+//-----------------------
+//history
+//0.0.1-20231110
+//-----------------------
+var raw_data_ysh_jf_global=[];
+var current_result_ysh_jf_global=[];
+var rows_per_page_ysh_jf_global=10;
+
+css_root_style_b('18','13',['base','menu'],[],1);
+</script>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<h2 style="margin-top:0px;font-size:1.2rem;"><span id="span_title">YSH JSON Fetch</span> <span id="span_count" style="font-weight:normal;font-size:0.9rem;"></span></h2>
+
+<div style="margin:0.5rem;">
+<p>查询内容：<input type="text" id="input_search" onkeyup="if (event.key=='Enter'){date_fetch_ysh_jf();}" /></p>
+<p>apikey: <input type="text" id="input_apikey" onkeyup="if (event.key=='Enter'){date_fetch_ysh_jf();}" /></p>
+
+<p>fetch 条数： <input type="number" id="input_count" onkeyup="if (event.key=='Enter'){date_fetch_ysh_jf();}" min=1 max=100 value=10 />
+<span class="aclick" onclick="date_fetch_ysh_jf();">fetch</span>
+</p>
+
+<div id="div_recent_search" style="font-size:0.85rem;margin:0.5rem 0rem;line-height:1.8rem;"></div>
+
+<div id="divhtml"></div>
+</div>
+<script>
+init_ysh_jf();
+</script>
+</body>
+</html>

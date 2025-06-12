@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Reader</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date','books','eng','enbook','en_de_str','wiki','flot','txtlistsearch','idb'],[],['words/enwords_count_sentence_data.js','words/cnwords_data.js,defer'],[],true);
+</script>
+<script>
+load_current_book_b(false,true,true,true);
+</script>
+<script>
+flot_import_js_b(['time','symbol']);    //用于显示阅读进度 - 保留注释
+</script>
+<script>
+//-----------------------
+//history
+//0.0.1-20190628
+//-----------------------
+css_root_style_b('17','14',['base','menu'],[],1);
+var en_words_temp_important_global=[];
+var csbookname_global='';
+</script>
+<style>
+.txtsearch_kltxt_lineno {color:#707070;font-size:0.8rem}
+i {border-bottom:0.15rem dashed tomato;}
+</style>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<a name=top></a>
+<h2 style="margin-top:0px;"><span id="span_title" onclick="popup_show_hide_b('div_show_hide');" style="cursor:pointer;">Reader</span> - <span id=booktitle></span><span id=readingdata></span></h2>
+<div id='div_show_hide' style="display:block;margin:0rem 0.5rem;">
+<script>
+var book_tag_global='all';
+mobile_style_kltxt_b();
+</script>
+
+<script>
+var cskeys=href_split_b(location.href);
+var kltxt_menulist_index_global=[];
+
+booklist_source_config_b();
+import_book_kltxt_b(cskeys);
+</script>
+<p id="p_book_list" style="line-height:150%;"></p>
+<p>
+<input type="text" id="input_search" onkeyup="if (event.key=='Enter'){search_klreader();}">
+<label><input type="checkbox" id="input_reg">正则</label>
+<span class="aclick" onclick="search_klreader();">Search</span>
+<span class="aclick" onclick="booksearch_kltxt_b();">书目</span>
+<span class="aclick" onclick="popup_show_hide_b('span_checkboxes_txtbook','');">⚙</span>
+<span id="span_checkboxes_txtbook" style="display:none;"></span>
+<span id="span_lines_config_txtbook"></span>
+<select id="select_menu" style="max-width:15rem;" onchange="findmenu_kltxt_b(this.value);"></select>
+</p>
+<div id="div_recent_search" style="line-height:1.8rem;"></div>
+</div>
+<div id="div_cn_words"></div>
+<a name=content></a>
+<input type="number" id="input_lineno" style="display:none;" value=1>
+<input type="number" id="input_lines" style="display:none;" value=20>
+</p>
+
+<div id="divhtml"></div>
+<div id="divhtml2"></div>
+<script>
+init_kltxt_b('reader',cskeys);
+//-----------------------
+function search_klreader(csstr=''){
+    var ocheck=document.getElementById('check_hide_lineno');
+    ocheck.checked=false;
+    if (csstr==''){
+        txtsearch_kltxt_b();
+    } else {
+        txtsearch_kltxt_b(csstr);
+    }
+    ocheck.checked=true;
+}
+//-----------------------
+</script>
+<a name=footer></a>
+<script>
+track_source_b('reader',false);
+if (!is_firefox_b(false)){
+    blank_page_b(false,false,false);
+}
+</script>
+</body>
+</html>

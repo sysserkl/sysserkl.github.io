@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date','rank','flot'],[],[],['qs_university_code.js'],true);
+</script>
+<script>
+flot_import_js_b(['pie','symbol']);
+</script>
+<script>
+var qs_region_global='';
+var qs_university_raw_global=[];
+args_qs_rank();
+</script>
+<script>
+klbase_addons_import_js_b([],[],['qs_university_'+qs_region_global+'_data.js'],[],false);
+</script>
+<script>
+//-----------------------
+//history
+//0.0.1-20210711
+//-----------------------
+var search_result_qs_rank_global=[];
+
+css_root_style_b('18','10.5',['base','menu'],[],1);
+</script>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<a name=top></a>
+<div id="div_buttons"></div>
+<div id="divhtml" style="margin:0.5rem;"></div>
+<div id="div_status" style="margin:0.5rem;"></div>
+<a name=footer></a>
+<script>
+init_qs_rank();
+</script>
+<script>
+track_source_b('qs_rank',false);
+</script>
+</body>
+</html>

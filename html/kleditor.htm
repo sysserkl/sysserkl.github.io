@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>📝 KLEditor</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','en_de_str','rows','image'],[],['imgs_kleditor_data.js']);
+</script>
+<script src="kleditor_code.js"></script>
+<script>
+//-----------------------
+//history
+//0.0.3-20220327 转换emoji；支持图片缩小
+//0.0.2-20220208 增加加密保存；增加图片转换为base64
+//0.0.1-20200721
+//-----------------------
+css_root_style_b('18','13',['base','menu'],[],1);
+</script>
+<style>
+img.img_link {cursor: pointer;}
+#div_text_box {width: 90%; height: 23rem; border: 0.1rem #000000 solid; padding: 0.5rem; overflow: scroll;}
+#div_text_box #sourceText {padding: 0; margin: 0; min-width: 90%; min-height: 15rem;}
+select {max-width:8rem;margin:0.05rem;}
+</style>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<a name=top></a>
+<h2 style="font-size:1.35rem;margin:0 0 0.5rem 0;"><span id="span_title">KLEditor</span> <span id="span_info" style="font-size:1rem;font-weight:normal;"></span></h2>
+<form name="compForm" style="margin-left:0.5rem;"> <!--method="post" action="sample.php" onsubmit="if (validate_mode_kleditor()){this.myDoc.value=odiv_text_global.innerHTML;return true;}return false;">--> <!--此行保留-->
+<div style="font-size:0.9rem;">
+<select id="select_title" onchange="select_kleditor('formatblock',this.value);"></select>
+<select id="select_font" onchange="select_kleditor('fontname',this.value);"></select>
+<select id="select_size" onchange="select_kleditor('fontsize',this.value);"></select>
+<select id="select_color" onchange="select_kleditor('forecolor',this.value);"></select>
+<select id="select_bgcolor" onchange="select_kleditor('backcolor',this.value);"></select>
+</div>
+<div id="div_buttons" style="margin-top:0.5rem;margin-bottom:0.5rem;">
+<span class="oblong_box" onmouseover="selection_kleditor();" onclick="table_kleditor();">table</span>
+<span class="span_box" style="font-weight:bold;" onmouseover="selection_kleditor();" onclick="format2_kleditor('b');">B</span>
+</div>
+<div id="div_text_box" contenteditable="true"><p>Hello World</p></div>
+<p style="margin-top:0.5rem;">
+<label><input type="checkbox" name="switchMode" id="checkbox_switch" onchange="set_mode_kleditor(this.checked);" />Show HTML</label>
+</p>
+<!--p><input type="submit" value="Send" /></p> --><!--此行保留 - 保留注释-->
+</form>
+<a name=footer></a>
+<script>
+var odiv_text_global;
+var selection_global=false;
+init_kleditor();
+</script>
+</body>
+</html>

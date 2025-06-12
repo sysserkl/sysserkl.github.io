@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>⏰ Clock</title>
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date','slide']);
+</script>
+<script>
+//-----------------------
+//history
+//0.0.3-20200413 增加 PWA Cache 清除
+//0.0.2-20200403 支持秒表 和 PWA
+//0.0.1-20190523
+//-----------------------
+css_root_style_b('18','6',['base'],[],1);
+</script>
+<script src="screen_clock_code.js"></script>
+<link rel="manifest" href="screen_clock.webmanifest" />
+<style>
+html {height: 100%;}
+body {height: 100%;}
+#div_flex {
+    height: 100%;
+    width:100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#child {width: 100%; height: 100%; text-align: center;}
+</style>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<div id="div_flex">
+<div style="width:100%;"> 
+<div id="child"></div>
+</div>
+</div>
+<script>
+pwa_register_b('screen_clock_service_worker.js','Screen Clock','','');
+
+var odiv_global=document.getElementById('child');
+var font_size1_global=0;
+var font_size2_global=0;
+var fore_color_global='black';
+var backgounrd_color_global='tomato';
+var nosecond_global=false;
+var stopwatch_start_global=-1;
+
+init_clock();
+
+track_source_b('screen_clock',false);
+</script>
+</body>
+</html>

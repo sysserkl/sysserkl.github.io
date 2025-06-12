@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Array Analyze</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date','flot'],[],[],[],true);
+</script>
+<script>
+flot_import_js_b(['time','pie','symbol']);
+</script>
+<script src="array_analyze_code.js"></script>
+<script>
+//-----------------------
+//history
+//0.0.3-20190307
+//0.0.2-20180911
+//-----------------------
+var table_array_global=[];
+css_root_style_b('17','12',['base','menu'],[],1);
+</script>
+<style>
+#textarea_arrays{height:25rem;font-size:1rem;padding:0.5rem;}
+</style>
+<link rel="shortcut icon" href="array_analyze_ico/array_analyze512.png" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<h2 style="margin-top:0px;font-size:1.2rem;"><span id="span_title" style="cursor:pointer;" onclick="popup_show_hide_b('div_buttons_aa','');">Array Analyze</span></h2>
+<div style="margin:0.5rem;">
+<div id="div_buttons_aa">
+<label><input type="checkbox" id="checkbox_source" onchange="show_source_arr_anaylze(this.checked);" checked />source</label>
+<textarea id="textarea_arrays"></textarea>
+<table id="table_arrays" class="table_common" style="display:none;"></table>
+<p>
+指定列号1：<input type="text" id="input_column1">
+<span class="aclick" onclick="group_arr_analyze(true);">分组</span>
+<span class="aclick" onclick="group_arr_analyze(false);">排行</span>
+<span class="aclick" onclick="lower_arr_analyze();">小写</span>
+<span class="aclick" onclick="list_arr_analyze();">显示为清单</span>
+<span class="aclick" onclick="var_arr_analyze();">显示为数组</span>
+<span class="aclick" onclick="remove_arr_analyze(',');">移除指定列号的英文逗号</span>
+<span class="aclick" onclick="column_filter_arr_analyze();">列号筛选</span> (-剔除；+保留；用英文逗号间隔；列号从1开始，如：+7,+9)
+指定列号2：<input type="text" id="input_column2">
+<span class="aclick" onclick="group_sum_arr_analyze();">分组求和</span>
+</p>
+<p>
+间隔标记：<input type="text" id="input_interval" value="," />
+<span class="aclick" onclick="table_refresh_arr_analyze();">刷新</span>
+<span class="aclick" onclick="table_refresh_arr_analyze('add_col');">添加列</span>
+行数：<input type="number" id="input_row_count" min=2 step=1 value=2 />
+<span class="aclick" onclick="merge_rows_2_one_column_arr_analyze();">合并多行为一列</span>
+<span class="aclick" onclick="column2number_arr_analyze('int');">转换指定列为整数</span>
+<span class="aclick" onclick="column2number_arr_analyze('float');">转换指定列为浮点数</span>
+指定小数位数：<input type="number" id="input_fraction_length" value="">
+<span class="aclick" onclick="column2number_arr_analyze('fraction');">转换指定数值列为指定小数位数的字符列</span>
+</p>
+<p>
+<input type="text" id="input_filter" value="">
+<label><input type="checkbox" id="input_reg" />正则</label>
+<span class="aclick" onclick="str_filter_arr_analyze();">关键字筛选</span>
+总记录数：<span id="span_length" style="padding:5px;"></span>
+</p>
+</div>
+<p>
+<span class="aclick" onclick="flot_lines_data_arr_analyze();">转换为flot lines格式数组</span>
+<input type="text" placeholder="legend 名称" id="input_flot_legend_caption_aa" />
+<input type="text" placeholder="Y轴 名称" id="input_flot_y1unit_aa" />
+<select id="select_flot_aa">
+<option>flot lines</option>
+<option>flot lines date</option>
+<option>flot lines data format 2 array</option>
+<option>根据指定两个列号（time value cols）转换数组为 flot lines data format</option>
+<option>pie</option>
+<option>two lines</option>
+<option>two lines date</option>
+</select>
+<span class="aclick" onclick="data_2_flot_arr_analyze();">执行</span>
+<span class="aclick" onclick="data_2_flot_arr_analyze(true);">示例</span>
+<select id="select_flot_legend_position_aa">
+<option>nw</option>
+<option>ne</option>
+<option>sw</option>
+<option>se</option>
+</select>
+<select id="select_flot_date_type_aa">
+<option>y</option>
+<option>m</option>
+<option selected>d</option>
+</select>
+y轴1小数位数：<input type="number" id="input_flot_y1_fraction_length" value="0">
+y轴2小数位数：<input type="number" id="input_flot_y2_fraction_length" value="0">
+</p>
+<div id="divhtml" style="margin:0.5rem;"></div>
+<div id="div_flot" style="width:100%;height:500px;padding-bottom:2rem;display:none;"></div>
+</div>
+<script>
+init_arr_analyze();
+</script>
+</body>
+</html>

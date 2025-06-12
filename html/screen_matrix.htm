@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Matrix</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date','en_de_str','slide'],[],[],['screen_matrix_ico/screen_matrix256.png']);
+</script>
+<script src="screen_matrix_code.js"></script>
+<script>
+//-----------------------
+//history
+//0.0.1-20190707
+//-----------------------
+css_root_style_b('19','14',['base']);
+</script>
+<link rel="manifest" href="screen_matrix.webmanifest" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body style="background-color:black;">
+<script>
+pwa_register_b('screen_matrix_service_worker.js','Screen Matrix','','');
+
+var color_global='green';
+var bg_global='black';
+init_matrix();
+</script>
+<script>
+track_source_b('matrix',false);
+</script>
+</body>
+</html>

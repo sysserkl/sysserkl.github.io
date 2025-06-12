@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>💵 Money Plan</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css']);
+</script>
+<script src="money_plan_code.js"></script>
+<script>
+//-----------------------
+//history
+//0.0.1-20200803
+//-----------------------
+css_root_style_b('18','13',['base','menu'],[],1);
+</script>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<a name=top></a>
+<h2 style="margin:0 0.5rem;font-size:1.5rem;"><span id="span_title">💵 Money Plan</span></h2>
+<div id="div_form" style="margin:0.5rem;">
+<fieldset>
+<legend>定期存款/理财年利率(%)：</legend>
+<p>3年期：<input type="number" id="input_3year" min=0 value=2.5>
+2年期：<input type="number" id="input_2year" min=0 value=1.5>
+1年期：<input type="number" id="input_1year" min=0 value=1></p>
+</fieldset>
+<p>本金(万元)：<input type="number" id="input_principal" value=300></p>
+<p>
+<label><input type="radio" name="radio_money" value="1" checked>年消费额(万元)：</label><input type="number" id="input_year_expenditure" min=0 value=10 step=0.1>
+</p>
+<p><label><input type="radio" name="radio_money" value="2">消费年限(年)：</label><input type="number" id="input_year_count" min=1 max=100 value=50 step=1>
+</p>
+<p>第1年(公元)：<input type="number" id="input_first_year" min=2000></p>
+<p><span class="aclick" onclick="calc_mplan();">计算</span></p>
+</div>
+<div id="divhtml" style="margin-left:0.5rem;"></div>
+<script>
+init_mplan();
+</script>
+<script>
+track_source_b('money_plan',false,(ismobile_b()?'2rem':'1.3rem'));
+</script>
+<a name=footer></a>
+</body>
+</html>

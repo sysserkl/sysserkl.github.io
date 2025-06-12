@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>时局图</title>
+<script src="../hard_ln_io/klbase.js"></script>
+<script src="gps_news_code.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date','en_de_str','leaflet'],['leaflet/leaflet.css','leaflet/leaflet.js','leaflet_plugins/leaflet.ChineseTmsProviders.js'],['map/district_cn_geo_data.js','gps_news_data.js']);
+</script>
+<script>
+//-----------------------
+//history
+//0.0.1-20210622
+//-----------------------
+css_root_style_b('17','11',['base','menu'],[],1);
+</script>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<div id="div_gps_news">
+<div id="div_icon" style="display:inline;font-size:1.5rem;cursor:pointer;" onclick="current_position_gps_news();"></div>
+<div id="div_status" style="display:inline;font-size:1.5rem;cursor:pointer;word-break:break-all;word-wrap:break-word;" onclick="popup_show_hide_b('div_buttons');"></div> 
+<div id="div_buttons" style="display:none;"></div>
+</div>
+<div id="div_map"></div>
+<div id="div_selection" style="display:none;line-height:2rem;padding:2rem;border:0.1rem solid black;overflow:scroll;"></div>
+<script>
+var klmaps_global=[];
+var omap_gps_news_global;
+init_gps_news();
+</script>
+</body>
+</html>

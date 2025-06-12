@@ -1,0 +1,31 @@
+{
+  "background_color": "transparent",
+  "description": "Face to Face",
+  "display": "standalone",
+  "icons": [
+    {
+        "src": "f2f_ico/f2f512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    },
+    {
+        "src": "f2f_ico/f2f256.png",
+        "sizes": "256x256",
+        "type": "image/png"
+    },
+    {
+        "src": "f2f_ico/f2f128.png",
+        "sizes": "128x128",
+        "type": "image/png"
+    },
+    {
+        "src": "f2f_ico/f2f64.png",
+        "sizes": "64x64",
+        "type": "image/png"
+    }
+  ],
+  "name": "KL F2F",
+  "short_name": "F2F",
+  "start_url": "f2f.htm"
+}
+

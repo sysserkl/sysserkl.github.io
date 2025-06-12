@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>⛳ Long Term Plans</title>
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date']);
+</script>
+<script src="long_term_plans_code.js"></script>
+<link rel="manifest" href="long_term_plans.webmanifest" />
+<script>
+var long_term_plans_global=[];
+var ltp_sort_type_global='1a';
+var ltp_ls_name_global='list_long_term_plans';
+var recent_search_key_lt_plan_global='';
+
+css_root_style_b('19','13',['base','menu']);
+</script>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<a name="top"></a>
+<h2 id="h2_title" style="margin-top:0rem;font-size:1.3rem;"><span style="cursor:pointer;" ondblclick="init_lt_plans();">Long Term Plans</span> <span id="span_count" style="font-size:0.8rem;font-weight:normal;"></span></h2>
+<div id="divhtml">
+</div>
+<div id="div_status" style="font-size:0.8rem;color:grey;cursor:pointer;" ondblclick="this.innerHTML='';"></div>
+<script>
+pwa_register_b('long_term_plans_service_worker.js','Long Term Plans','div_status','html');
+
+menu_lt_plans();    //在 init_lt_plnas() 前 - 保留注释
+init_lt_plans();
+top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.4rem'));
+</script>
+<script>
+track_source_b('long_term_plans',false);
+</script>
+</body>
+</html>

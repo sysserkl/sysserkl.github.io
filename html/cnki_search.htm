@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>cnki search</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date','flot','en_de_str'],[],['jieba_pb_dict_data.js'],['cnki_search_code.js'],true);
+</script>
+<script>
+flot_import_js_b(['time','pie','symbol']);
+</script>
+<script>
+var cnki_article_list_raw_global=[];
+var current_result_cnki_global=[];
+var rows_per_page_cnki_global=100;
+var is_all_result_cnki_global=true;
+var sort_desc_cnki_global=false;
+var cnki_kl_list_global=[];
+var database_name_cnki_global='';
+load_cnki();
+</script>
+<script src="../../../../data/cnki_kl/cnki_kl_list_data.js"></script>
+<script>
+//-----------------------
+//history
+//0.0.1-20230311
+//-----------------------
+css_root_style_b('18','13',['base','menu'],[],1);
+</script>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<a name=top></a>
+<h2 style="margin-top:0px;font-size:1.2rem;"><span id="span_title">cnki search</span> <span id="span_count" style="font-weight:normal;font-size:0.9rem;"></span></h2>
+<div id="div_form" style="margin:0.5rem;">
+<p><input type="text" id="input_search" placeholder="search" onkeyup="if (event.key=='Enter'){search_cnki();}" /></p>
+<div id="div_recent_search" style="font-size:0.85rem;margin:0.5rem 0rem;line-height:1.8rem;"></div>
+<div id="divhtml"></div>
+<div id="div_status"></div>
+</div>
+<script>
+init_cnki();
+</script>
+<a name=footer></a>
+</body>
+</html>

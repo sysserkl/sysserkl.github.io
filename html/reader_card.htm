@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>🗂 Reader Card</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date','books','eng','en_de_str','wiki','txtlistsearch'],[],[],['reader_card_code.js']);
+</script>
+<script>
+load_current_book_b(false,true,true,true);
+</script>
+<script>
+//-----------------------
+//history
+//0.0.2-20200614 增加最近搜索
+//0.0.1-20200411
+//-----------------------
+var csbookname_global='';
+
+css_root_style_b('17','14',['base'],[],1);
+</script>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<a name=top></a>
+<h2 style="margin-top:0px;"><span id="span_title" onclick="popup_show_hide_b('div_show_hide');" style="cursor:pointer;">🗂 Reader Card</span> - <span id=booktitle></span><span id=readingdata></span></h2>
+<div id='div_show_hide' style="display:block;margin:0rem 0.5rem;">
+<script>
+var book_tag_global='all';
+var cskeys=href_split_b(location.href);
+import_book_kltxt_b(cskeys,true);
+</script>
+<script>
+decode_and_create_menu_kltxt_b();
+</script>
+<p>
+<input type="text" id="input_search" onkeyup="if (event.key=='Enter'){recent_search_add_txtcard();}">
+<label><input type="checkbox" id="input_reg">正则</label>
+<span class="aclick" onclick="split_all_txtcard();">刷新本书卡片</span>
+<span class="aclick" onclick="document.location.href='?';">随机书籍(全部)</span>
+<span class="aclick" onclick="window.location.reload();">随机书籍(当前条件)</span>
+<label><input type="checkbox" id="input_digest" checked>Digest</label>
+</p>
+<p>
+<input type="number" id="input_lineno" style="display:none;" value=1>
+<input type="number" id="input_lines" style="display:none;" value=20>
+<input type="checkbox" id="check_hide_no" checked style="display:none;" /><!--隐藏序号-->
+<input type="checkbox" id="check_hide_lineno" checked style="display:none;" /><!--隐藏行号-->
+<input type="checkbox" id="check_klwiki_format" checked style="display:none;" /><!--KLWiki format-->
+</p>
+<div id="div_recent_search" style="margin:0.5rem;line-height:200%;"></div>
+</div>
+<a name=content></a>
+<div id="divhtml"></div>
+<a name=footer></a>
+<script>
+init_txtcard();
+track_source_b('reader_card',false);
+if (!is_firefox_b(false)){
+    blank_page_b(false,false,false);
+}
+</script>
+</body>
+</html>

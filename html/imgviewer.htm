@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>🖽 IMG Viewer</title>
+<meta charset="UTF-8" />
+<!-- script src="module/lazyload.js" /script -->
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','slide','image','album'],['exif.js'],[],['imgviewer_code.js'],true,true,false,false,false);
+</script>
+<script>
+var albumlist_kl_global=[];
+var album_marked_rows_global=[];
+</script>
+<script>
+//-----------------------
+//history
+//0.0.1-20240625
+//-----------------------
+css_root_style_b('17','10',['base','menu'],[style_generate_album_b()],1);
+</script>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body onkeypress="mykeycontrol_klphotos_b();">
+<a name=top></a>
+<h2 id="h2_photo" style="margin:0rem;margin-bottom:0.5rem;font-size:1.35rem;"><span id="span_title" onclick="showhide_klphotos_b();" style="cursor:pointer;">IMG Viewer</span> <span id="span_img_count" style="color:#707070;font-size:0.8rem;"></span></h2>
+<div id='div_show_hide' style="display:block;margin:0rem 0.5rem;">
+<p><input type="text" id="input_search" onkeyup="if (event.key=='Enter'){imgsearch_klphotos_b();}">
+<label><input type="checkbox" id="input_reg">正则</label>
+<span class="aclick" onclick="imgsearch_klphotos_b();">搜索</span>
+</p>
+<div id="div_recent_search" style="line-height:180%;margin-top:0.5rem;margin-bottom:0.5rem;"></div>
+<div id="div_toolbar2">
+<!--以下为隐藏按钮内容 - 保留注释-->
+<div id="div_tempphoto_list" style="display:none;">
+<textarea id="textarea_temp_klphotos" style="height:3rem;" placeholder="临时图片文件列表"></textarea>
+<p>
+<span class="aclick" onclick="show_temp_klphotos_b(false,true);">显示</span> 
+<span class="aclick" onclick="show_temp_klphotos_b(true,true);">随机</span>
+</p>
+</div>
+
+</div>
+</div>
+
+<a name=footer></a>
+
+<script>
+init_img_viewer();
+remote_access_page_b();
+if (!is_firefox_b(true) || !is_local_b()){
+    blank_page_b();
+}
+</script>
+</body>
+</html>

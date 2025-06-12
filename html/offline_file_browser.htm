@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Offline File Browser</title>
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date','flot','idb'],[],[],['offline_file_browser_code.js'],true);
+</script>
+<script>
+flot_import_js_b(['time','symbol']);
+</script>
+<script>
+var saved_movie_data_global=[];
+var saved_movie_category_global=[];
+var disk_category_list_global=[];
+var sort_des_global=false;
+var current_td_global='td_content_1';
+var offline_file_data_current_global=[];
+
+var offline_file_data_raw_global=[];
+var offline_file_category_global=[];
+var important_movie_global=[];
+var ssd_tf_file_list_merged_global=[];
+</script>
+<script>
+import_files_offline_file_browser(); 
+</script>
+<script>
+//-----------------------
+//history
+//0.0.6-20211204 增加完整影视重温清单
+//0.0.5-20191127
+//0.0.4-20190921
+//0.0.3-20190917
+//0.0.2-20190916
+//0.0.1-20190915
+//-----------------------
+css_root_style_b('18','12',['base','menu']);
+</script>
+<style>
+#td_content_1 th, #td_content_2 th{padding:0.2rem 0.5rem;}
+#td_content_1 td, #td_content_2 td{padding:0.2rem 0.5rem;word-break:break-all;word-wrap:break-word;border-top:0.1rem dashed #c0c0c0;}
+#td_content_1 tr:hover, #td_content_2 tr:hover, #table_disk_category tr:hover {background-color: #E9EEF2;}
+</style>
+<script>
+style_offline_file_browser();
+</script>
+<link rel="manifest" href="offline_file_browser.webmanifest" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<a name=top></a>
+<h2 style="margin-top:0rem;"><span id="span_title">Offline File Browser</span> <span id="span_statistics" style="font-size:0.9rem;font-weight:normal;"></span></h2>
+<div style="margin:0 0.5rem 0.5rem 0.5rem;">
+<div id="div_category"></div>
+<p>
+<input type="text" id="input_search" onkeyup="if (event.key=='Enter'){search_offline_file_browser();}">
+<span class="aclick" onclick="search_offline_file_browser();">Search</span>
+<span class="aclick" onclick="dir_offline_file_browser();">Find Directroy</span>
+<span class="aclick" onclick="saved_movie_list_offline_file_browser();">Saved Movie</span>
+<span class="aclick" onclick="diff_offline_file_browser();">Diff</span>
+</p>
+<div id="div_recent_search" style="line-height:1.8rem;"></div>
+<table width=100%><tr>
+<td id="td_content_1" valign=top onclick="td_offline_file_browser(this.id);"></td>
+<td id="td_content_2" valign=top onclick="td_offline_file_browser(this.id);"></td>
+</tr>
+</table>
+<div id="div_statistics" style="display:none;"></div>
+</div>
+<script>
+pwa_register_b('offline_file_browser_service_worker.js','offline file browser','span_statistics','html');
+//-----------------------
+init_offline_file_browser();
+if (!is_firefox_b(true)){
+    blank_page_b();
+}
+</script>
+</body>
+</html>

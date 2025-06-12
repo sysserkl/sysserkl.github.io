@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Data Analyze</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date','flot'],[],[],['society_data_analyze_ico/society_data_analyze512.png'],true);
+</script>
+<script>
+flot_import_js_b(['pie','symbol']);
+</script>
+<script src="society_data_analyze_code.js"></script>
+<script>
+//history
+//0.0.2-20210516 适应 数据浙江的 csv 格式
+//0.0.1-20181011
+css_root_style_b('17','13',['base','menu'],[],1);
+</script>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<style>
+td{font-size:0.9rem;}
+tr.odd {background-color: #ffffff;}
+tr.odd:hover {background-color: #E9EEF2;}
+td.blackline {border-bottom:2px solid #000000;}
+td.blackline0 {border-bottom:1px solid #000000;}
+#div_flot_pie_label {font-size:0.9rem; text-align:center; padding:2px; color:black;}
+</style>
+<h2 id="h2_title" style="margin:0;font-size:1.25rem;cursor:pointer;" ondblclick="show_hide_klsda();"></h2>
+<div style="margin:0.5rem;">
+<div id="div_buttons">
+<table><tr>
+<td valign=top>
+<p>项目：</p>
+<p><span class="aclick" onclick="change_option_klsda(1);">+</span><span class="aclick" onclick="change_option_klsda(-1);">-</span></p>
+</td>
+<td valign=top>
+<SELECT id="select_item" multiple size=5>
+</SELECT>
+</td>
+<td valign=top>
+<p>
+<span id="span_data_list"></span>
+年份(或 折线图的起始年份)：<SELECT id="select_year">
+</SELECT>
+<label><input type="checkbox" id="input_sort" checked>饼图排序</label>
+<span class="aclick" onclick="draw_pie_klsda();">Pie</span>
+幻灯片间隔(秒)：<input type="number" id="input_interval" style="width:4rem;" value=1>
+<span class="aclick" onclick="slide_start_klsda();">幻灯片</span>
+<span class="aclick" onclick="slide_stop_klsda();">停止</span>
+</p>
+<p>指定城市(以空格间隔)：<input type="text" id="input_citys" size="40"> 
+<label><input type="checkbox" id="input_reg">正则</label>
+<span class="aclick" onclick="draw_lines_klsda();">折线图</span></p>
+</td>
+</tr></table>
+</div>
+<div id="div_flot"></div>
+<div id="divhtml"></div>
+</div>
+<script>
+var selected_item_global=null;
+var global_interval;
+var datalist_global=['zj_11_population','zj_11_raw'];
+import_data_klsda();
+</script>
+<script>
+init_klsda();
+</script>
+</body>
+</html>

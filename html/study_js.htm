@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>study js</title>
+<meta charset="utf-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','code_highlight'],['prism/prism.js',"prism/prism-okaidia.css"],[],['study_js_ico/study_js512.png']);
+</script>
+<script src="study_js_code.js"></script>
+<script>
+css_root_style_b('17','12',['base','menu'],[],1);
+//history
+//0.0.1-20210303
+</script>
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+</head>
+<body>
+<script>
+var body_height_study_js_global=document_body_offsetHeight_b();
+var current_li_value_study_js_global='';
+</script>
+<div id="div_interactive_info" style="position: absolute;border: 0.1rem solid white;border-radius:1rem; padding: 0.1rem 0.5rem;background-color: pink; opacity: 0.80; display: none;"></div>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td valign="top" height=1 nowrap>
+<span id="span_title" class="aclick" onclick="run_source_study_js(current_li_value_study_js_global,false);">Run</span>
+</td>
+<td id="td_study_js" rowspan=2 align="center" valign="top" width="85%">
+</td>
+</tr>
+<tr>
+<td id="td_study_list" valign="top" style="padding:0.5rem;">
+<p><input type="text" id="input_search" onkeyup="if (event.key=='Enter'){li_filter_study_js(this.value);}" /></p>
+<p style="margin-top:0.5rem;"><span class="oblong_box" onclick="fun_full_search_li_study_klh_b(study_js_type_dict_global);">全文搜索</span></p>
+<section style="height:100%;overflow:auto;">
+<ol id="ol_menu">
+</ol>
+</section>
+</td>
+</tr>
+<tr><td></td><td id="td_interactive_info"></td></tr>
+</table>
+<script>
+init_study_js();
+</script>
+<script>
+track_source_b('study_js',false);
+</script>
+</body>
+</html>

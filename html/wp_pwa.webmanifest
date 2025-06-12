@@ -1,0 +1,30 @@
+{
+  "background_color": "transparent",
+  "description": "KL wp pwa",
+  "display": "standalone",
+  "icons": [
+    {
+    "src": "wp_pwa_ico/wp_pwa512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+    },
+    {
+    "src": "wp_pwa_ico/wp_pwa256.png",
+    "sizes": "256x256",
+    "type": "image/png"
+    },
+    {
+    "src": "wp_pwa_ico/wp_pwa128.png",
+    "sizes": "128x128",
+    "type": "image/png"
+    },
+    {
+    "src": "wp_pwa_ico/wp_pwa64.png",
+    "sizes": "64x64",
+    "type": "image/png"
+    }
+  ],
+  "name": "KL wp pwa",
+  "short_name": "wp pwa",
+  "start_url": "wp_pwa.htm"
+}

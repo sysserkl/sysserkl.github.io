@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>📱 vCard</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date'],[],['words/hz3500_data.js','xm_data.js']);
+</script>
+<script src="vcard_code.js"></script>
+<script>
+hz_3500_global=hz_3500_global+hz_easy_global;
+hz_easy_global='';
+css_root_style_b('17','12',['base'],[],1);
+//history:
+//0.0.1-20180416
+</script>
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+</head>
+<body>
+<a name=top></a>
+<h2 style="margin:0;">📱 vCard</h2>
+<div style="margin:0.5rem;">
+<p>
+<textarea id="textarea_x"></textarea>
+<p><span class="aclick" onclick="surname_vcard();">指定姓列表生成</span></p>
+<textarea id="textarea_xm"></textarea>
+<p><span class="aclick" onclick="fullname_vcard();">指定姓名列表生成</span></p>
+<textarea id="textarea_m"></textarea>
+<p>
+<span class="aclick" onclick="just_name_vcard();">指定名列表生成</span> 
+<span class="aclick" onclick="import_relation_vcard();">导入称呼</span>
+</p>
+<p>
+生成记录个数：<input type="text" id="input_xm_amount" value=10> 名字长度(-1为随机长度；0为不含名字)：<input type="text" id="input_m_length" value="-1">
+<span class="aclick" onclick="rnd_vcard();">随机生成</span>
+<span class="aclick" onclick="save_vcard();">保存</span>
+</p>
+<div id="divhtml"></div>
+</div>
+<a name=footer></a>
+<script>
+init_vcard();
+</script>
+<script>
+track_source_b('vcard',false);
+</script>
+</body>
+</html>

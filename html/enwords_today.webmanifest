@@ -1,0 +1,30 @@
+{
+  "background_color": "transparent",
+  "description": "entoday",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "enwords_today_ico/enwords_today512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },    
+    {
+      "src": "enwords_today_ico/enwords_today256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },  
+    {
+      "src": "enwords_today_ico/enwords_today128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "enwords_today_ico/enwords_today64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }
+  ],
+  "name": "entoday",
+  "short_name": "entoday",
+  "start_url": "enwords_today.htm"
+}

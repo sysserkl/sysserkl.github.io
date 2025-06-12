@@ -1,0 +1,30 @@
+{
+  "background_color": "transparent",
+  "description": "KL Rows",
+  "display": "standalone",
+  "icons": [
+    {
+        "src": "rows_ico/rows512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    },
+    {
+        "src": "rows_ico/rows256.png",
+        "sizes": "256x256",
+        "type": "image/png"
+    },
+    {
+        "src": "rows_ico/rows128.png",
+        "sizes": "128x128",
+        "type": "image/png"
+    },
+    {
+        "src": "rows_ico/rows64.png",
+        "sizes": "64x64",
+        "type": "image/png"
+    }
+  ],
+  "name": "KL Rows",
+  "short_name": "KLRows",
+  "start_url": "rows.htm"
+}

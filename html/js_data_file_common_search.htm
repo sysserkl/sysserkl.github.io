@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+var is_standalone_html_file_global=false;
+var js_file_list_common_kl_global=[];
+</script>
+<script>
+klbase_addons_import_js_b(['css','idb'],[],['js_data_file_common_search_pb_data.js'],['js_data_file_common_search_code.js','../../../../data/js_data_file_common_search_kl_data.js']);
+</script>
+<script>
+//-----------------------
+//history
+//0.0.1-20220715
+//-----------------------
+css_root_style_b('18','13',['base','menu'],[],1);
+</script>
+<style>
+#divhtml li {margin-bottom:0.5rem;}
+p, td, li {word-break:break-all;word-wrap:break-word;}
+</style>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<a name=top></a>
+<h2 id="h2_title" style="margin-top:0px;font-size:1.2rem;"><span id="span_title"></span> <span id="span_count" style="font-weight:normal;font-size:0.9rem;"></span></h2>
+<div id="div_buttons" style="margin:0.5rem;">
+<p style="line-height:1.5rem;">
+<input type="text" id="input_search" onkeyup="if (event.key=='Enter'){search_common();}" />
+返回结果数：<input type="number" id="input_result_max" min=-1 step=1 value=-1 onkeyup="if (event.key=='Enter'){search_common();}">
+</p>
+<div id="div_recent_search" style="font-size:0.85rem;margin:0.5rem 0rem;line-height:1.8rem;"></div>
+</div>
+<div id="divhtml" style="margin:0.5rem;"></div>
+<div id="div_form_common" style="margin:0.5rem;"></div>
+<div id="div_status_common" style="margin:0.5rem;"></div>
+<script>
+init_common();
+</script>
+<a name=footer></a>
+</body>
+</html>

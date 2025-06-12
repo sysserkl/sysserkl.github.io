@@ -1,0 +1,30 @@
+{
+  "background_color": "transparent",
+  "description": "klsearch",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "klsearch_ico/klsearch512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },  
+    {
+      "src": "klsearch_ico/klsearch256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "klsearch_ico/klsearch128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "klsearch_ico/klsearch64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }        
+  ],
+  "name": "klsearch",
+  "short_name": "klsearch",
+  "start_url": "klsearch.htm"
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>bigfile</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','idb','date','en_de_str','tts','html','websites','rows','eng'],[],[],['bigfile_code.js']);
+</script>
+<script>
+//-----------------------
+//history
+//0.0.1-20240324
+//-----------------------
+css_root_style_b('18','13',['base','menu'],[],1);
+</script>
+<style>
+#divhtml li {font-size:1rem;line-height:2rem;word-break:break-all;word-wrap:break-word;}
+</style>
+<link rel="manifest" href="bigfile.webmanifest" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<a name=top></a>
+<h2 style="margin-top:0px; font-size:1.2rem;"><span id="span_title">bigfile</span> <span id="span_count" style="font-weight:normal; font-size:0.9rem;"></span></h2>
+<div style="margin:0.5rem;">
+<p>
+ <input type="text" id="input_search" placeholder="search" onkeyup="if (event.key=='Enter'){search_bigfile();}" />
+<input type="file" id="input_upload_bigfile" multiple /> <select id="select_upload_bigfile"><option>上传文件</option><option>分割上传</option><option>仅分割</option></select> <span class="aclick" onclick="upload_a_bigfile();">执行</span> <span class="aclick" onclick="websites_bigfile();">网址</span>
+<div id="div_recent_search" style="font-size:0.85rem;margin:0.5rem 0rem;line-height:1.8rem;"></div>
+<div id="divhtml"></div>
+<div id="div_temp_txt_share" style="margin:0.5rem;display:none;">
+<div id="div_temp_save"></div>
+</div>
+</div>
+<script>
+pwa_register_b('bigfile_service_worker.js','bigfile','span_count','html');
+
+//-----------------------
+init_bigfile();
+</script>
+<a name=footer></a>
+</body>
+</html>

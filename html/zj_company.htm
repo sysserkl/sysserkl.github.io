@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>🏭 浙江百强企业</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date','rank','flot'],[],[],[],true);
+</script>
+<script src="zj_company_code.js"></script>
+<script>
+var data_type_zjcompany='';
+import_data_zjcompany();
+</script>
+<script>
+flot_import_js_b(['time','pie','symbol']);
+</script>
+<script>
+//-----------------------
+//history
+//0.0.1-20210416
+//-----------------------
+var search_result_zj_company_global=[];
+
+css_root_style_b('18','10.5',['base','menu'],[],1);
+</script>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body ondblclick="hide_show_zjcompany();">
+<a name=top></a>
+<div id="div_buttons"></div>
+<div id="divhtml" style="margin:0.5rem;"></div>
+<div id="div_flot_zj_company" style="margin:0.5rem;display:none;"></div>
+<a name=footer></a>
+<script>
+init_zjcompany();
+track_source_b('zj_company',false);
+</script>
+</body>
+</html>

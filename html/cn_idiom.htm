@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>😵 成语</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','en_de_str'],[],['words/cn_idoim_data.js']);
+</script>
+<script src="cn_idiom_code.js"></script>
+<script>
+//-----------------------
+//history
+//0.0.1-20220504
+//-----------------------
+var clicked_td_no_global=-1;
+var times_td_no_global=0;
+
+css_root_style_b('18','14',['base'],[],1);
+</script>
+<style>
+#table_cn_idiom {font-size:2.5rem;}
+#table_cn_idiom td {padding:0.5rem;border:0.1rem solid grey;border-radius:0.5rem;cursor:pointer;}
+</style>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<div style="margin:0.5rem;">
+<h2><span id="span_title">成语</span>
+<span style="font-weight:normal;">
+<span class="aclick" onclick="generate_cn_idiom();">generate</span>
+<span class="aclick" onclick="answer_cn_idiom();">answer</span>
+</span>
+</h2>
+<table id="table_cn_idiom" cellpadding=10 cellspacing=10></table>
+<div id="divhtml"></div>
+</div>
+<script>
+init_cn_idiom();
+track_source_b('cn_idiom',false);
+</script>
+</body>
+</html>

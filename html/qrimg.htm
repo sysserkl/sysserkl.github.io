@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>qrimg</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','qr','image'],['html2canvas.js','jeromeetienne_qrcode.min.js'],[],[],true);
+</script>
+<script src="qrimg_code.js"></script>
+<script>
+//-----------------------
+//history
+//0.0.2-20200404 增加自定义定位
+//0.0.1-20200303
+//-----------------------
+css_root_style_b('17.2','13',['base','menu'],[],1);
+</script>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<style>
+img{max-width:1440px;}
+</style>
+</head>
+<body>
+<a name=top></a>
+<div id="div_form">
+<h2 style="margin:0px;font-size:1.2rem;"><span id="span_title">qrimg</span></h2>
+<div style="margin:0.5rem;">
+<p>Select Image: 
+<input type="file" id="input_img" multiple>
+<span class="aclick" onclick="upload_qrimg();">Upload Image</span>
+rows: <input type="number" id="input_qr_rows" min=1 max=100 step=1 value=2 />
+cols: <input type="number" id="input_qr_cols" min=1 max=100 step=1 value=2 />
+padding: <input type="number" id="input_qr_padding" min=1 max=100 step=1 value=0 />
+<select style="height:2rem;" onchange="run_qrimg(this.value);">
+<option></option>
+<option>上下</option>
+<option>左右</option>
+<option>文件名升序</option>
+<option>文件名降序</option>
+<option>Reset</option>
+</select>
+<select id="select_img1" style="height:2rem;"></select>
+<select id="select_img2" style="height:2rem;"></select>
+<span onclick="shift_qrimg();" class="aclick">调换</span>
+</p>
+<p>
+qr: <input type="text" id="input_qrstr" />
+size: <input type="number" id="input_qr_size" min=0 max=1 step=0.1 value=0.5 />
+</p>
+<p>
+<span class="span_box" ondblclick="document.getElementById('input_qr_position').value='left:10px;top:10px;';">position:</span>
+<input type="text" id="input_qr_position" placeholder="left:10px;top:10px;" />
+<label><input type="radio" name="radio_position" value="absolute" checked onclick="position_qr_qrimg();">absolute</label>
+<label><input type="radio" name="radio_position" value="fixed" onclick="position_qr_qrimg();">fixed</label>
+<span class="aclick" onclick="qr_qrimg();">生成</span>
+<span class="aclick" onclick="round_qrimg();">圆角</span>
+<span class="aclick" onclick="rotate_qrimg();">旋转45度</span>
+<span class="aclick" onclick="clean_qrimg();">清除</span>
+<span class="aclick" onclick="close_qrimg();">关闭</span>
+<span class="aclick" onclick="close_qrimg();canvas_qrimg();">关闭并生成图片</span>
+
+</p>
+</div>
+</div>
+<div id="divhtml" ondblclick="document.getElementById('div_form').style.display='';"></div>
+<div id="div_qr" style="position:absolute;background-color:white;" ondblclick="clean_qrimg();"></div>
+<script>
+init_qrimg();
+</script>
+<script>
+track_source_b('qrimg',false);
+</script>
+<a name=footer></a>
+</body>
+</html>

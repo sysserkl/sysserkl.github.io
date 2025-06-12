@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>单词填空</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','eng','enwc','wiki','date','idb'],[],[],['enwords_exam_code.js']);
+</script>
+<script>
+var words_searched_arr_global=[];
+var en_words_no_list_global=[];
+
+css_root_style_b('18','14',['base','menu'],[],1);
+en_word_temp_get_b();
+</script>
+<script>
+style_generate_b(p_enwords_sentence_style_b(false),true,'style','head');
+</script>
+<style>
+span.span_word_blur {color:grey;background-color:grey;}
+</style>
+<script>
+en_style_b();
+</script>
+<link rel="manifest" href="enwords_exam.webmanifest" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<script>
+mobile_style_enwc_b();
+</script>
+<h2 style="margin-top:0px; font-size:1.3rem;"><span id="span_title">单词填空</span><span id="countwords" style="font-size:0.7rem;cursor:pointer;" onclick="words_count_enwords_b();" title=''></span></h2>
+<div id="div_exam_buttons"></div>
+<div id="divhtml"></div>
+<script>
+pwa_register_b('enwords_exam_service_worker.js','enwords_exam','countwords','html');
+
+//-----------------------
+init_klexam();
+</script>
+</body>
+</html>

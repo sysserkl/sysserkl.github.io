@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+document.title=local_storage_get_b('enbook_title_name');
+var onetab_global=[];
+klbase_addons_import_js_b(['css','date','eng','wiki','books','enbook','enwc','en_de_str','idb'],[],['words/senior_high_school_en_data.js','words/cet6_en_data.js','words/enwords_count_sentence_data.js','words/usr_share_dict_data.js'],['enwords_book_code.js','../../../../data/words/onetab_data.js']);
+</script>
+<script>
+var en_words_book_newwords_continue_global=false;
+is_continue_mode_enwords_book();
+
+if (en_words_book_newwords_continue_global){
+    klbase_addons_import_js_b([],[],['words/enwords_data.js']);
+}
+</script>
+<script>
+load_current_book_b(false,true,true,true);
+</script>
+<script>
+//-----------------------
+//history
+//0.0.4-20200404 增加按词尾排序
+//0.0.3-20200403 增加英语书籍生词新旧统计数据对比
+//0.0.2-20200302 增加英语书籍生词批量统计
+//0.0.1-20200120
+//-----------------------
+filelist=[];
+var enbook_compare_result_list_global=[];
+var enbook_compare_result_list_sort_order_global=true;
+en_word_temp_get_b();
+</script>
+<script>
+csbooklist_source_global.sort(function(a,b){return zh_sort_b(a,b,false,1);});
+
+css_root_style_b('17.2','13',['base','menu'],[],1);
+en_style_b(true);
+</script>
+<script>
+book_makelist_b(filter_get_enwords_book());
+mobile_style_enwc_b();
+</script>
+<script>
+load_filelist_enwords_book();
+</script>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<a name=top></a>
+<h2 style="margin-top:0px;font-size:1.2rem;"><span id="span_title" onclick="showhide_enwc_b();" style="cursor:pointer;">生词统计</span></h2>
+<div id='div_show_hide' style="display:block;margin:0rem 0.5rem;">
+<a name=content></a>
+<label><input type="checkbox" id="input_s_word" checked />单词</label>
+<label><input type="checkbox" id="input_s_p" />音标</label>
+<label><input type="checkbox" id="input_s_def" checked />释义</label>
+
+<input type="text" id="input_search_enbook" onkeyup="if (event.key=='Enter'){search_enwords_book();}"  />
+<select id="select_search_type_enbook">
+<option>kaikki phrase</option>
+<option>全部新单词</option>
+<option>usr share dict</option>
+</select>
+<span class="aclick" onclick="search_enwords_book();">搜索</span>
+
+<span id="span_progress_enbook"></span>
+<div id="div_recent_search" style="font-size:0.85rem;margin:0.5rem 0rem;line-height:1.8rem;"></div>
+</div>
+<div id="divhtml"></div>
+<div id="divhtml2" style="margin-left:2rem;margin-right:2rem;"></div>
+<script>
+init_enwords_book();
+</script>
+<a name=footer></a>
+</body>
+</html>

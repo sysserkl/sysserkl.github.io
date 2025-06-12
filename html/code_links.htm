@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>随机编程知识点</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+var learning_list_global=[];
+klbase_addons_import_js_b(['css','wiki'],[],['learning_links/learning_links_'+Math.floor(Math.random()*12+1)+'_data.js']);
+</script>
+<script>
+//-----------------------
+//history
+//0.0.1-20190901
+//-----------------------
+css_root_style_b('17.6','14',['base'],[],1);
+</script>
+<link href="../recent_info.css" type="text/css" rel="stylesheet" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<h2 style="margin:1rem;"><span id="span_title" class="headline_on" style="cursor:pointer;" ondblclick="codelinks(10);">随机编程知识点</span></h2>
+<div id="divhtml"></div>
+<p align=center>ver: 0.0.1-20190901</p>
+<script>
+function codelinks(cscount=1){
+    var learn_something='';
+    if (learning_list_global.length>0){
+        learning_list_global.sort(randomsort_b);
+        for (let blxl=0;blxl<Math.min(learning_list_global.length,cscount);blxl++){
+            learn_something=learn_something+div_title_href_b(learning_list_global[blxl]);
+        }
+    }
+    document.getElementById('divhtml').innerHTML=learn_something;
+    return learn_something;
+}
+//-----------------------
+codelinks(10);
+</script>
+<script>
+track_source_b('code_links');
+</script>
+</body>
+</html>

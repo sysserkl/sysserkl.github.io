@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Random Lines Circles Rectangles</title>
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','en_de_str','slide'],[],[],['screen_canvas_ico/screen_canvas512.png']);
+</script>
+<script src="screen_canvas_code.js"></script>
+<script>
+//-----------------------
+//history
+//0.0.1-20190713
+//-----------------------
+css_root_style_b('18','11',['base'],[],1);
+</script>
+<style>
+#canvas{margin:auto;height:100%;width:100%;}
+</style>
+<link rel="manifest" href="screen_canvas.webmanifest" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<div id="div_containter">
+<canvas id="canvas"></canvas>
+</div>
+<script>
+pwa_register_b('screen_canvas_service_worker.js','Screen Canvas','','');
+
+var drawnum_global=0;
+init_scanvas();
+</script>
+<script>
+track_source_b('screen_canvas',false);
+</script>
+</body>
+</html>

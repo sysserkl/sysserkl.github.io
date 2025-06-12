@@ -1,0 +1,25 @@
+{
+  "background_color": "transparent",
+  "description": "Random English Words",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "rnd_english_words_ico/english_words256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },  
+    {
+      "src": "rnd_english_words_ico/english_words128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "rnd_english_words_ico/english_words64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }
+  ],
+  "name": "random enwords",
+  "short_name": "KWords",
+  "start_url": "rnd_english_words.htm"
+}

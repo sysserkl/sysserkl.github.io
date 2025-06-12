@@ -1,0 +1,25 @@
+{
+  "background_color": "transparent",
+  "description": "EN CN Bible",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "bible_ico/bible256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "bible_ico/bible128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "bible_ico/bible64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }        
+  ],
+  "name": "KL Bible",
+  "short_name": "KL Bible",
+  "start_url": "bible.htm"
+}

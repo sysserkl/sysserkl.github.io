@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date','flot'],[],[],[],true);
+</script>
+<script>
+flot_import_js_b(['time','symbol']);
+</script>
+<script src="zj_college_search_code.js"></script>
+<script>
+//-----------------------
+//history
+//0.0.6-20220624 增加分数人数分布数据
+//0.0.5-20200805 增加 div id 跳转；增加分数对应位次
+//0.0.4-20191030
+//0.0.3-20190801
+//0.0.2-20180718
+//-----------------------
+css_root_style_b('18','10.5',['base','menu'],[],1);
+
+var mark_rank_global={};
+</script>
+<style>
+#td_right td {font-size:0.9rem;}
+</style>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<a name=top></a>
+<h2 style="margin:0;font-size:1.35rem;"><span id="span_h2"></span> <span id="span_array_count" style="font-size:0.7rem;font-weight:normal;"></span></h2>
+<script>
+var zj_university_global=[];
+var zj_exam_range_global={};
+var zj_current_year_global='';
+var zj_year_range_global=[2018,2024];
+load_data_zjedu();
+</script>
+
+<p style="margin-left:0.5rem;"><input type="text" id="input_search" onkeyup="if (event.key=='Enter'){run_txtsearch_zjedu();}"> 
+<span class="aclick" onclick="run_txtsearch_zjedu();">搜索</span>
+最大统计结果数：<input id="input_max_num_zjc" value="100" onfocusout="num_change_zjedu(this.value);" />
+</p>
+<div id="div_recent_search" style="margin-top:0.3rem;margin-left:0.5rem;line-height:180%;"></div>
+<table width=100%><tr><td valign=top width=60%>
+<div id="divhtml"></div>
+<div id="div_line_count_flot"></div>
+<div id="div_status"></div>
+</td>
+<td valign=top style="padding-left:0.5rem;" width=40% id="td_right">
+</td>
+</tr>
+</table>
+<script>
+var jgarray_zjc_global=[];
+var csorder_zjc_global=-1;
+var num_zjc_global=100;
+var school_zjc_global=[];
+
+init_zjedu();
+</script>
+<a name=footer></a>
+<script>
+track_source_b('zj_education',false);
+</script>
+</body>
+</html>

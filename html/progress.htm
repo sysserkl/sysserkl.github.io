@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Progress</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>klbase_addons_import_js_b(['css','date','flot'],[],[],[],true);</script>
+<script src="progress_code.js"></script>
+<script>flot_import_js_b(['time','symbol'],true);</script>
+<script>
+//-----------------------
+//history
+//0.0.1-20220929
+//-----------------------
+css_root_style_b('18','13',['base','menu'],[],1);
+</script>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<a name=top></a>
+<h2 style="margin-top:0px;font-size:1.2rem;"><span id="span_title">Progress</span></h2>
+<div style="margin:0.5rem;">
+<p>
+min date: <input type="text" id="input_min_date_prog" />
+max date: <input type="text" id="input_max_date_prog" />
+max lines: <input type="text" id="input_max_lines_prog" />
+filter: <input type="text" id="input_keys_prog" />
+<select id="selection_flot_type_prog"><option></option><option>1y</option><option>2y</option></select>
+</p>
+<p id="p_bookmark_progress" style="line-height:2rem;"></p>
+<div id="divhtml"></div>
+</div>
+<script>
+init_progress();
+</script>
+<a name=footer></a>
+</body>
+</html>

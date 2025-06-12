@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Diff JS</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','diff','rows','date'],[],[],[]);
+</script>
+<script>
+//-----------------------
+//history
+//0.0.1-20211124
+//-----------------------
+css_root_style_b('18','13',['base','menu'],[],1);
+</script>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<a name=top></a>
+<h2 style="margin-top:0px;font-size:1.2rem;"><span id="span_title" style="cursor:pointer;">Diff JS</span></h2>
+<div id="div_form" style="margin:0.5rem;">
+<table width=95%>
+<tr>
+<td width=50%>
+<textarea name="textarea_diff_1" id="textarea_diff_1" style="height:25rem;font-size:1rem;"></textarea>
+</td>
+<td width=50%>
+<textarea name="textarea_diff_2" id="textarea_diff_2" style="height:25rem;font-size:1rem;"></textarea>
+</td>
+</tr>
+</table>
+<p><span id="span_diff_buttons"></span>
+<div id="div_line_compare_form" style="margin:0.5rem;"></div>
+<div id="div_diff" style="border:0.2rem tomato dashed;padding:0.5rem;"></div>
+</div>
+<script>
+top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.6rem'));
+init_diff_b();
+</script>
+<script>
+track_source_b('diff_js',false);
+</script>
+<a name=footer></a>
+</body>
+</html>

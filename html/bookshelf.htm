@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>bookshelf</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','books','card'],[],[],['bookshelf_code.js']);
+</script>
+<script>
+load_current_book_b(false,true,true);
+</script>
+<script>
+//-----------------------
+//history
+//0.0.1-20210106
+//-----------------------
+var book_cover_list_all_global=[];
+var book_cover_list_current_global=[];
+css_root_style_b('16','13',['base','menu'],[],1);
+</script>
+<style>
+table#table_bookshelf td{padding:0.5rem;}
+img.img_bookcover{max-width:100%;max-height:100%;border-radius:0.5rem;}
+</style>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<a name=top></a>
+<h2 style="margin-top:0px;font-size:1.4rem;"><span id="span_title">bookshelf</span></h2>
+<div style="margin:0.5rem;">
+<p><input type="text" id="input_search" placeholder="Search" onkeyup="if (event.key=='Enter'){show_bookshelf();}" /></p>
+<div id="div_recent_search" style="font-size:0.85rem;line-height:1.8rem;"></div>
+<div id="divhtml"></div>
+</div>
+<script>
+init_bookshelf();
+</script>
+<a name=footer></a>
+</body>
+</html>

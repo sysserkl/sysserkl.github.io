@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>网址库</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date','en_de_str','qr','websites','eng','wiki','idb'],['jeromeetienne_qrcode.min.js','masonry.pkgd.js'],['jieba_pb_dict_data.js'],['websites_code.js'],true);
+</script>
+<script>
+css_root_style_b('18.5','14',['base','menu'],[],1);
+</script>
+<style>
+span.span_content{word-break:break-all;word-wrap:break-word;}
+div.div_qr{padding:0.2rem;margin:0.2rem;border: 0.15rem solid black;}
+</style>
+<link rel="manifest" href="websites.webmanifest" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<h2 id="h2_title" style="margin-top:0rem;margin-bottom:0.25rem;font-size:1.3rem;"><span style="cursor:pointer;" ondblclick="refresh_page_klwebsites();">网址库</span> <span style="font-size:0.8rem;font-weight:normal;" id="span_count"></span></h2>
+<div id="divhtml" style="margin:0rem 0.5rem;"></div>
+<script>
+pwa_register_b('websites_service_worker.js','websites','span_count','html');
+
+//-----------------------
+init_klwebsites();
+</script>
+</body>
+</html>

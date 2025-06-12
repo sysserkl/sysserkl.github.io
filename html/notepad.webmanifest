@@ -1,0 +1,30 @@
+{
+  "background_color": "transparent",
+  "description": "notepad",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "notepad_ico/notepad512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "notepad_ico/notepad256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "notepad_ico/notepad128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "notepad_ico/notepad64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }
+  ],
+  "name": "notepad",
+  "short_name": "notepad",
+  "start_url": "notepad.htm"
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Today Words</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date','eng','enbook','enwc','wiki','idb'],[],[],['enwords_today_code.js']);
+</script>
+<script>
+//在 klbase_books.js 前
+var rnd_cn__today_words_global=[5,5];
+en_word_temp_get_b();
+</script>
+<script>
+css_root_style_b('17.2','13',['base','menu'],[],1);
+en_style_b(false);
+</script>
+<link rel="manifest" href="enwords_today.webmanifest" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body style="margin:0px;">
+<script>
+mobile_style_enwc_b();
+</script>
+
+<a name=top></a>
+<h2 style="margin:0;font-size:1.35rem">
+<span id="span_title">Today Words</span> 
+<span id="countwords" style="font-size:0.7rem;cursor:pointer;" onclick="words_count_enwords_b();" title=''></span> <!--行中 title='' 不可少 - 保留注释-->
+</h2>
+<a name=content></a>
+<div id='div_show_hide' style="display:block;margin:0rem 0.5rem;">
+份数：<input type="number" id="input_count" style="width:4rem;" value=1 />
+每份条数：<input type="number" id="input_lines" style="width:4rem;" value=10 />
+<span class="aclick" onclick="rnd_batch_today_words();">随机单词</span> 
+<span class="aclick" onclick="rnd_batch_today_words('cn');">随机中文释义单词</span> 
+<select id="select_month_start" onchange="option_days_today_words('select_day_start',this.value);"></select>月
+<select id="select_day_start"></select>日 — 
+<select id="select_month_end" onchange="option_days_today_words('select_day_end',this.value);"></select>月
+<select id="select_day_end"></select>日
+<span class="aclick" onclick="set_today_words();">今日</span>
+<span class="aclick" onclick="olds_words_batch_today_words();">已背单词</span>
+<label><input type="checkbox" id="check_js_wiki" />js_wiki</label>
+<input type="hidden" id="input_search">
+<p>
+<span id="span_batch_button_today_words" class="aclick" onclick="olds_words_batch_today_words(rnd_cn__today_words_global[0],rnd_cn__today_words_global[1]);"></span>
+</p>
+</div>
+<div id="divhtml"></div>
+<script>
+pwa_register_b('enwords_today_service_worker.js','enwords_today','countwords','html');
+
+//-----------------------
+init_today_words();
+</script>
+<a name=footer></a>
+</body>
+</html>

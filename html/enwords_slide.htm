@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>单词幻灯片</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date','eng','enwc','wiki','slide','idb'],[],[],['enwords_slide_ico/enwords_slide512.png']);
+</script>
+<script>
+import_enwords_data_b();
+</script>
+<script src="enwords_slide_code.js"></script>
+<script>
+</script>
+<script>
+//history
+//0.0.1-20200312
+//在 klbase_books.js 前
+var en_words_temp_global;
+en_word_temp_get_b();
+</script>
+<script>
+css_root_style_b('17.2','13',['base','menu'],[],1);
+</script>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body style="margin:0px;">
+<script>
+mobile_style_enwc_b();
+</script>
+<a name=top></a>
+<h2 style="margin-top:0px;font-size:1.2rem;">
+<span id="span_title" onclick="showhide_enwc_b();" style="cursor:pointer;">单词幻灯片</span> 
+<span id="countwords" style="font-size:0.7rem;cursor:pointer;" onclick="words_count_enwords_b();" title=''></span> <!--行中 title='' 不可少 - 保留注释-->
+</h2>
+<div id='div_show_hide' style="display:block;margin:0rem 0.5rem;">
+<p class=minisize2><span id=span_days style="cursor:pointer;" onclick="popup_show_hide_b('popup_eng_days');"></span></p>
+<p>显示起始行号为 <input type="number" id="input_lineno" style="width:4rem;" value=1 onkeyup="if (event.key=='Enter'){getlines_enwc_b();}" /> 的 
+<input type="number" id="input_lines" style="width:4rem;" value=40 onkeyup="if (event.key=='Enter'){getlines_enwc_b();}" /> 行记录
+<span class="aclick" onclick="getlines_enwc_b();">显示</span>
+<span class="aclick" onclick="cocktail_enslide();">鸡尾酒</span> 
+<span title="最近记忆的单词+今日旧单词 : 随机旧单词。其中“最近记忆的单词+今日旧单词”不受大于0的比例限制">比例：</span>
+<input type="text" id="input_cocktail_percent" size="6" value="1:0.3" onkeyup="if (event.key=='Enter'){cocktail_enslide();}" ondblclick="this.value='1.0:0.3';" /> 
+<input type="number" id="input_month" style="width:3rem;" onkeyup="if (event.key=='Enter'){get_day_words_enwc_b('',0,'old');}" max=12 min=1 />月
+<input type="number" id="input_day" style="width:3rem;" onkeyup="if (event.key=='Enter'){get_day_words_enwc_b();}" max=31 min=1 />日
+<span class="aclick" onclick="get_day_words_enwc_b('',0,'old');">旧单词</span>
+<label><input type="checkbox" id="check_js_wiki" />js_wiki</label>
+<a name=content></a>
+<p>
+<input type="text" id="input_search" onkeyup="if (event.key=='Enter'){wordsearch_enwords_b();}" />
+<span class="aclick" onclick="wordsearch_enwords_b();">搜索</span> 
+<span class="aclick" onclick="similar_enwords_b();">相似单词</span> 
+&nbsp;幻灯片间隔毫秒：<input type="number" id="input_slide_interval" value=8000 style="width:5rem;">
+<div id="div_recent_search" style="font-size:0.85rem;margin-top:0.5rem 0rem;line-height:1.65rem;"></div>
+</div>
+<div id="divhtml"></div>
+<div id="div_slide" style="position: fixed; top: 0; left: 0; width:100%;height:100%;z-index: 99;display:none;"></div>
+<script>
+var slide_type_global=['鸡尾酒',2];
+var words_searched_arr_global=[];
+var slideshow;
+var slide_num=0;
+var slide_font_size=2;
+init_enslide();
+</script>
+<a name=footer></a>
+</body>
+</html>

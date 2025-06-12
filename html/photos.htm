@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>相册</title>
+<meta charset="UTF-8" />
+<!-- script src="module/lazyload.js" /script -->
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date','slide','en_de_str','flot','image','album'],['exif.js'],['photos_pb_data.js'],['photos_code.js'],true);
+</script>
+<script>
+var albumlist_kl_global=[];
+var album_marked_rows_global=[];
+</script>
+<script src="../../../../data/photos_kl_data.js"></script>
+<script>
+flot_import_js_b(['time','symbol'],true);
+</script>
+<script>
+data_load_klphotos();
+</script>
+<script>
+//-----------------------
+//history
+//0.0.4-20230327 移动到 selenium，支持 txtbook images
+//0.0.3-20190712
+//0.0.2-20181009 
+//0.0.1-20180404
+//-----------------------
+css_root_style_b('17','10',['base','menu'],[style_generate_album_b()],1);
+</script>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body onkeypress="mykeycontrol_klphotos_b();">
+<a name=top></a>
+<h2 id="h2_photo" style="margin:0rem;margin-bottom:0.5rem;font-size:1.35rem;"><span id="span_title" onclick="showhide_klphotos_b();" style="cursor:pointer;"></span> <span id="span_img_count" style="color:#707070;font-size:0.8rem;"></span></h2>
+<div id='div_show_hide' style="display:block;margin:0rem 0.5rem;">
+<p><input type="text" id="input_search" onkeyup="if (event.key=='Enter'){imgsearch_klphotos_b();}">
+<label><input type="checkbox" id="input_reg">正则</label>
+<span class="aclick" onclick="imgsearch_klphotos_b();">搜索</span>
+<span class="aclick" onclick="rndsearch_klphotos();" title="0?&rnd">随机</span>
+<span class="aclick" onclick="import_img_data_klphotos_b();">全部记录</span> 
+幻灯片间隔(秒)：<input type="number" id="input_slide_interval" style="width:5rem;" value=60>
+月份字号: <input type="number" id="input_calendar_month_font_size" style="width:4rem;" value=5>
+</p>
+<div id="div_recent_search" style="line-height:180%;margin-top:0.5rem;margin-bottom:0.5rem;"></div>
+<div id="div_toolbar2">
+<!--以下为隐藏按钮内容 - 保留注释-->
+<div id="div_css" style="display:none;">
+<SELECT id="select_css" onchange="search_r_key_b('textarea_calendar_css','',this.value);" style="max-width:500px;"> 
+</SELECT>
+<textarea id="textarea_calendar_css" style="height:3rem;" placeholder="text style">
+</textarea>
+</div>
+
+<div id="div_tempphoto_list" style="display:none;">
+<textarea id="textarea_temp_klphotos" style="height:3rem;" placeholder="临时图片文件列表"></textarea>
+<p>
+<span class="aclick" onclick="show_temp_klphotos_b();">显示</span> 
+<span class="aclick" onclick="show_temp_klphotos_b(true);">随机</span>
+</p>
+</div>
+
+<textarea id="textarea_caption" style="height:3rem;display:none;" placeholder="文字说明"></textarea>
+
+<p id="p_filter" style="display:none;"></p>
+</div>
+</div>
+
+<a name=footer></a>
+
+<div id="div_album" style="width:100%;height:100%;background-color:black;display:none;">
+<div style="position:absolute;left:0;top:0;width:3rem;height:3rem;" onmouseover="this.style.backgroundColor='red';" onmouseout="this.style.backgroundColor='';" onclick="screen_album_end_klphotos();"></div>
+</div>
+
+<script>
+init_klphotos();
+remote_access_page_b();
+if (!is_firefox_b(true) || !is_local_b()){
+    blank_page_b();
+}
+</script>
+</body>
+</html>

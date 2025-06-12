@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>link game</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','en_de_str'],[],[],['link_game_code.js','link_game_ico/link_game512.png']);
+</script>
+<script>
+//-----------------------
+//history
+//0.0.2-20240820
+//0.0.1-20220322
+//-----------------------
+css_root_style_b('18','13',['base','menu'],[],1);
+</script>
+<style>
+#table_lg td {line-height:120%; padding:0.2rem; border:0.1rem solid #e0e0e0; border-radius:0.2rem;}
+</style>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<link rel="manifest" href="link_game.webmanifest" />
+</head>
+<body>
+<a name=top></a>
+<h2 style="margin:0;font-size:1.35rem;"><span id="span_title">link game</span> <span id="span_tip_emoji" style="cursor:pointer;font-size:0.9rem;font-weight:normal;" onclick="find_td_emoji(this.textContent);"></span> <span id="span_mark_emoji" style="font-size:1rem;"></span></h2>
+<table id="table_lg" style="position:absolute;" border=0 width=1 height=1></table>
+<script>
+pwa_register_b('link_game_service_worker.js','Link Game','span_mark_emoji','html',5000);
+
+init_linkgame();
+track_source_b('link_game',false);
+</script>
+<a name=footer></a>
+</body>
+</html>

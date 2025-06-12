@@ -1,0 +1,30 @@
+{
+  "background_color": "transparent",
+  "description": "enwords",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "enwords_ico/enwords512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },  
+    {
+      "src": "enwords_ico/enwords256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },  
+    {
+      "src": "enwords_ico/enwords128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "enwords_ico/enwords64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }
+  ],
+  "name": "enwords",
+  "short_name": "enwords",
+  "start_url": "enwords.htm"
+}

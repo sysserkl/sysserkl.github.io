@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TXT文本搜索</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date','books','eng','enbook','en_de_str','wiki','flot','txtlistsearch','image','idb'],[],['words/enwords_count_sentence_data.js','words/cnwords_data.js','words/hz3500_data.js,defer','words/zh_tw_data.js'],[],true);
+</script>
+<script>
+load_current_book_b(false,true,true,true);
+</script>
+<script>
+flot_import_js_b(['time','symbol']);
+</script>
+<script>
+//-----------------------
+//history
+//0.0.9-20190306
+//0.0.8-20181017
+//0.0.7-20180321
+//-----------------------
+css_root_style_b('17.6','14',['base','menu'],[],1);
+var en_words_temp_important_global=[];
+var csbookname_global='';
+
+</script>
+<style>
+.txtsearch_kltxt_lineno {color:#707070;font-size:0.8rem}
+i {border-bottom:0.15rem dashed tomato;}
+</style>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<a name=top></a>
+<h2 style="margin-top:0px;"><span id="span_title" onclick="popup_show_hide_b('div_show_hide');" style="cursor:pointer;">TXT文本搜索</span> - <span id="booktitle"></span><span id="readingdata"></span></h2>
+<div id='div_show_hide' style="display:block;margin:0rem 0.5rem;">
+<script>
+var book_tag_global='all';
+mobile_style_kltxt_b();
+</script>
+
+<script>
+var cskeys=href_split_b(location.href);
+var kltxt_menulist_index_global=[];
+
+booklist_source_config_b();
+import_book_kltxt_b(cskeys);    //在 args_kltxt_b() 前运行，以获得 book_tag_global - 保留注释
+</script>
+<p id="p_book_list" style="line-height:150%;"></p>
+
+<p>
+<input type="text" id="input_search" onkeyup="if (event.key=='Enter'){txtsearch_kltxt_b();}">
+<label><input type="checkbox" id="input_reg" />正则</label>
+<span class="aclick" onclick="txtsearch_kltxt_b();">Search</span>
+<span class="aclick" onclick="booksearch_kltxt_b();">书目</span>
+<label><input type="checkbox" id="input_continue" />连续搜索</label>
+<span class="aclick" onclick="popup_show_hide_b('span_checkboxes_txtbook','');">⚙</span>
+<span id="span_checkboxes_txtbook" style="display:none;"></span>
+<span id="span_lines_config_txtbook"></span>
+</p>
+<div id="div_recent_search"></div>
+<p id="p_search_menu_kltxt">
+<select id="select_menu" style="max-width:10rem;" onchange="findmenu_kltxt_b(this.value);"></select>
+</p>
+</div>
+<div id="div_cn_words"></div>
+<a name=content></a>
+<p style="margin:0.5rem;">显示起始行号为 <input type="number" id="input_lineno" style="width:6rem;margin-left:15px; margin-bottom:5px;" value=1 onkeyup="if (event.key=='Enter'){getlines_kltxt_b();}" ondblclick='if (this.value==1){this.value=0;} else {this.value=1;}'> 的 
+<input type="number" id="input_lines" style="width:6rem;margin-left:15px; margin-bottom:5px;" value=20 onkeyup="if (event.key=='Enter'){getlines_kltxt_b();}"> 行记录
+<span class="aclick" onclick="getlines_kltxt_b();">显示</span>
+<span class="aclick" onclick="getlines_kltxt_b(false,false,true);">one page</span>
+<span class="aclick" onclick="findmenu_kltxt_b(-1,-1,a_raw_number_kltxt_b());">Search menu</span>
+</p>
+
+<div id="divhtml"></div>
+<div id="divhtml2"></div>
+<script>
+init_kltxt_b('txtlistsearch',cskeys);
+</script>
+<a name=footer></a>
+<script>
+track_source_b('txtlistsearch',false);
+if (!is_firefox_b(false)){
+    blank_page_b(false,false,false);
+}
+</script>
+</body>
+</html>

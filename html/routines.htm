@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>♾ Routines</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date','en_de_str','flot','plan'],[],[],[],true);
+</script>
+<script>
+flot_import_js_b(['time','symbol','categories']);
+</script>
+<script src="routines_code.js"></script>
+<script>
+var recent_search_key_klplan_global='';
+var div_canvas_list_klroutines_global=['div_flot_every_day_klroutines','div_flot_week_count_klroutines','div_flot_every_week_klroutines','div_flot_every_month_klroutines'];
+
+css_root_style_b('18','17',['base','menu']);
+</script>
+<style>
+h4{margin:0.5rem 0;}
+</style>
+<link rel="manifest" href="routines.webmanifest" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<a name=top></a>
+<h2 id="h2_title" style="margin:0;font-size:1.3rem;"><span style="cursor:pointer;" onclick="week_klroutines();hide_klplan_b();">Routines</span> <span id="span_total" style="font-size:1rem;font-weight:normal;cursor:pointer;" onclick="week_klroutines();hide_klplan_b(true);"></span></h2>
+<div id="div_week" style="margin-left:0.5rem;margin-right:0.5rem;"></div>
+<div id="div_category_links" style="line-height:1.8rem;margin-top:0.4rem;margin-left:0.5rem;margin-right:0.5rem;font-size:0.8rem;"></div>
+<div id="divhtml2" style="margin-left:0.5rem;margin-right:0.5rem;"></div>
+<div id="divhtml" style="margin-left:0.5rem;margin-right:0.5rem;"></div>
+<a name=footer></a>
+<script>
+pwa_register_b('routines_service_worker.js','Routines','','');
+
+var hide_li_golbal=false;
+top_bottom_arrow_b('div_top_bottom','',false,'1.3rem',true,false,2);
+var thisweek_global=day_2_week_range_b('','');
+var preweek_global=day_2_week_range_b('','pre');
+var routines_data_global=load_lists_klplan_b('list_routines');
+init_klroutines();
+track_source_b('routines',false);
+</script>
+</body>
+</html>

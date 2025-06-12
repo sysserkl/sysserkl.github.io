@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>QR</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','qr','image'],['jeromeetienne_qrcode.min.js','jsQR.js'],[],[],true);
+</script>
+<script src="qrcode.js"></script>
+<script>
+//-----------------------
+//history
+//0.0.3-20210321 增加菜单
+//0.0.2-20190926
+//0.0.1-20190924
+//-----------------------
+var qr_list_global=[];
+var background_img_data_klqr_global='';
+var background_img_name_klqr_global='';
+var parameter_klqr_global=new Set();
+
+css_root_style_b('18','11',['base','menu'],[],1);
+</script>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<link rel="manifest" href="qrcode.webmanifest" />
+</head>
+<body>
+<h2 id="h2_title" style="margin-top:0;font-size:1.3rem;"><span id="span_title" style="cursor:pointer;" onclick="popup_show_hide_b('div_head_buttons_klqr');">QR Code Generator</span> <span id="span_info" style="font-size:1rem; font-weight:normal;"></span></h2>
+<div style="margin:0.5rem;">
+<div id="div_head_buttons_klqr">
+<div id="div_img_upload_klqr" style="display:none;">
+<p>Select Image: 
+<input type="file" id="input_upload_img_klqr" />
+<span class="aclick" onclick="upload_img_klqr();">上传背景图片</span>
+<span class="aclick" onclick="read_img_klqr();">从图片中读取QR</span>
+<input id="bg_left_klqr" type="input" title="支持 ±0.x 和 ±x，-1 为 正中" value=-1 />
+<input id="bg_top_klqr" type="input" title="支持 ±0.x 和 ±x，-1 为 正中" value=-1 />
+<span class="aclick" onclick="popup_show_hide_b('div_base64_klqr');">base64</span>
+</p>
+<div id="div_base64_klqr" style="display:none;">
+<textarea id="textarea_base64_img_klqr"></textarea>
+</div>
+</div>
+
+<p><span class="span_box" ondblclick="qrtxt_clear_klqr();">Strings: </span><input type="text" id="input_qrtxt" value="just for fun" onkeyup="if (event.key=='Enter'){create_klqr();}">
+<span class="aclick" onclick="create_klqr();"><b>Generate</b></span> 
+</p>
+<p>Size: <input type="text" id="input_qrsize" value="280" onkeyup="if (event.key=='Enter'){create_klqr();}">
+F-Color: <input type="text" value="black" id="input_forecolor" onkeyup="if (event.key=='Enter'){create_klqr();}">
+B-Color: <input type="text" value="white" id="input_backcolor" onkeyup="if (event.key=='Enter'){create_klqr();}">
+<span class="aclick" onclick="randcolor_klqr();">Randomize</span>
+<span class="aclick" onclick="black_white_klqr();">Default</span>
+<span class="aclick" onclick="reverse_klqr();">Reverse</span>
+</p>
+</div>
+<div id="div_qrcode" style="padding:0.5rem;margin-top:0.5rem;"></div>
+<div id="div_recent_search" style="font-size:0.85rem;margin:0.5rem 0rem;line-height:1.8rem;"></div>
+<div id="div_content_klqr"></div>
+<div id="div_tail_buttons_klqr" style="display:none;">
+<p id="p_block_count"></p>
+<p>
+<span class="aclick" onclick="show_border_klqr();">Border</span> 
+<span class="aclick" onclick="show_number_klqr();">Number</span> 
+<select id="select_box_color_klqr"></select>
+<label><input type="checkbox" id="checkbox_comma" />逗号间隔</label>
+<span class="aclick" onclick="table_2_ascii_klqr();">ASCII</span>
+<span class="aclick" onclick="emoji_random_klqr();">随机emoji</span>
+<span class="aclick" id="span_list" style="display:none;" onclick="show_list_klqr();">List</span>
+<span class="aclick" onclick="round_klqr();">Round</span>
+<span class="aclick" onclick="td_2_str_klqr();">td2str</span>
+</p>
+<textarea id="textarea_ascii_klqr" placeholder="ASCII"></textarea>
+<div id="div_list_klqr" style="display:none;">
+</div>
+</div>
+
+<div id="div_statistics"></div>
+</div>
+<script>
+pwa_register_b('qrcode_service_worker.js','QRCode','div_statistics','html');
+init_klqr();
+</script>
+<script>
+track_source_b('qr',false);
+</script>
+</body>
+</html>

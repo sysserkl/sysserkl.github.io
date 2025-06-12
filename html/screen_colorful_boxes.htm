@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>🏳️‍🌈 Colorful Boxes</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','en_de_str']);
+</script>
+<script src="screen_colorful_boxes_code.js"></script>
+<link rel="manifest" href="screen_colorful_boxes.webmanifest" />
+<script>
+//-----------------------
+//history
+//0.0.2-20190628
+//-----------------------
+var times_global=0;
+
+css_root_style_b('19','11',['base'],[],1);
+</script>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body style="background-color:black;">
+<div id="div_colors" style="width:100%;height:100%;"></div>
+<script>
+pwa_register_b('screen_colorful_boxes_service_worker.js','Screen Colorful Boxes','','');
+init_klbox();
+track_source_b('colorful_boxes',false);
+</script>
+</body>
+</html>

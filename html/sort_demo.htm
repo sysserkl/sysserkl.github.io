@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>⬆ 排序算法可视化</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css'],[],[],['sort_demo_code.js']);
+</script>
+<script>
+css_root_style_b('18','14',['base'],[],1);
+</script>
+</head>
+<body>
+<div style="margin:0.5rem;">
+<canvas id="canvas" width="800" height="400" style="border: 1px solid #999;"></canvas>
+
+<p>
+<span class="aclick" onclick="init_sort_demo('bubble')">冒泡排序</span>
+<span class="aclick" onclick="init_sort_demo('selection')">选择排序</span>
+<span class="aclick" onclick="init_sort_demo('insertion')">插入排序</span>
+<span class="aclick" onclick="init_sort_demo('merge')">归并排序</span>
+<span class="aclick" onclick="generate_array_sort_demo()">重建数组</span>
+</p>
+<p>红色高亮当前正在比较/交换的元素，绿色为已排序部分。<span id="span_info"></span></p>
+<table id="table_steps_sort_demo" class="table_common"></table>
+</div>
+<script>
+load_sort_demo();
+</script>
+</body>
+</html>

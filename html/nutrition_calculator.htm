@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>nutrition calculator</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css']);
+</script>
+<script src="nutrition_calculator_code.js"></script>
+<script>
+//-----------------------
+//history
+//0.0.1-20231106
+//-----------------------
+css_root_style_b('18','13',['base','menu'],[],1);
+</script>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<a name=top></a>
+<h2 style="margin-top:0px;font-size:1.2rem;"><span id="span_title" style="cursor:pointer;">nutrition calculator</span></h2>
+<div id="div_table" style="margin:0.5rem;"></div>
+<div id="div_form" style="margin:0.5rem;">
+<p><span class="aclick" onclick="compare_nutrition_calc();">计算</span></p>
+<div id="divhtml"></div>
+<div id="div_status"></div>
+</div>
+<script>
+init_nutrition_calc();
+menu_nutrition_calc();
+</script>
+<a name=footer></a>
+</body>
+</html>

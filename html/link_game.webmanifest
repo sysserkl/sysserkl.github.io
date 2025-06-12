@@ -1,0 +1,30 @@
+{
+  "background_color": "transparent",
+  "description": "Link Game",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "link_game_ico/link_game512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },  
+    {
+      "src": "link_game_ico/link_game256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "link_game_ico/link_game128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "link_game_ico/link_game64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }        
+  ],
+  "name": "Link Game",
+  "short_name": "link game",
+  "start_url": "link_game.htm"
+}

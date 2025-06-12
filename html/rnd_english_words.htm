@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>随机单词</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date','en_de_str','wiki','eng','enbook','idb'],[],[],['rnd_english_words_ico/english_words64.png']);
+</script>
+<script src="enwords_exam_code.js"></script>
+<script src="rnd_english_words_code.js"></script>
+<link rel="manifest" href="rnd_english_words.webmanifest" />
+<script>
+//-----------------------
+//history
+//0.0.5-20200418 支持 PWA
+//0.0.4-20200224 增加每日旧单词搜索
+//0.0.3-20200223 增加菜单，增加最近搜索
+//0.0.2-20200110
+//0.0.1-20190805
+//-----------------------
+var slide_do_rndwords_global;
+css_root_style_b('18','15',['base','menu'],[],1);
+</script>
+<link href="../recent_info.css" type="text/css" rel="stylesheet" />
+<style>
+div.link_title{margin: 1rem;padding:0.8rem;}
+div#div_recent_search p{line-height:1.8rem;}
+</style>
+<script>
+style_generate_b(p_enwords_sentence_style_b(false),true,'style','head');
+</script>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<a name="top"></a>
+<div id="div_menu_buttons">
+<h2 style="margin:0rem;font-size:1.3rem;" id="h2_title"><span id="span_title" onclick="exam_rndwords(true);document.getElementById('input_eng_search').value='';word_search_rndwords();" style="cursor:pointer;">随机单词</span></h2>
+<div id="div_rnd_enwords_buttons" style="margin-left:1.5rem;margin-top:1.5rem;">
+<input type="text" name="input_eng_search" id="input_eng_search" placeholder="单词搜索" onkeyup="if (event.key=='Enter'){word_search_rndwords();}" />
+</div>
+<div id="div_recent_search" style="margin-left:1rem;margin-right:1rem;margin-top:0.5rem;"></div>
+</div>
+<div id="div_exam_buttons"></div>
+<div id="divhtml"></div>
+<script>
+pwa_register_b('rnd_english_words_service_worker.js','Rnd English Words','span_title','color');
+init_rndwords();
+</script>
+<script>
+track_source_b('rndwords',false);
+</script>
+</body>
+</html>

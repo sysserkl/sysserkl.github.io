@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>News</title>
+<meta charset="UTF-8" />
+<script src="hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','snr'],[],['title_data.js','selenium_offline_days_data.js']);
+</script>
+<script>
+//-----------------------
+//history
+//0.0.3-20190312
+//0.0.2-20190302
+//0.0.1-20190301
+//-----------------------
+var selenium_dbc_global=[['www','默认']];
+
+css_root_style_b('17.5','16',['base']);
+</script>
+<link href="recent_info.css" type="text/css" rel="stylesheet" />
+<style>
+span.span_content{word-break:break-all;word-wrap:break-word;}
+</style>
+<link rel="shortcut icon" href="icos/selenium_news.png" />
+<link rel="alternate" type="application/atom+xml" title="KL News Feed" href="www_rss.xml" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body style="margin:0.5rem;">
+<h2 style="margin-top:1rem;"><span id="span_title" class="headline_on" style="font-size:1.5rem;">News</span> <span style="font-size:0.8rem;font-weight:300;" id="span_count"></span></h2>
+<p><span id="span_search_key" style="font-weight:bold;"></span> <a href="www_rss.xml" target=_blank><img src="icos/rss.png" style="width:1rem;" /></a></p>
+<noscript><h1 style="color:red;">请在浏览器打开“原网页”</h1></noscript>
+
+<div id="div_dbcname" style="font-size:0.9rem;line-height:1.9rem;"></div>
+<script>
+if (recent_info_title_global.length>1){
+    if (recent_info_title_global[1].length>=3 && recent_info_title_global[1][1]!==""){
+        document.title=recent_info_title_global[1][1];
+        document.getElementById('span_title').innerText=recent_info_title_global[1][0];
+    } else {
+        document.title=recent_info_title_global[1][0];
+        document.getElementById('span_title').innerText=recent_info_title_global[1][0];
+    }
+}
+
+var sourcelist=[];
+var cskeys=href_split_b(location.href);
+var day_dbf='';
+for (var item of cskeys){
+    if (item.substring(0,8)=='day_dbf='){
+        day_dbf=item.substring(8,);
+    }
+}
+if (day_dbf==''){
+    //2019-01-24_laws
+    day_dbf=dbc_js_files[0]+'_'+selenium_dbc_global[0][0];
+}
+
+document.write('\n<script src="'+day_dbf.substring(0,7)+'/'+day_dbf+'.js"><\/script>\n');
+document.getElementById('span_search_key').innerHTML=day_dbf;
+</script>
+<div id="divhtml2"></div>
+<script>
+top_bottom_arrow_b('div_top_bottom',false,'',(ismobile_b()?'1.3rem':'1.3rem'));
+dbc_list_klsnews_b(day_dbf);
+classify_sites_klsnews_b();
+expand_all_klsnews_b(cskeys);
+document.getElementById('span_count').innerHTML='<i>('+sourcelist.length+')</i>';
+</script>
+<script>
+if (!is_firefox_b()){
+    blank_page_b();
+}
+track_source_b('selenium_news',false);
+</script>
+<p>&nbsp;</p>
+</body>
+</html>

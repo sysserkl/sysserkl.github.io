@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Reader IDB</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date','books','eng','en_de_str','wiki','flot','txtlistsearch','idb'],[],[],[],false);
+</script>
+<script>
+//flot_import_js_b(['time','symbol']);    //用于显示阅读进度 - 保留注释
+</script>
+<script src="reader_idb_code.js"></script>
+<script>
+load_current_book_b(false,true,true);
+</script>
+<script>
+//-----------------------
+//history
+//0.0.1-20210601
+//-----------------------
+csbooklist_source_global.sort(function (a,b){return zh_sort_b(a,b,false,1);}); //按书名排序 - 保留注释
+var csbooklist_sub_global=[['','','','1','']];
+var csbookno_global=0;
+var csbookname_global='';
+var digest_global=[];
+
+var filelist=[];
+var idbfilename_list_global=[];
+var book_tag_global='all';
+
+css_root_style_b('17','14',['base','menu'],[],1);
+</script>
+<link rel="manifest" href="reader_idb.webmanifest" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<a name=top></a>
+<h2 id="h2_title" style="margin-top:0; font-size:1.35rem;">Reader - IDB <span id="span_filename"></span><span id="span_filelength" style="font-size:0.8rem;"></span></h2>
+<div style="margin:1rem 0.5rem;">
+
+<div id="div_upload_buttons" style="margin-bottom:0.5rem;display:none;">
+<input type="file" id="input_upload_txt">
+<span class="aclick" onclick="upload_txt_reader_idb();">Upload TXT/JS File</span>
+<span class="aclick" onclick="upload_digest_reader_idb();">Upload Digest File</span>
+</div>
+
+<p style="margin-bottom:0.5rem;">
+<span id="span_idbbooklist"></span>
+<input type="text" id="input_search" style="display:none;">
+<input type="number" id="input_lineno" style="display:none;" value=1>
+<input type="number" id="input_lines" style="display:none;" value=20>
+<input type="checkbox" id="input_digest" checked style="display:none;"><!--显示摘要-->
+</p>
+</div>
+<a name=content></a>
+<div id="divhtml"></div>
+<div id="divhtml2"></div>
+<script>
+pwa_register_b('reader_idb_service_worker.js','Reader IDB','h2_title','color');
+
+init_reader_idb();
+track_source_b('reader_idb',false);
+if (!is_firefox_b(false)){
+    blank_page_b(false,false,false);
+}
+</script>
+</body>
+</html>

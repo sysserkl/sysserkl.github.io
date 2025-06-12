@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>✒ Proofreader</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date']);
+</script>
+<script src="proofreader_code.js"></script>
+<script>
+css_root_style_b('18','13',['base','menu'],[],1);
+</script>
+<style>
+div#div_content_dpr p{font-size:1rem;line-height:1.5rem;margin-bottom:0.5rem;}
+</style>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<a name=top></a>
+<h2 style="margin:0;font-size:1.25rem;"><span id="span_title" style="cursor:pointer;">Proofreader</span></h2>
+<p style="margin-left:0.5rem;"><small>ver. 0.0.2-20210425</small></p>
+<!--
+//history
+//0.0.2-20210425 增加高亮选项菜单
+//0.0.1-20210424
+-->
+<div style="margin:0.5rem;">
+<p><textarea id="textarea_document_proofreader" style="height:30rem;" placeholder='复制文本并粘贴到此处'></textarea></p>
+<div id="div_content_dpr" style="display:none;border:0.1rem grey solid;padding:0.5rem;" ondblclick="show_hide_dpr(true);"></div>
+<p>
+<span class="aclick" onclick="proofread_dpr();">校对</span>
+<span id="span_textarea_buttons"></span>
+</p>
+<div id="divhtml"></div>
+</div>
+<script>
+init_dpr();
+</script>
+<a name=footer></a>
+</body>
+</html>

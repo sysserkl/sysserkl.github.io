@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Memo</title>
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date'],[],[],['memo_ico/memo512.png']);
+</script>
+<script src="memo_code.js"></script>
+<link rel="manifest" href="memo.webmanifest" />
+<script>
+var content_klmemo_global=[];
+
+var recent_search_key_klmemo_global='';
+var sort_type_klmemo_global='1';
+
+css_root_style_b('19','13',['base','menu']);
+</script>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<a name="top"></a>
+<h2 id="h2_title" style="margin-top:0rem;font-size:1.3rem;"><span style="cursor:pointer;" ondblclick="init_lt_klmemo('',true);">Memo</span> <span id="span_count" style="font-size:0.8rem;font-weight:normal;"></span></h2>
+<div style="margin-left:0.5rem;margin-right:0.5rem;">
+<p id="p_tags_klmemo" style="font-size:0.8rem;line-height:1.8rem;"></p>
+<div id="divhtml">
+</div>
+<div id="div_status" style="font-size:0.8rem;color:grey;cursor:pointer;" ondblclick="this.innerHTML='';"></div>
+</div>
+<script>
+pwa_register_b('memo_service_worker.js','Memo','div_status','html');
+
+init_lt_klmemo('',true);
+menu_lt_klmemo();
+top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.4rem'));
+</script>
+<script>
+track_source_b('memo',false);
+</script>
+</body>
+</html>

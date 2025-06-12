@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8" />
+<script src="hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date','en_de_str','wiki'],['prism/prism.js',"prism/prism-coy.css"],['title_data.js','pwa_id_data.js']);
+</script>
+<script>
+klbase_addons_import_js_b([],[],['bible_quote/quote'+date_2_ymd_b(false,'m')+'_data.js','bible_quote/bible'+date_2_ymd_b(false,'m')+'_data.js','bible_quote/catchphrase_data.js']);
+</script>
+<script src="recent_info_code.js"></script>
+<script>
+var recent_info_list=[];
+var default_datafile_rct_global='jsdata/share_to_other_people_data.js';
+var is_default_rct_global=true;
+var current_datafile_rct_global=default_datafile_rct_global;
+var headline_size_rct_global='2.5';
+var showmenu_rct_global=true;
+var catchphrase_no_global=false;
+args_klrecent();
+
+if (current_datafile_rct_global!==''){
+    klbase_addons_import_js_b([],[],[],[current_datafile_rct_global]);
+}
+</script>
+<script>
+
+css_root_style_b('14','13',['base']);
+</script>
+<link href="recent_info.css" type="text/css" rel="stylesheet" />
+<script>
+style_klrecent();
+</script>
+<link rel="shortcut icon" href="./html/recent_info_ico/recent_info512.png" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<table id="table_title">
+<tr><td>
+<h2 class="headline_on" style="margin:0.5rem 1rem;"><span id="span_title"></span></h2>
+</td></tr>
+</table>
+<div id="divhtml"></div>
+<script>
+init_klrecent();
+</script>
+<script>
+track_source_b('recent_info - '+document.title,false);
+</script>
+</body>
+</html>

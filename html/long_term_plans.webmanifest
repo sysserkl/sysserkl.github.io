@@ -1,0 +1,30 @@
+{
+  "background_color": "transparent",
+  "description": "Long Term Plans",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "long_term_plans_ico/long_term_plans512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },  
+    {
+      "src": "long_term_plans_ico/long_term_plans256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "long_term_plans_ico/long_term_plans128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "long_term_plans_ico/long_term_plans64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }        
+  ],
+  "name": "Long Term Plans",
+  "short_name": "LT Plans",
+  "start_url": "long_term_plans.htm"
+}

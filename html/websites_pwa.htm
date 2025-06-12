@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Websites</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date','qr','en_de_str','websites'],['jeromeetienne_qrcode.min.js'],['jieba_pb_dict_data.js'],[],true);
+</script>
+<script src="websites_pwa_code.js"></script>
+<script>
+//-----------------------
+//history
+//0.0.2-20201207 增加搜索功能
+//0.0.1-20200811
+//-----------------------
+css_root_style_b('18','13',['base','menu'],[],1);
+var oa_qr_list_websites_global=[];
+var oa_qr_no_websites_global=0;
+var fav_websites_global=[];
+var jieba_websites_global=new Set();
+var today_clicked_websites_global=new Set();
+var canvas_size_websites_global=(ismobile_b()?90:150);
+</script>
+<style>
+div.div_qr{padding:0.2rem;margin:0.2rem;border: 0.15rem solid black;}
+</style>
+<link rel="manifest" href="websites_pwa.webmanifest" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<a name=top></a>
+<h2 style="margin-top:0;font-size:1.35rem;"><span id="span_title" style="cursor:pointer;" ondblclick="search_websites_pwa('');">Websites</span><span id="span_count" style="font-size:0.8rem;color:grey;font-weight:normal;"></span> <span id="span_status" style="font-weight:normal;font-size:1rem;"></span></h2>
+<div id="divhtml" style="margin-left:0.5rem;margin-right:0.5rem;margin-bottom:3rem;"></div>
+<script>
+document.getElementById('span_status').style.color=scheme_global['memo'];
+pwa_register_b('websites_pwa_service_worker.js','Websites for PWA','span_status','html',5000);
+init_websites_pwa();
+</script>
+<script>
+track_source_b('websites_pwa',false);
+</script>
+<a name=footer></a>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>GPS Points</title>
+<script src="../hard_ln_io/klbase.js"></script>
+<script src="gps_points_code.js"></script>
+<script>
+var gpx_pb_global=[];
+var gpx_kl_global=[];
+var clicked_lat_lng_global=[];
+var gpx_line_color_no_global=0;
+var gpx_files_district_global=[];
+klbase_addons_import_js_b(['css','date','en_de_str','leaflet','flot','idb'],['leaflet/leaflet.css','leaflet/leaflet.js','leaflet_plugins/leaflet.ChineseTmsProviders.js'],['gpx_pb_data.js','map/district_cn_geo_data.js'],[],true);
+</script>
+<script>
+flot_import_js_b(['time','symbol'],true);
+</script>
+<script src="../../../../data/gpx_kl_data.js"></script>
+<script>
+//-----------------------
+//history
+//0.0.9-20211029 增加 下载功能
+//0.0.8-20211020 增加 gpx file统计图
+//0.0.7-20210709 支持多种线条颜色
+//0.0.6-20210504 增加 距离指定地点最近的gpx文件排序
+//0.0.5-20201110 增加 路线擦除
+//0.0.4-20201109 增加 坐标转换
+//0.0.3-20200903 增加 XMLHttpRequest 读取 txt 文件功能
+//0.0.2-20200116
+//0.0.1-20191112
+//-----------------------
+css_root_style_b('17','11',['base','menu'],[],1);
+</script>
+<style>
+.li_gpx_file {word-break:break-all;word-wrap:break-word;}
+</style>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<link rel="manifest" href="gps_points.webmanifest" />
+</head>
+<body>
+<div id="div_gps_points">
+<div id="div_icon" style="display:inline;font-size:1.5rem;cursor:pointer;" onclick="current_position_gps_points();"></div>
+<div id="div_status" style="display:inline;font-size:1.5rem;cursor:pointer;word-break:break-all;word-wrap:break-word;" onclick="popup_show_hide_b('div_buttons');"></div> 
+<div id="div_buttons" style="display:none;"></div>
+<div id="divhtml" style="margin:0.5rem;"></div>
+</div>
+<div id="div_map"></div>
+<div id="div_selection" style="display:none;line-height:2rem;padding:2rem;border:0.1rem solid black;overflow:scroll;"></div>
+<script>
+var klmaps_global=[];
+var omap_gps_points_global;
+init_page_gps_points();
+
+pwa_register_b('gps_points_service_worker.js','GPS Points','div_status','html');
+</script>
+<script>
+track_source_b('gps_points',false);
+</script>
+</body>
+</html>

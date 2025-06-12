@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>🧭  Coords</title>
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','en_de_str'],['leaflet/leaflet.css','leaflet/leaflet.js']);
+</script>
+<script src="gps_https_code.js"></script>
+<script>
+//-----------------------
+//history
+//0.0.1-20191106
+//-----------------------
+css_root_style_b('17','11',['base'],[],1);
+</script>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<div id="div_gps">
+<span id="span_status" style="font-size:2rem;"></span>
+<span id="span_count"></span>
+<span id="span_buttons"></span>
+</div>
+<div id="div_map"></div>
+<div id="div_export" style="position:absolute;z-index:9999;left:0;top:0;padding:2rem;display:none;"></div>
+<script>
+var omap_gps_global=false;
+var lon_gps_global=-1;
+var lat_gps_global=-1;
+var run_gps_global;
+var run_times_global=0;
+
+height_gps();
+point_gps();
+</script>
+<script>
+track_source_b('gps_https',false);
+</script>
+</body>
+</html>

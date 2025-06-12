@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+<title>selenium enwords</title>
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date','en_de_str','eng','enbook','wiki','rlater','idb'],[],[],['selenium_enwords_code.js'],false);
+</script>
+<script>
+var readlater_marked_rows_global=[];
+var selenium_enwords_data_global=[];
+var selenium_enwords_current_global=[];
+var rows_per_page_seen_global=100;
+var is_all_result_seen_global=true;
+var klwiki_page_position_global=[];
+
+var delete_type_rlater_global='删除到iframe';
+var is_http_file_global=!is_file_type_b();  //(document.location.href.substring(0,5)!=='file:');
+var en_words_book_newwords_continue_global=false;
+</script>
+<script>
+import_files_seen(); 
+</script>
+<script>
+css_root_style_b('18','14',['base','menu'],[],1);
+</script>
+<script>
+import_data_seen();
+</script>
+<link rel="manifest" href="selenium_enwords.webmanifest" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<h2  id="h2_title" style="margin:0rem;font-size:1.35rem;">selenium enwords <span id="span_subtitle" style="font-size:0.8rem;font-weight:normal;"></span></h2>
+<div style="margin:0.5rem;margin-left:0.5rem;">
+<p id="p_buttons" style="line-height:2rem;">
+<input type="text" id="input_search" value=".*" onkeyup="if (event.key=='Enter'){search_seen();}">
+最大删除条数：<input type="number" id="input_max_delete_rlater" value=50 min=1>
+</p>
+<div id="div_recent_search" style="line-height:1.8rem;"></div>
+<div id="div_status"></div>
+<div id="div_search_links" style="max-width:1200px;"></div>
+</div>
+<textarea id="textarea_for_copy" style="display:none;"></textarea>
+<script>
+pwa_register_b('selenium_enwords_service_worker.js','selenium_enwords','span_subtitle','html');
+//-----------------------
+//history
+//1.0.1-20230914
+//-----------------------
+init_seen();
+if (!is_firefox_b(true)){
+    blank_page_b();
+}
+</script>
+</body>
+</html>

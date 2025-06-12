@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Notepad</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','en_de_str','idb','date','rows','wiki','eng','websites'],[],[],['notepad_code.js']);
+</script>
+<script>
+//-----------------------
+//history
+//0.0.1-20231012
+//-----------------------
+css_root_style_b('18','13',['base','menu'],[],1);
+</script>
+<style>
+#divhtml li {font-size:1rem;line-height:2rem;}
+</style>
+<link rel="manifest" href="notepad.webmanifest" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<a name=top></a>
+<h2 style="margin-top:0px; font-size:1.2rem;"><span id="span_title" style="cursor:pointer;">Notepad</span> <span id="span_count" style="font-weight:normal; font-size:0.9rem;"></span></h2>
+<div style="margin:0.5rem;">
+<p id="p_search_buttons_notepad"><input type="text" id="input_search" placeholder="search" onkeyup="if (event.key=='Enter'){search_notepad();}" /> <span class="oblong_box" onclick="new_notepad();">新建</span></p>
+<div id="div_recent_search" style="font-size:0.85rem;margin:0.5rem 0rem;line-height:1.8rem;"></div>
+
+<p id="p_menu_notepad" style="line-height:1.8rem;display:none;"></p>
+<form method="POST"  id="form_notepad" target=_blank>
+<p><textarea name="textarea_content_notepad" id="textarea_content_notepad" style="display:none;height:20rem; padding:1rem;font-size:1rem;"></textarea></p>
+<p id="p_edit_buttons_notepad" style="display:none;"><span id="span_append_or_edit_notepad" class="aclick" onclick="append_or_edit_notepad(this);">保存</span><span class="aclick" onclick="show_hide_notepad(false);">取消</span><span id="span_delete_notepad" class="aclick" onclick="delete_notepad();">删除</span> <span id="span_textarea_info_notepad" ondblclick="textarea_info_count_notepad(this);"></span></p>
+</form>
+
+<div id="divhtml" style="margin:1rem;"></div>
+<div id="div_status" style="margin:1rem;"></div>
+</div>
+<script>
+pwa_register_b('notepad_service_worker.js','notepad','span_count','html');
+
+//-----------------------
+current_id_notepad_global=false;
+rows_per_page_notepad_global=10;
+raw_data_notepad_global=[];
+init_notepad();
+menu_notepad();
+</script>
+<a name=footer></a>
+</body>
+</html>

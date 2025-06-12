@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>🎬 IMDb Analyze</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css']);
+</script>
+<script src="imdb_code.js"></script>
+<script>
+//-----------------------
+//history
+//0.0.3-20221013 转换为对 dict 格式的数据处理
+//0.0.2-20181005
+//-----------------------
+css_root_style_b('16','9',['base','menu'],[],1);
+</script>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<h2 style="margin:0px;font-size:1.35rem;"><span id="span_title"></span></h2>
+<div style="margin:0.5rem;">
+<span id="span_data_list"></span>
+<p>
+<input type="checkbox" id="check_no_name">不显示影片名称
+<span class="aclick" onclick="gate_multimedia();">执行</span>
+</p>
+<div id="divhtml" style="padding:0.5rem"></div>
+</div>
+<script>
+load_multimedia();
+</script>
+<script>
+init_multimedia();
+track_source_b('imdb',false);
+</script>
+</body>
+</html>

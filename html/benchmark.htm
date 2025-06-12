@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>benchmark</title>
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date'],[],[],['../hard_ln_io/sha.js']);
+</script>
+<script src="benchmark_code.js"></script>
+<script>
+//-----------------------
+//history
+//0.0.1-20240418
+//-----------------------
+css_root_style_b('18','10',['base','menu'],[],1);
+</script>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<h2 style="margin:0rem;font-size:1.35rem;"><span id="span_title">benchmark</span></h2>
+<div style="margin:0.5rem;">
+<textarea id="textarea_process_bmark" name="textarea_process_bmark" style="width:90%;height:20rem;"></textarea>
+<p id="p_process_buttons"></p>
+<form id="form_bmark" method="POST" target=_blank>
+<textarea id="textarea_result_bmark" name="textarea_result_bmark" style="width:90%;height:5rem;"></textarea>
+<p id="p_result_buttons"></p>
+</form>
+<div id="divhtml"></div>
+</div>
+<script>
+init_bmark();
+</script>
+</body>
+</html>

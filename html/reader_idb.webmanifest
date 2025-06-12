@@ -1,0 +1,30 @@
+{
+    "background_color": "transparent",
+    "description": "Reader IDB",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "reader_idb_ico/reader_idb512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "reader_idb_ico/reader_idb256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "reader_idb_ico/reader_idb128.png",
+            "sizes": "128x128",
+            "type": "image/png"
+        },
+        {
+            "src": "reader_idb_ico/reader_idb64.png",
+            "sizes": "64x64",
+            "type": "image/png"
+        }
+    ],
+    "name": "Reader IDB",
+    "short_name": "📕 IDB",
+    "start_url": "reader_idb.htm"
+}

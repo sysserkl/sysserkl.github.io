@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>🎁 emoji</title>
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css'],[],['emoji_data.js','unicode_data.js']);
+</script>
+<script src="emoji_code.js"></script>
+<script>
+//-----------------------
+//history
+//0.0.2-20211228 增加 unicode
+//0.0.1-20190928
+//-----------------------
+var no_per_page_emoji_global=300;
+
+css_root_style_b('18','11',['base','menu']);
+</script>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<h2 style="margin:0rem 0rem;font-size:1.35rem;"><span id="span_title" style="cursor:pointer;">emoji</span></h2>
+<div style="margin:0.5rem;">
+<p id="p_buttons_emoji">
+<span class="aclick" onclick="show_emoji('category');">category</span>
+<span class="aclick" onclick="show_emoji('range');">range</span>
+</p>
+
+<div class="div_emoji" id="div_category_emoji">
+<input type="text" id="input_emoji_search" value=".*" placeholder="emoji search" onkeyup="if (event.key=='Enter'){search_emoji();}" />
+<select id="select_chapter" style="max-width:24rem;height:2rem;" onchange="minor_options_emoji(this.value);"></select>
+<select id="select_sub" style="height:2rem;" onchange="one_chapter_emoji(this.value);"></select>
+</div>
+
+<div class="div_emoji" id="div_range_emoji">
+<select id="select_unicode" style="max-width:24rem;height:2rem;" onchange="unicode_list_emoji(this.value);"></select>
+<input type="text" id="input_range_filter" value=".*" placeholder="range filter" onkeyup="if (event.key=='Enter'){range_filter_emoji();}" />
+<span class="aclick" onclick="select_pre_next_emoji('p');">⇦</span><span class="aclick" onclick="select_pre_next_emoji('n');">⇨</span>
+<p><span id="span_unicode_info"></span></p>
+</div>
+</div>
+<div class="divhtml" id="divhtml_category" style="column-count: 2;"></div>
+<div class="divhtml" id="divhtml_range"></div>
+<div id="div_status_emoji" style="margin:0.5rem;"></div>
+<script>
+init_emoji();
+</script>
+<script>
+track_source_b('emoji',false);
+</script>
+</body>
+</html>

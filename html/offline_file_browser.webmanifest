@@ -1,0 +1,30 @@
+{
+    "background_color": "transparent",
+    "description": "offline file browser",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "offline_file_browser_ico/offline_file_browser512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "offline_file_browser_ico/offline_file_browser256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "offline_file_browser_ico/offline_file_browser128.png",
+            "sizes": "128x128",
+            "type": "image/png"
+        },
+        {
+            "src": "offline_file_browser_ico/offline_file_browser64.png",
+            "sizes": "64x64",
+            "type": "image/png"
+        }
+    ],
+    "name": "offline file browser",
+    "short_name": "ofb",
+    "start_url": "offline_file_browser.htm"
+}

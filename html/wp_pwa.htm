@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>✍️ 收支离线登记</title>
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','date','en_de_str','money'],[],['jieba_pb_dict_data.js']);
+</script>
+<script src="wp_pwa_code.js"></script>
+<script>
+//history
+//0.0.1-20210323
+var csdata=[];
+var current_id_wp_pwa_global=-1;
+
+css_root_style_b('15.5','10',['base','menu']);
+</script>
+<style>
+p{font-size:1.15rem;}
+div#lurudiv{position: fixed; left: 50%; top: 50%; width:auto; height:auto; display:inline; border:solid 15px #ff0000;background-color:#acf212;text-align:center;font-size:2rem;padding:25px;-webkit-transform: translateX(-50%) translateY(-50%);color:red;cursor:pointer;display:none;}
+.tablebordertd2{border-bottom:solid 0.1rem #e0e0e0;font-size:1.2rem;}
+.tablebordertd2 td{border-top:solid 0.1rem #e0e0e0;}
+.tablebordertd2 tr.trcolor {background-color: #ffffff;}
+.tablebordertd2 tr.trcolor:hover {background-color: #E9EEF2;}
+</style>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<link rel="manifest" href="wp_pwa.webmanifest" />
+</head>
+<body>
+<h2 style="margin:0;font-size:1.4rem;"><span id="span_title">收支离线登记</span></h2>
+<hr />
+<div id="lurudiv" onclick='this.style.display="none";'></div>
+
+<div style="margin:0 0.5rem;" id="div_edit_zone">
+<div id="div_export_import"></div>
+<p class=tb04><span id="span_class" style="cursor:pointer;font-weight:600;" onclick="popup_show_hide_b('popup_class');">分类：</span><input type="text" id="input_class" required autocomplete="off" placeholder="分类"></p>
+<p class=tb04><span style="cursor:pointer;" ondblclick="document.getElementById('input_name').value='';"><b>名称：</b></span><input type="text" id="input_name" required placeholder="名称">
+<p class=tb04>
+<span style="font-weight:bold;color:grey;">单位：</span><input type="text" id="input_unit" autocomplete="off" placeholder="单位">
+<b>数量：</b><input type="number" id="input_amount" step="0.001" required autocomplete="off" placeholder="数量">
+<p class=tb04><span style="font-weight:bold;color:grey;">单价：</span><input type="number" id="input_price" step="0.01" autocomplete="off" placeholder="单价">元
+<b>总价：</b><input type="number" id="input_total_price" step="0.01" required autocomplete="off" placeholder="总价">元
+</p>
+<p class=tb04><span id="span_from" style="cursor:pointer;font-weight:600;" onclick="popup_show_hide_b('popup_from');">出处：</span><input type="text" id="input_address" placeholder="出处">
+<p class=tb04><span style="font-weight:600;cursor:pointer;" onclick="luru_today_wp();">购置日期：</span><input type="date" id="input_day_purchase" required>
+</p>
+<p class=tb04><span style="font-weight:bold;color:grey;">子类：</span><input type="text" id="input_tag" placeholder="子类">
+</p>
+<p class=tb04><span style="cursor:pointer;" ondblclick="document.getElementById('textarea_content').value='';"><b>内容：</b></span><span class="minisize2"><i>(字数限制在20000个字符以内)</i></span></p>
+<div id="div_editor"></div>
+<p class=tb04><!--webbot bot="Validation" B-Value-Required="TRUE" I-Maximum-Length="20000" --><textarea id="textarea_content" style="width:90%;height:6.5rem;padding:0.5rem;font-size:1.2rem;margin-top:0.5rem;"></textarea></p>
+<p class=tb04><span class="aclick" id="span_submit" onclick="add_or_edit_wp_pwa(this.innerText);">添加</span> <span class="aclick" id="span_cancel_edit" onclick="cancel_edit_wp_pwa();" style="display:none;">取消修改</span> <span id="span_elm_buttons_wp_pwa" style="display:none;"></span></p>
+
+<div id="div_elm_buttons" style="display:none;">
+<div id="div_jieba_wpimport"></div>
+<textarea id="textarea_split_content" style="width:90%;height:10rem;padding:0.5rem;font-size:1.2rem;margin-top:0.5rem;"></textarea>
+<p><span class="aclick" onclick="textarea_shift_b('textarea_content','textarea_split_content');">对调</span></p>
+</div>
+
+<div id="div_calculator" style="margin:0 0.5rem;"></div>
+<div id="divhtml" style="margin-bottom:3rem;"></div>
+</div>
+<script>
+pwa_register_b('wp_pwa_service_worker.js','WP PWA','','');
+
+init_wp_pwa();
+if (!is_firefox_b()){
+    blank_page_b();
+}
+</script>
+<script>
+track_source_b('wp_pwa',false);
+</script>
+</body>
+</html>
