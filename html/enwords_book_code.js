@@ -8,11 +8,11 @@ function book_load_enwords_book(csno){
     import_book_js_b();
 }
 
-function refresh_book_new_enwords_book(csno=10){
+function refresh_book_new_enwords_book(csno=10,sort_col=4,is_dec=true){
     var value_old=all_new_words_count_get_enbook_b(false,false);
     var value_new=all_new_words_count_get_enbook_b(true,false);
     
-    compare_statistics_enwords_book(value_old,value_new,csno,false);
+    compare_statistics_enwords_book(value_old,value_new,csno,false,sort_col,is_dec);
     
     var filter_str=[];
     for (let item of enbook_compare_result_list_global){
@@ -152,7 +152,6 @@ function menu_enwords_book(){
     
     klmenu_new=klmenu_new.concat([
     '<span class="span_menu" onclick="'+str_t+'import_enwords_book(\'new\');">导入KLWiki和txtbook全部新单词</span>',   
-    //'<span class="span_menu" onclick="'+str_t+'import_enwords_book(\'new_hot\');">导入常见新单词</span>',   
     '<span class="span_menu" onclick="'+str_t+'max_length_new_enwords_book();">全部新单词中最长的单词</span>',     
     '<span class="span_menu" onclick="'+str_t+'phrase_in_current_enwords_book();">由当前单词组成的词组</span>',     
     ]);
@@ -206,12 +205,20 @@ function menu_enwords_book(){
     
     var klmenu2=[    
     '<a href="?book=1&continue" onclick="'+str_t+'">批量统计生词</a>',
-    '<span class="span_menu" onclick="'+str_t+'refresh_book_new_enwords_book(10);">按书名顺序重新批量统计变动最少的10本书籍</span>',
+    //'<span class="span_menu" onclick="'+str_t+'refresh_book_new_enwords_book(10);">按书名顺序重新批量统计变动最少的10本书籍</span>',
     '<span class="span_menu" onclick="'+str_t+'news_words_statistics_enwords_book();">显示统计结果</span>',
     '<span class="span_menu" onclick="'+str_t+'compare_form_statistics_enwords_book();">比较统计数据</span>',
     '<span class="span_menu" onclick="'+str_t+'exclude_enwords_book();">电子书中未包含的旧单词</span>',    
 
     ];
+    
+    format_list=[
+    ['变动最少','refresh_book_new_enwords_book(10,4,true);',true],
+    ['生词量最少','refresh_book_new_enwords_book(10,3,false);',true],
+    ['生词量最多','refresh_book_new_enwords_book(10,3,true);',true],
+    ];    
+    klmenu2.push(menu_container_b(str_t,format_list,'按书名顺序重新批量统计10本书籍：'));    
+    
     if (is_local_b()){
         klmenu2.push('<span class="span_menu" onclick="'+str_t+'klwiki_link_b(\'英语书籍生词统计\',true);">英语书籍生词统计(KLWiki)</span>');
     }
@@ -234,7 +241,7 @@ function menu_enwords_book(){
     ];    
     klmenu_config.push(menu_container_b(str_t,format_list,'文件载入：'));    
     
-    var menus=klmenu_b(klmenu1,'🝛','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_new,'🔤','32rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'🧮','23rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','27rem','1rem','1rem','60rem');
+    var menus=klmenu_b(klmenu1,'🝛','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_new,'🔤','32rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'🧮','33rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','27rem','1rem','1rem','60rem');
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(menus,'','0rem')+' ');
     
     var input_list=[['input_frequency_count_enwords',5,0.5],];
@@ -671,7 +678,7 @@ function title_set_enwords_book(){
     localStorage.setItem('enbook_title_name',bltitle);
 }
 
-function compare_statistics_enwords_book(value_old=false,value_new=false,csmax=-1,show_html=true){
+function compare_statistics_enwords_book(value_old=false,value_new=false,csmax=-1,show_html=true,sort_col=4,is_dec=true){
     function sub_compare_statistics_enwords_book_get_list(cslist){
         for (let blxl=0,lent=cslist.length;blxl<lent;blxl++){
             var item=cslist[blxl];
@@ -721,15 +728,19 @@ function compare_statistics_enwords_book(value_old=false,value_new=false,csmax=-
     }
     
     if (csmax>0){
-        enbook_compare_result_list_global.sort(function (a,b){return zh_sort_b(a,b,false,1);});
-        enbook_compare_result_list_global.sort(function (a,b){return a[4]<b[4]?1:-1;});
+        enbook_compare_result_list_global.sort(function (a,b){return zh_sort_b(a,b,false,1);}); //书名排序 - 保留注释
+        if (is_dec){
+            enbook_compare_result_list_global.sort(function (a,b){return a[sort_col]<b[sort_col]?1:-1;}); //4: Δ变动值排序 - 保留注释
+        } else {
+            enbook_compare_result_list_global.sort(function (a,b){return a[sort_col]>b[sort_col]?1:-1;}); //4: Δ变动值排序 - 保留注释
+        }
         enbook_compare_result_list_global=enbook_compare_result_list_global.slice(0,csmax);
     }
     //No.	书名	Data1	Data2	Δ	Data1(10%)	Data2(10%)	Δ - 保留注释
     //enbook_compare_result_list_global 元素形如：[ "ye_zhi_shi_xuan_ying_hdz_241502", "叶芝诗选(英汉对照)", 1129, 1126, -3, 153, 153, 0 ] - 保留注释
     
     if (show_html){
-        compare_result_list_to_table_enwords_book();
+        compare_result_list_to_table_enwords_book(sort_col);
     }
 }
 
