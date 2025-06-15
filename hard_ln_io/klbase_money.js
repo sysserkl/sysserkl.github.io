@@ -314,7 +314,7 @@ function editor_money_b(){
 
 function style_money_b(csedittype){
     function sub_style_money_b_multimedia(csstr){
-        var blreg=/^\/home\/.+\/wpatt\/(.+)$/;
+        var blreg=/^\/home\/.+\/wpatt\/(.+)$/mg;
         if (csstr.match(blreg)){
             csstr=csstr.replace(blreg,'$1');
         }

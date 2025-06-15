@@ -8,330 +8,66 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Sat, 14 Jun 2025 10:11:03 +0800</lastBuildDate>
-<item><title>The Republic on Parade - Law &amp; Liberty</title><link>https://lawliberty.org/the-republic-on-parade/</link></item>
-<item><title>The Morality of Mad Men - Law &amp; Liberty</title><link>https://lawliberty.org/the-morality-of-mad-men/</link></item>
-<item><title>Eco-Terrorists Aren’t What They Used to Be - Law &amp; Liberty</title><link>https://lawliberty.org/eco-terrorists-arent-what-they-used-to-be/</link></item>
-<item><title>Politics of the Cradle - Law &amp; Liberty</title><link>https://lawliberty.org/politics-of-the-cradle/</link></item>
-<item><title>Recovering Germany’s Conservative Tradition - Law &amp; Liberty</title><link>https://lawliberty.org/recovering-germanys-conservative-tradition/</link></item>
-<item><title>Animals taught us culture - Aeon</title><link>https://aeon.co/essays/did-animals-provide-the-blueprints-for-human-culture?utm_source=rss-feed</link></item>
-<item><title>David Harvey and the city - Aeon</title><link>https://aeon.co/videos/a-tour-of-new-yorks-gaudiest-neighbourhood-with-the-marxist-geographer-david-harvey?utm_source=rss-feed</link></item>
-<item><title>Incredible testimonies - Aeon</title><link>https://aeon.co/essays/the-short-dramatic-history-of-alien-abduction-in-the-us?utm_source=rss-feed</link></item>
-<item><title>GenAI应用工程师：新一代开发者的关键技能与面试技巧 - 宝玉的分享</title><link>https://baoyu.io/translations/genai-developer-skills-interview-tips</link></item>
-<item><title>Sam Altman 最新文章：悄然而至的奇点，一场温和的革命 - 宝玉的分享</title><link>https://baoyu.io/translations/the-gentle-singularity</link></item>
-<item><title>学好基本功，AI 才能真正助你一臂之力 - 宝玉的分享</title><link>https://baoyu.io/translations/how-to-not-using-ai-to-code</link></item>
-<item><title>Vibe Coding 的最佳实践仍然是 Agile 的版本迭代模式，而不是一次性完成一个庞大的无法运行和维护的半成品 - 宝玉的分享</title><link>https://baoyu.io/blog/agile-iterative-coding-best-practices</link></item>
-<item><title>真正的高手，不追逐目标，而是设定边界 - 宝玉的分享</title><link>https://baoyu.io/translations/smart-people-dont-chase-goals-they-create-limits</link></item>
-<item><title>Ilya Sutskever 最新毕业演讲：我们正处在人类史上最不寻常的时代，因为 AI 终将无所不能，你的未来无法逃避 - 宝玉的分享</title><link>https://baoyu.io/blog/ilya-sutskever-ai-future</link></item>
-<item><title>从 Cloudflare Workers OAuth Provider 学习 AI 结对编程：深入分析 AI 编程的最佳实践 - 宝玉的分享</title><link>https://baoyu.io/blog/cloudflare-workers-ai-pair-programming</link></item>
-<item><title>假设 AI 未来真的能在写代码和系统设计上超过人类，那还有必要学习编程和系统设计吗？ - 宝玉的分享</title><link>https://baoyu.io/blog/ai-surpass-humans-coding-necessary</link></item>
-<item><title>AI时代：判断力为何比技术能力更重要？ - 宝玉的分享</title><link>https://baoyu.io/translations/ai-and-judgement</link></item>
-<item><title>AI 编程越来越厉害了，我要怎么提升自己的系统架构能力？ - 宝玉的分享</title><link>https://baoyu.io/blog/improve-system-architecture-ai-era</link></item>
-<item><title>Taiwan’s military reform is failing where it matters most - Defense News</title><link>https://www.defensenews.com/opinion/2025/06/13/taiwans-military-reform-is-failing-where-it-matters-most/</link></item>
-<item><title>US helps defend Israel from Iranian missile attack - Defense News</title><link>https://www.defensenews.com/pentagon/2025/06/13/us-helps-defend-israel-from-iranian-missile-attack/</link></item>
-<item><title>Tech execs enlist in Army Reserve for new innovation detachment - Defense News</title><link>https://www.defensenews.com/land/2025/06/13/tech-execs-enlist-in-army-reserve-for-new-innovation-detachment/</link></item>
-<item><title>York’s experimental communications satellite ready for launch - Defense News</title><link>https://www.defensenews.com/space/2025/06/13/yorks-experimental-communications-satellite-ready-for-launch/</link></item>
-<item><title>Paris Air Show goes big on defense amid war concerns - Defense News</title><link>https://www.defensenews.com/global/europe/2025/06/13/paris-air-show-goes-big-on-defense-amid-war-concerns/</link></item>
-<item><title>Dead on arrival: Army pulls plug on M10 Booker light tank - Defense News</title><link>https://www.defensenews.com/land/2025/06/12/dead-on-arrival-army-pulls-plug-on-m10-booker-light-tank/</link></item>
-<item><title>Ukraine, NATO eye tech trials for intercepting Russia’s cabled drones - Defense News</title><link>https://www.defensenews.com/global/europe/2025/06/12/ukraine-nato-eye-tech-trials-for-intercepting-russias-cabled-drones/</link></item>
-<item><title>Italian Air Force accepts Leonardo’s M-345 as basic trainer jet - Defense News</title><link>https://www.defensenews.com/global/europe/2025/06/13/italian-air-force-accepts-leonardos-m-345-as-basic-trainer-jet/</link></item>
-<item><title>Air Force F-35 buy would be cut in half under Pentagon spending plan - Defense News</title><link>https://www.defensenews.com/air/2025/06/12/air-force-f-35-buy-would-be-cut-in-half-under-pentagon-spending-plan/</link></item>
-<item><title>Two industry teams to begin bending metal for Bradley replacement - Defense News</title><link>https://www.defensenews.com/land/2025/06/12/two-industry-teams-to-begin-bending-metal-for-bradley-replacement/</link></item>
-<item><title>House proposes manufacturing network to boost wartime arms production - Defense News</title><link>https://www.defensenews.com/pentagon/2025/06/12/house-proposes-manufacturing-network-to-boost-wartime-arms-production/</link></item>
-<item><title>Hegseth doesn’t initially commit to obeying courts on LA deployments - Defense News</title><link>https://www.defensenews.com/pentagon/2025/06/12/hegseth-doesnt-commit-to-obeying-courts-on-la-deployments-in-hearing/</link></item>
-<item><title>Marines show off body armor with lighter vest, plates and more sizes - Defense News</title><link>https://www.defensenews.com/video/2025/06/12/marines-show-off-body-armor-with-lighter-vest-plates-and-more-sizes/</link></item>
-<item><title>US Army signs up Band of Tech Bros with a suitably nerdy name - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/13/us_army_techies/</link></item>
-<item><title>Cyber weapons in the Israel-Iran conflict may hit the US - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/13/cyber_weapons_israel_iran/</link></item>
-<item><title>AST just got a small boost in its D2C battle against Elon Musk&amp;#39;s Starlink - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/13/ast_inmarsat_deal/</link></item>
-<item><title>Do you trust Xi with your &amp;#39;private&amp;#39; browsing data? Apple, Google stores still offer China-based VPNs, report says - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/13/apple_google_chinabased_vpns/</link></item>
-<item><title>Larry Ellison is still not the world&amp;#39;s richest person - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/13/larry_ellison_second_richest_person/</link></item>
-<item><title>Enterprise AI adoption stalls as inferencing costs confound cloud customers - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/13/cloud_costs_ai_inferencing/</link></item>
-<item><title>Meta offered one AI researcher at least $10,000,000 to join up - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/13/meta_offers_10m_ai_researcher/</link></item>
-<item><title>PCIe 7.0 specs finalized at 512 GBps bandwidth, PCIe 8.0 in the pipeline - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/13/pcie_70_specs_finalized/</link></item>
-<item><title>Apple fixes zero-click exploit underpinning Paragon spyware attacks - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/13/apple_fixes_zeroclick_exploit_underpinning/</link></item>
-<item><title>The trendline doesn’t look good for hard disk drives - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/13/hdd_features/</link></item>
-<item><title>Wanted: Junior cybersecurity staff with 10 years&amp;#39; experience and a PhD - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/13/infosec_employers_demanding_too_much/</link></item>
-<item><title>Friday the 13th strikes for Barclays&amp;#39; corporate customers - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/13/barclays_corporate_outage/</link></item>
-<item><title>Danish department determined to dump Microsoft - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/13/danish_department_dump_microsoft/</link></item>
-<item><title>UK unis to cough up to £10M on Java to keep Oracle off their backs - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/13/jisc_java_oracle/</link></item>
-<item><title>Forget Vibe Coding, we&amp;#39;re all about Vine Coding nowadays - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/13/forget_vibe_coding_were_all/</link></item>
-<item><title>Slapped wrists for Financial Conduct Authority staff who emailed work data home - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/13/fca_staff_data_breach/</link></item>
-<item><title>User demanded a ‘wireless’ computer and was outraged when its battery died - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/13/on_call/</link></item>
-<item><title>UK dumps £2.5 billion into fusion pipe dream that&amp;#39;s already cost millions - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/13/uk_dumps_25_billion_into/</link></item>
-<item><title>Chinese memory-maker YMTC sues US rival Micron for defamation instead of the usual patent breaches - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/13/ymtc_micron_defamation_lawsuit/</link></item>
-<item><title>I&amp;#39;m just a Barbie Girl in a ChatGPT world - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/13/mattel_openai_barbie/</link></item>
-<item><title>Ransomware scum disrupted utility services with SimpleHelp attacks - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/12/cisa_simplehelp_flaw_exploit_warning/</link></item>
-<item><title>Ease the seat back and watch some video in your car with next Apple CarPlay - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/12/apple_carplay_video/</link></item>
-<item><title>Google Cloud flexes as first to host Nvidia RTX PRO 6000 Server VMs - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/12/google_cloud_nvidia_blackwell_vms/</link></item>
-<item><title>US auditors beg Pentagon to pay attention to latest report about IT system flaws - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/12/pentagon_it_project_flaws_gao/</link></item>
-<item><title>Meta sues &amp;#39;nudify&amp;#39; app-maker that it claims ran 87k+ Facebook, Instagram ads - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/12/meta_sues_nudify_appmaker_that/</link></item>
-<item><title>Google Cloud goes down, takes Cloudflare and its customers with it - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/12/google_cloudflare_outage/</link></item>
-<item><title>Single passenger reportedly survives Air India Boeing 787 crash - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/12/air_india_787_crash/</link></item>
-<item><title>TSMC strengthens Japan ties with joint R&amp;amp;D lab in Tokyo - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/12/tsmc_japan_lab/</link></item>
-<item><title>AMD bets on rack-scale compute to boost AI efficiency 20x by 2030 - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/12/amd_20x_30/</link></item>
-<item><title>AMD preps rack-scale Helios systems to contend with Nvidia&amp;#39;s Vera Rubin NVL144 - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/12/amd_helios_dc/</link></item>
-<item><title>CISA loses another senior exec - and the budget cuts haven&amp;#39;t even started yet - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/12/cisa_loses_another_senior_exec/</link></item>
-<item><title>Falcon 9 leaks keep Axiom private astronaut mission on the ground - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/12/falcon_9_leaks_keep_axiom/</link></item>
-<item><title>AMD&amp;#39;s MI355X is a 1.4 kW liquid-cooled monster built to battle Nvidia&amp;#39;s Blackwell - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/12/amd_mi355x/</link></item>
-<item><title>Amazon has changed its nuclear deal in Pennsylvania to bypass grumpy regulators - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/12/amazon_talen_nuclear_deal/</link></item>
-<item><title>Ubuntu 25.10 and Fedora 43 to drop X11 in GNOME editions - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/12/ubuntu_2510_to_drop_x11/</link></item>
-<item><title>Nvidia hits the gas on autonomous vehicle software - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/12/nvidia_autonomous_vehicle_platform/</link></item>
-<item><title>Tape, glass, and molecules – the future of archival storage - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/12/archival_storage_feature/</link></item>
-<item><title>Google faces billion-quid bruising over Play Store fees in the UK - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/12/google_play_store_fees/</link></item>
-<item><title>UK Spending Review prescribes £10B digital remedy for NHS - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/12/nhs_tech_spending_review/</link></item>
-<item><title>Digital Realty CTO on why storage is the datacenter challenge no one&amp;#39;s talking about - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/12/digital_realty_cto_interview/</link></item>
-<item><title>&amp;#39;Major compromise&amp;#39; at NHS temping arm exposed gaping security holes - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/12/compromise_nhs_professionals/</link></item>
-<item><title>AI coding tools are like that helpful but untrustworthy friend, devs say - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/12/devs_mostly_welcome_ai_coding/</link></item>
-<item><title>UK reheats Edinburgh supercomputer plan sans exascale chops - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/12/uk_national_supercomputer_edinburgh/</link></item>
-<item><title>CIO wants to grow tech team by cloning staff as digital twins and AI agents - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/12/cio_wants_to_grow_tech/</link></item>
-<item><title>Behold! Humanity has captured our first look at the Sun&amp;#39;s South Pole - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/12/solar_orbiter_south_solar_pole_pics/</link></item>
-<item><title>Oracle scores cloud customer – maybe China&amp;#39;s TEMU – that wants any available server, anytime, anywhere - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/12/oracle_q4_2025/</link></item>
-<item><title>House appropriators OK rebukes to recent DOD scandals in budget bill - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2025/06/13/house-appropriators-ok-rebukes-to-recent-dod-scandals-in-budget-bill/</link></item>
-<item><title>German defense chief pledges $10 billion in Ukraine aid for 2025 - Defense News</title><link>https://www.defensenews.com/global/europe/2025/06/13/german-defense-chief-pledges-10-billion-in-ukraine-aid-for-2025/</link></item>
-<item><title>Iran strike puts question mark over Israeli firms at Paris Air Show - Defense News</title><link>https://www.defensenews.com/global/europe/2025/06/13/iran-strike-puts-question-mark-over-israeli-firms-at-paris-air-show/</link></item>
-<item><title>Images show new North Korea uranium enrichment plant, analysts say - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2025/06/13/images-show-new-north-korea-uranium-enrichment-plant-analysts-say/</link></item>
-<item><title>Hegseth won’t rule out military actions against Greenland, Panama - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2025/06/12/hegseth-wont-rule-out-military-actions-against-greenland-panama/</link></item>
-<item><title>First KAAN export prospect: Turkey to deliver 48 jets to Indonesia - Defense News</title><link>https://www.defensenews.com/global/europe/2025/06/12/first-kaan-export-prospect-turkey-to-deliver-48-jets-to-indonesia/</link></item>
-<item><title>Israel to show fresh weapons at Paris Air Show - Defense News</title><link>https://www.defensenews.com/global/mideast-africa/2025/06/12/israel-to-show-fresh-weapons-at-paris-air-show/</link></item>
-<item><title>UN nuclear watchdog finds Iran isn’t complying with its obligations - Defense News</title><link>https://www.defensenews.com/global/mideast-africa/2025/06/12/un-nuclear-watchdog-finds-iran-isnt-complying-with-its-obligations/</link></item>
-<item><title>Definition Detective Quiz #41 - Mental Floss</title><link>https://www.mentalfloss.com/quizzes/definition-detective-quiz-41</link></item>
-<item><title>Seating chart for lone survivor in India plane crash - FlowingData</title><link>https://flowingdata.com/2025/06/13/seating-chart-for-lone-survivor-in-india-plane-crash/</link></item>
-<item><title>Asian misrepresentation in American films - FlowingData</title><link>https://flowingdata.com/2025/06/13/asian-misrepresentation-in-american-films/</link></item>
-<item><title>Disney and Universal sue Midjourney, the generative AI service - FlowingData</title><link>https://flowingdata.com/2025/06/13/disney-and-universal-sue-midjourney-the-generative-ai-service/</link></item>
-<item><title>Apple introduces third dimension to Swift Charts framework - FlowingData</title><link>https://flowingdata.com/2025/06/12/apple-introduces-third-dimension-to-swift-charts-framework/</link></item>
-<item><title>✚ Comparing multiples - FlowingData</title><link>https://flowingdata.com/2025/06/12/comparing-multiples/</link></item>
-<item><title>Airlines sell passenger flight data to Customs and Border Protection - FlowingData</title><link>https://flowingdata.com/2025/06/12/airlines-sell-passenger-flight-data-to-customs-and-border-protection/</link></item>
-<item><title>[视频] 爱国者主题装机 - 超能网</title><link>https://www.expreview.com/100213.html</link></item>
-<item><title>GeForce RTX 5060天梯榜首发评测 - 超能网</title><link>https://www.expreview.com/99784.html</link></item>
-<item><title>前十IC设计公司2024Q1营收季增6%，英伟达占比已达到55% - 超能网</title><link>https://www.expreview.com/100235.html</link></item>
-<item><title>英伟达或选择20Gbps GDDR6显存，用于台式机RTX 5050显卡 - 超能网</title><link>https://www.expreview.com/100234.html</link></item>
-<item><title>Adob​​e发布Premiere Pro 25.3：支持Blackwell GPU 4:2:2色度采样编解码 - 超能网</title><link>https://www.expreview.com/100233.html</link></item>
-<item><title>10倍于当前产品的性能表现，AMD强势预告Instinct MI400系列AI GPU - 超能网</title><link>https://www.expreview.com/100232.html</link></item>
-<item><title>明基带来PV3200U显示器：面向专业影视剪辑，2.1立体环绕声，售价4999元 - 超能网</title><link>https://www.expreview.com/100231.html</link></item>
-<item><title>九州风神阿萨辛4S风冷散热器添新配色：绿黑版，售价429元 - 超能网</title><link>https://www.expreview.com/100230.html</link></item>
-<item><title>《沙丘：觉醒》RTX 50系列游戏体验：极高设置放心开，DLSS 4保百帧 - 超能网</title><link>https://www.expreview.com/100209.html</link></item>
-<item><title>美光宣布扩大在美国的投资规模：增至约2000亿美元，用于尖端DRAM制造和研发 - 超能网</title><link>https://www.expreview.com/100228.html</link></item>
-<item><title>PCI-SIG带来PCIe光互连解决方案，对PCIe 6.4和PCIe 7.0规范进行补充 - 超能网</title><link>https://www.expreview.com/100227.html</link></item>
-<item><title>Asetek宣布与安钛克达成新协议，2025Q4开始交付基于新平台的主流水冷产品 - 超能网</title><link>https://www.expreview.com/100226.html</link></item>
-<item><title>腾讯希望收购Nexon，估值约150亿美元 - 超能网</title><link>https://www.expreview.com/100224.html</link></item>
-<item><title>《战锤40K : 星际战士2》玩家数量已达700万，本月将带来“围攻模式”免费更新 - 超能网</title><link>https://www.expreview.com/100223.html</link></item>
-<item><title>技嘉推出M27UP显示器：FHD/4K双模高刷，针对FPS游戏玩家优化设计 - 超能网</title><link>https://www.expreview.com/100222.html</link></item>
-<item><title>雷蛇骑仕V3专业版发布：专为手机和平板设计，全尺寸手柄，升级游戏体验 - 超能网</title><link>https://www.expreview.com/100221.html</link></item>
-<item><title>九州风神推出CH160/170 PLUS机箱：优化兼容240水冷及MATX主板 - 超能网</title><link>https://www.expreview.com/100216.html</link></item>
-<item><title>AMD Software Adrenalin Edition 25.6.2驱动：支持《FBC: Firebreak》等 - 超能网</title><link>https://www.expreview.com/100220.html</link></item>
-<item><title>配备PCIe 5.0 x16接口的ARC B系列显卡曝光，ARC B770可能在正在内部测试 - 超能网</title><link>https://www.expreview.com/100219.html</link></item>
-<item><title>Epic平台免费领取《双点医院》，至6月19日23点截止 - 超能网</title><link>https://www.expreview.com/100218.html</link></item>
-<item><title>《巫师3》有望于2026年推出新DLC，《赛博朋克2077》将于今年迎来更新 - 超能网</title><link>https://www.expreview.com/100217.html</link></item>
-<item><title>微星带来MAG 271QP QD-OLED X28显示器：2K@280Hz，国补价2346元 - 超能网</title><link>https://www.expreview.com/100215.html</link></item>
-<item><title>从硬件到软件的完整生态，AMD正式发布CDNA4架构与MI350系列AI GPU - 超能网</title><link>https://www.expreview.com/100214.html</link></item>
-<item><title>万丽星云RTX 5070 OC 12G显卡图赏：外观全面革新，呈现流线型优雅美感 - 超能网</title><link>https://www.expreview.com/100212.html</link></item>
-<item><title>九州风神 阿萨辛 IV VC 至尊版 WH风冷散热器评测：极致纯粹的颜值旗舰 - 超能网</title><link>https://www.expreview.com/100019.html</link></item>
-<item><title>高通第三代骁龙8至尊版或有两个版本，类似于苹果提供A18 Pro和A18 - 超能网</title><link>https://www.expreview.com/100210.html</link></item>
-<item><title>IBM Says It&amp;#39;s Cracked Quantum Error Correction - Slashdot</title><link>https://tech.slashdot.org/story/25/06/13/218205/ibm-says-its-cracked-quantum-error-correction</link></item>
-<item><title>Enterprise AI Adoption Stalls As Inferencing Costs Confound Cloud Customers - Slashdot</title><link>https://news.slashdot.org/story/25/06/13/210224/enterprise-ai-adoption-stalls-as-inferencing-costs-confound-cloud-customers</link></item>
-<item><title>There Aren&amp;#39;t Enough Cables To Meet Growing Electricity Demand - Slashdot</title><link>https://hardware.slashdot.org/story/25/06/13/207259/there-arent-enough-cables-to-meet-growing-electricity-demand</link></item>
-<item><title>UK Universities Sign $13.3 Million Deal To Avoid Oracle Java Back Fees - Slashdot</title><link>https://developers.slashdot.org/story/25/06/13/2034219/uk-universities-sign-133-million-deal-to-avoid-oracle-java-back-fees</link></item>
-<item><title>Anker Recalls More Than 1.1 Million Power Banks - Slashdot</title><link>https://hardware.slashdot.org/story/25/06/13/2025259/anker-recalls-more-than-11-million-power-banks</link></item>
-<item><title>macOS Tahoe Brings a New Disk Image Format - Slashdot</title><link>https://hardware.slashdot.org/story/25/06/13/2021236/macos-tahoe-brings-a-new-disk-image-format</link></item>
-<item><title>AI Therapy Bots Are Conducting &amp;#39;Illegal Behavior&amp;#39;, Digital Rights Organizations Say - Slashdot</title><link>https://slashdot.org/story/25/06/13/2015216/ai-therapy-bots-are-conducting-illegal-behavior-digital-rights-organizations-say</link></item>
-<item><title>23andMe&amp;#39;s Founder Anne Wojcicki Wins Bid For DNA Testing Firm - Slashdot</title><link>https://science.slashdot.org/story/25/06/13/2046239/23andmes-founder-anne-wojcicki-wins-bid-for-dna-testing-firm</link></item>
-<item><title>GameStop CEO Says The Company&amp;#39;s Future Isn&amp;#39;t In Games - Slashdot</title><link>https://games.slashdot.org/story/25/06/13/1940258/gamestop-ceo-says-the-companys-future-isnt-in-games</link></item>
-<item><title>The Vaporware That Apple Insists Isn&amp;#39;t Vaporware - Slashdot</title><link>https://apple.slashdot.org/story/25/06/13/196231/the-vaporware-that-apple-insists-isnt-vaporware</link></item>
-<item><title>Walmart and Amazon Are Exploring Issuing Their Own Stablecoins - Slashdot</title><link>https://news.slashdot.org/story/25/06/13/1846255/walmart-and-amazon-are-exploring-issuing-their-own-stablecoins</link></item>
-<item><title>Google&amp;#39;s Test Turns Search Results Into an AI-Generated Podcast - Slashdot</title><link>https://tech.slashdot.org/story/25/06/13/1815247/googles-test-turns-search-results-into-an-ai-generated-podcast</link></item>
-<item><title>The Audacious Reboot of America&amp;#39;s Nuclear Energy Program - Slashdot</title><link>https://hardware.slashdot.org/story/25/06/13/1723246/the-audacious-reboot-of-americas-nuclear-energy-program</link></item>
-<item><title>Google&amp;#39;s Gemini AI Will Summarize PDFs For You When You Open Them - Slashdot</title><link>https://tech.slashdot.org/story/25/06/13/1646203/googles-gemini-ai-will-summarize-pdfs-for-you-when-you-open-them</link></item>
-<item><title>&amp;#39;We&amp;#39;re Done With Teams&amp;#39;: German State Hits Uninstall on Microsoft - Slashdot</title><link>https://it.slashdot.org/story/25/06/13/1538236/were-done-with-teams-german-state-hits-uninstall-on-microsoft</link></item>
-<item><title>How consensus can undermine science - Freethink</title><link>https://www.freethink.com/opinion/consensus</link></item>
-<item><title>Three founders look to the future at Freethink’s inaugural Great Progression event - Freethink</title><link>https://www.freethink.com/artificial-intelligence/the-great-progression-live-event</link></item>
-<item><title>Why AI today is more toddler than Terminator - Freethink</title><link>https://www.freethink.com/artificial-intelligence/raising-ai-excerpt</link></item>
-<item><title>How proof-of-human tech could save the internet - Freethink</title><link>https://www.freethink.com/the-digital-frontier/world-network-orbs</link></item>
-<item><title>America tried to ban fake photos in 1912 - Freethink</title><link>https://www.freethink.com/the-digital-frontier/fake-photo-ban-1912</link></item>
-<item><title>The AI social network war has begun - Freethink</title><link>https://www.freethink.com/artificial-intelligence/openai-ai-social-network</link></item>
-<item><title>Predictions of resource scarcity have a fundamental flaw - Freethink</title><link>https://www.freethink.com/the-material-world/techno-humanist-manifesto-chapter-7-section-1</link></item>
-<item><title>We stopped believing in progress. Now, we’re stagnating. - Freethink</title><link>https://www.freethink.com/series/the-freethink-interview/jason-crawford-progress</link></item>
-<item><title>Are large language models dyslexic? - Freethink</title><link>https://www.freethink.com/artificial-intelligence/llms-dyslexic</link></item>
-<item><title>Pessimists Archive - Freethink</title><link>https://www.freethink.com/collections/pessimists-archive</link></item>
-<item><title>AI thinks “vegetative electron microscopy” is real — it’s not - Freethink</title><link>https://www.freethink.com/artificial-intelligence/vegetative-electron-microscopy</link></item>
-<item><title>only one in ten - Slashdot</title><link>https://developers.slashdot.org/story/25/01/30/1617210/oracle-faces-java-customer-revolt-after-predatory-pricing-changes</link></item>
-<item><title>major 2023 data breach - Slashdot</title><link>https://it.slashdot.org/story/23/12/04/1911229/23andme-confirms-hackers-stole-ancestry-data-on-69-million-users</link></item>
-<item><title>showed off a dramatically improved Siri - Slashdot</title><link>https://apple.slashdot.org/story/24/06/10/1832242/apple-unveils-apple-intelligence</link></item>
-<item><title>announcing features to sell phones - Slashdot</title><link>https://apple.slashdot.org/story/25/03/10/1936216/apple-pulls-iphone-16-ad-showing-off-more-personal-siri</link></item>
-<item><title>replaced by LibreOffice - Slashdot</title><link>https://linux.slashdot.org/story/24/04/04/1920219/german-state-moving-tens-of-thousands-of-pcs-to-linux-and-libreoffice</link></item>
-<item><title>Denmark Is Dumping Microsoft Office and Windows For LibreOffice and Linux - Slashdot</title><link>https://linux.slashdot.org/story/25/06/12/0335229/denmark-is-dumping-microsoft-office-and-windows-for-libreoffice-and-linux?sbsrc=md</link></item>
-<item><title>Air India Boeing 787 Carrying 242 Passengers Crashes After Takeoff - Slashdot</title><link>https://tech.slashdot.org/story/25/06/12/1224214/air-india-boeing-787-carrying-242-passengers-crashes-after-takeoff?sbsrc=md</link></item>
-<item><title>Mel Brooks is Making &amp;#39;Spaceballs 2&amp;#39; After 38 Years - Slashdot</title><link>https://entertainment.slashdot.org/story/25/06/13/0325219/mel-brooks-is-making-spaceballs-2-after-38-years?sbsrc=md</link></item>
-<item><title>US Navy Backs Right To Repair After $13 Billion Carrier Crew Left Half-Fed By Contractor-Locked Ovens - Slashdot</title><link>https://tech.slashdot.org/story/25/06/13/0332208/us-navy-backs-right-to-repair-after-13-billion-carrier-crew-left-half-fed-by-contractor-locked-ovens?sbsrc=md</link></item>
-<item><title>World Bank Lifts Ban on Funding Nuclear Energy in Boost To Industry - Slashdot</title><link>https://hardware.slashdot.org/story/25/06/12/0947224/world-bank-lifts-ban-on-funding-nuclear-energy-in-boost-to-industry?sbsrc=md</link></item>
-<item><title>The Meta AI App Is a Privacy Disaster - Slashdot</title><link>https://tech.slashdot.org/story/25/06/13/020259/the-meta-ai-app-is-a-privacy-disaster</link></item>
-<item><title>Researchers Confirm Two Journalists Were Hacked With Paragon Spyware - Slashdot</title><link>https://yro.slashdot.org/story/25/06/12/2235231/researchers-confirm-two-journalists-were-hacked-with-paragon-spyware</link></item>
-<item><title>Apple Previews New Import/Export Feature To Make Passkeys More Interoperable - Slashdot</title><link>https://it.slashdot.org/story/25/06/12/2228212/apple-previews-new-importexport-feature-to-make-passkeys-more-interoperable</link></item>
-<item><title>CISA Loses Another Senior Exec - Slashdot</title><link>https://yro.slashdot.org/story/25/06/12/2044215/cisa-loses-another-senior-exec</link></item>
-<item><title>More Than a Dozen VPN Apps Have Undisclosed Ties To China - Slashdot</title><link>https://yro.slashdot.org/story/25/06/12/1731258/more-than-a-dozen-vpn-apps-have-undisclosed-ties-to-china</link></item>
-<item><title>Ask Slashdot: Can Technology Prevent Shootings? - Slashdot</title><link>https://ask.slashdot.org/story/16/06/13/0159223/ask-slashdot-can-technology-prevent-shootings?sbsrc=thisday</link></item>
-<item><title>Blocking Gun Laws With Patents - Slashdot</title><link>https://yro.slashdot.org/story/12/06/13/215204/blocking-gun-laws-with-patents?sbsrc=thisday</link></item>
-<item><title>The End of Native Code? - Slashdot</title><link>https://slashdot.org/story/06/06/12/2044245/the-end-of-native-code?sbsrc=thisday</link></item>
-<item><title>Body Modifications Still Hinder IT Professionals? - Slashdot</title><link>https://ask.slashdot.org/story/05/06/12/2341235/body-modifications-still-hinder-it-professionals?sbsrc=thisday</link></item>
-<item><title>Uniquely Bright: Experiences and Tips? - Slashdot</title><link>https://ask.slashdot.org/story/04/06/12/192233/uniquely-bright-experiences-and-tips?sbsrc=thisday</link></item>
-<item><title>The Real Python Podcast – Episode #253: Starting With Marimo Notebooks &amp; Python App Config Management - Real Python</title><link>https://realpython.com/podcasts/rpp/253/</link></item>
-<item><title>Defining Your Own Python Function - Real Python</title><link>https://realpython.com/defining-your-own-python-function/</link></item>
-<item><title>Quiz: Defining Your Own Python Function - Real Python</title><link>https://realpython.com/quizzes/python-function/</link></item>
-<item><title>Python Continuous Integration and Deployment Using GitHub Actions - Real Python</title><link>https://realpython.com/courses/cicd-github-actions/</link></item>
-<item><title>Python Hits the Big Screen and Other Python News for June 2025 - Real Python</title><link>https://realpython.com/python-news-june-2025/</link></item>
-<item><title>The Real Python Podcast – Episode #252: Rodrigo Girão Serrão: Python Training, itertools, and Idioms - Real Python</title><link>https://realpython.com/podcasts/rpp/252/</link></item>
-<item><title>Quiz: How to Find an Absolute Value in Python - Real Python</title><link>https://realpython.com/quizzes/python-absolute-value/</link></item>
-<item><title>Execute Your Python Scripts With a Shebang - Real Python</title><link>https://realpython.com/courses/execute-python-scripts-with-shebang/</link></item>
-<item><title>How Can You Structure Your Python Script? - Real Python</title><link>https://realpython.com/python-script-structure/</link></item>
-<item><title>Quiz: How Can You Structure Your Python Script? - Real Python</title><link>https://realpython.com/quizzes/python-script-structure/</link></item>
-<item><title>The Real Python Podcast – Episode #251: Python Thread Safety &amp; Managing Projects With uv - Real Python</title><link>https://realpython.com/podcasts/rpp/251/</link></item>
-<item><title>The Most Beautiful Libraries in Japan - Tokyo Weekender</title><link>https://www.tokyoweekender.com/art_and_culture/books-and-literature/the-most-beautiful-libraries-in-japan/</link></item>
-<item><title>Japan Ranks 118th Again in Latest Global Gender Gap Report | News Roundup - Tokyo Weekender</title><link>https://www.tokyoweekender.com/japan-life/news-and-opinion/japan-ranks-118th-in-2025-global-gender-gap-report/</link></item>
-<item><title>Tokyo Capsule Hotels: Best Places To Sleep in a Pod - Tokyo Weekender</title><link>https://www.tokyoweekender.com/travel/best-capsule-hotels-in-tokyo/</link></item>
-<item><title>Switch 2 Smashes Nintendo’s Record, Selling 3.5 Million Units in Four Days - Tokyo Weekender</title><link>https://www.tokyoweekender.com/entertainment/tech-trends/switch-2-sells-over-3-million-units-in-four-days/</link></item>
-<item><title>Japan in June: The Best Things To Do and Places To Visit - Tokyo Weekender</title><link>https://www.tokyoweekender.com/travel/japan-in-june-the-best-things-to-do/</link></item>
-<item><title>Junnosuke Date: The Wannabe Samurai Who Became a War Criminal - Tokyo Weekender</title><link>https://www.tokyoweekender.com/art_and_culture/japanese-culture/junnosuke-date-the-wannabe-samurai-who-became-a-war-criminal/</link></item>
-<item><title>Japanese Horror Game Exit 8’s Movie Adaptation Becomes Cannes Film Festival Hit - Tokyo Weekender</title><link>https://www.tokyoweekender.com/entertainment/movies-tv/exit-8-horror-movie-adaptation/</link></item>
-<item><title>Evangelion Voice Actress Megumi Hayashibara Deletes ‘Invasive Species’ Comment on Blog - Tokyo Weekender</title><link>https://www.tokyoweekender.com/japan-life/news-and-opinion/megumi-hayashibara-deletes-invasive-species-comment/</link></item>
-<item><title>Navigating Japan’s Rainy Season: A Guide to Tsuyu - Tokyo Weekender</title><link>https://www.tokyoweekender.com/travel/tsuyu-japan-rainy-season-guide/</link></item>
-<item><title>Construction Near Foot of Mount Yotei Halted Amid Forest Law Violations - Tokyo Weekender</title><link>https://www.tokyoweekender.com/japan-life/news-and-opinion/mount-yotei-construction-halted-amid-forest-law-violations/</link></item>
-<item><title>Robots to the rescue: Miniature robots offer new hope for search and rescue operations - Tech Xplore</title><link>https://techxplore.com/news/2025-06-robots-miniature.html</link></item>
-<item><title>Vision-language models gain spatial reasoning skills through artificial worlds and 3D scene descriptions - Tech Xplore</title><link>https://techxplore.com/news/2025-06-vision-language-gain-spatial-skills.html</link></item>
-<item><title>Training robots without robots: Smart glasses capture first-person task demos - Tech Xplore</title><link>https://techxplore.com/news/2025-06-robots-smart-glasses-capture-person.html</link></item>
-<item><title>Chinese researchers debut world&amp;#39;s first AI-based processor chip design system - Tech Xplore</title><link>https://techxplore.com/news/2025-06-chinese-debut-world-ai-based.html</link></item>
-<item><title>Bio-mimetic robotic hand seamlessly integrates tactile feedback to outperform predecessors - Tech Xplore</title><link>https://techxplore.com/news/2025-06-bio-mimetic-robotic-seamlessly-tactile.html</link></item>
-<item><title>Debut of LLM-enabled humanoid robot at event met with mixed reviews by human attendees - Tech Xplore</title><link>https://techxplore.com/news/2025-06-debut-llm-enabled-humanoid-robot.html</link></item>
-<item><title>New approach models potential and trade-offs of floating solar - Tech Xplore</title><link>https://techxplore.com/news/2025-06-approach-potential-offs-solar.html</link></item>
-<item><title>Explainable AI: New framework increases transparency in decision-making systems - Tech Xplore</title><link>https://techxplore.com/news/2025-06-ai-framework-transparency-decision.html</link></item>
-<item><title>Optimal design could unlock the potential of bladeless wind turbines - Tech Xplore</title><link>https://techxplore.com/news/2025-06-optimal-potential-bladeless-turbines.html</link></item>
-<item><title>Turning carbon dioxide into fuel just got easier, thanks to acid bubbles - Tech Xplore</title><link>https://techxplore.com/news/2025-06-carbon-dioxide-fuel-easier-acid.html</link></item>
-<item><title>Kirigami-inspired design enables uniform 200% stretch in multi-pixel display arrays - Tech Xplore</title><link>https://techxplore.com/news/2025-06-kirigami-enables-uniform-multi-pixel.html</link></item>
-<item><title>Zinc–iodine battery delivers double performance of lithium-ion batteries - Tech Xplore</title><link>https://techxplore.com/news/2025-06-zinciodine-battery-lithium-ion-batteries.html</link></item>
-<item><title>Less is more: Efficient pruning for reducing AI memory and computational cost - Tech Xplore</title><link>https://techxplore.com/news/2025-06-efficient-pruning-ai-memory.html</link></item>
-<item><title>Starch-based aerogel material improves anti-concussion headgear - Tech Xplore</title><link>https://techxplore.com/news/2025-06-starch-based-aerogel-material-anti.html</link></item>
-<item><title>A foundation for physical AI: Battery-free RFID sensing system offers real-time, reliable data - Tech Xplore</title><link>https://techxplore.com/news/2025-06-foundation-physical-ai-battery-free.html</link></item>
-<item><title>Innovative detection method makes AI smarter by cleaning up bad data before it learns - Tech Xplore</title><link>https://techxplore.com/news/2025-06-method-ai-smarter-bad.html</link></item>
-<item><title>How artificial intelligence can learn from mice - Tech Xplore</title><link>https://techxplore.com/news/2025-06-artificial-intelligence-mice.html</link></item>
-<item><title>Lithium supply will fall short of growing electric vehicle demand through 2029, analysis finds - Tech Xplore</title><link>https://techxplore.com/news/2025-06-lithium-fall-short-electric-vehicle.html</link></item>
-<item><title>Fog harvester gets upgrade for improved water collection - Tech Xplore</title><link>https://techxplore.com/news/2025-06-fog-harvester.html</link></item>
-<item><title>The Core of Fermat’s Last Theorem Just Got Superpowered - Quanta Magazine</title><link>https://www.quantamagazine.org/the-core-of-fermats-last-theorem-just-got-superpowered-20250602/</link></item>
-<item><title>engineering - Quanta Magazine</title><link>https://www.quantamagazine.org/tag/engineering/</link></item>
-<item><title>Switch 2 launch games - VGC</title><link>https://www.videogameschronicle.com/features/nintendo-switch-2-launch-games-every-switch-2-game-available-on-day-one/</link></item>
-<item><title>Summer Game Fest schedule - VGC</title><link>https://www.videogameschronicle.com/news/summer-game-fest-schedule-your-complete-2025-guide/</link></item>
-<item><title>Skill Up’s Summer Game Fest Game of the Show – VGC Podcast - VGC</title><link>https://www.videogameschronicle.com/news/skill-ups-summer-game-fest-game-of-the-show-vgc-podcast/</link></item>
-<item><title>Sony says it will continue to adjust PS Plus pricing as more players choose higher tiers - VGC</title><link>https://www.videogameschronicle.com/news/sony-says-it-will-continue-to-adjust-ps-plus-pricing-as-more-players-choose-higher-tiers/</link></item>
-<item><title>PlayStation is being ‘really thoughtful’ about picking which games to port to PC, says studios boss - VGC</title><link>https://www.videogameschronicle.com/news/playstation-is-being-really-thoughtful-about-picking-which-games-to-port-to-pc-says-studios-boss/</link></item>
-<item><title>Sony confirms PS5 has more monthly players than PS4 for the first time - VGC</title><link>https://www.videogameschronicle.com/news/sony-confirms-ps5-has-more-monthly-players-than-ps4-for-the-first-time/</link></item>
-<item><title>Switch 2: Sony says PS5 performance required for ‘great experience on a big screen’ - VGC</title><link>https://www.videogameschronicle.com/news/switch-2-sony-says-ps5-performance-required-for-great-experience-on-a-big-screen/</link></item>
-<item><title>PlayStation 6: Sony says future platforms ‘top of mind’, exploring ‘new and enhanced’ ways to play - VGC</title><link>https://www.videogameschronicle.com/news/playstation-6-sony-says-future-platforms-top-of-mind-exploring-new-and-enhanced-ways-to-play/</link></item>
-<item><title>Mario Kart World review - VGC</title><link>https://www.videogameschronicle.com/review/mario-kart-world-review/</link></item>
-<item><title>MindsEye studio ‘heartbroken’ over buggy launch, as PlayStation issues refunds - VGC</title><link>https://www.videogameschronicle.com/news/mindseye-studio-heartbroken-over-buggy-launch-as-playstation-issues-refunds/</link></item>
-<item><title>Capcom says it considers Switch 2’s controversial Game Key Card titles as ‘digital sales’ - VGC</title><link>https://www.videogameschronicle.com/news/capcom-says-it-considers-switch-2s-controversial-game-key-card-titles-as-digital-sales/</link></item>
-<item><title>Ratchet &amp; Clank: Rift Apart designer reveals hidden mini-game that’s gone undiscovered for four years - VGC</title><link>https://www.videogameschronicle.com/news/ratchet-clank-rift-apart-designer-reveals-hidden-mini-game-thats-gone-undiscovered-for-four-years/</link></item>
-<item><title>In its first gameplay demo, Capcom showed us why Resident Evil Requiem is a ‘bold evolution’ - VGC</title><link>https://www.videogameschronicle.com/features/in-its-first-gameplay-demo-capcom-showed-us-why-resident-evil-requiem-is-a-bold-evolution/</link></item>
-<item><title>Creative Assembly will reveal ‘the next era’ of Total War in December - VGC</title><link>https://www.videogameschronicle.com/news/creative-assembly-will-reveal-the-next-era-of-total-war-in-december/</link></item>
-<item><title>Capcom finally let us play Pragmata, and it left me hungry for more - VGC</title><link>https://www.videogameschronicle.com/features/capcom-finally-let-us-play-pragmata-and-it-left-me-hungry-for-more/</link></item>
-<item><title>Catch up with all our SGF 2025 Podcasts, featuring Ben Starr, Blumhouse Games, and more - VGC</title><link>https://www.videogameschronicle.com/news/catch-up-with-all-our-sgf-2025-podcasts-featuring-ben-starr-blumhouse-games-and-more/</link></item>
-<item><title>Switch 2 is by far Japan’s biggest ever console launch, likely clearing 1 million units - VGC</title><link>https://www.videogameschronicle.com/news/switch-2-is-by-far-japans-biggest-ever-console-launch-likely-clearing-1-million-units/</link></item>
-<item><title>Metal Gear Solid Delta multiplayer mode revealed – and it’s not Metal Gear Online - VGC</title><link>https://www.videogameschronicle.com/news/metal-gear-solid-delta-multiplayer-mode-revealed-and-its-not-metal-gear-online/</link></item>
-<item><title>Konami confirms it’s working on a Silent Hill 1 remake with Bloober Team - VGC</title><link>https://www.videogameschronicle.com/news/konami-announces-its-working-with-bloober-team-on-another-silent-hill-project/</link></item>
-<item><title>Metal Gear Solid 3 remake reveals Xbox-only Konami crossover - VGC</title><link>https://www.videogameschronicle.com/news/metal-gear-solid-3-remake-reveals-xbox-only-konami-crossover/</link></item>
-<item><title>Splatoon 3’s latest update is out now, boosting Switch 2 resolution and frame rate - VGC</title><link>https://www.videogameschronicle.com/news/splatoon-3s-latest-update-is-out-now-boosting-switch-2-resolution-and-frame-rate/</link></item>
-<item><title>Stellar Blade becomes the second PlayStation published game to pass 100,000 concurrent players on Steam - VGC</title><link>https://www.videogameschronicle.com/news/stellar-blade-becomes-the-second-playstation-published-game-to-pass-100000-concurrent-players-on-steam/</link></item>
-<item><title>A final, unannounced game by the Metal Slug team is getting a Switch release 20 years after it was cancelled - VGC</title><link>https://www.videogameschronicle.com/news/a-final-unannounced-game-by-the-metal-slug-team-is-getting-a-switch-release-20-years-after-it-was-cancelled/</link></item>
-<item><title>For those less happy with Mario Kart World, Sonic Racing CrossWorlds is a genuine contender - VGC</title><link>https://www.videogameschronicle.com/features/sonic-racing-crossworlds/</link></item>
-<item><title>June’s PlayStation Plus Game Catalog games include FBC: Firebreak and Battlefield 2042 - VGC</title><link>https://www.videogameschronicle.com/news/junes-playstation-plus-game-catalog-games-include-fbc-firebreak-and-battlefield-2042/</link></item>
-<item><title>A new Jumping Flash game was in development for PlayStation VR - VGC</title><link>https://www.videogameschronicle.com/news/a-new-jumping-flash-game-was-in-development-for-playstation-vr/</link></item>
-<item><title>Street Fighter 6 - VGC</title><link>https://www.videogameschronicle.com/games/street-fighter-6/</link></item>
-<item><title>Assassin’s Creed III - VGC</title><link>https://www.videogameschronicle.com/games/assassins-creed-series/assassins-creed-iii/</link></item>
-<item><title>Revenge of the Savage Planet - VGC</title><link>https://www.videogameschronicle.com/games/revenge-of-the-savage-planet/</link></item>
-<item><title>Alex Hutchinson - VGC</title><link>https://www.videogameschronicle.com/people/alex-hutchinson/</link></item>
-<item><title>Mark Mothersbaugh - VGC</title><link>https://www.videogameschronicle.com/people/mark-mothersbaugh/</link></item>
-<item><title>Nightdive Studios - VGC</title><link>https://www.videogameschronicle.com/companies/nightdive-studios/</link></item>
-<item><title>Insomniac Games - VGC</title><link>https://www.videogameschronicle.com/companies/sony/insomniac-games/</link></item>
-<item><title>Elden Ring Nightreign review: A clumsy multiplayer sideshow to the generation’s best RPG - VGC</title><link>https://www.videogameschronicle.com/review/elden-ring-nightreign-review/</link></item>
-<item><title>Interview: Sonic Team head talks CrossRoads, competing with Mario Kart World and leak culture - VGC</title><link>https://www.videogameschronicle.com/features/interviews/interview-sonic-team-head-talks-crossroads-competing-with-mario-kart-world-and-leak-culture/</link></item>
-<item><title>Pokémon Destined Rivals Trading Cards: Where to buy Destined Rivals - VGC</title><link>https://www.videogameschronicle.com/guide/pokemon-destined-rivals-trading-cards-where-to-buy-destined-rivals/</link></item>
-<item><title>Death Stranding 2 DualSense PS5 Controller: Where to buy the Death Stranding 2 PS5 Controller - VGC</title><link>https://www.videogameschronicle.com/guide/death-stranding-2-dualsense-ps5-controller-where-to-buy-the-death-stranding-2-ps5-controller/</link></item>
-<item><title>5 ways Obsidian Canvas beats Miro for mindmapping and visual thinkers - xda-developers</title><link>https://www.xda-developers.com/ways-obsidian-canvas-beats-miro-mindmapping/</link></item>
-<item><title>4 crucial things I&amp;#39;m worried about in Naughty Dog&amp;#39;s Intergalactic. - xda-developers</title><link>https://www.xda-developers.com/4-things-to-worry-about-in-naughty-dogs-intergalactic-the-heretic-prophet/</link></item>
-<item><title>Get up to 76% off NordVPN, plus get a free Amazon gift card in this limited-time deal - xda-developers</title><link>https://www.xda-developers.com/nordvpn-amazon-gift-card-promotion/</link></item>
-<item><title>I now have two Pi-holes on my network instead of one, and if you have the spare resources, I highly recommend it - xda-developers</title><link>https://www.xda-developers.com/two-pi-holes-spare-resources-recommend/</link></item>
-<item><title>This is how you’re killing your external hard drive - xda-developers</title><link>https://www.xda-developers.com/you-are-killing-your-external-hard-drive/</link></item>
-<item><title>Review: Cyberpunk 2077 on Switch 2 is a solid port, but not the best place to play - xda-developers</title><link>https://www.xda-developers.com/review-cyberpunk-2077-switch-2/</link></item>
-<item><title>Score this top-rated Lian Li PC case for cheap as it drops to a record low price - xda-developers</title><link>https://www.xda-developers.com/lian-li-sup-01-80-deal/</link></item>
-<item><title>Here&amp;#39;s what I do after installing Proxmox on a home server - xda-developers</title><link>https://www.xda-developers.com/changes-i-always-make-to-proxmox-in-my-home-lab/</link></item>
-<item><title>Your GPU is aging faster than you think - xda-developers</title><link>https://www.xda-developers.com/your-gpu-is-aging-faster-than-you-think/</link></item>
-<item><title>6 free software tools I love on my Raspberry Pi - xda-developers</title><link>https://www.xda-developers.com/free-software-tools-i-love-raspberry-pi/</link></item>
-<item><title>shenluchina - 平凡的大蓝 - 何青</title><link>https://blog.sciencenet.cn/home.php?mod=space&amp;uid=3417936</link></item>
-<item><title>Are Cats Color Blind? The Answer Isn&amp;#39;t Black and White - HowStuffWorks</title><link>https://animals.howstuffworks.com/pets/are-cats-color-blind.htm</link></item>
-<item><title>3 Types of Rocks Every Aspiring Geologist Should Know - HowStuffWorks</title><link>https://science.howstuffworks.com/environmental/earth/geology/types-of-rocks.htm</link></item>
-<item><title>Border Collie vs. Australian Shepherd: Comparing Herding Breeds - HowStuffWorks</title><link>https://animals.howstuffworks.com/pets/border-collie-vs-australian-shepherd.htm</link></item>
-<item><title>13 Indian Festivals That Celebrate Life, Love and Renewal - HowStuffWorks</title><link>https://people.howstuffworks.com/culture-traditions/cultural-traditions/indian-festivals.htm</link></item>
-<item><title>Eagle vs. Hawk: A Sharp Eye to Differentiate Birds of Prey - HowStuffWorks</title><link>https://animals.howstuffworks.com/birds/eagle-vs-hawk.htm</link></item>
-<item><title>Coyote vs. Dog: More Than Just Wild vs. Domesticated - HowStuffWorks</title><link>https://animals.howstuffworks.com/animal-facts/coyote-vs-dog.htm</link></item>
-<item><title>10 Types of Car Insurance Every Driver Needs to Know - HowStuffWorks</title><link>https://money.howstuffworks.com/personal-finance/auto-insurance/types-of-car-insurance.htm</link></item>
-<item><title>Orang Pendek: New Sumatran Primate or Just Another Cryptid? - HowStuffWorks</title><link>https://science.howstuffworks.com/science-vs-myth/strange-creatures/orang-pendek.htm</link></item>
-<item><title>7 Grey and White Cat Types for Understated Cuteness - HowStuffWorks</title><link>https://animals.howstuffworks.com/pets/grey-and-white-cat.htm</link></item>
-<item><title>10 San Diego Beaches Where Summer Is (Almost) Year-round - HowStuffWorks</title><link>https://lifestyle.howstuffworks.com/family/activities/san-diego-beaches.htm</link></item>
-<item><title>Swift Charts - FlowingData</title><link>https://flowingdata.com/tag/swift-charts/</link></item>
-<item><title>Urgent: Change FEMA Chief Administrator - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#13_June_2025_(Urgent:_Head_of_FEMA)</link></item>
-<item><title>Urgent: Ban super-PACs - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#13_June_2025_(Urgent:_Ban_super-PACs)</link></item>
-<item><title>Gaza aid boat attacked by ISR - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#12_June_2025_(Gaza_aid_boat_attacked_by_ISR)</link></item>
-<item><title>Greta Thunberg development: kidnappings - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#12_June_2025_(Greta_Thunberg_development:_kidnappings)</link></item>
-<item><title>A few blocks vs 500 sq mi, Los Angeles - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#12_June_2025_(A_few_blocks_vs_500_sq_mi,_Los_Angeles)</link></item>
-<item><title>ISR arms clans against Palestinians - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#12_June_2025_(ISR_arms_clans_against_Palestinians)</link></item>
-<item><title>Five Countries sanction ISR ministers - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#12_June_2025_(Sanctions_on_ISR_ministers,_CAN,_AUS,_NZL)</link></item>
-<item><title>History of Big Media domination - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#12_June_2025_(History_of_Big_Media_domination)</link></item>
-<item><title>List of ways, US govt executive-branch - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#12_June_2025_(List_of_ways,_US_govt_executive_branch)</link></item>
-<item><title>Urgent: Taxpayers supporting Proud Boys - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#12_June_2025_(Urgent:_Taxpayers_supporting_Proud_Boys)</link></item>
-<item><title>National guard coming to city near you - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#11_June_2025_(National_guard_coming_to_city_near_you)</link></item>
-<item><title>Lawmakers denied lawful entry - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#11_June_2025_(Lawmakers_denied_lawful_entry)</link></item>
-<item><title>Immigrants dragnet, Los Angeles - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#11_June_2025_(Immigrants_dragnat,_Los_Angeles)</link></item>
-<item><title>Greta Thunberg VS Israeli bombs - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#11_June_2025_(Greta_Thunberg_VS_Israeli_bombs)</link></item>
-<item><title>Urgent: Preserve federal courts - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#11_June_2025_(Urgent:_Preserve_federal_courts_)</link></item>
-<item><title>US military vs peaceful protestors, CA - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#10_June_2025_(US_military_vs_peaceful_protestors,_CA)</link></item>
-<item><title>Urgent: Conference of the Parties 30 - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#10_June_2025_(Urgent:_Conference_of_the_Parties_30)</link></item>
-<item><title>Urgent: Funding for bird flu vaccine - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#9_June_2025_(Urgent:_Funding_for_bird_flu_vaccine_funding)</link></item>
-<item><title>Urgent: Stop Thiel&amp;#39;s dangerous surveillance scheme - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#9_June_2025_(Urgent:_Stop_Thiel&amp;#39;s_dangerous_surveillance_scheme)</link></item>
-<item><title>Urgent: Right-wing election lies in public schools - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#9_June_2025_(Urgent:_Right-wing_election_lies_in_public_schools)</link></item>
-<item><title>Urgent: Block Charter-Cox megamerger - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#9_June_2025_(Urgent:_Block_Charter-Cox_megamerger)</link></item>
-<item><title>University of Michigan spying on students involved in Gaza protests - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#9_June_2025_(University_of_Michigan_spying_on_students_involved_in_Gaza_protests)</link></item>
-<item><title>Nuclear power plants in places near sea level rise - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#9_June_2025_(Nuclear_power_plants_in_places_near_sea_level_rise)</link></item>
-<item><title>Fighting climate crisis vital for national security - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#9_June_2025_(Fighting_climate_crisis_vital_for_national_security)</link></item>
-<item><title>Secretary of Education on teaching about Tulsa race massacre - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#9_June_2025_(Secretary_of_Education_on_teaching_about_Tulsa_race_massacre)</link></item>
-<item><title>Perspective on population growth not being a problem - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#9_June_2025_(Perspective_on_population_growth_not_being_a_problem)</link></item>
-<item><title>Deportation thugs threaten to deport witnesses - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#9_June_2025_(Deportation_thugs_threaten_to_deport_witnesses)</link></item>
-<item><title>Mass firings on Department of Education - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#9_June_2025_(Mass_firings_on_Department_of_Education)</link></item>
-<item><title>Britons who bought homes with dangerous cladding - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#9_June_2025_(Britons_who_bought_homes_with_dangerous_cladding)</link></item>
-<item><title>Kabul running out of water supply - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#9_June_2025_(Kabul_running_out_of_water_supply)</link></item>
-<item><title>Exploitative privatized parking meters - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#9_June_2025_(Exploitative_privatized_parking_meters)</link></item>
-<item><title>Day care costs in the US - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#9_June_2025_(Day_care_costs_in_the_US)</link></item>
-<item><title>Pushing to restrict lobbying in Australia - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#9_June_2025_(Pushing_to_restrict_lobbying_in_Australia)</link></item>
-<item><title>Bukele playbook attacks poor, SLV - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#9_June_2025_(Bukele_playbook_attacks_poor,_SLV)</link></item>
-<item><title>dooH nibboR protest, UK - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#9_June_2025_(dooR_nibboR_protest,_UK)</link></item>
-<item><title>Veterans Affairs attacked, US govt - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#9_June_2025_(Veterans_Affairs_attacked,_US_govt)</link></item>
-<item><title>Huge measles outbreak, Ontario, CAN - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#8_June_2025_(Huge_measles_outbreak,_Ontario,_CAN)</link></item>
-<item><title>(Satire) The Jesus papers, et al. - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#8_June_2025_((Satire)_The_Jesus_papers,_et_al.)</link></item>
-<item><title>Urgent: Call on senators to reject cuts to Medicaid, Medicare and Social Security - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#8_June_2025_(Urgent:_Call_on_senators_to_reject_cuts_to_Medicaid,_Medicare_and_Social_Security)</link></item>
-<item><title>Urgent: Write Brazil&amp;#39;s ministers in support of climate defense - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#8_June_2025_(Urgent:_Write_Brazil&amp;#39;s_ministers_in_support_of_climate_defense)</link></item>
-<item><title>Glowing predictions about nuclear power plants - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#8_June_2025_(Glowing_predictions_about_nuclear_power_plants)</link></item>
-<item><title>Someone in Syria fired artillery or missiles at Israel - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#8_June_2025_(Someone_in_Syria_fired_artillery_or_missiles_at_Israel)</link></item>
-<item><title>Israel to Palestinians in Gaza - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#8_June_2025_(Israel_to_Palestinians_in_Gaza)</link></item>
-<item><title>International journalists trying to observe Israeli expulsion - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#8_June_2025_(International_journalists_trying_to_observe_Israeli_expulsion)</link></item>
-<item><title>Need for inquiry on British involvement in Israel - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#8_June_2025_(Need_for_inquiry_on_British_involvement_in_Israel)</link></item>
-<item><title>Israel accused of arming Palestinian gang - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#8_June_2025_(Israel_accused_of_arming_Palestinian_gang)</link></item>
-<item><title>Reducing poaching by cutting off rhinos&amp;#39; horns - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#8_June_2025_(Reducing_poaching_by_cutting_off_rhinos&amp;#39;_horns)</link></item>
-<item><title>Amazon testing humanoid robots for package delivery - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#8_June_2025_(Amazon_testing_humanoid_robots_for_package_delivery)</link></item>
-<item><title>Shutting China&amp;#39;s access to advanced proprietary technology - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#8_June_2025_(Shutting_China&amp;#39;s_access_to_advanced_proprietary_technology)</link></item>
-<item><title>MIT graduate punished for talking about Gaza - Richard Stallman</title><link>https://stallman.org/archives/2025-mar-jun.html#8_June_2025_(MIT_graduate_punished_for_talking_about_Gaza)</link></item>
-<item><title>Shea McGee Says These Two Things Are All You Need for a More Private Backyard - domino</title><link>https://www.domino.com/style-shopping/shea-mcgees-rule-for-outdoor-privacy-design-it-like-you-would-a-room/</link></item>
-<item><title>Kitchen Organization - domino</title><link>https://www.domino.com/category/kitchen-organization/</link></item>
-<item><title>谷歌CEO皮查伊两小时访谈：AI是人类所见过最深远的技术，意义将超越火与电，因为它可以自我迭代 - Solidot</title><link>https://www.solidot.org/story?sid=81542</link></item>
-<item><title>四天工作制能提高生产力 - Solidot</title><link>https://www.solidot.org/story?sid=81543</link></item>
-<item><title>马斯克威胁起诉广告商取得部分成效 - Solidot</title><link>https://www.solidot.org/story?sid=81544</link></item>
-<item><title>Anker 召回逾百万台有起火风险的移动电源 - Solidot</title><link>https://www.solidot.org/story?sid=81545</link></item>
-<item><title>丹麦一政府部门准备淘汰 Windows 和 Microsoft 365 - Solidot</title><link>https://www.solidot.org/story?sid=81552</link></item>
-<item><title>研究认为霸王龙的大型化始于亚洲 - Solidot</title><link>https://www.solidot.org/story?sid=81551</link></item>
-<item><title>两名欧洲记者的手机感染了以色列间谍软件 Paragon - Solidot</title><link>https://www.solidot.org/story?sid=81550</link></item>
-<item><title>Scale AI 亚历山大·王的创业法则：人类计算资源可像计算机一样编排，吴恩达一观点毁掉红杉投资，YC创始人一句话带来商业灵感 - Solidot</title><link>https://www.solidot.org/story?sid=81549</link></item>
+<lastBuildDate>Sun, 15 Jun 2025 09:55:40 +0800</lastBuildDate>
+<item><title>US-backed Israeli warplanes bomb Tehran, Iran hits Tel Aviv - The Eastern Herald</title><link>https://easternherald.com/2025/06/14/israel-attack-iran-rising-lion/</link></item>
+<item><title>Karen read trial live ends with fierce closing arguments as jury begins deliberation - The Eastern Herald</title><link>https://easternherald.com/2025/06/13/karen-read-trial-live-verdict-update/</link></item>
+<item><title>Iran demands UN Security Council action after Israeli attack kills top generals - The Eastern Herald</title><link>https://easternherald.com/2025/06/13/iran-unsc-meeting-israel-kills-generals/</link></item>
+<item><title>US-backed Israeli attack drags Middle East into chaos - The Eastern Herald</title><link>https://easternherald.com/2025/06/13/israel-iran-us-attack-exposed/</link></item>
+<item><title>Zuckerberg’s $14B AI plan triggers superintelligence panic - The Eastern Herald</title><link>https://easternherald.com/2025/06/11/meta-zuckerberg-14b-superintelligence-ai-race/</link></item>
+<item><title>Los Angeles burns, US Republicans blame Mexico while Mexico blames American racism - The Eastern Herald</title><link>https://easternherald.com/2025/06/11/noem-sheinbaum-la-protests/</link></item>
+<item><title>Jack Ciattarelli wins New Jersey GOP primary, becomes frontrunner in 2025 governor’s race - The Eastern Herald</title><link>https://easternherald.com/2025/06/11/ciattarelli-wins-nj-gop-primary/</link></item>
+<item><title>Trump curfew collapses as ICE raids ignite chaos and Marines storm Los Angeles - The Eastern Herald</title><link>https://easternherald.com/2025/06/11/trump-curfew-collapse-los-angeles/</link></item>
+<item><title>Greta Thunberg deported by Israel after Gaza aid flotilla raid exposes Western complicity - The Eastern Herald</title><link>https://easternherald.com/2025/06/11/israel-deported-greta-thunberg/</link></item>
+<item><title>Trump deploys troops to Los Angeles, slams California leaders over wildfire delays and protests - The Eastern Herald</title><link>https://easternherald.com/2025/06/11/trump-deploys-troops-los-angeles/</link></item>
+<item><title>代糖赤藓糖醇被发现会损害脑血管细胞功能 - Solidot</title><link>https://www.solidot.org/story?sid=81554</link></item>
+<item><title>当 Google 打了个喷嚏，全世界都感冒了 - Solidot</title><link>https://www.solidot.org/story?sid=81555</link></item>
+<item><title>因 AI 科技巨头的间接碳排放自 2020 年以来增长了 50% - Solidot</title><link>https://www.solidot.org/story?sid=81556</link></item>
+<item><title>人类首次拍摄到太阳南极 - Solidot</title><link>https://www.solidot.org/story?sid=81557</link></item>
+<item><title>Neighborly help in the brain: Cerebral cortex networks rapidly reorganize to compensate for lost neurons - Medical Xpress</title><link>https://medicalxpress.com/news/2025-06-neighborly-brain-cerebral-cortex-networks.html</link></item>
+<item><title>FDA approves pembrolizumab for resectable head and neck cancer with PD-L1 expression - Medical Xpress</title><link>https://medicalxpress.com/news/2025-06-fda-pembrolizumab-resectable-neck-cancer.html</link></item>
+<item><title>US measles count nears 1,200 cases as Ohio officials confirm 3 outbreaks are over - Medical Xpress</title><link>https://medicalxpress.com/news/2025-06-measles-nears-cases-ohio-outbreaks.html</link></item>
+<item><title>2020 to 2022 saw nearly 2 million annual emergency room visits for dental issues - Medical Xpress</title><link>https://medicalxpress.com/news/2025-06-million-annual-emergency-room-dental.html</link></item>
+<item><title>Evolutionary model for antibiotic resistance reveals dose timing critical to care - Medical Xpress</title><link>https://medicalxpress.com/news/2025-06-evolutionary-antibiotic-resistance-reveals-dose.html</link></item>
+<item><title>Study reveals risk factors for spinal deterioration in r-axSpA - Medical Xpress</title><link>https://medicalxpress.com/news/2025-06-reveals-factors-spinal-deterioration-axspa.html</link></item>
+<item><title>Blocking CD200R1 protein offers new strategy for treatment-resistant blood cancers - Medical Xpress</title><link>https://medicalxpress.com/news/2025-06-blocking-cd200r1-protein-strategy-treatment.html</link></item>
+<item><title>Children with acute allergic reactions often spend unnecessary time in hospitals - Medical Xpress</title><link>https://medicalxpress.com/news/2025-06-children-acute-allergic-reactions-unnecessary.html</link></item>
+<item><title>Synergistic drug combinations explored for systemic sclerosis vasodilation - Medical Xpress</title><link>https://medicalxpress.com/news/2025-06-synergistic-drug-combinations-explored-sclerosis.html</link></item>
+<item><title>Different genetic roots of autism may lead to shared brain activity and behaviors - Medical Xpress</title><link>https://medicalxpress.com/news/2025-06-genetic-roots-autism-brain-behaviors.html</link></item>
+<item><title>Exploring patient experiences in juvenile idiopathic arthritis - Medical Xpress</title><link>https://medicalxpress.com/news/2025-06-exploring-patient-juvenile-idiopathic-arthritis.html</link></item>
+<item><title>Alcohol-linked liver deaths rising in women and young adults, finds study - Medical Xpress</title><link>https://medicalxpress.com/news/2025-06-alcohol-linked-liver-deaths-women.html</link></item>
+<item><title>Decline in youth physical fitness seen in association with pandemic - Medical Xpress</title><link>https://medicalxpress.com/news/2025-06-decline-youth-physical-association-pandemic.html</link></item>
+<item><title>Compound found in rice bran can suppress intestinal contractions by inhibiting calcium influx - Medical Xpress</title><link>https://medicalxpress.com/news/2025-06-compound-rice-bran-suppress-intestinal.html</link></item>
+<item><title>Heart disease and diabetes drive surge in deaths among Americans without college degrees - Medical Xpress</title><link>https://medicalxpress.com/news/2025-06-heart-disease-diabetes-surge-deaths.html</link></item>
+<item><title>The value of physical activity for people with RMD - Medical Xpress</title><link>https://medicalxpress.com/news/2025-06-physical-people-rmd.html</link></item>
+<item><title>Osteoarthritis: Too many non-evidence-based therapies? - Medical Xpress</title><link>https://medicalxpress.com/news/2025-06-osteoarthritis-evidence-based-therapies.html</link></item>
+<item><title>Studies show nurses play a critical role for people with rheumatic musculoskeletal diseases - Medical Xpress</title><link>https://medicalxpress.com/news/2025-06-nurses-play-critical-role-people.html</link></item>
+<item><title>Patient organizations: Supporting RMD patients with education - Medical Xpress</title><link>https://medicalxpress.com/news/2025-06-patient-rmd-patients.html</link></item>
+<item><title>Guidance needed for RMD patients seeking help online - Medical Xpress</title><link>https://medicalxpress.com/news/2025-06-guidance-rmd-patients-online.html</link></item>
+<item><title>First data from the EULAR RheumaFacts project - Medical Xpress</title><link>https://medicalxpress.com/news/2025-06-eular-rheumafacts.html</link></item>
+<item><title>Two biomarkers that may predict diabetic foot ulcer healing outcomes identified - Medical Xpress</title><link>https://medicalxpress.com/news/2025-06-biomarkers-diabetic-foot-ulcer-outcomes.html</link></item>
+<item><title>Preventing stalling to improve CAR-T cells&amp;#39; efficacy against tumors - Medical Xpress</title><link>https://medicalxpress.com/news/2025-06-stalling-car-cells-efficacy-tumors.html</link></item>
+<item><title>Muscle &amp;#39;control center&amp;#39; discovery could help elderly with better muscle healing - Medical Xpress</title><link>https://medicalxpress.com/news/2025-06-muscle-center-discovery-elderly.html</link></item>
+<item><title>New PET imaging approach provides precise mapping of nasopharyngeal cancer biomarker - Medical Xpress</title><link>https://medicalxpress.com/news/2025-06-pet-imaging-approach-precise-nasopharyngeal.html</link></item>
+<item><title>What does the new pandemic treaty mean for global health? - Medical Xpress</title><link>https://medicalxpress.com/news/2025-06-pandemic-treaty-global-health.html</link></item>
+<item><title>Excessive use of disinfectants in intensive care patients may raise risk of antibiotic-resistant infections - Medical Xpress</title><link>https://medicalxpress.com/news/2025-06-excessive-disinfectants-intensive-patients-antibiotic.html</link></item>
+<item><title>AI tool analyzes blood DNA fragments for faster, affordable cancer monitoring - Medical Xpress</title><link>https://medicalxpress.com/news/2025-06-ai-tool-blood-dna-fragments.html</link></item>
+<item><title>Experimental model for myelodysplastic syndromes uncovers genetic alterations to improve characterization - Medical Xpress</title><link>https://medicalxpress.com/news/2025-06-experimental-myelodysplastic-syndromes-uncovers-genetic.html</link></item>
+<item><title>Clinically deployed AI guidance may prevent C. difficile spread - Medical Xpress</title><link>https://medicalxpress.com/news/2025-06-clinically-deployed-ai-guidance-difficile.html</link></item>
+<item><title>Wim Hof bei Jay Shetty: Dein Gehirn kann Deinen Körper heilen – hier ist der Beweis! - MC Winkels weBlog</title><link>https://www.whudat.de/wim-hof-bei-jay-shetty-dein-gehirn-kann-deinen-koerper-heilen-hier-ist-der-beweis/</link></item>
+<item><title>Slick Rick veröffentlicht sein neues Album „Victory“ – Ein Meilenstein des Storytelling - MC Winkels weBlog</title><link>https://www.whudat.de/slick-rick-veroeffentlicht-sein-neues-album-victory-ein-meilenstein-des-storytelling/</link></item>
+<item><title>Eskalation in Osteuropa: Warum Ungarn seine Nachbarn provoziert - MC Winkels weBlog</title><link>https://www.whudat.de/eskalation-in-osteuropa-warum-ungarn-seine-nachbarn-provoziert/</link></item>
+<item><title>Wiz Khalifa performt live mit Band beim Tiny Desk Concert – Reifer, aber nicht leiser - MC Winkels weBlog</title><link>https://www.whudat.de/wiz-khalifa-performt-live-mit-band-beim-tiny-desk-concert-reifer-aber-nicht-leiser/</link></item>
+<item><title>KI gegen Depression: Wird eine KI wie Therabot den Therapeuten ersetzen? - MC Winkels weBlog</title><link>https://www.whudat.de/ki-gegen-depression-wird-eine-ki-wie-therabot-den-therapeuten-ersetzen/</link></item>
+<item><title>Eric Benét – „The Co-Star“: Eine Hommage an die Liebe in all ihren Facetten - MC Winkels weBlog</title><link>https://www.whudat.de/eric-benet-the-co-star-eine-hommage-an-die-liebe-in-all-ihren-facetten/</link></item>
+<item><title>Wie Borderline-Partner Sie süchtig machen: Die Falle des Gebrauchtseins - MC Winkels weBlog</title><link>https://www.whudat.de/wie-borderline-partner-sie-suechtig-machen-die-falle-des-gebrauchtseins/</link></item>
+<item><title>Elaquent veröffentlicht neues Album „If Not Now, When?“ - MC Winkels weBlog</title><link>https://www.whudat.de/elaquent-veroeffentlicht-neues-album-if-not-now-when/</link></item>
+<item><title>Bauchgefühl statt Grübelei: Wie Sie Ihre Intuition als Lebenskompass nutzen - MC Winkels weBlog</title><link>https://www.whudat.de/bauchgefuehl-statt-gruebelei-wie-sie-ihre-intuition-als-lebenskompass-nutzen/</link></item>
+<item><title>Omar ist mit „Brighter The Days“ zurück – mit Licht, Leben und Liebe - MC Winkels weBlog</title><link>https://www.whudat.de/omar-ist-mit-brighter-the-days-zurueck-mit-licht-leben-und-liebe/</link></item>
+<item><title>Bringing data science to life for K–12 students with the ‘API Can Code’ curriculum - Raspberry Pi</title><link>https://www.raspberrypi.org/blog/bringing-data-science-to-life-for-k-12-students-with-the-api-can-code-curriculum/</link></item>
+<item><title>Astro Pi 2024/25: Another stellar year of space education concludes - Raspberry Pi</title><link>https://www.raspberrypi.org/blog/astro-pi-2024-25-another-stellar-year-of-space-education-concludes/</link></item>
+<item><title>Discover the incredible impact of Code Club: The Code Club annual survey report 2025 - Raspberry Pi</title><link>https://www.raspberrypi.org/blog/discover-the-incredible-impact-of-code-club-the-code-club-annual-survey-report-2025/</link></item>
+<item><title>Join our free data science education workshop for teachers - Raspberry Pi</title><link>https://www.raspberrypi.org/blog/join-our-free-data-science-education-workshop-for-teachers/</link></item>
+<item><title>Why kids still need to learn to code in the age of AI - Raspberry Pi</title><link>https://www.raspberrypi.org/blog/why-kids-still-need-to-learn-to-code-in-the-age-of-ai/</link></item>
+<item><title>Young tech creators take over Bradford at Coolest Projects UK - Raspberry Pi</title><link>https://www.raspberrypi.org/blog/young-tech-creators-take-over-bradford-at-coolest-projects-uk/</link></item>
+<item><title>Bridging the divide: Connecting global communities with Experience AI - Raspberry Pi</title><link>https://www.raspberrypi.org/blog/bridging-the-divide-connecting-global-communities-with-experience-ai/</link></item>
 </channel></rss>

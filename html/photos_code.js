@@ -157,7 +157,7 @@ function menu_klphotos(){
     }
 
     var menu_tools=[
-    '<span class="span_menu" onclick="'+str_t+'month_day_line_klphotos();">逐日照片数统计</span>',
+    '<span class="span_menu" onclick="'+str_t+'month_day_line_klphotos();">当前条件逐日照片数统计</span>',
     '<span class="span_menu" onclick="'+str_t+'duplicate_category_check_klphotos();">重复或类似分类名检查</span>',
     '<span class="span_menu" onclick="'+str_t+'timeline_category_klphotos();">Timeline</span>',   
     '<span class="span_menu" onclick="'+str_t+'screen_album_start_klphotos();">屏幕相框</span>',
