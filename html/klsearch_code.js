@@ -154,6 +154,24 @@ function batch_type_get_klsearch(cstype){
     return cstype;
 }
 
+function iframe_current_button(event,obutton,csxl){
+    var rect=obutton.getBoundingClientRect();
+    var odiv=document.getElementById('div_new_window_iframe_klsearch');
+    if (!odiv){
+        odiv=document.createElement('div');
+        odiv.setAttribute('id','div_new_window_iframe_klsearch');
+        odiv.style.cssText='position:absolute;left:0px;top:0px;';
+        odiv.innerHTML='<span class="oblong_box" onclick="copy_iframe_link_klsearch(true);">↪</span>';
+        document.body.appendChild(odiv);
+        mouseover_mouseout_oblong_span_b(odiv.querySelectorAll('span.oblong_box'));
+    }
+
+    if (!odiv){return;}
+    var rect2=odiv.getBoundingClientRect();
+    odiv.style.left=rect.left+'px';
+    odiv.style.top=(rect.top-rect2.height)+'px';
+}
+
 function iframe_generate_klsearch(cstype='',cskey=false){
     cstype=batch_type_get_klsearch(cstype);
     if (cskey===false){
@@ -182,7 +200,7 @@ function iframe_generate_klsearch(cstype='',cskey=false){
                 if (is_local_file && blsrc.substring(0,4).toLowerCase()!=='http'){
                     if (blsrc.split('?')[0].slice(-4,).toLowerCase()=='.php'){continue;}
                 }
-                var list_t=iframe_generate_b(blxl,one_type,blsrc);
+                var list_t=iframe_generate_b(blxl,one_type,blsrc,'iframe_current_button');
                 buttons_t.push(list_t[0]);
                 result_t.push(list_t[1]);
                 break;
@@ -201,7 +219,7 @@ function iframe_generate_klsearch(cstype='',cskey=false){
     '<span class="span_menu" onclick="'+str_t+'iframe_generate_klsearch(this.innerText);">batch_en_wiktionary</span>',
     
     ];
-    document.getElementById('p_buttons_kls').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🇬🇧','13rem','1rem','1rem','30rem'),'','0rem')+' <span class="aclick" onclick="copy_iframe_link_klsearch(true);">↪</span>');
+    document.getElementById('p_buttons_kls').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🇬🇧','13rem','1rem','1rem','30rem'),'','0rem'));//+' <span class="aclick" onclick="copy_iframe_link_klsearch(true);">↪</span>');
     //-----------------------
     iframe_init_b();
     document.getElementById('checkbox_openwindow').parentNode.style.display='none';

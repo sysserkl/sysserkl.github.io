@@ -2562,8 +2562,8 @@ function iframe_show_b(ospan,csno){
     oiframe.style.display='';
 }
 
-function iframe_generate_b(csxl,cstitle,cssrc){
-    var buttons_t='<span class="aclick span_one_iframe_kl_b" onclick="iframe_show_b(this,'+csxl+');">'+cstitle+'</span>';
+function iframe_generate_b(csxl,cstitle,cssrc,js_code=''){
+    var buttons_t='<span class="aclick span_one_iframe_kl_b" onclick="iframe_show_b(this,'+csxl+');'+(js_code==''?'':js_code+'(event,this,'+csxl+');')+'">'+cstitle+'</span>';
     var result_t='<iframe id="iframe_site_kl_b_'+csxl+'" class="iframe_site_kl_b" style="width:95%;height:40rem;display:none;" src="'+cssrc+'"></iframe>';
     return [buttons_t,result_t];
 }

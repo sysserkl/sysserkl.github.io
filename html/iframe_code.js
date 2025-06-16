@@ -11,6 +11,7 @@ function init_kl_iframe(){
 function menu_kl_iframe(){
 var str_t=klmenu_hide_b('');
     var klmenu1=[
+    '<a href="?menu&one&www=enwords.htm&&www=enwords_today.htm&www=enwords_exam.htm" onclick="'+str_t+'" target=_blank>enwords_today_exam</a>',
     '<a href="?menu&one&www=readlater.htm&&www=notepad.htm&www=diff_js.htm" onclick="'+str_t+'" target=_blank>readlater_notepad_diff_js</a>',
     '<a href="?menu&button&size=2000px&percent=50,50&www=notepad.htm&www=diff_js.htm&type=ns" onclick="'+str_t+'" target=_blank>notepad_diff_js_demo</a>',
     ];
