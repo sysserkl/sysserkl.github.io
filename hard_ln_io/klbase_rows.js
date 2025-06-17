@@ -712,6 +712,7 @@ function strquick_klr_b(cstype='',csid='textarea_rows_content',status_id='textar
         case 'bing_oxford_klsearch_en':
         case 'oxford_klsearch_en':
         case 'cambridge':
+        case 'kaikki':
             batch_open_www_klr_b(csid,ostatus,cstype);
             break;
         case 'count':
