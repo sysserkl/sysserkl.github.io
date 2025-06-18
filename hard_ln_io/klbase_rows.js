@@ -847,15 +847,13 @@ function batch_open_www_klr_b(csid,ostatus,cstype=''){
             }
             break;
         case 'collins':
+        case 'cambridge':
+        case 'kaikki':        
+            let initialism_dict={'collins':'c','cambridge':'+','kaikki':'kai'};
             for (let blno=0;blno<bllen;blno++){
-                list_t[blno]=open_link_en_b('c',list_t[blno],false);
+                list_t[blno]=open_link_en_b(initialism_dict[cstype],list_t[blno],false);
             }
             break;
-        case 'cambridge':
-            for (let blno=0;blno<bllen;blno++){
-                list_t[blno]=open_link_en_b('+',list_t[blno],false);
-            }
-            break;        
     }
     
     var blxl=0;

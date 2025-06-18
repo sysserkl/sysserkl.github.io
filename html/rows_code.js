@@ -198,16 +198,25 @@ function menu_klr2(){
     }
    
     var klmenu_batch=[
-    '<span class="span_menu" onclick="'+str_t+'enwords_get_klr2();">提取英文单词</span>',        
+    '<span class="span_menu" onclick="'+str_t+'enwords_get_klr2();">提取英文单词</span>',
     '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'batchwww\');">批量打开网址</span>',
-    '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'bing_oxford_klsearch_en\');">批量打开B_O_KLSearch(en)</span>',  
-    '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'bing_oxford_+_klsearch_en\');">批量打开B_O_+_KLSearch(en)</span>',    
-    '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'bing_collins_oxford_+_klsearch_en\');">批量打开B_C_O_+_KLSearch(en)</span>',    
-    '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'oxford_klsearch_en\');">批量打开O_KLSearch(en)</span>',
-    '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'cambridge\');">批量打开+(en)</span>',    
-    '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'collins\');">批量打开C(en)</span>',
-    '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'collins\');">批量打开Kaikki(en)</span>',
     ];
+    
+    var group_list=[
+    ['BCO+K','strquick_klr_b(\'bing_collins_oxford_+_klsearch_en\');',true],
+    ['BO+K','strquick_klr_b(\'bing_oxford_+_klsearch_en\');',true],
+    ['BOK','strquick_klr_b(\'bing_oxford_klsearch_en\');',true],
+    ['OK','strquick_klr_b(\'oxford_klsearch_en\');',true],
+    ];    
+    klmenu_batch.push(menu_container_b(str_t,group_list,'批量打开(en): '));
+
+    var group_list=[
+    ['+','strquick_klr_b(\'cambridge\');',true],
+    ['C','strquick_klr_b(\'collins\');',true],
+    ['Kaikki','strquick_klr_b(\'kaikki\');',true],
+    ];    
+    klmenu_batch.push(menu_container_b(str_t,group_list,'批量打开(en): '));
+    
     if (is_local_b()){
         klmenu_batch.push('<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'klwikititle\');">批量打开KLWiki Title</span>');
     }

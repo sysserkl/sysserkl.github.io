@@ -39,7 +39,7 @@ var common_apps_pb_global=[
 ["{{selenium_news}}/html/gps_news.htm","GPS News","📰","1"],
 ["{{selenium_news}}/html/gps_points.htm","GPS Points","🧿","0_2"],
 ["{{selenium_news}}/html/hzpinyin.htm","hzpy","hzpy512.png","5","txteditor,character"],
-["{{selenium_news}}/html/iframe.htm","iframe","◧","3"],
+["{{selenium_news}}/html/iframe.htm?menu","iframe","◧","3"],
 ["{{selenium_news}}/html/image2base64.htm","image2base64","image2base64_512.png","5","image"],
 ["{{selenium_news}}/html/image_merge.htm","image merge","image_merge512.png","5","image"],
 ["{{selenium_news}}/html/imdb.htm","Movie Analyze","🎬","5","database"],
