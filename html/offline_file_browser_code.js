@@ -1118,14 +1118,20 @@ function menu_offline_file_browser(){
     ];
     
      var klmenu_link=[
-    '<span class="span_menu" onclick="'+str_t+'klwiki_link_b(\'光盘柜\',true);">光盘柜</span>',
     '<span class="span_menu" onclick="'+str_t+'klwiki_link_b(\'文件包内容列表\',true);">文件包内容列表</span>',
     '<span class="span_menu" onclick="'+str_t+'klwiki_link_b(\'KL 移动硬盘数据总量\',true);">KL 移动硬盘数据总量</span>',
     ];
+    
+    var group_list=[
+    ['01','klwiki_link_b(\'光盘柜01\',true);',true],
+    ['02','klwiki_link_b(\'光盘柜02\',true);',true],
+    ['03','klwiki_link_b(\'光盘柜03\',true);',true],
+    ];    
+    klmenu_link.push(menu_container_b(str_t,group_list,'光盘柜：'));
+    
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'💾','18rem','','1rem')+klmenu_b(klmenu2,'🔀','10rem','','1rem')+klmenu_b(klmenu_statistics,'🧮','12rem','','1rem')+klmenu_b(klmenu_config,'⚙','18rem','','1rem')+(is_local_b()?klmenu_b(klmenu_link,'L','16rem','','1rem'):''),'','0rem')+' ');
     
     klmenu_check_b('span_kmg_ofb',true);            
-    //klmenu_check_b('span_saved_disk_path_ofb',true);            
     klmenu_check_b('span_reg_ofb',true);       
     klmenu_check_b('span_fav_ofb',true);            
     klmenu_check_b('span_ssd_tf_show_ofb',true);            
