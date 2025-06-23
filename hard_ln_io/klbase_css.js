@@ -2836,3 +2836,9 @@ function find_closest_dom_next_by_tagname_b(odom,tagname,classname=false){
     }
     return null;
 }
+
+function rect_valign_middle_b(odom){
+    //odom 默认的 style 中 top 要预先设置为 50%; - 保留注释
+    var rect=odom.getBoundingClientRect();
+    odom.style.top=(rect.top-rect.height/2)+'px';
+}
