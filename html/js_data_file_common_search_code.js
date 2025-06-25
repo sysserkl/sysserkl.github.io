@@ -65,10 +65,7 @@ function init_common(){
         }
     }
     
-    var status_t=[];
-    for (let item of ['data_file_jscm_global','icon_emoji_jscm_global','title_name_jscm_global','var_name_jscm_global','js_additional_jscm_global']){
-        status_t.push(item+'=\''+eval(item)+'\';');
-    }
+    var status_t=global_var_common();
     console.log(status_t.join('\n'));
 
     web_page_name_set_common();
@@ -87,6 +84,28 @@ function init_common(){
     js_data_current_common_search_global=[];
     menu_common();
     wait_array_common();
+}
+
+function global_var_common(do_alert=false){
+    var status_t=[];
+    for (let item of ['data_file_jscm_global','icon_emoji_jscm_global','title_name_jscm_global','var_name_jscm_global','js_additional_jscm_global','load_remote_data_jscm_global']){
+        if (eval('typeof '+item) =='undefined'){
+            status_t.push(item+'=undefined;');
+        } else {
+            status_t.push(item+'=\''+eval(item)+'\';');
+        }
+    }
+
+    if (typeof table_th_jscm_global =='undefined'){
+        status_t.push('table_th_jscm_global=undefined;');
+    } else {
+        status_t.push('table_th_jscm_global='+JSON.stringify(table_th_jscm_global)+';');
+    }
+    
+    if (do_alert){
+        alert(status_t.join('\n'));
+    }
+    return status_t;
 }
 
 function web_page_name_set_common(){
@@ -264,6 +283,7 @@ function menu_common(){
     
     var klmenu_config=root_font_size_menu_b(str_t);
     klmenu_config=klmenu_config.concat([
+    '<span class="span_menu" onclick="'+str_t+'global_var_common(true);">全局变量一览</span>',
     '<span class="span_menu" onclick="'+str_t+'upload_data_files_form_common();">上传数据文件或从bigfile导入</span>',
     '<span class="span_menu" onclick="'+str_t+'split_current_arr_common();">当前结果数组分割</span>',
     '<span class="span_menu" onclick="'+str_t+'sort_by_key_count_common();">当前条件按输入的关键词出现次数排序</span>',    

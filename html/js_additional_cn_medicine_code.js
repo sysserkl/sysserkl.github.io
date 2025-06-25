@@ -82,7 +82,7 @@ function sort_cn_medicine(is_desc=false){
         cn_medicine_raw_global.sort(function (a,b){return zh_sort_b(a[rank_no],b[rank_no],is_desc);});    
     } else {
         rank_no=rank_no+1; //第2个元素是 link_id - 保留注释;
-        cn_medicine_raw_global.sort(function (a,b){return zh_sort_b(a[rank_no],b[rank_no],is_desc);});
+        cn_medicine_raw_global.sort(function (a,b){return zh_sort_b(a[rank_no],b[rank_no],is_desc,-1);});
     }
 }
 

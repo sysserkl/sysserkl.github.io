@@ -16,7 +16,6 @@ function col_rearrange_dp_rank(){
 
 function menu_more_dp_rank(){
     var str_t=klmenu_hide_b('');
-    //var blparent=menu_parent_node_b(str_t);
 
     table_th_jscm_global={'城市':'','店名':'','评论人数':'right','人均消费￥':'right','类型':'','地址':'','推荐菜':''};
     
