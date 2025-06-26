@@ -1044,10 +1044,22 @@ function same_record_data_zjedu(){
 }
 
 function exam_range_check_zjedu(){
-    function sub_exam_range_check_zjedu_array(csarr,range_compare=true){
+    function sub_exam_range_check_zjedu_array(csarr,range_compare=true,show_lost=false,show_sum=false){
         if (csarr.length==0){return '';}
         var blmin=Math.min(...csarr);
         var blmax=Math.max(...csarr);
+        
+        var blsum=0;
+        for (let item of csarr){
+            blsum=blsum+item;
+        }
+        
+        var lost_number_list=[];
+        for (let blxl=blmin;blxl<blmax;blxl++){
+            if (csarr.includes(blxl)){continue;}
+            lost_number_list.push(blxl);
+        }
+        
         var len1=csarr.length;
         var len2=array_unique_b(csarr).length;
         var bljg='length: '+len1+', 无重复长度: '+len2+', ';
@@ -1058,6 +1070,14 @@ function exam_range_check_zjedu(){
         if (range_compare){
             bljg=bljg+', '+(blmax-blmin+1==len1?'正常':'<font color="'+scheme_global['a-hover']+'">不正常</font>');    
         }
+        
+        if (show_lost && lost_number_list.length>0){
+            bljg=bljg+', 缺少: '+lost_number_list.join(', ');
+        }
+        
+        if (show_sum){
+            bljg=bljg+',合计: '+blsum;
+        }        
         return bljg;
     }
     //-----------------------
@@ -1080,8 +1100,8 @@ function exam_range_check_zjedu(){
             y_list.push(item[1]);
         }
         result_t.push('<h3>'+key+' <span class="oblong_box" style="font-size:0.85rem; font-weight:normal;" onclick="popup_show_hide_b(\'table_range_check_'+key+'\');">显示/隐藏</span></h3>');        
-        result_t.push('<p><b>score</b> '+sub_exam_range_check_zjedu_array(list_score)+'</p>');
-        result_t.push('<p><b>count</b> '+sub_exam_range_check_zjedu_array(list_count,false)+'</p>');
+        result_t.push('<p><b>score</b> '+sub_exam_range_check_zjedu_array(list_score,true,true)+'</p>');
+        result_t.push('<p><b>count</b> '+sub_exam_range_check_zjedu_array(list_count,false,false,true)+'</p>');
         result_t.push('<section style="max-height:25rem;overflow:auto;"><table class="table_common" style="display:none;" id="table_range_check_'+key+'"><tr><th>分数</th><th>人数</th><th>累计人数</th></tr>');
         result_t=result_t.concat(table_list);
         result_t.push('</table></section>');

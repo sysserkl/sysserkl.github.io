@@ -3352,8 +3352,8 @@ function str2num_range_b(csstr,csstep=1,maxlen=-1){ //numinrange。csstep仅对-
     for (let item of list_t){
         var blat=item.lastIndexOf('-');
         if (blat>0){   //非负数 - 保留注释
-            var blmin=parseInt(item.substring(0,blat).trim());
-            var blmax=parseInt(item.substring(blat+1,).trim());
+            var blmin=parseFloat(item.substring(0,blat).trim());
+            var blmax=parseFloat(item.substring(blat+1,).trim());
             if (isNaN(blmin) || isNaN(blmax)){continue;}
             if (blmin>blmax){continue;}
             for (let blxl=blmin;blxl<=blmax;blxl=blxl+csstep){
@@ -3361,7 +3361,7 @@ function str2num_range_b(csstr,csstep=1,maxlen=-1){ //numinrange。csstep仅对-
                 if (maxlen>0 && result_t.size>=maxlen){break;}
             }
         } else {
-            item=parseInt(item);
+            item=parseFloat(item);
             if (isNaN(item)){continue;}
             result_t.add(item);
         }
