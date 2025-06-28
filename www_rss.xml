@@ -8,181 +8,406 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Fri, 27 Jun 2025 07:53:14 +0800</lastBuildDate>
-<item><title>The whooper highway - Aeon</title><link>https://aeon.co/videos/join-endangered-whooping-cranes-on-their-perilous-migratory-path-over-north-america?utm_source=rss-feed</link></item>
-<item><title>Awkward silences - Aeon</title><link>https://aeon.co/essays/whats-so-awkward-about-an-awkward-silence?utm_source=rss-feed</link></item>
-<item><title>Back in black: Microsoft Blue Screen of Death is going dark - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/26/microsoft_bsod_goes_black/</link></item>
-<item><title>FBI used bitcoin wallet records to peg notorious IntelBroker as UK national - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/26/fbi_used_bitcoin_wallet_id_intelbroker/</link></item>
-<item><title>What if Microsoft just turned you off? Security pro counts the cost of dependency - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/26/cost_of_microsoft_dependency/</link></item>
-<item><title>Microsoft nuke power deal for Three Mile Island appears to be ahead of schedule - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/26/microsoft_tmi_nuclear/</link></item>
-<item><title>Cisco fixes two critical make-me-root bugs on Identity Services Engine components - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/26/patch_up_cisco_fixes_two/</link></item>
-<item><title>Exif marks the spot as fresh version of PNG image standard arrives - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/26/new_version_of_png/</link></item>
-<item><title>The SmartNIC revolution fell flat, but AI might change that - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/26/will_ai_save_dpus/</link></item>
-<item><title>Gridlocked: AI&amp;#39;s power needs could short-circuit US infrastructure - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/26/us_datacenter_power_crunch/</link></item>
-<item><title>NICER science not so nice as ISS telescope pauses operations - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/26/nicer_science_not_so_nice/</link></item>
-<item><title>Kaseya CEO: Why AI adoption is below industry expectations - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/26/kaseya_ceo_why_ai_adoption/</link></item>
-<item><title>Glasgow City Council online services crippled following cyberattack - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/26/glasgow_city_council_cyberattack/</link></item>
-<item><title>Qilin ransomware attack on NHS supplier contributed to patient fatality - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/26/qilin_ransomware_nhs_death/</link></item>
-<item><title>OpenDylan sheds some parentheses in 2025.1 update - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/26/opendylan_20251_released/</link></item>
-<item><title>UK to buy nuclear-capable F-35As that can&amp;#39;t be refueled from RAF tankers - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/26/uk_f_35a_refuel_hitch/</link></item>
-<item><title>Frozen foods supermarket chain deploys facial recognition tech - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/26/iceland_facial_recognition/</link></item>
-<item><title>Top AI models - even American ones - parrot Chinese propaganda, report finds - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/26/top_ai_models_parrot_chinese/</link></item>
-<item><title>That WhatsApp from an Israeli infosec expert could be a Iranian phish - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/26/that_whatsapp_from_an_israeli/</link></item>
-<item><title>French city of Lyon ditching Microsoft for open source office and collab tools - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/26/lyon_leaving_microsoft/</link></item>
-<item><title>Japanese company using mee-AI-ow to detect stressed cats - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/26/rabo_catlog_ai_stress_detector/</link></item>
-<item><title>韦伯望远镜可能首次直接获得系外行星影像 - Solidot</title><link>https://www.solidot.org/story?sid=81658</link></item>
-<item><title>ispace 登月舱登月失败源于高度计 - Solidot</title><link>https://www.solidot.org/story?sid=81657</link></item>
-<item><title>一次性电子烟毒性大于传统香烟 - Solidot</title><link>https://www.solidot.org/story?sid=81656</link></item>
-<item><title>法国里昂淘汰微软软件以实现数字主权 - Solidot</title><link>https://www.solidot.org/story?sid=81655</link></item>
-<item><title>过度捕捞导致鳕鱼体型缩小一半 - Solidot</title><link>https://www.solidot.org/story?sid=81654</link></item>
-<item><title>Bernie Sanders 认为如果 AI 提高了员工生产力那么应该推行一周四天工作制 - Solidot</title><link>https://www.solidot.org/story?sid=81653</link></item>
-<item><title>掌机测试发现游戏在 SteamOS 上的性能高于 Windows 11 - Solidot</title><link>https://www.solidot.org/story?sid=81652</link></item>
-<item><title>Aaron Sorkin 制作《社交网络》续集 - Solidot</title><link>https://www.solidot.org/story?sid=81651</link></item>
-<item><title>法官裁决 Meta 使用版权书籍训练大模型属于合理使用 - Solidot</title><link>https://www.solidot.org/story?sid=81650</link></item>
-<item><title>OpenAI 在企业级市场抢微软的客户 - Solidot</title><link>https://www.solidot.org/story?sid=81649</link></item>
-<item><title>运送近百辆电动汽车的货船起火沉没 - Solidot</title><link>https://www.solidot.org/story?sid=81648</link></item>
-<item><title>微软发布编辑器 MS-DOS Editor 的 Rust 版本 - Solidot</title><link>https://www.solidot.org/story?sid=81647</link></item>
-<item><title>法官裁决 Anthropic 使用书籍训练 AI 是合理使用，但使用盗版书籍训练并不是 - Solidot</title><link>https://www.solidot.org/story?sid=81646</link></item>
-<item><title>《侏罗纪世界：进化 3》放弃使用生成式 AI - Solidot</title><link>https://www.solidot.org/story?sid=81645</link></item>
-<item><title>Matching potential partners based on browser history - FlowingData</title><link>https://flowingdata.com/2025/06/26/matching-potential-partners-based-on-browser-history/</link></item>
-<item><title>Visualization Tools and Learning Resources, June 2025 Roundup - FlowingData</title><link>https://flowingdata.com/2025/06/26/process-343-roundup/</link></item>
-<item><title>Navy budget seeks to boost modernization of fleet, shipyards - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2025/06/26/navy-budget-seeks-to-boost-modernization-of-fleet-shipyards/</link></item>
-<item><title>Pentagon to request $848 billion in delayed base budget release - Defense News</title><link>https://www.defensenews.com/pentagon/2025/06/26/pentagon-to-request-848-billion-in-delayed-base-budget-release/</link></item>
-<item><title>Iran’s supreme leader resurfaces to warn against future US attacks - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2025/06/26/irans-supreme-leader-resurfaces-to-warn-against-future-us-attacks/</link></item>
-<item><title>Hegseth defends Iran strike after initial report doubted its effect - Defense News</title><link>https://www.defensenews.com/pentagon/2025/06/26/hegseth-defends-iran-strike-after-initial-report-doubted-its-effect/</link></item>
-<item><title>Split to win: Why the Air Force must become 4 services - Defense News</title><link>https://www.defensenews.com/opinion/2025/06/26/split-to-win-why-the-air-force-must-become-4-services/</link></item>
-<item><title>Italian navy taps Fincantieri to top up patrol fleet with two ships - Defense News</title><link>https://www.defensenews.com/global/europe/2025/06/26/italian-navy-taps-fincantieri-to-top-up-patrol-fleet-with-two-ships/</link></item>
-<item><title>Germany plans to double its defense spending within five years - Defense News</title><link>https://www.defensenews.com/global/europe/2025/06/26/germany-plans-to-double-its-defense-spending-within-five-years/</link></item>
-<item><title>The State Names That Are Hardest to Pronounce, Mapped - Mental Floss</title><link>https://www.mentalfloss.com/geography/maps/state-names-hardest-to-pronounce-and-spell-maps</link></item>
-<item><title>Definition Detective Quiz #43 - Mental Floss</title><link>https://www.mentalfloss.com/quizzes/definition-detective-quiz-43</link></item>
-<item><title>What&amp;#39;s the Smartest Cat Breed? Comparing 8 Clever Contenders - HowStuffWorks</title><link>https://animals.howstuffworks.com/pets/smartest-cat-breed.htm</link></item>
-<item><title>Axolotl Diet: What Do Captive Axolotls Eat? - HowStuffWorks</title><link>https://animals.howstuffworks.com/pets/otherpets/axolotl-diet.htm</link></item>
-<item><title>15 Blue Gemstones: Moonstone, Blue Lace Agate, and Beyond - HowStuffWorks</title><link>https://science.howstuffworks.com/environmental/earth/geology/blue-gemstones.htm</link></item>
-<item><title>Youngest Self-made Billionaire and 3 Exceptional Runners-up - HowStuffWorks</title><link>https://money.howstuffworks.com/youngest-self-made-billionaire.htm</link></item>
-<item><title>Black Vulture vs. Turkey Vulture: Seeing vs. Smelling Differences - HowStuffWorks</title><link>https://animals.howstuffworks.com/birds/black-vulture-vs-turkey-vulture.htm</link></item>
-<item><title>Uber In Talks With Founder Travis Kalanick To Fund Self-Driving Car Deal - Slashdot</title><link>https://tech.slashdot.org/story/25/06/26/2059214/uber-in-talks-with-founder-travis-kalanick-to-fund-self-driving-car-deal</link></item>
-<item><title>As AI Kills Search Traffic, Google Launches Offerwall To Boost Publisher Revenue - Slashdot</title><link>https://tech.slashdot.org/story/25/06/26/2046234/as-ai-kills-search-traffic-google-launches-offerwall-to-boost-publisher-revenue</link></item>
-<item><title>killing traffic to publishers - Slashdot</title><link>https://tech.slashdot.org/story/25/06/10/2126217/news-sites-are-getting-crushed-by-googles-new-ai-tools</link></item>
-<item><title>Blender 5.0 Introducing HDR Support On Linux With Vulkan + Wayland - Slashdot</title><link>https://linux.slashdot.org/story/25/06/26/2035245/blender-50-introducing-hdr-support-on-linux-with-vulkan--wayland</link></item>
-<item><title>YouTube Search Gets Its Own Version of Google&amp;#39;s AI Overviews - Slashdot</title><link>https://news.slashdot.org/story/25/06/26/2031231/youtube-search-gets-its-own-version-of-googles-ai-overviews</link></item>
-<item><title>VMware Perpetual License Holder Receives Audit Letter From Broadcom - Slashdot</title><link>https://tech.slashdot.org/story/25/06/26/2025246/vmware-perpetual-license-holder-receives-audit-letter-from-broadcom</link></item>
-<item><title>Apple To Open App Store To Competitors in EU As It Seeks To Avoid Fines - Slashdot</title><link>https://apple.slashdot.org/story/25/06/26/1910220/apple-to-open-app-store-to-competitors-in-eu-as-it-seeks-to-avoid-fines</link></item>
-<item><title>Sony Won&amp;#39;t Budge on PlayStation Plus Day-One Releases For First-Party Games - Slashdot</title><link>https://games.slashdot.org/story/25/06/26/192220/sony-wont-budge-on-playstation-plus-day-one-releases-for-first-party-games</link></item>
-<item><title>Windows is Getting Rid of the Blue Screen of Death After 40 Years - Slashdot</title><link>https://tech.slashdot.org/story/25/06/26/1737218/windows-is-getting-rid-of-the-blue-screen-of-death-after-40-years</link></item>
-<item><title>Malaysia Will Stop Accepting US Plastic Waste - Slashdot</title><link>https://news.slashdot.org/story/25/06/26/1726216/malaysia-will-stop-accepting-us-plastic-waste</link></item>
-<item><title>Microsoft Moves Antivirus Software Out of Windows Kernel To Prevent CrowdStrike-Style Crashes - Slashdot</title><link>https://tech.slashdot.org/story/25/06/26/1650259/microsoft-moves-antivirus-software-out-of-windows-kernel-to-prevent-crowdstrike-style-crashes</link></item>
-<item><title>crashed 8.5 million Windows-based machines worldwide - Slashdot</title><link>https://it.slashdot.org/story/24/07/19/0943232/global-it-outage-linked-to-crowdstrike-update-disrupts-businesses</link></item>
-<item><title>Who Needs Accenture in the Age of AI? - Slashdot</title><link>https://slashdot.org/story/25/06/26/165227/who-needs-accenture-in-the-age-of-ai</link></item>
-<item><title>Study Finds LLM Users Have Weaker Understanding After Research - Slashdot</title><link>https://slashdot.org/story/25/06/26/1526210/study-finds-llm-users-have-weaker-understanding-after-research</link></item>
-<item><title>CareerBuilder + Monster, Which Once Dominated Online Job Boards, File For Bankruptcy - Slashdot</title><link>https://slashdot.org/story/25/06/26/1356207/careerbuilder--monster-which-once-dominated-online-job-boards-file-for-bankruptcy</link></item>
-<item><title>Salesforce CEO Says 30% of Internal Work Is Being Handled by AI - Slashdot</title><link>https://slashdot.org/story/25/06/26/1316242/salesforce-ceo-says-30-of-internal-work-is-being-handled-by-ai</link></item>
-<item><title>Fannie Mae, Freddie Mac Ordered To Consider Crypto As an Asset When Buying Mortgages - Slashdot</title><link>https://slashdot.org/story/25/06/26/0048249/fannie-mae-freddie-mac-ordered-to-consider-crypto-as-an-asset-when-buying-mortgages</link></item>
-<item><title>Huawei Chair Says the Future of Comms Is Fiber-To-The-Room - Slashdot</title><link>https://slashdot.org/story/25/06/24/2224236/huawei-chair-says-the-future-of-comms-is-fiber-to-the-room?sbsrc=md</link></item>
-<item><title>Australia Regulator and YouTube Spar Over Under-16s Social Media Ban - Slashdot</title><link>https://news.slashdot.org/story/25/06/25/0146212/australia-regulator-and-youtube-spar-over-under-16s-social-media-ban</link></item>
-<item><title>The Promise of Modern Architecture - Law &amp; Liberty</title><link>https://lawliberty.org/the-promise-of-modern-architecture/</link></item>
-<item><title>An Unstable Fusion - Law &amp; Liberty</title><link>https://lawliberty.org/an-unstable-fusion/</link></item>
-<item><title>And Just Like That… - Vulture</title><link>https://www.vulture.com/tv/and-just-like-that/</link></item>
-<item><title>The Phoenician Scheme - Vulture</title><link>https://www.vulture.com/tags/the-phoenician-scheme/</link></item>
-<item><title>Materialists - Vulture</title><link>https://www.vulture.com/tags/materialists/</link></item>
-<item><title>Love Island USA - Vulture</title><link>https://www.vulture.com/tv/love-island/</link></item>
-<item><title>The Elephant in the Bear - Vulture</title><link>https://www.vulture.com/article/the-bear-finale-recap-season-4-episode-10-goodbye.html</link></item>
-<item><title>Best New Chef - Vulture</title><link>https://www.vulture.com/article/the-bear-recap-season-4-episode-9-tonnato.html</link></item>
-<item><title>Leave It All on the Dance Floor - Vulture</title><link>https://www.vulture.com/article/the-bear-recap-season-4-episode-8-the-last-shift.html</link></item>
-<item><title>Tougher Than the Rest - Vulture</title><link>https://www.vulture.com/article/the-bear-recap-season-4-episode-7-bears.html</link></item>
-<item><title>Family Business - Vulture</title><link>https://www.vulture.com/article/the-bear-recap-season-4-episode-6-sophie.html</link></item>
-<item><title>Friendship Bracelets of Betrayal - Vulture</title><link>https://www.vulture.com/article/ironheart-recap-episode-3-we-in-danger-girl.html</link></item>
-<item><title>We Have the Beefs - Vulture</title><link>https://www.vulture.com/article/the-bear-season-4-episode-5-recap.html</link></item>
-<item><title>When You Need a Helping Hand - Vulture</title><link>https://www.vulture.com/article/the-bear-recap-season-4-episode-4-sydneys-helping-hand.html</link></item>
-<item><title>Science News - Popular Mechanics</title><link>https://www.popularmechanics.com/science/</link></item>
-<item><title>Pop Mech Exclusives - Popular Mechanics</title><link>https://www.popularmechanics.com/pop-mech-exclusives</link></item>
-<item><title>国产 AI 网页开发工具：豆包 AI 编程简单测评 - 阮一峰的网络日志</title><link>https://www.ruanyifeng.com/blog/2025/06/doubao-ai-coding.html</link></item>
-<item><title>科技爱好者周刊（第 353 期）：苹果的&amp;quot;液态玻璃&amp;quot;是为了 AR - 阮一峰的网络日志</title><link>https://www.ruanyifeng.com/blog/2025/06/weekly-issue-353.html</link></item>
-<item><title>Best Steam Summer Sale Deals - GameSpot</title><link>https://www.gamespot.com/gallery/best-steam-summer-sale-2025-game-deals/2900-6667/</link></item>
-<item><title>CoD Season 4 Reloaded Update - GameSpot</title><link>https://www.gamespot.com/gallery/cod-black-ops-6-and-warzone-season-4-reloaded-adds-beavis-and-butt-head-and-cel-shaded-maps/2900-6709/</link></item>
-<item><title>Death Stranding 2 Guides - GameSpot</title><link>https://www.gamespot.com/articles/death-stranding-2-guides-hub/1100-6532611/</link></item>
-<item><title>2025&amp;#39;s Best Games - GameSpot</title><link>https://www.gamespot.com/gallery/best-reviewed-games-2025/2900-6127/</link></item>
-<item><title>MindsEye Review - Not Like This - GameSpot</title><link>https://www.gamespot.com/reviews/mindseye-review/1900-6418374/</link></item>
-<item><title>The Alters Review - Seeing Double - GameSpot</title><link>https://www.gamespot.com/reviews/the-alters-review-seeing-double/1900-6418373/</link></item>
-<item><title>JDM: Japanese Drift Master Review - Spinning Out - GameSpot</title><link>https://www.gamespot.com/reviews/jdm-japanese-drift-master-review-spinning-out/1900-6418372/</link></item>
-<item><title>Mario Kart World Review - A Worthy Marquee Launch Game - GameSpot</title><link>https://www.gamespot.com/reviews/mario-kart-world-review/1900-6418371/</link></item>
-<item><title>Lies Of P: Overture Review - Puppet Prelude - GameSpot</title><link>https://www.gamespot.com/reviews/lies-of-p-overture-review-puppet-prelude/1900-6418370/</link></item>
-<item><title>To A T Review - A Sweet-Natured Fable Without Much To Do - GameSpot</title><link>https://www.gamespot.com/reviews/to-a-t-review/1900-6418369/</link></item>
-<item><title>Elden Ring Nightreign Review - Distilled Souls - GameSpot</title><link>https://www.gamespot.com/reviews/elden-ring-nightreign-review/1900-6418368/</link></item>
-<item><title>Deliver At All Costs Review - Drive On By This Courier Action Game - GameSpot</title><link>https://www.gamespot.com/reviews/deliver-at-all-costs-review-drive-on-by-this-courier-action-game/1900-6418366/</link></item>
-<item><title>TMNT: Tactical Takedown Review - A Bite-Sized Saturday Morning Romp - GameSpot</title><link>https://www.gamespot.com/reviews/tmnt-tactical-takedown-review-a-bite-sized-saturday-morning-romp/1900-6418365/</link></item>
-<item><title>Capcom Fighting Collection 2 Review - Completing The Set - GameSpot</title><link>https://www.gamespot.com/reviews/capcom-fighting-collection-2-review/1900-6418364/</link></item>
-<item><title>Old Skies Review - An Affecting Stroll Down Memory Lane - GameSpot</title><link>https://www.gamespot.com/reviews/old-skies-review-an-affecting-stroll-down-memory-lane/1900-6418363/</link></item>
-<item><title>Revenge Of The Savage Planet Review - A Goo(d) Time - GameSpot</title><link>https://www.gamespot.com/reviews/revenge-of-the-savage-planet-review/1900-6418362/</link></item>
-<item><title>Doom: The Dark Ages Review - The Old One - GameSpot</title><link>https://www.gamespot.com/reviews/doom-the-dark-ages-review/1900-6418361/</link></item>
-<item><title>Fatal Fury: City Of The Wolves Review - A New Mark - GameSpot</title><link>https://www.gamespot.com/reviews/fatal-fury-city-of-the-wolves-review/1900-6418357/</link></item>
-<item><title>Skin Deep Review - System Snark - GameSpot</title><link>https://www.gamespot.com/reviews/skin-deep-review/1900-6418360/</link></item>
-<item><title>Audio Switcher – 用快捷键切换音箱和耳机，11 年历史，支持 Windows 7～11 - 小众软件</title><link>https://www.appinn.com/audio-switcher/</link></item>
-<item><title>Gemini CLI 上线不到 1 小时就删除？谷歌发布了什么？ - 小众软件</title><link>https://www.appinn.com/gemini-cli-google-published-then-deleted/</link></item>
-<item><title>微软大反转！Windows 10 免费安全更新再送一年 - 小众软件</title><link>https://www.appinn.com/microsoft-windows10-free-esu-2026/</link></item>
-<item><title>macOS Tahoe 兼容性检测：这次又要“卡”掉多少老设备？ - 小众软件</title><link>https://www.appinn.com/macos-tahoe-compatibility/</link></item>
-<item><title>【限时免费】价值 89.9 美元的 DVD 转 MP4 神器＋AI 影片图片强化工具限时送 - 小众软件</title><link>https://www.appinn.com/winx-dvd-ripper-platinum-and-winxvideo-ai/</link></item>
-<item><title>时隔 14 个月，Listen1 竟然更新了！ - 小众软件</title><link>https://www.appinn.com/listen1/</link></item>
-<item><title>谷歌已开始测试在 Android 上安装 Chrome 扩展程序，但用起来一言难尽 - 小众软件</title><link>https://www.appinn.com/google-testing-chrome-extensions-android/</link></item>
-<item><title>Echo 回声 – 开源安卓应用，让手机 24 小时自动录音 - 小众软件</title><link>https://www.appinn.com/echo-auto-loop-recording-android/</link></item>
-<item><title>又是 Cyber​​news！鲜为人知的 160 亿条记录数据泄露事件，涉及苹果、Facebook、Google、GitHub、Telegram… - 小众软件</title><link>https://www.appinn.com/cybernews-16b-records-leak/</link></item>
-<item><title>安卓小红书开发者模式意外泄漏 - 小众软件</title><link>https://www.appinn.com/android-xiaohongshu-devmode-leak/</link></item>
-<item><title>618 大促！ 跨平台 Markdown 编辑器 Typora，买断仅需 80.1 元 - 小众软件</title><link>https://www.appinn.com/typora-markdown/</link></item>
-<item><title>网传微信将提供备份聊天记录到 U 盘功能 - 小众软件</title><link>https://www.appinn.com/wechat-chat-backup-to-usb/</link></item>
-<item><title>东北话编程：有人用东北话整了一套编程语言，东北人说看不懂！ - 小众软件</title><link>https://www.appinn.com/make-dongbei-great-again/</link></item>
-<item><title>和 Cloudflare 硬刚？阿里云国际发布免费、不限流量全球 CDN 产品：边缘安全加速 ESA - 小众软件</title><link>https://www.appinn.com/alibabacloud-esa/</link></item>
-<item><title>OpenList – 开源网盘聚合工具，支持文件管理、视频播放，从 AList 分叉而来 - 小众软件</title><link>https://www.appinn.com/openlist/</link></item>
-<item><title>《主题医院》精神续作《双点医院》本周在 Epic 商店限时免费 - 小众软件</title><link>https://www.appinn.com/two-point-hospital/</link></item>
-<item><title>西洋名画查询小助手：上万幅，可无水印下载 - 小众软件</title><link>https://www.appinn.com/western-aesthetic/</link></item>
-<item><title>A Tactile Dialogue with the Landscape: Pine Island Cottage by Bureau Tempo &amp; Thom Fougere - Yatzer</title><link>https://www.yatzer.com/pine-island-cottage-canada-bureau-tempo-thom-fougere</link></item>
-<item><title>A São Paulo Apartment by Arthur Casas is a Contemporary Ode to Brazilian Modernism - Yatzer</title><link>https://www.yatzer.com/sete-apartment-sao-paolo-brazil-studio-arthur-casas</link></item>
-<item><title>Desert Reveries in SoHo: Ember Studio Channels Amangiri’s Spirit in a Loft Renovation - Yatzer</title><link>https://www.yatzer.com/crosby-street-apartment-new-york-city-ember-studio</link></item>
-<item><title>Ramdane Touhami’s WSCS Concept Store in Tokyo is a Snapshot of his Creative Universe - Yatzer</title><link>https://www.yatzer.com/wscs-store-tokyo-japan-ramdane-touhami</link></item>
-<item><title>Tritium Winery by Francesc Rifé Studio: A Measured Balance of Heritage and Modernity - Yatzer</title><link>https://www.yatzer.com/tritium-winery-la-rioja-spain-francesc-rife-studio</link></item>
-<item><title>Woloshyn Bathhouse: A Moldovan Sanctuary Where Nature and Design Entwine - Yatzer</title><link>https://www.yatzer.com/woloshyn-bathhouse-lh47-arch-durlesti-moldova</link></item>
-<item><title>Luminous Nomads: The Most Beautiful Portable Lamps for Indoors &amp; Out - Yatzer</title><link>https://www.yatzer.com/the-most-beautiful-portable-lamps-for-indoor-and-outdoor</link></item>
-<item><title>Google Photos makes ‘Ask Photos’ faster and begins wider rollout - 9to5Google</title><link>https://9to5google.com/2025/06/26/ask-google-photos-faster/</link></item>
-<item><title>Galaxy Z Fold 7 and Flip 7 officially launch on July 9, reservations open with $50 credit [Video] - 9to5Google</title><link>https://9to5google.com/2025/06/23/samsung-galaxy-z-fold-7-flip-7-launch-date-reservations-open/</link></item>
-<item><title>Gemini Live starts rolling out the Google Keep integration - 9to5Google</title><link>https://9to5google.com/2025/06/25/gemini-live-google-keep/</link></item>
-<item><title>How’s your Pixel holding up in the heat? [Poll] - 9to5Google</title><link>https://9to5google.com/2025/06/26/google-pixel-heat/</link></item>
-<item><title>Google Docs for Android finally fixes the search-status bar bug - 9to5Google</title><link>https://9to5google.com/2025/06/26/google-docs-search-status-bar/</link></item>
-<item><title>Pixel Camera 9.9 rolls out built-in help page with Material 3 Expressive - 9to5Google</title><link>https://9to5google.com/2025/06/26/pixel-camera-9-9-help-page/</link></item>
-<item><title>Pixel Camera 9.9 - 9to5Google</title><link>https://9to5google.com/2025/06/23/pixel-camera-9-9-update/</link></item>
-<item><title>New Google app setting disables sharing link shortener on Android - 9to5Google</title><link>https://9to5google.com/2025/06/26/google-app-link-shortener/</link></item>
-<item><title>OnePlus Watch 3 - 9to5Google</title><link>https://9to5google.com/guides/oneplus-watch-3/</link></item>
-<item><title>OnePlus Watch 3 (43mm) will have a 1.32-inch display, weigh as much as a Pixel Watch - 9to5Google</title><link>https://9to5google.com/2025/06/26/oneplus-watch-3-43mm-display-size-weight/</link></item>
-<item><title>Swift, a coding language developed by Apple, is working to add Android support - 9to5Google</title><link>https://9to5google.com/2025/06/26/swift-coding-language-android-support/</link></item>
-<item><title>Google Pixel 7 - 9to5Google</title><link>https://9to5google.com/guides/google-pixel-7/</link></item>
-<item><title>Google banned from selling select Pixel phones in Japan, and it might not end there - 9to5Google</title><link>https://9to5google.com/2025/06/26/google-pixel-japan-sales-ban/</link></item>
-<item><title>Google announces ‘AI Ultra for Business’ subscription - 9to5Google</title><link>https://9to5google.com/2025/06/26/google-ai-ultra-business/</link></item>
-<item><title>consumer version - 9to5Google</title><link>https://9to5google.com/2025/05/27/google-ai-pro-ultra-features/</link></item>
-<item><title>Another alleged Nothing Phone (3) design leaks, but this one is probably real [Gallery] - 9to5Google</title><link>https://9to5google.com/2025/06/26/nothing-phone-3-design-leak/</link></item>
-<item><title>Google Search will let you personalize Top Stories with ‘Preferred’ news sources - 9to5Google</title><link>https://9to5google.com/2025/06/26/google-top-stories-preferred-sources/</link></item>
-<item><title>YouTube is testing full-screen AI overviews in video search results [Video] - 9to5Google</title><link>https://9to5google.com/2025/06/26/youtube-ai-search-results-test/</link></item>
-<item><title>Deals: Galaxy Watch 7 $184, Samsung Smart Monitor + $300 Amazon credit, Moto razr+ 2025 $200 off, more - 9to5Google</title><link>https://9to5google.com/2025/06/26/deals-galaxy-watch-7-amazon-credit-moto-razr-2025/</link></item>
-<item><title>Google Chrome will stop getting updates on older Android phones in August - 9to5Google</title><link>https://9to5google.com/2025/06/26/google-chrome-android-versions-no-longer-supported-2025/</link></item>
-<item><title>YouTube is enacting new live streaming age restrictions beginning next month - 9to5Google</title><link>https://9to5google.com/2025/06/26/youtube-is-enacting-new-live-streaming-age-restrictions-beginning-next-month/</link></item>
-<item><title>Will Sattelberg - 9to5Google</title><link>https://9to5google.com/author/willsattelberg/</link></item>
-<item><title>Nothing Phone (3) has a 50MP ‘periscope’ telephoto lens – here are the first samples [Gallery] - 9to5Google</title><link>https://9to5google.com/2025/06/26/nothing-phone-3-telephoto-camera-samples/</link></item>
-<item><title>Find My Device - 9to5Google</title><link>https://9to5google.com/guides/find-my-device/</link></item>
-<item><title>You can now easily buy just one Moto Tag, the only Find Hub tracker with UWB - 9to5Google</title><link>https://9to5google.com/2025/06/26/moto-tag-find-my-device-amazon/</link></item>
-<item><title>Some of our favorite Pixel Watch 3 accessories [Video] - 9to5Google</title><link>https://9to5google.com/2025/06/26/some-of-our-favorite-pixel-watch-3-accessories-video/</link></item>
-<item><title>Google Clock 7.14 rolls out: Material 3 toggle &amp; Pixel weather tweaks - 9to5Google</title><link>https://9to5google.com/2025/06/25/google-clock-7-14/</link></item>
-<item><title>last release in April - 9to5Google</title><link>https://9to5google.com/2025/04/28/google-clock-7-13/</link></item>
-<item><title>adding captions - 9to5Google</title><link>https://9to5google.com/2025/06/25/gemini-live-android-ios-captions/</link></item>
-<item><title>Google AI Pro now available as annual $200 subscription - 9to5Google</title><link>https://9to5google.com/2025/06/25/google-ai-pro-annual-subscription/</link></item>
-<item><title>Android 16 Beta - 9to5Google</title><link>https://9to5google.com/guides/android-16-beta/</link></item>
-<item><title>Android 16 QPR1 Beta 2.1 rolling out with Pixel bug fixes, June 2025 patch - 9to5Google</title><link>https://9to5google.com/2025/06/25/android-16-qpr1-beta-2-1-pixel/</link></item>
-<item><title>Google Pixel 10 - 9to5Google</title><link>https://9to5google.com/guides/google-pixel-10/</link></item>
-<item><title>Pixel 10 reportedly gets a battery boost and faster ‘Qi2 Wireless Charging’ - 9to5Google</title><link>https://9to5google.com/2025/06/25/pixel-10-battery-size-qi2-report/</link></item>
-<item><title>Comcast&amp;#39;s New Plans Dump the Data Caps - Slashdot</title><link>https://mobile.slashdot.org/story/25/06/26/2124252/comcasts-new-plans-dump-the-data-caps</link></item>
-<item><title>Micron 2600 SSD debuts with QLC NAND and Adaptive Write tech - NERDS.xyz</title><link>https://nerds.xyz/2025/06/micron-2600-ssd-debuts-with-qlc-nand-and-adaptive-write-tech/</link></item>
-<item><title>Acer Chromebook Plus buyers get free year of Google AI Pro with Gemini and Flow - NERDS.xyz</title><link>https://nerds.xyz/2025/06/acer-chromebook-plus-free-google-ai-pro-gemini/</link></item>
-<item><title>AI travel scams are fooling young people and costing Americans thousands according to McAfee - NERDS.xyz</title><link>https://nerds.xyz/2025/06/ai-travel-scams-are-fooling-young-people-and-costing-americans-thousands-according-to-mcafee/</link></item>
-<item><title>Dell Premium laptops launch with new name, new chips, and Windows 11 focus - NERDS.xyz</title><link>https://nerds.xyz/2025/06/dell-premium-laptops-launch-intel-ultra-windows-11/</link></item>
-<item><title>deepin 25 Linux release brings AI assistant, new desktop, and hardened system design - NERDS.xyz</title><link>https://nerds.xyz/2025/06/deepin-25-linux-launches-with-new-desktop-ai-and-linyaps/</link></item>
-<item><title>Logitech launches Streamlabs Sponsorships to help all Twitch streamers earn money from brands - NERDS.xyz</title><link>https://nerds.xyz/2025/06/logitech-streamlabs-sponsorships-helps-twitch-streamers-earn-money/</link></item>
-<item><title>TEAMGROUP launches APEX SD7.1 microSD Express Card with blazing 800MB/s speeds and 1TB capacity - NERDS.xyz</title><link>https://nerds.xyz/2025/06/teamgroup-launches-apex-sd7-1-microsd-express-card-with-blazing-800mb-s-speeds-and-1tb-capacity/</link></item>
-<item><title>AVerMedia launches CamStream 4K BU113G2 and StreamLine MINI+ GC311G2 HDMI capture devices - NERDS.xyz</title><link>https://nerds.xyz/2025/06/avermedia-launches-camstream-4k-bu113g2-and-streamline-mini-gc311g2-hdmi-capture-devices/</link></item>
-<item><title>University of Phoenix reveals surprising truth about the future of IT careers - NERDS.xyz</title><link>https://nerds.xyz/2025/06/university-of-phoenix-future-of-it-careers-2025/</link></item>
-<item><title>KnowBe4 and Microsoft join forces to take on modern email threats with smarter AI - NERDS.xyz</title><link>https://nerds.xyz/2025/06/knowbe4-and-microsoft-join-forces-to-take-on-modern-email-threats-with-smarter-ai/</link></item>
+<lastBuildDate>Sat, 28 Jun 2025 09:46:15 +0800</lastBuildDate>
+<item><title>16th century storehouse in Russia holds Ivan the Terrible&amp;#39;s military arsenal - The Vintage News</title><link>https://www.thevintagenews.com/2016/03/04/16th-century-storehouse-in-russia-holds-ivan-the-terribles-military-arsenal/</link></item>
+<item><title>27 Heartbreaking Photos that Sums Up the Racial Segregation Era in the United States - The Vintage News</title><link>https://www.thevintagenews.com/2015/06/05/27-heartbreaking-photos-that-sums-up-the-racial-segregation-era-in-the-united-states/</link></item>
+<item><title>Wife of sheriff Marcos Lopez hit with racketeering charge as $400K bond set - ReadWrite</title><link>https://readwrite.com/wife-sheriff-marcos-lopez-racketeering-charge-400k-bond/</link></item>
+<item><title>SWEEPSTAKES - ReadWrite</title><link>https://readwrite.com/sweepstakes/</link></item>
+<item><title>California revamped bill looks to kill off sweepstakes casinos - ReadWrite</title><link>https://readwrite.com/california-revamped-bill-looks-to-kill-off-sweepstakes-casinos/</link></item>
+<item><title>Australia’s Star casino shareholders agree on $195M rescue deal - ReadWrite</title><link>https://readwrite.com/australias-star-casino-shareholders-agree-on-195m-rescue-deal/</link></item>
+<item><title>Swedish Gambling Authority launches sweeping crackdown on lotteries and phone sales practices - ReadWrite</title><link>https://readwrite.com/swedish-gambling-authority-crackdown-lotteries/</link></item>
+<item><title>Researcher finds one in 19 non-profit domains are associated with gambling - ReadWrite</title><link>https://readwrite.com/researcher-finds-one-in-19-non-profit-domains-are-associated-with-gambling/</link></item>
+<item><title>Hacksaw AB gets $2.3 billion valuation as trading begins on Nasdaq Stockholm - ReadWrite</title><link>https://readwrite.com/hacksaw-ab-gets-2-3-billion-valuation-as-trading-begins-on-nasdaq-stockholm/</link></item>
+<item><title>WWE Night of Champions 2025 odds and analysis - ReadWrite</title><link>https://readwrite.com/wwe-night-of-champions-2025-odds-and-analysis/</link></item>
+<item><title>Polymarket still bets on Minecraft Movie beating Superman and Fantastic Four as biggest opening weekend - ReadWrite</title><link>https://readwrite.com/polymarket-still-bets-on-minecraft-movie-beating-superman-and-fantastic-four/</link></item>
+<item><title>Toronto-based casino faces massive $350,000 fine from regulator - ReadWrite</title><link>https://readwrite.com/toronto-based-casino-faces-massive-350000-fine-from-regulator/</link></item>
+<item><title>California Tribes rebuff sweepstakes industry in recent webinar - ReadWrite</title><link>https://readwrite.com/california-tribes-rebuff-sweepstakes-industry/</link></item>
+<item><title>Man accused of stealing $680,000 to pay gambling debt - ReadWrite</title><link>https://readwrite.com/man-accused-of-stealing-680000-to-pay-gambling-debt/</link></item>
+<item><title>Australia’s Free TV has gambling and alcohol advertising reform rejected - ReadWrite</title><link>https://readwrite.com/australias-free-tv-has-advertising-reform-rejected/</link></item>
+<item><title>MGM submits bid for New York commercial casino licence, as glitzy plans are unveiled - ReadWrite</title><link>https://readwrite.com/mgm-submits-bid-new-york-commercial-casino-licence/</link></item>
+<item><title>Sri Lanka approves the importation of casino machines - ReadWrite</title><link>https://readwrite.com/sri-lanka-approves-the-importation-of-casino-machines/</link></item>
+<item><title>NBA betting odds eye Miami Heat’s Bam Adebayo for trade to LA Lakers - ReadWrite</title><link>https://readwrite.com/nba-betting-odds-miami-heats-bam-adebayo-la-lakers/</link></item>
+<item><title>Brighton &amp; Hove Albion’s billionaire poker-playing owner invests in new soccer club - ReadWrite</title><link>https://readwrite.com/brighton-poker-playing-owner-invests-in-new-soccer-club/</link></item>
+<item><title>Texas based JokerStars catches poker cheating schemers red handed - ReadWrite</title><link>https://readwrite.com/texas-based-jokerstars-catches-poker-cheating-schemers-red-handed/</link></item>
+<item><title>Ex-NFL star Adrian Peterson goes viral for poker punch up - ReadWrite</title><link>https://readwrite.com/ex-nfl-star-adrian-peterson-goes-viral-for-poker-punch-up/</link></item>
+<item><title>&amp;#39;The Year of the EU Linux Desktop May Finally Arrive&amp;#39; - Slashdot</title><link>https://linux.slashdot.org/story/25/06/27/2326226/the-year-of-the-eu-linux-desktop-may-finally-arrive</link></item>
+<item><title>dropping Windows and Office - Slashdot</title><link>https://linux.slashdot.org/story/25/06/12/0335229/denmark-is-dumping-microsoft-office-and-windows-for-libreoffice-and-linux</link></item>
+<item><title>Cars&amp;#39; Forward Blind Zones Are Worse Now Than 25 Years Ago - Slashdot</title><link>https://tech.slashdot.org/story/25/06/27/233212/cars-forward-blind-zones-are-worse-now-than-25-years-ago</link></item>
+<item><title>Fed Chair Powell Says AI Is Coming For Your Job - Slashdot</title><link>https://news.slashdot.org/story/25/06/27/2044239/fed-chair-powell-says-ai-is-coming-for-your-job</link></item>
+<item><title>A Developer Built a Real-World Ad Blocker For Snap Spectacles - Slashdot</title><link>https://slashdot.org/story/25/06/27/2038221/a-developer-built-a-real-world-ad-blocker-for-snap-spectacles</link></item>
+<item><title>Snap Spectacles - Slashdot</title><link>https://tech.slashdot.org/story/24/09/17/232227/snaps-new-spectacles-inch-closer-to-compelling-ar</link></item>
+<item><title>Facebook Is Asking To Use Meta AI On Photos In Your Camera Roll You Haven&amp;#39;t Yet Shared - Slashdot</title><link>https://yro.slashdot.org/story/25/06/27/1954211/facebook-is-asking-to-use-meta-ai-on-photos-in-your-camera-roll-you-havent-yet-shared</link></item>
+<item><title>Renewables Soar, But Fossil Fuels Continue To Rise as Global Electricity Demand Hits Record Levels - Slashdot</title><link>https://news.slashdot.org/story/25/06/27/1956207/renewables-soar-but-fossil-fuels-continue-to-rise-as-global-electricity-demand-hits-record-levels</link></item>
+<item><title>DeepSeek Faces Ban From Apple, Google App Stores In Germany - Slashdot</title><link>https://apple.slashdot.org/story/25/06/27/1949207/deepseek-faces-ban-from-apple-google-app-stores-in-germany</link></item>
+<item><title>Canada&amp;#39;s Digital Services Tax To Stay In Place Despite G7 Deal - Slashdot</title><link>https://news.slashdot.org/story/25/06/27/1935258/canadas-digital-services-tax-to-stay-in-place-despite-g7-deal</link></item>
+<item><title>Android 16 Will Tell You When Fake Cell Towers Try To Track Your Phone - Slashdot</title><link>https://tech.slashdot.org/story/25/06/27/1737221/android-16-will-tell-you-when-fake-cell-towers-try-to-track-your-phone</link></item>
+<item><title>Supreme Court Rejects Challenge To FCC Broadband Subsidy Program - Slashdot</title><link>https://tech.slashdot.org/story/25/06/27/1718259/supreme-court-rejects-challenge-to-fcc-broadband-subsidy-program</link></item>
+<item><title>Brazil Supreme Court Rules Digital Platforms Are Liable For Users&amp;#39; Posts - Slashdot</title><link>https://tech.slashdot.org/story/25/06/27/0624226/brazil-supreme-court-rules-digital-platforms-are-liable-for-users-posts</link></item>
+<item><title>Zuckerberg&amp;#39;s Advocacy Group Warns US Families They Can&amp;#39;t Afford Immigration Policy Changes - Slashdot</title><link>https://news.slashdot.org/story/25/06/27/1322241/zuckerbergs-advocacy-group-warns-us-families-they-cant-afford-immigration-policy-changes</link></item>
+<item><title>Deeper Sleep Stages Boost Problem-Solving Insights, Study Finds - Slashdot</title><link>https://science.slashdot.org/story/25/06/27/0724231/deeper-sleep-stages-boost-problem-solving-insights-study-finds</link></item>
+<item><title>Starlink Helps Eight More Nations Pass 50% IPv6 Adoption - Slashdot</title><link>https://tech.slashdot.org/story/25/06/27/0637210/starlink-helps-eight-more-nations-pass-50-ipv6-adoption</link></item>
+<item><title>36% of Chinese Undergraduates Choose Engineering, Compared To 5% in US and UK - Slashdot</title><link>https://news.slashdot.org/story/25/06/27/1340213/36-of-chinese-undergraduates-choose-engineering-compared-to-5-in-us-and-uk</link></item>
+<item><title>New IQ Research Shows Why Smarter People Make Better Decisions - Slashdot</title><link>https://science.slashdot.org/story/25/06/26/2339259/new-iq-research-shows-why-smarter-people-make-better-decisions?sbsrc=md</link></item>
+<item><title>Swarms of Tiny Nose Robots Could Clear Infected Sinuses, Researchers Say - Slashdot</title><link>https://hardware.slashdot.org/story/25/06/25/218250/swarms-of-tiny-nose-robots-could-clear-infected-sinuses-researchers-say?sbsrc=md</link></item>
+<item><title>Brother Printer Bug In 689 Models Exposes Millions To Hacking - Slashdot</title><link>https://hardware.slashdot.org/story/25/06/26/2351234/brother-printer-bug-in-689-models-exposes-millions-to-hacking</link></item>
+<item><title>Emigrating To a Freer Country? - Slashdot</title><link>https://ask.slashdot.org/story/09/06/27/0152216/emigrating-to-a-freer-country?sbsrc=thisday</link></item>
+<item><title>North Pole Ice On Track To Melt By September? - Slashdot</title><link>https://news.slashdot.org/story/08/06/27/1650207/north-pole-ice-on-track-to-melt-by-september?sbsrc=thisday</link></item>
+<item><title>Encrypted Ammunition? - Slashdot</title><link>https://slashdot.org/story/06/06/27/1544203/encrypted-ammunition?sbsrc=thisday</link></item>
+<item><title>Supreme Court Rules against Grokster - Slashdot</title><link>https://news.slashdot.org/story/05/06/27/155212/supreme-court-rules-against-grokster?sbsrc=thisday</link></item>
+<item><title>Fahrenheit 9/11 Discussion - Slashdot</title><link>https://news.slashdot.org/story/04/06/27/1315218/fahrenheit-911-discussion?sbsrc=thisday</link></item>
+<item><title>In a Baltimore Exhibition, the Transformative Potential of Today’s Griots Emerges - Colossal</title><link>https://www.thisiscolossal.com/2025/06/emergence-storytelling-exhibition/</link></item>
+<item><title>Chris Ware Illustrates a Postwoman’s Day to Celebrate 250 Years of USPS - Colossal</title><link>https://www.thisiscolossal.com/2025/06/chris-ware-usps-stamps/</link></item>
+<item><title>How Do Muppets Go Outside? Find Out How Kermit and Gang Took to the Real World - Colossal</title><link>https://www.thisiscolossal.com/2025/06/how-do-muppets-go-outside/</link></item>
+<item><title>Alicja Kwade Reflects the Warped Nature of Time and Reality in Poetic Installations - Colossal</title><link>https://www.thisiscolossal.com/2025/06/alicja-kwade-telos-tales/</link></item>
+<item><title>Explore Storytelling Through 300 Years of Quilts in ‘Fabric of a Nation’ - Colossal</title><link>https://www.thisiscolossal.com/2025/06/fabric-of-a-nation/</link></item>
+<item><title>See the First Images of Our Solar System Taken by the World’s Biggest Digital Camera - Colossal</title><link>https://www.thisiscolossal.com/2025/06/vera-c-rubin-observatory-first-photos/</link></item>
+<item><title>Ireland’s Oldest and Largest Medieval Book Shrine Goes on Public View for the First Time - Colossal</title><link>https://www.thisiscolossal.com/2025/06/lough-kinale-book-shrine/</link></item>
+<item><title>Wardrobe Snacks: Thoughtfully Composed Outfits that Perfectly Match Different Foods - Colossal</title><link>https://www.thisiscolossal.com/2017/04/wardrobe-snacks/</link></item>
+<item><title>Ultra-Practical Purses and Homewares by Nikolas Bentel Have Exactly One Ridiculous Job - Colossal</title><link>https://www.thisiscolossal.com/2023/10/nikolas-bentel-accessories/</link></item>
+<item><title>Tools, Snacks, and Other Household Goods Become Clever Wearables by Nicole McLaughlin - Colossal</title><link>https://www.thisiscolossal.com/2022/02/nicole-mclaughlin-clever-apparel/</link></item>
+<item><title>Ippei Tsujio’s Fresh Batch of Wrapping Paper Transforms Gifts Into Perfectly Baked Loaves - Colossal</title><link>https://www.thisiscolossal.com/2025/06/ippei-tsujio-bread-paper/</link></item>
+<item><title>Wandering Minds Reach the Bounds of Post-Its in Aron Wiesenfeld’s ‘Playtime’ - Colossal</title><link>https://www.thisiscolossal.com/2025/06/aron-wiesenfeld-playtime/</link></item>
+<item><title>Roméo Mivekannin’s Cage-Like Sculptures of Museums Reframe the Colonial Past - Colossal</title><link>https://www.thisiscolossal.com/2025/06/romeo-mivekannin-atlas/</link></item>
+<item><title>London’s Largest Ancient Roman Fresco Makes for the ‘World’s Most Difficult Jigsaw Puzzle’ - Colossal</title><link>https://www.thisiscolossal.com/2025/06/mola-liberty-roman-fresco/</link></item>
+<item><title>In ‘Big Bad Wolf,’ Sculptor Kendra Haste Contends with Conservation and Rewilding - Colossal</title><link>https://www.thisiscolossal.com/2025/06/kendra-haste-big-bad-wolf/</link></item>
+<item><title>Greg Corbino’s Fish Puppets Made from Reclaimed Trash Migrate Along the Hudson River - Colossal</title><link>https://www.thisiscolossal.com/2025/06/greg-corbino-murmurations-riverkeeper/</link></item>
+<item><title>Lucy Davidson’s Stop-Motion Animation ‘Baggage’ Travels Through an ‘Insecurity Inspection’ - Colossal</title><link>https://www.thisiscolossal.com/2025/06/lucy-davidson-baggage/</link></item>
+<item><title>Seth Armstrong Sets the Hills of Los Angeles Aglow in Vibrant Oil Paintings - Colossal</title><link>https://www.thisiscolossal.com/2025/06/seth-armstrong-los-angeles-paintings/</link></item>
+<item><title>African Mythology and Ancestry Merge in Zak Ové’s Exuberant Sculptures - Colossal</title><link>https://www.thisiscolossal.com/2025/06/zak-ove-sculptures/</link></item>
+<item><title>Sculptural Embroideries on Wood by Nosheen Iqbal Translate Architectural Motifs into Thread - Colossal</title><link>https://www.thisiscolossal.com/2025/06/nosheen-iqbal-wood-embroidery/</link></item>
+<item><title>US Air Force to retire all A-10s, cancel E-7 under 2026 spending plan - Defense News</title><link>https://www.defensenews.com/air/2025/06/27/us-air-force-to-retire-all-a-10s-cancel-e-7-under-2026-spending-plan/</link></item>
+<item><title>Space Force rethinking plans for proliferated satellite communications - Defense News</title><link>https://www.defensenews.com/space/2025/06/27/space-force-rethinking-plans-for-proliferated-satellite-communications/</link></item>
+<item><title>US Army tailoring Pacific commands for Multi-Domain force - Defense News</title><link>https://www.defensenews.com/land/2025/06/27/us-army-tailoring-pacific-commands-for-multi-domain-force/</link></item>
+<item><title>French military plants seed money to ‘master’ near-space operations - Defense News</title><link>https://www.defensenews.com/global/europe/2025/06/27/french-military-plants-seed-money-to-master-near-space-operations/</link></item>
+<item><title>Interview: Safran defense boss on the changing battlefield and AI - Defense News</title><link>https://www.defensenews.com/global/europe/2025/06/27/interview-safran-defense-boss-on-the-changing-battlefield-and-ai/</link></item>
+<item><title>Army seeks $197 billion FY26 budget with transformation plan at center - Defense News</title><link>https://www.defensenews.com/land/2025/06/27/army-seeks-197-billion-fy26-budget-with-transformation-plan-at-center/</link></item>
+<item><title>Anthropic chucks chump change at studies on job-killing tech - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/27/anthropic_job_killing_tech_study/</link></item>
+<item><title>Crims are posing as insurance companies to steal health records and payment info - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/27/patients_providers_records_payment_scam/</link></item>
+<item><title>Supremes uphold Texas law that forces age-check before viewing adult material - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/27/supreme_court_texas_smut/</link></item>
+<item><title>How Broadcom is quietly plotting a takeover of the AI infrastructure market - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/27/broadcom_ai_ip/</link></item>
+<item><title>Uncle Sam wants you – to use memory-safe programming languages - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/27/cisa_nsa_call_formemory_safe_languages/</link></item>
+<item><title>Fed chair Powell says AI is coming for your job - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/27/powell_ai_coming_for_your_job/</link></item>
+<item><title>Palantir jumps aboard tech-nuclear bandwagon with software deal - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/27/palantir_joins_tech_nuclear_bandwagon/</link></item>
+<item><title>Mars Reconnaissance Orbiter learns new trick at the age of 19: ‘very large rolls’ - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/27/mars_reconnaissance_orbiter_new_trick/</link></item>
+<item><title>Cisco punts network-security integration as key for agentic AI - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/27/cisco_punts_networksecurity_integration/</link></item>
+<item><title>Aloha, you’ve been pwned: Hawaiian Airlines discloses ‘cybersecurity event’ - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/27/aloha_youve_been_pwned_hawaiian/</link></item>
+<item><title>US Department of Defense will stop sending critical hurricane satellite data - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/27/us_hurricane_satellite_data_to_stop/</link></item>
+<item><title>So you CAN turn an entire car into a video game controller - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/27/renault_clio_racing_controller/</link></item>
+<item><title>Before the megabit: A trip through vintage datacenter networking - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/27/vintage_datacenter_networking/</link></item>
+<item><title>Data spill in aisle 5: Grocery giant Ahold Delhaize says 2.2M affected after cyberattack - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/27/ahold_delhaize_breach/</link></item>
+<item><title>There&amp;#39;s no international protocol on what to do if an asteroid strikes Earth - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/27/mps_space_asteroid_strike/</link></item>
+<item><title>The network is indeed trying to become the computer - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/27/analysis_network_computing/</link></item>
+<item><title>The year of the European Union Linux desktop may finally arrive - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/27/the_european_union_linux_desktop/</link></item>
+<item><title>Fresh UK postcode tool points out best mobile network in your area - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/27/ofcoms_postcode_checker_points_out/</link></item>
+<item><title>Don&amp;#39;t shoot me, I&amp;#39;m only the system administrator! - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/27/on_call/</link></item>
+<item><title>HPE customers on agentic AI: No, you go first - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/27/hpe_agentic_ai_customer_skepticism/</link></item>
+<item><title>Starlink helps eight more nations pass 50 percent IPv6 adoption - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/27/ipv6_adoption_statistics/</link></item>
+<item><title>Australia not banning kids from YouTube – they’ll just have to use mum and dad’s logins - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/27/australia_social_media_regulation/</link></item>
+<item><title>More trouble for authors as Meta wins Llama drama AI scraping case - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/27/meta_llama_author_lawsuit/</link></item>
+<item><title>Members of Abu Shabab have taken control of Nasser Hospital in Khan Yunis - The Jerusalem Post</title><link>https://www.jpost.com/middle-east/article-859262</link></item>
+<item><title>Trump responds to Khamenei&amp;#39;s victory speech: &amp;#39;I saved him from a very ugly, ignominious death&amp;#39; - The Jerusalem Post</title><link>https://www.jpost.com/middle-east/iran-news/article-859257</link></item>
+<item><title>US Senate blocks plans to restrict Trump&amp;#39;s ability to bomb Iran again if necessary - The Jerusalem Post</title><link>https://www.jpost.com/american-politics/article-859251</link></item>
+<item><title>Post-war Iran nuke threat: Why Iran is a couple years from a bomb despite critiques - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/article-859173</link></item>
+<item><title>After damages from Iran attacks, Israel&amp;#39;s small businesses are stuck in Tax Authority limbo - The Jerusalem Post</title><link>https://www.jpost.com/business-and-innovation/all-news/article-859004</link></item>
+<item><title>Israeli official to discuss Iran, Gaza in Monday visit to White House - The Jerusalem Post</title><link>https://www.jpost.com/american-politics/article-859256</link></item>
+<item><title>‘If we fail again, we normalize proliferation’: Expert warns of nuclear domino effect - The Jerusalem Post</title><link>https://www.jpost.com/middle-east/iran-news/article-859164</link></item>
+<item><title>World Bank approves $250 million for Lebanon to launch a broader $1 billion recovery - The Jerusalem Post</title><link>https://www.jpost.com/middle-east/article-859069</link></item>
+<item><title>El Al resumes ticket sales to and from Israel following 12 day Iran war - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/article-859039</link></item>
+<item><title>Argentine judge orders AMIA bombing suspects tried in absentia - The Jerusalem Post</title><link>https://www.jpost.com/international/islamic-terrorism/article-859218</link></item>
+<item><title>Israel paves a path, the diaspora should follow - The Jerusalem Post</title><link>https://www.jpost.com/opinion/article-858969</link></item>
+<item><title>China&amp;#39;s Iran oil imports surge in June on rising shipments, teapot demand - The Jerusalem Post</title><link>https://www.jpost.com/international/article-859242</link></item>
+<item><title>Ireland becomes first European country to introduce ban on trade, imports from Israeli settlements - The Jerusalem Post</title><link>https://www.jpost.com/diaspora/antisemitism/article-859160</link></item>
+<item><title>Wildfires and wars: Search and Rescue Brigade revolutionize Israel&amp;#39;s emergency response - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/article-857523</link></item>
+<item><title>Israel under fire: English-language resources for state of emergency - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/article-857905</link></item>
+<item><title>A warzone welcome for olah who arrived hours ahead of Iran attack - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/article-858615</link></item>
+<item><title>Reichman’s journey: Building a global academic home for the Jewish people - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/article-858310</link></item>
+<item><title>Miami to Tel Aviv: Rafi Horwitz’s journey of faith, volunteering, and discovery - The Jerusalem Post</title><link>https://www.jpost.com/aliyah/article-858338</link></item>
+<item><title>The municipality steps up: 108 families in the center to move into their new, reinforced apartments - The Jerusalem Post</title><link>https://www.jpost.com/business-and-innovation/real-estate/article-858319</link></item>
+<item><title>NYC Mayor Eric Adams, Israeli Economics Minister Nir Barkat sign economic partnership - The Jerusalem Post</title><link>https://www.jpost.com/conferences/article-854637</link></item>
+<item><title>ANeustart wins Next-Gen Women entrepreneurship award at Jerusalem Post Women Leaders Summit - The Jerusalem Post</title><link>https://www.jpost.com/conferences/article-850189</link></item>
+<item><title>Meet the medic who understood on Oct. 7 she must do everything to save a child - The Jerusalem Post</title><link>https://www.jpost.com/mdaheroes/article-826327</link></item>
+<item><title>MDA hero: We’re here for each and every person who is sick or injured - The Jerusalem Post</title><link>https://www.jpost.com/mdaheroes/article-827073</link></item>
+<item><title>Dodging missiles and sleeping in shelters: How are Israelis impacted by Iran strikes? - The Jerusalem Post</title><link>https://www.jpost.com/podcast/article-857805</link></item>
+<item><title>&amp;#39;We&amp;#39;re all settlers anywhere we live in Israel&amp;#39;: Jewish West Bank residents tell all - The Jerusalem Post</title><link>https://www.jpost.com/podcast/jpost-podcast/article-857097</link></item>
+<item><title>&amp;#39;Promise made, promise kept&amp;#39;: Huckabee praises Trump, Netanyahu&amp;#39;s bold leadership in action - The Jerusalem Post</title><link>https://www.jpost.com/opinion/article-859187</link></item>
+<item><title>Majority of Republicans support US joining Israel-Iran conflict while Democrats oppose - The Jerusalem Post</title><link>https://www.jpost.com/diaspora/article-859050</link></item>
+<item><title>Jewish New Yorkers respond to Zohran Mamdani’s win in the NYC mayoral democratic primary - The Jerusalem Post</title><link>https://www.jpost.com/diaspora/article-859034</link></item>
+<item><title>&amp;#39;Netanyahu&amp;#39;s declaration of war&amp;#39;: Mamdani fails to mention Hamas in Oct 7 statement - The Jerusalem Post</title><link>https://www.jpost.com/diaspora/antisemitism/article-859044</link></item>
+<item><title>Shabbat candle lighting times for Israel and US - The Jerusalem Post</title><link>https://www.jpost.com/judaism/article-859225</link></item>
+<item><title>Parashat Korah: ‘An elevated place in Gehenna’ - The Jerusalem Post</title><link>https://www.jpost.com/judaism/torah-portion/article-859005</link></item>
+<item><title>Israel condemns deadly Damascus church bombing, reaches out to Syria&amp;#39;s Christians - The Jerusalem Post</title><link>https://www.jpost.com/christianworld/article-858671</link></item>
+<item><title>Israeli Christian leaders condemn church suicide bombing, urge Syria to act against terror - The Jerusalem Post</title><link>https://www.jpost.com/christianworld/article-858630</link></item>
+<item><title>Wine Talk: A land of mountain vines, cats, and roses - The Jerusalem Post</title><link>https://www.jpost.com/food-recipes/article-857528</link></item>
+<item><title>What are the advantages of sprouted grain bread? - The Jerusalem Post</title><link>https://www.jpost.com/food-recipes/article-858223</link></item>
+<item><title>The Cyrus Cylinder: Archaeological treasure that connects Ancient Persia and the Jewish people - The Jerusalem Post</title><link>https://www.jpost.com/archaeology/article-858869</link></item>
+<item><title>2,000-year-old ‘Freedom of Zion’ coin unearthed in Jerusalem stuns Milei - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/article-857554</link></item>
+<item><title>Israel’s MKNL Technology is solving keyboard language disruptions through a color-coded solution - The Jerusalem Post</title><link>https://www.jpost.com/business-and-innovation/article-858719</link></item>
+<item><title>Step by step: How to build a nuclear bomb - The Jerusalem Post</title><link>https://www.jpost.com/middle-east/iran-news/article-858207</link></item>
+<item><title>My Word: Arik Einstein’s songs and the Iran war - The Jerusalem Post</title><link>https://www.jpost.com/opinion/article-859204</link></item>
+<item><title>&amp;#39;Hooligans,&amp;#39; &amp;#39;The Bear,&amp;#39; &amp;#39;Snow White&amp;#39;: What to watch in (or out of) the shelter - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/culture/article-858848</link></item>
+<item><title>This week in Jewish history: Altalena, sin of the spies, Jews expelled from France - The Jerusalem Post</title><link>https://www.jpost.com/history/article-858272</link></item>
+<item><title>&amp;#39;The Most American King&amp;#39;: Journalist Aaron Magid details Jordan&amp;#39;s King Abdullah rise to power - The Jerusalem Post</title><link>https://www.jpost.com/middle-east/article-857543</link></item>
+<item><title>American Vogue&amp;#39;s top job opens for first time in 37 years as Wintour shifts focus - The Jerusalem Post</title><link>https://www.jpost.com/j-spot/article-859207</link></item>
+<item><title>Ethiopian families, women locked out of public shelter declared ‘men only’ by extremists - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/defense-news/article-859045</link></item>
+<item><title>I Have Tested 20 Resume Writing Services - This Is The Best One - The Jerusalem Post</title><link>https://www.jpost.com/consumerism/article-858046</link></item>
+<item><title>The Rise of Humanized AI: Impact on Businesses &amp; Writers - The Jerusalem Post</title><link>https://www.jpost.com/consumerism/article-857052</link></item>
+<item><title>Tuesday&amp;#39;s horoscope: Capricorn - Ability to empower and be empowered - The Jerusalem Post</title><link>https://www.jpost.com/astrology/article-842625</link></item>
+<item><title>Daily horoscope for Sunday: Virgo – Try not to make rash decisions - The Jerusalem Post</title><link>https://www.jpost.com/astrology/article-842273</link></item>
+<item><title>How long do dental implants take in Istanbul, Turkey? - The Jerusalem Post</title><link>https://www.jpost.com/consumerism/article-857918</link></item>
+<item><title>Breaking down barriers, deepening connections: American innovation conference debuts in Tel Aviv - The Jerusalem Post</title><link>https://www.jpost.com/consumerism/article-856203</link></item>
+<item><title>The beat of goombay - Aeon</title><link>https://aeon.co/essays/out-of-africa-and-back-the-journey-of-goombay-is-a-path-home?utm_source=rss-feed</link></item>
+<item><title>Garena Free Fire Max Redeem Codes for June 27 - Fossbytes</title><link>https://fossbytes.com/garena-free-fire-max-redeem-codes-for-june-27/</link></item>
+<item><title>How To Pair &amp; Reset Your Fire TV Stick Remote? - Fossbytes</title><link>https://fossbytes.com/how-to-pair-reset-your-fire-tv-stick-remote/</link></item>
+<item><title>How To Cancel Fortnite Crew Subscription: PC, PS5, XBOX, &amp; More - Fossbytes</title><link>https://fossbytes.com/how-to-cancel-fortnite-crew-subscription-pc-ps5-xbox-more/</link></item>
+<item><title>Garena Free Fire Max Redeem Codes for June 26 - Fossbytes</title><link>https://fossbytes.com/garena-free-fire-max-redeem-codes-for-june-26/</link></item>
+<item><title>Vivo T4 Lite With 90Hz Display, 6000mAh Battery Launched In India At ₹9,999 - Fossbytes</title><link>https://fossbytes.com/vivo-t4-lite-with-90hz-display-6000mah-battery-launched-in-india-at-%e2%82%b99999/</link></item>
+<item><title>OnePlus Bullets Wireless Z3 Review: High on Bass, Low on Price - Fossbytes</title><link>https://fossbytes.com/oneplus-bullets-wireless-z3-review-high-on-bass-low-on-price/</link></item>
+<item><title>Asus ROG Strix G16 Review: Power Packed Performance - Fossbytes</title><link>https://fossbytes.com/asus-rog-strix-g16-review-power-packed-performance/</link></item>
+<item><title>Asus Vivobook S14 OLED Review: A Real MacBook Alternative - Fossbytes</title><link>https://fossbytes.com/asus-vivobook-s14-oled-review-a-real-macbook-alternative/</link></item>
+<item><title>Asus Expertbook P1 Review: A Value for Money Business Laptop - Fossbytes</title><link>https://fossbytes.com/asus-expertbook-p1-review-a-value-for-money-business-laptop/</link></item>
+<item><title>Garena Free Fire Max Redeem Codes for June 25 - Fossbytes</title><link>https://fossbytes.com/garena-free-fire-max-redeem-codes-for-june-25/</link></item>
+<item><title>How To Download YouTube Videos to Flash Drive Easily &amp; Safely - Fossbytes</title><link>https://fossbytes.com/how-to-download-youtube-videos-to-flash-drive-easily-safely/</link></item>
+<item><title>Garena Free Fire Max Redeem Codes for June 24 - Fossbytes</title><link>https://fossbytes.com/garena-free-fire-max-redeem-codes-for-june-24/</link></item>
+<item><title>Garena Free Fire Max Redeem Codes for June 23 - Fossbytes</title><link>https://fossbytes.com/garena-free-fire-max-redeem-codes-for-june-23/</link></item>
+<item><title>Garena Free Fire Max Redeem Codes for June 22 - Fossbytes</title><link>https://fossbytes.com/garena-free-fire-max-redeem-codes-for-june-22/</link></item>
+<item><title>Blox Fruits Codes (June 2025) - Fossbytes</title><link>https://fossbytes.com/blox-fruits-codes/</link></item>
+<item><title>Free Monopoly Go Dice Links (June 2025) - Fossbytes</title><link>https://fossbytes.com/free-monopoly-go-dice-links/</link></item>
+<item><title>数字主权始于桌面：欧洲 Linux 桌面时代有望到来 - Solidot</title><link>https://www.solidot.org/story?sid=81668</link></item>
+<item><title>AMD 成为 Debian 开发者大会的白金赞助商 - Solidot</title><link>https://www.solidot.org/story?sid=81667</link></item>
+<item><title>丹麦以赋权公民的方式打击深度伪造 - Solidot</title><link>https://www.solidot.org/story?sid=81666</link></item>
+<item><title>当美国人遇到新闻付费墙很少有人愿意付费 - Solidot</title><link>https://www.solidot.org/story?sid=81665</link></item>
+<item><title>研究发现大模型用户理解能力较弱 - Solidot</title><link>https://www.solidot.org/story?sid=81664</link></item>
+<item><title>微软正将杀毒软件移出 Windows 内核 - Solidot</title><link>https://www.solidot.org/story?sid=81663</link></item>
+<item><title>Google DeepMind 发布 AlphaGenome - Solidot</title><link>https://www.solidot.org/story?sid=81662</link></item>
+<item><title>美国计算机科学专业入学人数出现下降趋势 - Solidot</title><link>https://www.solidot.org/story?sid=81661</link></item>
+<item><title>美国 K-12 教师将 AI 用于备课和评分 - Solidot</title><link>https://www.solidot.org/story?sid=81660</link></item>
+<item><title>Fairphone 6 发布 - Solidot</title><link>https://www.solidot.org/story?sid=81659</link></item>
+<item><title>Rebellion to supply software for Navy’s secretive Project Overmatch - Defense News</title><link>https://www.defensenews.com/industry/2024/02/12/rebellion-to-supply-software-for-navys-secretive-project-overmatch/</link></item>
+<item><title>Poland’s new government eyes role as EU-Ukraine middleman - Defense News</title><link>https://www.defensenews.com/global/europe/2024/02/12/polands-new-government-eyes-role-as-eu-ukraine-middleman/</link></item>
+<item><title>Biden doesn’t plan to stop Israel aid after human rights order - Defense News</title><link>https://www.defensenews.com/congress/2024/02/09/biden-doesnt-plan-to-stop-israel-aid-after-human-rights-order/</link></item>
+<item><title>Space Force may launch GPS demonstration satellites to test new tech - Defense News</title><link>https://www.defensenews.com/battlefield-tech/space/2024/02/09/space-force-may-launch-gps-demonstration-satellites-to-test-new-tech/</link></item>
+<item><title>CENTCOM’s ‘Sandtrap’ hackathon targets drones amid Middle East barrage - Defense News</title><link>https://www.defensenews.com/battlefield-tech/it-networks/2024/02/09/centcoms-sandtrap-hackathon-targets-drones-amid-middle-east-barrage/</link></item>
+<item><title>Saab, Kongsberg post record orders as Europe boosts defense spending - Defense News</title><link>https://www.defensenews.com/industry/2024/02/09/saab-kongsberg-post-record-orders-as-europe-boosts-defense-spending/</link></item>
+<item><title>F-35 engine review pushed back months as government takes closer look - Defense News</title><link>https://www.defensenews.com/industry/techwatch/2024/02/09/f-35-engine-review-pushed-back-months-as-government-takes-closer-look/</link></item>
+<item><title>Chinese tech company threatens to sue US over claim of military links - Defense News</title><link>https://www.defensenews.com/industry/2024/02/09/chinese-tech-company-threatens-to-sue-us-over-claim-of-military-links/</link></item>
+<item><title>Ukraine’s new army chief reveals top priorities - Defense News</title><link>https://www.defensenews.com/global/europe/2024/02/09/ukraines-new-army-chief-reveals-top-priorities/</link></item>
+<item><title>Odin’s Eye to expand EU space-based, missile-warning system - Defense News</title><link>https://www.defensenews.com/global/europe/2024/02/09/odins-eye-to-expand-eu-space-based-missile-warning-system/</link></item>
+<item><title>Illustrated fears about AI-generated art - FlowingData</title><link>https://flowingdata.com/2025/06/27/illustrated-fears-about-ai-generated-art/</link></item>
+<item><title>Harvard’s $2.6b of grants canceled by the government - FlowingData</title><link>https://flowingdata.com/2025/06/27/harvard-canceled-grants/</link></item>
+<item><title>Being Friends with That Guy - Law &amp; Liberty</title><link>https://lawliberty.org/being-friends-with-that-guy/</link></item>
+<item><title>In the Jaws of Human Nature - Law &amp; Liberty</title><link>https://lawliberty.org/in-the-jaws-of-human-nature/</link></item>
+<item><title>Background Jobs in a Loop in Bash - Baeldung</title><link>https://feeds.feedblitz.com/~/920673941/0/baeldung/linux~Background-Jobs-in-a-Loop-in-Bash</link></item>
+<item><title>Redirecting Standard Output in C With the dup2() Function - Baeldung</title><link>https://feeds.feedblitz.com/~/920203664/0/baeldung/linux~Redirecting-Standard-Output-in-C-With-the-dup-Function</link></item>
+<item><title>Linux Emergency Recovery With init=/bin/bash - Baeldung</title><link>https://feeds.feedblitz.com/~/920030138/0/baeldung/linux~Linux-Emergency-Recovery-With-initbinbash</link></item>
+<item><title>What Is SELinux? - Baeldung</title><link>https://feeds.feedblitz.com/~/919939004/0/baeldung/linux~What-Is-SELinux</link></item>
+<item><title>Resolving the Reverse Tunnel Remote port forwarding failed for listen port SSH Error - Baeldung</title><link>https://feeds.feedblitz.com/~/919939007/0/baeldung/linux~Resolving-the-Reverse-Tunnel-Remote-port-forwarding-failed-for-listen-port-SSH-Error</link></item>
+<item><title>EFF&amp;#39;s 35th Anniversary - Electronic Frontier Foundation</title><link>https://www.eff.org/35</link></item>
+<item><title>Today&amp;#39;s Supreme Court Decision on Age Verification Tramples Free Speech and Undermines Privacy - Electronic Frontier Foundation</title><link>https://www.eff.org/deeplinks/2025/06/todays-supreme-court-decision-age-verification-tramples-free-speech-and-undermines</link></item>
+<item><title>The NO FAKES Act Has Changed – and It’s So Much Worse - Electronic Frontier Foundation</title><link>https://www.eff.org/deeplinks/2025/06/no-fakes-act-has-changed-and-its-so-much-worse</link></item>
+<item><title>How Cops Can Get Your Private Online Data - Electronic Frontier Foundation</title><link>https://www.eff.org/deeplinks/2025/06/how-cops-can-get-your-private-online-data</link></item>
+<item><title>Flock Safety’s Feature Updates Cannot Make Automated License Plate Readers Safe - Electronic Frontier Foundation</title><link>https://www.eff.org/deeplinks/2025/06/flock-safetys-feature-updates-cannot-make-automated-license-plate-readers-safe</link></item>
+<item><title>Georgia Court Rules for Transparency over Private Police Foundation - Electronic Frontier Foundation</title><link>https://www.eff.org/deeplinks/2025/06/georgia-court-rules-transparency-over-private-police-foundation</link></item>
+<item><title>Two Courts Rule On Generative AI and Fair Use — One Gets It Right - Electronic Frontier Foundation</title><link>https://www.eff.org/deeplinks/2025/06/two-courts-rule-generative-ai-and-fair-use-one-gets-it-right</link></item>
+<item><title>shape the future - Electronic Frontier Foundation</title><link>https://www.eff.org/deeplinks/2025/02/copyright-and-ai-cases-and-consequences</link></item>
+<item><title>Ahead of Budapest Pride, EFF and 46 Organizations Call on European Commission to Defend Fundamental Rights in Hungary - Electronic Frontier Foundation</title><link>https://www.eff.org/deeplinks/2025/06/ahead-budapest-pride-eff-and-46-organizations-call-european-commission-defend</link></item>
+<item><title>California’s Corporate Cover-Up Act Is a Privacy Nightmare - Electronic Frontier Foundation</title><link>https://www.eff.org/deeplinks/2025/06/californias-corporate-cover-act-privacy-nightmare</link></item>
+<item><title>FBI Warning on IoT Devices: How to Tell If You Are Impacted - Electronic Frontier Foundation</title><link>https://www.eff.org/deeplinks/2025/06/fbi-warning-iot-devices-how-tell-if-you-are-impacted</link></item>
+<item><title>Why Are Hundreds of Data Brokers Not Registering with States? - Electronic Frontier Foundation</title><link>https://www.eff.org/deeplinks/2025/06/why-are-hundreds-data-brokers-not-registering-states</link></item>
+<item><title>Major Setback for Intermediary Liability in Brazil: Risks and Blind Spots - Electronic Frontier Foundation</title><link>https://www.eff.org/deeplinks/2025/06/major-setback-intermediary-liability-brazil-risks-and-blind-spots</link></item>
+<item><title>The Periphery by Locus Studios - HomeAdore</title><link>https://homeadore.com/2025/06/27/the-periphery-by-locus-studios/</link></item>
+<item><title>Restyling CD Revitalizes 1970s Home into a Chic Open-Plan Haven - HomeAdore</title><link>https://homeadore.com/2025/06/27/restyling-cd-revitalizes-1970s-home-into-a-chic-open-plan-haven/</link></item>
+<item><title>Ridge House by Ben Hudson - HomeAdore</title><link>https://homeadore.com/2025/06/27/ridge-house-by-ben-hudson/</link></item>
+<item><title>The Slot House by Katerina Valsamaki Architects - HomeAdore</title><link>https://homeadore.com/2025/06/27/the-slot-house-by-katerina-valsamaki-architects/</link></item>
+<item><title>VDS House by 02A Studio - HomeAdore</title><link>https://homeadore.com/2025/06/27/vds-house-by-02a-studio/</link></item>
+<item><title>Dimora Magenta by Bevilacqua Architects - HomeAdore</title><link>https://homeadore.com/2025/06/27/dimora-magenta-by-bevilacqua-architects/</link></item>
+<item><title>1414 Donhill Drive Beverly Hills by Whipple Russell Architects - HomeAdore</title><link>https://homeadore.com/2025/06/26/1414-donhill-drive-beverly-hills-by-whipple-russell-architects/</link></item>
+<item><title>Theo’s Home by In-Nova Studio - HomeAdore</title><link>https://homeadore.com/2025/06/26/theos-home-by-in-nova-studio/</link></item>
+<item><title>5515 Pine Tree Drive by SDH Studio Architecture Design - HomeAdore</title><link>https://homeadore.com/2025/06/26/5515-pine-tree-drive-by-sdh-studio-architecture-design/</link></item>
+<item><title>Pinewood Villa by João Tiago Aguiar - HomeAdore</title><link>https://homeadore.com/2025/06/25/pinewood-villa-by-joao-tiago-aguiar/</link></item>
+<item><title>Casa M by Silverline - HomeAdore</title><link>https://homeadore.com/2025/06/25/casa-m-by-silverline/</link></item>
+<item><title>WT Apartment by FJ55 Arquitetos - HomeAdore</title><link>https://homeadore.com/2025/06/20/wt-apartment-by-fj55-arquitetos/</link></item>
+<item><title>Renda House by André Luque Arquitetura - HomeAdore</title><link>https://homeadore.com/2025/06/20/renda-house-by-andre-luque-arquitetura/</link></item>
+<item><title>Casa da Encosta by Ricardo Azevedo Arquitecto - HomeAdore</title><link>https://homeadore.com/2025/06/20/casa-da-encosta-by-ricardo-azevedo-arquitecto/</link></item>
+<item><title>Double Apartment by Abaco - HomeAdore</title><link>https://homeadore.com/2025/06/20/double-apartment-by-abaco/</link></item>
+<item><title>Forgetting Time House by Wallflower Architecture + Design - HomeAdore</title><link>https://homeadore.com/2025/06/24/forgetting-time-house-by-wallflower-architecture-design/</link></item>
+<item><title>Ravine House by Orangeink Design - HomeAdore</title><link>https://homeadore.com/2025/06/18/ravine-house-by-orangeink-design/</link></item>
+<item><title>Stodolove - Old Barn Renovation Combines Rustic Roots with Modern Minimalism - HomeAdore</title><link>https://homeadore.com/2025/06/13/stodolove-old-barn-renovation-combines-rustic-roots-with-modern-minimalism/</link></item>
+<item><title>Casa Valle by Kajim Estudio - HomeAdore</title><link>https://homeadore.com/2025/06/13/casa-valle-by-kajim-estudio/</link></item>
+<item><title>Ombak Community House Designed with Community-Focused Rooftop Spaces in Mind - HomeAdore</title><link>https://homeadore.com/2025/06/18/ombak-community-house-designed-with-community-focused-rooftop-spaces-in-mind/</link></item>
+<item><title>Icicle House 03 by Syndicate Smith - HomeAdore</title><link>https://homeadore.com/2025/06/17/icicle-house-03-by-syndicate-smith/</link></item>
+<item><title>A Home on the Edge of a Forest: A Sanctuary Nestled in the Lush Landscape - HomeAdore</title><link>https://homeadore.com/2024/06/28/a-home-on-the-edge-of-a-forest-a-sanctuary-nestled-in-the-lush-landscape/</link></item>
+<item><title>New UN report charts path out of debt crisis threatening global development - UN</title><link>https://news.un.org/en/story/2025/06/1165051</link></item>
+<item><title>Guterres calls for immediate Gaza ceasefire as humanitarian crisis reaches ‘horrific proportions’ - UN</title><link>https://news.un.org/en/story/2025/06/1165016</link></item>
+<item><title>Gaza: Health system crumbles amid growing desperation over food, fuel - UN</title><link>https://news.un.org/en/story/2025/06/1165011</link></item>
+<item><title>Enabling Micro-, Small and Medium-sized Enterprises to drive growth and innovation - UN</title><link>https://www.un.org/en/observances/micro-small-medium-businesses-day</link></item>
+<item><title>The future belongs to the tropics - UN</title><link>https://www.un.org/en/observances/tropics-day</link></item>
+<item><title>Advancing women’s leadership and peace - UN</title><link>https://www.un.org/en/observances/parliamentarism-day</link></item>
+<item><title>80th anniversary - UN</title><link>https://www.un.org/en/UN80</link></item>
+<item><title>San Francisco Conference - UN</title><link>https://www.un.org/en/about-us/history-of-the-un/san-francisco-conference</link></item>
+<item><title>Fourth World Conference on Financing for Development - UN</title><link>https://www.un.org/en/civil-society/1st-prep-com-session-ffd4</link></item>
+<item><title>How Did Ginger Ale Get Its Name? - Mental Floss</title><link>https://www.mentalfloss.com/food/beverages/ginger-ale-name-history</link></item>
+<item><title>Who’s the Monty of ‘The Full Monty’? - Mental Floss</title><link>https://www.mentalfloss.com/language/full-monty-meaning-origins</link></item>
+<item><title>Netherworld Covenant Preview (PC) - Softpedia</title><link>https://news.softpedia.com/news/netherworld-covenant-preview-pc-537815.shtml</link></item>
+<item><title>Broken Arrow Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/broke-arrow-review-537814.shtml</link></item>
+<item><title>Net.Attack() Preview (PC) - Softpedia</title><link>https://news.softpedia.com/news/net-attack-preview-pc-537813.shtml</link></item>
+<item><title>FBC: Firebreak Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/fbc-firebreak-review-537812.shtml</link></item>
+<item><title>Fallen Tear: The Ascension Preview (PC) - Softpedia</title><link>https://news.softpedia.com/news/fallen-tear-the-ascension-preview-pc-537811.shtml</link></item>
+<item><title>TRON: Catalyst Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/tron-catalyst-review-537810.shtml</link></item>
+<item><title>HITMAN 3 – The Banker Pack – Yay or Nay (PC) - Softpedia</title><link>https://news.softpedia.com/news/hitman-3-the-banker-pack-yay-or-nay-pc-537809.shtml</link></item>
+<item><title>Void Sails Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/void-sails-review-537808.shtml</link></item>
+<item><title>Deadzone: Rogue Preview (PC) - Softpedia</title><link>https://news.softpedia.com/news/deadzone-rogue-preview-pc-537807.shtml</link></item>
+<item><title>Monster Train 2 Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/monster-train-2-review-537806.shtml</link></item>
+<item><title>Ertugrul of Ulukayin Preview (PC) - Softpedia</title><link>https://news.softpedia.com/news/ertugrul-of-ulukayin-preview-pc-537805.shtml</link></item>
+<item><title>Dragon is Dead Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/dragon-is-dead-review-537804.shtml</link></item>
+<item><title>Victoria 3: Charters of Commerce DLC – Yay or Nay (PC) - Softpedia</title><link>https://news.softpedia.com/news/victoria-3-charters-of-commerce-dlc-yay-or-nay-pc-537803.shtml</link></item>
+<item><title>KIBORG Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/kiborg-review-537802.shtml</link></item>
+<item><title>Panzer Corps 2: Elite - Ghost Division DLC – Yay or Nay (PC) - Softpedia</title><link>https://news.softpedia.com/news/panzer-corps-2-elite-ghost-division-dlc-yay-or-nay-pc-537801.shtml</link></item>
+<item><title>Islands &amp; Trains Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/islands-trains-review-537800.shtml</link></item>
+<item><title>Warhammer 40,000: Darktide – Arbites Class DLC – Yay or Nay (PC) - Softpedia</title><link>https://news.softpedia.com/news/warhammer-40-000-darktide-arbites-class-dlc-yay-or-nay-pc-537799.shtml</link></item>
+<item><title>Lost in Random: The Eternal Die Review (PS5) - Softpedia</title><link>https://www.softpedia.com/reviews/games/playstation-5/lost-in-random-the-eternal-die-review-537798.shtml</link></item>
+<item><title>As We Descend Preview (PC) - Softpedia</title><link>https://news.softpedia.com/news/as-we-descend-preview-pc-537797.shtml</link></item>
+<item><title>Projected Dreams Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/projected-dreams-review-537796.shtml</link></item>
+<item><title>Decade Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/decade-review-537795.shtml</link></item>
+<item><title>9 Kings Preview (PC) - Softpedia</title><link>https://news.softpedia.com/news/9-kings-preview-pc-537794.shtml</link></item>
+<item><title>Morbid Metal Preview (PC) - Softpedia</title><link>https://news.softpedia.com/news/morbid-metal-preview-pc-537793.shtml</link></item>
+<item><title>Elden Ring Nightreign Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/elden-ring-nightreign-review-537792.shtml</link></item>
+<item><title>City Tales – Medieval Era Preview (PC) - Softpedia</title><link>https://news.softpedia.com/news/city-tales-medieval-era-preview-pc-537791.shtml</link></item>
+<item><title>Duck Detective: The Ghost of Glamping Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/duck-detective-the-ghost-of-glamping-review-537790.shtml</link></item>
+<item><title>Tour de France 2025 Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/tour-de-france-2025-review-537789.shtml</link></item>
+<item><title>Pro Cycling Manager 25 Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/pro-cycling-manager-25-review-537788.shtml</link></item>
+<item><title>Twilight Wars Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/twilight-wars-review-537787.shtml</link></item>
+<item><title>Mechjestic Preview (PC) - Softpedia</title><link>https://news.softpedia.com/news/mechjestic-preview-pc-537786.shtml</link></item>
+<item><title>太多人误解了「苦涩的教训」 - 宝玉的分享</title><link>https://baoyu.io/translations/bitter-lesson-misunderstanding</link></item>
+<item><title>大语言模型高考数学拿高分靠强化学习，那文科考高分得靠什么？ - 宝玉的分享</title><link>https://baoyu.io/blog/large-language-model-arts-exam-success</link></item>
+<item><title>构建 AI 智能体的经验分享 - 宝玉的分享</title><link>https://baoyu.io/translations/learnings-from-building-ai-agents</link></item>
+<item><title>人们如何使用 Claude 寻求支持、建议和陪伴 - 宝玉的分享</title><link>https://baoyu.io/translations/how-people-use-claude-for-support-advice-and-companionship</link></item>
+<item><title>程序员的提示工程实战手册 - 宝玉的分享</title><link>https://baoyu.io/translations/the-prompt-engineering-playbook-for</link></item>
+<item><title>先设计再写代码，还是先实现再重构？AI 编程让这种选择变的简单 - 宝玉的分享</title><link>https://baoyu.io/blog/design-code-or-refactor-ai-simplifies</link></item>
+<item><title>Claude Code 强大的秘密究竟是什么？ - 宝玉的分享</title><link>https://baoyu.io/blog/claude-code-secrets</link></item>
+<item><title>我用 Claude Code 花 2 小时没写一行代码做了一个翻译智能体，并且开源了整个过程 - 宝玉的分享</title><link>https://baoyu.io/blog/claude-code-translation-agent-opensource</link></item>
+<item><title>OpenAI: 构建 AI 智能体实用指南 - 宝玉的分享</title><link>https://baoyu.io/translations/a-practical-guide-to-building-agents</link></item>
+<item><title>Anthropic：我们如何构建多智能体研究系统 - 宝玉的分享</title><link>https://baoyu.io/translations/built-multi-agent-research-system</link></item>
+<item><title>Cannes Lions - Variety</title><link>https://variety.com/t/cannes-lions</link></item>
+<item><title>What’s Next for James Bond? - Variety</title><link>https://variety.com/2025/film/news/amazon-james-bond-wants-tom-holland-jacob-elordi-1236442329/</link></item>
+<item><title>‘Squid Game’ Ending Explained - Variety</title><link>https://variety.com/2025/tv/news/squid-game-3-ending-explained-gi-hun-dies-1236441794/</link></item>
+<item><title>Matt Reeves Finally Completes ‘The Batman 2’ Script - Variety</title><link>https://variety.com/2025/film/news/the-batman-2-script-done-matt-reeves-1236442972/</link></item>
+<item><title>‘The Comeback’ Returns! Lisa Kudrow Set for Season 3 of HBO Comedy Series - Variety</title><link>https://variety.com/2025/tv/news/the-comeback-season-3-lisa-kudrow-1236442737/</link></item>
+<item><title>‘The Bear’ Season 4 Finale Recap: Where Do Carmy and Sydney End Up? Will the Restaurant Survive? - Variety</title><link>https://variety.com/2025/tv/news/the-bear-season-4-ending-explained-1236441175/</link></item>
+<item><title>The Best Albums of 2025 (So Far) - Variety</title><link>https://variety.com/lists/best-albums-2025-so-far/</link></item>
+<item><title>Magic: The Gathering Sets ‘Sonic the Hedgehog’ Secret Lair Collections: First Look at Seven New Cards Revealed (EXCLUSIVE) - Variety</title><link>https://variety.com/2025/gaming/news/magic-the-gathering-sonic-the-hedgehog-secret-lair-cards-1236441713/</link></item>
+<item><title>‘Rogue One’ Director Says ‘I’m Happy to Move on’ From ‘Star Wars’ and ‘I Don’t Agree’ It’s the Best Movie of Disney’s Lucasfilm… - Variety</title><link>https://variety.com/2025/film/news/rogue-one-director-no-more-star-wars-movies-1236441573/</link></item>
+<item><title>The 10 Best Movies of 2025 (So Far) - Variety</title><link>https://variety.com/lists/best-movies-of-2025-so-far/</link></item>
+<item><title>Rebekah Del Rio, ‘Mulholland Drive’ Singer Who Performed ‘Llorando’ in David Lynch Classic, Dies at 57 - Variety</title><link>https://variety.com/2025/film/obituaries-people-news/rebekah-del-rio-dead-mulholland-drive-1236442508/</link></item>
+<item><title>Marge Simpson Is Very Much Alive, ‘The Simpsons’ EP Says After Finale Sparked Online Outrage: ‘There Is No Canon!’ - Variety</title><link>https://variety.com/2025/tv/news/marge-simpson-not-dead-simpsons-producers-finale-1236442002/</link></item>
+<item><title>LeAnn Rimes&amp;#39; Teeth Fall Out Mid-Concert: &amp;#39;If You Catch Them, Please Return Them’ - Variety</title><link>https://variety.com/2025/music/news/leann-rimes-teeth-fall-out-mid-concert-1236441739/</link></item>
+<item><title>Kristin Davis Gets Honest About Harry’s ‘And Just Like That’ [SPOILER]: ‘It Seems Like a Perfect Storyline for Charlotte… - Variety</title><link>https://variety.com/2025/tv/news/and-just-like-that-kristin-davis-harry-prostate-cancer-1236416401/</link></item>
+<item><title>Sabrina Carpenter Unveils Alternate ‘Man’s Best Friend’ Album Art That’s ‘Approved by God’ Amid Controversy - Variety</title><link>https://variety.com/2025/music/news/sabrina-carpenter-alternate-mans-best-friend-album-art-approved-by-god-1236440294/</link></item>
+<item><title>Katy O’Brian Says Sydney Sweeney ‘Didn’t Care’ About Getting Hurt During Fight Scenes in Christy Martin Biopic: ‘She Was Like, “If You Break My Nose, That’s Fine”’ - Variety</title><link>https://variety.com/2025/film/news/sydney-sweeney-boxing-christy-martin-katy-obrian-1236442741/</link></item>
+<item><title>Variety’s 10 Animators to Watch Event Returns to Los Angeles on July 9 - Variety</title><link>https://variety.com/2025/biz/news/variety-10-animators-to-watch-1236442885/</link></item>
+<item><title>Criterion Collection Summer Sale: Select Titles Are 50% Off at Barnes &amp; Noble - Variety</title><link>https://variety.com/shop/criterion-collection-sale-buy-online-1235039515/</link></item>
+<item><title>‘Squid Game’ Season 3 Delivers One Last Devastating Blow and a Shocking Path Forward: TV Review - Variety</title><link>https://variety.com/2025/tv/reviews/squid-game-season-3-review-netflix-1236440570/</link></item>
+<item><title>Diddy’s Son and Kanye West Release ‘Diddy Free’ Song With Lyrics About Trial: ‘F— the World, Critics and the Witness’ - Variety</title><link>https://variety.com/2025/music/news/sean-combs-son-kanye-west-diddy-free-song-lyrics-trial-1236442778/</link></item>
+<item><title>Box Office: ‘F1’ Makes $10 Million in Previews, ‘M3GAN 2.0’ Has $1.5 Million - Variety</title><link>https://variety.com/2025/film/box-office/box-office-f1-megan-2-previews-1236441817/</link></item>
+<item><title>Parker McCollum on Achieving Country Stardom While Honoring His Iconoclastic Texas Heroes: ‘I Was Never Gonna Go Write Pickup Truck and Beer Songs’ - Variety</title><link>https://variety.com/2025/music/news/parker-mccollum-country-star-interview-self-titled-album-1236443221/</link></item>
+<item><title>‘Squid Game’: Park Sung-hoon Breaks Down Hyun-ju’s [SPOILER] and Why Her Motivation Shifts in Season 3: ‘I Feel Very Emotional Right Now’ - Variety</title><link>https://variety.com/2025/tv/news/hyun-ju-dies-squid-game-3-park-sung-hoon-1236440271/</link></item>
+<item><title>‘Doctor Odyssey’ Canceled at ABC After One Season - Variety</title><link>https://variety.com/2025/tv/news/doctor-odyssey-canceled-abc-1236443173/</link></item>
+<item><title>Matty Healy Says the 1975 Doesn’t Want Its ‘Legacy to Be One of Politics’ at Glastonbury Headlining Set: ‘We Need More Love and Friendship’ - Variety</title><link>https://variety.com/2025/music/global/the-1975-matty-healy-dont-need-politics-glastonbury-1236438896/</link></item>
+<item><title>Diddy Trial Reaches Explosive Conclusion as Defense Asks Jury to ‘Summon That Courage’ to ‘Acquit Sean Combs’ - Variety</title><link>https://variety.com/2025/music/news/diddy-trial-ends-defense-asks-jury-acquit-sean-combs-1236442744/</link></item>
+<item><title>‘F1’ Rundown: Lewis Hamilton, Max Verstappen and Every Formula One Racer in Brad Pitt’s Movie - Variety</title><link>https://variety.com/lists/f1-movie-cast-real-drivers/</link></item>
+<item><title>Make James Bond an ‘Alcoholic, a Drug Addict. He Hates Women’: Matthew Goode’s ‘Really Dark’ 007 Pitch Got Him Dropped From ‘Casino Royale’ Auditions - Variety</title><link>https://variety.com/2025/film/news/matthew-goode-james-bond-drug-addict-hates-women-1236442612/</link></item>
+<item><title>Disney’s Dana Walden Talks Juggling Linear and Streaming Assets Amid Shifting Sands in Pay TV - Variety</title><link>https://variety.com/2025/tv/news/dana-walden-disney-linear-streaming-ken-ziffren-ucla-1236443088/</link></item>
+<item><title>Mark Hamill Says There’s No Beef With Rian Johnson Despite ‘Last Jedi’ Disagreement: He Made a ‘Great Movie’ and ‘Maybe I Should’ve Kept’ My Luke Skywalker Criticisms to Myself - Variety</title><link>https://variety.com/2025/film/news/mark-hamill-rian-johnson-despite-feud-last-jedi-not-true-1236442628/</link></item>
+<item><title>Like Father, Like Son - Variety</title><link>https://variety.com/2025/tv/news/arnold-patrick-schwarzenegger-nude-scenes-nepo-babies-1236414678/</link></item>
+<item><title>Parker Posey Tells Lisa Kudrow to Star in ‘The White Lotus’ Season 4 as They Bond Over Sitcom Struggles and Why Phoebe on ‘Friends’ Was ‘A Lot of… - Variety</title><link>https://variety.com/2025/tv/news/parker-posey-lisa-kudrow-white-lotus-friends-1236414695/</link></item>
+<item><title>Dave Chappelle Joins Mo Amer for Rare Interview on Political Comedy, Fiery ‘SNL’ Monologues and Crying Over Netflix’s ‘Mo’: ‘I’m Not Doing This S&amp;#8212… - Variety</title><link>https://variety.com/2025/tv/news/dave-chappelle-mo-amer-politics-comedy-snl-monologues-1236414683/</link></item>
+<item><title>Keri Russell and Scott Speedman on Nearly 30 Years of ‘Felicity’ and Friendship, From His Last-Minute Audition to Her Regrets: ‘Why Didn’t I Have… - Variety</title><link>https://variety.com/2025/tv/news/keri-russell-scott-speedman-felicity-greys-anatomy-diplomat-1236414788/</link></item>
+<item><title>‘Sorry, Baby’ - Variety</title><link>https://variety.com/2025/film/reviews/sorry-baby-review-sundance-eva-victor-1236286028/</link></item>
+<item><title>’28 Years Later’ - Variety</title><link>https://variety.com/2025/film/reviews/28-years-later-review-1236435361/</link></item>
+<item><title>Kate Winslet Drops Out of Hulu Series ‘The Spot’ - Variety</title><link>https://variety.com/2025/tv/news/kate-winslet-exits-hulu-series-the-spot-1236443073/</link></item>
+<item><title>California Legislature Approves $750 Million Film Tax Credit by Wide Margin - Variety</title><link>https://variety.com/2025/film/news/california-750-million-film-tax-credit-approved-1236442843/</link></item>
+<item><title>Music Industry Moves: FKA Twigs Inks Global Publishing Deal With Kobalt - Variety</title><link>https://variety.com/2025/music/news/ross-golan-joins-songwriters-north-america-board-1236438624/</link></item>
+<item><title>Katseye on the Timely Meaning Behind New ‘Beautiful Chaos’ EP: ‘A Big Transitional Part of Us’ - Variety</title><link>https://variety.com/2025/music/news/katseye-beautiful-chaos-ep-big-transitional-part-1236417368/</link></item>
+<item><title>Broadway’s ‘Boop! The Musical’ Is Latest Show to Close After the Tony Awards - Variety</title><link>https://variety.com/2025/legit/news/broadway-boop-musical-closing-date-1236440762/</link></item>
+<item><title>Stephen Sondheim’s ‘Sweeney Todd,’ ‘Into the Woods’ and Other Works Acquired by Library of Congress - Variety</title><link>https://variety.com/2025/legit/news/stephen-sondheim-library-of-congress-1236438278/</link></item>
+<item><title>‘Hercules’ Review: Disney’s Over-Bright, Relentless Revamp Muscles Into the West End - Variety</title><link>https://variety.com/2025/legit/reviews/hercules-review-musical-west-end-1236439211/</link></item>
+<item><title>Barbecue, Cheerleaders and Lin-Manuel Miranda: How St. Louis’ Muny Theater Celebrated Its Tony Win - Variety</title><link>https://variety.com/2025/legit/podcasts/muny-st-louis-celebrated-tony-award-win-1236439375/</link></item>
+<item><title>Amber Heard, Brandon Flynn Join Jeremy O. Harris Play &amp;#39;Spirit of the People&amp;#39;(EXCLUSIVE) - Variety</title><link>https://variety.com/2025/legit/news/amber-heard-brandon-flynn-jeremy-o-harris-play-spirit-of-the-people-1236438101/</link></item>
+<item><title>How &amp;#39;28 Years Later&amp;#39; Shot Those Bloody Zombie Kills and the Terrifying Alpha Chase on a Soundstage: ‘It Was Pretty Scary’ - Variety</title><link>https://variety.com/2025/artisans/news/28-years-later-cinematographer-shooting-alpha-chase-1236438742/</link></item>
+<item><title>IMDbPro and International Casting Directors Association Partner to Accelerate Global Casting Process - Variety</title><link>https://variety.com/2025/artisans/news/imdbpro-icda-collaboration-1236439241/</link></item>
+<item><title>Reframe Rise and WIF Announce Cohort Class of 2025 (EXCLUSIVE) - Variety</title><link>https://variety.com/2025/artisans/news/reframe-rise-wif-cohort-class-2025-1236439056/</link></item>
+<item><title>&amp;#39;Ballerina,&amp;#39; &amp;#39;Blade Runner 2099&amp;#39; Filming Location Czech Republic Offers One-Stop Shop With Barrandov, Prague Studios - Variety</title><link>https://variety.com/2025/artisans/filming-locations/ballerina-blade-runner-2099-czech-republic-barrandov-prague-studios-1236411721/</link></item>
+<item><title>Cinematographers Frederick Elmes and Peter Deming on Working With David Lynch and How His Unrealized Project Might Become a Book - Variety</title><link>https://variety.com/2025/artisans/global/frederick-elmes-peter-deming-david-lynch-1236438889/</link></item>
+<item><title>Trump Says He’s Ending Canada Trade Talks Over Its 3% Digital Services and Streaming Tax: ‘Blatant Attack on Our Country’ - Variety</title><link>https://variety.com/2025/digital/news/trump-ends-canada-trade-talks-digital-services-streaming-tax-1236443014/</link></item>
+<item><title>UTA CEO David Kramer on Diversifying the Agency Business Amid Tumult in Hollywood: ‘The Playground Has Expanded in So Many Ways’ - Variety</title><link>https://variety.com/2025/biz/news/uta-david-kramer-diversification-strictly-cannes-lions-1236442489/</link></item>
+<item><title>Supreme Court Upholds Texas Age-Verification Law for Porn Sites - Variety</title><link>https://variety.com/2025/digital/news/supreme-court-upholds-porn-site-texas-age-verification-law-1236442805/</link></item>
+<item><title>Netflix’s ‘Squid Game’ Mobile Game Adds Season 3 Competitions, Including Hide and Seek and Sky Squid Game (Gaming News Roundup) - Variety</title><link>https://variety.com/2025/gaming/news/squid-game-unleashed-chromebook-gaming-news-roundup-1236438283/</link></item>
+<item><title>Eric Dane&amp;#39;s &amp;#39;Countdown&amp;#39; Co-Stars Say He’s Handling ALS Diagnosis With &amp;#39;Grace and Dignity&amp;#39;: &amp;#39;He Wants Other People to Know They&amp;#39;re Not Alone&amp;#39; - Variety</title><link>https://variety.com/2025/scene/columns/eric-danes-countdown-cast-als-diagnosis-1236439759/</link></item>
+<item><title>Colman Domingo to Host amfAR Venice Film Festival Gala (EXCLUSIVE) - Variety</title><link>https://variety.com/2025/film/columns/colman-domingo-host-amfar-venice-film-festival-gala-1236438037/</link></item>
+<item><title>Justin Hartley on Playing a ‘Worm and Buffoon&amp;#39; in ‘Bride Hard’ and What Colter Will Learn About His Mother in ‘Tracker’ Season 3: &amp;#39;There&amp;#39;s Some Deep… - Variety</title><link>https://variety.com/2025/tv/news/justin-hartley-bride-hard-tracker-season-3-1236437081/</link></item>
+<item><title>Rebel Wilson on Working With Robert Pattinson&amp;#39;s &amp;#39;Batman&amp;#39; Stunt Coordinators on ‘Bride Hard’ And Wanting ‘Fat Amy’ to Get Married in ‘Pitch Perfect 4… - Variety</title><link>https://variety.com/2025/scene/news/rebel-wilson-bride-hard-train-robert-pattinson-batman-stunt-coordinators-pitch-perfect-4-1236437012/</link></item>
+<item><title>Cocaine, Boofing and Gator Tails: ‘Hacks’ Stars Megan Stalter, Paul W. Downs and Julianne Nicholson Explain That Wild Season 4 Scene - Variety</title><link>https://variety.com/2025/awards/news/hacks-boofing-cocaine-scene-season-4-1236434121/</link></item>
+<item><title>Trump Angrily Calls for CNN to Fire Reporter Over Story on Iran Nuclear Strikes: She Should Be ‘Thrown Out Like a Dog’ - Variety</title><link>https://variety.com/2025/tv/news/trump-cnn-fire-reporter-iran-nuclear-strikes-thrown-out-like-a-dog-1236440458/</link></item>
+<item><title>New York City Mayor Shocker: Zohran Mamdani’s Commanding Lead Causes Andrew Cuomo to Concede in Primary Race - Variety</title><link>https://variety.com/2025/politics/news/zohran-mamdani-lead-new-york-city-mayor-democratic-primary-1236439191/</link></item>
+<item><title>California Legislative Leaders Agree on $750 Million in Funding for Film and TV Credit - Variety</title><link>https://variety.com/2025/film/news/california-750-million-film-tv-credit-1236439413/</link></item>
+<item><title>‘My Job Is to F—ing Sing’: Bad Bunny on the ‘Pride, Pain and Love’ Behind His Massive Puerto Rico Residency and the Relationships That Define Him - Variety</title><link>https://variety.com/2025/music/news/bad-bunny-puerto-rico-concerts-world-tour-1236434112/</link></item>
+<item><title>6 Axolotl Predators: Dangers in Both Nature and Captivity - HowStuffWorks</title><link>https://animals.howstuffworks.com/amphibians/axolotl-predators.htm</link></item>
+<item><title>What Is the Youngest Country in the World Today? - HowStuffWorks</title><link>https://history.howstuffworks.com/world-history/what-is-the-youngest-country.htm</link></item>
+<item><title>Are Tulips Poisonous to Cats? Yes, the Whole Lily Family Is - HowStuffWorks</title><link>https://animals.howstuffworks.com/pets/are-tulips-poisonous-to-cats.htm</link></item>
+<item><title>14 Types of Noodles Coming to a Dinner Table Near You - HowStuffWorks</title><link>https://recipes.howstuffworks.com/types-of-noodles.htm</link></item>
+<item><title>Anatolian Shepherd vs. Kangal: More Than Just Regional Variation - HowStuffWorks</title><link>https://animals.howstuffworks.com/pets/anatolian-shepherd-vs-kangal.htm</link></item>
+<item><title>Skip to main content - WebMD</title><link>https://www.webmd.com/#main-container</link></item>
+<item><title>Atrial fibrillation - WebMD</title><link>https://www.webmd.com/heart-disease/atrial-fibrillation/default.htm</link></item>
+<item><title>Breast Cancer - WebMD</title><link>https://www.webmd.com/breast-cancer/default.htm</link></item>
+<item><title>Crohn&amp;#39;s Disease - WebMD</title><link>https://www.webmd.com/ibd-crohns-disease/crohns-disease/default.htm</link></item>
+<item><title>Heart Disease - WebMD</title><link>https://www.webmd.com/heart-disease/default.htm</link></item>
+<item><title>Lung Disease - WebMD</title><link>https://www.webmd.com/lung/default.htm</link></item>
+<item><title>Mental Health - WebMD</title><link>https://www.webmd.com/mental-health/default.htm</link></item>
+<item><title>Multiple Sclerosis - WebMD</title><link>https://www.webmd.com/multiple-sclerosis/default.htm</link></item>
+<item><title>Pain Management - WebMD</title><link>https://www.webmd.com/pain-management/default.htm</link></item>
+<item><title>Psoriatic Arthritis - WebMD</title><link>https://www.webmd.com/arthritis/psoriatic-arthritis/default.htm</link></item>
+<item><title>Rheumatoid Arthritis - WebMD</title><link>https://www.webmd.com/rheumatoid-arthritis/default.htm</link></item>
+<item><title>Sexual Conditions - WebMD</title><link>https://www.webmd.com/sexual-conditions/default.htm</link></item>
+<item><title>Skin Problems - WebMD</title><link>https://www.webmd.com/skin-problems-and-treatments/default.htm</link></item>
+<item><title>Sleep Disorders - WebMD</title><link>https://www.webmd.com/sleep-disorders/default.htm</link></item>
+<item><title>Ulcerative Colitis - WebMD</title><link>https://www.webmd.com/ibd-crohns-disease/ulcerative-colitis/default.htm</link></item>
+<item><title>Supplements - WebMD</title><link>https://www.webmd.com/vitamins/index</link></item>
+<item><title>Pill Identifier - WebMD</title><link>https://www.webmd.com/pill-identification/default.htm</link></item>
+<item><title>Interaction Checker - WebMD</title><link>https://www.webmd.com/interaction-checker/default.htm</link></item>
+<item><title>Birth Control - WebMD</title><link>https://www.webmd.com/sex/birth-control/default.htm</link></item>
+<item><title>Children&amp;#39;s Health - WebMD</title><link>https://www.webmd.com/children/default.htm</link></item>
+<item><title>Diet &amp; Weight Management - WebMD</title><link>https://www.webmd.com/diet/default.htm</link></item>
+<item><title>Fitness &amp; Exercise - WebMD</title><link>https://www.webmd.com/fitness-exercise/default.htm</link></item>
+<item><title>Food &amp; Recipes - WebMD</title><link>https://www.webmd.com/food-recipes/default.htm</link></item>
+<item><title>Health &amp; Balance - WebMD</title><link>https://www.webmd.com/balance/default.htm</link></item>
+<item><title>Healthy Beauty - WebMD</title><link>https://www.webmd.com/beauty/default.htm</link></item>
+<item><title>Men&amp;#39;s Health - WebMD</title><link>https://www.webmd.com/men/default.htm</link></item>
+<item><title>Sex &amp; Relationships - WebMD</title><link>https://www.webmd.com/sex-relationships/default.htm</link></item>
+<item><title>Women&amp;#39;s Health - WebMD</title><link>https://www.webmd.com/women/default.htm</link></item>
+<item><title>Newsletters - WebMD</title><link>https://www.webmd.com/newsletters</link></item>
+<item><title>WebMD Surveys - WebMD</title><link>https://surveys.webmd.com/survey/lu3n6U0tmKKU?eid=webmdheader</link></item>
+<item><title>WebMD Magazine - WebMD</title><link>https://www.webmd.com/magazine/default.htm</link></item>
+<item><title>Best Hospitals - WebMD</title><link>https://doctor.webmd.com/choice-awards</link></item>
+<item><title>Support Groups - WebMD</title><link>https://www.webmd.com/facebook-groups</link></item>
+<item><title>Terms &amp; Conditions - WebMD</title><link>https://www.webmd.com/about-webmd-policies/about-terms-and-conditions-of-use</link></item>
+<item><title>Privacy Policy - WebMD</title><link>https://www.webmd.com/about-webmd-policies/about-privacy-policy</link></item>
+<item><title>See All WebMD Newsletters - WebMD</title><link>https://member.webmd.com/subscribe</link></item>
+<item><title>Sickle Cell Disease - WebMD</title><link>https://blogs.webmd.com/sickle-cell-disease/default.htm</link></item>
+<item><title>Dunstan Nicol-Wilson - WebMD</title><link>https://www.webmd.com/dunstan-nicol-wilson</link></item>
+<item><title>A Severe Crisis Disrupts My Routine - WebMD</title><link>https://blogs.webmd.com/sickle-cell-disease/20250626/a-severe-crisis-disrupts-my-routine</link></item>
+<item><title>Marissa Smith - WebMD</title><link>https://blogs.webmd.com/psoriatic-arthritis/marissa-smith</link></item>
+<item><title>What I’ve Learned About Rest Since Having Psoriatic Arthritis - WebMD</title><link>https://blogs.webmd.com/psoriatic-arthritis/20250626/what-ive-learned-about-rest-since-having-psoriatic-arthritis</link></item>
+<item><title>Mary Alice Mina, MD - WebMD</title><link>https://blogs.webmd.com/skin-care/mary-alice-mina-md</link></item>
+<item><title>How to Finally Treat Acne Scars (Without Wasting Time or Money) - WebMD</title><link>https://blogs.webmd.com/skin-care/20250623/how-to-finally-treat-acne-scars-without-wasting-time-or-money</link></item>
+<item><title>Digestive Health - WebMD</title><link>https://blogs.webmd.com/digestive-health/default.htm</link></item>
+<item><title>Sally Kuzemchak, RD, MS - WebMD</title><link>https://blogs.webmd.com/digestive-health/sally-kuzemchak-ms-rd-2</link></item>
+<item><title>How Aging Affects Your Gut - WebMD</title><link>https://blogs.webmd.com/digestive-health/20250609/how-aging-affects-your-gut</link></item>
+<item><title>Learn more about our Editorial Process - WebMD</title><link>https://www.webmd.com/about-webmd-policies/default.htm</link></item>
+<item><title>Cookie Policy - WebMD</title><link>https://www.webmd.com/about-webmd-policies/cookie-policy</link></item>
+<item><title>Editorial Policy - WebMD</title><link>https://www.webmd.com/about-webmd-policies/about-editorial-policy</link></item>
+<item><title>Advertising Policy - WebMD</title><link>https://www.webmd.com/about-webmd-policies/about-advertising-policy</link></item>
+<item><title>Correction Policy - WebMD</title><link>https://www.webmd.com/about-webmd-policies/webmd-corrections-policies</link></item>
+<item><title>Advertise with Us - WebMD</title><link>https://www.webmd.com/mediakit</link></item>
+<item><title>See additional information. - WebMD</title><link>https://www.webmd.com/about-webmd-policies/additional-info</link></item>
+<item><title>Tech Firms Warn &amp;#39;Scattered Spider&amp;#39; Hacks Are Targeting Aviation Sector - Slashdot</title><link>https://it.slashdot.org/story/25/06/27/2347206/tech-firms-warn-scattered-spider-hacks-are-targeting-aviation-sector</link></item>
+<item><title>Christoph Niemann - FlowingData</title><link>https://flowingdata.com/tag/christoph-niemann/</link></item>
 </channel></rss>
