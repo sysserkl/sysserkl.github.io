@@ -1,4 +1,5 @@
 var csbooklist_source_global=[
+["autobiography_of_benjamin_franklin_3308", "Autobiography of Benjamin Franklin(Benjamin Franklin)","已整理,englishwords","3",""],
 ["the_oriental_rug_a_monograph_oera_4518", "The Oriental Rug  A Monograph on Eastern Rugs and...(William De Lancey Ellwanger)","已整理,englishwords","3",""],
 ["a_history_of_caricature_and_gilaa_5487", "A History of Caricature and Grotesque in Literature and Art(Thomas Wright)","已整理,englishwords","3",""],
 ["history_of_lace_1404", "History of Lace(Mrs. Bury Palliser)","已整理,englishwords","3",""],
