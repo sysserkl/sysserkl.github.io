@@ -8,64 +8,242 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Tue, 01 Jul 2025 08:18:10 +0800</lastBuildDate>
-<item><title>Tour the NPR Tiny Desk Concert Set with… - Adafruit Industries</title><link>https://blog.adafruit.com/2025/06/30/tour-the-npr-tiny-desk-concert-set-with-architectural-digest/</link></item>
-<item><title>Desk of Ladyada – E-Ink Experimentation Plus a… - Adafruit Industries</title><link>https://blog.adafruit.com/2025/06/30/desk-of-ladyada-e-ink-experimentation-plus-a-simple-moisture-sensor-deskofladyada-adafruit/</link></item>
-<item><title>NEW GUIDE: Adafruit TPS61169 Constant Current… - Adafruit Industries</title><link>https://blog.adafruit.com/2025/06/30/new-guide-adafruit-tps61169-constant-current-boost-converter-for-leds-adafruitlearningsystem-adafruit/</link></item>
-<item><title>Shipping Alert: Independence Day – Friday, July 4 - Adafruit Industries</title><link>https://blog.adafruit.com/2025/06/30/shipping-alert-independence-day-friday-july-4/</link></item>
-<item><title>Adafruit New Products this Week: Featuring TPS61169 Constant Current Boost Converter for LEDs - Adafruit Industries</title><link>https://blog.adafruit.com/2025/06/28/adafruit-new-products-this-week-featuring-tps61169-constant-current-boost-converter-for-leds/</link></item>
-<item><title>Today is International Women in Engineering Day 2025 #TogetherWeEngineer @INWED1919 #INWED25 - Adafruit Industries</title><link>https://blog.adafruit.com/2025/06/23/today-is-international-women-in-engineering-day-2025-togetherweengineer-inwed1919-inwed25/</link></item>
-<item><title>Adafruit TPS61169 Constant Current Boost Converter for LEDs - Adafruit Industries</title><link>https://blog.adafruit.com/tag/adafruit-tps61169-constant-current-boost-converter-for-leds/</link></item>
-<item><title>Constant current - Adafruit Industries</title><link>https://blog.adafruit.com/tag/constant-current/</link></item>
-<item><title>The Great Search – SPI SRAM Chip #adafruit #TheGreatSearch @digikey - Adafruit Industries</title><link>https://blog.adafruit.com/2025/06/30/the-great-search-spi-sram-chip-adafruit-thegreatsearch-digikey/</link></item>
-<item><title>UPDATED GUIDE: CircuitPython Libraries on any Computer with MCP2221 #AdafruitLearningSystem @Adafruit - Adafruit Industries</title><link>https://blog.adafruit.com/2025/06/30/updated-guide-adafruit-thonny-mcp2221/</link></item>
-<item><title>Make a Virtual Machine think it as a CPU fan - Adafruit Industries</title><link>https://blog.adafruit.com/2025/06/30/make-a-virtual-machine-think-it-as-a-cpu-fan/</link></item>
-<item><title>Droid Resonator: A Free Browser-Based Synth #MusicMonday - Adafruit Industries</title><link>https://blog.adafruit.com/2025/06/30/droid-resonator-a-free-browser-based-synth-musicmonday/</link></item>
-<item><title>Micro:bit LEGO Mechanical Bucket Cutebot Pro and Joystick:bit - Adafruit Industries</title><link>https://blog.adafruit.com/2025/06/30/microbit-lego-mechanical-bucket-cutebot-pro-and-joystickbit/</link></item>
-<item><title>The Adafruit IoT Monthly Newsletter for July 2025 is out NEXT WEEK, Subscribe Now! - Adafruit Industries</title><link>https://blog.adafruit.com/2025/06/30/the-adafruit-iot-monthly-newsletter-for-july-2025-is-out-next-week-subscribe-now/</link></item>
-<item><title>The Raspberry Pi Official Magazine – Issue 155: Building the Ultimate Media Center @rpimagazine - Adafruit Industries</title><link>https://blog.adafruit.com/2025/06/30/the-raspberry-pi-official-magazine-issue-155-building-the-ultimate-media-center-rpimagazine/</link></item>
-<item><title>Use NeoPixel Rings to Display Stereo Volume - Adafruit Industries</title><link>https://blog.adafruit.com/2025/06/30/use-neopixel-rings-to-display-stereo-volume/</link></item>
-<item><title>Mini National Rail Departure Board - Adafruit Industries</title><link>https://blog.adafruit.com/2025/06/30/mini-national-rail-departure-board/</link></item>
-<item><title>A Visual History of NYC’s Pride March from 1970 to 1985 #Pride2025 - Adafruit Industries</title><link>https://blog.adafruit.com/2025/06/30/a-visual-history-of-nycs-pride-march-from-1970-to-1985-pride2025/</link></item>
-<item><title>Asteroid Day 2025 – Where Space Science And Fun Collide - Adafruit Industries</title><link>https://blog.adafruit.com/2025/06/30/asteroid-day-2025-where-space-science-and-fun-collide/</link></item>
-<item><title>研究发现消费者对 AI 产品信任度低 - Solidot</title><link>https://www.solidot.org/story?sid=81677</link></item>
-<item><title>碳记录显示人类五万年前开始大规模用火 - Solidot</title><link>https://www.solidot.org/story?sid=81678</link></item>
-<item><title>小行星 2024 YR4 撞击月球概率上升至 1/25 - Solidot</title><link>https://www.solidot.org/story?sid=81679</link></item>
-<item><title>First Wisher [Comic] - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/06/30/first-wisher-comic/</link></item>
-<item><title>Your Brain Is Making Stuff Up Again: Here’s the Proof! [Video] - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/06/30/your-brain-is-making-stuff-up-again-heres-the-proof-video/</link></item>
-<item><title>Blue Milk, Space Ribs, and Existential Dread: A Culinary Tour of Galaxy’s Edge - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/06/30/blue-milk-space-ribs-and-existential-dread-a-culinary-tour-of-galaxys-edge/</link></item>
-<item><title>Today’s Hot Deals: PowerAdd Pro 18400mAh 130W Power Bank, Hisense 40-Inch Smart TV, Crucial Pro DDR5 RAM 64GB Kit, 4TB Portable SSD, and MORE! - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/06/30/todays-hot-deals-poweradd-pro-18400mah-130w-power-bank-hisense-40-inch-smart-tv-crucial-pro-ddr5-ram-64gb-kit-4tb-portable-ssd-and-more/</link></item>
-<item><title>1-Year Sam’s Club Membership with Auto-Renew - Geeks are Sexy</title><link>https://store.geeksaresexy.net/sales/sams-club-1-year-membership-with-auto-renew</link></item>
-<item><title>Survival of the Fittest [Comic] - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/06/30/survival-of-the-fittest-comic-2/</link></item>
-<item><title>How can the James Webb Space Telescope see so far? - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/06/30/how-can-the-james-webb-space-telescope-see-so-far/</link></item>
-<item><title>[email protected] - Geeks are Sexy</title><link>https://www.geeksaresexy.net/cdn-cgi/l/email-protection#066573746f6973756d6f6275737546726e636569687063747567726f69682865696b</link></item>
-<item><title>Too Stressed [Comic] - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/06/30/too-stressed-comic/</link></item>
-<item><title>Today’s Hot Deals: Logitech G Pro X Gaming Headset, WD 14TB External HD, Electric Bug Zapper, Godzilla: The Showa-Era Films, and MORE! - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/06/29/todays-hot-deals-logitech-g-pro-x-gaming-headset-wd-14tb-external-hd-electric-bug-zapper-godzilla-the-showa-era-films-and-more/</link></item>
-<item><title>Robbery Bear [Comic] - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/06/29/robbery-bear-comic/</link></item>
-<item><title>Cloth Armor Wearers [Comic] - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/06/29/cloth-armor-wearers-comic/</link></item>
-<item><title>Invisible Forces: The Making of Phantom.land’s Interactive Grid and 3D Face Particle System - Codrops</title><link>https://tympanus.net/codrops/2025/06/30/invisible-forces-the-making-of-phantom-lands-interactive-grid-and-3d-face-particle-system/</link></item>
-<item><title>Phantom Studios - Codrops</title><link>https://tympanus.net/codrops/author/jamie/</link></item>
-<item><title>Motion Highlights #10 - Codrops</title><link>https://tympanus.net/codrops/2025/06/29/motion-highlights-10/</link></item>
-<item><title>Designer Spotlight: Bimo Tri - Codrops</title><link>https://tympanus.net/codrops/2025/06/26/designer-spotlight-bimo-tri/</link></item>
-<item><title>Designing TrueKind: A Skincare Brand’s Journey Through Moodboards, Motion, and Meaning - Codrops</title><link>https://tympanus.net/codrops/2025/06/25/designing-truekind-a-skincare-brands-journey-through-moodboards-motion-and-meaning/</link></item>
-<item><title>Abhishek Jha - Codrops</title><link>https://tympanus.net/codrops/author/abhishekjha/</link></item>
-<item><title>Reksa Andhika - Codrops</title><link>https://tympanus.net/codrops/author/reksaandhika/</link></item>
-<item><title>Modeling the World in 280 Characters - Codrops</title><link>https://tympanus.net/codrops/2025/06/23/modeling-the-world-in-280-characters/</link></item>
-<item><title>Coding a 3D Audio Visualizer with Three.js, GSAP &amp; Web Audio API - Codrops</title><link>https://tympanus.net/codrops/2025/06/18/coding-a-3d-audio-visualizer-with-three-js-gsap-web-audio-api/</link></item>
-<item><title>Filip Zrnzevic - Codrops</title><link>https://tympanus.net/codrops/author/filip/</link></item>
-<item><title>Building an Infinite Marquee Along an SVG Path with React &amp; Motion - Codrops</title><link>https://tympanus.net/codrops/2025/06/17/building-an-infinite-marquee-along-an-svg-path-with-react-motion/</link></item>
-<item><title>Daniel Petho - Codrops</title><link>https://tympanus.net/codrops/author/danielpetho/</link></item>
-<item><title>Inside the Frontier of AI, WebXR &amp; Real-Time 3D: Crafting KODE Immersive - Codrops</title><link>https://tympanus.net/codrops/2025/06/16/inside-the-frontier-of-ai-webxr-real-time-3d-crafting-kode-immersive/</link></item>
-<item><title>Malvah Studio - Codrops</title><link>https://tympanus.net/codrops/author/malvah/</link></item>
-<item><title>Developer Spotlight: Robin Payot - Codrops</title><link>https://tympanus.net/codrops/2025/06/12/developer-spotlight-robin-payot/</link></item>
-<item><title>Building an Infinite Parallax Grid with GSAP and Seamless Tiling - Codrops</title><link>https://tympanus.net/codrops/2025/06/11/building-an-infinite-parallax-grid-with-gsap-and-seamless-tiling/</link></item>
-<item><title>How to Create Interactive, Droplet-like Metaballs with Three.js and GLSL - Codrops</title><link>https://tympanus.net/codrops/2025/06/09/how-to-create-interactive-droplet-like-metaballs-with-three-js-and-glsl/</link></item>
-<item><title>Motion Highlights #9 - Codrops</title><link>https://tympanus.net/codrops/2025/06/08/motion-highlights-9/</link></item>
-<item><title>Try It On: A Playful Drag-and-Drop Styling UI - Codrops</title><link>https://tympanus.net/codrops/2025/06/06/try-it-on-a-playful-drag-and-drop-styling-ui/</link></item>
-<item><title>How to Create Responsive and SEO-friendly WebGL Text - Codrops</title><link>https://tympanus.net/codrops/2025/06/05/how-to-create-responsive-and-seo-friendly-webgl-text/</link></item>
-<item><title>Eemeli Haakana - Codrops</title><link>https://tympanus.net/codrops/author/eemeli/</link></item>
-<item><title>Motion Highlights: Rive Special - Codrops</title><link>https://tympanus.net/codrops/2025/06/05/motion-highlights-rive-special/</link></item>
-<item><title>Building a Real-Time Dithering Shader - Codrops</title><link>https://tympanus.net/codrops/2025/06/04/building-a-real-time-dithering-shader/</link></item>
-<item><title>Elastic Grid Scroll: Creating Lag-Based Layout Animations with GSAP ScrollSmoother - Codrops</title><link>https://tympanus.net/codrops/2025/06/03/elastic-grid-scroll-creating-lag-based-layout-animations-with-gsap-scrollsmoother/</link></item>
-<item><title>DICH™ Fashion: A New Era of Futuristic Fashion - Codrops</title><link>https://tympanus.net/codrops/2025/06/02/dich-fashion-a-new-era-of-futuristic-fashion/</link></item>
+<lastBuildDate>Wed, 02 Jul 2025 12:18:31 +0800</lastBuildDate>
+<item><title>Rethinking adult ADHD - Aeon</title><link>https://aeon.co/essays/adult-adhd-is-becoming-more-inclusive-but-not-overdiagnosed?utm_source=rss-feed</link></item>
+<item><title>The cosmic distance ladder with Terence Tao: part two - Aeon</title><link>https://aeon.co/videos/how-we-came-to-know-the-size-of-the-universe-and-what-mysteries-remain?utm_source=rss-feed</link></item>
+<item><title>Walk in these - Aeon</title><link>https://aeon.co/essays/shoes-not-only-express-our-social-roles-they-also-create-them?utm_source=rss-feed</link></item>
+<item><title>AI slop on Last Week Tonight - FlowingData</title><link>https://flowingdata.com/2025/07/01/ai-slop-on-last-week-tonight/</link></item>
+<item><title>Last Week Tonight - FlowingData</title><link>https://flowingdata.com/tag/last-week-tonight/</link></item>
+<item><title>When a woman’s cycle stops - FlowingData</title><link>https://flowingdata.com/2025/06/30/when-a-womans-cycle-stops/</link></item>
+<item><title>Overview of the GOP bill, a bar chart - FlowingData</title><link>https://flowingdata.com/2025/06/30/overview-of-the-gop-bill-a-bar-chart/</link></item>
+<item><title>Cost and savings for each item in the GOP bill - FlowingData</title><link>https://flowingdata.com/2025/06/30/cost-and-savings-for-each-item-in-the-gop-bill/</link></item>
+<item><title>Effects of the Republican bill on your taxes - FlowingData</title><link>https://flowingdata.com/2025/06/30/effects-of-the-republican-bill-on-your-taxes/</link></item>
+<item><title>Google 购买了 200MW 还不存在的聚变能源 - Solidot</title><link>https://www.solidot.org/story?sid=81688</link></item>
+<item><title>Tumblr 搁置后端迁移到 WordPress 和联邦宇宙整合的计划 - Solidot</title><link>https://www.solidot.org/story?sid=81689</link></item>
+<item><title>微软 Windows 操作系统三年流失了 4 亿用户 - Solidot</title><link>https://www.solidot.org/story?sid=81690</link></item>
+<item><title>苹果考虑用 Anthropic 或 OpenAI 的模型驱动新版本的 Siri - Solidot</title><link>https://www.solidot.org/story?sid=81691</link></item>
+<item><title>发表在 arXiv 上的论文被发现隐含 AI 指令 - Solidot</title><link>https://www.solidot.org/story?sid=81692</link></item>
+<item><title>Android 未来可能会警告用户手机连接了假基站 - Solidot</title><link>https://www.solidot.org/story?sid=81693</link></item>
+<item><title>Windows 11 25H2 与 24H2 区别不大 - Solidot</title><link>https://www.solidot.org/story?sid=81694</link></item>
+<item><title>Steam 推出新的游戏性能监视器 - Solidot</title><link>https://www.solidot.org/story?sid=81695</link></item>
+<item><title>Sci-Hub 探索模因币的资助模式 - Solidot</title><link>https://www.solidot.org/story?sid=81696</link></item>
+<item><title>Cloudflar 测试对 AI 机器人抓取内容收费 - Solidot</title><link>https://www.solidot.org/story?sid=81697</link></item>
+<item><title>中国的纸币和硬币在快速消失 - Solidot</title><link>https://www.solidot.org/story?sid=81687</link></item>
+<item><title>服务器 GPU 配备太多的显存会导致 Linux 系统休眠出现问题 - Solidot</title><link>https://www.solidot.org/story?sid=81686</link></item>
+<item><title>Fedora 44 不会停止支持 32 位 - Solidot</title><link>https://www.solidot.org/story?sid=81685</link></item>
+<item><title>科学家在量子尺度验证守恒定律 - Solidot</title><link>https://www.solidot.org/story?sid=81684</link></item>
+<item><title>比特币钱包地址暴露黑客 IntelBroker 的英籍身份 - Solidot</title><link>https://www.solidot.org/story?sid=81683</link></item>
+<item><title>对 AI 的反对之声逐渐高涨 - Solidot</title><link>https://www.solidot.org/story?sid=81682</link></item>
+<item><title>NSA 鼓励使用内存安全语言 - Solidot</title><link>https://www.solidot.org/story?sid=81681</link></item>
+<item><title>refresh the page - TreeHugger</title><link>https://www.treehugger.com/#</link></item>
+<item><title>Senate passes Trump’s major policy bill with $150 billion for the DOD - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2025/07/01/senate-passes-trumps-major-policy-bill-with-150-billion-for-the-dod/</link></item>
+<item><title>Baykar vows to produce military drones at Piaggio sites in Italy - Defense News</title><link>https://www.defensenews.com/global/europe/2025/07/01/baykar-vows-to-produce-military-drones-at-piaggio-sites-in-italy/</link></item>
+<item><title>US vendors tussle over Norway’s maritime-surveillance drone business - Defense News</title><link>https://www.defensenews.com/global/europe/2025/07/01/us-vendors-tussle-over-norways-maritime-surveillance-drone-business/</link></item>
+<item><title>Military requests pulling 200 troops back from California protest duty - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2025/06/30/military-requests-pulling-200-troops-back-from-california-protest-duty/</link></item>
+<item><title>Pentagon awards $5 billion contract to speed up ship manufacturing - Defense News</title><link>https://www.defensenews.com/naval/2025/06/30/pentagon-awards-5-billion-contract-to-speed-up-ship-manufacturing/</link></item>
+<item><title>US Air Force uses leftover ICBM funds to revamp Qatar plane - Defense News</title><link>https://www.defensenews.com/pentagon/2025/06/30/us-air-force-uses-leftover-icbm-funds-to-revamp-qatar-plane/</link></item>
+<item><title>Navy destroyers intercepted Iranian missiles, service confirms - Defense News</title><link>https://www.defensenews.com/news/your-navy/2025/06/30/navy-destroyers-intercepted-iranian-missiles-service-confirms/</link></item>
+<item><title>Common Debit Card Myths — Money Minute - Defense News</title><link>https://www.defensenews.com/video/2025/06/30/common-debit-card-myths-money-minute/</link></item>
+<item><title>Missile Defense Agency’s FY26 budget targets homeland missile defense - Defense News</title><link>https://www.defensenews.com/pentagon/2025/06/30/missile-defense-agencys-fy26-budget-targets-homeland-missile-defense/</link></item>
+<item><title>How do you recruit for a cyber army of the near future? - Defense News</title><link>https://www.defensenews.com/video/2025/06/27/how-do-you-recruit-for-a-cyber-army-of-the-near-future/</link></item>
+<item><title>The evolving nature of the Army’s approach to artificial intelligence - Defense News</title><link>https://www.defensenews.com/video/2025/06/27/the-evolving-nature-of-the-armys-approach-to-artificial-intelligence/</link></item>
+<item><title>How data is helping the Army create a deadlier force - Defense News</title><link>https://www.defensenews.com/video/2025/06/27/how-data-is-helping-the-army-create-a-deadlier-force/</link></item>
+<item><title>Manning the digital front lines | Defense News Weekly Full Episode 6.28.25 - Defense News</title><link>https://www.defensenews.com/video/2025/06/27/manning-the-digital-front-lines-defense-news-weekly-full-episode-62825/</link></item>
+<item><title>European drone builders tinker with AI in navigation and targeting - Defense News</title><link>https://www.defensenews.com/global/europe/2025/06/30/european-drone-builders-tinker-with-ai-in-navigation-and-targeting/</link></item>
+<item><title>Kyiv plans exit from anti-landmine treaty as mines litter Ukraine - Defense News</title><link>https://www.defensenews.com/global/europe/2025/06/30/kyiv-plans-exit-from-anti-landmine-treaty-as-mines-litter-ukraine/</link></item>
+<item><title>India buys drones, air defense weapons following aerial Pakistan fight - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2025/06/30/india-buys-drones-air-defense-weapons-following-aerial-pakistan-fight/</link></item>
+<item><title>Australian airline Qantas reveals data theft impacting six million customers - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/02/qantas_data_theft/</link></item>
+<item><title>Figma files for an (A)IPO with prospectus that mentions AI 150+ times - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/01/figma_files_to_go_public/</link></item>
+<item><title>With OpenAI, there are no allegiances - just compute at all costs - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/01/openai_google_tpu/</link></item>
+<item><title>Microsoft pulls plug on generous Azure credit program for startups - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/01/microsoft_azure_startup/</link></item>
+<item><title>Cloudflare creates AI crawler tollbooth to pay publishers - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/01/cloudflare_creates_ai_crawler_toll/</link></item>
+<item><title>Microsoft admits to Intune forgetfulness - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/01/microsoft_intune_forgetfulness/</link></item>
+<item><title>Senate decides free rein for AI companies isn&amp;#39;t such a good thing - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/01/senate_passes_trumps_big_beastly/</link></item>
+<item><title>Chip design is a RISC-y business: Codasip puts itself up for sale - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/01/codasip_sale/</link></item>
+<item><title>Apple accuses former engineer of taking Vision Pro secrets to Snap - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/01/apple_accuses_exengineer_of_stealing/</link></item>
+<item><title>International Criminal Court swats away &amp;#39;sophisticated and targeted&amp;#39; cyberattack - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/01/international_criminal_court_cyberattack/</link></item>
+<item><title>Fedora 43 won&amp;#39;t drop 32-bit app support – or adopt Xlibre - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/01/fedora_43_i686_32bit/</link></item>
+<item><title>NASA gives Lunar Trailblazer a few more weeks to pick up the phone - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/01/nasa_lunar_trailblazer_lost/</link></item>
+<item><title>EU rattles its purse and AI datacenter builders come running - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/01/eu_shakes_its_purse_and/</link></item>
+<item><title>Microsoft Copilot joins ChatGPT at the feet of the mighty Atari 2600 Video Chess - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/01/microsoft_copilot_joins_chatgpt_at/</link></item>
+<item><title>Folks aren’t buying the PCs that US vendors stockpiled to dodge tariffs - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/01/pc_united_states_shipping_figs/</link></item>
+<item><title>Linus Torvalds hints Bcachefs may get dropped from the Linux kernel - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/01/bcachefs_may_get_dropped/</link></item>
+<item><title>People have empathy with AI… as long as they think it&amp;#39;s human - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/01/people_have_empathy_with_ai/</link></item>
+<item><title>Terrible tales of opsec oversights: How cybercrooks get themselves caught - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/01/terrible_tales_of_opsec_oversights/</link></item>
+<item><title>Critics blast Microsoft&amp;#39;s limited reprieve for those stuck on Windows 10 - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/01/windows_10_updates_criticism/</link></item>
+<item><title>A lot of product makers snub Right to Repair laws - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/01/right_to_repair_laws_manufacturers/</link></item>
+<item><title>Proton bashes Apple and joins antitrust suit that seeks to throw the App Store wide open - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/01/proton_lawsuit_apple/</link></item>
+<item><title>DRAM spot prices doubled last week - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/01/dram_spot_prices_surge/</link></item>
+<item><title>China successfully tests hypersonic aircraft, maybe at Mach 12 - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/01/china_successfully_tests_hypersonic_aircraft/</link></item>
+<item><title>Oracle just signed one mystery customer that will double its cloud revenue in 2028 - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/01/oracle_cloud_ai/</link></item>
+<item><title>US shuts down a string of North Korean IT worker scams - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/30/us_north_korea_workers/</link></item>
+<item><title>Want a job? Just put &amp;#39;AI skills&amp;#39; on your resume - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/30/ai_skills_job_postings_comptia/</link></item>
+<item><title>AIs have a favorite number, and it&amp;#39;s not 42 - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/30/ai_models_favorite_number_27/</link></item>
+<item><title>Google to buy power from fusion energy startup Commonwealth - if they can ever make it work - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/30/google_fusion_commonwealth/</link></item>
+<item><title>British IT worker sentenced to seven months after trashing company network - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/30/british_rogue_admin/</link></item>
+<item><title>Norwegian lotto mistakenly told thousands they were filthy rich after math error - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/30/norwegian_lotto_error/</link></item>
+<item><title>Scattered Spider crime spree takes flight as focus turns to aviation sector - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/30/scattered_spider_aviation/</link></item>
+<item><title>Northrop Grumman shows SpaceX doesn&amp;#39;t have a monopoly on explosions - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/30/northrop_grumman_test_anomaly/</link></item>
+<item><title>Mitch Kapor finally completes MIT master&amp;#39;s degree after 45-year detour - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/30/mitch_kapor_mba/</link></item>
+<item><title>VMware must support crucial Dutch govt agency as it migrates off the platform, judge rules - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/30/dutch_agency_wins_right_to/</link></item>
+<item><title>Sinaloa drug cartel hired a cybersnoop to identify and kill FBI informants - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/30/sinaloa_drug_cartel_hired_cybersnoop/</link></item>
+<item><title>Microsoft&amp;#39;s next Windows 11 update is more &amp;#39;enablement&amp;#39; than upgrade - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/30/microsoft_windows_11_25h2/</link></item>
+<item><title>Arm muscles into server market – but can&amp;#39;t wrestle control from x86 just yet - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/30/arm_server_shipments/</link></item>
+<item><title>Deutsche Bahn train hits 405 km/h without falling to bits - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/30/deutsche_bahn_test/</link></item>
+<item><title>Cloud lobby warns EU: Clamp down on water rules and we&amp;#39;ll evaporate - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/30/cispe_eu_water_resilience/</link></item>
+<item><title>Your browser has ad tech&amp;#39;s fingerprints all over it, but there&amp;#39;s a clean-up squad in town - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/30/opinion_browser/</link></item>
+<item><title>Junior sysadmin’s first lines of code set off alarms. His next lot crashed the company - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/30/who_me/</link></item>
+<item><title>Don&amp;#39;t pay for AI support failures, says Gradient Labs CEO - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/30/gradient_labs_ceo_ai_support_failure_interview/</link></item>
+<item><title>DoJ clears HPE to buy Juniper if it sells Instant On Wi-Fi and licenses some code - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/30/doj_approves_hpe_juniper_merger/</link></item>
+<item><title>China claims breakthroughs in classical and quantum computers - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/06/30/china_claims_breakthroughs_in_classical/</link></item>
+<item><title>How AI Is Proving Useful in New Materials Discovery for the 2nm Era - EETimes</title><link>https://www.eetimes.com/how-ai-is-proving-useful-in-new-materials-discovery-for-the-2nm-era/</link></item>
+<item><title>900% Price Hike Prompts Medical Device Manufacturer to Switch ERPs - EETimes</title><link>https://www.eetimes.com/900-price-hike-prompts-medical-device-manufacturer-to-switch-erps/</link></item>
+<item><title>Telink Semiconductor Launches ML7218 &amp; ML3219 Modules: A New Choice for Smart IoT with Low-Power Innovation - EETimes</title><link>https://www.eetimes.com/telink-semiconductor-launches-ml7218-ml3219-modules-a-new-choice-for-smart-iot-with-low-power-innovation/</link></item>
+<item><title>DAC 2025: Agentic AI In EDA Is Just Getting Started, And Chiplets Are All The Rage - EETimes</title><link>https://www.eetimes.com/dac-2025-agentic-ai-in-eda-is-just-getting-started-and-chiplets-are-all-the-rage/</link></item>
+<item><title>Quantum Sun Rises, Japan Gambit for Leadership - EETimes</title><link>https://www.eetimes.com/quantum-sun-rises-japan-gambit-for-leadership/</link></item>
+<item><title>A*STAR IME Launches World-First 200mm SiC Open R&amp;D Line - EETimes</title><link>https://www.eetimes.com/astar-ime-launches-world-first-200mm-sic-open-rd-line/</link></item>
+<item><title>Does the Semiconductor Industry Have a Perception Problem? - EETimes</title><link>https://www.eetimes.com/does-the-semiconductor-industry-have-a-perception-problem/</link></item>
+<item><title>Arm: Chiplets Can’t Deliver on TCO Without an Ecosystem - EETimes</title><link>https://www.eetimes.com/arm-chiplets-cant-deliver-on-tco-without-an-ecosystem/</link></item>
+<item><title>AI Clusters Spur Optical Connectivity - EETimes</title><link>https://www.eetimes.com/ai-clusters-spur-optical-connectivity/</link></item>
+<item><title>Rapidus, Siemens Join 2-nm Alliance Targeting 2027 Production - EETimes</title><link>https://www.eetimes.com/rapidus-siemens-join-2-nm-alliance-targeting-2027-production/</link></item>
+<item><title>Laptop Mag Is Shutting Down - Slashdot</title><link>https://hardware.slashdot.org/story/25/07/01/2133224/laptop-mag-is-shutting-down</link></item>
+<item><title>closure of long-running tech site AnandTech - Slashdot</title><link>https://news.slashdot.org/story/24/08/30/1235233/anandtech-shuts-down-after-27-year-run</link></item>
+<item><title>Apple Accuses Former Engineer of Taking Vision Pro Secrets To Snap - Slashdot</title><link>https://yro.slashdot.org/story/25/07/01/2128235/apple-accuses-former-engineer-of-taking-vision-pro-secrets-to-snap</link></item>
+<item><title>Tinder To Require Facial Recognition Check For New Users In California - Slashdot</title><link>https://yro.slashdot.org/story/25/07/01/2112208/tinder-to-require-facial-recognition-check-for-new-users-in-california</link></item>
+<item><title>Figma Files For IPO - Slashdot</title><link>https://slashdot.org/story/25/07/01/2058244/figma-files-for-ipo</link></item>
+<item><title>$20 billion acquisition by Adobe - Slashdot</title><link>https://slashdot.org/story/23/12/18/1317239/adobe-abandons-20-billion-acquisition-of-figma</link></item>
+<item><title>Xerox Buys Lexmark For $1.5 Billion As Print Industry Clings To Relevance - Slashdot</title><link>https://slashdot.org/story/25/07/01/2247221/xerox-buys-lexmark-for-15-billion-as-print-industry-clings-to-relevance</link></item>
+<item><title>AMC Warns Moviegoers To Expect &amp;#39;25-30 Minutes&amp;#39; of Ads and Trailers - Slashdot</title><link>https://entertainment.slashdot.org/story/25/07/01/2052226/amc-warns-moviegoers-to-expect-25-30-minutes-of-ads-and-trailers</link></item>
+<item><title>Amazon Deploys Its One Millionth Robot, Releases Generative AI Model - Slashdot</title><link>https://hardware.slashdot.org/story/25/07/01/2046242/amazon-deploys-its-one-millionth-robot-releases-generative-ai-model</link></item>
+<item><title>Landmark EU Tech Rules Holding Back Innovation, Google Says - Slashdot</title><link>https://tech.slashdot.org/story/25/07/01/1811254/landmark-eu-tech-rules-holding-back-innovation-google-says</link></item>
+<item><title>Tech Hobbyist Destroys 51 MicroSD Cards To Build Ultimate Performance Database - Slashdot</title><link>https://it.slashdot.org/story/25/07/01/155208/tech-hobbyist-destroys-51-microsd-cards-to-build-ultimate-performance-database</link></item>
+<item><title>AT&amp;T Now Lets Customers Lock Down Account To Prevent SIM Swapping Attacks - Slashdot</title><link>https://tech.slashdot.org/story/25/07/01/181213/att-now-lets-customers-lock-down-account-to-prevent-sim-swapping-attacks</link></item>
+<item><title>IT Worker Sentenced To Seven Months After Trashing Company Network - Slashdot</title><link>https://it.slashdot.org/story/25/07/01/1552216/it-worker-sentenced-to-seven-months-after-trashing-company-network</link></item>
+<item><title>AI is Now Screening Job Candidates Before Humans Ever See Them - Slashdot</title><link>https://slashdot.org/story/25/07/01/186240/ai-is-now-screening-job-candidates-before-humans-ever-see-them</link></item>
+<item><title>Cloudflare Flips AI Scraping Model With Pay-Per-Crawl System For Publishers - Slashdot</title><link>https://tech.slashdot.org/story/25/07/01/1745245/cloudflare-flips-ai-scraping-model-with-pay-per-crawl-system-for-publishers</link></item>
+<item><title>AI Arms Race Drives Engineer Pay To More Than $10 Million - Slashdot</title><link>https://tech.slashdot.org/story/25/07/01/1536223/ai-arms-race-drives-engineer-pay-to-more-than-10-million</link></item>
+<item><title>promised $100 million sign-on bonuses - Slashdot</title><link>https://tech.slashdot.org/story/25/06/18/0751230/altman-says-meta-targeting-openai-staff-with-100-million-bonuses-as-ai-race-intensifies</link></item>
+<item><title>Global Warming Is Speeding Up and the World Is Feeling the Effects - Slashdot</title><link>https://news.slashdot.org/story/25/07/01/164239/global-warming-is-speeding-up-and-the-world-is-feeling-the-effects</link></item>
+<item><title>In China, Coins and Banknotes Have All But Disappeared - Slashdot</title><link>https://slashdot.org/story/25/06/30/188259/in-china-coins-and-banknotes-have-all-but-disappeared?sbsrc=md</link></item>
+<item><title>&amp;#39;Space Is Hard. There Is No Excuse For Pretending It&amp;#39;s Easy&amp;#39; - Slashdot</title><link>https://science.slashdot.org/story/25/06/30/2249225/space-is-hard-there-is-no-excuse-for-pretending-its-easy?sbsrc=md</link></item>
+<item><title>In Last-Minute Move, Canada Rescinds Digital Services Tax, Restarts Negotiations - Slashdot</title><link>https://news.slashdot.org/story/25/06/30/0453227/in-last-minute-move-canada-rescinds-digital-services-tax-restarts-negotiations?sbsrc=md</link></item>
+<item><title>Windows User Base Shrinks By 400 Million In Three Years - Slashdot</title><link>https://tech.slashdot.org/story/25/06/30/2123239/windows-user-base-shrinks-by-400-million-in-three-years?sbsrc=md</link></item>
+<item><title>US Government Takes Down Major North Korean &amp;#39;Remote IT Workers&amp;#39; Operation - Slashdot</title><link>https://yro.slashdot.org/story/25/06/30/2236218/us-government-takes-down-major-north-korean-remote-it-workers-operation</link></item>
+<item><title>Apple Loses Bid To Dismiss US Smartphone Monopoly Case - Slashdot</title><link>https://apple.slashdot.org/story/25/06/30/204242/apple-loses-bid-to-dismiss-us-smartphone-monopoly-case</link></item>
+<item><title>U.S. Supreme Court Upholds Religious Objections To Contraception - Slashdot</title><link>https://science.slashdot.org/story/14/06/30/236241/us-supreme-court-upholds-religious-objections-to-contraception?sbsrc=thisday</link></item>
+<item><title>Google Protects Healthcare From Michael Moore - Slashdot</title><link>https://tech.slashdot.org/story/07/07/01/0126209/google-protects-healthcare-from-michael-moore?sbsrc=thisday</link></item>
+<item><title>Justice O&amp;#39;Connor Retiring - Slashdot</title><link>https://politics.slashdot.org/story/05/07/01/1753205/justice-oconnor-retiring?sbsrc=thisday</link></item>
+<item><title>Linux vs. Windows: What&amp;#39;s The Difference? - Slashdot</title><link>https://developers.slashdot.org/story/04/07/01/207235/linux-vs-windows-whats-the-difference?sbsrc=thisday</link></item>
+<item><title>Bill Gates On Linux - Slashdot</title><link>https://linux.slashdot.org/story/03/07/01/1440202/bill-gates-on-linux?sbsrc=thisday</link></item>
+<item><title>What’s the Difference Between Patriotism and Nationalism? - Mental Floss</title><link>https://www.mentalfloss.com/language/words/patriotism-vs-nationalism-whats-the-difference</link></item>
+<item><title>Partner Network Connect - Scotch.io</title><link>https://scotch.io/products/networking/partner-network-connect</link></item>
+<item><title>Hundreds of MCP Servers Expose AI Models to Abuse, RCE - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/servers/hundreds-of-mcp-servers-expose-ai-models-to-abuse-rce</link></item>
+<item><title>DigitalBridge Completes Yondr Group Acquisition - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/deals/digitalbridge-completes-yondr-group-acquisition</link></item>
+<item><title>Are Wooden Data Centers the Next Big Innovation in Tech Infrastructure? - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/sustainability/are-wooden-data-centers-the-next-big-innovation-in-tech-infrastructure-</link></item>
+<item><title>Comment: Texas’ New Large-Load Law is an Opportunity for Data Centers - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/texas-new-large-load-law-is-an-opportunity-for-data-centers</link></item>
+<item><title>Delhi Developer to Invest $2B on India’s Data Center Boom - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/investing/delhi-developer-to-invest-on-indias-data-center-boom</link></item>
+<item><title>What’s a Data Center Appliance, and Who Needs One? - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-hardware/what-s-a-data-center-appliance-and-who-needs-one-</link></item>
+<item><title>Crusoe, Redwood Partner on Data Center Powered by Used Batteries - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/crusoe-redwood-partner-on-data-center-powered-by-used-batteries</link></item>
+<item><title>Hyperscalers Will Command 60% of Global Data Center Capacity by 2030 – Report - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/hyperscalers/hyperscalers-will-command-60-of-global-data-center-capacity-by-2030-report</link></item>
+<item><title>Data Center Limits Will Hurt AI Boom, Alberta First Nations Say - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/regulations/data-center-limits-will-hurt-ai-boom-alberta-first-nations-say</link></item>
+<item><title>How to Select the Right Cloud GPU Instance for Deploying AI Models - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cloud/how-to-select-the-right-cloud-gpu-instance-for-deploying-ai-models</link></item>
+<item><title>How AI is Disrupting the Data Center Software Stack - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-software/how-ai-is-disrupting-the-data-center-software-stack</link></item>
+<item><title>Zoning and Land Use Considerations for Data Centers - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-site-selection/zoning-and-land-use-considerations-for-data-centers</link></item>
+<item><title>Three Mile Island Poised to Deliver Nuclear Power Ahead of Plan - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/three-mile-island-poised-to-deliver-nuclear-power-ahead-of-plan</link></item>
+<item><title>Could Aging Coal Plants Be Transformed into Renewable Data Center Energy Storage? - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/could-aging-coal-plants-be-transformed-into-renewable-data-center-energy-storage-</link></item>
+<item><title>China on Cusp of Seeing Over 100 DeepSeeks, Ex-Top Official Says - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/ai-data-centers/china-on-cusp-of-seeing-over-100-deepseeks-ex-top-official-says</link></item>
+<item><title>Singapore Data Centers: Pocket-Sized Powerhouse Primed for Growth - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-site-selection/singapore-data-centers-pocket-sized-powerhouse-primed-for-growth</link></item>
+<item><title>Data Center as a Service vs. Colocation: Key Similarities and Differences - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/colocation/data-center-as-a-service-vs-colocation-key-similarities-and-differences</link></item>
+<item><title>SASE Update: Why Enterprises are Reopening their Wallets - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cybersecurity/sase-update-why-enterprises-are-reopening-their-wallets</link></item>
+<item><title>Data Center Protective Coatings: The Hidden Drivers of Environmental Efficiency - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-hardware/data-center-protective-coatings-the-hidden-drivers-of-environmental-efficiency</link></item>
+<item><title>NTT Secures Backing for $16.3B Deal to Take Over AI Arm - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/deals/ntt-secures-backing-for-deal-to-take-over-ai-arm</link></item>
+<item><title>API Security: Aligning Technical Controls with Business Risk - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cybersecurity/api-security-aligning-technical-controls-with-business-risk</link></item>
+<item><title>Latin America’s Data Center Gold Rush Comes With Some Big Risks - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-site-selection/latin-americas-data-center-gold-rush-comes-with-some-big-risks</link></item>
+<item><title>Comment: The Data Center Space Race Has Begun - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/next-gen-data-centers/comment-the-data-center-space-race-has-begun</link></item>
+<item><title>Broadcom Unifies VMware Cloud Foundation in ‘Pivotal’ Release - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cloud/broadcom-unifies-vmware-cloud-foundation-in-pivotal-release</link></item>
+<item><title>Lazard: Solar Beats Gas Pricing for AI Power Needs - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/lazard-solar-beats-gas-pricing-for-ai-power-needs</link></item>
+<item><title>Architecture Firm Unveils ‘First Data Center Designed Entirely by AI’ - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/ai-data-centers/architecture-firm-unveils-first-data-center-designed-entirely-by-ai-</link></item>
+<item><title>Why the MENA Region Could Lead the Next Phase of Data Center Growth - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-site-selection/why-the-mena-region-could-lead-the-next-phase-of-data-center-growth</link></item>
+<item><title>Amazon Plans $13B Investment in Australia Data Centers - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-site-selection/amazon-plans-13-investment-in-australia-data-centers</link></item>
+<item><title>Cloud Exodus: When to Know It&amp;#39;s Time to Repatriate Your Workloads - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cloud/cloud-exodus-when-to-know-it-s-time-to-repatriate-your-workloads</link></item>
+<item><title>Data Centers Pose Threat to Electric Grids, US Regulator Says - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/data-centers-pose-threat-to-electric-grids-us-regulator-says</link></item>
+<item><title>Jupiter Supercomputer Now Among Top Five Fastest in the World - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/supercomputers/jupiter-supercomputer-now-among-top-five-fastest-in-the-world</link></item>
+<item><title>AMD Bolsters AI Chips and Software to Further Challenge Nvidia - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-chips/amd-bolsters-ai-chips-and-software-to-further-challenge-nvidia</link></item>
+<item><title>DayOne Gets $3.5B Funding for Malaysia Data Centers - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/deals/dayone-gets-3-5b-funding-for-malaysia-data-centers</link></item>
+<item><title>Data Center Life Cycle Assessments: A New Sustainability Standard - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-construction/data-center-life-cycle-assessments-the-new-sustainability-standard</link></item>
+<item><title>Apple’s Data Center Spending Still MIA - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-construction/apple-s-data-center-spending-still-mia</link></item>
+<item><title>Advancing Data Center Construction 2025 - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/events/advancing-data-center-construction-2025</link></item>
+<item><title>Nvidia CEO Sees Tenfold Boost to Europe’s AI Computing Power - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-chips/nvidia-ceo-sees-tenfold-boost-to-europe-s-ai-computing-power</link></item>
+<item><title>Beyond the Paycheck: Where IT Operations Careers Outshine Software Development - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-career-development/beyond-the-paycheck-why-it-operations-careers-outshine-software-development</link></item>
+<item><title>Why Prefabricated Concrete Is Ideal for Data Center Construction - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-construction/why-prefabricated-concrete-is-ideal-for-data-center-construction</link></item>
+<item><title>Cisco Rolls Out Data Center Solutions to Power AI - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/networking/cisco-rolls-out-data-center-solutions-to-power-ai</link></item>
+<item><title>Data Center Knowledge Wins National Azbee Award - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/business/data-center-knowledge-wins-2025-national-azbee-award</link></item>
+<item><title>AI Infrastructure Trade Roars Back as Tech Giants Boost Spending - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/investing/ai-infrastructure-trade-roars-back-as-tech-giants-boost-spending</link></item>
+<item><title>AI Infrastructure: When to Choose Cloud GPUs vs. Private Data Center GPUs - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-chips/ai-infrastructure-when-to-choose-cloud-gpus-vs-private-data-center-gpus</link></item>
+<item><title>EU Unveils Plan to Ease Water Shortages and Curb Data Center Use - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/sustainability/eu-unveils-plan-to-ease-water-shortages-and-curb-data-center-use</link></item>
+<item><title>Woke Delusions - Law &amp; Liberty</title><link>https://lawliberty.org/podcast/woke-delusions/</link></item>
+<item><title>The Path to Entitlement Reform - Law &amp; Liberty</title><link>https://lawliberty.org/forum/the-path-to-entitlement-reform/</link></item>
+<item><title>Why DOGE Failed - Law &amp; Liberty</title><link>https://lawliberty.org/why-doge-failed/</link></item>
+<item><title>Understanding the Commercial Republic - Law &amp; Liberty</title><link>https://lawliberty.org/book-review/understanding-the-commercial-republic/</link></item>
+<item><title>Presidents, Bureaucracy, and the Real Threat to Democracy - Law &amp; Liberty</title><link>https://lawliberty.org/forum/presidents-bureaucracy-and-the-real-threat-to-democracy/</link></item>
+<item><title>How Many Millionaires Are in the U.S.? More Than Any Other Country - HowStuffWorks</title><link>https://money.howstuffworks.com/personal-finance/financial-planning/how-many-millionaires-in-the-us.htm</link></item>
+<item><title>10 Purple Gemstones for Seriously Regal Vibes - HowStuffWorks</title><link>https://science.howstuffworks.com/environmental/earth/geology/purple-gemstones.htm</link></item>
+<item><title>Skate Fish vs. Stingray: Comparing Bottom-dwelling Fish - HowStuffWorks</title><link>https://animals.howstuffworks.com/fish/skate-fish-vs-stingray.htm</link></item>
+<item><title>15 Types of Dresses for Every Lifestyle and Aesthetic - HowStuffWorks</title><link>https://lifestyle.howstuffworks.com/style/fashion/body-type/types-of-dresses.htm</link></item>
+<item><title>The Turkish Angora Cat Is Playful, Loyal, and Simply Stunning - HowStuffWorks</title><link>https://animals.howstuffworks.com/pets/turkish-angora-cat.htm</link></item>
+<item><title>Mountain Lion vs. Bobcat: A Big Cat Showdown - HowStuffWorks</title><link>https://animals.howstuffworks.com/mammals/mountain-lion-vs-bobcat.htm</link></item>
+<item><title>The Youngest Oscar Winner and 9 More Young Record-Holders - HowStuffWorks</title><link>https://entertainment.howstuffworks.com/youngest-oscar-winner.htm</link></item>
+<item><title>15 Green Gemstones to Class Up Your Accessory Game - HowStuffWorks</title><link>https://science.howstuffworks.com/environmental/earth/geology/green-gemstones.htm</link></item>
+<item><title>Axolotl Care: Providing the Perfect Home for Pet Amphibians - HowStuffWorks</title><link>https://animals.howstuffworks.com/pets/otherpets/axolotl-care.htm</link></item>
+<item><title>15 Types of Beer to Order at the Pub - HowStuffWorks</title><link>https://recipes.howstuffworks.com/types-of-beer.htm</link></item>
+<item><title>Rome’s greatest sleepover? - Wallpaper*</title><link>https://www.wallpaper.com/travel/a-night-at-villa-medici-rome-review</link></item>
+<item><title>Aston Martin’s Tokyo townhouse - Wallpaper*</title><link>https://www.wallpaper.com/architecture/residential/aston-martin-tokyo-townhouse</link></item>
+<item><title>Paris Fashion Week highlights - Wallpaper*</title><link>https://www.wallpaper.com/fashion-beauty/paris-fashion-week-mens-ss-2026-highlights-review</link></item>
+<item><title>Eileen Gray: ultimate guide - Wallpaper*</title><link>https://www.wallpaper.com/architecture/eileen-gray-guide</link></item>
+<item><title>Living Colour Celebrates 35 Years of ‘Times Up’ in a Powerful NPR Tiny Desk Concert - Laughing Squid</title><link>https://laughingsquid.com/living-colour-npr-tiny-desk-concert/</link></item>
+<item><title>The Enchanting Origins of Magical Words, Incantations and Affirmations - Laughing Squid</title><link>https://laughingsquid.com/magical-words-origins/</link></item>
+<item><title>Engineer Builds Increasingly Complex LEGO Vehicles to Pop Increasingly Protected Balloons - Laughing Squid</title><link>https://laughingsquid.com/lego-vehicles-popping-balloons/</link></item>
+<item><title>Humanoid Robots Compete in 3-on-3 Soccer Match at Beijing’s First Robotic Soccer Tournament - Laughing Squid</title><link>https://laughingsquid.com/humanoid-robot-soccer-tournament/</link></item>
+<item><title>Highly Intelligent Cat Communicates With His Human Verbally and With a Talking Button Board - Laughing Squid</title><link>https://laughingsquid.com/cat-communicates-using-button-board/</link></item>
+<item><title>Middle-Aged Dad Jam Band Performs a Raucous Cover of the B-52’s Song ‘Love Shack’ - Laughing Squid</title><link>https://laughingsquid.com/middle-aged-dad-jam-band-love-shack/</link></item>
+<item><title>PennyFarming – An Incredibly Unique Penny-Farthing Style Motorcycle Made From Tractor Parts - Laughing Squid</title><link>https://laughingsquid.com/penny-farthing-tractor-motorcycle/</link></item>
+<item><title>Why Cats Shouldn’t Drink Milk - Laughing Squid</title><link>https://laughingsquid.com/why-cats-should-not-drink-milk/</link></item>
+<item><title>Rambunctious Chicken With a Backward Leg Learns to Walk Again After Corrective Surgery - Laughing Squid</title><link>https://laughingsquid.com/chicken-with-backward-leg-walks-again/</link></item>
+<item><title>The Most Expensive Music Videos of All Time - Laughing Squid</title><link>https://laughingsquid.com/most-expensive-music-videos/</link></item>
+<item><title>How Certain Yiddish Words Became Incorporated Into Everyday English - Laughing Squid</title><link>https://laughingsquid.com/yiddish-to-english/</link></item>
+<item><title>Introducing the Heroku AI Platform as a Service (AI PaaS) - Heroku Blog</title><link>https://www.heroku.com/blog/introducing-the-heroku-ai-platform-as-a-service/</link></item>
+<item><title>Elevate Your Salesforce Consulting Practice with Heroku - Heroku Blog</title><link>https://www.heroku.com/blog/elevate-salesforce-consulting-practice-with-heroku/</link></item>
+<item><title>Heroku AI: Heroku Remote MCP Server - Heroku Blog</title><link>https://www.heroku.com/blog/heroku-remote-mcp-server/</link></item>
+<item><title>Summary of Heroku June 10 Outage - Heroku Blog</title><link>https://www.heroku.com/blog/summary-of-june-10-outage/</link></item>
+<item><title>Local Speed, Smooth Deploys: Heroku Adds Support for uv - Heroku Blog</title><link>https://www.heroku.com/blog/local-speed-smooth-deploys-heroku-adds-support-uv/</link></item>
+<item><title>Simplifying JVM App Development with Heroku’s Buildpack Magic - Heroku Blog</title><link>https://www.heroku.com/blog/simplifying-jvm-app-development-herokus-buildpack-magic/</link></item>
+<item><title>Heroku AppLink Pilot: The Shortest Path to Bring Your Code to Agentforce - Heroku Blog</title><link>https://www.heroku.com/blog/heroku-applink-pilot-integrate-your-apps/</link></item>
+<item><title>Expanded Memory and Compute with Heroku’s New Larger Dynos - Heroku Blog</title><link>https://www.heroku.com/blog/heroku-larger-dyno-types/</link></item>
+<item><title>Heroku Feedback and News – Q1 Edition - Heroku Blog</title><link>https://www.heroku.com/blog/heroku-feedback-news-2023-q1/</link></item>
+<item><title>Heroku Pricing and Our New Low-Cost Plans - Heroku Blog</title><link>https://www.heroku.com/blog/new-low-cost-plans/</link></item>
+<item><title>We’ve Heard Your Feedback - Heroku Blog</title><link>https://www.heroku.com/blog/we-heard-your-feedback/</link></item>
+<item><title>Enhancing Security – MFA with More Options, Now Available for All Heroku Customers - Heroku Blog</title><link>https://www.heroku.com/blog/heroku-mfa-options/</link></item>
+<item><title>Coding at the Speed of a Pandemic: How Kilterset Delivered Apps That Test the Test Kits - Heroku Blog</title><link>https://www.heroku.com/blog/coding-at-the-speed-of-a-pandemic/</link></item>
+<item><title>Let’s Debug a Node.js Application - Heroku Blog</title><link>https://www.heroku.com/blog/debug-node-applications/</link></item>
+<item><title>Electric’s Advice During Uncertain Times: Invest in Your Culture - Heroku Blog</title><link>https://www.heroku.com/blog/invest-in-your-culture/</link></item>
+<item><title>From Project to Productionized with Python - Heroku Blog</title><link>https://www.heroku.com/blog/from-project-to-productionized-python/</link></item>
+<item><title>Announcing New Review Apps: Expanded Options for Greater Control, Automation, and Easier Access - Heroku Blog</title><link>https://www.heroku.com/blog/heroku-new-review-apps/</link></item>
+<item><title>Heroku Shield for Redis Is Now Generally Available - Heroku Blog</title><link>https://www.heroku.com/blog/announcing-shield-redis/</link></item>
+<item><title>161 Lives Saved (and Counting): Team Heroku Steps Up to Help Feed Malnourished Kids - Heroku Blog</title><link>https://www.heroku.com/blog/team-heroku-steps-up/</link></item>
+<item><title>Climbing Up The Walls:  (Not) Remotely Business As Usual - Heroku Blog</title><link>https://www.heroku.com/blog/climbing-up-the-walls/</link></item>
+<item><title>Bring Your Own Key for Heroku Managed Data Services Is Now Generally Available - Heroku Blog</title><link>https://www.heroku.com/blog/heroku-byok/</link></item>
+<item><title>A True Win-Win: How Being More Active Can Help Fight Malnutrition - Heroku Blog</title><link>https://www.heroku.com/blog/be-more-active-fight-malnutrition/</link></item>
+<item><title>Evolving Alongside your Tech Stack - Heroku Blog</title><link>https://www.heroku.com/blog/evolving-alongside-tech-stack/</link></item>
+<item><title>Building and Scaling a Global Chatbot using Heroku + Terraform - Heroku Blog</title><link>https://www.heroku.com/blog/chatbots-with-heroku-terraform/</link></item>
+<item><title>Impending Vroom — How Ruckit Will Modernize Construction Right in the Nick of Time - Heroku Blog</title><link>https://www.heroku.com/blog/modernizing-construction/</link></item>
+<item><title>“Do I Qualify?” And Other Questions Imposters Must Ask Themselves - Heroku Blog</title><link>https://www.heroku.com/blog/questions-imposters-must-ask-themselves/</link></item>
+<item><title>Building with Web Components - Heroku Blog</title><link>https://www.heroku.com/blog/building-with-web-components/</link></item>
+<item><title>Bringing Mindfulness to Work - Heroku Blog</title><link>https://www.heroku.com/blog/bringing-mindfulness-to-work/</link></item>
+<item><title>Join us for a Live Q&amp;A Chat with Salesforce Product Managers - Heroku Blog</title><link>https://www.heroku.com/blog/salesforce-platform-q-and-a/</link></item>
+<item><title>Using Research Grants to Foster Innovation - Heroku Blog</title><link>https://www.heroku.com/blog/research-grants/</link></item>
+<item><title>PostgreSQL 12 Generally Available on Heroku - Heroku Blog</title><link>https://www.heroku.com/blog/posgtresql-12/</link></item>
+<item><title>Chrome’s Changes Could Break Your App: Prepare for SameSite Cookie Updates - Heroku Blog</title><link>https://www.heroku.com/blog/chrome-changes-samesite-cookie/</link></item>
+<item><title>Terrier: An Open-Source Tool for Identifying and Analyzing Container and Image Components - Heroku Blog</title><link>https://www.heroku.com/blog/terrier-open-source-identifying-analyzing-containers/</link></item>
+<item><title>Google&amp;#39;s Data Center Energy Use Doubled In 4 Years - Slashdot</title><link>https://hardware.slashdot.org/story/25/07/01/221237/googles-data-center-energy-use-doubled-in-4-years</link></item>
+<item><title>Partner Network Connect - DigitalOcean</title><link>https://www.digitalocean.com/products/networking/partner-network-connect</link></item>
 </channel></rss>

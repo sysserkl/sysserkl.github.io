@@ -782,16 +782,15 @@ function diff_all_offline_file_browser(){
         disk_category_list_global.push([diskname1,list_t[blxl],diskname2,list_t[blxl+1]]);
         if (list_diff1.length==0 && list_diff2.length==0){continue;}
         
-        var str_t='';
         if (list_diff1.length>0){
             list_diff1.sort();
-            str_t=str_t+'<h2>'+diskname1+' '+list_t[blxl]+' 拥有但 '+diskname2+' '+list_t[blxl+1]+' 不存在</h2>'+array_2_li_b(list_diff1);
+            var str_t='<h2>'+diskname1+' '+list_t[blxl]+' 拥有但 '+diskname2+' '+list_t[blxl+1]+' 不存在</h2>'+array_2_li_b(list_diff1);
+            bljg.push(str_t);
         }
+        
         if (list_diff2.length>0){
             list_diff2.sort();
-            str_t=str_t+'<h2>'+diskname2+' '+list_t[blxl+1]+' 拥有但 '+diskname1+' '+list_t[blxl]+' 不存在</h2>'+array_2_li_b(list_diff2);    
-        }
-        if (str_t!==''){
+            var str_t='<h2>'+diskname2+' '+list_t[blxl+1]+' 拥有但 '+diskname1+' '+list_t[blxl]+' 不存在</h2>'+array_2_li_b(list_diff2);    
             bljg.push(str_t);
         }
     }
@@ -803,6 +802,8 @@ function diff_all_offline_file_browser(){
             bljg.push(str_t);
         }
     }
+    
+    bljg.sort();
     
     var odiv=document.getElementById('div_statistics');
     odiv.innerHTML='<p>过滤：<input type="text" id="input_disk_category" onkeyup="if (event.key==\'Enter\'){disk_category_offline_file_browser();}" /></p><table id="table_disk_category" border=1></table>'+bljg.join('\n')+'<p>'+close_button_b('div_statistics','none')+'</p>\n';
