@@ -181,10 +181,10 @@ function wikiuploads_count_notepad(){
     var otextarea=document.getElementById('textarea_export_notepad');
     if (!otextarea){return;}
     var blstr=otextarea.value;
-    var list_t=blstr.match(/^.*{{wikiuploads}}.*$/mg) || [];
-    list_t.sort();
+    var attach_list=blstr.match(/^.*{{wikiuploads}}.*$/mg) || [];
+    attach_list.sort();
     var ext_dict={};
-    for (let item of list_t){
+    for (let item of attach_list){
         let blext=file_path_name_b(item)[2];
         if (ext_dict['e_'+blext]==undefined){
             ext_dict['e_'+blext]=0;
@@ -194,7 +194,14 @@ function wikiuploads_count_notepad(){
     
     ext_dict=object2array_b(ext_dict,true,2);
     ext_dict.sort();
-    return '<h4>附件列表('+list_t.length+')</h4>'+array_2_li_b(list_t)+'<h4>扩展名统计('+ext_dict.length+')</h4>'+array_2_li_b(ext_dict);
+    
+    var title_list=blstr.match(/^=== \[.*\] ===/mg) || [];
+    var without_date=[];
+    for (let one_title of title_list){
+        if (one_title.match(/^=== \[http[^\s]+ \d{8} \| .*\] ===/)){continue;}
+        without_date.push(one_title);
+    }
+    return '<h4>附件列表('+attach_list.length+')</h4>'+array_2_li_b(attach_list)+'<h4>扩展名统计('+ext_dict.length+')</h4>'+array_2_li_b(ext_dict)+'<h4>无日期标题('+without_date.length+')</h4>'+array_2_li_b(without_date);
 }
 
 function textarea_info_count_notepad(ospan=false,otextarea=false){
