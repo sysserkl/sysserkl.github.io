@@ -3204,7 +3204,7 @@ function standalone_search_funs_b(cstitle='Search Standalone',cscontent='',diy_f
         }
     }
     //-----------------------
-    var fns=['ismobile_b','css_root_style_b','css_root_size_b','style_generate_b','str_reg_search_b','str_reg_check_b','page_one_b','page_prev_next_b','page_location_b','page_remove_dot_b','page_combination_b','mouseover_mouseout_oblong_span_b','highlight_obj_b','highlight_oblong_span_b','highlight_color_b'];
+    var fns=['ismobile_b','css_root_style_b','css_root_size_b','style_generate_b','str_reg_search_b','str_reg_check_b','page_one_b','page_p_style_b','page_prev_next_b','page_location_b','page_remove_dot_b','page_combination_b','mouseover_mouseout_oblong_span_b','highlight_obj_b','highlight_oblong_span_b','highlight_color_b'];
 
     fns=array_union_b(fns,diy_fn_list,false,true);
     
