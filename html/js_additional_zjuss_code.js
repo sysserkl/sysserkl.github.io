@@ -25,9 +25,9 @@ function menu_more_zjuss(){
     '<a href="https://www.zy91.com/department/doctor_list" onclick="'+str_t+'" target=_blank>浙一</a>',
     '<a href="https://www.z2hospital.com/doct.html" onclick="'+str_t+'" target=_blank>浙二</a>',    
     '<a href="https://www.srrsh.com/expertList/" onclick="'+str_t+'" target=_blank>邵逸夫</a>',
+    '<a href="https://www.zjuss.cn/experts" onclick="'+str_t+'" target=_blank>省妇保</a>',
     '<a href="https://www.zjuss.cn/experts" onclick="'+str_t+'" target=_blank>浙大口腔</a>',    
     '<span class="span_menu" onclick="'+str_t+'surname_zjuss();">当前条件姓氏统计</span>',
-    
     ];
     return klmenu_b(klmenu1,'🦷','12rem','1rem','1rem','30rem');
 }
