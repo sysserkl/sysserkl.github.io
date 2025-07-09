@@ -15,6 +15,7 @@ function menu_more_kltxt_klwiki_en2(){
     ['page页面第一个出现的稀有旧单词','first_rare_old_words_kltxt_klwiki_en2();',true],
     ['&批量查找','first_rare_old_words_kltxt_klwiki_en2(true);',true],    
     ['&random','first_rare_old_words_kltxt_klwiki_en2(true,true);',true],    
+    ['&10','first_rare_old_words_kltxt_klwiki_en2(true,true,10);',true],    
 
     ];    
     klmenu1.push(menu_container_b(str_t,group_list,''));
@@ -41,7 +42,7 @@ function menu_more_kltxt_klwiki_en2(){
     ];    
     klmenu1.push(menu_container_b(str_t,group_list,''));
     
-    var blstr=klmenu_b(klmenu1,'🇬🇧','28rem','1rem','1rem','30rem');
+    var blstr=klmenu_b(klmenu1,'🇬🇧','30rem','1rem','1rem','30rem');
     ospan.outerHTML=blstr;
 }
 
@@ -140,7 +141,7 @@ function rare_words_kltxt_klwiki_en2(run_fn=false){
     txtsearch_kltxt_b('\\(-[^\\(\\)]+\\)$ \\s-[^\\(\\)]+\\)$(:r)',-1,-1,true,run_fn); //-可能出现在(后或空格后 - 保留注释
 }
 
-function first_rare_old_words_kltxt_klwiki_en2(batch_search=false,israndom=false){
+function first_rare_old_words_kltxt_klwiki_en2(batch_search=false,israndom=false,csmax=-1){
     var t0 = performance.now();
     var result_t=new Set();
     var selected_rows=[];
@@ -175,22 +176,31 @@ function first_rare_old_words_kltxt_klwiki_en2(batch_search=false,israndom=false
         }
         //如果遍历每一行，获取 稀有单词 列表，可能很慢 - 保留注释
         
-        if (result_t.size>blmax){break;}
+        //if (result_t.size>blmax){break;}
     }
+    
+    result_t=Array.from(result_t);
+    if (csmax>0){
+        if (israndom){  //再次随机排序 - 保留注释
+            result_t.sort(randomsort_b);
+            result_t=result_t.slice(0,csmax);
+        }
+    }
+    
     en_word_temp_get_b();
 
     if (batch_search){
         var run_fn=function (){
             rare_enwords_search_kltxt_b(true,true,false,false,true);
         };
-        batch_search_result_kltxt_klwiki_en2(Array.from(result_t).join('\n'),[],false,run_fn);
+        batch_search_result_kltxt_klwiki_en2(result_t.join('\n'),[],false,run_fn);
     } else {
         lines_2_html_kltxt_b(selected_rows);
         render_html_kltxt_b(result_t);    
         menu_insert_kltxt_b(1);
         
         var button='<p>'+close_button_b('divhtml2','')+'</p>';
-        document.getElementById('divhtml2').innerHTML='<div style="margin:2rem;"><h4>'+result_t.size+'</h4>'+enwords_js_wiki_textarea_b(result_t,'str')+button+'</div>';
+        document.getElementById('divhtml2').innerHTML='<div style="margin:2rem;"><h4>'+result_t.length+'</h4>'+enwords_js_wiki_textarea_b(result_t,'str')+button+'</div>';
     }
 
     console.log('first_rare_old_words_kltxt_klwiki_en2() 费时：'+(performance.now() - t0) + ' milliseconds');
