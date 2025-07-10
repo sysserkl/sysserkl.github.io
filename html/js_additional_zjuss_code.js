@@ -28,8 +28,10 @@ function menu_more_zjuss(){
     '<a href="https://www.zjuss.cn/experts" onclick="'+str_t+'" target=_blank>省妇保</a>',
     '<a href="https://www.zjuss.cn/experts" onclick="'+str_t+'" target=_blank>浙大口腔</a>',    
     '<span class="span_menu" onclick="'+str_t+'surname_zjuss();">当前条件姓氏统计</span>',
+    '<span class="span_menu" onclick="'+str_t+'same_name_zjuss();">同一医院内相同名称的医生</span>',
+    '<span class="span_menu" onclick="'+str_t+'same_content_zjuss();">简介相同的医生</span>',
     ];
-    return klmenu_b(klmenu1,'🦷','12rem','1rem','1rem','30rem');
+    return klmenu_b(klmenu1,'🦷','16rem','1rem','1rem','30rem');
 }
 
 function surname_zjuss(){
@@ -45,8 +47,47 @@ function surname_zjuss(){
     surname_dict=object2array_b(surname_dict,true,2);
     surname_dict.sort(function (a,b){return zh_sort_b(a,b,false,0);});
     surname_dict.sort(function (a,b){return a[1]>b[1]?-1:1;});
-    
+
+    var blbutton='<p>'+close_button_b('div_status_common','','aclick')+'</p>';
+
     var odiv=document.getElementById('div_status_common');
-    odiv.innerHTML=array_2_li_b(surname_dict);
+    odiv.innerHTML=array_2_li_b(surname_dict)+blbutton;
     odiv.scrollIntoView();
+}
+
+function same_name_zjuss(){
+    var name_set=new Set();
+    for (let item of zjuss_expert_global){
+        let blname=item[1].match(/>(.*?)_\d+<\/a>/) || ['',''];
+        if (blname[0]!==''){
+            //blname 形如：[ ">陈佳琦_2</a>", "陈佳琦" ] - 保留注释
+            name_set.add(blname[1]);
+        }
+    }
+    
+    document.getElementById('input_search').value='>('+Array.from(name_set).join('|')+')(_\\d+)?<';
+    search_common();
+}
+
+function same_content_zjuss(){
+    var content_list=[];
+    for (let item of zjuss_expert_global){
+        content_list.push([item[1],item[2]]);
+    }
+    content_list.sort(function (a,b){return a[1]>b[1]?-1:1;});
+    
+    var name_set=new Set();
+    for (let blxl=1,lent=content_list.length;blxl<lent;blxl++){
+        if (content_list[blxl][1]==content_list[blxl-1][1]){
+            let blname=content_list[blxl][0].match(/>(.*?)(_\d+)?<\/a>/) || ['','',''];
+            //blname 形如：[ ">周炯_2</a>", "周炯", "_2" ] 或 [ ">周庆芳</a>", "周庆芳", undefined ] - 保留注释
+            name_set.add(blname[1]);
+            
+            blname=content_list[blxl-1][0].match(/>(.*?)(_\d+)?<\/a>/) || ['','',''];
+            name_set.add(blname[1]);
+        }
+    }
+    
+    document.getElementById('input_search').value='>('+Array.from(name_set).join('|')+')(_\\d+)?<';
+    search_common();
 }

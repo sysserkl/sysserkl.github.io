@@ -1961,6 +1961,7 @@ var en_sentence_count_global=[
 "moonlet",
 "mopboard",
 "mophead",
+"more\'n",
 "moron",
 "morpheme",
 "morphinic",

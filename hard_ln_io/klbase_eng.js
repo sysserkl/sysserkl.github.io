@@ -1647,7 +1647,7 @@ function enwords_lines_2_js_array_b(aword,emoji_list,three_lines=false){
 function enwords_different_types_div_b(cswlist,add_form=false,textarea_id='',textarea_name='',button_type='',more_buttons=''){
     var blstr='<p>';
     blstr=blstr+'<select onchange="enwords_different_types_textarea_b(this);">';
-    var type_names=['','asterisk','cut','js','temp','wiki','reg','space','rare_words','filter','group'];
+    var type_names=['','asterisk','cut','js','temp','wiki','reg','space','rare_words','filter','group','random_sort','switch with the first textarea'];
     type_names.sort();
     for (let item of type_names){
         blstr=blstr+'<option>'+item+'</option>\n';
@@ -1747,10 +1747,14 @@ function enwords_list_2_reg_b(cslist,delimiter='b'){
 
 function enwords_different_types_textarea_b(oselect){
     var ocontainer=oselect.parentNode.parentNode;
-    var raw_list=ocontainer.querySelector('textarea.textarea_enwords_raw_types').value.trim().split('\n');
+    var oraw_textarea=ocontainer.querySelector('textarea.textarea_enwords_raw_types');
+    var raw_str=oraw_textarea.value.trim();
+    var raw_list=raw_str.split('\n');
+    
     var odiv=ocontainer.querySelector('div.div_textarea_enwords_different_types');
     var one_textarea=ocontainer.querySelector('input.input_enwords_different_types_one_textarea').checked;    
     var remove_emoji=ocontainer.querySelector('input.input_enwords_different_types_remove_emoji').checked;
+    
     var bljg='';
     switch (oselect.value){
         case 'asterisk':
@@ -1805,8 +1809,21 @@ function enwords_different_types_textarea_b(oselect){
             bljg='    var rare_words=new Set(['+result_t.join(',')+']); //'+today_str_b('dt')+' //fn_in_one_line_content';
             bljg='<br /><textarea style="height:3rem;" onclick="this.select();document.execCommand(\'copy\');">'+bljg+'</textarea>';        
             break;
+        case 'random_sort':
+            var result_t=[].concat(raw_list);
+            result_t.sort(randomsort_b);
+            bljg='<br /><textarea style="height:3rem;" onclick="this.select();document.execCommand(\'copy\');">'+result_t.join('\n')+'</textarea>';
+            break;
+        case 'switch with the first textarea':
+            osecond_textarea=odiv.querySelector('textarea');
+            if (osecond_textarea){
+                oraw_textarea.value=osecond_textarea.value;
+                osecond_textarea.value=raw_str;
+                bljg=false;
+            }
+            break;
         case 'filter':
-            var blkey=prompt('输入筛选关键词，如何(,,\\d+$(:r))');
+            var blkey=prompt('输入筛选关键词，如(,,\\d+$(:r))');
             if (blkey==null){
                 bljg='';
             } else {
@@ -1839,7 +1856,10 @@ function enwords_different_types_textarea_b(oselect){
             }
             break;
     }
-    odiv.innerHTML=bljg;
+    
+    if (bljg!==false){
+        odiv.innerHTML=bljg;
+    }
 }
 
 function enwords_js_type_words_b(cswlist,onetextarea=false,remove_emoji=false,three_lines=false){
