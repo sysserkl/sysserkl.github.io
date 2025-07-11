@@ -8,395 +8,157 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Thu, 10 Jul 2025 10:05:34 +0800</lastBuildDate>
-<item><title>Marital Status Shifts in the United States - FlowingData</title><link>https://flowingdata.com/2025/07/09/marital-status-shifts-in-the-united-states/</link></item>
-<item><title>Studying the why behind the everyday, like coffee stains - FlowingData</title><link>https://flowingdata.com/2025/07/08/studying-the-why-behind-the-everyday-like-coffee-stains/</link></item>
-<item><title>The Pull of Intergenerational Justice - Law &amp; Liberty</title><link>https://lawliberty.org/forum/the-pull-of-intergenerational-justice/</link></item>
-<item><title>A Victory for Religious Liberty - Law &amp; Liberty</title><link>https://lawliberty.org/a-victory-for-religious-liberty/</link></item>
-<item><title>Nondelegation Doctrine in Limbo - Law &amp; Liberty</title><link>https://lawliberty.org/nondelegation-doctrine-in-limbo/</link></item>
-<item><title>The Architecture of Arrogance - Law &amp; Liberty</title><link>https://lawliberty.org/the-architecture-of-arrogance/</link></item>
-<item><title>Conceived in Liberty, Born in War - Law &amp; Liberty</title><link>https://lawliberty.org/book-review/conceived-in-liberty-born-in-war/</link></item>
-<item><title>张维迎：未来的本质——人工智能为 - 爱思想</title><link>https://www.aisixiang.com/data/164609.html</link></item>
-<item><title>金民卿：全面抗战时期中国共产党的 - 爱思想</title><link>https://www.aisixiang.com/data/164606.html</link></item>
-<item><title>李宏图：如何为“全球”构建秩序— - 爱思想</title><link>https://www.aisixiang.com/data/164590.html</link></item>
-<item><title>万勇 牟振宇：近代上海城市空间形 - 爱思想</title><link>https://www.aisixiang.com/data/164600.html</link></item>
-<item><title>莫砺锋：简论中华文化的诗性之美 - 爱思想</title><link>https://www.aisixiang.com/data/164615.html</link></item>
-<item><title>孙利军：为培养国际传播人才凝心铸 - 爱思想</title><link>https://www.aisixiang.com/data/164617.html</link></item>
-<item><title>林来梵：中国宪法中的“文明”国家 - 爱思想</title><link>https://www.aisixiang.com/data/164611.html</link></item>
-<item><title>赵静蓉：民族记忆共同体何以可能？ - 爱思想</title><link>https://www.aisixiang.com/data/164608.html</link></item>
-<item><title>钱静：新媒介环境下的多模态时尚传 - 爱思想</title><link>https://www.aisixiang.com/data/164616.html</link></item>
-<item><title>佩里·安德森：文明的标准与国际法 - 爱思想</title><link>https://www.aisixiang.com/data/164593.html</link></item>
-<item><title>胡祖铨：人口高质量发展支撑中国式 - 爱思想</title><link>https://www.aisixiang.com/data/164586.html</link></item>
-<item><title>刘尚希：我国当前的形势与趋势 - 爱思想</title><link>https://www.aisixiang.com/data/164650.html</link></item>
-<item><title>林珊珊：发挥舆论监督对作风建设的 - 爱思想</title><link>https://www.aisixiang.com/data/164641.html</link></item>
-<item><title>丁学良：一个不弃理想的社会主义者 - 爱思想</title><link>https://www.aisixiang.com/data/164690.html</link></item>
-<item><title>杜飞轮 王哲：厚植现代化建设人才 - 爱思想</title><link>https://www.aisixiang.com/data/164605.html</link></item>
-<item><title>赖海榕：国土绿化重在提质兴业利民 - 爱思想</title><link>https://www.aisixiang.com/data/164855.html</link></item>
-<item><title>韩喜平：文化是推动高质量发展重要 - 爱思想</title><link>https://www.aisixiang.com/data/164852.html</link></item>
-<item><title>周丹：积极探索文化和科技融合的有 - 爱思想</title><link>https://www.aisixiang.com/data/164848.html</link></item>
-<item><title>雷海潮：推动中医药服务人民造福全 - 爱思想</title><link>https://www.aisixiang.com/data/164755.html</link></item>
-<item><title>梁贞：坚定文化自信 建设社会主义 - 爱思想</title><link>https://www.aisixiang.com/data/164739.html</link></item>
-<item><title>楼宇烈：中医体现了中国哲学的根本 - 爱思想</title><link>https://www.aisixiang.com/data/164689.html</link></item>
-<item><title>唐晓彬 何桂烨：以数字化赋能文化 - 爱思想</title><link>https://www.aisixiang.com/data/164672.html</link></item>
-<item><title>唐浩明：湖湘文化的精神底色 - 爱思想</title><link>https://www.aisixiang.com/data/164653.html</link></item>
-<item><title>左康华：在赓续中华文脉中高扬中华 - 爱思想</title><link>https://www.aisixiang.com/data/164576.html</link></item>
-<item><title>牛先锋：掌握调查研究这个基本功 - 爱思想</title><link>https://www.aisixiang.com/data/164473.html</link></item>
-<item><title>吴海江：深刻理解文化主体性的理论 - 爱思想</title><link>https://www.aisixiang.com/data/164468.html</link></item>
-<item><title>张海鹏：“两山”理念引领林草业高 - 爱思想</title><link>https://www.aisixiang.com/data/164464.html</link></item>
-<item><title>杨宏伟：推进习近平生态文明思想的 - 爱思想</title><link>https://www.aisixiang.com/data/164461.html</link></item>
-<item><title>沈湘平 周春兰：文明共生呼唤共生 - 爱思想</title><link>https://www.aisixiang.com/data/164396.html</link></item>
-<item><title>黎娟娟：传统家文化的独特功能与时 - 爱思想</title><link>https://www.aisixiang.com/data/164378.html</link></item>
-<item><title>王毅：惟有绿荷红菡萏——荷花文化 - 爱思想</title><link>https://www.aisixiang.com/data/164370.html</link></item>
-<item><title>王琦：中医理论现代化的定义、框架 - 爱思想</title><link>https://www.aisixiang.com/data/164339.html</link></item>
-<item><title>李侠 尹辉：费曼的科学精神是“玩 - 爱思想</title><link>https://www.aisixiang.com/data/164779.html</link></item>
-<item><title>高关中：天文地理集大成者——托勒 - 爱思想</title><link>https://www.aisixiang.com/data/164751.html</link></item>
-<item><title>高关中：西方哲学和科学之祖——泰 - 爱思想</title><link>https://www.aisixiang.com/data/164750.html</link></item>
-<item><title>王守觉：一生求新只为摆脱“洋拐棍 - 爱思想</title><link>https://www.aisixiang.com/data/164749.html</link></item>
-<item><title>张瑞安：致盲作战行动：现代战争中 - 爱思想</title><link>https://www.aisixiang.com/data/164747.html</link></item>
-<item><title>任晓刚 谢贤君：我们党领导科技事 - 爱思想</title><link>https://www.aisixiang.com/data/164711.html</link></item>
-<item><title>王元丰：全球ESG治理，中国为何 - 爱思想</title><link>https://www.aisixiang.com/data/164704.html</link></item>
-<item><title>张国云：具身智能推动工业系统革命 - 爱思想</title><link>https://www.aisixiang.com/data/164645.html</link></item>
-<item><title>严济慈：用科学守护抗日战争中的“ - 爱思想</title><link>https://www.aisixiang.com/data/164580.html</link></item>
-<item><title>王凡：弘扬“两弹一星”精神 耕海 - 爱思想</title><link>https://www.aisixiang.com/data/164579.html</link></item>
-<item><title>符晓波：永不消散的光谱——缅怀中 - 爱思想</title><link>https://www.aisixiang.com/data/164578.html</link></item>
-<item><title>高亮：我国工业软件的突围与重构 - 爱思想</title><link>https://www.aisixiang.com/data/164571.html</link></item>
-<item><title>张晓丽：制胜未来战争要发挥体系化 - 爱思想</title><link>https://www.aisixiang.com/data/164567.html</link></item>
-<item><title>李省龙：构建中国特色人工智能治理 - 爱思想</title><link>https://www.aisixiang.com/data/164458.html</link></item>
-<item><title>姜明安：行政协议的判定标准与行政协议诉讼 - 爱思想</title><link>https://www.aisixiang.com/data/164841.html</link></item>
-<item><title>刘守英：推进适应城乡融合的土地制度变革 - 爱思想</title><link>https://www.aisixiang.com/data/164837.html</link></item>
-<item><title>高培勇：加快建构中国自主的财政知识体系 - 爱思想</title><link>https://www.aisixiang.com/data/164820.html</link></item>
-<item><title>陈柏峰：习近平法治思想中的依法治网理论 - 爱思想</title><link>https://www.aisixiang.com/data/164801.html</link></item>
-<item><title>姜长云：我国产业融合态势、问题与“十五五”发展思路 - 爱思想</title><link>https://www.aisixiang.com/data/164797.html</link></item>
-<item><title>谭启平：论中国法上民事主体、商事主体、市场主体的概念统合 - 爱思想</title><link>https://www.aisixiang.com/data/164860.html</link></item>
-<item><title>魏楚：法治护航民营经济高质量发展 - 爱思想</title><link>https://www.aisixiang.com/data/164833.html</link></item>
-<item><title>孟红艳：诈骗罪财产损失：司法认定规则的体系性展开 - 爱思想</title><link>https://www.aisixiang.com/data/164811.html</link></item>
-<item><title>王明喆：行政处罚变更判决的理论基础与适用规则 - 爱思想</title><link>https://www.aisixiang.com/data/164810.html</link></item>
-<item><title>杨虎涛 唐瑜：数字经济时代的杰文斯悖论：人工智能竞争与双碳目标 - 爱思想</title><link>https://www.aisixiang.com/data/164858.html</link></item>
-<item><title>郑栅洁：学好用好《习近平经济文选》 扎实推动高质量发展 - 爱思想</title><link>https://www.aisixiang.com/data/164850.html</link></item>
-<item><title>刘晓春：为人民币稳定币立规 - 爱思想</title><link>https://www.aisixiang.com/data/164849.html</link></item>
-<item><title>蔡之兵：从根本上治理企业低价无序竞争 - 爱思想</title><link>https://www.aisixiang.com/data/164843.html</link></item>
-<item><title>郑超华：党的自我革命理论与实践的中华文化底蕴——基于习近平相关论述及用典的论析 - 爱思想</title><link>https://www.aisixiang.com/data/164845.html</link></item>
-<item><title>张端：坚持实事求是的思想路线 - 爱思想</title><link>https://www.aisixiang.com/data/164839.html</link></item>
-<item><title>支振锋：高水平安全护航香港高质量发展 - 爱思想</title><link>https://www.aisixiang.com/data/164823.html</link></item>
-<item><title>杨晓楠：制度创新 维护国家安全的法治路径 - 爱思想</title><link>https://www.aisixiang.com/data/164822.html</link></item>
-<item><title>吴志良：高质量发展引领澳门系统性重塑——一场关乎命运的整体性重构 - 爱思想</title><link>https://www.aisixiang.com/data/164821.html</link></item>
-<item><title>余维海：当前发达资本主义国家共产党发展新态势 - 爱思想</title><link>https://www.aisixiang.com/data/164861.html</link></item>
-<item><title>张喜华 张耀军：全球文明倡议：以文明对话应对时代之变 - 爱思想</title><link>https://www.aisixiang.com/data/164853.html</link></item>
-<item><title>姜锋：王毅访欧与中欧关系战略调试期：从“威胁感知”到“机遇共创” - 爱思想</title><link>https://www.aisixiang.com/data/164836.html</link></item>
-<item><title>王友明：“大金砖”引领四领域全球治理变革 - 爱思想</title><link>https://www.aisixiang.com/data/164834.html</link></item>
-<item><title>马晓霖：伊朗、以色列和美国三角核游戏及困境 - 爱思想</title><link>https://www.aisixiang.com/data/164825.html</link></item>
-<item><title>林红：观念的力量：现代国家的意识形态维度 - 爱思想</title><link>https://www.aisixiang.com/data/164862.html</link></item>
-<item><title>刘春呈：铸牢中华民族共同体意识的“中华民族一家亲” 符号认同进路 - 爱思想</title><link>https://www.aisixiang.com/data/164856.html</link></item>
-<item><title>刘正妙 谭幸：坚持不懈铸牢中华民族共同体意识 - 爱思想</title><link>https://www.aisixiang.com/data/164819.html</link></item>
-<item><title>何威：间断性记忆的整体化思考：突发公共事件的集体记忆建构 - 爱思想</title><link>https://www.aisixiang.com/data/164807.html</link></item>
-<item><title>王红艳：社会治理共同体理念的理论内涵与原创性贡献 - 爱思想</title><link>https://www.aisixiang.com/data/164780.html</link></item>
-<item><title>冶进海：符号化、场景化、数字化叙事：中华民族共同体意识传播中的创新路径 - 爱思想</title><link>https://www.aisixiang.com/data/164805.html</link></item>
-<item><title>陈奇：制度性话语权视角下西方指数霸权祛魅与中国自主评价体系建设 - 爱思想</title><link>https://www.aisixiang.com/data/164796.html</link></item>
-<item><title>俞岚：把握六对关系做好党的创新理论国际传播 - 爱思想</title><link>https://www.aisixiang.com/data/164777.html</link></item>
-<item><title>刘璞：加强教育强国的法律体系保障 - 爱思想</title><link>https://www.aisixiang.com/data/164854.html</link></item>
-<item><title>胡细华：构建思政课程与课程思政协同育人新格局 - 爱思想</title><link>https://www.aisixiang.com/data/164846.html</link></item>
-<item><title>张福庆：人工智能赋能高等教育转型的战略前瞻 - 爱思想</title><link>https://www.aisixiang.com/data/164815.html</link></item>
-<item><title>徐溪远 梁严冰：“教育与生产劳动相结合”的历史创建和实践成就 - 爱思想</title><link>https://www.aisixiang.com/data/164800.html</link></item>
-<item><title>杨未：把德育工作做得更到位、更有效 - 爱思想</title><link>https://www.aisixiang.com/data/164786.html</link></item>
-<item><title>吴新平：“五四”新文学与神话传统 - 爱思想</title><link>https://www.aisixiang.com/data/164818.html</link></item>
-<item><title>常俊玲：记忆理论视域下的《格萨尔》史诗 - 爱思想</title><link>https://www.aisixiang.com/data/164806.html</link></item>
-<item><title>蒋绍愚：汉语史研究的几个问题 - 爱思想</title><link>https://www.aisixiang.com/data/164717.html</link></item>
-<item><title>胡泳：在日常与超越之间：扎加耶夫斯基的诗 - 爱思想</title><link>https://www.aisixiang.com/data/164706.html</link></item>
-<item><title>易华：秦代赴昆仑采药的可行性分析 - 爱思想</title><link>https://www.aisixiang.com/data/164859.html</link></item>
-<item><title>周行康：青藏高原田野调查视角下的“昆仑石刻” - 爱思想</title><link>https://www.aisixiang.com/data/164847.html</link></item>
-<item><title>鲍强：对“昆仑石刻”的一些疑问 - 爱思想</title><link>https://www.aisixiang.com/data/164844.html</link></item>
-<item><title>李小波：“昆仑石刻”位置远超秦的西部边界 - 爱思想</title><link>https://www.aisixiang.com/data/164842.html</link></item>
-<item><title>王子今：昆仑河源方向的“昔人所刻篆文” - 爱思想</title><link>https://www.aisixiang.com/data/164840.html</link></item>
-<item><title>徐玲：天由感在，神以情存——天地鬼神在场的存在论揭发 - 爱思想</title><link>https://www.aisixiang.com/data/164857.html</link></item>
-<item><title>陈远章：以系统思维推进马克思主义中国化时代化 - 爱思想</title><link>https://www.aisixiang.com/data/164851.html</link></item>
-<item><title>余永林：重读罗素：中西哲学的互鉴之旅 - 爱思想</title><link>https://www.aisixiang.com/data/164817.html</link></item>
-<item><title>曹刚：论科技伦理的四大转向 - 爱思想</title><link>https://www.aisixiang.com/data/164808.html</link></item>
-<item><title>姜妮伶：“巽以行权”与朱子的经权观 - 爱思想</title><link>https://www.aisixiang.com/data/164784.html</link></item>
-<item><title>郑永年：从方法论视角看自主知识体系构建 - 爱思想</title><link>https://www.aisixiang.com/data/164756.html</link></item>
-<item><title>朱富强：知识分子何以“无耻之耻” - 爱思想</title><link>https://www.aisixiang.com/data/164715.html</link></item>
-<item><title>刘周：悼恩师文——深切缅怀成中英教授 - 爱思想</title><link>https://www.aisixiang.com/data/164710.html</link></item>
-<item><title>程美东：解决问题是“理论文章”的最高境界 - 爱思想</title><link>https://www.aisixiang.com/data/164696.html</link></item>
-<item><title>陈鼓应：与汤一介先生那段难忘的人生记忆——写在中国文化书院成立 40 周年之际 - 爱思想</title><link>https://www.aisixiang.com/data/164691.html</link></item>
-<item><title>张军：《资治通鉴》论政治家必备的三种素质 - 爱思想</title><link>https://www.aisixiang.com/data/164754.html</link></item>
-<item><title>王蒙：阅读永远是不可动摇的 - 爱思想</title><link>https://www.aisixiang.com/data/164695.html</link></item>
-<item><title>陈行之：当青春成为往事——后记：文学应当有一条哲学的通道 - 爱思想</title><link>https://www.aisixiang.com/data/164532.html</link></item>
-<item><title>陈行之：当青春成为往事——第十九章  黄河照样流 - 爱思想</title><link>https://www.aisixiang.com/data/164531.html</link></item>
-<item><title>姜长云，1964年3月生，安徽庐江人。西北农业大学硕士（1989），中国社会科学院研究生院博士..... - 爱思想</title><link>https://www.aisixiang.com/thinktank/JiangChangyun.html</link></item>
-<item><title>Demis Hassabis, CEO and Co-Founder, Google DeepMind - Google Blog</title><link>https://blog.google/authors/demis-hassabis/</link></item>
-<item><title>How Lush and Google Cloud AI are reinventing retail checkout - Google Blog</title><link>https://blog.google/around-the-globe/google-europe/united-kingdom/how-lush-and-google-cloud-ai-are-reinventing-retail-checkout/</link></item>
-<item><title>New AI tools for mental health research and treatment - Google Blog</title><link>https://blog.google/technology/health/new-mental-health-ai-tools-research-treatment/</link></item>
-<item><title>4 new AI updates on Android coming to Samsung Galaxy devices - Google Blog</title><link>https://blog.google/products/android/galaxy-unpacked-2025-android-updates/</link></item>
-<item><title>Dive deeper with AI Mode and get gaming help in Circle to Search - Google Blog</title><link>https://blog.google/products/search/circle-to-search-ai-mode-gaming/</link></item>
-<item><title>Kaffeost, Sweden’s Unique Cheese-Infused Coffee - Oddity Central</title><link>https://www.odditycentral.com/foods/kaffeost-swedens-unique-cheese-infused-coffee.html</link></item>
-<item><title>Man Forgets Wife at Gas Station, Only Realizes 300 Km Later - Oddity Central</title><link>https://www.odditycentral.com/news/man-forgets-wife-at-gas-station-only-realizes-300-km-later.html</link></item>
-<item><title>Woman with Severe Face Rash Claims She Hasn’t Removed Makeup in 22 Years - Oddity Central</title><link>https://www.odditycentral.com/news/woman-with-severe-face-rash-claims-she-hasnt-removed-makeup-in-22-years.html</link></item>
-<item><title>Football Club Fined for Placing Talismans in Opponents’ Locker Room - Oddity Central</title><link>https://www.odditycentral.com/news/football-club-fined-for-placing-talismans-in-opponents-locker-room.html</link></item>
-<item><title>AI-Generated Band Gets Over 1Million Spotify Listeners in Just Two Weeks - Oddity Central</title><link>https://www.odditycentral.com/news/ai-generated-band-gets-over-1million-spotify-listeners-in-just-two-weeks.html</link></item>
-<item><title>Man Obsessed with Lab-Grown Viruses Raises Children in Complete Isolation - Oddity Central</title><link>https://www.odditycentral.com/news/man-obsessed-with-lab-grown-viruses-raises-children-in-complete-isolation.html</link></item>
-<item><title>Doctors Find Live Eel Swimming in Man’s Abdominal Cavity - Oddity Central</title><link>https://www.odditycentral.com/news/doctors-find-live-eel-swimming-in-mans-abdominal-cavity.html</link></item>
-<item><title>Boy Neglected by Family Spends Time with Dogs and Communicates by Barking - Oddity Central</title><link>https://www.odditycentral.com/news/boy-neglected-by-family-spends-time-with-dogs-and-communicates-by-barking.html</link></item>
-<item><title>Woman Files Complaint Against Husband for Making Her Do Chores Instead of Spending Time on Instagram - Oddity Central</title><link>https://www.odditycentral.com/news/woman-files-complaint-against-husband-for-making-her-do-chores-instead-of-spending-time-on-instagram.html</link></item>
-<item><title>Cult Leader Known as ‘Siberian Jesus’ Sentenced to 12 Years in Prison - Oddity Central</title><link>https://www.odditycentral.com/news/cult-leader-known-as-siberian-jesus-sentenced-to-12-years-in-prison.html</link></item>
-<item><title>first wrote about the Siberian Jesus in 2009 - Oddity Central</title><link>https://www.odditycentral.com/news/jesus-has-returned-and-lives-in-siberia.html</link></item>
-<item><title>Italian Mechanic Turns Old Fiat into the World’s Narrowest Drivable Car - Oddity Central</title><link>https://www.odditycentral.com/auto/italian-mechanic-turns-old-fiat-into-the-worlds-narrowest-drivable-car.html</link></item>
-<item><title>7 Engineers Suspended Over $2.3 Million Bridge with 90-Degree Turn - Oddity Central</title><link>https://www.odditycentral.com/architecture/7-engineers-suspended-over-2-3-million-bridge-with-90-degree-turn.html</link></item>
-<item><title>Avatar-Like Capsule Interface Allows Anyone to Control a Robot Remotely - Oddity Central</title><link>https://www.odditycentral.com/technology/avatar-like-capsule-interface-allows-anyone-to-control-a-robot-remotely.html</link></item>
-<item><title>Thunderbird 140 ESR 版释出 - Solidot</title><link>https://www.solidot.org/story?sid=81750</link></item>
-<item><title>开源工具帮助互联网抵御 AI 爬虫 - Solidot</title><link>https://www.solidot.org/story?sid=81751</link></item>
-<item><title>TikTok 计划九月推出一个美国专用版本 - Solidot</title><link>https://www.solidot.org/story?sid=81752</link></item>
-<item><title>科学家首次直接观测到反Klein隧穿现象 - Solidot</title><link>https://www.solidot.org/story?sid=81753</link></item>
-<item><title>海法洞穴发现的古代骨骼可能是人类和尼安德特人混血 - Solidot</title><link>https://www.solidot.org/story?sid=81754</link></item>
-<item><title>海马体在成年后仍然能生成新神经元 - Solidot</title><link>https://www.solidot.org/story?sid=81755</link></item>
-<item><title>研究估计未来的胃癌病例大部分与幽门螺杆菌感染相关 - Solidot</title><link>https://www.solidot.org/story?sid=81756</link></item>
-<item><title>230 万 Chrome 和 Edge 用户安装了会劫持浏览器会话的扩展 - Solidot</title><link>https://www.solidot.org/story?sid=81757</link></item>
-<item><title>美国科技巨头对财政部的制裁名单响应并不迅速 - Solidot</title><link>https://www.solidot.org/story?sid=81759</link></item>
-<item><title>英伟达市值突破 4 万亿美元 - Solidot</title><link>https://www.solidot.org/story?sid=81760</link></item>
-<item><title>微软证书过期导致 Windows 7 更新出错 - Solidot</title><link>https://www.solidot.org/story?sid=81749</link></item>
-<item><title>Epic Samsung deals! Pre-order the Galaxy Z Fold 7 or Z Flip 7 to score a free storage upgrade, plus 30% off the latest Galaxy Watch and Galaxy Buds products - Tomsguide</title><link>https://www.tomsguide.com/phones/epic-samsung-deals-pre-order-the-galaxy-z-fold-7-or-z-flip-7-to-score-a-free-storage-upgrade-plus-30-percent-off-the-latest-galaxy-watch-and-galaxy-buds-products</link></item>
-<item><title>I&amp;#39;m a sleep writer — the pillow I use to keep me from waking up with neck pain is 43% off in Prime Day bedding deal - Tomsguide</title><link>https://www.tomsguide.com/mattresses/pillows-bedding/im-a-sleep-writer-the-pillow-i-use-to-keep-me-from-waking-up-with-neck-pain-is-43-percent-off-in-prime-day-bedding-deal</link></item>
-<item><title>Forget foldables — Samsung&amp;#39;s Galaxy S25 FE leaked in real image, not just renders - Tomsguide</title><link>https://www.tomsguide.com/phones/samsung-phones/samsung-galaxy-s25-fe-pops-up-in-surprising-place-with-first-look-at-the-mid-range-phone</link></item>
-<item><title>Mattress Firm takes on Prime Day with its own epic sale — I&amp;#39;ve found the 5 best offers - Tomsguide</title><link>https://www.tomsguide.com/mattresses/mattress-firm-rival-prime-day-sale</link></item>
-<item><title>Struggling to sleep in the heat? I&amp;#39;ve perfected a nighttime routine for cooler sleep in 5 steps - Tomsguide</title><link>https://www.tomsguide.com/wellness/sleep/ive-devised-the-ultimate-nighttime-routine-to-sleep-through-the-heat</link></item>
-<item><title>Save up to $1,019 on a Tempur-Pedic Tempur-Adapt mattress in Prime Day beating deal - Tomsguide</title><link>https://www.tomsguide.com/mattresses/save-up-to-usd1-019-on-a-tempur-pedic-tempur-adapt-mattress-in-prime-day-beating-deal</link></item>
-<item><title>Hurry! Our favorite mini PCs are on sale for Prime Day - Tomsguide</title><link>https://www.tomsguide.com/computing/hurry-our-favorite-mini-pcs-are-on-sale-for-prime-day</link></item>
-<item><title>Apple Vision Pro with M4 chip and redesigned strap reportedly coming this year — but there&amp;#39;s bad news for the new lighter model - Tomsguide</title><link>https://www.tomsguide.com/computing/vr-ar/apple-vision-pro-with-m4-chip-and-redesigned-strap-reportedly-coming-this-year-but-theres-bad-news-for-the-new-lighter-model</link></item>
-<item><title>How long does Amazon Prime Day last — what you need to know - Tomsguide</title><link>https://www.tomsguide.com/sales-events/how-long-does-amazon-prime-day-last-what-you-need-to-know</link></item>
-<item><title>Forget the Samsung Galaxy Watch 8 — the ‘Classic’ model is the real star of the lineup - Tomsguide</title><link>https://www.tomsguide.com/wellness/smartwatches/forget-the-samsung-galaxy-watch-8-the-classic-model-is-the-real-star-of-the-lineup</link></item>
-<item><title>I&amp;#39;ve vetted hundreds of Prime Day deals under $50 — here&amp;#39;s my top picks from Apple, Lego, Adidas and more - Tomsguide</title><link>https://www.tomsguide.com/sales-events/ive-vetted-hundreds-of-prime-day-deals-under-usd50-heres-my-top-picks-from-apple-lego-adidas-and-more</link></item>
-<item><title>The mosquito dunks that saved my plants (and my sanity) from fungus gnat hell are on sale for $17 this Prime Day - Tomsguide</title><link>https://www.tomsguide.com/home/the-mosquito-dunks-that-saved-my-plants-and-my-sanity-from-fungus-gnat-hell-are-on-sale-for-usd17-this-prime-day</link></item>
-<item><title>Forget Chrome — this new AI browser is changing how people search the web - Tomsguide</title><link>https://www.tomsguide.com/ai/forget-chrome-this-new-ai-browser-is-changing-how-people-search-the-web</link></item>
-<item><title>Act fast! Save up to 50% with these Prime Day luggage deals - Tomsguide</title><link>https://www.tomsguide.com/home/act-fast-save-up-to-50-percent-with-these-prime-day-luggage-deals</link></item>
-<item><title>This Keurig coffee maker has 45,000 5-star reviews — and it&amp;#39;s half off for Prime Day - Tomsguide</title><link>https://www.tomsguide.com/home/coffee-makers/this-keurig-coffee-maker-has-45-000-5-star-reviews-and-its-half-off-for-prime-day</link></item>
-<item><title>From film cameras to coffee makers — these are the Prime Day deals you should grab to head back to college - Tomsguide</title><link>https://www.tomsguide.com/home/from-film-cameras-to-coffee-machines-these-are-the-prime-day-deals-you-should-grab-to-head-back-to-college</link></item>
-<item><title>I&amp;#39;ve made a list of all the things more expensive than these $18 earbuds for Prime Day — like a movie ticket or a drink at a bar — and I&amp;#39;d much rather have these - Tomsguide</title><link>https://www.tomsguide.com/audio/headphones/ive-made-a-list-of-all-the-things-more-expensive-than-these-usd18-earbuds-for-prime-day-like-a-movie-ticket-or-a-drink-at-a-bar-and-id-much-rather-have-these</link></item>
-<item><title>Best Galaxy Z Flip 7 preorder deals — how to get Samsung&amp;#39;s new foldable for free - Tomsguide</title><link>https://www.tomsguide.com/phones/samsung-phones/best-galaxy-z-flip-7-preorder-deals-how-to-get-samsungs-new-foldable-for-free</link></item>
-<item><title>No, not Dyson — I use this cordless vacuum every day and it’s currently down to its lowest ever price for Prime Day - Tomsguide</title><link>https://www.tomsguide.com/home/home-appliances/no-not-dyson-i-use-this-cordless-vacuum-every-day-and-its-currently-down-to-its-lowest-ever-price-for-prime-day</link></item>
-<item><title>This new Android attack could trick you into compromising your own phone — everything you need to know - Tomsguide</title><link>https://www.tomsguide.com/computing/online-security/this-new-android-attack-could-trick-you-into-compromising-your-own-phone-everything-you-need-to-know</link></item>
-<item><title>Don&amp;#39;t miss up to $230 off Beats headphones, earbuds and speakers in these Prime Day savings - Tomsguide</title><link>https://www.tomsguide.com/audio/headphones/dont-miss-up-to-usd230-off-beats-headphones-earbuds-and-speakers-in-these-prime-day-savings</link></item>
-<item><title>Google just made solving Wordle way easier — here’s how - Tomsguide</title><link>https://www.tomsguide.com/ai/google-just-made-solving-wordle-way-easier-heres-how</link></item>
-<item><title>These epic earbuds deals are all under $100 — grab an in-ear Prime Day bargain - Tomsguide</title><link>https://www.tomsguide.com/audio/headphones/these-epic-earbuds-deals-are-all-under-usd100-grab-an-in-ear-prime-day-bargain</link></item>
-<item><title>Lululemon&amp;#39;s Summer Scores section has activewear from $9 — 13 items I&amp;#39;d buy that beat Prime Day sales - Tomsguide</title><link>https://www.tomsguide.com/wellness/fitness/lululemons-summer-scores-section-has-activewear-from-usd9-13-items-id-buy-that-beat-prime-day-sales</link></item>
-<item><title>I love Fellow&amp;#39;s coffee gear — these Prime Day deals are your last chance to save before tariff price hikes next week - Tomsguide</title><link>https://www.tomsguide.com/home/coffee-makers/i-love-fellows-coffee-gear-these-prime-day-deals-are-your-last-chance-to-save-before-tariff-price-hikes-next-week</link></item>
-<item><title>The first truly copyright-free AI video generator has arrived — here&amp;#39;s what we know - Tomsguide</title><link>https://www.tomsguide.com/ai/the-first-truly-copyright-free-ai-video-generator-has-arrived-heres-what-we-know</link></item>
-<item><title>Hurry! The hiking boots I trust for mountain trails are now 55% off for Prime Day - Tomsguide</title><link>https://www.tomsguide.com/wellness/fitness/hurry-the-hiking-boots-i-trust-for-mountain-trails-are-now-55-percent-off-for-prime-day</link></item>
-<item><title>Want spotless carpets? Bissell’s Little Green carpet cleaner has just dropped in price for Prime Day - Tomsguide</title><link>https://www.tomsguide.com/sales-events/want-spotless-carpets-bissells-little-green-carpet-cleaner-has-just-dropped-in-price-for-prime-day</link></item>
-<item><title>The best Prime Day earbuds deals right now — save up to $100 on Beats, Sony, Bose and more - Tomsguide</title><link>https://www.tomsguide.com/audio/headphones/the-best-prime-day-earbuds-deals-right-now-save-up-to-usd100-on-beats-sony-bose-and-more</link></item>
-<item><title>13 Amazon devices starting at less than $20 worth buying in the big Prime Day sale - Tomsguide</title><link>https://www.tomsguide.com/home/13-amazon-devices-worth-buying-in-the-big-prime-day-sale</link></item>
-<item><title>Huge Under Armour Prime Day sale is live from $10 — here are my 21 favorite fitness apparel finds - Tomsguide</title><link>https://www.tomsguide.com/sales-events/huge-under-armour-prime-day-sale-is-live-from-usd10-here-are-my-21-favorite-fitness-apparel-finds</link></item>
-<item><title>Score a Fire TV stick for as low as $34 in these hot Prime Day deals — plus discounts on soundbars, TVs and more - Tomsguide</title><link>https://www.tomsguide.com/entertainment/streaming-devices/score-a-fire-tv-stick-for-as-low-as-usd34-in-these-hot-prime-day-deals-plus-discounts-on-soundbars-tvs-and-more</link></item>
-<item><title>Rock out without selling out — My favorite Bluetooth speaker just got its price shredded for Prime Day - Tomsguide</title><link>https://www.tomsguide.com/audio/bluetooth-speakers/rock-out-without-selling-out-my-favorite-bluetooth-speaker-just-got-its-price-shredded-for-prime-day</link></item>
-<item><title>This power bank charged my partner’s phone three times and saved her on vacation — and it’s currently 27% off for Prime Day - Tomsguide</title><link>https://www.tomsguide.com/tech/this-power-bank-charged-my-partners-phone-three-times-and-saved-her-on-vacation-and-its-currently-27-percent-off-for-prime-day</link></item>
-<item><title>Fed up of spiders in your home? Banish them with these 5 Prime Day pest-repellent deals - Tomsguide</title><link>https://www.tomsguide.com/sales-events/fed-up-of-spiders-in-your-home-banish-them-with-these-5-prime-day-pest-repellent-deals</link></item>
-<item><title>I’m an ex-chef — 9 kitchen essentials I can’t live without from just $3 in Prime Day sales - Tomsguide</title><link>https://www.tomsguide.com/home/kitchen-dining/im-an-ex-chef-9-kitchen-essentials-i-cant-live-without-from-just-usd3-in-prime-day-sales</link></item>
-<item><title>If you&amp;#39;re an outdoor lover like me, forget Prime Day — I&amp;#39;ve found 9 deals under $25 at REI, including Patagonia and Cotopaxi - Tomsguide</title><link>https://www.tomsguide.com/home/outdoors/if-youre-an-outdoor-lover-like-me-forget-prime-day-ive-found-9-deals-under-usd25-at-rei-including-patagonia-and-cotopaxi</link></item>
-<item><title>Canceling Netflix, Prime Video and other streaming services may about to get harder — what to know - Tomsguide</title><link>https://www.tomsguide.com/entertainment/streaming/canceling-netflix-prime-video-and-other-streaming-services-may-about-to-get-harder-what-to-know</link></item>
-<item><title>Netflix drops new &amp;#39;Wednesday&amp;#39; season 2 trailer and Enid&amp;#39;s in danger - Tomsguide</title><link>https://www.tomsguide.com/entertainment/netflix/netflix-drops-new-wednesday-season-2-trailer-and-enids-in-danger</link></item>
-<item><title>Netflix just added the first two seasons of this romance drama — and it&amp;#39;s already crashed the top 10 - Tomsguide</title><link>https://www.tomsguide.com/entertainment/netflix/netflix-just-added-the-first-two-seasons-of-this-romance-drama-and-its-already-crashed-the-top-10</link></item>
-<item><title>The Samsung S90F OLED just got its first price drop — but you should buy the S90D instead - Tomsguide</title><link>https://www.tomsguide.com/tvs/oled-tvs/the-samsung-s90f-oled-just-got-its-first-price-drop-but-you-should-buy-the-s90d-instead</link></item>
-<item><title>The iPad 11-inch is your new travel BFF — and it&amp;#39;s $70 off for Prime Day - Tomsguide</title><link>https://www.tomsguide.com/home/the-ipad-11-inch-is-your-new-travel-bff-and-its-usd70-off-for-prime-day</link></item>
-<item><title>Forget Prime Day — these are the 9 best On running deals I’d actually spend my money on - Tomsguide</title><link>https://www.tomsguide.com/wellness/fitness/forget-prime-day-these-are-the-9-best-on-running-deals-id-actually-spend-my-money-on</link></item>
-<item><title>One UI 8 is coming with Galaxy Z Fold 7 and Z Flip 7 — here are all the best new features - Tomsguide</title><link>https://www.tomsguide.com/phones/samsung-phones/one-ui-8-is-coming-with-galaxy-z-fold-7-and-z-flip-7-here-are-all-the-best-new-features</link></item>
-<item><title>I test pillows for a living — this is the Prime Day sleep deal to shop to recreate hotel-like luxury at home - Tomsguide</title><link>https://www.tomsguide.com/mattresses/pillows-bedding/-beckham-hotel-collection-down-alternative-pillow-prime-day-deal</link></item>
-<item><title>These are the beauty and grooming tools I swear by — here’s 21 deals from $7 to shop this Prime Day - Tomsguide</title><link>https://www.tomsguide.com/wellness/these-are-the-beauty-and-grooming-tools-i-swear-by-heres-21-deals-from-usd7-to-shop-this-prime-day</link></item>
-<item><title>The DreamCloud mattress we tested and loved drops to $549 for a queen in epic Prime Day deal - Tomsguide</title><link>https://www.tomsguide.com/mattresses/dreamcloud-luxury-hybrid-mattress-drops-to-usd549-for-a-queen-in-epic-prime-day-deal</link></item>
-<item><title>Massive Skechers Prime Day sale from $11 — 21 deals I’d shop on sneakers and apparel - Tomsguide</title><link>https://www.tomsguide.com/wellness/fitness/massive-skechers-prime-day-sale-from-usd11-21-deals-id-shop-on-sneakers-and-apparel</link></item>
-<item><title>Upgrade your online protection for less than $1 with this Prime Day VPN deal - Tomsguide</title><link>https://www.tomsguide.com/computing/vpns/upgrade-your-online-protection-for-less-than-usd1-with-this-prime-day-vpn-deal</link></item>
-<item><title>This Dyson cordless vacuum&amp;#39;s green laser reveals disgusting truths about your floors — and it&amp;#39;s $180 off for Prime Day - Tomsguide</title><link>https://www.tomsguide.com/home/i-just-found-a-killer-dyson-v15-detect-prime-day-deal-save-usd180-right-now-on-this-cordless-vacuum</link></item>
-<item><title>Removing Microsoft apps could become easy in Windows 11 25H2 - Windows Latest</title><link>https://www.windowslatest.com/2025/07/10/removing-microsoft-apps-could-become-easy-in-windows-11-25h2/</link></item>
-<item><title>Windows 11 KB5062552 adds PC-to-PC transfer, direct download links - Windows Latest</title><link>https://www.windowslatest.com/2025/07/08/windows-11-kb5062552-adds-pc-to-pc-transfer-direct-download-links/</link></item>
-<item><title>Windows 11 KB5062553 24H2 big update, direct download links - Windows Latest</title><link>https://www.windowslatest.com/2025/07/08/windows-11-kb5062553-24h2-big-update-with-smaller-taskbar-direct-download-links/</link></item>
-<item><title>Windows 11 might get another AI feature. It’s called Wallpaper AI (Dynamic) - Windows Latest</title><link>https://www.windowslatest.com/2025/07/08/windows-11-might-get-another-ai-feature-its-called-wallpaper-ai-dynamic/</link></item>
-<item><title>iOS 26’s Liquid Glass finger-light reflect looks like Windows 10 Fluent Design - Windows Latest</title><link>https://www.windowslatest.com/2025/07/05/ios-26s-liquid-glass-finger-light-reflect-looks-like-windows-10-fluent-design/</link></item>
-<item><title>Windows 11’s BSOD isn’t going anywhere. It’s now black, faster, and confusing - Windows Latest</title><link>https://www.windowslatest.com/2025/07/05/windows-11s-bsod-isnt-going-anywhere-its-now-black-faster-and-confusing/</link></item>
-<item><title>Google Chrome will check Windows 11 eligibility on your PC for Windows 10 EOL - Windows Latest</title><link>https://www.windowslatest.com/2025/07/04/google-chrome-will-check-windows-11-eligibility-on-your-pc-for-windows-10-eol/</link></item>
-<item><title>After Android, Microsoft Edge for iOS gets a native extensions feature - Windows Latest</title><link>https://www.windowslatest.com/2025/07/04/after-android-microsoft-edge-for-ios-gets-a-native-extensions-feature/</link></item>
-<item><title>Microsoft begins removing PowerShell 2.0 as it cleans up Windows 11 - Windows Latest</title><link>https://www.windowslatest.com/2025/07/04/microsoft-begins-removing-powershell-2-0-as-it-cleans-up-windows-11/</link></item>
-<item><title>You can now use Copilot AI to search, read local files on Windows 11 / 10 - Windows Latest</title><link>https://www.windowslatest.com/2025/07/04/you-can-now-use-copilot-ai-to-search-read-local-files-on-windows-11-10/</link></item>
-<item><title>Fred again.. Releases ‘Victory Lap’ Remix Featuring Denzel Curry - Billboard</title><link>https://www.billboard.com/music/music-news/fred-again-victory-lap-two-remix-denzel-curry-skepta-1236017323/</link></item>
-<item><title>Lena Dunham Credits Taylor Swift for Connecting Her With Rom-Com Icon Meg Ryan: ‘She Brings Everyone Together’ - Billboard</title><link>https://www.billboard.com/music/music-news/lena-dunham-taylor-swift-meg-ryan-eras-tour-connection-1236017217/</link></item>
-<item><title>Billie Eilish Condemns Israel Defense Minister’s Plan to Forcibly Relocate Palestinians: ‘Horrifying’ - Billboard</title><link>https://www.billboard.com/music/music-news/billie-eilish-condemns-israel-plan-relocate-palestinians-1236017115/</link></item>
-<item><title>Daryl Hall and John Oates Look Back on Playing With Mick Jagger at Live Aid: ‘It Was Shocking, To Be Honest’ - Billboard</title><link>https://www.billboard.com/music/music-news/daryl-hall-john-oates-live-aid-interview-1236017071/</link></item>
-<item><title>Tori Kelly Reveals She’s Pregnant, Expecting First Baby With Husband André Murillo in Sweet Video - Billboard</title><link>https://www.billboard.com/music/music-news/tori-kelly-pregnant-first-baby-husband-andre-murillo-1236016867/</link></item>
-<item><title>Nicole Scherzinger Opens Up About Working With Liam Payne on ‘Building the Band’: ‘This Was His Happy Place’ - Billboard</title><link>https://www.billboard.com/music/music-news/nicole-scherzinger-liam-payne-building-the-band-1236016655/</link></item>
-<item><title>Kevin Jonas Recalls ‘Losing Almost All’ of His Money After the Jonas Brothers Broke Up - Billboard</title><link>https://www.billboard.com/music/music-news/kevin-jonas-lost-money-jonas-brothers-split-1236016605/</link></item>
-<item><title>Katy Perry &amp; Orlando Bloom Enjoy Family Boat Day With Daughter Daisy in Photos Following Split - Billboard</title><link>https://www.billboard.com/music/music-news/katy-perry-orlando-bloom-reunite-daughter-split-1236016711/</link></item>
-<item><title>A Timeline of Katy Perry &amp; Orlando Bloom’s Relationship - Billboard</title><link>https://www.billboard.com/lists/katy-perry-orlando-bloom-relationship-timeline/</link></item>
-<item><title>Joe Jonas Praises Sophie Turner, Says They Have a ‘Great Coparenting Relationship’ Following Divorce - Billboard</title><link>https://www.billboard.com/music/music-news/joe-jonas-praises-sophie-turner-coparenting-divorce-1236016640/</link></item>
-<item><title>Sidney Nagel - FlowingData</title><link>https://flowingdata.com/tag/sidney-nagel/</link></item>
-<item><title>Soundslice Adds ASCII Tab Support After ChatGPT Hallucinates Feature - Slashdot</title><link>https://tech.slashdot.org/story/25/07/09/2247255/soundslice-adds-ascii-tab-support-after-chatgpt-hallucinates-feature</link></item>
-<item><title>Hugging Face Launches $299 Robot That Could Disrupt Entire Robotics Industry - Slashdot</title><link>https://hardware.slashdot.org/story/25/07/09/2051245/hugging-face-launches-299-robot-that-could-disrupt-entire-robotics-industry</link></item>
-<item><title>IKEA Ditches Zigbee For Thread Going All In On Matter Smart Homes - Slashdot</title><link>https://mobile.slashdot.org/story/25/07/09/2038213/ikea-ditches-zigbee-for-thread-going-all-in-on-matter-smart-homes</link></item>
-<item><title>UK Full-Fiber Broadband Coverage Jumps From 12% to 78% in Five Years - Slashdot</title><link>https://news.slashdot.org/story/25/07/09/2021217/uk-full-fiber-broadband-coverage-jumps-from-12-to-78-in-five-years</link></item>
-<item><title>Samsung Launches Three New Foldable Smartphones As It Fends Off Chinese Rivals - Slashdot</title><link>https://mobile.slashdot.org/story/25/07/09/2027259/samsung-launches-three-new-foldable-smartphones-as-it-fends-off-chinese-rivals</link></item>
-<item><title>McDonald&amp;#39;s AI Hiring Bot Exposed Millions of Applicants&amp;#39; Data To Hackers - Slashdot</title><link>https://yro.slashdot.org/story/25/07/09/2014234/mcdonalds-ai-hiring-bot-exposed-millions-of-applicants-data-to-hackers</link></item>
-<item><title>AMD Warns of New Meltdown, Spectre-like Bugs Affecting CPUs - Slashdot</title><link>https://it.slashdot.org/story/25/07/09/1835230/amd-warns-of-new-meltdown-spectre-like-bugs-affecting-cpus</link></item>
-<item><title>Microsoft Touts $500 Million in AI Savings While Slashing Jobs - Slashdot</title><link>https://tech.slashdot.org/story/25/07/09/1831232/microsoft-touts-500-million-in-ai-savings-while-slashing-jobs</link></item>
-<item><title>Western Europe Sees Hottest June on Record Amid Extreme Heatwaves - Slashdot</title><link>https://news.slashdot.org/story/25/07/09/1826228/western-europe-sees-hottest-june-on-record-amid-extreme-heatwaves</link></item>
-<item><title>OpenAI To Release AI Web Browser in Challenge To Chrome - Slashdot</title><link>https://tech.slashdot.org/story/25/07/09/1818249/openai-to-release-ai-web-browser-in-challenge-to-chrome</link></item>
-<item><title>Apple Working on Updated Vision Pro With M4 Chip as Early as 2025 - Slashdot</title><link>https://apple.slashdot.org/story/25/07/09/1731248/apple-working-on-updated-vision-pro-with-m4-chip-as-early-as-2025</link></item>
-<item><title>Microsoft Pledges $4 Billion for AI Education Training Programs - Slashdot</title><link>https://slashdot.org/story/25/07/09/176219/microsoft-pledges-4-billion-for-ai-education-training-programs</link></item>
-<item><title>Animal Diseases Leapt To Humans When We Started Keeping Livestock - Slashdot</title><link>https://science.slashdot.org/story/25/07/09/1649202/animal-diseases-leapt-to-humans-when-we-started-keeping-livestock</link></item>
-<item><title>Restaurants, Bars Say They&amp;#39;re Getting Squeezed by Rising Music Licensing Costs - Slashdot</title><link>https://entertainment.slashdot.org/story/25/07/09/164254/restaurants-bars-say-theyre-getting-squeezed-by-rising-music-licensing-costs</link></item>
-<item><title>Court Nullifies &amp;#39;Click-To-Cancel&amp;#39; Rule That Required Easy Methods of Cancellation - Slashdot</title><link>https://yro.slashdot.org/story/25/07/09/152205/court-nullifies-click-to-cancel-rule-that-required-easy-methods-of-cancellation</link></item>
-<item><title>Eggheads hold science fair on Capitol Hill to decry funding cuts - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/09/science_funding_trump/</link></item>
-<item><title>How to trick ChatGPT into revealing Windows keys? I give up - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/09/chatgpt_jailbreak_windows_keys/</link></item>
-<item><title>Perplexity rips another page from the Google playbook with its own browser, Comet - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/09/perplexity_comet_browser/</link></item>
-<item><title>Microsoft pushes $4B at AI education for the masses - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/09/microsoft_ai_training/</link></item>
-<item><title>Court cancels FTC click-to-cancel rule on a technicality - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/09/ftc_clicktocancel_rule_scrapped/</link></item>
-<item><title>US sanctions alleged North Korean IT sweatshop leader - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/09/us_sanctions_north_korean_it/</link></item>
-<item><title>AMD warns of new Meltdown, Spectre-like bugs affecting CPUs - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/09/amd_tsa_side_channel/</link></item>
-<item><title>Shiny object syndrome spells doom for many AI projects, warns EPA CIO - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/09/ai_projects_need_planning/</link></item>
-<item><title>Anubis guards gates against hordes of LLM bot crawlers - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/09/anubis_fighting_the_llm_hordes/</link></item>
-<item><title>Europe&amp;#39;s exascale dreams inch closer as SiPearl finally tapes out Rhea1 chip - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/09/sipearl_rhea1_tape_out/</link></item>
-<item><title>Google Cloud lands gig to make 100,000 UK civil servants tech-literate - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/09/google_cloud_civil_service/</link></item>
-<item><title>Elon Musk&amp;#39;s Grok chatbot posts Mein Kampf 2.0 in now-deleted X rant - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/09/grok_nazi/</link></item>
-<item><title>Thunderbird ESR is here: Mozilla&amp;#39;s email client adds new functions - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/09/new_thunderbird_esr_is_here/</link></item>
-<item><title>Qantas begins telling some customers that mystery attackers have their home address - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/09/qantas_begins_telling_customers_data/</link></item>
-<item><title>ESA backs five rockets in Launcher Challenge – only some have exploded - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/09/esa_elc_challengers/</link></item>
-<item><title>Ingram Micro restarts orders – for some – following ransomware attack - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/09/ingram_micro_restarts_orders_for/</link></item>
-<item><title>Privacy campaigners pour cold water on London cops&amp;#39; 1,000 facial recognition arrests - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/09/big_brother_watch_met_lfr/</link></item>
-<item><title>C-suite sours on AI despite rising investment, survey finds - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/09/csuite_sours_on_ai/</link></item>
-<item><title>Iranian ransomware crew reemerges, promises big bucks for attacks on US or Israel - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/09/iranian_ransomware_crew_reemerges/</link></item>
-<item><title>Chipmaker GlobalFoundries acquires chip designer MIPS - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/09/globalfoundries_acquires_mips/</link></item>
-<item><title>Samsung acquires Xealth to merge hospital records with data from wearables - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/09/samsung_acquires_xealth/</link></item>
-<item><title>Tim Cook&amp;#39;s Tim Cook stepping down from Apple - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/08/apple_coo_williams_retiring/</link></item>
-<item><title>Microsoft enjoys first Patch Tuesday of 2025 with no active exploits - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/08/microsoft_patch_tuesday/</link></item>
-<item><title>IBM boasts new Power11 chips are stingy on power usage - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/08/ibm_claims_x86_beating_efficiency/</link></item>
-<item><title>Jack Dorsey floats specs for decentralized messaging app that uses Bluetooth - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/08/jack_dorsey_debuts_bitchat/</link></item>
-<item><title>Army and Navy have both asked for right to repair, now Senators want to give it to them - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/08/senators_military_right_to_repair/</link></item>
-<item><title>Massive browser hijacking campaign infects 2.3M Chrome, Edge users - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/08/browser_hijacking_campaign/</link></item>
-<item><title>Trump&amp;#39;s budget bill opens wide swath of spectrum for sale - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/08/trump_budget_bill_spectrum_auctions/</link></item>
-<item><title>Semiconductor industry could short out as copper runs dry - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/08/copper_supplies_climate_change/</link></item>
-<item><title>One Big Brutal Bill: Ex-NASA brass decry Trump&amp;#39;s proposed budget cuts - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/08/nasa_boss_budget_reaction/</link></item>
-<item><title>Post Office and Fujitsu execs &amp;#39;should have known&amp;#39; Horizon IT system was flawed - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/08/post_office_horizon_inquiry/</link></item>
-<item><title>Georgia court throws out earlier ruling that relied on fake cases made up by AI - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/08/georgia_appeals_court_ai_caselaw/</link></item>
-<item><title>SUSE launching region-locked support for the sovereignty-conscious - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/08/suse_sovereign_support/</link></item>
-<item><title>Feds brag about hefty Oracle discount – licensing experts smell a lock-in - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/08/gsa_oracle_deal/</link></item>
-<item><title>Suspected Chinese cybersnoop grounded in Italy after US tipoff - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/08/silk_typhoon_italy_arrest/</link></item>
-<item><title>Britain&amp;#39;s 5G experience &amp;#39;among the worst in Europe&amp;#39; says MedUX - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/08/britains_5g_experience_among_the/</link></item>
-<item><title>Firefox is fine. The people running it are not - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/08/firefox_isnt_dead/</link></item>
-<item><title>UK police dangle £75 million to digitize its VHS tape archives - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/08/uk_police_dangle_75_million/</link></item>
-<item><title>Microsoft developer ported vector database coded in SAP’s ABAP to the ZX Spectrum - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/08/sap_abap_db_spectrum_port/</link></item>
-<item><title>Suspected Scattered Spider domains target everyone from manufacturers to Chipotle - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/08/suspected_scattered_spider_domains_target/</link></item>
-<item><title>Epic Games settles its antitrust side quest that sought battle royale with Samsung - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/08/epic_games_samsung_settle/</link></item>
-<item><title>Trump administration announces tariffs that may make plenty of tech more expensive from August 1 - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/08/trump_administration_reciprocal_tariffs/</link></item>
-<item><title>US resumes sending some weapons to Ukraine after Pentagon pause - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2025/07/10/us-resumes-sending-some-weapons-to-ukraine-after-pentagon-pause/</link></item>
-<item><title>Japan starts deploying Osprey fleet at a new base with an eye on China - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2025/07/09/japan-starts-deploying-osprey-fleet-at-a-new-base-with-an-eye-on-china/</link></item>
-<item><title>DARPA ends cargo seaplane program, eyes new uses for tech - Defense News</title><link>https://www.defensenews.com/air/2025/07/09/darpa-ends-cargo-seaplane-program-eyes-new-uses-for-tech/</link></item>
-<item><title>Pentagon trials drone-spotting air traffic suite at US bases worldwide - Defense News</title><link>https://www.defensenews.com/unmanned/2025/07/09/pentagon-trials-drone-spotting-air-traffic-suite-at-us-bases-worldwide/</link></item>
-<item><title>New aircraft carriers face years of delivery delays - Defense News</title><link>https://www.defensenews.com/naval/2025/07/09/new-aircraft-carriers-face-years-of-delivery-delays/</link></item>
-<item><title>Denmark to rent air defenses as it rushes to rebuild missile shield - Defense News</title><link>https://www.defensenews.com/global/europe/2025/07/08/denmark-to-rent-air-defenses-as-it-rushes-to-rebuild-missile-shield/</link></item>
-<item><title>Former Air Force chiefs sound alarm about planned F-35, E-7 cuts - Defense News</title><link>https://www.defensenews.com/air/2025/07/08/former-air-force-chiefs-sound-alarm-about-planned-f-35-e-7-cuts/</link></item>
-<item><title>French push for greater say in FCAS program roils partners: reports - Defense News</title><link>https://www.defensenews.com/global/europe/2025/07/08/french-push-for-greater-say-in-fcas-program-roils-partners-reports/</link></item>
-<item><title>Fighter pilots integrate drones into air combat training - Defense News</title><link>https://www.defensenews.com/newsletters/2025/07/09/fighter-pilots-integrate-drones-into-air-combat-training/</link></item>
-<item><title>Trump caught off guard by DOD pause on Ukraine arms deliveries: Report - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2025/07/08/trump-caught-off-guard-by-dod-pause-on-ukraine-arms-deliveries-report/</link></item>
-<item><title>Trump, Netanyahu take victory lap over strikes on Iran nuclear sites - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2025/07/08/trump-netanyahu-take-victory-lap-over-strikes-on-iran-nuclear-sites/</link></item>
-<item><title>NATO testing Baltic Sea drones to track Russian warships, freighters - Defense News</title><link>https://www.defensenews.com/global/europe/2025/07/08/nato-testing-baltic-sea-drones-to-track-russian-warships-freighters/</link></item>
-<item><title>Air Force review spotlights risks in space agency’s go-fast approach - Defense News</title><link>https://www.defensenews.com/space/2025/07/08/air-force-review-spotlights-risks-in-space-agencys-go-fast-approach/</link></item>
-<item><title>New Zealand will ‘look to the stars’ with first military space unit - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2025/07/08/new-zealand-will-look-to-the-stars-with-first-military-space-unit/</link></item>
-<item><title>What’s the key to better defense contracting? Measure what works. - Defense News</title><link>https://www.defensenews.com/opinion/2025/07/09/whats-the-key-to-better-defense-contracting-measure-what-works/</link></item>
-<item><title>South Korea backtracks over follow-on Apache helicopter buy - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2025/07/09/south-korea-backtracks-over-follow-on-apache-helicopter-buy/</link></item>
-<item><title>Trump’s 50% copper tariff triggers market chaos and global backlash - The Eastern Herald</title><link>https://easternherald.com/2025/07/09/trump-50-percent-tariff-copper-market-chaos/</link></item>
-<item><title>Nvda Stock dips despite record gains as Nvidia CEO sells over $35.16 million in shares - The Eastern Herald</title><link>https://easternherald.com/2025/07/09/nvidia-stock-forecast/</link></item>
-<item><title>Trump and Netanyahu push Gaza ceasefire cover-up as Israel slaughters innocents - The Eastern Herald</title><link>https://easternherald.com/2025/07/09/gaza-ceasefire-trump-netanyahu/</link></item>
-<item><title>Malaysia to host historic 47th ASEAN summit with world leaders - The Eastern Herald</title><link>https://easternherald.com/2025/07/08/47th-asean-summit-malaysia/</link></item>
-<item><title>Israel attacks Yemen ports and power plant as resistance expands beyond gaza - The Eastern Herald</title><link>https://easternherald.com/2025/07/07/israel-attack-yemen/</link></item>
-<item><title>Lula da Silva says US interference in Brazil’s affairs is unacceptable - The Eastern Herald</title><link>https://easternherald.com/2025/07/07/us-interference-brazils-affairs-unacceptable/</link></item>
-<item><title>Former transport Minister Roman Starovoyt dies by suicide after dismissal - The Eastern Herald</title><link>https://easternherald.com/2025/07/07/roman-starovoyt-suicide/</link></item>
-<item><title>Ukraine joining EU would import war into Europe, Hungary halts the bid - The Eastern Herald</title><link>https://easternherald.com/2025/07/06/hungary-blocks-ukraine-eu-bid/</link></item>
-<item><title>Yemen strikes Ben Gurion Airport in Israel with missiles - The Eastern Herald</title><link>https://easternherald.com/2025/07/06/yemen-strikes-ben-gurion-airport/</link></item>
-<item><title>Lavrov leads Russia at pivotal 17th BRICS summit in Rio De Janeiro - The Eastern Herald</title><link>https://easternherald.com/2025/07/06/17th-brics-summit-rio-de-janeiro/</link></item>
-<item><title>What Country Has the Most Islands? Surprisingly Not a Tropical One - HowStuffWorks</title><link>https://science.howstuffworks.com/environmental/earth/what-country-has-the-most-islands.htm</link></item>
-<item><title>Cod vs. Haddock: Identification, Cooking, and Buying Tips - HowStuffWorks</title><link>https://animals.howstuffworks.com/fish/cod-vs-haddock.htm</link></item>
-<item><title>Is Rosemary Safe for Cats? Not as an Essential Oil - HowStuffWorks</title><link>https://animals.howstuffworks.com/pets/is-rosemary-safe-for-cats.htm</link></item>
-<item><title>13 Types of Axolotl Morphs to Wow Aspiring Enthusiasts - HowStuffWorks</title><link>https://animals.howstuffworks.com/amphibians/types-of-axolotl.htm</link></item>
-<item><title>13 Brown Gemstones for Understated Elegance - HowStuffWorks</title><link>https://science.howstuffworks.com/environmental/earth/geology/brown-gemstones.htm</link></item>
-<item><title>Wolverine vs. Badger: An Intensely Scrappy Showdown - HowStuffWorks</title><link>https://animals.howstuffworks.com/mammals/wolverine-vs-badger.htm</link></item>
-<item><title>Is Catnip Bad for Cats or Can Cat Brains Handle the Nip? - HowStuffWorks</title><link>https://animals.howstuffworks.com/pets/is-catnip-bad-for-cats.htm</link></item>
-<item><title>10 Red Gemstones That Evoke Power and Bold Luxury - HowStuffWorks</title><link>https://science.howstuffworks.com/environmental/earth/geology/red-gemstones.htm</link></item>
-<item><title>15 Types of Blue for Every Mood and Vibe - HowStuffWorks</title><link>https://lifestyle.howstuffworks.com/style/fashion/types-of-blue.htm</link></item>
-<item><title>Snow Crab: A High-protein Delight Thriving in Cold Waters - HowStuffWorks</title><link>https://animals.howstuffworks.com/marine-life/snow-crab.htm</link></item>
-<item><title>COMING SOON – Adafruit Pi Stemma QT Breakout… - Adafruit Industries</title><link>https://blog.adafruit.com/2025/07/09/coming-soon-adafruit-pi-stemma-qt-breakout-for-raspberry-pi-and-compatibles/</link></item>
-<item><title>Head-Mounted Haptic Navigation Device for Visually… - Adafruit Industries</title><link>https://blog.adafruit.com/2025/07/09/head-mounted-haptic-navigation-device-for-visually-impaired-individuals-wearablewednesday/</link></item>
-<item><title>No-Code Rain Sensing Smart Desktop Umbrella Stand… - Adafruit Industries</title><link>https://blog.adafruit.com/2025/07/09/no-code-rain-sensing-smart-desktop-umbrella-stand-weather-adafruitlearningsystem-adafruit/</link></item>
-<item><title>New nEw NEWS From Adafruit Round-Up: April, May &amp; June 2025 - Adafruit Industries</title><link>https://blog.adafruit.com/2025/07/09/new-new-news-from-adafruit-round-up-april-may-june-2025/</link></item>
-<item><title>Remove AI from Slack - Adafruit Industries</title><link>https://adafruit.com/slackforce</link></item>
-<item><title>The machine for making the machine: making test jigs - Adafruit Industries</title><link>https://blog.adafruit.com/2025/07/09/the-machine-for-making-the-machine-making-test-jigs/</link></item>
-<item><title>From the Adafruit Learning System Archives: A CLUE Slideshow Purse with Bright Wearables #WearableWednesday - Adafruit Industries</title><link>https://blog.adafruit.com/2025/07/09/from-the-adafruit-learning-system-archives-a-clue-slideshow-purse-with-bright-wearables-wearablewednesday/</link></item>
-<item><title>UPDATED GUIDE: Track a Turtle with WipperSnapper #AdafruitIO #WipperSnapper #Turtles - Adafruit Industries</title><link>https://blog.adafruit.com/2025/07/09/new-guide-track-a-turtle-with-wippersnapper-adafruitio-wippersnapper-turtles-2/</link></item>
-<item><title>adafruit io actions - Adafruit Industries</title><link>https://blog.adafruit.com/tag/adafruit-io-actions/</link></item>
-<item><title>SVGs that feel like GIFs - Adafruit Industries</title><link>https://blog.adafruit.com/2025/07/09/svgs-that-feel-like-gifs/</link></item>
-<item><title>animated gif - Adafruit Industries</title><link>https://blog.adafruit.com/tag/animated-gif/</link></item>
-<item><title>animated svg - Adafruit Industries</title><link>https://blog.adafruit.com/tag/animated-svg/</link></item>
-<item><title>On the capacity, performance, and reliability of microSD cards - Adafruit Industries</title><link>https://blog.adafruit.com/2025/07/09/on-the-capacity-performance-and-reliability-of-microsd-cards/</link></item>
-<item><title>Lance Wyman Minnesota Zoo logo - Adafruit Industries</title><link>https://blog.adafruit.com/2025/07/09/lance-wyman-minnesota-zoo-logo/</link></item>
-<item><title>graphic design - Adafruit Industries</title><link>https://blog.adafruit.com/tag/graphic-design/</link></item>
-<item><title>From the Archives: Bluetooth Controlled NeoPixel Headphones - Adafruit Industries</title><link>https://blog.adafruit.com/2025/07/09/from-the-archives-bluetooth-controlled-neopixel-headphones/</link></item>
-<item><title>CircuitPython 10.0.0-alpha.8 Released! - Adafruit Industries</title><link>https://blog.adafruit.com/2025/07/08/circuitpython-10-0-0-alpha-8-released/</link></item>
-<item><title>Chess Comes Alive: The Magic of Automation ♟️ #raspberrypi - Adafruit Industries</title><link>https://blog.adafruit.com/2025/07/08/chess-comes-alive-the-magic-of-automation-%e2%99%9f%ef%b8%8f-raspberrypi/</link></item>
-<item><title>JP’s Product Pick of the Week — 4pm Eastern TODAY! 7/8/25 @adafruit #adafruit #newproductpick - Adafruit Industries</title><link>https://blog.adafruit.com/2025/07/08/jps-product-pick-of-the-week-4pm-eastern-today-7-8-25-adafruit-adafruit-newproductpick/</link></item>
-<item><title>Browser Extensions Turn Nearly 1 Million Browsers Into Website-Scraping Bots - Slashdot</title><link>https://tech.slashdot.org/story/25/07/09/2257245/browser-extensions-turn-nearly-1-million-browsers-into-website-scraping-bots</link></item>
-<item><title>Meltdown and Spectre - Slashdot</title><link>https://tech.slashdot.org/story/18/01/04/0131239/googles-project-zero-team-discovered-critical-cpu-flaw-last-year</link></item>
-<item><title>terminates thousands of personnel - Slashdot</title><link>https://slashdot.org/story/25/07/02/1330223/microsoft-to-lay-off-as-many-as-9000-employees-in-latest-round</link></item>
-<item><title>received $23 million from Microsoft, OpenAI and Anthropic - Slashdot</title><link>https://news.slashdot.org/story/25/07/08/1237220/microsoft-openai-and-a-us-teachers-union-are-hatching-a-plan-to-bring-ai-into-the-classroom</link></item>
-<item><title>Amazon Asks Corporate Workers To &amp;#39;Volunteer&amp;#39; Help With Grocery Deliveries as Prime Day Frenzy Approaches - Slashdot</title><link>https://slashdot.org/story/25/07/08/202255/amazon-asks-corporate-workers-to-volunteer-help-with-grocery-deliveries-as-prime-day-frenzy-approaches?sbsrc=md</link></item>
-<item><title>Weedkiller Ingredient Widely Used In US Can Damage Organs and Gut Bacteria, Research Shows - Slashdot</title><link>https://science.slashdot.org/story/25/07/08/0152223/weedkiller-ingredient-widely-used-in-us-can-damage-organs-and-gut-bacteria-research-shows?sbsrc=md</link></item>
-<item><title>Unless Users Take Action, Android Will Let Gemini Access Third-Party Apps - Slashdot</title><link>https://tech.slashdot.org/story/25/07/08/1255232/unless-users-take-action-android-will-let-gemini-access-third-party-apps?sbsrc=md</link></item>
-<item><title>Re:So basically... - Slashdot</title><link>https://slashdot.org/comments.pl?sid=25/07/09/152205&amp;cid=65507446&amp;sbsrc=topcom</link></item>
-<item><title>Re:What do they suggest as a replacement? - Slashdot</title><link>https://slashdot.org/comments.pl?sid=25/07/09/1443248&amp;cid=65507350&amp;sbsrc=topcom</link></item>
-<item><title>Teachers Urge Parents Not To Buy Children Smartphones - Slashdot</title><link>https://slashdot.org/article.pl?sid=25/07/09/1443248&amp;sbsrc=topcom</link></item>
-<item><title>Fill this niche - Slashdot</title><link>https://slashdot.org/comments.pl?sid=25/07/09/164254&amp;cid=65507462&amp;sbsrc=topcom</link></item>
-<item><title>Can&amp;#39;t speak for anyone else... - Slashdot</title><link>https://slashdot.org/comments.pl?sid=25/07/09/164254&amp;cid=65507456&amp;sbsrc=topcom</link></item>
-<item><title>Re:Pay up or shut it off. - Slashdot</title><link>https://slashdot.org/comments.pl?sid=25/07/09/164254&amp;cid=65507772&amp;sbsrc=topcom</link></item>
-<item><title>UCSD Lecturer Releases Geotagging Application For &amp;quot;Dangerous Guns and Owners&amp;quot; - Slashdot</title><link>https://yro.slashdot.org/story/13/07/09/136236/ucsd-lecturer-releases-geotagging-application-for-dangerous-guns-and-owners?sbsrc=thisday</link></item>
-<item><title>Sci-Fi Books For Pre-Teens? - Slashdot</title><link>https://entertainment.slashdot.org/story/08/07/08/2059231/sci-fi-books-for-pre-teens?sbsrc=thisday</link></item>
-<item><title>$499 PlayStation 3 Confirmed - Slashdot</title><link>https://games.slashdot.org/story/07/07/09/0253236/499-playstation-3-confirmed?sbsrc=thisday</link></item>
-<item><title>Microsoft Responds to IE Criticism - Slashdot</title><link>https://tech.slashdot.org/story/04/07/09/1355229/microsoft-responds-to-ie-criticism?sbsrc=thisday</link></item>
-<item><title>Alternative-Fuel Vehicle Recommendations? - Slashdot</title><link>https://ask.slashdot.org/story/02/07/08/2314215/alternative-fuel-vehicle-recommendations?sbsrc=thisday</link></item>
-<item><title>Definition Detective Quiz #45 - Mental Floss</title><link>https://www.mentalfloss.com/quizzes/definition-detective-quiz-45</link></item>
-<item><title>13 Things Made Collectible Thanks to Spelling Errors - Mental Floss</title><link>https://www.mentalfloss.com/article/53180/12-things-made-collectible-thanks-spelling-errors</link></item>
-<item><title>Why Is It Called a “Ball Peen Hammer”? - Mental Floss</title><link>https://www.mentalfloss.com/language/ball-peen-hammer-tool-name-origins</link></item>
-<item><title>Ace of spades - Sankaku Complex</title><link>https://www.sankakucomplex.com/?tags=Ace_of_spades&amp;tab=explore</link></item>
-<item><title>Acid GIFs, July 10 (25 gifs) - AcidCow.com</title><link>https://acidcow.com/gif/168702-acid-gifs-july-10-25-gifs.html</link></item>
-<item><title>Interesting Photos From Around The World (17 pics) - AcidCow.com</title><link>https://acidcow.com/pics/168686-interesting-photos-from-around-the-world-17-pics.html</link></item>
-<item><title>Busty Girls (25 pics) - AcidCow.com</title><link>https://acidcow.com/girls/168697-busty-girls-25-pics.html</link></item>
-<item><title>Redneck Lifehacks And Inventions (17 pics) - AcidCow.com</title><link>https://acidcow.com/pics/168694-redneck-lifehacks-and-inventions-17-pics.html</link></item>
-<item><title>Annoying Situations (21 pics) - AcidCow.com</title><link>https://acidcow.com/pics/168692-annoying-situations-21-pics.html</link></item>
-<item><title>Weird DIY Crafts (20 pics) - AcidCow.com</title><link>https://acidcow.com/pics/168685-weird-diy-crafts-20-pics.html</link></item>
-<item><title>Odd Things And Designs (23 pics) - AcidCow.com</title><link>https://acidcow.com/pics/168690-odd-things-and-designs-23-pics.html</link></item>
-<item><title>Cool Collections (20 pics) - AcidCow.com</title><link>https://acidcow.com/pics/168688-cool-collections-20-pics.html</link></item>
-<item><title>Talented People (23 pics) - AcidCow.com</title><link>https://acidcow.com/pics/168689-talented-people-23-pics.html</link></item>
-<item><title>Slim Girls (25 pics) - AcidCow.com</title><link>https://acidcow.com/girls/168698-slim-girls-25-pics.html</link></item>
-<item><title>Bad Drivers (16 pics) - AcidCow.com</title><link>https://acidcow.com/pics/168693-bad-drivers-16-pics.html</link></item>
-<item><title>Awful People (21 pics) - AcidCow.com</title><link>https://acidcow.com/pics/168691-awful-people-21-pics.html</link></item>
-<item><title>Cool Home Renovation (24 pics) - AcidCow.com</title><link>https://acidcow.com/pics/168684-cool-home-renovation-24-pics.html</link></item>
-<item><title>Daily Pictures. Part 2 (57 pics) - AcidCow.com</title><link>https://acidcow.com/picdump/168681-daily-pictures-part-2-57-pics.html</link></item>
-<item><title>The French liar - Aeon</title><link>https://aeon.co/essays/was-rene-descartes-a-self-centred-guru-and-a-lying-fraud?utm_source=rss-feed</link></item>
-<item><title>特朗普无视规则，抢跑国际深海采矿 - 绿色和平</title><link>https://www.greenpeace.org.cn/2025/07/03/trump-disregards-rules-and-jumps-the-gun-on-international-deep-sea-mining/</link></item>
-<item><title>往水灾一线送饭的她，补上了系统的空位 | 气候鸭先知 - 绿色和平</title><link>https://www.greenpeace.org.cn/2025/07/01/bringing-meals-to-the-flood-zone-she-stepped-in-where-the-system-fell-short/</link></item>
-<item><title>气候韧性，是一群人保持不服输的劲头 - 绿色和平</title><link>https://www.greenpeace.org.cn/2025/06/30/climate-resilience-is-the-spirit-of-a-group-of-people-who-refuse-to-give-up/</link></item>
-<item><title>绿色转型观察｜中国基础设施公募在可再生能源领域进展研究 - 绿色和平</title><link>https://www.greenpeace.org.cn/2025/06/30/reits-in-the-field-of-renewable-energy/</link></item>
-<item><title>其实所有的答案，已被你带到了现场 | 怎么「不插电！」地改变世界 - 绿色和平</title><link>https://www.greenpeace.org.cn/2025/06/27/how-to-change-the-world-unplugged/</link></item>
-<item><title>136号文专家对话 | 新能源竞价时代的赢家逻辑 - 绿色和平</title><link>https://www.greenpeace.org.cn/2025/06/24/expert-dialogue-on-document-no-136/</link></item>
-<item><title>在重新想象“气候”中再次发现自己的潜能 - 绿色和平</title><link>https://www.greenpeace.org.cn/2025/06/19/reimagine-potentials-through-climate-action-workshop3/</link></item>
-<item><title>围绕云南森林修复技术，还有哪些要做的？| 研讨会回顾 - 绿色和平</title><link>https://www.greenpeace.org.cn/2025/06/17/what-are-the-to-dos-about-forest-restoration/</link></item>
-<item><title>Does Paul Really Promise I’ll Suffer? - TGC</title><link>https://www.thegospelcoalition.org/article/paul-promise-suffer/</link></item>
-<item><title>In the Aftermath of the Texas Floods, Keep Watch with the Suffering - TGC</title><link>https://www.thegospelcoalition.org/article/texas-flood-keep-watch/</link></item>
-<item><title>4 Questions Pastors Should Ask Before Using AI - TGC</title><link>https://www.thegospelcoalition.org/article/questions-pastors-using-ai/</link></item>
-<item><title>Podcast: A Conversation with Matt Smethurst about Tim Keller - TGC</title><link>https://in.thegospelcoalition.org/article/podcast-with-matt-smethurst</link></item>
-<item><title>Saving Our Kids from Scrolling to Death - TGC</title><link>https://www.thegospelcoalition.org/article/saving-kids-scrolling-death/</link></item>
-<item><title>Work Is Cursed. We Need the Gospel. - TGC</title><link>https://www.thegospelcoalition.org/article/work-cursed-need-gospel/</link></item>
-<item><title>Countering 3 Muslim Attacks on the Bible - TGC</title><link>https://www.thegospelcoalition.org/article/muslim-bible-apologetics/</link></item>
-<item><title>Want to Grow in Wisdom? You Need Gospel Friends. - TGC</title><link>https://www.thegospelcoalition.org/article/grow-wisdom-gospel-friends/</link></item>
-<item><title>Books You Should Read This Summer - TGC</title><link>https://www.thegospelcoalition.org/article/reading-summer-2025/</link></item>
-<item><title>God’s Good Design for Marriage: 5 Doctrinal Dimensions - TGC</title><link>https://www.thegospelcoalition.org/article/marriage-doctrinal-dimensions/</link></item>
-<item><title>Twice Healed: The Blind Man at Bethsaida - TGC</title><link>https://www.thegospelcoalition.org/article/healed-blind-mind-bethsaida/</link></item>
-<item><title>No Chance of Survival: How a Deadly Plane Crash Yielded a Growing Spiritual Harvest - TGC</title><link>https://www.thegospelcoalition.org/article/no-chance-survival-plane-crash/</link></item>
-<item><title>Let’s Not Rush to Roles - TGC</title><link>https://www.thegospelcoalition.org/article/not-rush-roles/</link></item>
-<item><title>Outprinting the Prosperity Gospel in Southern Africa - TGC</title><link>https://www.thegospelcoalition.org/article/outprinting-prosperity-gospel-southern-africa/</link></item>
-<item><title>God’s Love Is Sufficient to Help You Fight Porn - TGC</title><link>https://www.thegospelcoalition.org/article/gods-love-fight-porn/</link></item>
-<item><title>What Churches Need to Know About Smart Glasses - TGC</title><link>https://www.thegospelcoalition.org/article/churches-smart-glasses/</link></item>
-<item><title>You Don’t Need Another Prayer Technique - TGC</title><link>https://www.thegospelcoalition.org/article/dont-need-prayer-technique/</link></item>
-<item><title>New Mobile Game ‘Serpent and the Seed’ Is Biblical and Beautiful - TGC</title><link>https://www.thegospelcoalition.org/article/serpent-seed-video-game/</link></item>
-<item><title>What Is Covenant Theology? - TGC</title><link>https://www.thegospelcoalition.org/article/what-covenant-theology/</link></item>
+<lastBuildDate>Fri, 11 Jul 2025 11:55:05 +0800</lastBuildDate>
+<item><title>海洋中的纳米塑料多达数千万吨 - Solidot</title><link>https://www.solidot.org/story?sid=81770</link></item>
+<item><title>GlobalFoundries 收购 MIPS - Solidot</title><link>https://www.solidot.org/story?sid=81769</link></item>
+<item><title>《星露谷物语》成为 Steam 平台最受好评的游戏 - Solidot</title><link>https://www.solidot.org/story?sid=81768</link></item>
+<item><title>基因组研究确认人类圈养动物后动物病毒开始传播给人类 - Solidot</title><link>https://www.solidot.org/story?sid=81765</link></item>
+<item><title>西欧经历有记录以来最热的六月 - Solidot</title><link>https://www.solidot.org/story?sid=81764</link></item>
+<item><title>两性权力关系泾渭并不分明 - Solidot</title><link>https://www.solidot.org/story?sid=81763</link></item>
+<item><title>OpenAI 将发布 AI Web 浏览器挑战 Chrome - Solidot</title><link>https://www.solidot.org/story?sid=81762</link></item>
+<item><title>麦当劳的 AI 招聘平台管理员密码是 123456 - Solidot</title><link>https://www.solidot.org/story?sid=81761</link></item>
+<item><title>一群抹香鲸被拍摄到以站立姿态睡觉 - Solidot</title><link>https://www.solidot.org/story?sid=81758</link></item>
+<item><title>HomeGoods Is Selling the Most Adorable Mini Dutch Ovens, and I Want All 3 Colors - Kitchn</title><link>https://www.thekitchn.com/home-goods-mini-dutch-ovens-23735152?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>Once You Fry an Egg Like Gordon Ramsay, You&amp;#39;ll Never Cook It Another Way - Kitchn</title><link>https://www.thekitchn.com/gordon-ramsay-frying-eggs-technique-23735141?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>I’m a Professional Baker and This Is the Most Incredible Cobbler I&amp;#39;ve EVER Eaten - Kitchn</title><link>https://www.thekitchn.com/blueberry-cobbler-recipe-review-23733843?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>This Candy Bar Is So Good, My Sister Started Buying It in Bulk After One Bite (Plus, It’s On Sale for Prime Day!) - Kitchn</title><link>https://www.thekitchn.com/unreal-dark-chocolate-coconut-bars-review-23734937?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>This Splurge Actually Saves Me Money — And I’d Make It Again and Again (It’s on Major Sale for Prime Day!) - Kitchn</title><link>https://www.thekitchn.com/lettuce-grow-farmstand-nook-review-2-23735112?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>The $3 Secret Ingredient for the Most Delicious Summer Drink - Kitchn</title><link>https://www.thekitchn.com/vietnamese-avocado-smoothie-23734204?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>I Brought 18 Different Tins of Fish Home from Portugal Last Summer — And This One Is Still My Absolute Favorite - Kitchn</title><link>https://www.thekitchn.com/jose-gourmet-smoked-small-sardines-olive-oil-review-23734818?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>The Best Way to Grill Boneless Chicken Thighs Is Super Fast - Kitchn</title><link>https://www.thekitchn.com/grilled-chicken-thighs-skills-showdown-23733850?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>The Surprising Little Gem That Makes Picnics and Outdoor Parties 100x Easier (Less Than $1 Each!) - Kitchn</title><link>https://www.thekitchn.com/clipra-tablecloth-clips-review-23734988?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>SPONSORED POST: Watch This Sunny NYC Bedroom Go from “Plain White Box” to “Elevated and Eclectic” - Kitchn</title><link>https://www.thekitchn.com/watch-this-sunny-nyc-bedroom-go-from-plain-white-box-to-elevated-and-eclectic-23734930?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>SPONSORED POST: No More Playing It Safe: A Fashion Pro’s Living Room Finally Matches Her Impeccable Style - Kitchn</title><link>https://www.thekitchn.com/no-more-playing-it-safe-a-fashion-pros-living-room-finally-matches-her-impeccable-style-23734914?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>SPONSORED POST: This Elegant Living Room Makeover Blends Grown-Up Style with Kid-Friendly Function - Kitchn</title><link>https://www.thekitchn.com/this-elegant-living-room-makeover-blends-grown-up-style-with-kid-friendly-function-23734910?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>This Cheap Best-Selling Nugget Ice Maker Is on Sale for Prime Day (It Has Nearly 3,200 Five-Star Ratings) - Kitchn</title><link>https://www.thekitchn.com/best-silonn-countertop-nugget-ice-maker-prime-day-deal-2025-23734756?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>I Just Discovered the Most Game-Changing Way to Store and Transport Cake - Kitchn</title><link>https://www.thekitchn.com/cake-storage-hack-23734900?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>What’s in Brooklyn Peltz Beckham’s Shopping Cart [Exclusive] - Kitchn</title><link>https://www.thekitchn.com/brooklyn-peltz-beckham-a-la-cart-exclusive-23734727?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>The Extra-Tomatoey Ingredient for the Perfect Tomato Toast - Kitchn</title><link>https://www.thekitchn.com/tomato-bouillon-toast-23734794?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>This Portable Deep-Cleaner Is the Best Thing I’ve Ever Done for My Kitchen (It’s on Sale for Prime Day!) - Kitchn</title><link>https://www.thekitchn.com/bissell-little-green-hydrosteam-cleaner-kitchen-review-23734804?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>Everything Giada De Laurentiis Cooks in a Day [Exclusive] - Kitchn</title><link>https://www.thekitchn.com/giada-de-laurentiis-cooking-diary-exclusive-23734168?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>I Can&amp;#39;t Stop Making This &amp;quot;Instantly Refreshing&amp;quot; Thai Salad - Kitchn</title><link>https://www.thekitchn.com/green-papaya-salad-23734353?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>European Evangelical Alliance leader meets Ukraine’s prime minister in Kyiv - WEA</title><link>https://worldea.org/news/28660/european-evangelical-alliance-leader-meets-ukraines-prime-minister-in-kyiv/</link></item>
+<item><title>Salt and Light Behind Bars: A Visit to Somang Prison and the WEA’s Gospel Vision in Action - WEA</title><link>https://worldea.org/news/28638/salt-and-light-behind-bars-a-visit-to-somang-prison-and-the-weas-gospel-vision-in-action/</link></item>
+<item><title>Symposium on Disciple Making as WEA continued direction in Disciple Making - WEA</title><link>https://worldea.org/news/28634/symposium-on-disciple-making-as-wea-continued-direction-in-disciple-making/</link></item>
+<item><title>WEA General Secretary Search Advancing On Schedule - WEA</title><link>https://worldea.org/news/28626/wea-general-secretary-search-advancing-on-schedule/</link></item>
+<item><title>Asia Evangelical Leaders Unite in Seoul to Rekindle a Disciple-Making Movement Across the Continent - WEA</title><link>https://worldea.org/news/28511/asia-evangelical-leaders-unite-in-seoul-to-rekindle-a-disciple-making-movement-across-the-continent/</link></item>
+<item><title>WEA Global Advocacy Newsletter – June 2025 - WEA</title><link>https://worldea.org/news/28500/wea-global-advocacy-newsletter-june-2025/</link></item>
+<item><title>WEA Responds to Concerns About Dr. Goodwill Shana’s Leadership Role - WEA</title><link>https://worldea.org/news/28486/wea-responds-to-concerns-about-dr-goodwill-shanas-leadership-role/</link></item>
+<item><title>Urgent Call to Prayer for the Holy Land - WEA</title><link>https://worldea.org/news/28441/urgent-call-to-prayer-for-the-holy-land/</link></item>
+<item><title>Lisa Cooper And Bremond Berry MacDougall On Influencing The Literary Canon With Quite Literally Books - Public Libraries Online</title><link>https://publiclibrariesonline.org/2025/07/quiteliterally/</link></item>
+<item><title>“Every Bit Of Art Is Local Some Place”: Helen Sheehy On Her Enthralling Family Saga - Public Libraries Online</title><link>https://publiclibrariesonline.org/2025/06/sheehy/</link></item>
+<item><title>Work It Out @ Your Library! - Public Libraries Online</title><link>https://publiclibrariesonline.org/2025/06/work-it-out-your-library/</link></item>
+<item><title>New Podcast Episode! Résumé Writing with Alison King - Public Libraries Online</title><link>https://publiclibrariesonline.org/2025/06/new-podcast-episode-resume-writing-with-alison-king/</link></item>
+<item><title>FYI Podcast Episode –  Navigating Legal Reference at the Public Library - Public Libraries Online</title><link>https://publiclibrariesonline.org/2025/05/fyi-podcast-episode-navigating-legal-reference-at-the-public-library/</link></item>
+<item><title>FYI Podcast Episode – Exploring Acoustic Rooster with PBS Kids - Public Libraries Online</title><link>https://publiclibrariesonline.org/2025/04/fyi-podcast-episode-exploring-acoustic-rooster-with-pbs-kids/</link></item>
+<item><title>Sizing Up AWS “Blackwell” GPU Systems Against Prior GPUs And Trainiums - The Next Platform</title><link>https://www.nextplatform.com/2025/07/10/sizing-up-aws-blackwell-gpu-systems-against-prior-gpus-and-trainiums/</link></item>
+<item><title>How BigQuery Combines Data And AI For Business Transformation - The Next Platform</title><link>https://www.nextplatform.com/2025/07/10/how-bigquery-combines-data-and-ai-for-business-transformation/</link></item>
+<item><title>With Money And Rhea1 Tapeout, SiPearl Gets Real About HPC CPUs - The Next Platform</title><link>https://www.nextplatform.com/2025/07/09/with-money-and-rhea1-tapeout-sipearl-gets-real-about-hpc-cpus/</link></item>
+<item><title>Only The Biggest Neoclouds Will Survive - The Next Platform</title><link>https://www.nextplatform.com/2025/07/08/only-the-biggest-neoclouds-will-survive/</link></item>
+<item><title>Silicon One: Many Cisco Chips With One Architecture Chasing Many AI Workloads - The Next Platform</title><link>https://www.nextplatform.com/2025/07/07/silicon-one-many-cisco-chips-with-one-architecture-chasing-many-ai-workloads/</link></item>
+<item><title>How Multi-Agent Systems Revolutionize Data Workflows - The Next Platform</title><link>https://www.nextplatform.com/2025/07/03/how-multi-agent-systems-revolutionize-data-workflows/</link></item>
+<item><title>How Will Juniper Change HPE’s Datacenter Networking Strategy? - The Next Platform</title><link>https://www.nextplatform.com/2025/07/02/how-will-juniper-change-hpes-datacenter-networking-strategy/</link></item>
+<item><title>Even AI Can’t Predict How Much Accelerated Iron The World Will Buy - The Next Platform</title><link>https://www.nextplatform.com/2025/07/01/even-ai-cant-predict-how-much-accelerated-iron-the-world-will-buy/</link></item>
+<item><title>Skyrocketing HBM Will Push Micron Through $45 Billion And Beyond - The Next Platform</title><link>https://www.nextplatform.com/2025/06/30/skyrocketing-hbm-will-push-micron-through-10-billion-and-beyond/</link></item>
+<item><title>HPE Throws Everything At AI – And AI At Everything - The Next Platform</title><link>https://www.nextplatform.com/2025/06/25/hpe-throws-everything-at-ai-and-ai-at-everything/</link></item>
+<item><title>Develop:Star Awards 2025 winners - GamesIndustry</title><link>https://www.gamesindustry.biz/developstar-awards-2025-winners</link></item>
+<item><title>Nintendo to discontinue Switch Game Voucher service - GamesIndustry</title><link>https://www.gamesindustry.biz/nintendo-to-discontinue-switch-game-voucher-service</link></item>
+<item><title>Circle Games secures $7.25m in latest funding round - GamesIndustry</title><link>https://www.gamesindustry.biz/circle-games-secures-725m-in-latest-funding-round</link></item>
+<item><title>Former Naughty Dog director to launch new Japanese studio - GamesIndustry</title><link>https://www.gamesindustry.biz/former-naughty-dog-director-to-launch-new-japanese-studio</link></item>
+<item><title>Wargaming sunsets F2P shooter Steel Hunters just three months after launch - GamesIndustry</title><link>https://www.gamesindustry.biz/wargaming-sunsets-f2p-shooter-steel-hunters-just-three-months-after-launch</link></item>
+<item><title>&amp;quot;We have three years to show what we can do.&amp;quot; UKIE&amp;#39;s Nick Poole on the new UK Video Games Council - GamesIndustry</title><link>https://www.gamesindustry.biz/we-have-three-years-to-show-what-we-can-do-ukies-nick-poole-on-the-new-uk-video-game-council</link></item>
+<item><title>SAG-AFTRA members vote in favour of agreement, strike officially ends - GamesIndustry</title><link>https://www.gamesindustry.biz/sag-aftra-members-vote-in-favour-of-agreement-strike-officially-ends</link></item>
+<item><title>Krafton pushes Subnautica 2 release to 2026 - GamesIndustry</title><link>https://www.gamesindustry.biz/krafton-pushes-subnautica-2-release-to-2026</link></item>
+<item><title>Million Victories secures almost $40m in funding round - GamesIndustry</title><link>https://www.gamesindustry.biz/million-victories-secures-almost-40m-in-funding-round</link></item>
+<item><title>UK Video Games Council confirms inaugural members, including Jason Kingsley CBE and Nick Button-Brown - GamesIndustry</title><link>https://www.gamesindustry.biz/uk-video-games-council-confirms-inaugural-members-including-jason-kingsley-cbe-and-nick-button-brown</link></item>
+<item><title>Elden Ring: Nightreign tops May 2025 US sales, but Monster Hunter: Wilds remains year&amp;#39;s biggest hit to date | US Monthly Charts - GamesIndustry</title><link>https://www.gamesindustry.biz/elden-ring-nightreign-tops-may-2025-us-sales-but-monster-hunter-wilds-remains-years-biggest-hit-to-date-us-monthly-charts</link></item>
+<item><title>Dragon Age: The Veilguard wins Game of the Year at Gayming Awards 2025 - GamesIndustry</title><link>https://www.gamesindustry.biz/dragon-age-the-veilguard-wins-game-of-the-year-at-gayming-awards-2025</link></item>
+<item><title>Ubisoft announces layoffs at Red Storm, 19 people affected - GamesIndustry</title><link>https://www.gamesindustry.biz/ubisoft-announces-layoffs-at-red-storm-19-people-affected</link></item>
+<item><title>What the UK government’s industrial strategy and immigration white paper mean for the UK games industry - GamesIndustry</title><link>https://www.gamesindustry.biz/what-the-uk-governments-industrial-strategy-and-immigration-white-paper-mean-for-the-uk-games-industry</link></item>
+<item><title>Epic Games settles antitrust lawsuit with Samsung - GamesIndustry</title><link>https://www.gamesindustry.biz/epic-games-settles-antitrust-lawsuit-with-samsung</link></item>
+<item><title>Apple appeals EU&amp;#39;s &amp;quot;unprecedented&amp;quot; $568m fine - GamesIndustry</title><link>https://www.gamesindustry.biz/apple-appeals-eus-unprecedented-568m-fine</link></item>
+<item><title>PlayStation set to attend Tokyo Game Show 2025 | News-in-brief - GamesIndustry</title><link>https://www.gamesindustry.biz/playstation-set-to-attend-tokyo-game-show-2025-news-in-brief</link></item>
+<item><title>BetaDwarf receives undisclosed investment from Square Enix - GamesIndustry</title><link>https://www.gamesindustry.biz/betadwarf-receives-undisclosed-investment-from-square-enix</link></item>
+<item><title>Former Unknown Worlds creative director says departure was &amp;quot;quite a shock&amp;quot; - GamesIndustry</title><link>https://www.gamesindustry.biz/former-unknown-worlds-creative-director-says-departure-was-quite-a-shock</link></item>
+<item><title>Valve blocks mod on Mount and Blade: Warband in South Korea following request from government - GamesIndustry</title><link>https://www.gamesindustry.biz/valve-blocks-mod-on-mount-and-blade-warband-in-south-korea-following-request-from-government</link></item>
+<item><title>Romero Games disputes claims it has &amp;quot;completely closed&amp;quot; - GamesIndustry</title><link>https://www.gamesindustry.biz/romero-games-disputes-claims-it-has-completely-closed</link></item>
+<item><title>Stop Killing Games EU petition tops 1.2m signatories, prompting response from Video Games Europe - GamesIndustry</title><link>https://www.gamesindustry.biz/stop-killing-games-eu-petition-tops-12m-signatories-prompting-response-from-video-games-europe</link></item>
+<item><title>Forza Motorsport developer Turn 10 &amp;quot;team is no more&amp;quot; - GamesIndustry</title><link>https://www.gamesindustry.biz/forza-motorsport-developer-turn-10-team-is-no-more</link></item>
+<item><title>Nintendo addresses Switch 2 price, supply versus demand, and Game-Key Card concerns - GamesIndustry</title><link>https://www.gamesindustry.biz/nintendo-addresses-switch-2-price-supply-versus-demand-and-game-key-card-concerns</link></item>
+<item><title>Cyberpunk: Edgerunners renewed for season 2 - GamesIndustry</title><link>https://www.gamesindustry.biz/cyberpunk-edgerunners-renewed-for-season-2</link></item>
+<item><title>Brazilian antitrust body recommends action against Apple for anticompetitive conduct - GamesIndustry</title><link>https://www.gamesindustry.biz/brazilian-antitrust-body-recommends-action-against-apple-for-anticompetitive-conduct</link></item>
+<item><title>Another industry recession warning light just flashed red | Opinion - GamesIndustry</title><link>https://www.gamesindustry.biz/another-industry-recession-warning-light-just-flashed-red-opinion</link></item>
+<item><title>Techland cancels two games mid-development, confirms there will be no layoffs - GamesIndustry</title><link>https://www.gamesindustry.biz/techland-cancels-two-games-mid-development-confirms-there-will-be-no-layoffs</link></item>
+<item><title>Double Eleven sister studio Cast Iron Games has opened its doors in Wakefield - GamesIndustry</title><link>https://www.gamesindustry.biz/double-eleven-sister-studio-cast-iron-games-has-opened-its-doors-in-wakefield</link></item>
+<item><title>Toca Boca lays off &amp;quot;small number&amp;quot; of employees - GamesIndustry</title><link>https://www.gamesindustry.biz/toca-boca-lays-off-unknown-number-of-employees</link></item>
+<item><title>Michael Madsen, the voice of GTA 3&amp;#39;s Toni Cipriani, has died - GamesIndustry</title><link>https://www.gamesindustry.biz/michael-madsen-the-voice-of-gta-3s-toni-cipriani-has-died</link></item>
+<item><title>Around 300 Build A Rocket Boy employees reportedly receive &amp;quot;at-risk of redundancy&amp;quot; emails following layoffs announcement - GamesIndustry</title><link>https://www.gamesindustry.biz/around-300-build-a-rocket-boy-employees-reportedly-receive-at-risk-of-redundancy-emails-following-layoffs-announcement</link></item>
+<item><title>EA to sunset Anthem in January 2026 - GamesIndustry</title><link>https://www.gamesindustry.biz/ea-to-sunset-anthem-in-january-2026</link></item>
+<item><title>ZeniMax Online Studios head Matt Firor to depart after 18 years - GamesIndustry</title><link>https://www.gamesindustry.biz/zenimax-online-studios-head-matt-firor-to-depart-after-18-years</link></item>
+<item><title>Microsoft&amp;#39;s darkest day in gaming since the last one | Opinion - GamesIndustry</title><link>https://www.gamesindustry.biz/microsofts-darkest-day-in-gaming-since-the-last-one-opinion</link></item>
+<item><title>Romero Games cancels upcoming FPS title after publisher pulls funding - GamesIndustry</title><link>https://www.gamesindustry.biz/romero-games-cancels-upcoming-fps-title-after-publisher-pulls-funding</link></item>
+<item><title>Neil Druckmann steps back from HBO&amp;#39;s The Last of Us to focus on Naughty Dog projects - GamesIndustry</title><link>https://www.gamesindustry.biz/neil-druckmann-steps-back-from-hbos-the-last-of-us-to-focus-on-naughty-dog-projects</link></item>
+<item><title>The GamesIndustry.biz Summer Party 2025 is sold out – we&amp;#39;ll see you in Brighton next week - GamesIndustry</title><link>https://www.gamesindustry.biz/the-gamesindustrybiz-summer-party-2025-is-sold-out-well-see-you-in-brighton-next-week</link></item>
+<item><title>G/O Media sells Kotaku to digital publishing company Keleops - GamesIndustry</title><link>https://www.gamesindustry.biz/go-media-sells-kotaku-to-digital-publishing-company-keleops</link></item>
+<item><title>Three Ubisoft former execs found guilty of sexual and psychological harassment, given suspended sentences - GamesIndustry</title><link>https://www.gamesindustry.biz/three-ubisoft-former-execs-found-guilty-of-sexual-and-psychological-harassment-given-suspended-sentences</link></item>
+<item><title>Xbox layoffs: Microsoft closes studio The Initiative, cancels Perfect Dark, Everwild, and unannounced projects - GamesIndustry</title><link>https://www.gamesindustry.biz/xbox-layoffs-july-2025</link></item>
+<item><title>Krafton appoints Steve Papoutsis as Unknown Worlds CEO, former leadership team leaves - GamesIndustry</title><link>https://www.gamesindustry.biz/krafton-appoints-steve-papoutsis-as-unknown-worlds-ceo-former-leadership-team-leaves</link></item>
+<item><title>Video games spending by young Americans is dropping sharply, report suggests - GamesIndustry</title><link>https://www.gamesindustry.biz/video-games-spending-by-young-americans-is-dropping-sharply-report-suggests</link></item>
+<item><title>Riding the wave: how Game Smithing managed to surf on the success of Vampire Survivors - GamesIndustry</title><link>https://www.gamesindustry.biz/riding-the-wave-how-game-smithing-managed-to-surf-on-the-success-of-vampire-survivors</link></item>
+<item><title>Former Unity employee Rod Stafford sentenced to 22 years for sexual offences - GamesIndustry</title><link>https://www.gamesindustry.biz/former-unity-employee-rod-stafford-sentenced-to-22-years-for-sexual-offences</link></item>
+<item><title>Remedy says it &amp;quot;hoped for a better launch&amp;quot; with FBC: Firebreak - GamesIndustry</title><link>https://www.gamesindustry.biz/remedy-says-it-hoped-for-a-better-launch-with-fbc-firebreak</link></item>
+<item><title>Ubisoft partners with Hooded Horse to publish Unfrozen&amp;#39;s Heroes of Might and Magic: Olden Era - GamesIndustry</title><link>https://www.gamesindustry.biz/ubisoft-partners-with-hooded-horse-to-publish-unfrozens-heroes-of-might-and-magic-olden-era</link></item>
+<item><title>GGWP Pulse is a tool that monitors in-game conversations for more honest community feedback - GamesIndustry</title><link>https://www.gamesindustry.biz/ggwp-pulse-is-an-ai-powered-tool-that-monitors-in-game-conversations-for-more-honest-community-feedback</link></item>
+<item><title>How Warhammer 40,000: Darktide won players back after a lukewarm first year - GamesIndustry</title><link>https://www.gamesindustry.biz/how-warhammer-40000-darktide-won-players-back-after-a-lukewarm-first-year</link></item>
+<item><title>Behold Ventures raises $59.2m to support European devs - GamesIndustry</title><link>https://www.gamesindustry.biz/behold-ventures-raises-592m-to-support-european-devs</link></item>
+<item><title>Nintendo announces price changes to original Switch hardware and software in Canada - GamesIndustry</title><link>https://www.gamesindustry.biz/nintendo-announces-price-changes-to-original-switch-hardware-and-software-in-canada</link></item>
+<item><title>11-Bit Studios acknowledges the use of AI-generated text in The Alters - GamesIndustry</title><link>https://www.gamesindustry.biz/11-bit-studios-acknowledges-the-use-of-ai-generated-text-in-the-alters</link></item>
+<item><title>Tamsin O&amp;#39;Luanaigh founds new advisory firm Wise Cat Strategy - GamesIndustry</title><link>https://www.gamesindustry.biz/tamsin-oluanaigh-founds-new-advisory-firm-wise-cat-strategy</link></item>
+<item><title>Apple makes EU App Store changes to comply with Digital Markets Act - GamesIndustry</title><link>https://www.gamesindustry.biz/apple-makes-eu-app-store-changes-to-comply-with-digital-markets-act</link></item>
+<item><title>Metacritic co-founder Marc Doyle lifts the veil on how the site works - GamesIndustry</title><link>https://www.gamesindustry.biz/metacritic-co-founder-marc-doyle-lifts-the-veil-on-how-the-site-works</link></item>
+<item><title>FTC reopens refunds for players affected by unwanted purchases in Fortnite - GamesIndustry</title><link>https://www.gamesindustry.biz/ftc-reopens-refunds-for-players-affected-by-unwanted-purchases-in-fortnite</link></item>
+<item><title>Games for Change 2025 Awards winners unveiled - GamesIndustry</title><link>https://www.gamesindustry.biz/games-for-change-2025-awards-winners-unveiled</link></item>
+<item><title>Riot Games will allow top Valorant and League of Legends esports teams to have gambling companies as sponsors - GamesIndustry</title><link>https://www.gamesindustry.biz/riot-will-allow-top-valorant-and-league-of-legends-esports-teams-to-have-gambling-companies-as-sponsors</link></item>
+<item><title>Death Stranding 2: On the Beach | Critical Consensus - GamesIndustry</title><link>https://www.gamesindustry.biz/death-stranding-2-on-the-beach-critical-consensus</link></item>
+<item><title>Looming Xbox layoffs threaten Microsoft&amp;#39;s reputation on acquisitions | Opinion - GamesIndustry</title><link>https://www.gamesindustry.biz/looming-xbox-layoffs-threaten-microsofts-reputation-opinion</link></item>
+<item><title>National Videogame Museum to feature at World Expo 2025 - GamesIndustry</title><link>https://www.gamesindustry.biz/national-videogame-museum-to-feature-at-world-expo-2025</link></item>
+<item><title>FBC: Firebreak surpasses 1m players | News-in-brief - GamesIndustry</title><link>https://www.gamesindustry.biz/fbc-firebreak-surpasses-1m-players-news-in-brief</link></item>
+<item><title>Game Dev Heroes co-founder Alex Boucher awarded MBE - GamesIndustry</title><link>https://www.gamesindustry.biz/game-dev-heroes-co-founder-alex-boucher-awarded-mbe</link></item>
+<item><title>Epic Games successfully sues Fortnite cheat for $175,000 - GamesIndustry</title><link>https://www.gamesindustry.biz/epic-games-successfully-sues-fortnite-cheat-for-175000</link></item>
+<item><title>Lost Records developer Don&amp;#39;t Nod confirms layoffs - GamesIndustry</title><link>https://www.gamesindustry.biz/lost-records-developer-dont-nod-cuts-a-non-insignificant-chunk-of-jobs</link></item>
+<item><title>Xsolla on the aftermath of the Epic vs. Apple ruling and Steam&amp;#39;s percentage cut - GamesIndustry</title><link>https://www.gamesindustry.biz/xsolla-on-the-aftermath-of-the-epic-vs-apple-ruling-and-steams-percentage-cut</link></item>
+<item><title>Peak sells 2m units in nine days | News-in-brief - GamesIndustry</title><link>https://www.gamesindustry.biz/peak-sells-2m-units-in-nine-days-news-in-brief</link></item>
+<item><title>Sony faces Dutch lawsuit over &amp;quot;artificially high PlayStation prices&amp;quot; - GamesIndustry</title><link>https://www.gamesindustry.biz/sony-faces-dutch-lawsuit-over-artificially-high-playstation-prices</link></item>
+<item><title>Intel begins another round of layoffs, &amp;quot;roughly 107 employees&amp;quot; reportedly affected - GamesIndustry</title><link>https://www.gamesindustry.biz/intel-begins-another-round-of-layoffs-roughly-107-employees-reportedly-affected</link></item>
+<item><title>Little Nightmares franchise celebrates 20m unit sales | News-in-brief - GamesIndustry</title><link>https://www.gamesindustry.biz/little-nightmares-franchise-celebrates-20m-unit-sales-news-in-brief</link></item>
+<item><title>UKIE on what the government&amp;#39;s Creative Industries Sector Plan means for the UK games industry - GamesIndustry</title><link>https://www.gamesindustry.biz/ukie-on-what-the-governments-creative-industries-sector-plan-means-for-the-uk-games-industry</link></item>
+<item><title>Frontier Developments removes gen AI use from Jurassic World Evolution 3 - GamesIndustry</title><link>https://www.gamesindustry.biz/frontier-developments-removes-gen-ai-use-from-jurassic-world-evolution-3</link></item>
+<item><title>Xbox and Meta unveil new VR Meta Quest 3S Xbox Edition headset - GamesIndustry</title><link>https://www.gamesindustry.biz/xbox-and-meta-unveil-new-vr-meta-quest-3s-xbox-edition-headset</link></item>
+<item><title>Report says Microsoft is planning a &amp;quot;major&amp;quot; round of Xbox layoffs next week - GamesIndustry</title><link>https://www.gamesindustry.biz/report-says-microsoft-is-planning-a-major-round-of-xbox-layoffs-next-week</link></item>
+<item><title>&amp;quot;We&amp;#39;ve been through the literal wringer.&amp;quot; The untimely death and traumatic rebirth of Evercore Heroes - GamesIndustry</title><link>https://www.gamesindustry.biz/weve-been-through-the-literal-wringer-the-untimely-death-and-traumatic-rebirth-of-evercore-heroes</link></item>
+<item><title>Clair Obscur: Expedition 33 back in Top 10 for revenue a month after release | Newzoo charts - GamesIndustry</title><link>https://www.gamesindustry.biz/clair-obscur-expedition-33-back-in-top-10-for-revenue-a-month-after-release-newzoo-charts</link></item>
+<item><title>Nintendo Switch 2 | Critical Consensus - GamesIndustry</title><link>https://www.gamesindustry.biz/nintendo-switch-2-critical-consensus</link></item>
+<item><title>Hypixel Studios announces closure and cancellation of Minecraft-like game Hytale - GamesIndustry</title><link>https://www.gamesindustry.biz/hypixel-studios-announces-closure-and-cancellation-of-minecraft-like-game-hytale</link></item>
+<item><title>Peak sells 1m copies in six days | News-in-brief - GamesIndustry</title><link>https://www.gamesindustry.biz/peak-sells-1m-copies-in-six-days-news-in-brief</link></item>
+<item><title>UK launches new $40.5m fund to support British game development - GamesIndustry</title><link>https://www.gamesindustry.biz/uk-launches-new-405m-fund-to-support-british-game-development</link></item>
+<item><title>Sega Sammy inadvertently posts internal sales data to its public website - GamesIndustry</title><link>https://www.gamesindustry.biz/sega-sammy-inadvertently-posts-internal-sale-data-to-its-public-website</link></item>
+<item><title>MindsEye developer confirms layoffs as it &amp;quot;focuses on updates and performance optimization for MindsEye&amp;quot; - GamesIndustry</title><link>https://www.gamesindustry.biz/mindseye-developer-confirms-layoffs-as-it-focuses-on-updates-and-performance-optimization-for-mindseye</link></item>
+<item><title>Fable Town tops $5m in lifetime revenue since its 2024 launch | News-in-brief - GamesIndustry</title><link>https://www.gamesindustry.biz/fable-town-tops-5m-in-lifetime-revenue-since-its-2024-launch-news-in-brief</link></item>
+<item><title>Dune: Awakening tops 1m players, becoming Funcom&amp;#39;s &amp;quot;fastest-selling game ever&amp;quot; | News-in-brief - GamesIndustry</title><link>https://www.gamesindustry.biz/dune-awakening-tops-1m-players-becoming-funcoms-fastest-selling-game-ever-news-in-brief</link></item>
+<item><title>Sega to open new store in Tokyo, Japan - GamesIndustry</title><link>https://www.gamesindustry.biz/sega-to-open-new-store-in-tokyo-japan</link></item>
+<item><title>BAFTA announces 2025 Young Game Designers competition winners - GamesIndustry</title><link>https://www.gamesindustry.biz/bafta-announces-2025-young-game-designers-competition-winners</link></item>
+<item><title>Creating emotionally resonant content for a global audience in Sky: Children of Light - GamesIndustry</title><link>https://www.gamesindustry.biz/creating-emotionally-resonant-content-for-a-global-audience-in-sky-children-of-light</link></item>
+<item><title>Splitgate 2 developer 1047 Games announces round of layoffs - GamesIndustry</title><link>https://www.gamesindustry.biz/splitgate-2-developer-1047-games-announces-round-of-layoffs</link></item>
+<item><title>Lies of P: Overture sells 3m copies | News-in-brief - GamesIndustry</title><link>https://www.gamesindustry.biz/lies-of-p-overture-sells-3m-copies-news-in-brief</link></item>
+<item><title>Ubisoft&amp;#39;s Fawzi Mesmar on the art of generating original ideas, as well as optimising your own creativity - GamesIndustry</title><link>https://www.gamesindustry.biz/ubisofts-fawzi-mesmar-on-the-art-of-generating-original-ideas-as-well-as-optimising-your-own-creativity</link></item>
+<item><title>Rematch reaches 1 million players | News-in-brief - GamesIndustry</title><link>https://www.gamesindustry.biz/rematch-reaches-1-million-players-news-in-brief</link></item>
+<item><title>Where are the Switch 2 indie games? - GamesIndustry</title><link>https://www.gamesindustry.biz/where-are-the-switch-2-indie-games</link></item>
+<item><title>Xbox and Windows are no longer at arm&amp;#39;s length | Opinion - GamesIndustry</title><link>https://www.gamesindustry.biz/xbox-and-windows-are-no-longer-at-arms-length-opinion</link></item>
+<item><title>Still Wakes The Deep developer The Chinese Room has seemingly made a small number of layoffs - GamesIndustry</title><link>https://www.gamesindustry.biz/still-wakes-the-deep-developer-the-chinese-room-has-seemingly-made-a-small-number-of-layoffs</link></item>
+<item><title>New report suggests third-party Switch 2 game sales are &amp;quot;below estimates&amp;quot; - GamesIndustry</title><link>https://www.gamesindustry.biz/new-report-suggests-third-party-switch-2-game-sales-are-below-estimates</link></item>
+<item><title>Playdead co-founder slammed with lawsuit as bitter row with co-founder escalates - GamesIndustry</title><link>https://www.gamesindustry.biz/playdead-co-founder-slammed-with-lawsuit-as-bitter-row-with-co-founder-escalates</link></item>
+<item><title>Capcom Spotlight stream set for June 26 | News-in-brief - GamesIndustry</title><link>https://www.gamesindustry.biz/capcom-spotlight-stream-set-for-june-26-news-in-brief</link></item>
+<item><title>Beat Saber support is ending on PS4 and PS5 - GamesIndustry</title><link>https://www.gamesindustry.biz/beat-saber-support-is-ending-on-ps4-and-ps5</link></item>
+<item><title>Debunking the grey market beyond Steam - GamesIndustry</title><link>https://www.gamesindustry.biz/debunking-the-grey-market-beyond-steam</link></item>
+<item><title>Developers at Ubisoft Halifax have filed to unionise - GamesIndustry</title><link>https://www.gamesindustry.biz/developers-at-ubisoft-halifax-have-filed-to-unionise</link></item>
 </channel></rss>

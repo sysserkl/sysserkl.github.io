@@ -28,7 +28,7 @@ function menu_more_zjuss(){
     '<a href="https://www.zjuss.cn/experts" onclick="'+str_t+'" target=_blank>省妇保</a>',
     '<a href="https://www.zjuss.cn/experts" onclick="'+str_t+'" target=_blank>浙大口腔</a>',    
     '<span class="span_menu" onclick="'+str_t+'surname_zjuss();">当前条件姓氏统计</span>',
-    '<span class="span_menu" onclick="'+str_t+'same_name_zjuss();">同一医院内相同名称的医生</span>',
+    '<span class="span_menu" onclick="'+str_t+'same_name_zjuss();">相同名称的医生</span>',
     '<span class="span_menu" onclick="'+str_t+'same_content_zjuss();">简介相同的医生</span>',
     ];
     return klmenu_b(klmenu1,'🦷','16rem','1rem','1rem','30rem');
@@ -57,12 +57,25 @@ function surname_zjuss(){
 
 function same_name_zjuss(){
     var name_set=new Set();
+    var name_unique=new Set();
+
     for (let item of zjuss_expert_global){
         let blname=item[1].match(/>(.*?)_\d+<\/a>/) || ['',''];
         if (blname[0]!==''){
             //blname 形如：[ ">陈佳琦_2</a>", "陈佳琦" ] - 保留注释
             name_set.add(blname[1]);
         }
+        
+        blname=item[1].match(/>(.*?)<\/a>/) || ['',''];
+        if (blname[0]!==''){
+            //blname 形如：[ ">巴立</a>", "巴立" ] - 保留注释
+            if (name_unique.has(blname[1])){
+                name_set.add(blname[1]);
+                console.log(blname[1]); //此行保留 - 保留注释
+            } else {
+                name_unique.add(blname[1]);
+            }
+        }        
     }
     
     document.getElementById('input_search').value='>('+Array.from(name_set).join('|')+')(_\\d+)?<';

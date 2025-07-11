@@ -182,8 +182,9 @@ function first_rare_old_words_kltxt_klwiki_en2(batch_search=false,israndom=false
     result_t=Array.from(result_t);
     if (csmax>0){
         if (israndom){  //再次随机排序 - 保留注释
-            result_t.sort(randomsort_b);
+            result_t=array_numbers_b(result_t,3);
             result_t=result_t.slice(0,csmax);
+            console.log(result_t);  //此行保留 - 保留注释
         }
     }
     
