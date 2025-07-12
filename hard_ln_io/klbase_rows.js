@@ -1338,3 +1338,22 @@ function character_double_2_single_klr_b(str,only_az09=false){
     }
     return result;
 }
+
+function notepad_tags_get_klr_b(cslist){
+    var tag_dict={};
+    for (let item of cslist){
+        let tag_name='t_'+item.replace(/<\/?tag>/g,'');
+        if (tag_dict[tag_name]==undefined){
+            tag_dict[tag_name]=0;
+        }
+        tag_dict[tag_name]=tag_dict[tag_name]+1;
+    }
+    tag_dict=object2array_b(tag_dict,true,2);
+    tag_dict.sort();
+    tag_dict.sort(function (a,b){return a[1]>b[1]?-1:1;});
+    for (let blxl=0,lent=tag_dict.length;blxl<lent;blxl++){
+        tag_dict[blxl]='<input type="text" value="&lt;tag&gt;'+specialstr92_b(tag_dict[blxl][0])+'&lt;/tag&gt;" /> <small>('+tag_dict[blxl][1]+')</small>';
+    }
+    
+    return tag_dict;
+}

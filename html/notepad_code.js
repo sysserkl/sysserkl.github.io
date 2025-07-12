@@ -181,8 +181,11 @@ function wikiuploads_count_notepad(){
     var otextarea=document.getElementById('textarea_export_notepad');
     if (!otextarea){return;}
     var blstr=otextarea.value;
+    
     var attach_list=blstr.match(/^.*{{wikiuploads}}.*$/mg) || [];
     attach_list.sort();
+    var attach_str=textarea_with_form_generate_b('textarea_attachment_notepad','','<p>','清空,复制,发送到临时记事本','</p>','','',false,attach_list.join('\n'));
+
     var ext_dict={};
     for (let item of attach_list){
         let blext=file_path_name_b(item)[2];
@@ -201,7 +204,11 @@ function wikiuploads_count_notepad(){
         if (one_title.match(/^=== \[http[^\s]+ \d{8} \| .*\] ===/)){continue;}
         without_date.push(one_title);
     }
-    return '<h4>附件列表('+attach_list.length+')</h4>'+array_2_li_b(attach_list)+'<h4>扩展名统计('+ext_dict.length+')</h4>'+array_2_li_b(ext_dict)+'<h4>无日期标题('+without_date.length+')</h4>'+array_2_li_b(without_date);
+    
+    var tag_list=blstr.match(/^<tag>(.*)<\/tag>$/mg) ||[];
+    tag_list=notepad_tags_get_klr_b(tag_list);
+    
+    return '<h4>附件列表('+attach_list.length+')</h4>'+attach_str+'<h4>扩展名统计('+ext_dict.length+')</h4>'+array_2_li_b(ext_dict)+'<h4>无日期标题('+without_date.length+')</h4>'+array_2_li_b(without_date)+'<h4>tag统计('+tag_list.length+')</h4>'+tag_list.join(' ');
 }
 
 function textarea_info_count_notepad(ospan=false,otextarea=false){
