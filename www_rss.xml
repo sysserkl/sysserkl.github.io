@@ -8,285 +8,103 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Sat, 12 Jul 2025 17:14:17 +0800</lastBuildDate>
-<item><title>Calibre 8.6.0 Delivers Dramatic Database Speed Boost - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/07/calibre-8-6-0-delivers-dramatic-database-speed-boost</link></item>
-<item><title>Want to Customise GNOME Shell Notifications? Try This Extension - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/07/customise-gnome-shell-notifications-with-this-essential-extension</link></item>
-<item><title>Ubuntu 24.04.3 HWE Stack Brings Big Mesa Upgrade - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/07/ubuntu-24-04-3-hwe-new-mesa-kernel-update</link></item>
-<item><title>Mozilla VPN Linux App is Now Available on Flathub - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/07/mozilla-vpn-linux-app-available-flathub</link></item>
-<item><title>Miracle-WM 0.6 Release Brings More Refinements - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/07/miracle-wm-0-6-release-new-ipc</link></item>
-<item><title>Ubuntu is Changing the Way it Boots on Raspberry Pi - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/07/ubuntu-raspberry-pi-boot-process-change</link></item>
-<item><title>Amarok 3.3 Released with Qt 6, GStreamer Audio Engine - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/07/amarok-3-3-released-with-qt-6-gstreamer-audio-engine</link></item>
-<item><title>Floating Mini Panel GNOME Extension Adds Auto Mode - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/07/floating-mini-panel-gnome-extension-automatic-mode</link></item>
-<item><title>OBS Studio 31.1 Adds Linux Multitrack Video Support + More - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/07/obs-studio-31-1-whats-new</link></item>
-<item><title>Thunderbird 140 ESR Released with New Features - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/07/thunderbird-140-release-new-features</link></item>
-<item><title>Bash 5.3 Release Adds ‘Significant’ New Features - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/07/bash-5-3-new-features</link></item>
-<item><title>New Linux Security Flaw Uses Initramfs to Inject Malware - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/07/ubuntu-security-initramfs-bypass-encryption</link></item>
-<item><title>Ubuntu 25.10 Raises RISC-V Profile Requirements - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/06/ubuntu-riscv-rva23-support</link></item>
-<item><title>The Scotsman AI Fallacy - Ibrahim Diallo</title><link>https://idiallo.com/blog/scotsman-ai-fallacy?src=feed</link></item>
-<item><title>Small teams should avoid Large Companies Processes - Ibrahim Diallo</title><link>https://idiallo.com/blog/small-teams-should-avoid-complex-workflows?src=feed</link></item>
-<item><title>Where is Web3? - Ibrahim Diallo</title><link>https://idiallo.com/blog/web3?src=feed</link></item>
-<item><title>Vibe Managing: The Future of Project Leadership - Ibrahim Diallo</title><link>https://idiallo.com/blog/vibe-managing-the-future?src=feed</link></item>
-<item><title>Why does my laptop sound like an Airplane - Ibrahim Diallo</title><link>https://idiallo.com/blog/why-my-laptop-sounds-like-an-airplane?src=feed</link></item>
-<item><title>Do not download the app, use the website - Ibrahim Diallo</title><link>https://idiallo.com/blog/dont-download-apps?src=feed</link></item>
-<item><title>When the CTO Asks You to Use Autocomplete - Ibrahim Diallo</title><link>https://idiallo.com/blog/when-cto-asks-you-to-use-autocomplete?src=feed</link></item>
-<item><title>How to Write Simple Software - Ibrahim Diallo</title><link>https://idiallo.com/blog/how-to-write-simple-software?src=feed</link></item>
-<item><title>What Does It Really Mean to Be an AI Skeptic? - Ibrahim Diallo</title><link>https://idiallo.com/blog/i-am-an-ai-skeptic?src=feed</link></item>
-<item><title>Keeping track of Terms and Conditions - Ibrahim Diallo</title><link>https://idiallo.com/blog/keeping-track-of-terms-and-conditions?src=feed</link></item>
-<item><title>Some A-10 Warthogs may dodge retirement under proposed Senate bill - Defense News</title><link>https://www.defensenews.com/air/2025/07/11/some-a-10-warthogs-may-dodge-retirement-under-proposed-senate-bill/</link></item>
-<item><title>Proposed Senate defense bill would add $500M in long-term Ukraine aid - Defense News</title><link>https://www.defensenews.com/congress/2025/07/11/proposed-senate-defense-bill-would-add-500m-in-long-term-ukraine-aid/</link></item>
-<item><title>Space Force building out more realistic digital training environment - Defense News</title><link>https://www.defensenews.com/space/2025/07/11/space-force-building-out-more-realistic-digital-training-environment/</link></item>
-<item><title>US is selling weapons to NATO allies to give to Ukraine, Trump says - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2025/07/11/us-is-selling-weapons-to-nato-allies-to-give-to-ukraine-trump-says/</link></item>
-<item><title>Delays in Navy’s next-gen submarine threaten US seapower, report says - Defense News</title><link>https://www.defensenews.com/naval/2025/07/11/delays-in-navys-next-gen-submarine-threaten-us-seapower-report-says/</link></item>
-<item><title>US commander says China has failed to coerce rivals in South China Sea - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2025/07/11/us-commander-says-china-has-failed-to-coerce-rivals-in-south-china-sea/</link></item>
-<item><title>Hegseth calls for extensive reforms to Pentagon drone-buying practices - Defense News</title><link>https://www.defensenews.com/pentagon/2025/07/10/hegseth-calls-for-extensive-reforms-to-pentagon-drone-buying-practices/</link></item>
-<item><title>France asks FCAS partners to ‘rethink’ work share on fighter project - Defense News</title><link>https://www.defensenews.com/global/europe/2025/07/10/france-asks-fcas-partners-to-rethink-work-share-on-fighter-project/</link></item>
-<item><title>France, UK join forces in step toward European nuclear deterrent - Defense News</title><link>https://www.defensenews.com/global/europe/2025/07/10/france-uk-join-forces-in-step-toward-european-nuclear-deterrent/</link></item>
-<item><title>Welcome: Sustainability and Computing Special Section - ACM</title><link>https://cacm.acm.org/sustainability-and-computing/welcome-sustainability-and-computing-special-section/</link></item>
-<item><title>Continuous Earth Observation of Forest Dynamics and Biodiversity - ACM</title><link>https://cacm.acm.org/sustainability-and-computing/continuous-earth-observation-of-forest-dynamics-and-biodiversity/</link></item>
-<item><title>The Ethical Implications of Online Computer Science Education - ACM</title><link>https://cacm.acm.org/opinion/the-ethical-implications-of-online-computer-science-education/</link></item>
-<item><title>The Emerging Face of Digital Dentistry - ACM</title><link>https://cacm.acm.org/news/the-emerging-face-of-digital-dentistry/</link></item>
-<item><title>Efficiency Is Not Enough: A Critical Perspective of Environmentally Sustainable AI - ACM</title><link>https://cacm.acm.org/sustainability-and-computing/efficiency-is-not-enough-a-critical-perspective-of-environmentally-sustainable-ai/</link></item>
-<item><title>A Brazilian Perspective on Computing for the Planet’s Sustainability - ACM</title><link>https://cacm.acm.org/sustainability-and-computing/a-brazilian-perspective-on-computing-for-the-planets-sustainability/</link></item>
-<item><title>Electoral Trickery - ACM</title><link>https://cacm.acm.org/opinion/electoral-trickery/</link></item>
-<item><title>Defying Moore: Envisioning the Economics of a Semiconductor Revolution through 12nm Specialization - ACM</title><link>https://cacm.acm.org/research/defying-moore-envisioning-the-economics-of-a-semiconductor-revolution-through-12nm-specialization/</link></item>
-<item><title>Toward Environmentally Equitable AI - ACM</title><link>https://cacm.acm.org/sustainability-and-computing/toward-environmentally-equitable-ai/</link></item>
-<item><title>AI Authorship Revisited - ACM</title><link>https://cacm.acm.org/opinion/ai-authorship-revisited/</link></item>
-<item><title>Advancements in Weather Prediction - ACM</title><link>https://cacm.acm.org/news/advancements-in-weather-prediction/</link></item>
-<item><title>Energy-Optimized Supercomputer Networks Using Wind Energy - ACM</title><link>https://cacm.acm.org/sustainability-and-computing/energy-optimized-supercomputer-networks-using-wind-energy/</link></item>
-<item><title>DeepSeek Inside: Origins, Technology, and Impact - ACM</title><link>https://cacm.acm.org/opinion/deepseek-inside-origins-technology-and-impact/</link></item>
-<item><title>Making AI Less ‘Thirsty’ - ACM</title><link>https://cacm.acm.org/sustainability-and-computing/making-ai-less-thirsty/</link></item>
-<item><title>I Teach Computer Science, and That Is Not All - ACM</title><link>https://cacm.acm.org/opinion/i-teach-computer-science-and-that-is-not-all/</link></item>
-<item><title>Empowering Users to Make Sustainability-Forward Decisions for Computing Services - ACM</title><link>https://cacm.acm.org/sustainability-and-computing/empowering-users-to-make-sustainability-forward-decisions-for-computing-services/</link></item>
-<item><title>Environmental Computing as a Branch of Science - ACM</title><link>https://cacm.acm.org/sustainability-and-computing/environmental-computing-as-a-branch-of-science/</link></item>
-<item><title>The Rational Programmer: Investigating Programming Language Pragmatics - ACM</title><link>https://cacm.acm.org/research/the-rational-programmer-investigating-programming-language-pragmatics/</link></item>
-<item><title>Beyond the Checkbox: Upgrading the Right to Opt Out - ACM</title><link>https://cacm.acm.org/opinion/beyond-the-checkbox-upgrading-the-right-to-opt-out/</link></item>
-<item><title>Generative Artificial Intelligence Policies under the Microscope - ACM</title><link>https://cacm.acm.org/opinion/generative-artificial-intelligence-policies-under-the-microscope/</link></item>
-<item><title>Understanding the Environmental Impact of Generative AI Services - ACM</title><link>https://cacm.acm.org/sustainability-and-computing/understanding-the-environmental-impact-of-generative-ai-services/</link></item>
-<item><title>Full Stack Recycling Approaches for Computing Devices - ACM</title><link>https://cacm.acm.org/sustainability-and-computing/full-stack-recycling-approaches-for-computing-devices/</link></item>
-<item><title>As Government Outsources More IT, Highly Skilled In-House Technologists Are More Essential - ACM</title><link>https://cacm.acm.org/opinion/as-government-outsources-more-it-highly-skilled-in-house-technologists-are-more-essential/</link></item>
-<item><title>Fighting Crime Online - ACM</title><link>https://cacm.acm.org/opinion/fighting-crime-online/</link></item>
-<item><title>Computer Science Under Trump - ACM</title><link>https://cacm.acm.org/news/computer-science-under-trump/</link></item>
-<item><title>测量2025年初AI工具对资深开源开发者生产力的影响 - 宝玉的分享</title><link>https://baoyu.io/translations/2025-07-10-early-2025-ai-experienced-os-dev-study</link></item>
-<item><title>在 Vercel 的 5 年，我学到了 5 件事 - 宝玉的分享</title><link>https://baoyu.io/translations/5-things-i-learned-from-5-years-at-vercel</link></item>
-<item><title>大语言模型（LLM）到底是怎么运作的？（配图通俗讲解） - 宝玉的分享</title><link>https://baoyu.io/translations/how-llms-work-explained-clearly</link></item>
-<item><title>老虎机 和 Vibe Coding 的异同 ​​​ - 宝玉的分享</title><link>https://baoyu.io/blog/slot-machine-vibe-coding-comparison</link></item>
-<item><title>吴恩达老师分享的这个做 MVP（最简可行产品，minimum viable product） 的技巧 - 宝玉的分享</title><link>https://baoyu.io/translations/nda-mvp-building-tips</link></item>
-<item><title>让 Claude Code 超深度思考（ultrathink）的自定义指令 - 宝玉的分享</title><link>https://baoyu.io/blog/claude-code-ultrathink-custom-instructions</link></item>
-<item><title>AI的新技能不是提示词，而是上下文工程 - 宝玉的分享</title><link>https://baoyu.io/translations/the-new-skill-in-ai-is-context-engineering</link></item>
-<item><title>一文看懂“提示词” vs “提示词工程” vs “上下文工程” - 宝玉的分享</title><link>https://baoyu.io/blog/prompt-engineering-vs-context-engineering</link></item>
-<item><title>AI领域并无真正的新想法，只有新的数据集 - 宝玉的分享</title><link>https://baoyu.io/translations/there-are-no-new-ideas-in-ai-only</link></item>
-<item><title>科学进步实际上很大程度依赖于实打实的实验结果，而不仅仅是理论智力｜AI 自我提升不会突然“起飞”，而是逐渐加速的过程 - 宝玉的分享</title><link>https://baoyu.io/translations/ai-self-improvement-gradual-acceleration</link></item>
-<item><title>Memories without brains - Aeon</title><link>https://aeon.co/essays/what-can-slime-mould-teach-us-about-biological-memory?utm_source=rss-feed</link></item>
-<item><title>Ancient water clocks - Aeon</title><link>https://aeon.co/videos/how-water-based-clocks-revolutionised-the-way-we-measure-time?utm_source=rss-feed</link></item>
-<item><title>Freedom over death - Aeon</title><link>https://aeon.co/essays/why-medically-assisted-dying-should-be-legalised?utm_source=rss-feed</link></item>
-<item><title>Verified students get 15% off - IKEA</title><link>https://www.ikea.com/us/en/campaigns/starting-college/college-student-discount-pub60c5c8a0/</link></item>
-<item><title>Save up to 15% on college essentials - IKEA</title><link>https://www.ikea.com/us/en/campaigns/starting-college/event-pub4550f730/</link></item>
-<item><title>Get 10% off when you buy 10 or more select college essentials - IKEA</title><link>https://www.ikea.com/us/en/search/?group=Buy%2010%2B%20Select%20College%20Essentials%2C%20Get%2010%25%20off</link></item>
-<item><title>Dorm bedding &amp; pillows - IKEA</title><link>https://www.ikea.com/us/en/campaigns/starting-college/college-dorm-bedding-pub39ec1700/</link></item>
-<item><title>IKEA Credit Cards - IKEA</title><link>https://www.ikea.com/us/en/customer-service/services/finance-options/ikea-credit-cards-pub9b4272b0/</link></item>
-<item><title>Bedroom organization - IKEA</title><link>https://www.ikea.com/us/en/live-shopping/shows/ZVVJv6m1nNFcgdys4kwY/</link></item>
-<item><title>Joyful function - IKEA</title><link>https://www.ikea.com/us/en/ideas/design-collab/daren-todd-safe-haven-puba94785e0/</link></item>
-<item><title>Cozy up your bedroom - IKEA</title><link>https://www.ikea.com/us/en/live-shopping/shows/4LKVmGKvcCfhHChaD5e6/?autoplayLiveShopping=4LKVmGKvcCfhHChaD5e6</link></item>
-<item><title>Overnight holiday guests - IKEA</title><link>https://www.ikea.com/us/en/live-shopping/shows/jy9uQJj51Sz9spplaumX/</link></item>
-<item><title>Shared family space - IKEA</title><link>https://www.ikea.com/us/en/ideas/home-furnishings/miami-pubf4feace0/</link></item>
-<item><title>Tips from our designers - IKEA</title><link>https://www.ikea.com/us/en/ideas/how-to-create-a-fun-organized-college-dorm-pubdef14060/</link></item>
-<item><title>Illustrated guide to card counting and investing - FlowingData</title><link>https://flowingdata.com/2025/07/11/illustrated-guide-to-card-counting-and-investing/</link></item>
-<item><title>Nominee to lead NOAA prioritizes hiring people - FlowingData</title><link>https://flowingdata.com/2025/07/11/nominee-to-lead-noaa-prioritizes-hiring-people/</link></item>
-<item><title>DOGE goes for farmers’ financial and personal data - FlowingData</title><link>https://flowingdata.com/2025/07/10/doge-goes-for-farmers-financial-and-personal-data/</link></item>
-<item><title>Map of flood-risk area at Camp Mystic - FlowingData</title><link>https://flowingdata.com/2025/07/10/map-of-flood-risk-area-and-camp-mystic/</link></item>
-<item><title>✚ Switching axis positions - FlowingData</title><link>https://flowingdata.com/2025/07/10/process-345-axis-positions/</link></item>
-<item><title>Second brain deleted - FlowingData</title><link>https://flowingdata.com/2025/07/10/second-brain-deleted/</link></item>
-<item><title>Quarter of the world’s ocean floor has been mapped, so far - FlowingData</title><link>https://flowingdata.com/2025/07/10/quarter-of-the-worlds-ocean-floor-has-been-mapped-so-far/</link></item>
-<item><title>金融存款15强地级市2025年前5月运行：东莞稳增长，唐山涨势更好 - Data居士</title><link>https://www.163.com/dy/article/K48RAH5J0539KVTS.html?spss=dy_author</link></item>
-<item><title>中西部十强省市2025年前5月工业营收：安徽稳坐首位，湖南涨势好 - Data居士</title><link>https://www.163.com/dy/article/K46AL3010539KVTS.html?spss=dy_author</link></item>
-<item><title>城镇居民人均消费20强城市：温州高居第2，苏州第7，长沙跻身入围 - Data居士</title><link>https://www.163.com/dy/article/K43O7NTN0539KVTS.html?spss=dy_author</link></item>
-<item><title>2025年前5月预算收入十强城市：杭州、宁波仍未回正，深圳稳增长 - Data居士</title><link>https://www.163.com/dy/article/K4165GE50539KVTS.html?spss=dy_author</link></item>
-<item><title>2025年前5月金融存款25强城市：宁波、合肥涨势喜人，福州下跌了 - Data居士</title><link>https://www.163.com/dy/article/K3S005B70539KVTS.html?spss=dy_author</link></item>
-<item><title>深圳与广州各区县GDP情况，南山区与白云区高涨，宝安区却很一般 - Data居士</title><link>https://www.163.com/dy/article/K3PMUGSV0539KVTS.html?spss=dy_author</link></item>
-<item><title>2025年1-5月工业营收十强省：山东、福建稳健上行，安徽涨势更好 - Data居士</title><link>https://www.163.com/dy/article/K3MRTP480539KVTS.html?spss=dy_author</link></item>
-<item><title>全国县市人均可支配收入30强：浙江独占23席，苏南四小龙果然富裕 - Data居士</title><link>https://www.163.com/dy/article/K3K9G8710539KVTS.html?spss=dy_author</link></item>
-<item><title>2025年前5月资金总量十强城市：成都南京稳步上行，广州意外受挫 - Data居士</title><link>https://www.163.com/dy/article/K3F4LNBA0539KVTS.html?spss=dy_author</link></item>
-<item><title>中国南北区域经济新格局：南北方GDP总量15强城市横向比较！ - Data居士</title><link>https://www.163.com/dy/article/K3CIVHSC0539KVTS.html?spss=dy_author</link></item>
-<item><title>2025年前5月十强省金融存款运行：江苏浙江稳步回升，山东很强劲 - Data居士</title><link>https://www.163.com/dy/article/K39V1EAN0539KVTS.html?spss=dy_author</link></item>
-<item><title>全国城市人均收入40强排行榜：浙粤苏三省唱主角，长沙有点亮眼！ - Data居士</title><link>https://www.163.com/dy/article/K37BF3BL0539KVTS.html?spss=dy_author</link></item>
-<item><title>全国省市近5年资金总量涨势图：浙江增速领跑，安徽福建也很强劲 - Data居士</title><link>https://www.163.com/dy/article/K328VFPE0539KVTS.html?spss=dy_author</link></item>
-<item><title>2025年前5月出口值30强城市！金华追近东莞，广州、郑州触底反弹 - Data居士</title><link>https://www.163.com/dy/article/K2VMT21N0539KVTS.html?spss=dy_author</link></item>
-<item><title>全国个税收入20强城市排行：苏州高居第6、成都第8，西安进步飞快 - Data居士</title><link>https://www.163.com/dy/article/K2T44E230539KVTS.html?spss=dy_author</link></item>
-<item><title>全国十强省市2025年前5月出口运行：浙江江苏挑大梁，安徽跃居第8 - Data居士</title><link>https://www.163.com/dy/article/K2QI2C0T0539KVTS.html?spss=dy_author</link></item>
-<item><title>外资企业职工数前15城市：上海、深圳与苏州居前三，杭州无缘入围 - Data居士</title><link>https://www.163.com/dy/article/K2LD4SQK0539KVTS.html?spss=dy_author</link></item>
-<item><title>全国省市近5年来GDP增长变化：江苏山东平稳上行，浙江上海更给力 - Data居士</title><link>https://www.163.com/dy/article/K2G9DNB90539KVTS.html?spss=dy_author</link></item>
-<item><title>国内居民人均消费30强城市：杭州跃居首位，厦门、宁波入围前十！ - Data居士</title><link>https://www.163.com/dy/article/K2B3U5290539KVTS.html?spss=dy_author</link></item>
-<item><title>国内30强城市近5年财政收入走向：杭州、成都很稳健，西安更强劲 - Data居士</title><link>https://www.163.com/dy/article/K28HF5QL0539KVTS.html?spss=dy_author</link></item>
-<item><title>全国金融产业GDP十大城市：北京上海争相斗艳，杭州天津双双进位 - Data居士</title><link>https://www.163.com/dy/article/K25V3VKG0539KVTS.html?spss=dy_author</link></item>
-<item><title>中西部地区人均可支配收入30强城市：武汉高居第3，合肥排名第5位 - Data居士</title><link>https://www.163.com/dy/article/K23E9N0O0539KVTS.html?spss=dy_author</link></item>
-<item><title>2025年前4月工业营收十大城市：东莞跃居第5，无锡与宁波超过重庆 - Data居士</title><link>https://www.163.com/dy/article/K1U808840539KVTS.html?spss=dy_author</link></item>
-<item><title>国有单位职工数量前20城市：西安雄踞第3位，杭州、苏州无缘入围 - Data居士</title><link>https://www.163.com/dy/article/K1RLGPEI0539KVTS.html?spss=dy_author</link></item>
-<item><title>Americans Celebrate the One Big Beautiful Bill’s Transformational Policies - The White House</title><link>https://www.whitehouse.gov/articles/2025/07/americans-celebrate-the-one-big-beautiful-bills-transformational-policies/</link></item>
-<item><title>Taxpayer-Funded Benefits Are for American Citizens — Not Illegals - The White House</title><link>https://www.whitehouse.gov/articles/2025/07/taxpayer-funded-benefits-are-for-american-citizens-not-illegals/</link></item>
-<item><title>TRUST IN TRUMP: Sentiment Surges as Economy Booms - The White House</title><link>https://www.whitehouse.gov/articles/2025/07/trust-in-trump-sentiment-surges-as-economy-booms/</link></item>
-<item><title>Democrats Inspire Vicious, Escalating Attacks on ICE - The White House</title><link>https://www.whitehouse.gov/articles/2025/07/democrats-inspire-vicious-escalating-attacks-on-ice/</link></item>
-<item><title>President Trump Announces Presidential Delegation to Osaka, Japan, to Attend the World Expo - The White House</title><link>https://www.whitehouse.gov/briefings-statements/2025/07/president-trump-announces-presidential-delegation-to-osaka-japan-to-attend-the-world-expo/</link></item>
-<item><title>ICE Remains Undeterred in Getting Dangerous Criminal Illegals Off Our Streets - The White House</title><link>https://www.whitehouse.gov/articles/2025/07/ice-remains-undeterred-in-getting-dangerous-criminal-illegals-off-our-streets/</link></item>
-<item><title>Fact Sheet: President Donald J. Trump Ends Market Distorting Subsidies for Unreliable, Foreign-Controlled Energy Sources - The White House</title><link>https://www.whitehouse.gov/fact-sheets/2025/07/fact-sheet-president-donald-j-trump-ends-market-distorting-subsidies-for-unreliable-foreign-controlled-energy-sources/</link></item>
-<item><title>Fact Sheet: President Donald J. Trump Ensures Accountability and Prioritizes Public Safety in Federal Hiring - The White House</title><link>https://www.whitehouse.gov/fact-sheets/2025/07/fact-sheet-president-donald-j-trump-ensures-accountability-and-prioritizes-public-safety-in-federal-hiring/</link></item>
-<item><title>Fact Sheet: President Donald J. Trump Continues Enforcement of Reciprocal Tariffs and Announces New Tariff Rates - The White House</title><link>https://www.whitehouse.gov/fact-sheets/2025/07/fact-sheet-president-donald-j-trump-continues-enforcement-of-reciprocal-tariffs-and-announces-new-tariff-rates/</link></item>
-<item><title>Solar Was the Leading Source of Electricity In the EU Last Month - Slashdot</title><link>https://hardware.slashdot.org/story/25/07/12/0045216/solar-was-the-leading-source-of-electricity-in-the-eu-last-month</link></item>
-<item><title>AI Therapy Bots Fuel Delusions and Give Dangerous Advice, Stanford Study Finds - Slashdot</title><link>https://science.slashdot.org/story/25/07/11/2314204/ai-therapy-bots-fuel-delusions-and-give-dangerous-advice-stanford-study-finds</link></item>
-<item><title>Researchers Develop New Tool To Measure Biological Age - Slashdot</title><link>https://science.slashdot.org/story/25/07/11/236230/researchers-develop-new-tool-to-measure-biological-age</link></item>
-<item><title>Russian Basketball Player Arrested For Alleged Role In Ransomware Attacks - Slashdot</title><link>https://yro.slashdot.org/story/25/07/11/2254200/russian-basketball-player-arrested-for-alleged-role-in-ransomware-attacks</link></item>
-<item><title>iFixit: the Switch 2 Pro is a &amp;#39;Piss-Poor Excuse For a Controller&amp;#39; - Slashdot</title><link>https://games.slashdot.org/story/25/07/11/1936226/ifixit-the-switch-2-pro-is-a-piss-poor-excuse-for-a-controller</link></item>
-<item><title>JPMorgan Tells Fintechs They Have To Pay Up For Customer Data - Slashdot</title><link>https://news.slashdot.org/story/25/07/11/1945201/jpmorgan-tells-fintechs-they-have-to-pay-up-for-customer-data</link></item>
-<item><title>OpenAI&amp;#39;s Windsurf Deal Is Off, Windsurf&amp;#39;s CEO Is Going To Google - Slashdot</title><link>https://tech.slashdot.org/story/25/07/11/2246210/openais-windsurf-deal-is-off-windsurfs-ceo-is-going-to-google</link></item>
-<item><title>BYD Pledges to Cover Damages from Self-Parking Car Crashes - Slashdot</title><link>https://tech.slashdot.org/story/25/07/11/1930239/byd-pledges-to-cover-damages-from-self-parking-car-crashes</link></item>
-<item><title>Google Nerfs Second Pixel Phone Battery This Year - Slashdot</title><link>https://hardware.slashdot.org/story/25/07/11/1921242/google-nerfs-second-pixel-phone-battery-this-year</link></item>
-<item><title>Apple Adds 2013 Mac Pro, 2019 MacBook Air, AirPorts To Vintage List - Slashdot</title><link>https://apple.slashdot.org/story/25/07/11/1812202/apple-adds-2013-mac-pro-2019-macbook-air-airports-to-vintage-list</link></item>
-<item><title>US Abandons Hunt For Signal of Cosmic Inflation - Slashdot</title><link>https://science.slashdot.org/story/25/07/11/1750256/us-abandons-hunt-for-signal-of-cosmic-inflation</link></item>
-<item><title>Earth Is Spinning Faster and Days Are Getting Shorter, for Now - Slashdot</title><link>https://news.slashdot.org/story/25/07/11/1741218/earth-is-spinning-faster-and-days-are-getting-shorter-for-now</link></item>
-<item><title>Few Danes Work Until Official Retirement Age as Government Pushes It to 70 - Slashdot</title><link>https://slashdot.org/story/25/07/11/1734217/few-danes-work-until-official-retirement-age-as-government-pushes-it-to-70</link></item>
-<item><title>How Hot Can It Get, Literally? Scientists Weigh In - Slashdot</title><link>https://news.slashdot.org/story/25/07/11/1728246/how-hot-can-it-get-literally-scientists-weigh-in</link></item>
-<item><title>Saving a Studio? This Looks Like a Job for Superman! - Slashdot</title><link>https://entertainment.slashdot.org/story/25/07/11/1613249/saving-a-studio-this-looks-like-a-job-for-superman</link></item>
-<item><title>teen&amp;#39;s suicide - Slashdot</title><link>https://slashdot.org/story/24/10/23/1343247/teen-dies-after-intense-bond-with-characterai-chatbot</link></item>
-<item><title>powerful future in therapy - Slashdot</title><link>https://science.slashdot.org/story/25/04/09/155247/the-ai-therapist-can-see-you-now</link></item>
-<item><title>nerfing the Pixel 4a&amp;#39;s battery capacity - Slashdot</title><link>https://hardware.slashdot.org/story/25/01/31/2220211/google-pixel-4as-ruinous-battery-performance-update-is-a-bewildering-mess</link></item>
-<item><title>Why Is Fertility So Low in High Income Countries? - Slashdot</title><link>https://news.slashdot.org/story/25/07/11/0755248/why-is-fertility-so-low-in-high-income-countries?sbsrc=md</link></item>
-<item><title>Why America Still Can&amp;#39;t Get Disaster Alerts Right - Slashdot</title><link>https://news.slashdot.org/story/25/07/10/1533207/why-america-still-cant-get-disaster-alerts-right?sbsrc=md</link></item>
-<item><title>Jamie Dimon&amp;#39;s Blunt Message for Europe: &amp;#39;You&amp;#39;re Losing&amp;#39; - Slashdot</title><link>https://slashdot.org/story/25/07/11/1432259/jamie-dimons-blunt-message-for-europe-youre-losing?sbsrc=md</link></item>
-<item><title>Ohio City Using AI-Equipped Garbage Trucks To Scan Your Trash, Scold You For Not Recycling - Slashdot</title><link>https://tech.slashdot.org/story/25/07/10/2338216/ohio-city-using-ai-equipped-garbage-trucks-to-scan-your-trash-scold-you-for-not-recycling?sbsrc=md</link></item>
-<item><title>Mental Floss’s 2026 Desk Calendars Are for Word Nerds and Fact Fans of All Kinds - Mental Floss</title><link>https://www.mentalfloss.com/recommended/mental-floss-2026-desk-calendars-on-sale-now</link></item>
-<item><title>The Reason Why ‘Peggy’ Is Short for ‘Margaret’ - Mental Floss</title><link>https://www.mentalfloss.com/language/names/why-is-peggy-short-for-margaret</link></item>
-<item><title>Tortellini Pasta Salad - Skinnytaste</title><link>https://www.skinnytaste.com/tortellini-salad/</link></item>
-<item><title>Red, White and Blueberry Trifle - Skinnytaste</title><link>https://www.skinnytaste.com/red-white-and-blueberry-trifle/</link></item>
-<item><title>Watermelon Caprese Salad - Skinnytaste</title><link>https://www.skinnytaste.com/watermelon-caprese-with-balsamic-glaze/</link></item>
-<item><title>BBQ Chicken Recipe - Skinnytaste</title><link>https://www.skinnytaste.com/bbq-chicken/</link></item>
-<item><title>Instant Pot Egg Bites (Just Like Starbucks) - Skinnytaste</title><link>https://www.skinnytaste.com/instant-pot-egg-bites/</link></item>
-<item><title>Shrimp Foil Packets - Skinnytaste</title><link>https://www.skinnytaste.com/shrimp-foil-packets/</link></item>
-<item><title>Grilled Jerk Chicken with Mango Avocado Salsa - Skinnytaste</title><link>https://www.skinnytaste.com/grilled-jerk-chicken/</link></item>
-<item><title>Grilled Bananas - Skinnytaste</title><link>https://www.skinnytaste.com/grilled-bananas/</link></item>
-<item><title>Panzanella (Tuscan Bread Salad) - Skinnytaste</title><link>https://www.skinnytaste.com/panzanella/</link></item>
-<item><title>Cottage Cheese Cacio e Pepe - Skinnytaste</title><link>https://www.skinnytaste.com/cottage-cheese-cacio-e-pepe/</link></item>
-<item><title>Air Fryer Greek Chicken - Skinnytaste</title><link>https://www.skinnytaste.com/air-fryer-greek-chicken/</link></item>
-<item><title>Free 7 Day Healthy Meal Plan (July 7-13) - Skinnytaste</title><link>https://www.skinnytaste.com/free-7-day-healthy-meal-plan-july-7-13/</link></item>
-<item><title>Cutting to the core of how 3D structure shapes gene activity - Phys</title><link>https://phys.org/news/2025-07-core-3d-gene.html</link></item>
-<item><title>Antibody mapping chip speeds up vaccine research by revealing hidden binding sites quickly - Phys</title><link>https://phys.org/news/2025-07-antibody-chip-vaccine-revealing-hidden.html</link></item>
-<item><title>Polar vortex patterns explain shifting US winter cold despite warming climate - Phys</title><link>https://phys.org/news/2025-07-polar-vortex-patterns-shifting-winter.html</link></item>
-<item><title>Polymer coating extends half life of MXene-based air quality sensor by 200% and enables regeneration - Phys</title><link>https://phys.org/news/2025-07-polymer-coating-life-mxene-based.html</link></item>
-<item><title>Sled dog genetic history sheds light on human migration patterns into Greenland - Phys</title><link>https://phys.org/news/2025-07-sled-dog-genetic-history-human.html</link></item>
-<item><title>Narcissism and other dark personality traits linked to AI cheating in art universities - Phys</title><link>https://phys.org/news/2025-07-narcissism-dark-personality-traits-linked.html</link></item>
-<item><title>The KATRIN experiment sets new constraints on general neutrino interactions - Phys</title><link>https://phys.org/news/2025-07-katrin-constraints-general-neutrino-interactions.html</link></item>
-<item><title>3I/ATLAS: Scientific paper details what&amp;#39;s known about the third-ever interstellar object - Phys</title><link>https://phys.org/news/2025-07-3iatlas-scientific-paper-interstellar.html</link></item>
-<item><title>A parasitic worm may help rebuild blue crab populations in the Chesapeake Bay - Phys</title><link>https://phys.org/news/2025-07-parasitic-worm-rebuild-blue-crab.html</link></item>
-<item><title>Higgs-boson properties clarified through decay pattern analysis - Phys</title><link>https://phys.org/news/2025-07-higgs-boson-properties-decay-pattern.html</link></item>
-<item><title>How the genome defends itself against internal enemies - Phys</title><link>https://phys.org/news/2025-07-genome-defends-internal-enemies.html</link></item>
-<item><title>Data transfer speeds increase significantly through new optical chip design - Phys</title><link>https://phys.org/news/2025-07-significantly-optical-chip.html</link></item>
-<item><title>Some sharks in the north Atlantic may delay their fall migrations south - Phys</title><link>https://phys.org/news/2025-07-sharks-north-atlantic-delay-fall.html</link></item>
-<item><title>Exploring animal life in the radioactive shadows of Chornobyl and Fukushima - Phys</title><link>https://phys.org/news/2025-07-exploring-animal-life-radioactive-shadows.html</link></item>
-<item><title>Part of Grand Canyon evacuated as wildfire spreads - Phys</title><link>https://phys.org/news/2025-07-wildfire-evacuation-grand-canyon.html</link></item>
-<item><title>Sustainable food safety means managing risk, not erasing it - Phys</title><link>https://phys.org/news/2025-07-sustainable-food-safety-erasing.html</link></item>
-<item><title>Polyethylene packaging may have lower global warming impact than alternatives, study finds - Phys</title><link>https://phys.org/news/2025-07-polyethylene-packaging-global-impact-alternatives.html</link></item>
-<item><title>Time machine in drones? Photorealistic depiction shows Great Hungarian Plain before water regulations - Phys</title><link>https://phys.org/news/2025-07-machine-drones-photorealistic-depiction-great.html</link></item>
-<item><title>Homelessness Prevention Unit participants 71% less likely to enter a shelter, study finds - Phys</title><link>https://phys.org/news/2025-07-homelessness.html</link></item>
-<item><title>Europe&amp;#39;s first deep-space optical communication link - Phys</title><link>https://phys.org/news/2025-07-europe-deep-space-optical-communication.html</link></item>
-<item><title>Sparking new ideas on how wildfire influences climate - Phys</title><link>https://phys.org/news/2025-07-ideas-wildfire-climate.html</link></item>
-<item><title>Black and minoritized people feel forced to disguise their identities - Phys</title><link>https://phys.org/news/2025-07-black-minoritized-people-disguise-identities.html</link></item>
-<item><title>Artificial sweeteners leave bitter aftertaste for the environment - Phys</title><link>https://phys.org/news/2025-07-artificial-sweeteners-bitter-aftertaste-environment.html</link></item>
-<item><title>Less hype, more drama: AI and the changing discourse of global news coverage - Phys</title><link>https://phys.org/news/2025-07-hype-drama-ai-discourse-global.html</link></item>
-<item><title>Celebrate the JWST&amp;#39;s third anniversary with this stunning image - Phys</title><link>https://phys.org/news/2025-07-celebrate-jwst-anniversary-stunning-image.html</link></item>
-<item><title>Whitefish decline a &amp;#39;big&amp;#39; problem in Great Lakes, biologist says - Phys</title><link>https://phys.org/news/2025-07-whitefish-decline-big-problem-great.html</link></item>
-<item><title>Plant phototropism regulated by acetylation–phosphorylation cross-talk, study finds - Phys</title><link>https://phys.org/news/2025-07-phototropism-acetylationphosphorylation.html</link></item>
-<item><title>NASA selects instruments for Artemis lunar terrain vehicle - Phys</title><link>https://phys.org/news/2025-07-nasa-instruments-artemis-lunar-terrain.html</link></item>
-<item><title>Indian Ocean fisheries play outsized role in nutritional security - Phys</title><link>https://phys.org/news/2025-07-indian-ocean-fisheries-play-outsized.html</link></item>
-<item><title>Muscle-like gel polymer gets stronger with a new recipe - Phys</title><link>https://phys.org/news/2025-07-muscle-gel-polymer-stronger-recipe.html</link></item>
-<item><title>Novel tool to study stress-dependent subcellular protein localization changes - Phys</title><link>https://phys.org/news/2025-07-tool-stress-subcellular-protein-localization.html</link></item>
-<item><title>Fertilizer runoff will likely force more drinking water restrictions, say experts - Phys</title><link>https://phys.org/news/2025-07-fertilizer-runoff-restrictions-experts.html</link></item>
-<item><title>A Look Inside A Home That Feels Like Living in a Forest Sanctuary - CONTEMPORIST</title><link>https://www.contemporist.com/a-look-inside-a-home-that-feels-like-living-in-a-forest-sanctuary/</link></item>
-<item><title>A Mid-Century Modern Home Renovation with Asian and Nordic Influences - CONTEMPORIST</title><link>https://www.contemporist.com/a-mid-century-modern-home-renovation-with-asian-and-nordic-influences/</link></item>
-<item><title>Inside the Forest Home That’s All About Light, Space, and Simplicity - CONTEMPORIST</title><link>https://www.contemporist.com/inside-the-forest-home-thats-all-about-light-space-and-simplicity/</link></item>
-<item><title>A Kitchen Island That Feels More Like Modern Furniture - CONTEMPORIST</title><link>https://www.contemporist.com/a-kitchen-island-that-feels-more-like-modern-furniture/</link></item>
-<item><title>This Sculptural Home Turns Minimalism Into a Statement - CONTEMPORIST</title><link>https://www.contemporist.com/this-sculptural-home-turns-minimalism-into-a-statement/</link></item>
-<item><title>Modern Living Meets Montreal’s History in a Striking Loft Transformation - CONTEMPORIST</title><link>https://www.contemporist.com/modern-living-meets-montreals-history-in-a-striking-loft-transformation/</link></item>
-<item><title>Looks like 1,300 Indeed and Glassdoor staffers will need their former employer&amp;#39;s websites - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/12/indeed_glassdoor_layoffs/</link></item>
-<item><title>AI coding tools make developers slower but they think they&amp;#39;re faster, study finds - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/11/ai_code_tools_slow_down/</link></item>
-<item><title>Hegseth signs flying memo to expand military use of cheap drones in oddball video - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/11/hegseth_signs_flying_memo_to/</link></item>
-<item><title>Tech to protect images against AI scrapers can be beaten, researchers show - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/11/defenses_against_ai_scrapers_beaten/</link></item>
-<item><title>ICANN fumes as AFRINIC offers no explanation for annulled election - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/11/afrinic_election_annulled_why/</link></item>
-<item><title>CVSS 10 RCE in Wing FTP exploited within 24 hours, security researchers warn - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/11/1010_wing_ftp_bug_exploited/</link></item>
-<item><title>Rimini Street, Oracle edge toward truce after years of legal warfare - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/11/rimini_street_oracle_settlement/</link></item>
-<item><title>British Perl guru Matt Trout dead at 42 - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/11/matt_trout_dies_at_42/</link></item>
-<item><title>Pentagon snaps up ownership stake in America&amp;#39;s only rare earths mine - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/11/pentagon_ownership_us_rare_earth_mine/</link></item>
-<item><title>Datacenters feeling the heat as climate risk boils over - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/11/climate_change_datacenters/</link></item>
-<item><title>Users of PostgreSQL in the cloud say the uptime just ain&amp;#39;t up to it - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/11/cloud_postgresql_uptime/</link></item>
-<item><title>Microsoft fixes the ESU blues for Windows 10 users - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/11/microsoft_esu_fix/</link></item>
-<item><title>More license upheaval to come after SAP kills RISE with SAP products, users warn - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/11/more_license_upheaval_to_come/</link></item>
-<item><title>Telefónica Germany offloads VMware support to Spinnaker due to high renewal costs - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/11/telefnica_germany_shifts_vmware_support/</link></item>
-<item><title>UK Online Safety Act &amp;#39;not up to scratch&amp;#39; on misinformation, warn MPs - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/11/online_safety_act_misinfo/</link></item>
-<item><title>Microsoft offers EU cloud providers fresh commercial terms, staves off risk of litigation - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/11/microsoft_offers_eu_cloud_providers/</link></item>
-<item><title>Security company hired a used car salesman to build a website, and it didn&amp;#39;t end well - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/11/on_call/</link></item>
-<item><title>French cops cuff Russian pro basketball player on ransomware charges - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/11/french_ransomware_arrest/</link></item>
-<item><title>Chinese censorship-busters claim Tencent is trying to kill its WeChat archive - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/11/greatfire_alleges_tencent_legal_attack/</link></item>
-<item><title>China&amp;#39;s biggest car rental company now offers autonomous cars - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/11/zuchen_baidu_apollo_car_rental/</link></item>
-<item><title>Lovestruck US Air Force worker admits leaking secrets on dating app - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/10/airman_admits_dating_app_leaks/</link></item>
-<item><title>Now everybody but Citrix agrees that CitrixBleed 2 is under exploit - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/10/cisa_citrixbleed_kev/</link></item>
-<item><title>Intel&amp;#39;s leaders have stopped pretending – and it&amp;#39;s about time - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/10/intel_ceo_offers_reality_check/</link></item>
-<item><title>Thousands of NASA senior staffers expected to quit after budget slashed - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/10/nasa_staff_layoffs/</link></item>
-<item><title>Ex-ASML engineer who stole chip tech for Russia gets three years in Dutch prison - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/10/exasml_engineer_dutch_prison/</link></item>
-<item><title>IBM moves scientists out of Almaden Research Center - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/10/ibm_almaden_research_center/</link></item>
-<item><title>EU tries to explain how to do AI without breaking the law - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/10/eu_ai_code_of_practice/</link></item>
-<item><title>Slow down on building power plants for all those new AI datacenters, report warns - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/10/us_datacenter_growth/</link></item>
-<item><title>Please don&amp;#39;t cut funds for space traffic control, industry begs Congress - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/10/space_traffic_control_congress/</link></item>
-<item><title>Red Hat sweetens the RHEL deal for biz devs – just don&amp;#39;t put it in prod - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/10/rhel_business_developers/</link></item>
-<item><title>Firebase Studio&amp;#39;s new Agent Mode wants to code so you don&amp;#39;t have to - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/10/google_firebase_ai_updates/</link></item>
-<item><title>Russia, hotbed of cybercrime, says nyet to ethical hacking bill - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/10/russia_ethical_hacking_bill/</link></item>
-<item><title>Trump tariffs turn techies topsy-turvy as US braces for PC tax - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/10/tariffs_deadline_us_pc_effects/</link></item>
-<item><title>Microsoft says regulations and environmental issues are cramping its Euro expansion - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/10/microsoft_says_regulations_and_environmental/</link></item>
-<item><title>Former reality TV star appointed NASA interim administrator - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/10/nasa_interim_administrator/</link></item>
-<item><title>NCA arrests four in connection with UK retail ransomware attacks - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/10/nca_arrests_four_in_connection/</link></item>
-<item><title>Sovereign-ish: Google Cloud keeps AI data in UK, but not the support - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/10/google_uk_data_sovereignty/</link></item>
-<item><title>Outlook takes another sick day - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/10/outlook_microsoft_email_outage/</link></item>
-<item><title>Write-back to aging UK health systems lessens benefits of Palantir-based platform - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/10/writeback_to_ageing_nhs_systems/</link></item>
-<item><title>At last, a use case for AI agents with sky-high ROI: Stealing crypto - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/10/ai_agents_automatically_steal_cryptocurrency/</link></item>
-<item><title>Swiss boffins just trained a &amp;#39;fully open&amp;#39; LLM on the Alps supercomputer - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/10/llm_swiss_supercomputer/</link></item>
-<item><title>Lord of the Rings director Peter Jackson backs plan to do a Jurassic Park on extinct birds - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/10/colossal_bioscience_peter_jackson_moa_resurrection/</link></item>
-<item><title>Chinese TV uses AI to translate broadcasts into sign language. It’s not going well - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/10/china_ai_sign_language_translation/</link></item>
-<item><title>Citrix signals return to the mainstream hypervisor market with a product it says isn’t quite ready for the job - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/10/citrix_returns_to_mainstream_hypervisors/</link></item>
-<item><title>A personal assistant for everyone: The promise of ambient AI - Freethink</title><link>https://www.freethink.com/artificial-intelligence/ambient-ai</link></item>
-<item><title>Gen Z: We must resist the temptation to cheat on everything - Freethink</title><link>https://www.freethink.com/artificial-intelligence/gen-z-cheat-on-everything</link></item>
-<item><title>Inside a neuroscientist’s quest to cure coma - Freethink</title><link>https://www.freethink.com/biotech/cure-coma</link></item>
-<item><title>Boaz Weinstein - FlowingData</title><link>https://flowingdata.com/tag/boaz-weinstein/</link></item>
-<item><title>Government Executive - FlowingData</title><link>https://flowingdata.com/tag/government-executive/</link></item>
-<item><title>Joan Westenberg - FlowingData</title><link>https://flowingdata.com/tag/joan-westenberg/</link></item>
-<item><title>Jorge Luis Borges - FlowingData</title><link>https://flowingdata.com/tag/jorge-luis-borges/</link></item>
-<item><title>Unmasking The Magic: The Wizard Of Oz Method For UX Research - Smashing Magazine</title><link>https://smashingmagazine.com/2025/07/unmasking-magic-wizard-oz-method-ux-research/</link></item>
-<item><title>Droip: The Modern Website Builder WordPress Needed - Smashing Magazine</title><link>https://smashingmagazine.com/2025/07/modern-website-builder-wordpress-droip/</link></item>
-<item><title>Design Guidelines For Better Notifications UX - Smashing Magazine</title><link>https://smashingmagazine.com/2025/07/design-guidelines-better-notifications-ux/</link></item>
-<item><title>CSS Intelligence: Speculating On The Future Of A Smarter Language - Smashing Magazine</title><link>https://smashingmagazine.com/2025/07/css-intelligence-speculating-future-smarter-language/</link></item>
-<item><title>Turning User Research Into Real Organizational Change - Smashing Magazine</title><link>https://smashingmagazine.com/2025/07/turning-user-research-into-organizational-change/</link></item>
-<item><title>Never Stop Exploring (July 2025 Wallpapers Edition) - Smashing Magazine</title><link>https://smashingmagazine.com/2025/06/desktop-wallpaper-calendars-july-2025/</link></item>
-<item><title>Can Good UX Protect Older Users From Digital Scams? - Smashing Magazine</title><link>https://smashingmagazine.com/2025/06/can-good-ux-protect-older-users-digital-scams/</link></item>
-<item><title>Decoding The SVG &amp;lt;code&amp;gt;path&amp;lt;/code&amp;gt; Element: Curve And Arc Commands - Smashing Magazine</title><link>https://smashingmagazine.com/2025/06/decoding-svg-path-element-curve-arc-commands/</link></item>
-<item><title>Meet Accessible UX Research, A Brand-New Smashing Book - Smashing Magazine</title><link>https://smashingmagazine.com/2025/06/accessible-ux-research-pre-release/</link></item>
-<item><title>CSS Cascade Layers Vs. BEM Vs. Utility Classes: Specificity Control - Smashing Magazine</title><link>https://smashingmagazine.com/2025/06/css-cascade-layers-bem-utility-classes-specificity-control/</link></item>
-<item><title>What I Wish Someone Told Me When I Was Getting Into ARIA - Smashing Magazine</title><link>https://smashingmagazine.com/2025/06/what-i-wish-someone-told-me-aria/</link></item>
-<item><title>Creating The &amp;ldquo;Moving Highlight&amp;rdquo; Navigation Bar With JavaScript And CSS - Smashing Magazine</title><link>https://smashingmagazine.com/2025/06/creating-moving-highlight-navigation-bar-javascript-css/</link></item>
-<item><title>Decoding The SVG &amp;lt;code&amp;gt;path&amp;lt;/code&amp;gt; Element: Line Commands - Smashing Magazine</title><link>https://smashingmagazine.com/2025/06/decoding-svg-path-element-line-commands/</link></item>
-<item><title>Collaboration: The Most Underrated UX Skill No One Talks About - Smashing Magazine</title><link>https://smashingmagazine.com/2025/06/collaboration-most-underrated-ux-skill/</link></item>
-<item><title>Smashing Animations Part 4: Optimising SVGs - Smashing Magazine</title><link>https://smashingmagazine.com/2025/06/smashing-animations-part-4-optimising-svgs/</link></item>
-<item><title>Why Designers Get Stuck In The Details And How To Stop - Smashing Magazine</title><link>https://smashingmagazine.com/2025/06/why-designers-get-stuck-in-details/</link></item>
-<item><title>Designing For Neurodiversity - Smashing Magazine</title><link>https://smashingmagazine.com/2025/06/designing-for-neurodiversity/</link></item>
-<item><title>Prelude To Summer (June 2025 Wallpapers Edition) - Smashing Magazine</title><link>https://smashingmagazine.com/2025/05/desktop-wallpaper-calendars-june-2025/</link></item>
-<item><title>Reliably Detecting Third-Party Cookie Blocking In 2025 - Smashing Magazine</title><link>https://smashingmagazine.com/2025/05/reliably-detecting-third-party-cookie-blocking-2025/</link></item>
-<item><title>Data Vs. Findings Vs. Insights In UX - Smashing Magazine</title><link>https://smashingmagazine.com/2025/05/data-vs-findings-vs-insights-ux/</link></item>
-<item><title>Gatsby’s Tragic Flaw - Law &amp; Liberty</title><link>https://lawliberty.org/gatsbys-tragic-flaw/</link></item>
-<item><title>Why Can’t the Kids Read? - Law &amp; Liberty</title><link>https://lawliberty.org/why-cant-the-kids-read/</link></item>
-<item><title>Logic Without History - Law &amp; Liberty</title><link>https://lawliberty.org/logic-without-history/</link></item>
-<item><title>A Magna Carta that Might Have Been - Law &amp; Liberty</title><link>https://lawliberty.org/a-magna-carta-that-might-have-been/</link></item>
-<item><title>Vampire Crab: More Cartoonish Than Blood-sucking - HowStuffWorks</title><link>https://animals.howstuffworks.com/marine-life/vampire-crab.htm</link></item>
-<item><title>The Most Expensive Gas in the U.S. Is on the West Coast - HowStuffWorks</title><link>https://money.howstuffworks.com/most-expensive-gas-in-the-us.htm</link></item>
-<item><title>15 Types of Gemstones to Add a Little Sparkle to Your Life - HowStuffWorks</title><link>https://science.howstuffworks.com/environmental/earth/geology/types-of-gemstones.htm</link></item>
-<item><title>Woodchuck vs. Beaver Habitats, Behaviors, and Misidentification - HowStuffWorks</title><link>https://animals.howstuffworks.com/mammals/woodchuck-vs-beaver.htm</link></item>
-<item><title>Why Is My Cat Peeing Everywhere? Let&amp;#39;s Dig in - HowStuffWorks</title><link>https://animals.howstuffworks.com/pets/why-is-my-cat-peeing-everywhere.htm</link></item>
-<item><title>The Most Dangerous Volcano in the World (and 9 Scary Others) - HowStuffWorks</title><link>https://science.howstuffworks.com/nature/natural-disasters/most-dangerous-volcano-in-the-world.htm</link></item>
-<item><title>How Do Cat Years Work? It&amp;#39;s Not a Linear Ratio - HowStuffWorks</title><link>https://animals.howstuffworks.com/pets/how-do-cat-years-work.htm</link></item>
-<item><title>Best Weather in the World: 10 Temperate Locales - HowStuffWorks</title><link>https://science.howstuffworks.com/nature/climate-weather/best-weather-in-the-world.htm</link></item>
-<item><title>5 Most Expensive Coffee Types Found Around the World - HowStuffWorks</title><link>https://recipes.howstuffworks.com/most-expensive-coffee.htm</link></item>
-<item><title>8 Fluffy Cats for Cuddle-loving Pet Parents - HowStuffWorks</title><link>https://animals.howstuffworks.com/pets/fluffy-cats.htm</link></item>
+<lastBuildDate>Sun, 13 Jul 2025 08:53:34 +0800</lastBuildDate>
+<item><title>Dolly Parton Inspired a Porter Wagoner Album Over 20 Years After Their Falling Out - Showbiz Cheat Sheet</title><link>https://www.cheatsheet.com/news/dolly-parton-inspired-porter-wagoner-album-20-years-falling.html/</link></item>
+<item><title>These 4 Celebrities are Currently Serving Significant Jail Time - Showbiz Cheat Sheet</title><link>https://www.cheatsheet.com/news/these-4-celebrities-are-currently-serving-significant-jail-time.html/</link></item>
+<item><title>Lauren Sánchez, Kim Kardashian Lose Out When Trying to Buy Jane Birkin’s Iconic Handbag: Report - Showbiz Cheat Sheet</title><link>https://www.cheatsheet.com/news/lauren-sanchez-kim-kardashian-lose-trying-buy-jane-birkin-iconic-handbag-report.html/</link></item>
+<item><title>A Diddy Juror Said the Jury ‘Did Believe’ Cassie Ventura Despite Verdict - Showbiz Cheat Sheet</title><link>https://www.cheatsheet.com/news/diddy-juror-said-jury-believe-cassie-ventura-despite-verdict.html/</link></item>
+<item><title>Porter Wagoner Made Dolly Parton Remove the Taboo Lyrics to 1 Song - Showbiz Cheat Sheet</title><link>https://www.cheatsheet.com/news/porter-wagoner-dolly-parton-remove-overly-taboo-lyrics-1-song.html/</link></item>
+<item><title>Royal Photographer Calls Prince Harry and Meghan’s Wedding ‘Miserable’ and the ‘Worst’ He’s Ever Covered - Showbiz Cheat Sheet</title><link>https://www.cheatsheet.com/news/royal-photographer-calls-prince-harry-meghans-wedding-miserable-worst-ever-covered.html/</link></item>
+<item><title>Jeff Bezos Shocks With a New Hair Look: He’s Been Shaving His Head Since 2013 - Showbiz Cheat Sheet</title><link>https://www.cheatsheet.com/news/jeff-bezos-shocks-with-a-new-hair-look-hes-been-shaving-his-head-since-2013.html/</link></item>
+<item><title>Josh Allen is Selling His Dana Point Home Months After Tying the Knot - Showbiz Cheat Sheet</title><link>https://www.cheatsheet.com/news/josh-allen-is-selling-his-dana-point-home-months-after-tying-the-knot.html/</link></item>
+<item><title>Jennifer Lopez Fears Ben Affleck Will Share ‘Uncensored Details’ of Relationship in Podcast With Matt Damon, Source Says - Showbiz Cheat Sheet</title><link>https://www.cheatsheet.com/news/jennifer-lopez-fears-ben-affleck-will-share-uncensored-details-relationship-podcast-with-matt-damon-source-says.html/</link></item>
+<item><title>Mel Owens’ Ex-Wife Speaks Out Ahead of ‘The Golden Bachelor’: ‘It’s Going to be Bad’ - Showbiz Cheat Sheet</title><link>https://www.cheatsheet.com/news/mel-owens-ex-wife-speaks-out-ahead-of-the-golden-bachelor-its-going-to-be-bad.html/</link></item>
+<item><title>🧱 Building better initramfs: A deep dive into dracut on Fedora &amp; RHEL - Fedora Magazine</title><link>https://fedoramagazine.org/%f0%9f%a7%b1-building-better-initramfs-a-deep-dive-into-dracut-on-fedora-rhel/</link></item>
+<item><title>🔧 Unlocking system performance: A practical guide to tuning PCP on Fedora &amp; RHEL - Fedora Magazine</title><link>https://fedoramagazine.org/unlocking-system-performance-a-practical-guide-to-tuning-pcp/</link></item>
+<item><title>🔧 Deep dive into sosreport: understanding the data pack layout in Fedora &amp; RHEL - Fedora Magazine</title><link>https://fedoramagazine.org/%f0%9f%94%a7-deep-dive-into-sosreport-understanding-the-data-pack-layout-in-fedora-rhel/</link></item>
+<item><title>System insights with command-line tools: free and vmstat - Fedora Magazine</title><link>https://fedoramagazine.org/system-insights-with-command-line-tools-free-and-vmstat/</link></item>
+<item><title>Flock to Fedora 2025 Recap: Streaming from Kenya - Fedora Magazine</title><link>https://fedoramagazine.org/flock-to-fedora-2025-recap-streaming-from-kenya/</link></item>
+<item><title>Making sense of software licensing with FSFE REUSE: A beginner’s guide for open source developers - Fedora Magazine</title><link>https://fedoramagazine.org/beginners-guide-for-open-source-developers-for-software-licensing-with-fsfe-reuse/</link></item>
+<item><title>Zobot: A Third Kind of Self-Sustaining Being - Larry Sanger Blog</title><link>https://larrysanger.org/2025/07/zobot-a-third-kind-of-self-sustaining-being/</link></item>
+<item><title>The Denominational Distinctives I: Catholic, Orthodox, Protestant - Larry Sanger Blog</title><link>https://larrysanger.org/2025/06/the-denominational-distinctives-i-catholic-orthodox-protestant/</link></item>
+<item><title>GradientAI Platform - DigitalOcean</title><link>https://docs.digitalocean.com/products/gradientai-platform</link></item>
+<item><title>GradientAI GPU Droplets - DigitalOcean</title><link>https://www.digitalocean.com/products/gradientai/gpu-droplets</link></item>
+<item><title>GradientAI Bare Metal GPUs - DigitalOcean</title><link>https://www.digitalocean.com/products/gradientai/bare-metal-gpus</link></item>
+<item><title>GradientAI 1-Click Models - DigitalOcean</title><link>https://www.digitalocean.com/products/gradientai/1-click-models</link></item>
+<item><title>Live coverage: SpaceX to launch unspecified satellite on a Falcon 9 rocket from Cape Canaveral - Spaceflight Now</title><link>https://spaceflightnow.com/2025/07/12/live-coverage-spacex-to-launch-unspecified-satellite-on-a-falcon-9-rocket-from-cape-canaveral/</link></item>
+<item><title>Axiom Space, Oakley partner on spacesuit visor for Artemis missions - Spaceflight Now</title><link>https://spaceflightnow.com/2025/07/12/axiom-space-oakley-partner-on-spacesuit-visor-for-artemis-missions/</link></item>
+<item><title>Transportation Secretary Sean Duffy picked as Interim NASA Administrator - Spaceflight Now</title><link>https://spaceflightnow.com/2025/07/10/transportation-secretary-sean-duffy-picked-as-interim-nasa-administrator/</link></item>
+<item><title>SpaceX launches 28 Starlink satellites on Falcon 9 rocket from Cape Canaveral - Spaceflight Now</title><link>https://spaceflightnow.com/2025/07/08/live-coverage-spacex-to-launch-28-starlink-satellites-on-falcon-9-rocket-from-cape-canaveral-5-2/</link></item>
+<item><title>Republican-backed reconciliation bill passes, includes funding for ISS, Artemis programs, Space Shuttle relocation - Spaceflight Now</title><link>https://spaceflightnow.com/2025/07/05/republican-backed-reconciliation-bill-passes-includes-funding-for-iss-artemis-programs-space-shuttle-relocation/</link></item>
+<item><title>ULA begins stacking its 1st Vulcan rocket supporting a national security mission - Spaceflight Now</title><link>https://spaceflightnow.com/2025/07/03/ula-begins-stacking-its-1st-vulcan-rocket-supporting-a-national-security-mission/</link></item>
+<item><title>SpaceX launches its 500th Falcon 9 rocket - Spaceflight Now</title><link>https://spaceflightnow.com/2025/07/01/live-coverage-spacex-to-launch-27-starlink-satellites-on-a-falcon-9-rocket-from-cape-canaveral/</link></item>
+<item><title>EUMETSAT, ESA launches combo MTG-S1, Sentinel-4 satellite on SpaceX Falcon 9 rocket from NASA’s Kennedy Space Center - Spaceflight Now</title><link>https://spaceflightnow.com/2025/07/01/live-coverage-eumetsat-esa-to-launch-combo-mtg-s1-sentinel-4-satellite-on-spacex-falcon-9-rocket-from-nasas-kennedy-space-center/</link></item>
+<item><title>SpaceX completes 60th Starlink flight of 2025 - Spaceflight Now</title><link>https://spaceflightnow.com/2025/06/28/live-coverage-spacex-to-launch-26-starlink-satellites-on-falcon-9-rocket-from-vandenberg-sfb-4/</link></item>
+<item><title>SpaceX breaks launchpad turnaround record with midnight Starlink flight - Spaceflight Now</title><link>https://spaceflightnow.com/2025/06/27/live-coverage-spacex-to-launch-27-starlink-satellites-on-falcon-9-rocket-from-cape-canaveral-4/</link></item>
+<item><title>HoloMem’s drop-in holographic tape drive for LTO tape libraries - Blocks and Files</title><link>https://blocksandfiles.com/2025/07/12/holomems-drop-in-holographic-tape-cartridge-for-lto-tape-libraries/</link></item>
+<item><title>Employees prefer to keep quiet when hit by a cyberattack - Blocks and Files</title><link>https://blocksandfiles.com/2025/07/11/employees-prefer-to-keep-quiet-when-hit-by-cyberattack/</link></item>
+<item><title>IDC brings out AI-Ready Data Storage Infrastructure paper - Blocks and Files</title><link>https://blocksandfiles.com/2025/07/11/idc-sings-hammerspace-like-song-on-ai-ready-data-storage-infrastructure/</link></item>
+<item><title>Kioxia UFS 4.1 flash promises smoother AI app performance - Blocks and Files</title><link>https://blocksandfiles.com/2025/07/10/kioxia-boosting-smartphone-flash/</link></item>
+<item><title>Komprise: Metadata is the key to smarter AI and data governance - Blocks and Files</title><link>https://blocksandfiles.com/2025/07/10/komprise-ceo-metadata-vector-embeddings/</link></item>
+<item><title>Datafy banks $14M to slash AWS block storage bills - Blocks and Files</title><link>https://blocksandfiles.com/2025/07/10/datafy-aws-block-cost-cutters-get-funding/</link></item>
+<item><title>Big Blue’s devs flood watsonx with incremental updates - Blocks and Files</title><link>https://blocksandfiles.com/2025/07/09/big-blues-intense-watsonx-incremental-update-flood/</link></item>
+<item><title>Quantum and Chief Revenue Officer to part ways - Blocks and Files</title><link>https://blocksandfiles.com/2025/07/09/quantum-wants-its-chief-revenue-officer-to-leave/</link></item>
+<item><title>Commvault promotes partner chief, integrates with Platform9 - Blocks and Files</title><link>https://blocksandfiles.com/2025/07/09/commvault-platform9-integration/</link></item>
+<item><title>Google Cloud takes a shine to Lustre - Blocks and Files</title><link>https://blocksandfiles.com/2025/07/09/google-cloud-takes-a-shine-to-lustre/</link></item>
+<item><title>The cloud-native imperative for effective cyber resilience - Blocks and Files</title><link>https://blocksandfiles.com/2025/07/08/the-cloud-native-imperative-for-effective-cyber-resilience/</link></item>
+<item><title>WEKA ports NeuralMesh to a GPU server’s local SSDs - Blocks and Files</title><link>https://blocksandfiles.com/2025/07/08/weka-ports-neuralmesh-to-a-gpu-servers-local-ssds/</link></item>
+<item><title>Cloudian bakes Milvus vector database into HyperStore for AI inference - Blocks and Files</title><link>https://blocksandfiles.com/2025/07/08/cloudian-milvus-support-hyperstore/</link></item>
+<item><title>Graid going for Nvidia RAID gold - Blocks and Files</title><link>https://blocksandfiles.com/2025/07/07/graid-going-for-nvidia-raid-gold/</link></item>
+<item><title>Analysis finds Volumez block storage outpaces cloud giants for PostgreSQL - Blocks and Files</title><link>https://blocksandfiles.com/2025/07/07/volumez-postgresql-cloud-block-storage/</link></item>
+<item><title>Nvidia extends LLM memory with tiered KV caching and Dynamo engine - Blocks and Files</title><link>https://blocksandfiles.com/2025/07/07/nvidia-and-memory-storage-tiering-for-ai-vectors/</link></item>
+<item><title>goHardDrive RMA customer details vulnerability - Blocks and Files</title><link>https://blocksandfiles.com/2025/07/07/the-goharddrive-rma-customer-details-vulnerability/</link></item>
+<item><title>VAST Data cracks into HPC with Doudna supercomputer win - Blocks and Files</title><link>https://blocksandfiles.com/2025/07/04/vast-doudna-supercomputer-storage/</link></item>
+<item><title>Storage news collection – July 3 - Blocks and Files</title><link>https://blocksandfiles.com/2025/07/03/storage-news-collection-july-3/</link></item>
+<item><title>Kioxia tunes SSD-based vector search for RAG workloads - Blocks and Files</title><link>https://blocksandfiles.com/2025/07/03/kioxia-aisaq/</link></item>
+<item><title>How your favorite movie is changing language learning technology - Stack Overflow Blog</title><link>https://stackoverflow.blog/2025/07/11/how-your-favorite-movie-is-changing-language-learning-technology/</link></item>
+<item><title>A new era of Stack Overflow - Stack Overflow Blog</title><link>https://stackoverflow.blog/2025/07/10/a-new-era-of-stack-overflow/</link></item>
+<item><title>Have your say on the evolution of our identity - Stack Overflow Blog</title><link>https://stackoverflow.blog/2025/07/10/vote-on-our-new-identity/</link></item>
+<item><title>There is no golden path anymore: Engineering practices are being rewritten - Stack Overflow Blog</title><link>https://stackoverflow.blog/2025/07/10/there-is-no-golden-path-anymore-engineering-practices-are-being-rewritten/</link></item>
+<item><title>Better performance, smarter workflows: What’s new in Stack Overflow for Teams - Stack Overflow Blog</title><link>https://stackoverflow.blog/2025/07/08/better-performance-smarter-workflows-what-s-new-in-stack-overflow-for-teams/</link></item>
+<item><title>Attention isn’t all we need; we need ownership too - Stack Overflow Blog</title><link>https://stackoverflow.blog/2025/07/08/attention-isn-t-all-we-need-we-need-ownership-too/</link></item>
+<item><title>Getting creative with Coding Challenges - Stack Overflow Blog</title><link>https://stackoverflow.blog/2025/07/07/getting-creative-with-coding-challenges/</link></item>
+<item><title>Why call one API when you can use GraphQL to call them all? - Stack Overflow Blog</title><link>https://stackoverflow.blog/2025/07/04/why-call-one-api-when-you-can-use-graphql-to-call-them-all/</link></item>
+<item><title>Programming problems that seem easy, but aren&amp;#39;t, featuring Jon Skeet - Stack Overflow Blog</title><link>https://stackoverflow.blog/2025/07/01/programming-problems-that-seem-easy-but-aren-t-featuring-jon-skeet/</link></item>
+<item><title>Reliability for unreliable LLMs - Stack Overflow Blog</title><link>https://stackoverflow.blog/2025/06/30/reliability-for-unreliable-llms/</link></item>
+<item><title>You’ve got 99 problems but data shouldn’t be one - Stack Overflow Blog</title><link>https://stackoverflow.blog/2025/06/27/you-ve-got-99-problems-but-data-shouldn-t-be-one/</link></item>
+<item><title>Not an option, but a necessity: How organizations are adopting and implementing AI internally - Stack Overflow Blog</title><link>https://stackoverflow.blog/2025/06/25/not-an-option-but-a-necessity-how-organizations-are-adopting-and-implementing-ai-internally/</link></item>
+<item><title>You&amp;#39;ve vibe coded an app. Now what? - Stack Overflow Blog</title><link>https://stackoverflow.blog/2025/06/25/you-ve-vibe-coded-an-app-now-what/</link></item>
+<item><title>How to build your prototypes without a 35% tariff - Stack Overflow Blog</title><link>https://stackoverflow.blog/2025/06/24/how-to-build-your-prototypes-without-a-35-tariff/</link></item>
+<item><title>Defending the realm: Trust and safety at Stack Overflow - Stack Overflow Blog</title><link>https://stackoverflow.blog/2025/06/20/defending-the-realm-trust-and-safety-at-stack-overflow/</link></item>
+<item><title>&amp;quot;My job is going to change in a dramatic way”: Exploring the future of the internet with Cloudflare - Stack Overflow Blog</title><link>https://stackoverflow.blog/2025/06/19/my-job-is-going-to-change-in-a-dramatic-way-exploring-the-future-of-the-internet-with-cloudflare/</link></item>
+<item><title>Learn like a lurker: Gen Z’s digital-first lifestyle and the future of knowledge - Stack Overflow Blog</title><link>https://stackoverflow.blog/2025/06/18/learn-like-a-lurker-gen-z-s-digital-first-lifestyle-and-the-future-of-knowledge/</link></item>
+<item><title>Reinvigorating T Cells Offers Hope for More Effective Cancer Immunotherapy - AZO</title><link>https://www.azolifesciences.com/news/20250708/Reinvigorating-T-Cells-Offers-Hope-for-More-Effective-Cancer-Immunotherapy.aspx</link></item>
+<item><title>Evidence for Neural Stem Cell-Based Therapies in Multiple Sclerosis - AZO</title><link>https://www.azolifesciences.com/news/20250708/Evidence-for-Neural-Stem-Cell-Based-Therapies-in-Multiple-Sclerosis.aspx</link></item>
+<item><title>New Framework for Plant Adaptation and Ecosystem Resilience - AZO</title><link>https://www.azolifesciences.com/news/20250708/New-Framework-for-Plant-Adaptation-and-Ecosystem-Resilience.aspx</link></item>
+<item><title>Genetic Ancestry Tied to Immune Response in Dengue Infection - AZO</title><link>https://www.azolifesciences.com/news/20250701/Genetic-Ancestry-Tied-to-Immune-Response-in-Dengue-Infection.aspx</link></item>
+<item><title>Fidelio Capital Partners with Alphalyse to Accelerate the Global Roll-Out of LC-MS Host Cell Protein Analytics - AZO</title><link>https://www.azolifesciences.com/news/20250702/Fidelio-Capital-Partners-with-Alphalyse-to-Accelerate-the-Global-Roll-Out-of-LC-MS-Host-Cell-Protein-Analytics.aspx</link></item>
+<item><title>The ACQUITY UPLC I-Class PLUS System - AZO</title><link>https://www.azolifesciences.com/equipment/The-ACQUITY-UPLC-I-Class-PLUS-System</link></item>
+<item><title>The Compact Xevo TQ-S Micro Mass Spectrometer - AZO</title><link>https://www.azolifesciences.com/equipment/The-Compact-Xevo-TQ-S-Micro-Mass-Spectrometer</link></item>
+<item><title>Simplified Mass Spectrometry with the Xevo MRT - AZO</title><link>https://www.azolifesciences.com/equipment/Simplified-Mass-Spectrometry-with-the-Xevo-MRT</link></item>
+<item><title>The Xevo G3 QTof Mass Spectrometry System - AZO</title><link>https://www.azolifesciences.com/equipment/The-Xevo-G3-QTof-Mass-Spectrometry-System</link></item>
+<item><title>The Robust Xevo TQ Absolute Mass Spectrometer - AZO</title><link>https://www.azolifesciences.com/equipment/The-Robust-Xevo-TQ-Absolute-Mass-Spectrometer</link></item>
+<item><title>Automated RADIAN ASAP Direct Mass Detection - AZO</title><link>https://www.azolifesciences.com/equipment/Automated-RADIAN-ASAP-Direct-Mass-Detection</link></item>
+<item><title>How Do Genetics and Diet Shape the Human Microbiome? - AZO</title><link>https://www.azolifesciences.com/article/How-Do-Genetics-and-Diet-Shape-the-Human-Microbiome.aspx</link></item>
+<item><title>In Vivo Base Editing Marks New Era in Personalized Genetic Medicine - AZO</title><link>https://www.azolifesciences.com/article/In-Vivo-Base-Editing-Marks-New-Era-in-Personalized-Genetic-Medicine.aspx</link></item>
+<item><title>Engineered for Defence: How Modified Microbes are Becoming the New Biopesticides - AZO</title><link>https://www.azolifesciences.com/article/Engineered-for-Defence-How-Modified-Microbes-are-Becoming-the-New-Biopesticides.aspx</link></item>
+<item><title>Ancient DNA Reveals Origins of Human Pathogens and Zoonotic Diseases - AZO</title><link>https://www.azolifesciences.com/news/20250710/Ancient-DNA-Reveals-Origins-of-Human-Pathogens-and-Zoonotic-Diseases.aspx</link></item>
+<item><title>New Software Boosts Genome Editing Accuracy for Genetic Therapies - AZO</title><link>https://www.azolifesciences.com/news/20250709/New-Software-Boosts-Genome-Editing-Accuracy-for-Genetic-Therapies.aspx</link></item>
+<item><title>New Global Platform Aims to Standardize and Improve Single-Cell Analysis - AZO</title><link>https://www.azolifesciences.com/news/20250708/New-Global-Platform-Aims-to-Standardize-and-Improve-Single-Cell-Analysis.aspx</link></item>
+<item><title>Iowa State Engineers Reinvent Gene Gun for Faster and Safer Crop Editing - AZO</title><link>https://www.azolifesciences.com/news/20250705/Iowa-State-Engineers-Reinvent-Gene-Gun-for-Faster-and-Safer-Crop-Editing.aspx</link></item>
+<item><title>New Multi Omics Database Advances Chrysanthemum Research and Breeding - AZO</title><link>https://www.azolifesciences.com/news/20250704/New-Multi-Omics-Database-Advances-Chrysanthemum-Research-and-Breeding.aspx</link></item>
+<item><title>Jennifer Aniston’s Enduring Style Arrives at Letterman - CelebMafia</title><link>https://celebmafia.com/jennifer-anistons-enduring-style-arrives-at-letterman-4530481/</link></item>
+<item><title>Katy Perry Electrifies Denver with Sci-Fi Spectacle - CelebMafia</title><link>https://celebmafia.com/katy-perry-electrifies-denver-with-sci-fi-spectacle-4530466/</link></item>
+<item><title>Mikey Madison Attends Tiffany &amp; Co. Ginza Opening in Sculptural Colleen Allen - CelebMafia</title><link>https://celebmafia.com/mikey-madison-attends-tiffany-co-ginza-opening-in-sculptural-colleen-allen-4530439/</link></item>
+<item><title>Ashley Roberts Unveils Power-Packed Style for The Sunday Times Style - CelebMafia</title><link>https://celebmafia.com/ashley-roberts-unveils-power-packed-style-for-the-sunday-times-style-4530434/</link></item>
+<item><title>Joey King’s Charmeuse Precision at Wimbledon 2025 – London - CelebMafia</title><link>https://celebmafia.com/joey-kings-charmeuse-precision-at-wimbledon-2025-london-4530417/</link></item>
+<item><title>Jennifer Lawrence Wears Vintage Qi Pao Vest in Tribeca – July 2025 - CelebMafia</title><link>https://celebmafia.com/jennifer-lawrence-wears-vintage-qi-pao-vest-in-tribeca-july-2025-4530402/</link></item>
+<item><title>Lorde and Sadie Sink Champion Broadway’s “John Proctor is the Villain” Cast - CelebMafia</title><link>https://celebmafia.com/lorde-and-sadie-sink-champion-broadways-john-proctor-is-the-villain-cast-4530389/</link></item>
+<item><title>Hayley Atwell Unveils Sharp Stripes at Wimbledon - CelebMafia</title><link>https://celebmafia.com/hayley-atwell-unveils-sharp-stripes-at-wimbledon-4530370/</link></item>
+<item><title>Pixie Lott Serves Up Whimsical Wimbledon Style - CelebMafia</title><link>https://celebmafia.com/pixie-lott-serves-up-whimsical-wimbledon-style-4530355/</link></item>
+<item><title>Delilah Hamlin Debuts Chic Bob on L.A. Stroll - CelebMafia</title><link>https://celebmafia.com/delilah-hamlin-debuts-chic-bob-on-l-a-stroll-4530350/</link></item>
 </channel></rss>
