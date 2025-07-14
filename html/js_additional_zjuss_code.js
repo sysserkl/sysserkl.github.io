@@ -30,8 +30,47 @@ function menu_more_zjuss(){
     '<span class="span_menu" onclick="'+str_t+'surname_zjuss();">当前条件姓氏统计</span>',
     '<span class="span_menu" onclick="'+str_t+'same_name_zjuss();">相同名称的医生</span>',
     '<span class="span_menu" onclick="'+str_t+'same_content_zjuss();">简介相同的医生</span>',
+    '<span class="span_menu" onclick="'+str_t+'email_zjuss();">当前条件邮箱统计</span>',
+
     ];
     return klmenu_b(klmenu1,'🦷','16rem','1rem','1rem','30rem');
+}
+
+function email_zjuss(){
+    var result_t={};
+    for (let arow of js_data_current_common_search_global){
+        var email_list=arow[0][2].match(/([\x00-\xff]+\s*@\s*[\x00-\xff]+)/g) || [];
+        if (email_list.length==0){continue;}
+        email_list=email_list.join(' ').replace(/https?:\/\/[^\s]+/g,' ').match(/([^\s]+\s*@\s*[^\s]+)/g) || [];
+        for (let item of email_list){
+            item=item.replace(/<\/?[^<>]+>/g,'').replace(/^:/,'').replace(/(Tel:|\.)$/,'').replace(/\s+/g,'');
+            var name_host=item.split('@');
+            name_host[1]=name_host[1].toLowerCase();
+            if (result_t['h_'+name_host[1]]==undefined){
+                result_t['h_'+name_host[1]]=new Set();
+            }
+            result_t['h_'+name_host[1]].add(item);
+        }
+    }
+    
+    var blcount=0;
+    for (let key in result_t){
+        result_t[key]=Array.from(result_t[key]);
+        result_t[key].sort();
+        blcount=blcount+result_t[key].length;
+        
+        result_t[key]=['<h4>'+key.slice(2,)+'('+result_t[key].length+')'+'</h4>'+array_2_li_b(result_t[key]),result_t[key].length];
+    }
+    
+    result_t=object2array_b(result_t);
+    result_t.sort();
+    result_t.sort(function (a,b){return a[1]>b[1]?-1:1;});
+    result_t=array_split_by_col_b(result_t,[0]);
+    
+    var blbutton='<p>Total: '+blcount+' '+close_button_b('div_status_common','','aclick')+'</p>';
+    var odiv=document.getElementById('div_status_common');
+    odiv.innerHTML=result_t.join('\n')+blbutton;
+    odiv.scrollIntoView();
 }
 
 function surname_zjuss(){
