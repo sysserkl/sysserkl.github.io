@@ -182,12 +182,14 @@ function wikiuploads_count_notepad(){
     if (!otextarea){return;}
     var blstr=otextarea.value;
     
-    var attach_list=blstr.match(/^.*{{wikiuploads}}.*$/mg) || [];
+    var attach_list=blstr.match(/^(<photo>)?.*{{wikiuploads}}.*$/mg) || [];
     attach_list.sort();
+    
     var attach_str=textarea_with_form_generate_b('textarea_attachment_notepad','','<p>','清空,复制,发送到临时记事本','</p>','','',false,attach_list.join('\n'));
 
     var ext_dict={};
     for (let item of attach_list){
+        item=item.replace(/<\/?photo>/g,'');
         let blext=file_path_name_b(item)[2];
         if (ext_dict['e_'+blext]==undefined){
             ext_dict['e_'+blext]=0;

@@ -80,6 +80,8 @@ function help_gps_points(){
 circle=lon,lat,radius1_radius2,color;lon,lat,radius,color;
 方形：
 rectangle=lon,lat,longlinexshortline_longlinexshortline,color;lon,lat,longlinexshortline,color;
+字符：
+character=lon,lat,radius1_radius2,color,某个字符;lon,lat,radius1_radius2,color,某个字符
 生成点格式1：
 EXIF_DateTimeOriginal:2017:06:30 08:24:03
 GPS_GPSLatitude:37.3628
