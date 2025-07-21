@@ -613,7 +613,7 @@ function point_size_get_leaflet_b(point_type){
     return point_size;
 }
 
-function draw_gpx_lines_simple_leaflet_b(onavigation,omap,cslist,csname,cscolors,textarea_id_for_remove='',dopanto=true,time_list=[],part_len=-1,point_type='',point_size=false){
+function draw_gpx_lines_simple_leaflet_b(onavigation,omap,cslist,csname,cscolors,textarea_id_for_remove='',dopanto=true,time_list=[],part_len=-1,point_type='',point_size=false,csfillcolor='',csfillopacity=0){
     //cslist 须是 lat,lon 格式，形如 [ [ 30.221588, 120.024205 ], [ 30.221542, 120.024116 ] ] - 保留注释
     //---
     if (cslist.length==0){return;}
@@ -642,23 +642,23 @@ function draw_gpx_lines_simple_leaflet_b(onavigation,omap,cslist,csname,cscolors
     
     if (cscolors[1]!==''){
         //lon,lat,radius,color - 保留注释
-        one_point_leaflet_b(onavigation,omap,cslist[0][1],cslist[0][0],point_size,cscolors[1],dopanto,point_type);
+        one_point_leaflet_b(onavigation,omap,cslist[0][1],cslist[0][0],point_size,cscolors[1],dopanto,point_type,csfillcolor,csfillopacity);
     }
     if (cscolors[2]!==''){
-        one_point_leaflet_b(onavigation,omap,cslist[cslist.length-1][1],cslist[cslist.length-1][0],point_size,cscolors[2],dopanto,point_type);
+        one_point_leaflet_b(onavigation,omap,cslist[cslist.length-1][1],cslist[cslist.length-1][0],point_size,cscolors[2],dopanto,point_type,csfillcolor,csfillopacity);
     }
 }
 
-function one_point_leaflet_b(onavigation,omap,lon,lat,csradius,cscolor,dopanto=true,cstype=''){ 
+function one_point_leaflet_b(onavigation,omap,lon,lat,csradius,cscolor,dopanto=true,cstype='',csfillcolor='',csfillopacity=0){ 
     switch (cstype){
         case 'triangle':
-            var odom=triangle_leaflet_b(omap,true,lon,lat,csradius,cscolor,'',0);
+            var odom=triangle_leaflet_b(omap,true,lon,lat,csradius,cscolor,csfillcolor,csfillopacity);
             break;
         case 'rectangle':
-            var odom=rectangle_by_polygon_leaflet_b(omap,true,lon,lat,csradius,cscolor,'',0);
+            var odom=rectangle_by_polygon_leaflet_b(omap,true,lon,lat,csradius,cscolor,csfillcolor,csfillopacity);
             break;
         case '':
-            var odom=circle_leaflet_b(omap,true,lon,lat,csradius,cscolor,'',0);
+            var odom=circle_leaflet_b(omap,true,lon,lat,csradius,cscolor,csfillcolor,csfillopacity);
             break;
         default:
             var odom=character_leaflet_b(cstype,omap,true, lon, lat, csradius,cscolor)
@@ -678,12 +678,13 @@ function rectangle_by_lines_leaflet_b(csomap,islayer=false,cslon=121.5,cslat=31.
     return line_leaflet_b(csomap,islayer,list_t,cscolor,'');
 }
 
-function circle_leaflet_b(csomap,islayer=false,cslon=121.5,cslat=31.2,csradius=10,cscolor='red',csfillcolor='#f03',csfillopacity=0.5){
+function circle_leaflet_b(csomap,islayer=false,cslon=121.5,cslat=31.2,csradius=10,cscolor='red',csfillcolor='#f03',csfillopacity=0.5,is_stroke=true){
     var circle = L.circle([cslat,cslon], {
         color: cscolor,
         fillColor: csfillcolor,
         fillOpacity: csfillopacity,
-        radius: csradius
+        radius: csradius,
+        stroke: is_stroke,
     });
     
     if (islayer){
@@ -868,7 +869,7 @@ function gpx_name_get_leaftlet_b(csstr,csname=''){
     return [blname,bltime];
 }
 
-function gpx_file_draw_leaflet_b(onavigation,omap,csstr,cstype,csname='',cscolors=[],part_len=-1,is_line_no_style=true){
+function gpx_file_draw_leaflet_b(onavigation,omap,csstr,cstype,csname='',cscolors=[],part_len=-1,is_line_no_style=true,csfillcolor='',csfillopacity=0){
     var all_points=[];
     var list_t=csstr.split('<trk>');    //有几条线路就有几个 trk - 保留注释
 
@@ -902,7 +903,7 @@ function gpx_file_draw_leaflet_b(onavigation,omap,csstr,cstype,csname='',cscolor
         cscolors[0]=line_color_list[gpx_line_color_no_global % line_color_list.length];
         gpx_line_color_no_global=gpx_line_color_no_global+1;
         
-        draw_gpx_lines_simple_leaflet_b(onavigation,omap,result_list,blname,cscolors,'',true,bltime,part_len,(is_line_no_style?blxl.toString():''),point_size);  
+        draw_gpx_lines_simple_leaflet_b(onavigation,omap,result_list,blname,cscolors,'',true,bltime,part_len,(is_line_no_style?blxl.toString():''),point_size,csfillcolor,csfillopacity);  
     }
 
     return all_points;

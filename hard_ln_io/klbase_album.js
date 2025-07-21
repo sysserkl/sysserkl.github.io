@@ -458,6 +458,14 @@ function pages_klphotos_b(csno){
 }
 
 function thumbnail_klphotos_b(csno=0){
+    function sub_thumbnail_klphotos_b_week(cstitle){
+        let bldate=(cstitle.match(/^\d{8}/) || [''])[0];
+        if (bldate!==''){
+            cstitle=cstitle.substring(0,8)+'('+day_2_week_b(bldate,'cnbrief')+')'+cstitle.substring(8,);
+        }
+        return cstitle;
+    }
+    
 	current_page_first_img_num_global = csno;
 
 	var bljg='';
@@ -472,14 +480,14 @@ function thumbnail_klphotos_b(csno=0){
 	for (let blxl=csno,lent=photodata_global.length-1;blxl<=lent;blxl++){
 		if (bltitle_tmp=='' || bltitle_tmp!==photodata_global[blxl][1]){
 			bltitle_tmp=photodata_global[blxl][1];
-			if (bltitle_tmp!=''){
+			if (bltitle_tmp!==''){
 				bljg=bljg+'<div class="div_thumb"><table border=0 width=100% height=100%><tr>';
                 bljg=bljg+'<td align=center valign=center class="td_thumb" style="word-break:break-all;word-wrap:break-word;overflow:hidden;';
 				if (bltitle_tmp.length>=30){
 					bljg=bljg+'font-size:0.9rem;';
 				}
 				bljg=bljg+'">';
-				bljg=bljg+bltitle_tmp;
+				bljg=bljg+sub_thumbnail_klphotos_b_week(bltitle_tmp);
 				bljg=bljg+'→</td></tr></table></div>';
 			}
 		}
@@ -502,7 +510,7 @@ function thumbnail_klphotos_b(csno=0){
 	if (csno+pageitems_global<photodata_global.length){
 		bljg=bljg+'<div class="div_thumb"><table border=0 width=100% height=100%><tr><td align=center valign=center class="td_thumb" style="cursor:pointer;" onclick="thumbnail_klphotos_b('+(csno+pageitems_global)+');">';
 		bljg=bljg+'<span style="text-decoration:none;font-size:2rem;"><font color=#707070>下一页<br />→</font></span> ';
-		bljg=bljg+'</td></tr></table></div>';		
+		bljg=bljg+'</td></tr></table></div>';
 	}
 
 	document.getElementById('div_thumb_album_b').innerHTML=bljg;
