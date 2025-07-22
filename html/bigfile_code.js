@@ -18,7 +18,7 @@ function init_bigfile(){
     is_args_checked_bigfile=false;
     
     var buttons_more='<span class="aclick" onclick="local_storage_import_b(\'textarea_temp_txt_share\',true);">import data to localStorage</span>';
-    buttons_more=buttons_more+'<span class="aclick" onclick="update_temp_txt_share_b(\'enwords_temp\',\'textarea_temp_txt_share\');">更新最近记忆单词</span>';
+    buttons_more=buttons_more+'<span class="aclick" onclick="update_temp_txt_share_b(\'enwords_temp\',\'textarea_temp_txt_share\');">更新最近记忆单词</span> ';
     buttons_more=buttons_more+'<span class="span_link" onclick="open_enwords_htm_bigfile();">enwords.htm</span>';
 
     init_temp_txt_share_b(false,'',false,true,buttons_more);

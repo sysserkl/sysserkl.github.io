@@ -681,11 +681,11 @@ async function extract_exif_from_urls(){
 }
 
 function load_image_and_get_exif(url){
-    function load_image_and_get_exif_date(exifDateString){
-        // EXIF日期格式通常为：YYYY:MM:DD HH:mm:ss
-        let parts = exifDateString.split(' ');
-        return parts[0].replace(/:/g, '-');
-    }
+    //function load_image_and_get_exif_date(exifDateString){
+        //// EXIF日期格式通常为：YYYY:MM:DD HH:mm:ss
+        //let parts = exifDateString.split(' ');
+        //return parts[0].replace(/:/g, '-');
+    //}
     
     return new Promise((resolve, reject) => {
         let oimg = new Image();
@@ -710,9 +710,9 @@ function load_image_and_get_exif(url){
 
                     // 获取日期信息
                     let dateTimeOriginal = EXIF.getTag(this, 'DateTimeOriginal') || EXIF.getTag(this, 'CreateDate') || EXIF.getTag(this, 'ModifyDate');
-                    if (dateTimeOriginal){
-                        dateTimeOriginal=load_image_and_get_exif_date(dateTimeOriginal)
-                    }
+                    //if (dateTimeOriginal){
+                    //    dateTimeOriginal=load_image_and_get_exif_date(dateTimeOriginal)
+                    //}
                     coordinates.push(dateTimeOriginal);
                     
                     resolve(coordinates);

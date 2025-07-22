@@ -1652,10 +1652,11 @@ function menu_gps_points(){
     ['转换为WGS84','baidu_data_transform_gps_points(\'BD09_TO_WGS84\');',true],
     ['转换为GCJ02','baidu_data_transform_gps_points(\'BD09_TO_GCJ02\');',true],
     ];    
-    klmenu_dots.push(menu_container_b(str_t,group_list,'百度 经度 纬度,经度 纬度;经度 纬度 格式: '));    
+    klmenu_dots.push(menu_container_b(str_t,group_list,'百度 经度 纬度,经度 纬度;经度 纬度 格式：'));    
     
     klmenu_dots=klmenu_dots.concat([
     '<span class="span_menu" onclick="'+str_t+'lng_lat_gps_points();">经度 纬度,经度 纬度;经度 纬度 格式生成线条</span>',
+    '<span class="span_menu">演示1秒 == 实际 <input type="number" id="input_real_second_gps_points" min="1" value="86400" style="width:5rem;" /> 秒 最长间隔时间（秒）：<input type="number" id="input_max_wait_seconds_gps_points" min="1" value="5" style="width:3rem;" /> <span class="aclick" onclick="'+blparent+'ppt_gps_points();">动态演示</span></span>',    
     ]);
     
     group_list=[
@@ -1733,12 +1734,16 @@ function menu_gps_points(){
     
     klmenu_config=klmenu_config.concat(root_font_size_menu_b(str_t,false,true,false,true,'textarea_gps_points'));
         
-    document.getElementById('input_upload_gpx').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_gpx,'⛰','22rem','1rem','1rem','60rem')+klmenu_b(klmenu_dots,'','34rem','1rem','1rem','60rem')+klmenu_b(klmenu_district,'📍','24rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','36rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('input_upload_gpx').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_gpx,'⛰','22rem','1rem','1rem','60rem')+klmenu_b(klmenu_dots,'','39rem','1rem','1rem','60rem')+klmenu_b(klmenu_district,'📍','24rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','36rem','1rem','1rem','60rem'),'','0rem')+' ');
     
     klmenu_check_b('span_line_no_gps',true);        
 
     line_default_weight_b();
     document.getElementById('input_line_weight_gps_points').value=gpx_line_weight_global;
+}
+
+function ppt_gps_points(){
+
 }
 
 function import_bigfile_gps_points(fname=false){
