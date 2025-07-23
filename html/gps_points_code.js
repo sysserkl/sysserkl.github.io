@@ -452,7 +452,7 @@ function dot_property_get_gps_points(item,cscolor,dotransform,transform_type){
     return [onecircle,radius_list,cscolor,lon,lat];
 }
 
-function character_gps_points(csstr,dotransform=true,layertype='navigation',dopanto=true,old_title=false){
+function character_gps_points(csstr,dotransform=true,layertype='navigation',dopanto=true,old_title=false,transform_type=false){
     //格式：lon,lat,radius,color,character;lon,lat,radius,color; - 保留注释
     function sub_character_gps_points_one_row(){
         if (blxl>=bllen){
@@ -462,7 +462,7 @@ function character_gps_points(csstr,dotransform=true,layertype='navigation',dopa
         }
         
         var item=list_t[blxl];
-        [onecharacter,radius_list,blcolor,head_lon,head_lat]=dot_property_get_gps_points(item,blcolor,dotransform,bltype);
+        [onecharacter,radius_list,blcolor,head_lon,head_lat]=dot_property_get_gps_points(item,blcolor,dotransform,transform_type);
         if (onecharacter===false){
             blxl=blxl+1;
             sub_character_gps_points_one_row();
@@ -509,7 +509,9 @@ function character_gps_points(csstr,dotransform=true,layertype='navigation',dopa
     
     var onecharacter,radius_list,head_lon,head_lat;
     var blcolor='red';
-    var bltype=document.getElementById('select_transform').value;    
+    if (transform_type===false){
+        transform_type=document.getElementById('select_transform').value;    
+    }
     var blxl=0;
     var bllen=list_t.length;
     if (old_title===false){
@@ -518,7 +520,7 @@ function character_gps_points(csstr,dotransform=true,layertype='navigation',dopa
     sub_character_gps_points_one_row();
 }
 
-function circle_gps_points(csstr,dotransform=true,layertype='navigation',dopanto=true,old_title=false){
+function circle_gps_points(csstr,dotransform=true,layertype='navigation',dopanto=true,old_title=false,transform_type=false,fill_opacity=-1,is_stroke=-1){
     //格式：lon,lat,radius,color;lon,lat,radius,color; - 保留注释
     function sub_circle_gps_points_one_row(){
         if (blxl>=bllen){
@@ -528,7 +530,7 @@ function circle_gps_points(csstr,dotransform=true,layertype='navigation',dopanto
         }
         
         var item=list_t[blxl];
-        [onecircle,radius_list,blcolor,head_lon,head_lat]=dot_property_get_gps_points(item,blcolor,dotransform,bltype);
+        [onecircle,radius_list,blcolor,head_lon,head_lat]=dot_property_get_gps_points(item,blcolor,dotransform,transform_type);
         if (onecircle===false){
             blxl=blxl+1;
             sub_circle_gps_points_one_row();
@@ -569,14 +571,20 @@ function circle_gps_points(csstr,dotransform=true,layertype='navigation',dopanto
     
     var onecircle,radius_list,head_lon,head_lat;
     var blcolor='red';
-    var bltype=document.getElementById('select_transform').value;    
+    if (transform_type===false){
+        transform_type=document.getElementById('select_transform').value;    
+    }
     var blxl=0;
     var bllen=list_t.length;
     if (old_title===false){
         old_title=document.title;
     }
-    var fill_opacity=parseFloat(document.getElementById('input_fill_opacity_gps_points').value.trim());
-    var is_stroke=document.getElementById('checkbox_stroke_line_border_gps_points').checked;
+    if (fill_opacity===-1){
+        fill_opacity=parseFloat(document.getElementById('input_fill_opacity_gps_points').value.trim());
+    }
+    if (is_stroke===-1){
+        is_stroke=document.getElementById('checkbox_stroke_line_border_gps_points').checked;
+    }
     sub_circle_gps_points_one_row();
 }
 
@@ -1743,7 +1751,74 @@ function menu_gps_points(){
 }
 
 function ppt_gps_points(){
+    function sub_ppt_gps_points_one_point(){
+        let arow=result_t[blno];
+        if (performance.now() - t0>1000){
+            var dopanto=true;
+            t0=performance.now();
+        } else {
+            var dopanto=false;
+        }
+        circle_gps_points([arow[2]+','+arow[1]+',10,red'],true,'navigation',dopanto,false,transform_type,fill_opacity,is_stroke);
+        character_gps_points([arow[2]+','+arow[1]+',20,blue,'+arow[0].substring(3,4)],true,'navigation',false,false,transform_type);
+        
+        blno=blno+1;
 
+        if (blno>=row_count){
+            document.title=old_title;
+            return;
+        }
+        
+        console.log(blno,'等待',result_t[blno][4],'秒',dopanto);
+        setTimeout(sub_ppt_gps_points_one_point,result_t[blno][4]*1000);
+    }
+    
+    var list_t=document.getElementById('textarea_gps_points').value.trim().split('\n');
+    var result_t=[];
+    for (let arow of list_t){
+        arow=arow.trim().split(' /// '); //形如：2025/20250714NUC散热.jpg /// 28.674675 /// 121.431758 /// 2025:07:14 22:19:09 - 保留注释
+        if (arow.length!==4){continue;}
+        arow[3]=arow[3].trim().split(' ');
+        if (arow[3].length!==2){continue;}
+        arow[3][0]=arow[3][0].replace(/\:/g,'-');
+        let img_date=validdate_b(arow[3].join(' '));
+        if (img_date===false){
+            console.log('日期错误',arow);
+            continue;
+        } else {
+            arow[3]=img_date;
+        }
+        arow[1]=parseFloat(arow[1].trim());
+        arow[2]=parseFloat(arow[2].trim());
+        if (isNaN(arow[1]) || isNaN(arow[2])){
+            console.log('经纬度错误',arow);
+            continue;
+        }
+        arow[0]=file_path_name_b(arow[0])[1];
+        arow.push(0);
+        result_t.push(arow);
+    }
+    
+    if (result_t.length==0){return;}
+    result_t.sort();
+    result_t.sort(function (a,b){return a[3]<b[3]?-1:1;});
+    
+    var ratio=Math.max(1,parseInt(document.getElementById('input_real_second_gps_points').value.trim()));
+    var wait_max=parseInt(document.getElementById('input_max_wait_seconds_gps_points').value.trim());
+
+    for (let blxl=1,lent=result_t.length;blxl<lent;blxl++){
+        result_t[blxl][4]=Math.min(wait_max,(result_t[blxl][3]-result_t[blxl-1][3])/1000/ratio);   //演示间隔秒数
+    }
+    
+    var transform_type=document.getElementById('select_transform').value;    
+    var fill_opacity=parseFloat(document.getElementById('input_fill_opacity_gps_points').value.trim());
+    var is_stroke=document.getElementById('checkbox_stroke_line_border_gps_points').checked;
+    
+    var blno=0;
+    var row_count=result_t.length;
+    var old_title=document.title;
+    var t0 = performance.now();
+    sub_ppt_gps_points_one_point();
 }
 
 function import_bigfile_gps_points(fname=false){
@@ -1792,7 +1867,6 @@ function arg_from_textarea_gps_points(){
     if (character_list.length>0){
         character_gps_points(character_list,true,'navigation',true,old_title);
     }
-    
 }
 
 function map_resize_gps_points(window_h=false,is_simple=false,map_resize=false,set_selection=false){

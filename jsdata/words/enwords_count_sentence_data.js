@@ -1843,6 +1843,7 @@ var en_sentence_count_global=[
 "mansplain",
 "many-headed",
 "mapmaker",
+"margarita",
 "mariticide",
 "marketer",
 "markswoman",
