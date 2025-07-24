@@ -1664,7 +1664,7 @@ function menu_gps_points(){
     
     klmenu_dots=klmenu_dots.concat([
     '<span class="span_menu" onclick="'+str_t+'lng_lat_gps_points();">经度 纬度,经度 纬度;经度 纬度 格式生成线条</span>',
-    '<span class="span_menu">演示1秒 == 实际 <input type="number" id="input_real_second_gps_points" min="1" value="86400" style="width:5rem;" /> 秒 最长间隔时间（秒）：<input type="number" id="input_max_wait_seconds_gps_points" min="1" value="5" style="width:3rem;" /> <span class="aclick" onclick="'+blparent+'ppt_gps_points();">动态演示</span></span>',    
+    '<span class="span_menu">演示1秒 == 实际 <input type="number" id="input_real_second_gps_points" min="1" value="86400" style="width:5rem;" /> 秒 最长间隔时间（秒）：<input type="number" id="input_max_wait_seconds_gps_points" min="0.01" value="0.5" style="width:4rem;" /><br /><label><input type="checkbox" id="checkbox_ppt_circle_gps_points" checked />circle</label> 半径：<input type="number" id="input_ppt_circle_radius_gps_points" min="1" value="10" style="width:3rem;" /> <label><input type="checkbox" id="checkbox_ppt_character_gps_points" checked />character</label> 半径：<input type="number" id="input_ppt_character_radius_gps_points" min="1" value="20" style="width:3rem;" /> <select id="select_ppt_color_gps_points"><option></option><option>年</option><option>月</option></select> 缩放范围：<input type="text" id="input_ppt_scale_range_gps_points" value="12-15" style="width:7rem;" /> <span class="aclick" onclick="'+blparent+'ppt_gps_points();">动态演示</span></span>',
     ]);
     
     group_list=[
@@ -1752,25 +1752,79 @@ function menu_gps_points(){
 
 function ppt_gps_points(){
     function sub_ppt_gps_points_one_point(){
+        let dopanto;
         let arow=result_t[blno];
-        if (performance.now() - t0>1000){
-            var dopanto=true;
-            t0=performance.now();
-        } else {
-            var dopanto=false;
+
+        let img_name=arow[0].replace(/\d+$/,'');
+        let img_year=arow[3].getFullYear();
+        let img_month=arow[3].getMonth();
+        if (current_year===false){
+            current_year=img_year;
         }
-        circle_gps_points([arow[2]+','+arow[1]+',10,red'],true,'navigation',dopanto,false,transform_type,fill_opacity,is_stroke);
-        character_gps_points([arow[2]+','+arow[1]+',20,blue,'+arow[0].substring(3,4)],true,'navigation',false,false,transform_type);
+        if (current_month===false){
+            current_month=img_month;
+        }
+        
+        let do_color_change=false;
+        if (color_type=='年' && current_year!==img_year){
+            do_color_change=true;
+            current_year=img_year;
+        } else if (color_type=='月' && (current_year!==img_year || current_month!==img_month)){
+            do_color_change=true;
+            current_year=img_year;
+            current_month=img_month;
+        }
+        
+        if (do_color_change){
+            color_no=color_no+1;
+            if (color_no>=color_count){
+                color_no=0;
+            }
+        }
+        
+        if (performance.now() - session0_start>wait_max*1000 || blno==row_count-1){
+            dopanto=true;
+            session0_start=performance.now();
+        } else {
+            dopanto=false;
+        }
+        
+        if (show_circle){
+            circle_gps_points([arow[2]+','+arow[1]+','+circle_radius+','+color_list[color_no]],true,'navigation',dopanto,false,transform_type,fill_opacity,is_stroke);
+            dopanto=false;
+        }
+        if (show_character){
+            character_gps_points([arow[2]+','+arow[1]+','+character_radius+','+color_list[color_no]+','+arow[0].substring(3,4)],true,'navigation',dopanto,false,transform_type);
+        }
         
         blno=blno+1;
+        document.title=blno+'/'+row_count+' - '+img_name+' - '+old_title;
 
         if (blno>=row_count){
             document.title=old_title;
+            console.log('ppt_gps_points() 费时：'+(performance.now() - t0)/1000 + ' seconds');    
             return;
         }
         
-        console.log(blno,'等待',result_t[blno][4],'秒',dopanto);
+        console.log(blno,'等待',result_t[blno][4],'秒',dopanto,arow);
         setTimeout(sub_ppt_gps_points_one_point,result_t[blno][4]*1000);
+    }
+    
+    var t0 = performance.now();
+
+    var show_circle=document.getElementById('checkbox_ppt_circle_gps_points').checked;
+    var show_character=document.getElementById('checkbox_ppt_character_gps_points').checked;
+    if (!show_circle && !show_character){return;}
+    
+    var circle_radius=parseInt(document.getElementById('input_ppt_circle_radius_gps_points').value.trim());
+    var character_radius=parseInt(document.getElementById('input_ppt_character_radius_gps_points').value.trim());
+    
+    var scale_range=document.getElementById('input_ppt_scale_range_gps_points').value.trim().split('-');
+    scale_range[0]=Math.max(5,parseInt(scale_range[0]));
+    if (scale_range.length==1){
+        scale_range.push(scale_range[0]);
+    } else {
+        scale_range[1]=Math.max(5,parseInt(scale_range[1]));
     }
     
     var list_t=document.getElementById('textarea_gps_points').value.trim().split('\n');
@@ -1804,8 +1858,13 @@ function ppt_gps_points(){
     result_t.sort(function (a,b){return a[3]<b[3]?-1:1;});
     
     var ratio=Math.max(1,parseInt(document.getElementById('input_real_second_gps_points').value.trim()));
-    var wait_max=parseInt(document.getElementById('input_max_wait_seconds_gps_points').value.trim());
-
+    var wait_max=parseFloat(document.getElementById('input_max_wait_seconds_gps_points').value.trim());
+    
+    var color_list=colors_get_gps_points(false)[0].split(':');
+    var color_count=color_list.length;
+    var color_no=0;
+    var color_type=document.getElementById('select_ppt_color_gps_points').value;
+    
     for (let blxl=1,lent=result_t.length;blxl<lent;blxl++){
         result_t[blxl][4]=Math.min(wait_max,(result_t[blxl][3]-result_t[blxl-1][3])/1000/ratio);   //演示间隔秒数
     }
@@ -1817,7 +1876,10 @@ function ppt_gps_points(){
     var blno=0;
     var row_count=result_t.length;
     var old_title=document.title;
-    var t0 = performance.now();
+    var current_year=false;
+    var current_month=false;
+    var session0_start = performance.now();
+    var session1_start = performance.now();
     sub_ppt_gps_points_one_point();
 }
 

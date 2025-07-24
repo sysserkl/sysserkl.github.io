@@ -34,12 +34,16 @@ function disk_category_offline_file_browser(csxl=0){
 		if (blfound==-1){break;}
         if (blfilter=='' || blfound){
             var bltype=item[1].split(/\-?\d+/)[0];
-            bltype='tr_'+item[0]+'_'+item[2]+'_'+bltype;
+            var disk2=[item[0],item[2]];
+            disk2.sort();
+            bltype='tr_'+disk2.join('_')+'_'+bltype;
             class_set.add(bltype);
             bljg=bljg+'<tr class="'+bltype+'"><td>'+item[0]+'</td><td>'+item[1]+'</td><td>'+item[2]+'</td><td>'+item[3]+'</td></tr>';
         }
     }
     document.getElementById('table_disk_category').innerHTML=bljg;
+    
+    //class_set 形如："tr_S2_S4_save", "tr_S2_S3_待整理", ​​"tr_S2_S5_待整理", ​​"tr_S2_S4_待看" - 保留注释
     
     for (let one_class of class_set){
         var otrs=document.querySelectorAll('tr.'+one_class);
@@ -755,6 +759,7 @@ function diff_all_offline_file_browser(){
         }
     }
     category_list.sort();
+    //category_list 形如：[ "save-33-b/", "待整理-01-a/", "待整理-01-b/" ] - 保留注释
     //获取成对的目录名 - 保留注释
     var list_t=[];
     for (let item of category_list){
@@ -780,6 +785,8 @@ function diff_all_offline_file_browser(){
         [list_diff1,list_diff2,diskname1,diskname2]=diff_offline_file_browser(list_t[blxl],list_t[blxl+1],false);
         
         disk_category_list_global.push([diskname1,list_t[blxl],diskname2,list_t[blxl+1]]);
+        //元素形如：[ "S3", "待看014副本/", ​​"S4", ​​"待看014/" ] - 保留注释
+        
         if (list_diff1.length==0 && list_diff2.length==0){continue;}
         
         if (list_diff1.length>0){

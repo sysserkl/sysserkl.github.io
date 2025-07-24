@@ -8,294 +8,145 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Wed, 23 Jul 2025 11:53:27 +0800</lastBuildDate>
-<item><title>Pet Medications - WebMD</title><link>https://www.webmd.com/pets/pet-meds</link></item>
-<item><title>Myasthenia Gravis - WebMD</title><link>https://blogs.webmd.com/myasthenia-gravis/default.htm</link></item>
-<item><title>Krystel El Koussa - WebMD</title><link>https://blogs.webmd.com/myasthenia-gravis/krystel-el-koussa</link></item>
-<item><title>Type 2 Diabetes - WebMD</title><link>https://blogs.webmd.com/diabetes/default.htm</link></item>
-<item><title>Serena Valentine - WebMD</title><link>https://blogs.webmd.com/diabetes/serena-valentine</link></item>
-<item><title>Letting Go of the Guilt - WebMD</title><link>https://blogs.webmd.com/diabetes/20250722/letting-go-of-the-guilt</link></item>
-<item><title>Elizabeth Ward, RD, MS - WebMD</title><link>https://blogs.webmd.com/digestive-health/elizabeth-ward-ms-rdn-2</link></item>
-<item><title>Prediabetes and Your Gut Health - WebMD</title><link>https://blogs.webmd.com/digestive-health/20250721/prediabetes-and-your-gut-health</link></item>
-<item><title>Sunlight and Your Skin: Finding the Balance Between Health and Harm - WebMD</title><link>https://blogs.webmd.com/skin-care/20250721/sunlight-and-your-skin-finding-the-balance-between-health-and-harm</link></item>
-<item><title>Market Research - WebMD</title><link>https://www.webmd.com/cm/marketresearch</link></item>
-<item><title>The Most Expensive Chicken Costs About $6K Per Bird - HowStuffWorks</title><link>https://animals.howstuffworks.com/birds/most-expensive-chicken.htm</link></item>
-<item><title>How to Discipline a Cat Without Eliciting Its Scorn - HowStuffWorks</title><link>https://animals.howstuffworks.com/pets/how-to-discipline-a-cat.htm</link></item>
-<item><title>Swai vs. Catfish: One Is Much Better for You (and for the Planet) - HowStuffWorks</title><link>https://animals.howstuffworks.com/fish/swai-vs-catfish.htm</link></item>
-<item><title>LaPerm Cat Breed History and Quirks - HowStuffWorks</title><link>https://animals.howstuffworks.com/pets/laperm-cat.htm</link></item>
-<item><title>Caribou vs. Elk: Comparing Completely Different Deer Species - HowStuffWorks</title><link>https://animals.howstuffworks.com/mammals/caribou-vs-elk.htm</link></item>
-<item><title>Medieval Murder Maps - FlowingData</title><link>https://flowingdata.com/2025/07/22/medieval-murder-maps/</link></item>
-<item><title>Down with measurements - FlowingData</title><link>https://flowingdata.com/2025/07/22/down-with-measurements/</link></item>
-<item><title>Errant data led to errant prosecution of British postal workers - FlowingData</title><link>https://flowingdata.com/2025/07/22/errant-data-led-to-errant-prosecution-of-british-postal-workers/</link></item>
-<item><title>Of Course Adam Sandler Already Owns Nike’s Most Anticipated Basketball Shoes - GQ</title><link>https://www.gq.com/story/adam-sandler-nike-sabrina-3</link></item>
-<item><title>Are These Tyler, The Creator’s Best Beats Yet? - GQ</title><link>https://www.gq.com/story/are-these-tyler-the-creators-best-beats-yet</link></item>
-<item><title>15 Essential Ozzy Osbourne Songs - GQ</title><link>https://www.gq.com/story/15-essential-ozzy-osbourne-songs</link></item>
-<item><title>Is Pedro Pascal’s Tom Ford Suit Hinting He’s the Next Indiana Jones? - GQ</title><link>https://www.gq.com/story/pedro-pascal-indiana-jones-tom-ford-fantastic-four-press-style</link></item>
-<item><title>The Best Beauty Products for Men to Put Your Best Face Forward - GQ</title><link>https://www.gq.com/story/best-beauty-products-for-men</link></item>
-<item><title>The Best Protein Powder for Building Muscle in 2025 - GQ</title><link>https://www.gq.com/story/best-protein-powder-muscle-gain</link></item>
-<item><title>I Bought an 18-Pound Mystery Box of Watches From Goodwill—Here’s What Was Inside - GQ</title><link>https://www.gq.com/story/goodwill-watches-18-pounds-box-papers-7-18-25#intcid=_gq-verso-hp-trending_f093ebca-5374-47f7-92c7-0e314855a8af_popular4-2</link></item>
-<item><title>Why a Rowing Machine Session Benefits You More Than Other Common Forms of Cardio - GQ</title><link>https://www.gq.com/story/rowing-machine-benefits-cardio#intcid=_gq-verso-hp-trending_f093ebca-5374-47f7-92c7-0e314855a8af_popular4-2</link></item>
-<item><title>The WNBA All-Star Game Was the Most Fun Professional Sports Has Had in a Long Time - GQ</title><link>https://www.gq.com/story/wnba-all-star-game-2025#intcid=_gq-verso-hp-trending_f093ebca-5374-47f7-92c7-0e314855a8af_popular4-2</link></item>
-<item><title>Tyler, the Creator’s New Look Is a Blast from Hip-Hop’s Past - GQ</title><link>https://www.gq.com/story/tyler-the-creator-stop-playing-with-me-style-cazal</link></item>
-<item><title>The Biggest Sneaker Trends of 2025 - GQ</title><link>https://www.gq.com/story/sneaker-trends-2025</link></item>
-<item><title>An Easy Morning Stretch Routine to Replace Your Doomscrolling - GQ</title><link>https://www.gq.com/story/morning-stretch-routine-easy-quick</link></item>
-<item><title>The Real-Life Diet of Brooklyn Peltz Beckham, Who Can’t Remember the Last Time He Took a Warm Shower - GQ</title><link>https://www.gq.com/story/brooklyn-peltz-beckham-diet-exercise-routine</link></item>
-<item><title>What Does Your Favorite Horror Movie Smell Like? It’s This Guy’s Job to Decide - GQ</title><link>https://www.gq.com/story/horror-movie-fragrance-jaws-american-psycho-xyrena</link></item>
-<item><title>Abercrombie’s Knit Polo Shirts Have No Business Being This Good - GQ</title><link>https://www.gq.com/story/abercrombie-and-fitch-knit-polo-shirts-ss-2025</link></item>
-<item><title>The Huckberry Summer Sale Has a Mountain of Menswear Deals - GQ</title><link>https://www.gq.com/story/best-of-huckberry-sale</link></item>
-<item><title>GQ Staffers Pick the Defining Shorts of Summer 2025 - GQ</title><link>https://www.gq.com/story/summer-shorts-editor-picks-2025</link></item>
-<item><title>The Best Lounge Shorts Are Always a Great Hang - GQ</title><link>https://www.gq.com/story/best-mens-lounge-shorts</link></item>
-<item><title>The Best White Jeans Are Just a Little Bit Cooler - GQ</title><link>https://www.gq.com/story/white-jeans-for-men</link></item>
-<item><title>The Best Hiking Shorts Are Land Rovers for Your Legs - GQ</title><link>https://www.gq.com/story/best-mens-hiking-shorts</link></item>
-<item><title>24 Warby Parker Glasses That Will Sharpen Up Your Vision and Your Fits - GQ</title><link>https://www.gq.com/story/best-warby-parker-glasses</link></item>
-<item><title>I Wore This $80 Polo for a Week Straight. Here&amp;#39;s Why I Can&amp;#39;t Take It Off - GQ</title><link>https://www.gq.com/story/i-wore-jcrew-polo-for-a-week-fit-check</link></item>
-<item><title>HBO&amp;#39;s Big Beautiful Billy Joel Documentary Delivers Maximum Piano Man Per Minute - GQ</title><link>https://www.gq.com/story/hbos-big-beautiful-billy-joel-documentary</link></item>
-<item><title>The Must Read - GQ</title><link>https://www.gq.com/about/the-must-read</link></item>
-<item><title>How Justin Bieber Harnessed Cash Cobain’s Swag for His New Album - GQ</title><link>https://www.gq.com/story/justin-bieber-cash-cobain</link></item>
-<item><title>How Elon Musk Changed Mexico’s Most Famous Nude Beach - GQ</title><link>https://www.gq.com/story/how-elon-musk-changed-mexicos-most-famous-nude-beach</link></item>
-<item><title>WNBA All-Star Weekend Is What It Looks Like When a Sports League Is Unapologetically Itself - GQ</title><link>https://www.gq.com/story/wnba-all-star-weekend-2025-report</link></item>
-<item><title>How Pete Crow-Armstrong Became the Fullest Version of Himself—and the Best Center Fielder in the World - GQ</title><link>https://www.gq.com/story/pete-crow-armstrong-all-star-interview</link></item>
-<item><title>Baseball’s Best Home Run Hitter Is a Guy Named Big Dumper - GQ</title><link>https://www.gq.com/story/big-dumper-cal-raleigh-interview</link></item>
-<item><title>David Beckham Got a One-of-One Tudor Watch for His 50th Birthday - GQ</title><link>https://www.gq.com/story/david-beckham-50th-birthday-tudor-watch-wimbledon</link></item>
-<item><title>Tudor’s Sporty New Chronograph Is a Tour de France Jersey for Your Wrist - GQ</title><link>https://www.gq.com/story/tudor-pelagos-fxd-chronos-yellow</link></item>
-<item><title>The Best Watches at the 2025 NBA Draft, From Cooper Flagg’s Blinged-Out Hublot to VJ Edgecombe’s Classic Rolex - GQ</title><link>https://www.gq.com/story/nba-draft-2025-best-watches</link></item>
-<item><title>LeBron James Just Debuted His Own Richard Mille Watch Collab - GQ</title><link>https://www.gq.com/story/lebron-james-richard-mille-collaboration</link></item>
-<item><title>China warns citizens to beware backdoored devices, on land and under the sea - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/23/china_backdoor_alerts/</link></item>
-<item><title>OpenAI sweet-talks Oracle into another 4.5GW worth of Stargate datacenters, assuming the check clears - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/22/openai_oracle_gpus/</link></item>
-<item><title>One in six US workers pretends to use AI to please the bosses - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/22/ai_anxiety_us_workers/</link></item>
-<item><title>Biden broadband benchmarks are BS, says Trump FCC - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/22/biden_broadband_benchmarks_are_bs/</link></item>
-<item><title>Funding for program to stop next Stuxnet from hitting US expired Sunday - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/22/lapsed_cisa_funding_cybersentry/</link></item>
-<item><title>Google AI Overviews are killing the web, Pew study shows (again) - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/22/google_ai_overviews_suppress_search/</link></item>
-<item><title>Biggest chunk of Mars on Earth sells for $5.3M at auction, cheaper than NASA&amp;#39;s sample return mission - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/22/mars_rock_auction/</link></item>
-<item><title>How to get rid of useless keys in Windows and turn them into something helpful - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/22/useless_keys_windows/</link></item>
-<item><title>How AI chip upstart FuriosaAI won over LG with its power-sipping design - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/22/sk_furiosa_ai_lg/</link></item>
-<item><title>Struggling to sell EVs, Tesla pivots to slinging burgers - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/22/tesla_fast_food/</link></item>
-<item><title>Arch Linux users told to purge Firefox forks after AUR malware scare - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/22/arch_aur_browsers_compromised/</link></item>
-<item><title>GitHub command palette wins stay of execution after dev pushback - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/22/github_command_palette_backtrack/</link></item>
-<item><title>Surprise, surprise: Chinese spies, IP stealers, other miscreants attacking Microsoft SharePoint servers - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/22/chinese_groups_attacking_microsoft_sharepoint/</link></item>
-<item><title>Silicon Valley engineer admits theft of US missile tech secrets - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/22/engineer_admits_trade_theft/</link></item>
-<item><title>Humans can be tracked with unique &amp;#39;fingerprint&amp;#39; based on how their bodies block Wi-Fi signals - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/22/whofi_wifi_identifier/</link></item>
-<item><title>UK government swoons over OpenAI in legally meaningless love-in - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/22/openai_to_help_fix_nhs/</link></item>
-<item><title>Microsoft patches critical SharePoint 2016 zero-days amid active exploits - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/22/microsoft_sharepoint_2016_patch/</link></item>
-<item><title>The real reason why Trump is killing the Mauna Loa observatory in Hawai&amp;#39;i - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/22/trump_shoots_climate_messenger/</link></item>
-<item><title>Mike Lynch estate owes HPE $943M over Autonomy fallout - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/22/mike_lynch_hpe_damages/</link></item>
-<item><title>NASA Goddard Center Director quits as agency staffers issue dissent letter - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/22/nasa_goddard_resignation/</link></item>
-<item><title>UK to ban ransomware payments by public sector organizations - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/22/uk_to_ban_ransomware_payments/</link></item>
-<item><title>UK Post Office names public inquiry as risk to £410 million Horizon replacement project - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/22/uk_post_office_names_public/</link></item>
-<item><title>Open source&amp;#39;s superior security is a matter of eyeballs: Be kind to the brains behind them - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/22/open_source_windows_security_opinion_column/</link></item>
-<item><title>Brit watchdog says public service TV must &amp;#39;urgently&amp;#39; join Team YouTube - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/22/ofcom_psb_youtube/</link></item>
-<item><title>Science confirms what we all suspected: Four-day weeks rule - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/22/4_day_week_study/</link></item>
-<item><title>Customers fret about downtime with hyperscalers&amp;#39; PostgreSQL services - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/22/postgresql_hyperscalers_gartner/</link></item>
-<item><title>Replit makes vibe-y promise to stop its AI agents making vibe coding disasters - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/22/replit_saastr_response/</link></item>
-<item><title>NASA hacked hardware of camera orbiting Jupiter – and fixed it - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/22/nasa_juno_annealing_camera_fix/</link></item>
-<item><title>The Pentagon’s Golden Dome program office is hiring - Defense News</title><link>https://www.defensenews.com/pentagon/2025/07/22/the-pentagons-golden-dome-program-office-is-hiring/</link></item>
-<item><title>Air Force says B-52 crew wasn’t told of passenger jet before near-miss - Defense News</title><link>https://www.defensenews.com/air/2025/07/22/air-force-says-b-52-crew-wasnt-told-of-passenger-jet-before-near-miss/</link></item>
-<item><title>Air Force experiments with using AI to seek combat targets - Defense News</title><link>https://www.defensenews.com/air/2025/07/22/air-force-experiments-with-using-ai-to-seek-combat-targets/</link></item>
-<item><title>US Army drops into Australia for massive war games - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2025/07/22/us-army-drops-into-australia-for-massive-war-games/</link></item>
-<item><title>Romania, Poland take different tacks on buying new combat vehicles - Defense News</title><link>https://www.defensenews.com/global/europe/2025/07/22/romania-poland-take-different-tacks-on-buying-new-combat-vehicles/</link></item>
-<item><title>独家专访｜王尧：每个时代都有难题，知识分子既清醒也困惑 - 澎湃</title><link>https://www.thepaper.cn/newsDetail_forward_31238416</link></item>
-<item><title>COVID Pandemic Aged Brains By an Average of 5.5 Months, Study Finds - Slashdot</title><link>https://science.slashdot.org/story/25/07/22/214228/covid-pandemic-aged-brains-by-an-average-of-55-months-study-finds</link></item>
-<item><title>The Escobar Phone Scam Saga Has Finally Come To an End - Slashdot</title><link>https://yro.slashdot.org/story/25/07/22/2245236/the-escobar-phone-scam-saga-has-finally-come-to-an-end</link></item>
-<item><title>Humans Can Be Tracked With Unique &amp;#39;Fingerprint&amp;#39; Based On How Their Bodies Block Wi-Fi Signals - Slashdot</title><link>https://mobile.slashdot.org/story/25/07/22/2112203/humans-can-be-tracked-with-unique-fingerprint-based-on-how-their-bodies-block-wi-fi-signals</link></item>
-<item><title>Amazon Buys Bee AI Wearable That Listens To Everything You Say - Slashdot</title><link>https://slashdot.org/story/25/07/22/2116255/amazon-buys-bee-ai-wearable-that-listens-to-everything-you-say</link></item>
-<item><title>Nvidia&amp;#39;s CUDA Platform Now Support RISC-V - Slashdot</title><link>https://hardware.slashdot.org/story/25/07/22/2042234/nvidias-cuda-platform-now-support-risc-v</link></item>
-<item><title>Brave Browser Blocks Microsoft Recall By Default - Slashdot</title><link>https://yro.slashdot.org/story/25/07/22/2033221/brave-browser-blocks-microsoft-recall-by-default</link></item>
-<item><title>Science Confirms What We All Suspected: Four-Day Weeks Rule - Slashdot</title><link>https://slashdot.org/story/25/07/22/2027203/science-confirms-what-we-all-suspected-four-day-weeks-rule</link></item>
-<item><title>Apple Set To Stave Off Daily Fines, EU To Accept App Store Changes - Slashdot</title><link>https://apple.slashdot.org/story/25/07/22/2016222/apple-set-to-stave-off-daily-fines-eu-to-accept-app-store-changes</link></item>
-<item><title>California Won&amp;#39;t Force ISPs To Offer $15 Broadband - Slashdot</title><link>https://yro.slashdot.org/story/25/07/22/2013209/california-wont-force-isps-to-offer-15-broadband</link></item>
-<item><title>Surge CEO Says &amp;#39;100x Engineers&amp;#39; Are Here - Slashdot</title><link>https://developers.slashdot.org/story/25/07/22/190242/surge-ceo-says-100x-engineers-are-here</link></item>
-<item><title>Microsoft Poaches Top Google DeepMind Staff in AI Talent War - Slashdot</title><link>https://slashdot.org/story/25/07/22/1727252/microsoft-poaches-top-google-deepmind-staff-in-ai-talent-war</link></item>
-<item><title>Google Users Are Less Likely To Click on Links When an AI Summary Appears in the Results, Pew Research Finds - Slashdot</title><link>https://tech.slashdot.org/story/25/07/22/1629240/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results-pew-research-finds</link></item>
-<item><title>Many Lung Cancers Are Now in Nonsmokers. Scientists Want to Know Why. - Slashdot</title><link>https://science.slashdot.org/story/25/07/22/163219/many-lung-cancers-are-now-in-nonsmokers-scientists-want-to-know-why</link></item>
-<item><title>Banks View Heavy &amp;#39;Buy Now, Pay Later&amp;#39; Use as Red Flag for Loan Approvals - Slashdot</title><link>https://slashdot.org/story/25/07/22/1451201/banks-view-heavy-buy-now-pay-later-use-as-red-flag-for-loan-approvals</link></item>
-<item><title>Mike Lynch&amp;#39;s Estate and Business Partner Owe HP $944M, Court Rules - Slashdot</title><link>https://yro.slashdot.org/story/25/07/22/140208/mike-lynchs-estate-and-business-partner-owe-hp-944m-court-rules</link></item>
-<item><title>New words – 21 July 2025 - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2025/07/21/new-words-21-july-2025/</link></item>
-<item><title>Up north and down south: prepositions for expressing directions - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2025/07/16/up-north-and-down-south-prepositions-for-expressing-directions/</link></item>
-<item><title>New words – 14 July 2025 - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2025/07/14/new-words-9-june-2025/</link></item>
-<item><title>Rookie mistakes and schoolboy errors (Talking about mistakes) - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2025/07/09/rookie-mistakes-and-schoolboy-errors-talking-about-mistakes/</link></item>
-<item><title>New words – 7 July 2025 - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2025/07/07/new-words-7-july-2025/</link></item>
-<item><title>Killing two birds with one stone: talking about achievements - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2025/07/02/killing-two-birds-with-one-stone-talking-about-achievements/</link></item>
-<item><title>New words – 30 June 2025 - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2025/06/30/new-words-30-june-2025/</link></item>
-<item><title>乐观主义者是相似的但悲观主义者是不同的 - Solidot</title><link>https://www.solidot.org/story?sid=81862</link></item>
-<item><title>科学家利用月球土壤取水 - Solidot</title><link>https://www.solidot.org/story?sid=81860</link></item>
-<item><title>參宿四发现有一颗小伴星 - Solidot</title><link>https://www.solidot.org/story?sid=81859</link></item>
-<item><title>Replit 删除生产数据库，伪造数据以隐藏 bug - Solidot</title><link>https://www.solidot.org/story?sid=81858</link></item>
-<item><title>OpenAI 和 Google DeepMind 先后宣称他们的 AI 模型在国际数学奥林匹克竞赛中取得金牌成绩 - Solidot</title><link>https://www.solidot.org/story?sid=81857</link></item>
-<item><title>NASA X-59 Quess 低音爆超音速飞机开始滑行测试 - Solidot</title><link>https://www.solidot.org/story?sid=81856</link></item>
-<item><title>弱密码导致一家没有备份的 158 年英国公司倒闭 - Solidot</title><link>https://www.solidot.org/story?sid=81855</link></item>
-<item><title>研究发现四天工作制显著提升幸福感 - Solidot</title><link>https://www.solidot.org/story?sid=81854</link></item>
-<item><title>英国考虑对苹果 iCloud 加密后门的要求做出让步 - Solidot</title><link>https://www.solidot.org/story?sid=81853</link></item>
-<item><title>微软和法国合作创造数字版巴黎圣母院 - Solidot</title><link>https://www.solidot.org/story?sid=81852</link></item>
-<item><title>恶意软件包上传到 Arch Linux AUR - Solidot</title><link>https://www.solidot.org/story?sid=81851</link></item>
-<item><title>中国证明开放权重模型比 GPU 更有效 - Solidot</title><link>https://www.solidot.org/story?sid=81850</link></item>
-<item><title>陪审团裁决丈夫为嫌疑谋杀妻子赔偿 2360 万美元 - Solidot</title><link>https://www.solidot.org/story?sid=81849</link></item>
-<item><title>Gabe Newell 称他在卧室工作，一周七天 - Solidot</title><link>https://www.solidot.org/story?sid=81848</link></item>
-<item><title>KDE Plasma 终于支持窗口圆角 - Solidot</title><link>https://www.solidot.org/story?sid=81847</link></item>
-<item><title>三父母 IVF 帮助 8 名婴儿健康出生 - Solidot</title><link>https://www.solidot.org/story?sid=81845</link></item>
-<item><title>英伟达宣布 CUDA 软件将支持 RISC-V 处理器 - Solidot</title><link>https://www.solidot.org/story?sid=81844</link></item>
-<item><title>日本自 2011 年以来首次准备建造新核电站 - Solidot</title><link>https://www.solidot.org/story?sid=81843</link></item>
-<item><title>微软释出紧急补丁缓解正被利用的 Sharepoint 0day - Solidot</title><link>https://www.solidot.org/story?sid=81842</link></item>
-<item><title>Google Maps Update Bug Killed A Popular Function On Android - HotHardware</title><link>https://hothardware.com/news/google-maps-update-killed-function-on-android</link></item>
-<item><title>Ill-Advised Shunt Mod Can Give GeForce RTX Laptops A Massive FPS Boost - HotHardware</title><link>https://hothardware.com/news/rtx-laptop-shunt-mod</link></item>
-<item><title>CrushFTP Zero-Day Exploit Leaves Thousands Of Servers Vulnerable To Hijacking - HotHardware</title><link>https://hothardware.com/news/crushftp-zero-day-exploit-over-1k-servers-vulnerable</link></item>
-<item><title>SpaceX Reschedules Falcon 9 Rocket Launch After Aborting Seconds Before Lift Off - HotHardware</title><link>https://hothardware.com/news/spacex-reschedules-falcon-9-rocket-launch</link></item>
-<item><title>Here&amp;#39;s How To Get A Free Chevrolet ZR1 Skin In Fortnite&amp;#39;s Summer Road Trip - HotHardware</title><link>https://hothardware.com/news/how-to-get-a-free-chevrolet-zr1-skin-in-fortnite</link></item>
-<item><title>Ransomware Gang Destroys A 158-Year-Old Company And A Weak Password Is To Blame - HotHardware</title><link>https://hothardware.com/news/ransomware-gang-destroys-weak-password</link></item>
-<item><title>Lenovo Legion Go 2 Prototype Gaming Handheld Spotted In The Wild - HotHardware</title><link>https://hothardware.com/news/lenovo-legion-go-2-prototype-gaming-handhelds-spotted-in-the</link></item>
-<item><title>A Nintendo Switch 2 Pokémon Legends: Z-A Console Bundle Is Coming Soon - HotHardware</title><link>https://hothardware.com/news/nintendo-switch-2-pokemon-legends-z-a-console-bundle</link></item>
-<item><title>Google Teases Pixel 10 With A Special Offer Amid Rampant Leaks, What To Expect - HotHardware</title><link>https://hothardware.com/news/google-teases-pixel-10-with-a-special-offer-amid-rampant-leaks</link></item>
-<item><title>Corsair Unveils External Elgato Game Capture 4K S To Level Up Your Streams - HotHardware</title><link>https://hothardware.com/news/corsair-unveils-external-elgato-game-capture-4k-s-to-level-up-your-streams</link></item>
-<item><title>HP Envy Desktop With An RTX 4060 Is $350 Off And More Gaming PC Deals - HotHardware</title><link>https://hothardware.com/news/hp-envy-desktop-rtx-4060-350-off-more-gaming-pc-deals</link></item>
-<item><title>ASUS Crams NVIDIA&amp;#39;s GB300 Blackwell Ultra Superchip Into A Desktop PC - HotHardware</title><link>https://hothardware.com/news/asus-crams-nvidias-gb300-blackwell-ultra-superchip-into-a-desktop-pc</link></item>
-<item><title>Samsung Galaxy Z Fold7 Preorder Deal: $300 Gift Card &amp; A Free Upgrade - HotHardware</title><link>https://hothardware.com/news/galaxy-z-fold7-preorder-deal-300-gift-card-free-upgrade</link></item>
-<item><title>Kioxia LC9 Is The World&amp;#39;s First 245TB SSD For Insatiable AI Storage Demands - HotHardware</title><link>https://hothardware.com/news/kioxia-lc9-worlds-first-245tb-nvme-ssd-ai-storage-demand</link></item>
-<item><title>Astronomers Saw This Mysterious Object Dancing In Rhythm With Neptune - HotHardware</title><link>https://hothardware.com/news/astronomers-saw-mysterious-object-neptune</link></item>
-<item><title>Ubisoft Boldly Claims Microtransactions Make Games More Fun, You Agree? - HotHardware</title><link>https://hothardware.com/news/ubisoft-claims-mtx-make-games-more-fun</link></item>
-<item><title>Fallout-Themed Doom Mod Finally Gets A Trailer And It Looks Spectacular - HotHardware</title><link>https://hothardware.com/news/fallout-themed-doom-mod</link></item>
-<item><title>A Microsoft SharePoint 0-Day Security Vulnerability Was Just Weaponized At Scale - HotHardware</title><link>https://hothardware.com/news/a-microsoft-sharepoint-security-0-day-vulnerability-was-just-weaponized-at-scale</link></item>
-<item><title>CEO Of ChatGPT Rival Perplexity Says AI Will Replace These Jobs In 6 Months - HotHardware</title><link>https://hothardware.com/news/ceo-of-chatgpt-rival-perplexity-says-ai-will-replace-these-jobs-in-6-months</link></item>
-<item><title>Delta Soars Into Controversy With An Airfare AI That Decides Your Ticket Price - HotHardware</title><link>https://hothardware.com/news/delta-soars-into-controversy-with-airfare-ai</link></item>
-<item><title>Atari 2600+ Pac-Man Edition Brings A Fresh Aesthetic To Iconic Retro Console - HotHardware</title><link>https://hothardware.com/news/atari-2600-pac-man-edition-relive-retro-classics-looks-incredible</link></item>
-<item><title>Folding iPhone Tipped For Big Bragging Rights Over Galaxy Z Fold7 &amp; Pixel Fold 10 - HotHardware</title><link>https://hothardware.com/news/folding-iphone-tipped-for-big-bragging-rights-over-galaxy-z-fold7--pixel-fold-10</link></item>
-<item><title>Score This 75&amp;quot; Fire TV For Just $349 And More Big Screen Deals Under $600 - HotHardware</title><link>https://hothardware.com/news/score-75-fire-tv-just-349-more-big-screen-deals-under-600</link></item>
-<item><title>M5 iPad Pro May Get Dual FaceTime Cameras To Finally Solve This Annoying Issue - HotHardware</title><link>https://hothardware.com/news/m5-ipad-pro-may-get-dual-facetime-cameras-to-finally-solve-this-annoying-issue</link></item>
-<item><title>GTA 6 Is Reportedly Targeting 60 FPS But Maybe Only On This Game Console - HotHardware</title><link>https://hothardware.com/news/gta-6-is-reportedly-targeting-60-fps-but-it-might-only-be-on-this-game</link></item>
-<item><title>IDF&amp;#39;s new strategy: All borders must have buffer zones, defense achieved through offense - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/defense-news/article-861842</link></item>
-<item><title>IDF: No famine in Gaza, but if UN keeps holding back 950 trucks, could be - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/article-861899</link></item>
-<item><title>State Comptroller warns of serious flaws in buildings&amp;#39; earthquake and missile preparedness - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/article-861858</link></item>
-<item><title>New haredi draft proposal by reservist NGOs gains traction on Knesset, still no clear framework - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/politics-and-diplomacy/article-861895</link></item>
-<item><title>IDF rejects WHO claim Israeli soldiers attacked staff during Deir al-Balah operations - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/defense-news/article-861856</link></item>
-<item><title>US Amb. Huckabee meets with Palestinian VP in Ramallah - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/article-861897</link></item>
-<item><title>Yeshiva students spat at, insulted by Arab man with knife in Lucerne, Switzerland - The Jerusalem Post</title><link>https://www.jpost.com/diaspora/antisemitism/article-861874</link></item>
-<item><title>Pro-Palestinian protesters prevent Israelis from disembarking cruise ship on Greek island - The Jerusalem Post</title><link>https://www.jpost.com/bds-threat/article-861867</link></item>
-<item><title>Dutch MP Ellian is &amp;#39;courageous voice against Iranian regime, rising antisemitism,&amp;#39; Haskel says - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/article-861876</link></item>
-<item><title>Ukraine invites companies to test defense platforms in Russia war battlefield - The Jerusalem Post</title><link>https://www.jpost.com/defense-and-tech/article-861749</link></item>
-<item><title>Strategic narratives and AI warfare: between Israel-Iran and India-Pakistan crises - The Jerusalem Post</title><link>https://www.jpost.com/defense-and-tech/article-861812</link></item>
-<item><title>North Korea vows to build new navy destroyer by October 2026 - The Jerusalem Post</title><link>https://www.jpost.com/international/article-861888</link></item>
-<item><title>Investigation exposes X, WhatsApp as hotbeds for arms trade involving Houthis, US weapons - The Jerusalem Post</title><link>https://www.jpost.com/international/article-861535</link></item>
-<item><title>Drones increasingly being used to smuggle items from Sinai to Gaza - The Jerusalem Post</title><link>https://www.jpost.com/middle-east/article-861626</link></item>
-<item><title>Iran&amp;#39;s water crisis: &amp;#39;Day Zero&amp;#39; looms as Islamic Republic faces complete shortage - The Jerusalem Post</title><link>https://www.jpost.com/middle-east/iran-news/article-861724</link></item>
-<item><title>How animated video prescriptions are revolutionizing patient care - The Jerusalem Post</title><link>https://www.jpost.com/business-and-innovation/article-861748</link></item>
-<item><title>Comptroller: Israel slow in fight against domestic abuse because of lack definition for violence - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/article-861875</link></item>
-<item><title>Using weight-loss injections? Five things you must know from the new guidelines - The Jerusalem Post</title><link>https://www.jpost.com/health-and-wellness/article-861802</link></item>
-<item><title>Critical timing: Why the first and last minutes of a flight are the most dangerous - The Jerusalem Post</title><link>https://www.jpost.com/health-and-wellness/article-861784</link></item>
-<item><title>Gov’t debates bill proposal to cancel Law of Return Grandchild Clause - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/politics-and-diplomacy/article-860177</link></item>
-<item><title>Now is the time to live by the sea in Gush Dan - The Jerusalem Post</title><link>https://www.jpost.com/business-and-innovation/real-estate/article-859365</link></item>
-<item><title>From real estate to reality: How the Alma project built a bridge between Israel and the US - The Jerusalem Post</title><link>https://www.jpost.com/business-and-innovation/real-estate/article-858035</link></item>
-<item><title>Trump admin. stands shoulder-to-shoulder with Israel, Steve Witkoff says - The Jerusalem Post</title><link>https://www.jpost.com/conferences/article-854135</link></item>
-<item><title>Legacy in the desert: Why this Israeli national park is like no other - The Jerusalem Post</title><link>https://www.jpost.com/environment-and-climate-change/article-861865</link></item>
-<item><title>Tune into today&amp;#39;s top stories: IDF buffer zones, US to leave UNESCO, Druze blood donations - The Jerusalem Post</title><link>https://www.jpost.com/podcast/jpost-headlines/article-861873</link></item>
-<item><title>Trump releases Martin Luther King Jr. assassination files - The Jerusalem Post</title><link>https://www.jpost.com/international/article-861798</link></item>
-<item><title>Trump to pull US out of UNESCO, citing &amp;#39;anti-American, anti-Israel leanings&amp;#39; - The Jerusalem Post</title><link>https://www.jpost.com/international/article-861859</link></item>
-<item><title>Heavy metal icon Ozzy Osbourne dies at 76 - The Jerusalem Post</title><link>https://www.jpost.com/international/article-861904</link></item>
-<item><title>Was Ozzy Osbourne Jewish, or ‘half a heeb’? - The Jerusalem Post</title><link>https://www.jpost.com/international/article-861908</link></item>
-<item><title>Rabbi Yitzhak Yosef&amp;#39;s attacks on Edelstein ignore his sacrifices for Judaism - The Jerusalem Post</title><link>https://www.jpost.com/opinion/article-861886</link></item>
-<item><title>Kosher or cruel? The Jewish ethical dilemma of factory-farmed meat - The Jerusalem Post</title><link>https://www.jpost.com/judaism/article-861358</link></item>
-<item><title>Ambassador Huckabee calls out Israeli ministry on visa obstacles for Christians - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/article-861786</link></item>
-<item><title>Pope Leo calls for end to &amp;#39;barbarity of war&amp;#39; after strike on Gaza church - The Jerusalem Post</title><link>https://www.jpost.com/international/article-861622</link></item>
-<item><title>Ofra: The new kid in Jerusalem&amp;#39;s dining scene - The Jerusalem Post</title><link>https://www.jpost.com/food-recipes/article-861386</link></item>
-<item><title>Italy&amp;#39;s authentic flavors come to Israel at Ra’anana&amp;#39;s Pastaria - The Jerusalem Post</title><link>https://www.jpost.com/food-recipes/article-861391</link></item>
-<item><title>Ancient Christian settlement unearthed in Jordan, illuminating Middle East&amp;#39;s religious past - The Jerusalem Post</title><link>https://www.jpost.com/archaeology/article-860983</link></item>
-<item><title>Ancient donkey sacrifice ritual unearthed in Israel sheds light on Egyptian trade links - The Jerusalem Post</title><link>https://www.jpost.com/archaeology/article-860606</link></item>
-<item><title>Asteroid the size of 145 Elmos to fly past Earth on Tuesday, July 15 - NASA - The Jerusalem Post</title><link>https://www.jpost.com/science/space/article-860988</link></item>
-<item><title>Bloomfield Science Museum hosts 400 new first graders in OneFamily special event - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/article-860576</link></item>
-<item><title>Israel achieves historic best at International Mathematical Olympiad, securing 6th place globally - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/article-861871</link></item>
-<item><title>First all‐accessible Israeli extreme park opens atop Bloomfield Stadium in Jaffa - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/sports/article-861872</link></item>
-<item><title>From Denmark to Israel: A journey of faith, war, and miracles - The Jerusalem Post</title><link>https://www.jpost.com/opinion/article-861004</link></item>
-<item><title>Macron declares July 12 as France&amp;#39;s annual Alfred Dreyfus day - The Jerusalem Post</title><link>https://www.jpost.com/diaspora/article-860890</link></item>
-<item><title>Saudi Arabia&amp;#39;s &amp;#39;Sleeping Prince&amp;#39; passes away after 20-year coma, Royal Family announces - The Jerusalem Post</title><link>https://www.jpost.com/middle-east/article-861694</link></item>
-<item><title>Jewish man accused of being Russian spy just ‘dreamt’ of being ‘James Bond,’ ex wife says - The Jerusalem Post</title><link>https://www.jpost.com/omg/article-861685</link></item>
-<item><title>As Antisemitism and Global Crime Rise, Israeli-Trained Dogs Become the First Line of Defense - The Jerusalem Post</title><link>https://www.jpost.com/consumerism/article-857355</link></item>
-<item><title>Daily horoscope for Tuesday, 15/7: Sagittarius – Heightened sensitivity at home and in the family - The Jerusalem Post</title><link>https://www.jpost.com/astrology/article-861053</link></item>
-<item><title>Weekly horoscope: July 13–19, 2025 - The Jerusalem Post</title><link>https://www.jpost.com/astrology/article-860962</link></item>
-<item><title>Why Is It Called a “Sledgehammer”? - Mental Floss</title><link>https://www.mentalfloss.com/language/why-is-it-called-a-sledgehammer</link></item>
-<item><title>Conquest Dark Preview (PC) - Softpedia</title><link>https://news.softpedia.com/news/conquest-dark-preview-pc-537829.shtml</link></item>
-<item><title>Quantum Witch Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/quantum-witch-review-537828.shtml</link></item>
-<item><title>Dying Light: The Beast Preview (PC) - Softpedia</title><link>https://news.softpedia.com/news/dying-light-the-beast-preview-pc-537827.shtml</link></item>
-<item><title>He is Coming Preview (PC) - Softpedia</title><link>https://news.softpedia.com/news/he-is-coming-preview-pc-537826.shtml</link></item>
-<item><title>Eriksholm: The Stolen Dream Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/eriksholm-the-stolen-dream-review-537825.shtml</link></item>
-<item><title>System Shock 2: 25th Anniversary Remaster Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/system-shock-2-25th-anniversary-remaster-review-537824.shtml</link></item>
-<item><title>Rise of Industry 2 Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/rise-of-industry-2-review-537823.shtml</link></item>
-<item><title>The Precinct Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/the-precinct-review-537822.shtml</link></item>
-<item><title>Trash Goblin Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/trash-goblin-review-537821.shtml</link></item>
-<item><title>SpellForce: Conquest of Eo - Children of Nor DLC – Yay or Nay (PC) - Softpedia</title><link>https://news.softpedia.com/news/spellforce-conquest-of-eo-children-of-nor-dlc-yay-or-nay-pc-537820.shtml</link></item>
-<item><title>Architect Life: A House Design Simulator Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/architect-life-a-house-design-simulator-review-537819.shtml</link></item>
-<item><title>Dustwind: Resistance Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/dustwind-resistance-review-537818.shtml</link></item>
-<item><title>Star Overdrive Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/star-overdrive-review-537817.shtml</link></item>
-<item><title>The Alters Review (PC) - Softpedia</title><link>https://www.softpedia.com/reviews/games/pc/the-alters-review-537816.shtml</link></item>
-<item><title>【办广发乐返卡】免费送山姆超市会员，抢300元盒马礼品卡 - 驴行天下_绍兴E网论坛</title><link>https://www.e0575.cn/read.php?tid=11832988</link></item>
-<item><title>求助：柯桥有周末一起爬山徒步群吗？ - 驴行天下_绍兴E网论坛</title><link>https://www.e0575.cn/read.php?tid=11825881</link></item>
-<item><title>九溪十八涧，十里琅珰，云栖竹径徒步记 - 驴行天下_绍兴E网论坛</title><link>https://www.e0575.cn/read.php?tid=11828273</link></item>
-<item><title>近期有自驾打算的友友吗？ - 驴行天下_绍兴E网论坛</title><link>https://www.e0575.cn/read.php?tid=11825230</link></item>
-<item><title>7月16号左右有没有一起去越南、老挝、马来西亚一起背包自由行的朋友？实 - 驴行天下_绍兴E网论坛</title><link>https://www.e0575.cn/read.php?tid=11826954</link></item>
-<item><title>带一小?去黄山，有没有一起前往的 - 驴行天下_绍兴E网论坛</title><link>https://www.e0575.cn/read.php?tid=11826579</link></item>
-<item><title>诚意转让7月19日爱达魔都号阳台房 - 驴行天下_绍兴E网论坛</title><link>https://www.e0575.cn/read.php?tid=11825845</link></item>
-<item><title>「徒步召集令」2025-6-22 周日 古城绍兴City Walk 越城区小众探索徒步 - 驴行天下_绍兴E网论坛</title><link>https://www.e0575.cn/read.php?tid=11826150</link></item>
-<item><title>世界上最大的城市一重庆。 - 驴行天下_绍兴E网论坛</title><link>https://www.e0575.cn/read.php?tid=11825337</link></item>
-<item><title>seeking damages of up to $4.55 billion - Slashdot</title><link>https://slashdot.org/story/24/02/12/168220/hp-seeks-4-billion-in-losses-from-lynch-over-autonomy-fraud</link></item>
-<item><title>acquittal on US fraud charges - Slashdot</title><link>https://yro.slashdot.org/story/24/06/08/2123202/jury-finds-autonomy-founder-mike-lynch-not-guilty-of-defrauding-hp</link></item>
-<item><title>US Signals Intention To Rethink Job H-1B Lottery - Slashdot</title><link>https://news.slashdot.org/story/25/07/21/2226250/us-signals-intention-to-rethink-job-h-1b-lottery?sbsrc=md</link></item>
-<item><title>FCC To Eliminate Gigabit Speed Goal, Scrap Analysis of Broadband Prices - Slashdot</title><link>https://tech.slashdot.org/story/25/07/21/2044200/fcc-to-eliminate-gigabit-speed-goal-scrap-analysis-of-broadband-prices?sbsrc=md</link></item>
-<item><title>Can AI Think - and Should It? What It Means To Think, From Plato To ChatGPT - Slashdot</title><link>https://slashdot.org/story/25/07/21/2052216/can-ai-think---and-should-it-what-it-means-to-think-from-plato-to-chatgpt?sbsrc=md</link></item>
-<item><title>So... New New Coke? Now with sugar! - Slashdot</title><link>https://slashdot.org/submission/17338110/so-new-new-coke-now-with-sugar</link></item>
-<item><title>Managers say supervising Gen Z feels like babysitting according to new survey - Slashdot</title><link>https://slashdot.org/submission/17338108/managers-say-supervising-gen-z-feels-like-babysitting-according-to-new-survey</link></item>
-<item><title>Engineers transform dental floss into needle-free vaccine - Slashdot</title><link>https://slashdot.org/submission/17338106/engineers-transform-dental-floss-into-needle-free-vaccine</link></item>
-<item><title>The MOnSter 6502 replicates IC on lighted circuit board - Slashdot</title><link>https://slashdot.org/submission/17338054/the-monster-6502-replicates-ic-on-lighted-circuit-board</link></item>
-<item><title>Kill Russian soldiers, win points: Is Ukraine&amp;#39;s new drone scheme gamifying war? - Slashdot</title><link>https://slashdot.org/submission/17338052/kill-russian-soldiers-win-points-is-ukraines-new-drone-scheme-gamifying-war</link></item>
-<item><title>Knowledge and justice - Aeon</title><link>https://aeon.co/essays/we-must-stop-treating-victims-of-epistemic-harm-as-things?utm_source=rss-feed</link></item>
-<item><title>HelloGitHub 第 111 期 - HelloGitHub</title><link>https://hellogithub.com/periodical/volume/111</link></item>
-<item><title>The Theories and the Furies - Law &amp; Liberty</title><link>https://lawliberty.org/the-theories-and-the-furies/</link></item>
-<item><title>Using and Misusing the Preventive State - Law &amp; Liberty</title><link>https://lawliberty.org/book-review/using-and-misusing-the-preventive-state/</link></item>
-<item><title>Publication Types - ITIF</title><link>https://itif.org/publications/</link></item>
-<item><title>Clean Energy - ITIF</title><link>https://itif.org/issues/clean-energy/</link></item>
-<item><title>A Time to Act: Policies to Strengthen the US Robotics Industry - ITIF</title><link>https://itif.org/publications/2025/07/18/time-to-act-policies-to-strengthen-us-robotics-industry/</link></item>
-<item><title>A Truck Mileage Traveled Tax to Enhance US Roadway Sustainability - ITIF</title><link>https://itif.org/publications/2025/07/21/a-truck-mileage-traveled-tax-to-enhance-us-roadway-sustainability/</link></item>
-<item><title>Broadband Convergence Is Creating More Competition - ITIF</title><link>https://itif.org/publications/2025/07/07/broadband-convergence-is-creating-more-competition/</link></item>
-<item><title>Letter to the Trump Administration Regarding Non-Tariff Attacks on US Tech Firms and Industries - ITIF</title><link>https://itif.org/publications/2025/07/02/letter-regarding-non-tariff-attacks-on-us-tech-firms-and-industries/</link></item>
-<item><title>Congress Should Fully Fund NSF’s TIP Directorate to Make America More Competitive Versus China - ITIF</title><link>https://itif.org/publications/2025/06/30/congress-should-fully-fund-nsf-tip-directorate/</link></item>
-<item><title>How America’s Trading Partners Are Reacting to US Tariffs - ITIF</title><link>https://itif.org/publications/2025/06/30/how-americas-trading-partners-reacting-to-us-tariffs/</link></item>
-<item><title>The Bayh-Dole Act’s Role in Stimulating University-Led Regional Economic Growth - ITIF</title><link>https://itif.org/publications/2025/06/16/bayh-dole-acts-role-in-stimulating-university-led-regional-economic-growth/</link></item>
-<item><title>Comments to the CMA on Its Proposed Google SMS Designation - ITIF</title><link>https://itif.org/publications/2025/07/22/comments-to-the-cma-on-its-proposed-google-sms-designation/</link></item>
-<item><title>Three Cheers for Industrial Policy (In the Arena Commentary) - ITIF</title><link>https://itif.org/publications/2025/07/22/three-cheers-for-industrial-policy/</link></item>
-<item><title>Korea’s Labor Market Too Small for Its Talent (Op-Ed in The Korea Times) - ITIF</title><link>https://itif.org/publications/2025/07/20/koreas-labor-market-too-small-for-its-talent/</link></item>
-<item><title>Letting US Companies Sell Second-Tier Chips to China Is the Right Move (Center for Data Innovation Commentary) - ITIF</title><link>https://itif.org/publications/2025/07/21/letting-us-companies-sell-second-tier-chips-to-china-is-the-right-move/</link></item>
-<item><title>American Tech Companies Are Under Attack in Global Markets (Commentary in The National Interest) - ITIF</title><link>https://itif.org/publications/2025/07/18/american-tech-companies-are-under-attack-in-global-markets/</link></item>
-<item><title>Mission-Oriented Innovation or Mission-Enabled Innovation? (In the Arena Commentary) - ITIF</title><link>https://itif.org/publications/2025/07/18/mission-oriented-innovation-or-mission-enabled-innovation/</link></item>
-<item><title>Broadband Myths: LEOs Don’t Belong in BEAD (Innovation Files Commentary) - ITIF</title><link>https://itif.org/publications/2025/07/14/broadband-myths-leos-dont-belong-in-bead/</link></item>
-<item><title>Allowing Nvidia’s H20 Sales to China Strengthens U.S. AI Leadership, Says Center for Data Innovation - ITIF</title><link>https://itif.org/publications/2025/07/15/allowing-nvidias-h20-sales-to-china-strengthens-us-ai-leadership/</link></item>
-<item><title>What’s Going on With All the Manufacturing Decline Deniers? (In the Arena Commentary) - ITIF</title><link>https://itif.org/publications/2025/07/15/whats-going-on-with-all-the-manufacturing-decline-deniers/</link></item>
-<item><title>Sustaining the Goose That Lays Golden Eggs: How to Continue Miraculous Biotech Advances (Innovation Files Commentary) - ITIF</title><link>https://itif.org/publications/2025/07/15/how-to-continue-miraculous-biotech-advances/</link></item>
-<item><title>Europe’s Innovation Lethargy Should Be a Lesson of What Not to Do, Even for a Leading US (Innovation Files Commentary) - ITIF</title><link>https://itif.org/publications/2025/07/14/europes-innovation-lethargy-lesson-of-what-not-to-do/</link></item>
-<item><title>Without a Federal Moratorium, US AI Policy Will Fragment Further (Center for Data Innovation Commentary) - ITIF</title><link>https://itif.org/publications/2025/07/14/without-a-federal-moratorium-us-ai-policy-will-fragment-further/</link></item>
-<item><title>Economic Experiments Weaken the FTC’s Case Against Meta (Innovation Files Commentary) - ITIF</title><link>https://itif.org/publications/2025/07/11/economic-experiments-weaken-ftcs-case-against-meta/</link></item>
-<item><title>Yes, We Do Want to Be Like China (In the Arena Commentary) - ITIF</title><link>https://itif.org/publications/2025/07/11/yes-we-do-want-to-be-like-china/</link></item>
-<item><title>Building Canada’s Tech Cluster in Waterloo (Canada Centre Commentary) - ITIF</title><link>https://itif.org/publications/2025/07/10/building-canadas-tech-cluster-in-waterloo/</link></item>
-<item><title>Brussels Risks Prioritising Symbolism Over Substance in Cloud Procurement (Center for Data Innovation Commentary) - ITIF</title><link>https://itif.org/publications/2025/07/10/brussels-risks-prioritising-symbolism-over-substance-in-cloud-procurement/</link></item>
-<item><title>US Antitrust as an Anti-Competitiveness Weapon (In the Arena Commentary) - ITIF</title><link>https://itif.org/publications/2025/07/08/us-antitrust-as-an-anti-competitiveness-weapon/</link></item>
-<item><title>Free Trade Protectionism: U.S. Tariffs Are Creating a New Trade Policy Paradox (Innovation Files Commentary) - ITIF</title><link>https://itif.org/publications/2025/07/07/free-trade-protectionism-us-tariffs-are-creating-a-new-trade-policy-paradox/</link></item>
-<item><title>Time for Strategic Clarity on the US Trade Agenda (Aegis Insights Commentary) - ITIF</title><link>https://itif.org/publications/2025/07/07/strategic-clarity-trade-agenda/</link></item>
-<item><title>Supreme Court Ruling Sparks Age Checks—Here’s a Smarter Fix (Innovation Files Commentary) - ITIF</title><link>https://itif.org/publications/2025/07/07/supreme-court-ruling-sparks-age-checks-heres-a-smarter-fix/</link></item>
-<item><title>Canada Doesn’t Have an Innovation System: It Has 134 Programs (Canada Centre Commentary) - ITIF</title><link>https://itif.org/publications/2025/07/07/canada-doesnt-have-innovation-system-it-has-134-programs/</link></item>
-<item><title>The Tortured Logic of Digital Services Taxes (Innovation Files Commentary) - ITIF</title><link>https://itif.org/publications/2025/07/07/the-tortured-logic-of-digital-services-taxes/</link></item>
-<item><title>The Case for Smarter AI Regulation (Innovation Files Podcast With Matt Perault) - ITIF</title><link>https://itif.org/publications/2025/07/07/the-case-for-smarter-ai-regulation-with-matt-perault/</link></item>
-<item><title>Five Reasons Why Critics Were Wrong About the AI Moratorium (Center for Data Innovation Commentary) - ITIF</title><link>https://itif.org/publications/2025/07/02/five-reasons-why-critics-were-wrong-about-the-ai-moratorium/</link></item>
-<item><title>Vietnam Tariffs on Transshipped Goods Are a Step Toward Fairer E-Commerce, Says ITIF - ITIF</title><link>https://itif.org/publications/2025/07/02/vietnam-tariffs-on-transshipped-goods-are-a-step-toward-fairer-e-commerce/</link></item>
-<item><title>Preserving PDUFA Is Critical for U.S. Biopharmaceutical Innovation (Pharma Factual Commentary) - ITIF</title><link>https://itif.org/publications/2025/07/01/preserving-pdufa-is-critical-for-us-biopharmaceutical-innovation/</link></item>
-<item><title>Amicus Brief in Support of the Appellant in Epic Games v. Apple - ITIF</title><link>https://itif.org/publications/2025/06/30/amicus-brief-re-epic-games-v-apple-ninth-circuit/</link></item>
-<item><title>South Korea Should Reform Outdated and Protectionist Mapping Data Restrictions (Center for Data Innovation) - ITIF</title><link>https://itif.org/publications/2025/07/01/south-korea-should-reform-outdated-and-protectionist-mapping-data-restrictions/</link></item>
-<item><title>Loss of AI Moratorium Means No Guardrails Against Costly State AI Laws, Says Center for Data Innovation - ITIF</title><link>https://itif.org/publications/2025/07/01/loss-of-ai-moratorium-means-no-guardrails-against-costly-state-ai-laws/</link></item>
-<item><title>Cutting Open RAN Funds Hurts U.S. Innovation and Helps China (Innovation Files Commentary) - ITIF</title><link>https://itif.org/publications/2025/06/30/cutting-open-ran-funds-hurts-u-s-innovation-and-helps-china/</link></item>
-<item><title>Scrapping the DST Opens Door to Smarter Competition Policy, Says ITIF’s Centre for Canadian Innovation and Competitiveness - ITIF</title><link>https://itif.org/publications/2025/06/30/scrapping-dst-opens-door-to-smarter-competition-policy-says-centre-for-canadian-innovation-and-competitiveness/</link></item>
-<item><title>Comments to Senators Heinrich and Rounds Regarding the American Science Acceleration Project - ITIF</title><link>https://itif.org/publications/2025/06/29/comments-regarding-the-american-science-acceleration-project/</link></item>
-<item><title>Canada Has Removed a Key Obstacle to Constructive Trade Engagement By Rescinding Its Digital Services Tax, Says ITIF’s Aegis Project - ITIF</title><link>https://itif.org/publications/2025/06/30/canada-has-removed-a-key-obstacle-to-constructive-trade-engagement-by-rescinding-its-dst/</link></item>
-<item><title>How Should Korea Negotiate With Trump Over Trade? (Op-Ed in The Korea Times) - ITIF</title><link>https://itif.org/publications/2025/06/29/how-should-korea-negotiate-with-trump-over-trade/</link></item>
-<item><title>Six Ways the DMA Is Backfiring on Europe by Harming Users, Innovation, and Allies (Brussels Effect Commentary) - ITIF</title><link>https://itif.org/publications/2025/06/30/six-ways-the-dma-is-backfiring-on-europe/</link></item>
-<item><title>If They Told You Wolverines Would Make Good House Pets, Prime Minister, Would You Believe Them? (In the Arena Commentary) - ITIF</title><link>https://itif.org/publications/2025/06/30/would-wolverines-make-good-house-pets/</link></item>
-<item><title>SCOTUS Texas Ruling Highlights Need for Congress to Preempt State Laws, Says ITIF - ITIF</title><link>https://itif.org/publications/2025/06/27/scotus-texas-ruling-highlights-need-for-congress-to-preempt-state-laws-says-itif/</link></item>
-<item><title>Comments to the United States Patent and Trademark Office Regarding Countering Illicit Trade - ITIF</title><link>https://itif.org/publications/2025/06/25/comments-united-states-patent-trademark-office-regarding-countering-illicit-trade/</link></item>
-<item><title>Supreme Court Ruling Clears Path for Smart USF Reform, Says ITIF - ITIF</title><link>https://itif.org/publications/2025/06/27/supreme-court-ruling-clears-path-for-smart-usf-reform-says-itif/</link></item>
-<item><title>Rostow’s The Stages of Growth Needs a Sixth Stage (In the Arena Commentary) - ITIF</title><link>https://itif.org/publications/2025/06/26/rostows-stages-of-growth-needs-sixth-stage/</link></item>
-<item><title>UK Industrial Strategy Signals Renewed Focus on Innovation, Digital Skills, and Pro-Growth Regulation, Says Center for Data Innovation - ITIF</title><link>https://itif.org/publications/2025/06/23/uk-industrial-strategy-signals-renewed-focus-on-innovation-digital-skills/</link></item>
-<item><title>US Science Policy at a Crossroads (In the Arena Commentary) - ITIF</title><link>https://itif.org/publications/2025/06/23/us-science-policy-at-a-crossroads/</link></item>
-<item><title>mRNA and the Future of Personalized Medicine (Innovation Files Podcast With Andrew Geall and Deborah Barbara) - ITIF</title><link>https://itif.org/publications/2025/06/23/mrna-and-the-future-of-personalized-medicine-with-andrew-geall-and-deborah-barbara/</link></item>
+<lastBuildDate>Thu, 24 Jul 2025 10:06:18 +0800</lastBuildDate>
+<item><title>Romania buys Spyder air-defense suites from Israel for over $2 billion - Defense News</title><link>https://www.defensenews.com/global/mideast-africa/2025/07/23/romania-buys-spyder-air-defense-suites-from-israel-for-over-2-billion/</link></item>
+<item><title>Berlin launches laxer laws in bid to hasten defense acquisitions - Defense News</title><link>https://www.defensenews.com/global/europe/2025/07/23/berlin-launches-laxer-laws-in-bid-to-hasten-defense-acquisitions/</link></item>
+<item><title>Turkey, UK agree on Eurofighter exports in step closer to deal - Defense News</title><link>https://www.defensenews.com/global/europe/2025/07/23/turkey-uk-agree-on-eurofighter-exports-in-step-closer-to-deal/</link></item>
+<item><title>Following clashes, Syrian regime formally requests support from Turkey - Defense News</title><link>https://www.defensenews.com/global/mideast-africa/2025/07/23/following-clashes-syrian-regime-formally-requests-support-from-turkey/</link></item>
+<item><title>Denmark buys four Sky Guardian drones for Arctic surveillance - Defense News</title><link>https://www.defensenews.com/global/europe/2025/07/23/denmark-buys-four-sky-guardian-drones-for-arctic-surveillance/</link></item>
+<item><title>Mysterious annex at North Korean missile plant has analysts puzzled - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2025/07/23/mysterious-annex-at-north-korean-missile-plant-has-analysts-puzzled/</link></item>
+<item><title>Trump AI plan rips the brakes out of the car and gives Big Tech exactly what it wanted - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/24/ai_trump_plan_/</link></item>
+<item><title>UN World Court declares countries must curb emissions or be held responsible - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/23/un_world_court_curb_emissions/</link></item>
+<item><title>How to host a Linux-powered local dev site in Windows - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/23/linux_dev_site_windows/</link></item>
+<item><title>IRL Com recruits teens for real-life stabbings, shootings, FBI warns - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/23/irl_com_recruits_teens/</link></item>
+<item><title>Nothing to see here: Brave browser blocks privacy-busting Microsoft Recall - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/23/brave_browse_block_microsoft_recall/</link></item>
+<item><title>Tata Consultancy enforces return-to-work mandate on all US staff, effective immediately - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/23/tata_consulting_returntowork_mandate/</link></item>
+<item><title>AI industry&amp;#39;s size obsession is killing ROI, engineer argues - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/23/ai_size_obsession/</link></item>
+<item><title>Meta eggheads demo Bluetooth wristband that decodes muscle twitches for UI control - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/23/meta_wristband_ui_control/</link></item>
+<item><title>Microsoft SharePoint victim count hits 400+ orgs in ongoing attacks - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/23/microsoft_sharepoint_400_orgs/</link></item>
+<item><title>Power cuts, cable damage, and government shutdowns behind Q2 internet outages - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/23/governments_power_cuts_cable_damage/</link></item>
+<item><title>IRS has lost one-quarter of its IT staff since Trump took office - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/23/irs_it_staff_down_25_percent/</link></item>
+<item><title>VMware prevents some perpetual license holders from downloading patches - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/23/vmware_patch_download_problems/</link></item>
+<item><title>Leading 3D printing site bans firearm files, but home gun makers have better options - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/23/thingiverse_drops_3d_gun_designs/</link></item>
+<item><title>SAP warns of &amp;#39;extended approvals&amp;#39; for spending in manufacturing, US public sector - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/23/sap_warns_of_extended_approvals/</link></item>
+<item><title>$380M lawsuit claims intruder got Clorox&amp;#39;s passwords from Cognizant simply by asking - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/23/lawsuit_clorox_vs_cognizant/</link></item>
+<item><title>Copilot Vision on Windows 11 sends data to Microsoft servers - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/23/microsoft_copilot_vision/</link></item>
+<item><title>US tariff terrors prompt Nokia profit drop, TI inventory binge - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/23/tariffs_nokia_texas_instruments/</link></item>
+<item><title>Firefox 141 relieves chronic Linux pain in the neck - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/23/firefox_141_relieves_linux_pain/</link></item>
+<item><title>NatWest banks on AWS and Accenture for AI-driven customer overhaul - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/23/natwest_aws_accenture_deal/</link></item>
+<item><title>Building the Apollo Soyuz Test Project out of LEGO® bricks - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/23/building_the_apollo_soyuz_test/</link></item>
+<item><title>Musk is messing with the Cosmic Dawn. Will alien hunters save the day for all mankind? - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/23/opinion_column_starlink_interference/</link></item>
+<item><title>Sh!t happens, so Microsoft is paying biz to flush its carbon sins underground - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/23/microsoft_carbon_removal_agreement/</link></item>
+<item><title>COVID-19 pandemic accelerated brain aging – even if you didn’t catch the virus - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/23/covid_brain_ageing_study/</link></item>
+<item><title>Stop flooding us with AI-based grant applications, begs Health Institute - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/23/nih_ai_research_application_ban/</link></item>
+<item><title>And now for our annual ‘Tape is &amp;lt;i&amp;gt;still&amp;lt;/i&amp;gt; not dead’ update - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/23/lto_2024_tape_shipment_data/</link></item>
+<item><title>Unboxing an antimonial cup - Aeon</title><link>https://aeon.co/videos/drinking-wine-from-toxic-cups-was-the-17th-centurys-own-dubious-detox-treatment?utm_source=rss-feed</link></item>
+<item><title>Despising an Ancient Liberty - Law &amp; Liberty</title><link>https://lawliberty.org/despising-an-ancient-liberty/</link></item>
+<item><title>A Crisis Foretold - Law &amp; Liberty</title><link>https://lawliberty.org/forum/a-crisis-foretold/</link></item>
+<item><title>Gen Z vs. Gen Alpha: Digital Natives With Key Differences - HowStuffWorks</title><link>https://people.howstuffworks.com/culture-traditions/generation-gaps/gen-z-vs-gen-alpha.htm</link></item>
+<item><title>10 Most Affectionate Cat Breeds for Pet Parents Who Need Love Too - HowStuffWorks</title><link>https://animals.howstuffworks.com/pets/most-affectionate-cat-breeds.htm</link></item>
+<item><title>10 Millennial Slang Words: Salty, Adulting, Slaps and More - HowStuffWorks</title><link>https://people.howstuffworks.com/culture-traditions/generation-gaps/millennial-slang-words.htm</link></item>
+<item><title>Why Is My Cat Sneezing? Does It Have Allergies? - HowStuffWorks</title><link>https://animals.howstuffworks.com/pets/why-is-my-cat-sneezing.htm</link></item>
+<item><title>Peterbald Cat Breed Origins and Coat Types - HowStuffWorks</title><link>https://animals.howstuffworks.com/pets/peterbald-cat.htm</link></item>
+<item><title>font-size-adjust Is Useful - Lobsters</title><link>https://matklad.github.io/2025/07/16/font-size-adjust.html</link></item>
+<item><title>You Can Now Disable All AI Features in Zed - Lobsters</title><link>https://zed.dev/blog/disable-ai-features</link></item>
+<item><title>Migrating a ZFS pool from RAIDZ1 to RAIDZ2 - Lobsters</title><link>https://mtlynch.io/raidz1-to-raidz2/</link></item>
+<item><title>What to expect from Debian/trixie - Lobsters</title><link>https://michael-prokop.at/blog/2025/07/20/what-to-expect-from-debian-trixie-newintrixie/</link></item>
+<item><title>Developing our position on AI - Lobsters</title><link>https://www.recurse.com/blog/191-developing-our-position-on-ai</link></item>
+<item><title>Computational Tyranny - Lobsters</title><link>https://happyfellow.bearblog.dev/computational-tyranny/</link></item>
+<item><title>20 years of Linux on the Desktop (part 4) - Lobsters</title><link>https://ploum.net/2025-07-23-linux_desktop4.html</link></item>
+<item><title>How we discovered, and recovered from, Postgres corruption on the matrix.org homeserver - Lobsters</title><link>https://matrix.org/blog/2025/07/postgres-corruption-postmortem/</link></item>
+<item><title>Superfunctions: solve the &amp;quot;color&amp;quot; problem of Python - Lobsters</title><link>https://github.com/pomponchik/transfunctions</link></item>
+<item><title>Tailwind is the Worst of All Worlds - Lobsters</title><link>https://colton.dev/blog/tailwind-is-the-worst-of-all-worlds/</link></item>
+<item><title>Python 3.14 release candidate 1 is go - Lobsters</title><link>https://pythoninsider.blogspot.com/2025/07/python-314-release-candidate-1-is-go.html</link></item>
+<item><title>Branch Coverage Won&amp;#39;t Prove The Collatz Conjecture - Lobsters</title><link>https://concerningquality.com/collatz-conjecture/</link></item>
+<item><title>Extending Emacs with Fennel (2024) - Lobsters</title><link>https://andreyor.st/posts/2024-12-20-extending-emacs-with-fennel/</link></item>
+<item><title>TODOs aren’t for doing - Lobsters</title><link>https://sophiebits.com/2025/07/21/todos-arent-for-doing</link></item>
+<item><title>What is X-Forwarded-For and when can you trust it? - Lobsters</title><link>https://httptoolkit.com/blog/what-is-x-forwarded-for/</link></item>
+<item><title>Implementing dynamic scope for Fennel and Lua - Lobsters</title><link>https://andreyor.st/posts/2025-06-09-implementing-dynamic-scope-for-fennel-and-lua/</link></item>
+<item><title>Using Radicle CI for Development - Lobsters</title><link>https://radicle.xyz/2025/07/23/using-radicle-ci-for-development</link></item>
+<item><title>NPM &amp;#39;accidentally&amp;#39; removes Stylus package, breaks builds and pipelines - Lobsters</title><link>https://www.bleepingcomputer.com/news/security/npm-accidentally-removes-stylus-package-breaks-builds-and-pipelines/</link></item>
+<item><title>Comparing the Glove80 and Maltron keyboards - Lobsters</title><link>https://tratt.net/laurie/blog/2025/comparing_the_glove80_and_maltron_keyboards.html</link></item>
+<item><title>Building Systems, Simply - Lobsters</title><link>https://www.youtube.com/watch?v=jVC4DP-8xLM</link></item>
+<item><title>Vintage Macintosh Programming Book Library - Lobsters</title><link>https://vintageapple.org/macprogramming/index_year.html</link></item>
+<item><title>Is it feasible to start a local forum in 2025? - Lobsters</title><link>https://lobste.rs/s/txrjel/is_it_feasible_start_local_forum_2025</link></item>
+<item><title>Brave 浏览器默认屏蔽 Microsoft Recall - Solidot</title><link>https://www.solidot.org/story?sid=81869</link></item>
+<item><title>10%-25% 的肺癌患者从未吸烟 - Solidot</title><link>https://www.solidot.org/story?sid=81868</link></item>
+<item><title>研究发现 AI 摘要会显著降低搜索结果页的点击率 - Solidot</title><link>https://www.solidot.org/story?sid=81867</link></item>
+<item><title>微软从 Google DeepMind 挖走了至少 24 名 AI 工程师 - Solidot</title><link>https://www.solidot.org/story?sid=81866</link></item>
+<item><title>NASA 如何从 8 亿公里外拯救朱诺号的相机 - Solidot</title><link>https://www.solidot.org/story?sid=81865</link></item>
+<item><title>法庭裁决 Mike Lynch 的遗产以及商业伙伴欠惠普 9.44 亿美元 - Solidot</title><link>https://www.solidot.org/story?sid=81864</link></item>
+<item><title>阿里巴巴发布 Qwen3-Coder - Solidot</title><link>https://www.solidot.org/story?sid=81863</link></item>
+<item><title>记「乾坤大挪移」式使用双系统 - I'm TualatriX</title><link>https://imtx.me/blog/macos-dual-boot/</link></item>
+<item><title>11 Words for People Who Hate Certain Things - Mental Floss</title><link>https://www.mentalfloss.com/article/53608/11-words-people-who-hate-certain-things</link></item>
+<item><title>How 15 Bizarre British Dishes Got Their Names - Mental Floss</title><link>https://www.mentalfloss.com/food/british-dish-name-origins</link></item>
+<item><title>Diverging consumer sentiment - FlowingData</title><link>https://flowingdata.com/2025/07/23/diverging-consumer-sentiment/</link></item>
+<item><title>Facial recognition app linked with government data - FlowingData</title><link>https://flowingdata.com/2025/07/23/facial-recognition-app-linked-with-government-data/</link></item>
+<item><title>Medicaid data - FlowingData</title><link>https://flowingdata.com/2025/07/23/ice-to-access-private-data-from-medicaid-records/</link></item>
+<item><title>The Golden Dome should be built — just not the way Trump imagines - Freethink</title><link>https://www.freethink.com/the-changing-world-order/golden-dome</link></item>
+<item><title>Administrator of Major Dark Web Cybercrime Forum Arrested In Ukraine - Slashdot</title><link>https://yro.slashdot.org/story/25/07/24/0055200/administrator-of-major-dark-web-cybercrime-forum-arrested-in-ukraine</link></item>
+<item><title>How Much Would You Pay For an American-Made Laptop? Palmer Luckey Wants To Know - Slashdot</title><link>https://hardware.slashdot.org/story/25/07/23/218247/how-much-would-you-pay-for-an-american-made-laptop-palmer-luckey-wants-to-know</link></item>
+<item><title>FDA&amp;#39;s New Drug Approval AI Is Generating Fake Studies - Slashdot</title><link>https://science.slashdot.org/story/25/07/23/2044251/fdas-new-drug-approval-ai-is-generating-fake-studies</link></item>
+<item><title>approve new drugs - Slashdot</title><link>https://science.slashdot.org/story/25/06/11/015216/fda-to-use-ai-in-drug-approvals-to-radically-increase-efficiency</link></item>
+<item><title>Leading 3D Printing Site Bans Firearm Files - Slashdot</title><link>https://hardware.slashdot.org/story/25/07/23/2031219/leading-3d-printing-site-bans-firearm-files</link></item>
+<item><title>Starlink-Powered &amp;#39;T-Satellite&amp;#39; Service Is Now Live On T-Mobile - Slashdot</title><link>https://tech.slashdot.org/story/25/07/23/2024201/starlink-powered-t-satellite-service-is-now-live-on-t-mobile</link></item>
+<item><title>Julian LeFay, &amp;#39;Father of The Elder Scrolls,&amp;#39; Has Died Aged 59 - Slashdot</title><link>https://games.slashdot.org/story/25/07/23/2058221/julian-lefay-father-of-the-elder-scrolls-has-died-aged-59</link></item>
+<item><title>After $380 Million Hack, Clorox Sues Its &amp;#39;Service Desk&amp;#39; Vendor For Simply Giving Out Passwords - Slashdot</title><link>https://yro.slashdot.org/story/25/07/23/2018211/after-380-million-hack-clorox-sues-its-service-desk-vendor-for-simply-giving-out-passwords</link></item>
+<item><title>Why 24/7 Trading is a Bad Idea - Slashdot</title><link>https://news.slashdot.org/story/25/07/23/204215/why-247-trading-is-a-bad-idea</link></item>
+<item><title>Power Cuts, Cable Damage, and Government Shutdowns Behind Q2 Internet Outages - Slashdot</title><link>https://tech.slashdot.org/story/25/07/23/1915209/power-cuts-cable-damage-and-government-shutdowns-behind-q2-internet-outages</link></item>
+<item><title>War on Hidden Motors Goes Undercover - Slashdot</title><link>https://tech.slashdot.org/story/25/07/23/192212/war-on-hidden-motors-goes-undercover</link></item>
+<item><title>ItsJustAPseudonym - Slashdot</title><link>https://slashdot.org/~ItsJustAPseudonym</link></item>
+<item><title>Sony is Fighting Climate Change By Scaling Back PS5 Performance - Slashdot</title><link>https://games.slashdot.org/story/25/07/23/1810221/sony-is-fighting-climate-change-by-scaling-back-ps5-performance</link></item>
+<item><title>Top UN Court Says Countries Can Sue Each Other Over Climate Change - Slashdot</title><link>https://news.slashdot.org/story/25/07/23/1741214/top-un-court-says-countries-can-sue-each-other-over-climate-change</link></item>
+<item><title>Meta Unveils Wristband That Controls Computers With Muscle Signals - Slashdot</title><link>https://tech.slashdot.org/story/25/07/23/1714242/meta-unveils-wristband-that-controls-computers-with-muscle-signals</link></item>
+<item><title>US Nuclear Weapons Agency &amp;#39;Among 400 Organizations Breached By Chinese Hackers&amp;#39; - Slashdot</title><link>https://news.slashdot.org/story/25/07/23/1652240/us-nuclear-weapons-agency-among-400-organizations-breached-by-chinese-hackers</link></item>
+<item><title>More Than 80% of Tuvalu Seeks Australian Climate Visa - Slashdot</title><link>https://slashdot.org/story/25/07/23/1519243/more-than-80-of-tuvalu-seeks-australian-climate-visa</link></item>
+<item><title>Europe&amp;#39;s Resistance To Air Conditioning is Softening Due To Climate Change and Recent Heat Waves - Slashdot</title><link>https://news.slashdot.org/story/25/07/23/144223/europes-resistance-to-air-conditioning-is-softening-due-to-climate-change-and-recent-heat-waves?sbsrc=md</link></item>
+<item><title>Conspiracy Theorists Don&amp;#39;t Realize They&amp;#39;re On the Fringe - Slashdot</title><link>https://tech.slashdot.org/story/25/07/22/2259204/conspiracy-theorists-dont-realize-theyre-on-the-fringe?sbsrc=md</link></item>
+<item><title>Economists: US Poverty On Track To Hit Highest Level Since 1960s - Slashdot</title><link>https://news.slashdot.org/story/12/07/23/138249/economists-us-poverty-on-track-to-hit-highest-level-since-1960s?sbsrc=thisday</link></item>
+<item><title>Google Engineer Decries Complexity of Java, C++ - Slashdot</title><link>https://developers.slashdot.org/story/10/07/23/1838243/google-engineer-decries-complexity-of-java-c?sbsrc=thisday</link></item>
+<item><title>World&amp;#39;s Oldest Bible Going Online - Slashdot</title><link>https://news.slashdot.org/story/08/07/23/0110243/worlds-oldest-bible-going-online?sbsrc=thisday</link></item>
+<item><title>Experiences with Laser Eye Surgery? - Slashdot</title><link>https://ask.slashdot.org/story/04/07/23/1912226/experiences-with-laser-eye-surgery?sbsrc=thisday</link></item>
+<item><title>A Geek&amp;#39;s Tour Of North America? - Slashdot</title><link>https://ask.slashdot.org/story/03/07/22/032205/a-geeks-tour-of-north-america?sbsrc=thisday</link></item>
+<item><title>ChatGPT 用户每天发送 25 亿提示词 - Solidot</title><link>https://www.solidot.org/story?sid=81870</link></item>
+<item><title>美国政府考虑重新评估 H-1B 签证签发方式 - Solidot</title><link>https://www.solidot.org/story?sid=81871</link></item>
+<item><title>气候变化导致森林火灾日益常见 - Solidot</title><link>https://www.solidot.org/story?sid=81872</link></item>
+<item><title>State Department OKs $322 million in proposed weapons sales to Ukraine - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2025/07/24/state-department-oks-322-million-in-proposed-weapons-sales-to-ukraine/</link></item>
+<item><title>At NATO summit, a question of what the alliance wants from the Pacific - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2024/07/11/at-nato-summit-a-question-of-what-the-alliance-wants-from-the-pacific/</link></item>
+<item><title>Switzerland squares neutrality with its European air-defense push - Defense News</title><link>https://www.defensenews.com/global/europe/2024/07/11/switzerland-squares-neutrality-with-its-european-air-defense-push/</link></item>
+<item><title>Germany buys more Patriots as it supplements Ukraine’s air defense - Defense News</title><link>https://www.defensenews.com/land/2024/07/11/germany-buys-more-patriots-as-it-supplements-ukraines-air-defense/</link></item>
+<item><title>Slovakia’s F-16 top-up plans reopen political battles over Ukraine aid - Defense News</title><link>https://www.defensenews.com/global/europe/2024/07/11/slovakias-f-16-top-up-plans-reopen-political-battles-over-ukraine-aid/</link></item>
+<item><title>NATO calls Ukraine’s path to membership ‘irreversible’ in new pledge - Defense News</title><link>https://www.defensenews.com/global/europe/2024/07/10/nato-calls-ukraines-path-to-membership-irreversible-in-new-pledge/</link></item>
+<item><title>As more NATO countries meet spending targets, some push to raise goals - Defense News</title><link>https://www.defensenews.com/pentagon/2024/07/10/as-more-nato-countries-meet-spending-targets-some-push-to-raise-goals/</link></item>
+<item><title>US to send Tomahawks, hypersonics, other long-range fires to Germany - Defense News</title><link>https://www.defensenews.com/land/2024/07/10/us-to-send-tomahawks-hypersonics-other-long-range-fires-to-germany/</link></item>
+<item><title>German brigade entering Lithuania is a welcome change for NATO - Defense News</title><link>https://www.defensenews.com/opinion/2024/07/10/german-brigade-entering-lithuania-is-a-welcome-change-for-nato/</link></item>
+<item><title>F-16s to be ‘flying in the skies of Ukraine this summer,’ US says - Defense News</title><link>https://www.defensenews.com/air/2024/07/10/f-16s-to-be-flying-in-the-skies-of-ukraine-this-summer-us-says/</link></item>
+<item><title>索泰RTX 5050 8GB 月白 OC显卡评测国潮新风吹进入门级市场 - 超能网</title><link>https://www.expreview.com/100628.html</link></item>
+<item><title>微星神影16锐龙版2025游戏本评测16核配RTX 5070，极具性价比 - 超能网</title><link>https://www.expreview.com/100655.html</link></item>
+<item><title>影驰RTX 5050魔刃OC评测入门级显卡也有高颜值 - 超能网</title><link>https://www.expreview.com/100667.html</link></item>
+<item><title>酷冷至尊GX GOLD 1000 PLUS电源评测给到全体硬件的安全保障 - 超能网</title><link>https://www.expreview.com/100418.html</link></item>
+<item><title>长鑫存储推进DDR5工艺升级，大规模量产预计延后至2025年末 - 超能网</title><link>https://www.expreview.com/100835.html</link></item>
+<item><title>AOC推出Q24G50F显示器：2K@144Hz，首发价749元 - 超能网</title><link>https://www.expreview.com/100834.html</link></item>
+<item><title>夏普正在开发一款新的VR控制器，主打触觉反馈 - 超能网</title><link>https://www.expreview.com/100833.html</link></item>
+<item><title>GPU-Z更新至2.67.0版：支持RTX 5050等新GPU - 超能网</title><link>https://www.expreview.com/100832.html</link></item>
+<item><title>《星空》PS5版仍在移植当中，发售时间或晚于原计划 - 超能网</title><link>https://www.expreview.com/100831.html</link></item>
+<item><title>《无主星渊》在PC和主机正式上线，国服要等到9月24日 - 超能网</title><link>https://www.expreview.com/100830.html</link></item>
+<item><title>威刚XPG翼龙S150 PCIe 5.0 SSD上市：SM2508主控，首发849元起 - 超能网</title><link>https://www.expreview.com/100829.html</link></item>
+<item><title>铭瑄推出NM1200 PCIe5.0 1TB SSD：读取速度可达10200MB/s，售价699元 - 超能网</title><link>https://www.expreview.com/100825.html</link></item>
+<item><title>Elgato带来Game Capture 4K S外置采集盒：4K60质量录制，具有广泛兼容性 - 超能网</title><link>https://www.expreview.com/100827.html</link></item>
+<item><title>Minisforum推出M1 Pro迷你PC：可选Ultra 9 285H处理器+128GB内存 - 超能网</title><link>https://www.expreview.com/100824.html</link></item>
+<item><title>《纪念碑谷3》PC和主机版正式发售，Steam国区首发43.2元 - 超能网</title><link>https://www.expreview.com/100823.html</link></item>
+<item><title>《无主之地4》将于10月3日登陆Nintendo Switch 2，仅比其他平台晚不到一个月 - 超能网</title><link>https://www.expreview.com/100822.html</link></item>
+<item><title>将高效散热带到日常生活，Arctic推出Summair 2Go便携风扇 - 超能网</title><link>https://www.expreview.com/100821.html</link></item>
+<item><title>2025Q2中国智能手机市场结束连续六个季度增长，华为时隔四年重返第一 - 超能网</title><link>https://www.expreview.com/100820.html</link></item>
+<item><title>预计DDR6于2027年开始大规模采用，DRAM制造商已完成原型设计 - 超能网</title><link>https://www.expreview.com/100819.html</link></item>
+<item><title>SOCAMM或点燃新的DRAM战争，有望成为HBM之后又一市场增长点 - 超能网</title><link>https://www.expreview.com/100818.html</link></item>
+<item><title>英伟达推迟N1系列发布或有其他原因：包括Windows更新延期和市场需求疲软等 - 超能网</title><link>https://www.expreview.com/100816.html</link></item>
+<item><title>宏碁推出MG270U X显示器：2K@210Hz，27英寸Fast-IPS面板，售价849元 - 超能网</title><link>https://www.expreview.com/100814.html</link></item>
+<item><title>传英伟达敲定RTX 5090 D V2上市时间：8月12日晚上9点，暂时不清楚定价 - 超能网</title><link>https://www.expreview.com/100815.html</link></item>
+<item><title>英伟达发布GeForce Game Ready 577.00驱动，为《明末：渊虚之羽》提供支持 - 超能网</title><link>https://www.expreview.com/100812.html</link></item>
+<item><title>硕一鲲鹏CH1L大屏幕版机箱图赏：299元超高性价比的大屏海景房 - 超能网</title><link>https://www.expreview.com/100752.html</link></item>
+<item><title>雷蛇眼镜蛇极速版发布：右手专用对称超轻设计，售价799元 - 超能网</title><link>https://www.expreview.com/100813.html</link></item>
+<item><title>华硕TUF Gaming VG249QM5A显示器上市：FHD@240Hz，售价849元 - 超能网</title><link>https://www.expreview.com/100811.html</link></item>
+<item><title>影驰黑曜石机箱正式发售：曜启新境！黑白双色可选，售价389元起 - 超能网</title><link>https://www.expreview.com/100809.html</link></item>
 </channel></rss>
