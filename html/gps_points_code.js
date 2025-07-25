@@ -452,12 +452,13 @@ function dot_property_get_gps_points(item,cscolor,dotransform,transform_type){
     return [onecircle,radius_list,cscolor,lon,lat];
 }
 
-function character_gps_points(csstr,dotransform=true,layertype='navigation',dopanto=true,old_title=false,transform_type=false){
+function character_gps_points(csstr,dotransform=true,layertype='navigation',dopanto=true,old_title=false,transform_type=false,check_is_in_map=false){
     //格式：lon,lat,radius,color,character;lon,lat,radius,color; - 保留注释
     function sub_character_gps_points_one_row(){
         if (blxl>=bllen){
             document.title=old_title;
-            console.log('character_gps_points() 费时：'+(performance.now() - t0) + ' milliseconds');    
+            //console.log('character_gps_points() 费时：'+(performance.now() - t0) + ' milliseconds');    
+            performance_b('character_gps_points()',t0,200);
             return;
         }
         
@@ -487,7 +488,12 @@ function character_gps_points(csstr,dotransform=true,layertype='navigation',dopa
         }
 
         if (dopanto){
-            omap_gps_points_global.panTo(new L.LatLng(head_lat,head_lon));
+            if (check_is_in_map){
+                dopanto=check_points_is_in_map(head_lat,head_lon,transform_type,dopanto);
+            }
+            if (dopanto){
+                omap_gps_points_global.panTo(new L.LatLng(head_lat,head_lon));
+            }
         }
 
         blxl=blxl+1;
@@ -520,7 +526,7 @@ function character_gps_points(csstr,dotransform=true,layertype='navigation',dopa
     sub_character_gps_points_one_row();
 }
 
-function circle_gps_points(csstr,dotransform=true,layertype='navigation',dopanto=true,old_title=false,transform_type=false,fill_opacity=-1,is_stroke=-1){
+function circle_gps_points(csstr,dotransform=true,layertype='navigation',dopanto=true,old_title=false,transform_type=false,fill_opacity=-1,is_stroke=-1,check_is_in_map=false){
     //格式：lon,lat,radius,color;lon,lat,radius,color; - 保留注释
     function sub_circle_gps_points_one_row(){
         if (blxl>=bllen){
@@ -549,7 +555,12 @@ function circle_gps_points(csstr,dotransform=true,layertype='navigation',dopanto
         }
 
         if (dopanto){
-            omap_gps_points_global.panTo(new L.LatLng(head_lat,head_lon));
+            if (check_is_in_map){
+                dopanto=check_points_is_in_map(head_lat,head_lon,transform_type,dopanto);
+            }
+            if (dopanto){
+                omap_gps_points_global.panTo(new L.LatLng(head_lat,head_lon));
+            }
         }
 
         blxl=blxl+1;
@@ -586,6 +597,18 @@ function circle_gps_points(csstr,dotransform=true,layertype='navigation',dopanto
         is_stroke=document.getElementById('checkbox_stroke_line_border_gps_points').checked;
     }
     sub_circle_gps_points_one_row();
+}
+
+function check_points_is_in_map(head_lat,head_lon,transform_type,dopanto){
+    if (dopanto){
+        var range_t=map_range_leaflet_b(omap_gps_points_global,true,transform_type);
+        if (head_lat>=range_t[0][0] && head_lat<=range_t[0][1]){
+            if (head_lon>=range_t[1][0] && head_lon<=range_t[1][1]){
+                dopanto=false;
+            }
+        }
+    }
+    return dopanto;
 }
 
 function rectangle_gps_points(csstr,dotransform=true,layertype='navigation',dopanto=true,old_title=false){
@@ -1664,7 +1687,7 @@ function menu_gps_points(){
     
     klmenu_dots=klmenu_dots.concat([
     '<span class="span_menu" onclick="'+str_t+'lng_lat_gps_points();">经度 纬度,经度 纬度;经度 纬度 格式生成线条</span>',
-    '<span class="span_menu">演示1秒 == 实际 <input type="number" id="input_real_second_gps_points" min="1" value="86400" style="width:5rem;" /> 秒 最长间隔时间（秒）：<input type="number" id="input_max_wait_seconds_gps_points" min="0.01" value="0.5" style="width:4rem;" /><br /><label><input type="checkbox" id="checkbox_ppt_circle_gps_points" checked />circle</label> 半径：<input type="number" id="input_ppt_circle_radius_gps_points" min="1" value="10" style="width:3rem;" /> <label><input type="checkbox" id="checkbox_ppt_character_gps_points" checked />character</label> 半径：<input type="number" id="input_ppt_character_radius_gps_points" min="1" value="20" style="width:3rem;" /> <select id="select_ppt_color_gps_points"><option></option><option>年</option><option>月</option></select> 缩放范围：<input type="text" id="input_ppt_scale_range_gps_points" value="12-15" style="width:7rem;" /> <span class="aclick" onclick="'+blparent+'ppt_gps_points();">动态演示</span></span>',
+    '<span class="span_menu">演示1秒 == 实际 <input type="number" id="input_real_second_gps_points" min="1" value="86400" style="width:5rem;" /> 秒 最长间隔时间（秒）：<input type="number" id="input_max_wait_seconds_gps_points" min="0.01" value="0.01" style="width:4rem;" /><br /><label><input type="checkbox" id="checkbox_ppt_circle_gps_points" checked />circle</label> 半径：<input type="number" id="input_ppt_circle_radius_gps_points" min="1" value="20" style="width:3rem;" /> <label><input type="checkbox" id="checkbox_ppt_character_gps_points" checked />character</label> 半径：<input type="number" id="input_ppt_character_radius_gps_points" min="1" value="17" style="width:3rem;" /> 分组：<select id="select_ppt_color_gps_points"><option></option><option>年</option><option>月</option></select> 最小缩放：<input type="number" id="input_ppt_scale_min_gps_points" min="5" value="9" step="1" style="width:4rem;" /> <span class="aclick" onclick="'+blparent+'ppt_gps_points();">动态演示</span></span>',
     ]);
     
     group_list=[
@@ -1752,7 +1775,36 @@ function menu_gps_points(){
 
 function ppt_gps_points(){
     function sub_ppt_gps_points_one_point(){
+        if (do_rescale){
+            if (blno!==row_count-1){
+                zoom_gps_points(scale_current);
+                console.log(today_str_b('t'), '缩放',scale_current);
+            }
+            do_rescale=false;
+            session1_start=performance.now();
+        }
+        
         let dopanto;
+        if (performance.now() - session0_start>wait_max*1000 || blno==row_count-1){
+            dopanto=true;
+            session0_start=performance.now();
+        } else {
+            dopanto=false;
+        }
+
+        if (scale_min!==scale_current && dopanto){
+            if (performance.now() - session1_start>Math.max(10,wait_max*10)*1000){
+                //至少10秒 - 保留注释
+                do_rescale=true;
+                zoom_gps_points(scale_min);
+                let rescale_wait=Math.max(1.5,Math.min(10,wait_max*10));
+                console.log(today_str_b('t'), '缩放',scale_min,'等待',rescale_wait,'秒');
+                setTimeout(sub_ppt_gps_points_one_point,rescale_wait*1000);
+                //等待 1.5-10秒之间 - 保留注释
+                return;
+            }
+        }
+
         let arow=result_t[blno];
 
         let img_name=arow[0].replace(/\d+$/,'');
@@ -1766,13 +1818,22 @@ function ppt_gps_points(){
         }
         
         let do_color_change=false;
-        if (color_type=='年' && current_year!==img_year){
-            do_color_change=true;
-            current_year=img_year;
-        } else if (color_type=='月' && (current_year!==img_year || current_month!==img_month)){
-            do_color_change=true;
-            current_year=img_year;
-            current_month=img_month;
+        let show_string='';
+        if (color_type=='年'){
+            if (current_year!==img_year){
+                do_color_change=true;
+                current_year=img_year;
+                sound_b('elephant');
+            }
+            show_string=arow[0].substring(3,4);
+        } else if (color_type=='月'){
+            if (current_year!==img_year || current_month!==img_month){
+                do_color_change=true;
+                current_year=img_year;
+                current_month=img_month;
+                sound_b('cuckoo');
+            }
+            show_string=(year_count>1?arow[0].substring(3,4)+'/':'')+arow[0].substring(4,6);
         }
         
         if (do_color_change){
@@ -1782,31 +1843,30 @@ function ppt_gps_points(){
             }
         }
         
-        if (performance.now() - session0_start>wait_max*1000 || blno==row_count-1){
-            dopanto=true;
-            session0_start=performance.now();
-        } else {
-            dopanto=false;
-        }
-        
         if (show_circle){
-            circle_gps_points([arow[2]+','+arow[1]+','+circle_radius+','+color_list[color_no]],true,'navigation',dopanto,false,transform_type,fill_opacity,is_stroke);
+            circle_gps_points([arow[2]+','+arow[1]+','+circle_radius+','+color_list[color_no]],true,'navigation',dopanto,false,transform_type,fill_opacity,is_stroke,blno!==row_count-1);
             dopanto=false;
         }
         if (show_character){
-            character_gps_points([arow[2]+','+arow[1]+','+character_radius+','+color_list[color_no]+','+arow[0].substring(3,4)],true,'navigation',dopanto,false,transform_type);
+            character_gps_points([arow[2]+','+arow[1]+','+character_radius+','+color_list[color_no]+','+show_string],true,'navigation',dopanto,false,transform_type,blno!==row_count-1);
         }
         
         blno=blno+1;
         document.title=blno+'/'+row_count+' - '+img_name+' - '+old_title;
 
         if (blno>=row_count){
+            if (scale_min!==scale_current){
+                zoom_gps_points(scale_min);
+                console.log(today_str_b('t'), '缩放',scale_min);
+            }
             document.title=old_title;
             console.log('ppt_gps_points() 费时：'+(performance.now() - t0)/1000 + ' seconds');    
             return;
         }
         
-        console.log(blno,'等待',result_t[blno][4],'秒',dopanto,arow);
+        if (blno % 1000 ==0){
+            console.log(today_str_b('t'), blno,'等待',result_t[blno][4],'秒',dopanto,arow);
+        }
         setTimeout(sub_ppt_gps_points_one_point,result_t[blno][4]*1000);
     }
     
@@ -1819,16 +1879,12 @@ function ppt_gps_points(){
     var circle_radius=parseInt(document.getElementById('input_ppt_circle_radius_gps_points').value.trim());
     var character_radius=parseInt(document.getElementById('input_ppt_character_radius_gps_points').value.trim());
     
-    var scale_range=document.getElementById('input_ppt_scale_range_gps_points').value.trim().split('-');
-    scale_range[0]=Math.max(5,parseInt(scale_range[0]));
-    if (scale_range.length==1){
-        scale_range.push(scale_range[0]);
-    } else {
-        scale_range[1]=Math.max(5,parseInt(scale_range[1]));
-    }
+    var scale_min=parseInt(document.getElementById('input_ppt_scale_min_gps_points').value.trim());
+    var scale_current=omap_gps_points_global.getZoom();
     
     var list_t=document.getElementById('textarea_gps_points').value.trim().split('\n');
     var result_t=[];
+    var year_range=new Set();
     for (let arow of list_t){
         arow=arow.trim().split(' /// '); //形如：2025/20250714NUC散热.jpg /// 28.674675 /// 121.431758 /// 2025:07:14 22:19:09 - 保留注释
         if (arow.length!==4){continue;}
@@ -1841,6 +1897,7 @@ function ppt_gps_points(){
             continue;
         } else {
             arow[3]=img_date;
+            year_range.add(img_date.getFullYear());
         }
         arow[1]=parseFloat(arow[1].trim());
         arow[2]=parseFloat(arow[2].trim());
@@ -1857,6 +1914,10 @@ function ppt_gps_points(){
     result_t.sort();
     result_t.sort(function (a,b){return a[3]<b[3]?-1:1;});
     
+    console.log('整理前行数：', list_t.length, '整理后行数：', result_t.length);
+    
+    var year_count=year_range.size;
+    
     var ratio=Math.max(1,parseInt(document.getElementById('input_real_second_gps_points').value.trim()));
     var wait_max=parseFloat(document.getElementById('input_max_wait_seconds_gps_points').value.trim());
     
@@ -1872,7 +1933,7 @@ function ppt_gps_points(){
     var transform_type=document.getElementById('select_transform').value;    
     var fill_opacity=parseFloat(document.getElementById('input_fill_opacity_gps_points').value.trim());
     var is_stroke=document.getElementById('checkbox_stroke_line_border_gps_points').checked;
-    
+
     var blno=0;
     var row_count=result_t.length;
     var old_title=document.title;
@@ -1880,6 +1941,7 @@ function ppt_gps_points(){
     var current_month=false;
     var session0_start = performance.now();
     var session1_start = performance.now();
+    var do_rescale=false;
     sub_ppt_gps_points_one_point();
 }
 

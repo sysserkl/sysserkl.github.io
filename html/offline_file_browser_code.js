@@ -1134,6 +1134,8 @@ function menu_offline_file_browser(){
     ['01','klwiki_link_b(\'光盘柜01\',true);',true],
     ['02','klwiki_link_b(\'光盘柜02\',true);',true],
     ['03','klwiki_link_b(\'光盘柜03\',true);',true],
+    ['批量打开','tf_ssd_batch_open_offline_file_browser(3);',true],
+
     ];    
     klmenu_link.push(menu_container_b(str_t,group_list,'光盘柜：'));
     
@@ -1150,6 +1152,18 @@ function menu_offline_file_browser(){
     ['input_return_max_rows_ofb',6],
     ];
     input_size_b(input_list,'id');
+}
+
+function tf_ssd_batch_open_offline_file_browser(csno){
+    //csno 仅限于个位数 - 保留注释
+    function sub_tf_ssd_batch_open_offline_file_browser_one(){
+        if (blxl>csno){return;}
+        klwiki_link_b('光盘柜0'+blxl,true);
+        blxl=blxl+1;
+        setTimeout(sub_tf_ssd_batch_open_offline_file_browser_one,1000);
+    }
+    var blxl=1;
+    sub_tf_ssd_batch_open_offline_file_browser_one();
 }
 
 function group_count_offline_file_browser(){

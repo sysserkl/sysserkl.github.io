@@ -1351,8 +1351,11 @@ function notepad_tags_get_klr_b(cslist){
     tag_dict=object2array_b(tag_dict,true,2);
     tag_dict.sort();
     tag_dict.sort(function (a,b){return a[1]>b[1]?-1:1;});
+    var is_local=is_local_b();
+    
+    
     for (let blxl=0,lent=tag_dict.length;blxl<lent;blxl++){
-        tag_dict[blxl]='<input type="text" value="&lt;tag&gt;'+specialstr92_b(tag_dict[blxl][0])+'&lt;/tag&gt;" /> <small>('+tag_dict[blxl][1]+')</small>';
+        tag_dict[blxl]='<input type="text" value="&lt;tag&gt;'+specialstr92_b(tag_dict[blxl][0])+'&lt;/tag&gt;" /> <small>('+tag_dict[blxl][1]+')</small>'+(is_local?'<a class="a_box" href="'+klwiki_link_b(tag_dict[blxl][0],false)+'" target=_blank>🖇</a>':'');
     }
     
     return tag_dict;
