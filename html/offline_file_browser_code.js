@@ -1086,6 +1086,12 @@ function menu_offline_file_browser(){
     '<span class="span_menu" onclick="'+str_t+'file_list_offline_file_browser();">当前结果文件列表</span>',    
     ];
     
+    var group_list=[
+    ['文件列表','file_list_offline_file_browser();',true],
+    ['坐标导出','lat_lng_date_get_offline_file_browser();',true],
+    ];    
+    klmenu1.push(menu_container_b(str_t,group_list,'当前结果：'));
+    
      var klmenu_config=[
     '<span class="span_menu" onclick="'+str_t+'import_bigfile_offline_file_browser();">导入 bigfile 文件</span>',
     '<span id="span_saved_disk_path_ofb" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ save movie 显示 Disk & Path</span>',    
@@ -1225,6 +1231,29 @@ function filelist_2_virtual_path_offline_file_browser(){
         result_t.push(one_li.textContent);
     }
     document.getElementById('div_sub_statistics').innerHTML='<textarea>'+result_t.join('\n').replace(/^wikiuploads\//mg,'{{wikiuploads}}')+'</textarea>';
+}
+
+function lat_lng_date_get_offline_file_browser(){
+    if (offline_file_data_current_global.length==0){return;}
+    var result_t=[];
+    for (let item of offline_file_data_current_global){
+        let list_t=item[5].split(/\s+/);
+        if (list_t.length<7){continue;}
+        result_t.push(item[0]+'/'+item[1]+item[2]+' /// '+list_t[3]+' /// '+list_t[4]+' /// '+list_t[5]+' '+list_t[6]);
+    }
+    result_t.sort();
+    
+    var left_str='<p>';
+    left_str=left_str+close_button_b('div_statistics','');
+    var right_str='('+result_t.length+' '+(result_t.length*100/offline_file_data_current_global.length).toFixed(2)+'%)</p>';
+
+    var bljg=textarea_with_form_generate_b('textarea_lat_lng_date_ofb','height:10rem;',left_str,'清空,复制,发送到临时记事本,发送地址',right_str);
+
+    var odiv=document.getElementById('div_statistics');
+    odiv.innerHTML=bljg;
+    odiv.style.display='block';
+    odiv.scrollIntoView();
+    document.getElementById('textarea_lat_lng_date_ofb').value=result_t.join('\n');
 }
 
 function file_list_offline_file_browser(){
