@@ -8,247 +8,329 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Sun, 27 Jul 2025 10:20:52 +0800</lastBuildDate>
-<item><title>1 MW Racks and Supply Chain Resilience: Planning for the Data Centers of the Future - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/supply-chain/1-mw-racks-and-supply-chain-resilience-planning-for-the-data-centers-of-the-future</link></item>
-<item><title>Amazon Scraps €300M New Irish Plant in Blow to State - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/investing/amazon-scraps-300m-new-irish-plant-in-blow-to-state</link></item>
-<item><title>Designing the Future of Data Center Physical Security - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/physical-security/designing-the-future-of-data-center-physical-security</link></item>
-<item><title>Trump Signs AI Orders, Vows US Will Win Race Over New Technology - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/regulations/trump-signs-ai-orders-vows-us-will-win-race-over-new-technology</link></item>
-<item><title>Decoding Cloud Terminology: What &amp;#39;Cloud-Native&amp;#39; Really Means - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cloud/decoding-cloud-terminology-what-cloud-native-really-means</link></item>
-<item><title>How Contractors Are Adapting to Accelerate Data Center Build Schedules - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-construction/how-contractors-are-adapting-to-accelerate-data-center-build-schedules</link></item>
-<item><title>Beyond Lithium: How Organic Flow Batteries Could Transform Data Center Energy Storage - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/beyond-lithium-how-organic-flow-batteries-could-transform-data-center-energy-storage</link></item>
-<item><title>Microsoft Rushes Emergency Patch for Critical SharePoint Server Bug - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cybersecurity/microsoft-rushes-emergency-patch-for-critical-sharepoint-server-bug</link></item>
-<item><title>Large US Grid Lacks Capacity for Data Centers, Watchdog Says - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/large-us-grid-lacks-capacity-for-data-centers-watchdog-says</link></item>
-<item><title>Vertiv and Oklo Explore Nuclear Energy for Data Center Cooling - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cooling/vertiv-and-oklo-explore-nuclear-energy-for-data-center-cooling</link></item>
-<item><title>Server Rack vs. Chassis: What’s the Difference, and Why Does It Matter? - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/servers/server-rack-vs-chassis-what-s-the-difference-and-why-does-it-matter-</link></item>
-<item><title>Elliott Investment Boosts Stake in Equinix - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/investing/elliott-investment-boosts-stake-in-equinix</link></item>
-<item><title>Sustainable Data Center Liquid Cooling Trends for the AI Heat Wave - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cooling/sustainable-data-center-liquid-cooling-trends-for-the-ai-heat-wave</link></item>
-<item><title>Northern Virginia, Beijing Lead Global Hyperscale Data Center Growth - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/hyperscalers/northern-virginia-beijing-lead-global-hyperscale-data-center-growth</link></item>
-<item><title>AWS Summit NYC: Suite of Production-Ready AI Agent Tools Debut - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cloud/aws-summit-nyc-suite-of-production-ready-ai-agent-tools-debut</link></item>
-<item><title>Amazon’s Emissions Climbed 6% in 2024 on Data Center Buildout - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/sustainability/amazon-s-emissions-climbed-6-in-2024-on-data-center-buildout</link></item>
-<item><title>IMasons Women Chair on the Power of Inclusion in Digital Infrastructure - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-career-development/imasons-women-chair-heather-dooley-on-the-power-of-inclusion-in-digital-infrastructure</link></item>
-<item><title>Agentic AI Is Here. What Does It Mean for Data Centers? - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/ai-data-centers/agentic-ai-is-here-what-does-it-mean-for-data-centers-</link></item>
-<item><title>Musk’s xAI in Talks With Saudi’s Humain on Data Center Deal - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/deals/musks-xai-in-talks-with-saudis-humain-on-data-center-deal</link></item>
-<item><title>The Seventh Wave: How AI Will Change the Technology Industry - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/ai-data-centers/the-seventh-wave-how-ai-will-change-the-technology-industry</link></item>
-<item><title>Google to Spend $3B for Hydropower from Brookfield - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/google-to-spend-3b-for-hydropower-from-brookfield</link></item>
-<item><title>Edge Computing Trends: Adoption, Challenges, and Future Outlook - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/edge-data-centers/edge-computing-trends-adoption-challenges-and-future-outlook</link></item>
-<item><title>The Pros and Cons of Behind-the-Meter Energy for Data Centers - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/the-pros-and-cons-of-behind-the-meter-energy-for-data-centers</link></item>
-<item><title>Motor Efficiency: The Key to Shifting Power from HVAC to AI for Better ROI - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cooling/motor-efficiency-the-key-to-shifting-power-from-hvac-to-ai-for-better-roi</link></item>
-<item><title>Data Center Bandwidth Soars 330%, Driven by AI Demand - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/networking/data-center-bandwidth-soars-330-driven-by-ai-demand</link></item>
-<item><title>Malaysia Controls AI Chip Exports as US Targets China Smuggling - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-chips/malaysia-controls-ai-chip-exports-as-us-targets-china-smuggling</link></item>
-<item><title>AT&amp;amp;T to Accelerate Fiber Build After Signing of Trump Bill - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/networking/at-t-to-accelerate-fiber-build-after-signing-of-trump-bill</link></item>
-<item><title>Data Center vs. Server Farm: What’s the Difference, Exactly? - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/networking/data-center-vs-server-farm-whats-the-difference-exactly</link></item>
-<item><title>Oracle Said to Advance Indonesia Cloud Services Plan - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cloud/oracle-said-to-advance-indonesia-cloud-services-plan</link></item>
-<item><title>Banking on Better Data: Why Financial Institutions Need an Agile Cloud Strategy - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cloud/banking-on-better-data-why-financial-institutions-need-an-agile-cloud-strategy</link></item>
-<item><title>Supermarket Billionaire Wants to Build AI Gigafactory in Europe - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-site-selection/supermarket-billionaire-wants-to-build-ai-gigafactory-in-europe</link></item>
-<item><title>‘AI Greenferencing’ Model Could Transform Data Centers with Wind Power - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/sustainability/ai-greenferencing-model-could-transform-data-centers-with-wind-power</link></item>
-<item><title>South Korean Government Imposes Penalties on SK Telecom for Breach - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-breaches/south-korean-government-imposes-penalties-on-sk-telecom-for-breach</link></item>
-<item><title>The Pros and Cons of Dry Coolers for Data Centers - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cooling/the-pros-and-cons-of-dry-coolers-for-data-centers</link></item>
-<item><title>How to Put the Heat from Data Centers to Good Use - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cooling/how-to-put-the-heat-from-data-centers-to-good-use</link></item>
-<item><title>Japanese Shipping Firm to Develop ‘World’s First’ Integrated Floating Data Center Platform - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/next-gen-data-centers/japanese-shipping-firm-to-develop-world-s-first-integrated-floating-data-center-platform</link></item>
-<item><title>CoreWeave to Buy Core Scientific in $9B Stock Deal - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/deals/coreweave-to-buy-core-scientific-in-stock-deal</link></item>
-<item><title>New Data Center Developments: July 2025 - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-construction/new-data-center-developments-july-2025</link></item>
-<item><title>US Plans AI Chip Curbs on Malaysia, Thailand Over China Concerns - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-chips/us-plans-ai-chip-curbs-on-malaysia-thailand-over-china-concerns</link></item>
-<item><title>AI Infrastructure Inflection Point: 60% Cloud Costs Signal Time to Go Private - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cloud/ai-infrastructure-inflection-point-60-cloud-costs-signal-time-to-go-private</link></item>
-<item><title>Amid Volatility, Data Center Spending a Signpost for Success, BlackRock Says - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/investing/amid-volatility-data-center-spending-a-signpost-for-success-blackrock-says</link></item>
-<item><title>Alibaba Expands AI Cloud Services in Malaysia, Philippines - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cloud/alibaba-expands-ai-cloud-services-in-malaysia-philippines</link></item>
-<item><title>Three Nations Will Lead Asia-Pacific Data Center Expansion Through 2030 - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-construction/three-nations-will-lead-asia-pacific-data-center-expansion-through-2030</link></item>
-<item><title>Astronomer Hires Coldplay Lead Singer&amp;#39;s Ex-Wife as &amp;#39;Temporary&amp;#39; Spokesperson: Gwyneth Paltrow - Slashdot</title><link>https://yro.slashdot.org/story/25/07/26/0126224/astronomer-hires-coldplay-lead-singers-ex-wife-as-temporary-spokesperson-gwyneth-paltrow</link></item>
-<item><title>Google Will Help Scale &amp;#39;Long-Duration Energy Storage&amp;#39; Solution for Clean Power - Slashdot</title><link>https://hardware.slashdot.org/story/25/07/26/2123234/google-will-help-scale-long-duration-energy-storage-solution-for-clean-power</link></item>
-<item><title>Stack Exchange Moves Everything to the Cloud, Destroys Servers in New Jersey - Slashdot</title><link>https://hardware.slashdot.org/story/25/07/26/1946217/stack-exchange-moves-everything-to-the-cloud-destroys-servers-in-new-jersey</link></item>
-<item><title>ChatGPT Loses in a Game of Chess Against Magnus Carlsen - Slashdot</title><link>https://games.slashdot.org/story/25/07/26/1658233/chatgpt-loses-in-a-game-of-chess-against-magnus-carlsen</link></item>
-<item><title>Google Gemini Deletes User&amp;#39;s Files, Then Just Admits &amp;#39;I Have Failed You Completely and Catastrophically&amp;#39; - Slashdot</title><link>https://developers.slashdot.org/story/25/07/26/0642239/google-gemini-deletes-users-files-then-just-admits-i-have-failed-you-completely-and-catastrophically</link></item>
-<item><title>Asteroid 2024 YR4 Spared The Earth. What Happens if It Hits the Moon Instead in 2032? - Slashdot</title><link>https://science.slashdot.org/story/25/07/26/0456207/asteroid-2024-yr4-spared-the-earth-what-happens-if-it-hits-the-moon-instead-in-2032</link></item>
-<item><title>at &amp;quot;impact probability zero - Slashdot</title><link>https://science.slashdot.org/story/25/02/26/032251/earth-safe-from-city-killer-asteroid-2024-yr4</link></item>
-<item><title>ChatGPT Gives Instructions for Dangerous Pagan Rituals and Devil Worship - Slashdot</title><link>https://slashdot.org/story/25/07/26/0523241/chatgpt-gives-instructions-for-dangerous-pagan-rituals-and-devil-worship</link></item>
-<item><title>Tesla Opens First Supercharger Diner in Los Angeles, with 80 Charging Stalls - Slashdot</title><link>https://tech.slashdot.org/story/25/07/26/0611234/tesla-opens-first-supercharger-diner-in-los-angeles-with-80-charging-stalls</link></item>
-<item><title>Hacker Slips Malicious &amp;#39;Wiping&amp;#39; Command Into Amazon&amp;#39;s Q AI Coding Assistant - Slashdot</title><link>https://developers.slashdot.org/story/25/07/26/0352242/hacker-slips-malicious-wiping-command-into-amazons-q-ai-coding-assistant</link></item>
-<item><title>Controversial &amp;#39;Arsenic Life&amp;#39; Paper Retracted After 15 Years - Slashdot</title><link>https://science.slashdot.org/story/25/07/26/044239/controversial-arsenic-life-paper-retracted-after-15-years</link></item>
-<item><title>Study Finds &amp;#39;Pressure Point&amp;#39; In the Gulf Could Drive Hurricane Strength - Slashdot</title><link>https://news.slashdot.org/story/25/07/26/0358218/study-finds-pressure-point-in-the-gulf-could-drive-hurricane-strength</link></item>
-<item><title>Google Set Up Two Robotic Arms For a Game of Infinite Table Tennis - Slashdot</title><link>https://hardware.slashdot.org/story/25/07/25/2237245/google-set-up-two-robotic-arms-for-a-game-of-infinite-table-tennis</link></item>
-<item><title>Pebble Is Officially Pebble Again - Slashdot</title><link>https://tech.slashdot.org/story/25/07/25/2151251/pebble-is-officially-pebble-again</link></item>
-<item><title>OG smartwatches - Slashdot</title><link>https://hardware.slashdot.org/story/13/04/07/2147246/ars-technica-goes-close-up-with-the-pebble-smartwatch</link></item>
-<item><title>Congress tries to outlaw AI that jacks up prices based on what it knows about you - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/26/ai_surveillance_pricing/</link></item>
-<item><title>Blame a leak for Microsoft SharePoint attacks, researcher insists - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/26/microsoft_sharepoint_attacks_leak/</link></item>
-<item><title>AMD CEO 称台积电美国工厂制造的芯片贵 5%-20% - Solidot</title><link>https://www.solidot.org/story?sid=81893</link></item>
-<item><title>Google 街景车拍摄到阿根廷男子的裸体被判赔偿 1.25 万美元 - Solidot</title><link>https://www.solidot.org/story?sid=81895</link></item>
-<item><title>DNSSEC 普及率仅为 34% - Solidot</title><link>https://www.solidot.org/story?sid=81896</link></item>
-<item><title>地球在向外星人广播其位置 - Solidot</title><link>https://www.solidot.org/story?sid=81897</link></item>
-<item><title>Pebble 创始人拿回了原商标 - Solidot</title><link>https://www.solidot.org/story?sid=81898</link></item>
-<item><title>受争议的砷基生命论文在发表 15 年后撤下 - Solidot</title><link>https://www.solidot.org/story?sid=81899</link></item>
-<item><title>今天的环法自行车选手已经超越了当年的阿姆斯特朗 - Solidot</title><link>https://www.solidot.org/story?sid=81900</link></item>
-<item><title>leopold banchini&amp;#39;s temporary timber bathhouse reclaims traffic roundabout in logroño, spain - designboom</title><link>https://www.designboom.com/architecture/leopold-banchini-temporary-timber-bathhouse-traffic-roundabout-spain-07-17-2025/</link></item>
-<item><title>tom ducarouge’s heat-reactive table for on running changes color when it gets warm - designboom</title><link>https://www.designboom.com/design/tom-ducarouge-heat-reactive-table-on-running-changes-color-07-23-2025/</link></item>
-<item><title>bofill taller carves elongated arches around deep green auditorium in morocco - designboom</title><link>https://www.designboom.com/architecture/bofill-taller-arquitectura-arches-green-auditorium-morocco-rabat-centre-congres-07-22-2025/</link></item>
-<item><title>heatherwick studio references thailand&amp;#39;s traditional lanterns for new bangkok development - designboom</title><link>https://www.designboom.com/architecture/heatherwick-studio-thailand-lanterns-bangkok-development-hatai-07-15-2025/</link></item>
-<item><title>masterplans and urban revitalization (39) - designboom</title><link>https://www.designboom.com/tag/masterplans-and-urban-revitalization/</link></item>
-<item><title>beachman ‘64 e-bike brings back 1960s cafe racer and old-school motorcycle aesthetics - designboom</title><link>https://www.designboom.com/technology/beachman-64-e-bike-1960s-cafe-racer-old-school-motorcycle-07-23-2025/</link></item>
-<item><title>LEGO releases nintendo game boy set complete with cartridges, control pad and buttons - designboom</title><link>https://www.designboom.com/design/lego-nintendo-game-boy-set-cartridges-control-pad-buttons-07-24-2025/</link></item>
-<item><title>TRUE conference 2025 by midea explores how AI is transforming the future of buildings - designboom</title><link>https://www.designboom.com/architecture/true-conference-2025-explores-ai-artificial-inteligence-transforming-future-smart-buildings-07-24-2025/</link></item>
-<item><title>oppenheim architecture unveils all-red vlore beach tower as part of albania&amp;#39;s coastal revival - designboom</title><link>https://www.designboom.com/architecture/oppenheim-architecture-red-vlore-beach-tower-albania-coastal-revival-07-24-2025/</link></item>
-<item><title>3D printed racing toy with miniature cars and steering wheel revives days of arcade games - designboom</title><link>https://www.designboom.com/technology/3d-printed-racing-toy-miniature-cars-steering-wheel-arcade-games-wontonnn-07-18-2025/</link></item>
-<item><title>photographers anna fox and karen knorr exhibit &amp;#39;slice of american life&amp;#39; in arles, france - designboom</title><link>https://www.designboom.com/architecture/photographers-anna-fox-karen-knorr-exhibit-american-arles-france-07-26-2025/</link></item>
-<item><title>house by MIDE architetti integrates interior and landscape on the outskirts of padua - designboom</title><link>https://www.designboom.com/architecture/house-mide-architetti-interior-landscape-padua-200-italy-07-26-2025/</link></item>
-<item><title>vollebak electromagnetic shielding jacket blocks radiation with materials used in NASA rover - designboom</title><link>https://www.designboom.com/technology/vollebak-electromagnetic-shielding-bomber-jacket-blocks-radiation-materials-nasa-rover-07-26-2025/</link></item>
-<item><title>university campus gymnasium in south china blends athletics with urban vitality - designboom</title><link>https://www.designboom.com/architecture/university-campus-gymnasium-south-china-athletics-urban-vitality-scut-07-26-2025/</link></item>
-<item><title>fans&amp;#39; inscriptions cover nigel VMU&amp;#39;s six-foot sculptural cup trophy replicas for FA cup final - designboom</title><link>https://www.designboom.com/art/fans-inscriptions-nigel-vmu-six-foot-sculptural-cup-trophy-replicas-fa-cup-final-cup-culture-07-25-2025/</link></item>
-<item><title>delmulle delmulle&amp;#39;s gradient brick facade shifts from terracotta to glass in amsterdam house - designboom</title><link>https://www.designboom.com/architecture/delmulle-delmulle-gradient-brick-facade-terracotta-glass-amsterdam-house-07-25-2025/</link></item>
-<item><title>MASK architects unveils sleek exterior design for tavolara-100 fast cruising luxury yacht - designboom</title><link>https://www.designboom.com/technology/mask-architects-sleek-exterior-design-tavolara-100-fast-cruising-luxury-yacht-07-25-2025/</link></item>
-<item><title>warm orange glow bathes crosby studios&amp;#39; chromatic café nuances in paris - designboom</title><link>https://www.designboom.com/architecture/orange-crosby-studios-chromatic-cafe-nuances-paris-france-07-25-2025/</link></item>
-<item><title>chevrolet corvette concept car has removable canopy that turns it into open-air track vehicle - designboom</title><link>https://www.designboom.com/technology/chevrolet-corvette-concept-car-removable-canopy-open-air-track-vehicle-california-07-25-2025/</link></item>
-<item><title>atienza maure converts barcelona warehouse into live-work space using industrial systems - designboom</title><link>https://www.designboom.com/architecture/atienza-maure-barcelona-warehouse-live-work-space-industrial-systems-07-25-2025/</link></item>
-<item><title>MA+HG completes fluevog house in east vancouver with bold color and geometric cutouts - designboom</title><link>https://www.designboom.com/architecture/ma-hg-fluevog-house-east-vancouver-color-geometric-cutouts-canada-07-25-2025/</link></item>
-<item><title>timber nest pavilion anchors dubai masterplan, the wilds, envisioned as woodland sanctuary - designboom</title><link>https://www.designboom.com/architecture/timber-nest-pavilion-dubai-masterplan-woodland-sanctuary-the-wilds-07-25-2025/</link></item>
-<item><title>drawing robot allows users to sketch floating illustrations inside liquids - designboom</title><link>https://www.designboom.com/technology/drawing-robot-users-floating-illustrations-liquids-suntory-expo-2025-osaka-07-25-2025/</link></item>
-<item><title>SAAG arquitetura designs PAB house with breezy, curated interiors in rural brazil - designboom</title><link>https://www.designboom.com/architecture/saag-arquitetura-pab-house-breezy-curated-interiors-rural-brazil-07-25-2025/</link></item>
-<item><title>way of normal carves a subterranean bathhouse-turned-bar in canada - designboom</title><link>https://www.designboom.com/architecture/way-of-normal-subterranean-bathhouse-bar-canada-blue-rock-swim-club-07-24-2025/</link></item>
-<item><title>zélé collective turns uber eats&amp;#39; entire menu into 22-meter-long print artwork - designboom</title><link>https://www.designboom.com/art/zele-collective-uber-eats-entire-menu-22-meter-long-print-artwork-menu-du-jour-07-24-2025/</link></item>
-<item><title>meta develops smart bracelet that can replace keyboard and mouse for computers - designboom</title><link>https://www.designboom.com/technology/meta-smart-bracelet-replace-keyboard-mouse-computers-reality-labs-semg-07-24-2025/</link></item>
-<item><title>notre-dame will soon have a hyper-precise, AI-powered digital twin, courtesy of microsoft - designboom</title><link>https://www.designboom.com/architecture/microsoft-digital-twin-paris-notre-dame-cathedral-ai-07-24-2025/</link></item>
-<item><title>artist andres serrano proposes trump mausoleum for US pavilion at the 2026 venice biennale - designboom</title><link>https://www.designboom.com/art/trump-mausoleum-venice-biennale-us-pavilion-andres-serrano-07-24-2025/</link></item>
-<item><title>katerina valsamaki embeds subterranean house into hillside slot on tinos island, greece - designboom</title><link>https://www.designboom.com/architecture/katerina-valsamaki-subterranean-house-hillside-slot-tinos-island-greece-07-24-2025/</link></item>
-<item><title>vinklu inserts triangular prism into narrow urban gap for coffee shop in romania - designboom</title><link>https://www.designboom.com/architecture/vinklu-triangular-prism-narrow-urban-gap-coffee-shop-romania-the-chapel-07-23-2025/</link></item>
-<item><title>MVRDV restores former cement factory for west bund dream center in shanghai - designboom</title><link>https://www.designboom.com/architecture/mvrdv-restores-cement-factory-west-bund-dream-center-shanghai-gate-m-china-07-23-2025/</link></item>
-<item><title>Optimists Are Alike, but Pessimists Are Unique, Brain Scan Study Suggests - Scientific American</title><link>https://www.scientificamerican.com/article/optimists-are-alike-but-pessimists-are-unique-bran-scan-study-suggests/</link></item>
-<item><title>How Logical Are You? Test Your Skills With These Problems from the New International Logic Olympiad - Scientific American</title><link>https://www.scientificamerican.com/article/try-these-logic-puzzles-from-the-international-logic-olympiad/</link></item>
-<item><title>What It’s Like to Live and Work on the Greenland Ice Sheet - Scientific American</title><link>https://www.scientificamerican.com/podcast/episode/what-scientists-on-greenlands-ice-sheet-are-learning-about-our-changing/</link></item>
-<item><title>Science Quiz: Deja Vu - Scientific American</title><link>https://www.scientificamerican.com/game/science-quiz-deja-vu-2025-07-25/</link></item>
-<item><title>Organs Age in Waves Accelerating at 50 Years Old - Scientific American</title><link>https://www.scientificamerican.com/article/organ-proteins-reveal-how-aging-accelerates-at-50-years-old/</link></item>
-<item><title>The Sky Is Falling—From Another Star - Scientific American</title><link>https://www.scientificamerican.com/article/interstellar-meteors-hit-earth-all-the-time-but-still-elude-astronomers/</link></item>
-<item><title>Scorching Heat Dome Grips Eastern U.S., with No Relief in Sight - Scientific American</title><link>https://www.scientificamerican.com/article/heat-dome-temperatures-may-break-records-in-eastern-u-s/</link></item>
-<item><title>Hulk Hogan’s Biggest Impact May Have Been in Digital Privacy - Scientific American</title><link>https://www.scientificamerican.com/article/hulk-hogan-professional-wrestler-who-defended-his-right-to-privacy-in-the/</link></item>
-<item><title>Gene-Swaps Could Let Influenza Jump Species - Scientific American</title><link>https://www.scientificamerican.com/article/how-influenza-reassortment-may-make-bird-flu-more-dangerous/</link></item>
-<item><title>What Would It Take for Bird Flu to Spread among Humans? - Scientific American</title><link>https://www.scientificamerican.com/article/could-bird-flu-spread-between-humans-heres-what-it-would-take/</link></item>
-<item><title>The Invisible Toll of Bird Flu on Wildlife - Scientific American</title><link>https://www.scientificamerican.com/article/bird-flu-is-killing-wildlife-and-experts-fear-the-ecological-toll/</link></item>
-<item><title>Where Did Bird Flu Go? - Scientific American</title><link>https://www.scientificamerican.com/article/bird-flu-is-out-of-the-news-but-still-circulating/</link></item>
-<item><title>How to Protect Pets and Backyard Chickens from Bird Flu - Scientific American</title><link>https://www.scientificamerican.com/article/how-to-protect-pets-and-backyard-chickens-from-bird-flu/</link></item>
-<item><title>Can You Get Bird Flu from Eggs? Your Egg Safety Questions Answered - Scientific American</title><link>https://www.scientificamerican.com/article/bird-flu-salmonella-and-other-health-risks-from-raw-eggs-explained/</link></item>
-<item><title>Were the Wright Brothers First in Flight? Inside a 1925 Dispute - Scientific American</title><link>https://www.scientificamerican.com/podcast/episode/who-was-first-in-flight-this-1925-scientific-american-piece-dives-into-a/</link></item>
-<item><title>The Surprising Science of Dungeons and Dragons - Scientific American</title><link>https://www.scientificamerican.com/podcast/episode/dropout-tvs-brennan-lee-mulligan-brings-dungeons-and-dragons-to-the-masses/</link></item>
-<item><title>The LIGO Lab Is Pushing the Boundaries of Gravitational-Wave Research - Scientific American</title><link>https://www.scientificamerican.com/podcast/episode/cosmic-explorer-laser-breakthroughs-and-the-next-generation-of-gravitational/</link></item>
-<item><title>Gaffes and blunders (Different types of mistakes) - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2025/07/23/gaffes-and-blunders-different-types-of-mistakes/</link></item>
-<item><title>Japan&amp;#39;s Video Game Rankings, July 14-20 - Anime News Network</title><link>https://www.animenewsnetwork.com/news/2025-07-26/japan-video-game-rankings-july-14-20/.227014</link></item>
-<item><title>Japanese Animation TV Ranking, July 14-20 - Anime News Network</title><link>https://www.animenewsnetwork.com/news/2025-07-26/japanese-animation-tv-ranking-july-14-20/.227015</link></item>
-<item><title>Crunchyroll&amp;#39;s Annecy Moment: A Missed Opportunity for Industry Transformation - Anime News Network</title><link>https://www.animenewsnetwork.com/convention/2025/crunchyroll-annecy-moment-a-missed-opportunity-for-industry-transformation/.225875</link></item>
-<item><title>All the News and Reviews from Anime Expo 2025 - Anime News Network</title><link>https://www.animenewsnetwork.com/convention/2025/all-the-news-and-reviews-from-anime-expo/.226062</link></item>
-<item><title>Going All Out with the Cast of DAN DA DAN Panel at Anime Boston - Anime News Network</title><link>https://www.animenewsnetwork.com/convention/2025/going-all-out-with-the-cast-of-dan-da-dan-panel-at-anime-boston/.224975</link></item>
-<item><title>VShojo Releases Statement Following Talent Exodus - Anime News Network</title><link>https://www.animenewsnetwork.com/interest/2025-07-25/vshojo-releases-statement-following-talent-exodus/.227005</link></item>
-<item><title>VTuber Ironmouse Leaves VShojo, Triggering Exodus of Most of Agency&amp;#39;s Talent (Updated) - Anime News Network</title><link>https://www.animenewsnetwork.com/interest/2025-07-22/vtuber-ironmouse-leaves-vshojo-triggering-exodus-of-most-of-agency-talent/.226905</link></item>
-<item><title>Voice Actor Hina Kino Announces Birth of Son - Anime News Network</title><link>https://www.animenewsnetwork.com/interest/2025-07-21/voice-actor-hina-kino-announces-birth-of-son/.226872</link></item>
-<item><title>Junji Ito Inducted Into the Will Eisner Comic Awards Hall of Fame at San Diego Comic-Con 2025 - Anime News Network</title><link>https://www.animenewsnetwork.com/press-release/2025-07-25/junji-ito-inducted-into-the-will-eisner-comic-awards-hall-of-fame-at-san-diego-comic-con-2025/.227038</link></item>
-<item><title>Tokyopop Announced 2025 San Diego Comic-Con Exclusives - Anime News Network</title><link>https://www.animenewsnetwork.com/press-release/2025-07-25/tokyopop-announced-2025-san-diego-comic-con-exclusives/.227037</link></item>
-<item><title>Your Anime Rankings - Best of Summer 2025, Jul 1-21 - Anime News Network</title><link>https://www.animenewsnetwork.com/weekly-ranking/2025/summer/.227040</link></item>
-<item><title>BAND-MAID&amp;#39;s MIKU Kobato Talks About the Future and How the Band Decides on Album Names - Anime News Network</title><link>https://www.animenewsnetwork.com/interview/2025-07-23/band-maid-miku-kobato-talks-about-the-future-and-how-the-band-decides-on-album-names/.226698</link></item>
-<item><title>Fighting for a Better Anime Industry - An Interview with Animator Supporters&amp;#39; Jun Sugawara and Genga-chan - Anime News Network</title><link>https://www.animenewsnetwork.com/interview/2025-07-21/fighting-for-a-better-anime-industry-an-with-animator-supporters-jun-sugawara-and-genga-chan/.225605</link></item>
-<item><title>Reading with Manga One App Editor-in-Chief, NOVELOUS App Producer Yuki Wada - Anime News Network</title><link>https://www.animenewsnetwork.com/interview/2025-07-18/reading-with-manga-one-app-editor-in-chief-novelous-app-producer-yuki-wada/.225182</link></item>
-<item><title>The ANN Aftershow Returns with Spooky Summer Anime Line-up! - Anime News Network</title><link>https://www.animenewsnetwork.com/watch/2025-07-15/the-ann-aftershow-returns-with-spooky-summer-anime-line-up/.226706</link></item>
-<item><title>Global Anime Challenge Unites Industry Veterans to Mentor Aspiring Animators and Tackle Crunch Culture for a Healthier Future - Anime News Network</title><link>https://www.animenewsnetwork.com/interview/2025-07-14/global-anime-challenge-unites-industry-veterans-to-mentor-aspiring-animators-and-tackle-crunch-/.225806</link></item>
-<item><title>Inside the Director&amp;#39;s Toy Box: An Interview with Hiroshi Nagahama at Animazement 2025 - Anime News Network</title><link>https://www.animenewsnetwork.com/interview/2025-07-14/inside-the-director-toy-box-an-with-hiroshi-nagahama-at-animazement-2025/.225297</link></item>
-<item><title>Yaiba Omnibus 1 Manga Review - Anime News Network</title><link>https://www.animenewsnetwork.com/review/yaiba/omnibus-1/.226451</link></item>
-<item><title>I Was Reincarnated as the 7th Prince Season 1 Anime Review - Anime News Network</title><link>https://www.animenewsnetwork.com/review/i-was-reincarnated-as-the-7th-prince/.226628</link></item>
-<item><title>Uma Musume: Cinderella Gray Season 1 Anime Review - Anime News Network</title><link>https://www.animenewsnetwork.com/review/uma-musume/cinderella-gray/season-1/.226776</link></item>
-<item><title>This Week in Games - Pokémon Presents 2025 - Anime News Network</title><link>https://www.animenewsnetwork.com/this-week-in-games/2025-07-25/pokemon-presents-2025/.226874</link></item>
-<item><title>This Week in Anime - Anti-Nostalgia - Anime News Network</title><link>https://www.animenewsnetwork.com/this-week-in-anime/2025-07-24/.226932</link></item>
-<item><title>Answerman - Anime and AI - Anime News Network</title><link>https://www.animenewsnetwork.com/answerman/2025-07-07/.226424</link></item>
-<item><title>Summer 2025 Preview Guide - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/.225217</link></item>
-<item><title>Kaiju No. 8 Season 2 - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-kaiju-no-8-season-2/.225776</link></item>
-<item><title>Nukitashi the Animation - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-nukitashi-the-animation/.225777</link></item>
-<item><title>Sakamoto Days Season 2 - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-sakamoto-days-season-2/.225775</link></item>
-<item><title>Dr. STONE SCIENCE FUTURE Season 2 - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-dr-stone-science-future-season-2/.225772</link></item>
-<item><title>Dealing with Mikadono Sisters Is a Breeze - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-dealing-with-mikadono-sisters-is-a-breeze/.225770</link></item>
-<item><title>New PANTY &amp; STOCKING with GARTERBELT - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-new-panty-and-stocking-with-garterbelt/.225221</link></item>
-<item><title>I Was Reincarnated as the 7th Prince Season 2 - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-i-was-reincarnated-as-the-7th-prince-season-2/.225769</link></item>
-<item><title>The Rising of the Shield Hero Season 4 - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-the-rising-of-the-shield-hero-season-4/.225771</link></item>
-<item><title>Mr. Osomatsu Season 4 - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-mr-osomatsu-season-4/.225766</link></item>
-<item><title>Turkey!-Time to Strike- - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-turkey-time-to-strike/.225767</link></item>
-<item><title>A Couple of Cuckoos Season 2 - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-a-couple-of-cuckoos-season-2/.225768</link></item>
-<item><title>There&amp;#39;s No Freaking Way I&amp;#39;ll Be Your Lover! Unless... - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-there-no-freaking-way-ill-be-your-lover-unless/.225565</link></item>
-<item><title>Grand Blue Dreaming Season 2 - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-grand-blue-dreaming-season-2/.225762</link></item>
-<item><title>See You Tomorrow at the Food Court - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-see-you-tomorrow-at-the-food-court/.225763</link></item>
-<item><title>Puniru is a Kawaii Slime Season 2 - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-puniru-is-a-kawaii-slime-season-2/.225562</link></item>
-<item><title>Apocalypse Bringer Mynoghra - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-apocalypse-bringer-mynoghra/.225557</link></item>
-<item><title>Hotel Inhumans - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-hotel-inhumans/.225560</link></item>
-<item><title>Cultural Exchange With a Game Centre Girl - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-cultural-exchange-with-a-game-centre-girl/.225566</link></item>
-<item><title>CITY The Animation - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-city-the-animation/.225246</link></item>
-<item><title>Uglymug, Epicfighter - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-uglymug-epicfighter/.225564</link></item>
-<item><title>Dekin no Mogura: The Earthbound Mole - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-dekin-no-mogura-the-earthbound-mole/.225765</link></item>
-<item><title>Toilet-Bound Hanako-kun Season 3 - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-toilet-bound-hanako-kun-season-3/.225558</link></item>
-<item><title>Rascal Does Not Dream of Santa Claus - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-rascal-does-not-dream-of-santa-claus/.225240</link></item>
-<item><title>The Summer Hikaru Died - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-the-hikaru-died/.225244</link></item>
-<item><title>With You and the Rain - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-with-you-and-the-rain/.225555</link></item>
-<item><title>My Dress-Up Darling Season 2 - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-my-dress-up-darling-season-2/.225242</link></item>
-<item><title>Scooped Up by an S-Rank Adventurer! - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-scooped-up-by-an-s-rank-adventurer/.225237</link></item>
-<item><title>The Shy Hero and the Assassin Princesses - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-the-shy-hero-and-the-assassin-princesses/.225554</link></item>
-<item><title>Call of the Night Season 2 - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-call-of-the-night-season-2/.225233</link></item>
-<item><title>Betrothed to My Sister&amp;#39;s Ex - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-betrothed-to-my-sister-ex/.225231</link></item>
-<item><title>Secrets of the Silent Witch - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-secrets-of-the-silent-witch/.225232</link></item>
-<item><title>Watari-kun&amp;#39;s ****** Is About to Collapse - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-watari-kun-is-about-to-collapse/.225553</link></item>
-<item><title>Solo Camping for Two - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-solo-camping-for-two/.225773</link></item>
-<item><title>Arknights: RISE FROM EMBER - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-arknights-rise-from-ember/.225236</link></item>
-<item><title>Nyaight of the Living Cat - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-nyaight-of-the-living-cat/.225561</link></item>
-<item><title>The Water Magician - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-the-water-magician/.225552</link></item>
-<item><title>KAMITSUBAKI CITY UNDER CONSTRUCTION - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-kamitsubaki-city-under-construction/.225228</link></item>
-<item><title>DAN DA DAN Season 2 - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-dan-da-dan-season-2/.225230</link></item>
-<item><title>Welcome to the Outcast&amp;#39;s Restaurant! - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-welcome-to-the-outcast-restaurant/.225229</link></item>
-<item><title>Hell Teacher: Jigoku Sensei Nube - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-hell-teacher-jigoku-sensei-nube/.225227</link></item>
-<item><title>Reborn as a Vending Machine, I Now Wander the Dungeon Season 2 - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-reborn-as-a-vending-machine-i-now-wander-the-dungeon-season-2/.225548</link></item>
-<item><title>Onmyo Kaiten Re:Birth Verse - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-onmyo-kaiten-re-birth-verse/.225226</link></item>
-<item><title>Rent-A-Girlfriend Season 4 - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-rent-a-girlfriend-season-4/.225234</link></item>
-<item><title>Necronomico and the Cosmic Horror Show - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-necronomico-and-the-cosmic-horror-show/.225224</link></item>
-<item><title>Detectives These Days Are Crazy! - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-detectives-these-days-are-crazy/.225222</link></item>
-<item><title>Private Tutor to the Duke&amp;#39;s Daughter - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-private-tutor-to-the-duke-daughter/.225241</link></item>
-<item><title>Takopi&amp;#39;s Original Sin - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2025/summer/the-anime-takopi-original-sin/.225220</link></item>
-<item><title>Junji Ito Inducted Into Eisner Hall of Fame - Anime News Network</title><link>https://www.animenewsnetwork.com/news/2025-07-25/junji-ito-inducted-into-eisner-hall-of-fame/.227033</link></item>
-<item><title>Turkey!-Time to Strike- ‒ SEASON PREMIERE - Anime News Network</title><link>https://www.animenewsnetwork.com/review/turkey-time-to-strike/episodes-1-3/.227032</link></item>
-<item><title>“Jujutsu Kaisen Phantom Parade” introduces the brand-new Jujutsu High-era SSR Satoru Gojo &amp; Shoko Ieiri! - Anime News Network</title><link>https://www.animenewsnetwork.com/press-release/2025-07-25/jujutsu-kaisen-phantom-parade-introduces-the-brand-new-jujutsu-high-era-ssr-satoru-gojo-and-shoko-/.226779</link></item>
-<item><title>Rock Band Kankaku Pierrot Disband - Anime News Network</title><link>https://www.animenewsnetwork.com/news/2025-07-25/rock-band-kankaku-pierrot-disband/.227029</link></item>
-<item><title>Dr. STONE SCIENCE FUTURE ‒ Episode 15 - Anime News Network</title><link>https://www.animenewsnetwork.com/review/dr-stone-science-future/episode-15/.227026</link></item>
-<item><title>DAN DA DAN Season 2 ‒ Episode 16 - Anime News Network</title><link>https://www.animenewsnetwork.com/review/dan-da-dan-season-2/episode-16/.227002</link></item>
-<item><title>Bushiroad Releases Statement After Company, Voice Actress Amane Shindō Receive Threats - Anime News Network</title><link>https://www.animenewsnetwork.com/news/2025-07-25/bushiroad-releases-statement-after-company-voice-actress-amane-shindo-receive-threats/.227017</link></item>
-<item><title>Manga Creator Kia Asamiya Receives San Diego Comic-Con International&amp;#39;s Inkpot Award - Anime News Network</title><link>https://www.animenewsnetwork.com/news/2025-07-24/manga-creator-kia-asamiya-receives-san-diego-comic-con-international-inkpot-award/.227000</link></item>
-<item><title>North American Anime, Manga Releases, July 20-26 - Anime News Network</title><link>https://www.animenewsnetwork.com/news/2025-07-24/north-american-anime-manga-releases-july-20-26/.226883</link></item>
-<item><title>There&amp;#39;s No Freaking Way I&amp;#39;ll Be Your Lover! Unless... ‒ SEASON PREMIERE - Anime News Network</title><link>https://www.animenewsnetwork.com/review/there-no-freaking-way-ill-be-your-lover-unless/episodes-1-3/.226970</link></item>
-<item><title>New PANTY &amp; STOCKING with GARTERBELT ‒ Episode 3 - Anime News Network</title><link>https://www.animenewsnetwork.com/review/new-panty-and-stocking-with-garterbelt/episode-3/.226968</link></item>
-<item><title>Clevatess ‒ Episode 4 - Anime News Network</title><link>https://www.animenewsnetwork.com/review/clevatess/episode-4/.226961</link></item>
-<item><title>Reborn as a Vending Machine, I Now Wander the Dungeon Season 2 ‒ Episode 4 - Anime News Network</title><link>https://www.animenewsnetwork.com/review/reborn-as-a-vending-machine-i-now-wander-the-dungeon-season-2/episode-4/.226959</link></item>
-<item><title>Aniplex, Sony Music Tease Original TV Anime With &amp;#39;Music x Hero&amp;#39; Theme - Anime News Network</title><link>https://www.animenewsnetwork.com/news/2025-07-24/aniplex-sony-music-tease-original-tv-anime-with-music-x-hero-theme/.226985</link></item>
-<item><title>Bandai Namco, Sony Sign Strategic Business Partnership - Anime News Network</title><link>https://www.animenewsnetwork.com/news/2025-07-24/bandai-namco-sony-sign-strategic-business-partnership/.226982</link></item>
-<item><title>Philippine Dub Veteran Jefferson Utanes Launches GoFundMe Crowdfunding Campaign to Cover Cost of Lifesaving Surgery - Anime News Network</title><link>https://www.animenewsnetwork.com/news/2025-07-24/philippine-dub-veteran-jefferson-utanes-launches-gofundme-crowdfunding-campaign-to-cover-cost-of-/.226981</link></item>
-<item><title>Comic-Con Peeks at New &amp;#39;Alien&amp;#39; and &amp;#39;Avatar&amp;#39; Series, Plus &amp;#39;Predator&amp;#39; and &amp;#39;Coyote vs. Acme&amp;#39; Movies - Slashdot</title><link>https://entertainment.slashdot.org/story/25/07/27/0131241/comic-con-peeks-at-new-alien-and-avatar-series-plus-predator-and-coyote-vs-acme-movies</link></item>
-<item><title>iPadOS 26 preview: The rare software update that makes (most) old hardware feel new - Ars Technica</title><link>https://arstechnica.com/gadgets/2025/07/ipados-26-preview-the-rare-software-update-that-makes-most-old-hardware-feel-new/</link></item>
-<item><title>Microsoft to stop using China-based teams to support Department of Defense - Ars Technica</title><link>https://arstechnica.com/security/2025/07/microsoft-to-stop-using-china-based-teams-to-support-department-of-defense/</link></item>
-<item><title>This aerogel and some sun could make saltwater drinkable - Ars Technica</title><link>https://arstechnica.com/science/2025/07/this-aerogel-and-some-sun-could-make-saltwater-drinkable/</link></item>
-<item><title>After BlackSuit is taken down, new ransomware group Chaos emerges - Ars Technica</title><link>https://arstechnica.com/security/2025/07/after-blacksuit-is-taken-down-new-ransomware-group-chaos-emerges/</link></item>
-<item><title>Starlink kept me connected to the Internet without fail—until Thursday - Ars Technica</title><link>https://arstechnica.com/space/2025/07/starlink-kept-me-connected-to-the-internet-without-fail-until-thursday/</link></item>
-<item><title>North Korean hackers ran US-based “laptop farm” from Arizona woman’s home - Ars Technica</title><link>https://arstechnica.com/security/2025/07/north-korean-hackers-ran-us-based-laptop-farm-from-arizona-womans-home/</link></item>
-<item><title>Widely panned arsenic life paper gets retracted—15 years after brouhaha - Ars Technica</title><link>https://arstechnica.com/science/2025/07/widely-panned-arsenic-life-paper-gets-retracted-15-years-after-brouhaha/</link></item>
-<item><title>Echelon kills smart home gym equipment offline capabilities with update - Ars Technica</title><link>https://arstechnica.com/gadgets/2025/07/firmware-update-hinders-echelon-smart-home-gym-equipments-ability-to-work-offline/</link></item>
-<item><title>OpenAI’s most capable AI model, GPT-5, may be coming in August - Ars Technica</title><link>https://arstechnica.com/ai/2025/07/openais-most-capable-ai-model-gpt-5-may-be-coming-in-august/</link></item>
-<item><title>Delta’s AI spying to “jack up” prices must be banned, lawmakers say - Ars Technica</title><link>https://arstechnica.com/tech-policy/2025/07/deltas-ai-spying-to-jack-up-prices-must-be-banned-lawmakers-say/</link></item>
-<item><title>Marine biologist for a day: Ars goes shark tagging - Ars Technica</title><link>https://arstechnica.com/science/2025/07/marine-biologist-for-a-day-ars-goes-shark-tagging/</link></item>
-<item><title>Mistral’s new “environmental audit” shows how much AI is hurting the planet - Ars Technica</title><link>https://arstechnica.com/ai/2025/07/mistrals-new-environmental-audit-shows-how-much-ai-is-hurting-the-planet/</link></item>
-<item><title>Going chain-free with the Priority Gemini gravel bike - Ars Technica</title><link>https://arstechnica.com/cars/2025/07/going-chain-free-with-the-priority-apollo-gravel-bike/</link></item>
-<item><title>Remembering Descent, the once-popular, fully 3D 6DOF shooter - Ars Technica</title><link>https://arstechnica.com/gaming/2025/07/remembering-descent-the-once-popular-fully-3d-6dof-shooter/</link></item>
-<item><title>Skydance deal allows Trump’s FCC to “censor speech” and “silence dissent” on CBS - Ars Technica</title><link>https://arstechnica.com/tech-policy/2025/07/skydance-deal-allows-trumps-fcc-to-censor-speech-and-silence-dissent-on-cbs/</link></item>
-<item><title>The electric Stark Varg EX is brutally fast but a little too unrefined - Ars Technica</title><link>https://arstechnica.com/cars/2025/07/the-stark-varg-ex-motorbike-is-an-all-terrain-all-electric-weapon/</link></item>
-<item><title>Supply-chain attacks on open source software are getting out of hand - Ars Technica</title><link>https://arstechnica.com/security/2025/07/open-source-repositories-are-seeing-a-rash-of-supply-chain-attacks/</link></item>
-<item><title>Inventor claims bleach injections will destroy cancer tumors - Ars Technica</title><link>https://arstechnica.com/health/2025/07/inventor-claims-bleach-injections-will-destroy-cancer-tumors/</link></item>
-<item><title>The 2025 Audi RS 3 is a five-cylinder firecracker - Ars Technica</title><link>https://arstechnica.com/cars/2025/07/the-2025-audi-rs-3-is-a-five-cylinder-firecracker/</link></item>
-<item><title>Rocket Report: Channeling the future at Wallops; SpaceX recovers rocket wreckage - Ars Technica</title><link>https://arstechnica.com/space/2025/07/rocket-report-channeling-the-future-at-wallops-spacex-recovers-rocket-wreckage/</link></item>
-<item><title>Lawmakers writing NASA’s budget want a cheaper upper stage for the SLS rocket - Ars Technica</title><link>https://arstechnica.com/space/2025/07/lawmakers-writing-nasas-budget-want-a-cheaper-upper-stage-for-the-sls-rocket/</link></item>
-<item><title>Two major AI coding tools wiped out user data after making cascading mistakes - Ars Technica</title><link>https://arstechnica.com/information-technology/2025/07/ai-coding-assistants-chase-phantoms-destroy-real-user-data/</link></item>
-<item><title>Hackers—hope to defect to Russia? Don’t Google “defecting to Russia.” - Ars Technica</title><link>https://arstechnica.com/security/2025/07/hackers-hope-to-defect-to-russia-dont-google-defecting-to-russia/</link></item>
-<item><title>Google’s new “Web Guide” will use AI to organize your search results - Ars Technica</title><link>https://arstechnica.com/ai/2025/07/googles-new-web-guide-will-use-ai-to-organize-your-search-results/</link></item>
-<item><title>Trump, who promised to save TikTok, threatens to shut down TikTok - Ars Technica</title><link>https://arstechnica.com/tech-policy/2025/07/tiktok-will-shut-down-soon-if-china-wont-agree-to-trumps-deal-official-says/</link></item>
-<item><title>Trump’s order to make chatbots anti-woke is unconstitutional, senator says - Ars Technica</title><link>https://arstechnica.com/tech-policy/2025/07/gop-ignores-groks-right-wing-bias-in-anti-woke-chatbot-fight-democrat-claims/</link></item>
-<item><title>Nvidia AI chips worth $1B smuggled to China after Trump export controls - Ars Technica</title><link>https://arstechnica.com/ai/2025/07/nvidia-ai-chips-worth-1b-smuggled-to-china-after-trump-export-controls/</link></item>
-<item><title>Study sheds light on why some people keep self-sabotaging - Ars Technica</title><link>https://arstechnica.com/science/2025/07/study-sheds-light-on-why-some-people-keep-self-sabotaging/</link></item>
-<item><title>Some VMware perpetual license owners are unable to download security patches - Ars Technica</title><link>https://arstechnica.com/information-technology/2025/07/some-vmware-perpetual-license-owners-are-unable-to-download-security-patches/</link></item>
-<item><title>Once a relative haven for adult games, itch.io begins removing explicit titles - Ars Technica</title><link>https://arstechnica.com/gaming/2025/07/once-a-relative-haven-for-adult-games-itch-io-begins-removing-explicit-titles/</link></item>
-<item><title>Six lesser-known features to like in the macOS 26 Tahoe public beta - Ars Technica</title><link>https://arstechnica.com/gadgets/2025/07/six-lesser-known-features-to-like-in-the-macos-26-tahoe-public-beta/</link></item>
-<item><title>Apple releases public betas of Liquid Glass-ified next-gen software updates - Ars Technica</title><link>https://arstechnica.com/gadgets/2025/07/public-betas-of-ios-26-macos-26-ipados-26-and-other-oses-now-available/</link></item>
-<item><title>RFK Jr.’s anti-vaccine group sues him: “This is not the Bobby we know” - Ars Technica</title><link>https://arstechnica.com/health/2025/07/anti-vaccine-group-founded-by-rfk-jr-sues-rfk-jr-over-vaccine-task-force/</link></item>
-<item><title>White House unveils sweeping plan to “win” global AI race through deregulation - Ars Technica</title><link>https://arstechnica.com/ai/2025/07/white-house-unveils-sweeping-plan-to-win-global-ai-race-through-deregulation/</link></item>
-<item><title>SpaceX launches a pair of NASA satellites to probe the origins of space weather - Ars Technica</title><link>https://arstechnica.com/space/2025/07/spacex-launches-a-pair-of-nasa-satellites-to-probe-the-origins-of-space-weather/</link></item>
-<item><title>OpenAI and partners are building a massive AI data center in Texas - Ars Technica</title><link>https://arstechnica.com/ai/2025/07/openai-and-partners-are-building-a-massive-ai-data-center-in-texas/</link></item>
-<item><title>Posting Guidelines - Ars Technica</title><link>https://arstechnica.com/ars-technica-posting-guidelines-v3-0/</link></item>
+<lastBuildDate>Mon, 28 Jul 2025 08:38:22 +0800</lastBuildDate>
+<item><title>2025年第二季度企业家问卷调查报告 - 中国人民银行-调查统计司</title><link>http://www.pbc.gov.cn/diaochatongjisi/116219/116227/5791338/index.html</link></item>
+<item><title>2025年第二季度银行家问卷调查报告 - 中国人民银行-调查统计司</title><link>http://www.pbc.gov.cn/diaochatongjisi/116219/116227/5791332/index.html</link></item>
+<item><title>2025年第二季度城镇储户问卷调查报告 - 中国人民银行-调查统计司</title><link>http://www.pbc.gov.cn/diaochatongjisi/116219/116227/5791327/index.html</link></item>
+<item><title>2025年第一季度企业家问卷调查报告 - 中国人民银行-调查统计司</title><link>http://www.pbc.gov.cn/diaochatongjisi/116219/116227/5791318/index.html</link></item>
+<item><title>2025年第一季度银行家问卷调查报告 - 中国人民银行-调查统计司</title><link>http://www.pbc.gov.cn/diaochatongjisi/116219/116227/5791313/index.html</link></item>
+<item><title>2025年第一季度城镇储户问卷调查报告 - 中国人民银行-调查统计司</title><link>http://www.pbc.gov.cn/diaochatongjisi/116219/116227/5791304/index.html</link></item>
+<item><title>This Hardware Brand Is a Well-Kept Designer Secret—And Now You’re In on It - domino</title><link>https://www.domino.com/style-shopping/rocky-mountain-hardware/</link></item>
+<item><title>US Navy champions digital weaponry as decider of future fights - Defense News</title><link>https://www.defensenews.com/cyber/2023/12/01/us-navy-champions-digital-weaponry-as-decider-of-future-fights/</link></item>
+<item><title>NATO picks first flock of startup pitches in push for fresh tech - Defense News</title><link>https://www.defensenews.com/global/europe/2023/12/01/nato-picks-first-flock-of-startup-pitches-in-push-for-fresh-tech/</link></item>
+<item><title>NATO deepens cyber coalition with Asian partners - Defense News</title><link>https://www.defensenews.com/cyber/2023/12/01/nato-deepens-cyber-coalition-with-asian-partners/</link></item>
+<item><title>Anduril reveals Roadrunner drone, mum on first US customer - Defense News</title><link>https://www.defensenews.com/unmanned/2023/12/01/anduril-reveals-roadrunner-drone-mum-on-first-us-customer/</link></item>
+<item><title>Defense Innovation Unit to host Replicator technology summit - Defense News</title><link>https://www.defensenews.com/battlefield-tech/2023/11/30/defense-innovation-unit-to-host-replicator-technology-summit/</link></item>
+<item><title>Seven questions with BAE Systems’ US chief executive - Defense News</title><link>https://www.defensenews.com/industry/2023/11/30/seven-questions-with-bae-systems-us-chief-executive/</link></item>
+<item><title>First US submarine repairs in Australia scheduled for summer - Defense News</title><link>https://www.defensenews.com/naval/2023/11/30/first-us-submarine-repairs-in-australia-scheduled-for-summer/</link></item>
+<item><title>Canada to buy Boeing-made Poseidons in $5.9 billion deal - Defense News</title><link>https://www.defensenews.com/air/2023/11/30/canada-to-buy-boeing-made-poseidons-in-59-billion-deal/</link></item>
+<item><title>Bill urges Pentagon to speed JADC2 transition in focus on Indo-Pacific - Defense News</title><link>https://www.defensenews.com/battlefield-tech/c2-comms/2023/11/30/bill-urges-pentagon-to-speed-jadc2-transition-in-focus-on-indo-pacific/</link></item>
+<item><title>Marine Corps looks at ocean glider for rapid resupply to fight China - Defense News</title><link>https://www.defensenews.com/news/your-marine-corps/2023/11/30/marine-corps-looks-at-ocean-glider-for-rapid-resupply-to-fight-china/</link></item>
+<item><title>Hope Hodge Seck - Defense News</title><link>https://www.defensenews.com/author/Hope</link></item>
+<item><title>Seeing is believing in biomedicine, which isn&amp;#39;t great when AI gets it wrong - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/27/biomedviz_ai_wrong_problems/</link></item>
+<item><title>KKR considers acquiring ST Telemedia Global Data Centres at $5bn valuation - DCD</title><link>https://www.datacenterdynamics.com/en/news/kkr-considers-acquiring-st-telemedia-global-data-centres-at-5bn-valuation/</link></item>
+<item><title>Soluna closes $20m funding round for 35MW Project Kati data center in Texas - DCD</title><link>https://www.datacenterdynamics.com/en/news/soluna-closes-20m-funding-round-for-35mw-project-kati-data-center-in-texas/</link></item>
+<item><title>Telco Q1 2026 results: BT continues fiber push as Vodafone fights back in Germany - DCD</title><link>https://www.datacenterdynamics.com/en/news/telco-q1-2026-results-bt-continues-fiber-push-as-vodafone-fights-back-in-germany/</link></item>
+<item><title>DayOne breaks ground on 20MW data center in Singapore - DCD</title><link>https://www.datacenterdynamics.com/en/news/dayone-breaks-ground-on-20mw-data-center-in-singapore/</link></item>
+<item><title>European cloud providers hold 15% of local market share - Synergy Research - DCD</title><link>https://www.datacenterdynamics.com/en/news/european-cloud-providers-hold-15-of-local-market-share-synergy-research/</link></item>
+<item><title>Real estate firm Atlas Capital Group may develop 1m square foot data center in Connecticut - DCD</title><link>https://www.datacenterdynamics.com/en/news/real-estate-firm-atlas-capital-group-may-develop-1m-square-foot-data-center-in-connecticut/</link></item>
+<item><title>Meta signs 600MW PPA with Enbridge in Texas - DCD</title><link>https://www.datacenterdynamics.com/en/news/meta-signs-600mw-ppa-with-enbridge-in-texas/</link></item>
+<item><title>Sparkle and Algérie Télécom plan Italy-Algeria subsea cable - DCD</title><link>https://www.datacenterdynamics.com/en/news/sparkle-and-alg%C3%A9rie-t%C3%A9l%C3%A9com-plan-italy-algeria-subsea-cable/</link></item>
+<item><title>Chinese government plans data center capacity reseller network amid overbuild concerns - DCD</title><link>https://www.datacenterdynamics.com/en/news/chinese-government-plans-data-center-capacity-reseller-network-amid-overbuild-concerns/</link></item>
+<item><title>EdgeCore secures $235 million in ABS financing - DCD</title><link>https://www.datacenterdynamics.com/en/news/edgecore-secures-235-million-in-abs-financing/</link></item>
+<item><title>Infleqtion partners with Illinois quantum institutions for utility-scale, neutral atom deployment - DCD</title><link>https://www.datacenterdynamics.com/en/news/infleqtion-partners-with-illinois-quantum-institutions-for-utility-scale-neutral-atom-deployment/</link></item>
+<item><title>Liberty Global to cut hundreds of jobs as part of restructure - DCD</title><link>https://www.datacenterdynamics.com/en/news/liberty-global-to-cut-hundreds-of-jobs-as-part-of-restructure/</link></item>
+<item><title>Globalstar to expand satellite ground stations sites in Canada - DCD</title><link>https://www.datacenterdynamics.com/en/news/globalstar-to-expand-satellite-ground-stations-sites-in-canada/</link></item>
+<item><title>Aligned to develop 200-acre data center campus in Coshocton, Ohio - DCD</title><link>https://www.datacenterdynamics.com/en/news/aligned-to-develop-200-acre-data-center-campus-in-coshocton-ohio/</link></item>
+<item><title>Ionos deploys Nvidia DGX H200 system in Germany data centers - DCD</title><link>https://www.datacenterdynamics.com/en/news/ionos-deploys-nvidia-dgx-h200-system-in-germany-data-centers/</link></item>
+<item><title>Former AT&amp;T data center up for sale in Orlando, Florida - DCD</title><link>https://www.datacenterdynamics.com/en/news/former-att-data-center-up-for-sale-in-orlando-florida/</link></item>
+<item><title>Mastercard breaks ground on offgrid solar project to power O’Fallon data center in Missouri - DCD</title><link>https://www.datacenterdynamics.com/en/news/mastercard-breaks-ground-on-offgrid-solar-project-to-power-ofallon-data-center-in-missouri/</link></item>
+<item><title>Dataprana launches 30MW immersion cooled crypto data center site in Texas - DCD</title><link>https://www.datacenterdynamics.com/en/news/dataprana-launches-30mw-immersion-cooled-crypto-data-center-site-in-texas/</link></item>
+<item><title>T-Mobile, KKR finalize Metronet fiber JV acquisition - DCD</title><link>https://www.datacenterdynamics.com/en/news/t-mobile-kkr-finalize-metronet-fiber-jv-acquisition/</link></item>
+<item><title>NTT tops out latest Jakarta data center, Indonesia - DCD</title><link>https://www.datacenterdynamics.com/en/news/ntt-tops-out-latest-jakarta-data-center-indonesia/</link></item>
+<item><title>25 Words That Don’t Mean What They Used To - Mental Floss</title><link>https://www.mentalfloss.com/article/505181/25-words-don’t-mean-what-they-used</link></item>
+<item><title>The Diplomat - The Mail &amp; Guardian</title><link>https://mg.co.za/tag/the-diplomat/</link></item>
+<item><title>Rwanda’s security forays buck the trend - The Mail &amp; Guardian</title><link>https://mg.co.za/thought-leader/opinion/2025-07-26-rwandas-security-forays-buck-the-trend/</link></item>
+<item><title>Erika van der Merwe - The Mail &amp; Guardian</title><link>https://mg.co.za/author/erika-van-der-merwe/</link></item>
+<item><title>Standard Bank - The Mail &amp; Guardian</title><link>https://mg.co.za/author/standard-bank/</link></item>
+<item><title>Editorial: It’s time to be decisive, Mr President - The Mail &amp; Guardian</title><link>https://mg.co.za/editorial/2025-07-25-editorial-its-time-to-be-decisive-mr-president/</link></item>
+<item><title>Small win for activists, but SA’s HIV projects won’t reopen - The Mail &amp; Guardian</title><link>https://mg.co.za/health/2025-07-23-small-win-for-activists-but-sas-hiv-projects-wont-reopen/</link></item>
+<item><title>SIU investigation into lottery corruption hamstrung by red tape - The Mail &amp; Guardian</title><link>https://mg.co.za/news/2025-07-23-siu-investigation-into-lottery-corruption-hamstrung-by-red-tape/</link></item>
+<item><title>Raymond Joseph - The Mail &amp; Guardian</title><link>https://mg.co.za/author/raymond-joseph/</link></item>
+<item><title>Come now, spill the beans on Sol - The Mail &amp; Guardian</title><link>https://mg.co.za/thought-leader/opinion/2025-07-24-come-now-spill-the-beans-on-sol/</link></item>
+<item><title>Siyavuya Madikane - The Mail &amp; Guardian</title><link>https://mg.co.za/author/siyavuya-madikane/</link></item>
+<item><title>Traditional authorities: Democratic governance must be reclaimed - The Mail &amp; Guardian</title><link>https://mg.co.za/thought-leader/2025-07-24-traditional-authorities-democratic-governance-must-be-reclaimed/</link></item>
+<item><title>Wandile Zondo - The Mail &amp; Guardian</title><link>https://mg.co.za/author/wandile-zondo/</link></item>
+<item><title>Agri-tech may be South Africa’s new frontier - The Mail &amp; Guardian</title><link>https://mg.co.za/thought-leader/2025-07-24-agri-tech-may-be-south-africas-new-frontier/</link></item>
+<item><title>Zanele Mabaso - The Mail &amp; Guardian</title><link>https://mg.co.za/author/zanele-mabaso/</link></item>
+<item><title>Taking back the Soweto night with Nomsa Mazwai and Rapsody - The Mail &amp; Guardian</title><link>https://mg.co.za/friday/2025-07-26-taking-back-the-soweto-night-with-nomsa-mazwai-and-rapsody/</link></item>
+<item><title>Success is spelt Sarkodie - The Mail &amp; Guardian</title><link>https://mg.co.za/friday/2025-07-25-success-is-spelt-sarkodie/</link></item>
+<item><title>Nomisupasta and Rapsody: The collab that took 13 years - The Mail &amp; Guardian</title><link>https://mg.co.za/friday/2025-07-25-nomisupasta-and-rapsody-the-collab-that-took-13-years/</link></item>
+<item><title>Diary: Tutu Puoane to tour in South Africa, Cold Chinese Food set to release new album in July and The Capitec handmadeAFRICA at Decorex - The Mail &amp; Guardian</title><link>https://mg.co.za/friday/2025-07-25-diary-tutu-puoane-to-tour-in-south-africa-cold-chinese-food-set-to-release-new-album-in-july-and-the-capitec-handmadeafrica-at-decorex/</link></item>
+<item><title>The arts of Senzeni Marasela and life of Theodorah - The Mail &amp; Guardian</title><link>https://mg.co.za/friday/2025-07-24-the-arts-of-senzeni-marasela-and-life-of-theodorah/</link></item>
+<item><title>People back climate policy when weather events feel personal, new study finds - The Mail &amp; Guardian</title><link>https://mg.co.za/the-green-guardian/2025-07-14-people-back-climate-policy-when-weather-events-feel-personal-new-study-finds/</link></item>
+<item><title>Africa’s freshwater fish crisis: 26% of species threatened with extinction - The Mail &amp; Guardian</title><link>https://mg.co.za/the-green-guardian/2025-07-13-africas-freshwater-fish-crisis-26-of-species-threatened-with-extinction/</link></item>
+<item><title>Climate crisis puts older adults at high risk from extreme heat, Unep warns - The Mail &amp; Guardian</title><link>https://mg.co.za/the-green-guardian/2025-07-13-climate-crisis-puts-older-adults-at-high-risk-from-extreme-heat-unep-warns/</link></item>
+<item><title>Antiretroviral drugs in South Africa’s rivers raise environmental concerns - The Mail &amp; Guardian</title><link>https://mg.co.za/the-green-guardian/2025-07-10-antiretroviral-drugs-in-south-africas-rivers-raise-environmental-concerns/</link></item>
+<item><title>NWU vice-chancellor, Prof Bismark Tyobeka, pleads for aligned academic hospital in North West - The Mail &amp; Guardian</title><link>https://mg.co.za/press-releases/2025-07-25-nwu-vice-chancellor-prof-bismark-tyobeka-pleads-for-aligned-academic-hospital-in-north-west/</link></item>
+<item><title>R44 billion: The big bucks of hunting tourism - The Mail &amp; Guardian</title><link>https://mg.co.za/press-releases/2025-07-16-r44-billion-the-big-bucks-of-hunting-tourism/</link></item>
+<item><title>The hidden cost of a broken funding system: SA’s public universities - The Mail &amp; Guardian</title><link>https://mg.co.za/press-releases/2025-07-10-the-hidden-cost-of-a-broken-funding-system-sas-public-universities/</link></item>
+<item><title>Prof Bismark Tyobeka appointed chairperson of Ministerial Expert Panel on Nuclear - The Mail &amp; Guardian</title><link>https://mg.co.za/press-releases/2025-07-10-prof-bismark-tyobeka-appointed-chairperson-of-ministerial-expert-panel-on-nuclear/</link></item>
+<item><title>The South African Council for the Quality Surveying Professions (SACQSP) - The Mail &amp; Guardian</title><link>https://careers.mg.co.za/listing/personal-assistant/</link></item>
+<item><title>UNIVERSITY OF THE WITWATERSRAND (WITS) - The Mail &amp; Guardian</title><link>https://careers.mg.co.za/listing/senior-lecturer-or-lecturer-in-geotechnical-engineering/</link></item>
+<item><title>Senior Lecturer in Structural Engineering. - The Mail &amp; Guardian</title><link>https://careers.mg.co.za/listing/senior-lecturer-in-structural-engineering-2/</link></item>
+<item><title>Mozambican children die after US funding cuts: Who bears responsibility? - The Mail &amp; Guardian</title><link>https://mg.co.za/africa/2025-07-21-mozambican-children-die-after-us-funding-cuts-who-bears-responsibility/</link></item>
+<item><title>Jesse Copelyn - The Mail &amp; Guardian</title><link>https://mg.co.za/author/jesse-copelyn/</link></item>
+<item><title>‘Fortress Europe’s’ African victims - The Mail &amp; Guardian</title><link>https://mg.co.za/africa/2025-07-17-fortress-europes-african-victims/</link></item>
+<item><title>Adekeye Adebajo - The Mail &amp; Guardian</title><link>https://mg.co.za/author/adekeye-adebajo/</link></item>
+<item><title>Ghana endorses bold campaign for a visa-free Africa - The Mail &amp; Guardian</title><link>https://mg.co.za/africa/2025-07-15-ghana-endorses-bold-campaign-for-a-visa-free-africa/</link></item>
+<item><title>Hasina Kathrada - The Mail &amp; Guardian</title><link>https://mg.co.za/author/hasina-kathrada/</link></item>
+<item><title>Poultry sector recovering, prices not expected to increase - The Mail &amp; Guardian</title><link>https://mg.co.za/business/2025-07-24-poultry-sector-recovering-prices-not-expected-to-increase/</link></item>
+<item><title>Inflation ticks up to 3% in June on the back of higher food prices - The Mail &amp; Guardian</title><link>https://mg.co.za/business/2025-07-23-inflation-ticks-up-to-3-in-june-on-the-back-of-higher-food-prices/</link></item>
+<item><title>South Africa must unlock financial sector for growth, says African Development Bank - The Mail &amp; Guardian</title><link>https://mg.co.za/business/2025-07-23-south-africa-must-unlock-financial-sector-for-growth-says-african-development-bank/</link></item>
+<item><title>Kenny Kunene steps away from Joburg and PA roles - The Mail &amp; Guardian</title><link>https://mg.co.za/politics/2025-07-26-patriotic-alliance-suspends-kenny-kunene-pending-investigation/</link></item>
+<item><title>Zille vs Mbalula: How the DA’s ultimatum toppled Nkabane - The Mail &amp; Guardian</title><link>https://mg.co.za/politics/2025-07-25-zille-vs-mbalula-how-the-das-ultimatum-toppled-nkabane/</link></item>
+<item><title>Finance MMC job in Jozi a political hotbed - The Mail &amp; Guardian</title><link>https://mg.co.za/politics/2025-07-24-finance-mmc-job-in-jozi-a-political-hotbed/</link></item>
+<item><title>New science hub bridges lab-skills gap for underprivileged students - The Mail &amp; Guardian</title><link>https://mg.co.za/education/2025-07-22-new-science-hub-bridges-lab-skills-gap-for-underprivileged-students/</link></item>
+<item><title>Gauteng needs 200 more schools, says education MEC Chiloane - The Mail &amp; Guardian</title><link>https://mg.co.za/education/2025-06-24-gauteng-needs-200-more-schools-says-education-mec-chiloane/</link></item>
+<item><title>The Real Prince reigns supreme at Durban July - The Mail &amp; Guardian</title><link>https://mg.co.za/sport/2025-07-06-the-real-prince-reigns-supreme-at-durban-july/</link></item>
+<item><title>BAL taking flight in fifth season - The Mail &amp; Guardian</title><link>https://mg.co.za/sport/2025-06-13-bal-taking-flight-in-fifth-season/</link></item>
+<item><title>Refiloe Seiboko - The Mail &amp; Guardian</title><link>https://mg.co.za/author/refiloe-seiboko/</link></item>
+<item><title>G20 youth confront challenges of multilateral cooperation, national sovereignty - The Mail &amp; Guardian</title><link>https://mg.co.za/world/2025-06-27-g20-youth-confront-challenges-of-multilateral-cooperation-national-sovereignty/</link></item>
+<item><title>连平 等：下半年宏观经济运行八大 - 爱思想</title><link>https://www.aisixiang.com/data/165300.html</link></item>
+<item><title>刘文强：推动人工智能创新突破和跨 - 爱思想</title><link>https://www.aisixiang.com/data/165275.html</link></item>
+<item><title>逄先知：抗日民族统一战线的几个问 - 爱思想</title><link>https://www.aisixiang.com/data/165295.html</link></item>
+<item><title>盛磊：打通堵点释放财政政策长期效 - 爱思想</title><link>https://www.aisixiang.com/data/165279.html</link></item>
+<item><title>黄晓春：习近平总书记现代化人民城 - 爱思想</title><link>https://www.aisixiang.com/data/165273.html</link></item>
+<item><title>马怀德：构建新时代法学学科体系 - 爱思想</title><link>https://www.aisixiang.com/data/165296.html</link></item>
+<item><title>刘元春：理性认识当前中国宏观经济 - 爱思想</title><link>https://www.aisixiang.com/data/165397.html</link></item>
+<item><title>顾洁 刘炜：生成式人工智能驱动的 - 爱思想</title><link>https://www.aisixiang.com/data/165310.html</link></item>
+<item><title>逯新红：共谱中拉命运共同体新篇章 - 爱思想</title><link>https://www.aisixiang.com/data/165360.html</link></item>
+<item><title>贺雪峰：村庄空心化与适度村级治理 - 爱思想</title><link>https://www.aisixiang.com/data/165344.html</link></item>
+<item><title>蒋立峰：审判战犯是确立二战后国际 - 爱思想</title><link>https://www.aisixiang.com/data/165375.html</link></item>
+<item><title>李忠杰：关于作风建设的五个思考 - 爱思想</title><link>https://www.aisixiang.com/data/165298.html</link></item>
+<item><title>吴士存：做学问就是不停地赶路 - 爱思想</title><link>https://www.aisixiang.com/data/165322.html</link></item>
+<item><title>发展不平衡不充分与因地制宜发展新 - 爱思想</title><link>https://www.aisixiang.com/data/165390.html</link></item>
+<item><title>薛君 陶林：深入学习习近平文化思 - 爱思想</title><link>https://www.aisixiang.com/data/165359.html</link></item>
+<item><title>庄贵阳：为全球生态文明建设贡献中 - 爱思想</title><link>https://www.aisixiang.com/data/165351.html</link></item>
+<item><title>黄承梁：生态环境保护督察制度理论 - 爱思想</title><link>https://www.aisixiang.com/data/165350.html</link></item>
+<item><title>张永生：生态文明引领全球绿色发展 - 爱思想</title><link>https://www.aisixiang.com/data/165287.html</link></item>
+<item><title>罗文东 吕瀚东：中国特色社会主义 - 爱思想</title><link>https://www.aisixiang.com/data/165286.html</link></item>
+<item><title>韩庆祥：中华民族文化主体性在新时 - 爱思想</title><link>https://www.aisixiang.com/data/165252.html</link></item>
+<item><title>高长武：深刻理解把握原创性 - 爱思想</title><link>https://www.aisixiang.com/data/165182.html</link></item>
+<item><title>张国刚：在知识创新中坚守中华文化 - 爱思想</title><link>https://www.aisixiang.com/data/165152.html</link></item>
+<item><title>赵月 邹广文：论新的文化生命体的 - 爱思想</title><link>https://www.aisixiang.com/data/165136.html</link></item>
+<item><title>李权时：论岭南文化的共性与个性— - 爱思想</title><link>https://www.aisixiang.com/data/165112.html</link></item>
+<item><title>杨伊佳 杨河：近代以来中华民族文 - 爱思想</title><link>https://www.aisixiang.com/data/165109.html</link></item>
+<item><title>张北坪：深刻理解坚持党的文化领导 - 爱思想</title><link>https://www.aisixiang.com/data/165099.html</link></item>
+<item><title>简小文：以全面深化改革推进文化强 - 爱思想</title><link>https://www.aisixiang.com/data/165053.html</link></item>
+<item><title>张鲲：社会主义先进文化的历史超越 - 爱思想</title><link>https://www.aisixiang.com/data/164963.html</link></item>
+<item><title>胡军：从“第二个结合”看习近平生 - 爱思想</title><link>https://www.aisixiang.com/data/164935.html</link></item>
+<item><title>王茹：新时代生态文明建设的根本遵 - 爱思想</title><link>https://www.aisixiang.com/data/164919.html</link></item>
+<item><title>张志刚：试论齐鲁文化“多元一体说 - 爱思想</title><link>https://www.aisixiang.com/data/164892.html</link></item>
+<item><title>赵力：重温“两弹一星”精神，架好 - 爱思想</title><link>https://www.aisixiang.com/data/165426.html</link></item>
+<item><title>温新红：他的101岁人生，见证中 - 爱思想</title><link>https://www.aisixiang.com/data/165425.html</link></item>
+<item><title>刘胜院士：人形机器人走向大众生活 - 爱思想</title><link>https://www.aisixiang.com/data/165364.html</link></item>
+<item><title>刘永元：构建支持重大科技基础设施 - 爱思想</title><link>https://www.aisixiang.com/data/165362.html</link></item>
+<item><title>裴瑞敏 肖尤丹：构筑未来发展新优 - 爱思想</title><link>https://www.aisixiang.com/data/165355.html</link></item>
+<item><title>高关中：催生科学的哲学家——亚里 - 爱思想</title><link>https://www.aisixiang.com/data/165327.html</link></item>
+<item><title>何路社 何文魁：袁隆平之梦：杂交 - 爱思想</title><link>https://www.aisixiang.com/data/165190.html</link></item>
+<item><title>任晓刚：以科技现代化赋能中国式现 - 爱思想</title><link>https://www.aisixiang.com/data/165173.html</link></item>
+<item><title>郭国平：超越“不可能三角”：量子 - 爱思想</title><link>https://www.aisixiang.com/data/165170.html</link></item>
+<item><title>刘如：打通科技成果转化“最后一公 - 爱思想</title><link>https://www.aisixiang.com/data/165038.html</link></item>
+<item><title>战鹰：新太空时代的全域战 - 爱思想</title><link>https://www.aisixiang.com/data/165034.html</link></item>
+<item><title>邱锐：以科技管理体制机制改革汇聚 - 爱思想</title><link>https://www.aisixiang.com/data/164872.html</link></item>
+<item><title>丁元竹：开创人工智能时代的新型文 - 爱思想</title><link>https://www.aisixiang.com/data/164866.html</link></item>
+<item><title>王勇：加快构建平等有序的全球经济新秩序 - 爱思想</title><link>https://www.aisixiang.com/data/165477.html</link></item>
+<item><title>韩庆祥 孙昊：中国式现代化的文明底蕴 - 爱思想</title><link>https://www.aisixiang.com/data/165452.html</link></item>
+<item><title>江必新：建设更高水平法治中国值得关注的十大议题 - 爱思想</title><link>https://www.aisixiang.com/data/165450.html</link></item>
+<item><title>干春松：《礼记 •礼运》之“大同”“小康”及其解释史 - 爱思想</title><link>https://www.aisixiang.com/data/165444.html</link></item>
+<item><title>洪银兴：人文经济学：人文与经济相互促进共同繁荣 - 爱思想</title><link>https://www.aisixiang.com/data/165434.html</link></item>
+<item><title>周光权：违反治安管理行为与犯罪的界限 - 爱思想</title><link>https://www.aisixiang.com/data/165486.html</link></item>
+<item><title>沈国明：以实践为导向构建法学自主知识体系 - 爱思想</title><link>https://www.aisixiang.com/data/165484.html</link></item>
+<item><title>柳华文：以发展促人权：中国经验与世界主张 - 爱思想</title><link>https://www.aisixiang.com/data/165463.html</link></item>
+<item><title>郑飞：证据种类法定主义的反思与重构 - 爱思想</title><link>https://www.aisixiang.com/data/165438.html</link></item>
+<item><title>贺城 谢地：马克思主义共同富裕思想的内在逻辑与中国方案 - 爱思想</title><link>https://www.aisixiang.com/data/165485.html</link></item>
+<item><title>田佳禾 卢江：构建高水平社会主义市场经济体制研究 - 爱思想</title><link>https://www.aisixiang.com/data/165483.html</link></item>
+<item><title>王三义：经济的世界与政治的世界——“变局”判断的弹性区间 - 爱思想</title><link>https://www.aisixiang.com/data/165460.html</link></item>
+<item><title>当联系汇率制遇上稳定币 - 爱思想</title><link>https://www.aisixiang.com/data/165459.html</link></item>
+<item><title>刘英：稳定币并非无风险 - 爱思想</title><link>https://www.aisixiang.com/data/165456.html</link></item>
+<item><title>阚道远：完善党中央重大决策部署落实机制的政治意蕴与实践进路 - 爱思想</title><link>https://www.aisixiang.com/data/165481.html</link></item>
+<item><title>张骥：百年未有之大变局下安全与国家治理形态的变革 - 爱思想</title><link>https://www.aisixiang.com/data/165480.html</link></item>
+<item><title>曹以达 来庆立：西方中心主义的文明交往危机及其超越 - 爱思想</title><link>https://www.aisixiang.com/data/165478.html</link></item>
+<item><title>代国玺：政治制度史研究的三个层面及可能 - 爱思想</title><link>https://www.aisixiang.com/data/165470.html</link></item>
+<item><title>郭亮：全过程人民民主如何赋能基层治理 - 爱思想</title><link>https://www.aisixiang.com/data/165467.html</link></item>
+<item><title>张弘：俄乌和谈僵局背后是“三观冲突” - 爱思想</title><link>https://www.aisixiang.com/data/165475.html</link></item>
+<item><title>张洁：中美博弈下的中国周边安全环境: 演进动力、 主要特征与发展趋势 - 爱思想</title><link>https://www.aisixiang.com/data/165474.html</link></item>
+<item><title>张洁：推动命运共同体理念在南海落地生根： 现实基础与路径选择 - 爱思想</title><link>https://www.aisixiang.com/data/165473.html</link></item>
+<item><title>肖宇 陈潇 孙瑶馨：以共建“一带一路”提升制度型开放水平 - 爱思想</title><link>https://www.aisixiang.com/data/165472.html</link></item>
+<item><title>李巨星 张欣：延安时期中共中央机关报对中华民族共同体意识的内容书写、传播实践与现实启示 - 爱思想</title><link>https://www.aisixiang.com/data/165476.html</link></item>
+<item><title>李俊奎 梁丹：精神生产与共享：铸牢中华民族共同体意识的重要维度 - 爱思想</title><link>https://www.aisixiang.com/data/165464.html</link></item>
+<item><title>葛珊 宣朝庆：从结构中的治理精英到能动的精英治理——地方社会治理研究的视角转换 - 爱思想</title><link>https://www.aisixiang.com/data/165421.html</link></item>
+<item><title>卢成仁：如何解释“合作丝厂”的失败——费孝通的工业转型理解及其再阐释 - 爱思想</title><link>https://www.aisixiang.com/data/165420.html</link></item>
+<item><title>吴振华：“拟亲”：情感劳动积极体验视角下的本土养老实践 - 爱思想</title><link>https://www.aisixiang.com/data/165419.html</link></item>
+<item><title>蔡华杰：美丽中国形象的共情叙事与国际传播 - 爱思想</title><link>https://www.aisixiang.com/data/165328.html</link></item>
+<item><title>程曼丽：加快构建中国话语和中国叙事体系 - 爱思想</title><link>https://www.aisixiang.com/data/165324.html</link></item>
+<item><title>钟悠天：以讲好中国故事参与全球文明对话 - 爱思想</title><link>https://www.aisixiang.com/data/165088.html</link></item>
+<item><title>杜占元：深化文明交流互鉴 促进人类发展进步 - 爱思想</title><link>https://www.aisixiang.com/data/165027.html</link></item>
+<item><title>迟宝旭：以全面深化高等教育改革助推教育强国建设 - 爱思想</title><link>https://www.aisixiang.com/data/165458.html</link></item>
+<item><title>任友群：高校如何更好推进“第二个结合” - 爱思想</title><link>https://www.aisixiang.com/data/165424.html</link></item>
+<item><title>陈娟：思政课教师要做教育家精神的践行者 - 爱思想</title><link>https://www.aisixiang.com/data/165418.html</link></item>
+<item><title>刘宇雷：将教育公平贯穿资源赋能和教育培养全过程 - 爱思想</title><link>https://www.aisixiang.com/data/165363.html</link></item>
+<item><title>陆华：以国家安全教育夯实教育强国建设之基 - 爱思想</title><link>https://www.aisixiang.com/data/165333.html</link></item>
+<item><title>王彬彬：孙犁的“情色”话语 - 爱思想</title><link>https://www.aisixiang.com/data/165443.html</link></item>
+<item><title>孙先科：“冯友兰的女儿”：宗璞小说中的“父/女”关系原型及美学呈现 - 爱思想</title><link>https://www.aisixiang.com/data/165442.html</link></item>
+<item><title>杨扬 朱一田 等：戏剧、文学及其它——有关莫言剧作《鳄鱼》的一堂讨论课 - 爱思想</title><link>https://www.aisixiang.com/data/165441.html</link></item>
+<item><title>袁礼：推进国际中文教育专业化发展 - 爱思想</title><link>https://www.aisixiang.com/data/165366.html</link></item>
+<item><title>李丹丹：推动国际中文教育高质量发展 - 爱思想</title><link>https://www.aisixiang.com/data/165365.html</link></item>
+<item><title>赵现海：北部边疆结合部政权与中华文明的统一性 - 爱思想</title><link>https://www.aisixiang.com/data/165462.html</link></item>
+<item><title>张宜强 张钦亚：“古今中西之争”的基础架构与“两个结合”的有效破解 - 爱思想</title><link>https://www.aisixiang.com/data/165453.html</link></item>
+<item><title>郭湛：从历史过程看国运盛衰 - 爱思想</title><link>https://www.aisixiang.com/data/165395.html</link></item>
+<item><title>何朝晖：以全球视角重估雕版印刷 - 爱思想</title><link>https://www.aisixiang.com/data/165388.html</link></item>
+<item><title>胡湘农：再论庄子的处世之道：基于《德充符》叔山无趾章的考察 - 爱思想</title><link>https://www.aisixiang.com/data/165482.html</link></item>
+<item><title>张家昱：论休谟原因理论对亚里士多德四因说的批判 - 爱思想</title><link>https://www.aisixiang.com/data/165479.html</link></item>
+<item><title>韩经太：道论三维：思想根脉与文艺精神 - 爱思想</title><link>https://www.aisixiang.com/data/165469.html</link></item>
+<item><title>张茂泽：论王夫之的黄帝观 - 爱思想</title><link>https://www.aisixiang.com/data/165468.html</link></item>
+<item><title>莫斌：以“自然之思”启蒙的康德哲学 - 爱思想</title><link>https://www.aisixiang.com/data/165465.html</link></item>
+<item><title>王京雪：寂寞的先生——追记语言文字学家李人鉴 - 爱思想</title><link>https://www.aisixiang.com/data/165455.html</link></item>
+<item><title>陶庆：用心用情才能做实调查研究——重温恩格斯《乌培河谷来信》 - 爱思想</title><link>https://www.aisixiang.com/data/165431.html</link></item>
+<item><title>陈心想：古稀之岁重建中国社会学——怀念费孝通先生 - 爱思想</title><link>https://www.aisixiang.com/data/165407.html</link></item>
+<item><title>高仁：推动哲学社会科学知识创新、理论创新、方法创新 - 爱思想</title><link>https://www.aisixiang.com/data/165304.html</link></item>
+<item><title>汤一介：思想自由是最重要的 - 爱思想</title><link>https://www.aisixiang.com/data/165130.html</link></item>
+<item><title>王元丰：马斯克是书呆子还是破局者？ - 爱思想</title><link>https://www.aisixiang.com/data/165121.html</link></item>
+<item><title>杨炎 杨冰：我们的爸爸妈妈 - 爱思想</title><link>https://www.aisixiang.com/data/165078.html</link></item>
+<item><title>汤一介：寻找溪水的源头 - 爱思想</title><link>https://www.aisixiang.com/data/165072.html</link></item>
+<item><title>冯仲平，山西吕梁人，英国兰卡斯特(Lancaster)大学历史学博士（1992)。现任中国社会..... - 爱思想</title><link>https://www.aisixiang.com/thinktank/FengZhongping.html</link></item>
+<item><title>Sense Your Surroundings: Easy DIY Weather Station… - Adafruit Industries</title><link>https://blog.adafruit.com/2025/07/27/sense-your-surroundings-easy-diy-weather-station/</link></item>
+<item><title>Adafruit Weekly Editorial Round-Up: 100 Days Until… - Adafruit Industries</title><link>https://blog.adafruit.com/2025/07/27/adafruit-weekly-editorial-round-up-100-days-until-halloween-mini-neon-sign-prop-n00ds-booster-case-more/</link></item>
+<item><title>Near Future Science Fiction #SciFiSunday - Adafruit Industries</title><link>https://blog.adafruit.com/2025/07/27/near-future-science-fiction-scifisunday/</link></item>
+<item><title>Adafruit New Products this Week: Featuring MagTag… - Adafruit Industries</title><link>https://blog.adafruit.com/2025/07/26/magtag-2025-ed-w-ssd1680/</link></item>
+<item><title>Revisiting The Ringtone Era: Crazy Frog’s Hits Album Came Out 20 Years Ago #Music #History - Adafruit Industries</title><link>https://blog.adafruit.com/2025/07/26/revisiting-the-ringtone-era-crazy-frogs-hits-album-came-out-20-years-ago-music-history/</link></item>
+<item><title>Celestial Gravitational Light in the T-Tauri System @SpaceSaturday - Adafruit Industries</title><link>https://blog.adafruit.com/2025/07/26/celestial-gravitational-light-in-the-t-tauri-system-spacesaturday/</link></item>
+<item><title>Are Colors Geometric? - Adafruit Industries</title><link>https://blog.adafruit.com/2025/07/26/are-colors-geometric/</link></item>
+<item><title>New WipperSnapper Releases, and Telling Time in Adafruit IO Actions. What’s new with Adafruit IO and the Adafruit Learning System. - Adafruit Industries</title><link>https://blog.adafruit.com/2025/07/25/telling-time-io-actions/</link></item>
+<item><title>New Products 7/25/2025 Featuring Adafruit MagTag – 2.9″ Grayscale E-Ink WiFi Display – 2025 Edition with SSD1680! (Video) - Adafruit Industries</title><link>https://blog.adafruit.com/2025/07/25/new-products-7-25-2025-featuring-adafruit-magtag-2-9-grayscale-e-ink-wifi-display-2025-edition-with-ssd1680-video/</link></item>
+<item><title>Chip On Board LEDs - Adafruit Industries</title><link>https://blog.adafruit.com/tag/chip-on-board-leds/</link></item>
+<item><title>stacking header - Adafruit Industries</title><link>https://blog.adafruit.com/tag/stacking-header/</link></item>
+<item><title>Stacking Headers - Adafruit Industries</title><link>https://blog.adafruit.com/tag/stacking-headers/</link></item>
+<item><title>Linux and Raspberry Pi Save a Printer! @Raspberry_Pi #PiDay #RaspberryPi - Adafruit Industries</title><link>https://blog.adafruit.com/2025/07/25/linux-and-raspberry-pi-save-a-printer-raspberry_pi-piday-raspberrypi/</link></item>
+<item><title>John Park’s CircuitPython Parsec: GPIO Switch to Input - Adafruit Industries</title><link>https://blog.adafruit.com/2025/07/25/john-parks-circuitpython-parsec-gpio-switch-to-input/</link></item>
+<item><title>Hubble Catches Intermediate-Sized Black Hole - Adafruit Industries</title><link>https://blog.adafruit.com/2025/07/25/hubble-catches-intermediate-sized-black-hole/</link></item>
+<item><title>The One Big Beautiful Bill is a Historic Investment in Rural Healthcare - The White House</title><link>https://www.whitehouse.gov/articles/2025/07/the-one-big-beautiful-bill-is-a-historic-investment-in-rural-healthcare/</link></item>
+<item><title>President Trump Promised to End Child Sexual Mutilation — and He Delivered - The White House</title><link>https://www.whitehouse.gov/articles/2025/07/president-trump-promised-to-end-child-sexual-mutilation-and-he-delivered/</link></item>
+<item><title>Made in America Week, 2025 - The White House</title><link>https://www.whitehouse.gov/presidential-actions/2025/07/made-in-america-week-2025/</link></item>
+<item><title>Captive Nations Week, 2025 - The White House</title><link>https://www.whitehouse.gov/presidential-actions/2025/07/captive-nations-week-2025/</link></item>
+<item><title>H.R. 4 and H.R. 517 Signed into Law S. 1582 - The White House</title><link>https://www.whitehouse.gov/briefings-statements/2025/07/h-r-4-and-h-r-517-signed-into-law-s-1582/</link></item>
+<item><title>Saving College Sports - The White House</title><link>https://www.whitehouse.gov/presidential-actions/2025/07/saving-college-sports/</link></item>
+<item><title>Ending Crime and Disorder on America’s Streets - The White House</title><link>https://www.whitehouse.gov/presidential-actions/2025/07/ending-crime-and-disorder-on-americas-streets/</link></item>
+<item><title>Fact Sheet: President Donald J. Trump Saves College Sports - The White House</title><link>https://www.whitehouse.gov/fact-sheets/2025/07/fact-sheet-president-donald-j-trump-saves-college-sports/</link></item>
+<item><title>Fact Sheet: President Donald J. Trump Takes Action to End Crime and Disorder on America’s Streets - The White House</title><link>https://www.whitehouse.gov/fact-sheets/2025/07/fact-sheet-president-donald-j-trump-takes-action-to-end-crime-and-disorder-on-americas-streets/</link></item>
+<item><title>Headlines Underscore President Trump’s Promises Kept - The White House</title><link>https://www.whitehouse.gov/articles/2025/07/headlines-underscore-president-trumps-promises-kept/</link></item>
+<item><title>Artist Cleverly Turns Manhole Cover Into a Waffle Maker for a 3D Chalk-Drawn Possum and Squirrel - Laughing Squid</title><link>https://laughingsquid.com/manhole-cover-waffle-maker-chalk-art/</link></item>
+<item><title>Chef Missy Robbins Gives a Tour of Her Three Renowned Italian Restaurants in Williamsburg, Brooklyn - Laughing Squid</title><link>https://laughingsquid.com/missy-robbins-williamsburg-italian-restaurants/</link></item>
+<item><title>A Marvelous Coffee Table With an Embedded Real-Time Traffic Map of Cincinnati, Ohio - Laughing Squid</title><link>https://laughingsquid.com/cincinnati-traffic-coffee-table/</link></item>
+<item><title>Robotic Spy Cuttlefish Documents the Struggle Between a Real Cuttlefish and a Hungry Seal - Laughing Squid</title><link>https://laughingsquid.com/spy-cuttlefish-seal-struggle/</link></item>
+<item><title>The Ingenious Design of the Syphon Coffee Brewer - Laughing Squid</title><link>https://laughingsquid.com/syphon-coffee-brewer/</link></item>
+<item><title>The Most Massive Drum Kits Ever Assembled - Laughing Squid</title><link>https://laughingsquid.com/massive-drum-kits/</link></item>
+<item><title>The History of Chisanbop – A Korean Finger Counting Method Used for Basic Math - Laughing Squid</title><link>https://laughingsquid.com/chisanbop-finger-counting-method/</link></item>
+<item><title>‘Spinal Tap II: The End Continues’ – The Legendary Band Reunites for One Final Concert in New Orleans - Laughing Squid</title><link>https://laughingsquid.com/spinal-tap-ii-the-end-continues/</link></item>
+<item><title>Frédette Lampre of La Machine Gives a TED Talk About the Wonder of Their Giant Mechanical Creatures - Laughing Squid</title><link>https://laughingsquid.com/fredette-lampre-la-machine-ted-talk/</link></item>
+<item><title>A Siamese Cat Named ‘Leonardo da Pinchy’ Steals Expensive Laundry From His Auckland Neighbors - Laughing Squid</title><link>https://laughingsquid.com/siamese-cat-burglar/</link></item>
+<item><title>Chinese Engineers Build an Amazing Series of Trash Cans That Automatically Catch Rubbish in Mid-Air - Laughing Squid</title><link>https://laughingsquid.com/trash-cans-automatically-catch-rubbish/</link></item>
+<item><title>The Complete Canine Family Tree Showing the Relationship Between Foxes, Wolves and Dogs - Laughing Squid</title><link>https://laughingsquid.com/canine-family-tree/</link></item>
+<item><title>Tom Lehrer, Satirical Songwriter and Mathematician, Dies at Age 97 - Slashdot</title><link>https://entertainment.slashdot.org/story/25/07/27/2347205/tom-lehrer-satirical-songwriter-and-mathematician-dies-at-age-97</link></item>
+<item><title>Huawei Shows Off 384-Chip AI Computing System That Rival Nvidia&amp;#39;s Top Product - Slashdot</title><link>https://hardware.slashdot.org/story/25/07/27/2248257/huawei-shows-off-384-chip-ai-computing-system-that-rival-nvidias-top-product</link></item>
+<item><title>Researchers Quietly Planned a Test to Dim Sunlight Over 3,900 Square Miles - Slashdot</title><link>https://news.slashdot.org/story/25/07/27/2146205/researchers-quietly-planned-a-test-to-dim-sunlight-over-3900-square-miles</link></item>
+<item><title>VPN Downloads Surge in UK as New Age-Verification Rules Take Effect - Slashdot</title><link>https://news.slashdot.org/story/25/07/27/1957211/vpn-downloads-surge-in-uk-as-new-age-verification-rules-take-effect</link></item>
+<item><title>Is ChatGPT Making You Stupid? - Slashdot</title><link>https://slashdot.org/story/25/07/27/1818251/is-chatgpt-making-you-stupid</link></item>
+<item><title>&amp;#39;It&amp;#39;s DOOM, but You Can Cut, Copy and Paste Opponents&amp;#39; - Slashdot</title><link>https://games.slashdot.org/story/25/07/27/1640244/its-doom-but-you-can-cut-copy-and-paste-opponents</link></item>
+<item><title>&amp;#39;Fantastic Four&amp;#39; Tops &amp;#39;Superman&amp;#39; Opening, Second-Largest of the Year - Slashdot</title><link>https://entertainment.slashdot.org/story/25/07/26/2225254/fantastic-four-tops-superman-opening-second-largest-of-the-year</link></item>
+<item><title>To Fight Climate Change, Norway Wants to Become Europe&amp;#39;s Carbon Dump - Slashdot</title><link>https://hardware.slashdot.org/story/25/07/26/0358240/to-fight-climate-change-norway-wants-to-become-europes-carbon-dump</link></item>
+<item><title>Creator of 1995 Phishing Tool &amp;#39;AOHell&amp;#39; On Piracy, Script Kiddies, and What He Thinks of AI - Slashdot</title><link>https://idle.slashdot.org/story/25/07/27/0015211/creator-of-1995-phishing-tool-aohell-on-piracy-script-kiddies-and-what-he-thinks-of-ai</link></item>
+<item><title>&amp;#39;Chuck E. Cheese&amp;#39; Handcuffed and Arrested in Florida, Charged with Using a Stolen Credit Card - Slashdot</title><link>https://idle.slashdot.org/story/25/07/27/0532227/chuck-e-cheese-handcuffed-and-arrested-in-florida-charged-with-using-a-stolen-credit-card</link></item>
+<item><title>&amp;#39;Serious Delays&amp;#39; Hit Satellite Mega-Constellations of China&amp;#39;s Starlink Rivals - Slashdot</title><link>https://science.slashdot.org/story/25/07/27/0233215/serious-delays-hit-satellite-mega-constellations-of-chinas-starlink-rivals</link></item>
+<item><title>Did a Vendor&amp;#39;s Leak Help Attackers Exploit Microsoft&amp;#39;s SharePoint Servers? - Slashdot</title><link>https://it.slashdot.org/story/25/07/27/0337218/did-a-vendors-leak-help-attackers-exploit-microsofts-sharepoint-servers</link></item>
+<item><title>Geany-Plugins 2.1 are out - Geany</title><link>https://www.geany.org/news/geany-plugins-21-are-out/</link></item>
+<item><title>Geany 2.1 is out! - Geany</title><link>https://www.geany.org/news/geany-21-is-out/</link></item>
+<item><title>Kiev loses 1,210 troops in all frontline areas in past day — Russia’s top brass - TASS</title><link>https://tass.com/defense/1994755</link></item>
+<item><title>victoria&amp;#39;s secret models - Listal</title><link>https://www.listal.com/list/victorias-secret-models-katiaassier</link></item>
+<item><title>My Ultimate Guide Of Best Young Actresses - Listal</title><link>https://www.listal.com/list/my-ultimate-guide-best-young</link></item>
+<item><title>Breakout Women of 2017 - Listal</title><link>https://www.listal.com/list/breakout-women-of-2017</link></item>
+<item><title>Pferdemädchen [ 2 ] - Listal</title><link>https://www.listal.com/list/pferdemdchen</link></item>
+<item><title>Actresses ~ Cooking (Landscape) - Listal</title><link>https://www.listal.com/list/1-actresses-cooking</link></item>
+<item><title>Paulina Porizkova (Czech Supermodel) - Listal</title><link>https://www.listal.com/list/paulina-porizkova</link></item>
+<item><title>Art of Manliness - 100 Must-Read Books - Listal</title><link>https://www.listal.com/list/art-manliness-100-mustread</link></item>
+<item><title>The Ever So Sexy Jennifer Love Hewitt - Listal</title><link>https://www.listal.com/list/favorite-images-2901</link></item>
+<item><title>Famous Curvy Girls &amp; Larger Ladies - Listal</title><link>https://www.listal.com/list/plussize-celebrities</link></item>
+<item><title>Best Series You&amp;#39;ve Probably Never Heard Of - Listal</title><link>https://www.listal.com/list/best-series-youve-probably-never</link></item>
+<item><title>pink and rosa - Listal</title><link>https://www.listal.com/list/pink-helensmile</link></item>
+<item><title>Anime worth watching - Listal</title><link>https://www.listal.com/list/anime-worth-watching</link></item>
+<item><title>Bad Guys?? But I love them!!! - Listal</title><link>https://www.listal.com/list/bad-guys-but-love-them</link></item>
+<item><title>Medieval Princess - Listal</title><link>https://www.listal.com/list/medieval-princess</link></item>
+<item><title>The Beatles - Studio Albums - Listal</title><link>https://www.listal.com/list/beatles-studio-albums</link></item>
+<item><title>Smallville Beauties Season 1 - Listal</title><link>https://www.listal.com/list/smallville-beauties-season-1</link></item>
+<item><title>♪ My Favorite Kinda Funny Male Voices - Listal</title><link>https://www.listal.com/list/voices-mmilica</link></item>
+<item><title>Marina Laswick is Spectacular - Listal</title><link>https://www.listal.com/list/marina-laswick-is-spectacular</link></item>
+<item><title>The Most Beautiful Queen - Listal</title><link>https://www.listal.com/list/my-favourite-beauty-queen</link></item>
+<item><title>Super Sentai legends cameo in Gokaiger - Listal</title><link>https://www.listal.com/list/gokaiger</link></item>
+<item><title>Favorite Listal Avatars #1 - Listal</title><link>https://www.listal.com/list/favorite-listal-avatars</link></item>
+<item><title>The Evolution of Aimee Teegarden - Listal</title><link>https://www.listal.com/list/evolution-aimee-teegarden</link></item>
+<item><title>Ecstatic Poetry and Writings - Listal</title><link>https://www.listal.com/list/ecstatic</link></item>
+<item><title>Horror Rainbow - Listal</title><link>https://www.listal.com/list/horror-rainbow</link></item>
+<item><title>Mangas With the Greatest Characters - Listal</title><link>https://www.listal.com/list/mangas-greatest-characters-4369</link></item>
+<item><title>Sony Playstation 1&amp;#39;s Obscure Games - Listal</title><link>https://www.listal.com/list/sony-playstation-1s-obscure-games</link></item>
+<item><title>Favourite movie/tv couples - Listal</title><link>https://www.listal.com/list/favourite-couples</link></item>
+<item><title>Disbanded Bands - Listal</title><link>https://www.listal.com/list/disbanded-or-retired</link></item>
+<item><title>The Evolution of Elizabeth Banks - Listal</title><link>https://www.listal.com/list/evolution-elizabeth-banks</link></item>
+<item><title>KingStefou&amp;#39;s &amp;quot;100 Greatest Horror Films&amp;quot; - Listal</title><link>https://www.listal.com/list/kingstefous-50-greatest-horror-movies</link></item>
+<item><title>My Favorite Movies - Listal</title><link>https://www.listal.com/list/my-favorite-movies-emilyj64</link></item>
+<item><title>Longest gaps between video game sequels/prequels - Listal</title><link>https://www.listal.com/list/most-delayed-video-game-sequels</link></item>
+<item><title>Bruce &amp;quot;Third Part&amp;quot; Spence - Listal</title><link>https://www.listal.com/list/bruce-third-part-spence</link></item>
+<item><title>Top 10 Nintendo 64 Games - Listal</title><link>https://www.listal.com/list/top-favorite-nintendo-64-games</link></item>
+<item><title>Cutest Game Characters - Listal</title><link>https://www.listal.com/list/cutest-game-characters</link></item>
+<item><title>turned away from his own copyright - Slashdot</title><link>https://entertainment.slashdot.org/story/20/10/23/237256/92-year-old-songwriter-tom-lehrer-releases-all-his-lyrics-into-the-public-domain</link></item>
+<item><title>thwarted pilot test on the carrier deck in Alameda - Slashdot</title><link>https://news.slashdot.org/story/24/05/15/2357259/bay-area-city-orders-scientists-to-stop-controversial-cloud-brightening-experiment</link></item>
+<item><title>Trump Calls For Russia To Cyber-Invade the United States To Find Clinton&amp;#39;s &amp;#39;Missing&amp;#39; Emails - Slashdot</title><link>https://politics.slashdot.org/story/16/07/27/1627250/trump-calls-for-russia-to-cyber-invade-the-united-states-to-find-clintons-missing-emails?sbsrc=thisday</link></item>
+<item><title>House Websites Jammed After Obama Debt Speech - Slashdot</title><link>https://news.slashdot.org/story/11/07/27/0516233/house-websites-jammed-after-obama-debt-speech?sbsrc=thisday</link></item>
+<item><title>Hillary, GTA, and High School Football - Slashdot</title><link>https://politics.slashdot.org/story/05/07/27/1542228/hillary-gta-and-high-school-football?sbsrc=thisday</link></item>
+<item><title>Van Allen Questions Human Spaceflight - Slashdot</title><link>https://science.slashdot.org/story/04/07/27/1638207/van-allen-questions-human-spaceflight?sbsrc=thisday</link></item>
+<item><title>How Do You Get Work Done? - Slashdot</title><link>https://ask.slashdot.org/story/03/07/24/2355245/how-do-you-get-work-done?sbsrc=thisday</link></item>
+<item><title>Is anyone left to defend trust and safety? - Platformer</title><link>https://www.platformer.news/trustcon-trust-safety-leadership-decline-2025/</link></item>
+<item><title>The Google study that told us what we already suspected - Platformer</title><link>https://www.platformer.news/google-ai-overviews-pew-research/</link></item>
+<item><title>Google and OpenAI fight over a high-school math competition - Platformer</title><link>https://www.platformer.news/google-openai-international-math-olympiad-gold/</link></item>
+<item><title>Let’s all try to help Substack live up to its new valuation - Platformer</title><link>https://www.platformer.news/substack-series-c-enshittification/</link></item>
+<item><title>Grok&amp;#39;s new porn companion is rated for kids 12+ in the App Store - Platformer</title><link>https://www.platformer.news/grok-ani-app-store-rating-nsfw-avatar-apple/</link></item>
+<item><title>The campaign to make it illegal for ChatGPT to criticize Trump - Platformer</title><link>https://www.platformer.news/andrew-bailey-chatgpt-trump-jawboning-legal-case/</link></item>
+<item><title>Victoria’s Secret Takes to the Streets for Body by Victoria - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/body-victorias-secret-2025-campaign/</link></item>
+<item><title>The Power of Eye Care: Why Your Eye Area Deserves a Dedicated Routine - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/eye-care-routine/</link></item>
+<item><title>7 Skincare Products to Bring on Your Beach Vacation - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/skincare-products-beach-vacation/</link></item>
+<item><title>Trending Suit Outfit Ideas for Women Right Now - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/suit-outfits-for-women/</link></item>
+<item><title>WISKII Drops Riviera Floral Swimsuits for Summer 2025 - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/wiskii-riviera-floral-swimsuits/</link></item>
+<item><title>Polo Ralph Lauren’s Oak Bluffs Line Is Serving Legacy Looks - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/polo-ralph-lauren-oak-bluffs-collection/</link></item>
+<item><title>Delice &amp; Dylan Bring Dark Elegance to Hunger Magazine - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/delice-dylan-hunger-andrew-yee/</link></item>
+<item><title>Elsa Hosk is Vintage Glam in Sporty &amp; Rich’s British Drop - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/sport-rich-british-drop-elsa-hosk/</link></item>
+<item><title>Leonie Hanne Shines in Couture for Vogue Scandinavia - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/photo-shoot/leonie-hanna-vogue-scandinavia/</link></item>
+<item><title>Zimmermann’s Fall 2025 Campaign Blooms in Flower Fields - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/zimmermann-fall-2025-campaign/</link></item>
+<item><title>Jisoo Enters the Future in Self-Portrait Fall 2025 Ad - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/self-portrait-fall-2025-ad-jisoo/</link></item>
+<item><title>Candice Swanepoel is the Moment in Victoria’s Secret VSX Line - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/victorias-secret-vsx-candice-swanepoel/</link></item>
+<item><title>Kendall Jenner Takes the Spotlight in Prada Fall 2025 Ad - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/prada-fall-2025-ad-kendall-jenner/</link></item>
+<item><title>Gucci Delivers Striking Portraits for Fall 2025 Campaign - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/gucci-fall-2025-campaign/</link></item>
+<item><title>Kylie Jenner Headlines Miu Miu’s Fall 2025 Ad - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/miu-miu-fall-2025-ad-kylie-jenner/</link></item>
+<item><title>Week in Review | Zimmermann, Candice Swanepoel, Gucci + More - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/week-in-review-zimmermann-candice-swanepoel-gucci-more/</link></item>
+<item><title>Week in Review | Louis Vuitton, Gigi Hadid, Jennie + More - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/week-review-gigi-hadid-lv-jennie/</link></item>
+<item><title>India&amp;#39;s TCS to cut 12,000 jobs - Tech Xplore</title><link>https://techxplore.com/news/2025-07-india-tcs-jobs.html</link></item>
+<item><title>Meta&amp;#39;s wristband breakthrough lets you use digital devices without touching them - Tech Xplore</title><link>https://techxplore.com/news/2025-07-meta-wristband-breakthrough-digital-devices.html</link></item>
+<item><title>A human-inspired pathfinding approach to improve robot navigation - Tech Xplore</title><link>https://techxplore.com/news/2025-07-human-pathfinding-approach-robot.html</link></item>
+<item><title>WhoFi: New surveillance technology can track people by how they disrupt Wi-Fi signals - Tech Xplore</title><link>https://techxplore.com/news/2025-07-whofi-surveillance-technology-track-people.html</link></item>
+<item><title>New memristor-based system could boost processing of radiofrequency signals - Tech Xplore</title><link>https://techxplore.com/news/2025-07-memristor-based-boost-radiofrequency.html</link></item>
+<item><title>New reconfigurable memristor-based system enables in-memory data sorting - Tech Xplore</title><link>https://techxplore.com/news/2025-07-reconfigurable-memristor-based-enables-memory.html</link></item>
+<item><title>Good vibrations: Scientists use imaging technology to visualize heat - Tech Xplore</title><link>https://techxplore.com/news/2025-07-good-vibrations-scientists-imaging-technology.html</link></item>
+<item><title>Design strategies for reshaping stability and sustainability of perovskite solar cells - Tech Xplore</title><link>https://techxplore.com/news/2025-07-strategies-reshaping-stability-sustainability-perovskite.html</link></item>
+<item><title>AI system identifies fake videos beyond face swaps and altered speech - Tech Xplore</title><link>https://techxplore.com/news/2025-07-scientists-tool-fake-videos.html</link></item>
+<item><title>Chemistry innovations pave way for more efficient industrial carbon capture - Tech Xplore</title><link>https://techxplore.com/news/2025-07-chemistry-pave-efficient-industrial-carbon.html</link></item>
+<item><title>Improving AI models: Automated tool detects silent errors in deep learning training - Tech Xplore</title><link>https://techxplore.com/news/2025-07-ai-automated-tool-silent-errors.html</link></item>
+<item><title>Long-term test shows efficiency of perovskite cells varies with the season - Tech Xplore</title><link>https://techxplore.com/news/2025-07-term-efficiency-perovskite-cells-varies.html</link></item>
+<item><title>Innovative robotic slip-prevention method could bring human-like dexterity to industrial automation - Tech Xplore</title><link>https://techxplore.com/news/2025-07-robotic-method-human-dexterity-industrial.html</link></item>
+<item><title>AI-driven framework creates defect-tolerant metamaterials with complex functionality - Tech Xplore</title><link>https://techxplore.com/news/2025-07-ai-driven-framework-defect-tolerant.html</link></item>
+<item><title>New electrochemical process captures carbon from treated wastewater before release - Tech Xplore</title><link>https://techxplore.com/news/2025-07-electrochemical-captures-carbon-wastewater.html</link></item>
 </channel></rss>

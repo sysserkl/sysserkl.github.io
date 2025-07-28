@@ -171,7 +171,7 @@ function export_form_klphotos_b(other_buttons=''){
     var left_str='<p>'+close_button_b('div_array_album_b','');
     
     var right_str=other_buttons;
-    right_str=right_str+'<span class="aclick" onclick="import_marked_rows_klphotos_b();">导入已标记图片名</span>';
+    right_str=right_str+'<span class="aclick" onclick="import_marked_rows_klphotos_b();">显示已标记图片名</span>';
     right_str=right_str+'<span class="aclick" onclick="delete_marked_rows_klphotos_b();">清空已标记图片名</span>';
     right_str=right_str+'</p>';
 

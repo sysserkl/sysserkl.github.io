@@ -391,7 +391,7 @@ function delete_batch_from_array_form_rlater_b(prefix='readlater'){
     var left_str='<p>';
     var right_str='<span class="aclick" onclick="delete_batch_from_array_transform_rlater_b(\''+specialstr92_b(prefix)+'\');">数组转换为列表</span>';
     right_str=right_str+'<span class="aclick" onclick="delete_batch_from_url_transform_rlater_b(\''+specialstr92_b(prefix)+'\');">链接转换为列表</span>';
-    right_str=right_str+'<span class="aclick" onclick="import_marked_rows_rlater_b();">导入已标记链接</span>';
+    right_str=right_str+'<span class="aclick" onclick="import_marked_rows_rlater_b();">显示已标记链接</span>';
     right_str=right_str+'<span class="aclick" onclick="delete_marked_rows_rlater_b(\''+specialstr92_b(prefix)+'\');">清空已标记链接</span>';
 
     right_str=right_str+'</p>';
