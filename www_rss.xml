@@ -8,329 +8,156 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Mon, 28 Jul 2025 08:38:22 +0800</lastBuildDate>
-<item><title>2025年第二季度企业家问卷调查报告 - 中国人民银行-调查统计司</title><link>http://www.pbc.gov.cn/diaochatongjisi/116219/116227/5791338/index.html</link></item>
-<item><title>2025年第二季度银行家问卷调查报告 - 中国人民银行-调查统计司</title><link>http://www.pbc.gov.cn/diaochatongjisi/116219/116227/5791332/index.html</link></item>
-<item><title>2025年第二季度城镇储户问卷调查报告 - 中国人民银行-调查统计司</title><link>http://www.pbc.gov.cn/diaochatongjisi/116219/116227/5791327/index.html</link></item>
-<item><title>2025年第一季度企业家问卷调查报告 - 中国人民银行-调查统计司</title><link>http://www.pbc.gov.cn/diaochatongjisi/116219/116227/5791318/index.html</link></item>
-<item><title>2025年第一季度银行家问卷调查报告 - 中国人民银行-调查统计司</title><link>http://www.pbc.gov.cn/diaochatongjisi/116219/116227/5791313/index.html</link></item>
-<item><title>2025年第一季度城镇储户问卷调查报告 - 中国人民银行-调查统计司</title><link>http://www.pbc.gov.cn/diaochatongjisi/116219/116227/5791304/index.html</link></item>
-<item><title>This Hardware Brand Is a Well-Kept Designer Secret—And Now You’re In on It - domino</title><link>https://www.domino.com/style-shopping/rocky-mountain-hardware/</link></item>
-<item><title>US Navy champions digital weaponry as decider of future fights - Defense News</title><link>https://www.defensenews.com/cyber/2023/12/01/us-navy-champions-digital-weaponry-as-decider-of-future-fights/</link></item>
-<item><title>NATO picks first flock of startup pitches in push for fresh tech - Defense News</title><link>https://www.defensenews.com/global/europe/2023/12/01/nato-picks-first-flock-of-startup-pitches-in-push-for-fresh-tech/</link></item>
-<item><title>NATO deepens cyber coalition with Asian partners - Defense News</title><link>https://www.defensenews.com/cyber/2023/12/01/nato-deepens-cyber-coalition-with-asian-partners/</link></item>
-<item><title>Anduril reveals Roadrunner drone, mum on first US customer - Defense News</title><link>https://www.defensenews.com/unmanned/2023/12/01/anduril-reveals-roadrunner-drone-mum-on-first-us-customer/</link></item>
-<item><title>Defense Innovation Unit to host Replicator technology summit - Defense News</title><link>https://www.defensenews.com/battlefield-tech/2023/11/30/defense-innovation-unit-to-host-replicator-technology-summit/</link></item>
-<item><title>Seven questions with BAE Systems’ US chief executive - Defense News</title><link>https://www.defensenews.com/industry/2023/11/30/seven-questions-with-bae-systems-us-chief-executive/</link></item>
-<item><title>First US submarine repairs in Australia scheduled for summer - Defense News</title><link>https://www.defensenews.com/naval/2023/11/30/first-us-submarine-repairs-in-australia-scheduled-for-summer/</link></item>
-<item><title>Canada to buy Boeing-made Poseidons in $5.9 billion deal - Defense News</title><link>https://www.defensenews.com/air/2023/11/30/canada-to-buy-boeing-made-poseidons-in-59-billion-deal/</link></item>
-<item><title>Bill urges Pentagon to speed JADC2 transition in focus on Indo-Pacific - Defense News</title><link>https://www.defensenews.com/battlefield-tech/c2-comms/2023/11/30/bill-urges-pentagon-to-speed-jadc2-transition-in-focus-on-indo-pacific/</link></item>
-<item><title>Marine Corps looks at ocean glider for rapid resupply to fight China - Defense News</title><link>https://www.defensenews.com/news/your-marine-corps/2023/11/30/marine-corps-looks-at-ocean-glider-for-rapid-resupply-to-fight-china/</link></item>
-<item><title>Hope Hodge Seck - Defense News</title><link>https://www.defensenews.com/author/Hope</link></item>
-<item><title>Seeing is believing in biomedicine, which isn&amp;#39;t great when AI gets it wrong - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/27/biomedviz_ai_wrong_problems/</link></item>
-<item><title>KKR considers acquiring ST Telemedia Global Data Centres at $5bn valuation - DCD</title><link>https://www.datacenterdynamics.com/en/news/kkr-considers-acquiring-st-telemedia-global-data-centres-at-5bn-valuation/</link></item>
-<item><title>Soluna closes $20m funding round for 35MW Project Kati data center in Texas - DCD</title><link>https://www.datacenterdynamics.com/en/news/soluna-closes-20m-funding-round-for-35mw-project-kati-data-center-in-texas/</link></item>
-<item><title>Telco Q1 2026 results: BT continues fiber push as Vodafone fights back in Germany - DCD</title><link>https://www.datacenterdynamics.com/en/news/telco-q1-2026-results-bt-continues-fiber-push-as-vodafone-fights-back-in-germany/</link></item>
-<item><title>DayOne breaks ground on 20MW data center in Singapore - DCD</title><link>https://www.datacenterdynamics.com/en/news/dayone-breaks-ground-on-20mw-data-center-in-singapore/</link></item>
-<item><title>European cloud providers hold 15% of local market share - Synergy Research - DCD</title><link>https://www.datacenterdynamics.com/en/news/european-cloud-providers-hold-15-of-local-market-share-synergy-research/</link></item>
-<item><title>Real estate firm Atlas Capital Group may develop 1m square foot data center in Connecticut - DCD</title><link>https://www.datacenterdynamics.com/en/news/real-estate-firm-atlas-capital-group-may-develop-1m-square-foot-data-center-in-connecticut/</link></item>
-<item><title>Meta signs 600MW PPA with Enbridge in Texas - DCD</title><link>https://www.datacenterdynamics.com/en/news/meta-signs-600mw-ppa-with-enbridge-in-texas/</link></item>
-<item><title>Sparkle and Algérie Télécom plan Italy-Algeria subsea cable - DCD</title><link>https://www.datacenterdynamics.com/en/news/sparkle-and-alg%C3%A9rie-t%C3%A9l%C3%A9com-plan-italy-algeria-subsea-cable/</link></item>
-<item><title>Chinese government plans data center capacity reseller network amid overbuild concerns - DCD</title><link>https://www.datacenterdynamics.com/en/news/chinese-government-plans-data-center-capacity-reseller-network-amid-overbuild-concerns/</link></item>
-<item><title>EdgeCore secures $235 million in ABS financing - DCD</title><link>https://www.datacenterdynamics.com/en/news/edgecore-secures-235-million-in-abs-financing/</link></item>
-<item><title>Infleqtion partners with Illinois quantum institutions for utility-scale, neutral atom deployment - DCD</title><link>https://www.datacenterdynamics.com/en/news/infleqtion-partners-with-illinois-quantum-institutions-for-utility-scale-neutral-atom-deployment/</link></item>
-<item><title>Liberty Global to cut hundreds of jobs as part of restructure - DCD</title><link>https://www.datacenterdynamics.com/en/news/liberty-global-to-cut-hundreds-of-jobs-as-part-of-restructure/</link></item>
-<item><title>Globalstar to expand satellite ground stations sites in Canada - DCD</title><link>https://www.datacenterdynamics.com/en/news/globalstar-to-expand-satellite-ground-stations-sites-in-canada/</link></item>
-<item><title>Aligned to develop 200-acre data center campus in Coshocton, Ohio - DCD</title><link>https://www.datacenterdynamics.com/en/news/aligned-to-develop-200-acre-data-center-campus-in-coshocton-ohio/</link></item>
-<item><title>Ionos deploys Nvidia DGX H200 system in Germany data centers - DCD</title><link>https://www.datacenterdynamics.com/en/news/ionos-deploys-nvidia-dgx-h200-system-in-germany-data-centers/</link></item>
-<item><title>Former AT&amp;T data center up for sale in Orlando, Florida - DCD</title><link>https://www.datacenterdynamics.com/en/news/former-att-data-center-up-for-sale-in-orlando-florida/</link></item>
-<item><title>Mastercard breaks ground on offgrid solar project to power O’Fallon data center in Missouri - DCD</title><link>https://www.datacenterdynamics.com/en/news/mastercard-breaks-ground-on-offgrid-solar-project-to-power-ofallon-data-center-in-missouri/</link></item>
-<item><title>Dataprana launches 30MW immersion cooled crypto data center site in Texas - DCD</title><link>https://www.datacenterdynamics.com/en/news/dataprana-launches-30mw-immersion-cooled-crypto-data-center-site-in-texas/</link></item>
-<item><title>T-Mobile, KKR finalize Metronet fiber JV acquisition - DCD</title><link>https://www.datacenterdynamics.com/en/news/t-mobile-kkr-finalize-metronet-fiber-jv-acquisition/</link></item>
-<item><title>NTT tops out latest Jakarta data center, Indonesia - DCD</title><link>https://www.datacenterdynamics.com/en/news/ntt-tops-out-latest-jakarta-data-center-indonesia/</link></item>
-<item><title>25 Words That Don’t Mean What They Used To - Mental Floss</title><link>https://www.mentalfloss.com/article/505181/25-words-don’t-mean-what-they-used</link></item>
-<item><title>The Diplomat - The Mail &amp; Guardian</title><link>https://mg.co.za/tag/the-diplomat/</link></item>
-<item><title>Rwanda’s security forays buck the trend - The Mail &amp; Guardian</title><link>https://mg.co.za/thought-leader/opinion/2025-07-26-rwandas-security-forays-buck-the-trend/</link></item>
-<item><title>Erika van der Merwe - The Mail &amp; Guardian</title><link>https://mg.co.za/author/erika-van-der-merwe/</link></item>
-<item><title>Standard Bank - The Mail &amp; Guardian</title><link>https://mg.co.za/author/standard-bank/</link></item>
-<item><title>Editorial: It’s time to be decisive, Mr President - The Mail &amp; Guardian</title><link>https://mg.co.za/editorial/2025-07-25-editorial-its-time-to-be-decisive-mr-president/</link></item>
-<item><title>Small win for activists, but SA’s HIV projects won’t reopen - The Mail &amp; Guardian</title><link>https://mg.co.za/health/2025-07-23-small-win-for-activists-but-sas-hiv-projects-wont-reopen/</link></item>
-<item><title>SIU investigation into lottery corruption hamstrung by red tape - The Mail &amp; Guardian</title><link>https://mg.co.za/news/2025-07-23-siu-investigation-into-lottery-corruption-hamstrung-by-red-tape/</link></item>
-<item><title>Raymond Joseph - The Mail &amp; Guardian</title><link>https://mg.co.za/author/raymond-joseph/</link></item>
-<item><title>Come now, spill the beans on Sol - The Mail &amp; Guardian</title><link>https://mg.co.za/thought-leader/opinion/2025-07-24-come-now-spill-the-beans-on-sol/</link></item>
-<item><title>Siyavuya Madikane - The Mail &amp; Guardian</title><link>https://mg.co.za/author/siyavuya-madikane/</link></item>
-<item><title>Traditional authorities: Democratic governance must be reclaimed - The Mail &amp; Guardian</title><link>https://mg.co.za/thought-leader/2025-07-24-traditional-authorities-democratic-governance-must-be-reclaimed/</link></item>
-<item><title>Wandile Zondo - The Mail &amp; Guardian</title><link>https://mg.co.za/author/wandile-zondo/</link></item>
-<item><title>Agri-tech may be South Africa’s new frontier - The Mail &amp; Guardian</title><link>https://mg.co.za/thought-leader/2025-07-24-agri-tech-may-be-south-africas-new-frontier/</link></item>
-<item><title>Zanele Mabaso - The Mail &amp; Guardian</title><link>https://mg.co.za/author/zanele-mabaso/</link></item>
-<item><title>Taking back the Soweto night with Nomsa Mazwai and Rapsody - The Mail &amp; Guardian</title><link>https://mg.co.za/friday/2025-07-26-taking-back-the-soweto-night-with-nomsa-mazwai-and-rapsody/</link></item>
-<item><title>Success is spelt Sarkodie - The Mail &amp; Guardian</title><link>https://mg.co.za/friday/2025-07-25-success-is-spelt-sarkodie/</link></item>
-<item><title>Nomisupasta and Rapsody: The collab that took 13 years - The Mail &amp; Guardian</title><link>https://mg.co.za/friday/2025-07-25-nomisupasta-and-rapsody-the-collab-that-took-13-years/</link></item>
-<item><title>Diary: Tutu Puoane to tour in South Africa, Cold Chinese Food set to release new album in July and The Capitec handmadeAFRICA at Decorex - The Mail &amp; Guardian</title><link>https://mg.co.za/friday/2025-07-25-diary-tutu-puoane-to-tour-in-south-africa-cold-chinese-food-set-to-release-new-album-in-july-and-the-capitec-handmadeafrica-at-decorex/</link></item>
-<item><title>The arts of Senzeni Marasela and life of Theodorah - The Mail &amp; Guardian</title><link>https://mg.co.za/friday/2025-07-24-the-arts-of-senzeni-marasela-and-life-of-theodorah/</link></item>
-<item><title>People back climate policy when weather events feel personal, new study finds - The Mail &amp; Guardian</title><link>https://mg.co.za/the-green-guardian/2025-07-14-people-back-climate-policy-when-weather-events-feel-personal-new-study-finds/</link></item>
-<item><title>Africa’s freshwater fish crisis: 26% of species threatened with extinction - The Mail &amp; Guardian</title><link>https://mg.co.za/the-green-guardian/2025-07-13-africas-freshwater-fish-crisis-26-of-species-threatened-with-extinction/</link></item>
-<item><title>Climate crisis puts older adults at high risk from extreme heat, Unep warns - The Mail &amp; Guardian</title><link>https://mg.co.za/the-green-guardian/2025-07-13-climate-crisis-puts-older-adults-at-high-risk-from-extreme-heat-unep-warns/</link></item>
-<item><title>Antiretroviral drugs in South Africa’s rivers raise environmental concerns - The Mail &amp; Guardian</title><link>https://mg.co.za/the-green-guardian/2025-07-10-antiretroviral-drugs-in-south-africas-rivers-raise-environmental-concerns/</link></item>
-<item><title>NWU vice-chancellor, Prof Bismark Tyobeka, pleads for aligned academic hospital in North West - The Mail &amp; Guardian</title><link>https://mg.co.za/press-releases/2025-07-25-nwu-vice-chancellor-prof-bismark-tyobeka-pleads-for-aligned-academic-hospital-in-north-west/</link></item>
-<item><title>R44 billion: The big bucks of hunting tourism - The Mail &amp; Guardian</title><link>https://mg.co.za/press-releases/2025-07-16-r44-billion-the-big-bucks-of-hunting-tourism/</link></item>
-<item><title>The hidden cost of a broken funding system: SA’s public universities - The Mail &amp; Guardian</title><link>https://mg.co.za/press-releases/2025-07-10-the-hidden-cost-of-a-broken-funding-system-sas-public-universities/</link></item>
-<item><title>Prof Bismark Tyobeka appointed chairperson of Ministerial Expert Panel on Nuclear - The Mail &amp; Guardian</title><link>https://mg.co.za/press-releases/2025-07-10-prof-bismark-tyobeka-appointed-chairperson-of-ministerial-expert-panel-on-nuclear/</link></item>
-<item><title>The South African Council for the Quality Surveying Professions (SACQSP) - The Mail &amp; Guardian</title><link>https://careers.mg.co.za/listing/personal-assistant/</link></item>
-<item><title>UNIVERSITY OF THE WITWATERSRAND (WITS) - The Mail &amp; Guardian</title><link>https://careers.mg.co.za/listing/senior-lecturer-or-lecturer-in-geotechnical-engineering/</link></item>
-<item><title>Senior Lecturer in Structural Engineering. - The Mail &amp; Guardian</title><link>https://careers.mg.co.za/listing/senior-lecturer-in-structural-engineering-2/</link></item>
-<item><title>Mozambican children die after US funding cuts: Who bears responsibility? - The Mail &amp; Guardian</title><link>https://mg.co.za/africa/2025-07-21-mozambican-children-die-after-us-funding-cuts-who-bears-responsibility/</link></item>
-<item><title>Jesse Copelyn - The Mail &amp; Guardian</title><link>https://mg.co.za/author/jesse-copelyn/</link></item>
-<item><title>‘Fortress Europe’s’ African victims - The Mail &amp; Guardian</title><link>https://mg.co.za/africa/2025-07-17-fortress-europes-african-victims/</link></item>
-<item><title>Adekeye Adebajo - The Mail &amp; Guardian</title><link>https://mg.co.za/author/adekeye-adebajo/</link></item>
-<item><title>Ghana endorses bold campaign for a visa-free Africa - The Mail &amp; Guardian</title><link>https://mg.co.za/africa/2025-07-15-ghana-endorses-bold-campaign-for-a-visa-free-africa/</link></item>
-<item><title>Hasina Kathrada - The Mail &amp; Guardian</title><link>https://mg.co.za/author/hasina-kathrada/</link></item>
-<item><title>Poultry sector recovering, prices not expected to increase - The Mail &amp; Guardian</title><link>https://mg.co.za/business/2025-07-24-poultry-sector-recovering-prices-not-expected-to-increase/</link></item>
-<item><title>Inflation ticks up to 3% in June on the back of higher food prices - The Mail &amp; Guardian</title><link>https://mg.co.za/business/2025-07-23-inflation-ticks-up-to-3-in-june-on-the-back-of-higher-food-prices/</link></item>
-<item><title>South Africa must unlock financial sector for growth, says African Development Bank - The Mail &amp; Guardian</title><link>https://mg.co.za/business/2025-07-23-south-africa-must-unlock-financial-sector-for-growth-says-african-development-bank/</link></item>
-<item><title>Kenny Kunene steps away from Joburg and PA roles - The Mail &amp; Guardian</title><link>https://mg.co.za/politics/2025-07-26-patriotic-alliance-suspends-kenny-kunene-pending-investigation/</link></item>
-<item><title>Zille vs Mbalula: How the DA’s ultimatum toppled Nkabane - The Mail &amp; Guardian</title><link>https://mg.co.za/politics/2025-07-25-zille-vs-mbalula-how-the-das-ultimatum-toppled-nkabane/</link></item>
-<item><title>Finance MMC job in Jozi a political hotbed - The Mail &amp; Guardian</title><link>https://mg.co.za/politics/2025-07-24-finance-mmc-job-in-jozi-a-political-hotbed/</link></item>
-<item><title>New science hub bridges lab-skills gap for underprivileged students - The Mail &amp; Guardian</title><link>https://mg.co.za/education/2025-07-22-new-science-hub-bridges-lab-skills-gap-for-underprivileged-students/</link></item>
-<item><title>Gauteng needs 200 more schools, says education MEC Chiloane - The Mail &amp; Guardian</title><link>https://mg.co.za/education/2025-06-24-gauteng-needs-200-more-schools-says-education-mec-chiloane/</link></item>
-<item><title>The Real Prince reigns supreme at Durban July - The Mail &amp; Guardian</title><link>https://mg.co.za/sport/2025-07-06-the-real-prince-reigns-supreme-at-durban-july/</link></item>
-<item><title>BAL taking flight in fifth season - The Mail &amp; Guardian</title><link>https://mg.co.za/sport/2025-06-13-bal-taking-flight-in-fifth-season/</link></item>
-<item><title>Refiloe Seiboko - The Mail &amp; Guardian</title><link>https://mg.co.za/author/refiloe-seiboko/</link></item>
-<item><title>G20 youth confront challenges of multilateral cooperation, national sovereignty - The Mail &amp; Guardian</title><link>https://mg.co.za/world/2025-06-27-g20-youth-confront-challenges-of-multilateral-cooperation-national-sovereignty/</link></item>
-<item><title>连平 等：下半年宏观经济运行八大 - 爱思想</title><link>https://www.aisixiang.com/data/165300.html</link></item>
-<item><title>刘文强：推动人工智能创新突破和跨 - 爱思想</title><link>https://www.aisixiang.com/data/165275.html</link></item>
-<item><title>逄先知：抗日民族统一战线的几个问 - 爱思想</title><link>https://www.aisixiang.com/data/165295.html</link></item>
-<item><title>盛磊：打通堵点释放财政政策长期效 - 爱思想</title><link>https://www.aisixiang.com/data/165279.html</link></item>
-<item><title>黄晓春：习近平总书记现代化人民城 - 爱思想</title><link>https://www.aisixiang.com/data/165273.html</link></item>
-<item><title>马怀德：构建新时代法学学科体系 - 爱思想</title><link>https://www.aisixiang.com/data/165296.html</link></item>
-<item><title>刘元春：理性认识当前中国宏观经济 - 爱思想</title><link>https://www.aisixiang.com/data/165397.html</link></item>
-<item><title>顾洁 刘炜：生成式人工智能驱动的 - 爱思想</title><link>https://www.aisixiang.com/data/165310.html</link></item>
-<item><title>逯新红：共谱中拉命运共同体新篇章 - 爱思想</title><link>https://www.aisixiang.com/data/165360.html</link></item>
-<item><title>贺雪峰：村庄空心化与适度村级治理 - 爱思想</title><link>https://www.aisixiang.com/data/165344.html</link></item>
-<item><title>蒋立峰：审判战犯是确立二战后国际 - 爱思想</title><link>https://www.aisixiang.com/data/165375.html</link></item>
-<item><title>李忠杰：关于作风建设的五个思考 - 爱思想</title><link>https://www.aisixiang.com/data/165298.html</link></item>
-<item><title>吴士存：做学问就是不停地赶路 - 爱思想</title><link>https://www.aisixiang.com/data/165322.html</link></item>
-<item><title>发展不平衡不充分与因地制宜发展新 - 爱思想</title><link>https://www.aisixiang.com/data/165390.html</link></item>
-<item><title>薛君 陶林：深入学习习近平文化思 - 爱思想</title><link>https://www.aisixiang.com/data/165359.html</link></item>
-<item><title>庄贵阳：为全球生态文明建设贡献中 - 爱思想</title><link>https://www.aisixiang.com/data/165351.html</link></item>
-<item><title>黄承梁：生态环境保护督察制度理论 - 爱思想</title><link>https://www.aisixiang.com/data/165350.html</link></item>
-<item><title>张永生：生态文明引领全球绿色发展 - 爱思想</title><link>https://www.aisixiang.com/data/165287.html</link></item>
-<item><title>罗文东 吕瀚东：中国特色社会主义 - 爱思想</title><link>https://www.aisixiang.com/data/165286.html</link></item>
-<item><title>韩庆祥：中华民族文化主体性在新时 - 爱思想</title><link>https://www.aisixiang.com/data/165252.html</link></item>
-<item><title>高长武：深刻理解把握原创性 - 爱思想</title><link>https://www.aisixiang.com/data/165182.html</link></item>
-<item><title>张国刚：在知识创新中坚守中华文化 - 爱思想</title><link>https://www.aisixiang.com/data/165152.html</link></item>
-<item><title>赵月 邹广文：论新的文化生命体的 - 爱思想</title><link>https://www.aisixiang.com/data/165136.html</link></item>
-<item><title>李权时：论岭南文化的共性与个性— - 爱思想</title><link>https://www.aisixiang.com/data/165112.html</link></item>
-<item><title>杨伊佳 杨河：近代以来中华民族文 - 爱思想</title><link>https://www.aisixiang.com/data/165109.html</link></item>
-<item><title>张北坪：深刻理解坚持党的文化领导 - 爱思想</title><link>https://www.aisixiang.com/data/165099.html</link></item>
-<item><title>简小文：以全面深化改革推进文化强 - 爱思想</title><link>https://www.aisixiang.com/data/165053.html</link></item>
-<item><title>张鲲：社会主义先进文化的历史超越 - 爱思想</title><link>https://www.aisixiang.com/data/164963.html</link></item>
-<item><title>胡军：从“第二个结合”看习近平生 - 爱思想</title><link>https://www.aisixiang.com/data/164935.html</link></item>
-<item><title>王茹：新时代生态文明建设的根本遵 - 爱思想</title><link>https://www.aisixiang.com/data/164919.html</link></item>
-<item><title>张志刚：试论齐鲁文化“多元一体说 - 爱思想</title><link>https://www.aisixiang.com/data/164892.html</link></item>
-<item><title>赵力：重温“两弹一星”精神，架好 - 爱思想</title><link>https://www.aisixiang.com/data/165426.html</link></item>
-<item><title>温新红：他的101岁人生，见证中 - 爱思想</title><link>https://www.aisixiang.com/data/165425.html</link></item>
-<item><title>刘胜院士：人形机器人走向大众生活 - 爱思想</title><link>https://www.aisixiang.com/data/165364.html</link></item>
-<item><title>刘永元：构建支持重大科技基础设施 - 爱思想</title><link>https://www.aisixiang.com/data/165362.html</link></item>
-<item><title>裴瑞敏 肖尤丹：构筑未来发展新优 - 爱思想</title><link>https://www.aisixiang.com/data/165355.html</link></item>
-<item><title>高关中：催生科学的哲学家——亚里 - 爱思想</title><link>https://www.aisixiang.com/data/165327.html</link></item>
-<item><title>何路社 何文魁：袁隆平之梦：杂交 - 爱思想</title><link>https://www.aisixiang.com/data/165190.html</link></item>
-<item><title>任晓刚：以科技现代化赋能中国式现 - 爱思想</title><link>https://www.aisixiang.com/data/165173.html</link></item>
-<item><title>郭国平：超越“不可能三角”：量子 - 爱思想</title><link>https://www.aisixiang.com/data/165170.html</link></item>
-<item><title>刘如：打通科技成果转化“最后一公 - 爱思想</title><link>https://www.aisixiang.com/data/165038.html</link></item>
-<item><title>战鹰：新太空时代的全域战 - 爱思想</title><link>https://www.aisixiang.com/data/165034.html</link></item>
-<item><title>邱锐：以科技管理体制机制改革汇聚 - 爱思想</title><link>https://www.aisixiang.com/data/164872.html</link></item>
-<item><title>丁元竹：开创人工智能时代的新型文 - 爱思想</title><link>https://www.aisixiang.com/data/164866.html</link></item>
-<item><title>王勇：加快构建平等有序的全球经济新秩序 - 爱思想</title><link>https://www.aisixiang.com/data/165477.html</link></item>
-<item><title>韩庆祥 孙昊：中国式现代化的文明底蕴 - 爱思想</title><link>https://www.aisixiang.com/data/165452.html</link></item>
-<item><title>江必新：建设更高水平法治中国值得关注的十大议题 - 爱思想</title><link>https://www.aisixiang.com/data/165450.html</link></item>
-<item><title>干春松：《礼记 •礼运》之“大同”“小康”及其解释史 - 爱思想</title><link>https://www.aisixiang.com/data/165444.html</link></item>
-<item><title>洪银兴：人文经济学：人文与经济相互促进共同繁荣 - 爱思想</title><link>https://www.aisixiang.com/data/165434.html</link></item>
-<item><title>周光权：违反治安管理行为与犯罪的界限 - 爱思想</title><link>https://www.aisixiang.com/data/165486.html</link></item>
-<item><title>沈国明：以实践为导向构建法学自主知识体系 - 爱思想</title><link>https://www.aisixiang.com/data/165484.html</link></item>
-<item><title>柳华文：以发展促人权：中国经验与世界主张 - 爱思想</title><link>https://www.aisixiang.com/data/165463.html</link></item>
-<item><title>郑飞：证据种类法定主义的反思与重构 - 爱思想</title><link>https://www.aisixiang.com/data/165438.html</link></item>
-<item><title>贺城 谢地：马克思主义共同富裕思想的内在逻辑与中国方案 - 爱思想</title><link>https://www.aisixiang.com/data/165485.html</link></item>
-<item><title>田佳禾 卢江：构建高水平社会主义市场经济体制研究 - 爱思想</title><link>https://www.aisixiang.com/data/165483.html</link></item>
-<item><title>王三义：经济的世界与政治的世界——“变局”判断的弹性区间 - 爱思想</title><link>https://www.aisixiang.com/data/165460.html</link></item>
-<item><title>当联系汇率制遇上稳定币 - 爱思想</title><link>https://www.aisixiang.com/data/165459.html</link></item>
-<item><title>刘英：稳定币并非无风险 - 爱思想</title><link>https://www.aisixiang.com/data/165456.html</link></item>
-<item><title>阚道远：完善党中央重大决策部署落实机制的政治意蕴与实践进路 - 爱思想</title><link>https://www.aisixiang.com/data/165481.html</link></item>
-<item><title>张骥：百年未有之大变局下安全与国家治理形态的变革 - 爱思想</title><link>https://www.aisixiang.com/data/165480.html</link></item>
-<item><title>曹以达 来庆立：西方中心主义的文明交往危机及其超越 - 爱思想</title><link>https://www.aisixiang.com/data/165478.html</link></item>
-<item><title>代国玺：政治制度史研究的三个层面及可能 - 爱思想</title><link>https://www.aisixiang.com/data/165470.html</link></item>
-<item><title>郭亮：全过程人民民主如何赋能基层治理 - 爱思想</title><link>https://www.aisixiang.com/data/165467.html</link></item>
-<item><title>张弘：俄乌和谈僵局背后是“三观冲突” - 爱思想</title><link>https://www.aisixiang.com/data/165475.html</link></item>
-<item><title>张洁：中美博弈下的中国周边安全环境: 演进动力、 主要特征与发展趋势 - 爱思想</title><link>https://www.aisixiang.com/data/165474.html</link></item>
-<item><title>张洁：推动命运共同体理念在南海落地生根： 现实基础与路径选择 - 爱思想</title><link>https://www.aisixiang.com/data/165473.html</link></item>
-<item><title>肖宇 陈潇 孙瑶馨：以共建“一带一路”提升制度型开放水平 - 爱思想</title><link>https://www.aisixiang.com/data/165472.html</link></item>
-<item><title>李巨星 张欣：延安时期中共中央机关报对中华民族共同体意识的内容书写、传播实践与现实启示 - 爱思想</title><link>https://www.aisixiang.com/data/165476.html</link></item>
-<item><title>李俊奎 梁丹：精神生产与共享：铸牢中华民族共同体意识的重要维度 - 爱思想</title><link>https://www.aisixiang.com/data/165464.html</link></item>
-<item><title>葛珊 宣朝庆：从结构中的治理精英到能动的精英治理——地方社会治理研究的视角转换 - 爱思想</title><link>https://www.aisixiang.com/data/165421.html</link></item>
-<item><title>卢成仁：如何解释“合作丝厂”的失败——费孝通的工业转型理解及其再阐释 - 爱思想</title><link>https://www.aisixiang.com/data/165420.html</link></item>
-<item><title>吴振华：“拟亲”：情感劳动积极体验视角下的本土养老实践 - 爱思想</title><link>https://www.aisixiang.com/data/165419.html</link></item>
-<item><title>蔡华杰：美丽中国形象的共情叙事与国际传播 - 爱思想</title><link>https://www.aisixiang.com/data/165328.html</link></item>
-<item><title>程曼丽：加快构建中国话语和中国叙事体系 - 爱思想</title><link>https://www.aisixiang.com/data/165324.html</link></item>
-<item><title>钟悠天：以讲好中国故事参与全球文明对话 - 爱思想</title><link>https://www.aisixiang.com/data/165088.html</link></item>
-<item><title>杜占元：深化文明交流互鉴 促进人类发展进步 - 爱思想</title><link>https://www.aisixiang.com/data/165027.html</link></item>
-<item><title>迟宝旭：以全面深化高等教育改革助推教育强国建设 - 爱思想</title><link>https://www.aisixiang.com/data/165458.html</link></item>
-<item><title>任友群：高校如何更好推进“第二个结合” - 爱思想</title><link>https://www.aisixiang.com/data/165424.html</link></item>
-<item><title>陈娟：思政课教师要做教育家精神的践行者 - 爱思想</title><link>https://www.aisixiang.com/data/165418.html</link></item>
-<item><title>刘宇雷：将教育公平贯穿资源赋能和教育培养全过程 - 爱思想</title><link>https://www.aisixiang.com/data/165363.html</link></item>
-<item><title>陆华：以国家安全教育夯实教育强国建设之基 - 爱思想</title><link>https://www.aisixiang.com/data/165333.html</link></item>
-<item><title>王彬彬：孙犁的“情色”话语 - 爱思想</title><link>https://www.aisixiang.com/data/165443.html</link></item>
-<item><title>孙先科：“冯友兰的女儿”：宗璞小说中的“父/女”关系原型及美学呈现 - 爱思想</title><link>https://www.aisixiang.com/data/165442.html</link></item>
-<item><title>杨扬 朱一田 等：戏剧、文学及其它——有关莫言剧作《鳄鱼》的一堂讨论课 - 爱思想</title><link>https://www.aisixiang.com/data/165441.html</link></item>
-<item><title>袁礼：推进国际中文教育专业化发展 - 爱思想</title><link>https://www.aisixiang.com/data/165366.html</link></item>
-<item><title>李丹丹：推动国际中文教育高质量发展 - 爱思想</title><link>https://www.aisixiang.com/data/165365.html</link></item>
-<item><title>赵现海：北部边疆结合部政权与中华文明的统一性 - 爱思想</title><link>https://www.aisixiang.com/data/165462.html</link></item>
-<item><title>张宜强 张钦亚：“古今中西之争”的基础架构与“两个结合”的有效破解 - 爱思想</title><link>https://www.aisixiang.com/data/165453.html</link></item>
-<item><title>郭湛：从历史过程看国运盛衰 - 爱思想</title><link>https://www.aisixiang.com/data/165395.html</link></item>
-<item><title>何朝晖：以全球视角重估雕版印刷 - 爱思想</title><link>https://www.aisixiang.com/data/165388.html</link></item>
-<item><title>胡湘农：再论庄子的处世之道：基于《德充符》叔山无趾章的考察 - 爱思想</title><link>https://www.aisixiang.com/data/165482.html</link></item>
-<item><title>张家昱：论休谟原因理论对亚里士多德四因说的批判 - 爱思想</title><link>https://www.aisixiang.com/data/165479.html</link></item>
-<item><title>韩经太：道论三维：思想根脉与文艺精神 - 爱思想</title><link>https://www.aisixiang.com/data/165469.html</link></item>
-<item><title>张茂泽：论王夫之的黄帝观 - 爱思想</title><link>https://www.aisixiang.com/data/165468.html</link></item>
-<item><title>莫斌：以“自然之思”启蒙的康德哲学 - 爱思想</title><link>https://www.aisixiang.com/data/165465.html</link></item>
-<item><title>王京雪：寂寞的先生——追记语言文字学家李人鉴 - 爱思想</title><link>https://www.aisixiang.com/data/165455.html</link></item>
-<item><title>陶庆：用心用情才能做实调查研究——重温恩格斯《乌培河谷来信》 - 爱思想</title><link>https://www.aisixiang.com/data/165431.html</link></item>
-<item><title>陈心想：古稀之岁重建中国社会学——怀念费孝通先生 - 爱思想</title><link>https://www.aisixiang.com/data/165407.html</link></item>
-<item><title>高仁：推动哲学社会科学知识创新、理论创新、方法创新 - 爱思想</title><link>https://www.aisixiang.com/data/165304.html</link></item>
-<item><title>汤一介：思想自由是最重要的 - 爱思想</title><link>https://www.aisixiang.com/data/165130.html</link></item>
-<item><title>王元丰：马斯克是书呆子还是破局者？ - 爱思想</title><link>https://www.aisixiang.com/data/165121.html</link></item>
-<item><title>杨炎 杨冰：我们的爸爸妈妈 - 爱思想</title><link>https://www.aisixiang.com/data/165078.html</link></item>
-<item><title>汤一介：寻找溪水的源头 - 爱思想</title><link>https://www.aisixiang.com/data/165072.html</link></item>
-<item><title>冯仲平，山西吕梁人，英国兰卡斯特(Lancaster)大学历史学博士（1992)。现任中国社会..... - 爱思想</title><link>https://www.aisixiang.com/thinktank/FengZhongping.html</link></item>
-<item><title>Sense Your Surroundings: Easy DIY Weather Station… - Adafruit Industries</title><link>https://blog.adafruit.com/2025/07/27/sense-your-surroundings-easy-diy-weather-station/</link></item>
-<item><title>Adafruit Weekly Editorial Round-Up: 100 Days Until… - Adafruit Industries</title><link>https://blog.adafruit.com/2025/07/27/adafruit-weekly-editorial-round-up-100-days-until-halloween-mini-neon-sign-prop-n00ds-booster-case-more/</link></item>
-<item><title>Near Future Science Fiction #SciFiSunday - Adafruit Industries</title><link>https://blog.adafruit.com/2025/07/27/near-future-science-fiction-scifisunday/</link></item>
-<item><title>Adafruit New Products this Week: Featuring MagTag… - Adafruit Industries</title><link>https://blog.adafruit.com/2025/07/26/magtag-2025-ed-w-ssd1680/</link></item>
-<item><title>Revisiting The Ringtone Era: Crazy Frog’s Hits Album Came Out 20 Years Ago #Music #History - Adafruit Industries</title><link>https://blog.adafruit.com/2025/07/26/revisiting-the-ringtone-era-crazy-frogs-hits-album-came-out-20-years-ago-music-history/</link></item>
-<item><title>Celestial Gravitational Light in the T-Tauri System @SpaceSaturday - Adafruit Industries</title><link>https://blog.adafruit.com/2025/07/26/celestial-gravitational-light-in-the-t-tauri-system-spacesaturday/</link></item>
-<item><title>Are Colors Geometric? - Adafruit Industries</title><link>https://blog.adafruit.com/2025/07/26/are-colors-geometric/</link></item>
-<item><title>New WipperSnapper Releases, and Telling Time in Adafruit IO Actions. What’s new with Adafruit IO and the Adafruit Learning System. - Adafruit Industries</title><link>https://blog.adafruit.com/2025/07/25/telling-time-io-actions/</link></item>
-<item><title>New Products 7/25/2025 Featuring Adafruit MagTag – 2.9″ Grayscale E-Ink WiFi Display – 2025 Edition with SSD1680! (Video) - Adafruit Industries</title><link>https://blog.adafruit.com/2025/07/25/new-products-7-25-2025-featuring-adafruit-magtag-2-9-grayscale-e-ink-wifi-display-2025-edition-with-ssd1680-video/</link></item>
-<item><title>Chip On Board LEDs - Adafruit Industries</title><link>https://blog.adafruit.com/tag/chip-on-board-leds/</link></item>
-<item><title>stacking header - Adafruit Industries</title><link>https://blog.adafruit.com/tag/stacking-header/</link></item>
-<item><title>Stacking Headers - Adafruit Industries</title><link>https://blog.adafruit.com/tag/stacking-headers/</link></item>
-<item><title>Linux and Raspberry Pi Save a Printer! @Raspberry_Pi #PiDay #RaspberryPi - Adafruit Industries</title><link>https://blog.adafruit.com/2025/07/25/linux-and-raspberry-pi-save-a-printer-raspberry_pi-piday-raspberrypi/</link></item>
-<item><title>John Park’s CircuitPython Parsec: GPIO Switch to Input - Adafruit Industries</title><link>https://blog.adafruit.com/2025/07/25/john-parks-circuitpython-parsec-gpio-switch-to-input/</link></item>
-<item><title>Hubble Catches Intermediate-Sized Black Hole - Adafruit Industries</title><link>https://blog.adafruit.com/2025/07/25/hubble-catches-intermediate-sized-black-hole/</link></item>
-<item><title>The One Big Beautiful Bill is a Historic Investment in Rural Healthcare - The White House</title><link>https://www.whitehouse.gov/articles/2025/07/the-one-big-beautiful-bill-is-a-historic-investment-in-rural-healthcare/</link></item>
-<item><title>President Trump Promised to End Child Sexual Mutilation — and He Delivered - The White House</title><link>https://www.whitehouse.gov/articles/2025/07/president-trump-promised-to-end-child-sexual-mutilation-and-he-delivered/</link></item>
-<item><title>Made in America Week, 2025 - The White House</title><link>https://www.whitehouse.gov/presidential-actions/2025/07/made-in-america-week-2025/</link></item>
-<item><title>Captive Nations Week, 2025 - The White House</title><link>https://www.whitehouse.gov/presidential-actions/2025/07/captive-nations-week-2025/</link></item>
-<item><title>H.R. 4 and H.R. 517 Signed into Law S. 1582 - The White House</title><link>https://www.whitehouse.gov/briefings-statements/2025/07/h-r-4-and-h-r-517-signed-into-law-s-1582/</link></item>
-<item><title>Saving College Sports - The White House</title><link>https://www.whitehouse.gov/presidential-actions/2025/07/saving-college-sports/</link></item>
-<item><title>Ending Crime and Disorder on America’s Streets - The White House</title><link>https://www.whitehouse.gov/presidential-actions/2025/07/ending-crime-and-disorder-on-americas-streets/</link></item>
-<item><title>Fact Sheet: President Donald J. Trump Saves College Sports - The White House</title><link>https://www.whitehouse.gov/fact-sheets/2025/07/fact-sheet-president-donald-j-trump-saves-college-sports/</link></item>
-<item><title>Fact Sheet: President Donald J. Trump Takes Action to End Crime and Disorder on America’s Streets - The White House</title><link>https://www.whitehouse.gov/fact-sheets/2025/07/fact-sheet-president-donald-j-trump-takes-action-to-end-crime-and-disorder-on-americas-streets/</link></item>
-<item><title>Headlines Underscore President Trump’s Promises Kept - The White House</title><link>https://www.whitehouse.gov/articles/2025/07/headlines-underscore-president-trumps-promises-kept/</link></item>
-<item><title>Artist Cleverly Turns Manhole Cover Into a Waffle Maker for a 3D Chalk-Drawn Possum and Squirrel - Laughing Squid</title><link>https://laughingsquid.com/manhole-cover-waffle-maker-chalk-art/</link></item>
-<item><title>Chef Missy Robbins Gives a Tour of Her Three Renowned Italian Restaurants in Williamsburg, Brooklyn - Laughing Squid</title><link>https://laughingsquid.com/missy-robbins-williamsburg-italian-restaurants/</link></item>
-<item><title>A Marvelous Coffee Table With an Embedded Real-Time Traffic Map of Cincinnati, Ohio - Laughing Squid</title><link>https://laughingsquid.com/cincinnati-traffic-coffee-table/</link></item>
-<item><title>Robotic Spy Cuttlefish Documents the Struggle Between a Real Cuttlefish and a Hungry Seal - Laughing Squid</title><link>https://laughingsquid.com/spy-cuttlefish-seal-struggle/</link></item>
-<item><title>The Ingenious Design of the Syphon Coffee Brewer - Laughing Squid</title><link>https://laughingsquid.com/syphon-coffee-brewer/</link></item>
-<item><title>The Most Massive Drum Kits Ever Assembled - Laughing Squid</title><link>https://laughingsquid.com/massive-drum-kits/</link></item>
-<item><title>The History of Chisanbop – A Korean Finger Counting Method Used for Basic Math - Laughing Squid</title><link>https://laughingsquid.com/chisanbop-finger-counting-method/</link></item>
-<item><title>‘Spinal Tap II: The End Continues’ – The Legendary Band Reunites for One Final Concert in New Orleans - Laughing Squid</title><link>https://laughingsquid.com/spinal-tap-ii-the-end-continues/</link></item>
-<item><title>Frédette Lampre of La Machine Gives a TED Talk About the Wonder of Their Giant Mechanical Creatures - Laughing Squid</title><link>https://laughingsquid.com/fredette-lampre-la-machine-ted-talk/</link></item>
-<item><title>A Siamese Cat Named ‘Leonardo da Pinchy’ Steals Expensive Laundry From His Auckland Neighbors - Laughing Squid</title><link>https://laughingsquid.com/siamese-cat-burglar/</link></item>
-<item><title>Chinese Engineers Build an Amazing Series of Trash Cans That Automatically Catch Rubbish in Mid-Air - Laughing Squid</title><link>https://laughingsquid.com/trash-cans-automatically-catch-rubbish/</link></item>
-<item><title>The Complete Canine Family Tree Showing the Relationship Between Foxes, Wolves and Dogs - Laughing Squid</title><link>https://laughingsquid.com/canine-family-tree/</link></item>
-<item><title>Tom Lehrer, Satirical Songwriter and Mathematician, Dies at Age 97 - Slashdot</title><link>https://entertainment.slashdot.org/story/25/07/27/2347205/tom-lehrer-satirical-songwriter-and-mathematician-dies-at-age-97</link></item>
-<item><title>Huawei Shows Off 384-Chip AI Computing System That Rival Nvidia&amp;#39;s Top Product - Slashdot</title><link>https://hardware.slashdot.org/story/25/07/27/2248257/huawei-shows-off-384-chip-ai-computing-system-that-rival-nvidias-top-product</link></item>
-<item><title>Researchers Quietly Planned a Test to Dim Sunlight Over 3,900 Square Miles - Slashdot</title><link>https://news.slashdot.org/story/25/07/27/2146205/researchers-quietly-planned-a-test-to-dim-sunlight-over-3900-square-miles</link></item>
-<item><title>VPN Downloads Surge in UK as New Age-Verification Rules Take Effect - Slashdot</title><link>https://news.slashdot.org/story/25/07/27/1957211/vpn-downloads-surge-in-uk-as-new-age-verification-rules-take-effect</link></item>
-<item><title>Is ChatGPT Making You Stupid? - Slashdot</title><link>https://slashdot.org/story/25/07/27/1818251/is-chatgpt-making-you-stupid</link></item>
-<item><title>&amp;#39;It&amp;#39;s DOOM, but You Can Cut, Copy and Paste Opponents&amp;#39; - Slashdot</title><link>https://games.slashdot.org/story/25/07/27/1640244/its-doom-but-you-can-cut-copy-and-paste-opponents</link></item>
-<item><title>&amp;#39;Fantastic Four&amp;#39; Tops &amp;#39;Superman&amp;#39; Opening, Second-Largest of the Year - Slashdot</title><link>https://entertainment.slashdot.org/story/25/07/26/2225254/fantastic-four-tops-superman-opening-second-largest-of-the-year</link></item>
-<item><title>To Fight Climate Change, Norway Wants to Become Europe&amp;#39;s Carbon Dump - Slashdot</title><link>https://hardware.slashdot.org/story/25/07/26/0358240/to-fight-climate-change-norway-wants-to-become-europes-carbon-dump</link></item>
-<item><title>Creator of 1995 Phishing Tool &amp;#39;AOHell&amp;#39; On Piracy, Script Kiddies, and What He Thinks of AI - Slashdot</title><link>https://idle.slashdot.org/story/25/07/27/0015211/creator-of-1995-phishing-tool-aohell-on-piracy-script-kiddies-and-what-he-thinks-of-ai</link></item>
-<item><title>&amp;#39;Chuck E. Cheese&amp;#39; Handcuffed and Arrested in Florida, Charged with Using a Stolen Credit Card - Slashdot</title><link>https://idle.slashdot.org/story/25/07/27/0532227/chuck-e-cheese-handcuffed-and-arrested-in-florida-charged-with-using-a-stolen-credit-card</link></item>
-<item><title>&amp;#39;Serious Delays&amp;#39; Hit Satellite Mega-Constellations of China&amp;#39;s Starlink Rivals - Slashdot</title><link>https://science.slashdot.org/story/25/07/27/0233215/serious-delays-hit-satellite-mega-constellations-of-chinas-starlink-rivals</link></item>
-<item><title>Did a Vendor&amp;#39;s Leak Help Attackers Exploit Microsoft&amp;#39;s SharePoint Servers? - Slashdot</title><link>https://it.slashdot.org/story/25/07/27/0337218/did-a-vendors-leak-help-attackers-exploit-microsofts-sharepoint-servers</link></item>
-<item><title>Geany-Plugins 2.1 are out - Geany</title><link>https://www.geany.org/news/geany-plugins-21-are-out/</link></item>
-<item><title>Geany 2.1 is out! - Geany</title><link>https://www.geany.org/news/geany-21-is-out/</link></item>
-<item><title>Kiev loses 1,210 troops in all frontline areas in past day — Russia’s top brass - TASS</title><link>https://tass.com/defense/1994755</link></item>
-<item><title>victoria&amp;#39;s secret models - Listal</title><link>https://www.listal.com/list/victorias-secret-models-katiaassier</link></item>
-<item><title>My Ultimate Guide Of Best Young Actresses - Listal</title><link>https://www.listal.com/list/my-ultimate-guide-best-young</link></item>
-<item><title>Breakout Women of 2017 - Listal</title><link>https://www.listal.com/list/breakout-women-of-2017</link></item>
-<item><title>Pferdemädchen [ 2 ] - Listal</title><link>https://www.listal.com/list/pferdemdchen</link></item>
-<item><title>Actresses ~ Cooking (Landscape) - Listal</title><link>https://www.listal.com/list/1-actresses-cooking</link></item>
-<item><title>Paulina Porizkova (Czech Supermodel) - Listal</title><link>https://www.listal.com/list/paulina-porizkova</link></item>
-<item><title>Art of Manliness - 100 Must-Read Books - Listal</title><link>https://www.listal.com/list/art-manliness-100-mustread</link></item>
-<item><title>The Ever So Sexy Jennifer Love Hewitt - Listal</title><link>https://www.listal.com/list/favorite-images-2901</link></item>
-<item><title>Famous Curvy Girls &amp; Larger Ladies - Listal</title><link>https://www.listal.com/list/plussize-celebrities</link></item>
-<item><title>Best Series You&amp;#39;ve Probably Never Heard Of - Listal</title><link>https://www.listal.com/list/best-series-youve-probably-never</link></item>
-<item><title>pink and rosa - Listal</title><link>https://www.listal.com/list/pink-helensmile</link></item>
-<item><title>Anime worth watching - Listal</title><link>https://www.listal.com/list/anime-worth-watching</link></item>
-<item><title>Bad Guys?? But I love them!!! - Listal</title><link>https://www.listal.com/list/bad-guys-but-love-them</link></item>
-<item><title>Medieval Princess - Listal</title><link>https://www.listal.com/list/medieval-princess</link></item>
-<item><title>The Beatles - Studio Albums - Listal</title><link>https://www.listal.com/list/beatles-studio-albums</link></item>
-<item><title>Smallville Beauties Season 1 - Listal</title><link>https://www.listal.com/list/smallville-beauties-season-1</link></item>
-<item><title>♪ My Favorite Kinda Funny Male Voices - Listal</title><link>https://www.listal.com/list/voices-mmilica</link></item>
-<item><title>Marina Laswick is Spectacular - Listal</title><link>https://www.listal.com/list/marina-laswick-is-spectacular</link></item>
-<item><title>The Most Beautiful Queen - Listal</title><link>https://www.listal.com/list/my-favourite-beauty-queen</link></item>
-<item><title>Super Sentai legends cameo in Gokaiger - Listal</title><link>https://www.listal.com/list/gokaiger</link></item>
-<item><title>Favorite Listal Avatars #1 - Listal</title><link>https://www.listal.com/list/favorite-listal-avatars</link></item>
-<item><title>The Evolution of Aimee Teegarden - Listal</title><link>https://www.listal.com/list/evolution-aimee-teegarden</link></item>
-<item><title>Ecstatic Poetry and Writings - Listal</title><link>https://www.listal.com/list/ecstatic</link></item>
-<item><title>Horror Rainbow - Listal</title><link>https://www.listal.com/list/horror-rainbow</link></item>
-<item><title>Mangas With the Greatest Characters - Listal</title><link>https://www.listal.com/list/mangas-greatest-characters-4369</link></item>
-<item><title>Sony Playstation 1&amp;#39;s Obscure Games - Listal</title><link>https://www.listal.com/list/sony-playstation-1s-obscure-games</link></item>
-<item><title>Favourite movie/tv couples - Listal</title><link>https://www.listal.com/list/favourite-couples</link></item>
-<item><title>Disbanded Bands - Listal</title><link>https://www.listal.com/list/disbanded-or-retired</link></item>
-<item><title>The Evolution of Elizabeth Banks - Listal</title><link>https://www.listal.com/list/evolution-elizabeth-banks</link></item>
-<item><title>KingStefou&amp;#39;s &amp;quot;100 Greatest Horror Films&amp;quot; - Listal</title><link>https://www.listal.com/list/kingstefous-50-greatest-horror-movies</link></item>
-<item><title>My Favorite Movies - Listal</title><link>https://www.listal.com/list/my-favorite-movies-emilyj64</link></item>
-<item><title>Longest gaps between video game sequels/prequels - Listal</title><link>https://www.listal.com/list/most-delayed-video-game-sequels</link></item>
-<item><title>Bruce &amp;quot;Third Part&amp;quot; Spence - Listal</title><link>https://www.listal.com/list/bruce-third-part-spence</link></item>
-<item><title>Top 10 Nintendo 64 Games - Listal</title><link>https://www.listal.com/list/top-favorite-nintendo-64-games</link></item>
-<item><title>Cutest Game Characters - Listal</title><link>https://www.listal.com/list/cutest-game-characters</link></item>
-<item><title>turned away from his own copyright - Slashdot</title><link>https://entertainment.slashdot.org/story/20/10/23/237256/92-year-old-songwriter-tom-lehrer-releases-all-his-lyrics-into-the-public-domain</link></item>
-<item><title>thwarted pilot test on the carrier deck in Alameda - Slashdot</title><link>https://news.slashdot.org/story/24/05/15/2357259/bay-area-city-orders-scientists-to-stop-controversial-cloud-brightening-experiment</link></item>
-<item><title>Trump Calls For Russia To Cyber-Invade the United States To Find Clinton&amp;#39;s &amp;#39;Missing&amp;#39; Emails - Slashdot</title><link>https://politics.slashdot.org/story/16/07/27/1627250/trump-calls-for-russia-to-cyber-invade-the-united-states-to-find-clintons-missing-emails?sbsrc=thisday</link></item>
-<item><title>House Websites Jammed After Obama Debt Speech - Slashdot</title><link>https://news.slashdot.org/story/11/07/27/0516233/house-websites-jammed-after-obama-debt-speech?sbsrc=thisday</link></item>
-<item><title>Hillary, GTA, and High School Football - Slashdot</title><link>https://politics.slashdot.org/story/05/07/27/1542228/hillary-gta-and-high-school-football?sbsrc=thisday</link></item>
-<item><title>Van Allen Questions Human Spaceflight - Slashdot</title><link>https://science.slashdot.org/story/04/07/27/1638207/van-allen-questions-human-spaceflight?sbsrc=thisday</link></item>
-<item><title>How Do You Get Work Done? - Slashdot</title><link>https://ask.slashdot.org/story/03/07/24/2355245/how-do-you-get-work-done?sbsrc=thisday</link></item>
-<item><title>Is anyone left to defend trust and safety? - Platformer</title><link>https://www.platformer.news/trustcon-trust-safety-leadership-decline-2025/</link></item>
-<item><title>The Google study that told us what we already suspected - Platformer</title><link>https://www.platformer.news/google-ai-overviews-pew-research/</link></item>
-<item><title>Google and OpenAI fight over a high-school math competition - Platformer</title><link>https://www.platformer.news/google-openai-international-math-olympiad-gold/</link></item>
-<item><title>Let’s all try to help Substack live up to its new valuation - Platformer</title><link>https://www.platformer.news/substack-series-c-enshittification/</link></item>
-<item><title>Grok&amp;#39;s new porn companion is rated for kids 12+ in the App Store - Platformer</title><link>https://www.platformer.news/grok-ani-app-store-rating-nsfw-avatar-apple/</link></item>
-<item><title>The campaign to make it illegal for ChatGPT to criticize Trump - Platformer</title><link>https://www.platformer.news/andrew-bailey-chatgpt-trump-jawboning-legal-case/</link></item>
-<item><title>Victoria’s Secret Takes to the Streets for Body by Victoria - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/body-victorias-secret-2025-campaign/</link></item>
-<item><title>The Power of Eye Care: Why Your Eye Area Deserves a Dedicated Routine - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/eye-care-routine/</link></item>
-<item><title>7 Skincare Products to Bring on Your Beach Vacation - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/skincare-products-beach-vacation/</link></item>
-<item><title>Trending Suit Outfit Ideas for Women Right Now - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/suit-outfits-for-women/</link></item>
-<item><title>WISKII Drops Riviera Floral Swimsuits for Summer 2025 - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/wiskii-riviera-floral-swimsuits/</link></item>
-<item><title>Polo Ralph Lauren’s Oak Bluffs Line Is Serving Legacy Looks - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/polo-ralph-lauren-oak-bluffs-collection/</link></item>
-<item><title>Delice &amp; Dylan Bring Dark Elegance to Hunger Magazine - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/delice-dylan-hunger-andrew-yee/</link></item>
-<item><title>Elsa Hosk is Vintage Glam in Sporty &amp; Rich’s British Drop - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/sport-rich-british-drop-elsa-hosk/</link></item>
-<item><title>Leonie Hanne Shines in Couture for Vogue Scandinavia - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/photo-shoot/leonie-hanna-vogue-scandinavia/</link></item>
-<item><title>Zimmermann’s Fall 2025 Campaign Blooms in Flower Fields - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/zimmermann-fall-2025-campaign/</link></item>
-<item><title>Jisoo Enters the Future in Self-Portrait Fall 2025 Ad - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/self-portrait-fall-2025-ad-jisoo/</link></item>
-<item><title>Candice Swanepoel is the Moment in Victoria’s Secret VSX Line - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/victorias-secret-vsx-candice-swanepoel/</link></item>
-<item><title>Kendall Jenner Takes the Spotlight in Prada Fall 2025 Ad - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/prada-fall-2025-ad-kendall-jenner/</link></item>
-<item><title>Gucci Delivers Striking Portraits for Fall 2025 Campaign - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/gucci-fall-2025-campaign/</link></item>
-<item><title>Kylie Jenner Headlines Miu Miu’s Fall 2025 Ad - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/miu-miu-fall-2025-ad-kylie-jenner/</link></item>
-<item><title>Week in Review | Zimmermann, Candice Swanepoel, Gucci + More - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/week-in-review-zimmermann-candice-swanepoel-gucci-more/</link></item>
-<item><title>Week in Review | Louis Vuitton, Gigi Hadid, Jennie + More - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/week-review-gigi-hadid-lv-jennie/</link></item>
-<item><title>India&amp;#39;s TCS to cut 12,000 jobs - Tech Xplore</title><link>https://techxplore.com/news/2025-07-india-tcs-jobs.html</link></item>
-<item><title>Meta&amp;#39;s wristband breakthrough lets you use digital devices without touching them - Tech Xplore</title><link>https://techxplore.com/news/2025-07-meta-wristband-breakthrough-digital-devices.html</link></item>
-<item><title>A human-inspired pathfinding approach to improve robot navigation - Tech Xplore</title><link>https://techxplore.com/news/2025-07-human-pathfinding-approach-robot.html</link></item>
-<item><title>WhoFi: New surveillance technology can track people by how they disrupt Wi-Fi signals - Tech Xplore</title><link>https://techxplore.com/news/2025-07-whofi-surveillance-technology-track-people.html</link></item>
-<item><title>New memristor-based system could boost processing of radiofrequency signals - Tech Xplore</title><link>https://techxplore.com/news/2025-07-memristor-based-boost-radiofrequency.html</link></item>
-<item><title>New reconfigurable memristor-based system enables in-memory data sorting - Tech Xplore</title><link>https://techxplore.com/news/2025-07-reconfigurable-memristor-based-enables-memory.html</link></item>
-<item><title>Good vibrations: Scientists use imaging technology to visualize heat - Tech Xplore</title><link>https://techxplore.com/news/2025-07-good-vibrations-scientists-imaging-technology.html</link></item>
-<item><title>Design strategies for reshaping stability and sustainability of perovskite solar cells - Tech Xplore</title><link>https://techxplore.com/news/2025-07-strategies-reshaping-stability-sustainability-perovskite.html</link></item>
-<item><title>AI system identifies fake videos beyond face swaps and altered speech - Tech Xplore</title><link>https://techxplore.com/news/2025-07-scientists-tool-fake-videos.html</link></item>
-<item><title>Chemistry innovations pave way for more efficient industrial carbon capture - Tech Xplore</title><link>https://techxplore.com/news/2025-07-chemistry-pave-efficient-industrial-carbon.html</link></item>
-<item><title>Improving AI models: Automated tool detects silent errors in deep learning training - Tech Xplore</title><link>https://techxplore.com/news/2025-07-ai-automated-tool-silent-errors.html</link></item>
-<item><title>Long-term test shows efficiency of perovskite cells varies with the season - Tech Xplore</title><link>https://techxplore.com/news/2025-07-term-efficiency-perovskite-cells-varies.html</link></item>
-<item><title>Innovative robotic slip-prevention method could bring human-like dexterity to industrial automation - Tech Xplore</title><link>https://techxplore.com/news/2025-07-robotic-method-human-dexterity-industrial.html</link></item>
-<item><title>AI-driven framework creates defect-tolerant metamaterials with complex functionality - Tech Xplore</title><link>https://techxplore.com/news/2025-07-ai-driven-framework-defect-tolerant.html</link></item>
-<item><title>New electrochemical process captures carbon from treated wastewater before release - Tech Xplore</title><link>https://techxplore.com/news/2025-07-electrochemical-captures-carbon-wastewater.html</link></item>
+<lastBuildDate>Tue, 29 Jul 2025 08:16:18 +0800</lastBuildDate>
+<item><title>On W. L. Craig on whether God can learn - Larry Sanger Blog</title><link>https://larrysanger.org/2025/07/on-w-l-craig-on-whether-god-can-learn/</link></item>
+<item><title>Sadhguru im Gespräch mit Lewis Howes: Wie Sterblichkeit uns zu mehr Freude führt - MC Winkels weBlog</title><link>https://www.whudat.de/sadhguru-im-gespraech-mit-lewis-howes-wie-sterblichkeit-uns-zu-mehr-freude-fuehrt/</link></item>
+<item><title>Apollo Brown &amp; Bronze Nazareth – Funeral For A Dream: Wenn ein Traum zu Grabe getragen wird - MC Winkels weBlog</title><link>https://www.whudat.de/apollo-brown-bronze-nazareth-funeral-for-a-dream-wenn-ein-traum-zu-grabe-getragen-wird/</link></item>
+<item><title>Carl Jung erklärt tiefen Narzissmus: Die dunkle Maske des Selbst - MC Winkels weBlog</title><link>https://www.whudat.de/carl-jung-erklaert-tiefen-narzissmus-die-dunkle-maske-des-selbst/</link></item>
+<item><title>Freddie Gibbs &amp; The Alchemist droppen „Alfredo 2“ Album // Review + Videos - MC Winkels weBlog</title><link>https://www.whudat.de/freddie-gibbs-the-alchemist-droppen-alfredo-2-album-review-videos/</link></item>
+<item><title>Common bei Jay Shetty: Aus Liebeskummer einen Sinn machen - MC Winkels weBlog</title><link>https://www.whudat.de/common-bei-jay-shetty-aus-liebeskummer-einen-sinn-machen/</link></item>
+<item><title>Parliament – „Mothership Connection“: Die Funk-Oper, die die Musikgeschichte veränderte - MC Winkels weBlog</title><link>https://www.whudat.de/parliament-mothership-connection-die-funk-oper-die-die-musikgeschichte-veraenderte/</link></item>
+<item><title>Jennifer Pastiloff bei Rich Roll: Wie man die eigene Selbstgesprächsführung neu schreibt - MC Winkels weBlog</title><link>https://www.whudat.de/jennifer-pastiloff-bei-rich-roll-wie-man-die-eigene-selbstgespraechsfuehrung-neu-schreibt/</link></item>
+<item><title>Benny The Butcher – „Summertime Butch 2“ // Mixtape Review - MC Winkels weBlog</title><link>https://www.whudat.de/benny-the-butcher-summertime-butch-2-mixtape-review/</link></item>
+<item><title>Ein Blick in die 38 Mio. Luxusvilla „Villa Gratitude“ in Marbella – Ein unvergessliches Erlebnis - MC Winkels weBlog</title><link>https://www.whudat.de/ein-blick-in-die-38-mio-luxusvilla-villa-gratitude-in-marbella-ein-unvergessliches-erlebnis/</link></item>
+<item><title>Reginald Omas Mamode IV – „Rivière Noire“ // Ein Album im Herzen des Soulquarians Spirit - MC Winkels weBlog</title><link>https://www.whudat.de/reginald-omas-mamode-iv-riviere-noire-ein-album-im-herzen-des-soulquarians-spirit/</link></item>
+<item><title>Bitwise Operators in Python - Real Python</title><link>https://realpython.com/python-bitwise-operators/</link></item>
+<item><title>Quiz: Bitwise Operators in Python - Real Python</title><link>https://realpython.com/quizzes/bitwise-operators/</link></item>
+<item><title>The Real Python Podcast – Episode #258: Supporting the Python Package Index - Real Python</title><link>https://realpython.com/podcasts/rpp/258/</link></item>
+<item><title>Python&amp;#39;s Requests Library (Guide) - Real Python</title><link>https://realpython.com/python-requests/</link></item>
+<item><title>Exploring Python Closures: Examples and Use Cases - Real Python</title><link>https://realpython.com/courses/closures-examples-use-cases/</link></item>
+<item><title>What Does isinstance() Do in Python? - Real Python</title><link>https://realpython.com/what-does-isinstance-do-in-python/</link></item>
+<item><title>Python Scope and the LEGB Rule: Resolving Names in Your Code - Real Python</title><link>https://realpython.com/python-scope-legb-rule/</link></item>
+<item><title>Getting Started With marimo Notebooks - Real Python</title><link>https://realpython.com/courses/getting-started-with-marimo-notebooks/</link></item>
+<item><title>How to Debug Common Python Errors - Real Python</title><link>https://realpython.com/debug-python-errors/</link></item>
+<item><title>Quiz: How to Debug Common Python Errors - Real Python</title><link>https://realpython.com/quizzes/debug-python-errors/</link></item>
+<item><title>This Bold Bedroom Makeover Has the Most Vibrant Wallpaper I’ve Ever Seen - Apartment Therapy</title><link>https://www.apartmenttherapy.com/orange-green-bedroom-makeover-floral-wallpaper-ba-37498505?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>The Obscure 1940s Home Type I Wish Was Still Around - Apartment Therapy</title><link>https://www.apartmenttherapy.com/lustron-homes-history-midwest-1940s-37498330?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>I Finally Got Rid of My Instant Pot After Years — Here’s Why I Don’t Regret It - Apartment Therapy</title><link>https://www.apartmenttherapy.com/kalorik-vivid-touch-air-fryer-review-37497400?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>HomeGoods Is Selling the Most Adorable Mini Dutch Ovens, and I Want All 3 Colors - Apartment Therapy</title><link>https://www.apartmenttherapy.com/home-goods-mini-dutch-ovens-37497393?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>The “Perfect” Under-Bed Storage Solution That’ll Instantly Declutter Your Space (It’s Selling Fast!) - Apartment Therapy</title><link>https://www.apartmenttherapy.com/periea-large-slim-storage-boxes-qvc-deal-july-2025-37498427?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>I Ruined My Husband’s White Clothes — Learn from My Mistake with This Pro Fix - Apartment Therapy</title><link>https://www.apartmenttherapy.com/remove-dye-clothes-37498097?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>This Gorgeous, Luxe London Apartment Was Once an 116-Year-Old Town Hall - Apartment Therapy</title><link>https://www.apartmenttherapy.com/renovated-luxe-west-london-apartment-37496878?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>I Used to Work Retail, and This $13 Gadget Made Me an Expert Folder - Apartment Therapy</title><link>https://www.apartmenttherapy.com/shirt-folder-amazon-reviews-37497849?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>West Elm Dropped a New Collab That’s Perfect for Summer - Apartment Therapy</title><link>https://www.apartmenttherapy.com/altuzarra-west-elm-kids-collection-2025-37498148?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>This Gorgeous $42 Towel Ladder Is a Brilliant Storage Gem - Apartment Therapy</title><link>https://www.apartmenttherapy.com/walmart-acacia-wood-towel-ladder-reviews-37497697?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>After a Reno, This 1976 Living Room Becomes the “Jewel of the House” - Apartment Therapy</title><link>https://www.apartmenttherapy.com/yellow-living-room-makeover-ba-37497855?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>Anthropologie’s Viral Bowls Are Finally Back in Stock, and I’m Buying Every Single Color - Apartment Therapy</title><link>https://www.apartmenttherapy.com/anthropologie-cereal-bowls-back-in-stock-37497379?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>IKEA’s Colorful Flatware Set Comes With 16 Pieces and Is Less Than $15 - Apartment Therapy</title><link>https://www.apartmenttherapy.com/tangmarla-ikea-product-reviews-37497841?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>I’ve Tried Dozens of Butter Dishes, and This “Stunning” $10 Find Is the Only One I’ll Use from Now on - Apartment Therapy</title><link>https://www.apartmenttherapy.com/glass-butter-dish-lid-review-37497386?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>This Might Be the Smartest Kitchen Trick for Storing Your Plastic Wrap - Apartment Therapy</title><link>https://www.apartmenttherapy.com/kitchen-storage-trick-for-plastic-wrap-37497482?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>I Bought 10+ Bath Mats Before This $40 Find Changed My Life - Apartment Therapy</title><link>https://www.apartmenttherapy.com/ll-bean-classic-bath-mat-review-37498135?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>7 Things to Let Go of After Divorce for a Fresh Start - Apartment Therapy</title><link>https://www.apartmenttherapy.com/decluttering-after-divorce-37495720?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>Kettle Just Launched a New Limited-Edition Potato Chip Flavor — And It’s So Good, the Bag Was Empty in 5 Minutes - Apartment Therapy</title><link>https://www.apartmenttherapy.com/kettle-brand-chili-crisp-chips-review-37497375?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>A “Stark White” Kitchen Gets a “Cozy French Country Aesthetic” Makeover - Apartment Therapy</title><link>https://www.apartmenttherapy.com/stark-cold-french-kitchen-ba-37495253?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>I’m Betting IKEA’s New $8 Designer-Looking Mug Will Be Sold Out Soon - Apartment Therapy</title><link>https://www.apartmenttherapy.com/ikea-skuggstubb-retailer-reviews-37497933?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>experimental physics - Quanta Magazine</title><link>https://www.quantamagazine.org/tag/experimental-physics/</link></item>
+<item><title>A New Geometry for Einstein’s Theory of Relativity - Quanta Magazine</title><link>https://www.quantamagazine.org/a-new-geometry-for-einsteins-theory-of-relativity-20250716/</link></item>
+<item><title>Dirty Historical Facts That Have Us Clutching Our Pearls (15 Photos) - theCHIVE</title><link>https://thechive.com/humor/wtf/dirty-historical-facts-that-have-us-clutching-our-pearls-15-photos/?utm_postid=5053935&amp;utm_editor=5053935_zach</link></item>
+<item><title>Animals, wild &amp; domesticated, who are bringing us all to howl (50 Photos) - theCHIVE</title><link>https://thechive.com/humanity/animals/animals-wild-domesticated-who-are-bringing-us-all-to-howl-50-photos/?utm_postid=5052683&amp;utm_editor=5052683_bob</link></item>
+<item><title>Total “Badasses” Who’ve Totally Never Bled Their Own Blood (28 Photos) - theCHIVE</title><link>https://thechive.com/humor/total-badasses-whove-totally-never-bled-their-own-blood-28-photos/?utm_postid=5054031&amp;utm_editor=5054031_ben</link></item>
+<item><title>Life Hacks, Cheat Codes, Magic Powers… Whatever You’d Like To Call It (30 Photos) - theCHIVE</title><link>https://thechive.com/humanity/inspirational/life-hacks-cheat-codes-magic-powers-whatever-youd-like-to-call-it-30-photos/?utm_postid=5050062&amp;utm_editor=5050062_ryder</link></item>
+<item><title>These are the geeky memes you’re looking for (25 Photos) - theCHIVE</title><link>https://thechive.com/entertainment/movies/these-are-the-geeky-memes-youre-looking-for-25-photos/?utm_postid=5054403&amp;utm_editor=5054403_jacob</link></item>
+<item><title>Don’t be fooled, the world is bursting with beautiful humanity (25 Photos) - theCHIVE</title><link>https://thechive.com/humanity/inspirational/dont-be-fooled-the-world-is-bursting-with-beautiful-humanity-25-photos/?utm_postid=5050494&amp;utm_editor=5050494_stephen</link></item>
+<item><title>Moronic Memes 4 Dummies (35 Photos) - theCHIVE</title><link>https://thechive.com/uncategorized/moronic-memes-4-dummies-35-photos-5/?utm_postid=5053858&amp;utm_editor=5053858_laura_lee</link></item>
+<item><title>Fill Ya Pockets With Random Facts! (15 GIFs) - theCHIVE</title><link>https://thechive.com/humanity/facts-random/fill-ya-pockets-with-random-facts-15-gifs/?utm_postid=5050390&amp;utm_editor=5050390_hendy</link></item>
+<item><title>Military Monday brings-out the firepower FUN (71 Photos) - theCHIVE</title><link>https://thechive.com/military/military-monday-brings-out-the-firepower-fun-71-photos/?utm_postid=5053665&amp;utm_editor=5053665_rick</link></item>
+<item><title>No Place Can Beat Father Time (30 Photos) - theCHIVE</title><link>https://thechive.com/lifestyle/mind-blowing/no-place-can-beat-father-time-30-photos/?utm_postid=5031356&amp;utm_editor=5031356_hendy</link></item>
+<item><title>Memes spot the target…NAILed IT (44 Photos) - theCHIVE</title><link>https://thechive.com/humor/memes-spot-the-targetnailed-it-44-photos/?utm_postid=5053414&amp;utm_editor=5053414_rick</link></item>
+<item><title>You Laugh, You Lose! Top Memes Found Here. (25 Photos) - theCHIVE</title><link>https://thechive.com/humor/you-laugh-you-lose-top-memes-found-here-25-photos/?utm_postid=5046514&amp;utm_editor=5046514_hendy</link></item>
+<item><title>Awesome Photos That May Peak Your Interest (25 Photos) - theCHIVE</title><link>https://thechive.com/lifestyle/mind-blowing/awesome-photos-that-may-peak-your-interest-25-photos/?utm_postid=5050344&amp;utm_editor=5050344_hendy</link></item>
+<item><title>Hmmm… There Are Too Many Questions (25 Photos) - theCHIVE</title><link>https://thechive.com/humor/hmmm-there-are-too-many-questions-25-photos/?utm_postid=5051694&amp;utm_editor=5051694_hendy</link></item>
+<item><title>Iconic Sports Quotes Etched in History (18 Photos) - theCHIVE</title><link>https://thechive.com/humanity/inspirational/iconic-sports-quotes-etched-in-history-18-photos/?utm_postid=5051728&amp;utm_editor=5051728_hendy</link></item>
+<item><title>Lighten the mood after a heavy week with Top Comments! (70 Photos) - theCHIVE</title><link>https://thechive.com/humor/lighten-the-mood-after-a-heavy-week-with-top-comments-70-photos/?utm_postid=5051316&amp;utm_editor=5051316_bob</link></item>
+<item><title>Roommate Stories That Will Send You Running (21 Photos) - theCHIVE</title><link>https://thechive.com/humor/roommate-stories-that-will-send-you-running-21-photos/?utm_postid=5050106&amp;utm_editor=5050106_ryder</link></item>
+<item><title>Retorts That Deserve Their Own Sitcom (28 Photos) - theCHIVE</title><link>https://thechive.com/humor/retorts-that-deserve-their-own-sitcom-28-photos/?utm_postid=5048170&amp;utm_editor=5048170_hendy</link></item>
+<item><title>1,2,3. Easy as Triple-B! (45 Photos) - theCHIVE</title><link>https://thechive.com/sexy-girls/fuego/123-easy-as-triple-b-45-photos/?utm_postid=5051534&amp;utm_editor=5051534_hendy</link></item>
+<item><title>Wholesomeness Can Be Found Right Here (25 Photos) - theCHIVE</title><link>https://thechive.com/humor/meme/wholesomeness-can-be-found-right-here-25-photos/?utm_postid=5050487&amp;utm_editor=5050487_hendy</link></item>
+<item><title>Good For Your Soul, Not Your Ego (31 Photos) - theCHIVE</title><link>https://thechive.com/humanity/inspirational/good-for-your-soul-not-your-ego-31-photos/?utm_postid=5049983&amp;utm_editor=5049983_ryder</link></item>
+<item><title>I Have a Fever &amp; the Cure Is Dank Memes (25 Photos) - theCHIVE</title><link>https://thechive.com/humor/i-have-a-fever-the-cure-is-dank-memes-25-photos/?utm_postid=5051585&amp;utm_editor=5051585_hendy</link></item>
+<item><title>Blimey, It’s Saturday! Bring Out the Cats! (35  Photos) - theCHIVE</title><link>https://thechive.com/humor/blimey-its-saturday-bring-out-the-cats-35-photos/?utm_postid=5051617&amp;utm_editor=5051617_hendy</link></item>
+<item><title>Memories from All The Perfectly Imperfect Days and People (25 Photos) - theCHIVE</title><link>https://thechive.com/humor/memories-from-all-the-perfectly-imperfect-days-and-people-25-photos/?utm_postid=5049896&amp;utm_editor=5049896_ryder</link></item>
+<item><title>Bushcraft Pics That Have Us Feeling the Need for Nature (20 Photos) - theCHIVE</title><link>https://thechive.com/humanity/animals/bushcraft-pics-that-have-us-feeling-the-need-for-nature-20-photos/?utm_postid=5052423&amp;utm_editor=5052423_zach</link></item>
+<item><title>Cheers to a much-needed weekend! (49 Photos) - theCHIVE</title><link>https://thechive.com/humanity/chive-nation/cheers-to-a-much-needed-weekend-49-photos/?utm_postid=5050633&amp;utm_editor=5050633_bob</link></item>
+<item><title>Start blasting with It’s Always Sunny in Philadelphia on Chive Trivia tonight (10 GIFs) - theCHIVE</title><link>https://thechive.com/entertainment/tv/start-blasting-with-its-always-sunny-in-philadelphia-on-chive-trivia-tonight-10-gifs/?utm_postid=5052598&amp;utm_editor=5052598_jacob</link></item>
+<item><title>Kite Incident - xkcd</title><link>https://xkcd.com/3121/</link></item>
+<item><title>Geologic Periods - xkcd</title><link>https://xkcd.com/3120/</link></item>
+<item><title>Flettner Rotor - xkcd</title><link>https://xkcd.com/3119/</link></item>
+<item><title>iNaturalist Animals and Plants - xkcd</title><link>https://xkcd.com/3118/</link></item>
+<item><title>Replication Crisis - xkcd</title><link>https://xkcd.com/3117/</link></item>
+<item><title>Echo Chamber - xkcd</title><link>https://xkcd.com/3116/</link></item>
+<item><title>Stack Exchange 迁移到云端 - Solidot</title><link>https://www.solidot.org/story?sid=81901</link></item>
+<item><title>A Glimpse Inside the Dizzying Psyche of Daniel Johnston - Hyperallergic</title><link>https://hyperallergic.com/1030465/a-glimpse-inside-the-dizzying-psyche-of-daniel-johnston/</link></item>
+<item><title>The Poetic Optimism of Latina Lesbian Activism - Hyperallergic</title><link>https://hyperallergic.com/1027355/the-poetic-optimism-of-latina-lesbian-activism/</link></item>
+<item><title>Robert Rauschenberg’s Centennary Gets Major Guggenheim Show - Hyperallergic</title><link>https://hyperallergic.com/1029615/guggenheim-museum-to-stage-a-robert-rauschenberg-exhibition-on-his-centenary-this-fall/</link></item>
+<item><title>Memory Becomes Form in the Art of Candida Alvarez - Hyperallergic</title><link>https://hyperallergic.com/1030451/memory-becomes-form-in-the-art-of-candida-alvarez/</link></item>
+<item><title>A Paean to the Bygone “Borscht Belt” - Hyperallergic</title><link>https://hyperallergic.com/1021540/a-paean-to-the-bygone-borscht-belt-skirball-marisa-j-futernick/</link></item>
+<item><title>BlackStar Festival Returns With 92 Films From Around the World - Hyperallergic</title><link>https://hyperallergic.com/1029327/blackstar-festival-returns-with-92-films-from-around-the-world/</link></item>
+<item><title>How Helen Chadwick Took the Piss Out of Art - Hyperallergic</title><link>https://hyperallergic.com/1029563/how-helen-chadwick-took-the-piss-out-of-art/</link></item>
+<item><title>The Woman Scientist and Artist Who Revolutionized the Study of Mushrooms - Hyperallergic</title><link>https://hyperallergic.com/1029741/mary-banning-woman-scientist-and-artist-who-revolutionized-the-study-of-mushrooms/</link></item>
+<item><title>Video Art That Chases the Rainbow - Hyperallergic</title><link>https://hyperallergic.com/1029800/video-art-that-chases-the-rainbow-wallach-art-gallery/</link></item>
+<item><title>A Hollywood Hills Gallery-Home Is Reborn as an Artist’s Residency - Hyperallergic</title><link>https://hyperallergic.com/1030087/galka-scheyer-hollywood-hills-gallery-home-reborn-as-artists-residency/</link></item>
+<item><title>Fine Arts Museums of San Francisco Lays Off 12 Workers - Hyperallergic</title><link>https://hyperallergic.com/1029234/fine-arts-museums-of-san-francisco-lays-off-12-workers/</link></item>
+<item><title>Andres Serrano Proposes Trump Altar for the Venice Biennale - Hyperallergic</title><link>https://hyperallergic.com/1029722/andres-serrano-proposes-trump-altar-for-the-venice-biennale/</link></item>
+<item><title>Refik Anadol’s Soulless AI Tribute to Leo Messi - Hyperallergic</title><link>https://hyperallergic.com/1029216/refik-anadol-soulless-ai-tribute-to-leo-messi/</link></item>
+<item><title>10 Bay Area Art Shows for the Dog Days of Summer - Hyperallergic</title><link>https://hyperallergic.com/1025739/10-bay-area-art-shows-for-the-dog-days-of-summer-2025/</link></item>
+<item><title>Amy Sherald Cancels Smithsonian Show, Citing Censorship of Trans Artwork - Hyperallergic</title><link>https://hyperallergic.com/1029808/amy-sherald-cancels-smithsonian-show-citing-censorship-of-trans-artwork/</link></item>
+<item><title>The Friendship That Transformed Frida Kahlo - Hyperallergic</title><link>https://hyperallergic.com/1027991/mary-reynolds-friendship-that-transformed-frida-kahlo/</link></item>
+<item><title>Chicago Nonprofit Celebrates a Decade of Serving Unhoused Artists - Hyperallergic</title><link>https://hyperallergic.com/1029277/chicago-nonprofit-red-line-service-celebrates-a-decade-of-serving-unhoused-artists/</link></item>
+<item><title>Trump Withdraws US From UNESCO, Again - Hyperallergic</title><link>https://hyperallergic.com/1029228/trump-withdraws-us-from-unesco-again/</link></item>
+<item><title>Chance Encounters at Upstate Art Weekend - Hyperallergic</title><link>https://hyperallergic.com/1029221/chance-encounters-at-upstate-art-weekend-2025/</link></item>
+<item><title>Four New York City Art Shows to See Right Now - Hyperallergic</title><link>https://hyperallergic.com/1028900/four-new-york-city-art-shows-to-see-july-22-2025/</link></item>
+<item><title>The Queens Phone Repair Shop Meets the Museum - Hyperallergic</title><link>https://hyperallergic.com/1029055/umber-majeed-queens-phone-repair-shop-meets-the-museum/</link></item>
+<item><title>Bidding Adieu to Art Deco’s Democratic Dream - Hyperallergic</title><link>https://hyperallergic.com/1028187/bidding-adieu-to-art-deco-democratic-dream/</link></item>
+<item><title>Met Museum Announces Highest Attendance Numbers Since 2019 - Hyperallergic</title><link>https://hyperallergic.com/1029086/met-museum-announces-highest-attendance-numbers-since-2019/</link></item>
+<item><title>How “Coldplaygate” Became the Meme of the Summer - Hyperallergic</title><link>https://hyperallergic.com/1028939/how-coldplaygate-became-the-meme-of-the-summer/</link></item>
+<item><title>Why Does Elon Musk Have Such a Straight View of Antiquity? - Hyperallergic</title><link>https://hyperallergic.com/1029023/why-does-elon-musk-have-such-a-straight-view-of-antiquity/</link></item>
+<item><title>The Communal Roots of Ben Shahn’s Social Realism - Hyperallergic</title><link>https://hyperallergic.com/1028907/ben-shahn-retrospective-jewish-museum-misses-key-element-of-the-artist-legacy/</link></item>
+<item><title>Magali Lara Stitches Together the Personal and Political - Hyperallergic</title><link>https://hyperallergic.com/1028933/magali-lara-stitches-together-the-personal-and-political-islaa/</link></item>
+<item><title>Saya Woolfalk Toys With Future Worlds - Hyperallergic</title><link>https://hyperallergic.com/1028997/saya-woolfalk-toys-with-future-worlds-empathic-universe/</link></item>
+<item><title>Hyperallergic Mini Art Crossword: July 2025 - Hyperallergic</title><link>https://hyperallergic.com/1028874/hyperallergic-mini-art-crossword-july-2025/</link></item>
+<item><title>Investing in Access: Art Bridges Supports Museums Nationwide - Hyperallergic</title><link>https://hyperallergic.com/1028151/investing-in-access-art-bridges-supports-museums-nationwide/</link></item>
+<item><title>The First Homosexuals Is a Defiant Celebration of LGBTQ+ Life - Hyperallergic</title><link>https://hyperallergic.com/1028459/the-first-homosexuals-defiant-celebration-of-lgbtq-life-wrightwood-659/</link></item>
+<item><title>Visa Denials Create Hurdles for Artist Residencies - Hyperallergic</title><link>https://hyperallergic.com/1028505/visa-denials-create-hurdles-for-artist-residencies/</link></item>
+<item><title>New Zealand Wants to Be the “Best Place to Have Herpes” - Hyperallergic</title><link>https://hyperallergic.com/1028521/new-zealand-ad-campaign-best-place-to-have-herpes/</link></item>
+<item><title>Israel Says It Will Hand Over Hebron Mosque to Settlers - Hyperallergic</title><link>https://hyperallergic.com/1028675/israel-says-it-will-hand-over-hebron-ibrahimi-mosque-to-settlers/</link></item>
+<item><title>An Absurd Take on Masahisa Fukase’s Darkness - Hyperallergic</title><link>https://hyperallergic.com/1028646/mark-gill-ravens-absurd-take-on-masahisa-fukase-darkness/</link></item>
+<item><title>Member Event: Artists and the Alchemy of Color - Hyperallergic</title><link>https://hyperallergic.com/1027993/member-event-artists-and-the-alchemy-of-color/</link></item>
+<item><title>Trump Gifted Epstein a Lewd Drawing on His Birthday, Report Says - Hyperallergic</title><link>https://hyperallergic.com/1028628/trump-gifted-epstein-a-lewd-drawing-on-his-birthday-report-says/</link></item>
+<item><title>Ruth Asawa Showed Us the Way to an Artistic Life - Hyperallergic</title><link>https://hyperallergic.com/1027751/ruth-asawa-showed-us-the-way-to-an-artistic-life-sfmoma/</link></item>
+<item><title>The Renaissance, but Make It Game of Thrones - Hyperallergic</title><link>https://hyperallergic.com/1028473/renaissance-the-blood-and-the-beauty-pbs-docuseries/</link></item>
+<item><title>Art Comes Naturally in Upstate New York - Hyperallergic</title><link>https://hyperallergic.com/1028372/art-comes-naturally-in-upstate-new-york/</link></item>
+<item><title>Yale Art Gallery Withdraws Federal Grant Requests After Trump DEI Ban - Hyperallergic</title><link>https://hyperallergic.com/1028300/yale-art-gallery-withdraws-federal-grant-requests-after-trump-dei-ban/</link></item>
+<item><title>Buyer of Maurizio Cattelan Banana Invests $100M in Trump Crypto - Hyperallergic</title><link>https://hyperallergic.com/1028232/justin-sun-buyer-of-maurizio-cattelan-banana-invests-100m-in-trump-crypto/</link></item>
+<item><title>My Dialogues With a Political Prisoner - Hyperallergic</title><link>https://hyperallergic.com/1028230/coco-fusco-dialogues-with-political-prisoner-luis-manuel-otero-alcantara/</link></item>
+<item><title>Rashaad Newsome’s Futurist Manifesto of Black Joy - Hyperallergic</title><link>https://hyperallergic.com/1028148/rashaad-newsome-assembly-futurist-manifesto-of-black-joy/</link></item>
+<item><title>Black-Owned Film Shop Photodom Gets a New Home in Bushwick - Hyperallergic</title><link>https://hyperallergic.com/1028100/black-owned-film-shop-photodom-gets-a-new-home-in-bushwick/</link></item>
+<item><title>10 Upstate Art Weekend Destinations Worth the Trip - Hyperallergic</title><link>https://hyperallergic.com/1027811/10-new-york-upstate-art-weekend-2025-destinations-worth-the-trip/</link></item>
+<item><title>Four Virtues That Our Leaders Need - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/four_virtues_that_our_leaders_need</link></item>
+<item><title>Same Sex or Not, Marriage Makes for Happier, Healthier Couples - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/same_sex_or_not_marriage_makes_for_happier_healthier_couples</link></item>
+<item><title>Can You Get Emotionally Dependent on ChatGPT? - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/can_you_get_emotionally_dependent_on_chatgpt</link></item>
+<item><title>How Hope Helps Us Build a Meaningful Life - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/how_hope_helps_us_build_a_meaningful_life</link></item>
+<item><title>Six Ways to Respond to Your Child’s Tantrum - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/six_ways_to_respond_to_your_childs_tantrum</link></item>
+<item><title>Bonus: Zakiya Used to Be So Fun (Proxy podcast) - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/podcasts/item/bonus_episode_title_proxy_podcast</link></item>
+<item><title>The Science of Trusting Your Intuition - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/podcasts/item/the_science_of_trusting_your_intuition</link></item>
+<item><title>10 Scientific Tips to Make You Better at Conversation - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/10_scientific_tips_to_make_you_better_at_conversation</link></item>
+<item><title>The Six Points of Connection We All Need - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/the_six_points_of_connection_we_all_need</link></item>
+<item><title>Five Habits to Help Kids Be Resilient - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/five_habits_to_help_kids_be_resilient</link></item>
+<item><title>How Relationships Help Us Grow and Learn - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/how_relationships_help_us_grow_and_learn</link></item>
+<item><title>Happiness Break: Smiling From the Inside Out - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/podcasts/item/happiness_break_smiling_from_the_inside_out</link></item>
+<item><title>16 Ways People Find Purpose Around the World - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/16_ways_people_find_purpose_around_the_world</link></item>
+<item><title>Can We Have Better Classroom Conversations in Challenging Times? - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/can_we_have_better_classroom_conversations_in_challenging_times</link></item>
+<item><title>What Does It Actually Mean to Forgive? - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/what_does_it_actually_mean_to_forgive</link></item>
+<item><title>Casio CRW-001 50th Anniversary Ring Watch - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/fashion-design/casio-crw-001-50th-anniversary-ring-watch/</link></item>
+<item><title>Ferrari Replaces Roma with the Amalfi and Brings Back Real Buttons - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/automotive-design/ferrari-replaces-roma-with-the-amalfi-and-brings-back-real-buttons/</link></item>
+<item><title>T-800 Terminator Headphone Stand Brings Judgment Day to Your Desktop - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/industrial-design/t-800-terminator-headphone-stand-brings-judgment-day-to-your-desktop/</link></item>
+<item><title>Top 12 Best Day Trading Platforms for Crypto - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/investing/best-day-trading-platforms-for-crypto/</link></item>
+<item><title>Zyon Smart Helmet Cleans the Air You Breathe - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/industrial-design/zyon-smart-helmet-cleans-the-air-you-breathe/</link></item>
+<item><title>Luxurious Prodrive Racing Simulator - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/industrial-design/luxurious-prodrive-racing-simulator/</link></item>
+<item><title>Bandit9 Transforms Ducati 821 into a Molten Masterpiece - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/automotive-design/bandit9-transforms-ducati-821-into-a-molten-masterpiece/</link></item>
+<item><title>Koenigsegg Delivers a €3.8 Million Legacy Wrapped in Carbon Fiber - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/automotive-design/koenigsegg-delivers-a-e3-8-million-legacy-wrapped-in-carbon-fiber/</link></item>
+<item><title>Louis Vuitton Tambour Bushido Automata - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/fashion-design/louis-vuitton-tambour-bushido-automata/</link></item>
+<item><title>2026 Maserati MCPURA - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/automotive-design/2026-maserati-mcpura/</link></item>
+<item><title>Heritage Reimagined in Bentley’s EXP 15 - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/automotive-design/heritage-reimagined-in-bentleys-exp-15/</link></item>
+<item><title>Stractra Watch Looks Like It Was Grown by Aliens - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/fashion-design/stractra-watch-looks-like-it-was-grown-by-aliens/</link></item>
+<item><title>Kriket 3000 Might Be the Next Robot You Actually Want Around - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/industrial-design/kriket-3000-might-be-the-next-robot-you-actually-want-around/</link></item>
 </channel></rss>

@@ -1,8 +1,6 @@
 function get_day_words_enwc_b(csday='',csmonth='',cstype='new',cs_write_html=true,cs_write_input=true){
     //cstype new:新单词 - 保留注释
-    var blyear;
-	var bldate;
-
+    var blyear, bldate;
     [blyear,csmonth,csday,bldate]=get_month_day_enwc_b(csday,csmonth,cs_write_input);
     if (csmonth==0 || csday==0){return;}
     
@@ -689,7 +687,9 @@ function rnd_cn_search_enwc_b(cslines='',showhtml=true){
         cslines=20;
     }
 	document.getElementById('input_lines').value=cslines;
-
+    
+    words_searched_arr_global=[];
+    
     enwords_sort_b('r');
     for (let bly=0;bly<10;bly++){
         var str_t=enwords[Math.max(0,parseInt(Math.random()*enwords.length))][2];
@@ -697,10 +697,11 @@ function rnd_cn_search_enwc_b(cslines='',showhtml=true){
         var list_t=array_unique_b(str_t.match(/[^\x00-\xff]{2,5}/g) || []);
         
         document.getElementById('input_search').value=list_t.join(' ');
-        wordsearch_enwords_b('',-1,[],false,showhtml);
+        wordsearch_enwords_b('',-1,[],false,showhtml);  //有可能 words_searched_arr_global 未重新赋值 - 保留注释
         //即便如此，也有可能返回只有1个的结果 - 保留注释
         if (words_searched_arr_global.length>=cslines){break;}
     }
+    
     words_searched_arr_global=words_searched_arr_global.slice(0,cslines);
     if (showhtml){
         var blhtml = document.getElementById('divhtml');
