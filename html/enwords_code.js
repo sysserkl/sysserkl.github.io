@@ -424,7 +424,7 @@ function words_editor_form_kle(){
     left_strings=left_strings+'<span class="aclick" onclick="words_queue_append_kle();">批量添加</span> ';
         
     var right_strings=' <select id="select_queue_do_type">';
-    for (let item of ['数组转为多行形式','展现为数组形式','batch_en','batch_en+']){
+    for (let item of ['数组转为多行形式','展现为数组形式','batch_en','batch_en+','batch_dwdlw']){
         right_strings=right_strings+'<option>'+item+'</option>';
     }
     right_strings=right_strings+'</select> ';
@@ -479,6 +479,7 @@ function words_queue_do_type_kle(){
             break;
         case 'batch_en':
         case 'batch_en+':
+        case 'batch_dwdlw':
             var otextarea=document.getElementById('textarea_words_queue');
             var blstr=otextarea.value.trim().split('\n')[0];
             if (blstr!==''){

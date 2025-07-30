@@ -97,4 +97,6 @@ var search_sites_list_global=[
 ['klsearch.htm?k=','&t=batch_en&iframe',0,'darkslategray','KLSearch(en)','0','Local',''],
 ['klsearch.htm?k=','&t=batch_en+&iframe',0,'darkslategray','KLSearch(en+)','0','Local',''],
 ['klsearch.htm?k=','&t=batch_en_wiktionary&close=1',0,'','KLSearch(wiktionary)','1','Local',''],
+['klsearch.htm?k=','&t=batch_dwdlw&close=1',0,'','KLSearch(dwdlw)','0','Local',''],
+
 ];

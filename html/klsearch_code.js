@@ -137,7 +137,7 @@ function batch_open_sites_klsearch(cscategory){
 function batch_type_get_klsearch(cstype){
     switch (cstype){
         case 'batch_en':
-            var cstype='dict.cn,youdao,iciba,merriam-webster,dictionary.com,wr_cn,TFD,longman,wordnik,AHD,learnersdictionary,lexico';
+            var cstype='youdao,iciba,merriam-webster,TFD,AHD,learnersdictionary,lexico';//,dict.cn,wr_cn,dictionary.com,longman,wordnik';
             //(is_local_b()?'KLWiki,':'') +'collins(p),wiktionary(p),' - 此两项保留 - 保留注释
             break;
         case 'batch_en+':
@@ -145,6 +145,9 @@ function batch_type_get_klsearch(cstype){
             break;
         case 'batch_en_wiktionary':
             cstype='Wiktionary(Local),kaikki(Local),wordhippo,definitions';
+            break;
+        case 'batch_dwdlw':
+            cstype='dict.cn,wr_cn,dictionary.com,longman,wordnik';
             break;
     }
     
@@ -173,10 +176,16 @@ function iframe_current_button(event,obutton,csxl){
 }
 
 function iframe_generate_klsearch(cstype='',cskey=false){
-    cstype=batch_type_get_klsearch(cstype);
     if (cskey===false){
         cskey=document.getElementById('input_searchtxt').value.trim();
     }
+    
+    if (cstype=='batch_dwdlw'){
+        window.open('?k='+encodeURIComponent(cskey)+'&t=batch_dwdlw&close=1');
+        return;
+    }
+    
+    cstype=batch_type_get_klsearch(cstype);
     
     var oiframes=document.querySelectorAll('iframe.iframe_site_kl_b');
     for (let one_iframe of oiframes){
@@ -217,9 +226,9 @@ function iframe_generate_klsearch(cstype='',cskey=false){
     '<span class="span_menu" onclick="'+str_t+'iframe_generate_klsearch(this.innerText);">batch_en</span>',
     '<span class="span_menu" onclick="'+str_t+'iframe_generate_klsearch(this.innerText);">batch_en+</span>',
     '<span class="span_menu" onclick="'+str_t+'iframe_generate_klsearch(this.innerText);">batch_en_wiktionary</span>',
-    
+    '<span class="span_menu" onclick="'+str_t+'iframe_generate_klsearch(this.innerText);">batch_dwdlw</span>',
     ];
-    document.getElementById('p_buttons_kls').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🇬🇧','13rem','1rem','1rem','30rem'),'','0rem'));//+' <span class="aclick" onclick="copy_iframe_link_klsearch(true);">↪</span>');
+    document.getElementById('p_buttons_kls').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🇬🇧','13rem','1rem','1rem','30rem'),'','0rem'));
     //-----------------------
     iframe_init_b();
     document.getElementById('checkbox_openwindow').parentNode.style.display='none';
