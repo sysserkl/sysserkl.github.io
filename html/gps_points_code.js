@@ -723,10 +723,12 @@ function init_page_gps_points(is_simple=false,map_type='',map_id='osm'){
     
     var lat_lon_value=[31.2,121.5];
     var zoom_value=12;
+    var ostatus=document.getElementById('div_status');
+    ostatus.style.backgroundColor=scheme_global['skyblue'];
     //-----------------------
     if (is_simple==false){
         document.getElementById('div_icon').innerHTML='🧿';
-        document.getElementById('div_status').innerHTML='GPS Points';
+        ostatus.innerHTML='GPS Points';
         document.getElementById('div_buttons').innerHTML=buttons_gps_points();
         menu_gps_points();
     }
@@ -784,8 +786,7 @@ function init_page_gps_points(is_simple=false,map_type='',map_id='osm'){
             var bltype=gps_tranform_type_global;
         } else {return;}
         
-        var bllon;
-        var bllat;
+        var bllon, bllat;
         [bllon,bllat]=transform_lon_lat_one_dot_b(bltype,ev.latlng.lng,ev.latlng.lat);
         var ostatus=document.getElementById('div_status');
         if (ostatus){

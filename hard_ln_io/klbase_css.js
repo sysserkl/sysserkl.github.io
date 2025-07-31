@@ -2793,6 +2793,7 @@ function remove_img_alt_b(){
 
 function find_closest_dom_above_by_tagname_b(odom,tagname,classname=false){
     let currentElement = odom;
+    let is_parent=false;
     while (currentElement){
         // 检查当前元素的前方兄弟元素
         let sibling = currentElement.previousElementSibling;
