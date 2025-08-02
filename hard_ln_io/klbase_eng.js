@@ -2076,7 +2076,12 @@ function enwords_search_old_b(cs_w_p_d,csword,csreg,csmax=500){
     return words_temp_equal_arr;
 }
 
-function enwords_mini_search_b(csword=''){
+function enwords_mini_search_clear_b(){
+    document.getElementById('input_enwords_mini_search').value='';
+    enwords_mini_search_do_b();
+}
+
+function enwords_mini_search_do_b(csword=''){
     var osession = document.getElementById('session_mini_search');
     var odiv=document.getElementById('input_enwords_mini_search');
     if (csword==''){
@@ -2201,7 +2206,7 @@ function enwords_mini_search_frame_form_b(cstype='s'){
         odiv.innerHTML='<span onclick="enwords_mini_search_frame_form_b(\'\');" style="padding:1rem 0.5rem;cursor:pointer;color:tomato;"><b>S</b></span>';
         odiv.style.opacity='0.5';
     } else {
-        var bljg='<input id="input_enwords_mini_search" type="text" onkeyup="if (event.key==\'Enter\'){enwords_mini_search_b();}"> ';
+        var bljg='<input id="input_enwords_mini_search" type="text" onkeyup="if (event.key==\'Enter\'){enwords_mini_search_do_b();}"> ';
 
         var radios='';
         var radio_count=0;
@@ -2232,7 +2237,7 @@ function enwords_mini_search_frame_form_b(cstype='s'){
         }
         
         bljg=bljg+radios;
-        
+        bljg=bljg+'<span class="aclick" onclick="enwords_mini_search_clear_b();">➡</span>';
         bljg=bljg+'<span class="aclick" onclick="enwords_mini_search_frame_form_b();">Close</span>';
         bljg=bljg+'<section style="overflow:auto;padding-top:0.1rem;max-height:'+parseInt(window.innerHeight*2/3)+'px;font-size:1rem;" id="session_mini_search">'+enwords_recent_search_b('','mini');+'</section>';
 
@@ -2256,7 +2261,7 @@ function enwords_recent_search_b(csword='',cstype=''){
     switch (cstype){
         case 'mini':
             var recent_search_str='<p id="p_recent_search" style="line-height:'+(ismobile_b()?'200':'210')+'%;">';
-            return recent_search_str+sub_enwords_recent_search_b_fn('enwords_mini_search_b')+'</p>';
+            return recent_search_str+sub_enwords_recent_search_b_fn('enwords_mini_search_do_b')+'</p>';
             break;
         case 'sentence':
             var odiv=document.getElementById('div_recent_search');

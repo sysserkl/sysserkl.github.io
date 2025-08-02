@@ -1299,7 +1299,7 @@ function sort_select_klr_b(){
 }
 
 function blank_rows_add_remove_klr_b(cstype='',textarea_id='',str_t=''){
-    var list_t=['blank_rows_add','blank_rows_remove','blank_rows_wiki_type'];
+    var list_t=['blank_rows_wiki_type','blank_rows_add','blank_rows_remove'];
     switch (cstype){
         case 'menu':
             for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
