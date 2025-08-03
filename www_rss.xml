@@ -8,397 +8,94 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Sat, 02 Aug 2025 09:19:09 +0800</lastBuildDate>
-<item><title>Florida jury throws huge fine at Tesla in Autopilot crash - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/08/01/florida_tesla_verdict/</link></item>
-<item><title>Rampant emoji use suggests crypto-stealing NPM package was written by AI - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/08/01/emoji_use_ai_malware/</link></item>
-<item><title>OpenAI removes ChatGPT self-doxing option - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/08/01/openai_removes_chatgpt_selfdoxing_option/</link></item>
-<item><title>$10 billion, 10 year US Army contract elevates Palantir to defense contracting royalty - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/08/01/palantir_us_army_contract/</link></item>
-<item><title>Gadget geeks aghast at guru&amp;#39;s geriatric GPU - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/08/01/geeks_aghast_at_guru_gpu/</link></item>
-<item><title>Tested: Microsoft Recall can still capture credit cards and passwords, a treasure trove for crooks - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/08/01/microsoft_recall_captures_credit_card_info/</link></item>
-<item><title>China says US spies exploited Microsoft Exchange zero-day to steal military info - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/08/01/china_us_intel_attacks/</link></item>
-<item><title>Court upholds Epic win in Google Play Store antitrust battle - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/08/01/epic_google_verdict_affirmed/</link></item>
-<item><title>Microsoft gives in to Chromebook bullies and drops Windows 11 SE - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/08/01/microsoft_abandons_windows_11_se/</link></item>
-<item><title>Another one bites the dust as KubeSphere kills open source edition - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/08/01/kubesphere_open_source_edition/</link></item>
-<item><title>ISS is still leaking air after latest repair efforts fail - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/08/01/iss_is_still_leaking/</link></item>
-<item><title>Florida prison email blunder exposes visitor contact info to inmates - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/08/01/florida_prison_email_blunder/</link></item>
-<item><title>Virgin Media scraps wholesale network rival to Openreach - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/08/01/virgin_media_ditches_plans_for/</link></item>
-<item><title>Oracle offers workaround to Windows boot issue in the cloud instead of fix - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/08/01/oracle_oci_windows_boot/</link></item>
-<item><title>Enterprise software giants weaponize AI to kill discounts and deepen lock-in - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/08/01/forrester_ai_enterprise_software/</link></item>
-<item><title>Wasp nest at US nuclear site tests ten times over safe radiation limit - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/08/01/radioactive_wasp_nest/</link></item>
-<item><title>Cybercrooks attached Raspberry Pi to bank network and drained ATM cash - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/08/01/cybercrooks_bribed_lackeys_in_physical/</link></item>
-<item><title>Windows 10 @ 10: How Microsoft led developers round in circles - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/08/01/windows_10_dev_comment/</link></item>
-<item><title>Servers hated Mondays until techie quit quaffing coffee in their company - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/08/01/on_call/</link></item>
-<item><title>Top spy says LinkedIn profiles that list defense work &amp;#39;recklessly invite attention of foreign intelligence services&amp;#39; - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/08/01/asio_espionage_social_media_warning/</link></item>
-<item><title>Panic buying ahead of Trump tariffs added $825 million to Apple&amp;#39;s sales last quarter - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/08/01/good_news_apple_says_trump/</link></item>
-<item><title>US lowers tariffs on major tech exporting nations - but buyers will still pay more - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/08/01/recipricoal_tariff_changes/</link></item>
-<item><title>AI is contributing to Meta’s growth – just not the kind anyone cares about - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/08/01/meta_ai_investments/</link></item>
-<item><title>Amazon is spending a boatload on AI but investors are impatient for results - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/31/amazon_earnings_q2_2025/</link></item>
-<item><title>Ex-CISA chief slams MAGA &amp;#39;manufactured outrage&amp;#39; after sudden West Point firing - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/31/jen_easterly_west_point_termination/</link></item>
-<item><title>New Google AI model maps world in 10-meter squares for machines to read - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/31/google_ai_maps_world/</link></item>
-<item><title>Tesla starts sort-of Robotaxi service in San Francisco by invite only - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/31/tesla_robotaxi_san_francisco/</link></item>
-<item><title>As ransomware gangs threaten physical harm, &amp;#39;I am afraid of what&amp;#39;s next,&amp;#39; ex-negotiator says - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/31/ransomware_physical_harm_threats/</link></item>
-<item><title>Gene scanner pays $9.8 million to get feds off its back in security flap - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/31/7_years_of_back_debt/</link></item>
-<item><title>Altman embraces inner Viking, raids Europe with 100K GPU supercluster in Norway - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/31/norway_stargate_openai/</link></item>
-<item><title>NIST discovers DevSecOps, thinks world should really check this out - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/31/nist_devsecops_guide/</link></item>
-<item><title>Microsoft&amp;#39;s Azure AI Speech needs just seconds of audio to spit out a convincing deepfake - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/31/microsoft_updates_azure_ai_speech/</link></item>
-<item><title>Beijing summons Nvidia over alleged backdoors in China-bound AI chips - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/31/beijing_nvidia_backdoors/</link></item>
-<item><title>Microsoft removes the whiff of Vista from Windows 11 Insider Preview - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/31/microsoft_windows_bug/</link></item>
-<item><title>Arm plots move up the stack with push into end-to-end silicon - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/31/arm_q1_2026/</link></item>
-<item><title>Kremlin goons caught abusing ISPs to spy on Moscow-based diplomats, Microsoft says - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/31/kremlin_goons_caught_abusing_isps/</link></item>
-<item><title>Silk Typhoon spun a web of patents for offensive cyber tools, report says - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/31/silk_typhoon_attack_patents/</link></item>
-<item><title>Canonical dusts off TPM encryption for Ubuntu 25.10 - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/31/ubuntu_tpm_fde/</link></item>
-<item><title>Brit watchdog pushes to rein in Microsoft and AWS with &amp;#39;strategic market status&amp;#39; - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/31/cma_aws_microsoft_sms/</link></item>
-<item><title>Figma debuts on Wall Street at $33 per share – then more than triples - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/31/ipo_figma/</link></item>
-<item><title>NHS disability equipment provider on brink of collapse a year after cyberattack - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/31/nhs_disability_equipment_provider_nears/</link></item>
-<item><title>SpaceX Crew Dragon lofting next batch of &amp;#39;nauts to ISS today - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/31/crew_11_iss/</link></item>
-<item><title>AWS Lambda loves charging for idle time: Vercel claims it found a way to dodge the bill - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/31/aws_lambda_cost_nightmare/</link></item>
-<item><title>Capgemini wins £107M HMRC extension – no competition needed - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/31/capgemini_hmrc_extension/</link></item>
-<item><title>Banning VPNs to protect kids? Good luck with that - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/31/banning_vpns_to_protect_kids/</link></item>
-<item><title>Bitter fight over 2020 Microsoft quantum paper both resolved and unresolved - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/31/microsoft_quantum_paper_science/</link></item>
-<item><title>Internet exchange points are ignored, vulnerable, and absent from infrastructure protection plans - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/31/ixp_resilience_call/</link></item>
-<item><title>Qualcomm working on datacenter CPU and in ‘advanced discussions’ with hyperscaler - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/31/qualcomm_q3_samsung_q2_205/</link></item>
-<item><title>Lethal Cambodia-Thailand border clash linked to cyber-scam slave camps - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/07/31/thai_cambodia_war_cyberscam_links/</link></item>
-<item><title>Future-Proofing Your Coding Career in the Age of AI - IEEE Spectrum</title><link>https://spectrum.ieee.org/future-proof-ai-coding</link></item>
-<item><title>Video Friday: Dance With CHILD - IEEE Spectrum</title><link>https://spectrum.ieee.org/video-friday-child-humanoid-robot</link></item>
-<item><title>A Cold War Kit for Surviving a Nuclear Attack - IEEE Spectrum</title><link>https://spectrum.ieee.org/civil-defense-cold-war</link></item>
-<item><title>Growing Through IEEE: Leadership and Learning in Action - IEEE Spectrum</title><link>https://spectrum.ieee.org/ieee-leadership-and-learning</link></item>
-<item><title>Move Too Fast, Risk Systemic Blowback - IEEE Spectrum</title><link>https://spectrum.ieee.org/ai-systemic-blowback</link></item>
-<item><title>The Stratosphere Will Be Telecom’s Next Frontier - IEEE Spectrum</title><link>https://spectrum.ieee.org/high-altitude-platform-station-softbank</link></item>
-<item><title>Learning Analog System Design With the MOSbius - IEEE Spectrum</title><link>https://spectrum.ieee.org/mosbius-learning-analog-system-design</link></item>
-<item><title>How to Accelerate Large Antenna Array Simulations - IEEE Spectrum</title><link>https://content.knowledgehub.wiley.com/efficient-simulation-of-radiation-pattern-diagrams-for-complex-electromagnetic-problems/</link></item>
-<item><title>Over-the-Air Lasers Aim to Solve the Internet’s “Middle Mile” - IEEE Spectrum</title><link>https://spectrum.ieee.org/free-space-optical-communication-taara</link></item>
-<item><title>IEEE President-Elect Candidates On Their No. 1 Strategic Goal - IEEE Spectrum</title><link>https://spectrum.ieee.org/2026-president-elect-candidates</link></item>
-<item><title>What the CHIPS Act Looks Like Now - IEEE Spectrum</title><link>https://spectrum.ieee.org/chips-act-map</link></item>
-<item><title>Ferroelectric Helps Break Transistor Limits - IEEE Spectrum</title><link>https://spectrum.ieee.org/negative-capacitance-schottky-limit</link></item>
-<item><title>The Telecommunications Pioneer Who Helped Connect the World - IEEE Spectrum</title><link>https://spectrum.ieee.org/telecommunication-pioneer-seizo-onoe</link></item>
-<item><title>Video Friday: Skyfall Takes on Mars With Swarm Helicopter Concept - IEEE Spectrum</title><link>https://spectrum.ieee.org/video-friday-skyfall-mars-helicopter</link></item>
-<item><title>Rethinking Haptic Testing: The Microphone Solution - IEEE Spectrum</title><link>https://content.knowledgehub.wiley.com/rethinking-haptic-testing-the-microphone-solution/</link></item>
-<item><title>Skipping Over-The-Air Car Updates Could Be Costly - Slashdot</title><link>https://tech.slashdot.org/story/25/08/01/2116210/skipping-over-the-air-car-updates-could-be-costly</link></item>
-<item><title>A Luggage Service&amp;#39;s Web Bugs Exposed the Travel Plans of Every User - Slashdot</title><link>https://yro.slashdot.org/story/25/08/01/219227/a-luggage-services-web-bugs-exposed-the-travel-plans-of-every-user</link></item>
-<item><title>Palantir Lands $10 Billion Army Software and Data Contract - Slashdot</title><link>https://tech.slashdot.org/story/25/08/01/2055248/palantir-lands-10-billion-army-software-and-data-contract</link></item>
-<item><title>Atlassian Terminates 150 Staff With Pre-Recorded Video - Slashdot</title><link>https://slashdot.org/story/25/08/01/2049255/atlassian-terminates-150-staff-with-pre-recorded-video</link></item>
-<item><title>Amazon CEO Wants To Put Ads In Your Alexa+ Conversations - Slashdot</title><link>https://slashdot.org/story/25/08/01/2043256/amazon-ceo-wants-to-put-ads-in-your-alexa-conversations</link></item>
-<item><title>India To Penalize Universities With Too Many Retractions - Slashdot</title><link>https://science.slashdot.org/story/25/08/01/1938215/india-to-penalize-universities-with-too-many-retractions</link></item>
-<item><title>Google Has Just Two Weeks To Begin Cracking Open Android, It Admits in Emergency Filing - Slashdot</title><link>https://tech.slashdot.org/story/25/08/01/195251/google-has-just-two-weeks-to-begin-cracking-open-android-it-admits-in-emergency-filing</link></item>
-<item><title>Tim Cook Says &amp;#39;It&amp;#39;s Difficult To See a World&amp;#39; Without iPhones - Slashdot</title><link>https://apple.slashdot.org/story/25/08/01/191248/tim-cook-says-its-difficult-to-see-a-world-without-iphones</link></item>
-<item><title>Belgium Bans Internet Archive&amp;#39;s &amp;#39;Open Library&amp;#39; - Slashdot</title><link>https://it.slashdot.org/story/25/08/01/1855254/belgium-bans-internet-archives-open-library</link></item>
-<item><title>Google Backpedals On Goo.gl Shutdown To Preserve Active Links - Slashdot</title><link>https://tech.slashdot.org/story/25/08/01/1845229/google-backpedals-on-googl-shutdown-to-preserve-active-links</link></item>
-<item><title>Verizon is Upping Its Fees Again - Slashdot</title><link>https://slashdot.org/story/25/08/01/186206/verizon-is-upping-its-fees-again</link></item>
-<item><title>The Industry&amp;#39;s Rush To $80 Video Games Has Stalled - For Now - Slashdot</title><link>https://games.slashdot.org/story/25/08/01/1727250/the-industrys-rush-to-80-video-games-has-stalled---for-now</link></item>
-<item><title>Microsoft Research Identifies 40 Jobs Most Vulnerable To AI - Slashdot</title><link>https://slashdot.org/story/25/08/01/1644200/microsoft-research-identifies-40-jobs-most-vulnerable-to-ai</link></item>
-<item><title>UK Supreme Court Gives Banks Partial Win on Car Finance Commissions - Slashdot</title><link>https://news.slashdot.org/story/25/08/01/161257/uk-supreme-court-gives-banks-partial-win-on-car-finance-commissions</link></item>
-<item><title>IRS Chief Says Agency Plans To End Free Filing Program - Slashdot</title><link>https://news.slashdot.org/story/25/08/01/1522254/irs-chief-says-agency-plans-to-end-free-filing-program</link></item>
-<item><title>Commissioner of Labor Statistics fired, because labor statistics were not to president’s liking - FlowingData</title><link>https://flowingdata.com/2025/08/01/commissioner-of-labor-statistics-fired-because-labor-statistics-were-not-to-presidents-liking/</link></item>
-<item><title>Tariff tracking by country - FlowingData</title><link>https://flowingdata.com/2025/08/01/tariff-tracking-by-country/</link></item>
-<item><title>Map drawing with a single line - FlowingData</title><link>https://flowingdata.com/2025/08/01/map-drawing-with-a-single-line/</link></item>
-<item><title>Federal data more at risk, a report from American Statistical Association - FlowingData</title><link>https://flowingdata.com/2025/08/01/federal-data-more-at-risk-a-report-from-american-statistical-association/</link></item>
-<item><title>American Statistical Association - FlowingData</title><link>https://flowingdata.com/tag/american-statistical-association/</link></item>
-<item><title>released a report - FlowingData</title><link>https://flowingdata.com/2024/07/18/federal-data-at-risk/</link></item>
-<item><title>Running an LLM on your laptop - FlowingData</title><link>https://flowingdata.com/2025/08/01/running-an-llm-on-your-laptop/</link></item>
-<item><title>Large Language Model - FlowingData</title><link>https://flowingdata.com/tag/large-language-model/</link></item>
-<item><title>Transformation of data centers to build out AI in the real world - FlowingData</title><link>https://flowingdata.com/2025/07/31/transformation-of-data-centers-to-build-out-ai-in-the-real-world/</link></item>
-<item><title>Odds against a sports betting king - FlowingData</title><link>https://flowingdata.com/2025/07/31/odds-against-a-sports-betting-king/</link></item>
-<item><title>Visualization Tools, Datasets, and Resources — July 2025 Roundup - FlowingData</title><link>https://flowingdata.com/2025/07/31/process-348-roundup/</link></item>
-<item><title>Policy timelines for the Big Beautiful Bill - FlowingData</title><link>https://flowingdata.com/2025/07/31/policy-timelines-for-the-big-beautiful-bill/</link></item>
-<item><title>Meghan Markle &amp; Prince Harry Hit the Beach for Archie&amp;#39;s Surf Lessons - TMZ</title><link>https://www.tmz.com/2025/08/01/meghan-markle-prince-harry-beach-archie-surf-lesson/</link></item>
-<item><title>Former Google CEO Eric Schmidt Buys L.A.’s Spelling Manor For $110 Million - TMZ</title><link>https://www.tmz.com/2025/08/01/spelling-manor-sold-former-google-ceo/</link></item>
-<item><title>Hulk Hogan Death Certificate Released - TMZ</title><link>https://www.tmz.com/2025/08/01/hulk-hogan-death-certificate/</link></item>
-<item><title>Matt Rife Says He Purchased Occult Museum, Becomes Guardian of Haunted Annabelle Doll - TMZ</title><link>https://www.tmz.com/2025/08/01/matt-rife-says-he-purchased-occult-museum/</link></item>
-<item><title>Michael Madsen Applauded Quentin Tarantino for Firing Lawrence Tierney - TMZ</title><link>https://www.tmz.com/2025/08/01/michael-madsen-applauded-quentin-tarantino-for-firing-lawrence-tierney-reservoir-dogs/</link></item>
-<item><title>Guess The Catsuit Cuties For Frisky Friday ... Rawrrr! - TMZ</title><link>https://www.tmz.com/2025/08/01/guess-the-catsuit-celebrities-photos/</link></item>
-<item><title>Stevie Nicks Postpones Tour After Fracturing Shoulder - TMZ</title><link>https://www.tmz.com/2025/08/01/stevie-nicks-postpones-tour-fracture-shoulder/</link></item>
-<item><title>Brooke Hogan Getting Back Into Music Industry After Dad Hulk&amp;#39;s Death - TMZ</title><link>https://www.tmz.com/2025/08/01/brooke-hogan-getting-back-into-music-after-hulk-death/</link></item>
-<item><title>Guess The 54 Year Old Rockin&amp;#39; This Hot Pink Bikini! - TMZ</title><link>https://www.tmz.com/2025/08/01/guess-the-54-year-old-rockin-this-hot-pink-bikini/</link></item>
-<item><title>American Eagle Releases Official Statement on Sydney Sweeney&amp;#39;s Jeans Ad - TMZ</title><link>https://www.tmz.com/2025/08/01/american-eagle-official-statement-on-sydney-sweeney-ad/</link></item>
-<item><title>Tobey Maguire Seeks Joint Custody of Son, 9 Years Since Separation From Wife - TMZ</title><link>https://www.tmz.com/2025/08/01/tobey-maguire-asks-for-joint-custody-of-son-otis/</link></item>
-<item><title>Nikki Bella Says Her Breast Implant Shifted To Her Ribs On &amp;#39;Monday Night Raw&amp;#39; - TMZ</title><link>https://www.tmz.com/2025/08/01/nikki-bella-breast-implant-injury-monday-night-raw/</link></item>
-<item><title>&amp;#39;Spider-Man&amp;#39; Starring Actors Through The Years For &amp;#39;Spider-Man&amp;#39; Day - TMZ</title><link>https://www.tmz.com/2025/08/01/spider-man-starring-actors-through-the-years-for-spider-man-day/</link></item>
-<item><title>Kim Zolciak Confirms Daughter Ariana&amp;#39;s Claims She Pocketed All Her Money - TMZ</title><link>https://www.tmz.com/2025/08/01/kim-zolciak-daughter-ariana-biermann-money-financial/</link></item>
-<item><title>Arkansas Double-Murder Suspect Had Blood on Face After Stabbing Couple, Cops Say - TMZ</title><link>https://www.tmz.com/2025/08/01/suspected-arkansas-double-murderer-blood-face-hiking-trail-stabbing-deaths/</link></item>
-<item><title>Matty Healy Comforts His Crying Mother Outside Restaurant - TMZ</title><link>https://www.tmz.com/2025/08/01/matty-healy-comforts-crying-mother-west-hollywood/</link></item>
-<item><title>Pilot Pete Cappio Says Turbulence Alone Will Never Take Down an Airplane - TMZ</title><link>https://www.tmz.com/2025/08/01/pilot-pete-cappio-turbulence-not-take-down-airplane/</link></item>
-<item><title>Ghislaine Maxwell Transferred to Federal Prison Camp in Texas - TMZ</title><link>https://www.tmz.com/2025/08/01/ghislaine-maxwell-transferred-new-prison-texas/</link></item>
-<item><title>Machine Gun Kelly Says He Didn&amp;#39;t Audition for &amp;#39;Sinners&amp;#39; Because of Slur in Script - TMZ</title><link>https://www.tmz.com/2025/08/01/machine-gun-kelly-turned-down-sinners-audition-over-slur/</link></item>
-<item><title>Diego Sanchez Arrest Video, Cop Says &amp;#39;I Grew Up Watching You!&amp;#39; - TMZ</title><link>https://www.tmz.com/2025/08/01/diego-sanchez-arrest-bodycam-shooting-ufc/</link></item>
-<item><title>AI’s next frontier: Modeling life itself - Freethink</title><link>https://www.freethink.com/artificial-intelligence/virtual-cells</link></item>
-<item><title>The next 10 years won’t be about AI knowing, they will be about AI doing - Freethink</title><link>https://www.freethink.com/series/the-freethink-interview/adam-cheyer</link></item>
-<item><title>Five-minute EV refills? This tech is wild - Freethink</title><link>https://www.freethink.com/series/hard-reset/ample</link></item>
-<item><title>所以，你现在是经理了。 - 宝玉的分享</title><link>https://baoyu.io/translations/so-youre-a-manager-now</link></item>
-<item><title>Claude Code 最佳实践视频文稿 - 宝玉的分享</title><link>https://baoyu.io/blog/claude-code-best-practices-video-transcription</link></item>
-<item><title>AI 提升的是下限，而不是上限 - 宝玉的分享</title><link>https://baoyu.io/translations/ai-is-a-floor-raiser-not-a-ceiling-raiser</link></item>
-<item><title>“跟着感觉走”的 Vibe Code，最后就是创造了一堆没人看得懂的祖传代码 - 宝玉的分享</title><link>https://baoyu.io/translations/vibe-code</link></item>
-<item><title>ChatGPT Study  Mode System Prompt - 宝玉的分享</title><link>https://baoyu.io/blog/chatgpt-study-mode-prompt</link></item>
-<item><title>花十年时间，教自己学会编程 - 宝玉的分享</title><link>https://baoyu.io/translations/teach-yourself-programming-in-ten-years</link></item>
-<item><title>WordPress 6.8.2 Maintenance Release - WordPress Blog</title><link>https://wordpress.org/news/2025/07/wordpress-6-8-2-maintenance-release/</link></item>
-<item><title>Celebrating Kim Parsell: 2025 WordCamp US Scholarship Applications Open - WordPress Blog</title><link>https://wordpress.org/news/2025/07/kim-parsell-2025-wcus-scholarship-applications-open/</link></item>
-<item><title>Introducing WordPress Credits: A New Contribution Internship Program for University Students - WordPress Blog</title><link>https://wordpress.org/news/2025/07/introducing-wordpress-credits-a-new-contribution-internship-program-for-university-students/</link></item>
-<item><title>WordCamp US 2025: See You in Portland, Oregon! - WordPress Blog</title><link>https://wordpress.org/news/2025/06/wordcamp-us-2025-see-you-in-portland-oregon/</link></item>
-<item><title>Trump moves US subs after ex-Russian leader’s ‘inflammatory’ remarks - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2025/08/01/trump-moves-us-subs-after-ex-russian-leaders-inflammatory-remarks/</link></item>
-<item><title>US defense industry vulnerable to China, government watchdog warns - Defense News</title><link>https://www.defensenews.com/industry/2025/08/01/us-defense-industry-vulnerable-to-china-government-watchdog-warns/</link></item>
-<item><title>Senate confims new top Navy leader, vice chief for Space Force - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2025/08/01/senate-confims-new-top-navy-leader-vice-chief-for-space-force/</link></item>
-<item><title>Joby, L3Harris developing autonomous aircraft for defense missions - Defense News</title><link>https://www.defensenews.com/air/2025/08/01/joby-l3harris-developing-autonomous-aircraft-for-defense-missions/</link></item>
-<item><title>New missile defense radar lands in Guam to be put to the test - Defense News</title><link>https://www.defensenews.com/land/2025/08/01/new-missile-defense-radar-lands-in-guam-to-be-put-to-the-test/</link></item>
-<item><title>Poland doubles down on South Korean tanks with $6.5 billion deal - Defense News</title><link>https://www.defensenews.com/global/europe/2025/08/01/poland-doubles-down-on-south-korean-tanks-with-65-billion-deal/</link></item>
-<item><title>Behind attacks on Ukrainian cities, Russia is building a drone empire - Defense News</title><link>https://www.defensenews.com/global/europe/2025/07/31/behind-attacks-on-ukrainian-cities-russia-is-building-a-drone-empire/</link></item>
-<item><title>Leonardo’s buy of Iveco Defence Vehicles secures Italian armor stable - Defense News</title><link>https://www.defensenews.com/global/europe/2025/07/31/leonardos-buy-of-iveco-defence-vehicles-secures-italian-armor-stable/</link></item>
-<item><title>In reversal, Navy will share satellite data with NOAA until fall 2026 - Defense News</title><link>https://www.defensenews.com/news/your-military/2025/07/31/in-reversal-navy-will-share-satellite-data-with-noaa-until-fall-2026/</link></item>
-<item><title>A Chinese blockade could cripple Taiwan’s electricity, war game warns - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2025/08/01/a-chinese-blockade-could-cripple-taiwans-electricity-war-game-warns/</link></item>
-<item><title>US Marines train beach landings Down Under with old allies, new rides - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2025/08/01/us-marines-train-beach-landings-down-under-with-old-allies-new-rides/</link></item>
-<item><title>NATO sends warships to patrol Arctic waters - Defense News</title><link>https://www.defensenews.com/global/europe/2025/08/01/nato-sends-warships-to-patrol-arctic-waters/</link></item>
-<item><title>Poised for growth, Millennium prioritizes efficiency and capacity - Defense News</title><link>https://www.defensenews.com/space/2025/07/31/poised-for-growth-millennium-prioritizes-efficiency-and-capacity/</link></item>
-<item><title>Senate panel OKs plans for $852 billion in defense spending next year - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2025/07/31/senate-panel-oks-plans-for-852-billion-in-defense-spending-next-year/</link></item>
-<item><title>Austria is torn over age-old question of neutrality and NATO - Defense News</title><link>https://www.defensenews.com/global/europe/2025/07/31/austria-is-torn-over-age-old-question-of-neutrality-and-nato/</link></item>
-<item><title>Flannery O’Connor’s Sensitive Young Men - Law &amp; Liberty</title><link>https://lawliberty.org/flannery-oconnors-sensitive-young-men/</link></item>
-<item><title>Truth, Justice, and the Cynical Way - Law &amp; Liberty</title><link>https://lawliberty.org/truth-justice-and-the-cynical-way/</link></item>
-<item><title>Reading the New Conservatives - Law &amp; Liberty</title><link>https://lawliberty.org/book-review/reading-the-new-conservatives/</link></item>
-<item><title>Curriculum and Conscience - Law &amp; Liberty</title><link>https://lawliberty.org/curriculum-and-conscience/</link></item>
-<item><title>Averting Fiscal Catastrophe - Law &amp; Liberty</title><link>https://lawliberty.org/forum/averting-fiscal-catastrophe/</link></item>
-<item><title>5 Common Terms You Didn’t Know Were Named After People - Mental Floss</title><link>https://www.mentalfloss.com/language/words/common-terms-you-didnt-know-were-eponyms</link></item>
-<item><title>Definition Detective Quiz #48 - Mental Floss</title><link>https://www.mentalfloss.com/quizzes/definition-detective-quiz-48</link></item>
-<item><title>雜誌月刊smart附錄「PG UNLEASHED 1/60 ν鋼彈」線稿托特包 買不起PG這總可以吧！ - 玩具人</title><link>https://www.toy-people.com/?p=102237</link></item>
-<item><title>CHARAJAN ✕《新世紀福音戰士》橫須賀外套五款上市 大面積刺繡超霸氣！ - 玩具人</title><link>https://www.toy-people.com/?p=102261</link></item>
-<item><title>GASHAPON「等待中的茶犬」轉蛋，快陪楚楚可憐的茶犬們一起等待吧！ - 玩具人</title><link>https://www.toy-people.com/?p=102243</link></item>
-<item><title>graniph ✕《哥吉拉》聯名服飾系列 經典電影場面與怪獸霸氣融入設計！ - 玩具人</title><link>https://www.toy-people.com/?p=102147</link></item>
-<item><title>GASHAPON「哈利波特 鏡子吊飾收藏」轉蛋，快來收集霍格華滋各學院的院徽吧！ - 玩具人</title><link>https://www.toy-people.com/?p=102250</link></item>
-<item><title>T-ARTS「神鬼奇航 電影物品收藏集」轉蛋 傑克船長的精美指南針還可以打開！ - 玩具人</title><link>https://www.toy-people.com/?p=101987</link></item>
-<item><title>YOLOPARK「AMK PRO《變形金剛：復仇之戰》密卡登」預塗裝合金組裝模型，精緻再現復活後的狂暴之姿！ - 玩具人</title><link>https://www.toy-people.com/?p=102123</link></item>
-<item><title>BANPRESTO《來自深淵》大型Fluffy Puffy「娜娜奇」＆「米蒂」擁有深厚情感的兩人毛茸茸立體化！ - 玩具人</title><link>https://www.toy-people.com/?p=102201</link></item>
-<item><title>GASHAPON『我們這一家 排排隊』轉蛋 可愛再現花媽、橘子一家人手牽手的溫馨造型！ - 玩具人</title><link>https://www.toy-people.com/?p=102169</link></item>
-<item><title>『G.E.M.DEATH NOTE 死亡筆記本 夜神月&amp;L』還原漫畫封面插畫 刺激的雙人手銬再販！ - 玩具人</title><link>https://www.toy-people.com/?p=102184</link></item>
-<item><title>GASHAPON「暗殺教室 殺老師 標記雕飾」轉蛋，快用殺老師的超豐富顏藝為物品做標記吧！ - 玩具人</title><link>https://www.toy-people.com/?p=102242</link></item>
-<item><title>壽屋「《守護甜心！》日奈森亞夢 制服ver.」1/7 比例塗裝完成品，讓我的心 Unlock！ - 玩具人</title><link>https://www.toy-people.com/?p=102248</link></item>
-<item><title>Numskull Designs「忍者龜下水道造型精油擴香儀」來自神龜四兄弟秘密基地的香味！? - 玩具人</title><link>https://www.toy-people.com/?p=102233</link></item>
-<item><title>Numskull Designs - 玩具人</title><link>https://www.toy-people.com/?tag=numskull-designs</link></item>
-<item><title>GASHAPON「JOJO的奇妙冒險角色人物收藏 RE-Collect 04」轉蛋，音石明強勢參戰！ - 玩具人</title><link>https://www.toy-people.com/?p=102244</link></item>
-<item><title>萬代台灣官方網路商店 PREMIUM BANDAI 全新網站登場！限時免運券等你拿 - 玩具人</title><link>https://www.toy-people.com/?p=101696</link></item>
-<item><title>GASHAPON『魔物獵人 捕獲隊4』轉蛋 收錄《荒野》鎖刃龍、煌雷龍...人氣魔物！ - 玩具人</title><link>https://www.toy-people.com/?p=102172</link></item>
-<item><title>一番賞「咒術迴戰 澀谷事變～肆～」全品項公開！虎杖與東堂、真人的遍殺即靈體角色模型熱血開抽 - 玩具人</title><link>https://www.toy-people.com/?p=102216</link></item>
-<item><title>Nike × LEGO「Air Max Dn」球鞋、聯名短T、籃球 8 月 1 日正式發售！ - 玩具人</title><link>https://www.toy-people.com/?p=102206</link></item>
-<item><title>GASHAPON『B.LEAGUE吉祥物 胖胖戒指』轉蛋 日職籃B聯盟10位人氣吉祥物化為可愛戒指～ - 玩具人</title><link>https://www.toy-people.com/?p=102209</link></item>
-<item><title>GASHAPON「夏日大作戰 標記雕飾」轉蛋，掛上吊飾重返那個令人熱血沸騰的夏天！ - 玩具人</title><link>https://www.toy-people.com/?p=102245</link></item>
-<item><title>GSC 新系列首彈『戰場原黑儀 Remaster Project』1/7比例模型 以最新技術重新構築經典名作！ - 玩具人</title><link>https://www.toy-people.com/?p=101982</link></item>
-<item><title>Remaster Project - 玩具人</title><link>https://www.toy-people.com/?tag=remaster-project</link></item>
-<item><title>LEGO 71050 《蜘蛛人：穿越新宇宙》人偶包正式公開！ 跨越時空的12位蜘蛛人登場！Spider-Man: Across the Spider-Verse - 玩具人</title><link>https://www.toy-people.com/?p=102239</link></item>
-<item><title>鋼彈基地 08 月限定新品『HG 梅德』完全新規造形再現《逆襲的夏亞》登場的工程用迷你 MS！ - 玩具人</title><link>https://www.toy-people.com/?p=102236</link></item>
-<item><title>Newsletters - Vanity Fair</title><link>https://www.vanityfair.com/newsletters?sourceCode=navbar</link></item>
-<item><title>WHAT IS CINEMA? - Vanity Fair</title><link>https://www.vanityfair.com/hollywood/what-is-cinema</link></item>
-<item><title>NEWSLETTERS - Vanity Fair</title><link>https://www.vanityfair.com/newsletters?sourceCode=hamburgernav</link></item>
-<item><title>What Liam Neeson Brings to the Table - Vanity Fair</title><link>https://www.vanityfair.com/hollywood/story/naked-gun-akiva-schaffer-interview</link></item>
-<item><title>The 25 Best Movies on Netflix Right Now - Vanity Fair</title><link>https://www.vanityfair.com/hollywood/best-movies-now-on-netflix</link></item>
-<item><title>Reality TV Is Getting Its Edge Back - Vanity Fair</title><link>https://www.vanityfair.com/hollywood/story/project-runway-season-21-law-roach</link></item>
-<item><title>Misty Copeland and More on the Language of Dance - Vanity Fair</title><link>https://www.vanityfair.com/culture/story/baand-together-dance-festival-at-lincoln-center</link></item>
-<item><title>When Hollywood Almost Killed James Baldwin - Vanity Fair</title><link>https://www.vanityfair.com/style/story/they-will-try-to-kill-you-james-baldwins-fraught-hollywood-journey</link></item>
-<item><title>Sydney Sweeney Under Fire After Controversial American Eagle Ad Campaign - Vanity Fair</title><link>https://www.vanityfair.com/hollywood/story/sydney-sweeney-american-eagle-jeans-controversy#intcid=_vanity-fair-verso-hp-trending_3c7a3ede-ffe1-4d0d-b500-ec47502d266c_popular4-2</link></item>
-<item><title>When Kate Middleton Becomes Queen, Will Her Parents Carole and Michael Middleton Get Royal Titles? - Vanity Fair</title><link>https://www.vanityfair.com/style/story/kate-middleton-parents-titles#intcid=_vanity-fair-verso-hp-trending_3c7a3ede-ffe1-4d0d-b500-ec47502d266c_popular4-2</link></item>
-<item><title>Pete Hegseth Is Reportedly Thinking About Taking His Talents to the Tennessee Governor’s Mansion - Vanity Fair</title><link>https://www.vanityfair.com/news/story/pete-hegseth-is-reportedly-thinking-about-tennessee-governor-run#intcid=_vanity-fair-verso-hp-trending_3c7a3ede-ffe1-4d0d-b500-ec47502d266c_popular4-2</link></item>
-<item><title>Why Prince William and Prince Harry Won&amp;#39;t Inherit Princess Diana&amp;#39;s Childhood Home - Vanity Fair</title><link>https://www.vanityfair.com/style/story/prince-william-prince-harry-princess-diana-childhood-home#intcid=_vanity-fair-verso-hp-trending_3c7a3ede-ffe1-4d0d-b500-ec47502d266c_popular4-2</link></item>
-<item><title>Robert Wilson and the Subject as Star - Vanity Fair</title><link>https://archive.vanityfair.com/article/2006/12/the-subject-as-star</link></item>
-<item><title>How Donald Trump’s Governing Style Mimics the Mob - Vanity Fair</title><link>https://www.vanityfair.com/news/story/how-donald-trumps-governing-style-mimics-the-mob</link></item>
-<item><title>The Secret Lives of Brando, Pacino, Dolly Parton, and More - Vanity Fair</title><link>https://www.vanityfair.com/hollywood/story/the-secret-lives-of-brando-pacino-and-dolly-parton</link></item>
-<item><title>What I Witnessed Inside an ICE Women’s Prison - Vanity Fair</title><link>https://www.vanityfair.com/news/story/rumeysa-ozturk-what-i-witnessed-inside-an-ice-womens-prison</link></item>
-<item><title>Bernice King Speaks Out - Vanity Fair</title><link>https://www.vanityfair.com/news/story/bernice-king-speaks-out-as-the-government-releases-files-about-her-father-martin-luther-king-jr</link></item>
-<item><title>Best Of Scene Selection Marathon - Vanity Fair</title><link>https://www.vanityfair.com/video/watch/scene-selection-best-of-scene-selection-marathon</link></item>
-<item><title>&amp;#39;The Fantastic Four&amp;#39; Cast Test How Well They Know Each Other - Vanity Fair</title><link>https://www.vanityfair.com/video/watch/quizzing-each-other-the-fantastic-four-cast-test-how-well-they-know-each-other</link></item>
-<item><title>Ari Aster Breaks Down Scenes from &amp;#39;Hereditary,&amp;#39; &amp;#39;Midsommar&amp;#39; and &amp;#39;Eddington&amp;#39; - Vanity Fair</title><link>https://www.vanityfair.com/video/watch/notes-on-a-scene-ari-aster-breaks-down-a-scene</link></item>
-<item><title>How Princess Diana Became a Style Icon - Vanity Fair</title><link>https://www.vanityfair.com/style/story/designer-jacques-azagury-princess-diana-royal-wardrobe</link></item>
-<item><title>King Charles’s Gardener Exodus - Vanity Fair</title><link>https://www.vanityfair.com/style/story/king-charles-highgrove</link></item>
-<item><title>Queen Elizabeth’s True Thoughts on Harry and Meghan - Vanity Fair</title><link>https://www.vanityfair.com/style/story/what-queen-elizabeth-really-thought-of-harry-and-meghan</link></item>
-<item><title>Inside the Royal “Rapprochement” Meeting - Vanity Fair</title><link>https://www.vanityfair.com/style/story/inside-the-rapprochement-meeting-between-king-charles-and-prince-harrys-press-teams</link></item>
-<item><title>Jamie Dimon Says “We’ll See” on Mamdani (as Fellow Finance Titans Lose Their Minds) - Vanity Fair</title><link>https://www.vanityfair.com/news/story/jamie-dimon-on-zohran-mamdani</link></item>
-<item><title>Trump Accuses Epstein of “Taking People” From His Mar-a-Lago Spa - Vanity Fair</title><link>https://www.vanityfair.com/news/story/trump-accuses-epstein-of-taking-people-from-his-mar-a-lago-spa</link></item>
-<item><title>Report: Even Pete Hegseth&amp;#39;s Allies Think He&amp;#39;s the “Crème de la Crème of Dysfunction” - Vanity Fair</title><link>https://www.vanityfair.com/news/story/report-even-pete-hegseths-allies-think-hes-the-creme-de-la-creme-of-dysfunction</link></item>
-<item><title>Speaker Mike Johnson Wants To “Protect the Innocent” Epstein Victims, But They Want More Information - Vanity Fair</title><link>https://www.vanityfair.com/news/story/mike-johnson-jeffrey-epstein-victims</link></item>
-<item><title>House Democrats Ask Jeffrey Epstein’s Estate For “Birthday Book” - Vanity Fair</title><link>https://www.vanityfair.com/news/story/house-democrats-ask-jeffrey-epstein-estate-for-birthday-book</link></item>
-<item><title>Voters Fell for Zohran Mamdani. The Democratic Establishment Will Be Harder to Convince - Vanity Fair</title><link>https://www.vanityfair.com/news/story/voters-fell-for-zohran-mamdani-the-democratic-establishment-will-be-harder-to-convince</link></item>
-<item><title>Elizabeth Warren Says Trump Is Turning the White House Into a “Crypto Cash Machine” - Vanity Fair</title><link>https://www.vanityfair.com/news/story/elizabeth-warren-says-trump-is-turning-the-white-house-into-a-crypto-cash-machine</link></item>
-<item><title>Are You a Canceled Celeb in Need of Great PR? Dial 1-900-Mitchell Jackson - Vanity Fair</title><link>https://www.vanityfair.com/news/story/mitchell-jackson-vice-media-pr</link></item>
-<item><title>Tom Cruise and Ana De Armas Are Photographed Hand in Hand - Vanity Fair</title><link>https://www.vanityfair.com/hollywood/story/tom-cruise-ana-de-armas-relationship</link></item>
-<item><title>Martha Stewart Hopes Meghan Markle “Knows What She’s Talking About,” And Has Some Thoughts About Goop, Too - Vanity Fair</title><link>https://www.vanityfair.com/style/story/martha-stewart-hopes-meghan-markle-knows-what-shes-talking-about</link></item>
-<item><title>Princess Diana Reportedly Had One Secret Good-Luck Charm on Her Wedding Day - Vanity Fair</title><link>https://www.vanityfair.com/style/story/princess-diana-reportedly-had-one-secret-good-luck-charm-on-her-wedding-day</link></item>
-<item><title>Charles Spencer Shares Previously Unseen Childhood Photo of Princess Diana - Vanity Fair</title><link>https://www.vanityfair.com/style/story/charles-spencer-princess-diana-unseen-photo</link></item>
-<item><title>Kourtney Kardashian&amp;#39;s Instagram Stories Allowed a Peek Inside the Very Private Wedding of Eve Jobs and Harry Charles - Vanity Fair</title><link>https://www.vanityfair.com/style/story/eve-jobs-harry-charles-wedding-photos</link></item>
-<item><title>Prince Charles Sent Princess Diana a Romantic Note on the Eve of Their Wedding - Vanity Fair</title><link>https://www.vanityfair.com/style/story/prince-charles-sent-princess-diana-a-romantic-note-on-the-eve-of-their-wedding</link></item>
-<item><title>Destiny&amp;#39;s Child Reunites For Final Date of Beyoncé&amp;#39;s Cowboy Carter Tour - Vanity Fair</title><link>https://www.vanityfair.com/style/story/destinys-child-reunites-beyonce-cowboy-carter</link></item>
-<item><title>Alexandria Ocasio-Cortez Ordered To Pay Up For “Tax The Rich” Dress - Vanity Fair</title><link>https://www.vanityfair.com/style/story/alexandria-ocasio-cortez-met-gala-dress-fine</link></item>
-<item><title>Manchester City and C.P. Company Join Forces for the Community - Collateral Magazine</title><link>https://www.collater.al/en/manchester-city-cp-company-collab-style/</link></item>
-<item><title>Surreal Eroticism in the Shots of Micheal Northrup - Collateral Magazine</title><link>https://www.collater.al/en/micheal-northrup-bad-seed-zine-nsfw-photography/</link></item>
-<item><title>The simple and universal illustrations of Sara Beneduci - Collateral Magazine</title><link>https://www.collater.al/en/sara-beneduci-sbcrayon-illustration-art/</link></item>
-<item><title>Juergen Teller shoots the Levi’s Blue Tab in a Japanese sentō - Collateral Magazine</title><link>https://www.collater.al/en/juergen-teller-levis-blue-tab-style/</link></item>
-<item><title>In Bari, Edoardo Tresoldi’s intervention is much more than a work of art - Collateral Magazine</title><link>https://www.collater.al/en/bari-edoardo-tresoldi-san-pietro-art/</link></item>
-<item><title>InstHunt – The 10 best photos of the week on Instagram - Collateral Magazine</title><link>https://www.collater.al/en/insthunt-the-10-best-photos-of-the-week-on-instagram-43/</link></item>
-<item><title>The Timeless Icons of Massimo Osti Studio - Collateral Magazine</title><link>https://www.collater.al/en/massimo-osti-studio-continuative-garments-style/</link></item>
-<item><title>Colony is not your typical design gallery - Collateral Magazine</title><link>https://www.collater.al/en/colony-tribeca-design/</link></item>
-<item><title>The Fotografia Calabria Festival Returns to San Lucido - Collateral Magazine</title><link>https://www.collater.al/en/fotografia-calabria-festival-san-lucido-photography/</link></item>
-<item><title>What Casey McKee and his Disaster Selfies Tell Us - Collateral Magazine</title><link>https://www.collater.al/en/casey-mckee-disaster-selfie-art/</link></item>
-<item><title>Eduardo Ortiz Tells the Story of La Paz Through His Black-and-White Shots - Collateral Magazine</title><link>https://www.collater.al/en/eduardo-ortiz-chukiyawu-la-paz-photography/</link></item>
-<item><title>Rains and the Solid Aesthetic of the New Homewear Collection - Collateral Magazine</title><link>https://www.collater.al/en/rains-homewear-home-away-desig/</link></item>
-<item><title>Cortegraff: between abstract calligraphy, symmetry, and balance - Collateral Magazine</title><link>https://www.collater.al/en/cortegraff-camilo-ortega-street-art/</link></item>
-<item><title>The allure of storytelling around the Nike Mars Yard - Collateral Magazine</title><link>https://www.collater.al/en/nike-mars-yard-tom-sachs-nasa-sneaker-style/</link></item>
-<item><title>The Assembled Movie Posters of Jordan Bolton - Collateral Magazine</title><link>https://www.collater.al/en/jordan-bolton-movie-poster-design/</link></item>
-<item><title>The Digital Kitsch of Iosif Abaab - Collateral Magazine</title><link>https://www.collater.al/en/iosif-abaab-3d-tamagootchi-berry-boom-design/</link></item>
-<item><title>Woodnest, the pinecone shaped mini house - Collateral Magazine</title><link>https://www.collater.al/en/woodnest-helen-hard-mini-house-architecture/</link></item>
-<item><title>Lidris, the robot that creates floating drawings in a glass - Collateral Magazine</title><link>https://www.collater.al/en/lidris-robot-3d-drawing-tech-des/</link></item>
-<item><title>Living works by Neri Oxman - Collateral Magazine</title><link>https://www.collater.al/en/living-works-neri-oxman-design/</link></item>
-<item><title>Collyrium – Xavier Dolan’s powerful cinema - Collateral Magazine</title><link>https://www.collater.al/en/xavier-dolan-cinema/</link></item>
-<item><title>Kappa Futur Festival: music, art and culture come together - Collateral Magazine</title><link>https://www.collater.al/en/kappa-futur-festival-turin-culture-art-2025/</link></item>
-<item><title>Vivienne Westwood and punk culture - Collateral Magazine</title><link>https://www.collater.al/en/vivienne-westwood-punk-culture-style/</link></item>
-<item><title>The Stüssy Holiday 2020 collection - Collateral Magazine</title><link>https://www.collater.al/en/stussy-holiday-2020-collection-style/</link></item>
-<item><title>A Signature Story, Hiroshi Fujiwara: Lost in Creation - Collateral Magazine</title><link>https://www.collater.al/en/a-signature-story-hiroshi-fujiwara/</link></item>
-<item><title>Marco Frattaruolo and his Journey to Self-Discovery - Collateral Magazine</title><link>https://www.collater.al/en/marco-frattaruolo-where-i-gound-myself-portugal-photography/</link></item>
-<item><title>为遏制登革热疫情巴西释放实验室培育的蚊子 - Solidot</title><link>https://www.solidot.org/story?sid=81942</link></item>
-<item><title>《战地6》的社区关卡编辑器使用开源引擎 Godot - Solidot</title><link>https://www.solidot.org/story?sid=81943</link></item>
-<item><title>苹果二季度在华销售收入 153.7 亿美元 - Solidot</title><link>https://www.solidot.org/story?sid=81944</link></item>
-<item><title>Google 将利用 AI 估算美国用户年龄 - Solidot</title><link>https://www.solidot.org/story?sid=81945</link></item>
-<item><title>The Naked Gun - Roger Ebert</title><link>https://www.rogerebert.com/reviews/the-naked-gun-liam-neeson-movie-review-2025</link></item>
-<item><title>The Unloved, Part 139: “Wild Card” - Roger Ebert</title><link>https://www.rogerebert.com/features/the-unloved-part-139-wild-card</link></item>
-<item><title>Smart steps to keep your AI future-ready - Help Net Security</title><link>https://www.helpnetsecurity.com/2025/08/01/rohan-sen-pwc-us-ai-ecosystems-security/</link></item>
-<item><title>It’s time to sound the alarm on water sector cybersecurity - Help Net Security</title><link>https://www.helpnetsecurity.com/2025/08/01/water-sector-cybersecurity-risk/</link></item>
-<item><title>What attackers know about your company thanks to AI - Help Net Security</title><link>https://www.helpnetsecurity.com/2025/08/01/ai-powered-cyber-threats-video/</link></item>
-<item><title>Review: CISA Certified Information Systems Auditor Practice Tests - Help Net Security</title><link>https://www.helpnetsecurity.com/2025/08/01/review-cisa-certified-information-systems-auditor-practice-tests/</link></item>
-<item><title>Security gaps still haunt shared mobile device use in healthcare - Help Net Security</title><link>https://www.helpnetsecurity.com/2025/08/01/shared-mobile-device-security-healthcare/</link></item>
-<item><title>Infosec products of the month: July 2025 - Help Net Security</title><link>https://www.helpnetsecurity.com/2025/08/01/infosec-products-of-the-month-july-2025/</link></item>
-<item><title>GreyNoise enhances threat response with real-time blocklists, feeds, and SOAR integrations - Help Net Security</title><link>https://www.helpnetsecurity.com/2025/07/31/greynoise-new-platform-capabilities/</link></item>
-<item><title>Intel 471 unveils Verity471, a unified platform for next-gen cyber threat intelligence - Help Net Security</title><link>https://www.helpnetsecurity.com/2025/07/31/intel-471-verity471/</link></item>
-<item><title>Outpost24 launches Credential Checker to spot leaked credentials on the dark web - Help Net Security</title><link>https://www.helpnetsecurity.com/2025/07/31/outpost24-credential-checker/</link></item>
-<item><title>Singulr introduces AI control plane to replace fragmented tools with unified, automated governance - Help Net Security</title><link>https://www.helpnetsecurity.com/2025/07/31/singulr-unified-ai-control-plane/</link></item>
-<item><title>Centipede vs. Millipede: Differentiating Between Many-legged Insects - HowStuffWorks</title><link>https://animals.howstuffworks.com/insects/centipede-vs-millipede.htm</link></item>
-<item><title>Can Cats Eat Chocolate in Any Form? - HowStuffWorks</title><link>https://animals.howstuffworks.com/pets/can-cats-eat-chocolate.htm</link></item>
-<item><title>Why Is My Cat Peeing on My Bed? - HowStuffWorks</title><link>https://animals.howstuffworks.com/pets/why-is-my-cat-peeing-on-my-bed.htm</link></item>
-<item><title>&amp;#39;Bleach&amp;#39; Filler List: Every Episode You Can Skip - HowStuffWorks</title><link>https://entertainment.howstuffworks.com/bleach-filler-list.htm</link></item>
-<item><title>U.S. Condo Market Struggles in 2025 - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/miami-real-estate-news/real-estate-news-2025-condo-trends-condo-home-sales-data-for-2025-condo-price-data-cotality-slowing-condo-market-in-2025-14517.php</link></item>
-<item><title>U.S. Remodeling Market Sentiment Slips in Q2 - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/atlanta-real-estate-news/real-estate-news-national-association-of-home-builders-nahb-westlake-royal-remodeling-market-index-data-may-2025-rmi-data-for-2025-home-remodeling-dat-14498.php</link></item>
-<item><title>U.S. Architecture Billings Improve Slightly in May - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/washington-dc-real-estate-news/commercial-real-estate-news-kermit-baker-american-institute-of-architects-2025-data-aia-architecture-billings-index-may-2025-abi-2025-data-14497.php</link></item>
-<item><title>Monaco F1 Grand Prix Sparks Local Property Frenzy - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/monaco/monaco-real-estate-news-2025-monaco-f1-grand-prix-f1-impact-on-monaco-home-sales-monaco-home-price-data-2025-eric-finnas-dahlstrom-jamesedition-marete-14496.php</link></item>
-<item><title>Canada Home Sales Climb for First Time in 6 Months as Market Stabilizes - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/canada/vancouver-real-estate-news/canada-real-estate-news-canadian-real-estate-association-crea-canada-real-estate-home-sales-data-may-2025-toronto-home-sales-report-vancouver-home-sal-14495.php</link></item>
-<item><title>Record Setting 72.2 Million Americans Traveling for July Fourth Holiday - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/miami-real-estate-news/vacation-real-estate-news-july-fourth-2025-travel-data-by-aaa-top-travel-destinations-for-july-fourth-2025-14493.php</link></item>
-<item><title>U.S. Real Estate Associations Applaud Senate Passage of Trump&amp;#39;s Big Beautiful Bill - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/washington-dc-real-estate-news/real-estate-news-president-trump-one-big-beautiful-bill-act-july-2025-buddy-hughes-national-association-of-home-builders-nahb-shannon-mcgahn-14492.php</link></item>
-<item><title>Greater Fort Lauderdale Area Residential Sales Dive 18 Percent Annually in May - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/fort-lauderdale/real-estate-news-fort-lauderdale-may-2025-home-sales-data-miami-association-of-realtors-may-2025-broward-home-sales-report-broward-home-sales-data-may-14490.php</link></item>
-<item><title>Top 10 Things to Know About the U.S. Housing Market Mid-2025 - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/irvine/real-estate-news-top-ten-2025-housing-market-trends-cotality-2025-housing-market-trends-data-2025-housing-data-14488.php</link></item>
-<item><title>AI Hyperscalers Drive Record Data Center Leasing in Early 2025 - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/atlanta-real-estate-news/commercial-real-estate-news-record-data-demand-from-hyperscalers-in-2025-cbre-2025-global-data-center-trends-report-data-center-demand-data-for-2025-14487.php</link></item>
-<item><title>Global Luxury Housing Rents Stabilize as Post-Covid Surge Cools - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/los-angeles-real-estate-news/real-estate-news-knight-frank-june-2025-prime-global-rental-index-pgri-liam-bailey-global-housing-rents-data-for-2025-14486.php</link></item>
-<item><title>World Property Ventures to Reorganize as a Digital Investment Bank - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/miami-real-estate-news/real-estate-news-world-property-ventures-wpv-world-property-exchange-wpe-world-property-media-world-property-markets-real-estate-investment-banks-mich-14484.php</link></item>
-<item><title>FHFA Signals to Count Crypto in U.S. Mortgage Underwriting - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/washington-dc-real-estate-news/real-estate-news-crypto-used-in-mortgage-underwriting-federal-housing-finance-agency-fannie-mae-freddie-mac-fhfa-director-william-pulte-crypto-use-cas-14485.php</link></item>
-<item><title>Greater Miami Area Residential Sales Implode 20 Percent Annually in May - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/miami-real-estate-news/real-estate-news-miami-may-2025-home-sales-data-miami-association-of-realtors-may-2025-housing-report-miami-condo-sales-data-miami-condo-price-data-ga-14482.php</link></item>
-<item><title>U.S. Home Sales Remain Sluggish in May - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/chicago-real-estate-news/real-estate-news-may-2025-home-sales-data-from-national-association-of-realtors-nar-may-2025-home-sales-report-lawrence-yun-median-home-price-data-for-14481.php</link></item>
-<item><title>Ireland Home Prices Surge 12.3 Percent Annually in Q2 - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/ireland/dublin/ireland-real-estate-news-ireland-home-price-data-2025-ireland-home-sales-data-for-2025-ronan-lyons-trinity-college-dublin-daftie-2025-ireland-home-pri-14480.php</link></item>
-<item><title>Global Super-Prime Housing Markets Rally in 2025 - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-arab-emirates/dubai-1/real-estate-news-super-prime-home-sales-data-2025-luxury-home-sales-data-for-2025-liam-bailey-knight-frank-2025-wealth-report-knight-frank-global-supe-14479.php</link></item>
-<item><title>Home Flipping in U.S. Hits Lowest Level Since 2018 - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/irvine/real-estate-news-attom-q1-2025-us-home-flipping-report-home-flipping-sales-data-in-2025-home-flipping-profit-margin-data-in-2025-rob-barber-14478.php</link></item>
-<item><title>World Property Markets to Launch Industry Wide Joint Venture Funding Round - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/miami-real-estate-news/real-estate-news-world-property-markets-global-listings-world-property-search-michael-gerrity-sentient-mortgage-14477.php</link></item>
-<item><title>Commercial, Multifamily Mortgage Debt in U.S. Hits Record $4.81 Trillion in Early 2025 - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/new-york-city-real-estate-news/real-estate-news-mortgage-bankers-association-2025-commercial-multifamily-mortgage-debt-outstanding-quarterly-report-2025-cmbs-data-2025-commercial-mo-14476.php</link></item>
-<item><title>Greater Orlando Home Sales Down 12 Percent Annually as Inventory Hits 14-Year High - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/orlando-real-estate-news/real-estate-news-orlando-home-sales-data-may-2025-orlando-home-price-data-may-2025-orra-may-2025-housing-report-lawrence-bellido-orlando-real-estate-n-14475.php</link></item>
-<item><title>vocal proponent - Slashdot</title><link>https://news.slashdot.org/story/25/02/20/0333203/palantir-ceo-calls-for-tech-patriotism-warns-of-ai-warfare</link></item>
-<item><title>boosted its Maven Smart Systems contract - Slashdot</title><link>https://tech.slashdot.org/story/25/04/14/1917246/nato-inks-deal-with-palantir-for-maven-ai-system</link></item>
-<item><title>growing number of retractions - Slashdot</title><link>https://science.slashdot.org/story/25/02/20/1230236/research-reveals-data-on-which-institutions-are-retraction-hotspots</link></item>
-<item><title>won its Google antitrust lawsuit - Slashdot</title><link>https://tech.slashdot.org/story/25/07/31/1846249/google-loses-epic-games-appeal-must-open-app-store-to-rivals</link></item>
-<item><title>sell new releases at $80 - Slashdot</title><link>https://games.slashdot.org/story/25/05/05/073207/budget-titles-dominate-2025s-top-rated-games-as-aaa-prices-climb-to-80</link></item>
-<item><title>Trump Suspends Trade Loophole For Cheap Online Retailers Globally - Slashdot</title><link>https://news.slashdot.org/story/25/07/31/2028246/trump-suspends-trade-loophole-for-cheap-online-retailers-globally?sbsrc=md</link></item>
-<item><title>Trump Launching a New Private Health Tracking System With Big Tech&amp;#39;s Help - Slashdot</title><link>https://science.slashdot.org/story/25/07/31/2232230/trump-launching-a-new-private-health-tracking-system-with-big-techs-help?sbsrc=md</link></item>
-<item><title>Voice Actors Push Back As AI Threatens Dubbing Industry - Slashdot</title><link>https://slashdot.org/story/25/07/30/227205/voice-actors-push-back-as-ai-threatens-dubbing-industry?sbsrc=md</link></item>
-<item><title>Australia Widens Teen Social Media Ban To YouTube, Scraps Exemption - Slashdot</title><link>https://yro.slashdot.org/story/25/07/31/0037258/australia-widens-teen-social-media-ban-to-youtube-scraps-exemption?sbsrc=md</link></item>
-<item><title>US Senators Introduce New Pirate Site Blocking Bill: Block BEARD - Slashdot</title><link>https://yro.slashdot.org/story/25/07/31/2059247/us-senators-introduce-new-pirate-site-blocking-bill-block-beard</link></item>
-<item><title>Sony Is Suing Tencent Over Shameless Horizon Knock-off Game - Slashdot</title><link>https://yro.slashdot.org/story/25/07/31/1638229/sony-is-suing-tencent-over-shameless-horizon-knock-off-game</link></item>
-<item><title>A film is a goodbye that never ends - Aeon</title><link>https://aeon.co/videos/what-does-it-mean-to-say-goodbye-to-a-creature-that-doesnt-know-youre-leaving?utm_source=rss-feed</link></item>
-<item><title>The story of Malcolm X - Aeon</title><link>https://aeon.co/essays/how-alex-haley-wrote-and-reframed-the-life-of-malcolm-x?utm_source=rss-feed</link></item>
-<item><title>chipwich ice cream cake - smitten kitchen</title><link>https://smittenkitchen.com/2025/07/chipwich-ice-cream-cake/</link></item>
-<item><title>Ice Cream, Sorbet, and Popsicles - smitten kitchen</title><link>https://smittenkitchen.com/./recipes/sweets/ice-cream-sorbet-popsicles/</link></item>
-<item><title>focaccia with zucchini and potatoes - smitten kitchen</title><link>https://smittenkitchen.com/2025/07/focaccia-with-zucchini-and-potatoes/</link></item>
-<item><title>blueberry muffins 25 times one summer - smitten kitchen</title><link>https://smittenkitchen.com/2016/08/even-more-perfect-blueberry-muffins/</link></item>
-<item><title>burrata with crushed cherries and pistachios - smitten kitchen</title><link>https://smittenkitchen.com/2025/07/burrata-with-crushed-cherries-and-pistachios/</link></item>
-<item><title>cucumber crunch salad with tofu - smitten kitchen</title><link>https://smittenkitchen.com/2025/06/cucumber-crunch-salad-with-tofu/</link></item>
-<item><title>Peanut Butter - smitten kitchen</title><link>https://smittenkitchen.com/./recipes/ingredient/peanut-butter/</link></item>
-<item><title>This Hard-to-Reach Mountaintop Lookout Is the Coolest Place I’ve Ever Slept - Backpacker Magazine</title><link>https://www.backpacker.com/trips/formidable-hike-washington-three-fingers-lookout/</link></item>
-<item><title>Deal of the Week: A Feature-Packed Tent That Weighs Less Than 2 Pounds - Backpacker Magazine</title><link>https://www.backpacker.com/gear/tents/deal-of-the-week-a-feature-packed-discount-tent-that-weighs-less-than-2-pounds/</link></item>
-<item><title>The Gear That Backpacker’s Editors Loved in July 2025 - Backpacker Magazine</title><link>https://www.backpacker.com/gear/the-gear-that-backpackers-editors-loved-in-july-2025/</link></item>
-<item><title>Should You Hike in Boots or Trail Runners? Here’s How a Backpacker Editor Chooses. - Backpacker Magazine</title><link>https://www.backpacker.com/gear/footwear/should-you-hike-in-boots-or-trail-runners-heres-how-a-backpacker-editor-chooses/</link></item>
-<item><title>4 Edible Berries Every Hiker Should Know - Backpacker Magazine</title><link>https://www.backpacker.com/skills/identify/plants/4-edible-berries-every-hiker-should-know/</link></item>
-<item><title>Can Ultralight Camp Shoes Survive in the Real World? - Backpacker Magazine</title><link>https://www.backpacker.com/gear/apparel/ultralight-camp-shoes/</link></item>
-<item><title>When Did Ultralight Becoming About Buying More, Not Packing Less? - Backpacker Magazine</title><link>https://www.backpacker.com/stories/essays/opinion/when-did-ultralight-becoming-about-buying-more-not-packing-less/</link></item>
-<item><title>Teacher Arrested in Connection to Murder of Two Hikers in Arkansas - Backpacker Magazine</title><link>https://www.backpacker.com/news-and-events/news/andrew-james-mcgann-arrested-devils-den-arkansas-murder/</link></item>
-<item><title>The Gear that Helps Me Hike More Isn’t Even Hiking Gear - Backpacker Magazine</title><link>https://www.backpacker.com/skills/multisport-skills/most-precious-hiking-gear-bike/</link></item>
-<item><title>“High Country Harasser” Arrested Near Continental Divide Trail After Altercation - Backpacker Magazine</title><link>https://www.backpacker.com/news-and-events/news/high-country-harasser-arrested-near-continental-divide-trail/</link></item>
-<item><title>These Indoor Workouts Will Save Your Fitness This Hot, Hot Summer - Backpacker Magazine</title><link>https://www.backpacker.com/skills/backpacking-fitness/indoor-hiking-workouts-hot-summer/</link></item>
-<item><title>Mountain Lions - Backpacker Magazine</title><link>https://www.backpacker.com/survival/surviving-animal-attacks/mountain-lions/</link></item>
-<item><title>Man Fights Off Cougar by Punching it in Face - Backpacker Magazine</title><link>https://www.backpacker.com/survival/surviving-animal-attacks/mountain-lions/man-punches-cougar/</link></item>
-<item><title>When Is It Too Hot To Hike? Here’s How to Decide. - Backpacker Magazine</title><link>https://www.backpacker.com/skills/when-is-it-too-hot-to-hike-how-to-decide/</link></item>
-<item><title>Hikers Rescued After Becoming Stranded on One of the Appalachian Trail’s Most Famous Mountains - Backpacker Magazine</title><link>https://www.backpacker.com/news-and-events/news/hikers-rescued-after-becoming-stranded-on-one-of-the-appalachian-trails-most-famous-mountains/</link></item>
-<item><title>Deal of the Week: Get Side Sleepers’ Favorite Sleeping Bag for 30 Percent Off - Backpacker Magazine</title><link>https://www.backpacker.com/gear/sleeping-bags/deal-of-the-week-get-big-agnes-sidewinder-30-percent-off/</link></item>
-<item><title>日本酉莲社嘉兴藏（旧增上寺报恩藏，213G，33227个文件） - 书格</title><link>https://www.shuge.org/meet/topic/138234/#post-187144</link></item>
-<item><title>bookget 开源了（更新至：v25.0701） - 书格</title><link>https://www.shuge.org/meet/topic/80138/page/56/#post-187134</link></item>
-<item><title>有人下载过美国医学图书馆的新中国卫生宣传画吗 - 书格</title><link>https://www.shuge.org/meet/topic/187025/#post-187132</link></item>
-<item><title>问询四川省图书馆《洪武南藏》的下载方式 - 书格</title><link>https://www.shuge.org/meet/topic/187136/</link></item>
-<item><title>关于方术，还真有个科班在传授，北京大学 - 书格</title><link>https://www.shuge.org/meet/topic/187130/</link></item>
-<item><title>求《苌楚斋书目》二十二卷 原图 - 书格</title><link>https://www.shuge.org/meet/topic/187103/</link></item>
-<item><title>求：汤文正手书文稿，存卷数：不分卷，册数：6册，版本：手稿本 （清）田兰芳、吴大澂批，（清）王廉跋。馆藏：苏州博物馆。 - 书格</title><link>https://www.shuge.org/meet/topic/187079/</link></item>
-<item><title>憨山老人 手书《证道歌》 - 书格</title><link>https://www.shuge.org/meet/topic/187078/</link></item>
-<item><title>Exploring Lagos’ rich culinary scene - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/the-lagos-culinary-scene</link></item>
-<item><title>The top things to do in Luxor, Egypt - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/the-best-things-to-do-in-luxor</link></item>
-<item><title>The 7 top things to do in Trondheim, Norway - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/top-things-to-do-in-trondheim-norway</link></item>
-<item><title>The 10 best things to do in and around Oban, Scotland - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/top-things-to-do-oban-scotland</link></item>
-<item><title>The 12 best things to do in The Cotswolds, England - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/top-things-to-do-in-the-cotswolds</link></item>
-<item><title>17 things you should do on Cape Cod - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/top-things-to-do-on-cape-cod</link></item>
-<item><title>A first-time guide to Wales - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/first-time-wales-discover</link></item>
-<item><title>The 15 best things to do in Verona, Italy - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/top-things-to-do-in-verona</link></item>
-<item><title>What to eat and drink in Miami - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/local-flavor-where-to-eat-and-drink-miami</link></item>
-<item><title>9 last-minute Labor Day weekend getaways for 2025 - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/last-minute-labor-day-weekend-getaways</link></item>
-<item><title>A first-time guide to Mendocino, CA - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/guide-to-mendocino-california</link></item>
-<item><title>10 best things to do in Ho Chi Minh City - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-things-to-do-in-ho-chi-minh-city</link></item>
-<item><title>10 of the best beaches along Oregon&amp;#39;s Pacific Coast - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/oregon-best-beaches</link></item>
-<item><title>15 things to do in the Catskill Mountains - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/top-things-to-do-in-the-catskills</link></item>
-<item><title>How to get around Madrid - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/getting-around-madrid</link></item>
-<item><title>Best outdoor activities in Spain&amp;#39;s Costa Brava - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-adventure-activities-in-costa-brava-spain</link></item>
-<item><title>The 7 best places to visit in Southeast Asia - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-places-to-visit-in-southeast-asia</link></item>
-<item><title>A food writer&amp;#39;s guide to shopping for Thai food like a local - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/shopping-for-groceries-thailand</link></item>
-<item><title>Portland, Maine vs Portland, Oregon: which Portland is best? - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/portland-oregon-vs-portland-maine</link></item>
-<item><title>India’s best coffee, spice and tea farm stays - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/indias-best-coffee-spice-and-tea-farm-stays</link></item>
-<item><title>Thinking Fast, Smelling Faster: Olfaction, Plants, and the Two Systems of Thought - World Sensorium</title><link>https://worldsensorium.com/thinking-fast-smelling-faster-olfaction-plants-and-the-two-systems-of-thought/</link></item>
-<item><title>An Existential Reflection on Plant Intelligence - World Sensorium</title><link>https://worldsensorium.com/an-existential-reflection-on-plant-intelligence/</link></item>
-<item><title>The Art of Sustainability: How to Care for a Tiny Planet in a Big Universe - World Sensorium</title><link>https://worldsensorium.com/the-art-of-sustainability-how-to-care-for-a-tiny-planet-in-a-big-universe/</link></item>
-<item><title>The Arborealists: Tree Painters from the United Kingdom - World Sensorium</title><link>https://worldsensorium.com/the-arborealists-tree-painters-from-the-united-kingdom/</link></item>
-<item><title>“Small Is Beautiful”: A Conversation with Renate Christ on Climate, Culture, and What We Stand to Lose - World Sensorium</title><link>https://worldsensorium.com/small-is-beautiful-a-conversation-with-renate-christ-on-climate-culture-and-what-we-stand-to-lose/</link></item>
-<item><title>Chopped Salad with Lime Dressing - World Sensorium</title><link>https://worldsensorium.com/chopped-salad-with-lime-dressing/</link></item>
-<item><title>Skip to main content - IFLScience</title><link>https://www.iflscience.com/#main-content</link></item>
-<item><title>Catch A Glimpse Of One Of The World’s Rarest Sharks In Dreamy New Footage - IFLScience</title><link>https://www.iflscience.com/catch-a-glimpse-of-one-of-the-worlds-rarest-sharks-in-dreamy-new-footage-80255</link></item>
-<item><title>Manta Rays Officially Get Third New Species – 15 Years After First Suspected - IFLScience</title><link>https://www.iflscience.com/manta-rays-officially-get-third-new-species-15-years-after-first-suspected-80252</link></item>
-<item><title>&amp;quot;Space Hurricanes&amp;quot; Are Happening At Earth&amp;#39;s Poles – And They Can Affect GPS Signals - IFLScience</title><link>https://www.iflscience.com/space-hurricanes-are-happening-at-earths-poles-and-they-can-affect-gps-signals-80253</link></item>
-<item><title>World’s “Oldest Baby” Born From Embryo Frozen In 1994 In New World Record - IFLScience</title><link>https://www.iflscience.com/worlds-oldest-baby-born-from-embryo-frozen-in-1994-in-new-world-record-80244</link></item>
-<item><title>“Spectacular” New Species Of 40cm Giant Stick Insect May Be Australia’s New Heaviest Insect - IFLScience</title><link>https://www.iflscience.com/spectacular-new-species-of-40cm-giant-stick-insect-may-be-australias-new-heaviest-insect-80245</link></item>
-<item><title>What Can Spain&amp;#39;s &amp;quot;Tunnel Of Bones&amp;quot; Tell Us About The Fate Of Human Species On The Brink Of Extinction? - IFLScience</title><link>https://www.iflscience.com/what-can-spains-tunnel-of-bones-tell-us-about-the-fate-of-human-species-on-the-brink-of-extinction-80237</link></item>
-<item><title>&amp;quot;World’s Rarest Elephant”: Meet Motty, The Only Known Elephant Hybrid - IFLScience</title><link>https://www.iflscience.com/worlds-rarest-elephant-meet-motty-the-only-known-elephant-hybrid-80171</link></item>
-<item><title>“The Blob” Triggered The Largest Single-Species Event In Modern History, Killing 4 Million Seabirds - IFLScience</title><link>https://www.iflscience.com/the-blob-triggered-the-largest-single-species-event-in-modern-history-killing-4-million-seabirds-80220</link></item>
-<item><title>Missing 40 Percent Of Matter In The Universe Finally Discovered: “The Simulations Were Right All Along” - IFLScience</title><link>https://www.iflscience.com/missing-40-percent-of-matter-in-the-universe-finally-discovered-the-simulations-were-right-all-along-80125</link></item>
-<item><title>The Wild Life Of Snowflake, The Only Albino Gorilla Ever Known - IFLScience</title><link>https://www.iflscience.com/the-wild-life-of-snowflake-the-only-albino-gorilla-ever-known-80134</link></item>
-<item><title>A One-Shot Vaccine For HIV Might Actually Be On The Cards - IFLScience</title><link>https://www.iflscience.com/a-one-shot-vaccine-for-hiv-might-actually-be-on-the-cards-80257</link></item>
-<item><title>First-Of-Its-Kind Vagus Nerve Implant Gets FDA Approval As A Therapy For Rheumatoid Arthritis - IFLScience</title><link>https://www.iflscience.com/first-of-its-kind-vagus-nerve-implant-gets-fda-approval-as-a-therapy-for-rheumatoid-arthritis-80254</link></item>
-<item><title>Rhino Horns Go Radioactive As Anti-Poaching Project Gets Off The Ground - IFLScience</title><link>https://www.iflscience.com/rhino-horns-go-radioactive-as-anti-poaching-project-gets-off-the-ground-80251</link></item>
-<item><title>First Time Crystal Made Of &amp;quot;Exotic&amp;quot; Giant Atoms 1,000 times Larger Than Hydrogen - IFLScience</title><link>https://www.iflscience.com/first-time-crystal-made-of-exotic-giant-atoms-1000-times-larger-than-hydrogen-80247</link></item>
-<item><title>Prehistoric Humans Began Eating Tubers 700,000 Years Before Our Teeth Evolved To Do So - IFLScience</title><link>https://www.iflscience.com/prehistoric-humans-began-eating-tubers-700000-years-before-our-teeth-evolved-to-do-so-80249</link></item>
-<item><title>What Is &amp;quot;Nobel Disease&amp;quot;, And Why Do So Many Prizewinners Go On To Develop It? - IFLScience</title><link>https://www.iflscience.com/what-is-nobel-disease-and-why-do-so-many-prizewinners-go-on-to-develop-it-80240</link></item>
-<item><title>Humans Were Buzzing On Psychoactive Betel Nuts 4,000 Years Ago - IFLScience</title><link>https://www.iflscience.com/humans-were-buzzing-on-psychoactive-betel-nuts-4000-years-ago-80230</link></item>
-<item><title>Siberian Mummy&amp;#39;s 2,000-Year-Old Tattoos Reveal The History Of Ancient Art - IFLScience</title><link>https://www.iflscience.com/siberian-mummys-2000-year-old-tattoos-reveal-the-history-of-ancient-art-80226</link></item>
-<item><title>Your Organs Don’t All Age At The Same Rate. One Is Growing Old Much Quicker Than Others - IFLScience</title><link>https://www.iflscience.com/your-organs-dont-all-age-at-the-same-rate-one-is-growing-old-much-quicker-than-others-80224</link></item>
-<item><title>New Human “Mini-Brains” Combine Cells From The Whole Brain – Even The Blood Vessels - IFLScience</title><link>https://www.iflscience.com/new-human-mini-brains-combine-cells-from-the-whole-brain-even-the-blood-vessels-80227</link></item>
-<item><title>Just How Many &amp;quot;Sixth Senses&amp;quot; Do We Have, Anyway? - IFLScience</title><link>https://www.iflscience.com/just-how-many-sixth-senses-do-we-have-anyway-80213</link></item>
-<item><title>Memories Of Places “Drift” In The Brain – Even When The Environment Doesn’t Change - IFLScience</title><link>https://www.iflscience.com/memories-of-places-drift-in-the-brain-even-when-the-environment-doesnt-change-80206</link></item>
-<item><title>The World’s Oldest Wild Bird &amp;quot;Surprised&amp;quot; Everyone With A Hatched Chick At 74 - IFLScience</title><link>https://www.iflscience.com/the-worlds-oldest-wild-bird-surprised-everyone-with-a-hatched-chick-at-74-80246</link></item>
-<item><title>Beneath Antarctica’s Sea Ice, Leopard Seals Sing Nursery Rhymes In Search Of Love - IFLScience</title><link>https://www.iflscience.com/beneath-antarcticas-sea-ice-leopard-seals-sing-nursery-rhymes-in-search-of-love-80238</link></item>
-<item><title>A Vast Ocean Of Water May Be Trapped In The Transition Zone Beneath Our Feet - IFLScience</title><link>https://www.iflscience.com/a-vast-ocean-of-water-may-be-trapped-in-the-transition-zone-beneath-our-feet-80232</link></item>
-<item><title>The Deepest Complex Ecosystem Ever Discovered Has Been Found 9,000 Meters Below The Sea - IFLScience</title><link>https://www.iflscience.com/the-deepest-complex-ecosystem-ever-discovered-has-been-found-9000-meters-below-the-sea-80235</link></item>
-<item><title>Time&amp;#39;s Arrow Within Glass Appears To Go Both Ways, Raising Huge Questions - IFLScience</title><link>https://www.iflscience.com/times-arrow-within-glass-appears-to-go-both-ways-raising-huge-questions-80239</link></item>
-<item><title>Double-Slit Experiment Performed With Single Atoms Shows Einstein Was Wrong - IFLScience</title><link>https://www.iflscience.com/double-slit-experiment-performed-with-single-atoms-shows-einstein-was-wrong-80203</link></item>
-<item><title>For The First Time, A Quantum Computer Has Been Sent Into Space - IFLScience</title><link>https://www.iflscience.com/for-the-first-time-a-quantum-computer-has-been-sent-into-space-80236</link></item>
-<item><title>Aging NASA Spacecraft Could Intercept The Interstellar Comet On The Other Side Of The Sun, Astronomers Suggest - IFLScience</title><link>https://www.iflscience.com/aging-nasa-spacecraft-could-intercept-the-interstellar-comet-on-the-other-side-of-the-sun-astronomers-suggest-80223</link></item>
-<item><title>Avoid These 7 Common Objects That Can &amp;quot;Wreck&amp;quot; Your Wi-Fi Signal - IFLScience</title><link>https://www.iflscience.com/avoid-these-7-common-objects-that-can-wreck-your-wi-fi-signal-80215</link></item>
-<item><title>Leonardo Da Vinci&amp;#39;s Flying Machine Is Better Than Modern Drones For Noise And Power - IFLScience</title><link>https://www.iflscience.com/leonardo-da-vincis-flying-machine-is-better-than-modern-drones-for-noise-and-power-80109</link></item>
-<item><title>AI Aliens: What If Extraterrestrial Life Is Artificially Intelligent? - IFLScience</title><link>https://www.iflscience.com/ai-aliens-what-if-extraterrestrial-life-is-artificially-intelligent-79926</link></item>
-<item><title>Why Do Many Large Language Models Give The Same Answer To This &amp;quot;Random&amp;quot; Number Query? - IFLScience</title><link>https://www.iflscience.com/why-do-many-large-language-models-give-the-same-answer-to-this-random-number-query-79966</link></item>
-<item><title>This Is The Most Bizarre International Border In The World - IFLScience</title><link>https://www.iflscience.com/this-is-the-most-bizarre-international-border-in-the-world-80163</link></item>
-<item><title>A Growing Number Of People Believe Aliens Have Visited Us – And That Could Be A Problem - IFLScience</title><link>https://www.iflscience.com/a-growing-number-of-people-believe-aliens-have-visited-us-and-that-could-be-a-problem-80052</link></item>
-<item><title>How Do Americans Really Feel About Diversity And Multiculturalism? - IFLScience</title><link>https://www.iflscience.com/how-do-americans-really-feel-about-diversity-and-multiculturalism-80117</link></item>
-<item><title>The Drunk Hypothesis: Did Booze Enable The Rise Of Human Civilization? - IFLScience</title><link>https://www.iflscience.com/the-drunk-hypothesis-did-booze-enable-the-rise-of-human-civilization-80101</link></item>
-<item><title>How Does An MRI Machine Work? - IFLScience</title><link>https://www.iflscience.com/how-does-an-mri-machine-work-80258</link></item>
-<item><title>There Is A Crucial Reason Why We Will Never See The Big Bang Directly With Our Telescopes - IFLScience</title><link>https://www.iflscience.com/there-is-a-crucial-reason-why-we-will-never-see-the-big-bang-directly-with-our-telescopes-80256</link></item>
-<item><title>The Longest-Reigning Monarch - IFLScience</title><link>https://www.iflscience.com/the-longest-reigning-monarch-80158</link></item>
-<item><title>Should You Wash Your Chicken? - IFLScience</title><link>https://www.iflscience.com/should-you-wash-your-chicken-80046</link></item>
-<item><title>The Worst Day In History For Humans - IFLScience</title><link>https://www.iflscience.com/the-worst-day-in-history-for-humans-80044</link></item>
-<item><title>HelloGitHub 第 112 期 - HelloGitHub</title><link>https://hellogithub.com/periodical/volume/112</link></item>
+<lastBuildDate>Sun, 03 Aug 2025 09:54:52 +0800</lastBuildDate>
+<item><title>毕业论文问题频出，原因竟是缺个“公共导师” - 科学网博客</title><link>https://blog.sciencenet.cn/blog-3389532-1496265.html</link></item>
+<item><title>含有丸的字，除了上面所说的纨、芄、汍以外，其他字中的“丸”，如在执、热、势等字中，都是“丮”字的讹写。但即使是讹写，以讹传讹千百年，大家都承认了，也就登堂入室，成了正统……冯大诚 - 科学网博客</title><link>https://blog.sciencenet.cn/blog-612874-1496258.html</link></item>
+<item><title>叶片溅有“油点”和花型较为奇特的… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3319332-1496270.html</link></item>
+<item><title>题敦煌风女神图 [七绝] - 科学网博客</title><link>http://blog.sciencenet.cn/blog-39350-1496269.html</link></item>
+<item><title>韩国科学技术院Kang Taek Le… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3411509-1496133.html</link></item>
+<item><title>西安交大诚邀全球英才依托申… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-425155-1496173.html</link></item>
+<item><title>松山湖材料实验室诚邀全球英… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-425155-1496172.html</link></item>
+<item><title>GeoHazards 2024封面文章荐… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3516770-1496096.html</link></item>
+<item><title>喜报！Risk Sciences被国际… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3496796-1496141.html</link></item>
+<item><title>期刊推介面面聊：投稿期刊如… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3411312-1496126.html</link></item>
+<item><title>喜报！AUDT被CAS数据库收录… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3563286-1496119.html</link></item>
+<item><title>论文句子真的是越短越好？ - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3344631-1496092.html</link></item>
+<item><title>最新SCI/SSCI论文接收！IF=5… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3462448-1496085.html</link></item>
+<item><title>基金会评季，本子出现这种情况可能被pass…… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-45-1495808.html</link></item>
+<item><title>清单，有效降低工作错误的方法 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-485553-1496254.html</link></item>
+<item><title>人工智能的安全性与复杂性 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-40841-1496251.html</link></item>
+<item><title>当代学术论文的发展困境与出路 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-575926-1496184.html</link></item>
+<item><title>青椒眼中与研究生关系的理想状态 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3612599-1496180.html</link></item>
+<item><title>Hugh Everett的多世界 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-863936-1496171.html</link></item>
+<item><title>人工智能的瓶颈依然在于休谟与维特根斯坦 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-40841-1496170.html</link></item>
+<item><title>Coasts 期刊正式被Scopus收录 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3516770-1496095.html</link></item>
+<item><title>大学 = 教着最古老的知识vs.做着最前沿的研究 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-627429-1496121.html</link></item>
+<item><title>WEVJ 香港大学&amp;香港理工大学：电动汽车无线充电技术——批判性综述 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3516770-1496007.html</link></item>
+<item><title>卧思清露浥，坐待高星灿 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-2724438-1496167.html</link></item>
+<item><title>这位大学老师的做法令人百思不得其解 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-827932-1496218.html</link></item>
+<item><title>张润之--《去新疆，到祖国最需要的地方》50年代人物 2 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-2024-1496230.html</link></item>
+<item><title>抗衰老102：血液透析和血液过滤 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-75458-1496198.html</link></item>
+<item><title>工科高校可以培养合格的工程师吗？ - 科学网博客</title><link>http://blog.sciencenet.cn/blog-325385-1496221.html</link></item>
+<item><title>江豚拜风老蛟徙（古今诗词咏江豚续六百七十一） - 科学网博客</title><link>http://blog.sciencenet.cn/blog-708326-1496166.html</link></item>
+<item><title>德泽寰宇传薪火,功耀千秋照汗青——我心目中的大先生… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-213646-1496187.html</link></item>
+<item><title>BUSINESS 领域 Top JIF 期刊 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-2724438-1496214.html</link></item>
+<item><title>圕人堂话题：图书馆开展公益电影放映的版权问题 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-213646-1496234.html</link></item>
+<item><title>中国科学家为弱精症精准诊疗提… - 科学网博客</title><link>https://blog.sciencenet.cn/video.php?mod=vinfo&amp;pid=4915</link></item>
+<item><title>中国科学家发现新物种，以“敦… - 科学网博客</title><link>https://blog.sciencenet.cn/video.php?mod=vinfo&amp;pid=4914</link></item>
+<item><title>7月“科学”流言榜 发布频繁洗… - 科学网博客</title><link>https://blog.sciencenet.cn/video.php?mod=vinfo&amp;pid=4913</link></item>
+<item><title>时速600公里磁浮不再&amp;quot;炸街&amp;quot; - 科学网博客</title><link>https://blog.sciencenet.cn/video.php?mod=vinfo&amp;pid=4911</link></item>
+<item><title>这7个论文初审被拒的理由，… - 科学网博客</title><link>http://blog.sciencenet.cn/home.php?mod=space&amp;uid=827932&amp;do=blog&amp;id=1494957</link></item>
+<item><title>微生物靠空气中微量氢气生存[PNAS] - 科学网博客</title><link>http://blog.sciencenet.cn/blog-41174-1495679.html</link></item>
+<item><title>南京航空航天大学王鹏副教授专访 | 亚… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3574014-1496070.html</link></item>
+<item><title>人形机器人中的具身、离身与反身智能 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-40841-1496051.html</link></item>
+<item><title>SUSOC论文推荐┃重构森林火灾航空应急… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3496796-1496008.html</link></item>
+<item><title>刊·见 | 眼科学SCI期刊，推动基础及临… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3574014-1495843.html</link></item>
+<item><title>博士研究奖 + 人形背景板 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-522469-1495360.html</link></item>
+<item><title>研究生该如何看文献？——带着三个层次… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-89570-1495181.html</link></item>
+<item><title>2030 年前消除由犬介导的人类狂犬病的… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-347754-1496257.html</link></item>
+<item><title>20250802——假杜鹃（Barleria cristat… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3319332-1496240.html</link></item>
+<item><title>20250730——刺苞老鼠簕（Acanthus leu… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3319332-1496027.html</link></item>
+<item><title>美丽“太阳花”，如何区分阔叶马齿苋和… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3319332-1495966.html</link></item>
+<item><title>诺贝尔物理学奖得主，客串“肯尼迪刺杀… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-1557-1496084.html</link></item>
+<item><title>新疆自驾游：独库公路-天山红石林与小… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-1432081-1496058.html</link></item>
+<item><title>北师大高友鹤教授：“预印本未来会改变… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3516770-1495975.html</link></item>
+<item><title>科学传播人Sarah Goodwin 通过纪录片传… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-1557-1495243.html</link></item>
+<item><title>对话Biomedicines期刊编委——北京大学… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3516770-1494903.html</link></item>
+<item><title>智能心理治疗的伦理隐忧及可能出路 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-829-1495889.html</link></item>
+<item><title>分存的机器与整存的心灵：大语言模型的… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-829-1494745.html</link></item>
+<item><title>兰陵奔牛多美酒（奔牛诗话之一百三十五… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-708326-1496049.html</link></item>
+<item><title>新疆自驾游：独库公路上的大小龙池 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-1432081-1495772.html</link></item>
+<item><title>火箭军工程大学汪刘应/西北工业大学卿… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3534092-1496067.html</link></item>
+<item><title>韩国高丽大学Dong-Wan Kim等：锂金属电… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3411509-1495935.html</link></item>
+<item><title>河北工程大学张志晓教授：TiC包裹SiCw… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3534092-1496064.html</link></item>
+<item><title>AMR Account｜安徽大学朱满洲/康熙团队… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3529677-1495945.html</link></item>
+<item><title>南京工业大学陈永华、徐葵等综述：从能… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3411509-1495872.html</link></item>
+<item><title>复杂性科学研究重镇——美国圣菲研究所… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-1557-1496250.html</link></item>
+<item><title>保护之美 ：美国长木花园保护园艺项目 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-38998-1495947.html</link></item>
+<item><title>如何推动中国编委会的多元化发展？ - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3432244-1495507.html</link></item>
+<item><title>地外语言学研究有何价值？ - 科学网博客</title><link>http://blog.sciencenet.cn/blog-1557-1495457.html</link></item>
+<item><title>保护园艺：国家植物园贡献于整合保护的… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-38998-1495397.html</link></item>
+<item><title>有分寸的诚实：语言艺术在制度文化中的… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3316383-1496032.html</link></item>
+<item><title>当附近有病人时，我们的大脑会激活免疫… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-41174-1495762.html</link></item>
+<item><title>威立与 Anthropic 达成合作，推动AI在… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3411312-1495706.html</link></item>
+<item><title>青蛙实验引发明电池——伏打及伽伐尼 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3032375-1495674.html</link></item>
+<item><title>小分子缓解辅酶Q10线粒体缺陷引发的神… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-41174-1495627.html</link></item>
+<item><title>脱巾挂石壁， 露顶洒松风 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-2724438-1496044.html</link></item>
+<item><title>新疆自驾游：巴音布鲁克草原-九曲十八… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-1432081-1495624.html</link></item>
+<item><title>谁挟种鱼经，来作陶朱不（千载种鱼忆范… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-708326-1496249.html</link></item>
+<item><title>《叙事韵文附照片》今生科研情 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-39664-1495862.html</link></item>
+<item><title>子奚邀嫡亲诸家聚合肥贺余退休之岁 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-595906-1495605.html</link></item>
+<item><title>会议征稿 | 近期教育类国际学术会议合… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3462448-1496082.html</link></item>
+<item><title>2025年吴瑞奖学金获奖名单公布 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-655618-1495967.html</link></item>
+<item><title>全球新增24所！2025年第二季度MDPI开放… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3516770-1495851.html</link></item>
+<item><title>探寻意识的多种可能形式 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-41174-1495763.html</link></item>
+<item><title>收藏！国家自然科学基金申请书写作攻略… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3462448-1495685.html</link></item>
+<item><title>聚焦科学问题，注重团队建设 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-41757-1495406.html</link></item>
+<item><title>郑大张懿强、李鹏伟&amp;化学… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3411509-1495288.html</link></item>
+<item><title>原创研究文章写作指南：从选… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3344631-1495491.html</link></item>
+<item><title>聊聊国家自然科学基金项目话… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-673617-1495463.html</link></item>
+<item><title>科学的科普（14.5）热能、光… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-39359-1494343.html</link></item>
+<item><title>提高论文被引率，这样做效果… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-45-1494884.html</link></item>
+<item><title>逻辑混乱的草图，比高温更让… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-45-1493899.html</link></item>
 </channel></rss>

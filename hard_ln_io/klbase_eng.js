@@ -2077,8 +2077,10 @@ function enwords_search_old_b(cs_w_p_d,csword,csreg,csmax=500){
 }
 
 function enwords_mini_search_clear_b(){
-    document.getElementById('input_enwords_mini_search').value='';
+    var oinput=document.getElementById('input_enwords_mini_search');
+    oinput.value='';
     enwords_mini_search_do_b();
+    oinput.focus();
 }
 
 function enwords_mini_search_do_b(csword=''){

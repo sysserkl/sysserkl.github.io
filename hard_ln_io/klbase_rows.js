@@ -313,7 +313,7 @@ function hash_filename2wiki_table_klr_b(csid,filename_hash=false){
 }
 
 function html2wiki_arr_get_klr_b(csid){
-    var year_t=new Date().getFullYear();       
+    var year_t=new Date().getFullYear();
     var arr_t=[
     ['\n',''],
     ['<(div|p) [^<>]*?>','\n'],
