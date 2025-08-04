@@ -25,7 +25,7 @@ function init_img_viewer(){
     //photodata_global=[];   //文件名，数组分类名，在 photo_source_global 中的序号 - 保留注释
     img_sec_global=0;
 
-    div_generate_album_b();
+    div_generate_klphotos_b();
 
     input_with_x_b('input_search',15);
     slide_klphotos_b(true);

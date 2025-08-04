@@ -159,7 +159,7 @@ function menu_klphotos(){
     var menu_tools=[
     '<span class="span_menu" onclick="'+str_t+'month_day_line_klphotos();">当前条件逐日照片数统计</span>',
     '<span class="span_menu" onclick="'+str_t+'duplicate_category_check_klphotos();">重复或类似分类名检查</span>',
-    '<span class="span_menu" onclick="'+str_t+'timeline_category_klphotos();">Timeline</span>',   
+    '<span class="span_menu" onclick="'+str_t+'timeline_category_klphotos();">当前条件Timeline</span>',   
     '<span class="span_menu" onclick="'+str_t+'screen_album_start_klphotos();">屏幕相框</span>',
     '<span class="span_menu" onclick="'+str_t+'export_form_klphotos();">导出数组和标记图片</span>',
     '<span class="span_menu" onclick="'+str_t+'gallery_klphotos();">当前图片合并显示</span>',  
@@ -178,7 +178,8 @@ function menu_klphotos(){
     '<span id="span_calendar_klphoto" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 在幻灯片中显示日历</span>',        
     '<span id="span_year_klphoto" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 在幻灯片中显示年份</span>',       
     '<span id="span_amount_klphoto" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 统计图显示合计数</span>',
-    '<span id="span_img_border" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ img border</span>',        
+    '<span id="span_img_border" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ img border</span>',     
+    '<span class="span_menu" onclick="'+str_t+'thumb_size_set_klphotos();">缩略图大小设置</span>',  
     ]);   
 
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(menu_gallery,'📸','17rem',button_size,button_size)+klmenu_b(menu_tools,'🔧','17rem',button_size,button_size)+klmenu_b(menu_month,'🈷️','5rem',button_size,button_size)+klmenu_b(menu_config,'⚙️','15rem',button_size,button_size),'','0rem')+' ');
@@ -190,6 +191,10 @@ function menu_klphotos(){
     button_more=button_more+'<div class=klmenu><button style=font-size:'+button_size+';" onclick="popup_show_hide_b(\'p_filter\');">Filter</button></div>';
 
     document.getElementById('div_toolbar2').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(button_more,'block','0','0.2rem 0rem 0rem 0rem'));
+}
+
+function thumb_size_set_klphotos(){
+    prompt_from_local_storage_b('输入缩略图尺寸，形如10rem,10rem，再重新载入页面','album_thumb_size');
 }
 
 function duplicate_category_check_klphotos(){
@@ -265,8 +270,8 @@ function month_day_line_klphotos(){
 
     function sub_month_day_line_klphotos_list(hasyear=false){
         var mdlist=[];
-        for (let blxl in photodata_global){
-            var bltmp = sub_month_day_line_klphotos_ymd(photodata_global[blxl][0],hasyear);
+        for (let item of photodata_global){
+            var bltmp = sub_month_day_line_klphotos_ymd(item[0],hasyear);
             if (bltmp==''){continue;}
             if (mdlist['d'+bltmp]==undefined){
                 mdlist['d'+bltmp]=[bltmp,0];
@@ -492,7 +497,6 @@ function calendar_css_klphotos(){
 }
 
 function data_load_klphotos(){
-    //photo_info_global;
     albumlist_global=albumlist_kl_global.concat(albumlist_pb_global);
     albumlist_pb_global=null;
     albumlist_kl_global=null;
@@ -561,7 +565,7 @@ function init_klphotos(){
     //---
     character_2_icon_b('📸');
     
-    div_generate_album_b();
+    div_generate_klphotos_b();
     
     document.getElementById('p_filter').innerHTML=filter_form_img_b();
     var input_list=[
@@ -615,40 +619,50 @@ function timeline_close_klphotos(){
 }
 
 function timeline_category_klphotos(){
-    var list_t=[];
-    var years_t={};
-    for (let item of photo_source_global){
-        if (!Array.isArray(item)){continue;}
-        if (item.length<2){continue;}   //元素个数为0，或只有名称 - 保留注释
-        var one_photo=item.slice(1,);
-        one_photo.sort(randomsort_b);
-        list_t.push('<li class="li_treeview_klphotos" style="display:none;"><span class="span_link" onclick="imgsearch_klphotos_b(\''+specialstr_j(item[0])+'\');">'+item[0]+'('+(item.length-1)+')</span></li>');
-        var blyear=item[0].substring(0,4);
-        if (blyear in years_t===false){
-            years_t[blyear]=0;
+    var category_dict={};
+    for (let item of photodata_global){
+        //item 形如 [ "2021/20201203博物馆032.jpg", "20201203博物馆", 13159 ] - 保留注释
+        var blkey='k_'+item[1];
+        if (category_dict[blkey]==undefined){
+            category_dict[blkey]=0;
         }
-        years_t[blyear]=years_t[blyear]+item.length-1;
+        category_dict[blkey]=category_dict[blkey]+1;
     }
     
-    list_t.sort().reverse();
-    
-    var years_str=[];
-    var max_year='';
-    for (let key in years_t){
-        years_str.push('<span class="oblong_box" onclick="timeline_oneyear_klphotos(\''+key+'\');"><strong>'+key+'</strong><small>('+years_t[key]+')</small></span>');
-        max_year=(key>max_year?key:max_year);
+    category_dict=object2array_b(category_dict,true,2);
+    category_dict.sort().reverse();
+
+    var years_t={};
+    for (let blxl=0,lent=category_dict.length;blxl<lent;blxl++){
+        let item=category_dict[blxl];
+        
+        var blyear=item[0].substring(0,4);
+        if (years_t['y_'+blyear]===undefined){
+            years_t['y_'+blyear]=0;
+        }
+        years_t['y_'+blyear]=years_t['y_'+blyear]+item[1];
+                
+        category_dict[blxl]='<li class="li_treeview_klphotos" style="display:none;"><span class="span_link" onclick="imgsearch_klphotos_b(\''+specialstr_j(item[0])+'\');">'+item[0]+'('+item[1]+')</span></li>';
     }
-    if (years_str.length<1){return;}
-    years_str.sort().reverse();
+
+    years_t=object2array_b(years_t,true,2);
+    if (years_t.length<1){return;}    
+    years_t.sort().reverse();
+    var max_year=years_t[0][0];
+
+    for (let blxl=0,lent=years_t.length;blxl<lent;blxl++){
+        let item=years_t[blxl];
+        years_t[blxl]='<span class="oblong_box" onclick="timeline_oneyear_klphotos(\''+item[0]+'\');"><strong>'+item[0]+'</strong><small>('+item[1]+')</small></span>';
+    }
     
-    years_str.push('<span class="oblong_box" onclick="timeline_close_klphotos();" style="color:'+scheme_global['a-hover']+';">✖</span>');
+    years_t.push('<span class="oblong_box" onclick="timeline_close_klphotos();" style="color:'+scheme_global['a-hover']+';">✖</span>');
     
     var otd_r=document.getElementById('td_thumb_album_b');
     otd_r.setAttribute('width','85%');
     var rect=otd_r.getBoundingClientRect();
 
     var otd_l=document.getElementById('td_treeview_album_b');
-    otd_l.innerHTML='<section id="section_timeline_klphotos" style="max-height:'+(window.screen.availHeight-rect.top)+'px;overflow:auto;"><p style="line-height:2rem;">'+years_str.join(' ')+'</p><p><input type="text" id="input_timeline_search" onkeyup="if (event.key==\'Enter\'){timeline_oneyear_klphotos(this.value,false);}"></p>\n<ol>'+list_t.join('\n')+'</ol></section>';
+    otd_l.innerHTML='<section id="section_timeline_klphotos" style="max-height:'+(window.screen.availHeight-rect.top)+'px;overflow:auto;"><p style="line-height:2rem;">'+years_t.join(' ')+'</p><p><input type="text" id="input_timeline_search" onkeyup="if (event.key==\'Enter\'){timeline_oneyear_klphotos(this.value,false);}"></p>\n<ol>'+category_dict.join('\n')+'</ol></section>';
     mouseover_mouseout_oblong_span_b(otd_l.querySelectorAll('span.oblong_box'));
     input_with_x_b('input_timeline_search',10);
     timeline_oneyear_klphotos(max_year);
@@ -706,7 +720,7 @@ function load_image_and_get_exif(url){
                     //0: Number { 28 }, 1: Number { 6 }, 2: Number { 41.778 }
                     
                     // 转换坐标格式
-                    let coordinates = parse_GPS_Coordinates_b(gps);
+                    let coordinates = parse_GPS_Coordinates_klphotos_b(gps);
 
                     // 获取日期信息
                     let dateTimeOriginal = EXIF.getTag(this, 'DateTimeOriginal') || EXIF.getTag(this, 'CreateDate') || EXIF.getTag(this, 'ModifyDate');

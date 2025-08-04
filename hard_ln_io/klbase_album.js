@@ -21,7 +21,7 @@ function showbigphoto_klphotos_b(csxl=0){
 
     var border_color=false;
     if (album_marked_rows_global.includes(imgpath_global+photodata_global[csxl][0])){
-        border_color='red';
+        border_color=marked_color_klphotos_b();
     }
     var list_t=slide_center_img_style_b(black_bg_t,filter_str,border_color);
     //list_t 形如：[ 20, 'style="max-height:743px;max-width:1560px;border:20px #7F7F7F solid;"' ] - 保留注释
@@ -48,7 +48,7 @@ function showbigphoto_klphotos_b(csxl=0){
     }
     bljg=bljg+imgname;
     
-	bljg=bljg+'</b> <i>(img='+photodata_global[csxl][2]+')</i></td><td align=right style="font-size:0.6rem;"><span id="span_exif"></span></td></tr></table></div>';
+	bljg=bljg+'</b></td><td align=right style="font-size:0.6rem;"><span id="span_exif"></span></td></tr></table></div>';    //<i>(img='+photodata_global[csxl][2]+')</i>
     
     if (klmenu_check_b('span_calendar_klphoto',false)){
         var str_t=(photodata_global[csxl][0].slice(photodata_global[csxl][0].lastIndexOf('/')+1)).substring(0,8);
@@ -204,34 +204,29 @@ function album_marked_rows_get_klphotos_b(){
 }
 
 
-function import_img_item_klphotos_b(blitem,img_xl_tmp,csimport=true){
+function import_img_item_klphotos_b(blitem){
+    function sub_import_img_item_klphotos_b_one(item,category=''){
+        item=item.split(' /// ')[0];
+        if (item.match(/\.(jpg|jpeg|png|bmp|gif|webp)$/i)){
+            photodata_global.push([item,category]);
+        }    
+    }
+    
 	if (Array.isArray(blitem)){
 		for (let one_img of blitem){
-			if (csimport){
-                one_img=one_img.split(' /// ')[0];
-                if (one_img.match(/\.(jpg|jpeg|png|bmp|gif|webp)$/i)){
-				    photodata_global.push([one_img,blitem[0],img_xl_tmp]);
-                }
-			}
-			img_xl_tmp=img_xl_tmp+1;
+            sub_import_img_item_klphotos_b_one(one_img,blitem[0]);
 		}
 	} else if (typeof blitem == 'string'){
-		if (csimport){
-            blitem=blitem.split(' /// ')[0];
-            if (blitem.match(/\.(jpg|jpeg|png|bmp|gif|webp)$/i)){
-			    photodata_global.push([blitem,'',img_xl_tmp]);
-            }
-		}
-		img_xl_tmp=img_xl_tmp+1;
+        sub_import_img_item_klphotos_b_one(blitem);
 	}
-	return img_xl_tmp;
 }
 
 function import_img_data_klphotos_b(){
 	photodata_global=[];
-	var img_xl_tmp=0;
+	//var img_xl_tmp=0;
 	for (let item of photo_source_global){
-		img_xl_tmp=import_img_item_klphotos_b(item, img_xl_tmp);
+		//img_xl_tmp=
+        import_img_item_klphotos_b(item);   //img_xl_tmp
 	}
 	hide_div_big_photo_b();
 	thumbnail_klphotos_b();
@@ -263,25 +258,35 @@ function imgsearch_klphotos_b(csword,csreg){
 	var blwordlist=csword.split(' ');
 	
 	photodata_global=[];
-	var img_xl_tmp=0;
+    var blfound0, blfound1;
+
+    var t0=performance.now();       
 	for (let item of photo_source_global){
-		if (typeof item == 'string'){
-            var bltmp = item;
-        } else {
-            var bltmp = item[0];
+        let is_str=(typeof item == 'string');
+        blfound0=str_reg_search_b((is_str?item:item[0]),blwordlist,csreg);
+        
+		if (blfound0==-1){break;}
+
+		if (blfound0){
+            import_img_item_klphotos_b(item);
+		} else if (!is_str){
+            var sub_list=[];
+            for (let blxl=1,lent=item.length;blxl<lent;blxl++){
+                blfound1=str_reg_search_b(item[blxl],blwordlist,csreg);
+                if (blfound1==-1){break;}
+                if (blfound1){
+                    sub_list.push(item[blxl]);
+                }
+            }
+            if (sub_list.length>0){
+                sub_list=[item[0]].concat(sub_list);
+                import_img_item_klphotos_b(sub_list);
+            }
         }
-
-		var blfound=str_reg_search_b(bltmp,blwordlist,csreg);
-		if (blfound==-1){break;}
-
-		if (blfound){
-			img_xl_tmp=import_img_item_klphotos_b(item,img_xl_tmp);
-		} else {
-			img_xl_tmp=import_img_item_klphotos_b(item,img_xl_tmp,false);
-		}
 	}
-
-	hide_div_big_photo_b();
+    console.log('imgsearch_klphotos_b() 检索费时：'+(performance.now() - t0) + ' milliseconds');
+	
+    hide_div_big_photo_b();
 	thumbnail_klphotos_b();
 	
 	document.getElementById('span_img_count').innerHTML='<i>('+photodata_global.length+')</i>';
@@ -477,6 +482,7 @@ function thumbnail_klphotos_b(csno=0){
 	}
     var filter_str=get_filter_style_klphotos_b(true);
     
+    var marked_color=marked_color_klphotos_b();
 	for (let blxl=csno,lent=photodata_global.length-1;blxl<=lent;blxl++){
 		if (bltitle_tmp=='' || bltitle_tmp!==photodata_global[blxl][1]){
 			bltitle_tmp=photodata_global[blxl][1];
@@ -494,7 +500,7 @@ function thumbnail_klphotos_b(csno=0){
 		//data-src= - 保留注释
         var blstyle='';
         if (album_marked_rows_global.includes(imgpath_global+photodata_global[blxl][0])){
-            blstyle='border-color: red; border-style: solid; ';
+            blstyle='border-color: '+marked_color+'; border-style: solid; ';
         }
 		bljg=bljg+'<img src="'+imgpath_global+photodata_global[blxl][0]+'" class="img_thumb"'+(blstyle+filter_str==''?'':' style="'+blstyle+filter_str+'"');
 		if (photodata_global[blxl][1]==''){
@@ -520,9 +526,13 @@ function thumbnail_klphotos_b(csno=0){
 	document.location.href='#top';
 }
 
+function marked_color_klphotos_b(){
+    return 'blue';
+}
+
 // GPS坐标转换函数
-function parse_GPS_Coordinates_b(gps){
-    function sub_parse_GPS_Coordinates_b_convert(degrees, ref){
+function parse_GPS_Coordinates_klphotos_b(gps){
+    function sub_parse_GPS_Coordinates_klphotos_b_convert(degrees, ref){
         let decimal = degrees[0] + degrees[1]/60 + degrees[2]/3600;
         return (ref === 'S' || ref === 'W') ? -decimal : decimal;
     };
@@ -531,13 +541,13 @@ function parse_GPS_Coordinates_b(gps){
         return [false,false]
     };
 
-    let lat=sub_parse_GPS_Coordinates_b_convert(gps.latitude, gps.latRef);
-    let lng=sub_parse_GPS_Coordinates_b_convert(gps.longitude, gps.lonRef);
+    let lat=sub_parse_GPS_Coordinates_klphotos_b_convert(gps.latitude, gps.latRef);
+    let lng=sub_parse_GPS_Coordinates_klphotos_b_convert(gps.longitude, gps.lonRef);
     
     return [lat,lng];
 }
 
-function div_generate_album_b(){
+function div_generate_klphotos_b(){
     var blstr=`<div id="div_big_album_b" style="position: fixed; top: 50%; left: 50%; -webkit-transform: translateX(-50%) translateY(-50%); z-index: 99;background-color:#ffffff;"></div>
 <div id="div_grey_album_b"></div>
 <div id="div_array_album_b" style="margin:0.5rem;"></div>
@@ -555,8 +565,22 @@ function div_generate_album_b(){
     document.getElementById('div_show_hide').insertAdjacentHTML('afterend',blstr);
 }
 
-function style_generate_album_b(){
-    return `.img_thumb {max-height:10rem;border:0.1rem dashed #c0c0c0;padding:0.2rem;margin:0.2rem;position:relative;float:left;cursor:pointer;}
-.div_thumb {width:10rem; height:10rem; border:0.1rem dashed #c0c0c0; padding:0.2rem;margin:0.2rem; position:relative; float:left;}
+function style_generate_klphotos_b(cssize=''){
+    if (cssize==''){
+        cssize=local_storage_get_b('album_thumb_size');
+    }
+    
+    if (cssize==''){
+        cssize='10rem';
+    }
+    
+    let list_t=cssize.split(',');
+    if (list_t.length==1){
+        list_t.push(list_t[0]);
+    }
+    let csw,csh;
+    [csw,csh]=list_t.slice(0,2);
+    return `.img_thumb {max-height:`+csh+`; border:0.1rem dashed #c0c0c0;padding:0.2rem;margin:0.2rem;position:relative;float:left;cursor:pointer;}
+.div_thumb {width:`+csw+`; height:`+csh+`; border:0.1rem dashed #c0c0c0; padding:0.2rem;margin:0.2rem; position:relative; float:left;}
 .td_thumb {font-size:1.3rem; color:707070;word-break:normal; word-wrap:normal;}`;
 }
