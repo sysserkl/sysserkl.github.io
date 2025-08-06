@@ -1353,10 +1353,15 @@ function notepad_tags_get_klr_b(cslist){
     tag_dict.sort(function (a,b){return a[1]>b[1]?-1:1;});
     var is_local=is_local_b();
     
-    
+    var blcount=0;
     for (let blxl=0,lent=tag_dict.length;blxl<lent;blxl++){
-        tag_dict[blxl]='<input type="text" value="&lt;tag&gt;'+specialstr92_b(tag_dict[blxl][0])+'&lt;/tag&gt;" /> <small>('+tag_dict[blxl][1]+')</small>'+(is_local?'<a class="a_box" href="'+klwiki_link_b(tag_dict[blxl][0],false)+'" target=_blank>🖇</a>':'');
+        blcount=blcount+tag_dict[blxl][1];
+        tag_dict[blxl]='<span><input type="text" value="&lt;tag&gt;'+specialstr92_b(tag_dict[blxl][0])+'&lt;/tag&gt;" /> <span class="span_box" style="font-size:small;" onclick="notepad_tags_copy_klr_b(this);" title="点击复制">('+tag_dict[blxl][1]+')</span></span>'+(is_local?'<a class="a_box" href="'+klwiki_link_b(tag_dict[blxl][0],false)+'" target=_blank>🖇</a>':'');
     }
-    
-    return tag_dict;
+    return [tag_dict,blcount];
+}
+
+function notepad_tags_copy_klr_b(odom){
+    var oinput=odom.parentNode.querySelector('input');
+    copy_2_clipboard_b(oinput.value);
 }

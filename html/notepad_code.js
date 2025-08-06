@@ -208,9 +208,10 @@ function wikiuploads_count_notepad(){
     }
     
     var tag_list=blstr.match(/^<tag>(.*)<\/tag>$/mg) ||[];
-    tag_list=notepad_tags_get_klr_b(tag_list);
+    var tag_count;
+    [tag_list,tag_count]=notepad_tags_get_klr_b(tag_list);
     
-    return '<h4>附件列表('+attach_list.length+')</h4>'+attach_str+'<h4>扩展名统计('+ext_dict.length+')</h4>'+array_2_li_b(ext_dict)+'<h4>无日期标题('+without_date.length+')</h4>'+array_2_li_b(without_date)+'<h4>tag统计('+tag_list.length+')</h4>'+tag_list.join(' ');
+    return '<h4>附件列表('+attach_list.length+')</h4>'+attach_str+'<h4>扩展名统计('+ext_dict.length+')</h4>'+array_2_li_b(ext_dict)+'<h4>无日期标题('+without_date.length+')</h4>'+array_2_li_b(without_date)+'<h4>tag统计('+tag_list.length+'/'+tag_count+')</h4>'+tag_list.join(' ');
 }
 
 function textarea_info_count_notepad(ospan=false,otextarea=false){
