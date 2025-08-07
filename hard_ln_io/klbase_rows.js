@@ -1348,17 +1348,21 @@ function notepad_tags_get_klr_b(cslist){
         }
         tag_dict[tag_name]=tag_dict[tag_name]+1;
     }
+
+
     tag_dict=object2array_b(tag_dict,true,2);
     tag_dict.sort();
     tag_dict.sort(function (a,b){return a[1]>b[1]?-1:1;});
     var is_local=is_local_b();
     
     var blcount=0;
+    var keys=new Set();
     for (let blxl=0,lent=tag_dict.length;blxl<lent;blxl++){
+        keys.add(tag_dict[blxl][0]);
         blcount=blcount+tag_dict[blxl][1];
         tag_dict[blxl]='<span><input type="text" value="&lt;tag&gt;'+specialstr92_b(tag_dict[blxl][0])+'&lt;/tag&gt;" /> <span class="span_box" style="font-size:small;" onclick="notepad_tags_copy_klr_b(this);" title="点击复制">('+tag_dict[blxl][1]+')</span></span>'+(is_local?'<a class="a_box" href="'+klwiki_link_b(tag_dict[blxl][0],false)+'" target=_blank>🖇</a>':'');
     }
-    return [tag_dict,blcount];
+    return [tag_dict,blcount,keys];
 }
 
 function notepad_tags_copy_klr_b(odom){

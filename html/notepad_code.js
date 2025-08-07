@@ -23,12 +23,32 @@ function new_notepad(){
     }
 }
 
+function tag_do_notepad(cstype){
+    var blstr=document.getElementById('select_tags_notepad').value;
+    if (blstr==''){return;}
+    
+    switch (cstype){
+        case 'search':
+            document.getElementById('input_search').value='+'+blstr;
+            break;
+        case 'copy':
+            copy_2_clipboard_b('<tag>'+blstr+'</tag>');
+            break;
+        case 'wiki':
+            klwiki_link_b(blstr,true);
+            break;
+    }
+}
+
 function menu_notepad(){
     var str_t=klmenu_hide_b('');
+    var blparent=menu_parent_node_b(str_t);
+    
     var klmenu1=[
     '<span id="span_reg_notepad" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ reg</span>',    
     '<span id="span_new_empty_notepad" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 新建时自动清空</span>',    
     '<span id="span_edit_show_wiki_notepad" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 添加或修改时自动展示wiki效果</span>',    
+    '<span class="span_menu"><select id="select_tags_notepad" style="height:2rem;"></select> <span class="aclick" onclick="tag_do_notepad(\'search\');'+blparent+'">搜索</span><span class="aclick" onclick="tag_do_notepad(\'copy\');'+blparent+'">复制</span>'+(is_local_b()?'<span class="aclick" onclick="tag_do_notepad(\'wiki\');'+blparent+'">WIKI</span>':'')+'</span>',
 
     '<span class="span_menu" onclick="'+str_t+'idb_notepad(\'read\',false,false,\'form\');">导入导出</span>',
     '<span class="span_menu" onclick="'+str_t+'idb_notepad(\'clear\');">清空数据库</span>',
@@ -208,8 +228,29 @@ function wikiuploads_count_notepad(){
     }
     
     var tag_list=blstr.match(/^<tag>(.*)<\/tag>$/mg) ||[];
-    var tag_count;
-    [tag_list,tag_count]=notepad_tags_get_klr_b(tag_list);
+    var tag_count,tag_keys;
+    [tag_list,tag_count,tag_keys]=notepad_tags_get_klr_b(tag_list);
+    
+    var oselect=document.getElementById('select_tags_notepad');
+    var ooptions=oselect.querySelectorAll('option');
+    var old_keys=new Set();
+    for (let one_option of ooptions){
+        old_keys.add(one_option.innerText);
+    }
+
+    var is_changed=false;
+    for (let one_key of tag_keys){
+        if (!old_keys.has(one_key)){
+            old_keys.add(one_key);
+            is_changed=true;
+        }
+    }
+    
+    if (is_changed){
+        old_keys=Array.from(old_keys);
+        old_keys.sort(function (a,b){return zh_sort_b(a,b);});
+        oselect.innerHTML=list_2_option_b(old_keys);
+    }
     
     return '<h4>附件列表('+attach_list.length+')</h4>'+attach_str+'<h4>扩展名统计('+ext_dict.length+')</h4>'+array_2_li_b(ext_dict)+'<h4>无日期标题('+without_date.length+')</h4>'+array_2_li_b(without_date)+'<h4>tag统计('+tag_list.length+'/'+tag_count+')</h4>'+tag_list.join(' ');
 }
