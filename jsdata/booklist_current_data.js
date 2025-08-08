@@ -1,4 +1,8 @@
 var csbooklist_source_global=[
+["the_republic_1143", "The Republic(Plato)","已整理,englishwords","3",""],
+["mariner_mission_to_venus_2308", "Mariner Mission to Venus(Jet Propulsion Laboratory)","已整理,englishwords","3",""],
+["the_battle_for_khe_sanh_2022", "The Battle for Khe Sanh(Moyers S. Shore)","已整理,englishwords","3",""],
+["the_art_of_war_1191", "The Art of War(active 6th century B.C. Sunzi)","已整理,englishwords","3",""],
 ["gulliver_s_travels_into_several_rrotw_5554", "Gulliver's Travels into Several Remote Regions of the World(Jonathan Swift)","已整理,englishwords","3",""],
 ["new_atlantis_1162", "New Atlantis(Francis Bacon)","已整理,englishwords","3",""],
 ["autobiography_of_benjamin_franklin_3308", "Autobiography of Benjamin Franklin(Benjamin Franklin)","已整理,englishwords","3",""],

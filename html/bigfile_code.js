@@ -400,7 +400,7 @@ function upload_a_bigfile(){
         if (sub_upload_a_bigfile_check(one_file)!==''){return;}
     }
 
-    if (!confirm('是否'+blcaption+'上传 '+file_count+' 个文件？')){return;}
+    if (!confirm('是否'+blcaption+'上传 '+file_count+' 个文件'+(blcaption=='分割'?'（待分割的文件名称应以 $$encoded.txt 结尾）':'')+'？')){return;}
     var file_no=0;
     var old_title=document.title;
     

@@ -179,9 +179,15 @@ function iframe_generate_klsearch(cstype='',cskey=false){
     if (cskey===false){
         cskey=document.getElementById('input_searchtxt').value.trim();
     }
-    
-    if (cstype=='batch_dwdlw'){
-        window.open('?k='+encodeURIComponent(cskey)+'&t=batch_dwdlw&close=1');
+
+    var iframe_or_select='';
+    var oselect=document.getElementById('select_iframe_or_close_klsearch');
+    if (oselect){
+        iframe_or_select=oselect.value;
+    }
+        
+    if (iframe_or_select=='close=1'){
+        window.open('?k='+encodeURIComponent(cskey)+'&t='+cstype+'&close=1');
         return;
     }
     
@@ -387,8 +393,8 @@ function menu_klsearch(){
     ];
     
     var klmenu2=[
-    '<span class="span_menu" onclick="'+str_t+'iframe_generate_klsearch();">batch en iframe 模式</span>',
-    '<span class="span_menu">batch search type: <select id="select_iframe_or_close_klsearch"><option></option><option>iframe</option><option>close=1</option></select></span>',    
+    '<span class="span_menu" onclick="'+str_t+'iframe_generate_klsearch();">iframe generate</span>',
+    '<span class="span_menu">batch search type: <select id="select_iframe_or_close_klsearch"><option></option><option>iframe</option><option>close=1</option></select></span>',
     '<span class="span_menu" onclick="'+str_t+'same_name_klsearch();">相同名称的搜索</span>',
     ];
     

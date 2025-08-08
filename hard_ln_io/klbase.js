@@ -4779,10 +4779,11 @@ function text_file_ext_b(){
 
 function file_is_encoded_b(fname,is_do_decode=true){
     let finfo=file_path_name_b(fname);
-    if (finfo[1].match(/_\$\$encoded$/)){
+    let reg_exp=/_\$\$encoded[^a-z]*$/; //蓝牙传输会在文件末尾添加随机数字字符串 - 保留注释
+    if (finfo[1].match(reg_exp)){
         var is_encoded=true;
         if (is_do_decode){
-            fname=finfo[1].replace(/_\$\$encoded$/,'')+'.'+finfo[2];
+            fname=finfo[1].replace(reg_exp,'')+'.'+finfo[2];
         }
     } else {
         var is_encoded=false;

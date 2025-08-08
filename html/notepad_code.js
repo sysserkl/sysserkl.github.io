@@ -29,7 +29,7 @@ function tag_do_notepad(cstype){
     
     switch (cstype){
         case 'search':
-            document.getElementById('input_search').value='+'+blstr;
+            document.getElementById('input_search').value='+<tag>'+blstr+'</tag>';
             break;
         case 'copy':
             copy_2_clipboard_b('<tag>'+blstr+'</tag>');
