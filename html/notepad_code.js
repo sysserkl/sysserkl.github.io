@@ -208,14 +208,26 @@ function wikiuploads_count_notepad(){
     var attach_str=textarea_with_form_generate_b('textarea_attachment_notepad','','<p>','清空,复制,发送到临时记事本','</p>','','',false,attach_list.join('\n'));
 
     var ext_dict={};
+    var path_dict={};
     for (let item of attach_list){
         item=item.replace(/<\/?photo>/g,'');
-        let blext=file_path_name_b(item)[2];
+        let file_info=file_path_name_b(item);
+        
+        let blpath=file_info[0];
+        if (path_dict['p_'+blpath]==undefined){
+            path_dict['p_'+blpath]=0;
+        }
+        path_dict['p_'+blpath]=path_dict['p_'+blpath]+1;
+                
+        let blext=file_info[2];
         if (ext_dict['e_'+blext]==undefined){
             ext_dict['e_'+blext]=0;
         }
         ext_dict['e_'+blext]=ext_dict['e_'+blext]+1;
     }
+
+    path_dict=object2array_b(path_dict,true,2);
+    path_dict.sort();
     
     ext_dict=object2array_b(ext_dict,true,2);
     ext_dict.sort();
@@ -252,7 +264,7 @@ function wikiuploads_count_notepad(){
         oselect.innerHTML=list_2_option_b(old_keys);
     }
     
-    return '<h4>附件列表('+attach_list.length+')</h4>'+attach_str+'<h4>扩展名统计('+ext_dict.length+')</h4>'+array_2_li_b(ext_dict)+'<h4>无日期标题('+without_date.length+')</h4>'+array_2_li_b(without_date)+'<h4>tag统计('+tag_list.length+'/'+tag_count+')</h4>'+tag_list.join(' ');
+    return '<h4>附件列表('+attach_list.length+')</h4>'+attach_str+'<h4>路径统计('+path_dict.length+')</h4>'+array_2_li_b(path_dict)+'<h4>扩展名统计('+ext_dict.length+')</h4>'+array_2_li_b(ext_dict)+'<h4>无日期标题('+without_date.length+')</h4>'+array_2_li_b(without_date)+'<h4>tag统计('+tag_list.length+'/'+tag_count+')</h4>'+tag_list.join(' ');
 }
 
 function textarea_info_count_notepad(ospan=false,otextarea=false){

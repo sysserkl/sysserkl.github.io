@@ -4830,3 +4830,36 @@ function mark_check_b(measure_caption='',mark_name='',sub_fix=false,mark_list=[]
 
     return [sub_fix,markNames,result_t];
 }
+
+function arr_keep_first_and_last_b(arr, x, y,return_zero=false){
+    if (x<0 && y<0){
+        return arr;
+    }
+        
+    x=Math.max(0,x);
+    y=Math.max(0,y);
+    
+    const len = arr.length;
+    // 如果数组长度小于等于 x + y，可能需要处理重叠
+    // 例如：[1,2,3], x=2, y=2，理论上应返回 [1,2,2,3]，但通常我们不希望重复
+    // 这里我们选择不重复元素，即返回整个数组
+    if (len == x + y){
+        return arr;
+    }
+    
+    if (len < x + y){
+        if (return_zero){return [];}
+        return arr;
+    }
+    
+    // 正常情况：取前x个和后y个，无重叠
+    if (x>0 && y>0){
+        arr=arr.slice(0, x).concat(arr.slice(-1*y,));
+    } else if (x>0){
+        arr=arr.slice(0, x);
+    } else {
+        arr=arr.slice(-1*y,);
+    }
+    
+    return arr;
+}

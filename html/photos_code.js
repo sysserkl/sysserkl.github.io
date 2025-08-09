@@ -173,16 +173,21 @@ function menu_klphotos(){
 
     var menu_config=root_font_size_menu_b(str_t);
     menu_config=menu_config.concat([
-    '<span id="span_black_bg_klphoto" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 幻灯片黑色背景</span>',    
-    '<span id="span_loop_klphoto" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 无限循环播放幻灯片</span>',    
-    '<span id="span_calendar_klphoto" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 在幻灯片中显示日历</span>',        
-    '<span id="span_year_klphoto" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 在幻灯片中显示年份</span>',       
     '<span id="span_amount_klphoto" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 统计图显示合计数</span>',
     '<span id="span_img_border" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ img border</span>',     
     '<span class="span_menu" onclick="'+str_t+'thumb_size_set_klphotos();">缩略图大小设置</span>',  
+    '<span class="span_menu">分组显示：忽略数量 <input type="text" id="input_ignore_count_klphoto" value=-1 style="width:3rem;" placeholder="-1, or <10 or >20" /> 的分组 两侧最多 <input type="text" id="input_max_range_klphotos" value="-1,-1" style="width:3rem;" placeholder="-1,-1" /> 张</span>',  
     ]);   
+    
+    var group_list=[
+    ['⚪ 日历','klmenu_check_b(this.id,true);',false,'span_calendar_klphoto'],
+    ['⚪ 年份','klmenu_check_b(this.id,true);',false,'span_year_klphoto'],
+    ['⚪ 黑色背景','klmenu_check_b(this.id,true);',false,'span_black_bg_klphoto'],
+    ['⚪ 循环','klmenu_check_b(this.id,true);',false,'span_loop_klphoto'],    
+    ];    
+    menu_config.push(menu_container_b(str_t,group_list,'幻灯片：'));
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(menu_gallery,'📸','17rem',button_size,button_size)+klmenu_b(menu_tools,'🔧','17rem',button_size,button_size)+klmenu_b(menu_month,'🈷️','5rem',button_size,button_size)+klmenu_b(menu_config,'⚙️','15rem',button_size,button_size),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(menu_gallery,'📸','17rem',button_size,button_size)+klmenu_b(menu_tools,'🔧','17rem',button_size,button_size)+klmenu_b(menu_month,'🈷️','5rem',button_size,button_size)+klmenu_b(menu_config,'⚙️','30rem',button_size,button_size),'','0rem')+' ');
     
     //-----------------------
     var button_more='<div class=klmenu><button style=font-size:'+button_size+';" onclick="popup_show_hide_b(\'div_css\');">Text Style</button></div>';
