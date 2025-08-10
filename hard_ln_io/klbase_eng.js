@@ -2393,10 +2393,23 @@ function sentence_split_b(csstr,csno=-1){   //sentence split - 保留注释
     function sub_sentence_split_b_check_str(csstr1,csstr2){
         let blcheck=csstr1.length<10 || (csstr1.match(/\s/g) || []).length<5 || csstr2.length<10 || (csstr2.match(/\s/g) || []).length<5 || csstr2.trim().match(/^[a-z]/);   //如果csstr2 以小写字母开头 - 保留注释
         if (blcheck){return true;}
+        
         if (csstr1.match(/\[https?:\/\/[^\]]+$/)){
-            console.log('例句再合并',csstr1,csstr2);
+            console.log('例句再合并 http:',csstr1,csstr2);
             return true;
         }
+        
+        if (has_quote){
+            let quote1=(csstr1.match(/[\(\)]/g) || ['']).slice(-1)[0];
+            if (quote1=='('){
+                let quote2=(csstr2.match(/[\(\)]/) || [''])[0];
+                if (quote2==')'){
+                    console.log('例句再合并 ():',csstr1,csstr2);
+                    return true;
+                }
+            }
+        }
+        
         return false;
     }
     
@@ -2414,8 +2427,10 @@ function sentence_split_b(csstr,csno=-1){   //sentence split - 保留注释
     }
     
     var old_str=csstr;
+    
     csstr=csstr.replace(/(([^A-Z]((\. )+)?\.|\?|!|\"|\?) )/g,'$1\n');
     var has_mr=(csstr.includes('Mr.') || csstr.includes('Dr.') || csstr.includes('St.'));
+    var has_quote=(csstr.includes('(') && csstr.includes(')'));
     var list_t=csstr.split('\n');
     var result_t=[];
 
@@ -2467,6 +2482,7 @@ function sentence_split_b(csstr,csno=-1){   //sentence split - 保留注释
             result_t.push(item);
         }
     }
+    
     if (csno>=0){
         en_sentence_global[csno][0]=result_t;
     }
