@@ -846,3 +846,46 @@ function year_dict_2_2000_b(year_t,cscaption='',line_type=''){
     return flot_arr;
 }
 
+function multi_dots_b(ocanvas,cscount,border_color='black',bg_color='white',dot_color='blue',csradius=1){
+    //以下2行保留，用法：
+    //<canvas id="canvas" width="450" height="150"></canvas>
+    //<script>multi_dots_b(document.getElementById('canvas'),56,'blue','green','ivory',3);</script>
+    
+    const ctx = ocanvas.getContext('2d');
+
+    if (bg_color!==false){
+        ctx.fillStyle = bg_color;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+    }
+
+    if (border_color!==false){    
+        ctx.strokeStyle = border_color;
+        ctx.strokeRect(0, 0, ocanvas.width, ocanvas.height);
+    }
+    
+    // Calculate the positions of cscount points
+    const points = [];
+    const rows = Math.ceil(Math.sqrt(cscount));
+    const cols = Math.ceil(cscount / rows);
+    
+    for (let blx = 0; blx < rows; blx++){
+        for (let bly = 0; bly < cols; bly++){
+            if (points.length >= cscount){break;}
+            
+            const px = (bly + 0.5) * (ocanvas.width / cols); 
+            //如果不加 0.5 ，点的坐标会直接对齐到网格的左上角
+            //这样会导致所有点集中在每个网格单元的左上角，分布不均匀。
+            //0.5 表示网格单元的一半。通过偏移半个单元，可以确保点位于网格的正中心，从而实现均匀分布。
+            const py = (blx + 0.5) * (ocanvas.height / rows);
+            points.push([px, py]);
+        }
+    }
+    
+    // Draw the points
+    ctx.fillStyle = dot_color;
+    points.forEach(point => {
+        ctx.beginPath();
+        ctx.arc(point[0], point[1], csradius, 0, Math.PI * 2); //绘制半径为2的圆 - 保留注释
+        ctx.fill();
+    });
+}
