@@ -40,5 +40,5 @@ var js_file_list_common_pb_global=[
 ['../jsdata/zj_gps_points/舟山_gps_data.js','🌐','浙江坐标_舟山','zj_gps_points_global','zj_gpsp','🧭','0'],
 ['../jsdata/fairprice_com_sg_20230629_0630_data.js','👝','fairprice','fairprice_com_sg_data_global','shopping','🛒','0'],
 ['../jsdata/zjuss_expert_data.js','💊','zjuss expert','zjuss_expert_global','zjuss','🩺','1'],
-
+['../jsdata/idcpc_data.js','🤝','idcpc wshd','idcpc_global','idcpc','','1'],
 ];

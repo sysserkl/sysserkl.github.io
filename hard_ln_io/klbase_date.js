@@ -626,6 +626,7 @@ function date_list_insert_zero_b(cslist,add0101=false,add1231=false,months_list=
     //[date2,value2],    
     //];
     //另：int_number_list_insert_zero_b
+    //days_list 形如 ['01','02']
     var inserted_list=[];
     cslist.sort(function (a,b){return a[0]>b[0] ? 1 : -1;});
     if (cslist.length==0){
