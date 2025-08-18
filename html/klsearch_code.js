@@ -175,18 +175,12 @@ function iframe_current_button(event,obutton,csxl){
     odiv.style.top=(rect.top-rect2.height)+'px';
 }
 
-function iframe_generate_klsearch(cstype='',cskey=false){
+function iframe_generate_klsearch(cstype='',cskey=false,iframe_or_close=''){
     if (cskey===false){
         cskey=document.getElementById('input_searchtxt').value.trim();
     }
-
-    var iframe_or_select='';
-    var oselect=document.getElementById('select_iframe_or_close_klsearch');
-    if (oselect){
-        iframe_or_select=oselect.value;
-    }
         
-    if (iframe_or_select=='close=1'){
+    if (iframe_or_close=='close=1'){
         window.open('?k='+encodeURIComponent(cskey)+'&t='+cstype+'&close=1');
         return;
     }
@@ -229,12 +223,17 @@ function iframe_generate_klsearch(cstype='',cskey=false){
     var str_t=klmenu_hide_b('');
     var klmenu1=[
     '<span class="span_menu" onclick="'+str_t+'copy_iframe_link_klsearch();">copy</span>',
-    '<span class="span_menu" onclick="'+str_t+'iframe_generate_klsearch(this.innerText);">batch_en</span>',
-    '<span class="span_menu" onclick="'+str_t+'iframe_generate_klsearch(this.innerText);">batch_en+</span>',
-    '<span class="span_menu" onclick="'+str_t+'iframe_generate_klsearch(this.innerText);">batch_en_wiktionary</span>',
-    '<span class="span_menu" onclick="'+str_t+'iframe_generate_klsearch(this.innerText);">batch_dwdlw</span>',
     ];
-    document.getElementById('p_buttons_kls').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🇬🇧','13rem','1rem','1rem','30rem'),'','0rem'));
+    
+    for (let item of ['batch_en','batch_en+','batch_en_wiktionary','batch_dwdlw']){
+        let group_list=[
+        [item,'iframe_generate_klsearch(\''+item+'\');',true],
+        ['🫧','iframe_generate_klsearch(\''+item+'\',false,\'close=1\');',true],
+        ];    
+        klmenu1.push(menu_container_b(str_t,group_list,''));
+    }
+    
+    document.getElementById('p_buttons_kls').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🇬🇧','17rem','1rem','1rem','30rem'),'','0rem'));
     //-----------------------
     iframe_init_b();
     document.getElementById('checkbox_openwindow').parentNode.style.display='none';
