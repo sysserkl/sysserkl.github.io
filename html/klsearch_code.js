@@ -233,7 +233,7 @@ function iframe_generate_klsearch(cstype='',cskey=false,iframe_or_close=''){
         klmenu1.push(menu_container_b(str_t,group_list,''));
     }
     
-    document.getElementById('p_buttons_kls').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🇬🇧','17rem','1rem','1rem','30rem'),'','0rem'));
+    document.getElementById('p_buttons_kls').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🇬🇧','14rem','1rem','1rem','30rem'),'','0rem'));
     //-----------------------
     iframe_init_b();
     document.getElementById('checkbox_openwindow').parentNode.style.display='none';

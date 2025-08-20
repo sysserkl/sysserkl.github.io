@@ -505,7 +505,7 @@ function dir_html_offline_file_browser(cslist,csid,csdisk,csdir){
     bljg=bljg+'<span style="cursor:pointer;" title="sort by filename" onclick="sort_offline_file_browser(2,true); '+jsfn+';">Filename</span></th>';
     bljg=bljg+'<th style="cursor:pointer;" onclick="sort_offline_file_browser(3,true); '+jsfn+';">File Size</th>';
     bljg=bljg+'<th style="cursor:pointer;" onclick="sort_offline_file_browser(4,true); '+jsfn+';">Modified Date</th>';    
-    bljg=bljg+'<th style="cursor:pointer;" onclick="sort_offline_file_browser(5,true); '+jsfn+';">FMultimedia<br />Length</th>';        
+    bljg=bljg+'<th style="cursor:pointer;" onclick="sort_offline_file_browser(5,true); '+jsfn+';">Multimedia<br />Length</th>';        
 
     bljg=bljg+'</tr>';
     var str_t='';
@@ -1070,7 +1070,7 @@ function menu_offline_file_browser(){
     var str_t=klmenu_hide_b('#top');
     var blparent=menu_parent_node_b(str_t);
     
-    var col_name=['Disk','Path','Filename','File Size','Modified Date','FMultimedia Length','Tag','TF Name'];
+    var col_name=['Disk','Path','Filename','File Size','Modified Date','Multimedia Length','Tag','TF Name'];
     for (let blxl=0,lent=col_name.length;blxl<lent;blxl++){
         col_name[blxl]='<option value='+blxl+'>'+col_name[blxl]+'</option>';
     }
