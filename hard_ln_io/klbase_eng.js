@@ -2113,6 +2113,8 @@ function enwords_mini_search_do_b(csword=''){
         search_type='';
     }
 
+    osession.scrollTop=0;
+    
     if (search_type!==''){
         switch (search_type){
             case 'filelist 检索': //txtlistsearch - 保留注释
@@ -2270,7 +2272,7 @@ function enwords_recent_search_b(csword='',cstype=''){
     var logo_list=['🥚','✏','🚧','〘 〙','🚩'];
     switch (cstype){
         case 'mini':
-            var recent_search_str='<p id="p_recent_search" style="line-height:'+(ismobile_b()?'200':'210')+'%;">';
+            var recent_search_str='<p id="p_recent_search" style="margin:0; line-height:'+(ismobile_b()?'200':'210')+'%;">';
             return recent_search_str+sub_enwords_recent_search_b_fn('enwords_mini_search_do_b')+'</p>';
             break;
         case 'sentence':
