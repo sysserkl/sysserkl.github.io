@@ -101,19 +101,22 @@ GPS_GPSLongitude:120.45
 }
 
 function upload_gpx_gps_points(){
-    var otextarea=document.getElementById('textarea_gps_points');
-    var ogpxfiles=document.getElementById('input_upload_gpx').files;
-    var part_len=parseInt(document.getElementById('input_sub_line_length_gps_points').value.trim()) || -1;
-
-    for (let blxl=0,lent=ogpxfiles.length;blxl<lent;blxl++){
+    function sub_upload_gpx_gps_points_one(){
+        if (blxl>=bllen){
+            document.title=old_title;
+            return;
+        }
+        
         var ofile=ogpxfiles[blxl];
         if (ofile.type!=='application/gpx+xml' && ofile.name.substring(ofile.name.toLowerCase().lastIndexOf('.gpx'),).toLowerCase()!=='.gpx'){
             otextarea.value = '非gpx文件：'+ofile.type+'\n'+ofile.name;  
-            continue;
+            sub_upload_gpx_gps_points_continue();
+            return;
         }
         if (ofile.size>30*1024*1024){
             otextarea.value = '文件太大：'+ofile.name+' '+ofile.size;  
-            continue;
+            sub_upload_gpx_gps_points_continue();
+            return;
         }
             
         var gpxFile = new FileReader();
@@ -122,8 +125,24 @@ function upload_gpx_gps_points(){
         gpxFile.onload = function (){
             otextarea.value = this.result;
             read_gpx_gps_points(this.result,this.fileName.substring(0,this.fileName.lastIndexOf('.')),false,part_len);
+            sub_upload_gpx_gps_points_continue();
         }
     }
+    
+    function sub_upload_gpx_gps_points_continue(){
+        blxl=blxl+1;
+        document.title=blxl+'/'+bllen+' -'+old_title;            
+        setTimeout(sub_upload_gpx_gps_points_one,1);    
+    }
+    
+    var otextarea=document.getElementById('textarea_gps_points');
+    var ogpxfiles=document.getElementById('input_upload_gpx').files;
+    var part_len=parseInt(document.getElementById('input_sub_line_length_gps_points').value.trim()) || -1;
+
+    var bllen=ogpxfiles.length;
+    var blxl=0;
+    var old_title=document.title;
+    sub_upload_gpx_gps_points_one();
 }
 
 function draw_multiple_lines_gps_points(){
