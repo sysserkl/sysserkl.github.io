@@ -8,7 +8,7 @@ var js_file_list_common_pb_global=[
 ['../jsdata/words/all_new_words_data.js','🇬🇧','All New Words','all_new_words_global','','言','1'],
 ['../jsdata/words/cet6_en_data.js','🇬🇧','英语四六级单词','cet6_en_global','','言','1'],
 ['../jsdata/words/cn_bullshit_data.js','💩','CN BS Search','cn_bullshit_global','','','1'],
-['../jsdata/words/cn_ci_data.js',' 🇨🇳','汉语词语','cn_ci_global','','言','1'],
+['../jsdata/words/cn_ci_data.js','🇨🇳','汉语词语','cn_ci_global','','言','1'],
 ['../jsdata/words/cn_idoim_data.js',' 🇨🇳','汉语成语','cn_idiom_global','cn_idiom','言','1'],
 ['../jsdata/words/enwords_sentence_data.js','🇬🇧','英语例句','en_sentence_global','','言','1'],
 ['../jsdata/js_data_file_common_search_blank_data.js','📦','blank data','blank_data_global','blank_data','','1'],
@@ -41,4 +41,5 @@ var js_file_list_common_pb_global=[
 ['../jsdata/fairprice_com_sg_20230629_0630_data.js','👝','fairprice','fairprice_com_sg_data_global','shopping','🛒','0'],
 ['../jsdata/zjuss_expert_data.js','💊','zjuss expert','zjuss_expert_global','zjuss','🩺','1'],
 ['../jsdata/idcpc_data.js','🤝','idcpc wshd','idcpc_global','idcpc','','1'],
+['../jsdata/sensitive_lexicon_data.js','🇨🇳','sensitive lexicon','sensitive_lexicon_global','slexicon','言','1'],
 ];

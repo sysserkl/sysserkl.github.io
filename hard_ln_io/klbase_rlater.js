@@ -595,7 +595,7 @@ function delete_batch_rlater_b(prefix='readlater'){
     }
     
     var rndstr=randstr_b(4,true,false);
-    if ((prompt('输入 '+rndstr+' 确认清空') || '').trim()!==rndstr){return;}
+    if ((prompt('输入 '+rndstr+' 确认批量删除') || '').trim()!==rndstr){return;}
     
     var old_title=document.title;
     var oas=document.querySelectorAll('div#div_links a.a_rlater_link');

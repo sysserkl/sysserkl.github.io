@@ -1369,3 +1369,15 @@ function notepad_tags_copy_klr_b(odom){
     var oinput=odom.parentNode.querySelector('input');
     copy_2_clipboard_b(oinput.value);
 }
+
+function remove_notepad_tag_b(csid){
+    var otextarea=document.getElementById(csid);
+    var old_str=otextarea.value;
+    var tags=old_str.match(/^<tag>.*<\/tag>\s*$/mg) || [];
+    
+    if (tags.length==0){return;}
+    if (confirm('是否清除 '+tags.length+' 个tag：\n'+tags.slice(0,5).join('')+'\n...')===false){return;}
+    
+    var new_str=old_str.replace(/^<tag>.*<\/tag>\s*$/mg,'');
+    otextarea.value=new_str;
+}

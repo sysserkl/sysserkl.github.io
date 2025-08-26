@@ -229,7 +229,7 @@ function menu_temp_txt_share_b(is_php=true,menu_more=''){
     '<span class="span_menu" onclick="'+str_t+'blank_rows_remove_klr_b(\'textarea_temp_txt_share\');">remove blank rows</span>',
     '<span class="span_menu" onclick="'+str_t+'local_storage_import_b(\'textarea_temp_txt_share\',true);">import data to localStorage</span>',    
     '<span class="span_menu" onclick="'+str_t+'remove_notepad_mark_temp_txt_share_b();">清除notepad标记和日期</span>',    
-    '<span class="span_menu" onclick="'+str_t+'remove_notepad_tag_temp_txt_share_b();">清除tag标记</span>',    
+    '<span class="span_menu" onclick="'+str_t+'remove_notepad_tag_b(\'textarea_temp_txt_share\');">清除tag标记</span>',    
     ];
     
     var klmenu_link=[
@@ -240,16 +240,6 @@ function menu_temp_txt_share_b(is_php=true,menu_more=''){
     
     var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu0,(is_php?'📗':'📙'),'16rem','1rem','1rem','60rem')+klmenu_b(klmenu_share,'🫂','19rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem')+menu_more,'','0rem')+' ';
     document.getElementById('h2_title').insertAdjacentHTML('afterbegin',bljg);
-}
-
-function remove_notepad_tag_temp_txt_share_b(){
-    var otextarea=document.getElementById('textarea_temp_txt_share');
-    var old_str=otextarea.value;
-    var new_str=old_str.replace(/^<tag>.*<\/tag>\s*$/mg,'');
-    if (new_str==old_str){return;}
-    
-    if (confirm('是否清除tag')===false){return;}
-    otextarea.value=new_str;
 }
 
 function remove_notepad_mark_temp_txt_share_b(){
