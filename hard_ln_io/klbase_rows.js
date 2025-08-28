@@ -1233,7 +1233,7 @@ function buttons_txt_klr_b(textarea_id,clear_copy_tab_title_url=false){
     buttons=buttons+'<span class="aclick" onclick="str2js_klr_b(\''+textarea_id+'\',\'title_href\');">JS</span> ';
     buttons=buttons+'<span class="aclick" onclick="str2js_klr_b(\''+textarea_id+'\',\'[t](h)\');">[t](h)</span> ';
     if (clear_copy_tab_title_url){
-        buttons=buttons+'<span class="aclick" onclick="clear_copy_tab_title_url_klr_b(\''+textarea_id+'\');">🪥</span> ';   
+        buttons=buttons+'<span class="aclick" onclick="clear_copy_tab_title_url_klr_b(\''+textarea_id+'\');" title="格式清理">🪥</span> ';   
     }
     return buttons;
 }
