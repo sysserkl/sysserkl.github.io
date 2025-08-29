@@ -95,9 +95,10 @@ function do_type_klr2(cstype){
             break;
         case '替换':
             var csrep1=document.getElementById('rep1').value;
-            var csrep2=document.getElementById('rep2').value;        
+            var csrep2=document.getElementById('rep2').value;
             var reg_type=document.getElementById('input_reg_type_klr2').value.trim();
-            replace_strs_klr_b(csrep1,csrep2,'textarea_rows_content','textarea_status',reg_type);
+            var is_multileline=document.getElementById('checkbox_replace_multiline_klr2').checked;
+            replace_strs_klr_b(csrep1,csrep2,'textarea_rows_content','textarea_status',reg_type,is_multileline);
             break;
         case '分组':
 	        var blinterval=Math.max(parseInt(document.getElementById('input_line_interval').value.trim()),1);
@@ -349,6 +350,7 @@ function option_generate_klr2(){
     ['common_string_from_filenames','提取文件名中的相同字符串'],
     ['common_string_from_lines','提取每一行中的相同字符串'],
     ['number_sub','数字替换为下标'],
+    ['letter2num9','字母替换为9键数字'],
     ];    
     for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         list_t[blxl]='<option value="'+list_t[blxl][0]+'">'+list_t[blxl][1]+'</option>';

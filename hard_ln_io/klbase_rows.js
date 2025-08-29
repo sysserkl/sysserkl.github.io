@@ -257,34 +257,43 @@ function lines_del_chars_klr_b(cstype,cscount,csid='textarea_rows_content'){
 	otextarea.value = bljg;
 }
 
-function replace_strs_klr_b(csrep1,csrep2,textarea_id='textarea_rows_content',status_id='textarea_status',reg_type='gm'){
+function replace_strs_klr_b(csrep1,csrep2,textarea_id='textarea_rows_content',status_id='textarea_status',reg_type='gm',multi_lines=false){
     //csrep1 被替换
     //csrep2 替换为，当 csrep1 为数组时，csrep2无作用
 	if (csrep1==''){return [false,false];}
 
 	var otextarea = document.getElementById(textarea_id);
-	var blstr = otextarea.value;
-    var blcount=0;
-    
-    if (Array.isArray(csrep1)){
-        //形如：[["被替换","替换为"], ["被替换","替换为"]];
-        for (let item of csrep1){
-            if (item[0]==''){continue;}
-            blcount=blcount+(blstr.match(new RegExp(item[0],reg_type)) || []).length;
-            blstr = blstr.replace(new RegExp(item[0],reg_type),item[1]);
-        }
+    if (multi_lines){
+	    var rows = otextarea.value.split('\n');
     } else {
-        blcount=blcount+(blstr.match(new RegExp(csrep1,reg_type)) || []).length;    
-	    blstr = blstr.replace(new RegExp(csrep1,reg_type),csrep2);
+	    var rows = [otextarea.value];
     }
     
-	otextarea.value = blstr;
+    var blcount=0;
+    
+    for (let blxl=0,lent=rows.length;blxl<lent;blxl++){
+        let blstr=rows[blxl];
+        if (Array.isArray(csrep1)){
+            //形如：[["被替换","替换为"], ["被替换","替换为"]];
+            for (let item of csrep1){
+                if (item[0]==''){continue;}
+                blcount=blcount+(blstr.match(new RegExp(item[0],reg_type)) || []).length;
+                blstr = blstr.replace(new RegExp(item[0],reg_type),item[1]);
+            }
+        } else {
+            blcount=blcount+(blstr.match(new RegExp(csrep1,reg_type)) || []).length;    
+            blstr = blstr.replace(new RegExp(csrep1,reg_type),csrep2);
+        }
+        rows[blxl]=blstr;
+    }
+    
+	otextarea.value = rows.join('\n');
     
     var ostatus=document.getElementById(status_id);
     if (ostatus){
         ostatus.value='共发现 '+blcount+' 处\n'+ostatus.value;
     }
-    return [otextarea,blstr];
+    return [otextarea,rows.join('\n')];
 }
 
 function hash_filename2wiki_table_klr_b(csid,filename_hash=false){
@@ -509,6 +518,10 @@ function strquick_klr_b(cstype='',csid='textarea_rows_content',status_id='textar
     
     var result_t=null;
 	switch (cstype){
+        case 'letter2num9':
+            var otextarea = document.getElementById(csid);
+			otextarea.value=letter2num9_convert_klr_b(otextarea.value.trim());
+            break;
         case 'number_sub':
             var otextarea = document.getElementById(csid);
 			otextarea.value=otextarea.value.trim().replace(/(\d+)/g,'<sub>$1</sub>');
@@ -737,6 +750,28 @@ function strquick_klr_b(cstype='',csid='textarea_rows_content',status_id='textar
         ostatus.value=ostatus.value + ' 处理后行数：' + document.getElementById(csid).value.split('\n').length;
     }
     return result_t;
+}
+
+function letter2num9_convert_klr_b(csstr){
+    let letter_2_num_dict=letter2num9_generate_klr_b();
+    for (let key in letter_2_num_dict){
+        csstr=csstr.replace(new RegExp(key,'ig'),letter_2_num_dict[key]);
+    }
+    return csstr;
+}
+
+function letter2num9_generate_klr_b(){
+    let letters='abcdefghijklmnopqrtuvwxy';
+    let letter_2_num_dict={'s':'7','z':'9'};
+
+    let blvalue=2;
+    for (let blxl=0;blxl<24;blxl=blxl+3){
+        letter_2_num_dict[letters[blxl]]=blvalue.toString();
+        letter_2_num_dict[letters[blxl+1]]=blvalue.toString();
+        letter_2_num_dict[letters[blxl+2]]=blvalue.toString();
+        blvalue=blvalue+1;
+    }
+    return letter_2_num_dict;
 }
 
 function clear_copy_tab_title_url_klr_b(csid){

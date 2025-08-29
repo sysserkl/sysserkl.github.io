@@ -42,4 +42,5 @@ var js_file_list_common_pb_global=[
 ['../jsdata/zjuss_expert_data.js','💊','zjuss expert','zjuss_expert_global','zjuss','🩺','1'],
 ['../jsdata/idcpc_data.js','🤝','idcpc wshd','idcpc_global','idcpc','','1'],
 ['../jsdata/sensitive_lexicon_data.js','🇨🇳','sensitive lexicon','sensitive_lexicon_global','slexicon','言','1'],
+['../jsdata/kaikki_phrase_2_number_data.js','🇬🇧','kaikki phrase 2 number','kaikki_phrase_2_number_global','kaikki_p2n','言','1'],
 ];

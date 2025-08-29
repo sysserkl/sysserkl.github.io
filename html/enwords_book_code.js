@@ -166,7 +166,7 @@ function menu_enwords_book(){
     var format_list=[
     ['例句中','frequency_count_get_enwords(\'sentence_common\');',true],
     ['当前内容','frequency_count_get_enwords(\'textarea\');',true],
-    ['返回结果数：<input type="number" id="input_frequency_count_enwords" min=-1 step=1 value=4000 />','',false],
+    //['返回结果数：<input type="number" id="input_frequency_count_enwords" min=-1 step=1 value=4000 />','',false],
     ];
     klmenu_new.push(menu_container_b(str_t,format_list,'常见单词：'));
     
@@ -205,7 +205,6 @@ function menu_enwords_book(){
     
     var klmenu2=[    
     '<a href="?book=1&continue" onclick="'+str_t+'">批量统计生词</a>',
-    //'<span class="span_menu" onclick="'+str_t+'refresh_book_new_enwords_book(10);">按书名顺序重新批量统计变动最少的10本书籍</span>',
     '<span class="span_menu" onclick="'+str_t+'news_words_statistics_enwords_book();">显示统计结果</span>',
     '<span class="span_menu" onclick="'+str_t+'compare_form_statistics_enwords_book();">比较统计数据</span>',
     '<span class="span_menu" onclick="'+str_t+'exclude_enwords_book();">电子书中未包含的旧单词</span>',    
@@ -232,6 +231,7 @@ function menu_enwords_book(){
     '<span class="span_menu" onclick="'+str_t+'space2underline_enwords_book();">替换单词间空格为下划线</span> ',  
     '<span class="span_menu" onclick="'+str_t+'character2space_enwords_book(\'_\',\'下划线\');">替换下划线为空格</span> ',  
     '<span class="span_menu" onclick="'+str_t+'character2space_enwords_book(\'-\',\'连字符\');">替换连字符为空格</span> ',  
+    '<span class="span_menu">返回结果数：<input type="number" id="input_frequency_count_enwords" min=-1 step=1 value=4000 /></span>',
     ];
     
     format_list=[
@@ -248,10 +248,12 @@ function menu_enwords_book(){
     input_size_b(input_list,'id');
 }
 
-function frequency_count_get_enwords(cstype){
+function result_return_rows_get_enwords(){
     var oinput=document.getElementById('input_frequency_count_enwords');
-    var common_max=parseInt(oinput.value.trim()) || 4000;
-    
+    return parseInt(oinput.value.trim()) || 4000;
+}
+function frequency_count_get_enwords(cstype){
+    let common_max=result_return_rows_get_enwords();
     frequency_enwords_book_b(cstype,false,common_max);
 }
 
@@ -412,7 +414,9 @@ function search_enwords_book(cskey=false){
     }
     if (blarr===false){return;}
     
-    var result_t=common_search_b(cskey,isreg,blarr,1000)[0];
+    let common_max=result_return_rows_get_enwords();
+
+    var result_t=common_search_b(cskey,isreg,blarr,common_max)[0];
     for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
         result_t[blxl]=result_t[blxl][0].replace(/\s/g,'_');
     }
