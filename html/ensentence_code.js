@@ -64,7 +64,7 @@ function menu_ensentence(){
     
     var group_list=[
     ['无例句的单词','rare_old_words_ensentence(\'无例句的单词\',false,false,1,0,3000);',true],
-    ['词组500','phrase_not_in_ensentence(0,500);',true],
+    ['词组1000','phrase_not_in_ensentence(0,1000);',true],
     ];    
     klmenu1.push(menu_container_b(str_t,group_list,''));
 
