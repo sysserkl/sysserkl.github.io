@@ -522,6 +522,10 @@ function strquick_klr_b(cstype='',csid='textarea_rows_content',status_id='textar
             var otextarea = document.getElementById(csid);
 			otextarea.value=letter2num9_convert_klr_b(otextarea.value.trim());
             break;
+        case 'numbers2datetime':
+            var otextarea = document.getElementById(csid);
+			otextarea.value=number2datetime_b(otextarea.value.trim().split('\n'),true).join('\n');
+            break;
         case 'number_sub':
             var otextarea = document.getElementById(csid);
 			otextarea.value=otextarea.value.trim().replace(/(\d+)/g,'<sub>$1</sub>');

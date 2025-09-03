@@ -351,6 +351,8 @@ function option_generate_klr2(){
     ['common_string_from_lines','提取每一行中的相同字符串'],
     ['number_sub','数字替换为下标'],
     ['letter2num9','字母替换为9键数字'],
+    ['numbers2datetime','数字串转换为日期时间'],
+
     ];    
     for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         list_t[blxl]='<option value="'+list_t[blxl][0]+'">'+list_t[blxl][1]+'</option>';

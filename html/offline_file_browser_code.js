@@ -21,6 +21,52 @@ function import_files_offline_file_browser(){
     }
 }
 
+function disk_relation_offline_file_browser(){
+    function sub_disk_relation_offline_file_browser_one(cskey,csvalue){
+        cskey='d_'+cskey;
+        if (disk_dict[cskey]==undefined){
+            disk_dict[cskey]=new Set();
+        }
+        disk_dict[cskey].add(csvalue);    
+    }
+    
+    var disk_dict={};
+    for (let item of disk_category_list_global){
+        sub_disk_relation_offline_file_browser_one(item[0],item[2]);
+        sub_disk_relation_offline_file_browser_one(item[2],item[0]);
+    }
+    
+    disk_dict=object2array_b(disk_dict,true,2);
+    disk_dict.sort();
+    var lent=disk_dict.length;
+    for (let blxl=0;blxl<lent;blxl++){
+        disk_dict[blxl][1]=Array.from(disk_dict[blxl][1]);
+        disk_dict[blxl][1].sort();
+    }
+
+    var intersection2_list=[];
+    for (let blx=0;blx<lent;blx++){
+        for (let bly=0;bly<lent;bly++){
+            if (blx>=bly){continue;}
+            let blintersection=array_intersection_b([disk_dict[blx][0]].concat(disk_dict[blx][1]),[disk_dict[bly][0]].concat(disk_dict[bly][1]));
+            blintersection.sort();
+            let intersection_color=(blintersection.includes(disk_dict[blx][0]) || blintersection.includes(disk_dict[bly][0])?scheme_global['memo']:scheme_global['a']);
+            intersection2_list.push([[disk_dict[blx][0],disk_dict[bly][0]],blintersection,intersection_color]);
+        }
+    }
+    
+    for (let blxl=0,lenb=intersection2_list.length;blxl<lenb;blxl++){
+        let item=intersection2_list[blxl];
+        intersection2_list[blxl]='<span style="color:'+item[2]+'; font-weight:bold;">'+item[0][0]+'∩'+item[0][1]+'('+item[1].length+'):</span> '+item[1].join(' ');
+    }
+    
+    for (let blxl=0;blxl<lent;blxl++){
+        disk_dict[blxl]=disk_dict[blxl][0]+': '+disk_dict[blxl][1].join(' ');
+    }
+    
+    document.getElementById('div_disk_intersection').innerHTML=array_2_li_b(disk_dict)+array_2_li_b(intersection2_list);
+}
+
 function disk_category_offline_file_browser(csxl=0){
     if (disk_category_list_global.length==0){return;}
     sort_des_global=!sort_des_global;
@@ -41,6 +87,7 @@ function disk_category_offline_file_browser(csxl=0){
             bljg=bljg+'<tr class="'+bltype+'"><td>'+item[0]+'</td><td>'+item[1]+'</td><td>'+item[2]+'</td><td>'+item[3]+'</td></tr>';
         }
     }
+    
     document.getElementById('table_disk_category').innerHTML=bljg;
     
     //class_set 形如："tr_S2_S4_save", "tr_S2_S3_待整理", ​​"tr_S2_S5_待整理", ​​"tr_S2_S4_待看" - 保留注释
@@ -813,12 +860,13 @@ function diff_all_offline_file_browser(){
     bljg.sort();
     
     var odiv=document.getElementById('div_statistics');
-    odiv.innerHTML='<p>过滤：<input type="text" id="input_disk_category" onkeyup="if (event.key==\'Enter\'){disk_category_offline_file_browser();}" /></p><table id="table_disk_category" border=1></table>'+bljg.join('\n')+'<p>'+close_button_b('div_statistics','none')+'</p>\n';
+    odiv.innerHTML='<p>过滤：<input type="text" id="input_disk_category" onkeyup="if (event.key==\'Enter\'){disk_category_offline_file_browser();}" /></p><table id="table_disk_category" border=1></table><div id="div_disk_intersection"></div>'+bljg.join('\n')+'<p>'+close_button_b('div_statistics','none')+'</p>\n';
     odiv.style.display='block';
     odiv.scrollIntoView();
     
     input_size_b([['input_disk_category',10],],'id');
     disk_category_offline_file_browser();
+    disk_relation_offline_file_browser();
 }
 
 function diff_offline_file_browser(csdir1='',csdir2='',showhtml=true){

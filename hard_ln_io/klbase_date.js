@@ -13,6 +13,31 @@ function day_of_year_b(theday=false){
     return (theday - pre_year_last_date) / 86400000;    //肯定是整数 - 保留注释
 }
 
+function number2datetime_b(cslist,include_old_item=false,time_sep=':',date_sep='-',join_str=' '){
+    var result_t=[];
+    for (let arow of cslist){
+        var old_item=arow;
+        blnums=arow.match(/\d{12,}/g) || [];    //至少12位数字 - 保留注释
+        for (let blstr of blnums){
+            try {
+                let bldate=new Date(parseInt(blstr));
+                if (bldate.toString()!=='Invalid Date'){
+                    let date_str=now_time_str_b(time_sep,true,bldate,date_sep,join_str);
+                    arow=arow.replace(blstr,date_str);
+                }
+            } catch (e){
+                console.log(e);
+            }
+        }
+        if (include_old_item){
+            result_t.push([old_item,arow]);
+        } else {
+            result_t.push(arow);        
+        }
+    }
+    return result_t;
+}
+
 function days_remained_of_year_b(theday=false){
     //返回指定日期之后的当年剩余天数 - 保留注释
 	if (theday===false){
