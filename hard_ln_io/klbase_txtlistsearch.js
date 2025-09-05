@@ -504,7 +504,7 @@ function txtmenus_kltxt_b(cstype=''){
     var group_list=[
     ['全部','digest_lines_kltxt_b();',true],
     ['最新的500条','digest_lines_kltxt_b(500);',true],
-    ['跳转到最新的10条','digest_lines_kltxt_b(10,true);',true],
+    ['跳转到最新的10条并进入阅读模式','digest_lines_kltxt_b(10,true,true);',true],
     ];    
     menu_digest.push(menu_container_b(str_t,group_list,'显示摘要段落：'));        
     
@@ -525,7 +525,7 @@ function txtmenus_kltxt_b(cstype=''){
     if (cstype!=='digest'){
         bljg=bljg+klmenu_b(menu_general,'','27rem','',fontsize);
         bljg=bljg+klmenu_b(menu_dir,'🔍',menu_dir_width,'',fontsize);
-        bljg=bljg+klmenu_b(menu_digest,'🖊','28rem','',fontsize);       
+        bljg=bljg+klmenu_b(menu_digest,'🖊','34rem','',fontsize);       
         bljg=bljg+colors;
         bljg=bljg+klmenu_b(menu_config,'⚙','22rem','',fontsize);
         if (cstype!=='reader'){
@@ -3587,8 +3587,13 @@ function digest_sort_kltxt_b(show_html=true){
     return result_t;
 }
 
-function digest_lines_kltxt_b(recent_lines=-1,do_jump=false){
+function digest_lines_kltxt_b(recent_lines=-1,do_jump=false,reading_mode=false){
     var t0 = performance.now();
+    
+    if (reading_mode){
+        reading_mode_kltxt_b();
+    }
+    
 	var start_lineno, end_lineno, blmax;
     [start_lineno,end_lineno,blmax]=start_end_lineno_kltxt_b();
     
@@ -3855,6 +3860,7 @@ function digest_temp_add_kltxt_b(do_fix=false){
     bljg=bljg+'<span class="oblong_box" onmouseenter="selected_range_get_kltxt_b();" onclick="selected_range_expand_kltxt_b(false,true);">cp</span> ';
     bljg=bljg+'<span class="oblong_box" onmouseenter="selected_range_get_kltxt_b();" onclick="selected_range_expand_kltxt_b(false,true,true);">cp➕</span> ';
     bljg=bljg+'<span class="oblong_box" id="span_digest_temp_fix" onclick="fix_divhtml2_kltxt_b(this.innerText==\'固定\',this);">固定</span> '; 
+    bljg=bljg+'<span class="oblong_box" onclick="div_digest_bottom_set_kltxt_b();" title="bottom 设置">B</span> '; 
     bljg=bljg+'<span id="span_current_book_temp_digest_count"></span>';     
     bljg=bljg+'</p>';
     
@@ -3885,6 +3891,14 @@ function digest_temp_add_kltxt_b(do_fix=false){
         }
     }
     location.href='#divhtml2';
+}
+
+function div_digest_bottom_set_kltxt_b(){
+    var odiv=document.getElementById('divhtml2');
+    var old_value=odiv.style.bottom;
+    var new_value=prompt('输入bottom值',old_value);
+    if (new_value==null || new_value==old_value){return;}    
+    odiv.style.bottom=new_value;
 }
 
 function digest_temp_jump_to_line_kltxt_b(){
