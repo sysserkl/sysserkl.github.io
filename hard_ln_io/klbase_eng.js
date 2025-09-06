@@ -1650,7 +1650,7 @@ function enwords_lines_2_js_array_b(aword,emoji_list,three_lines=false){
 function enwords_different_types_div_b(cswlist,add_form=false,textarea_id='',textarea_name='',button_type='',more_buttons=''){
     var blstr='<p>';
     blstr=blstr+'<select onchange="enwords_different_types_textarea_b(this);">';
-    var type_names=['','asterisk','cut','js','temp','wiki','reg','space','rare_words','filter','group','random_sort','switch with the first textarea'];
+    var type_names=['','asterisk','cut','js','temp','wiki','reg','space','rare_words','filter','group','random_sort','switch with the first textarea','移除行无非字母字符'];
     type_names.sort();
     for (let item of type_names){
         blstr=blstr+'<option>'+item+'</option>\n';
@@ -1758,13 +1758,14 @@ function enwords_different_types_textarea_b(oselect){
     var one_textarea=ocontainer.querySelector('input.input_enwords_different_types_one_textarea').checked;    
     var remove_emoji=ocontainer.querySelector('input.input_enwords_different_types_remove_emoji').checked;
     
-    var bljg='';
+    let bljg='';
+    let result_t,blkey;
     switch (oselect.value){
         case 'asterisk':
             bljg=enwords_wiki_type_words_b(raw_list,one_textarea,true);
             break;
         case 'cut':
-            var blkey=prompt('输入 slice 范围（0～'+(raw_list.length-1)+'），格式如 10,20，可输入负数：');
+            blkey=prompt('输入 slice 范围（0～'+(raw_list.length-1)+'），格式如 10,20，可输入负数：');
             if (blkey==null){
                 bljg='';
             } else {
@@ -1782,7 +1783,7 @@ function enwords_different_types_textarea_b(oselect){
                 if (isNaN(blkey[0]) || isNaN(blkey[1])){
                     bljg='';
                 } else {
-                    var result_t=raw_list.slice(blkey[0],blkey[1]);
+                    let result_t=raw_list.slice(blkey[0],blkey[1]);
                     bljg='<br /><textarea style="height:3rem;" onclick="this.select();document.execCommand(\'copy\');">'+result_t.join('\n')+'</textarea>';
                 }
             }
@@ -1804,8 +1805,12 @@ function enwords_different_types_textarea_b(oselect){
             bljg=raw_list.join(' ');
             bljg='<br /><textarea style="height:3rem;" onclick="this.select();document.execCommand(\'copy\');">'+bljg+'</textarea>';        
             break;
+        case '移除行无非字母字符':
+            bljg=raw_str.replace(/[^a-z]+$/img,'');
+            bljg='<br /><textarea style="height:3rem;" onclick="this.select();document.execCommand(\'copy\');">'+bljg+'</textarea>';
+            break;
         case 'rare_words':
-            var result_t=[];
+            result_t=[];
             for (let aword of raw_list){
                 result_t.push('"'+specialstr_j(aword)+'"');
             }
@@ -1813,7 +1818,7 @@ function enwords_different_types_textarea_b(oselect){
             bljg='<br /><textarea style="height:3rem;" onclick="this.select();document.execCommand(\'copy\');">'+bljg+'</textarea>';        
             break;
         case 'random_sort':
-            var result_t=[].concat(raw_list);
+            result_t=[].concat(raw_list);
             result_t.sort(randomsort_b);
             bljg='<br /><textarea style="height:3rem;" onclick="this.select();document.execCommand(\'copy\');">'+result_t.join('\n')+'</textarea>';
             break;
@@ -1826,15 +1831,15 @@ function enwords_different_types_textarea_b(oselect){
             }
             break;
         case 'filter':
-            var blkey=prompt('输入筛选关键词，如(,,\\d+$(:r))');
+            blkey=prompt('输入筛选关键词，如(,,\\d+$(:r))');
             if (blkey==null){
                 bljg='';
             } else {
-                var is_reg=false;
+                let is_reg=false;
                 [blkey,is_reg]=str_reg_check_b(blkey);
-                var result_t=[];
+                result_t=[];
                 for (let item of raw_list){
-                    var blfound=str_reg_search_b(item,blkey,is_reg);
+                    let blfound=str_reg_search_b(item,blkey,is_reg);
                     if (blfound==-1){break;}        
                     if (blfound){
                         result_t.push(item);
@@ -1844,11 +1849,11 @@ function enwords_different_types_textarea_b(oselect){
             }
             break;
         case 'group':
-            var blcount=parseInt(prompt('输入每组单词个数：') || '-1');
+            let blcount=parseInt(prompt('输入每组单词个数：') || '-1');
             if (blcount<=0){
                 bljg='';
             } else {
-                var group_count=Math.ceil(raw_list.length/blcount);
+                let group_count=Math.ceil(raw_list.length/blcount);
                 if (group_count>100){
                     bljg='分组结果 '+group_count+' 超过 100 组';
                 } else {

@@ -22,6 +22,13 @@ function import_files_offline_file_browser(){
 }
 
 function disk_relation_offline_file_browser(){
+    function sub_disk_relation_offline_file_browser_size(cspath){
+        if (cspath.endsWith('/')){
+            cspath=cspath.slice(0,-1);
+        }
+        return path_disk_size_ofb_global[0]['p_'+cspath][1] || 0;
+    }
+    
     function sub_disk_relation_offline_file_browser_one(cskey,csvalue){
         cskey='d_'+cskey;
         if (disk_dict[cskey]==undefined){
@@ -31,9 +38,24 @@ function disk_relation_offline_file_browser(){
     }
     
     var disk_dict={};
+    var connection_count_dict={};
+    size_calculate_offline_file_browser();
+    
+    var is_kmg=klmenu_check_b('span_kmg_ofb',false);
+
     for (let item of disk_category_list_global){
         sub_disk_relation_offline_file_browser_one(item[0],item[2]);
         sub_disk_relation_offline_file_browser_one(item[2],item[0]);
+        let blkey=[item[0],item[2]];
+        blkey.sort();
+        blkey='c_'+blkey.join('_');
+        if (connection_count_dict[blkey]==undefined){
+            connection_count_dict[blkey]=[0,0];
+        }
+        connection_count_dict[blkey][0]=connection_count_dict[blkey][0]+1;
+
+        let blsize=Math.max(sub_disk_relation_offline_file_browser_size(item[1]),sub_disk_relation_offline_file_browser_size(item[3]));
+        connection_count_dict[blkey][1]=connection_count_dict[blkey][1]+blsize;
     }
     
     disk_dict=object2array_b(disk_dict,true,2);
@@ -44,6 +66,20 @@ function disk_relation_offline_file_browser(){
         disk_dict[blxl][1].sort();
     }
 
+    connection_count_dict=object2array_b(connection_count_dict,true,2);
+    connection_count_dict.sort();
+    connection_count_dict.sort(function (a,b){return a[1]<b[1]?-1:1;});
+    connection_count_dict.sort(function (a,b){return a[2]<b[2]?-1:1;});
+    if (is_kmg){
+        for (let blxl=0,lenb=connection_count_dict.length;blxl<lenb;blxl++){
+            connection_count_dict[blxl][2]=kbmbgb_b(connection_count_dict[blxl][2]);
+        }
+    }
+    for (let blxl=0,lenb=connection_count_dict.length;blxl<lenb;blxl++){
+        let item=connection_count_dict[blxl];
+        connection_count_dict[blxl]='<tr><td>'+item[0]+'</td><td align=right>'+item[1]+'</td><td align=right>'+item[2]+'</td></tr>';
+    }    
+    
     var intersection2_list=[];
     for (let blx=0;blx<lent;blx++){
         for (let bly=0;bly<lent;bly++){
@@ -64,7 +100,7 @@ function disk_relation_offline_file_browser(){
         disk_dict[blxl]=disk_dict[blxl][0]+': '+disk_dict[blxl][1].join(' ');
     }
     
-    document.getElementById('div_disk_intersection').innerHTML=array_2_li_b(disk_dict)+array_2_li_b(intersection2_list);
+    document.getElementById('div_disk_intersection').innerHTML=array_2_li_b(disk_dict)+array_2_li_b(intersection2_list)+'<table class="table_common">'+connection_count_dict.join('\n')+'</table>';
 }
 
 function disk_category_offline_file_browser(csxl=0){
@@ -1349,6 +1385,44 @@ function filelist_filter_offline_file_browser(cskey){
     obj_search_show_hide_b(olis,'',cskey,is_reg);
 }
 
+function size_calculate_offline_file_browser(){
+    if (typeof path_disk_size_ofb_global!=='undefined'){return;}
+    
+    var path_list={};
+    var disk_list={};
+    var merge_list={};
+    offline_file_data_raw_global.sort(function (a,b){return a[4]>b[4] ? 1 : -1;});
+    for (let item of offline_file_data_raw_global){
+        let disk_key='d_'+item[0];
+        if (disk_list[disk_key]==undefined){
+            disk_list[disk_key]=[item[0],0,'',item[4],'']; //磁盘名称，体积，TXT文件修改日期，最旧文件日期，最新文件日期 - 保留注释
+            for (let one_name of offline_file_category_global){
+                if (item[0]==one_name[0]){
+                    disk_list[disk_key][2]=one_name[1]; //添加修改日期 - 保留注释
+                }
+            }
+        }
+        
+        var merge_key='m_'+item[0].split('-')[0];
+        if (merge_list[merge_key]==undefined){
+            merge_list[merge_key]=0;
+        }
+                        
+        disk_list[disk_key][1]=disk_list[disk_key][1]+item[3];
+        disk_list[disk_key][4]=item[4];
+        merge_list[merge_key]=merge_list[merge_key]+item[3];
+        
+        if (item[1].startsWith('save-') || item[1].startsWith('待看') || item[1].startsWith('待整理')){
+            let path_key='p_'+item[1].split('/')[0];
+            if (path_list[path_key]==undefined){
+                path_list[path_key]=[item[0],0];    //假设相同目录名称的磁盘也相同 - 保留注释
+            }                
+            path_list[path_key][1]=path_list[path_key][1]+item[3];
+        }
+    }
+    path_disk_size_ofb_global=[path_list,disk_list,merge_list];
+}
+
 function disks_size_date_offline_file_browser(cscol=0,csdesc=false,cstable_no=0){
     function sub_disks_size_date_offline_file_browser_th(csno,cscaption,tableno){
         return '<th onclick="disks_size_date_offline_file_browser('+csno+','+is_desc+','+tableno+');" style="cursor:pointer;">'+cscaption+'</th>';
@@ -1372,42 +1446,11 @@ function disks_size_date_offline_file_browser(cscol=0,csdesc=false,cstable_no=0)
         return '<h3 class="h3_disk_size_ofb">'+cscaption+'</h3><table class="table_common"><tr>'+th_list1.join('')+'</tr>'+csarr.join('\n')+'</table>';    
     }
     //-----------------------
-    var path_list={};
-    var disk_list={};
-    var merge_list={};
-    offline_file_data_raw_global.sort(function (a,b){return a[4]>b[4] ? 1 : -1;});
-    for (let item of offline_file_data_raw_global){
-        var disk_key='d_'+item[0];
-        if (disk_list[disk_key]==undefined){
-            disk_list[disk_key]=[item[0],0,'',item[4],'']; //磁盘名称，体积，TXT文件修改日期，最旧文件日期，最新文件日期 - 保留注释
-            for (let one_name of offline_file_category_global){
-                if (item[0]==one_name[0]){
-                    disk_list[disk_key][2]=one_name[1]; //添加修改日期 - 保留注释
-                }
-            }
-        }
-        
-        var merge_key='m_'+item[0].split('-')[0];
-        if (merge_list[merge_key]==undefined){
-            merge_list[merge_key]=0;
-        }
-                        
-        disk_list[disk_key][1]=disk_list[disk_key][1]+item[3];
-        disk_list[disk_key][4]=item[4];
-        merge_list[merge_key]=merge_list[merge_key]+item[3];
-        
-        if (item[1].startsWith('save-') || item[1].startsWith('待看') || item[1].startsWith('待整理')){
-            var path_key='p_'+item[1].split('/')[0];
-            if (path_list[path_key]==undefined){
-                path_list[path_key]=[item[0],0];    //假设相同目录名称的磁盘也相同 - 保留注释
-            }                
-            path_list[path_key][1]=path_list[path_key][1]+item[3];
-        }
-    }
-    
-    disk_list=object2array_b(disk_list);
-    merge_list=object2array_b(merge_list,true,2);
-    path_list=object2array_b(path_list,true,2);
+    size_calculate_offline_file_browser();
+
+    var path_list=object2array_b(path_disk_size_ofb_global[0],true,2);    
+    var disk_list=object2array_b(path_disk_size_ofb_global[1]);
+    var merge_list=object2array_b(path_disk_size_ofb_global[2],true,2);
 
     var ssd_size_list=[];
     if (typeof ssd_tf_size_global !== 'undefined'){
