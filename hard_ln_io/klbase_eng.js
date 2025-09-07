@@ -2650,7 +2650,7 @@ function words_count_enwords_b(){
     }
 }
 
-function day_no_enwords_b(csinterval=15,csdate=false,do_test=false){
+function day_no_enwords_b(csinterval=30,csdate=false,do_test=false){
     if (do_test){
         for (let blxl=1;blxl<=31;blxl++){
             var bldate=next_day_b('',blxl,false);
