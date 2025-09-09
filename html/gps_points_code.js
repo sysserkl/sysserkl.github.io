@@ -1707,7 +1707,7 @@ function menu_gps_points(){
     
     klmenu_dots=klmenu_dots.concat([
     '<span class="span_menu" onclick="'+str_t+'lng_lat_gps_points();">经度 纬度,经度 纬度;经度 纬度 格式生成线条</span>',
-    '<span class="span_menu">演示1秒 == 实际 <input type="number" id="input_real_second_gps_points" min="1" value="86400" style="width:5rem;" /> 秒 最长间隔时间（秒）：<input type="number" id="input_max_wait_seconds_gps_points" min="0.01" value="0.01" style="width:4rem;" /><br /><label><input type="checkbox" id="checkbox_ppt_circle_gps_points" checked />circle</label> 半径：<input type="number" id="input_ppt_circle_radius_gps_points" min="1" value="20" style="width:3rem;" /> <label><input type="checkbox" id="checkbox_ppt_character_gps_points" checked />character</label> 半径：<input type="number" id="input_ppt_character_radius_gps_points" min="1" value="17" style="width:3rem;" /> 分组：<select id="select_ppt_color_gps_points"><option></option><option>年</option><option>月</option></select> 最小缩放：<input type="number" id="input_ppt_scale_min_gps_points" min="5" value="9" step="1" style="width:4rem;" /> <span class="aclick" onclick="'+blparent+'ppt_gps_points();">动态演示</span></span>',
+    '<span class="span_menu">演示1秒 == 实际 <input type="number" id="input_real_second_gps_points" min="1" value="86400" style="width:5rem;" /> 秒 最长间隔时间（秒）：<input type="number" id="input_max_wait_seconds_gps_points" min="0.01" value="0.01" style="width:4rem;" /><br /><label><input type="checkbox" id="checkbox_ppt_circle_gps_points" checked />circle</label> 半径：<input type="number" id="input_ppt_circle_radius_gps_points" min="1" value="20" style="width:3rem;" /> <label><input type="checkbox" id="checkbox_ppt_character_gps_points" checked />character</label> 半径：<input type="number" id="input_ppt_character_radius_gps_points" min="1" value="17" style="width:3rem;" /> 分组：<select id="select_ppt_color_gps_points"><option></option><option>10年</option><option>年</option><option>月</option></select> 最小缩放：<input type="number" id="input_ppt_scale_min_gps_points" min="5" value="9" step="1" style="width:4rem;" /> <span class="aclick" onclick="'+blparent+'ppt_gps_points();">动态演示</span> 延时：<input type="number" id="input_run_wait_second_gps_points" min="1" value="3" style="width:3rem;" /> 秒 <span class="aclick" onclick="'+blparent+'selet_points_in_range_gps_points();">筛选出当前看见范围内的点</span></span>',
     ]);
     
     group_list=[
@@ -1793,6 +1793,76 @@ function menu_gps_points(){
     document.getElementById('input_line_weight_gps_points').value=gpx_line_weight_global;
 }
 
+function lat_lon_year_get_gps_points(add_raw=false){
+    var list_t=document.getElementById('textarea_gps_points').value.trim().split('\n');
+    var result_t=[];
+    var year_range=new Set();
+    for (let arow of list_t){
+        let raw_row=arow;
+        arow=arow.trim().split(' /// '); //形如：2025/20250714NUC散热.jpg /// 28.674675 /// 121.431758 /// 2025:07:14 22:19:09 - 保留注释
+        if (arow.length!==4){continue;}
+        arow[3]=arow[3].trim().split(' ');
+        if (arow[3].length!==2){continue;}
+        arow[3][0]=arow[3][0].replace(/\:/g,'-');
+        let img_date=validdate_b(arow[3].join(' '));
+        if (img_date===false){
+            console.log('日期错误',arow);
+            continue;
+        } else {
+            arow[3]=img_date;
+            year_range.add(img_date.getFullYear());
+        }
+        arow[1]=parseFloat(arow[1].trim());
+        arow[2]=parseFloat(arow[2].trim());
+        if (isNaN(arow[1]) || isNaN(arow[2])){
+            console.log('经纬度错误',arow);
+            continue;
+        }
+        arow[0]=file_path_name_b(arow[0])[1];
+        arow.push(0);
+        if (add_raw){
+            arow.push(raw_row);
+        }
+        result_t.push(arow);
+    }
+
+    result_t.sort();
+    result_t.sort(function (a,b){return a[3]<b[3]?-1:1;});
+
+    console.log('整理前行数：', list_t.length, '整理后行数：', result_t.length);
+    
+    return [result_t,year_range];
+}
+
+function selet_points_in_range_gps_points(){
+    var result_t,year_range;
+    [result_t,year_range]=lat_lon_year_get_gps_points(true);
+    if (result_t.length==0){return;}
+
+    var transform_type=document.getElementById('select_transform').value;
+    
+    //result_t 每个元素为数组，形如：
+    //"20200101XXXXXXX"
+    //30.361330972222
+    //120.03687497222
+    //Date Wed Jan 01 2020 09:21:16 GMT+0800 (China Standard Time)
+    //0
+    //raw_row
+    var selected_list=[];
+    for (let item of result_t){
+        let lon = item[2];
+        let lat  = item[1];
+        [lon,lat]=transform_lon_lat_one_dot_b(transform_type,lon,lat);
+        dopanto=check_points_is_in_map(lat,lon,transform_type,true);
+        if (dopanto){continue;}
+        selected_list.push(item[5]);
+    }
+    
+    if (confirm('获取数据 '+result_t.length+' 条，当前可见区域记录有 '+selected_list.length+' 条，是否替换？')==false){return;}
+
+    document.getElementById('textarea_gps_points').value=selected_list.join('\n');
+}
+
 function ppt_gps_points(){
     function sub_ppt_gps_points_one_point(){
         if (do_rescale){
@@ -1839,21 +1909,34 @@ function ppt_gps_points(){
         
         let do_color_change=false;
         let show_string='';
-        if (color_type=='年'){
-            if (current_year!==img_year){
-                do_color_change=true;
-                current_year=img_year;
-                sound_b('elephant');
-            }
-            show_string=arow[0].substring(3,4);
-        } else if (color_type=='月'){
-            if (current_year!==img_year || current_month!==img_month){
-                do_color_change=true;
-                current_year=img_year;
-                current_month=img_month;
-                sound_b('cuckoo');
-            }
-            show_string=(year_count>1?arow[0].substring(3,4)+'/':'')+arow[0].substring(4,6);
+        switch (color_type){
+            case '10年':
+                if (current_year!==img_year){
+                    if (current_year.toString().slice(0,3)!==img_year.toString().slice(0,3)){
+                        do_color_change=true;
+                        sound_b('elephant');
+                    }
+                    current_year=img_year;
+                }
+                show_string=arow[0].substring(3,4);
+                break;
+            case '年':
+                if (current_year!==img_year){
+                    do_color_change=true;
+                    current_year=img_year;
+                    sound_b('elephant');
+                }
+                show_string=arow[0].substring(3,4);
+                break;
+            case '月':
+                if (current_year!==img_year || current_month!==img_month){
+                    do_color_change=true;
+                    current_year=img_year;
+                    current_month=img_month;
+                    sound_b('cuckoo');
+                }
+                show_string=(year_count>1?arow[0].substring(3,4)+'/':'')+arow[0].substring(4,6);
+                break;
         }
         
         if (do_color_change){
@@ -1902,39 +1985,9 @@ function ppt_gps_points(){
     var scale_min=parseInt(document.getElementById('input_ppt_scale_min_gps_points').value.trim());
     var scale_current=omap_gps_points_global.getZoom();
     
-    var list_t=document.getElementById('textarea_gps_points').value.trim().split('\n');
-    var result_t=[];
-    var year_range=new Set();
-    for (let arow of list_t){
-        arow=arow.trim().split(' /// '); //形如：2025/20250714NUC散热.jpg /// 28.674675 /// 121.431758 /// 2025:07:14 22:19:09 - 保留注释
-        if (arow.length!==4){continue;}
-        arow[3]=arow[3].trim().split(' ');
-        if (arow[3].length!==2){continue;}
-        arow[3][0]=arow[3][0].replace(/\:/g,'-');
-        let img_date=validdate_b(arow[3].join(' '));
-        if (img_date===false){
-            console.log('日期错误',arow);
-            continue;
-        } else {
-            arow[3]=img_date;
-            year_range.add(img_date.getFullYear());
-        }
-        arow[1]=parseFloat(arow[1].trim());
-        arow[2]=parseFloat(arow[2].trim());
-        if (isNaN(arow[1]) || isNaN(arow[2])){
-            console.log('经纬度错误',arow);
-            continue;
-        }
-        arow[0]=file_path_name_b(arow[0])[1];
-        arow.push(0);
-        result_t.push(arow);
-    }
-    
+    var result_t,year_range;
+    [result_t,year_range]=lat_lon_year_get_gps_points();
     if (result_t.length==0){return;}
-    result_t.sort();
-    result_t.sort(function (a,b){return a[3]<b[3]?-1:1;});
-    
-    console.log('整理前行数：', list_t.length, '整理后行数：', result_t.length);
     
     var year_count=year_range.size;
     
@@ -1950,7 +2003,7 @@ function ppt_gps_points(){
         result_t[blxl][4]=Math.min(wait_max,(result_t[blxl][3]-result_t[blxl-1][3])/1000/ratio);   //演示间隔秒数
     }
     
-    var transform_type=document.getElementById('select_transform').value;    
+    var transform_type=document.getElementById('select_transform').value;
     var fill_opacity=parseFloat(document.getElementById('input_fill_opacity_gps_points').value.trim());
     var is_stroke=document.getElementById('checkbox_stroke_line_border_gps_points').checked;
 
@@ -1962,7 +2015,14 @@ function ppt_gps_points(){
     var session0_start = performance.now();
     var session1_start = performance.now();
     var do_rescale=false;
-    sub_ppt_gps_points_one_point();
+    
+    var run_wait=parseInt(document.getElementById('input_run_wait_second_gps_points').value.trim()) || 0;
+    if (run_wait>0){
+        setTimeout(sub_ppt_gps_points_one_point,run_wait*1000);
+        document.title='延时 '+run_wait +' 秒 - '+old_title;
+    } else {
+        sub_ppt_gps_points_one_point();
+    }
 }
 
 function import_bigfile_gps_points(fname=false){

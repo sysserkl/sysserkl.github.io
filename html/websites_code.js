@@ -46,6 +46,7 @@ function menu_klwebsites(change_no=false){
     var list_t=[
     ['bing','key_batch_search_by_engine_klwebsites(true,\'bing\');',true],
     ['百度','key_batch_search_by_engine_klwebsites(true,\'baidu\');',true],
+    ['yandex','key_batch_search_by_engine_klwebsites(true,\'yandex\');',true],
     ];    
     klmenu1.push(menu_container_b(str_t,list_t,'batch eword search: '));    
     
@@ -827,6 +828,9 @@ function search_in_site_new_window_klwebsites(cstype,cskey=false,site_name=false
             break;
         case 'baidu':
             blstr='https://www.baidu.com/baidu?wd='+cskey+' site: '+site_name;
+            break;
+        case 'yandex':
+            blstr='https://yandex.com/search/?text='+cskey+' site: '+site_name;
             break;
     }
     
