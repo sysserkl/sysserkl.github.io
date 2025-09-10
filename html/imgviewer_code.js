@@ -29,7 +29,7 @@ function init_img_viewer(){
 
     input_with_x_b('input_search',15);
     slide_klphotos_b(true);
-    hide_div_big_photo_b();
+    hide_div_big_klphoto_b();
     
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'2rem':'1.5rem'));
 

@@ -131,7 +131,7 @@ function slice_klphotos(){
 
     if (confirm('是否保留当前结果的 '+blrange+' 部分？')){
         photodata_global=photodata_global.slice(blrange[0],blrange[1]);
-        refresh_klphotos();
+        result_length_show_klphoto_b();
     }
 }
 
@@ -173,12 +173,21 @@ function menu_klphotos(){
 
     var menu_config=root_font_size_menu_b(str_t);
     menu_config=menu_config.concat([
-    '<span id="span_amount_klphoto" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 统计图显示合计数</span>',
-    '<span id="span_img_border" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ img border</span>',     
-    '<span class="span_menu" onclick="'+str_t+'thumb_size_set_klphotos();">缩略图大小设置</span>',  
     '<span class="span_menu">分组显示：忽略数量 <input type="text" id="input_ignore_count_klphoto" value=-1 style="width:3rem;" placeholder="-1, or <10 or >20" /> 的分组 两侧最多 <input type="text" id="input_max_range_klphotos" value="-1,-1" style="width:3rem;" placeholder="-1,-1" /> 张</span>',  
-    ]);   
+    ]);
+
+    var group_list=[
+    ['⚪ 统计图显示合计数','klmenu_check_b(this.id,true);',false,'span_amount_klphoto'],
+    ['⚪ 合并时显示图片边框','klmenu_check_b(this.id,true);',false,'span_img_border'],
+    ];
+    menu_config.push(menu_container_b(str_t,group_list,''));
     
+    var group_list=[
+    ['大小设置','thumb_size_set_klphotos();',true],
+    ['每页数量','thumbs_in_one_page_set_klphotos();',true],
+    ];    
+    menu_config.push(menu_container_b(str_t,group_list,'缩略图：'));
+
     var group_list=[
     ['⚪ 日历','klmenu_check_b(this.id,true);',false,'span_calendar_klphoto'],
     ['⚪ 年份','klmenu_check_b(this.id,true);',false,'span_year_klphoto'],
@@ -200,6 +209,10 @@ function menu_klphotos(){
 
 function thumb_size_set_klphotos(){
     prompt_from_local_storage_b('输入缩略图尺寸，形如10rem,10rem，再重新载入页面','album_thumb_size');
+}
+
+function thumbs_in_one_page_set_klphotos(){
+    pageitems_global=parseInt(prompt_from_local_storage_b('输入每页缩略图数量','album_thumbs_in_one_page')) || 30;
 }
 
 function duplicate_category_check_klphotos(){
@@ -371,14 +384,7 @@ function rndsearch_klphotos(){
 	for (let blxl=0;blxl<bltotal_t;blxl++){
 		photodata_global.sort(randomsort_b);
 	}
-    refresh_klphotos();
-}
-
-function refresh_klphotos(){
-	hide_div_big_photo_b();
-	thumbnail_klphotos_b();
-
-	document.getElementById('span_img_count').innerHTML='<i>('+photodata_global.length+')</i>';
+    result_length_show_klphoto_b();
 }
 
 function autoshow_klphotos(){
@@ -562,7 +568,7 @@ function init_klphotos(){
     //variable global
     imgnum_global=0;
     current_page_first_img_num_global=0;
-    pageitems_global=30;
+    pageitems_global=parseInt(local_storage_get_b('album_thumbs_in_one_page')) || 30;
     imgshow_klphotos_global=false;
     photodata_global=[];   //文件名，数组分类名，在 photo_source_global 中的序号 - 保留注释
     img_sec_global=Math.max(50, parseInt(document.getElementById('input_slide_interval').value)*1000);
