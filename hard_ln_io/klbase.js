@@ -1321,7 +1321,7 @@ function local_storage_list_in_one_day_b(csid){
     return list_t;
 }
 
-function local_storage_today_b(csid,csmax=-1,csnewcontent='',cssplit='',squash=[],cstype='d',add_mode=false){
+function local_storage_today_b(csid,csmax=-1,csnewcontent='',cssplit='',squash=[],cstype='d',add_mode=false,remove_same_value_new_item=true){
     if (csnewcontent==''){return;}
     if (squash.length==3){  //否则不执行压缩，仅截取 - 保留注释
         var list_t=local_storage_get_b(csid,-1,true);
@@ -1331,14 +1331,25 @@ function local_storage_today_b(csid,csmax=-1,csnewcontent='',cssplit='',squash=[
     }
     var list_t=local_storage_get_b(csid,csmax,true);
 
-    var remove_xl_list=[];
+    var remove_xl_set=new Set();
     if (cssplit!=='' && list_t.length>=1+3){
         for (let blxl=1,lent=list_t.length-2;blxl<lent;blxl++){
             var right_part_0=list_t[blxl].substring(list_t[blxl].indexOf(cssplit),);
             var right_part_1=list_t[blxl+1].substring(list_t[blxl+1].indexOf(cssplit),);
             var right_part_2=list_t[blxl+2].substring(list_t[blxl+2].indexOf(cssplit),);
             if (right_part_0==right_part_1 && right_part_1==right_part_2){
-                remove_xl_list.push(blxl+1);
+                remove_xl_set.add(blxl+1);
+            }
+            
+            if (remove_same_value_new_item){
+                if (right_part_0==right_part_1 && !remove_xl_set.has(blxl)){
+                    remove_xl_set.add(blxl);
+                    console.log(list_t[blxl],list_t[blxl+1],'移除：',list_t[blxl]);
+                }
+                if (right_part_1==right_part_2 && !remove_xl_set.has(blxl+1)){
+                    remove_xl_set.add(blxl+1);
+                    console.log(list_t[blxl+1],list_t[blxl+2],'移除：',list_t[blxl+1]);
+                }
             }
         }
     }
@@ -1348,7 +1359,7 @@ function local_storage_today_b(csid,csmax=-1,csnewcontent='',cssplit='',squash=[
     var old_value=0;
     for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         //去除连续3行值相同的行中的倒数第2行 - 保留注释
-        if (remove_xl_list.includes(blxl)){continue;}
+        if (remove_xl_set.has(blxl)){continue;}
             
         var item=list_t[blxl];
         //忽略日期相同的行 - 保留注释

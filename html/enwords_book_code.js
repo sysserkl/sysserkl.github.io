@@ -580,6 +580,7 @@ function import_enwords_book(cstype,csmax=-1){
                 }
                 result_t.sort(function(a,b){return a[1]<b[1]?1:-1;});
                 otextarea.value=result_t.join('\n');
+                console.log('获得结果',result_t.length,'个');
             }
             break;
         case 'old':
