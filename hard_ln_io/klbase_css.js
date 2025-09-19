@@ -2843,3 +2843,18 @@ function rect_valign_middle_b(odom){
     var rect=odom.getBoundingClientRect();
     odom.style.top=(rect.top-rect.height/2)+'px';
 }
+
+function popup_font_family_content_b(input_id,popup_id){
+    var list_t=local_storage_get_b('kl_font_family_b',40,true);
+    var bljg='';
+    for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
+        var item=list_t[blxl];
+        var blspecial=specialstr_j(item,true);
+        bljg=bljg+'<span class="oblong_box" style="font-size:1.5rem;font-family:'+item+';" onclick="document.getElementById(\''+input_id+'\').value=\''+blspecial+'\';" title="'+blspecial+'">字体'+item.slice(0,4)+(blxl+1)+'</span> ';
+    }
+    
+    var opopup=document.getElementById(popup_id);
+    opopup.innerHTML='<p style="line-height:2.8rem;">'+bljg+'</p>';
+    mouseover_mouseout_oblong_span_b(opopup.querySelectorAll('span.oblong_box'));
+    popup_show_hide_b(popup_id);
+}

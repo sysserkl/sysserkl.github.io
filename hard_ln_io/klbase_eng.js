@@ -1183,7 +1183,7 @@ function translator_sites_b(){
     ['https://translate.yandex.com/','yandex'],
     ['https://fanyi.baidu.com/mtpe-individual/multimodal','百度'],
     ['https://fanyi.youdao.com/#/TextTranslate','有道'],
-    ['https://qianwen.aliyun.com/','通义'],    
+    ['https://www.tongyi.com/','通义'],    
     ['https://yuanbao.tencent.com/chat/','元宝'],
     ];
     
