@@ -481,44 +481,44 @@ function electricity_get_money_b(csstr){
 function elm_get_money_b(csstr,csdate,csaddress,to_line_style=false){
     //饿了么格式如下： - 保留注释
     //知味观干菜肉煎饼 400g/包
-    //x 1
-    //¥
-    //8.92
-    //¥15.8
-    //折
+    //x1
+    //¥8.92
     //进口蓝莓（秘鲁） 125±10g/盒
-    //x 1
-    //¥
-    //8.75
-    //¥13.6
+    //x1
+    //¥8.75
     csstr=csstr.replace(/^支持\d+天无理由$/mg,'');
+    csstr=csstr.replace(/\n¥\n/g,'\n¥');
+    csstr=csstr.replace(/^(实付|折)$/mg,'');
     csstr=csstr.replace(/\n+/mg,'\n');
     
+    console.log(csstr);
     var list_t=csstr.trim().split('\n');
+    
     var result_t=[];
     var blname='';
     var blamount='';
     for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         var item=list_t[blxl].trim();
+        
         if (item.includes('/')){    //含有单位，如 /盒 - 保留注释
             blname=item;
             continue;
         } else if (blxl<list_t.length-1){
-            if (list_t[blxl+1].match(/^x \d/)){ //不含有单位，但下一行是如 x 1 格式 - 保留注释
+            if (list_t[blxl+1].match(/^x\s*\d/)){ //不含有单位，但下一行是如 x 1 格式 - 保留注释
                 blname=item;
                 continue;
             }
         }
         if (blname==''){continue;}
         
-        if (item.match(/^x\s+\d+$/g)!==null){
-            blamount=item.split(' ').slice(-1,)[0];
+        if (item.match(/^x\s*\d+$/g)!==null){
+            blamount=item.replace(/^x\s*(\d+)$/g,'$1');
             continue;
         }
         if (blamount==''){continue;}
         
-        if (item.match(/^[0-9\.]+$/)!==null){
-            result_t.push([blname,blamount,item]);
+        if (item.match(/^¥[0-9\.]+$/)!==null){
+            result_t.push([blname,blamount,item.slice(1,)]);
             blname='';
             blamount='';
         }
