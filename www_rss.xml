@@ -8,343 +8,305 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Sun, 28 Sep 2025 09:20:45 +0800</lastBuildDate>
-<item><title>View all posts by 傅真 - 最好金龟换酒</title><link>https://fz0512.net/archives/author/fz0512</link></item>
-<item><title>Walmart CEO Issues Wake-Up Call: &amp;#39;AI Is Going to Change Literally Every Job&amp;#39; - Slashdot</title><link>https://it.slashdot.org/story/25/09/27/066218/walmart-ceo-issues-wake-up-call-ai-is-going-to-change-literally-every-job</link></item>
-<item><title>Scientists Develop &amp;#39;Glue Gun&amp;#39; That 3D Prints Bone Grafts Directly Onto Fractures - Slashdot</title><link>https://science.slashdot.org/story/25/09/27/2157219/scientists-develop-glue-gun-that-3d-prints-bone-grafts-directly-onto-fractures</link></item>
-<item><title>Escalation in Akira Campaign Targeting SonicWall VPNs, Deploying Ransomware, With Malicious Logins - Slashdot</title><link>https://it.slashdot.org/story/25/09/27/2055246/escalation-in-akira-campaign-targeting-sonicwall-vpns-deploying-ransomware-with-malicious-logins</link></item>
-<item><title>Bundler&amp;#39;s Lead Maintainer Asserts Trademark in Ongoing Struggle with Ruby Central - Slashdot</title><link>https://developers.slashdot.org/story/25/09/27/1910211/bundlers-lead-maintainer-asserts-trademark-in-ongoing-struggle-with-ruby-central</link></item>
-<item><title>Did Microsoft Hide Key Data Flow Information In Plain Sight? - Slashdot</title><link>https://news.slashdot.org/story/25/09/27/1819239/did-microsoft-hide-key-data-flow-information-in-plain-sight</link></item>
-<item><title>Hugging Face Researchers Warn AI-Generated Video Consumes Much More Power Than Expected - Slashdot</title><link>https://hardware.slashdot.org/story/25/09/27/0249201/hugging-face-researchers-warn-ai-generated-video-consumes-much-more-power-than-expected</link></item>
-<item><title>BYD&amp;#39;s All-Electric Hypercar Hits 308 MPH, Becomes Fastest Car in Production - Slashdot</title><link>https://hardware.slashdot.org/story/25/09/27/0441242/byds-all-electric-hypercar-hits-308-mph-becomes-fastest-car-in-production</link></item>
-<item><title>NASA&amp;#39;s New Mission Will Try to Map the Heliosphere After Voyager&amp;#39;s Exit - Slashdot</title><link>https://science.slashdot.org/story/25/09/27/0124204/nasas-new-mission-will-try-to-map-the-heliosphere-after-voyagers-exit</link></item>
-<item><title>YouTube Music is Testing AI Hosts That Will Interrupt Your Tunes - Slashdot</title><link>https://news.slashdot.org/story/25/09/27/027234/youtube-music-is-testing-ai-hosts-that-will-interrupt-your-tunes</link></item>
-<item><title>Pentagon Can Call DJI a Chinese Military Company, Court Rules - Slashdot</title><link>https://tech.slashdot.org/story/25/09/27/004205/pentagon-can-call-dji-a-chinese-military-company-court-rules</link></item>
-<item><title>Humanoid Robots Are Meta&amp;#39;s Next &amp;#39;AR-Sized Bet&amp;#39; - Slashdot</title><link>https://hardware.slashdot.org/story/25/09/26/2027234/humanoid-robots-are-metas-next-ar-sized-bet</link></item>
-<item><title>ULA Launches Third Batch of Amazon&amp;#39;s Project Kuiper Satellites - Slashdot</title><link>https://tech.slashdot.org/story/25/09/26/1937234/ula-launches-third-batch-of-amazons-project-kuiper-satellites</link></item>
-<item><title>Wind and Solar Will Power Datacenters More Cheaply Than Nuclear, Study Finds - Slashdot</title><link>https://hardware.slashdot.org/story/25/09/26/1922220/wind-and-solar-will-power-datacenters-more-cheaply-than-nuclear-study-finds</link></item>
-<item><title>8 Famous Artists Who Benefited From the New Deal - Mental Floss</title><link>https://www.mentalfloss.com/art/artists/new-deal-artists</link></item>
-<item><title>What It Costs to Power 7 Popular Game Consoles - Mental Floss</title><link>https://www.mentalfloss.com/fun/video-games/energy-costs-of-video-game-consoles</link></item>
-<item><title>6 Strange Time Zone Disputes - Mental Floss</title><link>https://www.mentalfloss.com/history/time-zone-disputes</link></item>
-<item><title>Ken Jennings’s Kennections Quiz #186: Can You Guess What These Clues Have in Common? - Mental Floss</title><link>https://www.mentalfloss.com/kennections/ken-jennings-kennections-quiz-186</link></item>
-<item><title>Best 7 Websites to Learn Programming as an Intermediate in 2025 - AskPython</title><link>https://www.askpython.com/resources/best-websites-to-learn-programming-as-an-intermediate</link></item>
-<item><title>Best 7 Websites to Learn Programming for Professionals in 2025 - AskPython</title><link>https://www.askpython.com/resources/best-websites-to-learn-programming-for-professionals</link></item>
-<item><title>Best 7 Websites to Learn Programming as an Advanced Learner in 2025 - AskPython</title><link>https://www.askpython.com/resources/best-websites-to-learn-programming-as-an-advanced-learner</link></item>
-<item><title>Best 7 Websites to Learn Programming as a Beginner in 2025 - AskPython</title><link>https://www.askpython.com/resources/best-websites-to-learn-programming-as-a-beginner</link></item>
-<item><title>Best 7 Websites to Learn Programming for Career Changers in 2025 - AskPython</title><link>https://www.askpython.com/resources/best-websites-to-learn-programming-for-career-changers</link></item>
-<item><title>scipy.cluster: Clustering Algorithms in Python - AskPython</title><link>https://www.askpython.com/python-modules/scipy-cluster</link></item>
-<item><title>scipy.fft: Fast Fourier Transform for Signal Analysis - AskPython</title><link>https://www.askpython.com/python-modules/scipy-fft-fast-fourier-transform-for-signal-analysis</link></item>
-<item><title>scipy.odr: Orthogonal Distance Regression - AskPython</title><link>https://www.askpython.com/python-modules/scipy-odr</link></item>
-<item><title>scipy.spatial: Spatial Data Structures &amp; Algorithms - AskPython</title><link>https://www.askpython.com/python-modules/scipy-spatial</link></item>
-<item><title>Scipy Sparse: A Complete Guide - AskPython</title><link>https://www.askpython.com/python-modules/scipy-sparse</link></item>
-<item><title>Factor Protein Plus Meals Review (2025): Filling, Not Fattening - WIRED</title><link>https://www.wired.com/review/factor-high-protein-meal-delivery/</link></item>
-<item><title>The Best Body Pillow, Tested and Reviewed (2025) - WIRED</title><link>https://www.wired.com/gallery/best-body-pillow/</link></item>
-<item><title>An App Used to Dox Charlie Kirk Critics Doxed Its Own Users Instead - WIRED</title><link>https://www.wired.com/story/app-used-to-dox-charlie-kirk-critics-doxed-its-own-users-instead/</link></item>
-<item><title>Ultrahuman Home Review: Overpriced and Underbaked - WIRED</title><link>https://www.wired.com/review/ultrahuman-home/</link></item>
-<item><title>Samsung Galaxy Buds3 FE Review: Better AirPods for Android - WIRED</title><link>https://www.wired.com/review/samsung-galaxy-buds3-fe/</link></item>
-<item><title>Lenovo Legion 7i Gen 10 Review: An All-White Wonder - WIRED</title><link>https://www.wired.com/review/lenovo-legion-7i-gen-10/</link></item>
-<item><title>Inside the Nuclear Bunkers, Mines, and Mountains Being Retrofitted as Data Centers - WIRED</title><link>https://www.wired.com/story/inside-the-nuclear-bunkers-mines-and-mountains-being-retrofitted-as-data-centers/</link></item>
-<item><title>Our 10 Favorite Stand Mixers for Making Year-Round Treats (2025) - WIRED</title><link>https://www.wired.com/gallery/best-stand-mixer/</link></item>
-<item><title>The LA Fires Spewed Out Toxic Nanoparticles. He Made It His Mission to Trace Them - WIRED</title><link>https://www.wired.com/story/the-la-fires-spewed-out-toxic-nanoparticles-he-made-it-his-mission-to-trace-them/</link></item>
-<item><title>Gear News of the Week: The iPhone Air Is Surprisingly Repairable, and Gemini Comes to Google TV - WIRED</title><link>https://www.wired.com/story/gear-news-of-the-week-the-iphone-air-is-surprisingly-repairable-and-gemini-comes-to-google-tv/</link></item>
-<item><title>WIRED Roundup: Groypers Are Going Mainstream - WIRED</title><link>https://www.wired.com/story/uncanny-valley-podcast-wired-roundup-groypers-are-going-mainstream/</link></item>
-<item><title>Apple AirPods Pro 3 Review: Still The Best for iOS - WIRED</title><link>https://www.wired.com/review/apple-airpods-pro-3/</link></item>
-<item><title>Heritage Foundation Uses Bogus Stat to Push a Trans Terrorism Classification - WIRED</title><link>https://www.wired.com/story/heritage-foundation-uses-bogus-stat-to-push-a-trans-terrorism-classification/</link></item>
-<item><title>Is Silicon Valley Still the Tech Capital? - WIRED</title><link>https://www.wired.com/story/uncanny-valley-podcast-is-silicon-valley-still-the-tech-capital/</link></item>
-<item><title>Our Favorite Wi-Fi Router Is $20 Off - WIRED</title><link>https://www.wired.com/story/asus-rt-be58u-deal/</link></item>
-<item><title>Tech Billionaires Already Captured the White House. They Still Want to Be Kings - WIRED</title><link>https://www.wired.com/story/tech-billionaires-communities/</link></item>
-<item><title>What Is Your Tent or Rain Jacket Made From? (2025): Dyneema, Silpoly, X-Pac - WIRED</title><link>https://www.wired.com/story/outdoor-gear-fabric-explainer/</link></item>
-<item><title>Broadcast TV Is a &amp;#39;Melting Ice Cube.’ Kimmel Just Turned Up the Heat - WIRED</title><link>https://www.wired.com/story/broadcast-tv-fcc-carr-kimmel/</link></item>
-<item><title>The Best 3-in-1 Apple Charging Stations (2025), Tested and Reviewed - WIRED</title><link>https://www.wired.com/gallery/best-apple-3-in-1-wireless-chargers/</link></item>
-<item><title>11 Best 2-in-1 Laptops (2025), WIRED-Approved and Tested - WIRED</title><link>https://www.wired.com/gallery/best-2-in-1-laptops/</link></item>
-<item><title>Corsair Sabre V2 Pro Ultralight Gaming Mouse Review: Impossibly Light - WIRED</title><link>https://www.wired.com/review/corsair-sabre-v2-pro-ultralight-gaming-mouse/</link></item>
-<item><title>Yamaha YH-L500A Review: Extremely Comfortable Headphones - WIRED</title><link>https://www.wired.com/review/yamaha-yh-l500a/</link></item>
-<item><title>Can I Take Power Banks on Flights? We Explain the Rules (2025) - WIRED</title><link>https://www.wired.com/story/rules-for-power-banks-on-flights/</link></item>
-<item><title>Where to Go to Get Serious About Learning a Language: Lingoda, Preply, Fluenz - WIRED</title><link>https://www.wired.com/story/done-with-duolingo-get-serious-about-learning-a-language/</link></item>
-<item><title>5 More Physics Equations Everyone Should Know - WIRED</title><link>https://www.wired.com/story/5-more-physics-equations-everyone-should-know/</link></item>
-<item><title>Tesla Is Urging Drowsy Drivers to Use ‘Full Self-Driving.’ That Could Go Very Wrong - WIRED</title><link>https://www.wired.com/story/story/tesla-urging-drowsy-drivers-to-use-full-self-driving-that-could-go-very-wrong/</link></item>
-<item><title>6 Best Beard Trimmers (2025): Full Beards, Hair, Stubble - WIRED</title><link>https://www.wired.com/gallery/best-beard-trimmers/</link></item>
-<item><title>Could These Eye Drops End the Need for Reading Glasses? - WIRED</title><link>https://www.wired.com/story/could-these-eye-drops-end-the-need-for-reading-glasses/</link></item>
-<item><title>Target Promo Codes and Deals: Up to 50% Off - WIRED</title><link>https://www.wired.com/story/target-promo-code/</link></item>
-<item><title>Home Depot Promo Codes: 10% Off | September 2025 - WIRED</title><link>https://www.wired.com/story/home-depot-promo-code/</link></item>
-<item><title>Xiaomi 17 Pro and 17 Pro Max: Specs, Release Date, Price, Features - WIRED</title><link>https://www.wired.com/story/xiaomi-17-pro-max-hands-on/</link></item>
-<item><title>Amazon Might Owe You $51. Here’s How to Find Out if You’re Eligible - WIRED</title><link>https://www.wired.com/story/amazon-might-owe-you-find-out-if-youre-eligible/</link></item>
-<item><title>Trump Executive Order Will Hand TikTok Over to US Investors - WIRED</title><link>https://www.wired.com/story/president-trump-signs-tiktok-deal/</link></item>
-<item><title>Amazon Will Pay $2.5 Billion to Settle FTC Suit That Alleged ‘Dark Patterns’ in Prime Sign-Ups - WIRED</title><link>https://www.wired.com/story/amazon-ftc-settlement-prime-dark-patterns/</link></item>
-<item><title>This Asus Gaming Laptop Is on Sale for Under $1,000 - WIRED</title><link>https://www.wired.com/story/asus-laptop-deal-september-2025/</link></item>
-<item><title>WIRED’s Politics Issue Cover Is in a City Near You - WIRED</title><link>https://www.wired.com/story/wired-politics-cover-search/</link></item>
-<item><title>Chromebooks vs. PC: The Differences Between Chrome OS and Windows - WIRED</title><link>https://www.wired.com/story/chromebooks-vs-windows-laptops/</link></item>
-<item><title>AllTrails Hiking App Review: Outdoor Planning and Navigation - WIRED</title><link>https://www.wired.com/review/alltrails-hiking-app/</link></item>
-<item><title>12 Best Cheap Laptops (2025), Tested and Reviewed - WIRED</title><link>https://www.wired.com/gallery/best-cheap-laptops/</link></item>
-<item><title>9 Best Down Comforters (2025), Tested in Our Homes in Every Season - WIRED</title><link>https://www.wired.com/gallery/best-down-comforters/</link></item>
-<item><title>How to (Mostly) Get Rid of Liquid Glass - WIRED</title><link>https://www.wired.com/story/how-to-mostly-get-rid-of-liquid-glass/</link></item>
-<item><title>13 Best Bed Frames (2025), Tested in Our Homes - WIRED</title><link>https://www.wired.com/gallery/best-bed-frames/</link></item>
-<item><title>Google’s Conversational Photo Editor Is the Rare AI Feature People Will Actually Use - WIRED</title><link>https://www.wired.com/story/google-photos-conversational-photo-editor/</link></item>
-<item><title>Memecoins Are Coming to the Stock Market - WIRED</title><link>https://www.wired.com/story/memecoins-are-coming-to-the-stock-market/</link></item>
-<item><title>Tiny Arctic Organisms Are Defying the Rules of Biology - SciTechDaily</title><link>https://scitechdaily.com/tiny-arctic-organisms-are-defying-the-rules-of-biology/</link></item>
-<item><title>Biologists Baffled by Never-Before-Seen Structure in a Tiny Organism - SciTechDaily</title><link>https://scitechdaily.com/biologists-baffled-by-never-before-seen-structure-in-a-tiny-organism/</link></item>
-<item><title>This Mysterious Creature Has the Most Chromosomes on Earth - SciTechDaily</title><link>https://scitechdaily.com/this-mysterious-creature-has-the-most-chromosomes-on-earth/</link></item>
-<item><title>Is Fat Killing Your Gains? Surprising Pork Burger Study Stuns Scientists - SciTechDaily</title><link>https://scitechdaily.com/is-fat-killing-your-gains-surprising-pork-burger-study-stuns-scientists/</link></item>
-<item><title>Scientists Identify Simple and Effective Way To Reduce Calorie Intake Without Trying - SciTechDaily</title><link>https://scitechdaily.com/scientists-identify-simple-and-effective-way-to-reduce-calorie-intake-without-trying/</link></item>
-<item><title>This $0.05 Pill Could Revolutionize Colon Cancer Treatment - SciTechDaily</title><link>https://scitechdaily.com/this-0-05-pill-could-revolutionize-colon-cancer-treatment/</link></item>
-<item><title>Mushrooms Evolved Psychedelics Twice, and Scientists Just Found Out - SciTechDaily</title><link>https://scitechdaily.com/mushrooms-evolved-psychedelics-twice-and-scientists-just-found-out/</link></item>
-<item><title>Scientists Discover Ancient New Ichthyosaur Species in Germany - SciTechDaily</title><link>https://scitechdaily.com/scientists-discover-ancient-new-ichthyosaur-species-in-germany/</link></item>
-<item><title>From a 20-Foot Poop Pile, Scientists Uncover the Secrets of Giant Sloths - SciTechDaily</title><link>https://scitechdaily.com/from-a-20-foot-poop-pile-scientists-uncover-the-secrets-of-giant-sloths/</link></item>
-<item><title>Astronomers Discover Colossal Cosmic “Bridge” Linking Galaxies Across Space - SciTechDaily</title><link>https://scitechdaily.com/astronomers-discover-colossal-cosmic-bridge-linking-galaxies-across-space/</link></item>
-<item><title>Einstein Was Right Again: Ripples in Space-Time Confirm Century-Old Theory - SciTechDaily</title><link>https://scitechdaily.com/einstein-was-right-again-ripples-in-space-time-confirm-century-old-theory/</link></item>
-<item><title>Natural Plant Compound Shows Promise for Treating Gum Disease - SciTechDaily</title><link>https://scitechdaily.com/natural-plant-compound-shows-promise-for-treating-gum-disease/</link></item>
-<item><title>Flipping the Script on Aging: Study Reveals Declining Well-Being in Older Age Is Not Inevitable - SciTechDaily</title><link>https://scitechdaily.com/flipping-the-script-on-aging-study-reveals-declining-well-being-in-older-age-is-not-inevitable/</link></item>
-<item><title>Scientists Find Brain Circuit That Locks Alcohol Users in Addiction Cycle - SciTechDaily</title><link>https://scitechdaily.com/scientists-find-brain-circuit-that-locks-alcohol-users-in-addiction-cycle/</link></item>
-<item><title>A “Masterpiece” – For the First Time, Scientists Keep a Mammalian Cochlea Alive Outside the Body - SciTechDaily</title><link>https://scitechdaily.com/a-masterpiece-for-the-first-time-scientists-keep-a-mammalian-cochlea-alive-outside-the-body/</link></item>
-<item><title>What Is the Bigscale Pomfret? Scientists Unravel Secrets of an Oceanic Enigma - SciTechDaily</title><link>https://scitechdaily.com/what-is-the-bigscale-pomfret-scientists-unravel-secrets-of-an-oceanic-enigma/</link></item>
-<item><title>Scientists Unravel Secrets of How Gaslighting Really Works - SciTechDaily</title><link>https://scitechdaily.com/scientists-unravel-secrets-of-how-gaslighting-really-works/</link></item>
-<item><title>Hubble Reveals White Dwarf Devouring a Frozen, Pluto-Like World - SciTechDaily</title><link>https://scitechdaily.com/hubble-reveals-white-dwarf-devouring-a-frozen-pluto-like-world/</link></item>
-<item><title>NASA Hits 6,000 Exoplanets. Some Are Stranger Than Sci-Fi - SciTechDaily</title><link>https://scitechdaily.com/nasa-hits-6000-exoplanets-some-are-stranger-than-sci-fi/</link></item>
-<item><title>“Junk DNA” Provides Surprising New Treatments for Hard-To-Treat Blood Cancers - SciTechDaily</title><link>https://scitechdaily.com/junk-dna-provides-surprising-new-treatments-for-hard-to-treat-blood-cancers/</link></item>
-<item><title>Study Finds Cocoa Extract Supplement Reduces Key Marker of Aging - SciTechDaily</title><link>https://scitechdaily.com/study-finds-cocoa-extract-supplement-reduces-key-marker-of-aging/</link></item>
-<item><title>Key Bottleneck Broken: Quantum Computer Chips Clear Major Manufacturing Hurdle - SciTechDaily</title><link>https://scitechdaily.com/key-bottleneck-broken-quantum-computer-chips-clear-major-manufacturing-hurdle/</link></item>
-<item><title>AI Cracks the Code for the Next Generation of Solar Power - SciTechDaily</title><link>https://scitechdaily.com/ai-cracks-the-code-for-the-next-generation-of-solar-power/</link></item>
-<item><title>Life Finds a Way: Thriving Ecosystems Discovered on WWII Warheads - SciTechDaily</title><link>https://scitechdaily.com/life-finds-a-way-thriving-ecosystems-discovered-on-wwii-warheads/</link></item>
-<item><title>Linus Höller - Defense News</title><link>https://www.defensenews.com/author/linus-holler</link></item>
-<item><title>of all ages, vetted by picky parents like us and our even pickier kids. - New York Magazine</title><link>https://nymag.com/strategist/article/introducing-the-strategist-kids-department-newsletter.html?itm_source=sitepromo&amp;itm_medium=homepage-promo-spot&amp;itm_campaign=evergreen</link></item>
-<item><title>Life-Changing - New York Magazine</title><link>https://nymag.com/strategist/article/how-selling-the-life-changing-pants-changed-my-life.html</link></item>
-<item><title>5 Ways to Decorate for Fall If You Hate Orange - Country Living Magazine</title><link>https://www.countryliving.com/home-design/decorating-ideas/a68016461/decorate-for-fall-without-orange/</link></item>
-<item><title>Designer Hack to Instantly Elevate Any Room - Country Living Magazine</title><link>https://www.countryliving.com/home-design/decorating-ideas/a66132537/ceiling-design-tips-to-complete-your-room/</link></item>
-<item><title>When to Remove Hummingbird Feeders for Vacation - Country Living Magazine</title><link>https://www.countryliving.com/gardening/garden-ideas/a67964139/remove-hummingbird-feeder-during-vacation/</link></item>
-<item><title>How to Cozy Up Your Home for Fall in 5 Easy Steps - Country Living Magazine</title><link>https://www.countryliving.com/home-design/decorating-ideas/a67953201/how-to-make-your-home-cozy-this-fall/</link></item>
-<item><title>Sweater Weather, Activate! - Country Living Magazine</title><link>https://www.countryliving.com/fall/</link></item>
-<item><title>This North Carolina Log Cabin Gets the Rustic Look Right - Country Living Magazine</title><link>https://www.countryliving.com/home-design/house-tours/g40694918/highlands-north-carolina-mountain-house/</link></item>
-<item><title>Cozy Up with the Rustic Apple Cider Aesthetic - Country Living Magazine</title><link>https://www.countryliving.com/home-design/decorating-ideas/a65455237/apple-cider-aesthetic-fall-decorating-trend/</link></item>
-<item><title>Readers *Really* Love These Slow-Cooker Soups - Country Living Magazine</title><link>https://www.countryliving.com/food-drinks/g2663/slow-cooker-soup-recipes/</link></item>
-<item><title>These 5 Vintage Fall Collectibles Are Trending - Country Living Magazine</title><link>https://www.countryliving.com/shopping/antiques/a65743698/trending-vintage-collectible-for-fall/</link></item>
-<item><title>DIY an Apple Wreath to Celebrate Fall - Country Living Magazine</title><link>https://www.countryliving.com/diy-crafts/a61625685/diy-apple-wreath/</link></item>
-<item><title>15 Fall Garden Favorites That Keep the Color ComingHere’s what to plant for beautiful fall color. - Country Living Magazine</title><link>https://www.countryliving.com/gardening/garden-ideas/g65677749/best-plants-for-fall-color/</link></item>
-<item><title>7 Things You Should NEVER Plant in Fall - Country Living Magazine</title><link>https://www.countryliving.com/gardening/garden-ideas/g65823789/what-not-to-plant-in-fall/</link></item>
-<item><title>Want Gorgeous Early Spring Flowers? Do This Today - Country Living Magazine</title><link>https://www.countryliving.com/gardening/garden-tours/a65822763/early-spring-blooms-tips/</link></item>
-<item><title>When to Stop Mowing Your Lawn Before Winter - Country Living Magazine</title><link>https://www.countryliving.com/gardening/a66070261/when-stop-mowing-lawn-winter/</link></item>
-<item><title>Grow Asters: An Important Part of Your Fall Garden - Country Living Magazine</title><link>https://www.countryliving.com/gardening/garden-ideas/a62204462/aster-flower-plant-perennial-guide/</link></item>
-<item><title>Rachel Hardage Barrett - Country Living Magazine</title><link>https://www.countryliving.com/author/225150/rachel-barrett/</link></item>
-<item><title>Katie Bowlby - Country Living Magazine</title><link>https://www.countryliving.com/author/14879/katie-bowlby/</link></item>
-<item><title>Sarah Zlotnick - Country Living Magazine</title><link>https://www.countryliving.com/author/228287/sarah-zlotnick/</link></item>
-<item><title>Jennifer Kopf - Country Living Magazine</title><link>https://www.countryliving.com/author/10387/jennifer-kopf/</link></item>
-<item><title>Hannah Jones - Country Living Magazine</title><link>https://www.countryliving.com/author/500516/hannah-jones/</link></item>
-<item><title>Terri Robertson - Country Living Magazine</title><link>https://www.countryliving.com/author/241553/terri-robertson/</link></item>
-<item><title>Charlyne Mattox - Country Living Magazine</title><link>https://www.countryliving.com/author/12741/charlyne-mattox/</link></item>
-<item><title>Madoline Markham Koonce - Country Living Magazine</title><link>https://www.countryliving.com/author/431500/madoline-markham-koonce/</link></item>
-<item><title>Amy Mitchell - Country Living Magazine</title><link>https://www.countryliving.com/author/225337/amy-mitchell/</link></item>
-<item><title>Amazon&amp;#39;s Fall Decor is so Cozy and Cute - Country Living Magazine</title><link>https://www.countryliving.com/shopping/g66056442/amazon-fall-decor-finds-2025/</link></item>
-<item><title>Shop Kate Middleton&amp;#39;s English Country Closet - Country Living Magazine</title><link>https://www.countryliving.com/shopping/g67952536/kate-middleton-english-country-fashion-2025/</link></item>
-<item><title>It&amp;#39;s Officially Time to Buy That Barn Coat - Country Living Magazine</title><link>https://www.countryliving.com/shopping/g65554730/best-barn-coats-fall-2025/</link></item>
-<item><title>Fall Pieces I&amp;#39;m Adding to My Closet - Country Living Magazine</title><link>https://www.countryliving.com/shopping/g65783802/fall-fashion-coldwater-creek-2025/</link></item>
-<item><title>Make Your Yard a Haven for Fall’s Migrating Birds - Country Living Magazine</title><link>https://www.countryliving.com/gardening/garden-ideas/g66015380/fall-flowers-attract-migrating-birds/</link></item>
-<item><title>When Do Orioles Migrate South for the Winter? - Country Living Magazine</title><link>https://www.countryliving.com/gardening/a65961460/when-do-orioles-migrate/</link></item>
-<item><title>Should I Take Down My Hummingbird Feeder Now? - Country Living Magazine</title><link>https://www.countryliving.com/gardening/garden-ideas/a66029866/when-to-take-down-hummingbird-feeder-2025/</link></item>
-<item><title>What Do Cardinals Do All Winter? - Country Living Magazine</title><link>https://www.countryliving.com/gardening/garden-ideas/a65961879/do-cardinals-migrate/</link></item>
-<item><title>72 Movies That Feel Like Fall, No Matter The Current Temp - Country Living Magazine</title><link>https://www.countryliving.com/life/entertainment/g21240020/fall-movies/</link></item>
-<item><title>It’s Almost Time for Round Top! - Country Living Magazine</title><link>https://www.countryliving.com/shopping/antiques/a63665855/essential-insiders-guide-round-top-antiques-show/</link></item>
-<item><title>Fall Quotes to Remind You of Autumn&amp;#39;s Beauty - Country Living Magazine</title><link>https://www.countryliving.com/life/g1897/fall-quotes/</link></item>
-<item><title>Get Cozy with Quotes About Our Favorite Beverage - Country Living Magazine</title><link>https://www.countryliving.com/life/g30755994/coffee-quotes/</link></item>
-<item><title>Cozy Up with Quotes about the Magic of Reading - Country Living Magazine</title><link>https://www.countryliving.com/life/entertainment/g36620217/quotes-about-reading/</link></item>
-<item><title>Kevin James Discusses &amp;#39;King of Queens&amp;#39; Reboot - Country Living Magazine</title><link>https://www.countryliving.com/life/entertainment/a68039093/king-of-queens-reboot-kevin-james/</link></item>
-<item><title>Tim McGraw Reveals the Real Ending to 1994 Hit - Country Living Magazine</title><link>https://www.countryliving.com/life/entertainment/a68038022/tim-mcgraw-dont-take-the-girl-ending-meaning/</link></item>
-<item><title>Lainey Wilson Talks Stagecoach and New Music - Country Living Magazine</title><link>https://www.countryliving.com/life/entertainment/a68060418/lainey-wilson-stagecoach-interview/</link></item>
-<item><title>The Stagecoach 2026 Lineup Is Here - Country Living Magazine</title><link>https://www.countryliving.com/life/entertainment/a68058164/stagecoach-lineup-2026/</link></item>
-<item><title>The New Y&amp;#39;allmanac Is a Must-Read for Southerners and Southerners at Heart - Country Living Magazine</title><link>https://www.countryliving.com/life/a65595422/southerners-yallmanac-book-on-sale/</link></item>
-<item><title>The Best Vermont Town To Visit This Fall - Country Living Magazine</title><link>https://www.countryliving.com/life/travel/g45498807/stowe-vermont-travel-guide/</link></item>
-<item><title>Pawhuska, OK: The Pioneer Woman Weekend Getaway - Country Living Magazine</title><link>https://www.countryliving.com/life/travel/g61626264/pawhuska-oklahoma-travel-guide/</link></item>
-<item><title>The Best Missouri River Town for a Girls Weekend - Country Living Magazine</title><link>https://www.countryliving.com/life/travel/g41568725/hermann-missouri-things-to-do/</link></item>
-<item><title>Is This the Best Small Town in the Midwest? - Country Living Magazine</title><link>https://www.countryliving.com/life/travel/g44544589/galena-illinois-things-to-do/</link></item>
-<item><title>Stealthy off-road mini-camper van hails from unexpected US automaker - New Atlas</title><link>https://newatlas.com/campervans/chrysler-grizzly-peak-camper-concept/</link></item>
-<item><title>UV light is a fast, effective way to deactivate indoor airborne allergens - New Atlas</title><link>https://newatlas.com/health-wellbeing/uv222-light-indoor-airborne-allergens-deactivate/</link></item>
-<item><title>Existing drug slows progression of type 1 diabetes in newly diagnosed - New Atlas</title><link>https://newatlas.com/disease/antithymocyte-globulin-newly-diagnosed-type-1-diabetes/</link></item>
-<item><title>Microwave weapon downs 49 drones with a single blast - New Atlas</title><link>https://newatlas.com/military/microwave-beam-anti-drone-weapon/</link></item>
-<item><title>New MRI tools show exactly where and how headers damage the brain - New Atlas</title><link>https://newatlas.com/brain/brain-damage-soccer-ball-headers/</link></item>
-<item><title>Czinger&amp;#39;s 3D-printed hypercar breaks 5 Cali track records in 5 days - New Atlas</title><link>https://newatlas.com/automotive/czinger-21c-gold-rush/</link></item>
-<item><title>Amphibious assault ship of tomorrow targets a wide range of missions - New Atlas</title><link>https://newatlas.com/military/bmt-future-assault-ship/</link></item>
-<item><title>First Drive: 2026 Can-Am Outlander Electric quiets the wilds - New Atlas</title><link>https://newatlas.com/outdoors/first-drive-2026-can-am-outlander-electric/</link></item>
-<item><title>Professional milling machine for people who don&amp;#39;t own forklifts - New Atlas</title><link>https://newatlas.com/around-the-home/kujietool-k1-smallest-desktop-mill/</link></item>
-<item><title>Mushrooms make the difference in first-of-its-kind super-composting toilet - New Atlas</title><link>https://newatlas.com/environment/mycotoilet-mushroom-composting-toilet/</link></item>
-<item><title>New bidirectional electric jet ski fast-charges in 30 minutes - New Atlas</title><link>https://newatlas.com/boats-watersports/taiga-orca-3-person-e-pwc/</link></item>
-<item><title>Dual-light adventure phone punches more than 650 ft into the darkness - New Atlas</title><link>https://newatlas.com/outdoors/8849-unihertz-hike-rugged-phone/</link></item>
-<item><title>Shipping container tiny house designed for long-term living - New Atlas</title><link>https://newatlas.com/tiny-houses/mark-vi-vic-sonic-steel/</link></item>
-<item><title>Thumb-tapping torque boost for folding fat-tire adventure ebike - New Atlas</title><link>https://newatlas.com/bicycles/engwe-engine-pro-3-boost/</link></item>
-<item><title>USA&amp;#39;s new tallest timber tower halted mid-build, future uncertain - New Atlas</title><link>https://newatlas.com/architecture/neutral-1005-n-edison-timber-tower-delay/</link></item>
-<item><title>Lose yourself in these winning photos from the 2025 Sony Alpha Awards - New Atlas</title><link>https://newatlas.com/photography/winners-2025-sony-alpha-awards-australia-new-zealand/</link></item>
-<item><title>Surprise, surprise: Honda has quietly revealed the CB500 Super Four - New Atlas</title><link>https://newatlas.com/motorcycles/honda-cb500-super-four/</link></item>
-<item><title>Two-person Overnighter goes all in on travel-friendly tiny living - New Atlas</title><link>https://newatlas.com/tiny-houses/overnighter-nordic-spruce/</link></item>
-<item><title>Review: Maono Wave T5 wireless microphone punches above its weight - New Atlas</title><link>https://newatlas.com/consumer-tech/maono-wave-t5-wireless-microphone/</link></item>
-<item><title>27 oral microbes drive 250% rise in pancreatic cancer risk - New Atlas</title><link>https://newatlas.com/cancer/pancreatic-cancer-oral-bacteria/</link></item>
-<item><title>Device uses a camera, AI and electricity to boost healing time by 25% - New Atlas</title><link>https://newatlas.com/medical-devices/a-heal-speeds-healing/</link></item>
-<item><title>Utterly adorable 530-lb micro-camping pod airs up into tiny-tent abode - New Atlas</title><link>https://newatlas.com/camping-trailers/urbanoid-booba-micro-camping-tent-trailer/</link></item>
-<item><title>Architects reveal new model for urban living where desert meets forest - New Atlas</title><link>https://newatlas.com/architecture/ghaf-woods-experience-centre/</link></item>
-<item><title>Steel wheels promise to outlast rubber tires on mining trucks - New Atlas</title><link>https://newatlas.com/automotive/gacw-steel-wheels-rubber-tires-mining-vehicles-asw/</link></item>
-<item><title>Dumped World War munitions and sunken ships serve a wild new purpose - New Atlas</title><link>https://newatlas.com/environment/dumped-world-war-munitions-ships/</link></item>
-<item><title>Berra tiny house doubles down on superb timber craftsmanship - New Atlas</title><link>https://newatlas.com/tiny-houses/berra-timber-madeiguincho/</link></item>
-<item><title>Anker wheels out tri-laser outdoor theater with huge inflatable screen - New Atlas</title><link>https://newatlas.com/home-entertainment/anker-soundcore-nebula-x1-pro/</link></item>
-<item><title>Apple cider vinegar controversy undermines weight-loss claims - New Atlas</title><link>https://newatlas.com/diet-nutrition/apple-cider-vinegar-controversy/</link></item>
-<item><title>Promising anti-aging drug fails to live up to the hype - New Atlas</title><link>https://newatlas.com/aging/rapamycin-anti-aging-review-human-studies/</link></item>
-<item><title>GE Aerospace flies hypersonic engine with no moving parts - New Atlas</title><link>https://newatlas.com/military/ge-hypersonic-ramjet-engine-flight/</link></item>
-<item><title>Gut microbes and genes talk to each other – and shape our health - New Atlas</title><link>https://newatlas.com/health-wellbeing/microbiome-epigenome-communication-affect-health/</link></item>
-<item><title>117-year-old woman&amp;#39;s remarkable health may also help us live longer - New Atlas</title><link>https://newatlas.com/aging/117-year-old-woman-healthy-aging/</link></item>
-<item><title>$20K ebike costs more than a car ... and no one&amp;#39;s sure why - New Atlas</title><link>https://newatlas.com/bicycles/specialized-ultra-expensive-limited-cyborg-ebike/</link></item>
-<item><title>This ball-shooting robot wants to be your tennis coach - New Atlas</title><link>https://newatlas.com/sports/aceii-one-tennis-coaching-robot/</link></item>
-<item><title>Extraordinary feature-packed smart amp rewrites the guitarist&amp;#39;s playbook - New Atlas</title><link>https://newatlas.com/music/lava-studio-smart-desktop-amp/</link></item>
-<item><title>Heart disease kills 1 in 3 people worldwide, surprising no-one - New Atlas</title><link>https://newatlas.com/medical/heart-disease-kills-worldwide/</link></item>
-<item><title>Aging Antarctic research station set for extreme-environment upgrade - New Atlas</title><link>https://newatlas.com/architecture/davis-station-hugh-broughton-antarctica/</link></item>
-<item><title>GoPro&amp;#39;s 360 cam gets a makeover – and 8K - New Atlas</title><link>https://newatlas.com/photography/gopro-360-action-cam-max2-8k-lenses/</link></item>
-<item><title>Nano-cubosome eyedrops target macular degeneration without needles - New Atlas</title><link>https://newatlas.com/aging/new-eyedrop-retina-conditions/</link></item>
-<item><title>Direct-push wheel design would replace the whole drivetrain - New Atlas</title><link>https://newatlas.com/automotive/surfaceplan-actuator-wheel-reinvent/</link></item>
-<item><title>Enzyme behind diet-induced obesity and diabetes can be ‘switched off’ - New Atlas</title><link>https://newatlas.com/disease/obesity/camkk2-enzyme-switch-obesity-metabolism/</link></item>
-<item><title>&amp;quot;4x safer&amp;quot; bike helmet sports ball bearings and pop-off panels - New Atlas</title><link>https://newatlas.com/bicycles/rls-bike-helmet-ball-bearings/</link></item>
-<item><title>Brilliant 450-mile RV puts range-extended EV tech to its best use yet - New Atlas</title><link>https://newatlas.com/rvs-motorhomes/thor-entegra-embark-450-mile-rv/</link></item>
-<item><title>DJI gets the shrink on, with its new Osmo Nano actioncam - New Atlas</title><link>https://newatlas.com/photography/dji-osmo-nano-actioncam/</link></item>
-<item><title>Nissan unveils new 2026 Sentra with more tech, style - New Atlas</title><link>https://newatlas.com/automotive/nissan-unveils-new-2026-sentra/</link></item>
-<item><title>Autonomous gripper robot hauls heavy trash from Marseille seafloor - New Atlas</title><link>https://newatlas.com/robotics/tum-seaclear-2-autonomous-diving-robot-gets-to-grips-with-seabed-trash/</link></item>
-<item><title>Budget electric motorcycle packs radar, dashcams, and a ton of torque - New Atlas</title><link>https://newatlas.com/motorcycles/ultraviolette-x47-electric-motorcycle-radar-dashcams-torque/</link></item>
-<item><title>Rivers get heatwaves too, and they&amp;#39;re coming on strong - New Atlas</title><link>https://newatlas.com/environment/rivers-heatwaves-acceleration/</link></item>
-<item><title>A Titanium Frying Pan with a 100-Year Warranty? This Company Actually Built It - New Atlas</title><link>https://newatlas.com/sponsored-content/titaners-5-layer-titanium-frying-pan/</link></item>
-<item><title>Tumor-targeting Salmonella engineered to boost colon cancer survival - New Atlas</title><link>https://newatlas.com/disease/engineered-salmonella-lysis-colorectal-tumor-treatment/</link></item>
-<item><title>Experts caution: No evidence that acetaminophen causes autism - New Atlas</title><link>https://newatlas.com/adhd-autism/experts-acetaminophen-autism/</link></item>
-<item><title>Crash-proof drone inspired by the head of the woodpecker - New Atlas</title><link>https://newatlas.com/drones/swift-woodpecker-inspired-tensegrity-drone/</link></item>
-<item><title>Yangwang U9 Xtreme dethrones Bugatti as the world&amp;#39;s fastest production car - New Atlas</title><link>https://newatlas.com/automotive/yangwang-u9-xtreme-worlds-fastest/</link></item>
-<item><title>La Quête du Temps clock gives a guided tour of the heavens - New Atlas</title><link>https://newatlas.com/good-thinking/la-quete-du-temps-clock/</link></item>
-<item><title>Sleek ultrasonic chef&amp;#39;s knife makes chopping 50% less of a chore - New Atlas</title><link>https://newatlas.com/around-the-home/seattle-c200-ultrasonic-chef-knife/</link></item>
-<item><title>You’re probably overestimating the health benefits of supplements - New Atlas</title><link>https://newatlas.com/health-wellbeing/dietary-supplements-label-claims-consumer-beliefs/</link></item>
-<item><title>Luxury brand Montblanc writes a new chapter with classy premium e-note - New Atlas</title><link>https://newatlas.com/mobile-technology/montblanc-digital-paper-enote/</link></item>
-<item><title>Kymco&amp;#39;s 550cc maxi-scooter launches in the US: Hit or miss? - New Atlas</title><link>https://newatlas.com/motorcycles/kymco-ak-550i-premium/</link></item>
-<item><title>A handful of these vegetables can flatline blood sugar levels - New Atlas</title><link>https://newatlas.com/diet-nutrition/vegetables-blood-sugar-spikes/</link></item>
-<item><title>Skunk Works springs Vectis fighter drone on the world - New Atlas</title><link>https://newatlas.com/military/skunk-works-vectis-fighter-drone/</link></item>
-<item><title>PostgreSQL 18 释出 - Solidot</title><link>https://www.solidot.org/story?sid=82429</link></item>
-<item><title>Fedora 讨论使用 AI 工具的政策 - Solidot</title><link>https://www.solidot.org/story?sid=82430</link></item>
-<item><title>白蚁会主动清理危害其培育鸡枞菌的有害菌 - Solidot</title><link>https://www.solidot.org/story?sid=82431</link></item>
-<item><title>yt-dlp 将需要安装 JS 运行时 Deno - Solidot</title><link>https://www.solidot.org/story?sid=82432</link></item>
-<item><title>亚马逊 kindle 竭尽所能打击电子书盗版 - Solidot</title><link>https://www.solidot.org/story?sid=82433</link></item>
-<item><title>树莓派推出 Raspberry Pi 500+ - Solidot</title><link>https://www.solidot.org/story?sid=82434</link></item>
-<item><title>Goblin Sharks, Gender Trials &amp; Dead Internet Bots – Welcome to Today’s Strange News Digest - Strange Sounds</title><link>https://strangesounds.org/2025/09/goblin-shark-jaws-macron-court-asteroid-nuke-newsletter-strange-news-digest.html</link></item>
-<item><title>When Killer Squirrels Meet Interstellar Comets – Today’s Daily Strange News Recap - Strange Sounds</title><link>https://strangesounds.org/2025/09/killer-squirrels-interstellar-comet-chevron-epstein-strange-news-recap.html</link></item>
-<item><title>Equinox, Eclipse &amp; Apocalypse: Auroras, Pharaoh Bling &amp; Eyeless Cats – Daily Strange News Digest - Strange Sounds</title><link>https://strangesounds.org/2025/09/equinox-auroras-solar-eclipse-eyeless-cat-pharaoh.html</link></item>
-<item><title>Skeletons in Poltergeist, Lava in Hawaii &amp; Titan’s Giant Shadow – Welcome to Today’s Strange News Digest - Strange Sounds</title><link>https://strangesounds.org/2025/09/skeleton-pastor-lava-saturn-strange-news-digest.html</link></item>
-<item><title>Gzone Uncovered: Revolutionizing How We Experience Fun - Strange Sounds</title><link>https://strangesounds.org/2025/09/gzone-uncovered-revolutionizing-how-we-experience-fun.html</link></item>
-<item><title>Books That Unlock Creative Thinking - Strange Sounds</title><link>https://strangesounds.org/2025/09/books-unlock-creative-thinking.html</link></item>
-<item><title>From Tornado Outbreaks to Dogs on Zoom: Today’s StrangeSounds Apocalypse Digest - Strange Sounds</title><link>https://strangesounds.org/2025/09/tornadoes-fireball-comet-tail-dogs-phones-apocalypse-digest.html</link></item>
-<item><title>Goblin Sightings in Kentucky, Solar Flares Gone Wild &amp; Spiders That Wrap Around Trees – Today’s StrangeSounds Apocalypse Recap - Strange Sounds</title><link>https://strangesounds.org/2025/09/goblin-sightings-kentucky-solar-flares-wrap-around-spiders.html</link></item>
-<item><title>Flying Cows, Bright Comet SWAN25B &amp; Discord Prime Ministers: Today’s Apocalypse Recap - Strange Sounds</title><link>https://strangesounds.org/2025/09/flying-cows-bright-comet-swan25b-discord-prime-ministers.html</link></item>
-<item><title>UFOs, 9/11 Memories, Tongue-Biting Justice &amp; Holes in the Sun: Today’s StrangeSounds Apocalypse Recap - Strange Sounds</title><link>https://strangesounds.org/2025/09/ufos-9-11-memories-tongue-biting-justice-solar-storm.html</link></item>
-<item><title>Lola Young Collapses Onstage at All Things Go in New York City - Billboard</title><link>https://www.billboard.com/music/music-news/lola-young-collapses-onstage-nyc-concert-all-things-go-1236077195/</link></item>
-<item><title>Tina Turner Statue Unveiled in Tennessee Community Where She Grew Up - Billboard</title><link>https://www.billboard.com/music/music-news/tina-turner-statue-unveiled-tennessee-brownsville-1236077182/</link></item>
-<item><title>Morgan Wallen Gears Up in New ‘Battlefield 6’ Trailer Teaser: ‘Yeah, I’m the Problem’ - Billboard</title><link>https://www.billboard.com/music/music-news/morgan-wallen-battlefield-6-live-action-trailer-teaser-1236077171/</link></item>
-<item><title>Crystal Kay Brings Comprehensive, Fun-Filled 25th-Anniversary Set to L.A.: Concert Recap - Billboard</title><link>https://www.billboard.com/music/music-news/crystal-kay-los-angeles-concert-recap-miracle-theater-1236077049/</link></item>
-<item><title>Leonardo DiCaprio Recalls ‘Incredible’ Experience Seeing Oasis in Concert With Paul McCartney - Billboard</title><link>https://www.billboard.com/music/music-news/leonardo-dicaprio-oasis-concert-paul-mccartney-incredible-1236077001/</link></item>
-<item><title>Doja Cat, Mariah Carey &amp; More: Which New Music Release Is Your Favorite This Week? Vote! - Billboard</title><link>https://www.billboard.com/music/music-news/doja-cat-mariah-carey-best-new-music-week-poll-1236076850/</link></item>
-<item><title>Jason Kelce Has a Hilarious Response When NBA Star Asks to Meet Taylor Swift: ‘Get in Line, Buddy!’ - Billboard</title><link>https://www.billboard.com/music/music-news/jason-kelce-reacts-nba-star-josh-hart-meet-taylor-swift-1236076795/</link></item>
-<item><title>Friday Dance Music Guide: The Week’s Best New Tracks From Purity Ring, Madeon, Rochelle Jordan &amp; More - Billboard</title><link>https://www.billboard.com/lists/best-dance-songs-of-the-week-madeon-disclosure-purity-ring/</link></item>
-<item><title>Billie Eilish Reacts to Brother Finneas’ Engagement to Longtime Girlfriend Claudia Sulewski - Billboard</title><link>https://www.billboard.com/music/music-news/billie-eilish-reacts-finneas-claudia-sulewski-engagement-1236076635/</link></item>
-<item><title>Mariah Carey Gets Cozy With Anderson .Paak in Flirty ‘Play This Song’ Music Video Amid Dating Rumors - Billboard</title><link>https://www.billboard.com/music/music-news/mariah-carey-anderson-paak-pda-play-this-song-music-video-1236076456/</link></item>
-<item><title>How to install and use GitLab on Linux - FOSS Linux</title><link>https://www.fosslinux.com/128519/how-to-install-and-use-gitlab-on-linux.htm</link></item>
-<item><title>Hunt for RedNovember: Beijing hacked critical orgs in year-long snooping campaign - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/09/27/rednovember_chinese_espionage/</link></item>
-<item><title>Alibaba unveils $53B global AI plan – but it will need GPUs to back it up - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/09/27/alibaba_ai_drive/</link></item>
-<item><title>‘Vietnam Puts AI at the Center of Its Economic Strategy,’ Deputy Director of the Vietnam National Innovation Center Says at NVIDIA AI Day Ho Chi Minh City - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/ai-day-ho-chi-minh-city/</link></item>
-<item><title>Pilots Wanted: Stream ‘Mecha BREAK’ on GeForce NOW - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/geforce-now-thursday-mecha-break/</link></item>
-<item><title>Open Secret: How NVIDIA Nemotron Models, Datasets and Techniques Fuel AI Development - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/nemotron-open-source-ai/</link></item>
-<item><title>Canada Goes All In on AI: NVIDIA Joins Nations’ Technology Leaders in Montreal to Shape Sovereign AI Strategy - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/canada-all-in/</link></item>
-<item><title>At Climate Week NYC, NVIDIA Details AI’s Key Role in Energy Efficiency - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/ai-energy-innovation-climate-research/</link></item>
-<item><title>NVIDIA, OpenAI Announce ‘the Biggest AI Infrastructure Deployment in History’ - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/openai-nvidia/</link></item>
-<item><title>AI On: How Onboarding Teams of AI Agents Drives Productivity and Revenue for Businesses - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/onboarding-teams-ai-agents-productivity-revenue-businesses/</link></item>
-<item><title>The UK’s ‘Goldilocks Moment for AI’: NVIDIA, UK and US Leaders Highlight AI Infrastructure Investments - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/uk-ai-ecosystem-celebration/</link></item>
-<item><title>NVIDIA Blackwell: Born for Extreme-Scale AI Inference - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/blackwell-ai-inference/</link></item>
-<item><title>GeForce NOW Unleashes ‘Dying Light: The Beast’ in the Cloud - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/geforce-now-thursday-dying-light-the-beast/</link></item>
-<item><title>Meet the Streamlabs Streaming Assistant, Accelerated by NVIDIA RTX - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/rtx-ai-garage-logitech-streamlabs-agent/</link></item>
-<item><title>The AI Makers: NVIDIA Partners in UK Advance Physical and Agentic AI, Robotics, Life Sciences and More - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/uk-partner-ecosystem-ai-makers/</link></item>
-<item><title>Reaching Across the Isles: UK-LLM Brings AI to UK Languages With NVIDIA Nemotron - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/uk-llm-nemotron/</link></item>
-<item><title>Paint It Blackwell: GeForce RTX 5080 SuperPOD Rollout Begins - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/geforce-now-thursday-blackwell-rtx-launch/</link></item>
-<item><title>‘Safety First, Always,’ NVIDIA VP of Automotive Says, Unveiling the Future of AI-Defined Vehicles at IAA Mobility - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/iaa-mobility-ai-defined-vehicles/</link></item>
-<item><title>NVIDIA Blackwell Ultra Sets the Bar in New MLPerf Inference Benchmark - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/mlperf-inference-blackwell-ultra/</link></item>
-<item><title>NVIDIA Partners With AI Infrastructure Ecosystem to Unveil Reference Design for Giga-Scale AI Factories - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/ai-factories-reference-design/</link></item>
-<item><title>Get Started Using Generative AI for Content Creation With ComfyUI and NVIDIA RTX AI PCs - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/rtx-ai-garage-comfyui-wan-qwen-flux-krea-remix/</link></item>
-<item><title>cloud storage - Android Police</title><link>https://www.androidpolice.com/tag/cloud-storage/</link></item>
-<item><title>I tried Google Drive, OneDrive, Dropbox, and Nextcloud for a month, and here&amp;#39;s my verdict - Android Police</title><link>https://www.androidpolice.com/tried-google-drive-onedrive-dropbox-nextcloud-for-month/</link></item>
-<item><title>This little-known Android Auto trick gives your car a virtual upgrade - Android Police</title><link>https://www.androidpolice.com/android-auto-google-assistant-routines-guide/</link></item>
-<item><title>YouTube Premium - Android Police</title><link>https://www.androidpolice.com/tag/youtube-premium/</link></item>
-<item><title>YouTube Premium just got a lot more appealing with these 3 new major updates - Android Police</title><link>https://www.androidpolice.com/youtube-premium-introduces-more-features/</link></item>
-<item><title>Samsung needs to upgrade the Ultra or kill it - Android Police</title><link>https://www.androidpolice.com/samsung-needs-to-upgrade-the-ultra-or-let-it-die/</link></item>
-<item><title>Why the Galaxy Z Flip 7 will never replace the Motorola Razr Ultra - Android Police</title><link>https://www.androidpolice.com/samsung-galaxy-z-flip-7-motorola-razr-ultra-comparison/</link></item>
-<item><title>The secret setting in YouTube Music that fixed my playlists for good - Android Police</title><link>https://www.androidpolice.com/the-secret-setting-in-youtube-music-that-fixed-my-playlists-for-good/</link></item>
-<item><title>Google Home for web just got way more powerful - Android Police</title><link>https://www.androidpolice.com/google-home-for-web-big-update/</link></item>
-<item><title>I thought only Pixel Launcher got it right — then I tried this launcher - Android Police</title><link>https://www.androidpolice.com/i-thought-only-pixel-got-it-right-then-i-tried-this-launcher/</link></item>
-<item><title>Xiaomi 15T Pro review: How my indifference turned into love - Android Police</title><link>https://www.androidpolice.com/xiaomi-15t-pro-review/</link></item>
-<item><title>How to share Gemini Gems - Android Police</title><link>https://www.androidpolice.com/share-gemini-gems-tutorial/</link></item>
-<item><title>I flirted with the Pixel, but my Samsung had the one thing I couldn&amp;#39;t quit - Android Police</title><link>https://www.androidpolice.com/tried-to-love-google-pixel-but-kept-going-samsung-phone-due-to-one-feature/</link></item>
-<item><title>The one iPhone 17 Pro feature that convinced me I&amp;#39;d rather stick with my Pixel 10 Pro - Android Police</title><link>https://www.androidpolice.com/iphone-17-pro-feature-convinced-stick-with-pixel-10-pro/</link></item>
-<item><title>I didn&amp;#39;t expect this small underrated phone feature to save me so much time but it does - Android Police</title><link>https://www.androidpolice.com/voice-dictation-over-typing/</link></item>
-<item><title>Google Messages might finally fix its annoying group chat icon problem - Android Police</title><link>https://www.androidpolice.com/google-messages-might-soon-let-you-remove-group-chat-icons/</link></item>
-<item><title>Nintendo Switch emulator Eden mysteriously disappears from Google Play Store - Android Police</title><link>https://www.androidpolice.com/play-store-gives-nintendo-switch-emulator-eden-the-boot/</link></item>
-<item><title>Google turns to the Supreme Court in its Play Store battle with Epic Games - Android Police</title><link>https://www.androidpolice.com/google-asks-supreme-court-to-intervene-in-google-play-store-fight-with-epic/</link></item>
-<item><title>I used the Google Pixel 10 Pro XL and iPhone 17 Pro Max, and I can&amp;#39;t believe which one I prefer - Android Police</title><link>https://www.androidpolice.com/google-pixel-10-pro-xl-iphone-17-pro-max-comparison/</link></item>
-<item><title>I tweaked Google Calendar once and stopped double-booking forever (and you should too) - Android Police</title><link>https://www.androidpolice.com/how-i-set-up-google-calendar-to-make-double-booking-impossible/</link></item>
-<item><title>I loaded up these horror games to get in the Halloween mood — you should too - Android Police</title><link>https://www.androidpolice.com/dying-light-the-beast-cronos-the-new-dawn-recommendation/</link></item>
-<item><title>Discover finally lets me follow my favorite websites and creators — here&amp;#39;s how - Android Police</title><link>https://www.androidpolice.com/google-discover-follow-favorite-websites-and-creators-guide/</link></item>
-<item><title>I thought I knew my career path — then Google got involved - Android Police</title><link>https://www.androidpolice.com/google-career-dreamer/</link></item>
-<item><title>Google Messages is prepping a significant overhaul of link previews - Android Police</title><link>https://www.androidpolice.com/link-previews-google-messages-android-redesign-upgrades/</link></item>
-<item><title>Google Clock is broken for Samsung Galaxy Watch owners - Android Police</title><link>https://www.androidpolice.com/google-clock-samsung-galaxy-watch-oneplus-incompatibility/</link></item>
-<item><title>Samsung&amp;#39;s next major software update could fix your Wi-Fi annoyances for good - Android Police</title><link>https://www.androidpolice.com/samsungs-one-ui-85-could-fix-your-wi-fi-annoyances-for-good/</link></item>
-<item><title>Samsung Galaxy TriFold leak shows it&amp;#39;s serious about replacing your laptop - Android Police</title><link>https://www.androidpolice.com/samsung-galaxy-trifold-appear-in-leaked-animations/</link></item>
-<item><title>One UI 8.5 could bring massive camera upgrades to Samsung phones - Android Police</title><link>https://www.androidpolice.com/samsung-one-ui-85-update-major-camera-upgrades/</link></item>
-<item><title>Have you ever wanted an e-reader that fits in your pocket? - Android Police</title><link>https://www.androidpolice.com/thread/have-you-ever-wanted-an-e-reader-that-fits-in-your-pocket/</link></item>
-<item><title>The ROG Xbox Ally handhelds will cost you up to $1000 - Android Police</title><link>https://www.androidpolice.com/rog-xbox-ally-handhelds-price/</link></item>
-<item><title>Ghost of Yōtei gets rave reviews ahead of its launch on PS5 next week - Android Police</title><link>https://www.androidpolice.com/ghost-of-yotei-reviews-positive/</link></item>
-<item><title>Forza Horizon 6 was finally announced by Xbox, and it&amp;#39;s set in Japan - Android Police</title><link>https://www.androidpolice.com/forza-horizon-6-announced/</link></item>
-<item><title>Early Prime Big Deal Days promotion drops the Blink Mini 2 security camera to just $17 - Android Police</title><link>https://www.androidpolice.com/blink-mini-2-security-camera-3-pack-bundle-50/</link></item>
-<item><title>Our favorite compact Samsung tablet is $194 off, and it comes with upgraded storage - Android Police</title><link>https://www.androidpolice.com/our-favorite-compact-samsung-tablet-is-194-off-and-it-comes-with-upgraded-storage/</link></item>
-<item><title>This Anker 65W USB-C wall charger hits an all-time low price at just $26 - Android Police</title><link>https://www.androidpolice.com/this-anker-65w-usb-c-wall-charger-hits-an-all-time-low-price-at-just-26/</link></item>
-<item><title>android launcher - Android Police</title><link>https://www.androidpolice.com/tag/android-launcher/</link></item>
-<item><title>pixel phones - Android Police</title><link>https://www.androidpolice.com/tag/pixel-phones/</link></item>
-<item><title>YouTube opens the doors to AI experiments, and Premium members get first dibs - Android Police</title><link>https://www.androidpolice.com/youtube-labs-lets-premium-subscribers-test-ai-functions/</link></item>
-<item><title>One UI 8.5 hands-on gives a closer look at Samsung’s next big update - Android Police</title><link>https://www.androidpolice.com/one-ui-85-hands-on-closer-look-samsungs-next-big-update/</link></item>
-<item><title>My smartwatch replaced my wallet before it replaced my watch - Android Police</title><link>https://www.androidpolice.com/wallet-on-my-wrist/</link></item>
-<item><title>contactless payments - Android Police</title><link>https://www.androidpolice.com/tag/contactless-payments/</link></item>
-<item><title>Pocket&amp;#39;s shutdown didn&amp;#39;t hurt my workflow, thanks to this free Chrome extension - Android Police</title><link>https://www.androidpolice.com/pocket-shutdown-didnt-hurt-my-workflow-thanks-to-chrome-extension/</link></item>
-<item><title>Your Google Pixel&amp;#39;s Live Caption shortcut could soon be easier to access - Android Police</title><link>https://www.androidpolice.com/google-pixel-live-caption-shortcut-easier-to-access/</link></item>
-<item><title>Samsung is readying a handy new Galaxy gesture you&amp;#39;ll want to use - Android Police</title><link>https://www.androidpolice.com/samsung-is-readying-a-handy-new-galaxy-gesture-youll-want-to-use/</link></item>
-<item><title>5 things to know about the wild Xiaomi 17, from dual screens to gaming cases - Android Police</title><link>https://www.androidpolice.com/5-things-to-know-about-the-wild-xiaomi-17/</link></item>
-<item><title>Calling Cards on Android are about to get a lot more customizable - Android Police</title><link>https://www.androidpolice.com/google-phone-calling-cards-beta-customization-android/</link></item>
-<item><title>Ditch your gym membership as Samsung Health’s iFIT integration goes live - Android Police</title><link>https://www.androidpolice.com/samsung-health-ifit-intergration-goes-live/</link></item>
-<item><title>Pixel Buds Pro 2 update introduces head gesture tricks and Adaptive Audio - Android Police</title><link>https://www.androidpolice.com/pixel-buds-pro-2-update-introduces-adaptive-audio-and-gesture-tricks/</link></item>
-<item><title>Google Pixel Buds Pro 2 - Android Police</title><link>https://www.androidpolice.com/tag/google-pixel-buds-pro-2/</link></item>
-<item><title>YouTube TV may face another high-stakes negotiation over its streaming content - Android Police</title><link>https://www.androidpolice.com/youtube-tv-could-lose-nbc-content/</link></item>
-<item><title>5 hidden Android Auto features that make driving easier - Android Police</title><link>https://www.androidpolice.com/hidden-android-auto-features-that-make-driving-easier/</link></item>
-<item><title>Nintendo Direct September 2025: Live Updates &amp; Everything Announced - Android Police</title><link>https://www.androidpolice.com/nintendo-direct-september-2025-live/</link></item>
-<item><title>Samsung Galaxy S26 leak highlights the new-look rear cameras - Android Police</title><link>https://www.androidpolice.com/samsung-galaxy-s26-series-rear-camera-protectors-leak/</link></item>
-<item><title>LHB Linux Digest #25.28: New Git For DevOps Course, Emacs Guide, Self-hosted Cloud Storage and More - Linux Handbook</title><link>https://linuxhandbook.com/newsletter/25-28/</link></item>
-<item><title>Chapter 10: Explore Remote Repositories With GitHub - Linux Handbook</title><link>https://linuxhandbook.com/courses/git-for-devops/remote-repositories-git/</link></item>
-<item><title>Chapter 9: Git Merge and Resolve Conflicts - Linux Handbook</title><link>https://linuxhandbook.com/courses/git-for-devops/git-merge-conflicts/</link></item>
-<item><title>Chapter 8: Branching - Linux Handbook</title><link>https://linuxhandbook.com/courses/git-for-devops/git-branching/</link></item>
-<item><title>Chapter 7: Press the Undo Button - Linux Handbook</title><link>https://linuxhandbook.com/courses/git-for-devops/undo-in-git/</link></item>
-<item><title>Chapter 6: Commits and Diff - Linux Handbook</title><link>https://linuxhandbook.com/courses/git-for-devops/git-commits-diff/</link></item>
-<item><title>Chapter 5: Recreating Git’s Init Process - Linux Handbook</title><link>https://linuxhandbook.com/courses/git-for-devops/git-init-process/</link></item>
-<item><title>Chapter 4: Staging Files and Creating First Commit - Linux Handbook</title><link>https://linuxhandbook.com/courses/git-for-devops/first-commit/</link></item>
-<item><title>Chapter 3: Installing and Configuring Git - Linux Handbook</title><link>https://linuxhandbook.com/courses/git-for-devops/configuring-git/</link></item>
-<item><title>Chapter 2: Git Architecture - Linux Handbook</title><link>https://linuxhandbook.com/courses/git-for-devops/git-architecture/</link></item>
-<item><title>Chapter 1: Git as a Version Control System - Linux Handbook</title><link>https://linuxhandbook.com/courses/git-for-devops/git-version-control-system/</link></item>
-<item><title>Git for DevOps - Linux Handbook</title><link>https://linuxhandbook.com/courses/git/</link></item>
-<item><title>Module 1: Timers and Automated Task Scheduling in Systemd - Linux Handbook</title><link>https://linuxhandbook.com/courses/systemd-automation/timers/</link></item>
-<item><title>Advanced Automation with systemd [Work in Progress] - Linux Handbook</title><link>https://linuxhandbook.com/courses/systemd-automation/</link></item>
-<item><title>LHB Linux Digest #25.27: zswap vs zram, subfinder, kubectl logs, systemd-inhibit and More Linux Stuff - Linux Handbook</title><link>https://linuxhandbook.com/newsletter/25-27/</link></item>
-<item><title>Finding Subdomains with Subfinder in Linux - Linux Handbook</title><link>https://linuxhandbook.com/finding-subdomains-subfinder/</link></item>
-<item><title>Exploring Ansible Modules - Linux Handbook</title><link>https://linuxhandbook.com/ansible-modules/</link></item>
-<item><title>LHB Linux Digest #25.26: tcpdump for cookie capture, GUI for Podman, diff command mastery and more - Linux Handbook</title><link>https://linuxhandbook.com/newsletter/25-26/</link></item>
-<item><title>Use tcpdump to Monitor HTTP Traffic and Extract Sensitive Data like Password and Cookies - Linux Handbook</title><link>https://linuxhandbook.com/tcpdump-http-traffic-analysis/</link></item>
-<item><title>LHB Linux Digest #25.25: tmux, ripgrep, Intro to Linux Command Line, Redis Alternative and More - Linux Handbook</title><link>https://linuxhandbook.com/newsletter/25-25/</link></item>
-<item><title>Learn Bash Quickly - Linux Handbook</title><link>https://linuxhandbook.com/ebooks/learn-bash-quickly/</link></item>
-<item><title>Learn Ansible Quickly - Linux Handbook</title><link>https://linuxhandbook.com/ebooks/learn-ansible-quickly/</link></item>
-<item><title>Learn Docker Quickly - Linux Handbook</title><link>https://linuxhandbook.com/ebooks/learn-docker-quickly/</link></item>
-<item><title>Learn Linux Quickly - Linux Handbook</title><link>https://linuxhandbook.com/ebooks/learn-linux-quickly/</link></item>
-<item><title>LHB Linux Digest #25.24: Learning Corners, apropos, Proxmox Monitoring, Handling Huge Log with Docker - Linux Handbook</title><link>https://linuxhandbook.com/newsletter/25-24/</link></item>
-<item><title>Single Docker Container Generated 20 GB of Log. Here&amp;#x27;s How I Reclaimed Disk Space - Linux Handbook</title><link>https://linuxhandbook.com/docker-log-space-issue/</link></item>
-<item><title>Check Logs from Previous Boot With Journalctl - Linux Handbook</title><link>https://linuxhandbook.com/journalctl-boot-logs/</link></item>
-<item><title>Rethinking DevOps - Linux Handbook</title><link>https://linuxhandbook.com/rethinking-devops/</link></item>
-<item><title>Getting Started With Tmux - Linux Handbook</title><link>https://linuxhandbook.com/tmux/</link></item>
-<item><title>Mirnotoriety - Slashdot</title><link>https://www.slashdot.org/~Mirnotoriety</link></item>
-<item><title>Conspiracy is bullshit - Slashdot</title><link>https://slashdot.org/comments.pl?sid=25/09/27/1819239&amp;cid=65687374&amp;sbsrc=topcom</link></item>
-<item><title>Fucking idiots - Slashdot</title><link>https://slashdot.org/comments.pl?sid=25/09/26/2359224&amp;cid=65686296&amp;sbsrc=topcom</link></item>
-<item><title>In other words - Slashdot</title><link>https://slashdot.org/comments.pl?sid=25/09/26/2359224&amp;cid=65686298&amp;sbsrc=topcom</link></item>
+<lastBuildDate>Mon, 29 Sep 2025 09:26:51 +0800</lastBuildDate>
+<item><title>How To Find Command Help In Linux (Man, Info, Apropos, Whatis, –help) - OSTechNix</title><link>https://ostechnix.com/linux-command-help-guide/</link></item>
+<item><title>Auf Dem Fahrrad - Listal</title><link>https://www.listal.com/list/auf-dem-fahrrad</link></item>
+<item><title>Very Merry Street Art - Listal</title><link>https://www.listal.com/list/christmas-316</link></item>
+<item><title>VS Event- Incredible Launch August 12, 2010 - Listal</title><link>https://www.listal.com/list/vs-event-incredible-launch-august</link></item>
+<item><title>VS Event- Candice &amp; Alessandra Do Brunch 10.20.11 - Listal</title><link>https://www.listal.com/list/vs-event-candice-alessandra-do</link></item>
+<item><title>I&amp;#39;m Lovin&amp;#39; That Dress ♥ - Listal</title><link>https://www.listal.com/list/im-lovin-that-dress</link></item>
+<item><title>Nippon is beautiful - Listal</title><link>https://www.listal.com/list/nippon-is-beautiful</link></item>
+<item><title>Favorite Childhood Comics - Listal</title><link>https://www.listal.com/list/favorite-comic-books</link></item>
+<item><title>Cheerleaders Galore - Listal</title><link>https://www.listal.com/list/cheerleaders-galore</link></item>
+<item><title>The Movies of 2008 - Listal</title><link>https://www.listal.com/list/the-movies-of-2008</link></item>
+<item><title>Movie Diary 2012: May - Listal</title><link>https://www.listal.com/list/movie-diary-2012-may</link></item>
+<item><title>Hipster-tized - Listal</title><link>https://www.listal.com/list/hipstertized</link></item>
+<item><title>Rock Your Hair! - Listal</title><link>https://www.listal.com/list/r-y-m</link></item>
+<item><title>Ah! Die Meeresluft - Listal</title><link>https://www.listal.com/list/ah-die-meeresluft</link></item>
+<item><title>Best Performances of 2011 - Listal</title><link>https://www.listal.com/list/best-performances-of-2011</link></item>
+<item><title>What&amp;#39;s The Gist Of Your Thought? - Listal</title><link>https://www.listal.com/list/whats-gist-your-thought</link></item>
+<item><title>The Street Art by Mentalgassi - Listal</title><link>https://www.listal.com/list/mentalgassi</link></item>
+<item><title>Badeanzug 2 Stück - Listal</title><link>https://www.listal.com/list/badeanzug-2-stuck</link></item>
+<item><title>Vogelperspektive - Listal</title><link>https://www.listal.com/list/vogelperspektive</link></item>
+<item><title>Arnold Schwarzenegger My Best to Worst - Listal</title><link>https://www.listal.com/list/arnold-schwarzenegger-my-best-worst</link></item>
+<item><title>Favorite Amnesia Films - Listal</title><link>https://www.listal.com/list/favorite-amnesia-films</link></item>
+<item><title>let&amp;#39;s make this short - Listal</title><link>https://www.listal.com/list/lets-make-this-short</link></item>
+<item><title>Hot Women from SITCOMs - Listal</title><link>https://www.listal.com/list/hot-women-from-sitcoms</link></item>
+<item><title>Nothin&amp;#39; But (Vintage) Net! - Listal</title><link>https://www.listal.com/list/nothin-but</link></item>
+<item><title>The Girls of Bollywood - Listal</title><link>https://www.listal.com/list/the-girls-of-bollywood</link></item>
+<item><title>Women in the nature - Listal</title><link>https://www.listal.com/list/denis-woman-nature</link></item>
+<item><title>The Idiot&amp;#39;s Guide To Famous (Classic) Filmmakers - Listal</title><link>https://www.listal.com/list/idiots-guide-famous-filmmakers</link></item>
+<item><title>And God created woman - Listal</title><link>https://www.listal.com/list/people-5325</link></item>
+<item><title>sara sampaio for vs, complete. - Listal</title><link>https://www.listal.com/list/sara-sampaio-vs-complete</link></item>
+<item><title>Frida Gustavsson [VS] - Listal</title><link>https://www.listal.com/list/frida-gustavsson-wendylorene</link></item>
+<item><title>This Popular Diet Seems to Reduce Gum Disease, Scientists Say - ScienceAlert</title><link>https://www.sciencealert.com/this-popular-diet-seems-to-reduce-gum-disease-scientists-say</link></item>
+<item><title>Half of Heart Attacks in Younger Women Aren&amp;#39;t From Clogged Arteries - ScienceAlert</title><link>https://www.sciencealert.com/half-of-heart-attacks-in-younger-women-arent-from-clogged-arteries</link></item>
+<item><title>The Sad Case of The Youngest-Ever Alzheimer&amp;#39;s Diagnosis - ScienceAlert</title><link>https://www.sciencealert.com/the-sad-case-of-the-youngest-ever-alzheimers-diagnosis</link></item>
+<item><title>DNA Study of 117-Year-Old Woman Reveals Clues to a Long Life - ScienceAlert</title><link>https://www.sciencealert.com/dna-study-of-117-year-old-woman-reveals-clues-to-a-long-life</link></item>
+<item><title>New Blood Pressure Guidelines Mean You May Now Have Hypertension - ScienceAlert</title><link>https://www.sciencealert.com/new-blood-pressure-guidelines-mean-you-may-now-have-hypertension</link></item>
+<item><title>Learning One Word Could Help Prevent a Third of Alzheimer&amp;#39;s Cases - ScienceAlert</title><link>https://www.sciencealert.com/learning-one-word-could-help-prevent-a-third-of-alzheimers-cases</link></item>
+<item><title>The Sound of Earth&amp;#39;s Flipping Magnetic Field Is an Unnerving Horror - ScienceAlert</title><link>https://www.sciencealert.com/the-sound-of-earths-flipping-magnetic-field-is-an-unnerving-horror</link></item>
+<item><title>Can You Guess Which Star Wars Character This Coral Is Named After? - ScienceAlert</title><link>https://www.sciencealert.com/can-you-guess-which-star-wars-character-this-coral-is-named-after</link></item>
+<item><title>Mysterious Signature in Greenland&amp;#39;s Ice Might Not Be From Space After All - ScienceAlert</title><link>https://www.sciencealert.com/mysterious-signature-in-greenlands-ice-might-not-be-from-space-after-all</link></item>
+<item><title>Largest Study of Its Kind Reveals The Genes Behind Dyslexia - ScienceAlert</title><link>https://www.sciencealert.com/largest-study-of-its-kind-reveals-the-genes-behind-dyslexia</link></item>
+<item><title>The Truth About Public Toilets, According to Science - ScienceAlert</title><link>https://www.sciencealert.com/the-truth-about-public-toilets-according-to-science</link></item>
+<item><title>Giant Stars With Black Holes Inside Them May Have Been Detected For The First Time - ScienceAlert</title><link>https://www.sciencealert.com/giant-stars-with-black-holes-inside-them-may-have-been-detected-for-the-first-time</link></item>
+<item><title>Chronic Insomnia May Spark Changes in The Brain That Trigger Dementia - ScienceAlert</title><link>https://www.sciencealert.com/chronic-insomnia-may-spark-changes-in-the-brain-that-trigger-dementia</link></item>
+<item><title>The First Black Hole We Ever Saw Is Doing Something Never Seen Before - ScienceAlert</title><link>https://www.sciencealert.com/the-first-black-hole-we-ever-saw-is-doing-something-never-seen-before</link></item>
+<item><title>This Week in Science: World&amp;#39;s Second-Largest Diamond, Fishy Finger Origins, And More! - ScienceAlert</title><link>https://www.sciencealert.com/this-week-in-science-worlds-second-largest-diamond-fishy-finger-origins-and-more</link></item>
+<item><title>The Alarming Boom in Height Surgery, And Why It&amp;#39;s So Risky - ScienceAlert</title><link>https://www.sciencealert.com/the-alarming-boom-in-height-surgery-and-why-its-so-risky</link></item>
+<item><title>Eerie Circles in Space Could Be Blasts From Black Holes - ScienceAlert</title><link>https://www.sciencealert.com/eerie-circles-in-space-could-be-blasts-from-black-holes</link></item>
+<item><title>The Moon Is Rusting, And It&amp;#39;s All Earth&amp;#39;s Fault - ScienceAlert</title><link>https://www.sciencealert.com/the-moon-is-rusting-and-its-all-earths-fault</link></item>
+<item><title>Scientists Discover Giant Black Hole Growing 2.4X Faster Than Theoretical Limit - ScienceAlert</title><link>https://www.sciencealert.com/scientists-discover-giant-black-hole-growing-2-4x-faster-than-theoretical-limit</link></item>
+<item><title>A Million-Year-Old Skull Just Rewrote The Origin Story of Humanity - ScienceAlert</title><link>https://www.sciencealert.com/a-million-year-old-skull-just-rewrote-the-origin-story-of-humanity</link></item>
+<item><title>Scientists Finally Reveal Why &amp;#39;Hobbits&amp;#39; Were So Small - ScienceAlert</title><link>https://www.sciencealert.com/scientists-finally-reveal-why-hobbits-were-so-small</link></item>
+<item><title>Global by Design: Leading Across Borders to Shape Digital Experiences - Codrops</title><link>https://tympanus.net/codrops/2025/09/25/global-by-design-leading-across-borders-to-shape-digital-experiences/</link></item>
+<item><title>Oliver Muñoz - Codrops</title><link>https://tympanus.net/codrops/author/oliveruncommonstudio-com-au/</link></item>
+<item><title>Lax Space: Designing With Duct Tape and Everyday Chaos - Codrops</title><link>https://tympanus.net/codrops/2025/09/23/lax-space-designing-with-duct-tape-and-everyday-chaos/</link></item>
+<item><title>Where Silence Speaks: Kakeru Taira on Transforming Everyday Spaces into Liminal Experiences - Codrops</title><link>https://tympanus.net/codrops/2025/09/22/where-silence-speaks-kakeru-taira-on-transforming-everyday-spaces-into-liminal-experiences/</link></item>
+<item><title>Motion Highlights #13 - Codrops</title><link>https://tympanus.net/codrops/2025/09/22/motion-highlights-13/</link></item>
+<item><title>LO2S × SNP &amp; DashDigital: Designing a Website Full of Movement and Energy - Codrops</title><link>https://tympanus.net/codrops/2025/09/19/lo2s-x-snp-dashdigital-designing-a-website-full-of-movement-and-energy/</link></item>
+<item><title>DashDigital Studio - Codrops</title><link>https://tympanus.net/codrops/author/rogandashdigital-io/</link></item>
+<item><title>Creating an Immersive 3D Weather Visualization with React Three Fiber - Codrops</title><link>https://tympanus.net/codrops/2025/09/18/creating-an-immersive-3d-weather-visualization-with-react-three-fiber/</link></item>
+<item><title>The Making of a Personal Project Platform: A Portfolio that Grew out of Process and Play - Codrops</title><link>https://tympanus.net/codrops/2025/09/17/the-making-of-a-personal-project-platform-a-portfolio-that-grew-out-of-process-and-play/</link></item>
+<item><title>Mike van der Sanden - Codrops</title><link>https://tympanus.net/codrops/author/mikekomma/</link></item>
+<item><title>From Figma to WordPress in Minutes with Droip - Codrops</title><link>https://tympanus.net/codrops/2025/09/16/from-figma-to-wordpress-in-minutes-with-droip/</link></item>
+<item><title>The Journey Behind inspo.page: A Better Way to Collect Web Design Inspiration - Codrops</title><link>https://tympanus.net/codrops/2025/09/15/the-journey-behind-inspo-page-a-better-way-to-collect-web-design-inspiration/</link></item>
+<item><title>Craft, Clarity, and Care: The Story and Work of Mengchu Yao - Codrops</title><link>https://tympanus.net/codrops/2025/09/12/designer-spotlight-mengchu-yao/</link></item>
+<item><title>When Cells Collide: The Making of an Organic Particle Experiment with Rapier &amp; Three.js - Codrops</title><link>https://tympanus.net/codrops/2025/09/11/when-cells-collide-the-making-of-an-organic-particle-experiment-with-rapier-three-js/</link></item>
+<item><title>Reality meets Emotion: The 3D Storytelling of Célia Lopez - Codrops</title><link>https://tympanus.net/codrops/2025/09/10/reality-meets-emotion-the-3d-storytelling-of-celia-lopez/</link></item>
+<item><title>Design Has Never Been More Important: Inside Shopify’s Acquisition of Molly - Codrops</title><link>https://tympanus.net/codrops/2025/09/08/design-has-never-been-more-important-inside-shopifys-acquisition-of-molly/</link></item>
+<item><title>Between Strategy and Story: Thierry Chopain’s Creative Path - Codrops</title><link>https://tympanus.net/codrops/2025/09/05/between-strategy-and-story-thierry-chopains-creative-path/</link></item>
+<item><title>From Zero to MCP: Simplifying AI Integrations with xmcp - Codrops</title><link>https://tympanus.net/codrops/2025/09/04/from-zero-to-mcp-simplifying-ai-integrations-with-xmcp/</link></item>
+<item><title>Valentina Bearzotti - Codrops</title><link>https://tympanus.net/codrops/author/valentinabearzotti/</link></item>
+<item><title>7 Must-Know GSAP Animation Tips for Creative Developers - Codrops</title><link>https://tympanus.net/codrops/2025/09/03/7-must-know-gsap-animation-tips-for-creative-developers/</link></item>
+<item><title>Carl Schooff - Codrops</title><link>https://tympanus.net/codrops/author/carl_schooff/</link></item>
+<item><title>A Behind-the-Scenes Look at the New Jitter Website - Codrops</title><link>https://tympanus.net/codrops/2025/09/02/a-behind-the-scenes-look-at-the-new-jitter-website/</link></item>
+<item><title>Mathieu Boulet - Codrops</title><link>https://tympanus.net/codrops/author/mathieu/</link></item>
+<item><title>Recreating Palmer’s Draggable Product Grid with GSAP - Codrops</title><link>https://tympanus.net/codrops/2025/09/01/recreating-palmers-draggable-product-grid-with-gsap/</link></item>
+<item><title>Joffrey Spitzer - Codrops</title><link>https://tympanus.net/codrops/author/joffreyspitzer/</link></item>
+<item><title>Play Lab: Pinecone Dolls - The Strong</title><link>https://www.museumofplay.org/event/play-lab-pinecone-dolls/2025-09-29/</link></item>
+<item><title>Firefox 将支持图像搜索 - Solidot</title><link>https://www.solidot.org/story?sid=82439</link></item>
+<item><title>比亚迪超跑时速突破 496 km/h - Solidot</title><link>https://www.solidot.org/story?sid=82438</link></item>
+<item><title>Eric Schmidt 呼吁美国科技行业拥抱中国的 996 工作制 - Solidot</title><link>https://www.solidot.org/story?sid=82436</link></item>
+<item><title>社交纽带的累积效应或有助于健康老龄化 - Solidot</title><link>https://www.solidot.org/story?sid=82435</link></item>
+<item><title>Louise Trotter Debuts the New-New Bottega Veneta at Milan Fashion Week - WMagazine</title><link>https://www.wmagazine.com/fashion/bottega-veneta-spring-2026-runway-show-photos</link></item>
+<item><title>The Best Looks From Milan Fashion Week Spring 2026 - WMagazine</title><link>https://www.wmagazine.com/fashion/milan-fashion-week-spring-2026-best-runway-looks-photos</link></item>
+<item><title>Meet Verde Visconti, the Gatekeeper of Miuccia Prada&amp;#39;s Empire - WMagazine</title><link>https://www.wmagazine.com/fashion/verde-visconti-miuccia-prada-miu-miu-interview</link></item>
+<item><title>At Milan Fashion Week, Ferragamo Heads to New Territory for Spring 2026 - WMagazine</title><link>https://www.wmagazine.com/fashion/ferragamo-spring-2026-collection-runway-photos</link></item>
+<item><title>Naomi Watts’s Best Red Carpet Moments Embody Hollywood Glamour - WMagazine</title><link>https://www.wmagazine.com/fashion/naomi-watts-best-red-carpet-fashion-style</link></item>
+<item><title>Cécred Haircare’s New Protection Collection: An Honest Review - WMagazine</title><link>https://www.wmagazine.com/beauty/cecred-hair-poducts-protection-collection-review</link></item>
+<item><title>Tightlining Is the Under-the-Radar Lash Technique That Makes Eyes Pop - WMagazine</title><link>https://www.wmagazine.com/beauty/tightlining-eyeliner-makeup-trend</link></item>
+<item><title>Jennifer Lawrence Dresses Like a Sexy Librarian in Cut-Out Belt Gown - WMagazine</title><link>https://www.wmagazine.com/fashion/jennifer-lawrence-cut-out-belt-dress-san-sebastian-film-festival</link></item>
+<item><title>Gwyneth Paltrow’s Best Red Carpet Looks Have Been Going Viral For Decades - WMagazine</title><link>https://www.wmagazine.com/fashion/gwyneth-paltrow-best-red-carpet-style-evolution</link></item>
+<item><title>Rihanna Dropped Maternity Fashion Hints She Was Expecting a Baby Girl - WMagazine</title><link>https://www.wmagazine.com/fashion/rihanna-maternity-fashion-hints-baby-gender-reveal</link></item>
+<item><title>Keira Knightley Goes for Victorian Drama in Embroidered Dress With High Collar - WMagazine</title><link>https://www.wmagazine.com/fashion/keira-knightley-yellow-floral-dress-high-collar-london</link></item>
+<item><title>The 7 New It Bags of Fall 2025 - WMagazine</title><link>https://www.wmagazine.com/fashion/it-bags-fall-2025</link></item>
+<item><title>Doja Cat’s ‘Gorgeous’ Video: A Guide To All The Supermodel Cameos - WMagazine</title><link>https://www.wmagazine.com/fashion/doja-cat-gorgeous-music-video-model-cameos-irina-shayk-anok-yai-alex-consani</link></item>
+<item><title>Breaking Down the Fashion World 2025 By the Numbers - WMagazine</title><link>https://www.wmagazine.com/fashion/fashion-by-the-numbers-fall-2025</link></item>
+<item><title>How the Bottega Veneta Cabat Bag Became an Icon of Discreet Luxury - WMagazine</title><link>https://www.wmagazine.com/fashion/bottega-veneta-cabat-bag-intrecciato-backstory</link></item>
+<item><title>Doja Cat&amp;#39;s Best Red Carpet Fashion Moments Are Always a Risk - WMagazine</title><link>https://www.wmagazine.com/fashion/doja-cat-best-red-carpet-moments</link></item>
+<item><title>Dakota Johnson Frees the Nipple in Drop-Waist Lace Gown by Demna&amp;#39;s Gucci - WMagazine</title><link>https://www.wmagazine.com/fashion/dakota-johnson-sheer-blue-lace-dress-drop-waist-zurich-film-festival</link></item>
+<item><title>Amelia Gray Hamlin Brings Indie Sleaze to Milan in Faux Fur Coat &amp; Low-Rise Jeans - WMagazine</title><link>https://www.wmagazine.com/fashion/amelia-gray-faux-fur-coat-printed-jeans-boots-milan-fashion-week</link></item>
+<item><title>Amelia Gray Hamlin Takes on New York City - WMagazine</title><link>https://www.wmagazine.com/fashion/amelia-gray-hamlin-takes-on-new-york-city</link></item>
+<item><title>Prada Spring 2026 Gives a Master Class in Dressing for an Uncertain Future - WMagazine</title><link>https://www.wmagazine.com/fashion/prada-spring-2026-runway-show-photos</link></item>
+<item><title>Emma Chamberlain Mixes Prep and Punk at Prada&amp;#39;s Show - WMagazine</title><link>https://www.wmagazine.com/fashion/emma-chamberlain-white-shirt-skirt-sheer-shirt-prada-show-milan</link></item>
+<item><title>Hailey Bieber Puts a Sultry Spin on This Classic Fall Color for a Night Out - WMagazine</title><link>https://www.wmagazine.com/fashion/hailey-bieber-brown-maxi-dress-leather-heels-los-angeles</link></item>
+<item><title>At Milan Fashion Week, Max Mara Does Extravagant Minimalism for Spring 2026 - WMagazine</title><link>https://www.wmagazine.com/fashion/max-mara-spring-2026-milan-fashion-week-runway-photos</link></item>
+<item><title>Jodie Turner-Smith Wears Old Motherboards &amp; Electronic Junk on the Red Carpet - WMagazine</title><link>https://www.wmagazine.com/fashion/jodie-turner-smith-couture-technology-dress-tron-premiere-paris</link></item>
+<item><title>Why Ibiza in the Fall Is the Perfect Off-Season Escape - WMagazine</title><link>https://www.wmagazine.com/life/ibiza-spain-travel-guide</link></item>
+<item><title>Rihanna Gives Birth to Third Child, First Daughter With A$AP Rocky - WMagazine</title><link>https://www.wmagazine.com/culture/rihanna-asap-rocky-third-baby-birth-gender-name</link></item>
+<item><title>Madelyn Cline &amp; Prince Constantine-Alexios Dating Rumors, Explained - WMagazine</title><link>https://www.wmagazine.com/culture/madelyn-cline-prince-constantine-alexios-dating-rumors-relationship</link></item>
+<item><title>Fendi’s Spring 2026 Show Was a Technicolor Reprieve From Reality - WMagazine</title><link>https://www.wmagazine.com/fashion/fendi-spring-2026-milan-fashion-week-runway-looks-photos</link></item>
+<item><title>Rosalía&amp;#39;s Best Red Carpet Moments Mix Spanish Elegance With Pop Star Glam - WMagazine</title><link>https://www.wmagazine.com/fashion/rosalia-best-fashion-style-evolution</link></item>
+<item><title>Rosé&amp;#39;s Sheer Babydoll Dress Looked Entirely Different on the Runway - WMagazine</title><link>https://www.wmagazine.com/fashion/rose-sheer-dress-bra-tube-socks-new-york</link></item>
+<item><title>The Insider&amp;#39;s Guide to the Berkshires—Where to Eat, Stay, and Play - WMagazine</title><link>https://www.wmagazine.com/life/berkshires-travel-guide-where-to-eat-drink-shop-art-culture</link></item>
+<item><title>Kobe Bryant&amp;#39;s Daughter Natalia Does Boho Style at Milan Fashion Week - WMagazine</title><link>https://www.wmagazine.com/fashion/natalia-bryant-white-boho-top-skirt-milan-fashion-week</link></item>
+<item><title>Gucci Spring 2026: The Demna Era Comes to Life With a Surreal, Star-Studded Film - WMagazine</title><link>https://www.wmagazine.com/fashion/gucci-spring-2026-demna-designer-debut-milan-fashion-week-photos</link></item>
+<item><title>Blackpink&amp;#39;s Jennie Goes Full Goth in a Witchy Skirt Suit - WMagazine</title><link>https://www.wmagazine.com/fashion/jennie-black-jacket-maxi-skirt-heels-seoul</link></item>
+<item><title>Inside Thaddaeus Ropac&amp;#39;s Paris Apartment Where Warhol, Duchamp &amp; Basquiat Hold Court - WMagazine</title><link>https://www.wmagazine.com/culture/thaddaeus-ropac-paris-apartment-photos-interview</link></item>
+<item><title>London Fashion Week Spring 2026: 9 Things We Saw and Loved on the Runways - WMagazine</title><link>https://www.wmagazine.com/fashion/london-fashion-week-spring-2026-runway-photos</link></item>
+<item><title>Demi Moore Is a Vision in Gold Fringe &amp; Beads at Milan Fashion Week - WMagazine</title><link>https://www.wmagazine.com/fashion/demi-moore-gold-sequin-dress-gucci-milan-fashion-week</link></item>
+<item><title>Dua Lipa Puts a Modest Spin on the Cone Bra Trend - WMagazine</title><link>https://www.wmagazine.com/fashion/dua-lipa-black-cone-bra-dress-cheetah-bag-new-york</link></item>
+<item><title>Why Jane Birkin Had the Right Idea About Getting Older - WMagazine</title><link>https://www.wmagazine.com/culture/jane-birkin-it-girl-biography-marisa-meltzer-interview</link></item>
+<item><title>Teyana Taylor&amp;#39;s Best Red Carpet Looks Make Her a Fierce Front Row Fixture - WMagazine</title><link>https://www.wmagazine.com/fashion/teyana-taylor-style-evolution-red-carpet-fashion</link></item>
+<item><title>The Insider&amp;#39;s Guide to New York City - WMagazine</title><link>https://www.wmagazine.com/culture/the-insiders-guide-to-new-york-city</link></item>
+<item><title>Rosé Believes in the Power of a Simple Tube Sock - WMagazine</title><link>https://www.wmagazine.com/fashion/rose-blackpink-white-socks-black-flats-the-row-bag-new-york</link></item>
+<item><title>Scarlett Johansson Finishes a Classic Black Dress With a Big, Bold Belt - WMagazine</title><link>https://www.wmagazine.com/fashion/scarlett-johansson-black-dress-statement-belt-new-york</link></item>
+<item><title>Napa Valley, California Travel Guide: Where to Drink Wine, Eat, Play, Shop, and See Nature Year-Round - WMagazine</title><link>https://www.wmagazine.com/life/napa-valley-california-travel-guide-vacation-best-wineries-restaurants</link></item>
+<item><title>Natural Selection: Fall 2025 Looks to Effortlessly Evolve Your Wardrobe - WMagazine</title><link>https://www.wmagazine.com/fashion/jamie-hawkesworth-brian-molloy-fall-2025-natural-selection-photos</link></item>
+<item><title>London Fashion Week Spring 2026: The Best Looks From the Runways - WMagazine</title><link>https://www.wmagazine.com/fashion/london-fashion-week-spring-2026-best-runway-looks-photos</link></item>
+<item><title>Today’s Hot Deals: James Gunn’s Superman, Native 1080p Portable Mini Projector, JBL FLIP 5 Portable Speaker, Shark NeverChange Air Purifier, and MORE! - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/09/28/todays-hot-deals-james-gunns-superman-native-1080p-portable-mini-projector-jbl-flip-5-portable-speaker-shark-neverchange-air-purifier-and-more/</link></item>
+<item><title>Microsoft Office Professional 2021 - Geeks are Sexy</title><link>https://store.geeksaresexy.net/sales/microsoft-office-professional-2021-for-windows-lifetime-license-8</link></item>
+<item><title>Microsoft Visio 2021 Professional: Lifetime License for Windows - Geeks are Sexy</title><link>https://store.geeksaresexy.net/sales/microsoft-visio-2021-professional-lifetime-license-for-windows-2</link></item>
+<item><title>xX_gamerw0lf_Xx [Comic] - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/09/28/xx_gamerw0lf_xx-comic/</link></item>
+<item><title>Guitar [Comic] - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/09/28/guitar-comic/</link></item>
+<item><title>Unsolicited Advice [Comic] - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/09/28/unsolicited-advice-comic/</link></item>
+<item><title>What Video Games Taught Me Better Than School or Parents Ever Could - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/09/28/what-video-games-taught-me-better-than-school-or-parents-ever-could/</link></item>
+<item><title>Today’s Hot Deals: Baseus ANC Headphones, 10000 Lumens Rechargeable Flashlights, GTPLAYER Gaming Chair, Inspiroy H1060P Graphics Drawing Tablet, and MORE! - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/09/27/todays-hot-deals-baseus-anc-headphones-10000-lumens-rechargeable-flashlights-gtplayer-gaming-chair-inspiroy-h1060p-graphics-drawing-tablet-and-more/</link></item>
+<item><title>InfoSec4TC Platinum Membership: Cyber Security Training Lifetime Access - Geeks are Sexy</title><link>https://store.geeksaresexy.net/sales/infosec4tc-platinum-membership-lifetime-access</link></item>
+<item><title>Cute and Cuddly with Caveats [Comic] - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/09/27/cute-and-cuddly-with-caveats-comic/</link></item>
+<item><title>Counter-Spell [Comic] - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/09/27/counter-spell-comic/</link></item>
+<item><title>《欧陆风云5》与《群星》亮相东京电玩展2025：玩家近距离体验与开发者现场分享 - 游研社</title><link>https://www.yystv.cn/p/12814</link></item>
+<item><title>SOC赛道还有高手？Rust正版授权《失控进化》9.26双端登岛测试 - 游研社</title><link>https://www.yystv.cn/p/13234</link></item>
+<item><title>《三国望神州》公测定档10月23日，亮相荆州古城与全球数贸会 - 游研社</title><link>https://www.yystv.cn/p/13233</link></item>
+<item><title>首发即全部：《王国保卫战5》的破局之道与西游DLC的文化锚点 - 游研社</title><link>https://www.yystv.cn/p/13231</link></item>
+<item><title>【白夜谈】成为“全国第一盖伦”是种怎样的体验？ - 游研社</title><link>https://www.yystv.cn/p/13229</link></item>
+<item><title>暴雪创始人的“偷打撤”新游，就指着网易来救场了 - 游研社</title><link>https://www.yystv.cn/p/13228</link></item>
+<item><title>在《黑神话》线下零售店买买买，我直接“金海尽干”了 - 游研社</title><link>https://www.yystv.cn/p/13218</link></item>
+<item><title>「我不会只在夺冠时才支持CNDOTA」 - 游研社</title><link>https://www.yystv.cn/p/13219</link></item>
+<item><title>搜打撤的下一阶段，拼的是长期主义 - 游研社</title><link>https://www.yystv.cn/p/13226</link></item>
+<item><title>一部描绘「中式青春」的黑白游戏正在Steam上逐渐出圈 - 游研社</title><link>https://www.yystv.cn/p/13221</link></item>
+<item><title>欧美多国推行在线年龄验证，一代人有一代人的“网络实名制” - 游研社</title><link>https://www.yystv.cn/p/13220</link></item>
+<item><title>不走寻常路的射击游戏系列，如何让“玩家”爽到飞起来 - 游研社</title><link>https://www.yystv.cn/p/13222</link></item>
+<item><title>Space Station Themed Window Frames - Adafruit Industries</title><link>https://blog.adafruit.com/2025/09/28/space-station-themed-window-frames/</link></item>
+<item><title>Arduino: From Blink to Think …or blink once… - Adafruit Industries</title><link>https://blog.adafruit.com/2025/09/28/arduino-from-blink-to-think-or-blink-once-for-open-source-twice-for-ai/</link></item>
+<item><title>Behind the Scenes of Metropolis (1927)… - Adafruit Industries</title><link>https://blog.adafruit.com/2025/09/28/behind-the-scenes-of-metropolis-1927-scifisunday/</link></item>
+<item><title>interior design - Adafruit Industries</title><link>https://blog.adafruit.com/tag/interior-design/</link></item>
+<item><title>space station - Adafruit Industries</title><link>https://blog.adafruit.com/tag/space-station/</link></item>
+<item><title>ip and attribution - Adafruit Industries</title><link>https://blog.adafruit.com/tag/ip-and-attribution/</link></item>
+<item><title>maker community - Adafruit Industries</title><link>https://blog.adafruit.com/tag/maker-community/</link></item>
+<item><title>oshwa certification - Adafruit Industries</title><link>https://blog.adafruit.com/tag/oshwa-certification/</link></item>
+<item><title>venture capital - Adafruit Industries</title><link>https://blog.adafruit.com/tag/venture-capital/</link></item>
+<item><title>Building An Over-engineered DOORBELL With Simone Giertz (One Day Build) - Adafruit Industries</title><link>https://blog.adafruit.com/2025/09/28/building-an-over-engineered-doorbell-with-simone-giertz-one-day-build/</link></item>
+<item><title>Adafruit Weekly Editorial Round-Up: Using the OPEN INSTALLER Button on circuitpython.org, The Great Search – Linear Image Sensor and more - Adafruit Industries</title><link>https://blog.adafruit.com/2025/09/28/adafruit-weekly-editorial-round-up-using-the-open-installer-button-on-circuitpython-org-the-great-search-linear-image-sensor-and-more/</link></item>
+<item><title>September is Library Card Sign-Up Month at NYPL! - Adafruit Industries</title><link>https://blog.adafruit.com/2025/09/28/september-is-library-card-sign-up-month-at-nypl/</link></item>
+<item><title>The Discovery of 6000 Exoplanets - Adafruit Industries</title><link>https://blog.adafruit.com/2025/09/27/the-discovery-of-6000-exoplanets/</link></item>
+<item><title>NASA’s New Celestial Cartographer - Adafruit Industries</title><link>https://blog.adafruit.com/2025/09/27/nasas-new-celestial-cartographer/</link></item>
+<item><title>Wearable MOTORIZED Wings From Borderlands 4 - Adafruit Industries</title><link>https://blog.adafruit.com/2025/09/27/wearable-motorized-wings-from-borderlands-4/</link></item>
+<item><title>UPDATED GUIDE: Adafruit MLX90632 FIR Remote Thermal Temperature Sensor #AdafruitIO #AdafruitLearningSystem #WipperSnapper @Adafruit - Adafruit Industries</title><link>https://blog.adafruit.com/2025/09/27/updated-guide-adafruit-mlx90632-fir-remote-thermal-temperature-sensor-adafruitlearningsystem-adafruit-ws/</link></item>
+<item><title>Temperature Sensors - Adafruit Industries</title><link>https://blog.adafruit.com/category/breakoutboards/temperature-sensors/</link></item>
+<item><title>Adafruit MLX90632 FIR Remote Thermal Temperature Sensor - Adafruit Industries</title><link>https://blog.adafruit.com/tag/adafruit-mlx90632-fir-remote-thermal-temperature-sensor/</link></item>
+<item><title>far infrared - Adafruit Industries</title><link>https://blog.adafruit.com/tag/far-infrared/</link></item>
+<item><title>remote infrared - Adafruit Industries</title><link>https://blog.adafruit.com/tag/remote-infrared/</link></item>
+<item><title>Maker Boi Made a Transforming Perry the Platypus Robot  from Phineas and Ferb - Adafruit Industries</title><link>https://blog.adafruit.com/2025/09/27/maker-boi-made-a-transforming-perry-the-platypus-robot-from-phineas-and-ferb/</link></item>
+<item><title>Updated Learn Guide: Adafruit BMP580, BMP581, and BMP585 – Temperature and Pressure Sensor #Sensors #AdafruitLearningSystem #AdafruitIO #WipperSnapper @Adafruit - Adafruit Industries</title><link>https://blog.adafruit.com/2025/09/26/updated-learn-guide-adafruit-bmp580-bmp581-and-bmp585-temperature-and-pressure-sensor-sensors-adafruitlearningsystem-adafruit-ws/</link></item>
+<item><title>air pressure - Adafruit Industries</title><link>https://blog.adafruit.com/tag/air-pressure/</link></item>
+<item><title>Manage your Filament with Spoolman on the Raspberry Pi #PiDay #RaspberryPi #3DPrinting - Adafruit Industries</title><link>https://blog.adafruit.com/2025/09/26/manage-your-filament-with-spoolman-on-the-raspberry-pi-piday-raspberrypi-3dprinting/</link></item>
+<item><title>AI Model Trapped in Raspberry Pi #piday #raspberrypi - Adafruit Industries</title><link>https://blog.adafruit.com/2025/09/26/ai-model-trapped-in-raspberry-pi-piday-raspberrypi/</link></item>
+<item><title>Kernel 6.15.4 Performance Tuned, Networking Polished, Stability Reinforced - Linux Journal</title><link>https://www.linuxjournal.com/content/kernel-6154-performance-tuned-networking-polished-stability-reinforced</link></item>
+<item><title>Python 3.13.5 Patch Release Packed with Fixes &amp; Stability Boosts - Linux Journal</title><link>https://www.linuxjournal.com/content/python-3135-patch-release-packed-fixes-stability-boosts</link></item>
+<item><title>Denmark’s Strategic Leap Replacing Microsoft Office 365 with LibreOffice for Digital Independence - Linux Journal</title><link>https://www.linuxjournal.com/content/denmarks-strategic-leap-replacing-microsoft-office-365-libreoffice-digital-independence</link></item>
+<item><title>Valve Survey Reveals Slight Retreat in Steam-on-Linux Share - Linux Journal</title><link>https://www.linuxjournal.com/content/valve-survey-reveals-slight-retreat-steam-linux-share</link></item>
+<item><title>burninatortech4 - AnandTech</title><link>https://www.anandtech.com/members/burninatortech4.341692/</link></item>
+<item><title>jamesdsimone - AnandTech</title><link>https://www.anandtech.com/members/jamesdsimone.366589/</link></item>
+<item><title>Ginger_McDou21 - AnandTech</title><link>https://www.anandtech.com/members/ginger_mcdou21.527294/</link></item>
+<item><title>Anyone still remember sliders and flagship keypad phones - AnandTech</title><link>https://www.anandtech.com/threads/anyone-still-remember-sliders-and-flagship-keypad-phones.2630803/post-41514249</link></item>
+<item><title>Cd ripping software - AnandTech</title><link>https://www.anandtech.com/threads/cd-ripping-software.2632145/post-41514040</link></item>
+<item><title>De-Rokufied our new &amp;quot;Roku TV&amp;quot; - AnandTech</title><link>https://www.anandtech.com/threads/de-rokufied-our-new-roku-tv.2621535/post-41514041</link></item>
+<item><title>okoroezenwa - AnandTech</title><link>https://www.anandtech.com/members/okoroezenwa.463819/</link></item>
+<item><title>Open source Conferences &amp; meetings all around the globe .... - AnandTech</title><link>https://www.anandtech.com/threads/open-source-conferences-meetings-all-around-the-globe.2630262/post-41514366</link></item>
+<item><title>Cant update to Win 11 - AnandTech</title><link>https://www.anandtech.com/threads/cant-update-to-win-11.2631212/post-41514395</link></item>
+<item><title>General VR discussion thread - AnandTech</title><link>https://www.anandtech.com/threads/general-vr-discussion-thread.2460026/post-41514218</link></item>
+<item><title>Weekly DC Stats - 28SEP2025 - AnandTech</title><link>https://www.anandtech.com/threads/weekly-dc-stats-28sep2025.2632257/post-41514179</link></item>
+<item><title>Tell me about Macrium and other backup software when you don&amp;#39;t have an optical drive. - AnandTech</title><link>https://www.anandtech.com/threads/tell-me-about-macrium-and-other-backup-software-when-you-dont-have-an-optical-drive.2624426/post-41510190</link></item>
+<item><title>The official ATOT Fast Food discussion thread - AnandTech</title><link>https://www.anandtech.com/threads/the-official-atot-fast-food-discussion-thread.2475588/post-41514414</link></item>
+<item><title>What is this Quantico Meeting-of-Generals all about? - AnandTech</title><link>https://www.anandtech.com/threads/what-is-this-quantico-meeting-of-generals-all-about.2632232/post-41514413</link></item>
+<item><title>Robotics : state of the art technologies and hobby - AnandTech</title><link>https://www.anandtech.com/threads/robotics-state-of-the-art-technologies-and-hobby.2210157/post-41511847</link></item>
+<item><title>William Gaatjes - AnandTech</title><link>https://www.anandtech.com/members/william-gaatjes.237558/</link></item>
+<item><title>New CAFE Gas Milage Standards...impacting safety and reliability. - AnandTech</title><link>https://www.anandtech.com/threads/new-cafe-gas-milage-standards-impacting-safety-and-reliability.2632166/post-41514394</link></item>
+<item><title>It is so weird to know that a widely used sweetener is made from coal tar. - AnandTech</title><link>https://www.anandtech.com/threads/it-is-so-weird-to-know-that-a-widely-used-sweetener-is-made-from-coal-tar.2618300/post-41513747</link></item>
+<item><title>Outdoor garage wall light placement, centre to wall or keep same distance from door? - AnandTech</title><link>https://www.anandtech.com/threads/outdoor-garage-wall-light-placement-centre-to-wall-or-keep-same-distance-from-door.2632265/post-41514415</link></item>
+<item><title>Red Squirrel - AnandTech</title><link>https://www.anandtech.com/members/red-squirrel.111499/</link></item>
+<item><title>Mod participation in threads - AnandTech</title><link>https://www.anandtech.com/threads/mod-participation-in-threads.2632132/post-41514043</link></item>
+<item><title>ICE fires first shot. - AnandTech</title><link>https://www.anandtech.com/threads/ice-fires-first-shot.2625159/post-41514412</link></item>
+<item><title>Doctors Tested a Common Drug on COVID. the Results Are Stunning - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250928095616.htm</link></item>
+<item><title>Fruit Might Be the Surprising Key to Healthier Lungs - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250928095620.htm</link></item>
+<item><title>New Inhaler Halves Childhood Asthma Attacks - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250928095611.htm</link></item>
+<item><title>The Accidental Discovery That Forged the Iron Age - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250927031245.htm</link></item>
+<item><title>Why “Dry” Oil Wells Aren’t Really Empty - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250927031239.htm</link></item>
+<item><title>Quantum Chips Just Proved They’re Ready for the Real World - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250927031230.htm</link></item>
+<item><title>Living with Purpose May Protect Your Brain from Dementia - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250927031227.htm</link></item>
+<item><title>Autism May Be the Price of Human Intelligence - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250927031224.htm</link></item>
+<item><title>Four Strange Secrets Scientists Just Found in Beer and Wine - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250927031219.htm</link></item>
+<item><title>Hidden Alzheimer’s Warning Signs Found in Parkinson’s Patients Without Dementia - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250927031217.htm</link></item>
+<item><title>Cocoa Supplements Show Surprising Anti-aging Potential - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250927031221.htm</link></item>
+<item><title>How the Brain Decides Which Moments You’ll Never Forget - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250927031214.htm</link></item>
+<item><title>What Happens to Your Body When You Eat Too Many Ultra-Processed Foods - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250927031211.htm</link></item>
+<item><title>Scientists Uncover How to Block Pain Without Side Effects - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250926035030.htm</link></item>
+<item><title>Headache Research - ScienceDaily</title><link>https://www.sciencedaily.com/news/health_medicine/headaches/</link></item>
+<item><title>Cambridge Scientists Created a Gel That Could End Arthritis Pain - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250925025401.htm</link></item>
+<item><title>This High-Sugar Fruit May Actually Lower Diabetes Risk - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250925025359.htm</link></item>
+<item><title>Mysterious “quantum Echo” in Superconductors Could Unlock New Tech - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250926035059.htm</link></item>
+<item><title>Breakthrough Wetsuits Slash Shark Attack Injuries and Save Lives - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250925025310.htm</link></item>
+<item><title>Can Meditation Apps Really Reduce Stress, Anxiety, and Insomnia? - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250922075000.htm</link></item>
+<item><title>Tiny New Lenses, Smaller Than a Hair, Could Transform Phone and Drone Cameras - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250921090853.htm</link></item>
+<item><title>Tiny Stones Rewrite Earth’s Evolution Story - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250926035026.htm</link></item>
+<item><title>Biochar’s Secret Power Could Change Clean Water Forever - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250926035019.htm</link></item>
+<item><title>Toxic Waste Could Become the Next Clean Energy Breakthrough - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250926035016.htm</link></item>
+<item><title>Hidden “electron Highways” Beneath Our Feet Could Revolutionize Pollution Cleanup - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250926035015.htm</link></item>
+<item><title>Hidden Bacterial Molecules in the Brain Reveal New Secrets of Sleep - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250925025336.htm</link></item>
+<item><title>Brain Fat, Not Just Plaques, May Be the Hidden Driver of Alzheimer’s - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250924012257.htm</link></item>
+<item><title>Scientists Reveal Pill That Helps Shed 20% of Body Weight - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250924012248.htm</link></item>
+<item><title>Tylenol in Pregnancy Linked to Higher Autism Risk, Harvard Scientists Report - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250924012222.htm</link></item>
+<item><title>How Dehydration Secretly Fuels Anxiety and Health Problems - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250923021148.htm</link></item>
+<item><title>Dementia-like Clumps Found in Cells Before Cancer Strikes - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250922074954.htm</link></item>
+<item><title>Hidden Brain Signal Reveals Alzheimer’s Years Before Symptoms - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250922074952.htm</link></item>
+<item><title>Childhood Plastic Exposure Could Be Fueling Obesity, Infertility, and Asthma - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250922074947.htm</link></item>
+<item><title>Sneezing from Cats or Dust? Safe UV Light May Neutralize Allergens in Minutes - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250922074945.htm</link></item>
+<item><title>A Hormone That Silences the Immune System May Unlock New Cancer Treatments - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250921091002.htm</link></item>
+<item><title>When Cancer Cells Feel Squeezed, They Become More Dangerous - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250921090904.htm</link></item>
+<item><title>Want a Younger Brain? Harvard Researchers Say Eat Like This - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250921090902.htm</link></item>
+<item><title>Could Your Smartphone Detect Mental Health Risks Before You Notice Them? - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250926035051.htm</link></item>
+<item><title>AI-Powered Smart Bandage Heals Wounds 25% Faster - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250924012232.htm</link></item>
+<item><title>A Tiny Mineral May Hold the Secret to Feeding Billions Sustainably - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250924012230.htm</link></item>
+<item><title>AI Breakthrough Finds Life-Saving Insights in Everyday Bloodwork - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250923021156.htm</link></item>
+<item><title>Scientists Reveal the Everyday Habits That May Shield You from Dementia - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250920214459.htm</link></item>
+<item><title>Scientists Discover Microplastics Deep Inside Human Bones - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250918225014.htm</link></item>
+<item><title>Could Plastic in Your Food Be Fueling Azheimer’s? - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250917221010.htm</link></item>
+<item><title>Rogue DNA Rings May Be the Secret Spark Driving Deadly Brain Cancer - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250916221917.htm</link></item>
+<item><title>This Surprising Building Material Is Strong, Cheap, and Sustainable - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250922074949.htm</link></item>
+<item><title>Why Alcohol Blocks the Liver from Healing, Even After You Quit - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250921090859.htm</link></item>
+<item><title>Your Pancreas May Be Making Its Own Version of Ozempic - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250920214455.htm</link></item>
+<item><title>Hardly Anyone Uses This Surprisingly Simple Fix for High Blood Pressure - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250919085237.htm</link></item>
+<item><title>New Cooling Breakthrough Nearly Doubles Efficiency - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250919085242.htm</link></item>
+<item><title>Cosmic Simulations That Once Needed Supercomputers Now Run on a Laptop - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250918225001.htm</link></item>
+<item><title>America Is Throwing Away the Minerals That Could Power Its Future - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250917221212.htm</link></item>
+<item><title>The Moon Could Finally Reveal Dark Matter - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250917220957.htm</link></item>
+<item><title>Tiny Magnetic Spirals Unlock the Future of Spintronics - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250913232933.htm</link></item>
+<item><title>Electrons That Act Like Photons Reveal a Quantum Secret - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250912195124.htm</link></item>
+<item><title>New Quantum Breakthrough Could Transform Teleportation and Computing - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250912195122.htm</link></item>
+<item><title>Google&amp;#39;s Quantum Computer Creates Exotic State Once Thought Impossible - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250912195119.htm</link></item>
+<item><title>Graphene Just Broke a Fundamental Law of Physics - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250912081319.htm</link></item>
+<item><title>Scientists Just Built a Detector That Could Finally Catch Dark Matter - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250910000302.htm</link></item>
+<item><title>Hit the Wrong Spot and an Asteroid Returns on a Collision Course - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250909031457.htm</link></item>
+<item><title>Light-powered Chip Makes AI 100 Times More Efficient - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250908175458.htm</link></item>
+<item><title>This New Camera Sees the Invisible in 3D Without Lenses - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250926035048.htm</link></item>
+<item><title>Scientists Brew “quantum Ink” to Power Next-Gen Night Vision - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250925025356.htm</link></item>
+<item><title>Scientists Crack the Explosive Secret of How Diamonds Reach the Surface - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250924012229.htm</link></item>
+<item><title>The Shocking Reason Arctic Rivers Are Turning Rusty Orange - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250922074938.htm</link></item>
+<item><title>This New AI Can Spot Solar Storms Days Before They Strike - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250916221824.htm</link></item>
+<item><title>Rapid Rocket Growth Raises Alarm Over Earth’s Fragile Ozone Layer - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250902085134.htm</link></item>
+<item><title>NASA Spacecraft Detect a Mysterious Force Shaping the Solar Wind - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250911073154.htm</link></item>
+<item><title>The Quantum Internet Just Went Live on Verizon’s Network - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250925025409.htm</link></item>
+<item><title>Scientists Unveil Breakthrough Pixel That Could Put Holograms on Your Smartphone - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250925025406.htm</link></item>
+<item><title>Caltech’s Massive 6,100-Qubit Array Brings the Quantum Future Closer - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250925025341.htm</link></item>
+<item><title>Scientists Just Made Atoms Talk to Each Other Inside Silicon Chips - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250920214318.htm</link></item>
+<item><title>Strange New Hybrid Bird Spotted in Texas Backyard - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250920214309.htm</link></item>
+<item><title>DNA from Old Ants Reveals a Hidden Insect Apocalypse in Fiji - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250919085246.htm</link></item>
+<item><title>Egg-eating Worms Could Be the Secret to Saving Chesapeake Bay’s Blue Crabs - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250918225022.htm</link></item>
+<item><title>Wildfire Smoke Could Kill 70,000 Americans a Year by 2050 - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250918225016.htm</link></item>
+<item><title>Why Alaska’s Salmon Streams Are Suddenly Bleeding Orange - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250918011602.htm</link></item>
+<item><title>Soil Warming Experiments Challenge Assumptions About Climate Change - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250916221823.htm</link></item>
+<item><title>Scientists Just Found the “Master Switch” for Plant Growth - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250915202831.htm</link></item>
+<item><title>A Volcano Erased an Island’s Plants. Their DNA Revealed How Life Starts Over - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250915202828.htm</link></item>
+<item><title>Scientists Just Found Hidden Parasitic Wasps Spreading Across the U. S. - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250914205835.htm</link></item>
+<item><title>Tiny Skaters Beneath the Arctic Ice Rewrite the Limits of Life - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250911073201.htm</link></item>
+<item><title>Scientists Finally Solve the Mystery of Ghostly Halos on the Ocean Floor - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250910000244.htm</link></item>
+<item><title>The Invisible Plastic Threat You Can Finally See - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250910000240.htm</link></item>
+<item><title>Stressed Koalas Are Facing a Deadly Epidemic - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250923021207.htm</link></item>
+<item><title>Insects Are Disappearing from the Last Places We Thought Were Safe - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250922074956.htm</link></item>
+<item><title>Goodbye Colonoscopy? Simple Stool Test Detects 90% of Colorectal Cancers - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250916221920.htm</link></item>
+<item><title>Guava’s Secret Molecule Could Fight Liver Cancer - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250914205840.htm</link></item>
+<item><title>Breakthrough Method Could Dramatically Cut Prescription Drug Prices - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250921090838.htm</link></item>
+<item><title>Scientists Stunned by Salt Giants Forming Beneath the Dead Sea - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250916221828.htm</link></item>
+<item><title>Toxic “forever Chemicals” Found in 95% of Beers Tested in the U.S. - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250911073204.htm</link></item>
+<item><title>Hungry Flathead Catfish Are Changing Everything in the Susquehanna - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250909031516.htm</link></item>
+<item><title>Forgotten Royal Warship Sunk 500 Years Ago Reveals Surprising Secrets - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250919085232.htm</link></item>
+<item><title>Doctors Warn of a Stealth Opioid 20x More Potent Than Fentanyl - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250917221004.htm</link></item>
+<item><title>The Foods That Delay Dementia and Heart Disease. Backed by a 15-year Study - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250909031513.htm</link></item>
+<item><title>Why So Many Young Kids With ADHD Are Getting the Wrong Treatment - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250915202839.htm</link></item>
+<item><title>1 in 8 Americans Have Already Tried Ozempic and Similar Weight Loss Medications - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250913232936.htm</link></item>
+<item><title>A Pink Bumpy Snailfish Was Just Discovered Miles Beneath the Ocean - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250926035023.htm</link></item>
+<item><title>This Flower Smells Like Dying Ants, and Flies Can’t Resist It - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2025/09/250925025308.htm</link></item>
 </channel></rss>
