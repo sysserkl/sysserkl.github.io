@@ -505,10 +505,12 @@ function sort_js_websites_b(csarr){
 }
 
 function js_arr_type_websites_b(csarr){
+    //网址载入过滤
     var klwebphp_path=klwebphp_path_b();
-
-    for (let blxl=0,lent=csarr.length;blxl<lent;blxl++){
-        var href_str=csarr[blxl][0];
+    var href_set=new Set();
+    var result_t=[];
+    for (let arow of csarr){
+        var href_str=arow[0];
         var count1=0;
         var count2=0;
         var count3=0;
@@ -523,16 +525,23 @@ function js_arr_type_websites_b(csarr){
             count1=1;
         }
         if (count3>0){
-            csarr[blxl][0]=href_str;
+            arow[0]=href_str;
         }
         if (count1==1){
-            if (csarr[blxl][2]=='CN' || csarr[blxl][2].slice(-3,)==',CN' || csarr[blxl][2].substring(0,3)=='CN,' || csarr[blxl][2].includes(',CN,')){
+            if (arow[2]=='CN' || arow[2].slice(-3,)==',CN' || arow[2].substring(0,3)=='CN,' || arow[2].includes(',CN,')){
                 count2=1;
             }
         }
-        csarr[blxl].push([count1,count2,count3]);   //selenium类型网址，其中CN网址，非selenium类型网址 - 保留注释
+        arow.push([count1,count2,count3]);   //selenium类型网址，其中CN网址，非selenium类型网址 - 保留注释
+        if (href_set.has(href_str)){
+            console.log('相同网址',arow);    //通常是RSS地址 - 保留注释
+        } else {
+            href_set.add(href_str);
+            result_t.push(arow);
+        }
     }
-    return csarr;
+    console.log('过滤前条数：',csarr.length,'过滤后条数：',result_t.length);
+    return result_t;
 }
     
 function search_js_websites_b(websites_list,keyword='',csnumber=999,enable_rnd=false,enable_jieba=false){

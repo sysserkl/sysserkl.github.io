@@ -175,7 +175,6 @@ function menu_klr2(){
     klmenu_fn=klmenu_fn.concat([
     '<span class="span_menu" onclick="'+str_t+'en_double_2_array_klr2();">en_double 2 array</span>',
     '<span class="span_menu" onclick="'+str_t+'en_double_2_array_klr2(true);">en_double 2 array html file</span>',
-    '<span class="span_menu" onclick="'+str_t+'add_to_html_klr_b(\'textarea_rows_content\',\'body\');">显示为HTML(body)</span>',    
     '<span class="span_menu" onclick="'+str_t+'html_to_image_klr_b();">保存为图片</span>',
     '<span class="span_menu" onclick="'+str_t+'setInterval(random_strs_klr2,5000);">每5秒生成随机字符串到剪贴板</span>',
     '<span class="span_menu" onclick="'+str_t+'random_txt_files_klr2('+fsize+');">随机生成'+fsize+'MB文本文件</span>',
@@ -183,6 +182,13 @@ function menu_klr2(){
     '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'rows\');">更新版本</span>',
     ]);
 
+    var group_list=[
+    ['显示为HTML(body)','add_to_html_klr_b(\'textarea_rows_content\',\'body\');',true],
+    ['markdown->HTML','markdown2html_klr2();',true],
+    ['HTML->markdown','markdown2html_klr2(true);',true],
+    ];    
+    klmenu_fn.push(menu_container_b(str_t,group_list,''));
+    
     var klmenu_sort=sort_menu_klr_b('textarea_rows_content',str_t);
       
     var klmenu_convert=[];
@@ -227,7 +233,7 @@ function menu_klr2(){
     '<a href="?klqr">KLQR(userscript)</a>',
     '<a href="image2base64.htm" onclick="'+str_t+'" target=_blank>Image 2 base64</a>',
     ];    
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_fn,'','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_sort,'↕','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_convert,'↔','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_batch,'🗂','20rem','1rem','1rem','60rem')+klmenu_b(klmenu_links,'链','12rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_fn,'','22rem','1rem','1rem','60rem')+klmenu_b(klmenu_sort,'↕','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_convert,'↔','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_batch,'🗂','20rem','1rem','1rem','60rem')+klmenu_b(klmenu_links,'链','12rem','1rem','1rem','60rem'),'','0rem')+' ');
 }
 
 function random_txt_files_klr2(cssize=100){
@@ -305,6 +311,26 @@ function form_set_klr2(){
         bljg=bljg+'<span class="aclick" onclick="diff_klr2();">diff</span>';
         op.insertAdjacentHTML('beforeend',bljg);
     }  
+}
+
+function markdown2html_klr2(is_reverse=false){
+    var otextarea=document.getElementById('textarea_rows_content');
+    var ostatus=document.getElementById('textarea_status');
+    var blstr=otextarea.value;
+    if (is_reverse){
+        const turndownService = new TurndownService({
+            headingStyle: 'atx' //或 setext - 保留注释
+        });
+  
+        const markdown = turndownService.turndown(blstr);
+        ostatus.value = markdown;    
+    } else {
+        var blhtml = marked.parse(blstr);
+        ostatus.value=blhtml;
+        var odiv=document.getElementById('divhtml');
+        odiv.innerHTML=blhtml;
+        odiv.scrollIntoView();
+    }
 }
 
 function diff_klr2(){
