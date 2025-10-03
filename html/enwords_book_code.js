@@ -166,7 +166,6 @@ function menu_enwords_book(){
     var format_list=[
     ['例句中','frequency_count_get_enwords(\'sentence_common\');',true],
     ['当前内容','frequency_count_get_enwords(\'textarea\');',true],
-    //['返回结果数：<input type="number" id="input_frequency_count_enwords" min=-1 step=1 value=4000 />','',false],
     ];
     klmenu_new.push(menu_container_b(str_t,format_list,'常见单词：'));
     
@@ -231,7 +230,7 @@ function menu_enwords_book(){
     '<span class="span_menu" onclick="'+str_t+'space2underline_enwords_book();">替换单词间空格为下划线</span> ',  
     '<span class="span_menu" onclick="'+str_t+'character2space_enwords_book(\'_\',\'下划线\');">替换下划线为空格</span> ',  
     '<span class="span_menu" onclick="'+str_t+'character2space_enwords_book(\'-\',\'连字符\');">替换连字符为空格</span> ',  
-    '<span class="span_menu">返回结果数：<input type="number" id="input_frequency_count_enwords" min=-1 step=1 value=4000 /></span>',
+    '<span class="span_menu">返回结果数：<input type="number" id="input_frequency_count_enwords" min=-1 step=1 value=-1 /></span>',
     ];
     
     format_list=[
