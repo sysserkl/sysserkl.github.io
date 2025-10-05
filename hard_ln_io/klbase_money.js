@@ -488,7 +488,7 @@ function elm_get_money_b(csstr,csdate,csaddress,to_line_style=false){
     //¥8.75
     csstr=csstr.replace(/^支持\d+天无理由$/mg,'');
     csstr=csstr.replace(/\n¥\n/g,'\n¥');
-    csstr=csstr.replace(/^(实付|折)$/mg,'');
+    csstr=csstr.replace(/^(实付|折|不?支持7天无理由)$/mg,'');
     csstr=csstr.replace(/\n+/mg,'\n');
     
     console.log(csstr);
@@ -497,6 +497,8 @@ function elm_get_money_b(csstr,csdate,csaddress,to_line_style=false){
     var result_t=[];
     var blname='';
     var blamount='';
+    var amount_count=0;
+    var price_count=0;
     for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         var item=list_t[blxl].trim();
         
@@ -509,21 +511,26 @@ function elm_get_money_b(csstr,csdate,csaddress,to_line_style=false){
                 continue;
             }
         }
+        
         if (blname==''){continue;}
         
         if (item.match(/^x\s*\d+$/g)!==null){
             blamount=item.replace(/^x\s*(\d+)$/g,'$1');
+            amount_count=amount_count+1;
             continue;
         }
+        
         if (blamount==''){continue;}
         
         if (item.match(/^¥[0-9\.]+$/)!==null){
             result_t.push([blname,blamount,item.slice(1,)]);
             blname='';
             blamount='';
+            price_count=price_count+1;
         }
     }
     
+    console.log('发现数量',amount_count,'处，发现价格',price_count,'处');
     if (!to_line_style){
         return result_t;
     }
@@ -548,7 +555,7 @@ function elm_get_money_b(csstr,csdate,csaddress,to_line_style=false){
 备注:`;
         line_style_list.push(blcontent);
     }    
-    return [result_t,line_style_list];
+    return [result_t,line_style_list,amount_count,price_count];
 }
 
 function import_elm_money_b(textarea_id='textarea_idb_content'){   //饿了么 - 保留注释
@@ -579,9 +586,9 @@ function import_elm_money_b(textarea_id='textarea_idb_content'){   //饿了么 -
     bladdress=bladdress.trim();
     localStorage.setItem('wp_import_address',bladdress);
     
-    var result_t,line_style_list;
-    [result_t,line_style_list]=elm_get_money_b(blstr,bldate,bladdress,true);
-
+    var result_t,line_style_list,amount_count,price_count;
+    [result_t,line_style_list,amount_count,price_count]=elm_get_money_b(blstr,bldate,bladdress,true);
+    
     if (result_t.length==0){
         return [false,false,'未发现饿了么数据'];
     }
@@ -590,7 +597,7 @@ function import_elm_money_b(textarea_id='textarea_idb_content'){   //饿了么 -
     for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
             alert_str.push((blxl+1)+'. '+result_t[blxl]);
     }
-    if (!confirm('是否转换以下记录以备导入：\n'+alert_str.join('\n'))){return [false,false,''];}
+    if (!confirm('发现数量：'+amount_count+' 处，发现价格：'+price_count+' 处\n是否转换以下记录以备导入：\n'+alert_str.join('\n'))){return [false,false,''];}
 
     otextarea.value=line_style_list.join('\n');
     return [result_t,line_style_list,''];
@@ -637,6 +644,7 @@ function import_vegetable_fruit_money_b(textarea_id,cscategory=false,do_ask=true
 function elm_buttons_money_b(dom_id,textarea_id){
     var blstr=`<span class="aclick" onclick="import_name_list_money_b(true,'`+textarea_id+`');">名称列表</span>
 <span class="aclick" onclick="import_statistics_money_b(true,'`+textarea_id+`');">数量与总价</span>
+实付总价：<input type="text" id="input_real_total_price_wp_import" /> <span class="aclick" onclick="import_adjust_price_money_b('`+textarea_id+`');">调整总价</span>
 合并为一条记录：<span class="aclick" onclick="import_merge_money_b('`+textarea_id+`');">执行</span>
 <span class="aclick" onclick="import_merge_money_b('`+textarea_id+`',1,'蔬菜');">数量为1的蔬菜</span>
 <span class="aclick" onclick="import_merge_money_b('`+textarea_id+`',1,'水果');">数量为1的水果</span>
@@ -653,6 +661,7 @@ function elm_buttons_money_b(dom_id,textarea_id){
     op.insertAdjacentHTML('beforeend',blstr);
     var input_list=[
     ['input_filter_wp_import',35,15],
+    ['input_real_total_price_wp_import',7,15],
     ];
     input_size_b(input_list,'id');  
     return op;
@@ -669,6 +678,34 @@ function import_name_list_money_b(do_alert=true,textarea_id='textarea_idb_conten
         alert(list_t.join('\n'));
     }
     return list_t;
+}
+
+function import_adjust_price_money_b(textarea_id='textarea_idb_content'){   
+    var otextarea,raw_list;
+    [otextarea,raw_list]=import_data_get_money_b(textarea_id).slice(0,2);
+    if (otextarea===false){return;}
+    if (raw_list.length==0){return;}
+
+    var total_price=import_statistics_money_b(false,textarea_id)[2];
+    var real_price=parseFloat(document.getElementById('input_real_total_price_wp_import').value.trim());
+    if (total_price.toFixed(2)==real_price.toFixed(2)){
+        alert('价格相同，取消操作');
+        return;
+    }
+    var percent=real_price/total_price;
+    if (!confirm('是否将总价从：'+total_price.toFixed(2)+'￥，调整为'+real_price+'￥？')){return;}
+
+    for (let blx=0,lent=raw_list.length;blx<lent;blx++){
+        var item=raw_list[blx].split('\n');
+        for (let bly=0,lenb=item.length;bly<lenb;bly++){
+            if (item[bly].startsWith('总价:')){
+                var blprice=parseFloat(item[bly].split('总价:')[1]);
+                item[bly]='总价:'+(percent*blprice).toFixed(2);
+            }
+        }
+        raw_list[blx]=item.join('\n');
+    }
+    otextarea.value='---\n'+raw_list.join('\n---\n');
 }
 
 function import_statistics_money_b(do_alert=true,textarea_id='textarea_idb_content'){
@@ -708,8 +745,8 @@ function import_data_get_money_b(textarea_id='textarea_idb_content'){
 }
 
 function import_merge_money_b(textarea_id='textarea_idb_content',amount_to_1=false,new_category_and_name=''){
-    var otextarea,raw_list,set_t;
-    [otextarea,raw_list,set_t]=import_data_get_money_b(textarea_id);
+    var otextarea,raw_list;
+    [otextarea,raw_list]=import_data_get_money_b(textarea_id).slice(0,2);
     if (otextarea===false){return;}
     if (raw_list.length==0){return;}
     
@@ -744,8 +781,8 @@ function import_merge_money_b(textarea_id='textarea_idb_content',amount_to_1=fal
 
 
 function import_filter_records_money_b(from_check_box=false,textarea_id='textarea_idb_content'){
-    var otextarea,raw_list,set_t;
-    [otextarea,raw_list,set_t]=import_data_get_money_b(textarea_id);
+    var otextarea,raw_list;
+    [otextarea,raw_list]=import_data_get_money_b(textarea_id).slice(0,2);
     if (otextarea===false){return;}
     
     var oinput=document.getElementById('input_filter_wp_import');
