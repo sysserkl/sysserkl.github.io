@@ -49,12 +49,16 @@ function menu_more_district_weather(){
 function fn_more_district_weather(){
     function sub_fn_more_district_weather_load_link(){
         var blcity=title_name_jscm_global.split(' ').slice(-1)[0];
-        var prev_month=prev_month_b().replace('-','');
+        
+        var ym_list=array_split_by_col_b(district_weather_global,[0]);        
+        ym_list.sort();
+        var blmonth=next_month_b(ym_list.slice(-1)[0].slice(0,7)).replace('-','');  //最大记录日期的下一个月 - 保留注释
+        
         if (title_name_jscm_global.startsWith('tianqihoubao ')){
-            var bllink='http://www.tianqihoubao.com/lishi/'+blcity+'/month/'+prev_month+'.html';    
+            var bllink='https://www.tianqihoubao.com/lishi/'+blcity+'/month/'+blmonth+'.html';    
             var site_name='天气后报';
         } else {
-            var bllink='https://m.tianqi.com/lishi/'+blcity+'/'+prev_month+'.html';
+            var bllink='https://m.tianqi.com/lishi/'+blcity+'/'+blmonth+'.html';
             var site_name='天气网'
         }
         var oa=document.getElementById('a_link_jsad_dweather');
@@ -63,7 +67,7 @@ function fn_more_district_weather(){
             oa.innerText=site_name;
         }
     }
-    load_fn_b('prev_month_b',sub_fn_more_district_weather_load_link);
+    load_fn_b('next_month_b',sub_fn_more_district_weather_load_link);
 }
 
 function statistics_temperature_district_weather(){

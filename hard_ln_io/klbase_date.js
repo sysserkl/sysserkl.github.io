@@ -74,6 +74,11 @@ function prev_month_b(csstr='',csmonths=1){
         blyear=blyear-1;
         blmonth=blmonth+12;
     }
+
+    if (blmonth>12){
+        blyear=blyear+1;
+        blmonth=blmonth-12;
+    }
     
     return blyear+'-'+('0'+blmonth).slice(-2);
 }
