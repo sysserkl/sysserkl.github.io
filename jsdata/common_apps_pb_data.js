@@ -86,6 +86,7 @@ var common_apps_pb_global=[
 ["{{selenium_news}}/html/study_flot.htm","study flot","📊","5"],
 ["{{selenium_news}}/html/study_js.htm","study js","study_js512.png","5"],
 ["{{selenium_news}}/html/study_leaflet.htm","study leaflet","📍","5"],
+["{{selenium_news}}/html/study_mermaid.htm","study mermaid","🧜‍♀","5"],
 ["{{selenium_news}}/html/sudoku.htm","Sudoku","sudoku512.png","5","game"],
 ["{{selenium_news}}/html/symbols.htm","Symbols","🔣️","5","character"],
 ["{{selenium_news}}/html/temp_txt_share.htm","Temp Txt Share Offline","📙","5"],
