@@ -1,4 +1,13 @@
 <?php
+function origin_g($subdir_or_file=''){
+    if (isset($_SERVER['HTTP_HOST'])){  #不能使用defined - 保留注释
+        return 'http://'.$_SERVER['HTTP_HOST'].'/'.$subdir_or_file;
+    }
+    else {
+        return 'http://127.0.0.1/'.$subdir_or_file;
+    }
+}
+
 function file_check_g($file_path_name,$show_full_name=false,$check_write=false,$check_is_file=true,$max_size=50){   //$max_size 单位 MB - 保留注释
     if ($show_full_name){
         $bname=$file_path_name;

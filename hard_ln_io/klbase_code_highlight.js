@@ -13,12 +13,21 @@ function prism_highlight_strings_klh_b(cscontent,filetype){
     '.txt':'text',
     };
     
-    var codetype=codetype_dict[filetype] || '';
+    var codetype='';
+    if (filetype in codetype_dict){
+        var codetype=codetype_dict[filetype];
+    } else {
+        var values=Object.values(codetype_dict);
+        if (values.includes(filetype)){
+            codetype=filetype;
+        }
+    }
+    
     if (codetype==''){
         return 'not found code type';
     }
     
-    var bljg='<pre class="line-numbers language-'+codetype+'" id="pre_prism">\n';            
+    var bljg='<pre class="line-numbers language-'+codetype+'">\n';
     bljg=bljg+'<code class="language-'+codetype+'">';        
     
     bljg=bljg+Prism.highlight(cscontent, Prism.languages[codetype], codetype);

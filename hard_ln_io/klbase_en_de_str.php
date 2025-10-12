@@ -56,7 +56,6 @@ function confuse_str_g($csstr,$cssegments=-1){
         return $csstr;
     }
     $csstr=utf8_strrev_g($csstr);
-    //echo $csstr;
     $len_t=mb_strlen($csstr);
 
 	if ($cssegments<0){
