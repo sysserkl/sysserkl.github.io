@@ -335,7 +335,10 @@ function books_generate_b(show_type=false,cstype='txt',cstag='all',enforce_refre
                 bljg=bljg+'">';
             } else if (cstype=='eng'){
                 bljg=bljg+'<a class="a_oblong_box" href="?book='+(parseInt(blno)+1)+'">';
+            } else if (cstype=='wiki'){
+                bljg=bljg+'<a class="a_oblong_box" href="?book='+(parseInt(blno)+1)+'&subtag='+specialstr92_b(cstag)+'">';                
             }
+            
 			if (csbookno_global==blno){
 				bljg=bljg+'<span class="span_current_book_item" style="color:'+scheme_global['a-hover']+';">';
 			}
@@ -346,7 +349,7 @@ function books_generate_b(show_type=false,cstype='txt',cstag='all',enforce_refre
             if (item[2].includes('已整理')){   //待完成整理后，删除
                 bljg=bljg+'✔';
             }
-			if (cstype=='txt' || cstype=='eng'){
+			if (['txt','eng','wiki'].includes(cstype)){
                 bljg=bljg+'</a> ';
             }
 		} else {

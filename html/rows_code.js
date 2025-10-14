@@ -466,7 +466,7 @@ function leaflet_en_buttons_klr2(){
     for (let item of ['base64','braille','morse']){
         buttons=buttons+'<option>'+item+'</option>';
     }
-    buttons=buttons+'</select>';
+    buttons=buttons+'</select> ';
     buttons=buttons+'<span class="aclick" onclick="transform_type_kl2(true);">encode</span> ';
     buttons=buttons+'<span class="aclick" onclick="transform_type_kl2(false);">decode</span> ';
         
