@@ -145,6 +145,19 @@ function str_en_de_kl2(cstype='double',en=true){
             }
             ostatus.value=list_t.join('\n');
             break;
+        case 'confuse':
+            var list_t=blstr.split('\n');
+            if (en){
+                for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
+                    list_t[blxl]=en_confuse_str_b(list_t[blxl]);
+                }
+            } else {
+                for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
+                    list_t[blxl]=de_confuse_str_b(list_t[blxl]);
+                }
+            }
+            ostatus.value=list_t.join('\n');        
+            break;
     }
 }
 
@@ -158,23 +171,9 @@ function menu_klr2(){
     ];    
     klmenu_fn.push(menu_container_b(str_t,group_list,'删除每行空格: '));
 
-    var group_list=[
-    ['en','str_en_de_kl2(\'url\',true);',true],
-    ['de','str_en_de_kl2(\'url\',false);',true],
-    ];    
-    klmenu_fn.push(menu_container_b(str_t,group_list,'codeURIComponent: '));
-    
-    var group_list=[
-    ['en','str_en_de_kl2(\'double\',true);',true],
-    ['de','str_en_de_kl2(\'double\',false);',true],
-    ];    
-    klmenu_fn.push(menu_container_b(str_t,group_list,'double: '));
-    
     var fsize=(ismobile_b()?50:100);
     
     klmenu_fn=klmenu_fn.concat([
-    '<span class="span_menu" onclick="'+str_t+'en_double_2_array_klr2();">en_double 2 array</span>',
-    '<span class="span_menu" onclick="'+str_t+'en_double_2_array_klr2(true);">en_double 2 array html file</span>',
     '<span class="span_menu" onclick="'+str_t+'html_to_image_klr_b();">保存为图片</span>',
     '<span class="span_menu" onclick="'+str_t+'setInterval(random_strs_klr2,5000);">每5秒生成随机字符串到剪贴板</span>',
     '<span class="span_menu" onclick="'+str_t+'random_txt_files_klr2('+fsize+');">随机生成'+fsize+'MB文本文件</span>',
@@ -183,12 +182,34 @@ function menu_klr2(){
     ]);
 
     var group_list=[
-    ['显示为HTML(body)','add_to_html_klr_b(\'textarea_rows_content\',\'body\');',true],
-    ['markdown->HTML','markdown2html_klr2();',true],
-    ['HTML->markdown','markdown2html_klr2(true);',true],
+    ['md->HTML','markdown2html_klr2();',true],
+    ['HTML->md','markdown2html_klr2(true);',true],
     ];    
-    klmenu_fn.push(menu_container_b(str_t,group_list,''));
+    klmenu_fn.push(menu_container_b(str_t,group_list,'markdown: '));
     
+    var klmenu_ende=[
+    '<span class="span_menu" onclick="'+str_t+'en_double_2_array_klr2();">en_double 2 array</span>',
+    '<span class="span_menu" onclick="'+str_t+'en_double_2_array_klr2(true);">en_double 2 array html file</span>',    
+    ];
+
+    var group_list=[
+    ['en','str_en_de_kl2(\'url\',true);',true],
+    ['de','str_en_de_kl2(\'url\',false);',true],
+    ];    
+    klmenu_ende.push(menu_container_b(str_t,group_list,'codeURIComponent: '));
+    
+    var group_list=[
+    ['en','str_en_de_kl2(\'double\',true);',true],
+    ['de','str_en_de_kl2(\'double\',false);',true],
+    ];    
+    klmenu_ende.push(menu_container_b(str_t,group_list,'double: '));
+
+    var group_list=[
+    ['en','str_en_de_kl2(\'confuse\',true);',true],
+    ['de','str_en_de_kl2(\'confuse\',false);',true],
+    ];    
+    klmenu_ende.push(menu_container_b(str_t,group_list,'confuse: '));
+        
     var klmenu_sort=sort_menu_klr_b('textarea_rows_content',str_t);
       
     var klmenu_convert=[];
@@ -233,7 +254,7 @@ function menu_klr2(){
     '<a href="?klqr">KLQR(userscript)</a>',
     '<a href="image2base64.htm" onclick="'+str_t+'" target=_blank>Image 2 base64</a>',
     ];    
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_fn,'','22rem','1rem','1rem','60rem')+klmenu_b(klmenu_sort,'↕','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_convert,'↔','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_batch,'🗂','20rem','1rem','1rem','60rem')+klmenu_b(klmenu_links,'链','12rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_fn,'','20rem','1rem','1rem','60rem')+klmenu_b(klmenu_ende,'🛡️','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_sort,'↕','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_convert,'↔','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_batch,'🗂','20rem','1rem','1rem','60rem')+klmenu_b(klmenu_links,'链','12rem','1rem','1rem','60rem'),'','0rem')+' ');
 }
 
 function random_txt_files_klr2(cssize=100){

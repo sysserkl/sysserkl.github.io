@@ -29,6 +29,7 @@ div.div_leaflet{border:0.1rem dotted grey; border-radius:1rem; padding:0.2rem 0.
 <form method="POST" action="" name="form_content_klr" target=_blank>
 <textarea name="textarea_rows_content" id="textarea_rows_content" style="width:90%;"></textarea>
 <p>
+<!--------------------->
 <span class="aclick span_leaflet" id="span_leaflet_insert" onclick="leaflet_klr2('insert')">插入</span>
 <span class="aclick span_leaflet" id="span_leaflet_lineno" onclick="leaflet_klr2('lineno')">行号</span>
 <span class="aclick span_leaflet" id="span_leaflet_duplicate" onclick="leaflet_klr2('duplicate')">重复</span>
@@ -38,17 +39,15 @@ div.div_leaflet{border:0.1rem dotted grey; border-radius:1rem; padding:0.2rem 0.
 <span class="aclick span_leaflet" id="span_leaflet_random" onclick="leaflet_klr2('random')">随机</span>
 <span class="aclick span_leaflet" id="span_leaflet_group" onclick="leaflet_klr2('group')">分组</span>
 <span class="aclick span_leaflet" id="span_leaflet_group" onclick="leaflet_klr2('en')">EN</span>
-
-<span class="aclick" onclick="add_to_html_klr_b();">显示为 HTML</span>
-<span class="aclick" onclick="add_to_html_klr_b('textarea_rows_content','div#divhtml',true)">执行 JavaScript</span>
+<span class="aclick span_leaflet" id="span_leaflet_group" onclick="leaflet_klr2('html_js')">HTML_JS</span>
+<!--------------------->
 <span class="aclick" onclick="blank_rows_add_klr_b();">add blank rows</span>
-<span class="aclick" onclick="strquick_klr_b('space2underline');">空格转换为下划线</span>
 <span class="aclick" onclick="strquick_klr_b('count');">字数、行数统计</span>
 常用操作：<select id="oquick" style="width:150px;"></select>
 <span class="aclick" onclick="strquick_klr_b(document.getElementById('oquick').value);">执行</span>
 <span class="aclick" onclick="temp_save_klr2('write','textarea_rows_content');">暂存</span>
 </p>
-
+<!--------------------->
 <div id="div_leaflet_insert" class="div_leaflet">
 在每一行的前面插入字符串：<input type="text" id="taddstr1" />
 在每一行的后面插入字符串：<input type="text" id="taddstr2" />
@@ -56,7 +55,7 @@ div.div_leaflet{border:0.1rem dotted grey; border-radius:1rem; padding:0.2rem 0.
 常用：<select id="select_leaflet_insert_common"></select>
 <span class="aclick" onclick="insert_common_klr2();">选择</span>
 </div>
-
+<!--------------------->
 <div id="div_leaflet_lineno" class="div_leaflet">
 在每一行的 <select id="fwhere"> 
 <option value=1>前面</option>
@@ -75,12 +74,12 @@ step：<input type="number" id="input_date_step_klr2" value=1 />
 
 <span class="aclick" onclick="do_type_klr2('date');">插入日期</span>
 </div>
-
+<!--------------------->
 <div id="div_leaflet_duplicate" class="div_leaflet" />
 将当前内容重复 <input type="number" id="tcopy" value=1 />&nbsp;次
 <span class="aclick" onclick="do_type_klr2('重复');">执行</span>
 </div>
-
+<!--------------------->
 <div id="div_leaflet_filter" class="div_leaflet">
 <select id="oget1">
 <option value="sel">提取</option>
@@ -94,16 +93,17 @@ step：<input type="number" id="input_date_step_klr2" value=1 />
 的行
 <span class="aclick" onclick="do_type_klr2('筛选');">筛选</span>
 </div>
-
+<!--------------------->
 <div id="div_leaflet_replace" class="div_leaflet">
 替换 <input type="text" id="rep1" /> 为 <input type="text" id="rep2" />
 <input type="text" id="input_reg_type_klr2" style="width:4rem;" placeholder="i|m|g" value="img">
 <label>逐行替换：<input type="checkbox" id="checkbox_replace_multiline_klr2" /></label>
 <span class="aclick" onclick="do_type_klr2('替换');">执行</span>
-常用：<select id="select_leaflet_replace_common"></select>
+常用：<select id="select_leaflet_replace_common" style="max-width:15rem;"></select>
 <span class="aclick" onclick="replace_common_klr2();">选择</span>
+<span class="aclick" onclick="strquick_klr_b('space2underline');">空格转换为下划线</span>
 </div>
-
+<!--------------------->
 <div id="div_leaflet_remove" class="div_leaflet">
 移除
 <select id="char_o">
@@ -113,7 +113,7 @@ step：<input type="number" id="input_date_step_klr2" value=1 />
 <input type="number" id="char_t" value=1 />&nbsp;个字符
 <span class="aclick" onclick="do_type_klr2('移除');">执行</span>
 </div>
-
+<!--------------------->
 <div id="div_leaflet_random" class="div_leaflet">
 <input type="number" id="input_rnd_lines" min=1 value=1 />行，
 每行字数：<input type="number" id="input_rnd_count_min" min=1 value=1 /> 
@@ -122,16 +122,22 @@ step：<input type="number" id="input_date_step_klr2" value=1 />
 <span class="aclick" onclick="do_type_klr2('随机英文');">随机英文</span> 
 <span class="aclick" onclick="do_type_klr2('随机字符');">随机字符</span> 
 </div>
-
+<!--------------------->
 <div id="div_leaflet_group" class="div_leaflet">
 每 <input type="number" id="input_line_interval" value=100 />&nbsp;行，
 插入一行(序号:NO)：<input type="text" id="input_new_line" /> 
 <span class="aclick" onclick="do_type_klr2('分组');">插入</span> 
 </div>
-
+<!--------------------->
 <div id="div_leaflet_en" class="div_leaflet">
 </div>
-
+<!--------------------->
+<div id="div_leaflet_html_js" class="div_leaflet">
+<span class="aclick" onclick="add_to_html_klr_b();">显示为 HTML</span>
+<span class="aclick" onclick="add_to_html_klr_b('textarea_rows_content','body');">显示为HTML(body)</span>
+<span class="aclick" onclick="add_to_html_klr_b('textarea_rows_content','div#divhtml',true)">执行 JavaScript</span>
+</div>
+<!--------------------->
 <p id="p_buttons_1" align=right></p>
 </form>
 <p id="p_version" align=right></p>
