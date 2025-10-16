@@ -337,6 +337,8 @@ function init_klsearch(){
             if (item.substring(0,4)=='http'){continue;}
             search_sites_list_global[blxl][0]=blhref+search_sites_list_global[blxl][0];
         }
+        search_sites_list_global.sort(function (a,b){return a[4].toLowerCase()>b[4].toLowerCase()?-1:1;});  //名称
+        search_sites_list_global.sort(function (a,b){return a[6]<b[6]?-1:1;});  //分类
     }
     
     search_sites_list_kl_global=[];
