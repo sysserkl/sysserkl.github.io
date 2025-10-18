@@ -45,10 +45,14 @@ function show_sites_klsearch(){
 }
 
 function search_site_klsearch(csno,csproxy=false,cskey='',openwindow=-1,showhtml=true,csencode=false){
-    if (csno<0 || csno>=search_sites_list_global.length){return '';}
+    if (csno<0 || csno>=search_sites_list_global.length){
+        return ['',[]];
+    }
+    
     if (cskey==''){
         cskey=document.getElementById('input_searchtxt').value;
     }
+    var raw_key=cskey;
     
     if (openwindow===-1){
         openwindow=document.getElementById('checkbox_openwindow').checked;
@@ -56,7 +60,7 @@ function search_site_klsearch(csno,csproxy=false,cskey='',openwindow=-1,showhtml
     
     recent_search_klsearch(cskey);
     var item=[].concat(search_sites_list_global[csno]);
-    
+
     //item 形如：[ "http://xxx/klsearch.htm?k=", "&t=batch_en_wiktionary&close=1" ] - 保留注释
     if (item[0].endsWith('klsearch.htm?k=') && (item[1].includes('&close=1') || item[1].includes('&iframe'))){  //klsearch.htm 不能在其前部添加/ - 保留注释
         var iframe_or_select='';
@@ -100,14 +104,21 @@ function search_site_klsearch(csno,csproxy=false,cskey='',openwindow=-1,showhtml
         }
     }
     blhref=href_replace_host_klsearch(blhref,item[6]);
-    
+
+    var link_list=[];
     if (openwindow){
         window.open(blhref);
+    } else {
+        var batch_type=item[1].match(/&t=(batch_.*?)&/);    //形如：[ "&t=batch_offline&", "batch_offline" ] - 保留注释
+        if (batch_type){
+            link_list=types_2_list_klsearch(batch_type[1],raw_key,'',showhtml);
+        }
     }
+
     if (showhtml){
-        document.getElementById('div_status').innerHTML='<a href="'+blhref+'" target=_blank>'+blhref+'</a>';
+        document.getElementById('div_status').innerHTML='<a href="'+blhref+'" target=_blank>'+blhref+'</a>'+(link_list.length>0?array_2_li_b(link_list):'');
     }
-    return blhref;
+    return [blhref,link_list];
 }
 
 function batch_open_sites_klsearch(cscategory){
@@ -137,17 +148,20 @@ function batch_open_sites_klsearch(cscategory){
 function batch_type_get_klsearch(cstype){
     switch (cstype){
         case 'batch_en':
-            var cstype='youdao,iciba,merriam-webster,TFD,AHD,learnersdictionary,lexico';//,dict.cn,wr_cn,dictionary.com,longman,wordnik';
+            cstype='youdao,iciba,merriam-webster,TFD,AHD,britannica,lexico';//,dict.cn,WR_CN,dictionary.com,longman,wordnik';
             //(is_local_b()?'KLWiki,':'') +'collins(p),wiktionary(p),' - 此两项保留 - 保留注释
             break;
         case 'batch_en+':
-            var cstype='Bing(cn),Oxford,Cambridge';
+            cstype='Bing(cn),Oxford,Cambridge';
             break;
         case 'batch_en_wiktionary':
             cstype='Wiktionary(Local),kaikki(Local),wordhippo,definitions';
             break;
         case 'batch_dwdlw':
-            cstype='dict.cn,wr_cn,dictionary.com,longman,wordnik';
+            cstype='dict.cn,WR_CN,dictionary.com,longman,wordnik';
+            break;
+        case 'batch_offline':
+            cstype='merriam-webster,AHD,britannica,Oxford,Cambridge,Cambridge_CN,WR_CN,dictionary.com,longman,wordnik,Collins,reverso';
             break;
     }
     
@@ -205,7 +219,7 @@ function iframe_generate_klsearch(cstype='',cskey=false,iframe_or_close=''){
         for (let blxl=0,lent=search_sites_list_global.length;blxl<lent;blxl++){
             var item=search_sites_list_global[blxl];
             if (one_type==item[4].toLowerCase()){
-                var blsrc=search_site_klsearch(blxl,is_proxy,cskey,false);
+                var blsrc=search_site_klsearch(blxl,is_proxy,cskey,false)[0];
                 if (is_local_file && blsrc.substring(0,4).toLowerCase()!=='http'){
                     if (blsrc.split('?')[0].slice(-4,).toLowerCase()=='.php'){continue;}
                 }
@@ -240,6 +254,33 @@ function iframe_generate_klsearch(cstype='',cskey=false,iframe_or_close=''){
     document.getElementById('div_recent_search').style.display='none';
     document.getElementById('div_search').style.display='none';
     document.title=cskey+' - KLSearch';
+}
+
+function types_2_list_klsearch(cstype,cskey,cscategory='',to_html=false){
+    var type_list=batch_type_get_klsearch(cstype);
+
+    var links_t=[];
+    for (let one_type of type_list){
+        let is_proxy=false;        
+        if (one_type.slice(-3,)=='(p)'){
+            is_proxy=true;
+            one_type=one_type.slice(0,-3);
+        }
+        
+        for (let blxl=0,lent=search_sites_list_global.length;blxl<lent;blxl++){
+            let item=search_sites_list_global[blxl];
+            if (one_type==item[4].toLowerCase()){
+                if (cscategory!=='' && cscategory!==item[6].toLowerCase()){continue;}
+                let blhref=search_site_klsearch(blxl,is_proxy,cskey,false,false)[0];
+                if (to_html){
+                    blhref='<a href="'+blhref+'" target=_blank>'+blhref+'</a>';
+                }
+                links_t.push(blhref);
+            }
+        }
+    }
+    links_t.sort();
+    return links_t;
 }
 
 function args_klsearch(){
@@ -278,25 +319,7 @@ function args_klsearch(){
         return;
     }
     
-    bltype=batch_type_get_klsearch(bltype);
-    var links_t=[];
-    for (let one_type of bltype){
-        var is_proxy=false;        
-        if (one_type.slice(-3,)=='(p)'){
-            is_proxy=true;
-            one_type=one_type.slice(0,-3);
-        }
-        
-        for (let blxl=0,lent=search_sites_list_global.length;blxl<lent;blxl++){
-            var item=search_sites_list_global[blxl];
-            if (one_type==item[4].toLowerCase()){
-                if (blcategory!=='' && blcategory!==item[6].toLowerCase()){continue;}
-                var blhref=search_site_klsearch(blxl,is_proxy,blkey,false);
-                links_t.push(blhref);
-            }
-        }
-    }
-    
+    var links_t=types_2_list_klsearch(bltype,blkey,blcategory);
     if (links_t.length==0){return;}
     
     for (let blxl=0,lent=links_t.length-1;blxl<lent;blxl++){
@@ -428,9 +451,9 @@ function one_key_to_all_links_klsearch(){
     var list_t=[];
     for (let blxl=0,lent=search_sites_list_global.length;blxl<lent;blxl++){
         var item=search_sites_list_global[blxl];
-        list_t.push([item[4],search_site_klsearch(blxl,false,blkey,false,false)]);
+        list_t.push([item[4],search_site_klsearch(blxl,false,blkey,false,false)[0]]);
         if (item[5].includes('p')){
-            list_t.push([item[4]+'(p)',search_site_klsearch(blxl,true,blkey,false,false)]);
+            list_t.push([item[4]+'(p)',search_site_klsearch(blxl,true,blkey,false,false)[0]]);
         }
     }
     var bljg='';
@@ -542,7 +565,12 @@ function batch_keys_links_klsearch(){
     for (let one_key of list_t){
         one_key=one_key.trim();
         if (one_key==''){continue;}
-        result_t.push([search_site_klsearch(csno,isproxy,one_key,false,false,do_en),one_key]);
+        let bllink=search_site_klsearch(csno,isproxy,one_key,false,false,do_en);
+        result_t.push([bllink[0],one_key]);
+        
+        for (let item of bllink[1]){
+            result_t.push([item,one_key]);        
+        }
     }
     
     var add_key=document.getElementById('checkbox_key_name_klsearch').checked;

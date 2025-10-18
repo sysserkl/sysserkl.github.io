@@ -20,7 +20,7 @@ var search_sites_list_global=[
 ['https://www.behindthename.com/name/','',2,'','btn','','English',''],
 ['https://kaikki.org/dictionary/English/words/index.html?s=','',0,'#CC6600','kaikki','0','English',''], 
 
-['https://learnersdictionary.com/definition/','',0,'','learnersdictionary','','English',''],
+['https://www.britannica.com/dictionary/','',0,'','britannicadict','','English',''],
 ['https://www.ldoceonline.com/dictionary/','',2,'','Longman','0','English',''],    
 ['https://www.oed.com/search/dictionary/?q=','',1,'','oed','0','English',''],
 ['https://dictionary.reverso.net/english-definition/','',1,'','reverso','0','English',''],
@@ -91,6 +91,7 @@ var search_sites_list_global=[
 ['https://en.search.wordpress.com/?q=','',0,'','WordPress.com','','SNS',''],
 
 //以下不复制到 userscript 中 - 保留注释
+//batch 系列格式为 &t=batch_type& - 保留注释
 ['txtlistsearch.htm?_tag','_reg',0,'','📚','b0','Local','书目查询'],
 ['rnd_english_words.htm?s=','(:r)',0,'','🇬🇧','b','Local','随机单词'],
 ['bible.htm?s=','(:r)',0,'red','✝','b0','Local','Bible'],
@@ -98,5 +99,6 @@ var search_sites_list_global=[
 ['klsearch.htm?k=','&t=batch_en+&iframe',0,'darkslategray','KLSearch(en+)','0','Local',''],
 ['klsearch.htm?k=','&t=batch_en_wiktionary&close=1',0,'','KLSearch(wiktionary)','1','Local',''],
 ['klsearch.htm?k=','&t=batch_dwdlw&close=1',0,'','KLSearch(dwdlw)','0','Local',''],
+['klsearch.htm?k=','&t=batch_offline&close=1',0,'','KLSearch(batch_offline)','0','Local',''],
 
 ];
