@@ -132,12 +132,18 @@ function menu_enwords_book(){
     var str2_t=klmenu_hide_b('#div_new_words2');
     var klmenu1=[
     '<a href="enwords.htm" onclick="'+str_t+'" target=_blank>单词库</a>',
-    '<span class="span_menu" onclick="'+str2_t+'get_new_words_arr_set_enbook_b(4);">旧单词js_wiki格式</span>',
-    '<span class="span_menu" onclick="'+str2_t+'get_new_words_arr_set_enbook_b(6);">稀有旧单词js_wiki格式</span>',
     '<span class="span_menu" onclick="'+str2_t+'show_sentence_enwc_b(3,true);">显示少量例句</span>',
     '<span class="span_menu" onclick="'+str_t+'words_sort_count_enwords_book();">单词数量统计排序</span>',
     '<span class="span_menu" onclick="'+str_t+'txtlistsearch_open_enwords_book();">打开当前电子书</span>',
     ];
+
+    var scoll_str='document.getElementById(\'div_new_words2\').scrollIntoView();';
+    var format_list=[
+    ['新','get_new_words_arr_set_enbook_b(7);'+scoll_str,true],
+    ['旧','get_new_words_arr_set_enbook_b(4);'+scoll_str,true],
+    ['稀有','get_new_words_arr_set_enbook_b(6);'+scoll_str,true],
+    ];    
+    klmenu1.push(menu_container_b(str_t,format_list,'js_wiki格式：'));    
     
     if (is_local_b()){
         klmenu1.push('<span class="span_menu" onclick="'+str_t+'onetab_links_enwords_book();">onetab链接</span>');
@@ -145,8 +151,10 @@ function menu_enwords_book(){
 
     var klmenu_new=[];
     var format_list=[
-    ['全部','day_new_enwords_book();',true],
-    ['过滤','filter_new_enwords_book();',true],
+    ['全部(y)','day_new_enwords_book(false,\'y\');',true],
+    ['过滤(y)','day_new_enwords_book(true,\'y\');',true],
+    ['全部(m)','day_new_enwords_book(false,\'m\');',true],
+    ['过滤(m)','day_new_enwords_book(true,\'m\');',true],
     ];    
     klmenu_new.push(menu_container_b(str_t,format_list,'今日新单词：'));    
     
@@ -660,11 +668,6 @@ function max_length_new_enwords_book(){
     document.getElementById('textarea_new_words1').value='最长('+list_t[0].length+'-'+list_t.slice(-1)[0].length+')的 '+list_t.length+' 个单词：\n'+list_t.join('\n');
 }
 
-function filter_new_enwords_book(){
-    day_new_enwords_book(true);
-    get_new_words_arr_set_enbook_b(2);
-}
-
 function title_set_enwords_book(){
     var bltitle='生词统计';
     if (csbookno_global>=0 && csbookno_global<csbooklist_sub_global.length){
@@ -803,11 +806,22 @@ function current_statistics_data_enwords_book(csid,iscurrent){
     document.getElementById('textarea_compare_'+csid).value=blresult;
 }
 
-function day_new_enwords_book(do_filter=false){
+function day_new_enwords_book(do_filter=false,group_by='y'){
     if (check_all_new_enwords_book()===false){return;}
-    //var days=day_of_year_b();   //当年第几天，此行保留 - 保留注释
-    var days=date_2_ymd_b(false,'d');
     
+    switch (group_by){
+        case 'y':
+            var days=day_of_year_b();   //当年第几天，此行保留 - 保留注释
+            var group_len=366;
+            break;
+        case 'm':
+            var days=date_2_ymd_b(false,'d'); //本月第几天，此行保留 - 保留注释
+            var group_len=31;
+            break;
+        default:
+            return [];
+    }
+        
     var result_t=[];
     for (let item of all_new_words_global){
         if (do_filter){
@@ -815,7 +829,8 @@ function day_new_enwords_book(do_filter=false){
             if (item.split('-').length>=2){continue;}
             if (item.substring(0,1)!==item.substring(0,1).toLowerCase()){continue;} //首字母大写 - 保留注释
         }
-        if ((1+asc_sum_b(item)%31)==days){  //原本365 - 保留注释
+        let asc_sum=asc_sum_b(item);
+        if (1+asc_sum%group_len==days){
             result_t.push(item);
         }
     }

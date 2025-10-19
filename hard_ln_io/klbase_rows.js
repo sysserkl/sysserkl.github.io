@@ -510,7 +510,17 @@ function chinese_punctuation_b(csstr){
     return csstr;
 }
 
-function strquick_klr_b(cstype='',csid='textarea_rows_content',status_id='textarea_status',start_no=1,no_len=1){
+function strquick_klr_b(cstype='',csid='textarea_rows_content',status_id='textarea_status',start_no=1,no_len=1,csseconds=false){
+    if (csseconds===false){
+        var oinput=document.getElementById('input_seconds_strquick_b');
+        if (oinput){
+            csseconds=parseFloat(oinput.value.trim()) || 1;
+        } else {
+            csseconds=1;
+        }
+    }
+    csseconds=Math.max(0,csseconds);
+    
     var ostatus=document.getElementById(status_id);
     if (ostatus){
         ostatus.value=cstype + ' 处理前行数：' + document.getElementById(csid).value.split('\n').length;
@@ -730,7 +740,7 @@ function strquick_klr_b(cstype='',csid='textarea_rows_content',status_id='textar
         case 'oxford_klsearch_en':
         case 'cambridge':
         case 'kaikki':
-            batch_open_www_klr_b(csid,ostatus,cstype);
+            batch_open_www_klr_b(csid,ostatus,cstype,csseconds);
             break;
         case 'count':
             if (ostatus){
@@ -800,7 +810,7 @@ function clear_copy_tab_title_url_klr_b(csid){
     otextarea.value=bljg.join('\n');
 }
 
-function batch_open_www_klr_b(csid,ostatus,cstype=''){
+function batch_open_www_klr_b(csid,ostatus,cstype='',csseconds=1){
     function sub_batch_open_www_klr_b_one_link(){
         if (blxl>=bllen){
             if (ostatus){
@@ -819,7 +829,7 @@ function batch_open_www_klr_b(csid,ostatus,cstype=''){
         }
         blxl=blxl+1;
         document.title=blxl+'/'+bllen+' - '+old_title;
-        setTimeout(sub_batch_open_www_klr_b_one_link,1000);
+        setTimeout(sub_batch_open_www_klr_b_one_link,csseconds*1000);
     }
     //-----------------------
     var blstr=document.getElementById(csid).value.trim();

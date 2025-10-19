@@ -4874,3 +4874,19 @@ function arr_keep_first_and_last_b(arr, x, y,return_zero=false){
     
     return arr;
 }
+
+function windows_filename_b(csstr,cstype='fullname'){
+    let reg_exp=/[<>/\\|:*?"]/g;
+    switch (cstype){
+        case 'reg':
+            return reg_exp;
+        case 'fullname':
+            var list_t=file_path_name_b(csstr);
+            return list_t[0]+list_t[3].replace(reg_exp,'_');
+        case 'basename':
+            var list_t=file_path_name_b(csstr);
+            return list_t[0]+list_t[1].replace(reg_exp,'_')+'.'+list_t[2];
+        default:
+            return csstr.replace(reg_exp,'_');
+    }
+}

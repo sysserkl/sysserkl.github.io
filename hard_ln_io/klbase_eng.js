@@ -1650,7 +1650,7 @@ function enwords_lines_2_js_array_b(aword,emoji_list,three_lines=false){
 function enwords_different_types_div_b(cswlist,add_form=false,textarea_id='',textarea_name='',button_type='',more_buttons=''){
     var blstr='<p>';
     blstr=blstr+'<select onchange="enwords_different_types_textarea_b(this);">';
-    var type_names=['','asterisk','cut','js','temp','wiki','reg','space','rare_words','filter','group','random_sort','switch with the first textarea','移除行无非字母字符'];
+    var type_names=['','(o)asterisk','cut','(o)js','count','(o)temp','(o)wiki','reg','space','rare_words','filter','group','random_sort','switch with the first textarea','移除行无非字母字符'];
     type_names.sort();
     for (let item of type_names){
         blstr=blstr+'<option>'+item+'</option>\n';
@@ -1761,8 +1761,11 @@ function enwords_different_types_textarea_b(oselect){
     let bljg='';
     let result_t,blkey;
     switch (oselect.value){
-        case 'asterisk':
+        case '(o)asterisk':
             bljg=enwords_wiki_type_words_b(raw_list,one_textarea,true);
+            break;
+        case 'count':
+            alert(raw_list.length);
             break;
         case 'cut':
             blkey=prompt('输入 slice 范围（0～'+(raw_list.length-1)+'），格式如 10,20，可输入负数：');
@@ -1788,13 +1791,13 @@ function enwords_different_types_textarea_b(oselect){
                 }
             }
             break;
-        case 'js':
+        case '(o)js':
             bljg=enwords_js_type_words_b(raw_list,one_textarea,remove_emoji);
             break;
-        case 'temp':
+        case '(o)temp':
             bljg=enwords_js_type_words_b(raw_list,one_textarea,remove_emoji,true);
             break;
-        case 'wiki':
+        case '(o)wiki':
             bljg=enwords_wiki_type_words_b(raw_list,one_textarea,false);        
             break;
         case 'reg':
@@ -1900,10 +1903,7 @@ function enwords_js_type_words_b(cswlist,onetextarea=false,remove_emoji=false,th
 
 function enwords_different_types_result_b(cslist,onetextarea){
     cslist.sort(function (a,b){return a[1]<b[1] ? 1 : -1;});
-    var bljg='';    
-    for (let item of cslist){
-        bljg=bljg+item[0];
-    }
+    var bljg=array_split_by_col_b(cslist,[0]).join('');  //已经含有\n - 保留注释
     if (onetextarea){
         var firstword='';
         if (cslist.length>1){
@@ -1916,8 +1916,8 @@ function enwords_different_types_result_b(cslist,onetextarea){
             textarea_id='textarea_enwords_different_types_'+blxl+'_'+Math.round(Math.random()*9999);
             if (!document.getElementById(textarea_id)){break;}
         }
-
-        var blstr=textarea_with_form_generate_b(textarea_id,'height:20rem;','<p>','全选,清空,复制,发送到临时记事本,发送地址','</p>','','',false,bljg.trim());
+        
+        var blstr=textarea_with_form_generate_b(textarea_id,'height:20rem;','<p>','全选,清空,复制,发送到临时记事本,发送地址','</p>','','',false,bljg);
         bljg=firstword+blstr;
     }
     return bljg;
@@ -1933,14 +1933,17 @@ function enwords_wiki_type_words_b(cswlist,onetextarea=false,asterisk=false){
             } else {
                 wiki_type='&lt;eword w="'+item[0]+'"&gt;&lt;/eword&gt;';
             }
+            
             if (onetextarea==false){
                 wiki_type='<br /><textarea style="height:3rem;" onclick="this.select();document.execCommand(\'copy\');">'+wiki_type+'</textarea>';
             } else {
                 wiki_type=wiki_type+'\n';
             }
+            
             list_t.push([wiki_type,(2+cswlist.indexOf(item[0]))*-1]);
         }
     }
+
     return enwords_different_types_result_b(list_t,onetextarea);
 }
 

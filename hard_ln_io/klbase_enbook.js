@@ -79,7 +79,7 @@ function get_new_old_rare_words_set_enbook_b(csstr,is_remove_square=-1,words_typ
 }
 
 function get_new_words_arr_set_enbook_b(cstype,csstr='',div_id='div_new_words2',is_remove_square=-1,words_type=-1,csendata_set=false){
-    //cstype 1 全部单词 2 未收录 3 已收录 4 旧单词js_wiki格式 5 稀有旧单词 6 稀有旧单词js_wiki格式 - 保留注释
+    //cstype 1 全部单词 2 未收录 3 已收录 4 旧单词js_wiki格式 5 稀有旧单词 6 稀有旧单词js_wiki格式 7 新单词js_wiki格式 - 保留注释
     var t0 = performance.now();
 
     var new_words_set, old_words_set, rare_words_set, bltypecheck;
@@ -178,7 +178,7 @@ function rare_or_new_span_remove_enbook_b(odiv,is_rare){
 }
 
 function get_new_words_arr_obj_enbook_b(cstype,csstr='',csobjects=false,addline=false,append_parent=false,execstring='',ew=false,border_width_and_style='0.15rem dotted',word_is_in_sentence=''){
-    //cstype 1 全部单词 2 未收录 3 已收录 4 旧单词js_wiki格式 5 稀有旧单词 6 稀有旧单词js_wiki格式 - 保留注释
+    //cstype 1 全部单词 2 未收录 3 已收录 4 旧单词js_wiki格式 5 稀有旧单词 6 稀有旧单词js_wiki格式 7 新单词js_wiki格式 - 保留注释
     //csobjects 在 selenium bible mediawiki_common 等中被调用 - 保留注释
     //-----------------------
     function sub_get_new_words_arr_obj_enbook_b_objects(){
@@ -382,7 +382,7 @@ function words_in_sentence_enbook_b(words_set,return_list=false,run_fn=false){
     sub_words_in_sentence_enbook_b_one();
 }
 
-function new_old_word_list_enbook_b(bljgarr2,check_types=true,csendata_set=false){
+function new_old_word_list_enbook_b(word_list,check_types=true,csendata_set=false){
     //提取单词列表
     if (csendata_set==false){
 	    csendata_set=simple_words_b(true,false,true);   //将空格替换为下划线 - 保留注释
@@ -398,7 +398,7 @@ function new_old_word_list_enbook_b(bljgarr2,check_types=true,csendata_set=false
         en_sentence_count_global=[];
     }
     
-    for (let item of bljgarr2){
+    for (let item of word_list){
         if (new_words_all_set.has(item) || new_words_set.has(item) || old_words_set.has(item)){
             continue;
         }
@@ -436,7 +436,7 @@ function new_old_word_list_enbook_b(bljgarr2,check_types=true,csendata_set=false
 }
 
 function get_new_words_arr_html_enbook_b(cstype,all_words_set,new_words_set,old_words_set,rare_words_set,new_words_set10_size,div_id){
-    //cstype: 1 全部单词 2 未收录 3 已收录 4 旧单词js_wiki格式 5 稀有旧单词 6 稀有旧单词js_wiki格式 - 保留注释
+    //cstype: 1 全部单词 2 未收录 3 已收录 4 旧单词js_wiki格式 5 稀有旧单词 6 稀有旧单词js_wiki格式 7 新单词js_wiki格式 - 保留注释
     //-----------------------
     if (en_words_book_newwords_continue_global){
         new_words_continue_enbook_b(new_words_set.size,new_words_set10_size);
@@ -462,7 +462,10 @@ function get_new_words_arr_html_enbook_b(cstype,all_words_set,new_words_set,old_
             break;            
         case 6:
             bljg=enwords_different_types_div_b(Array.from(rare_words_set));
-            break;            
+            break;         
+        case 7:
+            bljg=enwords_different_types_div_b(Array.from(new_words_set));
+            break;                 
     }
     var odiv=document.getElementById(div_id);
     if (odiv){

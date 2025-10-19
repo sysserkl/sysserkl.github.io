@@ -227,9 +227,10 @@ function menu_klr2(){
    
     var klmenu_batch=[
     '<span class="span_menu" onclick="'+str_t+'enwords_get_klr2();">提取英文单词</span>',
+    '<span class="span_menu">间隔(秒)：<input type="number" id="input_seconds_strquick_b" style="width:3rem;" value=1 min=0 /></span>',
     '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'batchwww\');">批量打开网址</span>',
     ];
-    
+        
     var group_list=[
     ['BCO+K','strquick_klr_b(\'bing_collins_oxford_+_klsearch_en\');',true],
     ['BO+K','strquick_klr_b(\'bing_oxford_+_klsearch_en\');',true],

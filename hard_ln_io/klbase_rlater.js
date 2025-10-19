@@ -389,6 +389,7 @@ function one_link_gerenrate_rlater_b(idno,cslink,cstitle,csstrong=false,prgname=
 
 function delete_batch_from_array_form_rlater_b(prefix='readlater'){
     var left_str='<p>';
+    
     var right_str='<span class="aclick" onclick="delete_batch_from_array_transform_rlater_b(\''+specialstr92_b(prefix)+'\');">数组转换为列表</span>';
     right_str=right_str+'<span class="aclick" onclick="delete_batch_from_url_transform_rlater_b(\''+specialstr92_b(prefix)+'\');">链接转换为列表</span>';
     right_str=right_str+'<span class="aclick" onclick="import_marked_rows_rlater_b();">显示已标记链接</span>';
