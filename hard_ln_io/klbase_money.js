@@ -695,16 +695,32 @@ function import_adjust_price_money_b(textarea_id='textarea_idb_content'){
     var percent=real_price/total_price;
     if (!confirm('是否将总价从：'+total_price.toFixed(2)+'￥，调整为'+real_price+'￥？')){return;}
 
+    var blsum=0;
     for (let blx=0,lent=raw_list.length;blx<lent;blx++){
         var item=raw_list[blx].split('\n');
+        var item_no=-1; //每次循环重定义 - 保留注释
+        var item_value=-1;
         for (let bly=0,lenb=item.length;bly<lenb;bly++){
             if (item[bly].startsWith('总价:')){
-                var blprice=parseFloat(item[bly].split('总价:')[1]);
-                item[bly]='总价:'+(percent*blprice).toFixed(2);
+                let blprice_num=parseFloat(item[bly].split('总价:')[1]);
+                let blprice_str=(percent*blprice_num).toFixed(2);
+                item[bly]='总价:'+blprice_str;
+                blsum=blsum+parseFloat(blprice_str);
+                item_no=bly;
+                item_value=parseFloat(blprice_str);
             }
         }
+        
+        if (blx==lent-1 && item_no!==-1){
+            if (Math.abs(real_price-blsum).toFixed(2)=='0.01'){ //数值型可能是 0.010000000000005116 - 保留注释
+                item[item_no]='总价:'+(item_value+(real_price-blsum)).toFixed(2);
+                console.log(item,'总价调整0.01');
+            }
+        }
+        
         raw_list[blx]=item.join('\n');
     }
+    
     otextarea.value='---\n'+raw_list.join('\n---\n');
 }
 

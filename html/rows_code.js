@@ -416,6 +416,7 @@ function option_generate_klr2(){
     var list_t=[
     '^.*?(/.*/)((save|待整理)-\\d*-[ab]|待看\\d*(副本)?)/.*$+$1$2',
     '^===\\d*===$',
+    '\\s.*$',
     ];
     document.getElementById('select_leaflet_replace_common').innerHTML=list_2_option_b(list_t);
 }
