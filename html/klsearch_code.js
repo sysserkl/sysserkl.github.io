@@ -502,8 +502,12 @@ function batch_files_2_links_klsearch(){
             result_t.push([arow,blat]); //按照文件的顺序排序链接，便于比较 - 保留注释
         }
         result_t.sort(function (a,b){return a[1]<b[1]?-1:1;});
-        result_t=array_split_by_col_b(result_t,[0]);
-        document.getElementById('textarea_batch_keys').value=result_t.join('\n');
+        var bljg=[];
+        for (let item of result_t){
+            bljg.push('<a class="a_batch_links_klsearch" href="'+item[0]+'" target=_blank>'+item[0]+'</a>');
+        }
+        //document.getElementById('textarea_batch_keys').value=result_t.join('\n');
+        list_2_links_container_klsearch(bljg,result_t,'链接');
     }
     
     var list_t=document.getElementById('textarea_batch_keys').value.trim().split('\n');
@@ -522,16 +526,17 @@ function batch_files_2_links_klsearch(){
 
 function batch_open_links_klsearch(is_init=false){
     if (oa_batch_links_klsearch_global===false){
-        oa_batch_links_klsearch_global=document.getElementsByClassName('batch_links_klsearch');
+        oa_batch_links_klsearch_global=[];
+        for (let one_a of document.querySelectorAll('a.a_batch_links_klsearch')){
+            oa_batch_links_klsearch_global.push(one_a.href);
+        }
         current_no_oa_klsearch_global=0;
         document.getElementById('select_links_range_klsearch').value=0;
     }
     
     if (is_init){return;}
     
-    if (oa_batch_links_klsearch_global[current_no_oa_klsearch_global]){
-        window.open(oa_batch_links_klsearch_global[current_no_oa_klsearch_global].href);
-    }
+    window.open(oa_batch_links_klsearch_global[current_no_oa_klsearch_global]);
     
     document.getElementById('span_batch_keys_count').innerHTML=(1+current_no_oa_klsearch_global)+'/'+oa_batch_links_klsearch_global.length;
     current_no_oa_klsearch_global=current_no_oa_klsearch_global+1;
@@ -542,7 +547,6 @@ function batch_open_links_klsearch(is_init=false){
         document.getElementById('select_links_range_klsearch').value=0;
     } else if (current_no_oa_klsearch_global % 10 == 0){
         document.getElementById('select_links_range_klsearch').value=current_no_oa_klsearch_global;
-        return;
     } else {    
         var blmax=parseInt(document.getElementById('input_max_seconds').value);
         var blrand=randint_b(0,blmax*1000);
@@ -572,6 +576,22 @@ function batch_keys_no_get_klsearch(link_wiki_js=false){
         csno=csno2;
     }
     return csno;
+}
+
+function list_2_links_container_klsearch(cslist,result_t,link_wiki_js){
+    let textarea_str=textarea_with_form_generate_b('textarea_batch_links_result_klsearch','height:20rem;','<p>','复制,发送到临时记事本,发送地址','</p>');
+    if (link_wiki_js=='链接'){
+        let table_str='<table style="width:100%;"><tr><td valign=top width=50%>'+array_2_li_b(cslist)+'</td>';
+        table_str=table_str+'<td valign=top width=50%>'+textarea_str+'</td></tr></table>';
+        
+        document.getElementById('div_sub_status').insertAdjacentHTML('beforeend',table_str);
+        
+        let alinks=array_split_by_col_b(result_t,[0]);
+        document.getElementById('textarea_batch_links_result_klsearch').value=alinks.join('\n');
+    } else {
+        document.getElementById('div_sub_status').insertAdjacentHTML('beforeend',textarea_str);        
+        document.getElementById('textarea_batch_links_result_klsearch').value=cslist.join('\n');  
+    }
 }
 
 function batch_keys_links_klsearch(word_list=false,link_wiki_js=false,show_html=true,run_fn=false){
@@ -617,9 +637,9 @@ function batch_keys_links_klsearch(word_list=false,link_wiki_js=false,show_html=
         switch (link_wiki_js){
             case '链接':
                 for (let item of result_t){
-                    bljg.push('<a class="batch_links_klsearch" href="'+item[0]+'" target=_blank>'+(add_key?item[1]:item[0])+'</a>');
+                    bljg.push('<a class="a_batch_links_klsearch" href="'+item[0]+'" target=_blank>'+(add_key?item[1]:item[0])+'</a>');
                 }
-                sub_batch_keys_links_klsearch_container(bljg);
+                list_2_links_container_klsearch(bljg,result_t,link_wiki_js);
                 
                 batch_open_links_klsearch(true);
                 
@@ -638,7 +658,7 @@ function batch_keys_links_klsearch(word_list=false,link_wiki_js=false,show_html=
                 for (let item of result_t){
                     bljg.push('["'+item[0]+'","'+(add_key?specialstr_j(item[1]):item[0])+'"],');
                 }        
-                sub_batch_keys_links_klsearch_container(bljg);
+                list_2_links_container_klsearch(bljg,result_t,link_wiki_js);
                 break;
             case 'wiki':
                 if (add_key){
@@ -654,26 +674,11 @@ function batch_keys_links_klsearch(word_list=false,link_wiki_js=false,show_html=
                         bljg.push('['+item[0]+' '+item[0]+']');
                     }
                 }
-                sub_batch_keys_links_klsearch_container(bljg);
+                list_2_links_container_klsearch(bljg,result_t,link_wiki_js);
                 break;
         }
     }
     
-    function sub_batch_keys_links_klsearch_container(cslist){
-        let textarea_str=textarea_with_form_generate_b('textarea_batch_links_result_klsearch','height:20rem;','<p>','复制,发送到临时记事本,发送地址','</p>');
-        if (link_wiki_js=='链接'){
-            let table_str='<table style="width:100%;"><tr><td valign=top width=50%>'+array_2_li_b(cslist)+'</td>';
-            table_str=table_str+'<td valign=top width=50%>'+textarea_str+'</td></tr></table>';
-            
-            document.getElementById('div_sub_status').insertAdjacentHTML('beforeend',table_str);
-            
-            let alinks=array_split_by_col_b(result_t,[0]);
-            document.getElementById('textarea_batch_links_result_klsearch').value=alinks.join('\n');
-        } else {
-            document.getElementById('div_sub_status').insertAdjacentHTML('beforeend',textarea_str);        
-            document.getElementById('textarea_batch_links_result_klsearch').value=cslist.join('\n');  
-        }
-    }
     //-----------------------
     var result_t=[];    
     
