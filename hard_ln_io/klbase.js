@@ -2580,7 +2580,6 @@ function blob_2_download_link_b(blob,savename){
     document.body.appendChild(odom); 
     odom.click();
     document.body.removeChild(odom);
-    //blob='';
 }
 
 function string_base64_2_file_b(base64Data, cstype,savename){
@@ -4875,18 +4874,49 @@ function arr_keep_first_and_last_b(arr, x, y,return_zero=false){
     return arr;
 }
 
-function windows_filename_b(csstr,cstype='fullname'){
+function windows_filename_b(csstr,cstype='fullname',entype=false){
+    function sub_windows_filename_b_en(csname){
+        if (entype){
+            for (let item of endict_ellipsis_global){
+                if (csname.startsWith(item[0])){
+                    csname=csname.replace(item[0],item[1]);
+                    break;
+                }
+            }
+        }
+        return csname;
+    }
+
     let reg_exp=/[<>/\\|:*?"]/g;
+    if (cstype=='reg'){
+        return reg_exp;
+    }
+
+    if (typeof endict_ellipsis_global == 'undefined'){
+        endict_ellipsis_global=[];
+    }
+        
+    if (entype && endict_ellipsis_global.length>0){
+        if (endict_ellipsis_global[0].length==0){
+            endict_ellipsis_global.splice(0,1);
+            endict_ellipsis_global.sort(function (a,b){return a[0].length>b[0].length?-1:1;});
+        }
+    }
+    console.log(endict_ellipsis_global);
+    
+    let new_name='';
     switch (cstype){
-        case 'reg':
-            return reg_exp;
         case 'fullname':
             var list_t=file_path_name_b(csstr);
-            return list_t[0]+list_t[3].replace(reg_exp,'_');
+            new_name=list_t[0]+sub_windows_filename_b_en(list_t[3].replace(reg_exp,'_'));
+            break;
         case 'basename':
             var list_t=file_path_name_b(csstr);
-            return list_t[0]+list_t[1].replace(reg_exp,'_')+'.'+list_t[2];
+            new_name=list_t[0]+sub_windows_filename_b_en(list_t[1].replace(reg_exp,'_'))+'.'+list_t[2];
+            break;
         default:
-            return csstr.replace(reg_exp,'_');
+            new_name=sub_windows_filename_b_en(csstr.replace(reg_exp,'_'));
+            break;
     }
+    return new_name;
 }

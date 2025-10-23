@@ -478,6 +478,7 @@ function batch_keys_form_klsearch(){
     bljg=bljg+'<span class="aclick" onclick="batch_keys_links_klsearch();">生成</span> ';
     bljg=bljg+'<label><input type="checkbox" id="checkbox_key_name_klsearch" />链接只显示关键字名称</label> ';
     bljg=bljg+'<label><input type="checkbox" id="checkbox_use_proxy_klsearch" />proxy</label> ';
+    bljg=bljg+'<span class="aclick" onclick="batch_ellipsis_2_full_klsearch();">EN缩写文件名转换为全名</span> ';        
     bljg=bljg+'<span class="aclick" onclick="batch_files_2_links_klsearch();">根据文件名生成链接</span> ';        
     
     bljg=bljg+'<select id="select_links_range_klsearch" style="display:none;" onchange="current_no_oa_klsearch_global=Math.max(0,parseInt(this.value));"></select> ';
@@ -489,6 +490,23 @@ function batch_keys_form_klsearch(){
     document.getElementById('div_status').innerHTML=bljg;
     input_with_x_b('input_search_type',8,'',0.8);
     input_size_b([['input_max_seconds',4]],'id');
+}
+
+function batch_ellipsis_2_full_klsearch(){
+    var otextarea=document.getElementById('textarea_batch_keys');
+    var list_t=otextarea.value.trim().split('\n');
+    var result_t=[];
+    for (let afile of list_t){
+        let finfo=file_path_name_b(afile);
+        for (let arow of endict_ellipsis_global){
+            if (finfo[1].startsWith(arow[1])){
+                afile=finfo[0]+finfo[1].replace(arow[1],arow[0])+(finfo[2]==''?'':'.'+finfo[2]);
+                break;
+            }
+        }
+        result_t.push(afile);
+    }    
+    otextarea.value=result_t.join('\n');
 }
 
 function batch_files_2_links_klsearch(){
@@ -506,7 +524,6 @@ function batch_files_2_links_klsearch(){
         for (let item of result_t){
             bljg.push('<a class="a_batch_links_klsearch" href="'+item[0]+'" target=_blank>'+item[0]+'</a>');
         }
-        //document.getElementById('textarea_batch_keys').value=result_t.join('\n');
         list_2_links_container_klsearch(bljg,result_t,'链接');
     }
     
@@ -514,7 +531,12 @@ function batch_files_2_links_klsearch(){
     var full_name_list=[];
     var words=new Set();
     for (let arow of list_t){
-        arow=file_path_name_b(arow)[3];
+        let finfo=file_path_name_b(arow);
+        if (finfo[2]=='txt'){
+            arow=file_path_name_b(arow)[1];
+        } else {
+            arow=file_path_name_b(arow)[3];
+        }
         full_name_list.push(arow);
         let blat=Math.max(arow.lastIndexOf('=',arow),arow.lastIndexOf('_',arow));
         if (blat>=0){

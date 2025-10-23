@@ -1,0 +1,16 @@
+var endict_ellipsis_global=[    //第一个元素[]，表示没有排序过，注释要写在此处以支持python - 保留注释
+[],
+['https___www.ahdictionary.com_word_search.html','ahd'],
+['https___www.britannica.com_dictionary','br'],
+['https___dictionary.cambridge.org_dictionary_english-chinese-simplified','cb_c'],
+['https___dictionary.cambridge.org_dictionary_english','cb_e'],
+['https___www.collinsdictionary.com_dictionary_english','cl_d'],
+['https___www.collinsdictionary.com_spellcheck_english','cl_s'],
+['https___www.dictionary.com_browse','di'],
+['https___www.ldoceonline.com_dictionary','ld'],
+['https___www.merriam-webster.com_dictionary','mw'],
+['https___www.oxfordlearnersdictionaries.com_definition_english','ox'],
+['https___dictionary.reverso.net_english-definition','re'],
+['https___www.wordnik.com_words','wn'],
+['https___www.wordreference.com_enzh','wr_c'],
+];
