@@ -842,6 +842,11 @@ function duplicate_words_kle(){
     '	':[],   //\t  - 保留注释
     ' :':[],   //空格+冒号  - 保留注释
     '．':[], //点号 - 保留注释
+    '……':[],    //省略号
+    ' …':[],    //空格+省略号
+    '… ':[],    //省略号+空格
+    '...':[],    //三个点
+    
     };
     var end_list=[];
     var semicolon_without_space_list=[];
