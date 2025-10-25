@@ -4902,7 +4902,7 @@ function windows_filename_b(csstr,cstype='fullname',entype=false){
             endict_ellipsis_global.sort(function (a,b){return a[0].length>b[0].length?-1:1;});
         }
     }
-    console.log(endict_ellipsis_global);
+    //console.log(endict_ellipsis_global);
     
     let new_name='';
     switch (cstype){

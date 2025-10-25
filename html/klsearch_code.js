@@ -72,37 +72,8 @@ function search_site_klsearch(csno,csproxy=false,cskey='',openwindow=-1,showhtml
             item[1]=item[1].replace(/&(close=1|iframe)\b/,'&'+iframe_or_select);
         }
     }
-    
-    if (item[2]==4){ 
-        cskey=gbkcode(cskey);
-    } else {
-        cskey=web_href_key_b(cskey,item[2]);
-    }
-    
-    if (csencode && !csproxy){
-        cskey=encodeURIComponent(cskey);
-    }
-    //以下3行保留 - 保留注释
-    //else if (item[csi][3]=="unicode"){
-    //    window.open(blleft+escape(blstr)+blright);
-    //}
 
-    if (item[5].includes('n')){
-        var blhref=item[0]+item[1];
-    } else {
-        if (item[5].includes('l')){
-            var blhref=item[0]+cskey.toLowerCase()+item[1];
-        } else {
-            var blhref=item[0]+cskey+item[1];
-        }
-    }
-    
-    if (csproxy){
-        var blhero=local_storage_get_b('herokuapp_host').trim();
-        if (blhero!==''){
-            blhref='https://'+blhero+'/get?url='+encodeURIComponent(blhref);
-        }
-    }
+    var blhref=search_site_kls_b(item,cskey,csencode,csproxy);
     blhref=href_replace_host_klsearch(blhref,item[6]);
 
     var link_list=[];
@@ -111,7 +82,7 @@ function search_site_klsearch(csno,csproxy=false,cskey='',openwindow=-1,showhtml
     } else {
         var batch_type=item[1].match(/&t=(batch_.*?)&/);    //形如：[ "&t=batch_offline&", "batch_offline" ] - 保留注释
         if (batch_type){
-            link_list=types_2_list_klsearch(batch_type[1],raw_key,'',showhtml);
+            link_list=types_2_list_kls_b(batch_type[1],raw_key,'',showhtml);
         }
     }
 
@@ -145,32 +116,6 @@ function batch_open_sites_klsearch(cscategory){
     sub_batch_open_sites_klsearch_one_site();
 }
 
-function batch_type_get_klsearch(cstype){
-    switch (cstype){
-        case 'batch_en':
-            cstype='youdao,iciba,merriam-webster,TFD,AHD,britannicadict,lexico';//,dict.cn,WR_CN,dictionary.com,longman,wordnik';
-            //(is_local_b()?'KLWiki,':'') +'collins(p),wiktionary(p),' - 此两项保留 - 保留注释
-            break;
-        case 'batch_en+':
-            cstype='Bing(cn),Oxford,Cambridge';
-            break;
-        case 'batch_en_wiktionary':
-            cstype='Wiktionary(Local),kaikki(Local),wordhippo,definitions';
-            break;
-        case 'batch_dwdlw':
-            cstype='dict.cn,WR_CN,dictionary.com,longman,wordnik';
-            break;
-        case 'batch_offline':
-            cstype='merriam-webster,AHD,britannicadict,Oxford,Cambridge,Cambridge_CN,WR_CN,dictionary.com,longman,wordnik,Collins,reverso';
-            break;
-    }
-    
-    if (cstype==''){return [];}
-    
-    cstype=cstype.toLowerCase().split(',');
-    return cstype;
-}
-
 function iframe_current_button(event,obutton,csxl){
     var rect=obutton.getBoundingClientRect();
     var odiv=document.getElementById('div_new_window_iframe_klsearch');
@@ -199,7 +144,7 @@ function iframe_generate_klsearch(cstype='',cskey=false,iframe_or_close=''){
         return;
     }
     
-    cstype=batch_type_get_klsearch(cstype);
+    cstype=batch_type_get_kls_b(cstype);
     
     var oiframes=document.querySelectorAll('iframe.iframe_site_kl_b');
     for (let one_iframe of oiframes){
@@ -256,33 +201,6 @@ function iframe_generate_klsearch(cstype='',cskey=false,iframe_or_close=''){
     document.title=cskey+' - KLSearch';
 }
 
-function types_2_list_klsearch(cstype,cskey,cscategory='',to_html=false){
-    var type_list=batch_type_get_klsearch(cstype);
-
-    var links_t=[];
-    for (let one_type of type_list){
-        let is_proxy=false;        
-        if (one_type.slice(-3,)=='(p)'){
-            is_proxy=true;
-            one_type=one_type.slice(0,-3);
-        }
-        
-        for (let blxl=0,lent=search_sites_list_global.length;blxl<lent;blxl++){
-            let item=search_sites_list_global[blxl];
-            if (one_type==item[4].toLowerCase()){
-                if (cscategory!=='' && cscategory!==item[6].toLowerCase()){continue;}
-                let blhref=search_site_klsearch(blxl,is_proxy,cskey,false,false)[0];
-                if (to_html){
-                    blhref='<a href="'+blhref+'" target=_blank>'+blhref+'</a>';
-                }
-                links_t.push(blhref);
-            }
-        }
-    }
-    links_t.sort();
-    return links_t;
-}
-
 function args_klsearch(){
     var blkey='';
     var bltype='';
@@ -319,7 +237,7 @@ function args_klsearch(){
         return;
     }
     
-    var links_t=types_2_list_klsearch(bltype,blkey,blcategory);
+    var links_t=types_2_list_kls_b(bltype,blkey,blcategory);
     if (links_t.length==0){return;}
     
     for (let blxl=0,lent=links_t.length-1;blxl<lent;blxl++){
@@ -511,10 +429,11 @@ function batch_ellipsis_2_full_klsearch(){
 
 function batch_files_2_links_klsearch(){
     function sub_batch_files_2_links_klsearch_result(cslist){
+        //cslist 每个元素形如：[ "https://www.ahdictionary.com/word/search.html?q=culver", "culver" ] - 保留注释
         cslist=array_split_by_col_b(cslist,[0]);
         let result_t=[];
         for (let arow of cslist){
-            let wname=windows_filename_b(arow,'');   //含路径替换 - 保留注释
+            let wname=windows_filename_b(arow,'',true);   //含路径替换 - 保留注释
             let blat=full_name_list.indexOf(wname);
             if (blat==-1){continue;}
             result_t.push([arow,blat]); //按照文件的顺序排序链接，便于比较 - 保留注释
