@@ -2568,6 +2568,33 @@ function iframe_generate_b(csxl,cstitle,cssrc,js_code=''){
     return [buttons_t,result_t];
 }
 
+function iframe_with_content_b(oparent,cscontent='',iframe_style='',css_js='',add_html=true,add_body=true){
+    // 创建一个 iframe 元素
+    const iframe = document.createElement('iframe');
+
+    iframe.style.cssText = iframe_style;
+    oparent.appendChild(iframe);
+
+    // 等待 iframe 加载完成后再写入内容（确保 contentDocument 可用）
+    iframe.onload = function (){
+        const doc = iframe.contentDocument || iframe.contentWindow.document;
+        doc.open();
+        if (add_html){
+            let html_top=`
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+`+css_js+`
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>`;
+        cscontent=html_top+(add_body?'<body>':'')+cscontent+(add_body?'</body>':'')+'</html>';
+        }
+        doc.write(cscontent);
+        doc.close();
+    };
+}
+
 function iframe_init_b(cslist=[],obutton=false,ocontent=false){
     var buttons_t=[];
     var result_t=[];

@@ -904,3 +904,45 @@ function selenium_enwords_count_enbook_b(is_original=false,marked_links=[]){
     }
     return selenium_dict;  
 }    
+
+function check_all_new_enbook_b(){
+    if (typeof all_new_words_global == 'undefined'){return false;}
+    return true;
+}
+
+function day_new_enbook_b(csmax=-1,do_filter=false,group_by='y'){
+    if (check_all_new_enbook_b()===false){return [];}
+    
+    switch (group_by){
+        case 'y':
+            var days=day_of_year_b();   //当年第几天，此行保留 - 保留注释
+            var group_len=366;
+            break;
+        case 'm':
+            var days=date_2_ymd_b(false,'d'); //本月第几天，此行保留 - 保留注释
+            var group_len=31;
+            break;
+        default:
+            return [];
+    }
+        
+    var result_t=[];
+    for (let item of all_new_words_global){
+        if (do_filter){
+            if (item.length==1 || item.length>15){continue;}
+            if (item.split('-').length>=2){continue;}
+            if (item.substring(0,1)!==item.substring(0,1).toLowerCase()){continue;} //首字母大写 - 保留注释
+        }
+        let asc_sum=asc_sum_b(item);
+        if (1+asc_sum%group_len==days){
+            result_t.push(item);
+        }
+    }
+    if (csmax>0){
+        for (let blxl=0;blxl<5;blxl++){
+            result_t.sort(randomsort_b);
+        }
+        result_t=result_t.slice(0,csmax);
+    }
+    return result_t;
+}
