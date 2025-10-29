@@ -8,330 +8,59 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Tue, 28 Oct 2025 09:28:24 +0800</lastBuildDate>
-<item><title>How to Use Ubuntu Live USB or CD - FOSS Linux</title><link>https://www.fosslinux.com/136734/how-to-use-ubuntu-live-usb-or-cd.htm</link></item>
-<item><title>How to install and use Jenkins on Linux - FOSS Linux</title><link>https://www.fosslinux.com/128502/how-to-install-and-use-jenkins-on-linux.htm</link></item>
-<item><title>How to install Software Using PowerShell Script - FOSS Linux</title><link>https://www.fosslinux.com/126152/how-to-install-software-using-powershell-script.htm</link></item>
-<item><title>新冠 mRNA 疫苗能触发免疫系统识别和杀死癌细胞 - Solidot</title><link>https://www.solidot.org/story?sid=82651</link></item>
-<item><title>生成式 AI 是否会威胁开源生态系统 - Solidot</title><link>https://www.solidot.org/story?sid=82650</link></item>
-<item><title>天文学家在银河系外冰层发现复杂有机分子 - Solidot</title><link>https://www.solidot.org/story?sid=82649</link></item>
-<item><title>AI 聊天机器人太过于奉承人类 - Solidot</title><link>https://www.solidot.org/story?sid=82648</link></item>
-<item><title>【火热报名中】NVIDIA 中国开发者日 2025 将于11月14日在苏州举办 - Solidot</title><link>https://www.solidot.org/story?sid=82647</link></item>
-<item><title>盖茨的核电公司通过环评 - Solidot</title><link>https://www.solidot.org/story?sid=82646</link></item>
-<item><title>号称保护隐私的浏览器被发现包含恶意程序的功能 - Solidot</title><link>https://www.solidot.org/story?sid=82645</link></item>
-<item><title>企业将 AI 作为裁员借口 - Solidot</title><link>https://www.solidot.org/story?sid=82644</link></item>
-<item><title>微软禁用文件资源管理器的预览功能 - Solidot</title><link>https://www.solidot.org/story?sid=82643</link></item>
-<item><title>Fashion color counting - FlowingData</title><link>https://flowingdata.com/2025/10/27/fashion-color-counting/</link></item>
-<item><title>Sarah Constantin - FlowingData</title><link>https://flowingdata.com/tag/sarah-constantin/</link></item>
-<item><title>Wikipedia losing human views to AI summaries - FlowingData</title><link>https://flowingdata.com/2025/10/27/wikipedia-losing-human-views-to-ai-summaries/</link></item>
-<item><title>Firefox Plans Smarter, Privacy-First Search Suggestions In Your Address Bar - Slashdot</title><link>https://news.slashdot.org/story/25/10/27/236208/firefox-plans-smarter-privacy-first-search-suggestions-in-your-address-bar</link></item>
-<item><title>Mozilla to Require Data-Collection Disclosure in All New Firefox Extensions - Slashdot</title><link>https://tech.slashdot.org/story/25/10/27/0359250/mozilla-to-require-data-collection-disclosure-in-all-new-firefox-extensions</link></item>
-<item><title>Ransomware Profits Drop As Victims Stop Paying Hackers - Slashdot</title><link>https://it.slashdot.org/story/25/10/27/2044254/ransomware-profits-drop-as-victims-stop-paying-hackers</link></item>
-<item><title>Apple Says US Passport Digital IDs Are Coming To Wallet &amp;#39;Soon&amp;#39; - Slashdot</title><link>https://apple.slashdot.org/story/25/10/27/2035221/apple-says-us-passport-digital-ids-are-coming-to-wallet-soon</link></item>
-<item><title>Qualcomm Announces AI Chips To Compete With AMD and Nvidia - Slashdot</title><link>https://hardware.slashdot.org/story/25/10/27/2030204/qualcomm-announces-ai-chips-to-compete-with-amd-and-nvidia</link></item>
-<item><title>Real Estate Is Entering Its AI Slop Era - Slashdot</title><link>https://slashdot.org/story/25/10/27/2026202/real-estate-is-entering-its-ai-slop-era</link></item>
-<item><title>&amp;#39;AI Sets Up Kodak Moment For Global Consultants&amp;#39; - Slashdot</title><link>https://slashdot.org/story/25/10/27/181215/ai-sets-up-kodak-moment-for-global-consultants</link></item>
-<item><title>Companies Battle Wave of AI-Generated Fake Expense Receipts - Slashdot</title><link>https://slashdot.org/story/25/10/27/1829258/companies-battle-wave-of-ai-generated-fake-expense-receipts</link></item>
-<item><title>Microsoft&amp;#39;s Next Xbox Will Run Full Windows and Eliminate Multiplayer Paywall, Report Says - Slashdot</title><link>https://games.slashdot.org/story/25/10/27/1824246/microsofts-next-xbox-will-run-full-windows-and-eliminate-multiplayer-paywall-report-says</link></item>
-<item><title>4K or 8K TVs Offer No Distinguishable Benefit Over Similarly Sized 2K Screen in Average Living Room, Scientists Say - Slashdot</title><link>https://entertainment.slashdot.org/story/25/10/27/1821210/4k-or-8k-tvs-offer-no-distinguishable-benefit-over-similarly-sized-2k-screen-in-average-living-room-scientists-say</link></item>
-<item><title>Amazon Plans To Cut As Many As 30,000 Corporate Jobs Beginning Tomorrow - Slashdot</title><link>https://slashdot.org/story/25/10/27/1852239/amazon-plans-to-cut-as-many-as-30000-corporate-jobs-beginning-tomorrow</link></item>
-<item><title>First Shape Found That Can&amp;#39;t Pass Through Itself - Slashdot</title><link>https://science.slashdot.org/story/25/10/27/1749229/first-shape-found-that-cant-pass-through-itself</link></item>
-<item><title>Apple Moving Ahead With Plans To Bring Ads in Maps App, Report Says - Slashdot</title><link>https://apple.slashdot.org/story/25/10/27/1743217/apple-moving-ahead-with-plans-to-bring-ads-in-maps-app-report-says</link></item>
-<item><title>Finnish Fertility Rate Drops by a Third Since 2010 - Slashdot</title><link>https://news.slashdot.org/story/25/10/27/1653231/finnish-fertility-rate-drops-by-a-third-since-2010</link></item>
-<item><title>Australia Sues Microsoft Over AI-linked Subscription Price Hikes - Slashdot</title><link>https://yro.slashdot.org/story/25/10/27/1540239/australia-sues-microsoft-over-ai-linked-subscription-price-hikes</link></item>
-<item><title>US Department of Energy Forms $1 Billion Supercomputer and AI Partnership With AMD - Slashdot</title><link>https://news.slashdot.org/story/25/10/27/1526208/us-department-of-energy-forms-1-billion-supercomputer-and-ai-partnership-with-amd</link></item>
-<item><title>What Will the Trump-Era Crackdown on Drug Ads Accomplish? - Undark</title><link>https://undark.org/2025/10/27/dtc-drug-advertising-trump/</link></item>
-<item><title>Book Review: The Mystery of Transformation in Nature - Undark</title><link>https://undark.org/2025/10/24/book-review-metamorphosis/</link></item>
-<item><title>Misinformation About the End of Life Is Harming Organ Donation - Undark</title><link>https://undark.org/2025/10/23/opinion-misinformation-organ-donation/</link></item>
-<item><title>A Struggle to Find Adequate Care for a Common Menstrual Disorder - Undark</title><link>https://undark.org/2025/10/22/pmdd-struggle-for-care/</link></item>
-<item><title>The Land That Stores Nearly a Third of the World’s Carbon - Undark</title><link>https://undark.org/2025/10/21/peatlands-carbon-mining/</link></item>
-<item><title>Putting a Pause on the Practice of Surrogacy - Undark</title><link>https://undark.org/2025/10/20/opinion-surrogacy-health-risks/</link></item>
-<item><title>Book Review: The Mixed Blessing of Antibiotics - Undark</title><link>https://undark.org/2025/10/17/book-review-dangerous-miracle/</link></item>
-<item><title>Reflecting on the ‘Crime Gene’ Conference, 30 Years Later - Undark</title><link>https://undark.org/2025/10/16/opinioncrime-gene-conference/</link></item>
-<item><title>Will Science Journalism Funders Step Up or Retreat? - Undark</title><link>https://undark.org/2025/10/15/science-journalism-funders-trump/</link></item>
-<item><title>EPA Readied a Report on One Forever Chemical. Now It’s in Limbo. - Undark</title><link>https://undark.org/2025/10/14/epa-toxicity-report-pfna/</link></item>
-<item><title>Building De Stijl Style - JSTOR Daily</title><link>https://daily.jstor.org/building-de-stijl-style/</link></item>
-<item><title>Honoring Indigenous Peoples’ Day: A Reading List - JSTOR Daily</title><link>https://daily.jstor.org/honoring-indigenous-peoples-day-a-reading-list/</link></item>
-<item><title>The Long and Winding Island - JSTOR Daily</title><link>https://daily.jstor.org/the-long-and-winding-island/</link></item>
-<item><title>Wolves, Personal Choices, and Chemtrails - JSTOR Daily</title><link>https://daily.jstor.org/wolves-personal-choices-and-chemtrails/</link></item>
-<item><title>Amy V. Margaris on the Role of the Archaeologist - JSTOR Daily</title><link>https://daily.jstor.org/amy-v-margaris-on-the-role-of-the-archaeologist/</link></item>
-<item><title>When You Know That Loan Won’t Be Repaid - JSTOR Daily</title><link>https://daily.jstor.org/when-you-know-that-loan-wont-be-repaid/</link></item>
-<item><title>The Fifteenth Amendment: Annotated - JSTOR Daily</title><link>https://daily.jstor.org/the-fifteenth-amendment-annotated/</link></item>
-<item><title>Los Angeles’s War on Tramps - JSTOR Daily</title><link>https://daily.jstor.org/los-angeless-war-on-tramps/</link></item>
-<item><title>Enchanting Imposters - JSTOR Daily</title><link>https://daily.jstor.org/enchanting-imposters/</link></item>
-<item><title>The Sandinista Revolution, Reconsidered - JSTOR Daily</title><link>https://daily.jstor.org/the-sandinista-revolution-reconsidered/</link></item>
-<item><title>Rebecca Lehmann on Breaking the Rules of Poetry - JSTOR Daily</title><link>https://daily.jstor.org/rebecca-lehmann-on-breaking-the-rules-of-poetry/</link></item>
-<item><title>The Voting Rights Act 1965: Annotated - JSTOR Daily</title><link>https://daily.jstor.org/the-voting-rights-act-1965-annotated/</link></item>
-<item><title>Documenting a Disappearing Architecture - JSTOR Daily</title><link>https://daily.jstor.org/documenting-a-disappearing-architecture/</link></item>
-<item><title>“Space Tornadoes” Could Cause Geomagnetic Storms - JSTOR Daily</title><link>https://daily.jstor.org/space-tornadoes-could-cause-geomagnetic-storms/</link></item>
-<item><title>The Long Quest to Uncover a Sea Star Killing Bacteria - JSTOR Daily</title><link>https://daily.jstor.org/the-long-quest-to-uncover-a-sea-star-killing-bacteria/</link></item>
-<item><title>Birding by Ear - JSTOR Daily</title><link>https://daily.jstor.org/birding-by-ear/</link></item>
-<item><title>Learning about Language: An In-Class Activity - JSTOR Daily</title><link>https://daily.jstor.org/learning-about-language-an-in-class-activity/</link></item>
-<item><title>“Mad About Geology”: Charles Darwin’s Origin Story - JSTOR Daily</title><link>https://daily.jstor.org/mad-about-geology-charles-darwins-origin-story/</link></item>
-<item><title>300+ pledge to boycott the New York Times’ op-ed page over their anti-Palestinian bias. - Literary  Hub</title><link>https://lithub.com/300-pledge-to-boycott-the-new-york-times-op-ed-page-over-their-anti-palestinian-bias/</link></item>
-<item><title>Writers Beware: On the Dangerous Fine Print of Creative Contract Law - Literary  Hub</title><link>https://lithub.com/writers-beware-on-the-dangerous-fine-print-of-creative-contract-law/</link></item>
-<item><title>Lit Hub Daily: October 27, 2025 - Literary  Hub</title><link>https://lithub.com/lit-hub-daily-october-27-2025/</link></item>
-<item><title>On the 19th-Century Scientist Who Realized Solar Storms Influence Life on Earth - Literary  Hub</title><link>https://lithub.com/on-the-19th-century-scientist-who-realized-solar-storms-influence-life-on-earth/</link></item>
-<item><title>Meet the Kobold, the Gnome‘s Tougher, Meaner Cousin - Literary  Hub</title><link>https://lithub.com/meet-the-kobold-the-gnomes-tougher-meaner-cousin/</link></item>
-<item><title>How FarmVille Inspired a Ponzi Scheme That Swindled $250 Million From Its Investors - Literary  Hub</title><link>https://lithub.com/how-farmville-inspired-a-ponzi-scheme-that-swindled-250-million-from-its-investors/</link></item>
-<item><title>Five Essential Books For Understanding Why We Choose What We Choose - Literary  Hub</title><link>https://lithub.com/five-essential-books-for-understanding-why-we-choose-what-we-choose/</link></item>
-<item><title>Fit For a Queen: How to Make the Best Pizza Margherita - Literary  Hub</title><link>https://lithub.com/fit-for-a-queen-how-to-make-the-best-pizza-margherita/</link></item>
-<item><title>On the Rituals of My Grandmother’s Tibetan Buddhist Funeral - Literary  Hub</title><link>https://lithub.com/on-the-rituals-of-my-grandmothers-tibetan-buddhist-funeral/</link></item>
-<item><title>WSUS attacks hit &amp;#39;multiple&amp;#39; orgs as Google and other infosec sleuths ring Redmond’s alarm bell - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/27/microsoft_wsus_attacks_multiple_orgs/</link></item>
-<item><title>Get ready to squint! World&amp;#39;s smallest pixel is just 300 nm - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/27/world_smallest_oled_pixel/</link></item>
-<item><title>Python Foundation goes ride or DEI, rejects government grant with strings attached - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/27/python_foundation_abandons_15m_nsf/</link></item>
-<item><title>Signal president Meredith Whittaker says they had no choice but to use AWS, and that&amp;#39;s a problem - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/27/signal_ceo_meredith_whittaker_aws_dependency/</link></item>
-<item><title>Atlas vuln lets crims inject malicious prompts ChatGPT won&amp;#39;t forget between sessions - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/27/atlas_vulnerability_memory_injection/</link></item>
-<item><title>HPE&amp;#39;s Discovery to succeed Frontier supercomputer with next-gen Cray tech - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/27/hpe_discovery_frontier_successor/</link></item>
-<item><title>Iran&amp;#39;s school for cyberspies could&amp;#39;ve used a few more lessons in preventing breaches - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/27/breach_iran_ravin_academy/</link></item>
-<item><title>You have one week to opt out or become fodder for LinkedIn AI training - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/27/linkedin_ai_profile_scraping/</link></item>
-<item><title>As AI agents join SaaS, AWS tells users to expect more pricing puzzles - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/27/aws_ai_agent_saas/</link></item>
-<item><title>EU sovereignty plan accused of helping US cloud giants - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/27/cispe_eu_sovereignty_framework/</link></item>
-<item><title>Researchers exploit OpenAI&amp;#39;s Atlas by disguising prompts as URLs - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/27/openai_atlas_prompt_injection/</link></item>
-<item><title>X says passkey reset isn&amp;#39;t about a security issue – it&amp;#39;s to finally kill off twitter.com - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/27/x_passkey_reset/</link></item>
-<item><title>Ex-CISA head thinks AI might fix code so fast we won&amp;#39;t need security teams - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/27/jen_easterly_ai_cybersecurity/</link></item>
-<item><title>Everything you know about last week&amp;#39;s AWS outage is wrong - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/27/aws_outage_myths_reality/</link></item>
-<item><title>Machine learning saves £4.4M in UK.gov work and pensions fraud detection - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/27/dwp_machine_learning_savings/</link></item>
-<item><title>The Chinese Box and Turing Test: AI has no intelligence at all - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/27/ai_intelligence_opinion/</link></item>
-<item><title>The perfect AWS storm has blown over, but the climate is only getting worse - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/27/aws_outage_opinion/</link></item>
-<item><title>Frustrated consultant &amp;#39;went full Hulk&amp;#39; and started smashing hardware - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/27/who_me/</link></item>
-<item><title>Automattic accuses rival WordPress outfit WP Engine of ‘false advertising, and deceptive business practices’ - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/27/automattic_wp_engine_counterclaim/</link></item>
-<item><title>UN Cybercrime Treaty wins dozens of signatories, to go with its many critics - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/27/un_cybercrime_convention_signed/</link></item>
-<item><title>Acid GIFs, October 28 (25 gifs) - AcidCow.com</title><link>https://acidcow.com/gif/170448-acid-gifs-october-28-25-gifs.html</link></item>
-<item><title>Bad Days Happen (31 pics) - AcidCow.com</title><link>https://acidcow.com/pics/170438-bad-days-happen-31-pics.html</link></item>
-<item><title>Asian Girls (25 pics) - AcidCow.com</title><link>https://acidcow.com/girls/170445-asian-girls-25-pics.html</link></item>
-<item><title>Epic Fails (31 pics) - AcidCow.com</title><link>https://acidcow.com/pics/170430-epic-fails-31-pics.html</link></item>
-<item><title>Creepy Facts (15 pics) - AcidCow.com</title><link>https://acidcow.com/pics/170436-creepy-facts-15-pics.html</link></item>
-<item><title>Truthful Jokes (28 pics) - AcidCow.com</title><link>https://acidcow.com/pics/170434-truthful-jokes-28-pics.html</link></item>
-<item><title>Random Memes (32 pics) - AcidCow.com</title><link>https://acidcow.com/pics/170431-random-memes-32-pics.html</link></item>
-<item><title>Online Shopping Disasters (16 pics) - AcidCow.com</title><link>https://acidcow.com/pics/170428-online-shopping-disasters-16-pics.html</link></item>
-<item><title>Weird Food Serving (21 pics) - AcidCow.com</title><link>https://acidcow.com/pics/170440-weird-food-serving-21-pics.html</link></item>
-<item><title>Beauty Girls (26 pics) - AcidCow.com</title><link>https://acidcow.com/girls/170442-beauty-girls-26-pics.html</link></item>
-<item><title>Unexpected Coincidences (25 pics) - AcidCow.com</title><link>https://acidcow.com/pics/170439-unexpected-coincidences-25-pics.html</link></item>
-<item><title>Funny Photos From Forest Cams (23 pics) - AcidCow.com</title><link>https://acidcow.com/pics/170441-funny-photos-from-forest-cams-23-pics.html</link></item>
-<item><title>Drones could replace large US Army units in Europe, expert suggests - Defense News</title><link>https://www.defensenews.com/unmanned/2025/10/27/drones-could-replace-large-us-army-units-in-europe-expert-suggests/</link></item>
-<item><title>Turkey signs $10.7 billion deal with UK for 20 Eurofighter jets - Defense News</title><link>https://www.defensenews.com/global/europe/2025/10/27/turkey-signs-107-billion-deal-with-uk-for-20-eurofighter-jets/</link></item>
-<item><title>Piggy Banks to Paychecks: Helping Kids Learn Smart Money Habits — Money Minute - Defense News</title><link>https://www.defensenews.com/video/2025/10/27/piggy-banks-to-paychecks-helping-kids-learn-smart-money-habits-money-minute/</link></item>
-<item><title>Connecting coalition forces through real-time interoperability and shared awareness - Defense News</title><link>https://www.defensenews.com/video/2025/10/15/connecting-coalition-forces-through-real-time-interoperability-and-shared-awareness/</link></item>
-<item><title>How a movie cinematographer turned aerial filming skills into a Pentagon partnership - Defense News</title><link>https://www.defensenews.com/video/2025/10/24/how-a-movie-cinematographer-turned-aerial-filming-skills-into-a-pentagon-partnership/</link></item>
-<item><title>Hear from the new TACOM commander at AUSA 2025 - Defense News</title><link>https://www.defensenews.com/video/2025/10/24/hear-from-the-new-tacom-commander-at-ausa-2025/</link></item>
-<item><title>What&amp;#39;s on the horizon for the Army&amp;#39;s missile contracts? - Defense News</title><link>https://www.defensenews.com/video/2025/10/24/whats-on-the-horizon-for-the-armys-missile-contracts/</link></item>
-<item><title>The Old West Meets Wine Country At This High-End California Getaway - Maxim</title><link>https://www.maxim.com/travel/the-old-west-meets-wine-country-at-this-high-end-california-getaway/</link></item>
-<item><title>Bang &amp; Olufsen Debuts Luxe Audio Upgrades With New Centennial Collection - Maxim</title><link>https://www.maxim.com/gear/bang-olufsen-debuts-luxe-audio-upgrades-with-new-centennial-collection/</link></item>
-<item><title>Junya Watanabe Just Updated A Timeless Filson Jacket With A Wild New Design - Maxim</title><link>https://www.maxim.com/style/junya-watanabe-just-updated-a-timeless-filson-jacket-with-a-wild-new-design/</link></item>
-<item><title>Panerai Luminor GMT Ceramica Marks First Time Its 40MM Case Is Crafted In Black Ceramic - Maxim</title><link>https://www.maxim.com/style/panerai-luminor-gmt-ceramica-pam01460-marks-first-time-40mm-case-is-crafted-in-black-ceramic/</link></item>
-<item><title>Palace &amp; Barbour Team Up For Winter 2025 Capsule Collection Featuring Camo-Print Dog Coat - Maxim</title><link>https://www.maxim.com/style/palace-barbour-team-up-for-winter-2025-capsule-collection-featuring-camo-print-dog-coat/</link></item>
-<item><title>Rolls-Royce Phantom Centenary: $3 Million Car Honors 100 Years of Luxury With 24K Gold, Bespoke Art - Maxim</title><link>https://www.maxim.com/rides/rolls-royce-phantom-centenary-3-million-car-honors-100-years-of-luxury-with-24k-gold-bespoke-art/</link></item>
-<item><title>Emily Ratajkowski Stuns In Gucci Lingerie For Beyond Noise Magazine - Maxim</title><link>https://www.maxim.com/entertainment/emily-ratajkowski-stuns-in-gucci-lingerie-for-beyond-noise-magazine-shoot/</link></item>
-<item><title>Ford 2026 Mustang Mach-E GT California Special Blends Heritage Design &amp; EV Power - Maxim</title><link>https://www.maxim.com/rides/ford-2026-mustang-mach-e-gt-california-special-blends-heritage-design-ev-power/</link></item>
-<item><title>This El Tesoro Tequila Is Finished In Yamazaki Japanese Whisky Barrels - Maxim</title><link>https://www.maxim.com/food-drink/this-el-tesoro-tequila-is-finished-in-yamazaki-japanese-whisky-barrels/</link></item>
-<item><title>Maxim Halloween 2025 Takes Over The Hollywood Roosevelt - Maxim</title><link>https://www.maxim.com/entertainment/maxim-halloween-2025-takes-over-the-hollywood-roosevelt/</link></item>
-<item><title>Samuel Adams Unveils Utopias 2025, An Extreme Beer That Hits Historic 30% ABV Milestone - Maxim</title><link>https://www.maxim.com/food-drink/samuel-adams-unveils-utopias-2025-an-extreme-beer-that-hits-historic-30-abv-milestone/</link></item>
-<item><title>Nikki Beach To Open Antigua’s First Branded Residential Beach Resort - Maxim</title><link>https://www.maxim.com/travel/nikki-beach-to-open-antiguas-first-branded-residential-beach-resort/</link></item>
-<item><title>Maxim Cover Girl Competition Spotlight: Rose Pennington, Tiffany Mahogany, Iris Samone, Jenna James &amp; Tiffany K - Maxim</title><link>https://www.maxim.com/news/maxim-cover-girl-competition-spotlight-rose-pennington-tiffany-mahogany-iris-samone-jenna-james-tiffany-k/</link></item>
-<item><title>Gear Up For Fall With Flint And Tinder’s Ultra-Rugged Mason Workwear Collection - Maxim</title><link>https://www.maxim.com/style/gear-up-for-fall-with-flint-and-tinders-mason-workwear-collection/</link></item>
-<item><title>‘Being Eddie’ Trailer: Dave Chappelle, Jamie Foxx, Jerry Seinfeld Honor Eddie Murphy In Netflix Doc - Maxim</title><link>https://www.maxim.com/entertainment/being-eddie-trailer-dave-chappelle-jamie-foxx-jerry-seinfeld-praise-eddie-murphy-in-new-netflix-doc/</link></item>
-<item><title>Jack Daniel’s New Tanyard Hill Whiskey Is A Totally Stellar Single Barrel Rye - Maxim</title><link>https://www.maxim.com/food-drink/jack-daniels-new-tanyard-hill-rye-is-a-stellar-single-barrel-rye-whiskey/</link></item>
-<item><title>This Chinese Hypercar Just Set The EV Lap Record At The Nürburgring - Maxim</title><link>https://www.maxim.com/news/this-chinese-hypercar-just-set-the-ev-lap-record-at-the-nurburgring/</link></item>
-<item><title>Wine Of The Week: Orin Swift Eight Years In The Desert 2023 - Maxim</title><link>https://www.maxim.com/food-drink/wine-of-the-week-orin-swift-eight-years-in-the-desert-2023/</link></item>
-<item><title>The New Ferrari SC40 Pays Tribute To One Of The World’s Greatest Supercars - Maxim</title><link>https://www.maxim.com/rides/the-new-ferrari-sc40-pays-tribute-to-one-of-the-worlds-greatest-supercars/</link></item>
-<item><title>Spanish Pop Star Rosalía Announces New Album ‘Lux’ - Maxim</title><link>https://www.maxim.com/entertainment/spanish-pop-star-rosalia-announces-new-album-lux/</link></item>
-<item><title>Time Machines: The Watches That Changed The World - Maxim</title><link>https://www.maxim.com/style/time-machines-the-watches-that-changed-the-world/</link></item>
-<item><title>Jake Gyllenhaal Climbs To ‘New Heights’ In Latest Prada Linea Rossa Eyewear Campaign - Maxim</title><link>https://www.maxim.com/style/jake-gyllenhaal-climbs-to-new-heights-in-latest-prada-linea-rossa-eyewear-campaign/</link></item>
-<item><title>LG Debuts Massive 136-Inch MAGNIT 4K TV - Maxim</title><link>https://www.maxim.com/gear/lg-debuts-massive-136-inch-magnit-4k-tv/</link></item>
-<item><title>The James Brand Sharpens Timex Automatic GMT With Sand-Blasted Stainless Steel - Maxim</title><link>https://www.maxim.com/gear/the-james-brand-sharpens-timex-automatic-gmt-with-sand-blasted-stainless-steel/</link></item>
-<item><title>Wet Leg’s Rhian Teasdale Does A Bloody Dance In ‘Mangetout’ Music Video - Maxim</title><link>https://www.maxim.com/entertainment/wet-legs-rhian-teasdale-does-a-bloody-dance-in-mangetout-music-video/</link></item>
-<item><title>CudaJet Launches ‘World’s First Underwater Jetpack’ - Maxim</title><link>https://www.maxim.com/gear/cudajet-launches-worlds-first-underwater-jetpack/</link></item>
-<item><title>Travis Scott’s ‘SICKO MODE’ Hits 16x Platinum, Ties for Second-Highest Certified Rap Song - Maxim</title><link>https://www.maxim.com/entertainment/travis-scotts-sicko-mode-hits-16x-platinum-ties-for-second-highest-certified-rap-song/</link></item>
-<item><title>Lamborghini X Orlebar Brown’s Menswear Collab Is Inspired By South Beach Swagger - Maxim</title><link>https://www.maxim.com/style/lamborghini-x-orlebar-brown-launch-menswear-collaboration-inspired-by-south-beach-swagger/</link></item>
-<item><title>Apple Wins Formula One Streaming Rights For $750 Million - Maxim</title><link>https://www.maxim.com/sports/apple-wins-formula-one-racing-streaming-rights-for-750-million/</link></item>
-<item><title>Lou Gehrig’s Yankees Jersey Could Fetch $5 Million At Auction - Maxim</title><link>https://www.maxim.com/sports/lou-gehrigs-yankees-jersey-could-fetch-5-million-at-auction/</link></item>
-<item><title>Riva Reverie: How The Italian Luxury Lifestyle Brand Transcends Boat Building - Maxim</title><link>https://www.maxim.com/rides/riva-reviere-how-the-italian-luxury-lifestyle-brand-transcends-boat-building/</link></item>
-<item><title>Test Drive: The 2026 Lyriq-V Is Cadillac’s Fastest Vehicle Yet - Maxim</title><link>https://www.maxim.com/rides/test-drive-the-2026-cadillac-lyriq-v-is-automakers-fastest-vehicle-yet/</link></item>
-<item><title>Backyard caterpillars - Aeon</title><link>https://aeon.co/videos/close-ups-reveal-how-caterpillars-live-long-enough-to-cocoon?utm_source=rss-feed</link></item>
-<item><title>An emperor for all seasons - Aeon</title><link>https://aeon.co/essays/how-did-the-roman-empire-view-nature-and-its-seasons?utm_source=rss-feed</link></item>
-<item><title>研究人员显示用垃圾数据训练会导致大模型认知衰退 - Solidot</title><link>https://www.solidot.org/story?sid=82636</link></item>
-<item><title>The All-Clad Pizza Oven Is $800 Off Right Now - WIRED</title><link>https://www.wired.com/story/all-clad-pizza-oven-deal-october-2025/</link></item>
-<item><title>The Best Deals From the All-Clad Factory Seconds Sale on Kitchen Essentials (2025) - WIRED</title><link>https://www.wired.com/story/all-clad-sale-october-2025/</link></item>
-<item><title>Man Has Pig Kidney Removed After Living With It for a Record 9 Months - WIRED</title><link>https://www.wired.com/story/man-has-pig-kidney-removed-after-living-with-it-for-a-record-9-months/</link></item>
-<item><title>Sennheiser’s Awesome Wireless Earbuds Are Almost Half Off - WIRED</title><link>https://www.wired.com/story/sennheiser-tw4-deal-1025/</link></item>
-<item><title>OpenAI Says Hundreds of Thousands of ChatGPT Users May Show Signs of Manic or Psychotic Crisis Every Week - WIRED</title><link>https://www.wired.com/story/chatgpt-psychosis-and-self-harm-update/</link></item>
-<item><title>7 Best Sunrise Alarm Clocks to Snag Before the Fall 2025 Time Change - WIRED</title><link>https://www.wired.com/gallery/best-sunrise-alarm-clocks/</link></item>
-<item><title>17 Thoughtful Gifts for Coworkers They&amp;#39;ll Appreciate in 2025 - WIRED</title><link>https://www.wired.com/gallery/gifts-for-coworkers/</link></item>
-<item><title>14 Best Bookshelf Speakers (2025): Active, Passive, and Hi-Fi - WIRED</title><link>https://www.wired.com/gallery/best-bookshelf-speakers/</link></item>
-<item><title>Are Kids Still Looking for Careers in Tech? - WIRED</title><link>https://www.wired.com/story/teens-stem-school-career-artificial-intelligence/</link></item>
-<item><title>Hundreds of People With ‘Top Secret’ Clearance Exposed by House Democrats’ Website - WIRED</title><link>https://www.wired.com/story/hundreds-of-people-with-top-secret-clearance-exposed-by-house-democrats-website/</link></item>
-<item><title>AI and the End of Accents - WIRED</title><link>https://www.wired.com/story/ai-americanizer-end-accents/</link></item>
-<item><title>AI’s Next Frontier? An Algorithm for Consciousness - WIRED</title><link>https://www.wired.com/story/ai-sentient-consciousness-algorithm/</link></item>
-<item><title>Rise of the Killer Chatbots - WIRED</title><link>https://www.wired.com/story/ai-weapon-anduril-llms-drones/</link></item>
-<item><title>Divorced? With Kids? And an Impossible Ex? There’s AI for That - WIRED</title><link>https://www.wired.com/story/ai-emotional-spellcheck-difficult-people/</link></item>
-<item><title>I Tried to Have Sex With AI Clive Owen - WIRED</title><link>https://www.wired.com/story/ai-kink-sex-clive-owen/</link></item>
-<item><title>Ed Zitron Gets Paid to Love AI. He Also Gets Paid to Hate AI - WIRED</title><link>https://www.wired.com/story/ai-pr-ed-zitron-profile/</link></item>
-<item><title>AI of a Thousand Faces - WIRED</title><link>https://www.wired.com/ai-issue/</link></item>
-<item><title>The Haunting Story of Two People—and Their Bots—on Therapy’s New Frontier - WIRED</title><link>https://www.wired.com/story/ai-therapist-collective-psyche/</link></item>
-<item><title>AI Is the Bubble to Burst Them All - WIRED</title><link>https://www.wired.com/story/ai-bubble-will-burst/</link></item>
-<item><title>The Future of AI Isn&amp;#39;t Just Slop - WIRED</title><link>https://www.wired.com/story/the-future-of-ai-media-parody-of-the-apocalypse-guy-named-josh/</link></item>
-<item><title>The Worst Thing About AI Is That People Can’t Shut Up About It - WIRED</title><link>https://www.wired.com/story/ai-journalism-worst-thing-about-ai/</link></item>
-<item><title>AI Will Kill the Smartphone—and Maybe the Screen Entirely - WIRED</title><link>https://www.wired.com/story/ai-kill-phone-screen/</link></item>
-<item><title>The Argument for Letting AI Burn It All Down - WIRED</title><link>https://www.wired.com/story/ai-normal-after-ai-plateaus/</link></item>
-<item><title>Claude Goes to Therapy - WIRED</title><link>https://www.wired.com/story/ai-mother-eliza-claude-therapy/</link></item>
-<item><title>Parents Fell in Love With Alpha School’s Promise. Then They Wanted Out - WIRED</title><link>https://www.wired.com/story/ai-teacher-inside-alpha-school/</link></item>
-<item><title>How to Build an AI Startup: Go Big, Be Strange, Embrace Probable Doom - WIRED</title><link>https://www.wired.com/story/ai-startup-interview-founders/</link></item>
-<item><title>Why AI Breaks Bad - WIRED</title><link>https://www.wired.com/story/ai-black-box-interpretability-problem/</link></item>
-<item><title>Chatbots Are Pushing Sanctioned Russian Propaganda - WIRED</title><link>https://www.wired.com/story/chatbots-are-pushing-sanctioned-russian-propaganda/</link></item>
-<item><title>Best GoPro Camera (2025): Compact, Budget, Accessories - WIRED</title><link>https://www.wired.com/gallery/best-gopro-hero-camera/</link></item>
-<item><title>Thuma Hybrid Mattress Review: Firm but Favorable - WIRED</title><link>https://www.wired.com/review/thuma-hybrid-mattress/</link></item>
-<item><title>Google Nest Cam Indoor and Outdoor 2K Review: Slick, Smart, and Secure - WIRED</title><link>https://www.wired.com/review/google-nest-cam-indoor-outdoor-2k-2025/</link></item>
-<item><title>You Still Shouldn’t Use a Browser Password Manager - WIRED</title><link>https://www.wired.com/story/browser-password-managers/</link></item>
-<item><title>Best Workout Headphones (2025), Tested In the Gym and Beyond - WIRED</title><link>https://www.wired.com/gallery/best-workout-headphones/</link></item>
-<item><title>Real Estate Is Entering Its AI Slop Era - WIRED</title><link>https://www.wired.com/story/real-estate-is-entering-its-ai-slop-era/</link></item>
-<item><title>Casio’s Fluffy AI Robot Squeaked Its Way Into My Heart - WIRED</title><link>https://www.wired.com/story/casios-fluffy-ai-robot-squeaked-its-way-into-my-heart/</link></item>
-<item><title>A First Ride With the Maeving RM2 Electric Motorcycle - WIRED</title><link>https://www.wired.com/story/maeving-rm2-electric-motorcycle/</link></item>
-<item><title>Sodapop Bluetooth Speaker Review: Bottled Up - WIRED</title><link>https://www.wired.com/review/sodapop-bluetooth-speaker/</link></item>
-<item><title>Baseus Inspire XC1 Review: Excellent Open Earbuds - WIRED</title><link>https://www.wired.com/review/baseus-inspire-xc1/</link></item>
-<item><title>The Best OTC Hearing Aids (2025), Tested and Reviewed - WIRED</title><link>https://www.wired.com/gallery/best-over-the-counter-hearing-aids/</link></item>
-<item><title>Gear News of the Week: There’s Yet Another New AI Browser, and Fujifilm Debuts the X-T30 III - WIRED</title><link>https://www.wired.com/story/gear-news-of-the-week-theres-yet-another-new-ai-browser-and-fujifilm-debuts-the-x-t30-iii/</link></item>
-<item><title>Amazon Explains How Its AWS Outage Took Down the Web - WIRED</title><link>https://www.wired.com/story/amazon-explains-how-its-aws-outage-took-down-the-web/</link></item>
-<item><title>How to Keep Squirrels Off Bird Feeders (2025) - WIRED</title><link>https://www.wired.com/story/how-to-keep-squirrels-off-bird-feeders/</link></item>
-<item><title>Best Mattresses for Sex (2025) - WIRED</title><link>https://www.wired.com/gallery/best-mattress-for-sex/</link></item>
-<item><title>OpenAI Atlas Browser Hands On: I’m Not Convinced the Web Needs a Chatbot Tour Guide - WIRED</title><link>https://www.wired.com/story/web-browsers-ai-tour-guide-openai-atlas-ask-chatgpt/</link></item>
-<item><title>The Pepsi Man Is Coming to Save Samsung From Boring Design - WIRED</title><link>https://www.wired.com/story/the-pepsi-man-is-coming-to-save-samsung-from-boring-design/</link></item>
-<item><title>6 Best Couples Sex Toys (2025), Tested and Reviewed - WIRED</title><link>https://www.wired.com/gallery/best-couples-sex-toys/</link></item>
-<item><title>AI’s Truth Problem - Law &amp; Liberty</title><link>https://lawliberty.org/ais-truth-problem/</link></item>
-<item><title>The Tragic Politics of the French Revolution - Law &amp; Liberty</title><link>https://lawliberty.org/book-review/the-tragic-politics-of-the-french-revolution/</link></item>
-<item><title>The Final Edition of Friendship Is Happening in 2026: See The Lineup - Billboard</title><link>https://www.billboard.com/music/music-news/friendship-dance-music-cruise-2026-lineup-gary-richards-1236099085/</link></item>
-<item><title>Shakira &amp; The Weeknd Join FIFA Global Citizen Education Board Ahead of 2026 World Cup With Ivanka Trump, Serena Williams &amp; More Also Onboard - Billboard</title><link>https://www.billboard.com/music/music-news/shakira-weeknd-ivanka-trump-global-citizen-education-board-1236098994/</link></item>
-<item><title>Former ‘Dancing With the Stars’ Pros Say Taylor Swift Dancer Has ‘Absolutely No Business’ Being Cast on the Show - Billboard</title><link>https://www.billboard.com/music/music-news/dancing-with-the-stars-alums-taylor-swift-backup-jan-ravnik-1236098835/</link></item>
-<item><title>Katie Bain Bringing Her New Coachella Book ‘Desert Dreams’ to Billboard Book Club: How to Watch - Billboard</title><link>https://www.billboard.com/music/music-news/katie-bain-coachella-book-desert-dreams-billboard-book-club-1236098719/</link></item>
-<item><title>20 Terrifying Music Videos for Your Halloween From Lady Gaga, Taylor Swift, Michael Jackson, Ozzy Osbourne &amp; Billie Eilish - Billboard</title><link>https://www.billboard.com/lists/halloween-music-videos/</link></item>
-<item><title>Brad Paisley &amp; Tinashe to Perform U.S. National Anthem at 2025 World Series Games 3 &amp; 4 - Billboard</title><link>https://www.billboard.com/music/music-news/brad-paisley-tinashe-national-anthem-world-series-games-3-4-1236098558/</link></item>
-<item><title>Kenshi Yonezu on ‘Unconscious’ Links Between ‘IRIS OUT’ / ‘JANE DOE,’ Reconnecting With ‘CHAINSAW MAN’ &amp; Hikaru Utada’s Influence: Interview - Billboard</title><link>https://www.billboard.com/music/music-news/kenshi-yonezu-interview-iris-out-jane-doe-hikaru-utada-1236098651/</link></item>
-<item><title>Sabrina Carpenter Arrests Anne Hathaway at NYC Show ‘for Being the Most Perfect Princess in the World’ - Billboard</title><link>https://www.billboard.com/music/music-news/sabrina-carpenter-arrests-anne-hathaway-nyc-show-1236098374/</link></item>
-<item><title>BLACKPINK Choreographer Reveals Which ‘Iconic’ Act Almost Made a Cameo at Band’s Coachella Set - Billboard</title><link>https://www.billboard.com/music/music-news/blackpink-coachella-set-spice-girls-cameo-choreographer-1236098373/</link></item>
-<item><title>Taylor Swift’s Choreographer Recalls How Star Used to Be ‘in Her Head’ Over Her ‘Bad Rap’ as a Dancer - Billboard</title><link>https://www.billboard.com/music/music-news/taylor-swift-choreographer-insecure-about-dancing-1236098300/</link></item>
-<item><title>Crossword Puzzle - Billboard</title><link>https://www.billboard.com/p/billboard-crossword/</link></item>
-<item><title>Snakebite Resurrection, Ancient DNA, Nike’s Cyborg Shoes – Strange News Digest for October 27, 2025 - Strange Sounds</title><link>https://strangesounds.org/2025/10/strange-news-digest-october-27-2025.html</link></item>
-<item><title>How Does Sound Change the Perception of Video Games? - Strange Sounds</title><link>https://strangesounds.org/2025/10/how-sound-changes-the-perception-of-video-games.html</link></item>
-<item><title>Louvre Robbery Ad, AI Doritos Panic, Alien Bodies &amp; La Pascualita Mystery – Strange News Digest for October 24, 2025 - Strange Sounds</title><link>https://strangesounds.org/2025/10/louvre-robbery-ad-ai-doritos-panic-alien-bodies-la-pascualita-mystery-strange-news-digest-for-october-24-2025.html</link></item>
-<item><title>The Most Beautiful Woman to Ever Die, Lava Fountains &amp; a 109-Year-Old Elephant’s Farewell – Strange News Digest for October 23, 2025 - Strange Sounds</title><link>https://strangesounds.org/2025/10/the-most-beautiful-woman-to-ever-die-lava-fountains-a-109-year-old-elephants-farewell-strange-news-digest-for-october-23-2025.html</link></item>
-<item><title>Cascadia Megathrust Earthquakes May Trigger San Andreas Fault Events - Strange Sounds</title><link>https://strangesounds.org/2025/10/cascadia-megathrust-earthquakes-san-andreas-fault-events-link.html</link></item>
-<item><title>A Giant Asteroid Hit Earth In Previously Unknown Mega Impact — But Its Crater Is Missing - Strange Sounds</title><link>https://strangesounds.org/2025/10/giant-asteroid-hit-earth-crater-missing.html</link></item>
-<item><title>Drones Over Spain, UFOs Over Minneapolis and Venus Gets Blasted – Strange News Digest for October 22, 2025 - Strange Sounds</title><link>https://strangesounds.org/2025/10/drones-spain-ufos-minneapolis-venus-blasted-strange-news-digest-october-22-2025.html</link></item>
-<item><title>US Loud Booms &amp; Military Advisories Nationwide — What’s Behind the Mysterious Explosions? - Strange Sounds</title><link>https://strangesounds.org/2025/10/loud-booms-military-noise-advisories-oct-2025.html</link></item>
-<item><title>Geoengineering: Dimming the Sun Will Spark Global Chaos - Strange Sounds</title><link>https://strangesounds.org/2025/10/solar-geoengineering-dimming-sun-chaos.html</link></item>
-<item><title>Carnivorous Squirrels, Cosmic Plasma, Collapsing Tombs &amp; Smart Bed Meltdowns – Strange News Digest for Oct 21, 2025 - Strange Sounds</title><link>https://strangesounds.org/2025/10/carnivorous-squirrels-solar-fire-tutankhamun-collapse-strange-news-digest-oct-21-2025.html</link></item>
-<item><title>The 10 Most Dangerous States for Trick-or-Treaters, Mapped - Mental Floss</title><link>https://www.mentalfloss.com/geography/maps/most-dangerous-states-trick-or-treaters</link></item>
-<item><title>Why Do We Carve and Paint Pumpkins for Halloween? - Mental Floss</title><link>https://www.mentalfloss.com/holidays/halloween/why-carve-paint-pumpkins</link></item>
-<item><title>7 Best-Selling 19th-Century Female Novelists Who Aren’t Jane Austen - Mental Floss</title><link>https://www.mentalfloss.com/literature/authors/bestselling-victorian-female-authors</link></item>
-<item><title>The Nordic Countries Where There’s No Word for ‘Please’ - Mental Floss</title><link>https://www.mentalfloss.com/language/scandinavian-countries-no-word-for-please</link></item>
-<item><title>Only 21% of People Can Complete This Fall Puzzle in Under 10 Seconds - Mental Floss</title><link>https://www.mentalfloss.com/quizzes/brainteasers/21-percent-complete-fall-puzzle-under-10-seconds</link></item>
-<item><title>Quiz: Which Real-Life People Inspired These Horror Characters? - Mental Floss</title><link>https://www.mentalfloss.com/quizzes/real-people-inspired-horror-characters</link></item>
-<item><title>6 of History’s Scariest Paintings - Mental Floss</title><link>https://www.mentalfloss.com/art/historys-scariest-paintings</link></item>
-<item><title>10M people watched a YouTuber shim a lock; the lock company sued him. Bad idea. - Ars Technica</title><link>https://arstechnica.com/tech-policy/2025/10/suing-a-popular-youtuber-who-shimmed-a-130-lock-what-could-possibly-go-wrong/</link></item>
-<item><title>Porsche’s 2026 911 Turbo S is a ballistic, twin-turbo, 701-horsepower monster - Ars Technica</title><link>https://arstechnica.com/cars/2025/10/porsches-2026-911-turbo-s-is-a-ballistic-twin-turbo-701-horsepower-monster/</link></item>
-<item><title>AI-powered search engines rely on “less popular” sources, researchers find - Ars Technica</title><link>https://arstechnica.com/ai/2025/10/ai-powered-search-engines-rely-on-less-popular-sources-researchers-find/</link></item>
-<item><title>AT&amp;T ad congratulating itself for its ethics violated an ad-industry rule - Ars Technica</title><link>https://arstechnica.com/tech-policy/2025/10/att-ad-congratulating-itself-for-its-ethics-violated-an-ad-industry-rule/</link></item>
-<item><title>F1 in Mexico City: We have a new championship leader - Ars Technica</title><link>https://arstechnica.com/cars/2025/10/f1-in-mexico-city-we-have-a-new-championship-leader/</link></item>
-<item><title>Why imperfection could be key to Turing patterns in nature - Ars Technica</title><link>https://arstechnica.com/science/2025/10/why-imperfection-could-be-key-to-turing-patterns-in-nature/</link></item>
-<item><title>Melissa set to be the strongest hurricane to ever strike Jamaica - Ars Technica</title><link>https://arstechnica.com/science/2025/10/melissa-set-to-be-the-strongest-hurricane-to-ever-strike-jamaica/</link></item>
-<item><title>New image-generating AIs are being used for fake expense reports - Ars Technica</title><link>https://arstechnica.com/ai/2025/10/ai-generated-receipts-make-submitting-fake-expenses-easier/</link></item>
-<item><title>Whale and dolphin migrations are being disrupted by climate change - Ars Technica</title><link>https://arstechnica.com/science/2025/10/whale-and-dolphin-migrations-are-being-disrupted-by-climate-change/</link></item>
-<item><title>Are you the asshole? Of course not!—quantifying LLMs’ sycophancy problem - Ars Technica</title><link>https://arstechnica.com/ai/2025/10/are-you-the-asshole-of-course-not-quantifying-llms-sycophancy-problem/</link></item>
-<item><title>We let OpenAI’s “Agent Mode” surf the web for us—here’s what happened - Ars Technica</title><link>https://arstechnica.com/features/2025/10/we-let-openais-agent-mode-surf-the-web-for-us-heres-what-happened/</link></item>
-<item><title>A single point of failure triggered the Amazon outage affecting millions - Ars Technica</title><link>https://arstechnica.com/gadgets/2025/10/a-single-point-of-failure-triggered-the-amazon-outage-affecting-millions/</link></item>
-<item><title>Tesla’s “Mad Max” mode is now under federal scrutiny - Ars Technica</title><link>https://arstechnica.com/cars/2025/10/feds-probe-tesla-about-its-mad-max-mode/</link></item>
-<item><title>Man takes herbal pain quackery, nearly dies, spends months in hospital - Ars Technica</title><link>https://arstechnica.com/health/2025/10/man-takes-herbal-pain-quackery-nearly-dies-spends-months-in-hospital/</link></item>
-<item><title>Clinical trial of a technique that could give everyone the best antibodies - Ars Technica</title><link>https://arstechnica.com/science/2025/10/dna-and-jolts-of-electricity-get-people-to-make-optimal-antibodies/</link></item>
-<item><title>The Android-powered Boox Palma 2 Pro fits in your pocket, but it’s not a phone - Ars Technica</title><link>https://arstechnica.com/gadgets/2025/10/the-android-powered-boox-palma-2-pro-fits-in-your-pocket-but-its-not-a-phone/</link></item>
-<item><title>Tech billionaires are now shaping the militarization of American cities - Ars Technica</title><link>https://arstechnica.com/tech-policy/2025/10/troops-in-us-cities-tech-billionaires-are-shaping-that-too/</link></item>
-<item><title>EU accuses Meta of violating content rules in move that could anger Trump - Ars Technica</title><link>https://arstechnica.com/tech-policy/2025/10/trump-tariff-threats-havent-stopped-eu-from-cracking-down-on-meta/</link></item>
-<item><title>Microsoft’s Mico heightens the risks of parasocial LLM relationships - Ars Technica</title><link>https://arstechnica.com/ai/2025/10/microsofts-mico-heightens-the-risks-of-parasocial-llm-relationships/</link></item>
-<item><title>Rivian is settling $250 million lawsuit to focus on next year’s R2 EV - Ars Technica</title><link>https://arstechnica.com/cars/2025/10/rivian-settles-shareholder-lawsuit-for-250-million-denies-allegations/</link></item>
-<item><title>Bats eat the birds they pluck from the sky while on the wing - Ars Technica</title><link>https://arstechnica.com/science/2025/10/tracking-bats-as-they-hunt-birds-in-the-skies-above-europe/</link></item>
-<item><title>DNA analysis reveals likely pathogens that killed Napoleon’s army - Ars Technica</title><link>https://arstechnica.com/science/2025/10/dna-analysis-reveals-likely-pathogens-that-killed-napoleons-army/</link></item>
-<item><title>This browser claims “perfect privacies protection,” but it acts like malware - Ars Technica</title><link>https://arstechnica.com/security/2025/10/this-browser-claims-perfect-privacies-protection-but-it-acts-like-malware/</link></item>
-<item><title>Satellite shows what’s really happening at the East Wing of the White House - Ars Technica</title><link>https://arstechnica.com/space/2025/10/satellite-shows-whats-really-happening-at-the-east-wing-of-the-white-house/</link></item>
-<item><title>Rocket Report: China tests Falcon 9 lookalike; NASA’s Moon rocket fully stacked - Ars Technica</title><link>https://arstechnica.com/space/2025/10/rocket-report-china-tests-falcon-9-lookalike-nasas-moon-rocket-fully-stacked/</link></item>
-<item><title>With new acquisition, OpenAI signals plans to integrate deeper into the OS - Ars Technica</title><link>https://arstechnica.com/ai/2025/10/openai-acquires-the-team-that-made-apples-shortcuts/</link></item>
-<item><title>Lawsuit: Reddit caught Perplexity “red-handed” stealing data from Google results - Ars Technica</title><link>https://arstechnica.com/tech-policy/2025/10/reddit-sues-to-block-perplexity-from-scraping-google-search-results/</link></item>
-<item><title>Researchers show that training on “junk data” can lead to LLM “brain rot” - Ars Technica</title><link>https://arstechnica.com/ai/2025/10/researchers-show-that-training-on-junk-data-can-lead-to-llm-brain-rot/</link></item>
-<item><title>Dinosaurs may have flourished right up to when the asteroid hit - Ars Technica</title><link>https://arstechnica.com/science/2025/10/dinosaurs-may-have-flourished-right-up-to-when-the-asteroid-hit/</link></item>
-<item><title>An NIH director joins MAHA, gets replaced by JD Vance’s close friend - Ars Technica</title><link>https://arstechnica.com/health/2025/10/an-nih-director-joins-maha-gets-replaced-by-jd-vances-close-friend/</link></item>
-<item><title>Microsoft makes Copilot “human-centered” with a ‘90s-style animated assistant - Ars Technica</title><link>https://arstechnica.com/gadgets/2025/10/microsoft-makes-copilot-human-centered-with-a-90s-style-animated-assistant/</link></item>
-<item><title>The first people to set foot in Australia were fossil hunters - Ars Technica</title><link>https://arstechnica.com/science/2025/10/the-first-people-to-set-foot-in-australia-were-fossil-hunters/</link></item>
-<item><title>Great hybrid V6, lousy HMI: Three days with a Ferrari 296 GTB - Ars Technica</title><link>https://arstechnica.com/cars/2025/10/great-hybrid-v6-lousy-hmi-three-days-with-a-ferrari-296-gtb/</link></item>
-<item><title>Trump eyes government control of quantum computing firms with Intel-like deals - Ars Technica</title><link>https://arstechnica.com/tech-policy/2025/10/trumps-industry-meddling-may-give-us-a-stake-in-quantum-computing-firms/</link></item>
-<item><title>My favorite Spotify feature just arrived on Android Auto and it makes all other music apps obsolete - Android Police</title><link>https://www.androidpolice.com/spotify-jam-car-music-sharing/</link></item>
-<item><title>The Google Pixel 10 is already excellent for $800, but it’s irresistible for $550 - Android Police</title><link>https://www.androidpolice.com/google-pixel-10-mint-limited-deal/</link></item>
-<item><title>I swapped Chrome for Vivaldi on Android - Android Police</title><link>https://www.androidpolice.com/swapped-chrome-for-vivaldi-on-android/</link></item>
-<item><title>The Unihertz Titan 2 made me fall in love with keyboard phones again - Android Police</title><link>https://www.androidpolice.com/unihertz-titan-2-long-term/</link></item>
-<item><title>I tried Garmin&amp;#39;s most stylish smartwatch—and now I can&amp;#39;t take it off - Android Police</title><link>https://www.androidpolice.com/garmin-stylish-hybrid-smartwatch/</link></item>
-<item><title>Samsung&amp;#39;s Galaxy S26 lineup feels like a missed opportunity - Android Police</title><link>https://www.androidpolice.com/samsungs-galaxy-s26-lineup-rumors/</link></item>
-<item><title>These $80 earbuds are better than my Pixel Buds Pros - Android Police</title><link>https://www.androidpolice.com/earbuds-made-me-rethink-what-i-want-in-2025/</link></item>
-<item><title>How to roll back to an older version of an app on Android - Android Police</title><link>https://www.androidpolice.com/roll-back-android-app-older-version/</link></item>
-<item><title>I&amp;#39;ve taken photos with the OnePlus 15, and they live up to the hype - Android Police</title><link>https://www.androidpolice.com/oneplus-15-first-real-world-camera-photos/</link></item>
-<item><title>Chrome for Android finally picks up Google&amp;#39;s latest design language - Android Police</title><link>https://www.androidpolice.com/google-chrome-android-material-3-expressive-refresh/</link></item>
-<item><title>The Google Pixel 10’s gaming reputation isn’t fair — here’s what my tests showed - Android Police</title><link>https://www.androidpolice.com/google-pixel-10-gaming/</link></item>
-<item><title>I wasted weeks on a Chrome issue with a 5-second fix - Android Police</title><link>https://www.androidpolice.com/fix-chrome-home-shortcuts/</link></item>
-<item><title>The secret Android keyboard settings everyone forgets to change - Android Police</title><link>https://www.androidpolice.com/secret-android-keyboard-settings/</link></item>
-<item><title>Remember the 5G hype? Samsung&amp;#39;s going in a different direction with 6G - Android Police</title><link>https://www.androidpolice.com/samsung-6g-hype/</link></item>
-<item><title>I love this phone&amp;#39;s unique hardware and fresh Android experience - Android Police</title><link>https://www.androidpolice.com/i-love-this-phones-unique-feature/</link></item>
-<item><title>Samsung’s first trifold phone may not unfold in the US - Android Police</title><link>https://www.androidpolice.com/samsungs-first-trifold-phone-may-not-unfold-in-us/</link></item>
-<item><title>How Google Wallet quietly replaced 10 other apps on my phone - Android Police</title><link>https://www.androidpolice.com/google-wallet-features-replace-other-apps/</link></item>
-<item><title>I used to bail on long reads — then Chrome added something brilliant - Android Police</title><link>https://www.androidpolice.com/chrome-summarizer-tool/</link></item>
-<item><title>6 ways to use your phone less — and none involve screen-time alerts - Android Police</title><link>https://www.androidpolice.com/ways-to-reduce-your-smartphone-use-that-arent-just-time-limits/</link></item>
-<item><title>Folding phones are nearly there — thinner, tougher, but still too pricey to win - Android Police</title><link>https://www.androidpolice.com/folding-phones-are-ready-to-go-mainstream-almost/</link></item>
-<item><title>I thought I’d always “just Google it” — then Gemini made answers effortless - Android Police</title><link>https://www.androidpolice.com/gemini-instead-of-googling-not-sure-how-i-feel/</link></item>
-<item><title>Samsung&amp;#39;s new update puts ads on your fridge starting November 3 - Android Police</title><link>https://www.androidpolice.com/ads-are-coming-for-your-refreigerator-starting-on-november-3/</link></item>
-<item><title>Google&amp;#39;s upcoming Feature Drop leaks, giving an early look at big changes coming to Pixel phones - Android Police</title><link>https://www.androidpolice.com/googles-upcoming-feature-drop-aims-to-transform-pixels-in-new-ways/</link></item>
-<item><title>Google&amp;#39;s Gemini AI health coach is finally ready to roll out to Fitbit Premium users - Android Police</title><link>https://www.androidpolice.com/fitbit-premium-users-get-personal-coach-feature/</link></item>
-<item><title>Samsung&amp;#39;s next big beta update is hitting a sudden snag - Android Police</title><link>https://www.androidpolice.com/one-ui-85-beta-program-is-likely-delayed/</link></item>
-<item><title>YouTube pushed a highly NSFW thumbnail to millions of unsuspecting users - Android Police</title><link>https://www.androidpolice.com/youtubes-latest-recommendation-blunder/</link></item>
-<item><title>The Pixel Watch 3&amp;#39;s sudden discount seems like a mistake, but we&amp;#39;re not complaining - Android Police</title><link>https://www.androidpolice.com/pixel-watch-3-drops-to-absolute-lowest-price-ahead-of-holidays/</link></item>
-<item><title>This massive 100-inch Google TV just dropped to a price that can&amp;#39;t be ignored - Android Police</title><link>https://www.androidpolice.com/this-100-inch-google-tv-is-now-just-1500/</link></item>
-<item><title>Anker&amp;#39;s most popular power bank just got a surprise discount, falling to its lowest price yet - Android Police</title><link>https://www.androidpolice.com/ankers-popular-power-bank-is-at-its-lowest-price/</link></item>
-<item><title>This versatile power strip does everything you need it to for just $10 - Android Police</title><link>https://www.androidpolice.com/this-versatile-power-strip-has-everything-you-need-for-just-10/</link></item>
-<item><title>This is the only power bank you&amp;#39;ll ever need, and it&amp;#39;s $43 off right now - Android Police</title><link>https://www.androidpolice.com/anker-laptop-power-bank-92-deal/</link></item>
-<item><title>Google wants to make multitasking on Android tablets easier - Android Police</title><link>https://www.androidpolice.com/google-wants-to-make-multitasking-android-tablets-easier/</link></item>
-<item><title>Best VPN for Amazon Fire TV Stick in 2025 - Android Police</title><link>https://www.androidpolice.com/best-vpn-amazon-fire-tv-stick/</link></item>
-<item><title>Virtual Private Network (VPN) - Android Police</title><link>https://www.androidpolice.com/tag/vpn/</link></item>
-<item><title>How to add custom notification sounds for each app on your Android phone - Android Police</title><link>https://www.androidpolice.com/change-notification-sound-android-tutorial/</link></item>
-<item><title>The 15 Samsung Galaxy S24 settings you should change immediately - Android Police</title><link>https://www.androidpolice.com/samsung-galaxy-s24-settings-change-immediately/</link></item>
-<item><title>NotebookLM has a source limit, but these tricks helped me stay organized anyway - Android Police</title><link>https://www.androidpolice.com/notebooklm-source-limit-tricks-stay-organized/</link></item>
-<item><title>How Surfshark finally solved my biggest VPN annoyance - Android Police</title><link>https://www.androidpolice.com/surfshark-solved-biggest-vpn-annoyance/</link></item>
-<item><title>How to access Google Photos on any device - Android Police</title><link>https://www.androidpolice.com/access-google-photos-any-device-tutorial/</link></item>
-<item><title>How to change your Android Auto view - Android Police</title><link>https://www.androidpolice.com/change-android-auto-view/</link></item>
-<item><title>I don&amp;#39;t usually trust Google freebies, but I&amp;#39;m sold on this student promo — here&amp;#39;s what I love about it - Android Police</title><link>https://www.androidpolice.com/gemini-ai-pro-student/</link></item>
-<item><title>Samsung resumes the Galaxy S23&amp;#39;s One UI 8 update - Android Police</title><link>https://www.androidpolice.com/samsung-galaxy-s23-ultra-plus-one-ui-8-android-16-update-returns/</link></item>
-<item><title>The Pixel 10 Pro Fold is picky and doesn&amp;#39;t work with all chargers - Android Police</title><link>https://www.androidpolice.com/pixel-10-pro-fold-gives-users-the-questions-mark-when-charging/</link></item>
-<item><title>Garmin doesn&amp;#39;t even blink as Strava voluntarily drops its lawsuit - Android Police</title><link>https://www.androidpolice.com/strava-voluntarily-drops-lawsuit-against-garmin/</link></item>
-<item><title>8 Android Auto settings you didn&amp;#39;t know you needed to change - Android Police</title><link>https://www.androidpolice.com/android-auto-settings-to-change/</link></item>
-<item><title>Google Pixel’s most dangerous bug refuses to die - Android Police</title><link>https://www.androidpolice.com/google-pixels-most-dangerous-bug-refuses-to-die/</link></item>
-<item><title>Lithuania Will Shoot Down Balloons Crossing Border From Belarus After Dozens Detected Overnight - The War Zone</title><link>https://www.twz.com/news-features/lithuania-will-shoot-down-balloons-crossing-border-from-belarus-after-dozens-detected-overnight</link></item>
-<item><title>“Bad Fuel” May Have Caused Back-To-Back Nimitz Aircraft Crashes: Trump - The War Zone</title><link>https://www.twz.com/sea/bad-fuel-may-have-caused-back-to-back-nimitz-aircraft-crashes-trump</link></item>
-<item><title>U.S. Navy Air-Launched Version Of ‘Cheap’ Blackbeard Hypersonic Missile Hinted At - The War Zone</title><link>https://www.twz.com/air/u-s-navy-air-launched-version-of-cheap-blackbeard-hypersonic-missile-hinted-at</link></item>
-<item><title>Massive Hurricane Forces Movement Of Several Navy Ships Deployed To Caribbean - The War Zone</title><link>https://www.twz.com/sea/massive-hurricane-forces-movement-of-several-navy-ships-deployed-to-caribbean</link></item>
-<item><title>Skyfall Nuclear-Powered Cruise Missile Long-Range Test Claimed By Russia - The War Zone</title><link>https://www.twz.com/nuclear/skyfall-nuclear-powered-cruise-missile-long-range-test-claimed-by-russia</link></item>
-<item><title>Supercarrier USS Ford Being Pulled From Europe And Ordered To Caribbean - The War Zone</title><link>https://www.twz.com/sea/supercarrier-uss-ford-being-pulled-from-europe-and-ordered-to-caribbean</link></item>
-<item><title>F-35 Proving Itself On The Front Line And Evolving For Future Threats - The War Zone</title><link>https://www.twz.com/sponsored-content/f-35-proving-itself-on-the-front-line-and-evolving-for-future-threats</link></item>
-<item><title>Coast Guard Will Get A New MH-60 Variant To Replace MH-65 Helicopters - The War Zone</title><link>https://www.twz.com/air/coast-guard-will-get-a-new-mh-60-variant-to-replace-mh-65-helicopters</link></item>
-<item><title>Air Force’s Crop Duster Converted Into Attack Plane Crash Lands In Field (Updated) - The War Zone</title><link>https://www.twz.com/air/air-forces-crop-duster-converted-into-attack-plane-crash-lands-in-field</link></item>
-<item><title>B-1 Bombers Fly Off Venezuela’s Coast - The War Zone</title><link>https://www.twz.com/air/b-1-bombers-fly-off-venezuelas-coast</link></item>
-<item><title>South Korea Has Launched Its Most Advanced Submarine Ever - The War Zone</title><link>https://www.twz.com/air/south-korea-has-launched-its-most-advanced-submarine-ever</link></item>
-<item><title>Army To Bring Nuclear Microreactors To Its Bases By 2028 - The War Zone</title><link>https://www.twz.com/nuclear/army-to-bring-nuclear-microreactors-to-its-bases-by-2028</link></item>
-<item><title>Russia Is Now Launching Jet-Powered Glide Bombs At Ukraine - The War Zone</title><link>https://www.twz.com/air/russia-is-now-launching-powered-glide-bombs-at-ukraine</link></item>
-<item><title>AeroVironment’s Freedom Eagle-1 Picked As New Counter-Drone Interceptor For U.S. Army - The War Zone</title><link>https://www.twz.com/land/aerovironments-freedom-eagle-1-picked-as-new-counter-drone-interceptor-for-u-s-army</link></item>
-<item><title>Huge Gripen Fighter Order Letter Of Intent Signed By Ukraine - The War Zone</title><link>https://www.twz.com/air/huge-gripen-fighter-order-letter-of-intent-signed-by-ukraine</link></item>
-<item><title>Submarine Partnership Pitched By Germany And Norway To Canada - The War Zone</title><link>https://www.twz.com/sea/submarine-partnership-pitched-by-germany-and-norway-to-canada</link></item>
-<item><title>MQ-20 Avenger Depicted With Laser Weapon In Its Nose A Sign Of What’s To Come - The War Zone</title><link>https://www.twz.com/air/mq-20-avenger-depicted-with-laser-weapon-in-its-nose-a-sign-of-whats-to-come</link></item>
-<item><title>Gripen E Fighter Officially Joins The Swedish Air Force - The War Zone</title><link>https://www.twz.com/air/gripen-e-fighter-officially-joins-the-swedish-air-force</link></item>
-<item><title>The Rise Of X-BAT - The War Zone</title><link>https://www.twz.com/air/the-rise-of-x-bat</link></item>
-<item><title>Lockheed To Test Golden Dome Space-Based Missile Interceptor In Orbit By 2028 - The War Zone</title><link>https://www.twz.com/space/lockheed-to-test-golden-dome-space-based-missile-interceptor-in-orbit-by-2028</link></item>
-<item><title>Singapore Launches Its Biggest And Most Capable Warship Ever - The War Zone</title><link>https://www.twz.com/sea/singapore-launches-its-biggest-and-most-capable-warship-ever</link></item>
-<item><title>Walk-Around Tour Of Beechcraft’s M-346 That’s Vying To Become The Navy’s Next Jet Trainer - The War Zone</title><link>https://www.twz.com/air/walk-around-tour-of-beechcrafts-m-346-thats-vying-to-become-the-navys-next-jet-trainer</link></item>
-<item><title>Sweden Pushes Ahead With Future Fighter Program - The War Zone</title><link>https://www.twz.com/air/sweden-pushes-ahead-with-future-tactical-jet-program</link></item>
-<item><title>Venezuela’s Supersonic Anti-Ship Missiles Are A Real Threat To American Warships - The War Zone</title><link>https://www.twz.com/sea/venezuelas-supersonic-anti-ship-missiles-are-a-real-threat-to-american-warships</link></item>
-<item><title>Troubled Infrared Pod For Navy Super Hornets Gets New Vote Of Confidence - The War Zone</title><link>https://www.twz.com/air/troubled-infrared-pod-for-navy-super-hornets-get-new-vote-of-confidence</link></item>
-<item><title>China’s Huge ‘GJ-X’ Stealth Drone Appears To Have Been Spotted In The Air For The First Time - The War Zone</title><link>https://www.twz.com/air/chinas-huge-cj-x-stealth-drone-appears-to-have-been-spotted-in-the-air-for-the-first-time</link></item>
-<item><title>The Best Streaming Services for Military Families - Military.com</title><link>https://www.military.com/daily-news/2025/10/23/best-streaming-services-military-families-and-why.html</link></item>
+<lastBuildDate>Wed, 29 Oct 2025 08:56:36 +0800</lastBuildDate>
+<item><title>人类迁移的生物量超过所有陆地动物总和 40 倍 - Solidot</title><link>https://www.solidot.org/story?sid=82660</link></item>
+<item><title>勒索软件的赎金支付比例创新低 - Solidot</title><link>https://www.solidot.org/story?sid=82659</link></item>
+<item><title>GLP-1 减肥药降低了美国的肥胖率 - Solidot</title><link>https://www.solidot.org/story?sid=82658</link></item>
+<item><title>阿尔巴尼亚的 AI 部长怀孕了 - Solidot</title><link>https://www.solidot.org/story?sid=82657</link></item>
+<item><title>OpenAI 和 Anthropic 拥抱不同的商业模式 - Solidot</title><link>https://www.solidot.org/story?sid=82656</link></item>
+<item><title>小行星撞击地球时恐龙正处于繁盛期 - Solidot</title><link>https://www.solidot.org/story?sid=82655</link></item>
+<item><title>澳大利亚就微软对 Microsoft 365 订阅费用涨价提起诉讼 - Solidot</title><link>https://www.solidot.org/story?sid=82654</link></item>
+<item><title>芬兰生育率自 2010 年以来下降了三分之一 - Solidot</title><link>https://www.solidot.org/story?sid=82653</link></item>
+<item><title>看三分钟励志视频有助于增加希望和减轻压力 - Solidot</title><link>https://www.solidot.org/story?sid=82652</link></item>
+<item><title>Sabrina Carpenter in Aritzia Coat and Plaid Scarf at Prospect Park 2025 - CelebMafia</title><link>https://celebmafia.com/sabrina-carpenter-in-aritzia-coat-and-plaid-scarf-at-prospect-park-2025-4592660/</link></item>
+<item><title>Mackenzie Ziegler in Checkered Socks and Button-Up for Double Soul Shoot - CelebMafia</title><link>https://celebmafia.com/mackenzie-ziegler-in-checkered-socks-and-button-up-for-double-soul-shoot-4592649/</link></item>
+<item><title>Rachel Zegler in Leather Blazer and Ripped Denim at BBC Studios London - CelebMafia</title><link>https://celebmafia.com/rachel-zegler-in-leather-blazer-and-ripped-denim-at-bbc-studios-london-4592628/</link></item>
+<item><title>Zoey Deutch in Pale Yellow Gown at Nouvelle Vague Premiere in Austin - CelebMafia</title><link>https://celebmafia.com/zoey-deutch-in-pale-yellow-gown-at-nouvelle-vague-premiere-in-austin-4592613/</link></item>
+<item><title>Leni Klum in Monochrome Leather Look in NYC’s Financial District - CelebMafia</title><link>https://celebmafia.com/leni-klum-in-monochrome-leather-look-in-nycs-financial-district-4592598/</link></item>
+<item><title>Eiza Gonzalez in Mugler Corset Look for Vogue World Photoshoot October 2025 - CelebMafia</title><link>https://celebmafia.com/eiza-gonzalez-in-mugler-corset-look-for-vogue-world-photoshoot-october-2025-4592585/</link></item>
+<item><title>Sydney Sweeney in Stella McCartney Mini Dress at SCAD Savannah Film Festival - CelebMafia</title><link>https://celebmafia.com/sydney-sweeney-in-stella-mccartney-mini-dress-at-scad-savannah-film-festival-4592564/</link></item>
+<item><title>Mindy Kaling in Quilted Beige Dress at Vogue World: Hollywood 2025 - CelebMafia</title><link>https://celebmafia.com/mindy-kaling-in-quilted-beige-dress-at-vogue-world-hollywood-2025-4592559/</link></item>
+<item><title>Madison Beer in UGG Boots and Sweatpants at All Time in Los Feliz - CelebMafia</title><link>https://celebmafia.com/madison-beer-in-ugg-boots-and-sweatpants-at-all-time-in-los-feliz-4592550/</link></item>
+<item><title>Eiza Gonzalez in Def Leppard Tee and Leather Jacket in Los Angeles - CelebMafia</title><link>https://celebmafia.com/eiza-gonzalez-in-def-leppard-tee-and-leather-jacket-in-los-angeles-4592531/</link></item>
+<item><title>Drew Barrymore’s Storage Cabinet Can Live Under the Bathroom Sink—Or in a Hallway - domino</title><link>https://www.domino.com/style-shopping/drew-barrymore-bathroom-storage-2025/</link></item>
+<item><title>Kids&amp;#39; Products - domino</title><link>https://www.domino.com/category/kids-products/</link></item>
+<item><title>Alicia Waite - domino</title><link>https://www.domino.com/authors/alicia-waite/</link></item>
+<item><title>A Good Experience [Comic] - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/10/28/a-good-experience-comic/</link></item>
+<item><title>The Foolproof Science-Backed Methods to Fall Asleep FAST! - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/10/28/the-foolproof-science-backed-methods-to-fall-asleep-fast/</link></item>
+<item><title>Dad Trek: A Compilation of Star Trek: The Original Series Dad Jokes - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/10/28/dad-trek-a-compilation-of-star-trek-the-original-series-dad-jokes/</link></item>
+<item><title>Today’s Hot Deals: Anker Zolo 20,000mAh Power Bank, Logitech Lift Wireless Vertical Ergonomic Mouse, Berserk Deluxe Volume 1, 2, and 3, Legendary Foods Protein Pastry, and More! - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/10/28/todays-hot-deals-anker-zolo-20000mah-power-bank-logitech-lift-wireless-vertical-ergonomic-mouse-berserk-deluxe-volume-1-2-and-3-legendary-foods-protein-pastry-and-more/</link></item>
+<item><title>The Wild World of Courtship [Comic] - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/10/28/the-wild-world-of-courtship-comic/</link></item>
+<item><title>Why We Love Monsters: The Real Reason Behind Your Spooky Obsession - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/10/28/why-we-love-monsters-the-real-reason-behind-your-spooky-obsession/</link></item>
+<item><title>Twik or Tweet [Comic] - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/10/28/twik-or-tweet-comic/</link></item>
+<item><title>Star Trek Fans, Engage! Numskull’s USS Enterprise Advent Statue is Now 55% Off! - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/10/27/star-trek-fans-engage-numskulls-uss-enterprise-advent-statue-is-now-55-off/</link></item>
+<item><title>Using Search Data APIs for Faster Prototyping - Codrops</title><link>https://tympanus.net/codrops/2025/10/28/using-search-data-apis-for-faster-prototyping/</link></item>
+<item><title>Interpol: A Low-Level Take on Tweening and Motion - Codrops</title><link>https://tympanus.net/codrops/2025/10/27/interpol-a-low-level-take-on-tweening-and-motion/</link></item>
+<item><title>Willy Brauner - Codrops</title><link>https://tympanus.net/codrops/author/willybrauner/</link></item>
+<item><title>Motion Highlights #14 - Codrops</title><link>https://tympanus.net/codrops/2025/10/26/motion-highlights-14/</link></item>
+<item><title>Dissecting a Wavy Shader: Sine, Refraction, and Serendipity - Codrops</title><link>https://tympanus.net/codrops/2025/10/25/dissecting-a-wavy-shader-sine-refraction-and-serendipity/</link></item>
+<item><title>The Human Side of the Interface: Abhishek Jha’s Art of Storytelling Through Design - Codrops</title><link>https://tympanus.net/codrops/2025/10/24/the-human-side-of-the-interface-abhishek-jhas-art-of-storytelling-through-design/</link></item>
+<item><title>A Studio Reborn: FUTURE THREE® and the Art of Self-Redesign - Codrops</title><link>https://tympanus.net/codrops/2025/10/23/a-studio-reborn-future-three-and-the-art-of-self-redesign/</link></item>
+<item><title>FUTURE THREE® - Codrops</title><link>https://tympanus.net/codrops/author/futurethree/</link></item>
+<item><title>Weisdevice: Crafting a Glitched-Out World Between 2D, 3D, and Sound - Codrops</title><link>https://tympanus.net/codrops/2025/10/22/weisdevice-crafting-a-glitched-out-world-between-2d-3d-and-sound/</link></item>
+<item><title>The Vision Behind Daria Nevezhyna’s Interactive Configurators - Codrops</title><link>https://tympanus.net/codrops/2025/10/21/the-vision-behind-daria-nevezhynas-interactive-configurators/</link></item>
+<item><title>From Garage to Browser: Forged.build and the WebGPU Revolution - Codrops</title><link>https://tympanus.net/codrops/2025/10/20/from-garage-to-browser-forged-build-and-the-webgpu-revolution/</link></item>
+<item><title>Michael Modena - Codrops</title><link>https://tympanus.net/codrops/author/michael/</link></item>
+<item><title>Fragments: A Platform for Learning Creative Coding with Shaders - Codrops</title><link>https://tympanus.net/codrops/2025/10/17/fragments-a-platform-for-learning-creative-coding-with-shaders/</link></item>
+<item><title>Creating Smooth Scroll-Synchronized Animation for OPTIKKA: From HTML5 Video to Frame Sequences - Codrops</title><link>https://tympanus.net/codrops/2025/10/16/creating-smooth-scroll-synchronized-animation-for-optikka-from-html5-video-to-frame-sequences/</link></item>
+<item><title>From Blank Canvas to Mayhem: Eloy Benoffi’s Brutalist, Glitchy Portfolio Built with Webflow and GSAP - Codrops</title><link>https://tympanus.net/codrops/2025/10/15/from-blank-canvas-to-mayhem-eloy-benoffis-brutalist-glitchy-portfolio-built-with-webflow-and-gsap/</link></item>
+<item><title>Eloy Benoffi - Codrops</title><link>https://tympanus.net/codrops/author/eloybenoffi/</link></item>
+<item><title>The Underdog’s Crown: Clay Boan’s 3D Playground of Design, Motion, and GSAP Magic - Codrops</title><link>https://tympanus.net/codrops/2025/10/14/the-underdogs-crown-clay-boans-3d-playground-of-design-motion-and-gsap-magic/</link></item>
+<item><title>How to Build an Immersive 3D Circular Carousel in WordPress Using Droip - Codrops</title><link>https://tympanus.net/codrops/2025/10/13/how-to-build-an-immersive-3d-circular-carousel-in-wordpress-using-droip/</link></item>
+<item><title>NITEX: Building a Brand and Digital Platform for Fashion’s New Supply Chain - Codrops</title><link>https://tympanus.net/codrops/2025/10/10/nitex-building-a-brand-and-digital-platform-for-fashions-new-supply-chain/</link></item>
+<item><title>Spring/Summer - Codrops</title><link>https://tympanus.net/codrops/author/springsummer/</link></item>
+<item><title>Generating Your Website from Scratch for Remixing and Exploration - Codrops</title><link>https://tympanus.net/codrops/2025/10/09/generating-your-website-from-scratch-for-remixing-and-exploration/</link></item>
+<item><title>How to Animate WebGL Shaders with GSAP: Ripples, Reveals, and Dynamic Blur Effects - Codrops</title><link>https://tympanus.net/codrops/2025/10/08/how-to-animate-webgl-shaders-with-gsap-ripples-reveals-and-dynamic-blur-effects/</link></item>
+<item><title>Ponpon Mania: How WebGL and GSAP Bring a Comic Sheep’s Dream to Life - Codrops</title><link>https://tympanus.net/codrops/2025/10/07/ponpon-mania-how-webgl-and-gsap-bring-a-comic-sheeps-dream-to-life/</link></item>
+<item><title>Justine Soulié - Codrops</title><link>https://tympanus.net/codrops/author/justinesoulie/</link></item>
 </channel></rss>
