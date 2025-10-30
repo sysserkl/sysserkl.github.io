@@ -8,59 +8,436 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Wed, 29 Oct 2025 08:56:36 +0800</lastBuildDate>
-<item><title>人类迁移的生物量超过所有陆地动物总和 40 倍 - Solidot</title><link>https://www.solidot.org/story?sid=82660</link></item>
-<item><title>勒索软件的赎金支付比例创新低 - Solidot</title><link>https://www.solidot.org/story?sid=82659</link></item>
-<item><title>GLP-1 减肥药降低了美国的肥胖率 - Solidot</title><link>https://www.solidot.org/story?sid=82658</link></item>
-<item><title>阿尔巴尼亚的 AI 部长怀孕了 - Solidot</title><link>https://www.solidot.org/story?sid=82657</link></item>
-<item><title>OpenAI 和 Anthropic 拥抱不同的商业模式 - Solidot</title><link>https://www.solidot.org/story?sid=82656</link></item>
-<item><title>小行星撞击地球时恐龙正处于繁盛期 - Solidot</title><link>https://www.solidot.org/story?sid=82655</link></item>
-<item><title>澳大利亚就微软对 Microsoft 365 订阅费用涨价提起诉讼 - Solidot</title><link>https://www.solidot.org/story?sid=82654</link></item>
-<item><title>芬兰生育率自 2010 年以来下降了三分之一 - Solidot</title><link>https://www.solidot.org/story?sid=82653</link></item>
-<item><title>看三分钟励志视频有助于增加希望和减轻压力 - Solidot</title><link>https://www.solidot.org/story?sid=82652</link></item>
-<item><title>Sabrina Carpenter in Aritzia Coat and Plaid Scarf at Prospect Park 2025 - CelebMafia</title><link>https://celebmafia.com/sabrina-carpenter-in-aritzia-coat-and-plaid-scarf-at-prospect-park-2025-4592660/</link></item>
-<item><title>Mackenzie Ziegler in Checkered Socks and Button-Up for Double Soul Shoot - CelebMafia</title><link>https://celebmafia.com/mackenzie-ziegler-in-checkered-socks-and-button-up-for-double-soul-shoot-4592649/</link></item>
-<item><title>Rachel Zegler in Leather Blazer and Ripped Denim at BBC Studios London - CelebMafia</title><link>https://celebmafia.com/rachel-zegler-in-leather-blazer-and-ripped-denim-at-bbc-studios-london-4592628/</link></item>
-<item><title>Zoey Deutch in Pale Yellow Gown at Nouvelle Vague Premiere in Austin - CelebMafia</title><link>https://celebmafia.com/zoey-deutch-in-pale-yellow-gown-at-nouvelle-vague-premiere-in-austin-4592613/</link></item>
-<item><title>Leni Klum in Monochrome Leather Look in NYC’s Financial District - CelebMafia</title><link>https://celebmafia.com/leni-klum-in-monochrome-leather-look-in-nycs-financial-district-4592598/</link></item>
-<item><title>Eiza Gonzalez in Mugler Corset Look for Vogue World Photoshoot October 2025 - CelebMafia</title><link>https://celebmafia.com/eiza-gonzalez-in-mugler-corset-look-for-vogue-world-photoshoot-october-2025-4592585/</link></item>
-<item><title>Sydney Sweeney in Stella McCartney Mini Dress at SCAD Savannah Film Festival - CelebMafia</title><link>https://celebmafia.com/sydney-sweeney-in-stella-mccartney-mini-dress-at-scad-savannah-film-festival-4592564/</link></item>
-<item><title>Mindy Kaling in Quilted Beige Dress at Vogue World: Hollywood 2025 - CelebMafia</title><link>https://celebmafia.com/mindy-kaling-in-quilted-beige-dress-at-vogue-world-hollywood-2025-4592559/</link></item>
-<item><title>Madison Beer in UGG Boots and Sweatpants at All Time in Los Feliz - CelebMafia</title><link>https://celebmafia.com/madison-beer-in-ugg-boots-and-sweatpants-at-all-time-in-los-feliz-4592550/</link></item>
-<item><title>Eiza Gonzalez in Def Leppard Tee and Leather Jacket in Los Angeles - CelebMafia</title><link>https://celebmafia.com/eiza-gonzalez-in-def-leppard-tee-and-leather-jacket-in-los-angeles-4592531/</link></item>
-<item><title>Drew Barrymore’s Storage Cabinet Can Live Under the Bathroom Sink—Or in a Hallway - domino</title><link>https://www.domino.com/style-shopping/drew-barrymore-bathroom-storage-2025/</link></item>
-<item><title>Kids&amp;#39; Products - domino</title><link>https://www.domino.com/category/kids-products/</link></item>
-<item><title>Alicia Waite - domino</title><link>https://www.domino.com/authors/alicia-waite/</link></item>
-<item><title>A Good Experience [Comic] - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/10/28/a-good-experience-comic/</link></item>
-<item><title>The Foolproof Science-Backed Methods to Fall Asleep FAST! - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/10/28/the-foolproof-science-backed-methods-to-fall-asleep-fast/</link></item>
-<item><title>Dad Trek: A Compilation of Star Trek: The Original Series Dad Jokes - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/10/28/dad-trek-a-compilation-of-star-trek-the-original-series-dad-jokes/</link></item>
-<item><title>Today’s Hot Deals: Anker Zolo 20,000mAh Power Bank, Logitech Lift Wireless Vertical Ergonomic Mouse, Berserk Deluxe Volume 1, 2, and 3, Legendary Foods Protein Pastry, and More! - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/10/28/todays-hot-deals-anker-zolo-20000mah-power-bank-logitech-lift-wireless-vertical-ergonomic-mouse-berserk-deluxe-volume-1-2-and-3-legendary-foods-protein-pastry-and-more/</link></item>
-<item><title>The Wild World of Courtship [Comic] - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/10/28/the-wild-world-of-courtship-comic/</link></item>
-<item><title>Why We Love Monsters: The Real Reason Behind Your Spooky Obsession - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/10/28/why-we-love-monsters-the-real-reason-behind-your-spooky-obsession/</link></item>
-<item><title>Twik or Tweet [Comic] - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/10/28/twik-or-tweet-comic/</link></item>
-<item><title>Star Trek Fans, Engage! Numskull’s USS Enterprise Advent Statue is Now 55% Off! - Geeks are Sexy</title><link>https://www.geeksaresexy.net/2025/10/27/star-trek-fans-engage-numskulls-uss-enterprise-advent-statue-is-now-55-off/</link></item>
-<item><title>Using Search Data APIs for Faster Prototyping - Codrops</title><link>https://tympanus.net/codrops/2025/10/28/using-search-data-apis-for-faster-prototyping/</link></item>
-<item><title>Interpol: A Low-Level Take on Tweening and Motion - Codrops</title><link>https://tympanus.net/codrops/2025/10/27/interpol-a-low-level-take-on-tweening-and-motion/</link></item>
-<item><title>Willy Brauner - Codrops</title><link>https://tympanus.net/codrops/author/willybrauner/</link></item>
-<item><title>Motion Highlights #14 - Codrops</title><link>https://tympanus.net/codrops/2025/10/26/motion-highlights-14/</link></item>
-<item><title>Dissecting a Wavy Shader: Sine, Refraction, and Serendipity - Codrops</title><link>https://tympanus.net/codrops/2025/10/25/dissecting-a-wavy-shader-sine-refraction-and-serendipity/</link></item>
-<item><title>The Human Side of the Interface: Abhishek Jha’s Art of Storytelling Through Design - Codrops</title><link>https://tympanus.net/codrops/2025/10/24/the-human-side-of-the-interface-abhishek-jhas-art-of-storytelling-through-design/</link></item>
-<item><title>A Studio Reborn: FUTURE THREE® and the Art of Self-Redesign - Codrops</title><link>https://tympanus.net/codrops/2025/10/23/a-studio-reborn-future-three-and-the-art-of-self-redesign/</link></item>
-<item><title>FUTURE THREE® - Codrops</title><link>https://tympanus.net/codrops/author/futurethree/</link></item>
-<item><title>Weisdevice: Crafting a Glitched-Out World Between 2D, 3D, and Sound - Codrops</title><link>https://tympanus.net/codrops/2025/10/22/weisdevice-crafting-a-glitched-out-world-between-2d-3d-and-sound/</link></item>
-<item><title>The Vision Behind Daria Nevezhyna’s Interactive Configurators - Codrops</title><link>https://tympanus.net/codrops/2025/10/21/the-vision-behind-daria-nevezhynas-interactive-configurators/</link></item>
-<item><title>From Garage to Browser: Forged.build and the WebGPU Revolution - Codrops</title><link>https://tympanus.net/codrops/2025/10/20/from-garage-to-browser-forged-build-and-the-webgpu-revolution/</link></item>
-<item><title>Michael Modena - Codrops</title><link>https://tympanus.net/codrops/author/michael/</link></item>
-<item><title>Fragments: A Platform for Learning Creative Coding with Shaders - Codrops</title><link>https://tympanus.net/codrops/2025/10/17/fragments-a-platform-for-learning-creative-coding-with-shaders/</link></item>
-<item><title>Creating Smooth Scroll-Synchronized Animation for OPTIKKA: From HTML5 Video to Frame Sequences - Codrops</title><link>https://tympanus.net/codrops/2025/10/16/creating-smooth-scroll-synchronized-animation-for-optikka-from-html5-video-to-frame-sequences/</link></item>
-<item><title>From Blank Canvas to Mayhem: Eloy Benoffi’s Brutalist, Glitchy Portfolio Built with Webflow and GSAP - Codrops</title><link>https://tympanus.net/codrops/2025/10/15/from-blank-canvas-to-mayhem-eloy-benoffis-brutalist-glitchy-portfolio-built-with-webflow-and-gsap/</link></item>
-<item><title>Eloy Benoffi - Codrops</title><link>https://tympanus.net/codrops/author/eloybenoffi/</link></item>
-<item><title>The Underdog’s Crown: Clay Boan’s 3D Playground of Design, Motion, and GSAP Magic - Codrops</title><link>https://tympanus.net/codrops/2025/10/14/the-underdogs-crown-clay-boans-3d-playground-of-design-motion-and-gsap-magic/</link></item>
-<item><title>How to Build an Immersive 3D Circular Carousel in WordPress Using Droip - Codrops</title><link>https://tympanus.net/codrops/2025/10/13/how-to-build-an-immersive-3d-circular-carousel-in-wordpress-using-droip/</link></item>
-<item><title>NITEX: Building a Brand and Digital Platform for Fashion’s New Supply Chain - Codrops</title><link>https://tympanus.net/codrops/2025/10/10/nitex-building-a-brand-and-digital-platform-for-fashions-new-supply-chain/</link></item>
-<item><title>Spring/Summer - Codrops</title><link>https://tympanus.net/codrops/author/springsummer/</link></item>
-<item><title>Generating Your Website from Scratch for Remixing and Exploration - Codrops</title><link>https://tympanus.net/codrops/2025/10/09/generating-your-website-from-scratch-for-remixing-and-exploration/</link></item>
-<item><title>How to Animate WebGL Shaders with GSAP: Ripples, Reveals, and Dynamic Blur Effects - Codrops</title><link>https://tympanus.net/codrops/2025/10/08/how-to-animate-webgl-shaders-with-gsap-ripples-reveals-and-dynamic-blur-effects/</link></item>
-<item><title>Ponpon Mania: How WebGL and GSAP Bring a Comic Sheep’s Dream to Life - Codrops</title><link>https://tympanus.net/codrops/2025/10/07/ponpon-mania-how-webgl-and-gsap-bring-a-comic-sheeps-dream-to-life/</link></item>
-<item><title>Justine Soulié - Codrops</title><link>https://tympanus.net/codrops/author/justinesoulie/</link></item>
+<lastBuildDate>Thu, 30 Oct 2025 09:43:40 +0800</lastBuildDate>
+<item><title>哈佛本科生六成成绩是 A - Solidot</title><link>https://www.solidot.org/story?sid=82664</link></item>
+<item><title>接近九成 Windows 游戏能在 Linux 上运行 - Solidot</title><link>https://www.solidot.org/story?sid=82665</link></item>
+<item><title>外卖正在毁灭美国餐饮业 - Solidot</title><link>https://www.solidot.org/story?sid=82667</link></item>
+<item><title>澳大利亚警方开发大模型解码 Z 世代俚语和表情符号 - Solidot</title><link>https://www.solidot.org/story?sid=82668</link></item>
+<item><title>小鼠研究显示头发在 20 天内完全再生 - Solidot</title><link>https://www.solidot.org/story?sid=82670</link></item>
+<item><title>英伟达成为第一家市值突破 5 万亿美元的公司 - Solidot</title><link>https://www.solidot.org/story?sid=82671</link></item>
+<item><title>Fedora Linux 43 释出 - Solidot</title><link>https://www.solidot.org/story?sid=82672</link></item>
+<item><title>Tor Browser 15.0 释出 - Solidot</title><link>https://www.solidot.org/story?sid=82673</link></item>
+<item><title>Python 基金会坚持 DEI 放弃美国政府的 150 万美元拨款 - Solidot</title><link>https://www.solidot.org/story?sid=82663</link></item>
+<item><title>OpenAI 完成公司重组，微软持 27% 股份和访问技术至 2032 年 - Solidot</title><link>https://www.solidot.org/story?sid=82662</link></item>
+<item><title>社交圈扩大可能与社会极化相关 - Solidot</title><link>https://www.solidot.org/story?sid=82661</link></item>
+<item><title>Major telecom supplier compromised by unnamed nation-state attackers - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/29/major_telco_networking_provider_compromised/</link></item>
+<item><title>Microsoft gives Windows 11 a fresh Start - here’s how to get it - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/29/microsofts_new_windows_start_menu/</link></item>
+<item><title>Microsoft seemingly just revealed that OpenAI lost $11.5B last quarter - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/29/microsoft_earnings_q1_26_openai_loss/</link></item>
+<item><title>Microsoft Azure challenges AWS for downtime crown - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/29/microsoft_azure_outage/</link></item>
+<item><title>&amp;#39;Keep Android Open&amp;#39; movement fights back against Google sideloading restrictions - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/29/keep_android_open_movement/</link></item>
+<item><title>Ubuntu Unity hanging by a thread as wunderkind maintainer gets busy with life - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/29/ubuntu_unity_child_maintainer/</link></item>
+<item><title>This security hole can crash billions of Chromium browsers, and Google hasn&amp;#39;t patched it yet - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/29/brash_dos_attack_crashes_chromium/</link></item>
+<item><title>AWS Stargate-smashing Rainier AI megacluster is up and running - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/29/aws_rainier_ai_megacluster/</link></item>
+<item><title>Flight simulator fans revive a classic Boeing 747 cockpit - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/29/flight_simulator_boeing_747_cockpit/</link></item>
+<item><title>EY exposes 4TB+ SQL database to open internet for who knows how long - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/29/ey_exposes_4tb_sql_database/</link></item>
+<item><title>Smile! Uncle Sam wants to scan your face on the way in – and out - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/29/us_foreigner_facial_scans/</link></item>
+<item><title>India to dethrone US for dev numbers as AI reshapes coding, says GitHub - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/29/india_devs_github/</link></item>
+<item><title>Dame Emma Thompson gives the &amp;#39;AI revolution&amp;#39; both barrels - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/29/emma_thompson_ai/</link></item>
+<item><title>Nvidia pitches Omniverse DSX as model for gigawatt-scale AI factories - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/29/nvidia_omniverse_dsx/</link></item>
+<item><title>AI layoffs to backfire: Half quietly rehired at lower pay - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/29/forrester_ai_rehiring/</link></item>
+<item><title>The CAPITAL LETTERS trick that helped merge Windows 95 into NT - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/29/chen_windows_95_sizeof/</link></item>
+<item><title>Marketing giant Dentsu warns staff after Merkle data raid - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/29/dentsu_merkle_breach/</link></item>
+<item><title>UK politicians to draft outage blueprint after AWS calamity - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/29/uk_govt_outage_plan/</link></item>
+<item><title>Sole trader dispatched almost 1M spam texts to hard-up Brits, says watchdog - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/29/ico_spam_text_fine/</link></item>
+<item><title>Bolt Graphics unveils Zeus GPU built on RISC-V and path tracing tech - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/29/bolt_graphics_zeus_gpu/</link></item>
+<item><title>UK government on the lookout for bargain-priced CTO - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/29/uk_government_cto/</link></item>
+<item><title>Zen Internet loses unfair dismissal appeal case with former CEO - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/29/zen_internet_unfair_dismissal/</link></item>
+<item><title>9 in 10 Exchange servers in Germany still running out-of-support software - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/29/germany_exchange_support/</link></item>
+<item><title>Starlink tells the world it has over 150 sextillion IPv6 addresses - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/29/nded/</link></item>
+<item><title>Australian police building AI to translate emoji used by ‘crimefluencers’ - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/29/afp_ai_commissioner_barrett_speech/</link></item>
+<item><title>Amazon Web Services’ US-EAST-1 region in trouble again, with EC2 and container services impacted - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/29/aws_us_east_1_more_problems/</link></item>
+<item><title>OpenAI non-profit will run for-profit that has yet to make a profit - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/28/openai_simplifies_corporate_structure_into/</link></item>
+<item><title>Firewalls and VPNs are so complex now, they can actually make you less secure - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/28/cisco_citrix_vpn_ransomware/</link></item>
+<item><title>This is Doom, running headless, on Ubuntu Arm… on a satellite - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/28/doom_running_in_space/</link></item>
+<item><title>Nvidia, Oracle to build 7 supercomputers for Department of Energy, including its largest ever - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/28/nvidia_oracle_supercomputers_doe/</link></item>
+<item><title>Nvidia adds AI peanut butter to Nokia&amp;#39;s 6G network chocolate, throws in $1 billion - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/28/nvidia_nokia_partnership_6g/</link></item>
+<item><title>Android malware types like your gran to steal banking creds - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/28/android_malware_randomly_delays_texts/</link></item>
+<item><title>OpenAI tells Trump to build more power plants or China wins the AI arms race - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/28/openai_100gw_power_demand/</link></item>
+<item><title>Elon Musk&amp;#39;s Grokipedia launches, filled to the brim with plagiarism and AI slop - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/28/elon_musks_grokipedia_launches/</link></item>
+<item><title>AI bubble to deflate as enterprises defer spending to 2027 - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/28/forrester_ai_spending/</link></item>
+<item><title>Think tank decries science friction between countries, demands global cooperation - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/28/oecd_global_science_collaboration/</link></item>
+<item><title>Euro cloud alliance urges action on Broadcom as Microsoft mends fences - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/28/cispe_ecco_broadcom/</link></item>
+<item><title>Anthropic&amp;#39;s Claude is learning Excel so you don&amp;#39;t have to - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/28/anthropic_claude_excel/</link></item>
+<item><title>Clearview AI faces criminal heat for ignoring EU data fines - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/28/noyb_criminal_charges_clearview/</link></item>
+<item><title>Cloudflare Q3 report shows the internet still breaks for the strangest reasons - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/28/cloudflare_q3_internet_disruption/</link></item>
+<item><title>AI browsers face a security flaw as inevitable as death and taxes - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/28/ai_browsers_prompt_injection/</link></item>
+<item><title>Beatings, killings, and lasting fear: The human toll of MoD&amp;#39;s Afghan data breach - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/28/impact_afghan_data_breach/</link></item>
+<item><title>Amazon axes 14,000 desk jobs in AI-powered slimming plan - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/28/amazon_14000_jobs_cut/</link></item>
+<item><title>Google says reports of a Gmail breach have been greatly exaggerated - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/28/gmail_breach_fake_news/</link></item>
+<item><title>Chatbots parrot Putin&amp;#39;s propaganda about the illegal invasion of Ukraine - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/28/chatbots_still_parrot_russian_state/</link></item>
+<item><title>UK government inflates G-Cloud framework to £14B - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/28/uk_g_cloud_15/</link></item>
+<item><title>Marks &amp;amp; Spencer swaps out TCS for fresh helpdesk deal - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/28/marks_spencer_helpdesk_deal/</link></item>
+<item><title>IBM Cloud stops signing and seeking new customers for its VMware service - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/28/ibm_end_of_marketing_vmware_cloud/</link></item>
+<item><title>Twist in Tesco vs. VMware case as Computacenter files claim against Broadcom, Dell - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/28/tesco_vs_broadcom_vmware_update/</link></item>
+<item><title>Qualcomm announces AI accelerators and mysterious racks they’ll run in - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/10/28/qualcom_ai_accelerators/</link></item>
+<item><title>Communications Practice Section Welcomes Submissions - ACM</title><link>https://cacm.acm.org/practice/communications-practice-section-welcomes-submissions/</link></item>
+<item><title>Trading Bits for Atoms: How Digital Products Are Reshaping the Global Economy - ACM</title><link>https://cacm.acm.org/opinion/trading-bits-for-atoms-how-digital-products-are-reshaping-the-global-economy/</link></item>
+<item><title>In Search of Better Search - ACM</title><link>https://cacm.acm.org/news/in-search-of-better-search/</link></item>
+<item><title>When Is WebAssembly Going to Get DOM Support? - ACM</title><link>https://cacm.acm.org/practice/when-is-webassembly-going-to-get-dom-support/</link></item>
+<item><title>The Memory Exchange - ACM</title><link>https://cacm.acm.org/opinion/the-memory-exchange/</link></item>
+<item><title>WebAssembly: Yes, but for What? - ACM</title><link>https://cacm.acm.org/practice/webassembly-yes-but-for-what/</link></item>
+<item><title>Acting in Self-Defense - ACM</title><link>https://cacm.acm.org/opinion/acting-in-self-defense/</link></item>
+<item><title>Automatically Translating C to Rust - ACM</title><link>https://cacm.acm.org/research/automatically-translating-c-to-rust/</link></item>
+<item><title>Characterizing Cryptocurrency-Themed Malicious Browser Extensions - ACM</title><link>https://cacm.acm.org/research-highlights/characterizing-cryptocurrency-themed-malicious-browser-extensions/</link></item>
+<item><title>Technical Perspective: Cryptocurrency Browser-Extension Security: A Wake-Up Call and a Way Forward - ACM</title><link>https://cacm.acm.org/research-highlights/technical-perspective-cryptocurrency-browser-extension-security-a-wake-up-call-and-a-way-forward/</link></item>
+<item><title>Information Power! - ACM</title><link>https://cacm.acm.org/research/information-power/</link></item>
+<item><title>Shedding Labels, Sidestepping Limitations, and Self-Fulfillment - ACM</title><link>https://cacm.acm.org/careers/shedding-labels-sidestepping-limitations-and-self-fulfillment/</link></item>
+<item><title>Shields for Safe Reinforcement Learning - ACM</title><link>https://cacm.acm.org/research/shields-for-safe-reinforcement-learning/</link></item>
+<item><title>Creating Digital Replicas of History with AI - ACM</title><link>https://cacm.acm.org/news/creating-digital-replicas-of-history-with-ai/</link></item>
+<item><title>Reinventing AI: Is It the Time for a New Paradigm? - ACM</title><link>https://cacm.acm.org/opinion/reinventing-ai-is-it-the-time-for-a-new-paradigm/</link></item>
+<item><title>Tech Workers Versus Enshittification - ACM</title><link>https://cacm.acm.org/opinion/tech-workers-versus-enshittification/</link></item>
+<item><title>Computing Is Indeed a Discipline in Crisis - ACM</title><link>https://cacm.acm.org/opinion/computing-is-indeed-a-discipline-in-crisis/</link></item>
+<item><title>The Silent Scientist: When Software Research Fails to Reach Its Audience - ACM</title><link>https://cacm.acm.org/opinion/the-silent-scientist-when-software-research-fails-to-reach-its-audience/</link></item>
+<item><title>Cyberpsychology’s Influence on Modern Computing - ACM</title><link>https://cacm.acm.org/research/cyberpsychologys-influence-on-modern-computing/</link></item>
+<item><title>Culture, Language, and Generative Language Models - ACM</title><link>https://cacm.acm.org/opinion/culture-language-and-generative-language-models/</link></item>
+<item><title>Does Using In-Copyright Works as Training Data Infringe? - ACM</title><link>https://cacm.acm.org/opinion/does-using-in-copyright-works-as-training-data-infringe/</link></item>
+<item><title>Can AI Talk to the Animals? - ACM</title><link>https://cacm.acm.org/news/can-ai-talk-to-the-animals/</link></item>
+<item><title>Collecting all the croissants in Zürich - FlowingData</title><link>https://flowingdata.com/2025/10/29/collecting-all-the-croissants-in-zurich/</link></item>
+<item><title>Statistics to find cheating sports gamblers - FlowingData</title><link>https://flowingdata.com/2025/10/29/statistics-to-find-cheating-sports-gamblers/</link></item>
+<item><title>Math to map the world - FlowingData</title><link>https://flowingdata.com/2025/10/28/math-to-map-the-world/</link></item>
+<item><title>xkcd shielding vs. forces matrix - FlowingData</title><link>https://flowingdata.com/2025/10/28/xkcd-shielding-vs-forces-matrix/</link></item>
+<item><title>SUSE Linux Enterprise Server 16 Becomes First Enterprise Linux With Built-In Agentic AI - Slashdot</title><link>https://linux.slashdot.org/story/25/10/29/2211231/suse-linux-enterprise-server-16-becomes-first-enterprise-linux-with-built-in-agentic-ai</link></item>
+<item><title>US Startup Substrate Announces Chipmaking Tool That It Says Will Rival ASML - Slashdot</title><link>https://slashdot.org/story/25/10/29/2130249/us-startup-substrate-announces-chipmaking-tool-that-it-says-will-rival-asml</link></item>
+<item><title>Nvidia Takes $1 Billion Stake In Nokia - Slashdot</title><link>https://hardware.slashdot.org/story/25/10/29/2114253/nvidia-takes-1-billion-stake-in-nokia</link></item>
+<item><title>Grammarly Rebrands To &amp;#39;Superhuman,&amp;#39; Launches a New AI Assistant - Slashdot</title><link>https://tech.slashdot.org/story/25/10/29/2110239/grammarly-rebrands-to-superhuman-launches-a-new-ai-assistant</link></item>
+<item><title>Character.AI To Bar Children Under 18 From Using Its Chatbots - Slashdot</title><link>https://slashdot.org/story/25/10/29/213211/characterai-to-bar-children-under-18-from-using-its-chatbots</link></item>
+<item><title>FCC&amp;#39;s Gomez Slams Move To Revise Broadband Labels as &amp;#39;Anti-Consumer&amp;#39; - Slashdot</title><link>https://tech.slashdot.org/story/25/10/29/1744228/fccs-gomez-slams-move-to-revise-broadband-labels-as-anti-consumer</link></item>
+<item><title>Windows is the Problem With Windows Handhelds - Slashdot</title><link>https://games.slashdot.org/story/25/10/29/1739232/windows-is-the-problem-with-windows-handhelds</link></item>
+<item><title>US Needs &amp;#39;Finesse&amp;#39; to Stay Ahead of China, Nvidia Boss Says - Slashdot</title><link>https://news.slashdot.org/story/25/10/29/1722259/us-needs-finesse-to-stay-ahead-of-china-nvidia-boss-says</link></item>
+<item><title>Google Chrome Will Finally Default To Secure HTTPS Connections Starting in April - Slashdot</title><link>https://tech.slashdot.org/story/25/10/29/1715202/google-chrome-will-finally-default-to-secure-https-connections-starting-in-april</link></item>
+<item><title>&amp;#39;ChatGPT&amp;#39;s Atlas: The Browser That&amp;#39;s Anti-Web&amp;#39; - Slashdot</title><link>https://it.slashdot.org/story/25/10/29/177230/chatgpts-atlas-the-browser-thats-anti-web</link></item>
+<item><title>YouTube Plans Automatic Upscaling for Low-Res Videos - Slashdot</title><link>https://news.slashdot.org/story/25/10/29/1516225/youtube-plans-automatic-upscaling-for-low-res-videos</link></item>
+<item><title>Microsoft CEO Nadella Says Gaming Needs Good Margins To Innovate, Compares Strategy To Office - Slashdot</title><link>https://games.slashdot.org/story/25/10/29/1543218/microsoft-ceo-nadella-says-gaming-needs-good-margins-to-innovate-compares-strategy-to-office</link></item>
+<item><title>AOL To Be Sold To Bending Spoons For Roughly $1.5 Billion - Slashdot</title><link>https://slashdot.org/story/25/10/29/1631223/aol-to-be-sold-to-bending-spoons-for-roughly-15-billion</link></item>
+<item><title>China Bars Influencers From Discussing Professional Topics Without Relevant Degrees - Slashdot</title><link>https://tech.slashdot.org/story/25/10/29/147251/china-bars-influencers-from-discussing-professional-topics-without-relevant-degrees</link></item>
+<item><title>The Game Theory of How Algorithms Can Drive Up Prices - Slashdot</title><link>https://slashdot.org/story/25/10/29/1418252/the-game-theory-of-how-algorithms-can-drive-up-prices</link></item>
+<item><title>The Halloween Death That’s Haunted History for Nearly a Century - Mental Floss</title><link>https://www.mentalfloss.com/history/mystery/halloween-death-haunted-nearly-century</link></item>
+<item><title>5 Best Guillermo del Toro Movies to Stream Before ‘Frankenstein’ - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/movies/best-guillermo-del-toro-movies-stream-before-frankenstein</link></item>
+<item><title>Warning: These Vintage Halloween Costumes May Give You Nightmares - Mental Floss</title><link>https://www.mentalfloss.com/holidays/halloween/scary-vintage-halloween-costumes</link></item>
+<item><title>What Is This ‘Bird Theory’ Trend Going Viral on TikTok? - Mental Floss</title><link>https://www.mentalfloss.com/culture/social-media/what-is-bird-theory-tiktok</link></item>
+<item><title>Why Is Wednesday Called “Hump Day”? - Mental Floss</title><link>https://www.mentalfloss.com/language/why-wednesday-is-called-hump-day</link></item>
+<item><title>10 Most Haunted States in America, Ranked by Scare-Level - Mental Floss</title><link>https://www.mentalfloss.com/geography/states/10-most-haunted-states-america-ranked-scare-level</link></item>
+<item><title>16 Things to Look for When ‘Mulholland Drive’ Melts Your Brain - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/movies/things-to-look-for-david-lynch-mulholland-drive-movie</link></item>
+<item><title>Quiz: Guess the Halloween Candy by Its Tagline - Mental Floss</title><link>https://www.mentalfloss.com/quizzes/guess-halloween-candy-tagline</link></item>
+<item><title>12 (Mostly) Spooky Halloween Superstitions - Mental Floss</title><link>https://www.mentalfloss.com/holidays/halloween/spooky-halloween-superstitions</link></item>
+<item><title>Can You Decipher These Translated Song Lyrics? Tune Twist Quiz #64 - Mental Floss</title><link>https://www.mentalfloss.com/quizzes/tune-twist-quiz-64</link></item>
+<item><title>Israel’s IAI shoots for land-based, space-based Golden Dome business - Defense News</title><link>https://www.defensenews.com/global/mideast-africa/2025/10/29/israels-iai-shoots-for-land-based-space-based-golden-dome-business/</link></item>
+<item><title>US will share tech to let South Korea build nuclear submarine: Trump - Defense News</title><link>https://www.defensenews.com/naval/2025/10/29/us-will-share-tech-to-let-south-korea-build-nuclear-submarine-trump/</link></item>
+<item><title>China’s military may discard its rigid command structure, report warns - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2025/10/29/chinas-military-may-discard-its-rigid-command-structure-report-warns/</link></item>
+<item><title>In Europe, the problem is deterrence, not drones - Defense News</title><link>https://www.defensenews.com/opinion/2025/10/30/in-europe-the-problem-is-deterrence-not-drones/</link></item>
+<item><title>The US draws down some troops on NATO’s eastern flank - Defense News</title><link>https://www.defensenews.com/global/europe/2025/10/29/the-us-draws-down-some-troops-on-natos-eastern-flank/</link></item>
+<item><title>Heavy Russian cargo plane lands in Caracas amid US-Venezuela tensions - Defense News</title><link>https://www.defensenews.com/global/the-americas/2025/10/28/heavy-russian-cargo-plane-lands-in-caracas-amid-us-venezuela-tensions/</link></item>
+<item><title>France updates submarine-launched nuclear missile amid arms race - Defense News</title><link>https://www.defensenews.com/global/europe/2025/10/28/france-updates-submarine-launched-nuclear-missile-amid-arms-race/</link></item>
+<item><title>Rheinmetall, MBDA tout German shipborne laser gun for zapping drones - Defense News</title><link>https://www.defensenews.com/global/europe/2025/10/28/rheinmetall-mbda-tout-german-shipborne-laser-gun-for-zapping-drones/</link></item>
+<item><title>Carrier’s move to South America leaves Mideast, Europe with none - Defense News</title><link>https://www.defensenews.com/news/your-military/2025/10/29/carriers-move-to-south-america-leaves-mideast-europe-with-none/</link></item>
+<item><title>To coordinate strikes from space, US needs space JTACs, experts argue - Defense News</title><link>https://www.defensenews.com/news/your-military/2025/10/28/to-coordinate-strikes-from-space-us-needs-space-jtacs-experts-argue/</link></item>
+<item><title>53rd Weather Reconnaissance Squadron plane flies into eye of Hurricane Melissa - Defense News</title><link>https://www.defensenews.com/video/2025/10/28/53rd-weather-reconnaissance-squadron-plane-flies-into-eye-of-hurricane-melissa/</link></item>
+<item><title>Elbit America showcases AI-enabled launched effects and precision strike innovation - Defense News</title><link>https://www.defensenews.com/video/2025/10/16/elbit-america-showcases-ai-enabled-launched-effects-and-precision-strike-innovation/</link></item>
+<item><title>One dies after explosion at General Dynamics plant in Arkansas - Defense News</title><link>https://www.defensenews.com/industry/2024/07/05/one-dies-after-explosion-at-general-dynamics-plant-in-arkansas/</link></item>
+<item><title>NATO needs to defeat Russia in the ammunition war - Defense News</title><link>https://www.defensenews.com/opinion/2024/07/05/nato-needs-to-defeat-russia-in-the-ammunition-war/</link></item>
+<item><title>MBDA, Kongsberg snub Swiss tender for medium-range air defense system - Defense News</title><link>https://www.defensenews.com/global/europe/2024/07/05/mbda-kongsberg-snub-swiss-tender-for-medium-range-air-defense-system/</link></item>
+<item><title>Corps reactivates East Coast helicopter squadron it closed in 2022 - Defense News</title><link>https://www.defensenews.com/news/your-marine-corps/2024/07/05/corps-reactivates-east-coast-helicopter-squadron-it-closed-in-2022/</link></item>
+<item><title>How Europe’s diverging artillery munitions complicate Ukraine support - Defense News</title><link>https://www.defensenews.com/global/europe/2024/07/04/how-europes-diverging-artillery-munitions-complicate-ukraine-support/</link></item>
+<item><title>German arms exports on track to hit record high again - Defense News</title><link>https://www.defensenews.com/global/europe/2024/07/03/german-arms-exports-on-track-to-hit-record-high-again/</link></item>
+<item><title>Kansas businessman pleads guilty in case over illegal export of aviation tech to Russia - Defense News</title><link>https://www.defensenews.com/global/the-americas/2024/07/03/kansas-businessman-pleads-guilty-in-case-over-illegal-export-of-aviation-tech-to-russia/</link></item>
+<item><title>Kratos’ Erinyes test vehicle logs hypersonic speeds on first flight - Defense News</title><link>https://www.defensenews.com/battlefield-tech/hypersonics/2024/07/03/kratos-erinyes-test-vehicle-logs-hypersonic-speeds-on-first-flight/</link></item>
+<item><title>Air Force Ospreys in Japan resume flight ops - Defense News</title><link>https://www.defensenews.com/news/your-air-force/2024/07/03/air-force-ospreys-in-japan-resume-flight-ops/</link></item>
+<item><title>Market Outlook - BNN Bloomberg</title><link>https://www.bnnbloomberg.ca/investing/market-outlook</link></item>
+<item><title>Canada in a ‘structural productivity crisis’: Economists react to second BoC rate cut - BNN Bloomberg</title><link>https://www.bnnbloomberg.ca/business/politics/2025/10/29/canada-in-a-structural-productivity-crisis-economists-react-to-second-boc-rate/</link></item>
+<item><title>Algoma reports net loss of $485.1M in Q3 as tariffs weighed on the steel producer - BNN Bloomberg</title><link>https://www.bnnbloomberg.ca/business/company-news/2025/10/29/algoma-reports-net-loss-of-4851m-in-q3-as-tariffs-weighed-on-the-steel-producer/</link></item>
+<item><title>Mike Philbrick’s Top Picks for October 29, 2025 - BNN Bloomberg</title><link>https://www.bnnbloomberg.ca/markets/2025/10/29/mike-philbricks-top-picks-for-october-29-2025/</link></item>
+<item><title>Real estate experts happy with mortgage rates after BoC announcement - BNN Bloomberg</title><link>https://www.bnnbloomberg.ca/business/2025/10/29/real-estate-executives-welcome-interest-rate-cut-amid-economic-uncertainty/</link></item>
+<item><title>Stellantis president grilled at House committee over decision move production to U.S. - BNN Bloomberg</title><link>https://www.bnnbloomberg.ca/business/2025/10/29/stellantis-president-grilled-at-house-committee-over-decision-move-production-to-us/</link></item>
+<item><title>‘Cheese slipped off the cracker’: Ford calls for apology after U.S. ambassador hurls ‘insults and swore’ at Ontario trade rep - BNN Bloomberg</title><link>https://www.bnnbloomberg.ca/business/politics/2025/10/29/us-ambassador-hurls-insults-and-swore-at-ontario-trade-rep-ford-calls-for-apology/</link></item>
+<item><title>Zellers is making a comeback — again - BNN Bloomberg</title><link>https://www.bnnbloomberg.ca/business/company-news/2025/10/29/zellers-is-set-for-another-relaunch-heres-what-the-new-owners-have-in-store/</link></item>
+<item><title>You could receive up to $50 in Keurig class-action settlement over ‘misleading’ recycling claims - BNN Bloomberg</title><link>https://www.bnnbloomberg.ca/business/2025/10/29/keurig-agrees-to-185-million-settlement-over-misleading-coffee-pod-recycling-claims/</link></item>
+<item><title>Investor Outlook: Visa beats earnings forecasts as agentic commerce drives industry discussion - BNN Bloomberg</title><link>https://www.bnnbloomberg.ca/investing/investor-outlook/2025/10/29/investor-outlook-visa-beats-earnings-forecasts-as-agentic-commerce-drives-industry-discussion/</link></item>
+<item><title>Central bank commentary weighs on risk assets, following BoC and Fed rate cuts - BNN Bloomberg</title><link>https://www.bnnbloomberg.ca/markets/tsx/2025/10/29/sptsx-composite-down-nearly-100-points-us-stock-markets-higher/</link></item>
+<item><title>Bank of Canada governor says AI could be both good and bad for Canada’s economy - BNN Bloomberg</title><link>https://www.bnnbloomberg.ca/business/2025/10/29/bank-of-canada-governor-says-ai-could-be-both-good-and-bad-for-canadas-economy/</link></item>
+<item><title>Budget to include new funding for security at Pride, gender-based violence supports - BNN Bloomberg</title><link>https://www.bnnbloomberg.ca/business/politics/2025/10/29/budget-to-include-new-funding-for-security-at-pride-gender-based-violence-supports/</link></item>
+<item><title>Capital Power excited about Alberta nuclear, but CEO says it’s too soon to invest - BNN Bloomberg</title><link>https://www.bnnbloomberg.ca/business/company-news/2025/10/29/capital-power-reports-dip-in-net-income-looking-at-potential-michigan-data-centre/</link></item>
+<item><title>GM lays off 1,700 workers at plants in Michigan and Ohio amid slower EV demand - BNN Bloomberg</title><link>https://www.bnnbloomberg.ca/business/company-news/2025/10/29/gm-to-cut-ev-battery-production-and-1200-jobs-at-detroit-plant/</link></item>
+<item><title>Here’s who’s appearing on BNN Bloomberg Market Call today - BNN Bloomberg</title><link>https://www.bnnbloomberg.ca/faq/2025/10/24/heres-whos-appearing-on-bnn-bloomberg-market-call/</link></item>
+<item><title>Rare earth miners fall after U.S.-China truce to pause tariffs, export curbs - BNN Bloomberg</title><link>https://www.bnnbloomberg.ca/investing/commodities/2025/10/27/rare-earth-miners-fall-after-us-china-truce-to-pause-tariffs-export-curbs/</link></item>
+<item><title>Carney says ports, minerals key to his plan to double non-U.S. exports - BNN Bloomberg</title><link>https://www.bnnbloomberg.ca/investing/commodities/2025/10/23/carney-says-ports-minerals-key-to-his-plan-to-double-non-us-exports/</link></item>
+<item><title>‘They will have the best oil sand quality assets in Canada’: Eric Nuttall on Cenovus Energy - BNN Bloomberg</title><link>https://www.bnnbloomberg.ca/business/company-news/2025/10/22/they-will-have-the-best-oil-sand-quality-assets-in-canada-eric-nuttall-on-cenovus-energy/</link></item>
+<item><title>Copper prices may have saved Teck Resources despite setbacks at Chile copper mine - BNN Bloomberg</title><link>https://www.bnnbloomberg.ca/business/company-news/2025/10/22/copper-prices-may-have-saved-teck-resources-despite-setbacks-at-chile-copper-mine/</link></item>
+<item><title>More mines, more ounces: A decade of gold gains turned Canada into a mining powerhouse - BNN Bloomberg</title><link>https://www.bnnbloomberg.ca/business/2025/10/22/more-mines-more-ounces-a-decade-of-gold-gains-turned-canada-into-a-mining-powerhouse/</link></item>
+<item><title>Canada ‘not yet’ a reliable energy supplier, says Indian high commissioner - BNN Bloomberg</title><link>https://www.bnnbloomberg.ca/investing/commodities/2025/10/19/canada-not-yet-a-reliable-energy-supplier-says-indian-high-commissioner/</link></item>
+<item><title>N.S. creates portal aimed at making it easier for mining companies to track permits - BNN Bloomberg</title><link>https://www.bnnbloomberg.ca/investing/commodities/2025/10/14/ns-creates-portal-aimed-at-making-it-easier-for-mining-companies-to-track-permits/</link></item>
+<item><title>‘Conflict of interest’: Experts share concerns of U.S. stakes in Canadian miners - BNN Bloomberg</title><link>https://www.bnnbloomberg.ca/investing/commodities/2025/10/10/conflict-of-interest-experts-share-concerns-of-us-stakes-in-canadian-miners/</link></item>
+<item><title>U.S. Senate passes legislation to nullify Trump’s tariffs on Canada - BNN Bloomberg</title><link>https://www.bnnbloomberg.ca/tariffs/2025/10/30/us-senate-passes-legislation-to-nullify-trumps-tariffs-on-canada/</link></item>
+<item><title>‘Call 1-800-DOUG-FORD’: Ontario premier rolling out red carpet for fed-up Quebec doctors - BNN Bloomberg</title><link>https://www.bnnbloomberg.ca/business/2025/10/29/call-1-800-doug-ford-ontario-premier-rolling-out-red-carpet-for-fed-up-quebec-doctors/</link></item>
+<item><title>Market Outlook: Investors climb a ‘wall of worry’ as market breadth improves, says Citi strategist - BNN Bloomberg</title><link>https://www.bnnbloomberg.ca/investing/market-outlook/2025/10/29/market-outlook-investors-climb-a-wall-of-worry-as-market-breadth-improves-says-citi-strategist/</link></item>
+<item><title>Market Outlook: Investors look beyond the Magnificent Seven to find the next 100-bagger tech stocks - BNN Bloomberg</title><link>https://www.bnnbloomberg.ca/investing/market-outlook/2025/10/28/market-outlook-investor-sees-tesla-of-cell-therapy-potential-in-biotech-firm-sana/</link></item>
+<item><title>Hot Picks: Pharma stocks climb on innovation and new growth drivers - BNN Bloomberg</title><link>https://www.bnnbloomberg.ca/investing/hot-picks/2025/10/27/hot-picks-pharma-stocks-climb-on-innovation-and-new-growth-drivers/</link></item>
+<item><title>Hot Picks: Why industrials could be the next growth engine of the market - BNN Bloomberg</title><link>https://www.bnnbloomberg.ca/investing/hot-picks/2025/10/24/hot-picks-industrial-stocks-poised-for-growth-as-ai-and-electrification-reshape-markets/</link></item>
+<item><title>Investor Outlook: Wealthsimple hits $10-billion valuation after major equity round - BNN Bloomberg</title><link>https://www.bnnbloomberg.ca/investing/investor-outlook/2025/10/29/investor-outlook-wealthsimple-hits-10-billion-valuation-after-major-equity-round/</link></item>
+<item><title>Canada needs to ‘stay very cool’ with Trump: Charest - BNN Bloomberg</title><link>https://www.bnnbloomberg.ca/business/politics/2025/10/29/ex-quebec-premier-on-termination-of-canada-us-trade-talks-now-is-the-time-to-stay-very-cool/</link></item>
+<item><title>Canada’s exports drop as tariffs weigh heavy on economy: Statistics Canada - BNN Bloomberg</title><link>https://www.bnnbloomberg.ca/business/economics/2025/10/27/canadas-exports-drop-as-tariffs-weigh-heavy-on-economy-statistics-canada/</link></item>
+<item><title>‘Canada burned the bridges’: U.S. ambassador doubts tariff deal feasible before new year - BNN Bloomberg</title><link>https://www.bnnbloomberg.ca/tariffs/2025/10/27/us-ambassador-to-canada-doesnt-see-any-way-to-get-tariff-deal-by-american-thanksgiving/</link></item>
+<item><title>Carney says trade talks with U.S. ‘had been making progress’ until Ontario anti-tariff ad - BNN Bloomberg</title><link>https://www.bnnbloomberg.ca/business/politics/2025/10/27/carney-says-trade-talks-with-us-had-been-making-progress-until-ontario-anti-tariff-ad/</link></item>
+<item><title>Prime Minister Mark Carney says he plans to meet with Chinese leader at APEC - BNN Bloomberg</title><link>https://www.bnnbloomberg.ca/tariffs/2025/10/27/prime-minister-mark-carney-says-he-plans-to-meet-with-chinese-leader-at-apec/</link></item>
+<item><title>Business leaders urge Canada to rethink strategy as U.S. auto incentives expand - BNN Bloomberg</title><link>https://www.bnnbloomberg.ca/tariffs/2025/10/26/theyre-coming-after-our-cars-canadian-business-leaders-warns-future-of-auto-industry-at-stake/</link></item>
+<item><title>New China Law Fines Influencers If They Discuss &amp;#39;Serious&amp;#39; Topics Without a Degree - Slashdot</title><link>https://slashdot.org/story/25/10/29/2223209/new-china-law-fines-influencers-if-they-discuss-serious-topics-without-a-degree</link></item>
+<item><title>its acquisition - Slashdot</title><link>https://slashdot.org/story/25/07/02/2128229/grammarly-acquires-ai-email-client-superhuman</link></item>
+<item><title>filed a lawsuit - Slashdot</title><link>https://yro.slashdot.org/story/25/05/31/1940219/judge-rejects-claim-ai-chatbots-protected-by-first-amendment-in-teen-suicide-lawsuit</link></item>
+<item><title>expected unrealistic profit margins from its gaming division - Slashdot</title><link>https://games.slashdot.org/story/25/10/23/122257/microsoft-demands-30-profit-margins-from-struggling-xbox-division</link></item>
+<item><title>Python Foundation Rejects Government Grant Over DEI Restrictions - Slashdot</title><link>https://developers.slashdot.org/story/25/10/28/211237/python-foundation-rejects-government-grant-over-dei-restrictions?sbsrc=md</link></item>
+<item><title>Society Will Accept a Death Caused By a Robotaxi, Waymo Co-CEO Says - Slashdot</title><link>https://tech.slashdot.org/story/25/10/28/2325205/society-will-accept-a-death-caused-by-a-robotaxi-waymo-co-ceo-says?sbsrc=md</link></item>
+<item><title>&amp;#39;How Delivery Is Destroying American Restaurants&amp;#39; - Slashdot</title><link>https://slashdot.org/story/25/10/28/192256/how-delivery-is-destroying-american-restaurants?sbsrc=md</link></item>
+<item><title>Senator Blocks Trump-Backed Effort To Make Daylight Saving Time Permanent - Slashdot</title><link>https://yro.slashdot.org/story/25/10/29/0321225/senator-blocks-trump-backed-effort-to-make-daylight-saving-time-permanent?sbsrc=md</link></item>
+<item><title>Fedora Approves AI-Assisted Contributions - Slashdot</title><link>https://developers.slashdot.org/story/25/10/23/2138252/fedora-approves-ai-assisted-contributions</link></item>
+<item><title>Códice Maya de México - Aeon</title><link>https://aeon.co/videos/the-americas-oldest-book-is-an-intricate-work-of-maya-astronomy?utm_source=rss-feed</link></item>
+<item><title>My private mountain - Aeon</title><link>https://aeon.co/essays/some-people-refer-to-new-mexico-as-okeeffe-country-i-dont?utm_source=rss-feed</link></item>
+<item><title>What&amp;#39;s the Hardest Wood in the World? - HowStuffWorks</title><link>https://science.howstuffworks.com/hardest-wood-in-the-world.htm</link></item>
+<item><title>10 of the Scariest Sea Creatures Lurking in the Ocean&amp;#39;s Depths - HowStuffWorks</title><link>https://animals.howstuffworks.com/marine-life/scariest-sea-creatures.htm</link></item>
+<item><title>13 Socialist Countries That Look Way Different From Each Other - HowStuffWorks</title><link>https://people.howstuffworks.com/socialist-countries.htm</link></item>
+<item><title>10 Best Sword Enchantments in Minecraft - HowStuffWorks</title><link>https://entertainment.howstuffworks.com/leisure/online-games/best-sword-enchantments-minecraft.htm</link></item>
+<item><title>What Is the Hardest Sport in the World? - HowStuffWorks</title><link>https://entertainment.howstuffworks.com/what-is-the-hardest-sport-in-the-world.htm</link></item>
+<item><title>10 Best Minecraft Texture Packs to Customize Your Game - HowStuffWorks</title><link>https://entertainment.howstuffworks.com/leisure/online-games/best-minecraft-texture-packs.htm</link></item>
+<item><title>What Is a Group of Crows Called? Murder, Mob, and More - HowStuffWorks</title><link>https://animals.howstuffworks.com/birds/what-is-a-group-of-crows-called.htm</link></item>
+<item><title>10 States With the Highest Crime Rates - HowStuffWorks</title><link>https://people.howstuffworks.com/states-with-highest-crime-rates.htm</link></item>
+<item><title>10 Best Minecraft Mods to Breathe New Life Into Your Game - HowStuffWorks</title><link>https://entertainment.howstuffworks.com/leisure/online-games/best-minecraft-mods.htm</link></item>
+<item><title>Leftist vs. Liberal: Nuanced Differences in Political Philosophies - HowStuffWorks</title><link>https://people.howstuffworks.com/leftist-vs-liberal.htm</link></item>
+<item><title>9 States With the Lowest Property Tax (and Just 1 Pacific Entry) - HowStuffWorks</title><link>https://money.howstuffworks.com/personal-finance/personal-income-taxes/states-with-lowest-property-tax.htm</link></item>
+<item><title>What&amp;#39;s the Most Powerful Pokémon Card? - HowStuffWorks</title><link>https://entertainment.howstuffworks.com/most-powerful-pokemon-card.htm</link></item>
+<item><title>The Tiny Treehouse That’s Also a Bird Sanctuary - CONTEMPORIST</title><link>https://www.contemporist.com/the-tiny-treehouse-thats-also-a-bird-sanctuary/</link></item>
+<item><title>Inside a Peaceful Modern Cabin by the Water’s Edge - CONTEMPORIST</title><link>https://www.contemporist.com/inside-a-peaceful-modern-cabin-by-the-waters-edge/</link></item>
+<item><title>A Rusted Roof, White Walls, and Desert Light: Inside Arizona’s Canal House - CONTEMPORIST</title><link>https://www.contemporist.com/a-rusted-roof-white-walls-and-desert-light-inside-arizonas-canal-house/</link></item>
+<item><title>If You’re Obsessed with Concrete, You’ll Want to See This House - CONTEMPORIST</title><link>https://www.contemporist.com/if-youre-obsessed-with-concrete-youll-want-to-see-this-house/</link></item>
+<item><title>How Two Car Collectors Turned Their Passion Into a House - CONTEMPORIST</title><link>https://www.contemporist.com/how-two-car-collectors-turned-their-passion-into-a-house/</link></item>
+<item><title>How a Seattle Family Built a Backyard Office for Two Using Off-the-Shelf Materials - CONTEMPORIST</title><link>https://www.contemporist.com/how-a-seattle-family-built-a-backyard-office-for-two-using-off-the-shelf-materials/</link></item>
+<item><title>US troops should be alarmed at Trump’s strikes on alleged drug boats - Defense News</title><link>https://www.defensenews.com/opinion/2025/10/28/us-troops-should-be-alarmed-at-trumps-strikes-on-alleged-drug-boats/</link></item>
+<item><title>Ashley Brooks - WebMD</title><link>https://blogs.webmd.com/myasthenia-gravis/ashley-brooks</link></item>
+<item><title>Favorite Fall Comforts for Chronic Illness - WebMD</title><link>https://blogs.webmd.com/myasthenia-gravis/20251020/favorite-fall-comforts-for-chronic-illness</link></item>
+<item><title>Charles Sanchez - WebMD</title><link>https://blogs.webmd.com/hiv/charles-sanchez</link></item>
+<item><title>The Chaos, the Madness, and the Highs I Shouldn’t Have Survived - WebMD</title><link>https://blogs.webmd.com/hiv/20251028/the-chaos-the-madness-and-the-highs-i-shouldnt-have-survived</link></item>
+<item><title>How Supplements Can Support Your Skin and Hair Health, When Used the Right Way - WebMD</title><link>https://blogs.webmd.com/skin-care/20251027/how-supplements-can-support-your-skin-and-hair-health-when-used-the-right-way</link></item>
+<item><title>Why No Single Food Causes IBD, and What Really Might - WebMD</title><link>https://blogs.webmd.com/digestive-health/20251027/why-no-single-food-causes-ibd-and-what-really-might</link></item>
+<item><title>Accessibility Statement - WebMD</title><link>https://www.webmd.com/about-webmd-policies/accessibility-statement</link></item>
+<item><title>This drone’s wingspan rivals a 737—but it’s lighter than a NFL linebacker - Popular Science</title><link>https://www.popsci.com/technology/radical-evenstar-drone/</link></item>
+<item><title>New asphalt could make potholes extinct - Popular Science</title><link>https://www.popsci.com/technology/potholes-asphalt-graphene/</link></item>
+<item><title>Spiders ‘decorate’ their webs to help trap dinner - Popular Science</title><link>https://www.popsci.com/environment/spiders-decorate-webs/</link></item>
+<item><title>The secret ingredient in a snake antivenom? Llamas. - Popular Science</title><link>https://www.popsci.com/health/snake-llama-antivenom/</link></item>
+<item><title>Zombie worms have gone missing - Popular Science</title><link>https://www.popsci.com/environment/zombie-worms-missing/</link></item>
+<item><title>Why you ‘see’ things in the dark, according to an ophthalmologist - Popular Science</title><link>https://www.popsci.com/science/why-you-see-things-in-dark/</link></item>
+<item><title>The quest to find Shackleton’s ship uncovered an Antarctic mystery - Popular Science</title><link>https://www.popsci.com/environment/shackleton-shipwreck-fish-nest-mystery/</link></item>
+<item><title>Dreo space heaters are on sale at Amazon just in time for the cold weather to roll in - Popular Science</title><link>https://www.popsci.com/gear/dreo-space-heater-humidifier-deals-amazon/</link></item>
+<item><title>The best portable power stations for 2026, tested and reviewed - Popular Science</title><link>https://www.popsci.com/reviews/best-portable-power-stations/</link></item>
+<item><title>Red Spider Nebula glows in ethereal new JWST image - Popular Science</title><link>https://www.popsci.com/science/red-spider-nebula-jwst/</link></item>
+<item><title>Renaissance sword reveals a hidden engraving - Popular Science</title><link>https://www.popsci.com/science/renaissance-sword-engraving/</link></item>
+<item><title>Rhinos once lived in Canada - Popular Science</title><link>https://www.popsci.com/environment/rhinos-lived-in-canada/</link></item>
+<item><title>Six new bat species discovered in the Philippines - Popular Science</title><link>https://www.popsci.com/environment/new-bat-species-philippines/</link></item>
+<item><title>Queen bees are violently ousted if worker bees smell weakness - Popular Science</title><link>https://www.popsci.com/environment/queen-bees-overthrow/</link></item>
+<item><title>The U.S. tried permanent daylight saving time—and hated it - Popular Science</title><link>https://www.popsci.com/science/permanent-daylight-saving-time-usa/</link></item>
+<item><title>Mystery Mayan ruler was no king - Popular Science</title><link>https://www.popsci.com/science/mayan-woman-ruler-mexico/</link></item>
+<item><title>Dolphins may be getting an Alzheimer’s-like disease due to this neurotoxin - Popular Science</title><link>https://www.popsci.com/environment/dolphins-alzheimers-algae-bloom-toxin/</link></item>
+<item><title>Your eyes can only handle so much HDTV - Popular Science</title><link>https://www.popsci.com/technology/eyes-hdtv-pixels/</link></item>
+<item><title>Half of all uncontacted Indigenous tribes may disappear by 2036 - Popular Science</title><link>https://www.popsci.com/environment/uncontacted-tribe-threat-report/</link></item>
+<item><title>Why do animals have spots and stripes? - Popular Science</title><link>https://www.popsci.com/environment/why-animals-have-spots-stripes/</link></item>
+<item><title>Can dogs really smell fear? A vet weighs in. - Popular Science</title><link>https://www.popsci.com/environment/dogs-sense-fear/</link></item>
+<item><title>Apple Maps in iOS 26 keeps track of your favorite places - Popular Science</title><link>https://www.popsci.com/diy/apple-maps-visited-places/</link></item>
+<item><title>Endangered North Atlantic right whales are making a slow comeback - Popular Science</title><link>https://www.popsci.com/environment/endangered-north-atlantic-right-whales-are-making-a-slow-comeback/</link></item>
+<item><title>NASA’s trailblazing generation - Popular Science</title><link>https://www.popsci.com/science/nasas-trailblazing-generation/</link></item>
+<item><title>Why you get carsick—and how an iPhone feature might help - Popular Science</title><link>https://www.popsci.com/diy/vehicle-motion-cues-iphone-carsickness/</link></item>
+<item><title>Archaeologists discover massive ancient Egyptian fortress - Popular Science</title><link>https://www.popsci.com/science/archaeologists-discover-ancient-egyptian-fortress/</link></item>
+<item><title>13 riveting images from the 2025 Wildlife Photographer of the Year awards - Popular Science</title><link>https://www.popsci.com/environment/wildlife-photographer-of-the-year-2025/</link></item>
+<item><title>Scientists prepare for the next Carrington Event - Popular Science</title><link>https://www.popsci.com/science/carrington-event-training/</link></item>
+<item><title>Amazon is clearing out Anker chargers, cables, adapters, and more during this post-Prime Day sale - Popular Science</title><link>https://www.popsci.com/gear/anker-charger-adapter-cable-gadget-deals-amazon/</link></item>
+<item><title>A NASA commander’s most important system wasn’t a computer. It was the crew. - Popular Science</title><link>https://www.popsci.com/science/pam-melroy-nasa/</link></item>
+<item><title>The real killer of Napoleon’s army revealed by DNA testing - Popular Science</title><link>https://www.popsci.com/science/napoleon-army-disease-cause/</link></item>
+<item><title>Meet the man who built a 15-foot-tall sea glass Christmas tree - Popular Science</title><link>https://www.popsci.com/science/sea-glass-christmas-tree/</link></item>
+<item><title>Ancient Roman mass grave shows its army’s ethnic diversity - Popular Science</title><link>https://www.popsci.com/science/ancient-roman-mass-grave-diverse-soldiers/</link></item>
+<item><title>Why do horses have eyes on the side of their head? - Popular Science</title><link>https://www.popsci.com/environment/why-do-horses-have-eyes-on-the-side-of-their-head/</link></item>
+<item><title>What Americans fear most in 2025 - Popular Science</title><link>https://www.popsci.com/health/biggest-fears-2025/</link></item>
+<item><title>Dinosaur ‘mummies’ prove some dinos had hooves - Popular Science</title><link>https://www.popsci.com/science/dinosaur-mummy-hooves/</link></item>
+<item><title>2025 Audio Awards: 25 sound investments for sonic satisfaction - Popular Science</title><link>https://www.popsci.com/gear/audio-awards-2025/</link></item>
+<item><title>You’re actually not allowed to keep bird feathers you find on hikes—and it’s all thanks to two women who got really mad about hats - Popular Science</title><link>https://www.popsci.com/science/not-allowed-to-keep-bird-feathers-weirdest-thing-podcast/</link></item>
+<item><title>Iceland was the only country in the world without mosquitos—now they’ve found three - Popular Science</title><link>https://www.popsci.com/environment/iceland-mosquitoes/</link></item>
+<item><title>Human outsmarts Google DeepMind AI, solving centuries-old ‘kissing problem’ - Popular Science</title><link>https://www.popsci.com/science/human-outsmarts-ai-kissing-problem-math/</link></item>
+<item><title>How snake bites really work - Popular Science</title><link>https://www.popsci.com/environment/how-snake-bites-work/</link></item>
+<item><title>Can dogs sense ghosts? - Popular Science</title><link>https://www.popsci.com/environment/can-dogs-sense-ghosts/</link></item>
+<item><title>Astronomers’ telescope ‘hack’ uncovered a lopsided star - Popular Science</title><link>https://www.popsci.com/science/lopsided-star-telescope-hack/</link></item>
+<item><title>New recycling method turns Teflon into toothpaste fluoride - Popular Science</title><link>https://www.popsci.com/science/teflon-recycling-method-flouride/</link></item>
+<item><title>Ancient poop from Mexico’s ‘Cave of the Dead Children’ teems with parasites - Popular Science</title><link>https://www.popsci.com/health/ancient-poop-parasites-mexico/</link></item>
+<item><title>Reptile ‘pee crystals’ might help treat kidney stones and gout - Popular Science</title><link>https://www.popsci.com/science/reptile-pee-kidney-stones/</link></item>
+<item><title>Teen turns his suburban home into elaborate haunted house every October - Popular Science</title><link>https://www.popsci.com/diy/teen-builds-haunted-house/</link></item>
+<item><title>Men speak with a vocal fry just as much as women - Popular Science</title><link>https://www.popsci.com/science/vocal-fry-men/</link></item>
+<item><title>Tiny spider crabs snack on parasites from Chile’s favorite fish - Popular Science</title><link>https://www.popsci.com/environment/spider-crab-cusk-eel-chile/</link></item>
+<item><title>World’s only flightless parrot doing okay against ‘crusty bum’ disease - Popular Science</title><link>https://www.popsci.com/environment/kakapo-antibiotics-crusty-bum/</link></item>
+<item><title>The Bambu Lab A1 is the best multi-color 3D printer for beginners and it’s up to $260 off at Amazon - Popular Science</title><link>https://www.popsci.com/gear/bambu-lab-a1-color-3d-printer-amazon-deal/</link></item>
+<item><title>Why the Louvre heist doesn’t surprise museum security experts - Popular Science</title><link>https://www.popsci.com/technology/how-louvre-heist-happened/</link></item>
+<item><title>How to use Visual Intelligence on your iPhone with iOS 26 - Popular Science</title><link>https://www.popsci.com/diy/how-to-use-visual-intelligence-iphone/</link></item>
+<item><title>Is fear contagious? - Popular Science</title><link>https://www.popsci.com/health/how-fear-spreads/</link></item>
+<item><title>Rare 19th-century coins found after fire at historic tavern - Popular Science</title><link>https://www.popsci.com/science/rare-coins-ohio-tavern-musuem/</link></item>
+<item><title>Donor organ’s blood type altered for the first time - Popular Science</title><link>https://www.popsci.com/health/organ-transplant-blood-type-change/</link></item>
+<item><title>Forgotten rival of Ancient Rome featured an impressive water basin - Popular Science</title><link>https://www.popsci.com/science/water-basin-rival-ancient-rome/</link></item>
+<item><title>This national park uses helicopters for bison round-up duty - Popular Science</title><link>https://www.popsci.com/environment/national-park-bison-round-up/</link></item>
+<item><title>Ultra-endurance athletes can burn up to 8,000 calories per day - Popular Science</title><link>https://www.popsci.com/health/ultra-endurance-athletes-calories-burn/</link></item>
+<item><title>What makes a place seem ‘haunted’? - Popular Science</title><link>https://www.popsci.com/science/haunted-places-science/</link></item>
+<item><title>IDF kills Hussein Tohmeh, Hezbollah terrorist working to reestablish group in southern Lebanon - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/defense-news/article-872018</link></item>
+<item><title>Dozens of terrorists killed: Israel resumes ceasefire after strikes responding to Hamas violations - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/defense-news/article-872009</link></item>
+<item><title>Father of slain IDF soldier Rabbi Doron Perez to be new World Zionist Organization chair - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/article-872077</link></item>
+<item><title>A-G Baharav-Miara warns moves to change Army Radio are stained with political motivations - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/politics-and-diplomacy/article-872101</link></item>
+<item><title>Nearly 6,000 Palestinians illegally crossed into Israel in 2025, Knesset Nat&amp;#39;l Security Cm&amp;#39;tee told - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/article-872086</link></item>
+<item><title>Harvard conservative magazine is shut down after publishing article laced with Nazi rhetoric - The Jerusalem Post</title><link>https://www.jpost.com/diaspora/antisemitism/article-871984</link></item>
+<item><title>ADL enlists major law firms to launch pro bono network for antisemitism cases - The Jerusalem Post</title><link>https://www.jpost.com/diaspora/antisemitism/article-872112</link></item>
+<item><title>Jewish tradition, hands-on acts of service, show the power of volunteering - The Jerusalem Post</title><link>https://www.jpost.com/opinion/article-872026</link></item>
+<item><title>Axon Vision secures contract for EdgeUAV system with leading suicide drone manufacturer - The Jerusalem Post</title><link>https://www.jpost.com/defense-and-tech/article-871884</link></item>
+<item><title>Breakfast in NY, dinner in TLV: NASA&amp;#39;s new supersonic jet passes first test flight - The Jerusalem Post</title><link>https://www.jpost.com/defense-and-tech/article-872001</link></item>
+<item><title>German government pledges record $1 billion in funding for Holocaust survivor home care - The Jerusalem Post</title><link>https://www.jpost.com/diaspora/article-871999</link></item>
+<item><title>British Embassy in Israel launches second cohort of HealthTech Academy - The Jerusalem Post</title><link>https://www.jpost.com/business-and-innovation/article-872003</link></item>
+<item><title>The next battle: The future of Israeli high-tech and its economy - The Jerusalem Post</title><link>https://www.jpost.com/business-and-innovation/opinion/article-872055</link></item>
+<item><title>Melissa kills 25 in Haiti, nearly 30 total as hurricane batters Caribbean - The Jerusalem Post</title><link>https://www.jpost.com/international/article-871937</link></item>
+<item><title>Health ministry investigates malfunction in BRCA screening test after false negative results - The Jerusalem Post</title><link>https://www.jpost.com/health-and-wellness/article-871990</link></item>
+<item><title>IDF soldier suicide attempts spike to 279 since 2024, Knesset report reveals - The Jerusalem Post</title><link>https://www.jpost.com/health-and-wellness/article-871963</link></item>
+<item><title>CNN host Christiane Amanpour confirms cancer returned for third time - The Jerusalem Post</title><link>https://www.jpost.com/health-and-wellness/article-871758</link></item>
+<item><title>Dressed for ‘aliyah’ success: How a Chicago woman became a self-made fashion designer in Israel - The Jerusalem Post</title><link>https://www.jpost.com/aliyah/article-871510</link></item>
+<item><title>Who wants to open a hotel in the Gaza Envelope? The state will cover a third of the cost - The Jerusalem Post</title><link>https://www.jpost.com/business-and-innovation/real-estate/article-871363</link></item>
+<item><title>Just come: the state is giving away plots in the north at a ridiculous price - who is eligible? - The Jerusalem Post</title><link>https://www.jpost.com/business-and-innovation/real-estate/article-871913</link></item>
+<item><title>&amp;#39;Post&amp;#39; sits down with the inspiring &amp;#39;spokeskid&amp;#39; of Israel, 10-year-old Ben Carasso - The Jerusalem Post</title><link>https://www.jpost.com/podcast/jpost-sits-down-with/article-871526</link></item>
+<item><title>Can Hezbollah recover? Inside the battle for Lebanon&amp;#39;s future - The Jerusalem Post</title><link>https://www.jpost.com/defense-and-tech/article-871400</link></item>
+<item><title>Trump says US law blocks bid for a third presidential term - The Jerusalem Post</title><link>https://www.jpost.com/american-politics/article-871995</link></item>
+<item><title>I&amp;#39;m a Jew, I met with Mamdani and this is what I learned - The Jerusalem Post</title><link>https://www.jpost.com/opinion/article-871862</link></item>
+<item><title>World Zionist Congress opens with tribute to October 7 victims, calls for unity - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/article-871977</link></item>
+<item><title>Britain must wake up: Antisemitic events don&amp;#39;t happen in a vacuum - The Jerusalem Post</title><link>https://www.jpost.com/opinion/article-871792</link></item>
+<item><title>Professional advancement in Halacha: Why women should be allowed to take official exams - The Jerusalem Post</title><link>https://www.jpost.com/opinion/article-871797</link></item>
+<item><title>Ex-Sephardi chief rabbi slams Tel Aviv rabbi as &amp;#39;heretic&amp;#39; after he calls for haredi IDF enlistment - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/article-871717</link></item>
+<item><title>Pope Leo canonizes former Satanic priest Bartolo Longo as one of seven new saints - The Jerusalem Post</title><link>https://www.jpost.com/christianworld/article-871906</link></item>
+<item><title>‘The church is asleep right now’: Ted Cruz calls on Christians to confront right-wing antisemitism - The Jerusalem Post</title><link>https://www.jpost.com/diaspora/antisemitism/article-871537</link></item>
+<item><title>Winter is coming, and it’s worth preparing: Here’s what you should start eating right now - The Jerusalem Post</title><link>https://www.jpost.com/health-and-wellness/nutrition/article-871242</link></item>
+<item><title>Malka: An Israeli dining experience - The Jerusalem Post</title><link>https://www.jpost.com/food-recipes/article-871454</link></item>
+<item><title>Enigmatic Jurassic reptile looks like a mix of snake and lizard - The Jerusalem Post</title><link>https://www.jpost.com/archaeology/article-871078</link></item>
+<item><title>Rare Assyrian inscription unearthed near Temple Mount reveals communication with the King of Judah - The Jerusalem Post</title><link>https://www.jpost.com/archaeology/article-871313</link></item>
+<item><title>How old are you really? New AI tool reveals your body’s true age - The Jerusalem Post</title><link>https://www.jpost.com/science/article-871702</link></item>
+<item><title>Mega Or and Nebius unveil $300m data center in Modi&amp;#39;in to power Israel’s AI sector - The Jerusalem Post</title><link>https://www.jpost.com/business-and-innovation/article-871239</link></item>
+<item><title>Beitar Jerusalem tops Hapoel Tel Aviv for Toto Cup - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/sports/article-872088</link></item>
+<item><title>Punch comedy festival: Laugh lines in Tel Aviv coming in December - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/culture/article-871931</link></item>
+<item><title>Beyond the beaches and medieval walls: Discovering Jewish Rhodes - The Jerusalem Post</title><link>https://www.jpost.com/judaism/article-871425</link></item>
+<item><title>Yad Vashem’s ‘Living Memory’ exhibition brings Holocaust stories into the present - The Jerusalem Post</title><link>https://www.jpost.com/podcast/travel-edition/article-871575</link></item>
+<item><title>I do… again: Divorced Americans are more likely to remarry, Pew finds - The Jerusalem Post</title><link>https://www.jpost.com/omg/article-871595</link></item>
+<item><title>US Navy aircraft carrier loses helicopter, fighter jet in South China Sea crash - The Jerusalem Post</title><link>https://www.jpost.com/international/article-871795</link></item>
+<item><title>This Massive Robot Wants To Replace An Entire Restaurant - Yanko Design</title><link>https://www.yankodesign.com/2025/10/29/this-massive-robot-wants-to-replace-an-entire-restaurant/</link></item>
+<item><title>Nothing Phone 3a Lite or CMF Phone 2 Pro? The Choice Is Just Glyph vs. Zoom - Yanko Design</title><link>https://www.yankodesign.com/2025/10/29/nothing-phone-3a-lite-or-cmf-phone-2-pro-the-choice-is-just-glyph-vs-zoom/</link></item>
+<item><title>This Thunderbolt 5 Dock Finally Gives Apple Silicon Macs 3 Displays - Yanko Design</title><link>https://www.yankodesign.com/2025/10/29/this-thunderbolt-5-dock-finally-gives-apple-silicon-macs-3-displays/</link></item>
+<item><title>7 Best Home Upgrades For Millennials Who Finally Have Disposable Income - Yanko Design</title><link>https://www.yankodesign.com/2025/10/29/7-best-home-upgrades-for-millennials-who-finally-have-disposable-income/</link></item>
+<item><title>Polestar Kairos unifies space travel and daily commutes into one intriguing concept - Yanko Design</title><link>https://www.yankodesign.com/2025/10/29/polestar-kairos-unifies-space-travel-and-daily-commutes-into-one-intriguing-concept/</link></item>
+<item><title>Wheelhome turns Tesla Model 3 into ultimate electric rooftop camper with Dashaway eRC - Yanko Design</title><link>https://www.yankodesign.com/2025/10/29/wheelhome-turns-tesla-model-3-into-ultimate-electric-rooftop-camper-with-dashaway-erc/</link></item>
+<item><title>Still Dragging Your Cooler? This 500W Electric Wagon Makes Hauling 200 Pounds Feel Weightless. - Yanko Design</title><link>https://www.yankodesign.com/2025/10/28/still-dragging-your-cooler-this-500w-electric-wagon-makes-hauling-200-pounds-feel-weightless/</link></item>
+<item><title>These $300 Bamboo Houses Just Effortlessly Survived A 7.7 Earthquake In Myanmar - Yanko Design</title><link>https://www.yankodesign.com/2025/10/29/these-300-bamboo-houses-just-effortlessly-survived-a-7-7-earthquake-in-myanmar/</link></item>
+<item><title>This Japanese Architect Just Designed Dubai’s Most Poetic Museum - Yanko Design</title><link>https://www.yankodesign.com/2025/10/29/this-japanese-architect-just-designed-dubais-most-poetic-museum/</link></item>
+<item><title>This 26-Foot Tiny Home Fits A Washer, Dishwasher, &amp; 10-Foot Ceilings - Yanko Design</title><link>https://www.yankodesign.com/2025/10/28/this-26-foot-tiny-home-fits-a-washer-dishwasher-10-foot-ceilings/</link></item>
+<item><title>5 Sustainable Travel Products That Don’t Look Like They’re Made From Grass - Yanko Design</title><link>https://www.yankodesign.com/2025/10/26/5-sustainable-travel-products-that-dont-look-like-theyre-made-from-grass/</link></item>
+<item><title>This House Puts an Oak Tree Inside 4 Concentric Moving Rings - Yanko Design</title><link>https://www.yankodesign.com/2025/10/25/this-house-puts-an-oak-tree-inside-4-concentric-moving-rings/</link></item>
+<item><title>This Solar Textile Turns Buildings Into Giant Energy Harvesters - Yanko Design</title><link>https://www.yankodesign.com/2025/10/24/this-solar-textile-turns-buildings-into-giant-energy-harvesters/</link></item>
+<item><title>7 Best Drawing Gifts Every Artist Actually Wants in 2025 - Yanko Design</title><link>https://www.yankodesign.com/2025/10/28/7-best-drawing-gifts-every-artist-actually-wants-in-2025/</link></item>
+<item><title>Oppo Find X9 Pro Review: A 200MP Telephoto Beast With Massive Battery Life - Yanko Design</title><link>https://www.yankodesign.com/2025/10/28/oppo-find-x9-pro-review-a-200mp-telephoto-beast-with-massive-battery-life/</link></item>
+<item><title>Vivo X300 Pro Review: A Camera Powerhouse with Battery Concerns - Yanko Design</title><link>https://www.yankodesign.com/2025/10/22/vivo-x300-pro-review-a-camera-powerhouse-with-battery-concerns/</link></item>
+<item><title>Realme 15 Pro Game of Thrones Limited Edition review: Black to Red Leather, Gold Dragons, and only 5,000 Made - Yanko Design</title><link>https://www.yankodesign.com/2025/10/13/realme-15-pro-game-of-thrones-limited-edition-review-black-to-red-leather-gold-dragons-and-only-5000-made/</link></item>
+<item><title>This $28 Refillable Deodorant Is Threatening the $38 Billion Deodorant Market (While Saving the Planet) - Yanko Design</title><link>https://www.yankodesign.com/2025/10/18/this-28-refillable-deodorant-is-threatening-the-38-billion-deodorant-market-while-saving-the-planet/</link></item>
+<item><title>Experience Next-Level Shine with BSTY Dual-Action Cordless Floor Washing - Yanko Design</title><link>https://www.yankodesign.com/2025/10/12/experience-next-level-shine-with-bsty-dual-action-cordless-floor-washing/</link></item>
+<item><title>When Trays Become Magic: Bo Zhang’s Shadow-Dancing Lightware - Yanko Design</title><link>https://www.yankodesign.com/2025/10/29/when-trays-become-magic-bo-zhangs-shadow-dancing-lightware/</link></item>
+<item><title>Water Purifier Faucet Looks Like a Designer Lamp and Fits in 135mm - Yanko Design</title><link>https://www.yankodesign.com/2025/10/29/water-purifier-faucet-looks-like-a-designer-lamp-and-fits-in-135mm/</link></item>
+<item><title>Nike Just Made a Puffer Jacket You Can Inflate in 15 Seconds - Yanko Design</title><link>https://www.yankodesign.com/2025/10/29/nike-just-made-a-puffer-jacket-you-can-inflate-in-15-seconds/</link></item>
+<item><title>This Gingerbread AT-AT LEGO Set Is Every Star Wars Fan’s Dream Holiday Gift - Yanko Design</title><link>https://www.yankodesign.com/2025/10/29/this-gingerbread-at-at-lego-set-is-every-star-wars-fans-dream-holiday-gift/</link></item>
+<item><title>Kensington Trackball Has a Scroll Ring and 16 Programmable Buttons - Yanko Design</title><link>https://www.yankodesign.com/2025/10/29/kensington-trackball-has-a-scroll-ring-and-16-programmable-buttons/</link></item>
+<item><title>This E Ink 4G Smartphone Runs for Days and Won’t Hurt Your Eyes - Yanko Design</title><link>https://www.yankodesign.com/2025/10/29/this-e-ink-4g-smartphone-runs-for-days-and-wont-hurt-your-eyes/</link></item>
+<item><title>Ferrari’s F76 exists only in the metaverse yet feels more real than any hypercar - Yanko Design</title><link>https://www.yankodesign.com/2025/10/28/ferraris-f76-exists-only-in-the-metaverse-yet-feels-more-real-than-any-hypercar/</link></item>
+<item><title>This Handheld Detector Could Change How We Hunt for Pathogens - Yanko Design</title><link>https://www.yankodesign.com/2025/10/28/this-handheld-detector-could-change-how-we-hunt-for-pathogens/</link></item>
+<item><title>This Futuristic iPod Boasts A Clean Minimal-Punk Design… And A Jogwheel - Yanko Design</title><link>https://www.yankodesign.com/2025/10/28/this-futuristic-ipod-boasts-a-clean-minimal-punk-design-and-a-jogwheel/</link></item>
+<item><title>Skip to main content - Verily</title><link>https://verilymag.com/#genesis-content</link></item>
+<item><title>Skip to header right navigation - Verily</title><link>https://verilymag.com/#nav-header-right</link></item>
+<item><title>Skip to site footer - Verily</title><link>https://verilymag.com/#site-footer</link></item>
+<item><title>From the Editor’s Desk - Verily</title><link>https://verilymag.com/blog/from-the-editors-desk/</link></item>
+<item><title>Explore Verily Magazine in Print! - Verily</title><link>https://verilymag.com/subscribe/</link></item>
+<item><title>The First No-Photoshop Women’s Mag Has Returned to Print! - Verily</title><link>https://verilymag.com/blog/verily-magazine-returning-to-print-no-photoshop-2023/</link></item>
+<item><title>Join the movement for better women’s media. - Verily</title><link>https://verilymag.com/donate/</link></item>
+<item><title>The Path To My Profession: Lights, Camera, Action - Verily</title><link>https://verilymag.com/path-to-my-profession/the-path-to-my-profession-lights-camera-action-2025/</link></item>
+<item><title>Making of a Mom: Diagnosis: Mother - Verily</title><link>https://verilymag.com/making-of-a-mom/making-of-a-mom-diagnosis-mother-2025/</link></item>
+<item><title>At Home With Her: A Cocktail Cabinet That Inspires Conversation - Verily</title><link>https://verilymag.com/athomewithher/at-home-with-her-a-cocktail-cabinet-that-inspires-conversation-2025/</link></item>
+<item><title>Simply Hosting: A Fortieth Birthday Filled with Favorite Things - Verily</title><link>https://verilymag.com/simply-hosting/simply-hosting-a-fortieth-birthday-filled-with-favorite-things-2025/</link></item>
+<item><title>From the Editor’s Desk: Hope - Verily</title><link>https://verilymag.com/blog/from-the-editors-desk-hope/</link></item>
+<item><title>Jane Austen Book Club Ideas: How to Discuss ‘Sense and Sensibility’ - Verily</title><link>https://verilymag.com/culture/jane-austen-book-club-ideas-how-to-discuss-sense-and-sensibility/</link></item>
+<item><title>Classic English Scones - Verily</title><link>https://verilymag.com/lifestyle/classic-english-scones/</link></item>
+<item><title>The Problem With ‘Happily Ever After’ Thinking - Verily</title><link>https://verilymag.com/relationships/single-life-marriage-future-husband-happiness/</link></item>
+<item><title>Easy Sweet Potato Chicken Curry (One-Pot Recipe Full of Flavor) - Verily</title><link>https://verilymag.com/lifestyle/easy-sweet-potato-chicken-curry-one-pot-recipe-full-of-flavor/</link></item>
+<item><title>How to Enjoy an Art Museum: 12 Tips From an Art Historian - Verily</title><link>https://verilymag.com/culture/how-to-enjoy-an-art-museum-12-tips-from-an-art-historian/</link></item>
+<item><title>When Is It Worthwhile to “Buy” Time? - Verily</title><link>https://verilymag.com/lifestyle/when-is-it-worthwhile-to-buy-time/</link></item>
+<item><title>How to Live Like a Hobbit - Verily</title><link>https://verilymag.com/culture/how-to-live-like-a-hobbit/</link></item>
+<item><title>The Life-Changing Magic of Creative Leisure - Verily</title><link>https://verilymag.com/culture/the-life-changing-magic-of-creative-leisure/</link></item>
+<item><title>Swedish Pancakes Recipe (Thin Roll-Up Pancakes with Berries) - Verily</title><link>https://verilymag.com/lifestyle/swedish-pancakes-recipe-thin-roll-up-pancakes-with-berries/</link></item>
+<item><title>How I Broke Up With Toxic Productivity After Burnout - Verily</title><link>https://verilymag.com/productivity/how-i-broke-up-with-toxic-productivity-after-burnout/</link></item>
+<item><title>Why My Dad Came Wedding Dress Shopping—and Loved It - Verily</title><link>https://verilymag.com/beauty/why-my-dad-came-wedding-dress-shopping-and-loved-it/</link></item>
+<item><title>Living the Aunt-Life - Verily</title><link>https://verilymag.com/relationships/living-the-aunt-life/</link></item>
+<item><title>Privacy Policy - Verily</title><link>https://verilymag.com/privacy-policy/</link></item>
+<item><title>Slow Cooker Chili - Skinnytaste</title><link>https://www.skinnytaste.com/slow-cooker-chili/</link></item>
+<item><title>Frozen Chocolate Banana Ghost Pops - Skinnytaste</title><link>https://www.skinnytaste.com/frozen-boo-nana-pops/</link></item>
+<item><title>Free 7 Day Healthy Meal Plan (Oct. 27-Nov. 2) - Skinnytaste</title><link>https://www.skinnytaste.com/free-7-day-healthy-meal-plan-oct-27-nov-2/</link></item>
+<item><title>Prosciutto Wrapped Stuffed Turkey Tenderloin Recipe with Apples and Kale - Skinnytaste</title><link>https://www.skinnytaste.com/stuffed-turkey-tenderloin-recipe/</link></item>
+<item><title>Slow Cooker Coq au Vin - Skinnytaste</title><link>https://www.skinnytaste.com/slow-cooker-coq-au-vin/</link></item>
+<item><title>Southwest Stuffed Sweet Potatoes - Skinnytaste</title><link>https://www.skinnytaste.com/southwest-stuffed-sweet-potatoes/</link></item>
+<item><title>25 Crockpot Dinner Ideas You’ll Love All Year Long - Skinnytaste</title><link>https://www.skinnytaste.com/crockpot-dinner-ideas/</link></item>
+<item><title>Air Fryer Mushrooms - Skinnytaste</title><link>https://www.skinnytaste.com/air-fryer-mushrooms/</link></item>
+<item><title>Free 7 Day Healthy Meal Plan (Oct. 13-19) - Skinnytaste</title><link>https://www.skinnytaste.com/free-7-day-healthy-meal-plan-oct-13-19/</link></item>
+<item><title>Complete Guide to What&amp;#39;s New in Ubuntu 25.10 - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/10/ubuntu-25-10-new-features</link></item>
+<item><title>Ghostty 1.2 Update Brings Major New Features - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/10/ghostty-1-2-new-features-for-linux</link></item>
+<item><title>NordVPN&amp;#39;s Linux App Goes Open Source - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/10/nordvpn-linux-gui-open-sourced</link></item>
+<item><title>How to Upgrade to Ubuntu 25.10 from 25.04 - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/10/how-to-upgrade-ubuntu-25-10</link></item>
+<item><title>How to Run Scripts and Commands at Login in Ubuntu 25.10 - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/10/how-to-autostart-apps-custom-scripts-ubuntu</link></item>
+<item><title>Floating Mini Panel Gains New Vertical Orientation Option - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/10/floating-mini-panel-vertical-mode</link></item>
+<item><title>Rust Bug Broke Ubuntu 25.10 Automatic Update Checks - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/10/ubuntu-25-10-rust-coreutils-date-bug</link></item>
+<item><title>How to Upgrade to KDE Plasma 6.5 on Kubuntu 25.10 - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/10/how-to-upgrade-kde-plasma-6-5-kubuntu-25-10</link></item>
+<item><title>DeepSeek and Qwen AI Models Now Available as Ubuntu Snaps - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/10/deepseek-qwen-ubuntu-snaps</link></item>
+<item><title>VirtualBox 7.2.4 Released (But Won’t Install on Ubuntu 25.10) - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/10/virtualbox-7-2-4-release-libxml2-error-ubuntu-25-10</link></item>
+<item><title>SuperTuxKart 1.5 Released with Improved Graphics + More - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/10/supertuxkart-1-5-released</link></item>
+<item><title>KDE Plasma 6.5: Rounded Corners, Clipboard Pinning + More - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/10/kde-plasma-6-5-new-features-changes-release</link></item>
+<item><title>Zorin OS 18 Broke Download Records on Windows 10 EOL Day - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/10/zorin-os-18-biggest-launch-ever</link></item>
+<item><title>Ubuntu 26.04 LTS Daily Builds Are Now Available - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/10/ubuntu-26-04-daily-builds-available</link></item>
+<item><title>Xubuntu Website Hijack Served Malware Downloads (Now Fixed) - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/10/xubuntu-website-malware-hack</link></item>
+<item><title>GIMP Announce Official Snap Package for Ubuntu - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/10/official-gimp-snap-package-announced</link></item>
+<item><title>Dracut in Ubuntu 25.10: What it is and Why it Matters (or Doesn’t) - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/10/what-is-dracut-ubuntu</link></item>
+<item><title>Thunderbird 144 Update Delivers Assorted Fixes - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2025/10/thunderbird-144-update-fastmail-exchange-fixes</link></item>
+<item><title>How AI Will Forge the Next Generation of Cybersecurity Talent - SPONSOR CONTENT FROM PALO ALTO NETWORKS - Harvard Business Review</title><link>https://hbr.org/sponsored/2025/10/how-ai-will-forge-the-next-generation-of-cybersecurity-talent</link></item>
+<item><title>How Design Thinking Unlocks Creativity - Harvard Business Review</title><link>https://hbr.org/podcast/2025/10/how-design-thinking-unlocks-creativity</link></item>
+<item><title>How Tech Product Managers Can Drive Innovation by Focusing on Customer Needs - SPONSOR CONTENT FROM CAPITALONE - Harvard Business Review</title><link>https://hbr.org/sponsored/2025/10/how-tech-product-managers-can-drive-innovation-by-focusing-on-customer-needs</link></item>
+<item><title>Employee Discontent Is on the Rise. Here’s What to Do About It. - Harvard Business Review</title><link>https://hbr.org/2025/10/employee-discontent-is-on-the-rise-heres-what-to-do-about-it</link></item>
+<item><title>6 Defensive Behaviors That Show Up at Work—and How Psychological Safety Can Help - Harvard Business Review</title><link>https://hbr.org/2025/10/6-defensive-behaviors-that-show-up-at-work-and-how-psychological-safety-can-help</link></item>
+<item><title>Don’t Cling to Your Old Job After Being Promoted - Harvard Business Review</title><link>https://hbr.org/2025/10/dont-cling-to-your-old-job-after-being-promoted</link></item>
+<item><title>How to Let Go When a New Hire Takes on Your Old Responsibilities - Harvard Business Review</title><link>https://hbr.org/2025/10/how-to-let-go-when-a-new-hire-takes-on-your-old-responsibilities</link></item>
+<item><title>What’s Holding You Back from Being a Great Leader? - Harvard Business Review</title><link>https://hbr.org/podcast/2025/10/whats-holding-you-back-from-being-a-great-leader</link></item>
+<item><title>Inside India’s Energy Transition: Tata Power’s Net Zero Strategy - Harvard Business Review</title><link>https://hbr.org/podcast/2025/10/inside-indias-energy-transition-tata-powers-net-zero-strategy</link></item>
+<item><title>Why AI at Work Makes Us So Anxious - Harvard Business Review</title><link>https://hbr.org/2025/10/why-ai-at-work-makes-us-so-anxious</link></item>
+<item><title>Innovating at the Core—and for the Future - Harvard Business Review</title><link>https://hbr.org/2025/10/innovating-at-the-core-and-for-the-future</link></item>
+<item><title>What Should Retailers Do About AI Shoppers? - Harvard Business Review</title><link>https://hbr.org/2025/10/what-should-retailers-do-about-ai-shoppers</link></item>
+<item><title>How to Ask for Executive Support—Without Undermining Yourself - Harvard Business Review</title><link>https://hbr.org/2025/10/how-to-ask-for-executive-support-without-undermining-yourself</link></item>
+<item><title>When the CEO Becomes Board Chair - Harvard Business Review</title><link>https://hbr.org/2025/10/when-the-ceo-becomes-board-chair</link></item>
+<item><title>How Tariffs Are Playing Out So Far - Harvard Business Review</title><link>https://hbr.org/2025/10/how-tariffs-are-playing-out-so-far</link></item>
+<item><title>Designing a Successful Agentic AI System - Harvard Business Review</title><link>https://hbr.org/2025/10/designing-a-successful-agentic-ai-system</link></item>
+<item><title>What Consumers Really Want Brands to Do About Social Issues - Harvard Business Review</title><link>https://hbr.org/2025/10/what-consumers-really-want-brands-to-do-about-social-issues</link></item>
+<item><title>What Every Leader Can Learn from the Principles of Yoga - Harvard Business Review</title><link>https://hbr.org/2025/10/what-every-leader-can-learn-from-the-principles-of-yoga</link></item>
+<item><title>What Makes a Great Negotiator, According to Research - Harvard Business Review</title><link>https://hbr.org/2025/10/what-makes-a-great-negotiator-according-to-research</link></item>
+<item><title>When Setting the Standard for Your Team, Avoid This Common Mistake - Harvard Business Review</title><link>https://hbr.org/2025/10/when-setting-the-standard-for-your-team-avoid-this-common-mistake</link></item>
+<item><title>Sales Teams, Don’t Undervalue Face Time with Customers - Harvard Business Review</title><link>https://hbr.org/2025/10/sales-teams-dont-undervalue-face-time-with-customers</link></item>
+<item><title>How Business Leaders Can Help Solve the World’s Toughest Problems - Harvard Business Review</title><link>https://hbr.org/podcast/2025/10/how-business-leaders-can-help-solve-the-worlds-toughest-problems</link></item>
+<item><title>Middle Managers Feel the Least Psychological Safety at Work - Harvard Business Review</title><link>https://hbr.org/2025/10/middle-managers-feel-the-least-psychological-safety-at-work</link></item>
+<item><title>Our Favorite Management Tips on Leading Through Uncertainty - Harvard Business Review</title><link>https://hbr.org/2025/10/our-favorite-management-tips-on-leading-through-uncertainty</link></item>
+<item><title>Why Agentic AI Projects Fail—and How to Set Yours Up for Success - Harvard Business Review</title><link>https://hbr.org/2025/10/why-agentic-ai-projects-fail-and-how-to-set-yours-up-for-success</link></item>
+<item><title>The Return of Do-It-Yourself Economics - Law &amp; Liberty</title><link>https://lawliberty.org/the-return-of-do-it-yourself-economics/</link></item>
+<item><title>Strauss and Meyer Rediscovered - Law &amp; Liberty</title><link>https://lawliberty.org/strauss-and-meyer-rediscovered/</link></item>
+<item><title>Virtue Economics - Law &amp; Liberty</title><link>https://lawliberty.org/virtue-economics/</link></item>
+<item><title>Why Engagement Failed - Law &amp; Liberty</title><link>https://lawliberty.org/book-review/why-engagement-failed/</link></item>
+<item><title>Alina Birjuk - FlowingData</title><link>https://flowingdata.com/tag/alina-birjuk/</link></item>
+<item><title>Paulina Rowińska - FlowingData</title><link>https://flowingdata.com/tag/paulina-rowinska/</link></item>
+<item><title>Science Friday - FlowingData</title><link>https://flowingdata.com/tag/science-friday/</link></item>
+<item><title>Die Essenz des Dhamma – und warum moderne „No-Essence“-Theorien scheitern - MC Winkels weBlog</title><link>https://www.whudat.de/die-essenz-des-dhamma-und-warum-moderne-no-essence-theorien-scheitern/</link></item>
+<item><title>Leon Thomas – „Pholks“ EP // Zwischen Funk, Gefühl und Rebellion - MC Winkels weBlog</title><link>https://www.whudat.de/leon-thomas-pholks-ep-zwischen-funk-gefuehl-und-rebellion/</link></item>
+<item><title>Das Apartment von Seinfeld neu gedacht und designed: Wenn Feng Shui auf Sitcom trifft - MC Winkels weBlog</title><link>https://www.whudat.de/das-apartment-von-seinfeld-neu-gedacht-und-designed-wenn-feng-shui-auf-sitcom-trifft/</link></item>
+<item><title>YUNGMORPHEUS &amp; Dirty Art Club – A Spyglass To One’s Face // Zwischen Selbstreflexion und Soul-Dekonstruktion - MC Winkels weBlog</title><link>https://www.whudat.de/yungmorpheus-dirty-art-club-a-spyglass-to-ones-face-zwischen-selbstreflexion-und-soul-dekonstruktion/</link></item>
+<item><title>Das Leben hat keinen Sinn – und genau darin liegt seine Schönheit. - MC Winkels weBlog</title><link>https://www.whudat.de/das-leben-hat-keinen-sinn-und-genau-darin-liegt-seine-schoenheit/</link></item>
+<item><title>Koralle &amp; Yawuh – „Primo Quarto“: Wenn der Mond zwischen Licht und Schatten steht - MC Winkels weBlog</title><link>https://www.whudat.de/koralle-yawuh-primo-quarto-wenn-der-mond-zwischen-licht-und-schatten-steht/</link></item>
+<item><title>PRÜF! Denn wer die Demokratie schützen will, muss ihre Gegner prüfen - MC Winkels weBlog</title><link>https://www.whudat.de/pruef-denn-wer-die-demokratie-schuetzen-will-muss-ihre-gegner-pruefen/</link></item>
+<item><title>Daniel Caesar- „Son of Spergy“: Zwischen Schuld, Glaube und Selbstprüfung - MC Winkels weBlog</title><link>https://www.whudat.de/daniel-caesar-son-of-spergy-zwischen-schuld-glaube-und-selbstpruefung/</link></item>
+<item><title>Pool Timelapse: Vom leeren Grundstück zum Traumgarten mit Pool - MC Winkels weBlog</title><link>https://www.whudat.de/pool-timelapse-vom-leeren-grundstueck-zum-traumgarten-mit-pool/</link></item>
+<item><title>Retrogott – „12 Bit, 10 Seconds, Infinite Flavor“: Analoge Seele, digitale Präzision - MC Winkels weBlog</title><link>https://www.whudat.de/retrogott-12-bit-10-seconds-infinite-flavor-analoge-seele-digitale-praezision/</link></item>
 </channel></rss>
