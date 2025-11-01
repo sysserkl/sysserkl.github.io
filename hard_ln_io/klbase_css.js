@@ -2943,3 +2943,12 @@ function popup_font_family_content_b(input_id,popup_id){
     mouseover_mouseout_oblong_span_b(opopup.querySelectorAll('span.oblong_box'));
     popup_show_hide_b(popup_id);
 }
+
+function textarea_flash_b(dom_id,remove_outline=false){
+    var list_t=[];
+    if (remove_outline){
+        list_t.push(dom_id+' {outline:none;}');
+    }
+    list_t.push(dom_id+':focus {border-color: '+scheme_global['color']+';}');
+    return list_t;  //消除屏幕闪烁 - 保留注释
+}
