@@ -1940,19 +1940,29 @@ function textarea_top_bottom_b(textareaId, csposition=0,csstart=0){
 }
 
 function textarea_en_de_b(textarea_id1,is_de=false,do_ask=true,textarea_id2=''){
-    var otextarea1=document.getElementById(textarea_id1);
+    if (typeof textarea_id1=='string'){
+        var otextarea1=document.getElementById(textarea_id1);
+    } else {
+        var otextarea1=textarea_id1;    
+    }
     if (!otextarea1){return;}
 
     var otextarea2=false;
     if (textarea_id2!==''){
-        otextarea2=document.getElementById(textarea_id2);
+        if (typeof textarea_id1=='string'){
+            otextarea2=document.getElementById(textarea_id2);
+        } else {
+            otextarea2=textarea_id2;
+        }
         if (!otextarea2){return;}
     }
     
     var old_str=otextarea1.value;
     if (old_str==''){return;}
     
-    if (!confirm('是否'+(is_de?'解密':'加密')+'？')){return;}
+    if (do_ask){
+        if (!confirm('是否'+(is_de?'解密':'加密')+'？')){return;}
+    }
 
     if (is_de){
         var new_str=bc_decode_b(old_str)[0];
@@ -1965,6 +1975,30 @@ function textarea_en_de_b(textarea_id1,is_de=false,do_ask=true,textarea_id2=''){
     } else {
         otextarea1.value=new_str;
     }
+}
+
+function textarea_form_submit_b(obutton,do_encrypt=false,do_ask=true){
+    var oparent=obutton.parentNode;
+    var blxl=0;
+    while (true){
+        if (!oparent || blxl>100){break;}
+        if (oparent.tagName.toLowerCase()=='form'){
+            if (do_encrypt){
+                var otextarea=oparent.querySelector('textarea');
+                if (otextarea){
+                    textarea_en_de_b(otextarea,false,false);
+                }
+            }
+            if (do_ask){
+                if (!confirm('是否发送到临时记事本？')){break;}
+            }
+            oparent.submit();
+            break;
+        }
+        oparent=oparent.parentNode;
+        blxl=blxl+1;
+    }
+    console.log('textarea_form_submit_b()','查找 form 次数：',blxl);
 }
 
 function textarea_buttons_b(textarea_id,csbuttons,cstype='',csstyle='',span_class='aclick'){
@@ -2006,11 +2040,11 @@ function textarea_buttons_b(textarea_id,csbuttons,cstype='',csstyle='',span_clas
         bljg=bljg+button_left+' onclick="textarea_top_bottom_b(\''+textarea_id+'\',1);">⤵'+button_right;
     }
     
-    if (csbuttons.includes('加密')){
+    if (csbuttons.includes(',加密,')){
         bljg=bljg+button_left+' onclick="textarea_en_de_b(\''+textarea_id+'\');">🔐'+button_right;
     }
     
-    if (csbuttons.includes('解密')){
+    if (csbuttons.includes(',解密,')){
         bljg=bljg+button_left+' onclick="textarea_en_de_b(\''+textarea_id+'\',true);">🔓'+button_right;
     }
         
@@ -2030,11 +2064,18 @@ function textarea_buttons_b(textarea_id,csbuttons,cstype='',csstyle='',span_clas
     }
         
     if (csbuttons.includes('发送到临时记事本') || csbuttons.includes('send to remote temp memo')){
-        bljg=bljg+'<input type="submit" value="📤"'+csstyle+' title="send to remote temp memo" /> ';
+        //bljg=bljg+'<input type="submit" value="📤"'+csstyle+' title="send to remote temp memo" /> ';
+        bljg=bljg+button_left+' onclick="textarea_form_submit_b(this);" title="send to remote temp memo">📤'+button_right;
     }
+    
+    if (csbuttons.includes('加密发送')){
+        bljg=bljg+button_left+' onclick="textarea_form_submit_b(this,true);" title="加密发送">🔐📤'+button_right;
+    }
+    
     if (csbuttons.includes('打开临时记事本') || csbuttons.includes('open remote temp memo')){
         bljg=bljg+'<a'+csstyle+' href="'+postpath+'temp_txt_share.php'+(cstype==''?'':'?type='+cstype)+'" class="a_oblong_box" target=_blank>open remote temp memo('+remote_host.slice(-3,)+')</a> ';
     }
+    
     if (csbuttons.includes('从 bigfile 导入文件内容') || csbuttons.includes('import file content from bigfile')){
         bljg=bljg+button_left+' onclick="import_bigfile_content_b(false,\''+textarea_id+'\');">从 bigfile 导入文件内容'+button_right;
     }
@@ -4902,7 +4943,7 @@ function windows_filename_b(csstr,cstype='fullname',entype=false){
             endict_ellipsis_global.sort(function (a,b){return a[0].length>b[0].length?-1:1;});
         }
     }
-    //console.log(endict_ellipsis_global);
+    console.log(endict_ellipsis_global);
     
     let new_name='';
     switch (cstype){

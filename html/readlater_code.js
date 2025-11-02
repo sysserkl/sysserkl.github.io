@@ -989,7 +989,7 @@ function search_batch_rlater(key_list,randomsort=false,csmax=-1,istest=false){
 }
 
 function recent_search_key_rlater(csstr=''){
-    recent_search_b('recent_search_readlater',csstr,'sort_rlater','div_recent_search',["-[^\\x00-\\xff]{2,}(:r)", ".*", "https?:\/\/[^\/]+\/?$(:r)", "javascript|python|linux|bash(:r)","javascript(:r)", "python(:r)", "linux(:r)","bash(:r)","^[美国万岁](:r)",],20);
+    recent_search_b('recent_search_readlater',csstr,'sort_rlater','div_recent_search',["-[^\\x00-\\xff]{2,}(:r)", ".*", "https?:\/\/[^\/]+\/?$(:r)", "javascript|python|linux|bash(:r)","javascript(:r)", "python(:r)", "linux(:r)","bash(:r)","dictionary|definition|dict|iciba|\\.word(:r)",],20);
 }
 
 function search_websites_rlater(cskeys='',israndom=-1,rnd_number=20,showhtml=true,add_recent_search=true,update_input=true,rows_max=false,csreg=-1,is_simple=false){ //rnd_number 只在 random 时有效 - 保留注释

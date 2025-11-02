@@ -18,10 +18,21 @@ function init_bigfile(){
     is_args_checked_bigfile=false;
     
     var buttons_more='<span class="aclick" onclick="local_storage_import_b(\'textarea_temp_txt_share\',true);">import data to localStorage</span>';
-    buttons_more=buttons_more+'<span class="aclick" onclick="update_temp_txt_share_b(\'enwords_temp\',\'textarea_temp_txt_share\');">更新最近记忆单词</span> ';
-    buttons_more=buttons_more+'<span class="span_link" onclick="open_enwords_htm_bigfile();">enwords.htm</span>';
+    buttons_more=buttons_more+'<span class="aclick" onclick="update_temp_txt_share_b(\'enwords_temp\',\'textarea_temp_txt_share\');">① 更新最近记忆单词</span> ';
+    buttons_more=buttons_more+'<span class="span_link" onclick="open_enwords_htm_bigfile();">② enwords.htm</span>';
+    buttons_more=buttons_more+'<span class="aclick" onclick="en_decode_update_open_bigfile();">🔓+①+②</span>';
 
     init_temp_txt_share_b(false,'',false,true,buttons_more);
+}
+
+function en_decode_update_open_bigfile(){
+    function sub_en_decode_update_open_bigfile_step2(){
+        if (update_temp_txt_share_b('enwords_temp','textarea_temp_txt_share')){
+            open_enwords_htm_bigfile();
+        }    
+    }
+    textarea_en_de_b('textarea_temp_txt_share',true);
+    setTimeout(sub_en_decode_update_open_bigfile_step2,1);  //让 textarea 刷新 - 保留注释
 }
 
 function open_enwords_htm_bigfile(){
@@ -951,7 +962,7 @@ function page_bigfile(csno){
         let htm_icon='';
         
         if (parseFloat(current_data_bigfile_global[csxl][0][3])<=1){   //1MB大小以内 - 保留注释
-            if (item[1].endsWith('.htm') || item[1].endsWith('.html')){
+            if (item[1]!=='bigfile_standalone.htm' && (item[1].endsWith('.htm') || item[1].endsWith('.html'))){
                 htm_icon='<span class="oblong_box" onclick="html_form_bigfile(this);" title="转换htm文件并载入或下载">🌐</span> ';
             } else {
                 htm_icon='<span class="oblong_box" onclick="html_form_bigfile(this);" title="查看内容">{}</span> ';

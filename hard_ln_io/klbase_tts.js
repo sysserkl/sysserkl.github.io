@@ -26,7 +26,7 @@ function textarea_diff_txt_share_b(id1,id2){
 
 function update_temp_txt_share_b(csid,textarea_id='textarea_temp_txt_share'){
     var otextarea=document.getElementById(textarea_id);
-    if (!otextarea){return;}
+    if (!otextarea){return false;}
     
     var cscaption=temp_txt_share_type_dict_global[csid][0];
     var blfound=false;
@@ -38,10 +38,10 @@ function update_temp_txt_share_b(csid,textarea_id='textarea_temp_txt_share'){
     }
     
     if (blfound){
-        if (confirm('是否更新 '+cscaption+'？')===false){return;}
+        if (confirm('是否更新 '+cscaption+'？')===false){return false;}
     } else {
         var rndstr=randstr_b(4,true,false);
-        if ((prompt('输入 '+rndstr+' 确认更新 '+cscaption) || '').trim()!==rndstr){return;}
+        if ((prompt('输入 '+rndstr+' 确认更新 '+cscaption) || '').trim()!==rndstr){return false;}
     }
     
     switch (csid){
@@ -55,6 +55,7 @@ function update_temp_txt_share_b(csid,textarea_id='textarea_temp_txt_share'){
             localStorage.setItem(csid,otextarea.value.trim());
             break;
     }
+    return true;
 }
 
 function temp_save_temp_txt_share_b(cstype=''){

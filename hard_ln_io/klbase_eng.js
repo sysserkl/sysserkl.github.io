@@ -1381,9 +1381,7 @@ function en_words_temp_textarea_b(divname,csrecount=false){
     left_str=left_str+'<span class="aclick" onclick="recent_words_remove_old_date_b(400);">清除400天以前的日期标记</span> ';
     left_str=left_str+'<span class="aclick" onclick="en_words_temp_diff_b();">diff</span> ';
     
-    var right_str='<span class="aclick" onclick="en_words_temp_send_to_txt_b();" title="send to remote temp memo">📤</span> ';
-
-    right_str=right_str+textarea_buttons_b('textarea_word_temp','发送地址','enwords_temp');
+    var right_str=textarea_buttons_b('textarea_word_temp','发送到临时记事本,加密发送,发送地址','enwords_temp');
     right_str=right_str+' row: '+en_words_temp_global.length;
     right_str=right_str+'</p>';    
 
@@ -1426,12 +1424,6 @@ function recent_words_remove_old_date_b(csnum){
     
     if (!confirm('原有行数 '+list_t.length+' 行，剔除后剩余行数 '+result_t.length+' 行，是否替换编辑框内容？')){return;}
     otextarea.value=result_t.join('\n');    
-}
-
-function en_words_temp_send_to_txt_b(){
-    if (confirm('是否发送到临时记事本？')){
-        document.querySelector('form[name="form_word_temp"]').submit();
-    }
 }
 
 function en_words_temp_update_b(divname,recount=false){

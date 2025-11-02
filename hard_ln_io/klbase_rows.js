@@ -346,7 +346,7 @@ function html2wiki_arr_get_klr_b(csid){
     ['<a href="([^"]*?)" .*?>(.*?)<\/a>',"[$1 $2]"],        
     ['<a [^<>]* href="([^"]*?)">(.*?)<\/a>',"[$1 $2]"],
     ['<a [^<>]* href="([^"]*?)" .*?>(.*?)<\/a>',"[$1 $2]"],        
-    ['<img src="http://[^"]+/wikiuploads/([^"]+)">',"{{wikiuploads}}$1"],   //对源自 wikiuploads 的图片优先处理 - 保留注释
+    ['<img src="http://[^"]+/wikiuploads/([^"]+)"[^<>]*>',"{{wikiuploads}}$1"],   //对源自 wikiuploads 的图片优先处理 - 保留注释
     ['<img src="[^<>]*\/(.*?)">',"\n{{wikiuploads}}"+year_t+"/$1\n"],
     ['<img src="[^<>]*\/(.*?)" .*?>',"\n{{wikiuploads}}"+year_t+"/$1\n"],
     ['<img [^<>]* src="[^<>]*\/(.*?)">',"\n{{wikiuploads}}"+year_t+"/$1\n"],
