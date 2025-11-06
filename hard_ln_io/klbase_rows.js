@@ -646,11 +646,8 @@ function strquick_klr_b(cstype='',csid='textarea_rows_content',status_id='textar
             break;
         case 'jieba':
             var otextarea = document.getElementById(csid);
-            var arr_t = count_words_b(otextarea.value,split_words_b(otextarea.value,true),2);
-            var str_t=[];
-            for (let item of arr_t){
-                str_t.push(item[0]);
-            }
+            var str_t,arr_t;
+            [str_t,arr_t]=jieba_klr_b(otextarea.value);
             otextarea.value = str_t.join(' ')+'\n\n'+arr_t;
             break;
         case 'n_br':
@@ -764,6 +761,15 @@ function strquick_klr_b(cstype='',csid='textarea_rows_content',status_id='textar
         ostatus.value=ostatus.value + ' 处理后行数：' + document.getElementById(csid).value.split('\n').length;
     }
     return result_t;
+}
+
+function jieba_klr_b(csstr){
+    var arr_t = count_words_b(csstr,split_words_b(csstr,true),2);
+    var str_t=[];
+    for (let item of arr_t){
+        str_t.push(item[0]);    //不能使用 array_split_by_range_b - 保留注释
+    }
+    return [str_t,arr_t];
 }
 
 function letter2num9_convert_klr_b(csstr){

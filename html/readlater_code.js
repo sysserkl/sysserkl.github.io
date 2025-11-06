@@ -292,6 +292,20 @@ function menu_rlater(){
     klmenu_check_b('span_reg_rlater',true);
 }
 
+function jieba_copy_rlater(){
+    var odiv=document.getElementById('section_jieba');
+    var ospans=odiv.querySelectorAll('span.span_jieba_group_rlater');
+    
+    var result_t=[];
+    for (let one_span of ospans){
+        let osub1=one_span.querySelector('span.span_jieba_key_rlater');
+        let osub2=one_span.querySelector('span.span_jieba_count_rlater');
+        result_t.push('["'+specialstr_html_b(osub1.innerText)+'",'+osub2.innerText+'],');
+    }
+    copy_2_clipboard_b(result_t.join('\n'));
+    alert('已复制'+result_t.length+'条');
+}
+
 function jieba_sites_rlater(){
     var list_t=[];
     var ospans=document.querySelectorAll('#section_jieba span.span_jieba_key_rlater');
@@ -336,10 +350,11 @@ function jieba_keys_rlater(isall=false){
     var str_t='';
     for (let item of arr_t){
         var blkey=specialstr92_b(item[0]);
-        str_t=str_t+'<span class="oblong_box span_jieba_key_rlater" onclick="search_r_key_b(\'input_search\',\'\',\''+blkey+'\');search_websites_rlater();document.location.href=\'#div_links\';">'+blkey+'</span> <span style="color:'+scheme_global['memo']+';">'+item[1]+'</span> ';
+        str_t=str_t+'<span class="span_jieba_group_rlater"><span class="oblong_box span_jieba_key_rlater" onclick="search_r_key_b(\'input_search\',\'\',\''+blkey+'\');search_websites_rlater();document.location.href=\'#div_links\';">'+blkey+'</span> <span class="span_jieba_count_rlater" style="color:'+scheme_global['memo']+';">'+item[1]+'</span></span> ';
     }
     
     var blbuttons='<span class="oblong_box" onclick="jieba_sites_rlater();"><strong>浏览内容</strong></span> ';
+    blbuttons=blbuttons+'<span class="oblong_box" onclick="jieba_copy_rlater();"><strong>复制分词</strong></span>';
     blbuttons=blbuttons+'<span class="oblong_box" onclick="this.parentNode.innerHTML=\'\';"><strong>Close</strong></span>';
     
     var odiv=document.getElementById('section_jieba');

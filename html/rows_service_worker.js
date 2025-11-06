@@ -10,7 +10,10 @@ self.addEventListener('install', function(e) {
             '../hard_ln_io/klbase_date.js',            
             '../hard_ln_io/klbase_rows.js',
             '../hard_ln_io/klbase_eng.js',
+            '../hard_ln_io/klbase_d3.js',
             '../module/html2canvas.js',
+            '../module/d3/d3.min.js',
+            '../module/d3/d3.layout.cloud.min.js',
             '../jsdata/jieba_pb_dict_data.js',
             ]);
         })

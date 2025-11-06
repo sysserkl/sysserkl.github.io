@@ -5,9 +5,11 @@
 <meta charset="UTF-8" />
 <script src="../hard_ln_io/klbase.js"></script>
 <script>
-klbase_addons_import_js_b(['css','en_de_str','date','rows','eng'],['turndown.js','marked.umd.js','html2canvas.js'],['jieba_pb_dict_data.js'],['rows_ico/rows512.png']);
+klbase_addons_import_js_b(['css','en_de_str','date','rows','eng','d3'],['turndown.js','marked.umd.js','html2canvas.js'],['jieba_pb_dict_data.js'],['rows_ico/rows512.png','rows_code.js']);
 </script>
-<script src="rows_code.js"></script>
+<script>
+import_wordcloud_js_d3_b();
+</script>
 <script>
 //-----------------------
 //history
@@ -39,10 +41,9 @@ div.div_leaflet{border:0.1rem dotted grey; border-radius:1rem; padding:0.2rem 0.
 <span class="aclick span_leaflet" id="span_leaflet_random" onclick="leaflet_klr2('random')">随机</span>
 <span class="aclick span_leaflet" id="span_leaflet_group" onclick="leaflet_klr2('group')">分组</span>
 <span class="aclick span_leaflet" id="span_leaflet_group" onclick="leaflet_klr2('en')">EN</span>
-<span class="aclick span_leaflet" id="span_leaflet_group" onclick="leaflet_klr2('html_js')">HTML_JS</span>
+<span class="aclick span_leaflet" id="span_leaflet_group" onclick="leaflet_klr2('html_js')">HTML_JS_字词</span>
 <!--------------------->
 <span class="aclick" onclick="blank_rows_add_klr_b();">add blank rows</span>
-<span class="aclick" onclick="strquick_klr_b('count');">字数、行数统计</span>
 常用操作：<select id="oquick" style="width:150px;"></select>
 <span class="aclick" onclick="strquick_klr_b(document.getElementById('oquick').value);">执行</span>
 <span class="aclick" onclick="temp_save_klr2('write','textarea_rows_content');">暂存</span>
@@ -136,6 +137,14 @@ step：<input type="number" id="input_date_step_klr2" value=1 />
 <span class="aclick" onclick="add_to_html_klr_b();">显示为 HTML</span>
 <span class="aclick" onclick="add_to_html_klr_b('textarea_rows_content','body');">显示为HTML(body)</span>
 <span class="aclick" onclick="add_to_html_klr_b('textarea_rows_content','div#divhtml',true)">执行 JavaScript</span>
+<span class="aclick" onclick="strquick_klr_b('count');">字数、行数统计</span>
+font-family: <input type="text" id="input_font_family_jieba_klr2" value='FZDocHei' />
+bgcolor: <input type="text" id="input_bgcolor_jieba_klr2" value='white' />
+ratio: <input type="number" id="input_ratio_jieba_klr2" min=0 value=1 />
+w: <input type="number" id="input_width_jieba_klr2" min=0 value=800 />
+h: <input type="number" id="input_height_jieba_klr2" min=0 value=600 />
+<span class="aclick" onclick="jieba_klr2();">分词</span>
+<span class="aclick" onclick="wordcloud_klr2();">wordcloud</span>
 </div>
 <!--------------------->
 <p id="p_buttons_1" align=right></p>

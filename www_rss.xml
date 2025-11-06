@@ -8,131 +8,379 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Wed, 05 Nov 2025 08:40:21 +0800</lastBuildDate>
-<item><title>Learn How to Lower Heroku Dyno Latency through Persistent Connections (Keep-alive) - Heroku Blog</title><link>https://www.heroku.com/blog/learn-how-to-lower-heroku-dyno-latency-keep-alive/</link></item>
-<item><title>Heroku Connect: Faster, More Reliable Data Sync with Salesforce CDC - Heroku Blog</title><link>https://www.heroku.com/blog/heroku-connect-data-sync-with-salesforce-cdc/</link></item>
-<item><title>How to Create an AI Agent With Heroku and Agentforce - Heroku Blog</title><link>https://www.heroku.com/blog/building-supercharged-agents-heroku-agentforce/</link></item>
-<item><title>What is Data Residency? Data Residency Concerns for Global Applications - Heroku Blog</title><link>https://www.heroku.com/blog/data-residency-concerns-global-applications/</link></item>
-<item><title>How to Use pnpm on Heroku - Heroku Blog</title><link>https://www.heroku.com/blog/using-pnpm-on-heroku/</link></item>
-<item><title>Router 2.0 Common Runtime Router: The Road to Beta - Heroku Blog</title><link>https://www.heroku.com/blog/router-2dot0-the-road-to-beta/</link></item>
-<item><title>科学家可能找到了治疗毒蛇咬伤的灵药 - Solidot</title><link>https://www.solidot.org/story?sid=82721</link></item>
-<item><title>澳大利亚人将每天分享到至少三小时的免费太阳能 - Solidot</title><link>https://www.solidot.org/story?sid=82719</link></item>
-<item><title>大模型无法可靠区分信念和事实 - Solidot</title><link>https://www.solidot.org/story?sid=82718</link></item>
-<item><title>南极一冰川在两个月内缩小一半 - Solidot</title><link>https://www.solidot.org/story?sid=82717</link></item>
-<item><title>在共和党参议员投诉之后 Google 从 AI Studio 中移除 Gemma 模型 - Solidot</title><link>https://www.solidot.org/story?sid=82716</link></item>
-<item><title>微软修复十年历史的“更新关机”变“更新重启”bug - Solidot</title><link>https://www.solidot.org/story?sid=82715</link></item>
-<item><title>铠侠与英伟达合作推出直连 GPU 的 SSD - Solidot</title><link>https://www.solidot.org/story?sid=82714</link></item>
-<item><title>微软 AI 负责人认为 AI 有意识是无稽之谈 - Solidot</title><link>https://www.solidot.org/story?sid=82712</link></item>
-<item><title>吉卜力工作室等日本公司要求 OpenAI 停止使用其内容训练 Sora 2 - Solidot</title><link>https://www.solidot.org/story?sid=82711</link></item>
-<item><title>AI 是否真的影响了工作岗位招聘？ - Solidot</title><link>https://www.solidot.org/story?sid=82710</link></item>
-<item><title>美国学者向欧洲申请研究拨款 - Solidot</title><link>https://www.solidot.org/story?sid=82709</link></item>
-<item><title>让你闻起来更吸引人的食物 - Solidot</title><link>https://www.solidot.org/story?sid=82708</link></item>
-<item><title>报告称波兰语最容易被 AI 理解 - Solidot</title><link>https://www.solidot.org/story?sid=82707</link></item>
-<item><title>Jabber Zeus 程序员 ‘MrICQ’被引渡至美国 - Solidot</title><link>https://www.solidot.org/story?sid=82706</link></item>
-<item><title>Wikipedia Recognized as a Digital Public Good - Wikimedia Foundation</title><link>https://wikimediafoundation.org/news/2025/10/29/wikipedia-recognized-as-a-digital-public-good/</link></item>
-<item><title>Data Center Frenzy Triggers Distress Warning in Industry Survey - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/investing/data-center-frenzy-triggers-distress-warning-in-industry-survey</link></item>
-<item><title>New Data Center Developments: November 2025 - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-construction/new-data-center-developments-november-2025</link></item>
-<item><title>Powering Data Center Growth Through Nuclear Energy - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/powering-data-center-growth-through-nuclear-energy</link></item>
-<item><title>Amazon Inks $38 Billion Deal With OpenAI for Nvidia Chips - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/hyperscalers/amazon-inks-38-billion-deal-with-openai-for-nvidia-chips</link></item>
-<item><title>South Korea To Boost AI Infrastructure With 260,000 Nvidia Chips - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/infrastructure/south-korea-to-boost-ai-infrastructure-with-260-000-nvidia-chips</link></item>
-<item><title>APAC’s $800B Data Center Boom Faces Sustainability Reality Check - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/sustainability/apac-s-800-billion-data-center-boom-faces-sustainability-reality-check</link></item>
-<item><title>AWS Outage: What Are the Lessons for Enterprises? - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/uptime/aws-outage-what-are-the-lessons-for-enterprises</link></item>
-<item><title>AtlasEdge Scores $292M in Funding for Portugal Data Centers - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-site-selection/atlasedge-scores-292m-in-green-funding-for-lisbon-data-centers</link></item>
-<item><title>Blue Energy Plans Data Center Plant Powered by Gas, Then Nuclear - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-construction/blue-energy-plans-data-center-plant-powered-by-gas-then-nuclear</link></item>
-<item><title>Data Center Cooling Methods: Costs vs. Efficiency vs. Sustainability - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cooling/data-center-cooling-methods-costs-vs-efficiency-vs-sustainability</link></item>
-<item><title>Comment: Is Nuclear Energy the Partner to Power a Global AI Future? - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/is-nuclear-energy-the-partner-to-power-a-global-ai-future</link></item>
-<item><title>Canada Emerges as Global Data Center Powerhouse - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-site-selection/canada-emerges-as-global-data-center-powerhouse</link></item>
-<item><title>Microsoft Azure Outage: Web Services Down as DNS Issue Unfolds - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/outages/microsoft-azure-outage-web-services-down-as-dns-issue-unfolds</link></item>
-<item><title>Project Rainer: AWS, Anthropic Complete Massive AI Supercomputing Cluster - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/supercomputers/project-rainer-aws-anthropic-complete-massive-ai-supercomputing-cluster</link></item>
-<item><title>How to Measure the Real Business Impact of Data Center Outages - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/outages/how-to-measure-real-business-impact-of-data-center-outages</link></item>
-<item><title>Why Agentic AI Could Make Command-Line Skills Obsolete - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/automation/why-agentic-ai-could-make-command-line-skill-obsolete</link></item>
-<item><title>Tech Firms Race to Curb Chile’s Plans to Regulate AI - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/regulations/tech-firms-race-to-curb-chile-s-plans-to-regulate-ai</link></item>
-<item><title>US Department of Energy Advances Nuclear Program for AI Data Centers - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/us-department-of-energy-advances-nuclear-program-for-ai-data-centers</link></item>
-<item><title>Fermi Orders Four Nuclear Reactors for Texas Data Centers - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/next-gen-data-centers/fermi-orders-four-nuclear-reactors-for-texas-data-centers</link></item>
-<item><title>Qualcomm Enters Data Center AI Chip Market to Challenge Nvidia, AMD - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-chips/qualcomm-enters-data-center-ai-chip-fray-vs-nvidia-amd</link></item>
-<item><title>Virginia Faces New Data Center Growth Headwinds - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-site-selection/virginia-faces-new-headwinds-in-data-center-growth</link></item>
-<item><title>Omdia: Open Rack Enclosures to Dominate AI Data Centers by 2030 - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-hardware/omdia-open-rack-enclosures-to-dominate-ai-data-centers-by-2030</link></item>
-<item><title>Amazon’s AWS Shows Signs of Weakness as Competitors Charge Ahead - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/hyperscalers/amazon-s-aws-shows-signs-of-weakness-as-competitors-charge-ahead</link></item>
-<item><title>Google Quantum Breakthrough Marks ‘Significant Step’ to Real-World Applications - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/next-gen-data-centers/google-quantum-breakthrough-marks-significant-step-to-real-world-application</link></item>
-<item><title>Aligned to Deploy ‘First-of-its-Kind’ Data Center Battery Storage Project - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/aligned-to-deploy-first-of-its-kind-data-center-battery-storage-project</link></item>
-<item><title>Is Agentic AI the Future of Cloud Infrastructure Management? - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cloud/is-agentic-ai-the-future-of-cloud-infrastructure-management-</link></item>
-<item><title>Vietnam’s Data Center Boom: The Next Singapore? - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-site-selection/vietnam-s-data-center-boom-the-next-singapore</link></item>
-<item><title>GE Vernova Sees Gas Turbine Sales to Hyperscalers Surging - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/ge-vernova-sees-gas-turbine-sales-to-hyperscalers-surging</link></item>
-<item><title>How MLPerf Benchmarks Guide Data Center Design Decisions - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/ai-data-centers/how-mlperf-benchmarks-guide-data-center-design-decisions</link></item>
-<item><title>AWS Outage Exposes ‘Dangerous’ Over-Reliance on US Cloud Giants - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/outages/aws-outage-exposes-dangerous-over-reliance-on-us-cloud-giants</link></item>
-<item><title>Essential Power Optimization Strategies for Data Centers - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/essential-power-optimization-strategies-for-data-centers</link></item>
-<item><title>Equinix Unveils ‘Distributed AI’ Infrastructure to Link Data Centers - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/infrastructure/equinix-unveils-distributed-ai-infrastructure-to-link-data-centers</link></item>
-<item><title>Amazon Outage Still Hampers AWS Service as Recovery Drags On - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/outages/aws-says-cloud-service-has-recovered-after-widespread-outage</link></item>
-<item><title>How CIOs Can Close the IT Workforce Skills Gap for an AI-First Organization - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/training-certifications/how-cios-can-close-the-it-workforce-skills-gap-for-an-ai-first-organization</link></item>
-<item><title>Congo Says World’s Biggest Hydro Site Can Power AI Data Centers - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-site-selection/congo-says-world-s-biggest-hydro-site-can-power-ai-data-centers</link></item>
-<item><title>Omdia: Hyperscaler Cloud Marketplace Sales to Hit $163 Billion by 2030 - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cloud/omdia-hyperscaler-cloud-marketplace-sales-to-hit-163-billion-by-2030</link></item>
-<item><title>Pennsylvania’s $70 Billion Race for America’s Data Centers - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/pennsylvania-s-70-billion-race-for-america-s-data-centers</link></item>
-<item><title>BlackRock, Nvidia-Led Group to Buy Aligned Data Centers in $40B AI Play - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/deals/blackrock-nvidia-led-group-to-buy-aligned-data-centers-in-40b-ai-play</link></item>
-<item><title>Meta Building New Gigawatt-Sized Data Center in Texas - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-construction/meta-building-new-gigawatt-sized-data-center-in-texas</link></item>
-<item><title>Google to Build $15B AI Data Center Hub in India - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-construction/google-to-build-15b-ai-data-center-hub-in-india</link></item>
-<item><title>Microsoft to Rent Nscale AI Data Center Capacity in Portugal - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/deals/microsoft-to-rent-nscale-ai-data-center-capacity-in-portugal</link></item>
-<item><title>Global Cloud Market Nears $100B, Neoclouds Surge 200% - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cloud/global-cloud-market-nears-100b-neoclouds-surge-200-yoy</link></item>
-<item><title>Stranded Power: The Hidden Challenge Reshaping Data Center Energy Strategy - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/stranded-power-the-hidden-challenge-reshaping-data-center-energy-strategy</link></item>
-<item><title>Microsoft Forecasts Show Data Center Crunch Persisting Into 2026 - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/servers/microsoft-forecasts-show-data-center-crunch-persisting-into-2026</link></item>
-<item><title>Cisco Launches Upgraded Data Center Routing Systems, AI Chip - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/networking/cisco-launches-upgraded-data-center-routing-systems-ai-chip</link></item>
-<item><title>7 MCP Servers To Automate Data Center and Cloud Tasks - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cloud/7-mcp-servers-to-automate-data-center-and-cloud-tasks</link></item>
-<item><title>US Approves Some Nvidia UAE Sales in Trump AI Diplomacy Step - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-chips/us-approves-some-nvidia-uae-sales-in-trump-ai-diplomacy-step</link></item>
-<item><title>New Data Center Developments: October 2025 - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-construction/new-data-center-developments-october-2025</link></item>
-<item><title>Best early Black Friday PlayStation deals 2025: I&amp;#39;m tracking my favorite discounts live now - ZDNet</title><link>https://www.zdnet.com/home-and-office/home-entertainment/best-early-black-friday-playstation-deals-2025/</link></item>
-<item><title>I found the best early Black Friday gaming PC deals on desktops, laptops, and more - ZDNet</title><link>https://www.zdnet.com/home-and-office/home-entertainment/best-early-black-friday-gaming-pc-deals-2025/</link></item>
-<item><title>I&amp;#39;ve found the best early Black Friday TV deals actually worth your time - ZDNet</title><link>https://www.zdnet.com/home-and-office/home-entertainment/best-early-black-friday-tv-deals-2025/</link></item>
-<item><title>Best early Black Friday Nintendo Switch deals 2025: I&amp;#39;m tracking my favorite discounts live now - ZDNet</title><link>https://www.zdnet.com/home-and-office/home-entertainment/best-early-black-friday-nintendo-switch-deals-2025/</link></item>
-<item><title>Best early Black Friday deals 2025: I&amp;#39;m tracking over 30 of my favorite discounts live now - ZDNet</title><link>https://www.zdnet.com/article/best-early-black-friday-deals-2025/</link></item>
-<item><title>WhatsApp arrives on Apple Watch - here&amp;#39;s which models get it - ZDNet</title><link>https://www.zdnet.com/article/whatsapp-arrives-on-apple-watch-heres-which-models-get-it/</link></item>
-<item><title>Amazon is selling the Google Pixel 9 for $300 off right now - and I highly recommend it - ZDNet</title><link>https://www.zdnet.com/article/amazon-is-selling-the-google-pixel-9-for-300-off-right-now-and-i-highly-recommend-it/</link></item>
-<item><title>You can try OpenAI&amp;#39;s popular Sora video app on Android and iOS now - for free - ZDNet</title><link>https://www.zdnet.com/article/you-can-try-openais-popular-sora-video-app-on-android-and-ios-now-for-free/</link></item>
-<item><title>Best early Black Friday Target deals 2025: I found the best discounts live now - ZDNet</title><link>https://www.zdnet.com/article/best-early-black-friday-target-deals-2025/</link></item>
-<item><title>Best early Black Friday robot vacuum deals 2025: I&amp;#39;m tracking the best discounts live now - ZDNet</title><link>https://www.zdnet.com/home-and-office/kitchen-household/best-early-black-friday-robot-vacuum-deals-2025/</link></item>
-<item><title>The latest Meta smart glasses update makes this Ray-Ban model even easier for me to recommend - ZDNet</title><link>https://www.zdnet.com/article/the-latest-meta-smart-glasses-update-makes-this-ray-ban-model-even-easier-for-me-to-recommend/</link></item>
-<item><title>If Apple&amp;#39;s new budget MacBook is true, I&amp;#39;m worried for Chromebooks and Windows laptops - ZDNet</title><link>https://www.zdnet.com/article/if-apples-new-budget-macbook-is-true-im-worried-for-chromebooks-and-windows-laptops/</link></item>
-<item><title>Best early Black Friday Chromebook deals 2025: I&amp;#39;m tracking over 15 of my favorite discounts live now - ZDNet</title><link>https://www.zdnet.com/article/best-early-black-friday-chromebook-deals-2025/</link></item>
-<item><title>Best early Black Friday Costco deals 2025: I&amp;#39;m tracking my favorite discounts live now - ZDNet</title><link>https://www.zdnet.com/home-and-office/best-early-black-friday-costco-deals-2025/</link></item>
-<item><title>Shop the best early Kindle deals for Black Friday 2025 - ZDNet</title><link>https://www.zdnet.com/article/best-early-black-friday-kindle-deals-2025/</link></item>
-<item><title>Best early Black Friday Sam&amp;#39;s Club deals 2025: I&amp;#39;m tracking my favorite sales live now - ZDNet</title><link>https://www.zdnet.com/article/best-early-black-friday-sams-club-deals-2025/</link></item>
-<item><title>Chrome can now store your driver&amp;#39;s license and passport, but is that safe? - ZDNet</title><link>https://www.zdnet.com/article/chrome-can-now-store-your-drivers-license-and-passport-but-is-that-safe/</link></item>
-<item><title>Best early Black Friday Apple Watch deals 2025: I&amp;#39;m tracking my favorite discounts live now - ZDNet</title><link>https://www.zdnet.com/article/best-early-black-friday-apple-watch-deals-2025/</link></item>
-<item><title>How to clear your iPhone cache (and fix slow performance for good) - ZDNet</title><link>https://www.zdnet.com/article/how-to-clear-your-iphone-cache-and-fix-slow-performance-for-good/</link></item>
-<item><title>The 12+ best early Black Friday phone deals to grab now - ZDNet</title><link>https://www.zdnet.com/article/best-early-black-friday-phone-deals-2025/</link></item>
-<item><title>Best early Black Friday smartwatch and fitness tracker deals 2025: I&amp;#39;m tracking my favorite discounts live now - ZDNet</title><link>https://www.zdnet.com/article/best-black-friday-smartwatch-deals-2025/</link></item>
-<item><title>The Apple Watch SE 3 just got its first discount - here&amp;#39;s where to buy one - ZDNet</title><link>https://www.zdnet.com/article/the-apple-watch-se-3-just-got-its-first-discount-heres-where-to-buy-one/</link></item>
-<item><title>AMD confirms Zen 5 chips hit by critical bug - but a fix on the way - ZDNet</title><link>https://www.zdnet.com/article/amd-confirms-zen-5-chips-hit-by-critical-bug-but-a-fix-on-the-way/</link></item>
-<item><title>My top 5 screen-recording apps for Linux - and they&amp;#39;re all free - ZDNet</title><link>https://www.zdnet.com/article/my-top-5-screen-recording-apps-for-linux-and-theyre-all-free/</link></item>
-<item><title>Will DJI drones soon be banned in the US? Here&amp;#39;s what we know - ZDNet</title><link>https://www.zdnet.com/article/will-dji-drones-soon-be-banned-in-the-us-heres-what-we-know/</link></item>
-<item><title>Black Friday 2025: Best early streaming deals I&amp;#39;ve found so far - ZDNet</title><link>https://www.zdnet.com/home-and-office/home-entertainment/best-early-black-friday-streaming-deals-2025/</link></item>
-<item><title>Best early Black Friday Amazon deals 2025: I&amp;#39;m tracking over 20 of my favorite discounts - ZDNet</title><link>https://www.zdnet.com/article/best-early-black-friday-amazon-deals-2025/</link></item>
-<item><title>Best early Black Friday deals under $100 2025: 12 sales out now - ZDNet</title><link>https://www.zdnet.com/article/best-early-black-friday-deals-under-100-2025/</link></item>
-<item><title>I&amp;#39;ve tested every Apple Watch model in 2025 - here&amp;#39;s why now is the best time to buy the Ultra - ZDNet</title><link>https://www.zdnet.com/article/ive-tested-every-apple-watch-model-in-2025-heres-why-now-is-the-best-time-to-buy-the-ultra/</link></item>
-<item><title>Best early Black Friday Best Buy deals 2025: I&amp;#39;m tracking 20+ of my favorite discounts live now - ZDNet</title><link>https://www.zdnet.com/home-and-office/best-early-black-friday-best-buy-deals-2025/</link></item>
-<item><title>Best early Black Friday tablet deals 2025: 12 sales out now - ZDNet</title><link>https://www.zdnet.com/article/best-early-black-friday-tablet-deals-2025/</link></item>
-<item><title>11 ways to delete or hide yourself from the internet - and protect your privacy - ZDNet</title><link>https://www.zdnet.com/article/11-ways-to-delete-or-hide-yourself-from-the-internet-and-protect-your-privacy/</link></item>
-<item><title>Best early Black Friday iPad deals 2025: 10 sales out already - ZDNet</title><link>https://www.zdnet.com/article/best-early-black-friday-ipad-deals-2025/</link></item>
-<item><title>Gartner just dropped its 2026 tech trends - and it&amp;#39;s not all AI: Here&amp;#39;s the list - ZDNet</title><link>https://www.zdnet.com/article/gartner-just-dropped-its-2026-tech-trends-and-its-not-all-ai-heres-the-list/</link></item>
-<item><title>Inside the Massive Effort to Sequence All of Europe’s Lepidoptera - IEEE Spectrum</title><link>https://spectrum.ieee.org/lepidoptera-genome-sequencing</link></item>
-<item><title>This Professor’s Open-Source Robots Make STEM More Inclusive - IEEE Spectrum</title><link>https://spectrum.ieee.org/berry-hands-on-robotics-education</link></item>
-<item><title>A Challenge to Roboticists: My Humanoid Olympics - IEEE Spectrum</title><link>https://spectrum.ieee.org/humanoid-robot-olympics</link></item>
-<item><title>Volcanologists Turn to a High-Tech Suitcase to Study Eruptions - IEEE Spectrum</title><link>https://spectrum.ieee.org/volcano-monitoring-stromboli-skate</link></item>
-<item><title>Novel Geothermal System to Come Online in Germany - IEEE Spectrum</title><link>https://spectrum.ieee.org/advanced-geothermal-germany</link></item>
-<item><title>Chips Need to Chill Out - IEEE Spectrum</title><link>https://spectrum.ieee.org/thermal-management-chips</link></item>
-<item><title>Why I Admire Walt Downing’s Volunteerism - IEEE Spectrum</title><link>https://spectrum.ieee.org/walt-downings-volunteerism</link></item>
-<item><title>Video Friday: Happy Robot Halloween! - IEEE Spectrum</title><link>https://spectrum.ieee.org/video-friday-robot-halloween-2674252642</link></item>
-<item><title>In 1953, the Ford X-100 Concept Car Had It All - IEEE Spectrum</title><link>https://spectrum.ieee.org/ford-x-100-concept-car</link></item>
-<item><title>Special Report: The Hot, Hot Future of Chips - IEEE Spectrum</title><link>https://spectrum.ieee.org/special-reports/keeping-chips-cool/</link></item>
-<item><title>A Hassle-Free Battery Charger - IEEE Spectrum</title><link>https://spectrum.ieee.org/diy-nimh-battery-charger</link></item>
-<item><title>‘Liquid Jets’ Could Be Key to Studying Cancer Cells - IEEE Spectrum</title><link>https://spectrum.ieee.org/hypersonic-levitation-spinning-cancer-studies</link></item>
-<item><title>AI Model Growth Outpaces Hardware Improvements - IEEE Spectrum</title><link>https://spectrum.ieee.org/mlperf-trends</link></item>
-<item><title>New Thermal Battery Supplies Clean Heat for Oil Extraction - IEEE Spectrum</title><link>https://spectrum.ieee.org/thermal-battery-for-industrial-heat</link></item>
-<item><title>From Bottleneck to Breakthrough: AI in Chip Verification - IEEE Spectrum</title><link>https://spectrum.ieee.org/calibre-vision-ai-chip-design</link></item>
-<item><title>Advancing Magnetized Target Fusion by Solving an Inverse Problem with COMSOL Multiphysics - IEEE Spectrum</title><link>https://events.bizzabo.com/769024</link></item>
-<item><title>Scientists Need a Positive Vision for AI - IEEE Spectrum</title><link>https://spectrum.ieee.org/responsible-ai</link></item>
-<item><title>How to Land a Job in Quantum Computing - IEEE Spectrum</title><link>https://spectrum.ieee.org/quantum-computing-jobs</link></item>
-<item><title>Teens Explore Aerospace and AI at TryEngineering Summer Camp - IEEE Spectrum</title><link>https://spectrum.ieee.org/ieee-tryengineering-summer-camp</link></item>
-<item><title>Your AI Agent Is Now a Target for Email Phishing - IEEE Spectrum</title><link>https://spectrum.ieee.org/ai-agent-phishing</link></item>
-<item><title>The 7 Phases of the Internet - IEEE Spectrum</title><link>https://spectrum.ieee.org/history-of-internet-7-phases</link></item>
-<item><title>Tips for Success From Crowd Supply’s Helen Leigh - IEEE Spectrum</title><link>https://spectrum.ieee.org/helen-leigh-crowd-supply-crowdsourcing</link></item>
-<item><title>Go Go Gadgets! - IEEE Spectrum</title><link>https://spectrum.ieee.org/go-go-gadgets</link></item>
+<lastBuildDate>Thu, 06 Nov 2025 08:10:56 +0800</lastBuildDate>
+<item><title>The Flaws of Seila Law - Law &amp; Liberty</title><link>https://lawliberty.org/the-flaws-of-seila-law/</link></item>
+<item><title>China’s Engineering State - Law &amp; Liberty</title><link>https://lawliberty.org/book-review/chinas-engineering-state/</link></item>
+<item><title>Decline and Fall? - Law &amp; Liberty</title><link>https://lawliberty.org/podcast/decline-and-fall/</link></item>
+<item><title>A European Threat to the First Amendment - Law &amp; Liberty</title><link>https://lawliberty.org/a-european-threat-to-the-first-amendment/</link></item>
+<item><title>Data centers driving AU$17.5bn Goodman Group construction pipeline - DCD</title><link>https://www.datacenterdynamics.com/en/news/data-centers-driving-au175bn-goodman-group-construction-pipeline/</link></item>
+<item><title>CBRE acquires engineering services firm Pearce for $1.2bn - DCD</title><link>https://www.datacenterdynamics.com/en/news/cbre-acquires-engineering-services-firm-pearce-for-12bn/</link></item>
+<item><title>&amp;quot;Nobody really wants a data center in their backyard,&amp;quot; says Microsoft attorney - DCD</title><link>https://www.datacenterdynamics.com/en/news/nobody-really-wants-a-data-center-in-their-backyard-says-microsoft-attorney/</link></item>
+<item><title>Data center campus to be built on former jam factory site in Southall, UK - DCD</title><link>https://www.datacenterdynamics.com/en/news/data-center-campus-to-be-built-on-former-jam-factory-site-in-southall-uk/</link></item>
+<item><title>Nearly 1GW of Amazon-backed renewable projects come online in Europe - DCD</title><link>https://www.datacenterdynamics.com/en/news/more-t/</link></item>
+<item><title>Optus restores network after another outage as Australian police investigate alleged fiber cut - DCD</title><link>https://www.datacenterdynamics.com/en/news/optus-restores-network-after-another-outage-as-australian-police-investigate-alleged-fiber-cut/</link></item>
+<item><title>Indosat CEO Vikram Sinha: AI has to be for everyone - DCD</title><link>https://www.datacenterdynamics.com/en/news/indosat-ceo-vikram-sinha-ai-has-to-be-for-everyone/</link></item>
+<item><title>Satellite operator Globalstar expands ground stations at four sites in Brazil - DCD</title><link>https://www.datacenterdynamics.com/en/news/satellite-operator-globalstar-expands-ground-stations-at-four-sites-in-brazil/</link></item>
+<item><title>Infrastructure education: Building strategic community understanding in the data center industry - DCD</title><link>https://www.datacenterdynamics.com/en/opinions/infrastructure-education-building-strategic-community-understanding-in-the-data-center-industry/</link></item>
+<item><title>Orange to build two cable ships - DCD</title><link>https://www.datacenterdynamics.com/en/news/orange-to-build-two-cable-ships/</link></item>
+<item><title>Alps Blockchain rebrands to Alps, pivoting to AI and HPC data centers - DCD</title><link>https://www.datacenterdynamics.com/en/news/alps-blockchain-rebrands-to-alps-pivoting-to-ai-and-hpc-data-centers/</link></item>
+<item><title>B&amp;W to supply Applied Digital with more than 1GW of natural gas power for AI data centers - DCD</title><link>https://www.datacenterdynamics.com/en/news/bw-to-supply-applied-digital-with-more-than-1gw-of-natural-gas-power-for-ai-data-centers/</link></item>
+<item><title>Harmoni Towers secures $620m in private placement financing - DCD</title><link>https://www.datacenterdynamics.com/en/news/harmoni-towers-secures-620m-in-private-placement-financing/</link></item>
+<item><title>Hood County, Texas, set to reject proposal to incorporate community as a city to curb data center noise - DCD</title><link>https://www.datacenterdynamics.com/en/news/hood-county-texas-set-to-reject-proposal-to-incorporate-community-as-a-city-to-curb-data-center-noise/</link></item>
+<item><title>CyrusOne signs 210MW energy deal with Calpine for Texas data center campus - DCD</title><link>https://www.datacenterdynamics.com/en/news/cyrusone-signs-210mw-energy-deal-with-calpine-for-texas-data-center-campus/</link></item>
+<item><title>Beyond legacy DCIM - DCD</title><link>https://www.datacenterdynamics.com/en/whitepapers/beyond-legacy-dcim/</link></item>
+<item><title>Vacant enterprise data center to be replaced with apartment buildings in Liverpool, UK - DCD</title><link>https://www.datacenterdynamics.com/en/news/vacant-enterprise-data-center-to-be-replaced-with-apartment-buildings-in-liverpool-uk/</link></item>
+<item><title>AMD posts record data center revenue for Q3 2025, as compute demand shows no signs of slowing - DCD</title><link>https://www.datacenterdynamics.com/en/news/amd-posts-record-data-center-revenue-for-q3-2025-as-compute-demand-shows-no-signs-of-slowing/</link></item>
+<item><title>Salute acquires data center engineering and consulting firm Northshore - DCD</title><link>https://www.datacenterdynamics.com/en/news/salute-acquires-data-center-engineering-and-consulting-firm-northshore/</link></item>
+<item><title>Amazon pays $700m for planned data center site in Virginia’s Prince William County – report - DCD</title><link>https://www.datacenterdynamics.com/en/news/amazon-pays-700m-for-planned-data-center-site-in-virginias-prince-william-county-report/</link></item>
+<item><title>Celebrating the UK’s National Engineering Day 2025 - Raspberry Pi</title><link>https://www.raspberrypi.org/blog/celebrating-the-uks-national-engineering-day-2025/</link></item>
+<item><title>Celebrating young tech creators: Coolest Projects 2025 and what’s next in 2026 - Raspberry Pi</title><link>https://www.raspberrypi.org/blog/celebrating-young-tech-creators-coolest-projects-2025-and-whats-next-in-2026/</link></item>
+<item><title>What should be included in a data science curriculum for schools? - Raspberry Pi</title><link>https://www.raspberrypi.org/blog/what-should-be-included-in-a-data-science-curriculum-for-schools/</link></item>
+<item><title>The new home for Blockly - Raspberry Pi</title><link>https://www.raspberrypi.org/blog/new-home-for-blockly/</link></item>
+<item><title>Play, pedagogy, and real-world impact: What we learned from the AI Quests webinars - Raspberry Pi</title><link>https://www.raspberrypi.org/blog/play-pedagogy-and-real-world-impact-what-we-learned-from-the-ai-quests-webinars/</link></item>
+<item><title>Experience AI receives global recognition from UNESCO - Raspberry Pi</title><link>https://www.raspberrypi.org/blog/experience-ai-recognition-unesco/</link></item>
+<item><title>10 Social Media Abbreviations That Stump People the Most - Mental Floss</title><link>https://www.mentalfloss.com/culture/social-media/abbreviations-stump-people-most</link></item>
+<item><title>Quiz: If You Can Name All 15 of These Rom-Coms, You’re Ready for Cuffing Season - Mental Floss</title><link>https://www.mentalfloss.com/quizzes/name-all-15-rom-coms</link></item>
+<item><title>The States With the Most Devoted Dog Owners, Mapped - Mental Floss</title><link>https://www.mentalfloss.com/geography/maps/states-most-devoted-dog-owners</link></item>
+<item><title>November Is Native American Heritage Month—Here Are 5 Things to Know - Mental Floss</title><link>https://www.mentalfloss.com/history/native-american-heritage-month-facts</link></item>
+<item><title>8 American Waterfalls You Can Visit Without a Long Hike - Mental Floss</title><link>https://www.mentalfloss.com/geography/american-waterfalls-without-long-hike</link></item>
+<item><title>10 Best Easter Eggs in Music That Aren’t by Taylor Swift - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/music/best-easter-eggs-music-not-taylor-swift</link></item>
+<item><title>9 Misconceptions About Shakespeare - Mental Floss</title><link>https://www.mentalfloss.com/literature/authors/misconceptions-about-shakespeare</link></item>
+<item><title>The 10 Most Expensive Cities to Own a Dog (#1 Might Surprise You) - Mental Floss</title><link>https://www.mentalfloss.com/geography/cities/most-expensive-cities-own-dog</link></item>
+<item><title>11 Everyday Words That Were Coined in Sci-Fi Stories - Mental Floss</title><link>https://www.mentalfloss.com/language/words/everyday-words-coined-sci-fi-stories</link></item>
+<item><title>Why Do We Say We’re “In the Pink”? - Mental Floss</title><link>https://www.mentalfloss.com/language/in-the-pink</link></item>
+<item><title>10 Facts You Should Know About Guy Fawkes Night - Mental Floss</title><link>https://www.mentalfloss.com/holidays/guy-fawkes-night-facts</link></item>
+<item><title>Quiz: Name the Classic Holiday Movie by Just One Line - Mental Floss</title><link>https://www.mentalfloss.com/quizzes/name-classic-holiday-movie-one-line</link></item>
+<item><title>Quiz: Can You Match the Theme Song to the Classic TV Show? - Mental Floss</title><link>https://www.mentalfloss.com/quizzes/match-theme-song-classic-tv-show</link></item>
+<item><title>The 10 Weirdest Foods in the World Have Us Struggling to Finish Lunch - HowStuffWorks</title><link>https://people.howstuffworks.com/culture-traditions/cultural-traditions/weirdest-foods-in-the-world.htm</link></item>
+<item><title>What Is a Baby Turkey Called? &amp;#39;Poultry&amp;#39; Is About to Make So Much Sense - HowStuffWorks</title><link>https://animals.howstuffworks.com/birds/what-is-a-baby-turkey-called.htm</link></item>
+<item><title>8 Most Liberal Cities in the U.S., Including 2 Not on the Coasts - HowStuffWorks</title><link>https://people.howstuffworks.com/government/local-politics/most-liberal-cities-in-the-us.htm</link></item>
+<item><title>10 Ugliest Car Designs We&amp;#39;ve Seen Available to Consumers - HowStuffWorks</title><link>https://auto.howstuffworks.com/ugliest-car.htm</link></item>
+<item><title>10 Cutest Snake Species That Have Us Squeeing - HowStuffWorks</title><link>https://animals.howstuffworks.com/snakes/cutest-snake.htm</link></item>
+<item><title>10 Most Exclusive Resorts in the World With Next-level Luxury - HowStuffWorks</title><link>https://lifestyle.howstuffworks.com/event-planning/most-exclusive-resorts-in-the-world.htm</link></item>
+<item><title>What Is a Group of Turkeys Called? Not a Flock or Anything Else You&amp;#39;d Expect - HowStuffWorks</title><link>https://animals.howstuffworks.com/birds/what-is-a-group-of-turkeys-called.htm</link></item>
+<item><title>5 Best Minecraft Servers of All Time (and 2 Hosting Favorites) - HowStuffWorks</title><link>https://entertainment.howstuffworks.com/leisure/online-games/best-minecraft-servers.htm</link></item>
+<item><title>Between moon tides - Aeon</title><link>https://aeon.co/videos/racing-rising-tides-volunteers-work-to-save-a-bird-on-the-brink?utm_source=rss-feed</link></item>
+<item><title>Megastructures on Mars - Aeon</title><link>https://aeon.co/essays/in-the-late-1800s-alien-engineers-altered-our-world-forever?utm_source=rss-feed</link></item>
+<item><title>Experts: Full nuclear weapons tests would backfire on US - Defense News</title><link>https://www.defensenews.com/global/the-americas/2025/11/05/experts-full-nuclear-weapons-tests-would-backfire-on-us/</link></item>
+<item><title>Leonardo, Rheinmetall book first Lynx combat vehicle order for Italy - Defense News</title><link>https://www.defensenews.com/global/europe/2025/11/05/leonardo-rheinmetall-book-first-lynx-combat-vehicle-order-for-italy/</link></item>
+<item><title>NATO’s spending pledge is no invitation for creative accounting - Defense News</title><link>https://www.defensenews.com/opinion/2025/11/05/natos-spending-pledge-is-no-invitation-for-creative-accounting/</link></item>
+<item><title>Philippines tests new battle plan for fending off invaders alone - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2025/11/05/philippines-tests-new-battle-plan-for-fending-off-invaders-alone/</link></item>
+<item><title>Netherlands mulls local production of Raytheon’s Amraam missile - Defense News</title><link>https://www.defensenews.com/global/europe/2025/11/04/netherlands-mulls-local-production-of-raytheons-amraam-missile/</link></item>
+<item><title>After Caracas stop, mysterious Russian plane flew to Cuba, Nicaragua - Defense News</title><link>https://www.defensenews.com/global/the-americas/2025/11/04/after-caracas-stop-mysterious-russian-plane-flew-to-cuba-nicaragua/</link></item>
+<item><title>麒麟勒索软件滥用 WSL 在 Windows 中运行 Linux 加密器 - Solidot</title><link>https://www.solidot.org/story?sid=82723</link></item>
+<item><title>Google 移除安娜的档案 7.49 亿网址 - Solidot</title><link>https://www.solidot.org/story?sid=82724</link></item>
+<item><title>老年人更可能一天到晚盯着屏幕 - Solidot</title><link>https://www.solidot.org/story?sid=82725</link></item>
+<item><title>Switch 2 首年销量预计将达到 1900 万台 - Solidot</title><link>https://www.solidot.org/story?sid=82726</link></item>
+<item><title>微软测试用 Copilot 取代桌面搜索框 - Solidot</title><link>https://www.solidot.org/story?sid=82727</link></item>
+<item><title>天文学家可能发现了大爆炸之后的第一代恒星 - Solidot</title><link>https://www.solidot.org/story?sid=82728</link></item>
+<item><title>特朗普再次提名 Jared Isaacman 为 NASA 局长 - Solidot</title><link>https://www.solidot.org/story?sid=82729</link></item>
+<item><title>逾七成开发者认为 Steam 是 PC 游戏市场的垄断者 - Solidot</title><link>https://www.solidot.org/story?sid=82730</link></item>
+<item><title>GIFs confirm…you can, NEVER Out-Random the internet - theCHIVE</title><link>https://thechive.com/humor/gifs-confirmyou-can-never-out-random-the-internet/?utm_postid=5125225&amp;utm_editor=5125225_rick</link></item>
+<item><title>Google Maps Logo Redesign Has the Internet in Shambles - theCHIVE</title><link>https://thechive.com/humanity/design/google-maps-logo-redesign-has-the-internet-in-shambles/?utm_postid=5125166&amp;utm_editor=5125166_zach</link></item>
+<item><title>Whoa Nelly, It’s WTF Wednesday! - theCHIVE</title><link>https://thechive.com/humor/whoa-nelly-its-wtf-wednesday/?utm_postid=5125309&amp;utm_editor=5125309_hendy</link></item>
+<item><title>These 20 Hobbies Don’t Make You Better than Everyone Else, I Promise - theCHIVE</title><link>https://thechive.com/humor/douchebags/these-20-hobbies-dont-make-you-better-than-everyone-else-i-promise/?utm_postid=5124255&amp;utm_editor=5124255_zach</link></item>
+<item><title>”Speaking My Truth” &amp; Other Annoying Phrases - theCHIVE</title><link>https://thechive.com/humor/speaking-my-truth-other-annoying-phrases/?utm_postid=5125401&amp;utm_editor=5125401_hendy</link></item>
+<item><title>One Big Oof After Another - theCHIVE</title><link>https://thechive.com/humor/one-big-oof-after-another/?utm_postid=5125362&amp;utm_editor=5125362_hendy</link></item>
+<item><title>“Interstellar” Turns 11: Galactic-Sized Facts About the Epic Sci-Fi Flick - theCHIVE</title><link>https://thechive.com/entertainment/movies/interstellar-facts-trivia/?utm_postid=5125174&amp;utm_editor=5125174_ty</link></item>
+<item><title>You Can Almost Hear Gordon Ramsay Crying - theCHIVE</title><link>https://thechive.com/humor/you-can-almost-hear-gordon-ramsay-crying/?utm_postid=5124982&amp;utm_editor=5124982_hendy</link></item>
+<item><title>Ryder’s Best Comments from the Past Two Weeks! - theCHIVE</title><link>https://thechive.com/humor/ryders-best-comments-from-the-past-two-weeks/?utm_postid=5124905&amp;utm_editor=5124905_ryder</link></item>
+<item><title>A Beautiful Blast From the Past - theCHIVE</title><link>https://thechive.com/humanity/nostalgia/a-beautiful-blast-from-the-past/?utm_postid=5124837&amp;utm_editor=5124837_hendy</link></item>
+<item><title>HD Full Moon Photos in Honor of Today’s Supermoon - theCHIVE</title><link>https://thechive.com/humanity/art/hd-full-moon-photos-in-honor-of-todays-supermoon/?utm_postid=5125117&amp;utm_editor=5125117_zach</link></item>
+<item><title>Non-S*x Workers Share the Horniest Professions - theCHIVE</title><link>https://thechive.com/humor/work-sucks/non-sx-workers-share-the-horniest-professions/?utm_postid=5125009&amp;utm_editor=5125009_zach</link></item>
+<item><title>Tinder: Where Shame is Optional and WTF is Guaranteed - theCHIVE</title><link>https://thechive.com/humor/tinder-where-shame-is-optional-and-wtf-is-guaranteed/?utm_postid=5124738&amp;utm_editor=5124738_hendy</link></item>
+<item><title>Sneaky Smart Charts That Actually Make Sense of Stuff - theCHIVE</title><link>https://thechive.com/humanity/facts-random/sneaky-smart-charts-that-actually-make-sense-of-stuff/?utm_postid=5124562&amp;utm_editor=5124562_ty</link></item>
+<item><title>On This Day William B. Cushing Was Born, Cheers to the American Hero and Total Bad*ss - theCHIVE</title><link>https://thechive.com/humanity/history-random/on-this-day-william-b-cushing-was-born-cheers-to-the-american-hero-and-total-badss/?utm_postid=5124719&amp;utm_editor=5124719_zach</link></item>
+<item><title>Dudes Being Dudes: Things That All Guys Do - theCHIVE</title><link>https://thechive.com/humanity/facts-random/just-dudes-things-all-guys-do/?utm_postid=5124534&amp;utm_editor=5124534_ty</link></item>
+<item><title>DI-Why? Did You Really Think That Was a Good Idea? - theCHIVE</title><link>https://thechive.com/humor/di-why-did-you-really-think-that-was-a-good-idea/?utm_postid=5124840&amp;utm_editor=5124840_stephen</link></item>
+<item><title>‘Wilfred’ Quotes Proving You Can’t Choose Man’s Best Friend, He Chooses You - theCHIVE</title><link>https://thechive.com/entertainment/tv/wilfred-quotes-proving-you-cant-choose-mans-best-friend-he-chooses-you/?utm_postid=5124632&amp;utm_editor=5124632_zach</link></item>
+<item><title>Cringe Movie Lines So Corny You Can Practically Butter Them - theCHIVE</title><link>https://thechive.com/entertainment/movies/cringey-corny-movie-line-deliveries/?utm_postid=5124362&amp;utm_editor=5124362_ty</link></item>
+<item><title>Just Like Lamar Jackson, Leather Bound NFL Memes Are Back for Week 9 - theCHIVE</title><link>https://thechive.com/humor/meme/just-like-lamar-jackson-leather-bound-nfl-memes-are-back-for-week-9/?utm_postid=5124563&amp;utm_editor=5124563_stephen</link></item>
+<item><title>Memes with red hot Wis-DUMB - theCHIVE</title><link>https://thechive.com/humor/memes-with-sizzling-hot-wis-dumb/?utm_postid=5124484&amp;utm_editor=5124484_rick</link></item>
+<item><title>Wendy’s Social Media Roasts So Savage You Can Almost Hear the Sizzle - theCHIVE</title><link>https://thechive.com/humor/wendys-social-media-roasts-funny/?utm_postid=5124133&amp;utm_editor=5124133_ty</link></item>
+<item><title>Don’t Forget How Funny “That ’70s Show” Was, Man - theCHIVE</title><link>https://thechive.com/entertainment/tv/funny-that-70s-show-memes/?utm_postid=5123995&amp;utm_editor=5123995_ty</link></item>
+<item><title>Weezer’s Pop-Fueled ‘Raditude’ Celebrates 16th Anniversary - theCHIVE</title><link>https://thechive.com/humanity/nostalgia/weezers-pop-fueled-raditude-celebrates-16th-anniversary/?utm_postid=5124125&amp;utm_editor=5124125_zach</link></item>
+<item><title>Marketplace Listings That Take the WTF Cake - theCHIVE</title><link>https://thechive.com/humor/marketplace-listings-that-take-the-wtf-cake/?utm_postid=5124167&amp;utm_editor=5124167_hendy</link></item>
+<item><title>‘SNL’ Puts Nashville Predators on Blast in Miles Teller Sketch - theCHIVE</title><link>https://thechive.com/entertainment/tv/snl-puts-nashville-predators-on-blast-in-miles-teller-sketch/?utm_postid=5124009&amp;utm_editor=5124009_zach</link></item>
+<item><title>GIFs of random: Aircraft AWESOMENESS - theCHIVE</title><link>https://thechive.com/military/gifs-of-random-aircraft-awesomeness/?utm_postid=5124041&amp;utm_editor=5124041_rick</link></item>
+<item><title>Sandwich Memes Stacked High For ‘National Sandwich Day’ - theCHIVE</title><link>https://thechive.com/lifestyle/food-and-drink/national-sandwich-day-memes-jokes/?utm_postid=5124043&amp;utm_editor=5124043_ty</link></item>
+<item><title>No Nut November Memes for Motivation and Stamina - theCHIVE</title><link>https://thechive.com/humor/meme/no-nut-november/?utm_postid=5123964&amp;utm_editor=5123964_zach</link></item>
+<item><title>GRUMPY old Dad memes know…68 &amp;gt; 67 - theCHIVE</title><link>https://thechive.com/humor/grumpy-old-dad-memes-know68-67/?utm_postid=5123905&amp;utm_editor=5123905_rick</link></item>
+<item><title>You Laugh, You Lose… Spooky Edition - theCHIVE</title><link>https://thechive.com/humor/you-laugh-you-lose-spooky-edition/?utm_postid=5120422&amp;utm_editor=5120422_hendy</link></item>
+<item><title>When Calm Meets Chaos in the Rain - theCHIVE</title><link>https://thechive.com/humanity/nostalgia/when-calm-meets-chaos-in-the-rain/?utm_postid=5123644&amp;utm_editor=5123644_hendy</link></item>
+<item><title>Awkward Attempts at Being Funny That Slipped Like Soap in the Shower - theCHIVE</title><link>https://thechive.com/humanity/awkward-attempts-at-being-funny-didnt-land/?utm_postid=5123027&amp;utm_editor=5123027_ty</link></item>
+<item><title>Images That Make Our Eyes Feel Gooood - theCHIVE</title><link>https://thechive.com/humanity/beautiful/images-that-make-our-eyes-feel-gooood/?utm_postid=5121121&amp;utm_editor=5121121_hendy</link></item>
+<item><title>Facts About Dogs. That’s It. That’s The Headline. - theCHIVE</title><link>https://thechive.com/uncategorized/facts-about-dogs/?utm_postid=5122903&amp;utm_editor=5122903_ty</link></item>
+<item><title>Modern Problems Require Modern Solutions - theCHIVE</title><link>https://thechive.com/entertainment/movies/modern-problems-require-modern-solutions/?utm_postid=5122082&amp;utm_editor=5122082_ryder</link></item>
+<item><title>tadao ando plans floating dubai museum of art with twisting concrete silhouette - designboom</title><link>https://www.designboom.com/architecture/tadao-ando-monolithic-museum-curving-concrete-float-dubai-uae-10-28-2025/</link></item>
+<item><title>new photos show rhythmic structure of belgium’s &amp;#39;gare de mons&amp;#39; by santiago calatrava - designboom</title><link>https://www.designboom.com/architecture/santiago-calatrava-station-gare-de-mons-belgium-10-11-2025/</link></item>
+<item><title>zaha hadid architects draws from silk embroidery of hangzhou with serpentine footbridge - designboom</title><link>https://www.designboom.com/architecture/zaha-hadid-architects-hangzhou-serpentine-grand-canal-gateway-bridge-10-31-2025/</link></item>
+<item><title>interview: paul smith classically twists production-ready MINI edition - designboom</title><link>https://www.designboom.com/technology/mini-paul-smith-edition-interview-japan-mobility-show-10-29-2025/</link></item>
+<item><title>&amp;#39;orbit&amp;#39; kinetic turntable translates sound into motion through flipping wooden tiles - designboom</title><link>https://www.designboom.com/design/orbit-kinetic-turntable-sound-motion-flipping-wooden-tiles-lillian-brown-10-28-2025/</link></item>
+<item><title>self-sufficient bivouac shelter by carlo ratti produces its own water and electricity in the alps - designboom</title><link>https://www.designboom.com/architecture/self-sufficient-bivouac-shelter-carlo-ratti-associati-produces-water-electricity-alps-10-28-2025/</link></item>
+<item><title>milano cortina 2026 winter olympics (3) - designboom</title><link>https://www.designboom.com/tag/milano-cortina-2026-winter-olympics/</link></item>
+<item><title>curved electric motorcycle ‘outlier’ comes with hooded front panel and bucket-style seat - designboom</title><link>https://www.designboom.com/technology/curved-electric-motorcycle-ev-outlier-concept-bucket-seat-honda-japan-mobility-show-2025-11-03-2025/</link></item>
+<item><title>step inside new york&amp;#39;s narrowest townhouse, measuring under nine feet wide - designboom</title><link>https://www.designboom.com/architecture/new-york-narrowest-townhouse-under-nine-feet-wide-bedford-sothebys-11-03-2025/</link></item>
+<item><title>solar-powered backpack with sleeping bag and pillow provides shelter for the homeless - designboom</title><link>https://www.designboom.com/technology/solar-powered-backpack-sleeping-bag-pillow-supports-individuals-looking-for-shelter-homemore-project-11-04-2025/</link></item>
+<item><title>santiago calatrava sculpts haus zum falken in zurich with folded glass facade - designboom</title><link>https://www.designboom.com/architecture/santiago-calatrava-haus-zum-falken-zurich-folded-glass-facade-11-02-2025/</link></item>
+<item><title>sound effect microphone by teenage engineering gives users fairy and robotic voices - designboom</title><link>https://www.designboom.com/technology/microphone-sound-effects-teenage-engineering-robot-pixie-ep-2350-ting-ep-40-riddim-11-04-2025/</link></item>
+<item><title>wing-shaped magnesium battery case keeps electric motorcycle FF.S6 cool on off-road rides - designboom</title><link>https://www.designboom.com/technology/wing-shaped-magnesium-battery-case-electric-motorcycle-ff-s6-off-road-flying-flea-royal-enfield-11-05-2025/</link></item>
+<item><title>is THE LINE still becoming reality as saudi arabia reimagines its architectural future? - designboom</title><link>https://www.designboom.com/architecture/the-line-reality-saudi-arabia-architectural-future-neom-11-05-2025/</link></item>
+<item><title>snøhetta sculpts hangzhou&amp;#39;s riverfront art museum to mimic shifting tides - designboom</title><link>https://www.designboom.com/architecture/snohetta-hangzhou-riverfront-art-museum-tides-qiantang-bay-china-11-05-2025/</link></item>
+<item><title>over 30 large-scale installations form creative landscapes during dubai design week 2025 - designboom</title><link>https://www.designboom.com/design/large-scale-installations-dubai-design-week-11-05-2025/</link></item>
+<item><title>google plans to build AI data centers in space using solar-powered satellites - designboom</title><link>https://www.designboom.com/technology/google-ai-data-centers-space-solar-powered-satellites-project-suncatcher-11-05-2025/</link></item>
+<item><title>one-kilometer red line land art installation by gregory orekhov spans across california desert - designboom</title><link>https://www.designboom.com/art/one-kilometer-red-line-land-art-installation-gregory-orekhov-california-desert-el-mirage-11-05-2025/</link></item>
+<item><title>nothing beats smartphone price range with phone (3a) lite in black &amp; white - designboom</title><link>https://www.designboom.com/technology/nothing-smartphone-price-phone-3a-lite-black-white-11-05-2025/</link></item>
+<item><title>canyon-like yidan center by zaha hadid architects tops out in shenzhen&amp;#39;s cultural quarter - designboom</title><link>https://www.designboom.com/architecture/canyon-yidan-center-zaha-hadid-architects-zha-shenzhen-cultural-quarter-11-05-2025/</link></item>
+<item><title>bjarke ingels group unveils &amp;#39;the row saadiyat&amp;#39;, a residential district for abu dhabi - designboom</title><link>https://www.designboom.com/architecture/bjarke-ingels-group-row-saadiyat-residential-district-abu-dhabi-uae-11-05-2025/</link></item>
+<item><title>yong ju lee grows bio-integrated pavilion from mycelium using robotic 3D printing in seoul - designboom</title><link>https://www.designboom.com/architecture/yong-ju-lee-bio-integrated-pavilion-mycelium-robotic-3d-printing-seoul-11-05-2025/</link></item>
+<item><title>meet the KINGPIN: ringbrothers&amp;#39; newest restomod, once a 1969 ford mustang - designboom</title><link>https://www.designboom.com/technology/kingpin-ringbrothers-restomod-1969-ford-mustang-mach-1-car-11-05-2025/</link></item>
+<item><title>pyramidal volumes with wood strip patterns frame luxeisland restaurant by DL atelier - designboom</title><link>https://www.designboom.com/architecture/pyramidal-volumes-wood-strip-patterns-luxeisland-restaurant-dl-atelier-11-04-2025/</link></item>
+<item><title>common integrates microbakery and pizzeria within flexible hybrid interior in berlin - designboom</title><link>https://www.designboom.com/architecture/common-hybrid-hospitality-space-microbakery-pizzeria-flexible-interior-berlin-neukolln-thalea-schmalenberg-11-04-2025/</link></item>
+<item><title>watch how populous built the RC strasbourg stadium out of decommissioned aeroplanes - designboom</title><link>https://www.designboom.com/architecture/populous-airplane-bodies-sun-shading-facade-strasbourg-stadium-rey-de-crecy-11-04-2025/</link></item>
+<item><title>ariostea’s mūra surfaces translate concrete into a unified porcelain stoneware system - designboom</title><link>https://www.designboom.com/design/ariostea-mura-ceramic-surfaces-concrete-porcelain-stoneware-system-11-04-2025/</link></item>
+<item><title>kong xiangwei&amp;#39;s art museum is a rolled concrete shell-structure in the woods - designboom</title><link>https://www.designboom.com/architecture/kong-xiangwei-art-museum-rolled-concrete-shell-crouching-tiger-hidden-dragon-china-11-04-2025/</link></item>
+<item><title>buried souvenir shop on japanese shoreline reflects on tourism, land, and memory - designboom</title><link>https://www.designboom.com/architecture/buried-souvenir-shop-japanese-shoreline-tourism-land-memory-atami-naoshi-kondo-11-04-2025/</link></item>
+<item><title>tunnel-shaped snow park that lets users ski all year round set to open in australia - designboom</title><link>https://www.designboom.com/design/tunnel-shaped-snow-park-ski-all-year-round-australia-11-04-2025/</link></item>
+<item><title>BACH converts reina sofía&amp;#39;s auditorium into red-velvet cinema beneath blue vault in madrid - designboom</title><link>https://www.designboom.com/architecture/bach-reina-sofia-historic-auditorium-red-velvet-cinema-starry-blue-vault-madrid-11-03-2025/</link></item>
+<item><title>interlocking bamboo and cedar frames shape wild boar nest installation by cheng tsung feng - designboom</title><link>https://www.designboom.com/art/interlocking-bamboo-cedar-frames-wild-boar-nest-installation-cheng-tsung-feng-11-03-2025/</link></item>
+<item><title>carbon-negative bamboo pavilion by cave urban gives new life to disused car park in bali - designboom</title><link>https://www.designboom.com/architecture/carbon-negative-bamboo-pavilion-cave-urban-life-disused-car-park-bali-bauhaus-earth-11-03-2025/</link></item>
+<item><title>NYT Connections hints today: Clues, answers for November 4, 2025 - Mashable</title><link>https://mashable.com/article/nyt-connections-hint-answer-today-november-4-2025</link></item>
+<item><title>Moon phase today: What the moon will look like on November 5 - Mashable</title><link>https://mashable.com/article/moon-phase-today-nov-5</link></item>
+<item><title>Wordle today: Answer, hints for November 4, 2025 - Mashable</title><link>https://mashable.com/article/wordle-today-answer-november-4-2025</link></item>
+<item><title>iRobot could be facing bankruptcy. But as a vacuum tester, I saw the Roomba flop era coming from a mile away. - Mashable</title><link>https://mashable.com/article/irobot-stocks-drop-roomba-fate-looks-bleak</link></item>
+<item><title>Trend alert: High-tech Bluetooth CD players make me nostalgic for the mix tape era - Mashable</title><link>https://mashable.com/article/high-tech-bluetooth-cd-players-trend</link></item>
+<item><title>Kim Kardashian: ChatGPT made me fail my law exams - Mashable</title><link>https://mashable.com/article/kim-kardashian-blames-chatgpt-failing-law-exams</link></item>
+<item><title>Google Maps introduces conversational navigation with Gemini - Mashable</title><link>https://mashable.com/article/google-maps-introduce-conversational-navigation-with-gemini</link></item>
+<item><title>Google reportedly blocks 749 million Anna’s Archive URLs - Mashable</title><link>https://mashable.com/article/google-blocks-hundreds-of-millions-of-annas-archive-urls</link></item>
+<item><title>Win tickets to see &amp;#39;Hamnet&amp;#39; early at Mashable&amp;#39;s advanced screenings - Mashable</title><link>https://mashable.com/article/hamnet-advanced-screenings-focus-features</link></item>
+<item><title>&amp;#39;Football Manager 26&amp;#39; review: Fun to play, awful to look at - Mashable</title><link>https://mashable.com/review/football-manager-26-pc-review</link></item>
+<item><title>The Nintendo Store finally has a mobile app for iOS and Android devices - Mashable</title><link>https://mashable.com/article/nintendo-store-mobile-app-ios-android-switch-2</link></item>
+<item><title>&amp;#39;All&amp;#39;s Fair&amp;#39;s most WTF lines of dialogue - Mashable</title><link>https://mashable.com/article/alls-fair-lines-ryan-murphy</link></item>
+<item><title>Influencers were kicked out of a market for filming without a permit - Mashable</title><link>https://mashable.com/article/influencers-london-permit-borough-market-filming</link></item>
+<item><title>Best Christmas gifts for 2025, picked by our reviewers - Mashable</title><link>https://mashable.com/article/best-christmas-gifts</link></item>
+<item><title>60+ of the absolute best stocking stuffers for 2025 - Mashable</title><link>https://mashable.com/gifts/best-stocking-stuffers</link></item>
+<item><title>The 40+ best tech gifts of the year, hand-picked by professional gadget nerds - Mashable</title><link>https://mashable.com/gifts/best-tech-gifts-2025</link></item>
+<item><title>Splurge-worthy gift ideas - Mashable</title><link>https://mashable.com/gifts/splurge-worthy-gifts</link></item>
+<item><title>NYT Connections hints today: Clues, answers for November 5, 2025 - Mashable</title><link>https://mashable.com/article/nyt-connections-hint-answer-today-november-5-2025</link></item>
+<item><title>Wordle today: Answer, hints for November 5, 2025 - Mashable</title><link>https://mashable.com/article/wordle-today-answer-november-5-2025</link></item>
+<item><title>NYT Mini crossword answers, hints for November 5, 2025 - Mashable</title><link>https://mashable.com/article/nyt-mini-crossword-answers-hints-november-5-2025</link></item>
+<item><title>NYT Strands hints, answers for November 5, 2025 - Mashable</title><link>https://mashable.com/article/strands-nyt-hint-november-5-2025</link></item>
+<item><title>Discord launches new safety features following lawsuits - Mashable</title><link>https://mashable.com/article/discord-parental-controls-family-center</link></item>
+<item><title>Louvre video security password was ‘louvre,’ report reveals - Mashable</title><link>https://mashable.com/article/louvre-video-security-password-was-louvre</link></item>
+<item><title>Viral TikToks show neighbors setting up pop-up food pantries amid SNAP benefit turmoil - Mashable</title><link>https://mashable.com/article/tiktok-food-pantry-community-snap-benefits</link></item>
+<item><title>Gillian Anderson and Lena Headey face off in &amp;#39;The Abandons&amp;#39; trailer - Mashable</title><link>https://mashable.com/video/the-abandons-trailer</link></item>
+<item><title>&amp;#39;A Man on the Inside&amp;#39; Season 2 trailer sees Ted Danson going undercover on campus - Mashable</title><link>https://mashable.com/video/man-on-the-inside-season-2-trailer</link></item>
+<item><title>Seth Meyers responds to Trump&amp;#39;s targeted Truth Social rant about him - Mashable</title><link>https://mashable.com/video/seth-meyers-responds-trump-rant</link></item>
+<item><title>Jimmy Kimmel hits out at Trump&amp;#39;s &amp;#39;Great Gatsby&amp;#39; party, doesn&amp;#39;t hold back - Mashable</title><link>https://mashable.com/video/jimmy-kimmel-trump-great-gatsby-party</link></item>
+<item><title>Job hunters are using dating apps to network, survey reports - Mashable</title><link>https://mashable.com/article/dating-app-users-job-opportunities</link></item>
+<item><title>The free Lego Tom the Turkey build event goes live on Nov. 15 — how to take part - Mashable</title><link>https://mashable.com/article/free-lego-tom-turkey</link></item>
+<item><title>Score a free Lego Snowman at Barnes &amp; Noble from Nov. 7-9 — how to reserve your spot - Mashable</title><link>https://mashable.com/article/free-lego-snowman</link></item>
+<item><title>All the states and countries that have age-verification laws (so far) - Mashable</title><link>https://mashable.com/article/all-the-states-and-countries-with-age-verification-laws</link></item>
+<item><title>&amp;#39;Hyrule Warriors: Age of Imprisonment&amp;#39; is fine. It&amp;#39;s also the most disappointing Switch 2 exclusive. - Mashable</title><link>https://mashable.com/review/hyrule-warriors-age-of-imprisonment</link></item>
+<item><title>Nothing CMF Watch 3 Pro: I can&amp;#39;t believe how much I loved this $99 smartwatch - Mashable</title><link>https://mashable.com/review/cmf-by-nothing-watch-3-pro</link></item>
+<item><title>Review: &amp;#39;The Outer Worlds 2&amp;#39; is a fun but flawed space odyssey - Mashable</title><link>https://mashable.com/review/outer-worlds-2-review</link></item>
+<item><title>The EcoFlow Delta 3 Ultra Plus is a workhorse warrior and it’s awesome for off-grid life - Mashable</title><link>https://mashable.com/review/ecoflow-delta-3-ultra-plus-review</link></item>
+<item><title>I tested the best Beats headphones for sound quality, portability, style, and value - Mashable</title><link>https://mashable.com/roundup/best-beats-headphones</link></item>
+<item><title>SNAP recipients: Check out these online resources - Mashable</title><link>https://mashable.com/article/snap-benefits-online-resources</link></item>
+<item><title>Motion Picture Association demands Meta stops using PG-13 rating for teen accounts - Mashable</title><link>https://mashable.com/article/motion-picture-association-meta-teen-accounts-cease-and-desist</link></item>
+<item><title>Forthcoming AI museum announces opening, teases &amp;#39;Infinity Room&amp;#39; - Mashable</title><link>https://mashable.com/article/ai-museum-infinity-room</link></item>
+<item><title>&amp;#39;Perfect predator&amp;#39;: When chatbots sexually abuse kids - Mashable</title><link>https://mashable.com/article/chatbot-youth-sexual-abuse-character-ai</link></item>
+<item><title>November full moon 2025: See the Beaver supermoon - Mashable</title><link>https://mashable.com/article/november-full-moon-2025-beaver-supermoon</link></item>
+<item><title>Moon phase today: What the moon will look like on November 4 - Mashable</title><link>https://mashable.com/article/moon-phase-today-nov-4</link></item>
+<item><title>Moon phase today: What the moon will look like on November 3 - Mashable</title><link>https://mashable.com/article/moon-phase-today-nov-3</link></item>
+<item><title>Moon phase today: What the moon will look like on November 2 - Mashable</title><link>https://mashable.com/article/moon-phase-today-nov-2</link></item>
+<item><title>Get a free $10 Target gift card when you buy 3 home essentials: Shop laundry, kitchen, and bathroom supplies - Mashable</title><link>https://mashable.com/article/nov-5-target-household-essentials-gift-card-deal</link></item>
+<item><title>Oprah&amp;#39;s Favorite Things 2025 list is full of Mashable&amp;#39;s top tech products - Mashable</title><link>https://mashable.com/article/oprahs-favorite-things-2025</link></item>
+<item><title>I&amp;#39;m shocked: Apple&amp;#39;s M4 MacBook Air has fallen to a new record low of $750 on Amazon - Mashable</title><link>https://mashable.com/article/nov-5-apple-m4-macbook-air-deal</link></item>
+<item><title>Great gift alert: An adorable Lego Animal Crossing set is 50% off at Macy&amp;#39;s today - Mashable</title><link>https://mashable.com/article/nov-5-lego-animal-crossing-isabelles-house-visit-building-set-deal</link></item>
+<item><title>What&amp;#39;s new to streaming this week? (Oct. 31, 2025) - Mashable</title><link>https://mashable.com/article/new-to-streaming-october-31-2025</link></item>
+<item><title>The 28 best queer horror movies now streaming - Mashable</title><link>https://mashable.com/article/queer-horror-streaming</link></item>
+<item><title>Common Crawl accused of feeding paywalled content to AI companies - Mashable</title><link>https://mashable.com/article/common-crawl-accused-sharing-paywalled-content-ai-companies</link></item>
+<item><title>Critics hate &amp;#39;All&amp;#39;s Fair,&amp;#39; but the internet has other thoughts - Mashable</title><link>https://mashable.com/article/alls-fair-reviews-internet-reactions</link></item>
+<item><title>Stay charged up with the Bluetti Laptop Battery Power Bank at its lowest price yet - Mashable</title><link>https://mashable.com/article/nov-5-bluetti-laptop-battery-power-bank</link></item>
+<item><title>Brittany Vincent - Mashable</title><link>https://mashable.com/author/brittany-vincent</link></item>
+<item><title>Studio Ghibli, Square Enix demand OpenAI stop training Sora 2 on their content - Mashable</title><link>https://mashable.com/article/studio-ghibli-square-enix-openai-sora-content</link></item>
+<item><title>Another smart ring brand hits the market, but it&amp;#39;s not for fitness - Mashable</title><link>https://mashable.com/article/meta-employees-launch-smart-ring-sandbar</link></item>
+<item><title>Tinted glass: How to change Liquid Glass settings in iOS 26.1 - Mashable</title><link>https://mashable.com/article/apple-ios-26-1-tint-liquid-glass-how-to-change</link></item>
+<item><title>Samsung plans to sell a ton of foldable phones next year - Mashable</title><link>https://mashable.com/article/samsung-sales-galaxy-s26</link></item>
+<item><title>5 big tech settlements you might be eligible for in 2025 - Mashable</title><link>https://mashable.com/article/tech-social-media-settlement-payments-check-eligibility</link></item>
+<item><title>DJI&amp;#39;s new Osmo Mobile 8 gimbal launches today, but not for you - Mashable</title><link>https://mashable.com/article/dji-osmo-mobile-8-global-launch-us-availability</link></item>
+<item><title>Target Black Friday ad: The best deals you can buy online early - Mashable</title><link>https://mashable.com/article/target-black-friday-2025-ad-deals</link></item>
+<item><title>哪位老师看看 《新刻斷易天機》这个书那个馆藏地，或者谁有发一下，谢谢！ - 书格</title><link>https://www.shuge.org/meet/topic/197033/#post-197034</link></item>
+<item><title>请教各位大神一枚盖在古籍上印章内容 - 书格</title><link>https://www.shuge.org/meet/topic/196971/</link></item>
+<item><title>明代杨抚（二檀）文学作品查询 - 书格</title><link>https://www.shuge.org/meet/topic/196910/</link></item>
+<item><title>清 王先谦《合校水经注》1892年刊本 四十卷 - 书格</title><link>https://www.shuge.org/meet/topic/196867/</link></item>
+<item><title>With new rules for disability insurance, states that will be affected the most - FlowingData</title><link>https://flowingdata.com/2025/11/05/with-new-rules-for-disability-insurance-states-that-will-be-affected-the-most/</link></item>
+<item><title>Non-profit takes over a canceled NOAA database - FlowingData</title><link>https://flowingdata.com/2025/11/05/non-profit-takes-over-a-canceled-noaa-database/</link></item>
+<item><title>New Bipartisan Bill Would Require Companies To Report AI Job Losses - Slashdot</title><link>https://slashdot.org/story/25/11/05/2119253/new-bipartisan-bill-would-require-companies-to-report-ai-job-losses</link></item>
+<item><title>43% of Gen Z Prefer YouTube and TikTok To Traditional TV and Streaming - Slashdot</title><link>https://entertainment.slashdot.org/story/25/11/05/2114212/43-of-gen-z-prefer-youtube-and-tiktok-to-traditional-tv-and-streaming</link></item>
+<item><title>Compare the top business software of 2025 - Slashdot</title><link>https://a.slashdotmedia.com/www/delivery/ck.php?oaparams=2__bannerid=77589__zoneid=74985__cb=9a1c8c9bd0__oadest=https%3A%2F%2Fslashdot.org%2Fsoftware%2F%3Fpk_campaign%3DSDBSL-NEL%26pk_source%3DSD-NEL</link></item>
+<item><title>Danish Authorities In Rush To Close Security Loophole In Chinese Electric Buses - Slashdot</title><link>https://it.slashdot.org/story/25/11/05/2111221/danish-authorities-in-rush-to-close-security-loophole-in-chinese-electric-buses</link></item>
+<item><title>T-Mobile Brings Free 911 Emergency Texting To AT&amp;T and Verizon Customers - Slashdot</title><link>https://tech.slashdot.org/story/25/11/05/1916259/t-mobile-brings-free-911-emergency-texting-to-att-and-verizon-customers</link></item>
+<item><title>allowing both T-Mobile and non-T-Mobile customers - Slashdot</title><link>https://mobile.slashdot.org/story/25/02/10/043208/free-t-mobile-starlink-for-six-months-announced-during-super-bowl-also-available-to-verizon-and-att-customers</link></item>
+<item><title>Windows 11 Store Gets Ninite-Style Multi-App Installer Feature - Slashdot</title><link>https://tech.slashdot.org/story/25/11/05/1830216/windows-11-store-gets-ninite-style-multi-app-installer-feature</link></item>
+<item><title>Smartphone Maker Nothing Retreats on Bloatware After User Backlash - Slashdot</title><link>https://mobile.slashdot.org/story/25/11/05/1827248/smartphone-maker-nothing-retreats-on-bloatware-after-user-backlash</link></item>
+<item><title>Solar Geoengineering in Wrong Hands Could Wreak Climate Havoc, Scientists Warn - Slashdot</title><link>https://news.slashdot.org/story/25/11/05/1817220/solar-geoengineering-in-wrong-hands-could-wreak-climate-havoc-scientists-warn</link></item>
+<item><title>Deutsche Bank Explores Hedges For Data Centre Exposure as AI Lending Booms - Slashdot</title><link>https://slashdot.org/story/25/11/05/182230/deutsche-bank-explores-hedges-for-data-centre-exposure-as-ai-lending-booms</link></item>
+<item><title>China Bans Foreign AI Chips From State-Funded Data Centres - Slashdot</title><link>https://slashdot.org/story/25/11/05/1752200/china-bans-foreign-ai-chips-from-state-funded-data-centres</link></item>
+<item><title>Epic and Google Settle Antitrust Case With Global Fee Cuts and Easier Third-Party Store Access - Slashdot</title><link>https://tech.slashdot.org/story/25/11/05/1729212/epic-and-google-settle-antitrust-case-with-global-fee-cuts-and-easier-third-party-store-access</link></item>
+<item><title>Kodak Quietly Begins Directly Selling Kodak Gold and Ultramax Film Again - Slashdot</title><link>https://it.slashdot.org/story/25/11/05/1643214/kodak-quietly-begins-directly-selling-kodak-gold-and-ultramax-film-again</link></item>
+<item><title>World Economic Forum Chief Warns of Three Possible &amp;#39;Bubbles&amp;#39; in Global Economy - Slashdot</title><link>https://slashdot.org/story/25/11/05/1542255/world-economic-forum-chief-warns-of-three-possible-bubbles-in-global-economy</link></item>
+<item><title>Europe&amp;#39;s Self-Driving Cars Aren&amp;#39;t Even at the Starting Line - Slashdot</title><link>https://tech.slashdot.org/story/25/11/05/1533219/europes-self-driving-cars-arent-even-at-the-starting-line</link></item>
+<item><title>Brazil Proposes a New Type of Fund To Protect Tropical Forests - Slashdot</title><link>https://news.slashdot.org/story/25/11/05/1441220/brazil-proposes-a-new-type-of-fund-to-protect-tropical-forests</link></item>
+<item><title>DRAM Costs Surge Past Gold as AI Demand Strains Supply - Slashdot</title><link>https://it.slashdot.org/story/25/11/05/147220/dram-costs-surge-past-gold-as-ai-demand-strains-supply</link></item>
+<item><title>EV Sales Plummet In October After Federal Tax Credit Ends - Slashdot</title><link>https://tech.slashdot.org/story/25/11/04/039212/ev-sales-plummet-in-october-after-federal-tax-credit-ends?sbsrc=md</link></item>
+<item><title>Dick Cheney, Powerful Former VP, Dies at 84 - Slashdot</title><link>https://news.slashdot.org/story/25/11/04/1437234/dick-cheney-powerful-former-vp-dies-at-84?sbsrc=md</link></item>
+<item><title>Trump Re-Nominates Billionaire Jared Isaacman To Run NASA - Slashdot</title><link>https://science.slashdot.org/story/25/11/05/010250/trump-re-nominates-billionaire-jared-isaacman-to-run-nasa?sbsrc=md</link></item>
+<item><title>China Achieves Thorium-Uranium Conversion Within Molten Salt Reactor - Slashdot</title><link>https://hardware.slashdot.org/story/25/11/05/0052206/china-achieves-thorium-uranium-conversion-within-molten-salt-reactor?sbsrc=md</link></item>
+<item><title>LADWP Says It Will Shift Its Largest Gas Power Plant To Hydrogen - Slashdot</title><link>https://hardware.slashdot.org/story/25/11/03/2351252/ladwp-says-it-will-shift-its-largest-gas-power-plant-to-hydrogen?sbsrc=md</link></item>
+<item><title>The world&amp;#39;s tallest chip defies the limits of computing: goodbye to Moore&amp;#39;s Law? - Slashdot</title><link>https://slashdot.org/submission/17342032/the-worlds-tallest-chip-defies-the-limits-of-computing-goodbye-to-moores-law</link></item>
+<item><title>Sam Altman says &amp;#39;enough&amp;#39; to questions about OpenAI&amp;#39;s revenue - Slashdot</title><link>https://slashdot.org/submission/17342028/sam-altman-says-enough-to-questions-about-openais-revenue</link></item>
+<item><title>Bank of America faces lawsuit over alleged unpaid computer boot-up time - Slashdot</title><link>https://slashdot.org/submission/17342026/bank-of-america-faces-lawsuit-over-alleged-unpaid-computer-boot-up-time</link></item>
+<item><title>China Achieved Thorium-Uranium Conversion within Molten Salt Reactor - Slashdot</title><link>https://slashdot.org/submission/17342024/china-achieved-thorium-uranium-conversion-within-molten-salt-reactor</link></item>
+<item><title>Defeating drone swarms with smarter, faster, and more autonomous systems - Defense News</title><link>https://www.defensenews.com/video/2025/10/23/defeating-drone-swarms-with-smarter-faster-and-more-autonomous-systems/</link></item>
+<item><title>Driving defense innovation through agility, affordability, and modular design - Defense News</title><link>https://www.defensenews.com/video/2025/10/31/driving-defense-innovation-through-agility-affordability-and-modular-design/</link></item>
+<item><title>Gen Z most likely to fall for phishing attacks - BetaNews</title><link>https://betanews.com/2025/09/30/gen-z-most-likely-to-fall-for-phishing-attacks/</link></item>
+<item><title>OpenAI introduces parental controls for ChatGPT - BetaNews</title><link>https://betanews.com/2025/09/29/openai-introduces-parental-controls-for-chatgpt/</link></item>
+<item><title>Ad-free versions of Facebook and Instagram are coming to the UK – for a price - BetaNews</title><link>https://betanews.com/2025/09/26/ad-free-versions-of-facebook-and-instagram-are-coming-to-the-uk-for-a-price/</link></item>
+<item><title>Google Maps to receive AI upgrade powered by Gemini - BetaNews</title><link>https://betanews.com/2025/11/05/google-maps-to-receive-ai-upgrade-powered-by-gemini/</link></item>
+<item><title>Google Earth - BetaNews</title><link>https://betanews.com/2025/10/23/google-earths-new-ai-tools-let-users-ask-questions-about-the-planet/</link></item>
+<item><title>AI makes holiday shopping scams harder to spot - BetaNews</title><link>https://betanews.com/2025/11/05/ai-makes-holiday-shopping-scams-harder-to-spot/</link></item>
+<item><title>81 percent of security teams lack visibility into AI coding - BetaNews</title><link>https://betanews.com/2025/11/05/81-percent-of-security-teams-lack-visibility-into-ai-coding/</link></item>
+<item><title>Cooler Master launches QUBE 540, a compact and customizable PC case for modern builders - BetaNews</title><link>https://betanews.com/2025/11/05/cooler-master-launches-qube-540-a-compact-and-customizable-pc-case-for-modern-builders/</link></item>
+<item><title>UK police trial AI system to support frontline officers with procedural advice - BetaNews</title><link>https://betanews.com/2025/11/05/uk-police-trial-ai-system-to-support-frontline-officers-with-procedural-advice/</link></item>
+<item><title>82 percent of finserv organizations suffered a data breach in the last year - BetaNews</title><link>https://betanews.com/2025/11/05/82-percent-of-finserv-organizations-suffered-a-data-breach-in-the-last-year/</link></item>
+<item><title>Experts warn AI tools are fueling a rise in scams targeting older adults - BetaNews</title><link>https://betanews.com/2025/11/05/experts-warn-ai-tools-are-fueling-a-rise-in-scams-targeting-older-adults/</link></item>
+<item><title>Microsoft is killing off Defender Application Guard for Office - BetaNews</title><link>https://betanews.com/2025/11/05/microsoft-is-killing-off-defender-application-guard-for-office/</link></item>
+<item><title>Finally! WhatsApp launches official Apple Watch app with messaging and voice note support - BetaNews</title><link>https://betanews.com/2025/11/05/finally-whatsapp-launches-official-apple-watch-app-with-messaging-and-voice-note-support/</link></item>
+<item><title>Why, finally, all eyes are on OT [Q&amp;A] - BetaNews</title><link>https://betanews.com/2025/11/05/why-finally-all-eyes-are-on-ot-qa/</link></item>
+<item><title>Microsoft hits Windows 10 users with misleading ‘end of support’ messages - BetaNews</title><link>https://betanews.com/2025/11/05/microsoft-hits-windows-10-users-with-misleading-end-of-support-messages/</link></item>
+<item><title>Microsoft makes its first references to Windows 11 26H1 - BetaNews</title><link>https://betanews.com/2025/11/05/microsoft-makes-its-first-references-to-windows-11-26h1/</link></item>
+<item><title>Microsoft says irritating update and shutdown bug has been wiped from Windows 11 - BetaNews</title><link>https://betanews.com/2025/11/05/microsoft-says-irritating-update-and-shutdown-bug-has-been-wiped-from-windows-11/</link></item>
+<item><title>New AI testing solution helps avoid hallucinations - BetaNews</title><link>https://betanews.com/2025/11/04/new-ai-testing-solution-helps-avoid-hallucinations/</link></item>
+<item><title>Agon by AOC announces first QD-OLED gaming monitors - BetaNews</title><link>https://betanews.com/2025/11/04/agon-by-aoc-announces-first-qd-oled-gaming-monitors/</link></item>
+<item><title>Microsoft is making every PC an AI PC with new Hey Copilot voice command - BetaNews</title><link>https://betanews.com/2025/10/17/microsoft-is-making-every-pc-and-ai-pc-with-new-hey-copilot-voice-command/</link></item>
+<item><title>Apple, predictably, thinks Windows 10 users should move to macOS – here’s why - BetaNews</title><link>https://betanews.com/2025/10/13/apple-predictably-thinks-windows-10-users-should-move-to-macos-heres-why/</link></item>
+<item><title>Windows 11 installation no longer lets you skip creating a Microsoft Account - BetaNews</title><link>https://betanews.com/2025/10/07/windows-11-installation-no-longer-lets-you-skip-creating-a-microsoft-account/</link></item>
+<item><title>Nearly a third of US and UK consumers plan to switch internet providers, survey finds - BetaNews</title><link>https://betanews.com/2025/10/09/nearly-a-third-of-us-and-uk-consumers-plan-to-switch-internet-providers-survey-finds/</link></item>
+<item><title>CCleaner 7 debuts with redesigned interface and smarter cleanup tools - BetaNews</title><link>https://betanews.com/2025/10/07/ccleaner-7-debuts-with-redesigned-interface-and-smarter-cleanup-tools/</link></item>
+<item><title>Microsoft says Windows update may have caused login problems - BetaNews</title><link>https://betanews.com/2025/10/22/microsoft-says-windows-update-may-have-caused-login-problems/</link></item>
+<item><title>Mozilla commits to updating Firefox on Windows 10 - BetaNews</title><link>https://betanews.com/2025/10/17/mozilla-commits-to-updating-firefox-on-windows-10/</link></item>
+<item><title>Windows 10&amp;#39;s end of life is only days away -- WhyNotWin11 explains why your PC may not qualify for Windows 11 - BetaNews</title><link>https://betanews.com/2025/10/09/windows-10s-end-of-life-is-only-days-away-whynotwin11-explains-why-your-pc-may-not-qualify-for-windows-11/</link></item>
+<item><title>Climate Central - FlowingData</title><link>https://flowingdata.com/tag/climate-central/</link></item>
+<item><title>Carol D. Simmons Storytime Club: Food and Feasts - The Strong</title><link>https://www.museumofplay.org/event/carol-d-simmons-storytime-club-food-and-feasts/2025-11-03/</link></item>
+<item><title>Play Lab: Experience Clixo! - The Strong</title><link>https://www.museumofplay.org/event/play-lab-experience-clixo/2025-11-08/</link></item>
+<item><title>Play Lab: Space Puppets - The Strong</title><link>https://www.museumofplay.org/event/play-lab-space-puppets/2025-11-10/</link></item>
+<item><title>Mocktails and Meows Painting Workshop - The Strong</title><link>https://www.museumofplay.org/event/mocktails-and-meows-painting-workshop/</link></item>
+<item><title>Play Lab: Sci-Fi Headbands - The Strong</title><link>https://www.museumofplay.org/event/play-lab-sci-fi-headbands/2025-11-17/</link></item>
+<item><title>Rebels, Empires, &amp; Galaxies - The Strong</title><link>https://www.museumofplay.org/event/rebels-empires-galaxies/2025-11-22/</link></item>
+<item><title>Play Lab: Moon and Stars - The Strong</title><link>https://www.museumofplay.org/event/play-lab-moon-and-stars/2025-11-24/</link></item>
+<item><title>Play Lab: Wintery Decorations - The Strong</title><link>https://www.museumofplay.org/event/play-lab-wintery-decorations/2025-12-01/</link></item>
+<item><title>Read Journal - The Strong</title><link>https://www.museumofplay.org/journalofplay/issues/volume-17-number-3/</link></item>
+<item><title>Facial recognition - Futurism</title><link>https://futurism.com/category/facial-recognition</link></item>
+<item><title>Machine Learning - Futurism</title><link>https://futurism.com/category/machine-learning</link></item>
+<item><title>Cybersecurity - Futurism</title><link>https://futurism.com/category/cybersecurity</link></item>
+<item><title>The Industrialists - Futurism</title><link>https://futurism.com/category/the-industrialists</link></item>
+<item><title>Virtual Reality - Futurism</title><link>https://futurism.com/category/virtual-reality</link></item>
+<item><title>Prosthetics and Devices - Futurism</title><link>https://futurism.com/category/prosthetics-and-devices</link></item>
+<item><title>Agriculture - Futurism</title><link>https://futurism.com/category/agriculture</link></item>
+<item><title>Environment - Futurism</title><link>https://futurism.com/category/environment</link></item>
+<item><title>Future Materials - Futurism</title><link>https://futurism.com/category/future-materials</link></item>
+<item><title>Astrophysics - Futurism</title><link>https://futurism.com/category/astrophysics</link></item>
+<item><title>Electric Vehicles - Futurism</title><link>https://futurism.com/category/electric-vehicles</link></item>
+<item><title>Mass Transit - Futurism</title><link>https://futurism.com/category/mass-transit</link></item>
+<item><title>Self-Driving Vehicles - Futurism</title><link>https://futurism.com/category/self-driving-vehicles</link></item>
+<item><title>Andrew Cuomo’s Extensive Use of AI Made His Campaign a Toxic Joke - Futurism</title><link>https://futurism.com/artificial-intelligence/andrew-cuomo-ai-toxic</link></item>
+<item><title>Frank Landymore - Futurism</title><link>https://futurism.com/authors/flandymore</link></item>
+<item><title>International Space Station - Futurism</title><link>https://futurism.com/category/international-space-station</link></item>
+<item><title>Victor Tangermann - Futurism</title><link>https://futurism.com/authors/victor</link></item>
+<item><title>Coke’s New AI-Generated Ad Required 100 Staff and 70,000 AI-Generated Clips, and It Still Looks Like Garbage - Futurism</title><link>https://futurism.com/artificial-intelligence/coke-ai-holiday-ad</link></item>
+<item><title>Amazon Demands That AI Browser Stop Automatically Shopping on Behalf of Users - Futurism</title><link>https://futurism.com/artificial-intelligence/amazon-perplexity-agent-ai</link></item>
+<item><title>Don’t Panic, But AI Stocks Are Suddenly Lurching Downward - Futurism</title><link>https://futurism.com/artificial-intelligence/ai-stocks-lurching-downward</link></item>
+<item><title>Neuroscience and Brain - Futurism</title><link>https://futurism.com/category/neuroscience-brain</link></item>
+<item><title>Neuralink Head of Surgery Says Robot-Human Interface Happening “Very Soon” - Futurism</title><link>https://futurism.com/robots-and-machines/neuralink-optimus-tesla-surgery</link></item>
+<item><title>AI Psychosis - Futurism</title><link>https://futurism.com/tag/ai-psychosis</link></item>
+<item><title>Maggie Harrison Dupré - Futurism</title><link>https://futurism.com/authors/mharrison</link></item>
+<item><title>Noor Al-Sibai - Futurism</title><link>https://futurism.com/authors/nooralsibai</link></item>
+<item><title>Cryptocurrency - Futurism</title><link>https://futurism.com/category/cryptocurrency</link></item>
+<item><title>futurism originals - Futurism</title><link>https://futurism.com/tag/futurism-originals</link></item>
+<item><title>Robots and Machines - Futurism</title><link>https://futurism.com/category/robots-and-machines</link></item>
+<item><title>Science &amp; Energy - Futurism</title><link>https://futurism.com/category/science-energy</link></item>
+<item><title>Creamy Potato and Broccoli Soup - Bev Cooks</title><link>https://bevcooks.com/2025/10/creamy-potato-and-broccoli-soup/</link></item>
+<item><title>Polish Sausage with Creamy Polenta - Bev Cooks</title><link>https://bevcooks.com/2025/10/polish-sausage-with-creamy-polenta/</link></item>
+<item><title>One Pan Creamy Gnocchi with Beef and Tomatoes - Bev Cooks</title><link>https://bevcooks.com/2025/10/creamy-gnocchi-with-beef-and-tomatoes/</link></item>
+<item><title>Monthly Mixtape: I feel like I’m cooking in a Nancy Meyers Kitchen - Bev Cooks</title><link>https://bevcooks.com/2025/10/monthly-mixtape-i-feel-like-im-cooking-in-a-nancy-meyers-kitchen/</link></item>
+<item><title>Apple Crumble - Bev Cooks</title><link>https://bevcooks.com/2025/09/apple-crumble/</link></item>
+<item><title>nasa.gov/shutdown - NASA</title><link>https://www.nasa.gov/shutdown/</link></item>
+<item><title>千面·库拉岗日徒步大会报名中 - 户外资料网</title><link>https://hd.8264.com/xianlu-189926</link></item>
+<item><title>活动|72km东疆  越野大海道深度旅行 - 户外资料网</title><link>https://hd.8264.com/xianlu-189467</link></item>
+<item><title>藏在霞慕尼风雪里的信任：一场逍何与艾格极限6代的巅峰之约 - 户外资料网</title><link>https://www.8264.com/viewnews-156749-page-1.html</link></item>
+<item><title>道孚各卡村小环线+党龄三湖穿越，明智的川西赏秋之行 - 户外资料网</title><link>https://www.8264.com/viewnews-156738-page-1.html</link></item>
+<item><title>盛夏走朝台，避暑清凉山 - 户外资料网</title><link>https://www.8264.com/viewnews-156737-page-1.html</link></item>
+<item><title>秦岭徒步躺平版，扯袍峪人头山全攻略 - 户外资料网</title><link>https://www.8264.com/viewnews-156740-page-1.html</link></item>
+<item><title>龙脊上的芭蕾淬炼，司马台单边行记 - 户外资料网</title><link>https://www.8264.com/viewnews-156739-page-1.html</link></item>
+<item><title>念念不忘，必有回响，国庆年保玉则穿越莲宝叶则 - 户外资料网</title><link>https://www.8264.com/viewnews-156727-page-1.html</link></item>
+<item><title>川西没有雪的莲花雪山穿越线 - 户外资料网</title><link>https://www.8264.com/viewnews-156721-page-1.html</link></item>
+<item><title>塞尔维亚 波黑 黑山！消逝在历史长河的南斯拉夫 - 户外资料网</title><link>https://www.8264.com/viewnews-156724-page-1.html</link></item>
+<item><title>2026第四届喜马拉雅[千面·库拉岗日徒步大会]一山守千峰（6日行程） - 户外资料网</title><link>http://hd.8264.com/xianlu-189926</link></item>
+<item><title>藏东环线之穿越念青东 冰川探索之旅 越野车4人小团（8日行程） - 户外资料网</title><link>http://hd.8264.com/xianlu-189927</link></item>
+<item><title>冬季贝加尔湖玩转俄罗斯蓝冰丨南北线全景，北京国航直飞（8日行程） - 户外资料网</title><link>http://hd.8264.com/xianlu-182813</link></item>
+<item><title>[骆驼十大]徒步长江三峡 | 360°环视三峡全景（5日行程） - 户外资料网</title><link>http://hd.8264.com/xianlu-189912</link></item>
+<item><title>2026年新疆海拔7546米幕士塔格峰攀登计划（18日行程） - 户外资料网</title><link>http://hd.8264.com/xianlu-189925</link></item>
+<item><title>川西 奥太娜丨2天圆梦人生中第一座五千米雪山（2日行程） - 户外资料网</title><link>http://hd.8264.com/xianlu-189771</link></item>
+<item><title>求教~~GREGORY whitney 95和Palisade 80 背负系统有什么区别吗 - 户外资料网</title><link>http://www.8264.com/wenda/77204.html</link></item>
+<item><title>关于K2的Jungle和discovery包（60L）的问题 - 户外资料网</title><link>http://www.8264.com/wenda/77222.html</link></item>
+<item><title>请问雪镜Z3 LIVE和SNOW 2的区别 - 户外资料网</title><link>http://www.8264.com/wenda/77241.html</link></item>
+<item><title>请老驴点评下2款凯瑞摩的背包 - 户外资料网</title><link>http://www.8264.com/wenda/77220.html</link></item>
+<item><title>Perplexity shows how to run monster AI models more efficiently on aging GPUs, AWS networks - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/05/perplexity_1t_parameter_models_aws_efa/</link></item>
+<item><title>Azure stumbles in Western Europe, Microsoft blames &amp;#39;thermal event&amp;#39; - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/05/azure_thermal_event_west_europe/</link></item>
+<item><title>Sony rolls out a standard way to measure bias in how AI describes what it &amp;#39;sees&amp;#39; - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/05/sony_ai_vision_model_benchmark/</link></item>
+<item><title>Gorge on Microsoft Store apps with 16-at-once installer - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/05/microsoft_multiapp_download/</link></item>
+<item><title>Black Hawk chown: DARPA takes helicopter pilots out of the air for $6M - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/05/pilotless_black_hawk_darpas/</link></item>
+<item><title>Uncle Sam lets Google take Wiz for $32B - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/05/googles_32b_wiz_acquisition_its/</link></item>
+<item><title>Oak Ridge lab bags $125M to bolt quantum onto supercomputers - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/05/oak_ridge_125m_funding/</link></item>
+<item><title>When Debian won&amp;#39;t do, Devuan 6 &amp;#39;Excalibur&amp;#39; Linux makes the grade - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/05/devuan_6_excalibur_is_out/</link></item>
+<item><title>AMD taking AI fight to Nvidia with Helios rack-scale system - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/05/amd_pins_its_hopes_on/</link></item>
+<item><title>Two-fifths of SAP Americas users yet to ditch legacy ERP - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/05/two_years_out_from_support/</link></item>
+<item><title>AMD red-faced over random-number bug that kills cryptographic security - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/05/amd_promises_to_fix_chips/</link></item>
+<item><title>Attackers abuse Gemini AI to develop ‘Thinking Robot’ malware and data processing agent for spying purposes - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/05/attackers_experiment_with_gemini_ai/</link></item>
+<item><title>Rust Foundation tries to stop maintainers corroding - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/05/rust_foundation_announces_maintainers_fund/</link></item>
+<item><title>Snowflake goes all out to woo PostgreSQL developers with lakehouse extensions - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/05/snowflake_postgresql_push/</link></item>
+<item><title>M&amp;amp;S pegs cyberattack cleanup costs at £136M as profits slump - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/05/ms_pegs_cyberattack_cleanup_costs/</link></item>
+<item><title>Power crunch threatens to derail AI datacenter construction - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/05/supply_chain_woes_and_power/</link></item>
+<item><title>Famed software engineer DJB tries Fil-C… and likes what he sees - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/05/djb_tries_filc_and_approves/</link></item>
+<item><title>UK agri dept spent hundreds of millions upgrading to Windows 10 – just in time for end of support - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/05/uk_defra_dept_spent_312m_window_10/</link></item>
+<item><title>Trump turnabout sees him re-nominate amateur astronaut Jared Isaacman to run NASA - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/05/jared_isaacman_nasa_administrator_again/</link></item>
+<item><title>Supermicro admits building AI infrastructure is a tricky, low-margin business ... for now - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/05/supermicro_q1_2026/</link></item>
+<item><title>Tanzania back online after politically motivated five-day outage - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/05/tanzania_internet_outage/</link></item>
+<item><title>Amazon complains that Perplexity&amp;#39;s agentic shopping bot is a terrible customer - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/05/amazon_perplexity_comet_legal_threat/</link></item>
+<item><title>Google imagines out of this world AI - running on orbital datacenters - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/04/google_takes_ai_aspirations_orbital/</link></item>
+<item><title>Uncle Sam wants to scan your iris and collect your DNA, citizen or not - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/04/dhs_wants_to_collect_biometric_data/</link></item>
+<item><title>Copilot can replace Search in latest Windows 11 test builds, but it&amp;#39;s not a good idea - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/04/microsoft_windows_copilot_search/</link></item>
+<item><title>Deploying to Amazon&amp;#39;s cloud is a pain in the AWS younger devs won&amp;#39;t tolerate - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/04/aws_genz_misery_nope/</link></item>
+<item><title>IBM cutting several thousand jobs in latest layoffs - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/04/ibm_cutting_several_thousand_jobs/</link></item>
+<item><title>UK judge delivers a &amp;#39;damp squib&amp;#39; in Getty AI training case, no clear precedent set - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/04/uk_court_getty_stability_ai/</link></item>
+<item><title>Russian spies pack custom malware into hidden VMs on Windows machines - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/04/russian_spies_pack_custom_malware/</link></item>
+<item><title>Consumer Financial Protection Bureau&amp;#39;s security falls apart amid layoffs - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/04/us_cfpb_infosec_posture_crumbles/</link></item>
+<item><title>Game on! Penguin levels up as Linux finally cracks 3% on Steam - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/04/steam_on_linux_numbers_up/</link></item>
+<item><title>Python slithers faster by adding lazy imports that load code after startup - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/04/python_to_embrace_lazy_imports/</link></item>
+<item><title>Coders paired with bot buddies work fast, but take too many shortcuts - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/04/humanhuman_code_pairs_more_talkative/</link></item>
+<item><title>Tesla board wants to grant Musk $1T in stock, Norway wealth fund says nope - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/04/norway_wealth_fund_says_ingen/</link></item>
+<item><title>Win10 still clings to over 40% of devices weeks after Microsoft pulls support - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/04/windows_10_eol/</link></item>
+<item><title>Invasion of the message body snatchers! Teams flaw allowed crims to impersonate the boss - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/04/microsoft_teams_bugs_could_let/</link></item>
+<item><title>$10B + spent on liquid cooling this week – it&amp;#39;s only Tuesday - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/04/eaton_and_vertiv_both_acquire/</link></item>
+<item><title>Cybercrooks getting violent more often to secure big payouts in Europe - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/04/cybercriminals_increasingly_rely_on_violence/</link></item>
+<item><title>OpenAI API moonlights as malware HQ in Microsoft’s latest discovery - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/04/openai_api_moonlights_as_malware/</link></item>
+<item><title>Keeping the lights on takes up nearly all police IT spending in England and Wales - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/04/england_wales_it_policing_budget/</link></item>
+<item><title>&amp;#39;What the hell, Microsoft?&amp;#39; Users hit with incorrect ESU and LTSC Win10 out-of-support messages - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/04/windows_10_out_of_support_update/</link></item>
+<item><title>AI&amp;#39;s trillion dollar deal wheel bubbling around Nvidia, OpenAI - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/04/the_circular_economy_of_ai/</link></item>
+<item><title>Ministry of Defence&amp;#39;s F-35 blunder: £57B and counting - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/04/uk_f35_capability_crimped_by/</link></item>
+<item><title>Google Cloud suspended customer&amp;#39;s account three times, for three different reasons - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/04/google_cloud_suspended_customers_account/</link></item>
+<item><title>China&amp;#39;s president Xi Jinping jokes about backdoors in Xiaomi smartphones - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/04/chinas_president_xi_jinping_jokes/</link></item>
+<item><title>LLMs are lousy at reading Asian languages, finds Singapore’s Grab - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/04/grab_vision_llm_project/</link></item>
+<item><title>AN0M, the backdoored ‘secure’ messaging app for criminals, is still producing arrests after four years - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/04/an0m_ironside_more_arrests/</link></item>
+<item><title>Cisco suggests a stubby chassis, shrunken servers and router, to tame the edge - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/04/cisco_unified_edge/</link></item>
+<item><title>Palantir CEO celebrates one cash culture to rule them all - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/04/palantir_ceo_celebrates_one_culture/</link></item>
+<item><title>The Astounding Pop Mech Show - Popular Mechanics</title><link>https://www.popularmechanics.com/astounding-pop-mech-show/</link></item>
 </channel></rss>

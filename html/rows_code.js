@@ -17,6 +17,12 @@ function input_style_klr2(){
     ['input_date_start_klr2',8],
     ['input_date_step_klr2',3],
     ['input_date_format_klr2',8],
+    ['input_font_family_jieba_klr2',8],
+    ['input_bgcolor_jieba_klr2',5],
+    ['input_ratio_jieba_klr2',3],
+    ['input_width_jieba_klr2',4],
+    ['input_height_jieba_klr2',4],
+
     ];
     var dom_list=input_size_b(input_list,'id',false,true);
     for (let one_dom of dom_list){
@@ -381,7 +387,6 @@ function option_generate_klr2(){
     ['ahref','a href'],
     ['ahref_encode','a href encode'],
     ['movefiles','Move Files'],
-    ['jieba','分词'],
     ['links_html','链接和文本'],
     ['reverse','段落倒转'],
     ['reverse_str','每段文字倒转'],
@@ -569,4 +574,40 @@ function leaflet_klr2(csid=''){
         }
         localStorage.setItem('recent_rows_span_id',csid);
     }
+}
+
+function jieba_klr2(){
+    var otextarea = document.getElementById('textarea_rows_content');
+    var str_t,arr_t;
+    [str_t,arr_t]=jieba_klr_b(otextarea.value);
+    var ostatus=document.getElementById('textarea_status');
+    ostatus.value = str_t.join(' ')+'\n\n'+arr_t;
+    ostatus.scrollIntoView();
+    
+    wordcloud_klr2(arr_t);
+}
+
+function wordcloud_klr2(csarr=false){
+    if (csarr===false){
+        var list_t=document.getElementById('textarea_rows_content').value.trim().match(/^\[".*",\s*\d+\]\s*,$/mg) || [];
+        try {
+            csarr=eval('['+list_t.join('\n')+']');
+        } catch (error){
+            alert(error);
+            console.log(error);
+            return;
+        }
+    }
+    
+    var ratio=parseFloat(document.getElementById('input_ratio_jieba_klr2').value.trim());
+    
+    for (let blxl=0,lent=csarr.length;blxl<lent;blxl++){
+        csarr[blxl]={ text: csarr[blxl][0], size: csarr[blxl][1]*ratio};
+    }
+    
+    var font_family=document.getElementById('input_font_family_jieba_klr2').value.trim();
+    var bgcolor=document.getElementById('input_bgcolor_jieba_klr2').value.trim();
+    var width=parseInt(document.getElementById('input_width_jieba_klr2').value.trim());
+    var height=parseInt(document.getElementById('input_height_jieba_klr2').value.trim());
+    wordcloud_generate_d3_b('#div_status',width,height,csarr,font_family,bgcolor);
 }
