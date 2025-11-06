@@ -367,7 +367,7 @@ function search_html_offline_file_browser(cslist,csid,show_review_bookmark=false
     var odiv=document.getElementById(csid);
     if (!odiv){return;}
     var bljg='<table border=0 width=100% cellpading=0 cellspacing=0><tr style="background-color:'+scheme_global['button']+';"><th>No.</th>';
-    var jsfn='td_offline_file_browser(\''+current_td_global+'\');current_2_html_offline_file_browser();'; //search_offline_file_browser()';
+    var jsfn='td_offline_file_browser(\''+current_td_global+'\');current_2_html_offline_file_browser();';
     var list_t=['Disk','Path','Filename','File Size','Modified Date','Multimedia<br />Length'];
     for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         bljg=bljg+'<th style="cursor:pointer;" onclick="sort_offline_file_browser('+blxl+',true); '+jsfn+';">'+list_t[blxl]+'</th>';
@@ -1154,13 +1154,13 @@ function menu_offline_file_browser(){
     var str_t=klmenu_hide_b('#top');
     var blparent=menu_parent_node_b(str_t);
     
-    var col_name=['Disk','Path','Filename','File Size','Modified Date','Multimedia Length','Tag','TF Name'];
+    var col_name=['Disk','Path','Filename','File Size','Modified Date','Multimedia Length','Tag','TF Name','File path & name Length'];
     for (let blxl=0,lent=col_name.length;blxl<lent;blxl++){
         col_name[blxl]='<option value='+blxl+'>'+col_name[blxl]+'</option>';
     }
     
      var klmenu1=[
-    '<span class="span_menu"><select id="select_raw_sort_id_ofb" style="height:2rem;">'+col_name.join('\n')+'</select> <span class="aclick" onclick="sort_offline_file_browser(document.getElementById(\'select_raw_sort_id_ofb\').value,false);'+blparent+'">排序</span></span>',    
+    '<span class="span_menu"><select id="select_raw_sort_id_ofb" style="height:2rem;">'+col_name.join('\n')+'</select> <span class="aclick" onclick="sort_offline_file_browser(document.getElementById(\'select_raw_sort_id_ofb\').value,false);'+blparent+'">排序</span></span>',
     
     '<span class="span_menu" style="font-size:0.85rem; line-height:2rem;">分组2：<select id="select_raw_sub_group1_id_ofb">'+col_name.join('\n')+'</select><br />分组3：<select id="select_raw_sub_group2_id_ofb">'+col_name.join('\n')+'</select><br />次数：<input type="number" id="input_group_count_min_ofb" min=1 value=2 / > - <input type="number" id="input_group_count_max_ofb" min=1 value=2 / ><br /><span class="oblong_box" onclick="group_count_offline_file_browser();'+blparent+'">当前条件分组统计指定次数列</span></span>',    
 
@@ -1212,7 +1212,8 @@ function menu_offline_file_browser(){
     var klmenu_statistics=[
     '<span class="span_menu" onclick="'+str_t+'statistics_show_offline_file_browser();">文件数统计</span>',
     '<span class="span_menu" onclick="'+str_t+'disks_size_date_offline_file_browser();">磁盘大小和日期统计</span>',
-    '<span class="span_menu" onclick="'+str_t+'diff_all_offline_file_browser();">Diff All</span>',    
+    '<span class="span_menu" onclick="'+str_t+'diff_all_offline_file_browser();">Diff All</span>', 
+    '<span class="span_menu" onclick="'+str_t+'statistics_lengthy_offline_file_browser();">超长路径和文件名统计</span>',
     ];
     
      var klmenu_link=[
@@ -1229,7 +1230,7 @@ function menu_offline_file_browser(){
     ];    
     klmenu_link.push(menu_container_b(str_t,group_list,'光盘柜：'));
     
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'💾','18rem','','1rem')+klmenu_b(klmenu2,'🔀','10rem','','1rem')+klmenu_b(klmenu_statistics,'🧮','12rem','','1rem')+klmenu_b(klmenu_config,'⚙','18rem','','1rem')+(is_local_b()?klmenu_b(klmenu_link,'L','16rem','','1rem'):''),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'💾','18rem','','1rem')+klmenu_b(klmenu2,'🔀','10rem','','1rem')+klmenu_b(klmenu_statistics,'🧮','14rem','','1rem')+klmenu_b(klmenu_config,'⚙','18rem','','1rem')+(is_local_b()?klmenu_b(klmenu_link,'L','16rem','','1rem'):''),'','0rem')+' ');
     
     klmenu_check_b('span_kmg_ofb',true);            
     klmenu_check_b('span_reg_ofb',true);       
@@ -1242,6 +1243,43 @@ function menu_offline_file_browser(){
     ['input_return_max_rows_ofb',6],
     ];
     input_size_b(input_list,'id');
+}
+
+function statistics_lengthy_offline_file_browser(){
+    var username=prompt('输入用户名称');
+    if (username==null){return;}
+    
+    const encoder = new TextEncoder();
+    var result_t=[];
+    for (let item of offline_file_data_raw_global){
+        switch (item[0]){
+            case 'wikiuploads':
+                var prepath='/home/'+username+'/';
+                break;
+            case 'klmusic':
+                var prepath='/home/'+username+'/KLData/';
+                break;
+            default:
+                var prepath='/media/'+username+'/';
+        }
+        
+        var blmark=['',''];
+        if (encoder.encode(prepath+item[0]+'/'+item[1]).length>4096){
+            blmark[0]='📏';
+        }
+        
+        if (encoder.encode(item[2]).length>255){
+            blmark[1]='📐';
+        }
+
+        if (blmark[0]=='' && blmark[1]==''){continue;}
+        result_t.push(prepath+item[0]+'/'+item[1]+item[2]+blmark.join(''));
+    }
+    result_t.sort();
+    var odiv=document.getElementById('div_statistics');
+    odiv.innerHTML='<h3>超长路径和文件名</h3>'+array_2_li_b(result_t)+'<p>'+close_button_b('div_statistics','none')+'</p>';
+    odiv.style.display='block';
+    odiv.scrollIntoView();
 }
 
 function tf_ssd_batch_open_offline_file_browser(csno){
@@ -1351,6 +1389,7 @@ function file_list_offline_file_browser(){
     var odiv=document.getElementById('div_statistics');
     var bljg='<p><input id="input_flist_filter_ofb" onkeyup="if (event.key==\'Enter\'){filelist_filter_offline_file_browser(this.value);}"></p>';
     bljg=bljg+array_2_li_b(result_t,'li','ol','ol_flist_ofb');
+    
     bljg=bljg+'<p align=right>';
     bljg=bljg+'<span class="aclick" onclick="document.getElementById(\'input_flist_filter_ofb\').scrollIntoView();">head</span>';
     bljg=bljg+'<span class="aclick" onclick="filelist_disk_count_offline_file_browser();">磁盘数</span>';    

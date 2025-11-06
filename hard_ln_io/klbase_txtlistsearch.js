@@ -3869,7 +3869,7 @@ function digest_temp_add_kltxt_b(do_fix=false){
     
     var right_strings=' rows: '+list_t.length+' <span id="span_digest_temp_status"></span></p>';    
 
-    var blstr=textarea_with_form_generate_b('textarea_digest_txtlistsearch','height:4rem;',left_strings,'全选,复制,发送到临时记事本,发送地址',right_strings,'','form_digest_textarea',false,'',false,'','oblong_box',true,'margin:0.5rem');  //'\n'.repeat(list_t.length)
+    var blstr=textarea_with_form_generate_b('textarea_digest_txtlistsearch','height:4rem;',left_strings,'全选,复制,发送到临时记事本,发送地址,↑,↓',right_strings,'','form_digest_textarea',false,'',false,'','oblong_box',true,'margin:0.5rem');
 
     var odiv=document.getElementById('divhtml2');
     odiv.innerHTML=bljg+blstr;
@@ -3881,6 +3881,7 @@ function digest_temp_add_kltxt_b(do_fix=false){
     '<span class="span_menu" onclick="'+str_t+'digest_temp_show_kltxt_b(true);">显示全部临时摘要</span>',
     '<span class="span_menu" onclick="'+str_t+'digest_temp_delete_kltxt_b(true);">清除当前书籍所有临时摘要</span>',
     '<span class="span_menu" onclick="'+str_t+'digest_temp_delete_kltxt_b();">清除当前书籍最新添加的一条临时摘要</span>',
+    '<span class="span_menu" onclick="'+str_t+'digest_temp_copy1_kltxt_b();">复制编辑框第一条内容</span>',
     ];
     document.getElementById('p_digest_button').insertAdjacentHTML('afterbegin',klmenu_b(digest_menu,'🔻','21rem','0.8rem','0.9rem','','','menu_temp_digest')+' ');
     
@@ -3891,6 +3892,11 @@ function digest_temp_add_kltxt_b(do_fix=false){
         }
     }
     location.href='#divhtml2';
+}
+
+function digest_temp_copy1_kltxt_b(){
+    var blstr=document.getElementById('textarea_digest_txtlistsearch').value.trim().split('\n')[0];
+    copy_2_clipboard_b(blstr);
 }
 
 function div_digest_bottom_set_kltxt_b(){
