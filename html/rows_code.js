@@ -43,7 +43,7 @@ function do_type_klr2(cstype){
         case '插入':
             var lstr=document.getElementById('taddstr1').value;
             var rstr=document.getElementById('taddstr2').value;
-            add_line_str_klr_b(lstr,rstr);
+            add_line_str_klr_b(lstr,rstr,'textarea_rows_content',document.getElementById('checkbox_trim_insert_klr2').checked);
             break;
         case '行号':
         case 'ed2k':

@@ -121,19 +121,22 @@ function blank_rows_wiki_type_klr_b(csid_or_csstr='textarea_rows_content',cstype
 }
 
 //插入行首行尾
-function add_line_str_klr_b(lstr='',rstr='',csid='textarea_rows_content'){   
+function add_line_str_klr_b(lstr='',rstr='',csid='textarea_rows_content',do_trim=false){   
 	var otextarea = document.getElementById(csid);
 	var blcontent = otextarea.value;
-	
+	if (do_trim){
+        blcontent=blcontent.trim();
+    }
+    
 	if (lstr!==''){
-		blcontent = blcontent.replace(new RegExp('\n','gm'),'\n'+lstr);
+		blcontent = blcontent.replace(/\n/g,'\n'+lstr);
 		if (blcontent.indexOf('\n')!==0){
             blcontent=lstr+blcontent;
         }
 	}
 	
     if (rstr!==''){
-		blcontent = blcontent.replace(new RegExp('\n','gm'),rstr+'\n');
+		blcontent = blcontent.replace(/\n/g,rstr+'\n');
 		if (blcontent.lastIndexOf('\n')!==(blcontent.length-1)){
             blcontent=blcontent+rstr;
         }

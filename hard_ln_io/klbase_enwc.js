@@ -402,7 +402,7 @@ function days_enwc_b(only_plan=false){
 	var date1_tmp=default_date_b('',true);
 	var year_tmp=date1_tmp.getFullYear();
 	
-    var wordscount=[2022,15000];
+    var wordscount=[2025,18750];
     var year_increment=1250;    //确保显示万位整数 - 保留注释
 
     var not_this_year=false;
@@ -494,7 +494,8 @@ function days_enwc_b(only_plan=false){
     var blplan=sub_days_enwc_b_plan(max_everyday,blint,blvalue,true);
     
     var max_everyday_ceil=Math.max(2,Math.ceil(max_everyday));
-    for (let blxl=max_everyday_ceil;blxl<5;blxl++){
+
+    for (let blxl=Math.max(3,Math.min(4,max_everyday_ceil));blxl<7;blxl++){ //不含7 - 保留注释
         if (blxl!==max_everyday){
             blplan=blplan+sub_days_enwc_b_plan(blxl,blint,blvalue);
         }

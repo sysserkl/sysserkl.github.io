@@ -438,6 +438,10 @@ function new_old_word_list_enbook_b(word_list,check_types=true,csendata_set=fals
 function get_new_words_arr_html_enbook_b(cstype,all_words_set,new_words_set,old_words_set,rare_words_set,new_words_set10_size,div_id){
     //cstype: 1 全部单词 2 未收录 3 已收录 4 旧单词js_wiki格式 5 稀有旧单词 6 稀有旧单词js_wiki格式 7 新单词js_wiki格式 - 保留注释
     //-----------------------
+    if (typeof en_words_book_newwords_continue_global == 'undefined'){
+        en_words_book_newwords_continue_global=false;
+    }
+    
     if (en_words_book_newwords_continue_global){
         new_words_continue_enbook_b(new_words_set.size,new_words_set10_size);
         return;
@@ -470,6 +474,8 @@ function get_new_words_arr_html_enbook_b(cstype,all_words_set,new_words_set,old_
     var odiv=document.getElementById(div_id);
     if (odiv){
         odiv.innerHTML='<div id="div_sub_words">'+bljg+'</div>';
+    } else {
+        console.log('未发现 id',div_id);
     }
 }
 

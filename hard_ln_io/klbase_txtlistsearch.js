@@ -350,9 +350,15 @@ function txtmenus_kltxt_b(cstype=''){
         
     menu_general=menu_general.concat([
     '<span id="span_add_zero_reading_lines_txtlistsearch" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 阅读行数补零</span>',
-    '<span class="span_menu" onclick="'+str_t+'new_words_kltxt_b([2],\'exclude\',true);">当前页面不在例句中的生词</span>',
+    //'<span class="span_menu" onclick="'+str_t+'new_words_kltxt_b([2],\'exclude\',true);">当前页面不在例句中的生词</span>',
     ]);    
 
+    var group_list=[
+    ['当前页面不在例句中的生词','new_words_kltxt_b([2],\'exclude\',true);',true],
+    ['摘要中的旧单词','old_words_in_digest_kltxt_b();',true],
+    ];    
+    menu_general.push(menu_container_b(str_t,group_list,''));
+    
     var group_list=[
     ['返回阅读页面','getlines_kltxt_b();',true],
     ['溢出调整','content_horizontal_overflow_check_kltxt_b();',true],
@@ -549,6 +555,10 @@ function content_horizontal_overflow_check_kltxt_b(){
     var ocontainer=document.getElementById('divhtml');
     var ospans=ocontainer.querySelectorAll('span.txt_content');
     doms_horizontal_overflow_check_b(ocontainer,ospans);
+}
+
+function old_words_in_digest_kltxt_b(){
+    get_new_words_arr_set_enbook_b(4,Array.from(digest_special_raw_global['*']).join(' '),'divhtml')
 }
 
 function line_no_show_hide_kltxt_b(is_dry=false,ocontainer=false){
@@ -3578,10 +3588,12 @@ function digest_sort_kltxt_b(show_html=true){
     if (show_html){
         result_t=array_split_by_col_b(result_t,[1]);
         
-        var bljg='<p><textarea style="height:30rem;">'+result_t.join('\n')+'</textarea></p>';
-        bljg=bljg+'<p style="font-size:0.9rem;">原摘要数：'+digest_global.length+'，其中<b>#</b>开头的摘要有：'+hash_count+'；原摘要无重复数：'+new Set(digest_global).size+'；#NO# hash摘要数：'+hash_len+'；*摘要数：'+asterisk_len+'；整理后：'+result_t.length+'</p>';
-        bljg=bljg+'<p  style="font-size:0.9rem;">注：原摘要的数字形式会转化为文字形式。原摘要中的<b>#</b>会排在最前面。</p>';
-        document.getElementById('divhtml').innerHTML=bljg;
+        var bljg=textarea_with_form_generate_b('textarea_digest_sort_kltxt_b','height:10rem;','<p>','清空,复制,发送到临时记事本,发送地址','</p>');
+
+        var buttons='<p style="font-size:0.9rem;">原摘要数：'+digest_global.length+'，其中<b>#</b>开头的摘要有：'+hash_count+'；原摘要无重复数：'+new Set(digest_global).size+'；#NO# hash摘要数：'+hash_len+'；*摘要数：'+asterisk_len+'；整理后：'+result_t.length+'</p>';
+        buttons=buttons+'<p  style="font-size:0.9rem;">注：原摘要的数字形式会转化为文字形式。原摘要中的<b>#</b>会排在最前面。</p>';
+        document.getElementById('divhtml').innerHTML=bljg+buttons;
+        document.getElementById('textarea_digest_sort_kltxt_b').value=result_t.join('\n');
     }
     console.log('digest_sort_kltxt_b() 费时：'+(performance.now() - t0) + ' milliseconds');
     return result_t;
