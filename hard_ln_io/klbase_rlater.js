@@ -191,9 +191,13 @@ function manage_item_rlater_b(csid,cstype='copy text'){
         return;
     }
     
+    oa.style.backgroundColor=scheme_global['pink'];
     switch (cstype){
         case 'copy text':
             otextarea.value=oa.innerText;
+            break;
+        case 'copy word':
+            otextarea.value=((oa.innerText.split(' - ')[0].replace(/_/g,' ').match(/[a-z\s\'\-]+/i) || [''])[0]).trim();
             break;
         case 'copy url':
             otextarea.value=oa.href;
@@ -317,19 +321,25 @@ function delete_one_rlater_b(event=false,csid='',is_yes=false,button_id='',prgna
         if (wikilink.length>0){
             bljg=bljg+'<p>klwiki: '+wikilink.join(' ')+'</p>';
         }
+        
         bljg=bljg+'<p style="line-height:1.8rem;margin-top:0.5rem;">';
         bljg=bljg+'<span class="oblong_box" style="margin-right:1rem;" onclick="delete_one_rlater_b(false,\''+csid+'\',true,\''+button_id+'\',\''+prgname+'\');close_popup_rlater_b();"><b>'+(delete_type_rlater_global=='仅做标记不删除记录'?'添加删除标记':'删除')+'</b></span> ';      
-        bljg=bljg+'修改：<span class="oblong_box" onclick="manage_item_rlater_b(\''+csid+'\',\'edit title\');">标题</span> ';          
-        bljg=bljg+'<span class="oblong_box" onclick="manage_item_rlater_b(\''+csid+'\',\'edit link\');">链接</span> ';          
+        bljg=bljg+'<span style="font-size:large;">'
+        bljg=bljg+'𝐄 <span class="span_box" onclick="manage_item_rlater_b(\''+csid+'\',\'edit title\');" title="编辑标题">🅃</span> ';          
+        bljg=bljg+'<span class="span_box" onclick="manage_item_rlater_b(\''+csid+'\',\'edit link\');" title="编辑链接">🄻</span> ';          
 
-        bljg=bljg+'复制：<span class="oblong_box" onclick="manage_item_rlater_b(\''+csid+'\');">标题</span> ';
-        bljg=bljg+'<span class="oblong_box" onclick="manage_item_rlater_b(\''+csid+'\',\'copy url\');">链接</span> ';
-        bljg=bljg+'<span class="oblong_box" onclick="manage_item_rlater_b(\''+csid+'\',\'copy wiki\');">WIKI</span> ';
+        bljg=bljg+'𝐂 <span class="span_box" onclick="manage_item_rlater_b(\''+csid+'\');" title="复制标题">🅃</span> ';
+        bljg=bljg+'<span class="span_box" onclick="manage_item_rlater_b(\''+csid+'\',\'copy url\');" title="复制链接">🄻</span> ';
+        bljg=bljg+'<span class="span_box" onclick="manage_item_rlater_b(\''+csid+'\',\'copy wiki\');" title="编辑WIKI格式">🅆</span> ';
+        bljg=bljg+'<span class="span_box" onclick="manage_item_rlater_b(\''+csid+'\',\'copy word\');" title="复制单词">🄴</span> ';
         
         if (is_local_b()){
-            bljg=bljg+'<span class="oblong_box" onclick="manage_item_rlater_b(\''+csid+'\',\'selenium\');" title="Selenium">S</span> ';
+            bljg=bljg+'<span class="span_box" onclick="manage_item_rlater_b(\''+csid+'\',\'selenium\');" title="打开 selenium 链接">🅂</span> ';
         }
-        bljg=bljg+'<span class="span_box" onclick="close_popup_rlater_b();">❌</span></p>';
+        bljg=bljg+'</span>';
+        bljg=bljg+'<span class="span_box" onclick="close_popup_rlater_b();">❌</span>';
+        bljg=bljg+'</p>';
+        
         popup_event_div_b(event,'div_confirm_delete_one_record_rlater',bljg,'');
         mouseover_mouseout_oblong_span_b(document.querySelectorAll('div#div_confirm_delete_one_record_rlater span.oblong_box'));
     }
