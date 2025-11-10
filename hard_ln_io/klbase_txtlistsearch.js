@@ -2902,7 +2902,7 @@ function img_load_check_kltxt_b(){
 
     var is_group_file=is_group_file_kltxt_b();
     var imgpath=img_path_kltxt_b();
-    var csmax=(is_local_b()?5:10);    
+    var csmax=(is_local_b()?10:20);    
     var group_t, bllen, blxl;
 
     if (typeof mini_img_index_global == 'undefined'){
@@ -2949,16 +2949,14 @@ function img_key_2_base64_kltxt_b(img_name,is_group_file,group_no=false){
     }
 
     for (let group_no of group_no_list){
-        if (eval('typeof mini_img_list'+group_no+'_global') !== 'undefined'){
-            if (group_no!==''){
-                try {
-                    var csarray=eval('mini_img_list'+group_no+'_global');
-                    base64_value=sub_img_key_2_base64_kltxt_b_one_arr(csarray);
-                    if (base64_value!==''){break;}
-                } catch (error){
-                    console.log(error);
-                }
-            }
+        if (eval('typeof mini_img_list'+group_no+'_global') == 'undefined'){continue;}
+        if (group_no===''){continue;}
+        try {
+            var csarray=eval('mini_img_list'+group_no+'_global');
+            base64_value=sub_img_key_2_base64_kltxt_b_one_arr(csarray);
+            if (base64_value!==''){break;}
+        } catch (error){
+            console.log(error);
         }
     }
     

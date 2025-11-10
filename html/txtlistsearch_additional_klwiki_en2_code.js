@@ -7,6 +7,7 @@ function menu_more_kltxt_klwiki_en2(){
     '<span class="span_menu" onclick="'+str_t+'days_kltxt_klwiki_en2();">今日段落阅读</span>',
     '<span class="span_menu" onclick="'+str_t+'batch_search_form_kltxt_klwiki_en2();">单词批量查找</span>',
     '<span class="span_menu" onclick="'+str_t+'common_rare_old_words_kltxt_klwiki_en2();">当前范围常见稀有旧单词</span>',
+    '<span class="span_menu" onclick="'+str_t+'rare_old_words_in_chapter_kltxt_klwiki_en2();">稀有旧单词章节统计</span>',
     '<a href="../jsdata/words/enwords_sentence_data.js'+file_date_parameter_b()+'" onclick="'+str_t+'" target=_blank>enwords_sentence_data.js</a>',    
     
     ];
@@ -44,6 +45,47 @@ function menu_more_kltxt_klwiki_en2(){
     
     var blstr=klmenu_b(klmenu1,'🇬🇧','30rem','1rem','1rem','30rem');
     ospan.outerHTML=blstr;
+}
+
+function rare_old_words_in_chapter_kltxt_klwiki_en2(){
+    var t0 = performance.now();
+
+    var result_t=[];
+    var chapter_name='';
+    var rare_list=[];
+    for (let arow of filelist){
+        if (arow.startsWith('=== ') && arow.endsWith(' ===')){
+            if (rare_list.length>0){
+                var set_t=array_unique_b(rare_list);
+                set_t.sort();
+                result_t.push([chapter_name,rare_list.length,set_t.length,set_t]);
+            }
+            chapter_name=arow.slice(4,-4);
+            rare_list=[];
+            continue;
+        }
+        
+        var list_t=rare_old_words_get_kltxt_klwiki_en2(arow);
+        if (list_t.length==0){continue;}
+        for (let item of list_t){
+            rare_list.push(item.trim().slice(1,));
+        }
+    }
+    if (rare_list.length>0){
+        var set_t=array_unique_b(rare_list);  
+        set_t.sort();  
+        result_t.push([chapter_name,rare_list.length,set_t.length,set_t]);
+    }    
+    
+    result_t.sort();
+    result_t.sort(function (a,b){return a[1]>b[1]?-1:1;});
+    result_t.sort(function (a,b){return a[2]>b[2]?-1:1;});
+    for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
+        var item=result_t[blxl];
+        result_t[blxl]='<tr><td width=1%>'+item[0]+'</td><td width=1% align=right>'+item[1]+'</td><td width=1% align=right>'+item[2]+'</td><td width=90% style="word-break:break-all;word-wrap:break-word;font-size:small;">'+item[3].join('|')+'</td></tr>';
+    }
+    document.getElementById('divhtml').innerHTML='<table class="table_common">'+result_t.join('\n')+'</table>';
+    console.log('rare_old_words_in_chapter_kltxt_klwiki_en2() 费时：'+(performance.now() - t0) + ' milliseconds');
 }
 
 function rare_old_words_get_kltxt_klwiki_en2(arow){

@@ -499,6 +499,7 @@ function elm_get_money_b(csstr,csdate,csaddress,to_line_style=false){
     var blamount='';
     var amount_count=0;
     var price_count=0;
+    var blunit='';
     for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         var item=list_t[blxl].trim();
         
@@ -514,8 +515,9 @@ function elm_get_money_b(csstr,csdate,csaddress,to_line_style=false){
         
         if (blname==''){continue;}
         
-        if (item.match(/^x\s*\d+$/g)!==null){
-            blamount=item.replace(/^x\s*(\d+)$/g,'$1');
+        if (item.match(/^x\s*\d+.?$/g)!==null){ //含有1个单位 - 保留注释
+            blamount=item.replace(/^x\s*(\d+).?$/g,'$1');
+            blunit=item.replace(/^x\s*\d+(.?)$/g,'$1');
             amount_count=amount_count+1;
             continue;
         }
@@ -523,7 +525,7 @@ function elm_get_money_b(csstr,csdate,csaddress,to_line_style=false){
         if (blamount==''){continue;}
         
         if (item.match(/^¥[0-9\.]+$/)!==null){
-            result_t.push([blname,blamount,item.slice(1,)]);
+            result_t.push([blname,blamount,item.slice(1,),blunit]);
             blname='';
             blamount='';
             price_count=price_count+1;
@@ -548,7 +550,7 @@ function elm_get_money_b(csstr,csdate,csaddress,to_line_style=false){
 用户名:忽略
 登记日期:忽略
 登记时间:忽略
-单位:
+单位:`+item[3]+`
 数量:`+item[1]+`
 单价:
 总价:`+item[2]+`

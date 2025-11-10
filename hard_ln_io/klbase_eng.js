@@ -540,12 +540,7 @@ function sup_kleng_show_hide_b(ospan){
     popup_show_hide_b(oword,'');
 }
 
-function sup_kleng_words_b(csdisplay='none',ocontainer=false){
-    if (typeof enwords == 'undefined'){
-        console.log('未发现 enwords');
-        return;
-    }
-    
+function sup_kleng_words_b(csdisplay='none',ocontainer=false,cstimes=0){   
     if (ocontainer===false){
         var o_sups=document.querySelectorAll('sup.kleng');
     } else {
@@ -553,10 +548,24 @@ function sup_kleng_words_b(csdisplay='none',ocontainer=false){
     }
     
 	if (o_sups.length==0){return;}
-    
+
+    if (typeof enwords == 'undefined'){
+        if (cstimes>3){
+            console.log('未发现 enwords');
+        } else {
+            setTimeout(function (){sup_kleng_words_b(csdisplay,ocontainer,cstimes+1);},1000);
+        }
+        return;
+    }
+        
     var t0 = performance.now(); 
     
 	for (let one_sup of o_sups){
+        if (one_sup.querySelector('span.span_sup_word_icon')){
+            console.log('已存在 span.span_sup_word_icon');
+            return;
+        }
+        
         var word_t=one_sup.innerText;
         if (!word_t){return;}
         
@@ -575,7 +584,7 @@ function sup_kleng_words_b(csdisplay='none',ocontainer=false){
             }
         }
 	}
-    console.log('sup_kleng_words_b() 费时：'+(performance.now() - t0) + ' milliseconds');
+    console.log('sup_kleng_words_b() 等待次数：',cstimes,'费时：'+(performance.now() - t0) + ' milliseconds');
 }
 
 function line_enword_count_b(odiv,ocontent){
