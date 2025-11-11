@@ -768,9 +768,15 @@ function s2t_t2s_pair_b(){
 
     for (let key in cn_s2t_global){
         var blvalue=cn_s2t_global[key];
-        if (blvalue.length!==1){continue;}
+        if (blvalue.length!==1){
+            console.log('s2t 忽略',key,blvalue);
+            continue;
+        }
         if (cn_t2s_global[blvalue]==undefined){continue;}
-        if (cn_t2s_global[blvalue].length!==1){continue;}
+        if (cn_t2s_global[blvalue].length!==1){
+            console.log('t2s 忽略',blvalue,cn_t2s_global[blvalue]);
+            continue;
+        }
         if (key==blvalue){continue;}
         result_s2t[key]=blvalue;
         result_t2s[blvalue]=key;

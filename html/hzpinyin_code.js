@@ -698,8 +698,14 @@ function half_py_hzpy(cstype='py'){
     }
     
     var s2t_list={};
-    if (cstype=='s2t'){
-        s2t_list=s2t_t2s_pair_b()[0];
+    var t2s_list={};
+    switch (cstype){
+        case 's2t':
+            s2t_list=cn_s2t_global; //s2t_t2s_pair_b()[0];
+            break;
+        case 't2s':
+            t2s_list=cn_t2s_global; //s2t_t2s_pair_b()[1];
+            break;
     }
     
     var blstr=document.getElementById('textarea_search_hzpy').value.trim();
@@ -728,6 +734,9 @@ function half_py_hzpy(cstype='py'){
                     case 's2t':
                         blfound=(one_character in s2t_list);
                         break;
+                    case 't2s':
+                        blfound=(one_character in t2s_list);
+                        break;
                     case 'overlape':
                         blfound=true;
                         break;
@@ -749,7 +758,10 @@ function half_py_hzpy(cstype='py'){
                         done_py=true;
                         break;
                     case 's2t':
-                        result_t.push(s2t_list[one_character]);
+                        result_t.push(s2t_list[one_character].split(' ')[0]);
+                        break;
+                    case 't2s':
+                        result_t.push(t2s_list[one_character].split(' ')[0]);                        
                         break;
                     case 'overlape':
                         unicode_overlape_global.sort(randomsort_b);
