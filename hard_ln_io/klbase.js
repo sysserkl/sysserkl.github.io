@@ -2019,7 +2019,7 @@ function textarea_buttons_b(textarea_id,csbuttons,cstype='',csstyle='',span_clas
     }
     
     if (csbuttons.includes('clear textarea')){    
-        bljg=bljg+button_left+' onclick="document.getElementById(\''+textarea_id+'\').value=\'\';">Clear textarea'+button_right;
+        bljg=bljg+button_left+' onclick="document.getElementById(\''+textarea_id+'\').value=\'\';" title="Clear textarea">🫙'+button_right;
     } else if (csbuttons.includes('清空') || csbuttons.includes('clear')){    
         bljg=bljg+button_left+' onclick="document.getElementById(\''+textarea_id+'\').value=\'\';">Clear'+button_right;
     }
