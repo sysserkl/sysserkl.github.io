@@ -18,7 +18,7 @@ var search_sites_list_global=[
 ['https://www.dictionary.com/browse/','',0,'#6666cc','Dictionary.com','','ENG',''],
 ['https://www.howtopronounce.com/','',2,'','htp','','ENG',''],
 ['https://www.behindthename.com/name/','',2,'','btn','','ENG',''],
-['https://kaikki.org/dictionary/English/words/index.html?s=','',0,'#CC6600','kaikki','0','ENG',''], 
+['https://kaikki.org/dictionary/English/words/index.html?s=','',0,'#CC6600','kaikki','0m','ENG',''], 
 
 ['https://www.britannica.com/dictionary/','',0,'','britannicadict','','ENG',''],
 ['https://www.ldoceonline.com/dictionary/','',2,'','Longman','0','ENG',''],    
