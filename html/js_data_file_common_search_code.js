@@ -73,11 +73,11 @@ function init_common(){
     if (load_remote_data_jscm_global=='0' && !is_local_b()){
         eval(var_name_jscm_global+'=[]');   //设置默认值为空，只对非本地段起作用 - 保留注释
         if (!is_standalone_html_file_global){
-            file_dom_create_b([(js_additional_jscm_global==''?'':'js_additional_'+js_additional_jscm_global+'_code.js')]);
+            file_dom_create_b([(js_additional_jscm_global==''?'':'jsadd/js_additional_'+js_additional_jscm_global+'_code.js')]);
         }
     } else {
         if (!is_standalone_html_file_global){
-            file_dom_create_b([data_file_jscm_global,(js_additional_jscm_global==''?'':'js_additional_'+js_additional_jscm_global+'_code.js')]);
+            file_dom_create_b([data_file_jscm_global,(js_additional_jscm_global==''?'':'jsadd/js_additional_'+js_additional_jscm_global+'_code.js')]);
         }
     }
     

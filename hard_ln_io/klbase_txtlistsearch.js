@@ -3359,7 +3359,7 @@ function load_book_js_code_file_kltxt_b(){
     }
     //-----------------------
     if (txtbook_js_code_file_global==''){return;}
-    var file4=['txtlistsearch_additional_'+txtbook_js_code_file_global+'_code.js'];
+    var file4=['txtadd/txtlistsearch_additional_'+txtbook_js_code_file_global+'_code.js'];
     var file_list=klbase_addons_import_js_b([],[],[],file4,false,false);
     file_dom_create_b(file_list,true,'js');
     load_fn_b('menu_more_kltxt_'+txtbook_js_code_file_global,sub_load_book_js_code_file_kltxt_b_do);
@@ -3879,7 +3879,7 @@ function digest_temp_add_kltxt_b(do_fix=false){
     
     var right_strings=' rows: '+list_t.length+' <span id="span_digest_temp_status"></span></p>';    
 
-    var blstr=textarea_with_form_generate_b('textarea_digest_txtlistsearch','height:4rem;',left_strings,'全选,复制,发送到临时记事本,发送地址,↑,↓',right_strings,'','form_digest_textarea',false,'',false,'','oblong_box',true,'margin:0.5rem');
+    var blstr=textarea_with_form_generate_b('textarea_digest_txtlistsearch','height:4rem; background-color:transparent;',left_strings,'全选,复制,发送到临时记事本,发送地址,↑,↓',right_strings,'','form_digest_textarea',false,'',false,'','oblong_box',true,'margin:0.5rem');
 
     var odiv=document.getElementById('divhtml2');
     odiv.innerHTML=bljg+blstr;
