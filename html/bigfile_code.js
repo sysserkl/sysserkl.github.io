@@ -192,7 +192,7 @@ function batch_open_bigfile(cstype){
 function file_date_compare_bigfile(){
     var otextarea=document.getElementById('textarea_file_date_compare_bigfile');
     var blstr=otextarea.value.trim();
-    //每一行形如：60. /home/kl/klwebphp/PythonTools/file_rar_sn_terminal.py 2024-03-26 16:55:01 - 保留注释
+    //每一行形如：60. /home/username/aaa/file_rar_sn_terminal.py 2024-03-26 16:55:01 - 保留注释
     var list_t=blstr.split('\n');
     var file_dict={};
     for (let item of list_t){
