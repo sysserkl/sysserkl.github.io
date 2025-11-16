@@ -492,6 +492,7 @@ function txtmenus_kltxt_b(cstype=''){
     '<span class="span_menu" onclick="'+str_t+'statistics_kltxt_b();">Statistics</span>',    
     '<span class="span_menu" onclick="'+str_t+'counthz_kltxt_b();">不重复汉字数统计</span>',
     '<span class="span_menu" onclick="'+str_t+'count_characters_kltxt_b();">span.txt_content innterText 字符数统计</span>',
+    '<span class="span_menu" onclick="'+str_t+'words_distribution_kltxt_b();" title="格式：搜索关键词1,搜索关键词2|提前剔除关键词1,提前剔除关键词2，如：宝玉,黛玉|甄宝玉">span.txt_content innterText 关键词分回合统计</span>',
     '<span class="span_menu" onclick="'+str_t+'tw_kltxt_b();">繁体字统计</span>',     
     '<span class="span_menu" onclick="'+str_t+'booksthickness_form_kltxt_b();">书的厚度</span>',    
     '<span class="span_menu" onclick="'+str_t+'books_current_table_kltxt_b();">当前书目列表</span>',
@@ -772,6 +773,113 @@ function img_size_show_kltxt_b(){
 function img_resize_kltxt_b(){
     var oimgs=document.querySelectorAll('#divhtml img');    
     resize_batch_imgs_b(oimgs,false,'');
+}
+
+function words_distribution_kltxt_b(keep_list=false,replace_list=false,cshighlight=-1){
+    function sub_words_distribution_kltxt_b_h4(){
+        let str_list=[];
+        for (let arow of statistics_list){
+            str_list.push(arow[1].toString());
+            let oh4=document.getElementById('h4_kltxt_'+arow[0]);
+            if (oh4){
+                oh4.insertAdjacentHTML('beforeend','<span style="font-size:small;word-break:break-all;word-wrap:break-word;">('+arow[1]+')</span>');
+            }
+        }
+        console.log(str_list.join('\n'));
+    }
+    
+    function sub_words_distribution_kltxt_b_calculate(new_no=-1){
+        if (current_menu_no>=0){
+            keep_dict=object2array_b(keep_dict,true,2);
+            statistics_list.push([current_menu_no,keep_dict]);
+        }
+        current_menu_no=new_no;
+        sub_words_distribution_kltxt_b_dict_ini();
+    }
+    
+    function sub_words_distribution_kltxt_b_dict_ini(){
+        keep_dict={};
+        for (let key of keep_list){
+            keep_dict['k_'+key]=0;
+        }
+    }
+    
+    function sub_words_distribution_kltxt_b_one_step(){
+        if (blxl>bllen){
+            sub_words_distribution_kltxt_b_calculate();
+            
+            odiv.innerHTML=result_t.join('\n');
+            sub_words_distribution_kltxt_b_h4();
+            if (cshighlight===-1){
+                cshighlight=document.getElementById('input_highlight')?.checked || false;
+            }
+            if (cshighlight){
+                highlight_text_b(keep_list);
+            }
+            return;
+        }
+        
+        getlines_kltxt_b(blxl,blstep,true,false,false,false,false);
+        var ospans=odiv.querySelectorAll('span.txt_content');
+        
+        for (let one_span of ospans){
+            var blstr=one_span.innerText.trim();
+
+            var ono=one_span.parentNode.querySelector('span.txtsearch_kltxt_lineno');
+            if (ono){
+                var blno=parseInt(ono.innerText.slice(1,-1));
+                if (menu_no_list.includes(blno-1)){
+                    sub_words_distribution_kltxt_b_calculate(blno-1);
+                    result_t.push('<h4 id="h4_kltxt_'+(blno-1)+'">'+blstr+'</h4>');
+                    is_started=true;
+                    continue;
+                }
+            }
+        
+            for (let item of replace_list){
+                blstr=blstr.replace(new RegExp(item,'g'),'▢'.repeat(item.length));
+            }
+            
+            var match_list=blstr.split(new RegExp('('+keep_list.join(')|(')+')'));
+            for (let one_phrase of match_list){
+                if (one_phrase == undefined){continue;}
+                if (keep_list.includes(one_phrase)){
+                    keep_dict['k_'+one_phrase]=keep_dict['k_'+one_phrase]+1;
+                    continue;
+                }
+                blstr=blstr.replace(one_phrase,'▢'.repeat(one_phrase.length))
+            }
+            
+            result_t.push('<p style="line-height:120%; margin:0.5rem 0;font-size:small;word-break:break-all;word-wrap:break-word;"><span class="txt_content">'+blstr+'</span></p>');
+        }      
+                
+        blxl=blxl+blstep;
+        setTimeout(sub_words_distribution_kltxt_b_one_step,200);
+    }
+    //-----------------------
+    if (keep_list===false){
+        let list_t=document.getElementById('input_search').value.trim().split('|');
+        keep_list=list_t[0].split(',');
+        if (replace_list===false && list_t.length>1){
+            replace_list=list_t[1].split(',');
+        }
+    }
+    if (replace_list===false){
+        replace_list=[];
+    }
+    
+    var bllen=filelist.length;
+    var blxl=1;
+    var blstep=250;
+    var odiv=document.getElementById('divhtml');
+    var result_t=[];
+    var keep_dict={};
+    sub_words_distribution_kltxt_b_dict_ini();
+    var is_started=false;
+    var statistics_list=[];
+    var current_menu_no=-1;
+    var menu_no_list=array_split_by_col_b(kltxt_menulist_index_global,[0]);
+    sub_words_distribution_kltxt_b_one_step();
 }
 
 function count_characters_kltxt_b(){
