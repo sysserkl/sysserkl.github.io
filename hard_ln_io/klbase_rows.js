@@ -1016,36 +1016,41 @@ function links_and_text_klr_b(){
 	div_t.innerHTML=ahref+'<br />'+otextarea;
 }
 
-function rnd_str_klr_b(cstype='',cslines=0,csmin=0,csmax=0,csid='textarea_rows_content'){
+function rnd_str_klr_b(cstype=[],cslines=0,csmin=0,csmax=0,csid='textarea_rows_content'){
     cslines=parseInt(cslines);
     csmin=parseInt(csmin);
     csmax=parseInt(csmax);
+    
+    while (cstype.length<3){    //[cn,en,num] - 保留注释
+        cstype.push(1);
+    }
+
     var bljg=[];
-    switch (cstype){
-        case 'cn':
+
+    if (cstype[0]){
+        if (!cstype[1] && !cstype[2]){
             for (let blxl=1;blxl<=cslines;blxl++){
                 var blstr=random_chs_b(randint_b(csmin,csmax));
                 bljg.push(blstr);
-            }
-            break;
-        case 'en':
-            for (let blxl=1;blxl<=cslines;blxl++){
-                var blstr=randstr_b(randint_b(csmin,csmax),false);
-                bljg.push(blstr);
-            }
-            break;
-        default:
+            }        
+        } else {
             for (let blxl=1;blxl<=cslines;blxl++){
                 var bllen=randint_b(csmin,csmax);
-                var blstr=randstr_b(bllen)+random_chs_b(bllen);
+                var blstr=randstr_b(bllen,cstype[2],cstype[1])+random_chs_b(bllen);
                 var list_t=blstr.split('');
                 list_t.sort(randomsort_b);
                 blstr=list_t.join('');
                 blstr=blstr.substring(0,bllen);
                 bljg.push(blstr);
-            }
-            break;
+            }        
+        }
+    } else {
+        for (let blxl=1;blxl<=cslines;blxl++){
+            var blstr=randstr_b(randint_b(csmin,csmax),cstype[2],cstype[1]);
+            bljg.push(blstr);
+        }    
     }
+    
     document.getElementById(csid).value=bljg.join('\n');
 }
 

@@ -581,7 +581,7 @@ function show_klroutines(ispreweek=false){
         
         var left_strings='<p style="line-height:2.4rem;">';
         var right_strings='</p>';
-        var blstr=textarea_with_form_generate_b('textarea_preweek_routines','height:10rem;margin-bottom:0.5rem;',left_strings,'发送到临时记事本,发送地址',right_strings,'','form_preweek_routines',true);
+        var blstr=textarea_with_form_generate_b('textarea_preweek_routines','height:10rem;margin-bottom:0.5rem;',left_strings,'发送到临时记事本,加密发送,发送地址',right_strings,'','form_preweek_routines',true);
         document.getElementById('divhtml').innerHTML=bljg+blstr;
         var otextarea=document.getElementById('textarea_preweek_routines').value=blwiki;
     } else {

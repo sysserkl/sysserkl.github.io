@@ -111,14 +111,16 @@ function do_type_klr2(cstype){
 	        var blinsert_str=document.getElementById('input_new_line').value;        
             insert_new_lines_klr_b(blinterval,blinsert_str);
             break;
-        case '随机字符':            
-        case '随机中文':
-        case '随机英文':
-        var cslines=document.getElementById('input_rnd_lines').value;
-        var csmin=document.getElementById('input_rnd_count_min').value;
-        var csmax=document.getElementById('input_rnd_count_max').value;        
-            var list_t={'随机字符':'','随机中文':'cn','随机英文':'en'};
-            rnd_str_klr_b(list_t[cstype],cslines,csmin,csmax);
+        case '随机字符':
+            var cslines=document.getElementById('input_rnd_lines').value;
+            var csmin=document.getElementById('input_rnd_count_min').value;
+            var csmax=document.getElementById('input_rnd_count_max').value;        
+            var bltype=[
+            document.getElementById('checkbox_rnd_character_cn_klr2').checked,
+            document.getElementById('checkbox_rnd_character_en_klr2').checked,
+            document.getElementById('checkbox_rnd_character_num_klr2').checked,
+            ];
+            rnd_str_klr_b(bltype,cslines,csmin,csmax);
             break;
         case '重复':
 	        var bltimes=document.getElementById('tcopy').value;
@@ -307,7 +309,7 @@ function random_strs_klr2(){
     var cslines=document.getElementById('input_rnd_lines').value;
     var csmin=document.getElementById('input_rnd_count_min').value;
     var csmax=document.getElementById('input_rnd_count_max').value;
-    rnd_str_klr_b('',cslines,csmin,csmax);
+    rnd_str_klr_b([],cslines,csmin,csmax);
     
     var otextarea=document.getElementById('textarea_rows_content');
     otextarea.select();
