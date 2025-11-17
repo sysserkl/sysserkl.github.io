@@ -633,7 +633,7 @@ function crpytology_klr2(rows=99,cols=14,start_l='L',do_test=true){
             blvalue=('0'+blvalue.toString()).slice(-2,);
             arow.push(blvalue);
         }
-        result_t.push('<tr><td align=right>'+(blx+1)+'</td><td>'+arow.join('</td><td>')+'</td></tr>');
+        result_t.push('<tr><td align=right>'+(blx+1)+'</td><td>'+arow.join('</td><td>')+'</td></tr>');  //no. 不能仅保留2位 - 保留注释
         test_data.push(arow);
     }
     
@@ -641,8 +641,10 @@ function crpytology_klr2(rows=99,cols=14,start_l='L',do_test=true){
     
     var buttons='<p>'+close_button_b('div_status','')+'</p>';    
     var odiv=document.getElementById('div_status');    
-    odiv.innerHTML='<table class="table_common">'+oth+result_t.join('\n')+'</table>';
+    odiv.innerHTML='<table class="table_common">'+oth+result_t.join('\n')+'</table>'+buttons;
     odiv.scrollIntoView();
+    
+    document.getElementById('textarea_status').value=SHA1(test_data.toString());
     
     if (do_test){
         console.log('rows',rows,'cols',cols,'start_L',start_l);
