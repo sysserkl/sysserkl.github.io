@@ -4,17 +4,21 @@ self.addEventListener('install', function(e) {
             return cache.addAll([
             'rows.htm',
             'rows_code.js',
-            '../hard_ln_io/klbase.js',
             '../hard_ln_io/klbase_css.js',
-            '../hard_ln_io/klbase_en_de_str.js',
-            '../hard_ln_io/klbase_date.js',            
-            '../hard_ln_io/klbase_rows.js',
-            '../hard_ln_io/klbase_eng.js',
             '../hard_ln_io/klbase_d3.js',
-            '../module/html2canvas.js',
-            '../module/d3/d3.min.js',
-            '../module/d3/d3.layout.cloud.min.js',
+            '../hard_ln_io/klbase_date.js',            
+            '../hard_ln_io/klbase_en_de_str.js',
+            '../hard_ln_io/klbase_eng.js',
+            '../hard_ln_io/klbase.js',
+            '../hard_ln_io/klbase_rows.js',
+            '../hard_ln_io/sha.js',            
             '../jsdata/jieba_pb_dict_data.js',
+            '../module/d3/d3.layout.cloud.min.js',
+            '../module/d3/d3.min.js',
+            '../module/html2canvas.js',
+            '../module/marked.umd.js',
+            '../module/turndown.js',
+
             ]);
         })
     );

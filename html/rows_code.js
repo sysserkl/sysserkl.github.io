@@ -614,14 +614,14 @@ function wordcloud_klr2(csarr=false){
     wordcloud_generate_d3_b('#div_status',width,height,csarr,font_family,bgcolor);
 }
 
-function crpytology_klr2(rows=99,cols=14,start_l='L',do_test=true){
+function crpytology_klr2(rows=99,cols=26,start_l='L',do_test=true){
     var chars=characters_b('A').split('');
     var blat=chars.indexOf(start_l);
     if (blat>=0){
         chars=chars.slice(blat,);
     }
     
-    chars=chars.slice(0,cols);
+    chars=chars.slice(0,cols+1);
     var bllen=chars.length;
     
     var test_data=[];
@@ -629,7 +629,7 @@ function crpytology_klr2(rows=99,cols=14,start_l='L',do_test=true){
     for (let blx=0;blx<rows;blx++){
         var arow=[];
         for (let bly=0;bly<bllen;bly++){
-            var blvalue=asc_sum_b(blx+''+bly+''+(blx+bly)+''+(blx*bly)+''+parseInt(blx*100/(bly+1))+''+parseInt(Math.sqrt(blx*bly)*100) +chars[bly]+chars[bly].toLowerCase());
+            var blvalue=asc_sum_b(blx+''+bly+''+(blx+bly)+''+(blx*bly)+''+parseInt(blx*100/(bly+1))+''+parseInt(Math.sqrt(blx*bly)*100) +chars[bly]+chars[bly].toLowerCase());  //从A-Z前99行3-4组合无重复
             blvalue=('0'+blvalue.toString()).slice(-2,);
             arow.push(blvalue);
         }
