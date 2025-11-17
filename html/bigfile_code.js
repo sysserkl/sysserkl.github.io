@@ -95,9 +95,9 @@ function menu_bigfile(){
     klmenu_select_sort_b('select_sort_type_bigfile',['','文件名','内容','大小','日期'],str_t,'sort_bigfile',true,true,[],4),
     '<span class="span_menu" onclick="'+str_t+'refresh_bigfile();">refresh</span>',
     '<span class="span_menu" onclick="'+str_t+'clear_data_bigfile();">清空数据库</span>',
-    '<span class="span_menu" onclick="'+str_t+'merge_files_bigfile();">合并导出当前文件内容</span>',
-    '<span class="span_menu" onclick="'+str_t+'htm_files_prerequisite_bigfile();">当前条件htm文件包含文件列表</span>',
-    '<span class="span_menu" onclick="'+str_t+'statistics_ext_bigfile();">当前条件文件扩展名统计</span>',
+    '<span class="span_menu" onclick="'+str_t+'merge_files_bigfile();">合并导出当前文件列表内容</span>',
+    '<span class="span_menu" onclick="'+str_t+'htm_files_prerequisite_bigfile();">当前条件htm文件列表包含文件列表</span>',
+    '<span class="span_menu" onclick="'+str_t+'statistics_ext_bigfile();">当前条件文件列表和扩展名统计</span>',
     ];
     
     var group_list=[
@@ -128,7 +128,7 @@ function menu_bigfile(){
     ];    
     klmenu_config.push(menu_container_b(str_t,group_list,''));
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'𖧶','18rem','1rem','1rem','30rem')+'<span id="span_menu_htm_bigfile"></span>'+klmenu_b(klmenu_batch,'📦','19rem','1rem','1rem','30rem')+klmenu_b(klmenu_config,'⚙','19rem','1rem','1rem','30rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'𖧶','20rem','1rem','1rem','30rem')+'<span id="span_menu_htm_bigfile"></span>'+klmenu_b(klmenu_batch,'📦','19rem','1rem','1rem','30rem')+klmenu_b(klmenu_config,'⚙','19rem','1rem','1rem','30rem'),'','0rem')+' ');
     
     klmenu_check_b('span_reg_bigfile',true);
     klmenu_check_b('span_decode_bigfile',true);
@@ -460,7 +460,9 @@ function sort_bigfile(is_desc=false){
 
 function statistics_ext_bigfile(){
     let ext_dict={};
+    let fname_list=[];
     for (let item of current_data_bigfile_global){
+        fname_list.push(item[0][1]);
         let blext=file_path_name_b(item[0][1])[2];
         if (ext_dict['f_'+blext]==undefined){
             ext_dict['f_'+blext]=0;
@@ -470,7 +472,7 @@ function statistics_ext_bigfile(){
     ext_dict=object2array_b(ext_dict,true,2);
     ext_dict.sort();
     ext_dict.sort(function (a,b){return a[1]>b[1]?-1:1;});
-    document.getElementById('divhtml').innerHTML=array_2_li_b(ext_dict);
+    document.getElementById('divhtml').innerHTML=array_2_li_b(ext_dict)+array_2_li_b(fname_list);
 }
 
 function key_get_bigfile(cskey=false){
@@ -880,10 +882,10 @@ function html_form_bigfile(ospan,do_render=false){
         var blstr0=textarea_with_form_generate_b('textarea_html_file_content_bigfile','width:90%;height:'+(only_source?25:10)+'rem;',left_strings0,'清空,复制,↑,↓,发送到临时记事本,发送地址','</p>');
         
         if (!only_source){
-            var left_strings1='<p>';
+            var left_strings1='<p><span class="aclick" onclick="copy_reg_bigfile(\'textarea_html_file_include_bigfile\');">复制为reg</span>';
             var blstr1=textarea_with_form_generate_b('textarea_html_file_include_bigfile','width:100%;height:10rem;',left_strings1,'清空,复制,发送到临时记事本','</p>');
 
-            var left_strings2='<p>';
+            var left_strings2='<p><span class="aclick" onclick="copy_reg_bigfile(\'textarea_html_file_ignore_bigfile\');">复制为reg</span>';
             var blstr2=textarea_with_form_generate_b('textarea_html_file_ignore_bigfile','width:100%;height:10rem;',left_strings2,'清空,复制,发送到临时记事本','</p>');
 
             var left_strings_spare='<p>';
@@ -991,6 +993,15 @@ function page_bigfile(csno){
         odiv.innerHTML=bljg+'<ol>'+result_t.join('\n')+'</ol>\n'+bljg;
         mouseover_mouseout_oblong_span_b(odiv.querySelectorAll('span.oblong_box'));
     }
+}
+
+function copy_reg_bigfile(textarea_id){
+    var blstr=document.getElementById(textarea_id).value;
+    blstr=blstr.replace(/^'/mg,'').replace(/'$/mg,'');
+    blstr=blstr.replace(/\n/mg,'|').replace(/\./g,'\\.');
+    blstr='^('+blstr+')$';
+    copy_2_clipboard_b(blstr);
+    alert('已复制到剪贴板：'+blstr.slice(0,50)+'...');
 }
 
 function locate_bigfile(pages){

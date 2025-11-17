@@ -441,6 +441,7 @@ function init_klr2(){
         return blvalue;
     }
     //-----------------------
+    character_2_icon_b('𝍣');    
     leaflet_klr2();
     option_generate_klr2();
     form_set_klr2();
@@ -626,6 +627,7 @@ function crpytology_klr2(rows=99,cols=26,start_l='L',do_test=true){
     
     var test_data=[];
     var result_t=[];
+    var oth='<tr><th></th><th>'+chars.join('</th><th>')+'</th></tr>';    
     for (let blx=0;blx<rows;blx++){
         var arow=[];
         for (let bly=0;bly<bllen;bly++){
@@ -633,15 +635,17 @@ function crpytology_klr2(rows=99,cols=26,start_l='L',do_test=true){
             blvalue=('0'+blvalue.toString()).slice(-2,);
             arow.push(blvalue);
         }
+        if (blx % 10 == 0){
+            result_t.push(oth);
+        }
         result_t.push('<tr><td align=right>'+(blx+1)+'</td><td>'+arow.join('</td><td>')+'</td></tr>');  //no. 不能仅保留2位 - 保留注释
         test_data.push(arow);
     }
     
-    var oth='<tr><th></th><th>'+chars.join('</th><th>')+'</th></tr>';
     
     var buttons='<p>'+close_button_b('div_status','')+'</p>';    
     var odiv=document.getElementById('div_status');    
-    odiv.innerHTML='<table class="table_common">'+oth+result_t.join('\n')+'</table>'+buttons;
+    odiv.innerHTML='<table class="table_common">'+result_t.join('\n')+'</table>'+buttons;
     odiv.scrollIntoView();
     
     document.getElementById('textarea_status').value=SHA1(test_data.toString());
