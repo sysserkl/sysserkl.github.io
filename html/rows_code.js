@@ -613,3 +613,65 @@ function wordcloud_klr2(csarr=false){
     var height=parseInt(document.getElementById('input_height_jieba_klr2').value.trim());
     wordcloud_generate_d3_b('#div_status',width,height,csarr,font_family,bgcolor);
 }
+
+function crpytology_klr2(rows=99,cols=14,start_l='L',do_test=true){
+    var chars=characters_b('A').split('');
+    var blat=chars.indexOf(start_l);
+    if (blat>=0){
+        chars=chars.slice(blat,);
+    }
+    
+    chars=chars.slice(0,cols);
+    var bllen=chars.length;
+    
+    var test_data=[];
+    var result_t=[];
+    for (let blx=0;blx<rows;blx++){
+        var arow=[];
+        for (let bly=0;bly<bllen;bly++){
+            var blvalue=asc_sum_b(blx+''+bly+''+(blx+bly)+''+(blx*bly)+''+parseInt(blx*100/(bly+1))+''+parseInt(Math.sqrt(blx*bly)*100) +chars[bly]+chars[bly].toLowerCase());
+            blvalue=('0'+blvalue.toString()).slice(-2,);
+            arow.push(blvalue);
+        }
+        result_t.push('<tr><td align=right>'+(blx+1)+'</td><td>'+arow.join('</td><td>')+'</td></tr>');
+        test_data.push(arow);
+    }
+    
+    var oth='<tr><th></th><th>'+chars.join('</th><th>')+'</th></tr>';
+    
+    var buttons='<p>'+close_button_b('div_status','')+'</p>';    
+    var odiv=document.getElementById('div_status');    
+    odiv.innerHTML='<table class="table_common">'+oth+result_t.join('\n')+'</table>';
+    odiv.scrollIntoView();
+    
+    if (do_test){
+        console.log('rows',rows,'cols',cols,'start_L',start_l);
+        for (let test_no=3;test_no<=4;test_no++){
+            var sub_group={};
+            for (let arow of test_data){
+                for (let blxl=0;blxl<bllen;blxl=blxl+test_no){
+                    var sub_col=arow.slice(blxl,blxl+test_no);
+                    if (sub_col.length<test_no){continue;}
+                    
+                    var blkey='g_'+sub_col.join('_');
+                    if (sub_group[blkey]==undefined){
+                        sub_group[blkey]=0;
+                    }
+                    sub_group[blkey]=sub_group[blkey]+1;
+                }
+            }
+            sub_group=object2array_b(sub_group,true,2);
+            sub_group.sort();
+            sub_group.sort(function (a,b){return a[1]>b[1]?-1:1;});
+            console.log('元素组合 '+test_no+'：',sub_group);
+            var repeat_count=0;
+            for (let blxl=0,lent=sub_group.length;blxl<lent;blxl++){
+                if (sub_group[blxl][1]==1){
+                    console.log('重复元素：',sub_group.slice(0,blxl),'占比：'+repeat_count/sub_group.length);
+                    break;
+                }
+                repeat_count=repeat_count+sub_group[blxl][1]-1;
+            }
+        }
+    }
+}

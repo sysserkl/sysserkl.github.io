@@ -86,7 +86,7 @@ function randstr_b(cslen=8,csnumber=true,csletter=true){
         for (let blxl=1;blxl<=cslen;blxl++){
             bljg=bljg+list_t[randint_b(0,51)];
         }
-    } else {
+    } else {    //csnumber=false 时，csletter=true，默认显示数字 - 保留注释
         for (let blxl=1;blxl<=cslen;blxl++){
             bljg=bljg+randint_b(0,9);
         }
