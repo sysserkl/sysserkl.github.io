@@ -8,360 +8,96 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Tue, 18 Nov 2025 08:57:06 +0800</lastBuildDate>
-<item><title>Tocqueville versus the Groypers - Law &amp; Liberty</title><link>https://lawliberty.org/tocqueville-versus-the-groypers/</link></item>
-<item><title>The Latest Legal Battle of the Pronouns - Law &amp; Liberty</title><link>https://lawliberty.org/the-latest-legal-battle-of-the-pronouns/</link></item>
-<item><title>Love Snow? Head to These 10 Serene U.S. Cities This Winter - Mental Floss</title><link>https://www.mentalfloss.com/geography/snowiest-serene-u-s-cities-winter</link></item>
-<item><title>The Midwestern Mystery of Snickers Salad at Thanksgiving - Mental Floss</title><link>https://www.mentalfloss.com/holidays/thanksgiving/midwestern-snickers-salad</link></item>
-<item><title>This Chef-Approved Sweet Potato Soup Will Steal the Show This Thanksgiving - Mental Floss</title><link>https://www.mentalfloss.com/food/recipes/chef-approved-sweet-potato-soup-thanksgiving</link></item>
-<item><title>Quiz: Finish These Classic Holiday Movie Quotes to Prove You’re in the Spirit - Mental Floss</title><link>https://www.mentalfloss.com/quizzes/finish-these-classic-holiday-movie-quotes</link></item>
-<item><title>12 Protests That Changed the World - Mental Floss</title><link>https://www.mentalfloss.com/history/important-historical-protests</link></item>
-<item><title>Quiz: Name the Iconic Christmas Song With Just One Lyric - Mental Floss</title><link>https://www.mentalfloss.com/quizzes/name-iconic-christmas-song-one-lyric</link></item>
-<item><title>The Best States to Raise a Family in 2025, Ranked by Key Data - Mental Floss</title><link>https://www.mentalfloss.com/geography/states/best-states-raise-family-ranked-key-data</link></item>
-<item><title>9 Vintage Thanksgiving Side Dishes We Definitely Shouldn’t Bring Back - Mental Floss</title><link>https://www.mentalfloss.com/holidays/thanksgiving/9-vintage-thanksgiving-side-dishes-we-shouldnt-bring-back</link></item>
-<item><title>Accelerated Computing, Networking Drive Supercomputing in Age of AI - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/accelerated-computing-networking-supercomputing-ai/</link></item>
-<item><title>NVIDIA Accelerates AI for Over 80 New Science Systems Worldwide - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/sc25-new-science-systems-worldwide/</link></item>
-<item><title>NVIDIA Accelerated Computing Enables Scientific Breakthroughs for Materials Discovery - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/ai-science-materials-discovery-sc25/</link></item>
-<item><title>One Giant Leap for AI Physics: NVIDIA Apollo Unveiled as Open Model Family for Scientific Simulation - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/apollo-open-models/</link></item>
-<item><title>How to Unlock Accelerated AI Storage Performance With RDMA for S3-Compatible Storage - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/s3-compatible-ai-storage/</link></item>
-<item><title>AI On: 3 Ways to Bring Agentic AI to Computer Vision Applications - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/ways-to-bring-agentic-ai-to-computer-vision-applications/</link></item>
-<item><title>AWS, Google, Microsoft and OCI Boost AI Inference Performance for Cloud Customers With NVIDIA Dynamo - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/think-smart-dynamo-ai-inference-data-center/</link></item>
-<item><title>GeForce NOW Enlists ‘Call of Duty: Black Ops 7’ for the Cloud - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/geforce-now-thursday-call-of-duty-black-ops-7/</link></item>
-<item><title>NVIDIA Wins Every MLPerf Training v5.1 Benchmark - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/mlperf-training-benchmark-blackwell-ultra/</link></item>
-<item><title>Faster Than a Click: Hyperlink Agent Search Now Available on NVIDIA RTX PCs - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/rtx-ai-garage-nexa-hyperlink-local-agent/</link></item>
-<item><title>Fall Into Gaming With 20+ Titles Joining GeForce NOW in November - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/geforce-now-thursday-november-2025-games/</link></item>
-<item><title>NVIDIA Founder and CEO Jensen Huang and Chief Scientist Bill Dally Awarded Prestigious Queen Elizabeth Prize for Engineering - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/nvidia-founder-and-ceo-jensen-huang-and-chief-scientist-bill-dally-awarded-prestigious-queen-elizabeth-prize-for-engineering/</link></item>
-<item><title>How NVIDIA GeForce RTX GPUs Power Modern Creative Workflows - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/rtx-ai-garage-adobe-max-creativity/</link></item>
-<item><title>Deutsche Telekom and NVIDIA Launch Industrial AI Cloud — a New Era for Germany’s Industrial Transformation - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/germany-industrial-ai-cloud-launch/</link></item>
-<item><title>NVIDIA Partners Bring Physical AI, New Smart City Technologies to Dublin, Ho Chi Minh City, Raleigh and More - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/physical-ai-smart-city-expo-world-congress/</link></item>
-<item><title>Korea Joins AI Industrial Revolution: NVIDIA CEO Jensen Huang Unveils Historic Partnership at APEC Summit - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/korea-ai-apec-ceo-summit/</link></item>
-<item><title>AI-Powered Mobile Clinics Deliver Breast Cancer Screening to India’s Rural Communities - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/medcognetics-ai-powered-breast-cancer-screening-india/</link></item>
-<item><title>Join the Resistance: ‘ARC Raiders’ Launches in the Cloud - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/geforce-now-thursday-arc-raiders/</link></item>
-<item><title>Shifts back to the left for Hispanic voters - FlowingData</title><link>https://flowingdata.com/2025/11/17/shifts-back-to-the-left-for-hispanic-voters/</link></item>
-<item><title>Microsoft Mitigated the Largest Cloud DDoS Ever Recorded, 15.7 Tbps - Slashdot</title><link>https://it.slashdot.org/story/25/11/17/2121230/microsoft-mitigated-the-largest-cloud-ddos-ever-recorded-157-tbps</link></item>
-<item><title>An AI Podcasting Machine Is Churning Out 3,000 Episodes a Week - Slashdot</title><link>https://slashdot.org/story/25/11/17/2114208/an-ai-podcasting-machine-is-churning-out-3000-episodes-a-week</link></item>
-<item><title>NetChoice Sues Virginia To Block Its One-Hour Social Media Limit For Kids - Slashdot</title><link>https://yro.slashdot.org/story/25/11/17/215259/netchoice-sues-virginia-to-block-its-one-hour-social-media-limit-for-kids</link></item>
-<item><title>Tech Giants&amp;#39; Cloud Power Probed As EU Weighs Inclusion In DMA - Slashdot</title><link>https://slashdot.org/story/25/11/17/2056254/tech-giants-cloud-power-probed-as-eu-weighs-inclusion-in-dma</link></item>
-<item><title>&amp;#39;Buy Now, Pay Later&amp;#39; is Expanding Fast, and That Should Worry Everyone - Slashdot</title><link>https://news.slashdot.org/story/25/11/17/1851247/buy-now-pay-later-is-expanding-fast-and-that-should-worry-everyone</link></item>
-<item><title>Harvard Has Almost Half a Billion Dollars in Crypto - Slashdot</title><link>https://slashdot.org/story/25/11/17/1834233/harvard-has-almost-half-a-billion-dollars-in-crypto</link></item>
-<item><title>Is Video Watching Bad for Kids? The Effect of Video Watching on Children&amp;#39;s Skills - Slashdot</title><link>https://news.slashdot.org/story/25/11/17/1810213/is-video-watching-bad-for-kids-the-effect-of-video-watching-on-childrens-skills</link></item>
-<item><title>Iran Begins Cloud Seeding To Induce Rain Amid Historic Drought - Slashdot</title><link>https://news.slashdot.org/story/25/11/17/1749243/iran-begins-cloud-seeding-to-induce-rain-amid-historic-drought</link></item>
-<item><title>AI Use in &amp;#39;Call of Duty: Black Ops 7&amp;#39; Draws Fire From US Lawmaker - Slashdot</title><link>https://games.slashdot.org/story/25/11/17/1743203/ai-use-in-call-of-duty-black-ops-7-draws-fire-from-us-lawmaker</link></item>
-<item><title>Take-Two CEO Says Consoles Aren&amp;#39;t Going Away, But Gaming is Moving Toward PCs - Slashdot</title><link>https://games.slashdot.org/story/25/11/17/1648254/take-two-ceo-says-consoles-arent-going-away-but-gaming-is-moving-toward-pcs</link></item>
-<item><title>UK Cyber Ransom Ban Risks Collapse of Essential Services - Slashdot</title><link>https://news.slashdot.org/story/25/11/17/1631207/uk-cyber-ransom-ban-risks-collapse-of-essential-services</link></item>
-<item><title>Global Web Freedoms Tumble - Slashdot</title><link>https://tech.slashdot.org/story/25/11/17/1620236/global-web-freedoms-tumble</link></item>
-<item><title>Why Hotel-Room Cancellations Disappeared - Slashdot</title><link>https://slashdot.org/story/25/11/17/1541210/why-hotel-room-cancellations-disappeared</link></item>
-<item><title>Anthropic CEO Says He&amp;#39;s &amp;#39;Deeply Uncomfortable&amp;#39; With Unelected Tech Elites Shaping AI - Slashdot</title><link>https://tech.slashdot.org/story/25/11/17/1518202/anthropic-ceo-says-hes-deeply-uncomfortable-with-unelected-tech-elites-shaping-ai</link></item>
-<item><title>Florida Bill Would Require Cursive Instruction in Elementary Schools - Slashdot</title><link>https://news.slashdot.org/story/25/11/17/1434243/florida-bill-would-require-cursive-instruction-in-elementary-schools</link></item>
-<item><title>Solar and Wind are Covering All New Power Demand in 2025 - Slashdot</title><link>https://hardware.slashdot.org/story/25/11/15/0633205/solar-and-wind-are-covering-all-new-power-demand-in-2025?sbsrc=md</link></item>
-<item><title>More Tech Moguls Want to Build Data Centers in Outer Space - Slashdot</title><link>https://science.slashdot.org/story/25/11/17/0527202/more-tech-moguls-want-to-build-data-centers-in-outer-space?sbsrc=md</link></item>
-<item><title>Some Americans Are Trying to Heat Their Homes With Bitcoin Mining - Slashdot</title><link>https://news.slashdot.org/story/25/11/16/2339215/some-americans-are-trying-to-heat-their-homes-with-bitcoin-mining?sbsrc=md</link></item>
-<item><title>Could C# Overtake Java in TIOBE&amp;#39;s Programming Language Popularity Rankings? - Slashdot</title><link>https://developers.slashdot.org/story/25/11/16/0516224/could-c-overtake-java-in-tiobes-programming-language-popularity-rankings?sbsrc=md</link></item>
-<item><title>Setting Up an R&amp;D Center: Best Practices and Benefits - AskPython</title><link>https://www.askpython.com/resources/rd-center-best-practices-benefits</link></item>
-<item><title>From Dorm Room to Developer: How Students Are Turning Coding Skills into Careers - AskPython</title><link>https://www.askpython.com/resources/developer-students-coding-skills-careers</link></item>
-<item><title>How Learning Python Can Make College Research Easier (and More Fun) - AskPython</title><link>https://www.askpython.com/resources/learning-python-college-research-easier</link></item>
-<item><title>How to Append a Table to an Existing HDF File? - AskPython</title><link>https://www.askpython.com/python/examples/append-table-to-existing-hdf-file</link></item>
-<item><title>US will sell F-35 jets to Saudi Arabia, Trump says - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2025/11/17/us-will-sell-f-35-jets-to-saudi-arabia-trump-says/</link></item>
-<item><title>Here are the major defense programs backed in shutdown-ending deal - Defense News</title><link>https://www.defensenews.com/air/2025/11/17/here-are-the-major-defense-programs-backed-in-shutdown-ending-deal/</link></item>
-<item><title>Top US admiral says he’s watching China’s rapid naval buildup closely - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2025/11/17/top-us-admiral-says-hes-watching-chinas-rapid-naval-buildup-closely/</link></item>
-<item><title>US arms deal still up in the air after Hegseth visit to Vietnam - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2025/11/17/us-arms-deal-still-up-in-the-air-after-hegseth-visit-to-vietnam/</link></item>
-<item><title>Poland sends forces to probe Ukraine rail link blown up in ‘sabotage’ - Defense News</title><link>https://www.defensenews.com/global/europe/2025/11/17/poland-sends-forces-to-probe-ukraine-rail-link-blown-up-in-sabotage/</link></item>
-<item><title>Ukraine signs letter of intent to buy up to 100 Rafales from France - Defense News</title><link>https://www.defensenews.com/global/europe/2025/11/17/ukraine-signs-letter-of-intent-to-buy-up-to-100-rafales-from-france/</link></item>
-<item><title>ICEYE sees role as Europe’s defense space-intelligence linchpin - Defense News</title><link>https://www.defensenews.com/global/europe/2025/11/17/iceye-sees-role-as-europes-defense-space-intelligence-linchpin/</link></item>
-<item><title>US aircraft carrier arrives in the Caribbean in buildup near Venezuela - Defense News</title><link>https://www.defensenews.com/news/your-military/2025/11/16/us-aircraft-carrier-arrives-in-the-caribbean-in-buildup-near-venezuela/</link></item>
-<item><title>Could this protein be a secret weapon in the fight against depression? - New Atlas</title><link>https://newatlas.com/mental-health/sgk1-protein-depression-treatment/</link></item>
-<item><title>Smartphone-connected camera shows you the sources of sounds - New Atlas</title><link>https://newatlas.com/photography/soundcam-go-smartphone-acoustic-camera/</link></item>
-<item><title>Meet the parasitic invader that tricks ants into killing their own queen - New Atlas</title><link>https://newatlas.com/biology/parasite-ants-kill-queen/</link></item>
-<item><title>Startup bets on terahertz sensors to make self-driving cars safer - New Atlas</title><link>https://newatlas.com/automotive/teradar-terahertz-sensors-self-driving-cars/</link></item>
-<item><title>Why power Mars rovers with nuclear batteries when charging mats will do? - New Atlas</title><link>https://newatlas.com/energy/bumblebee-power-wireless-charging-space/</link></item>
-<item><title>Heavenly design: Concrete church hailed world&amp;#39;s best new building - New Atlas</title><link>https://newatlas.com/architecture/world-building-of-the-year-2025/</link></item>
-<item><title>We may not need to exercise to get the same neuron boost as a workout - New Atlas</title><link>https://newatlas.com/brain/brain-exercise-neurons-transfer/</link></item>
-<item><title>New Swiss Army knife gets optimized for most essential piece of EDC - New Atlas</title><link>https://newatlas.com/knives-multitools/victorinox-espresso-machine-swiss-army-knife/</link></item>
-<item><title>Leica tri-laser projector aims for bright and big 4K viewing - New Atlas</title><link>https://newatlas.com/home-entertainment/leica-cine-play-1-plus-tri-laser-projector/</link></item>
-<item><title>First evidence of a sixth sense you can’t see, but share with some birds - New Atlas</title><link>https://newatlas.com/biology/extra-sense-hands/</link></item>
-<item><title>Transforming interior makes 172-sq-ft tiny house surprisingly livable - New Atlas</title><link>https://newatlas.com/tiny-houses/sofia-vagabond-haven/</link></item>
-<item><title>Natural compound rejuvenates aging cells in just 28 days - New Atlas</title><link>https://newatlas.com/diet-nutrition/anti-aging-compound-immune-cells/</link></item>
-<item><title>Fighting poison with poison: A deep-sea worm uses toxins as armor - New Atlas</title><link>https://newatlas.com/biology/deep-sea-worm-toxin-armor/</link></item>
-<item><title>Turkey tail mushroom provides alternative to single-use plastic wrap - New Atlas</title><link>https://newatlas.com/materials/turkey-tail-mushroom-mycelium-food-wrap-alternative/</link></item>
-<item><title>CFMoto&amp;#39;s 210 hp, sub-440-lb, liter-class superbike can’t come soon enough - New Atlas</title><link>https://newatlas.com/motorcycles/cfmoto-v4-sr-rr-prototype/</link></item>
-<item><title>Anduril&amp;#39;s pilotless fighter jet completes its first test flight - New Atlas</title><link>https://newatlas.com/military/fury-fighter-jet-autonomous-first-test-flight/</link></item>
-<item><title>You won&amp;#39;t believe what this waterless camper toilet does with urine - New Atlas</title><link>https://newatlas.com/rvs-motorhomes/etteliot-rv-urine-aerosolizer/</link></item>
-<item><title>Can we finally &amp;#39;e-RAIS&amp;#39; the threat of sonic deepfaking? - New Atlas</title><link>https://newatlas.com/ai-humanoids/e-rais-sonic-deep-faking/</link></item>
-<item><title>Zero muscles into the scooter market with the 62-mph electric LS1 - New Atlas</title><link>https://newatlas.com/motorcycles/zero-motorcycles-ls1-scooter/</link></item>
-<item><title>Honda unveils V3R 900 prototype with unique electric compressor system - New Atlas</title><link>https://newatlas.com/motorcycles/honda-v3r900-prototype/</link></item>
-<item><title>Fender walks a fine line between innovation and tradition - New Atlas</title><link>https://newatlas.com/music/fender-american-professional-classic/</link></item>
-<item><title>Ancient Maya monument discovery rewrites the history books - New Atlas</title><link>https://newatlas.com/history/ancient-maya-monument-discovery/</link></item>
-<item><title>Nuclear waste may hold the key to greener hydrogen production - New Atlas</title><link>https://newatlas.com/energy/nuclear-waste-green-hydrogen/</link></item>
-<item><title>Cubed Toyota Land Cruiser 4x4 micro-camper gears up for global odyssey - New Atlas</title><link>https://newatlas.com/expedition-trucks/telescopic-toyota-camper-cube-is-2025s-ne-plus-ultra-of-4x4-micro-rvs/</link></item>
-<item><title>Desktop cold laser brands the tiniest kit with micron precision - New Atlas</title><link>https://newatlas.com/consumer-tech/xlaserlab-e3-uv-laser-engraver/</link></item>
-<item><title>New nanoparticle mRNA vaccine may be cheaper and 100 times more powerful - New Atlas</title><link>https://newatlas.com/medical-tech/nanoparticle-mrna-vaccine-cheaper-more-powerful/</link></item>
-<item><title>Review: 2025 VW Jetta is a reliable daily driver ... with a few drawbacks - New Atlas</title><link>https://newatlas.com/automotive/review-2025-volkswagen-jetta/</link></item>
-<item><title>Global emissions peak again – but dozens of nations are cutting carbon - New Atlas</title><link>https://newatlas.com/environment/global-emissions-peak-nations-cutting-carbon/</link></item>
-<item><title>Bosch-powered tilting e-trike keeps flatbed cargo on the level - New Atlas</title><link>https://newatlas.com/urban-transport/cube-trike-flatbed-hybrid-bosch-powered-tilting-etrike/</link></item>
-<item><title>Revolutionary biofuel battery is inspired by human metabolism - New Atlas</title><link>https://newatlas.com/energy/biofuel-battery-human-metabolism/</link></item>
-<item><title>Antibiotic reprograms gut bacteria to produce longevity compounds - New Atlas</title><link>https://newatlas.com/aging/antibiotic-longevity-microbiome/</link></item>
-<item><title>Ambitious music venue makes a day at the opera a walk in the park - New Atlas</title><link>https://newatlas.com/architecture/big-hamburg-state-opera/</link></item>
-<item><title>TVR is making another comeback with the V8 Griffith and future EVs - New Atlas</title><link>https://newatlas.com/automotive/tvr-comeback-griffith-evs-charge-holdings/</link></item>
-<item><title>‘Trophy wife’ stereotype evolves into ‘trophy spouse’ once vows are made - New Atlas</title><link>https://newatlas.com/society-health/trophy-wife-evolution-trophy-spouse-marriage/</link></item>
-<item><title>Meet the samurai jellyfish: A striking new species found off Japan - New Atlas</title><link>https://newatlas.com/biology/samurai-jellyfish-japan/</link></item>
-<item><title>Injectable weight-loss drug helps shift stubborn pounds post-surgery - New Atlas</title><link>https://newatlas.com/disease/liraglutide-post-bariatric-surgery/</link></item>
-<item><title>Six-million-year-old Antarctic ice offers rare glimpse into Earth&amp;#39;s past - New Atlas</title><link>https://newatlas.com/science/antarctic-ice-glimpse-earths-past/</link></item>
-<item><title>Are bananas the worst ingredient for smoothie nutrition? - New Atlas</title><link>https://newatlas.com/diet-nutrition/bananas-worst-ingredient-smoothie-nutrition/</link></item>
-<item><title>DJI&amp;#39;s made a gesture-controlled drone for vlogging rookies - New Atlas</title><link>https://newatlas.com/drones/dji-neo-2-camera-gesture-controlled-drone-vlogging/</link></item>
-<item><title>This one-bedroom tiny house was 3D-printed in just one week - New Atlas</title><link>https://newatlas.com/tiny-houses/lux-oda-architects/</link></item>
-<item><title>Valve&amp;#39;s new VR gaming headset packs a clever high-res graphics feature - New Atlas</title><link>https://newatlas.com/vr/valve-vr-gaming-headset-steam-frame-foveated-streaming/</link></item>
-<item><title>Seagulls don’t respect you until you speak up, according to science - New Atlas</title><link>https://newatlas.com/biology/seagull-stealing-food-shout/</link></item>
-<item><title>Your diabetes medication could be sabotaging your hard work - New Atlas</title><link>https://newatlas.com/diabetes/diabetes-medication-fitness/</link></item>
-<item><title>Biomimetic marching robot brings Christopher Nolan&amp;#39;s &amp;quot;Interstellar&amp;quot; to life - New Atlas</title><link>https://newatlas.com/robotics/interstellar-inspired-tars3d-robot/</link></item>
-<item><title>Review: Cheap studio headphones, or just studio namesake? Studio Max 1 - New Atlas</title><link>https://newatlas.com/consumer-tech/review-studio-max-1-headphones/</link></item>
-<item><title>360-rotational marine e-thruster pod promises 70% drag decrease - New Atlas</title><link>https://newatlas.com/marine/helix-pod-cartridge-electric-boat-drive/</link></item>
-<item><title>The wooden office treadmill: quiet, minimalistic, and fully manual - New Atlas</title><link>https://newatlas.com/fitness/office-walker-wooden-office-treadmill/</link></item>
-<item><title>Natural molecule reverses memory loss seen in Alzheimer&amp;#39;s disease - New Atlas</title><link>https://newatlas.com/brain/alzheimers-dementia/natural-molecule-restores-memory/</link></item>
-<item><title>4-in-1 EDC tool packs a foldable saw in a sleek titanium frame - New Atlas</title><link>https://newatlas.com/knives-multitools/edc-tool-foldable-saw-titanium-sawg/</link></item>
-<item><title>Archer acquires Los Angeles airport for use as electric air-taxi hub - New Atlas</title><link>https://newatlas.com/aircraft/archer-los-angeles-evtol/</link></item>
-<item><title>MIT&amp;#39;s injectable brain chips could treat disease without surgery - New Atlas</title><link>https://newatlas.com/brain/mit-injectable-brain-chips-treat-disease/</link></item>
-<item><title>90% of us aren’t getting this essential nutrient linked to anxiety - New Atlas</title><link>https://newatlas.com/diet-nutrition/anxiety-spike-essential-nutrient-choline/</link></item>
-<item><title>Like living on Earth? Thank Jupiter - New Atlas</title><link>https://newatlas.com/space/earth-jupiter-solar-system-formation/</link></item>
-<item><title>Brain development in children linked to mother&amp;#39;s PFAS chemical exposure - New Atlas</title><link>https://newatlas.com/health-wellbeing/brain-development-mother-pfas-exposure/</link></item>
-<item><title>Honda bucks a century of automotive thought with new flexible chassis design - New Atlas</title><link>https://newatlas.com/automotive/honda-flexible-chassis-design/</link></item>
-<item><title>Secret camper van with tiny kitchen lurks inside unassuming 7-seat MPV - New Atlas</title><link>https://newatlas.com/campervans/renault-escapade-7-seat-camper-van/</link></item>
-<item><title>Landmark bat study reveals how neurons &amp;quot;store memories as an orchestra&amp;quot; - New Atlas</title><link>https://newatlas.com/science/bat-study-neurons-store-memories-orchestra/</link></item>
-<item><title>Mod multitool lets you bring 14 functions into the deep, dark woods - New Atlas</title><link>https://newatlas.com/knives-multitools/tavaker-14-in-1-multitool/</link></item>
-<item><title>Massive spherical building stacks apartments above a sports arena - New Atlas</title><link>https://newatlas.com/architecture/grand-ballroom-mvrdv-tirana/</link></item>
-<item><title>4G e-reader puts on-page AI assistance in your pocket - New Atlas</title><link>https://newatlas.com/consumer-tech/viwoods-aipaper-reader/</link></item>
-<item><title>The Shire: A Long-Expected Upgrade - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/11/17/the-shire-a-long-expected-upgrade/</link></item>
-<item><title>The Creators Child - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/the-creators-child/</link></item>
-<item><title>Villains unite – sinister figs of the LEGO multiverse [Minifig Monday] - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/11/17/villains-unite-sinister-figs-of-the-lego-multiverse-minifig-monday/</link></item>
-<item><title>Click for more villains from the world of comics, Warhammer, and fantasy - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/11/17/villains-unite-sinister-figs-of-the-lego-multiverse-minifig-monday/#more-465710</link></item>
-<item><title>Custom Minifigs - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/custom-minifigs/</link></item>
-<item><title>legodoctorstrange - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/legodoctorstrange/</link></item>
-<item><title>Marvelous Minifigs - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/marvelous-minifigs/</link></item>
-<item><title>snipersquirrel - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/snipersquirrel/</link></item>
-<item><title>thickerbricks - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/thickerbricks/</link></item>
-<item><title>One builder’s weekly exploration of shape and color with Monday mosaics - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/11/16/one-builders-weekly-exploration-of-shape-and-color-with-monday-mosaics/</link></item>
-<item><title>we spoke with the founders of the initiative back in 2022 - The Brothers Brick</title><link>https://www.brothers-brick.com/2022/02/14/todays-the-day-to-fall-in-love-with-mosaics-on-monday/</link></item>
-<item><title>Johanita Kirsten - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/johanita-kirsten/</link></item>
-<item><title>Mosaics On Monday - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/mosaics-on-monday/</link></item>
-<item><title>A cozy cabin creation to get you through the cold. - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/11/16/a-cozy-cabin-creation-to-get-you-through-the-cold/</link></item>
-<item><title>Mogwai care is not for the faint of heart - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/11/16/mogwai-care-is-not-for-the-faint-of-heart/</link></item>
-<item><title>Am I wobbling because of the ocean…or the beer? - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/11/15/am-i-wobbling-because-of-the-oceanor-the-beer/</link></item>
-<item><title>the ocean of the future - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/11/02/set-sail-on-high-seas-of-the-future/</link></item>
-<item><title>Daniel Church - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/daniel-church/</link></item>
-<item><title>“Live fast, die young, and leave behind a LEGO corpse, that’s what I always say.” - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/11/15/live-fast-die-young-and-leave-behind-a-lego-corpse-thats-what-i-always-say/</link></item>
-<item><title>Greg Scherrer’s inspired brick-built characters find big Muppet energy in LEGO - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/11/14/greg-scherrers-inspired-brick-built-characters-find-big-muppet-energy-in-lego/</link></item>
-<item><title>Click to read more about Greg’s incredible LEGO characters - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/11/14/greg-scherrers-inspired-brick-built-characters-find-big-muppet-energy-in-lego/#more-465475</link></item>
-<item><title>Greg Scherrer - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/greg-scherrer/</link></item>
-<item><title>A cozy watch tower for fire spotting in microscale - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/11/14/a-cozy-watch-tower-for-fire-spotting-in-microscale/</link></item>
-<item><title>Benjamin Anderledes - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/benjamin-anderledes/</link></item>
-<item><title>Watchtowers - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/watchtowers/</link></item>
-<item><title>From swans to spoonbills, these brick-built birds are a soaring achievement - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/11/13/from-swans-to-spoonbills-these-brick-built-birds-are-a-soaring-achievement/</link></item>
-<item><title>AFOLs and birdwatchers, come this way for more fantastic fowl - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/11/13/from-swans-to-spoonbills-these-brick-built-birds-are-a-soaring-achievement/#more-465376</link></item>
-<item><title>William Van Beek - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/william-van-beek/</link></item>
-<item><title>Home never felt so colorful - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/11/13/home-never-felt-so-colorful/</link></item>
-<item><title>Johnny Thunder returns to the Amazon and those ruins have never looked better - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/11/13/johnny-thunder-returns-to-the-amazon-and-those-ruins-have-never-looked-better/</link></item>
-<item><title>Read on for more pics of Clayton’s update to this Adventurers classic! - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/11/13/johnny-thunder-returns-to-the-amazon-and-those-ruins-have-never-looked-better/#more-465395</link></item>
-<item><title>Johnny Thunder - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/johnny-thunder/</link></item>
-<item><title>sunroombricks - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/sunroombricks/</link></item>
-<item><title>LEGO Icons 40768 Type 15 Shuttlepod: to boldly gift where no-one has gifted before [Review] - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/11/08/lego-icons-40768-type-15-shuttlepod-to-boldly-gift-where-no-one-has-gifted-before-review/</link></item>
-<item><title>LEGO Icons 10365 USS Enterprise: a ship worthy of the name [Review] - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/11/07/lego-icons-10365-uss-enterprise-a-ship-worthy-of-the-name-review/</link></item>
-<item><title>AMD 占 x86 CPU 市场的份额突破四分之一 - Solidot</title><link>https://www.solidot.org/story?sid=82823</link></item>
-<item><title>比特币币值一个月下跌逾 3 万美元 - Solidot</title><link>https://www.solidot.org/story?sid=82822</link></item>
-<item><title>企业数据外泄的主要源头是拷贝黏贴 - Solidot</title><link>https://www.solidot.org/story?sid=82821</link></item>
-<item><title>太阳能和风能能满足 2025 年新增能源需求 - Solidot</title><link>https://www.solidot.org/story?sid=82820</link></item>
-<item><title>美国比特币矿场转向 AI 数据中心 - Solidot</title><link>https://www.solidot.org/story?sid=82819</link></item>
-<item><title>神舟二十号宇航员搭乘神舟二十一号飞船返回地面 - Solidot</title><link>https://www.solidot.org/story?sid=82817</link></item>
-<item><title>How to Serve a Website With FastAPI Using HTML and Jinja2 - Real Python</title><link>https://realpython.com/fastapi-jinja2-template/</link></item>
-<item><title>Quiz: How to Serve a Website With FastAPI Using HTML and Jinja2 - Real Python</title><link>https://realpython.com/quizzes/fastapi-jinja2-template/</link></item>
-<item><title>The Real Python Podcast – Episode #274: Preparing Data Science Projects for Production - Real Python</title><link>https://realpython.com/podcasts/rpp/274/</link></item>
-<item><title>Python Operators and Expressions - Real Python</title><link>https://realpython.com/courses/python-operators-expressions/</link></item>
-<item><title>Python 3.14 Released and Other Python News for November 2025 - Real Python</title><link>https://realpython.com/python-news-november-2025/</link></item>
-<item><title>The Real Python Podcast – Episode #273: Advice for Writing Maintainable Python Code - Real Python</title><link>https://realpython.com/podcasts/rpp/273/</link></item>
-<item><title>Python MarkItDown: Convert Documents Into LLM-Ready Markdown - Real Python</title><link>https://realpython.com/python-markitdown/</link></item>
-<item><title>Quiz: Python MarkItDown: Convert Documents Into LLM-Ready Markdown - Real Python</title><link>https://realpython.com/quizzes/python-markitdown/</link></item>
-<item><title>Building UIs in the Terminal With Python Textual - Real Python</title><link>https://realpython.com/courses/building-uis-terminal-python-textual/</link></item>
-<item><title>A Close Look at a FastAPI Example Application - Real Python</title><link>https://realpython.com/fastapi-python-web-apis/</link></item>
-<item><title>Quiz: A Close Look at a FastAPI Example Application - Real Python</title><link>https://realpython.com/quizzes/fastapi-python-web-apis/</link></item>
-<item><title>Scientific computing is about to get a massive injection of AI - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/18/future_of_scientific_computing/</link></item>
-<item><title>&amp;#39;Largest-ever&amp;#39; cloud DDoS attack pummels Azure with 3.64B packets per second - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/17/biggest_cloud_ddos_attack_azure/</link></item>
-<item><title>Pentagon and soldiers let too many secrets slip on social networks, watchdog says - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/17/pentagon_soldiers_secrets_socials_whoops/</link></item>
-<item><title>AI is actually bad at math, ORCA shows - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/17/ai_bad_math_orca/</link></item>
-<item><title>Security researcher calls BS on Coinbase breach disclosure timeline - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/17/coinbase_breach_timeline/</link></item>
-<item><title>Europe joins US as exascale superpower after Jupiter clinches Top500 run - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/17/europe_jupiter_supercomputer/</link></item>
-<item><title>Google previews Code Wiki: Can you trust AI to document your repository? - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/17/google_previews_code_wiki/</link></item>
-<item><title>Need AI? Dell backs up the truck and tips out servers, storage, blueprints - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/17/dell_ai_lineup/</link></item>
-<item><title>Selling your identity to North Korean IT scammers isn&amp;#39;t a sustainable side hustle - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/17/doj_north_korean_it_scam/</link></item>
-<item><title>Game over: Europol storms gaming platforms in extremist content sweep - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/17/game_over_europol_storms_gaming/</link></item>
-<item><title>Windows boss defends &amp;#39;agentic OS&amp;#39; push as users plead for reliability - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/17/windows_agentic_os_feedback/</link></item>
-<item><title>Jeff Bezos gives CEO another go at $6.2B AI startup Prometheus - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/17/jeff_bezos_ceo_prometheus/</link></item>
-<item><title>Overconfidence is the new zero-day as teams stumble through cyber simulations - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/17/immersive_cyber_resilience_report/</link></item>
-<item><title>SAP portal outage raises questions over vendor&amp;#39;s cloud readiness - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/17/sap_for_me_outage/</link></item>
-<item><title>Eurofiber admits crooks swiped data from French unit after cyberattack - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/17/eurofiber_breach/</link></item>
-<item><title>Palantir plots NHS skills drive for its controversial data platform - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/17/palantir_nhs_training_drive/</link></item>
-<item><title>UK prosecutors seize £4.11M in crypto from Twitter mega-hack culprit - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/17/cps_41m_crypto_twitter/</link></item>
-<item><title>Microsoft&amp;#39;s first Windows 10 ESU Patch Tuesday release fails for some - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/17/windows_10_esu_fail/</link></item>
-<item><title>AI music has finally beaten hat-act humans, but sounds nothing like victory - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/17/ai_music/</link></item>
-<item><title>Developer made one wrong click and sent his AWS bill into the stratosphere - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/17/who_me/</link></item>
-<item><title>Server virtualization market heats up as VMware rivals try to create alluring alternatives - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/17/gartner_server_virtualization_guide/</link></item>
-<item><title>Jaguar Land Rover hack cost India&amp;#39;s Tata Motors around $2.4 billion and counting - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/17/asia_tech_news_roundup/</link></item>
-<item><title>Logitech leaks data after zero-day attack - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/16/infosec_news_in_brief/</link></item>
-<item><title>Nvidia-backed photonics startup Ayar Labs eyes hyperscale customers with GUC design collab - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/16/ayar_guc_collab/</link></item>
-<item><title>Maybach Ocean Club - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/automotive-design/maybach-ocean-club/</link></item>
-<item><title>Circus Autonomy One and the Fully Automated Kitchen - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/industrial-design/circus-autonomy-one-and-the-fully-automated-kitchen/</link></item>
-<item><title>Christiaan van der Klaauw’s Planetarium Julie and the Art of Emotional Horology - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/fashion-design/christiaan-van-der-klaauws-planetarium-julie-and-the-art-of-emotional-horology/</link></item>
-<item><title>The Sculpture Turning the Pyramids Into Living Art - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/art-works/the-sculpture-turning-the-pyramids-into-living-art/</link></item>
-<item><title>McLaren’s One-Off Project Viva Brings Las Vegas to the 750S - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/automotive-design/mclarens-one-off-project-viva-brings-las-vegas-to-the-750s/</link></item>
-<item><title>Italjet Roadster 400 Pushes the Line Between Scooter and Motorcycle - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/automotive-design/italjet-roadster-400-scooter/</link></item>
-<item><title>TAG Heuer x Senna Formula 1 Chronographs - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/fashion-design/tag-heuer-x-senna-formula-1-chronographs/</link></item>
-<item><title>Honda V3R 900 E-Compressor Prototype - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/automotive-design/honda-v3r-900-e-compressor-prototype/</link></item>
-<item><title>After 30 Years, the LS Sedan Steps Aside for a Radical Future - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/automotive-design/after-30-years-the-ls-sedan-steps-aside-for-a-radical-future/</link></item>
-<item><title>The Illusion Box by László Tompa Turns Geometry into Hidden Art - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/interior-design/the-illusion-box-by-laszlo-tompa-turns-geometry-into-hidden-art/</link></item>
-<item><title>The Dotti Collection Evolves for Today’s Collaborative Spaces - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/interior-design/the-dotti-collection-evolves-for-todays-collaborative-spaces/</link></item>
-<item><title>Top Arctic Experiences You Can Only Have in Svalbard - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/travel/top-arctic-experiences-you-can-only-have-in-svalbard/</link></item>
-<item><title>Linux Kernel 6.18 RC6 Released: Linus Says It is Larger than Usual - OSTechNix</title><link>https://ostechnix.com/linux-kernel-6-18-rc6-released/</link></item>
-<item><title>How To Backup And Restore Installed Packages In Ubuntu Linux - OSTechNix</title><link>https://ostechnix.com/backup-restore-installed-packages-ubuntu/</link></item>
-<item><title>How To Enable Activate Linux Watermark Notification In Linux Desktop - OSTechNix</title><link>https://ostechnix.com/activate-linux/</link></item>
-<item><title>Canonical Extends Ubuntu LTS Support To 15 Years - OSTechNix</title><link>https://ostechnix.com/canonical-extends-ubuntu-lts-support-to-15-years/</link></item>
-<item><title>How To Migrate Python Packages Between Virtual Environments In Linux [2025 Guide] - OSTechNix</title><link>https://ostechnix.com/migrate-python-packages-between-virtual-environments/</link></item>
-<item><title>Rust 1.91.1 Released With Two Critical Bug Fixes - OSTechNix</title><link>https://ostechnix.com/rust-1-91-1-released/</link></item>
-<item><title>[Bug] Rust uutils du Command Reports Wrong Size in Ubuntu 25.10 - OSTechNix</title><link>https://ostechnix.com/rust-uutils-du-command-wrong-size-ubuntu-25-10/</link></item>
-<item><title>What Are .pacsave Files in Arch Linux and How to Use Them Safely - OSTechNix</title><link>https://ostechnix.com/understanding-pacsave-files-in-arch-linux/</link></item>
-<item><title>Linux Kernel 6.18 RC5 Released: Linus Says It is Small and Boring! - OSTechNix</title><link>https://ostechnix.com/linux-kernel-6-18-rc5-released/</link></item>
-<item><title>Plasma 6.6 Brings Primary-Screen Virtual Desktops, QR Code Wi-Fi, Plus More! - OSTechNix</title><link>https://ostechnix.com/plasma-6-6-primary-desktops-qr-code-wifi/</link></item>
-<item><title>How Your Brain Creates ‘Aha’ Moments and Why They Stick - Quanta Magazine</title><link>https://www.quantamagazine.org/how-your-brain-creates-aha-moments-and-why-they-stick-20251105/</link></item>
-<item><title>The Tiny Finger Monkey Gets Lonely Without Its Family - HowStuffWorks</title><link>https://animals.howstuffworks.com/mammals/finger-monkey.htm</link></item>
-<item><title>What Is a Baby Horse Called? Foal vs. Yearling vs. Colt vs. Filly - HowStuffWorks</title><link>https://animals.howstuffworks.com/mammals/what-is-a-baby-horse-called.htm</link></item>
-<item><title>Ed Gein, Inspiration for &amp;#39;Psycho,&amp;#39; Never Served Prison Time - HowStuffWorks</title><link>https://people.howstuffworks.com/ed-gein-psycho.htm</link></item>
-<item><title>What Is a Group of Whales Called? Pods, Gams, Herds (but Not Schools) - HowStuffWorks</title><link>https://animals.howstuffworks.com/mammals/what-is-a-group-of-whales-called.htm</link></item>
-<item><title>The SS Edmund Fitzgerald and a Fateful Night on Lake Superior - HowStuffWorks</title><link>https://history.howstuffworks.com/historical-events/edmund-fitzgerald.htm</link></item>
-<item><title>12 Best Starter Anime Series for Anyone New to Watching Anime - HowStuffWorks</title><link>https://entertainment.howstuffworks.com/best-starter-anime.htm</link></item>
-<item><title>LHB Linux Digest #25.35: Trap, Network Troubleshooting Tips, Self-host Server Management and More - Linux Handbook</title><link>https://linuxhandbook.com/newsletter/25-35/</link></item>
-<item><title>Find Subdomains Fast with OWASP Amass: Don&amp;#x27;t Miss Hidden Entry Points - Linux Handbook</title><link>https://linuxhandbook.com/owasp-amass/</link></item>
-<item><title>Why I Stopped Hating Systemd - Linux Handbook</title><link>https://linuxhandbook.com/dont-hate-systemd/</link></item>
-<item><title>Common Networking Issues Every DevOps Engineer Encounters - Linux Handbook</title><link>https://linuxhandbook.com/common-networking-issues/</link></item>
-<item><title>Pentora Box: Pen-Test Practice Labs - Linux Handbook</title><link>https://linuxhandbook.com/pentora-box/</link></item>
-<item><title>LHB Linux Digest #25.34: CNCF Project Hands-on, Better split Command, Local AWS Cloud Stack and More - Linux Handbook</title><link>https://linuxhandbook.com/newsletter/25-34/</link></item>
-<item><title>A to Z Hands-on Guide to Building and Publishing an Open Source Project to CNCF - Linux Handbook</title><link>https://linuxhandbook.com/cncf-project-guide/</link></item>
-<item><title>Pen-Testing Lab: Hunting and Exploiting SQL Injection With SQLMap - Linux Handbook</title><link>https://linuxhandbook.com/sql-injection-test-sqlmap/</link></item>
-<item><title>LHB Linux Digest #25.33: Linux Networking Course, Linux Practice Project, Distributed File System and More - Linux Handbook</title><link>https://linuxhandbook.com/newsletter/25-33/</link></item>
-<item><title>Module 4: Traffic Shaping and QoS with tc in Real Environments - Linux Handbook</title><link>https://linuxhandbook.com/courses/networking-scale/traffic-shaping-qos/</link></item>
-<item><title>Module 3: Building Overlay Networks with VXLAN and WireGuard - Linux Handbook</title><link>https://linuxhandbook.com/courses/networking-scale/vxlan-wireguard/</link></item>
-<item><title>Creating an Automated PDF Conversion System on Linux with unoconv [In-depth Guide] - Linux Handbook</title><link>https://linuxhandbook.com/automated-pdf-conversion-system/</link></item>
-<item><title>Automating XSS Hunting with Dalfox [Pen Testing Hands-on] - Linux Handbook</title><link>https://linuxhandbook.com/xss-hunting-dalfox/</link></item>
-<item><title>LHB Linux Digest #25.32: New Linux Networking Course, iotop, Chargebee Alternative and More - Linux Handbook</title><link>https://linuxhandbook.com/newsletter/25-32/</link></item>
-<item><title>Module 2: nftables for Complex Rulesets and Performance Optimization - Linux Handbook</title><link>https://linuxhandbook.com/courses/networking-scale/nftables/</link></item>
-<item><title>Module 1: Advanced iproute2: Policy Routing, Multiple Routing, and VRFs - Linux Handbook</title><link>https://linuxhandbook.com/courses/networking-scale/advanced-iproute2/</link></item>
-<item><title>Linux Networking at Scale - Linux Handbook</title><link>https://linuxhandbook.com/courses/networking-scale/</link></item>
-<item><title>Monitoring I/O Usage and Network Traffic in Linux With iotop &amp;amp; ntopng - Linux Handbook</title><link>https://linuxhandbook.com/iotop-ntopng/</link></item>
-<item><title>PenTesting 101: Using TheHarvester for OSINT and Reconnaissance - Linux Handbook</title><link>https://linuxhandbook.com/using-theharvester/</link></item>
-<item><title>Can You Relieve Menopause Symptoms Without Medication? - Everyday Health</title><link>https://www.everydayhealth.com/womens-health/can-you-relieve-menopause-symptoms-without-medication/</link></item>
-<item><title>Surprise Flu Mutation Puts U.S. on High Alert - Everyday Health</title><link>https://www.everydayhealth.com/infectious-diseases/surprise-flu-mutation-puts-us-on-high-alert/</link></item>
-<item><title>GLP-1 Drugs Like Ozempic May Boost Colon Cancer Survival - Everyday Health</title><link>https://www.everydayhealth.com/cancer/glp-1s-drugs-like-ozempic-may-boost-colon-cancer-survival/</link></item>
-<item><title>7 Red Flags That Your Relationship Is Toxic - Everyday Health</title><link>https://www.everydayhealth.com/emotional-health/7-types-men-avoid/</link></item>
-<item><title>Study Shows People With Eczema Can Bathe as Often as They Want - Everyday Health</title><link>https://www.everydayhealth.com/skin-conditions/study-shows-people-with-eczema-can-bathe-as-often-as-they-want/</link></item>
-<item><title>Poor Sleep Could Nearly Double Your Risk of a Running Injury - Everyday Health</title><link>https://www.everydayhealth.com/fitness/poor-sleep-could-nearly-double-your-risk-of-running-injury/</link></item>
-<item><title>High-Dose Vitamin D Might Prevent Repeat Heart Attack, Study Finds - Everyday Health</title><link>https://www.everydayhealth.com/cardiovascular-diseases/high-dose-vitamin-d-might-prevent-repeat-heart-attack/</link></item>
-<item><title>Can Cutting Refined Carbs Help You Lose Weight and Get Healthier? - Everyday Health</title><link>https://www.everydayhealth.com/food-ingredients/list-refined-foods/</link></item>
-<item><title>The 10 Best Fitness Trackers On the Market in 2025 - Everyday Health</title><link>https://www.everydayhealth.com/fitness-trends-tech/best-fitness-tracker/</link></item>
-<item><title>35 Arthritis-Friendly Gifts That Are as Thoughtful as They Are Functional - Everyday Health</title><link>https://www.everydayhealth.com/arthritis/arthritis-friendly-gifts/</link></item>
-<item><title>We Tested Over 80 Shampoos, These 11 Were the Best for Oily Hair - Everyday Health</title><link>https://www.everydayhealth.com/skin-care/best-shampoo-for-oily-hair/</link></item>
-<item><title>The 11 Best Mop-Vacuum Combos to Make Cleaning Your Home Easier Than Ever - Everyday Health</title><link>https://www.everydayhealth.com/wellness/best-mop-vacuum-combo/</link></item>
-<item><title>Insight into Marines’ experiences, and groups helping vets | Defense News Weekly Full Episode 11.15. - Defense News</title><link>https://www.defensenews.com/video/2025/11/17/insight-into-marines-experiences-and-groups-helping-vets-defense-news-weekly-full-episode-1115/</link></item>
-<item><title>Sebastian Junger outlines Marines’ experience in new Netflix series ‘Marines’ - Defense News</title><link>https://www.defensenews.com/video/2025/11/17/sebastian-junger-outlines-marines-experience-in-new-netflix-series-marines/</link></item>
-<item><title>Harnessing the healing power of dogs for veterans in need - Defense News</title><link>https://www.defensenews.com/video/2025/11/17/harnessing-the-healing-power-of-dogs-for-veterans-in-need/</link></item>
-<item><title>Wounded Navy SEAL Jason Redman on how to move veterans forward - Defense News</title><link>https://www.defensenews.com/video/2025/11/17/wounded-navy-seal-jason-redman-on-how-to-move-veterans-forward/</link></item>
-<item><title>Macron’s Rafale Fiasco: French Leader’s $20 Billion Ukraine Gamble Ignites Domestic Fury and Resignation Demands - The Eastern Herald</title><link>https://easternherald.com/2025/11/18/macron-rafale-gamble-ukraine-deal-sparks-outrage-france/</link></item>
-<item><title>Germany resumes arms exports to Israel, fueling Gaza’s genocide and regional devastation - The Eastern Herald</title><link>https://easternherald.com/2025/11/18/germany-lifts-arms-exports-israel-gaza-genocide/</link></item>
-<item><title>US accused of destabilizing Lebanon as Hezbollah warns of sovereignty threat - The Eastern Herald</title><link>https://easternherald.com/2025/11/18/us-accused-destabilizing-lebanon-hezbollah-warns-sovereignty/</link></item>
-<item><title>Russia Ukraine War Day 1362: Western Powers’ Escalation Fuels Conflict, Violating International Law and Undermining Sovereignty - The Eastern Herald</title><link>https://easternherald.com/2025/11/17/russia-ukraine-war-day-1362-west-nato-intl-law-violations/</link></item>
-<item><title>Sudan Civil War Day 947: West Kordofan Erupts as Army Battles Deadly RSF Eastward Offensive - The Eastern Herald</title><link>https://easternherald.com/2025/11/17/sudan-civil-war-day-947-west-kordofan-bloodshed/</link></item>
-<item><title>Gaza Genocide Day 712: Israel’s Continuing War Crimes Amid Fragile Ceasefire - The Eastern Herald</title><link>https://easternherald.com/2025/11/17/gaza-genocide-day-712-israel-war-crimes-crisis/</link></item>
-<item><title>Bali Jatra UK 2025 Makes History at the House of Lords — A Two-Day Celebration of Odisha’s Maritime Legacy and Global South Innovation - The Eastern Herald</title><link>https://easternherald.com/2025/11/17/bali-jatra-uk-2025-makes-history-at-the-house-of-lords-a-two-day-celebration-of-odishas-maritime-legacy-and-global-south-innovation/</link></item>
-<item><title>Kolkata Shines as Karma International Hosts The Glam Awards 2025 with Tollywood Stars in Attendance - The Eastern Herald</title><link>https://easternherald.com/2025/11/17/kolkata-shines-as-karma-international-hosts-the-glam-awards-2025-with-tollywood-stars-in-attendance/</link></item>
-<item><title>At ₹12, Chandrima Mercantiles Ltd (540829) Gains Momentum as Analysts Predict a Climb to ₹150 - The Eastern Herald</title><link>https://easternherald.com/2025/11/17/at-%e2%82%b912-chandrima-mercantiles-ltd-540829-gains-momentum-as-analysts-predict-a-climb-to-%e2%82%b9150/</link></item>
-<item><title>2025-26 NFL Playoff Race Heats Up: Broncos and Eagles Lead, Rams Clinch NFC West After Thrilling Week 11 - The Eastern Herald</title><link>https://easternherald.com/2025/11/17/nfl-playoff-race-broncos-eagles-rams-nfc-west-2025-26/</link></item>
-<item><title>Let Google Handle Your Holiday Shopping With Agentic AI - Make Tech Easier</title><link>https://www.maketecheasier.com/holiday-shopping-with-google-agentic-ai/</link></item>
-<item><title>Apple’s Digital ID Lets You Use Your Passport on iPhone — Here’s How to Use It - Make Tech Easier</title><link>https://www.maketecheasier.com/apples-digital-id-add-passport-iphone/</link></item>
-<item><title>How to Use the Tree Command to Navigate File Directory in Linux - Make Tech Easier</title><link>https://www.maketecheasier.com/use-tree-command-navigate-file-directory-linux/</link></item>
-<item><title>Huginn Is a Great Automation Alternative to IFTTT and Zapier - Make Tech Easier</title><link>https://www.maketecheasier.com/huginn-automation-tool-ifttt-alternative/</link></item>
-<item><title>Think Someone Found Your Lost iPhone? Read This Before You Reply - Make Tech Easier</title><link>https://www.maketecheasier.com/ios-lost-iphone-sms-scam/</link></item>
-<item><title>How to Locally Backup WhatsApp Data Without Google Drive - Make Tech Easier</title><link>https://www.maketecheasier.com/locally-backup-whatsapp-data-without-google-drive/</link></item>
-<item><title>Stop iPhone Apps From Asking for Ratings and Reviews - Make Tech Easier</title><link>https://www.maketecheasier.com/stop-iphone-apps-asking-ratings-reviews/</link></item>
-<item><title>Get a Truly Custom Fit With OpenRock X Open-Ear Earbuds - Make Tech Easier</title><link>https://www.maketecheasier.com/review/openrock-x-open-ear-earbuds/</link></item>
-<item><title>How to Fix Purple Flash When Closing Apps on iOS 26.1 - Make Tech Easier</title><link>https://www.maketecheasier.com/fix-purple-flash-ios/</link></item>
-<item><title>TasteDive Is Better Than Netflix At Finding New Shows You Like - Make Tech Easier</title><link>https://www.maketecheasier.com/tastedive-better-show-recommendations/</link></item>
-<item><title>How to Decrease WhatsApp Backup File Size on Android - Make Tech Easier</title><link>https://www.maketecheasier.com/decrease-whatsapp-backup-file-size/</link></item>
-<item><title>Shopping for Nintendo Games and Consoles Just Got Easier With the Nintendo Store App - Make Tech Easier</title><link>https://www.maketecheasier.com/nintendo-store-app/</link></item>
-<item><title>Best TV Deals - Make Tech Easier</title><link>https://www.maketecheasier.com/deal/best-tv-deals/</link></item>
-<item><title>Forget ChatGPT and Gemini: Consensus Is the Better AI for Research - Make Tech Easier</title><link>https://www.maketecheasier.com/consensus-better-ai-for-research/</link></item>
-<item><title>Why LNK Files in Windows Are a Major Security Vulnerability and How to Stay Safe - Make Tech Easier</title><link>https://www.maketecheasier.com/windows-lnk-files-security-vulnerability/</link></item>
-<item><title>How to Fix iPhone’s Wallpaper Keeps Changing by Itself - Make Tech Easier</title><link>https://www.maketecheasier.com/fix-iphone-wallpaper-keeps-changing/</link></item>
-<item><title>The quest for exomoons - Aeon</title><link>https://aeon.co/videos/why-exomoons-could-be-astronomys-next-big-breakthrough?utm_source=rss-feed</link></item>
-<item><title>‘I awoke at ½ past 7’ - Aeon</title><link>https://aeon.co/essays/victorian-diary-writers-kicked-off-our-age-of-self-optimisation?utm_source=rss-feed</link></item>
-<item><title>Met Museum Workers Push to Unionize - Hyperallergic</title><link>https://hyperallergic.com/1057800/met-museum-workers-push-to-unionize/</link></item>
-<item><title>Evening Auctions to Watch During Fall’s Marquee Week - Hyperallergic</title><link>https://hyperallergic.com/1057622/evening-auctions-to-watch-during-fall-2025-marquee-week/</link></item>
-<item><title>Will Jeff Bezos Ruin The Met’s Costume Institute? - Hyperallergic</title><link>https://hyperallergic.com/1057717/will-jeff-bezos-ruin-the-mets-costume-institute/</link></item>
-<item><title>Art Problems: Do I Need a Studio? - Hyperallergic</title><link>https://hyperallergic.com/1057676/art-problems-do-i-need-a-studio/</link></item>
-<item><title>School of the Art Institute of Chicago Lays Off 20 Workers - Hyperallergic</title><link>https://hyperallergic.com/1057696/school-of-the-art-institute-of-chicago-lays-off-20-workers/</link></item>
-<item><title>Pamela Phatsimo Sunstrum Reminds Us of Our Humanity - Hyperallergic</title><link>https://hyperallergic.com/1057742/pamela-phatsimo-sunstrum-reminds-us-of-our-humanity/</link></item>
-<item><title>Karin Davie’s Oceans of Color - Hyperallergic</title><link>https://hyperallergic.com/1057603/karin-davie-oceans-of-color/</link></item>
-<item><title>The Sacrifices of the Single-Mother Artist - Hyperallergic</title><link>https://hyperallergic.com/1057586/the-sacrifices-of-the-single-mother-artist/</link></item>
-<item><title>15 Art Books to Gift This Holiday Season - Hyperallergic</title><link>https://hyperallergic.com/1057196/15-art-books-to-gift-2025-holiday-season/</link></item>
-<item><title>Uman: After all the things … On View at The Aldrich Contemporary Art Museum - Hyperallergic</title><link>https://hyperallergic.com/1046988/aldrich-contemporary-art-museum-presents-uman/</link></item>
-<item><title>NADA Miami Returns With Its 23rd Edition - Hyperallergic</title><link>https://hyperallergic.com/1057369/nada-miami-returns-with-its-23rd-edition/</link></item>
-<item><title>Duncan McGillivray-Smith’s Game of Shadows - Hyperallergic</title><link>https://hyperallergic.com/1057180/duncan-mcgillivray-smith-game-of-shadows/</link></item>
-<item><title>Tate Museums Workers Set to Strike Over “Insulting” Pay Raise - Hyperallergic</title><link>https://hyperallergic.com/1057326/tate-museums-workers-set-to-strike-over-insulting-pay-raise/</link></item>
-<item><title>How an Air Purifier Can Make Your Art Event Safer - Hyperallergic</title><link>https://hyperallergic.com/1057303/brooklyn-collective-air-nyc-is-helping-artists-breathe-easier/</link></item>
-<item><title>Can We Meme the British Museum Into Doing the Right Thing? - Hyperallergic</title><link>https://hyperallergic.com/1056821/can-we-meme-the-british-museum-into-doing-the-right-thing/</link></item>
-<item><title>Artist Andres Serrano Discussed Trump in Emails With Jeffrey Epstein - Hyperallergic</title><link>https://hyperallergic.com/1057258/artist-andres-serrano-discussed-trump-in-emails-with-jeffrey-epstein/</link></item>
-<item><title>Transform Your Art Practice at UC Davis: The Maria Manetti Shrem Art Studio MFA Program - Hyperallergic</title><link>https://hyperallergic.com/1056212/uc-davis-maria-manetti-shrem-art-studio-mfa-program/</link></item>
-<item><title>Art Movements: MoMA PS1 Reveals Greater New York Curators - Hyperallergic</title><link>https://hyperallergic.com/1056958/art-movements-moma-ps1-reveals-greater-new-york-curators/</link></item>
-<item><title>Monuments Collapses American History on Itself - Hyperallergic</title><link>https://hyperallergic.com/1057080/monuments-collapses-american-history-on-itself/</link></item>
-<item><title>Eric Adams and Mamdani Clash Over NYC Art Garden - Hyperallergic</title><link>https://hyperallergic.com/1056967/eric-adams-and-mamdani-clash-over-nyc-elizabeth-street-garden/</link></item>
-<item><title>The Canary in the Turbine Hall - Hyperallergic</title><link>https://hyperallergic.com/1057029/maret-anne-sara-canary-in-the-turbine-hall-tate-modern/</link></item>
-<item><title>Barkley L. Hendricks’s Studio Was a Wonderland of Inspiration - Hyperallergic</title><link>https://hyperallergic.com/1056959/barkley-l-hendricks-studio-was-a-wonderland-of-inspiration/</link></item>
-<item><title>Smithsonian to Reopen After Longest Government Shutdown in US History - Hyperallergic</title><link>https://hyperallergic.com/1056968/smithsonian-to-reopen-after-longest-government-shutdown-in-us-history/</link></item>
-<item><title>Shape the Future of Your Practice Through the MFA in Studio Art at the University of Arkansas - Hyperallergic</title><link>https://hyperallergic.com/1056796/shape-your-practice-through-mfa-studio-art-university-of-arkansas/</link></item>
-<item><title>Mitchell Johnson: Paintings from North America, South America, Europe, Asia and Morocco (Selected Work 1979-2025) - Hyperallergic</title><link>https://hyperallergic.com/1056508/mitchell-johnson-paintings-north-south-america-europe-asia-morocco-selected-work-1979-2025/</link></item>
-<item><title>One-Third of US Museums Feel the Pain of Trump’s Grant Cuts - Hyperallergic</title><link>https://hyperallergic.com/1056720/one-third-of-us-museums-feel-the-pain-of-trumps-grant-cuts/</link></item>
-<item><title>Remembering Erik Bulatov, Kazuki Motoyama, and Ken Parker - Hyperallergic</title><link>https://hyperallergic.com/1056819/remembering-erik-bulatov-kazuki-motoyama-and-ken-parker/</link></item>
-<item><title>Prankster With a Cause Sneaks AI Artwork Into UK Museum - Hyperallergic</title><link>https://hyperallergic.com/1056743/prankster-with-a-cause-sneaks-ai-artwork-into-uk-museum/</link></item>
-<item><title>We’re All Pink on the Inside - Hyperallergic</title><link>https://hyperallergic.com/1056834/were-all-pink-on-the-inside-soft-weapons-12-franklin/</link></item>
-<item><title>Pyaari Azaadi’s Epic Mission to Mend the World - Hyperallergic</title><link>https://hyperallergic.com/1056761/pyaari-azaadi-epic-mission-to-mend-the-world/</link></item>
-<item><title>The Art World Loves to Talk Shit - Hyperallergic</title><link>https://hyperallergic.com/1056734/the-art-world-loves-to-talk-shit/</link></item>
-<item><title>UCLA’s MFA in Media Arts Encourages Bold Experimentation - Hyperallergic</title><link>https://hyperallergic.com/1056200/ucla-mfa-in-media-arts-encourages-bold-experimentation/</link></item>
-<item><title>Writing My Own Artistic Origin Story - Hyperallergic</title><link>https://hyperallergic.com/1056462/lynn-hershman-leeson-private-i-excerpt/</link></item>
-<item><title>Calder’s Circus Is for Everyone - Hyperallergic</title><link>https://hyperallergic.com/1056451/calder-circus-is-for-everyone-whitney-museum/</link></item>
-<item><title>New Egypt Museum Takes “Grand Opening” a Bit Too Far - Hyperallergic</title><link>https://hyperallergic.com/1054438/new-egypt-museum-takes-grand-opening-a-bit-too-far/</link></item>
-<item><title>The Anti-Caravaggio of the Baroque Era - Hyperallergic</title><link>https://hyperallergic.com/1056497/georges-de-la-tour-anti-caravaggio-of-the-baroque-era/</link></item>
-<item><title>Thieves Steal Roman-Era Statues From Damascus Museum - Hyperallergic</title><link>https://hyperallergic.com/1056436/thieves-steal-roman-era-statues-from-damascus-museum/</link></item>
-<item><title>Fall 2025 Art Books From Yale University Press - Hyperallergic</title><link>https://hyperallergic.com/1055555/fall-2025-art-books-from-yale-university-press/</link></item>
-<item><title>Dismissed Philadelphia Art Museum Director Fires Back With a Lawsuit - Hyperallergic</title><link>https://hyperallergic.com/1056120/dismissed-philadelphia-art-museum-director-fires-back-with-a-lawsuit/</link></item>
-<item><title>Public Artwork by Shellyne Rodriguez Pays Homage to the Bronx - Hyperallergic</title><link>https://hyperallergic.com/1056208/public-artwork-by-shellyne-rodriguez-pays-homage-to-the-bronx/</link></item>
-<item><title>Can’t Make It to The Met? Take a VR Tour Instead - Hyperallergic</title><link>https://hyperallergic.com/1056129/cant-make-it-to-the-met-take-a-vr-tour-instead/</link></item>
-<item><title>Before Wonder Woman, There Was Fantomah - Hyperallergic</title><link>https://hyperallergic.com/1056288/before-wonder-woman-there-was-fletcher-hanks-fantomah/</link></item>
-<item><title>Who Was Marie Antoinette Beneath All That Silk and Spectacle? - Hyperallergic</title><link>https://hyperallergic.com/1056237/marie-antoinette-style-victoria-albert-museum/</link></item>
-<item><title>The Algorithmic Presidency - Hyperallergic</title><link>https://hyperallergic.com/1050277/the-algorithmic-donald-trump-presidency/</link></item>
-<item><title>Nearly Intact Roman Shipwreck Rests Just Six Feet Beneath Mallorca’s Waters - Hyperallergic</title><link>https://hyperallergic.com/1056159/nearly-intact-roman-shipwreck-rests-just-six-feet-beneath-mallorca-waters/</link></item>
-<item><title>Call for Proposals: Roman Witt Residency at the University of Michigan - Hyperallergic</title><link>https://hyperallergic.com/1055433/call-for-proposals-roman-witt-residency-university-of-michigan-2/</link></item>
-<item><title>Reinvent Your Practice With UMBC’s Intermedia + Digital Arts MFA Program - Hyperallergic</title><link>https://hyperallergic.com/1055182/reinvent-your-practice-with-umbc-intermedia-digital-arts-mfa-program/</link></item>
-<item><title>Entertainment News - Country Living Magazine</title><link>https://www.countryliving.com/life/entertainment/</link></item>
-<item><title>Meet the Rest of the Team - Country Living Magazine</title><link>https://www.countryliving.com/about/a3561/about-us/</link></item>
-<item><title>Bird-watching - Country Living Magazine</title><link>https://www.countryliving.com/bird-watching/</link></item>
-<item><title>Small Town Travel - Country Living Magazine</title><link>https://www.countryliving.com/life/travel/</link></item>
-<item><title>Tips for Thrifting - Country Living Magazine</title><link>https://www.countryliving.com/thrift-shopping-advice/</link></item>
-<item><title>Democrats fail to block intraparty motion condemning Chuy Garcia - Conservative News Daily</title><link>https://www.conservativenewsdaily.net/breaking-news/democrats-fail-to-block-intraparty-motion-condemning-chuy-garcia/</link></item>
-<item><title>ICE Arrests ‘Wanted Terrorist’ Who Was Released Into the US by the Biden Admin and Was Given a CDL - Conservative News Daily</title><link>https://www.conservativenewsdaily.net/breaking-news/ice-arrests-wanted-terrorist-who-was-released-into-the-us-by-the-biden-admin-and-was-given-a-cdl/</link></item>
-<item><title>Watch: Chuck Schumer Accidentally Admits the Truth When Asked About Biden and the Epstein Files - Conservative News Daily</title><link>https://www.conservativenewsdaily.net/breaking-news/watch-chuck-schumer-accidentally-admits-the-truth-when-asked-about-biden-and-the-epstein-files/</link></item>
-<item><title>The Mamdani Effect: Another Democratic Socialist Is Running for Mayor in a Major Blue City - Conservative News Daily</title><link>https://www.conservativenewsdaily.net/breaking-news/the-mamdani-effect-another-democratic-socialist-is-running-for-mayor-in-a-major-blue-city/</link></item>
-<item><title>Trump Extends an Olive Branch to Mamdani: ‘We’ll Work Something Out’ - Conservative News Daily</title><link>https://www.conservativenewsdaily.net/breaking-news/trump-extends-an-olive-branch-to-mamdani-well-work-something-out/</link></item>
-<item><title>Polish PM calls attack on railroad ‘unprecedented act of sabotage’ - Conservative News Daily</title><link>https://www.conservativenewsdaily.net/breaking-news/polish-pm-calls-attack-on-railroad-unprecedented-act-of-sabotage/</link></item>
-<item><title>Report: Democrat-Run City in Major Swing State Is Becoming a Human Trafficking Hub - Conservative News Daily</title><link>https://www.conservativenewsdaily.net/breaking-news/report-democrat-run-city-in-major-swing-state-is-becoming-a-human-trafficking-hub/</link></item>
-<item><title>Israel investigating settlers who set fire to West Bank village - Conservative News Daily</title><link>https://www.conservativenewsdaily.net/breaking-news/israel-investigating-settlers-who-set-fire-to-west-bank-village/</link></item>
-<item><title>Schumer isn’t ‘necessarily’ the problem in modern Democratic Party: Joe Concha - Conservative News Daily</title><link>https://www.conservativenewsdaily.net/breaking-news/schumer-isnt-necessarily-the-problem-in-modern-democratic-party-joe-concha/</link></item>
-<item><title>Raskin says ‘huge’ Democratic Party tent has room for Greene - Conservative News Daily</title><link>https://www.conservativenewsdaily.net/breaking-news/raskin-says-huge-democratic-party-tent-has-room-for-greene/</link></item>
-<item><title>Heritage board member resigns over leader’s defense of Fuentes - Conservative News Daily</title><link>https://www.conservativenewsdaily.net/breaking-news/heritage-board-member-resigns-over-leaders-defense-of-fuentes/</link></item>
-<item><title>Massie claims win after Trump backs vote to release Epstein files - Conservative News Daily</title><link>https://www.conservativenewsdaily.net/breaking-news/massie-claims-win-after-trump-backs-vote-to-release-epstein-files/</link></item>
-<item><title>Report: Biden Admin Hid Online Activity Of Trump’s Would-Be Killer - Conservative News Daily</title><link>https://www.conservativenewsdaily.net/breaking-news/report-biden-admin-hid-online-activity-of-trumps-would-be-killer/</link></item>
-<item><title>Surprise: CBS News Poll Shows Who The Majority of Americans Blame for Record-Breaking Government Shutdown - Conservative News Daily</title><link>https://www.conservativenewsdaily.net/breaking-news/surprise-cbs-news-poll-shows-who-the-majority-of-americans-blame-for-record-breaking-government-shutdown/</link></item>
-<item><title>Senators ask DC Circuit to suspend Boasberg pending impeachment vote - Conservative News Daily</title><link>https://www.conservativenewsdaily.net/breaking-news/senators-ask-dc-circuit-to-suspend-boasberg-pending-impeachment-vote/</link></item>
+<lastBuildDate>Wed, 19 Nov 2025 19:46:48 +0800</lastBuildDate>
+<item><title>Eating This Common Food Ingredient Is Linked To Gut Damage and Obesity Risk in Offspring - SciTechDaily</title><link>https://scitechdaily.com/eating-this-common-food-ingredient-is-linked-to-gut-damage-and-obesity-risk-in-offspring/</link></item>
+<item><title>A Critical Medicare Deadline Is Approaching. 5 Things You Should Do Right Now - SciTechDaily</title><link>https://scitechdaily.com/a-critical-medicare-deadline-is-approaching-5-things-you-should-do-right-now/</link></item>
+<item><title>Beyond Ibuprofen: Scientists Find Way To Stop Pain Without Stopping Healing - SciTechDaily</title><link>https://scitechdaily.com/beyond-ibuprofen-scientists-find-way-to-stop-pain-without-stopping-healing/</link></item>
+<item><title>Kissing Likely Began 20 Million Years Ago With Ape Ancestors and Neanderthals - SciTechDaily</title><link>https://scitechdaily.com/kissing-likely-began-20-million-years-ago-with-ape-ancestors-and-neanderthals/</link></item>
+<item><title>Ultra-Processed Foods Are Fueling a Global Health Crisis, Experts Warn - SciTechDaily</title><link>https://scitechdaily.com/ultra-processed-foods-are-fueling-a-global-health-crisis-experts-warn/</link></item>
+<item><title>Scientists Discover “Highly Energetic” Water Hiding in Plain Sight - SciTechDaily</title><link>https://scitechdaily.com/scientists-discover-highly-energetic-water-hiding-in-plain-sight/</link></item>
+<item><title>Scientists Warn That This “Essential” Medicine Can Cause Birth Defects - SciTechDaily</title><link>https://scitechdaily.com/scientists-warn-that-this-essential-medicine-can-cause-birth-defects/</link></item>
+<item><title>Scientists Uncover Cancer-Causing Chemicals in Common Foods - SciTechDaily</title><link>https://scitechdaily.com/scientists-uncover-cancer-causing-chemicals-in-common-foods/</link></item>
+<item><title>Just 2 Cigarettes a Day May Raise Heart Failure Risk by 50% - SciTechDaily</title><link>https://scitechdaily.com/just-2-cigarettes-a-day-may-raise-heart-failure-risk-by-50/</link></item>
+<item><title>Archaeologists Discover Long-Lost 2,000-Year-Old Crop in the Canary Islands - SciTechDaily</title><link>https://scitechdaily.com/archaeologists-discover-long-lost-2000-year-old-crop-in-the-canary-islands/</link></item>
+<item><title>Evolution Is Not Neutral: New Study Challenges 60-Year Biology Theory - SciTechDaily</title><link>https://scitechdaily.com/evolution-is-not-neutral-new-study-challenges-60-year-biology-theory/</link></item>
+<item><title>Underwater Robot “Lassie” Finds Thousands of Icefish Nests Beneath Antarctic Ice - SciTechDaily</title><link>https://scitechdaily.com/underwater-robot-lassie-finds-thousands-of-icefish-nests-beneath-antarctic-ice/</link></item>
+<item><title>Scientists Grow a Tiny Human “Blood Factory” in the Lab - SciTechDaily</title><link>https://scitechdaily.com/scientists-grow-a-tiny-human-blood-factory-in-the-lab/</link></item>
+<item><title>FuZE3 Hits Gigapascal Plasma in Fusion Energy Milestone - SciTechDaily</title><link>https://scitechdaily.com/fuze3-hits-gigapascal-plasma-in-fusion-energy-milestone/</link></item>
+<item><title>Future Moon Base? Robots Explore Lava Tubes As Shelter for Astronauts - SciTechDaily</title><link>https://scitechdaily.com/future-moon-base-robots-explore-lava-tubes-as-shelter-for-astronauts/</link></item>
+<item><title>Mars Was Habitable for Far Longer Than We Thought, New Study Reveals - SciTechDaily</title><link>https://scitechdaily.com/mars-was-habitable-for-far-longer-than-we-thought-new-study-reveals/</link></item>
+<item><title>This Red Dwarf Just Launched a Planet-Killing Blast Into Space - SciTechDaily</title><link>https://scitechdaily.com/this-red-dwarf-just-launched-a-planet-killing-blast-into-space/</link></item>
+<item><title>MIT Ultrasonic Device Shakes Drinking Water Out of Thin Air - SciTechDaily</title><link>https://scitechdaily.com/mit-ultrasonic-device-shakes-drinking-water-out-of-thin-air/</link></item>
+<item><title>This Inexpensive Anti-Inflammatory Pill Could Reduce Risk of Heart Attack and Stroke - SciTechDaily</title><link>https://scitechdaily.com/this-inexpensive-anti-inflammatory-pill-could-reduce-risk-of-heart-attack-and-stroke/</link></item>
+<item><title>Reversing the Irreversible? First-in-Human Trial Shows Stem Cells May Restore Lost Vision in AMD Patients - SciTechDaily</title><link>https://scitechdaily.com/reversing-the-irreversible-first-in-human-trial-shows-stem-cells-may-restore-lost-vision-in-amd-patients/</link></item>
+<item><title>Hypertension Wreaks Havoc on the Brain Before Blood Pressure Ever Rises - SciTechDaily</title><link>https://scitechdaily.com/hypertension-wreaks-havoc-on-the-brain-before-blood-pressure-ever-rises/</link></item>
+<item><title>Study Debunks Major Myth: AI’s Energy Usage Is Significantly Less Than Feared - SciTechDaily</title><link>https://scitechdaily.com/study-debunks-major-myth-ais-energy-usage-is-significantly-less-than-feared/</link></item>
+<item><title>Was King Tut’s Tomb Filled With Opiates? Yale Study Unlocks Ancient Secret - SciTechDaily</title><link>https://scitechdaily.com/was-king-tuts-tomb-filled-with-opiates-yale-study-unlocks-ancient-secret/</link></item>
+<item><title>What Really Killed the Mammoths? New Evidence Points to Exploding Comet 13,000 Years Ago - SciTechDaily</title><link>https://scitechdaily.com/what-really-killed-the-mammoths-new-evidence-points-to-exploding-comet-13000-years-ago/</link></item>
+<item><title>全球互联网自由度连续 15 年下降 - Solidot</title><link>https://www.solidot.org/story?sid=82826</link></item>
+<item><title>为何一部分人对人脸过目不忘 - Solidot</title><link>https://www.solidot.org/story?sid=82827</link></item>
+<item><title>Take-Two Interactive CEO 认为游戏行业正转向 PC - Solidot</title><link>https://www.solidot.org/story?sid=82828</link></item>
+<item><title>微软在 Windows 11 中加入 AI 智能体 - Solidot</title><link>https://www.solidot.org/story?sid=82829</link></item>
+<item><title>Sundar Pichai 称如果 AI 泡沫破裂没有公司能免受影响 - Solidot</title><link>https://www.solidot.org/story?sid=82830</link></item>
+<item><title>很多时候放弃是最明智的选择 - Solidot</title><link>https://www.solidot.org/story?sid=82831</link></item>
+<item><title>浣熊显示驯化的早期迹象 - Solidot</title><link>https://www.solidot.org/story?sid=82832</link></item>
+<item><title>Cloudflare 宕机影响整个互联网 - Solidot</title><link>https://www.solidot.org/story?sid=82833</link></item>
+<item><title>Debian Libre Live Images 项目发布首个版本 - Solidot</title><link>https://www.solidot.org/story?sid=82834</link></item>
+<item><title>哈佛持有 4.42 亿美元的加密货币 - Solidot</title><link>https://www.solidot.org/story?sid=82835</link></item>
+<item><title>华盛顿邮报上万员工和合同工信息泄露 - Solidot</title><link>https://www.solidot.org/story?sid=82825</link></item>
+<item><title>Google 将标记耗电量高的 Android 应用 - Solidot</title><link>https://www.solidot.org/story?sid=82824</link></item>
+<item><title>Your Laptop Isn’t Ready for LLMs. Yet. - IEEE Spectrum</title><link>https://spectrum.ieee.org/ai-models-locally</link></item>
+<item><title>Artificial Diamonds Illuminate Hidden Chip Defects - IEEE Spectrum</title><link>https://spectrum.ieee.org/quantum-sensors-2674296517</link></item>
+<item><title>Amazon, Rivian Spin-Off Pilot Pedal-Assist EV - IEEE Spectrum</title><link>https://spectrum.ieee.org/electric-delivery-vehicles-amazon-also</link></item>
+<item><title>Old Pay Phones Get New Life in Vermont - IEEE Spectrum</title><link>https://spectrum.ieee.org/payphone-voip</link></item>
+<item><title>Microfluidics Boosts Chip Cooling Efficiency - IEEE Spectrum</title><link>https://spectrum.ieee.org/microfluidics-cooling-ai-chips-corintis</link></item>
+<item><title>Smart Bandage Speeds Up Wound Healing - IEEE Spectrum</title><link>https://spectrum.ieee.org/smart-bandage-ai-electrical-stimulation</link></item>
+<item><title>Ukraine&amp;#39;s Tech Innovations Are Reshaping Warfare - IEEE Spectrum</title><link>https://spectrum.ieee.org/ukraine-weapons</link></item>
+<item><title>DC Universe Cast - Superheroes - Listal</title><link>https://www.listal.com/list/my-dc-universe-cast</link></item>
+<item><title>Liam Neeson Films Viewed by Kathy - Listal</title><link>https://www.listal.com/list/liam-neeson-films-viewed-kathy</link></item>
+<item><title>Olivia Thirlby - favorite pictures - Listal</title><link>https://www.listal.com/list/olivia-thirlby-favorite-pictures</link></item>
+<item><title>Top 20 Unforgivable Oscar Losses - Listal</title><link>https://www.listal.com/list/top-20-unforgiveable-oscar-losses</link></item>
+<item><title>I&amp;#39;ve Seen This Pose XXVII - Romeo &amp; Juliet - Listal</title><link>https://www.listal.com/list/ive-seen-pose-xxvii</link></item>
+<item><title>Rock Star Daughters - Listal</title><link>https://www.listal.com/list/rock-star-daughters</link></item>
+<item><title>She&amp;#39;s a Fox &amp; She&amp;#39;s a Belle Megan &amp; Camilla - Listal</title><link>https://www.listal.com/list/shes-fox-shes-belle</link></item>
+<item><title>My favorite Japanese models - Listal</title><link>https://www.listal.com/list/my-favorite-japanese-models</link></item>
+<item><title>LegOscars 2011: Best Picture - Listal</title><link>https://www.listal.com/list/legoscars-2011-best-film-nominee</link></item>
+<item><title>Erotic Cinema: From Nudie Cuties to Roughies - Listal</title><link>https://www.listal.com/list/erotica-jammar</link></item>
+<item><title>Shows I Binge Watched on Netflix - Listal</title><link>https://www.listal.com/list/shows-binge-watched-netflix</link></item>
+<item><title>Tv shows I&amp;#39;ve finished - Listal</title><link>https://www.listal.com/list/tv-shows-ive-finished-ceadejos</link></item>
+<item><title>vintage covergirls - Listal</title><link>https://www.listal.com/list/vintage-covergirls</link></item>
+<item><title>Favorite Images of Sharon Tate - Listal</title><link>https://www.listal.com/list/favorite-images-sharon-tate</link></item>
+<item><title>Karmen Pedaru [VS] - Listal</title><link>https://www.listal.com/list/a-karmen-pedaru</link></item>
+<item><title>Movie Ticket Collection - Listal</title><link>https://www.listal.com/list/movie-ticket-collection-cdsmiles</link></item>
+<item><title>Massive Attack - Listal</title><link>https://www.listal.com/list/massive-attack</link></item>
+<item><title>My Top 5 Each Year. - Listal</title><link>https://www.listal.com/list/my-top-5-each-year</link></item>
+<item><title>Pauline Hoarau VS *complete* - Listal</title><link>https://www.listal.com/list/pauline-hoarau-vs-complete</link></item>
+<item><title>Droid Bishop Discography - Listal</title><link>https://www.listal.com/list/droid-bishop-discography</link></item>
+<item><title>&amp;quot;lets spend the night together&amp;quot; said Mick - Listal</title><link>https://www.listal.com/list/lets-spend-night-together-said</link></item>
+<item><title>The Influence of Painting in Cinema - Listal</title><link>https://www.listal.com/list/influence-painting-cinema</link></item>
+<item><title>Say It With Your Clothes - Listal</title><link>https://www.listal.com/list/bold-clothing</link></item>
+<item><title>Remembering Marcia Strassman - Listal</title><link>https://www.listal.com/list/remembering-marcia-strassman</link></item>
+<item><title>Wallpapers - New Orleans - Listal</title><link>https://www.listal.com/list/wallpapers-new-orleans</link></item>
+<item><title>Favorite Feelgood Tracks #1 - Listal</title><link>https://www.listal.com/list/favorite-feelgood-tracks</link></item>
+<item><title>Movies I&amp;#39;ve Streamed On Netflix Instant Watch - Listal</title><link>https://www.listal.com/list/movies-ive-streamed-netflix-instant</link></item>
+<item><title>Debian 13.2 Released With Numerous Security Fixes And Updates - OSTechNix</title><link>https://ostechnix.com/debian-13-2-released/</link></item>
+<item><title>Sabrina Carpenter ‘Arrests’ Elle &amp; Dakota Fanning at L.A. Concert: ‘One of You Is Cute, But Two Though?’ - Billboard</title><link>https://www.billboard.com/music/music-news/sabrina-carpenter-arrests-elle-dakota-fanning-la-concert-1236116276/</link></item>
+<item><title>Inside Fred again..’s 10 Shows in 10 Cities in 10 Weeks Run (Updating) - Billboard</title><link>https://www.billboard.com/lists/fred-again-10-shows-10-cities-usb002-tour-photos/</link></item>
+<item><title>Ariana Grande Says ‘Eternal Sunshine’ Tour Will Be Her ‘Last Hurrah’ - Billboard</title><link>https://www.billboard.com/music/music-news/ariana-grande-eternal-sunshine-tour-last-hurrah-1236116103/</link></item>
+<item><title>What’s Your Favorite No. 1 Album on the Billboard 200 From 2025? Vote! - Billboard</title><link>https://www.billboard.com/music/music-news/billboard-100-no-1-albums-2025-favorite-1236114191/</link></item>
+<item><title>What’s Your Favorite No. 1 Song on the Billboard Hot 100 From 2025? Vote! - Billboard</title><link>https://www.billboard.com/music/music-news/hot-100-no-1-songs-2025-favorite-1236114307/</link></item>
+<item><title>Summer Walker Explains How Anna Nicole Smith Inspired Her ‘Finally Over It’ Album Cover - Billboard</title><link>https://www.billboard.com/music/music-news/summer-walker-anna-nicole-smith-finally-over-it-album-cover-1236115898/</link></item>
+<item><title>Chase Stokes Slams ‘F–king Weird’ Comments About Kelsea Ballerini &amp; Ex Madelyn Cline: ‘Grow Up’ - Billboard</title><link>https://www.billboard.com/music/music-news/chase-stokes-slams-comments-kelsea-ballerini-madelyn-cline-1236115899/</link></item>
+<item><title>Uketsu’s ‘Strange Pictures’ Shortlisted for Waterstones’ 2025 Book of the Year - Billboard</title><link>https://www.billboard.com/music/music-news/uketsu-strange-pictures-waterstones-2025-book-year-shortlist-1236115910/</link></item>
+<item><title>Here’s How Taylor Swift &amp; Travis Kelce’s Engagement Inspired Cambridge Dictionary’s 2025 Word of the Year - Billboard</title><link>https://www.billboard.com/music/music-news/taylor-swift-travis-kelce-engagement-2025-word-of-the-year-1236115816/</link></item>
+<item><title>Paris Hilton Addresses Rumors Ghislaine Maxwell Wanted to ‘Recruit’ Her to Date Jeffrey Epstein - Billboard</title><link>https://www.billboard.com/music/music-news/paris-hilton-jeffrey-epstein-ghislaine-maxwell-recruit-rumors-1236115653/</link></item>
+<item><title>Strange News Digest: You Want Aliens? Because This Is How You Get Aliens – November 18, 2025 - Strange Sounds</title><link>https://strangesounds.org/2025/11/strange-news-digest-november-18-2025.html</link></item>
+<item><title>When a Solar Storm Warps Atomic Time: WWV Goes Haunted Over Illinois - Strange Sounds</title><link>https://strangesounds.org/2025/11/solar-storm-distorts-wwv-atomic-time-radio-signals.html</link></item>
+<item><title>Strange News Digest – Black Jesus, Cloned Meat, Solar Skydive, Earth Axis Shifts, Albino Whale – November 17, 2025 - Strange Sounds</title><link>https://strangesounds.org/2025/11/strange-news-digest-black-jesus-cloned-meat-earth-axis-tilted-albino-whale-november-17-2025.html</link></item>
+<item><title>Mysterious Booms Compilation Nov 7-17, 2025 — From Myrtle Beach to Jodhpur, When the Sky Suddenly Explodes - Strange Sounds</title><link>https://strangesounds.org/2025/11/mysterious-booms-myrtle-beach-norman-jodhpur-nasa-x-59.html</link></item>
+<item><title>Ghost Voices in the Sandstorms: The Dhatki Whispers of Tanot &amp; Longewala - Strange Sounds</title><link>https://strangesounds.org/2025/11/tanot-longewala-sandstorm-voices-dhatki-mystery.html</link></item>
+<item><title>Strange News Digest – Syringes, wars and a soccer ball… We all know what they have planned for us! – November 16, 2025 - Strange Sounds</title><link>https://strangesounds.org/2025/11/strange-news-digest-november-16-2025.html</link></item>
+<item><title>Relics glitter, comets crumble, AI ghosts whisper, and nature hums like a cathedral organ – Strange News Digest for Nov 14, 2025 - Strange Sounds</title><link>https://strangesounds.org/2025/11/relics-glitter-comets-crumble-ai-ghosts-whisper-strange-news-digest-nov-14-2025.html</link></item>
+<item><title>War on Terror Rebooted, Chemtrails, Chernobyl Fungi &amp; Robot Cops — Strange News Digest for Nov 12, 2025 - Strange Sounds</title><link>https://strangesounds.org/2025/11/strange-news-digest-november-12-2025-war-on-terror-rebooted-chemtrails-chernobyl-fungi-robot-cops.html</link></item>
+<item><title>Sonic Flow: How Online Casinos Borrow the Language of Music to Build the Gameplay - Strange Sounds</title><link>https://strangesounds.org/2025/11/sonic-flow-online-casinos-music-sound-design.html</link></item>
+<item><title>Devil Bees, Cover-Ups, Drone Wars &amp; Black Hole Flares – Strange News Digest for Nov 11, 2025 - Strange Sounds</title><link>https://strangesounds.org/2025/11/strange-news-digest-nov-11-2025-strange-sounds.html</link></item>
 </channel></rss>
