@@ -208,11 +208,16 @@ function menu_rlater(){
     '<span class="span_menu" onclick="'+str_t+'rare_enwords_get_rlater();">稀有旧单词</span>',
     '<span class="span_menu" onclick="'+str_t+'statistics_show_rlater();">Statistics</span>',
     '<span class="span_menu" onclick="'+str_t+'split_rlater();">截取最新记录</span>',
-    '<span class="span_menu" onclick="'+str_t+'duplication_rlater();">duplication</span>',        
-    '<span class="span_menu" onclick="'+str_t+'comment_rlater();">#记录</span>',    
     '<span class="span_menu" onclick="'+str_t+'weibo_weixin_user_rlater();">当前条件微博、微信用户统计</span>',    
     ];   
-    
+
+    var group_list=[
+    ['相同记录','duplication_rlater();',true],
+    ['只显示1条','duplication_rlater(true);',true],
+    ['#记录','comment_rlater();',true],
+    ];    
+    klmenu_statistics.push(menu_container_b(str_t,group_list,'<select id="select_same_type_record_rlater"><option value=0>链接</option><option value=1>标题</option></select>'));
+
     var group_list=[
     ['当前','jieba_keys_rlater();',true],
     ['全部','jieba_keys_rlater(true);',true],
@@ -286,7 +291,7 @@ function menu_rlater(){
     ];    
     klmenu_idb.push(menu_container_b(str_t,group_list,'IDB: '));    
 
-    var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu1,'🛋','10rem','1rem','1rem','60rem')+klmenu_b(klmenu_statistics,'🧮','16rem','1rem','1rem','30rem')+klmenu_b(klmenu_idb,'⚙','22rem','1rem','1rem','60rem')+local_menu_group,'','0rem');
+    var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu1,'🛋','10rem','1rem','1rem','60rem')+klmenu_b(klmenu_statistics,'🧮','22rem','1rem','1rem','30rem')+klmenu_b(klmenu_idb,'⚙','22rem','1rem','1rem','60rem')+local_menu_group,'','0rem');
     
     document.getElementById('h2_title').insertAdjacentHTML('afterbegin',bljg+' ');    
     klmenu_check_b('span_reg_rlater',true);
@@ -714,17 +719,35 @@ function title_words_rlater(cscount=20){
     return list_t.slice(0,cscount);
 }
 
-function duplication_rlater(){
+function duplication_rlater(is_unique=false,col_no=false){
     sort_rlater('href',false);
 
     var today_t=date_2_ymd_b(false,'d');    
     var cstype=radio_value_get_b('radio_search_type');
     
+    if (col_no===false){
+        col_no=parseInt(document.getElementById('select_same_type_record_rlater').value);
+    }
+    
+    var link_set=new Set();
     var result_t=new Set();
     for (let blxl=1,lent=readlater_data_global.length;blxl<lent;blxl++){//忽略第1条 - 保留注释
-        if (readlater_data_global[blxl][0]==readlater_data_global[blxl-1][0]){
-            result_t.add(red_one_rlater(readlater_data_global[blxl],cstype,today_t));
-            result_t.add(red_one_rlater(readlater_data_global[blxl-1],cstype,today_t));
+        if (readlater_data_global[blxl][col_no]==readlater_data_global[blxl-1][col_no]){
+            var do_add=true;
+            
+            if (is_unique){
+                if (link_set.has(readlater_data_global[blxl][col_no])){
+                    do_add=false;
+                }
+            }
+            
+            if (do_add){
+                result_t.add(red_one_rlater(readlater_data_global[blxl],cstype,today_t));
+                if (!is_unique){
+                    result_t.add(red_one_rlater(readlater_data_global[blxl-1],cstype,today_t));
+                }
+                link_set.add(readlater_data_global[blxl][col_no]);
+            }
         }
     }
     result_t=Array.from(result_t);
@@ -1084,7 +1107,9 @@ function search_array_2_html_rlater(csarr,cstype){
     }
     
     bljg=years_rlater_b(readlater_data_global.length,csarr.length)+bljg;
-    bljg=bljg+'<p><span class="aclick" onclick="delete_batch_rlater_b();">批量删除</span> <span id="span_batch_delete_process"></span></p>';
+    if (cstype=='2'){
+        bljg=bljg+'<p><span class="aclick" onclick="delete_batch_rlater_b();">批量删除</span> <span id="span_batch_delete_process"></span></p>';
+    }
     
     bljg='<div id="div_links">'+bljg+'</div>';
     

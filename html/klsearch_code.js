@@ -495,7 +495,7 @@ function batch_open_links_klsearch(is_init=false){
     }
 }
 
-function batch_keys_no_get_klsearch(link_wiki_js=false){
+function batch_keys_no_get_klsearch(){
     var bltype=document.getElementById('input_search_type').value.trim();
     if (bltype==''){return -1;}
     
