@@ -339,7 +339,12 @@ function idb_count_bigfile_b(db){
 }
 
 function idb_menu_generate_bigfile_b(cstype,select_id_name,csparent,import_fn_name){
-    return '<span class="span_menu"><span class="span_link" onclick="window.open(\'bigfile.htm\');">bigfile</span>: <input type="text" class="input_filter_idb_menu_bigfile" title="筛选" placeholder="筛选" style="width:11rem;" value="" onkeyup="if (event.key==\'Enter\'){idb_option_clear_bigfile_b(\''+cstype+'\',\''+select_id_name+'\',true);}" /><br /><select id="'+select_id_name+'" style="width:12rem;height:2rem;" onclick="idb_option_generate_bigfile_b(\''+cstype+'\',this);" onchange="idb_option_clear_bigfile_b(\''+cstype+'\',this);"></select> <span class="aclick" onclick="'+csparent+import_fn_name+'();">导入</span></span>';
+    console.log(csparent,import_fn_name);
+    return '<span class="span_menu"><span class="span_link" onclick="window.open(\'bigfile.htm\');">bigfile</span>: <input type="text" class="input_filter_idb_menu_bigfile" title="筛选" placeholder="筛选" style="width:11rem;" value="" onkeyup="if (event.key==\'Enter\'){idb_option_clear_bigfile_b(\''+cstype+'\',\''+select_id_name+'\',true);}" /><br /><select id="'+select_id_name+'" style="width:12rem;height:2rem;" onclick="idb_option_generate_bigfile_b(\''+cstype+'\',this);" onchange="idb_option_clear_bigfile_b(\''+cstype+'\',this);"></select> <span class="aclick" onclick="if (idb_menu_import_bigfile_b(\''+select_id_name+'\')){'+csparent+'} '+import_fn_name+'();">导入</span></span>';
+}
+
+function idb_menu_import_bigfile_b(select_id_name){
+    return document.getElementById(select_id_name).value!=='重新载入';
 }
 
 function idb_option_clear_bigfile_b(cstype,oselect,do_refresh=false){

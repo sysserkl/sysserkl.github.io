@@ -2037,6 +2037,10 @@ function import_bigfile_gps_points(fname=false){
         fname=document.getElementById('select_big_file_gpx_gps_points').value;
     }
     
+    if (fname=='重新载入'){
+        idb_option_clear_bigfile_b('gpx',document.getElementById('select_big_file_gpx_gps_points'));
+    }
+    
     if (fname=='手动输入 bigfile gpx 文件名'){
         fname=false;
     }
