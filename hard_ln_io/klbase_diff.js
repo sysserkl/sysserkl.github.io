@@ -107,6 +107,7 @@ function compare_lines_diff_b(do_submit=false,other_string=''){
     var blstr2=document.querySelector('textarea[name="textarea_diff_2"]').value;
     if (blstr1==blstr2){
         odiv.innerHTML=other_string+'<h3>行差集 '+time_get_diff_b()+'</h3><p>完全一致</p>';   
+        odiv.scrollIntoView();
         return;
     }
     
@@ -153,6 +154,8 @@ function compare_lines_diff_b(do_submit=false,other_string=''){
         result_t.push('<div class="div_two_list_diff_2">'+array_2_li_b(diff2)+'</div>');
     }
     odiv.innerHTML=other_string+'<h3>行差集 '+time_get_diff_b()+'</h3>'+result_t.join('\n');
+    odiv.scrollIntoView();
+
     key_location_diff_b([[1,'textarea_diff_1'],[2,'textarea_diff_2']]);
 }
 
@@ -253,7 +256,7 @@ function time_get_diff_b(rnd_emoji=true){
 }
 
 function compare_textarea_diff_b(compare_lines=false){
-    var diff_str,is_ok;
+    let diff_str,is_ok;
     [diff_str,is_ok]=two_list_diff_b(false,false,'textarea_diff_1','textarea_diff_2').slice(1,3);
     diff_str='<h3>编辑框对比 '+time_get_diff_b()+'</h3>'+diff_str;
     var odiv=document.getElementById('div_diff');
@@ -264,6 +267,8 @@ function compare_textarea_diff_b(compare_lines=false){
     
     if (is_ok && compare_lines){
         compare_lines_diff_b(false,diff_str);
+    } else {
+        odiv.scrollIntoView();
     }
 }
 

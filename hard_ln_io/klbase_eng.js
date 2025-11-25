@@ -1189,10 +1189,10 @@ function translator_sites_b(){
     ['https://cn.bing.com/translator/','Bing'],
     ['https://www.deepl.com/en/translator','DeepL'],
     ['https://www.reverso.net/text-translation','Reverso'],
-    ['https://translate.yandex.com/','yandex'],
+    ['https://translate.yandex.com/','Yandex'],
     ['https://fanyi.baidu.com/mtpe-individual/multimodal','百度'],
     ['https://fanyi.youdao.com/#/TextTranslate','有道'],
-    ['https://www.tongyi.com/','通义'],    
+    ['https://www.qianwen.com/','千问'],    
     ['https://yuanbao.tencent.com/chat/','元宝'],
     ];
     
