@@ -232,6 +232,9 @@ function menu_temp_txt_share_b(is_php=true,menu_more=''){
     '<span class="span_menu" onclick="'+str_t+'remove_notepad_mark_temp_txt_share_b();">清除notepad标记和日期</span>',    
     '<span class="span_menu" onclick="'+str_t+'remove_notepad_tag_b(\'textarea_temp_txt_share\');">清除tag标记</span>',    
     ];
+
+    var group_list=textarea_group_menu_klr_b('textarea_temp_txt_share');
+    klmenu_config.push(menu_container_b(str_t,group_list,''));
     
     var klmenu_link=[
     '<a href="'+klwebphp+'temp_txt_append.php" onclick="'+str_t+'" target=_blank>➕ temp txt append</a>',

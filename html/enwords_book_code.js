@@ -448,9 +448,19 @@ function get_new_words_group_enwords_book(cstype){
 
 function compare_form_statistics_enwords_book(){
     var bljg='<table width=95% height=600px>';
-    bljg=bljg+'<tr><td width=50% valign=top><textarea id="textarea_compare_1" style="width:100%;height:100%;"></textarea><p><span class="aclick" onclick="current_statistics_data_enwords_book(\'1\',false);">旧数据</span></p></td>';
-    bljg=bljg+'<td width=50% valign=top><textarea id="textarea_compare_2" style="width:100%;height:100%;"></textarea><p><span class="aclick" onclick="current_statistics_data_enwords_book(\'2\',true);">新数据</span></p></td></tr>';
-    bljg=bljg+'<tr><td colspan=2 align=right>前 <input type="number" id="input_table_rows_enwords_book" min=0 /> 行 <span class="aclick" onclick="booknames_get_enwords_book();">获取书名</span><span class="aclick" onclick="sentences_get_by_bookname_enwords_book();">获取例句</span><span class="aclick" onclick="compare_statistics_enwords_book();">比较</span>'+close_button_b('divhtml2','')+'</p></tr>';
+    bljg=bljg+'<tr>';
+    bljg=bljg+'<td width=50% valign=top><textarea id="textarea_compare_1" style="width:100%;height:100%;"></textarea><p><span class="aclick" onclick="current_statistics_data_enwords_book(\'1\',false);">旧数据</span></p></td>';
+    bljg=bljg+'<td width=50% valign=top><textarea id="textarea_compare_2" style="width:100%;height:100%;"></textarea><p><span class="aclick" onclick="current_statistics_data_enwords_book(\'2\',true);">新数据</span></p></td>';
+    bljg=bljg+'</tr>';
+    
+    var buttons='前 <input type="number" id="input_table_rows_enwords_book" min=0 /> 行';
+    buttons=buttons+'<label><input type="checkbox" id="checkbox_only_delta_rows_enbook" checked />忽略无Δ行</label> ';
+    buttons=buttons+'<span class="aclick" onclick="booknames_get_enwords_book();">获取书名</span>';
+    buttons=buttons+'<span class="aclick" onclick="sentences_get_by_bookname_enwords_book();">获取例句</span>';
+    buttons=buttons+'<span class="aclick" onclick="compare_statistics_enwords_book();">比较</span>';
+    buttons=buttons+close_button_b('divhtml2','');
+    
+    bljg=bljg+'<tr><td colspan=2 align=right>'+buttons+'</td></tr>';
     bljg=bljg+'<tr><td colspan=2 valign=top id="td_result" style="padding:1rem;"></tr>';    
     bljg=bljg+'</table>';
     var odiv=document.getElementById('divhtml2');
@@ -473,11 +483,19 @@ function booknames_get_enwords_book(){
     if (!otable){return;}
     var otrs=otable.querySelectorAll('tr');
     
+    var is_only_delta=document.getElementById('checkbox_only_delta_rows_enbook').checked;
+    
     var blno=0;
     var result_t=[];
     for (let arow of otrs){
         var otds=arow.querySelectorAll('td');
-        if (otds.length==0){continue;}
+        if (otds.length<5){continue;}
+        if (is_only_delta){
+            if (isNaN(parseInt(otds[4].innerText))){
+                console.log('忽略',otds[1].innerText,otds[4].innerText);
+                continue;
+            }
+        }
         result_t.push(otds[1].innerText);
         blno=blno+1;
         if (blno>=blrows){break;}

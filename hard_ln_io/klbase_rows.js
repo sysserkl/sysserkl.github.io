@@ -759,11 +759,38 @@ function strquick_klr_b(cstype='',csid='textarea_rows_content',status_id='textar
         case 'clear_copy_tab_title_url':
             clear_copy_tab_title_url_klr_b(csid);
             break;
+        case 'ul_ol_li_wiki':
+            var blstr=document.getElementById(csid).value;        
+            document.getElementById(csid).value=ul_ol_2_list_b(blstr);
+            break;
 	}
+    
     if (ostatus){
         ostatus.value=ostatus.value + ' 处理后行数：' + document.getElementById(csid).value.split('\n').length;
     }
     return result_t;
+}
+
+function ul_ol_2_list_b(text){
+    function sub_ul_ol_2_list_b_li(inner,csreplace){
+        inner=inner.replace(/<\/li>/g,'');
+        inner=inner.replace(/\n*\s*\n*<li[^>]*>/g,'\n'+csreplace+' ');
+        return inner;
+    }
+    
+    // 使用正则匹配整个 <ul>...</ul> 块（支持跨行）
+    var subs=text.match(/<ul>([\s\S]*?)<\/ul>/gi) || [];
+    for (let one_sub of subs){
+        text=text.replace(one_sub,sub_ul_ol_2_list_b_li(one_sub,'*'));
+    }
+    
+    var subs=text.match(/<ol>([\s\S]*?)<\/ol>/gi) || [];
+    for (let one_sub of subs){
+        text=text.replace(one_sub,sub_ul_ol_2_list_b_li(one_sub,'#'));
+    }
+
+    text=text.replace(/<(ul|ol)>([\s\S]*?)<\/\1>/gi,'$2');
+    return text;
 }
 
 function jieba_klr_b(csstr){
@@ -1443,4 +1470,17 @@ function remove_notepad_tag_b(csid){
     
     var new_str=old_str.replace(/^<tag>.*<\/tag>\s*$/mg,'');
     otextarea.value=new_str;
+}
+
+function textarea_only_first_line_klr_b(textarea_id){
+    var otextarea=document.getElementById(textarea_id);
+    var blstr=otextarea.value.trim().split('\n')[0];
+    otextarea.value=blstr;
+}
+
+function textarea_group_menu_klr_b(textarea_id){
+    return [
+    ['unique','sort_rows_klr_b(\''+textarea_id+'\',\'unique\');',true],
+    ['保留第一行','textarea_only_first_line_klr_b(\''+textarea_id+'\');',true],
+    ];    
 }
