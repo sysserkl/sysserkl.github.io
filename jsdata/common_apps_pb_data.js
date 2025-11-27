@@ -23,6 +23,7 @@ var common_apps_pb_global=[
 ["{{selenium_news}}/html/cn_idiom.htm","cn idiom","😵","2",""],
 ["{{selenium_news}}/html/cnki_search.htm","cnki search","🛢️","5","database"],
 ["{{selenium_news}}/html/container.htm","container","📦️","2",""],
+["{{selenium_news}}/html/crosswords.htm","crosswords","⚔","5","game,ENG"],
 ["{{selenium_news}}/html/diff_js.htm","diff js","⚖","0"],
 ["{{selenium_news}}/html/digest.htm","Digest","🗃️","5","txtbook"],
 ["{{selenium_news}}/html/douban_book.htm","douban book","𖠗","5","txtbook"],

@@ -76,7 +76,7 @@ function menu_bible(){
     var klmenu2=[
     '<span id="span_reg_bible" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 正则</span>',            
     '<span id="span_confuse_bible" class="span_menu" onclick="'+str_t+'confuse_bible();">⚪ 混淆显示</span>',        
-    '<span class="span_menu" onclick="'+str_t+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>',    
+    enwords_mini_menu_item_b(str_t),    
     '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'bible\');">更新版本</span>',
     '<span class="span_menu" onclick="'+str_t+'help_bible();">Help</span>',
     ];

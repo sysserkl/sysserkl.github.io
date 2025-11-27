@@ -109,7 +109,7 @@ function menu_rndwords(){
     '<span class="span_menu" onclick="'+str_t+'window.open(location.href,\'\',\'width=550, height=200\');">新窗口</span>', 
     '<span class="span_menu" onclick="'+str_t+'enwords_definition_2_multilines_b();">释义分段</span>',
     '<span class="span_menu" onclick="'+str_t+'pronunciation_show_hide_rndwords();">音标显示切换</span>',    
-    '<span class="span_menu" onclick="'+str_t+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>',
+    enwords_mini_menu_item_b(str_t),
     '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'rnd_english_words\');">更新版本</span>',
     ];
     klmenu3=root_font_size_menu_b(str_t,true,true,true).concat(klmenu3);

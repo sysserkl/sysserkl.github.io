@@ -1089,7 +1089,7 @@ function menu_klsnews_b(cskeys,js_or_php=''){
     var menu_list3=[
     '<span id="span_masonry_style" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ masonry</span>',            
     '<span class="span_menu" onclick="'+str_t+'statistics_sites_klsnews_b();">当前页网站列表</span>',
-    '<span class="span_menu" onclick="'+str_t+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>',
+    enwords_mini_menu_item_b(str_t),
     '<span class="span_menu" onclick="'+str_t+'newwords_klsnews_b();">热门生词</span>',
     '<span class="span_menu" onclick="'+str_t+'span_fav_show_hide_klsnews_b();">fav button show/hide</span>',    
     '<span class="span_menu" onclick="'+str_t+'stanalone_search_klsnews_b();">导出链接为standalone search</span>',        

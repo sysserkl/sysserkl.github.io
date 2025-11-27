@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>crosswords</title>
+<meta charset="UTF-8" />
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css','en_de_str','math','eng'],['crosswords.js'],[],['crosswords_code.js']);
+</script>
+<script>
+import_enwords_data_b();
+</script>
+<script>
+//-----------------------
+//history
+//0.0.1-20251126
+//-----------------------
+css_root_style_b('18','13',['base','menu'],[],1);
+</script>
+<style>
+#table_content_klcw td {border-bottom:0.05rem dotted black; padding:0.1rem 0.5rem;}
+</style>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<a name=top></a>
+<h2 style="margin-top:0px;font-size:1.2rem;"><span id="span_title" style="cursor:pointer;">crosswords</span> <span id="span_count" style="font-weight:normal;font-size:0.9rem;"></span></h2>
+<div style="margin:0.5rem;">
+<p id="p_buttons_klcw">
+单词个数：<input type="number" id="input_count_klcw" min=1 value=9 />
+宽：<input type="number" id="input_w_klcw" min=1 value=20 />
+高：<input type="number" id="input_h_klcw" min=1 value=20 />
+泄露概率：<input type="number" id="input_leak_klcw" min=0 max=1 value=0.5 />
+<span class="aclick" onclick="generate_klcw();">随机生成</span>
+<span class="aclick" onclick="generate_klcw();">测试</span>
+<span class="aclick" onclick="print_klcw();">检查</span>
+<span class="aclick" onclick="print_klcw();">答案</span>
+</p>
+<div id="divhtml"></div>
+<div id="div_status"></div>
+</div>
+<script>
+
+
+init_klcw();
+menu_klcw();
+</script>
+<a name=footer></a>
+</body>
+</html>

@@ -1,7 +1,7 @@
 function menu_more_js_tts(){
     var str_t=klmenu_hide_b('');
     var klmenu1=[
-    '<span class="span_menu" onclick="'+str_t+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>',    
+    enwords_mini_menu_item_b(str_t),    
     load_sentence_menu_b(str_t), 
     ];
     

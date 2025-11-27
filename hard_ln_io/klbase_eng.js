@@ -2180,6 +2180,10 @@ function enwords_merge_b(cswords_list,cstimes=500){
     return result_t;
 }
 
+function enwords_mini_menu_item_b(csjs){
+    return '<span class="span_menu" onclick="'+csjs+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>';
+}
+
 function enwords_mini_search_frame_show_hide_b(csexpand=true){
     if (csexpand){
         enwords_init_b(true);
@@ -2560,15 +2564,31 @@ function sentence_search_b(csword='',csreg=false,csmax=500,show_button=true,csmo
 	return '<div class="div_sentence">'+bljg.join('\n')+'</div><p><i>('+bljg.length+')</i></p>';
 }
 
-function simple_words_b(is_set=true,to_lower_case=false,space_2_underline=false){
+function simple_words_b(is_set=true,to_lower_case=false,space_2_underline=false,onlyaz=false){
     var result_t=[];
     if (to_lower_case){
-        for (let item of enwords){
-            result_t.push(item[0].toLowerCase());
-        }        
+        if (onlyaz){
+            for (let item of enwords){
+                if (item[0].match(/^[a-z]+$/i)){
+                    result_t.push(item[0].toLowerCase());
+                }
+            }                
+        } else {
+            for (let item of enwords){
+                result_t.push(item[0].toLowerCase());
+            }        
+        }
     } else {
-        for (let item of enwords){
-            result_t.push(item[0]);
+        if (onlyaz){
+            for (let item of enwords){
+                if (item[0].match(/^[a-z]+$/i)){
+                    result_t.push(item[0]);
+                }
+            }
+        } else {
+            for (let item of enwords){
+                result_t.push(item[0]);
+            }
         }
     }
     

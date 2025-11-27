@@ -29,7 +29,7 @@ function menu_klwebsites(change_no=false){
     '<span class="span_menu" onclick="'+str_t+'search_in_site_options_klwebsites();">search in site</span>',        
     '<span class="span_menu" onclick="'+str_t+'search_klwebsites(\'http://\');">http_https check</span>',
     '<span class="span_menu" onclick="'+str_t+'new_filter_form_klwebsites();">新网址过滤</span>',   
-    '<span class="span_menu" onclick="'+str_t+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>',    
+    enwords_mini_menu_item_b(str_t),    
     '<span class="span_menu" onclick="'+str_t+'window_open_klwebsites();">New Window</span>',
     '<span class="span_menu">batch eword search max windows: <input type="number" id="input_key_batch_search_max_klwebsites" value=5 /></span>',
     ];

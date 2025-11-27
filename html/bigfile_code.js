@@ -116,7 +116,7 @@ function menu_bigfile(){
     var klmenu_config=root_font_size_menu_b(str_t);
     klmenu_config=klmenu_config.concat([
     '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'bigfile\');">更新版本</span>',
-    '<span class="span_menu" onclick="'+str_t+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>',        
+    enwords_mini_menu_item_b(str_t),        
     '<span class="span_menu" onclick="'+str_t+'show_hide_storage_bigfile();">暂存</span>',    
     '<span class="span_menu" onclick="'+str_t+'file_date_form_bigfile();">文件日期对比</span>',    
     '<span class="span_menu">删除方式：'+list_2_option_b(['数字确认','简单确认','直接删除'],'select_delete_option_bigfile')+'</span>',    

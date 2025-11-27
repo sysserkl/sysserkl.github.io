@@ -443,7 +443,7 @@ function txtmenus_kltxt_b(cstype=''){
 
     var menu_config=root_font_size_menu_b(str_t);
     menu_config=menu_config.concat([
-    '<span class="span_menu" onclick="'+str_t+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>',
+    enwords_mini_menu_item_b(str_t),
     '<span class="span_menu" onclick="'+str_t+'float_bookname_kltxt_b();">浮动书名</span>',
     fpara_menu_b(str_t),
     ]);
@@ -543,7 +543,7 @@ function txtmenus_kltxt_b(cstype=''){
         var dmenu_info=[
         '<span class="span_menu" onclick="'+str_t+'date_size_digest();">当前摘要文件日期和大小</span>',    
         '<span class="span_menu" onclick="'+str_t+'date_size_digest(true);">无摘要文件列表</span>',    
-        '<span class="span_menu" onclick="'+str_t+'enwords_mini_search_frame_show_hide_b();">单词搜索</span>'        
+        enwords_mini_menu_item_b(str_t),        
         ];   
         bljg=bljg+klmenu_b(dmenu_info,'🗃','15rem','',fontsize);        
         bljg=bljg+colors;
