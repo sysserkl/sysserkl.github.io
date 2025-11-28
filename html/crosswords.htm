@@ -18,7 +18,8 @@ import_enwords_data_b();
 css_root_style_b('18','13',['base','menu'],[],1);
 </script>
 <style>
-#table_content_klcw td {border-bottom:0.05rem dotted black; padding:0.1rem 0.5rem;}
+#table_content_klcw {border-top:0.05rem dotted black; border-right:0.05rem dotted black;}
+#table_content_klcw td {font-size:large; border-bottom:0.05rem dotted black; border-left:0.05rem dotted black; padding:0.1rem 0.5rem;}
 </style>
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
 </head>
@@ -31,13 +32,14 @@ css_root_style_b('18','13',['base','menu'],[],1);
 宽：<input type="number" id="input_w_klcw" min=1 value=20 />
 高：<input type="number" id="input_h_klcw" min=1 value=20 />
 泄露概率：<input type="number" id="input_leak_klcw" min=0 max=1 value=0.5 />
+<select id="select_type_klcw"><option>table</option><option>textarea</option></select>
 <span class="aclick" onclick="generate_klcw();">随机生成</span>
-<span class="aclick" onclick="generate_klcw();">测试</span>
-<span class="aclick" onclick="print_klcw();">检查</span>
-<span class="aclick" onclick="print_klcw();">答案</span>
+<span class="aclick" onclick="check_klcw();">检查</span>
+<span class="aclick" onclick="print_klcw(0);">答案</span>
 </p>
+<div id="div_buttons_1"></div>
 <div id="divhtml"></div>
-<div id="div_status"></div>
+<div id="div_buttons_2"></div>
 </div>
 <script>
 

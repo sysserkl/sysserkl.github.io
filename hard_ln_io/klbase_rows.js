@@ -1484,3 +1484,61 @@ function textarea_group_menu_klr_b(textarea_id){
     ['保留第一行','textarea_only_first_line_klr_b(\''+textarea_id+'\');',true],
     ];    
 }
+
+function tabs_titles_urls_formatter_b(tabs,cstype='js',format='all'){
+    switch (cstype){
+        case 'text':
+            return tabs.map(tab => {
+                switch (format) {
+                    case 'u':
+                    case 'urls':
+                        return tab.url || 'no URL';
+                    case 't':
+                    case 'titles':
+                        return tab.title;
+                    default:
+                        return `${tab.title}\n${tab.url}\n`;
+                }
+            }).join('\n');
+
+        case 'md':
+            return tabs.map((tab, index) => {
+                // 定义转义函数
+                const escapeForMarkdown = (text) => {
+                    // 先转义反斜杠，再转义方括号和圆括号
+                    return text.replace(/\\/g, '\\\\')
+                               .replace(/\[/g, '\\[')
+                               .replace(/\]/g, '\\]')
+                               .replace(/\(/g, '\\(')
+                               .replace(/\)/g, '\\)');
+                };
+
+                let escapedUrl = tab.url || 'no URL';
+                let escapedTitle = escapeForMarkdown(tab.title || 'no title');
+                
+                return `[${escapedTitle}](${escapedUrl})`;
+            }).join('\n');
+            
+        case 'wiki':
+            return tabs.map(tab => {
+                let escapedUrl = tab.url || 'no URL';
+                let escapedTitle = (tab.title || 'no title').replace(/\[/g, '<nowiki>[</nowiki>').replace(/\]/g, '<nowiki>]</nowiki>');
+                return `[${escapedUrl} ${escapedTitle}]`;
+            }).join('\n');
+        
+        case 'js':
+            return tabs.map(tab => {
+                let escapedUrl = JSON.stringify(tab.url || 'no URL');
+                let escapedTitle = JSON.stringify(tab.title || 'no title');
+                return `[${escapedUrl},${escapedTitle}],`;
+            }).join('\n');
+
+        case 'html':
+            return tabs.map(tab => {
+                let escapedUrl = JSON.stringify(tab.url || 'no URL');
+                let escapedTitle = JSON.stringify(tab.title || 'no title').slice(1,-1);
+                return `<a href=${escapedUrl}>${escapedTitle}</a>`;
+            }).join('\n');
+    }
+    return '';
+}

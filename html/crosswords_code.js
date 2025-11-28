@@ -23,17 +23,20 @@ function menu_klcw(){
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'⚔','8rem','1rem','1rem','30rem'),'','0rem')+' ');
 }
 
-function print_klcw(cstype){
+function print_klcw(leak_percent=false){
     if (typeof result_klcw_global == 'undefined'){return;}
-    
+
+    let cstype=document.getElementById('select_type_klcw').value;
     if (cstype=='textarea'){
         var csarr=array_find_replace_b(result_klcw_global.grid,' ','.');
     } else {
         var csarr=result_klcw_global.grid;
     }
-
-    let leak_percent=parseFloat(document.getElementById('input_leak_klcw').value.trim());
-
+    
+    if (leak_percent===false){
+        leak_percent=parseFloat(document.getElementById('input_leak_klcw').value.trim());
+    }
+    
     var mask_list=[];
     if (leak_percent>0){
         for (let arow of csarr){
@@ -64,14 +67,13 @@ function print_klcw(cstype){
             for (let arow of mask_list){
                 result_t.push('<tr><td>'+arow.join('</td><td>')+'</td></tr>');
             }
-            bljg='<table id="table_content_klcw" cellspacing=0>'+result_t.join('\n')+'</table>';
+            bljg='<table id="table_content_klcw" cellspacing=0 style="margin-left:1rem;">'+result_t.join('\n')+'</table>';
             break;
     }
     document.getElementById('divhtml').innerHTML=bljg;
     td_style_klcw();
-    unused_klcw();
+    unused_klcw(leak_percent>0);
     
-    console.log(result_klcw_global);
     document.getElementById('span_count').innerText='候选单词：'+result_klcw_global.total_words+'个，放入：'+result_klcw_global.placed_count+'个，成功率：'+result_klcw_global.success_rate.toFixed(1)+'%'+(result_klcw_global.grid.length>0?'；实际宽高：'+result_klcw_global.grid.length+'x'+result_klcw_global.grid[0].length:'');    
 }
 
@@ -82,7 +84,7 @@ function td_style_klcw(){
         one_td.setAttribute('align','center');
         if (one_td.innerText=='?'){
             one_td.style.color=scheme_global['a-hover'];
-            one_td.setAttribute('class','td_character_klcw');
+            one_td.setAttribute('class','td_character_klcw td_unknown_klcw');
             one_td.style.cursor='pointer';
             one_td.addEventListener('click',
                 function(e){
@@ -90,7 +92,8 @@ function td_style_klcw(){
                 },false
             );                       
         } else if (one_td.innerText.trim()==''){
-            one_td.style.color='';     
+            one_td.style.color='';    
+            one_td.style.backgroundColor=scheme_global['memo']; 
         } else {
             one_td.style.color=scheme_global['a'];
             one_td.setAttribute('class','td_character_klcw');
@@ -115,14 +118,15 @@ function td_click_klcw(otd){
 function choose_klcw(ochar){
     if (!clicked_td_klcw_global){return;}
     clicked_td_klcw_global.innerText=ochar.innerText;
-    unused_klcw();
+    setTimeout(unused_klcw,1);
 }
 
-function unused_klcw(){
+function unused_klcw(do_check=true){
     for (let key in character_used_dict_klcw_global){
         character_used_dict_klcw_global[key]=0;
     }
     var otable=document.getElementById('table_content_klcw');
+    if (!otable){return;}
     
     var otds=otable.querySelectorAll('td.td_character_klcw');
     for (let one_td of otds){
@@ -136,17 +140,25 @@ function unused_klcw(){
         if (key=='c_?'){
             blminus=-1*blminus;
         }
-        if (blminus!==0){
-            left_list.push('<span class="oblong_box" onclick="choose_klcw(this);">'+key.slice(2,)+'</span> <b>'+blminus+'</b>');
+        
+        if (blminus!==0 || key=='c_?'){
+            left_list.push('<span class="oblong_box" onclick="choose_klcw(this);" style="font-weight:bold;">'+key.slice(2,)+'</span> <span style="color:'+scheme_global['memo']+'; font-size:small;">'+blminus+'</span>');
         }
     }
     
-    var ostatus=document.getElementById('div_status');
-    ostatus.innerHTML='<p style="margin:0.5rem 0;">可用字母数量：'+left_list.join(' | ')+'</p>';
-    mouseover_mouseout_oblong_span_b(ostatus.querySelectorAll('span.oblong_box'));
+    for (let blxl=1;blxl<=2;blxl++){
+        var ostatus=document.getElementById('div_buttons_'+blxl);
+        ostatus.innerHTML='<p style="margin:1rem 0 1rem 1rem; font-size:large;">可用字母数量：'+left_list.join(' | ')+'</p>';
+        mouseover_mouseout_oblong_span_b(ostatus.querySelectorAll('span.oblong_box'));
+    }
+    
+    if (do_check && left_list.length==1){   //只有c_? - 保留注释
+        check_klcw();
+    }
 }
 
-function generate_klcw(cstype='table'){
+function generate_klcw(){
+    let cstype=document.getElementById('select_type_klcw').value;
     let cscount=parseInt(document.getElementById('input_count_klcw').value.trim());
     let csw=parseInt(document.getElementById('input_w_klcw').value.trim());
     let csh=parseInt(document.getElementById('input_h_klcw').value.trim());
@@ -156,7 +168,7 @@ function generate_klcw(cstype='table'){
     result_klcw_global.grid=arrary_remove_empty_rows_columns_b(result_klcw_global.grid,' ');
     character_count_klcw();
     
-    print_klcw(cstype);
+    print_klcw();
 }
 
 function character_count_klcw(){
@@ -172,10 +184,39 @@ function character_count_klcw(){
             
     for (let arow of result_klcw_global.placed_words){
         character_list_klcw_global.push(arow['word']);
-        character_count_klcw_global=character_count_klcw_global+arow['word'].length;
-        for (let achar of arow['word']){
+    }
+    
+    for (let arow of result_klcw_global.grid){
+        for (let achar of arow){
+            if (achar==' '){continue;}
             character_all_dict_klcw_global['c_'+achar]=character_all_dict_klcw_global['c_'+achar]+1;
+            character_count_klcw_global=character_count_klcw_global+1;
         }
     }
+    
     //console.log(character_list_klcw_global,character_count_klcw_global,character_all_dict_klcw_global);   //此行保留 - 保留注释
+}
+
+function check_klcw(){
+    if (typeof result_klcw_global == 'undefined'){return;}
+
+    var otable=document.getElementById('table_content_klcw');
+    if (!otable){return;}
+    
+    var found_error=0;
+    var found_query=false;
+    var otrs=otable.querySelectorAll('tr');
+    for (let blx=0,lent=otrs.length;blx<lent;blx++){
+        var otds=otrs[blx].querySelectorAll('td');
+        for (let bly=0,lenb=otds.length;bly<lenb;bly++){
+            if (!otds[bly].classList.contains('td_unknown_klcw')){continue;}        
+            if (otds[bly].innerText=='?'){
+                found_query=true;
+                continue;
+            }        
+            if (otds[bly].innerText==result_klcw_global.grid[blx][bly]){continue;}
+            found_error=found_error+1;
+        }
+    }
+    alert(found_error>0?'发现错误 '+found_error+' 处':(found_query?'尚未出错':'完全正确'));
 }
