@@ -8,341 +8,71 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Fri, 28 Nov 2025 10:08:15 +0800</lastBuildDate>
-<item><title>Public Transit Is a Lawless Land - theCHIVE</title><link>https://thechive.com/humor/public-transit-is-a-lawless-land/?utm_postid=5138045&amp;utm_editor=5138045_hendy</link></item>
-<item><title>Street Smarts Can Get You Through Anything - theCHIVE</title><link>https://thechive.com/humor/street-smarts-can-get-you-through-anything/?utm_postid=5137107&amp;utm_editor=5137107_ryder</link></item>
-<item><title>GIF-ing Girls with SKILLs…Women winning Wednesday - theCHIVE</title><link>https://thechive.com/lifestyle/gif-ing-girls-with-skillswomen-winning-wednesday/?utm_postid=5137616&amp;utm_editor=5137616_rick</link></item>
-<item><title>Random Facts You’ll Forget Immediately - theCHIVE</title><link>https://thechive.com/humanity/facts-random/random-facts-youll-forget-immediately/?utm_postid=5138480&amp;utm_editor=5138480_hendy</link></item>
-<item><title>Billboard’s ’50 Best Rock Bands’ Gives Us Something New to Fight Over - theCHIVE</title><link>https://thechive.com/entertainment/music-2/billboards-50-best-rock-bands-gives-us-something-new-to-fight-over/?utm_postid=5138458&amp;utm_editor=5138458_zach</link></item>
-<item><title>Wholesome Memes Are Like Internet Hugs - theCHIVE</title><link>https://thechive.com/humanity/beautiful/wholesome-memes-are-like-internet-hugs/?utm_postid=5138478&amp;utm_editor=5138478_hendy</link></item>
-<item><title>I’m Not Hungry Anymore… 12 Weird Foods from Around the World! - theCHIVE</title><link>https://thechive.com/humor/wtf/im-not-hungry-anymore-12-weird-foods-from-around-the-world/?utm_postid=5137507&amp;utm_editor=5137507_luka</link></item>
-<item><title>People, Places and Wrong Things - theCHIVE</title><link>https://thechive.com/humor/people-places-and-wrong-things/?utm_postid=5137139&amp;utm_editor=5137139_ryder</link></item>
-<item><title>Life rewards those…Who GIVE - theCHIVE</title><link>https://thechive.com/humanity/inspirational/life-rewards-thosewho-give/?utm_postid=5138352&amp;utm_editor=5138352_rick</link></item>
-<item><title>Good Morning! Enjoy a Nostalgia Boost - theCHIVE</title><link>https://thechive.com/humanity/nostalgia/good-morning-enjoy-a-nostalgia-boost/?utm_postid=5138014&amp;utm_editor=5138014_hendy</link></item>
-<item><title>City Cats of the World to Jump On a Plane For - theCHIVE</title><link>https://thechive.com/humanity/animals/city-cats-of-the-world-to-jump-on-a-plane-for/?utm_postid=5137543&amp;utm_editor=5137543_woody</link></item>
-<item><title>Pareidolia: The Art of Seeing ‘Things’ in Objects - theCHIVE</title><link>https://thechive.com/humor/pareidolia-the-art-of-seeing-things-in-objects/?utm_postid=5137746&amp;utm_editor=5137746_hendy</link></item>
-<item><title>Life Didn’t Give Me Lemons, It Squeezed Them Into My Eyes - theCHIVE</title><link>https://thechive.com/humor/life-didnt-give-me-lemons-it-squeezed-them-into-my-eyes/?utm_postid=5137717&amp;utm_editor=5137717_hendy</link></item>
-<item><title>Parents Share Their “It Must Be Genetic” Stories - theCHIVE</title><link>https://thechive.com/humanity/parents-share-their-it-must-be-genetic-stories/?utm_postid=5137384&amp;utm_editor=5137384_luka</link></item>
-<item><title>I Nearly Forgot About WTF Wednesday - theCHIVE</title><link>https://thechive.com/humor/i-nearly-forgot-about-wtf-wednesday/?utm_postid=5137783&amp;utm_editor=5137783_hendy</link></item>
-<item><title>Too Blessed 2 Be Stressed! - theCHIVE</title><link>https://thechive.com/humor/too-blessed-2-be-stressed/?utm_postid=5137036&amp;utm_editor=5137036_ryder</link></item>
-<item><title>Inside the Pride: Fascinating Lion Facts from the Wild - theCHIVE</title><link>https://thechive.com/humanity/animals/inside-the-pride-fascinating-lion-facts-from-the-wild/?utm_postid=5137719&amp;utm_editor=5137719_hendy</link></item>
-<item><title>Pics got: EXPLAIN-ing to Do - theCHIVE</title><link>https://thechive.com/humor/pics-got-explain-ing-to-do/?utm_postid=5137667&amp;utm_editor=5137667_rick</link></item>
-<item><title>Internet Screenshots That Prove This Place Never Gets Boring - theCHIVE</title><link>https://thechive.com/humor/internet-screenshots-never-boring/?utm_postid=5137228&amp;utm_editor=5137228_ty</link></item>
-<item><title>10 Proper Ways to Serve Cranberry Sauce This Thanksgiving - theCHIVE</title><link>https://thechive.com/lifestyle/food-and-drink/10-proper-ways-to-serve-cranberry-sauce-this-thanksgiving/?utm_postid=5137605&amp;utm_editor=5137605_zach</link></item>
-<item><title>Forever Alone? Yeah, Sounds About Right! - theCHIVE</title><link>https://thechive.com/humor/forever-alone-yeah-sounds-about-right/?utm_postid=5136878&amp;utm_editor=5136878_hendy</link></item>
-<item><title>James Van Der Beek Selling ‘Varsity Blues’ Jerseys, Proceeds to Fund Cancer Treatments - theCHIVE</title><link>https://thechive.com/entertainment/movies/james-van-der-beek-selling-varsity-blues-jerseys-proceeds-to-fund-cancer-treatments/?utm_postid=5137173&amp;utm_editor=5137173_zach</link></item>
-<item><title>The Thrift Store Really is Hit Or Miss…. - theCHIVE</title><link>https://thechive.com/humor/the-thrift-store-really-is-hit-or-miss/?utm_postid=5136810&amp;utm_editor=5136810_hendy</link></item>
-<item><title>‘Charming and Chaotic’: Movie Theaters Only a Mother Could Love - theCHIVE</title><link>https://thechive.com/entertainment/movies/charming-and-chaotic-movie-theaters-only-a-mother-could-love/?utm_postid=5136931&amp;utm_editor=5136931_zach</link></item>
-<item><title>Dogs Are Awesome! - theCHIVE</title><link>https://thechive.com/humanity/animals/dogs-are-awesome-2/?utm_postid=5136764&amp;utm_editor=5136764_hendy</link></item>
-<item><title>Nobody Loves Thanksgiving More than Bob Belcher - theCHIVE</title><link>https://thechive.com/entertainment/tv/nobody-loves-thanksgiving-more-than-bob-belcher/?utm_postid=5136069&amp;utm_editor=5136069_zach</link></item>
-<item><title>Genius Designs That’ll Knock Your Socks Off - theCHIVE</title><link>https://thechive.com/humanity/genius-designs-thatll-knock-your-socks-off/?utm_postid=5136653&amp;utm_editor=5136653_hendy</link></item>
-<item><title>Funny Tweets From This Month That Deserve a Second Look - theCHIVE</title><link>https://thechive.com/humor/funny-tweets-from-november/?utm_postid=5136315&amp;utm_editor=5136315_ty</link></item>
-<item><title>49ers Receiver Jennings Retaliates After Direct Hit to Gonads - theCHIVE</title><link>https://thechive.com/humor/wtf/49ers-receiver-jennings-retaliates-after-direct-hit-to-gonads/?utm_postid=5136649&amp;utm_editor=5136649_zach</link></item>
-<item><title>Leather Bound NFL Memes From Week 12 Will Have You ROFL - theCHIVE</title><link>https://thechive.com/humor/meme/leather-bound-nfl-memes-from-week-12-will-have-you-rofl/?utm_postid=5136528&amp;utm_editor=5136528_stephen</link></item>
-<item><title>History’s Early Photos That Still Carry Serious Weight - theCHIVE</title><link>https://thechive.com/humanity/interesting-random/humans-first-photographs-history/?utm_postid=5136166&amp;utm_editor=5136166_ty</link></item>
-<item><title>Deviled Eggs Are the GOAT of Sides and We’ve Got Memes to Prove It - theCHIVE</title><link>https://thechive.com/humor/meme/devil/?utm_postid=5136464&amp;utm_editor=5136464_zach</link></item>
-<item><title>Anti-Life Hacks That Will Change Your Life (For the Worse) - theCHIVE</title><link>https://thechive.com/humor/anti-life-hacks-that-will-change-your-life-for-the-worse/?utm_postid=5136373&amp;utm_editor=5136373_luka</link></item>
-<item><title>GIFs warn…Expect the UN-Expected - theCHIVE</title><link>https://thechive.com/humor/gifs-warnexpect-the-un-expected/?utm_postid=5136480&amp;utm_editor=5136480_rick</link></item>
-<item><title>We All Know That You Want to See These Interesting Things - theCHIVE</title><link>https://thechive.com/humanity/interesting-random/we-all-know-that-you-want-to-see-these-interesting-things/?utm_postid=5136318&amp;utm_editor=5136318_stephen</link></item>
-<item><title>Cozy Spaces Are the Best Places to Spend the Holidays - theCHIVE</title><link>https://thechive.com/humanity/holidays-random/cozy-spaces-are-the-best-places-to-spend-the-holidays/?utm_postid=5136276&amp;utm_editor=5136276_zach</link></item>
-<item><title>The Best Workout Advice People Have Received - theCHIVE</title><link>https://thechive.com/humanity/the-best-workout-advice-people-have-received/?utm_postid=5135711&amp;utm_editor=5135711_woody</link></item>
-<item><title>90’s Movie Quotes That Still Hit Home - theCHIVE</title><link>https://thechive.com/humanity/nostalgia/90s-movie-quotes-that-still-hit-home/?utm_postid=5136052&amp;utm_editor=5136052_hendy</link></item>
-<item><title>Cabin Crew Confessions: Unhinged Moments at Cruising Altitude - theCHIVE</title><link>https://thechive.com/humor/cabin-crew-confessions-unhinged-moments-at-cruising-altitude/?utm_postid=5135971&amp;utm_editor=5135971_hendy</link></item>
-<item><title>3-Day Work Week Has Us Mentally Checked Out in Honor of Turkey Day - theCHIVE</title><link>https://thechive.com/humor/3-day-work-week-has-us-mentally-checked-out-in-honor-of-turkey-day/?utm_postid=5136114&amp;utm_editor=5136114_zach</link></item>
-<item><title>Poland picks Saab’s A26 submarine design, contract eyed by year’s end - Defense News</title><link>https://www.defensenews.com/global/europe/2025/11/27/poland-picks-saabs-a26-submarine-design-contract-eyed-by-years-end/</link></item>
-<item><title>入门级雪山  奥太娜雪山攀登报名中 - 户外资料网</title><link>https://hd.8264.com/xianlu-189839</link></item>
-<item><title>藏东大环线  看中国最美的雪山冰川蓝冰洞 - 户外资料网</title><link>https://hd.8264.com/xianlu-189413</link></item>
-<item><title>长江三峡徒步   赠价值2000冲锋衣 - 户外资料网</title><link>https://hd.8264.com/xianlu-189912</link></item>
-<item><title>向山而行，步履问秋，雅拉党岭 - 户外资料网</title><link>https://www.8264.com/viewnews-156970-page-1.html</link></item>
-<item><title>零小仃的江湖，中山峰冰塔林未遂的躺平心愿 - 户外资料网</title><link>https://www.8264.com/viewnews-156967-page-1.html</link></item>
-<item><title>天不辜负，山高月圆，记梅里北坡C线徒步 - 户外资料网</title><link>https://www.8264.com/viewnews-156965-page-1.html</link></item>
-<item><title>加德满都的街巷记：猴庙的灵动与烧尸庙的沉静 - 户外资料网</title><link>https://www.8264.com/viewnews-156963-page-1.html</link></item>
-<item><title>会无数次爱上北京的秋天，古都的秋日是一场盛大浪漫 - 户外资料网</title><link>https://www.8264.com/viewnews-156969-page-1.html</link></item>
-<item><title>20万奖金，让近百位素人为骆驼「拼命」 - 户外资料网</title><link>https://www.8264.com/viewnews-156964-page-1.html</link></item>
-<item><title>祁门赤岭防火哨-九龙池水库-何岭古道-三岳源探路记 - 户外资料网</title><link>https://www.8264.com/viewnews-156971-page-1.html</link></item>
-<item><title>双岭路穿越：从忐忑到征服的南太行徒步日记 - 户外资料网</title><link>https://www.8264.com/viewnews-156968-page-1.html</link></item>
-<item><title>人间烟火气，最抚凡人心之上里古镇 - 户外资料网</title><link>https://www.8264.com/viewnews-156966-page-1.html</link></item>
-<item><title>重走长征路：党岭莫斯卡穿越 - 户外资料网</title><link>https://www.8264.com/viewnews-156956-page-1.html</link></item>
-<item><title>深秋的党岭 你美得太不像画 - 户外资料网</title><link>https://www.8264.com/viewnews-156957-page-1.html</link></item>
-<item><title>关于八月国王峰（普拉喜琼）的事故分析 - 户外资料网</title><link>https://www.8264.com/viewnews-156952-page-1.html</link></item>
-<item><title>亲历尼泊尔解锁世界顶级徒步震撼现场之ABC - 户外资料网</title><link>https://www.8264.com/viewnews-156953-page-1.html</link></item>
-<item><title>穿越雪原与冰湖 伊犁冬季 徒步之旅（7日行程） - 户外资料网</title><link>http://hd.8264.com/xianlu-189948</link></item>
-<item><title>2025 萨武主峰 2日速登计划 解锁人生第一座5000米（2日行程） - 户外资料网</title><link>http://hd.8264.com/xianlu-189848</link></item>
-<item><title>越野旅拍精品小团玩西藏林芝 巴松措 然乌湖 来古冰川（5日行程） - 户外资料网</title><link>http://hd.8264.com/xianlu-187300</link></item>
-<item><title>喜马拉雅 巡游西藏喜马拉雅边境线越野车4人小团（8日行程） - 户外资料网</title><link>http://hd.8264.com/xianlu-189803</link></item>
-<item><title>徒步/登山/露营/团建--定制专属路线，送骆驼品牌装备！（3日行程） - 户外资料网</title><link>http://hd.8264.com/xianlu-189866</link></item>
-<item><title>想能个头灯Mammut Lucido TX1和Petzl Tikka XP 2 这件纠结 - 户外资料网</title><link>http://www.8264.com/wenda/77493.html</link></item>
-<item><title>新人老问题，新新菜鸟装备问题求助。人家说标题要长。。。 - 户外资料网</title><link>http://www.8264.com/wenda/77535.html</link></item>
-<item><title>新人买炉子 求前辈给意见 - 户外资料网</title><link>http://www.8264.com/wenda/77536.html</link></item>
-<item><title>还想问大家一个问题,关于徒步和远足 - 户外资料网</title><link>http://www.8264.com/wenda/77505.html</link></item>
-<item><title>小女纸求老驴推荐背包一款…O家的 - 户外资料网</title><link>http://www.8264.com/wenda/77501.html</link></item>
-<item><title>纠结大象、鸟和haglofs的软壳裤子 - 户外资料网</title><link>http://www.8264.com/wenda/77522.html</link></item>
-<item><title>Everything to know about Best Buy Black Friday 2025: Doorbusters, top deals, ad highlights - Mashable</title><link>https://mashable.com/article/best-buy-black-friday-2025-everything-to-know</link></item>
-<item><title>Everything to know about Walmart Black Friday 2025: Early access, best deals, ad highlights - Mashable</title><link>https://mashable.com/article/walmart-black-friday-2025-everything-to-know-best-deals-ad-highlights</link></item>
-<item><title>100+ Black Friday deals: We found record-low prices on AirPods, MacBooks, Samsung TVs, Kindles, and Ninja - Mashable</title><link>https://mashable.com/article/best-black-friday-deals-macbooks-airpods-kindles-samsung-tv-2025</link></item>
-<item><title>35 of the best Black Friday deals under $50 - Mashable</title><link>https://mashable.com/article/best-early-black-friday-under-50-dollar-deals-2025</link></item>
-<item><title>Black Friday 2025: I review headphones, and I&amp;#39;d shop these noise-cancelling headphone deals - Mashable</title><link>https://mashable.com/article/best-black-friday-noise-cancelling-headphones-deals-2025-sony-bose-apple</link></item>
-<item><title>Unlock Peacock for free this Black Friday — here’s how to stream for free - Mashable</title><link>https://mashable.com/article/black-friday-deal-2025-walmart-peacock-premium-free</link></item>
-<item><title>Everything to know about Target Black Friday 2025: Opening hours, top deals, ad highlights - Mashable</title><link>https://mashable.com/article/target-black-friday-2025-everything-to-know</link></item>
-<item><title>Grab massive Black Friday savings on Magic: The Gathering Final Fantasy Commander decks - Mashable</title><link>https://mashable.com/article/black-friday-deal-2025-magic-the-gathering-final-fantasy-commander-decks</link></item>
-<item><title>50+ Walmart Black Friday deals: Score Lego, Samsung TVs, AirPods at record-low prices - Mashable</title><link>https://mashable.com/article/best-black-friday-walmart-deals-2025-airpods-lego-samsung</link></item>
-<item><title>Hulu Black Friday 2025 deal: It&amp;#39;s here and different this year - Mashable</title><link>https://mashable.com/article/black-friday-2025-hulu-deal-disney-plus-bundle</link></item>
-<item><title>Social media companies to be held liable for financial scams under new EU rules - Mashable</title><link>https://mashable.com/article/social-media-companies-held-liable-for-finance-scams-in-new-eu-rules</link></item>
-<item><title>As a tech editor, I found 40+ Black Friday tech deals I&amp;#39;d recommend to friends and family: Apple, Samsung, DJI, Nintendo on sale - Mashable</title><link>https://mashable.com/article/best-black-friday-tech-deals-2025-apple-samsung-dji-nintendo</link></item>
-<item><title>Black Friday 2025: Best Mac and iOS app deals - Mashable</title><link>https://mashable.com/article/black-friday-deals-2025-mac-iphone-ipad-ios-app</link></item>
-<item><title>Which Critical Role campaign is funniest? The cast weighs in. - Mashable</title><link>https://mashable.com/video/critical-role-mighty-nein-interview-campaign-superlatives</link></item>
-<item><title>NFL Thanksgiving games streaming: How to watch live - Mashable</title><link>https://mashable.com/article/nfl-thanksgiving-games-livestreams-lions-packers-cowboys-chiefs</link></item>
-<item><title>Seth Meyers mocks Trump&amp;#39;s Truth Social rant about the NYT - Mashable</title><link>https://mashable.com/video/seth-meyers-mocks-trump-rant-nyt</link></item>
-<item><title>11 burning questions we have for &amp;#39;Stranger Things&amp;#39; Season 5, Volume 2 - Mashable</title><link>https://mashable.com/article/stranger-things-season-5-volume-2-questions</link></item>
-<item><title>How singer-songwriter Chloé Caroline built a loyal following without chasing virality - Mashable</title><link>https://mashable.com/article/chloe-caroline-singer-interview-creator-tips</link></item>
-<item><title>From lip stain to a laptop mic: Inside Chloé Caroline&amp;#39;s creator essentials - Mashable</title><link>https://mashable.com/article/chloe-caroline-creator-essential-products</link></item>
-<item><title>How to vote for the TikTok Awards 2025 — plus date, nominees, and how to watch - Mashable</title><link>https://mashable.com/article/tiktok-awards-2025-how-to-vote-creators-nominees</link></item>
-<item><title>Vine is back, rebooted as diVine, funded by Twitter&amp;#39;s Jack Dorsey - Mashable</title><link>https://mashable.com/article/vine-reboot-divine-jack-dorsey-no-ai</link></item>
-<item><title>The 63 best gifts for moms — Holiday gift ideas worthy of a great woman - Mashable</title><link>https://mashable.com/gifts/best-gifts-for-mom-2025</link></item>
-<item><title>NYT Connections hints today: Clues, answers for November 27, 2025 - Mashable</title><link>https://mashable.com/article/nyt-connections-hint-answer-today-november-27-2025</link></item>
-<item><title>Wordle today: Answer, hints for November 27, 2025 - Mashable</title><link>https://mashable.com/article/wordle-today-answer-november-27-2025</link></item>
-<item><title>NYT Mini crossword answers, hints for November 27, 2025 - Mashable</title><link>https://mashable.com/article/nyt-mini-crossword-answers-hints-november-27-2025</link></item>
-<item><title>NYT Strands hints, answers for November 27, 2025 - Mashable</title><link>https://mashable.com/article/strands-nyt-hint-november-27-2025</link></item>
-<item><title>TikTok persona Mr. Fantasy shows up in Macy&amp;#39;s Thanksgiving Day Parade as the internet melts down - Mashable</title><link>https://mashable.com/article/macys-thanksgiving-day-parade-mr-fantasy-kj-apa-react</link></item>
-<item><title>Spotify might be raising its prices just after Wrapped - Mashable</title><link>https://mashable.com/article/spotify-raising-subscription-prices</link></item>
-<item><title>The internet is drowning in AI slop. Here&amp;#39;s how we got here. - Mashable</title><link>https://mashable.com/article/ai-slop-tiktok-fyp-trending-social-media-why</link></item>
-<item><title>Seth Meyers pokes fun at Trump being utterly charmed by Mamdani - Mashable</title><link>https://mashable.com/video/seth-meyers-mamdani-trump-meeting</link></item>
-<item><title>Paul Mescal and Jessie Buckley reveal the real surprise in &amp;#39;Hamnet&amp;#39; - Mashable</title><link>https://mashable.com/video/hamnet-jessie-buckley-paul-mescal</link></item>
-<item><title>&amp;#39;Stranger Things&amp;#39; Season 4 recap in 60 seconds - Mashable</title><link>https://mashable.com/video/stranger-things-recap-to-prepare-for-season-5</link></item>
-<item><title>Jimmy Kimmel gleefully mocks Trump&amp;#39;s enthusiastic reaction to meeting Mamdani - Mashable</title><link>https://mashable.com/video/jimmy-kimmel-trump-mamdani</link></item>
-<item><title>There are way too many Demogorgons in the &amp;#39;Stranger Things&amp;#39; Season 5, Volume 1 trailer - Mashable</title><link>https://mashable.com/video/stranger-things-season-5-volume-1-trailer</link></item>
-<item><title>Black Friday kitchen deals are hot — shop Ninja, KitchenAid, and Our Place now - Mashable</title><link>https://mashable.com/article/best-early-black-friday-kitchen-deals-2025</link></item>
-<item><title>The Chili&amp;#39;s &amp;#39;Wicked&amp;#39; margaritas are all over TikTok - Mashable</title><link>https://mashable.com/article/chilis-wicked-margaritas-trend-tiktok</link></item>
-<item><title>Pornhub asked tech platforms to enable device-level age verification - Mashable</title><link>https://mashable.com/article/pornhub-asked-apple-google-microsoft-to-enable-device-level-age-verification</link></item>
-<item><title>Dell 16 Premium review: The perfect blend of sleek and powerful at a steep price - Mashable</title><link>https://mashable.com/review/dell-16-premium-laptop</link></item>
-<item><title>DJI Mic 3 review: Ease and versatility for semi-pro producers - Mashable</title><link>https://mashable.com/review/dji-mic-3</link></item>
-<item><title>Review: &amp;#39;Kirby Air Riders&amp;#39; is frivolous, fleeting, and only fun with other people - Mashable</title><link>https://mashable.com/review/kirby-air-riders-nintendo-switch-2</link></item>
-<item><title>The Anker Solix EverFrost 2 electric cooler is a sweet upgrade from a standard cooler. Plus, it can recharge your phone. - Mashable</title><link>https://mashable.com/review/anker-solix-everfrost-2</link></item>
-<item><title>The 50 best tech gifts of the year, hand-picked by professional gadget nerds - Mashable</title><link>https://mashable.com/gifts/best-tech-gifts-for-2025</link></item>
-<item><title>What is the best Shark robot vacuum? Here are my top 3 picks after testing at home. - Mashable</title><link>https://mashable.com/roundup/best-shark-robot-vacuums</link></item>
-<item><title>The best laptops of 2025: Compare the M4 MacBook Air, Microsoft Surface Laptop 7, and more - Mashable</title><link>https://mashable.com/roundup/best-laptops</link></item>
-<item><title>OpenAI denies allegations in teen death lawsuit - Mashable</title><link>https://mashable.com/article/openai-lawsuit-deny-allegations-adam-raine</link></item>
-<item><title>Character.AI debuts choose-your-own-adventure Stories for teens - Mashable</title><link>https://mashable.com/article/character-ai-debuts-stories-for-teens</link></item>
-<item><title>What to know before you buy an AI toy - Mashable</title><link>https://mashable.com/article/ai-toys-for-kids</link></item>
-<item><title>Grokipedia sourcing info from the internet&amp;#39;s biggest neo-Nazi forum, researchers say - Mashable</title><link>https://mashable.com/article/grokipedia-cites-neo-nazi-sources-report-finds</link></item>
-<item><title>Moon phase today: What the moon will look like on November 25 - Mashable</title><link>https://mashable.com/article/moon-phase-today-nov-25</link></item>
-<item><title>Moon phase today: What the moon will look like on November 24 - Mashable</title><link>https://mashable.com/article/moon-phase-today-nov-24</link></item>
-<item><title>Moon phase today: What the moon will look like on November 23 - Mashable</title><link>https://mashable.com/article/moon-phase-today-nov-23</link></item>
-<item><title>An asteroid near Earth could become a temporary moon, then a crash risk - Mashable</title><link>https://mashable.com/article/asteroid-2022-rd2-mini-moon-potentially-hazardous</link></item>
-<item><title>The viral SanDisk Extreme Fit 1TB Flash drive is in stock and on sale for Black Friday - Mashable</title><link>https://mashable.com/article/black-friday-deal-2025-sandisk-1tb-flash-drive</link></item>
-<item><title>Earbuds deals are in full swing for Black Friday: See the latest price drops on AirPods, Sony, and Bose buds - Mashable</title><link>https://mashable.com/article/best-early-black-friday-earbuds-deals-2025</link></item>
-<item><title>I love Anker Soundcore sleep earbuds and both pairs I own are $50 off for Black Friday - Mashable</title><link>https://mashable.com/article/black-friday-deal-2025-soundcore-sleep-a20-a30</link></item>
-<item><title>My favorite power station for camping just hit a record price for Black Friday — Save 50% on Anker Solix - Mashable</title><link>https://mashable.com/article/black-friday-deal-2025-anker-solix-c1000-gen2</link></item>
-<item><title>What&amp;#39;s new to streaming this week? (Nov. 28, 2025) - Mashable</title><link>https://mashable.com/article/new-to-streaming-november-28-2025</link></item>
-<item><title>Where to watch the best holiday movies - Mashable</title><link>https://mashable.com/article/best-holiday-movies-list</link></item>
-<item><title>What&amp;#39;s new to streaming this week? (Nov. 21, 2025) - Mashable</title><link>https://mashable.com/article/new-to-streaming-november-21-2025</link></item>
-<item><title>Black Friday 2025: Live updates on the latest deals from Amazon, Target, Walmart, and more - Mashable</title><link>https://mashable.com/live/black-friday-live-deals-updates-amazon-target-walmart-2025</link></item>
-<item><title>Google Maps&amp;#39; Gemini addition is finally rolling out - Mashable</title><link>https://mashable.com/article/google-gemini-rolling-out-to-maps-now</link></item>
-<item><title>Are Amazon&amp;#39;s Cyber Monday prices better than Black Friday? Our shopping experts say the answer is clear. - Mashable</title><link>https://mashable.com/article/black-friday-vs-cyber-monday-amazon-which-is-better</link></item>
-<item><title>&amp;#39;Stranger Things&amp;#39; mind-bending Season 5, Volume 1 ending, explained - Mashable</title><link>https://mashable.com/article/stranger-things-season-5-volume-1-ending-explained-will-powers</link></item>
-<item><title>Here&amp;#39;s how &amp;#39;Stranger Things&amp;#39; connects to &amp;#39;A Wrinkle in Time&amp;#39; - Mashable</title><link>https://mashable.com/article/stranger-things-season-5-a-wrinkle-in-time-madeleine-lengle-mr-whatsit</link></item>
-<item><title>&amp;#39;Stranger Things&amp;#39; Season 5 brings back a major character — but not the one you think - Mashable</title><link>https://mashable.com/article/stranger-things-season-5-eight-kali-the-lost-sister</link></item>
-<item><title>&amp;#39;Stranger Things&amp;#39; Season 5 steals a key scene from &amp;#39;The Umbrella Academy&amp;#39; - Mashable</title><link>https://mashable.com/article/stranger-things-season-5-i-think-were-alone-now-tiffany-umbrella-academy</link></item>
-<item><title>Black Friday: 9 things you should buy, and 3 to avoid - Mashable</title><link>https://mashable.com/article/black-friday-things-to-buy-and-avoid</link></item>
-<item><title>Black Friday 2025 is here: How to find the best deals - Mashable</title><link>https://mashable.com/article/black-friday-cyber-monday-shopping-tips-hacks</link></item>
-<item><title>NYT Pips hints, answers for November 27, 2025 - Mashable</title><link>https://mashable.com/article/pips-nyt-games-hints-answers-easy-medium-hard-november-27</link></item>
-<item><title>Perspectives - inews.co.uk</title><link>https://inews.co.uk/topic/perspectives</link></item>
-<item><title>Drivers of new EVs will face yearly MOT visits in pay-per-mile tax plan - inews.co.uk</title><link>https://inews.co.uk/news/politics/drivers-new-evs-yearly-mot-pay-mile-tax-4072014</link></item>
-<item><title>Cheaper UK university fees for EU students to clinch Brexit reset deal - inews.co.uk</title><link>https://inews.co.uk/news/politics/cheaper-uk-university-fees-eu-students-clinch-brexit-reset-deal-4070424</link></item>
-<item><title>All we know about the National Guard shooting as one officer dies - inews.co.uk</title><link>https://inews.co.uk/news/world/two-national-guard-officers-shot-washington-dc-4069709</link></item>
-<item><title>Labour U-turns on unfair dismissal right from day one after business backlash - inews.co.uk</title><link>https://inews.co.uk/news/politics/labour-u-turns-unfair-dismissal-right-day-one-business-backlash-4072473</link></item>
-<item><title>Italy has cut illegal boat crossings – but its lessons for the UK are bleak - inews.co.uk</title><link>https://inews.co.uk/news/world/italy-cut-illegal-boat-crossings-lessons-for-uk-bleak-4062241</link></item>
-<item><title>I’m a landlord selling my property - the Budget tax rise was the last straw - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/money/property-and-mortgages/landlord-selling-property-budget-tax-rise-4069260</link></item>
-<item><title>&amp;#39;Fiscal fiction&amp;#39;: What the UK&amp;#39;s leading economists say about the Budget - inews.co.uk</title><link>https://inews.co.uk/news/politics/fiscal-fiction-uks-economists-budget-4070430</link></item>
-<item><title>I&amp;#39;ve negotiated in war zones, Trump has put the UK in grave danger - inews.co.uk</title><link>https://inews.co.uk/opinion/donald-trump-russia-ukraine-peace-deal-putin-4067260</link></item>
-<item><title>The red meat allergy that many doctors don&amp;#39;t understand - and its bizarre cause - inews.co.uk</title><link>https://inews.co.uk/news/red-meat-allergy-doctors-dont-understand-bizarre-cause-4068759</link></item>
-<item><title>What to do with your money after the Budget - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/money/saving-and-banking/what-money-after-budget-4067251</link></item>
-<item><title>Our welfare bill is ballooning - and our pathetic politicians are to blame - inews.co.uk</title><link>https://inews.co.uk/opinion/welfare-bill-ballooning-politicians-to-blame-4070043</link></item>
-<item><title>The end of the state pension triple-lock just became inevitable - inews.co.uk</title><link>https://inews.co.uk/opinion/triple-lock-pension-end-rachel-reeves-budget-4067279</link></item>
-<item><title>What William says about Kate isn&amp;#39;t sweet - it&amp;#39;s sexist - inews.co.uk</title><link>https://inews.co.uk/opinion/prince-william-kate-middleton-wife-sexist-4070307</link></item>
-<item><title>My kids want to talk about Trump. As a GP, this is how I do it - inews.co.uk</title><link>https://inews.co.uk/opinion/kids-talk-about-trump-gp-how-to-do-it-4055464</link></item>
-<item><title>Reeves has just poured cold water on the housing market - this is how it&amp;#39;ll affect you - inews.co.uk</title><link>https://inews.co.uk/opinion/reeves-housing-market-affect-4064535</link></item>
-<item><title>Who will pay the price for this Budget? The i Paper&amp;#39;s experts give their verdicts - inews.co.uk</title><link>https://inews.co.uk/opinion/budget-pay-price-i-papers-experts-verdicts-4061914</link></item>
-<item><title>Middle-class millennials will pay for Reeves&amp;#39;s Budget – but they can&amp;#39;t afford it - inews.co.uk</title><link>https://inews.co.uk/opinion/middle-class-millennials-pay-rachel-reeves-budget-4064543</link></item>
-<item><title>Reeves sacrificed taxpayers - and placed a timebomb under Labour - inews.co.uk</title><link>https://inews.co.uk/opinion/reeves-taxpayers-timebomb-under-labour-4064890</link></item>
-<item><title>Salary sacrifice will hit people in their 50s hardest – and it&amp;#39;s unjust - inews.co.uk</title><link>https://inews.co.uk/opinion/budget-rachel-reeves-harder-retire-4064523</link></item>
-<item><title>I have a BMW on Motability - I worry other cars won&amp;#39;t be safe for me - inews.co.uk</title><link>https://inews.co.uk/news/i-have-a-bmw-on-motability-i-worry-other-cars-wont-be-safe-for-me-4068613</link></item>
-<item><title>Budget fails to prepare UK for war with Russia as funding fears left unanswered - inews.co.uk</title><link>https://inews.co.uk/news/politics/budget-fails-prepare-uk-war-russia-funding-fears-4068842</link></item>
-<item><title>End of two-child benefit cap will see some parents hit second £22k limit - inews.co.uk</title><link>https://inews.co.uk/news/politics/end-of-two-child-benefit-cap-will-see-some-parents-hit-second-22k-limit-4069128</link></item>
-<item><title>Why Britons won&amp;#39;t feel better off under Labour - inews.co.uk</title><link>https://inews.co.uk/news/politics/britons-better-off-labour-4068811</link></item>
-<item><title>&amp;#39;Everyone is depressed&amp;#39;: Rebellious Labour MPs give Starmer and Reeves until May - inews.co.uk</title><link>https://inews.co.uk/news/politics/everyone-depressed-rebellious-labour-mps-starmer-reeves-may-4054765</link></item>
-<item><title>The 14 best novels of 2025 - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/the-14-best-novels-of-2025-4051109</link></item>
-<item><title>Why do we hate Millie Bobby Brown? - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/why-do-we-hate-millie-bobby-brown-4068304</link></item>
-<item><title>I’m an expat planning to draw a UK state pension, the Budget could ruin my retirement - inews.co.uk</title><link>https://inews.co.uk/news/world/expats-uk-state-pension-budget-big-impact-4068921</link></item>
-<item><title>Stranger Things season 5 is ridiculous but hasn&amp;#39;t run out of fun - inews.co.uk</title><link>https://inews.co.uk/culture/stranger-things-season-5-ridiculous-but-fun-4039858</link></item>
-<item><title>At 47, I&amp;#39;ve never had a day off sick - experts told me why - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/never-day-off-sick-experts-told-why-4067016</link></item>
-<item><title>Wall insulation covered my home with mould and could cost £100k to fix. I’m trapped - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/money/wall-insulation-home-mouldy-cost-fix-trapped-4024932</link></item>
-<item><title>How the UK&amp;#39;s property taxes compare to other countries - inews.co.uk</title><link>https://inews.co.uk/news/how-uk-property-taxes-compare-other-countries-4070299</link></item>
-<item><title>Trump sees this shooting as an opportunity - and immigrants are about to pay - inews.co.uk</title><link>https://inews.co.uk/news/world/trump-sees-shooting-opportunity-immigrants-about-to-pay-4070225</link></item>
-<item><title>What Ukrainian soldiers on the front line really think about Trump&amp;#39;s peace deal - inews.co.uk</title><link>https://inews.co.uk/news/world/what-ukrainian-soldiers-front-line-think-trumps-peace-deal-4068886</link></item>
-<item><title>Migration plummets but asylum hotel numbers rise - here&amp;#39;s what&amp;#39;s really happening - inews.co.uk</title><link>https://inews.co.uk/news/migration-plummets-asylum-hotel-numbers-rise-happening-4070398</link></item>
-<item><title>Liverpool fear Man City will hijack £65m Antoine Semenyo transfer - inews.co.uk</title><link>https://inews.co.uk/sport/football/liverpool-man-city-antoine-semenyo-transfer-4067287</link></item>
-<item><title>Tottenham’s youthful revolution can turn the Frank project around - inews.co.uk</title><link>https://inews.co.uk/sport/football/tottenham-psg-archie-gray-lucas-bergvall-thomas-frank-4068516</link></item>
-<item><title>Can Arne Slot survive this Liverpool crisis? - inews.co.uk</title><link>https://inews.co.uk/sport/football/liverpool-arne-slot-sacking-question-4068521</link></item>
-<item><title>The curious case of England’s invisible spinner - inews.co.uk</title><link>https://inews.co.uk/sport/cricket/shoaib-bashir-england-invisible-spinner-4065148</link></item>
-<item><title>Chelsea&amp;#39;s wonderkid Estevao reminds me of a young Cristiano Ronaldo - inews.co.uk</title><link>https://inews.co.uk/sport/football/chelsea-estevao-young-cristiano-ronaldo-4065814</link></item>
-<item><title>What our obsession with Ken Bruce tells us about British radio - inews.co.uk</title><link>https://inews.co.uk/culture/radio/what-obsession-ken-bruce-tells-us-british-radio-4071120</link></item>
-<item><title>Salman Rushdie: &amp;#39;MI6 stopped at least half a dozen attempts to kill me&amp;#39; - inews.co.uk</title><link>https://inews.co.uk/culture/books/salman-rushdie-mi6-stopped-attempts-to-kill-me-4053177</link></item>
-<item><title>The best classical music to book in December, from Handel&amp;#39;s Messiah to Hitchcock - inews.co.uk</title><link>https://inews.co.uk/culture/arts/best-classical-music-book-december-handel-messiah-hitchcock-4065344</link></item>
-<item><title>Knives Out 3 is a melodramatic masterpiece - inews.co.uk</title><link>https://inews.co.uk/culture/film/knives-out-3-melodramatic-masterpiece-4052548</link></item>
-<item><title>£3.53 for The Traitors? The licence fee is a bargain - inews.co.uk</title><link>https://inews.co.uk/culture/television/traitors-licence-fee-bargain-4063944</link></item>
-<item><title>Hannah Fry: &amp;#39;They called me a “nubile young woman”. F**k you, I’ve got three degrees&amp;#39; - inews.co.uk</title><link>https://inews.co.uk/culture/radio/hannah-fry-they-called-me-nubile-young-woman-4027937</link></item>
-<item><title>Britain is about to unlock Russia&amp;#39;s dirty money - here&amp;#39;s how it could be used - inews.co.uk</title><link>https://inews.co.uk/news/britain-unlock-russias-dirty-money-heres-how-used-4035021</link></item>
-<item><title>Leaked recordings prove Putin is making Trump his puppet - inews.co.uk</title><link>https://inews.co.uk/news/world/leaked-recordings-prove-putin-making-trump-puppet-4066858</link></item>
-<item><title>Whatever peace looks like in Ukraine, Europe will still have to fight with Putin - inews.co.uk</title><link>https://inews.co.uk/news/whatever-peace-looks-like-in-ukraine-europe-will-still-have-to-fight-with-putin-4066887</link></item>
-<item><title>UK facing &amp;#39;existential&amp;#39; risk from Russia - and it’s not ready, says ex-top commander - inews.co.uk</title><link>https://inews.co.uk/news/uk-facing-existential-risk-russia-not-ready-top-commander-4065574</link></item>
-<item><title>Putin only wants peace on his terms. He thinks Trump may provide it - inews.co.uk</title><link>https://inews.co.uk/news/world/putin-wants-peace-his-terms-thinks-trump-provide-4065336</link></item>
-<item><title>How Instagram is destroying its own influencers - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/instagram-destroying-own-influencers-4052718</link></item>
-<item><title>Why I&amp;#39;ll keep parenting my kids like a &amp;#39;dad&amp;#39; - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/parenting-kids-like-a-dad-4058688</link></item>
-<item><title>My doctor husband tried to hide his money when we divorced - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/divorcing-husband-hidden-money-4064307</link></item>
-<item><title>I tested supermarket smoked salmon - at £4, Aldi&amp;#39;s was the winner - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/tested-supermarket-smoked-salmon-aldi-4064325</link></item>
-<item><title>The winter sun destination that’s a perfect foodie escape - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/travel/winter-sun-destination-foodie-escape-malaysia-4052384</link></item>
-<item><title>Asim Chaudhry: &amp;#39;I was beaten up by the National Front. I grew up in fear&amp;#39; - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/asim-chaudhry-people-just-do-nothing-4057981</link></item>
-<item><title>I’m a mum-of-five. Ending the two-child benefit cap will be life-changing - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/money/mum-child-benefit-cap-axe-children-poverty-4070462</link></item>
-<item><title>What you can do to minimise the cash ISA cut pain - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/money/saving-and-banking/minimise-cash-isa-pain-4069148</link></item>
-<item><title>I rent out my flat on AirBnB - I&amp;#39;m worried tourist tax could put people off booking - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/money/airbnb-flat-tourist-tax-would-unfairly-hit-4067467</link></item>
-<item><title>There is no war on pensioners - retirees got a good deal from the Budget - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/money/war-pensioners-retirees-budget-4070377</link></item>
-<item><title>Reeves is raiding your pension, but your boss might help you escape it - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/money/pensions-and-retirement/reeves-raiding-pension-boss-might-help-dodge-4069498</link></item>
-<item><title>I took a £15 train journey along Spain&amp;#39;s north coast - it was a quiet delight - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/travel/feve-train-spain-north-coast-santander-bilbao-4058069</link></item>
-<item><title>Britain&amp;#39;s 12 best hotels for foodies, according to the Good Hotel Guide - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/britain-best-hotels-foodies-good-hotel-guide-4041515</link></item>
-<item><title>Five Christmassy British towns to visit by train, from Knaresborough to Oban - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/travel/five-christmassy-british-towns-visit-train-knaresborough-oban-4063182</link></item>
-<item><title>I wasn&amp;#39;t convinced by the idea of a cruise on a billion-dollar ship - I was wrong - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/travel/billion-dollar-ship-converted-cruises-4052668</link></item>
-<item><title>Daniel Storey&amp;#39;s verdict on every Premier League team after Gameweek 12 - inews.co.uk</title><link>https://inews.co.uk/sport/football/the-score-arsenal-caicedo-dyche-4058200</link></item>
-<item><title>The radical theory about heart attacks - and the common gout drug that may help - inews.co.uk</title><link>https://inews.co.uk/news/radical-theory-heart-attacks-common-gout-drug-4047868</link></item>
-<item><title>How the £22k minimum wage caught up with graduate jobs - inews.co.uk</title><link>https://inews.co.uk/opinion/22k-minimum-wage-graduate-jobs-4047850</link></item>
-<item><title>Starmer will pay the price for his spinelessness toward Trump - inews.co.uk</title><link>https://inews.co.uk/opinion/starmer-pay-price-spinelessness-toward-trump-4036767</link></item>
-<item><title>Mansion tax is morally wrong - they&amp;#39;re attacking hardworking people - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/money/mansion-tax-jealousy-tax-worked-hard-big-house-4032888?ico=most_popular</link></item>
-<item><title>What Rachel Reeves hopes you didn’t notice in the Budget - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/money/what-reeves-hopes-you-didnt-notice-in-budget-4067241?ico=most_popular</link></item>
-<item><title>Salary sacrifice pension schemes to be cut by firms after new cap in Budget - inews.co.uk</title><link>https://inews.co.uk/news/salary-sacrifice-pension-schemes-cut-firms-budget-4068188?ico=most_popular</link></item>
-<item><title>Cowell Blood – 27 November - inews.co.uk</title><link>https://inews.co.uk/shorts/cowell-blood-27-november?utm_source=theipaper&amp;utm_medium=shorts_card&amp;utm_campaign=shorts_Cowell+Blood+-+27+November</link></item>
-<item><title>Ukrainian Soldiers – 27 November - inews.co.uk</title><link>https://inews.co.uk/shorts/ukrainian-soldiers-27-november?utm_source=theipaper&amp;utm_medium=shorts_card&amp;utm_campaign=shorts_Ukrainian+Soldiers+-+27+November</link></item>
-<item><title>Net Migration – 27 November - inews.co.uk</title><link>https://inews.co.uk/shorts/net-migration-27-november?utm_source=theipaper&amp;utm_medium=shorts_card&amp;utm_campaign=shorts_Net+Migration+-+27+November</link></item>
-<item><title>Manchester Terror Arrest – 27 November - inews.co.uk</title><link>https://inews.co.uk/shorts/manchester-terror-arrest-27-november?utm_source=theipaper&amp;utm_medium=shorts_card&amp;utm_campaign=shorts_Manchester+Terror+Arrest+-+27+November</link></item>
-<item><title>Asthma – 27 November - inews.co.uk</title><link>https://inews.co.uk/shorts/asthma-27-november?utm_source=theipaper&amp;utm_medium=shorts_card&amp;utm_campaign=shorts_Asthma+-+27+November</link></item>
-<item><title>National Guard – 27 November - inews.co.uk</title><link>https://inews.co.uk/shorts/national-guard-shooting-27-november?utm_source=theipaper&amp;utm_medium=shorts_card&amp;utm_campaign=shorts_National+Guard+-+27+November</link></item>
-<item><title>Epic&amp;#39;s Sweeney Says Platforms Should Stop Tagging Games Made With AI - Slashdot</title><link>https://games.slashdot.org/story/25/11/28/0033246/epics-sweeney-says-platforms-should-stop-tagging-games-made-with-ai</link></item>
-<item><title>Social Media Giants Liable For Financial Scams Under New EU Law - Slashdot</title><link>https://tech.slashdot.org/story/25/11/28/0028207/social-media-giants-liable-for-financial-scams-under-new-eu-law</link></item>
-<item><title>Australia Spent $62 Million To Update Its Weather Web Site and Made It Worse - Slashdot</title><link>https://slashdot.org/story/25/11/27/2013252/australia-spent-62-million-to-update-its-weather-web-site-and-made-it-worse</link></item>
-<item><title>Face Transplants Promised Hope. Patients Were Put Through the Unthinkable - Slashdot</title><link>https://science.slashdot.org/story/25/11/27/202228/face-transplants-promised-hope-patients-were-put-through-the-unthinkable</link></item>
-<item><title>UK To Tax Electric Cars by the Mile Starting 2028 - Slashdot</title><link>https://news.slashdot.org/story/25/11/27/1332209/uk-to-tax-electric-cars-by-the-mile-starting-2028</link></item>
-<item><title>Android&amp;#39;s New Dual-Band Hotspot Mode Pairs 6 GHz Speed With 2.4 GHz Compatibility - Slashdot</title><link>https://mobile.slashdot.org/story/25/11/27/1255245/androids-new-dual-band-hotspot-mode-pairs-6-ghz-speed-with-24-ghz-compatibility</link></item>
-<item><title>Defense Contractors Lobby To Kill Military Right-to-Repair, Push Pay-Per-Use Data Model - Slashdot</title><link>https://tech.slashdot.org/story/25/11/27/095202/defense-contractors-lobby-to-kill-military-right-to-repair-push-pay-per-use-data-model</link></item>
-<item><title>bipartisan right-to-repair provision - Slashdot</title><link>https://slashdot.org/story/25/07/08/226213/the-military-might-finally-win-the-right-to-repair</link></item>
-<item><title>NASA Reduces Flights on Boeing&amp;#39;s Starliner After Botched Astronaut Mission - Slashdot</title><link>https://science.slashdot.org/story/25/11/27/0856219/nasa-reduces-flights-on-boeings-starliner-after-botched-astronaut-mission</link></item>
-<item><title>AI Can Technically Perform 12% of US Labor Market&amp;#39;s Wage Value, MIT Simulation Finds - Slashdot</title><link>https://news.slashdot.org/story/25/11/27/0752210/ai-can-technically-perform-12-of-us-labor-markets-wage-value-mit-simulation-finds</link></item>
-<item><title>UK Police To Trial AI &amp;#39;Agents&amp;#39; Responding To Non-Emergency Calls - Slashdot</title><link>https://news.slashdot.org/story/25/11/26/2344228/uk-police-to-trial-ai-agents-responding-to-non-emergency-calls</link></item>
-<item><title>Apple Asks Indian Court to Block Antitrust Law Allowing $38 Billion Fine - Slashdot</title><link>https://yro.slashdot.org/story/25/11/26/2352256/apple-asks-indian-court-to-block-antitrust-law-allowing-38-billion-fine</link></item>
-<item><title>China&amp;#39;s Giant Underground Neutrino Observatory Releases Its First Results - Slashdot</title><link>https://science.slashdot.org/story/25/11/26/2337257/chinas-giant-underground-neutrino-observatory-releases-its-first-results</link></item>
-<item><title>Mexico Unveils Plans To Build Most Powerful Supercomputer In Latin America - Slashdot</title><link>https://hardware.slashdot.org/story/25/11/26/2330218/mexico-unveils-plans-to-build-most-powerful-supercomputer-in-latin-america</link></item>
-<item><title>Amazon Faces FAA Probe After Delivery Drone Snaps Internet Cable In Texas - Slashdot</title><link>https://tech.slashdot.org/story/25/11/26/2326203/amazon-faces-faa-probe-after-delivery-drone-snaps-internet-cable-in-texas</link></item>
-<item><title>Greek Cybercrime Unit Shuts Down IPTV Pirates, 68 End Users Face Fines - Slashdot</title><link>https://yro.slashdot.org/story/25/11/26/227244/greek-cybercrime-unit-shuts-down-iptv-pirates-68-end-users-face-fines</link></item>
-<item><title>Plex Is Now Enforcing Remote Play Restrictions On TVs - Slashdot</title><link>https://entertainment.slashdot.org/story/25/11/25/239252/plex-is-now-enforcing-remote-play-restrictions-on-tvs?sbsrc=md</link></item>
-<item><title>Why Do People String Popcorn on Christmas Trees? - Mental Floss</title><link>https://www.mentalfloss.com/holidays/christmas/why-string-popcorn-christmas-trees</link></item>
-<item><title>A Brief History of Black Friday - Mental Floss</title><link>https://www.mentalfloss.com/holidays/brief-history-black-friday</link></item>
-<item><title>45 Brilliant Uses For Thanksgiving Leftovers - Mental Floss</title><link>https://www.mentalfloss.com/holidays/thanksgiving/uses-thanksgiving-leftovers</link></item>
-<item><title>6 U.S. Destinations for Travelers Who Love the Cottagecore Aesthetic - Mental Floss</title><link>https://www.mentalfloss.com/geography/wanderlust/u-s-destinations-cottagecore-aesthetic</link></item>
-<item><title>7 Famous Imposters Throughout History - Mental Floss</title><link>https://www.mentalfloss.com/history/7-famous-imposters</link></item>
-<item><title>10 Olde-Timey Thanksgiving Recipes We Should Bring Back - Mental Floss</title><link>https://www.mentalfloss.com/holidays/thanksgiving/olde-timey-thanksgiving-recipes</link></item>
-<item><title>Quiz: Guess the Popular ’90s Movie by Its Tagline - Mental Floss</title><link>https://www.mentalfloss.com/quizzes/guess-popular-90s-movie-tagline</link></item>
-<item><title>Killer Black Friday Deals From Apple, Samsung and More - CNET</title><link>https://www.cnet.com/deals/best-black-friday-deals-2025-11-27/</link></item>
-<item><title>Heard, Chef. Air Fryers Have Earned Their Place in Our Kitchens - CNET</title><link>https://www.cnet.com/home/kitchen-and-household/features/heard-chef-air-fryers-have-earned-their-place-in-our-kitchens/</link></item>
-<item><title>iPhone 17 Review: Skip the Rest, This One&amp;#39;s All You Need - CNET</title><link>https://www.cnet.com/tech/mobile/apple-iphone-17-review/</link></item>
-<item><title>Apple Watch Series 11 vs. Ultra 3 and SE 3 - CNET</title><link>https://www.cnet.com/tech/mobile/apple-watch-series-11-vs-ultra-3-and-se-3-how-to-choose-the-best-smartwatch-for-you/</link></item>
-<item><title>CNET Labs Exclusive: This Is the Air Purifier You Need This Winter - CNET</title><link>https://www.cnet.com/health/medical/our-exclusive-lab-data-reveals-youll-want-an-air-purifier-this-cold-and-flu-season/</link></item>
-<item><title>All I Want for Black Friday Are These 5 Big Deals - CNET</title><link>https://www.cnet.com/deals/all-i-want-for-black-friday-is-these-5-big-deals/</link></item>
-<item><title>Top 100 Channels on Live TV Streaming Services: YouTube TV, Hulu Live and More - CNET</title><link>https://www.cnet.com/tech/services-and-software/top-100-channels-live-tv-streaming-services-look-youtubetv-hulu-live-more/</link></item>
-<item><title>Still Haven&amp;#39;t Gotten Into the Viral Sora 2 App? The Key To Getting a Code - CNET</title><link>https://www.cnet.com/tech/services-and-software/none-of-your-friends-have-a-sora-invite-code-how-you-can-get-on-the-viral-app-anyway/</link></item>
-<item><title>If You&amp;#39;re Using ChatGPT For Any of These 11 Tasks, You Need to Stop - CNET</title><link>https://www.cnet.com/tech/services-and-software/using-chatgpt-for-these-11-things-is-a-terrible-idea-heres-why/</link></item>
-<item><title>How to Detect AI Writing Using These Tips - CNET</title><link>https://www.cnet.com/tech/services-and-software/how-to-detect-ai-writing-using-these-tips/</link></item>
-<item><title>All Gemini Users Can Now Use the Viral Nano Banana AI Image Generator. Here&amp;#39;s How - CNET</title><link>https://www.cnet.com/tech/services-and-software/all-gemini-users-can-now-use-the-viral-nano-banana-ai-image-generator-heres-how/</link></item>
-<item><title>Wellness Influencers Are Good at Winning Your Trust. That May Not Be the Best Medicine - CNET</title><link>https://www.cnet.com/health/features/wellness-influencers-good-winning-your-trust-may-not-be-best-medicine/</link></item>
-<item><title>AI Data Centers Are Coming for Your Land, Water and Power - CNET</title><link>https://www.cnet.com/tech/services-and-software/features/ai-data-centers-are-massive-energy-hungry-and-headed-your-way/</link></item>
-<item><title>No, Your iPhone Isn&amp;#39;t Listening to You. Here&amp;#39;s What&amp;#39;s Really Happening - CNET</title><link>https://www.cnet.com/tech/services-and-software/features/no-your-iphone-isnt-listening-to-you-heres-whats-really-happening/</link></item>
-<item><title>27 of the Best Tech Gifts Under $100 for 2025 - CNET</title><link>https://www.cnet.com/gifts/best-tech-gifts-under-100/</link></item>
-<item><title>31 Best Advent Calendars for Kids in 2025 - CNET</title><link>https://www.cnet.com/gifts/best-advent-calendars-for-kids/</link></item>
-<item><title>43 Best Christmas Gifts and Ideas for Every Price Range - CNET</title><link>https://www.cnet.com/gifts/best-christmas-gift-ideas/</link></item>
-<item><title>Apple Intelligence Reboot - CNET</title><link>https://www.cnet.com/tech/services-and-software/apple-reportedly-planning-ai-comeback-complete-with-a-tabletop-robot/</link></item>
-<item><title>With No Subscription - CNET</title><link>https://www.cnet.com/home/security/best-home-security-cameras-without-subscriptions/</link></item>
-<item><title>Solar Batteries - CNET</title><link>https://www.cnet.com/home/solar/best-solar-batteries/</link></item>
-<item><title>How to Buy the Switch 2 - CNET</title><link>https://www.cnet.com/deals/nintendo-switch-2-restock-tracker/</link></item>
-<item><title>Meal Delivery Deals - CNET</title><link>https://www.cnet.com/deals/want-cheap-eats-sent-to-your-door-these-are-the-best-meal-delivery-deals-for-fall/</link></item>
-<item><title>Identity Theft Protection - CNET</title><link>https://www.cnet.com/tech/services-and-software/best-identity-theft-protection/</link></item>
-<item><title>Tax Software - CNET</title><link>https://www.cnet.com/personal-finance/best-tax-software/</link></item>
-<item><title>Best iPhone VPN - CNET</title><link>https://www.cnet.com/tech/services-and-software/best-vpn-for-iphone/</link></item>
-<item><title>Best High-Yield Savings Accounts - CNET</title><link>https://www.cnet.com/personal-finance/banking/best-high-yield-savings-accounts/</link></item>
-<item><title>Best Mortgage Lenders - CNET</title><link>https://www.cnet.com/personal-finance/mortgages/best-mortgage-lenders/</link></item>
-<item><title>Best Home Equity Loans - CNET</title><link>https://www.cnet.com/personal-finance/home-equity/best-home-equity-loan-lenders/</link></item>
-<item><title>Nordvpn vs Expressvpn - CNET</title><link>https://www.cnet.com/tech/services-and-software/expressvpn-vs-nordvpn/</link></item>
-<item><title>Black Friday Cyber Monday - CNET</title><link>https://www.cnet.com/deals/black-friday-cyber-monday/</link></item>
-<item><title>News Release - NASA</title><link>https://www.nasa.gov/news-release/nasa-astronaut-chris-williams-crewmates-arrive-at-space-station/</link></item>
-<item><title>科学家可能首次观察到了暗物质 - Solidot</title><link>https://www.solidot.org/story?sid=82903</link></item>
-<item><title>著名歌星的平均寿命较短 - Solidot</title><link>https://www.solidot.org/story?sid=82904</link></item>
-<item><title>America 250: Our nation’s nature - FWS</title><link>https://www.fws.gov/story/2025-11/america-250-our-nations-nature-2</link></item>
-<item><title>An Abundance of Thanks - FWS</title><link>https://www.fws.gov/story/2025-11/abundance-thanks</link></item>
-<item><title>Administration Revises Endangered Species Act Regulations to Strengthen Certainty, Reduce Burdens and Uphold the Law - FWS</title><link>https://www.fws.gov/press-release/2025-11/administration-revises-endangered-species-act-regulations-strengthen</link></item>
-<item><title>Into the Weeds: Virginia Biologists Track the Life of Invasive Snakehead - FWS</title><link>https://www.fws.gov/story/2025-11/weeds-virginia-biologists-track-life-invasive-snakehead</link></item>
-<item><title>Worthy and wicked (Words meaning ‘good’ and ‘bad’) - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2025/11/26/worthy-and-wicked-words-meaning-good-and-bad/</link></item>
-<item><title>New words – 24 November 2025 - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2025/11/24/new-words-24-november-2025/</link></item>
-<item><title>观察｜上海美术教育中的“上戏现象” - 澎湃</title><link>https://www.thepaper.cn/newsDetail_forward_32056845</link></item>
-<item><title>Expression 360 Powers the Complete ESTIC 2025 Experience, Bringing IMAGINE–INNOVATE–INSPIRE to Life for Viksit Bharat 2047 - The Eastern Herald</title><link>https://easternherald.com/2025/11/27/expression-360-powers-the-complete-estic-2025-experience-bringing-imagine-innovate-inspire-to-life-for-viksit-bharat-2047/</link></item>
-<item><title>Heeriye New Song by Shyna Sunsara &amp; Karanjeet Arora, Bollywood Love Song Under Music Label AB Bansal Music - The Eastern Herald</title><link>https://easternherald.com/2025/11/27/heeriye-new-song-by-shyna-sunsara-karanjeet-arora-bollywood-love-song-under-music-label-ab-bansal-music/</link></item>
-<item><title>&amp;quot;A Plea for Compassion: Embracing Our Responsibility Towards Dogs&amp;quot; - The Eastern Herald</title><link>https://easternherald.com/2025/11/27/a-plea-for-compassion-embracing-our-responsibility-towards-dogs/</link></item>
-<item><title>Indian Gaming Leaders Join 200+ Global Executives in Moscow to Shape Industry&amp;#39;s Next Chapter - The Eastern Herald</title><link>https://easternherald.com/2025/11/27/indian-gaming-leaders-join-200-global-executives-in-moscow-to-shape-industrys-next-chapter/</link></item>
-<item><title>Tata Motors Stock Split Announcement: How It Affects Share Price and Valuation? - The Eastern Herald</title><link>https://easternherald.com/2025/11/27/tata-motors-stock-split-affects-share-price-valuation/</link></item>
-<item><title>LALVIS INTERNATIONAL Brings Large-Scale Precision to the First-Ever Tejas Rotary Institute 2025 - The Eastern Herald</title><link>https://easternherald.com/2025/11/27/lalvis-international-brings-large-scale-precision-to-the-first-ever-tejas-rotary-institute-2025/</link></item>
-<item><title>Realty Hunting Highlights Surge in New Launches as Gurugram Real Estate Market Gains Momentum - The Eastern Herald</title><link>https://easternherald.com/2025/11/27/realty-hunting-highlights-surge-in-new-launches-as-gurugram-real-estate-market-gains-momentum/</link></item>
-<item><title>Paisa Bachao: India’s Fastest-Growing Telegram Deals Channel Revolutionizing Everyday Savings - The Eastern Herald</title><link>https://easternherald.com/2025/11/27/paisa-bachao-indias-fastest-growing-telegram-deals-channel-revolutionizing-everyday-savings/</link></item>
-<item><title>Philips launches Evnia QD OLED monitor for gamers and creators - BetaNews</title><link>https://betanews.com/2025/11/27/philips-launches-evnia-qd-oled-monitor-for-gamers-and-creators/</link></item>
-<item><title>Alibaba debuts its first self developed AI glasses in China - BetaNews</title><link>https://betanews.com/2025/11/27/alibaba-debuts-its-first-self-developed-ai-glasses-in-china/</link></item>
-<item><title>AI generated founding fathers go bargain hunting in this new ad for Black Friday - BetaNews</title><link>https://betanews.com/2025/11/27/ai-generated-founding-fathers-go-bargain-hunting-in-this-new-ad-for-black-friday/</link></item>
-<item><title>Power availability shapes future data center plans - BetaNews</title><link>https://betanews.com/2025/11/27/power-availability-shapes-future-data-center-plans/</link></item>
-<item><title>Newegg partners with PayPal to bring AI driven shopping to Perplexity - BetaNews</title><link>https://betanews.com/2025/11/27/newegg-partners-with-paypal-to-bring-ai-driven-shopping-to-perplexity/</link></item>
-<item><title>AI browser Opera Neon gains new tools and Gemini 3 and Nano Banana support - BetaNews</title><link>https://betanews.com/2025/11/27/ai-browser-opera-neon-gains-new-tools-and-gemini-3-and-nano-banana-support/</link></item>
-<item><title>launched two months ago - BetaNews</title><link>https://betanews.com/2025/10/01/opera-begins-rolling-out-opera-neon-its-ai-powered-browser/</link></item>
-<item><title>How LLMs could revolutionize ad blocking - BetaNews</title><link>https://betanews.com/2025/11/27/how-llms-could-revolutionize-ad-blocking/</link></item>
-<item><title>Online shoppers warned of QR code phishing scam - BetaNews</title><link>https://betanews.com/2025/11/27/online-shoppers-warned-of-qr-code-phishing-scam/</link></item>
-<item><title>Microsoft is working to simplify updating apps in Windows 11 - BetaNews</title><link>https://betanews.com/2025/11/27/microsoft-is-working-to-simplify-updating-apps-in-windows-11/</link></item>
-<item><title>Microsoft releases PowerToys v0.96.1 with a nice surprise for Windows 10 users - BetaNews</title><link>https://betanews.com/2025/11/27/microsoft-releases-powertoys-v0-96-1-with-a-nice-surprise-for-windows-10-users/</link></item>
-<item><title>Microsoft is pulling Copilot from WhatsApp to comply with Meta policies - BetaNews</title><link>https://betanews.com/2025/11/27/microsoft-is-pulling-copilot-from-whatsapp-to-comply-with-meta-policies/</link></item>
-<item><title>Americans fear losing control of AI more than losing their jobs, study shows - BetaNews</title><link>https://betanews.com/2025/11/26/americans-fear-losing-control-of-ai-more-than-losing-their-jobs-study-shows/</link></item>
-<item><title>Waze gets a massive new feature for Android Auto users - BetaNews</title><link>https://betanews.com/2025/11/26/waze-gets-a-massive-new-feature-for-android-auto-users/</link></item>
-<item><title>Collabora Office is an open source desktop suite for Windows, macOS and Linux - BetaNews</title><link>https://betanews.com/2025/11/26/collabora-office-is-an-open-source-desktop-suite-for-windows-macos-and-linux/</link></item>
-<item><title>Spotify has a price increase planned for early 2026 - BetaNews</title><link>https://betanews.com/2025/11/26/spotify-has-a-price-increase-planned-for-early-2026/</link></item>
-<item><title>Apple bows to Chinese pressure to remove queer dating apps from its App Store - BetaNews</title><link>https://betanews.com/2025/11/10/apple-bows-to-chinese-pressure-to-remove-queer-dating-apps-from-its-app-store/</link></item>
-<item><title>Say goodbye to Microsoft Windows 11 and hello to Nitrux Linux 5 - BetaNews</title><link>https://betanews.com/2025/11/12/say-goodbye-to-microsoft-windows-11-and-hello-to-nitrux-linux-5/</link></item>
-<item><title>Orion 1.0 is a privacy focused browser for macOS, but will Apple users really leave Safari? - BetaNews</title><link>https://betanews.com/2025/11/25/orion-1-0-is-a-privacy-focused-browser-for-macos/</link></item>
-<item><title>New year, new Microsoft OS -- the stunning Windows 26 is everything Windows 12 should be - BetaNews</title><link>https://betanews.com/2025/11/12/new-year-new-microsoft-os-the-stunning-windows-26-is-everything-windows-12-should-be/</link></item>
-<item><title>Microsoft is changing the naming schema for Windows 11 updates - BetaNews</title><link>https://betanews.com/2025/11/01/microsoft-is-changing-the-naming-schema-for-windows-11-updates/</link></item>
-<item><title>Would you swap personal information for a bargain? - BetaNews</title><link>https://betanews.com/2025/11/10/would-you-swap-personal-information-for-a-bargain/</link></item>
-<item><title>Logitech opens its first U.S. experience store in San Francisco, with a giant MX Master 4 mouse - BetaNews</title><link>https://betanews.com/2025/11/20/logitech-opens-its-first-u-s-experience-store-in-san-francisco-with-a-giant-mx-master-4-mouse/</link></item>
-<item><title>WhatsApp will soon support third-party chats - BetaNews</title><link>https://betanews.com/2025/11/07/whatsapp-will-soon-support-third-party-chats/</link></item>
-<item><title>The Empty Tune - Hazlitt</title><link>https://hazlitt.net/longreads/empty-tune</link></item>
-<item><title>Larissa Diakiw - Hazlitt</title><link>https://hazlitt.net/authors/larissa-diakiw</link></item>
-<item><title>The Creature - Hazlitt</title><link>https://hazlitt.net/longreads/creature</link></item>
-<item><title>Mannika Mishra - Hazlitt</title><link>https://hazlitt.net/authors/mannika-mishra</link></item>
-<item><title>Norway takes home top prize in multinational best sniper competition - Defense News</title><link>https://www.defensenews.com/news/your-military/2025/11/27/norway-takes-home-top-prize-in-multinational-best-sniper-competition/</link></item>
-<item><title>Korean web giant Naver acquired crypto exchange Upbit, which reported a $30m heist a day later - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/28/naver_upbit_crypto_heist/</link></item>
-<item><title>Zendesk users targeted as Scattered Lapsus$ Hunters spin up fake support sites - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/27/scattered_lapsus_hunters_zendesk/</link></item>
-<item><title>OpenAI cuts off Mixpanel after analytics leak exposes API users - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/27/openai_mixpanel_api/</link></item>
-<item><title>Tenstorrent QuietBox tested: A high-performance RISC-V AI workstation trapped in a software blackhole - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/27/tenstorrent_quietbox_review/</link></item>
-<item><title>Rosalind Franklin rover catches a break as NASA reaffirms commitment - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/27/nasa_support_exomars/</link></item>
-<item><title>FCC sounds alarm after emergency tones turned into potty-mouthed radio takeover - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/27/fcc_radio_hijack/</link></item>
-<item><title>Asahi admits ransomware gang may have spilled almost 2M people&amp;#39;s data - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/27/asahi_ransomware_numbers/</link></item>
-<item><title>Canadian data order risks blowing a hole in EU sovereignty - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/27/canada_court_ovh/</link></item>
-<item><title>Scottish council still rebuilding systems two years after ransomware attack - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/27/western_isles_ransomware_council/</link></item>
-<item><title>One-fifth of the jobs at your company could disappear as AI automation takes off - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/27/ai_employee_overcapacity_report/</link></item>
-<item><title>Tiny tweak for Pi OS, big makeover for the Imager - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/27/new_raspberry_pi_imager/</link></item>
-<item><title>HPC won&amp;#39;t be an x86 monoculture forever – and it&amp;#39;s starting to show - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/27/arm_riscv_hpc/</link></item>
-<item><title>TSMC lawsuit claims former exec is probably leaking secrets to Intel - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/27/tsmc_intel_trade_secrets_case/</link></item>
-<item><title>ICANN distances itself from radical proposal – which it funded – to give nations a role in internet governance - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/27/icann_caiga_internet_governance/</link></item>
-<item><title>Apple’s lousy AI didn’t stop it beating Samsung’s smartphone sales for the first time since 2011 - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/27/counterpoint_smartphone_market_predictions/</link></item>
-<item><title>AWS builds a DNS backstop to allow changes when its notoriously flaky US East region wobbles - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2025/11/27/aws_dns_us_east_workaround/</link></item>
-<item><title>New compact cameras - Wallpaper*</title><link>https://www.wallpaper.com/tech/best-compact-cameras</link></item>
-<item><title>iPhone pocket - Wallpaper*</title><link>https://www.wallpaper.com/fashion-beauty/iphone-pocket-apple-issey-miyake</link></item>
-<item><title>A Tribute to Turkeys - Law &amp; Liberty</title><link>https://lawliberty.org/a-tribute-to-turkeys/</link></item>
+<lastBuildDate>Sat, 29 Nov 2025 21:27:24 +0800</lastBuildDate>
+<item><title>Acid GIFs, November 28 (25 gifs) - AcidCow.com</title><link>https://acidcow.com/gif/170963-acid-gifs-november-28-25-gifs.html</link></item>
+<item><title>Bad Days Happen (22 pics) - AcidCow.com</title><link>https://acidcow.com/pics/170946-bad-days-happen-22-pics.html</link></item>
+<item><title>Girls In Lingerie (30 pics) - AcidCow.com</title><link>https://acidcow.com/girls/170957-girls-in-lingerie-30-pics.html</link></item>
+<item><title>Memes About Loneliness And Dating (38 pics) - AcidCow.com</title><link>https://acidcow.com/pics/170950-memes-about-loneliness-and-dating-38-pics.html</link></item>
+<item><title>Hot Girls (23 pics) - AcidCow.com</title><link>https://acidcow.com/girls/170960-hot-girls-23-pics.html</link></item>
+<item><title>Resourceful People (23 pics) - AcidCow.com</title><link>https://acidcow.com/pics/170952-resourceful-people-23-pics.html</link></item>
+<item><title>Memorable Quotes From Movies (15 pics) - AcidCow.com</title><link>https://acidcow.com/pics/170944-memorable-quotes-from-movies-15-pics.html</link></item>
+<item><title>Immortal Things From The Past (19 pics) - AcidCow.com</title><link>https://acidcow.com/pics/170954-immortal-things-from-the-past-19-pics.html</link></item>
+<item><title>Unfortunate Situations (23 pics) - AcidCow.com</title><link>https://acidcow.com/pics/170951-unfortunate-situations-23-pics.html</link></item>
+<item><title>Failed Online Shopping (15 pics) - AcidCow.com</title><link>https://acidcow.com/pics/170953-failed-online-shopping-15-pics.html</link></item>
+<item><title>Asian Girls (23 pics) - AcidCow.com</title><link>https://acidcow.com/girls/170959-asian-girls-23-pics.html</link></item>
+<item><title>Jokes And Photos For A Good Mood (25 pics) - AcidCow.com</title><link>https://acidcow.com/pics/170948-jokes-and-photos-for-a-good-mood-25-pics.html</link></item>
+<item><title>What Is Going On Here? (49 pics) - AcidCow.com</title><link>https://acidcow.com/pics/170947-what-is-going-on-here-49-pics.html</link></item>
+<item><title>Beautiful Stewardesses (25 pics) - AcidCow.com</title><link>https://acidcow.com/girls/170958-beautiful-stewardesses-25-pics.html</link></item>
+<item><title>Strange Finds And Situations (31 pics) - AcidCow.com</title><link>https://acidcow.com/pics/170949-strange-finds-and-situations-31-pics.html</link></item>
+<item><title>They Don&amp;#39;t Care About Safety (29 pics) - AcidCow.com</title><link>https://acidcow.com/pics/170956-they-dont-care-about-safety-29-pics.html</link></item>
+<item><title>From Pawn to King: A Beginner&amp;#39;s Guide to the World of Chess - AcidCow.com</title><link>https://acidcow.com/pics/170986-from-pawn-to-king-a-beginners-guide-to-the-world-of-chess.html</link></item>
+<item><title>Cats Before And After Adoption (17 pics) - AcidCow.com</title><link>https://acidcow.com/pics/170955-cats-before-and-after-adoption-17-pics.html</link></item>
+<item><title>Are Rear-End Collisions Always the Fault of the Rear-Ender? - AcidCow.com</title><link>https://acidcow.com/pics/170985-are-rear-end-collisions-always-the-fault-of-the-rear-ender.html</link></item>
+<item><title>This Is Pareidolia (34 pics) - AcidCow.com</title><link>https://acidcow.com/pics/170945-this-is-pareidolia-34-pics.html</link></item>
+<item><title>How does the Wikimedia Foundation use donations to Wikipedia? - Wikimedia Foundation</title><link>https://wikimediafoundation.org/news/2025/11/26/how-does-the-wikimedia-foundation-use-donations-to-wikipedia/</link></item>
+<item><title>How is Wikipedia funded? - Wikimedia Foundation</title><link>https://wikimediafoundation.org/news/2025/11/26/how-is-wikipedia-funded/</link></item>
+<item><title>EPICS in IEEE Funds Record-Breaking Number of Student Projects - IEEE Spectrum</title><link>https://spectrum.ieee.org/epics-in-ieee-student-projects</link></item>
+<item><title>Citizens of Smart Cities Need a Way to Opt Out - IEEE Spectrum</title><link>https://spectrum.ieee.org/smart-city-personal-data-collection</link></item>
+<item><title>3 Weird Things You Can Turn Into a Memristor - IEEE Spectrum</title><link>https://spectrum.ieee.org/memristor-materials</link></item>
+<item><title>For This Engineer, Taking Deep Dives Is Part of the Job - IEEE Spectrum</title><link>https://spectrum.ieee.org/levi-unema-underwater-robotics-exploration</link></item>
+<item><title>IEEE and Girl Scouts Are Working on Getting Girls Into STEM - IEEE Spectrum</title><link>https://spectrum.ieee.org/ieee-and-girl-scouts-stem</link></item>
+<item><title>TraffickCam Uses Computer Vision to Counter Human Trafficking - IEEE Spectrum</title><link>https://spectrum.ieee.org/traffickcam-human-trafficking-hotel-ai</link></item>
+<item><title>Event Sensors Bring Just the Right Data to Device Makers - IEEE Spectrum</title><link>https://spectrum.ieee.org/event-sensors-to-the-edge</link></item>
+<item><title>Listen to Protons for Less Than $100 - IEEE Spectrum</title><link>https://spectrum.ieee.org/listen-to-protons-diy-magnetometer</link></item>
+<item><title>AI Agents Break Rules Under Everyday Pressure - IEEE Spectrum</title><link>https://spectrum.ieee.org/ai-agents-safety</link></item>
+<item><title>IEEE Hits 500,000-Member Milestone​ - IEEE Spectrum</title><link>https://spectrum.ieee.org/ieee-500000-member-milestone</link></item>
+<item><title>Trillions Spent and Big Software Projects Are Still Failing - IEEE Spectrum</title><link>https://spectrum.ieee.org/it-management-software-failures</link></item>
+<item><title>How to Spot a Counterfeit Lithium-Ion Battery - IEEE Spectrum</title><link>https://spectrum.ieee.org/counterfeit-lithium-ion-batteries</link></item>
+<item><title>On Rereading Norbert Wiener’s The Human Use of Human Beings at 75 - IEEE Spectrum</title><link>https://spectrum.ieee.org/on-rereading-norbert-wieners-the-human-use-of-human-beings-at-75</link></item>
+<item><title>Tips for How to Think Like an Entrepreneur - IEEE Spectrum</title><link>https://spectrum.ieee.org/thinking-like-an-entrepreneur</link></item>
+<item><title>Video Friday: Watch Robots Throw, Catch, and Hit a Baseball - IEEE Spectrum</title><link>https://spectrum.ieee.org/video-friday-baseball-robot</link></item>
+<item><title>Could Terahertz Radar in Cars Save Lives? - IEEE Spectrum</title><link>https://spectrum.ieee.org/terahertz-radar</link></item>
+<item><title>Narrowing focus can increase productivity - IEEE Spectrum</title><link>https://spectrum.ieee.org/produ</link></item>
+<item><title>This IBM Engineer Is Pushing Quantum Computing Out of the Lab - IEEE Spectrum</title><link>https://spectrum.ieee.org/quantum-computing-ieee-genya-crossman</link></item>
+<item><title>A New Axial-Flux Motor Becomes a Supercar Staple - IEEE Spectrum</title><link>https://spectrum.ieee.org/axial-flux-motor-yasa</link></item>
+<item><title>Keys to Building an AI University: A Framework from NVIDIA - IEEE Spectrum</title><link>https://content.knowledgehub.wiley.com/the-roadmap-to-becoming-an-ai-university-industry-brief/</link></item>
+<item><title>Why Is Everyone’s Robot Folding Clothes? - IEEE Spectrum</title><link>https://spectrum.ieee.org/robots-folding-clothes</link></item>
+<item><title>The First Ticket Pre-Purchasing System Was Created 65 Years Ago - IEEE Spectrum</title><link>https://spectrum.ieee.org/ieee-milestone-ticket-system</link></item>
+<item><title>AI 撰写了哪些类型的文章 - Solidot</title><link>https://www.solidot.org/story?sid=82906</link></item>
+<item><title>苹果时隔多年再次成为全球最大的智能手机制造商 - Solidot</title><link>https://www.solidot.org/story?sid=82907</link></item>
+<item><title>戴尔称 Windows 11 换代速度比 Windows 10 慢 - Solidot</title><link>https://www.solidot.org/story?sid=82908</link></item>
+<item><title>NASA 漫游车在火星上发现闪电 - Solidot</title><link>https://www.solidot.org/story?sid=82909</link></item>
+<item><title>手术期间播放音乐有助于减少用药量改善术后恢复 - Solidot</title><link>https://www.solidot.org/story?sid=82910</link></item>
+<item><title>基于 Source 2 的 s&amp;box 引擎开源 - Solidot</title><link>https://www.solidot.org/story?sid=82911</link></item>
+<item><title>五角大楼建议将阿里巴巴百度等加入到协助中国军方的名单 - Solidot</title><link>https://www.solidot.org/story?sid=82912</link></item>
+<item><title>KDE Plasma 6.8 将只支持 Wayland - Solidot</title><link>https://www.solidot.org/story?sid=82913</link></item>
+<item><title>改变推荐算法排名能改变一个人的政治立场 - Solidot</title><link>https://www.solidot.org/story?sid=82914</link></item>
+<item><title>After Fitbit Killed it in 2016, Pebble Returns with 100% Open Source Software and Hardware - It's FOSS</title><link>https://itsfoss.com/news/pebble-returns-as-open-source/</link></item>
+<item><title>KDE Plasma 6.8 Set to Drop X11 Support Completely - It's FOSS</title><link>https://itsfoss.com/news/kde-plasma-to-drop-x11-support/</link></item>
+<item><title>Google Just Made Its Sleek New Font Open Source - It's FOSS</title><link>https://itsfoss.com/news/google-sans-flex/</link></item>
+<item><title>Collabora Launches Desktop Office Suite for Linux - It's FOSS</title><link>https://itsfoss.com/news/collabora-launches-desktop-office-suite/</link></item>
+<item><title>The Laptop That Wasn&amp;#39;t: TUXEDO Computers Shelves Linux ARM Notebook Plans - It's FOSS</title><link>https://itsfoss.com/news/tuxedo-computers-shelves-arm-notebook/</link></item>
+<item><title>Linux First, Windows Later! Dell Launches Qualcomm NPU Laptop on Linux Before Windows - It's FOSS</title><link>https://itsfoss.com/news/dell-pro-max-16-plus/</link></item>
+<item><title>Ubuntu 26.04 LTS: Release Date and New Features - It's FOSS</title><link>https://itsfoss.com/ubuntu-26-04-release-features/</link></item>
+<item><title>Mission Center vs. Resources: The Ultimate Linux System Monitor Showdown - It's FOSS</title><link>https://itsfoss.com/mission-center-vs-resources/</link></item>
+<item><title>Self-Hosting is Rising and Linux Users are Leading This Revolution - It's FOSS</title><link>https://itsfoss.com/self-hosting-rising/</link></item>
+<item><title>Theena Kumaragurunathan - It's FOSS</title><link>https://itsfoss.com/author/theena/</link></item>
+<item><title>13 Popular Software That Feel Like Open Source But They Are Not - It's FOSS</title><link>https://itsfoss.com/popular-software-open-source-feel/</link></item>
+<item><title>FOSS Weekly #25.48: Backup Flatpaks and Snaps, Arduino&amp;#39;s Troubled Future, New Office, Popular Linux Apps Reborn and More - It's FOSS</title><link>https://itsfoss.com/newsletter/foss-weekly-25-48/</link></item>
+<item><title>Open Source Never Dies: 11 of My Favorite Linux Apps That Refused to Stay Dead - It's FOSS</title><link>https://itsfoss.com/new-gen-linux-apps/</link></item>
 </channel></rss>

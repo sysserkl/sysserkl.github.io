@@ -1498,19 +1498,13 @@ function tabs_titles_urls_formatter_b(tabs,cstype='js',format='all'){
                         return tab.title;
                     default:
                         return `${tab.title}\n${tab.url}\n`;
-                }
+                }   //测试
             }).join('\n');
 
         case 'md':
             return tabs.map((tab, index) => {
-                // 定义转义函数
-                const escapeForMarkdown = (text) => {
-                    // 先转义反斜杠，再转义方括号和圆括号
-                    return text.replace(/\\/g, '\\\\')
-                               .replace(/\[/g, '\\[')
-                               .replace(/\]/g, '\\]')
-                               .replace(/\(/g, '\\(')
-                               .replace(/\)/g, '\\)');
+                const escapeForMarkdown = (text) => {   // 定义转义函数
+                    return text.replace(/\\/g, '\\\\').replace(/\[/g, '\\[').replace(/\]/g, '\\]').replace(/\(/g, '\\(').replace(/\)/g, '\\)'); // 先转义反斜杠，再转义方括号和圆括号
                 };
 
                 let escapedUrl = tab.url || 'no URL';
