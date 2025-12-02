@@ -1533,6 +1533,13 @@ function tabs_titles_urls_formatter_b(tabs,cstype='js',format='all'){
                 let escapedTitle = JSON.stringify(tab.title || 'no title').slice(1,-1);
                 return `<a href=${escapedUrl}>${escapedTitle}</a>`;
             }).join('\n');
+
+        case 'csv':
+            return tabs.map(tab => {
+                let escapedUrl = JSON.stringify(tab.url || 'no URL');
+                let escapedTitle = JSON.stringify(tab.title || 'no title');
+                return `${escapedUrl},${escapedTitle}`;
+            }).join('\n');            
     }
     return '';
 }

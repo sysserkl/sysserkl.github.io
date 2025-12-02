@@ -197,11 +197,12 @@ function menu_rlater(){
     ];
 
     var group_list=[
-    ['单词搜索','enwords_mini_search_frame_show_hide_b();',true],
-    ['词典记录','endict_reg_str_rlater(true,true);',true],
+    ['搜索','enwords_mini_search_frame_show_hide_b();',true],
+    ['记录','endict_reg_str_rlater(true,true);',true],
     ['EFULL','efull_get_rlater();',true],
+    ['稀有','rare_enwords_get_rlater();',true],
     ];    
-    klmenu1.push(menu_container_b(str_t,group_list,''));     
+    klmenu1.push(menu_container_b(str_t,group_list,'单词：'));     
 
     var group_list=[
     ['本月','month_rlater();',true],
@@ -211,7 +212,6 @@ function menu_rlater(){
     
     var klmenu_statistics=[
     '<span class="span_menu" onclick="'+str_t+'tags_editor_rlater();">Tags</span>',   
-    '<span class="span_menu" onclick="'+str_t+'rare_enwords_get_rlater();">稀有旧单词</span>',
     '<span class="span_menu" onclick="'+str_t+'statistics_show_rlater();">Statistics</span>',
     '<span class="span_menu" onclick="'+str_t+'split_rlater();">截取最新记录</span>',
     '<span class="span_menu" onclick="'+str_t+'weibo_weixin_user_rlater();">当前条件微博、微信用户统计</span>',    
