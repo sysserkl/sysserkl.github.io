@@ -1492,14 +1492,14 @@ function tabs_titles_urls_formatter_b(tabs,cstype='js',format='all'){
                 switch (format) {
                     case 'u':
                     case 'urls':
-                        return tab.url || 'no URL';
+                        return [tab.url || 'no URL'];
                     case 't':
                     case 'titles':
-                        return tab.title;
+                        return [tab.title];
                     default:
                         return `${tab.title}\n${tab.url}\n`;
                 }   //测试
-            }).join('\n');
+            });
 
         case 'md':
             return tabs.map((tab, index) => {
@@ -1511,35 +1511,35 @@ function tabs_titles_urls_formatter_b(tabs,cstype='js',format='all'){
                 let escapedTitle = escapeForMarkdown(tab.title || 'no title');
                 
                 return `[${escapedTitle}](${escapedUrl})`;
-            }).join('\n');
+            });
             
         case 'wiki':
             return tabs.map(tab => {
                 let escapedUrl = tab.url || 'no URL';
                 let escapedTitle = (tab.title || 'no title').replace(/\[/g, '<nowiki>[</nowiki>').replace(/\]/g, '<nowiki>]</nowiki>');
                 return `[${escapedUrl} ${escapedTitle}]`;
-            }).join('\n');
+            });
         
         case 'js':
             return tabs.map(tab => {
                 let escapedUrl = JSON.stringify(tab.url || 'no URL');
                 let escapedTitle = JSON.stringify(tab.title || 'no title');
                 return `[${escapedUrl},${escapedTitle}],`;
-            }).join('\n');
+            });
 
         case 'html':
             return tabs.map(tab => {
                 let escapedUrl = JSON.stringify(tab.url || 'no URL');
                 let escapedTitle = JSON.stringify(tab.title || 'no title').slice(1,-1);
                 return `<a href=${escapedUrl}>${escapedTitle}</a>`;
-            }).join('\n');
+            });
 
         case 'csv':
             return tabs.map(tab => {
                 let escapedUrl = JSON.stringify(tab.url || 'no URL');
                 let escapedTitle = JSON.stringify(tab.title || 'no title');
                 return `${escapedUrl},${escapedTitle}`;
-            }).join('\n');            
+            });            
     }
-    return '';
+    return [];
 }

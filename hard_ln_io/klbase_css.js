@@ -2957,3 +2957,14 @@ function textarea_flash_b(dom_id,remove_outline=false){
     list_t.push(dom_id+':focus {border-color: '+scheme_global['color']+';}');
     return list_t;  //消除屏幕闪烁 - 保留注释
 }
+
+function show_temporary_message_b(message,bgcolor='#00a000', fcolor='white', cstop='10px',csright='10px',cspadding='10px',csradius='4px',cszindex=1000,cstimeout=2000) {
+    //error bgcolor:  '#d70000'
+    const messageEl = document.createElement('div');
+    messageEl.textContent = message;
+    messageEl.style.cssText ='position: fixed; top: '+cstop+'; right: '+csright+'; background: '+bgcolor+'; color: '+fcolor+'; padding: '+cspadding+'; border-radius: '+csradius+'; z-index: '+cszindex+';';
+    
+    document.body.appendChild(messageEl);
+    
+    setTimeout(() => {document.body.removeChild(messageEl);}, cstimeout);
+}

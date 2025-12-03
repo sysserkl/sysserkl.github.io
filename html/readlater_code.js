@@ -201,6 +201,7 @@ function menu_rlater(){
     ['记录','endict_reg_str_rlater(true,true);',true],
     ['EFULL','efull_get_rlater();',true],
     ['稀有','rare_enwords_get_rlater();',true],
+    ['旧','old_enwords_get_rlater();',true],
     ];    
     klmenu1.push(menu_container_b(str_t,group_list,'单词：'));     
 
@@ -329,6 +330,62 @@ function jieba_sites_rlater(){
 
 function rare_enwords_get_rlater(){
     search_websites_rlater('-[^\\x00-\\xff]{3,} +\\b('+en_sentence_count_global.join('|').replace(/\./g,'\\.')+')\\b');
+}
+
+function old_enwords_get_rlater(cstimes=1){
+    function sub_old_enwords_get_rlater_one(){
+        if (blxl>=bllen || rows_max>=0 && blcount>=rows_max){
+            search_array_2_html_rlater(bljg,cstype);
+            document.title=old_title;
+            return;
+        }
+
+        let item=readlater_data_global[blxl];
+        if (item[0].match(endict_reg)){
+            let words_list=word_get_rlater_b(item[1]);
+            for (let one_word of words_list){
+                if (old_words.has(one_word.toLowerCase())){
+                    bljg.push(red_one_rlater(item,cstype,today_t,false));
+                    blcount=blcount+1;
+                    break;
+                }
+            }
+        }
+        
+        blxl=blxl+1;
+        if (blxl % 1000 == 0){
+            document.title=blcount+' - '+blxl+'/'+bllen+' - '+old_title;
+            setTimeout(sub_old_enwords_get_rlater_one,1);
+        } else {
+            sub_old_enwords_get_rlater_one();
+        }
+    }
+    
+    console.log('old_enwords_get_rlater(): 第',cstimes,'次运行');
+    if (cstimes>10){return;}
+    
+    if (typeof enwords == 'undefined'){
+        enwords_init_b(true,true,function (){old_enwords_get_rlater(cstimes+1);});
+        return;
+    }
+    
+    let rows_max=parseInt(document.getElementById('input_max_rows').value);
+    if (rows_max===-1){
+        rows_max=10000;
+    }
+
+    let cstype=radio_value_get_b('radio_search_type');
+    let today_t=date_2_ymd_b(false,'d');    
+    
+    let old_words=simple_words_b(true,true);
+    let blxl=0;
+    let bllen=readlater_data_global.length;
+    let old_title=document.title;
+    let blcount=0;
+    let bljg=[];
+    let endict_reg=endict_reg_str_rlater(false,false);
+    
+    sub_old_enwords_get_rlater_one();
 }
 
 function efull_get_rlater(){

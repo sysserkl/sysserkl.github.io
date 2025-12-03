@@ -179,6 +179,10 @@ function selenium_search_str_rlater_b(cstitle){
     return selestr;
 }
 
+function word_get_rlater_b(csstr){
+    return csstr.split(' - ')[0].replace(/_/g,' ').match(/[a-z\s\'\-]+/ig) || [''];  //不能改为 [] - 保留注释
+}
+
 function manage_item_rlater_b(csid,cstype='copy text'){
     var oa=document.getElementById(csid);
     if (!oa){
@@ -197,7 +201,7 @@ function manage_item_rlater_b(csid,cstype='copy text'){
             otextarea.value=oa.innerText;
             break;
         case 'copy word':
-            otextarea.value=((oa.innerText.split(' - ')[0].replace(/_/g,' ').match(/[a-z\s\'\-]+/i) || [''])[0]).trim();
+            otextarea.value=word_get_rlater_b(oa.innerText)[0].trim();
             break;
         case 'copy url':
             otextarea.value=oa.href;
