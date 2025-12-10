@@ -63,7 +63,7 @@ function line_default_weight_b(){
     }
 }
 
-function line_leaflet_b(csomap,islayer=false,cslist=[],cscolor='red',cscaption='',textarea_id_for_remove='',time_list=[],part_len=-1){
+function line_leaflet_b(csomap,islayer=false,cslist=[],cscolor='red',cscaption='',textarea_id_for_remove='',time_ele_list=[[],[]],part_len=-1){
     function sub_line_leaflet_b_one(sub_list){
         let [dots_list,cslen,start_no,end_no]=sub_list;
         
@@ -99,6 +99,9 @@ function line_leaflet_b(csomap,islayer=false,cslist=[],cscolor='red',cscaption='
         console.log('cslist 长度为0');
         return;
     }
+    
+    var time_list,ele_list;
+    [time_list,ele_list]=time_ele_list;
     
     var line_list=[];
     
@@ -613,11 +616,11 @@ function point_size_get_leaflet_b(point_type){
     return point_size;
 }
 
-function draw_gpx_lines_simple_leaflet_b(onavigation,omap,cslist,csname,cscolors,textarea_id_for_remove='',dopanto=true,time_list=[],part_len=-1,point_type='',point_size=false,csfillcolor='',csfillopacity=0){
+function draw_gpx_lines_simple_leaflet_b(onavigation,omap,cslist,csname,cscolors,textarea_id_for_remove='',dopanto=true,time_ele_list=[[],[]],part_len=-1,point_type='',point_size=false,csfillcolor='',csfillopacity=0){
     //cslist 须是 lat,lon 格式，形如 [ [ 30.221588, 120.024205 ], [ 30.221542, 120.024116 ] ] - 保留注释
     //---
     if (cslist.length==0){return;}
-
+        
     if (cscolors.length<3){
         cscolors=cscolors.concat([-1,-1,-1]).slice(0,3);
     }
@@ -628,7 +631,7 @@ function draw_gpx_lines_simple_leaflet_b(onavigation,omap,cslist,csname,cscolors
 
     line_default_weight_b();
     
-    onavigation.addLayer(line_leaflet_b(omap,true,cslist,cscolors[0],csname,textarea_id_for_remove,time_list,part_len));
+    onavigation.addLayer(line_leaflet_b(omap,true,cslist,cscolors[0],csname,textarea_id_for_remove,time_ele_list,part_len));
     
     if (point_type===''){
         var type_list=['','triangle','rectangle'];
@@ -823,6 +826,34 @@ function map_range_leaflet_b(omap,min_max=false,cstype=false){
     }
 }
 
+function gpx_ele_get_leaftlet_b(ele_list){
+    if (ele_list.length==0){
+        return '';
+    }
+    
+    var up_sum=0;
+    var down_sum=0;
+    var ele_set=new Set();
+    
+    var point0=parseFloat(ele_list[0].slice(5,-6));
+    for (let blxl=1,lent=ele_list.length;blxl<lent;blxl++){
+        let item=parseFloat(ele_list[blxl].slice(5,-6));  //<ele>480.0</ele> - 保留注释
+        if (item==point0){continue;}
+        if (item>point0){
+            up_sum=up_sum+item-point0;
+        } else {
+            down_sum=down_sum+item-point0;
+        }
+        point0=item;
+        ele_set.add(item);
+    }
+    
+    let blmax=Math.max(...ele_set);
+    let blmin=Math.min(...ele_set);
+    
+    return '(↑'+up_sum+' ↓ '+down_sum+' max '+blmax+' min '+blmin+')'
+}
+
 function gpx_time_get_leaftlet_b(time_list){
     let blname='';
     if (time_list.length>=1){
@@ -845,6 +876,7 @@ function gpx_time_get_leaftlet_b(time_list){
         }
         blname=blname+')';  //添加日期 - 保留注释
     }
+    //blname 形如：(2014-11-19 07:53:52 - 10:12:03 / 02:18:11) - 保留注释
     return blname;
 }
 
@@ -860,13 +892,21 @@ function gpx_name_get_leaftlet_b(csstr,csname=''){
     
     blname=blname.replace(new RegExp('_','g'),' ').replace(new RegExp('-','g'),' - ');
     
-    var bltime=csstr.match(/<time>.*?<\/time>/mg);    //multiline - 保留注释
+    var bltime=csstr.match(/<time>.*?<\/time>/mg);    //time_list, multiline - 保留注释
     if (bltime!==null){
         blname=blname+gpx_time_get_leaftlet_b(bltime);
     } else {
         bltime=[];
     }
-    return [blname,bltime];
+    //bltime 元素形如：<time>2025-02-17T02:47:18Z</time> - 保留注释
+
+    var ele_list=csstr.match(/<ele>.*?<\/ele>/mg) || [];    //海拔 - 保留注释
+    if (ele_list.length>0){
+        blname=blname+gpx_ele_get_leaftlet_b(ele_list);
+    }
+    
+    //ele_list 形如：<ele>480.0</ele> - 保留注释
+    return [blname,bltime,ele_list];
 }
 
 function gpx_file_draw_leaflet_b(onavigation,omap,csstr,cstype,csname='',cscolors=[],part_len=-1,is_line_no_style=true,csfillcolor='',csfillopacity=0){
@@ -874,11 +914,11 @@ function gpx_file_draw_leaflet_b(onavigation,omap,csstr,cstype,csname='',cscolor
     var list_t=csstr.split('<trk>');    //有几条线路就有几个 trk - 保留注释
 
     var line_color_list=cscolors[0].split(':');
-    var blname,bltime;
+    var blname,bltime,blele;
     var point_size=point_size_get_leaflet_b((is_line_no_style?'1':''));
 
     for (let blxl=1,lent=list_t.length;blxl<lent;blxl++){ //忽略第1个元素 - 保留注释
-        [blname,bltime]=gpx_name_get_leaftlet_b(list_t[blxl],csname);
+        [blname,bltime,blele]=gpx_name_get_leaftlet_b(list_t[blxl],csname);   //time_list - 保留注释
 
         var result_list=[];
         var trkpts=list_t[blxl].split('<trkpt ');
@@ -903,7 +943,7 @@ function gpx_file_draw_leaflet_b(onavigation,omap,csstr,cstype,csname='',cscolor
         cscolors[0]=line_color_list[gpx_line_color_no_global % line_color_list.length];
         gpx_line_color_no_global=gpx_line_color_no_global+1;
         
-        draw_gpx_lines_simple_leaflet_b(onavigation,omap,result_list,blname,cscolors,'',true,bltime,part_len,(is_line_no_style?blxl.toString():''),point_size,csfillcolor,csfillopacity);  
+        draw_gpx_lines_simple_leaflet_b(onavigation,omap,result_list,blname,cscolors,'',true,[bltime,blele],part_len,(is_line_no_style?blxl.toString():''),point_size,csfillcolor,csfillopacity);  
     }
 
     return all_points;

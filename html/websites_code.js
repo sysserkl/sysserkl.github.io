@@ -51,7 +51,8 @@ function menu_klwebsites(change_no=false){
     klmenu1.push(menu_container_b(str_t,list_t,'batch eword search: '));    
     
     var list_t=[
-    ['RSS','rss_klwebsites();',true],
+    ['RSS','has_rss_klwebsites();',true],
+    ['无RSS','without_rss_klwebsites();',true,'','Selenium站点'],
     ['Weibo ALL','weibo_klwebsites();',true],
     ['Weibo RND','weibo_klwebsites(true);',true],
     ];    
@@ -359,7 +360,45 @@ function new_filter_result_klwebsites(){
     }
 }
 
-function rss_klwebsites(){
+function without_rss_klwebsites(){
+    function sub_without_rss_klwebsites_replace(cshref){
+        return cshref.replace('//www.','//').replace('//rss.','//').replace('//feeds.','//').replace('//feed.','//');
+    }
+    
+    sites_all_global.sort();
+    let rss_origin=new Set();
+    for (let item of sites_all_global){
+        if (!(','+item[2]+',').includes(',RSS,')){continue;}
+        let list_t=item[0].match(/(.*?\/\/.*?\/).*/) || []; //形如：[ "http://blog.linuxmint.com/?feed=rss2", "http://blog.linuxmint.com/" ] - 保留注释
+        if (list_t.length==2){
+            rss_origin.add(sub_without_rss_klwebsites_replace(list_t[1]));
+        }
+    }
+    
+    let without_list=[];
+    for (let blxl=0,lent=sites_all_global.length;blxl<lent;blxl++){
+        let item=sites_all_global[blxl];
+        if ((','+item[2]+',').includes(',RSS,')){continue;}
+        if (item[4][0]==0){continue;}   //忽略非selenium类型网址 - 保留注释
+        //selenium类型网址，其中CN网址，非selenium类型网址 - 保留注释
+        
+        let list_t=item[0].match(/(.*?\/\/.*?\/).*/) || []; //形如：[ "http://blog.linuxmint.com/?feed=rss2", "http://blog.linuxmint.com/" ] - 保留注释
+        if (list_t.length!==2){
+            console.log('error',item[0]);
+            without_list.push([item[0],blxl,item[2]]);
+        } else {
+            list_t[1]=sub_without_rss_klwebsites_replace(list_t[1]);
+            if (rss_origin.has(list_t[1])){continue;}
+            without_list.push([item[0],blxl,item[2]]);  //形如：[ "http://www.grubstreet.com/", 533, "未分类" ] - 保留注释
+        }
+    }    
+
+    console.log(Array.from(rss_origin).sort()); //此行保留 - 保留注释
+
+    href_no_category_2_html_klwebsites(without_list,false);
+}
+
+function has_rss_klwebsites(){
     var blkey='';
     var oinput=document.getElementById('input_search');
     if (oinput){
@@ -367,13 +406,17 @@ function rss_klwebsites(){
     }
     
     let arrays=array_klwebsites(blkey);
+    //arrays 元素形如：[ "https://blog.python.org/", 318, "编程" ]
+    href_no_category_2_html_klwebsites(arrays);
+}
+
+function href_no_category_2_html_klwebsites(arrays,check_rss=true){
     var result_t=[];
     for (let arow of arrays){
         var item=sites_all_global[arow[1]];
-        if (item[4]==''){continue;}
+        if (check_rss && !(','+item[2]+',').includes(',RSS,')){continue;}
         
-        var blname=specialstr92_b(item[1]);
-        result_t.push([blname,'<span class="span_rss"><a class="a_oblong_box a_rss_name" href="'+arow[0]+'" target=_blank>'+blname+'</a> <a class="a_rss_link" href="'+item[4]+'" target=_blank>'+item[4]+'</a></span>']);
+        result_t.push([item[1],'<span class="span_rss"><a class="a_oblong_box a_rss_name" href="'+arow[0]+'" target=_blank>'+item[1]+'</a> <a class="a_rss_link" href="'+item[0]+'" target=_blank>'+item[0]+'</a></span>']);
     }
 
     result_t.sort(function (a,b){return zh_sort_b(a,b,false,0);});
@@ -385,9 +428,13 @@ function rss_klwebsites(){
     if (ismobile_b()==false){
         bljg='<div style="column-count:2;">'+bljg+'</div>';
     }
-    var blbutton='<p>';
-    blbutton=blbutton+'<span class="aclick" onclick="opml_klwebsites();">opml</span>';
-    blbutton=blbutton+'</p>';
+    if (check_rss){
+        var blbutton='<p>';
+        blbutton=blbutton+'<span class="aclick" onclick="opml_klwebsites();">opml</span>';
+        blbutton=blbutton+'</p>';
+    } else {
+        var blbutton='';
+    }
     
     document.getElementById('divhtml').innerHTML=bljg+blbutton;
 }
@@ -538,16 +585,16 @@ function search_klwebsites(keyword='',csnumber=999){
         var item=sites_all_global[href_list[1]];
         //sites_all_global 的元素为数组，形如：[["https://www.hanselman.com/blog/", "Scott Hanselman<small>(hanselman)</small>", ​"IT", ​20, ​"", ​[ 1, 0, 0 ] ] - 保留注释
         
-        count1=count1+item[5][0];
-        count2=count2+item[5][1];
-        count3=count3+item[5][2];    
+        count1=count1+item[4][0];
+        count2=count2+item[4][1];
+        count3=count3+item[4][2];    
         
         var blkey='c_'+href_list[2];
         if (category_dict[blkey]==undefined){
             category_dict[blkey]=[[]];  //网址列表在一个 list 中 - 保留注释
         }
         var item=sites_all_global[href_list[1]];
-        category_dict[blkey][0].push(one_link_klwebsites(href_list[0],href_list[1],csnumber,(item[5][0]>0),ico_type));
+        category_dict[blkey][0].push(one_link_klwebsites(href_list[0],href_list[1],csnumber,(item[4][0]>0),ico_type));
     }
     result_2_html_klwebsites(category_dict,keyword,csnumber,count1,count2,count3);
 }
@@ -673,7 +720,7 @@ function random_klwebsites(lineheight){
             break;
         } else if (href_str===''){continue;}
         
-        bljg=bljg+one_link_klwebsites(href_str,blxl,-1,(item[5][0]>0),ico_type); //count1 - 保留注释
+        bljg=bljg+one_link_klwebsites(href_str,blxl,-1,(item[4][0]>0),ico_type); //count1 - 保留注释
         blno=blno+1;
         if (blno>=5){break;}
     }
@@ -717,7 +764,7 @@ function day_klwebsites(lineheight,csday='',odom=false){
         
         var blasc_sum=asc_sum_b(item[0]);
         if (!item[2].includes(',登陆') && blasc_sum % 100 == bldays || item[2].includes(',登陆') && blasc_sum % 30 == bldays_2){
-            bljg=bljg+one_link_klwebsites(href_str,blxl,-1,(item[5][0]>0),ico_type); //count1 - 保留注释
+            bljg=bljg+one_link_klwebsites(href_str,blxl,-1,(item[4][0]>0),ico_type); //count1 - 保留注释
         }
     }
 

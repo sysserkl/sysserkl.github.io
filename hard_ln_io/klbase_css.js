@@ -1795,17 +1795,25 @@ function menu_parent_node_b(nodestr){
 function menu_container_b(nodestr,cslist,caption=''){
     var blparent=menu_parent_node_b(nodestr);
     var result_t=[];
-    for (let item of cslist){   //[caption,onclick,add_parent_node,span_id] - 保留注释
+    for (let item of cslist){   //[caption,onclick,add_parent_node,span_id,title] - 保留注释
         var id_str='';
         if (item.length>=4){
             if (item[3]!==''){
                 id_str='id="'+item[3]+'" ';
             }
         }
+
+        var span_title='';
+        if (item.length>=5){
+            if (item[4]!==''){
+                span_title='title="'+item[4]+'" ';
+            }
+        }
+        
         var js_str=(item[2]?blparent:'')+item[1];
         js_str=(js_str==''?'':' onclick="'+js_str+'"');
 
-        var blstr='<span '+id_str+'class="span_box_strong span_menu_container_item"'+js_str+'>'+item[0]+'</span>';            
+        var blstr='<span '+id_str+span_title+'class="span_box_strong span_menu_container_item"'+js_str+'>'+item[0]+'</span>';            
         result_t.push(blstr);   //item[1] 不能添加 specialstr_j - 保留注释
     }
     return '<span class="span_menu_container">'+caption+result_t.join(' ')+'</span>';

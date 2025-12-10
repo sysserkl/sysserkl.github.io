@@ -186,30 +186,20 @@ function draw_gpx_gps_points(cslist=false,csname='',dotransform=false,cscolors=[
         cslist=transform_dotlines_gps_points(cslist,bltype,false);
     }
     //---
-    //if (cscolors==false || cscolors==-1){
-        //cscolors=colors_get_gps_points(false);
-    //} else
-    //if (Array.isArray(cscolors)){
-        //if (cscolors.length<3){
-            //cscolors=cscolors.concat([-1,-1,-1]).slice(0,3);
-        //}
-        var blfound_list=[];
-        for (let blxl=0,lent=cscolors.length;blxl<lent;blxl++){
-            if (cscolors[blxl]==-1 || cscolors[blxl]==false){
-                blfound_list.push(blxl);
-            }
+    var blfound_list=[];
+    for (let blxl=0,lent=cscolors.length;blxl<lent;blxl++){
+        if (cscolors[blxl]==-1 || cscolors[blxl]==false){
+            blfound_list.push(blxl);
         }
-        if (blfound_list.length>0){
-            color_list=colors_get_gps_points();
-            for (let blno of blfound_list){
-                cscolors[blno]=color_list[blno];
-            }
+    }
+    if (blfound_list.length>0){
+        color_list=colors_get_gps_points();
+        for (let blno of blfound_list){
+            cscolors[blno]=color_list[blno];
         }
-    //} else {
-        //return cslist;
-    //}
+    }
     
-    draw_gpx_lines_simple_leaflet_b(navigation_layer_gps_global,omap_gps_points_global,cslist,csname,cscolors,'textarea_gps_points',dopanto,[],-1,'',false,csfillcolor,csfillopacity);
+    draw_gpx_lines_simple_leaflet_b(navigation_layer_gps_global,omap_gps_points_global,cslist,csname,cscolors,'textarea_gps_points',dopanto,[[],[]],-1,'',false,csfillcolor,csfillopacity);
 }
 
 function transform_dotlines_gps_points(cslist=false,cstype=false,write_to_textarea=false){
