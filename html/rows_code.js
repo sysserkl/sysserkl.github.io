@@ -259,11 +259,12 @@ function menu_klr2(){
     }
     
     var klmenu_links=[
-    '<a href="../module/CSV_to_Wiki_Table.htm" onclick="'+str_t+'" target=_blank>CSV to Wiki Table</a>',
-    '<a href="?klqr">KLQR(userscript)</a>',
     '<a href="image2base64.htm" onclick="'+str_t+'" target=_blank>Image 2 base64</a>',
+    '<a href="?klqr">KLQR(userscript)</a>',
+    '<a href="../module/CSV_to_Wiki_Table.htm" onclick="'+str_t+'" target=_blank>CSV to Wiki Table</a>',
+    '<a href="readlater.htm" onclick="'+str_t+'" target=_blank>readlater</a>',
     ];    
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_fn,'','20rem','1rem','1rem','60rem')+klmenu_b(klmenu_ende,'🛡️','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_sort,'↕','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_convert,'↔','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_batch,'🗂','20rem','1rem','1rem','60rem')+klmenu_b(klmenu_links,'链','12rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_fn,'','20rem','1rem','1rem','60rem')+klmenu_b(klmenu_ende,'🛡️','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_sort,'↕','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_convert,'↔','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_batch,'🗂','20rem','1rem','1rem','60rem')+klmenu_b(klmenu_links,'L','12rem','1rem','1rem','60rem'),'','0rem')+' ');
 }
 
 function random_txt_files_klr2(cssize=100){

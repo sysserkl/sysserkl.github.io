@@ -73,13 +73,21 @@ function line_leaflet_b(csomap,islayer=false,cslist=[],cscolor='red',cscaption='
         } else {
             blstr=cslen.toFixed(2)+' m';
         }
-
+        
+        if (line_no==1){
+            lte_list_leaflet_global.push('🧭 '+cscaption+(line_count>1?'':' '+blstr));
+        }
+        
         let sub_caption='';
         if (line_count>1){
-            sub_caption=' '+line_no+'/'+line_count;
+            sub_caption=' 🥾 '+line_no+'/'+line_count;
             if (time_len>=list_len){
                 sub_caption=sub_caption+' '+gpx_time_get_leaftlet_b(time_list.slice(start_no,end_no));
             }
+            if (ele_len==time_len && ele_len>=list_len){
+                sub_caption=sub_caption+' '+gpx_ele_get_leaftlet_b(ele_list.slice(start_no,end_no));
+            }       
+            lte_list_leaflet_global.push(sub_caption+' '+blstr);
         }
         
         blstr='<span class="span_line_caption_leaflet">'+cscaption+sub_caption+'</span> '+blstr+' <span style="cursor:pointer;" onclick="data_2_gpx_file_leaflet_b(\''+restore_type+'\',this);">⬇</span>';
@@ -109,6 +117,7 @@ function line_leaflet_b(csomap,islayer=false,cslist=[],cscolor='red',cscaption='
     var blstart=0;
     var list_len=cslist.length;
     var time_len=time_list.length;
+    var ele_len=ele_list.length;
     
     line_default_weight_b();
     
@@ -183,6 +192,10 @@ function line_leaflet_b(csomap,islayer=false,cslist=[],cscolor='red',cscaption='
         cscaption=cslist[0]+'_'+cslist[cslist.length-1];
     }
     
+    if (typeof lte_list_leaflet_global == 'undefined'){
+        lte_list_leaflet_global=[]; //全局变量 - 保留注释
+    }
+    
     var line_no=1;
     if (line_count>1){
         var line_group = L.layerGroup();
@@ -196,12 +209,16 @@ function line_leaflet_b(csomap,islayer=false,cslist=[],cscolor='red',cscaption='
             line_no=line_no+1;
         }
         
-        console.log('生成了含有', line_group.getLayers().length,'条线的group');
+        console.log(lte_list_leaflet_global.join('\n'));
+
+        //console.log('生成了含有', line_group.getLayers().length,'条线的 group');  
         if (islayer){
             return line_group;
         }
     } else {
         var polyline=sub_line_leaflet_b_one(line_list[0]);
+        console.log(lte_list_leaflet_global.join('\n'));
+        
         if (islayer){
             return polyline;
         } else {
@@ -851,7 +868,7 @@ function gpx_ele_get_leaftlet_b(ele_list){
     let blmax=Math.max(...ele_set);
     let blmin=Math.min(...ele_set);
     
-    return '(↑'+up_sum+' ↓ '+down_sum+' max '+blmax+' min '+blmin+')'
+    return '(↑'+up_sum.toFixed(0)+' ↓ '+down_sum.toFixed(0)+' | '+blmin.toFixed(0)+' ~ '+blmax.toFixed(0)+')';
 }
 
 function gpx_time_get_leaftlet_b(time_list){
@@ -916,7 +933,9 @@ function gpx_file_draw_leaflet_b(onavigation,omap,csstr,cstype,csname='',cscolor
     var line_color_list=cscolors[0].split(':');
     var blname,bltime,blele;
     var point_size=point_size_get_leaflet_b((is_line_no_style?'1':''));
-
+    
+    lte_list_leaflet_global=[]; //全局变量
+    
     for (let blxl=1,lent=list_t.length;blxl<lent;blxl++){ //忽略第1个元素 - 保留注释
         [blname,bltime,blele]=gpx_name_get_leaftlet_b(list_t[blxl],csname);   //time_list - 保留注释
 

@@ -1668,6 +1668,7 @@ function menu_gps_points(){
     var group_list=[
     ['清除','remove_navigation_gps_points();',true],   
     ['筛选','trk_filter_gps_points();',true],    
+    ['距离、时间、海拔表格显示','lte_show_gps_points();',true],    
     ];    
     klmenu_gpx.push(menu_container_b(str_t,group_list,'路线：'));    
     
@@ -1781,6 +1782,11 @@ function menu_gps_points(){
 
     line_default_weight_b();
     document.getElementById('input_line_weight_gps_points').value=gpx_line_weight_global;
+}
+
+function lte_show_gps_points(){
+    if (typeof lte_list_leaflet_global == 'undefined'){return;}
+    document.getElementById('textarea_gps_points').value=lte_list_leaflet_global.join('\n');
 }
 
 function lat_lon_year_get_gps_points(add_raw=false){
