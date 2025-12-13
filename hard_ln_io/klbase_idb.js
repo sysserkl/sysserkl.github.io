@@ -264,12 +264,18 @@ function idb_read_bigfile_b(db,do_type='',cskey='',run_fn=false){
         return book_name;
     }
     
+    function sub_idb_read_bigfile_b_title(){
+        record_count=record_count+1;
+        document.title=record_count+' - '+old_title;    
+    }
+    
     function sub_idb_read_bigfile_b_onsuccess(resolve, reject, event, other_var1,other_var2){
         var cursor = event.target.result;
         if (cursor){
             if (do_type=='filedict'){   //根据文件名称，获取文件内容，返回字典 - 保留注释
                 if (cskey.includes(cursor.value.name)){
                     raw_data_bigfile['f_'+cursor.value.name]=cursor.value.content;
+                    sub_idb_read_bigfile_b_title();
                 }
             } else if (cskey=='' || cursor.value.name==cskey){
                 switch (do_type){
@@ -278,42 +284,50 @@ function idb_read_bigfile_b(db,do_type='',cskey='',run_fn=false){
                         //var odom = document.createElement('script');
                         //document.head.appendChild(odom);    
                         //odom.src=cursor.value.content; //此行保留 - 保留注释
-                        //odom.innerHTML=cursor.value.content; //此行保留 - 保留注释                    
+                        //odom.innerHTML=cursor.value.content; //此行保留 - 保留注释       
+                        sub_idb_read_bigfile_b_title();             
                         break;
                     case 'content':
                         raw_data_bigfile=cursor.value.content;
+                        sub_idb_read_bigfile_b_title();
                         break;
                     case 'booklist':
                         var book_name=sub_idb_read_bigfile_b_is_book_data_file(cursor.value.name,cursor.value.content);
                         //返回文件名、书籍名称 - 保留注释
                         if (book_name!==''){
                             raw_data_bigfile.push([cursor.value.name,book_name]);
+                            sub_idb_read_bigfile_b_title();
                         }
                         break;
                     case 'gpxlist':
                         if (cursor.value.name.endsWith('.gpx')){
                             raw_data_bigfile.push(cursor.value.name);
+                            sub_idb_read_bigfile_b_title();
                         }                        
                         break;
                     case 'readlaterlist':
                         if (cursor.value.name.match(/^readlater_data_.+\.js$/)){
                             raw_data_bigfile.push(cursor.value.name);
+                            sub_idb_read_bigfile_b_title();
                         }
                         break;
                     case 'lsmlist':
                         if (cursor.value.name.match(/^lsm.*\.txt$/)){
                             raw_data_bigfile.push(cursor.value.name);
+                            sub_idb_read_bigfile_b_title();
                         }
                         break;
                     default:
                         //返回文件序号、名称、起始部分、大小(M)、日期等 - 保留注释
                         var bllen=cursor.value.content.length;
                         raw_data_bigfile.push([cursor.value.id,cursor.value.name,cursor.value.content.slice(0,100)+(bllen>200?'……'+cursor.value.content.slice(-100,):''),(cursor.value.content.length/1024/1024).toFixed(3)+'M',cursor.value.date]);
+                        sub_idb_read_bigfile_b_title();
                         break;
                 }
             }
             cursor.continue();
         } else {
+            document.title=old_title;
             sub_idb_read_bigfile_b_search();
         }
     }
@@ -325,7 +339,9 @@ function idb_read_bigfile_b(db,do_type='',cskey='',run_fn=false){
     } else {
         var raw_data_bigfile=[];
     }
-
+    
+    var old_title=document.title;
+    var record_count=0;  //不能放在 sub_idb_read_bigfile_b_onsuccess 函数中 - 保留注释
     return idb_read_b(db,'bigfile_dbf',sub_idb_read_bigfile_b_onsuccess);
 }
 
