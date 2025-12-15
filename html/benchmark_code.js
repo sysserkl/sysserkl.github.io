@@ -17,6 +17,7 @@ function menu_bmark(){
     '<span class="span_menu" onclick="'+str_t+'measureFrame_bmark();">requestAnimationFrame测试</span>',
     '<span class="span_menu" onclick="'+str_t+'color_boxs_bmark();">color_boxs测试</span>',
     '<span class="span_menu" onclick="'+str_t+'prime_get_bmark();">质数测试</span>',
+    '<span class="span_menu" onclick="'+str_t+'rnd_relative_maximum_deviation_bmark();">随机数相对最大偏差测试</span>',
 
     ];
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🔩','18rem','1rem','1rem','30rem'),'','0rem')+' ');
@@ -219,4 +220,124 @@ function prime_get_bmark(csno=500000){
     var otextarea_process=document.getElementById('textarea_process_bmark');
     var otextarea_result=document.getElementById('textarea_result_bmark');            
     sub_prime_get_bmark_one_number();
+}
+
+function rnd_relative_maximum_deviation_bmark(){
+    function sub_rnd_relative_maximum_deviation_bmark_one(){
+        if (blxl>=TRIALS){
+            if (is_within_005 == 0){
+                console.log("⚠️ 警告：可能存在显著偏置（某个结果出现的频率明显偏离了理论上的期望值，且这种偏离不太可能是由随机波动造成的）！");
+            }
+            
+            otextarea_result.value='rnd_relative_maximum_deviation_bmark() 费时：'+(performance.now() - t0)/1000 + ' seconds';
+            return;
+        }
+
+        let is_continue=false;
+        let val=randint_b(MIN,MAX);
+        //校验值是否在范围内
+        if (val < MIN || val > MAX){
+            console.log('警告：生成了范围外的值:',val);
+            is_continue=true;
+        } else {
+            count_dict['c_'+val]=count_dict['c_'+val]+1;
+        }
+        
+        if (is_progressive == 0 && blxl < TRIALS-1){
+            is_continue=true;
+        }
+        
+        if (is_continue){
+            blxl=blxl+1;
+            setTimeout(sub_rnd_relative_maximum_deviation_bmark_one,1);        
+        }
+        
+        let is_in_step=0;
+        if (is_progressive == 1 && show_every_round == 0){
+            if ((blxl+1) % blstep == 0 ){
+                if (show_in_step == 0){
+                    console.log((blxl+1) / TRIALS);
+                }
+                is_in_step=1;
+            }
+        }
+        
+        // 计算期望值
+        let expected=(blxl + 1) / (MAX - MIN + 1);
+        // $MAX - $MIN + 1：可能的取值个数
+
+        let print_arr=[['值','出现次数','偏差']];
+        let max_deviation=0;
+        for (let blno=MIN; blno<=MAX; blno++){
+            let count_value=count_dict['c_'+blno];
+            let dev=count_value - expected;
+            //实际出现的次数 - 在理想均匀分布下，该值应该出现的次数
+            
+            // 计算绝对偏差
+            let abs_dev=Math.abs(dev);
+            if (abs_dev > max_deviation){
+                max_deviation=abs_dev;
+            }
+            print_arr.push([blno,count_value,(dev>=0?'+':'')+dev.toFixed(2)]);
+        }
+            
+        is_within_005=(max_deviation / expected < 0.05);
+        if (is_in_step==1 && show_in_step==1 || show_every_round==1 || is_within_005==1 || is_progressive==0 || blxl==TRIALS-1){
+            let summary_list=[
+            ['采样',blxl+1,'次'],
+            ['期望频率',expected.toFixed(2),''],
+            ['最大绝对偏差',max_deviation.toFixed(2),''],
+            ['相对最大偏差',(100 * max_deviation / expected).toFixed(3),'%'],
+            ];
+            
+            if (is_within_005 == 1){
+                summary_list.push('✅ 通过：分布基本均匀（偏差 < 5%）');
+            }
+            
+            console.log(summary_list.join('\n'));
+            otextarea_process.value=summary_list.join('\n');
+            
+            if (show_detail == 1){
+                console.log(print_arr.join('\n'));
+                otextarea_process.value=otextarea_process.value+print_arr.join('\n');
+            }
+        }
+        
+        if (do_break == 1 && is_within_005 == 1 && is_progressive == 1){
+            blxl=TRIALS;
+        } else {
+            blxl=blxl+1;
+        }
+        
+        if (blxl % 100 == 0){
+            setTimeout(sub_rnd_relative_maximum_deviation_bmark_one,1);
+        } else {
+            sub_rnd_relative_maximum_deviation_bmark_one();
+        }
+    }
+    
+    let MIN=0;
+    let MAX=9;
+    let TRIALS=100000;
+    let is_progressive=1;
+    let show_every_round=0;
+    let blstep=1;
+    let show_in_step=1;
+    let show_detail=1;
+    let do_break=0;
+    
+    let t0 = performance.now();
+    
+    let count_dict={};
+    for (let blxl=MIN; blxl<=MAX; blxl++){
+        count_dict['c_'+blxl]=0;
+    }
+    
+    let is_within_005=0;
+    
+    let otextarea_process=document.getElementById('textarea_process_bmark');
+    let otextarea_result=document.getElementById('textarea_result_bmark');
+
+    let blxl=0;
+    sub_rnd_relative_maximum_deviation_bmark_one();
 }
