@@ -154,7 +154,7 @@ function day_2_week_b(csstr='',cstype=''){
     }
 }
 
-function days_between_two_dates_b(csday_start='',csday_end='',return_type='d'){
+function days_between_two_dates_b(csday_start='',csday_end='',return_type='d',invalid_return_false=false){
     if (csday_start==''){
         csday_start=new Date();
     }
@@ -163,7 +163,13 @@ function days_between_two_dates_b(csday_start='',csday_end='',return_type='d'){
     }
     var day1 = validdate_b(csday_start);
     var day2 = validdate_b(csday_end);
-
+    
+    if (invalid_return_false){
+        if (day1===false || day2===false){
+            return false;
+        }
+    }
+    
     var blvalue=day2-day1;
     switch (return_type){
         case 's':

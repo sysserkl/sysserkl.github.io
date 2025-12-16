@@ -889,3 +889,41 @@ function multi_dots_b(ocanvas,cscount,border_color='black',bg_color='white',dot_
         ctx.fill();
     });
 }
+
+function canvas_nn_line_chart_b(canvas,dataX,dataY,padding=30){
+    // 缩放x轴坐标到canvas尺寸
+    function sub_canvas_nn_line_chart_scale_x(x){
+        var max = Math.max(...dataX);
+        return (x / max) * width;
+    }
+
+    // 缩放y轴坐标到canvas尺寸，并且因为canvas的y轴向下为正方向，所以需要做相应的调整
+    function sub_canvas_nn_line_chart_scale_y(y){
+        return height - ((y - minY) / (maxY - minY)) * height + padding;
+    }
+
+    var ctx = canvas.getContext('2d');
+
+    // 找到y轴的最大值和最小值以确定比例
+    var maxY = Math.max(...dataY);
+    var minY = Math.min(...dataY);
+    
+    // 定义一些用于缩放和平移的变量
+    var width = canvas.width - 2 * padding;
+    var height = canvas.height - 2 * padding;
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height); // 清除画布
+
+    // 开始路径
+    ctx.beginPath();
+    ctx.moveTo(padding + sub_canvas_nn_line_chart_scale_x(dataX[0]), sub_canvas_nn_line_chart_scale_y(dataY[0]));
+
+    for (let blxl = 1; blxl < dataX.length; blxl++){
+        ctx.lineTo(padding + sub_canvas_nn_line_chart_scale_x(dataX[blxl]), sub_canvas_nn_line_chart_scale_y(dataY[blxl]));
+    }
+
+    // 设置线条样式并绘制
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = '#007bff';
+    ctx.stroke();
+}

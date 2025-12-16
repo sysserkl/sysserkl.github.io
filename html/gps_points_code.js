@@ -1467,7 +1467,7 @@ function gpx_near_gps_points(info_id='span_gpx_files_info',show_list=true){
     }
     
     var result_t=[];
-    for (let item of gpx_pb_global){//gpxfilename,fsize,fdate,min_lat,min_lon,max_lat,max_lon
+    for (let item of gpx_pb_global){    //gpxfilename,fsize,fdate,min_lat,min_lon,max_lat,max_lon
         if (!li_names.has(item[0])){continue;}        
         result_t.push([item[0],sub_gpx_near_gps_points_min_distance(clicked_lat_lng_global,item[3]),'pb']);
     }
@@ -1532,6 +1532,7 @@ function remove_navigation_gps_points(){
     navigation_layer_gps_global.removeFrom(omap_gps_points_global);
     navigation_layer_gps_global = L.layerGroup();    //全局变量，不加 var - 保留注释
     navigation_layer_gps_global.addTo(omap_gps_points_global);
+    lte_list_leaflet_global=[]; //全局变量
 }
 
 function gpx_from_textarea_gps_points(){

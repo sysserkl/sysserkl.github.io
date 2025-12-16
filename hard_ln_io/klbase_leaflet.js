@@ -64,6 +64,38 @@ function line_default_weight_b(){
 }
 
 function line_leaflet_b(csomap,islayer=false,cslist=[],cscolor='red',cscaption='',textarea_id_for_remove='',time_ele_list=[[],[]],part_len=-1){
+    function sub_line_leaflet_b_one_detail(tlist,elist){
+        let result_t=[];
+        for (let item of tlist){
+            item=item.replace(/^<.*?>(.*?)<\/.*?>/,'$1');
+            result_t.push(new Date(item));
+        }
+        
+        let error_found=false;
+        let seconds_sum=0;
+        let seconds_list=[0];
+        for (let blxl=1,lent=result_t.length;blxl<lent;blxl++){
+            let seconds_minus=days_between_two_dates_b(result_t[blxl-1],result_t[blxl],'s',true);
+            if (seconds_minus===false){
+                error_found=true;
+                break;
+            }
+            seconds_sum=seconds_sum+seconds_minus;
+            seconds_list.push(seconds_sum);
+        }
+
+        result_t=[];
+        for (let item of elist){
+            item=item.replace(/^<.*?>(.*?)<\/.*?>/,'$1');
+            result_t.push(parseFloat(item));
+        }
+        
+        if (!error_found){
+            detail_key='te_detail_'+Object.keys(te_detail_leaflet_global).length;        
+            te_detail_leaflet_global[detail_key]=[seconds_list,result_t];
+        }
+    }
+    
     function sub_line_leaflet_b_one(sub_list){
         let [dots_list,cslen,start_no,end_no]=sub_list;
         
@@ -78,26 +110,40 @@ function line_leaflet_b(csomap,islayer=false,cslist=[],cscolor='red',cscaption='
             lte_list_leaflet_global.push('🧭 '+cscaption+(line_count>1?'':' '+blstr));
         }
         
+        detail_key='';
         let sub_caption='';
         if (line_count>1){
             sub_caption=' 🥾 '+line_no+'/'+line_count;
+            let sub_time=time_list.slice(start_no,end_no);
             if (time_len>=list_len){
-                sub_caption=sub_caption+' '+gpx_time_get_leaftlet_b(time_list.slice(start_no,end_no));
+                sub_caption=sub_caption+' '+gpx_time_get_leaftlet_b(sub_time);
             }
+            
             if (ele_len==time_len && ele_len>=list_len){
-                sub_caption=sub_caption+' '+gpx_ele_get_leaftlet_b(ele_list.slice(start_no,end_no));
-            }       
+                let sub_ele=ele_list.slice(start_no,end_no);
+                sub_line_leaflet_b_one_detail(sub_time,sub_ele);
+                sub_caption=sub_caption+' '+gpx_ele_get_leaftlet_b(sub_ele);
+            }
             lte_list_leaflet_global.push(sub_caption+' '+blstr);
+        } else {
+            if (ele_len==time_len && ele_len>=list_len){
+                sub_line_leaflet_b_one_detail(time_list,ele_list);
+            }
         }
         
-        blstr='<span class="span_line_caption_leaflet">'+cscaption+sub_caption+'</span> '+blstr+' <span style="cursor:pointer;" onclick="data_2_gpx_file_leaflet_b(\''+restore_type+'\',this);">⬇</span>';
+        blstr='<span class="span_line_caption_leaflet">'+cscaption+sub_caption+'</span> '+blstr;
+        if (detail_key!==''){
+            blstr=blstr+' <span style="cursor:pointer;" onclick="te_2_chart_leaflet_b(this,\''+detail_key+'\');">⛰</span>';
+        }
+        blstr=blstr+' <span style="cursor:pointer;" onclick="data_2_gpx_file_leaflet_b(\''+restore_type+'\',this);">⬇</span>';
+        
         if (textarea_id_for_remove!==''){
             blstr=blstr+' <span style="cursor:pointer;" onclick="remove_data_in_textarea_leaflet_b(\''+restore_type+'\',this,\''+textarea_id_for_remove+'\');">⛔</span>';
         }
 
         var polyline = L.polyline(dots_list, line_style[line_no % 2]);
 
-        polyline.bindPopup('<span style="word-break:break-all;">'+blstr+'</span>');
+        polyline.bindPopup('<span style="word-break:break-all;">'+blstr+'</span>'+(detail_key!==''?'<div id="div_'+detail_key+'" style="display:none;width:100%;height:5rem;"><canvas style="border:1px solid black; background-color:'+scheme_global['button']+'; border-radius: 1rem;"></canvas></div>':''));
         polyline.on('click', (e) => {gpx_current_geometry_data_global=e.target.getLatLngs();}); //全局变量 - 保留注释   
         return polyline; 
     }
@@ -196,7 +242,13 @@ function line_leaflet_b(csomap,islayer=false,cslist=[],cscolor='red',cscaption='
         lte_list_leaflet_global=[]; //全局变量 - 保留注释
     }
     
+    if (typeof te_detail_leaflet_global == 'undefined'){
+        te_detail_leaflet_global={};
+    }
+    
     var line_no=1;
+    var detail_key='';
+    
     if (line_count>1){
         var line_group = L.layerGroup();
         for (let one_line of line_list){
@@ -249,6 +301,29 @@ function distance_leaflet_b(lat1, lng1, lat2=false, lng2=false){
 
 function rad_leaflet_b(d){
     return d*Math.PI/180.0;
+}
+
+function te_2_chart_leaflet_b(ospan,cskey){
+    dataX=te_detail_leaflet_global[cskey][0];
+    dataY=te_detail_leaflet_global[cskey][1];
+    let compare_list=[];
+    for (let blxl=0,lent=dataX.length;blxl<lent;blxl++){
+        compare_list.push('['+dataX[blxl]+','+dataY[blxl]+']');
+    }
+    
+    let blname='array_analyze';
+    var oname=ospan.parentNode.querySelector('span.span_line_caption_leaflet');
+    if (oname){
+        blname=oname.innerText.replace(/^(.*?)\s\d+.*$/,'$1');
+    }
+    console.log('"'+blname+'#points:false#",'+compare_list.join(','));
+    
+    var odiv=document.getElementById('div_'+cskey);
+    if (odiv){
+        odiv.style.display='block';
+        canvas=odiv.querySelector('canvas');
+        canvas_nn_line_chart_b(canvas,dataX,dataY,5);
+    }
 }
 
 function earth_radius_leaflet_b(){ 
@@ -660,11 +735,12 @@ function draw_gpx_lines_simple_leaflet_b(onavigation,omap,cslist,csname,cscolors
         point_size=point_size_get_leaflet_b(point_type);
     }
     
-    if (cscolors[1]!==''){
+    //cscolors 形如：[ "greenyellow", "cyan", "red" ] - 保留注释
+    if (cscolors[1]!==''){  //标注起点 - 保留注释
         //lon,lat,radius,color - 保留注释
         one_point_leaflet_b(onavigation,omap,cslist[0][1],cslist[0][0],point_size,cscolors[1],dopanto,point_type,csfillcolor,csfillopacity);
     }
-    if (cscolors[2]!==''){
+    if (cscolors[2]!==''){  //标注终点 - 保留注释
         one_point_leaflet_b(onavigation,omap,cslist[cslist.length-1][1],cslist[cslist.length-1][0],point_size,cscolors[2],dopanto,point_type,csfillcolor,csfillopacity);
     }
 }
@@ -868,7 +944,7 @@ function gpx_ele_get_leaftlet_b(ele_list){
     let blmax=Math.max(...ele_set);
     let blmin=Math.min(...ele_set);
     
-    return '(↑'+up_sum.toFixed(0)+' ↓ '+down_sum.toFixed(0)+' | '+blmin.toFixed(0)+' ~ '+blmax.toFixed(0)+')';
+    return '(↑'+up_sum.toFixed(0)+' ↓ '+Math.abs(down_sum).toFixed(0)+' | '+blmin.toFixed(0)+' ~ '+blmax.toFixed(0)+')';
 }
 
 function gpx_time_get_leaftlet_b(time_list){
