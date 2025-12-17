@@ -402,9 +402,13 @@ function days_enwc_b(only_plan=false){
 	var date1_tmp=default_date_b('',true);
 	var year_tmp=date1_tmp.getFullYear();
 	
-    var wordscount=[2025,18750];
-    var year_increment=1250;    //确保显示万位整数 - 保留注释
-
+    var wordscount=[2026,20000];
+    var year_increment=1500;    //合适的数值可显示结果为万位整数 - 保留注释
+    if (year_tmp>wordscount[0]){
+        wordscount[1]=wordscount[1]+year_increment*(year_tmp-wordscount[0]);    //先修改wordscount[1] - 保留注释
+        wordscount[0]=wordscount[0]+year_tmp-wordscount[0];
+    }
+    
     var not_this_year=false;
     var years_used=(enwords.length - wordscount[1])/year_increment;  //已完成的单词数>计划数 - 保留注释
     
@@ -438,15 +442,26 @@ function days_enwc_b(only_plan=false){
     var scan_times=0;
     var max_everyday=0;
     var td_last2_value=-1;
+    var do_break=false;
 	while (true){
-        if (scan_times>=5){break;}        
         scan_times=scan_times+1;
+        let words_sum=wordscount[1]+years_used*year_increment;
+        if (scan_times>3){
+            if (words_sum>=wordscount[1]+50000){
+                do_break=true;
+            }
+            else if ((wordscount[0]+years_used) % 15 !== 0){
+                years_used=years_used+1;
+                continue;
+            }
+        }
+        
 		var ndays_t=days_between_two_dates_b(date1_tmp,new Date((wordscount[0]+years_used+1)+'-01-01'));
         
 		blstr_tmp='<tr>';
         blstr_tmp=blstr_tmp+'<td>距'+(wordscount[0]+years_used)+'年底</td>';
         blstr_tmp=blstr_tmp+'<td align=right>'+ndays_t.toFixed(0)+'</td>';
-        blstr_tmp=blstr_tmp+'<td align=right>'+(wordscount[1]+years_used*year_increment)+'</td>';
+        blstr_tmp=blstr_tmp+'<td align=right>'+words_sum+'</td>';
 
         blstr_tmp=blstr_tmp+'<td align=right>';
 		var day_t=Math.max((ndays_t-1),1);
@@ -478,12 +493,13 @@ function days_enwc_b(only_plan=false){
         
         list_t.push(blstr_tmp);
         years_used=years_used+1;
+        if (do_break){break;}
 	}
    
     local_storage_today_b('enwords_days_last_row_minus_one',40,td_last2_value,'/',[15,0,0.5]);
 
-    blstr_tmp='<table id="table_plan_count" cellpadding=0 cellspacing=0>';
-    blstr_tmp=blstr_tmp+'<tr><td align=center>时间段</td><td align=center>剩余天数</td><td align=center>计划累计<br />单词数</td><td align=center>每日须记忆<br />单词数</td><td align=center>-0.1所需的额外<br />记忆单词量</td><td align=center>-1所需的额外<br />记忆单词量</td></tr>';
+    blstr_tmp='<table id="table_plan_count" class="table_common">';
+    blstr_tmp=blstr_tmp+'<tr><th>时间段</th><th>剩余天数</th><th>计划累计<br />单词数</th><th>每日须记忆<br />单词数</th><th>-0.1所需的额外<br />记忆单词量</th><th>-1所需的额外<br />记忆单词量</th></tr>';
     blstr_tmp=blstr_tmp+list_t.join('\n');
     
     blstr_tmp=blstr_tmp+'<tr><td colspan=6>';    
@@ -495,7 +511,7 @@ function days_enwc_b(only_plan=false){
     
     var max_everyday_ceil=Math.max(2,Math.ceil(max_everyday));
 
-    for (let blxl=Math.max(3,Math.min(4,max_everyday_ceil));blxl<7;blxl++){ //不含7 - 保留注释
+    for (let blxl=Math.max(3,Math.min(4,max_everyday_ceil));blxl<=5;blxl++){    //按每日 5 计算，每周须记忆单词 - 保留注释
         if (blxl!==max_everyday){
             blplan=blplan+sub_days_enwc_b_plan(blxl,blint,blvalue);
         }
@@ -517,8 +533,7 @@ function mobile_style_enwc_b(mobile_more='',pc_more=''){
 	'ul,ol,li{font-size:1.2rem;line-height:120%;margin-bottom:0.5rem;}',
 	'p.article{font-size:1rem;line-height:120%;}',
 	'#divhtml {margin:0 0.5rem;}',
-    '#table_plan_count{font-size:0.6rem;}',
-    '#table_plan_count td{border-bottom:black solid 0.1rem;padding:0.2rem;}',
+    '#table_plan_count{font-size:0.5rem;}',
     mobile_more,
     ];
 
@@ -526,8 +541,7 @@ function mobile_style_enwc_b(mobile_more='',pc_more=''){
 	'ul,ol,li{font-size:1rem;line-height:150%;padding:0px;}',
 	'p.article{font-size:1rem;line-height:150%;}',
 	'#divhtml {margin-left:3rem; max-width:900px;font-family:Noto Sans;}',
-    '#table_plan_count{font-size:1rem;font-family:Noto Sans}',
-    '#table_plan_count td{border-bottom:black solid 0.1rem;padding:0.2rem;}',
+    '#table_plan_count{font-size:0.9rem;}',
     pc_more,
     ];
     

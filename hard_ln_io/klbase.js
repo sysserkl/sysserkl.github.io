@@ -3357,6 +3357,48 @@ function fun_soruce_show_b(csid){
     }
 }
 
+function get_current_selection_info_b(){
+    function sub_get_current_selection_info_b_container(){
+        const selection = window.getSelection();
+        if (selection.rangeCount === 0){return null;}
+        let container = selection.getRangeAt(0).commonAncestorContainer;
+        if (container.nodeType === Node.TEXT_NODE){
+            container = container.parentElement;
+        }
+        return container;
+    }
+    
+    const activeEl = document.activeElement;
+
+    // 情况1：焦点在 textarea
+    if (activeEl && activeEl.tagName === 'TEXTAREA'){
+        //在 标准的 DOM 环境中（HTML 文档），element.tagName 总是返回大写的字符串
+        const start = activeEl.selectionStart;
+        const end = activeEl.selectionEnd;
+        const selectedText = activeEl.value.slice(start, end);
+        return {type: 'textarea', element: activeEl, selectedText};
+    }
+
+    // 情况2：焦点在 input（可选）
+    if (activeEl && activeEl.tagName === 'INPUT' && ['text', 'search', 'url', 'tel', 'email'].includes(activeEl.type)){
+        const start = activeEl.selectionStart;
+        const end = activeEl.selectionEnd;
+        const selectedText = activeEl.value.slice(start, end);
+        return {type: 'input', element: activeEl, selectedText};
+    }
+
+    // 情况3：其他可编辑区域或普通文本（使用 window.getSelection）
+    const selection = window.getSelection();
+    if (!selection.isCollapsed){
+        const selectedText = selection.toString();
+        const container = sub_get_current_selection_info_b_container();
+        return {type: 'other', element: container, selectedText};
+    }
+
+    // 无选中内容
+    return null;
+}
+
 function dom_insert_str_b(odom,str1,str2,check_selected=false,every_line=false,run_fn=false){
     var st=odom.selectionStart;
     var ed=odom.selectionEnd;
