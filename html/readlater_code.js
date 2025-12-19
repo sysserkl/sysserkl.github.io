@@ -298,7 +298,7 @@ function menu_rlater(){
     ];    
     klmenu_idb.push(menu_container_b(str_t,group_list,'IDB: '));    
 
-    var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu1,'🛋','16rem','1rem','1rem','60rem')+klmenu_b(klmenu_statistics,'🧮','22rem','1rem','1rem','30rem')+klmenu_b(klmenu_idb,'⚙','22rem','1rem','1rem','60rem')+local_menu_group,'','0rem');
+    var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu1,'🛋','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_statistics,'🧮','22rem','1rem','1rem','30rem')+klmenu_b(klmenu_idb,'⚙','22rem','1rem','1rem','60rem')+local_menu_group,'','0rem');
     
     document.getElementById('h2_title').insertAdjacentHTML('afterbegin',bljg+' ');    
     klmenu_check_b('span_reg_rlater',true);

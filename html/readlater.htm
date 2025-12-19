@@ -37,7 +37,7 @@ import_data_rlater();
 <label><input type="radio" name="radio_search_type" value="1" onclick="search_websites_rlater();">数组</label>
 <label><input type="radio" name="radio_search_type" value="2" checked onclick="search_websites_rlater();">链接</label>
 <label><input type="radio" name="radio_search_type" value="3" onclick="search_websites_rlater();">WIKI</label>
-最大返回结果数：<input type="number" id="input_max_rows" value=10000 min=-1 onkeyup="if (event.key=='Enter'){search_websites_rlater();}">
+最大返回结果数：<input type="number" id="input_max_rows" value=50000 min=-1 onkeyup="if (event.key=='Enter'){search_websites_rlater();}">
 <span class="aclick" onclick="host_count_rlater();">信息源</span> 
 <span class="aclick" onclick="random_pages_rlater(10);" title="随机打开10个页面">R10P</span>
 <span class="aclick" onclick="search_websites_rlater('',true,20);" title="随机显示20条记录">R20R</span>

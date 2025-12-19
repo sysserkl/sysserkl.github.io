@@ -283,7 +283,7 @@ function split_words_b(csstr,cscombine=false,diy_words_list=[]){
     //------------------    
     var t0 = performance.now();
     var list_done=[];
-    csstr=csstr.replace(/["—、；：。，？！【】（）《》“”‘’…ɑəŋɔʒθ〈〉「」〔〕『』〜～・．－]｜/g,' ');  //〜～ 这两个不一样 - 保留注释
+    csstr=csstr.replace(/["—、；：。，？！【】（）《》“”‘’…ɑəŋɔʒθ〈〉「」〔〕『』〜～・．－｜≥]/g,' ');  //〜～ 这两个不一样 - 保留注释
     
     var list_en=csstr.match(/\b[a-zA-Z'\-_]{2,}\b/g);   //英文分词简单处理 - 保留注释
     if (list_en==null){
