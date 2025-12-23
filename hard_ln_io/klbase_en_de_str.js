@@ -828,6 +828,12 @@ function decode_quoted_printable_b(data){
 
 // Base64 编码
 function base64_encode_b(str){
+    //对 Unicode 字符串进行 UTF-8 安全的 Base64 编码：
+    
+    //1. 使用 encodeURIComponent(str) 将字符串转为 URI 编码（UTF-8 字节序列以 %XX 形式表示）；
+    //2. 将 %XX 转换为对应的字节（即还原为原始 UTF-8 字节）；
+    //3. 用 btoa() 对这些字节进行 Base64 编码。
+
     try {
         var new_str=btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g,
             function(match, p1){
@@ -878,7 +884,7 @@ function base64_decode_b(base64Str){
     //为了修复这个问题，可以直接使用 TextDecoder 来处理二进制数据，而不是手动构造 URI 百分号编码。TextDecoder 是一种可以将二进制数据（例如从 Base64 解码得到的数据）转换为字符串的方式，它能够正确处理各种字符集，包括多字节字符。
 }
 
-function caesar_encrypt_b(text, shift){
+function caesar_encrypt_b(text, shift=7){
     //shift 的取值范围可以是任何整数，但在实际应用中通常只考虑 0 到 25 的正整数
     shift = ((shift % 26) + 26) % 26;
 
@@ -897,7 +903,7 @@ function caesar_encrypt_b(text, shift){
     }
 }
 
-function caesar_decrypt_b(encryptedText, shift){
+function caesar_decrypt_b(encryptedText, shift=7){
     // 解密实际上是用负数位移量进行加密
     shift = ((shift % 26) + 26) % 26;
     return caesar_encrypt_b(encryptedText, 26 - shift);

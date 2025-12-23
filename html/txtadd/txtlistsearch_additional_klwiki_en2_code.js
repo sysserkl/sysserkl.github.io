@@ -374,7 +374,7 @@ function new_words_count_kltxt_klwiki_en2(cstype='all'){
     if (bltype==''){
         bltype='none';
     }
-    frequency_enwords_book_b('dict_plus_'+bltype,false,4000,result_t);
+    frequency_words_enbook_b('dict_plus_'+bltype,false,4000,result_t);
 }
 
 function batch_search_form_kltxt_klwiki_en2(){

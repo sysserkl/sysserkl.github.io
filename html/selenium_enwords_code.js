@@ -341,7 +341,7 @@ function menu_seen(){
 
     var klmenu1=[
     klmenu_select_sort_b('select_raw_sort_id_seen',sort_type,str_t,'sort_seen',true,false),
-    '<span class="span_menu" onclick="'+str_t+'frequency_enwords_book_b(\'sentence_rare\',true);">非稀有旧单词</span>',
+    '<span class="span_menu" onclick="'+str_t+'frequency_words_enbook_b(\'sentence_rare\',true);">非稀有旧单词</span>',
     '<span class="span_menu" onclick="'+str_t+'list_popular_seen();">常见新单词</span>',    
     '<span class="span_menu" onclick="'+str_t+'title_words_seen();">常见标题单词</span>',    
     '<span class="span_menu" onclick="'+str_t+'words_count_statistics_seen(1,true);">当前条件的单一新单词</span>',    

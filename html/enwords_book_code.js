@@ -254,7 +254,7 @@ function result_return_rows_get_enwords(){
 }
 function frequency_count_get_enwords(cstype){
     let common_max=result_return_rows_get_enwords();
-    frequency_enwords_book_b(cstype,false,common_max);
+    frequency_words_enbook_b(cstype,false,common_max);
 }
 
 function load_new_words_count_enwords_book(){

@@ -89,4 +89,95 @@ function de_confuse_str_g($csstr){
     if ($csstr==''){return '';}
     return utf8_strrev_g(preg_replace('/~[\x{4e00}-\x{9fa5}]{3,5}[}\)\]]{2}([a-zA-Z0-9]){3,5}~~[\x{4e00}-\x{9fa5}]{3,5}[{\(\[]{2}~/u','',$csstr)); 
 }
+
+function caesar_encrypt_g($text, $shift=7){
+    // 确保 shift 在 0 到 25 的范围内（处理负数和大于26的情况）
+    $shift = (($shift % 26) + 26) % 26;
+
+    try {
+        $new_str = '';
+        $length = strlen($text);
+
+        for ($blxl = 0; $blxl < $length; $blxl++){
+            $char = $text[$blxl];
+            #使用 ctype_lower() 和 ctype_upper() 来判断字符是否为小写或大写字母，这比正则更高效且符合 PHP 风格
+            if (ctype_lower($char)){
+                // 小写字母：'a' = 97
+                $new_char = chr((ord($char) - 97 + $shift) % 26 + 97);
+                $new_str .= $new_char;
+            } elseif (ctype_upper($char)){
+                // 大写字母：'A' = 65
+                $new_char = chr((ord($char) - 65 + $shift) % 26 + 65);
+                $new_str .= $new_char;
+            } else {
+                // 非字母字符保持不变
+                $new_str .= $char;
+            }
+        }
+
+        return [$new_str, ''];
+    } catch (Exception $e){
+        return [$text, $e->getMessage()];
+    }
+}
+
+function caesar_decrypt_g($encryptedText, $shift=7){
+    // 解密实际上是用负数位移量进行加密
+    $shift = (($shift % 26) + 26) % 26;
+    return caesar_encrypt_g($encryptedText, 26 - $shift);
+}
+
+function base64_encode_g($str){
+    try {
+        // 确保字符串是 UTF-8（通常已经是）
+        // JavaScript 的 encodeURIComponent + byte conversion 等价于 UTF-8 字节序列
+        // PHP 的 base64_encode 直接对原始字节编码，所以直接使用即可
+        $new_str = base64_encode($str);
+        return [$new_str, ''];
+    } catch (Exception $e) {
+        return [$str, $e->getMessage()];
+    }
+}
+
+function base64_decode_g($base64Str){
+    try {
+        // strict mode: 第二个参数设为 true，无效 Base64 时返回 false
+        $binary = base64_decode($base64Str, true);
+
+        if ($binary === false){
+            throw new Exception("Invalid base64 string");
+        }
+
+        // $binary 已是 UTF-8 编码的字符串
+        return [$binary, ''];
+    } catch (Exception $e){
+        return [$base64Str, $e->getMessage()];
+    }
+}
+
+function bc_encode_g($csstr,$shift=7){
+    [$new_str,$is_ok]=base64_encode_g($csstr);
+    if ($is_ok!==''){
+        return [$csstr,$is_ok];
+    }
+    
+    [$new_str,$is_ok]=caesar_encrypt_g($new_str, $shift);
+    if ($is_ok!==''){
+        return [$csstr,$is_ok];
+    }
+    return [$new_str,''];
+}
+
+function bc_decode_g($csstr,$shift=7){
+    [$new_str,$is_ok]=caesar_decrypt_g($csstr, $shift);
+    if ($is_ok!==''){
+        return [$csstr,$is_ok];
+    }
+    [$new_str,$is_ok]=base64_decode_g($new_str);
+    if ($is_ok!==''){
+        return [$csstr,$is_ok];
+    }
+    return [$new_str,''];
+}
 ?>
+
