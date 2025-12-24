@@ -1,4 +1,4 @@
-function wordtypes_enbook_b(blitem){
+function wordtypes_enbook_b(blitem,only_lower_upper=false){
     function sub_wordtypes_enbook_b_push(csword){
         bltmparr.add(csword);
         bltmparr.add(csword.toLowerCase());
@@ -7,11 +7,12 @@ function wordtypes_enbook_b(blitem){
     }
     
 	var bltmparr=new Set();
-    bltmparr.add(blitem);
-    bltmparr.add(blitem.toLowerCase());
-    bltmparr.add(blitem.toUpperCase());
-    bltmparr.add(blitem.substring(0,1).toUpperCase()+blitem.substring(1,).toLowerCase());
+    sub_wordtypes_enbook_b_push(blitem);
+    if (only_lower_upper){
+        return bltmparr;
+    }
     
+    var word_tmp;
     if ('pped,gged,nned,lled,dded,ssed'.includes(blitem.slice(-4))){
         word_tmp=blitem.substring(0,blitem.length-3);
         sub_wordtypes_enbook_b_push(word_tmp);
@@ -39,6 +40,7 @@ function wordtypes_enbook_b(blitem){
         word_tmp=blitem.substring(0,blitem.length-2);
         sub_wordtypes_enbook_b_push(word_tmp);
     }
+    
     if ('d,s'.includes(blitem.slice(-1))){
         word_tmp=blitem.substring(0,blitem.length-1);
         sub_wordtypes_enbook_b_push(word_tmp);
@@ -60,6 +62,8 @@ function get_new_old_rare_words_set_enbook_b(csstr,is_remove_square=-1,words_typ
         if (!otextarea){return [false,false,false,false,csstr];}
         csstr=otextarea.value;
     }
+    csstr=csstr.trim();
+    var is_all_old_def=(csstr.split('\n')[0]=='全部释义');
     
     if (is_remove_square===-1){
         is_remove_square=checkbox_kl_value_b('remove_square');
@@ -75,7 +79,12 @@ function get_new_old_rare_words_set_enbook_b(csstr,is_remove_square=-1,words_typ
         words_type=checkbox_kl_value_b('words_type_check');
     }
     words_type=(words_type===0?true:words_type);
-    return new_old_word_list_enbook_b(bljgarr2,words_type,csendata_set).concat([words_type,csstr]);    //[new_words_set,old_words_set,rare_words_set,bltypecheck,csstr] - 保留注释
+    
+    var result_t=new_old_word_list_enbook_b(bljgarr2,words_type,csendata_set).concat([words_type,csstr]);    //[new_words_set,old_words_set,rare_words_set,bltypecheck,csstr] - 保留注释
+    if (is_all_old_def){
+        local_storage_today_b('all_def_new_words_count',40,result_t[0].size,'/');
+    }
+    return result_t;
 }
 
 function get_new_words_arr_set_enbook_b(cstype,csstr='',div_id='div_new_words2',is_remove_square=-1,words_type=-1,csendata_set=false){
@@ -84,7 +93,7 @@ function get_new_words_arr_set_enbook_b(cstype,csstr='',div_id='div_new_words2',
 
     var new_words_set, old_words_set, rare_words_set, bltypecheck;
     [new_words_set,old_words_set,rare_words_set,bltypecheck,csstr]=get_new_old_rare_words_set_enbook_b(csstr,is_remove_square,words_type,csendata_set);
-    if (new_words_set===false){return;}    
+    if (new_words_set===false){return;}
     
     var bljgarr2=array_union_b(new_words_set,old_words_set,true);
 
@@ -583,19 +592,30 @@ function new_old_words_html_enbook_b(csarray,csname='',csaname='',onlytitle=fals
     blsort=blsort+'<span class="aclick" onclick="sort_enwords_enbook_b(this,\'tail\');">尾部</span>';
     blsort=blsort+'<span class="aclick" onclick="sort_enwords_enbook_b(this,\'length\');">长度</span>';    
     blsort=blsort+'<span class="aclick" onclick="sort_enwords_enbook_b(this,\'random\');">随机</span>';
-    blsort=blsort+'<span class="aclick" onclick="sort_enwords_enbook_b(this,\'in_sentence\');">在例句中</span>';
-    blsort=blsort+'<span class="aclick" onclick="sort_enwords_enbook_b(this,\'not_in_sentence\');">不在例句中</span>';
 
     blsort=blsort+'<span class="aclick" onclick="document.getElementById(\'textarea_enwords_book_'+csaname+'\').select();document.execCommand(\'copy\');">Copy</span>';
     blsort=blsort+'<span class="aclick" onclick="show_hide_words_enbook_b(this);">Show/Hide</span>';
 
+    var select_str='<select class="select_type_enwords_container">'+list_2_option_b(['全部','在例句中','不在例句中'])+'</select>';
+    
     var arr_temp=Array.from(csarray);
-    return bltitle+'<div class="div_enwords_container"><textarea id="textarea_enwords_book_'+csaname+'" style="height:200px;">'+arr_temp.join(' ')+'</textarea><p>'+blsort+'</p><div class="div_enwords_links">'+bljg.join(' ')+enwords_batch_div_b(arr_temp,parseInt(Math.random()*99999))+(show_words_type?enwords_different_types_div_b(arr_temp):'')+'</div></div>';
+    return bltitle+'<div class="div_enwords_container"><textarea id="textarea_enwords_book_'+csaname+'" style="height:200px;">'+arr_temp.join(' ')+'</textarea><p>'+select_str+' '+blsort+'</p><div class="div_enwords_links">'+bljg.join(' ')+enwords_batch_div_b(arr_temp,parseInt(Math.random()*99999))+(show_words_type?enwords_different_types_div_b(arr_temp):'')+'</div></div>';
 }
 
 function show_hide_words_enbook_b(ospan){
     var odiv=ospan.parentNode.parentNode.querySelector('div.div_enwords_links');
     odiv.style.display=(odiv.style.display==''?'none':'');
+}
+
+function words_in_sentence_set_generate_enbook_b(){
+    if (typeof words_in_sentence_set_global == 'undefined'){
+        words_in_sentence_set_global=new Set();    //全局变量
+    }
+    if (words_in_sentence_set_global.size==0){
+        words_in_sentence_set_global=sentences_2_words_set_enbook_b(false,0,false,true);
+        console.log('words_in_sentence_set_global 元素个数',words_in_sentence_set_global.size);
+        local_storage_today_b('words_in_sentence_set_global_count',40,words_in_sentence_set_global.size,'/');
+    }
 }
 
 function sort_enwords_enbook_b(oa,cstype=''){
@@ -610,8 +630,24 @@ function sort_enwords_enbook_b(oa,cstype=''){
     var olinksdiv=odiv.querySelector('div.div_enwords_links');
     if (!olinksdiv){return;}
     
+    var oselect_type=odiv.querySelector('select.select_type_enwords_container');
+    if (!oselect_type){return;}
+    
     var t0 = performance.now();
     var csarray=otextarea.value.trim().split(' ');
+    
+    if (oselect_type.value.includes('例句')){
+        words_in_sentence_set_generate_enbook_b();
+        switch (oselect_type.value){
+            case '不在例句中':
+                csarray=array_difference_b(csarray,Array.from(words_in_sentence_set_global));
+                break;
+            case '在例句中':
+                csarray=array_intersection_b(csarray,Array.from(words_in_sentence_set_global));
+                break;        
+        }    
+    }
+    
     switch (cstype){
         case '': //排序 - 保留注释
             csarray.sort();
@@ -624,12 +660,9 @@ function sort_enwords_enbook_b(oa,cstype=''){
             break;            
         case 'random': //随机排序
             csarray.sort(randomsort_b);
-            break;        
-        case 'not_in_sentence':
-            break;
-        case 'in_sentence':
             break;
     }
+    
     var bljg=enwords_array_to_links_b(csarray);
     olinksdiv.innerHTML=bljg.join(' ')+enwords_batch_div_b(csarray);
     console.log('sort_enwords_enbook_b() 费时：'+(performance.now() - t0) + ' milliseconds'); 
@@ -674,7 +707,8 @@ function str_2_array_enbook_b(blstr,cstype='set'){
     return bljgarr2;
 }
 
-function new_words_in_str_enbook_b(article_arr,simple_split=false,csresult={},run_fn=false){
+function new_words_in_str_enbook_b(article_arr,simple_split=false,only_lower_upper=false,csresult={},run_fn=false){
+    //类似函数：sentences_2_words_set_enbook_b()
     function sub_new_words_in_str_enbook_b_arow(){
         if (blxl>=bllen){
             console.log('new_words_in_str_enbook_b() 费时：'+(performance.now() - t0) + ' milliseconds');
@@ -686,6 +720,7 @@ function new_words_in_str_enbook_b(article_arr,simple_split=false,csresult={},ru
         
         var blstr=article_arr[blxl].toString().replace(/&lt;eword w=['"]?.*?['"]?&gt;&lt;\/eword&gt;/g,'');
         var list_t=str_2_array_enbook_b(blstr,'list');
+        //list_t 形如：[ "There", "are", "large", "number", "of", "minor", "parallels", "that", "might", "be", … ] - 保留注释
         for (let aword of list_t){
             aword=aword.trim();
             if (aword==''){continue;}
@@ -699,7 +734,7 @@ function new_words_in_str_enbook_b(article_arr,simple_split=false,csresult={},ru
                 blstr=aword;
                 is_new=false;
             } else if (!simple_split){
-                var variety=wordtypes_enbook_b(aword);
+                var variety=wordtypes_enbook_b(aword,only_lower_upper);
                 for (let one_type of variety){
                     if (oldwords.has(one_type)){
                         blstr=one_type;
@@ -742,7 +777,7 @@ function new_words_in_str_enbook_b(article_arr,simple_split=false,csresult={},ru
     sub_new_words_in_str_enbook_b_arow();   
 }
 
-function frequency_words_enbook_b(cstype='',simple_split=false,common_max=4000,csresult={}){
+function frequency_words_enbook_b(cstype='',simple_split=false,common_max=4000,csresult={},only_lower_upper=false){
     function sub_frequency_words_enbook_b_done(oldwords_size){
         var new_t,common_t,common_set;
         [new_t,common_t,common_set]=new_and_common_enwords_book_b(csresult,oldwords_size*2,common_max); //2倍旧单词长度 - 保留注释
@@ -819,7 +854,7 @@ function frequency_words_enbook_b(cstype='',simple_split=false,common_max=4000,c
             break;
     }
     
-    new_words_in_str_enbook_b(article_arr,simple_split,csresult,sub_frequency_words_enbook_b_done);
+    new_words_in_str_enbook_b(article_arr,simple_split,only_lower_upper,csresult,sub_frequency_words_enbook_b_done);
 }
 
 function new_and_common_enwords_book_b(csresult,cslength,common_max){
@@ -863,17 +898,46 @@ function new_and_common_enwords_book_b(csresult,cslength,common_max){
     return [new_t,common_list,common_set];
 }
 
-function sentences_2_words_set_enbook_b(){
+function sentences_2_words_set_enbook_b(csarr=false,col_no=-1,simple_split=true,only_lower_upper=false){
+    //类似函数：new_words_in_str_enbook_b()
+
+    function sub_sentences_2_words_set_enbook_b_one(item){
+        let blstr=item.toString().replace(/&lt;eword w=['"]?.*?['"]?&gt;&lt;\/eword&gt;/g,'');    
+        let set_t=str_2_array_enbook_b(blstr,'set');
+        for (let aword of set_t){
+            if (simple_split){
+                words_in_sentence_set.add(aword);
+            } else {
+                let list_t=wordtypes_enbook_b(aword,only_lower_upper);
+                for (let item of list_t){
+                    words_in_sentence_set.add(item);
+                }
+            }
+        }
+    }
+
     var t0 = performance.now();
     var words_in_sentence_set=new Set();
     var list_t=[];
-    for (let item of en_sentence_global){
-        var blstr=item[0].toString().replace(/&lt;eword w=['"]?.*?['"]?&gt;&lt;\/eword&gt;/g,'');
-        var set_t=str_2_array_enbook_b(blstr,'set');
-        for (let aword of set_t){
-            words_in_sentence_set.add(aword);
+    
+    if (csarr===false){
+        if (typeof en_sentence_global == 'undefined'){
+            return words_in_sentence_set;
+        } else {
+            csarr=en_sentence_global;        
         }
     }
+    
+    if (col_no>=0){
+        for (let item of csarr){
+            sub_sentences_2_words_set_enbook_b_one(item[col_no]);
+        }
+    } else {
+        for (let item of csarr){
+            sub_sentences_2_words_set_enbook_b_one(item);
+        }
+    }
+    
     console.log('sentences_2_words_set_enbook_b() 费时：'+(performance.now() - t0) + ' milliseconds');
     return words_in_sentence_set;
 }
