@@ -1992,7 +1992,7 @@ function bookmarks_get_kltxt_b(current_book_today_bookmark_only_one=false,return
             sum_line_total=sum_line_total+abook[4];
         }
         
-        var str_t=filename_2_bookname_b(abook[1]);
+        var str_t=bookid_2_bookname_b(abook[1])[0];
         
         var lines_left=abook[4]-lines_done;
         var blstr='<td align=right>'+abook[2]+' / ';

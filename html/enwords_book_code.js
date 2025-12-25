@@ -455,9 +455,12 @@ function compare_form_statistics_enwords_book(){
     
     var buttons='前 <input type="number" id="input_table_rows_enwords_book" min=0 /> 行';
     buttons=buttons+'<label><input type="checkbox" id="checkbox_only_delta_rows_enbook" checked />忽略无Δ行</label> ';
+    buttons=buttons+'<label><input type="checkbox" id="checkbox_ignore_klwiki_en2_enbook" checked />忽略klwiki_en2</label> ';
     buttons=buttons+'<span class="aclick" onclick="booknames_get_enwords_book();">获取书名</span>';
     buttons=buttons+'<span class="aclick" onclick="sentences_get_by_bookname_enwords_book();">获取例句</span>';
     buttons=buttons+'<span class="aclick" onclick="compare_statistics_enwords_book();">比较</span>';
+    buttons=buttons+'<span class="aclick" onclick="filelist_merge_enwords_book();">filelist合并导入</span>';
+    
     buttons=buttons+close_button_b('divhtml2','');
     
     bljg=bljg+'<tr><td colspan=2 align=right>'+buttons+'</td></tr>';
@@ -476,6 +479,32 @@ function compare_form_statistics_enwords_book(){
     odiv.scrollIntoView();
 }
 
+function filelist_merge_enwords_book(){
+    function sub_filelist_merge_enwords_book_done(csresult){
+        var otextarea1=document.getElementById('textarea_new_words1');
+        otextarea1.value=csresult.join('\n');
+        otextarea1.scrollIntoView();
+        filelist=[];
+    }
+    
+    var otextarea_book=document.querySelector('#div_compare_enbook textarea');
+    if (!otextarea_book){
+        alert('未发现书名编辑框');
+        return;
+    }
+    var list_t=otextarea_book.value.trim().split('\n');
+    var id_list=[];
+    for (let arow of list_t){
+        id_list.push(bookid_2_bookname_b(arow.trim(),true,true)[0]);
+    }
+
+    var raw_len=id_list.length;
+    id_list=id_list.slice(0,10);
+    
+    if (!confirm('是否合并'+(raw_len>10?'（最多）':'')+id_list.length+'本书籍的filelist？')){return;}
+    filelist_merge_book_b(id_list,sub_filelist_merge_enwords_book_done);
+}
+
 function booknames_get_enwords_book(){
     var blrows=parseInt(document.getElementById('input_table_rows_enwords_book').value.trim());
     if (isNaN(blrows) || blrows<=0){return;}
@@ -484,6 +513,7 @@ function booknames_get_enwords_book(){
     var otrs=otable.querySelectorAll('tr');
     
     var is_only_delta=document.getElementById('checkbox_only_delta_rows_enbook').checked;
+    var ignore_klwiki_en2=document.getElementById('checkbox_ignore_klwiki_en2_enbook').checked;
     
     var blno=0;
     var result_t=[];
@@ -496,6 +526,13 @@ function booknames_get_enwords_book(){
                 continue;
             }
         }
+        if (ignore_klwiki_en2){
+            if (otds[1].innerText=='klwiki_en2'){
+                console.log('忽略',otds[1].innerText);
+                continue;
+            }
+        }
+        
         result_t.push(otds[1].innerText);
         blno=blno+1;
         if (blno>=blrows){break;}
@@ -505,13 +542,13 @@ function booknames_get_enwords_book(){
 
 function sentences_get_by_bookname_enwords_book(){
     if (typeof en_sentence_global == 'undefined'){
-        console.log('例句未载入');
+        alert('例句未载入');
         return;
     }
     
     var otextarea=document.querySelector('#div_compare_enbook textarea');
     if (!otextarea){
-        console.log('未发现书名编辑框');
+        alert('未发现书名编辑框');
         return;
     }
     var list_t=otextarea.value.split('\n');

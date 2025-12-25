@@ -27,7 +27,7 @@ function init_ensentence(){
     ];
     for (let blno=0,lent=data_files.length;blno<lent;blno++){
         data_files[blno][1]=klbase_addons_import_js_b([],[],['words/'+data_files[blno][1]+'_data.js'],[],false,false);
-        //data_files[blno][1]为数组，其元素是数组，形如：[ "js", "http://127.0.0.1/klwebphp/PythonTools/data/selenium_news/jsdata/words/enwords_count_sentence_data.js", "" ] - 保留注释
+        //data_files[blno][1]为数组，其元素是数组，形如：[ "js", "http://aaa/enwords_count_sentence_data.js", "" ] - 保留注释
     }
     
     load_js_var_one_by_one_b(data_files,0,sub_init_ensentence_done);

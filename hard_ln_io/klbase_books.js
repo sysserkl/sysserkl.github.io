@@ -103,6 +103,54 @@ function import_one_book_b(bookname,jsdoc_num,do_write=true){
     return blpath_name;
 }
 
+function filelist_merge_book_b(id_list,run_fn=false){
+    function sub_filelist_merge_book_b_wait(is_ok){
+        console.log(is_ok);
+        if (is_ok){
+            result_t=result_t.concat(filelist);
+            console.log(result_t.length);
+            filelist=undefined;
+        }
+        
+        blxl=blxl+1;
+        document.title=blxl+'/'+bllen+' - '+old_title;
+        setTimeout(sub_filelist_merge_book_b_one,1);        
+    }
+    
+    function sub_filelist_merge_book_b_one(){
+        if (blxl>=bllen){
+            document.title=old_title;
+            if (typeof run_fn == 'function'){
+                run_fn(result_t);
+            }
+            return;
+        }
+        
+        let blfound=false;
+        for (let row_no=0,lent=csbooklist_sub_global.length;row_no<lent;row_no++){
+            if (csbooklist_sub_global[row_no][0]==id_list[blxl]){
+                fpath=['js',num_type_path_id_get_book_b(row_no).slice(-2,).join('')+'.js',''];
+                load_js_var_file_b('filelist',[fpath],'',sub_filelist_merge_book_b_wait);
+                blfound=true;
+                break;
+            }
+        }
+        
+        if (!blfound){
+            console.log('未发现 id',id_list[blxl]);
+            sub_filelist_merge_book_b_wait(false);
+        }
+    }
+    
+    var blxl=0;
+    var bllen=id_list.length;
+    var old_title=document.title;
+    var fpath;
+    var result_t=[];
+    filelist=undefined;
+    sub_filelist_merge_book_b_one();
+}
+
 function num_type_path_id_get_book_b(book_no){
     var jsdoc_num='';
     var book_type='';
@@ -118,6 +166,8 @@ function num_type_path_id_get_book_b(book_no){
         var jsdoc_path=book_path_b(jsdoc_num,book_type.includes('P'));
         var bookid=csbooklist_sub_global[book_no][0];
     }
+    
+    //结果形如：[ "1", "", "http://aaa/jsdoc1/", "1984_dong_wu_zhuang_yuan_ywb_186007" ]
     return [jsdoc_num,book_type,jsdoc_path,bookid];
 }
 
@@ -410,15 +460,22 @@ function book_category_b(csid='',otherlists=[],cstag='',cstype=''){
     return bljg;
 }
 
-function filename_2_bookname_b(filename){
-    var bookname_t=filename;
-    for (let item of csbooklist_source_global){
-        if (item[0]==filename){
-            bookname_t=item[1];
+function bookid_2_bookname_b(csid,is_current=false,is_name_2_id=false){
+    //根据id返回书名 或 根据书名返回id - 保留注释
+    let col_list=(is_name_2_id?[1,0]:[0,1]);
+    
+    let bookname_t=csid;
+    let blno=-1;    
+    let csarr=(is_current?csbooklist_sub_global:csbooklist_source_global);    
+    for (let blxl=0,lent=csarr.length;blxl<lent;blxl++){
+        let item=csarr[blxl];    
+        if (item[col_list[0]]==csid){
+            bookname_t=item[col_list[1]];
+            blno=blxl;
             break;
         }
     }
-    return bookname_t;
+    return [bookname_t,blno];
 }
 
 function reader_lastbook_id_get_b(){

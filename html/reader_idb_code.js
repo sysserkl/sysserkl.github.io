@@ -105,8 +105,8 @@ function remote_book_filter_reader_idb(cskey){
 }
 
 function remote_book_import_reader_idb(filename,jsdoc_num){
-    var bookname=filename_2_bookname_b(filename);
-    if (!confirm("是否载入文件："+bookname+"？")){return;}
+    var bookname=bookid_2_bookname_b(filename)[0];
+    if (!confirm('是否载入文件：'+bookname+'？')){return;}
     
     var blpath_name=book_path_b(jsdoc_num)+filename+'.js';
     var allText=read_txt_file_b(blpath_name);
@@ -275,7 +275,7 @@ function filename_list_reader_idb(db){
                     }
                 }
                 if (bookname_t==''){
-                    bookname_t=filename_2_bookname_b(cursor.value.content);
+                    bookname_t=bookid_2_bookname_b(cursor.value.content)[0];
                 }
                 idbfilename_list_global.push([cursor.value.id,cursor.value.content,bookname_t]);
             }
@@ -451,7 +451,7 @@ function write_reader_idb(db,filename,cslist){
                     }
                 }
                 if (bookname_t==''){
-                    bookname_t=filename_2_bookname_b(filename);
+                    bookname_t=bookid_2_bookname_b(filename)[0];
                 }      
                 idbfilename_list_global.push([maxid,filename,bookname_t]);
                 refresh_book_list_reader_idb();

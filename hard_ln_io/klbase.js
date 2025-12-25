@@ -4284,10 +4284,15 @@ function load_js_var_one_by_one_b(data_files,csxl,run_fn=false,is_ok=true){
         }
         return;
     }
+
+    //data_files[blno][0]为变量名称
+    //data_files[blno][1]为数组，其元素是数组，形如：[ "js", "http://aaa/enwords_count_sentence_data.js", "" ] - 保留注释
     
     if (eval('typeof '+data_files[csxl][0]) == 'undefined'){
         var bname=file_path_name_b(data_files[csxl][1][0][1])[3];
-        load_js_var_file_b(data_files[csxl][0],data_files[csxl][1],bname,function(is_ok){return load_js_var_one_by_one_b(data_files,csxl+1,run_fn,is_ok);},true,false);
+        load_js_var_file_b(data_files[csxl][0],data_files[csxl][1],bname,function(is_ok){
+            return load_js_var_one_by_one_b(data_files,csxl+1,run_fn,is_ok);
+        },true,false);
     } else {
         load_js_var_one_by_one_b(data_files,csxl+1,run_fn);
     }

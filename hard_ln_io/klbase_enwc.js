@@ -442,6 +442,7 @@ function days_enwc_b(only_plan=false){
     var scan_times=0;
     var max_everyday=0;
     var td_last2_value=-1;
+    var mincount=(parseInt(wordscount[1].toString().slice(0,1))+1)*10000;
     var do_break=false;
 	while (true){
         scan_times=scan_times+1;
@@ -450,9 +451,11 @@ function days_enwc_b(only_plan=false){
             if (words_sum>=wordscount[1]+50000){
                 do_break=true;
             }
-            else if ((wordscount[0]+years_used) % 15 !== 0){
+            else if ((wordscount[0]+years_used) % 15 !== 0 && words_sum<mincount){
                 years_used=years_used+1;
                 continue;
+            } else {
+                mincount=mincount+10000;
             }
         }
         
