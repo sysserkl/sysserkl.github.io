@@ -22,8 +22,8 @@ var search_sites_list_global=[
 
 ['https://www.britannica.com/dictionary/','',0,'','britannicadict','','ENG',''],
 ['https://www.ldoceonline.com/dictionary/','',2,'','Longman','0','ENG',''],    
-['https://www.oed.com/search/dictionary/?q=','',1,'','oed','0','ENG',''],
-['https://dictionary.reverso.net/english-definition/','',1,'','reverso','0','ENG',''],
+['https://www.oed.com/search/dictionary/?q=','',1,'yellowgreen','oed','0','ENG',''],
+['https://dictionary.reverso.net/english-definition/','',1,'dodgerblue','reverso','0','ENG',''],
 ['https://www.thefreedictionary.com/','',0,'#0099ff','TFD','0','ENG',''],
 ['https://en.wiktionary.org/wiki/','',0,'#6666cc','Wiktionary','p0','ENG',''],
 ['https://www.wordhippo.com/what-is/the-meaning-of-the-word/','.html',1,'','wordhippo','','ENG',''], 
