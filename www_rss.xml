@@ -8,270 +8,95 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Sun, 28 Dec 2025 09:49:40 +0800</lastBuildDate>
-<item><title>Researchers Show Some Robots Can Be Hijacked Just Through Spoken Commands - Slashdot</title><link>https://hardware.slashdot.org/story/25/12/27/225211/researchers-show-some-robots-can-be-hijacked-just-through-spoken-commands</link></item>
-<item><title>New Runtime Standby ABI Proposed for Linux Like Microsoft Windows&amp;#39; &amp;#39;Modern Standby&amp;#39; - Slashdot</title><link>https://linux.slashdot.org/story/25/12/27/2053239/new-runtime-standby-abi-proposed-for-linux-like-microsoft-windows-modern-standby</link></item>
-<item><title>Is Russia Developing an Anti-Satellite Weapon to Target Starlink? - Slashdot</title><link>https://science.slashdot.org/story/25/12/27/2023253/is-russia-developing-an-anti-satellite-weapon-to-target-starlink</link></item>
-<item><title>NVIDIA Drops Pascal Support On Linux, Causing Chaos On Arch Linux - Slashdot</title><link>https://linux.slashdot.org/story/25/12/27/0744237/nvidia-drops-pascal-support-on-linux-causing-chaos-on-arch-linux</link></item>
-<item><title>Waymo Updates Vehicles to Better Handle Power Outages - But Still Faces Criticism - Slashdot</title><link>https://tech.slashdot.org/story/25/12/27/0645206/waymo-updates-vehicles-to-better-handle-power-outages---but-still-faces-criticism</link></item>
-<item><title>Open Source Initiative Estimates the &amp;#39;Top Open Source Licenses in 2025&amp;#39; - Slashdot</title><link>https://news.slashdot.org/story/25/12/27/0541200/open-source-initiative-estimates-the-top-open-source-licenses-in-2025</link></item>
-<item><title>Japan Votes to Restart World&amp;#39;s Biggest Nuclear Plant 15 Years After Fukushima Meltdown - Slashdot</title><link>https://hardware.slashdot.org/story/25/12/27/0510206/japan-votes-to-restart-worlds-biggest-nuclear-plant-15-years-after-fukushima-meltdown</link></item>
-<item><title>Should Physicists Study the Question: What is Life? - Slashdot</title><link>https://science.slashdot.org/story/25/12/27/042221/should-physicists-study-the-question-what-is-life</link></item>
-<item><title>Free Software Foundation Receives &amp;#39;Historic&amp;#39; Donations Worth Nearly $900K - in Monero - Slashdot</title><link>https://news.slashdot.org/story/25/12/27/036241/free-software-foundation-receives-historic-donations-worth-nearly-900k---in-monero</link></item>
-<item><title>Introducing our new ‘Programming with AI’ unit - Raspberry Pi</title><link>https://www.raspberrypi.org/blog/introducing-our-new-programming-with-ai-unit/</link></item>
-<item><title>Astro Pi is 10: A decade of your code in space - Raspberry Pi</title><link>https://www.raspberrypi.org/blog/astro-pi-is-10-a-decade-of-your-code-in-space/</link></item>
-<item><title>2025 highlights from the Raspberry Pi Computing Education Research Centre - Raspberry Pi</title><link>https://www.raspberrypi.org/blog/2025-highlights-from-the-raspberry-pi-computing-education-research-centre/</link></item>
-<item><title>From learners to leaders: Jayantika and Ruturaj’s journey as Code Club youth mentors - Raspberry Pi</title><link>https://www.raspberrypi.org/blog/from-learners-to-leaders-jayantika-and-ruturajs-journey-as-code-club-youth-mentors/</link></item>
-<item><title>Noon Year’s Eve - The Strong</title><link>https://www.museumofplay.org/event/noon-years-eve/</link></item>
-<item><title>The Strong Museum - The Strong</title><link>https://www.museumofplay.org/venue/the-strong-museum/</link></item>
-<item><title>NASA’s Hubble Images Largest Found Protoplanetary… - Adafruit Industries</title><link>https://blog.adafruit.com/2025/12/27/nasas-hubble-images-largest-found-protoplanetary-disc-spacesaturday/</link></item>
-<item><title>The Stanley Parable Reassurance Bucket Prop!… - Adafruit Industries</title><link>https://blog.adafruit.com/2025/12/27/the-stanley-parable-reassurance-bucket-prop-esp32/</link></item>
-<item><title>Adam Savage Visits Jim Henson’s Creature… - Adafruit Industries</title><link>https://blog.adafruit.com/2025/12/26/adam-savage-visits-jim-hensons-creature-shop/</link></item>
-<item><title>Shipping Alert: Adafruit Not Shipping Orders on… - Adafruit Industries</title><link>https://blog.adafruit.com/2025/12/22/shipping-alert-adafruit-not-shipping-orders-on-christmas-day-december-25-2025/</link></item>
-<item><title>Boosting Preventative Care with AI-Powered Wearable - Adafruit Industries</title><link>https://blog.adafruit.com/2025/12/26/boosting-preventative-care-with-ai-powered-wearable/</link></item>
-<item><title>Raspberry Pi for Sailors @Raspberry_Pi #PiDay #RaspberryPi - Adafruit Industries</title><link>https://blog.adafruit.com/2025/12/26/raspberry-pi-for-sailors-raspberry_pi-piday-raspberrypi/</link></item>
-<item><title>Raspberry Pi for Christmas? Welcome to the family! #piday #raspberrypi - Adafruit Industries</title><link>https://blog.adafruit.com/2025/12/26/raspberry-pi-for-christmas-welcome-to-the-family-piday-raspberrypi/</link></item>
-<item><title>Snowball Buddy #3DThursday #3DPrinting - Adafruit Industries</title><link>https://blog.adafruit.com/2025/12/25/snowball-buddy-3dthursday-3dprinting/</link></item>
-<item><title>Skadis SKÅDIS Pegboard Basket with Mounting Plate #3DThursday #3DPrinting - Adafruit Industries</title><link>https://blog.adafruit.com/2025/12/25/skadis-skadis-pegboard-basket-with-mounting-plate-3dthursday-3dprinting/</link></item>
-<item><title>Hakko Base (FX-888D) #3DThursday #3DPrinting - Adafruit Industries</title><link>https://blog.adafruit.com/2025/12/25/hakko-base-fx-888d-3dthursday-3dprinting/</link></item>
-<item><title>LEGO Rings – Press in Studs #3DThursday #3DPrinting - Adafruit Industries</title><link>https://blog.adafruit.com/2025/12/25/lego-rings-press-in-studs-3dthursday-3dprinting/</link></item>
-<item><title>Parametric Sand Paper Organizer Storage #3DThursday #3DPrinting - Adafruit Industries</title><link>https://blog.adafruit.com/2025/12/25/parametric-sand-paper-organizer-storage-3dthursday-3dprinting/</link></item>
-<item><title>Seedlings Pot – Continuous Self Watering System (PET Water Bottle Sealed) – Germination Station #3DThursday #3DPrinting - Adafruit Industries</title><link>https://blog.adafruit.com/2025/12/25/seedlings-pot-continuous-self-watering-system-pet-water-bottle-sealed-germination-station-3dthursday-3dprinting/</link></item>
-<item><title>Santa Dragon – Articulated Keychain Figure #3DThursday #3DPrinting - Adafruit Industries</title><link>https://blog.adafruit.com/2025/12/25/santa-dragon-articulated-keychain-figure-3dthursday-3dprinting/</link></item>
-<item><title>Wave motion ball grid #3DThursday #3DPrinting - Adafruit Industries</title><link>https://blog.adafruit.com/2025/12/25/wave-motion-ball-grid-3dthursday-3dprinting/</link></item>
-<item><title>Flex Force Clips – Multi-Purpose Clip Set #3DThursday #3DPrinting - Adafruit Industries</title><link>https://blog.adafruit.com/2025/12/25/flex-force-clips-multi-purpose-clip-set-3dthursday-3dprinting/</link></item>
-<item><title>Liberation of Gulyaipole and Dimitrov: Putin&amp;#39;s statements at meeting with Gerasimov - TASS</title><link>https://tass.com/politics/2065749</link></item>
-<item><title>7 ‘80s Movies So Great, Hollywood Could Never Remake Them - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/movies/1980s-movies-could-never-be-remade</link></item>
-<item><title>The 7 Best Tennessee Williams Adaptations, Ranked - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/movies/best-tennessee-williams-adaptations</link></item>
-<item><title>Only Sharp Trivia Fans Can Crack Ken Jennings’s Kennections Quiz This Week - Mental Floss</title><link>https://www.mentalfloss.com/kennections/ken-jennings-kennections-quiz-194</link></item>
-<item><title>This Simple New Year’s Day Habit Could Be the Easiest Resolution You Keep - Mental Floss</title><link>https://www.mentalfloss.com/holidays/simple-new-years-state-park-resolution</link></item>
-<item><title>Quiz: Match the ‘90s Disney Character to Their Best Friend - Mental Floss</title><link>https://www.mentalfloss.com/quizzes/match-90s-disney-character-best-friend</link></item>
-<item><title>11 Wonderful Winter Weather Terms - Mental Floss</title><link>https://www.mentalfloss.com/science/weather/11-wonderful-winter-weather-terms</link></item>
-<item><title>A better way to provision NVIDIA BlueField DPUs at scale with MAAS - Ubuntu blog</title><link>https://ubuntu.com/blog/a-better-way-to-provision-nvidia-bluefield-dpus-at-scale-with-maas</link></item>
-<item><title>MicroCeph: why it’s the superior MinIO alternative (and how to use it) - Ubuntu blog</title><link>https://ubuntu.com/blog/microceph-why-its-the-superior-minio-alternative</link></item>
-<item><title>Design and Documentation clinics at FOSDEM Fringe 2026 - Ubuntu blog</title><link>https://ubuntu.com/blog/design-and-documentation-clinics-at-fosdem-fringe-2026</link></item>
-<item><title>Graham Morrison - Ubuntu blog</title><link>https://ubuntu.com/blog/author/morrisong</link></item>
-<item><title>Extending ROS Noetic Support with ESM-Enabled Content Snaps - Ubuntu blog</title><link>https://ubuntu.com/blog/extending-ros-noetic-support-with-esm-enabled-content-snaps</link></item>
-<item><title>The Meaning and Main Texts of Christmas - Larry Sanger Blog</title><link>https://larrysanger.org/2025/12/the-meaning-and-main-texts-of-christmas/</link></item>
-<item><title>Leaked Avengers: Doomsday teaser is now public - Ars Technica</title><link>https://arstechnica.com/culture/2025/12/steve-rogers-returns-in-avengers-doomsday-teaser/</link></item>
-<item><title>Odyssey trailer brings the myth to vivid life - Ars Technica</title><link>https://arstechnica.com/culture/2025/12/odyssey-trailer-brings-the-myth-to-vivid-life/</link></item>
-<item><title>刘澍：中国共产党战时对法西斯主义 - 爱思想</title><link>https://www.aisixiang.com/data/170803.html</link></item>
-<item><title>鲁鹏：关于制度的几个认识问题 - 爱思想</title><link>https://www.aisixiang.com/data/170891.html</link></item>
-<item><title>安介生：近代交通体系建设与赈灾救 - 爱思想</title><link>https://www.aisixiang.com/data/170860.html</link></item>
-<item><title>李振华：探讨历史文化的边界在哪儿 - 爱思想</title><link>https://www.aisixiang.com/data/170878.html</link></item>
-<item><title>姚中秋：如何用大历史观回答“清朝 - 爱思想</title><link>https://www.aisixiang.com/data/170885.html</link></item>
-<item><title>王文 申宇婧：“中美战争”的美国 - 爱思想</title><link>https://www.aisixiang.com/data/170940.html</link></item>
-<item><title>杨光斌 万泽雨：西方统治世界的思 - 爱思想</title><link>https://www.aisixiang.com/data/170841.html</link></item>
-<item><title>徐奇渊：全球产业链重构的三重变局 - 爱思想</title><link>https://www.aisixiang.com/data/170835.html</link></item>
-<item><title>常修泽：厘清“十五五”时期四个理 - 爱思想</title><link>https://www.aisixiang.com/data/170796.html</link></item>
-<item><title>林间：深海科技创新前瞻性布局研究 - 爱思想</title><link>https://www.aisixiang.com/data/170788.html</link></item>
-<item><title>闫宏秀：超级智能的价值对齐困惑 - 爱思想</title><link>https://www.aisixiang.com/data/170787.html</link></item>
-<item><title>单世联 徐一超：企业的“文化性” - 爱思想</title><link>https://www.aisixiang.com/data/170815.html</link></item>
-<item><title>杨振宁：近代科学进入中国的回顾与 - 爱思想</title><link>https://www.aisixiang.com/data/170814.html</link></item>
-<item><title>赵燕菁：重新理解增长——一个基于 - 爱思想</title><link>https://www.aisixiang.com/data/170910.html</link></item>
-<item><title>赵树凯：“故事”，还是“事故”？ - 爱思想</title><link>https://www.aisixiang.com/data/170811.html</link></item>
-<item><title>发展新时代中国特色社会主义文化 - 爱思想</title><link>https://www.aisixiang.com/data/170993.html</link></item>
-<item><title>坚持以习近平生态文明思想为指引 - 爱思想</title><link>https://www.aisixiang.com/data/170988.html</link></item>
-<item><title>杨志成：擦亮中国式现代化的鲜明底 - 爱思想</title><link>https://www.aisixiang.com/data/170984.html</link></item>
-<item><title>胡军：把学习贯彻习近平生态文明思 - 爱思想</title><link>https://www.aisixiang.com/data/170980.html</link></item>
-<item><title>江畅 张媛媛：中国文化的创造性转 - 爱思想</title><link>https://www.aisixiang.com/data/170969.html</link></item>
-<item><title>卓高生 周意涵：以“两个结合”构 - 爱思想</title><link>https://www.aisixiang.com/data/170961.html</link></item>
-<item><title>杨慧 余果：社会目标与生态目标耦 - 爱思想</title><link>https://www.aisixiang.com/data/170942.html</link></item>
-<item><title>张军芳：持续增强数字文化“新三样 - 爱思想</title><link>https://www.aisixiang.com/data/170919.html</link></item>
-<item><title>张政 高奇：论习近平文化思想的辩 - 爱思想</title><link>https://www.aisixiang.com/data/170897.html</link></item>
-<item><title>察应坤 丁慧：既现代又中国：一种 - 爱思想</title><link>https://www.aisixiang.com/data/170895.html</link></item>
-<item><title>孙彧：准确把握文化强国建设的前进 - 爱思想</title><link>https://www.aisixiang.com/data/170880.html</link></item>
-<item><title>谢瑞瑾：以中医药文化传承创新助力 - 爱思想</title><link>https://www.aisixiang.com/data/170745.html</link></item>
-<item><title>何畏：以美丽中国建设全面推进人与 - 爱思想</title><link>https://www.aisixiang.com/data/170742.html</link></item>
-<item><title>国承彦：增强文化“四力” 推进文 - 爱思想</title><link>https://www.aisixiang.com/data/170659.html</link></item>
-<item><title>罗欢欣：《旧金山和约》文本及草案 - 爱思想</title><link>https://www.aisixiang.com/data/170641.html</link></item>
-<item><title>松岛泰胜：当代琉球复国论———历 - 爱思想</title><link>https://www.aisixiang.com/data/170625.html</link></item>
-<item><title>郭国平：我国量子计算产业布局与场 - 爱思想</title><link>https://www.aisixiang.com/data/170657.html</link></item>
-<item><title>李志林：王崇愚：纯粹的科学家 - 爱思想</title><link>https://www.aisixiang.com/data/170638.html</link></item>
-<item><title>张思玮：吴旻：医之大者，为国为民 - 爱思想</title><link>https://www.aisixiang.com/data/170637.html</link></item>
-<item><title>郭毅可：人类智能和机器智能共生共 - 爱思想</title><link>https://www.aisixiang.com/data/170628.html</link></item>
-<item><title>闫磊：突破壁垒 加快实现技术链迭 - 爱思想</title><link>https://www.aisixiang.com/data/170622.html</link></item>
-<item><title>马一德：美国启动“创世纪任务”， - 爱思想</title><link>https://www.aisixiang.com/data/170602.html</link></item>
-<item><title>傅志寰 李伯聪：工程师的时代内涵 - 爱思想</title><link>https://www.aisixiang.com/data/170563.html</link></item>
-<item><title>张宏院士：“资源型科研”正在摧毁 - 爱思想</title><link>https://www.aisixiang.com/data/170559.html</link></item>
-<item><title>薛俊强：科技的人文向度与人性之美 - 爱思想</title><link>https://www.aisixiang.com/data/170541.html</link></item>
-<item><title>鄂维南：回国五年，我的探索与思考 - 爱思想</title><link>https://www.aisixiang.com/data/170497.html</link></item>
-<item><title>陈文玲：人工智能发展的重大变革与 - 爱思想</title><link>https://www.aisixiang.com/data/170481.html</link></item>
-<item><title>杜传忠：提升国家创新体系整体效能 - 爱思想</title><link>https://www.aisixiang.com/data/170454.html</link></item>
-<item><title>梅国平：加快发展新一代人工智能 - 爱思想</title><link>https://www.aisixiang.com/data/170431.html</link></item>
-<item><title>为变乱交织的世界持续注入稳定性——2025年中国特色大国外交砥砺前行 - 爱思想</title><link>https://www.aisixiang.com/data/171001.html</link></item>
-<item><title>张辉：从“十五五”规划建议看高质量发展新图景 - 爱思想</title><link>https://www.aisixiang.com/data/170986.html</link></item>
-<item><title>张晓晶：中国亟须加快高水平开放下的金融制度创新 - 爱思想</title><link>https://www.aisixiang.com/data/170981.html</link></item>
-<item><title>殷之光：全球南方问题及其未来：兼论中国式现代化的普遍意义 - 爱思想</title><link>https://www.aisixiang.com/data/170971.html</link></item>
-<item><title>周力：中国式现代化建设需要注意的三个方面 - 爱思想</title><link>https://www.aisixiang.com/data/170963.html</link></item>
-<item><title>何邦武：刑事诉讼法典化的应然逻辑、自主表达与实现路径 - 爱思想</title><link>https://www.aisixiang.com/data/171027.html</link></item>
-<item><title>齐萌：人工智能强制责任保险的法律构造——以智能驾驶为例 - 爱思想</title><link>https://www.aisixiang.com/data/171019.html</link></item>
-<item><title>姚建龙：加快涉外法治体系和能力建设 - 爱思想</title><link>https://www.aisixiang.com/data/171017.html</link></item>
-<item><title>步洋洋：从形式法典化到实质法典化：刑事诉讼法的法典化进阶 - 爱思想</title><link>https://www.aisixiang.com/data/171015.html</link></item>
-<item><title>石一峰：破产程序中担保权行使的体系化分析 - 爱思想</title><link>https://www.aisixiang.com/data/171009.html</link></item>
-<item><title>都阳 崔慧敏：“投资于人”：关键问题与实现路径 - 爱思想</title><link>https://www.aisixiang.com/data/171018.html</link></item>
-<item><title>黄锐 燕建平：推动旅游业智能化、绿色化、融合化发展 - 爱思想</title><link>https://www.aisixiang.com/data/171016.html</link></item>
-<item><title>马佰莲　赵龙：教育科技人才协同发展赋能新质生产力：逻辑依据、系统结构与实践路径 - 爱思想</title><link>https://www.aisixiang.com/data/171014.html</link></item>
-<item><title>贾根良 周尊璞：现代货币理论视角下的国债管理：原理与启示 - 爱思想</title><link>https://www.aisixiang.com/data/171013.html</link></item>
-<item><title>田轩：科技竞争新格局下的中国资本市场战略转型 - 爱思想</title><link>https://www.aisixiang.com/data/170997.html</link></item>
-<item><title>王鲁娜 李笙媛：数字时代主流意识形态叙事的三重转向 - 爱思想</title><link>https://www.aisixiang.com/data/171026.html</link></item>
-<item><title>刘礼：新帝国主义理论论争四题驳议——以列宁《帝国主义论》为中心的考察 - 爱思想</title><link>https://www.aisixiang.com/data/171025.html</link></item>
-<item><title>孙亮：“符号学治理术”的政治经济学批判——反思拉扎拉托的“权力生产”及其抵抗方式 - 爱思想</title><link>https://www.aisixiang.com/data/171011.html</link></item>
-<item><title>李浩 焦倩：新时代党的民族工作话语体系的范式变迁与内在逻辑 - 爱思想</title><link>https://www.aisixiang.com/data/171008.html</link></item>
-<item><title>薛洁：国家建设：符号系统政治功能的转向 - 爱思想</title><link>https://www.aisixiang.com/data/171004.html</link></item>
-<item><title>李莉文 陈泽雨：特朗普政府削减对非援助的影响与非洲援助体系的重构 - 爱思想</title><link>https://www.aisixiang.com/data/171024.html</link></item>
-<item><title>达巍：中美关系，急风骤雨中的韧性与新局 - 爱思想</title><link>https://www.aisixiang.com/data/171023.html</link></item>
-<item><title>全球治理倡议引领全球治理体系健康发展——访华中科技大学国家治理研究院院长欧阳康 - 爱思想</title><link>https://www.aisixiang.com/data/171021.html</link></item>
-<item><title>庞中鹏：试析近年来日本的 “全球南方”外交 - 爱思想</title><link>https://www.aisixiang.com/data/170999.html</link></item>
-<item><title>蔡昉：中国式现代化进程中的人口老龄化：趋势、机遇与应对 - 爱思想</title><link>https://www.aisixiang.com/data/170944.html</link></item>
-<item><title>公坤 马建强：寻绎“中国人”的形成：李济民族历史书写的人类学路径 - 爱思想</title><link>https://www.aisixiang.com/data/170935.html</link></item>
-<item><title>彭丰文：文明史视野下的中国古代正统观与中华民族共同体的历史演进 - 爱思想</title><link>https://www.aisixiang.com/data/170851.html</link></item>
-<item><title>徐勇 陈志永：小共同体：中华民族共有家园建设的传统资源 - 爱思想</title><link>https://www.aisixiang.com/data/170839.html</link></item>
-<item><title>吴晓林：加快构建中国自主的城市学 - 爱思想</title><link>https://www.aisixiang.com/data/170826.html</link></item>
-<item><title>张晶晶：创新中华优秀传统文化传播叙事 - 爱思想</title><link>https://www.aisixiang.com/data/170941.html</link></item>
-<item><title>曾祥敏：探索多元国际传播专门人才培养模式 - 爱思想</title><link>https://www.aisixiang.com/data/170876.html</link></item>
-<item><title>邹广文 赵月：构建融通中外的现代化话语体系 - 爱思想</title><link>https://www.aisixiang.com/data/170849.html</link></item>
-<item><title>刘进旭 石红梅：数智技术赋能中华优秀传统文化国际传播的生态重构及其风险治理 - 爱思想</title><link>https://www.aisixiang.com/data/170847.html</link></item>
-<item><title>眭国荣：在高水平对外开放中提升我国话语权 - 爱思想</title><link>https://www.aisixiang.com/data/170820.html</link></item>
-<item><title>一体推进教育科技人才发展 加快实现高水平科技自立自强 - 爱思想</title><link>https://www.aisixiang.com/data/170979.html</link></item>
-<item><title>卢艳香 石浩：以系统观念深入推进教育数字化 - 爱思想</title><link>https://www.aisixiang.com/data/170957.html</link></item>
-<item><title>袁礼 李宇明：“新汉学计划”助力全球中国学研究 - 爱思想</title><link>https://www.aisixiang.com/data/170952.html</link></item>
-<item><title>施晓光：地方高校助力地方经济高质量发展的探索 - 爱思想</title><link>https://www.aisixiang.com/data/170916.html</link></item>
-<item><title>周建超 柏桦：发挥家庭家教家风在未成年人思想道德建设中的作用 - 爱思想</title><link>https://www.aisixiang.com/data/170899.html</link></item>
-<item><title>李向东 王增如：毛泽东何以要写《临江仙·给丁玲同志》？ - 爱思想</title><link>https://www.aisixiang.com/data/170987.html</link></item>
-<item><title>刘奎：郭沫若与现代革命小说的发生 - 爱思想</title><link>https://www.aisixiang.com/data/170982.html</link></item>
-<item><title>周逸群：艺术自主性何以可能？——卢曼的社会系统论视角 - 爱思想</title><link>https://www.aisixiang.com/data/170968.html</link></item>
-<item><title>饶静：“无器官身体”与创世神话：兼论神话思维的媒介变迁 - 爱思想</title><link>https://www.aisixiang.com/data/170967.html</link></item>
-<item><title>范玉刚：习近平文化思想体系中的文艺发展道路阐释 - 爱思想</title><link>https://www.aisixiang.com/data/170966.html</link></item>
-<item><title>朱浒：超越“康梁维新”与“孙黄革命”：毛泽东早期政治思想的新陈代谢 - 爱思想</title><link>https://www.aisixiang.com/data/171028.html</link></item>
-<item><title>卢俊丞 姜胜利：周一良对传统史学的认识及晚年转变 - 爱思想</title><link>https://www.aisixiang.com/data/171022.html</link></item>
-<item><title>王明珂：“英雄徙边记”与近代中国边疆史 - 爱思想</title><link>https://www.aisixiang.com/data/171007.html</link></item>
-<item><title>左玉河：一般规律与特殊道路：抗战时期马克思主义史家对社会形态理论的新阐释 - 爱思想</title><link>https://www.aisixiang.com/data/171006.html</link></item>
-<item><title>邹皓丹：近代日本军政关系中的编制权问题———以九一八事变期间若槻内阁与军部的博弈为中心 - 爱思想</title><link>https://www.aisixiang.com/data/171000.html</link></item>
-<item><title>郑宗义：心之四端 —— 孟子道德心的结构分析 - 爱思想</title><link>https://www.aisixiang.com/data/171020.html</link></item>
-<item><title>杨文亮：列宁对马克思社会再生产理论的捍卫与阐发——基于列宁对“合法马克思主义”的批判研究 - 爱思想</title><link>https://www.aisixiang.com/data/171012.html</link></item>
-<item><title>李志：青年马克思宗教批判的跨学科阐释 - 爱思想</title><link>https://www.aisixiang.com/data/171010.html</link></item>
-<item><title>方朝晖 康良：儒家文化的价值及其传承——方朝晖先生访谈 - 爱思想</title><link>https://www.aisixiang.com/data/171003.html</link></item>
-<item><title>彭国翔：王畿与道教——阳明学者对道教内丹学的融摄 - 爱思想</title><link>https://www.aisixiang.com/data/170998.html</link></item>
-<item><title>郑克晟：梅贻琦与郑天挺 - 爱思想</title><link>https://www.aisixiang.com/data/170884.html</link></item>
-<item><title>刘泽华：我与“中国社会史研究中心” - 爱思想</title><link>https://www.aisixiang.com/data/170783.html</link></item>
-<item><title>崔唯航：把握构建自主知识体系的方位方向方法 - 爱思想</title><link>https://www.aisixiang.com/data/170728.html</link></item>
-<item><title>吴晓明：构建中国自主知识体系的基本路径 - 爱思想</title><link>https://www.aisixiang.com/data/170714.html</link></item>
-<item><title>鲁迅：谈所谓“大内档案”[1] - 爱思想</title><link>https://www.aisixiang.com/data/170852.html</link></item>
-<item><title>田秋棉：“欹器”中的持满之道 - 爱思想</title><link>https://www.aisixiang.com/data/170834.html</link></item>
-<item><title>张河清：怀念挚友刘一周 - 爱思想</title><link>https://www.aisixiang.com/data/170727.html</link></item>
-<item><title>夏新民：寻找爱琴的石头——希土光影拾遗（之三） - 爱思想</title><link>https://www.aisixiang.com/data/170627.html</link></item>
-<item><title>赵可金，1975年生，山东昌乐人。曲阜师大政治教育学士（1997），复旦大学国际关系与公共事务..... - 爱思想</title><link>https://www.aisixiang.com/thinktank/ZhaoKejin.html</link></item>
-<item><title>Carney’s Reckless $2.5B Ukraine Squander: Throwing Billions at Zelenskyy’s Doomed War Machine - The Eastern Herald</title><link>https://easternherald.com/2025/12/28/carney-2-5-billion-ukraine-squander-zelenskyy-trump-war-2025/</link></item>
-<item><title>Zelenskyy Lands in US for High-Stakes Trump Summit on Ukraine Peace - The Eastern Herald</title><link>https://easternherald.com/2025/12/28/zelenskyy-trump-florida-peace-talks-russia-donbas-crush/</link></item>
-<item><title>Trump Tariffs Ignite Corporate Bankruptcy Apocalypse: 717 Firms Crushed in 2025 - The Eastern Herald</title><link>https://easternherald.com/2025/12/28/trump-tariffs-bankruptcies-2025-corporate-apocalypse-717-firms/</link></item>
-<item><title>Ukraine EU Entry Blocked: German AfD Says 20 Years Minimum - The Eastern Herald</title><link>https://easternherald.com/2025/12/28/ukraine-eu-accession-20-years-afd-kotre-orban-zelensky/</link></item>
-<item><title>Corporate Bankruptcy Tsunami: Trump’s Tariffs and Inflation Crush US Firms in 2025 - The Eastern Herald</title><link>https://easternherald.com/2025/12/28/trump-tariffs-bankruptcy-tsunami-us-economy-2025-crash/</link></item>
-<item><title>Thailand-Cambodia Ceasefire: Fragile Truce or Prelude to Renewed War? - The Eastern Herald</title><link>https://easternherald.com/2025/12/28/thailand-cambodia-ceasefire-fails-trump-border-war-chaos/</link></item>
-<item><title>Latvia Risks Economic Suicide by Dismantling Russia Railway Links, Moscow Warns - The Eastern Herald</title><link>https://easternherald.com/2025/12/28/latvia-railway-russia-dismantle-economic-suicide-rinkevics/</link></item>
-<item><title>Chinese Embassy Accuses US for Fabricating Arsenal Lies to Stoke Global Fears - The Eastern Herald</title><link>https://easternherald.com/2025/12/28/chinese-embassy-slams-us-pentagon-china-arsenal-lies-vulnerability/</link></item>
-<item><title>Sudan Civil War: Nyala Airstrikes Defy UN Ceasefire Amid Unimaginable Civilian Agony - The Eastern Herald</title><link>https://easternherald.com/2025/12/28/sudan-civil-war-nyala-airstrikes-un-ceasefire-crisis-2025/</link></item>
-<item><title>Putin Confirms Russian Forces on Track to Crush Ukraine Objectives - The Eastern Herald</title><link>https://easternherald.com/2025/12/28/putin-russian-forces-fulfill-ukraine-objectives-command-post/</link></item>
-<item><title>No, your brain doesn&amp;#39;t suddenly &amp;#39;fully develop&amp;#39; at 25. Here&amp;#39;s what the neuroscience actually shows - Medical Xpress</title><link>https://medicalxpress.com/news/2025-12-brain-doesnt-suddenly-fully-neuroscience.html</link></item>
-<item><title>How gut bacteria could help to diagnose teen depression - Medical Xpress</title><link>https://medicalxpress.com/news/2025-12-gut-bacteria-teen-depression.html</link></item>
-<item><title>Indoor tanning makes youthful skin much older on a genetic level - Medical Xpress</title><link>https://medicalxpress.com/news/2025-12-indoor-tanning-youthful-skin-older.html</link></item>
-<item><title>New study suggests best way to stop taking antidepressants - Medical Xpress</title><link>https://medicalxpress.com/news/2025-12-antidepressants.html</link></item>
-<item><title>Worried about statins? Here&amp;#39;s what the evidence shows - Medical Xpress</title><link>https://medicalxpress.com/news/2025-12-statins-evidence.html</link></item>
-<item><title>Study finds a better way to screen for breast cancer - Medical Xpress</title><link>https://medicalxpress.com/news/2025-12-screen-breast-cancer.html</link></item>
-<item><title>Social media, not gaming, tied to rising attention problems in teens, new study finds - Medical Xpress</title><link>https://medicalxpress.com/news/2025-12-social-media-gaming-attention-problems.html</link></item>
-<item><title>Why the human brain matures slower than its primate relatives - Medical Xpress</title><link>https://medicalxpress.com/news/2025-12-human-brain-matures-slower-primate.html</link></item>
-<item><title>Why so many young people in China are hugging trees - Medical Xpress</title><link>https://medicalxpress.com/news/2025-12-young-people-china-trees.html</link></item>
-<item><title>How stomach cancer learns to grow on its own - Medical Xpress</title><link>https://medicalxpress.com/news/2025-12-stomach-cancer.html</link></item>
-<item><title>Scientists develop targeted therapy for T-cell lymphomas and leukemias - Medical Xpress</title><link>https://medicalxpress.com/news/2025-12-scientists-therapy-cell-lymphomas-leukemias.html</link></item>
-<item><title>Call 911 or risk losing the baby? Raids force some immigrants to avoid care - Medical Xpress</title><link>https://medicalxpress.com/news/2025-12-baby-raids-immigrants.html</link></item>
-<item><title>Novel AI tool offers prognosis for patients with head and neck cancer - Medical Xpress</title><link>https://medicalxpress.com/news/2025-12-ai-tool-prognosis-patients-neck.html</link></item>
-<item><title>Flu surge exposes missed COVID lessons - Medical Xpress</title><link>https://medicalxpress.com/news/2025-12-flu-surge-exposes-covid-lessons.html</link></item>
-<item><title>Sleep variability linked with sleep apnea and hypertension - Medical Xpress</title><link>https://medicalxpress.com/news/2025-12-variability-linked-apnea-hypertension.html</link></item>
-<item><title>Rb1 identified as predictive biomarker for new therapeutic strategy in some breast cancers - Medical Xpress</title><link>https://medicalxpress.com/news/2025-12-rb1-biomarker-therapeutic-strategy-breast.html</link></item>
-<item><title>Heart-brain connection: International study reveals role of vagus nerve in keeping the heart young - Medical Xpress</title><link>https://medicalxpress.com/news/2025-12-heart-brain-international-reveals-role.html</link></item>
-<item><title>AI model predicts blood loss in liposuction - Medical Xpress</title><link>https://medicalxpress.com/news/2025-12-ai-blood-loss-liposuction.html</link></item>
-<item><title>Automatic label checking: The missing step in making medical AI reliable - Medical Xpress</title><link>https://medicalxpress.com/news/2025-12-automatic-medical-ai-reliable.html</link></item>
-<item><title>Stimulant ADHD medications work differently than previously thought - Medical Xpress</title><link>https://medicalxpress.com/news/2025-12-adhd-medications-differently-previously-thought.html</link></item>
-<item><title>Boston reports 114% recent surge in flu cases in December, urges vaccinations - Medical Xpress</title><link>https://medicalxpress.com/news/2025-12-boston-surge-flu-cases-december.html</link></item>
-<item><title>Alzheimer&amp;#39;s disease can be reversed in animal models to achieve full neurological recovery - Medical Xpress</title><link>https://medicalxpress.com/news/2025-12-alzheimer-disease-reversed-animal-full.html</link></item>
-<item><title>Key enzyme controls both weight gain and cholesterol levels in animal models - Medical Xpress</title><link>https://medicalxpress.com/news/2025-12-key-enzyme-weight-gain-cholesterol.html</link></item>
-<item><title>Text messages could be key to helping TB patients quit smoking, according to study - Medical Xpress</title><link>https://medicalxpress.com/news/2025-12-text-messages-key-tb-patients.html</link></item>
-<item><title>Holiday heart risk: Overindulgence, stress, cold increase heart attacks - Medical Xpress</title><link>https://medicalxpress.com/news/2025-12-holiday-heart-overindulgence-stress-cold.html</link></item>
-<item><title>&amp;#39;The best gift ever&amp;#39;: Baby is born after the rarest of pregnancies, defying all odds - Medical Xpress</title><link>https://medicalxpress.com/news/2025-12-gift-baby-born-rarest-pregnancies.html</link></item>
-<item><title>Ice baths and marathons: Our modern obsession with &amp;#39;wellness&amp;#39; is driven by ancient instincts - Medical Xpress</title><link>https://medicalxpress.com/news/2025-12-ice-marathons-modern-obsession-wellness.html</link></item>
-<item><title>Can eating high fat cheese and cream reduce dementia risk, as a new study suggests? - Medical Xpress</title><link>https://medicalxpress.com/news/2025-12-high-fat-cheese-cream-dementia.html</link></item>
-<item><title>This &amp;#39;super flu&amp;#39; could cause widespread serious illness, experts say - Medical Xpress</title><link>https://medicalxpress.com/news/2025-12-super-flu-widespread-illness-experts.html</link></item>
-<item><title>Supporting kids&amp;#39; social lives, without social media - Medical Xpress</title><link>https://medicalxpress.com/news/2025-12-kids-social-media.html</link></item>
-<item><title>好拼｜免费在线拼图工具又收到赞助啦 - 运维咖啡吧</title><link>https://blog.ops-coffee.com/s/second-sponsorship-received-for-collage-tool.html</link></item>
-<item><title>长兴岛｜1小时直达！上海周末出游好去处 - 运维咖啡吧</title><link>https://blog.ops-coffee.com/r/city-china-shanghai-chongming-changxingdao.html</link></item>
-<item><title>广德｜竹乡画廊风景道上的独行者 - 运维咖啡吧</title><link>https://blog.ops-coffee.com/r/city-china-anhui-xuancheng-guangde-zhuxianghualang.html</link></item>
-<item><title>The evolution of Bafana Bafana under Hugo Broos - The Mail &amp; Guardian</title><link>https://mg.co.za/sport/2025-12-26-the-evolution-of-bafana-bafana-under-hugo-broos/</link></item>
-<item><title>Tokelo Mokhesi - The Mail &amp; Guardian</title><link>https://mg.co.za/author/tokelo-mokhesi/</link></item>
-<item><title>Wellington Muzengeza - The Mail &amp; Guardian</title><link>https://mg.co.za/author/wellington-muzengeza/</link></item>
-<item><title>Brian Sokutu - The Mail &amp; Guardian</title><link>https://mg.co.za/author/brian-sokutu/</link></item>
-<item><title>Malawian state’s rhetoric belies reality - The Mail &amp; Guardian</title><link>https://mg.co.za/africa/2025-12-19-malawian-states-rhetoric-belies-reality/</link></item>
-<item><title>The real estate year in review - The Mail &amp; Guardian</title><link>https://mg.co.za/thought-leader/opinion/2025-12-27-the-real-estate-year-in-review/</link></item>
-<item><title>The billionaire house of cards - The Mail &amp; Guardian</title><link>https://mg.co.za/thought-leader/opinion/2025-12-26-the-billionaire-house-of-cards/</link></item>
-<item><title>High cost of US decoupling from China - The Mail &amp; Guardian</title><link>https://mg.co.za/thought-leader/opinion/2025-12-23-high-cost-of-us-decoupling-from-china/</link></item>
-<item><title>The hustler, the dancer, the dreamer - The Mail &amp; Guardian</title><link>https://mg.co.za/friday/2025-12-27-the-hustler-the-dancer-the-dreamer/</link></item>
-<item><title>Netflix reimagining December viewing - The Mail &amp; Guardian</title><link>https://mg.co.za/friday/2025-12-25-netflix-reimagining-december-viewing/</link></item>
-<item><title>Top binge entertainment picks - The Mail &amp; Guardian</title><link>https://mg.co.za/friday/2025-12-20-top-binge-entertainment-picks/</link></item>
-<item><title>Navigating ethics and art - The Mail &amp; Guardian</title><link>https://mg.co.za/friday/2025-12-19-navigating-ethics-and-art/</link></item>
-<item><title>A spirit walk with Kelly Khumalo - The Mail &amp; Guardian</title><link>https://mg.co.za/friday/2025-12-12-a-spirit-walk-with-kelly-khumalo/</link></item>
-<item><title>AG warns of deepening water crisis - The Mail &amp; Guardian</title><link>https://mg.co.za/the-green-guardian/2025-12-22-ag-warns-of-deepening-water-crisis/</link></item>
-<item><title>Unsafe water found in taps, water storage tanks across South Africa, citizen tests reveal - The Mail &amp; Guardian</title><link>https://mg.co.za/the-green-guardian/2025-12-18-unsafe-water-found-in-taps-water-storage-tanks-across-south-africa-citizen-tests-reveal/</link></item>
-<item><title>Abalone trafficking fuels crime and coastal poverty in South Africa - The Mail &amp; Guardian</title><link>https://mg.co.za/the-green-guardian/2025-12-17-abalone-trafficking-fuels-crime-and-coastal-poverty-in-south-africa/</link></item>
-<item><title>After 53 years without sightings, elusive lizard found alive - The Mail &amp; Guardian</title><link>https://mg.co.za/the-green-guardian/2025-12-17-after-53-years-without-sightings-elusive-lizard-found-alive/</link></item>
-<item><title>Moafrika Tours - The Mail &amp; Guardian</title><link>https://mg.co.za/author/moafrika-tours/</link></item>
-<item><title>Top 10 hidden gems in Kruger National Park: Lesser-known areas worth exploring - The Mail &amp; Guardian</title><link>https://mg.co.za/press-releases/2025-12-11-top-10-hidden-gems-in-kruger-national-park-lesser-known-areas-worth-exploring/</link></item>
-<item><title>Change is an opportunity for reflection and recalibration - The Mail &amp; Guardian</title><link>https://mg.co.za/press-releases/2025-12-09-change-is-an-opportunity-for-reflection-and-recalibration/</link></item>
-<item><title>MBDA 5 600-seater lakeside amphitheatre will boost business events tourism - The Mail &amp; Guardian</title><link>https://mg.co.za/press-releases/2025-11-10-mbda-5-600-seater-lakeside-amphitheatre-will-boost-business-events-tourism/</link></item>
-<item><title>MBDA secures world cup qualifiers, Bafana Bafana for international friendly against Zambia - The Mail &amp; Guardian</title><link>https://mg.co.za/press-releases/2025-11-06-nelson-mandela-bay-stadium-brings-fans-a-festive-season-soccer-taster/</link></item>
-<item><title>Lecturer in Structural Engineering - The Mail &amp; Guardian</title><link>https://careers.mg.co.za/listing/lecturer-in-structural-engineering/</link></item>
-<item><title>Senior Technician: Hydraulic Engineering. - The Mail &amp; Guardian</title><link>https://careers.mg.co.za/listing/senior-technician-hydraulic-engineering/</link></item>
-<item><title>Campus Principal (P3) - The Mail &amp; Guardian</title><link>https://careers.mg.co.za/listing/campus-principal-p3/</link></item>
-<item><title>Ghost workers haunt Kenyan state - The Mail &amp; Guardian</title><link>https://mg.co.za/africa/2025-12-12-ghost-workers-haunt-kenyan-state/</link></item>
-<item><title>Oliver-Twist Amani - The Mail &amp; Guardian</title><link>https://mg.co.za/author/oliver-twist-amani/</link></item>
-<item><title>The fall of Uvira is a turning point in the DRC conflict - The Mail &amp; Guardian</title><link>https://mg.co.za/africa/2025-12-11-the-fall-of-uvira-is-a-turning-point-in-the-drc-conflict/</link></item>
-<item><title>Competition Commission to look into complaint over Actom’s acquisition of SSPM - The Mail &amp; Guardian</title><link>https://mg.co.za/business/2025-12-18-competition-commission-to-look-into-complaint-over-actoms-acquisition-of-sspm/</link></item>
-<item><title>Qantas launches new non-stop flight between Johannesburg and Perth - The Mail &amp; Guardian</title><link>https://mg.co.za/business/2025-12-08-qantas-launches-new-non-stop-flight-between-johannesburg-and-perth/</link></item>
-<item><title>Mine communities group launches campaign against Anglo over plight of former workers - The Mail &amp; Guardian</title><link>https://mg.co.za/business/2025-12-08-mine-communities-group-launches-campaign-against-anglo-over-plight-of-former-workers/</link></item>
-<item><title>Ramaphosa’s tumultuous 2025 - The Mail &amp; Guardian</title><link>https://mg.co.za/politics/2025-12-19-ramaphosas-tumultuous-2025/</link></item>
-<item><title>ANCYL ‘will sell its votes to highest bidder’, insiders say - The Mail &amp; Guardian</title><link>https://mg.co.za/politics/2025-12-19-ancyl-will-sell-its-votes-to-highest-bidder-insiders-say/</link></item>
-<item><title>Mother-tongue education is failing - The Mail &amp; Guardian</title><link>https://mg.co.za/education/2025-12-24-mother-tongue-education-is-failing/</link></item>
-<item><title>The politics of literacy - The Mail &amp; Guardian</title><link>https://mg.co.za/education/2025-12-23-the-politics-of-literacy/</link></item>
-<item><title>Lucas Nowick - The Mail &amp; Guardian</title><link>https://mg.co.za/author/lucas-nowick/</link></item>
-<item><title>How funding apartheid fails young library users - The Mail &amp; Guardian</title><link>https://mg.co.za/education/2025-12-13-how-funding-apartheid-fails-young-library-users/</link></item>
-<item><title>Gcina Ntsaluba - The Mail &amp; Guardian</title><link>https://mg.co.za/author/gcina-ntsaluba/</link></item>
-<item><title>Padel Promises fuels youth grit - The Mail &amp; Guardian</title><link>https://mg.co.za/sport/2025-12-21-padel-promises-fuels-youth-grit/</link></item>
-<item><title>Samsung becomes the official mobile and consumer electronics partner for SA rugby’s national teams and the Vodacom URC - The Mail &amp; Guardian</title><link>https://mg.co.za/sport/2025-11-28-samsung-becomes-the-official-mobile-and-consumer-electronics-partner-for-sa-rugbys-national-teams-and-the-vodacom-urc/</link></item>
-<item><title>At Hague Group meeting, frustration over failure of global institutions to constrain Israel’s conduct - The Mail &amp; Guardian</title><link>https://mg.co.za/world/2025-12-17-at-hague-group-meeting-frustration-over-failure-of-global-institutions-to-constrain-israels-conduct/</link></item>
-<item><title>数据不够代码凑？用 Albumentations 让你的 AI 模型“看”得更广，训练快 10 倍！ - 博客园</title><link>https://www.cnblogs.com/swizard/p/19410908</link></item>
-<item><title>前后端分离框架 CatchAdmin V5 beta.2 发布 插件化与开发效率的进一步提升 - 博客园</title><link>https://www.cnblogs.com/catchadmin/p/19410766</link></item>
-<item><title>如何使用『页脚HTML代码』-实现自推广 -『AI实现的小程序&amp;小游戏』 - 博客园</title><link>https://www.cnblogs.com/uoky/p/19410177</link></item>
-<item><title>红米AX6 扩容 刷Uboot+openwrt 经历 - 博客园</title><link>https://www.cnblogs.com/sollong/p/19410157</link></item>
-<item><title>StruSP——Structure-aware Propagation Generation with Large Language Models for Fake News Detection - 博客园</title><link>https://www.cnblogs.com/xyc-blog/p/19409070</link></item>
-<item><title>Spring Boot整合Sentinel之QPS限流 - 博客园</title><link>https://www.cnblogs.com/east7/p/19409978</link></item>
-<item><title>2025年暨PhD第一学期总结 - 博客园</title><link>https://www.cnblogs.com/orion-orion/p/19409951</link></item>
-<item><title>Sidecar不就是在Pod里多跑一个容器吗！ - 博客园</title><link>https://www.cnblogs.com/ydswin/p/19396769</link></item>
-<item><title>基于莱布尼茨公式的编程语言计算性能基准测试 - 博客园</title><link>https://www.cnblogs.com/shanyou/p/19408361</link></item>
-<item><title>大模型榜单周报（2025/12/27） - 博客园</title><link>https://www.cnblogs.com/xjk15082/p/19408692</link></item>
-<item><title>FFmpeg开发笔记（九十五）国产的开源视频美颜工具VideoEditorForAndroid - 博客园</title><link>https://www.cnblogs.com/aqi00/p/19319684</link></item>
-<item><title>使用Gradio构建AI前端 - RAG的QA模块 - 博客园</title><link>https://www.cnblogs.com/aspnetx/p/19408276</link></item>
-<item><title>.NET 数据摄取与向量化架构：构建企业级检索增强生成（RAG）管道 - 博客园</title><link>https://www.cnblogs.com/shanyou/p/19408104</link></item>
-<item><title>别让你的密钥在互联网上“裸奔”！用 python-dotenv 优雅管理你的敏感配置 - 博客园</title><link>https://www.cnblogs.com/swizard/p/19407993</link></item>
-<item><title>【面试题】详细描述一条 SQL 语句在 MySQL 中的执行过程。 - 博客园</title><link>https://www.cnblogs.com/sun-10387834/p/19391378</link></item>
-<item><title>C++中JSON序列化和反序列化的实现 - 博客园</title><link>https://www.cnblogs.com/charlee44/p/19407771</link></item>
-<item><title>成为高级 PHP 开发者需要的思维转变 - 博客园</title><link>https://www.cnblogs.com/catchadmin/p/19407447</link></item>
-<item><title>一阶低通滤波器（LPF）使用详讲 - 博客园</title><link>https://www.cnblogs.com/lsksp/p/19406964</link></item>
-<item><title>一款由字节跳动推出的 AI 提示词生成和优化工具，为你提供更精准，专业，可持续迭代提示词！ - 博客园</title><link>https://www.cnblogs.com/Can-daydayup/p/19406862</link></item>
-<item><title>go-zero rest 源码学习笔记 - 博客园</title><link>https://www.cnblogs.com/xingzheanan/p/19404672</link></item>
-<item><title>English Cottages, Austin Bungalows—These Were the Top Home Tours of 2025 - domino</title><link>https://www.domino.com/design-inspiration/most-popular-home-tours-2025/</link></item>
-<item><title>Laura Lajiness Kaupke - domino</title><link>https://www.domino.com/authors/laura-lajiness-kaupke/</link></item>
-<item><title>Courtney Somer - domino</title><link>https://www.domino.com/authors/courtney-somer/</link></item>
-<item><title>Laura Regensdorf - domino</title><link>https://www.domino.com/authors/laura-regensdorf/</link></item>
-<item><title>Elaina Sullivan - domino</title><link>https://www.domino.com/authors/elaina-sullivan-2/</link></item>
-<item><title>Lindsay Talbot - domino</title><link>https://www.domino.com/authors/lindsay-talbot/</link></item>
-<item><title>Christopher Mosier - domino</title><link>https://www.domino.com/authors/christopher-mosier/</link></item>
-<item><title>Christine Lennon - domino</title><link>https://www.domino.com/authors/christine-lennon-2/</link></item>
+<lastBuildDate>Mon, 29 Dec 2025 08:56:26 +0800</lastBuildDate>
+<item><title>Trump Reports a &amp;#39;Very Productive Call&amp;#39; With Putin Before Engaging With Zelenskyy in Florida - Military.com</title><link>https://www.military.com/daily-news/2025/12/28/trump-reports-very-productive-call-putin-engaging-zelenskyy-florida.html</link></item>
+<item><title>Myanmar Holds First Election Since Military Seized Power But Critics Say the Vote is a Sham - Military.com</title><link>https://www.military.com/daily-news/2025/12/28/myanmar-holds-first-election-military-seized-power-critics-say-vote-sham.html</link></item>
+<item><title>Thailand and Cambodia Sign a New Ceasefire Agreement to End Border Fighting - Military.com</title><link>https://www.military.com/daily-news/2025/12/27/thailand-and-cambodia-sign-new-ceasefire-agreement-end-border-fighting.html</link></item>
+<item><title>Russia Attacks Kyiv With Missiles and Drones, Killing 1 and Wounding Many Ahead of Ukraine-US Talks - Military.com</title><link>https://www.military.com/daily-news/2025/12/27/russia-attacks-kyiv-missiles-and-drones-killing-1-and-wounding-many-ahead-of-ukraine-us-talks.html</link></item>
+<item><title>‘We Love Him’: Vietnam Veteran Continues Service by Volunteering at Fort Carson - Military.com</title><link>https://www.military.com/daily-news/2025/12/27/we-love-him-vietnam-veteran-continues-service-volunteering-fort-carson.html</link></item>
+<item><title>Nigerian Villagers Are Rattled by US Airstrikes That Made Their Homes Shake and the Sky Glow Red - Military.com</title><link>https://www.military.com/daily-news/2025/12/26/nigerian-villagers-are-rattled-us-airstrikes-made-their-homes-shake-and-sky-glow-red.html</link></item>
+<item><title>China Sanctions 20 US Defense Companies and 10 Executives Over Massive Arms Sales to Taiwan - Military.com</title><link>https://www.military.com/daily-news/2025/12/26/china-sanctions-20-us-defense-companies-and-10-executives-over-massive-arms-sales-taiwan.html</link></item>
+<item><title>Zelenskyy Expects to Meet With Trump Sunday on Peace Plan - Military.com</title><link>https://www.military.com/daily-news/2025/12/26/zelenskyy-expects-meet-trump-sunday-peace-plan.html</link></item>
+<item><title>Japan&amp;#39;s Cabinet OKs Record Defense Budget That Aims to Deter China - Military.com</title><link>https://www.military.com/daily-news/2025/12/26/japans-cabinet-oks-record-defense-budget-aims-deter-china.html</link></item>
+<item><title>After Trump Strike on Terrorists, Nigeria Says It’s Open to More - Military.com</title><link>https://www.military.com/daily-news/2025/12/26/after-trump-strike-terrorists-nigeria-says-its-open-more.html</link></item>
+<item><title>Trump Says US Struck Islamic State Targets in Nigeria After Group Targeted Christians - Military.com</title><link>https://www.military.com/daily-news/2025/12/25/trump-says-us-struck-islamic-state-targets-nigeria-after-group-targeted-christians.html</link></item>
+<item><title>Trump Warns Against Infiltration by a &amp;#39;Bad Santa,&amp;#39; Defends Coal in Jovial Christmas Calls With Kids - Military.com</title><link>https://www.military.com/daily-news/2025/12/25/trump-warns-against-infiltration-bad-santa-defends-coal-jovial-christmas-calls-kids.html</link></item>
+<item><title>Zelenskyy Says He&amp;#39;s Open to Creating Demilitarized Zone in Ukraine&amp;#39;s Industrial Heartland - Military.com</title><link>https://www.military.com/daily-news/2025/12/25/zelenskyy-says-hes-open-creating-demilitarized-zone-ukraines-industrial-heartland.html</link></item>
+<item><title>Two Iowa National Guard Members Killed in Syria Return Home on Christmas Eve - Military.com</title><link>https://www.military.com/daily-news/2025/12/25/two-iowa-national-guard-members-killed-syria-return-home-christmas-eve.html</link></item>
+<item><title>North Korea Displays Apparent Progress in Construction of Nuclear-Powered Submarine - Military.com</title><link>https://www.military.com/daily-news/2025/12/25/north-korea-displays-apparent-progress-construction-of-nuclear-powered-submarine.html</link></item>
+<item><title>Venezuela Seeks to Criminalize Oil Tanker Seizures as Trump Puts Pressure on Maduro - Military.com</title><link>https://www.military.com/daily-news/2025/12/24/venezuela-seeks-criminalize-oil-tanker-seizures-trump-puts-pressure-maduro.html</link></item>
+<item><title>Trump&amp;#39;s Newly Appointed Envoy to Greenland Says US Not Looking to &amp;#39;Conquer&amp;#39; the Danish Territory - Military.com</title><link>https://www.military.com/daily-news/2025/12/24/trumps-newly-appointed-envoy-greenland-says-us-not-looking-conquer-danish-territory.html</link></item>
+<item><title>Trump Approves Deployment of 350 National Guard Members to New Orleans - Military.com</title><link>https://www.military.com/daily-news/2025/12/24/trump-approves-deployment-of-350-national-guard-members-new-orleans.html</link></item>
+<item><title>Ukraine and US Seek Land Compromise for Peace Deal With Putin - Military.com</title><link>https://www.military.com/daily-news/2025/12/24/ukraine-and-us-seek-land-compromise-peace-deal-putin.html</link></item>
+<item><title>Suspect in National Guard Shooting Faces New Federal Charges That Allow Death Penalty Discussions - Military.com</title><link>https://www.military.com/daily-news/2025/12/24/suspect-national-guard-shooting-faces-new-federal-charges-allow-death-penalty-discussions.html</link></item>
+<item><title>Supreme Court Keeps Trump’s National Guard Deployment Blocked in the Chicago Area, for Now - Military.com</title><link>https://www.military.com/daily-news/2025/12/24/supreme-court-keeps-trumps-national-guard-deployment-blocked-chicago-area-now.html</link></item>
+<item><title>Search Teams in Turkey Recover Recorders After Plane Crash That Killed Libyan Military Officials - Military.com</title><link>https://www.military.com/daily-news/2025/12/24/search-teams-turkey-recover-recorders-after-plane-crash-killed-libyan-military-officials.html</link></item>
+<item><title>UK’s Nscale to Boost US Footprint with $865M Data Center Deal - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/investing/uk-s-nscale-to-boost-us-footprint-with-865m-nc-data-center-deal</link></item>
+<item><title>Goodman, CPP Forge $9B Deal to Power Europe’s Data Center Boom - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-construction/goodman-cpp-forge-9b-deal-to-power-europe-s-data-center-boom</link></item>
+<item><title>2025 Cloud Highlights: AI, Outages, and the Future of Infrastructure - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cloud/2025-cloud-highlights-ai-outages-and-the-future-of-infrastructure</link></item>
+<item><title>Alphabet to Buy Data Center Partner Intersect for $4.75B - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/alphabet-to-buy-data-center-partner-intersect-for-4-75b</link></item>
+<item><title>Nuclear Fusion, Trump, and AI: A High-Stakes Bet on Future Power - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/fusion-trump-and-ai-a-high-stakes-bet-on-future-power</link></item>
+<item><title>Vantage Breaks Ground on $15B Stargate Campus in Wisconsin - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-construction/vantage-breaks-ground-on-15b-stargate-campus-in-wisconsin</link></item>
+<item><title>AI and Latency: Why Milliseconds Decide Winners and Losers in the Data Center Race - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/infrastructure/ai-and-latency-why-milliseconds-decide-winners-and-losers-in-the-data-center-race</link></item>
+<item><title>Oracle and OpenAI Win Michigan Approval to Power New Data Center - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-site-selection/oracle-and-openai-win-michigan-approval-to-power-new-data-center</link></item>
+<item><title>Data Center Sustainability Trends: 10 Stories That Defined the Year - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/sustainability/data-center-sustainability-trends-10-stories-that-defined-the-year</link></item>
+<item><title>Higher Loads, Faster Builds: Six Trends Defining Data Centers in 2026 - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-construction/higher-loads-faster-builds-six-trends-defining-data-centers-in-2026</link></item>
+<item><title>Calls for US Data Center Freeze Grow as Local Enthusiasm Melts - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/build-design/calls-for-us-data-center-freeze-grow-as-local-enthusiasm-melts</link></item>
+<item><title>2025’s Biggest Data Center Construction Stories: A Year in Review - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-construction/2025-s-biggest-data-center-construction-stories-a-year-in-review</link></item>
+<item><title>Google to Lead $120m Papua New Guinea subsea cable scheme - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/networking/google-to-lead-120m-papua-new-guinea-subsea-cable-scheme</link></item>
+<item><title>Oracle at Center of Tech’s $500B AI-Fueled Rent Spree - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/investing/oracle-at-center-of-tech-s-500-billion-ai-fueled-rent-spree</link></item>
+<item><title>Top 5 Unstructured Data Management Predictions for 2026 - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/business/top-5-unstructured-data-management-predictions-for-2026</link></item>
+<item><title>Did Hyperscalers Solve the Power Problem in 2025 – or Rethink It? - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/hyperscalers/did-hyperscalers-solve-the-power-problem-in-2025-or-rethink-it-</link></item>
+<item><title>Amazon Deal Marks Data Center Payday for RWE - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/amazon-deal-marks-data-center-payday-for-rwe</link></item>
+<item><title>Ethernet Switch Sales Boom as Nvidia Drives Q3 Data Center Gains - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/switches-routers/ethernet-switch-sales-boom-as-nvidia-drives-q3-data-center-gains</link></item>
+<item><title>Global Hyperscale Growth Persists Despite Grid and Land Constraints - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/hyperscalers/global-hyperscale-growth-persists-despite-grid-and-land-constraints</link></item>
+<item><title>How AI Data Centers Redefined the Industry in 2025 - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/ai-data-centers/how-ai-data-centers-redefined-the-industry-in-2025</link></item>
+<item><title>Lenovo’s Data Storage Product Updates Target AI Boom - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-storage/lenovo-s-data-storage-product-updates-target-ai-boom</link></item>
+<item><title>Ireland Ends Moratorium on New Power Links to Data Centers - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/regulations/ireland-ends-moratorium-on-new-power-links-to-data-centers</link></item>
+<item><title>Data Center Growth Draining Global Water Supplies - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/infrastructure/data-center-growth-draining-global-water-supplies</link></item>
+<item><title>The Hottest Data Center Chip Developments in 2025 - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/infrastructure/the-hottest-data-center-chip-developments-in-2025</link></item>
+<item><title>Oracle Shares Drop the Most Since 2001 on Mounting AI Spending - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/investing/oracle-shares-drop-the-most-since-2001-on-mounting-ai-spending</link></item>
+<item><title>Data Centers Integrate Cyber and Physical Security in 2025 - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/security-and-risk-management/data-centers-integrate-cyber-and-physical-security-in-2025</link></item>
+<item><title>Key Cloud Trends That I&amp;amp;O Leaders Should Leverage in 2026 - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cloud/key-cloud-trends-that-i-o-leaders-should-leverage-in-2026</link></item>
+<item><title>Toshiba, Quantum Corridor Hit Quantum-Secure Network Milestone - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/infrastructure/toshiba-quantum-corridor-hit-quantum-secure-network-milestone</link></item>
+<item><title>How Two-Phase Liquid Cooling Is Solving the Thermal Crisis - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cooling/how-two-phase-liquid-cooling-is-solving-the-thermal-crisis</link></item>
+<item><title>How Data Centers Redefined Energy and Power in 2025 - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/how-data-centers-redefined-energy-and-power-in-2025</link></item>
+<item><title>AI Chip Export Controls: A New Challenge for Data Center Operators - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-chips/ai-chip-export-controls-a-new-challenge-for-data-center-operators</link></item>
+<item><title>Canada Open for AI Data Centers After Carney’s Energy Shift, Power CEO Says - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/canada-open-for-ai-data-centers-after-carney-s-energy-shift-power-ceo-says</link></item>
+<item><title>Neoclouds vs. Hyperscalers: Will AI’s Specialized Clouds Prevail? - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/ai-data-centers/neoclouds-vs-hyperscalers-will-ai-s-specialized-clouds-prevail-</link></item>
+<item><title>Power, Bravery, and the Wild Data Center Future Ahead - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/power-bravery-and-the-wild-data-center-future-ahead</link></item>
+<item><title>A Clean Sweep: Why Data Center Maintenance Is More Critical Than Ever - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/operations-and-management/a-clean-sweep-why-data-center-maintenance-is-more-critical-than-ever</link></item>
+<item><title>IBM to Buy Confluent in $11B Bid to Boost Data Streaming - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/deals/ibm-to-buy-confluent-in-11b-bid-to-boost-data-streaming</link></item>
+<item><title>CME Data Center Outage Caused by Human Error, CyrusOne Says - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/outages/cme-data-center-outage-caused-by-human-error-cyrusone-says</link></item>
+<item><title>The Data Center Safety and Design Gap No One’s Talking About - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/security-and-risk-management/the-data-center-safety-and-design-gap-no-one-s-talking-about</link></item>
+<item><title>KKR to Invest in Assets of Brookfield’s Compass Datacenters - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/investing/kkr-to-invest-in-assets-of-brookfield-s-compass-datacenters</link></item>
+<item><title>Extending Server Lifespan: Cost-Saving Strategies for Data Centers - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/servers/extending-server-lifespan-cost-saving-strategies-for-data-centers</link></item>
+<item><title>Privatizing Cloud: The Rise of Private and Sovereign Clouds - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cloud/privatizing-cloud-the-rise-of-private-and-sovereign-clouds</link></item>
+<item><title>Flexible Power Accelerates Data Center Projects, Princeton Says - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/flexible-power-accelerates-data-center-projects-princeton-says</link></item>
+<item><title>Physical Constraints Threaten US and European AI Ambitions, BlackRock Says - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/investing/physical-constraints-threaten-us-and-european-ai-ambitions-blackrock-says</link></item>
+<item><title>TikTok to Invest More Than $37B in Brazil Data Center - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-construction/tiktok-to-invest-in-brazil-data-center</link></item>
+<item><title>Data Center Interconnect: Taming the Wildest, Fastest Growing Part of the Network - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cables/data-center-interconnect-taming-the-wildest-fastest-growing-part-of-the-network</link></item>
+<item><title>New Data Center Developments: December 2025 - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-construction/new-data-center-developments-december-2025</link></item>
+<item><title>AWS Launches Trainium3 Chip to Challenge Nvidia’s AI Dominance - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-chips/aws-launches-tranium3-chip-to-challenge-nvidia-ai-dominance</link></item>
+<item><title>Beyond Municipal Water: Alternative Solutions for Data Center Cooling Needs - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cooling/beyond-municipal-water-alternative-solutions-for-data-center-cooling-needs</link></item>
+<item><title>AMD-Backed Vultr to Build $1B Chip Cluster in Ohio for AI - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-chips/amd-backed-vultr-to-build-1b-chip-cluster-in-ohio-for-ai</link></item>
+<item><title>Calibre 引入 AI “讨论”功能 - Solidot</title><link>https://www.solidot.org/story?sid=83161</link></item>
+<item><title>在两年等待之后 FFmpeg 向瑞芯发出 DMCA 下架通知 - Solidot</title><link>https://www.solidot.org/story?sid=83160</link></item>
+<item><title>Giving Users A Voice Through Virtual Personas - Smashing Magazine</title><link>https://smashingmagazine.com/2025/12/giving-users-voice-virtual-personas/</link></item>
+<item><title>How To Measure The Impact Of Features - Smashing Magazine</title><link>https://smashingmagazine.com/2025/12/how-measure-impact-features-tars/</link></item>
+<item><title>Smashing Animations Part 7: Recreating Toon Text With CSS And SVG - Smashing Magazine</title><link>https://smashingmagazine.com/2025/12/smashing-animations-part-7-recreating-toon-text-css-svg/</link></item>
+<item><title>Accessible UX Research, eBook Now Available For Download - Smashing Magazine</title><link>https://smashingmagazine.com/2025/12/accessible-ux-research-ebook-release/</link></item>
+<item><title>State, Logic, And Native Power: CSS Wrapped 2025 - Smashing Magazine</title><link>https://smashingmagazine.com/2025/12/state-logic-native-power-css-wrapped-2025/</link></item>
+<item><title>How UX Professionals Can Lead AI Strategy - Smashing Magazine</title><link>https://smashingmagazine.com/2025/12/how-ux-professionals-can-lead-ai-strategy/</link></item>
+<item><title>Beyond The Black Box: Practical XAI For UX Practitioners - Smashing Magazine</title><link>https://smashingmagazine.com/2025/12/beyond-black-box-practical-xai-ux-practitioners/</link></item>
+<item><title>Masonry: Things You Won’t Need A Library For Anymore - Smashing Magazine</title><link>https://smashingmagazine.com/2025/12/masonry-things-you-wont-need-library-anymore/</link></item>
+<item><title>A Sparkle Of December Magic (2025 Wallpapers Edition) - Smashing Magazine</title><link>https://smashingmagazine.com/2025/11/desktop-wallpaper-calendars-december-2025/</link></item>
+<item><title>The Accessibility Problem With Authentication Methods Like CAPTCHA - Smashing Magazine</title><link>https://smashingmagazine.com/2025/11/accessibility-problem-authentication-methods-captcha/</link></item>
+<item><title>Design System Culture: What It Is And Why It Matters (Excerpt) - Smashing Magazine</title><link>https://smashingmagazine.com/2025/11/design-system-culture/</link></item>
+<item><title>Designing For Stress And Emergency - Smashing Magazine</title><link>https://smashingmagazine.com/2025/11/designing-for-stress-emergency/</link></item>
+<item><title>Keyframes Tokens: Standardizing Animation Across Projects - Smashing Magazine</title><link>https://smashingmagazine.com/2025/11/keyframes-tokens-standardizing-animation-across-projects/</link></item>
+<item><title>From Chaos To Clarity: Simplifying Server Management With AI And Automation - Smashing Magazine</title><link>https://smashingmagazine.com/2025/11/simplifying-server-management-ai-automation/</link></item>
+<item><title>CSS Gamepad API Visual Debugging With CSS Layers - Smashing Magazine</title><link>https://smashingmagazine.com/2025/11/css-gamepad-api-visual-debugging-css-layers/</link></item>
+<item><title>Older Tech In The Browser Stack - Smashing Magazine</title><link>https://smashingmagazine.com/2025/11/older-tech-browser-stack/</link></item>
+<item><title>Effectively Monitoring Web Performance - Smashing Magazine</title><link>https://smashingmagazine.com/2025/11/effectively-monitoring-web-performance/</link></item>
 </channel></rss>

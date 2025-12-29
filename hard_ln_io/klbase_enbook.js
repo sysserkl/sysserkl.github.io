@@ -793,7 +793,6 @@ function frequency_words_enbook_b(cstype='',simple_split=false,common_max=4000,c
                 get_new_words_arr_set_enbook_b(2,new_t.join(' '),'div_new_words2',is_remove_square,words_type,csendata_set);
                 break;
             case 'sentence_rare':
-                console.log('frequency_enwords_book() 费时：'+(performance.now() - t0) + ' milliseconds');
                 common_word_sign_set_enwords_book_b(common_set);
                 break;
             case 'klwiki_en_new':
