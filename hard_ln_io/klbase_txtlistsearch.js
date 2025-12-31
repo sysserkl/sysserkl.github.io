@@ -480,12 +480,6 @@ function txtmenus_kltxt_b(cstype=''){
         ['resize','img_resize_kltxt_b();',true],
         ];    
         menu_config.push(menu_container_b(str_t,group_list,'img: '));            
-            
-        if (csbookno_global>=0 && csbooklist_sub_global.length>0){
-            if (csbooklist_sub_global[csbookno_global][0].substring(0,7)=='klwiki0'){
-                menu_config.push('<span class="span_menu" onclick="'+str_t+'klwiki_title_batch_open_kltxt_b();">批量打开title</span>');
-            }
-        }
     }
     
     var menu_statistics=[
@@ -960,43 +954,6 @@ function frequent_new_enwords_kltxt_b(is_current_page=false){
     }
     document.getElementById('divhtml').innerHTML='<h3>统计中...</h3>';
     setTimeout(function (){frequency_words_enbook_b(csarr);},1);
-}
-
-function klwiki_title_batch_open_kltxt_b(){
-    function sub_klwiki_title_batch_open_kltxt_b_open(){
-        if (blxl>=bllen){return;}
-        
-        klwiki_link_b(result_t[blxl],true);
-        blxl=blxl+1;
-        setTimeout(sub_klwiki_title_batch_open_kltxt_b_open,1000);
-    }
-    //-----------------------
-    var ospans=document.querySelectorAll('div#divhtml span.txt_content');
-    var result_t=[];
-    for (let one_span of ospans){
-        var blstr=one_span.innerText.trim();
-        if (blstr.substring(0,7)=='<title>' && blstr.slice(-8,)=='</title>'){
-            result_t.push(blstr.slice(7,-8));
-        }
-    }
-    var blkey=prompt('输入起始title包含的关键字（可选）');
-    if (blkey==null){return;}
-    
-    var blat=0;
-    for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
-        if (result_t[blxl].includes(blkey)){
-            blat=blxl;
-            break;
-        }
-    }
-    result_t=result_t.slice(blat,blat+10);
-    if (result_t.length==0){return;}
-    
-    if (!confirm('是否批量打开以下title：\n'+result_t.join('\n')+'\n？')){return;}
-
-    var blxl=0;
-    var bllen=result_t.length;
-    sub_klwiki_title_batch_open_kltxt_b_open();
 }
 
 function editable_kltxt_b(){

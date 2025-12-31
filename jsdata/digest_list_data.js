@@ -183,6 +183,7 @@ var digest_list_source_global=[
 ["quan_yuan_qu_xi_wen_119091_digest",1,"2020-10-29",573],
 ["shen_cong_wen_jing_xuan_swxlq6_354788_digest",1,"2024-06-17",197351],
 ["na_bu_lei_si_si_bqalnflt_189926_digest",1,"2025-11-24",306712],
+["the_assassination_of_jesse_james_btcrf_5333_digest",1,"2025-12-29",93],
 ["the_sicilian_a_novel_the_gb2_3682_digest",1,"2025-12-22",516],
 ["jin_yong_zuo_pin_ji_bxjxdbq2_682718_digest",1,"2020-10-22",981],
 ["pi_pi_lu_he_she_wab_247886_digest",1,"2020-10-30",1055],
