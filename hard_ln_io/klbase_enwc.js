@@ -430,7 +430,7 @@ function days_enwc_b(only_plan=false){
 	    var month_tmp=date1_tmp.getMonth()+1;    
         for (let blxl=3;blxl<10;blxl=blxl+3){
             if (month_tmp<=blxl){
-                blstr_tmp='<tr><td style="border-bottom:black solid 0.1rem;">距'+blxl+'月底</td><td align=right>';
+                blstr_tmp='<tr><td>距'+blxl+'月底</td><td align=right>';
                 blstr_tmp=blstr_tmp+days_between_two_dates_b(date1_tmp,year_tmp+'-'+(blxl+1)+'-01')+'</td>';
 
                 blstr_tmp=blstr_tmp+'</tr>';
