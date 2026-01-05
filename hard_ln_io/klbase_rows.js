@@ -731,6 +731,9 @@ function strquick_klr_b(cstype='',csid='textarea_rows_content',status_id='textar
         case 'title_href2csv':
             str2csv_klr_b(csid,'title_href');
             break;
+        case 'enword2enlink':
+            str2js_klr_b(csid,'enword2enlink');
+            break;
         case 'batchwww':
         case 'klwikititle':
         case 'collins':
@@ -1003,6 +1006,12 @@ function str2js_klr_b(csid,cstype){
             blstr=blstr.replace(/^\[(.*)\]\((.*)\)$/mg,'["$2","$1"],');
             otextarea.value=blstr;
             return;
+        case 'enword2enlink':
+            list_t=otextarea.value.trim().split('\n');
+            for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
+                list_t[blxl]='http://dict.youdao.com/search?le=eng&q='+encodeURI(list_t[blxl])+' '+list_t[blxl];
+            }
+            break;
     }
     
     for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){

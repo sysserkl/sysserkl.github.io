@@ -500,7 +500,7 @@ function rank_f6t(){
             
             var th_str='<tr><th style="cursor:pointer;" ondblclick="no_refresh_f6t(this);">No.</th><th>地区</th><th nowrap>'+one_h3.slice(2,)+'</th>'+th_month+th_difficult+th_year+th_user+hot_th;
             
-            var buttons_str='<input style="width:10rem;" placeholder=\'filter\' onkeyup="if (event.key==\'Enter\'){filter_table_f6t(this);}" /> <span class="aclick" onclick="flot_f6t('+table_no+');" style="font-weight:normal;">flot</span> html: <select class="select_rank_f6t_html_type"><option>h</option><option>u</option></select> <span class="aclick" onclick="batch_links_generate_f6t(this,'+table_no+');" style="font-weight:normal;">show</span> <span class="aclick" onclick="batch_links_generate_f6t(this,'+table_no+',true);" style="font-weight:normal;">save</span>';
+            var buttons_str='<input style="width:10rem;" placeholder=\'filter\' onkeyup="if (event.key==\'Enter\'){filter_table_f6t(this);}" /> <span class="aclick" onclick="flot_f6t('+table_no+');" style="font-weight:normal;">flot</span> html/js: <select class="select_rank_f6t_html_type"><option>h</option><option>u</option></select> <span class="aclick" onclick="batch_links_generate_f6t(this,'+table_no+');" style="font-weight:normal;">show</span> <span class="aclick" onclick="batch_links_generate_f6t(this,'+table_no+',true);" style="font-weight:normal;">save</span> <span class="aclick" onclick="mini_js_data_file_generate_f6t('+table_no+');" style="font-weight:normal;" title="save as js data file">js</span>';
             
             var flot_str='<div id="div_rank_f6t_flot_m_'+table_no+'" style="width:90%;"></div><div id="div_rank_f6t_flot_y_'+table_no+'" style="width:90%;"></div><div id="div_rank_f6t_html_'+table_no+'" style="width:90%;column-count:'+div_column_count+';"></div>';
             
@@ -687,6 +687,57 @@ function no_refresh_f6t(oth){
             blno=blno+1;
         }
     }
+}
+
+function mini_js_data_file_generate_f6t(table_no){
+    var t0=performance.now();       
+    var odiv=document.getElementById('div_rank_f6t_'+table_no);
+    var col_no=0;
+    var csclass='td_rank_hot_words_f6t';
+    var otrs=odiv.querySelectorAll('tr');
+    var cstype='h';
+    var result_t=['var f6t_hot_words_global=['];
+    for (let one_tr of otrs){
+        let otds=one_tr.querySelectorAll('td.'+csclass);
+        for (let one_td of otds){
+            let blid=one_td.getAttribute('id').split('_').slice(-2,);
+            let distrct_name=specialstr_html_b(distrct_name_get_f6t(blid[0],blid[1])[1]);
+            let js_words=['"'+distrct_name+'"'];    //第一个字段为地区 - 保留注释
+            let used_set=new Set();
+            used_set.add(distrct_name);
+            let ospans=one_td.querySelectorAll('span.span_popup_f6t_'+cstype);
+            let hot_words=[];
+            for (let one_span of ospans){
+                hot_words.push(specialstr_html_b(one_span.innerText));
+            }
+            hot_words.sort(function (a,b){return a.length<b.length?1:-1;});
+            for (let blstr of hot_words){
+                let is_used=false;
+                for (let one_used of used_set){
+                    if (one_used.includes(blstr)){
+                        is_used=true;
+                        break;
+                    }
+                }
+                if (!is_used){
+                    js_words.push('"'+blstr+'"');
+                    used_set.add(blstr);
+                }
+            }
+            
+            if (js_words.length>1){
+                result_t.push('['+js_words.join(',')+'],');
+            }
+        }
+    }
+    result_t.push('];');
+    console.log(result_t.join('\n'));
+    alert(result_t.slice(0,5).join('\n')+'\n...');
+    if (confirm('是否保存为js文件？')){
+        string_2_txt_file_b(result_t.join('\n'),'f6t_hot_words_data.js','txt');
+    }    
+    
+    console.log('mini_js_data_file_generate_f6t() 费时：'+(performance.now() - t0) + ' milliseconds');
 }
 
 function batch_links_generate_f6t(obutton,table_no,is_save=false){

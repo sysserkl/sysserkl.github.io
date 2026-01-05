@@ -1031,3 +1031,45 @@ function day_new_enbook_b(csmax=-1,do_filter=false,group_by='y'){
     }
     return result_t;
 }
+
+function check_kaikki_phrase_b(do_load=false,remove_old_after_load=false,run_fn=false){
+    function sub_check_kaikki_phrase_b_run(is_ok){
+        if (typeof run_fn == 'function'){
+            run_fn(is_ok);
+        }    
+    }
+    
+    function sub_check_kaikki_phrase_b_remove(is_ok){
+        if (!is_ok){
+            sub_check_kaikki_phrase_b_run(false);
+            return; 
+        }
+
+        if (typeof enwords == 'undefined'){
+            sub_check_kaikki_phrase_b_run(true);
+            return;
+        }
+        
+        var old_words=simple_words_b(false);
+        console.log('kaikki_phrase_global 元素个数',kaikki_phrase_global.length);
+        kaikki_phrase_global=array_difference_b(kaikki_phrase_global,old_words);        
+        console.log('kaikki_phrase_global 元素个数',kaikki_phrase_global.length);
+        sub_check_kaikki_phrase_b_run(true);
+    }
+    
+    if (typeof kaikki_phrase_global == 'undefined'){
+        if (do_load){
+            if (remove_old_after_load){
+                load_enword_file_b('kaikki_phrase_global','kaikki_phrase',sub_check_kaikki_phrase_b_remove);            
+            } else {
+                load_enword_file_b('kaikki_phrase_global','kaikki_phrase',run_fn);
+            }
+        } else {
+            sub_check_kaikki_phrase_b_run(false);      
+        }
+        return false;
+    }
+
+    sub_check_kaikki_phrase_b_run(true);
+    return true;
+}

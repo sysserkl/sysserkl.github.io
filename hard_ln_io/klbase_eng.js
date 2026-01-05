@@ -2146,6 +2146,9 @@ function enwords_mini_search_do_b(csword=''){
                     osession.innerHTML='<ol>'+search_websites_rlater(csword,false,20,false,true,false,25,csreg,true).join('\n')+'</ol>';
                 }
                 break;
+            case 'f6t':
+                osession.innerHTML='<div style="column-count:'+(ismobile_b()?1:2)+';">'+array_2_li_b(f6t_hot_words_search_b(csword,csreg,(ismobile_b()?10:20)))+'</div>';
+                break;
         }
         return;
     }
@@ -2167,6 +2170,27 @@ function enwords_mini_search_do_b(csword=''){
 
     var recent_search_str=enwords_recent_search_b(csword,'mini');
     enwords_search_show_html_b(osession,'_mini',recent_search_str,csword,words_temp_arr,blequal,true);
+}
+
+function f6t_hot_words_search_b(csword,isreg,csmax=10){
+    [csword,isreg]=str_reg_check_b(csword,isreg,true);
+    var hot_words=common_search_b(csword,isreg,f6t_hot_words_global)[0];
+    
+    var result_t=[];
+    for (let arow of hot_words){
+        for (let acol=1,lent=arow[0].length;acol<lent;acol++){
+            result_t.push(arow[0][0]+' '+arow[0][acol]);
+        }
+    }
+    
+    if (csmax>0){
+        for (let blxl=0;blxl<5;blxl++){
+            result_t.sort(randomsort_b);
+        }
+        result_t=result_t.slice(0,csmax);
+    }
+    
+    return result_t;
 }
 
 function enwords_merge_b(cswords_list,cstimes=500){
@@ -2255,6 +2279,11 @@ function enwords_mini_search_frame_form_b(cstype='s'){
             radio_count=radio_count+1;
         }
         
+        if (typeof f6t_hot_words_global !== 'undefined'){
+            radios=radios+'<label><input type="radio" name="checkbox_mini_search_type">f6t</label> ';
+            radio_count=radio_count+1;
+        }
+                
         if (radio_count>1){
             radios='<label><input type="radio" name="checkbox_mini_search_type" checked>单词</label> '+radios;
         } else if (radio_count==1){
@@ -2572,7 +2601,7 @@ function simple_words_b(is_set=true,to_lower_case=false,space_2_underline=false,
                 if (item[0].match(/^[a-z]+$/i)){
                     result_t.push(item[0].toLowerCase());
                 }
-            }                
+            }
         } else {
             for (let item of enwords){
                 result_t.push(item[0].toLowerCase());
