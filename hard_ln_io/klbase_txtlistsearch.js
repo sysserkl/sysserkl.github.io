@@ -445,7 +445,7 @@ function txtmenus_kltxt_b(cstype=''){
     menu_config=menu_config.concat([
     enwords_mini_menu_item_b(str_t),
     '<span class="span_menu" onclick="'+str_t+'float_bookname_kltxt_b();">浮动书名</span>',
-    fpara_menu_b(str_t),
+    fpara_menu_b(str_t,true),
     ]);
 
     if (cstype=='reader'){

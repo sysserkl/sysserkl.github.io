@@ -1009,6 +1009,7 @@ function str2js_klr_b(csid,cstype){
         case 'enword2enlink':
             list_t=otextarea.value.trim().split('\n');
             for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
+                list_t[blxl]=list_t[blxl].trim();
                 list_t[blxl]='http://dict.youdao.com/search?le=eng&q='+encodeURI(list_t[blxl])+' '+list_t[blxl];
             }
             break;

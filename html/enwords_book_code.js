@@ -188,7 +188,7 @@ function menu_enwords_book(){
     ['释义','import_enwords_book(\'old_def\');',true],
     ['全部词组','import_enwords_book(\'phrase\');',true],
     ['非词组','import_enwords_book(\'not_phrase\');',true],
-    ['词组中的生词','new_words_in_phrase_enwords_book();',true],
+    ['全部词组中的生词','new_words_in_phrase_enwords_book();',true],
     ];    
     klmenu_new.push(menu_container_b(str_t,format_list,''));    
     
@@ -579,7 +579,7 @@ function new_words_in_phrase_enwords_book(){
             result_t.add(item);
         }
     }
-    document.getElementById('textarea_new_words1').value=Array.from(result_t);
+    document.getElementById('textarea_new_words1').value='全部词组\n'+Array.from(result_t);
     console.log('new_words_in_phrase_enwords_book() 费时：'+(performance.now() - t0) + ' milliseconds');
 }
 

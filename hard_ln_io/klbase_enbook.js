@@ -63,7 +63,9 @@ function get_new_old_rare_words_set_enbook_b(csstr,is_remove_square=-1,words_typ
         csstr=otextarea.value;
     }
     csstr=csstr.trim();
-    var is_all_old_def=(csstr.split('\n')[0]=='全部释义');
+    var first_line=csstr.split('\n')[0];
+    var is_all_old_def=(first_line=='全部释义');
+    var is_all_phrase=(first_line=='全部词组');
     
     if (is_remove_square===-1){
         is_remove_square=checkbox_kl_value_b('remove_square');
@@ -83,6 +85,8 @@ function get_new_old_rare_words_set_enbook_b(csstr,is_remove_square=-1,words_typ
     var result_t=new_old_word_list_enbook_b(bljgarr2,words_type,csendata_set).concat([words_type,csstr]);    //[new_words_set,old_words_set,rare_words_set,bltypecheck,csstr] - 保留注释
     if (is_all_old_def){
         local_storage_today_b('all_def_new_words_count',40,result_t[0].size,'/');
+    } else if (is_all_phrase){
+        local_storage_today_b('all_phrase_new_words_count',40,result_t[0].size,'/');
     }
     return result_t;
 }

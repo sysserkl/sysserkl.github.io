@@ -61,7 +61,6 @@ function menu_ensentence(){
     ];    
     klmenu1.push(menu_container_b(str_t,group_list,''));
 
-    
     var group_list=[
     ['无例句的单词','rare_old_words_ensentence(\'无例句的单词\',false,false,1,0,3000);',true],
     ['词组1000','phrase_not_in_ensentence(0,1000);',true],
@@ -88,6 +87,7 @@ function menu_ensentence(){
     '<span class="span_menu" onclick="'+str_t+'host_count_ensentence();">例句出处统计</span>',
     '<span class="span_menu" onclick="'+str_t+'sentence_flag_get_ensentence(-1);">例句🚩统计</span>',
     '<span class="span_menu" onclick="'+str_t+'eword_duplicate_ensentence();">行内重复 eword 检索</span>',
+    fpara_menu_b(str_t,true),
     ];  
 
     var group_list=[
