@@ -298,13 +298,13 @@ function enwords_get_klr2(){
     var list_t=blstr.trim().replace(new RegExp('_','g'),' ').split('\n');
     var result_t=[];
     for (let arow of list_t){
-        for (let item of ['】',' - ','是什么意思','Definition & Meaning','definition and meaning',' in English']){
+        for (let item of ['】',' - ','是什么意思','Definition & Meaning','definition and meaning',' in English',' | English meaning']){
             arow=arow.split(item)[0];
         }
         row_list=arow.match(/[a-z\-\_\s]+/ig) || [];
         result_t=array_union_b(result_t,row_list);
     }
-    otextarea.value=result_t.join('\n');
+    otextarea.value=result_t.join('\n').replace(/^\s+|\s+$/mg,'');
     document.getElementById('textarea_status').value=blstr;
 }
 

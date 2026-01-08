@@ -2444,9 +2444,9 @@ function sentence_split_b(csstr,csno=-1){   //sentence split - 保留注释
         }
         
         if (has_quote){
-            let quote1=(csstr1.match(/[\(\)]/g) || ['']).slice(-1)[0];
+            let quote1=(csstr1.match(/[\(\)]/g) || ['']).slice(-1)[0];  //获取最后一个括号 - 保留注释
             if (quote1=='('){
-                let quote2=(csstr2.match(/[\(\)]/) || [''])[0];
+                let quote2=(csstr2.match(/[\(\)]/) || [''])[0];  //获取第一个括号 - 保留注释
                 if (quote2==')'){
                     console.log('例句再合并 ():',csstr1,csstr2);
                     return true;
