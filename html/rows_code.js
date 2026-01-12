@@ -238,26 +238,24 @@ function menu_klr2(){
     var klmenu_batch=[
     '<span class="span_menu" onclick="'+str_t+'enwords_get_klr2();">提取英文单词</span>',
     '<span class="span_menu">间隔(秒)：<input type="number" id="input_seconds_strquick_b" style="width:3rem;" value=1 min=0 /></span>',
-    '<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'batchwww\');">批量打开网址</span>',
+    '<span class="span_menu" onclick="'+str_t+'batch_open_www_klr_b(\'batchwww\');">批量打开网址</span>',
     ];
         
-    var group_list=[
-    ['BCO+K','strquick_klr_b(\'bing_collins_oxford_+_klsearch_en\');',true],
-    ['BO+K','strquick_klr_b(\'bing_oxford_+_klsearch_en\');',true],
-    ['BOK','strquick_klr_b(\'bing_oxford_klsearch_en\');',true],
-    ['OK','strquick_klr_b(\'oxford_klsearch_en\');',true],
-    ];    
+    var group_list=['Kai_B_C_O_+_K', 'BCO+K', 'BO+K', 'BOK', 'OK',];
+    for (let blxl=0,lent=group_list.length;blxl<lent;blxl++){
+        group_list[blxl]=[group_list[blxl],'batch_open_www_klr_b(\''+group_list[blxl]+'\');',true];
+    }
     klmenu_batch.push(menu_container_b(str_t,group_list,'批量打开(en): '));
 
     var group_list=[
-    ['+','strquick_klr_b(\'cambridge\');',true],
-    ['C','strquick_klr_b(\'collins\');',true],
-    ['Kaikki','strquick_klr_b(\'kaikki\');',true],
+    ['+','batch_open_www_klr_b(\'+\');',true],
+    ['C','batch_open_www_klr_b(\'C\');',true],
+    ['Kaikki','batch_open_www_klr_b(\'Kai\');',true],
     ];    
     klmenu_batch.push(menu_container_b(str_t,group_list,'批量打开(en): '));
     
     if (is_local_b()){
-        klmenu_batch.push('<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\'klwikititle\');">批量打开KLWiki Title</span>');
+        klmenu_batch.push('<span class="span_menu" onclick="'+str_t+'batch_open_www_klr_b(\'klwikititle\');">批量打开KLWiki Title</span>');
     }
     
     var klmenu_links=[
@@ -266,7 +264,7 @@ function menu_klr2(){
     '<a href="../module/CSV_to_Wiki_Table.htm" onclick="'+str_t+'" target=_blank>CSV to Wiki Table</a>',
     '<a href="readlater.htm" onclick="'+str_t+'" target=_blank>readlater</a>',
     ];    
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_fn,'','20rem','1rem','1rem','60rem')+klmenu_b(klmenu_ende,'🛡️','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_sort,'↕','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_convert,'↔','20rem','1rem','1rem','60rem')+klmenu_b(klmenu_batch,'🗂','20rem','1rem','1rem','60rem')+klmenu_b(klmenu_links,'L','12rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_fn,'','20rem','1rem','1rem','60rem')+klmenu_b(klmenu_ende,'🛡️','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_sort,'↕','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_convert,'↔','20rem','1rem','1rem','60rem')+klmenu_b(klmenu_batch,'🗂','28rem','1rem','1rem','60rem')+klmenu_b(klmenu_links,'L','12rem','1rem','1rem','60rem'),'','0rem')+' ');
 }
 
 function random_txt_files_klr2(cssize=100){

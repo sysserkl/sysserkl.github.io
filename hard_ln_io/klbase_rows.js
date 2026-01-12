@@ -513,7 +513,18 @@ function chinese_punctuation_b(csstr){
     return csstr;
 }
 
-function strquick_klr_b(cstype='',csid='textarea_rows_content',status_id='textarea_status',start_no=1,no_len=1,csseconds=false){
+function show_line_count_in_status_klr_b(csid,status_id,cscaption='',do_clear=false){
+    var ostatus=document.getElementById(status_id);
+    if (ostatus){
+        if (do_clear){
+            ostatus.value='';
+        }
+        ostatus.value=ostatus.value+cscaption + document.getElementById(csid).value.split('\n').length;
+    }
+    return ostatus;
+}
+
+function input_seconds_strquick_get_klr_b(csseconds){
     if (csseconds===false){
         var oinput=document.getElementById('input_seconds_strquick_b');
         if (oinput){
@@ -522,12 +533,12 @@ function strquick_klr_b(cstype='',csid='textarea_rows_content',status_id='textar
             csseconds=1;
         }
     }
-    csseconds=Math.max(0,csseconds);
-    
-    var ostatus=document.getElementById(status_id);
-    if (ostatus){
-        ostatus.value=cstype + ' 处理前行数：' + document.getElementById(csid).value.split('\n').length;
-    }
+    return Math.max(0,csseconds);
+}
+
+function strquick_klr_b(cstype='',csid='textarea_rows_content',status_id='textarea_status',start_no=1,no_len=1,csseconds=false){
+    csseconds=input_seconds_strquick_get_klr_b(csseconds);
+    var ostatus=show_line_count_in_status_klr_b(csid,status_id,cstype + ' 处理前行数：',true);
     
     var result_t=null;
 	switch (cstype){
@@ -733,18 +744,7 @@ function strquick_klr_b(cstype='',csid='textarea_rows_content',status_id='textar
             break;
         case 'enword2enlink':
             str2js_klr_b(csid,'enword2enlink');
-            break;
-        case 'batchwww':
-        case 'klwikititle':
-        case 'collins':
-        case 'bing_collins_oxford_+_klsearch_en':
-        case 'bing_oxford_+_klsearch_en':
-        case 'bing_oxford_klsearch_en':
-        case 'oxford_klsearch_en':
-        case 'cambridge':
-        case 'kaikki':
-            batch_open_www_klr_b(csid,ostatus,cstype,csseconds);
-            break;
+            break; 
         case 'count':
             if (ostatus){
                 var blstr=document.getElementById(csid).value;
@@ -767,10 +767,8 @@ function strquick_klr_b(cstype='',csid='textarea_rows_content',status_id='textar
             document.getElementById(csid).value=ul_ol_2_list_b(blstr);
             break;
 	}
-    
-    if (ostatus){
-        ostatus.value=ostatus.value + ' 处理后行数：' + document.getElementById(csid).value.split('\n').length;
-    }
+
+    show_line_count_in_status_klr_b(csid,status_id,' 处理后行数：',false);
     return result_t;
 }
 
@@ -849,7 +847,7 @@ function clear_copy_tab_title_url_klr_b(csid){
     otextarea.value=bljg.join('\n');
 }
 
-function batch_open_www_klr_b(csid,ostatus,cstype='',csseconds=1){
+function batch_open_www_klr_b(cstype='',csid='textarea_rows_content',status_id='textarea_status',csseconds=false){
     function sub_batch_open_www_klr_b_one_link(){
         if (blxl>=bllen){
             if (ostatus){
@@ -871,79 +869,50 @@ function batch_open_www_klr_b(csid,ostatus,cstype='',csseconds=1){
         setTimeout(sub_batch_open_www_klr_b_one_link,csseconds*1000);
     }
     //-----------------------
+    csseconds=input_seconds_strquick_get_klr_b(csseconds);
+    var ostatus=show_line_count_in_status_klr_b(csid,status_id,cstype + ' 处理前行数：',true);
+        
     var blstr=document.getElementById(csid).value.trim();
     if (blstr==''){return;}
     if (!confirm('是否批量打开'+cstype+'链接？')){return;}        
     
     var list_t=blstr.split('\n');
     var bllen=list_t.length;
-    
     for (let blno=0;blno<bllen;blno++){
         list_t[blno]=list_t[blno].trim();
     }
+    
     var raw_words_list=[].concat(list_t);
     
-    switch (cstype){
-        case 'klwikititle':
-            for (let blno=0;blno<bllen;blno++){
-                var atitle=list_t[blno];
-                atitle=atitle.split('</title>')[0];
-                if (atitle.substring(0,7)=='<title>'){
-                    atitle=atitle.substring(7,);
+    if (cstype=='klwikititle'){
+        for (let blno=0;blno<bllen;blno++){
+            var atitle=list_t[blno];
+            atitle=atitle.split('</title>')[0];
+            if (atitle.substring(0,7)=='<title>'){
+                atitle=atitle.substring(7,);
+            }
+            list_t[blno]=klwiki_link_b(atitle,false);
+        }
+    } else {
+        if (cstype.includes('_')){
+            var type_list=cstype.split('_');
+        } else {
+            var type_list=cstype.split('');
+        }        
+        
+        var result_t=[];
+        for (let aword of list_t){
+            for (let one_type of type_list){
+                var blhref=open_link_en_b(one_type,aword,false);
+                if (blhref!==''){
+                    result_t.push(blhref);
                 }
-                list_t[blno]=klwiki_link_b(atitle,false);
             }
-            break;
-        case 'bing_collins_oxford_+_klsearch_en':
-        case 'bing_oxford_+_klsearch_en':
-        case 'bing_oxford_klsearch_en':
-        case 'oxford_klsearch_en':
-            var bing_links=[];
-            var collins_links=[];
-            var klsearch_links=[];
-            var cambridge_links=[];
-            
-            for (let blno=0;blno<bllen;blno++){
-                var aword=list_t[blno];
-                list_t[blno]=[aword,open_link_en_b('o',aword,false)];   //oxford, klbase_eng.js - 保留注释
-                
-                klsearch_links.push([aword,open_link_en_b('k',aword,false)]);
-                bing_links.push([aword,open_link_en_b('b',aword,false)]);
-                collins_links.push([aword,open_link_en_b('c',aword,false)]);
-                cambridge_links.push([aword,open_link_en_b('+',aword,false)]);
-            }
-            
-            list_t=list_t.concat(klsearch_links);
-            
-            if (['bing_oxford_klsearch_en','bing_collins_oxford_+_klsearch_en','bing_oxford_+_klsearch_en'].includes(cstype)){
-                list_t=list_t.concat(bing_links);
-            }
-            
-            if (cstype=='bing_collins_oxford_+_klsearch_en'){
-                list_t=list_t.concat(collins_links);
-                list_t=list_t.concat(cambridge_links);
-            }
-            
-            if (cstype=='bing_oxford_+_klsearch_en'){
-                list_t=list_t.concat(cambridge_links);            
-            }
-            
-            list_t.sort();
-            bllen=list_t.length;  //list_t 元素个数发生变化 - 保留注释
-            for (let blno=0;blno<bllen;blno++){
-                list_t[blno]=list_t[blno][1];
-            }
-            break;
-        case 'collins':
-        case 'cambridge':
-        case 'kaikki':        
-            let initialism_dict={'collins':'c','cambridge':'+','kaikki':'kai'};
-            for (let blno=0;blno<bllen;blno++){
-                list_t[blno]=open_link_en_b(initialism_dict[cstype],list_t[blno],false);
-            }
-            break;
+        }
+        list_t=result_t;
+        bllen=list_t.length;
     }
-    
+
     var blxl=0;
     var blsites_count=0;
     var old_title=document.title;

@@ -372,11 +372,11 @@ function en_search_sites_b(maxlength=-1,ew=false,www=false){
     ['+','Cambridge'],
     //['r','wordReference'],
     ['k','KL Search'],
-    ['kai','kaikki'],
+    ['kai','Kai'],
     ];
     
     if (www){
-        list_t=[['L','link']].concat(list_t);
+        list_t=[['li','link']].concat(list_t);
     }
     
     if (is_local_b()){
@@ -447,6 +447,7 @@ function enwords_checkbox_open_b(csname,cstype){
 
 function open_link_en_b(cstype,csword,do_open=true){
     var blhref='';
+    cstype=cstype.toLowerCase();
     switch (cstype){
         case '+':
             blhref='https://dictionary.cambridge.org/dictionary/english/'+web_href_key_b(csword,'-',true);
@@ -470,7 +471,7 @@ function open_link_en_b(cstype,csword,do_open=true){
             blhref=klbase_sele_path_b()[1]+'/html/txtlistsearch.htm';
             blhref=blhref+'?_tagKLWiki0&s='+web_href_key_b(csword,'+',true);
             break;
-        case 'L':
+        case 'li':
             websites_in_en_popup_box_b();
             break;
         case 'kai':
@@ -503,7 +504,7 @@ function open_link_en_b(cstype,csword,do_open=true){
             break;
         case 'k':
             blhref=klbase_sele_path_b()[1];
-            blhref=blhref+'/html/klsearch.htm?k='+encodeURIComponent(csword)+'&t=batch_en&iframe';           
+            blhref=blhref+'/html/klsearch.htm?k='+encodeURIComponent(csword)+'&t=batch_en&iframe';
             break; 
         case 'l':
             blhref='https://www.ldoceonline.com/dictionary/'+web_href_key_b(csword,'-',true);        
