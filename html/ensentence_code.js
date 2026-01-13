@@ -85,11 +85,16 @@ function menu_ensentence(){
     var klmenu_config=[
     '<span class="span_menu" onclick="'+str_t+'sentence_source_list_ensentence();">例句出处文章列表</span>',    
     '<span class="span_menu" onclick="'+str_t+'host_count_ensentence();">例句出处统计</span>',
-    '<span class="span_menu" onclick="'+str_t+'sentence_flag_get_ensentence(-1);">例句🚩统计</span>',
     '<span class="span_menu" onclick="'+str_t+'eword_duplicate_ensentence();">行内重复 eword 检索</span>',
     fpara_menu_b(str_t,true),
     ];  
 
+    var group_list=[
+    ['🚩','sentence_flag_get_ensentence(-1);',true],
+    ['奇数个引号','odd_quote_get_ensentence();',true],
+    ];    
+    klmenu_config.push(menu_container_b(str_t,group_list,'统计：'));
+    
     var group_list=[
     ['⚪ reg','klmenu_check_b(this.id,true);',true,'span_reg_ensentence'],
     ['⚪ show button','klmenu_check_b(this.id,true);',true,'span_button_show_ensentence'],
@@ -105,9 +110,8 @@ function menu_ensentence(){
         var group_list=[
         ['最短例句','length_sort_ensentence();',true],
         ['最长例句','length_sort_ensentence(false);',true],
-
         ];    
-        klmenu_config.push(menu_container_b(str_t,group_list,''));        
+        klmenu_config.push(menu_container_b(str_t,group_list,'<select id="select_length_sort_ensentence_type"><option>分句</option><option>全句</option></select>：'));        
     }
     
     var klmenu_link=[
@@ -422,23 +426,34 @@ function enwords_count_sentence_data_save_ensentence(){
     string_2_txt_file_b('var en_sentence_count_global=[\n'+list_t.join('\n')+'\n];\n','enwords_count_sentence_data.js','txt');
 }
 
-function length_sort_ensentence(is_short=true){
+function length_sort_ensentence(is_short=true,do_merge=-1){
     var t0 = performance.now();
-
+    if (do_merge===-1){
+        var do_merge=(document.getElementById('select_length_sort_ensentence_type').value=='全句');
+    }
+    
     var result_t=[];
+    var re_combine=sentence_split_status_generate_b();
     for (let blno=0,lent=en_sentence_global.length;blno<lent;blno++){
         var aline=en_sentence_global[blno];
         //if (aline[2].slice(-4,)=='_TLS'){continue;}   //此行保留 - 保留注释
-
-        if (Array.isArray(aline[0])){
-            var blstr=aline[0].join('');    //不能合并为' ' - 保留注释
-        } else {
-            var blstr=aline[0];
-        }
         
-        blstr=blstr.replace(/&lt;eword w=.*?&gt;&lt;\/eword&gt;/g,'');
-        //if (blstr.length>50+10){continue;}  //最短例句长度是50 - 保留注释
-        result_t.push([blstr.length,aline]);
+        if (do_merge){
+            if (Array.isArray(aline[0])){
+                var blstr=aline[0].join('');    //不能合并为' ' - 保留注释
+            } else {
+                var blstr=aline[0];
+            }
+            blstr=blstr.replace(/&lt;eword w=.*?&gt;&lt;\/eword&gt;/g,'');
+            //if (blstr.length>50+10){continue;}  //最短例句长度是50 - 保留注释
+            result_t.push([blstr.length,aline]);     
+        } else {
+            var line_split=sentence_split_b(aline[0],blno,re_combine);
+            for (let arow of line_split){
+                arow=arow.replace(/&lt;eword w=.*?&gt;&lt;\/eword&gt;/g,'');
+                result_t.push([arow.length,[arow].concat(aline.slice(1,))]);
+            }
+        }
     }
     
     if (is_short){
@@ -447,13 +462,19 @@ function length_sort_ensentence(is_short=true){
         result_t.sort(function (a,b){return a[0]<b[0] ? 1 : -1;});    
     }
     
+    var bllen=result_t.length;
+    var groups=group_2_equal_bins_b(array_split_by_col_b(result_t,[0]),20,true);
+    for (let blxl=0,lent=groups.length;blxl<lent;blxl++){
+        groups[blxl]='<b>'+groups[blxl]['interval'].toString().replace(',','~')+':</b> '+groups[blxl]['values'].length+' ('+(groups[blxl]['values'].length*100/bllen).toFixed(3)+'%)';
+    }
+    
     result_t=result_t.slice(0,200);
     for (blxl=0,lent=result_t.length;blxl<lent;blxl++){
         result_t[blxl]=result_t[blxl][1];
     }
     var bljg=sentence_list_2_html_b(result_t,[''],500,false);
     
-    document.getElementById('divhtml').innerHTML='<div class="div_sentence">'+bljg.join('\n')+'</div><p><i>('+bljg.length+')</i></p>';
+    document.getElementById('divhtml').innerHTML='<div class="div_sentence">'+bljg.join('\n')+'</div><p><i>('+bljg.length+')</i> '+groups.join(' | ')+'</p>';
     console.log('length_sort_ensentence() 费时：'+(performance.now() - t0) + ' milliseconds');    
 }
 
@@ -501,68 +522,74 @@ function rare_old_words_ensentence(cscaption='',show_sentence=false,generate_js=
         }  
     }
     
+    function sub_rare_old_words_ensentence_done(){
+        console.log(re_combine);
+        
+        result_t=object2array_b(result_t);
+        result_t.sort();
+        result_t.sort(function (a,b){return a[1]>b[1] ? 1 : -1;});   //出现次数从少到多排列 - 保留注释
+        var oldset=simple_words_b(true,true);
+        en_word_temp_get_b();
+        words_searched_arr_global=[];            
+        var blno=0;
+        for (let arow of result_t){
+            if (!oldset.has(arow[0].toLowerCase())){continue;}
+            if (source_check && arow[1]==0){continue;}
+            if (arow[1]>=max_count && blno>=rows_min){break;}
+            words_searched_arr_global.push(arow[0]);
+            blno=blno+1;
+        }
+        
+        if (words_searched_arr_global.length>rows_max){
+            words_searched_arr_global.sort(randomsort_b);
+            words_searched_arr_global=words_searched_arr_global.slice(0,rows_max);
+        }
+        words_searched_arr_global=rare_old_words_sort_ensentence(words_searched_arr_global);
+        
+        var bltextarea=rare_old_words_form_ensentence(words_searched_arr_global,generate_js);
+        
+        var progress_list=ltp_status_get_b('+例句 +单词','green','white',100);
+
+        var remained_days=days_remained_of_year_b();
+        var theyear=new Date().getFullYear();
+        var nextyear_days=isLeapYear_b(theyear,1,true);
+        var max_in_current_year=(words_searched_arr_global.length+4*remained_days);
+        var nextyear_count=words_searched_arr_global.length+4*(remained_days+nextyear_days);
+
+        var blpercent_current=(words_searched_arr_global.length*100/enwords.length).toFixed(2);
+        var blpercent_this_year=((words_searched_arr_global.length+max_in_current_year)*100/(enwords.length+max_in_current_year)).toFixed(2);
+        var blpercent_next_year=((words_searched_arr_global.length+nextyear_count)*100/(enwords.length+nextyear_count)).toFixed(2);
+        
+        if (cscaption=='例句最少的单词'){
+            local_storage_today_b('estimated_rare_words_count',40,max_in_current_year,'/');
+            local_storage_today_b('rare_words_in_old_words_percent',40,blpercent_current,'/');
+            local_storage_today_b('estimated_rare_words_percent',40,blpercent_this_year,'/');
+        }
+        
+        var remain_str='当前'+cscaption+'占全部旧单词比为 '+blpercent_current+'%，今年剩余天数 '+remained_days+' 天，按 4个单词/日 计算， '+theyear+' 年内最多产生 '+max_in_current_year+' 个'+cscaption+'，占比 '+blpercent_this_year+'%，至 '+(theyear+1)+' 年底，最多产生 '+nextyear_count+' 个，占比 '+blpercent_next_year+'%';
+        
+        document.getElementById('divhtml').innerHTML='<p>'+progress_list.join(' ')+'</p><p>'+remain_str+'</p>'+enwords_array_to_html_b(words_searched_arr_global,false)+bltextarea;
+        
+        if (source_check){
+            var local_id='enwords_one_source_ensentence';
+        } else {
+            var local_id=(max_count>1?'enwords_rare_ensentence':'enwords_non_ensentence');
+        }
+        local_storage_today_b(local_id,40,words_searched_arr_global.length,'/');
+        
+        if (show_sentence){
+            show_sentence_enwc_b();
+        }
+        console.log('rare_old_words_ensentence() 费时：'+(performance.now() - t0) + ' milliseconds');
+    }
+    
     function sub_rare_old_words_ensentence_arow(){
         if (blxl>=bllen){
-            result_t=object2array_b(result_t);
-            result_t.sort();
-            result_t.sort(function (a,b){return a[1]>b[1] ? 1 : -1;});   //出现次数从少到多排列 - 保留注释
-            var oldset=simple_words_b(true,true);
-            en_word_temp_get_b();
-            words_searched_arr_global=[];            
-            var blno=0;
-            for (let arow of result_t){
-                if (!oldset.has(arow[0].toLowerCase())){continue;}
-                if (source_check && arow[1]==0){continue;}
-                if (arow[1]>=max_count && blno>=rows_min){break;}
-                words_searched_arr_global.push(arow[0]);
-                blno=blno+1;
-            }
-            
-            if (words_searched_arr_global.length>rows_max){
-                words_searched_arr_global.sort(randomsort_b);
-                words_searched_arr_global=words_searched_arr_global.slice(0,rows_max);
-            }
-            words_searched_arr_global=rare_old_words_sort_ensentence(words_searched_arr_global);
-            
-            var bltextarea=rare_old_words_form_ensentence(words_searched_arr_global,generate_js);
-            
-            var progress_list=ltp_status_get_b('+例句 +单词','green','white',100);
-
-            var remained_days=days_remained_of_year_b();
-            var theyear=new Date().getFullYear();
-            var nextyear_days=isLeapYear_b(theyear,1,true);
-            var max_in_current_year=(words_searched_arr_global.length+4*remained_days);
-            var nextyear_count=words_searched_arr_global.length+4*(remained_days+nextyear_days);
-
-            var blpercent_current=(words_searched_arr_global.length*100/enwords.length).toFixed(2);
-            var blpercent_this_year=((words_searched_arr_global.length+max_in_current_year)*100/(enwords.length+max_in_current_year)).toFixed(2);
-            var blpercent_next_year=((words_searched_arr_global.length+nextyear_count)*100/(enwords.length+nextyear_count)).toFixed(2);
-            
-            if (cscaption=='例句最少的单词'){
-                local_storage_today_b('estimated_rare_words_count',40,max_in_current_year,'/');
-                local_storage_today_b('rare_words_in_old_words_percent',40,blpercent_current,'/');
-                local_storage_today_b('estimated_rare_words_percent',40,blpercent_this_year,'/');
-            }
-            
-            var remain_str='当前'+cscaption+'占全部旧单词比为 '+blpercent_current+'%，今年剩余天数 '+remained_days+' 天，按 4个单词/日 计算， '+theyear+' 年内最多产生 '+max_in_current_year+' 个'+cscaption+'，占比 '+blpercent_this_year+'%，至 '+(theyear+1)+' 年底，最多产生 '+nextyear_count+' 个，占比 '+blpercent_next_year+'%';
-            
-            document.getElementById('divhtml').innerHTML='<p>'+progress_list.join(' ')+'</p><p>'+remain_str+'</p>'+enwords_array_to_html_b(words_searched_arr_global,false)+bltextarea;
-            
-            if (source_check){
-                var local_id='enwords_one_source_ensentence';
-            } else {
-                var local_id=(max_count>1?'enwords_rare_ensentence':'enwords_non_ensentence');
-            }
-            local_storage_today_b(local_id,40,words_searched_arr_global.length,'/');
-            
-            if (show_sentence){
-                show_sentence_enwc_b();
-            }
-            console.log('rare_old_words_ensentence() 费时：'+(performance.now() - t0) + ' milliseconds');
+            sub_rare_old_words_ensentence_done();
             return;
         }
         
-        var line_split=sentence_split_b(en_sentence_global[blxl][0],blxl);
+        var line_split=sentence_split_b(en_sentence_global[blxl][0],blxl,re_combine);
         if (source_check){
             var words_list=new Set(line_split.join('\n').toLowerCase().match(/[a-zA-Z\-']+/mg) || []);
             sub_rare_old_words_ensentence_words(words_list);
@@ -595,9 +622,81 @@ function rare_old_words_ensentence(cscaption='',show_sentence=false,generate_js=
 
     var blxl=0;
     var bllen=en_sentence_global.length;
+    var re_combine=sentence_split_status_generate_b();
     sub_rare_old_words_ensentence_arow();
 }
 
+function odd_quote_get_ensentence(csmax=-1,show_button=true,csmobile_font=false){
+    function sub_odd_quote_get_ensentence_check(compared,csstr){
+        let blfound=false;
+        for (let one_quote of csstr){
+            let match_list=compared.match(new RegExp(one_quote,'g')) || [];
+            if (match_list.length % 2 == 0){continue;}
+            
+            blfound=true;
+            break;
+        }    
+        return blfound;
+    }
+    
+    if (typeof en_sentence_global == 'undefined'){
+        return 'en_sentence_global 未定义';
+    }
+
+    var t0 = performance.now();
+
+	var blcount=0;
+    var result_t=[];
+    var do_break=false;
+    var keys=new Set();
+    var re_combine=sentence_split_status_generate_b();
+    re_combine['alone']=0;
+    var compared, compared2;
+	for (let blxl=0,lent=en_sentence_global.length;blxl<lent;blxl++){
+        var aline=en_sentence_global[blxl];
+        var line_split=sentence_split_b(aline[0],blxl,re_combine);
+        for (let arow of line_split){
+            //将单词内部的撇号（包括各种单引号变体）标准化为下划线 - 保留注释
+            compared=arow.replace(/([a-z0-9])['‘’]([a-z0-9])/ig,'$1_$2');   //把夹在两个字母/数字之间的引号换成下划线
+
+            let blfound=sub_odd_quote_get_ensentence_check(compared,'"\'');
+            
+            if (!blfound){
+                compared2=compared.replace(/“[^“”]+”/g,''); //清空“”之间的内容 - 保留注释
+                blfound=sub_odd_quote_get_ensentence_check(compared2,'“”');  //是否存在奇数个“” - 保留注释
+                if (!blfound){
+                    compared2=compared.replace(/‘[^‘’]+’/g,'');
+                    blfound=sub_odd_quote_get_ensentence_check(compared2,'‘’');
+                }
+            }
+            
+            if (blfound){
+                if (compared.match(/^[^'"“”‘’]+['’]\s[^'"“”‘’]+$/)){
+                    if (re_combine['console']){
+                        console.log('alone:',arow);
+                    }
+                    re_combine['alone']=re_combine['alone']+1;
+                    blfound=false;
+                }
+            }
+            
+            if (blfound){
+                result_t.push([arow].concat(aline.slice(1,)));
+                blcount=blcount+1;
+                if (csmax>=0 && blcount>=csmax){
+                    do_break=true;
+                    break;
+                }
+            }
+        }
+        if (do_break){break;}
+    }
+    console.log(re_combine);
+    result_t=sentence_list_2_html_b(result_t,['"',"'",'“','”','‘','’'],csmax,show_button,csmobile_font,false,false,'rs');
+
+	document.getElementById('divhtml').innerHTML='<div class="div_sentence">'+result_t.join('\n')+'</div><p><i>('+result_t.length+')</i></p>';
+    console.log('odd_quote_get_ensentence() 费时：'+(performance.now() - t0) + ' milliseconds');
+}
 
 function sentence_flag_get_ensentence(csmax=-1,show_button=true,csmobile_font=false){
     function sentence_flag_get_ensentence_word(csstr){
@@ -624,9 +723,10 @@ function sentence_flag_get_ensentence(csmax=-1,show_button=true,csmobile_font=fa
     var result_t=[];
     var do_break=false;
     var keys=new Set();
+    var re_combine=sentence_split_status_generate_b();
 	for (let blxl=0,lent=en_sentence_global.length;blxl<lent;blxl++){
         var aline=en_sentence_global[blxl];
-        var line_split=sentence_split_b(aline[0],blxl);
+        var line_split=sentence_split_b(aline[0],blxl,re_combine);
         for (let arow of line_split){
             if (!arow.includes('&lt;eword w=')){continue;}
             var word_set=(sentence_flag_get_ensentence_word(arow));
@@ -642,7 +742,7 @@ function sentence_flag_get_ensentence(csmax=-1,show_button=true,csmobile_font=fa
         }
         if (do_break){break;}
 	}
-    
+    console.log(re_combine);
     result_t=sentence_list_2_html_b(result_t,Array.from(keys),csmax,show_button,csmobile_font);
     var bljg=[];
     for (let item of result_t){
@@ -829,14 +929,18 @@ function random_get_ensentence(input_mode=false){
 
     var row_and_col_no_list=[];
     var blsum=0;
+    var re_combine=sentence_split_status_generate_b();
 	for (let blxl=0,lent=en_sentence_global.length;blxl<lent;blxl++){
         var aline=en_sentence_global[blxl];
-        var line_split=sentence_split_b(aline[0],blxl);
+        var line_split=sentence_split_b(aline[0],blxl,re_combine);
         row_and_col_no_list.push([blsum,blsum+line_split.length-1]);
         blsum=blsum+line_split.length;
 	}
     
-    if (row_and_col_no_list.length==0){return;}
+    if (row_and_col_no_list.length==0){
+        console.log(re_combine);
+        return;
+    }
     
     var row_no_list=randint_list_b(0,row_and_col_no_list.slice(-1,)[0][1],blmax);
     row_no_list.sort(function (a,b){return a<b?-1:1;});
@@ -847,13 +951,13 @@ function random_get_ensentence(input_mode=false){
             var arow=row_and_col_no_list[blxl];
             if (item>=arow[0] && item<=arow[1]){
                 var aline=en_sentence_global[blxl];
-                var line_split=sentence_split_b(aline[0],blxl);
+                var line_split=sentence_split_b(aline[0],blxl,re_combine);
                 bljg.push([line_split[item-arow[0]]].concat(aline.slice(1,)));
                 break;
             }
         }
     }
-
+    console.log(re_combine);
     var result_t=sentence_list_2_html_b(bljg,[''],blmax,show_button,false);
 	var odiv=document.getElementById('divhtml');
     
@@ -887,12 +991,12 @@ function get_day_sentences(csday='',csmonth='',use_asc=true){
     [blyear,csmonth,csday,bldate]=get_month_day_enwc_b(csday,csmonth);
 
     var csdays=months_b(csmonth-1)+csday;
-
+    var re_combine=sentence_split_status_generate_b();
     var list_t=[];
     if (use_asc){
         for (let blno=0,lent=en_sentence_global.length;blno<lent;blno++){
             var aline=en_sentence_global[blno];    
-            var line_split=sentence_split_b(aline[0],blno);
+            var line_split=sentence_split_b(aline[0],blno,re_combine);
             for (let arow of line_split){
                 var asc_t=asc_sum_b(arow);            
                 if ((1+asc_t%365)==csdays){
@@ -909,12 +1013,12 @@ function get_day_sentences(csday='',csmonth='',use_asc=true){
         var blend=Math.min(en_sentence_global.length,Math.floor(csdays*blsection));
         for (let blno=blstart;blno<blend;blno++){
             var aline=en_sentence_global[blno];    
-            var line_split=sentence_split_b(aline[0],blno);
+            var line_split=sentence_split_b(aline[0],blno,re_combine);
             var arow=line_split.join('');
             list_t.push([arow].concat(aline.slice(1,)));
         }
     }
-    
+    console.log(re_combine);
     var show_button=klmenu_check_b('span_button_show_ensentence',false);
 
     var bljg=sentence_list_2_html_b(list_t,[''],500,show_button,false,!use_asc,!use_asc);    

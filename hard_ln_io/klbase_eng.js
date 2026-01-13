@@ -675,7 +675,15 @@ function en_sentence_p_style_b(fontsize=''){
     return '<p class="p_enwords_sentence" style="line-height:130%;font-size:'+fontsize+'rem;margin-top:0.3rem;padding:0.2rem 0.5rem;">';
 }
 
-function en_sentence_one_line_b(aline,wordname='',attachment_path='',wikisite='',button_str='',return_arr=false,keep_kleng=false){  //attachment_path 用于替换 {{wikiuploads}} - 保留注释
+function en_sentence_one_line_b(aline,wordname='',attachment_path='',wikisite='',button_str='',return_arr=false,keep_kleng=false,remove_quote='rq'){  //attachment_path 用于替换 {{wikiuploads}} - 保留注释
+    function sub_en_sentence_one_line_b_return(){
+        if (return_arr){
+            return [];
+        } else {
+            return '';
+        }    
+    }
+    
     function sub_en_sentence_one_line_b_replace(item,aword){
         item=item.replace(new RegExp('&lt;eword w=&quot;'+aword+'&quot;&gt;&lt;/eword&gt;','g'),'<sup>🚩</sup>');
         item=item.replace(new RegExp('&lt;eword w='+aword+'&gt;&lt;/eword&gt;','g'),'<sup>🚩</sup>');    
@@ -716,11 +724,7 @@ function en_sentence_one_line_b(aline,wordname='',attachment_path='',wikisite=''
     
     //若循环一遍后未含有 指定的单词组，则直接返回空字符串 - 保留注释
     if (blmatch==false){
-        if (return_arr){
-            return [];
-        } else {
-            return '';
-        }
+        return sub_en_sentence_one_line_b_return();
     }
     
     if (!keep_kleng){
@@ -745,6 +749,29 @@ function en_sentence_one_line_b(aline,wordname='',attachment_path='',wikisite=''
             }
         }
     }
+    
+    //处理 “不完整引号” 的情况
+    //如果字符串只有开头引号，就去掉开头引号
+    //如果字符串只有结尾引号，就去掉结尾引号
+    if (['rq','rs'].includes(remove_quote) && item.match(/^['"”“‘’]|['"”“‘’]$/)){
+        let compared=item.replace(/([a-z0-9])['‘’]([a-z0-9])/ig,'$1_$2');
+        if (compared.match(/^'[^']+$/) || compared.match(/^"[^"]+$/) || compared.match(/^‘[^‘’]+$/) || compared.match(/^“[^“”]+$/)){
+            if (remove_quote=='rs'){
+                return sub_en_sentence_one_line_b_return();
+            } else {
+                item=item.slice(1,);
+            }
+        }
+        
+        if (compared.match(/^[^']+'$/) || compared.match(/^[^"]+"$/) || compared.match(/^[^‘’]+’$/) || compared.match(/^[^“”]+”$/)){
+            if (remove_quote=='rs'){
+                return sub_en_sentence_one_line_b_return();
+            } else {
+                item=item.slice(0,-1);
+            }
+        }
+    }
+    
     var bljg='<span class="span_enwords_sentence">'+wiki_line_b(item,attachment_path)+'</span>';
     
     //---
@@ -806,6 +833,7 @@ function en_sentence_result_b(wordname,csmax=-1,fontsize='',attachment_path='',w
     }
     var p_style=en_sentence_p_style_b(fontsize);
     
+    var re_combine=sentence_split_status_generate_b();
     var split_no_set=new Set();
     if (Array.isArray(wordname)){
         var sentence_list={};
@@ -819,7 +847,7 @@ function en_sentence_result_b(wordname,csmax=-1,fontsize='',attachment_path='',w
                 if (csmax>0 && sentence_list['w_'+aword][1]>=csmax){continue;}
             
                 var search_site=(aline[2].slice(-4,)=='_TLS'?txtlistsearch_site:wikisite);
-                var line_split=sentence_split_b(aline[0],blno);
+                var line_split=sentence_split_b(aline[0],blno,re_combine);
                 split_no_set.add(blno);
                 for (let arow of line_split){
                     var str_t=en_sentence_one_line_b([arow].concat(aline.slice(1,)),aword,attachment_path,search_site,button_str);
@@ -832,7 +860,7 @@ function en_sentence_result_b(wordname,csmax=-1,fontsize='',attachment_path='',w
                 }
             }
         }
-        
+        console.log(re_combine);
         sub_en_sentence_result_b_statistics();
         return sentence_list;
     } else {
@@ -843,7 +871,7 @@ function en_sentence_result_b(wordname,csmax=-1,fontsize='',attachment_path='',w
             var aline=en_sentence_global[blno];
             var search_site=(aline[2].slice(-4,)=='_TLS'?txtlistsearch_site:wikisite);
             var do_break=false;
-            var line_split=sentence_split_b(aline[0],blno);
+            var line_split=sentence_split_b(aline[0],blno,re_combine);
             split_no_set.add(blno);
 
             for (let arow of line_split){
@@ -860,7 +888,7 @@ function en_sentence_result_b(wordname,csmax=-1,fontsize='',attachment_path='',w
             }
             if (do_break){break;}
         }
-        
+        console.log(re_combine);
         sub_en_sentence_result_b_statistics();
         return [bljg,blxl,no_next];
     }
@@ -2393,7 +2421,7 @@ function en_sentence_attachment_wikisite_path_get_b(islocal,remote_host,sele_pat
     return [attachment_path,wikisite];
 }
 
-function sentence_list_2_html_b(cslist,csword_list=[''],csmax=500,show_button=true,csmobile_font=false,return_arr=false,keep_kleng=false){
+function sentence_list_2_html_b(cslist,csword_list=[''],csmax=500,show_button=true,csmobile_font=false,return_arr=false,keep_kleng=false,remove_quote='rq'){
     var remote_host=local_storage_get_b('kl_remote_host',-1,false);
     var mobile_pc_font_size='';
     if (ismobile_b()){
@@ -2412,14 +2440,14 @@ function sentence_list_2_html_b(cslist,csword_list=[''],csmax=500,show_button=tr
         //符合宽泛的条件后，再判断是否含有 过滤后的单词，若没有返回空字符 - 保留注释
         [attachment_path,wikisite]=en_sentence_attachment_wikisite_path_get_b(islocal,remote_host,sele_path,item);
 
-        var str_t=en_sentence_one_line_b(item,csword_list,attachment_path,wikisite,button_str,return_arr,keep_kleng);
+        var str_t=en_sentence_one_line_b(item,csword_list,attachment_path,wikisite,button_str,return_arr,keep_kleng,remove_quote);
         
         if (return_arr){
             if (str_t.length>0){
                 bljg.push(str_t);
                 blcount=blcount+1;
             }
-        } else if (str_t!=''){
+        } else if (str_t!==''){
             bljg.push(p_style+str_t+'</p>');
             blcount=blcount+1;
         }        
@@ -2434,13 +2462,39 @@ function sentence_horizontal_overflow_check_b(){
     doms_horizontal_overflow_check_b(ocontainer,ospans);
 }
 
-function sentence_split_b(csstr,csno=-1){   //sentence split - 保留注释
+function sentence_split_status_generate_b(){
+    return {'小写':0,'长度':0,'单词数':0,'http':0,'()':0,'_Dr.':0,'Dr.':0,'etc':0,'console':false};
+}
+
+function sentence_split_b(csstr,csno=-1,re_combine=false){   //sentence split - 保留注释
+    function sub_sentence_split_b_count(cstype,str1,str2){
+        re_combine[cstype]=re_combine[cstype]+1;
+        if (re_combine['console']){
+            console.log('例句再合并 '+cstype+':',str1,str2);
+        }
+    }
+    
     function sub_sentence_split_b_check_str(csstr1,csstr2){
-        let blcheck=csstr1.length<10 || (csstr1.match(/\s/g) || []).length<5 || csstr2.length<10 || (csstr2.match(/\s/g) || []).length<5 || csstr2.trim().match(/^[a-z]/);   //如果csstr2 以小写字母开头 - 保留注释
-        if (blcheck){return true;}
+        let blcheck=csstr1.length<25 || csstr2.length<25;
+        if (blcheck){
+            sub_sentence_split_b_count('长度',csstr1,csstr2);
+            return true;
+        }
+    
+        blcheck=(csstr1.match(/\s+/g) || []).length<10 || (csstr2.match(/\s+/g) || []).length<10;
+        if (blcheck){
+            sub_sentence_split_b_count('单词数',csstr1,csstr2);
+            return true;
+        }
+        
+        blcheck=csstr2.trim().match(/^[a-z]/);   //如果csstr2 以小写字母开头 - 保留注释
+        if (blcheck){
+            sub_sentence_split_b_count('小写',csstr1,csstr2);
+            return true;
+        }
         
         if (csstr1.match(/\[https?:\/\/[^\]]+$/)){
-            console.log('例句再合并 http:',csstr1,csstr2);
+            sub_sentence_split_b_count('http',csstr1,csstr2);
             return true;
         }
         
@@ -2449,17 +2503,22 @@ function sentence_split_b(csstr,csno=-1){   //sentence split - 保留注释
             if (quote1=='('){
                 let quote2=(csstr2.match(/[\(\)]/) || [''])[0];  //获取第一个括号 - 保留注释
                 if (quote2==')'){
-                    console.log('例句再合并 ():',csstr1,csstr2);
+                    sub_sentence_split_b_count('()',csstr1,csstr2);                
                     return true;
                 }
             }
         }
-        
+
         return false;
     }
     
     function sub_sentence_split_b_check_etc(col_no){
-        return sub_sentence_split_b_check_str(list_t[col_no-1],list_t[col_no]) || list_t[col_no-1].trim().slice(-5,)==' etc.'; 
+        if (list_t[col_no-1].trim().slice(-5,)==' etc.'){
+            sub_sentence_split_b_count('etc',list_t[col_no-1],list_t[col_no]);
+            return true;
+        } else {
+            return sub_sentence_split_b_check_str(list_t[col_no-1],list_t[col_no]); 
+        }
     }
     //-----------------------
     if (Array.isArray(csstr)){
@@ -2471,6 +2530,9 @@ function sentence_split_b(csstr,csno=-1){   //sentence split - 保留注释
         return [csstr];
     }
     
+    if (re_combine===false){
+        re_combine=sentence_split_status_generate_b();
+    }
     var old_str=csstr;
     
     csstr=csstr.replace(/(([^A-Z]((\. )+)?\.|\?|!|\"|\?) )/g,'$1\n');
@@ -2481,7 +2543,11 @@ function sentence_split_b(csstr,csno=-1){   //sentence split - 保留注释
 
     if (has_mr){
         for (let blxl=list_t.length-1;blxl>0;blxl--){
-            if (sub_sentence_split_b_check_etc(blxl) || [' Dr.',' Mr.',' St.'].includes(list_t[blxl-1].trim().slice(-4,)) && list_t[blxl-1].slice(-1)!=='.'){
+            if (sub_sentence_split_b_check_etc(blxl)){
+                list_t[blxl-1]=list_t[blxl-1]+list_t[blxl];
+                list_t[blxl]='';
+            } else if ([' Dr.',' Mr.',' St.'].includes(list_t[blxl-1].trim().slice(-4,)) && list_t[blxl-1].slice(-1)!=='.'){
+                sub_sentence_split_b_count('_Dr.',list_t[blxl-1],list_t[blxl]);        
                 list_t[blxl-1]=list_t[blxl-1]+list_t[blxl];
                 list_t[blxl]='';
             }
@@ -2495,6 +2561,7 @@ function sentence_split_b(csstr,csno=-1){   //sentence split - 保留注释
         
         for (let blxl=0,lent=list_t.length-1;blxl<lent;blxl++){
             if (['Mr.','Dr.','St.'].includes(list_t[blxl].trim().slice(-3,))){
+                sub_sentence_split_b_count('Dr.',list_t[blxl],list_t[blxl+1]);
                 list_t[blxl+1]=list_t[blxl]+list_t[blxl+1];
                 list_t[blxl]='';
             }
@@ -2567,9 +2634,10 @@ function sentence_search_b(csword='',csreg=false,csmax=500,show_button=true,csmo
     }
     
     var result_t=[];
+    var re_combine=sentence_split_status_generate_b();
 	for (let blxl=0,lent=en_sentence_global.length;blxl<lent;blxl++){
         var aline=en_sentence_global[blxl];
-        var line_split=sentence_split_b(aline[0],blxl);
+        var line_split=sentence_split_b(aline[0],blxl,re_combine);
         var do_break=false;
         for (let arow of line_split){
             var blfound=str_reg_search_b(arow,blwordlist,csreg);
@@ -2589,6 +2657,7 @@ function sentence_search_b(csword='',csreg=false,csmax=500,show_button=true,csmo
         }
         if (do_break){break;}
 	}
+    console.log(re_combine);
     console.log(result_t.length);
     var bljg=sentence_list_2_html_b(result_t,blwordlist2,csmax,show_button,csmobile_font);
 	return '<div class="div_sentence">'+bljg.join('\n')+'</div><p><i>('+bljg.length+')</i></p>';

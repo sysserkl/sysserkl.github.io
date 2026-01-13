@@ -500,6 +500,7 @@ function txtmenus_kltxt_b(cstype=''){
     '<span class="span_menu" onclick="'+str_t+'digest_statistics_kltxt_b();">摘要分布统计</span>',
     '<span class="span_menu" onclick="'+str_t+'digest_sort_kltxt_b();">按文章顺序重新生成不重复的摘要</span>',    
     '<span class="span_menu" onclick="'+str_t+'wiki_style_kltxt_b();">当前页面WIKI格式生成</span>',
+    '<span class="span_menu" onclick="'+str_t+'multi_sentence_in_quote_kltxt_b();">标记引号内含有多个句子部分</span>',
     ];
     
     var group_list=[
@@ -2752,6 +2753,40 @@ function txtsearch_kltxt_b(csword='',csreg=-1,cscontinue=-1,add_recent=true,run_
     
     if (do_continue==false){
         render_html_kltxt_b(blwordlist,true,true,false,true,run_fn,ocontainer);
+    }
+}
+
+function multi_sentence_in_quote_kltxt_b(){
+    var odoms=document.querySelectorAll('span.span_multi_sentence_in_quote');
+    if (odoms.length>0){
+        for (let one_dom of odoms){
+            one_dom.style.display=(one_dom.style.display==''?'none':'');
+        }
+        odoms[0].scrollIntoView();
+        return;
+    }
+    
+    var query_str=container_query_doms_get_kltxt_b('p span.txt_content, li span.txt_content');
+    
+    for (let one_dom of query_str){
+        var old_text=one_dom.innerText;
+        let found_list=old_text.match(/(“[^“”]+[\.\?!]\s+)[^“”]+”/) || old_text.match(/("[^"]+[\.\?!]\s+)[^"]+"/) || old_text.match(/(‘[^‘’]+[\.\?!]\s+)[^‘’]+’/) || old_text.match(/('[^']+[\.\?!]\s+)[^']+'/);
+        //形如：[ "“I was a bookworm as a kid. By eleven I wanted to be an archaeologist, because of a fascination with ancient Egypt.”", "“I was a bookworm as a kid. " ]
+        if (!found_list){continue;}
+        
+        var old_html=one_dom.innerHTML;
+        var new_html=old_html;
+        new_html=new_html.replace(found_list[1],found_list[1]+'<span class="span_multi_sentence_in_quote" style="color:'+scheme_global['a-hover']+';">🅰</span>');
+        one_dom.innerHTML=new_html;
+        
+        if (one_dom.innerText.replace('🅰','')!==old_text){
+            console.log('error',found_list);
+            one_dom.innerHTML=old_html;
+        }
+    }
+    var odom=document.querySelector('span.span_multi_sentence_in_quote');
+    if (odom){
+        odom.scrollIntoView();
     }
 }
 

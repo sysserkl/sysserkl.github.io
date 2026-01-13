@@ -4587,6 +4587,9 @@ function arr_max_min_get_b(csarr,arr_in_col=-1,value_in_col=1,ignore_nan=true,ig
 }
 
 function zero_prefix_b(csnum,prefix='0'){
+    //zero_prefix_b(45692)
+    //return: Array [ -5, "00000" ]
+    
     var bllen=csnum.toString().length;
     return [-1*bllen,prefix.repeat(bllen)];
 }
@@ -5007,4 +5010,51 @@ function windows_filename_b(csstr,cstype='fullname',entype=false){
             break;
     }
     return new_name;
+}
+
+function group_2_equal_bins_b(arr, numBins,to_int=false){
+    const result = [];
+
+    if (arr.length == 0){return [];}
+
+    var min = Math.min(...arr);
+    var max = Math.max(...arr);
+    
+    if (to_int){
+        min=Math.floor(min);
+        max=Math.ceil(max);
+        
+        var remainder=(max - min) % numBins;
+        if (remainder>0){
+            max=numBins-remainder+max;
+        }
+    }
+    var binWidth = (max - min) / numBins;
+
+    if (min === max){
+        return [{'interval':[min,max],'values':arr}];
+    }
+
+    // 构建每个 bin 的区间和值
+    for (let blxl = 0; blxl < numBins; blxl++){
+        const start = min + blxl * binWidth;
+        const end = min + (blxl + 1) * binWidth;
+        // 最后一个区间闭合到 max（避免浮点误差）
+        const intervalEnd = (blxl === numBins - 1 ? max : end);
+        result.push({
+            interval: [start, intervalEnd],
+            values: [],
+        });
+    }
+
+    // 分配元素到对应 bin
+    for (const val of arr){
+        let binIndex = Math.floor((val - min) / binWidth);
+        if (binIndex >= numBins){
+            binIndex = numBins - 1; // 处理 max 的边界情况
+        }
+        result[binIndex].values.push(val);
+    }
+    
+    return result;
 }
