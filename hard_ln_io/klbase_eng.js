@@ -573,16 +573,18 @@ function sup_kleng_words_b(csdisplay='none',ocontainer=false,cstimes=0){
         if (word_t.substring(0,1)=='"' && word_t.slice(-1)=='"'){
             word_t=word_t.slice(1,-1);
         }
+        
         if (one_sup.style && one_sup.style.color=='blue'){
             var supcolor='blue';
         } else {
             var supcolor='#cc0000';
         }
+        
+        var blhead='<span class="span_sup_word_icon span_box" onclick="sup_kleng_show_hide_b(this);" style="margin-left:0.05rem;">🇬🇧</span><span class="span_sup_word_full" style="display:'+csdisplay+';margin-left:0.05rem;">';
         for (let item of enwords){
-            if (item[0]==word_t){
-                one_sup.innerHTML='<span class="span_sup_word_icon span_box" onclick="sup_kleng_show_hide_b(this);" style="margin-left:0.05rem;">🇬🇧</span><span class="span_sup_word_full" style="display:'+csdisplay+';margin-left:0.05rem;">(<span class="span_box" onclick="popup_words_links_b(event,\''+specialstr_j(word_t)+'\');"><font color="'+supcolor+'">'+item[1]+'</font></span> '+en_word_def_istrong_b(item[2])+')</span>';
-                break;
-            }
+            if (item[0]!==word_t){continue;}
+            one_sup.innerHTML=blhead+'(<span class="span_box span_kleng" onclick="popup_words_links_b(event,\''+specialstr_j(word_t)+'\');" title="'+specialstr_j(word_t)+'"><font color="'+supcolor+'">'+item[1]+'</font></span> '+en_word_def_istrong_b(item[2])+')</span>';
+            break;
         }
 	}
     console.log('sup_kleng_words_b() 等待次数：',cstimes,'费时：'+(performance.now() - t0) + ' milliseconds');
@@ -753,6 +755,7 @@ function en_sentence_one_line_b(aline,wordname='',attachment_path='',wikisite=''
     //处理 “不完整引号” 的情况
     //如果字符串只有开头引号，就去掉开头引号
     //如果字符串只有结尾引号，就去掉结尾引号
+    //item 可能形如：Now then, it<span style="background-color: #D9F2F2;">'</span>s this sodium that I extract from salt water and with which I compose my electric cells."
     if (['rq','rs'].includes(remove_quote) && item.match(/^['"”“‘’]|['"”“‘’]$/)){
         let compared=item.replace(/([a-z0-9])['‘’]([a-z0-9])/ig,'$1_$2');
         if (compared.match(/^'[^']+$/) || compared.match(/^"[^"]+$/) || compared.match(/^‘[^‘’]+$/) || compared.match(/^“[^“”]+$/)){
@@ -2658,7 +2661,6 @@ function sentence_search_b(csword='',csreg=false,csmax=500,show_button=true,csmo
         if (do_break){break;}
 	}
     console.log(re_combine);
-    console.log(result_t.length);
     var bljg=sentence_list_2_html_b(result_t,blwordlist2,csmax,show_button,csmobile_font);
 	return '<div class="div_sentence">'+bljg.join('\n')+'</div><p><i>('+bljg.length+')</i></p>';
 }

@@ -426,12 +426,14 @@ function enwords_count_sentence_data_save_ensentence(){
     string_2_txt_file_b('var en_sentence_count_global=[\n'+list_t.join('\n')+'\n];\n','enwords_count_sentence_data.js','txt');
 }
 
-function length_sort_ensentence(is_short=true,do_merge=-1){
+function length_sort_ensentence(is_short=true,do_merge=-1,keep_kleng=true){
     var t0 = performance.now();
     if (do_merge===-1){
-        var do_merge=(document.getElementById('select_length_sort_ensentence_type').value=='全句');
+        do_merge=(document.getElementById('select_length_sort_ensentence_type').value=='全句');
     }
     
+    var csmax=parseInt(document.getElementById('input_max_result').value);
+
     var result_t=[];
     var re_combine=sentence_split_status_generate_b();
     for (let blno=0,lent=en_sentence_global.length;blno<lent;blno++){
@@ -444,13 +446,17 @@ function length_sort_ensentence(is_short=true,do_merge=-1){
             } else {
                 var blstr=aline[0];
             }
-            blstr=blstr.replace(/&lt;eword w=.*?&gt;&lt;\/eword&gt;/g,'');
+            if (!keep_kleng){
+                blstr=blstr.replace(/&lt;eword w=.*?&gt;&lt;\/eword&gt;/g,'');
+            }
             //if (blstr.length>50+10){continue;}  //最短例句长度是50 - 保留注释
             result_t.push([blstr.length,aline]);     
         } else {
             var line_split=sentence_split_b(aline[0],blno,re_combine);
             for (let arow of line_split){
-                arow=arow.replace(/&lt;eword w=.*?&gt;&lt;\/eword&gt;/g,'');
+                if (!keep_kleng){
+                    arow=arow.replace(/&lt;eword w=.*?&gt;&lt;\/eword&gt;/g,'');
+                }
                 result_t.push([arow.length,[arow].concat(aline.slice(1,))]);
             }
         }
@@ -463,18 +469,19 @@ function length_sort_ensentence(is_short=true,do_merge=-1){
     }
     
     var bllen=result_t.length;
-    var groups=group_2_equal_bins_b(array_split_by_col_b(result_t,[0]),20,true);
+    var groups=group_2_equal_bins_b(array_split_by_col_b(result_t,[0]),20,keep_kleng);
     for (let blxl=0,lent=groups.length;blxl<lent;blxl++){
         groups[blxl]='<b>'+groups[blxl]['interval'].toString().replace(',','~')+':</b> '+groups[blxl]['values'].length+' ('+(groups[blxl]['values'].length*100/bllen).toFixed(3)+'%)';
     }
     
-    result_t=result_t.slice(0,200);
-    for (blxl=0,lent=result_t.length;blxl<lent;blxl++){
-        result_t[blxl]=result_t[blxl][1];
-    }
-    var bljg=sentence_list_2_html_b(result_t,[''],500,false);
+    result_t=result_t.slice(0,csmax);
+    result_t=array_split_by_col_b(result_t,[1]);
+    var bljg=sentence_list_2_html_b(result_t,[''],csmax,false,false,false,true);
     
     document.getElementById('divhtml').innerHTML='<div class="div_sentence">'+bljg.join('\n')+'</div><p><i>('+bljg.length+')</i> '+groups.join(' | ')+'</p>';
+    if (keep_kleng){
+        sup_kleng_words_b();
+    }
     console.log('length_sort_ensentence() 费时：'+(performance.now() - t0) + ' milliseconds');    
 }
 
@@ -692,8 +699,10 @@ function odd_quote_get_ensentence(csmax=-1,show_button=true,csmobile_font=false)
         if (do_break){break;}
     }
     console.log(re_combine);
-    result_t=sentence_list_2_html_b(result_t,['"',"'",'“','”','‘','’'],csmax,show_button,csmobile_font,false,false,'rs');
-
+    result_t=sentence_list_2_html_b(result_t,[''],csmax,show_button,csmobile_font,false,false,'rs');
+    //第二个参数不能是 ['"',"'",'“','”','‘','’']，加亮后会影响判断开头和末尾的引号 - 保留注释
+    //keep_kleng 不能是 true
+    
 	document.getElementById('divhtml').innerHTML='<div class="div_sentence">'+result_t.join('\n')+'</div><p><i>('+result_t.length+')</i></p>';
     console.log('odd_quote_get_ensentence() 费时：'+(performance.now() - t0) + ' milliseconds');
 }
@@ -918,7 +927,32 @@ function search_sentences(csstr=false){
 }
 
 function eword_duplicate_ensentence(){
-    search_sentences('&lt;eword.*&lt;eword');
+    //search_sentences('eword.*eword.*eword');
+    var t0 = performance.now();
+    var csmax=parseInt(document.getElementById('input_max_result').value);
+    
+    var result_t=[];
+    for (let blno=0,lent=en_sentence_global.length;blno<lent;blno++){
+        var aline=en_sentence_global[blno];
+        
+        if (Array.isArray(aline[0])){
+            var blstr=aline[0].join('');    //不能合并为' ' - 保留注释
+        } else {
+            var blstr=aline[0];
+        }
+        
+        let blfound=str_reg_search_b(blstr,'\\beword\\b.*\\beword\\b.*\\beword\\b',true);
+        if (blfound==-1){break;}        
+        if (blfound){
+            result_t.push([blstr.length,aline]);
+            if (result_t.length>=csmax){break;}
+        }
+    }
+
+    result_t=array_split_by_col_b(result_t,[1]);
+    var bljg=sentence_list_2_html_b(result_t,[''],csmax,false);
+    document.getElementById('divhtml').innerHTML='<div class="div_sentence">'+bljg.join('\n')+'</div><p><i>('+bljg.length+')</i></p>';
+    console.log('eword_duplicate_ensentence() 费时：'+(performance.now() - t0) + ' milliseconds');    
 }
 
 function random_get_ensentence(input_mode=false){

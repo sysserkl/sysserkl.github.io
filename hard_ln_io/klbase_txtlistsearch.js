@@ -350,12 +350,12 @@ function txtmenus_kltxt_b(cstype=''){
         
     menu_general=menu_general.concat([
     '<span id="span_add_zero_reading_lines_txtlistsearch" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 阅读行数补零</span>',
-    //'<span class="span_menu" onclick="'+str_t+'new_words_kltxt_b([2],\'exclude\',true);">当前页面不在例句中的生词</span>',
     ]);    
 
     var group_list=[
     ['当前页面不在例句中的生词','new_words_kltxt_b([2],\'exclude\',true);',true],
     ['摘要中的旧单词','old_words_in_digest_kltxt_b();',true],
+    ['行内多余旧单词','old_words_redundant_kltxt_b();',true],
     ];    
     menu_general.push(menu_container_b(str_t,group_list,''));
     
@@ -525,7 +525,7 @@ function txtmenus_kltxt_b(cstype=''){
     var bljg='';
     var colors=klmenu_b(color_menu,'🎨',(ismobile_b()?'16rem':'20rem'),'',fontsize,'20rem');
     if (cstype!=='digest'){
-        bljg=bljg+klmenu_b(menu_general,'','27rem','',fontsize);
+        bljg=bljg+klmenu_b(menu_general,'','29rem','',fontsize);
         bljg=bljg+klmenu_b(menu_dir,'🔍',menu_dir_width,'',fontsize);
         bljg=bljg+klmenu_b(menu_digest,'🖊','34rem','',fontsize);       
         bljg=bljg+colors;
@@ -551,6 +551,21 @@ function content_horizontal_overflow_check_kltxt_b(){
     var ocontainer=document.getElementById('divhtml');
     var ospans=ocontainer.querySelectorAll('span.txt_content');
     doms_horizontal_overflow_check_b(ocontainer,ospans);
+}
+
+function old_words_redundant_kltxt_b(){
+    var result_t=[];
+    var orows=document.querySelectorAll('span.txt_content');
+    for (let arow of orows){
+        var ospans=arow.querySelectorAll('span.span_kleng');
+        var lent=ospans.length;
+        if (lent<2){continue;}
+        //<span class="span_box span_kleng" onclick="popup_words_links_b(event,'unofficial');" title="unofficial"><font color="#cc0000">[ˌʌnə'fɪʃ(ə)l]</font></span>
+        for (let blxl=1;blxl<lent;blxl++){
+            result_t.push(ospans[blxl].getAttribute('title'));
+        }
+    }
+    alert('结果：\n^\\*('+result_t.join('|')+')$');
 }
 
 function old_words_in_digest_kltxt_b(){
