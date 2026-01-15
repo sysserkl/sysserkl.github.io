@@ -664,7 +664,7 @@ function odd_quote_get_ensentence(csmax=-1,show_button=true,csmobile_font=false)
         var line_split=sentence_split_b(aline[0],blxl,re_combine);
         for (let arow of line_split){
             //将单词内部的撇号（包括各种单引号变体）标准化为下划线 - 保留注释
-            compared=arow.replace(/([a-z0-9])['‘’]([a-z0-9])/ig,'$1_$2');   //把夹在两个字母/数字之间的引号换成下划线
+            compared=en_sentence_quote_compared_get_b(arow);
 
             let blfound=sub_odd_quote_get_ensentence_check(compared,'"\'');
             
@@ -703,8 +703,67 @@ function odd_quote_get_ensentence(csmax=-1,show_button=true,csmobile_font=false)
     //第二个参数不能是 ['"',"'",'“','”','‘','’']，加亮后会影响判断开头和末尾的引号 - 保留注释
     //keep_kleng 不能是 true
     
-	document.getElementById('divhtml').innerHTML='<div class="div_sentence">'+result_t.join('\n')+'</div><p><i>('+result_t.length+')</i></p>';
+    var buttons='<span class="aclick" onclick="quote_ignore_ensentence(\'s_quote_space\');">忽略内部仅有一个s\'或s’的句子</span>';
+    buttons=buttons+'<span class="aclick" onclick="quote_ignore_ensentence(\'az_quote_az\');">忽略含有[a-z][\'’][a-z]但无其他引号的句子</span>';
+    buttons=buttons+'<span class="aclick" onclick="quote_ignore_ensentence(\'space_q_quote_09\');">忽略含有\\s[\'’][0-9]但无其他引号的句子</span>';
+    buttons=buttons+'<span class="aclick" onclick="quote_reg_ensentence();">分组reg检索</span>';
+
+	document.getElementById('divhtml').innerHTML='<div class="div_sentence">'+result_t.join('\n')+'</div><p><i id="i_odd_quote_count_ensentence">('+result_t.length+')</i> '+buttons+'</p><p id="p_odd_quote_result_ensentence"></p>';
     console.log('odd_quote_get_ensentence() 费时：'+(performance.now() - t0) + ' milliseconds');
+}
+
+function quote_reg_ensentence(){
+    var group_dict={};
+    var ops=document.querySelectorAll('p.p_enwords_sentence');
+    for (let one_p of ops){
+        var str_list=one_p.querySelector('span.span_enwords_sentence').innerText.split(/\s+/);
+        var bllen=str_list.length;
+        var blstart=randint_b(0,Math.max(0,bllen-5));   //至少5个关键词 - 保留注释
+                
+        var blkey='b_'+one_p.querySelector('span.span_from_wiki').innerText; 
+        if (group_dict[blkey]==undefined){
+            group_dict[blkey]=[];
+        }
+
+        group_dict[blkey].push(str_list.slice(blstart,blstart+5).join(' '));
+    }
+    
+    var result_t=[];
+    var blxl=0;
+    for (let key in group_dict){
+        result_t.push('<h4>'+(blxl+1)+'. '+key.slice(2,)+'('+group_dict[key].length+')</h4><p>\\b('+group_dict[key].join('|').replace(/\s/g,'\\s').replace(/([\(\)\[\]\.\*\?])/g,'\\$1')+')\\b</p>');
+        blxl=blxl+1;
+    }
+    document.getElementById('p_odd_quote_result_ensentence').innerHTML=result_t.join('\n');
+}
+
+function quote_ignore_ensentence(cstype){
+    var reg_exp;
+    switch (cstype){
+        case 's_quote_space':
+            reg_exp=/s['’]\s/ig;
+            break;
+        case 'az_quote_az':
+            reg_exp=/[a-z][\'’][a-z]/ig;
+            break;
+        case 'space_q_quote_09':
+            reg_exp=/\s[\'’][0-9]/g;
+            break;
+        default:
+            return;
+    }
+    
+    var ops=document.querySelectorAll('p.p_enwords_sentence');
+    for (let one_p of ops){
+        var ospan=one_p.querySelector('span.span_enwords_sentence');
+        var blstr=ospan.innerText;
+        var compared=en_sentence_quote_compared_get_b(blstr).replace(reg_exp,'');
+        if (compared.match(/^[^'"“”‘’]*$/)){
+            console.log(cstype,':',blstr);
+            one_p.parentNode.removeChild(one_p);
+        }
+    }
+    document.getElementById('i_odd_quote_count_ensentence').innerHTML='('+document.querySelectorAll('p.p_enwords_sentence').length+')';
 }
 
 function sentence_flag_get_ensentence(csmax=-1,show_button=true,csmobile_font=false){

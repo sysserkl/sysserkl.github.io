@@ -677,6 +677,10 @@ function en_sentence_p_style_b(fontsize=''){
     return '<p class="p_enwords_sentence" style="line-height:130%;font-size:'+fontsize+'rem;margin-top:0.3rem;padding:0.2rem 0.5rem;">';
 }
 
+function en_sentence_quote_compared_get_b(csstr){
+    return csstr.replace(/([a-z0-9])['‘’]([a-z0-9])/ig,'$1_$2');   //把夹在两个字母/数字之间的引号换成下划线
+}
+
 function en_sentence_one_line_b(aline,wordname='',attachment_path='',wikisite='',button_str='',return_arr=false,keep_kleng=false,remove_quote='rq'){  //attachment_path 用于替换 {{wikiuploads}} - 保留注释
     function sub_en_sentence_one_line_b_return(){
         if (return_arr){
@@ -757,7 +761,7 @@ function en_sentence_one_line_b(aline,wordname='',attachment_path='',wikisite=''
     //如果字符串只有结尾引号，就去掉结尾引号
     //item 可能形如：Now then, it<span style="background-color: #D9F2F2;">'</span>s this sodium that I extract from salt water and with which I compose my electric cells."
     if (['rq','rs'].includes(remove_quote) && item.match(/^['"”“‘’]|['"”“‘’]$/)){
-        let compared=item.replace(/([a-z0-9])['‘’]([a-z0-9])/ig,'$1_$2');
+        let compared=en_sentence_quote_compared_get_b(item);
         if (compared.match(/^'[^']+$/) || compared.match(/^"[^"]+$/) || compared.match(/^‘[^‘’]+$/) || compared.match(/^“[^“”]+$/)){
             if (remove_quote=='rs'){
                 return sub_en_sentence_one_line_b_return();
@@ -3224,5 +3228,29 @@ function phrase_in_old_words_b(merge_phrase=false){
         return [array_union_b(phrase1_set,phrase2_set,true),words_set];
     } else {
         return [phrase1_set,phrase2_set,words_set];
+    }
+}
+
+function old_words_redundant_kltxt_b(is_all=false,row_query='span.txt_content',check_is_visible=false,return_reg=true){
+    var result_t=[];
+    var blmin=(is_all?0:1);
+    var orows=document.querySelectorAll(row_query);
+    for (let arow of orows){
+        if (check_is_visible){
+            if (arow.style.display=='none'){continue;}
+        }
+        
+        var ospans=arow.querySelectorAll('span.span_kleng');
+        var lent=ospans.length;
+        if (lent<blmin+1){continue;}
+        //<span class="span_box span_kleng" onclick="popup_words_links_b(event,'unofficial');" title="unofficial"><font color="#cc0000">[ˌʌnə'fɪʃ(ə)l]</font></span>
+        for (let blxl=blmin;blxl<lent;blxl++){
+            result_t.push(ospans[blxl].getAttribute('title'));
+        }
+    }
+    if (return_reg){
+        alert('结果：\n^\\*('+result_t.join('|')+')$');
+    } else {
+        alert('结果：\n'+result_t.join('\n')+'');
     }
 }
