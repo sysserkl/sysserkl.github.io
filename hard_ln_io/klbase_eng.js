@@ -2470,7 +2470,7 @@ function sentence_horizontal_overflow_check_b(){
 }
 
 function sentence_split_status_generate_b(){
-    return {'小写':0,'长度':0,'单词数':0,'http':0,'()':0,'_Dr.':0,'Dr.':0,'etc':0,'console':false};
+    return {'小写':0,'长度':0,'单词数':0,'http':0,'()':0,'_Dr.':0,'Dr.':0,'etc':0,'console':false,'alone':0,'lengthy':0,'open_end':0,};
 }
 
 function sentence_split_b(csstr,csno=-1,re_combine=false){   //sentence split - 保留注释
@@ -3252,5 +3252,150 @@ function old_words_redundant_kltxt_b(is_all=false,row_query='span.txt_content',c
         alert('结果：\n^\\*('+result_t.join('|')+')$');
     } else {
         alert('结果：\n'+result_t.join('\n')+'');
+    }
+}
+
+function open_end_key_ensentence_b(){
+    return '[a-z0-9:;,]$';
+}
+
+function odd_quote_get_ensentence_b(csarr,csmax=-1,show_button=true,csmobile_font=false,use_no=true,max_line_len=-1,re_combine=false,ignore_open_end=false,no_ignore=new Set()){
+    function sub_odd_quote_get_ensentence_b_check(compared,csstr){
+        let blfound=false;
+        for (let one_quote of csstr){
+            let match_list=compared.match(new RegExp(one_quote,'g')) || [];
+            if (match_list.length % 2 == 0){continue;}
+            
+            blfound=true;
+            break;
+        }    
+        return blfound;
+    }
+    
+    var t0 = performance.now();
+	var blcount=0;
+    var result_t=[];
+    var do_break=false;
+    var keys=new Set();
+    if (re_combine===false){
+        re_combine=sentence_split_status_generate_b();
+    }
+    var compared, compared2;
+    var open_end_key=new RegExp(open_end_key_ensentence_b(),'i');
+    
+	for (let blxl=0,lent=csarr.length;blxl<lent;blxl++){
+        var aline=csarr[blxl];
+        var line_split=sentence_split_b(aline[0],(use_no?blxl:-1),re_combine);
+        
+        if (max_line_len>0){
+            var max_found=false;
+            for (let arow of line_split){
+                if (arow.length>max_line_len){
+                    max_found=true;
+                    if (re_combine['console']){
+                        console.log('lengthy:',arow,arow.length,'>',max_line_len,aline[3]);
+                    }
+                    re_combine['lengthy']=re_combine['lengthy']+1;
+                    no_ignore.add(aline[3]);                    
+                    break;
+                }
+            }
+            if (max_found){continue;}
+        }
+        
+        if (ignore_open_end){
+            var open_end_found=false;
+            for (let arow of line_split){
+                if (arow.match(open_end_key)){
+                    open_end_found=true;
+                    if (re_combine['console']){
+                        console.log('open_end:',arow,aline[3]);
+                    }            
+                    re_combine['open_end']=re_combine['open_end']+1;
+                    no_ignore.add(aline[3]);                    
+                    break;
+                }
+            }
+            if (open_end_found){continue;}
+        }
+        
+        for (let arow of line_split){
+            //将单词内部的撇号（包括各种单引号变体）标准化为下划线 - 保留注释
+            compared=en_sentence_quote_compared_get_b(arow);
+
+            let blfound=sub_odd_quote_get_ensentence_b_check(compared,'"\'');
+            
+            if (!blfound){
+                compared2=compared.replace(/“[^“”]+”/g,''); //清空“”之间的内容 - 保留注释
+                blfound=sub_odd_quote_get_ensentence_b_check(compared2,'“”');  //是否存在奇数个“” - 保留注释
+                if (!blfound){
+                    compared2=compared.replace(/‘[^‘’]+’/g,'');
+                    blfound=sub_odd_quote_get_ensentence_b_check(compared2,'‘’');
+                }
+            }
+            
+            if (blfound){
+                if (compared.match(/^[^'"“”‘’]+['’]\s[^'"“”‘’]+$/)){
+                    if (re_combine['console']){
+                        console.log('alone:',arow);
+                    }
+                    re_combine['alone']=re_combine['alone']+1;
+                    blfound=false;
+                }
+            }
+            
+            if (blfound){
+                result_t.push([arow].concat(aline.slice(1,)));
+                blcount=blcount+1;
+                if (csmax>=0 && blcount>=csmax){
+                    do_break=true;
+                    break;
+                }
+            }
+        }
+        if (do_break){break;}
+    }
+    console.log(re_combine);
+    
+    result_t=sentence_list_2_html_b(result_t,[''],csmax,show_button,csmobile_font,false,false,'rs');
+    //第二个参数不能是 ['"',"'",'“','”','‘','’']，加亮后会影响判断开头和末尾的引号 - 保留注释
+    //keep_kleng 不能是 true
+
+    console.log('odd_quote_get_ensentence_b() 费时：'+(performance.now() - t0) + ' milliseconds');
+    //result_t 元素形如：<p class="p_enwords_sentence" style="..."><span class="span_enwords_sentence">Cleopatra adds more of just about everything, from imports to monuments, ...</span> <span class="span_from_url" style="...</p> - 保留注释
+    return result_t;
+}
+
+function quote_ignore_ensentence_b(cstype,ops){
+    var reg_exp;
+    switch (cstype){
+        case 's_quote_space':
+            reg_exp=/s['’]\s/ig;
+            break;
+        case 'az_quote_az':
+            reg_exp=/[a-z][\'’][a-z]/ig;
+            break;
+        case 'space_q_quote_09':
+            reg_exp=/\s[\'’][0-9]/g;
+            break;
+        case 'all':
+            for (let item of ['az_quote_az', 'space_q_quote_09', 's_quote_space']){
+                quote_ignore_ensentence_b(item,ops);
+            }
+            return;
+        default:
+            return;
+    }
+    
+    for (let one_p of ops){
+        if (!one_p.parentNode){continue;}
+        
+        var ospan=one_p.querySelector('span.span_enwords_sentence');
+        var blstr=ospan.innerText;
+        var compared=en_sentence_quote_compared_get_b(blstr).replace(reg_exp,'');
+        if (compared.match(/^[^'"“”‘’]*$/)){
+            console.log(cstype,':',blstr);
+            one_p.parentNode.removeChild(one_p);
+        }
     }
 }

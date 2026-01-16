@@ -351,7 +351,6 @@ function txtmenus_kltxt_b(cstype=''){
     menu_general=menu_general.concat([
     '<span id="span_add_zero_reading_lines_txtlistsearch" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 阅读行数补零</span>',
     '<span class="span_menu" onclick="'+str_t+'new_words_kltxt_b([2],\'exclude\',true);">当前页面不在例句中的生词</span>',
-    
     ]);    
 
     var group_list=[
@@ -377,6 +376,7 @@ function txtmenus_kltxt_b(cstype=''){
     var group_list=[
     ['枚举','rare_enwords_enumerate_kltxt_b();',true],
     ['搜索','rare_enwords_search_kltxt_b();',true],
+    ['可选','show_rare_and_load_sentence_kltxt_b(true,true,rare_enwords_candidate_kltxt_b);',true],    
     ['例句+生词+','rare_enwords_search_kltxt_b(true,true,true);',true],
     ];    
     menu_general.push(menu_container_b(str_t,group_list,'稀有旧单词：'));
@@ -2659,6 +2659,10 @@ function txtsearch_list_kltxt_b(csword,csreg,csmaxlines,start_lineno=0,end_linen
     return result_t;
 }
 
+function rare_enwords_key_generate_kltxt_b(){
+    return '-class="kleng" -eword +\\b('+en_sentence_count_global.join('|')+')\\b';
+}
+
 function rare_enwords_search_kltxt_b(show_rare_word=false,import_sentence=false,show_new_word=false,do_search=true,scan_rare=false){
     function sub_rare_enwords_search_kltxt_b_new(){
         var type_list=[];
@@ -2676,7 +2680,7 @@ function rare_enwords_search_kltxt_b(show_rare_word=false,import_sentence=false,
     function sub_rare_enwords_search_kltxt_b_done(is_ok=true){
         if (is_ok){
             if (do_search){
-                var blstr='-class="kleng" -eword +\\b('+en_sentence_count_global.join('|')+')\\b';
+                var blstr=rare_enwords_key_generate_kltxt_b();
                 txtsearch_kltxt_b(blstr,true,-1,false,sub_rare_enwords_search_kltxt_b_new);
             } else {
                 sub_rare_enwords_search_kltxt_b_new();
@@ -2686,19 +2690,26 @@ function rare_enwords_search_kltxt_b(show_rare_word=false,import_sentence=false,
     
     if (typeof en_sentence_count_global == 'undefined'){return;}
     
+    if (!show_rare_and_load_sentence_kltxt_b(show_rare_word,import_sentence,sub_rare_enwords_search_kltxt_b_done)){
+        sub_rare_enwords_search_kltxt_b_done();
+    }
+}
+
+function show_rare_and_load_sentence_kltxt_b(show_rare_word=true,import_sentence=true,run_fn=false){
     if (show_rare_word){
         if (!klmenu_check_b('span_show_rare_enwords',false)){
             klmenu_check_b('span_show_rare_enwords',true);
         }
     }
     
+    var is_load=false;
     if (import_sentence){
         if (typeof en_sentence_global == 'undefined'){
-            load_enword_file_b('en_sentence_global','enwords_sentence',sub_rare_enwords_search_kltxt_b_done);
-            return;
+            load_enword_file_b('en_sentence_global','enwords_sentence',run_fn);
+            is_load=true;
         }
     }
-    sub_rare_enwords_search_kltxt_b_done();
+    return is_load;
 }
 
 function txtsearch_kltxt_b(csword='',csreg=-1,cscontinue=-1,add_recent=true,run_fn=false,ocontainer=false){
@@ -4628,4 +4639,62 @@ function best_sentences_kltxt_b(csid,filter_str='',csreg=false){
     var ocontainer=document.getElementById(csid);
     ocontainer.innerHTML='<div style="margin:2rem;"><p>'+result_t.join('</p><p>')+'</p>'+buttons+'</div>';
     ocontainer.scrollIntoView();
+}
+
+function rare_enwords_candidate_kltxt_b(is_ok){
+    if (!is_ok){return;}
+    flist_2_ensentence_b();
+}
+
+function flist_2_ensentence_b(max_line_len=1000){
+    if (typeof en_sentence_count_global == 'undefined'){return;}
+
+    var t0 = performance.now();
+
+    var remove_hot_words=(csbookname_global='klwiki_en2');
+
+    var start_lineno, end_lineno, csmaxlines;
+    [start_lineno, end_lineno, csmaxlines]=start_end_lineno_kltxt_b();
+    var csword=rare_enwords_key_generate_kltxt_b();
+    
+    var result_t=txtsearch_list_kltxt_b(csword,true,csmaxlines,start_lineno,end_lineno,false);
+
+    var no_all=new Set();
+    for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
+        no_all.add(result_t[blxl][1]);
+        if (remove_hot_words){
+            result_t[blxl][0]=result_t[blxl][0].replace(/\([^()]+\)$/,'');
+        }
+        result_t[blxl]=['<span class="span_filelist_no">'+result_t[blxl][1]+'</span> | '+result_t[blxl][0],'','',result_t[blxl][1]];
+    }
+    
+    var re_combine=sentence_split_status_generate_b();
+    re_combine['console']=true;
+    var no_ignore=new Set();    
+    var blhtml=odd_quote_get_ensentence_b(result_t,-1,false,false,false,max_line_len,re_combine,true,no_ignore);
+
+    var odiv=document.createElement('div');
+    odiv.innerHTML=blhtml.join('\n');
+    var ops=odiv.querySelectorAll('p.p_enwords_sentence');
+    quote_ignore_ensentence_b('all',ops);
+    //console.log(odiv.innerHTML); //此行保留 - 保留注释
+    
+    var ospan_nos=odiv.querySelectorAll('span.span_filelist_no');
+    for (let one_span of ospan_nos){
+        let blvalue=parseInt(one_span.innerText);
+        no_ignore.add(blvalue);
+    }
+    
+    var bljg=[];
+    var no_remain=Array.from(array_difference_b(no_all,no_ignore,true));
+    no_remain.sort(function (a,b){return a<b?-1:1;});
+    no_remain=no_remain.slice(0,csmaxlines);
+    for (let one_no of no_remain){
+        bljg.push([filelist[one_no],one_no]);
+    }
+    
+    console.log('flist_2_ensentence_b() no 获取',bljg.length,'条记录，费时：'+(performance.now() - t0) + ' milliseconds');    
+    
+    lines_2_html_kltxt_b(bljg.slice(0,20000));    
+    render_html_kltxt_b();
 }

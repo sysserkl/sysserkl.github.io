@@ -92,6 +92,7 @@ function menu_ensentence(){
     var group_list=[
     ['🚩','sentence_flag_get_ensentence(-1);',true],
     ['奇数个引号','odd_quote_get_ensentence();',true],
+    ['开放结尾','search_sentences(open_end_key_ensentence_b());',true],
     ];    
     klmenu_config.push(menu_container_b(str_t,group_list,'统计：'));
     
@@ -427,6 +428,15 @@ function enwords_count_sentence_data_save_ensentence(){
 }
 
 function length_sort_ensentence(is_short=true,do_merge=-1,keep_kleng=true){
+    function sub_length_sort_ensentence_group(csarr){
+        let bllen=csarr.length;
+        let groups=group_2_equal_bins_b(array_split_by_col_b(csarr,[0]),20,keep_kleng);
+        for (let blxl=0,lent=groups.length;blxl<lent;blxl++){
+            groups[blxl]='<b>'+groups[blxl]['interval'].toString().replace(',','~')+':</b> '+groups[blxl]['values'].length+' ('+(groups[blxl]['values'].length*100/bllen).toFixed(3)+'%)';
+        }
+        return groups.join('|');
+    }
+
     var t0 = performance.now();
     if (do_merge===-1){
         do_merge=(document.getElementById('select_length_sort_ensentence_type').value=='全句');
@@ -468,17 +478,15 @@ function length_sort_ensentence(is_short=true,do_merge=-1,keep_kleng=true){
         result_t.sort(function (a,b){return a[0]<b[0] ? 1 : -1;});    
     }
     
-    var bllen=result_t.length;
-    var groups=group_2_equal_bins_b(array_split_by_col_b(result_t,[0]),20,keep_kleng);
-    for (let blxl=0,lent=groups.length;blxl<lent;blxl++){
-        groups[blxl]='<b>'+groups[blxl]['interval'].toString().replace(',','~')+':</b> '+groups[blxl]['values'].length+' ('+(groups[blxl]['values'].length*100/bllen).toFixed(3)+'%)';
-    }
-    
+    var groups_full='<font color="'+scheme_global['a-hover']+'">全部：</font>'+sub_length_sort_ensentence_group(result_t);
     result_t=result_t.slice(0,csmax);
+    var groups_part='<font color="'+scheme_global['a-hover']+'">部分：</font>'+sub_length_sort_ensentence_group(result_t);
+
     result_t=array_split_by_col_b(result_t,[1]);
     var bljg=sentence_list_2_html_b(result_t,[''],csmax,false,false,false,true);
     
-    document.getElementById('divhtml').innerHTML='<div class="div_sentence">'+bljg.join('\n')+'</div><p><i>('+bljg.length+')</i> '+groups.join(' | ')+'</p>';
+    var group_reg=quote_reg_button_ensentence();
+    document.getElementById('divhtml').innerHTML='<div class="div_sentence">'+bljg.join('\n')+'</div><p><i>('+bljg.length+')</i> '+groups_full+' '+groups_part+'</p><p>'+group_reg[0]+'</p>'+group_reg[1];
     if (keep_kleng){
         sup_kleng_words_b();
     }
@@ -634,135 +642,74 @@ function rare_old_words_ensentence(cscaption='',show_sentence=false,generate_js=
 }
 
 function odd_quote_get_ensentence(csmax=-1,show_button=true,csmobile_font=false){
-    function sub_odd_quote_get_ensentence_check(compared,csstr){
-        let blfound=false;
-        for (let one_quote of csstr){
-            let match_list=compared.match(new RegExp(one_quote,'g')) || [];
-            if (match_list.length % 2 == 0){continue;}
-            
-            blfound=true;
-            break;
-        }    
-        return blfound;
-    }
-    
     if (typeof en_sentence_global == 'undefined'){
-        return 'en_sentence_global 未定义';
+        var result_t=['en_sentence_global 未定义'];
+    } else {
+        var result_t=odd_quote_get_ensentence_b(en_sentence_global,csmax,show_button,csmobile_font);
     }
-
-    var t0 = performance.now();
-
-	var blcount=0;
-    var result_t=[];
-    var do_break=false;
-    var keys=new Set();
-    var re_combine=sentence_split_status_generate_b();
-    re_combine['alone']=0;
-    var compared, compared2;
-	for (let blxl=0,lent=en_sentence_global.length;blxl<lent;blxl++){
-        var aline=en_sentence_global[blxl];
-        var line_split=sentence_split_b(aline[0],blxl,re_combine);
-        for (let arow of line_split){
-            //将单词内部的撇号（包括各种单引号变体）标准化为下划线 - 保留注释
-            compared=en_sentence_quote_compared_get_b(arow);
-
-            let blfound=sub_odd_quote_get_ensentence_check(compared,'"\'');
-            
-            if (!blfound){
-                compared2=compared.replace(/“[^“”]+”/g,''); //清空“”之间的内容 - 保留注释
-                blfound=sub_odd_quote_get_ensentence_check(compared2,'“”');  //是否存在奇数个“” - 保留注释
-                if (!blfound){
-                    compared2=compared.replace(/‘[^‘’]+’/g,'');
-                    blfound=sub_odd_quote_get_ensentence_check(compared2,'‘’');
-                }
-            }
-            
-            if (blfound){
-                if (compared.match(/^[^'"“”‘’]+['’]\s[^'"“”‘’]+$/)){
-                    if (re_combine['console']){
-                        console.log('alone:',arow);
-                    }
-                    re_combine['alone']=re_combine['alone']+1;
-                    blfound=false;
-                }
-            }
-            
-            if (blfound){
-                result_t.push([arow].concat(aline.slice(1,)));
-                blcount=blcount+1;
-                if (csmax>=0 && blcount>=csmax){
-                    do_break=true;
-                    break;
-                }
-            }
-        }
-        if (do_break){break;}
-    }
-    console.log(re_combine);
-    result_t=sentence_list_2_html_b(result_t,[''],csmax,show_button,csmobile_font,false,false,'rs');
-    //第二个参数不能是 ['"',"'",'“','”','‘','’']，加亮后会影响判断开头和末尾的引号 - 保留注释
-    //keep_kleng 不能是 true
     
-    var buttons='<span class="aclick" onclick="quote_ignore_ensentence(\'s_quote_space\');">忽略内部仅有一个s\'或s’的句子</span>';
-    buttons=buttons+'<span class="aclick" onclick="quote_ignore_ensentence(\'az_quote_az\');">忽略含有[a-z][\'’][a-z]但无其他引号的句子</span>';
-    buttons=buttons+'<span class="aclick" onclick="quote_ignore_ensentence(\'space_q_quote_09\');">忽略含有\\s[\'’][0-9]但无其他引号的句子</span>';
-    buttons=buttons+'<span class="aclick" onclick="quote_reg_ensentence();">分组reg检索</span>';
+    var group_reg=quote_reg_button_ensentence();
+    var buttons='<span class="aclick" onclick="quote_ignore_ensentence(\'s_quote_space\');">①忽略内部仅有一个s\'或s’的句子</span>';
+    buttons=buttons+'<span class="aclick" onclick="quote_ignore_ensentence(\'az_quote_az\');">②忽略含有[a-z][\'’][a-z]但无其他引号的句子</span>';
+    buttons=buttons+'<span class="aclick" onclick="quote_ignore_ensentence(\'space_q_quote_09\');">③忽略含有\\s[\'’][0-9]但无其他引号的句子</span>';
+    buttons=buttons+'<span class="aclick" onclick="quote_ignore_ensentence(\'all\');">①+③</span>';
+    buttons=buttons+group_reg[0];
 
-	document.getElementById('divhtml').innerHTML='<div class="div_sentence">'+result_t.join('\n')+'</div><p><i id="i_odd_quote_count_ensentence">('+result_t.length+')</i> '+buttons+'</p><p id="p_odd_quote_result_ensentence"></p>';
-    console.log('odd_quote_get_ensentence() 费时：'+(performance.now() - t0) + ' milliseconds');
+	document.getElementById('divhtml').innerHTML='<div class="div_sentence">'+result_t.join('\n')+'</div><p><i id="i_odd_quote_count_ensentence">('+result_t.length+')</i> '+buttons+'</p>'+group_reg[1];
 }
 
-function quote_reg_ensentence(){
+function quote_reg_button_ensentence(){
+    var blstr='<span class="aclick" onclick="quote_reg_result_ensentence();">分组reg检索</span>';
+    var bldiv='<div id="div_odd_quote_result_ensentence"></div>';
+    return [blstr,bldiv];
+}
+
+function quote_reg_result_ensentence(){
     var group_dict={};
+    var a_dict={};
     var ops=document.querySelectorAll('p.p_enwords_sentence');
     for (let one_p of ops){
-        var str_list=one_p.querySelector('span.span_enwords_sentence').innerText.split(/\s+/);
+        var odom=document.createElement('p');
+        odom.innerHTML=one_p.innerHTML;
+        var osups=odom.querySelectorAll('sup.kleng');
+        for (let one_sup of osups){
+            one_sup.parentNode.removeChild(one_sup);
+        }
+            
+        var str_list=odom.querySelector('span.span_enwords_sentence').innerText.split(/\s+/);
         var bllen=str_list.length;
         var blstart=randint_b(0,Math.max(0,bllen-5));   //至少5个关键词 - 保留注释
-                
-        var blkey='b_'+one_p.querySelector('span.span_from_wiki').innerText; 
+
+        var owiki=odom.querySelector('span.span_from_wiki');
+        var blkey='b_'+owiki.innerText; 
+        var bllink=(owiki.querySelector('a')?.href || '').split('#')[0];
         if (group_dict[blkey]==undefined){
             group_dict[blkey]=[];
         }
-
+        if (a_dict[blkey]==undefined){
+            a_dict[blkey]=bllink;
+        }
         group_dict[blkey].push(str_list.slice(blstart,blstart+5).join(' '));
     }
     
     var result_t=[];
     var blxl=0;
     for (let key in group_dict){
-        result_t.push('<h4>'+(blxl+1)+'. '+key.slice(2,)+'('+group_dict[key].length+')</h4><p>\\b('+group_dict[key].join('|').replace(/\s/g,'\\s').replace(/([\(\)\[\]\.\*\?])/g,'\\$1')+')\\b</p>');
+        var bljg='<h4>'+(blxl+1)+'. <a href="'+a_dict[key]+'" onclick="this.style.backgroundColor=\''+scheme_global['pink']+'\';" target=_blank>'+key.slice(2,)+'</a> ('+group_dict[key].length+')</h4>';
+        var add_r=(a_dict[key].includes('/wiki/index.php')?'(:r)':'');        
+        bljg=bljg+textarea_for_copy_b('\\b('+group_dict[key].join('|').replace(/\s/g,'\\s').replace(/([\(\)\[\]\.\*\?])/g,'\\$1')+')\\b'+add_r);
+        result_t.push('<p>'+bljg+'</p>');
         blxl=blxl+1;
     }
-    document.getElementById('p_odd_quote_result_ensentence').innerHTML=result_t.join('\n');
+    
+    var buttons='<span class="aclick" onclick="document.getElementById(\'div_odd_quote_result_ensentence\').scrollIntoView();">🔝</span>';
+    document.getElementById('div_odd_quote_result_ensentence').innerHTML=result_t.join('\n')+'<p>'+buttons+'</p>';
 }
 
 function quote_ignore_ensentence(cstype){
-    var reg_exp;
-    switch (cstype){
-        case 's_quote_space':
-            reg_exp=/s['’]\s/ig;
-            break;
-        case 'az_quote_az':
-            reg_exp=/[a-z][\'’][a-z]/ig;
-            break;
-        case 'space_q_quote_09':
-            reg_exp=/\s[\'’][0-9]/g;
-            break;
-        default:
-            return;
-    }
-    
     var ops=document.querySelectorAll('p.p_enwords_sentence');
-    for (let one_p of ops){
-        var ospan=one_p.querySelector('span.span_enwords_sentence');
-        var blstr=ospan.innerText;
-        var compared=en_sentence_quote_compared_get_b(blstr).replace(reg_exp,'');
-        if (compared.match(/^[^'"“”‘’]*$/)){
-            console.log(cstype,':',blstr);
-            one_p.parentNode.removeChild(one_p);
-        }
-    }
+    quote_ignore_ensentence_b(cstype,ops);
+
     document.getElementById('i_odd_quote_count_ensentence').innerHTML='('+document.querySelectorAll('p.p_enwords_sentence').length+')';
 }
 

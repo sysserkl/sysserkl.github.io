@@ -1817,6 +1817,10 @@ function remote_ip_detector_b(host_left_part,csmin,csmax,do_alert=false){
     sub_remote_ip_detector_b_one_step(false);
 }
 
+function textarea_for_copy_b(csstr='',csheight='3rem'){
+    return '<textarea style="height:'+csheight+';" onclick="this.select(); document.execCommand(\'copy\');">'+csstr+'</textarea>';
+}
+
 function textarea_with_form_generate_b(textarea_id,textarea_style='',left_strings='',common_buttons='',right_strings='',form_type='',form_name='',enable_copy=false,textarea_value='',button_first=false,button_style='',span_class='aclick',add_form=true,form_style=''){
     var bljg='';
     if (add_form){
