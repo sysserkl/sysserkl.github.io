@@ -3256,7 +3256,7 @@ function old_words_redundant_kltxt_b(is_all=false,row_query='span.txt_content',c
 }
 
 function open_end_key_ensentence_b(){
-    return '[a-z0-9:;,]$';
+    return '[a-z0-9:;,—]$';
 }
 
 function odd_quote_get_ensentence_b(csarr,csmax=-1,show_button=true,csmobile_font=false,use_no=true,max_line_len=-1,re_combine=false,ignore_open_end=false,no_ignore=new Set()){

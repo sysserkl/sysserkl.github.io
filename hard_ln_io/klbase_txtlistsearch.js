@@ -376,8 +376,9 @@ function txtmenus_kltxt_b(cstype=''){
     var group_list=[
     ['枚举','rare_enwords_enumerate_kltxt_b();',true],
     ['搜索','rare_enwords_search_kltxt_b();',true],
-    ['可选','show_rare_and_load_sentence_kltxt_b(true,true,rare_enwords_candidate_kltxt_b);',true],    
+    ['可选','show_rare_and_load_sentence_kltxt_b(true,true,flist_2_ensentence_b);',true],    
     ['例句+生词+','rare_enwords_search_kltxt_b(true,true,true);',true],
+    ['重复剔除','rare_enwords_unique_kltxt_b();',true],
     ];    
     menu_general.push(menu_container_b(str_t,group_list,'稀有旧单词：'));
     
@@ -2678,21 +2679,45 @@ function rare_enwords_search_kltxt_b(show_rare_word=false,import_sentence=false,
     }
     
     function sub_rare_enwords_search_kltxt_b_done(is_ok=true){
-        if (is_ok){
-            if (do_search){
-                var blstr=rare_enwords_key_generate_kltxt_b();
-                txtsearch_kltxt_b(blstr,true,-1,false,sub_rare_enwords_search_kltxt_b_new);
-            } else {
-                sub_rare_enwords_search_kltxt_b_new();
-            }
-        }
+        if (!is_ok){return;}
+        if (do_search){
+            var blstr=rare_enwords_key_generate_kltxt_b();
+            txtsearch_kltxt_b(blstr,true,-1,false,sub_rare_enwords_search_kltxt_b_new);
+        } else {
+            sub_rare_enwords_search_kltxt_b_new();
+        }        
     }
     
     if (typeof en_sentence_count_global == 'undefined'){return;}
     
-    if (!show_rare_and_load_sentence_kltxt_b(show_rare_word,import_sentence,sub_rare_enwords_search_kltxt_b_done)){
-        sub_rare_enwords_search_kltxt_b_done();
+    show_rare_and_load_sentence_kltxt_b(show_rare_word,import_sentence,sub_rare_enwords_search_kltxt_b_done);
+}
+
+function rare_enwords_unique_kltxt_b(){
+    var odiv=document.getElementById('divhtml');
+    var orows=odiv.querySelectorAll('p span.txt_content, li span.txt_content');
+    var rare_words=new Set();
+    for (let item of digest_special_raw_global['*']){
+        rare_words.add(item.slice(1,));
+    } //将摘要中的旧单词当作稀有单词 - 保留注释
+    
+    var blcount=0;
+    for (let one_row of orows){
+        var owords=one_row.querySelectorAll('span.span_rare_word_search_links');
+        var do_remove=true;
+        for (let one_word of owords){
+            var blstr=one_word.innerText;
+            if (!rare_words.has(blstr)){
+                do_remove=false;
+                rare_words.add(blstr);  //不能 break，需要遍历行内全部单词 - 保留注释
+            }
+        }
+        if (do_remove){
+            one_row.parentNode.parentNode.removeChild(one_row.parentNode);
+            blcount=blcount+1;
+        }
     }
+    alert('移除了 '+blcount+' 行');
 }
 
 function show_rare_and_load_sentence_kltxt_b(show_rare_word=true,import_sentence=true,run_fn=false){
@@ -2702,14 +2727,16 @@ function show_rare_and_load_sentence_kltxt_b(show_rare_word=true,import_sentence
         }
     }
     
-    var is_load=false;
     if (import_sentence){
         if (typeof en_sentence_global == 'undefined'){
             load_enword_file_b('en_sentence_global','enwords_sentence',run_fn);
-            is_load=true;
+            return;
         }
     }
-    return is_load;
+    
+    if (typeof run_fn == 'function'){
+        run_fn(typeof en_sentence_global !== 'undefined');
+    }
 }
 
 function txtsearch_kltxt_b(csword='',csreg=-1,cscontinue=-1,add_recent=true,run_fn=false,ocontainer=false){
@@ -4641,13 +4668,8 @@ function best_sentences_kltxt_b(csid,filter_str='',csreg=false){
     ocontainer.scrollIntoView();
 }
 
-function rare_enwords_candidate_kltxt_b(is_ok){
-    if (!is_ok){return;}
-    flist_2_ensentence_b();
-}
-
-function flist_2_ensentence_b(max_line_len=1000){
-    if (typeof en_sentence_count_global == 'undefined'){return;}
+function flist_2_ensentence_b(is_ok=true,max_line_len=1000){
+    if (!is_ok || typeof en_sentence_count_global == 'undefined'){return;}
 
     var t0 = performance.now();
 
