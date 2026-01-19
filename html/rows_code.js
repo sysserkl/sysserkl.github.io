@@ -326,7 +326,7 @@ function form_set_klr2(){
     }
     var op=document.getElementById('p_buttons_1');
     if (op){
-        var bljg=textarea_buttons_b('textarea_rows_content','全选,清空,复制,导入temp_txt_share,导入 txt 文件,发送到临时记事本,发送地址,↑,↓');    
+        var bljg=textarea_buttons_b('textarea_rows_content','全选,清空,复制,导入temp_txt_share,导入 txt 文件,发送到临时记事本,发送地址,加密,解密,↑,↓');    
         op.insertAdjacentHTML('beforeend',bljg);
     }
     //-----------------------
