@@ -93,6 +93,7 @@ function menu_ensentence(){
     ['🚩','sentence_flag_get_ensentence(-1);',true],
     ['奇数个引号','odd_quote_get_ensentence();',true],
     ['开放结尾','search_sentences(open_end_key_ensentence_b());',true],
+    ['数字开头','search_sentences(\'^[0-9]\');',true],
     ];    
     klmenu_config.push(menu_container_b(str_t,group_list,'统计：'));
     

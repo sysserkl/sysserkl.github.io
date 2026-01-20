@@ -376,8 +376,8 @@ function txtmenus_kltxt_b(cstype=''){
     var group_list=[
     ['枚举','rare_enwords_enumerate_kltxt_b();',true],
     ['搜索','rare_enwords_search_kltxt_b();',true],
-    ['可选','show_rare_and_load_sentence_kltxt_b(true,true,flist_2_ensentence_b);',true],    
     ['例句+生词+','rare_enwords_search_kltxt_b(true,true,true);',true],
+    ['可选','show_rare_and_load_sentence_kltxt_b(true,true,flist_2_ensentence_b);',true],    
     ['重复剔除','rare_enwords_unique_kltxt_b();',true],
     ];    
     menu_general.push(menu_container_b(str_t,group_list,'稀有旧单词：'));
@@ -2693,13 +2693,20 @@ function rare_enwords_search_kltxt_b(show_rare_word=false,import_sentence=false,
     show_rare_and_load_sentence_kltxt_b(show_rare_word,import_sentence,sub_rare_enwords_search_kltxt_b_done);
 }
 
-function rare_enwords_unique_kltxt_b(){
-    var odiv=document.getElementById('divhtml');
-    var orows=odiv.querySelectorAll('p span.txt_content, li span.txt_content');
+function rare_words_in_digest_set_generate_kltxt_b(){
     var rare_words=new Set();
     for (let item of digest_special_raw_global['*']){
         rare_words.add(item.slice(1,));
     } //将摘要中的旧单词当作稀有单词 - 保留注释
+    return rare_words;
+}
+
+function rare_enwords_unique_kltxt_b(){
+    if (!confirm('是否剔除含有相同稀有单词的行？')){return;}
+
+    var odiv=document.getElementById('divhtml');
+    var orows=odiv.querySelectorAll('p span.txt_content, li span.txt_content');
+    var rare_words=rare_words_in_digest_set_generate_kltxt_b();
     
     var blcount=0;
     for (let one_row of orows){
@@ -4668,7 +4675,7 @@ function best_sentences_kltxt_b(csid,filter_str='',csreg=false){
     ocontainer.scrollIntoView();
 }
 
-function flist_2_ensentence_b(is_ok=true,max_line_len=1000){
+function flist_2_ensentence_b(is_ok=true,max_line_len=1000,max_rows=20000){
     if (!is_ok || typeof en_sentence_count_global == 'undefined'){return;}
 
     var t0 = performance.now();
@@ -4680,7 +4687,29 @@ function flist_2_ensentence_b(is_ok=true,max_line_len=1000){
     var csword=rare_enwords_key_generate_kltxt_b();
     
     var result_t=txtsearch_list_kltxt_b(csword,true,csmaxlines,start_lineno,end_lineno,false);
-
+    //result_t 元素形如：[ "“Anne Shirley, since you seem to be so fond of the boys’ company we shall indulge your taste for it this afternoon,” he said sarcastically. “Take those flowers out of your hair and sit with Gilbert Blythe.”", 884 ]
+    
+    if (confirm('是否剔除含有相同稀有单词的行？')){
+        var rare_words=rare_words_in_digest_set_generate_kltxt_b();
+        var filtered_list=[];
+        var rare_reg=new RegExp('\\b('+en_sentence_count_global.join('|')+')\\b');
+        for (let arow of result_t){
+            let words_in_a_row=arow[0].match(rare_reg) || [];
+            var do_remove=true;
+            for (let one_word of words_in_a_row){
+                if (!rare_words.has(one_word)){
+                    do_remove=false;
+                    rare_words.add(one_word);  //不能 break，需要遍历行内全部单词 - 保留注释
+                }
+            }
+            if (!do_remove){
+                filtered_list.push(arow);
+            }
+        }
+        alert('剔除了 '+(result_t.length-filtered_list.length)+' 行');
+        result_t=filtered_list;
+    }
+    
     var no_all=new Set();
     for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
         no_all.add(result_t[blxl][1]);
@@ -4691,7 +4720,6 @@ function flist_2_ensentence_b(is_ok=true,max_line_len=1000){
     }
     
     var re_combine=sentence_split_status_generate_b();
-    re_combine['console']=true;
     var no_ignore=new Set();    
     var blhtml=odd_quote_get_ensentence_b(result_t,-1,false,false,false,max_line_len,re_combine,true,no_ignore);
 
@@ -4715,8 +4743,8 @@ function flist_2_ensentence_b(is_ok=true,max_line_len=1000){
         bljg.push([filelist[one_no],one_no]);
     }
     
-    console.log('flist_2_ensentence_b() no 获取',bljg.length,'条记录，费时：'+(performance.now() - t0) + ' milliseconds');    
-    
-    lines_2_html_kltxt_b(bljg.slice(0,20000));    
-    render_html_kltxt_b();
+    console.log('flist_2_ensentence_b() no 获取',bljg.length,'条记录，费时：'+(performance.now() - t0) + ' milliseconds');
+
+    lines_2_html_kltxt_b(bljg.slice(0,max_rows));    
+    render_html_kltxt_b([],true,true,false,false,false,false);
 }

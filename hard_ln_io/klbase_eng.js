@@ -691,14 +691,18 @@ function en_sentence_one_line_b(aline,wordname='',attachment_path='',wikisite=''
     }
     
     function sub_en_sentence_one_line_b_replace(item,aword){
-        item=item.replace(new RegExp('&lt;eword w=&quot;'+aword+'&quot;&gt;&lt;/eword&gt;','g'),'<sup>🚩</sup>');
-        item=item.replace(new RegExp('&lt;eword w='+aword+'&gt;&lt;/eword&gt;','g'),'<sup>🚩</sup>');    
+        if (aword.match(/^[a-z0-9\'\-\s]$/i)){  //仅考虑单词 - 保留注释
+            item=item.replace(new RegExp('&lt;eword w=&quot;'+aword+'&quot;&gt;&lt;/eword&gt;','g'),'<sup>🚩</sup>');
+            item=item.replace(new RegExp('&lt;eword w='+aword+'&gt;&lt;/eword&gt;','g'),'<sup>🚩</sup>');    
+        }
         return item;
     }
     
     function sub_en_sentence_one_line_b_flag(item,aword){
-        if (item.match(new RegExp('\\b'+aword+'\\b','i'))!==null){
-            item=item.replace(new RegExp('<sup>🚩</sup>','g'),'');
+        if (aword.match(/^[a-z0-9\'\-\s]$/i)){  //仅考虑单词 - 保留注释
+            if (item.match(new RegExp('\\b'+aword+'\\b','i'))!==null){
+                item=item.replace(/<sup>🚩<\/sup>/g,'');
+            }
         }
         if (item.toLowerCase().match('http[^\\s]*'+aword.toLowerCase()+'[^\\s]*')==null){
             item=item.replace(new RegExp('\\b('+aword+')\\b','ig'),'<span style="background-color: '+scheme_global['skyblue']+';">$1</span>');
@@ -2348,10 +2352,11 @@ function enwords_recent_search_b(csword='',cstype=''){
     }
     //-----------------------
     var logo_list=['🥚','✏','🚧','〘 〙','🚩'];
+    var bljg='';
     switch (cstype){
         case 'mini':
             var recent_search_str='<p id="p_recent_search" style="margin:0; line-height:'+(ismobile_b()?'200':'210')+'%;">';
-            return recent_search_str+sub_enwords_recent_search_b_fn('enwords_mini_search_do_b')+'</p>';
+            bljg=recent_search_str+sub_enwords_recent_search_b_fn('enwords_mini_search_do_b')+'</p>';
             break;
         case 'sentence':
             var odiv=document.getElementById('div_recent_search');
@@ -2359,7 +2364,6 @@ function enwords_recent_search_b(csword='',cstype=''){
                 odiv.innerHTML=sub_enwords_recent_search_b_fn('search_sentences');    
                 mouseover_mouseout_oblong_span_b(odiv.querySelectorAll('span.oblong_box'));
             }
-            return '';
             break;
         default:
             var odiv=document.getElementById('div_recent_search');
@@ -2367,8 +2371,9 @@ function enwords_recent_search_b(csword='',cstype=''){
                 odiv.innerHTML=sub_enwords_recent_search_b_fn('wordsearch_enwords_b');    
                 mouseover_mouseout_oblong_span_b(odiv.querySelectorAll('span.oblong_box'));
             }
-            return '';
+            break;
     }
+    return bljg;
 }
 
 function p_enwords_sentence_style_b(){
@@ -2470,7 +2475,7 @@ function sentence_horizontal_overflow_check_b(){
 }
 
 function sentence_split_status_generate_b(){
-    return {'小写':0,'长度':0,'单词数':0,'http':0,'()':0,'_Dr.':0,'Dr.':0,'etc':0,'console':false,'alone':0,'lengthy':0,'open_end':0,};
+    return {'小写':0,'长度':0,'单词数':0,'http':0,'()':0,'_Dr.':0,'Dr.':0,'etc':0,'console':false,'alone':0,'lengthy':0,'open_end':0,'month':0,'no':0};
 }
 
 function sentence_split_b(csstr,csno=-1,re_combine=false){   //sentence split - 保留注释
@@ -2482,7 +2487,7 @@ function sentence_split_b(csstr,csno=-1,re_combine=false){   //sentence split - 
     }
     
     function sub_sentence_split_b_check_str(csstr1,csstr2){
-        let blcheck=csstr1.length<25 || csstr2.length<25;
+        let blcheck=(csstr1.length<25 || csstr2.length<25);
         if (blcheck){
             sub_sentence_split_b_count('长度',csstr1,csstr2);
             return true;
@@ -2502,6 +2507,16 @@ function sentence_split_b(csstr,csno=-1,re_combine=false){   //sentence split - 
         
         if (csstr1.match(/\[https?:\/\/[^\]]+$/)){
             sub_sentence_split_b_count('http',csstr1,csstr2);
+            return true;
+        }
+        
+        if (csstr1.match(/\bNo\.\s*$/) && csstr2.match(/^\s*\d+\s/)){
+            sub_sentence_split_b_count('no',csstr1,csstr2);
+            return true;
+        }
+
+        if (csstr1.match(/\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)\.\s*$/) && csstr2.match(/^\s*\d+\s/)){  //May后面无. - 保留注释
+            sub_sentence_split_b_count('month',csstr1,csstr2);
             return true;
         }
         
@@ -2553,7 +2568,7 @@ function sentence_split_b(csstr,csno=-1,re_combine=false){   //sentence split - 
             if (sub_sentence_split_b_check_etc(blxl)){
                 list_t[blxl-1]=list_t[blxl-1]+list_t[blxl];
                 list_t[blxl]='';
-            } else if ([' Dr.',' Mr.',' St.'].includes(list_t[blxl-1].trim().slice(-4,)) && list_t[blxl-1].slice(-1)!=='.'){
+            } else if ([' Dr.',' Mr.',' St.'].includes(list_t[blxl-1].trim().slice(-4,)) && list_t[blxl-1].slice(-1)!=='.'){    //注意有个 tirm - 保留注释
                 sub_sentence_split_b_count('_Dr.',list_t[blxl-1],list_t[blxl]);        
                 list_t[blxl-1]=list_t[blxl-1]+list_t[blxl];
                 list_t[blxl]='';

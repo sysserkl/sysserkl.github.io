@@ -185,6 +185,19 @@ function weibo_weixin_user_rlater(){
     window.open('./PythonTools/data/selenium_news/html/js_data_file_common_search.htm?s=klwiki_h3_pb_data');
 }
 
+function add_date_rlater(){
+    var oas=document.querySelectorAll('a.a_rlater_link');
+    for (let one_a of oas){
+        var blstr=one_a.innerText;
+        if (blstr.match(/^\d{8}\s/)){continue;}
+        var blhref=one_a.href;
+        if (!blhref){continue;}
+        var bldate=(blhref.match(/[^\d]?(\d{4}[\-\/]*\d{2}[\-\/]*\d{2})[^\d]?/) || ['',''])[1];
+        if (bldate==''){continue;}
+        one_a.innerText=bldate+' | '+blstr;
+    }
+}
+
 function menu_rlater(){
     var str_t=klmenu_hide_b('#top');
     var blparent=menu_parent_node_b(str_t);
@@ -192,6 +205,7 @@ function menu_rlater(){
     var klmenu1=[
     '<span class="span_menu" onclick="'+str_t+'search_in_site_rlater();">站内搜索</span>',   
     '<span class="span_menu" onclick="'+str_t+'fav_show_rlater();">Fav</span>',   
+    '<span class="span_menu" onclick="'+str_t+'add_date_rlater();">当前结果根据链接添加日期</span>',   
     load_sentence_menu_b(str_t),
     '<span class="span_menu" onclick="'+str_t+'month_rlater(0,-1,true);">去年今日</span>',       
     ];
