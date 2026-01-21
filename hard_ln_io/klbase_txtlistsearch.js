@@ -4692,7 +4692,7 @@ function flist_2_ensentence_b(is_ok=true,max_line_len=1000,max_rows=20000){
     if (confirm('是否剔除含有相同稀有单词的行？')){
         var rare_words=rare_words_in_digest_set_generate_kltxt_b();
         var filtered_list=[];
-        var rare_reg=new RegExp('\\b('+en_sentence_count_global.join('|')+')\\b');
+        var rare_reg=new RegExp('\\b('+en_sentence_count_global.join('|')+')\\b','i');
         for (let arow of result_t){
             let words_in_a_row=arow[0].match(rare_reg) || [];
             var do_remove=true;

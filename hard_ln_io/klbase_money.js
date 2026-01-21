@@ -370,15 +370,18 @@ function popup_selection_money_b(){
     sub_popup_selection_money_b_generate(from_list,'span_from','popup_from','input_address',true);
 }
 
-function eval_calculator_money_b(){
-    var str_t=document.getElementById('input_calculator').value.trim();
+function eval_calculator_money_b(oinput){
+    var str_t=oinput.value.trim();
     localStorage.setItem('simple_calculator',str_t);
-    var ospan=document.getElementById('span_calculator');
+    var odiv=document.getElementById('div_calculator');
+    var ospan=odiv.querySelector('span.span_calculator');
+    console.log(ospan);
     if (str_t==''){
         ospan.innerHTML='未输入数学表达式';
         return;        
     }
-    var checkstr=str_t.replace(new RegExp('[0-9]','g'),'');
+    
+    var checkstr=str_t.replace(/[0-9]/g,'');
     var checkstr=checkstr.replace(/[\.\s\+\-\*\/\(\)]/g,'');
     if (checkstr!==''){
         ospan.innerHTML='包含了多余字符：'+checkstr;
@@ -389,7 +392,7 @@ function eval_calculator_money_b(){
     } catch (error){
         var blvalue=error;
     }
-    document.getElementById('span_calculator').innerHTML=blvalue;
+    ospan.innerHTML=blvalue;
 }
 
 function calculator_generate_money_b(){
@@ -399,7 +402,7 @@ function calculator_generate_money_b(){
         return;
     }
     var blstr=specialstr_j(local_storage_get_b('simple_calculator'));
-    var bljg='计算器：<input type="text" name="input_calculator" id="input_calculator" value="'+blstr+'" onkeyup="if (event.key==\'Enter\'){eval_calculator_money_b();}"> = <span id="span_calculator"></span>';
+    var bljg='计算器：<input type="text" id="input_calculator" value="'+blstr+'" onkeyup="if (event.key==\'Enter\'){eval_calculator_money_b(this);}"> = <span class="span_calculator" ondblclick="copy_2_clipboard_b(this.innerText);" title="双击复制到剪贴板"></span>';
     odiv.innerHTML=bljg;
     input_with_x_b('input_calculator',14,'',0.8);
 }

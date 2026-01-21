@@ -681,7 +681,7 @@ function en_sentence_quote_compared_get_b(csstr){
     return csstr.replace(/([a-z0-9])['‘’]([a-z0-9])/ig,'$1_$2');   //把夹在两个字母/数字之间的引号换成下划线
 }
 
-function en_sentence_one_line_b(aline,wordname='',attachment_path='',wikisite='',button_str='',return_arr=false,keep_kleng=false,remove_quote='rq'){  //attachment_path 用于替换 {{wikiuploads}} - 保留注释
+function en_sentence_one_line_b(aline,wordname='',attachment_path='',wikisite='',button_str='',return_arr=false,keep_kleng=false,remove_quote='rq',remove_ol_ul=true){  //attachment_path 用于替换 {{wikiuploads}} - 保留注释
     function sub_en_sentence_one_line_b_return(){
         if (return_arr){
             return [];
@@ -780,6 +780,13 @@ function en_sentence_one_line_b(aline,wordname='',attachment_path='',wikisite=''
             } else {
                 item=item.slice(0,-1);
             }
+        }
+    }
+    
+    if (remove_ol_ul){
+        if (item.startsWith('# ') || item.startsWith('* ')){
+            console.log('移除 ol ul',item);
+            item=item.slice(2,);
         }
     }
     
@@ -3381,7 +3388,7 @@ function odd_quote_get_ensentence_b(csarr,csmax=-1,show_button=true,csmobile_fon
     return result_t;
 }
 
-function quote_ignore_ensentence_b(cstype,ops){
+function quote_ignore_ensentence_b(cstype,ops,show_console=false){
     var reg_exp;
     switch (cstype){
         case 's_quote_space':
@@ -3409,7 +3416,9 @@ function quote_ignore_ensentence_b(cstype,ops){
         var blstr=ospan.innerText;
         var compared=en_sentence_quote_compared_get_b(blstr).replace(reg_exp,'');
         if (compared.match(/^[^'"“”‘’]*$/)){
-            console.log(cstype,':',blstr);
+            if (show_console){
+                console.log(cstype,':',blstr);
+            }
             one_p.parentNode.removeChild(one_p);
         }
     }

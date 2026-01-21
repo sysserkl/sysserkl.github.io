@@ -125,6 +125,7 @@ function menu_ensentence(){
 
     klmenu_check_b('span_reg_ensentence',true);
     klmenu_check_b('span_remove_full_exam_ensentence',true);
+    klmenu_check_b('span_source_en_b',true);
     
     var input_list=[
     ['input_ensentence_percent_exam',4,0.5],

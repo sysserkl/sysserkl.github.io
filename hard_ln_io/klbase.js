@@ -3667,6 +3667,7 @@ function window_list_init_b(max_result){
 }
     
 function copy_2_clipboard_b(csstr,nav_mode=false){
+    //str2clipboard - 保留注释
     if (nav_mode==false){
         var otextarea=document.createElement('textarea');
         otextarea.value=csstr;
