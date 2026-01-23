@@ -98,7 +98,7 @@ function menu_ensentence(){
     klmenu_config.push(menu_container_b(str_t,group_list,'统计：'));
     
     var group_list=[
-    ['⚪ reg','klmenu_check_b(this.id,true);',true,'span_reg_ensentence'],
+    //['⚪ reg','klmenu_check_b(this.id,true);',true,'span_reg_ensentence'],
     ['⚪ show button','klmenu_check_b(this.id,true);',true,'span_button_show_ensentence'],
     ['⚪ 显示例句详细出处','klmenu_check_b(this.id,true);',true,'span_source_en_b'],
     ];    
@@ -123,7 +123,7 @@ function menu_ensentence(){
 
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🗨','24rem','1rem','1rem','60rem')+klmenu_b(klmenu_fill,'✏','29rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','23rem','1rem','1rem','60rem'),'','0rem')+' ');
 
-    klmenu_check_b('span_reg_ensentence',true);
+    //klmenu_check_b('span_reg_ensentence',true);
     klmenu_check_b('span_remove_full_exam_ensentence',true);
     klmenu_check_b('span_source_en_b',true);
     

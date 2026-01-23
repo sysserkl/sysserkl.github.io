@@ -38,8 +38,11 @@ function menu_more_kltxt_klwiki_en2(){
     
     var group_list=[
     ['稀有单词行','rare_words_kltxt_klwiki_en2();',true],
+    ['含有2个稀有单词的行','txtsearch_kltxt_b(\'(\\\\(\\\\-|\\\\([^\\\\(\\\\)]+\\\\s\\\\-)[^\\\\(\\\\)-]+\\\\s\\\\-\');',true],
     ['无新单词行','new_words_kltxt_klwiki_en2(0);',true],    
     ['仅有1个新单词行','new_words_kltxt_klwiki_en2(1);',true],
+    
+    
     ];    
     klmenu1.push(menu_container_b(str_t,group_list,''));
     
