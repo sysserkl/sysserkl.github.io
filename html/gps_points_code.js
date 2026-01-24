@@ -540,7 +540,7 @@ function circle_gps_points(csstr,dotransform=true,layertype='navigation',dopanto
     function sub_circle_gps_points_one_row(){
         if (blxl>=bllen){
             document.title=old_title;
-            console.log('circle_gps_points() 费时：'+(performance.now() - t0) + ' milliseconds');    
+            performance_b('circle_gps_points()',t0);
             return;
         }
         
@@ -1699,7 +1699,7 @@ function menu_gps_points(){
     
     klmenu_dots=klmenu_dots.concat([
     '<span class="span_menu" onclick="'+str_t+'lng_lat_gps_points();">经度 纬度,经度 纬度;经度 纬度 格式生成线条</span>',
-    '<span class="span_menu">演示1秒 == 实际 <input type="number" id="input_real_second_gps_points" min="1" value="86400" style="width:5rem;" /> 秒 最长间隔时间（秒）：<input type="number" id="input_max_wait_seconds_gps_points" min="0.01" value="0.01" style="width:4rem;" /><br /><label><input type="checkbox" id="checkbox_ppt_circle_gps_points" checked />circle</label> 半径：<input type="number" id="input_ppt_circle_radius_gps_points" min="1" value="20" style="width:3rem;" /> <label><input type="checkbox" id="checkbox_ppt_character_gps_points" checked />character</label> 半径：<input type="number" id="input_ppt_character_radius_gps_points" min="1" value="17" style="width:3rem;" /> 分组：<select id="select_ppt_color_gps_points"><option></option><option>10年</option><option>年</option><option>月</option></select> 最小缩放：<input type="number" id="input_ppt_scale_min_gps_points" min="5" value="9" step="1" style="width:4rem;" /> <span class="aclick" onclick="'+blparent+'ppt_gps_points();">动态演示</span> 延时：<input type="number" id="input_run_wait_second_gps_points" min="1" value="3" style="width:3rem;" /> 秒 <span class="aclick" onclick="'+blparent+'selet_points_in_range_gps_points();">筛选出当前看见范围内的点</span></span>',
+    '<span class="span_menu">演示1秒 == 实际 <input type="number" id="input_real_second_gps_points" min="1" value="86400" style="width:5rem;" /> 秒 最长间隔时间（秒）：<input type="number" id="input_max_wait_seconds_gps_points" min="0.01" value="0.01" style="width:4rem;" /><br /><label><input type="checkbox" id="checkbox_ppt_circle_gps_points" checked />circle</label> 半径：<input type="number" id="input_ppt_circle_radius_gps_points" min="1" value="20" style="width:3rem;" /> <label><input type="checkbox" id="checkbox_ppt_character_gps_points" checked />character</label> 半径：<input type="number" id="input_ppt_character_radius_gps_points" min="1" value="17" style="width:3rem;" /> 分组：<select id="select_ppt_color_gps_points"><option></option><option>10年</option><option>年</option><option>月</option></select> 最小缩放：<input type="number" id="input_ppt_scale_min_gps_points" min="5" value="9" step="1" style="width:4rem;" /> <span class="aclick" onclick="'+blparent+'ppt_gps_points();">动态演示</span><span class="aclick" onclick="'+blparent+'ppt_gps_points(true);">直接载入</span> 延时：<input type="number" id="input_run_wait_second_gps_points" min="1" value="3" style="width:3rem;" /> 秒 <span class="aclick" onclick="'+blparent+'selet_points_in_range_gps_points();">筛选出当前看见范围内的点</span></span>',
     ]);
     
     group_list=[
@@ -1860,7 +1860,7 @@ function selet_points_in_range_gps_points(){
     document.getElementById('textarea_gps_points').value=selected_list.join('\n');
 }
 
-function ppt_gps_points(){
+function ppt_gps_points(direct_show=false){
     function sub_ppt_gps_points_one_point(){
         if (do_rescale){
             if (blno!==row_count-1){
@@ -1879,7 +1879,7 @@ function ppt_gps_points(){
             dopanto=false;
         }
 
-        if (scale_min!==scale_current && dopanto){
+        if (!direct_show && scale_min!==scale_current && dopanto){
             if (performance.now() - session1_start>Math.max(10,wait_max*10)*1000){
                 //至少10秒 - 保留注释
                 do_rescale=true;
@@ -1905,7 +1905,7 @@ function ppt_gps_points(){
         }
         
         let do_color_change=false;
-        let show_string='';
+        let show_string='+';
         switch (color_type){
             case '10年':
                 if (current_year!==img_year){
@@ -1923,7 +1923,8 @@ function ppt_gps_points(){
                     current_year=img_year;
                     sound_b('elephant');
                 }
-                show_string=arow[0].substring(3,4);
+                show_string=arow[0].substring(3,4); //年份尾数 - 保留注释
+                //arow 形如：[ "20250625杭州3", 30.296242, 120.091354, Date Wed Jun 25 2025 14:50:57 GMT+0800 (China Standard Time), 0.00008101851851851852 ]
                 break;
             case '月':
                 if (current_year!==img_year || current_month!==img_month){
@@ -1964,10 +1965,18 @@ function ppt_gps_points(){
             return;
         }
         
-        if (blno % 1000 ==0){
-            console.log(today_str_b('t'), blno,'等待',result_t[blno][4],'秒',dopanto,arow);
+        if (direct_show){
+            if (blno % 1000 ==0){
+                setTimeout(sub_ppt_gps_points_one_point,1);
+            } else {
+                sub_ppt_gps_points_one_point();
+            }
+        } else {
+            if (blno % 1000 ==0){
+                console.log(today_str_b('t'), blno,'等待',result_t[blno][4],'秒',dopanto,arow);
+            }
+            setTimeout(sub_ppt_gps_points_one_point,result_t[blno][4]*1000);
         }
-        setTimeout(sub_ppt_gps_points_one_point,result_t[blno][4]*1000);
     }
     
     var t0 = performance.now();
