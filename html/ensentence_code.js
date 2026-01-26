@@ -654,7 +654,7 @@ function odd_quote_get_ensentence(csmax=-1,show_button=true,csmobile_font=false)
     var buttons='<span class="aclick" onclick="quote_ignore_ensentence(\'s_quote_space\');">①忽略内部仅有一个s\'或s’的句子</span>';
     buttons=buttons+'<span class="aclick" onclick="quote_ignore_ensentence(\'az_quote_az\');">②忽略含有[a-z][\'’][a-z]但无其他引号的句子</span>';
     buttons=buttons+'<span class="aclick" onclick="quote_ignore_ensentence(\'space_q_quote_09\');">③忽略含有\\s[\'’][0-9]但无其他引号的句子</span>';
-    buttons=buttons+'<span class="aclick" onclick="quote_ignore_ensentence(\'all\');">①+③</span>';
+    buttons=buttons+'<span class="aclick" onclick="quote_ignore_ensentence(\'all\');">①+②+③</span>';
     buttons=buttons+group_reg[0];
 
 	document.getElementById('divhtml').innerHTML='<div class="div_sentence">'+result_t.join('\n')+'</div><p><i id="i_odd_quote_count_ensentence">('+result_t.length+')</i> '+buttons+'</p>'+group_reg[1];
