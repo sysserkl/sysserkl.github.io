@@ -177,12 +177,17 @@ function menu_enwords_book(){
     ['新单词','import_enwords_book(\'new\',2500);',true],
     ['旧单词释义','import_enwords_book(\'old_def\',2500);',true],
     ['例句','import_enwords_book(\'sentence\',1000);',true],
-    ['kaikki phrase','import_enwords_book(\'kaikki phrase\',1000);',true],
-    ['kaikki单词','import_enwords_book(\'kaikki\',1000);',true],
     ['usr share dict','import_enwords_book(\'usr share dict\',3000);',true],
     ];    
     klmenu_new.push(menu_container_b(str_t,format_list,'随机导入：'));    
 
+    var format_list=[
+    ['phrase','import_enwords_book(\'kaikki phrase\',1000);',true],
+    ['单词','import_enwords_book(\'kaikki\',1000);',true],
+    ['含有生词的phrase','import_enwords_book(\'kaikki phrase new\',1000);',true],
+    ];    
+    klmenu_new.push(menu_container_b(str_t,format_list,'kaikki随机导入1000个：'));    
+    
     var format_list=[
     ['导入全部旧单词','import_enwords_book(\'old\');',true],
     ['释义','import_enwords_book(\'old_def\');',true],
@@ -237,12 +242,12 @@ function menu_enwords_book(){
     
     format_list=[
     ['全部新单词','load_all_new_enwords_book();',true],
-    ['kaikki','load_enword_file_b(\'kaikki_phrase_global\',\'kaikki_phrase\',false);',true],
+    ['kaikki 中未收录的 phrase','check_kaikki_phrase_b(true,true);',true],
     ['new_words_count','load_new_words_count_enwords_book();',true],
     ];
     klmenu_config.push(menu_container_b(str_t,format_list,'文件载入：'));    
     
-    var menus=klmenu_b(klmenu1,'🝛','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_new,'🔤','36rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'🧮','33rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','27rem','1rem','1rem','60rem');
+    var menus=klmenu_b(klmenu1,'🝛','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_new,'🔤','30rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'🧮','33rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','34rem','1rem','1rem','60rem');
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(menus,'','0rem')+' ');
     
     var input_list=[['input_frequency_count_enwords',5,0.5],];
@@ -686,7 +691,7 @@ function import_enwords_book(cstype,csmax=-1){
             var progress_list=ltp_status_get_b('+生词 +CET6','pink','white',100);
             ospan.innerHTML=progress_list.join(' ');   
             break;   
-        case 'kaikki':            
+        case 'kaikki':
         case 'kaikki phrase':
             if (check_kaikki_phrase_b()){
                 kaikki_phrase_global.sort(randomsort_b);
@@ -695,6 +700,23 @@ function import_enwords_book(cstype,csmax=-1){
                     blstr=blstr.replace(/ /g,'_');
                 }
                 otextarea.value=blstr;
+            }
+            break;
+        case 'kaikki phrase new':
+            if (check_kaikki_phrase_b()){
+                var is_remove_square=checkbox_kl_value_b('remove_square');
+                var words_type=checkbox_kl_value_b('words_type_check');
+                var csendata_set=simple_words_b(true,false,true);
+                kaikki_phrase_global.sort(randomsort_b);
+                var result_t=[];
+                for (let aphrase of kaikki_phrase_global){
+                    var new_words_set=get_new_old_rare_words_set_enbook_b(aphrase.replace(/\-/g,' '),is_remove_square,words_type,csendata_set)[0];
+                    if (new_words_set.size>0){
+                        result_t.push(aphrase);
+                        if (result_t.length>=csmax){break;}
+                    }
+                }
+                otextarea.value=result_t.join('\n').replace(/ /g,'_');
             }
             break;
         case 'usr share dict':
