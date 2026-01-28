@@ -355,6 +355,7 @@ function txtmenus_kltxt_b(cstype=''){
 
     var group_list=[
     ['摘要中','old_words_in_digest_kltxt_b();',true],
+    ['新添加的几个','recent_added_in_digest_kltxt_b();',true],
     ['当前页面','old_words_redundant_kltxt_b(true);',true],    
     ['行内多余','old_words_redundant_kltxt_b();',true],    
     ];    
@@ -554,6 +555,23 @@ function content_horizontal_overflow_check_kltxt_b(){
     var ocontainer=document.getElementById('divhtml');
     var ospans=ocontainer.querySelectorAll('span.txt_content');
     doms_horizontal_overflow_check_b(ocontainer,ospans);
+}
+
+function recent_added_in_digest_kltxt_b(){
+    var csarr=Array.from(digest_special_raw_global['*']);
+    var blcount=prompt('输入截取个数');
+    if (blcount==null){return;}
+    blcount=parseInt(blcount.trim());
+    csarr=csarr.slice(-1*blcount,);
+    for (let blxl=0,lent=csarr.length;blxl<lent;blxl++){
+        csarr[blxl]=csarr[blxl].slice(1,);  //去掉* - 保留注释
+    }
+    
+    if (confirm('是否返回reg格式？')){
+        alert(enwords_list_2_reg_b(csarr)); //依赖klbase_eng
+    } else {
+        alert(csarr.join('\n'));
+    }    
 }
 
 function old_words_in_digest_kltxt_b(){
