@@ -91,15 +91,18 @@ function menu_ensentence(){
 
     var group_list=[
     ['🚩','sentence_flag_get_ensentence(-1);',true],
-    ['奇数个引号','odd_quote_get_ensentence();',true],
-    ['开放结尾','search_sentences(open_end_key_ensentence_b());',true],
-    ['数字开头','search_sentences(\'^[0-9]\');',true],
+    ['①奇数个引号','odd_quote_get_ensentence();',true],
+    ['②开放结尾','search_sentences(open_end_key_ensentence_b());',true],
+    ['③数字开头','search_sentences(\'^[0-9]\');',true],
+    ['①②③ hash','hash_result_sentences();',true],
+    
     ];    
     klmenu_config.push(menu_container_b(str_t,group_list,'统计：'));
     
     var group_list=[
     //['⚪ reg','klmenu_check_b(this.id,true);',true,'span_reg_ensentence'],
     ['⚪ show button','klmenu_check_b(this.id,true);',true,'span_button_show_ensentence'],
+    ['⚪ match strictly','klmenu_check_b(this.id,true);',true,'span_match_strictly_eng_b'],
     ['⚪ 显示例句详细出处','klmenu_check_b(this.id,true);',true,'span_source_en_b'],
     ];    
     klmenu_config.push(menu_container_b(str_t,group_list,''));
@@ -121,11 +124,12 @@ function menu_ensentence(){
     '<a href="'+location.origin+'/wiki/index.php/%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9" onclick="'+str_t+'" target=_blank>KLWiki最近更改</a>',        
     ];
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🗨','24rem','1rem','1rem','60rem')+klmenu_b(klmenu_fill,'✏','29rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','23rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🗨','24rem','1rem','1rem','60rem')+klmenu_b(klmenu_fill,'✏','29rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','29rem','1rem','1rem','60rem'),'','0rem')+' ');
 
     //klmenu_check_b('span_reg_ensentence',true);
     klmenu_check_b('span_remove_full_exam_ensentence',true);
     klmenu_check_b('span_source_en_b',true);
+    klmenu_check_b('span_match_strictly_eng_b',true);
     
     var input_list=[
     ['input_ensentence_percent_exam',4,0.5],
@@ -133,6 +137,63 @@ function menu_ensentence(){
     ['input_ensentence_row_max_exam',3,0.5],
     ];
     input_size_b(input_list,'id');
+}
+
+function hash_result_sentences(){
+    function sub_hash_result_sentences_html(csarr,cskey=false,csstring=''){
+        var bllen=csarr.length;
+        if (bllen>2){
+            csarr=[csarr[0]].concat(csarr.slice(-1));
+        }
+        if (cskey===false){
+            var bljg=csarr;
+        } else {
+            var bljg=sentence_list_2_html_b(csarr,[''],-1,false,false);
+        }
+	    return '<div class="div_sentence">'+bljg.join('\n')+'</div><p><i>('+bllen+')</i>'+csstring+'</p>';        
+    }
+    
+    var match_strictly=klmenu_check_b('span_match_strictly_eng_b',false);
+    if (match_strictly){
+        klmenu_check_b('span_match_strictly_eng_b',true);
+    }
+    
+    var result1=odd_quote_get_ensentence(-1,false,false,false);
+    var result2=sentence_search_value_get_b(open_end_key_ensentence_b(),false,false,false,true);
+    var result3=sentence_search_value_get_b('^[0-9]',false,false,false,true);
+    
+    var bible_count=0;
+    for (let item of result3[0]){
+        if (item[2]=='Bible(kjv)_TLS'){
+            bible_count=bible_count+1;
+        }
+    }
+
+    var len_all=result1.length+'_'+result2[0].length+'_'+result3[0].length;
+    
+    var bljg=sub_hash_result_sentences_html(result1);
+    
+    bljg=bljg+sub_hash_result_sentences_html(result2[0],result2[1]);
+    bljg=bljg+sub_hash_result_sentences_html(result3[0],result3[1],' 其中 Bible(kjv)_TLS: <i>('+bible_count+')</i>');
+    
+    var hash_value=SHA1(bljg);
+    var old_value=local_storage_get_b('hash_result_ensentence');
+    if (len_all+'_'+hash_value==old_value){
+        var blcaption='<font color="'+scheme_global['green']+'">一致 ✔</font>';
+        var blbutton='';
+    } else {
+        var blcaption='('+old_value+')<font color="'+scheme_global['a-hover']+'">不一致 ✗</font>';
+        var blbutton=' <span class="aclick" onclick="hash_save_ensentence(\''+len_all+'_'+hash_value+'\');">储存</span>';
+    }
+    document.getElementById('divhtml').innerHTML=bljg+'<p>'+hash_value+' 与缓存值'+blcaption+blbutton+'</p>';
+    
+    if (match_strictly){
+        klmenu_check_b('span_match_strictly_eng_b',true);
+    }
+}
+
+function hash_save_ensentence(csvalue){
+    localStorage.setItem('hash_result_ensentence',csvalue);
 }
 
 function args_ensentence(){
@@ -643,7 +704,7 @@ function rare_old_words_ensentence(cscaption='',show_sentence=false,generate_js=
     sub_rare_old_words_ensentence_arow();
 }
 
-function odd_quote_get_ensentence(csmax=-1,show_button=true,csmobile_font=false){
+function odd_quote_get_ensentence(csmax=-1,show_button=true,csmobile_font=false,show_html=true){
     if (typeof en_sentence_global == 'undefined'){
         var result_t=['en_sentence_global 未定义'];
     } else {
@@ -657,7 +718,10 @@ function odd_quote_get_ensentence(csmax=-1,show_button=true,csmobile_font=false)
     buttons=buttons+'<span class="aclick" onclick="quote_ignore_ensentence(\'all\');">①+②+③</span>';
     buttons=buttons+group_reg[0];
 
-	document.getElementById('divhtml').innerHTML='<div class="div_sentence">'+result_t.join('\n')+'</div><p><i id="i_odd_quote_count_ensentence">('+result_t.length+')</i> '+buttons+'</p>'+group_reg[1];
+    if (show_html){
+	    document.getElementById('divhtml').innerHTML='<div class="div_sentence">'+result_t.join('\n')+'</div><p><i id="i_odd_quote_count_ensentence">('+result_t.length+')</i> '+buttons+'</p>'+group_reg[1];
+    }
+    return result_t;
 }
 
 function quote_reg_button_ensentence(){
@@ -929,7 +993,9 @@ function search_sentences(csstr=false){
         csstr=oinput.value.trim();
     }
     oinput.value=csstr;
+    
     enwords_recent_search_b(csstr,'sentence');
+    
     var show_button=klmenu_check_b('span_button_show_ensentence',false);
     sentence_search_value_get_b(csstr,false,show_button);
 }
@@ -1062,7 +1128,6 @@ function get_day_sentences(csday='',csmonth='',use_asc=true){
     }
     console.log(re_combine);
     var show_button=klmenu_check_b('span_button_show_ensentence',false);
-
     var bljg=sentence_list_2_html_b(list_t,[''],500,show_button,false,!use_asc,!use_asc);    
     var pages='<p>'+sub_get_day_sentences_pages(blyear,csmonth,csday,use_asc)+'</p>';
     if (use_asc){

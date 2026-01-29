@@ -681,7 +681,7 @@ function en_sentence_quote_compared_get_b(csstr){
     return csstr.replace(/([a-z0-9])['‘’]([a-z0-9])/ig,'$1_$2');   //把夹在两个字母/数字之间的引号换成下划线
 }
 
-function en_sentence_one_line_b(aline,wordname='',attachment_path='',wikisite='',button_str='',return_arr=false,keep_kleng=false,remove_quote='rq',remove_ol_ul=true){  //attachment_path 用于替换 {{wikiuploads}} - 保留注释
+function en_sentence_one_line_b(aline,wordname='',attachment_path='',wikisite='',button_str='',return_arr=false,keep_kleng=false,remove_quote='rq',remove_ol_ul=true,match_strictly=true){  //attachment_path 用于替换 {{wikiuploads}} - 保留注释
     function sub_en_sentence_one_line_b_return(){
         if (return_arr){
             return [];
@@ -710,6 +710,7 @@ function en_sentence_one_line_b(aline,wordname='',attachment_path='',wikisite=''
         return item;
     }
     //-----------------------
+    
     var item=aline[0];
     if (Array.isArray(item)){
         item=item.join('');
@@ -732,9 +733,8 @@ function en_sentence_one_line_b(aline,wordname='',attachment_path='',wikisite=''
         item=sub_en_sentence_one_line_b_replace(item,aword);
     }
     
-    //若循环一遍后未含有 指定的单词组，则直接返回空字符串 - 保留注释
-    if (blmatch==false){
-        return sub_en_sentence_one_line_b_return();
+    if (match_strictly && blmatch==false){
+        return sub_en_sentence_one_line_b_return();    //若循环一遍后未含有 指定的单词组，则直接返回空字符串 - 保留注释
     }
     
     if (!keep_kleng){
@@ -782,7 +782,7 @@ function en_sentence_one_line_b(aline,wordname='',attachment_path='',wikisite=''
             }
         }
     }
-    
+
     if (remove_ol_ul){
         if (item.startsWith('# ') || item.startsWith('* ')){
             console.log('移除 ol ul',item);
@@ -790,7 +790,7 @@ function en_sentence_one_line_b(aline,wordname='',attachment_path='',wikisite=''
         }
     }
     
-    var bljg='<span class="span_enwords_sentence">'+wiki_line_b(item,attachment_path)+'</span>';
+    var bljg='<span class="span_enwords_sentence">'+wiki_line_b(item,attachment_path)+(blmatch?'':'⁜')+'</span>';
     
     //---
     if (aline[1].slice(-1)!=='/'){
@@ -820,7 +820,7 @@ function en_sentence_one_line_b(aline,wordname='',attachment_path='',wikisite=''
             wiki_source='<span class="span_from_wiki" style="line-height:150%;" onclick="this.style.backgroundColor=\''+scheme_global['pink']+'\';">'+wiki_source+'</span>';
         }
     }
-    
+        
     if (return_arr){
         return [bljg,web_source,wiki_source];
     } else {
@@ -2440,7 +2440,7 @@ function en_sentence_attachment_wikisite_path_get_b(islocal,remote_host,sele_pat
     return [attachment_path,wikisite];
 }
 
-function sentence_list_2_html_b(cslist,csword_list=[''],csmax=500,show_button=true,csmobile_font=false,return_arr=false,keep_kleng=false,remove_quote='rq'){
+function sentence_list_2_html_b(cslist,csword_list=[''],csmax=500,show_button=true,csmobile_font=false,return_arr=false,keep_kleng=false,remove_quote='rq',match_strictly=-1){
     var remote_host=local_storage_get_b('kl_remote_host',-1,false);
     var mobile_pc_font_size='';
     if (ismobile_b()){
@@ -2455,12 +2455,15 @@ function sentence_list_2_html_b(cslist,csword_list=[''],csmax=500,show_button=tr
     var islocal=is_local_b();
     var sele_path=klbase_sele_path_b()[1];
     var attachment_path,wikisite;
+    if (match_strictly===-1){
+        match_strictly=klmenu_check_b('span_match_strictly_eng_b',false);
+    }    
 	for (let item of cslist){
         //符合宽泛的条件后，再判断是否含有 过滤后的单词，若没有返回空字符 - 保留注释
         [attachment_path,wikisite]=en_sentence_attachment_wikisite_path_get_b(islocal,remote_host,sele_path,item);
 
-        var str_t=en_sentence_one_line_b(item,csword_list,attachment_path,wikisite,button_str,return_arr,keep_kleng,remove_quote);
-        
+        var str_t=en_sentence_one_line_b(item,csword_list,attachment_path,wikisite,button_str,return_arr,keep_kleng,remove_quote,true,match_strictly);
+
         if (return_arr){
             if (str_t.length>0){
                 bljg.push(str_t);
@@ -2522,7 +2525,7 @@ function sentence_split_b(csstr,csno=-1,re_combine=false){   //sentence split - 
             return true;
         }
 
-        if (csstr1.match(/\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)\.\s*$/) && csstr2.match(/^\s*\d+\s/)){  //May后面无. - 保留注释
+        if (csstr1.match(/\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)\.\s*$/) && csstr2.match(/^\s*\d+[\s,]/)){  //May后面无. - 保留注释
             sub_sentence_split_b_count('month',csstr1,csstr2);
             return true;
         }
@@ -2632,21 +2635,34 @@ function sentence_split_b(csstr,csno=-1,re_combine=false){   //sentence split - 
     return result_t;
 }
 
-function sentence_search_value_get_b(csword,change_title=true,show_button=true){
+function sentence_search_value_get_b(csword,change_title=true,show_button=true,show_html=true,return_arr=false){
     var is_reg=checkbox_kl_value_b('input_reg');
     var blmax=parseInt(document.getElementById('input_max_result').value);
-    document.getElementById('divhtml').innerHTML=sentence_search_b(csword,is_reg,blmax,show_button);
-    setTimeout(en_sentence_mobile_b,10);
+    var bljg=sentence_search_b(csword,is_reg,blmax,show_button,false,return_arr);
+    if (show_html){
+        document.getElementById('divhtml').innerHTML=bljg;
+        setTimeout(en_sentence_mobile_b,10);
+    }
     if (change_title){
         title_change_enwords_b('例句搜索');
     }
+    return bljg;
 }
 
-function sentence_search_b(csword='',csreg=false,csmax=500,show_button=true,csmobile_font=false){
+function sentence_search_b(csword='',csreg=false,csmax=500,show_button=true,csmobile_font=false,return_arr=false){
     if (typeof en_sentence_global == 'undefined'){
+        if (return_arr){
+            return [[],[]];
+        }    
         return 'en_sentence_global 未定义';
     }
-    if (csword==''){return '';}
+    
+    if (csword==''){
+        if (return_arr){
+            return [[],[]];
+        }
+        return '';
+    }
 
 	var blcount=0;
 	var blwordlist=csword.split(' ');
@@ -2687,6 +2703,10 @@ function sentence_search_b(csword='',csreg=false,csmax=500,show_button=true,csmo
         if (do_break){break;}
 	}
     console.log(re_combine);
+    if (return_arr){
+        return [result_t,blwordlist2];
+    }
+    
     var bljg=sentence_list_2_html_b(result_t,blwordlist2,csmax,show_button,csmobile_font);
 	return '<div class="div_sentence">'+bljg.join('\n')+'</div><p><i>('+bljg.length+')</i></p>';
 }
