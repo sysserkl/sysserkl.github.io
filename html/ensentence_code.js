@@ -708,7 +708,7 @@ function odd_quote_get_ensentence(csmax=-1,show_button=true,csmobile_font=false,
     if (typeof en_sentence_global == 'undefined'){
         var result_t=['en_sentence_global 未定义'];
     } else {
-        var result_t=odd_quote_get_ensentence_b(en_sentence_global,csmax,show_button,csmobile_font);
+        var result_t=odd_quote_get_ensentence_b(en_sentence_global,csmax,show_button,csmobile_font,true,-1,false,false,new Set(),false);
     }
     
     var group_reg=quote_reg_button_ensentence();

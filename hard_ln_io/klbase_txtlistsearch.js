@@ -380,12 +380,14 @@ function txtmenus_kltxt_b(cstype=''){
     ['例句+生词+','rare_enwords_search_kltxt_b(true,true,true);',true],
     ['可选','show_rare_and_load_sentence_kltxt_b(true,true,flist_2_ensentence_b);',true],    
     ['重复剔除','rare_enwords_unique_kltxt_b();',true],
+    ['例句提取','current_page_2_ensentence_b(\'rare\');',true],    
     ];    
     menu_general.push(menu_container_b(str_t,group_list,'稀有旧单词：'));
     
     var group_list=[
     ['全部','frequent_new_enwords_kltxt_b();',true],
     ['当前页面','frequent_new_enwords_kltxt_b(true);',true],
+    ['例句提取','current_page_2_ensentence_b(\'new\');',true],      
     ];    
     menu_general.push(menu_container_b(str_t,group_list,'常见英语生词：'));
     
@@ -568,7 +570,8 @@ function recent_added_in_digest_kltxt_b(){
     }
     
     if (confirm('是否返回reg格式？')){
-        alert(enwords_list_2_reg_b(csarr)); //依赖klbase_eng
+        document.getElementById('input_search').value=enwords_list_2_reg_b(csarr);
+        //alert(enwords_list_2_reg_b(csarr)); //依赖klbase_eng
     } else {
         alert(csarr.join('\n'));
     }    
@@ -4693,6 +4696,91 @@ function best_sentences_kltxt_b(csid,filter_str='',csreg=false){
     ocontainer.scrollIntoView();
 }
 
+function current_page_2_ensentence_b(cstype=''){
+    var result_t=[];
+    var re_combine=sentence_split_status_generate_b();
+    var ospans=document.querySelectorAll('span.txt_content');
+    var remove_hot_words=(csbookname_global='klwiki_en2');
+
+    for (let one_span of ospans){
+        var blstr=one_span.innerText;
+        if (remove_hot_words){
+            blstr=blstr.replace(/\([^()]+\)\s*$/,'');
+        }
+        var line_split=sentence_split_b(blstr,-1,re_combine);
+        result_t=result_t.concat(line_split);
+    }
+    
+    var owords=[];
+    switch (cstype){
+        case 'rare':
+            owords=document.querySelectorAll('span.span_rare_word_search_links');
+            break;
+        case 'new':
+            owords=document.querySelectorAll('span.span_new_word_search_links');
+            break;
+    }
+    
+    var key_list=[];
+    for (let item of owords){
+        key_list.push(item.innerText);
+    }
+    
+    if (key_list.length>0){
+        var reg_str=new RegExp('\\b('+key_list.join('|')+')\\b','i');
+        var filtered_list=[];
+        for (let arow of result_t){
+            if (arow.match(reg_str)){
+                filtered_list.push(arow);
+            }
+        }
+        result_t=filtered_list;
+    } else if (cstype!==''){
+        result_t=[];
+    }
+
+    var bljg=result_t.join('\n\n');    
+    var odiv=document.getElementById('divhtml2');
+    var left_str='<p>('+result_t.length+'/'+bljg.length+')';
+    left_str=left_str+close_button_b('divhtml2','');      
+    left_str=left_str+'<input type="number" id="input_sentences_from_kltxt_split_len_b" placeholder="分割长度" min=0 value="5000" style="width:4rem;" /> <span class="aclick" onclick="ensentence_in_textarea_split_b();">分割</span>';
+    var right_str='</p>';
+    var bljg=textarea_with_form_generate_b('textarea_sentences_from_kltxt_b','height:10rem;',left_str,'清空,复制,发送到临时记事本,发送地址',right_str,'','',false,bljg);
+    
+    odiv.innerHTML='<div style="margin:0.5rem;">'+bljg+'<div id="div_sentences_from_kltxt_result_b"></div></div>';
+    odiv.scrollIntoView();
+}
+
+function ensentence_in_textarea_split_b(){
+    function sub_ensentence_in_textarea_split_b_textarea(part_str,row_count){
+        return '<textarea onclick="this.style.borderColor=\''+scheme_global['pink']+'\'; this.select(); document.execCommand(\'copy\');">'+part_str+'</textarea><p>'+(split_str.length+1)+'. '+row_count+'/'+part_str.length+'</p>';
+    }
+    
+    var otextarea=document.getElementById('textarea_sentences_from_kltxt_b');
+    var bljg=otextarea.value;
+    var split_len=parseInt(document.getElementById('input_sentences_from_kltxt_split_len_b').value.trim());
+    if (bljg.length<=5000){return;}
+    var result_t=bljg.split(/\n+/);
+    
+    var split_str=[];
+    var part_str='';
+    var row_count=0;
+    for (let arow of result_t){
+        if ((part_str+arow+'\n\n').length>5000){
+            split_str.push(sub_ensentence_in_textarea_split_b_textarea(part_str,row_count));
+            part_str='';
+            row_count=0;
+        }
+        part_str=part_str+arow+'\n\n';
+        row_count=row_count+1;
+    }
+    if (split_str.length>0){
+        split_str.push(sub_ensentence_in_textarea_split_b_textarea(part_str,row_count));
+    }
+    
+    document.getElementById('div_sentences_from_kltxt_result_b').innerHTML=split_str.join('\n');
+}
+
 function flist_2_ensentence_b(is_ok=true,max_line_len=1000,max_rows=20000){
     if (!is_ok || typeof en_sentence_count_global == 'undefined'){return;}
 
@@ -4732,7 +4820,7 @@ function flist_2_ensentence_b(is_ok=true,max_line_len=1000,max_rows=20000){
     for (let blxl=0,lent=result_t.length;blxl<lent;blxl++){
         no_all.add(result_t[blxl][1]);
         if (remove_hot_words){
-            result_t[blxl][0]=result_t[blxl][0].replace(/\([^()]+\)$/,'');
+            result_t[blxl][0]=result_t[blxl][0].replace(/\([^()]+\)\s*$/,'');
         }
         result_t[blxl]=['<span class="span_filelist_no">'+result_t[blxl][1]+'</span> | '+result_t[blxl][0],'','',result_t[blxl][1]];
     }
@@ -4740,18 +4828,18 @@ function flist_2_ensentence_b(is_ok=true,max_line_len=1000,max_rows=20000){
     var re_combine=sentence_split_status_generate_b();
     var no_ignore=new Set();    
     var blhtml=odd_quote_get_ensentence_b(result_t,-1,false,false,false,max_line_len,re_combine,true,no_ignore);
-
     var odiv=document.createElement('div');
     odiv.innerHTML=blhtml.join('\n');
-    var ops=odiv.querySelectorAll('p.p_enwords_sentence');
-    quote_ignore_ensentence_b('all',ops);
-    //console.log(odiv.innerHTML); //此行保留 - 保留注释
-    
+
     var ospan_nos=odiv.querySelectorAll('span.span_filelist_no');
     for (let one_span of ospan_nos){
         let blvalue=parseInt(one_span.innerText);
         no_ignore.add(blvalue);
-    }
+    }   //要先提取 no_ignore - 保留注释
+
+    var ops=odiv.querySelectorAll('p.p_enwords_sentence');
+    quote_ignore_ensentence_b('all',ops);
+    //console.log(odiv.innerHTML); //此行保留 - 保留注释
     
     var bljg=[];
     var no_remain=Array.from(array_difference_b(no_all,no_ignore,true));
@@ -4764,5 +4852,5 @@ function flist_2_ensentence_b(is_ok=true,max_line_len=1000,max_rows=20000){
     console.log('flist_2_ensentence_b() no 获取',bljg.length,'条记录，费时：'+(performance.now() - t0) + ' milliseconds');
 
     lines_2_html_kltxt_b(bljg.slice(0,max_rows));    
-    render_html_kltxt_b([],true,true,false,false,false,false);
+    render_html_kltxt_b([],true,true,false,false,function (){current_page_2_ensentence_b('rare');},false);
 }

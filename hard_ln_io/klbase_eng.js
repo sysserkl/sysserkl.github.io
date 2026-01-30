@@ -3301,7 +3301,7 @@ function open_end_key_ensentence_b(){
     return '[a-z0-9:;,—]$';
 }
 
-function odd_quote_get_ensentence_b(csarr,csmax=-1,show_button=true,csmobile_font=false,use_no=true,max_line_len=-1,re_combine=false,ignore_open_end=false,no_ignore=new Set()){
+function odd_quote_get_ensentence_b(csarr,csmax=-1,show_button=true,csmobile_font=false,use_no=true,max_line_len=-1,re_combine=false,ignore_open_end=false,no_ignore=new Set(),only_first_row=true){
     function sub_odd_quote_get_ensentence_b_check(compared,csstr){
         let blfound=false;
         for (let one_quote of csstr){
@@ -3315,9 +3315,8 @@ function odd_quote_get_ensentence_b(csarr,csmax=-1,show_button=true,csmobile_fon
     }
     
     var t0 = performance.now();
-	var blcount=0;
     var result_t=[];
-    var do_break=false;
+
     var keys=new Set();
     if (re_combine===false){
         re_combine=sentence_split_status_generate_b();
@@ -3328,6 +3327,8 @@ function odd_quote_get_ensentence_b(csarr,csmax=-1,show_button=true,csmobile_fon
 	for (let blxl=0,lent=csarr.length;blxl<lent;blxl++){
         var aline=csarr[blxl];
         var line_split=sentence_split_b(aline[0],(use_no?blxl:-1),re_combine);
+        var col0=line_split[0];
+        line_split[0]=line_split[0].replace(/^<span class="span_filelist_no">\d+<\/span> \| /,'');
         
         if (max_line_len>0){
             var max_found=false;
@@ -3361,6 +3362,7 @@ function odd_quote_get_ensentence_b(csarr,csmax=-1,show_button=true,csmobile_fon
             if (open_end_found){continue;}
         }
         
+        var matched_row=[];
         for (let arow of line_split){
             //将单词内部的撇号（包括各种单引号变体）标准化为下划线 - 保留注释
             compared=en_sentence_quote_compared_get_b(arow);
@@ -3373,11 +3375,18 @@ function odd_quote_get_ensentence_b(csarr,csmax=-1,show_button=true,csmobile_fon
                 if (!blfound){
                     compared2=compared.replace(/‘[^‘’]+’/g,'');
                     blfound=sub_odd_quote_get_ensentence_b_check(compared2,'‘’');
+                    if (blfound){
+                        console.log('found3',arow);
+                    }
+                } else {
+                    console.log('found1',arow);
                 }
+            } else {
+                console.log('found0',arow);
             }
             
             if (blfound){
-                if (compared.match(/^[^'"“”‘’]+['’]\s[^'"“”‘’]+$/)){
+                if (compared.match(/^[^'"“”‘’]+['’]\s[^'"“”‘’]+$/)){    //只中间含有1个单引号的，不作为异常 - 保留注释
                     if (re_combine['console']){
                         console.log('alone:',arow);
                     }
@@ -3385,20 +3394,27 @@ function odd_quote_get_ensentence_b(csarr,csmax=-1,show_button=true,csmobile_fon
                     blfound=false;
                 }
             }
-            
+        
             if (blfound){
-                result_t.push([arow].concat(aline.slice(1,)));
-                blcount=blcount+1;
-                if (csmax>=0 && blcount>=csmax){
-                    do_break=true;
+                if (only_first_row){
+                    matched_row.push([col0].concat(aline.slice(1,)));  //重新组合数组，只获取带有no的第一个元素，适用于剔除含有不符合条件分句的整句 - 保留注释
                     break;
+                } else {
+                    matched_row.push([arow].concat(aline.slice(1,)));   //适用于对每一条分句进行检查 - 保留注释
+                    if (csmax>=0 && result_t.length>=csmax){break;}
                 }
             }
         }
-        if (do_break){break;}
+        
+        if (matched_row.length>0){
+            result_t=result_t.concat(matched_row);
+        }
+        if (csmax>=0 && result_t.length>=csmax){break;}
     }
+    //result_t 元素形如：[ '<span class="span_filelist_no">1116</span> | Optimus Prime’s voice grew solemn. “You are quite correct, Sam Witwicky. We are not ‘playing.’ We have come in search of what I will categorize for you as the Energon Cube. ', "", "", 1116 ] 或 [ "“You don’t have a checking account, but that’s all right. ", "", "", 290 ]
+
     console.log(re_combine);
-    
+
     result_t=sentence_list_2_html_b(result_t,[''],csmax,show_button,csmobile_font,false,false,'rs');
     //第二个参数不能是 ['"',"'",'“','”','‘','’']，加亮后会影响判断开头和末尾的引号 - 保留注释
     //keep_kleng 不能是 true
