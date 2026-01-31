@@ -3376,13 +3376,13 @@ function odd_quote_get_ensentence_b(csarr,csmax=-1,show_button=true,csmobile_fon
                     compared2=compared.replace(/‘[^‘’]+’/g,'');
                     blfound=sub_odd_quote_get_ensentence_b_check(compared2,'‘’');
                     if (blfound){
-                        console.log('found3',arow);
+                        //console.log('found3',arow);   //调试用 - 保留注释
                     }
                 } else {
-                    console.log('found1',arow);
+                    //console.log('found1',arow);   //调试用 - 保留注释
                 }
             } else {
-                console.log('found0',arow);
+                //console.log('found0',arow);   //调试用 - 保留注释
             }
             
             if (blfound){

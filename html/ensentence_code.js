@@ -171,12 +171,11 @@ function hash_result_sentences(){
 
     var len_all=result1.length+'_'+result2[0].length+'_'+result3[0].length;
     
-    var bljg=sub_hash_result_sentences_html(result1);
+    var bljg1=sub_hash_result_sentences_html(result1);
+    var bljg2=sub_hash_result_sentences_html(result2[0],result2[1]);
+    var bljg3=sub_hash_result_sentences_html(result3[0],result3[1],' 其中 Bible(kjv)_TLS: <i>('+bible_count+')</i>');
     
-    bljg=bljg+sub_hash_result_sentences_html(result2[0],result2[1]);
-    bljg=bljg+sub_hash_result_sentences_html(result3[0],result3[1],' 其中 Bible(kjv)_TLS: <i>('+bible_count+')</i>');
-    
-    var hash_value=SHA1(bljg);
+    var hash_value=SHA1(bljg1)+'/'+SHA1(bljg2)+'/'+SHA1(bljg3);
     var old_value=local_storage_get_b('hash_result_ensentence');
     if (len_all+'_'+hash_value==old_value){
         var blcaption='<font color="'+scheme_global['green']+'">一致 ✔</font>';
@@ -185,7 +184,7 @@ function hash_result_sentences(){
         var blcaption='('+old_value+')<font color="'+scheme_global['a-hover']+'">不一致 ✗</font>';
         var blbutton=' <span class="aclick" onclick="hash_save_ensentence(\''+len_all+'_'+hash_value+'\');">储存</span>';
     }
-    document.getElementById('divhtml').innerHTML=bljg+'<p>'+hash_value+' 与缓存值'+blcaption+blbutton+'</p>';
+    document.getElementById('divhtml').innerHTML=bljg1+bljg2+bljg3+'<p>'+hash_value+' 与缓存值'+blcaption+blbutton+'</p>';
     
     if (match_strictly){
         klmenu_check_b('span_match_strictly_eng_b',true);
