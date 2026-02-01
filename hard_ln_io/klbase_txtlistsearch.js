@@ -571,7 +571,7 @@ function recent_added_in_digest_kltxt_b(){
     }
     
     if (confirm('是否返回reg格式？')){
-        document.getElementById('input_search').value=enwords_list_2_reg_b(csarr);
+        document.getElementById('input_search').value='+kleng +'+enwords_list_2_reg_b(csarr);
         //alert(enwords_list_2_reg_b(csarr)); //依赖klbase_eng
     } else {
         alert(csarr.join('\n'));

@@ -170,7 +170,7 @@ function hash_result_sentences(){
     }
 
     var len_all=result1.length+'_'+result2[0].length+'_'+result3[0].length;
-    
+
     var bljg1=sub_hash_result_sentences_html(result1);
     var bljg2=sub_hash_result_sentences_html(result2[0],result2[1]);
     var bljg3=sub_hash_result_sentences_html(result3[0],result3[1],' 其中 Bible(kjv)_TLS: <i>('+bible_count+')</i>');
@@ -707,6 +707,7 @@ function odd_quote_get_ensentence(csmax=-1,show_button=true,csmobile_font=false,
     if (typeof en_sentence_global == 'undefined'){
         var result_t=['en_sentence_global 未定义'];
     } else {
+        en_sentence_to_default_order_b();
         var result_t=odd_quote_get_ensentence_b(en_sentence_global,csmax,show_button,csmobile_font,true,-1,false,false,new Set(),false);
     }
     
