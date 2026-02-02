@@ -389,6 +389,9 @@ function eval_calculator_money_b(oinput){
     }
     try {
         var blvalue=eval(str_t).toFixed(3);
+        if (blvalue.endsWith('0')){ //只除去末尾1个0 - 保留注释
+            blvalue=blvalue.slice(0,-1);
+        }
     } catch (error){
         var blvalue=error;
     }
