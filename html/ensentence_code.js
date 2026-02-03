@@ -85,6 +85,7 @@ function menu_ensentence(){
     var klmenu_config=[
     '<span class="span_menu" onclick="'+str_t+'sentence_source_list_ensentence();">例句出处文章列表</span>',    
     '<span class="span_menu" onclick="'+str_t+'host_count_ensentence();">例句出处统计</span>',
+    '<span class="span_menu" onclick="'+str_t+'row_duplicate_ensentence();">重复例句</span>',
     '<span class="span_menu" onclick="'+str_t+'eword_duplicate_ensentence();">行内重复 eword 检索</span>',
     fpara_menu_b(str_t,true),
     ];  
@@ -175,16 +176,25 @@ function hash_result_sentences(){
     var bljg2=sub_hash_result_sentences_html(result2[0],result2[1]);
     var bljg3=sub_hash_result_sentences_html(result3[0],result3[1],' 其中 Bible(kjv)_TLS: <i>('+bible_count+')</i>');
     
-    var hash_value=SHA1(bljg1)+'/'+SHA1(bljg2)+'/'+SHA1(bljg3);
+    var hash_value=len_all+'/'+SHA1(bljg1)+'/'+SHA1(bljg2)+'/'+SHA1(bljg3);
     var old_value=local_storage_get_b('hash_result_ensentence');
-    if (len_all+'_'+hash_value==old_value){
+    if (hash_value==old_value){
         var blcaption='<font color="'+scheme_global['green']+'">一致 ✔</font>';
         var blbutton='';
     } else {
-        var blcaption='('+old_value+')<font color="'+scheme_global['a-hover']+'">不一致 ✗</font>';
-        var blbutton=' <span class="aclick" onclick="hash_save_ensentence(\''+len_all+'_'+hash_value+'\');">储存</span>';
+        var blcaption='<font color="'+scheme_global['a-hover']+'">不一致 ✗</font>';
+        var blbutton=' <span class="aclick" onclick="hash_save_ensentence(\''+hash_value+'\');">储存</span>';
     }
-    document.getElementById('divhtml').innerHTML=bljg1+bljg2+bljg3+'<p>'+hash_value+' 与缓存值'+blcaption+blbutton+'</p>';
+    
+    var list1=hash_value.split('/');
+    var list2=old_value.split('/');
+    for (let blxl=0,lent=Math.min(list1.length,list2.length);blxl<lent;blxl++){
+        var blcolor=(list1[blxl]==list2[blxl]?'green':'a-hover');
+        list1[blxl]='<font color="'+scheme_global[blcolor]+'">'+list1[blxl]+'</font>';
+        list2[blxl]='<font color="'+scheme_global[blcolor]+'">'+list2[blxl]+'</font>';
+    }
+    
+    document.getElementById('divhtml').innerHTML=bljg1+bljg2+bljg3+'<p>'+list1.join(' | ')+' 与缓存值（'+list2.join(' | ')+'）'+blcaption+blbutton+'</p>';
     
     if (match_strictly){
         klmenu_check_b('span_match_strictly_eng_b',true);
@@ -487,6 +497,38 @@ function enwords_count_sentence_data_save_ensentence(){
         list_t[blxl]='"'+specialstr_j(list_t[blxl])+'",';
     }   
     string_2_txt_file_b('var en_sentence_count_global=[\n'+list_t.join('\n')+'\n];\n','enwords_count_sentence_data.js','txt');
+}
+
+function row_duplicate_ensentence(){
+    var ensen_set=new Set();
+    var duplicated=new Set();
+    for (let aline of en_sentence_global){
+        if (Array.isArray(aline[0])){
+            var blstr=aline[0].join('').toString();
+        } else {
+            var blstr=aline[0].toString();
+        }
+        if (ensen_set.has(blstr)){
+            duplicated.add(blstr);
+        }
+        ensen_set.add(blstr);
+    }
+    
+    var result_t=[];
+    for (let aline of en_sentence_global){
+        if (Array.isArray(aline[0])){
+            var blstr=aline[0].join('').toString();
+        } else {
+            var blstr=aline[0].toString();
+        }
+        if (duplicated.has(blstr)){
+            result_t.push(aline);
+        }
+    }
+    console.log(result_t);
+    var bljg=sentence_list_2_html_b(result_t,[''],-1,false,false,false,true);
+    document.getElementById('divhtml').innerHTML='<div class="div_sentence">'+bljg.join('\n')+'</div>';
+    sup_kleng_words_b();
 }
 
 function length_sort_ensentence(is_short=true,do_merge=-1,keep_kleng=true){
