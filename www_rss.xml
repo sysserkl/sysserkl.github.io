@@ -8,34 +8,422 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Tue, 03 Feb 2026 09:01:03 +0800</lastBuildDate>
-<item><title>最大动漫盗版网站被关，运营者被捕 - Solidot</title><link>https://www.solidot.org/story?sid=83455</link></item>
-<item><title>Blue Origin 专注于月球项目放弃亚轨道旅游 - Solidot</title><link>https://www.solidot.org/story?sid=83454</link></item>
-<item><title>过去四个月比特币从峰值下跌了四成 - Solidot</title><link>https://www.solidot.org/story?sid=83453</link></item>
-<item><title>MRI 扫描显示锻炼让大脑看起来更年轻 - Solidot</title><link>https://www.solidot.org/story?sid=83452</link></item>
-<item><title>中国计划 2-3 年内向日地 L5 点发射羲和二号 - Solidot</title><link>https://www.solidot.org/story?sid=83451</link></item>
-<item><title>英伟达的 Shield TV 是支持时间最长的 Android 设备 - Solidot</title><link>https://www.solidot.org/story?sid=83450</link></item>
-<item><title>2025 年中国工人工作时长略有下降 - Solidot</title><link>https://www.solidot.org/story?sid=83448</link></item>
-<item><title>In Praise of Small Bars of Soap - Larry Sanger Blog</title><link>https://larrysanger.org/2026/02/in-praise-of-small-bars-of-soap/</link></item>
-<item><title>A Historical Bibliography of Philosophy of Religion (according to LLMs, edited by humans) - Larry Sanger Blog</title><link>https://larrysanger.org/2026/01/a-historical-bibliography-of-philosophy-of-religion-according-to-llms-edited-by-humans/</link></item>
-<item><title>How Animals Build a Sense of Direction - Quanta Magazine</title><link>https://www.quantamagazine.org/how-animals-build-a-sense-of-direction-20260121/</link></item>
-<item><title>10 Facts You Didn&amp;#39;t Know About Cat Whiskers - TreeHugger</title><link>https://www.treehugger.com/things-you-didnt-know-about-cat-whiskers-4864051</link></item>
-<item><title>10 Houseplants to Beat the Winter Blues - TreeHugger</title><link>https://www.treehugger.com/happy-houseplants-beat-winter-blues-4851259</link></item>
-<item><title>What Your Houseplants Need for Spring - TreeHugger</title><link>https://www.treehugger.com/spring-care-tips-happy-houseplants-4847968</link></item>
-<item><title>15 Fantastic Tropical Plants to Grow Indoors - TreeHugger</title><link>https://www.treehugger.com/tropical-plants-5113699</link></item>
-<item><title>How to Start a Hydroponic Garden - TreeHugger</title><link>https://www.treehugger.com/how-to-start-your-own-hydroponic-garden-4864121</link></item>
-<item><title>What Is Aeroponics? - TreeHugger</title><link>https://www.treehugger.com/what-is-aeroponics-5187783</link></item>
-<item><title>5 Ideas for Simple DIY Vertical Gardens in Small Spaces - TreeHugger</title><link>https://www.treehugger.com/ideas-simple-diy-vertical-gardens-5525435</link></item>
-<item><title>The Terminal: First Steps and Useful Commands for Python Developers - Real Python</title><link>https://realpython.com/terminal-commands/</link></item>
-<item><title>The Real Python Podcast – Episode #282: Testing Python Code for Scalability &amp; What&amp;#39;s New in pandas 3.0 - Real Python</title><link>https://realpython.com/podcasts/rpp/282/</link></item>
-<item><title>How Long Does It Take to Learn Python? - Real Python</title><link>https://realpython.com/how-long-does-it-take-to-learn-python/</link></item>
-<item><title>Create Callable Instances With Python&amp;#39;s .__call__() - Real Python</title><link>https://realpython.com/courses/create-callable-instances-dunder-call/</link></item>
-<item><title>GeoPandas Basics: Maps, Projections, and Spatial Joins - Real Python</title><link>https://realpython.com/geopandas/</link></item>
-<item><title>Quiz: GeoPandas Basics: Maps, Projections, and Spatial Joins - Real Python</title><link>https://realpython.com/quizzes/geopandas/</link></item>
-<item><title>The Real Python Podcast – Episode #281: Continuing to Improve the Learning Experience at Real Python - Real Python</title><link>https://realpython.com/podcasts/rpp/281/</link></item>
-<item><title>How to Integrate Local LLMs With Ollama and Python - Real Python</title><link>https://realpython.com/ollama-python/</link></item>
-<item><title>Quiz: How to Integrate Local LLMs With Ollama and Python - Real Python</title><link>https://realpython.com/quizzes/ollama-python/</link></item>
-<item><title>uv vs pip: Python Packaging and Dependency Management - Real Python</title><link>https://realpython.com/courses/uv-vs-pip-packaging-dependency-management/</link></item>
-<item><title>How to Integrate ChatGPT&amp;#39;s API With Python Projects - Real Python</title><link>https://realpython.com/chatgpt-api-python/</link></item>
-<item><title>Quiz: How to Integrate ChatGPT&amp;#39;s API With Python Projects - Real Python</title><link>https://realpython.com/quizzes/chatgpt-api-python/</link></item>
+<lastBuildDate>Wed, 04 Feb 2026 09:26:27 +0800</lastBuildDate>
+<item><title>8 Great Super Bowl Halftime Show Performances That Have Aged Well - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/music/super-bowl-halftime-show-performances-that-aged-well</link></item>
+<item><title>6 NFL Stars With the Most Super Bowl MVP Titles—Including 1 Current Player - Mental Floss</title><link>https://www.mentalfloss.com/sports/nfl-starts-most-super-bowl-mvp-titles</link></item>
+<item><title>7 Enemies-to-Lovers TV Shows Where Rivalry Turns Romantic - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/tv/enemies-to-lovers-tv-shows</link></item>
+<item><title>This Surprising Winter Trend Turns Snowplows Into Local Celebrities - Mental Floss</title><link>https://www.mentalfloss.com/culture/winter-trend-snowplow-names</link></item>
+<item><title>Quiz: Can You Identify These Countries by Their Flags? - Mental Floss</title><link>https://www.mentalfloss.com/quizzes/name-countries-flags</link></item>
+<item><title>The 4 Most Unusual Torch Lightings in Olympic History - Mental Floss</title><link>https://www.mentalfloss.com/sports/olympics/most-unusual-torch-lightings-olympic-history</link></item>
+<item><title>The Real Rules of Courtship in the Regency Era - Mental Floss</title><link>https://www.mentalfloss.com/history/real-rules-of-courtship-in-regency-era</link></item>
+<item><title>Who Was St. Brigid? The Irish Saint Who Might Have Been a Goddess First - Mental Floss</title><link>https://www.mentalfloss.com/holidays/who-was-st-brigid</link></item>
+<item><title>The Ancient Origins of the Names of the Days of the Week - Mental Floss</title><link>https://www.mentalfloss.com/language/names/ancient-origins-days-of-the-week</link></item>
+<item><title>5 Dangerous Beauty Trends Regency Women Actually Followed - Mental Floss</title><link>https://www.mentalfloss.com/history/beauty-trends-regency-women-actually-followed</link></item>
+<item><title>Quiz: How Quickly Can You Name These Disney Movies With One-Word Titles? - Mental Floss</title><link>https://www.mentalfloss.com/quizzes/name-disney-movies-one-word-titles</link></item>
+<item><title>US Navy wants commercial satellites for nighttime Earth observation - Defense News</title><link>https://www.defensenews.com/naval/2026/02/03/us-navy-seeks-commercial-satellites-for-nighttime-earth-observation/</link></item>
+<item><title>The US Army is seeking autonomous drones to clean up chemical weapons - Defense News</title><link>https://www.defensenews.com/news/your-military/2026/02/03/the-us-army-is-seeking-autonomous-drones-to-clean-up-chemical-weapons/</link></item>
+<item><title>Pentagon taps 25 firms for small, cheap attack drone competition - Defense News</title><link>https://www.defensenews.com/air/2026/02/03/pentagon-taps-25-firms-for-small-cheap-attack-drone-competition/</link></item>
+<item><title>Taiwan’s Tron Future unveils AI-guided anti-armor rockets - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2026/02/03/taiwans-tron-future-unveils-ai-guided-anti-armor-rockets/</link></item>
+<item><title>US Air Force eyes inspections, spare parts funding to boost readiness - Defense News</title><link>https://www.defensenews.com/air/2026/02/02/us-air-force-eyes-inspections-spare-parts-funding-to-boost-readiness/</link></item>
+<item><title>Russia claims $15 billion in 2025 arms exports, with focus on Africa - Defense News</title><link>https://www.defensenews.com/global/europe/2026/02/02/russia-claims-15-billion-in-2025-arms-exports-with-focus-on-africa/</link></item>
+<item><title>Poland picks Kongsberg-PGZ consortium to build anti-drone ‘wall’ - Defense News</title><link>https://www.defensenews.com/global/europe/2026/02/02/poland-picks-kongsberg-pgz-consortium-to-build-anti-drone-wall/</link></item>
+<item><title>Taiwan-US ‘firepower’ center to hone asymmetric warfare tactics - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2026/02/02/taiwan-us-firepower-center-to-hone-asymmetric-warfare-tactics/</link></item>
+<item><title>Russian cargo plane arrives in Cuba, echoing frantic Caracas buildup - Defense News</title><link>https://www.defensenews.com/global/the-americas/2026/02/02/russian-cargo-plane-arrives-in-cuba-echoing-frantic-caracas-buildup/</link></item>
+<item><title>Jobs reports delayed, because government shutdown - FlowingData</title><link>https://flowingdata.com/2026/02/03/jobs-reports-delayed-because-government-shutdown/</link></item>
+<item><title>Firefox will provide option to turn off AI features - FlowingData</title><link>https://flowingdata.com/2026/02/03/firefox-will-provide-option-to-turn-off-ai-features/</link></item>
+<item><title>Financial cliff of health subsidies - FlowingData</title><link>https://flowingdata.com/2026/02/03/financial-cliff-of-health-subsidies/</link></item>
+<item><title>Trying to make US postal workers count people for decennial census - FlowingData</title><link>https://flowingdata.com/2026/02/02/us-postal-workers-count-people-attempt/</link></item>
+<item><title>Isometric New York pixel art - FlowingData</title><link>https://flowingdata.com/2026/02/02/isometric-new-york-pixel-art/</link></item>
+<item><title>This Emergency Response May Be Saving More Lives Than Expected - SciTechDaily</title><link>https://scitechdaily.com/this-emergency-response-may-be-saving-more-lives-than-expected/</link></item>
+<item><title>The Ocean’s Most Successful Bacteria May Be Trapped by Their Own Evolution - SciTechDaily</title><link>https://scitechdaily.com/the-oceans-most-successful-bacteria-may-be-trapped-by-their-own-evolution/</link></item>
+<item><title>Scientists Discover Gut Bacteria Can Inject Proteins Into Human Cells - SciTechDaily</title><link>https://scitechdaily.com/scientists-discover-gut-bacteria-can-inject-proteins-into-human-cells/</link></item>
+<item><title>Wolves vs. Cougars: New Study Reveals Who Really Dominates Yellowstone - SciTechDaily</title><link>https://scitechdaily.com/wolves-vs-cougars-new-study-reveals-who-really-dominates-yellowstone/</link></item>
+<item><title>NASA SpaceX Crew-12 Enters Isolation Ahead of Launch - SciTechDaily</title><link>https://scitechdaily.com/nasa-spacex-crew-12-enters-isolation-ahead-of-launch/</link></item>
+<item><title>This Breakthrough Lets Scientists See Arctic Ice Loss Coming - SciTechDaily</title><link>https://scitechdaily.com/this-breakthrough-lets-scientists-see-arctic-ice-loss-coming/</link></item>
+<item><title>How Chronic Kidney Disease Quietly Poisons the Heart - SciTechDaily</title><link>https://scitechdaily.com/how-chronic-kidney-disease-quietly-poisons-the-heart/</link></item>
+<item><title>Why Exercise Science Still Treats Men As the “Default” Body - SciTechDaily</title><link>https://scitechdaily.com/why-exercise-science-still-treats-men-as-the-default-body/</link></item>
+<item><title>Massive Global Study Rewrites the Biology of Type 2 Diabetes - SciTechDaily</title><link>https://scitechdaily.com/massive-global-study-rewrites-the-biology-of-type-2-diabetes/</link></item>
+<item><title>Astronomers Discover an Earth-Like Planet With a Dangerous Temperature Problem - SciTechDaily</title><link>https://scitechdaily.com/astronomers-discover-an-earth-like-planet-with-a-dangerous-temperature-problem/</link></item>
+<item><title>Why Nearby Galaxies Are Fleeing Us: Scientists Finally Solve a 50-Year Mystery - SciTechDaily</title><link>https://scitechdaily.com/why-nearby-galaxies-are-fleeing-us-scientists-finally-solve-a-50-year-mystery/</link></item>
+<item><title>Something Massive Deep Inside Earth Is Steering the Planet’s Magnetic Field - SciTechDaily</title><link>https://scitechdaily.com/something-massive-deep-inside-earth-is-steering-the-planets-magnetic-field/</link></item>
+<item><title>Scientists Identify Key Protein That Could Reverse Brain Aging - SciTechDaily</title><link>https://scitechdaily.com/scientists-identify-key-protein-that-could-reverse-brain-aging/</link></item>
+<item><title>A Hidden Cellular Defense May Protect the Brain From Alzheimer’s - SciTechDaily</title><link>https://scitechdaily.com/a-hidden-cellular-defense-may-protect-the-brain-from-alzheimers/</link></item>
+<item><title>This One Body Measurement Could Reveal Heart Disease Risk Years Before Symptoms Appear - SciTechDaily</title><link>https://scitechdaily.com/this-one-body-measurement-could-reveal-heart-disease-risk-years-before-symptoms-appear/</link></item>
+<item><title>Atoms Don’t Sit Still: Scientists Catch Them Roaming Before X-Ray Damage Strikes - SciTechDaily</title><link>https://scitechdaily.com/atoms-dont-sit-still-scientists-catch-them-roaming-before-x-ray-damage-strikes/</link></item>
+<item><title>A Fundamental Quantum Rule May Entangle the Entire Universe - SciTechDaily</title><link>https://scitechdaily.com/a-fundamental-quantum-rule-may-entangle-the-entire-universe/</link></item>
+<item><title>Massive Quantum Leap: New Tech Could Enable 100,000-Qubit Computers - SciTechDaily</title><link>https://scitechdaily.com/massive-quantum-leap-new-tech-could-enable-100000-qubit-computers/</link></item>
+<item><title>Old Hair Reveals How Toxic America Once Was - SciTechDaily</title><link>https://scitechdaily.com/old-hair-reveals-how-toxic-america-once-was/</link></item>
+<item><title>The Brain May Be Wired for Drinking Before the First Sip - SciTechDaily</title><link>https://scitechdaily.com/the-brain-may-be-wired-for-drinking-before-the-first-sip/</link></item>
+<item><title>Nitrate in Drinking Water May Raise Dementia Risk, Study Warns - SciTechDaily</title><link>https://scitechdaily.com/nitrate-in-drinking-water-may-raise-dementia-risk-study-warns/</link></item>
+<item><title>Sleep Deprivation Triggers a Strange Brain Cleanup - SciTechDaily</title><link>https://scitechdaily.com/sleep-deprivation-triggers-a-strange-brain-cleanup/</link></item>
+<item><title>No More Jet Lag: New Oral Compound Helps “Reset” the Body’s Internal Clock - SciTechDaily</title><link>https://scitechdaily.com/no-more-jet-lag-new-oral-compound-helps-reset-the-bodys-internal-clock/</link></item>
+<item><title>New Brain Scans Reveal Hidden Intelligence in Babies - SciTechDaily</title><link>https://scitechdaily.com/new-brain-scans-reveal-hidden-intelligence-in-babies/</link></item>
+<item><title>芬兰新交通控制系统将自动对紧急车辆开绿灯 - Solidot</title><link>https://www.solidot.org/story?sid=83462</link></item>
+<item><title>禁止含铅汽油有效减少头发中的铅含量 - Solidot</title><link>https://www.solidot.org/story?sid=83463</link></item>
+<item><title>评测龙芯 3B6000 12 核处理器性能 - Solidot</title><link>https://www.solidot.org/story?sid=83464</link></item>
+<item><title>SpaceX 收购 xAI - Solidot</title><link>https://www.solidot.org/story?sid=83465</link></item>
+<item><title>因内存价格飙升树莓派再次涨价 - Solidot</title><link>https://www.solidot.org/story?sid=83466</link></item>
+<item><title>乌克兰和 SpaceX 合作阻止俄罗斯无人机使用 Starlink 发动攻击 - Solidot</title><link>https://www.solidot.org/story?sid=83467</link></item>
+<item><title>巴黎检方突击搜查 X 在法办公室 - Solidot</title><link>https://www.solidot.org/story?sid=83469</link></item>
+<item><title>西班牙计划禁止 16 岁以下儿童使用社交媒体 - Solidot</title><link>https://www.solidot.org/story?sid=83470</link></item>
+<item><title>超加工食品应视为香烟而非食品 - Solidot</title><link>https://www.solidot.org/story?sid=83471</link></item>
+<item><title>Mozilla 为 Firefox 提供禁用所有 AI 功能的选项 - Solidot</title><link>https://www.solidot.org/story?sid=83461</link></item>
+<item><title>微软考虑收缩 Windows 11 的 AI 战略 - Solidot</title><link>https://www.solidot.org/story?sid=83460</link></item>
+<item><title>公安部发布《网络犯罪防治法（征求意见稿）》 - Solidot</title><link>https://www.solidot.org/story?sid=83459</link></item>
+<item><title>Notepad++ 被国家支持黑客劫持 - Solidot</title><link>https://www.solidot.org/story?sid=83458</link></item>
+<item><title>泄漏的聊天记录曝光东南亚电诈园区工人的日常生活 - Solidot</title><link>https://www.solidot.org/story?sid=83457</link></item>
+<item><title>Chía, Goddess of the Moon - Hazlitt</title><link>https://hazlitt.net/feature/chia-goddess-moon</link></item>
+<item><title>Google Home Finally Adds Support For Buttons - Slashdot</title><link>https://tech.slashdot.org/story/26/02/03/180213/google-home-finally-adds-support-for-buttons</link></item>
+<item><title>Ultra-Processed Foods Should Be Treated More Like Cigarettes Than Food, Study Says - Slashdot</title><link>https://science.slashdot.org/story/26/02/03/196254/ultra-processed-foods-should-be-treated-more-like-cigarettes-than-food-study-says</link></item>
+<item><title>NASA Delays Artemis II To March - Slashdot</title><link>https://science.slashdot.org/story/26/02/03/1931235/nasa-delays-artemis-ii-to-march</link></item>
+<item><title>Google Plots Big Expansion in India as US Restricts Visas - Slashdot</title><link>https://tech.slashdot.org/story/26/02/03/190223/google-plots-big-expansion-in-india-as-us-restricts-visas</link></item>
+<item><title>&amp;#39;Vibe Coding Kills Open Source&amp;#39; - Slashdot</title><link>https://news.slashdot.org/story/26/02/03/1754205/vibe-coding-kills-open-source</link></item>
+<item><title>YouTube Kills Background Playback on Third-Party Mobile Browsers - Slashdot</title><link>https://news.slashdot.org/story/26/02/03/1655249/youtube-kills-background-playback-on-third-party-mobile-browsers</link></item>
+<item><title>PayPal&amp;#39;s CEO Change Blindsided HP&amp;#39;s Board - Slashdot</title><link>https://slashdot.org/story/26/02/03/1513242/paypals-ceo-change-blindsided-hps-board</link></item>
+<item><title>Adobe Is Killing A Popular Animation And Game Development Program - Slashdot</title><link>https://tech.slashdot.org/story/26/02/03/1445206/adobe-is-killing-a-popular-animation-and-game-development-program</link></item>
+<item><title>Fintech CEO and Forbes 30 Under 30 Alum Charged for Alleged Fraud - Slashdot</title><link>https://slashdot.org/story/26/02/03/1343205/fintech-ceo-and-forbes-30-under-30-alum-charged-for-alleged-fraud</link></item>
+<item><title>The Switch is Now Nintendo&amp;#39;s Best-Selling Console of All Time - Slashdot</title><link>https://games.slashdot.org/story/26/02/03/0848248/the-switch-is-now-nintendos-best-selling-console-of-all-time</link></item>
+<item><title>Hidden Car Door Handles Are Officially Being Banned In China - Slashdot</title><link>https://tech.slashdot.org/story/26/02/03/0512212/hidden-car-door-handles-are-officially-being-banned-in-china</link></item>
+<item><title>SpaceX Acquires xAI in $1.25 Trillion All-Stock Deal - Slashdot</title><link>https://slashdot.org/story/26/02/03/0346252/spacex-acquires-xai-in-125-trillion-all-stock-deal</link></item>
+<item><title>A Century of Hair Samples Proves Leaded Gas Ban Worked - Slashdot</title><link>https://science.slashdot.org/story/26/02/02/2029212/a-century-of-hair-samples-proves-leaded-gas-ban-worked</link></item>
+<item><title>Leica Camera&amp;#39;s Owners Weigh $1.2 Billion Sale of Controlling Stake - Slashdot</title><link>https://slashdot.org/story/26/02/02/2015228/leica-cameras-owners-weigh-12-billion-sale-of-controlling-stake</link></item>
+<item><title>Feds Skipping Infosec Industry&amp;#39;s Biggest Conference This Year - Slashdot</title><link>https://news.slashdot.org/story/26/02/02/1935214/feds-skipping-infosec-industrys-biggest-conference-this-year</link></item>
+<item><title>5 Romantic Period Dramas to Watch If You Love &amp;#39;Bridgerton&amp;#39; - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/tv/romantic-period-dramas-like-bridgerton?utm_source=RSS</link></item>
+<item><title>How a new AI tool fixed my single biggest problem with Spotify - Platformer</title><link>https://www.platformer.news/spotify-prompted-playlists-ai-meta-vibes/</link></item>
+<item><title>Five ways of thinking about Moltbook - Platformer</title><link>https://www.platformer.news/moltbook-ai-agents-security-content-moderation/</link></item>
+<item><title>Falling in and out of love with Moltbot - Platformer</title><link>https://www.platformer.news/moltbot-clawdbot-review-ai-agent/</link></item>
+<item><title>What a big study of teens says about social media — and what it can’t - Platformer</title><link>https://www.platformer.news/social-media-screen-time-manchester-study-haidt/</link></item>
+<item><title>When murder becomes a meme - Platformer</title><link>https://www.platformer.news/minneapolis-pretti-good-ice-disinformation/</link></item>
+<item><title>The AI productivity paradox - Platformer</title><link>https://www.platformer.news/ai-productivity-paradox-metr-pwc-workday/</link></item>
+<item><title>Meta’s scam problem, UK edition - Platformer</title><link>https://www.platformer.news/meta-scams-gambling-uk/</link></item>
+<item><title>Claude Code for writers - Platformer</title><link>https://www.platformer.news/claude-code-for-writers-tips-ideas/</link></item>
+<item><title>What I learned while cloning my own voice - Platformer</title><link>https://www.platformer.news/platformer-voice-clone-elevenlabs/</link></item>
+<item><title>Grok gets blocked - Platformer</title><link>https://www.platformer.news/grock-blocked-uk-indonesia-france-musk/</link></item>
+<item><title>The project that turned me into a Claude Code believer - Platformer</title><link>https://www.platformer.news/claude-code-review-web-design/</link></item>
+<item><title>Inside the debate over AI consciousness - Platformer</title><link>https://www.platformer.news/ai-consciousness-conference-eleos/</link></item>
+<item><title>Debunking the AI food delivery hoax that fooled Reddit - Platformer</title><link>https://www.platformer.news/fake-uber-eats-whisleblower-hoax-debunked/</link></item>
+<item><title>11 predictions for 2026 - Platformer</title><link>https://www.platformer.news/2026-tech-predictions-ai-bubble-openai-meta-google/</link></item>
+<item><title>Spotify is part of the trade war now - Platformer</title><link>https://www.platformer.news/trump-eu-trade-representative-retaliation-spotify/</link></item>
+<item><title>Notepad++ Compromised By State Actor - Slashdot</title><link>https://it.slashdot.org/story/26/02/02/1646253/notepad-compromised-by-state-actor?sbsrc=md</link></item>
+<item><title>Is the TV Industry Finally Conceding That the Future May Not Be 8K? - Slashdot</title><link>https://entertainment.slashdot.org/story/26/02/02/0152250/is-the-tv-industry-finally-conceding-that-the-future-may-not-be-8k?sbsrc=md</link></item>
+<item><title>China&amp;#39;s Decades-Old &amp;#39;Genius Class&amp;#39; Pipeline Is Quietly Fueling Its AI Challenge To the US - Slashdot</title><link>https://news.slashdot.org/story/26/02/02/1359211/chinas-decades-old-genius-class-pipeline-is-quietly-fueling-its-ai-challenge-to-the-us?sbsrc=md</link></item>
+<item><title>Former Google Engineer Found Guilty of Stealing AI Secrets For Chinese Firms - Slashdot</title><link>https://yro.slashdot.org/story/26/01/30/062232/former-google-engineer-found-guilty-of-stealing-ai-secrets-for-chinese-firms</link></item>
+<item><title>U.S. Rightsholders Applaud India’s “Lock and Suspend” Piracy Blockades - TorrentFreak</title><link>https://torrentfreak.com/u-s-rightsholders-applaud-indias-lock-and-suspend-piracy-blockades/</link></item>
+<item><title>Danish Students Face Legal Action and Fines Over Textbook Piracy - TorrentFreak</title><link>https://torrentfreak.com/danish-students-face-legal-action-and-fines-over-textbook-piracy/</link></item>
+<item><title>Charli XCX Blows Up the Music Doc - GQ</title><link>https://www.gq.com/story/charli-xcx-blows-up-the-music-doc</link></item>
+<item><title>Audemars Piguet Just Unveiled a Daring New Watch - GQ</title><link>https://www.gq.com/story/audemars-piguet-just-unveiled-a-daring-new-watch</link></item>
+<item><title>The Longevity Bros Are Fighting - GQ</title><link>https://www.gq.com/story/the-longevity-bros-are-fighting</link></item>
+<item><title>The Best Sleeper Sofas Make Air Mattresses Obsolete - GQ</title><link>https://www.gq.com/story/best-sleeper-sofas</link></item>
+<item><title>The Best Nail Clippers for Men Won’t Dull or Rust - GQ</title><link>https://www.gq.com/story/best-nail-clippers-for-men</link></item>
+<item><title>The Best Gold Bracelets for Every Fledgling Jewelry Guy - GQ</title><link>https://www.gq.com/gallery/best-gold-bracelets-for-men</link></item>
+<item><title>To Live Longer, Do These Things - GQ</title><link>https://www.gq.com/story/exercises-for-longevity-3#intcid=_gq-verso-hp-trending_aa39ae3c-c0d4-4cd3-99c2-a3c29c65107b_popular4-2</link></item>
+<item><title>Should You Do Cardio Before or After Lifting Weights? Here’s the Definitive Answer - GQ</title><link>https://www.gq.com/story/cardio-before-or-after-weight-lifting-3#intcid=_gq-verso-hp-trending_aa39ae3c-c0d4-4cd3-99c2-a3c29c65107b_popular4-2</link></item>
+<item><title>4 Easy Shoulder Exercises to Get Chiseled - GQ</title><link>https://www.gq.com/story/best-shoulder-exercises-3#intcid=_gq-verso-hp-trending_aa39ae3c-c0d4-4cd3-99c2-a3c29c65107b_popular4-2</link></item>
+<item><title>The 9 Fall-Winter 2026 Menswear Trends to Try Right Now - GQ</title><link>https://www.gq.com/story/the-9-fall-winter-2026-menswear-trends-to-try-right-now</link></item>
+<item><title>The 54 Greatest Super Bowl Fits of All Time - GQ</title><link>https://www.gq.com/gallery/best-super-bowl-fits-of-all-time</link></item>
+<item><title>Timothée Chalamet Got 4 Fits off on 2 Continents in 1 Weekend - GQ</title><link>https://www.gq.com/story/timothee-chalamet-big-fit-weekend</link></item>
+<item><title>The Real-Life Diet of Will Forte, Who Is Thinking About Getting Into Blueberries - GQ</title><link>https://www.gq.com/story/will-forte-real-life-diet</link></item>
+<item><title>The 4 Best Core Workouts to Hit Your Abs From Every Angle - GQ</title><link>https://www.gq.com/story/the-4-best-core-workouts-to-hit-your-abs-from-every-angle</link></item>
+<item><title>The Best Compression Socks for Men Deserve a Spot In Your Drawer - GQ</title><link>https://www.gq.com/story/compression-socks-for-men</link></item>
+<item><title>The Best Suits of 2026 - GQ</title><link>https://www.gq.com/story/best-mens-suits</link></item>
+<item><title>The Best Workout Shorts Will Become Your Favorite Gym Partners - GQ</title><link>https://www.gq.com/story/best-workout-shorts-for-men</link></item>
+<item><title>The Best Workout Socks for Every Kind of Fitness Buff - GQ</title><link>https://www.gq.com/story/best-workout-socks</link></item>
+<item><title>The Huckberry Winter Sale Is an Avalanche of Menswear Deals - GQ</title><link>https://www.gq.com/story/huckberry-winter-sale-2026</link></item>
+<item><title>Are the Grammys Good Again? - GQ</title><link>https://www.gq.com/story/are-the-grammys-good-again</link></item>
+<item><title>Grammys 2026: An Industry Disruptor Threw a Great Industry Party - GQ</title><link>https://www.gq.com/story/grammys-2026-larry-jackson</link></item>
+<item><title>Zohran Mamdani Wore Custom Carhartt to Tackle His First Snowstorm as Mayor - GQ</title><link>https://www.gq.com/story/zohran-mamdani-carhartt-jacket-nyc-snowstorm</link></item>
+<item><title>Bring Back the Red-Carpet Baseball Cap - GQ</title><link>https://www.gq.com/story/bring-back-the-90s-red-carpet-baseball-cap</link></item>
+<item><title>It Was the Most Violent Prison in America. Then the Guards Went on Strike - GQ</title><link>https://www.gq.com/story/walpole-prison-uprising</link></item>
+<item><title>How Every NFL Team Left Can Win the Super Bowl, According to ESPN’s Ryan Clark - GQ</title><link>https://www.gq.com/story/ryan-clark-espn-nfl-conference-championship-games</link></item>
+<item><title>CM Punk Thinks Being Grizzled and Old Is ‘F***ing Awesome’ - GQ</title><link>https://www.gq.com/story/cm-punk-wwe-2k26-interview</link></item>
+<item><title>Trinity Rodman on Her Historic Contract and Outsized Style - GQ</title><link>https://www.gq.com/story/trinity-rodman-washington-spirit-contract</link></item>
+<item><title>The Hottest Watches on Earth Actually Come From Space - GQ</title><link>https://www.gq.com/story/meteorite-dial-watches-box-and-papers</link></item>
+<item><title>Skip the Gold Bars and Buy This New Piaget Instead - GQ</title><link>https://www.gq.com/story/piaget-polo-79-two-tone</link></item>
+<item><title>This New Pan-Am Pilot’s Watch Wants to Party Like It’s 1959 - GQ</title><link>https://www.gq.com/story/pan-am-christopher-ward-c60-clipper-gmt</link></item>
+<item><title>4 Collector-Grade Watches to Kick Off 2026 - GQ</title><link>https://www.gq.com/story/watch-guy-watches-january-2026</link></item>
+<item><title>‘Fallout’ Cast Break Down The Show’s Biggest Moments - GQ</title><link>https://www.gq.com/video/watch/biggest-moments-fallout</link></item>
+<item><title>The Stranger Things Original Party Tackle The Ultimate ‘Stranger Things’ Pop Quiz - GQ</title><link>https://www.gq.com/video/watch/stranger-things-pop-quiz</link></item>
+<item><title>Do Insects Sleep? - ThoughtCo</title><link>https://www.thoughtco.com/do-insects-sleep-1968410</link></item>
+<item><title>Myers-Briggs Personality Types: Which One Are You? - ThoughtCo</title><link>https://www.thoughtco.com/myers-briggs-personality-types-4686022</link></item>
+<item><title>What Are Civil Rights? - ThoughtCo</title><link>https://www.thoughtco.com/civil-rights-definition-4688614</link></item>
+<item><title>What Is the North Atlantic Treaty Organization (NATO)? - ThoughtCo</title><link>https://www.thoughtco.com/what-is-nato-1221961</link></item>
+<item><title>7 New Deal Programs That Still Exist Today - ThoughtCo</title><link>https://www.thoughtco.com/new-deal-programs-still-in-effect-today-4154043</link></item>
+<item><title>Basic Japanese: Ordering at a Restaurant - ThoughtCo</title><link>https://www.thoughtco.com/basic-japanese-ordering-at-a-restaurant-4077056</link></item>
+<item><title>Pronouncing the French Alphabet - ThoughtCo</title><link>https://www.thoughtco.com/pronounce-the-french-alphabet-1369570</link></item>
+<item><title>10 Characteristics of Great Students - ThoughtCo</title><link>https://www.thoughtco.com/perfect-student-characteristics-4148286</link></item>
+<item><title>The Basics of Adult Learning - ThoughtCo</title><link>https://www.thoughtco.com/what-is-adult-learning-31425</link></item>
+<item><title>Fast Facts About the U.S. Constitution - ThoughtCo</title><link>https://www.thoughtco.com/us-constitution-fast-facts-105425</link></item>
+<item><title>Your 1st Amendment Rights - ThoughtCo</title><link>https://www.thoughtco.com/the-first-amendment-p2-721185</link></item>
+<item><title>How the 4th Amendment Protects You - ThoughtCo</title><link>https://www.thoughtco.com/the-fourth-amendment-721515</link></item>
+<item><title>Mortgage 101: What You Need to Qualify — Money Minute - Defense News</title><link>https://www.defensenews.com/video/2026/02/02/mortgage-101-what-you-need-to-qualify-money-minute/</link></item>
+<item><title>Inside a new submarine engine production plant | Defense News Weekly Full Episode 2.3.26 - Defense News</title><link>https://www.defensenews.com/video/2026/02/02/inside-a-new-submarine-engine-production-plant-defense-news-weekly-full-episode-2326/</link></item>
+<item><title>Staccato debuts new handgun, and firearms makers show off short-barreled rifles at SHOT Show 2026 - Defense News</title><link>https://www.defensenews.com/video/2026/02/02/staccato-debuts-new-handgun-and-firearms-makers-show-off-short-barreled-rifles-at-shot-show-2026/</link></item>
+<item><title>Troops’ pay, healthcare and barracks updates for 2026 - Defense News</title><link>https://www.defensenews.com/video/2026/02/02/troops-pay-healthcare-and-barracks-updates-for-2026/</link></item>
+<item><title>From Automation to Infection: How OpenClaw AI Agent Skills Are Being Weaponized - VirusTotal Blog</title><link>https://blog.virustotal.com/2026/02/from-automation-to-infection-how.html</link></item>
+<item><title>New Infostealer Campaign Targets Users via Spoofed Software Installers - VirusTotal Blog</title><link>https://blog.virustotal.com/2026/01/malicious-infostealer-january-26.html</link></item>
+<item><title>AI Hunts for the Next Big Thing in Physics - IEEE Spectrum</title><link>https://spectrum.ieee.org/particle-physics-ai</link></item>
+<item><title>3D-Printed Batteries Put Power in Every Nook and Cranny - IEEE Spectrum</title><link>https://spectrum.ieee.org/3d-printed-batteries</link></item>
+<item><title>Why China&amp;#39;s Moon Mission May Outpace NASA - IEEE Spectrum</title><link>https://spectrum.ieee.org/china-moon-mission-mengzhou-artemis</link></item>
+<item><title>Brainlike Computers Can Do Math, Too - IEEE Spectrum</title><link>https://spectrum.ieee.org/neuromorphic-math</link></item>
+<item><title>Don’t Regulate AI Models. Regulate AI Use - IEEE Spectrum</title><link>https://spectrum.ieee.org/ai-model-regulation</link></item>
+<item><title>Terahertz Chip Achieves 72 Gbps Data Rate - IEEE Spectrum</title><link>https://spectrum.ieee.org/terahertz-chip-topological-antenna</link></item>
+<item><title>Low-Cost Electronics Unclog the U.K.’s Grid - IEEE Spectrum</title><link>https://spectrum.ieee.org/grid-congestion-uk</link></item>
+<item><title>AI Benchmarks Aim to Enhance Business Safety - IEEE Spectrum</title><link>https://spectrum.ieee.org/ai-agent-benchmarks</link></item>
+<item><title>Artemis II: The First Crewed Moon Mission in 50 Years - IEEE Spectrum</title><link>https://spectrum.ieee.org/artemis-ii-launch-nasa-orion</link></item>
+<item><title>Was 2025 Really the Year of AI Agents? - IEEE Spectrum</title><link>https://spectrum.ieee.org/2025-year-of-ai-agents</link></item>
+<item><title>Faster cancer tests at local hospital of your choice to slash treatment waits - inews.co.uk</title><link>https://inews.co.uk/news/politics/faster-cancer-tests-local-hospital-treatment-waits-4210856</link></item>
+<item><title>Police investigate Mandelson after No 10 hands over Epstein dossier - inews.co.uk</title><link>https://inews.co.uk/news/politics/mandelson-may-have-broken-the-law-with-epstein-emails-no-10-fears-4210768</link></item>
+<item><title>Now 150,000 renters will pay stamp duty. This tax-mad Government knows no bounds - inews.co.uk</title><link>https://inews.co.uk/opinion/renters-pay-stamp-duty-tax-government-4205925</link></item>
+<item><title>Andrew moves from Royal Lodge home to Norfolk - inews.co.uk</title><link>https://inews.co.uk/news/andrew-moves-out-of-royal-lodge-to-norfolk-4212806</link></item>
+<item><title>Sarah Ferguson’s charity shuts &amp;#39;with just £28,000 in the bank&amp;#39; after Epstein disgrace - inews.co.uk</title><link>https://inews.co.uk/news/sarah-ferguson-charity-shuts-28000-in-bank-after-epstein-disgrace-4212108</link></item>
+<item><title>The rot at the heart of British politics is a patriotic affront - inews.co.uk</title><link>https://inews.co.uk/opinion/rot-heart-of-british-politics-patriotic-affront-4211161</link></item>
+<item><title>US shoots down Iranian drone near Abraham Lincoln aircraft carrier in Arabian Sea - inews.co.uk</title><link>https://inews.co.uk/news/world/us-shoots-down-iranian-drone-near-abraham-lincoln-aircraft-carrier-4212410</link></item>
+<item><title>Union Jack doormats and 7,000 teabags: Inside Team GB’s Winter Olympics HQ - inews.co.uk</title><link>https://inews.co.uk/sport/olympics/union-jack-doormats-7000-teabags-team-gb-winter-olympics-4212116</link></item>
+<item><title>Thin-skinned Trump&amp;#39;s threats reveal the weakness he has lived with his whole life - inews.co.uk</title><link>https://inews.co.uk/opinion/trumps-threats-reveal-weakness-lived-with-whole-life-4205903</link></item>
+<item><title>Failing crops, mystery deaths and no warning: How a bioweapon attack would unfold - inews.co.uk</title><link>https://inews.co.uk/opinion/failing-crops-mystery-deaths-and-no-warning-how-a-bioweapon-attack-would-unfold-4199808</link></item>
+<item><title>The real PIP crisis starts in our schools - inews.co.uk</title><link>https://inews.co.uk/opinion/real-pip-crisis-starts-in-our-schools-4171005</link></item>
+<item><title>Carrie Grant - inews.co.uk</title><link>https://inews.co.uk/author/carrie-grant</link></item>
+<item><title>If you’re too anxious to work but go on holiday, you shouldn’t get PIP - inews.co.uk</title><link>https://inews.co.uk/opinion/anxious-work-holiday-shouldnt-get-pip-4171015</link></item>
+<item><title>Julie Burchill - inews.co.uk</title><link>https://inews.co.uk/author/julie-burchill</link></item>
+<item><title>I was a PIP assessor. We get it wrong all the time - inews.co.uk</title><link>https://inews.co.uk/opinion/pip-assessor-wrong-all-the-time-4171008</link></item>
+<item><title>Jacqueline Gozzard - inews.co.uk</title><link>https://inews.co.uk/author/jacqueline-gozzard</link></item>
+<item><title>Tessa Dunlop - inews.co.uk</title><link>https://inews.co.uk/author/tessa-dunlop</link></item>
+<item><title>Beatrice and Eugenie have one option left after their parents&amp;#39; Epstein disgrace - inews.co.uk</title><link>https://inews.co.uk/opinion/beatrice-eugenie-one-option-left-parents-epstein-disgrace-4208864</link></item>
+<item><title>Vladimir Putin has found a useful idiot in Gianni Infantino - inews.co.uk</title><link>https://inews.co.uk/sport/football/vladimir-putin-gianni-infantino-useful-idiot-4210147</link></item>
+<item><title>Why the student loan scandal could be Labour&amp;#39;s next U-turn - inews.co.uk</title><link>https://inews.co.uk/opinion/student-loan-scandal-labours-next-u-turn-4205923</link></item>
+<item><title>Steve Jobs: The twisted genius who turned us all into lonely, anxious addicts - inews.co.uk</title><link>https://inews.co.uk/opinion/steve-jobs-genius-turned-us-into-lonely-addicts-4199801</link></item>
+<item><title>Fergie&amp;#39;s skin-crawling emails about her own daughter damn her forever - inews.co.uk</title><link>https://inews.co.uk/opinion/fergies-skin-crawling-emails-own-daughter-damn-forever-4208527</link></item>
+<item><title>The real reason for Trump&amp;#39;s erratic behaviour is becoming ever clearer - inews.co.uk</title><link>https://inews.co.uk/opinion/trumps-erratic-behaviour-becoming-ever-clearer-4190384</link></item>
+<item><title>Mandelson&amp;#39;s greed is his undoing. But so is his attitude to Epstein&amp;#39;s victims - inews.co.uk</title><link>https://inews.co.uk/opinion/mandelsons-greed-is-his-undoing-but-so-is-his-attitude-to-epsteins-victims-4209017</link></item>
+<item><title>Why the Salt Path&amp;#39;s author will never learn - inews.co.uk</title><link>https://inews.co.uk/opinion/why-the-salt-paths-author-will-never-learn-4208850</link></item>
+<item><title>This is either the end of Andrew – or the Royal Family - inews.co.uk</title><link>https://inews.co.uk/opinion/this-is-either-the-end-of-andrew-or-the-royal-family-4190407</link></item>
+<item><title>Operation stop Farage: New tactical voting plan for Starmer&amp;#39;s critical by-election - inews.co.uk</title><link>https://inews.co.uk/news/politics/operation-stop-farage-tactical-voting-starmer-by-election-4208679</link></item>
+<item><title>Mandelson &amp;#39;tipped off&amp;#39; Epstein about Brown resigning - as police probe calls grow - inews.co.uk</title><link>https://inews.co.uk/news/politics/mandelson-tipped-off-epstein-brown-resigning-police-probe-calls-4208672</link></item>
+<item><title>60,000 families will be hit by second benefit limit after two-child cap axed - inews.co.uk</title><link>https://inews.co.uk/news/politics/60000-families-will-be-hit-by-second-benefit-limit-4195203</link></item>
+<item><title>Starmer in fresh storm over Mandelson links to $75,000 Epstein payments - inews.co.uk</title><link>https://inews.co.uk/news/politics/starmer-fresh-storm-mandelsons-epstein-links-4207466</link></item>
+<item><title>Reform surge to 12-point poll lead over Labour - as Tory support falls - inews.co.uk</title><link>https://inews.co.uk/news/politics/reform-12-point-poll-lead-labour-tory-falls-4204122</link></item>
+<item><title>I&amp;#39;m taking my sausage dog to swimming lessons. Here&amp;#39;s why - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/taking-sausage-dog-swimming-lessons-4201847</link></item>
+<item><title>The favourite Spanish holiday beaches that are slowly disappearing - inews.co.uk</title><link>https://inews.co.uk/news/world/favourite-spanish-holiday-beaches-slowly-disappearing-4210554</link></item>
+<item><title>Why Santander, NatWest and Nationwide are raising mortgage rates - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/money/property-and-mortgages/santander-natwest-nationwide-increasing-mortgage-rates-4209953</link></item>
+<item><title>I&amp;#39;m a prepping expert - this is how I&amp;#39;m getting ready for water shortages - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/prepping-expert-getting-ready-for-water-shortages-4209449</link></item>
+<item><title>I&amp;#39;m a locksmith - these are the 11 biggest mistakes to make with home security - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/locksmith-11-biggest-mistakes-home-security-4200514</link></item>
+<item><title>Santander launches 2% deposit mortgage for first-time buyers - how it works - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/money/santander-launches-mortgage-first-time-buyers-4205385</link></item>
+<item><title>A £25k job is no prize for young graduates - inews.co.uk</title><link>https://inews.co.uk/news/25k-job-no-prize-young-graduates-4211254</link></item>
+<item><title>Inside Barnsley, the town hoping one big change will fix its potholes and A&amp;E - inews.co.uk</title><link>https://inews.co.uk/news/potholes-patients-inside-town-ai-will-fix-potholes-4210690</link></item>
+<item><title>When the four-tier SEND system will begin - and how it could work - inews.co.uk</title><link>https://inews.co.uk/news/education/when-four-tier-send-system-begin-how-works-4209490</link></item>
+<item><title>Inside the race to stop Trump unleashing war - inews.co.uk</title><link>https://inews.co.uk/news/world/inside-race-stop-trump-unleashing-war-iran-4209753</link></item>
+<item><title>Newcastle target four summer transfers - but miss out on &amp;#39;next Pogba&amp;#39; - inews.co.uk</title><link>https://inews.co.uk/sport/football/newcastle-united-transfers-pogba-4208666</link></item>
+<item><title>Cristiano Ronaldo’s ego is out of control - inews.co.uk</title><link>https://inews.co.uk/sport/football/cristiano-ronaldo-ego-control-4208606</link></item>
+<item><title>The five reasons for Spurs&amp;#39; quiet transfer window after fresh Romero outburst - inews.co.uk</title><link>https://inews.co.uk/sport/football/tottenham-transfer-window-cristian-romero-4210036</link></item>
+<item><title>Man Utd divided over Harry Maguire&amp;#39;s future with four big names set to leave - inews.co.uk</title><link>https://inews.co.uk/sport/football/man-utd-harry-maguire-transfers-4196568</link></item>
+<item><title>The sight of Maro Itoje on England’s bench should terrify Wales - inews.co.uk</title><link>https://inews.co.uk/sport/rugby-union/england-maro-itoje-bomb-squad-six-nations-wales-4208598</link></item>
+<item><title>Novak Djokovic should be scared for his grand slams record - inews.co.uk</title><link>https://inews.co.uk/sport/tennis/novak-djokovic-scared-grand-slams-record-4207980</link></item>
+<item><title>Childminders saved our family - but good luck finding one now - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/childminders-decline-uk-childcare-nursery-alternative-4209548</link></item>
+<item><title>I left the UK for Dubai - we have a live-in nanny but miss parks and roast dinners - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/left-uk-dubai-nanny-parks-roast-dinners-4107690</link></item>
+<item><title>I went to grammar and private schools - selective education saved me - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/grammar-private-schools-selective-education-saved-me-4204017</link></item>
+<item><title>I got divorced and realised I had no friends of my own – how I made more at 60 - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/divorced-realised-no-friends-how-made-more-60-4204022</link></item>
+<item><title>Inside the Salford secondary school where every pupil gets a job when they leave - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/inside-salford-school-every-pupil-job-graduate-4175580</link></item>
+<item><title>I tested 18 dark chocolate bars – the best was a £2.40 supermarket brand - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/best-supermarket-dark-chocolate-review-4200546</link></item>
+<item><title>I would watch Silent Witness for another 30 years - it&amp;#39;s still the best - inews.co.uk</title><link>https://inews.co.uk/culture/television/would-watch-silent-witness-30-years-still-best-4199513</link></item>
+<item><title>Mortal Engines&amp;#39; Philip Reeve: &amp;#39;My son doesn&amp;#39;t read - I&amp;#39;ve made peace with it&amp;#39; - inews.co.uk</title><link>https://inews.co.uk/culture/books/mortal-engines-philip-reeve-son-read-made-peace-4199931</link></item>
+<item><title>Alistair Petrie explains The Night Manager finale: &amp;#39;Everyone has a price&amp;#39; - inews.co.uk</title><link>https://inews.co.uk/culture/television/alistair-petrie-explains-night-manager-finale-everyone-price-4194770</link></item>
+<item><title>Secret identities and plagiarism accusations: The mystery of Freida McFadden - inews.co.uk</title><link>https://inews.co.uk/culture/secret-identities-plagiarism-accusations-mystery-freida-mcfadden-4185922</link></item>
+<item><title>American Psycho is a coke-fuelled triumph - inews.co.uk</title><link>https://inews.co.uk/culture/greed-never-good-american-psycho-might-just-be-4167496</link></item>
+<item><title>The Night Manager finale had more betrayal than a Traitors roundtable - inews.co.uk</title><link>https://inews.co.uk/culture/television/night-manger-finale-more-betrayal-than-traitors-roundtable-4194496</link></item>
+<item><title>Trump will be forever tainted by suspicions of an Epstein cover-up - inews.co.uk</title><link>https://inews.co.uk/news/world/trump-will-be-forever-tainted-by-suspicions-of-an-epstein-cover-up-4208360</link></item>
+<item><title>China&amp;#39;s spying is messy, wildly incompetent - and often aimed at &amp;#39;traitors&amp;#39; - inews.co.uk</title><link>https://inews.co.uk/news/world/china-spying-messy-wildly-incompetent-aimed-traitors-4201984</link></item>
+<item><title>Iran is ready to hit back if Trump attacks. It could trigger a nuclear stand-off - inews.co.uk</title><link>https://inews.co.uk/news/world/iran-ready-hit-back-trump-attacks-could-trigger-nuclear-exchange-4208389</link></item>
+<item><title>Trump may live to regret his victory lap over latest Epstein files - inews.co.uk</title><link>https://inews.co.uk/news/world/trump-may-live-regret-victory-lap-latest-epstein-files-4207628</link></item>
+<item><title>Grammy awards stars take aim at Trump&amp;#39;s immigration crackdown - inews.co.uk</title><link>https://inews.co.uk/news/world/grammy-awards-protest-trump-immigration-ice-4208270</link></item>
+<item><title>Over-50s should pay a graduate tax - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/money/over-graduate-tax-student-loans-fund-nhs-4208908</link></item>
+<item><title>Graduates to pay extra 17% on salary sacrifice above new cap from 2029 - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/money/graduates-pay-extra-salary-sacrifice-cap-4208643</link></item>
+<item><title>At 16, I worked six years as a hairdresser but can&amp;#39;t find my pension. Where is it? - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/money/pensions-and-retirement/16-hairdresser-lost-pension-4180376</link></item>
+<item><title>I have a £50,000 student loan but I don’t care how big it is – here’s why - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/money/have-student-loan-dont-care-4203298</link></item>
+<item><title>How I used a boosted deposit scheme to buy my home - here&amp;#39;s what you must consider - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/money/property-and-mortgages/boosted-deposit-scheme-buy-home-4189804</link></item>
+<item><title>My children loved our affordable Swiss rail holiday – it was flight free - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/travel/family-rail-holiday-switzerland-surprisingly-affordable-4176404</link></item>
+<item><title>I left my skis to go walking in the Dolomites – it was breathtakingly tranquil - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/travel/left-skis-walking-dolomites-breathtakingly-tranquil-4199532</link></item>
+<item><title>The affordable winter sun holidays to escape Brexit queues and find warmth - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/travel/affordable-winter-sun-holidays-escape-brexit-queues-warmth-4187660</link></item>
+<item><title>With a boat sauna and fondue, my no-fly Swiss winter break was deeply relaxing - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/travel/sauna-fondue-rail-swiss-winter-break-deeply-relaxing-4192004</link></item>
+<item><title>Daniel Storey&amp;#39;s verdict on every Premier League team after Gameweek 24 - inews.co.uk</title><link>https://inews.co.uk/sport/football/the-score-newcastle-man-utd-everton-4207746</link></item>
+<item><title>Trump has unleashed a new war - but not the one you think - inews.co.uk</title><link>https://inews.co.uk/opinion/trump-unleashed-new-war-not-one-you-think-4190380</link></item>
+<item><title>Why dry eyes and skin problems might have an overlooked (and revolting) cause - inews.co.uk</title><link>https://inews.co.uk/news/dry-eyes-skin-problems-overlooked-revolting-cause-4196889</link></item>
+<item><title>From house prices to service charges - how major reform saves leaseholders money - inews.co.uk</title><link>https://inews.co.uk/news/house-prices-service-charges-leasehold-reform-money-4196224</link></item>
+<item><title>No - it&amp;#39;s encouraging laziness - inews.co.uk</title><link>https://inews.co.uk/opinion/anxious-work-holiday-shouldnt-get-pip-4171015?ico=most_popular</link></item>
+<item><title>Yes - it is a undeniable lifeline - inews.co.uk</title><link>https://inews.co.uk/opinion/pip-assessor-wrong-all-the-time-4171008?ico=most_popular</link></item>
+<item><title>Moltbook AI – 3 February - inews.co.uk</title><link>https://inews.co.uk/shorts/moltbook-ai-3-february?utm_source=theipaper&amp;utm_medium=shorts_card&amp;utm_campaign=shorts_Moltbook+AI+-+3+February&amp;short_id=4211796</link></item>
+<item><title>Cancer Causes – 3 February - inews.co.uk</title><link>https://inews.co.uk/shorts/cancer-causes-3-februrary?utm_source=theipaper&amp;utm_medium=shorts_card&amp;utm_campaign=shorts_Cancer+Causes+-+3+February&amp;short_id=4211601</link></item>
+<item><title>Career Savings – 3 February - inews.co.uk</title><link>https://inews.co.uk/shorts/career-savings-3-february?utm_source=theipaper&amp;utm_medium=shorts_card&amp;utm_campaign=shorts_Career+Savings+-+3+February&amp;short_id=4211665</link></item>
+<item><title>Trump Iran – 3 February - inews.co.uk</title><link>https://inews.co.uk/shorts/trump-iran-3-february?utm_source=theipaper&amp;utm_medium=shorts_card&amp;utm_campaign=shorts_Trump+Iran+-+3+February&amp;short_id=4211167</link></item>
+<item><title>Eight simple ways to quit bad habits - inews.co.uk</title><link>https://inews.co.uk/shorts/eight-everyday-ways-to-quit-bad-habits?utm_source=theipaper&amp;utm_medium=shorts_card&amp;utm_campaign=shorts_Eight+simple+ways+to+quit+bad+habits&amp;short_id=4165603</link></item>
+<item><title>I’m 23 – I asked boomers for life advice and this is what I learned - inews.co.uk</title><link>https://inews.co.uk/shorts/learned-boomers-life-advice?utm_source=theipaper&amp;utm_medium=shorts_card&amp;utm_campaign=shorts_I%E2%80%99m+23+-+I+asked+boomers+for+life+advice+and+this+is+what+I+learned&amp;short_id=4165019</link></item>
+<item><title>8 Best Countries for Safari Adventures - HowStuffWorks</title><link>https://lifestyle.howstuffworks.com/family/activities/best-countries-for-safari.htm</link></item>
+<item><title>10 of the Worst People in History: A Leadership Hall of Infamy - HowStuffWorks</title><link>https://history.howstuffworks.com/historical-figures/worst-people-in-history.htm</link></item>
+<item><title>What Is a Group of Capybaras Called? Reminiscent of Cattle - HowStuffWorks</title><link>https://animals.howstuffworks.com/mammals/what-is-a-group-of-capybaras-called.htm</link></item>
+<item><title>The Youngest Olympian Was an Unnamed 7-Year-Old - HowStuffWorks</title><link>https://entertainment.howstuffworks.com/youngest-olympian.htm</link></item>
+<item><title>What Is a Group of Hummingbirds Called? A Buzz, a Bouquet, a Charm? - HowStuffWorks</title><link>https://animals.howstuffworks.com/birds/what-is-a-group-of-hummingbirds-called.htm</link></item>
+<item><title>12 Weed-Friendly States for Both Recreational and Medical Use - HowStuffWorks</title><link>https://people.howstuffworks.com/weed-friendly-states.htm</link></item>
+<item><title>Can you rewire your brain? - Aeon</title><link>https://aeon.co/essays/what-the-metaphor-of-rewiring-gets-wrong-about-neuroplasticity?utm_source=rss-feed</link></item>
+<item><title>The car that came back from the sea - Aeon</title><link>https://aeon.co/videos/youthful-joy-and-civil-unrest-collide-in-this-epic-road-trip-tale?utm_source=rss-feed</link></item>
+<item><title>Victims and villains - Aeon</title><link>https://aeon.co/essays/inside-the-criminal-world-of-southeast-asias-scam-compounds?utm_source=rss-feed</link></item>
+<item><title>State Agencies Apply to E-Stamp - FWS</title><link>https://www.fws.gov/service/apply-join-e-stamp-program-state-wildlife-agencies-only</link></item>
+<item><title>From Fish Cars to Freezers: The Future of Fisheries - FWS</title><link>https://www.fws.gov/story/2026-02/fish-cars-freezers-future-fisheries</link></item>
+<item><title>Our nation&amp;#39;s nature - FWS</title><link>https://www.fws.gov/story/2026-02/our-nations-nature-2</link></item>
+<item><title>Bringing blackbanded sunfish back to blackwater habitat in Maryland - FWS</title><link>https://www.fws.gov/story/2026-01/bringing-blackbanded-sunfish-back-blackwater-habitat-maryland</link></item>
+<item><title>Innovation in the Gallatin Valley: The Flags’ Journey to Bozeman Fish Technology Center - FWS</title><link>https://www.fws.gov/story/2026-01/innovation-gallatin-valley-flags-journey-bozeman-fish-technology-center</link></item>
+<item><title>Conservation construction crew to the rescue! - FWS</title><link>https://www.fws.gov/story/2026-01/conservation-construction-crew-rescue</link></item>
+<item><title>U.S. Fish and Wildlife Service recognizes Naval Base Ventura County for excellence in natural resource conservation - FWS</title><link>https://www.fws.gov/press-release/2026-01/us-fish-and-wildlife-service-recognizes-naval-base-ventura-county-excellence</link></item>
+<item><title>Lila Moss Brings a Quiet Mood to Adanola Spring 2026 - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/lila-moss-adanola-spring-2026/</link></item>
+<item><title>What to Wear for Easter That Works All Spring - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/what-to-wear-for-easter/</link></item>
+<item><title>5 Must-Have Coach Sunglasses That Are Trending - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/shop/coach-sunglasses/</link></item>
+<item><title>Grey Hair Treatments Worth Your Time in 2026 - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/grey-hair-treatments/</link></item>
+<item><title>Irina Shayk is Ermanno Scervino’s Spring 2026 Muse - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/irina-shayk-ermanno-scervino-spring-2026/</link></item>
+<item><title>Zimmermann’s Spring 2026 Campaign Celebrates Fashion Freedom - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/zimmermann-spring-2026-campaign/</link></item>
+<item><title>Alo Keeps It Pretty in Pink for Valentine’s Day Edit - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/alo-valentines-day-2026/</link></item>
+<item><title>Reformation’s Pre-Spring Styles Will Save Your Social Calendar - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/shop/reformation-pre-spring-dresses/</link></item>
+<item><title>H&amp;M Studio Spring 2026 Embraces Unexpected Fashion - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/hm-studio-spring-2026/</link></item>
+<item><title>5 RAYE Boots That Will Make Everyone Stop &amp; Look - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/shop/raye-boots/</link></item>
+<item><title>How Korean Skincare Fits the New Era of Effortless Beauty - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/korean-skincare-new-era/</link></item>
+<item><title>Text To Speech (TTS) - OSTechNix</title><link>https://ostechnix.com/category/text-to-speech-tts/</link></item>
+<item><title>Pocket TTS: High-Quality Local Voice Cloning Without GPU - OSTechNix</title><link>https://ostechnix.com/pocket-tts-local-text-to-speech-no-gpu/</link></item>
+<item><title>How to Use –dry-run Flag in Linux Commands: Avoid Mistakes Before They Happen - OSTechNix</title><link>https://ostechnix.com/linux-dry-run-flag-guide-beginners/</link></item>
+<item><title>Greg Kroah-Hartman Wins Prize for Excellence in Open Source 2026 - OSTechNix</title><link>https://ostechnix.com/greg-kroah-hartman-open-source-award-2026/</link></item>
+<item><title>Why WhatsApp Migrated to Rust from C++ (And What It Fixed) - OSTechNix</title><link>https://ostechnix.com/why-whatsapp-migrated-to-rust-from-c/</link></item>
+<item><title>Bazzite Joins Open Gaming Collective: A New Era for Linux Gaming - OSTechNix</title><link>https://ostechnix.com/bazzite-joins-open-gaming-collective-ogc/</link></item>
+<item><title>32 Essential Python One-Liners for Python’s 32nd Anniversary - OSTechNix</title><link>https://ostechnix.com/32-python-one-liners/</link></item>
+<item><title>There’s A Fine Line Between Genius and Stupid… - theCHIVE</title><link>https://thechive.com/funny/theres-a-fine-line-between-genius-and-stupid/?utm_postid=5175561&amp;utm_editor=5175561_ryder</link></item>
+<item><title>Britain’s Street Names Are Completely Unhinged - theCHIVE</title><link>https://thechive.com/funny/britains-street-names-are-completely-unhinged/?utm_postid=5174839&amp;utm_editor=5174839_hendy</link></item>
+<item><title>De-Motivational Quotes Hit a Little Too Hard - theCHIVE</title><link>https://thechive.com/funny/de-motivational-quotes-hit-a-little-too-hard/?utm_postid=5174871&amp;utm_editor=5174871_hendy</link></item>
+<item><title>Cool Infographics That’ll Make You Feel a Wee Bit Smarter Today - theCHIVE</title><link>https://thechive.com/humanity/interesting-random/learn-something-cool-infographics-guides/?utm_postid=5175661&amp;utm_editor=5175661_ty</link></item>
+<item><title>Road Rage Reactions We Felt in Our Soul - theCHIVE</title><link>https://thechive.com/funny/road-rage-reactions-we-felt-in-our-soul/?utm_postid=5175464&amp;utm_editor=5175464_ryder</link></item>
+<item><title>Simple Life Hacks that Actually Work - theCHIVE</title><link>https://thechive.com/humanity/simple-life-hacks-that-actually-work/?utm_postid=5174724&amp;utm_editor=5174724_luka</link></item>
+<item><title>Knit Happens: Welcome to The Cozy Club! - theCHIVE</title><link>https://thechive.com/humanity/art/knit-happens-welcome-to-the-cozy-club/?utm_postid=5175517&amp;utm_editor=5175517_ryder</link></item>
+<item><title>Feel-Good GIFS Just Might Make You Cry - theCHIVE</title><link>https://thechive.com/humanity/beautiful/feel-good-gifs-just-might-make-you-cry/?utm_postid=5174919&amp;utm_editor=5174919_hendy</link></item>
+<item><title>GIFs 103% proof: Men do STUPID sh*t - theCHIVE</title><link>https://thechive.com/funny/gifs-103-proof-men-do-stupid-sht/?utm_postid=5175435&amp;utm_editor=5175435_rick</link></item>
+<item><title>Powerful Old Quotes That Still Hit Hard Today - theCHIVE</title><link>https://thechive.com/humanity/beautiful/powerful-old-quotes-still-relatable-today/?utm_postid=5175126&amp;utm_editor=5175126_ty</link></item>
+<item><title>Yeah… I’m Gettin’ Old - theCHIVE</title><link>https://thechive.com/funny/yeah-im-gettin-old/?utm_postid=5174974&amp;utm_editor=5174974_hendy</link></item>
+<item><title>The Unexpected Art of the Everyday Ashtray - theCHIVE</title><link>https://thechive.com/humanity/art/the-unexpected-art-of-the-everyday-ashtray/?utm_postid=5174787&amp;utm_editor=5174787_ryder</link></item>
+<item><title>Every Artist with EGOT Status After Steven Spielberg’s Big Grammy Win - theCHIVE</title><link>https://thechive.com/entertainment/celebrity/every-artist-with-egot-status-after-steven-spielbergs-big-grammy-win/?utm_postid=5175128&amp;utm_editor=5175128_zach</link></item>
+<item><title>Care To Explain Yourself, Internet? - theCHIVE</title><link>https://thechive.com/funny/care-to-explain-yourself-internet/?utm_postid=5174603&amp;utm_editor=5174603_ryder</link></item>
+<item><title>Dad Jokes + Stock Images = Comedy Heaven - theCHIVE</title><link>https://thechive.com/funny/dad-jokes-stock-images-comedy-heaven/?utm_postid=5174695&amp;utm_editor=5174695_luka</link></item>
+<item><title>Meet the Patriots Cheerleaders Heading to Super Bowl LX - theCHIVE</title><link>https://thechive.com/entertainment/tv/meet-the-patriots-cheerleaders-heading-to-super-bowl-lx/?utm_postid=5174889&amp;utm_editor=5174889_zach</link></item>
+<item><title>Memes see the shot…BOOOOOM…NAILed IT - theCHIVE</title><link>https://thechive.com/funny/memes-see-the-shotbooooomnailed-it/?utm_postid=5175077&amp;utm_editor=5175077_rick</link></item>
+<item><title>Good Looking GIFs To Start The Week! - theCHIVE</title><link>https://thechive.com/entertainment/movies/good-looking-gifs-to-start-the-week/?utm_postid=5174316&amp;utm_editor=5174316_ryder</link></item>
+<item><title>10 Most Diabolical ‘Law &amp; Order: SVU’ Villains - theCHIVE</title><link>https://thechive.com/entertainment/tv/10-most-diabolical-law-order-svu-villains/?utm_postid=5173491&amp;utm_editor=5173491_zach</link></item>
+<item><title>NHL Has Its Second Goalie Fight in as Many Weeks, Outdoors to Boot! - theCHIVE</title><link>https://thechive.com/entertainment/tv/nhl-has-its-second-goalie-fight-in-as-many-weeks-outdoors-to-boot/?utm_postid=5174818&amp;utm_editor=5174818_zach</link></item>
+<item><title>You Laugh, You Lose! Come Play! - theCHIVE</title><link>https://thechive.com/funny/you-laugh-you-lose-come-play-2/?utm_postid=5171656&amp;utm_editor=5171656_hendy</link></item>
+<item><title>Nerd Memes That Deserve Admin Access - theCHIVE</title><link>https://thechive.com/funny/nerd-memes-that-deserve-admin-access/?utm_postid=5174566&amp;utm_editor=5174566_ryder</link></item>
+<item><title>The Triple-B Brings the Heat! - theCHIVE</title><link>https://thechive.com/humanity/the-triple-b-brings-the-heat/?utm_postid=5174315&amp;utm_editor=5174315_luka</link></item>
+<item><title>Gas Stations, Groceries, and God Level Sunsets - theCHIVE</title><link>https://thechive.com/humanity/beautiful/gas-stations-groceries-and-god-level-sunsets/?utm_postid=5174532&amp;utm_editor=5174532_ryder</link></item>
+<item><title>‘Workaholics’ Songs That Continue Living Rent Free in Our Heads - theCHIVE</title><link>https://thechive.com/entertainment/tv/workaholics-songs-that-continue-living-rent-free-in-our-heads/?utm_postid=5172832&amp;utm_editor=5172832_zach</link></item>
+<item><title>Random Memes I Refuse to Delete From My Computer - theCHIVE</title><link>https://thechive.com/funny/random-memes-i-refuse-to-delete/?utm_postid=5173677&amp;utm_editor=5173677_ty</link></item>
+<item><title>Dank Memes Are My Medicine - theCHIVE</title><link>https://thechive.com/funny/dank-memes-are-my-medicine/?utm_postid=5173341&amp;utm_editor=5173341_hendy</link></item>
+<item><title>Small Life Hacks You Might Have Been Doing Wrong Your Whole Life - theCHIVE</title><link>https://thechive.com/funny/genius-or-stupid/small-life-hacks-you-might-have-been-doing-wrong-your-whole-life/?utm_postid=5174269&amp;utm_editor=5174269_ryder</link></item>
+<item><title>Cat Saturday Will Never Let You Down - theCHIVE</title><link>https://thechive.com/funny/cat-saturday-will-never-let-you-down/?utm_postid=5173224&amp;utm_editor=5173224_hendy</link></item>
+<item><title>The Hunnies &amp; Funnies Will See You Now - theCHIVE</title><link>https://thechive.com/funny/the-hunnies-funnies-will-see-you-now/?utm_postid=5172301&amp;utm_editor=5172301_hendy</link></item>
+<item><title>Can I Interest You In Some Weekend Memes? - theCHIVE</title><link>https://thechive.com/funny/work-sucks/can-i-interest-you-in-some-weekend-memes/?utm_postid=5172033&amp;utm_editor=5172033_ryder</link></item>
+<item><title>USA Women’s Olympic Hockey Roster Is Chock-Full of Talent - theCHIVE</title><link>https://thechive.com/funny/merica-funny/usa-womens-olympic-hockey-roster-is-chock-full-of-talent/?utm_postid=5174381&amp;utm_editor=5174381_zach</link></item>
+<item><title>Freaky Memes For A Freaky Friday - theCHIVE</title><link>https://thechive.com/funny/wtf/freaky-memes-for-a-freaky-friday/?utm_postid=5173412&amp;utm_editor=5173412_ryder</link></item>
+<item><title>VS Code for Linux may be secretly hoarding trashed files - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/04/vs_code_for_linux_trash_fail/</link></item>
+<item><title>AI agents can&amp;#39;t yet pull off fully autonomous cyberattacks - but they are already very helpful to crims - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/03/autonomous_cyberattacks_not_real_yet/</link></item>
+<item><title>Sudo maintainer, handling utility for more than 30 years, is looking for support - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/03/sudo_maintainer_asks_for_help/</link></item>
+<item><title>GitHub ponders kill switch for pull requests to stop AI slop - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/03/github_kill_switch_pull_requests_ai/</link></item>
+<item><title>Amazon&amp;#39;s European datacenter buildout blows a breaker as grid connection wait list hits 7 years - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/03/amazon_power_europe/</link></item>
+<item><title>&amp;#39;Lethal&amp;#39; and &amp;#39;magical&amp;#39; Palantir tech is in demand by Pentagon, China, Middle East, CEO says - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/03/palantir_lethal_magical_china_middle_east/</link></item>
+<item><title>Critical React Native Metro dev server bug under attack as researchers scream into the void - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/03/critical_react_native_metro_server/</link></item>
+<item><title>Next-gen nuclear reactors safe enough to skip full environmental reviews, says Trump admin - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/03/nextgen_nuclear_reactors_skip_nepa_reviews/</link></item>
+<item><title>Snowflake plugs PostgreSQL into its AI Data Cloud - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/03/snowflake_postgresql_ai_data/</link></item>
+<item><title>CISA updated ransomware intel on 59 bugs last year without telling defenders - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/03/greynoise_cisa_ransomware_gripe/</link></item>
+<item><title>Palantir declares itself the guardian of Americans&amp;#39; rights - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/03/palantir_american_rights/</link></item>
+<item><title>Azure outages ripple across multiple dependent Microsoft services - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/03/azure_virtual_machine_outage/</link></item>
+<item><title>Europe shrugs off tariffs, plots to end tech reliance on US - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/03/europe_tariffs_forrester/</link></item>
+<item><title>HP CEO prints final page after six years, moves to PayPal - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/03/enrique_lores_exits_hp/</link></item>
+<item><title>X marks the raid: French cops swoop on Musk&amp;#39;s Paris ops - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/03/french_police_raid_x/</link></item>
+<item><title>Microsoft finally sends TLS 1.0 and 1.1 to the cloud retirement home - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/03/microsoft_tls_deprecations/</link></item>
+<item><title>Polish cops bail 20-year-old bedroom botnet operator - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/03/polish_cops_ddos_arrest/</link></item>
+<item><title>UK names Barnsley as first Tech Town to see whether AI can fix... well, anything - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/03/barnsley_ai_town/</link></item>
+<item><title>Firefox makes AI optional, like it probably should have been all along - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/03/firefox_ai_kill_switch/</link></item>
+<item><title>NASA delays Artemis II to March after hydrogen leaks bedevil countdown test - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/03/nasa_artemis_ii_wdr/</link></item>
+<item><title>DIY AI bot farm OpenClaw is a security &amp;#39;dumpster fire&amp;#39; - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/03/openclaw_security_problems/</link></item>
+<item><title>British military to get legal OK to swat drones near bases - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/03/armed_forces_bill_drones/</link></item>
+<item><title>Microsoft kills standalone SharePoint and OneDrive plans, because they’re not suite enough - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/03/microsoft_retires_sharepoint_onedrive_standalone/</link></item>
+<item><title>South Korea enlists AI to spot pump and dump schemes on social media, or in Spam - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/03/south_korea_ai_stock_fraud/</link></item>
+<item><title>Elon Musk merges xAI into SpaceX to spread universal consciousness via a sentient sun - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/03/musk_spacex_xai_merge_hallucination_burning_man/</link></item>
+<item><title>Notepad++ hijacking blamed on Chinese Lotus Blossom crew behind Chrysalis backdoor - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/02/notepad_hijacking_lotus_blossom/</link></item>
+<item><title>Let them eat Pi: RAM shortage bumps Raspberry prices as much as $60 - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/02/raspberry_pi_ram_shortage_price_hike/</link></item>
+<item><title>Intel welcomes memory apocalypse with Xeon workstation refresh - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/02/intel_xeon_workstation/</link></item>
+<item><title>There&amp;#39;s nothing micro about this super-sized Arduino Uno - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/02/arduino_uno/</link></item>
+<item><title>Want more ads on your web pages? Try the AdBoost extension - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/02/ads_web_pages_adboost_extension/</link></item>
+<item><title>DRAM prices expected to double in Q1 as AI ambitions push memory fabs to their limit - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/02/dram_prices_expected_to_double/</link></item>
+<item><title>StopICE hacked to send alarming text messages, admins accuse border patrol agent of sabotage - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/02/stopice_alerts_hacked/</link></item>
+<item><title>Russia-linked APT28 attackers already abusing new Microsoft Office zero-day - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/02/russialinked_apt28_microsoft_office_bug/</link></item>
+<item><title>Oracle&amp;#39;s first general on-prem release of its .ai database iteration draws skeptics - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/02/oracles_on_prem_ai_database/</link></item>
+<item><title>McDonald&amp;#39;s is not lovin&amp;#39; your bigmac, happymeal, and mcnuggets passwords - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/02/mcdonalds_password_advice/</link></item>
+<item><title>Snowflake bets $200M that OpenAI makes databases more chatty - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/02/snowflake_200m_openai/</link></item>
+<item><title>Patch Tuesday meets Groundhog Day as Windows hibernation bug returns - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/02/windows_hibernation_bug/</link></item>
+<item><title>SAP refuses to budge on renewal discounts despite cloud growth slowdown - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/02/sap_renewal_discounts/</link></item>
+<item><title>OpenClaw patches one-click RCE as security Whac-A-Mole continues - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/02/openclaw_security_issues/</link></item>
+<item><title>Microsoft spends billions on AI, converts just 3.3% of Copilot Chat users - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/02/microsoft_ai_spend_copilot/</link></item>
+<item><title>Notepad++ update service hijacked in targeted state-linked attack - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/02/notepad_plusplus_intrusion/</link></item>
+<item><title>US TikTok service restored after cloud &amp;#39;that doesn&amp;#39;t go down&amp;#39; went down - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/02/tiktok_service_restored_us/</link></item>
+<item><title>Microsoft&amp;#39;s Sinofsky saw Surface fail coming – then hit up Epstein for advice on exit - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/02/microsoft_sinofsky_epstein/</link></item>
+<item><title>Help! Does anyone on the bus know Linux? - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/02/bus_linux/</link></item>
+<item><title>Infrastructure cyberattacks are suddenly in fashion. We can buck the trend - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/02/energy_infrastructure_cyberattacks/</link></item>
+<item><title>Microsoft&amp;#39;s &amp;#39;atypical&amp;#39; emergency Windows patches are becoming awfully typical - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/02/microsoft_quality_control/</link></item>
+<item><title>Techie&amp;#39;s one ring brought darkness by shorting a server - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/02/who_me/</link></item>
+<item><title>Capgemini to sell the biz that works for US government amid criticism of ICE contract - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/02/capgemini_divests_us_federal_entity_cgs/</link></item>
+<item><title>Oracle expects investors to pump $50 billion into its cloud this year alone - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/02/oracle_cloud_expansion_investment_plan/</link></item>
+<item><title>India dangles 20-year tax holiday for clouds that serve offshore users - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/02/asia_tech_news_roundup/</link></item>
+<item><title>2025年第四季度银行家问卷调查报告 - 中国人民银行-调查统计司</title><link>http://www.pbc.gov.cn/diaochatongjisi/116219/116227/2026012320124966002/index.html</link></item>
+<item><title>2025年第四季度企业家问卷调查报告 - 中国人民银行-调查统计司</title><link>http://www.pbc.gov.cn/diaochatongjisi/116219/116227/2026012320114154002/index.html</link></item>
+<item><title>2025年第四季度城镇储户问卷调查报告 - 中国人民银行-调查统计司</title><link>http://www.pbc.gov.cn/diaochatongjisi/116219/116227/2026012320103962314/index.html</link></item>
+<item><title>From Communist to Conservative - Law &amp; Liberty</title><link>https://lawliberty.org/podcast/from-communist-to-conservative/</link></item>
+<item><title>Russell Kirk’s Tragic Sense of Life - Law &amp; Liberty</title><link>https://lawliberty.org/russell-kirks-tragic-sense-of-life/</link></item>
+<item><title>Higher Education and the New Civil Rights State - Law &amp; Liberty</title><link>https://lawliberty.org/forum/higher-education-and-the-new-civil-rights-state/</link></item>
+<item><title>With Love from Minnesota - Law &amp; Liberty</title><link>https://lawliberty.org/with-love-from-minnesota/</link></item>
+<item><title>find out all about me by visiting this page - Raspberry Pi Pod</title><link>https://www.recantha.co.uk/blog/?page_id=619</link></item>
+<item><title>The Mainstreaming of Social Science in China Isn’t Necessarily a Good Thing - Sixth Tone</title><link>https://www.sixthtone.com/news/1018161/the-mainstreaming-of-social-science-in-china-isn%E2%80%99t-necessarily-a-good-thing?source=channel_home</link></item>
+<item><title>12-Year-Old Finds Asia’s First Jurassic Amphibian Footprint - Sixth Tone</title><link>https://www.sixthtone.com/news/1018162/12-year-old-finds-asia%E2%80%99s-first-jurassic-amphibian-footprint-?source=channel_home</link></item>
+<item><title>To Reach Remote Patients, China Puts a Hospital on a Plane - Sixth Tone</title><link>https://www.sixthtone.com/news/1018153/to-reach-remote-patients%2C-china-puts-a-hospital-on-a-plane-?source=channel_home</link></item>
+<item><title>Shanghai Sessions: Four Notes From a City in Swing - Sixth Tone</title><link>https://www.sixthtone.com/news/1018156/shanghai-sessions%3A-four-notes-from-a-city-in-swing?source=channel_home</link></item>
+<item><title>Young Chinese Are Diagnosing Themselves With ADHD — and Finding Community Online - Sixth Tone</title><link>https://www.sixthtone.com/news/1018155/young-chinese-are-diagnosing-themselves-with-adhd-%E2%80%94-and-finding-community-online</link></item>
+<item><title>In National First, China Founds ‘School of Space Exploration’ - Sixth Tone</title><link>https://www.sixthtone.com/news/1018149/in-national-first%2C-china-founds-%E2%80%98school-of-space-exploration%E2%80%99</link></item>
+<item><title>Can Ultrasound Alone Treat Alzheimer’s? One Chinese Neurologist Thinks It Might - Sixth Tone</title><link>https://www.sixthtone.com/news/1018142/can-ultrasound-alone-treat-alzheimer%E2%80%99s%3F-one-chinese-neurologist-thinks-it-might</link></item>
+<item><title>Work It Out: Why More Chinese Students Pick Skills Over Degrees - Sixth Tone</title><link>https://www.sixthtone.com/news/1018143/work-it-out%3A-why-more-chinese-students-pick-skills-over-degrees</link></item>
+<item><title>In Wuhan, A Race to Study a 3,500-Year-Old City Between Seasons - Sixth Tone</title><link>https://www.sixthtone.com/news/1018087/in-wuhan%2C-a-race-to-study-a-3%2C500-year-old-city-between-seasons</link></item>
+<item><title>On the Trail of Shanghai Jazz - Sixth Tone</title><link>https://www.sixthtone.com/news/1018154/on-the-trail-of-shanghai-jazz</link></item>
+<item><title>She Picked Up a Computer Mouse in Her 50s — Then Defeated a World Champion - Sixth Tone</title><link>https://www.sixthtone.com/news/1018145/she-picked-up-a-computer-mouse-in-her-50s-%E2%80%94-then-defeated-a-world-champion</link></item>
+<item><title>Her Eye, Her Era, Her Archive: Xiao Zhuang, One of China’s First Female Photojournalists, Dies at 93 - Sixth Tone</title><link>https://www.sixthtone.com/news/1018093/her-eye%2C-her-era%2C-her-archive%3A-xiao-zhuang%2C-one-of-china%E2%80%99s-first-female-photojournalists%2C-dies-at-93</link></item>
+<item><title>The Ups and Downs of Shanghai’s ‘Saint of Songs’ - Sixth Tone</title><link>https://www.sixthtone.com/news/1018108/the-ups-and-downs-of-shanghai%E2%80%99s-%E2%80%98saint-of-songs%E2%80%99?source=channel_home</link></item>
+<item><title>Street Angels: Meet the Women Who Became China’s First Pop Stars - Sixth Tone</title><link>https://www.sixthtone.com/news/1018106/street-angels%3A-meet-the-women-who-became-china%E2%80%99s-first-pop-stars?source=channel_home</link></item>
+<item><title>Why China’s Young Urbanites Are Ditching Cities for Villages - Sixth Tone</title><link>https://www.sixthtone.com/news/1018134/why-china%E2%80%99s-young-urbanites-are-ditching-cities-for-villages</link></item>
+<item><title>Overdoing It: The Cheap Pain Pills Hooking Young Chinese - Sixth Tone</title><link>https://www.sixthtone.com/news/1018123/overdoing-it%3A-the-cheap-pain-pills-hooking-young-chinese</link></item>
+<item><title>6 Lives, 3 Years, and a Long Look at China’s Short-Video Era - Sixth Tone</title><link>https://www.sixthtone.com/news/1018119/6-lives%2C-3-years%2C-and-a-long-look-at-china%E2%80%99s-short-video-era</link></item>
+<item><title>Brain Implant Trial in China Leaves Patients with Gambling, Sexual Urges - Sixth Tone</title><link>https://www.sixthtone.com/news/1018099/brain-implant-trial-in-china-leaves-patients-with-gambling%2C-sexual-urges</link></item>
+<item><title>The Making and Unmaking of China’s Backpacker Hostels - Sixth Tone</title><link>https://www.sixthtone.com/news/1018026/the-making-and-unmaking-of-china%E2%80%99s-backpacker-hostels</link></item>
+<item><title>The Buzzword Capturing Chinese Gen Z’s Individualism - Sixth Tone</title><link>https://www.sixthtone.com/news/1018043/the-buzzword-capturing-chinese-gen-z%E2%80%99s-individualism</link></item>
+<item><title>China Drafts Rules to Regulate AI ‘Boyfriends’ and ‘Girlfriends’ - Sixth Tone</title><link>https://www.sixthtone.com/news/1018050/china-drafts-rules-to-regulate-ai-%E2%80%98boyfriends%E2%80%99-and-%E2%80%98girlfriends%E2%80%99</link></item>
+<item><title>China Begins Clinical Trials of Its First Acne Vaccine - Sixth Tone</title><link>https://www.sixthtone.com/news/1018112/china-begins-clinical-trials-of-its-first-acne-vaccine</link></item>
+<item><title>Why This McLaren Speedtail Hypercar Could Sell For Over $2.3 Million - Maxim</title><link>https://www.maxim.com/rides/why-this-mclaren-speedtail-hypercar-could-sell-for-over-2-3-million/</link></item>
+<item><title>Planes, Trains And Luxury Yachts: Discovering the Secret Wonders Of Vietnam - Maxim</title><link>https://www.maxim.com/travel/planes-trains-and-luxury-yachts-discovering-the-secret-wonders-of-vietnam/</link></item>
+<item><title>H. Moser Unveils Endeavour Tourbillon Skeleton Watch In Red Gold - Maxim</title><link>https://www.maxim.com/style/h-moser-unveils-endeavour-tourbillon-skeleton-watch-in-red-gold/</link></item>
+<item><title>Paul Newman’s Favorite Sunglasses Inspired These Oliver Peoples Shades - Maxim</title><link>https://www.maxim.com/style/paul-newman-is-the-stylish-inspiration-behind-these-oliver-peoples-sunglasses/</link></item>
+<item><title>Check Into The Only Overwater Bungalows In St. Vincent &amp; The Grenadines - Maxim</title><link>https://www.maxim.com/travel/check-into-the-only-overwater-bungalows-in-st-vincent-the-grenadines/</link></item>
+<item><title>How To Register For The 2026 Maxim Cover Girl Competition - Maxim</title><link>https://www.maxim.com/news/how-to-register-for-the-2026-maxim-cover-girl-competition/</link></item>
+<item><title>Shinola Celebrates 100 Years Of ‘Hockeytown’ With Detroit Red Wings-Inspired Timepiece - Maxim</title><link>https://www.maxim.com/sports/shinola-celebrates-100-years-of-hockeytown-with-detroit-red-wings-inspired-timepiece/</link></item>
+<item><title>Post Malone &amp; Jelly Roll Announce 2026 ‘Big Ass Stadium Tour’ Expansion - Maxim</title><link>https://www.maxim.com/entertainment/post-malone-jelly-roll-announce-2026-big-ass-stadium-tour-expansion/</link></item>
+<item><title>Standing Tall: How Luke Hanvey And TUSQ Are Transforming Men’s Shapewear - Maxim</title><link>https://www.maxim.com/partner/standing-tall-how-luke-hanvey-and-tusq-are-transforming-mens-shapewear/</link></item>
+<item><title>Here’s When The Final ‘Fast and Furious’ Movie Hits Theaters - Maxim</title><link>https://www.maxim.com/entertainment/heres-when-the-final-fast-and-furious-movie-hits-theaters/</link></item>
+<item><title>This Insane Genesis X Skorpio Off-Roader Is Headed Into Production - Maxim</title><link>https://www.maxim.com/rides/the-insane-genesis-x-skorpio-off-road-concept-is-headed-for-production/</link></item>
+<item><title>This Supremely Spicy Absolut Vodka Is Made With Real Tabasco Sauce - Maxim</title><link>https://www.maxim.com/food-drink/this-supremely-spicy-absolut-vodka-is-made-with-real-tabasco-sauce/</link></item>
+<item><title>Billie Eilish &amp; James Cameron’s 3D Concert Movie Is Coming In May - Maxim</title><link>https://www.maxim.com/entertainment/billie-eilish-james-camerons-3d-concert-movie-is-coming-in-may/</link></item>
+<item><title>Elijah Craig’s 2026 Barrel Proof Rye Whiskey Is A 120-Proof Stunner - Maxim</title><link>https://www.maxim.com/food-drink/elijah-craigs-2026-barrel-proof-rye-whiskey-is-a-120-proof-stunner/</link></item>
+<item><title>The Lamborghini ‘Camel Collection’ Features An F1 Racecar &amp; Matching Countach - Maxim</title><link>https://www.maxim.com/rides/the-lamborghini-camel-collection-features-an-f1-racecar-matching-countach/</link></item>
+<item><title>Maxim Cover Girl Competition Spotlight: Ashleigh Byers, Joanna Langemak, Daja Taylor, Tori Lausch &amp; Madeline Craft - Maxim</title><link>https://www.maxim.com/news/maxim-cover-girl-competition-spotlight-ashleigh-byers-joanna-langemak-daja-taylor/</link></item>
+<item><title>Why Turkey Has Become A Global Destination For Hair Restoration - Maxim</title><link>https://www.maxim.com/partner/why-turkey-has-become-a-global-destination-for-hair-restoration/</link></item>
+<item><title>TAG Heuer Expands Carrera Collection With Three Bold New 2026 Models - Maxim</title><link>https://www.maxim.com/style/tag-heuer-expands-carrera-collection-with-three-bold-new-2026-models/</link></item>
+<item><title>Kendall Jenner Mocks ‘Kardashian Curse’ &amp; Trolls NBA Exes In Fanatics Super Bowl Ad - Maxim</title><link>https://www.maxim.com/sports/kendall-jenner-mocks-kardashian-curse-and-trolls-nba-exes-in-fanatics-super-bowl-ad/</link></item>
+<item><title>Check Into Key West’s Best Boutique Luxury Hotel Collection - Maxim</title><link>https://www.maxim.com/travel/check-into-key-wests-best-historic-boutique-luxury-hotel-collection/</link></item>
+<item><title>Sydney Sweeney Reveals New SYRN Lingerie Line - Maxim</title><link>https://www.maxim.com/style/sydney-sweeney-stuns-in-her-new-syrn-lingerie-line/</link></item>
+<item><title>Lisa Leads NikeSkims’ Ballerina-Inspired Spring Campaign - Maxim</title><link>https://www.maxim.com/entertainment/lisa-leads-nikeskims-ballerina-inspired-spring-campaign/</link></item>
+<item><title>Garrison Brothers Distillery Uncorks First Bottled-in-Bond Texas Bourbon - Maxim</title><link>https://www.maxim.com/food-drink/garrison-brothers-distillery-uncorks-first-bottled-in-bond-texas-bourbon/</link></item>
 </channel></rss>
