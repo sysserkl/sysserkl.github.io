@@ -1241,6 +1241,9 @@ function translator_sites_b(){
     ['https://fanyi.youdao.com/#/TextTranslate','有道'],
     ['https://www.qianwen.com/','千问'],    
     ['https://yuanbao.tencent.com/chat/','元宝'],
+    ['https://yiyan.baidu.com/','文心'],
+    ['https://chat.deepseek.com/','DeepSeek'],
+
     ];
     
     for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){

@@ -315,8 +315,7 @@ function phrase_not_in_ensentence(max_count=0,max_result=100){
         
         var odiv=document.getElementById('divhtml');   
         odiv.innerHTML=enwords_array_to_html_b(full_t,false)+rare_old_words_form_ensentence(words_found,false);
-        
-        //odiv.insertAdjacentHTML('beforeend','<textarea onclick="this.select();document.execCommand(\'copy\');">'+words_found.join('\n')+'</textarea>');
+        document.title=old_title;
         console.log('phrase_not_in_ensentence() 费时：'+(performance.now() - t0) + ' milliseconds');       
     }
     
@@ -349,6 +348,7 @@ function phrase_not_in_ensentence(max_count=0,max_result=100){
         
         blxl=blxl+1;
         if (blxl % 100 == 0){
+            document.title=blxl+'/'+bllen+' - '+old_title;
             setTimeout(sub_phrase_not_in_ensentence_one,1);
         } else {
             sub_phrase_not_in_ensentence_one();
@@ -361,6 +361,7 @@ function phrase_not_in_ensentence(max_count=0,max_result=100){
     var bllen=enwords.length;
     var phrase_dict={};
     var blcount=0;
+    var old_title=document.title;
     sub_phrase_not_in_ensentence_one();
 }
 
