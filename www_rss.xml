@@ -8,97 +8,339 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Thu, 05 Feb 2026 09:04:43 +0800</lastBuildDate>
-<item><title>中国少年班人才项目为 AI 竞争源源不断输送人才 - Solidot</title><link>https://www.solidot.org/story?sid=83472</link></item>
-<item><title>Who will pioneer the next web?Read More - The Mozilla Blog</title><link>https://blog.mozilla.org/en/mozilla-new-products/mozilla-pioneers/</link></item>
-<item><title>The State of Mozilla: Are you ready to choose your future? Read More - The Mozilla Blog</title><link>https://blog.mozilla.org/en/mozilla/state-of-mozilla-25-26/</link></item>
-<item><title>bladeRunner2049 - V2EX</title><link>https://www.v2ex.com/member/bladeRunner2049</link></item>
-<item><title>再来谈谈我的 ArchLinux 使用体验 - V2EX</title><link>https://www.v2ex.com/t/1190623#reply7</link></item>
-<item><title>shimheeyeon - V2EX</title><link>https://www.v2ex.com/member/shimheeyeon</link></item>
-<item><title>thinkbook 14+ 2024 Intel 版安装 arch plasma 左右声道声音大小不一样 - V2EX</title><link>https://www.v2ex.com/t/1189128#reply4</link></item>
-<item><title>有没有便宜好用的服务器推荐 - V2EX</title><link>https://www.v2ex.com/t/1187937#reply28</link></item>
-<item><title>2026 年了，有没有丝滑一些的 Linux 远程桌面解决方案 - V2EX</title><link>https://www.v2ex.com/t/1183939#reply70</link></item>
-<item><title>songtianlun - V2EX</title><link>https://www.v2ex.com/member/songtianlun</link></item>
-<item><title>能不能改改 networkmanager 中的错别字？ - V2EX</title><link>https://www.v2ex.com/t/1186780#reply17</link></item>
-<item><title>求大佬们分享下跨境组网方案 - V2EX</title><link>https://www.v2ex.com/t/1184078#reply44</link></item>
-<item><title>《铜豌豆 Linux 》12.13.1 版本发布 2026-01-16 - V2EX</title><link>https://www.v2ex.com/t/1186270#reply2</link></item>
-<item><title>Wayland 显示服务下的远控方案 - V2EX</title><link>https://www.v2ex.com/t/1185783#reply6</link></item>
-<item><title>折腾两天还是换回 Manjaro - V2EX</title><link>https://www.v2ex.com/t/1182856#reply15</link></item>
-<item><title>深度科技原 cto 关于西装门的每日锐评 - V2EX</title><link>https://www.v2ex.com/t/1184309#reply3</link></item>
-<item><title>Linux 下看电影， dts 音轨声音小，音质破。 - V2EX</title><link>https://www.v2ex.com/t/1183490#reply11</link></item>
-<item><title>华为擎云 W515X 支持运行 openSUSE 等发行版吗 - V2EX</title><link>https://www.v2ex.com/t/1183011#reply8</link></item>
-<item><title>Arch Linux 下微信备份聊天记录的方案？ - V2EX</title><link>https://www.v2ex.com/t/1182710#reply20</link></item>
-<item><title>完整启用 Fedora/ Linux 下 GNOME 的硬件加速 - V2EX</title><link>https://www.v2ex.com/t/1180897#reply10</link></item>
-<item><title>国内 Linux 服务，安装各种软件有什么好的办法快速安装？ - V2EX</title><link>https://www.v2ex.com/t/1182248#reply15</link></item>
-<item><title>荣耀笔记本与 Linux - 性能管理 - V2EX</title><link>https://www.v2ex.com/t/1181579#reply30</link></item>
-<item><title>垃圾佬组 Linux 求推荐亮机卡 - V2EX</title><link>https://www.v2ex.com/t/1181920#reply6</link></item>
-<item><title>有个 javac 进程长期占用，是否被挂马了？ - V2EX</title><link>https://www.v2ex.com/t/1181915#reply8</link></item>
-<item><title>See all gadgets - The Verge</title><link>https://www.theverge.com/gadgets</link></item>
-<item><title>Smart Home Reviews - The Verge</title><link>https://www.theverge.com/smart-home-review</link></item>
-<item><title>Tablet Reviews - The Verge</title><link>https://www.theverge.com/tablet-review</link></item>
-<item><title>Headphone Reviews - The Verge</title><link>https://www.theverge.com/headphone-review</link></item>
-<item><title>See all policy - The Verge</title><link>https://www.theverge.com/policy</link></item>
-<item><title>PlayStation - The Verge</title><link>https://www.theverge.com/sony-playstation</link></item>
-<item><title>See all gaming - The Verge</title><link>https://www.theverge.com/games</link></item>
-<item><title>See all streaming - The Verge</title><link>https://www.theverge.com/streaming</link></item>
-<item><title>Everyone is stealing TV - The Verge</title><link>https://www.theverge.com/streaming/873416/piracy-streaming-boxes</link></item>
-<item><title>Apple TV details its 2026 streaming lineup with big list of announcements - The Verge</title><link>https://www.theverge.com/streaming/873862/apple-tv-2026-streaming-lineup</link></item>
-<item><title>Nintendo’s new Virtual Boy is more fun to look at than to play - The Verge</title><link>https://www.theverge.com/games/873755/nintendo-switch-virtual-boy-impressions</link></item>
-<item><title>Ikea’s cheap new smart home gear is struggling to get connected - The Verge</title><link>https://www.theverge.com/tech/873973/ikea-matter-thread-smart-home-connectivity-issues</link></item>
-<item><title>“I was detained by federal agents in Minneapolis” - The Verge</title><link>https://www.theverge.com/policy/873656/alex-pretti-protester-detained-dhs-ice-whipple</link></item>
-<item><title>space AI data centers - The Verge</title><link>https://www.theverge.com/transportation/873203/elon-musk-spacex-xai-merge-data-centers-space-tesla-ipo</link></item>
-<item><title>purchasing it in 2013 - The Verge</title><link>https://www.theverge.com/2013/8/6/4595684/tracking-jeff-bezos-purchase-of-the-washington-post</link></item>
-<item><title>cancellation-driving - The Verge</title><link>https://www.theverge.com/2025/1/16/24345278/democracy-dies-in-riveting-storytelling-for-all-of-america</link></item>
-<item><title>Valve’s Steam Machine has been delayed, and the RAM crisis will impact pricing - The Verge</title><link>https://www.theverge.com/games/874196/valve-steam-machine-frame-controller-delay-pricing-memory-crisis</link></item>
-<item><title>Google’s annual revenue tops $400 billion for the first time - The Verge</title><link>https://www.theverge.com/news/874161/google-400-billion-revenue-q4-2025-earnings</link></item>
-<item><title>I drove three Chinese cars — here’s why they would clean up in the US - The Verge</title><link>https://www.theverge.com/transportation/873408/geely-zeekr-lynk-co-test-drive-china</link></item>
-<item><title>Senators grill Waymo and Tesla over robotaxi safety, liability, and China - The Verge</title><link>https://www.theverge.com/transportation/873891/senate-hearing-autonomous-vehicles-robotaxi-waymo-tesla-legislation</link></item>
-<item><title>Anthropic says ‘Claude will remain ad-free,’ unlike ChatGPT - The Verge</title><link>https://www.theverge.com/ai-artificial-intelligence/873686/anthropic-claude-ai-ad-free-super-bowl-advert-chatgpt</link></item>
-<item><title>Aluminium: Why Google’s Android for PC launch may be messy and controversial - The Verge</title><link>https://www.theverge.com/tech/869659/aluminium-why-googles-android-for-pc-launch-may-be-messy-and-controversial</link></item>
-<item><title>Amazon rolls out Alexa Plus nationwide and launches a new free tier - The Verge</title><link>https://www.theverge.com/news/873702/amazon-alexa-plus-ai-assistant-now-available</link></item>
-<item><title>including Z-Wave - The Verge</title><link>https://www.theverge.com/2019/12/19/21029661/zwave-open-standard-radios-smart-home-multiple-vendors-silicon-labs</link></item>
-<item><title>The Home Depot’s Hubspace - The Verge</title><link>https://www.theverge.com/2024/1/8/24025140/home-depot-hubspace-smart-home-ecosystem-new-products</link></item>
-<item><title>Sam Altman responds to Anthropic’s ‘funny’ Super Bowl ads - The Verge</title><link>https://www.theverge.com/news/874084/ai-chatgpt-claude-super-bowl-ads-openai-anthropic</link></item>
-<item><title>ICE is afraid of children protesting - The Verge</title><link>https://www.theverge.com/policy/872783/tear-gas-children-portland-ice-labor</link></item>
-<item><title>replaced the original - The Verge</title><link>https://www.theverge.com/2022/6/27/23185275/overwatch-2-original-overwatch-game-overwrite</link></item>
-<item><title>prediction market - The Verge</title><link>https://www.theverge.com/news/868238/prediction-markets-polymarket-kalshi-robinhood</link></item>
-<item><title>OpenClaw’s AI ‘skill’ extensions are a security nightmare - The Verge</title><link>https://www.theverge.com/news/874011/openclaw-ai-skill-clawhub-extensions-security-nightmare</link></item>
-<item><title>I didn’t expect to love Dyson’s PencilVac Fluffycones – but I did - The Verge</title><link>https://www.theverge.com/tech/872981/dyson-pencilvac-fluffycones-vacuum-hands-on-review</link></item>
-<item><title>How Gesaffelstein’s Coachella set tricked minds with the world’s blackest black - The Verge</title><link>https://www.theverge.com/2019/4/24/18512555/gesaffelstein-coachella-performance-vantablack-monolith</link></item>
-<item><title>Republicans haul Netflix before Congress for being too ‘woke’ - The Verge</title><link>https://www.theverge.com/policy/873533/netflix-warner-bros-discovery-senate-antitrust-hearing</link></item>
-<item><title>announced at CES - The Verge</title><link>https://www.theverge.com/news/846608/lg-dolby-flexconnect-speakers-ces-2026</link></item>
-<item><title>Google Cloud’s customer chief returns to Microsoft as head of security - The Verge</title><link>https://www.theverge.com/news/873930/google-cloud-hayete-gallot-microsoft-security</link></item>
-<item><title>Google’s Pixel 10A will be revealed on February 18th - The Verge</title><link>https://www.theverge.com/news/873923/google-pixel-10a-launch-date-reveal-teaser</link></item>
-<item><title>Best gas masks - The Verge</title><link>https://www.theverge.com/policy/868571/best-gas-masks</link></item>
-<item><title>Dragon Quest gets another great remake that’s perfect for newcomers - The Verge</title><link>https://www.theverge.com/games/871307/dragon-quest-7-reimagined-review-ps5-switch-xbox</link></item>
-<item><title>The Switch is now Nintendo’s best-selling console of all time - The Verge</title><link>https://www.theverge.com/games/872768/nintendo-earnings-switch-best-selling-console-ds</link></item>
-<item><title>Send Help is an ode to every worker who has had a bad boss - The Verge</title><link>https://www.theverge.com/entertainment/868182/sam-raimi-send-help-review</link></item>
-<item><title>Fallout’s season 2 finale left plenty unanswered as it expanded in scope - The Verge</title><link>https://www.theverge.com/entertainment/873816/fallout-season-2-finale-review</link></item>
-<item><title>Roblox calls its take on AI world models ‘real-time dreaming’ - The Verge</title><link>https://www.theverge.com/games/873777/roblox-ai-world-models-real-time-dreaming-4d-creation-tools</link></item>
-<item><title>GitHub adds Claude and Codex AI coding agents - The Verge</title><link>https://www.theverge.com/news/873665/github-claude-codex-ai-agents</link></item>
-<item><title>‘Incognito’ operator sentenced to 30 years for running a dark web drug market - The Verge</title><link>https://www.theverge.com/tech/873825/incognito-market-dark-web-drug-sales-sentencing</link></item>
-<item><title>The 14-inch, ARM-based Asus Vivobook is half off today - The Verge</title><link>https://www.theverge.com/gadgets/873792/asus-vivobook-snapdragon-x-laptop-amd-ryzen-switch-2-deal-sale</link></item>
-<item><title>The Verge’s 2026 Valentine’s Day gift guide (for him) - The Verge</title><link>https://www.theverge.com/gadgets/865396/valentines-day-2026-gift-ideas-for-him-boyfriend-husband-partner</link></item>
-<item><title>Spotify launches offline lyrics, translations, and lyric previews - The Verge</title><link>https://www.theverge.com/entertainment/873779/spotify-lyrics-offline-translations-previews</link></item>
-<item><title>AMD hints Microsoft could launch its next-gen Xbox in 2027 - The Verge</title><link>https://www.theverge.com/news/873490/microsoft-next-gen-xbox-console-2027-date-amd</link></item>
-<item><title>NSO Virtual Boy games - The Verge</title><link>https://www.theverge.com/nintendo/777032/nintendo-switch-virtual-boy-games</link></item>
-<item><title>use Amazon Leo - The Verge</title><link>https://www.theverge.com/news/820580/project-kuiper-amazon-leo-rebrand</link></item>
-<item><title>gigabit-speed Leo Ultra antenna - The Verge</title><link>https://www.theverge.com/news/827783/amazon-leo-ultra-antenna-enterprise-preview</link></item>
-<item><title>Millions of books died so Claude could live - The Verge</title><link>https://www.theverge.com/podcast/872998/anthropic-claude-books-netflix-theaters-vergecast</link></item>
-<item><title>Docusign’s CEO on the dangers of trusting AI to read, and write, your contracts - The Verge</title><link>https://www.theverge.com/podcast/871205/docusign-ceo-allan-thygesen-ai-contracts-e-signature-interview</link></item>
-<item><title>Tim Cook is destroying his own legacy - The Verge</title><link>https://www.theverge.com/podcast/870717/tim-cook-melania-minneapolis-tiktok-vergecast</link></item>
-<item><title>Netflix is eating Hollywood — because it has to - The Verge</title><link>https://www.theverge.com/podcast/869464/netflix-warner-bros-discovery-deal-paramount-skydance-hollywood-streaming-future</link></item>
-<item><title>Truth and AI in Minneapolis - The Verge</title><link>https://www.theverge.com/podcast/868359/minneapolis-alex-pretti-tiktok-vergecast</link></item>
-<item><title>The Super Mario Galaxy Movie - The Verge</title><link>https://www.theverge.com/news/867447/new-super-mario-galaxy-trailer-yoshi</link></item>
-<item><title>Tomodachi Life: Living the Dream - The Verge</title><link>https://www.theverge.com/games/870062/its-animal-crossing-for-sickos</link></item>
-<item><title>eyeing restrictions on Roblox - The Verge</title><link>https://www.theverge.com/policy/860727/new-york-governor-hochul-roblox-kids-online-safety</link></item>
-<item><title>adding tennis last June - The Verge</title><link>https://www.theverge.com/news/692872/apples-sports-app-now-shows-tennis-scores</link></item>
-<item><title>bring ads to ChatGPT - The Verge</title><link>https://www.theverge.com/news/867898/openai-chatgpt-ad-pricing</link></item>
-<item><title>Fitbit’s founders launch a new platform for monitoring your entire family’s health - The Verge</title><link>https://www.theverge.com/tech/872963/fitbit-james-park-eric-friedman-luffu-caregivers-family-health-app</link></item>
-<item><title>Elon Musk merges SpaceX with xAI (and X) - The Verge</title><link>https://www.theverge.com/tech/872619/elon-musk-merges-spacex-with-xai-and-x</link></item>
-<item><title>China’s move to ban - The Verge</title><link>https://www.theverge.com/transportation/873039/china-ban-hidden-tesla-door-handles-january-2027#comments</link></item>
-<item><title>Sen. Warren wants to know what Google Gemini’s built-in checkout means for user privacy - The Verge</title><link>https://www.theverge.com/news/873476/senator-elizabeth-warren-google-gemini-ai-shopping-privacy</link></item>
-<item><title>Adobe actually won’t discontinue Animate - The Verge</title><link>https://www.theverge.com/tech/873621/adobe-animate-maintenance-mode-reverse-course</link></item>
-<item><title>Slopaganda goes West - The Verge</title><link>https://www.theverge.com/news/873400/nick-shirley-somali-daycares-san-diego-california-youtube</link></item>
-<item><title>Who’s afraid of the new TikTok? - The Verge</title><link>https://www.theverge.com/tech/870543/tiktok-us-ownership-oracle-algorithm-trust</link></item>
+<lastBuildDate>Fri, 06 Feb 2026 08:43:47 +0800</lastBuildDate>
+<item><title>Trump calls for new nuclear pact as US-Russia treaty expires - Defense News</title><link>https://www.defensenews.com/global/europe/2026/02/05/trump-calls-for-new-nuclear-pact-as-us-russia-treaty-expires/</link></item>
+<item><title>US and Russia agree to reestablish military dialogue after Ukraine talks - Defense News</title><link>https://www.defensenews.com/global/europe/2026/02/05/us-and-russia-agree-to-reestablish-military-dialogue-after-ukraine-talks/</link></item>
+<item><title>‘No strangers to drones’: Singapore eyes unmanned surge with Israeli tech - Defense News</title><link>https://www.defensenews.com/industry/techwatch/2026/02/05/no-strangers-to-drones-singapore-eyes-unmanned-surge-with-israeli-tech/</link></item>
+<item><title>ST Engineering unveils new loitering munition, assault rifle family - Defense News</title><link>https://www.defensenews.com/industry/techwatch/2026/02/05/st-engineering-unveils-new-loitering-munition-assault-rifle-family/</link></item>
+<item><title>Russia’s domestic drone push is a mixed bag for its war on the West - Defense News</title><link>https://www.defensenews.com/opinion/2026/02/05/russias-domestic-drone-push-is-a-mixed-bag-for-its-war-on-the-west/</link></item>
+<item><title>Saab floats Gripen production hub in Canada, if Ottawa were willing - Defense News</title><link>https://www.defensenews.com/global/europe/2026/02/05/saab-floats-gripen-production-hub-in-canada-if-ottawa-were-willing/</link></item>
+<item><title>Indonesia selects Italian M-346 trainer jet - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2026/02/05/indonesia-selects-italian-m-346-trainer-jet/</link></item>
+<item><title>F-15 progresses in Asia, but without Indonesia - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2026/02/05/f-15-progresses-in-asia-but-without-indonesia/</link></item>
+<item><title>Raytheon to ramp up missile production in Pentagon deals - Defense News</title><link>https://www.defensenews.com/industry/2026/02/05/raytheon-to-ramp-up-missile-production-in-pentagon-deals/</link></item>
+<item><title>Iran, US to hold nuclear talks Friday as tensions remain high - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2026/02/04/iran-us-to-hold-nuclear-talks-friday-as-tensions-remain-high/</link></item>
+<item><title>US Air Force tests new, rapidly developed cruise missile - Defense News</title><link>https://www.defensenews.com/air/2026/02/04/us-air-force-tests-new-rapidly-developed-cruise-missile/</link></item>
+<item><title>US Marine attack helicopters to field long-range missiles by 2027 - Defense News</title><link>https://www.defensenews.com/air-warfare/2026/02/04/us-marine-attack-helicopters-to-field-long-range-missiles-by-2027/</link></item>
+<item><title>Singapore inks deal for ST Engineering’s Titan 8x8 vehicle - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2026/02/04/singapore-inks-deal-for-st-engineerings-titan-8x8-vehicle/</link></item>
+<item><title>Russian arms makers vanish from Asia’s largest airshow - Defense News</title><link>https://www.defensenews.com/industry/techwatch/2026/02/04/russian-arms-makers-vanish-from-asias-largest-airshow/</link></item>
+<item><title>India and US maintain momentum in defense ties - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2026/02/04/india-and-us-maintain-momentum-in-defense-ties/</link></item>
+<item><title>Ukraine’s Gripen jets likely to come with long-reach Meteor missiles - Defense News</title><link>https://www.defensenews.com/global/europe/2026/02/04/ukraines-gripen-jets-likely-to-come-with-long-reach-meteor-missiles/</link></item>
+<item><title>Africa’s cultural landmarks: Tsodilo Hills, Botswana - Aeon</title><link>https://aeon.co/videos/what-the-louvre-of-the-desert-reveals-about-the-human-story?utm_source=rss-feed</link></item>
+<item><title>Between being and emptiness - Aeon</title><link>https://aeon.co/essays/the-japanese-ethics-of-ningen-dethrones-the-western-self?utm_source=rss-feed</link></item>
+<item><title>Being in the world: rules and risk - Aeon</title><link>https://aeon.co/videos/true-mastery-demands-going-beyond-the-rules-to-learn-for-yourself?utm_source=rss-feed</link></item>
+<item><title>ASCII art, visually explained - FlowingData</title><link>https://flowingdata.com/2026/02/05/ascii-art-visually-explained/</link></item>
+<item><title>✚ Conversational data graphics - FlowingData</title><link>https://flowingdata.com/2026/02/05/process-374-conversational/</link></item>
+<item><title>Tariff revenue is nowhere close to enough - FlowingData</title><link>https://flowingdata.com/2026/02/04/tariff-revenue-is-nowhere-close-to-enough/</link></item>
+<item><title>Impact of tariffs on cost of goods - FlowingData</title><link>https://flowingdata.com/2026/02/04/impact-of-tariffs-on-cost-of-goods/</link></item>
+<item><title>Court Rules That Ripping YouTube Clips Can Violate the DMCA - Slashdot</title><link>https://news.slashdot.org/story/26/02/05/1924252/court-rules-that-ripping-youtube-clips-can-violate-the-dmca</link></item>
+<item><title>NASA Will Finally Let Its Astronauts Bring iPhones To the Moon - Slashdot</title><link>https://science.slashdot.org/story/26/02/05/1918226/nasa-will-finally-let-its-astronauts-bring-iphones-to-the-moon</link></item>
+<item><title>Musk Predicts SpaceX Will Launch More AI Compute Per Year Than the Cumulative Total on Earth - Slashdot</title><link>https://science.slashdot.org/story/26/02/05/1949245/musk-predicts-spacex-will-launch-more-ai-compute-per-year-than-the-cumulative-total-on-earth</link></item>
+<item><title>Automattic and the Internet Archive Team Up To Fight Link Rot - Slashdot</title><link>https://tech.slashdot.org/story/26/02/05/1729259/automattic-and-the-internet-archive-team-up-to-fight-link-rot</link></item>
+<item><title>Anthropic Launches Claude Opus 4.6 as Its AI Tools Rattle Software Markets - Slashdot</title><link>https://slashdot.org/story/26/02/05/1755209/anthropic-launches-claude-opus-46-as-its-ai-tools-rattle-software-markets</link></item>
+<item><title>spooked markets - Slashdot</title><link>https://slashdot.org/story/26/02/04/1810206/as-software-stocks-slump-investors-debate-ais-existential-threat</link></item>
+<item><title>Western Digital Plots a Path To 140 TB Hard Drives Using Vertical Lasers and 14-Platter Designs - Slashdot</title><link>https://hardware.slashdot.org/story/26/02/05/175200/western-digital-plots-a-path-to-140-tb-hard-drives-using-vertical-lasers-and-14-platter-designs</link></item>
+<item><title>Amazon Plans To Use AI To Speed Up TV and Film Production - Slashdot</title><link>https://entertainment.slashdot.org/story/26/02/05/1519212/amazon-plans-to-use-ai-to-speed-up-tv-and-film-production</link></item>
+<item><title>Spotify Plans To Sell Physical Books - Slashdot</title><link>https://news.slashdot.org/story/26/02/05/1458204/spotify-plans-to-sell-physical-books</link></item>
+<item><title>FBI Couldn&amp;#39;t Get Into Reporter&amp;#39;s iPhone Because It Had Lockdown Mode Enabled - Slashdot</title><link>https://apple.slashdot.org/story/26/02/05/1229222/fbi-couldnt-get-into-reporters-iphone-because-it-had-lockdown-mode-enabled</link></item>
+<item><title>Kalshi Claims &amp;#39;Extortion,&amp;#39; Then Recants in Feud Over User Losses - Slashdot</title><link>https://slashdot.org/story/26/02/05/1019252/kalshi-claims-extortion-then-recants-in-feud-over-user-losses</link></item>
+<item><title>China Has Seized Sony&amp;#39;s Television Halo - Slashdot</title><link>https://entertainment.slashdot.org/story/26/02/05/0839245/china-has-seized-sonys-television-halo</link></item>
+<item><title>Munich Makes Digital Sovereignty Measurable With Its Own Score - Slashdot</title><link>https://it.slashdot.org/story/26/02/05/0445243/munich-makes-digital-sovereignty-measurable-with-its-own-score</link></item>
+<item><title>Valve&amp;#39;s Steam Machine Has Been Delayed, and the RAM Crisis Will Impact Pricing - Slashdot</title><link>https://it.slashdot.org/story/26/02/05/0030225/valves-steam-machine-has-been-delayed-and-the-ram-crisis-will-impact-pricing</link></item>
+<item><title>BMW Commits To Subscriptions Even After Heated Seat Debacle - Slashdot</title><link>https://tech.slashdot.org/story/26/02/05/0036222/bmw-commits-to-subscriptions-even-after-heated-seat-debacle</link></item>
+<item><title>retreated from its controversial plan - Slashdot</title><link>https://tech.slashdot.org/story/23/09/07/1545202/bmw-drops-controversial-heated-seats-subscription-to-refocus-on-software-services</link></item>
+<item><title>charge monthly fees for heated seats - Slashdot</title><link>https://tech.slashdot.org/story/22/07/12/1616236/bmw-starts-selling-heated-seat-subscriptions-for-18-a-month</link></item>
+<item><title>Microsoft Adds Sysmon To Windows - Slashdot</title><link>https://tech.slashdot.org/story/26/02/05/0023249/microsoft-adds-sysmon-to-windows</link></item>
+<item><title>&amp;#39;Everyone is Stealing TV&amp;#39; - Slashdot</title><link>https://entertainment.slashdot.org/story/26/02/04/1826249/everyone-is-stealing-tv?sbsrc=md</link></item>
+<item><title>Russian Spy Satellites Have Intercepted EU Communications Satellites - Slashdot</title><link>https://science.slashdot.org/story/26/02/04/2046202/russian-spy-satellites-have-intercepted-eu-communications-satellites?sbsrc=md</link></item>
+<item><title>100 Gigawatts. In a vacuum. - Slashdot</title><link>https://slashdot.org/comments.pl?sid=26/02/05/1949245&amp;cid=65970954&amp;sbsrc=topcom</link></item>
+<item><title>Re:price war of the satellites - Slashdot</title><link>https://slashdot.org/comments.pl?sid=26/02/05/1949245&amp;cid=65970990&amp;sbsrc=topcom</link></item>
+<item><title>Ah, the ketamine&amp;#39;s Nazi&amp;#39;s selling bullhit again. - Slashdot</title><link>https://slashdot.org/comments.pl?sid=26/02/05/1949245&amp;cid=65970926&amp;sbsrc=topcom</link></item>
+<item><title>微软终于在 Windows 中加入了系统监控工具 Sysmon - Solidot</title><link>https://www.solidot.org/story?sid=83484</link></item>
+<item><title>男性富人大脑奖赏和压力区域的代谢率更高 - Solidot</title><link>https://www.solidot.org/story?sid=83485</link></item>
+<item><title>俄罗斯黑客快速利用微软紧急修复的 Office 高危漏洞 - Solidot</title><link>https://www.solidot.org/story?sid=83486</link></item>
+<item><title>流媒体时代机电视盒盗版服务再次兴盛 - Solidot</title><link>https://www.solidot.org/story?sid=83487</link></item>
+<item><title>麦地那龙线虫病接近彻底根除 - Solidot</title><link>https://www.solidot.org/story?sid=83489</link></item>
+<item><title>台积电计划在日本生产 3 纳米芯片 - Solidot</title><link>https://www.solidot.org/story?sid=83490</link></item>
+<item><title>CIA 停止出版 World Factbook - Solidot</title><link>https://www.solidot.org/story?sid=83491</link></item>
+<item><title>Substack 警告用户数据泄漏 - Solidot</title><link>https://www.solidot.org/story?sid=83492</link></item>
+<item><title>因内存短缺 Valve 推迟 Steam Machine 的发售时间 - Solidot</title><link>https://www.solidot.org/story?sid=83482</link></item>
+<item><title>逾三分之一癌症病例是可预防的 - Solidot</title><link>https://www.solidot.org/story?sid=83481</link></item>
+<item><title>附近星系发现一颗类地行星 - Solidot</title><link>https://www.solidot.org/story?sid=83480</link></item>
+<item><title>分析 Notepad++ 的供应链攻击 - Solidot</title><link>https://www.solidot.org/story?sid=83479</link></item>
+<item><title>LibreOffice 26.2 释出 - Solidot</title><link>https://www.solidot.org/story?sid=83478</link></item>
+<item><title>ZetaSQL 更名为 GoogleSQL - Solidot</title><link>https://www.solidot.org/story?sid=83477</link></item>
+<item><title>沃尔玛市值突破万亿美元 - Solidot</title><link>https://www.solidot.org/story?sid=83476</link></item>
+<item><title>NASA 将 Artemis II 的发射时间推迟至三月 - Solidot</title><link>https://www.solidot.org/story?sid=83475</link></item>
+<item><title>AI 真的是裁员的原因？ - Solidot</title><link>https://www.solidot.org/story?sid=83474</link></item>
+<item><title>What Is a Group of Hyenas Called? Not a Pack or a Herd but a... - HowStuffWorks</title><link>https://animals.howstuffworks.com/mammals/what-is-a-group-of-hyenas-called.htm</link></item>
+<item><title>9 Worst Airlines: Domestic, International, and Budget Airlines to Avoid - HowStuffWorks</title><link>https://money.howstuffworks.com/worst-airlines.htm</link></item>
+<item><title>Is He a Disney Prince? List of Royalty vs. Main Men Without a Crown - HowStuffWorks</title><link>https://entertainment.howstuffworks.com/disney-prince-list.htm</link></item>
+<item><title>Why Did the Ottoman Empire Fall During the Industrial Revolution? - HowStuffWorks</title><link>https://history.howstuffworks.com/world-history/why-did-the-ottoman-empire-fall.htm</link></item>
+<item><title>Where Does Cocaine Originate From? All About the Coca Plant - HowStuffWorks</title><link>https://health.howstuffworks.com/wellness/drugs-alcohol/where-does-cocaine-originate-from.htm</link></item>
+<item><title>What Is a Group of Sparrows Called? Reminiscent of Their Chatter - HowStuffWorks</title><link>https://animals.howstuffworks.com/birds/what-is-a-group-of-sparrows-called.htm</link></item>
+<item><title>Cato Institute - FlowingData</title><link>https://flowingdata.com/tag/cato-institute/</link></item>
+<item><title>‘Ripping’ Clips for YouTube Reaction Videos can Violate the DMCA, Court Rules - TorrentFreak</title><link>https://torrentfreak.com/ripping-clips-for-youtube-reaction-videos-can-violate-the-dmca-court-rules/</link></item>
+<item><title>NVIDIA: Contact With Anna’s Archive Doesn’t Prove Copyright Infringement - TorrentFreak</title><link>https://torrentfreak.com/nvidia-contact-with-annas-archive-doesnt-prove-copyright-infringement/</link></item>
+<item><title>U.S. Homeowner Equity Growth Cooled in 2025 but Remained Historically Strong - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/irvine/2025-homeowner-equity-data-attom-home-equity-report-for-2025-equity-rich-homes-in-america-in-2026-rob-barber-14669.php</link></item>
+<item><title>U.S. Homebuyers Scored Biggest Price Discounts Since 2012 as Market Shifts - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/west-palm-beach/2026-home-price-discount-data-redfin-2026-home-sales-report-asad-khan-cities-with-biggest-home-price-discounts-in-2026-14668.php</link></item>
+<item><title>Ten Key Takeaways from the U.S. Housing Market in January - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/irvine/cotality-2026-housing-data-2026-home-sales-trends-january-2026-housing-report-current-home-price-data-2026-housing-market-outlook-14667.php</link></item>
+<item><title>Commercial Property Investors Poised to Increase Allocations in 2026 - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/new-york-city-real-estate-news/2026-commercial-real-estate-investment-data-cbre-2026-north-america-investor-intentions-survey-tommy-lee-commercial-real-estate-investor-trends-14666.php</link></item>
+<item><title>Hong Kong Stock Market Front-Runs Local Home Prices by Two Months - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/hong-kong/hong-kong-2026-home-price-data-hong-kong-stock-exchange-jll-2026-hong-kong-housing-report-hang-seng-index-norry-lee-cathie-chung-14665.php</link></item>
+<item><title>Mass Exodus: U.S. Homebuyers Cancel Deals at Record Levels - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/atlanta-real-estate-news/homebuyer-cancellation-data-for-2025-redfin-housing-reports-home-purchase-agreement-cancellations-data-chen-zhao-14664.php</link></item>
+<item><title>U.S. Housing Outlook for 2026 Darkens After Sharp December Pullback in Contract Signings - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/washington-dc-real-estate-news/-december-2025-pending-home-sales-data-phsi-december-2025-national-association-of-realtors-2025-housing-data-lawrence-yun-14663.php</link></item>
+<item><title>America&amp;#39;s Housing &amp;#39;Silver Tsunami&amp;#39; Is Turning Into a Trickle - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/irvine/cotality-baby-boomers-transfer-home-ownership-to-heirs-data-2026-housing-trends-cotality-2026-housing-data-14662.php</link></item>
+<item><title>Builders Tell Congress Government Rules Are Pricing Americans Out of Housing - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/washington-dc-real-estate-news/congressional-panel-focused-on-housing-affordability-in-2026-national-association-of-home-builders-home-affordability-issues-in-2026-buddy-hughes-cong-14661.php</link></item>
+<item><title>California Housing Market Poised for Balanced Growth in 2026 - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/laguna-beach/california-2025-housing-market-data-california-association-of-realtors-market-reports-los-angeles-home-prices-san-francisco-home-sales-data-san-diego--14660.php</link></item>
+<item><title>U.S. Housing Market Hits Largest Buyer-Seller Imbalance on Record - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/austin/home-buyer-market-data-december-2025-home-buyer-ratio-to-home-sellers-in-2026-redfin-2026-housing-report-top-home-buyer-markets-in-2026-14659.php</link></item>
+<item><title>Miami Housing Market Ends 2025 on Firmer Ground - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/miami-real-estate-news/miami-association-of-realtors-miami-dade-residential-real-estate-sales-data-for-2025-miami-home-sales-data-for-2025-miami-condo-price-data-for-2025-14658.php</link></item>
+<item><title>U.S. Homebuilder Confidence Dips at Start of 2026 - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/washington-dc-real-estate-news/national-association-of-home-builders-wells-fargo-housing-market-confidence-index-january-2026-nahb-builder-confidence-data-january-2026-14657.php</link></item>
+<item><title>U.S. Home Sales Hit Three-Year High in December as Rates Ease - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/los-angeles-real-estate-news/national-association-of-realtors-2025-housing-data-nar-december-2025-home-sales-report-lawrence-yun-home-price-data-for-2025-14655.php</link></item>
+<item><title>Building AI Search on Heroku - Heroku Blog</title><link>https://www.heroku.com/blog/building-ai-search-on-heroku/</link></item>
+<item><title>Optimize Search Precision with Reranking on Heroku AI - Heroku Blog</title><link>https://www.heroku.com/blog/optimize-search-precision-reranking-heroku-ai/</link></item>
+<item><title>OpenClaw reveals meaty personal information after simple cracks - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/05/openclaw_skills_marketplace_leaky_security/</link></item>
+<item><title>OpenAI chases business bucks with confusingly named Frontier platform - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/05/openai_debuts_frontier_platform/</link></item>
+<item><title>Substack says intruder lifted emails, phone numbers in months-old breach - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/05/substack_admit_security_incident/</link></item>
+<item><title>Asia-based government spies quietly broke into critical networks across 37 countries - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/05/asia_government_spies_hacked_37_critical_networks/</link></item>
+<item><title>Stash or splash? Lawmakers ask NASA to find alternatives for International Space Station - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/05/iss_stash_or_splash/</link></item>
+<item><title>Anthropic apes OpenAI with cheeky chatbot commercials - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/05/anthropic_superbowl_openai_chatgpt_ads/</link></item>
+<item><title>SpaceX wants to fill Earth orbit with a million datacenter satellites - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/05/spacex_1m_satellite_datacenter/</link></item>
+<item><title>Most SAP migrations bust budgets and project timelines, research finds - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/05/sap_migrations_research/</link></item>
+<item><title>Betterment breach may expose 1.4M users after social engineering attack - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/05/betterment_hack/</link></item>
+<item><title>Microsoft declares &amp;#39;reliability&amp;#39; a priority for Visual Studio AI - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/05/microsoft_visual_studio_ai/</link></item>
+<item><title>UK&amp;#39;s &amp;#39;world-first&amp;#39; deepfake detection framework unlikely to stop the fakes, says expert - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/05/uk_government_deepfake_framework/</link></item>
+<item><title>Microsoft sets Copilot agents loose on your OneDrive files - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/05/microsoft_onedrive_agents/</link></item>
+<item><title>Curse of AI to push up PC prices as memory and CPU shortages bite - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/05/pc_prices_rising/</link></item>
+<item><title>Italy claims cyberattacks &amp;#39;of Russian origin&amp;#39; are pelting Winter Olympics - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/05/winter_olympics_russian_attacks/</link></item>
+<item><title>n8n security woes roll on as new critical flaws bypass December fix - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/05/n8n_security_woes_roll_on/</link></item>
+<item><title>CentOS is coming to RISC-V soon if you have the kit - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/05/centos_coming_to_riscv_soon/</link></item>
+<item><title>Cloud sovereignty is no longer just a public sector concern - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/05/opennebula_sovereignty_interview/</link></item>
+<item><title>UK justice system unplugs from ancient datacenters after five-year slog - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/05/uk_courts_cloud/</link></item>
+<item><title>Britain courts private cash to fund &amp;#39;golden age&amp;#39; of nuclear-powered AI - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/05/uk_private_finance_smr/</link></item>
+<item><title>Three clues that your LLM may be poisoned with a sleeper-agent back door - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/05/llm_poisoned_how_to_tell/</link></item>
+<item><title>Satya Nadella decides Microsoft needs an engineering quality czar - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/05/microsoft_appoints_quality_chief/</link></item>
+<item><title>AI’s lust for memory drags down the smartphone industry, and Qualcomm with it - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/05/qualcomm_q1_2026/</link></item>
+<item><title>It&amp;#39;s bubble or nothing for Google as search giant looks to plow ~$180B into datacenters this year - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/05/alphabet_google_q4_2025/</link></item>
+<item><title>Ghost gun legislation casts shadow over 3D printing - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/05/ghost_gun_legislation_3d_printing/</link></item>
+<item><title>Workday reveals around 400 staff soon won&amp;#39;t have to work another day - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/04/workday_layoffs_400_jobs/</link></item>
+<item><title>Bots are taking over the internet and AI users are to blame - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/04/ai_bot_traffic_web_browsers/</link></item>
+<item><title>Positron: we don’t need no fancy HBM to compete with Nvidia’s Rubin - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/04/positron_hbm_no_need/</link></item>
+<item><title>AWS intruder achieved admin access in under 10 minutes thanks to AI assist, researchers say - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/04/aws_cloud_breakin_ai_assist/</link></item>
+<item><title>Anthropic cements its position as the not-OpenAI with no-ads pledge - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/04/anthropic_no_advertising_in_claude/</link></item>
+<item><title>Critical SolarWinds Web Help Desk bug under attack - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/04/critical_solarwinds_web_help_desk/</link></item>
+<item><title>Rise of AI means companies could pass on SaaS - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/04/ai_replace_saas/</link></item>
+<item><title>US Army looks for robots that can clean up chemical and bioweapons messes - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/04/army_bots_cleanup_ai_biological_chemical/</link></item>
+<item><title>Server CPUs join memory in the supply shortage, pushing up prices - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/04/server_cpus_memory_shortage/</link></item>
+<item><title>Estonia hedges its bets on US tech while going all-in on Microsoft - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/04/estonia_hedges_its_bets_on/</link></item>
+<item><title>Microsoft engineer speedruns Raspberry Pi magic smoke in five minutes - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/04/microsoft_manager_pi_smoke/</link></item>
+<item><title>DWP finds Copilot saves civil servants a whopping 19 minutes a day - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/04/dwp_finds_copilot_saves_civil/</link></item>
+<item><title>Nitrogen ransomware is so broken even the crooks can&amp;#39;t unlock your files - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/04/nitrogen_ransomware_broken_decryptor/</link></item>
+<item><title>UK watchdog to rule on £246M Post Office subsidy over Horizon scandal and IR35 - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/04/post_office_horizon_subsidy/</link></item>
+<item><title>Microsoft actually does something useful, adds Sysmon to Windows - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/04/microsoft_adds_sysmon_to_windows/</link></item>
+<item><title>EU&amp;#39;s fishy digital certificate system leaves exporters floundering - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/04/catch_eu_fishing_problems/</link></item>
+<item><title>Universal £7,500 payout offered to PSNI staff over major data breach - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/04/psni_breach_compensation/</link></item>
+<item><title>SpaceX halts Falcon 9 flights after second stage anomaly - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/04/spacex_halts_falcon_9_flights/</link></item>
+<item><title>&amp;#39;The EU runs on Microsoft&amp;#39; – and Uncle Sam could turn it off, claims MEP - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/04/eu_foss_fears/</link></item>
+<item><title>AWS says you&amp;#39;re on your own if media codec patent owners come knocking - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/04/aws_codec_patent_holders/</link></item>
+<item><title>Lego shrinks NASA&amp;#39;s biggest rocket – accuracy sold separately - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/04/lego_artemis/</link></item>
+<item><title>UK to properly probe xAI to test if its revolting robo-smut generator broke the law - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/04/uk_spain_social_media_regulation/</link></item>
+<item><title>Clouds rush to deliver OpenClaw-as-a-service offerings - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/04/cloud_hosted_openclaw/</link></item>
+<item><title>For once, Supermicro has dodged drama and just delivered datacenters - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/04/for_once_supermicro_has_dodged/</link></item>
+<item><title>Too much AI for some, too little for others: Why AMD can&amp;#39;t win with investors - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/04/amd_q4_fy_2025/</link></item>
+<item><title>Check out the demo for Wireworks, a tower defense where you wire up modules to make weapons dance - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/02/check-out-the-demo-for-wireworks-a-tower-defense-where-you-wire-up-modules-to-make-weapons-dance/</link></item>
+<item><title>Zellah Games revealed the &amp;quot;next-gen&amp;quot; modding-friendly Skate Style for PC - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/02/zellah-games-revealed-the-next-gen-modding-friendly-skate-style-for-pc/</link></item>
+<item><title>REMOTE CONTROL looks like Alien: Isolation if it was a retro-styled typing adventure - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/02/remote-control-looks-like-alien-isolation-if-it-was-a-retro-styled-typing-adventure/</link></item>
+<item><title>PlayStation Publishing reveal Horizon Hunters Gathering, Guerrilla&amp;#39;s new co-op action game - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/02/playstation-publishing-reveal-horizon-hunters-gathering-guerrillas-new-co-op-action-game/</link></item>
+<item><title>GeForce NOW celebrates six years with new games like Delta Force and PUBG: BLINDSPOT - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/02/geforce-now-celebrates-six-years-with-new-games-like-delta-force-and-pubg-blindspot/</link></item>
+<item><title>GOG did an AMA and here&amp;#39;s some highlights - like how they&amp;#39;ll continue using generative AI - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/02/gog-did-an-ama-and-heres-some-highlights-like-how-theyll-continue-using-generative-ai/</link></item>
+<item><title>Poker Night at the Inventory returns with a remaster in March - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/02/poker-night-at-the-inventory-returns-with-a-remaster-in-march/</link></item>
+<item><title>Overwatch returns on February 10th with the &amp;#39;2&amp;#39; gone and some massive upgrades - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/02/overwatch-returns-on-february-10th-with-the-2-gone-and-some-massive-upgrades/</link></item>
+<item><title>Steam Machine &amp; Steam Frame FAQ - RAM and storage crisis to blame for no pricing or dates - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/02/steam-machine-steam-frame-faq-ram-and-storage-crisis-to-blame-for-no-pricing-or-dates/</link></item>
+<item><title>Winnie&amp;#39;s Hole is a delightfully grim roguelite now in Early Access - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/02/winnies-hole-is-a-delightfully-grim-roguelite-now-in-early-access/</link></item>
+<item><title>Hyperslice is a fast, focused and extremely fun action arena roguelite - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/02/hyperslice-is-a-fast-focused-and-extremely-fun-action-arena-roguelite/</link></item>
+<item><title>Google&amp;#39;s Project Genie experiment allows creating interactive worlds with generative AI - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/02/googles-project-genie-experiment-allows-creating-interactive-worlds-with-generative-ai/</link></item>
+<item><title>Epic Games Store saw a 57% increase in purchases for third-party PC games in 2025 - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/02/epic-games-store-saw-a-57-percent-increase-in-purchases-for-third-party-pc-games-in-2025/</link></item>
+<item><title>Sphinx and the Cursed Mummy remaster gets a big upgrade - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/02/sphinx-and-the-cursed-mummy-remaster-gets-a-big-upgrade/</link></item>
+<item><title>Delivery &amp; Beyond is a free new chaotic physics-based co-op game - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/02/delivery-beyond-is-a-free-new-chaotic-physics-based-co-op-game/</link></item>
+<item><title>Resident Evil Village and more available in Humble Choice for February 2026 - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/02/resident-evil-village-and-more-available-in-humble-choice-for-february-2026/</link></item>
+<item><title>AMD say the Steam Machine is &amp;quot;on track&amp;quot; for an early 2026 release - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/02/amd-say-the-steam-machine-is-on-track-for-an-early-2026-release/</link></item>
+<item><title>I really have no idea what&amp;#39;s going on in STICKER/BALL but I love the chaos - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/02/i-really-have-no-idea-whats-going-on-in-sticker-ball-but-i-love-the-chaos/</link></item>
+<item><title>Dune: Awakening Chapter 3 is live bringing massive changes - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/02/dune-awakening-chapter-3-is-live-bringing-massive-changes/</link></item>
+<item><title>HELLDIVERS 2 has a big new event to take down the Automatons and you get tanks - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/02/helldivers-2-has-a-big-new-event-to-take-down-the-automatons-and-you-get-tanks/</link></item>
+<item><title>Civilization VII major update &amp;quot;Test of Time&amp;quot; will stop the forced civ swapping - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/02/civilization-vii-major-update-test-of-time-will-stop-the-forced-civ-swapping/</link></item>
+<item><title>Factory 95 is a retro Windows inspired automation sim about making a slide-show factory - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/02/factory-95-is-a-retro-windows-inspired-automation-sim-about-making-a-slide-show-factory/</link></item>
+<item><title>Get some quality action in the Sci-Fi Shooters 2.0 Humble Bundle - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/02/get-some-quality-action-in-the-sci-fi-shooters-2-0-humble-bundle/</link></item>
+<item><title>Firefox will get AI controls to turn it all off - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/02/firefox-will-get-ai-controls-to-turn-it-all-off/</link></item>
+<item><title>GOG are giving away Alone in the Dark: The Trilogy to celebrate their Preservation Program - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/02/gog-are-giving-away-alone-in-the-dark-the-trilogy-to-celebrate-their-preservation-program/</link></item>
+<item><title>Story-heavy tactical CRPG &amp;#39;ATOM RPG 2&amp;#39; announced - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/02/story-heavy-tactical-crpg-atom-rpg-2-announced/</link></item>
+<item><title>Upgrade your theme park as OpenRCT2 updates just as new Humble Bundle drops - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/02/upgrade-your-theme-park-as-openrct2-updates-just-as-new-humble-bundle-drops/</link></item>
+<item><title>The new TerraTech Legion trailer has me itching to play it - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/02/the-new-terratech-legion-trailer-has-me-itching-to-play-it/</link></item>
+<item><title>Bash Moto is an upcoming 90s themed beat &amp;#39;em up motorcycle racing game - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/02/bash-moto-is-an-upcoming-90s-themed-beat-em-up-motorcycle-racing-game/</link></item>
+<item><title>ScummVM v2026.1.0 is a huge new release with tons of new supported games - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/02/scummvm-v2026-1-0-is-a-huge-new-release-with-tons-of-new-supported-games/</link></item>
+<item><title>Valheim gets a big birthday update with optimizations, Steam Deck upgrades and new content - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/02/valheim-gets-a-big-birthday-update-with-optimizations-steam-deck-upgrades-and-new-content/</link></item>
+<item><title>Hardcore single-player survival FPS Road to Vostok arrives April 7 - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/02/hardcore-single-player-survival-fps-road-to-vostok-arrives-april-7/</link></item>
+<item><title>Team Fortress 2 Classified (formerly Team Fortress 2 Classic) has launched on Steam - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/02/team-fortress-2-classified-formerly-team-fortress-2-classic-has-launched-on-steam/</link></item>
+<item><title>Raspberry Pi prices are rising again by up to $60 - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/02/raspberry-pi-prices-are-rising-again-by-up-to-60/</link></item>
+<item><title>Steam Survey for January 2026 shows a small drop for Linux and macOS - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/02/steam-survey-for-january-2026-shows-a-small-drop-for-linux/</link></item>
+<item><title>Here&amp;#39;s the most played games on Steam Deck for January 2026 - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/02/here-s-the-most-played-games-on-steam-deck-for-january-2026/</link></item>
+<item><title>CachyOS founder explains why they didn&amp;#39;t join the new Open Gaming Collective (OGC) - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/01/cachyos-founder-explains-why-they-didn-t-join-the-new-open-gaming-collective-ogc/</link></item>
+<item><title>GPD release their own statement on the confusion with Bazzite Linux support - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/01/gpd-release-their-own-statement-on-the-confusion-with-bazzite-linux-support/</link></item>
+<item><title>Check out the new suitably weird Mewgenics feature trailer - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/01/check-out-the-new-suitably-weird-mewgenics-feature-trailer/</link></item>
+<item><title>Stop Destroying Videogames initiative to get a public hearing organised by the European Parliament - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/01/stop-destroying-videogames-initiative-to-get-a-public-hearing-organised-by-the-european-parliament/</link></item>
+<item><title>GDC 2026 report: 36% of devs use GenAI; 28% target Steam Deck and 8% target Linux - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/01/gdc-2026-report-36pct-of-devs-use-genai-28pct-target-steam-deck-and-8pct-target-linux/</link></item>
+<item><title>Proton Experimental updated to fix the EA app again on SteamOS / Linux - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/01/proton-experimental-updated-to-fix-the-ea-app-again-on-steamos-linux/</link></item>
+<item><title>The original FINAL FANTASY VII is getting a new refreshed edition - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/01/the-original-final-fantasy-vii-is-getting-a-new-refreshed-edition/</link></item>
+<item><title>HUNTDOWN: OVERTIME looks like a glorious follow-up to HUNTDOWN from 2021 - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/01/huntdown-overtime-looks-like-a-glorious-follow-up-to-huntdown-from-2021/</link></item>
+<item><title>Stardew Valley dev makes it clear Haunted Chocolatier is progressing well - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/01/stardew-valley-dev-makes-it-clear-haunted-chocolatier-is-progressing-well/</link></item>
+<item><title>The Native Linux app for NVIDIA GeForce NOW is now in Beta - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/01/the-native-linux-app-for-nvidia-geforce-now-is-now-in-beta/</link></item>
+<item><title>Four FINAL FANTASY games have arrived on GOG in the Preservation Program - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/01/four-final-fantasy-games-have-arrived-on-gog-in-the-preservation-program/</link></item>
+<item><title>Deck-builder meets bullet heaven with Hordes of Fate : A Hand of Fate Adventure arriving in Q2 2026 - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/01/deck-builder-meets-bullet-heaven-with-hordes-of-fate-a-hand-of-fate-adventure-arriving-in-q2-2026/</link></item>
+<item><title>Meet the mind behind Bazzite - an interview with Kyle Gospodnetich - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/01/meet-the-mind-behind-bazzite-an-interview-with-kyle-gospodnetich/</link></item>
+<item><title>Open Gaming Collective (OGC) formed to push Linux gaming even further - GamingOnLinux</title><link>https://www.gamingonlinux.com/2026/01/open-gaming-collective-ogc-formed-to-push-linux-gaming-even-further/</link></item>
+<item><title>The 8 Most Controversial Super Bowl Commercials We&amp;#39;ll Never Forget - Mental Floss</title><link>https://www.mentalfloss.com/sports/football/most-controversial-super-bowl-commercials</link></item>
+<item><title>Why Do Snowboarders Wear Baggy Clothes? - Mental Floss</title><link>https://www.mentalfloss.com/sports/olympics/why-snowboarders-wear-baggy-clothes</link></item>
+<item><title>Why Do Skiers Drink Hot Sauce? (And Why You Might Want to Try It) - Mental Floss</title><link>https://www.mentalfloss.com/sports/why-skiers-drink-hot-sauce-benefits</link></item>
+<item><title>6 Romantic Period Books to Read if You Love &amp;#39;Bridgerton&amp;#39; - Mental Floss</title><link>https://www.mentalfloss.com/literature/books/romantic-period-books-bridgerton</link></item>
+<item><title>The New England Patriots’ Name Has a Surprisingly Complicated Origin - Mental Floss</title><link>https://www.mentalfloss.com/sports/why-new-england-patriots-name</link></item>
+<item><title>Quiz: Only Disney Experts Can Name the Movie From the Final Scene - Mental Floss</title><link>https://www.mentalfloss.com/quizzes/name-disney-movie-final-scene</link></item>
+<item><title>5 Chilling Discoveries Found in the Snow From Around the World - Mental Floss</title><link>https://www.mentalfloss.com/science/weather/chilling-discoveries-snow</link></item>
+<item><title>Every New Sport and Event Coming to the 2026 Winter Olympics - Mental Floss</title><link>https://www.mentalfloss.com/sports/olympics/new-events-2026-winter-olympics</link></item>
+<item><title>What Is a Scullery Maid? The Real-Life &amp;#39;Bridgerton&amp;#39; History Explained - Mental Floss</title><link>https://www.mentalfloss.com/history/what-is-a-scullery-maid</link></item>
+<item><title>From Long Shots to Legends: 5 Most Unlikely Sports Champions - Mental Floss</title><link>https://www.mentalfloss.com/sports/most-unlikely-sports-champions</link></item>
+<item><title>Quiz: How Fast Can You Identify These Countries by Their Borders? - Mental Floss</title><link>https://www.mentalfloss.com/quizzes/how-fast-identify-countries-borders</link></item>
+<item><title>Here’s the Unexpected Item Chappell Roan’s Makeup Artist Used to Pull Off Her Grammy Nipple Piercings - Billboard</title><link>https://www.billboard.com/music/music-news/chappell-roan-grammys-nipple-piercings-gum-wrappers-1236174288/</link></item>
+<item><title>Kid Rock Shares Kobe Bryant Quote About Loving the ‘Haters’ Amid Turning Point Halftime Show Backlash - Billboard</title><link>https://www.billboard.com/music/music-news/kid-rock-kobe-bryant-haters-quote-turning-point-1236174225/</link></item>
+<item><title>BLACKPINK Unveils Intriguing ‘DEADLINE’ Mini-Album Tracklist: See All the Song Titles - Billboard</title><link>https://www.billboard.com/music/music-news/blackpink-deadline-tracklist-song-titles-1236174138/</link></item>
+<item><title>Zayn Announces the 2026 Konnakol Tour, His Biggest Solo Outing Yet: Here Are the Dates - Billboard</title><link>https://www.billboard.com/music/music-news/zayn-2026-tour-dates-konnakol-1236173939/</link></item>
+<item><title>Zach Bryan Replaces Luke Combs as Madden Bowl Headliner: ‘We Can’t Wait to Put on an Unforgettable’ Show - Billboard</title><link>https://www.billboard.com/music/music-news/zach-bryan-replaces-luke-combs-madden-bowl-2026-headliner-1236173823/</link></item>
+<item><title>Bunnie Xo Says Jelly Roll Is Giving 1 of His Grammys to a Juvenile Detention Center for ‘Inspiration’ - Billboard</title><link>https://www.billboard.com/music/music-news/jelly-roll-give-grammy-juvenile-detention-center-1236173887/</link></item>
+<item><title>Wynn Nightlife Reveals 2026 Lineup: ‘Chart-Topping Hits With a Close Eye on Emerging Talent’ - Billboard</title><link>https://www.billboard.com/music/music-news/wynn-nightlife-2026-lineup-calvin-harris-mau-p-diplo-1236173847/</link></item>
+<item><title>Mao Abe Reflects on Self-Discovery, Personal Growth Through New Singles ‘Ding-dong’ &amp; ‘Buddy’: Interview - Billboard</title><link>https://www.billboard.com/music/music-news/mao-abe-interview-singles-ding-dong-buddy-1236173948/</link></item>
+<item><title>Christopher ‘Kid’ Reid of Kid ‘N Play Reveals He Had a Heart Transplant - Billboard</title><link>https://www.billboard.com/music/music-news/kid-n-play-christopher-reid-heart-transplant-1236173772/</link></item>
+<item><title>Tate McRae Responds to Criticism for Doing a Team USA Olympics Ad Even Though She’s Canadian - Billboard</title><link>https://www.billboard.com/music/music-news/tate-mcrae-criticism-team-usa-olympics-ad-canadian-1236173716/</link></item>
+<item><title>No Compulsion in Islam - Law &amp; Liberty</title><link>https://lawliberty.org/book-review/no-compulsion-in-islam/</link></item>
+<item><title>Hope for American Education - Law &amp; Liberty</title><link>https://lawliberty.org/hope-for-american-education/</link></item>
+<item><title>Historical Perspective on the Unitary Executive - Law &amp; Liberty</title><link>https://lawliberty.org/historical-perspective-on-the-unitary-executive/</link></item>
+<item><title>Frenemies Behind the Veil of Ignorance - Law &amp; Liberty</title><link>https://lawliberty.org/frenemies-behind-the-veil-of-ignorance/</link></item>
+<item><title>TR in the Arena - Law &amp; Liberty</title><link>https://lawliberty.org/book-review/tr-in-the-arena/</link></item>
+<item><title>So yeah, I vibe-coded a log colorizer—and I feel good about it - Ars Technica</title><link>https://arstechnica.com/features/2026/02/so-yeah-i-vibe-coded-a-log-colorizer-and-i-feel-good-about-it/</link></item>
+<item><title>AI companies want you to stop chatting with bots and start managing them - Ars Technica</title><link>https://arstechnica.com/information-technology/2026/02/ai-companies-want-you-to-stop-chatting-with-bots-and-start-managing-them/</link></item>
+<item><title>The Switch 2 is getting a new Virtual Console (kind of) - Ars Technica</title><link>https://arstechnica.com/gaming/2026/02/the-virtual-console-is-sort-of-back-on-the-switch-2/</link></item>
+<item><title>With GPT-5.3-Codex, OpenAI pitches Codex for more than just writing code - Ars Technica</title><link>https://arstechnica.com/ai/2026/02/with-gpt-5-3-codex-openai-pitches-codex-for-more-than-just-writing-code/</link></item>
+<item><title>“ICE Out of Our Faces Act” would ban ICE and CBP use of facial recognition - Ars Technica</title><link>https://arstechnica.com/tech-policy/2026/02/ice-out-of-our-faces-act-would-ban-ice-and-cbp-use-of-facial-recognition/</link></item>
+<item><title>Neocities founder stuck in chatbot hell after Bing blocked 1.5 million sites - Ars Technica</title><link>https://arstechnica.com/tech-policy/2026/02/neocities-founder-stuck-in-chatbot-hell-after-bing-blocked-1-5m-sites/</link></item>
+<item><title>Watch Kanzi the bonobo pretend to have a tea party - Ars Technica</title><link>https://arstechnica.com/science/2026/02/watch-kanzi-the-bonobo-pretend-to-have-a-tea-party/</link></item>
+<item><title>Bad sleep made woman’s eyelids so floppy they flipped inside out, got stuck - Ars Technica</title><link>https://arstechnica.com/health/2026/02/a-womans-eyelids-flipped-inside-out-on-their-own-the-fix-was-sleep/</link></item>
+<item><title>Google hints at big AirDrop expansion for Android “very soon” - Ars Technica</title><link>https://arstechnica.com/gadgets/2026/02/google-hints-at-big-airdrop-expansion-for-android-very-soon/</link></item>
+<item><title>OpenAI is hoppin’ mad about Anthropic’s new Super Bowl TV ads - Ars Technica</title><link>https://arstechnica.com/information-technology/2026/02/openai-is-hoppin-mad-about-anthropics-new-super-bowl-tv-ads/</link></item>
+<item><title>This black hole “burps” with Death Star energy - Ars Technica</title><link>https://arstechnica.com/science/2026/02/this-black-hole-burps-with-death-star-energy/</link></item>
+<item><title>Intel Panther Lake Core Ultra review: Intel’s best laptop CPU in a very long time - Ars Technica</title><link>https://arstechnica.com/gadgets/2026/02/intel-panther-lake-core-ultra-review-intels-best-laptop-cpu-in-a-very-long-time/</link></item>
+<item><title>NASA changes its mind, will allow Artemis astronauts to take iPhones to the Moon - Ars Technica</title><link>https://arstechnica.com/space/2026/02/nasa-will-finally-allow-astronauts-to-bring-their-iphones-to-space/</link></item>
+<item><title>NASA finally acknowledges the elephant in the room with the SLS rocket - Ars Technica</title><link>https://arstechnica.com/space/2026/02/nasa-finally-acknowledges-the-elephant-in-the-room-with-the-sls-rocket/</link></item>
+<item><title>Netflix says users can cancel service if HBO Max merger makes it too expensive - Ars Technica</title><link>https://arstechnica.com/gadgets/2026/02/netflix-claims-subscribers-will-get-more-content-for-less-if-it-buys-hbo-max/</link></item>
+<item><title>FBI stymied by Apple&amp;#39;s Lockdown Mode after seizing journalist&amp;#39;s iPhone - Ars Technica</title><link>https://arstechnica.com/tech-policy/2026/02/fbi-stymied-by-apples-lockdown-mode-after-seizing-journalists-iphone/</link></item>
+<item><title>Microsoft releases urgent Office patch. Russian-state hackers pounce. - Ars Technica</title><link>https://arstechnica.com/security/2026/02/russian-state-hackers-exploit-office-vulnerability-to-infect-computers/</link></item>
+<item><title>User blowback convinces Adobe to keep supporting 30-year-old 2D animation app - Ars Technica</title><link>https://arstechnica.com/gadgets/2026/02/adobe-reverses-decision-to-discontinue-animate-after-a-lot-of-confusion-and-angst/</link></item>
+<item><title>Tesla slipped behind VW in European EV sales last year - Ars Technica</title><link>https://arstechnica.com/cars/2026/02/tesla-slipped-behind-vw-in-european-ev-sales-last-year/</link></item>
+<item><title>Steam Machine and Steam Frame delays are the latest product of the RAM crisis - Ars Technica</title><link>https://arstechnica.com/gadgets/2026/02/ram-shortage-delays-valves-steam-machine-desktop-and-steam-frame-headset/</link></item>
+<item><title>Increase of AI bots on the Internet sparks arms race - Ars Technica</title><link>https://arstechnica.com/ai/2026/02/increase-of-ai-bots-on-the-internet-sparks-arms-race/</link></item>
+<item><title>Museums incorporate “scent of the afterlife” into Egyptian exhibits - Ars Technica</title><link>https://arstechnica.com/science/2026/02/museums-incorporate-scent-of-the-afterlife-into-egyptian-exhibits/</link></item>
+<item><title>Should AI chatbots have ads? Anthropic says no. - Ars Technica</title><link>https://arstechnica.com/ai/2026/02/should-ai-chatbots-have-ads-anthropic-says-no/</link></item>
+<item><title>US House takes first step toward creating “commercial” deep space program - Ars Technica</title><link>https://arstechnica.com/space/2026/02/us-house-takes-first-step-toward-creating-commercial-deep-space-program/</link></item>
+<item><title>Judge gives Musk bad news, says Trump hasn’t intervened to block SEC lawsuit - Ars Technica</title><link>https://arstechnica.com/tech-policy/2026/02/trump-ghosts-musk-wont-back-claims-sec-lawsuit-was-political-harassment/</link></item>
+<item><title>Trump admin is “destroying medical research,” Senate report finds - Ars Technica</title><link>https://arstechnica.com/health/2026/02/trump-admin-is-destroying-medical-research-senate-report-finds/</link></item>
+<item><title>“Capture it all”: ICE urged to explain memo about collecting info on protesters - Ars Technica</title><link>https://arstechnica.com/tech-policy/2026/02/capture-it-all-ice-urged-to-explain-memo-about-collecting-info-on-protesters/</link></item>
+<item><title>Russian spy satellites have intercepted EU communications satellites - Ars Technica</title><link>https://arstechnica.com/space/2026/02/russian-spy-satellites-have-intercepted-eu-communications-satellites/</link></item>
+<item><title>Nvidia’s $100 billion OpenAI deal has seemingly vanished - Ars Technica</title><link>https://arstechnica.com/information-technology/2026/02/five-months-later-nvidias-100-billion-openai-investment-plan-has-fizzled-out/</link></item>
+<item><title>Newborn dies after mother drinks raw milk during pregnancy - Ars Technica</title><link>https://arstechnica.com/health/2026/02/newborns-death-spurs-raw-milk-warning-in-new-mexico/</link></item>
+<item><title>X office raided in France’s Grok probe; Elon Musk summoned for questioning - Ars Technica</title><link>https://arstechnica.com/tech-policy/2026/02/x-office-raided-in-frances-grok-probe-elon-musk-summoned-for-questioning/</link></item>
+<item><title>Nintendo Switch is the second-bestselling game console ever, behind only the PS2 - Ars Technica</title><link>https://arstechnica.com/gadgets/2026/02/original-nintendo-switch-passes-the-ds-to-become-nintendos-bestselling-console/</link></item>
+<item><title>Google court filings suggest ChromeOS has an expiration date - Ars Technica</title><link>https://arstechnica.com/google/2026/02/google-court-filings-suggest-googles-chromeos-has-an-expiration-date/</link></item>
+<item><title>Xcode 26.3 adds support for Claude, Codex, and other agentic tools via MCP - Ars Technica</title><link>https://arstechnica.com/apple/2026/02/xcode-26-3-adds-support-for-claude-codex-and-other-agentic-tools-via-mcp/</link></item>
+<item><title>Is Love at First Sight Real? The Science Behind Instant Attraction - Mental Floss</title><link>https://www.mentalfloss.com/science/psychology/love-at-first-sight-science?utm_source=RSS</link></item>
+<item><title>5 Shakespeare Characters Inspired by Real People in History - Mental Floss</title><link>https://www.mentalfloss.com/literature/shakespeare-characters-inspired-by-real-people?utm_source=RSS</link></item>
+<item><title>14 Youngest Academy Award Winners, From Shirley Temple to Adrien Brody - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/awards/youngest-oscar-winners?utm_source=RSS</link></item>
+<item><title>Python Switch Case Statement (match-case) - Linuxize</title><link>https://linuxize.com/post/python-switch/</link></item>
+<item><title>How to Install Python on Ubuntu 24.04 - Linuxize</title><link>https://linuxize.com/post/how-to-install-python-on-ubuntu-24-04/</link></item>
+<item><title>Sed Cheatsheet - Linuxize</title><link>https://linuxize.com/cheatsheet/sed/</link></item>
+<item><title>How to Install Docker on Debian 13 (Trixie) - Linuxize</title><link>https://linuxize.com/post/how-to-install-docker-on-debian-13/</link></item>
+<item><title>Rsync Cheatsheet - Linuxize</title><link>https://linuxize.com/cheatsheet/rsync/</link></item>
+<item><title>How to Fix SSH &amp;quot;Permission Denied (publickey)&amp;quot; Error - Linuxize</title><link>https://linuxize.com/post/fix-ssh-permission-denied-publickey/</link></item>
+<item><title>Tmux Cheatsheet - Linuxize</title><link>https://linuxize.com/cheatsheet/tmux/</link></item>
+<item><title>SSH Hardening: Best Practices for Securing Your Server - Linuxize</title><link>https://linuxize.com/post/ssh-hardening-best-practices/</link></item>
+<item><title>Docker Cheatsheet - Linuxize</title><link>https://linuxize.com/cheatsheet/docker/</link></item>
+<item><title>How to Copy SSH Keys with ssh-copy-id - Linuxize</title><link>https://linuxize.com/post/ssh-copy-id-command/</link></item>
+<item><title>How to Install PHP on Ubuntu 24.04 - Linuxize</title><link>https://linuxize.com/post/how-to-install-php-on-ubuntu-24-04/</link></item>
+<item><title>How to Install MySQL on Ubuntu 24.04 - Linuxize</title><link>https://linuxize.com/post/how-to-install-mysql-on-ubuntu-24-04/</link></item>
+<item><title>How to Install Odoo 19 on Ubuntu 24.04 - Linuxize</title><link>https://linuxize.com/post/how-to-install-odoo-on-ubuntu-24-04/</link></item>
+<item><title>Bash Positional Parameters - Linuxize</title><link>https://linuxize.com/post/bash-positional-parameters/</link></item>
+<item><title>How to Install Java on Ubuntu 24.04 - Linuxize</title><link>https://linuxize.com/post/install-java-on-ubuntu-24-04/</link></item>
+<item><title>How to Install Git on Ubuntu 24.04 - Linuxize</title><link>https://linuxize.com/post/how-to-install-git-on-ubuntu-24-04/</link></item>
+<item><title>How to Install Node.js and npm on Ubuntu 24.04 - Linuxize</title><link>https://linuxize.com/post/how-to-install-node-js-on-ubuntu-24-04/</link></item>
+<item><title>SSH Cheatsheet - Linuxize</title><link>https://linuxize.com/cheatsheet/ssh/</link></item>
+<item><title>Python Dictionary: How to Create, Access, and Modify - Linuxize</title><link>https://linuxize.com/post/python-dictionaries/</link></item>
+<item><title>Play Lab: Paper Boats - The Strong</title><link>https://www.museumofplay.org/event/play-lab-paper-boats/2026-02-02/</link></item>
+<item><title>Carol D. Simmons Storytime Club: Groove and Giggle - The Strong</title><link>https://www.museumofplay.org/event/carol-d-simmons-storytime-club-groove-and-giggle/2026-02-02/</link></item>
+<item><title>Play Lab: Makey Makey - The Strong</title><link>https://www.museumofplay.org/event/play-lab-makey-makey/2026-02-09/</link></item>
+<item><title>Grossology Break Week - The Strong</title><link>https://www.museumofplay.org/event/grossology-break-week/2026-02-14/</link></item>
+<item><title>Video Game Creation Workshop (Ages 8–11) - The Strong</title><link>https://www.museumofplay.org/event/video-game-creation-workshop-ages-8-11/2026-02-16/</link></item>
+<item><title>Video Game Creation Workshop (Ages 12–17) - The Strong</title><link>https://www.museumofplay.org/event/video-game-creation-workshop/2026-02-16/</link></item>
+<item><title>Play Lab: LEGO - The Strong</title><link>https://www.museumofplay.org/event/play-lab-lego/2026-02-23/</link></item>
+<item><title>Fantasy Adventures: After-Hours Event - The Strong</title><link>https://www.museumofplay.org/event/fantasy-adventures-after-hours-event/</link></item>
+<item><title>Japanese Indie Games Panel Discussion - The Strong</title><link>https://www.museumofplay.org/event/japanese-indie-games-panel-discussion/</link></item>
+<item><title>The Strong National Museum of Play - The Strong</title><link>https://www.museumofplay.org/venue/the-strong-national-museum-of-play/</link></item>
+<item><title>Two Titanic Structures Hidden Deep Within the Earth Have Altered the Magnetic Field for Millions of Years - WIRED</title><link>https://www.wired.com/story/titanic-structures-earth-magnetic-field-millions-of-years/</link></item>
+<item><title>Loyalty Is Dead in Silicon Valley - WIRED</title><link>https://www.wired.com/story/model-behavior-loyalty-is-dead-in-silicon-valley/</link></item>
+<item><title>ICE and CBP’s Face-Recognition App Can’t Actually Verify Who People Are - WIRED</title><link>https://www.wired.com/story/cbp-ice-dhs-mobile-fortify-face-recognition-verify-identity/</link></item>
+<item><title>9 Great Deals on WIRED-Approved Valentine’s Day Gifts (2026) - WIRED</title><link>https://www.wired.com/story/valentines-day-deals-2026/</link></item>
+<item><title>The 2026 Winter Olympics Will Have a Major Impact on the Region’s Snow - WIRED</title><link>https://www.wired.com/story/winter-olympics-2026-impacts-snow/</link></item>
+<item><title>The Rise and Fall of the World&amp;#39;s Largest Gay Dating App - WIRED</title><link>https://www.wired.com/story/made-in-china-how-people-in-china-learn-what-they-can-say-online/</link></item>
+<item><title>The Latest Apple Watch Is $100 Off - WIRED</title><link>https://www.wired.com/story/apple-watch-11-deal-226/</link></item>
+<item><title>Motorola Moto Watch Review: Polar-Powered - WIRED</title><link>https://www.wired.com/review/motorola-moto-watch/</link></item>
+<item><title>These 10 Automatic Cat Feeders Were the Best We Tested (2026) - WIRED</title><link>https://www.wired.com/gallery/best-automatic-cat-feeders/</link></item>
+<item><title>What Is Thread? Matter’s Smart Home Network Protocol, Explained - WIRED</title><link>https://www.wired.com/story/what-is-thread/</link></item>
+<item><title>The Best Flower Delivery Services of 2026, Tested and Reviewed - WIRED</title><link>https://www.wired.com/gallery/best-flower-delivery-service/</link></item>
+<item><title>How the Olympic Torchbearers Are Chosen - WIRED</title><link>https://www.wired.com/story/winter-olympics-2026-torchbearers-chosen/</link></item>
+<item><title>Brenna Huckaby Starter Pack: Paralympic Winter Games 2026 - WIRED</title><link>https://www.wired.com/story/para-snowboarder-brenna-huckabys-winter-games-starter-pack/</link></item>
+<item><title>How iPhones Made a Surprising Comeback in China - WIRED</title><link>https://www.wired.com/story/how-iphones-made-a-surprising-comeback-in-china/</link></item>
+<item><title>Hollywood Is Losing Audiences to AI Fatigue - WIRED</title><link>https://www.wired.com/story/hollywood-is-losing-audiences-to-ai-fatigue/</link></item>
+<item><title>I Didn&amp;#39;t Care for Dildos Until I Tried This One From Lelo - WIRED</title><link>https://www.wired.com/story/i-didnt-care-for-dildos-until-i-tried-this-one-from-lelo/</link></item>
+<item><title>Paramount Plus Coupon Codes and Deals: 50% Off - WIRED</title><link>https://www.wired.com/story/paramount-plus-coupon-code/</link></item>
+<item><title>HBO Max Promo Code: 50% Off | February - WIRED</title><link>https://www.wired.com/story/max-promo-code/</link></item>
+<item><title>Netflix Says if the HBO Merger Makes It Too Expensive, You Can Always Cancel - WIRED</title><link>https://www.wired.com/story/netflix-says-users-can-cancel-service-if-hbo-merger-too-expensive/</link></item>
+<item><title>The Best Super Bowl TV Deals (2026) - WIRED</title><link>https://www.wired.com/gallery/super-bowl-tv-deals-2026/</link></item>
+<item><title>Measles Is Causing Brain Swelling in Children in South Carolina - WIRED</title><link>https://www.wired.com/story/measles-is-causing-brain-swelling-in-children-in-south-carolina/</link></item>
+<item><title>Notepad++ Users, You May Have Been Hacked by China - WIRED</title><link>https://www.wired.com/story/notepad-plus-plus-china-hackers-update-infrastructure/</link></item>
+<item><title>A New AI Math Startup Just Cracked 4 Previously Unsolved Problems - WIRED</title><link>https://www.wired.com/story/a-new-ai-math-ai-startup-just-cracked-4-previously-unsolved-problems/</link></item>
+<item><title>Our Favorite Pixel Phone Is $100 Off - WIRED</title><link>https://www.wired.com/story/pixel-9a-deal-226/</link></item>
+<item><title>Cozey Neptune Sofa Bed Review: Firm but Flexible - WIRED</title><link>https://www.wired.com/review/cozey-neptune-sofa-bed/</link></item>
+<item><title>Inside the ICE Forum Where Agents Complain About Their Jobs - WIRED</title><link>https://www.wired.com/story/inside-the-ice-forum-where-agents-complain-about-their-jobs/</link></item>
+<item><title>Mistral&amp;#39;s New Ultra-Fast Translation Model Gives Big AI Labs a Run for Their Money - WIRED</title><link>https://www.wired.com/story/mistral-voxtral-real-time-ai-translation/</link></item>
+<item><title>Best Laptop Backpacks We’ve Tried and Tested (2026) - WIRED</title><link>https://www.wired.com/gallery/the-best-backpacks-for-work/</link></item>
+<item><title>What Is RGB LED TV? Everything You Need to Know About This Next-Gen TV Tech In 2026 - WIRED</title><link>https://www.wired.com/story/what-is-rgb-led-tv/</link></item>
+<item><title>The Best Cordless Vacuums for Your Whole House (2026) - WIRED</title><link>https://www.wired.com/gallery/the-best-cordless-vacuum/</link></item>
+<item><title>Forget Hinge or Bumble. This App Promises a Personal AI Matchmaker - WIRED</title><link>https://www.wired.com/review/three-day-rule-matchmaking-app/</link></item>
+<item><title>Alpine Skier Ryan Cochran-Siegle’s Starter Pack: Winter Olympics 2026 - WIRED</title><link>https://www.wired.com/story/ryan-cochran-siegles-starter-pack/</link></item>
+<item><title>Winter Olympics 2026: Why I Love Watching Curling - WIRED</title><link>https://www.wired.com/story/i-love-watching-curling-and-you-will-too/</link></item>
+<item><title>The 2026 Winter Olympics Opening and Closing Ceremonies: What You Need to Know - WIRED</title><link>https://www.wired.com/story/winter-olympics-2026-opening-closing-ceremonies/</link></item>
+<item><title>Outdoor Vitals Vantage Alpine Puffer Jacket Review: Perfect Spring Puffer - WIRED</title><link>https://www.wired.com/review/outdoor-vitals-vantage-alpine-puffer-jacket/</link></item>
+<item><title>Why Are Some Women Training for Pregnancy Like It’s a Marathon? - WIRED</title><link>https://www.wired.com/story/pregnancy-zero-trimester-influencers/</link></item>
+<item><title>AI Bots Are Now a Significant Source of Web Traffic - WIRED</title><link>https://www.wired.com/story/ai-bots-are-now-a-signifigant-source-of-web-traffic/</link></item>
+<item><title>HHS Is Making an AI Tool to Create Hypotheses About Vaccine Injury Claims - WIRED</title><link>https://www.wired.com/story/hhs-is-making-an-ai-tool-to-create-hypotheses-about-vaccine-injury-claims/</link></item>
+<item><title>An ‘Intimacy Crisis’ Is Driving the Dating Divide - WIRED</title><link>https://www.wired.com/story/justin-garcia-the-intimate-animal-sex-and-relationships/</link></item>
+<item><title>I Infiltrated Moltbook, the AI-Only Social Network Where Humans Aren’t Allowed - WIRED</title><link>https://www.wired.com/story/i-infiltrated-moltbook-ai-only-social-network/</link></item>
+<item><title>The Paramilitary ICE and CBP Units at the Center of Minnesota&amp;#39;s Killings - WIRED</title><link>https://www.wired.com/story/ice-cbp-srt-bortac-units-immigration-operations/</link></item>
+<item><title>Upgrade Your Roku Before the Big Game - WIRED</title><link>https://www.wired.com/story/roku-deal-226/</link></item>
+<item><title>Republicans Are All In on Boosting Fraud Allegations in California - WIRED</title><link>https://www.wired.com/story/republicans-boosting-fraud-allegations-california/</link></item>
+<item><title>Best Microsoft Surface Laptop (2026): Which Model to Buy or Avoid - WIRED</title><link>https://www.wired.com/story/microsoft-surface-buying-guide/</link></item>
+<item><title>Nintendo’s Virtual Boy Is a Silly but Fun Blast From the Past - WIRED</title><link>https://www.wired.com/story/nintendo-virtual-boy-switch-accessory/</link></item>
+<item><title>Freezing in Florida: Arctic Air Stuns Iguanas, Breaks Records, and Strains the Power Grid - Strange Sounds</title><link>https://strangesounds.org/2026/02/freezing-in-florida-record-lows-iguanas-falling.html</link></item>
+<item><title>A “Super Plasma Bubble” Just Glitched GPS Over Europe and Africa - Strange Sounds</title><link>https://strangesounds.org/2026/01/super-plasma-bubble-gps-disruption-europe-africa.html</link></item>
+<item><title>Does the News Reflect What We Die From? No — And That’s the Whole Point - Strange Sounds</title><link>https://strangesounds.org/2026/01/does-the-news-reflect-causes-of-death.html</link></item>
+<item><title>Japan’s October 2023 Tsunami Explained: Submarine Caldera Deformation (Izu-Bonin Arc) - Strange Sounds</title><link>https://strangesounds.org/2026/01/japan-october-2023-submarine-caldera-tsunami.html</link></item>
+<item><title>Sea lions and pigs are becoming gamers and surprising scientists - Strange Sounds</title><link>https://strangesounds.org/2026/01/sea-lions-pigs-becoming-gamers-surprising-scientists.html</link></item>
+<item><title>Why Light Pollution Deprives Us of the Beauty of the Night - Strange Sounds</title><link>https://strangesounds.org/2026/01/light-pollution-deprives-us-of-the-beauty-of-the-night.html</link></item>
+<item><title>Australia’s Heatwave Pushes Near 50°C — Ceduna Shatters Records Under a “Frying Pan” Sky - Strange Sounds</title><link>https://strangesounds.org/2026/01/australia-heatwave-near-50c-record-jan-2026.html</link></item>
+<item><title>Cold Arctic Air Plunge Wrecks Flights and Power — Winter Chaos Hits Full Volume - Strange Sounds</title><link>https://strangesounds.org/2026/01/arctic-air-plunge-flight-cancellations-power-outages-jan-2026.html</link></item>
+<item><title>The Leather Mandela Effect and Why Your Favorite Things Feel Different Now - Strange Sounds</title><link>https://strangesounds.org/2026/01/leather-mandela-effect.html</link></item>
+<item><title>5 of the Strangest Things Landlords See - Strange Sounds</title><link>https://strangesounds.org/2026/01/strangest-things-landlords-see.html</link></item>
 </channel></rss>
