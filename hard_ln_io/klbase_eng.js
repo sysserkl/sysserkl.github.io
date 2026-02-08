@@ -3300,8 +3300,12 @@ function old_words_redundant_kltxt_b(is_all=false,row_query='span.txt_content',c
     }
 }
 
-function open_end_key_ensentence_b(){
-    return '[a-z0-9:;,—]$';
+function open_end_key_ensentence_b(return_reg=false){
+    var blstr='[a-z0-9:;,—]$';
+    if (return_reg){
+        return new RegExp(blstr,'i');
+    }
+    return blstr;
 }
 
 function odd_quote_get_ensentence_b(csarr,csmax=-1,show_button=true,csmobile_font=false,use_no=true,max_line_len=-1,re_combine=false,ignore_open_end=false,no_ignore=new Set(),only_first_row=true){
@@ -3325,7 +3329,7 @@ function odd_quote_get_ensentence_b(csarr,csmax=-1,show_button=true,csmobile_fon
         re_combine=sentence_split_status_generate_b();
     }
     var compared, compared2;
-    var open_end_key=new RegExp(open_end_key_ensentence_b(),'i');
+    var open_end_key=open_end_key_ensentence_b(true);
     
 	for (let blxl=0,lent=csarr.length;blxl<lent;blxl++){
         var aline=csarr[blxl];

@@ -4805,14 +4805,40 @@ function current_page_2_ensentence_b(cstype=''){
 
     var bljg=result_t.join('\n\n');    
     var odiv=document.getElementById('divhtml2');
-    var left_str='<p>('+result_t.length+'/'+bljg.length+')';
+    var left_str='<p><span id="span_sentences_from_len_kltxt_b"></span>';
     left_str=left_str+close_button_b('divhtml2','');      
-    left_str=left_str+'<input type="number" id="input_sentences_from_kltxt_split_len_b" placeholder="分割长度" min=0 value="5000" style="width:4rem;" /> <span class="aclick" onclick="ensentence_in_textarea_split_b();">分割</span>';
+    left_str=left_str+'字符串长度：<input type="number" id="input_sentences_from_kltxt_split_len_b" placeholder="分割长度" min=0 value="5000" style="width:4rem;" /> <span class="aclick" onclick="ensentence_in_textarea_split_b();">分割</span><span class="aclick" onclick="ensentence_in_textarea_sort_b();">按长度升序</span><span class="aclick" onclick="ensentence_in_textarea_remove_open_end_b();">剔除开放结尾行</span>';
     var right_str='</p>';
-    var bljg=textarea_with_form_generate_b('textarea_sentences_from_kltxt_b','height:10rem;',left_str,'清空,复制,发送到临时记事本,发送地址',right_str,'','',false,bljg);
+    bljg=textarea_with_form_generate_b('textarea_sentences_from_kltxt_b','height:10rem;',left_str,'清空,复制,发送到临时记事本,发送地址',right_str,'','',false,bljg);
     
     odiv.innerHTML='<div style="margin:0.5rem;">'+bljg+'<div id="div_sentences_from_kltxt_result_b"></div></div>';
+    ensentence_in_textarea_len_b(result_t);
     odiv.scrollIntoView();
+}
+
+function ensentence_in_textarea_len_b(csarr){
+    document.getElementById('span_sentences_from_len_kltxt_b').innerHTML='('+csarr.length+'/'+csarr.join('\n\n').length+')';
+}
+
+function ensentence_in_textarea_remove_open_end_b(){
+    var open_end_key=open_end_key_ensentence_b(true);
+    var otextarea=document.getElementById('textarea_sentences_from_kltxt_b');
+    var list_t=otextarea.value.trim().split(/\n+/mg);
+    var result_t=[];
+    for (let arow of list_t){
+        if (arow.trim().match(open_end_key)){continue;}
+        result_t.push(arow);
+    }
+    otextarea.value=result_t.join('\n\n');
+    ensentence_in_textarea_len_b(result_t);
+}
+
+function ensentence_in_textarea_sort_b(){
+    var otextarea=document.getElementById('textarea_sentences_from_kltxt_b');
+    var list_t=otextarea.value.trim().split(/\n+/mg);
+    list_t.sort(function (a,b){return a.length<b.length?-1:1;});
+    otextarea.value=list_t.join('\n\n');
+    ensentence_in_textarea_len_b(list_t);
 }
 
 function ensentence_in_textarea_split_b(){
