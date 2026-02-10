@@ -393,8 +393,8 @@ function txtmenus_kltxt_b(cstype=''){
     menu_general.push(menu_container_b(str_t,group_list,'常见英语生词：'));
 
     var group_list=[
-    ['例句提取','current_page_2_ensentence_b(\'key\');',true],      
     ['重复剔除','rare_enwords_unique_kltxt_b(\'key\');',true],    
+    ['例句提取','current_page_2_ensentence_b(\'key\');',true],      
     ];    
     menu_general.push(menu_container_b(str_t,group_list,'关键词：'));
     
@@ -4803,6 +4803,8 @@ function current_page_2_ensentence_b(cstype=''){
         result_t=[];
     }
 
+    result_t=array_unique_b(result_t);
+    
     var bljg=result_t.join('\n\n');    
     var odiv=document.getElementById('divhtml2');
     var left_str='<p><span id="span_sentences_from_len_kltxt_b"></span>';
