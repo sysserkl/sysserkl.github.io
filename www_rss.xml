@@ -8,483 +8,113 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Tue, 10 Feb 2026 09:48:00 +0800</lastBuildDate>
-<item><title>Linux 7.0 Kernel Confirmed By Linus Torvalds, Expected In Mid-April 2026 - Slashdot</title><link>https://linux.slashdot.org/story/26/02/09/2034222/linux-70-kernel-confirmed-by-linus-torvalds-expected-in-mid-april-2026</link></item>
-<item><title>OpenAI Starts Running Ads in ChatGPT - Slashdot</title><link>https://slashdot.org/story/26/02/09/1929257/openai-starts-running-ads-in-chatgpt</link></item>
-<item><title>Anthropic Pledges To Keep Claude Ad-free, Calls AI Conversations a &amp;#39;Space To Think&amp;#39; - Slashdot</title><link>https://slashdot.org/story/26/02/04/1327223/anthropic-pledges-to-keep-claude-ad-free-calls-ai-conversations-a-space-to-think</link></item>
-<item><title>Sixteen AI Agents Built a C Compiler From Scratch - Slashdot</title><link>https://developers.slashdot.org/story/26/02/09/1948212/sixteen-ai-agents-built-a-c-compiler-from-scratch</link></item>
-<item><title>Romance Publishing Has an AI Problem and Most Readers Don&amp;#39;t Know It Yet - Slashdot</title><link>https://news.slashdot.org/story/26/02/09/181212/romance-publishing-has-an-ai-problem-and-most-readers-dont-know-it-yet</link></item>
-<item><title>Autodesk Takes Google To Court Over AI Movie Software Named &amp;#39;Flow&amp;#39; - Slashdot</title><link>https://tech.slashdot.org/story/26/02/09/1742213/autodesk-takes-google-to-court-over-ai-movie-software-named-flow</link></item>
-<item><title>Google Lines Up 100-Year Sterling Bond Sale - Slashdot</title><link>https://tech.slashdot.org/story/26/02/09/1548222/google-lines-up-100-year-sterling-bond-sale</link></item>
-<item><title>Discord Will Require a Face Scan or ID for Full Access Next Month - Slashdot</title><link>https://yro.slashdot.org/story/26/02/09/161215/discord-will-require-a-face-scan-or-id-for-full-access-next-month</link></item>
-<item><title>AI Gold Rush is Resurrecting China&amp;#39;s Infamous 72-hour Work Week - in US - Slashdot</title><link>https://slashdot.org/story/26/02/09/1514248/ai-gold-rush-is-resurrecting-chinas-infamous-72-hour-work-week---in-us</link></item>
-<item><title>Age Bias is Still the Default at Work But the Data is Turning - Slashdot</title><link>https://tech.slashdot.org/story/26/02/09/1413223/age-bias-is-still-the-default-at-work-but-the-data-is-turning</link></item>
-<item><title>New Raspberry Pi 4 Model Splits RAM Across Dual Chips - Slashdot</title><link>https://hardware.slashdot.org/story/26/02/09/0644255/new-raspberry-pi-4-model-splits-ram-across-dual-chips</link></item>
-<item><title>SpaceX Prioritizes Lunar &amp;#39;Self-Growing City&amp;#39; Over Mars Project, Musk Says - Slashdot</title><link>https://science.slashdot.org/story/26/02/09/0536231/spacex-prioritizes-lunar-self-growing-city-over-mars-project-musk-says</link></item>
-<item><title>National Football League Launches Challenge to Improve Facemasks and Reduce Concussions - Slashdot</title><link>https://science.slashdot.org/story/26/02/09/053208/national-football-league-launches-challenge-to-improve-facemasks-and-reduce-concussions</link></item>
-<item><title>Carmakers Rush To Remove Chinese Code Under New US Rules - Slashdot</title><link>https://tech.slashdot.org/story/26/02/09/0030214/carmakers-rush-to-remove-chinese-code-under-new-us-rules</link></item>
-<item><title>Amazon Delivery Drone Crashes into Texas Apartment Building - Slashdot</title><link>https://tech.slashdot.org/story/26/02/08/2321202/amazon-delivery-drone-crashes-into-texas-apartment-building</link></item>
-<item><title>Do Super Bowl Ads For AI Signal a Bubble About to Burst? - Slashdot</title><link>https://slashdot.org/story/26/02/08/220228/do-super-bowl-ads-for-ai-signal-a-bubble-about-to-burst</link></item>
-<item><title>Have We Been Thinking About Exercise Wrong for Half a Century? - Slashdot</title><link>https://science.slashdot.org/story/26/02/07/0410235/have-we-been-thinking-about-exercise-wrong-for-half-a-century?sbsrc=md</link></item>
-<item><title>Discord data breach October 2020 - Slashdot</title><link>https://slashdot.org/comments.pl?sid=26/02/09/161215&amp;cid=65977738&amp;sbsrc=topcom</link></item>
-<item><title>As she suggestively removed her right arm... - Slashdot</title><link>https://slashdot.org/comments.pl?sid=26/02/09/181212&amp;cid=65978262&amp;sbsrc=topcom</link></item>
-<item><title>Good luck for the grandkids - Slashdot</title><link>https://slashdot.org/comments.pl?sid=26/02/09/1548222&amp;cid=65978004&amp;sbsrc=topcom</link></item>
-<item><title>Doesn&amp;#39;t sound like &amp;quot;from scratch&amp;quot; to me! - Slashdot</title><link>https://slashdot.org/comments.pl?sid=26/02/09/1948212&amp;cid=65978466&amp;sbsrc=topcom</link></item>
-<item><title>Featured item:Coming up in the Commons 9-13 FebruaryFind out what&amp;#39;s coming up in the Commons6 February 2026 - UK Parliament</title><link>https://www.parliament.uk/business/news/2026/feb-2026/coming-up-in-the-commons-9-13-february/</link></item>
-<item><title>Featured item:What&amp;#39;s on in the Lords 9-12 FebruaryDiscover what&amp;#39;s on in the House of Lords from 9-12 February.6 February 2026 - UK Parliament</title><link>https://www.parliament.uk/business/news/2026/feb-2026/whats-on-in-the-lords-9-february-12-february/</link></item>
-<item><title>Featured item:Lord McFall of Alcluith: Lord Speaker&amp;#39;s CornerThe tables are turned as outgoing Lord Speaker Lord McFall of Alcluith is the guest on his own podcast. Listen or watch now29 January 2026 - UK Parliament</title><link>https://www.parliament.uk/business/lords/house-of-lords-podcast/lord-mcfall-of-alcluith-lord-speakers-corner/</link></item>
-<item><title>MPs look for certainty and end to &amp;#39;micromanagement&amp;#39; under Great British RailwaysThe Transport Committee has called for more detail about the Government’s landmark reforms to the rail sector and changes to the legislation to prevent undue political interference in Great British Railways.10 February 2026 - UK Parliament</title><link>https://committees.parliament.uk/committee/153/transport-committee/news/211808/mps-look-for-certainty-and-end-to-micromanagement-under-great-british-railways/</link></item>
-<item><title>MPs to hold a debate on Onshoring in the fashion and textiles industryOn Thursday 12 February in Westminster Hall, MPs will hold a debate on Onshoring in the fashion and textiles industry09 February 2026 - UK Parliament</title><link>https://committees.parliament.uk/committee/202/backbench-business-committee/news/211819/mps-to-hold-a-debate-on-onshoring-in-the-fashion-and-textiles-industry/</link></item>
-<item><title>MPs to hold a debate on the Independent Water Commission Final ReportOn Tuesday 10 February in Westminster Hall, MPs will hold a debate on the Independent Water Commission Final Report09 February 2026 - UK Parliament</title><link>https://committees.parliament.uk/committee/202/backbench-business-committee/news/211817/mps-to-hold-a-debate-on-the-independent-water-commission-final-report/</link></item>
-<item><title>Government must take a stronger stance to disincentivise phone theft, Chair warnsThe government has failed to act on using technological solutions to deter phone theft or hold the long-promised phone theft summit, a letter from the Home Secretary to the Chair of the Science, Innovation and Technology Committee reveals.09 February 2026 - UK Parliament</title><link>https://www.parliament.uk/external/committees/news/2026/february/sitc_government_must_take_a_stronger_stance_to_disincentivise_phone_theft_chair_warns/</link></item>
-<item><title>Vitaliy Klitschko, Mayor of Kyiv, to give evidence virtually to the Foreign Affairs CommitteeVitaliy Klitschko, Mayor of Kyiv, to give evidence virtually to the Foreign Affairs Committee09 February 2026 - UK Parliament</title><link>https://www.parliament.uk/external/committees/news/2026/february/fac_vitaliy_klitschko_mayor_of_kyiv_to_give_evidence_virtually_to_the_foreign_affairs_committee/</link></item>
-<item><title>Operation Kenova: MPs call on Government to formally name agent StakeknifeA cross-party committee of MPs is calling on the Government to formally name Stakeknife - a British Army agent who worked within the IRA in the 1980s and was suspected of direct involvement in numerous murders.09 February 2026 - UK Parliament</title><link>https://committees.parliament.uk/committee/120/northern-ireland-affairs-committee/news/211797/operation-kenova-mps-call-on-government-to-formally-name-agent-stakeknife/</link></item>
-<item><title>为遵守美国新规汽车厂商加紧移除中国软件代码 - Solidot</title><link>https://www.solidot.org/story?sid=83517</link></item>
-<item><title>COVID-19 疫情期间天空更干净但甲烷排放飙升 - Solidot</title><link>https://www.solidot.org/story?sid=83516</link></item>
-<item><title>Linux From Scratch 放弃 System V 版本 - Solidot</title><link>https://www.solidot.org/story?sid=83515</link></item>
-<item><title>LineageOS 23.2 释出 - Solidot</title><link>https://www.solidot.org/story?sid=83514</link></item>
-<item><title>绝命毒师效应：癌症诊断与犯罪行为上升相关 - Solidot</title><link>https://www.solidot.org/story?sid=83511</link></item>
-<item><title>US Air Force needs 500 next-gen fighters, bombers to beat China, think tank says - Defense News</title><link>https://www.defensenews.com/air/2026/02/09/us-air-force-needs-500-next-gen-fighters-bombers-to-beat-china-think-tank-says/</link></item>
-<item><title>Ukraine seeks god mode with new control app for drone war - Defense News</title><link>https://www.defensenews.com/unmanned/2026/02/09/ukraine-seeks-god-mode-with-new-control-app-for-drone-war/</link></item>
-<item><title>Moscow sees opportunity in Greenland crisis, but fears expanded US Arctic presence - Defense News</title><link>https://www.defensenews.com/global/europe/2026/02/09/moscow-sees-opportunity-in-greenland-crisis-but-fears-expanded-us-arctic-presence/</link></item>
-<item><title>US, European navies push Lego-like modularity to boost ships’ combat punch - Defense News</title><link>https://www.defensenews.com/global/europe/2026/02/09/us-european-navies-push-lego-like-modularity-to-boost-ships-combat-punch/</link></item>
-<item><title>DMCA Subpoenas Can’t Be Used for Foreign Piracy Lawsuits, Court Rules - TorrentFreak</title><link>https://torrentfreak.com/dmca-subpoenas-cant-be-used-for-foreign-piracy-lawsuits-court-rules/</link></item>
-<item><title>The Future of Intellectual Conservatism - Law &amp; Liberty</title><link>https://lawliberty.org/the-future-of-intellectual-conservatism/</link></item>
-<item><title>A Quiet Refusal to Compromise - Law &amp; Liberty</title><link>https://lawliberty.org/a-quiet-refusal-to-compromise/</link></item>
-<item><title>The Meaning of Intellectual Conservatism - Law &amp; Liberty</title><link>https://lawliberty.org/the-meaning-of-intellectual-conservatism/</link></item>
-<item><title>The Reopening of the Conservative Mind? - Law &amp; Liberty</title><link>https://lawliberty.org/the-reopening-of-the-conservative-mind/</link></item>
-<item><title>追更 HelloGitHub 一整年，终于等到了这篇年度盘点 - 削微寒 - 博客园</title><link>https://www.cnblogs.com/xueweihan/p/19596455</link></item>
-<item><title>从零学习Kafka：数据存储 - Jackeyzhe - 博客园</title><link>https://www.cnblogs.com/Jackeyzhe/p/19597292</link></item>
-<item><title>从模型评估、梯度难题到科学初始化：一步步解析深度学习的训练问题 - yLDeveloper - 博客园</title><link>https://www.cnblogs.com/yldeveloper/p/19597056</link></item>
-<item><title>Lab3-page tables  &amp;&amp; MIT6.1810操作系统工程【持续更新】 - 小白同学_C - 博客园</title><link>https://www.cnblogs.com/xiaobai1523/p/19596981</link></item>
-<item><title>AI 时代的前端技术：从系统编程到 JavaScript/TypeScript - 念风零壹 - 博客园</title><link>https://www.cnblogs.com/kaiux/p/19596869</link></item>
-<item><title>【开源】《clip》一个不到4M的、跨平台的、支持分组、搜索、自定义条数、局域网共享的、剪贴板历史工具 - 咸鱼Doyoung - 博客园</title><link>https://www.cnblogs.com/Doyoung/p/19596816</link></item>
-<item><title>国产AI编程工具Skill生成能力测试：CodeBuddy VS Trae - haibindev - 博客园</title><link>https://www.cnblogs.com/haibindev/p/19596593</link></item>
-<item><title>基于DWS构建RAG框架生成行业调研报告 - 华为云开发者联盟 - 博客园</title><link>https://www.cnblogs.com/huaweiyun/p/19596583</link></item>
-<item><title>Langchain 1.0后astream_events事件类型及生命周期简析 - 孤舟晓月 - 博客园</title><link>https://www.cnblogs.com/old-code-monkey/p/19596521</link></item>
-<item><title>Qt技术笔记（八）：QCheckBox 多选框笔记 - GeoFXR - 博客园</title><link>https://www.cnblogs.com/GeophysicsWorker/p/19596076</link></item>
-<item><title>STM32移植Freertos - 沁拒离 - 博客园</title><link>https://www.cnblogs.com/tianwuyvlianshui/p/19595818</link></item>
-<item><title>OpenClaw for macOS: 完整本地化部署指南（2026.2.6-3 版本） - 小白跃升坊 - 博客园</title><link>https://www.cnblogs.com/xiaobaiysf/p/19595515</link></item>
-<item><title>Istio 流量治理实战：镜像、超时重试、熔断与限流，一次讲透 - it排球君 - 博客园</title><link>https://www.cnblogs.com/MrVolleyball/p/19595103</link></item>
-<item><title>一款悄然崛起的国产规则引擎，让业务编排效率提升 10 倍！ - JavaGuide - 博客园</title><link>https://www.cnblogs.com/javaguide/p/19595114</link></item>
-<item><title>从零开始学Flink：Flink SQL 窗口(Window)操作详解 - 代码匠心 - 博客园</title><link>https://www.cnblogs.com/daimajiangxin/p/19595086</link></item>
-<item><title>C盘满了？告别磁盘告急！基于Python打造高性能磁盘清理工具 TurboClean【复制即可用】 - TTGF - 博客园</title><link>https://www.cnblogs.com/ChenAI-TGF/p/19594886</link></item>
-<item><title>C++小白训练第十三天 - Godjian - 博客园</title><link>https://www.cnblogs.com/godjian/p/19594585</link></item>
-<item><title>扣子Coze实战：从0到1搭建小红书图文改写智能体 - AI架构师汤师爷 - 博客园</title><link>https://www.cnblogs.com/tangshiye/p/19594522</link></item>
-<item><title>FastAPI不止于API：手把手教你用Jinja2打造动态Web页面 - 一名程序媛呀 - 博客园</title><link>https://www.cnblogs.com/ymtianyu/p/19594466</link></item>
-<item><title>鸿蒙应用开发UI基础第四节：UIAbility 启动模式详解 - 鸿蒙-散修 - 博客园</title><link>https://www.cnblogs.com/san-xiu/p/19594371</link></item>
-<item><title>High-Performance WebGPU Charting Library for Large Datasets – ChartGPU - CSS Script</title><link>https://www.cssscript.com/webgpu-chart/</link></item>
-<item><title>JavaScript Video Conference Grid Layout Library with Gallery &amp; Spotlight Modes - CSS Script</title><link>https://www.cssscript.com/video-conference-grid-layout/</link></item>
-<item><title>Lightweight Form Validation and Input Masking/Formatting – Masker.js - CSS Script</title><link>https://www.cssscript.com/form-validation-mask-format/</link></item>
-<item><title>WAI-ARIA Compliant Dialog Box In JavaScript – a11y-dialog - CSS Script</title><link>https://www.cssscript.com/wai-aria-compliant-dialog-box-javascript-a11y-dialog/</link></item>
-<item><title>Vanilla JS Gallery Lightbox with Touch Support – Web-Thread Lightbox - CSS Script</title><link>https://www.cssscript.com/gallery-lightbox-web-thread/</link></item>
-<item><title>Modern Data Table Library for Web Developers – TablixJS - CSS Script</title><link>https://www.cssscript.com/data-table-tablixjs/</link></item>
-<item><title>Bootstrap 5 Theme with shadcn/ui Aesthetics – Shadstrap - CSS Script</title><link>https://www.cssscript.com/bootstrap-shadcn-ui-theme/</link></item>
-<item><title>Confirm Dialog - CSS Script</title><link>https://www.cssscript.com/tag/confirm/</link></item>
-<item><title>OpenAI introduces ads...for the people! - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/10/openai_ads/</link></item>
-<item><title>Microsoft boffins figured out how to break LLM safety guardrails with one simple prompt - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/09/microsoft_one_prompt_attack/</link></item>
-<item><title>Someone&amp;#39;s attacking SolarWinds WHD to steal high‑privilege credentials - but we don&amp;#39;t know who or how - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/09/solarwinds_mystery_whd_attack/</link></item>
-<item><title>Google soaks up 1GW of Texas sunshine to power $185B AI spending spree - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/09/google_power_solar/</link></item>
-<item><title>AI chatbots are no better at medical advice than a search engine - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/09/ai_chatbots_medical_advice_sucks/</link></item>
-<item><title>Discord to start assuming all users are underage unless they prove otherwise - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/09/discord_demands_id_proof_of_age/</link></item>
-<item><title>&amp;#39;Roaring cougars&amp;#39; lunched on OpenAI in Super Bowl ad battle, but ai.com wins the day - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/09/superbowl_ad_reach_anthropic_beat_openai/</link></item>
-<item><title>Yes, backsies: Crypto exchange Bithumb claws back $40B in accidental payments to users - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/09/crypto_exchange_bithumb_40b_payments/</link></item>
-<item><title>More than 135,000 OpenClaw instances exposed to internet in latest vibe-coded disaster - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/09/openclaw_instances_exposed_vibe_code/</link></item>
-<item><title>Anthropic&amp;#39;s Claude Opus 4.6 spends $20K trying to write a C compiler - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/09/claude_opus_46_compiler/</link></item>
-<item><title>AI.com goes for $70M as crypto boss bets big on buzzword bubble - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/09/70m_aicom_domain_sale/</link></item>
-<item><title>Salesforce puts Heroku out to PaaSture - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/09/heroku_freeze/</link></item>
-<item><title>Workday CEO Carl Eschenbach clocks out amid job cuts and market jitters - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/09/workday_ceo_steps_down/</link></item>
-<item><title>Dutch data watchdog snitches on itself after getting caught in Ivanti zero-day attacks - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/09/dutch_data_protection_ivanti/</link></item>
-<item><title>Azure power hiccup gives Windows admins a rare break from updates - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/09/azure_west_us_disruption/</link></item>
-<item><title>SpaceX back to Falcon 9 launches as Musk blathers about Moon city - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/09/spacex_resumes_falcon_9/</link></item>
-<item><title>Europe&amp;#39;s sovereign cloud spend set to triple as geopolitics bite - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/09/europe_sovereign_cloud_spend/</link></item>
-<item><title>Taiwan tells Uncle Sam its chip ecosystem ain&amp;#39;t going anywhere - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/09/taiwan_us_chip_production/</link></item>
-<item><title>Brussels eyes crowbar for Meta&amp;#39;s WhatsApp AI lockout - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/09/brussels_eyes_crowbar_for_metas/</link></item>
-<item><title>How the GNU C Compiler became the Clippy of cryptography - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/09/compilers_undermine_encryption/</link></item>
-<item><title>Follow the money: Switzerland remains Europe&amp;#39;s top destination for tech pay - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/09/switzerland_tech_salaries/</link></item>
-<item><title>BBC bumps telly tax to £180 as Netflix lurks with cheaper tiers - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/09/bbc_tv_licensing_hike/</link></item>
-<item><title>European Commission probes intrusion into staff mobile management backend - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/09/european_commission_phone_breach/</link></item>
-<item><title>Matrix is quietly becoming the chat layer for governments chasing digital sovereignty - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/09/matrix_element_secure_chat/</link></item>
-<item><title>The Linux mid-life crisis that&amp;#39;s an opportunity for Tux-led transformation - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/09/the_linux_midlife_crisis_thats/</link></item>
-<item><title>Tech support chap invented fake fix for non-problem and watched it spread across the office - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/09/who_me/</link></item>
-<item><title>Cache is king and DIMMS are bling as memory prices soar - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/09/memory_price_rises_cashing_in/</link></item>
-<item><title>Indian police commissioner wants ID cards for AI agents - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/09/asia_tech_news_roundup/</link></item>
-<item><title>Linus Torvalds keeps his ‘fingers and toes’ rule by decreeing next Linux will be version 7.0 - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/09/linux_6_19_7_named/</link></item>
-<item><title>Telcos aren&amp;#39;t saying how they fought back against China&amp;#39;s Salt Typhoon attacks - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/08/infosec_news_in_brief/</link></item>
-<item><title>This dev made a Llama with three inference engines - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/08/llama3pure_incorporates_three_inference_engines/</link></item>
-<item><title>Containers, cloud, blockchain, AI – it&amp;#39;s all the same old BS, says veteran Red Hatter - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/08/waves_of_tech_bs/</link></item>
-<item><title>Machine learning could yield faster, cheaper lithium-ion battery development - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/08/machine_learning_battery_development/</link></item>
-<item><title>12 Highly Anticipated TV Shows Based on Bestselling Books Coming in 2026 - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/tv/adaptations-bestselling-books-2026</link></item>
-<item><title>What Does &amp;quot;GPT&amp;quot; in ChatGPT Stand For? - Mental Floss</title><link>https://www.mentalfloss.com/language/what-does-gpt-in-chatgpt-stand-for</link></item>
-<item><title>Map Shows America’s Most Romantic States, According to DoorDash - Mental Floss</title><link>https://www.mentalfloss.com/geography/maps/most-romantic-states-map</link></item>
-<item><title>Even Guy Fieri Won’t Eat These 6 Foods - Mental Floss</title><link>https://www.mentalfloss.com/food/foods-guy-fieri-refuses-to-eat</link></item>
-<item><title>Why Is the Winter Sport Called “Bobsledding”? - Mental Floss</title><link>https://www.mentalfloss.com/sports/olympics/why-called-bobsledding</link></item>
-<item><title>20 Memorable Performances That Won the Golden Globe but Not the Oscar - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/awards/performances-won-golden-globe-not-oscar</link></item>
-<item><title>Quiz: Can You Guess the Country From Just Three Clues? - Mental Floss</title><link>https://www.mentalfloss.com/quizzes/name-country-three-clues</link></item>
-<item><title>What We Know—And Don&amp;#39;t—About Shakespeare&amp;#39;s Wife - Mental Floss</title><link>https://www.mentalfloss.com/literature/authors/what-we-know-about-william-shakespeares-wife-anne-hathaway</link></item>
-<item><title>What Is the “Kiss and Cry” in Olympic Figure Skating? - Mental Floss</title><link>https://www.mentalfloss.com/sports/olympics/what-is-kiss-and-cry-figure-skating</link></item>
-<item><title>What—and Who—Inspired Emily Brontë&amp;#39;s &amp;#39;Wuthering Heights?&amp;#39; - Mental Floss</title><link>https://www.mentalfloss.com/literature/what-and-who-inspired-emily-brontes-wuthering-heights</link></item>
-<item><title>Quiz: Prove Your Disney Knowledge by Finishing These Quotes - Mental Floss</title><link>https://www.mentalfloss.com/quizzes/finish-these-disney-quotes</link></item>
-<item><title>The 10 Cheapest—And 10 Most Expensive—States to Buy Roses This Valentine’s Day - Mental Floss</title><link>https://www.mentalfloss.com/geography/states/cheapest-expensive-states-roses-valentines-day</link></item>
-<item><title>Carlo Rovelli: thermal time - Aeon</title><link>https://aeon.co/videos/time-is-real-if-you-view-it-through-the-lens-of-heat?utm_source=rss-feed</link></item>
-<item><title>Orcas and ourselves - Aeon</title><link>https://aeon.co/essays/orcas-havent-changed-but-our-view-of-the-killer-whale-has?utm_source=rss-feed</link></item>
-<item><title>10 Olympic Rules That Sound Fake but Are Actually Real - Mental Floss</title><link>https://www.mentalfloss.com/sports/olympics/olympic-rules-sound-fake-actually-real?utm_source=RSS</link></item>
-<item><title>赵玉民：特斯拉与爱迪生之间的瑜亮情结 - 科学网博客</title><link>https://blog.sciencenet.cn/blog-3404169-1521647.html</link></item>
-<item><title>宁笔：上帝粒子提出者彼得·希格斯博士论文 - 科学网博客</title><link>https://blog.sciencenet.cn/blog-408109-1521611.html</link></item>
-<item><title>2025年度十佳博文评选活动结… - 科学网博客</title><link>https://blog.sciencenet.cn/blog-45-1520553.html</link></item>
-<item><title>斜而不倒经典作-比萨斜塔 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-39664-1521753.html</link></item>
-<item><title>本院员工精心创演了小品节目——日… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-1557-1521752.html</link></item>
-<item><title>国际能源署将举办2026年能源创新论… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-202810-1521750.html</link></item>
-<item><title>微型人类大脑揭秘大脑的自我连接机… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-41174-1520676.html</link></item>
-<item><title>西北工业大学张秋禹&amp;张和… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3411509-1521478.html</link></item>
-<item><title>又新增了！15本SCI期刊on ho… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-1232242-1521703.html</link></item>
-<item><title>Separations南京工业大学桂… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3516770-1521699.html</link></item>
-<item><title>南京航空航天大学诚邀全球英… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-425155-1521689.html</link></item>
-<item><title>上午投下午Under Review，巨… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3462448-1521677.html</link></item>
-<item><title>Fundamental Research 文章… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3496796-1521661.html</link></item>
-<item><title>刊·见 | 碳中和离不开核能… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3574014-1521645.html</link></item>
-<item><title>云南大学朱静/五邑大学李小… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3534092-1521644.html</link></item>
-<item><title>北京工业大学2026年公开招聘… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-425155-1521574.html</link></item>
-<item><title>基金本子“瘦身提质”，配图不要踩这3种坑！ - 科学网博客</title><link>http://blog.sciencenet.cn/blog-45-1521102.html</link></item>
-<item><title>祝贺！科学网2025年度十佳博文评选活动结果揭晓 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-45-1520553.html</link></item>
-<item><title>北京市科学技术委员会、中关村科技园区管理委员会国际合作处及国际中心 ... - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3516770-1521694.html</link></item>
-<item><title>植物与人类：跨越万年的共生驯化，而非单向的征服 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-38998-1521670.html</link></item>
-<item><title>别逗了！机器真的会学习吗？ - 科学网博客</title><link>http://blog.sciencenet.cn/blog-40841-1521659.html</link></item>
-<item><title>脆弱教育：在裂缝中照进光 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3414523-1521650.html</link></item>
-<item><title>协同界面电子结构与多组分活性调控，实现低能垒高效析氢催化体系构建 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3534092-1521643.html</link></item>
-<item><title>物质崇拜时代的价值迷失 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3414523-1521623.html</link></item>
-<item><title>偏凌早春发， 应诮众芳迟 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-2724438-1521627.html</link></item>
-<item><title>广防风：紫塔擎天藏本草，青囊遗世现药王 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-437607-1521705.html</link></item>
-<item><title>一中的奇人奇事之二十一 10.我的语文老师们（6） - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3622817-1521614.html</link></item>
-<item><title>从混沌到秩序：复杂世界的重整化之旅（第二章） - 科学网博客</title><link>http://blog.sciencenet.cn/blog-41701-1521713.html</link></item>
-<item><title>从混沌到秩序：复杂世界的重整化之旅（第四章） - 科学网博客</title><link>http://blog.sciencenet.cn/blog-41701-1521716.html</link></item>
-<item><title>夜半江豚吹浪起（古今诗词咏江豚续七百四十七） - 科学网博客</title><link>http://blog.sciencenet.cn/blog-708326-1521605.html</link></item>
-<item><title>我是如何被“热熵”吸引的（完） - 科学网博客</title><link>http://blog.sciencenet.cn/blog-2071524-1521624.html</link></item>
-<item><title>从混沌到秩序：复杂世界的重整化之旅（第三章） - 科学网博客</title><link>http://blog.sciencenet.cn/blog-41701-1521714.html</link></item>
-<item><title>图说易理（8）：“比”的哲理意涵 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-1251036-1521635.html</link></item>
-<item><title>拒绝爱因斯坦的华人，把数学玩… - 科学网博客</title><link>https://blog.sciencenet.cn/video.php?mod=vinfo&amp;pid=5377</link></item>
-<item><title>菲尔兹奖得主吴宝珠将加盟香港… - 科学网博客</title><link>https://blog.sciencenet.cn/video.php?mod=vinfo&amp;pid=5376</link></item>
-<item><title>科学家破解钼-93能量释放争议 - 科学网博客</title><link>https://blog.sciencenet.cn/video.php?mod=vinfo&amp;pid=5374</link></item>
-<item><title>童年动画片里的配角 摇身一变… - 科学网博客</title><link>https://blog.sciencenet.cn/video.php?mod=vinfo&amp;pid=5373</link></item>
-<item><title>高校科研：AI时代的论文之殇 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3389532-1521749.html</link></item>
-<item><title>人机环智能边界下的超级智能 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-40841-1521657.html</link></item>
-<item><title>为何古代沉积盆地的范围总是被小看？ - 科学网博客</title><link>http://blog.sciencenet.cn/blog-39040-1521561.html</link></item>
-<item><title>塔里木河流域保护与发展：生态系统红色… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3514295-1521474.html</link></item>
-<item><title>博士生必备心理技能3：习惯化和去习惯… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3383728-1521491.html</link></item>
-<item><title>伍氏献文鱼化石和伍氏青鱼的求证 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-279293-1521274.html</link></item>
-<item><title>博士生必备心理技能之2：大脑急停加速… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3383728-1521076.html</link></item>
-<item><title>挂科就是在一场马拉松中摔了一跤 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3612599-1520898.html</link></item>
-<item><title>离南极那么近，却那么绿，物种那样丰富 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-458-1521334.html</link></item>
-<item><title>从“常数”到“变量”：原子量为何不再… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3549522-1521060.html</link></item>
-<item><title>阴香：香林妙隐君臣药，绿冠深藏甘辛香 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-437607-1521035.html</link></item>
-<item><title>春节无归期，乡愁有归处 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-2533479-1521451.html</link></item>
-<item><title>对话 Batteries Travel Award获奖者—… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3516770-1521074.html</link></item>
-<item><title>对话Sensors期刊青年编委：香港城市大… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3516770-1520930.html</link></item>
-<item><title>沙眼探源，“汤氏病毒”——“衣原体之… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-279293-1520731.html</link></item>
-<item><title>从白衣少年到“断肢再植之父”：陈中伟… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-279293-1520403.html</link></item>
-<item><title>明代徐祯卿江行记中的江豚形象 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-708326-1521295.html</link></item>
-<item><title>亲朋饯我毘陵道（奔牛诗话之一百四十六… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-708326-1521516.html</link></item>
-<item><title>舒展，游泳的另一个姿态 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3578660-1521500.html</link></item>
-<item><title>致朱珍老师：英语路上的领航人 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3414523-1521310.html</link></item>
-<item><title>蒸镀超薄spiro-OMeTAD助力n-i-p钙钛矿/… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3411509-1521301.html</link></item>
-<item><title>Drones 华中师范大学和武汉大学研究团… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3516770-1521365.html</link></item>
-<item><title>南京航空航天大学姬广斌：多尺度跨波段… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3411509-1521298.html</link></item>
-<item><title>投稿总被拒？5步精准锁定Taylor &amp; Fr… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3574014-1521391.html</link></item>
-<item><title>罗马植物园：从千年教皇药圃到大学植物… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-38998-1521494.html</link></item>
-<item><title>别让你的研究被误读！学会沟通科学中的… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-1232242-1521231.html</link></item>
-<item><title>“青椒”为何拒当教学副院长 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-71964-1521182.html</link></item>
-<item><title>谁是世界最早学术植物园？比萨与帕多瓦… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-38998-1521157.html</link></item>
-<item><title>肥胖治疗全新靶点：蛋白去亚硝基化酶 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-41174-1520475.html</link></item>
-<item><title>我对研究生基础教育的一点浅见 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3395313-1521521.html</link></item>
-<item><title>抗阻训练预防糖尿病确实更有效 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-41174-1521259.html</link></item>
-<item><title>好望角并不是非洲最南端 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-616948-1521344.html</link></item>
-<item><title>长寿花：青叶祝长寿，红花贺新岁 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-437607-1521745.html</link></item>
-<item><title>我爱此花能耐冷，一生低首紫罗兰 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-2724438-1521187.html</link></item>
-<item><title>辞去教学副系主任后，他为何持续“发声… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-71964-1521557.html</link></item>
-<item><title>【春节红包封面派送中】被重塑的希望与… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3516770-1521236.html</link></item>
-<item><title>“顶刊”杀回来了！影响因子10.1涨至12… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3462448-1521219.html</link></item>
-<item><title>研途有暖，马启新福｜艾思科蓝Aischola… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3462448-1520929.html</link></item>
-<item><title>松山湖材料实验室林生晃&amp;… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3411509-1520893.html</link></item>
-<item><title>广西大学徐传辉等: 仿植物蒸… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3411509-1521046.html</link></item>
-<item><title>痴呆可能取决于日常饮食细微… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-41174-1521101.html</link></item>
-<item><title>程序在cmd窗口能运行，服务… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-331295-1518483.html</link></item>
-<item><title>31日直播 | 科学网邀您一起… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-45-1520217.html</link></item>
-<item><title>《随机过程》与《随机信号分… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3418723-1520454.html</link></item>
-<item><title>Screening Theory：挑豆子、… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-437607-1520427.html</link></item>
-<item><title>从逻辑推理形式看技术分析、… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3418723-1520065.html</link></item>
-<item><title>从系统科学角度看基本分析、… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3418723-1519799.html</link></item>
-<item><title>AEIC学术交流中心的个人博客 - 科学网博客</title><link>http://blog.sciencenet.cn/home.php?mod=space&amp;uid=3652364</link></item>
-<item><title>What to Expect from the SAG-AFTRA 2026 Contract Negotiations - IndieWire</title><link>https://www.indiewire.com/news/business/sag-aftra-2026-contract-negotiations-what-to-expect-1235177515/</link></item>
-<item><title>The Best New Movies Streaming on Netflix in February 2026 - IndieWire</title><link>https://www.indiewire.com/gallery/best-new-movies-streaming-netflix-february-2026/</link></item>
-<item><title>‘Wuthering Heights’ Review: Emerald Fennell’s Loose, Lush Adaptation - IndieWire</title><link>https://www.indiewire.com/criticism/movies/wuthering-heights-review-emerald-fennell-1235177844/</link></item>
-<item><title>Francine Maisler on Texting Ryan Coogler Around the Clock to Find the Perfect Cast for ‘Sinners’ - IndieWire</title><link>https://www.indiewire.com/features/craft/sinners-casting-francine-maisler-interview-1235178315/</link></item>
-<item><title>Timothée Chalamet’s Box Office Worth as a Leading Man? A Cool 2 Billion Dollars - IndieWire</title><link>https://www.indiewire.com/news/box-office/timothee-chalamet-box-office-leading-2-billion-dollars-1235178409/</link></item>
-<item><title>Subscribe to Our Craft Newsletter: This Week, Hayao Miyazaki Is Right - IndieWire</title><link>https://www.indiewire.com/features/craft/indiewire-craft-newsletter-hayao-miyazaki-ai-1235177944/</link></item>
-<item><title>The Controversial ‘Blue Film,’ Rejected by Mainstream Film Festivals, Is Picked Up by Obscured Releasing - IndieWire</title><link>https://www.indiewire.com/news/breaking-news/blue-film-release-date-elliot-tuttle-1235178447/</link></item>
-<item><title>Is the ‘Wuthering Heights’ Press Tour Messy Performance Art or Marketing Rage Bait? - IndieWire</title><link>https://www.indiewire.com/features/commentary/wuthering-heights-press-tour-performance-art-rage-bait-1235177870/</link></item>
-<item><title>Utopia Launches New Membership on Patreon, Complete with Online Screenings, Special Events, and More - IndieWire</title><link>https://www.indiewire.com/news/business/utopia-membership-patreon-screening-room-1235178081/</link></item>
-<item><title>Brad Pitt Returns as Cliff Booth in Surprise Super Bowl Spot for Netflix’s ‘Once Upon a Time in Hollywood’ Sequel - IndieWire</title><link>https://www.indiewire.com/news/trailers/cliff-booth-brad-pitt-tarantino-fincher-super-bowl-trailer-1235178366/</link></item>
-<item><title>At Olympics Opening Ceremony, Weirdness Was in Short Supply — but Not Attempts at ‘Harmony’ - IndieWire</title><link>https://www.indiewire.com/criticism/shows/2026-olympics-opening-ceremony-milan-cortina-review-1235178055/</link></item>
-<item><title>The Winners of the Best Casting Oscar from the Last 25 Years, According to IndieWire - IndieWire</title><link>https://www.indiewire.com/features/craft/best-casting-oscar-winners-21st-century-1235176139/</link></item>
-<item><title>Every Documentary Filmmaker Should Be Worried About the Success of ‘Melania’ - IndieWire</title><link>https://www.indiewire.com/features/commentary/melania-box-office-documentary-filmmakers-worried-1235177403/</link></item>
-<item><title>‘Disclosure Day’ Super Bowl Trailer Gives Us Our Best Look Yet at Spielberg’s UFO Blockbuster - IndieWire</title><link>https://www.indiewire.com/news/trailers/disclosure-day-super-bowl-trailer-1235177926/</link></item>
-<item><title>‘Ready or Not 2: Here I Come’ New Trailer: Let Radio Silence Explain the Rules of a New Game - IndieWire</title><link>https://www.indiewire.com/news/trailers/ready-or-not-2-here-i-come-new-trailer-1235177845/</link></item>
-<item><title>‘Tow’ Trailer: Oscar Nominee Rose Byrne Goes Blonde for Heart-Tugging, Fact-Based Dramedy - IndieWire</title><link>https://www.indiewire.com/news/trailers/tow-trailer-rose-byrne-1235177698/</link></item>
-<item><title>‘The Pitt’ Review: Season 2’s Ticking Clock Is More Urgent Than Ever - IndieWire</title><link>https://www.indiewire.com/criticism/shows/the-pitt-season-2-review-1235170958/</link></item>
-<item><title>‘Industry’ Review: Season 4 Is a Remarkable Reboot That Will Blind You with Its Brilliance - IndieWire</title><link>https://www.indiewire.com/criticism/shows/industry-season-4-review-hbo-1235171930/</link></item>
-<item><title>‘Mel Brooks: The 99-Year-Old Man!’ Review: Judd Apatow’s Sweet HBO Doc Aims To Please - IndieWire</title><link>https://www.indiewire.com/criticism/shows/mel-brooks-documentary-review-the-99-year-old-man-hbo-1235174062/</link></item>
-<item><title>‘A Knight of the Seven Kingdoms’ Review: ‘Game of Thrones’ Spinoff Chooses Kindness Over Carnage - IndieWire</title><link>https://www.indiewire.com/criticism/shows/knight-of-the-seven-kingdoms-review-game-of-thrones-series-1235172708/</link></item>
-<item><title>For Timothée Chalamet, the ‘Marty Supreme’ Press Tour Is Part of the Performance - IndieWire</title><link>https://www.indiewire.com/awards/consider-this/timothee-chalamet-interview-marty-supreme-1235169009/</link></item>
-<item><title>When Kate Hudson Realized She ‘Hadn’t Put Everything Out on the Table,’ It Changed Everything - IndieWire</title><link>https://www.indiewire.com/features/interviews/kate-hudson-song-sung-blue-singing-interview-1235173111/</link></item>
-<item><title>Michael B. Jordan Shares How He and Director Ryan Coogler Became ‘Something People Can Count On’ - IndieWire</title><link>https://www.indiewire.com/awards/consider-this/michael-b-jordan-interview-sinners-1235169679/</link></item>
-<item><title>Renate Reinsve and Inga Ibsdotter Lilleaas See ‘Sentimental Value’ as a ‘Collective’ Achievement - IndieWire</title><link>https://www.indiewire.com/awards/consider-this/renate-reinsve-inga-ibsdotter-lilleaas-sentimental-value-1235171425/</link></item>
-<item><title>‘Pillion’ Review: A Wildly Explicit and Strangely Sweet BDSM Romance - IndieWire</title><link>https://www.indiewire.com/criticism/movies/pillion-review-alexander-skarsgard-1235124356/</link></item>
-<item><title>‘Bridgerton’ S4: Benedict Finally Learns About Power Dynamics (and Pulse-Pounding Romance) - IndieWire</title><link>https://www.indiewire.com/criticism/shows/bridgerton-season-4-part-1-review-power-dynamics-romance-1235176002/</link></item>
-<item><title>‘Dracula’ Review: Caleb Landry Jones Has a Ball in a Gothic Saga from the Guy Who Made ‘Fifth Element’ - IndieWire</title><link>https://www.indiewire.com/criticism/movies/dracula-review-caleb-landry-jones-christoph-waltz-1235178015/</link></item>
-<item><title>‘The ‘Burbs’ Review: Keke Palmer Deserves Better Than This Redundant Reboot - IndieWire</title><link>https://www.indiewire.com/criticism/shows/the-burbs-review-keke-palmer-2026-peacock-series-1235177385/</link></item>
-<item><title>Harry Melling Always Wanted to Be a Character Actor — but He’s About to Be a Leading Man - IndieWire</title><link>https://www.indiewire.com/features/interviews/harry-melling-pillion-interview-1235177793/</link></item>
-<item><title>‘A Poet’ Is a Movie About Artistic Frustration. It’s Also About the Experience of Making Movies - IndieWire</title><link>https://www.indiewire.com/features/interviews/a-poet-simon-mesa-soto-interview-1235177746/</link></item>
-<item><title>Inside Michał Marczak’s Cinematic Return 11 Years After ‘All These Sleepless Nights’ with ‘Closure’ - IndieWire</title><link>https://www.indiewire.com/features/interviews/closure-michal-marczak-documentary-1235177582/</link></item>
-<item><title>Best-Selling Romance Sensation Emily Henry Is Coming for the Movies Next - IndieWire</title><link>https://www.indiewire.com/features/interviews/emily-henry-interview-movies-people-we-meet-on-vacation-1235170838/</link></item>
-<item><title>Subscribe to Our Craft Newsletter, Top of the Line: This Week, A Last Dance at Sundance - IndieWire</title><link>https://www.indiewire.com/features/craft/indiewire-craft-newsletter-sundance-the-housemaid-1235177415/</link></item>
-<item><title>How Real World Costumes Inform the Looks of ‘Avatar: Fire and Ash’ - IndieWire</title><link>https://www.indiewire.com/features/craft/avatar-fire-and-ash-costumes-james-cameron-1235176587/</link></item>
-<item><title>Inside the Casting on Streaming Comedy’s Most Chaotic Improv Show, ‘Very Important People’ - IndieWire</title><link>https://www.indiewire.com/features/craft/very-important-people-casting-streaming-improv-show-1235177697/</link></item>
-<item><title>How ‘Ponies’ Hides Its Spy Psychology in Plain Sight Through ’70s-Tastic Costumes and Sets - IndieWire</title><link>https://www.indiewire.com/features/craft/ponies-spy-series-peacock-behind-the-scenes-1235172727/</link></item>
-<item><title>Screen Talk: We Have ‘One Battle After Another’ About the Oscar Noms - IndieWire</title><link>https://www.indiewire.com/features/podcast/oscar-nominations-2026-who-will-win-screen-talk-1235174796/</link></item>
-<item><title>Screen Talk: Row K Heads on Sundance and Scrambled Theatrical Universe - IndieWire</title><link>https://www.indiewire.com/features/podcast/row-k-entertainment-interview-1235172158/</link></item>
-<item><title>Toolkit: Kristen Stewart on Wanting to Make a Female ‘Taxi Driver’ - IndieWire</title><link>https://www.indiewire.com/features/podcast/kristen-stewart-interview-directing-the-chronology-of-water-1235159056/</link></item>
-<item><title>Toolkit: How ‘The Testament of Ann Lee’ Mirrors the Shaker Aesthetic - IndieWire</title><link>https://www.indiewire.com/features/podcast/the-testament-of-ann-lee-shaker-furniture-design-explained-1235159048/</link></item>
-<item><title>Charli XCX on What’s Real (and ‘Legally’ Not Real) in ‘The Moment’ - IndieWire</title><link>https://www.indiewire.com/news/events/charli-xcx-whats-real-and-not-the-moment-interview-1235175136/</link></item>
-<item><title>How Did Channing Tatum Make His Young ‘Josephine’ Co-Star Feel Comfortable? - IndieWire</title><link>https://www.indiewire.com/news/events/josephine-channing-tatum-mason-reeves-manicures-1235175138/</link></item>
-<item><title>John Wilson on the Anxiety of Secretly Shooting the Kardashians - IndieWire</title><link>https://www.indiewire.com/news/events/john-wilson-the-history-of-concrete-kardashians-1235176140/</link></item>
-<item><title>Gregg Araki Thinks Sex Is Coming Back to Screens - IndieWire</title><link>https://www.indiewire.com/news/festivals/gregg-araki-sex-screens-heated-rivalry-1235176108/</link></item>
-<item><title>‘The Mandalorian and Grogu’ Super Bowl Trailer: ‘Star Wars’ Finally Returns to the Big Screen - IndieWire</title><link>https://www.indiewire.com/news/trailers/the-mandalorian-and-grogu-super-bowl-trailer-1235178191/</link></item>
-<item><title>The 2026 DGA Awards Were a Site for Inauguration and Commemoration - IndieWire</title><link>https://www.indiewire.com/news/events/2026-dga-awards-winners-honor-catherine-ohara-adam-somner-1235178340/</link></item>
-<item><title>Paul Thomas Anderson Wins DGA Award for Theatrical Feature Film for ‘One Battle After Another’ (Complete Winners List) - IndieWire</title><link>https://www.indiewire.com/awards/results/dga-awards-2026-winners-list-1235178320/</link></item>
-<item><title>‘KPop Demon Hunters’ and ‘Sinners’ Among 2026 SCL Awards Winners - IndieWire</title><link>https://www.indiewire.com/awards/results/kpop-demon-hunters-sinners-scl-awards-winners-1235178172/</link></item>
-<item><title>IndieWire’s 101 Guide to Working with Hollywood Unions — What Do Indie Filmmakers Need to Know? - IndieWire</title><link>https://www.indiewire.com/features/general/indie-filmmaker-guide-working-with-hollywood-unions-1235177953/</link></item>
-<item><title>SXSW 2026 Announces More Film and TV, Led by ‘The Comeback’ Season 3 - IndieWire</title><link>https://www.indiewire.com/news/festivals/sxsw-2026-film-tv-lineup-second-wave-1235177643/</link></item>
-<item><title>The Academy Gets Back Into the Content Business, Led by a Familiar Face - IndieWire</title><link>https://www.indiewire.com/awards/industry/the-academy-creates-academy-studios-jennifer-davidson-1235177885/</link></item>
-<item><title>The Best Director Oscar Race May Be a Lot More Competitive Than We Think - IndieWire</title><link>https://www.indiewire.com/awards/predictions/best-director-oscar-race-competitive-1235177658/</link></item>
-<item><title>Beth de Araújo’s Sundance Hit ‘Josephine’ Wins Both Grand Jury Prize and Audience Award — Full List - IndieWire</title><link>https://www.indiewire.com/awards/results/2026-sundance-film-festival-awards-winners-full-list-1235176428/</link></item>
-<item><title>Secure Your Finances Before You Deploy — Money Minute - Defense News</title><link>https://www.defensenews.com/video/2026/02/09/secure-your-finances-before-you-deploy-money-minute/</link></item>
-<item><title>Air Force leaders chart improvements to comms, readiness | Defense News Weekly Full Episode 2.10.26 - Defense News</title><link>https://www.defensenews.com/video/2026/02/09/air-force-leaders-chart-improvements-to-comms-readiness-defense-news-weekly-full-episode-21026/</link></item>
-<item><title>The Golden Dome boom and advances in interceptors | Defense Dollars - Defense News</title><link>https://www.defensenews.com/video/2026/02/09/the-golden-dome-boom-and-advances-in-interceptors-defense-dollars/</link></item>
-<item><title>Hot optics: Check out the latest sights from SHOT Show 2026 - Defense News</title><link>https://www.defensenews.com/video/2026/02/09/hot-optics-check-out-the-latest-sights-from-shot-show-2026/</link></item>
-<item><title>Access to Winter Olympic sports near you - FlowingData</title><link>https://flowingdata.com/2026/02/09/access-to-winter-olympic-sports-near-you/</link></item>
-<item><title>US population might decline for the first time - FlowingData</title><link>https://flowingdata.com/2026/02/09/us-population-might-decline-for-the-first-time/</link></item>
-<item><title>A Plain Bedroom Turns into a Colorful Retreat - Apartment Therapy</title><link>https://www.apartmenttherapy.com/bedroom-makeover-wallpaper-diy-ba-37536921?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>The One Detail That Makes Drew Barrymore’s Bedroom Look Effortlessly Chic - Apartment Therapy</title><link>https://www.apartmenttherapy.com/drew-barrymore-bedroom-design-instagram-37537882?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>The One Color That Always Works in Small Bathrooms, According to Designers - Apartment Therapy</title><link>https://www.apartmenttherapy.com/small-bathroom-paint-ideas-2-37536927?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>I Just Discovered a Black Friday-Worthy Deal on One of Dyson’s Most Popular Stick Vacuums (Almost 50% Off!) - Apartment Therapy</title><link>https://www.apartmenttherapy.com/dyson-v8-stick-vacuum-qvc-deal-feb-2026-37538557?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>I Tried The Pink Stuff’s New Squeezable Cleaning Paste on My Cooktop - Apartment Therapy</title><link>https://www.apartmenttherapy.com/the-pink-stuff-the-miracle-squeezable-paste-review-37538049?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>See Why This 100-Year-Old LA Rental Feels like a Cool Aunt’s House - Apartment Therapy</title><link>https://www.apartmenttherapy.com/100-year-old-los-angeles-rental-apartment-37538092?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>3 Things Pro Organizers Always Declutter in February - Apartment Therapy</title><link>https://www.apartmenttherapy.com/things-to-declutter-in-february-37537854?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>46 Morning Journaling Prompts to Transform Your Mindset - Apartment Therapy</title><link>https://www.apartmenttherapy.com/morning-journal-prompts-37537812?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>This $26 Fridge Solution Gives You 2x the Storage - Apartment Therapy</title><link>https://www.apartmenttherapy.com/kitchen-storage-fridge-find-2-37536917?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>A Farmhouse Kitchen Gets a Midcentury Modern Moment — with a European Feel - Apartment Therapy</title><link>https://www.apartmenttherapy.com/mid-century-modern-kitchen-reno-ba-2-2-37536913?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>Walmart&amp;#39;s Stunning Faux Topiary Adds &amp;quot;Instant Style&amp;quot; in Any Space - Apartment Therapy</title><link>https://www.apartmenttherapy.com/walmart-topiary-ball-faux-tree-37537826?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>My Picky 16-Year-Old Cat Finally Ate Every Bite, Thanks to This Smart Feeder - Apartment Therapy</title><link>https://www.apartmenttherapy.com/petlibro-wet-cat-food-automatic-feeder-review-37538199?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>“Bridgerton” Fans Will Lose It Over Urban Outfitters’ 18th-Century-Inspired Duvet Set - Apartment Therapy</title><link>https://www.apartmenttherapy.com/urban-outfitters-toile-duvet-cover-set-37538183?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>I Put Shark’s New Cordless Stain Cleaner to the Test on My Stained Rug - Apartment Therapy</title><link>https://www.apartmenttherapy.com/shark-stainforce-cordless-spot-stain-cleaner-review-37538070?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>My Grandma&amp;#39;s Simple Towel Storage Trick Is a Game-Changer - Apartment Therapy</title><link>https://www.apartmenttherapy.com/towel-rolling-storage-technique-37536193?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>My Most Stylish Friend Swears by This Simple Decorating Tip (It’s *Genius*) - Apartment Therapy</title><link>https://www.apartmenttherapy.com/patina-rule-tip-for-lived-in-feel-37538081?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>A Dated Living Room Gets a Cozy, Dreamy Hangout Upgrade - Apartment Therapy</title><link>https://www.apartmenttherapy.com/brick-wall-living-room-makeover-ba-37536909?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>The 1-Minute Hack Leanne Ford Uses for Gorgeous Window Treatments - Apartment Therapy</title><link>https://www.apartmenttherapy.com/leanne-ford-minimalist-curtain-hack-instagram-37537802?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>A Dining Chair Belongs in Your Bathroom (The Reasons Are Brilliant!) - Apartment Therapy</title><link>https://www.apartmenttherapy.com/dining-chair-in-the-bathroom-hack-37538088?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>I Keep This $25 Tool in My Shower All the Time - Apartment Therapy</title><link>https://www.apartmenttherapy.com/oxo-good-grips-stainless-steel-squeegee-review-37537876?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
-<item><title>Super Bowl LX - Variety</title><link>https://variety.com/p/super-bowl-commercials-2026/</link></item>
-<item><title>All-American Triumph - Variety</title><link>https://variety.com/2026/music/columns/bad-bunny-kid-rock-turning-point-super-bowl-1236656506/</link></item>
-<item><title>Paul Thomas Anderson and Radiohead&amp;#39;s Jonny Greenwood Want &amp;#39;Melania&amp;#39; Doc to Remove &amp;#39;Phantom Thread&amp;#39; Music - Variety</title><link>https://variety.com/2026/film/news/melania-anderson-greenwood-want-phantom-thread-music-removed-1236656857/</link></item>
-<item><title>Savannah Guthrie Says ‘We’re at an Hour of Desperation’ in New Video Amid Mom Nancy’s Disappearance: ‘We Believe Our Mom Is Still Out There’ - Variety</title><link>https://variety.com/2026/tv/news/savannah-guthrie-video-hour-of-desperation-nancy-guthrie-1236655921/</link></item>
-<item><title>Delroy Lindo Reflects on ‘Sinners,’ His First Oscar Nomination and the Awards Snubs in Between: ‘The Work Still Stands’ - Variety</title><link>https://variety.com/2026/film/awards/delroy-lindo-sinners-oscar-nomination-awards-snubs-1236651514/</link></item>
-<item><title>‘Wuthering Heights’ Review: Intense as Her Two Leads’ Chemistry May Be, Emerald Fennell Knows to Leave Them Wanting Moor - Variety</title><link>https://variety.com/2026/film/reviews/wuthering-heights-review-1236651546/</link></item>
-<item><title>Super Bowl Ads: Top 10 Most-Liked Commercials - Variety</title><link>https://variety.com/2026/tv/news/super-bowl-2026-ads-top-10-most-liked-commercials-1236656776/</link></item>
-<item><title>Bad Bunny Stuns the Super Bowl With Lady Gaga, Ricky Martin and a Real Wedding Ceremony as Pedro Pascal, Jessica Alba and More Party on Stage - Variety</title><link>https://variety.com/2026/music/news/bad-bunny-super-bowl-lady-gaga-real-wedding-ceremony-1236656381/</link></item>
-<item><title>Jake Paul, Who Lives in Puerto Rico, Calls Bad Bunny a &amp;#39;Fake American&amp;#39; in Halftime Show Rant - Variety</title><link>https://variety.com/2026/music/news/jake-paul-bad-bunny-super-bowl-halftime-show-1236656447/</link></item>
-<item><title>Ben Affleck’s Dunkin’ Super Bowl Commercial Taps Jennifer Aniston, Tom Brady, Ted Danson for 1990s Sitcom - Variety</title><link>https://variety.com/2026/tv/news/dunkin-super-bowl-commercial-jennifer-aniston-tom-brady-1236656261/</link></item>
-<item><title>Catherine O’Hara’s Cause of Death Revealed - Variety</title><link>https://variety.com/2026/film/news/catherine-ohara-cause-of-death-1236646153/</link></item>
-<item><title>Kid Rock’s ‘All-American Halftime Show’ Goes Light on Politics, Feeling More Like an Old CMT Special Than Super Bowl Protest Event - Variety</title><link>https://variety.com/2026/music/news/kid-rock-all-american-halftime-show-recap-1236656460/</link></item>
-<item><title>‘God of War’ Live-Action Series Casts Callum Vinson as Atreus - Variety</title><link>https://variety.com/2026/tv/news/god-of-war-live-action-series-cast-callum-vinson-atreus-1236656985/</link></item>
-<item><title>Box Office: ‘Melania’ Plunges 67% to Ninth Place, ‘Send Help’ Remains No. 1 in Glacial Super Bowl Weekend - Variety</title><link>https://variety.com/2026/film/box-office/melania-box-office-plunges-send-help-stays-first-slow-super-bowl-1236656120/</link></item>
-<item><title>Berlinale Generation Queer Horror Pic ‘No Salgas’ Picked Up by Berlin-Based ArtHood Entertainment (EXCLUSIVE) - Variety</title><link>https://variety.com/2026/film/global/berlinale-generation-no-salgas-arthood-entertainment-1236655831/</link></item>
-<item><title>Bad Bunny’s Super Bowl Halftime Producers Explain All: The Real Wedding, Those Grass People, the Child Who Got the Grammy Award and More - Variety</title><link>https://variety.com/2026/tv/news/bad-bunny-super-bowl-producers-wedding-grammys-kid-grass-people-1236657494/</link></item>
-<item><title>Toxic Gym Culture Horror ‘Shredded’ From Josh Lawson and Michael Bay Launching at EFM With Logical Pictures, Protagonist and UTA Independent Film Group (EXCLUSIVE) - Variety</title><link>https://variety.com/2026/film/global/shredded-horror-josh-lawson-platinum-dunes-efm-1236655663/</link></item>
-<item><title>Bad Bunny Wore His Signature Adidas Sneakers During the Super Bowl Halftime Show — And They’re Still Available to Shop Online - Variety</title><link>https://variety.com/2026/shopping/news/bad-bunny-adidas-sneakers-super-bowl-buy-online-1236657005/</link></item>
-<item><title>Scripps Sells Court TV to Jellysmack’s Law&amp;Crime Network - Variety</title><link>https://variety.com/2026/tv/news/scripps-sells-court-tv-lawandcrime-dan-abrams-jellysmack-1236657158/</link></item>
-<item><title>As Chappell Roan and Other Artists Exit, Wasserman Music Agency’s Fate to Be Decided This Week Following Epstein Revelations - Variety</title><link>https://variety.com/2026/music/news/wasserman-music-agency-fate-to-be-decided-epstein-revelations-1236657485/</link></item>
-<item><title>‘Bookends’ Star and Writer Noam Ash on Authentic Queer and Jewish Casting and How ‘Heated Rivalry’ Could Help Sell the Film - Variety</title><link>https://variety.com/2026/film/columns/bookends-noam-ash-authentic-queer-jewish-casting-heated-rivalry-1236654441/</link></item>
-<item><title>Dan Bongino Will Return to Fox News in Contributor Role - Variety</title><link>https://variety.com/2026/tv/news/dan-bongino-fox-news-retturn-contributor-1236657521/</link></item>
-<item><title>Michael Douglas Says ‘Wall Street’ Director Asked ‘Are You Doing Drugs?’ Because ‘You Look Like You’ve Never Acted Before in Your Life.’ Then Douglas Won the Oscar - Variety</title><link>https://variety.com/2026/film/news/michael-douglas-wall-street-oliver-stone-insulted-acting-1236657269/</link></item>
-<item><title>‘Sinners,’ ‘Zootopia 2’ and ‘KPop Demon Hunters’ Take Top Honors at Advanced Imaging Society Lumiere Awards - Variety</title><link>https://variety.com/2026/artisans/awards/advanced-imaging-society-lumiere-awards-winners-2026-1236656860/</link></item>
-<item><title>Bill Maher Says ‘Jimmy Kimmel Is Very Mad at Me’ After Calling Out His Wife for Cutting Ties With Trump-Loving Family Members: ‘We May Never Talk Again’ - Variety</title><link>https://variety.com/2026/tv/news/bill-maher-jimmy-kimmel-feud-politics-1236657444/</link></item>
-<item><title>Curate Hires Avalon Vet Aaron Brown (EXCLUSIVE) - Variety</title><link>https://variety.com/2026/tv/news/curate-aaron-brown-avalon-1236657418/</link></item>
-<item><title>Bad Bunny Teams Up With Mitchell &amp; Ness on Limited-Edition Jersey Inspired by Custom Super Bowl Outfit - Variety</title><link>https://variety.com/2026/shopping/news/bad-bunny-super-bowl-jersey-buy-online-1236657437/</link></item>
-<item><title>Andy Cohen Tells Off Bad Bunny Haters and Roasts MAGA Outrage Over Super Bowl Halftime Show Being in Spanish: ‘Oh, That’s Lady Gaga Singing in English!’ - Variety</title><link>https://variety.com/2026/music/news/andy-cohen-bad-bunny-super-bowl-halftime-show-maga-haters-1236657278/</link></item>
-<item><title>‘The Moment’ - Variety</title><link>https://variety.com/2026/film/reviews/the-moment-review-charli-xcx-alexander-skarsgard-1236639576/</link></item>
-<item><title>Where to Buy Harry Styles’ Eye Masks in His ‘Aperture’ Promo - Variety</title><link>https://variety.com/2026/shopping/news/harry-styles-aperture-eye-mask-buy-online-1236639360/</link></item>
-<item><title>Oscars 2026 Streaming Guide: Where to Watch This Year’s Nominated Films Online - Variety</title><link>https://variety.com/lists/where-to-stream-2026-oscar-nominated-films-online/</link></item>
-<item><title>‘KPop Demon Hunters’ Merch Include Uno, American Girl Dolls and Furby Toys - Variety</title><link>https://variety.com/2026/shopping/news/best-kpop-demon-hunters-merch-buy-online-1236642118/</link></item>
-<item><title>The Best ‘Bridgerton’ Merch to Buy Ahead of Season 4 - Variety</title><link>https://variety.com/2026/shopping/news/bridgerton-collaborations-where-to-buy-online-1235981124/</link></item>
-<item><title>‘Sinners’ Cinematographer Autumn Durald Arkapaw on Filming Buddy Guy’s Cameo, Her Favorite Shot and Shares an Update on Reuniting With Ryan Coogler… - Variety</title><link>https://variety.com/2026/film/awards/sinners-cinematographer-autumn-durald-arkapaw-buddy-guy-1236644457/</link></item>
-<item><title>Only Two Original Song Nominees to Perform Live at Oscars, Academy Producers Tell Nominees (EXCLUSIVE) - Variety</title><link>https://variety.com/2026/film/news/oscars-performing-two-songs-kpop-sinners-1236645430/</link></item>
-<item><title>Film Factory, Warner Bros., Atresmedia Board  Daniel Sánchez Arévalo&amp;#39;s Movistar Plus+ Black Comedy Thriller &amp;#39;Caza Mayor&amp;#39; - Variety</title><link>https://variety.com/2026/film/global/film-factory-warner-bros-atresmedia-movistar-plus-1236657314/</link></item>
-<item><title>Mary J. Blige, Paul Simon, Hozier, Jon Batiste, Elvis Costello to Headline Love Rocks NYC 10th Anniversary Benefit - Variety</title><link>https://variety.com/2026/music/news/mary-j-blige-paul-simon-love-rocks-nyc-10th-anniversary-1236656955/</link></item>
-<item><title>Logan Paul Defends Bad Bunny After Brother Jake Paul Turns Off Super Bowl Halftime Show in Protest: ‘Puerto Ricans Are Americans’ - Variety</title><link>https://variety.com/2026/music/news/logan-paul-defends-bad-bunny-super-bowl-jake-paul-protest-1236656845/</link></item>
-<item><title>‘Moulin Rouge! The Musical’ to Close on Broadway After Seven Years - Variety</title><link>https://variety.com/2026/legit/news/moulin-rouge-musical-close-broadway-1236653932/</link></item>
-<item><title>Anthony Rapp Starring in Off-Broadway Solo Show ‘Touch’ (EXCLUSIVE) - Variety</title><link>https://variety.com/2026/legit/news/anthony-rapp-off-broadway-solo-show-touch-1236651854/</link></item>
-<item><title>‘Dirty Dancing’ Musical Sets North American Tour - Variety</title><link>https://variety.com/2026/legit/news/dirty-dancing-musical-north-american-tour-1236651751/</link></item>
-<item><title>Tony Award-Winning Producers Hal Luftig, Cathy Dantchik and Kevin Connor Launch Halcyon Theatricals (EXCLUSIVE) - Variety</title><link>https://variety.com/2026/legit/news/tony-award-winning-producers-hal-luftig-cathy-dantchik-kevin-connor-halcyon-theatricals-1236649582/</link></item>
-<item><title>Donald Trump Will Close the Kennedy Center for Two Years for a ‘Complete Rebuilding’ - Variety</title><link>https://variety.com/2026/music/news/donald-trump-close-kennedy-center-two-years-1236648812/</link></item>
-<item><title>‘Sinners’ Exhibit Featuring Props, Costumes and Set Pieces Is Now Part of Warner Bros. Studio Tour (EXCLUSIVE) - Variety</title><link>https://variety.com/2026/artisans/news/sinners-warner-bros-studio-tour-hollywood-1236657004/</link></item>
-<item><title>‘One Battle After Another’s’ Michael Bauman Wins British Society of Cinematographers Feature Film Award - Variety</title><link>https://variety.com/2026/artisans/news/one-battle-wins-british-society-of-cinematographers-2026-1236655868/</link></item>
-<item><title>Oscar-Nominated Composers Single Out One Magic Moment in Their Scores - Variety</title><link>https://variety.com/2026/artisans/news/oscar-composers-scores-moment-1236655483/</link></item>
-<item><title>Ludwig Göransson and EJAE Lead Society of Composers and Lyricists Awards Winners - Variety</title><link>https://variety.com/2026/artisans/news/society-of-composers-and-lyricists-awards-winners-2026-1236654423/</link></item>
-<item><title>SimonSits, aka Isabel Klee, on the Puppy Bowl, Being a Rescue Influencer and Why You Should Donate to Kill Shelters - Variety</title><link>https://variety.com/2026/tv/news/simonsits-isabel-klee-puppy-bowl-fostering-dogs-1236654794/</link></item>
-<item><title>Matthew Berry Lands a Super Bowl Pre-Game Slot Highlighting the Explosive Growth of Fantasy Football: ‘Every Game Matters Now’ - Variety</title><link>https://variety.com/2026/tv/news/matthew-berry-super-bowl-pre-game-fantasy-football-nbc-1236655256/</link></item>
-<item><title>Trump Account Deletes AI Video Showing Obamas as Apes; White House, After Defending It, Claims Staff Member Had ‘Erroneously’ Posted Clip - Variety</title><link>https://variety.com/2026/digital/news/white-house-trump-obama-ape-video-deleted-1236654542/</link></item>
-<item><title>Donald Trump Shares AI Video Depicting Barack and Michelle Obama as Apes; Newsom Slams ‘Disgusting Behavior by the President’ - Variety</title><link>https://variety.com/2026/digital/news/donald-trump-racist-ai-video-obamas-apes-newsom-disgusting-behavior-1236654344/</link></item>
-<item><title>Germany to Impose Commitment on Streamers and Broadcasters to Invest in Local Content, and Boosts Public Funding for Film - Variety</title><link>https://variety.com/2026/digital/global/germany-investment-commitment-streamers-broadcasters-1236654286/</link></item>
-<item><title>Meghan Markle Makes Surprise Appearance at Fifteen Percent Pledge Gala Honoring Tina Knowles - Variety</title><link>https://variety.com/2026/scene/news/meghan-markle-surprise-gala-appearance-tina-knowles-1236656208/</link></item>
-<item><title>Jennifer Hudson on the End of ‘The Kelly Clarkson Show’: ‘I Wish Her the Absolute Best’ - Variety</title><link>https://variety.com/2026/tv/columns/jennifer-hudson-kelly-clarkson-talk-show-ending-1236655700/</link></item>
-<item><title>Jamie Lee Curtis Slams ICE as an ‘Abhorrence’ and Says It’s Being Used as a ‘Distraction So That We Don’t Pay Attention to the Epstein Files… - Variety</title><link>https://variety.com/2026/politics/columns/jamie-lee-curtis-ice-abhorrence-distraction-epstein-files-1236653979/</link></item>
-<item><title>Jodie Foster, Chelsea Clinton and Ava DuVernay to Speak at the Making Their Mark Foundation Women’s History Month Symposium (EXCLUSIVE) - Variety</title><link>https://variety.com/2026/film/news/jodie-foster-chelsea-clinton-ava-duvernay-making-their-mark-foundation-womens-history-month-1236652377/</link></item>
-<item><title>Japan’s Takaichi Scores Historic Landslide in Snap Election Gamble - Variety</title><link>https://variety.com/2026/politics/news/japan-election-takaichi-win-1236656213/</link></item>
-<item><title>Newsom Declares Super Bowl Sunday to Be ‘Bad Bunny Day’ in California, Trolls Kid Rock for Being ‘Banned’ in State - Variety</title><link>https://variety.com/2026/music/news/newsom-bad-bunny-day-california-super-bowl-kid-rock-banned-1236656103/</link></item>
-<item><title>Lawmakers Push Netflix and Paramount to Preserve Hollywood Jobs in Warner Bros. Sale - Variety</title><link>https://variety.com/2026/politics/news/adam-schiff-netflix-paramount-job-commitments-warner-bros-1236653831/</link></item>
-<item><title>California Post Alliance Seeks Standalone Tax Incentive to Stop Post-Production Downturn - Variety</title><link>https://variety.com/2026/artisans/news/california-post-alliance-tax-incentive-post-production-downturn-1236653587/</link></item>
-<item><title>Sex, Lies and Politics: How FX’s ‘Love Story’ Brings Back the Doomed Romance of John F. Kennedy Jr. and Carolyn Bessette - Variety</title><link>https://variety.com/2026/tv/features/love-story-fx-jfk-jr-carolyn-bessette-sex-politics-1236648235/</link></item>
-<item><title>How Burlesque Heals Its Dancers - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/How_burlesque_heals_its_dancers</link></item>
-<item><title>How Sports Can Help Bridge Our Differences - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/how_sports_can_help_bridge_our_differences</link></item>
-<item><title>Navigating Emotions for Teens - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/video/item/navigating_emotions_for_teens</link></item>
-<item><title>The Science of Love, with Geena Davis (Episode 1) - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/podcasts/item/the_science_of_love_with_geena_davis_episode_1</link></item>
-<item><title>How ICE Raids Are Affecting Children—And What Schools Can Do - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/how_ice_raids_are_affecting_children_and_what_schools_can_do</link></item>
-<item><title>How Volunteering Could Help Us Feel Connected Again - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/how_volunteering_could_help_us_feel_connected_again</link></item>
-<item><title>Four Things Queer Eye Gets Right About Bridging Differences - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/four_things_queer_eye_gets_right_about_bridging_differences</link></item>
-<item><title>Your Happiness Calendar for Educators for February 2026 - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/your_happiness_calendar_for_educators_for_february_2026</link></item>
-<item><title>Unpacking Identity for Teens - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/video/item/unpacking_identity_for_teens</link></item>
-<item><title>Your Happiness Calendar for February 2026 - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/your_happiness_calendar_for_february_2026</link></item>
-<item><title>How to Keep Your Humanity - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/podcasts/item/how_to_keep_your_humanity</link></item>
-<item><title>Can “Self-Love” Undermine Personal Growth? - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/can_self_love_undermine_personal_growth</link></item>
-<item><title>How Self-Compassion Can Help School Leaders Stay Grounded - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/how_self_compassion_can_help_school_leaders_stay_grounded</link></item>
-<item><title>Can Self-Compassion Change the Way You See Society? - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/can_self_compassion_change_way_you_see_society</link></item>
-<item><title>Can Literature Help Save Democracy? - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/can_literature_help_save_democracy</link></item>
-<item><title>Helping Teens Recognize Our Potential for Change - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/video/item/helping_teens_recognize_our_potential_for_change</link></item>
-<item><title>Happiness Break: Finding Calm in Uncertainty - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/podcasts/item/happiness_break_finding_calm_in_uncertainty</link></item>
-<item><title>How to Move From Harm to Healing in Schools - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/how_to_move_from_harm_to_healing_in_schools</link></item>
-<item><title>How a Work Buddy Can Improve Your Well-being and Your Workplace - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/how_a_work_buddy_can_improve_your_well_being_and_your_workplace</link></item>
-<item><title>How to Listen to Teens with Compassion - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/video/item/listening_to_teens_with_compassion</link></item>
-<item><title>How Qigong Can Calm Your Mind and Body - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/podcasts/item/how_qigong_can_calm_your_mind_and_body</link></item>
-<item><title>Can We Cultivate Forgiveness in Prison? - Greater Good Science Center</title><link>https://greatergood.berkeley.edu/article/item/can_we_cultivate_forgiveness_in_prison</link></item>
-<item><title>15 Highest-Valued NFL Teams (Post-Super Bowl LX) - HowStuffWorks</title><link>https://entertainment.howstuffworks.com/highest-valued-nfl-teams.htm</link></item>
-<item><title>15 French-Speaking Countries in Africa, Europe, and the Americas - HowStuffWorks</title><link>https://people.howstuffworks.com/french-speaking-countries.htm</link></item>
-<item><title>What Group of Animals Is Called a Charm? - HowStuffWorks</title><link>https://animals.howstuffworks.com/birds/what-group-of-animals-is-called-a-charm.htm</link></item>
-<item><title>Tiny House Appendix: Act 2 - Tiny House Blog</title><link>https://tinyhouseblog.com/announcement/tiny-house-appendix-act-2/</link></item>
-<item><title>Review: Casio’sGW9400 Rangeman Might Be The Toughest G-SHOCK Ever Made - HiConsumption</title><link>https://hiconsumption.com/watches/casio-g-shock-gw9400-1-rangeman-review/</link></item>
-<item><title>Review: IWC’s Top Gun Mojave Desert Might Be The Perfect Everyday IWC Pilot Watch - HiConsumption</title><link>https://hiconsumption.com/watches/iwc-pilots-watch-automatic-41-top-gun-mojave-desert-edition-review/</link></item>
-<item><title>Everyday Carry: Frozen Tundra - HiConsumption</title><link>https://hiconsumption.com/gear/everyday-carry-frozen-tundra/</link></item>
-<item><title>Scoured: The 7 Best Nike Sneakers You Can Buy in January 2026 - HiConsumption</title><link>https://hiconsumption.com/style/best-nike-sneakers-january-2026/</link></item>
-<item><title>Scoured: The Best Gear on Huckberry for January 2026 - HiConsumption</title><link>https://hiconsumption.com/gear/scoured-best-gear-on-huckberry-january-2026/</link></item>
-<item><title>MING’s First-Ever Integrated Bracelet Watch Sports a Stunning Hyperspace-Inspired Caseback - HiConsumption</title><link>https://hiconsumption.com/watches/ming-56-00-starfield-integrated-bracelet/</link></item>
-<item><title>New Balance Revives Steve Jobs’ Favorite Sneakers with Premium Leather Inspired by Italian Luggage - HiConsumption</title><link>https://hiconsumption.com/style/new-balance-made-in-uk-991v1-luxury-leather/</link></item>
-<item><title>Suunto’s 90th Anniversary Vertical 2 Is a Retro-Style Throwback to Its Legendary 1998 Watch - HiConsumption</title><link>https://hiconsumption.com/tech/suunto-vertical-2-90th-anniversary-limited-edition/</link></item>
-<item><title>Ferrari Tapped Jony Ive &amp; Marc Newson to Design the Cockpit of Its First-Ever EV - HiConsumption</title><link>https://hiconsumption.com/motors/2027-ferrari-luce-interior-reveal/</link></item>
-<item><title>Iron &amp; Resin’s Rambler Is the Made-in-USA Waxed Canvas Jacket That Refuses to Go Out of Style - HiConsumption</title><link>https://hiconsumption.com/style/iron-resin-rambler-jacket/</link></item>
-<item><title>Analogue’s N64 Console Gets Prototype Editions in Transparent Colors Nintendo Buried 30 Years Ago - HiConsumption</title><link>https://hiconsumption.com/tech/analogue-3d-prototype-limited-editions/</link></item>
-<item><title>Kith &amp; Salomon Just Perfected Their XT-Voyager Trail Shoe with a Monochrome Sequel - HiConsumption</title><link>https://hiconsumption.com/style/kith-x-salomon-xt-voyager-2/</link></item>
-<item><title>IWC’s 2026 F1 Watches Swap Petronas Turquoise for the George Russell’s Signature Racing Blue - HiConsumption</title><link>https://hiconsumption.com/watches/iwc-x-mercedes-amg-george-russell-pilots-watches/</link></item>
-<item><title>Nike’s ACG Lava Loft Jacket Packs Down-Filled Insulation Into a Shell That Fits into Your Pocket - HiConsumption</title><link>https://hiconsumption.com/gear/nike-acg-lava-loft-jacket/</link></item>
-<item><title>Breitling &amp; Aston Martin F1 Celebrate New Partnership with the First Titanium Navitimer - HiConsumption</title><link>https://hiconsumption.com/watches/breitling-navitimer-b01-chronograph-43-aston-martin-aramco-formula-one/</link></item>
-<item><title>Benelli’s BKX 125 Brings Italian Adventure Bike Design to the Entry-Level Market - HiConsumption</title><link>https://hiconsumption.com/motors/2026-benelli-bkx-125/</link></item>
-<item><title>Bentley’s Bentayga X Transforms the Luxury SUV Into an Off-Road Bruiser - HiConsumption</title><link>https://hiconsumption.com/motors/2026-bentley-bentayga-x-concept/</link></item>
-<item><title>Canon’s G7 X Mark III Gets a Graphite Makeover for the PowerShot Line’s 30th Anniversary - HiConsumption</title><link>https://hiconsumption.com/tech/canon-powershot-g7-x-mark-iii-30th-anniversary/</link></item>
-<item><title>Buck’s Iconic 110 Folding Hunter Gets a Minimalist Mirror-Polished Aluminum Makeover - HiConsumption</title><link>https://hiconsumption.com/gear/buck-110-slim-2026-we-are-knifemakers-andrew-avoux/</link></item>
-<item><title>The North Face’s Advanced Mountain Kit Gets a Stealthy All-Black Makeover - HiConsumption</title><link>https://hiconsumption.com/gear/the-north-face-x-haven-amk-black-edition-collection/</link></item>
-<item><title>The Macallan Honors 007’s Diamonds Are Forever with an 18-Year Red Wine Cask Single Malt - HiConsumption</title><link>https://hiconsumption.com/vices/the-macallan-diamonds-are-forever-55th-anniversary-whisky/</link></item>
-<item><title>Sotheby’s Assembles the Most Valuable Single-Owner American Whiskey Collection Ever - HiConsumption</title><link>https://hiconsumption.com/vices/sothebys-the-great-american-whiskey-collection-auction/</link></item>
-<item><title>You Can Now Own All 19 Bottles of The Macallan’s Anniversary Malt Set for $168k - HiConsumption</title><link>https://hiconsumption.com/vices/the-macallan-anniversary-malt-complete-set-auction/</link></item>
-<item><title>Permalink to 在日本教華語 - 梅と桜</title><link>http://umesakura.jp/20260130192338.html</link></item>
-<item><title>Permalink to 八場水庫與吾妻溪谷 - 梅と桜</title><link>http://umesakura.jp/20251218222232.html</link></item>
-<item><title>Is the craft dead? - Scott Hanselman</title><link>http://feeds.hanselman.com/~/945480746/0/scotthanselman~Is-the-craft-dead</link></item>
-<item><title>The danger of glamourizing one shots - Scott Hanselman</title><link>http://feeds.hanselman.com/~/945480803/0/scotthanselman~The-danger-of-glamourizing-one-shots</link></item>
-<item><title>DOSBox performance improvements on     modern processors - Dedoimedo</title><link>https://www.dedoimedo.com/games/reviving/dosbox-performance-improvements.html</link></item>
-<item><title>Slimbook Titan report 8 - The rollercoaster goes up - Dedoimedo</title><link>https://www.dedoimedo.com/computers/slimbook-titan-report-8.html</link></item>
-<item><title>The Matrix and the silly use of humans as fuel - Dedoimedo</title><link>https://www.dedoimedo.com/physics/matrix-human-fuel.html</link></item>
-<item><title>VirtualBox can&amp;#39;t operate in VMX root mode - Dedoimedo</title><link>https://www.dedoimedo.com/computers/virtualbox-vmx-root.html</link></item>
-<item><title>Why Ubuntu? And the answer is, why not. - Dedoimedo</title><link>https://www.dedoimedo.com/computers/why-ubuntu.html</link></item>
-<item><title>Modifier keys in Linux virtual machines under macOS - Dedoimedo</title><link>https://www.dedoimedo.com/computers/macos-linux-keyboard-remap.html</link></item>
-<item><title>Some fresh macOS tips from a long-time PC user - Dedoimedo</title><link>https://www.dedoimedo.com/computers/macos-productivity-tips.html</link></item>
-<item><title>VirtualBox &amp; kernel driver not installed     error - Dedoimedo</title><link>https://www.dedoimedo.com/computers/virtualbox-kernel-driver-not-installed.html</link></item>
-<item><title>Windows 11 &amp; adaptive desktop brightness nonsense - Dedoimedo</title><link>https://www.dedoimedo.com/computers/windows-11-brightness-content.html</link></item>
-<item><title>Slimbook Executive report 12 - Still no joy - Dedoimedo</title><link>https://www.dedoimedo.com/computers/slimbook-executive-report-12.html</link></item>
-<item><title>MX Linux MX-25 Infinity Xfce - Jolly but not too chipper - Dedoimedo</title><link>https://www.dedoimedo.com/computers/mx-25-xfce.html</link></item>
-<item><title>How I assembled my own Plasma desktop - Dedoimedo</title><link>https://www.dedoimedo.com/computers/linux-my-own-plasma-desktop.html</link></item>
-<item><title>DOSBox, Linux and sound problems in various games - Dedoimedo</title><link>https://www.dedoimedo.com/games/reviving/dosbox-sound-midi.html</link></item>
-<item><title>Plasma 6.5 review - Solid improvements, destination unknown - Dedoimedo</title><link>https://www.dedoimedo.com/computers/plasma-6-5-review.html</link></item>
-<item><title>Samsung A54 report 10, after the calm comes the storm - Dedoimedo</title><link>https://www.dedoimedo.com/computers/samsung-a54-report-10.html</link></item>
-<item><title>Kubuntu 24.04, three dots later, it still keeps me on edge - Dedoimedo</title><link>https://www.dedoimedo.com/computers/kubuntu-24-04-3-good-bad.html</link></item>
-<item><title>VirtualBox, OVA import and E_INVALIDARG 0x80070057     error - Dedoimedo</title><link>https://www.dedoimedo.com/computers/virtualbox-ova-export-import.html</link></item>
-<item><title>KDE Daemon System Notification Helper annoyances - Dedoimedo</title><link>https://www.dedoimedo.com/computers/kde-system-notification-helper.html</link></item>
-<item><title>Mom, Windows 11 made me buy a Macbook! - Dedoimedo</title><link>https://www.dedoimedo.com/computers/macbook-pro-review.html</link></item>
-<item><title>Slimbook Executive report 11 - Many twists and turns - Dedoimedo</title><link>https://www.dedoimedo.com/computers/slimbook-executive-report-11.html</link></item>
-<item><title>Linux, VirtualBox freeze, unchecked MSR error - Dedoimedo</title><link>https://www.dedoimedo.com/computers/virtualbox-msr-error-freeze.html</link></item>
-<item><title>Disable animations and boost     performance in Windows 11 - Dedoimedo</title><link>https://www.dedoimedo.com/computers/windows-11-disable-animations-transparency.html</link></item>
-<item><title>Artifical Intelligence - Electronic Frontier Foundation</title><link>https://www.eff.org/issues/ai</link></item>
-<item><title>On Its 30th Birthday, Section 230 Remains The Lynchpin For Users’ Speech - Electronic Frontier Foundation</title><link>https://www.eff.org/deeplinks/2026/02/its-30th-birthday-section-230-remains-lynchpin-users-speech</link></item>
-<item><title>The Internet Still Works: Wikipedia Defends Its Editors - Electronic Frontier Foundation</title><link>https://www.eff.org/deeplinks/2026/02/internet-still-works-wikipedia-defends-its-editors</link></item>
-<item><title>Smart AI Policy Means Examining Its Real Harms and Benefits - Electronic Frontier Foundation</title><link>https://www.eff.org/deeplinks/2026/02/smart-ai-policy-means-understanding-its-real-harms-and-benefits</link></item>
-<item><title>EFFecting Change: Get the Flock Out of Our City - Electronic Frontier Foundation</title><link>https://www.eff.org/deeplinks/2026/02/effecting-change-get-flock-out-our-city</link></item>
-<item><title>The Internet Still Works: Yelp Protects Consumer Reviews - Electronic Frontier Foundation</title><link>https://www.eff.org/deeplinks/2026/02/internet-still-works-yelp-protects-consumer-reviews</link></item>
-<item><title>RIP Dave Farber, EFF Board Member and Friend - Electronic Frontier Foundation</title><link>https://www.eff.org/deeplinks/2026/02/rip-dave-farber-eff-board-member-and-friend</link></item>
-<item><title>Op-ed: Weakening Section 230 Would Chill Online Speech - Electronic Frontier Foundation</title><link>https://www.eff.org/deeplinks/2026/02/op-ed-weakening-section-230-would-chill-online-speech</link></item>
-<item><title>Yes to the “ICE Out of Our Faces Act” - Electronic Frontier Foundation</title><link>https://www.eff.org/deeplinks/2026/02/yes-ice-out-my-face-act</link></item>
-<item><title>descended into utter lawlessness - Electronic Frontier Foundation</title><link>https://www.eff.org/deeplinks/2026/01/eff-statement-lawless-actions-ice-and-cbp</link></item>
-<item><title>Protecting Our Right to Sue Federal Agents Who Violate the Constitution - Electronic Frontier Foundation</title><link>https://www.eff.org/deeplinks/2026/02/protecting-our-right-sue-federal-agents-who-violate-constitution</link></item>
-<item><title>EFF to Close Friday in Solidarity with National Shutdown - Electronic Frontier Foundation</title><link>https://www.eff.org/deeplinks/2026/01/eff-close-friday-solidarity-national-shutdown</link></item>
-<item><title>Protect Religious Liberty - The White House</title><link>https://www.whitehouse.gov/priorities/faith/</link></item>
-<item><title>Fact Sheet: The United States and India Announce Historic Trade Deal - The White House</title><link>https://www.whitehouse.gov/fact-sheets/2026/02/fact-sheet-the-united-states-and-india-announce-historic-trade-deal/</link></item>
-<item><title>Don’t Be a Panican. We’re Winning — and We’re Not Slowing Down. - The White House</title><link>https://www.whitehouse.gov/articles/2026/02/dont-be-a-panican-were-winning-and-were-not-slowing-down/</link></item>
-<item><title>Joint Statement on United States – Bangladesh Agreement on Reciprocal Trade - The White House</title><link>https://www.whitehouse.gov/briefings-statements/2026/02/joint-statement-on-framework-for-united-states-bangladesh-agreement-on-reciprocal-trade/</link></item>
-<item><title>Presidential Message on Super Bowl LX - The White House</title><link>https://www.whitehouse.gov/briefings-statements/2026/02/presidential-message-on-super-bowl-lx/</link></item>
-<item><title>Modifying Duties to Address Threats to the United States by the Government of the Russian Federation - The White House</title><link>https://www.whitehouse.gov/presidential-actions/2026/02/modifying-duties-to-address-threats-to-the-united-states-by-the-government-of-the-russian-federation-04b2/</link></item>
-<item><title>United States-India Joint Statement - The White House</title><link>https://www.whitehouse.gov/briefings-statements/2026/02/united-states-india-joint-statement/</link></item>
-<item><title>Establishing an America First Arms Transfer Strategy - The White House</title><link>https://www.whitehouse.gov/presidential-actions/2026/02/establishing-an-america-first-arms-transfer-strategy/</link></item>
-<item><title>Fact Sheet: President Donald J. Trump Establishes the America First Arms Transfer Strategy - The White House</title><link>https://www.whitehouse.gov/fact-sheets/2026/02/fact-sheet-president-donald-j-trump-establishes-the-america-first-arms-transfer-strategy/</link></item>
-<item><title>Fact Sheet: President Donald J. Trump Addresses Threats to the United States by the Government of Iran - The White House</title><link>https://www.whitehouse.gov/fact-sheets/2026/02/fact-sheet-president-donald-j-trump-addresses-threats-to-the-united-states-by-the-government-of-iran/</link></item>
-<item><title>Fact Sheet: President Donald J. Trump Ensures Affordable Beef for the American Consumer - The White House</title><link>https://www.whitehouse.gov/fact-sheets/2026/02/fact-sheet-president-donald-j-trump-ensures-affordable-beef-for-the-american-consumer/</link></item>
-<item><title>科技爱好者周刊（第 384 期）：为什么软件股下跌 - 阮一峰的网络日志</title><link>https://www.ruanyifeng.com/blog/2026/02/weekly-issue-384.html</link></item>
-<item><title>AI native Workspace 也许是智能体的下一阶段 - 阮一峰的网络日志</title><link>https://www.ruanyifeng.com/blog/2026/01/ai-native-workspace.html</link></item>
-<item><title>科技爱好者周刊（第 381 期）：中国 AI 大模型领导者在想什么 - 阮一峰的网络日志</title><link>https://www.ruanyifeng.com/blog/2026/01/weekly-issue-381.html</link></item>
-<item><title>科技爱好者周刊（第 380 期）：为什么人们拥抱&amp;quot;不对称收益&amp;quot; - 阮一峰的网络日志</title><link>https://www.ruanyifeng.com/blog/2026/01/weekly-issue-380.html</link></item>
-<item><title>科技爱好者周刊（第 379 期）：《硅谷钢铁侠》摘录 - 阮一峰的网络日志</title><link>https://www.ruanyifeng.com/blog/2025/12/weekly-issue-379.html</link></item>
-<item><title>Watch Bad Bunny Bring Puerto Rico and Pure Joy to His Super Bowl 2026 Halftime Show - Teen Vogue</title><link>https://www.teenvogue.com/story/bad-bunny-super-bowl-2026-halftime-show</link></item>
-<item><title>Blue Ivy Brings the It-Girl Bag of 2026 to the Super Bowl - Teen Vogue</title><link>https://www.teenvogue.com/story/blue-ivy-brings-the-it-girl-bag-of-2026-super-bowl</link></item>
-<item><title>Best Super Bowl Commercials of 2026: Sabrina, KATSEYE, and More - Teen Vogue</title><link>https://www.teenvogue.com/story/best-super-bowl-commercials-2026-watch-them-all</link></item>
-<item><title>Blue Ivy, SVT&amp;#39;s Joshua, and All the Celebrities at Super Bowl 2026 - Teen Vogue</title><link>https://www.teenvogue.com/story/blue-ivy-hailey-bieber-seventeen-joshua-super-bowl-2026-celebs</link></item>
-<item><title>Green Day’s Anti-Fascist History, From &amp;#39;American Idiot&amp;#39; to Guyliner - Teen Vogue</title><link>https://www.teenvogue.com/story/see-green-days-anti-fascist-history-ahead-of-super-bowl-2026</link></item>
-<item><title>How to Watch the Bad Bunny Halftime Show - Teen Vogue</title><link>https://www.teenvogue.com/story/how-to-watch-the-super-bowl-2026-and-halftime-show-with-bad-bunny#intcid=_teen-vogue-verso-hp-trending_beae24ce-3e1f-4ff9-8813-c92b6ff0784a_popular4-2</link></item>
-<item><title>So You Love Real Person Fiction…Here&amp;#39;s How to Read and Write It Ethically - Teen Vogue</title><link>https://www.teenvogue.com/story/what-is-rpf-and-how-do-i-write-and-read-it-ethically#intcid=_teen-vogue-verso-hp-trending_beae24ce-3e1f-4ff9-8813-c92b6ff0784a_popular4-2</link></item>
-<item><title>Rosy Brown Lipstick Is Your Answer to the Cool-Toned Makeup Trend of Winter 2026 - Teen Vogue</title><link>https://www.teenvogue.com/story/brown-lipstick-trend</link></item>
-<item><title>Hudson Williams Reveals His Scent Routine for Steamy ‘Heated Rivalry’ Scenes - Teen Vogue</title><link>https://www.teenvogue.com/story/heated-rivalrys-hudson-williams-reveals-scent-routine-for-steamy-scenes</link></item>
-<item><title>The Real World of Grace Van Patten &amp; Jackson White - Teen Vogue</title><link>https://www.teenvogue.com/story/grace-van-patten-jackson-white-tell-me-lies-cover-janfeb-2026</link></item>
-<item><title>Mckenna Grace, Relentless Optimist - Teen Vogue</title><link>https://www.teenvogue.com/story/mckenna-grace-new-hollywood-2025-cover-interview</link></item>
-<item><title>Mason Thames, Hollywood Heartthrob - Teen Vogue</title><link>https://www.teenvogue.com/story/mason-thames-new-hollywood-2025-cover-interview</link></item>
-<item><title>Leah Sava Jeffries, Transcendent Talent - Teen Vogue</title><link>https://www.teenvogue.com/story/leah-jeffries-new-hollywood-2025-cover-interview</link></item>
-<item><title>Wuthering Heights Star Charlotte Mellington Finally Met Charli XCX: &amp;#39;She&amp;#39;s the Sweetest!&amp;#39; - Teen Vogue</title><link>https://www.teenvogue.com/story/wuthering-heights-charlotte-mellington-premiere-interview</link></item>
-<item><title>Bad Bunny’s Halftime Show Was Party as Protest - Teen Vogue</title><link>https://www.teenvogue.com/story/bad-bunny-super-bowl-2026-halftime-show-puerto-rican-history</link></item>
-<item><title>Your Valentine&amp;#39;s Day Horoscope: Take Control of Your Destiny - Teen Vogue</title><link>https://www.teenvogue.com/story/weekly-horoscope-february-9-february-15-2026</link></item>
-<item><title>Mckenna Grace Loves Feeling Like a Peach Gummy Ring With This Perfume - Teen Vogue</title><link>https://www.teenvogue.com/story/mckenna-grace-peach-gummy-ring-perfume-dior-addict-launch-party-grwm-interview</link></item>
-<item><title>How to Watch the Winter Olympics Opening Ceremony - Teen Vogue</title><link>https://www.teenvogue.com/story/how-to-watch-winter-olympics-2026</link></item>
-<item><title>The Annular Solar Eclipse Will Bring a ‘Ring of Fire.’ Take It as a Call to Action - Teen Vogue</title><link>https://www.teenvogue.com/story/eclipse-guide-2026-how-to-maximize-its-power</link></item>
-<item><title>ENHYPEN&amp;#39;s Sunghoon Knows Fans Love to See His Old Figure Skating Videos - Teen Vogue</title><link>https://www.teenvogue.com/story/enhypen-sunghoon-winter-olympics-2026-torchbearer-interview</link></item>
-<item><title>10 Best Valentine&amp;#39;s Day Outfit Ideas to Make the Day Feel Special - Teen Vogue</title><link>https://www.teenvogue.com/story/valentines-day-outfit-ideas</link></item>
-<item><title>Everything We Know About BTS&amp;#39;s 2026 Comeback and Tour - Teen Vogue</title><link>https://www.teenvogue.com/story/bts-2026-comeback-tour-everything-you-need-to-know</link></item>
-<item><title>KATSEYE Used These Underrated OPI Shades for Their Grammys Nails - Teen Vogue</title><link>https://www.teenvogue.com/story/all-the-details-behind-katseyes-grammys-2026-manicures</link></item>
-<item><title>Inside Avantika&amp;#39;s Star-Studded 21st Birthday Party - Teen Vogue</title><link>https://www.teenvogue.com/story/avantika-turned-21-star-studded-birthday-party-essay</link></item>
-<item><title>快到离谱！voidImageViewer 比图片还小的免费“极速看图”神器 (出自 Everything 团队) - 异次元软件世界</title><link>https://www.iplaysoft.com/void-image-viewer.html</link></item>
-<item><title>新年 31 款正版软件 5 折起！Bartender / XYplorer / Fences / Downie 等… - 异次元软件世界</title><link>https://www.iplaysoft.com/news/6487</link></item>
-<item><title>Minxin Pei: February 3, 2026 - Foreign Correspondents' Club of China</title><link>https://fccchina.org/2026/02/03/minxin-pei-february-3-2026/</link></item>
-<item><title>Chad Sbragia: February 2, 2026 - Foreign Correspondents' Club of China</title><link>https://fccchina.org/2026/02/02/chad-sbragia-february-2-2026/</link></item>
-<item><title>Francisco Urdinez: January 30, 2026 - Foreign Correspondents' Club of China</title><link>https://fccchina.org/2026/01/30/francisco-urdinez-january-30-2026/</link></item>
-<item><title>Andrew Small: December 9, 2025 - Foreign Correspondents' Club of China</title><link>https://fccchina.org/2025/12/09/andrew-small-december-9-2025/</link></item>
+<lastBuildDate>Wed, 11 Feb 2026 09:11:38 +0800</lastBuildDate>
+<item><title>The Cost of AI Slop in Lines of Code - SD Times</title><link>https://sdtimes.com/ai/the-cost-of-ai-slop-in-lines-of-code/</link></item>
+<item><title>Security professionals express concern over OpenClaw - SD Times</title><link>https://sdtimes.com/ai/security-professionals-express-concern-over-openclaw/</link></item>
+<item><title>Planview releases Connected Work Graph to provide insights into relationships across teams and initiatives - SD Times</title><link>https://sdtimes.com/softwaredev/planview-releases-connected-work-graph-to-provide-insights-into-relationships-across-teams-and-initiatives/</link></item>
+<item><title>People don’t belong in the loop — They belong at the center - SD Times</title><link>https://sdtimes.com/ai/people-dont-belong-in-the-loop-they-belong-at-the-center/</link></item>
+<item><title>How to Design the Software Engineering Organization to Deliver Business Value - SD Times</title><link>https://sdtimes.com/softwaredev/how-to-design-the-software-engineering-organization-to-deliver-business-value/</link></item>
+<item><title>This week in AI updates: Claude Opus 4.6, GPT-5.3-Codex, and more (February 6, 2026) - SD Times</title><link>https://sdtimes.com/ai/this-week-in-ai-updates-claude-opus-4-6-gpt-5-3-codex-and-more-february-6-2026/</link></item>
+<item><title>Introducing CoreWeave ARENA, New Lab for AI Production Readiness - SD Times</title><link>https://sdtimes.com/introducing-coreweave-arena-new-lab-for-ai-production-readiness/</link></item>
+<item><title>Google previews Developer Knowledge API, MCP server that will make it easier to access docs for Google services - SD Times</title><link>https://sdtimes.com/softwaredev/google-previews-developer-knowledge-api-mcp-server-to-make-it-easier-to-access-docs-for-google-services/</link></item>
+<item><title>Xcode 26.3 adds agentic coding support - SD Times</title><link>https://sdtimes.com/ai/xcode-26-3-adds-agentic-coding-support/</link></item>
+<item><title>The Shift from Chaos to Controlled Reliability Testing - SD Times</title><link>https://sdtimes.com/test/the-shift-from-chaos-to-controlled-reliability-testing/</link></item>
+<item><title>Unveiling Android X: The Next Generation of Android Development - Our Code World</title><link>https://ourcodeworld.com/articles/read/2189/unveiling-android-x-the-next-generation-of-android-development</link></item>
+<item><title>How Canadian Businesses Choose the Right Web Design Agency (Step-by-Step Guide) - Our Code World</title><link>https://ourcodeworld.com/articles/read/2692/how-canadian-businesses-choose-the-right-web-design-agency-step-by-step-guide</link></item>
+<item><title>Uri Poliavich: Architecting Scalable Technology Platforms with a Global Vision - Our Code World</title><link>https://ourcodeworld.com/articles/read/2691/uri-poliavich-architecting-scalable-technology-platforms-with-a-global-vision</link></item>
+<item><title>Collection Framework in Java – Complete Guide - Our Code World</title><link>https://ourcodeworld.com/articles/read/2689/collection-framework-in-java-complete-guide</link></item>
+<item><title>Kling 3.0-Style Short Clips in a Real Workflow: Turning a Still Into Video (and Extending It) Without the “Processed” Look - Our Code World</title><link>https://ourcodeworld.com/articles/read/2688/kling-30-style-short-clips-in-a-real-workflow-turning-a-still-into-video-and-extending-it-without-the-processed-look</link></item>
+<item><title>How Email Accuracy Affects Digital Outreach Efforts - Our Code World</title><link>https://ourcodeworld.com/articles/read/2687/how-email-accuracy-affects-digital-outreach-efforts</link></item>
+<item><title>How Web Technologies Power Modern Digital Signage - Our Code World</title><link>https://ourcodeworld.com/articles/read/2686/how-web-technologies-power-modern-digital-signage</link></item>
+<item><title>Tech Revolution in Modern Landscaping: AI, Robotics, and Smart Systems Transforming Outdoor Spaces - Our Code World</title><link>https://ourcodeworld.com/articles/read/2685/tech-revolution-in-modern-landscaping-ai-robotics-and-smart-systems-transforming-outdoor-spaces</link></item>
+<item><title>How to Call SAP OData Services with Python - Our Code World</title><link>https://ourcodeworld.com/articles/read/2684/how-to-call-sap-odata-services-with-python</link></item>
+<item><title>Painted by Hand, a Stop-Motion Film Eulogizes a Lost Childhood Home - Colossal</title><link>https://www.thisiscolossal.com/2026/02/jason-mitcham-ever-behind-the-sunset-film/</link></item>
+<item><title>Amoako Boafo Weaves His Portraiture into an Architectural Replica of His Accra Studio - Colossal</title><link>https://www.thisiscolossal.com/2026/02/amoako-boafo-portraits/</link></item>
+<item><title>In ‘Altai,’ Photographer Claire Thomas Chronicles a Time-Honored Way of Life in Mongolia - Colossal</title><link>https://www.thisiscolossal.com/2026/02/altai-hunters-herders-mongolia-claire-thomas-photography-book/</link></item>
+<item><title>In Collaboration with Indigenous Artisans Around the World, PET Lamp Emphasizes Sustainability - Colossal</title><link>https://www.thisiscolossal.com/2026/02/pet-lamp-global-artisans-lighting-design/</link></item>
+<item><title>Victoria Dugger Reinterprets the American Flag in Glitter and Fringe - Colossal</title><link>https://www.thisiscolossal.com/2026/02/victoria-dugger-mixed-media-freak-flags/</link></item>
+<item><title>A Painterly Short Film Follows Alfred Nakache from Swimming Star to Holocaust Survivor - Colossal</title><link>https://www.thisiscolossal.com/2026/02/papillon-florence-miailhe-short-animated-film/</link></item>
+<item><title>Through Vivid Color, Martin Wittfooth Revels in Surreal Worlds - Colossal</title><link>https://www.thisiscolossal.com/2026/02/martin-wittfooth-surreal-paintings/</link></item>
+<item><title>The Forest-Like Interior of Coral Takes the Grand Prize in the CUPOTY 7 Photo Contest - Colossal</title><link>https://www.thisiscolossal.com/2026/02/cupoty-7-nature-photography-contest-winners/</link></item>
+<item><title>Tara Donovan’s ‘Stratagems’ Tower Within a San Francisco Architectural Icon - Colossal</title><link>https://www.thisiscolossal.com/2026/02/tara-donovans-stratagems-sculptures-transamerica-pyramid-center/</link></item>
+<item><title>A Major Survey in Paris Chronicles Leonora Carrington’s Esoteric Surrealism - Colossal</title><link>https://www.thisiscolossal.com/2026/02/leonora-carrington-paintings-retrospective-musee-du-luxembourg/</link></item>
+<item><title>Vote for the 2025 Wildlife Photographer of the Year People’s Choice Award - Colossal</title><link>https://www.thisiscolossal.com/2026/02/peoples-choice-award-2025-wildlife-photographer-of-the-year-contest/</link></item>
+<item><title>‘Where the World is Melting’ Documents Communities Amid Indelible Changes in the Arctic - Colossal</title><link>https://www.thisiscolossal.com/2026/02/where-the-world-is-melting-ragnar-axelsson-photography/</link></item>
+<item><title>Bruno Pontiroli Tests the Boundaries of Familiarity in His Uncanny Wildlife Paintings - Colossal</title><link>https://www.thisiscolossal.com/2026/02/bruno-pontiroli-absurd-animals-paintings/</link></item>
+<item><title>Vilcek Prizes Awarded to Immigrants in Fashion for Innovative Design - Colossal</title><link>https://www.thisiscolossal.com/2026/02/vilcek-prizes-2026-fashion-prizes/</link></item>
+<item><title>Wenting Zhu Cultivates a Kaleidoscopic Garden of Crystals in 100+ Petri Dishes - Colossal</title><link>https://www.thisiscolossal.com/2026/02/wenting-zhu-crystal-garden-seasons-video/</link></item>
+<item><title>A Celestial Nest by Atelier YokYok Lands on a Former Farm in Eastern Portugal - Colossal</title><link>https://www.thisiscolossal.com/2026/02/atelier-yokyok-ninho-globo-schist-sculpture-installation/</link></item>
+<item><title>‘Sarah Stone’s Unseen World’ Highlights Avian Paintings by an 18th-Century Talent - Colossal</title><link>https://www.thisiscolossal.com/2026/02/sarah-stone-unseen-world-watercolor-paintings-birds/</link></item>
+<item><title>AI 没有减少工作量而是增加了工作强度 - Solidot</title><link>https://www.solidot.org/story?sid=83522</link></item>
+<item><title>AI 写的编译器都能编译内核了，但我还是无动于衷 - Solidot</title><link>https://www.solidot.org/story?sid=83523</link></item>
+<item><title>Discord 将验证用户年龄 - Solidot</title><link>https://www.solidot.org/story?sid=83524</link></item>
+<item><title>欧洲政府悄然普及 Matrix - Solidot</title><link>https://www.solidot.org/story?sid=83525</link></item>
+<item><title>Google 计划发行百年债券为 AI 筹集资金 - Solidot</title><link>https://www.solidot.org/story?sid=83526</link></item>
+<item><title>美国 AI 初创公司盛行 996 工作制 - Solidot</title><link>https://www.solidot.org/story?sid=83527</link></item>
+<item><title>YouTube Music 限制免费用户查看歌词 - Solidot</title><link>https://www.solidot.org/story?sid=83528</link></item>
+<item><title>素食幼儿的生长速度与杂食幼儿相同 - Solidot</title><link>https://www.solidot.org/story?sid=83529</link></item>
+<item><title>电动汽车有助于改善空气质量 - Solidot</title><link>https://www.solidot.org/story?sid=83530</link></item>
+<item><title>单次饮酒就能显著改变大脑内部通信 - Solidot</title><link>https://www.solidot.org/story?sid=83520</link></item>
+<item><title>NASA 允许宇航员携带智能手机去月球 - Solidot</title><link>https://www.solidot.org/story?sid=83519</link></item>
+<item><title>SpaceX 优先建月球城市而不是火星城市 - Solidot</title><link>https://www.solidot.org/story?sid=83518</link></item>
+<item><title>The Evolution of Lunch Box- These cool vintage lunch boxes will bring back nostalgia - The Vintage News</title><link>https://www.thevintagenews.com/2016/01/28/48566/</link></item>
+<item><title>&amp;#39;Silver ingot&amp;#39; from legendary pirate Captain Kidd&amp;#39;s treasure horde discovered off Madagascar is a FAKE - The Vintage News</title><link>https://www.thevintagenews.com/2015/11/05/silver-ingot-from-legendary-pirate-captain-kidds-treasure-horde-discovered-off-madagascar-is-a-fake/</link></item>
+<item><title>The Grave of the &amp;quot;Griffin Warrior&amp;quot; - A bronze age tomb filled with epic treasures was found near the palace of the legendary king Nestor - The Vintage News</title><link>https://www.thevintagenews.com/2015/11/07/the-grave-of-the-griffin-warrior-a-bronze-age-tomb-filled-with-epic-treasures-was-found-near-the-palace-of-the-legendary-king-nestor/</link></item>
+<item><title>An 1800 election controversy in the United States - The Vintage News</title><link>https://www.thevintagenews.com/2016/04/29/1800-election-controversy-united-states/</link></item>
+<item><title>Release calendar - IMDb</title><link>https://www.imdb.com/calendar/?ref_=nwc_nv_menu</link></item>
+<item><title>Most popular movies - IMDb</title><link>https://www.imdb.com/chart/moviemeter/?ref_=nwc_nv_menu</link></item>
+<item><title>Browse movies by genre - IMDb</title><link>https://www.imdb.com/interest/all/?ref_=nwc_nv_menu</link></item>
+<item><title>Top box office - IMDb</title><link>https://www.imdb.com/chart/boxoffice/?ref_=nwc_nv_menu</link></item>
+<item><title>Showtimes &amp; tickets - IMDb</title><link>https://www.imdb.com/showtimes/?ref_=nwc_nv_menu</link></item>
+<item><title>India movie spotlight - IMDb</title><link>https://www.imdb.com/india/top-rated-indian-movies/?ref_=nwc_nv_menu</link></item>
+<item><title>What&amp;#39;s on TV &amp; streaming - IMDb</title><link>https://www.imdb.com/whats-on-tv/?ref_=nwc_nv_menu</link></item>
+<item><title>Most popular TV shows - IMDb</title><link>https://www.imdb.com/chart/tvmeter/?ref_=nwc_nv_menu</link></item>
+<item><title>What to watch - IMDb</title><link>https://www.imdb.com/what-to-watch/?ref_=nwc_nv_menu</link></item>
+<item><title>Latest trailers - IMDb</title><link>https://www.imdb.com/trailers/?ref_=nwc_nv_menu</link></item>
+<item><title>IMDb Originals - IMDb</title><link>https://www.imdb.com/originals/?ref_=nwc_nv_menu</link></item>
+<item><title>Family entertainment guide - IMDb</title><link>https://www.imdb.com/family-entertainment-guide/?ref_=nwc_nv_menu</link></item>
+<item><title>Black History Month - IMDb</title><link>https://www.imdb.com/spotlight/?ref_=nv_ev_csegbhm</link></item>
+<item><title>Red Carpet Photos - IMDb</title><link>https://www.imdb.com/awards-central/2026-awards-season-red-carpet/rg1289459712/mediaviewer/rm2053757698/?ref_=nv_ev_csegawds</link></item>
+<item><title>Most popular celebs - IMDb</title><link>https://www.imdb.com/chart/starmeter/?ref_=nwc_nv_menu</link></item>
+<item><title>Celebrity news - IMDb</title><link>https://www.imdb.com/news/celebrity/?ref_=nwc_nv_menu</link></item>
+<item><title>Contributor zone - IMDb</title><link>https://contribute.imdb.com/czone?ref_=nv_menu_cm_cz</link></item>
+<item><title>The Mummy Returns - IMDb</title><link>https://www.imdb.com/title/tt0209163/</link></item>
+<item><title>The Mummy: Tomb of the Dragon Emperor - IMDb</title><link>https://www.imdb.com/title/tt0859163/</link></item>
+<item><title>Radio Silence - IMDb</title><link>https://www.imdb.com/company/co0800521/</link></item>
+<item><title>Wuthering Heights - IMDb</title><link>https://www.imdb.com/title/tt32897959/</link></item>
+<item><title>Stranger Things: The First Shadow - IMDb</title><link>https://www.imdb.com/title/tt39333472/</link></item>
+<item><title>Gerald&amp;#39;s Game - IMDb</title><link>https://www.imdb.com/title/tt3748172/</link></item>
+<item><title>The Life Of Chuck - IMDb</title><link>https://www.imdb.com/title/tt12908150/</link></item>
+<item><title>The Dark Tower - IMDb</title><link>https://www.imdb.com/title/tt1648190/</link></item>
+<item><title>I Want Your Sex - IMDb</title><link>https://www.imdb.com/title/tt32332915/</link></item>
+<item><title>The Girl on the Train - IMDb</title><link>https://www.imdb.com/title/tt3631112/</link></item>
+<item><title>Don’t Worry Darling - IMDb</title><link>https://www.imdb.com/title/tt10731256/</link></item>
+<item><title>Song Sung Blue - IMDb</title><link>https://www.imdb.com/title/tt30343021/</link></item>
+<item><title>One Battle After Another - IMDb</title><link>https://www.imdb.com/title/tt30144839/</link></item>
+<item><title>Frankenstein - IMDb</title><link>https://www.imdb.com/title/tt1312221/</link></item>
+<item><title>Sentimental Value - IMDb</title><link>https://www.imdb.com/title/tt27714581/</link></item>
+<item><title>Fantastic Four - IMDb</title><link>https://www.imdb.com/title/tt0120667/</link></item>
+<item><title>Seattle Seahawks - IMDb</title><link>https://www.imdb.com/company/co0790678/</link></item>
+<item><title>Marty Supreme - IMDb</title><link>https://www.imdb.com/title/tt32916440/</link></item>
+<item><title>A Knight of the Seven Kingdoms - IMDb</title><link>https://www.imdb.com/title/tt27497448/</link></item>
+<item><title>The Spoils of War - IMDb</title><link>https://www.imdb.com/title/tt0373622/</link></item>
+<item><title>Sonia Friedman Productions - IMDb</title><link>https://www.imdb.com/company/co0124510/</link></item>
+<item><title>A Cure for Wellness - IMDb</title><link>https://www.imdb.com/title/tt4731136/</link></item>
+<item><title>Good Luck, Have Fun, Don’t Die - IMDb</title><link>https://www.imdb.com/title/tt1341338/</link></item>
+<item><title>The Golden Life - IMDb</title><link>https://www.imdb.com/title/tt39602642/</link></item>
+<item><title>Blink49 Studios - IMDb</title><link>https://www.imdb.com/company/co0913251/</link></item>
+<item><title>Ninja Turtles - IMDb</title><link>https://www.imdb.com/title/tt1291150/</link></item>
+<item><title>The Real Housewives of New York City - IMDb</title><link>https://www.imdb.com/title/tt1191056/</link></item>
+<item><title>Steven Universe - IMDb</title><link>https://www.imdb.com/title/tt3061046/</link></item>
+<item><title>The Mitchells vs the Machines - IMDb</title><link>https://www.imdb.com/title/tt7979580/</link></item>
+<item><title>The Lincoln Lawyer - IMDb</title><link>https://www.imdb.com/title/tt13833978/</link></item>
+<item><title>Scatena &amp; Rosner Films - IMDb</title><link>https://www.imdb.com/company/co0289302/</link></item>
+<item><title>The Wrecking Crew - IMDb</title><link>https://www.imdb.com/title/tt33046197/</link></item>
+<item><title>Darkest Hour - IMDb</title><link>https://www.imdb.com/title/tt4555426/</link></item>
+<item><title>Small Things Like These - IMDb</title><link>https://www.imdb.com/title/tt27196021/</link></item>
+<item><title>The Education of Jane Cumming - IMDb</title><link>https://www.imdb.com/title/tt27811182/</link></item>
+<item><title>Apple Original Films - IMDb</title><link>https://www.imdb.com/company/co0822606/</link></item>
+<item><title>Apple Studios - IMDb</title><link>https://www.imdb.com/company/co0861654/</link></item>
+<item><title>Sign in for more access - IMDb</title><link>https://www.imdb.com/registration/signin/?u=%2F&amp;ref_=nwc_ftr_reg</link></item>
+<item><title>C.A.M.P. X-Dream Ice Tools: Continuing the Long Evolution of Ice and Mixed Climbing Hardware - Alpinist</title><link>https://alpinist.com/mountain-standards/c-a-m-p-x-dream-ice-tools-continuing-the-long-evolution-of-ice-and-mixed-climbing-hardware/</link></item>
 </channel></rss>

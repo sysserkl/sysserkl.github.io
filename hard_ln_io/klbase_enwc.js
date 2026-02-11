@@ -402,8 +402,8 @@ function days_enwc_b(only_plan=false){
 	var date1_tmp=default_date_b('',true);
 	var year_tmp=date1_tmp.getFullYear();
 	
-    var wordscount=[2026,20800];
-    var year_increment=1640;    //合适的数值可显示结果为万位整数 - 保留注释
+    var wordscount=[2026,21200];
+    var year_increment=2000;    //合适的数值可显示结果为万位整数 - 保留注释
     if (year_tmp>wordscount[0]){
         wordscount[1]=wordscount[1]+year_increment*(year_tmp-wordscount[0]);    //先修改wordscount[1] - 保留注释
         wordscount[0]=wordscount[0]+year_tmp-wordscount[0];
