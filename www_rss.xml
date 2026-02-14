@@ -8,27 +8,398 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Fri, 13 Feb 2026 08:29:14 +0800</lastBuildDate>
-<item><title>Oli&amp;#39;s Italiano: Alan Prekop Reimagines a Bratislava Restaurant as a Mediterranean Streetscape - Yatzer</title><link>https://www.yatzer.com/olis-italiano-bratislava-alan-prekop</link></item>
-<item><title>Aviation Discipline Meets Design Precision at +kouple&amp;#39;s AEROTIM Hangar - Yatzer</title><link>https://www.yatzer.com/aerotim-hangar-ukraine-pluskouple</link></item>
-<item><title>Design In Motion - Yatzer</title><link>https://www.yatzer.com/category/transportation</link></item>
-<item><title>Chesa Marchetta: Artfarm&amp;#39;s Art-Led Transformation of a Historic Alpine Guesthouse in Sils Maria - Yatzer</title><link>https://www.yatzer.com/chesa-marchetta-sils-maria</link></item>
-<item><title>Down in the Clouds: Industrial Logic Meets Playful Experimentation in the Rice Fields of Suzhou - Yatzer</title><link>https://www.yatzer.com/down-in-the-clouds-suzhou-china</link></item>
-<item><title>Casa Corten: A Site-Driven House by HPA Arquitetura in Northern Portugal - Yatzer</title><link>https://www.yatzer.com/casa-corten-portugal-hpa-arquitetura</link></item>
-<item><title>Neema Maison Finikia Santorini: A Fashion-Forward Take on Cycladic Hospitality - Yatzer</title><link>https://www.yatzer.com/neema-maison-finikia-santorini-greece</link></item>
-<item><title>Highguard 开发商裁掉大部分员工 - Solidot</title><link>https://www.solidot.org/story?sid=83550</link></item>
-<item><title>重编程特定神经元能恢复小鼠记忆功能 - Solidot</title><link>https://www.solidot.org/story?sid=83549</link></item>
-<item><title>人类的总能量消耗受到限制 - Solidot</title><link>https://www.solidot.org/story?sid=83548</link></item>
-<item><title>惠普推出游戏笔记本订阅服务 - Solidot</title><link>https://www.solidot.org/story?sid=83547</link></item>
-<item><title>大部分美国人不会付费阅读新闻 - Solidot</title><link>https://www.solidot.org/story?sid=83546</link></item>
-<item><title>俄罗斯屏蔽 WhatsApp - Solidot</title><link>https://www.solidot.org/story?sid=83544</link></item>
-<item><title>安娜的档案悄悄发布 Spotify 音乐文件 - Solidot</title><link>https://www.solidot.org/story?sid=83543</link></item>
-<item><title>Archive.today 对博主发动 DDoS 攻击，维基百科考虑将其屏蔽 - Solidot</title><link>https://www.solidot.org/story?sid=83542</link></item>
-<item><title>Wuthering Heights - Vulture</title><link>https://www.vulture.com/tags/wuthering-heights/</link></item>
-<item><title>Itchy Grass Is Greener - Vulture</title><link>https://www.vulture.com/article/southern-charm-recap-season-11-episode-11-bravo.html</link></item>
-<item><title>Group Therapy - Vulture</title><link>https://www.vulture.com/article/love-is-blind-recap-season-10-episodes-1-6-netflix.html</link></item>
-<item><title>A House Divided - Vulture</title><link>https://www.vulture.com/article/summer-house-recap-premiere-season-10-episode-2-bravo.html</link></item>
-<item><title>I’ve Never Met Such a Person in My Life - Vulture</title><link>https://www.vulture.com/article/below-deck-down-under-recap-season-4-episode-2-bravo.html</link></item>
-<item><title>Down at the Dog Track - Vulture</title><link>https://www.vulture.com/article/all-creatures-great-and-small-recap-season-6-episode-5-pbs.html</link></item>
-<item><title>Honey, This Is How You Throw a Party in Mykonos, Bitch - Vulture</title><link>https://www.vulture.com/article/rupauls-drag-race-recap-season-18-episode-6-the-rate-a-queen-talent-show-part-2-mtv.html</link></item>
+<lastBuildDate>Sat, 14 Feb 2026 08:57:34 +0800</lastBuildDate>
+<item><title>Travel Advice - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/category/travel-advice</link></item>
+<item><title>10 of the best weekend trips in Europe for short escapes - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-weekend-trips-in-europe</link></item>
+<item><title>10 important things to know before visiting Florence - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/things-to-know-before-traveling-to-florence</link></item>
+<item><title>A guide to Patagonia, Argentina - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/guide-to-patagonia</link></item>
+<item><title>The best things to do in London with kids on a family trip - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/london-with-kids</link></item>
+<item><title>A seasonal guide to visiting Lima, Peru - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-time-to-visit-lima</link></item>
+<item><title>A 2-week journey by train in Kazakhstan - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/train-travel-kazakhstan</link></item>
+<item><title>A guide to Phoenix, Arizona - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/guide-to-phoenix</link></item>
+<item><title>Top free things to do in Seville - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/free-things-seville</link></item>
+<item><title>When is the best time to visit Mexico? - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-time-to-visit-mexico</link></item>
+<item><title>The women of the Tha Kha Floating Market - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/tha-kha-floating-market-thailand</link></item>
+<item><title>The best sleeper-train journeys across Europe - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/europes-best-night-trains</link></item>
+<item><title>How to connect with nature in Namibia - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/natural-namibia</link></item>
+<item><title>Spain itineraries: 6 great routes that cover the whole country - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-spain-itineraries</link></item>
+<item><title>5 itineraries to see the best of Portugal - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-portugal-itineraries</link></item>
+<item><title>The best ways to travel around in Puglia, Italy - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/getting-around-puglia</link></item>
+<item><title>A guide to the San Juan Islands, Washington - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/first-time-guide-to-san-juan-islands</link></item>
+<item><title>35 dos and don&amp;#39;ts for travelers in Japan - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/essential-tourist-rules-for-japan</link></item>
+<item><title>The best things to do with kids in Italy - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/italy-with-kids</link></item>
+<item><title>The 14 best things to do in Kraków, Poland - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/top-things-to-do-in-krakow</link></item>
+<item><title>16 top things to do in and around İzmir, Türkiye - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/things-to-do-in-izmir</link></item>
+<item><title>The best time to visit Puglia, Italy - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-time-to-visit-puglia</link></item>
+<item><title>The best day trips from Kyoto - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-day-trips-from-kyoto</link></item>
+<item><title>24 essential travel rules for Spain - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/what-not-to-do-as-a-tourist-in-spain</link></item>
+<item><title>10 things to know before traveling to Peru - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/things-to-know-before-traveling-to-peru</link></item>
+<item><title>Highland hygge: 6 ways to find coorie in Scotland - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/coorie-in-scotland</link></item>
+<item><title>10 tips for enjoying Singapore on a budget - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/singapore-on-a-budget</link></item>
+<item><title>The best neighborhoods to visit in Mexico City - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-neighborhoods-in-mexico-city</link></item>
+<item><title>Costumes from Carnival the world over - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/carnival-photo-around-the-world-brazil-new-orleans</link></item>
+<item><title>A guide to Cairo, Egypt - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/guide-to-cairo</link></item>
+<item><title>Guide to island-hopping around the Azores - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/getting-around-the-azores</link></item>
+<item><title>The 8 best areas to stay in Cancún - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-neighborhoods-in-cancun</link></item>
+<item><title>Visit Tropea for an Italian beach vacation without the crowds - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/why-you-should-visit-tropea-italy</link></item>
+<item><title>12 things to know before traveling to Turin, Italy - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/things-to-know-before-traveling-to-turin</link></item>
+<item><title>A traveling soccer fan&amp;#39;s guide to the 2026 World Cup host cities - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/world-cup-2026-best-city</link></item>
+<item><title>Do I need a visa to travel to Portugal? - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/visa-requirements-for-portugal</link></item>
+<item><title>12 of the most beautiful towns and villages in Italy - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-italian-small-towns-villages-to-visit</link></item>
+<item><title>How to travel by train in Italy - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/exploring-italy-by-train</link></item>
+<item><title>A guide to outdoor adventures in Egypt - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/guide-to-outdoor-adventures-in-egypt</link></item>
+<item><title>10 tips to budget for a dream trip - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/how-to-budget-for-a-big-trip</link></item>
+<item><title>The top free things to do in Utah - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/top-free-things-to-do-in-utah</link></item>
+<item><title>The 11 best things to do in Vienna - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-things-to-do-in-vienna</link></item>
+<item><title>How to navigate the Alaska Marine Highway ferry system - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/sailing-alaska-marine-highway</link></item>
+<item><title>Explore Sicily: 3 of the island&amp;#39;s best itineraries - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-sicily-itineraries</link></item>
+<item><title>The 12 best places in Norway - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-places-to-visit-in-norway</link></item>
+<item><title>A guide to solo travel in Botswana - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/guide-to-solo-travel-in-botswana</link></item>
+<item><title>14 things to know before visiting Iceland - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/things-to-know-before-traveling-to-iceland</link></item>
+<item><title>10 things to know before traveling to Barcelona - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/things-to-know-before-traveling-to-barcelona</link></item>
+<item><title>Ultimate weekend in Cape Town - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/three-day-itinerary-cape-town</link></item>
+<item><title>Guide to Italy - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/first-time-guide-to-italy</link></item>
+<item><title>The best time to visit Albania - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-time-to-visit-albania</link></item>
+<item><title>London&amp;#39;s most charming bookshops - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-london-bookshops-to-visit</link></item>
+<item><title>Where to see cherry blossoms in Japan in 2026 - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/cherry-blossom-season</link></item>
+<item><title>10 essential New York tips for first-time visitors to the city - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/things-to-know-new-york-city</link></item>
+<item><title>17 of the best beaches in Hawaii - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-beaches-hawaii</link></item>
+<item><title>13 of the best places to visit in China - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-places-to-visit-in-china</link></item>
+<item><title>Lisbon vs Porto: which riverside city is right for you? - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/lisbon-vs-porto</link></item>
+<item><title>What Does &amp;quot;Wuthering&amp;quot; Mean in &amp;#39;Wuthering Heights?&amp;#39; - Mental Floss</title><link>https://www.mentalfloss.com/language/words/what-does-wuthering-mean-in-wuthering-heights</link></item>
+<item><title>Route 66 Road Trip: Must-See Stops From Illinois to California - Mental Floss</title><link>https://www.mentalfloss.com/geography/wanderlust/route-66-must-visit-attractions</link></item>
+<item><title>The 5 Best &amp;#39;Wuthering Heights&amp;#39; Adaptations, According to Rotten Tomatoes - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/movies/best-wuthering-heights-adaptations-rotten-tomatoes</link></item>
+<item><title>The Unexpected Origin of Galentine’s Day - Mental Floss</title><link>https://www.mentalfloss.com/holidays/the-unexpected-origins-of-galentines-day</link></item>
+<item><title>The Surprisingly Medieval Origins of the Modern Romance Movie - Mental Floss</title><link>https://www.mentalfloss.com/history/medieval-origins-modern-romance-movie</link></item>
+<item><title>Book Vs. Movie: 6 Biggest Changes in Emerald Fennell’s ‘Wuthering Heights’ - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/movies/wuthering-heights-differences-book-vs-movie</link></item>
+<item><title>Quiz: Can You Match the Disney Couple to Their First Kiss? - Mental Floss</title><link>https://www.mentalfloss.com/quizzes/match-disney-couple-first-kiss</link></item>
+<item><title>How Draco Malfoy Became the Unofficial Chinese New Year Mascot - Mental Floss</title><link>https://www.mentalfloss.com/holidays/draco-malfoy-chinese-new-year-mascot</link></item>
+<item><title>9 Bizarre Love-Related Superstitions People Still Believe - Mental Floss</title><link>https://www.mentalfloss.com/culture/bizarre-love-related-superstitions</link></item>
+<item><title>What &amp;quot;Spinster&amp;quot; Originally Meant (And How It Turned Into an Insult) - Mental Floss</title><link>https://www.mentalfloss.com/language/words/what-spinster-originally-meant-and-how-it-turned-into-an-insult</link></item>
+<item><title>Why Do We Call It a “Crush”? - Mental Floss</title><link>https://www.mentalfloss.com/language/words/why-do-we-call-crush</link></item>
+<item><title>Quiz: Can You Name the Shakespeare Play From One Romantic Quote? - Mental Floss</title><link>https://www.mentalfloss.com/quizzes/name-shakespeare-play-romantic-quote</link></item>
+<item><title>The Most Educated States in America, Ranked - Mental Floss</title><link>https://www.mentalfloss.com/geography/states/most-educated-states-ranked</link></item>
+<item><title>ICE 部署反无人机激光器，FAA 紧急关闭空域 - Solidot</title><link>https://www.solidot.org/story?sid=83551</link></item>
+<item><title>Linux Mint 考虑采用更长的开发周期 - Solidot</title><link>https://www.solidot.org/story?sid=83552</link></item>
+<item><title>长江禁渔令缓解了生态系统恶化 - Solidot</title><link>https://www.solidot.org/story?sid=83553</link></item>
+<item><title>首次观测到恒星直接坍缩成黑洞 - Solidot</title><link>https://www.solidot.org/story?sid=83554</link></item>
+<item><title>当超级智能成为信仰，我们需要谈谈节奏 - Solidot</title><link>https://www.solidot.org/story?sid=83556</link></item>
+<item><title>科学家警告地球接近气候临界点 - Solidot</title><link>https://www.solidot.org/story?sid=83557</link></item>
+<item><title>中国成功测试可重复使用的新型火箭 - Solidot</title><link>https://www.solidot.org/story?sid=83558</link></item>
+<item><title>科技爱好者周刊（第 385 期）：马斯克害怕中国车企吗？ - 阮一峰的网络日志</title><link>http://www.ruanyifeng.com/blog/2026/02/weekly-issue-385.html</link></item>
+<item><title>智谱旗舰 GLM-5 实测：对比 Opus 4.6 和 GPT-5.3-Codex - 阮一峰的网络日志</title><link>http://www.ruanyifeng.com/blog/2026/02/glm-5.html</link></item>
+<item><title>State &amp; Local Innovation - FAS</title><link>https://fas.org/issue/metrolab/</link></item>
+<item><title>Center for Regulatory Ingenuity - FAS</title><link>https://fas.org/initiative/regulatory-ingenuity/</link></item>
+<item><title>US Army to debut FPV Bumblebee V2 drone interceptor next month - Defense News</title><link>https://www.defensenews.com/news/your-military/2026/02/13/us-army-to-debut-fpv-bumblebee-v2-drone-interceptor-next-month/</link></item>
+<item><title>US Air Force buying more bunker-buster bombs after Iran nuclear strikes - Defense News</title><link>https://www.defensenews.com/air/2026/02/13/us-air-force-buying-more-bunker-buster-bombs-after-iran-nuclear-strikes/</link></item>
+<item><title>Pentagon to deploy roughly 200 troops to Nigeria - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2026/02/13/pentagon-to-deploy-roughly-200-troops-to-nigeria/</link></item>
+<item><title>Pentagon wants counter-drone sensors to protect US infrastructure — and fast - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2026/02/13/pentagon-wants-counter-drone-sensors-to-protect-us-infrastructure-and-fast/</link></item>
+<item><title>USS Gerald Ford the second aircraft carrier sent to Middle East: Report - Defense News</title><link>https://www.defensenews.com/news/your-military/2026/02/13/uss-gerald-ford-the-second-aircraft-carrier-sent-to-middle-east-report/</link></item>
+<item><title>Philippines still eying F-16s, but costs are causing political headaches - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2026/02/13/philippines-still-eying-f-16s-but-costs-are-causing-political-headaches/</link></item>
+<item><title>India clears the way for landmark deal to acquire French Rafale jets - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2026/02/13/india-clears-the-way-for-landmark-deal-to-acquire-french-rafale-jets/</link></item>
+<item><title>US Air Force’s CCA program advances with auto-flying software integration - Defense News</title><link>https://www.defensenews.com/air/2026/02/12/us-air-forces-cca-program-advances-with-auto-flying-software-integration/</link></item>
+<item><title>China’s new maritime combat drone poised for global success: analysts - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2026/02/12/chinas-new-maritime-combat-drone-poised-for-global-success-analysts/</link></item>
+<item><title>Fincantieri predicts strong growth despite ding to US warship business - Defense News</title><link>https://www.defensenews.com/global/europe/2026/02/13/fincantieri-predicts-strong-growth-despite-ding-to-us-warship-business/</link></item>
+<item><title>2027 defense budget could double 2026 ship requests, US Navy secretary says - Defense News</title><link>https://www.defensenews.com/news/your-navy/2026/02/12/2027-defense-budget-could-double-2026-ship-requests-us-navy-secretary-says/</link></item>
+<item><title>Two US Navy ships collide in Caribbean, leaving 2 sailors injured - Defense News</title><link>https://www.defensenews.com/news/your-military/2026/02/12/two-us-navy-ships-collide-in-caribbean-leaving-2-sailors-injured/</link></item>
+<item><title>Trans-Atlantic tensions in focus as annual Munich security gathering opens - Defense News</title><link>https://www.defensenews.com/global/europe/2026/02/13/trans-atlantic-tensions-in-focus-as-annual-munich-security-gathering-opens/</link></item>
+<item><title>Syria says its forces have taken over al-Tanf base after handover from US - Defense News</title><link>https://www.defensenews.com/news/your-military/2026/02/12/syria-says-its-forces-have-taken-over-al-tanf-base-after-handover-from-us/</link></item>
+<item><title>48-Year Love Affair Leads To This 1,000-Horse ’63 Impala SS - Street Muscle</title><link>https://www.streetmusclemag.com/features/48-year-love-affair-leads-to-this-1000-horse-63-impala-ss/</link></item>
+<item><title>Street/Strip Epidemic At Sick Week 2026 - Street Muscle</title><link>https://www.streetmusclemag.com/event-coverage/street-strip-epidemic-at-sick-week-2026/</link></item>
+<item><title>1967 396-375 Camaro: On The Street For the First Time Since ’68 - Street Muscle</title><link>https://www.streetmusclemag.com/features/1967-396-375-camaro-on-the-street-for-the-first-time-since-68/</link></item>
+<item><title>First Official Winner of the 2026 TMI TRIM Road Tour Announced - Street Muscle</title><link>https://www.streetmusclemag.com/news/first-official-winner-of-the-2026-tmi-trim-road-tour-announced/</link></item>
+<item><title>Building Confidence Into a Classic Muscle Car With Moser Axles - Street Muscle</title><link>https://www.streetmusclemag.com/tech-stories/building-with-moser-axles/</link></item>
+<item><title>Detroit Speed Teases 1,200HP ZR12 Differential - Street Muscle</title><link>https://www.streetmusclemag.com/news/new-products/detroit-speed-teases-1200hp-zr12-differential/</link></item>
+<item><title>FiTech Nemesis Pushes EFI Airflow Limits For Serious Power - Street Muscle</title><link>https://www.streetmusclemag.com/news/fitech-nemesis-pushes-efi-airflow-limits-for-serious-power/</link></item>
+<item><title>Dodge A100 Works Hard, And With A 440 Plays Hard, Too - Street Muscle</title><link>https://www.streetmusclemag.com/features/1965-dodge-a100-works-hard-and-with-a-440-plays-hard-too/</link></item>
+<item><title>Giveaway RM33 1970 HEMI Charger Returns But With a New Color - Street Muscle</title><link>https://www.streetmusclemag.com/features/rm33-1970-hemi-charger-returns-with-a-new-color/</link></item>
+<item><title>Museum Restores Rare 1993 Black Rose Corvette ZR-1 - Street Muscle</title><link>https://www.streetmusclemag.com/news/museum-restores-rare-1993-black-rose-corvette-zr-1/</link></item>
+<item><title>War Child Duster Slays On Street &amp; Show Battlefields - Street Muscle</title><link>https://www.streetmusclemag.com/features/war-child-duster-slays-on-street-and-show-battlefields/</link></item>
+<item><title>Classic Car Collection Destroyed in Trenton Fire - Street Muscle</title><link>https://www.streetmusclemag.com/news/classic-car-collection-destroyed-in-trenton-fire/</link></item>
+<item><title>Put Modern Back In Your Mustang With Dakota Digital RTX Gauges - Street Muscle</title><link>https://www.streetmusclemag.com/tech-stories/put-modern-back-in-your-mustang-with-dakota-digital-rtx-gauges/</link></item>
+<item><title>1969 Corvette Auction Benefits Curing Kids Cancer - Street Muscle</title><link>https://www.streetmusclemag.com/news/1969-corvette-auction-benefits-curing-kids-cancer/</link></item>
+<item><title>Rare Dodge Viper ACR Snakeskin Green Edition Hits Auction - Street Muscle</title><link>https://www.streetmusclemag.com/features/rare-dodge-viper-acr-snakeskin-green-edition-hits-auction/</link></item>
+<item><title>Chuckwalla Valley Raceway Listed for $26 Million - Street Muscle</title><link>https://www.streetmusclemag.com/news/chuckwalla-valley-raceway-listed-for-26-million/</link></item>
+<item><title>Lost and Found: Return of A Detroit Autorama 1970 Dodge Charger - Street Muscle</title><link>https://www.streetmusclemag.com/features/car-features/lost-and-found-return-of-a-detroit-autorama-1970-dodge-charger/</link></item>
+<item><title>Long-Distance 1969 Pro Touring Camaro Piles On The Miles - Street Muscle</title><link>https://www.streetmusclemag.com/features/long-distance-pro-touring-camaro-piles-on-the-miles/</link></item>
+<item><title>TMI Products Reveals 2026 TRIM Road Tour Schedule - Street Muscle</title><link>https://www.streetmusclemag.com/news/tmi-products-reveals-2026-trim-road-tour-schedule/</link></item>
+<item><title>CRC Industries Hydrogen ’57 Bel Air Nets $100,000 For Charity At Auction - Street Muscle</title><link>https://www.streetmusclemag.com/news/crc-industries-auctions-hydrogen-57-bel-air/</link></item>
+<item><title>Ultimate Headers: New Cerakote &amp; Flange Tech - Street Muscle</title><link>https://www.streetmusclemag.com/news/new-products/ultimate-headers-new-cerakote-flange-tech/</link></item>
+<item><title>Stop The Lifter Tick With Hot Shot’s Secret Tick Fix - Street Muscle</title><link>https://www.streetmusclemag.com/news/new-products/stop-the-lifter-tick-with-hot-shots-secret-tick-fix/</link></item>
+<item><title>Dart GTS 383: A Rare Cruiser For a Hardcore Drag Racer - Street Muscle</title><link>https://www.streetmusclemag.com/features/car-features/dart-gt-383-a-rare-cruiser-for-a-hardcore-drag-racer/</link></item>
+<item><title>Mustang Dark Horse SC: The Right Car For A Dying Market Or The Start Of Something Huge? - Street Muscle</title><link>https://www.streetmusclemag.com/features/columns/mustang-dark-horse-sc-the-start-of-something-huge-or/</link></item>
+<item><title>Classic Restomods Take Over the 2026 Scottsdale Auction - Street Muscle</title><link>https://www.streetmusclemag.com/news/classic-selection-take-over-the-2026-scottsdale-auction/</link></item>
+<item><title>Meta planning facial recognition with glasses - FlowingData</title><link>https://flowingdata.com/2026/02/13/meta-planning-facial-recognition-with-glasses/</link></item>
+<item><title>Ring cancels partnership with law enforcement supplier Flock - FlowingData</title><link>https://flowingdata.com/2026/02/13/ring-cancels-partnership-with-law-enforcement-supplier-flock/</link></item>
+<item><title>Ring’s Super Bowl commercial - FlowingData</title><link>https://flowingdata.com/2026/02/12/ring-cameras-as-large-scale-surveillance-system/</link></item>
+<item><title>Dinosaurs, not dinosaurs - FlowingData</title><link>https://flowingdata.com/2026/02/13/dinosaurs-not-dinosaurs/</link></item>
+<item><title>xkcd mechanic - FlowingData</title><link>https://flowingdata.com/2023/08/21/pairwise-matrix-of-what-to-do-in-an-emergency/</link></item>
+<item><title>Visual echoes - FlowingData</title><link>https://flowingdata.com/2026/02/12/process-375-echo/</link></item>
+<item><title>Searchable database of unregulated political contributions - FlowingData</title><link>https://flowingdata.com/2026/02/12/searchable-database-of-unregulated-political-contributions/</link></item>
+<item><title>Bangalow Road House: Timber Screens Shape a Calm Urban Retreat - HomeAdore</title><link>https://homeadore.com/2026/02/13/bangalow-road-house-timber-screens-shape-a-calm-urban-retreat/</link></item>
+<item><title>Apartment in Kichijoji by Roovice - HomeAdore</title><link>https://homeadore.com/2026/02/13/apartment-in-kichijoji-by-roovice/</link></item>
+<item><title>Block House: Interior by Studio MA - HomeAdore</title><link>https://homeadore.com/2026/02/13/block-house-interior-by-studio-ma/</link></item>
+<item><title>Bronze and Black House by SPF:architects - HomeAdore</title><link>https://homeadore.com/2026/02/13/bronze-and-black-house-by-spfarchitects/</link></item>
+<item><title>Studio &amp; Guest House In New York Reimagines Cabin-Style Comfort Living - HomeAdore</title><link>https://homeadore.com/2026/02/13/studio-guest-house-in-new-york-reimagines-cabin-style-comfort-living/</link></item>
+<item><title>Francesca’s House: Lively Family Apartment Crafted for Digital Life - HomeAdore</title><link>https://homeadore.com/2026/02/13/francescas-house-lively-family-apartment-crafted-for-digital-life/</link></item>
+<item><title>Apartment in Kifissia Reframes Modernist Roots with Lush Color - HomeAdore</title><link>https://homeadore.com/2026/02/12/apartment-in-kifissia-reframes-modernist-roots-with-lush-color/</link></item>
+<item><title>ST House by Roberto Lebrero - HomeAdore</title><link>https://homeadore.com/2026/02/12/st-house-by-roberto-lebrero/</link></item>
+<item><title>Villa Lyla by SAOTA - HomeAdore</title><link>https://homeadore.com/2026/02/11/villa-lyla-by-saota/</link></item>
+<item><title>Zilker Park House by Specht Novak - HomeAdore</title><link>https://homeadore.com/2026/01/30/zilker-park-house-by-specht-novak/</link></item>
+<item><title>Alpha 1 Revives Contemporary Mountain Living - HomeAdore</title><link>https://homeadore.com/2026/01/29/alpha-1-revives-contemporary-mountain-living/</link></item>
+<item><title>Counterpoint House by Ippolito Fleitz Group – Identity Architects - HomeAdore</title><link>https://homeadore.com/2026/01/29/counterpoint-house-by-ippolito-fleitz-group-identity-architects/</link></item>
+<item><title>Perchée: Elevated Forest House Embracing Quebec&amp;#39;s Northern Light Fully - HomeAdore</title><link>https://homeadore.com/2026/02/06/perchee-elevated-forest-house-embracing-quebecs-northern-light-fully/</link></item>
+<item><title>Chalet Cristallo Reimagines Mountain Living - HomeAdore</title><link>https://homeadore.com/2026/02/06/chalet-cristallo-reimagines-mountain-living/</link></item>
+<item><title>A Quiet House for Tropical Living - HomeAdore</title><link>https://homeadore.com/2026/02/06/a-quiet-house-for-tropical-living/</link></item>
+<item><title>Casa Mulix by Arkham Projects - HomeAdore</title><link>https://homeadore.com/2026/02/07/casa-mulix-by-arkham-projects/</link></item>
+<item><title>Holler House Interiors: Carolina Rooms Shaped By Natural Soft Light - HomeAdore</title><link>https://homeadore.com/2026/02/06/holler-house-interiors-carolina-rooms-shaped-by-natural-soft-light/</link></item>
+<item><title>Hybrid Interior BXB studio: Warsaw Workshop Apartment Reinvented - HomeAdore</title><link>https://homeadore.com/2026/01/29/hybrid-interior-bxb-studio-warsaw-workshop-apartment-reinvented/</link></item>
+<item><title>The Arctic Food Web (and Why Ice Matters So Much) - HowStuffWorks</title><link>https://animals.howstuffworks.com/animal-facts/arctic-food-web.htm</link></item>
+<item><title>Pluralist Democracy: How Organized Groups Influence Policymakers - HowStuffWorks</title><link>https://people.howstuffworks.com/pluralist-democracy.htm</link></item>
+<item><title>What Is a Group of Koalas Called? Spoiler: There Isn&amp;#39;t One - HowStuffWorks</title><link>https://animals.howstuffworks.com/wild-animals/what-is-a-group-of-koalas-called.htm</link></item>
+<item><title>The Origins of Valentine&amp;#39;s Day: A Surprisingly Dark Roman Tradition - HowStuffWorks</title><link>https://people.howstuffworks.com/culture-traditions/holidays-other/origins-of-valentines-day.htm</link></item>
+<item><title>What Is a Group of Buzzards Called? Depends, Are They Feeding or Flying? - HowStuffWorks</title><link>https://animals.howstuffworks.com/birds/what-is-a-group-of-buzzards-called.htm</link></item>
+<item><title>10 Highest-Valued Sports Teams in the U.S. - HowStuffWorks</title><link>https://entertainment.howstuffworks.com/highest-valued-sports-teams.htm</link></item>
+<item><title>Sharge’s Latest Power Bank Packs 24,000mAh Battery, 300W Charging, &amp; Transparent... - Gizmochina</title><link>https://www.gizmochina.com/2026/02/13/sharges-latest-power-bank-packs-24000mah-battery-300w-charging-transparent-body/</link></item>
+<item><title>OnePlus Pad Lite Gets OxygenOS 16 in India: What’s New in the Update - Gizmochina</title><link>https://www.gizmochina.com/2026/02/13/oneplus-pad-lite-gets-oxygenos-16-in-india-whats-new-in-the-update/</link></item>
+<item><title>Casio Launches New Vintage Digital Watch with Leather Straps - Gizmochina</title><link>https://www.gizmochina.com/2026/02/13/casio-launches-new-vintage-digital-watch-with-leather-straps/</link></item>
+<item><title>New Xiaomi Watch 5 may launch globally with WearOS soon - Gizmochina</title><link>https://www.gizmochina.com/2026/02/13/new-xiaomi-watch-5-may-launch-globally-with-wearos-soon/</link></item>
+<item><title>Hisense M7 4K MiniLED TV Series Brings Dolby Vision and VRR at Budget Pricing - Gizmochina</title><link>https://www.gizmochina.com/2026/02/13/hisense-m7-miniled-4k-google-tv-us-2026/</link></item>
+<item><title>Xiaomi’s New TV S Mini LED 2026 launching globally soon - Gizmochina</title><link>https://www.gizmochina.com/2026/02/13/xiaomis-new-tv-s-mini-led-2026-launching-globally-soon/</link></item>
+<item><title>Xiaomi HyperOS 3 Rolls Out 3 New Chinese New Year Watermarks - Gizmochina</title><link>https://www.gizmochina.com/2026/02/13/xiaomi-hyperos-3-rolls-out-3-new-chinese-new-year-watermarks/</link></item>
+<item><title>BenQ GW90TC Series Launched with 144Hz IPS Panels, 20W USB-C, and Full Ergonomic Stand - Gizmochina</title><link>https://www.gizmochina.com/2026/02/13/benq-gw90tc-series-144hz-usb-c-monitors-india/</link></item>
+<item><title>Xiaomi 17 Max Roundup: Design, Display, Camera, Performance, and More - Gizmochina</title><link>https://www.gizmochina.com/2026/02/12/xiaomi-17-max-leaks-8000mah-battery-200mp-camera/</link></item>
+<item><title>The Best USB-C Hubs You Can Buy in 2026 - Gizmochina</title><link>https://www.gizmochina.com/2026/02/11/best-usb-c-hubs-of-2026/</link></item>
+<item><title>Best Limited Edition Phones You Can Buy in January 2026 - Gizmochina</title><link>https://www.gizmochina.com/2026/02/10/best-limited-edition-phones-you-can-buy-in-january-2026/</link></item>
+<item><title>Qubo Smart Air Purifier Q400 Review: Smart, Affordable, and Surprisingly Effective - Gizmochina</title><link>https://www.gizmochina.com/2026/02/09/qubo-smart-air-purifier-q400-review/</link></item>
+<item><title>Galaxy S26 Ultra: Everything we know so far - Gizmochina</title><link>https://www.gizmochina.com/2026/02/09/galaxy-s26-ultra-rumor-roundup/</link></item>
+<item><title>Why Mini PCs Are Stealing the Spotlight from Laptops in 2026 - Gizmochina</title><link>https://www.gizmochina.com/2026/02/09/why-mini-pcs-are-stealing-the-spotlight-from-laptops-in-2026/</link></item>
+<item><title>HyperOS 3.1 vs HyperOS 3: Every Features, Changes, &amp; Full Eligible Device List - Gizmochina</title><link>https://www.gizmochina.com/2026/02/09/hyperos-3-1-vs-hyperos-3-every-features-changes-full-eligible-device-list/</link></item>
+<item><title>Vivo V70 and V70 Elite Roundup: Everything We Know So Far - Gizmochina</title><link>https://www.gizmochina.com/2026/02/09/vivo-v70-and-v70-elite-roundup/</link></item>
+<item><title>iQOO 15 Ultra vs Red Magic 11 Pro: Which Gaming Beast Should You Choose? - Gizmochina</title><link>https://www.gizmochina.com/2026/02/08/iqoo-15-ultra-vs-red-magic-11-pro-which-gaming-beast-should-you-choose/</link></item>
+<item><title>Comulytic Note Pro Offer: AI Note Taker Now Discounted for Valentine’s... - Gizmochina</title><link>https://www.gizmochina.com/2026/01/31/comulytic-note-pro-offer-ai-note-taker-now-discounted-for-valentines-day-sale/</link></item>
+<item><title>Asus Vivobook S14 (M3407) Review: Big Battery, AI Features and a... - Gizmochina</title><link>https://www.gizmochina.com/2026/02/12/asus-vivobook-s14-m3407-review-big-battery-ai-features-and-a-brilliant-oled-display/</link></item>
+<item><title>Honor Magic8 Pro Air Review: An All-around ‘AIR’ That’s Worth The... - Gizmochina</title><link>https://www.gizmochina.com/2026/02/10/honor-magic8-pro-air-review-an-all-around-air-thats-worth-the-wait/</link></item>
+<item><title>Is the Tecno Spark Go 3 a good choice for everyday... - Gizmochina</title><link>https://www.gizmochina.com/2026/01/28/tecno-spark-go-3-review/</link></item>
+<item><title>Honor Magic8 Pro Review: A Leap Forward For The Series - Gizmochina</title><link>https://www.gizmochina.com/2026/01/21/honor-magic8-pro-review-a-leap-forward-for-the-series/</link></item>
+<item><title>OnePlus 15 Gets $100 Off: Exclusive Deal on Geekwills - Gizmochina</title><link>https://www.gizmochina.com/2026/01/07/oneplus-15-gets-100-off-exclusive-deal-on-geekwills/</link></item>
+<item><title>Here’re What We Picked For Gizmochina Best Phones Awards 2025 - Gizmochina</title><link>https://www.gizmochina.com/2026/01/20/herere-what-we-picked-for-gizmochina-best-phones-awards-2025/</link></item>
+<item><title>Galaxy S26 Ultra realistic looking dummy surfaces in hands-on video with rounder corners - Gizmochina</title><link>https://www.gizmochina.com/2026/02/13/galaxy-s26-ultra-realistic-looking-dummy-surfaces-in-hands-on-video-with-rounder-corners/</link></item>
+<item><title>Google Pixel 10a full specifications leaked; Here are 5 major changes - Gizmochina</title><link>https://www.gizmochina.com/2026/02/13/google-pixel-10a-full-specifications-leaked/</link></item>
+<item><title>Honor Pad X8b launched with 90Hz display, 10,100mAh battery - Gizmochina</title><link>https://www.gizmochina.com/2026/02/13/honor-pad-x9b-launched-price-specifications/</link></item>
+<item><title>User spent 16 hours a day on Instagram, CEO tells court it’s not “clinical addiction” - Gizmochina</title><link>https://www.gizmochina.com/2026/02/13/user-spent-16-hours-a-day-on-instagram-ceo-tells-court-its-not-clinical-addiction/</link></item>
+<item><title>One UI 9 testing begins early for Samsung Galaxy Z Fold 8, Z Flip 8 - Gizmochina</title><link>https://www.gizmochina.com/2026/02/13/one-ui-9-testing-begins-early-for-samsung-galaxy-z-fold-9-z-flip-8/</link></item>
+<item><title>Samsung begins One UI 9 testing for these Galaxy devices - Gizmochina</title><link>https://www.gizmochina.com/2026/02/13/samsung-begins-one-ui-9-testing-for-these-galaxy-devices/</link></item>
+<item><title>Poco X8 Pro Max clears another hurdle before launch - Gizmochina</title><link>https://www.gizmochina.com/2026/02/13/poco-x8-pro-max-tkdn-certification/</link></item>
+<item><title>iPhone 17e renders emerge before launch, key specifications tipped - Gizmochina</title><link>https://www.gizmochina.com/2026/02/13/iphone-17e-leak-design-a19-chip-launch-details/</link></item>
+<item><title>Huawei Mate 80 Pro is Finally Launching Globally on Feb 26... - Gizmochina</title><link>https://www.gizmochina.com/2026/02/13/huawei-mate-80-pro-is-finally-launching-globallyon-feb-26-with-advanced-cameras/</link></item>
+<item><title>Xiaomi launches 45W Mini GaN charger with USB-C cable &amp; affordable... - Gizmochina</title><link>https://www.gizmochina.com/2026/02/13/xiaomi-launches-45w-mini-gan-charger-with-usb-c-cable-affordable-pricing/</link></item>
+<item><title>Samsung Galaxy A17 5G vs OPPO K14x 5G: Under $200 /... - Gizmochina</title><link>https://www.gizmochina.com/2026/02/13/samsung-galaxy-a17-5g-vs-oppo-k14x-5g-under-200-%e2%82%b920000-which-5g-phone-should-you-buy/</link></item>
+<item><title>Tecno Pova Curve 2 5G debuts with 8,000mAh battery, 144Hz curved... - Gizmochina</title><link>https://www.gizmochina.com/2026/02/13/tecno-pova-curve-2-5g-launch-specifications-price/</link></item>
+<item><title>Xiaomi 18 render leaks — is this the final look? - Gizmochina</title><link>https://www.gizmochina.com/2026/02/13/xiaomi-18-render-leak/</link></item>
+<item><title>Xiaomi HyperOS February 2026 security update tracker: Check if your device... - Gizmochina</title><link>https://www.gizmochina.com/2026/02/13/xiaomi-hyperos-february-2026-security-update-tracker/</link></item>
+<item><title>Honor teams up with Telesin on Camera Grip Kit for Magic... - Gizmochina</title><link>https://www.gizmochina.com/2026/02/13/honor-magic-8-pro-gets-camera-grip-kit-with-200mm-teleconverter-thanks-to-new-partnership/</link></item>
+<item><title>Detroit Automakers Take $50 Billion Hit - Slashdot</title><link>https://tech.slashdot.org/story/26/02/13/191242/detroit-automakers-take-50-billion-hit</link></item>
+<item><title>Meta&amp;#39;s New Patent: an AI That Likes, Comments and Messages For You When You&amp;#39;re Dead - Slashdot</title><link>https://tech.slashdot.org/story/26/02/13/1929209/metas-new-patent-an-ai-that-likes-comments-and-messages-for-you-when-youre-dead</link></item>
+<item><title>Google Warns EU Risks Undermining Own Competitiveness With Tech Sovereignty Push - Slashdot</title><link>https://tech.slashdot.org/story/26/02/13/1844218/google-warns-eu-risks-undermining-own-competitiveness-with-tech-sovereignty-push</link></item>
+<item><title>Spotify Says Its Best Developers Haven&amp;#39;t Written a Line of Code Since December, Thanks To AI - Slashdot</title><link>https://developers.slashdot.org/story/26/02/13/1834228/spotify-says-its-best-developers-havent-written-a-line-of-code-since-december-thanks-to-ai</link></item>
+<item><title>FTC Ratchets Up Microsoft Probe, Queries Rivals on Cloud, AI - Slashdot</title><link>https://slashdot.org/story/26/02/13/1757219/ftc-ratchets-up-microsoft-probe-queries-rivals-on-cloud-ai</link></item>
+<item><title>EPA Reverses Long-Standing Climate Change Finding, Stripping Its Own Ability To Regulate Emissions - Slashdot</title><link>https://news.slashdot.org/story/26/02/13/1710236/epa-reverses-long-standing-climate-change-finding-stripping-its-own-ability-to-regulate-emissions</link></item>
+<item><title>OpenAI Claims DeepSeek Distilled US Models To Gain an Edge - Slashdot</title><link>https://slashdot.org/story/26/02/13/1630235/openai-claims-deepseek-distilled-us-models-to-gain-an-edge</link></item>
+<item><title>Waymo is Asking DoorDash Drivers To Shut the Doors of Its Self-Driving Cars - Slashdot</title><link>https://tech.slashdot.org/story/26/02/13/1527208/waymo-is-asking-doordash-drivers-to-shut-the-doors-of-its-self-driving-cars</link></item>
+<item><title>Bill Introduced To Replace West Virginia&amp;#39;s New CS Course Graduation Requirement With Computer Literacy Proficiency - Slashdot</title><link>https://news.slashdot.org/story/26/02/13/1424257/bill-introduced-to-replace-west-virginias-new-cs-course-graduation-requirement-with-computer-literacy-proficiency</link></item>
+<item><title>mandate CS and AI courses as graduation requirements - Slashdot</title><link>https://news.slashdot.org/story/25/06/04/1323220/codeorg-changes-mission-to-make-cs-and-ai-a-core-part-of-k-12-education</link></item>
+<item><title>Meta Plans To Let Smart Glasses Identify People Through AI-Powered Facial Recognition - Slashdot</title><link>https://tech.slashdot.org/story/26/02/13/1336235/meta-plans-to-let-smart-glasses-identify-people-through-ai-powered-facial-recognition</link></item>
+<item><title>Ring Cancels Its Partnership With Flock Safety After Surveillance Backlash - Slashdot</title><link>https://yro.slashdot.org/story/26/02/13/0846202/ring-cancels-its-partnership-with-flock-safety-after-surveillance-backlash</link></item>
+<item><title>Russia Fully Blocks WhatsApp - Slashdot</title><link>https://tech.slashdot.org/story/26/02/13/067244/russia-fully-blocks-whatsapp</link></item>
+<item><title>Windows 11 Notepad Flaw Let Files Execute Silently via Markdown Links - Slashdot</title><link>https://tech.slashdot.org/story/26/02/12/2111243/windows-11-notepad-flaw-let-files-execute-silently-via-markdown-links</link></item>
+<item><title>discontinuing WordPad - Slashdot</title><link>https://tech.slashdot.org/story/23/09/03/0050200/after-28-years-microsoft-announces-it-will-remove-wordpad-from-windows</link></item>
+<item><title>CIA Makes New Push To Recruit Chinese Military Officers as Informants - Slashdot</title><link>https://news.slashdot.org/story/26/02/12/211223/cia-makes-new-push-to-recruit-chinese-military-officers-as-informants</link></item>
+<item><title>IBM Plans To Triple Entry-Level Hiring in the US - Slashdot</title><link>https://slashdot.org/story/26/02/12/214250/ibm-plans-to-triple-entry-level-hiring-in-the-us</link></item>
+<item><title>Border Officials Are Said To Have Caused El Paso Closure by Firing Anti-Drone Laser - Slashdot</title><link>https://news.slashdot.org/story/26/02/12/1712232/border-officials-are-said-to-have-caused-el-paso-closure-by-firing-anti-drone-laser?sbsrc=md</link></item>
+<item><title>The &amp;quot;Are You Sure?&amp;quot; Problem: Why Your AI Keeps Changing Its Mind - Slashdot</title><link>https://slashdot.org/story/26/02/12/153227/the-are-you-sure-problem-why-your-ai-keeps-changing-its-mind?sbsrc=md</link></item>
+<item><title>Anthropic Safety Researcher Quits, Warning &amp;#39;World is in Peril&amp;#39; - Slashdot</title><link>https://slashdot.org/story/26/02/11/1849224/anthropic-safety-researcher-quits-warning-world-is-in-peril?sbsrc=md</link></item>
+<item><title>WP Engine Says Automattic Planned To Shake Down 10 Hosting Companies For WordPress Royalties - Slashdot</title><link>https://yro.slashdot.org/story/26/02/12/2055249/wp-engine-says-automattic-planned-to-shake-down-10-hosting-companies-for-wordpress-royalties</link></item>
+<item><title>With Ring, American Consumers Built a Surveillance Dragnet - Slashdot</title><link>https://yro.slashdot.org/story/26/02/11/1844232/with-ring-american-consumers-built-a-surveillance-dragnet</link></item>
+<item><title>U.S. Home Sales Plunge in January, Worst Decline in Years - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/chicago-real-estate-news/january-2026-home-sales-data-national-association-of-realtors-2026-housing-data-lawrence-yun-median-home-prices-in-january-2026-nar-housing-affordabil-14676.php</link></item>
+<item><title>U.S. Commercial Mortgage Debt Climbs Toward $5 Trillion - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/new-york-city-real-estate-news/mortgage-bankers-association-2025-quarterly-mortgage-survey-outstanding-commercial-debt-cmbs-data-for-2025-gse-portfolio-data-14654.php</link></item>
+<item><title>Las Vegas Area Home Sales Hit 18-Year Low in 2025 - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/las-vegas/las-vegas-2025-home-sales-data-las-vegas-home-price-data-for-2025-george-kypreos-las-vegas-realtors-2025-housing-reports-14653.php</link></item>
+<item><title>U.S. Mortgage Rates Hit Three-Year Low in January - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/washington-dc-real-estate-news/freddie-mac-january-2026-primary-mortgage-market-survey-current-mortgage-rates-sam-khater-freddie-mac-2026-mortgage-data-14651.php</link></item>
+<item><title>Acid GIFs, February 13 (25 gifs) - AcidCow.com</title><link>https://acidcow.com/gif/172175-acid-gifs-february-13-25-gifs.html</link></item>
+<item><title>Busty Girls (21 pics) - AcidCow.com</title><link>https://acidcow.com/girls/172171-busty-girls-21-pics.html</link></item>
+<item><title>Random Facts (18 pics) - AcidCow.com</title><link>https://acidcow.com/pics/172161-random-facts-18-pics.html</link></item>
+<item><title>Weird Finds In Thrift Shops (25 pics) - AcidCow.com</title><link>https://acidcow.com/pics/172163-weird-finds-in-thrift-shops-25-pics.html</link></item>
+<item><title>Restaurant Food Delivery Failures (25 pics) - AcidCow.com</title><link>https://acidcow.com/pics/172156-restaurant-food-delivery-failures-25-pics.html</link></item>
+<item><title>Nostalgic Things From The Past (25 pics) - AcidCow.com</title><link>https://acidcow.com/pics/172167-nostalgic-things-from-the-past-25-pics.html</link></item>
+<item><title>Bad Days Happen (27 pics) - AcidCow.com</title><link>https://acidcow.com/pics/172165-bad-days-happen-27-pics.html</link></item>
+<item><title>Girls In Sundresses (21 pics) - AcidCow.com</title><link>https://acidcow.com/girls/172172-girls-in-sundresses-21-pics.html</link></item>
+<item><title>Interesting Facts About James Bond (12 pics) - AcidCow.com</title><link>https://acidcow.com/pics/172159-interesting-facts-about-james-bond-12-pics.html</link></item>
+<item><title>Unfortunate Situations (18 pics) - AcidCow.com</title><link>https://acidcow.com/pics/172164-unfortunate-situations-18-pics.html</link></item>
+<item><title>Crazy Cars (21 pics) - AcidCow.com</title><link>https://acidcow.com/pics/172168-crazy-cars-21-pics.html</link></item>
+<item><title>Unexpected Coincidences (14 pics) - AcidCow.com</title><link>https://acidcow.com/pics/172166-unexpected-coincidences-14-pics.html</link></item>
+<item><title>Epic Sticks (25 pics) - AcidCow.com</title><link>https://acidcow.com/pics/172160-epic-sticks-25-pics.html</link></item>
+<item><title>Cool &amp;#39;&amp;#39;LEGO&amp;#39;&amp;#39; Constructions (28 pics) - AcidCow.com</title><link>https://acidcow.com/pics/172157-cool-lego-constructions-28-pics.html</link></item>
+<item><title>TryEngineering Marks 20 Years of Getting Kids Interested in STEM - IEEE Spectrum</title><link>https://spectrum.ieee.org/ieee-tryengineering-20-years</link></item>
+<item><title>Video Friday: Robot Collective Stays Alive Even When Parts Die - IEEE Spectrum</title><link>https://spectrum.ieee.org/video-friday-robot-collective</link></item>
+<item><title>LEDs Enter the Nanoscale - IEEE Spectrum</title><link>https://spectrum.ieee.org/nanoled-research-approaches</link></item>
+<item><title>What the FDA’s 2026 Update Means for Wearables - IEEE Spectrum</title><link>https://spectrum.ieee.org/fda-medical-device-rules</link></item>
+<item><title>Rediscovering the Lost Legacy of Chemist Jan Czochralski - IEEE Spectrum</title><link>https://spectrum.ieee.org/legacy-chemist-jan-czochralski</link></item>
+<item><title>Tips for Using AI Tools in Technical Interviews - IEEE Spectrum</title><link>https://spectrum.ieee.org/ai-tools-interviews</link></item>
+<item><title>How Can AI Companions Be Helpful, not Harmful? - IEEE Spectrum</title><link>https://spectrum.ieee.org/ai-companion-harm-benefit</link></item>
+<item><title>How Do You Define an AI Companion? - IEEE Spectrum</title><link>https://spectrum.ieee.org/ai-companion-relationships</link></item>
+<item><title>How and When the Memory Chip Shortage Will End - IEEE Spectrum</title><link>https://spectrum.ieee.org/dram-shortage</link></item>
+<item><title>IEEE Honors Global Dream Team of Innovators - IEEE Spectrum</title><link>https://spectrum.ieee.org/ieee-2026-honors</link></item>
+<item><title>New Devices Might Scale the Memory Wall - IEEE Spectrum</title><link>https://spectrum.ieee.org/ai-and-memory-wall</link></item>
+<item><title>Low-Vision Programmers Can Now Design 3D Models Independently - IEEE Spectrum</title><link>https://spectrum.ieee.org/3d-modeling-blind-programmers</link></item>
+<item><title>IEEE Online Mini-MBA Aims to Fill Leadership Skills Gaps in AI - IEEE Spectrum</title><link>https://spectrum.ieee.org/ieee-online-mini-ai-mba</link></item>
+<item><title>Video Friday: Autonomous Robots Learn By Doing in This Factory - IEEE Spectrum</title><link>https://spectrum.ieee.org/autonomous-warehouse-robots</link></item>
+<item><title>“Quantum Twins” Simulate What Supercomputers Can’t - IEEE Spectrum</title><link>https://spectrum.ieee.org/quantum-twins</link></item>
+<item><title>Paying Tribute to Finite Element Field Computation Pioneer - IEEE Spectrum</title><link>https://spectrum.ieee.org/tribute-finite-element-field-computation-pioneer</link></item>
+<item><title>Milan-Cortina Winter Olympics Debut Next-Generation Sports Smarts - IEEE Spectrum</title><link>https://spectrum.ieee.org/winter-olympics-2026-tech</link></item>
+<item><title>Breaking Boundaries in Wireless Communication - IEEE Spectrum</title><link>https://content.knowledgehub.wiley.com/breaking-boundaries-in-wireless-communication-simulating-animated-on-body-rf-propagation/</link></item>
+<item><title>IEEE Considers Safety Guidelines for Neurotech Consumer Products - IEEE Spectrum</title><link>https://spectrum.ieee.org/ieee-safety-guidelines-neurotech</link></item>
+<item><title>AI is a tool, not a voice - UN</title><link>https://www.un.org/en/observances/radio-day</link></item>
+<item><title>Syria transition gains ground with Kurdish deal, but violence and humanitarian strain persist - UN</title><link>https://news.un.org/en/story/2026/02/1166961</link></item>
+<item><title>‘Like a scene out of a horror movie’: UN report warns of war crimes in Sudan’s El Fasher - UN</title><link>https://news.un.org/en/story/2026/02/1166960</link></item>
+<item><title>Protecting children in war is key to lasting peace, top UN envoy warns - UN</title><link>https://news.un.org/en/story/2026/02/1166948</link></item>
+<item><title>End poverty in all its forms everywhere - UN</title><link>https://www.un.org/sustainabledevelopment/poverty/</link></item>
+<item><title>International Day of Women and Girls in Science - UN</title><link>https://www.un.org/en/observances/women-and-girls-in-science-day/</link></item>
+<item><title>SDG 4: Quality Education - UN</title><link>https://www.un.org/en/property-cards-by-og-global-category/287/6988</link></item>
+<item><title>SDG 9: Industry, Innovation and Infrastructure - UN</title><link>https://www.un.org/en/property-cards-by-og-global-category/287/7003</link></item>
+<item><title>The United Nations Pulse - UN</title><link>https://www.un.org/en/live/daily-pulse</link></item>
+<item><title>ServiceNow can&amp;#39;t seem to keep its wallet closed, snaps up small AI analytics company - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/14/servicenow_buys_pyramid_analytics_to/</link></item>
+<item><title>Anthropic wants comp-sci students to vibe code their way through college - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/13/anthropic_claudeifies_comp_sci_courses/</link></item>
+<item><title>Oxide plans new rack attack, packing in Zen 5 CPUs and DDR5 RAM - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/13/whats_next_for_oxide_computer/</link></item>
+<item><title>Attackers finally get around to exploiting critical Microsoft bug from 2024 - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/13/critical_microsoft_bug_from_2024/</link></item>
+<item><title>Trump&amp;#39;s Genesis Mission gets its first set of 26 sure-to-succeed objectives - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/13/trumps_genesis_mission/</link></item>
+<item><title>AMD climbs in desktop and server CPUs while Intel battles supply squeeze - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/13/amd_intel_market_share/</link></item>
+<item><title>Broadband rollouts feel the burn from AI memory frenzy - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/13/ai_memory_router_prices/</link></item>
+<item><title>Misconfigured AI could trigger the next national infrastructure meltdown - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/13/gartner_ai_infrastructure/</link></item>
+<item><title>US is moving ahead with colocated nukes and datacenters - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/13/us_moving_ahead_with_colocated/</link></item>
+<item><title>Ring kills Flock partnership amid surveillance scrutiny - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/13/ring_flock_partnership/</link></item>
+<item><title>Investors shove another $30B into the Anthropic money furnace - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/13/anthropic_series_g/</link></item>
+<item><title>Booster nozzle anomaly fails to stop ULA Vulcan Centaur reaching orbit - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/13/ula_vulcan_centaur_anomaly/</link></item>
+<item><title>ʎɹǝʌoɔǝᴚ sʍopuᴉM ʇɐ sǝʇɐuᴉɯɹǝʇ snq sᴉɥ┴ - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/13/bus_bork/</link></item>
+<item><title>MPs brand NS&amp;amp;I&amp;#39;s £3B IT overhaul a &amp;#39;full-spectrum disaster&amp;#39; - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/13/nsandi_pac_latest/</link></item>
+<item><title>Top Dutch telco Odido admits 6.2M customers caught in contact system caper - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/13/odido_breach/</link></item>
+<item><title>OK, so Anthropic&amp;#39;s AI built a C compiler. That don&amp;#39;t impress me much - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/13/anthropic_c_compiler/</link></item>
+<item><title>Skyrora circles Orbex wreckage as UK rocket rival heads for administration - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/13/british_wannabe_rocketeers_fail_to/</link></item>
+<item><title>Enforcing piracy policy earned helpdesk worker death threats - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/13/on_call/</link></item>
+<item><title>Multistakeholder internet governance can be messy. APNIC wants it that way - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/13/apnic_apricot_2026_multistakeholder_governance/</link></item>
+<item><title>Samsung says it&amp;#39;s first to ship HBM4, a day after Micron revealed its own sales - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/13/samsung_and_micron_start_shipping/</link></item>
+<item><title>Cloudflare turns websites into faster food for AI agents - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/13/cloudflare_markdown_for_ai_crawlers/</link></item>
+<item><title>AI to make call center agents &amp;#39;superheroes,&amp;#39; not unemployed, says industry CEO - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/13/call_center_ai_superheroes/</link></item>
+<item><title>30+ Chrome extensions disguised as AI chatbots steal users&amp;#39; API keys, emails, other sensitive data - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/12/30_chrome_extensions_ai/</link></item>
+<item><title>OpenAI dishes out its first model on a plate of Cerebras silicon - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/12/openai_model_cerebras/</link></item>
+<item><title>Waymo launching China-made van that won&amp;#39;t fail in rain, snow, or gloom of night - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/12/waymo_6th_gen_autonomous_driving_system/</link></item>
+<item><title>AI agent seemingly tries to shame open source developer for rejected pull request - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/12/ai_bot_developer_rejected_pull_request/</link></item>
+<item><title>Who&amp;#39;s the bossware? Ransomware slingers like employee monitoring tools, too - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/12/ransomware_slingers_bossware/</link></item>
+<item><title>Oracle suits up for Air Force Cloud One program with $88M contract - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/12/oracle_airforce_cloud_88m/</link></item>
+<item><title>$8K laundry bot knows when to hold ’em, knows when to fold ’em, and knows it has help standing by - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/12/laundry_folding_robot_8000_dollars_teleoperated/</link></item>
+<item><title>Elon Musk paints exodus of xAI co-founders as &amp;#39;evolution&amp;#39; - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/12/musk_xai_departures/</link></item>
+<item><title>&amp;#39;Another dark day&amp;#39;: Users slam Microsoft over Polyglot Notebooks deprecation - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/12/polyglot_notebooks_deprecation/</link></item>
+<item><title>Apple patches decade-old iOS zero-day, possibly exploited by commercial spyware - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/12/apple_ios_263/</link></item>
+<item><title>Memory price explosion triggers PC buying spree - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/12/memory_pc_rush/</link></item>
+<item><title>NASA pauses most Swift science ops to buy time for reboost mission - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/12/nasa_swift_reboost/</link></item>
+<item><title>Supply chain attacks now fuel a &amp;#39;self-reinforcing&amp;#39; cybercrime economy - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/12/supply_chain_attacks/</link></item>
+<item><title>The big FOSS vendors don&amp;#39;t eat their own dogfood – they pay for proprietary groupware - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/12/suse_runs_ms/</link></item>
+<item><title>UK unveils telecoms charter to curb mid-contract bill shocks - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/12/uk_telco_charter/</link></item>
+<item><title>Feeling brave? Ministry of Defence seeks £300K digital boss to manage £4.6B spend - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/12/mod_recruits_tech_head/</link></item>
+<item><title>The UK government isn&amp;#39;t spending much taxpayer cash on X - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/12/uk_government_x_spend/</link></item>
+<item><title>Google: China&amp;#39;s APT31 used Gemini to plan cyberattacks against US orgs - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/12/google_china_apt31_gemini/</link></item>
+<item><title>Starlink speeds past terrestrial networks – and regulators - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/12/starlink_challenges/</link></item>
+<item><title>Cisco hikes prices to cover memory cost rises, says you don’t much care - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/12/cisco_q2_2026/</link></item>
+<item><title>Microsoft warns that poisoned AI buttons and links may betray your trust - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/12/microsoft_ai_recommendation_poisoning/</link></item>
+<item><title>Anthropic promises its datacenters totally won&amp;#39;t drive up your utility bill - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/12/anthropic_power_promises/</link></item>
+<item><title>Ontario regulator moves to suspend PointsBet over major NBA betting failures - ReadWrite</title><link>https://readwrite.com/agco-suspend-pointsbet-nba-betting-failures-jontay-porter/</link></item>
+<item><title>FanDuel to halt credit card deposits nationwide on March 2 - ReadWrite</title><link>https://readwrite.com/fanduel-halt-credit-card-deposits-nationwide-march-2/</link></item>
+<item><title>Robinhood stock falls despite record Q4 earnings amid questions over prediction markets - ReadWrite</title><link>https://readwrite.com/robinhood-stock-falls-record-q4-earnings-prediction-markets/</link></item>
+<item><title>Viral post sparks debate over Kroger gambling machines in Georgia - ReadWrite</title><link>https://readwrite.com/viral-post-kroger-gambling-machines-georgia/</link></item>
+<item><title>Man jailed for 301 years to life over Sacramento gambling robbery - ReadWrite</title><link>https://readwrite.com/man-jailed-for-301-years-to-life-over-sacramento-gambling-robbery/</link></item>
+<item><title>Jamaican man faces federal charges in sweepstakes elder fraud case in Connecticut - ReadWrite</title><link>https://readwrite.com/jamaican-federal-charges-sweepstakes-elder-fraud-case-connecticut/</link></item>
+<item><title>Wolcott man indicted in alleged crypto fraud tied to $950K of Stake.com gambling losses - ReadWrite</title><link>https://readwrite.com/wolcott-man-indicted-crypto-fraud-allegedly-950k-stake-com-gambling/</link></item>
+<item><title>Israeli reservist civilian charged over classified Polymarket betting scheme - ReadWrite</title><link>https://readwrite.com/israeli-reservist-civilian-charged-classified-polymarket-betting-scheme/</link></item>
+<item><title>Marlon Wayans joins MyPrize as Premier Creator in entertainment platform expansion - ReadWrite</title><link>https://readwrite.com/marlon-wayans-joins-myprize-premier-creator/</link></item>
+<item><title>23 charged after charity network allegedly siphoned $3.2 million gambling grants - ReadWrite</title><link>https://readwrite.com/23-charged-3m-fraudulent-charity-gambling-grant-funds-new-zealand/</link></item>
+<item><title>DraftKings announces plans to launch market-making arm for predictions sector - ReadWrite</title><link>https://readwrite.com/draftkings-launch-market-making-prediction/</link></item>
+<item><title>Nevada lawmaker Dina Titus files discharge petition to force vote on gambling tax bill - ReadWrite</title><link>https://readwrite.com/titus-discharge-petition-force-vote-gambling-tax-bill/</link></item>
+<item><title>CFTC names 35 members including Kalshi, Polymarket, and DraftKings CEOs to Innovation Advisory Panel - ReadWrite</title><link>https://readwrite.com/cftc-kalshi-polymarket-draftkings-ceo-innovation-advisory-panel/</link></item>
+<item><title>Six men face charges in court over fatal stabbing outside London casino - ReadWrite</title><link>https://readwrite.com/six-men-charges-court-fatal-stabbing-outside-london-casino/</link></item>
+<item><title>Lexington man gets prison time in federal COVID-19 loan gambling fraud scheme - ReadWrite</title><link>https://readwrite.com/lexington-man-prison-federal-covid-19-loan-gambling-fraud-scheme/</link></item>
+<item><title>Former unregistered NDIS director faces 15-year jail term for alleged $858k misuse - ReadWrite</title><link>https://readwrite.com/former-ndis-director-faces-15-year-jail-term-for-alleged-858k-misuse/</link></item>
+<item><title>Aristocrat announces the acquisition of Gaming Analytics, Inc - ReadWrite</title><link>https://readwrite.com/aristocrat-acquisition-gaming-analytics-inc/</link></item>
+<item><title>Tabcorp hit with $158,400 penalty for taking illegal in-play sports bets - ReadWrite</title><link>https://readwrite.com/tabcorp-158400-acma-fine-illegal-in-play-sports-bets/</link></item>
+<item><title>Michigan Governor drives gambling taxation that could raise $800M for Medicaid - ReadWrite</title><link>https://readwrite.com/michigan-governor-drives-gambling-and-nicotine-taxation-that-could-raise-800m-for-medicaid/</link></item>
+<item><title>Institute aiming for support for gambling education funding accused of AI ‘slop’ report - ReadWrite</title><link>https://readwrite.com/institute-gambling-education-funding-ai-slop-report/</link></item>
+<item><title>Missouri Attorney General Hanaway launches crackdown on illegal gambling machines - ReadWrite</title><link>https://readwrite.com/missouri-attorney-general-takes-aim-at-illegal-gaming-machines/</link></item>
+<item><title>Kalshi to offer fee rebates to sportsbooks that lay off risk, according to CFTC document - ReadWrite</title><link>https://readwrite.com/kalshi-fee-rebates-sportsbooks-risk/</link></item>
+<item><title>Nevada Rep. Titus unveils prediction markets bill targeting sports loopholes oversight push - ReadWrite</title><link>https://readwrite.com/titus-prediction-markets-bill/</link></item>
+<item><title>Banned San Pablo Lytton Casino guest dies in police custody - ReadWrite</title><link>https://readwrite.com/banned-san-pablo-lytton-casino-guest-dies-police-custody/</link></item>
+<item><title>Study warns gambling ads drove soccer betting during 2022 World Cup despite UK safeguards - ReadWrite</title><link>https://readwrite.com/study-warns-gambling-ads-drive-soccer-betting-world-cup/</link></item>
+<item><title>Got a TCL TV? Change these 16 settings ASAP - here&amp;#39;s why - ZDNet</title><link>https://www.zdnet.com/home-and-office/home-entertainment/tcl-tv-settings-change-asap-why/</link></item>
+<item><title>Why my favorite Linux distro is slowing down - and I&amp;#39;m thrilled about it - ZDNet</title><link>https://www.zdnet.com/article/whats-coming-next-for-linux-mint/</link></item>
+<item><title>How to download YouTube videos for free - 2 easy and reliable methods I always use - ZDNet</title><link>https://www.zdnet.com/home-and-office/home-entertainment/how-i-download-youtube-videos-for-free/</link></item>
+<item><title>Last year&amp;#39;s MacBook Pro just dropped to a new low price at Best Buy for Presidents&amp;#39; Day - ZDNet</title><link>https://www.zdnet.com/article/apple-m4-macbook-pro-deal/</link></item>
+<item><title>Turn your doodles into video clips in minutes with this new AI tool - here&amp;#39;s how - ZDNet</title><link>https://www.zdnet.com/article/runway-ai-video-tool-motion-sketch/</link></item>
+<item><title>I replaced my Meta Ray-Bans with the Oakleys for a week - and they&amp;#39;re better in every way - ZDNet</title><link>https://www.zdnet.com/article/meta-oakley-hstn-smart-glasses-review/</link></item>
+<item><title>I found the 10 best early Presidents&amp;#39; Day TV sales: Save up to $1,500 on LG, Samsung, and more - ZDNet</title><link>https://www.zdnet.com/home-and-office/home-entertainment/early-presidents-day-tv-deals-2026/</link></item>
+<item><title>Looking for an OLED laptop with great battery life? Here&amp;#39;s one I recommend - ZDNet</title><link>https://www.zdnet.com/article/asus-vivobook-s15-snapdragon-presidents-day-deal/</link></item>
+<item><title>Want off-grid Starlink Mini? This power bank kept mine online for hours - ZDNet</title><link>https://www.zdnet.com/home-and-office/energy/xtar-link-mp158-starlink-mini-power-bank-review/</link></item>
+<item><title>The best early Presidents&amp;#39; Day sales we&amp;#39;ve found so far: Save on Apple, Sony, and more - ZDNet</title><link>https://www.zdnet.com/home-and-office/best-early-presidents-day-deals-2026/</link></item>
+<item><title>Windows 11 Home vs. Windows 11 Pro: I compared both versions, and here&amp;#39;s how to choose - ZDNet</title><link>https://www.zdnet.com/article/windows-11-home-windows-11-pro-compared/</link></item>
+<item><title>The best early Walmart sales for Presidents&amp;#39; Day - ZDNet</title><link>https://www.zdnet.com/home-and-office/best-early-walmart-deals-presidents-day-2026/</link></item>
+<item><title>This futuristic robot vacuum and mop changed how I clean my floors - here&amp;#39;s how - ZDNet</title><link>https://www.zdnet.com/home-and-office/kitchen-household/mova-mobius-60-robot-vacuum-mop-review/</link></item>
+<item><title>The best early Presidents&amp;#39; Day laptop sales we&amp;#39;ve found: Acer, HP, Lenovo, and Apple - ZDNet</title><link>https://www.zdnet.com/article/best-early-laptop-deals-presidents-day-2026/</link></item>
+<item><title>How to enable Extend Unlock on your Android phone (and why it&amp;#39;s seriously useful) - ZDNet</title><link>https://www.zdnet.com/article/android-extend-unlock-faster-phone-access/</link></item>
+<item><title>Kindle Scribe vs. ReMarkable Paper Pro: I&amp;#39;ve used both E Ink tablets, and this one wins - ZDNet</title><link>https://www.zdnet.com/article/remarkable-paper-pro-vs-kindle-scribe/</link></item>
+<item><title>AirTag 2 vs. AirTag 1: I compared both Bluetooth trackers, and the winner comes down to this - ZDNet</title><link>https://www.zdnet.com/article/airtag-2-vs-airtag-1/</link></item>
+<item><title>4 Linux distros that made Hyprland easy to use - and this one seriously impressed me - ZDNet</title><link>https://www.zdnet.com/article/top-linux-distributions-hyprland/</link></item>
+<item><title>Spotify vs. Apple Music: I&amp;#39;ve tried both streaming services, and prefer this one - ZDNet</title><link>https://www.zdnet.com/home-and-office/home-entertainment/spotify-vs-apple-music/</link></item>
+<item><title>Wearables to train like an Olympian, AI-powered pin trading, last-minute Valentine&amp;#39;s gifts | tech today - ZDNet</title><link>https://www.zdnet.com/video/wearables-to-train-like-an-olympian-ai-powered-pin-trading-last-minute-valentines-gifts-tech-today/</link></item>
+<item><title>An unlikely AirPods rival just launched with features I&amp;#39;ve yet to see on mainstream earbuds - ZDNet</title><link>https://www.zdnet.com/article/lg-xboom-buds-plus-tech/</link></item>
+<item><title>The secret to AI job security? Stop stressing and pivot at work now - here&amp;#39;s how - ZDNet</title><link>https://www.zdnet.com/article/ai-job-security-stop-stressing-pivot-work/</link></item>
+<item><title>Your LG TV is getting a big brightness boost for free - these older models included - ZDNet</title><link>https://www.zdnet.com/home-and-office/home-entertainment/lg-tv-picture-quality-upgrade/</link></item>
+<item><title>Atomic vs. immutable Linux: Why choose one when these nine distros offer both? - ZDNet</title><link>https://www.zdnet.com/article/atomic-vs-immutable-linux-distro-how-to-decide/</link></item>
+<item><title>Why I still recommend the Sonos Arc soundbar over competing models, especially at this price - ZDNet</title><link>https://www.zdnet.com/home-and-office/home-entertainment/sons-arc-ultra-deal/</link></item>
+<item><title>The wireless charger I recommend to hardcore Apple fans costs just $20 (but can do a lot) - ZDNet</title><link>https://www.zdnet.com/article/infinacore-3-in-1-charging-station-review/</link></item>
+<item><title>One of the best privacy upgrades you can give to your laptop costs less than you think - ZDNet</title><link>https://www.zdnet.com/home-and-office/startech-macbook-pro-privacy-screen-review/</link></item>
+<item><title>How I freed up 10GB of storage space on my Pixel by disabling this one optional app - ZDNet</title><link>https://www.zdnet.com/article/how-to-disable-aicore-google-pixel-free-storage/</link></item>
+<item><title>How to set up God Mode on Windows 11 (and use its powers effectively) - ZDNet</title><link>https://www.zdnet.com/article/how-to-turn-on-god-mode-windows-11/</link></item>
+<item><title>Spotify vs. YouTube Music: I paid for both services, and this one gave me better value - ZDNet</title><link>https://www.zdnet.com/home-and-office/home-entertainment/spotify-vs-youtube-music/</link></item>
+<item><title>The best smart TV VPNs of 2026: Expert tested and reviewed - ZDNet</title><link>https://www.zdnet.com/article/best-smart-tv-vpns/</link></item>
+<item><title>I&amp;#39;m a ChatGPT power user: Here are 7 useful settings that are turned off by default - ZDNet</title><link>https://www.zdnet.com/article/chatgpt-settings-for-pro-users/</link></item>
+<item><title>Why last year&amp;#39;s LG C5 OLED is my top TV recommendation right now - especially at 50% off - ZDNet</title><link>https://www.zdnet.com/home-and-office/home-entertainment/lg-c5-oled-review/</link></item>
+<item><title>Can a newbie really vibe code an app? I tried Cursor and Replit to find out - ZDNet</title><link>https://www.zdnet.com/article/beginner-vibe-coding-apps-cursor-replit-hands-on/</link></item>
+<item><title>I ignored Apple&amp;#39;s battery tips and charged my iPhone in all the wrong ways - here&amp;#39;s how it&amp;#39;s fared - ZDNet</title><link>https://www.zdnet.com/article/ignored-apple-battery-advice-on-iphone-the-result/</link></item>
+<item><title>I thought replacing my AirTag battery with a rechargeable one was a good idea - it wasn&amp;#39;t - ZDNet</title><link>https://www.zdnet.com/article/rechargeable-battery-airtag-do-not-use/</link></item>
+<item><title>ICFJ and Wikimedia Foundation Seek Applications for Open the Knowledge Journalism Awards in Africa - Wikimedia Foundation</title><link>https://wikimediafoundation.org/news/2026/02/02/open-knowledge-journalism-awards-applications-open/</link></item>
+<item><title>Argentina Blocks Pirate Streaming Services Magis TV and Xuper TV, VPN Usage Skyrockets - TorrentFreak</title><link>https://torrentfreak.com/argentina-blocks-pirate-streaming-services-magis-tv-and-xuper-tv-vpn-usage-skyrockets/</link></item>
+<item><title>Anna’s Archive Quietly ‘Releases’ Millions of Spotify Tracks, Despite Legal Pushback - TorrentFreak</title><link>https://torrentfreak.com/annas-archive-quietly-releases-millions-of-spotify-tracks-despite-legal-pushback/</link></item>
+<item><title>Nintendo Piracy: NXBrew and NSWPedia Targeted in European Blocking Efforts - TorrentFreak</title><link>https://torrentfreak.com/nintendo-piracy-nxbrew-and-nswpedia-targeted-in-european-blocking-efforts/</link></item>
+<item><title>Amazing Smooth Jazz Covers of Popular Songs - Laughing Squid</title><link>https://laughingsquid.com/kubla-smooth-jazz-covers/</link></item>
+<item><title>Conductor Amusingly Improvises a Live Composition With an Orchestra Made Up of San Francisco Musicians - Laughing Squid</title><link>https://laughingsquid.com/jacob-collier-improvises-with-orchestra/</link></item>
+<item><title>Inside a Bustling Gold Exchange in the Heart of New York City’s Diamond District - Laughing Squid</title><link>https://laughingsquid.com/gold-exchange-nyc-diamond-district/</link></item>
+<item><title>Dedicated Man Rescues Wayward Sloths Who Hang Around Miranda, Venezuela - Laughing Squid</title><link>https://laughingsquid.com/miranda-venezuela-sloth-rescue/</link></item>
+<item><title>Two Violinists Play One Violin at the Same Time - Laughing Squid</title><link>https://laughingsquid.com/two-violinists-one-violin/</link></item>
+<item><title>A Detailed Tour of the ‘Game of Thrones’ World Map - Laughing Squid</title><link>https://laughingsquid.com/game-of-thrones-world-map/</link></item>
+<item><title>How the Missing ‘R’ Is Making Its Way Back Into the Iconic South Boston Accent - Laughing Squid</title><link>https://laughingsquid.com/south-boston-accent-disappearing/</link></item>
+<item><title>Vocal Cockatoo Surrendered for Being Too Loud Finds Home After 16 Years With Humans Who Adore Him - Laughing Squid</title><link>https://laughingsquid.com/loud-cockatoo-finds-loving-home/</link></item>
+<item><title>Beautiful Harp Cover of the Grateful Dead’s ‘Bird Song’ - Laughing Squid</title><link>https://laughingsquid.com/grateful-dead-bird-song-harp-cover/</link></item>
+<item><title>A Brilliant TED Talk About How Funny Wildlife Photos Can Lead to Empathy for Conservation Efforts - Laughing Squid</title><link>https://laughingsquid.com/funny-animal-photos-ted-talk/</link></item>
+<item><title>Generous Woman Adopts Dog Who Was Left Wandering the Desert After His Beloved Family Was Deported - Laughing Squid</title><link>https://laughingsquid.com/adopting-dog-after-deportation/</link></item>
+<item><title>Art Garfunkel Performs a Verse of &amp;#39;Scarborough Fair&amp;#39; From a New York City Rooftop - Laughing Squid</title><link>https://laughingsquid.com/art-garfunkel-tad-laven-scarborough-fair/</link></item>
+<item><title>Dachshund Gleefully Zooms Around a Track That Her Human Made In the Snow - Laughing Squid</title><link>https://laughingsquid.com/dachshund-snow-track/</link></item>
+<item><title>&amp;quot;Wuthering Heights&amp;quot; Made Kate Bush a Star at 19—Here&amp;#39;s What Inspired the Song - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/music/what-inspired-kate-bushs-wuthering-heights?utm_source=RSS</link></item>
+<item><title>7 of the Most Scandalous Romantic Plot Twists in Classic Literature - Mental Floss</title><link>https://www.mentalfloss.com/literature/books/romantic-plot-twists-in-classic-literature?utm_source=RSS</link></item>
+<item><title>Russia will uphold nuclear weapons limits of expired treaty, foreign minister says - Defense News</title><link>https://www.defensenews.com/global/europe/2026/02/12/russia-will-uphold-nuclear-weapons-limits-of-expired-treaty-foreign-minister-says/</link></item>
+<item><title>Urban Nature: Building Resilience with Living Systems - World Sensorium</title><link>https://worldsensorium.com/urban-nature-building-resilience-with-living-systems/</link></item>
+<item><title>The Crown Made of Leaves - World Sensorium</title><link>https://worldsensorium.com/the-crown-made-of-leaves/</link></item>
+<item><title>Why the World Must Measure Well-Being, Not GDP - World Sensorium</title><link>https://worldsensorium.com/why-the-world-must-measure-well-being-not-gdp/</link></item>
+<item><title>The Secret Lives of Tree Roots - World Sensorium</title><link>https://worldsensorium.com/the-secret-lives-of-tree-roots/</link></item>
+<item><title>Becoming the Sea: Anselm Kiefer and the Mississippi as Memory, Material, and Warning - World Sensorium</title><link>https://worldsensorium.com/becoming-the-sea-anselm-kiefer-and-the-mississippi-as-memory-material-and-warning/</link></item>
+<item><title>On Self-Incompatibility - World Sensorium</title><link>https://worldsensorium.com/on-self-incompatibility/</link></item>
+<item><title>Why and How to Grow Microgreens - World Sensorium</title><link>https://worldsensorium.com/why-and-how-to-grow-microgreens/</link></item>
+<item><title>Guarding the guardians - Aeon</title><link>https://aeon.co/essays/institutions-are-how-we-scale-up-cooperation-among-millions?utm_source=rss-feed</link></item>
+<item><title>Stephen and David’s toy cupboard - Aeon</title><link>https://aeon.co/videos/an-action-figure-makers-outsized-tribute-to-his-late-brother?utm_source=rss-feed</link></item>
+<item><title>Subverting hell - Aeon</title><link>https://aeon.co/essays/feel-the-burn-how-subversion-works-in-literature?utm_source=rss-feed</link></item>
 </channel></rss>
