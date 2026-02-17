@@ -222,7 +222,7 @@ function menu_enwords_book(){
     ['生词量最少','refresh_book_new_enwords_book(10,3,false);',true],
     ['生词量最多','refresh_book_new_enwords_book(10,3,true);',true],
     ];    
-    klmenu2.push(menu_container_b(str_t,format_list,'按书名顺序重新批量统计10本书籍：'));    
+    klmenu2.push(menu_container_b(str_t,format_list,'按书名顺序重新批量统计10本书籍：<br />'));    
     
     if (is_local_b()){
         klmenu2.push('<span class="span_menu" onclick="'+str_t+'klwiki_link_b(\'英语书籍生词统计\',true);">英语书籍生词统计(KLWiki)</span>');
@@ -247,7 +247,7 @@ function menu_enwords_book(){
     ];
     klmenu_config.push(menu_container_b(str_t,format_list,'文件载入：'));    
     
-    var menus=klmenu_b(klmenu1,'🝛','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_new,'🔤','30rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'🧮','33rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','34rem','1rem','1rem','60rem');
+    var menus=klmenu_b(klmenu1,'🝛','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_new,'🔤','30rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'🧮','20rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','34rem','1rem','1rem','60rem');
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(menus,'','0rem')+' ');
     
     var input_list=[['input_frequency_count_enwords',5,0.5],];
