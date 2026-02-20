@@ -4809,7 +4809,11 @@ function current_page_2_ensentence_b(cstype=''){
     var odiv=document.getElementById('divhtml2');
     var left_str='<p><span id="span_sentences_from_len_kltxt_b"></span>';
     left_str=left_str+close_button_b('divhtml2','');      
-    left_str=left_str+'字符串长度：<input type="number" id="input_sentences_from_kltxt_split_len_b" placeholder="分割长度" min=0 value="5000" style="width:4rem;" /> <span class="aclick" onclick="ensentence_in_textarea_split_b();">分割</span><span class="aclick" onclick="ensentence_in_textarea_sort_b();">按长度升序</span><span class="aclick" onclick="ensentence_in_textarea_remove_open_end_b();">剔除开放结尾行</span>';
+    left_str=left_str+`字符串长度：<input type="number" id="input_sentences_from_kltxt_split_len_b" placeholder="分割长度" min=0 value="5000" style="width:4rem;" /> 
+<span class="aclick" onclick="ensentence_in_textarea_split_b();">分割</span>
+<span class="aclick" onclick="ensentence_in_textarea_sort_b();">按长度升序</span>
+<span class="aclick" onclick="ensentence_in_textarea_group_b();">按稀有单词分割</span>
+<span class="aclick" onclick="ensentence_in_textarea_remove_open_end_b();">剔除开放结尾行</span>`;
     var right_str='</p>';
     bljg=textarea_with_form_generate_b('textarea_sentences_from_kltxt_b','height:10rem;',left_str,'清空,复制,发送到临时记事本,发送地址',right_str,'','',false,bljg);
     
@@ -4835,6 +4839,35 @@ function ensentence_in_textarea_remove_open_end_b(){
     ensentence_in_textarea_len_b(result_t);
 }
 
+function ensentence_in_textarea_group_b(){
+    if (typeof en_sentence_count_global == 'undefined'){return;}
+
+    var otextarea=document.getElementById('textarea_sentences_from_kltxt_b');
+    var list_t=otextarea.value.trim().split(/\n+/mg);
+    
+    var rare_reg=new RegExp('\\b('+en_sentence_count_global.join('|')+')\\b');
+    var rare_dict={};
+    for (let arow of list_t){
+        var word=arow.match(rare_reg);  //形如：[ "free-spirited", "free-spirited" ] - 保留注释
+        if (word==null){continue;}
+        var blkey='w_'+word[0];
+        if (rare_dict[blkey]==undefined){
+            rare_dict[blkey]=[];
+        }
+        rare_dict[blkey].push(arow);
+    }
+    
+    rare_dict=object2array_b(rare_dict,true,2);
+    rare_dict.sort();
+    rare_dict.sort(function (a,b){return a.length>b.length?-1:1;});
+    
+    for (let blxl=0,lent=rare_dict.length;blxl<lent;blxl++){
+        var arow=rare_dict[blxl].slice(1,);
+        rare_dict[blxl]='<h4>'+rare_dict[blxl][0]+'</h4>'+ensentence_in_sub_textarea_b(arow.join('\n\n'),arow.length,blxl);
+    }
+    document.getElementById('div_sentences_from_kltxt_result_b').innerHTML=rare_dict.join('\n');
+}
+
 function ensentence_in_textarea_sort_b(){
     var otextarea=document.getElementById('textarea_sentences_from_kltxt_b');
     var list_t=otextarea.value.trim().split(/\n+/mg);
@@ -4843,11 +4876,11 @@ function ensentence_in_textarea_sort_b(){
     ensentence_in_textarea_len_b(list_t);
 }
 
-function ensentence_in_textarea_split_b(){
-    function sub_ensentence_in_textarea_split_b_textarea(part_str,row_count){
-        return '<textarea onclick="this.style.color=\''+scheme_global['memo']+'\'; this.style.backgroundColor=\''+scheme_global['button']+'\'; this.select(); document.execCommand(\'copy\');">'+part_str+'</textarea><p>'+(split_str.length+1)+'. '+row_count+'/'+part_str.length+'</p>';
-    }
-    
+function ensentence_in_sub_textarea_b(part_str,row_count,split_str_length){
+    return '<textarea onclick="this.style.color=\''+scheme_global['memo']+'\'; this.style.backgroundColor=\''+scheme_global['button']+'\'; this.select(); document.execCommand(\'copy\');">'+part_str+'</textarea><p>'+(split_str_length+1)+'. '+row_count+'/'+part_str.length+'</p>';
+}
+
+function ensentence_in_textarea_split_b(){    
     var otextarea=document.getElementById('textarea_sentences_from_kltxt_b');
     var bljg=otextarea.value;
     var split_len=parseInt(document.getElementById('input_sentences_from_kltxt_split_len_b').value.trim());
@@ -4859,7 +4892,7 @@ function ensentence_in_textarea_split_b(){
     var row_count=0;
     for (let arow of result_t){
         if ((part_str+arow+'\n\n').length>split_len){
-            split_str.push(sub_ensentence_in_textarea_split_b_textarea(part_str,row_count));
+            split_str.push(ensentence_in_sub_textarea_b(part_str,row_count,split_str.length));
             part_str='';
             row_count=0;
         }
@@ -4867,7 +4900,7 @@ function ensentence_in_textarea_split_b(){
         row_count=row_count+1;
     }
     if (split_str.length>0){
-        split_str.push(sub_ensentence_in_textarea_split_b_textarea(part_str,row_count));
+        split_str.push(ensentence_in_sub_textarea_b(part_str,row_count,split_str.length));
     }
     
     document.getElementById('div_sentences_from_kltxt_result_b').innerHTML=split_str.join('\n');

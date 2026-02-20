@@ -615,8 +615,7 @@ function day_info_klcalendar(td_number=false,odom=false){
     var blstr='<p><span class="span_box" ondblclick="day_info_klcalendar(false);"><b>'+date_obj.sYear+'年'+date_obj.sMonth+'月'+date_obj.sDay+'日</b></span>';
     
     var memo_list=memo_theday_klcalendar(validdate_b(date_obj.sYear+'-'+date_obj.sMonth+'-'+date_obj.sDay));
-    
-    blstr=blstr+'<small>(第'+day_of_year_b(date_obj.odate)+'天)</small></p>';
+    blstr=blstr+'<small>(第'+day_of_year_b(date_obj.odate)+'天 | 距今日'+days_between_two_dates_b(date_obj.odate,date2str_b()).toFixed(0)+'天)</small></p>';
     blstr=blstr+'<p><font color=blue>农历'+(date_obj.isLeap?'闰':'')+date_obj.lMonth+'月'+date_obj.lDay+'日</font></p><p>'+festival; 
 
     var theyear=parseInt(odom.querySelector('.select_year').value);
