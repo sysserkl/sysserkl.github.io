@@ -4813,7 +4813,8 @@ function current_page_2_ensentence_b(cstype=''){
 <span class="aclick" onclick="ensentence_in_textarea_split_b();">分割</span>
 <span class="aclick" onclick="ensentence_in_textarea_sort_b();">按长度升序</span>
 <span class="aclick" onclick="ensentence_in_textarea_group_b();">按稀有单词分割</span>
-<span class="aclick" onclick="ensentence_in_textarea_remove_open_end_b();">剔除开放结尾行</span>`;
+<span class="aclick" onclick="ensentence_in_textarea_remove_open_end_b();">剔除开放结尾行</span>
+<span class="aclick" onclick="ensentence_in_textarea_remove_lengthy_rows_b();">剔除超长行</span>`;
     var right_str='</p>';
     bljg=textarea_with_form_generate_b('textarea_sentences_from_kltxt_b','height:10rem;',left_str,'清空,复制,发送到临时记事本,发送地址',right_str,'','',false,bljg);
     
@@ -4824,6 +4825,22 @@ function current_page_2_ensentence_b(cstype=''){
 
 function ensentence_in_textarea_len_b(csarr){
     document.getElementById('span_sentences_from_len_kltxt_b').innerHTML='('+csarr.length+'/'+csarr.join('\n\n').length+')';
+}
+
+function ensentence_in_textarea_remove_lengthy_rows_b(){
+    var blcount=prompt('输入最长行字符数','300');
+    if (blcount==null){return;}
+    blcount=parseInt(blcount.trim());
+    
+    var otextarea=document.getElementById('textarea_sentences_from_kltxt_b');
+    var list_t=otextarea.value.trim().split(/\n+/mg);
+    var result_t=[];
+    for (let arow of list_t){
+        if (arow.length>blcount){continue;}
+        result_t.push(arow);
+    }
+    otextarea.value=result_t.join('\n\n');
+    ensentence_in_textarea_len_b(result_t);
 }
 
 function ensentence_in_textarea_remove_open_end_b(){
