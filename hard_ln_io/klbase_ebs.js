@@ -184,6 +184,7 @@ function menu_ebs_b(){
     '<span class="span_menu" onclick="'+str_t+'document.getElementById(\'div_batch_search_ebs\').style.display=\'\';">批量搜索</span>',   
     load_sentence_menu_b(str_t),
     ];
-
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'👁','11rem','1rem','1rem','60rem'),'','0rem')+' ');
+    enwords_key_new_rare_menu_kltxt_b(klmenu1,str_t,false);
+    
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'👁','21rem','1rem','1rem','60rem'),'','0rem')+' ');
 }

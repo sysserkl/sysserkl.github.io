@@ -324,6 +324,48 @@ function new_words_lines_kltxt_b(new_min=-1,new_max=-1,rare_min=-1,rare_max=-1){
     sub_new_words_lines_kltxt_b_arow();
 }
 
+function enwords_key_new_rare_menu_kltxt_b(csmenu,str_t,is_full=true){
+    var group_list=[];
+    if (is_full){
+        group_list=group_list.concat([
+        ['枚举','rare_enwords_enumerate_kltxt_b();',true],
+        ['搜索','rare_enwords_search_kltxt_b();',true],
+        ['例句+生词+','rare_enwords_search_kltxt_b(true,true,true);',true],
+        ['可选','show_rare_and_load_sentence_kltxt_b(true,true,flist_2_ensentence_b);',true],    
+        ['重复剔除','rare_enwords_unique_kltxt_b();',true],
+        ]);
+    }
+    group_list=group_list.concat([
+    ['当前页面','current_page_rare_words_kltxt_b(\'rare\',true);',true],    
+    ['例句提取','current_page_2_ensentence_b(\'rare\');',true],        
+    ]);    
+    csmenu.push(menu_container_b(str_t,group_list,'稀有旧单词：'));
+    
+    var group_list=[];
+    if (is_full){
+        group_list=group_list.concat([
+        ['全部','frequent_new_enwords_kltxt_b();',true],
+        ]);    
+    }
+    group_list=group_list.concat([
+    ['当前页面','frequent_new_enwords_kltxt_b(true);',true],
+    ['例句提取','current_page_2_ensentence_b(\'new\');',true],
+    ]);
+    csmenu.push(menu_container_b(str_t,group_list,'常见英语生词：'));
+
+    var group_list=[];
+    if (is_full){
+        group_list=group_list.concat([
+        ['重复剔除','rare_enwords_unique_kltxt_b(\'key\');',true],    
+        ]);  
+    }
+    group_list=group_list.concat([
+    ['例句提取','current_page_2_ensentence_b(\'key\');',true],      
+    ]);    
+
+    csmenu.push(menu_container_b(str_t,group_list,'关键词：'));
+}
+
 function txtmenus_kltxt_b(cstype=''){
     var str_t=klmenu_hide_b('');
     var blparent=menu_parent_node_b(str_t);
@@ -374,29 +416,7 @@ function txtmenus_kltxt_b(cstype=''){
     ];    
     menu_general.push(menu_container_b(str_t,group_list,'行：'));
     
-    var group_list=[
-    ['枚举','rare_enwords_enumerate_kltxt_b();',true],
-    ['搜索','rare_enwords_search_kltxt_b();',true],
-    ['例句+生词+','rare_enwords_search_kltxt_b(true,true,true);',true],
-    ['可选','show_rare_and_load_sentence_kltxt_b(true,true,flist_2_ensentence_b);',true],    
-    ['重复剔除','rare_enwords_unique_kltxt_b();',true],
-    ['例句提取','current_page_2_ensentence_b(\'rare\');',true],    
-    ['当前页面','current_page_rare_words_kltxt_b(\'rare\',true);',true],    
-    ];    
-    menu_general.push(menu_container_b(str_t,group_list,'稀有旧单词：'));
-    
-    var group_list=[
-    ['全部','frequent_new_enwords_kltxt_b();',true],
-    ['当前页面','frequent_new_enwords_kltxt_b(true);',true],
-    ['例句提取','current_page_2_ensentence_b(\'new\');',true],      
-    ];    
-    menu_general.push(menu_container_b(str_t,group_list,'常见英语生词：'));
-
-    var group_list=[
-    ['重复剔除','rare_enwords_unique_kltxt_b(\'key\');',true],    
-    ['例句提取','current_page_2_ensentence_b(\'key\');',true],      
-    ];    
-    menu_general.push(menu_container_b(str_t,group_list,'关键词：'));
+    enwords_key_new_rare_menu_kltxt_b(menu_general,str_t,true);
     
     menu_general.push(load_sentence_menu_b(str_t,[['最佳','best_sentences_kltxt_b(\'divhtml2\');',true]]));
     
@@ -2736,7 +2756,6 @@ function rare_words_in_digest_set_generate_kltxt_b(){
 
 function rare_enwords_unique_kltxt_b(cstype='rare'){
     function sub_rare_enwords_unique_kltxt_b_remove(one_row){
-        //var owords=one_row.querySelectorAll('span.span_rare_word_search_links');
         var owords=new_rare_key_doms_get_kltxt_b(cstype,one_row)[0];
         var do_remove=true;
         for (let one_word of owords){
@@ -4812,6 +4831,7 @@ function current_page_2_ensentence_b(cstype=''){
     left_str=left_str+`字符串长度：<input type="number" id="input_sentences_from_kltxt_split_len_b" placeholder="分割长度" min=0 value="5000" style="width:4rem;" /> 
 <span class="aclick" onclick="ensentence_in_textarea_split_b();">分割</span>
 <span class="aclick" onclick="ensentence_in_textarea_sort_b();">按长度升序</span>
+小于<input type="number" id="input_sentences_from_kltxt_minor_merge_b" style="width:2rem;" value=2 />时不分割
 <span class="aclick" onclick="ensentence_in_textarea_group_b();">按稀有单词分割</span>
 <span class="aclick" onclick="ensentence_in_textarea_remove_open_end_b();">剔除开放结尾行</span>
 <span class="aclick" onclick="ensentence_in_textarea_remove_lengthy_rows_b();">剔除超长行</span>`;
@@ -4878,11 +4898,30 @@ function ensentence_in_textarea_group_b(){
     rare_dict.sort();
     rare_dict.sort(function (a,b){return a.length>b.length?-1:1;});
     
+    var blminor=parseInt(document.getElementById('input_sentences_from_kltxt_minor_merge_b').value.trim());
+    var right_part_list=[];
+    var blno=0;
     for (let blxl=0,lent=rare_dict.length;blxl<lent;blxl++){
         var arow=rare_dict[blxl].slice(1,);
+        if (arow.length<blminor){
+            console.log(rare_dict.length);        
+            right_part_list=rare_dict.slice(blxl,);
+            rare_dict=rare_dict.slice(0,blxl);
+            console.log(right_part_list.length,rare_dict.length);
+            break;
+        }
+        
         rare_dict[blxl]='<h4>'+rare_dict[blxl][0]+'</h4>'+ensentence_in_sub_textarea_b(arow.join('\n\n'),arow.length,blxl);
+        blno=blxl;
     }
-    document.getElementById('div_sentences_from_kltxt_result_b').innerHTML=rare_dict.join('\n');
+
+    var merge_list=[];
+    for (let arow of right_part_list){
+        merge_list=merge_list.concat(arow.slice(1,));
+    }
+    merge_list='<h4>其他</h4>'+ensentence_in_sub_textarea_b(merge_list.join('\n\n'),merge_list.length,blno+1);
+
+    document.getElementById('div_sentences_from_kltxt_result_b').innerHTML=rare_dict.join('\n')+merge_list;
 }
 
 function ensentence_in_textarea_sort_b(){

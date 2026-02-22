@@ -146,7 +146,7 @@ function show_result_ebsjs(csstr=''){
     }
     if (csstr==''){return;}
     var is_eng=document.getElementById('input_only_eng').checked;
-    var book_arr=csbooklist_sub_global;//(is_eng?:csbooklist_source_global);
+    var book_arr=csbooklist_sub_global;
 
     var selepath=klbase_sele_path_b()[1];
     show_result_ebs_b(content_file_found_global,book_arr,csstr,selepath);

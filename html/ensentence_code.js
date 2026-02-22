@@ -535,11 +535,14 @@ function row_duplicate_ensentence(){
 function length_sort_ensentence(is_short=true,do_merge=-1,keep_kleng=true){
     function sub_length_sort_ensentence_group(csarr){
         let bllen=csarr.length;
-        let groups=group_2_equal_bins_b(array_split_by_col_b(csarr,[0]),20,keep_kleng);
+        let pie_list=[];
+        let groups=group_2_equal_bins_b(array_split_by_col_b(csarr,[0]),10,keep_kleng);
         for (let blxl=0,lent=groups.length;blxl<lent;blxl++){
-            groups[blxl]='<b>'+groups[blxl]['interval'].toString().replace(',','~')+':</b> '+groups[blxl]['values'].length+' ('+(groups[blxl]['values'].length*100/bllen).toFixed(3)+'%)';
+            let group_name=groups[blxl]['interval'].toString().replace(',','~');
+            pie_list.push({label: group_name, data: groups[blxl]['values'].length});
+            groups[blxl]='<b>'+group_name+':</b> '+groups[blxl]['values'].length+' ('+(groups[blxl]['values'].length*100/bllen).toFixed(3)+'%)';
         }
-        return groups.join('|');
+        return [groups.join('|'),pie_list];
     }
 
     var t0 = performance.now();
@@ -583,18 +586,22 @@ function length_sort_ensentence(is_short=true,do_merge=-1,keep_kleng=true){
         result_t.sort(function (a,b){return a[0]<b[0] ? 1 : -1;});    
     }
     
-    var groups_full='<font color="'+scheme_global['a-hover']+'">全部：</font>'+sub_length_sort_ensentence_group(result_t);
+    var groups_full,pie_full;
+    [groups_full,pie_full]=sub_length_sort_ensentence_group(result_t);
+    groups_full='<font color="'+scheme_global['a-hover']+'">全部：</font>'+groups_full;
+    
     result_t=result_t.slice(0,csmax);
-    var groups_part='<font color="'+scheme_global['a-hover']+'">部分：</font>'+sub_length_sort_ensentence_group(result_t);
+    var groups_part='<font color="'+scheme_global['a-hover']+'">部分：</font>'+sub_length_sort_ensentence_group(result_t)[0];
 
     result_t=array_split_by_col_b(result_t,[1]);
     var bljg=sentence_list_2_html_b(result_t,[''],csmax,false,false,false,true);
     
     var group_reg=quote_reg_button_ensentence();
-    document.getElementById('divhtml').innerHTML='<div class="div_sentence">'+bljg.join('\n')+'</div><p><i>('+bljg.length+')</i> '+groups_full+' '+groups_part+'</p><p>'+group_reg[0]+'</p>'+group_reg[1];
+    document.getElementById('divhtml').innerHTML='<div class="div_sentence">'+bljg.join('\n')+'</div><p><i>('+bljg.length+')</i> '+groups_full+' '+groups_part+'</p>'+'<div id="div_length_pie_ensentence" style="width:25rem; height:25rem"></div>'+'<p>'+group_reg[0]+'</p>'+group_reg[1];
     if (keep_kleng){
         sup_kleng_words_b();
     }
+    flot_pie_b(pie_full,'div_length_pie_ensentence');
     console.log('length_sort_ensentence() 费时：'+(performance.now() - t0) + ' milliseconds');    
 }
 
