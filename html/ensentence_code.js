@@ -87,6 +87,7 @@ function menu_ensentence(){
     '<span class="span_menu" onclick="'+str_t+'host_count_ensentence();">例句出处统计</span>',
     '<span class="span_menu" onclick="'+str_t+'row_duplicate_ensentence();">重复例句</span>',
     '<span class="span_menu" onclick="'+str_t+'eword_duplicate_ensentence();">行内重复 eword 检索</span>',
+    '<span class="span_menu" onclick="'+str_t+'len_between_ensentence();">当前页面保留指定长度例句</span>',
     fpara_menu_b(str_t,true),
     ];  
 
@@ -112,14 +113,14 @@ function menu_ensentence(){
         klmenu_config=klmenu_config.concat([
         '<span id="span_sort_by_selenium_ensentence" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 按selenium单词数排序</span>',
         ]);
-        
-        var group_list=[
-        ['最短例句','length_sort_ensentence();',true],
-        ['最长例句','length_sort_ensentence(false);',true],
-        ];    
-        klmenu_config.push(menu_container_b(str_t,group_list,'<select id="select_length_sort_ensentence_type"><option>分句</option><option>全句</option></select>：'));        
     }
-    
+
+    var group_list=[
+    ['最短例句','length_sort_ensentence();',true],
+    ['最长例句','length_sort_ensentence(false);',true],
+    ];    
+    klmenu_config.push(menu_container_b(str_t,group_list,'<select id="select_length_sort_ensentence_type"><option>分句</option><option>全句</option></select>：'));        
+        
     var klmenu_link=[
     '<a href="../jsdata/words/enwords_sentence_data.js'+file_date_parameter_b()+'" onclick="'+str_t+'" target=_blank>enwords_sentence_data.js</a>',    
     '<a href="'+location.origin+'/wiki/index.php/%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9" onclick="'+str_t+'" target=_blank>KLWiki最近更改</a>',        
@@ -138,6 +139,59 @@ function menu_ensentence(){
     ['input_ensentence_row_max_exam',3,0.5],
     ];
     input_size_b(input_list,'id');
+}
+
+function len_between_ensentence(){
+    function sub_len_between_ensentence_current(){
+        var len_set=new Set();
+        var ospans=document.querySelectorAll('#divhtml p.p_enwords_sentence span.span_enwords_sentence');
+        for (let one_span of ospans){
+            len_set.add(one_span.innerText.length);
+        }
+        
+        len_set=Array.from(len_set);
+        let len_count=len_set.length;
+        let sentence_len=ospans.length;
+        if (len_count==0){return [false,false,sentence_len];}
+        if (len_count==1){return [false,len_set[0],sentence_len];}
+        
+        len_set.sort();
+        return [len_set[0]].concat(len_set.slice(-1)).concat([sentence_len]);
+    }
+
+    var blmin,blmax,bllen;
+    [blmin,blmax,bllen]=sub_len_between_ensentence_current();
+    if (blmin===false){return;}
+    
+    var blrange=prompt('当前句子共'+bllen+'条，长度在 '+blmin+'~'+blmax+' 之间，输入要保留的长度范围',blmin+','+blmax);
+    if (blrange==null){return;}
+    blrange=blrange.replace(/\s/g,'').split(',');
+    if (blrange.length<2){
+        blrange.push(blrange[0]);
+    }
+    blrange=blrange.slice(0,2);
+    blrange[0]=parseInt(blrange[0]);
+    blrange[1]=parseInt(blrange[1]);
+    if (isNaN(blrange[0]) || isNaN(blrange[1])){return;}
+    
+    var blcount=0;
+    var ops=document.querySelectorAll('#divhtml p.p_enwords_sentence');
+    for (let one_p of ops){
+        var ospan=one_p.querySelector('span.span_enwords_sentence');
+        let bllen=ospan.innerText.length;
+        if (bllen>=blrange[0] && bllen<=blrange[1]){continue;}
+        one_p.parentNode.removeChild(one_p);
+        blcount=blcount+1;
+    }
+    
+    [blmin,blmax,bllen]=sub_len_between_ensentence_current();
+    if (blmax===false){
+        alert('移除了'+blcount+'条，剩余记录'+bllen+'条');
+    } else if (blmin===false){
+        alert('移除了'+blcount+'条，剩余记录'+bllen+'条，长度为'+blmax);
+    } else {
+        alert('移除了'+blcount+'条，剩余记录'+bllen+'条，长度在'+blmin+'~'+blmax+'之间');
+    }
 }
 
 function hash_result_sentences(){

@@ -200,9 +200,11 @@ function menu_enwords_book(){
     format_list=[
     ['高中单词','import_enwords_book(\'senior_high_school\');',true],
     ['CET6单词','import_enwords_book(\'cet6\');',true],
+    ['分组比较高中单词','compare_enwords_book(\'senior_high_school\');',true],
+    ['CET6单词','compare_enwords_book(\'cet6\');',true],
     ];    
 
-    klmenu_new.push(menu_container_b(str_t,format_list,'导入'));    
+    klmenu_new.push(menu_container_b(str_t,format_list,'导入'));
     
     var cache_type_list=['','随机','旧单词在前','单词数','标题和链接长度','标题首字母','稀有度','一对多','包含'];
     for (let blxl=0,lent=cache_type_list.length;blxl<lent;blxl++){
@@ -586,6 +588,17 @@ function new_words_in_phrase_enwords_book(){
     }
     document.getElementById('textarea_new_words1').value='全部词组\n'+Array.from(result_t);
     console.log('new_words_in_phrase_enwords_book() 费时：'+(performance.now() - t0) + ' milliseconds');
+}
+
+function compare_enwords_book(cstype){
+    var otext1=document.getElementById('textarea_new_words1');
+    var otext2=document.getElementById('textarea_new_words2');
+    if (otext2.value.trim()==''){
+        otext2.value=otext1.value;
+        otext1.value='';
+    }
+    import_enwords_book(cstype);
+    get_new_words_group_enwords_book();
 }
 
 function import_enwords_book(cstype,csmax=-1){

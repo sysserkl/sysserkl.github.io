@@ -781,7 +781,7 @@ function new_words_in_str_enbook_b(article_arr,simple_split=false,only_lower_upp
     sub_new_words_in_str_enbook_b_arow();   
 }
 
-function frequency_words_enbook_b(cstype='',simple_split=false,common_max=4000,csresult={},only_lower_upper=false){
+function frequency_words_enbook_b(cstype='',simple_split=false,common_max=8000,csresult={},only_lower_upper=false){
     function sub_frequency_words_enbook_b_done(oldwords_size){
         var new_t,common_t,common_set;
         [new_t,common_t,common_set]=new_and_common_enwords_book_b(csresult,oldwords_size*2,common_max); //2倍旧单词长度 - 保留注释

@@ -1175,6 +1175,12 @@ function menu_offline_file_browser(){
     ['坐标导出','lat_lng_date_get_offline_file_browser();',true],
     ];    
     klmenu1.push(menu_container_b(str_t,group_list,'当前结果：'));
+
+    var group_list=[
+    ['出现1次','date_size_group_offline_file_browser(1);',true],
+    ['出现2次','date_size_group_offline_file_browser(2);',true],
+    ];    
+    klmenu1.push(menu_container_b(str_t,group_list,'当前条件（文件日期_大小）分组比较：<br />'));
     
      var klmenu_config=[
     '<span class="span_menu" onclick="'+str_t+'import_bigfile_offline_file_browser();">导入 bigfile 文件</span>',
@@ -1230,7 +1236,7 @@ function menu_offline_file_browser(){
     ];    
     klmenu_link.push(menu_container_b(str_t,group_list,'光盘柜：'));
     
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'💾','18rem','','1rem')+klmenu_b(klmenu2,'🔀','10rem','','1rem')+klmenu_b(klmenu_statistics,'🧮','14rem','','1rem')+klmenu_b(klmenu_config,'⚙','18rem','','1rem')+(is_local_b()?klmenu_b(klmenu_link,'L','16rem','','1rem'):''),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'💾','20rem','','1rem')+klmenu_b(klmenu2,'🔀','10rem','','1rem')+klmenu_b(klmenu_statistics,'🧮','14rem','','1rem')+klmenu_b(klmenu_config,'⚙','18rem','','1rem')+(is_local_b()?klmenu_b(klmenu_link,'L','16rem','','1rem'):''),'','0rem')+' ');
     
     klmenu_check_b('span_kmg_ofb',true);            
     klmenu_check_b('span_reg_ofb',true);       
@@ -1243,6 +1249,15 @@ function menu_offline_file_browser(){
     ['input_return_max_rows_ofb',6],
     ];
     input_size_b(input_list,'id');
+}
+
+function date_size_group_offline_file_browser(cscount){
+    document.getElementById('select_raw_sort_id_ofb').value=3;
+    document.getElementById('select_raw_sub_group1_id_ofb').value=4;
+    document.getElementById('select_raw_sub_group2_id_ofb').value=4;
+    document.getElementById('input_group_count_min_ofb').value=cscount;
+    document.getElementById('input_group_count_max_ofb').value=cscount;    
+    group_count_offline_file_browser();
 }
 
 function statistics_lengthy_offline_file_browser(){
