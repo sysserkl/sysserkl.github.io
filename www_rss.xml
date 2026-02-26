@@ -8,362 +8,571 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Wed, 25 Feb 2026 09:02:23 +0800</lastBuildDate>
-<item><title>Galaxy S26 Ultra Can Turn Into a Costly Mistake If You Lose It While The Flagship Is Powered Off Because Samsung Didn’t Include A Crucial Feature - Wccftech</title><link>https://wccftech.com/galaxy-s26-ultra-cannot-be-tracked-when-powered-off/</link></item>
-<item><title>World of Warcraft: Midnight Devs Discuss the Prey System, Split Raids, Zul’Aman, and More in Pre-Launch Interview - Wccftech</title><link>https://wccftech.com/wow-midnight-interview-prey-system-raids-zulaman/</link></item>
-<item><title>Apple’s Higher-End M5 MacBook Pro With 24GB Of Unified Memory And 512GB SSD Returns To One Of Its Best Discount, With Both Colors Now $200 Off On Amazon - Wccftech</title><link>https://wccftech.com/m5-macbook-pro-with-24gb-ram-and-512gb-ssd-both-colors-200-off-on-amazon/</link></item>
-<item><title>Rebel Moon’s Ed Skrein Will Play Baldur in Amazon’s God of War TV Series - Wccftech</title><link>https://wccftech.com/god-of-war-tv-amazon-series-rebel-moons-ed-skrein-will-play-baldur/</link></item>
-<item><title>GPU Sales On A Major German Retailer Shows RTX 5080 Is Now The Most Popular GPU In NVIDIA RTX 50 Series - Wccftech</title><link>https://wccftech.com/german-retailer-shows-rtx-5080-is-now-the-most-popular-gpu-in-nvidia-rtx-50-series/</link></item>
-<item><title>“Let’s Cut to the Chase”: Insomniac Reveals Marvel’s Wolverine Arrives on PS5 in September 2026 - Wccftech</title><link>https://wccftech.com/marvels-wolverine-release-date-revealed-insomniac-games-september-2026/</link></item>
-<item><title>Intel Misses Another ‘AI Opportunity’ With SambaNova as Acquisition Talks Die Down, Settling for Xeon CPU Collaboration Instead - Wccftech</title><link>https://wccftech.com/intel-misses-another-ai-opportunity-with-sambanova/</link></item>
-<item><title>Steam Next Fest February 2026 Edition – Jumping Into 2026 - Wccftech</title><link>https://wccftech.com/steam-next-fest-february-2026-edition-jumping-into-2026/</link></item>
-<item><title>Guerrilla Games Will Host the First Horizon Hunters Gathering Closed Playtest This Weekend - Wccftech</title><link>https://wccftech.com/horizon-hunters-gathering-closed-beta-test-guerilla-games/</link></item>
-<item><title>Apple’s Steve Jobs Would Have Turned 71 Today - Wccftech</title><link>https://wccftech.com/apples-steve-jobs-would-have-turned-71-today/</link></item>
-<item><title>Blizzard Reveals a New 4v4 F2P Overwatch Mobile Game, Overwatch Rush - Wccftech</title><link>https://wccftech.com/overwatch-rush-new-mobile-4v4-free-to-play-game-blizzard/</link></item>
-<item><title>‘When We First Saw It In Our Hands, We Had To Do a Triple Take’: Resident Evil Requiem Runs So Well On Switch 2 The Developer Couldn’t Believe It - Wccftech</title><link>https://wccftech.com/triple-take-resident-evil-requien-runs-so-well-nintendo-switch-2/</link></item>
-<item><title>Fortnite Gamers’ PCs Have More Combined Compute Than the Top 500 Supercomputers, Reaching Up to a Whopping 30GW Power - Wccftech</title><link>https://wccftech.com/fortnite-players-alone-generate-30gw-of-compute-power/</link></item>
-<item><title>Death Stranding 2: On the Beach Gets Accessible PC Requirements; NVIDIA DLSS 4, AMD FSR 4 and Intel XeSS 2 Confirmed - Wccftech</title><link>https://wccftech.com/death-stranding-2-on-the-beach-pc-requirements/</link></item>
-<item><title>ARC Raiders Shrouded Sky Update is Here, Adds a Whirlwind of Changes With New ARC Threats, Map Changes, and an Actual Hurricane - Wccftech</title><link>https://wccftech.com/arc-raiders-shrouded-sky-update-hurricane-map-condition-arc-threats-embark-studios/</link></item>
-<item><title>AMD Risks a Hefty 20% of Its Company To Enter Into ‘Mega’ AI Deals, With the Latest Venture Tied to a Meta Agreement for Next-Gen Infrastructure - Wccftech</title><link>https://wccftech.com/amd-puts-up-a-hefty-20-of-its-company-just-for-ai-deals/</link></item>
-<item><title>Singularity Computers Launches PSU Penta-Node That Let’s You Control Up To Five PSUs Simultaneously - Wccftech</title><link>https://wccftech.com/singularity-computers-launches-psu-penta-node-that-lets-you-control-up-to-five-psus-simultaneously/</link></item>
-<item><title>PlayStation 5 Pro PSSR Patent Details Real-Time AI Precision Adjustment To Prevent Frame Rate Drops - Wccftech</title><link>https://wccftech.com/playstation-5-pro-pssr-real-time-ai-precision-adjustment-frame-rate/</link></item>
-<item><title>Apple’s ‘Make In America’ Push Gains Steam, With Server Production Now Hitting 10 Units Per Hour, As CIA Warns Of A 2027 Taiwan Attack - Wccftech</title><link>https://wccftech.com/apples-make-in-america-push-gains-steam-with-server-production-now-hitting-10-units-per-hour-as-cia-warns-of-a-2027-taiwan-attack/</link></item>
-<item><title>Galaxy S26 Ultra Isn’t Just Sticking To The Same 5,000mAh Battery As The Galaxy S25 Ultra, But It’s Downgrading It In A Way That Will Compromise Its Longevity - Wccftech</title><link>https://wccftech.com/galaxy-s26-ultra-battery-charge-cycles-significantly-reduced/</link></item>
-<item><title>What Is a Group of Shrimp Called? (Hint: You&amp;#39;d Use the Term for Bugs) - HowStuffWorks</title><link>https://animals.howstuffworks.com/marine-life/what-is-a-group-of-shrimp-called.htm</link></item>
-<item><title>9 Arctic Plants That Defy Nature to Bloom Near the North Pole - HowStuffWorks</title><link>https://science.howstuffworks.com/environmental/earth/arctic-plants.htm</link></item>
-<item><title>Parliamentary Democracy, Explained Simply - HowStuffWorks</title><link>https://people.howstuffworks.com/parliamentary-democracy.htm</link></item>
-<item><title>HHS Secretary Kennedy urged to halt restructuring of ACF research arm - FedScoop</title><link>https://fedscoop.com/hhs-secretary-kennedy-urged-halt-restructuring-acf-research-arm/</link></item>
-<item><title>DHS shutdown puts strain on security, information-sharing ahead of World Cup - FedScoop</title><link>https://fedscoop.com/dhs-shutdown-world-cup-operations/</link></item>
-<item><title>NIST bill for small business AI assistance passes House - FedScoop</title><link>https://fedscoop.com/nist-bill-ai-assistance-small-businesses-passes-house/</link></item>
-<item><title>State Department makes multiple awards under $10B IT program - FedScoop</title><link>https://fedscoop.com/state-department-makes-multiple-awards-under-10b-it-program/</link></item>
-<item><title>House passes bill to scrap education requirements from federal contracting jobs - FedScoop</title><link>https://fedscoop.com/no-education-requirements-federal-contracting-bill-passes-house/</link></item>
-<item><title>Energy Department to present early iteration of Genesis Mission platform this year - FedScoop</title><link>https://fedscoop.com/energy-department-genesis-mission-mvp-progress/</link></item>
-<item><title>Fewer than 1% of HHS’s AI uses are ‘high impact.’ It stands out. - FedScoop</title><link>https://fedscoop.com/few-hhs-ai-uses-are-high-impact-it-stands-out/</link></item>
-<item><title>GSA reveals first round of awards for Alliant 3 contract - FedScoop</title><link>https://fedscoop.com/general-services-administration-alliant-3-contract-award-gwac-governmentwide-acquisition/</link></item>
-<item><title>House Democrats question DHS, ICE use of surveillance tech - FedScoop</title><link>https://fedscoop.com/dhs-ice-surveillance-tech-democrat-criticism/</link></item>
-<item><title>Treasury watchdog finds poor data practices in financial crimes unit - FedScoop</title><link>https://fedscoop.com/treasury-oig-report-fincen-bulk-data-management/</link></item>
-<item><title>太平洋向北冰洋的热输送过去二十年增至 1.5 倍 - Solidot</title><link>https://www.solidot.org/story?sid=83601</link></item>
-<item><title>Firefox 148 释出，引入了 AI 关闭开关 - Solidot</title><link>https://www.solidot.org/story?sid=83599</link></item>
-<item><title>Ladybird 浏览器项目将在 AI 帮助下使用 Rust 语言 - Solidot</title><link>https://www.solidot.org/story?sid=83598</link></item>
-<item><title>ASML 改进极紫外光源有望增加芯片产量 - Solidot</title><link>https://www.solidot.org/story?sid=83597</link></item>
-<item><title>F-35 能被越狱安装第三方软件 - Solidot</title><link>https://www.solidot.org/story?sid=83596</link></item>
-<item><title>Linux 7.0-rc1 释出 - Solidot</title><link>https://www.solidot.org/story?sid=83595</link></item>
-<item><title>雏鸡也存在 Bouba/Kiki 效应 - Solidot</title><link>https://www.solidot.org/story?sid=83594</link></item>
-<item><title>Continuous testing tool delivers ‘self-securing’ software - BetaNews</title><link>https://betanews.com/article/continuous-testing-tool-delivers-self-securing-software/</link></item>
-<item><title>95 percent of CISOs say AI is a top risk - BetaNews</title><link>https://betanews.com/article/95-percent-of-cisos-say-ai-is-a-top-risk/</link></item>
-<item><title>Identity linked to two-thirds of security incidents - BetaNews</title><link>https://betanews.com/article/identity-linked-to-two-thirds-of-security-incidents/</link></item>
-<item><title>Mozilla makes good on its AI kill switch with the release of Firefox 148 - BetaNews</title><link>https://betanews.com/article/mozilla-makes-good-on-its-ai-kill-switch-with-the-release-of-firefox-148/</link></item>
-<item><title>Google is working to restore lost Gemini chat histories - BetaNews</title><link>https://betanews.com/article/google-is-working-to-restore-lost-gemini-chat-histories/</link></item>
-<item><title>Microsoft confirms classic Outlook bug that hides the cursor - BetaNews</title><link>https://betanews.com/article/microsoft-confirms-classic-outlook-bug-that-hides-the-cursor/</link></item>
-<item><title>DOJ Opens Antitrust Investigation Into Netflix’s $83B Warner Deal - BetaNews</title><link>https://betanews.com/article/doj-opens-antitrust-investigation-into-netflixs-83b-warner-deal/</link></item>
-<item><title>Quantum threats are coming, and Cloudflare wants your network ready now - BetaNews</title><link>https://betanews.com/article/quantum-threats-are-coming-and-cloudflare-wants-your-network-ready-now/</link></item>
-<item><title>Picsart’s new Aura tool turns voice prompts into social videos - BetaNews</title><link>https://betanews.com/article/picsarts-new-aura-tool-turns-voice-prompts-into-social-videos/</link></item>
-<item><title>Omdia: Samsung fends off Apple in Europe as iPhone maker hits record 27% smartphone share - BetaNews</title><link>https://betanews.com/article/omdia-samsung-fends-off-apple-in-europe-as-iphone-maker-reaches-record-27-smartphone-share/</link></item>
-<item><title>80 percent of retail sites vulnerable to AI agent spoofing - BetaNews</title><link>https://betanews.com/article/80-percent-of-retail-sites-vulnerable-to-ai-agent-spoofing/</link></item>
-<item><title>Microsoft is expanding the Extended Security Update (ESU) program - BetaNews</title><link>https://betanews.com/article/microsoft-is-expanding-the-extended-security-update-esu-program/</link></item>
-<item><title>Microsoft puts Copilot at the top of its list of the best productivity apps for Windows 11 - BetaNews</title><link>https://betanews.com/article/microsoft-puts-copilot-at-the-top-of-its-list-of-the-best-productivity-apps-for-windows-11/</link></item>
-<item><title>Why it needs to be easier for security teams to fix vulnerabilities [Q&amp;A] - BetaNews</title><link>https://betanews.com/article/why-it-needs-to-be-easier-for-security-teams-to-fix-vulnerabilities-qa/</link></item>
-<item><title>WhatsApp is working on a new password feature to boost security - BetaNews</title><link>https://betanews.com/article/whatsapp-is-working-on-a-new-password-feature-to-boost-security/</link></item>
-<item><title>Microsoft is adding image support to Notepad in Windows 11 - BetaNews</title><link>https://betanews.com/article/microsoft-is-adding-image-support-to-notepad-in-windows-11/</link></item>
-<item><title>Google Maps now hides some information until you sign in - BetaNews</title><link>https://betanews.com/article/google-maps-now-hides-some-information-until-you-sign-in/</link></item>
-<item><title>Google adds three outrageously useful new features to Chrome - BetaNews</title><link>https://betanews.com/article/google-adds-three-outrageously-useful-new-features-to-chrome/</link></item>
-<item><title>AI and the difference between safety, security and business risk [Q&amp;A] - BetaNews</title><link>https://betanews.com/article/ai-and-the-difference-between-safety-security-and-business-risk-qa/</link></item>
-<item><title>Meta says VR is still the future, but Worlds is going mobile - BetaNews</title><link>https://betanews.com/article/meta-says-vr-is-still-the-future-but-worlds-is-going-mobile/</link></item>
-<item><title>刘振中：怎么看全球产业格局之变 - 爱思想</title><link>https://www.aisixiang.com/data/172878.html</link></item>
-<item><title>尧育飞：程千帆：教育行业的“手艺 - 爱思想</title><link>https://www.aisixiang.com/data/172897.html</link></item>
-<item><title>宗平：“新门罗主义”背后的霸权焦 - 爱思想</title><link>https://www.aisixiang.com/data/172877.html</link></item>
-<item><title>王义桅：胸怀天下：中国式现代化的 - 爱思想</title><link>https://www.aisixiang.com/data/172876.html</link></item>
-<item><title>肖群忠：传统孝道的现代挑战与传承 - 爱思想</title><link>https://www.aisixiang.com/data/172872.html</link></item>
-<item><title>徐朝阳：建立和完善扩大居民消费的 - 爱思想</title><link>https://www.aisixiang.com/data/172874.html</link></item>
-<item><title>陈文胜：农业农村现代化要抓住农民 - 爱思想</title><link>https://www.aisixiang.com/data/172881.html</link></item>
-<item><title>习近平：当前经济工作的重点任务 - 爱思想</title><link>https://www.aisixiang.com/data/172885.html</link></item>
-<item><title>韩文秀：坚持稳中求进、提质增效 - 爱思想</title><link>https://www.aisixiang.com/data/172884.html</link></item>
-<item><title>乔健：论老子的“精英意识” - 爱思想</title><link>https://www.aisixiang.com/data/172893.html</link></item>
-<item><title>王毅：携手校准历史巨轮的正确航向 - 爱思想</title><link>https://www.aisixiang.com/data/172873.html</link></item>
-<item><title>段威：善于通过科学立法解决新问题 - 爱思想</title><link>https://www.aisixiang.com/data/172880.html</link></item>
-<item><title>付子堂：法治之魂论——学习习近平 - 爱思想</title><link>https://www.aisixiang.com/data/172883.html</link></item>
-<item><title>范围：从强制到自愿：我国延迟退休 - 爱思想</title><link>https://www.aisixiang.com/data/172891.html</link></item>
-<item><title>魏鹏举：新型文化业态的特征与发展 - 爱思想</title><link>https://www.aisixiang.com/data/172954.html</link></item>
-<item><title>刘守华：从解读故事文本到追踪故事 - 爱思想</title><link>https://www.aisixiang.com/data/172912.html</link></item>
-<item><title>孟令法：时间共享的多元实践与可持 - 爱思想</title><link>https://www.aisixiang.com/data/172911.html</link></item>
-<item><title>林航：吴越文化蕴含的中华文明突出 - 爱思想</title><link>https://www.aisixiang.com/data/172871.html</link></item>
-<item><title>振武　施基伟：AI赋能的人文审视 - 爱思想</title><link>https://www.aisixiang.com/data/172972.html</link></item>
-<item><title>强化基础研究战略性、前瞻性、体系 - 爱思想</title><link>https://www.aisixiang.com/data/172949.html</link></item>
-<item><title>张树华 陈晴：构建中国自主知识体系的政治学之维 - 爱思想</title><link>https://www.aisixiang.com/data/172960.html</link></item>
-<item><title>张文显：法治中国建设开创新局面——习近平法治思想提出五年来的历史性成就考察 - 爱思想</title><link>https://www.aisixiang.com/data/172952.html</link></item>
-<item><title>刘艳红：智能平权：通过数字开源的人工智能立法实现 - 爱思想</title><link>https://www.aisixiang.com/data/172944.html</link></item>
-<item><title>洪银兴：经济高质量发展的四个维度 - 爱思想</title><link>https://www.aisixiang.com/data/172941.html</link></item>
-<item><title>迟福林：促进城乡融合发展是解决好“三农”问题的根本之策 - 爱思想</title><link>https://www.aisixiang.com/data/172922.html</link></item>
-<item><title>张瑄：论互联网平台行政责任的限度——基于制度实践与判例的考察 - 爱思想</title><link>https://www.aisixiang.com/data/172965.html</link></item>
-<item><title>汪劲：生态环境法治的“十四五”回顾与“十五五”展望 - 爱思想</title><link>https://www.aisixiang.com/data/172964.html</link></item>
-<item><title>程琥：减轻行政处罚裁量基准的规范构造与司法审查 - 爱思想</title><link>https://www.aisixiang.com/data/172943.html</link></item>
-<item><title>邓喜道 张成文：“十五五”时期现代化产业体系建设基础、现实挑战与优化路径 - 爱思想</title><link>https://www.aisixiang.com/data/172977.html</link></item>
-<item><title>宋皓：数据要素赋能全国统一大市场：工具矩阵、多维协同与保障体系 - 爱思想</title><link>https://www.aisixiang.com/data/172976.html</link></item>
-<item><title>王婷婷 江敏思：全球分配正义视域下财富税的演化逻辑与中国因应路径 - 爱思想</title><link>https://www.aisixiang.com/data/172968.html</link></item>
-<item><title>龚云：扎实推进全体人民共同富裕 - 爱思想</title><link>https://www.aisixiang.com/data/172967.html</link></item>
-<item><title>张瑜：汇率叙事的思辨——兼论人民币汇率展望 - 爱思想</title><link>https://www.aisixiang.com/data/172961.html</link></item>
-<item><title>王山 陈娅 张彩华：数智时代乡镇政府“去部门化”改革的实践逻辑 - 爱思想</title><link>https://www.aisixiang.com/data/172979.html</link></item>
-<item><title>曲延春：化繁为简：基层减负的简约治理路径论析 - 爱思想</title><link>https://www.aisixiang.com/data/172978.html</link></item>
-<item><title>梁君思：中国式现代化蕴含的独特民主观及其原创性贡献 - 爱思想</title><link>https://www.aisixiang.com/data/172975.html</link></item>
-<item><title>吴佳：空间的想象力：超大城市韧性治理的尺度统筹 - 爱思想</title><link>https://www.aisixiang.com/data/172971.html</link></item>
-<item><title>龚云 李雪银：中国式现代化的世界社会主义意蕴 - 爱思想</title><link>https://www.aisixiang.com/data/172966.html</link></item>
-<item><title>徐若杰：格陵兰危机正在重塑北约运作模式 - 爱思想</title><link>https://www.aisixiang.com/data/172959.html</link></item>
-<item><title>庞大鹏：“两史一路一文明”的方法论意义 - 爱思想</title><link>https://www.aisixiang.com/data/172957.html</link></item>
-<item><title>韩雪青：推动构建更加公正合理的全球治理体系 - 爱思想</title><link>https://www.aisixiang.com/data/172951.html</link></item>
-<item><title>王毅：推动落实全球治理倡议 改革完善全球人权治理 - 爱思想</title><link>https://www.aisixiang.com/data/172946.html</link></item>
-<item><title>田飞龙：“特朗普关税”被判违宪，美国国法能关住这个“怪兽”吗？ - 爱思想</title><link>https://www.aisixiang.com/data/172945.html</link></item>
-<item><title>陆治原：提高民政工作服务民生水平 - 爱思想</title><link>https://www.aisixiang.com/data/172882.html</link></item>
-<item><title>潘涌：实现中国式现代化需要话语创新 - 爱思想</title><link>https://www.aisixiang.com/data/172963.html</link></item>
-<item><title>沙垚 余程程：乡村传播研究的未来方向 - 爱思想</title><link>https://www.aisixiang.com/data/172958.html</link></item>
-<item><title>沈悦：数智时代中国国际传播效力提升的韧性机理与调适路径——兼论DeepSeek何以重构全球舆论生态 - 爱思想</title><link>https://www.aisixiang.com/data/172913.html</link></item>
-<item><title>周勇：如何建构中国新闻传播学自主知识体系 - 爱思想</title><link>https://www.aisixiang.com/data/172879.html</link></item>
-<item><title>徐艳国：构建固本铸魂的思想政治教育体系 - 爱思想</title><link>https://www.aisixiang.com/data/172956.html</link></item>
-<item><title>王春春 翟雪辰：分类改革：让高校在各自赛道追求卓越 - 爱思想</title><link>https://www.aisixiang.com/data/172955.html</link></item>
-<item><title>彭锋：如何认同人工智能艺术 - 爱思想</title><link>https://www.aisixiang.com/data/172940.html</link></item>
-<item><title>周宪：艺术史研究范式的数字人文转型 - 爱思想</title><link>https://www.aisixiang.com/data/172910.html</link></item>
-<item><title>左杨：文体学视域下辽金文学价值探赜与体系建构——以近五年研究成果为中心 - 爱思想</title><link>https://www.aisixiang.com/data/172973.html</link></item>
-<item><title>王晓丹：美国华裔文学的中国记忆书写——以汤亭亭、谭恩美的作品为例 - 爱思想</title><link>https://www.aisixiang.com/data/172970.html</link></item>
-<item><title>林雅华：新大众文艺繁荣发展的三维透视 - 爱思想</title><link>https://www.aisixiang.com/data/172947.html</link></item>
-<item><title>刘睿：中古文学研究的“自转”与“公转”——山水文学研究中的本体与他者 - 爱思想</title><link>https://www.aisixiang.com/data/172939.html</link></item>
-<item><title>刘跃进：《统万城铭》的作者及其相关问题 - 爱思想</title><link>https://www.aisixiang.com/data/172938.html</link></item>
-<item><title>励轩：十七世纪以来The Chinese Nation概念生成与认知演变的历史考察 - 爱思想</title><link>https://www.aisixiang.com/data/172974.html</link></item>
-<item><title>杨新育：在全球变局中推进文明对话 - 爱思想</title><link>https://www.aisixiang.com/data/172962.html</link></item>
-<item><title>曹应旺：毛泽东《论持久战》是怎样写出来的 - 爱思想</title><link>https://www.aisixiang.com/data/172950.html</link></item>
-<item><title>蒙克：公元前546年：春秋战国历史分期的机器学习新证 - 爱思想</title><link>https://www.aisixiang.com/data/172942.html</link></item>
-<item><title>齐义虎：《周礼》与《王制》两种大一统模式 - 爱思想</title><link>https://www.aisixiang.com/data/172932.html</link></item>
-<item><title>刘旭光：审美的反思愉悦：关于审美愉悦的特征与构成 - 爱思想</title><link>https://www.aisixiang.com/data/172980.html</link></item>
-<item><title>安鹏：张载《西铭》中的政治哲学——以大君、圣人与学者为中心 - 爱思想</title><link>https://www.aisixiang.com/data/172969.html</link></item>
-<item><title>晋荣东：论当前中国逻辑研究的三种类型——兼论名学研究的多种可能 - 爱思想</title><link>https://www.aisixiang.com/data/172917.html</link></item>
-<item><title>王华平：生成式人工智能具有创造力吗？ - 爱思想</title><link>https://www.aisixiang.com/data/172904.html</link></item>
-<item><title>苟东锋：重估“仁义”：论儒学的标识性“概念” - 爱思想</title><link>https://www.aisixiang.com/data/172903.html</link></item>
-<item><title>徐建飞：大众学术的鲜明时代特征 - 爱思想</title><link>https://www.aisixiang.com/data/172948.html</link></item>
-<item><title>郑力刚：老赋华章——记我的邻居赵钟岷教授 - 爱思想</title><link>https://www.aisixiang.com/data/172933.html</link></item>
-<item><title>刘晓峰：年的快乐从未改变 - 爱思想</title><link>https://www.aisixiang.com/data/172929.html</link></item>
-<item><title>程千帆：我上大学的时候 - 爱思想</title><link>https://www.aisixiang.com/data/172895.html</link></item>
-<item><title>程千帆，著名古代文史学家、教育家。1913年9月21日出生，祖籍湖南宁乡，生于长沙。原名逢会，..... - 爱思想</title><link>https://www.aisixiang.com/thinktank/ChengQianfan.html</link></item>
-<item><title>How’s your prostate? - Psyche</title><link>https://psyche.co/videos/an-unlikely-chat-transforms-a-father-daughter-relationship?utm_source=rss-feed</link></item>
-<item><title>Finding solace in Murderbot - Psyche</title><link>https://psyche.co/notes-to-self/why-ive-started-describing-my-feelings-like-murderbot?utm_source=rss-feed</link></item>
-<item><title>How to reclaim your attention - Psyche</title><link>https://psyche.co/guides/how-to-reclaim-your-attention?utm_source=rss-feed</link></item>
-<item><title>Why we’re falling out of love with our AI confidants - Psyche</title><link>https://psyche.co/ideas/why-were-falling-out-of-love-with-our-ai-confidants?utm_source=rss-feed</link></item>
-<item><title>Most of the time I can just be - Psyche</title><link>https://psyche.co/videos/dancing-in-public-is-deeply-vulnerable-emma-does-it-anyway?utm_source=rss-feed</link></item>
-<item><title>Mosque and state - Psyche</title><link>https://psyche.co/turning-points/once-a-muslim-now-im-an-apatheist-god-should-earn-my-love?utm_source=rss-feed</link></item>
-<item><title>How to know if your meditation is working - Psyche</title><link>https://psyche.co/guides/how-to-know-if-your-meditation-is-working?utm_source=rss-feed</link></item>
-<item><title>How I became more facially expressive - Psyche</title><link>https://psyche.co/notes-to-self/how-i-became-more-facially-expressive?utm_source=rss-feed</link></item>
-<item><title>Helen Keller’s letter to the New York Symphony Orchestra - Psyche</title><link>https://psyche.co/videos/helen-kellers-blissful-encounter-with-beethovens-ninth?utm_source=rss-feed</link></item>
-<item><title>Science, serendipity and a new era for schizophrenia treatment - Psyche</title><link>https://psyche.co/ideas/science-serendipity-and-a-new-era-for-schizophrenia-treatment?utm_source=rss-feed</link></item>
-<item><title>Living off a dying sea - Psyche</title><link>https://psyche.co/turning-points/im-a-shark-hunter-like-my-prey-i-am-a-declining-species?utm_source=rss-feed</link></item>
-<item><title>Living with sexual OCD - Psyche</title><link>https://psyche.co/videos/sexual-ocd-doesnt-fit-the-stereotypes-that-compounds-the-pain?utm_source=rss-feed</link></item>
-<item><title>How to network when you’re socially anxious - Psyche</title><link>https://psyche.co/guides/how-to-network-when-youre-socially-anxious?utm_source=rss-feed</link></item>
-<item><title>Why the search for proof can’t be separated from faith - Psyche</title><link>https://psyche.co/ideas/why-the-search-for-proof-cant-be-separated-from-faith?utm_source=rss-feed</link></item>
-<item><title>Existential crisis? Try reading Wordsworth - Psyche</title><link>https://psyche.co/notes-to-self/for-navigating-an-existential-crisis-try-reading-wordsworth?utm_source=rss-feed</link></item>
-<item><title>The hard art of comfort - Psyche</title><link>https://psyche.co/turning-points/i-had-cancer-did-i-need-all-the-miserable-comforters-too?utm_source=rss-feed</link></item>
-<item><title>Why we should embrace ‘nepantla’ – the in-betweenness of life - Psyche</title><link>https://psyche.co/ideas/why-we-should-embrace-nepantla-the-in-betweenness-of-life?utm_source=rss-feed</link></item>
-<item><title>1985: Waddington Traverse - Alpinist</title><link>https://alpinist.com/features/1985-waddington-traverse/</link></item>
-<item><title>Hegseth and Anthropic CEO set to meet as debate intensifies over the military’s use of AI - Defense News</title><link>https://www.defensenews.com/industry/techwatch/2026/02/24/hegseth-and-anthropic-ceo-set-to-meet-as-debate-intensifies-over-the-militarys-use-of-ai/</link></item>
-<item><title>US Air Force awards contract for drone wingman engines - Defense News</title><link>https://www.defensenews.com/news/your-military/2026/02/24/us-air-force-awards-contract-for-drone-wingman-engines/</link></item>
-<item><title>US Navy, NATO explosive ordnance teams tackle High North during ‘Arctic Sentry’ - Defense News</title><link>https://www.defensenews.com/news/your-military/2026/02/24/us-navy-nato-explosive-ordnance-teams-tackle-high-north-during-arctic-sentry/</link></item>
-<item><title>Lockheed debuts AI on F-35 fighter jet to identify targets - Defense News</title><link>https://www.defensenews.com/industry/techwatch/2026/02/24/lockheed-debuts-ai-on-f-35-fighter-jet-to-identify-targets/</link></item>
-<item><title>‘We don’t have infantry’: Ukraine’s war machine evolves into machine war - Defense News</title><link>https://www.defensenews.com/global/europe/2026/02/24/we-dont-have-infantry-ukraines-war-machine-evolves-into-machine-war/</link></item>
-<item><title>US Air Force accelerates B-21 Raider production, projects 2027 fielding - Defense News</title><link>https://www.defensenews.com/industry/techwatch/2026/02/24/us-air-force-accelerates-b-21-raider-production-projects-2027-fielding/</link></item>
-<item><title>The US Air Force needs more airpower — but not the kind it’s buying - Defense News</title><link>https://www.defensenews.com/opinion/2026/02/24/the-us-air-force-needs-more-airpower-but-not-the-kind-its-buying/</link></item>
-<item><title>Putin has ‘not broken’ Ukraine in 4 years since Russian invasion, Zelenskyy says - Defense News</title><link>https://www.defensenews.com/global/europe/2026/02/24/putin-has-not-broken-ukraine-in-4-years-since-russian-invasion-zelenskyy-says/</link></item>
-<item><title>China’s new nuclear submarine breaks cover amid shipbuilding spree - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2026/02/24/chinas-new-nuclear-submarine-breaks-cover-amid-shipbuilding-spree/</link></item>
-<item><title>Iranians worry over American military buildup as last-chance round of talks with US nears - Defense News</title><link>https://www.defensenews.com/flashpoints/middle-east/2026/02/24/iranians-worry-over-american-military-buildup-as-last-chance-round-of-talks-with-us-nears/</link></item>
-<item><title>Russia’s defense-spending surge tapers off in 2025, analysts find - Defense News</title><link>https://www.defensenews.com/global/europe/2026/02/24/russias-defense-spending-surge-tapers-off-in-2025-analysts-find/</link></item>
-<item><title>ShoPro Books&amp;#39; Contract to Publish Marvel Comics in Japan Ends on March 31 - Anime News Network</title><link>https://www.animenewsnetwork.com/news/2026-02-24/shopro-books-contract-to-publish-marvel-comics-in-japan-ends-on-march-31/.234470</link></item>
-<item><title>Manga Mavericks Enters Distribution Deal with Pathway Book Service, Gazelle Book Services - Anime News Network</title><link>https://www.animenewsnetwork.com/news/2026-02-24/manga-mavericks-enters-distribution-deal-with-pathway-book-service-gazelle-book-services/.234495</link></item>
-<item><title>Pokémon Company International to Acquire Excell Brands - Anime News Network</title><link>https://www.animenewsnetwork.com/news/2026-02-24/pokemon-company-international-to-acquire-excell-brands/.234474</link></item>
-<item><title>Updated: Rap Duo chelmico Announces Indefinite Hiatus - Anime News Network</title><link>https://www.animenewsnetwork.com/news/2026-02-24/updated-rap-duo-chelmico-announces-indefinite-hiatus/.234539</link></item>
-<item><title>Happy Cat Day 2026 From Around the Anime World, Part II - Anime News Network</title><link>https://www.animenewsnetwork.com/interest/2026-02-22/happy-cat-day-2026-from-around-the-anime-world-part-ii/.234451</link></item>
-<item><title>Happy Cat Day 2026 From Around the Anime World, Part I - Anime News Network</title><link>https://www.animenewsnetwork.com/interest/2026-02-22/happy-cat-day-2026-from-around-the-anime-world-part-i/.234450</link></item>
-<item><title>Anime World Offers Condolences After Voice Actor Masaru Ikeda&amp;#39;s Death, Part II - Anime News Network</title><link>https://www.animenewsnetwork.com/interest/2026-02-21/anime-world-offers-condolences-after-voice-actor-masaru-ikeda-death-part-ii/.234309</link></item>
-<item><title>Anime World Offers Condolences After Voice Actor Masaru Ikeda&amp;#39;s Death, Part I - Anime News Network</title><link>https://www.animenewsnetwork.com/interest/2026-02-21/anime-world-offers-condolences-after-voice-actor-masaru-ikeda-death-part-i/.234307</link></item>
-<item><title>JAKKS Pacific and COVER Corporation Announce Partnership to Launch Official hololive Merchandise Line - Anime News Network</title><link>https://www.animenewsnetwork.com/press-release/2026-02-24/jakks-pacific-and-cover-corporation-announce-partnership-to-launch-official-hololive-merchandise-/.234534</link></item>
-<item><title>Nodwin Gaming Announces Mumbai Comic Con 2026: A Two-Day Celebration of Pop-Culture Fandom Arrives in May - Anime News Network</title><link>https://www.animenewsnetwork.com/press-release/2026-02-24/nodwin-gaming-announces-mumbai-comic-con-2026-a-two-day-celebration-of-pop-culture-fandom-arrives-/.234521</link></item>
-<item><title>Is it Really Impossible to Make a Living as an Animator in Japan? - Anime News Network</title><link>https://www.animenewsnetwork.com/feature/2026-02-20/is-it-really-impossible-to-make-a-living-as-an-animator-in-japan/.233979</link></item>
-<item><title>The Winter 2026 Manga Guide After Dark (18+) - Anime News Network</title><link>https://www.animenewsnetwork.com/seasonal/2026/winter/.230546</link></item>
-<item><title>Anime in 2025: Is the Crunchyroll Cage Real? - Anime News Network</title><link>https://www.animenewsnetwork.com/feature/2026-02-13/anime-in-2025-is-the-crunchyroll-cage-real/.233196</link></item>
-<item><title>Trigun Maximum Manga Review - Anime News Network</title><link>https://www.animenewsnetwork.com/review/trigun-maximum/manga/.234047</link></item>
-<item><title>This Week in Anime - Running on Empty - Anime News Network</title><link>https://www.animenewsnetwork.com/this-week-in-anime/2026-02-24/.234477</link></item>
-<item><title>The ANN Aftershow - We&amp;#39;re Still Here - Anime News Network</title><link>https://www.animenewsnetwork.com/aftershow/2026-02-23/.234501</link></item>
-<item><title>This Week in Mobile Games - The Years Start Walkin&amp;#39; and They Don&amp;#39;t Stop Walkin&amp;#39; - Anime News Network</title><link>https://www.animenewsnetwork.com/this-week-in-mobile-games/2026-02-23/.234347</link></item>
-<item><title>Answerman - BritDubs Explained - Anime News Network</title><link>https://www.animenewsnetwork.com/answerman/2026-02-21/.234311</link></item>
-<item><title>This Week in Games - Dot Hackers, Demon Attackers, and Sony&amp;#39;s State of Play - Anime News Network</title><link>https://www.animenewsnetwork.com/this-week-in-games/2026-02-20/dot-hackers-demon-attackers-and-sony-state-of-play/.234233</link></item>
-<item><title>This Week in Mobile Games - Anime News Network</title><link>https://www.animenewsnetwork.com/this-week-in-mobile-games/</link></item>
-<item><title>&amp;#39;Tis Time for &amp;quot;Torture,&amp;quot; Princess Season 2 - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2026/winter/tis-time-for-torture-princess-season-2/.232598</link></item>
-<item><title>Frieren: Beyond Journey&amp;#39;s End Season 2 - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2026/winter/frieren-beyond-journey-end-season-2/.232600</link></item>
-<item><title>Love Through a Prism - Anime News Network</title><link>https://www.animenewsnetwork.com/preview-guide/2026/winter/love-through-a-prism/.233123</link></item>
-<item><title>Medalist Season 2 - Anime News Network</title><link>https://www.animenewsnetwork.com/review/medalist-season-2/.233095</link></item>
-<item><title>Oshi no Ko Season 3 - Anime News Network</title><link>https://www.animenewsnetwork.com/review/oshi-no-ko-season-3/.233083</link></item>
-<item><title>Yoroi-Shinden Samurai Troopers - Anime News Network</title><link>https://www.animenewsnetwork.com/review/yoroi-shinden-samurai-troopers/.233087</link></item>
-<item><title>Vertical Publishing Company&amp;#39;s Co-Founder Ioannis Mentzas Dies - Anime News Network</title><link>https://www.animenewsnetwork.com/news/2026-02-23/vertical-publishing-company-co-founder-ioannis-mentzas-dies/.234497</link></item>
-<item><title>Luna Sea Rock Band&amp;#39;s Drummer Shinya Yamada Dies Due to Cancer at 56 - Anime News Network</title><link>https://www.animenewsnetwork.com/news/2026-02-22/luna-sea-rock-band-drummer-shinya-yamada-dies-due-to-cancer-at-56/.234458</link></item>
-<item><title>Hana-Kimi ‒ Episode 9 - Anime News Network</title><link>https://www.animenewsnetwork.com/review/hana-kimi/episode-9/.234536</link></item>
-<item><title>Golden Kamuy Final Season ‒ Episode 57 - Anime News Network</title><link>https://www.animenewsnetwork.com/review/golden-kamuy-final-season/episode-57/.234518</link></item>
-<item><title>Gift-o&amp;#39;-Animation Founder Satoshi Mori Dies - Anime News Network</title><link>https://www.animenewsnetwork.com/news/2026-02-24/gift-o-animation-founder-satoshi-mori-dies/.234526</link></item>
-<item><title>Wash It All Away ‒ Episode 8 - Anime News Network</title><link>https://www.animenewsnetwork.com/review/wash-it-all-away/episode-8/.234505</link></item>
-<item><title>Video Game Composer Shigeru Ikeda Dies at 57 - Anime News Network</title><link>https://www.animenewsnetwork.com/news/2026-02-24/video-game-composer-shigeru-ikeda-dies-at-57/.234502</link></item>
-<item><title>Fate/strange Fake ‒ Episode 8 - Anime News Network</title><link>https://www.animenewsnetwork.com/review/fate-strange-fake/episode-8/.234486</link></item>
-<item><title>You and I Are Polar Opposites ‒ Episode 7 - Anime News Network</title><link>https://www.animenewsnetwork.com/review/you-and-i-are-polar-opposites/episode-7/.234463</link></item>
-<item><title>WEBTOON to Make Emerald City Comic Con Debut - Anime News Network</title><link>https://www.animenewsnetwork.com/news/2026-02-22/webtoon-to-make-emerald-city-comic-con-debut/.234359</link></item>
-<item><title>Saudi Arabia&amp;#39;s RTS Acquires EVO Fighting Game Tournaments - Anime News Network</title><link>https://www.animenewsnetwork.com/news/2026-02-22/saudi-arabia-rts-acquires-evo-fighting-game-tournaments/.234417</link></item>
-<item><title>tvN Reveals Sneak Peek of 2026 Lineup, Including Multiple Webtoon-Based Live-Action Series - Anime News Network</title><link>https://www.animenewsnetwork.com/news/2026-02-22/tvn-reveals-sneak-peek-of-2026-lineup-including-multiple-webtoon-based-live-action-series/.234257</link></item>
-<item><title>Trigun Stargaze ‒ Episode 7 - Anime News Network</title><link>https://www.animenewsnetwork.com/review/trigun-stargaze/episode-7/.234435</link></item>
-<item><title>Dead Account ‒ Episode 7 - Anime News Network</title><link>https://www.animenewsnetwork.com/review/dead-account/episode-7/.234434</link></item>
-<item><title>Japanese Animation TV Ranking, February 9-15 - Anime News Network</title><link>https://www.animenewsnetwork.com/news/2026-02-22/japanese-animation-tv-ranking-february-9-15/.234372</link></item>
-<item><title>Fire Force Season 3 ‒ Episode 19 - Anime News Network</title><link>https://www.animenewsnetwork.com/review/fire-force-season-3/episode-19/.234428</link></item>
-<item><title>MediaOCD Announces New Licenses, New Titles Added to Discotek Deep Dives Project - Anime News Network</title><link>https://www.animenewsnetwork.com/news/2026-02-22/mediaocd-announces-new-licenses-new-titles-added-to-discotek-deep-dives-project/.234409</link></item>
-<item><title>Champignon Witch ‒ Episode 8 - Anime News Network</title><link>https://www.animenewsnetwork.com/review/champignon-witch/episode-8/.234421</link></item>
-<item><title>Crunchyroll Partners with Times Prime in India - Anime News Network</title><link>https://www.animenewsnetwork.com/daily-briefs/2026-02-22/crunchyroll-partners-with-times-prime-in-india/.234380</link></item>
-<item><title>Meta AI Security Researcher Said an OpenClaw Agent Ran Amok on Her Inbox - Slashdot</title><link>https://it.slashdot.org/story/26/02/24/1950253/meta-ai-security-researcher-said-an-openclaw-agent-ran-amok-on-her-inbox</link></item>
-<item><title>New Datacentres Risk Doubling Great Britain&amp;#39;s Electricity Use, Regulator Says - Slashdot</title><link>https://news.slashdot.org/story/26/02/24/1935207/new-datacentres-risk-doubling-great-britains-electricity-use-regulator-says</link></item>
-<item><title>CrowdStrike Says Attackers Are Moving Through Networks in Under 30 Minutes - Slashdot</title><link>https://it.slashdot.org/story/26/02/24/1911240/crowdstrike-says-attackers-are-moving-through-networks-in-under-30-minutes</link></item>
-<item><title>Hegseth Gives Anthropic Until Friday To Back Down on AI Safeguards - Slashdot</title><link>https://tech.slashdot.org/story/26/02/24/1850232/hegseth-gives-anthropic-until-friday-to-back-down-on-ai-safeguards</link></item>
-<item><title>The US Spent $30 Billion on Classroom Laptops and Got the First Generation Less Capable Than Its Parents - Slashdot</title><link>https://news.slashdot.org/story/26/02/24/1751207/the-us-spent-30-billion-on-classroom-laptops-and-got-the-first-generation-less-capable-than-its-parents</link></item>
-<item><title>Microsoft Execs Worry AI Will Eat Entry Level Coding Jobs - Slashdot</title><link>https://developers.slashdot.org/story/26/02/24/1643213/microsoft-execs-worry-ai-will-eat-entry-level-coding-jobs</link></item>
-<item><title>Billions of Dollars Later and Still Nobody Knows What an Xbox Is - Slashdot</title><link>https://games.slashdot.org/story/26/02/24/165200/billions-of-dollars-later-and-still-nobody-knows-what-an-xbox-is</link></item>
-<item><title>Discord Distances Itself From Persona Age Verification After User Backlash - Slashdot</title><link>https://tech.slashdot.org/story/26/02/24/1457221/discord-distances-itself-from-persona-age-verification-after-user-backlash</link></item>
-<item><title>Russia Targets Telegram as Rift With Founder Pavel Durov Deepens - Slashdot</title><link>https://yro.slashdot.org/story/26/02/24/1351257/russia-targets-telegram-as-rift-with-founder-pavel-durov-deepens</link></item>
-<item><title>Firefox 148 Now Available With The New AI Controls, AI Kill Switches - Slashdot</title><link>https://news.slashdot.org/story/26/02/24/0054207/firefox-148-now-available-with-the-new-ai-controls-ai-kill-switches</link></item>
-<item><title>Quantum Algorithm Beats Classical Tools On Complement Sampling Tasks - Slashdot</title><link>https://tech.slashdot.org/story/26/02/24/0047210/quantum-algorithm-beats-classical-tools-on-complement-sampling-tasks</link></item>
-<item><title>Texas Is About To Overtake California In Battery Storage - Slashdot</title><link>https://hardware.slashdot.org/story/26/02/24/0043228/texas-is-about-to-overtake-california-in-battery-storage</link></item>
-<item><title>US Farmers Are Rejecting Multimillion-Dollar Datacenter Bids For Their Land - Slashdot</title><link>https://news.slashdot.org/story/26/02/24/005258/us-farmers-are-rejecting-multimillion-dollar-datacenter-bids-for-their-land</link></item>
-<item><title>New Microsoft Gaming CEO Has &amp;#39;No Tolerance For Bad AI&amp;#39; - Slashdot</title><link>https://games.slashdot.org/story/26/02/23/2356223/new-microsoft-gaming-ceo-has-no-tolerance-for-bad-ai</link></item>
-<item><title>Microsoft Says Bug In Classic Outlook Hides the Mouse Pointer - Slashdot</title><link>https://it.slashdot.org/story/26/02/23/2343241/microsoft-says-bug-in-classic-outlook-hides-the-mouse-pointer</link></item>
-<item><title>Chicken and Bean Quesadillas - Bev Cooks</title><link>https://bevcooks.com/2026/02/chicken-and-bean-quesadillas/</link></item>
-<item><title>Easiest Chicken and Rice Soup - Bev Cooks</title><link>https://bevcooks.com/2026/02/easiest-chicken-and-rice-soup/</link></item>
-<item><title>Homemade English Muffins - Bev Cooks</title><link>https://bevcooks.com/2026/02/homemade-english-muffins/</link></item>
-<item><title>Monthly Mixtape: Love Sick and Turtlenecks - Bev Cooks</title><link>https://bevcooks.com/2026/02/monthly-mixtape-love-sick-and-turtlenecks/</link></item>
-<item><title>Chicken Parmesan Focaccia Toast - Bev Cooks</title><link>https://bevcooks.com/2026/01/chicken-parmesan-focaccia-toast/</link></item>
-<item><title>Italian Turkey Meatball Noodle Soup - Bev Cooks</title><link>https://bevcooks.com/2026/01/italian-turkey-meatball-noodle-soup/</link></item>
-<item><title>6 Tallest Abandoned Skyscrapers Around the World - Mental Floss</title><link>https://www.mentalfloss.com/culture/architecture/tallest-abandoned-skyscrapers-around-the-world</link></item>
-<item><title>5-Letter Words Ending in &amp;quot;IE&amp;quot; to Give You a Leg Up in Wordle - Mental Floss</title><link>https://www.mentalfloss.com/fun/games/5-letter-words-ending-in-ie</link></item>
-<item><title>Quiz: Can You Name the Disney Movie From Just Its Final Line Alone? - Mental Floss</title><link>https://www.mentalfloss.com/quizzes/name-disney-movie-final-line</link></item>
-<item><title>11 Best Food Destinations in the World, According to Gordon Ramsay - Mental Floss</title><link>https://www.mentalfloss.com/food/gordon-ramsay-best-food-destinations-in-world</link></item>
-<item><title>7 Real Life Female Pirates Who Ran Their Ships Like Businesses - Mental Floss</title><link>https://www.mentalfloss.com/history/female-pirates-who-ran-their-ships-like-businesses</link></item>
-<item><title>7 Box Office Flops That Later Won Oscars - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/movies/box-office-flops-that-won-oscars</link></item>
-<item><title>Your &amp;#39;Bridgerton&amp;#39; Character Based on Your Zodiac Sign - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/tv/bridgerton-character-zodiac-sign</link></item>
-<item><title>The Major Tariff Question - Law &amp; Liberty</title><link>https://lawliberty.org/the-major-tariff-question/</link></item>
-<item><title>Constitutions of Liberty - Law &amp; Liberty</title><link>https://lawliberty.org/constitutions-of-liberty/</link></item>
-<item><title>The Elite Revolt Against Elites - Law &amp; Liberty</title><link>https://lawliberty.org/book-review/the-elite-revolt-against-elites/</link></item>
-<item><title>Gucci just proved why luxury brands shouldn’t use AI - Fast Company</title><link>https://www.fastcompany.com/91498073/gucci-just-proved-why-luxury-brands-shouldnt-use-ai-generated-ads-images</link></item>
-<item><title>A teacher was killed during an ICE chase last week. Why you probably didn’t hear about it - Fast Company</title><link>https://www.fastcompany.com/91497866/a-teacher-was-killed-during-an-ice-chase-last-week-why-you-probably-didnt-hear-about-it</link></item>
-<item><title>Spirit Airlines plans a much smaller future as it tries to survive bankruptcy—again - Fast Company</title><link>https://www.fastcompany.com/91497876/spirit-airlines-plans-a-much-smaller-future-as-it-tries-to-survive-bankruptcy-again</link></item>
-<item><title>How to scale genomics to transform precision diagnostics - Fast Company</title><link>https://www.fastcompany.com/91498078/how-to-scale-genomics-to-transform-precision-diagnostics</link></item>
-<item><title>Warner Bros. is reviewing a new offer from Paramount as the takeover fight heats up - Fast Company</title><link>https://www.fastcompany.com/91498025/warner-bros-netflix-paramount-studio-hollywood</link></item>
-<item><title>Why your best-looking candidates often perform the worst - Fast Company</title><link>https://www.fastcompany.com/91498038/why-your-best-looking-candidates-often-perform-the-worst</link></item>
-<item><title>Jamie Dimon says these ‘dumb things’ in our current economy could point to another financial crisis - Fast Company</title><link>https://www.fastcompany.com/91497827/jamie-dimon-says-these-dumb-things-in-current-economy-could-point-to-financial-crisis-jp-morgan-investor-day</link></item>
-<item><title>A suspension part Ford stopped using in 2019 is now triggering a massive recall - Fast Company</title><link>https://www.fastcompany.com/91497756/a-suspension-part-ford-stopped-using-in-2019-is-now-triggering-a-massive-recall</link></item>
-<item><title>Read Jony Ive’s advice to young creatives - Fast Company</title><link>https://www.fastcompany.com/91497758/read-jony-ives-advice-to-young-creatives</link></item>
-<item><title>‘This should terrify you’: Meta Superintelligence safety director lost control of her AI agent—it deleted her emails - Fast Company</title><link>https://www.fastcompany.com/91497841/meta-superintelligence-lab-ai-safety-alignment-director-lost-control-of-agent-deleted-her-emails</link></item>
-<item><title>He built a hit podcast about the Epstein files. It’s entirely AI-generated - Fast Company</title><link>https://www.fastcompany.com/91497873/epstein-files-ai-podcast-adam-levy</link></item>
-<item><title>Japanese firms are quietly making a huge bet on the U.S. housing market - Fast Company</title><link>https://www.fastcompany.com/91497771/america-housing-market-bet-by-japanese-homebuilders</link></item>
-<item><title>Apple killed Dark Sky. Now its creators are trying again with a new weather app - Fast Company</title><link>https://www.fastcompany.com/91497860/acme-weather-launch-dark-sky-apple</link></item>
-<item><title>Listen to Oscar nominee Hannah Beachler on our By Design podcast - Fast Company</title><link>https://www.fastcompany.com/91496937/listen-to-oscar-nominee-hannah-beachler-on-our-by-design-podcast</link></item>
-<item><title>Frozen meatball recall: Product sold at Aldi could cause serious harm. Check your freezer now - Fast Company</title><link>https://www.fastcompany.com/91497774/frozen-meatballs-recalled-aldi-bremer-product-has-serious-risk-check-your-freezer-now</link></item>
-<item><title>TED’s Audacious Project raises $1 billion in 2 days to fund initiatives for these winning nonprofits - Fast Company</title><link>https://www.fastcompany.com/91497708/teds-audacious-project-raises-1-billion-2-days-fund-initiatives-winning-nonprofits</link></item>
-<item><title>It just got easier for your company to hire immigrant tech workers - Fast Company</title><link>https://www.fastcompany.com/91496954/it-just-got-easier-for-your-company-to-hire-immigrant-tech-workers</link></item>
-<item><title>Rare disease isn’t rare—it’s a healthcare blind spot - Fast Company</title><link>https://www.fastcompany.com/91497745/rare-disease-isnt-rare-its-a-healthcare-blind-spot</link></item>
-<item><title>The future of fashion - Fast Company</title><link>https://www.fastcompany.com/91497740/the-future-of-fashion</link></item>
-<item><title>Creating Horror Concept Art for Video Games… - Adafruit Industries</title><link>https://blog.adafruit.com/2026/02/24/creating-horror-concept-art-for-video-games-arttuesday/</link></item>
-<item><title>ICYMI – Adafruit IoT Monthly: Accidental… - Adafruit Industries</title><link>https://blog.adafruit.com/2026/02/24/icymi-adafruit-iot-monthly-accidental-antennas-hardware-catalog-and-more/</link></item>
-<item><title>LED Sale Week Starts Today! - Adafruit Industries</title><link>https://blog.adafruit.com/2026/02/23/led-sale-week-starts-today/</link></item>
-<item><title>🐴Happy Lunar New Year, 2026 🐴 - Adafruit Industries</title><link>https://blog.adafruit.com/2026/02/17/happy-lunar-new-year-2026/</link></item>
-<item><title>Month-Long Sale Event Starts Next Week! - Adafruit Industries</title><link>https://blog.adafruit.com/2026/02/16/month-long-sale-event-starts-next-week/</link></item>
-<item><title>JP’s Product Pick of the Week — 4pm Eastern TODAY! 2/24/26 @adafruit #adafruit #newproductpick - Adafruit Industries</title><link>https://blog.adafruit.com/2026/02/24/jps-product-pick-of-the-week-4pm-eastern-today-2-24-26-adafruit-adafruit-newproductpick/</link></item>
-<item><title>The thing behind the smiley face mask has an unlimited wardrobe to choose from - Adafruit Industries</title><link>https://blog.adafruit.com/2026/02/24/the-thing-behind-the-smiley-face-mask-has-an-unlimited-wardrobe-to-choose-from/</link></item>
-<item><title>Unfold – DRIFT at Manar Abu Dhabi #ArtTuesday - Adafruit Industries</title><link>https://blog.adafruit.com/2026/02/24/unfold-drift-at-manar-abu-dhabi-arttuesday/</link></item>
-<item><title>REMINDER: JP’s Product Pick of the Week — 4pm Eastern TODAY! 2/24/26 @adafruit #adafruit #newproductpick - Adafruit Industries</title><link>https://blog.adafruit.com/2026/02/24/reminder-jps-product-pick-of-the-week-4pm-eastern-today-2-24-26-adafruit-adafruit-newproductpick/</link></item>
-<item><title>Pip-Boy 2040 Wrist-Mounted Prop Guide #AdafruitLearnSystem - Adafruit Industries</title><link>https://blog.adafruit.com/2026/02/24/pip-boy-2040-wrist-mounted-prop-guide-adafruitlearnsystem/</link></item>
-<item><title>Make a T³ Time Triangle Thing with Adafruit 1.2″ 8×8 LED Matrix, Currently on Sale! - Adafruit Industries</title><link>https://blog.adafruit.com/2026/02/24/make-a-t%c2%b3-time-triangle-thing-with-adafruit-1-2-8x8-led-matrix-currently-on-sale/</link></item>
-<item><title>Why Hate Math? #BlackHistoryMonth #WomeninSTEM - Adafruit Industries</title><link>https://blog.adafruit.com/2026/02/24/why-hate-math-empowering-blackblackhistorymonth-womeninstem/</link></item>
-<item><title>Why Bluey Doesn’t Sound Like a Cartoon w/ Bluey’s Sound Designer - Adafruit Industries</title><link>https://blog.adafruit.com/2026/02/24/why-bluey-doesnt-sound-like-a-cartoon-w-blueys-sound-designer/</link></item>
-<item><title>sound design - Adafruit Industries</title><link>https://blog.adafruit.com/tag/sound-design/</link></item>
-<item><title>Colorado Wants Your Operating System to Card You - Adafruit Industries</title><link>https://blog.adafruit.com/2026/02/23/colorado-wants-your-operating-system-to-card-you/</link></item>
-<item><title>Make a DIY Pocket LED Gamer – Tiny Tetris! - Adafruit Industries</title><link>https://blog.adafruit.com/2026/02/23/make-a-diy-pocket-led-gamer-tiny-tetris/</link></item>
-<item><title>It’s STILL Snowing ☃️ - Adafruit Industries</title><link>https://blog.adafruit.com/2026/02/23/its-still-snowing-%e2%98%83%ef%b8%8f/</link></item>
-<item><title>adafruit warehouse sale - Adafruit Industries</title><link>https://blog.adafruit.com/tag/adafruit-warehouse-sale/</link></item>
-<item><title>The algorithm that shrank the internet (in a good way) - Adafruit Industries</title><link>https://blog.adafruit.com/2026/02/23/the-algorithm-that-shrank-the-internet-in-a-good-way/</link></item>
-<item><title>Xfwl4 – The roadmap for a Xfce Wayland Compositor - Xfce Blog</title><link>https://alexxcons.github.io/blogpost_15.html</link></item>
-<item><title>the first state to hand laptops to middle schoolers - Slashdot</title><link>https://apple.slashdot.org/story/01/12/03/2043212/maine-buys-38600-ibooks-for-public-schools</link></item>
-<item><title>announced his retirement last week - Slashdot</title><link>https://games.slashdot.org/story/26/02/20/2125252/phil-spencer-retiring-after-38-years-at-microsoft</link></item>
-<item><title>Re: Government by temper tantrum - Slashdot</title><link>https://slashdot.org/comments.pl?sid=26/02/24/1850232&amp;cid=66008350&amp;sbsrc=topcom</link></item>
-<item><title>Re:If Only This Were Parody - Slashdot</title><link>https://slashdot.org/comments.pl?sid=26/02/23/2226231&amp;cid=66006638&amp;sbsrc=topcom</link></item>
-<item><title>Re:Terminators? - Slashdot</title><link>https://slashdot.org/comments.pl?sid=26/02/24/1850232&amp;cid=66008230&amp;sbsrc=topcom</link></item>
-<item><title>If Only This Were Parody - Slashdot</title><link>https://slashdot.org/comments.pl?sid=26/02/23/2226231&amp;cid=66006592&amp;sbsrc=topcom</link></item>
-<item><title>Nice AI you have here - Slashdot</title><link>https://slashdot.org/comments.pl?sid=26/02/24/1850232&amp;cid=66008200&amp;sbsrc=topcom</link></item>
-<item><title>Regional biases and stereotypes in ChatGPT models - FlowingData</title><link>https://flowingdata.com/2026/02/24/regional-biases-and-stereotypes-in-chatgpt-models/</link></item>
-<item><title>Dialed, a color memory game - FlowingData</title><link>https://flowingdata.com/2026/02/24/dialed-a-color-memory-game/</link></item>
-<item><title>The six-second hug - Aeon</title><link>https://aeon.co/essays/instrumentalisation-is-making-everything-a-means-to-an-end?utm_source=rss-feed</link></item>
-<item><title>Meta Employee Deleted 9TB of Torrented Files, Adult Film Producers Claim - TorrentFreak</title><link>https://torrentfreak.com/meta-employee-deleted-9tb-of-torrented-files-adult-film-producers-claim/</link></item>
-<item><title>New words – 23 February 2026 - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2026/02/23/new-words-23-february-2026/</link></item>
-<item><title>It’s your own fault! Talking about deserving bad things. - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2026/02/18/its-your-own-fault-talking-about-deserving-bad-things/</link></item>
-<item><title>New words – 16 February 2026 - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2026/02/16/new-words-16-february-2026/</link></item>
-<item><title>Pondering, musing, and brooding (The language of thinking) - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2026/02/11/pondering-musing-and-brooding-the-language-of-thinking/</link></item>
-<item><title>New words – 9 February 2026 - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2026/02/09/new-words-9-february-2026/</link></item>
-<item><title>Poker faced or heart on your sleeve? Showing or hiding emotions. - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2026/02/04/poker-faced-or-heart-on-your-sleeve-showing-or-hiding-emotions/</link></item>
-<item><title>New words – 2 February 2026 - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2026/02/02/new-words-2-february-2026/</link></item>
-<item><title>Flavour of the month (Newspaper idioms) - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2026/01/28/flavour-of-the-month-newspaper-idioms/</link></item>
-<item><title>states in the U.S. - FlowingData</title><link>https://flowingdata.com/2012/08/09/state-stereotypes-suggested-by-google/</link></item>
-<item><title>Curiosity Blog, Sols 4812-4819: Back Into the Hollows - NASA</title><link>https://science.nasa.gov/blog/curiosity-blog-sols-4812-4819-back-into-the-hollows/</link></item>
-<item><title>New Volunteer Data from 143 Observatories Unveils the 2024 Total Solar Eclipse - NASA</title><link>https://science.nasa.gov/get-involved/citizen-science/new-volunteer-data-from-143-observatories-unveils-the-2024-total-solar-eclipse/</link></item>
-<item><title>Webb Maps Uranus’ Upper Atmosphere - NASA</title><link>https://www.nasa.gov/image-article/webb-maps-uranus-upper-atmosphere/</link></item>
-<item><title>Technology Originally Developed for Space Missions Now Integral to Everyday Life - NASA</title><link>https://science.nasa.gov/science-research/science-enabling-technology/technology-highlights/technology-originally-developed-for-space-missions-now-integral-to-everyday-life/</link></item>
-<item><title>Showy Swirls Around Jeju Island - NASA</title><link>https://science.nasa.gov/earth/earth-observatory/showy-swirls-around-jeju-island/</link></item>
-<item><title>Young ‘Sun’ Caught Blowing Bubbles by NASA’s Chandra - NASA</title><link>https://www.nasa.gov/missions/chandra/young-sun-caught-blowing-bubbles-by-nasas-chandra/</link></item>
-<item><title>Astronomy Activation Ambassadors: Embracing Multiple Perspectives - NASA</title><link>https://science.nasa.gov/learning-resources/science-activation/astronomy-activation-ambassadors-embracing-multiple-perspectives/</link></item>
-<item><title>NASA to Cover 33rd SpaceX Resupply Mission Station Departure - NASA</title><link>https://www.nasa.gov/news-release/nasa-to-cover-33rd-spacex-resupply-mission-station-departure/</link></item>
-<item><title>Curiosity Studies Nodules on Boxwork Formations - NASA</title><link>https://science.nasa.gov/photojournal/curiosity-studies-nodules-on-boxwork-formations/</link></item>
-<item><title>Curiosity Surveys the Boxwork Region - NASA</title><link>https://science.nasa.gov/photojournal/curiosity-surveys-the-boxwork-region/</link></item>
-<item><title>Webb Maps Uranus’ Upper Atmosphere and Finds a Magnetic Surprise - SciTechDaily</title><link>https://scitechdaily.com/webb-maps-uranus-upper-atmosphere-and-finds-a-magnetic-surprise/</link></item>
-<item><title>Astronomers Witness Unprecedented Cosmic Explosion Linked to a “Missing” Black Hole - SciTechDaily</title><link>https://scitechdaily.com/astronomers-witness-unprecedented-cosmic-explosion-linked-to-a-missing-black-hole/</link></item>
-<item><title>The Truth About Wormholes: Einstein’s “Bridge” May Rewrite Time Itself - SciTechDaily</title><link>https://scitechdaily.com/the-truth-about-wormholes-einsteins-bridge-may-rewrite-time-itself/</link></item>
-<item><title>Scientists Discover Unusual Long-Legged Ancient Crocodile From 200 Million Years Ago - SciTechDaily</title><link>https://scitechdaily.com/scientists-discover-unusual-long-legged-ancient-crocodile-from-200-million-years-ago/</link></item>
-<item><title>Scientists Reverse Blood Stem Cell Aging by Rewiring the Cell’s Recycling System - SciTechDaily</title><link>https://scitechdaily.com/scientists-reverse-blood-stem-cell-aging-by-rewiring-the-cells-recycling-system/</link></item>
-<item><title>Johns Hopkins Study Uncovers Master Gene Supercharging Pancreatic Cancer Metastasis - SciTechDaily</title><link>https://scitechdaily.com/johns-hopkins-study-uncovers-master-gene-supercharging-pancreatic-cancer-metastasis/</link></item>
-<item><title>Scientists Create “Chocolate Honey” Packed With Antioxidants - SciTechDaily</title><link>https://scitechdaily.com/scientists-create-chocolate-honey-packed-with-antioxidants/</link></item>
-<item><title>A Flash of Light Can Build and Erase Crystals Instantly - SciTechDaily</title><link>https://scitechdaily.com/a-flash-of-light-can-build-and-erase-crystals-instantly/</link></item>
-<item><title>“Absolutely Huge” – Giant 400-Year-Old Black Coral Stuns Marine Researchers in New Zealand - SciTechDaily</title><link>https://scitechdaily.com/absolutely-huge-giant-400-year-old-black-coral-stuns-marine-researchers-in-new-zealand/</link></item>
-<item><title>Lost for 80 Years: WWII B-17 Bomber Discovered in the Baltic Sea - SciTechDaily</title><link>https://scitechdaily.com/lost-for-80-years-wwii-b-17-bomber-discovered-in-the-baltic-sea/</link></item>
-<item><title>Melting Antarctic Ice Disrupted Earth’s Global Ocean Conveyor Belt - SciTechDaily</title><link>https://scitechdaily.com/melting-antarctic-ice-disrupted-earths-global-ocean-conveyor-belt/</link></item>
-<item><title>Scientists Discover DNA Is Already Organized Before Life Switches On - SciTechDaily</title><link>https://scitechdaily.com/scientists-discover-dna-is-already-organized-before-life-switches-on/</link></item>
-<item><title>Scientists Create Chip That Generates Brand-New Colors of Light, Cracking a Decades-Old Nonlinear Optics Challenge - SciTechDaily</title><link>https://scitechdaily.com/scientists-create-chip-that-generates-brand-new-colors-of-light-cracking-a-decades-old-nonlinear-optics-challenge/</link></item>
-<item><title>7,000 GPUs Simulate Quantum Microchip in Unprecedented Detail - SciTechDaily</title><link>https://scitechdaily.com/7000-gpus-simulate-quantum-microchip-in-unprecedented-detail/</link></item>
-<item><title>Replacing Humans With Machines Is Leaving Truckloads of Food To Rot - SciTechDaily</title><link>https://scitechdaily.com/replacing-humans-with-machines-is-leaving-truckloads-of-food-to-rot/</link></item>
-<item><title>Treating a Common Dental Infection May Have Effects That Extend Far Beyond the Mouth - SciTechDaily</title><link>https://scitechdaily.com/treating-a-common-dental-infection-may-have-effects-that-extend-far-beyond-the-mouth/</link></item>
-<item><title>Scientists Uncover Key Aging Protein That May Trigger Neurodegenerative Disease - SciTechDaily</title><link>https://scitechdaily.com/scientists-uncover-key-aging-protein-that-may-trigger-neurodegenerative-disease/</link></item>
-<item><title>Using Your Phone on the Toilet Linked to Painful Medical Condition - SciTechDaily</title><link>https://scitechdaily.com/using-your-phone-on-the-toilet-linked-to-painful-medical-condition/</link></item>
-<item><title>The Moon Is Still Shrinking and Scientists Just Found New Moonquake Zones - SciTechDaily</title><link>https://scitechdaily.com/the-moon-is-still-shrinking-and-scientists-just-found-new-moonquake-zones/</link></item>
-<item><title>Mars’ Missing Water Mystery Takes an Unexpected Turn - SciTechDaily</title><link>https://scitechdaily.com/mars-missing-water-mystery-takes-an-unexpected-turn/</link></item>
-<item><title>Popular Sugar Substitutes Linked to Faster Cognitive Decline - SciTechDaily</title><link>https://scitechdaily.com/popular-sugar-substitutes-linked-to-faster-cognitive-decline/</link></item>
-<item><title>This 125 Million-Year-Old Dinosaur Had Spikes Like a Porcupine - SciTechDaily</title><link>https://scitechdaily.com/this-125-million-year-old-dinosaur-had-spikes-like-a-porcupine/</link></item>
-<item><title>Ancient DNA Reveals Europe’s Last Hunter-Gatherers Survived Thousands of Years Longer Than Expected - SciTechDaily</title><link>https://scitechdaily.com/ancient-dna-reveals-europes-last-hunter-gatherers-survived-thousands-of-years-longer-than-expected/</link></item>
-<item><title>Scientists Found Cancer’s Invisibility Switch - SciTechDaily</title><link>https://scitechdaily.com/scientists-found-cancers-invisibility-switch/</link></item>
-<item><title>Why Scientists Are Urging Caution About a Common Ingredient in Semaglutide and Ozempic - SciTechDaily</title><link>https://scitechdaily.com/why-scientists-are-urging-caution-about-a-common-ingredient-in-semaglutide-and-ozempic/</link></item>
-<item><title>Researchers Catch Cancer Cells Cheating Death in a New Way - SciTechDaily</title><link>https://scitechdaily.com/researchers-catch-cancer-cells-cheating-death-in-a-new-way/</link></item>
-<item><title>Meta frees React to live in its own foundation - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/25/meta_sends_react_to_live/</link></item>
-<item><title>It&amp;#39;s only Tuesday and AI chip startups have already soaked up $1.1B in funding - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/25/ai_chips_vc_funding_1point1billion/</link></item>
-<item><title>Amazon would rather blame its own engineers than its AI - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/24/amazon_blame_human_not_ai/</link></item>
-<item><title>AI has gotten good at finding bugs, not so good at swatting them - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/24/ai_finding_bugs/</link></item>
-<item><title>Discord drama delays age verification debut until the second half of 2026 - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/24/discord_drama_delays_age_verification/</link></item>
-<item><title>Patch these 4 critical, make-me-root SolarWinds bugs ASAP - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/24/patch_these_4_critical_makemeroot/</link></item>
-<item><title>&amp;#39;Merica-made Mac Minis marked for manufacturing - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/24/apple_mac_mini_us/</link></item>
-<item><title>Rogue devs of sideloaded Android apps beg for freedom from Google’s verification regime - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/24/google_android_developer_verification_plan/</link></item>
-<item><title>North Korea&amp;#39;s Lazarus Group targets healthcare orgs with Medusa ransomware - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/24/north_koreas_lazarus_group_healthcare_medusa_ransomware/</link></item>
-<item><title>The fix inches closer: Iowa moves farm right-to-repair bill forward - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/24/iowa_right_to_repair_bill_farming/</link></item>
-<item><title>GhostBSD to ditch Xorg for XLibre as Red Hat&amp;#39;s Wayland crusade leaves X11 fans out in the cold - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/24/ghostbsd_plans_to_adopt_xlibre/</link></item>
-<item><title>Go library maintainer brands GitHub&amp;#39;s Dependabot a &amp;#39;noise machine&amp;#39; - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/24/github_dependabot_noise_machine/</link></item>
-<item><title>AMD copy-pastes 6 GW chips-for-stock deal in new Meta agreement - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/24/amd_copypastes_openai_6gw_chipsforstock/</link></item>
-<item><title>Microsoft gives Windows laggards the &amp;#39;gift of time&amp;#39; wrapped in licensing fees - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/24/microsoft_windows_support/</link></item>
-<item><title>Euro hosting giant hiking prices by up to 50% from April Fool&amp;#39;s Day - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/24/ai_isnt_done_yet_memoryrelated/</link></item>
-<item><title>UK data watchdog fines Reddit £14.47M for letting kids slip past the gate - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/24/ico_fines_reddit/</link></item>
-<item><title>KDE Plasma 6.6 isn&amp;#39;t forcing systemd but the arguments rage on - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/24/kde_plasma_66/</link></item>
-<item><title>Korean cops charge teens over bike hire breach that exposed data on 4.62M riders - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/24/korean_bike_breach_charges/</link></item>
-<item><title>West Midlands Police earn red card over Copilot&amp;#39;s imaginary football match - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/24/west_midlands_police_copilot/</link></item>
-<item><title>Intel backs SambaNova&amp;#39;s $350M bid to challenge GPUs in AI inference - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/24/sambanova_intel_funding/</link></item>
-<item><title>UK tech hit by double trouble: Fewer foreign techies amid skills squeeze - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/24/brit_tech_firms_face_falling/</link></item>
-<item><title>Euro allies aiming to rapidly build low-cost air defense weapons - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/24/uk_joins_european_allies_aiming/</link></item>
-<item><title>Microsoft teases ‘reimagined SharePoint experience’ with added AI - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/24/microsoft_365_roadmap_update/</link></item>
-<item><title>Cisco turns to titanium spoons and sand dunes to build a better … box? - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/24/cisco_everpure_brand_design/</link></item>
-<item><title>Anthropic accuses China&amp;#39;s AI labs of ripping off content - just like it did - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/24/anthropic_misanthropic_chinese_ai_labs/</link></item>
+<lastBuildDate>Thu, 26 Feb 2026 09:14:01 +0800</lastBuildDate>
+<item><title>Spirit Airlines Eyes Spring-Summer Chapter 11 Exit, With Ceo-Heavy Fleet - Aviation Week Network</title><link>https://aviationweek.com/air-transport/airlines-lessors/spirit-airlines-eyes-spring-summer-chapter-11-exit-ceo-heavy-fleet</link></item>
+<item><title>USAF To Continue E-7 Prototypes, Won’t Yet Budget For Next Step - Aviation Week Network</title><link>https://aviationweek.com/defense/budget-policy-operations/usaf-continue-e-7-prototypes-wont-yet-budget-next-step</link></item>
+<item><title>ATR Plans 20% Production Growth In 2026 - Aviation Week Network</title><link>https://aviationweek.com/air-transport/aircraft-propulsion/atr-plans-20-production-growth-2026</link></item>
+<item><title>See Full Coverage - Aviation Week Network</title><link>https://aviationweek.com/shows-events/air-warfare-symposium</link></item>
+<item><title>#206 – Jonathan Desrosiers on WordPress Sustainability, Community Engagement, and Release Strategies - WP Tavern</title><link>https://wptavern.com/podcast/206-jonathan-desrosiers-on-wordpress-sustainability-community-engagement-and-release-strategies</link></item>
+<item><title>#205 – Matt Cromwell on Redefining WordPress Product Growth in a Crowded Ecosystem - WP Tavern</title><link>https://wptavern.com/podcast/205-matt-cromwell-on-redefining-wordpress-product-growth-in-a-crowded-ecosystem</link></item>
+<item><title>#204 – Russell Aaron on the Hidden Settings Page You Never Knew Existed options.php - WP Tavern</title><link>https://wptavern.com/podcast/204-russell-aaron-on-the-hidden-settings-page-you-never-knew-existed-options-php</link></item>
+<item><title>#203 – Miriam Schwab on Elementor’s Decade of Growth and the Future With AI - WP Tavern</title><link>https://wptavern.com/podcast/203-miriam-schwab-on-elementors-decade-of-growth-and-the-future-with-ai</link></item>
+<item><title>Mysteries of women’s clothing sizes - FlowingData</title><link>https://flowingdata.com/2026/02/25/mysteries-of-womens-clothing-sizes/</link></item>
+<item><title>7 Rare Vinyl Records That Are Worth a Fortune - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/music/rare-vinyl-records-worth-a-fortune</link></item>
+<item><title>9 Extraordinary Black Women Who Changed History - Mental Floss</title><link>https://www.mentalfloss.com/history/black-history-month/black-women-who-changed-history</link></item>
+<item><title>All Six &amp;#39;Scream&amp;#39; Movies, Ranked by Rotten Tomatoes - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/movies/scream-movies-rotten-tomatoes-ranking</link></item>
+<item><title>9 Actors Who Surprisingly Made the Billboard 100 Chart - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/music/actors-who-made-billboard-100-chart</link></item>
+<item><title>Quiz: How Quickly Can You Match the Disney Song to the Villain? - Mental Floss</title><link>https://www.mentalfloss.com/quizzes/match-disney-song-villain</link></item>
+<item><title>Year of the Fire Horse: Meaning, History, and Why It Sparked Widespread Fear - Mental Floss</title><link>https://www.mentalfloss.com/culture/folklore-mythology/year-of-fire-horse-meaning-history-fear</link></item>
+<item><title>Lily-Rose Depp Gets Dreamy in Chanel’s Denim Makeup - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/chanel-denim-makeup/</link></item>
+<item><title>Jimmy Choo’s Cool Girl Take on Bridal Style with Gabbriette - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/jimmy-choo-bridal-2026-campaign/</link></item>
+<item><title>The LPA Polka Dot Dresses We Can’t Stop Eyeing - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/shop/lpa-polka-dot-dresses/</link></item>
+<item><title>Abby Champion Gets Glam for Tommy Hilfiger Spring 2026 - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/tommy-hilfiger-spring-2026-campaign/</link></item>
+<item><title>9 Long Wavy Hairstyles to Transform Your Look - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/long-wavy-hairstyles/</link></item>
+<item><title>Ice Spice and H&amp;M Capture New York Energy - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/hm-new-york-campaign/</link></item>
+<item><title>Bridal Lingerie Beyond the Basics for Gowns &amp; Getaways - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/bridal-lingerie/</link></item>
+<item><title>Hailey Bieber is the Face of DKNY’s Spring 2026 Campaign - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/hailey-bieber-dkny-spring-2026-campaign/</link></item>
+<item><title>The Chic Reinvention: Navigating a Cross Country Move - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/navigating-cross-country-move/</link></item>
+<item><title>Coach’s Must-Have Bags Are Having A Major Moment - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/shop/coach-handbags/</link></item>
+<item><title>Dolce &amp; Gabbana Sets a Bedroom Scene for Spring 2026 - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/dolce-gabbana-spring-2026-campaign/</link></item>
+<item><title>LISA Shows Her Duality in Kith Spring 2026 Collab - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/lisa-kith-collaboration/</link></item>
+<item><title>A Colossus on the Court - Law &amp; Liberty</title><link>https://lawliberty.org/book-review/a-colossus-on-the-court/</link></item>
+<item><title>The Classical Liberal University in a Second-Best World - Law &amp; Liberty</title><link>https://lawliberty.org/forum/the-classical-liberal-university-in-a-second-best-world/</link></item>
+<item><title>Trade, Tariffs, and Trust - Law &amp; Liberty</title><link>https://lawliberty.org/trade-tariffs-and-trust/</link></item>
+<item><title>Can You Lose Weight by Only Eating Fruit and Vegetables? - Everyday Health</title><link>https://www.everydayhealth.com/diet-types/how-much-weight-will-i-lose-if-i-only-eat-fruits-vegetables-for-two-days/</link></item>
+<item><title>Is This Weird Bleeding a Sign of Cancer? - Everyday Health</title><link>https://www.everydayhealth.com/cancer/is-weird-bleeding-a-sign-of-cancer/</link></item>
+<item><title>A Swallowable Balloon for Weight Loss Gets FDA Approval - Everyday Health</title><link>https://www.everydayhealth.com/obesity/swallowable-balloon-for-weight-loss-fda-approval/</link></item>
+<item><title>People With Severe Fungus Allergies Have a New Treatment Options - Everyday Health</title><link>https://www.everydayhealth.com/allergies/people-with-severe-fungus-allergies-have-new-options/</link></item>
+<item><title>Living With Fibromyalgia Pain: Dos and Don’ts - Everyday Health</title><link>https://www.everydayhealth.com/fibromyalgia/dos-donts-managing-fibromyalgia-pain/</link></item>
+<item><title>A List of Hypoallergenic Foods - Everyday Health</title><link>https://www.everydayhealth.com/food-allergies/list-of-hypoallergenic-foods/</link></item>
+<item><title>Why Blood Sugar Matters for Heart Health Even if You Don’t Have Diabetes - Everyday Health</title><link>https://www.everydayhealth.com/heart-health/blood-sugar-prediabetes-and-heart-health/</link></item>
+<item><title>Affordable Home Safety Tips for Rheumatoid Arthritis - Everyday Health</title><link>https://www.everydayhealth.com/rheumatic-conditions/affordable-home-safety-tips-for-rheumatic-arthritis/</link></item>
+<item><title>7 Things You’re Doing That Are Actually Making Your Crohn’s Disease Worse - Everyday Health</title><link>https://www.everydayhealth.com/digestive-health/mistakes-that-can-make-crohns-worse/</link></item>
+<item><title>Shoveling Snow Can Put a Strain on Your Heart - Everyday Health</title><link>https://www.everydayhealth.com/heart-attack/shoveling-snow-can-put-a-strain-on-your-heart/</link></item>
+<item><title>7 Things No One Tells You About Weight Loss and Excess Skin - Everyday Health</title><link>https://www.everydayhealth.com/weight-management/things-no-one-tells-you-about-weight-loss-and-excess-skin/</link></item>
+<item><title>7 Things to Know About Managing Atopic Dermatitis at Work - Everyday Health</title><link>https://www.everydayhealth.com/skin-conditions/tips-for-managing-atopic-dermatitis-at-work/</link></item>
+<item><title>Who Should Take Probiotics: 5 Potential Benefits - Everyday Health</title><link>https://www.everydayhealth.com/digestive-health/the-pros-and-cons-of-probiotics.aspx</link></item>
+<item><title>Clearing the Mist: How to Treat Bipolar Brain Fog Without Destabilizing Your Mood - Everyday Health</title><link>https://www.everydayhealth.com/mental-health-conditions/managing-bipolar-brain-fog/</link></item>
+<item><title>Genes or Lifestyle: Which Matters More for Longevity? - Everyday Health</title><link>https://www.everydayhealth.com/healthy-living/genes-or-lifestyle-which-matters-more-for-longevity/</link></item>
+<item><title>Can Crohn’s Disease Cause Eye Problems? - Everyday Health</title><link>https://www.everydayhealth.com/digestive-health/can-crohns-disease-affect-your-eyes/</link></item>
+<item><title>Ulcerative Colitis and Urgency: What’s Normal and What You Can Do About It - Everyday Health</title><link>https://www.everydayhealth.com/digestive-health/ulcerative-colitis-and-urgency-whats-normal-and-what-to-do/</link></item>
+<item><title>Fulminant Colitis: When an Ulcerative Colitis Flare Becomes a Medical Emergency - Everyday Health</title><link>https://www.everydayhealth.com/digestive-health/fulminant-colitis-ulcerative-colitis-flare-medical-emergency/</link></item>
+<item><title>Obstructive Sleep Apnea (OSA) and Your Health: Why OSA Is a Diabetes and Heart Health Risk - Everyday Health</title><link>https://www.everydayhealth.com/sleep/why-osa-is-a-diabetes-and-heart-health-risk/</link></item>
+<item><title>Prostate Cancer and Dating: When and How to Tell Someone About Your Diagnosis - Everyday Health</title><link>https://www.everydayhealth.com/cancer/prostate-cancer-and-dating-how-to-tell-someone/</link></item>
+<item><title>How to Navigate the Emotional Challenges of Living With CIDP - Everyday Health</title><link>https://www.everydayhealth.com/autoimmune-diseases/how-to-manage-the-emotional-challenges-of-cidp/</link></item>
+<item><title>How a Health Leader Is Getting Black Women to Talk About Menopause — and Making the Conversation Fun - Everyday Health</title><link>https://www.everydayhealth.com/womens-health/how-joy-calloway-is-encouraging-black-women-to-talk-about-menopause/</link></item>
+<item><title>7 Myths About Mastectomy - Everyday Health</title><link>https://www.everydayhealth.com/cancer/myths-about-mastectomy/</link></item>
+<item><title>Mild Cognitive Impairment and Social Fatigue: Why Conversations Feel Tiring and What to Do About It - Everyday Health</title><link>https://www.everydayhealth.com/neurological-disorders/mild-cognitive-impairment-managing-social-fatigue/</link></item>
+<item><title>How Often to Clean These 7 Bathroom Items - Everyday Health</title><link>https://www.everydayhealth.com/healthy-home/how-often-you-should-clean-your-shower-curtain-and-other-bathroom-items/</link></item>
+<item><title>7 Healthiest Shelf-Stable Proteins, According to RDs - Everyday Health</title><link>https://www.everydayhealth.com/diet-nutrition/healthiest-shelf-stable-proteins-according-to-rds/</link></item>
+<item><title>When Rest Doesn’t Help: How to Manage Major Depressive Disorder–Related Fatigue - Everyday Health</title><link>https://www.everydayhealth.com/mental-health-conditions/how-to-manage-major-depressive-disorder-related-fatigue/</link></item>
+<item><title>How to Measure Real Recovery in Major Depressive Disorder - Everyday Health</title><link>https://www.everydayhealth.com/mental-health-conditions/how-to-measure-progress-in-major-depressive-disorder/</link></item>
+<item><title>Causes of Insomnia: Risk Factors, Medical Conditions, and More - Everyday Health</title><link>https://www.everydayhealth.com/insomnia/what-causes-insomnia-your-genes-medical-history-mental-health-lifestyle-all-play-role/</link></item>
+<item><title>How I Manage My Lupus While Also Coping With Rheumatoid Arthritis - Everyday Health</title><link>https://www.everydayhealth.com/rheumatic-conditions/how-i-manage-lupus-with-rheumatoid-arthritis/</link></item>
+<item><title>Coping With Brain Fog When You Have Rheumatoid Arthritis - Everyday Health</title><link>https://www.everydayhealth.com/rheumatic-conditions/brain-fog-when-you-have-rheumatoid-arthritis/</link></item>
+<item><title>Stillman’s Diet - Everyday Health</title><link>https://www.everydayhealth.com/diet-types/stillmans-diet/</link></item>
+<item><title>Why Is Getting Pregnant After 35 More Difficult? - Everyday Health</title><link>https://www.everydayhealth.com/fertility/what-men-women-must-know-about-fertility-infertility-getting-pregnant/</link></item>
+<item><title>What Is the CICO Diet, and Can It Help You Manage Weight? - Everyday Health</title><link>https://www.everydayhealth.com/diet-nutrition/diet/cico-diet-can-calories-calories-out-fad-help-with-weight-loss/</link></item>
+<item><title>How to Prevent Falls When You Have MS - Everyday Health</title><link>https://www.everydayhealth.com/neurological-disorders/how-to-prevent-falls-when-you-have-ms/</link></item>
+<item><title>The ‘Prior Auth’ Playbook for Ulcerative Colitis: Cutting Through the Red Tape - Everyday Health</title><link>https://www.everydayhealth.com/digestive-health/prior-auth-playbook-for-ulcerative-colitis/</link></item>
+<item><title>Is Intermittent Fasting Safe for People With Ulcerative Colitis? - Everyday Health</title><link>https://www.everydayhealth.com/digestive-health/is-intermittent-fasting-safe-for-people-with-ulcerative-colitis/</link></item>
+<item><title>Your AAV Medical Team — and Which Doctors You Should Have on Speed Dial - Everyday Health</title><link>https://www.everydayhealth.com/autoimmune-diseases/which-doctors-to-have-on-your-aav-medical-team/</link></item>
+<item><title>Heart-Healthy Diets May Also Protect Your Brain - Everyday Health</title><link>https://www.everydayhealth.com/healthy-living/heart-healthy-diets-may-also-protect-your-brain/</link></item>
+<item><title>When Crohn’s Disease Makes You Feel Betrayed by Your Body - Everyday Health</title><link>https://www.everydayhealth.com/digestive-health/when-crohns-disease-makes-you-feel-betrayed-by-your-body/</link></item>
+<item><title>How Crohn’s Disease Can Change as You Get Older — and What That Means for Your Care - Everyday Health</title><link>https://www.everydayhealth.com/digestive-health/how-crohns-disease-can-change-as-you-get-older/</link></item>
+<item><title>Trader Joe’s Fried Rice and Aldi’s Frozen Meatballs Recalled — What to Know - Everyday Health</title><link>https://www.everydayhealth.com/diet-nutrition/trader-joes-fried-rice-and-aldis-frozen-meatballs-recalled/</link></item>
+<item><title>Are There Drugs That Interact With Eating Fresh Pineapple? - Everyday Health</title><link>https://www.everydayhealth.com/food-safety/are-there-drugs-that-interact-with-eating-fresh-pineapple/</link></item>
+<item><title>7 Potential Health Benefits of Berries - Everyday Health</title><link>https://www.everydayhealth.com/diet-nutrition-pictures/amazing-health-benefits-of-berries.aspx</link></item>
+<item><title>What Are Vasomotor Symptoms of Menopause? Causes, Diagnosis, and Treatment - Everyday Health</title><link>https://www.everydayhealth.com/menopause/vasomotor-signs/guide/</link></item>
+<item><title>Fasted Workouts and Blood Sugar: Helpful Hack or Hormonal Stressor? - Everyday Health</title><link>https://www.everydayhealth.com/diabetes/fasted-workouts-and-blood-sugar-benefits-risks/</link></item>
+<item><title>Why ‘Normal’ Blood Sugar Readings Don’t Always Mean You Feel Good After Eating - Everyday Health</title><link>https://www.everydayhealth.com/diabetes/why-normal-blood-sugar-readings-dont-always-mean-you-feel-good/</link></item>
+<item><title>When ‘Healthy’ Foods Spike Blood Sugar — and What You Can Do About It - Everyday Health</title><link>https://www.everydayhealth.com/diabetes/when-healthy-foods-spike-blood-sugar-and-what-you-can-do-about-it/</link></item>
+<item><title>Why Blood Sugar Is Harder to Control During Illness, Injury, or Recovery - Everyday Health</title><link>https://www.everydayhealth.com/diabetes/why-blood-sugar-is-harder-to-control-during-illness-injury/</link></item>
+<item><title>What Is Scar Revision? - Everyday Health</title><link>https://www.everydayhealth.com/skin-beauty/scar-revision/guide/</link></item>
+<item><title>What Is Aphasia? - Everyday Health</title><link>https://www.everydayhealth.com/stroke/aphasia/</link></item>
+<item><title>What Is Cirrhosis? - Everyday Health</title><link>https://www.everydayhealth.com/liver-disease/cirrhosis/</link></item>
+<item><title>What Is Melanoma? - Everyday Health</title><link>https://www.everydayhealth.com/melanoma/guide/</link></item>
+<item><title>What Is Pancreatic Cancer? - Everyday Health</title><link>https://www.everydayhealth.com/pancreatic-cancer/guide/</link></item>
+<item><title>Crohn’s Disease vs. Ulcerative Colitis: What’s the Difference? - Everyday Health</title><link>https://www.everydayhealth.com/digestive-health/key-difference-between-crohns-disease-ulcerative-colitis/</link></item>
+<item><title>What Is Chronic Inflammatory Demyelinating Polyneuropathy (CIDP)? - Everyday Health</title><link>https://www.everydayhealth.com/autoimmune-diseases/chronic-inflammatory-demyelinating-polyneuropathy/</link></item>
+<item><title>7 Adjunctive Medications to Discuss When Your Bipolar Mood Stabilizer Isn’t Enough - Everyday Health</title><link>https://www.everydayhealth.com/mental-health-conditions/adjunctive-medications-for-bipolar-stability/</link></item>
+<item><title>AAV Treatment 101: Induction vs. Maintenance - Everyday Health</title><link>https://www.everydayhealth.com/autoimmune-diseases/aav-care-induction-maintenance/</link></item>
+<item><title>Breaking the ‘Flare-Fix’ Cycle: Why Your Current Atopic Dermatitis Routine Might Be Holding You Back - Everyday Health</title><link>https://www.everydayhealth.com/skin-conditions/breaking-the-flare-fix-cycle-in-atopic-dermatitis/</link></item>
+<item><title>5 Foods to Avoid During Menopause - Everyday Health</title><link>https://www.everydayhealth.com/hs/menopause-resource-center/foods-to-avoid/</link></item>
+<item><title>Does Late-Night Eating Cause Weight Gain? - Everyday Health</title><link>https://www.everydayhealth.com/diet-nutrition/does-late-night-eating-cause-weight-gain/</link></item>
+<item><title>9 Healthier Alternatives to Butter - Everyday Health</title><link>https://www.everydayhealth.com/news/healthy-alternatives-to-butter/</link></item>
+<item><title>Type 2 Diabetes Treatment: Medication, Lifestyle Changes, and More - Everyday Health</title><link>https://www.everydayhealth.com/type-2-diabetes/guide/care/</link></item>
+<item><title>5 Core Exercises That Also Strengthen the Pelvic Floor - Everyday Health</title><link>https://www.everydayhealth.com/fitness/core-exercises-that-also-strengthen-pelvic-floor/</link></item>
+<item><title>What Is a Vegan Diet? A Comprehensive Beginner’s Guide - Everyday Health</title><link>https://www.everydayhealth.com/diet-nutrition/diet/vegan-diet-guide-benefits-risks-weight-loss-effect-food-list/</link></item>
+<item><title>Eric Dane, ‘Grey’s Anatomy’ Heartthrob and ALS Advocate, Dies at 53 - Everyday Health</title><link>https://www.everydayhealth.com/neurological-disorders/eric-dane-greys-anatomy-heartthrob-als-advocate-dies-at-at-53/</link></item>
+<item><title>Psoriatic Arthritis: Hand Strength, Dexterity, and Fine Motor Control - Everyday Health</title><link>https://www.everydayhealth.com/rheumatic-conditions/psoriatic-arthritis-hand-strength-and-dexterity/</link></item>
+<item><title>Can a Face Ice Bath Really Cure a Hangover, Bust Anxiety, Clear Skin, and More? - Everyday Health</title><link>https://www.everydayhealth.com/healthy-living/can-a-face-ice-bath-really-cure-a-hangover-bust-anxiety-clear-skin-and-more/</link></item>
+<item><title>Surgery for Cataracts - Everyday Health</title><link>https://www.everydayhealth.com/cataracts/guide/surgery/</link></item>
+<item><title>What Causes Blood in Urine (Hematuria)? - Everyday Health</title><link>https://www.everydayhealth.com/urine/what-causes-blood-urine-hematuria/</link></item>
+<item><title>The Crucial Importance of Self-Care When You’re a Caregiver - Everyday Health</title><link>https://www.everydayhealth.com/emotional-health/self-care-for-caregivers/</link></item>
+<item><title>Poison Ivy, Poison Oak, and 7 Other Plants That Cause Rashes - Everyday Health</title><link>https://www.everydayhealth.com/poison-ivy/rashes-caused-by-poisonous-plants/</link></item>
+<item><title>Alcohol and Cancer: What’s the Link? - Everyday Health</title><link>https://www.everydayhealth.com/cancer/alcohol-and-cancer-what-an-expert-wants-you-to-know/</link></item>
+<item><title>4 Health Benefits of Farting - Everyday Health</title><link>https://www.everydayhealth.com/digestive-health/health-benefits-of-farting/</link></item>
+<item><title>What Are Personalized Vitamins, and Do You Need Them? - Everyday Health</title><link>https://www.everydayhealth.com/diet-nutrition/what-are-personalized-vitamins-and-do-you-need-them/</link></item>
+<item><title>The Top Foods High in Vitamin C — and Why the Nutrient Is So Important - Everyday Health</title><link>https://www.everydayhealth.com/diet-nutrition/top-foods-high-in-vitamin-c.aspx</link></item>
+<item><title>Can Hair Loss Pills Cause Erectile Dysfunction? - Everyday Health</title><link>https://www.everydayhealth.com/mens-health/can-hair-loss-pills-cause-ed/</link></item>
+<item><title>A Drug Combo That Includes a GLP-1 May Improve Psoriasis and Psoriatic Arthritis Symptoms - Everyday Health</title><link>https://www.everydayhealth.com/skin-conditions/drug-combo-may-improve-psoriasis-psoriatic-arthritis/</link></item>
+<item><title>Missed Period: Is It Perimenopause or Something Else? - Everyday Health</title><link>https://www.everydayhealth.com/womens-health/missed-period-perimenopause-or-something-else/</link></item>
+<item><title>Blurred Vision: 14 Potential Causes (and When to See a Doctor) - Everyday Health</title><link>https://www.everydayhealth.com/eye-vision-health/blurred-vision-potential-causes/</link></item>
+<item><title>Can Essential Oils Help During Cancer Treatment? - Everyday Health</title><link>https://www.everydayhealth.com/cancer/all-you-need-know-about-essential-oils-for-cancer/</link></item>
+<item><title>6 Things to Know About Early Menopause - Everyday Health</title><link>https://www.everydayhealth.com/womens-health/things-to-know-about-early-menopause/</link></item>
+<item><title>What Your Daily Fart Count Could Say About Your Health - Everyday Health</title><link>https://www.everydayhealth.com/digestive-health/what-your-daily-fart-count-could-say-about-your-health/</link></item>
+<item><title>Are Bidets Sanitary? - Everyday Health</title><link>https://www.everydayhealth.com/digestive-health/are-bidets-good-for-your-bum-and-the-planet/</link></item>
+<item><title>‘What I Wish I Knew Sooner About the Mental Health Toll of Caregiving’ - Everyday Health</title><link>https://www.everydayhealth.com/mental-health/what-i-wish-i-knew-about-the-mental-health-toll-of-caregiving/</link></item>
+<item><title>How to Prepare for a Routine Colonoscopy for Crohn’s - Everyday Health</title><link>https://www.everydayhealth.com/crohns-disease/colonoscopy-for-crohns-tips/</link></item>
+<item><title>When to Consider Surgery for Crohn’s Disease - Everyday Health</title><link>https://www.everydayhealth.com/digestive-health/when-to-consider-surgery-for-crohns/</link></item>
+<item><title>6 Reasons Your Hands Smell and How to Stop the Stink - Everyday Health</title><link>https://www.everydayhealth.com/skin-conditions/hands-smell-causes/</link></item>
+<item><title>Runner&amp;#39;s Flu: Why You Feel Sick After Running a Marathon - Everyday Health</title><link>https://www.everydayhealth.com/health-impacts/getting-sick-after-running-a-marathon/</link></item>
+<item><title>Zelensky Says All ‘Flamingo’ Missiles Hit Target in Strike on Sanctioned Russian Missile Plant - KyivPost</title><link>https://www.kyivpost.com/post/70772</link></item>
+<item><title>SBU Detains Air Force Logistics Chief, Regional Security Head in Defense Funds Probe - KyivPost</title><link>https://www.kyivpost.com/post/70776</link></item>
+<item><title>Ukraine Hits Russian S-400 System, Destroys Pantsir-S1 in Occupied Crimea - KyivPost</title><link>https://www.kyivpost.com/post/70770</link></item>
+<item><title>Zelensky and Trump Hold Call Ahead of US-Ukraine Talks in Geneva - KyivPost</title><link>https://www.kyivpost.com/post/70789</link></item>
+<item><title>Count of Russian Soldiers, Officers Confirmed Killed in Ukraine Passes 200,000 - KyivPost</title><link>https://www.kyivpost.com/post/70759</link></item>
+<item><title>Donbas – Rise and Fall of Ukraine’s Historic Lands Caught in a Tug of War - KyivPost</title><link>https://www.kyivpost.com/post/70497</link></item>
+<item><title>OPINION: What Is the Global Lesson Learned From Russian Aggression Against Ukraine? - KyivPost</title><link>https://www.kyivpost.com/post/70589</link></item>
+<item><title>‘We Crawled Through Glass and Smoke’: How Kyiv Residents Survived a Shahed Drone Attack - KyivPost</title><link>https://www.kyivpost.com/post/70386</link></item>
+<item><title>EXCLUSIVE: Lithuania’s President Nausėda: Russia Does Not Want Peace, It Is Playing for Time - KyivPost</title><link>https://www.kyivpost.com/post/70562</link></item>
+<item><title>‘Results Have Already Been Achieved’: Zelensky Says Arrests Mark Progress in SBU Anti-Corruption Probe - KyivPost</title><link>https://www.kyivpost.com/post/70792</link></item>
+<item><title>Nawrocki: Russia Sees NATO and Poland as ‘Main Enemy’ in ‘Civilizational War’ Against West - KyivPost</title><link>https://www.kyivpost.com/post/70791</link></item>
+<item><title>Switzerland to Implement ‘Complete Ban’ on Russian Gas - KyivPost</title><link>https://www.kyivpost.com/post/70790</link></item>
+<item><title>First Ukrainian Defense Plant Opens in UK - KyivPost</title><link>https://www.kyivpost.com/post/70788</link></item>
+<item><title>Suspect in Pro-Russian Politician’s Shooting Detained in Germany - KyivPost</title><link>https://www.kyivpost.com/post/70787</link></item>
+<item><title>German MPs Approve Military Drones Deal With Start-ups Stark, Helsing - KyivPost</title><link>https://www.kyivpost.com/post/70786</link></item>
+<item><title>Zelensky Hosts Ghana’s Top Diplomat as Kyiv Warns of Russian Recruitment in Africa - KyivPost</title><link>https://www.kyivpost.com/post/70784</link></item>
+<item><title>Ukraine, France to Launch Joint Defense-Tech Startup Grant Program - KyivPost</title><link>https://www.kyivpost.com/post/70781</link></item>
+<item><title>EU Parliament Signs €90 Billion Loan for Ukraine, European Council Approval Still Pending - KyivPost</title><link>https://www.kyivpost.com/post/70710</link></item>
+<item><title>Terrorist Bombings Spur Renewed Debate Over Telegram Restrictions in Ukraine - KyivPost</title><link>https://www.kyivpost.com/post/70647</link></item>
+<item><title>Despite Drop in 2025, Russian Oil Exports Exceed Pre-War Volumes: Report - KyivPost</title><link>https://www.kyivpost.com/post/70634</link></item>
+<item><title>Europe Must Act: Kiesewetter on Taurus Missiles, Sanctions and the Future of Ukraine - KyivPost</title><link>https://www.kyivpost.com/post/70708</link></item>
+<item><title>Bucha: The Inside Story the World Missed - KyivPost</title><link>https://www.kyivpost.com/post/70503</link></item>
+<item><title>The Moscow Hit and the War Inside the Kremlin - KyivPost</title><link>https://www.kyivpost.com/post/70467</link></item>
+<item><title>Putin Believes He Is Winning: Here’s Why - KyivPost</title><link>https://www.kyivpost.com/post/70014</link></item>
+<item><title>Ukraine’s Drone War: Frontline Insights From Munich Security Conference - KyivPost</title><link>https://www.kyivpost.com/post/70604</link></item>
+<item><title>Four Years and More of Heroic Resistance: Ukraine Will Not Be Broken - KyivPost</title><link>https://www.kyivpost.com/post/70521</link></item>
+<item><title>Prosecutors Seek Nearly $10 Million Bail for Ex-Energy Minister - KyivPost</title><link>https://www.kyivpost.com/post/70206</link></item>
+<item><title>Ex-Energy Minister Suspected of Pocketing Millions in $100M ‘Midas’ Corruption Case - KyivPost</title><link>https://www.kyivpost.com/post/70146</link></item>
+<item><title>2 Russian Security Personnel Were on Board France-Seized Tanker: Sources - KyivPost</title><link>https://www.kyivpost.com/post/70617</link></item>
+<item><title>US Intercepts Sanctioned Tanker Linked to Russia’s Shadow Fleet - KyivPost</title><link>https://www.kyivpost.com/post/69731</link></item>
+<item><title>Did Trump Really Get Putin to Stop Bombarding Ukraine for a Week? - KyivPost</title><link>https://www.kyivpost.com/post/69431</link></item>
+<item><title>‘Stab in the back’: Open Letter Demands European Venue Drop Pianist over Russia Links - KyivPost</title><link>https://www.kyivpost.com/post/70484</link></item>
+<item><title>Ivan Marchuk at 90 – An Interview from Vienna - KyivPost</title><link>https://www.kyivpost.com/post/70072</link></item>
+<item><title>Sydney Gets New Ukrainian-Themed Mural - KyivPost</title><link>https://www.kyivpost.com/post/69633</link></item>
+<item><title>Russian Strike Damages WWII Museum Hall of Glory in Kyiv - KyivPost</title><link>https://www.kyivpost.com/post/69313</link></item>
+<item><title>International education in Ukraine today: how to choose a school — Open House at PSI Kyiv - KyivPost</title><link>https://www.kyivpost.com/post/69847</link></item>
+<item><title>Following: Anthropic vs. the Pentagon - Platformer</title><link>https://www.platformer.news/anthropic-pentagon-global-intelligence-crisis/</link></item>
+<item><title>The shallow impact of India’s AI summit - Platformer</title><link>https://www.platformer.news/india-impact-summit-ai-governance/</link></item>
+<item><title>The infinite scroll goes on trial - Platformer</title><link>https://www.platformer.news/the-infinite-scroll-goes-on-trial/</link></item>
+<item><title>Meta’s face turn - Platformer</title><link>https://www.platformer.news/meta-facial-recognition-return/</link></item>
+<item><title>Why GPT-4o had to go - Platformer</title><link>https://www.platformer.news/gpt-4o-sunset-sycophancy/</link></item>
+<item><title>Exclusive: OpenAI disbanded its mission alignment team - Platformer</title><link>https://www.platformer.news/openai-mission-alignment-team-joshua-achiam/</link></item>
+<item><title>Why the infinite-scroll childhood may be coming to an end - Platformer</title><link>https://www.platformer.news/social-media-addiction-trial-eu-tiktok-investigation/</link></item>
+<item><title>The reporter who tried to replace herself with a bot - Platformer</title><link>https://www.platformer.news/journalism-job-automation-claude/</link></item>
+<item><title>Tech Firms Aren&amp;#39;t Just Encouraging Their Workers To Use AI. They&amp;#39;re Enforcing It. - Slashdot</title><link>https://tech.slashdot.org/story/26/02/25/1648247/tech-firms-arent-just-encouraging-their-workers-to-use-ai-theyre-enforcing-it</link></item>
+<item><title>Americans Are Destroying Flock Surveillance Cameras - Slashdot</title><link>https://yro.slashdot.org/story/26/02/25/1632246/americans-are-destroying-flock-surveillance-cameras</link></item>
+<item><title>Xbox Co-founder Says Microsoft is Quietly Sunsetting the Platform - Slashdot</title><link>https://games.slashdot.org/story/26/02/25/1622230/xbox-co-founder-says-microsoft-is-quietly-sunsetting-the-platform</link></item>
+<item><title>Hacker Used Anthropic&amp;#39;s Claude To Steal Sensitive Mexican Data - Slashdot</title><link>https://yro.slashdot.org/story/26/02/25/1524257/hacker-used-anthropics-claude-to-steal-sensitive-mexican-data</link></item>
+<item><title>DVD Sales Decline Slows Sharply as Gen Z Discovers the Appeal of Physical Media - Slashdot</title><link>https://entertainment.slashdot.org/story/26/02/25/1517205/dvd-sales-decline-slows-sharply-as-gen-z-discovers-the-appeal-of-physical-media</link></item>
+<item><title>Scientists Crack the Case of &amp;#39;Screeching&amp;#39; Scotch Tape - Slashdot</title><link>https://science.slashdot.org/story/26/02/25/1446236/scientists-crack-the-case-of-screeching-scotch-tape</link></item>
+<item><title>Microsoft Japan Raided Over Suspected Violation of Anti-Monopoly Law - Slashdot</title><link>https://slashdot.org/story/26/02/25/1124220/microsoft-japan-raided-over-suspected-violation-of-anti-monopoly-law</link></item>
+<item><title>Uber Previews Its Dubai Air Taxi Service - Slashdot</title><link>https://tech.slashdot.org/story/26/02/25/1321256/uber-previews-its-dubai-air-taxi-service</link></item>
+<item><title>Anthropic Drops Flagship Safety Pledge - Slashdot</title><link>https://slashdot.org/story/26/02/25/1355245/anthropic-drops-flagship-safety-pledge</link></item>
+<item><title>HP Says Memory&amp;#39;s Contribution To PC Costs Just Doubled To 35% - Slashdot</title><link>https://tech.slashdot.org/story/26/02/25/0540220/hp-says-memorys-contribution-to-pc-costs-just-doubled-to-35</link></item>
+<item><title>Apple&amp;#39;s Touch-Screen MacBook Pro To Have Dynamic Island, New Interface - Slashdot</title><link>https://apple.slashdot.org/story/26/02/25/0435253/apples-touch-screen-macbook-pro-to-have-dynamic-island-new-interface</link></item>
+<item><title>The US Had a Big Battery Boom Last Year - Slashdot</title><link>https://hardware.slashdot.org/story/26/02/24/206224/the-us-had-a-big-battery-boom-last-year</link></item>
+<item><title>First British Baby Born Using Transplanted Womb From Dead Donor - Slashdot</title><link>https://science.slashdot.org/story/26/02/24/200231/first-british-baby-born-using-transplanted-womb-from-dead-donor</link></item>
+<item><title>Rule-Breaking Black Hole Growing At 13x the Cosmic &amp;#39;Speed Limit&amp;#39; Challenges Theories - Slashdot</title><link>https://science.slashdot.org/story/26/02/23/0638227/rule-breaking-black-hole-growing-at-13x-the-cosmic-speed-limit-challenges-theories</link></item>
+<item><title>New hypersonic missiles unveiled for fighter planes, ground systems - Defense News</title><link>https://www.defensenews.com/air-warfare/2026/02/25/new-hypersonic-missiles-unveiled-for-fighter-planes-ground-systems/</link></item>
+<item><title>US Army revamping its electronic warfare acquisition system - Defense News</title><link>https://www.defensenews.com/land/2026/02/25/us-army-revamping-its-electronic-warfare-acquisition-system/</link></item>
+<item><title>Ukraine is reshaping the armored battlefield. The US Army is trying to keep up. - Defense News</title><link>https://www.defensenews.com/news/your-military/2026/02/25/ukraine-is-reshaping-the-armored-battlefield-the-us-army-is-trying-to-keep-up/</link></item>
+<item><title>Ukrainian officials to meet Trump envoys in Geneva over more Russia talks - Defense News</title><link>https://www.defensenews.com/global/europe/2026/02/25/ukrainian-officials-to-meet-trump-envoys-in-geneva-over-more-russia-talks/</link></item>
+<item><title>18 Famous Horror Movies Referenced in the Scream Franchise - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/movies/horror-movie-references-in-scream?utm_source=RSS</link></item>
+<item><title>8 Best BBQ Joints in America, According to Guy Fieri - Mental Floss</title><link>https://www.mentalfloss.com/food/restaurants/best-bbq-joints-guy-fieri?utm_source=RSS</link></item>
+<item><title>Apple Maps adds detailed F1 experience ahead of 2026 season - 9to5Mac</title><link>https://9to5mac.com/2026/02/25/apple-maps-adds-detailed-f1-experience-ahead-of-2026-season/</link></item>
+<item><title>9to5Mac Daily: February 25, 2026 – Touchscreen MacBook Pro rumors, Apple Card latest - 9to5Mac</title><link>https://9to5mac.com/2026/02/25/daily-february-25-2026/</link></item>
+<item><title>iOS 26 has made Apple Passwords the only password manager I need - 9to5Mac</title><link>https://9to5mac.com/2026/02/25/ios-26-has-made-apple-passwords-the-only-password-manager-i-need/</link></item>
+<item><title>Apple TV just added three new movies to expanding future lineup - 9to5Mac</title><link>https://9to5mac.com/2026/02/25/apple-tv-just-added-three-new-movies-to-expanding-future-lineup/</link></item>
+<item><title>The Mac is about to get a new AAA game in rare day-one launch - 9to5Mac</title><link>https://9to5mac.com/2026/02/25/the-mac-is-about-to-get-a-new-aaa-game-in-rare-day-one-launch/</link></item>
+<item><title>Samsung copies Apple’s Search button from iOS for One UI 8.5, shamelessly names it ‘Finder’ - 9to5Mac</title><link>https://9to5google.com/2026/02/25/samsung-copies-apple-ios-search-button-shamelessly-names-it-finder/</link></item>
+<item><title>Apple and Amazon accused of ignoring Spanish antitrust order for nearly two years - 9to5Mac</title><link>https://9to5mac.com/2026/02/25/apple-and-amazon-accused-of-ignoring-spanish-antitrust-order-for-nearly-two-years/</link></item>
+<item><title>Apple’s low-cost MacBook might lack these features - 9to5Mac</title><link>https://9to5mac.com/2026/02/25/apples-low-cost-macbook-might-lack-these-key-features/</link></item>
+<item><title>Apple reveals US chipmaking behind-the-scenes process - 9to5Mac</title><link>https://9to5mac.com/2026/02/25/apple-reveals-us-chipmaking-behind-the-scenes-process/</link></item>
+<item><title>App Store gaming revenue hit $52.5B in 2025, topping Google Play and Steam combined: report - 9to5Mac</title><link>https://9to5mac.com/2026/02/25/app-store-gaming-revenue-hit-52-5b-in-2025-topping-google-play-and-steam-combined-report/</link></item>
+<item><title>tvOS 26.4: Three new changes are coming for Apple TV 4K - 9to5Mac</title><link>https://9to5mac.com/2026/02/25/tvos-26-4-three-new-changes-are-coming-for-apple-tv-4k/</link></item>
+<item><title>Deals: M3 iPad Air $250 off, Apple Watch Ultra 3 up to $159 off, ZAGG Pro 2 Apple Pencil 62% off, more - 9to5Mac</title><link>https://9to5mac.com/2026/02/25/deals-m3-ipad-air-apple-watch-ultra-3-zagg-pro-2-pencil/</link></item>
+<item><title>Spotify’s newest feature makes playlists sound better - 9to5Mac</title><link>https://9to5mac.com/2026/02/25/spotifys-newest-feature-makes-playlists-sound-better/</link></item>
+<item><title>iOS 26.4 beta 2 changes and features: hints at upcoming upgrades [Video] - 9to5Mac</title><link>https://9to5mac.com/2026/02/25/ios-26-4-beta-2-changes-and-features-hints-at-upcoming-upgrades-video/</link></item>
+<item><title>Apple is launching new products next week, here’s what’s coming - 9to5Mac</title><link>https://9to5mac.com/2026/02/25/apple-is-launching-new-products-next-week-heres-whats-coming/</link></item>
+<item><title>Carrot Weather adds The Weather Channel data, new dynamic interface, more - 9to5Mac</title><link>https://9to5mac.com/2026/02/25/carrot-weather-adds-the-weather-channel-data-new-dynamic-interface-more/</link></item>
+<item><title>Apple age verification in iOS 26.4 beta 2 took less than 30 seconds - 9to5Mac</title><link>https://9to5mac.com/2026/02/25/apple-age-verification-in-ios-26-4-beta-2-took-less-than-30-seconds/</link></item>
+<item><title>iPhone Fold leak details crease depth and folding angle - 9to5Mac</title><link>https://9to5mac.com/2026/02/25/iphone-fold-leak-details-crease-depth-and-folding-angle/</link></item>
+<item><title>With this report, I’m no longer scared of a touchscreen Mac - 9to5Mac</title><link>https://9to5mac.com/2026/02/25/with-this-report-im-no-longer-scared-of-a-touchscreen-mac/</link></item>
+<item><title>Adobe Firefly can now use AI to turn raw footage into a first-cut video - 9to5Mac</title><link>https://9to5mac.com/2026/02/25/adobe-firefly-can-now-use-ai-to-turn-raw-footage-into-a-first-cut-video/</link></item>
+<item><title>Apple battling rising component costs in low-cost MacBook production - 9to5Mac</title><link>https://9to5mac.com/2026/02/25/apple-battling-rising-component-costs-in-low-cost-macbook-production/</link></item>
+<item><title>Here’s how to switch from 1Password to Apple Passwords - 9to5Mac</title><link>https://9to5mac.com/2026/02/25/heres-how-to-switch-from-1password-to-apple-passwords/</link></item>
+<item><title>Apple TV: Martin Scorsese adds another A-lister to upcoming project - 9to5Mac</title><link>https://9to5mac.com/2026/02/25/apple-tv-martin-scorsese-adds-another-a-lister-to-upcoming-project/</link></item>
+<item><title>Mac hardware is great, but macOS 26 is a disaster, say pundits - 9to5Mac</title><link>https://9to5mac.com/2026/02/25/mac-hardware-is-great-but-macos-26-is-a-disaster-say-pundits/</link></item>
+<item><title>Apple fined in Brazil once again for selling iPhones without a charger - 9to5Mac</title><link>https://9to5mac.com/2026/02/25/apple-fined-in-brazil-once-again-for-selling-iphones-without-a-charger/</link></item>
+<item><title>The touchscreen MacBook Pro is shaping up to be exactly what I wanted - 9to5Mac</title><link>https://9to5mac.com/2026/02/24/the-touchscreen-macbook-pro-is-shaping-up-to-be-exactly-what-i-wanted/</link></item>
+<item><title>9to5Mac Daily: February 24, 2026 – Apple US manufacturing, iOS 26.4 beta 2 - 9to5Mac</title><link>https://9to5mac.com/2026/02/24/daily-february-24-2026/</link></item>
+<item><title>Apple acquires startup specializing in AI-powered light and optics design tools - 9to5Mac</title><link>https://9to5mac.com/2026/02/24/apple-acquires-startup-specializing-in-ai-powered-light-and-optics-design-tools/</link></item>
+<item><title>New M6 MacBook Pro details revealed, including Dynamic Island, touch, more - 9to5Mac</title><link>https://9to5mac.com/2026/02/24/new-m6-macbook-pro-details-revealed-including-dynamic-island-touch-more/</link></item>
+<item><title>Security Bite Podcast: It’s all about infostealers (Part 2) - 9to5Mac</title><link>https://9to5mac.com/2026/02/24/security-bite-podcast-its-all-about-infostealers-part-2/</link></item>
+<item><title>Ted Lasso season 4 just got a big release timing update - 9to5Mac</title><link>https://9to5mac.com/2026/02/24/ted-lasso-season-4-just-got-a-big-release-timing-update/</link></item>
+<item><title>Apple TV reveals For All Mankind’s time-jump return in new trailer - 9to5Mac</title><link>https://9to5mac.com/2026/02/24/apple-tv-reveals-for-all-mankinds-time-jump-return-in-new-trailer/</link></item>
+<item><title>Apple expands age assurance tools as new App Store requirements roll out in several regions - 9to5Mac</title><link>https://9to5mac.com/2026/02/24/apple-expands-age-assurance-tools-as-new-app-store-requirements-roll-out-in-several-regions/</link></item>
+<item><title>Discord just canceled its planned age verification rollout, for now - 9to5Mac</title><link>https://9to5mac.com/2026/02/24/discord-just-canceled-its-planned-age-verification-rollout-for-now/</link></item>
+<item><title>Apple releases macOS 26.4 public beta 2 - 9to5Mac</title><link>https://9to5mac.com/2026/02/24/apple-releases-macos-26-4-public-beta-2/</link></item>
+<item><title>Apple Vision Pro team talks process behind designing newest visionOS 26 Environment - 9to5Mac</title><link>https://9to5mac.com/2026/02/24/apple-vision-pro-team-talks-process-behind-designing-newest-visionos-26-environment/</link></item>
+<item><title>Chase explains why it won’t lose billions on Apple Card - 9to5Mac</title><link>https://9to5mac.com/2026/02/24/chase-explains-why-it-wont-lose-billions-on-apple-card/</link></item>
+<item><title>1Password announces big price increases coming next month - 9to5Mac</title><link>https://9to5mac.com/2026/02/24/1password-announces-big-price-increases-coming-next-month/</link></item>
+<item><title>Hands-on: These are my favorite portable power banks for MacBook and iPad - 9to5Mac</title><link>https://9to5mac.com/2026/02/24/hands-on-these-are-my-favorite-high-power-power-banks-for-your-macbook-ipad/</link></item>
+<item><title>iOS 27’s most fascinating change might stay secret until September - 9to5Mac</title><link>https://9to5mac.com/2026/02/24/ios-27s-most-fascinating-change-might-stay-secret-until-september/</link></item>
+<item><title>Deals: Most affordable iPhone 16 Pro $300 off, 1TB M5 MacBook Pro $200 off, stainless steel Apple Watch $450 off, more - 9to5Mac</title><link>https://9to5mac.com/2026/02/24/deals-iphone-16-pro-1tb-m5-macbook-pro-apple-watch/</link></item>
+<item><title>Apple shareholders vote down China audit proposal at annual meeting, more - 9to5Mac</title><link>https://9to5mac.com/2026/02/24/apple-shareholders-vote-down-china-audit-proposal-at-annual-meeting-more/</link></item>
+<item><title>iOS 26.4 release date: Here’s when to expect new iPhone features - 9to5Mac</title><link>https://9to5mac.com/2026/02/24/ios-26-4-release-date-heres-when-to-expect-new-iphone-features/</link></item>
+<item><title>Steve Jobs Archive releases ‘Letters to a Young Creator’ featuring Tim Cook, Jony Ive, and more - 9to5Mac</title><link>https://9to5mac.com/2026/02/24/steve-jobs-archive-releases-letters-to-a-young-creator-featuring-tim-cook-jony-ive-and-more/</link></item>
+<item><title>Apple TV’s next big sci-fi premiere is coming this week, first reviews here - 9to5Mac</title><link>https://9to5mac.com/2026/02/24/apple-tvs-next-big-sci-fi-premiere-is-coming-this-week-first-reviews-here/</link></item>
+<item><title>HomeKit Weekly: Hands on with Level Lock Pro and why it sets a new standard for HomeKit and Matter smart locks - 9to5Mac</title><link>https://9to5mac.com/2026/02/24/homekit-weekly-hands-on-with-level-lock-pro-and-why-it-sets-a-new-standard-for-homekit-and-matter/</link></item>
+<item><title>What Apple product colors would you like to see offered in future? [Poll] - 9to5Mac</title><link>https://9to5mac.com/2026/02/24/what-apple-product-colors-would-you-like-to-see-offered-in-future-poll/</link></item>
+<item><title>Sonos plans to fix its biggest iOS hurdle with a new Live Activities feature - 9to5Mac</title><link>https://9to5mac.com/2026/02/24/sonos-plans-to-fix-its-biggest-ios-hurdle-with-a-new-live-activities-feature/</link></item>
+<item><title>Reddit and Discord are both in trouble over controversial age verification service - 9to5Mac</title><link>https://9to5mac.com/2026/02/24/reddit-and-discord-are-both-in-trouble-over-controversial-age-verification-service/</link></item>
+<item><title>Tim Cook ‘slept with one eye open’ after classified CIA briefing on Taiwan - 9to5Mac</title><link>https://9to5mac.com/2026/02/24/tim-cook-slept-with-one-eye-open-after-classified-cia-briefing-on-taiwan/</link></item>
+<item><title>Apple shares more details, photos, and video of US Mac mini plant - 9to5Mac</title><link>https://9to5mac.com/2026/02/24/apple-shares-more-details-photos-and-video-of-us-mac-mini-plant/</link></item>
+<item><title>Apple @ Work Podcast: The rise of the autonomous AI SOC - 9to5Mac</title><link>https://9to5mac.com/2026/02/24/apple-work-podcast-the-rise-of-the-autonomous-ai-soc/</link></item>
+<item><title>Apple announces plans to manufacture some new Macs in the United States this year - 9to5Mac</title><link>https://9to5mac.com/2026/02/23/apple-announces-plans-to-manufacture-mac-mini-in-united-states-this-year/</link></item>
+<item><title>AI coding tools may be the end of freemium utility apps - 9to5Mac</title><link>https://9to5mac.com/2026/02/23/ai-coding-tools-may-be-the-end-of-freemium-utility-apps/</link></item>
+<item><title>Apple’s new ‘Sales Coach’ app is now live on the App Store, replacing ‘SEED’ - 9to5Mac</title><link>https://9to5mac.com/2026/02/23/apples-new-sales-coach-app-is-now-live-on-the-app-store-replacing-seed/</link></item>
+<item><title>9to5Mac Daily: February 23, 2026 – iPhone 18 Pro colors, more - 9to5Mac</title><link>https://9to5mac.com/2026/02/23/daily-february-23-2026/</link></item>
+<item><title>AirPods as Apple’s first AI wearable product makes so much sense - 9to5Mac</title><link>https://9to5mac.com/2026/02/23/airpods-as-apples-first-ai-wearable-product-makes-so-much-sense/</link></item>
+<item><title>David Pogue shares first look at upcoming ‘Apple: The First 50 Years’ book - 9to5Mac</title><link>https://9to5mac.com/2026/02/23/david-pogue-shares-first-look-at-upcoming-apple-the-first-50-years-book/</link></item>
+<item><title>iOS 26.4 beta 2: Here’s what’s new - 9to5Mac</title><link>https://9to5mac.com/2026/02/23/ios-26-4-beta-2-heres-whats-new/</link></item>
+<item><title>WhatsApp is finally working on scheduled messages - 9to5Mac</title><link>https://9to5mac.com/2026/02/23/whatsapp-is-finally-working-on-scheduled-messages/</link></item>
+<item><title>Apple releases videos from its 2025 AI Reasoning and Planning Workshop - 9to5Mac</title><link>https://9to5mac.com/2026/02/23/apple-releases-videos-from-its-2025-ai-reasoning-and-planning-workshop/</link></item>
+<item><title>MagSafe Monday: TopMade Wallet review – Find My and massive storage - 9to5Mac</title><link>https://9to5mac.com/2026/02/23/magsafe-monday-topmade-wallet-review-find-my-and-massive-storage/</link></item>
+<item><title>iOS 26.4 makes two app updates that bring back iOS 18 designs - 9to5Mac</title><link>https://9to5mac.com/2026/02/23/ios-26-4-makes-two-app-updates-that-bring-back-ios-18-designs/</link></item>
+<item><title>iOS 26.4 beta 2 adds support for testing encrypted RCS between iPhone and Android - 9to5Mac</title><link>https://9to5mac.com/2026/02/23/ios-26-4-beta-2-adds-support-for-testing-encrypted-rcs-between-iphone-and-android/</link></item>
+<item><title>Apple releases beta 2 for tvOS 26.4, visionOS 26.4, more - 9to5Mac</title><link>https://9to5mac.com/2026/02/23/apple-releases-beta-2-for-tvos-26-4-visionos-26-4-more/</link></item>
+<item><title>Apple releases macOS 26.4 beta 2, here’s what’s new - 9to5Mac</title><link>https://9to5mac.com/2026/02/23/apple-releases-macos-26-4-beta-2-heres-whats-new/</link></item>
+<item><title>iPadOS 26.4 beta 2 is now available - 9to5Mac</title><link>https://9to5mac.com/2026/02/23/ipados-26-4-beta-2-is-now-available/</link></item>
+<item><title>Apple releases iOS 26.4 beta 2 for iPhone with upcoming features - 9to5Mac</title><link>https://9to5mac.com/2026/02/23/apple-releases-ios-26-4-beta-2-for-iphone-with-upcoming-features/</link></item>
+<item><title>Here’s everything new Apple TV has coming in March - 9to5Mac</title><link>https://9to5mac.com/2026/02/23/heres-everything-new-apple-tv-has-coming-in-march/</link></item>
+<item><title>iPhone 18 Pro design could include an exciting first - 9to5Mac</title><link>https://9to5mac.com/2026/02/23/why-red-iphone-18-pro-would-be-an-exciting-first-despite-its-many-red-predecessors/</link></item>
+<item><title>Deals: 512GB iPhone 16 Pro $480 off, 17 Pro TechWoven cases, Alpine Loop 30% off, iPad Pro, more - 9to5Mac</title><link>https://9to5mac.com/2026/02/23/deals-iphone-16-pro-17-pro-techwoven-case-alpine-loop/</link></item>
+<item><title>Apple TV sets world record with Godzilla, Kong drone marketing spectacle - 9to5Mac</title><link>https://9to5mac.com/2026/02/23/apple-tv-sets-world-record-with-godzilla-kong-drone-marketing-spectacle/</link></item>
+<item><title>Apple Sports enhanced with key features and expansion - 9to5Mac</title><link>https://9to5mac.com/2026/02/23/apple-sports-ncaa-tournament-bracket-soccer-expansion/</link></item>
+<item><title>New ‘Acme Weather’ app from Dark Sky creators wants to fix weather apps’ biggest problem - 9to5Mac</title><link>https://9to5mac.com/2026/02/23/new-weather-app-from-dark-sky-forecasts/</link></item>
+<item><title>iOS 26.3.1 could launch soon as the next iPhone update - 9to5Mac</title><link>https://9to5mac.com/2026/02/23/ios-26-3-1-could-launch-soon-as-the-next-iphone-update/</link></item>
+<item><title>Microsoft finally makes OneDrive look like a Mac app as it gets an all-new UI - 9to5Mac</title><link>https://9to5mac.com/2026/02/23/microsoft-finally-makes-onedrive-look-like-a-mac-app-as-it-gets-an-all-new-ui/</link></item>
+<item><title>iPhone 18 Pro reportedly enters test production - 9to5Mac</title><link>https://9to5mac.com/2026/02/23/iphone-18-pro-reportedly-enters-test-production/</link></item>
+<item><title>We already have a good idea how capable the new MacBook will be - 9to5Mac</title><link>https://9to5mac.com/2026/02/23/we-already-have-a-good-idea-how-capable-the-new-macbook-will-be/</link></item>
+<item><title>Apple faces new tariffs after Supreme Court ruling strikes down the old ones [U] - 9to5Mac</title><link>https://9to5mac.com/2026/02/23/apple-faces-new-tariffs-after-supreme-court-ruling-strikes-down-the-old-ones/</link></item>
+<item><title>Apple should take Visual Intelligence one step further – with Reminders - 9to5Mac</title><link>https://9to5mac.com/2026/02/22/apple-visual-intelligence-reminders-feature-request-ios-27/</link></item>
+<item><title>Apple testing ‘deep red’ color for iPhone 18 Pro, but iPhone Fold may skip the fun: report - 9to5Mac</title><link>https://9to5mac.com/2026/02/22/iphone-18-pro-rumored-to-come-in-new-red-color-iphone-fold-details/</link></item>
+<item><title>Report: Apple to launch ‘at least five products’ leading into March 4 event - 9to5Mac</title><link>https://9to5mac.com/2026/02/22/apple-launching-at-least-five-products-next-week-with-march-4-event-report/</link></item>
+<item><title>MOFT’s long-awaited MagSafe kickstand wallet with Find My support is now available - 9to5Mac</title><link>https://9to5mac.com/2026/02/21/moft-magsafe-wallet-with-find-my-now-available/</link></item>
+<item><title>Indie App Spotlight: ‘Summit’ is an all-in-one portfolio tracker for iPhone and iPad - 9to5Mac</title><link>https://9to5mac.com/2026/02/21/indie-app-spotlight-summit-stock-portfolio-tracker/</link></item>
+<item><title>Apple’s upcoming AI smart glasses are starting to sound a lot more exciting - 9to5Mac</title><link>https://9to5mac.com/2026/02/21/apple-ai-smart-glasses-rumors-sounding-more-exciting/</link></item>
+<item><title>Apple @ Work: How the iPhone forced the entire printing industry to adopt AirPrint - 9to5Mac</title><link>https://9to5mac.com/2026/02/21/how-the-iphone-forced-the-entire-printing-industry-to-adopt-airprint/</link></item>
+<item><title>WhatsApp working on anti-spoiler feature for text messages - 9to5Mac</title><link>https://9to5mac.com/2026/02/20/whatsapp-working-on-anti-spoiler-feature-for-text-messages/</link></item>
+<item><title>Apple researchers develop on-device AI agent that interacts with apps for you - 9to5Mac</title><link>https://9to5mac.com/2026/02/20/apple-researchers-develop-on-device-ai-agent-that-interacts-with-apps-for-you/</link></item>
+<item><title>9to5Mac Daily: February 20, 2026 – iPhone’s satellite features, more - 9to5Mac</title><link>https://9to5mac.com/2026/02/20/daily-february-20-2026/</link></item>
+<item><title>Protect your family’s private data by removing it from the internet - 9to5Mac</title><link>https://9to5mac.com/2026/02/20/protect-your-familys-private-data-by-removing-it-from-the-internet/</link></item>
+<item><title>iOS 26 added my favorite new iPhone ringtone, listen here - 9to5Mac</title><link>https://9to5mac.com/2026/02/20/ios-26-added-my-favorite-new-iphone-ringtone-listen-here/</link></item>
+<item><title>Strava adds five activity modalities, including dancing - 9to5Mac</title><link>https://9to5mac.com/2026/02/20/strava-adds-five-activity-modalities-including-dancing/</link></item>
+<item><title>Apple rolls out Xcode 26.3 Release Candidate 2 - 9to5Mac</title><link>https://9to5mac.com/2026/02/20/apple-rolls-out-xcode-26-3-release-candidate-2/</link></item>
+<item><title>Apple TV’s new movie is a hit, and just the start of a big year ahead - 9to5Mac</title><link>https://9to5mac.com/2026/02/20/apple-tvs-new-movie-is-a-hit-and-just-the-start-of-a-big-year-ahead/</link></item>
+<item><title>HomeKit Weekly: UWB is the secret weapon inside Aqara’s new U400 smart lock - 9to5Mac</title><link>https://9to5mac.com/2026/02/20/aqara-u400/</link></item>
+<item><title>OpenAI’s first Jony Ive device sounds like HomePod 2.0: report - 9to5Mac</title><link>https://9to5mac.com/2026/02/20/openais-first-jony-ive-device-sounds-like-homepod-2-0-report/</link></item>
+<item><title>Feature Request: iCloud really needs to copy Dropbox ‘sync next’ - 9to5Mac</title><link>https://9to5mac.com/2026/02/20/feature-request-icloud-really-needs-to-copy-dropbox-sync-next/</link></item>
+<item><title>Intriguing New Smartphone Design Features a Small Robot Arm - Futurism</title><link>https://futurism.com/robots-and-machines/new-smartphone-robot-arm</link></item>
+<item><title>The Average American Would Pay $49 Per Month to Drink Recycled Toilet Water, Study Finds - Futurism</title><link>https://futurism.com/science-energy/average-american-drink-toilet-water</link></item>
+<item><title>Kalshi Says It’s Busted a MrBeast Staffer for Insider Trading - Futurism</title><link>https://futurism.com/future-society/kalshi-busted-mrbeast-staffer-insider-trading</link></item>
+<item><title>If AI Causes an Office Job Wipeout, It’ll Cause Huge Problems for Blue Collar Work Too - Futurism</title><link>https://futurism.com/artificial-intelligence/ai-blue-collar-jobs-wipeout</link></item>
+<item><title>New App Detects the Radio Fingerprint of Smart Glasses and Warns You When Someone Is Using Them Nearby - Futurism</title><link>https://futurism.com/robots-and-machines/app-smart-glasses-bluetooth</link></item>
+<item><title>Meta’s Head of AI Safety Just Made a Mistake That May Cause You a Certain Amount of Alarm - Futurism</title><link>https://futurism.com/artificial-intelligence/meta-ai-safety-mistake-alarm</link></item>
+<item><title>Google Apologizes for Sending the Worst Push Notification You Can Possibly Imagine - Futurism</title><link>https://futurism.com/artificial-intelligence/google-apologizes-notification</link></item>
+<item><title>Tech CEOs Confused by Why Everybody Hates AI So Much - Futurism</title><link>https://futurism.com/future-society/tech-ceo-ai-hate</link></item>
+<item><title>Discord’s Verification Saga Has Devolved Into a Complete Self-Inflicted Embarrassment - Futurism</title><link>https://futurism.com/future-society/discord-age-verification</link></item>
+<item><title>The Winklevoss Twins’ Crypto Company Is in Crisis After the Bitcoin Crash - Futurism</title><link>https://futurism.com/future-society/winklevoss-bitcoin-crypto-crash</link></item>
+<item><title>Pope Implores Priests to Stop Writing Sermons Using ChatGPT - Futurism</title><link>https://futurism.com/artificial-intelligence/pope-priests-ai</link></item>
+<item><title>OpenAI Massively Cuts Spending Plan as Reality Closes in - Futurism</title><link>https://futurism.com/artificial-intelligence/openai-cuts-spending-plan</link></item>
+<item><title>Huge Plume of Pollution Linked to Something That Will Not Make Elon Musk Happy - Futurism</title><link>https://futurism.com/space/plume-pollution-spacex-falcon-9-rocket</link></item>
+<item><title>Daring Space Mission Would Catch Up With 3I/ATLAS and Intercept It - Futurism</title><link>https://futurism.com/future-society/mission-catch-up-3i-atlas</link></item>
+<item><title>Anthropic Furious at DeepSeek for Copying Its AI Without Permission, Which Is Pretty Ironic When You Consider How It Built Claude in the First Place - Futurism</title><link>https://futurism.com/artificial-intelligence/anthropic-deepseek-copying-ai</link></item>
+<item><title>American AI Industry Trembles as Deepseek Prepares to Release New Model - Futurism</title><link>https://futurism.com/artificial-intelligence/ai-industry-deepseek-v4</link></item>
+<item><title>New AI Agent Logs Directly Into College Platform Canvas to Do Your Homework for You - Futurism</title><link>https://futurism.com/artificial-intelligence/ai-agent-canvas-homework</link></item>
+<item><title>Goldman Sachs Researchers Make Startling Claim About AI’s Effects on the US Economy - Futurism</title><link>https://futurism.com/future-society/researchers-economy-ai-narratives</link></item>
+<item><title>Sam Altman Fumes That It Takes Longer to Train a Human Than an AI, Plus They Eat All That Wasteful Food - Futurism</title><link>https://futurism.com/artificial-intelligence/sam-altman-fumes-longer-train-human-ai</link></item>
+<item><title>Palantir Is Stocking the Wildest Imaginable Item in Its Vending Machines - Futurism</title><link>https://futurism.com/health-medicine/palantir-nicotine-vending-machines</link></item>
+<item><title>A Serial Killer Used ChatGPT to Plan Murders, Police Say - Futurism</title><link>https://futurism.com/future-society/serial-killer-chatgpt-murders</link></item>
+<item><title>Here’s How Many Remote Operators Waymo Has Per Self-Driving Taxi - Futurism</title><link>https://futurism.com/advanced-transport/waymo-remote-operators</link></item>
+<item><title>Japan Opens School Staffed Entirely by Virtual Waifus - Futurism</title><link>https://futurism.com/future-society/vtuber-waifu-school-japan</link></item>
+<item><title>AI Is Destroying Grocery Supply Chains - Futurism</title><link>https://futurism.com/artificial-intelligence/ai-supply-chain-groceries</link></item>
+<item><title>Barrage of Emails From AI Politics Platform Defeats Clean Air Initiative - Futurism</title><link>https://futurism.com/artificial-intelligence/ai-civiclick-environment</link></item>
+<item><title>Eric Trump Pouring Funding Into “Low Cost-Per-Kill” Drone Corporation - Futurism</title><link>https://futurism.com/robots-and-machines/drones-eric-trump-xtend</link></item>
+<item><title>Antarctica’s Gravity Hole Growing Stronger, Scientists Find - Futurism</title><link>https://futurism.com/future-society/antarctica-gravity-hole-stronger</link></item>
+<item><title>Cities Are Shredding Their AI Surveillance Contracts en Masse - Futurism</title><link>https://futurism.com/artificial-intelligence/ai-surveillance-flock-contracts</link></item>
+<item><title>AI “Filmmaker” Gets Funding, Begs For Ideas On What to Actually Make - Futurism</title><link>https://futurism.com/artificial-intelligence/ai-filmmaker-begs-for-ideas</link></item>
+<item><title>Hackers Working on Method to Make Ring Cameras Store Footage Locally, Never Giving It to Amazon - Futurism</title><link>https://futurism.com/future-society/hackers-ring-doorbell-fulu</link></item>
+<item><title>In Blind Test, Audiophiles Unable to Tell Difference Between Sound Signal Run Through an Expensive Cable and a Banana - Futurism</title><link>https://futurism.com/robots-and-machines/blind-test-audiophiles-cable-banana</link></item>
+<item><title>The Economics of 3D Printed Homes Are Surprisingly Horrible - Futurism</title><link>https://futurism.com/science-energy/3d-printed-houses-finances</link></item>
+<item><title>Woman Uses AI to Apologize for Burning Down House, Biting Cop - Futurism</title><link>https://futurism.com/artificial-intelligence/woman-apologizes-ai-burning-house</link></item>
+<item><title>AI Could Cause Workers to Rise Up Against the Corporations Driving Them Into Poverty - Futurism</title><link>https://futurism.com/artificial-intelligence/ai-labor-workers-movement</link></item>
+<item><title>Scientists Find That Igniting Oil Spills to Create Fire Tornadoes Might Actually Be Good for the Oceans - Futurism</title><link>https://futurism.com/science-energy/fire-tornado-pollution</link></item>
+<item><title>Man Letting AI Rent Human Bodies Says Elon Musk Is His Hero - Futurism</title><link>https://futurism.com/artificial-intelligence/rentahuman-musk-ai</link></item>
+<item><title>Hollywood Is Lying to Everyone About How Much AI They’re Using, Says Consummate Hollywood Insider - Futurism</title><link>https://futurism.com/artificial-intelligence/hollywood-lying-about-ai-usage</link></item>
+<item><title>It’s Comically Easy to Trick ChatGPT Into Saying Things About People That Are Completely Untrue - Futurism</title><link>https://futurism.com/artificial-intelligence/easy-trick-chatgpt-spread-lies-people</link></item>
+<item><title>Developer’s Honest Assessment of AI at Work Rattles the Official Narrative - Futurism</title><link>https://futurism.com/artificial-intelligence/developer-honest-assessment-ai</link></item>
+<item><title>Video Shows Man Bleeding After Flailing Robot Kicks Him in Nose - Futurism</title><link>https://futurism.com/robots-and-machines/robot-kicks-man-in-nose</link></item>
+<item><title>Court Having Trouble Assembling Jury for Elon Musk Because People Hate Him So Much - Futurism</title><link>https://futurism.com/future-society/court-trouble-jury-hates-elon-musk</link></item>
+<item><title>Personal Electronics Spiking in Price as AI Industry Buys Up All the Components - Futurism</title><link>https://futurism.com/artificial-intelligence/personal-electronics-spiking-price-ai</link></item>
+<item><title>Amazon’s Blundering AI Caused Multiple AWS Outages - Futurism</title><link>https://futurism.com/artificial-intelligence/amazon-ai-aws-outages</link></item>
+<item><title>Stanford’s New “Universal Vaccine Formula” Nasal Spray Protects Mice Against Stunning Range of Diseases - Futurism</title><link>https://futurism.com/health-medicine/stanford-universal-vaccine-mice</link></item>
+<item><title>It Seems Bad That Temu Is Selling Peptides - Futurism</title><link>https://futurism.com/health-medicine/temu-peptides-biohacking</link></item>
+<item><title>3I/ATLAS Spraying Material as It Exits the Solar System - Futurism</title><link>https://futurism.com/space/water-spraying-3i-atlas</link></item>
+<item><title>OpenAI Flagged a Mass Shooter’s Troubling Conversations With ChatGPT Before the Incident, Decided Not to Warn Police - Futurism</title><link>https://futurism.com/artificial-intelligence/openai-mass-shooter</link></item>
+<item><title>OpenAI’s Hardware Device Just Leaked, and You Will Cringe - Futurism</title><link>https://futurism.com/artificial-intelligence/openai-hardware-device-leaked-cringe</link></item>
+<item><title>Jack Dorsey’s New Company Falling Apart as It Forces Employees to Use AI - Futurism</title><link>https://futurism.com/artificial-intelligence/jack-dorsey-block-falling-apart-ai</link></item>
+<item><title>Lockheed Martin F-35s Can Be Jailbroken Like $80 Million iPhones, European Military Chief Says - Futurism</title><link>https://futurism.com/science-energy/f35-jailbreak-dutch</link></item>
+<item><title>As Epstein Scandal Tightens, Trump Announces That He’s Releasing All Government Files About Alien Life - Futurism</title><link>https://futurism.com/future-society/epstein-scandal-trump-files-alien-life</link></item>
+<item><title>Concern Grows That Bitcoin’s Value Could Be Entirely Destroyed - Futurism</title><link>https://futurism.com/future-society/concern-bitcoin-value-destroyed</link></item>
+<item><title>Every Single Headphone That Researchers Tested Contained Horrifying Chemicals - Futurism</title><link>https://futurism.com/science-energy/headphone-chemicals-bpa</link></item>
+<item><title>Look Out, OpenAI: Perplexity Admits AI Adverts Were a Mistake, Is Now Getting Rid of Them - Futurism</title><link>https://futurism.com/artificial-intelligence/openai-perplexity-admits-ai-adverts-mistake</link></item>
+<item><title>Skin-Crawlingly Awkward Video Shows Sam Altman and Dario Amodei Refusing to Hold Hands - Futurism</title><link>https://futurism.com/artificial-intelligence/awkward-video-altman-amodei</link></item>
+<item><title>New Platform Lets You Gamble on CCTV Footage - Futurism</title><link>https://futurism.com/future-society/rush-hour-gamble-cctv-footage</link></item>
+<item><title>Amazon’s Shiny New Warehouse Robot Just Failed in Spectacular Style - Futurism</title><link>https://futurism.com/robots-and-machines/amazon-warehouse-robot-failed</link></item>
+<item><title>Farmer Hailed as Hero for Rejecting Huge Payment to Turn His Land Into a Giant Data Center - Futurism</title><link>https://futurism.com/future-society/farmer-hero-rejecting-payment-data-center</link></item>
+<item><title>Blinking New Warning Sign Appears for AI Industry - Futurism</title><link>https://futurism.com/artificial-intelligence/blinking-new-warning-sign-ai-industry</link></item>
+<item><title>Elon Musk Boasts That Grok Says America Isn’t Built on Stolen Land, Which It Obviously Is - Futurism</title><link>https://futurism.com/artificial-intelligence/elon-musk-grok-america-stolen-land</link></item>
+<item><title>A Huge Survey of CEOs and Other Execs Just Found Something Damning About AI’s Effects on Productivity - Futurism</title><link>https://futurism.com/artificial-intelligence/survey-ceos-ai-workplace</link></item>
+<item><title>AI Will Destroy Millions of White Collars Jobs in the Coming Months, Andrew Yang Warns, Driving Surge of Personal Bankruptcies - Futurism</title><link>https://futurism.com/artificial-intelligence/ai-labor-andrew-yang</link></item>
+<item><title>SpaceX Angling for Military Contract to Produce Drone Swarms - Futurism</title><link>https://futurism.com/robots-and-machines/spacex-military-contract-drone-swarms</link></item>
+<item><title>Buckle Up: New Fund Will Let Regular Investors Buy SpaceX Stock - Futurism</title><link>https://futurism.com/artificial-intelligence/regular-investors-buy-spacex-stock</link></item>
+<item><title>Skeptic Builds “Havana Syndrome”-Style Device, Tests It on Himself, Suffers Grim Consequences - Futurism</title><link>https://futurism.com/science-energy/weapon-havana-syndrome-scientist</link></item>
+<item><title>Tesla Robotaxis Crashing Vastly More Often Than Human Drivers - Futurism</title><link>https://futurism.com/advanced-transport/tesla-robotaxis-crashing-more-human-drivers</link></item>
+<item><title>Oxford Researcher Warns That AI Is Heading for a Hindenburg-Style Disaster - Futurism</title><link>https://futurism.com/artificial-intelligence/ai-hindenburg-disast</link></item>
+<item><title>Realtor Uses AI, Accidentally Posts Listing for Rental Property With Demonic Figure Emerging From Mirror - Futurism</title><link>https://futurism.com/artificial-intelligence/realtor-ai-photo-mirror</link></item>
+<item><title>Tesla’s New Sales Data Is Absolutely Brutal - Futurism</title><link>https://futurism.com/advanced-transport/tesla-europe-sales-2026</link></item>
+<item><title>Unity Says It Has a New Product That Cooks Up Entire Games Using AI - Futurism</title><link>https://futurism.com/artificial-intelligence/unity-create-entire-games-using-ai</link></item>
+<item><title>AI Data Centers Are Now Spiking Hard Drive Prices - Futurism</title><link>https://futurism.com/artificial-intelligence/ai-data-centers-spiking-hard-drive-prices</link></item>
+<item><title>It Turns Out That Constantly Telling Workers They’re About to Be Replaced by AI Has Grim Psychological Effects - Futurism</title><link>https://futurism.com/artificial-intelligence/ai-effects-workers-psychological</link></item>
+<item><title>Pentagon Issues Threat to Anthropic - Futurism</title><link>https://futurism.com/artificial-intelligence/pentagon-issues-threat-anthropic</link></item>
+<item><title>Chinese Robots Can Now Run Up Walls - Futurism</title><link>https://futurism.com/robots-and-machines/robots-run-up-walls</link></item>
+<item><title>FSD Tries to Drive Straight Into Lake - Futurism</title><link>https://futurism.com/advanced-transport/fsd-lake</link></item>
+<item><title>Meta Patented AI That Takes Over Your Account When You Die, Keeps Posting Forever - Futurism</title><link>https://futurism.com/future-society/meta-patented-ai-die-keeps-posting</link></item>
+<item><title>AI Delusions Are Leading to Domestic Abuse, Harassment, and Stalking - Futurism</title><link>https://futurism.com/artificial-intelligence/ai-abuse-harassment-stalking</link></item>
+<item><title>Top Machine Learning Developer Speechless at Simple Question: Should AI Simulate Emotional Intimacy? - Futurism</title><link>https://futurism.com/artificial-intelligence/ai-developers-emotional-intimacy</link></item>
+<item><title>Site of Elementary School Was Sprayed With Radioactive Fracking Waste, Worker Warns - Futurism</title><link>https://futurism.com/science-energy/radioactive-fracking-school-texas</link></item>
+<item><title>Obama Just Dropped a Truth Bomb About Aliens - Futurism</title><link>https://futurism.com/space/obama-aliens</link></item>
+<item><title>Prediction Markets Are Sucking Huge Numbers of Young People Into Gambling - Futurism</title><link>https://futurism.com/future-society/prediction-markets-gambling</link></item>
+<item><title>Forests Are Steadily Crawling North, Satellite Imagery Shows - Futurism</title><link>https://futurism.com/science-energy/forests-shifting-north</link></item>
+<item><title>There’s a Grim New Expression: “AI;DR” - Futurism</title><link>https://futurism.com/artificial-intelligence/aidr-meaning</link></item>
+<item><title>Claude collaboration tools left the door wide open to remote code execution - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/26/clade_code_cves/</link></item>
+<item><title>LLMs killed the privacy star, we can&amp;#39;t rewind, we&amp;#39;ve gone too far - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/26/llms_killed_privacy_star/</link></item>
+<item><title>AIs are happy to launch nukes in simulated combat scenarios - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/25/ai_models_nuclear/</link></item>
+<item><title>Google catches Beijing spies using Sheets to spread espionage across 4 continents - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/25/google_and_friends_disrupt_unc2814/</link></item>
+<item><title>Hide from Meta&amp;#39;s spyglasses with this new Android app - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/25/meta_smart_glasses_android_app/</link></item>
+<item><title>AMD challenges Intel with an 84-core Epyc processor aimed at telcos, edge - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/25/amd_edge_sorano/</link></item>
+<item><title>OpenAI asks its friends to tell their friends about Frontier - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/25/openai_asks_its_friends_to/</link></item>
+<item><title>All your bots are belong to US if you don&amp;#39;t play ball, DoD tells Anthropic - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/25/pentagon_threatens_anthropic/</link></item>
+<item><title>Hardly anybody bought Samsung&amp;#39;s last smartphones for AI. It hopes this year&amp;#39;s models change that - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/25/samsung_galaxy_s26_launch/</link></item>
+<item><title>Fake &amp;#39;interview&amp;#39; repos lure Next.js devs into running secret-stealing malware - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/25/jobseeking_nextjs_devs_attack/</link></item>
+<item><title>Microsoft boss on AI content: &amp;#39;Nobody wants anything that is sloppy&amp;#39; - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/25/microsoft_boss_on_ai_content/</link></item>
+<item><title>Cloudflare experiment ports most of Next.js API &amp;#39;in one week&amp;#39; with AI - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/25/cloudflare_nextjs_api_ai/</link></item>
+<item><title>Firefox 148 adds master switch for browser bot bother - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/25/firefox_tbird_148/</link></item>
+<item><title>Execs love AI, just not enough to pay for user training - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/25/few_firms_investing_in_the/</link></item>
+<item><title>Ex-L3Harris exec jailed 7 years for selling exploits to Russia - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/25/former_l3harris_exec_jailed/</link></item>
+<item><title>Hubble in a death spiral that could end as early as 2028 without a reboost - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/25/hubble_orbit_decay/</link></item>
+<item><title>Worried Europeans can now cut Azure&amp;#39;s phone cord completely - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/25/microsoft_azure_local/</link></item>
+<item><title>Wynn Resorts takes attacker&amp;#39;s word for it that stolen staff data was deleted - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/25/wynn_resorts_shinyhunters/</link></item>
+<item><title>Bcachefs creator insists his custom LLM is female and &amp;#39;fully conscious&amp;#39; - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/25/bcachefs_creator_ai/</link></item>
+<item><title>Brit dual nationals grounded by border digitization drive - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/25/uk_dual_nationals_border/</link></item>
+<item><title>Recycling biz reckons AI features are destroying smartphone resale values - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/25/ai_secondhand_phones/</link></item>
+<item><title>DVSA drives up online theory test contract value to £700M with no explanation - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/25/earmarked_price_for_uk_online/</link></item>
+<item><title>OpenAI says Chinese cops used ChatGPT to plan and track smear ops against opponents - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/25/chinese_law_enforcement_chatgpt_abuse/</link></item>
+<item><title>Gatwick shuttle screen suffers pre-flight nerves - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/25/airport_bork/</link></item>
+<item><title>Threat intelligence supply chain is full of weak links, researchers find - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/25/threat_intelligence_supply_chain_research/</link></item>
+<item><title>HP says memory’s contribution to PC costs just doubled to 35 percent - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/25/hp_inc_q1_2026/</link></item>
+<item><title>Orbital datacenters are a pie-in-the-sky idea: Gartner - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/25/gartner_orbiting_datacenter_peak_insanity/</link></item>
+<item><title>Workday CEO&amp;#39;s AI talk can&amp;#39;t shake off weaker sales forecast - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/02/25/workday_q4_2026/</link></item>
+<item><title>双语共享大脑意义系统，但略有差异 - Solidot</title><link>https://www.solidot.org/story?sid=83613</link></item>
+<item><title>AI 总是在战争模拟游戏中推荐核打击 - Solidot</title><link>https://www.solidot.org/story?sid=83612</link></item>
+<item><title>量子算法在补集抽样任务中胜过经典算法 - Solidot</title><link>https://www.solidot.org/story?sid=83611</link></item>
+<item><title>苹果将在美国工厂制造 Mac mini - Solidot</title><link>https://www.solidot.org/story?sid=83610</link></item>
+<item><title>英国首例利用捐赠子宫生育的婴儿诞生 - Solidot</title><link>https://www.solidot.org/story?sid=83608</link></item>
+<item><title>SpaceX 火箭重返大气层为高层大气引入金属污染 - Solidot</title><link>https://www.solidot.org/story?sid=83607</link></item>
+<item><title>贝加尔湖与中国北方早在 7700 年前存在人类迁徙廊道 - Solidot</title><link>https://www.solidot.org/story?sid=83606</link></item>
+<item><title>Discord 将年龄验证实施时间推迟到下半年 - Solidot</title><link>https://www.solidot.org/story?sid=83605</link></item>
+<item><title>币安解雇发现 17 亿美元伊朗账号的调查人员 - Solidot</title><link>https://www.solidot.org/story?sid=83604</link></item>
+<item><title>Anthropic 指控三家中国 AI 公司蒸馏数据训练模型 - Solidot</title><link>https://www.solidot.org/story?sid=83603</link></item>
+<item><title>血液测试将阿尔茨海默病诊断正确率提高至 94.5% - Solidot</title><link>https://www.solidot.org/story?sid=83602</link></item>
+<item><title>I Hated Highlighter Until I Tried This One From Hailey Bieber&amp;#39;s Makeup Artist - POPSUGAR</title><link>https://www.popsugar.com/beauty/kjh-hyper-shine-high-lite-kit-review-49286793</link></item>
+<item><title>Travis Kelce Is One of the NFL&amp;#39;s Best Dressed — See His Most Stylish Moments - POPSUGAR</title><link>https://www.popsugar.com/fashion/travis-kelce-style-49286462</link></item>
+<item><title>How Much Does a Life Time Membership Cost, Exactly? - POPSUGAR</title><link>https://www.popsugar.com/fitness/life-time-fitness-membership-cost-49354078</link></item>
+<item><title>How I Turned a Music Festival Into a Wellness Excursion - POPSUGAR</title><link>https://www.popsugar.com/fitness/festival-wellness-experiment-49474521</link></item>
+<item><title>Fitness Gear - POPSUGAR</title><link>https://www.popsugar.com/Fitness-Gear</link></item>
+<item><title>8 Therabody Devices Our Editors Love — Now Up to 50% Off - POPSUGAR</title><link>https://www.popsugar.com/fitness/best-therabody-products-fitness-recovery-49421425</link></item>
+<item><title>Keke Palmer Is Officially in Her Pilates Girl Era - POPSUGAR</title><link>https://www.popsugar.com/fitness/keke-palmer-workout-routine-49474227</link></item>
+<item><title>Inside Our “Temp Check” Wellness Experience in Partnership With Audible - POPSUGAR</title><link>https://www.popsugar.com/fitness/popsugar-audible-temp-check-event-49473550</link></item>
+<item><title>Beauty Interview - POPSUGAR</title><link>https://www.popsugar.com/Beauty-Interview</link></item>
+<item><title>Naomi Watts Is Rewriting the Conversation Around Beauty and Aging - POPSUGAR</title><link>https://www.popsugar.com/beauty/naomi-watts-beauty-interview-49472980</link></item>
+<item><title>This 13-Year-Old Founder Is Redefining Skin Care For Her Generation - POPSUGAR</title><link>https://www.popsugar.com/beauty/coco-granderson-tween-skin-care-interview-49474477</link></item>
+<item><title>11 Editor-Approved Sex Gifts That Won&amp;#39;t Disappoint in the Bedroom - POPSUGAR</title><link>https://www.popsugar.com/sex/best-sex-gifts-49465706</link></item>
+<item><title>This Vibrator Sold Every 35 Seconds on Black Friday — and It&amp;#39;s 44% Off Right Now - POPSUGAR</title><link>https://www.popsugar.com/shopping/nancy-viral-lemon-vibrator-deal-49470563</link></item>
+<item><title>Caraway Iconics - POPSUGAR</title><link>https://www.popsugar.com/home/caraway-iconics-cookware-review-48864114</link></item>
+<item><title>Stanley Tumbler - POPSUGAR</title><link>https://www.popsugar.com/home/stanley-quencher-h20-travel-tumbler-review-49037080</link></item>
+<item><title>Béis Weekender - POPSUGAR</title><link>https://www.popsugar.com/smart-living/beis-weekender-bag-review-48815164</link></item>
+<item><title>Mineral Sunscreen - POPSUGAR</title><link>https://www.popsugar.com/beauty/colorescience-sunforgettable-spf-review-48817834</link></item>
+<item><title>The Viral Street-Style Trends to Try This Season, As Seen on Our Editors at NYFW - POPSUGAR</title><link>https://www.popsugar.com/fashion/street-style-trends-48961602</link></item>
+<item><title>Valentine&amp;#39;s Day - POPSUGAR</title><link>https://www.popsugar.com/Valentine%E2%80%99s-Day</link></item>
+<item><title>We Found the Sexiest Lingerie on the Internet, Just in Time For Valentine&amp;#39;s Day - POPSUGAR</title><link>https://www.popsugar.com/fashion/Naughty-Lingerie-36799873</link></item>
+<item><title>Adrienne Bailon-Houghton&amp;#39;s &amp;quot;Chef’s Kiss&amp;quot; Wardrobe Deserves a Starring Role - POPSUGAR</title><link>https://www.popsugar.com/fashion/adrienne-bailon-houghton-outfits-chefs-kiss-49473830</link></item>
+<item><title>What Your Valentine’s Day Underwear Says About Your Love Life in 2026 - POPSUGAR</title><link>https://www.popsugar.com/fashion/valentine-day-underwear-color-meaning-49081982</link></item>
+<item><title>19 Best Beauty Launches of February, According to Editors - POPSUGAR</title><link>https://www.popsugar.com/beauty/february-beauty-launches-49075582</link></item>
+<item><title>Winter Fashion - POPSUGAR</title><link>https://www.popsugar.com/Winter-Fashion</link></item>
+<item><title>Let&amp;#39;s Be Honest: Your Outfit Is the Most Important Part of the Super Bowl - POPSUGAR</title><link>https://www.popsugar.com/fashion/What-Wear-Watch-Super-Bowl-33814815</link></item>
+<item><title>The Best Furniture For People With Allergies, From an Editor Allergic to Everything - POPSUGAR</title><link>https://www.popsugar.com/home/best-furniture-for-allergies-49472852</link></item>
+<item><title>Our 4 Editor-Favorite Albany Park Sofas Are Now 40% Off - POPSUGAR</title><link>https://www.popsugar.com/home/albany-park-furniture-review-49380356</link></item>
+<item><title>Margot Robbie - POPSUGAR</title><link>https://www.popsugar.com/Margot-Robbie</link></item>
+<item><title>Margot Robbie’s &amp;quot;Wuthering Heights&amp;quot; Home Is Basically a Gothic Fairy Tale IRL - POPSUGAR</title><link>https://www.popsugar.com/home/margot-robbie-wuthering-heights-home-tour-49473591</link></item>
+<item><title>Pet Shopping - POPSUGAR</title><link>https://www.popsugar.com/Pet-Shopping</link></item>
+<item><title>Is the Viral Litter-Bot Worth the Hype? My Cats Think So - POPSUGAR</title><link>https://www.popsugar.com/pets/litter-robot-vs-meowant-litter-box-49342241</link></item>
+<item><title>Healthy Eating Tips - POPSUGAR</title><link>https://www.popsugar.com/Healthy-Eating-Tips</link></item>
+<item><title>10 High-Fiber Snacks That&amp;#39;ll Keep You Feeling Full For Longer - POPSUGAR</title><link>https://www.popsugar.com/food/high-fiber-snacks-49057580</link></item>
+<item><title>Coway&amp;#39;s Air Purifier Helps Me Conquer Allergies All Year Round - POPSUGAR</title><link>https://www.popsugar.com/home/coway-airmega-400-air-purifier-review-49367199</link></item>
+<item><title>14 Genius Organizing Products That Will Transform Your Home Instantly - POPSUGAR</title><link>https://www.popsugar.com/home/best-home-organizers-45654164</link></item>
+<item><title>15 Headboards and Bed Frames That Instantly Upgrade Your Bedroom - POPSUGAR</title><link>https://www.popsugar.com/home/best-upholstered-beds-headboards-47549692</link></item>
+<item><title>20 Editor-Approved Kitchen Products That&amp;#39;ll Help You Elevate Your Cooking - POPSUGAR</title><link>https://www.popsugar.com/food/best-cooking-products-and-gadgets-48116472</link></item>
+<item><title>Multi-agent workflows often fail. Here’s how to engineer ones that don’t. - The GitHub Blog</title><link>https://github.blog/ai-and-ml/generative-ai/multi-agent-workflows-often-fail-heres-how-to-engineer-ones-that-dont/</link></item>
+<item><title>How AI is reshaping developer choice (and Octoverse data proves it) - The GitHub Blog</title><link>https://github.blog/ai-and-ml/generative-ai/how-ai-is-reshaping-developer-choice-and-octoverse-data-proves-it/</link></item>
+<item><title>What to expect for open source in 2026 - The GitHub Blog</title><link>https://github.blog/open-source/maintainers/what-to-expect-for-open-source-in-2026/</link></item>
+<item><title>Securing the AI software supply chain: Security results across 67 open source projects - The GitHub Blog</title><link>https://github.blog/open-source/maintainers/securing-the-ai-software-supply-chain-security-results-across-67-open-source-projects/</link></item>
+<item><title>Automate repository tasks with GitHub Agentic Workflows - The GitHub Blog</title><link>https://github.blog/ai-and-ml/automate-repository-tasks-with-github-agentic-workflows/</link></item>
+<item><title>Welcome to the Eternal September of open source. Here’s what we plan to do for maintainers. - The GitHub Blog</title><link>https://github.blog/open-source/maintainers/welcome-to-the-eternal-september-of-open-source-heres-what-we-plan-to-do-for-maintainers/</link></item>
+<item><title>GitHub availability report: January 2026 - The GitHub Blog</title><link>https://github.blog/news-insights/company-news/github-availability-report-january-2026/</link></item>
+<item><title>Continuous AI in practice: What developers can automate today with agentic CI - The GitHub Blog</title><link>https://github.blog/ai-and-ml/generative-ai/continuous-ai-in-practice-what-developers-can-automate-today-with-agentic-ci/</link></item>
+<item><title>Pick your agent: Use Claude and Codex on Agent HQ - The GitHub Blog</title><link>https://github.blog/news-insights/company-news/pick-your-agent-use-claude-and-codex-on-agent-hq/</link></item>
+<item><title>What the fastest-growing tools reveal about how software is being built - The GitHub Blog</title><link>https://github.blog/news-insights/octoverse/what-the-fastest-growing-tools-reveal-about-how-software-is-being-built/</link></item>
+<item><title>Skip to main content - Automotive News</title><link>https://www.autonews.com/#main-content</link></item>
+<item><title>After latest auto retail hack, how dealerships — ‘in the crosshairs of cybercriminals’ — can protect themselves - Automotive News</title><link>https://www.autonews.com/retail/an-cargurus-data-breach-0225/</link></item>
+<item><title>Asbury Automotive Group exits St. Louis market with sale of 6 dealerships, sells 3 stores in South Carolina - Automotive News</title><link>https://www.autonews.com/retail/mergers-acquisitions/an-asbury-sells-six-dealerships-0225/</link></item>
+<item><title>Subaru’s gambit: Lower Forester prices and hybrid option target Toyota RAV4 in volume war - Automotive News</title><link>https://www.autonews.com/subaru/an-subaru-forester-affordability-move-0225/</link></item>
+<item><title>How Nissan wants to challenge Toyota with dual Pathfinder strategy - Automotive News</title><link>https://www.autonews.com/nissan/an-nissan-dual-strategy-pathfinder-0225/</link></item>
+<item><title>Nissan’s dual Pathfinder bet; why Chinese automakers face a U.S. brick wall - Automotive News</title><link>https://www.autonews.com/podcasts/daily-drive/an-daily-drive-nissan-pathfinder-chinese-ev-regulations/</link></item>
+<item><title>First Shift: Nissan’s dual Pathfinder strategy - Automotive News</title><link>https://www.autonews.com/video/first-shift-nissans-dual-pathfinder-strategy/</link></item>
+<item><title>Automotive News Video: Supreme Court strikes down tariffs - Automotive News</title><link>https://www.autonews.com/video/automotive-news-video-supreme-court-strikes-down-tariffs/</link></item>
+<item><title>Building infrastructure for responsible AI - Automotive News</title><link>https://www.autonews.com/sponsored/an-building-infrastructure-for-responsible-ai/</link></item>
+<item><title>How Ford is helping dealers aim for same-day vehicle repairs - Automotive News</title><link>https://www.autonews.com/retail/service-and-parts/an-ford-uptime-assist-dealership-service-0226/</link></item>
+<item><title>ACV Auctions reports nearly $19 million loss linked to Tricolor - Automotive News</title><link>https://www.autonews.com/news/an-acv-auctions-tricolor-bankruptcy-loss-0224/</link></item>
+<item><title>FINAL ASSEMBLY - Automotive News</title><link>https://www.autonews.com/chery-automobile-co</link></item>
+<item><title>Chinese auto brand introduces itself to UK with rain, flowers and dozens of cats - Automotive News</title><link>https://www.autonews.com/retail/marketing/an-chinese-automaker-omoda-ad-campaign-0224/</link></item>
+<item><title>Audi, as part of legal case, discloses it expects U.S. sales slump to stretch into 2026 - Automotive News</title><link>https://www.autonews.com/volkswagen/audi/an-audi-2026-sales-forecast-0224/</link></item>
+<item><title>Jeffrey Epstein had keen interest in Carlos Ghosn’s arrest, Toyota Century limo - Automotive News</title><link>https://www.autonews.com/manufacturing/an-jeffrey-epstein-nissan-carlos-ghosn-toyota-century-0220/</link></item>
+<item><title>VW workers in Chattanooga ratify first contract with UAW - Automotive News</title><link>https://www.autonews.com/volkswagen/an-vw-uaw-contract-results-0219/</link></item>
+<item><title>Mercedes-Benz names new China sales chief amid 5-year slump - Automotive News</title><link>https://www.autonews.com/mercedes-benz/an-mercedes-benz-china-new-ceo-daniel-lescow-sales-slump-0217/</link></item>
+<item><title>Small-volume Subaru bets big on growth with 1.2 million sales plan to fight tariffs - Automotive News</title><link>https://www.autonews.com/subaru/an-subaru-million-car-sales-plan-lineup-expansion-tariffs-0218/</link></item>
+<item><title>Nissan, Honda, Mitsubishi still talking tie-ups — with little to show so far — year after merger blowup - Automotive News</title><link>https://www.autonews.com/nissan/an-nissan-honda-mitsubishi-merger-partnership-talks-america-0217/</link></item>
+<item><title>NADA 2026: DriveCentric CEO on why simplifying the tech stack is the mindset shift dealers need - Automotive News</title><link>https://www.autonews.com/sponsored/in-the-drivers-seat/an-nada-2026-drivecentric-ceo-on-why-simplifying-the-tech-stack-is-the-mindset-shift-dealers-need/</link></item>
+<item><title>2026 Mazda CX-5: Nifty and notable things - Automotive News</title><link>https://www.autonews.com/mazda/an-2026-mazda-cx-5-cool-things-0225/</link></item>
+<item><title>Will truck loyalists give Hyundai a chance? - Automotive News</title><link>https://www.autonews.com/hyundai/an-hyundai-midsize-truck-segment-0224/</link></item>
+<item><title>The Tesla Model S, destined for the history books, in a short time upended everything - Automotive News</title><link>https://www.autonews.com/tesla/an-tesla-model-s-appreciation-0224/</link></item>
+<item><title>NADA 2026: Protective doubles down on dealer wealth with Portfolio acquisition - Automotive News</title><link>https://www.autonews.com/sponsored/in-the-drivers-seat/an-nada-2026-protective-doubles-down-on-dealer-wealth-with-portfolio-acquisition/</link></item>
+<item><title>Rivian wagers on mass-market R2 crossover to fuel turnaround after 2025’s $3.6 billion net loss - Automotive News</title><link>https://www.autonews.com/rivian/an-rivian-reports-q4-earnings-after-sales-slump-0212/</link></item>
+<item><title>EV registrations fall in 2025 for first time in a decade; December numbers plunge 48% after tax credit repeal - Automotive News</title><link>https://www.autonews.com/ev/an-ev-registrations-show-2025-decline-0213/</link></item>
+<item><title>Automakers regroup as market shifts after $50 billion EV debacle - Automotive News</title><link>https://www.autonews.com/ev/an-automakers-50-billion-ev-writedowns-0213/</link></item>
+<item><title>Why China’s unstoppable car industry is suddenly losing momentum at home - Automotive News</title><link>https://www.autonews.com/byd/an-china-unstoppable-auto-industry-faces-new-challenges-2026-outlook-ev-0212/</link></item>
+<item><title>Honda’s mounting EV losses force ‘fundamental review’ of automotive strategy as sales plunge - Automotive News</title><link>https://www.autonews.com/honda/an-honda-ev-losses-strategy-review-3q-earnings-financial-results-0210/</link></item>
+<item><title>NADA 2026: How Cars Commerce is helping dealers navigate 2026 - Automotive News</title><link>https://www.autonews.com/sponsored/in-the-drivers-seat/an-nada-2026-how-cars-commerce-is-helping-dealers-navigate-2026/</link></item>
+<item><title>Daunting obstacles stand in way of Chinese vehicles reaching U.S. customers - Automotive News</title><link>https://www.autonews.com/technology/mobility/an-chinese-vehicle-importers-prepare-0225/</link></item>
+<item><title>Mercedes, Nissan, Stellantis invest in UK self-driving AI startup Wayve - Automotive News</title><link>https://www.autonews.com/manufacturing/automakers/ane-wayve-investment-round-0225/</link></item>
+<item><title>TrueCar eliminates nearly one-third of staff as CEO Scott Painter pursues back-to-basics strategy - Automotive News</title><link>https://www.autonews.com/retail/an-truecar-layoffs-0224/</link></item>
+<item><title>Dan Hearsch: A whole new world for auto industry executives - Automotive News</title><link>https://www.autonews.com/podcasts/shift/an-shift-podcast-alixpartners-dan-hearsch-0222/</link></item>
+<item><title>Toyota deploying humanoid robots at Canadian assembly plant - Automotive News</title><link>https://www.autonews.com/manufacturing/anc-tmmc-agility-humanoid-robot-deployment-0219/</link></item>
+<item><title>North America car and truck production by model, Jan. 2026 - Automotive News</title><link>https://www.autonews.com/data-center/manufacturing-data/production-model/an-north-america-production-model-january-2026/</link></item>
+<item><title>Automotive News Dealer Outlook Survey: How car dealers can stay profitable in 2026 - Automotive News</title><link>https://www.autonews.com/retail/an-intersection-0201/</link></item>
+<item><title>Automakers look to range extenders despite strategic trade-offs - Automotive News</title><link>https://www.autonews.com/ev/ane-range-extenders-evs-phevs-china-0225/</link></item>
+<item><title>BMW, EU said to be in talks on tariff exemption for electric Minis built in China - Automotive News</title><link>https://www.autonews.com/bmw/mini/ane-bmw-mini-china-built-eu-tariff-exemption-0225/</link></item>
+<item><title>Volvo launches cheaper EX30, tones down interiors as small SUV’s global sales fall 23% - Automotive News</title><link>https://www.autonews.com/volvo/ane-volvo-ex30-budget-model-tech-refresh-0225/</link></item>
+<item><title>Novonix to sell Nova Scotia battery-testing business back to Canadian founder for $1 - Automotive News</title><link>https://www.autonews.com/ev/anc-novonix-canadian-unit-burns-sale-0224/</link></item>
+<item><title>Electra Battery Materials spending $100M to get stalled Ontario cobalt refinery back on track - Automotive News</title><link>https://www.autonews.com/ev/anc-electra-battery-cobalt-refinery-construction-restart-0224/</link></item>
+<item><title>How to Thrive as a Remote Worker - IEEE Spectrum</title><link>https://spectrum.ieee.org/remote-work</link></item>
+<item><title>AI Is Acing Math Exams Faster Than Scientists Write Them - IEEE Spectrum</title><link>https://spectrum.ieee.org/ai-math-benchmarks</link></item>
+<item><title>Jimi Hendrix Was a Systems Engineer - IEEE Spectrum</title><link>https://spectrum.ieee.org/jimi-hendrix-systems-engineer</link></item>
+<item><title>This Physics Professor Credits Collaboration for Her Success - IEEE Spectrum</title><link>https://spectrum.ieee.org/cinzia-davia-physics</link></item>
+<item><title>Your Watch Will One Day Track Blood Pressure - IEEE Spectrum</title><link>https://spectrum.ieee.org/blood-pressure-monitor-smartwatch</link></item>
+<item><title>AI’s Math Tricks Don’t Work for Scientific Computing - IEEE Spectrum</title><link>https://spectrum.ieee.org/number-formats-ai-scientific-computing</link></item>
+<item><title>AI for Cybersecurity: Promise, Practice, and Pitfalls - IEEE Spectrum</title><link>https://events.bizzabo.com/734412</link></item>
+<item><title>The Age-Verification Trap - IEEE Spectrum</title><link>https://spectrum.ieee.org/age-verification</link></item>
+<item><title>Poem: The Attraction of Blackberries - IEEE Spectrum</title><link>https://spectrum.ieee.org/poetry-for-engineers-blackberries</link></item>
+<item><title>AI Data Centers Turn to High-Temperature Superconductors - IEEE Spectrum</title><link>https://spectrum.ieee.org/ai-data-centers-hts-superconductors</link></item>
+<item><title>IEEE Plays a Pivotal Role In Climate Mitigation Talks - IEEE Spectrum</title><link>https://spectrum.ieee.org/ieee-climate-mitigation-talks-2025</link></item>
+<item><title>Video Friday: Humanoid Robots Celebrate Spring - IEEE Spectrum</title><link>https://spectrum.ieee.org/robot-martial-arts</link></item>
+<item><title>The U.S. and China Are Pursuing Different AI Futures - IEEE Spectrum</title><link>https://spectrum.ieee.org/us-china-ai</link></item>
+<item><title>IEEE Course Improves Engineers’ Writing Skills - IEEE Spectrum</title><link>https://spectrum.ieee.org/ieee-course-technical-writing</link></item>
+<item><title>Tomorrow’s Smart Pills Will Deliver Drugs and Take Biopsies - IEEE Spectrum</title><link>https://spectrum.ieee.org/ingestible-electronics</link></item>
+<item><title>Lidar Mobility Device Assists Navigation and Avoids Collisions - IEEE Spectrum</title><link>https://spectrum.ieee.org/assistive-technology-lidar-wheelchair</link></item>
+<item><title>Estimating Surface Heating of an Atmospheric Reentry Vehicle With Simulation - IEEE Spectrum</title><link>https://event.on24.com/wcc/r/5204256/9B4BA35D454493C7D9829FE90B5A0ABD</link></item>
+<item><title>We’re Measuring Data Center Sustainability Wrong - IEEE Spectrum</title><link>https://spectrum.ieee.org/data-center-sustainability-metrics</link></item>
+<item><title>This Former Physicist Helps Keep the Internet Secure - IEEE Spectrum</title><link>https://spectrum.ieee.org/network-security-engineer-alan-dekok</link></item>
+<item><title>Why Are Blue Whales Going Silent? - HowStuffWorks</title><link>https://animals.howstuffworks.com/mammals/blue-whales-going-silent.htm</link></item>
+<item><title>What Is a Group of Vampires Called? Depends on the Lore - HowStuffWorks</title><link>https://science.howstuffworks.com/science-vs-myth/strange-creatures/what-is-a-group-of-vampires-called.htm</link></item>
+<item><title>How Athenian Democracy Laid the Foundation for Modern Voting - HowStuffWorks</title><link>https://people.howstuffworks.com/athenian-democracy.htm</link></item>
+<item><title>The Story of America: Video Series - The White House</title><link>https://www.whitehouse.gov/freedom250/story-of-america/</link></item>
+<item><title>Road to Liberty: Video Series - The White House</title><link>https://www.whitehouse.gov/freedom250/founders-museum/major-events/</link></item>
+<item><title>Signers of the Declaration of Independence - The White House</title><link>https://www.whitehouse.gov/freedom250/founders-museum/signers/profiles/</link></item>
+<item><title>WHAT THEY ARE SAYING: President Trump Heralds America’s Golden Age in Historic State of the Union Address - The White House</title><link>https://www.whitehouse.gov/articles/2026/02/what-they-are-saying-president-trump-heralds-americas-golden-age-in-historic-state-of-the-union-address/</link></item>
+<item><title>President Trump’s Peace Through Strength: Renewed American Leadership and Global Security - The White House</title><link>https://www.whitehouse.gov/articles/2026/02/president-trumps-peace-through-strength-renewed-american-leadership-and-global-security/</link></item>
+<item><title>President Trump Returned Our Nation to Law and Order - The White House</title><link>https://www.whitehouse.gov/articles/2026/02/president-trump-returned-our-nation-to-law-and-order/</link></item>
+<item><title>American Energy Dominance Is Back Under President Trump - The White House</title><link>https://www.whitehouse.gov/articles/2026/02/american-energy-dominance-is-back-under-president-trump/</link></item>
+<item><title>President Trump Is Delivering Real Relief — Reversing Biden’s Economic Disaster and Unleashing Greater Prosperity Ahead - The White House</title><link>https://www.whitehouse.gov/articles/2026/02/president-trump-is-delivering-real-relief-reversing-bidens-economic-disaster-and-unleashing-greater-prosperity-ahead/</link></item>
+<item><title>President Trump Is Restoring the American Dream - The White House</title><link>https://www.whitehouse.gov/articles/2026/02/president-trump-is-restoring-the-american-dream/</link></item>
+<item><title>President Trump Is Securing Our Homeland: Ending the Invasion, Deporting Criminals, and Protecting Our Communities - The White House</title><link>https://www.whitehouse.gov/articles/2026/02/president-trump-is-securing-our-homeland-ending-the-invasion-deporting-criminals-and-protecting-our-communities/</link></item>
+<item><title>Radical Left’s Rebuttal Will Contrast Democrat Extremism with President Trump’s Road to Prosperity - The White House</title><link>https://www.whitehouse.gov/articles/2026/02/radical-lefts-rebuttal-will-contrast-democrat-extremism-with-president-trumps-road-to-prosperity/</link></item>
+<item><title>ONDCP Launches New Public Awareness Effort Focused on Saving Lives Through Drug Prevention - The White House</title><link>https://www.whitehouse.gov/articles/2026/02/ondcp-launches-new-public-awareness-effort-focused-on-saving-lives-through-drug-prevention/</link></item>
+<item><title>37 Effective Products That Should Be On Your Radar If You’ve Got Annoying Body Problems - BuzzFeed</title><link>https://www.buzzfeed.com/diviniatarin/products-to-help-with-annoying-body-problems?origin=hfshp</link></item>
+<item><title>Anyone Can Take On Home DIY Projects: Here Are 48 Super Easy Ones - BuzzFeed</title><link>https://www.buzzfeed.com/elizabethlilly/quick-easy-diy-projects?origin=hfshp</link></item>
+<item><title>if I send you this, it means idk what I&amp;#39;m talking about - BuzzFeed</title><link>https://www.buzzfeed.com/meganeliscomb/karoline-leavitt-joe-biden-economy?origin=hfmotd</link></item>
+<item><title>Months Before His Tragic Death, Eric Dane’s Estranged Wife Detailed How His Healthcare Insurance Kept Denying His Treatment - BuzzFeed</title><link>https://www.buzzfeed.com/leylamohammed/eric-dane-wife-health-insurance-initially-denied-treatment?origin=hffun</link></item>
+<item><title>“I Am HORRIFIED”: Benny Blanco Farted And Showed His Dirty Feet On A Podcast - BuzzFeed</title><link>https://www.buzzfeed.com/chelseastewart/benny-blanco-farts-dirty-feet-podcast?origin=hffun</link></item>
+<item><title>Tim Gunn Revealed The Heartbreaking Reason He’s Been Celibate For 43 Years - BuzzFeed</title><link>https://www.buzzfeed.com/larryfitzmaurice/tim-gunn-celibate-43-years-reason-why?origin=hffun</link></item>
+<item><title>“I Don’t Censor Him”: Hilary Duff Shared How She Really Felt About Her Husband’s Shady Post Calling Ashley Tisdale “Self-Obsessed” - BuzzFeed</title><link>https://www.buzzfeed.com/ellendurney/hilary-duff-reaction-matthew-koma-post-about-ashley-tisdale?origin=hffun</link></item>
+<item><title>JoJo Siwa Explains Her Name Change - BuzzFeed</title><link>https://www.buzzfeed.com/chelseastewart/jojo-siwa-explains-name-change?origin=hffun</link></item>
+<item><title>GIFs got funny FAILs - theCHIVE</title><link>https://thechive.com/funny/gifs-got-funny-fails/?utm_postid=5186717&amp;utm_editor=5186717_rick</link></item>
+<item><title>WTF Wednesday Never Fails to WTF - theCHIVE</title><link>https://thechive.com/funny/wtf-wednesday-never-fails-to-wtf/?utm_postid=5186377&amp;utm_editor=5186377_hendy</link></item>
+<item><title>The Absolute Weirdest Celebrity Conspiracy Theories - theCHIVE</title><link>https://thechive.com/funny/weirdest-celebrity-conspiracy-theories/?utm_postid=5186431&amp;utm_editor=5186431_brian</link></item>
+<item><title>Action Figures We Can’t Believe Existed - theCHIVE</title><link>https://thechive.com/uncategorized/unbelievable-action-figures/?utm_postid=5185680&amp;utm_editor=5185680_brian</link></item>
+<item><title>Can’t Spell “Old School” Without “Cool!” - theCHIVE</title><link>https://thechive.com/uncategorized/cant-spell-old-school-without-cool/?utm_postid=5186750&amp;utm_editor=5186750_hendy</link></item>
+<item><title>It’s priceless, ya know? (16 Photos) - theCHIVE</title><link>https://thechive.com/humanity/inspirational/its-priceless-ya-know-16-photos/?utm_postid=5186974&amp;utm_editor=5186974_brittany</link></item>
+<item><title>No-Context Quotes That’ll Stick With You - theCHIVE</title><link>https://thechive.com/humanity/inspirational/interesting-quotes-that-will-stick-with-you/?utm_postid=5186451&amp;utm_editor=5186451_ty</link></item>
+<item><title>Celebrate Twin Peaks Day with Memes! - theCHIVE</title><link>https://thechive.com/entertainment/tv/celebrate-twin-peaks-day-with-memes/?utm_postid=5186582&amp;utm_editor=5186582_luka</link></item>
+<item><title>Can’t Argue With That Logic… - theCHIVE</title><link>https://thechive.com/funny/logic-sarcasm-funny-humor-memes-thechive/?utm_postid=5186540&amp;utm_editor=5186540_ryder</link></item>
+<item><title>29 Relationship Moments That Test Patience - theCHIVE</title><link>https://thechive.com/funny/29-relationship-moments-that-test-patience/?utm_postid=5186342&amp;utm_editor=5186342_hendy</link></item>
+<item><title>Serving Up Savage Food Memes - theCHIVE</title><link>https://thechive.com/funny/serving-up-savage-food-memes/?utm_postid=5185983&amp;utm_editor=5185983_ryder</link></item>
+<item><title>A Grim Tour of Medieval Torture Devices - theCHIVE</title><link>https://thechive.com/lifestyle/mind-blowing/a-grim-tour-of-medieval-torture-devices/?utm_postid=5186279&amp;utm_editor=5186279_hendy</link></item>
+<item><title>Turns Out We Missed the Golden Age of Flying - theCHIVE</title><link>https://thechive.com/humanity/nostalgia/golden-age-airplane-interiors-air-travel-design/?utm_postid=5186097&amp;utm_editor=5186097_ty</link></item>
+<item><title>Scrubs Was Both Hilarious &amp; Heartwarming - theCHIVE</title><link>https://thechive.com/entertainment/tv/scrubs-was-both-hilarious-heartwarming/?utm_postid=5186227&amp;utm_editor=5186227_hendy</link></item>
+<item><title>A Crash-Course in the Origins of Popular Idioms - theCHIVE</title><link>https://thechive.com/humanity/interesting-random/a-crash-course-in-the-origins-of-popular-idioms/?utm_postid=5185956&amp;utm_editor=5185956_luka</link></item>
+<item><title>I Need HAPPY FACTS and I Need ’em NOW! - theCHIVE</title><link>https://thechive.com/humanity/facts-random/i-need-happy-facts-and-i-need-em-now/?utm_postid=5185808&amp;utm_editor=5185808_hendy</link></item>
+<item><title>Want Sauce With These Wild Chicken Nugget Facts? - theCHIVE</title><link>https://thechive.com/lifestyle/food-and-drink/chicken-nugget-facts/?utm_postid=5186076&amp;utm_editor=5186076_brian</link></item>
+<item><title>The Dumbest Solutions That Actually Solved Problems - theCHIVE</title><link>https://thechive.com/humanity/adulting/dumbest-solutions-worked/?utm_postid=5185725&amp;utm_editor=5185725_brian</link></item>
+<item><title>Memes see the goal…BOOOOM…NAILed IT - theCHIVE</title><link>https://thechive.com/funny/memes-see-the-goalboooomnailed-it/?utm_postid=5186100&amp;utm_editor=5186100_rick</link></item>
+<item><title>The Toons That Made Millennials - theCHIVE</title><link>https://thechive.com/entertainment/tv/the-toons-that-made-millennials/?utm_postid=5185896&amp;utm_editor=5185896_ryder</link></item>
+<item><title>The World is a Set: Film Locations in Real Life! - theCHIVE</title><link>https://thechive.com/humanity/the-world-is-a-set-film-locations-in-real-life/?utm_postid=5185723&amp;utm_editor=5185723_hendy</link></item>
+<item><title>Before making BAD decisions…Phrase you “SAY” - theCHIVE</title><link>https://thechive.com/funny/before-making-bad-decisionsphrase-you-say/?utm_postid=5185919&amp;utm_editor=5185919_rick</link></item>
+<item><title>The Second Breakfast of Memes: A LOTR Collection - theCHIVE</title><link>https://thechive.com/funny/the-second-breakfast-of-memes-a-lotr-collection-2/?utm_postid=5185640&amp;utm_editor=5185640_hendy</link></item>
+<item><title>Reality Had Perfect Timing Here - theCHIVE</title><link>https://thechive.com/funny/perfect-timing-photos/?utm_postid=5185724&amp;utm_editor=5185724_ty</link></item>
+<item><title>These Cat Paintings Belong in a Meowseum - theCHIVE</title><link>https://thechive.com/funny/these-cat-paintings-belong-in-a-meowseum/?utm_postid=5185597&amp;utm_editor=5185597_hendy</link></item>
+<item><title>Fake Kids’ Books From an Alternate Reality Nobody Asked For - theCHIVE</title><link>https://thechive.com/funny/funny-relatable-fake-kids-books/?utm_postid=5185526&amp;utm_editor=5185526_ty</link></item>
+<item><title>More Memes, Less Work - theCHIVE</title><link>https://thechive.com/funny/more-memes-less-work/?utm_postid=5185390&amp;utm_editor=5185390_ryder</link></item>
+<item><title>10 Life Lessons that Come with Age! - theCHIVE</title><link>https://thechive.com/humanity/10-life-lessons-that-come-with-age/?utm_postid=5185429&amp;utm_editor=5185429_luka</link></item>
+<item><title>GIFs for a variety-pack of Funny FAILs - theCHIVE</title><link>https://thechive.com/funny/gifs-for-a-variety-pack-of-funny-fails/?utm_postid=5185489&amp;utm_editor=5185489_rick</link></item>
+<item><title>You Laugh, You lose. Who’s Down? - theCHIVE</title><link>https://thechive.com/funny/you-laugh-you-lose-whos-down-3/?utm_postid=5184750&amp;utm_editor=5184750_hendy</link></item>
+<item><title>The Worst Decisions People Ever Witnessed - theCHIVE</title><link>https://thechive.com/humanity/worst-decisions-others/?utm_postid=5184260&amp;utm_editor=5184260_brian</link></item>
+<item><title>The Triple-B is Serving Up Perfection Yet Again - theCHIVE</title><link>https://thechive.com/humanity/the-triple-b-is-serving-up-perfection-yet-again/?utm_postid=5185253&amp;utm_editor=5185253_luka</link></item>
+<item><title>Old TV Shows We Wish They’d Remade as Movies - theCHIVE</title><link>https://thechive.com/entertainment/movies/tv-shows-remade-movies/?utm_postid=5184359&amp;utm_editor=5184359_brian</link></item>
 </channel></rss>

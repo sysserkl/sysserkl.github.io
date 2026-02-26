@@ -1800,6 +1800,10 @@ function enwords_list_2_reg_b(cslist,delimiter='b'){
 }
 
 function enwords_different_types_textarea_b(oselect){
+    function sub_enwords_different_types_textarea_b_bljg(csstr){
+        return textarea_with_form_generate_b('textarea_enwords_different_types_all_in_one','height:10rem;','<p>','清空,复制,发送到临时记事本','</p>','','',false,csstr);
+    }
+    
     var ocontainer=oselect.parentNode.parentNode;
     var oraw_textarea=ocontainer.querySelector('textarea.textarea_enwords_raw_types');
     var raw_str=oraw_textarea.value.trim();
@@ -1838,7 +1842,7 @@ function enwords_different_types_textarea_b(oselect){
                     bljg='';
                 } else {
                     let result_t=raw_list.slice(blkey[0],blkey[1]);
-                    bljg='<br /><textarea style="height:3rem;" onclick="this.select();document.execCommand(\'copy\');">'+result_t.join('\n')+'</textarea>';
+                    bljg=sub_enwords_different_types_textarea_b_bljg(result_t.join('\n'));
                 }
             }
             break;
@@ -1853,15 +1857,14 @@ function enwords_different_types_textarea_b(oselect){
             break;
         case 'reg':
             bljg=enwords_list_2_reg_b(raw_list);
-            bljg='<br /><textarea style="height:3rem;" onclick="this.select();document.execCommand(\'copy\');">'+bljg+'</textarea>';
+            bljg=sub_enwords_different_types_textarea_b_bljg(bljg);
             break;
         case 'space':
-            bljg=raw_list.join(' ');
-            bljg='<br /><textarea style="height:3rem;" onclick="this.select();document.execCommand(\'copy\');">'+bljg+'</textarea>';        
+            bljg=sub_enwords_different_types_textarea_b_bljg(raw_list.join(' '));        
             break;
         case '移除行无非字母字符':
             bljg=raw_str.replace(/[^a-z]+$/img,'');
-            bljg='<br /><textarea style="height:3rem;" onclick="this.select();document.execCommand(\'copy\');">'+bljg+'</textarea>';
+            bljg=sub_enwords_different_types_textarea_b_bljg(bljg);
             break;
         case 'rare_words':
             result_t=[];
@@ -1869,12 +1872,12 @@ function enwords_different_types_textarea_b(oselect){
                 result_t.push('"'+specialstr_j(aword)+'"');
             }
             bljg='    var rare_words=new Set(['+result_t.join(',')+']); //'+today_str_b('dt')+' //fn_in_one_line_content';
-            bljg='<br /><textarea style="height:3rem;" onclick="this.select();document.execCommand(\'copy\');">'+bljg+'</textarea>';        
+            bljg=sub_enwords_different_types_textarea_b_bljg(bljg);        
             break;
         case 'random_sort':
             result_t=[].concat(raw_list);
             result_t.sort(randomsort_b);
-            bljg='<br /><textarea style="height:3rem;" onclick="this.select();document.execCommand(\'copy\');">'+result_t.join('\n')+'</textarea>';
+            bljg=sub_enwords_different_types_textarea_b_bljg(result_t.join('\n'));
             break;
         case 'switch with the first textarea':
             osecond_textarea=odiv.querySelector('textarea');
@@ -1899,7 +1902,7 @@ function enwords_different_types_textarea_b(oselect){
                         result_t.push(item);
                     }
                 }
-                bljg='<br /><textarea style="height:3rem;" onclick="this.select();document.execCommand(\'copy\');">'+result_t.join('\n')+'</textarea>';        
+                bljg=sub_enwords_different_types_textarea_b_bljg(result_t.join('\n'));        
             }
             break;
         case 'group':

@@ -346,19 +346,19 @@ function days_enwc_b(only_plan=false){
             week_count=week_count.toFixed(1);
         }
         
-        var blstr_tmp='按每日 '+day_count+' 计算，每周须记忆单词 '+week_count+' 个；';
+        var blstr_tmp='按 '+day_count+' 个/日 计，';
         if (show_month_words){
-            blstr_tmp=blstr_tmp+'<br />至本月底须完成 '+this_month_words_count+' 个单词，即累计达 '+(enwords.length+this_month_words_count) +' 个单词；';
+            blstr_tmp=blstr_tmp+'至本月底须完成 '+this_month_words_count+' 个单词，即累计达 '+(enwords.length+this_month_words_count) +' 个单词；<br />';
         }
         
         var bldays_ceil=(csint-enwords.length)/cseveryday;
-        blstr_tmp=blstr_tmp+'<br />达到 '+csint+' 需要 '+bldays_ceil.toFixed(1)+' 天，即 '+next_day_b('',bldays_ceil);
+        blstr_tmp=blstr_tmp+'至 '+csint/10000+' 万 需 '+Math.ceil(bldays_ceil)+' 天（ '+next_day_b('',bldays_ceil)+' ）';
         
         if (csvalue!==csint){
             var bldays2_ceil=(csvalue-enwords.length)/cseveryday;
-            blstr_tmp=blstr_tmp+'；<br />达到 '+csvalue+' 需要 '+bldays2_ceil.toFixed(1)+' 天，即 '+next_day_b('',bldays2_ceil);
+            blstr_tmp=blstr_tmp+'，至 '+csvalue/10000+' 万 需 '+Math.ceil(bldays2_ceil)+' 天（ '+next_day_b('',bldays2_ceil)+' ）';
         }
-        blstr_tmp=blstr_tmp+'。<br />';    
+        blstr_tmp=blstr_tmp+'。<br />';
         return blstr_tmp;
     }
     
@@ -515,15 +515,16 @@ function days_enwc_b(only_plan=false){
     
     var max_everyday_ceil=Math.max(2,Math.ceil(max_everyday));
 
-    for (let blxl=Math.max(3,Math.min(4,max_everyday_ceil));blxl<=5;blxl++){    //按每日 5 计算，每周须记忆单词 - 保留注释
+    for (let blxl=Math.max(3,Math.min(4,max_everyday_ceil));blxl<=6;blxl++){    //按每日 6 计算，每周须记忆单词 - 保留注释
         if (blxl!==max_everyday){
             blplan=blplan+sub_days_enwc_b_plan(blxl,blint,blvalue);
         }
     }
-        
+    
     if (only_plan){
         return blplan;
     }
+    
     blstr_tmp=blstr_tmp+blplan+'</td></tr></table>';
 	document.getElementById('span_days').innerHTML='<b>'+quote_or_fav_b()+'</b>';
     document.getElementById('span_days').insertAdjacentHTML('afterend',popup_b('popup_eng_days',blstr_tmp,'','90%',(ismobile_b()?'0.5rem':'')));

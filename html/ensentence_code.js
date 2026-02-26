@@ -46,6 +46,7 @@ function menu_ensentence(){
     klmenu1.push(menu_container_b(str_t,group_list,'指定日期例句：'));
     
     klmenu1=klmenu1.concat([
+    '<span class="span_menu" onclick="'+str_t+'words_2_today_ensentence();">当前单词中的今日单词</span>',    
     '<span class="span_menu" onclick="'+str_t+'rare_old_words_ensentence(\'例句最少的单词\',false,true,2,10,5000,false);">例句最少的单词5000</span>',
     '<span class="span_menu" onclick="'+str_t+'phrase_not_in_ensentence(1,100);">例句最少的词组100</span>',
     '<span class="span_menu" onclick="'+str_t+'rare_old_words_ensentence(\'例句出处唯一的单词\',false,true,2,10,5000,true);">例句出处唯一的单词5000</span>',
@@ -691,7 +692,19 @@ function rare_old_words_form_ensentence(cslist,generate_js){
     var bljg=enwords_different_types_div_b(cslist,true,'textarea_rare_words','textarea_rare_words','复制,发送到临时记事本,发送地址',more_buttons);
     return bljg;
 }
+
+function words_2_today_ensentence(){
+    var words=[];
+    var ospans=document.querySelectorAll('#divhtml span.a_word');
+    for (let one_span of ospans){
+        words.push(one_span.innerText);
+    }
+    words=day_new_enbook_b(-1,false,'m',false,words);
     
+    var bltextarea=rare_old_words_form_ensentence(words);
+    document.getElementById('divhtml').innerHTML=enwords_array_to_html_b(words,false)+bltextarea;
+}
+
 function rare_old_words_ensentence(cscaption='',show_sentence=false,generate_js=false,max_count=2,rows_min=10,rows_max=5000,source_check=false){
     function sub_rare_old_words_ensentence_words(words_list){
         for (let aword of words_list){
@@ -711,7 +724,7 @@ function rare_old_words_ensentence(cscaption='',show_sentence=false,generate_js=
         result_t.sort(function (a,b){return a[1]>b[1] ? 1 : -1;});   //出现次数从少到多排列 - 保留注释
         var oldset=simple_words_b(true,true);
         en_word_temp_get_b();
-        words_searched_arr_global=[];            
+        words_searched_arr_global=[];
         var blno=0;
         for (let arow of result_t){
             if (!oldset.has(arow[0].toLowerCase())){continue;}

@@ -4848,7 +4848,7 @@ function ensentence_in_textarea_len_b(csarr){
 }
 
 function ensentence_in_textarea_remove_lengthy_rows_b(){
-    var blcount=prompt('输入最长行字符数','300');
+    var blcount=prompt('输入最长行字符数','600');
     if (blcount==null){return;}
     blcount=parseInt(blcount.trim());
     

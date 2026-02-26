@@ -999,8 +999,18 @@ function check_all_new_enbook_b(){
     return true;
 }
 
-function day_new_enbook_b(csmax=-1,do_filter=false,group_by='y'){
-    if (check_all_new_enbook_b()===false){return [];}
+function day_new_enbook_b(csmax=-1,do_filter=false,group_by='y',is_rare=false,csdata=[]){
+    if (csdata.length>0){
+        var csarr=csdata;
+    } else {
+        if (is_rare){
+            if (typeof en_sentence_count_global == 'undefined'){return [];}
+            var csarr=en_sentence_count_global;
+        } else {
+            if (check_all_new_enbook_b()===false){return [];}
+            var csarr=all_new_words_global;
+        }
+    }
     
     switch (group_by){
         case 'y':
@@ -1016,7 +1026,7 @@ function day_new_enbook_b(csmax=-1,do_filter=false,group_by='y'){
     }
         
     var result_t=[];
-    for (let item of all_new_words_global){
+    for (let item of csarr){
         if (do_filter){
             if (item.length==1 || item.length>15){continue;}
             if (item.split('-').length>=2){continue;}
