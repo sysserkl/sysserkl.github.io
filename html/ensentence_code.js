@@ -88,7 +88,7 @@ function menu_ensentence(){
     '<span class="span_menu" onclick="'+str_t+'host_count_ensentence();">例句出处统计</span>',
     '<span class="span_menu" onclick="'+str_t+'row_duplicate_ensentence();">重复例句</span>',
     '<span class="span_menu" onclick="'+str_t+'eword_duplicate_ensentence();">行内重复 eword 检索</span>',
-    '<span class="span_menu" onclick="'+str_t+'len_between_ensentence();">当前页面保留指定长度例句</span>',
+    '<span class="span_menu" onclick="'+str_t+'len_between_select_ensentence();">当前页面保留指定长度例句</span>',
     fpara_menu_b(str_t,true),
     ];  
 
@@ -143,26 +143,26 @@ function menu_ensentence(){
     input_size_b(input_list,'id');
 }
 
-function len_between_ensentence(){
-    function sub_len_between_ensentence_current(){
-        var len_set=new Set();
-        var ospans=document.querySelectorAll('#divhtml p.p_enwords_sentence span.span_enwords_sentence');
-        for (let one_span of ospans){
-            len_set.add(one_span.innerText.length);
-        }
-        
-        len_set=Array.from(len_set);
-        let len_count=len_set.length;
-        let sentence_len=ospans.length;
-        if (len_count==0){return [false,false,sentence_len];}
-        if (len_count==1){return [false,len_set[0],sentence_len];}
-        
-        len_set.sort();
-        return [len_set[0]].concat(len_set.slice(-1)).concat([sentence_len]);
+function len_between_status_ensentence(){
+    var len_set=new Set();
+    var ospans=document.querySelectorAll('#divhtml p.p_enwords_sentence span.span_enwords_sentence');
+    for (let one_span of ospans){
+        len_set.add(one_span.innerText.length);
     }
-
+    
+    len_set=Array.from(len_set);
+    let len_count=len_set.length;
+    let sentence_len=ospans.length;
+    if (len_count==0){return [false,false,sentence_len];}
+    if (len_count==1){return [false,len_set[0],sentence_len];}
+    
+    len_set.sort();
+    return [len_set[0]].concat(len_set.slice(-1)).concat([sentence_len]);
+}
+    
+function len_between_select_ensentence(){
     var blmin,blmax,bllen;
-    [blmin,blmax,bllen]=sub_len_between_ensentence_current();
+    [blmin,blmax,bllen]=len_between_status_ensentence();
     if (blmin===false){return;}
     
     var blrange=prompt('当前句子共'+bllen+'条，长度在 '+blmin+'~'+blmax+' 之间，输入要保留的长度范围',blmin+','+blmax);
@@ -186,7 +186,7 @@ function len_between_ensentence(){
         blcount=blcount+1;
     }
     
-    [blmin,blmax,bllen]=sub_len_between_ensentence_current();
+    [blmin,blmax,bllen]=len_between_status_ensentence();
     if (blmax===false){
         alert('移除了'+blcount+'条，剩余记录'+bllen+'条');
     } else if (blmin===false){
@@ -653,11 +653,20 @@ function length_sort_ensentence(is_short=true,do_merge=-1,keep_kleng=true){
     var bljg=sentence_list_2_html_b(result_t,[''],csmax,false,false,false,true);
     
     var group_reg=quote_reg_button_ensentence();
-    document.getElementById('divhtml').innerHTML='<div class="div_sentence">'+bljg.join('\n')+'</div><p><i>('+bljg.length+')</i> '+groups_full+' '+groups_part+'</p>'+'<div id="div_length_pie_ensentence" style="width:25rem; height:25rem"></div>'+'<p>'+group_reg[0]+'</p>'+group_reg[1];
+    var odiv=document.getElementById('divhtml');
+    odiv.innerHTML='<div class="div_sentence">'+bljg.join('\n')+'</div><p><i>('+bljg.length+')</i> '+groups_full+' '+groups_part+'</p>'+'<div id="div_length_pie_ensentence" style="width:25rem; height:25rem"></div>'+'<p>'+group_reg[0]+'</p>'+group_reg[1];
     if (keep_kleng){
         sup_kleng_words_b();
     }
     flot_pie_b(pie_full,'div_length_pie_ensentence');
+    
+    var blmin,blmax,bllen;
+    [blmin,blmax,bllen]=len_between_status_ensentence();
+    if (blmin===false){return;}
+    
+    var blrange='<p>当前句子共'+bllen+'条，长度在 '+blmin+'~'+blmax+' 之间</p>';
+    odiv.insertAdjacentHTML('afterbegin',blrange);
+    
     console.log('length_sort_ensentence() 费时：'+(performance.now() - t0) + ' milliseconds');    
 }
 

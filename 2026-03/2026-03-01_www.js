@@ -1,0 +1,15 @@
+var sourcelist=[
+["https://www.solidot.org/story?sid=83633","一个晚上的交通噪音就能增加心脏和血管压力","2026-03-01","Solidot","1",],
+["https://www.solidot.org/story?sid=83634","北美农业区的鸟类数量加速减少","2026-03-01","Solidot","1",],
+["https://www.solidot.org/story?sid=83635","内存短缺可能杀死入门级 PC","2026-03-01","Solidot","1",],
+["https://www.solidot.org/story?sid=83636","让你压力山大的人也会增加你的生物年龄","2026-03-01","Solidot","1",],
+["https://www.solidot.org/story?sid=83637","特朗普命令联邦机构立即停用 Anthropic 的 AI 技术","2026-03-01","Solidot","1",],
+["https://www.solidot.org/story?sid=83638","韩国允许 Google 使用高精度地图数据","2026-03-01","Solidot","1",],
+["https://www.solidot.org/story?sid=83639","丹·西蒙斯因中风去世，享年 77 岁","2026-03-01","Solidot","1",],
+["https://www.solidot.org/story?sid=83640","月球短暂拥有过强于地球的磁场","2026-03-01","Solidot","1",],
+["https://www.solidot.org/story?sid=83642","OpenAI 与五角大楼达成合作，用户纷纷取消 ChatGPT 订阅","2026-03-01","Solidot","1",],
+["https://www.solidot.org/story?sid=83632","NASA 披露突发疾病的宇航员身份","2026-03-01","Solidot","1",],
+["https://www.solidot.org/story?sid=83631","PFAS 可能加速中年人的衰老","2026-03-01","Solidot","1",],
+["https://xkcd.com/3213/","Dental Formulas","2026-03-01","xkcd","0",],
+["https://www.thepaper.cn/newsDetail_forward_32581727","寻马记｜青州彩陶马，两千年的“汉紫”","2026-03-01","澎湃","1",],
+];

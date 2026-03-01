@@ -14,6 +14,7 @@ self.addEventListener('install', function(e) {
             '../hard_ln_io/klbase_flot.js',
             '../hard_ln_io/klbase_en_de_str.js',            
             '../hard_ln_io/klbase_idb.js',            
+            '../hard_ln_io/klbase_websites.js',            
             '../jsdata/words/enwords_data.js',
             '../jsdata/words/enwords_sentence_data.js',
             ]);
