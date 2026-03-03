@@ -388,8 +388,9 @@ function batch_search_form_kltxt_klwiki_en2(){
     bljg=bljg+'<span class="aclick" onclick="batch_search_result_kltxt_klwiki_en2();">单词批量查找</span> ';
     bljg=bljg+'<span class="aclick" onclick="enwords_search_result_load_b(false,\'textarea\',\'textarea_batch_search_words_kltxt_klen2\');">载入暂存搜索单词</span> ';
     bljg=bljg+'<span class="aclick" onclick="words_not_in_article_kltxt_klwiki_en2();">正文中不存在的单词</span> ';
-    bljg=bljg+'<input type="number" id="input_recent_rare_old_words_kltxt_klen2" value="200" style="width:3rem;" /> 个';
+    bljg=bljg+'<input type="number" id="input_recent_rare_old_words_kltxt_klen2" value="25" style="width:3rem;" /> 个';
     bljg=bljg+'<span class="aclick" onclick="recent_rare_words_kltxt_klwiki_en2();">最新录入的稀有旧单词</span> ';
+    bljg=bljg+'<span class="aclick" onclick="recent_rare_words_kltxt_klwiki_en2(true);">随机稀有旧单词</span> ';
     bljg=bljg+textarea_buttons_b('textarea_batch_search_words_kltxt_klen2','复制,清空');
     bljg=bljg+'</p><p>';
     bljg=bljg+'<span class="span_box">提取过滤：</span><input type="text" id="input_selective_sentences_kltxt_klen2" /> ';
@@ -406,7 +407,7 @@ function batch_search_form_kltxt_klwiki_en2(){
     odiv.scrollIntoView();
 }
 
-function recent_rare_words_kltxt_klwiki_en2(){
+function recent_rare_words_kltxt_klwiki_en2(is_random=false){
     var csmax=parseInt(document.getElementById('input_recent_rare_old_words_kltxt_klen2').value.trim());
     var blxl=0;
     var result_t=[];
@@ -414,8 +415,12 @@ function recent_rare_words_kltxt_klwiki_en2(){
         if (en_sentence_count_global.includes(item[0])){
             result_t.push(item[0]);
             blxl=blxl+1;
-            if (blxl>=csmax){break;}
+            if (!is_random && blxl>=csmax){break;}
         }
+    }
+    if (is_random){
+        result_t.sort(randomsort_b);
+        result_t=result_t.slice(0,csmax);
     }
     document.getElementById('textarea_batch_search_words_kltxt_klen2').value=result_t.join('\n');
 }

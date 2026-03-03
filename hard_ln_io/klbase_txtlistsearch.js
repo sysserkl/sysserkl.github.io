@@ -4793,9 +4793,13 @@ function current_page_rare_words_kltxt_b(cstype='',textarea_mode=false){
 }
 
 function current_page_2_ensentence_b(cstype=''){
+    if (typeof csbookname_global=='undefined'){
+        csbookname_global='';
+    }
+    
     var result_t=[];
     var re_combine=sentence_split_status_generate_b();
-    var ospans=document.querySelectorAll('span.txt_content');
+    var ospans=document.querySelectorAll('span.txt_content, #mw-content-text p, #mw-content-text li');
     var remove_hot_words=(csbookname_global=='klwiki_en2');
 
     for (let one_span of ospans){
@@ -4826,6 +4830,15 @@ function current_page_2_ensentence_b(cstype=''){
     
     var bljg=result_t.join('\n\n');    
     var odiv=document.getElementById('divhtml2');
+    if (!odiv){
+        odiv=document.getElementById('mw-content-text');
+        if (odiv){
+            odiv.insertAdjacentHTML('afterend','<div id="divhtml2"></div>');
+            odiv=document.getElementById('divhtml2');
+        }
+    }
+    if (!odiv){return;}
+    
     var left_str='<p><span id="span_sentences_from_len_kltxt_b"></span>';
     left_str=left_str+close_button_b('divhtml2','');      
     left_str=left_str+`字符串长度：<input type="number" id="input_sentences_from_kltxt_split_len_b" placeholder="分割长度" min=0 value="5000" style="width:4rem;" /> 
