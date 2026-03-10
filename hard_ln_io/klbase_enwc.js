@@ -402,7 +402,7 @@ function days_enwc_b(only_plan=false){
 	var date1_tmp=default_date_b('',true);
 	var year_tmp=date1_tmp.getFullYear();
 	
-    var wordscount=[2026,21280];
+    var wordscount=[2026,21390];
     var year_increment=2010;    //合适的数值可显示结果为万位整数 - 保留注释
     if (year_tmp>wordscount[0]){
         wordscount[1]=wordscount[1]+year_increment*(year_tmp-wordscount[0]);    //先修改wordscount[1] - 保留注释
@@ -448,11 +448,11 @@ function days_enwc_b(only_plan=false){
         scan_times=scan_times+1;
         let words_sum=wordscount[1]+years_used*year_increment;
         if (scan_times>3){
-            console.log(years_used,words_sum,mincount);
+            console.log(years_used,wordscount[0]+years_used,words_sum,mincount);
             if (words_sum>=70000 && words_sum>=wordscount[1]+20000){
                 do_break=true;
             }
-            else if ((wordscount[0]+years_used) % 15 !== 0 && words_sum<mincount){
+            else if ((wordscount[0]+years_used) % 10 !== 0 && words_sum<mincount){
                 years_used=years_used+1;
                 continue;
             } else if (words_sum>=mincount){

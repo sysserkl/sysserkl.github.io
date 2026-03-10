@@ -611,17 +611,17 @@ function import_elm_money_b(textarea_id='textarea_idb_content'){   //饿了么 -
     return [result_t,line_style_list,''];
 }
 
-function import_is_only_one_thing_money_b(textarea_id){
+function import_is_only_one_thing_money_b(textarea_id,only_one=true){
     var name_list=import_name_list_money_b(false,textarea_id,false);
-    if (name_list.length!==1){
+    if (only_one && name_list.length!==1){
         alert('编辑框有'+name_list.length+'种物品，应只有一种');
-        return '';
+        return [''];
     }
-    return name_list[0];
+    return name_list;
 }
 
 function import_number1_money_b(textarea_id,do_ask=true){
-    var blname=import_is_only_one_thing_money_b(textarea_id);
+    var blname=import_is_only_one_thing_money_b(textarea_id)[0];
     if (blname==''){return;}
 
     if (do_ask && !confirm('是否转换【'+blname+'】的数量为1？')){return;}
@@ -632,20 +632,26 @@ function import_number1_money_b(textarea_id,do_ask=true){
     otextarea.value=blstr;
 }
 
-function import_vegetable_fruit_money_b(textarea_id,cscategory=false,do_ask=true){
+function import_vegetable_fruit_money_b(textarea_id,cstype='',only_one=true,cscategory=false,do_ask=true){
     if (cscategory===false){
         cscategory=document.getElementById('select_wp_import_category_name').value;
     }
     if (cscategory==''){return;}
     
-    var blname=import_is_only_one_thing_money_b(textarea_id);
+    var name_list=import_is_only_one_thing_money_b(textarea_id,only_one);
+    if (only_one){
+        blname=name_list[0]
+    } else {
+        blname=name_list.length+'项物品：'+name_list.join('、');
+    }
     if (blname==''){return;}
 
-    if (do_ask && !confirm('是否转换【'+blname+'】的分类为【'+cscategory+'】？')){return;}
+    var blcaption=(cstype==''?'(名称|分类)':'('+cstype+')');
+    if (do_ask && !confirm('是否转换【'+blname+'】的'+blcaption+'为【'+cscategory+'】？')){return;}
     
     var otextarea=document.getElementById(textarea_id);
     var blstr=otextarea.value.trim();
-    blstr=blstr.replace(/^(名称|分类):(.*)$/mg,'$1:'+cscategory);
+    blstr=blstr.replace(new RegExp('^'+blcaption+':(.*)$','mg'),'$1:'+cscategory);
     otextarea.value=blstr;
 }
 
@@ -657,8 +663,9 @@ function elm_buttons_money_b(dom_id,textarea_id){
 <span class="aclick" onclick="import_merge_money_b('`+textarea_id+`',1,'蔬菜');">数量为1的蔬菜</span>
 <span class="aclick" onclick="import_merge_money_b('`+textarea_id+`',1,'水果');">数量为1的水果</span>
 
-分类和名称修改为：<select id="select_wp_import_category_name"><option></option><option>蔬菜</option><option>水果</option></select>
-<span class="aclick" onclick="import_vegetable_fruit_money_b('`+textarea_id+`');">修改</span>
+分类/名称修改为：<select id="select_wp_import_category_name"><option></option><option>蔬菜</option><option>水果</option></select>
+<span class="aclick" onclick="import_vegetable_fruit_money_b('`+textarea_id+`');">修改分类和名称</span>
+<span class="aclick" onclick="import_vegetable_fruit_money_b('`+textarea_id+`','分类',false);">修改分类</span>
 <span class="aclick" onclick="import_number1_money_b('`+textarea_id+`');">数量改为1</span>
 <select id="select_wp_import_retain_or_remove"><option>保留</option><option selected>剔除</option></select>
 <input type="text" id="input_filter_wp_import" onkeydown="if (event.key=='Enter'){return false;}" />
