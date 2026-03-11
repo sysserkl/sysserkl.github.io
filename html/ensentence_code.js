@@ -403,7 +403,7 @@ function phrase_not_in_ensentence(max_count=0,max_result=100){
         }
         
         blxl=blxl+1;
-        if (blxl % 100 == 0){
+        if (blxl % 1000 == 0 || blxl == 1){
             document.title=blxl+'/'+bllen+' - '+old_title;
             setTimeout(sub_phrase_not_in_ensentence_one,1);
         } else {
