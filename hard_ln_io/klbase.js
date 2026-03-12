@@ -1322,7 +1322,9 @@ function local_storage_list_in_one_day_b(csid){
 }
 
 function local_storage_today_b(csid,csmax=-1,csnewcontent='',cssplit='',squash=[],cstype='d',add_mode=false,remove_same_value_new_item=true){
+    csnewcontent=csnewcontent.toString();
     if (csnewcontent==''){return;}
+    
     if (squash.length==3){  //否则不执行压缩，仅截取 - 保留注释
         var list_t=local_storage_get_b(csid,-1,true);
         if (list_t.length>csmax*0.9){

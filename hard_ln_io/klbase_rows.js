@@ -975,6 +975,12 @@ function str2js_klr_b(csid,cstype){
             blstr=blstr.replace(/^\[(.*)\]\((.*)\)$/mg,'["$2","$1"],');
             otextarea.value=blstr;
             return;
+        case 'ymd':
+            var blstr=otextarea.value.trim();
+            console.log(blstr);
+            blstr=blstr.replace(/^(\["http[^\?"]+?)(",\s*"(?!\d{8}))/img,'$1'+'?'+today_str_b('d','')+'$2');
+            otextarea.value=blstr;
+            return;
         case 'enword2enlink':
             list_t=otextarea.value.trim().split('\n');
             for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
@@ -1301,6 +1307,7 @@ function buttons_txt_klr_b(textarea_id,clear_copy_tab_title_url=false){
     buttons=buttons+'<span class="aclick" onclick="important_line_js_array_klr_b(\''+textarea_id+'\');">💎</span> ';
     buttons=buttons+'<span class="aclick" onclick="str2js_klr_b(\''+textarea_id+'\',\'title_href\');">JS</span> ';
     buttons=buttons+'<span class="aclick" onclick="str2js_klr_b(\''+textarea_id+'\',\'[t](h)\');">[t](h)</span> ';
+    buttons=buttons+'<span class="aclick" onclick="str2js_klr_b(\''+textarea_id+'\',\'ymd\');">ymd</span> ';
     if (clear_copy_tab_title_url){
         buttons=buttons+'<span class="aclick" onclick="clear_copy_tab_title_url_klr_b(\''+textarea_id+'\');" title="格式清理">🪥</span> ';   
     }

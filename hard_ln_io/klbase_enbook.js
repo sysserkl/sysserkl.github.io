@@ -618,7 +618,9 @@ function words_in_sentence_set_generate_enbook_b(){
     if (words_in_sentence_set_global.size==0){
         words_in_sentence_set_global=sentences_2_words_set_enbook_b(false,0,false,true);
         console.log('words_in_sentence_set_global 元素个数',words_in_sentence_set_global.size);
-        local_storage_today_b('words_in_sentence_set_global_count',40,words_in_sentence_set_global.size,'/');
+        if (words_in_sentence_set_global.size>0){
+            local_storage_today_b('words_in_sentence_set_global_count',40,words_in_sentence_set_global.size,'/');
+        }
     }
 }
 

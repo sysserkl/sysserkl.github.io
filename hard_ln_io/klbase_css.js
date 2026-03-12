@@ -2595,7 +2595,8 @@ function iframe_with_content_b(oparent,cscontent='',iframe_style='',css_js='',ad
     oparent.appendChild(iframe);
 
     // 等待 iframe 加载完成后再写入内容（确保 contentDocument 可用）
-    iframe.onload = function (){
+    //iframe.onload = function (){  //对于 about:blank 或无 src 的 iframe，可以立即访问其 contentDocument，无需等待 onload - 保留注释
+    //在某些浏览器或场景下（尤其是当 iframe 没有 src 时），onload 可能不会被触发 - 保留注释
         const doc = iframe.contentDocument || iframe.contentWindow.document;
         doc.open();
         if (add_html){
@@ -2611,7 +2612,7 @@ function iframe_with_content_b(oparent,cscontent='',iframe_style='',css_js='',ad
         }
         doc.write(cscontent);
         doc.close();
-    };
+    //};    //此行保留 - 保留注释
 }
 
 function iframe_init_b(cslist=[],obutton=false,ocontent=false){
