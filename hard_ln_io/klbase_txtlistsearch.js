@@ -4383,7 +4383,7 @@ function random_book_current_category_kltxt_b(){
     location.href=href;
 }
 
-function category_generate_bltxt_b(){
+function category_generate_kltxt_b(){
     var op=document.getElementById('p_book_list');
     var bljg='<span class="span_link" onclick="books_generate_b(\'switch\',\'txt\',book_tag_global);"><b>Books</b></span> <a href="?&line=0_0">RND</a> ';
     if (book_tag_global!=='all'){
@@ -4499,7 +4499,7 @@ function layout_kltxt_b(cstype=''){
 
     input_with_x_b('input_search',15);
 
-    category_generate_bltxt_b();    
+    category_generate_kltxt_b();    
     txtmenus_kltxt_b(html_name_kltxt_global);
     change_colors_kltxt_b();
     
@@ -5056,4 +5056,29 @@ function flist_2_ensentence_b(is_ok=true,max_line_len=1000,max_rows=20000){
 
     lines_2_html_kltxt_b(bljg.slice(0,max_rows));    
     render_html_kltxt_b([],true,true,false,false,function (){current_page_2_ensentence_b('rare');},false);
+}
+
+function recent_rare_words_buttons_kltxt_b(textarea_id=''){
+    var bljg='<input type="number" id="input_recent_rare_old_words_kltxt_b" value="25" style="width:3rem;" /> 个';
+    bljg=bljg+'<span class="aclick" onclick="recent_rare_words_kltxt_b(\''+textarea_id+'\');">最新录入的稀有旧单词</span> ';
+    bljg=bljg+'<span class="aclick" onclick="recent_rare_words_kltxt_b(\''+textarea_id+'\',true);">随机稀有旧单词</span> ';
+    return bljg;
+}
+
+function recent_rare_words_kltxt_b(textarea_id,is_random=false){
+    var csmax=parseInt(document.getElementById('input_recent_rare_old_words_kltxt_b').value.trim());
+    var blxl=0;
+    var result_t=[];
+    for (let item of enwords){
+        if (en_sentence_count_global.includes(item[0])){
+            result_t.push(item[0]);
+            blxl=blxl+1;
+            if (!is_random && blxl>=csmax){break;}
+        }
+    }
+    if (is_random){
+        result_t.sort(randomsort_b);
+        result_t=result_t.slice(0,csmax);
+    }
+    document.getElementById(textarea_id).value=result_t.join('\n');
 }
