@@ -63,7 +63,36 @@ function line_default_weight_b(){
     }
 }
 
-function line_leaflet_b(csomap,islayer=false,cslist=[],cscolor='red',cscaption='',textarea_id_for_remove='',time_ele_list=[[],[]],part_len=-1){
+function line_length_2_km_leaflet_b(cslen){
+    if (cslen>500){
+        return (cslen/1000).toFixed(2)+' km';
+    } else {
+        return cslen.toFixed(2)+' m';
+    }
+}
+
+function transform_and_restore_leaflet_b(){
+    var transform_type='';
+    var restore_type='';
+    var oselect=document.getElementById('select_transform');
+    if (oselect){
+        transform_type=oselect.value;
+    } else if (typeof gps_tranform_type_global !== 'undefined'){
+        transform_type=gps_tranform_type_global;
+    }
+    
+    switch (transform_type){
+        case 'WGS84_TO_GCJ02':
+            restore_type='GCJ02_TO_WGS84';
+            break;
+        case 'GCJ02_TO_WGS84':
+            restore_type='WGS84_TO_GCJ02';
+            break;
+    }
+    return [transform_type,restore_type];
+}
+
+function line_leaflet_b(csomap,islayer=false,cslist=[],cscolor='red',cscaption='',textarea_id_for_remove='',time_ele_list=[[],[]],part_len=-1,point_type=''){
     function sub_line_leaflet_b_one_detail(tlist,elist){
         let result_t=[];
         for (let item of tlist){
@@ -96,15 +125,10 @@ function line_leaflet_b(csomap,islayer=false,cslist=[],cscolor='red',cscaption='
         }
     }
     
-    function sub_line_leaflet_b_one(sub_list){
+    function sub_line_leaflet_b_one_draw(sub_list){
         let [dots_list,cslen,start_no,end_no]=sub_list;
         
-        let blstr='';
-        if (cslen>500){
-            blstr=(cslen/1000).toFixed(2)+' km';
-        } else {
-            blstr=cslen.toFixed(2)+' m';
-        }
+        let blstr=line_length_2_km_leaflet_b(cslen);
         
         if (line_no==1){
             lte_list_leaflet_global.push('🧭 '+cscaption+(line_count>1?'':' '+blstr));
@@ -136,7 +160,8 @@ function line_leaflet_b(csomap,islayer=false,cslist=[],cscolor='red',cscaption='
             blstr=blstr+' <span style="cursor:pointer;" onclick="te_2_chart_leaflet_b(this,\''+detail_key+'\');">⛰</span>';
         }
         blstr=blstr+' <span style="cursor:pointer;" onclick="data_2_gpx_file_leaflet_b(\''+restore_type+'\',this);">⬇</span>';
-        
+        blstr=blstr+point_type;
+        blstr=blstr+' <span style="cursor:pointer;" onclick="split_2_gpx_file_leaflet_b();">🪚</span>';
         if (textarea_id_for_remove!==''){
             blstr=blstr+' <span style="cursor:pointer;" onclick="remove_data_in_textarea_leaflet_b(\''+restore_type+'\',this,\''+textarea_id_for_remove+'\');">⛔</span>';
         }
@@ -144,7 +169,10 @@ function line_leaflet_b(csomap,islayer=false,cslist=[],cscolor='red',cscaption='
         var polyline = L.polyline(dots_list, line_style[line_no % 2]);
 
         polyline.bindPopup('<span style="word-break:break-all;">'+blstr+'</span>'+(detail_key!==''?'<div id="div_'+detail_key+'" style="display:none;width:100%;height:5rem;"><canvas style="border:1px solid black; background-color:'+scheme_global['button']+'; border-radius: 1rem;"></canvas></div>':''));
-        polyline.on('click', (e) => {gpx_current_geometry_data_global=e.target.getLatLngs();}); //全局变量 - 保留注释   
+        polyline.on('click', (e) => {
+            gpx_current_geometry_data_global=e.target.getLatLngs(); //全局变量 - 保留注释   
+            lat_lon_status_b(e.latlng['lat'],e.latlng['lng'],'div_status',csomap);
+        });
         return polyline; 
     }
     
@@ -189,7 +217,7 @@ function line_leaflet_b(csomap,islayer=false,cslist=[],cscolor='red',cscaption='
     for (let blno=1;blno<list_len;blno++){
         var latlng1 = L.latLng(cslist[blno-1][0], cslist[blno-1][1]);
         var latlng2 = L.latLng(cslist[blno][0], cslist[blno][1]);
-        bllen=bllen+latlng1.distanceTo(latlng2);
+        bllen=bllen+latlng1.distanceTo(latlng2);    //线条长度计算 - 保留注释
         
         if (part_len>0 && bllen>=part_len && blno>=blstart+2 && blno<=list_len-3){
             line_list.push([cslist.slice(blstart,blno+1),bllen,blstart,blno+1])
@@ -217,22 +245,8 @@ function line_leaflet_b(csomap,islayer=false,cslist=[],cscolor='red',cscaption='
         return;
     }
     
-    var restore_type='';
-    var oselect=document.getElementById('select_transform');
-    if (oselect){
-        restore_type=oselect.value;
-    } else if (typeof gps_tranform_type_global !== 'undefined'){
-        restore_type=gps_tranform_type_global;
-    }
-    
-    switch (restore_type){
-        case 'WGS84_TO_GCJ02':
-            restore_type='GCJ02_TO_WGS84';
-            break;
-        case 'GCJ02_TO_WGS84':
-            restore_type='WGS84_TO_GCJ02';
-            break;
-    }
+    var transform_type,restore_type;
+    [transform_type,restore_type]=transform_and_restore_leaflet_b();
 
     if (cscaption==''){
         cscaption=cslist[0]+'_'+cslist[cslist.length-1];
@@ -252,7 +266,7 @@ function line_leaflet_b(csomap,islayer=false,cslist=[],cscolor='red',cscaption='
     if (line_count>1){
         var line_group = L.layerGroup();
         for (let one_line of line_list){
-            var sub_line=sub_line_leaflet_b_one(one_line);
+            var sub_line=sub_line_leaflet_b_one_draw(one_line);
             if (islayer){
                 line_group.addLayer(sub_line);
             } else {
@@ -268,7 +282,7 @@ function line_leaflet_b(csomap,islayer=false,cslist=[],cscolor='red',cscaption='
             return line_group;
         }
     } else {
-        var polyline=sub_line_leaflet_b_one(line_list[0]);
+        var polyline=sub_line_leaflet_b_one_draw(line_list[0]);
         console.log(lte_list_leaflet_global.join('\n'));
         
         if (islayer){
@@ -279,6 +293,51 @@ function line_leaflet_b(csomap,islayer=false,cslist=[],cscolor='red',cscaption='
     }
 }
 
+function split_2_gpx_file_leaflet_b(){
+    if (typeof clicked_lat_lng_global == 'undefined'){return;}
+        
+    let closestIndex = -1;
+    let minDistance = Infinity;
+
+    // 确保点击点是 L.LatLng
+    const clickLatLng = L.latLng(clicked_lat_lng_global);
+    
+    // 遍历所有点，找最近点的索引
+    for (let blxl = 0,lent=gpx_current_geometry_data_global.length; blxl < lent; blxl++){
+        const vertex = L.latLng(gpx_current_geometry_data_global[blxl]);
+        const distance = clickLatLng.distanceTo(vertex);
+        if (distance < minDistance){
+            minDistance = distance;
+            closestIndex = blxl; // 👈 记录索引！
+        }
+    }
+
+    if (closestIndex === -1){
+        console.warn('未找到最近点');
+        return;
+    }
+
+    // 分割为两段（包含分割点）
+    const part1 = gpx_current_geometry_data_global.slice(0, closestIndex + 1); // 从起点到分割点（含）
+    const part2 = gpx_current_geometry_data_global.slice(closestIndex);        // 从分割点到终点（含）
+
+    const length1 = lat_lon_dict_dots_get_length_b(part1);
+    const length2 = lat_lon_dict_dots_get_length_b(part2);
+
+    var bljg=line_length_2_km_leaflet_b(length1)+' + '+line_length_2_km_leaflet_b(length2)+' = '+line_length_2_km_leaflet_b(length1+length2);
+    alert(bljg);
+}
+
+function lat_lon_dict_dots_get_length_b(points){
+    var bllen=0;
+    for (let blno=1,lent=points.length;blno<lent;blno++){
+        var latlng1 = L.latLng(points[blno-1]);
+        var latlng2 = L.latLng(points[blno]);
+        bllen=bllen+latlng1.distanceTo(latlng2);    //线条长度计算 - 保留注释
+    }
+    return bllen;
+}
+    
 function distance_leaflet_b(lat1, lng1, lat2=false, lng2=false){
     if (lat2===false && lng2===false){
         [lat2,lng2]=lng1;
@@ -710,6 +769,7 @@ function point_size_get_leaflet_b(point_type){
 
 function draw_gpx_lines_simple_leaflet_b(onavigation,omap,cslist,csname,cscolors,textarea_id_for_remove='',dopanto=true,time_ele_list=[[],[]],part_len=-1,point_type='',point_size=false,csfillcolor='',csfillopacity=0){
     //cslist 须是 lat,lon 格式，形如 [ [ 30.221588, 120.024205 ], [ 30.221542, 120.024116 ] ] - 保留注释
+    //point_type 数字编号 - 保留注释
     //---
     if (cslist.length==0){return;}
         
@@ -723,7 +783,7 @@ function draw_gpx_lines_simple_leaflet_b(onavigation,omap,cslist,csname,cscolors
 
     line_default_weight_b();
     
-    onavigation.addLayer(line_leaflet_b(omap,true,cslist,cscolors[0],csname,textarea_id_for_remove,time_ele_list,part_len));
+    onavigation.addLayer(line_leaflet_b(omap,true,cslist,cscolors[0],csname,textarea_id_for_remove,time_ele_list,part_len,point_type));
     
     if (point_type===''){
         var type_list=['','triangle','rectangle'];
@@ -757,7 +817,7 @@ function one_point_leaflet_b(onavigation,omap,lon,lat,csradius,cscolor,dopanto=t
             var odom=circle_leaflet_b(omap,true,lon,lat,csradius,cscolor,csfillcolor,csfillopacity);
             break;
         default:
-            var odom=character_leaflet_b(cstype,omap,true, lon, lat, csradius,cscolor)
+            var odom=character_leaflet_b(cstype,omap,true, lon, lat, csradius,cscolor); //数字编号 - 保留注释
             break;
     }
     
@@ -1003,6 +1063,7 @@ function gpx_name_get_leaftlet_b(csstr,csname=''){
 }
 
 function gpx_file_draw_leaflet_b(onavigation,omap,csstr,cstype,csname='',cscolors=[],part_len=-1,is_line_no_style=true,csfillcolor='',csfillopacity=0){
+    //is_line_no_style 数字编号 - 保留注释
     var all_points=[];
     var list_t=csstr.split('<trk>');    //有几条线路就有几个 trk - 保留注释
 
@@ -1100,11 +1161,11 @@ function data_lines_2_latlon_gps_points_b(csstr='',cstype='latlon',textarea_id='
     }
 }
 
-function remove_data_in_textarea_leaflet_b(transform_type='',odom=false,textarea_id_for_remove=''){
+function remove_data_in_textarea_leaflet_b(restore_type='',odom=false,textarea_id_for_remove=''){
     var otextarea=document.getElementById(textarea_id_for_remove);
     if (!otextarea){return;}
     
-    var list_t=current_line_lat_lon_get_leaflet_b(transform_type);
+    var list_t=current_line_lat_lon_get_leaflet_b(restore_type);
     var bllen=list_t.length;
     if (bllen==0){return;}
     
@@ -1130,7 +1191,7 @@ function remove_data_in_textarea_leaflet_b(transform_type='',odom=false,textarea
         var distance=0;
         var error_found=false;
         for (let blno=0,lenb=content_t[blxl].length;blno<lenb;blno++){
-            content_t[blxl][blno]=transform_lon_lat_one_dot_b(transform_type,content_t[blxl][blno][1],content_t[blxl][blno][0],true);
+            content_t[blxl][blno]=transform_lon_lat_one_dot_b(restore_type,content_t[blxl][blno][1],content_t[blxl][blno][0],true);
             var two_points_len=distance_leaflet_b(content_t[blxl][blno],list_t[blno]);
             if (two_points_len>1000){   //超过一定距离（米），则忽略 - 保留注释
                 error_found=true;
@@ -1164,18 +1225,18 @@ function remove_data_in_textarea_leaflet_b(transform_type='',odom=false,textarea
     otextarea.value=textarea_str.replace(blreg,'');
 }
 
-function current_line_lat_lon_get_leaflet_b(transform_type=''){
+function current_line_lat_lon_get_leaflet_b(restore_type=''){
     if (typeof gpx_current_geometry_data_global == 'undefined'){return [];}
     if (Array.isArray(gpx_current_geometry_data_global)==false){return [];}
     var list_t=[];
     for (let item of gpx_current_geometry_data_global){
-        list_t.push(transform_lon_lat_one_dot_b(transform_type,item['lng'],item['lat'],true));
+        list_t.push(transform_lon_lat_one_dot_b(restore_type,item['lng'],item['lat'],true));
     }
     return list_t;
 }
 
-function data_2_gpx_file_leaflet_b(transform_type='',odom=false){
-    var list_t=current_line_lat_lon_get_leaflet_b(transform_type);
+function data_2_gpx_file_leaflet_b(restore_type='',odom=false){
+    var list_t=current_line_lat_lon_get_leaflet_b(restore_type);
     if (list_t.length==0){return;}
     
     var savename='';
@@ -1230,4 +1291,18 @@ function rectangle_angles_leaflet_b(southWest,northEast,return_dict=true){
     } else {
         return [northWest,southEast];
     }
+}
+
+function lat_lon_status_b(cslat,cslon,status_id,csmap){
+    //[cslon,cslat]=transform_lon_lat_one_dot_b(transform_type,cslon,cslat);
+    var ostatus=document.getElementById(status_id);
+    if (ostatus){
+        ostatus.innerHTML='('+csmap.getZoom()+') lat,lng: '+cslat+','+cslon;
+        clicked_lat_lng_global=[cslat,cslon];
+        
+        circle_leaflet_b(csmap,false,cslon,cslat);    //根据存储坐标画圆来检验位置一致性 - 保留注释
+        
+        return true;
+    }
+    return false;
 }

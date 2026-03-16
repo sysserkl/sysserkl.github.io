@@ -272,7 +272,7 @@ function read_gpx_gps_points(csstr,csname='',cscolors=false,part_len=false){
         //cscolors 形似 [ "blue:red:green:brown:cyan:black:purple", "cyan", "red" ] - 保留注释
     }
 
-    var is_no_style=klmenu_check_b('span_line_no_gps',false);
+    var is_no_style=klmenu_check_b('span_line_no_gps',false);   //数字编号
 
     var all_points=gpx_file_draw_leaflet_b(navigation_layer_gps_global,omap_gps_points_global,csstr,bltype,csname,cscolors,part_len,is_no_style);
 
@@ -703,11 +703,13 @@ function current_position_gps_points(){
         function (position){
             var lon = position.coords.longitude;
             var lat  = position.coords.latitude;
-            var bltype=document.getElementById('select_transform').value;
-            [lon,lat]=transform_lon_lat_one_dot_b(bltype,lon,lat);
+            //var bltype=document.getElementById('select_transform').value;
             
-            document.getElementById('div_status').innerHTML='lat,lng: '+lat+','+lon;
-            clicked_lat_lng_global=[lat,lon];
+            lat_lon_status_b(lat,lon,'div_status',omap_gps_points_global);
+            //[lon,lat]=transform_lon_lat_one_dot_b(bltype,lon,lat);
+            
+            //document.getElementById('div_status').innerHTML='lat,lng: '+lat+','+lon;
+            //clicked_lat_lng_global=[lat,lon];
             omap_gps_points_global.panTo(new L.LatLng(lat,lon));
 
             current_layer_refresh_gps_points();
@@ -788,20 +790,23 @@ function init_page_gps_points(is_simple=false,map_type='',map_id='osm'){
     }
 
     omap_gps_points_global.addEventListener('click', function(ev){
-        var oselect=document.getElementById('select_transform');
-        if (oselect){
-            var bltype=oselect.value;    
-        } else if (typeof gps_tranform_type_global == 'string' ){
-            var bltype=gps_tranform_type_global;
-        } else {return;}
+        //var oselect=document.getElementById('select_transform');
+        //if (oselect){
+            //var bltype=oselect.value;    
+        //} else if (typeof gps_tranform_type_global == 'string'){
+            //var bltype=gps_tranform_type_global;
+        //} else {return;}
         
-        var bllon, bllat;
-        [bllon,bllat]=transform_lon_lat_one_dot_b(bltype,ev.latlng.lng,ev.latlng.lat);
-        var ostatus=document.getElementById('div_status');
-        if (ostatus){
-            ostatus.innerHTML='('+omap_gps_points_global.getZoom()+') lat,lng: '+bllat+','+bllon;
+        //var bllon, bllat;
         
-            clicked_lat_lng_global=[bllat,bllon],
+        
+        //[bllon,bllat]=transform_lon_lat_one_dot_b(bltype,ev.latlng.lng,ev.latlng.lat);
+        //var ostatus=document.getElementById('div_status');
+        //if (ostatus){
+        if (lat_lon_status_b(ev.latlng.lat,ev.latlng.lng,'div_status',omap_gps_points_global)){
+            //ostatus.innerHTML='('+omap_gps_points_global.getZoom()+') lat,lng: '+bllat+','+bllon;
+        
+            //clicked_lat_lng_global=[bllat,bllon];
             current_layer_refresh_gps_points();
             circle_distance_show_gps_points(ev.latlng.lng,ev.latlng.lat);
         }
