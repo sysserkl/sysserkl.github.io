@@ -1300,7 +1300,7 @@ function lat_lon_status_b(cslat,cslon,status_id,csmap){
         ostatus.innerHTML='('+csmap.getZoom()+') lat,lng: '+cslat+','+cslon;
         clicked_lat_lng_global=[cslat,cslon];
         
-        circle_leaflet_b(csmap,false,cslon,cslat);    //根据存储坐标画圆来检验位置一致性 - 保留注释
+        //circle_leaflet_b(csmap,false,cslon,cslat);    //根据存储坐标画圆来检验位置一致性 - 保留注释
         
         return true;
     }
