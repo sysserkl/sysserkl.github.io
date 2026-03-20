@@ -5,7 +5,7 @@
 <meta charset="UTF-8" />
 <script src="../hard_ln_io/klbase.js"></script>
 <script>
-klbase_addons_import_js_b(['css','en_de_str','date','rows','eng','d3'],['turndown.js','marked.umd.js','html2canvas.js'],['jieba_pb_dict_data.js'],['rows_code.js','../hard_ln_io/sha.js']);
+klbase_addons_import_js_b(['css','en_de_str','date','rows','eng','d3','mermaid','wiki'],['mermaid.min.js','turndown.js','marked.umd.js','html2canvas.js'],['jieba_pb_dict_data.js'],['rows_code.js','../hard_ln_io/sha.js']);
 </script>
 <script>
 import_wordcloud_js_d3_b();
@@ -41,7 +41,7 @@ div.div_leaflet{border:0.1rem dotted grey; border-radius:1rem; padding:0.2rem 0.
 <span class="aclick span_leaflet" id="span_leaflet_random" onclick="leaflet_klr2('random')">随机</span>
 <span class="aclick span_leaflet" id="span_leaflet_group" onclick="leaflet_klr2('group')">分组</span>
 <span class="aclick span_leaflet" id="span_leaflet_group" onclick="leaflet_klr2('en')">EN</span>
-<span class="aclick span_leaflet" id="span_leaflet_group" onclick="leaflet_klr2('html_js')">HTML_JS_字词</span>
+<span class="aclick span_leaflet" id="span_leaflet_group" onclick="leaflet_klr2('html_js')">HTML_JS_字词_流程</span>
 <!--------------------->
 <span class="aclick" onclick="blank_rows_add_klr_b();">add blank rows</span>
 常用操作：<select id="oquick" style="width:150px;"></select>
@@ -148,7 +148,8 @@ ratio: <input type="number" id="input_ratio_jieba_klr2" min=0 value=1 />
 w: <input type="number" id="input_width_jieba_klr2" min=0 value=800 />
 h: <input type="number" id="input_height_jieba_klr2" min=0 value=600 />
 <span class="aclick" onclick="jieba_klr2();">分词</span>
-<span class="aclick" onclick="wordcloud_klr2();">wordcloud</span>
+<span class="aclick" onclick="wordcloud_klr2();">Wordcloud</span>
+<span class="aclick" onclick="mermaid_klr2();">Mermaid</span>
 </div>
 <!--------------------->
 <p id="p_buttons_1" align=right></p>

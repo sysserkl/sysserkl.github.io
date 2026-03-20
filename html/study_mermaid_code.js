@@ -1,13 +1,14 @@
-function flowchart_study_mermaid(){
+function flowchart_study_mermaid(cstyle='LR'){
+    //cstyle: TD LR RL
     const data=`
-    graph TD
+    graph ${cstyle}
     A[开始] --> B{条件判断}
-    B -->|是| C[执行操作A]
-    B -->|否| D[执行操作B]
-    C --> E[结束]
-    D --> E
+    B -->|是| C[执行操作甲]
+    B -->|否| D[执行操作<b>乙</b>]
+    C --> step4[结束]
+    D --> step4
     style A fill:#f9f,stroke:#333,stroke-width:2px
-    style E fill:#ccf,stroke:#333,stroke-width:2px
+    style step4 fill:#ccf,stroke:#333,stroke-width:2px
     `;
     
     graph_generate_study_mermaid(data);
@@ -65,8 +66,11 @@ function gantt_study_mermaid(){
 
 function graph_generate_study_mermaid(data){
     var otd=document.getElementById('td_mermaid');
-    otd.innerHTML= `<div>${data}</div>`;   //需要添加div，否则 td_mermaid 会被修改 - 保留注释
-    var osub=otd.querySelector('div');
+    otd.innerHTML='';
+    
+    var osub=document.createElement('div'); //需要添加div，否则 td_mermaid 会被修改 - 保留注释
+    osub.innerHTML=`${data}`;
+    otd.appendChild(osub);
     // 重新渲染图表
     mermaid.init(undefined, osub);
 }

@@ -682,3 +682,36 @@ function crpytology_klr2(rows=99,cols=26,start_l='L',do_test=true){
         }
     }
 }
+
+function mermaid_klr2(){
+    function sub_mermaid_klr2_one(){
+        if (blxl>=bllen){
+            return;
+        }
+        
+        var item=list_t[blxl];
+        item=str_convert_mermaid_b(wiki_all_format_b(item)).join('\n');
+        if (item!==''){
+            line_no=line_no+1;
+            odiv.insertAdjacentHTML('beforeend','<hr /><h3>'+line_no+'</h3>');
+            item='graph TD\n'+item;
+            console.log(item);  //此行保留 - 保留注释
+            var osub=document.createElement('p');
+            osub.style.textAlign='center';
+            osub.innerHTML=`${item}`;
+            odiv.appendChild(osub);
+            mermaid.init(undefined, osub);
+        }
+        blxl=blxl+1;
+        setTimeout(sub_mermaid_klr2_one,1);
+    }
+    
+    var list_t=document.getElementById('textarea_rows_content').value.trim().split('\n');
+    
+    var odiv=document.getElementById('div_status');
+    odiv.innerHTML='';
+    var blxl=0;
+    var line_no=0;
+    var bllen=list_t.length;
+    sub_mermaid_klr2_one();
+}
