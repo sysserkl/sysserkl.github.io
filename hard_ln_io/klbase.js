@@ -2621,12 +2621,34 @@ function string_2_txt_file_b(csstr,savename,cstype='csv'){
 }
 
 function blob_2_download_link_b(blob,savename){
+    var blurl=URL.createObjectURL(blob);
+    
     var odom = document.createElement('a');
-    odom.href = URL.createObjectURL(blob);
+    odom.href = blurl;
     odom.setAttribute('download', savename);
     document.body.appendChild(odom); 
     odom.click();
     document.body.removeChild(odom);
+    URL.revokeObjectURL(blurl);
+}
+
+function export_svg_b(svgElement, filename = 'chart.svg'){
+    if (!svgElement || svgElement.tagName.toLowerCase() !== 'svg'){
+        console.error('未找到有效的 SVG 元素');
+        return;
+    }
+
+    // 序列化 SVG 元素为字符串（保留 xmlns 等关键属性）
+    const serializer = new XMLSerializer();
+    let svgStr = serializer.serializeToString(svgElement);
+
+    // 确保有 xmlns 声明（某些浏览器会省略，导致文件无法打开）
+    if (!svgStr.includes('xmlns')){
+        svgStr = svgStr.replace('<svg ', '<svg xmlns="http://www.w3.org/2000/svg" ');
+    }
+
+    const blob = new Blob([svgStr], { type: 'image/svg+xml;charset=utf-8' });   //SVG 是 XML 文件，默认应使用 UTF-8 编码。如果字符串包含中文或特殊符号，需明确指定编码 - 保留注释
+    blob_2_download_link_b(blob, filename);
 }
 
 function string_base64_2_file_b(base64Data, cstype,savename){

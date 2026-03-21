@@ -264,7 +264,10 @@ function menu_klr2(){
     '<a href="../module/CSV_to_Wiki_Table.htm" onclick="'+str_t+'" target=_blank>CSV to Wiki Table</a>',
     '<a href="readlater.htm" onclick="'+str_t+'" target=_blank>readlater</a>',
     ];    
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_fn,'','20rem','1rem','1rem','60rem')+klmenu_b(klmenu_ende,'🛡️','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_sort,'↕','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_convert,'↔','20rem','1rem','1rem','60rem')+klmenu_b(klmenu_batch,'🗂','28rem','1rem','1rem','60rem')+klmenu_b(klmenu_links,'L','12rem','1rem','1rem','60rem'),'','0rem')+' ');
+    
+    var klmenu_config=root_font_size_menu_b(str_t);
+
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_fn,'','20rem','1rem','1rem','60rem')+klmenu_b(klmenu_ende,'🛡️','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_sort,'↕','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_convert,'↔','20rem','1rem','1rem','60rem')+klmenu_b(klmenu_batch,'🗂','28rem','1rem','1rem','60rem')+klmenu_b(klmenu_links,'L','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','20rem','1rem','1rem','60rem'),'','0rem')+' ');
 }
 
 function random_txt_files_klr2(cssize=100){
@@ -683,8 +686,8 @@ function crpytology_klr2(rows=99,cols=26,start_l='L',do_test=true){
     }
 }
 
-function mermaid_klr2(){
-    function sub_mermaid_klr2_one(){
+function mermaid_show_klr2(){
+    async function sub_mermaid_show_klr2_one(){
         if (blxl>=bllen){
             return;
         }
@@ -693,17 +696,27 @@ function mermaid_klr2(){
         item=str_convert_mermaid_b(wiki_all_format_b(item)).join('\n');
         if (item!==''){
             line_no=line_no+1;
-            odiv.insertAdjacentHTML('beforeend','<hr /><h3>'+line_no+'</h3>');
+            
+            var chartId = 'mermaid-' + crypto.randomUUID();   // 自动生成唯一 ID
+
+            odiv.insertAdjacentHTML('beforeend','<hr /><h3 style="cursor:pointer;" onclick="mermaid_export_klr2(\''+chartId+'\');">'+line_no+'</h3>');
             item='graph TD\n'+item;
             console.log(item);  //此行保留 - 保留注释
-            var osub=document.createElement('p');
-            osub.style.textAlign='center';
-            osub.innerHTML=`${item}`;
-            odiv.appendChild(osub);
-            mermaid.init(undefined, osub);
+
+            var result_t = await mermaid.render(chartId, item);
+            var blsvg = result_t.svg;
+            
+            odiv.insertAdjacentHTML('beforeend',`<p style="text-align:center;">${blsvg}</p>`);
+
+            //以下几行保留 - 保留注释
+            //var osub=document.createElement('p');
+            //osub.style.textAlign='center';
+            //odiv.appendChild(osub);
+            //osub.innerHTML=`${item}`;
+            //mermaid.init(undefined, osub);
         }
         blxl=blxl+1;
-        setTimeout(sub_mermaid_klr2_one,1);
+        setTimeout(sub_mermaid_show_klr2_one,1);
     }
     
     var list_t=document.getElementById('textarea_rows_content').value.trim().split('\n');
@@ -713,5 +726,11 @@ function mermaid_klr2(){
     var blxl=0;
     var line_no=0;
     var bllen=list_t.length;
-    sub_mermaid_klr2_one();
+    sub_mermaid_show_klr2_one();
+}
+
+function mermaid_export_klr2(csid){
+    var osvg=document.getElementById(csid);
+    if (!osvg){return;}
+    export_svg_b(osvg,csid+'.svg');
 }
