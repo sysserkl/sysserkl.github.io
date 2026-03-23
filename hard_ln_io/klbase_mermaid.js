@@ -1,4 +1,7 @@
-function str_convert_mermaid_b(csstr){
+function str_convert_mermaid_b(csstr,wiki_format=true,return_str=true,cshead='graph TD',show_console=true){
+    if (wiki_format){
+        csstr=wiki_all_format_b(csstr); //依赖klbase_wiki.js
+    }
     csstr=csstr.trim();
     var lines=str_expand_mermaid_b(csstr);
     var result_t=[];
@@ -34,6 +37,19 @@ function str_convert_mermaid_b(csstr){
             prev_node='step'+blat+acol;
         }
     }
+    
+    if (result_t.length>0 && cshead!==''){
+        result_t=[cshead].concat(result_t);
+    }
+        
+    if (return_str){
+        result_t=result_t.join('\n');
+    }
+
+    if (show_console){
+        console.log(result_t);
+    }
+    
     return result_t;
 }
 
@@ -67,3 +83,44 @@ function str_expand_mermaid_b(str){
     return results;
 }
 
+function show_mermaid_b(cslist,odiv,show_no=true,add_hr=true){
+    async function sub_show_mermaid_b_one(){
+        if (blxl>=bllen){return;}
+        
+        var item=cslist[blxl];
+        item=str_convert_mermaid_b(item);
+        if (item!==''){
+            line_no=line_no+1;
+            
+            var chartId = 'mermaid-' + crypto.randomUUID();   // 自动生成唯一 ID
+
+            odiv.insertAdjacentHTML('beforeend',hr_str+'<h3 style="cursor:pointer;" onclick="export_mermaid_b(\''+chartId+'\');">'+(show_no?line_no:'⇩')+'</h3>');
+
+            var result_t = await mermaid.render(chartId, item);
+            var blsvg = result_t.svg;
+            
+            odiv.insertAdjacentHTML('beforeend',`<p style="text-align:center;">${blsvg}</p>`);
+
+            //以下几行保留 - 保留注释
+            //var osub=document.createElement('p');
+            //osub.style.textAlign='center';
+            //odiv.appendChild(osub);
+            //osub.innerHTML=`${item}`;
+            //mermaid.init(undefined, osub);
+        }
+        blxl=blxl+1;
+        setTimeout(sub_show_mermaid_b_one,1);
+    }
+    
+    var hr_str=(add_hr?'<hr />':'');
+    var blxl=0;
+    var line_no=0;
+    var bllen=cslist.length;
+    sub_show_mermaid_b_one();
+}
+
+function export_mermaid_b(csid){
+    var osvg=document.getElementById(csid);
+    if (!osvg){return;}
+    export_svg_b(osvg,csid+'.svg');
+}
