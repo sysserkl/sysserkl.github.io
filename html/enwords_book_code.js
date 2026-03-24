@@ -625,7 +625,6 @@ function import_enwords_book(cstype,csmax=-1){
         case 'new_hot_not_in_sentence':
             if (typeof new_words_count_global !== 'undefined'){
                 var result_t=object2array_b(new_words_count_global,true,2);
-                
                 if (cstype.endsWith('_sentence')){
                     var words_in_sentence_set=sentences_2_words_set_enbook_b(false,0);
                     var new_host_in_list=[[],[]];
