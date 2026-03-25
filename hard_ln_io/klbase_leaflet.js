@@ -131,7 +131,7 @@ function line_leaflet_b(csomap,islayer=false,cslist=[],cscolor='red',cscaption='
         let blstr=line_length_2_km_leaflet_b(cslen);
         
         if (line_no==1){
-            lte_list_leaflet_global.push('🧭 '+cscaption+(line_count>1?'':' '+blstr));
+            lte_list_leaflet_global.push('🧭 '+cscaption+(line_count>1?'':' '+blstr)+(point_type==''?'':' '+point_type));
         }
         
         detail_key='';
