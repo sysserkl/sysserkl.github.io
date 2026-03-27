@@ -238,7 +238,7 @@ function show_sentence_enwc_b(maxlines=0,showcount=true,is_random=false,show_but
         var odiv=document.querySelector('div.div_word_sentence_rank');
         if (!odiv){return;}
         word_sentence_rank=object2array_b(word_sentence_rank,false,2);
-        var rank_dict={'K_0':[],'K_1':[],'K_0+1':[],'K_2':[],'K_3':[],'K_4':[],'K_5':[],'K_more':[]};
+        var rank_dict={'K_0':[],'K_1':[],'K_0+1':[],'K_2':[],'K_3':[],'K_4':[],'K_5':[],'K_2~5':[],'K_more':[]};
         for (let item of word_sentence_rank){
             if (rank_dict['K_'+item[0]]==undefined){
                 rank_dict['K_more']=rank_dict['K_more'].concat(item[1]);
@@ -246,8 +246,9 @@ function show_sentence_enwc_b(maxlines=0,showcount=true,is_random=false,show_but
                 rank_dict['K_'+item[0]]=rank_dict['K_'+item[0]].concat(item[1]);
             }
         }
-        
-        rank_dict['K_0+1']=rank_dict['K_0'].concat(rank_dict['K_1']);        
+
+        rank_dict['K_0+1']=rank_dict['K_0'].concat(rank_dict['K_1']);
+        rank_dict['K_2~5']=rank_dict['K_2'].concat(rank_dict['K_3']).concat(rank_dict['K_4']).concat(rank_dict['K_5']);
         
         var bljg=[];
         for (let key in rank_dict){

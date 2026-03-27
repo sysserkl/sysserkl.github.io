@@ -320,6 +320,7 @@ function new_words_form_enwords_book(){
     bljg=bljg+'分隔符：<input type="text" id="input_filter_delimiter" value=" " /> ';
 
     bljg=bljg+'<span class="aclick" onclick="filter_key_enwords_book();">Filter</span> ';
+    bljg=bljg+'<span class="aclick" onclick="short_words_ignore_enwords_book();">忽略短单词</span> ';
     bljg=bljg+textarea_buttons_b('textarea_new_words1','清空,复制');
 
     bljg=bljg+'<br />'+checkbox_kl_b('remove_square','删除方括号[](否则方括号中的内容视为音标而不收录')+' ';
@@ -965,15 +966,18 @@ function character2space_enwords_book(cscharacter,cscaption){
     otextarea.value=blstr;
 }
 
-function filter_key_enwords_book(){
+function short_words_ignore_enwords_book(){
+    filter_key_enwords_book('[a-z]{5,}(:r)');
+}
+
+function filter_key_enwords_book(default_value=''){
     var blstr=document.getElementById('textarea_new_words1').value.trim();
     if (blstr==''){return;}
-    var blkey=prompt('输入筛选关键字：') || '';
+    var blkey=prompt('输入筛选关键字：',default_value) || '';
     if (blkey==''){return;}
     
     var is_reg=false;
     [blkey,is_reg]=str_reg_check_b(blkey,is_reg);
-
     var result_t=new Set();
     var bldelimiter=delimiter_get_b(document.getElementById('input_filter_delimiter').value);
     var list_t=blstr.split(bldelimiter);

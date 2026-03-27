@@ -1701,7 +1701,7 @@ function enwords_lines_2_js_array_b(aword,emoji_list,three_lines=false){
 function enwords_different_types_div_b(cswlist,add_form=false,textarea_id='',textarea_name='',button_type='',more_buttons=''){
     var blstr='<p>';
     blstr=blstr+'<select onchange="enwords_different_types_textarea_b(this);">';
-    var type_names=['','(o)asterisk','cut','(o)js','count','(o)temp','(o)wiki','reg','space','rare_words','filter','group','random_sort','switch with the first textarea','移除行无非字母字符'];
+    var type_names=['','(o)asterisk','cut','(o)js','count','(o)temp','(o)wiki','reg','space','rare_words','filter','group','random_sort','switch with the first textarea','移除行无非字母字符','移除短单词'];
     type_names.sort();
     for (let item of type_names){
         blstr=blstr+'<option>'+item+'</option>\n';
@@ -1887,8 +1887,10 @@ function enwords_different_types_textarea_b(oselect){
                 bljg=false;
             }
             break;
+        case '移除短单词':
         case 'filter':
-            blkey=prompt('输入筛选关键词，如(,,\\d+$(:r))');
+            var default_value=(oselect.value=='移除短单词'?'[a-z]{5,}(:r)':'');
+            blkey=prompt('输入筛选关键词，如(,,\\d+$(:r))',default_value);
             if (blkey==null){
                 bljg='';
             } else {
