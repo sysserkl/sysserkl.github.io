@@ -332,8 +332,9 @@ function enwords_key_new_rare_menu_kltxt_b(csmenu,str_t,is_full=true){
         ['搜索','rare_enwords_search_kltxt_b();',true],
         ['例句+生词+','rare_enwords_search_kltxt_b(true,true,true);',true],
         ['可选','show_rare_and_load_sentence_kltxt_b(true,true,flist_2_ensentence_b);',true],    
-        ['① 重复剔除','rare_enwords_unique_kltxt_b(\'rare\');',true],
         ['当前页面','current_page_rare_words_kltxt_b(\'rare\',true);',true],
+        ['无关行剔除','rows_irrelevant_remove_kltxt_b(\'rare\');',true],
+        ['① 重复剔除','rare_enwords_unique_kltxt_b(\'rare\');',true],
         ['② 例句提取','current_page_2_ensentence_b(\'rare\');',true],
         ['① + ②','rare_enwords_unique_kltxt_b(\'rare\',true);',true],        
         ];
@@ -359,6 +360,8 @@ function enwords_key_new_rare_menu_kltxt_b(csmenu,str_t,is_full=true){
 
     if (is_full){
         var group_list=[
+        ['无关行剔除','rows_irrelevant_remove_kltxt_b(\'key\');',true],
+        ['首词加亮','enwords_debut_highlight_kltxt_b();',true],        
         ['① 重复剔除','rare_enwords_unique_kltxt_b(\'key\');',true],
         ['② 例句提取','current_page_2_ensentence_b(\'key\');',true],
         ['① + ②','rare_enwords_unique_kltxt_b(\'key\',true);',true],
@@ -369,6 +372,88 @@ function enwords_key_new_rare_menu_kltxt_b(csmenu,str_t,is_full=true){
         ];
     }
     csmenu.push(menu_container_b(str_t,group_list,'关键词：'));
+}
+
+function enwords_debut_highlight_kltxt_b(){
+    function sub_enwords_debut_highlight_kltxt_b_one(){
+        let lent=wordlist.length;
+        if (blxl>=bllen || lent==0){
+            document.title=old_title;
+            if (highlight_list.length>0){
+                document.getElementById('divhtml2').innerHTML='<div style="margin:0.5rem;">'+enwords_different_types_div_b(highlight_list,false,'','','',close_button_b('divhtml2'))+'</div>';
+                highlight_text_b(highlight_list,orows,true,new_words_kltxt_b);
+            } else {
+                alert('未发现首词');
+            }
+            return;
+        }
+        
+        let remove_no=[];
+        let remove_word=[];
+        let arow=filelist[blxl];
+        for (let col=0;col<lent;col++){
+            let aword=wordlist[col];
+            if (arow.match(new RegExp('\\b'+aword+'\\b','i'))){
+                if (no_list.includes(blxl)){
+                    highlight_list.push(aword);
+                }
+                remove_no.push(col);    //首次发现即移除 - 保留注释
+                remove_word.push(aword.toLowerCase());
+            }
+        }
+
+        if (remove_no.length>0){
+            remove_no.reverse();
+            for (let one_no of remove_no){
+                wordlist.splice(one_no,1);
+            }
+            
+            while (true){
+                let blfound=false;
+                for (let col=0,lenb=wordlist.length;col<lenb;col++){
+                    if (remove_word.includes(wordlist[col].toLowerCase())){
+                        console.log('移除',blxl,wordlist[col]);
+                        wordlist.splice(col,1);
+                        blfound=true;
+                        break;
+                    }
+                }
+                if (!blfound){break;}
+            }
+        }
+        
+        blxl=blxl+1;
+        if (blxl % 500 == 0){
+            document.title=blxl+'/'+bllen+' - '+old_title;
+            setTimeout(sub_enwords_debut_highlight_kltxt_b_one,1);
+        } else {
+            sub_enwords_debut_highlight_kltxt_b_one();
+        }
+    }
+    
+    var odiv=document.getElementById('divhtml');
+    var ohighlights=odiv.querySelectorAll('span.span_key_highlight, span.span_rare_word_search_links, span.span_new_word_search_links');
+    for (let one_highlight of ohighlights){
+        one_highlight.outerHTML=one_highlight.innerHTML;
+    }
+    
+    var orows=container_query_doms_get_kltxt_b('p span.txt_content, li span.txt_content');
+
+    var wordlist=[];
+    var no_list=[];
+    for (let one_row of orows){
+        var ono=one_row.parentNode.querySelector('span.txtsearch_kltxt_lineno');
+        if (!ono){continue;}
+        no_list.push(parseInt(ono.innerText.replace(/[\(\)]/g,''))-1);
+        wordlist=wordlist.concat(one_row.innerText.match(/\b[a-z\-\']+\b/ig) || []);
+        wordlist=array_unique_b(wordlist);
+    }
+    
+    var blxl=0;
+    var bllen=filelist.length;
+    var highlight_list=[];
+    var old_title=document.title;
+    sub_enwords_debut_highlight_kltxt_b_one();
 }
 
 function txtmenus_kltxt_b(cstype=''){
@@ -563,7 +648,7 @@ function txtmenus_kltxt_b(cstype=''){
     var bljg='';
     var colors=klmenu_b(color_menu,'🎨',(ismobile_b()?'16rem':'20rem'),'',fontsize,'20rem');
     if (cstype!=='digest'){
-        bljg=bljg+klmenu_b(menu_general,'','40rem','',fontsize);
+        bljg=bljg+klmenu_b(menu_general,'','45rem','',fontsize);
         bljg=bljg+klmenu_b(menu_dir,'🔍',menu_dir_width,'',fontsize);
         bljg=bljg+klmenu_b(menu_digest,'🖊','34rem','',fontsize);       
         bljg=bljg+colors;
@@ -2759,6 +2844,20 @@ function rare_words_in_digest_set_generate_kltxt_b(){
     return rare_words;
 }
 
+function rows_irrelevant_remove_kltxt_b(cstype='rare'){
+    var caption,dom_str;
+    [caption,dom_str]=new_rare_key_doms_get_kltxt_b(cstype).slice(1,3);
+    if (!confirm('是否剔除无'+caption+'的行？')){return;}
+    var orows=container_query_doms_get_kltxt_b('p span.txt_content, li span.txt_content');
+    var blcount=0;
+    for (let one_row of orows){
+        if (one_row.querySelector(dom_str)){continue;}
+        one_row.parentNode.parentNode.removeChild(one_row.parentNode);
+        blcount=blcount+1;
+    }
+    alert('移除了 '+blcount+' 行');
+}
+
 function rare_enwords_unique_kltxt_b(cstype='rare',get_sentence=false){
     function sub_rare_enwords_unique_kltxt_b_remove(one_row){
         var owords=new_rare_key_doms_get_kltxt_b(cstype,one_row)[0];
@@ -2779,8 +2878,7 @@ function rare_enwords_unique_kltxt_b(cstype='rare',get_sentence=false){
     var caption=new_rare_key_doms_get_kltxt_b(cstype)[1];
     if (!confirm('是否剔除含有相同'+caption+'的行'+(get_sentence?'并提取例句':'')+'？')){return;}
 
-    var odiv=document.getElementById('divhtml');
-    var orows=odiv.querySelectorAll('p span.txt_content, li span.txt_content');
+    var orows=container_query_doms_get_kltxt_b('p span.txt_content, li span.txt_content');
     var rare_words=rare_words_in_digest_set_generate_kltxt_b();
 
     var blcount=0;
@@ -4764,30 +4862,34 @@ function best_sentences_kltxt_b(csid,filter_str='',csreg=false){
 function new_rare_key_doms_get_kltxt_b(cstype='',ocontainer=false){
     var owords=[];
     var caption='';
+    var dom_str='';
     if (ocontainer===false){
         ocontainer=document;
     }
     
     switch (cstype){
         case 'rare':
-            owords=ocontainer.querySelectorAll('span.span_rare_word_search_links');
+            dom_str='span.span_rare_word_search_links';
+            owords=ocontainer.querySelectorAll(dom_str);
             caption='稀有单词';
             break;
         case 'new':
-            owords=ocontainer.querySelectorAll('span.span_new_word_search_links');
+            dom_str='span.span_new_word_search_links';        
+            owords=ocontainer.querySelectorAll(dom_str);
             caption='新单词';
             break;
         case 'key':
-            owords=ocontainer.querySelectorAll('span.span_key_highlight');
+            dom_str='span.span_key_highlight';        
+            owords=ocontainer.querySelectorAll(dom_str);
             caption='关键字';
             break;
     }
-    return [owords,caption];
+    return [owords,caption,dom_str];
 }
 
 function current_page_rare_words_kltxt_b(cstype='',textarea_mode=false){
     var owords,caption;
-    [owords,caption]=new_rare_key_doms_get_kltxt_b(cstype);
+    [owords,caption]=new_rare_key_doms_get_kltxt_b(cstype).slice(0,2);
     
     var key_list=[];
     for (let item of owords){
