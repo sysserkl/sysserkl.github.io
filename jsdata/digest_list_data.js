@@ -226,6 +226,7 @@ var digest_list_source_global=[
 ["ying_guo_yu_wen_tuo_msnesgs_324853_digest",1,"2026-03-30",72],
 ["da_dian_ying_shuang_yu_ydsmhzzxyxgl_488720_digest",1,"2026-01-22",121],
 ["range_why_generalists_triumph_in_asw_4937_digest",1,"2026-03-25",245],
+["treasury_of_greek_mythology_2638_digest",1,"2026-03-30",52],
 ["the_story_of_earth_1611_digest",1,"2026-02-16",285],
 ["the_house_of_cards_complete_t_3242_digest",1,"2026-02-16",113],
 ["da_dian_ying_shuang_yu_ydcafagdz1czxf_478205_digest",1,"2026-01-22",166],
