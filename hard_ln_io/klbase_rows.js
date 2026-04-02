@@ -52,6 +52,10 @@ function sort_rows_klr_b(csid='textarea_rows_content',cstype=''){
         case 'unique':
             list_t=array_unique_b(list_t);
             break;
+        case 'wiki_title':
+            list_t.sort(function (a,b){return a.replace(/^.*?\[https?:\/\/[^\s]+/,'') >b.replace(/^.*?\[https?:\/\/[^\s]+/,'') ? 1 : -1;});
+            //对如下格式进行排序：# [https://www.zaobao.com/news/world/story20240530-3753839 20240530 | 朝鲜试射至少10枚导弹 韩日美齐声谴责 | 联合早报网]
+            break;
     }
 
 	var result_t=[];
@@ -1324,7 +1328,7 @@ function sort_type_get_klr_b(return_group=true){
     ['数字：',[['asc_num','升序'],['desc_num','倒序']]],
     ];
     
-    var list_t2=[['reverse','倒转'],['cn','汉字升序'],['unique','unique'],['length','长度排序'],['random','随机排序']];
+    var list_t2=[['reverse','倒转'],['cn','汉字升序'],['unique','unique'],['length','长度排序'],['random','随机排序'],['wiki_title','WIKI 标题升序']];
     if (return_group){
         return [list_t1,list_t2];
     } else {
