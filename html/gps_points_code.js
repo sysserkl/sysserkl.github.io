@@ -1754,9 +1754,19 @@ function menu_gps_points(){
     
     var klmenu_config=[
     '<span id="span_colors_gps_points" class="span_menu" style="font-size:small;word-break:break-all;" onclick="'+str_t+'colors_settings_gps_points();">line color: '+colors_default_value_gps_points()+'</span>',
+    ];
+    
+    group_list=[
+    ['<font color="red">red</font>','colors_settings_gps_points(\'red\');',true],
+    ['<font color="blue">blue</font>','colors_settings_gps_points(\'blue\');',true],
+    ['默认','colors_settings_gps_points(\'默认\');',true],
+    ];    
+    klmenu_config.push(menu_container_b(str_t,group_list,'颜色：'));        
+    
+    klmenu_config=klmenu_config.concat([
     '<span class="span_menu"><select onchange="quick_buttons_select_gps_points(this.value);"><option></option><option>lat,lon处理</option></select></span>',
     '<span class="span_menu">fill opacity: <input type="number" id="input_fill_opacity_gps_points" value="0" min="0" max="1" step="0.1" /> <label><input type="checkbox" id="checkbox_stroke_line_border_gps_points" checked />stroke</label> 线路分段(m): <input type="number" id="input_sub_line_length_gps_points" value="0" min="100" step="100" style="width:5rem;" /> 线宽: <input type="number" id="input_line_weight_gps_points" min="3" max="10" step="1" style="width:2rem;" onchange="gpx_line_weight_global=parseInt(this.value);" /></span>',
-    ];
+    ]);
 
     group_list=[
     ['距离圈设置','circle_distance_settings_gps_points();',true],
@@ -2447,12 +2457,15 @@ function colors_default_value_gps_points(){
     return 'blue:red:green:brown:greenyellow:cyan:black:tomato:dodgerblue:hotpink:indianred:purple,cyan,red';
 }
 
-function colors_settings_gps_points(){
+function colors_settings_gps_points(new_value=''){
     var ospan=document.getElementById('span_colors_gps_points');
     if (!ospan){return;}
-
-    var old_value=colors_get_gps_points(false).join(',');
-    var new_value=(prompt('输入颜色，输入 默认 则返回默认值：',old_value) || '').trim();
+    
+    if (new_value==''){
+        var old_value=colors_get_gps_points(false).join(',');
+        new_value=(prompt('输入颜色，输入 默认 则返回默认值：',old_value) || '').trim();
+    }
+    
     if (new_value==''){return;}
     
     new_value=new_value.replace(/[，\s]/g,',');
