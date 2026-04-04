@@ -3266,7 +3266,7 @@ function phrase_in_old_words_b(merge_phrase=false){
     var phrase2_set=new Set();
 
     for (let item of enwords){
-        if (item[0].includes(' ')){
+        if (item[0].includes(' ')){ //可能同时存在空格和- - 保留注释
             phrase1_set.add(item[0]);
         } else if (item[0].includes('-')){
             phrase2_set.add(item[0]);
