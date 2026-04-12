@@ -78,21 +78,11 @@ function success_record_gps(position){
     document.getElementById('span_count').innerHTML=run_times_global;
 }
 
-function error_record_gps(){
-    document.getElementById('span_status').innerHTML = 'Unable to retrieve your location';
-    map_gps();
-}
-
 function success_init_gps(position){
     lon_gps_global = position.coords.longitude;
     lat_gps_global  = position.coords.latitude;
     document.getElementById('span_status').innerHTML = 'Lon: '+lon_gps_global+', Lat: '+lat_gps_global;
     map_gps(lon_gps_global,lat_gps_global);
-}
-
-function error_init_gps(){
-    document.getElementById('span_status').innerHTML = 'Unable to retrieve your location';
-    map_gps();
 }
 
 function map_gps(cslon=121.5,cslat=31.2){
@@ -118,13 +108,18 @@ function map_gps(cslon=121.5,cslat=31.2){
 }
 
 function point_gps(cstype='init'){
+    function sub_point_gps_error(error){
+        navigator_geolocation_getCurrentPosition_error_b(error,map_gps);
+    }
+
     if (!navigator.geolocation){
         document.getElementById('span_status').innerHTML = 'Geolocation is not supported by your browser';
-    } else {
-        if (cstype=='init'){
-            navigator.geolocation.getCurrentPosition(success_init_gps, error_init_gps);
-        } else if (cstype=='record'){
-            navigator.geolocation.getCurrentPosition(success_record_gps, error_record_gps);
-        }
+        return;
+    } 
+    
+    if (cstype=='init'){
+        navigator.geolocation.getCurrentPosition(success_init_gps, sub_point_gps_error);
+    } else if (cstype=='record'){
+        navigator.geolocation.getCurrentPosition(success_record_gps, sub_point_gps_error);
     }
 }

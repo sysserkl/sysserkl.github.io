@@ -698,18 +698,15 @@ function current_position_gps_points(){
     if (!navigator.geolocation){
         document.getElementById('div_status').innerHTML='A Geolocation request can only be fulfilled in a secure context';
         return;
-    } 
+    }
+    
     navigator.geolocation.getCurrentPosition(
         function (position){
             var lon = position.coords.longitude;
             var lat  = position.coords.latitude;
-            //var bltype=document.getElementById('select_transform').value;
             
             lat_lon_status_b(lat,lon,'div_status',omap_gps_points_global);
-            //[lon,lat]=transform_lon_lat_one_dot_b(bltype,lon,lat);
-            
-            //document.getElementById('div_status').innerHTML='lat,lng: '+lat+','+lon;
-            //clicked_lat_lng_global=[lat,lon];
+
             omap_gps_points_global.panTo(new L.LatLng(lat,lon));
 
             current_layer_refresh_gps_points();
@@ -719,9 +716,7 @@ function current_position_gps_points(){
                 setTimeout(current_position_gps_points,5000);
             }
         },
-        function (){
-            document.getElementById('div_status').innerHTML='Unable to retrieve your location';        
-        }
+        navigator_geolocation_getCurrentPosition_error_b,
     );
 }
 

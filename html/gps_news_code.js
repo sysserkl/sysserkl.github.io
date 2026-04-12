@@ -22,7 +22,8 @@ function current_position_gps_news(){
     if (!navigator.geolocation){
         document.getElementById('div_status').innerHTML='A Geolocation request can only be fulfilled in a secure context';
         return;
-    } 
+    }
+    
     navigator.geolocation.getCurrentPosition(
         function (position){
             var lon = position.coords.longitude;
@@ -36,9 +37,7 @@ function current_position_gps_news(){
             current_layer_refresh_gps_news();
             current_position_layer_gps_global.addLayer(L.marker([lat,lon]));
         },
-        function (){
-            document.getElementById('div_status').innerHTML='Unable to retrieve your location';        
-        }
+        navigator_geolocation_getCurrentPosition_error_b,
     );
 }
 

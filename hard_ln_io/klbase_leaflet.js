@@ -1294,7 +1294,6 @@ function rectangle_angles_leaflet_b(southWest,northEast,return_dict=true){
 }
 
 function lat_lon_status_b(cslat,cslon,status_id,csmap){
-    //[cslon,cslat]=transform_lon_lat_one_dot_b(transform_type,cslon,cslat);
     var ostatus=document.getElementById(status_id);
     if (ostatus){
         ostatus.innerHTML='('+csmap.getZoom()+') lat,lng: '+cslat+','+cslon;
@@ -1305,4 +1304,11 @@ function lat_lon_status_b(cslat,cslon,status_id,csmap){
         return true;
     }
     return false;
+}
+
+function navigator_geolocation_getCurrentPosition_error_b(error,run_fn=false,csid='div_status'){
+    document.getElementById(csid).innerHTML = error.message;
+    if (typeof run_fn == 'function'){
+        run_fn();
+    }
 }
