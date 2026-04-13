@@ -1307,8 +1307,17 @@ function lat_lon_status_b(cslat,cslon,status_id,csmap){
 }
 
 function navigator_geolocation_getCurrentPosition_error_b(error,run_fn=false,csid='div_status'){
-    document.getElementById(csid).innerHTML = error.message;
+    document.getElementById(csid).innerHTML = error.code+'. '+error.message;
     if (typeof run_fn == 'function'){
         run_fn();
     }
+}
+
+function navigator_geolocation_getCurrentPosition_ok_b(position,omap){
+    var lon = position.coords.longitude;
+    var lat  = position.coords.latitude;
+    var bltype=document.getElementById('select_transform').value;
+    [lon,lat]=transform_lon_lat_one_dot_b(bltype,lon,lat);  //浏览器获得的点是 WGS，因此需要根据地图类型进行转换 - 保留注释
+    
+    lat_lon_status_b(lat,lon,'div_status',omap);
 }

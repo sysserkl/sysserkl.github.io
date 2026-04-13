@@ -26,13 +26,8 @@ function current_position_gps_news(){
     
     navigator.geolocation.getCurrentPosition(
         function (position){
-            var lon = position.coords.longitude;
-            var lat  = position.coords.latitude;
-            var bltype=document.getElementById('select_transform').value;
-            [lon,lat]=transform_lon_lat_one_dot_b(bltype,lon,lat);
-            
-            document.getElementById('div_status').innerHTML='lat,lng: '+lat+','+lon;
-            omap_gps_news_global.panTo(new L.LatLng(lat,lon));
+            navigator_geolocation_getCurrentPosition_ok_b(position,omap_gps_news_global);
+            //omap_gps_news_global.panTo(new L.LatLng(lat,lon));
 
             current_layer_refresh_gps_news();
             current_position_layer_gps_global.addLayer(L.marker([lat,lon]));

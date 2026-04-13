@@ -53,38 +53,6 @@ function record_clear_gps(){
     }
 }
 
-function success_record_gps(position){
-    if (lon_gps_global==position.coords.longitude && lat_gps_global==position.coords.latitude){
-        return;
-    }
-    
-    var old_lon=lon_gps_global;
-    var old_lat=lat_gps_global;
-    lon_gps_global = position.coords.longitude;
-    lat_gps_global  = position.coords.latitude;
-    document.getElementById('span_status').innerHTML = 'Lon: '+lon_gps_global+', Lat: '+lat_gps_global;
-
-    var myLines = [{
-    'type': 'LineString',
-    'coordinates': [[old_lon, old_lat], [lon_gps_global,lat_gps_global]],
-    },];
-    
-    myLayer = L.geoJSON().addTo(omap_gps_global);
-    myLayer.addData(myLines);
-    
-    local_storage_today_b('gps',20000,csnewcontent=lon_gps_global+','+lat_gps_global,',',[],'dt');
-    
-    run_times_global=run_times_global+1;
-    document.getElementById('span_count').innerHTML=run_times_global;
-}
-
-function success_init_gps(position){
-    lon_gps_global = position.coords.longitude;
-    lat_gps_global  = position.coords.latitude;
-    document.getElementById('span_status').innerHTML = 'Lon: '+lon_gps_global+', Lat: '+lat_gps_global;
-    map_gps(lon_gps_global,lat_gps_global);
-}
-
 function map_gps(cslon=121.5,cslat=31.2){
     var myLines = [{
     'type': 'Point',
@@ -122,4 +90,36 @@ function point_gps(cstype='init'){
     } else if (cstype=='record'){
         navigator.geolocation.getCurrentPosition(success_record_gps, sub_point_gps_error);
     }
+}
+
+function success_init_gps(position){
+    lon_gps_global = position.coords.longitude;
+    lat_gps_global  = position.coords.latitude;
+    document.getElementById('span_status').innerHTML = 'Lon: '+lon_gps_global+', Lat: '+lat_gps_global;
+    map_gps(lon_gps_global,lat_gps_global);
+}
+
+function success_record_gps(position){
+    if (lon_gps_global==position.coords.longitude && lat_gps_global==position.coords.latitude){
+        return;
+    }
+    
+    var old_lon=lon_gps_global;
+    var old_lat=lat_gps_global;
+    lon_gps_global = position.coords.longitude;
+    lat_gps_global  = position.coords.latitude;
+    document.getElementById('span_status').innerHTML = 'Lon: '+lon_gps_global+', Lat: '+lat_gps_global;
+
+    var myLines = [{
+    'type': 'LineString',
+    'coordinates': [[old_lon, old_lat], [lon_gps_global,lat_gps_global]],
+    },];
+    
+    myLayer = L.geoJSON().addTo(omap_gps_global);
+    myLayer.addData(myLines);
+    
+    local_storage_today_b('gps',20000,csnewcontent=lon_gps_global+','+lat_gps_global,',',[],'dt');
+    
+    run_times_global=run_times_global+1;
+    document.getElementById('span_count').innerHTML=run_times_global;
 }
