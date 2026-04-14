@@ -26,7 +26,8 @@ function current_position_gps_news(){
     
     navigator.geolocation.getCurrentPosition(
         function (position){
-            navigator_geolocation_getCurrentPosition_ok_b(position,omap_gps_news_global);
+            let lon,lat;
+            [lon,lat]=navigator_geolocation_getCurrentPosition_ok_b(position,omap_gps_news_global);
             //omap_gps_news_global.panTo(new L.LatLng(lat,lon));
 
             current_layer_refresh_gps_news();

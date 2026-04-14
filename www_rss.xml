@@ -8,29 +8,423 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Mon, 13 Apr 2026 08:29:51 +0800</lastBuildDate>
-<item><title>Over 100 Self-Driving Robotaxis Stop Working Simultaneously And No One Really Knows Why - Oddity Central</title><link>https://www.odditycentral.com/auto/over-100-self-driving-robotaxis-stop-working-simultaneously-and-no-one-really-knows-why.html</link></item>
-<item><title>Chinese Students Incresingly Renting AI Smart Glasses to Cheat on Univeristy Exams - Oddity Central</title><link>https://www.odditycentral.com/news/chinese-students-incresingly-renting-ai-smart-glasses-to-cheat-on-univeristy-exams.html</link></item>
-<item><title>The World’s Oldest Pigeon in Captivity Lived Over 44 Years - Oddity Central</title><link>https://www.odditycentral.com/animals/the-worlds-oldest-pigeon-in-captivity-lived-over-44-years.html</link></item>
-<item><title>The World’s Largest Hotel Features Over 7,000 Rooms - Oddity Central</title><link>https://www.odditycentral.com/travel/the-worlds-largest-hotel-features-over-7000-rooms.html</link></item>
-<item><title>Dutch Politician Expelled from Her Party for Editing Her Publicity Photo Too Much - Oddity Central</title><link>https://www.odditycentral.com/news/dutch-politician-expelled-from-her-party-for-editing-her-publicity-photo-too-much.html</link></item>
-<item><title>Mental Health - Billboard</title><link>https://www.billboard.com/p/mental-health-and-music/</link></item>
-<item><title>KATSEYE Raves About Their ‘Joint Slay’ With HUNTR/X at Coachella 2026 - Billboard</title><link>https://www.billboard.com/music/music-news/katseye-coachella-2026-interview-1236221222/</link></item>
-<item><title>Katy Perry &amp; Zara Larsson React to Justin Bieber’s YouTube-Fueled Coachella Set: ‘Thank God He Has Premium’ - Billboard</title><link>https://www.billboard.com/music/music-news/justin-bieber-coachella-2026-katy-perry-zara-larsson-react-1236221215/</link></item>
-<item><title>Offset Rolls Out Onstage in Wheelchair for First Performance After Being Shot - Billboard</title><link>https://www.billboard.com/music/music-news/offset-appears-onstage-first-time-after-being-shot-1236221193/</link></item>
-<item><title>No Doubt’s Tom Dumont Reveals Early Onset Parkinson’s Disease Diagnosis: ‘It’s Been a Struggle’ - Billboard</title><link>https://www.billboard.com/music/music-news/tom-dumont-no-doubt-parkinsons-disease-diagnosis-1236221183/</link></item>
-<item><title>Asha Bhosle, One of India’s Most Versatile Bollywood Singers, Dies at 92 - Billboard</title><link>https://www.billboard.com/music/music-news/asha-bhosle-death-bollywood-singer-dies-1236221180/</link></item>
-<item><title>Sabrina Carpenter Apologizes for Her Reaction to Crowd Chant at Coachella: ‘Now I Know What a Zaghrouta Is’ - Billboard</title><link>https://www.billboard.com/music/music-news/sabrina-carpenter-coachella-zaghrouta-reaction-apology-1236221010/</link></item>
-<item><title>Zac Brown Band Steps Up to the Plate for NBC’s ‘Sunday Night Baseball’ Opening - Billboard</title><link>https://www.billboard.com/music/music-news/zac-brown-band-sunday-night-baseball-song-nbc-1236220984/</link></item>
-<item><title>Jackson Wang’s MAGIC MAN 2 Is Where Happiness Prevails: Best Moments From His Brooklyn Show - Billboard</title><link>https://www.billboard.com/lists/jackson-wang-tour-best-moments-brooklyn/</link></item>
-<item><title>Labrinth Addresses Why His Music Won’t Be in ‘Euphoria’ Season 3: ‘I Don’t Let People Treat Me Like S—t’ - Billboard</title><link>https://www.billboard.com/music/music-news/labrinth-music-euphoria-season-3-replaced-hans-zimmer-1236220933/</link></item>
-<item><title>BTS’ ARIRANG World Tour Launches in South Korea: Best Moments from Opening Night - Billboard</title><link>https://www.billboard.com/lists/bts-arirang-world-tour-south-korea-best-moments/</link></item>
-<item><title>Billboard Korea - Billboard</title><link>https://www.billboard.com/author/billboard-korea-staff/</link></item>
-<item><title>Rockstar 证实遭到入侵，但否认重要数据被盗 - Solidot</title><link>https://www.solidot.org/story?sid=84022</link></item>
-<item><title>CPUID 网站下载链接被劫持传播恶意程序 - Solidot</title><link>https://www.solidot.org/story?sid=84023</link></item>
-<item><title>韩国移动运营商将为其用户提供 400 Kbps 基本数据传输率 - Solidot</title><link>https://www.solidot.org/story?sid=84025</link></item>
-<item><title>things with a dark side - Wrong Hands</title><link>https://wronghands1.com/2026/04/10/things-with-a-dark-side/</link></item>
-<item><title>rockin’ with Sisyphus - Wrong Hands</title><link>https://wronghands1.com/2026/04/07/rockin-with-sisyphus/</link></item>
-<item><title>on some sort of a crusade - Wrong Hands</title><link>https://wronghands1.com/2026/04/03/on-some-sort-of-a-crusade/</link></item>
-<item><title>Cher finally turns back time - Wrong Hands</title><link>https://wronghands1.com/2026/03/31/cher-finally-turns-back-time/</link></item>
+<lastBuildDate>Tue, 14 Apr 2026 08:54:59 +0800</lastBuildDate>
+<item><title>Africa’s Forests Have Flipped from Carbon Sink to Carbon Source - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260413043135.htm</link></item>
+<item><title>New Toothpaste Stops Gum Disease Without Killing Good Bacteria - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260413043141.htm</link></item>
+<item><title>Men and Women with Obesity Face Very Different Hidden Health Risks - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260413043129.htm</link></item>
+<item><title>Gray Whales Are Entering San Francisco Bay and Many Aren’t Surviving - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260413043127.htm</link></item>
+<item><title>Light Makes Plants Stronger but Also Holds Them Back - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260413043123.htm</link></item>
+<item><title>“Giant Superatoms” Could Finally Solve Quantum Computing’s Biggest Problem - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260413043155.htm</link></item>
+<item><title>Scientists Were Wrong About Lifespan. Your Genes Matter Way More Than We Thought - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260411022047.htm</link></item>
+<item><title>Black Hole Wakes After 100 Million Years and Erupts Like a Cosmic Volcano - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260411022037.htm</link></item>
+<item><title>Forget Daily Pills. This Shot Works When Blood Pressure Meds Fail - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260411022035.htm</link></item>
+<item><title>Stanford Scientists Discover “Natural Ozempic” Without Side Effects - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260412221946.htm</link></item>
+<item><title>Why Ozempic Doesn’t Work for Everyone: Scientists Just Found a Hidden Reason - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260411022029.htm</link></item>
+<item><title>Neanderthals May Have Hunted and Eaten Outsiders, Chilling Cannibalism Study Finds - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260411022044.htm</link></item>
+<item><title>How Aggressive Breast Cancer Turns Off the Immune System - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260411022031.htm</link></item>
+<item><title>Hidden Weak Spots in HIV and Ebola Revealed With Breakthrough Nanodisc Technology - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260411022027.htm</link></item>
+<item><title>Two Simple Eating Habits Linked to Lower Weight, Study Finds - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260411090018.htm</link></item>
+<item><title>A 67-Year-Old “crazy” Theory About Vitamin B1 Has Finally Been Proven - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260411081426.htm</link></item>
+<item><title>The Universe Is Expanding Too Fast and Scientists Still Can’t Explain It - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260411022025.htm</link></item>
+<item><title>Gravitational Waves May Be Hidden in the Light Atoms Emit - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260409101109.htm</link></item>
+<item><title>This Superconductivity Dies Then Comes Back to Life - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260409101108.htm</link></item>
+<item><title>Dragonflies Can See a Color Humans Can’t and It Could Change Medicine - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260409101059.htm</link></item>
+<item><title>Unusual Airborne Toxin Detected in the U.S. for the First Time - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260411084441.htm</link></item>
+<item><title>Scientists Shocked to Find Lab Gloves May Be Skewing Microplastics Data - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/03/260329222938.htm</link></item>
+<item><title>This New Carbon Material Could Make Carbon Capture Far More Affordable - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/03/260328043549.htm</link></item>
+<item><title>Your Nose Could Detect Alzheimer’s Years Before Symptoms Begin - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260411043048.htm</link></item>
+<item><title>Scientists Finally Crack Mystery of Rare COVID Vaccine Blood Clots - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260409101106.htm</link></item>
+<item><title>Scientists Say We’ve Been Treating Alzheimer’s All Wrong - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260409101111.htm</link></item>
+<item><title>A Common Nutrient Could Supercharge Cancer Treatment - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260410083114.htm</link></item>
+<item><title>Scientists Finally Uncover Why Promising Cancer Drugs Keep Failing - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260409101055.htm</link></item>
+<item><title>Goodbye Colonoscopy? New Stool Test Detects 90% of Colorectal Cancers - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260409221823.htm</link></item>
+<item><title>Scientists Just Found a Hidden “Drain” Inside the Human Brain - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260408225934.htm</link></item>
+<item><title>Brain Study Reveals Hidden Link Between Autism and ADHD - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260408225941.htm</link></item>
+<item><title>Scientists Discover Hidden Gut Trigger Behind ALS and Dementia - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260408225944.htm</link></item>
+<item><title>Your DNA Has a Secret “Second Code” That Decides Which Genes Get Silenced - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260408225946.htm</link></item>
+<item><title>The Hidden Tradeoff Behind Today’s Most Popular Weight Loss Drugs - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260408225948.htm</link></item>
+<item><title>Scientists Discover Spice Synergy That Boosts Anti-inflammation 100x - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260408225950.htm</link></item>
+<item><title>Early Weight Gain Is Linked to Lifelong Health Consequences - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260411022023.htm</link></item>
+<item><title>Breakthrough Water Filter Removes 98% of Toxic PFAS Forever Chemicals - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260408225951.htm</link></item>
+<item><title>This “rotten Egg” Brain Gas Could Be the Key to Fighting Alzheimer’s Disease - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260408225933.htm</link></item>
+<item><title>Your Brain Could Help Solve Autism and Most People Don’t Know It - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260408095346.htm</link></item>
+<item><title>Scientists Map the Brain’s Hidden Wiring Using RNA Barcodes in Major Breakthrough - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260407193848.htm</link></item>
+<item><title>Your Vitamin D Levels in Midlife Could Shape Your Brain Decades Later - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260407073850.htm</link></item>
+<item><title>Scientists Just Watched Alzheimer’s Damage Happen in Real Time - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260406192922.htm</link></item>
+<item><title>Scientists Solve 30-Year Mystery of a Hidden Nutrient That Protects the Brain and Fights Cancer - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260407004815.htm</link></item>
+<item><title>Scientists Discover Reversible Male Birth Control That Stops Sperm Production - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260407193844.htm</link></item>
+<item><title>Scientists Say 7 Days of Meditation Can Rewire Your Brain - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260406192913.htm</link></item>
+<item><title>Scientists May Have Found a Way to Keep Your Bones Strong for Life - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260406080131.htm</link></item>
+<item><title>The World Is Getting Brighter at Night but Some Places Are Going Dark - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260409101057.htm</link></item>
+<item><title>Scientists Discover Bizarre New States Inside Tiny Magnetic Whirlpools - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/03/260326075614.htm</link></item>
+<item><title>Scientists Create Clear Nail Polish That Lets You Use Touchscreens with Long Nails - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/03/260326064200.htm</link></item>
+<item><title>Deepfake X-rays Are so Real Even Doctors Can’t Tell the Difference - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/03/260326011452.htm</link></item>
+<item><title>This Tiny Implant, Smaller Than a Grain of Salt, Can Read Your Brain - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/03/260324024249.htm</link></item>
+<item><title>World’s First Quantum Battery Could Enable Ultra Fast Charging - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/03/260322020249.htm</link></item>
+<item><title>Scientists Twisted a Mysterious Superconductor and Got a Shocking Result - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/03/260322020252.htm</link></item>
+<item><title>These Cheap Solar Cells Work Better Because They’re Flawed - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260409101104.htm</link></item>
+<item><title>This New Chip Could Slash Data Center Energy Waste - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260409101103.htm</link></item>
+<item><title>Scientists Find Quantum Computers Forget Most of Their Work - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260406045126.htm</link></item>
+<item><title>This Walking Robot Could Change How We Search for Life on Mars - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260407193902.htm</link></item>
+<item><title>Quantum Computers Keep Losing Data. This Breakthrough Finally Tracks It - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260407193857.htm</link></item>
+<item><title>Distributed Computing - ScienceDaily</title><link>https://www.sciencedaily.com/news/computers_math/distributed_computing/</link></item>
+<item><title>This New Chip Survives 1300°F (700°C) and Could Change AI Forever - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260406192904.htm</link></item>
+<item><title>AI Breakthrough Cuts Energy Use by 100x While Boosting Accuracy - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260405003952.htm</link></item>
+<item><title>Watch the Earth Split in Real Time: Stunning Footage Captures a 2.5-meter Fault Slip in Seconds - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/03/260327211149.htm</link></item>
+<item><title>Ocean Species Are Disappearing Before Scientists Can Even Find Them - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/03/260326075603.htm</link></item>
+<item><title>Most People Get Food’s Environmental Impact Completely Wrong, Study Finds - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/03/260323005528.htm</link></item>
+<item><title>Freshwater Fish Populations Plunge 81% as River Migrations Collapse - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/03/260326064157.htm</link></item>
+<item><title>What You Do in Midlife Could Reveal How Long You’ll Live - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/03/260325005914.htm</link></item>
+<item><title>This Simple Design Could Save Oyster Reefs Worldwide - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260405003954.htm</link></item>
+<item><title>Scientists Solved the Mystery of Missing Ocean Plastic—and the Answer Is Alarming - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/03/260329041649.htm</link></item>
+<item><title>Neanderthals and Humans Worked Together - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/04/260412071005.htm</link></item>
+<item><title>Make a private CA with step-ca - Fedora Magazine</title><link>https://fedoramagazine.org/make-a-private-ca-with-step-ca/</link></item>
+<item><title>Contribute at the Fedora CoreOS 44 Test Week - Fedora Magazine</title><link>https://fedoramagazine.org/contribute-at-the-fedora-coreos-44-test-week/</link></item>
+<item><title>Fedora Asahi Remix 43 is now available - Fedora Magazine</title><link>https://fedoramagazine.org/fedora-asahi-remix-43-is-now-available/</link></item>
+<item><title>Apple AI Glasses Will Rival Meta&amp;#39;s With Several Styles, Oval Cameras - Slashdot</title><link>https://apple.slashdot.org/story/26/04/13/215252/apple-ai-glasses-will-rival-metas-with-several-styles-oval-cameras</link></item>
+<item><title>Hollywood Stars Sign Open Letter Protesting Paramount-Warner Bros Merger - Slashdot</title><link>https://slashdot.org/story/26/04/13/2056254/hollywood-stars-sign-open-letter-protesting-paramount-warner-bros-merger</link></item>
+<item><title>FBI Raids Texas Home of Man Suspected of Firebombing Sam Altman&amp;#39;s SF Mansion - Slashdot</title><link>https://yro.slashdot.org/story/26/04/13/2037240/fbi-raids-texas-home-of-man-suspected-of-firebombing-sam-altmans-sf-mansion</link></item>
+<item><title>throwing a Molotov cocktail - Slashdot</title><link>https://yro.slashdot.org/story/26/04/10/205209/suspect-arrested-for-allegedly-throwing-molotov-cocktail-at-sam-altmans-home</link></item>
+<item><title>Another incident occurred - Slashdot</title><link>https://yro.slashdot.org/story/26/04/13/0219250/sam-altmans-home-targeted-a-second-time-two-suspects-arrested</link></item>
+<item><title>Meta Is Warned That Facial Recognition Glasses Will Arm Sexual Predators - Slashdot</title><link>https://yro.slashdot.org/story/26/04/13/1930253/meta-is-warned-that-facial-recognition-glasses-will-arm-sexual-predators</link></item>
+<item><title>Linux 7.0 Released - Slashdot</title><link>https://linux.slashdot.org/story/26/04/13/1857240/linux-70-released</link></item>
+<item><title>rexx mainframe - Slashdot</title><link>https://slashdot.org/~rexx+mainframe</link></item>
+<item><title>Booking.com Hit By Data Breach - Slashdot</title><link>https://it.slashdot.org/story/26/04/13/1653212/bookingcom-hit-by-data-breach</link></item>
+<item><title>Mark Zuckerberg Is Reportedly Building an AI Clone To Replace Him In Meetings - Slashdot</title><link>https://meta.slashdot.org/story/26/04/13/1642228/mark-zuckerberg-is-reportedly-building-an-ai-clone-to-replace-him-in-meetings</link></item>
+<item><title>Maine Set To Become First State With Data Center Ban - Slashdot</title><link>https://yro.slashdot.org/story/26/04/13/0335254/maine-set-to-become-first-state-with-data-center-ban</link></item>
+<item><title>Californians Sue Over AI Tool That Records Doctor Visits - Slashdot</title><link>https://slashdot.org/story/26/04/13/0330204/californians-sue-over-ai-tool-that-records-doctor-visits</link></item>
+<item><title>Will Some Programmers Become &amp;#39;AI Babysitters&amp;#39;? - Slashdot</title><link>https://developers.slashdot.org/story/26/04/12/2225245/will-some-programmers-become-ai-babysitters</link></item>
+<item><title>Anthropic Asks Christian Leaders for Help Steering Claude&amp;#39;s Spiritual Development - Slashdot</title><link>https://slashdot.org/story/26/04/13/0156227/anthropic-asks-christian-leaders-for-help-steering-claudes-spiritual-development</link></item>
+<item><title>Robot Birds Deployed by Park to Attract Real Birds - Built By High School Students - Slashdot</title><link>https://news.slashdot.org/story/26/04/13/0115243/robot-birds-deployed-by-park-to-attract-real-birds---built-by-high-school-students</link></item>
+<item><title>Has the Rust Programming Language&amp;#39;s Popularity Reached Its Plateau? - Slashdot</title><link>https://developers.slashdot.org/story/26/04/12/2329229/has-the-rust-programming-languages-popularity-reached-its-plateau</link></item>
+<item><title>How Good is Windows on Arm With Snapdragon X? - Slashdot</title><link>https://hardware.slashdot.org/story/26/04/12/2149242/how-good-is-windows-on-arm-with-snapdragon-x</link></item>
+<item><title>Botched IT Upgrade Ended Liquor Sales for the Entire State of Mississippi - Slashdot</title><link>https://news.slashdot.org/story/26/04/12/1728224/botched-it-upgrade-ended-liquor-sales-for-the-entire-state-of-mississippi?sbsrc=md</link></item>
+<item><title>暴雪起诉“乌龟服”胜诉，全球最大魔兽怀旧私服将关停 - 游研社</title><link>https://www.yystv.cn/p/13805</link></item>
+<item><title>开局上万差评，《红色沙漠》为何能这么快翻身？ - 游研社</title><link>https://www.yystv.cn/p/13804</link></item>
+<item><title>《挽救计划》电影还没下映，VR游戏就已经在路上了 - 游研社</title><link>https://www.yystv.cn/p/13806</link></item>
+<item><title>《GTA6》开发数据再遭泄露，R星称其影响有限 - 游研社</title><link>https://www.yystv.cn/p/13801</link></item>
+<item><title>一千个现代人，有一千种《颈椎病》 - 游研社</title><link>https://www.yystv.cn/p/13800</link></item>
+<item><title>一家承认“街机已死”的工作室，又做了款难度夸张的“3A级街机” - 游研社</title><link>https://www.yystv.cn/p/13799</link></item>
+<item><title>《永恒空间》开发商获得了德国政府的800万欧元拨款扶持 - 游研社</title><link>https://www.yystv.cn/p/13797</link></item>
+<item><title>SBTI火了一夜便消失了，或许是因为它作为玩笑却太准了 - 游研社</title><link>https://www.yystv.cn/p/13798</link></item>
+<item><title>Faker对话李世石：想战胜AI的两位天才，怎样才能「捍卫人类」？ - 游研社</title><link>https://www.yystv.cn/p/13795</link></item>
+<item><title>这款国产生存游戏黑马，今年手搓了个新“埃及” - 游研社</title><link>https://www.yystv.cn/p/13796</link></item>
+<item><title>《灵魂面甲》正式版全球上线，灵犀互娱持续深耕国产游戏出海 - 游研社</title><link>https://www.yystv.cn/p/13789</link></item>
+<item><title>因为担心AI风险，《请出示证件》开发者选择“隐居” - 游研社</title><link>https://www.yystv.cn/p/13792</link></item>
+<item><title>The Juggling Act - Law &amp; Liberty</title><link>https://lawliberty.org/the-juggling-act/</link></item>
+<item><title>FDR’s Hubris - Law &amp; Liberty</title><link>https://lawliberty.org/book-review/fdrs-hubris/</link></item>
+<item><title>Visual guide to Iran’s coastline and islands at the Strait of Hormuz - FlowingData</title><link>https://flowingdata.com/2026/04/13/visual-guide-to-irans-coastline-and-islands-at-the-strait-of-hormuz/</link></item>
+<item><title>Days that Trump spends at his own properties - FlowingData</title><link>https://flowingdata.com/2026/04/13/days-that-trump-spends-at-his-own-properties/</link></item>
+<item><title>Linux Kernel Developers Adopt New Fuzzing Tools - Linux Journal</title><link>https://www.linuxjournal.com/content/linux-kernel-developers-adopt-new-fuzzing-tools</link></item>
+<item><title>GNOME 50 Reaches Arch Linux: A Leaner, Wayland-Only Future Arrives - Linux Journal</title><link>https://www.linuxjournal.com/content/gnome-50-reaches-arch-linux-leaner-wayland-only-future-arrives</link></item>
+<item><title>Space Station captures, berths Cygnus XL ’S.S. Steven R. Nagel’ cargo spacecraft - Spaceflight Now</title><link>https://spaceflightnow.com/2026/04/13/live-coverage-space-station-to-capture-berth-cygnus-xl-s-s-steven-r-nagel-cargo-spacecraft/</link></item>
+<item><title>NASA confident Artemis 2 heat shield will protect crew during re-entry - Spaceflight Now</title><link>https://spaceflightnow.com/2026/04/10/nasa-confident-artemis-ii-heat-shield-will-protect-crew-during-re-entry/</link></item>
+<item><title>Artemis astronauts send down Easter message, prep for lunar fly around Monday - Spaceflight Now</title><link>https://spaceflightnow.com/2026/04/05/artemis-astronauts-send-down-easter-message-prep-for-lunar-fly-around-monday/</link></item>
+<item><title>ULA’s Atlas 5 rocket launches its heaviest payload ever with fifth Amazon Leo mission - Spaceflight Now</title><link>https://spaceflightnow.com/2026/04/03/live-coverage-ulas-atlas-5-rocket-to-launch-its-heaviest-payload-ever-with-next-amazon-leo-mission/</link></item>
+<item><title>Artemis 2 crew blasts off on historic moon mission - Spaceflight Now</title><link>https://spaceflightnow.com/2026/04/02/artemis-2-crew-blasts-off-on-historic-moon-mission/</link></item>
+<item><title>Live coverage: NASA to launch Artemis 2, its first Moon-bound mission with astronauts since 1972 - Spaceflight Now</title><link>https://spaceflightnow.com/2026/04/01/live-coverage-nasa-to-launch-artemis-2-its-first-moon-bound-mission-with-astronauts-since-1972/</link></item>
+<item><title>Falcon 9 booster launches for record 34th time on Starlink delivery mission - Spaceflight Now</title><link>https://spaceflightnow.com/2026/03/30/falcon-9-booster-to-fly-for-record-34th-time-on-starlink-delivery-mission/</link></item>
+<item><title>SpaceX launches 119 payloads on smallsat rideshare mission from California - Spaceflight Now</title><link>https://spaceflightnow.com/2026/03/30/live-coverage-spacex-to-launch-119-payloads-on-smallsat-rideshare-mission-from-california/</link></item>
+<item><title>Artemis 2 astronauts arrive in Florida ahead of April 1 launch attempt - Spaceflight Now</title><link>https://spaceflightnow.com/2026/03/27/live-coverage-artemis-2-astronauts-head-to-florida-ahead-of-april-1-launch-attempt/</link></item>
+<item><title>SpaceX launches batch of Starlink satellites from the West Coast - Spaceflight Now</title><link>https://spaceflightnow.com/2026/03/26/spacex-to-launch-batch-of-starlink-satellites-from-the-west-coast/</link></item>
+<item><title>Lusion: Where Digital Craft Meets Ambitious Experimentation - Codrops</title><link>https://tympanus.net/codrops/2026/04/13/lusion-where-digital-craft-meets-ambitious-experimentation/</link></item>
+<item><title>The Exat Microsite: Pushing a Typography Showcase to New Creative Extremes - Codrops</title><link>https://tympanus.net/codrops/2026/04/10/the-exat-microsite-pushing-a-typography-showcase-to-new-creative-extremes/</link></item>
+<item><title>A Single DM, a First SOTD, and the Start of Chanh M. Ho’s Creative Journey - Codrops</title><link>https://tympanus.net/codrops/2026/04/09/a-single-dm-a-first-sotd-and-the-start-of-chanh-m-hos-creative-journey/</link></item>
+<item><title>Creating Custom Page Transitions in Astro with Barba.js and GSAP - Codrops</title><link>https://tympanus.net/codrops/2026/04/08/creating-custom-page-transitions-in-astro-with-barba-js-and-gsap/</link></item>
+<item><title>R—K ’26: The Thinking and Code Behind a Portfolio Led by Presence - Codrops</title><link>https://tympanus.net/codrops/2026/04/07/r-k-26-the-thinking-and-code-behind-a-portfolio-led-by-presence/</link></item>
+<item><title>Ravi Klaassens - Codrops</title><link>https://tympanus.net/codrops/author/raviklaassens/</link></item>
+<item><title>Building the Maxima Therapy Website: React, GSAP, and Dabbling with AI - Codrops</title><link>https://tympanus.net/codrops/2026/04/06/building-the-maxima-therapy-website-react-gsap-and-dabbling-with-ai/</link></item>
+<item><title>Nicolas Garnier - Codrops</title><link>https://tympanus.net/codrops/author/nicolasgarnier/</link></item>
+<item><title>Where Engineering Meets Craft: Edoardo Lunardi’s Obsession with the Details - Codrops</title><link>https://tympanus.net/codrops/2026/04/02/where-engineering-meets-craft-edoardo-lunardis-obsession-with-the-details/</link></item>
+<item><title>Animating 160,000 Cubes in Three.js to Visualize Dithering - Codrops</title><link>https://tympanus.net/codrops/2026/04/01/animating-160000-cubes-in-three-js-to-visualize-dithering/</link></item>
+<item><title>Damar Aji Pramudita - Codrops</title><link>https://tympanus.net/codrops/author/damar/</link></item>
+<item><title>Arnaud Rocca’s Portfolio: From a GSAP-Powered Motion System to Fluid WebGL - Codrops</title><link>https://tympanus.net/codrops/2026/03/31/arnaud-roccas-portfolio-from-a-gsap-powered-motion-system-to-fluid-webgl/</link></item>
+<item><title>Arnaud Rocca - Codrops</title><link>https://tympanus.net/codrops/author/arnaud/</link></item>
+<item><title>Where Confidence Needs No Decoration: The Malvah.Studio Story - Codrops</title><link>https://tympanus.net/codrops/2026/03/30/where-confidence-needs-no-decoration-the-malvah-studio-story/</link></item>
+<item><title>The sterilisation-seekers - Aeon</title><link>https://aeon.co/essays/why-did-disabled-people-support-eugenics-in-the-1930s?utm_source=rss-feed</link></item>
+<item><title>Paris Court Issued Simultaneous Site Blocking Orders Against ISPs, DNS Resolvers and VPNs - TorrentFreak</title><link>https://torrentfreak.com/paris-court-issued-simultaneous-site-blocking-orders-against-isps-dns-resolvers-and-vpns/</link></item>
+<item><title>赵长鹏自费出版了自己的自传 - Solidot</title><link>https://www.solidot.org/story?sid=84027</link></item>
+<item><title>美国人仍然偏爱阅读纸质书 - Solidot</title><link>https://www.solidot.org/story?sid=84028</link></item>
+<item><title>中纬度地区的夏季比 1960 年代延长了 30 天 - Solidot</title><link>https://www.solidot.org/story?sid=84029</link></item>
+<item><title>女性免疫系统衰老变化比男性更显著 - Solidot</title><link>https://www.solidot.org/story?sid=84030</link></item>
+<item><title>Valve 工程师改进 Linux 游戏的显存占用 - Solidot</title><link>https://www.solidot.org/story?sid=84031</link></item>
+<item><title>Google Play 下架《心跳文学部》 - Solidot</title><link>https://www.solidot.org/story?sid=84032</link></item>
+<item><title>长期接触农药可能诱发糖尿病 - Solidot</title><link>https://www.solidot.org/story?sid=84033</link></item>
+<item><title>《传送门2社区版》将于 4 月 18 日公测 - Solidot</title><link>https://www.solidot.org/story?sid=84034</link></item>
+<item><title>计算机科学的黄金期可能已结束 - Solidot</title><link>https://www.solidot.org/story?sid=84035</link></item>
+<item><title>扎克伯格可能很快会有他的 AI 克隆 - Solidot</title><link>https://www.solidot.org/story?sid=84036</link></item>
+<item><title>Beijing, Tehran, Washington: The Hidden Significance of Cheng Li-wen’s Visit - Modern Diplomacy</title><link>https://moderndiplomacy.eu/2026/04/14/beijing-tehran-washington-the-hidden-significance-of-cheng-li-wens-visit/</link></item>
+<item><title>Iran Repeats Thermopylae — But the War Goes On - Modern Diplomacy</title><link>https://moderndiplomacy.eu/2026/04/14/iran-repeats-thermopylae-but-the-war-goes-on/</link></item>
+<item><title>Von der Leyen Compares Orban’s Defeat to Hungary’s 1956 Anti-Soviet Uprising - Modern Diplomacy</title><link>https://moderndiplomacy.eu/2026/04/13/von-der-leyen-compares-orbans-defeat-to-hungarys-1956-anti-soviet-uprising/</link></item>
+<item><title>Trump’s Strait of Hormuz Blockade Plan Fails as NATO Allies Refuse to Join - Modern Diplomacy</title><link>https://moderndiplomacy.eu/2026/04/13/trumps-strait-of-hormuz-blockade-plan-fails-as-nato-allies-refuse-to-join/</link></item>
+<item><title>Iran Threatens Strikes on Gulf Ports if US Imposes Blockade - Modern Diplomacy</title><link>https://moderndiplomacy.eu/2026/04/13/iran-threatens-strikes-on-gulf-ports-if-us-imposes-blockade/</link></item>
+<item><title>South Korea President’s Holocaust Comparison Sparks Diplomatic Row With Israel - Modern Diplomacy</title><link>https://moderndiplomacy.eu/2026/04/13/south-korea-presidents-holocaust-comparison-sparks-diplomatic-row-with-israel/</link></item>
+<item><title>Pope Vows to Keep Speaking Against War After Trump Attack - Modern Diplomacy</title><link>https://moderndiplomacy.eu/2026/04/13/pope-vows-to-keep-speaking-against-war-after-trump-attack/</link></item>
+<item><title>ASEAN Urges US–Iran Talks and Safe Passage in Strait of Hormuz - Modern Diplomacy</title><link>https://moderndiplomacy.eu/2026/04/13/asean-urges-us-iran-talks-and-safe-passage-in-strait-of-hormuz/</link></item>
+<item><title>How a US Naval Blockade of Iran Could Squeeze Global Oil Supply - Modern Diplomacy</title><link>https://moderndiplomacy.eu/2026/04/13/how-a-us-naval-blockade-of-iran-could-squeeze-global-oil-supply/</link></item>
+<item><title>Cyanide Discovery in South China Sea Sparks Philippines–China Tensions - Modern Diplomacy</title><link>https://moderndiplomacy.eu/2026/04/13/cyanide-discovery-in-south-china-sea-sparks-philippines-china-tensions/</link></item>
+<item><title>The votes are in: AI will hurt elections and relationships - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/04/14/ai_report_2026_stanford_hai/</link></item>
+<item><title>Zombie Microsoft bugs rise from the dead, pave way for crims and ransomware scum - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/04/13/ransomware_gang_other_crims_attacking/</link></item>
+<item><title>Cloudflare revamps CLI as agents take over the internet - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/04/13/cloudflare_expanding_wrangler_cli_functionality/</link></item>
+<item><title>Claude is getting worse, according to Claude - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/04/13/claude_outage_quality_complaints/</link></item>
+<item><title>How ServiceNow gets customers to gorge at the AI trough - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/04/13/servicenow_ai_everywhere/</link></item>
+<item><title>Fake Linux leader using Slack to con devs into giving up their secrets - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/04/13/linux_foundation_social_engineering/</link></item>
+<item><title>Attention, gamers: The FAA wants YOU to be an air traffic controller - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/04/13/faa_gamers_air_traffic_control/</link></item>
+<item><title>WARNING: Oracle&amp;#39;s AI obsession could mean higher prices and worse support - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/04/13/oracle_job_losses_ai_impact_support/</link></item>
+<item><title>Claude Code cache chaos creates quota complaints - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/04/13/claude_code_cache_confusion/</link></item>
+<item><title>Notepad sheds Copilot from toolbar as Microsoft gives subtlety a try - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/04/13/microsoft_notepad_copilot_icon/</link></item>
+<item><title>Booking.com warns reservation data may have checked out with intruders - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/04/13/bookingcom_breach/</link></item>
+<item><title>Microsoft attempts to untangle &amp;#39;confusing&amp;#39; Windows Insider program - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/04/13/microsoft_windows_insider_refresh/</link></item>
+<item><title>Veterans Affairs has lost track of software licenses amid $985M bill - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/04/13/va_software_licensing_gao/</link></item>
+<item><title>UK defense startup to supply drone interceptors for Britain and allies - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/04/13/cambridge_aerospace_skyhammer_interceptor/</link></item>
+<item><title>Adobe finally patches PDF pest after months of abuse - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/04/13/adobe_reader_zeroday/</link></item>
+<item><title>Gym giant Basic-Fit confirms data on a million members stolen in cyberattack - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/04/13/basicfit_breach/</link></item>
+<item><title>Rockstar Games gets a taste of grand theft data - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/04/13/shinyhunters_rockstar_breach/</link></item>
+<item><title>Digital sovereignty isn&amp;#39;t just a buzzword – it&amp;#39;s the future - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/04/13/digital_sovereignty/</link></item>
+<item><title>NHS pays £46K to prep next Microsoft licensing round - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/04/13/nhs_benchmarking_microsoft/</link></item>
+<item><title>What happened when AI ran into the cold hard reality of the legal profession - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/04/13/ai_attorneys/</link></item>
+<item><title>France’s digital directorate dumping Windows desktops, adopting Linux instead - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/04/13/france_tech_sovereignty_plan/</link></item>
+<item><title>IT manager approved downtime over lunch, but made a meal of it - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/04/13/who_me/</link></item>
+<item><title>China wants AI to prepare school lessons and mark homework - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/04/13/asia_tech_news_roundup/</link></item>
+<item><title>Linux 7.0 debuts as Linus Torvalds ponders AI&amp;#39;s bug-finding powers - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/04/13/linux_kernel_7_releaseed/</link></item>
+<item><title>Anthropic&amp;#39;s mysterious Mythos AI threatens to upend the infosec world - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/04/12/anthropic_mythos_kettle_podcast/</link></item>
+<item><title>I vibe coded a feed reading web app. It was enlightening and uncomfortable - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/04/12/vibe_coding_works/</link></item>
+<item><title>Growing void between enterprise and frontier AI puts open weights models in the spotlight - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/04/12/ai_open_weights_models/</link></item>
+<item><title>Apple update looks like Czech mate for locked-out iPhone user - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/04/12/ios_passcode_bug/</link></item>
+<item><title>The messy truth of your AI strategies - Stack Overflow Blog</title><link>https://stackoverflow.blog/2026/04/10/the-messy-truth-of-your-ai-strategies/</link></item>
+<item><title>Gen Z needs a knowledge base (and so do you) - Stack Overflow Blog</title><link>https://stackoverflow.blog/2026/04/09/gen-z-needs-a-knowledge-base-and-so-do-you/</link></item>
+<item><title>He designed C++ to solve your code problems - Stack Overflow Blog</title><link>https://stackoverflow.blog/2026/04/07/he-designed-c-to-solve-your-code-problems/</link></item>
+<item><title>Seizing the means of messenger production - Stack Overflow Blog</title><link>https://stackoverflow.blog/2026/04/03/seizing-the-means-of-messenger-production/</link></item>
+<item><title>What the AI trust gap means for enterprise SaaS - Stack Overflow Blog</title><link>https://stackoverflow.blog/2026/04/02/what-the-ai-trust-gap-means-for-enterprise-saas/</link></item>
+<item><title>How can you test your code when you don’t know what’s in it? - Stack Overflow Blog</title><link>https://stackoverflow.blog/2026/03/31/how-can-you-test-your-code-when-you-don-t-know-what-s-in-it/</link></item>
+<item><title>Prevent agentic identity theft - Stack Overflow Blog</title><link>https://stackoverflow.blog/2026/03/27/prevent-agentic-identity-theft/</link></item>
+<item><title>Building shared coding guidelines for AI (and people too) - Stack Overflow Blog</title><link>https://stackoverflow.blog/2026/03/26/coding-guidelines-for-ai-agents-and-people-too/</link></item>
+<item><title>Multi-stage attacks are the Final Fantasy bosses of security - Stack Overflow Blog</title><link>https://stackoverflow.blog/2026/03/24/multi-stage-attacks-are-the-final-fantasy-bosses-of-security/</link></item>
+<item><title>After all the hype, was 2025 really the year of AI agents? - Stack Overflow Blog</title><link>https://stackoverflow.blog/2026/03/20/was-2025-really-the-year-of-ai-agents/</link></item>
+<item><title>AI is becoming a second brain at the expense of your first one - Stack Overflow Blog</title><link>https://stackoverflow.blog/2026/03/19/ai-is-becoming-a-second-brain-at-the-expense-of-your-first-one/</link></item>
+<item><title>Building a global engineering team (plus AI agents) with Netlify - Stack Overflow Blog</title><link>https://stackoverflow.blog/2026/03/19/building-a-global-engineering-team-netlify/</link></item>
+<item><title>New words – 13 April 2026 - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2026/04/13/new-words-13-april-2026/</link></item>
+<item><title>US Navy should rely on allies to boost maritime industrial base, report says - Defense News</title><link>https://www.defensenews.com/naval/2026/04/13/us-navy-should-rely-on-allies-to-boost-maritime-industrial-base-report-says/</link></item>
+<item><title>US military eyes high-energy ‘laser dome’ for domestic air defense - Defense News</title><link>https://www.defensenews.com/industry/techwatch/2026/04/13/us-military-eyes-high-energy-laser-dome-for-domestic-air-defense/</link></item>
+<item><title>Turkey pushes for larger role in Europe’s defense as Trump questions NATO - Defense News</title><link>https://www.defensenews.com/global/europe/2026/04/13/turkey-pushes-for-larger-role-in-europes-defense-as-trump-questions-nato/</link></item>
+<item><title>US blockade of Iran will be major military endeavor, experts say - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2026/04/13/us-blockade-of-iran-will-be-major-military-endeavor-experts-say/</link></item>
+<item><title>Study suggests Russia could conquer Baltic states in 90 days - Defense News</title><link>https://www.defensenews.com/global/europe/2026/04/13/study-suggests-russia-could-conquer-baltic-states-in-90-days/</link></item>
+<item><title>US Navy to blockade Strait of Hormuz ‘effective immediately,’ Trump says - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2026/04/12/us-navy-to-blockade-strait-of-hormuz-effective-immediately-trump-says/</link></item>
+<item><title>US-Iran peace talks end without deal as delegations leave Pakistan - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2026/04/12/us-iran-peace-talks-end-without-deal-as-delegations-leave-pakistan/</link></item>
+<item><title>Fedora 44: Best New Features - DebugPoint</title><link>https://www.debugpoint.com/fedora-44-features/</link></item>
+<item><title>OpenShot 3.5 Brings Faster, Smoother Video Editing - DebugPoint</title><link>https://www.debugpoint.com/openshot-3-5/</link></item>
+<item><title>EndeavourOS Titan: Feature Highlights - DebugPoint</title><link>https://www.debugpoint.com/endeavouros-titan/</link></item>
+<item><title>GNOME 50 Tokyo: Best New Features and Improvements - DebugPoint</title><link>https://www.debugpoint.com/gnome-50-features/</link></item>
+<item><title>Linux Kernel 6.18: Key Feature Highlights - DebugPoint</title><link>https://www.debugpoint.com/linux-kernel-6-18/</link></item>
+<item><title>Kali Linux 2026.1: Fresh 2026 Theme and Nostalgic BackTrack Mode - DebugPoint</title><link>https://www.debugpoint.com/kali-linux-2026-1/</link></item>
+<item><title>SystemRescue 13.00: Release Highlights - DebugPoint</title><link>https://www.debugpoint.com/systemrescue-13/</link></item>
+<item><title>How Quantum Mechanics Went From Baffling Theory to Revolutionizing Modern Technology - SciTechDaily</title><link>https://scitechdaily.com/how-quantum-mechanics-went-from-baffling-theory-to-revolutionizing-modern-technology/</link></item>
+<item><title>Scientists May Have Found the Key to Jupiter and Saturn’s Moon Mystery - SciTechDaily</title><link>https://scitechdaily.com/scientists-may-have-found-the-key-to-jupiter-and-saturns-moon-mystery/</link></item>
+<item><title>Scientists Uncover Hidden Clues to the Origin of the Genetic Code - SciTechDaily</title><link>https://scitechdaily.com/scientists-uncover-hidden-clues-to-the-origin-of-the-genetic-code/</link></item>
+<item><title>Scientists Discover Unexpected Role of Alzheimer’s Protein in Cell Division - SciTechDaily</title><link>https://scitechdaily.com/scientists-discover-unexpected-role-of-alzheimers-protein-in-cell-division/</link></item>
+<item><title>Scientists Uncover Brain Changes That Link Pain to Depression - SciTechDaily</title><link>https://scitechdaily.com/scientists-uncover-brain-changes-that-link-pain-to-depression/</link></item>
+<item><title>A New Chapter in Chemistry? Scientists Uncover New Way Metals Bind Oxygen - SciTechDaily</title><link>https://scitechdaily.com/a-new-chapter-in-chemistry-scientists-uncover-new-way-metals-bind-oxygen/</link></item>
+<item><title>New Study Reveals Earth Is Getting Brighter at Night – About 2% Each Year - SciTechDaily</title><link>https://scitechdaily.com/new-study-reveals-earth-is-getting-brighter-at-night-about-2-each-year/</link></item>
+<item><title>Accidental Deep Ocean Discovery Reveals Hidden Carbon Sink - SciTechDaily</title><link>https://scitechdaily.com/accidental-deep-ocean-discovery-reveals-hidden-carbon-sink/</link></item>
+<item><title>Cooling the Planet Could Come at a Devastating Cost - SciTechDaily</title><link>https://scitechdaily.com/cooling-the-planet-could-come-at-a-devastating-cost/</link></item>
+<item><title>These New Molecules Could Change How We Treat Lupus and Arthritis - SciTechDaily</title><link>https://scitechdaily.com/these-new-molecules-could-change-how-we-treat-lupus-and-arthritis/</link></item>
+<item><title>Saunas May Do More Than Raise Body Temperature – They Activate Your Immune System - SciTechDaily</title><link>https://scitechdaily.com/saunas-may-do-more-than-raise-body-temperature-they-activate-your-immune-system/</link></item>
+<item><title>Exercise in a Pill? Metformin Shows Surprising Effects in Cancer Patients - SciTechDaily</title><link>https://scitechdaily.com/exercise-in-a-pill-metformin-shows-surprising-effects-in-cancer-patients/</link></item>
+<item><title>Saturn’s Magnetic Shield Isn’t What Scientists Expected - SciTechDaily</title><link>https://scitechdaily.com/saturns-magnetic-shield-isnt-what-scientists-expected/</link></item>
+<item><title>Hidden Oceans of Magma Could Be Protecting Alien Life - SciTechDaily</title><link>https://scitechdaily.com/hidden-oceans-of-magma-could-be-protecting-alien-life/</link></item>
+<item><title>After Decades of Searching, Astronomers Finally Track Down the Universe’s Missing Hydrogen - SciTechDaily</title><link>https://scitechdaily.com/after-decades-of-searching-astronomers-finally-track-down-the-universes-missing-hydrogen/</link></item>
+<item><title>Scientists Capture Hidden Electron Patterns Inside Quantum Materials - SciTechDaily</title><link>https://scitechdaily.com/scientists-capture-hidden-electron-patterns-inside-quantum-materials/</link></item>
+<item><title>New Study Challenges Alzheimer’s Theories: It’s Not Just About Plaques - SciTechDaily</title><link>https://scitechdaily.com/new-study-challenges-alzheimers-theories-its-not-just-about-plaques/</link></item>
+<item><title>Scientists Discover Way To Treat Lung Cancer and Its Deadly Side Effect Together - SciTechDaily</title><link>https://scitechdaily.com/scientists-discover-way-to-treat-lung-cancer-and-its-deadly-side-effect-together/</link></item>
+<item><title>Researchers Have Found a Dietary Compound That Increases Longevity - SciTechDaily</title><link>https://scitechdaily.com/researchers-have-found-a-dietary-compound-that-increases-longevity/</link></item>
+<item><title>Scientists Baffled by Bizarre “Living Fossil” From 275 Million Years Ago - SciTechDaily</title><link>https://scitechdaily.com/scientists-baffled-by-bizarre-living-fossil-from-275-million-years-ago/</link></item>
+<item><title>Your IQ at 23 Could Predict Your Wealth at 27, Study Finds - SciTechDaily</title><link>https://scitechdaily.com/your-iq-at-23-could-predict-your-wealth-at-27-study-finds/</link></item>
+<item><title>320 Light-Years Away, a Planet Confirms a Fundamental Cosmic Assumption - SciTechDaily</title><link>https://scitechdaily.com/320-light-years-away-a-planet-confirms-a-fundamental-cosmic-assumption/</link></item>
+<item><title>The Crown Jewel of Dentistry? Breakthrough Tech Could Transform Tooth Repair - SciTechDaily</title><link>https://scitechdaily.com/the-crown-jewel-of-dentistry-breakthrough-tech-could-transform-tooth-repair/</link></item>
+<item><title>Python Blood Could Hold the Secret to Weight Loss Without Side Effects - SciTechDaily</title><link>https://scitechdaily.com/python-blood-could-hold-the-secret-to-weight-loss-without-side-effects/</link></item>
+<item><title>Naturally Occurring Bacteria Completely Eradicate Tumors in Mice With a Single Dose - SciTechDaily</title><link>https://scitechdaily.com/naturally-occurring-bacteria-completely-eradicate-tumors-in-mice-with-a-single-dose/</link></item>
+<item><title>New “Nanozyme Hypothesis” Could Rewrite the Story of Life’s Origins - SciTechDaily</title><link>https://scitechdaily.com/new-nanozyme-hypothesis-could-rewrite-the-story-of-lifes-origins/</link></item>
+<item><title>Scientists Grow Electronics Inside the Brains of Living Mice - Singularity Hub</title><link>https://singularityhub.com/2026/04/13/scientists-grow-electronics-inside-the-brains-of-living-mice/</link></item>
+<item><title>How to Build Better Digital Twins of the Human Brain - Singularity Hub</title><link>https://singularityhub.com/2026/04/11/how-to-build-better-digital-twins-of-the-human-brain/</link></item>
+<item><title>Anthropic’s Mythos AI Uncovered Serious Security Holes in Every Major OS and Browser - Singularity Hub</title><link>https://singularityhub.com/2026/04/10/anthropics-mythos-ai-uncovered-serious-security-holes-in-every-major-os-and-browser/</link></item>
+<item><title>MIT Mined Bacteria for the Next CRISPR—and Found Hundreds of Potential New Tools - Singularity Hub</title><link>https://singularityhub.com/2026/04/07/mit-mined-bacteria-for-the-next-crispr-and-found-hundreds-of-potential-new-tools/</link></item>
+<item><title>US Issues Grand Challenge: The First Fault-Tolerant Quantum Computer by 2028 - Singularity Hub</title><link>https://singularityhub.com/2026/04/06/us-issues-grand-challenge-the-first-fault-tolerant-quantum-computer-by-2028/</link></item>
+<item><title>This Week’s Awesome Tech Stories From Around the Web (Through April 4) - Singularity Hub</title><link>https://singularityhub.com/2026/04/04/this-weeks-awesome-tech-stories-from-around-the-web-through-april-4-2/</link></item>
+<item><title>Five Ways Quantum Technology Could Shape Everyday Life - Singularity Hub</title><link>https://singularityhub.com/2026/04/03/five-ways-quantum-technology-could-shape-everyday-life/</link></item>
+<item><title>The Mad Scramble to Power AI Is Rewiring the US Grid - Singularity Hub</title><link>https://singularityhub.com/2026/04/02/the-mad-scramble-to-power-ai-is-rewiring-the-us-grid/</link></item>
+<item><title>Chatbots ‘Optimized to Please’ Make Us Less Likely to Admit When We’re Wrong - Singularity Hub</title><link>https://singularityhub.com/2026/03/31/chatbots-optimized-to-please-make-us-less-likely-to-admit-when-were-wrong/</link></item>
+<item><title>Forget Antibiotics: These Killer Cells Wipe Out Deadly Superbugs in a Day - Singularity Hub</title><link>https://singularityhub.com/2026/03/30/forget-antibiotics-these-killer-cells-are-programmed-to-wipe-out-deadly-superbugs-in-a-day/</link></item>
+<item><title>Common Issues With Windows 11 March Update - Tech Junkie</title><link>https://www.techjunkie.com/common-issues-with-windows-11-march-update/</link></item>
+<item><title>Can’t Upgrade? Different Ways to Keep Your Windows 10 PC Secure - Tech Junkie</title><link>https://www.techjunkie.com/cant-upgrade-different-ways-to-keep-your-windows-10-pc-secure/</link></item>
+<item><title>Why Have RAM Prices Soared in Recent Months? - Tech Junkie</title><link>https://www.techjunkie.com/why-have-ram-prices-soared-in-recent-months/</link></item>
+<item><title>Windows 11 Installed Automatically Without Your Consent? What to Do Next - Tech Junkie</title><link>https://www.techjunkie.com/windows-11-installed-automatically-without-your-consent-what-to-do-next/</link></item>
+<item><title>What to Do if Windows 11 Keeps Shutting Down Unexpectedly - Tech Junkie</title><link>https://www.techjunkie.com/what-to-do-if-windows-11-keeps-shutting-down-unexpectedly/</link></item>
+<item><title>How to Extend the Life of Your SSD – 6 Tips - Tech Junkie</title><link>https://www.techjunkie.com/how-to-extend-the-life-of-your-ssd-6-tips/</link></item>
+<item><title>What’s Causing Error Code 53 on Steam and How to Fix It? - Tech Junkie</title><link>https://www.techjunkie.com/whats-causing-error-code-53-on-steam-and-how-to-fix-it/</link></item>
+<item><title>Celebrating Community at WordCamp Asia 2026 - WordPress Blog</title><link>https://wordpress.org/news/2026/04/celebrating-wcasia-2026/</link></item>
+<item><title>How to Watch WordCamp Asia 2026 Live - WordPress Blog</title><link>https://wordpress.org/news/2026/04/watch-wc-asia-2026-live/</link></item>
+<item><title>From AI to Open Source at WordCamp Asia 2026 - WordPress Blog</title><link>https://wordpress.org/news/2026/04/wcasia-2026-sessions/</link></item>
+<item><title>WordPress 7.0 Release Candidate 2 - WordPress Blog</title><link>https://wordpress.org/news/2026/03/wordpress-7-0-release-candidate-2/</link></item>
+<item><title>WP Packages is Working the Way Open Source Should - WordPress Blog</title><link>https://wordpress.org/news/2026/03/wp-packages/</link></item>
+<item><title>Semen-Derived Exosomes Eye Drops to Treat Retinoblastoma - AZO</title><link>https://www.azolifesciences.com/news/20260408/Semen-Derived-Exosomes-Eye-Drops-to-Treat-Retinoblastoma.aspx</link></item>
+<item><title>SHP Protein Slows Cartilage Degeneration in Osteoarthritis - AZO</title><link>https://www.azolifesciences.com/news/20260324/SHP-Protein-Slows-Cartilage-Degeneration-in-Osteoarthritis.aspx</link></item>
+<item><title>The Future of Vision Restoration With ReVision Implant - AZO</title><link>https://www.azolifesciences.com/news/20260326/The-Future-of-Vision-Restoration-With-ReVision-Implant.aspx</link></item>
+<item><title>Regenerative Vascular Grafts Solve Key Shortage In Surgery - AZO</title><link>https://www.azolifesciences.com/news/20260402/Regenerative-Vascular-Grafts-Solve-Key-Shortage-In-Surgery.aspx</link></item>
+<item><title>Turning Plastic Bottles into Levodopa, a Key Parkinson’s Treatment - AZO</title><link>https://www.azolifesciences.com/news/20260325/Turning-Plastic-Bottles-into-Levodopa-a-Key-Parkinsone28099s-Treatment.aspx</link></item>
+<item><title>How siRNA Technology Targets Disease-Causing Genes in Inflammation and Cancer - AZO</title><link>https://www.azolifesciences.com/article/Title.aspx</link></item>
+<item><title>What Is Quantitative Proteomics? Methods, Techniques, And Applications - AZO</title><link>https://www.azolifesciences.com/article/What-Is-Quantitative-Proteomics-Methods-Techniques-And-Applications.aspx</link></item>
+<item><title>Whole-Brain Mapping and Connectomics: Tracing the Wiring of the Mind - AZO</title><link>https://www.azolifesciences.com/article/Whole-Brain-Mapping-and-Connectomics-Tracing-the-Wiring-of-the-Mind.aspx</link></item>
+<item><title>What Role Can Top-Down Proteomics Play in Fighting Disease? - AZO</title><link>https://www.azolifesciences.com/article/What-Role-Can-Top-Down-Proteomics-Play-in-Fighting-Disease.aspx</link></item>
+<item><title>Why No Single Model Can Explain Autism, and Why That’s Progress - AZO</title><link>https://www.azolifesciences.com/article/Why-No-Single-Model-Can-Explain-Autism-and-Why-Thate28099s-Progress.aspx</link></item>
+<item><title>New Technology Uses Genetic Passcodes to Protect High-Value Engineered Cell Lines - AZO</title><link>https://www.azolifesciences.com/news/20260411/New-Technology-Uses-Genetic-Passcodes-to-Protect-High-Value-Engineered-Cell-Lines.aspx</link></item>
+<item><title>Single-Letter Insertion in Non-Coding DNA can Alter Sex Development in Mice - AZO</title><link>https://www.azolifesciences.com/news/20260411/Single-Letter-Insertion-in-Non-Coding-DNA-can-Alter-Sex-Development-in-Mice.aspx</link></item>
+<item><title>CU Boulder Study Shows Genetic Link Between Mental and Physical Illness - AZO</title><link>https://www.azolifesciences.com/news/20260410/CU-Boulder-Study-Shows-Genetic-Link-Between-Mental-and-Physical-Illness.aspx</link></item>
+<item><title>Redefining Cancer Therapy Through Selective Targeting of BET Protein Families - AZO</title><link>https://www.azolifesciences.com/news/20260410/Redefining-Cancer-Therapy-Through-Selective-Targeting-of-BET-Protein-Families.aspx</link></item>
+<item><title>Genomic Study Maps the Biosynthesis of Dihydromyricetin in Vine Tea - AZO</title><link>https://www.azolifesciences.com/news/20260410/Genomic-Study-Maps-the-Biosynthesis-of-Dihydromyricetin-in-Vine-Tea.aspx</link></item>
+<item><title>Empire Issue Preview: Steven Spielberg, Disclosure Day, Mother Mary, Power Ballad - Empire</title><link>https://www.empireonline.com/movies/news/issue-preview-steven-spielberg-disclosure-day/</link></item>
+<item><title>Steven Spielberg Loves Denis Villeneuve’s Dune: ‘They’re Among My Favourite Sci-Fi Movies Of All Time’ - Empire</title><link>https://www.empireonline.com/movies/news/steven-spielberg-loves-dune-favourite-sci-fi-movies-exclusive/</link></item>
+<item><title>The Boys Season 5 - Empire</title><link>https://www.empireonline.com/tv/reviews/the-boys-season-5/</link></item>
+<item><title>Maul: Shadow Lord Explores The ‘Missing Years’ Of Star Wars’ Coolest Villain - Empire</title><link>https://www.empireonline.com/tv/features/maul-shadow-lord-explores-the-missing-years-of-star-wars-coolest-villain/</link></item>
+<item><title>David Lowery’s Mother Mary Based Its Concert Scenes On Taylor Swift’s ‘Phenomenal’ Reputation Tour - Empire</title><link>https://www.empireonline.com/movies/news/david-lowery-mother-mary-taylor-swift-reputation-tour-exclusive/</link></item>
+<item><title>Pilot TV Podcast: Euphoria, Big Mood, And The Miniature Wife - Empire</title><link>https://www.empireonline.com/tv/news/pilot-tv-podcast-euphoria-big-mood-and-the-miniature-wife/</link></item>
+<item><title>The Hunger Games: Sunrise On The Reaping Trailer Begins The Most Brutal Games Ever - Empire</title><link>https://www.empireonline.com/movies/news/hunger-games-sunrise-on-the-reaping-trailer-most-brutal-games-ever/</link></item>
+<item><title>Mint Trailer: Mob Daughter Emma Laird Falls For Loyle Carner In Scrapper Director’s Debut TV Series - Empire</title><link>https://www.empireonline.com/tv/news/mint-trailer-mob-daughter-emma-laird-falls-for-loyle-carner-in-scrapper-directors-debut-tv-series/</link></item>
+<item><title>You, Me And Tuscany - Empire</title><link>https://www.empireonline.com/movies/reviews/you-me-and-tuscany/</link></item>
+<item><title>The Empire Film Podcast Ft. California Schemin’ Director James McAvoy - Empire</title><link>https://www.empireonline.com/movies/news/the-empire-film-podcast-ft-fuze-star-aaron-taylor-johnson-and-director-david-mackenzie/</link></item>
+<item><title>Interstellar Live With An Orchestra Left Me Weeping - Empire</title><link>https://www.empireonline.com/movies/features/interstellar-live-orchestra-left-me-weeping/</link></item>
+<item><title>Father Mother Sister Brother - Empire</title><link>https://www.empireonline.com/movies/reviews/father-mother-sister-brother/</link></item>
+<item><title>These Are The Best Soundbars Of 2026: Our Guide To Immersive Home Cinema Audio - Empire</title><link>https://www.empireonline.com/tv/hardware/best-soundbars/</link></item>
+<item><title>Metal Gear Solid Movie Is In The Works At Sony From Final Destination: Bloodlines Duo - Empire</title><link>https://www.empireonline.com/movies/news/metal-gear-solid-movie-is-in-the-works-at-sony-from-final-destination-bloodlines-duo/</link></item>
+<item><title>Scarlett Johansson And Sam Rockwell Join Brad Bird’s Netflix Sci-Fi Movie Ray Gunn - Empire</title><link>https://www.empireonline.com/movies/news/scarlett-johansson-sam-rockwell-join-the-incredibles-directors-netflix-sci-fi-movie-ray-gunn/</link></item>
+<item><title>Extraction 3 Set To Start Shooting This Summer — Chris Hemsworth To Return As Tyler Rake - Empire</title><link>https://www.empireonline.com/movies/news/extraction-3-set-to-start-shooting-this-summer-chris-hemsworth-to-return-as-tyler-rake/</link></item>
+<item><title>California Schemin’ Review - Empire</title><link>https://www.empireonline.com/movies/reviews/california-schemin/</link></item>
+<item><title>Undertone Review - Empire</title><link>https://www.empireonline.com/movies/reviews/undertone/</link></item>
+<item><title>X-Men MCU Movie Taps Beef Creator And The Bear Co-Showrunner To Draft Latest Screenplay - Empire</title><link>https://www.empireonline.com/movies/news/x-men-mcu-movie-taps-beef-creator-and-the-bear-co-showrunner-to-draft-latest-screenplay/</link></item>
+<item><title>Toy Story 5 Villain Lilypad Might Spell The End For Woody And Buzz: ‘When Tech Comes In, It Wins’ - Empire</title><link>https://www.empireonline.com/movies/news/toy-story-5-villain-lilypad-tech-wins-exclusive/</link></item>
+<item><title>Why Edgar Wright Had To Change The Running Man Ending: ‘This Is Too Brutal’ - Empire</title><link>https://www.empireonline.com/movies/news/edgar-wright-running-man-changed-ending-too-brutal/</link></item>
+<item><title>The Super Mario Galaxy Movie Review - Empire</title><link>https://www.empireonline.com/movies/reviews/the-super-mario-galaxy-movie/</link></item>
+<item><title>The Drama Review - Empire</title><link>https://www.empireonline.com/movies/reviews/the-drama/</link></item>
+<item><title>They Will Kill You Review - Empire</title><link>https://www.empireonline.com/movies/reviews/they-will-kill-you/</link></item>
+<item><title>Orwell: 2+2=5 Review - Empire</title><link>https://www.empireonline.com/movies/reviews/orwell-225/</link></item>
+<item><title>Splitsville Review - Empire</title><link>https://www.empireonline.com/movies/reviews/splitsville/</link></item>
+<item><title>The Magic Faraway Tree Review - Empire</title><link>https://www.empireonline.com/movies/reviews/the-magic-faraway-tree/</link></item>
+<item><title>PROMOTION: How Ben-Hur Became The Ultimate Biblical Epic - Empire</title><link>https://www.empireonline.com/movies/features/promotion-how-ben-hur-became-ultimate-biblical-epic/</link></item>
+<item><title>The Punisher: One Last Kill Trailer Sees Jon Bernthal Searching For Peace — And Finding Violence - Empire</title><link>https://www.empireonline.com/tv/news/the-punisher-one-last-kill-trailer-sees-jon-bernthal-searching-for-peace-and-finding-violence/</link></item>
+<item><title>Alien: Earth Season 2 Adds Peter Dinklage As New Series Regular - Empire</title><link>https://www.empireonline.com/tv/news/alien-earth-season-2-adds-peter-dinklage-as-new-series-regular/</link></item>
+<item><title>Danny Dyer Learned To Ride ‘A Lovely Horse Named Snaffles’ For Rivals Season 2 Polo Scenes - Empire</title><link>https://www.empireonline.com/tv/news/rivals-season-2-danny-dyer-learned-to-ride-horse/</link></item>
+<item><title>Half Man Trailer: Richard Gadd And Jamie Bell Come Together — And Apart — In BBC-HBO Drama - Empire</title><link>https://www.empireonline.com/tv/news/half-man-trailer-richard-gadd-and-jamie-bell-come-together-and-apart-in-bbc-hbo-drama/</link></item>
+<item><title>Star Wars: Maul — Shadow Lord Review - Empire</title><link>https://www.empireonline.com/tv/reviews/star-wars-maul-shadow-lord/</link></item>
+<item><title>Matt Reeves And David E. Kelley Tackling Bonfire Of The Vanities TV Series At Apple - Empire</title><link>https://www.empireonline.com/tv/news/matt-reeves-and-david-e-kelley-tackling-bonfire-of-the-vanities-tv-series-at-apple/</link></item>
+<item><title>Peaky Blinders Sequel Series Recasts Duke Shelby With Jamie Bell — Adds Charlie Heaton And More - Empire</title><link>https://www.empireonline.com/tv/news/peaky-blinders-sequel-series-recasts-duke-shelby-with-jamie-bell-adds-charlie-heaton-and-more/</link></item>
+<item><title>Crimson Desert Review - Empire</title><link>https://www.empireonline.com/gaming/reviews/crimson-desert/</link></item>
+<item><title>Fatal Frame II – Crimson Butterfly Remake Review - Empire</title><link>https://www.empireonline.com/gaming/reviews/fatal-frame-ii-crimson-butterfly-remake/</link></item>
+<item><title>GreedFall: The Dying World Review - Empire</title><link>https://www.empireonline.com/gaming/reviews/greedfall-the-dying-world/</link></item>
+<item><title>Pokémon Pokopia Review - Empire</title><link>https://www.empireonline.com/gaming/reviews/pokemon-pokopia/</link></item>
+<item><title>Code Vein II Review - Empire</title><link>https://www.empireonline.com/gaming/reviews/code-vein-ii/</link></item>
+<item><title>We Found The Best 55-inch TVs In 2026: Smart Sets For All Budgets - Empire</title><link>https://www.empireonline.com/tv/hardware/best-55-inch-tv/</link></item>
+<item><title>Quick Lofi – a GNOME extension for chill beats to study to - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/04/quick-lofi-beats-gnome-extension</link></item>
+<item><title>Linux 7.0: faster swap, Intel TSX &amp; Rock Band 4 controller support - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/04/linux-7-0-kernel-features</link></item>
+<item><title>Ghostty terminal is now available in the Ubuntu repos - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/04/ghostty-terminal-ubuntu-26-04-apt-install</link></item>
+<item><title>Your old Kindle won’t stop working on 20 May – but it could - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/04/older-kindles-amazon-support</link></item>
+<item><title>Rust API and a new plugin system added to Miracle-WM - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/04/miracle-wm-rust-plugins</link></item>
+<item><title>Dynamic Music Pill brings lyrics to your GNOME desktop - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/04/lyrics-feature-dynamic-music-pill-extension</link></item>
+<item><title>macOS app Little Snitch is now available on Linux - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/04/little-snitch-linux</link></item>
+<item><title>Firefox’s free VPN rollout finally reached me – is it any good? - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/04/firefox-free-vpn-enabled</link></item>
+<item><title>Enabling Ubuntu Pro from the OS setup tool is easier - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/04/ubuntu-pro-initial-setup-tool</link></item>
+<item><title>More new icons arrive in Ubuntu 26.04 LTS - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/04/yaru-new-icons-resources-showtime</link></item>
+<item><title>Skyscraper brings Bluesky to the Linux terminal - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/04/skyscraper-bluesky-terminal-client-linux</link></item>
+<item><title>Linux App Release Roundup (March 2026) - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/04/linux-release-roundup-march-2026</link></item>
+<item><title>Ubuntu 26.04 lets you hide sudo password feedback with shortcut - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/04/sudo-rs-password-feedback-toggle</link></item>
+<item><title>Raspberry Pi’s eye-watering price rises &amp; new 3GB RAM model - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/04/raspberry-pi-4-3gb-announced</link></item>
+<item><title>Ubuntu quietly raises its minimum system requirements - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/04/ubuntu-2604-system-requriments</link></item>
+<item><title>GNOME 50 dropped support for accessing Google Drive files - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/03/google-drive-not-working-nautilus-ubuntu-26-04</link></item>
+<item><title>Ubuntu MATE’s founder is stepping back after 12 years - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/03/ubuntu-mate-needs-new-maintainer</link></item>
+<item><title>Ubuntu 26.10 could drop btrfs, ZFS and LUKS support from GRUB - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/03/ubuntu-grub-secure-boot-luks-changes</link></item>
+<item><title>Marriage Linked to Lower Cancer Risk In Study of 4 Million Cases - ScienceAlert</title><link>https://www.sciencealert.com/marriage-linked-to-lower-cancer-risk-in-study-of-4-million-cases</link></item>
+<item><title>Experimental Drug Can Reverse Osteoarthritis in Weeks, Animal Research Shows - ScienceAlert</title><link>https://www.sciencealert.com/experimental-drug-can-reverse-osteoarthritis-in-weeks-animal-research-shows</link></item>
+<item><title>Common Vitamin May Reduce Buildup of Alzheimer&amp;#39;s Proteins, Study Finds - ScienceAlert</title><link>https://www.sciencealert.com/common-vitamin-may-reduce-buildup-of-alzheimers-proteins-study-finds</link></item>
+<item><title>Scientists Discovered a &amp;#39;Yellow Brick Road&amp;#39; at The Bottom of The Ocean - ScienceAlert</title><link>https://www.sciencealert.com/scientists-discovered-a-yellow-brick-road-at-the-bottom-of-the-ocean</link></item>
+<item><title>Scientists May Have Found a New Cause of High Blood Pressure, And a Way to Treat It - ScienceAlert</title><link>https://www.sciencealert.com/scientists-may-have-found-a-new-cause-of-high-blood-pressure-and-a-way-to-treat-it</link></item>
+<item><title>Woman With 3 Autoimmune Diseases Enters Remission After Immune &amp;#39;Reset&amp;#39; - ScienceAlert</title><link>https://www.sciencealert.com/woman-with-3-autoimmune-diseases-enters-remission-after-immune-reset</link></item>
+<item><title>Ancient Landscape Reveals Bones of Humans Who Lived 100,000 Years Ago - ScienceAlert</title><link>https://www.sciencealert.com/ancient-landscape-reveals-bones-of-humans-who-lived-100000-years-ago</link></item>
+<item><title>Sibling Stem Cell Transplant Leads to Rare HIV Remission in &amp;#39;Oslo Patient&amp;#39; - ScienceAlert</title><link>https://www.sciencealert.com/sibling-stem-cell-transplant-leads-to-rare-hiv-remission-in-oslo-patient</link></item>
+<item><title>Scientists Discover Liquids Can Snap Like Solids - ScienceAlert</title><link>https://www.sciencealert.com/scientists-discover-liquids-can-snap-like-solids</link></item>
+<item><title>Giant New Moon Scar Is a Once-in-a-Century Crater, Scientists Discover - ScienceAlert</title><link>https://www.sciencealert.com/giant-new-moon-scar-is-a-once-in-a-century-crater-scientists-discover</link></item>
+<item><title>Taking Too Much Vitamin D Can Backfire, Scientists Warn - ScienceAlert</title><link>https://www.sciencealert.com/taking-too-much-vitamin-d-can-backfire-scientists-warn</link></item>
+<item><title>Quantum Computers Could Break Encryption Far Sooner Than We Realized - ScienceAlert</title><link>https://www.sciencealert.com/quantum-computers-could-break-encryption-far-sooner-than-we-realized</link></item>
+<item><title>Ocean Heat Waves Are &amp;#39;Supercharging&amp;#39; Hurricane Damage, Scientists Warn - ScienceAlert</title><link>https://www.sciencealert.com/ocean-heat-waves-are-supercharging-hurricane-damage-scientists-warn</link></item>
+<item><title>&amp;#39;Forever Chemicals&amp;#39; May Be Weakening The Bones of Children, Study Warns - ScienceAlert</title><link>https://www.sciencealert.com/forever-chemicals-may-be-weakening-the-bones-of-children-study-warns</link></item>
+<item><title>This Tiny Wildflower Could Be a Secret Weapon Against Superbugs - ScienceAlert</title><link>https://www.sciencealert.com/this-tiny-wildflower-could-be-a-secret-weapon-against-superbugs</link></item>
+<item><title>This RNA Almost Self-Replicates, Which Could Explain Life&amp;#39;s Origins - ScienceAlert</title><link>https://www.sciencealert.com/this-rna-almost-self-replicates-which-could-explain-lifes-origins</link></item>
+<item><title>Muscles Have Their Own Kind of &amp;#39;Memory&amp;#39; – Here&amp;#39;s How It Works - ScienceAlert</title><link>https://www.sciencealert.com/muscles-have-their-own-kind-of-memory-heres-how-it-works</link></item>
+<item><title>The Universe&amp;#39;s Most Pristine Ancient Star Is Surprisingly Close - ScienceAlert</title><link>https://www.sciencealert.com/the-universes-most-pristine-ancient-star-is-surprisingly-close</link></item>
+<item><title>If Venus Has Life It May Have Come From Earth, Scientists Say - ScienceAlert</title><link>https://www.sciencealert.com/if-venus-has-life-it-may-have-come-from-earth-scientists-say</link></item>
+<item><title>Twins Face Developmental Delays in Early Childhood, Study Finds - ScienceAlert</title><link>https://www.sciencealert.com/twins-developmental-delays-single-born-siblings</link></item>
+<item><title>This Week in Science: Artemis II Returns, a Chimp &amp;#39;Civil War&amp;#39;, And More! - ScienceAlert</title><link>https://www.sciencealert.com/this-week-in-science-artemis-ii-returns-a-chimp-civil-war-and-more</link></item>
+<item><title>Brooklyn Beckham’s Ex Says His Famous Parents Caused Her ‘Anxiety’: ‘Lots of Warning Signs’ - Showbiz Cheat Sheet</title><link>https://www.cheatsheet.com/news/brooklyn-beckhams-ex-says-his-famous-parents-caused-her-anxiety-lots-of-warning-signs.html/</link></item>
+<item><title>Ruby Rose Once Slammed Katy Perry’s ‘Swish Swish’ as a ‘Sloppy Mess’ - Showbiz Cheat Sheet</title><link>https://www.cheatsheet.com/news/ruby-rose-slammed-katy-perrys-swish-swish-sloppy-mess.html/</link></item>
+<item><title>Another ‘My 600-lb Life’ Cast Member Gone: Pattern of Death Worries Fans - Showbiz Cheat Sheet</title><link>https://www.cheatsheet.com/news/my-600-lb-life-cast-member-gone-pattern-death-fans.html/</link></item>
+<item><title>Lena Dunham Said Adam Driver Was ‘Feral’ and Violent on ‘Girls’ Set - Showbiz Cheat Sheet</title><link>https://www.cheatsheet.com/news/lena-dunham-said-adam-driver-feral-violent-girls-set.html/</link></item>
+<item><title>OnlyFans Star Sophie Rain Breaks Down Coachella Costs: Passes, Travel, Airbnb &amp; More - Showbiz Cheat Sheet</title><link>https://www.cheatsheet.com/news/onlyfans-star-sophie-rain-breaks-down-coachella-costs-passes-travel-airbnb.html/</link></item>
+<item><title>‘RHORI’ Star Kelsey Swanson Denies Escort Rumors, Blames Stolen Social Media Photos - Showbiz Cheat Sheet</title><link>https://www.cheatsheet.com/news/rhori-star-kelsey-swanson-escort-rumors-stolen-social-media-photos.html/</link></item>
+<item><title>Jacob Elordi Sparks Buzz After Coachella Sightings With Teyana Taylor and Kendall Jenner - Showbiz Cheat Sheet</title><link>https://www.cheatsheet.com/news/jacob-elordi-sparks-buzz-coachella-sightings-teyana-taylor-kendall-jenner.html/</link></item>
+<item><title>Offset’s Mother Breaks Silence on His Shooting After His Performance - Showbiz Cheat Sheet</title><link>https://www.cheatsheet.com/news/offsets-mother-breaks-silence-shooting-performance.html/</link></item>
+<item><title>‘Rock the Block’ Star Brooke Hogan Waited Tables as She Worked to Get Home Design Business Off the Ground - Showbiz Cheat Sheet</title><link>https://www.cheatsheet.com/news/rock-the-block-brooke-hogan-waited-tables-home-design-business.html/</link></item>
+<item><title>All Eyes Will Be on Zendaya at the 2026 Met Gala After Big News - Showbiz Cheat Sheet</title><link>https://www.cheatsheet.com/news/all-eyes-zendaya-2026-met-gala-big-news.html/</link></item>
+<item><title>Tyson Fury’s Net Worth: How Rich is the Professional Boxer? - The Cinemaholic</title><link>https://thecinemaholic.com/tyson-fury-net-worth/</link></item>
+<item><title>Who are Alamo Brown and Bishop? Who Play Them in Euphoria? - The Cinemaholic</title><link>https://thecinemaholic.com/alamo-brown-bishop-euphoria/</link></item>
+<item><title>Kevin Turen Tribute in Euphoria: How did He Die? - The Cinemaholic</title><link>https://thecinemaholic.com/kevin-turen-euphoria/</link></item>
+<item><title>Bradley Bobbit: Where is the Temptation Island Season 2 Star Now? - The Cinemaholic</title><link>https://thecinemaholic.com/bradley-bobbit/</link></item>
+<item><title>Preston Viltz: Where is the Temptation Island Season 2 Star Now? - The Cinemaholic</title><link>https://thecinemaholic.com/preston-viltz/</link></item>
+<item><title>Beast: Are the Lions Real or CGI? - The Cinemaholic</title><link>https://thecinemaholic.com/beast-lions-cgi/</link></item>
+<item><title>Arch Linux Releases March 2026 ISO - DebugPoint NEWS</title><link>https://debugpointnews.com/arch-linux-iso-refresh-march-2026/</link></item>
+<item><title>Emily Ratajkowski Masterfully Mixes Three Trends At Once - WMagazine</title><link>https://www.wmagazine.com/fashion/emily-ratajkowski-leopard-coat-trends</link></item>
+<item><title>Kendall &amp; Kylie Jenner Styled Their Coachella Crop Tops in Two Distinct Ways - WMagazine</title><link>https://www.wmagazine.com/fashion/kendall-kylie-jenner-coachella-2026-croptops-chanel</link></item>
+<item><title>Quen Blackwell Talks Coachella Style and Her Best Festival Advice - WMagazine</title><link>https://www.wmagazine.com/fashion/quen-blackwell-coachella-style-interview-photos</link></item>
+<item><title>Cate Blanchett Gives Red Carpet Cutouts The Cold Shoulder - WMagazine</title><link>https://www.wmagazine.com/fashion/cate-blanchett-olivier-awards-cutout-dress</link></item>
+<item><title>Sharon Stone Looks Back at Her Life in Parties - WMagazine</title><link>https://www.wmagazine.com/culture/sharon-stone-life-in-parties-interview</link></item>
+<item><title>Euphoria Season 3 Episode 1 “New Beginnings” Recap: Nothing Good - WMagazine</title><link>https://www.wmagazine.com/culture/euphoria-season-3-episode-1-recap</link></item>
+<item><title>Bella Hadid Channels Britney Spears in a Sultry Y2K Set - WMagazine</title><link>https://www.wmagazine.com/fashion/bella-hadid-y2k-lace-lingerie-set</link></item>
+<item><title>Maui Travel Guide: 3 Insiders Share Where to Eat, Drink, Stay, Shop, and Play - WMagazine</title><link>https://www.wmagazine.com/life/maui-travel-guide-hawaii</link></item>
+<item><title>Michaela Coel Leaves Her Skirt Suit Artfully Undone - WMagazine</title><link>https://www.wmagazine.com/fashion/michaela-coel-buttoned-blue-suit</link></item>
+<item><title>Anne Hathaway &amp; Meryl Streep’s Red Carpet Looks Are Full of &amp;#39;Devil&amp;#39;-ish Easter Eggs - WMagazine</title><link>https://www.wmagazine.com/fashion/anne-hathaway-meryl-streep-shanghai-devil-wears-prada-easter-eggs</link></item>
+<item><title>Yes, &amp;quot;Hangover Skin&amp;quot; Is Real—Here’s How to Fix It - WMagazine</title><link>https://www.wmagazine.com/beauty/skin-care-after-drinking-alcohol</link></item>
+<item><title>Anne Hathaway &amp; Meryl Streep Reunite in High Style for &amp;#39;TDWP2&amp;#39; Press in Mexico City - WMagazine</title><link>https://www.wmagazine.com/fashion/anne-hathaway-meryl-streep-devil-wears-prada-2-press-tour-mexico-city</link></item>
+<item><title>Michaela Coel’s Black &amp; White Chanel Look Is Far From Basic - WMagazine</title><link>https://www.wmagazine.com/fashion/michaela-coel-chanel-black-skirt</link></item>
+<item><title>Carey Mulligan Shows Us A New Side to Spring Florals - WMagazine</title><link>https://www.wmagazine.com/fashion/carey-mulligan-beef-pixelated-florals</link></item>
+<item><title>&amp;#39;Catwalk: The Art of the Fashion Show&amp;#39; Examines the Enduring Power of the Runway - WMagazine</title><link>https://www.wmagazine.com/fashion/va-dundee-catwalk-the-art-of-the-fashion-show-runway-photos</link></item>
+<item><title>Nicole Kidman Brings Sheer, Second-Skin Schiaparelli to the Red Carpet - WMagazine</title><link>https://www.wmagazine.com/fashion/nicole-kidman-sheer-second-skin-schiaparelli-set</link></item>
+<item><title>Elle Fanning Is a Preppy, Preppy Princess in a Polo and Ballroom Skirt - WMagazine</title><link>https://www.wmagazine.com/culture/elle-fanning-prep-polo-princess-skirt</link></item>
+<item><title>Oprah Chicly Upgrades Double Denim with Chloé’s Revived It Bag - WMagazine</title><link>https://www.wmagazine.com/fashion/oprah-double-denim-chloe-paddington</link></item>
+<item><title>Julia Fox Takes Sleepmaxxing to New Heights With a Subversive Nightie - WMagazine</title><link>https://www.wmagazine.com/fashion/julia-fox-sleepmaxxing-nighty</link></item>
+<item><title>Meryl Streep&amp;#39;s Red Prada Suit Is a Sign Fashion Is Fully Behind &amp;#39;The Devil Wears Prada 2&amp;#39; - WMagazine</title><link>https://www.wmagazine.com/fashion/meryl-streep-devil-wears-prada-2-red-suit-miuccia-reaction</link></item>
+<item><title>Zendaya&amp;#39;s Moody Dress Kept Up a &amp;#39;Euphoria&amp;#39; Premiere Tradition - WMagazine</title><link>https://www.wmagazine.com/fashion/zendaya-euphoria-season-three-premiere-dress</link></item>
+<item><title>Hunter Schafer’s Sheer Dress Lets Tiger Print Out of the Cage at the &amp;#39;Euphoria&amp;#39; Premiere - WMagazine</title><link>https://www.wmagazine.com/fashion/hunter-schafer-euphoria-season-3-premiere-sheer-tiger-dress</link></item>
+<item><title>Mexico Travel Guide: Where to Stay, Eat &amp; Shop in Riviera Maya - WMagazine</title><link>https://www.wmagazine.com/life/riviera-maya-mexico-travel-guide</link></item>
+<item><title>In Uncertain Times, Fashion Reaches For Its Armor - WMagazine</title><link>https://www.wmagazine.com/fashion/medieval-core-trend-spring-2026</link></item>
+<item><title>In &amp;#39;The Testaments,&amp;#39; Chase Infiniti and Lucy Halliday Bring Teenage Drama to Gilead - WMagazine</title><link>https://www.wmagazine.com/culture/chase-infiniti-lucy-halliday-the-testaments-interview</link></item>
+<item><title>Cameron Diaz Doubles Down On Rich Mom Style With A Pop of Color - WMagazine</title><link>https://www.wmagazine.com/fashion/cameron-diaz-doubles-rich-mom-dressing</link></item>
+<item><title>The 14 Biggest Accessory Trends From the Fall 2026 Runways - WMagazine</title><link>https://www.wmagazine.com/fashion/best-accessories-trends-fall-2026-bags-shoes-jewelry</link></item>
+<item><title>Rihanna’s All-Black Athleisure and Ballet Flats Are Anything But Basic - WMagazine</title><link>https://www.wmagazine.com/fashion/rihanna-all-black-leather-paris-ballet-flats</link></item>
+<item><title>Elle Fanning Gives Formal Florals a Subversive Edge With a Signature 2020s Shoe - WMagazine</title><link>https://www.wmagazine.com/fashion/elle-fanning-margots-got-money-troubles-pink-dress</link></item>
+<item><title>Anne Hathaway Takes Miranda Priestly&amp;#39;s Valentino Rockstud Cue - WMagazine</title><link>https://www.wmagazine.com/fashion/anne-hathaway-takes-edgy-fashion-cue-from-miranda-priestly</link></item>
+<item><title>Dua Lipa Boosts High-Contrast Prints With A High-Voltage Speedy Bag - WMagazine</title><link>https://www.wmagazine.com/fashion/dua-lipa-leopard-skirt-yellow-louis-vuitton-bag</link></item>
+<item><title>The 17 Best Lip Balms &amp; Glosses of All Time, According to W Editors - WMagazine</title><link>https://www.wmagazine.com/beauty/best-lip-balm-for-dry-cracked-lips</link></item>
+<item><title>Rihanna Steps Out In Paris With an It Bag With Quite the Backstory - WMagazine</title><link>https://www.wmagazine.com/fashion/rihanna-asap-rocky-paris-dracula-bag</link></item>
+<item><title>The 14 Best Fall 2026 Fashion Trends We Saw on the Runways - WMagazine</title><link>https://www.wmagazine.com/fashion/fall-2026-fashion-trends</link></item>
+<item><title>Lily-Rose Depp and 070 Shake Match in Baggy Low-Rise Jeans - WMagazine</title><link>https://www.wmagazine.com/fashion/lily-rose-depp-070-shake-matching-jeans-los-angeles</link></item>
+<item><title>Why Caramelized Brunette Is the Perfect Between-Seasons Hair Color - WMagazine</title><link>https://www.wmagazine.com/beauty/caramelized-brunette-hair-color-products</link></item>
+<item><title>Barbie Ferreira’s Best Fashion Moments Are Pure Euphoria - WMagazine</title><link>https://www.wmagazine.com/fashion/barbie-ferreira-best-red-carpet-fashion-dresses-photos</link></item>
+<item><title>Selena Gomez’s Polly Pocket Prada Dress Comes With Built-In Jewelry - WMagazine</title><link>https://www.wmagazine.com/fashion/selena-gomez-pink-mini-dress-rare-beauty-event-los-angeles</link></item>
+<item><title>Zendaya’s “Something Blue” Couture Dress Is the Ultimate Bridal Crescendo - WMagazine</title><link>https://www.wmagazine.com/fashion/zendaya-blue-feather-dress-the-drama-new-york-premiere</link></item>
+<item><title>All of Zendaya’s &amp;#39;The Drama&amp;#39; Press Looks Are Pure Bridal Bliss - WMagazine</title><link>https://www.wmagazine.com/fashion/zendaya-the-drama-press-fashion-photos</link></item>
+<item><title>&amp;quot;Mom, What Were You Like in the &amp;#39;90s?&amp;quot; Look to the Fall 2026 Runways - WMagazine</title><link>https://www.wmagazine.com/fashion/90s-trends-fall-2026-collections</link></item>
+<item><title>How Zendaya&amp;#39;s Outfits in &amp;#39;The Drama&amp;#39; Reveal Her Character&amp;#39;s Secrets - WMagazine</title><link>https://www.wmagazine.com/culture/zendaya-the-drama-outfits-wedding-dress-shop</link></item>
+<item><title>Kendall Jenner’s Business Look Includes Blue Jeans &amp; a New-and-Improved It Bag - WMagazine</title><link>https://www.wmagazine.com/fashion/kendall-jenner-blue-jeans-chanel-flap-bag-black-flats-los-angeles</link></item>
+<item><title>Meryl Streep Hides a Cerulean Sweater Under Her Leopard Top Coat - WMagazine</title><link>https://www.wmagazine.com/fashion/meryl-streep-leopard-coat-blue-sweater-black-bag-new-york</link></item>
+<item><title>Your Future Paycheck: Retirement Savings Explained — Money Minute - Defense News</title><link>https://www.defensenews.com/video/2026/04/13/your-future-paycheck-retirement-savings-explained-money-minute/</link></item>
+<item><title>China draws strategic lessons from US war with Iran | Defense News Weekly Full Episode 4.14.26 - Defense News</title><link>https://www.defensenews.com/video/2026/04/13/china-draws-strategic-lessons-from-us-war-with-iran-defense-news-weekly-full-episode-41426/</link></item>
+<item><title>China draws, strategic, diplomatic lessons from US war with Iran - Defense News</title><link>https://www.defensenews.com/video/2026/04/13/china-draws-strategic-diplomatic-lessons-from-us-war-with-iran/</link></item>
+<item><title>The damage from ‘economic weapons’ in global conflict would worsen in a war with China. Here’s how. - Defense News</title><link>https://www.defensenews.com/video/2026/04/13/the-damage-from-economic-weapons-in-global-conflict-would-worsen-in-a-war-with-china-heres-how/</link></item>
+<item><title>For some veterans, it’s retirement benefits vs. VA compensation in a head-shaking battle - Defense News</title><link>https://www.defensenews.com/video/2026/04/13/for-some-veterans-its-retirement-benefits-vs-va-compensation-in-a-head-shaking-battle/</link></item>
 </channel></rss>

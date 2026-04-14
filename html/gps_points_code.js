@@ -742,7 +742,8 @@ function current_position_show_gps_points(){
     
     navigator.geolocation.getCurrentPosition(
         function (position){
-            navigator_geolocation_getCurrentPosition_ok_b(position,omap_gps_points_global);
+            let lon,lat;
+            [lon,lat]=navigator_geolocation_getCurrentPosition_ok_b(position,omap_gps_points_global);
             omap_gps_points_global.panTo(new L.LatLng(lat,lon));
 
             current_layer_refresh_gps_points();
